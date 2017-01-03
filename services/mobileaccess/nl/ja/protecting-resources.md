@@ -6,7 +6,8 @@ lastupdated: "2016-10-27"
 
 ---
 
-{:shortdesc: .shortdesc} {:codeblock:.codeblock}
+{:shortdesc: .shortdesc} 
+{:codeblock:.codeblock}
 
 # {{site.data.keyword.amashort}} サービスを使用したバックエンド・リソースの保護
 {: #protecting-resources}

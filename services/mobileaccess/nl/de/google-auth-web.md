@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016
-lastupdated: "2016-11-01"
+lastupdated: "2016-11-22"
 
 ---
 
@@ -60,8 +60,10 @@ Die Umgebungsvariable `VCAP_SERVICES` wird automatisch für jede {{site.data.key
 Gehen Sie wie folgt vor, um den Berechtigungsprozess zu starten:
 
 1. Rufen Sie den Berechtigungsendpunkt (`authorizationEndpoint`) und die Client-ID (`clientId`) von den Serviceberechtigungsnachweisen ab, die in der Umgebungsvariablen `VCAP_SERVICES` gespeichert sind. 
+
 	`var cfEnv = require("cfenv");` 
-	 `var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;` 
+	
+	`var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;` 
 
 	**Hinweis:** Wenn Sie den {{site.data.keyword.amashort}}-Service vor der Webunterstützung zur Ihrer Anwendung hinzugefügt haben, ist möglicherweise kein Tokenendpunkt in den Serviceberechtigungsnachweisen enthalten. Verwenden Sie stattdessen die folgenden URLs, abhängig von Ihrer {{site.data.keyword.Bluemix_notm}}-Region: 
  
@@ -107,8 +109,9 @@ app.get("/protected", checkAuthentication, function(req, res, next){
 				redirectUrl += "&redirect_uri=" + redirectUri; 
 				res.redirect(redirectUrl); 
 			} 
-		} 
-	}
+		 	} 
+	   	}
+       }
 	```
 	{: codeblock}
 
@@ -177,7 +180,7 @@ Im nächsten Schritt werden Zugriffstoken und Identitätstokens mithilfe des zuv
 	```
 	{: codeblock}
 
-	Der Parameter `redirect_uri` entspricht dem URI für die Weiterleitung nach erfolgreicher oder fehlgeschlagener Authentifizierung bei Google+ und muss mit `redirect_uri` aus Schritt 1 übereinstimmen.  
+	Der Parameter `redirect_uri` entspricht dem URI für die Weiterleitung nach erfolgreicher oder fehlgeschlagener Authentifizierung bei Google+ und muss mit der im {{site.data.keyword.amashort}}-Dashboard definierten `redirect_uri` übereinstimmen.  
    
 	Sie müssen diese POST-Anforderung innerhalb von 10 Minuten senden, da der Autorisierungscode danach abgelaufen ist. Nach 10 Minuten ist ein neuer Code erforderlich.
 

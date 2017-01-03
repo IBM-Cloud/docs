@@ -2,9 +2,10 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-06"
+lastupdated: "2016-11-24"
 
 ---
+
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -27,8 +28,8 @@ lastupdated: "2016-11-06"
 * 受 {{site.data.keyword.amashort}} 服务保护的 {{site.data.keyword.Bluemix_notm}} 应用程序实例。有关如何创建 {{site.data.keyword.Bluemix_notm}} 后端服务的更多信息，请参阅[入门](index.html)。
 * 应用程序路径。这是后端应用程序的 URL。
 * `tenantId` 值。打开 {{site.data.keyword.amashort}} 服务仪表板。单击**移动选项**。`tenantId`（也称为 `appGUID`）值会显示在**应用程序 GUID/TenantId** 字段中。您将需要这些值来初始化 SDK，并将请求发送到后端服务。
-*  找到托管 {{site.data.keyword.Bluemix_notm}} 服务的区域。您可以在菜单栏中的**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标") 旁边的标题中找到当前 {{site.data.keyword.Bluemix_notm}} 区域。区域值应为以下某个值：**美国南部**、**悉尼**或**英国**。对应于这些名称的准确 SDK 常量值如代码示例中所示。
-* Facebook 应用程序标识。有关更多信息，请参阅[从 Facebook 开发者门户网站获取 Facebook 应用程序标识](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)。
+*  找到托管 {{site.data.keyword.Bluemix_notm}} 服务的区域。您可以在菜单栏中的**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标") 旁边的头中找到当前 {{site.data.keyword.Bluemix_notm}} 区域。区域值应为以下某个值：**美国南部**、**悉尼**或**英国**。对应于这些名称的准确 SDK 常量值如代码示例中所示。
+* Facebook 应用程序和应用程序标识。有关更多信息，请参阅[从 Facebook 开发者门户网站获取 Facebook 应用程序标识](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)。
 
 
 
@@ -41,7 +42,7 @@ lastupdated: "2016-11-06"
 * [配置 MCA 进行 Facebook 认证](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-android.html#facebook-auth-android-mca)。这将在 {{site.data.keyword.Bluemix}} 服务器上配置 {{site.data.keyword.amashort}} 服务进行 Android Facebook 认证。
 
 
-### 针对 Android 配置 {{site.data.keyword.amashort}} Facebook 客户端 SDK
+### 针对 Android 平台配置 {{site.data.keyword.amashort}} Facebook 客户端 SDK
 {: #configure_android}
 
 在本机 Android 应用程序项目中，必须由 Gradle 添加 {{site.data.keyword.amashort}} Facebook 客户端 SDK。
@@ -58,6 +59,7 @@ lastupdated: "2016-11-06"
     	// other dependencies  
 	}
 ```
+	{: codeblock}
 
 2. 单击**工具 > Android > 使用 Gradle 文件同步项目**来使用 Gradle 同步项目。
 
@@ -71,6 +73,7 @@ lastupdated: "2016-11-06"
 		<string name="facebook_app_id">"<facebook_app_id>"</string>
 	</resources>
 	```
+	{: codeblock}
 
 4. 在 Android 项目的 `AndroidManifest.xml` 文件中 (`android/manifests/AndroidManifest.xml`)：
 
@@ -86,6 +89,7 @@ lastupdated: "2016-11-06"
     <activity ...../>
     </application>
     ```
+    {: codeblock}
 
    * 将 Facebook Activity 元素添加到现有 Activity 下：
 
@@ -100,6 +104,7 @@ lastupdated: "2016-11-06"
 			    />
     </application>
     ```
+    {: codeblock}
 
 5. 将以下代码添加到 Activity Java 代码：
 
@@ -111,6 +116,7 @@ lastupdated: "2016-11-06"
 			.onActivityResultCalled(requestCode, resultCode, data);
 	}
 	```
+	{: codeblock}
 
 ### 使用本机 Android 代码初始化授权管理器
 {: #initialize_android}
@@ -123,6 +129,7 @@ MCAAuthorizationManager mcaAuthorizationManager = MCAAuthorizationManager.create
 BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 FacebookAuthenticationManager.getInstance().registerDefaultAuthenticationListener(this);
 ```
+{: codeblock}
 
 
 ## 配置 iOS 平台
@@ -177,6 +184,7 @@ FacebookAuthenticationManager.getInstance().registerDefaultAuthenticationListene
 	}
 
 ```
+{: codeblock}
 
 **注：**导入的头文件名由合并到字符串 `-Swift.h` 的模块名称构成，例如，如果模块名称为 `Cordova`，那么 import 行应该为 `#import "Cordova-Swift.h"` 。要查找模块名称，请转至 `构建设置` > `打包` > `产品模块名称`。
 
@@ -191,6 +199,7 @@ FacebookAuthenticationManager.getInstance().registerDefaultAuthenticationListene
 ```javascript
 BMSClient.initialize(<applicationBluemixRegion>);
 ```
+{: codeblock}
 
 将 `<applicationBluemixRegion>` 替换为区域（请参阅[开始之前](#facebook-auth-before)）。
 
@@ -223,6 +232,7 @@ BMSClient.initialize(<applicationBluemixRegion>);
 	var request = new BMSRequest("<applicationRoute}/protected>", BMSRequest.GET);
 	request.send(success, failure);
 	```
+	{: codeblock}
 
 1. 运行应用程序。这将弹出 Facebook 登录屏幕：
 

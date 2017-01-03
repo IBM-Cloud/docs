@@ -2,23 +2,26 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-03"
+lastupdated: "2016-12-05"
 
 ---
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # Android SDK のセットアップ
 {: #getting-started-android}
 
 Android アプリケーションに {{site.data.keyword.amafull}} Client SDK を装備し、SDK を初期化し、保護されたリソースまたは無保護のリソースへの要求を実行します。
-
-
-{:shortdesc}
+{: shortdesc}
 
 ## 開始する前に
 {: #before-you-begin}
+
 以下が必要です。
+
 * {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。
 * {{site.data.keyword.amafull}} サービスのインスタンス。
 * **「TenantID」**。{{site.data.keyword.amafull}} ダッシュボードでサービスを開きます。**「モバイル・オプション」**ボタンをクリックします。`tenantId` (`appGUID` とも呼ばれる) の値が、**「アプリ GUID」/「TenantId」**フィールドに表示されます。許可マネージャーを初期化するためにこの値が必要になります。
@@ -47,6 +50,7 @@ Android アプリケーションに {{site.data.keyword.amafull}} Client SDK を
     	// other dependencies  
 }
 ```
+	{: codeblock}
 
 1. プロジェクトを Gradle と同期化します。**「ツール」&gt;「Android」&gt;「プロジェクトを Gradle ファイルと同期 (Sync Project with Gradle Files)」**とクリックします。
 
@@ -54,7 +58,8 @@ Android アプリケーションに {{site.data.keyword.amafull}} Client SDK を
 
 	```XML
 	<uses-permission android:name="android.permission.INTERNET" />
-```
+	```
+	{: codeblock}
 
 ## {{site.data.keyword.amashort}} Client SDK の初期化
 {: #initalize-mca-sdk}
@@ -68,9 +73,12 @@ Android アプリケーションに {{site.data.keyword.amafull}} Client SDK を
 					MCAAuthorizationManager.createInstance(this, "<MCAServiceTenantId>"));
 						
 	```
+{: codeblock}
 
 * `<applicationBluemixRegion>` を、{{site.data.keyword.Bluemix_notm}} サービスがホストされている地域に置き換えます。
-* `<MCAServiceTenantId>` を**「tenantId」**に置き換えます。
+* `<MCAServiceTenantId>` を**「tenantId」** 
+
+に置き換えます。
 これらの値について詳しくは、[開始する前に](#before-you-begin)を参照してください。
 
 ## モバイル・バックエンド・アプリケーションへの要求の実行
@@ -103,6 +111,7 @@ Android アプリケーションに {{site.data.keyword.amafull}} Client SDK を
 		}
 	});
 	```
+	{: codeblock}
 
 1. 要求が正常に実行されると、LogCat ユーティリティーで以下の出力が表示されます。
 
@@ -112,6 +121,7 @@ Android アプリケーションに {{site.data.keyword.amafull}} Client SDK を
 {: #next-steps}
 
 保護されているエンドポイントに繋がった場合、資格情報は必要とされません。アプリケーションにユーザーのログインを要求する場合、Facebook、Google またはカスタム認証を構成する必要があります。
+
 * [Facebook](facebook-auth-android.html)
 * [Google](google-auth-android.html)
 * [カスタム](custom-auth-android.html)

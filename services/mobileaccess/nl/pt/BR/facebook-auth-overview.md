@@ -83,5 +83,5 @@ Você precisa desse valor para configurar a autenticação do Facebook para o se
 
 * [Ativando a autenticação do Facebook para apps Android](facebook-auth-android.html)
 * [Ativando a autenticação do Facebook para apps iOS (Swift SDK)](facebook-auth-ios-swift-sdk.html)
-* [Ativando a autenticação do Facebook para apps iOS (Objective-C SDK - descontinuado)](facebook-auth-ios.html)
+* [Ativando a autenticação do Facebook para apps iOS (Objective-C SDK - Deprecated)](facebook-auth-ios.html)
 * [Ativando a autenticação do Facebook para apps Cordova](facebook-auth-cordova.html)

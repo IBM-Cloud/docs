@@ -2,16 +2,17 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-11-03"
+lastupdated: "2016-12-05"
 
 ---
-
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
 {:codeblock: .codeblock}
+{:pre: .pre}
 
 #Configuration d'une authentification personnalisée pour les applications Web {{site.data.keyword.amashort}}
 {: #custom-web}
-
 
 Ajoutez une authentification personnalisée et une fonctionnalité de sécurité {{site.data.keyword.amafull}} à votre application Web.
 
@@ -21,10 +22,10 @@ Ajoutez une authentification personnalisée et une fonctionnalité de sécurité
 Avant de commencer, vous devez disposer des éléments suivants :
 
 * Une appli Web.
-* Ressource protégée par une instance du service {{site.data.keyword.amashort}} qui est configurée pour utiliser un fournisseur d'identité personnalisé (voir [Configuration de l'authentification personnalisée](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).    
+* Ressource protégée par une instance du service {{site.data.keyword.amashort}} qui est configurée pour utiliser un fournisseur d'identité personnalisé (voir [Configuration de l'authentification personnalisée](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).  
 * Valeur de votre **TenantID**. Ouvrez votre service dans le tableau de bord de {{site.data.keyword.amashort}}. Cliquez sur le bouton **Options pour application mobile**. La valeur `tenantId` (qui porte également le nom d'`appGUID`) est affichée dans la zone **App GUID / TenantId**. Vous aurez besoin de cette valeur pour initialiser le Gestionnaire des autorisations.
 * Nom de votre **Realm**. Il s'agit de la valeur que vous avez spécifiée dans la zone **Nom du domaine** de la section **Personnalisé** dans l'onglet **Gestion** du tableau de bord de {{site.data.keyword.amashort}}.
-* L'URL de votre application back-end (**Route de l'application**). Vous aurez besoin de ces valeurs pour envoyer des requêtes aux noeuds finaux protégés de votre application back end. 
+* L'URL de votre application back-end (**Route de l'application**). Vous aurez besoin de ces valeurs pour envoyer des requêtes aux noeuds finaux protégés de votre application back end.
 * Votre **région** {{site.data.keyword.Bluemix_notm}}. Vous pouvez trouver votre région {{site.data.keyword.Bluemix_notm}} actuelle dans l'en-tête, en regard de l'icône **Avatar**![icône Avatar](images/face.jpg "icône Avatar"). La valeur de la région qui apparaît doit être l'une des suivantes : `US South`, `United Kingdom` ou `Sydney`, et correspondre aux valeurs requises dans le code Javascript : `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` ou `BMSClient.REGION_UK`. Vous aurez besoin de cette valeur pour initialiser le client {{site.data.keyword.amashort}}.
 * L'URI de redirection finale (au terme du processus d'autorisation). Il s'agit de la valeur **Vos URI de redirection d'application Web** que vous avez saisie dans la section **Personnalisé** de l'onglet **Gestion**.
 
@@ -111,8 +112,8 @@ Une fois que vous avez configuré votre fournisseur d'identité personnalisé, v
 
 1. Ouvrez votre service dans le tableau de bord {{site.data.keyword.amashort}}.
 1. Dans l'onglet **Gérer**, activez **Autorisation**.
-1. Développez la section **Personnalisé**. 
-1. Entrez le **Nom de domaine**, **URL de fournisseur d'identité personnalisé**.  
+1. Développez la section **Personnalisé**.
+1. Entrez le **Nom de domaine**, **URL de fournisseur d'identité personnalisé**. 
 1. Entrez la valeur de **Vos URI de redirection d'application Web**. Il s'agit de l'URI de la redirection finale après autorisation réussie.
 1. Cliquez sur **Sauvegarder**.
 
@@ -124,17 +125,14 @@ La variable d'environnement `VCAP_SERVICES` est créée automatiquement pour cha
 
 Pour demander l'autorisation de l'utilisateur, redirigez le navigateur vers le noeud final du serveur d'autorisation. Pour ce faire, procédez comme suit : 
 
-1. Identifiez le noeud final d'autorisation (`authorizationEndpoint`) et l'ID client
-(`clientId`) depuis les données d'identification du service stockées dans la variable d'environnement
-`VCAP_SERVICES`. 
+1. Extrayez le noeud final d'autorisation (`authorizationEndpoint`) et l'ID client ID (`clientId`) depuis les données d'identification du service stockées dans la variable `VCAP_SERVICES`. 
 
 	`var cfEnv = require("cfenv");` 
-	
+
 	`var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;` 
 
-
 	**Remarque :** si vous avez ajouté le service {{site.data.keyword.amashort}} dans votre application avant l'ajout de la prise en charge Web, il se peut que vous n'ayez pas de noeud final de jeton dans les données d'identification pour le service. A la place, utilisez les URL suivantes, selon votre région {{site.data.keyword.Bluemix_notm}} : 
-  
+
 	Sud des Etats-Unis : 
 
 	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization` 
@@ -153,7 +151,7 @@ Pour demander l'autorisation de l'utilisateur, redirigez le navigateur vers le n
 
 3. Redirigez l'utilisateur depuis votre application Web vers l'URI généré. 
 
-	L'exemple suivant extrait les paramètres depuis la variable `VCAP_SERVICES`,
+   L'exemple suivant extrait les paramètres depuis la variable `VCAP_SERVICES`,
 construit l'URL et envoie la demande de redirection.
 
 	```Java
@@ -207,17 +205,17 @@ d'identification du service stockées dans la variable d'environnement `VCAP_SER
 	**Remarque :** si vous avez ajouté le service {{site.data.keyword.amashort}} dans votre application avant l'ajout de la prise en charge Web, il se peut que vous n'ayez pas de noeud final de jeton dans les données d'identification pour le service. A la place, utilisez les URL suivantes, selon votre région {{site.data.keyword.Bluemix_notm}} : 
 
 	Sud des Etats-Unis : 
-  
+
 	`     https://mobileclientaccess.ng.bluemix.net/oauth/v2/token   
  `
- 
+
 	Londres : 
- 
+	
 	`     https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token
  ` 
  
 	Sydney : 
- 
+
 	`     https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/token 
  `
  
@@ -285,7 +283,4 @@ Le jeton d'accès permet une communication avec les ressources protégées par l
 * Les éléments `<accessToken>` et `<idToken>` doivent être séparés par un espace.
 
 * Le jeton d'identité est facultatif. Si vous l'omettez, il est possible d'accéder à la ressource protégée, mais sans recevoir
-d'informations sur l'utilisateur autorisé. 
-
-
-
+d'informations sur l'utilisateur autorisé.

@@ -2,9 +2,10 @@
 
 copyright:
   year: 2016
-lastupdated: "2016-11-07"
+lastupdated: "2016-12-04"
 
 ---
+
 {:screen: .screen}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
@@ -34,19 +35,19 @@ Para usar o Facebook como um provedor de identidade em seu website, deve-se incl
 
 1. Efetue login em sua conta no site
 [Facebook for
-Developers](https://developers.facebook.com). Para obter informações sobre como criar um
-novo app, consulte
-[Criando um aplicativo no website Facebook for Developers](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID). 
-1. Anote o **ID do app** e o **Segredo do app**. 
-Você precisa desses valores ao configurar seu projeto
+Developers](https://developers.facebook.com). 
+	Para obter
+informações sobre como criar um novo app, consulte
+[Criando
+um aplicativo no website Facebook for Developers](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID). 
+1. Anote o **ID do app** e o **Segredo do app**. Você precisa desses valores ao configurar seu projeto
 da web para autenticação do Facebook no painel Mobile Client
 Access.
 1. Na **Lista de Produtos**, escolha
 **Facebook Login**.
 4. Inclua a plataforma da **web**, se ela
 não existir.
-6. Insira o URI do terminal de retorno de chamada do servidor de autorizações na caixa **URIs de redirecionamento de OAuth válidos**. 
-É possível incluir este valor depois de ter configurado seu serviço
+6. Insira o URI do terminal de retorno de chamada do servidor de autorizações na caixa **URIs de redirecionamento de OAuth válidos**. É possível incluir este valor depois de ter configurado seu serviço
 {{site.data.keyword.amashort}} nas etapas seguintes.
 7. Salve as mudanças.
 
@@ -59,8 +60,8 @@ aplicativo Facebook for Developers ter sido configurado
 para atender clientes da web, será possível ativar a autenticação do
 Facebook no painel {{site.data.keyword.amashort}}.
 
-1. Abra o painel de serviço
-{{site.data.keyword.amashort}}.
+1. Abra o painel
+de serviço {{site.data.keyword.amashort}}.
 1. Na guia **Gerenciar**, acione
 **Autorização**.
 1. Expanda a seção **Facebook**.
@@ -85,8 +86,7 @@ redirecionamento seja acessado após o processo de autorização ser concluído 
 {: #facebook-auth-flow}
 
 A variável de ambiente `VCAP_SERVICES` é criada automaticamente para cada instância de serviço do
-{{site.data.keyword.amashort}} e contém propriedades necessárias para o processo de autorização. 
-Ela consiste em um objeto JSON e pode ser visualizada na guia
+{{site.data.keyword.amashort}} e contém propriedades necessárias para o processo de autorização. Ela consiste em um objeto JSON e pode ser visualizada na guia
 **Credenciais de Serviço** no
 painel de serviço {{site.data.keyword.amashort}}.
 

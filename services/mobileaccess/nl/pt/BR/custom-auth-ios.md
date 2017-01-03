@@ -19,13 +19,12 @@ o SDK do cliente {{site.data.keyword.amafull}} e conectar seu aplicativo ao {{si
 {: #before-you-begin}
 Você deve ter:
 
-* Um recurso que seja protegido por uma instância do serviço
-{{site.data.keyword.amashort}} que está
+* Um recurso que seja protegido por uma instância do
+serviço {{site.data.keyword.amashort}} que está
 configurado para usar um provedor de identidade customizado
 (consulte
 [Configurando autenticação customizada](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).  
-* Seu valor **TenantID**. Abra o seu serviço no painel do {{site.data.keyword.amashort}}. 
-Clique no botão **Opções móveis**. O valor
+* Seu valor **TenantID**. Abra o seu serviço no painel do {{site.data.keyword.amashort}}. Clique no botão **Opções móveis**. O valor
 `tenantId` (também conhecido como
 `appGUID`) é exibido no campo **App
 GUID / TenantId**. Você precisará desse valor para
@@ -37,7 +36,7 @@ na guia **Gerenciamento** do painel
 {{site.data.keyword.amashort}} (consulte
 [Configurando
 autenticação customizada](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).
-* A URL do seu aplicativo backend (**Rota de App**).Você precisará desse valor para enviar
+* A URL do seu aplicativo backend (**Rota de App**). Você precisará desse valor para enviar
 solicitações para os terminais protegido do seu aplicativo
 backend.
 * A {{site.data.keyword.Bluemix_notm}}
@@ -50,7 +49,8 @@ aos valores no SDK requeridos no código WebView Javascript:
 `BMSClient.REGION_US_SOUTH`,
 `BMSClient.REGION_UK` ou
 `BMSClient.REGION_SYDNEY`. Você precisará desse
-valor para inicializar o cliente {{site.data.keyword.amashort}}.
+valor para inicializar o cliente
+{{site.data.keyword.amashort}}.
 
 Para obter informações adicionais, consulte as seguintes informações:
  * [Introdução

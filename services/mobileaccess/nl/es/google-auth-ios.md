@@ -22,8 +22,8 @@ Utilice el inicio de sesión de Google para autenticar usuarios en la app de {{s
 {: #before-you-begin}
 Debe tener lo siguiente:
 * Una instancia de un servicio de {{site.data.keyword.amafull}} y una aplicación {{site.data.keyword.Bluemix_notm}}. Para obtener más información sobre la creación de una aplicación de fondo {{site.data.keyword.Bluemix_notm}}, consulte [Cómo empezar](index.html).
-* El URL de la aplicación de programa de fondo (**Ruta de app**). Necesitará estos valores para enviar solicitudes a los puntos finales protegidos de la aplicación de programa de fondo. 
-* El valor de **TenantID**. Abra el servicio en el panel de control de {{site.data.keyword.amashort}}. Pulse el botón **Opciones móviles**. El valor `tenantId` (también conocido como `appGUID`) se muestra en el campo **GUID de app / TenantId**. Necesitará este valor para inicializar el gestor de autorización. 
+* El URL de la aplicación de programa de fondo (**Ruta de app**). Necesitará estos valores para enviar solicitudes a los puntos finales protegidos de la aplicación de programa de fondo.
+* El valor de **TenantID**. Abra el servicio en el panel de control de {{site.data.keyword.amashort}}. Pulse el botón **Opciones móviles**. El valor `tenantId` (también conocido como `appGUID`) se muestra en el campo **GUID de app / TenantId**. Necesitará este valor para inicializar el gestor de autorización.
 
 ## Configuración de un proyecto de Google para la plataforma iOS
 {: #google-auth-ios-project}
@@ -51,8 +51,8 @@ Ahora que ya dispone de un ID de cliente de iOS de Google, puede activar la aute
 
 1. Abra el servicio en el panel de control de {{site.data.keyword.amashort}}.
 1. En el separador **Gestionar**, active **Autorización**.
-1. Expanda la sección **Google**. 
-1. En **ID de aplicación para iOS**, especifique su ID de cliente Google para iOS. 
+1. Expanda la sección **Google**.
+1. En **ID de aplicación para iOS**, especifique su ID de cliente Google para iOS.
 1. Pulse **Guardar**.
 
 

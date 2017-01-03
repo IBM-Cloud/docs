@@ -24,8 +24,7 @@ recursos em nuvem hospedados no
 
 * **{{site.data.keyword.amashort}}
 dashboard**: configure vários tipos de autenticação
-* **{{site.data.keyword.amashort}} client SDK**: instrumente aplicativos móveis para usar a funcionalidade do {{site.data.keyword.amashort}}. 
-As plataformas suportadas são: iOS 8 +, Android 4 +, Cordova e
+* **{{site.data.keyword.amashort}} client SDK**: instrumente aplicativos móveis para usar a funcionalidade do {{site.data.keyword.amashort}}. As plataformas suportadas são: iOS 8 +, Android 4 +, Cordova e
 aplicativos da Web.
 * **{{site.data.keyword.amashort}} server SDK**: proteja os recursos hospedados no {{site.data.keyword.Bluemix_notm}}. Atualmente,
 os tempos de execução suportados são Node.js e Liberty for Java&trade;.
@@ -33,10 +32,8 @@ os tempos de execução suportados são Node.js e Liberty for Java&trade;.
 ## Tipos de autenticação
 {: #authtypes}
 É possível usar os tipos de autenticação a seguir em seu app móvel:
-* **Facebook**: use o Facebook como um provedor de identidade. 
-Os usuários efetuarão login no app móvel ou da web com suas credenciais do Facebook.
-* **Google**: use o Google como um provedor de identidade. 
-Seus usuários efetuam login ao app móvel ou da web
+* **Facebook**: use o Facebook como um provedor de identidade. Os usuários efetuarão login no app móvel ou da web com suas credenciais do Facebook.
+* **Google**: use o Google como um provedor de identidade. Seus usuários efetuam login ao app móvel ou da web
 com as credenciais que usam para o Google+.
 * **Customizado**: crie seu próprio provedor de identidade. Você controlará totalmente que tipo de informações serão reunidas e validadas.
 

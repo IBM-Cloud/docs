@@ -6,6 +6,8 @@ lastupdated: "2016-11-07"
 
 ---
 
+{:codeblock:.codeblock}
+
 # Angepassten Identitätsprovider erstellen
 {: #custom-create}
 
@@ -25,6 +27,7 @@ Zur Erstellung eines angepassten Identitätsproviders entwickeln Sie eine Webanw
 {: #custom-startauthorization}
 
 `POST <base_url>/apps/<tenant_id>/<realm_name>/startAuthorization`
+{: codeblock}
 
 Die API `startAuthorization` wird als erster Schritt des Authentifizierungsprozesses verwendet. Ein angepasster Identitätsprovider muss mit dem Status "challenge", "success" oder "failure" antworten.
 
@@ -38,6 +41,7 @@ Eine hohe Flexibilität erhält der Authentifizierungsprozess dadurch, dass ein 
     }
 }
 ```
+{: codeblock}
 
 Ein angepasster Identitätsprovider kann mit Authentifizierungsanforderung ('challenge'), mit sofortigem Erfolg ('success') oder Fehler ('failure') antworten. Der Antwort-HTTP-Status muss `HTTP 200` sein und die das Antwort-JSON-Objekt muss die folgenden Eigenschaften enthalten:
 
@@ -58,11 +62,13 @@ Beispiel:
 	}
 }
 ```
+{: codeblock}
 
 ## API `handleChallengeAnswer`
 {: #custom-handleChallengeAnswer}
 
 `POST <base_url>/apps/<tenant_id>/<realm_name>/handleChallengeAnswer`
+{: codeblock}
 
 Die API `handleChallengeAnswer` verarbeitet eine Antwort auf eine Authentifizierungsanforderung aus dem mobilen Client. Ebenso wie die API `startAuthorization` antwortet die API `handleChallengeAnswer` mit dem Status `challenge` (Anforderung), `success` (Erfolg) oder `failure` (Fehler).
 
@@ -83,6 +89,7 @@ Die API `handleChallengeAnswer` verarbeitet eine Antwort auf eine Authentifizier
  	}
 }
 ```
+{: codeblock}
 
 Die Antwort aus einer API `handleChallengeAnswer` muss dieselbe Struktur wie die Antwort der API `startAuthorization` aufweisen.
 
@@ -106,6 +113,7 @@ Eine Antwort auf eine erfolgreiche Authentifizierungsanforderung muss ein Benutz
     }
 }
 ```
+{: codeblock}
 
 Das Benutzeridentitätsobjekt wird vom {{site.data.keyword.amashort}}-Service zum Generieren eines ID-Tokens verwendet, das an den mobilen Client als Teil des Berechtigungsheaders gesendet wird. Nach einer erfolgreichen Authentifizierung hat der mobile Client uneingeschränkten Zugriff auf das Benutzeridentitätsobjekt.
 

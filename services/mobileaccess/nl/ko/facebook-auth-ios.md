@@ -17,20 +17,20 @@ lastupdated: "2016-11-03"
 **참고:** Objective-C SDK는 그대로 완벽하게 지원되며 여전히 {{site.data.keyword.Bluemix}} 모바일 서비스의 기본 SDK로 간주되지만, 새로운 Swift SDK를 위해 올해 말에 중단될 계획입니다([iOS Swift SDK 설정](facebook-auth-ios-swift-sdk.html) 참조).
 
 ## 시작하기 전에
-{: #facebook-auth-ios-before}
+{: #before-you-begin}
 
 다음이 있어야 합니다.
 * CocoaPods와 작동하도록 설정된 iOS 프로젝트. 자세한 정보는 [iOS SDK 설정](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html)의 **CocoaPods 설치**를 참조하십시오.
    **참고:** 계속하기 전에 코어 {{site.data.keyword.amashort}} 클라이언트 SDK를 설치하지 않아도 됩니다.
 * {{site.data.keyword.amashort}} 서비스에서 보호하는 {{site.data.keyword.Bluemix_notm}} 애플리케이션의 인스턴스. {{site.data.keyword.Bluemix_notm}} 백엔드 작성 방법에 대한 자세한 정보는 [시작하기](index.html)를 참조하십시오. 
 * **AppGUID** 값. {{site.data.keyword.amashort}} 대시보드에서 서비스를 여십시오. **모바일 옵션** 단추를 클릭하십시오. **앱 GUID / TenantId** 필드에 `appGUID`(`tenantId`라고도 함) 값이 표시됩니다. 이 값은 권한 관리자를 초기화하는 데 필요합니다. 
-* Facebook 애플리케이션 ID. 자세한 정보는 [개발자용 Facebook 웹 사이트에서 애플리케이션 작성](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)을 참조하십시오.
+* Facebook 애플리케이션 및 애플리케이션 ID. 자세한 정보는 [개발자용 Facebook 웹 사이트에서 애플리케이션 작성](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)을 참조하십시오.
 
 ## iOS 플랫폼에 대한 Facebook 애플리케이션 구성
 {: #facebook-auth-ios-config}
 개발자용 Facebook 사이트에서: 
 
-1. [Facebook for Developers](https://developers.facebook.com)에서 계정에 로그인하십시오. 새 앱 작성에 대한 정보는 https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)의 내용을 참조하십시오. 
+1. [Facebook for Developers](https://developers.facebook.com)에서 계정에 로그인하십시오.  
 
 1. iOS 플랫폼이 앱에 추가되었는지 확인하십시오. iOS 플랫폼을 추가하거나 구성하는 경우 iOS 애플리케이션의 **bundleId**를 제공해야 합니다. iOS 애플리케이션의 **번들 ID**를 찾으려면, `info.plist` 파일 또는 Xcode 프로젝트 **일반** 탭에서 **번들 ID**를 검색하십시오.
 
@@ -159,7 +159,7 @@ URL 스킴 및 `FacebookappID` 특성을 **Facebook 애플리케이션 ID**로 �
 	#import <IMFCore/IMFCore.h>
 	#import <IMFFacebookAuthentication/IMFFacebookAuthenticationHandler.h>
 	#import <FacebookSDK/FacebookSDK.h>
-```	
+ ```	
 
 	####Swift
 	{: #bridgingheader-swift}
@@ -189,7 +189,7 @@ URL 스킴 및 `FacebookappID` 특성을 **Facebook 애플리케이션 ID**로 �
 
 	```Objective-C
 	[[IMFClient sharedInstance]
-			initializeWithBackendRoute:@"applicationRoute"
+			 initializeWithBackendRoute:@"applicationRoute"
 			backendGUID:@"applicationGUID"];
 	```
 
@@ -198,24 +198,23 @@ URL 스킴 및 `FacebookappID` 특성을 **Facebook 애플리케이션 ID**로 �
 
 	```Swift
 	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
-	 							backendGUID: "applicationGUID")
+	 							                      backendGUID: "applicationGUID")
 	```
 
-1. {{site.data.keyword.amashort}} 서비스 `tenantId` 매개변수를 전달하여 `AuthorizationManager`를 초기화하십시오. [시작하기 전에]를 참조하십시오.
-(#before-you-begin)).
+1. {{site.data.keyword.amashort}} 서비스 `tenantId` 매개변수를 전달하여 `AuthorizationManager`를 초기화하십시오. [시작하기 전에](#before-you-begin)를 참조하십시오.
 
 	####Objective-C
 	{: #authman-objc}
 
 	```Objective-C
-     [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"tenantId"];
-  ```
+ [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: @"tenantId"];
+ ```
 
 	####Swift
 	{: #authman-swift}
 
 	```Swift
-  IMFAuthorizationManager.sharedInstance().initializeWithTenantId("tenantId")
+ IMFAuthorizationManager.sharedInstance().initializeWithTenantId("tenantId")
  ```
 
 1. 앱 활성화에 대한 알림을 Facebook SDK에 전송하고, 앱 위임자의 `application:didFinishLaunchingWithOptions` 메소드에 다음 코드를 추가하여 Facebook 인증 핸들러를 등록하십시오. IMFClient 인스턴스를 초기화한 후 이 코드를 추가하십시오.
@@ -226,7 +225,7 @@ URL 스킴 및 `FacebookappID` 특성을 **Facebook 애플리케이션 ID**로 �
 	```Objective-C
 		[FBAppEvents activateApp];
 		[[IMFFacebookAuthenticationHandler sharedInstance] registerWithDefaultDelegate];
-```
+ ```
 
 	####Swift
 	{: #activate-swift}
@@ -234,7 +233,7 @@ URL 스킴 및 `FacebookappID` 특성을 **Facebook 애플리케이션 ID**로 �
 	```Swift
 		FBAppEvents.activateApp()
 		IMFFacebookAuthenticationHandler.sharedInstance().registerWithDefaultDelegate()
-```
+ ```
 
 1. 다음 코드를 앱 위임자에 추가하십시오. 
 
@@ -283,8 +282,8 @@ URL 스킴 및 `FacebookappID` 특성을 **Facebook 애플리케이션 ID**로 �
 	NSString *requestPath = [NSString stringWithFormat:@"%@/protected",
 								[[IMFClient sharedInstance] backendRoute]];
 
-	IMFResourceRequest *request =  [IMFResourceRequest requestWithPath:requestPath
-																method:@"GET"];
+	IMFResourceRequest *request =  [IMFResourceRequest
+  requestWithPath:requestPath method:@"GET"];
 
 	[request sendWithCompletionHandler:^(IMFResponse *response, NSError *error) {
 		if (error){

@@ -2,11 +2,12 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-30"
+lastupdated: "2016-10-25"
 
 ---
-
 {:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 
 # {{site.data.keyword.amashort}} SDK, esempi e guida di riferimento alle API
@@ -20,7 +21,7 @@ Per aggiungere delle SDK {{site.data.keyword.amafull}} alla tua applicazione cli
 ## SDK Core
 {: #coresdk}
 
-L'SDK Core include le API per abilitare l'autenticazione e l'accesso personalizzati. 
+L'SDK Core include le API per abilitare l'autenticazione e l'accesso personalizzati.
 
 ### Android
 {: #coresdk-android}
@@ -31,7 +32,7 @@ L'SDK Core include le API per abilitare l'autenticazione e l'accesso personalizz
 #### Installa l'SDK Core con Gradle
 {: #coresdk-android-gradle}
 
-Aggiungi una dipendenza di compilazione per il file `build.gradle` della tua applicaizone:
+Aggiungi una dipendenza di compilazione per il file `build.gradle` della tua applicazione:
 
 ```Gradle
     compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
@@ -100,7 +101,7 @@ cordova plugin add bms-core
 #### Installa l'SDK Facebook con Gradle
 {: #facebooksdk-android-gradle}
 
-Aggiungi una dipendenza di compilazione per il file `build.gradle` della tua applicaizone:
+Aggiungi una dipendenza di compilazione per il file `build.gradle` della tua applicazione:
 ```Gradle
     compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
     	name:'facebookauthentication',
@@ -169,7 +170,7 @@ cordova plugin add ibm-mfp-core
 #### Installa l'SDK Google+ con Gradle
 {: #googlesdk-android-gradle}
 
-Aggiungi una dipendenza di compilazione per il file `build.gradle` della tua applicaizone:
+Aggiungi una dipendenza di compilazione per il file `build.gradle` della tua applicazione:
 
 ```Gradle
     compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    

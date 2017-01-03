@@ -20,7 +20,7 @@ Puede utilizar el servicio de {{site.data.keyword.amashort}} para proteger las a
 {: #components}
 
 * **Panel de control de {{site.data.keyword.amashort}}**: configure diversos tipos de aplicaciones
-* **SDK del cliente de {{site.data.keyword.amashort}}**: prepare las aplicaciones móviles para que utilicen la funcionalidad {{site.data.keyword.amashort}}. Las plataformas admitidas son: iOS 8+, Android 4+, Cordova y aplicaciones web. 
+* **SDK del cliente de {{site.data.keyword.amashort}}**: prepare las aplicaciones móviles para que utilicen la funcionalidad {{site.data.keyword.amashort}}. Las plataformas admitidas son: iOS 8+, Android 4+, Cordova y aplicaciones web.
 * **SDK del servidor de {{site.data.keyword.amashort}}**: proteja los recursos que se alojan en {{site.data.keyword.Bluemix_notm}}. Los tiempos de ejecución que se admiten actualmente son Node.js y Liberty for Java&trade;.
 
 ## Tipos de autenticación

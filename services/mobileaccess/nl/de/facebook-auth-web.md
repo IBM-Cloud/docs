@@ -2,9 +2,10 @@
 
 copyright:
   year: 2016
-lastupdated: "2016-11-07"
+lastupdated: "2016-12-04"
 
 ---
+
 {:screen: .screen}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
@@ -29,7 +30,8 @@ Voraussetzungen:
 
 Zur Verwendung von Facebook als Identitätsprovider auf Ihrer Website müssen Sie die Website-Plattform Ihrer Facebook-Anwendung hinzufügen und sie konfigurieren.
 
-1. Melden Sie sich auf der Site [Facebook for Developers](https://developers.facebook.com) bei Ihrem Konto an. Informationen zum Erstellen einer neuen App finden Sie unter [Anwendung auf der Site 'Facebook for Developers' erstellen](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID). 
+1. Melden Sie sich auf der Site [Facebook for Developers](https://developers.facebook.com) bei Ihrem Konto an. 
+	Informationen zum Erstellen einer neuen App finden Sie unter [Anwendung auf der Site 'Facebook for Developers' erstellen](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID). 
 1. Notieren Sie die **App-ID** und den **geheimen Schlüssel der App**. Sie benötigen diese Werte beim Konfigurieren Ihres Webprojekts für die Facebook-Authentifizierung im Mobile Client Access-Dashboard.
 1. Wählen Sie unter **Products List** die Option **Facebook Login** aus.
 4. Fügen Sie die **Web**-Plattform hinzu, falls sie nicht vorhanden ist.

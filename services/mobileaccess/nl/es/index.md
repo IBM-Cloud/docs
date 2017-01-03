@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-07"
+lastupdated: "2016-11-15"
 
 ---
 
@@ -18,10 +18,12 @@ Añada seguridad a la app para móvil con el servicio {{site.data.keyword.amaful
 Para comenzar a utilizar el servicio {{site.data.keyword.amashort}}:
 
 1. Utilice una de las siguientes opciones para crear un servicio enlazado o no enlazado:
- * Cree una aplicación {{site.data.keyword.Bluemix_notm}} utilizando el contenedor modelo **MobileFirst Services Starter** del catálogo. Esto crea un servicio de {{site.data.keyword.amashort}} enlazado a una aplicación de programa de fondo de {{site.data.keyword.Bluemix_notm}}. 
- * Cree un servicio de {{site.data.keyword.amashort}} mediante el panel de control de {{site.data.keyword.amashort}}. Puede enlazar el servicio a una aplicación de programa de fondo existente y configurarlo en el panel de control de {{site.data.keyword.amashort}}.  
+ * Cree una aplicación {{site.data.keyword.Bluemix_notm}} utilizando el contenedor modelo **MobileFirst Services Starter** del catálogo. Esto crea un servicio de {{site.data.keyword.amashort}} enlazado a una aplicación de programa de fondo de {{site.data.keyword.Bluemix_notm}}.
+ * Cree un servicio de {{site.data.keyword.amashort}} mediante el panel de control de {{site.data.keyword.amashort}}.  Puede enlazar el servicio a una aplicación de programa de fondo existente y configurarlo en el panel de control de {{site.data.keyword.amashort}}.
 
    Cuando utilice MobileFirst Services Starter, obtendrá una instancia de un tiempo de ejecución Node.js que se ejecuta en IBM {{site.data.keyword.Bluemix_notm}} para implementar la lógica del programa de fondo móvil. Se enlaza a la app Node.js un conjunto de servicios móviles principales que ofrecen funciones de seguridad, datos, envío y supervisión. Después de crear la app Node.js de {{site.data.keyword.Bluemix_notm}}, puede configurar el entorno de desarrollo y empezar a utilizar los SDK de {{site.data.keyword.Bluemix_notm}} Mobile Services. Puede utilizar los SDK para acceder a los servicios que están enlazados a la app de nube con sencillas llamadas API.
+
+	Para obtener más información sobre cómo crear y trabajar con proyectos, aplicaciones y servicios, consulte [Panel de control de IBM Bluemix Mobile](https://console.{DomainName}/docs/mobile/index.html).
 
 2. Recursos seguros del lado del servidor.
 
@@ -48,7 +50,7 @@ Para comenzar a utilizar el servicio {{site.data.keyword.amashort}}:
 	####Desarrollo web
    {: #web-development}
 
-   El servicio de {{site.data.keyword.amashort}} puede proteger su aplicación web, que no requiere SDK especiales. Puede aprovechar diferentes proveedores de identidad, además de la protección suministrada por el servicio de {{site.data.keyword.amashort}}. La integración de {{site.data.keyword.amashort}} permite que cualquier aplicación web, independientemente de la tecnología que implemente, aproveche el protocolo OAuth2. Para obtener información sobre cómo configurar la app web de {{site.data.keyword.amashort}} para que acceda al servicio de {{site.data.keyword.amashort}} utilizando otros proveedores de identidad, consulte: 
+   El servicio de {{site.data.keyword.amashort}} puede proteger su aplicación web, que no requiere SDK especiales. Puede aprovechar diferentes proveedores de identidad, además de la protección suministrada por el servicio de {{site.data.keyword.amashort}}. La integración de {{site.data.keyword.amashort}} permite que cualquier aplicación web, independientemente de la tecnología que implemente, aproveche el protocolo OAuth2. Para obtener información sobre cómo configurar la app web de {{site.data.keyword.amashort}} para que acceda al servicio de {{site.data.keyword.amashort}} utilizando otros proveedores de identidad, consulte:
 
     * [Habilitación de la autenticación de Facebook para aplicaciones web](facebook-auth-web.html)
 

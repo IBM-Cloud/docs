@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016
-lastupdated: "2016-11-01"
+lastupdated: "2016-11-22"
 
 ---
 
@@ -57,8 +57,7 @@ de serviço {{site.data.keyword.amashort}}.
 1. Verifique **Incluir Google a um app da
 web**
 4. Na seção **Configurar para web**:   
-    * Observe o valor na caixa de texto **URI de redirecionamento do Mobile Client Access para o Google Developer Console**. 
-Esse é o valor necessário para incluir na caixa **URIs
+    * Observe o valor na caixa de texto **URI de redirecionamento do Mobile Client Access para o Google Developer Console**. Esse é o valor necessário para incluir na caixa **URIs
 de redirecionamento autorizado** em
 **Restrições no Identificador de cliente para
 aplicativo da web** do **Portal de
@@ -73,8 +72,7 @@ redirecionamento seja acessado após o processo de autorização ser concluído 
 {: #google-auth-flow}
 
 A variável de ambiente `VCAP_SERVICES` é criada automaticamente para cada instância de serviço do
-{{site.data.keyword.amashort}} e contém propriedades necessárias para o processo de autorização. 
-Ela consiste em um objeto JSON e pode ser visualizada clicando
+{{site.data.keyword.amashort}} e contém propriedades necessárias para o processo de autorização. Ela consiste em um objeto JSON e pode ser visualizada clicando
 na guia **Credenciais de serviço** no painel de serviço
 {{site.data.keyword.amashort}}.
 
@@ -82,8 +80,10 @@ Para iniciar o processo de autorização:
 
 1. Recupere o terminal de autorização (`authorizationEndpoint`) e o clientId (`clientId`) das credenciais
 de serviço armazenadas na variável de ambiente `VCAP_SERVICES`. 
+
 	`var cfEnv = require("cfenv");` 
-	 `var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;` 
+	
+	`var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;` 
 
 	**Nota:** se você tiver incluído o
 serviço {{site.data.keyword.amashort}} em seu aplicativo
@@ -133,8 +133,9 @@ app.get("/protected", checkAuthentication, function(req, res, next){
 				redirectUrl += "&redirect_uri=" + redirectUri; 
 				res.redirect(redirectUrl); 
 			} 
-		} 
-	}
+		 	} 
+	   	}
+       }
 	```
 	{: codeblock}
 
@@ -143,9 +144,7 @@ representa seu URI de redirecionamento de aplicativo da web e
 deve ser igual àquele
 definido no painel {{site.data.keyword.amashort}}.
 
-
-	Após redirecionar para o terminal de autorização, o usuário obterá um formulário de login do Google. 
-Depois que o usuário concede permissões para efetuar login
+	Após redirecionar para o terminal de autorização, o usuário obterá um formulário de login do Google. Depois que o usuário concede permissões para efetuar login
 usando a identidade do Google, o serviço
 {{site.data.keyword.amashort}} chama o URI de
 redirecionamento de aplicativo da web, fornecendo o código de
@@ -210,8 +209,9 @@ nas credenciais de serviço. Como alternativa, use as URLs a seguir, dependendo 
 	```
 	{: codeblock}
 
-	O parâmetro `redirect_uri` é o URI para redirecionar, após a autenticação bem-sucedida ou com falha com o Google+ e deve
-corresponder ao `redirect_uri` a partir da etapa 1.  
+	O parâmetro `redirect_uri` é o URI
+para redirecionamento, após a autenticação bem-sucedida ou com falha no Google+, e deve corresponder
+ao `redirect_uri` definido no painel do {{site.data.keyword.amashort}}.  
    
 	Certifique-se de enviar esta solicitação POST no período de 10 minutos, após o qual, o código de concessão expirará. Depois de 10 minutos, será necessário um novo código.
 

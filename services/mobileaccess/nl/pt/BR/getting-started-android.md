@@ -2,28 +2,31 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-03"
+lastupdated: "2016-12-05"
 
 ---
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # Configurando o SDK do Android
 {: #getting-started-android}
 
 Instrumente seu aplicativo Android com o {{site.data.keyword.amafull}} client SDK, inicialize o SDK e faça as solicitações para recursos protegidos e desprotegidos.
-
-{:shortdesc}
+{: shortdesc}
 
 ## Antes de Começar
 {: #before-you-begin}
+
 Você deve ter:
+
 * Uma instância de um aplicativo
 {{site.data.keyword.Bluemix_notm}}.
 * Uma instância de um serviço
 {{site.data.keyword.amafull}}.
-* Seu **TenantID**. Abra o seu serviço no painel do {{site.data.keyword.amafull}}. 
-Clique no botão **Opções móveis**. Os valores
+* Seu **TenantID**. Abra o seu serviço no painel do {{site.data.keyword.amafull}}. Clique no botão **Opções móveis**. Os valores
 `tenantId` (também conhecido como
 `appGUID`) são exibidos no campo **App
 GUID / TenantId**. Você precisará desse valor para
@@ -32,7 +35,7 @@ inicializar o Gerenciador de Autorização.
 URL do seu aplicativo backend. Você precisa desse valor para
 enviar solicitações para seus terminais protegidos.
 * A {{site.data.keyword.Bluemix_notm}}
-**Região**. É possível encontrar a sua região
+**Região**.  É possível encontrar a sua região
 {{site.data.keyword.Bluemix_notm}} atual no cabeçalho,
 próximo ao ícone **Avatar**
 ![ícone de avatar](images/face.jpg "ícone de avatar"). O valor da região que aparece deve ser um dos
@@ -68,15 +71,17 @@ do projeto).
         transitive: true
     	// other dependencies  
 }
-```
+	```
+	{: codeblock}
 
 1. Sincronizar seu projeto com o Gradle. Clique em **Ferramentas &gt; Android &gt; Sincronizar projeto com arquivos Gradle**.
 
-1. Abra o arquivo `AndroidManifest.xml` para seu projeto Android. Inclua a permissão de acesso à Internet no elemento `<manifest>`:
+1. Abra o arquivo `AndroidManifest.xml` para seu projeto Android. Inclua a permissão de acesso à Internet sob o elemento `<manifest>`:
 
 	```XML
 	<uses-permission android:name="android.permission.INTERNET" />
-```
+	```
+	{: codeblock}
 
 ## Inicializando o {{site.data.keyword.amashort}} client SDK
 {: #initalize-mca-sdk}
@@ -86,10 +91,10 @@ método `initialize`. Um local comum, mas não obrigatório, para colocar o cód
 
 ```Java 	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
 
-  BMSClient.getInstance().setAuthorizationManager(
+BMSClient.getInstance().setAuthorizationManager(
 					MCAAuthorizationManager.createInstance(this, "<MCAServiceTenantId>"));
-
 ```
+{: codeblock}
 
 * Substitua `<
 applicationBluemixRegion>` pela região em que seu serviço
@@ -97,7 +102,9 @@ applicationBluemixRegion>` pela região em que seu serviço
 hospedado.
 * Substitua `<
 MCAServiceTenantId>` pelo
-**tenantId**. Para obter mais informações
+**tenantId** 
+
+. Para obter mais informações
 sobre esses valores, consulte
 [Antes de iniciar](#before-you-begin).
 
@@ -114,7 +121,7 @@ seu navegador, abra a URL a seguir: `{applicationRoute}/protected`
 
 	O terminal `/protected` de um aplicativo backend móvel que foi criado com o modelo MobileFirst Services Starter é protegido com {{site.data.keyword.amashort}}. Uma mensagem `Unauthorized` é retornada em seu navegador, porque esse terminal só pode ser acessado por aplicativos móveis instrumentados com o SDK do cliente {{site.data.keyword.amashort}}.
 
-1. Use seu aplicativo Android para fazer uma solicitação ao mesmo terminal. Inclua o código a seguir depois de inicializar o `BMSClient`:
+1. Use seu aplicativo Android para fazer uma solicitação ao mesmo terminal. Inclua o código a seguir depois de inicializar `BMSClient`:
 
 	```Java
 	Request request = new Request("http://my-mobile-backend.mybluemix.net/protected", Request.GET);
@@ -135,6 +142,7 @@ seu navegador, abra a URL a seguir: `{applicationRoute}/protected`
 		}
 	});
 	```
+	{: codeblock}
 
 1. Quando suas solicitações forem bem-sucedidas, você verá a saída a seguir no utilitário LogCat:
 
@@ -144,6 +152,7 @@ seu navegador, abra a URL a seguir: `{applicationRoute}/protected`
 {: #next-steps}
 
 Quando você se conectou ao terminal protegido, nenhuma credencial foi necessária. Para requerer que os usuários efetuem login no aplicativo, deve-se configurar autenticação do Facebook, Google ou customizada.
+
 * [Facebook
 ](facebook-auth-android.html)
 * [Google](google-auth-android.html)

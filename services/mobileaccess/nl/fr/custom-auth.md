@@ -6,6 +6,8 @@ lastupdated: "2016-11-2"
 
 ---
 
+{:codeblock:.codeblock}
+
 # Authentification d'utilisateurs à l'aide d'un fournisseur d'identité personnalisé
 {: #custom-id}
 
@@ -70,6 +72,7 @@ personnaliser les flux d'authentification.
 		}
 	}
 	```
+	{: codeblock}
 
 1. Implémentez éventuellement des flux de collecte de données d'identification personnalisés sur le client, notamment l'authentification
 multi-étapes et multi-forme. De la même manière que pour la demande d'authentification personnalisée, vous devez créer la structure de la réponse personnalisée.
@@ -83,6 +86,8 @@ multi-étapes et multi-forme. De la même manière que pour la demande d'authent
 		pincode:"1234"
 	}
 	```
+	{: codeblock}
+	
 1. Implémenter la logique personnalisée de la validation fournie par la réponse à la demande d'authentification.
 
 1. Définir un objet identité de l'utilisateur personnalisé contenant les propriétés personnalisées requises. Ci-après figure un exemple d'objet d'identité
@@ -99,6 +104,7 @@ utilisateur personnalisé obtenu par le client après aboutissement de l'authent
 		}
 	}
 	```
+	{: codeblock}
 
 ### Exemple d'implémentation d'un fournisseur d'identité personnalisé
 {: #custom-sample}

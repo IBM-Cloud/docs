@@ -80,4 +80,6 @@ Le corps de la réponse `POST` contient les paramètres *access_token* et *id_to
 ## Test de l'authentification
 
 
-Vous pouvez maintenant commencer à effectuer des demandes dans vos ressources protégées. Toutes ces demandes doivent contenir le paramètre `access_token`. Envoyez le jeton d'accès vers la zone d'en-tête `the-Authorization-request`.
+Vous pouvez maintenant commencer à effectuer des demandes dans vos ressources protégées.
+Toutes ces demandes doivent contenir le paramètre `access_token`.
+Envoyez le jeton d'accès vers la zone d'en-tête `the-Authorization-request`.

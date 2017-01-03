@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-07"
+lastupdated: "2016-11-15"
 
 ---
 
@@ -22,6 +22,8 @@ Per essere operativo in tempi brevi con il servizio {{site.data.keyword.amashort
  * Crea un servizio {{site.data.keyword.amashort}} utilizzando il dashboard {{site.data.keyword.amashort}}.  Puoi eseguire il bind del servizio a un'applicazione di back-end esistente e configurarlo nel dashboard {{site.data.keyword.amashort}}.
 
    Quando utilizzi MobileFirst Services Starter, ottieni un'istanza di un runtime Node.js che viene eseguito su IBM {{site.data.keyword.Bluemix_notm}} per implementare la tua logica di back-end personalizzata. A tale applicazione Node.js viene associata mediante bind una serie di servizi mobili di base che forniscono funzioni di sicurezza, dati, push e monitoraggio. Dopo che l'applicazione {{site.data.keyword.Bluemix_notm}} Node.js è stata creata, puoi configurare il tuo ambiente di sviluppo e iniziare a utilizzare gli SDK {{site.data.keyword.Bluemix_notm}} Mobile Services. Puoi utilizzare gli SDK per accedere ai servizi associati mediante bind alla tua applicazione cloud con delle semplici chiamate API.
+
+	Per ulteriori informazioni su come creare e lavorare con progetti, applicazioni e servizi, vedi [IBM Bluemix Mobile dashboard](https://console.{DomainName}/docs/mobile/index.html).
 
 2. Risorse lato server sicure.
 

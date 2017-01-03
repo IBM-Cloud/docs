@@ -2,15 +2,16 @@
 
 copyright:
   year: 2016
-lastupdated: "2016-11-07"
+lastupdated: "2016-12-04"
 
 ---
+
 {:screen: .screen}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 
 
-# Abilitazione dell'autenticazione Facebook per le applicazioni Web 
+# Abilitazione dell'autenticazione Facebook per le applicazioni Web
 {: #facebook-auth-web}
 
 Utilizza Facebook per autenticare gli utenti alla tua applicazione Web {{site.data.keyword.amafull}}. Aggiungi la funzionalità di sicurezza {{site.data.keyword.amashort}}. 
@@ -24,12 +25,12 @@ Utilizza Facebook per autenticare gli utenti alla tua applicazione Web {{site.da
 * L'URI Per il reindirizzamento finale (dopo il completamento del processo di autorizzazione).
 
 
-## Configurazione di un'applicazione sul sito Facebook  for Developers 
+## Configurazione di un'applicazione sul sito Facebook  for Developers
 {: #facebook-auth-config}
 
 Per utilizzare Facebook come provider di identità per il tuo sito web, devi aggiungere e impostare la piattaforma del sito web sull'applicazione Facebook.
 
-1. Accedi al tuo account nel sito [Facebook for Developers](https://developers.facebook.com).
+1. Accedi al tuo account nel sito [Facebook for Developers](https://developers.facebook.com). 
 	Per informazioni sulla creazione di una nuova applicazione, consulta [Creazione di un'applicazione nel sito web Facebook for Developers](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID). 
 1. Prendi nota di **App ID** e **App Secret**. Avrai bisogno di questi valori quando configuri il tuo progetto Web per l'autenticazione Facebook nel dashboard Mobile Client Access.
 1. Da **Products List**, scegli **Facebook Login**.
@@ -43,11 +44,11 @@ Per utilizzare Facebook come provider di identità per il tuo sito web, devi agg
 
 Una volta che disponi del tuo ID applicazione Facebook e del segreto applicazione e la tua applicazione Facebook for Developers è stata configurata perché serva i client Web, puoi abilitare l'autenticazione Facebook nel dashboard {{site.data.keyword.amashort}}.
 
-1. Apri il dashboard del servizio {{site.data.keyword.amashort}}.  
+1. Apri il dashboard del servizio {{site.data.keyword.amashort}}.
 1. Dalla scheda **Manage**, attiva **Authorization**.
 1. Espandi la sezione **Facebook**.
 1. Seleziona **Add Facebook to a Web App**.
-5. Prendi nota del valore nella casella di testo **Mobile Client Access Redirect URI for Facebook for Developers**. Hai bisogno di questo valore da aggiungere alla casella **Valid OAuth redirect URIs** in **Facebook Login** del portale Facebook Developers. 
+5. Prendi nota del valore nella casella di testo **Mobile Client Access Redirect URI for Facebook for Developers**. Hai bisogno di questo valore da aggiungere alla casella **Valid OAuth redirect URIs** in **Facebook Login** del portale Facebook Developers.
 6. Immetti il **App ID** e **App Secret** ottenuti dal sito web Facebook for Developers.
 7. Immetti l'URI di reindirizzamento in **Your Web Application Redirect URIs**. Questo valore è per l'URI di reindirizzamento a cui accedere dopo che viene completato il processo di autorizzazione e viene determinato dallo sviluppatore.
 8. Fai clic su **Save**.
@@ -106,7 +107,7 @@ Per avviare il processo di autorizzazione:
 			var authorizationEndpoint = mcaCredentials.authorizationEndpoint;
 			var clientId = mcaCredentials.clientId;
 			var redirectUri = "http://some-server/oauth/callback";
-			// Il tuo URI di reindirizzamento dell'applicazione web
+			// Il tuo URI di reindirizzamento dell'applicazione web   
 
 			var redirectUrl = authorizationEndpoint + "?response_type=code";
         redirectUrl += "&client_id=" + clientId;   
@@ -149,7 +150,7 @@ Il passo successivo è quello di ottenere i token di accesso e di identità util
 	`     https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/token
  `
  
-2. Invia una richiesta POST all'URI del server del token con il tipo di concessione ("authorization_code"), `clientId` e il tuo URI di reindirizzamento come parametri del modulo. Invia `clientId` e `secret` come credenziali di autenticazion HTTP di base.
+2. Invia una richiesta POST all'URI del server del token con il tipo di concessione ("authorization_code"), `clientId` e il tuo URI di reindirizzamento come parametri del modulo. Invia `clientId` e `secret` come credenziali di autenticazione HTTP di base.
  
 	Il seguente codice richiama i valori necessari e li invia con una richiesta POST:
 

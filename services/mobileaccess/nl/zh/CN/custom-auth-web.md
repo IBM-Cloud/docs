@@ -2,16 +2,17 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-11-03"
+lastupdated: "2016-12-05"
 
 ---
-
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
 {:codeblock: .codeblock}
+{:pre: .pre}
 
 #针对 {{site.data.keyword.amashort}} Web 应用程序配置定制认证
 {: #custom-web}
-
 
 将定制认证和 {{site.data.keyword.amafull}} 安全功能添加到 Web 应用程序。
 
@@ -25,7 +26,7 @@ lastupdated: "2016-11-03"
 * **TenantID** 值。在 {{site.data.keyword.amashort}}“仪表板”中打开服务。单击**移动选项**按钮。`tenantId`（也称为 `appGUID`）值会显示在**应用程序 GUID/TenantId** 字段中。您将需要此值来初始化授权管理器。
 * **域名**。这是在 {{site.data.keyword.amashort}}“仪表板”的**管理**选项卡中**定制**部分的**域名**字段中指定的值。
 * 后端应用程序的 URL（**应用程序路径**）。您将需要此值来向后端应用程序的受保护端点发送请求。
-* {{site.data.keyword.Bluemix_notm}} **区域**。您可以在**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标") 旁边的标题中找到当前 {{site.data.keyword.Bluemix_notm}} 区域。显示的区域值应为以下某个值：`美国南部`、`英国`或`悉尼`，并对应于 Javascript 代码中需要的 SDK 值：`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_UK` 或 `BMSClient.REGION_SYDNEY`。您将需要此值来初始化 {{site.data.keyword.amashort}} 客户端。
+* {{site.data.keyword.Bluemix_notm}} **区域**。您可以在**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标") 旁边的头中找到当前 {{site.data.keyword.Bluemix_notm}} 区域。显示的区域值应为以下某个值：`US South`、`United Kingdom` 或 `Sydney`，并对应于 Javascript 代码中需要的 SDK 值：`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_UK` 或 `BMSClient.REGION_SYDNEY`。您将需要此值来初始化 {{site.data.keyword.amashort}} 客户端。
 * 最终重定向的 URI（授权流程完成后）。这是在**管理**选项卡的**定制**部分中输入的 **Web 应用程序重定向 URI** 值。
 
 有关更多信息，请参阅：
@@ -127,13 +128,12 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer',
 1. 从存储在 `VCAP_SERVICES` 环境变量的服务凭证中，检索授权端点 (`authorizationEndpoint`) 和客户端标识 (`clientId`)。 
 
 	`var cfEnv = require("cfenv");` 
-	
-	`var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;` 
 
+	`var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;` 
 
 	**注：**如果在添加 Web 支持之前，您已向应用程序添加了
 {{site.data.keyword.amashort}} 服务，那么可能在服务凭证中没有令牌端点。请改为使用下列 URL，具体取决于 {{site.data.keyword.Bluemix_notm}} 区域： 
-  
+
 	美国南部： 
 
 	`  https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization
@@ -153,7 +153,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer',
 
 3. 从 Web 应用程序重定向到生成的 URI。 
 
-	以下示例从 `VCAP_SERVICES` 变量检索参数，构建 URL，并发送重定向请求。
+   以下示例从 `VCAP_SERVICES` 变量检索参数，构建 URL，并发送重定向请求。
 
 	```Java
  var cfEnv = require("cfenv"); 
@@ -200,21 +200,16 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer',
 	**注：**如果在添加 Web 支持之前，您已向应用程序添加了 {{site.data.keyword.amashort}} 服务，那么可能在服务凭证中没有令牌端点。请改为使用下列 URL，具体取决于 {{site.data.keyword.Bluemix_notm}} 区域： 
 
 	美国南部： 
-  
-	`     https://mobileclientaccess.ng.bluemix.net/oauth/v2/token
- `
+
+	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/token`
+
+	伦敦： 
+	
+	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token` 
  
-	  伦敦：
-   
- 
-	`     https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token
- ` 
- 
-	  悉尼：
-   
- 
-	`     https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/token
- `
+	悉尼： 
+
+	`https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/token`
  
 2. 使用 `grant_type`、`client_id`、`redirect_uri` 和 `code` 作为表单参数，`clientId` 和 `secret` 作为基本 HTTP 认证凭证，向令牌服务器 URI 发送 POST 请求。
 
@@ -235,10 +230,10 @@ app.get("/oauth/callback", function(req, res, next){
 		} 
 
 		request.post({ 
-			url: tokenEndpoint, 
-        formData: formData 
-      }, function (err, response, body){ 
-        var parsedBody = JSON.parse(body); 
+			url: tokenEndpoint,
+			formData: formData
+		}, function (err, response, body) {
+			var parsedBody = JSON.parse(body); 
 
       req.session.accessToken = parsedBody.access_token; 
       req.session.idToken = parsedBody.id_token; 
@@ -277,7 +272,4 @@ code 数值应该是在授权请求结束时响应中收到的授权代码。授
 * `<accessToken>` 和 `<idToken>` 必须以
 空格分隔。
 
-* 身份令牌是可选的。如果您未提供身份令牌，那么虽然可以访问受保护资源，但是不会收到有关已授权用户的任何信息。 
-
-
-
+* 身份令牌是可选的。如果您未提供身份令牌，那么虽然可以访问受保护资源，但是不会收到有关已授权用户的任何信息。

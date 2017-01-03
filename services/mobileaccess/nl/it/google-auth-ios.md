@@ -52,7 +52,7 @@ Ora che hai un ID client iOS, puoi abilitare l'autenticazione Google nel dashboa
 1. Apri il tuo servizio nel dashboard {{site.data.keyword.amashort}}.
 1. Dalla scheda **Manage**, attiva **Authorization**.
 1. Espandi la sezione **Google**.
-1. In **Application ID for iOS**, specifica il tuo ID client Google per iOS. 
+1. In **Application ID for iOS**, specifica il tuo ID client Google per iOS.
 1. Fai clic su **Save**.
 
 

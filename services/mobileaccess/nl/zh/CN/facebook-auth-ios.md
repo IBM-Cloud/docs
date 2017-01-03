@@ -17,20 +17,20 @@ lastupdated: "2016-11-03"
 **注：**虽然 Objective-C SDK 仍受到完全支持，且仍视为 {{site.data.keyword.Bluemix}} Mobile Services 的主 SDK，但是有计划要在今年晚些时候停止使用此 SDK，以支持新的 Swift SDK（请参阅[设置 iOS Swift SDK](facebook-auth-ios-swift-sdk.html)）。
 
 ## 开始之前
-{: #facebook-auth-ios-before}
+{: #before-you-begin}
 
 您必须具有：
 * 设置为使用 CocoaPods 的 iOS 项目。有关更多信息，请参阅[设置 iOS SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html) 中的**安装 CocoaPods**。
 **注：**继续之前，您无需安装核心 {{site.data.keyword.amashort}} 客户端 SDK。
 * 受 {{site.data.keyword.amashort}} 服务保护的 {{site.data.keyword.Bluemix_notm}} 应用程序实例。有关如何创建 {{site.data.keyword.Bluemix_notm}} 后端的更多信息，请参阅[入门](index.html)。
 * **AppGUID** 值。在 {{site.data.keyword.amashort}}“仪表板”中打开服务。单击**移动选项**按钮。`AppGUID`（也称为 `tenantId`）值会显示在**应用程序 GUID/TenantId** 字段中。您将需要此值来初始化授权管理器。
-* Facebook 应用程序标识。有关更多信息，请参阅[在 Facebook for Developers Web 站点上创建应用程序](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)。
+* Facebook 应用程序和应用程序标识。有关更多信息，请参阅[在 Facebook for Developers Web 站点上创建应用程序](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)。
 
 ## 针对 iOS 平台配置 Facebook 应用程序
 {: #facebook-auth-ios-config}
 在 Facebook for Developers 站点上：
 
-1. 在 [Facebook for Developers](https://developers.facebook.com) 上登录到您的帐户。有关创建新应用程序的信息，请参阅 https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)。 
+1. 在 [Facebook for Developers](https://developers.facebook.com) 上登录到您的帐户。 
 
 1. 确保 iOS 平台已添加到应用程序。添加或配置 iOS 平台时，需要提供 iOS 应用程序的 **bundleId**。要找到 iOS 应用程序的 **bundleId**，请在 `info.plist` 文件或 Xcode 项目的**常规**选项卡中查找**捆绑软件标识**。
 
@@ -203,8 +203,7 @@ lastupdated: "2016-11-03"
                                backendGUID: "applicationGUID")
 	```
 
-1. 通过传递 {{site.data.keyword.amashort}} 服务 `tenantId` 参数来初始化 `AuthorizationManager`。请参阅 [开始之前]
-(#before-you-begin))。
+1. 通过传递 {{site.data.keyword.amashort}} 服务 `tenantId` 参数来初始化 `AuthorizationManager`。请参阅[开始之前](#before-you-begin)。
 
 	####Objective-C
 	{: #authman-objc}
@@ -345,7 +344,7 @@ lastupdated: "2016-11-03"
 	```
 {: codeblock}
 
-	如果您在用户登录 Facebook 之后调用此代码，并且用户尝试重新登录，那么系统将提示他们授予 {{site.data.keyword.amashort}} 权限，以使用 Facebook 进行认证。
+	如果您在用户登录 Facebook 之后调用此代码，并且用户尝试重新登录，那么系统将提示他们授权 {{site.data.keyword.amashort}} 使用 Facebook 进行认证。
 
 	要切换用户，您必须调用此代码，并且用户必须在浏览器中注销 Facebook。
 

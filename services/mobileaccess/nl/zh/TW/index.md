@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-07"
+lastupdated: "2016-11-15"
 
 ---
 
@@ -22,6 +22,8 @@ lastupdated: "2016-11-07"
  * 使用 {{site.data.keyword.amashort}} 儀表板來建立 {{site.data.keyword.amashort}} 服務。您可以將服務連結至現有的後端應用程式，並且在 {{site.data.keyword.amashort}} 儀表板中加以配置。
 
    當您使用 MobileFirst Services Starter 時，會取得在 IBM {{site.data.keyword.Bluemix_notm}} 上執行的 Node.js 運行環境實例來實作自訂後端邏輯。會將一組提供安全、資料、推送及監視功能的核心行動服務連結至該 Node.js 應用程式。建立 {{site.data.keyword.Bluemix_notm}} Node.js 應用程式之後，即可設定開發環境，並開始使用 {{site.data.keyword.Bluemix_notm}} Mobile Services SDK。您可以使用 SDK，透過簡單的 API 呼叫來存取連結至雲端應用程式的服務。
+
+	如需如何建立及使用專案、應用程式及服務的相關資訊，請參閱 [IBM Bluemix 行動儀表板](https://console.{DomainName}/docs/mobile/index.html)。
 
 2. 保護伺服器端資源的安全。
 
@@ -48,11 +50,11 @@ lastupdated: "2016-11-07"
 
    {{site.data.keyword.amashort}} 服務可以保護您的 Web 應用程式，而不需要特殊的 SDK。除了 {{site.data.keyword.amashort}} 服務提供的保護外，您還可以運用不同的身分提供者。{{site.data.keyword.amashort}} 整合可讓任何 Web 應用程式（不論其實作何種技術）充分運用 OAuth2 通訊協定。如需將 {{site.data.keyword.amashort}} Web 應用程式設定為使用不同身分提供者來存取 {{site.data.keyword.amashort}} 服務的相關資訊，請參閱：
 
-    * [為 Web 應用程式啟用 Facebook 鑑別](facebook-auth-web.html)
+    * [啟用 Web 應用程式的 Facebook 鑑別](facebook-auth-web.html)
 
-    * [為 Web 應用程式啟用 Google 鑑別](google-auth-web.html)
+    * [啟用 Web 應用程式的 Google 鑑別](google-auth-web.html)
 
-    * [為 Web 應用程式啟用自訂鑑別](custom-auth-web.html)
+    * [啟用 Web 應用程式的自訂鑑別](custom-auth-web.html)
 
 4. **選用項目：**配置應用程式的身分提供者。您可以為每個應用程式配置一個身分提供者。配置身分提供者可讓行動應用程式使用者利用其現有 Facebook 或 Google+ 帳戶進行登入。或者，您可以建立自訂鑑別來定義使用者的登入方式。
    * [使用 Facebook 認證鑑別使用者](facebook-auth-overview.html)

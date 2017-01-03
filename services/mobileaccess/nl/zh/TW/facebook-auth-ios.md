@@ -17,20 +17,20 @@ lastupdated: "2016-11-03"
 **附註：**雖然仍然完全支援 Objective-C SDK 且將它視為 {{site.data.keyword.Bluemix}} Mobile Services 的主要 SDK，不過預計在今年稍晚停止使用它，改用新的 Swift SDK（請參閱[設定 iOS Swift SDK](facebook-auth-ios-swift-sdk.html)）。
 
 ## 開始之前
-{: #facebook-auth-ios-before}
+{: #before-you-begin}
 
 您必須具有：
 * 設定成使用 CocoaPods 的 iOS 專案。如需相關資訊，請參閱[設定 iOS SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html) 中的**安裝 CocoaPods**。
    **附註：**您不需要安裝核心 {{site.data.keyword.amashort}} 用戶端 SDK，即可繼續進行。
 * {{site.data.keyword.amashort}} 服務所保護的 {{site.data.keyword.Bluemix_notm}} 應用程式實例。如需如何建立 {{site.data.keyword.Bluemix_notm}} 後端的相關資訊，請參閱[開始使用](index.html)。
-* **AppGUID** 值。在 {{site.data.keyword.amashort}} 儀表板中，開啟服務。按一下**行動選項**按鈕。`appGUID`（也稱為 `tenantId`）值會顯示在**應用程式 GUID/租戶 ID** 欄位中。您需要此值來起始設定「授權管理程式」。
-* Facebook 應用程式 ID。如需相關資訊，請參閱[在 Facebook for Developers 網站上建立應用程式](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)。
+* **AppGUID** 值。在 {{site.data.keyword.amashort}} 儀表板中，開啟服務。按一下**行動選項**按鈕。`appGUID`（也稱為 `tenantId`）值會顯示在**應用程式 GUID/承租戶 ID** 欄位中。您需要此值來起始設定「授權管理程式」。
+* Facebook 應用程式及應用程式 ID。如需相關資訊，請參閱[在 Facebook for Developers 網站上建立應用程式](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)。
 
 ## 針對 iOS 平台配置 Facebook 應用程式
 {: #facebook-auth-ios-config}
 在 Facebook for Developers 網站上，執行下列動作：
 
-1. 在 [Facebook for Developers](https://developers.facebook.com) 上，登入您的帳戶。如需建立新應用程式的相關資訊，請參閱 https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID) 
+1. 在 [Facebook for Developers](https://developers.facebook.com) 上，登入您的帳戶。 
 
 1. 確保 iOS 平台已新增至您的應用程式。在新增或配置 iOS 平台時，您需要提供 iOS 應用程式的 **bundleId**。若要尋找 iOS 應用程式的 **bundleId**，請在 `info.plist` 檔案或 Xcode 專案**一般**標籤中尋找**軟體組 ID**。
 
@@ -50,7 +50,7 @@ lastupdated: "2016-11-03"
 	1. 展開 **Facebook** 區段。
 	1. 新增 **Facebook 應用程式 ID**，然後按一下**儲存**。
 
-## 配置適用於 iOS 的 {{site.data.keyword.amashort}} Facebook 用戶端 SDK
+## 針對 iOS 配置 {{site.data.keyword.amashort}} Facebook 用戶端 SDK
 {: #facebook-auth-ios-sdk}
 
 ### 安裝 CocoaPods
@@ -139,7 +139,7 @@ lastupdated: "2016-11-03"
 
 使用 **Facebook 應用程式 ID** 來更新 URL 架構和 `FacebookappID` 內容。
 
- **重要事項**：請確定您未置換 `info.plist` 檔案中的任何現有內容。如果您具有重疊的內容，則必須手動進行合併。如需相關資訊，請參閱[配置 Xcode 專案](https://developers.facebook.com/docs/ios/getting-started/)及[準備 iOS9 的應用程式](https://developers.facebook.com/docs/ios/ios9)。
+ **重要事項**：請確定您未置換 `info.plist` 檔案中的任何現有內容。如果您具有重疊的內容，則必須手動進行合併。如需相關資訊，請參閱[設定 Xcode 專案](https://developers.facebook.com/docs/ios/getting-started/)及[讓應用程式在 iOS9 環境下運作無礙](https://developers.facebook.com/docs/ios/ios9)。
 
 
 ## 起始設定 {{site.data.keyword.amashort}} 用戶端 SDK
@@ -166,8 +166,8 @@ lastupdated: "2016-11-03"
 
 	{{site.data.keyword.amashort}} 用戶端 SDK 是使用 Objective-C 進行實作，因此您可能需要將橋接標頭新增至 Swift 專案。
 
-	1. 在 Xcode 中的專案上按一下滑鼠右鍵，然後選取**新建檔案...**。
-		1. 在 **iOS 來源**種類中，挑選`標頭檔`。
+	1. 在 Xcode 中的專案上按一下滑鼠右鍵，然後選取 **New File...**。
+		1. 在 **iOS Source** 種類中，挑選 `Header file`。
 		1. 將它命名為 `BridgingHeader.h`。
 		1. 將匯入項目新增至橋接標頭：
 
@@ -177,7 +177,7 @@ lastupdated: "2016-11-03"
 			#import <FacebookSDK/FacebookSDK.h>
 			```
 
-	1. 在 Xcode 中按一下您的專案，然後選取**建置設定**標籤。
+	1. 在 Xcode 中按一下您的專案，然後選取 **Build Settings** 標籤。
 		1. 搜尋 **Objective-C Bridging Header**。
 		1. 將值設為 `BridgingHeader.h` 檔案的位置（例如：`$(SRCROOT)/MyApp/BridgingHeader.h`）。
 		1. 建置專案，以確定 Xcode 取得橋接標頭。您應該不會看到任何失敗訊息。
@@ -201,8 +201,7 @@ lastupdated: "2016-11-03"
 	 							backendGUID: "applicationGUID")
 	```
 
-1. 傳遞 {{site.data.keyword.amashort}} 服務 `tenantId` 參數，以起始設定 `AuthorizationManager`。請參閱 [開始之前]。
-(#before-you-begin)。
+1. 藉由傳遞 {{site.data.keyword.amashort}} 服務 `tenantId` 參數，起始設定 `AuthorizationManager`。請參閱[開始之前](#before-you-begin)。
 
 	####Objective-C
 	{: #authman-objc}
@@ -343,4 +342,4 @@ lastupdated: "2016-11-03"
 
 	若要切換使用者，您必須呼叫此程式碼，而且使用者必須在其瀏覽器中登出 Facebook。
 
-  將 `callBack` 傳遞給 logout 函數是選用性的作業。您也可以傳遞 `nil`。
+  將 `callBack` 傳遞給 logout 函數是選用性的作業。您也可以傳遞 `nil`。

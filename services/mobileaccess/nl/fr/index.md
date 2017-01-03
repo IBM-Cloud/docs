@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-07"
+lastupdated: "2016-11-15"
 
 ---
 
@@ -17,16 +17,18 @@ Ajoutez une fonctionnalité de sécurité à votre application mobile avec le se
 
 Mise en route du service {{site.data.keyword.amashort}} :
 
-1. Utilisez l'une des options suivantes pour créer un service lié ou non lié : 
+1. Utilisez l'une des options suivantes pour créer un service lié ou non lié :
  * Créez une application {{site.data.keyword.Bluemix_notm}} à l'aide du conteneur boilerplate de **MobileFirst Services Starter** dans le catalogue. Cela crée un service {{site.data.keyword.amashort}} lié à une application back end {{site.data.keyword.Bluemix_notm}}.
- * Créez un service {{site.data.keyword.amashort}} en utilisant le tableau de bord de {{site.data.keyword.amashort}}. Vous pouvez lier le service à une application back end existante et le configurer dans le tableau de bord {{site.data.keyword.amashort}}.
+ * Créez un service {{site.data.keyword.amashort}} en utilisant le tableau de bord de {{site.data.keyword.amashort}}.  Vous pouvez lier le service à une application back end existante et le configurer dans le tableau de bord {{site.data.keyword.amashort}}.
 
    Quand vous utilisez MobileFirst Services Starter, vous obtenez une instance du contexte d'exécution Node.js qui s'exécute sur IBM {{site.data.keyword.Bluemix_notm}} pour implémenter votre logique de back end personnalisée. Un ensemble de services mobiles de base qui fournissent des fonctions de sécurité, de données, de push et de surveillance et sont liés à cette appli Node.js. Une fois l'application Node.js {{site.data.keyword.Bluemix_notm}} créée, vous pouvez configurer votre environnement de développement et commencer à utiliser les logiciels SDK de {{site.data.keyword.Bluemix_notm}} Mobile Services. Vous pouvez utiliser les logiciels SDK pour accéder aux services qui sont liés à votre application en cloud à l'aide de simples appels d'API.
+
+	Pour plus d'informations sur la façon de créer et d'utiliser des projets, des applications et des services, voir [Tableau de bord IBM Bluemix Mobile](https://console.{DomainName}/docs/mobile/index.html).
 
 2. Sécurisez les ressources côté serveur.
 
    Protégez vos ressources de back end mobile s'exécutant sous les contextes d'exécution Node.js ou Liberty for Java&trade; avec sécurité OAuth activée pour les applications mobiles. Pour plus d'informations, voir [Protection des ressources](protecting-resources.html).
-Pour plus d'informations sur l'application de back end mobile par défaut, reportez-vous à l'exemple d'application [bms-hellotodo-strongloop](https://github.com/ibm-bluemix-mobile-services/bms-hellotodo-strongloop).
+   Pour plus d'informations sur l'application de back end mobile par défaut, reportez-vous à l'exemple d'application [bms-hellotodo-strongloop](https://github.com/ibm-bluemix-mobile-services/bms-hellotodo-strongloop).
 
 3. Configurez votre environnement principal de développement {{site.data.keyword.amashort}}.
 
@@ -48,7 +50,7 @@ Pour plus d'informations sur l'application de back end mobile par défaut, repor
 	####Développement Web
    {: #web-development}
 
-   Le service {{site.data.keyword.amashort}} peut protéger votre application Web, sans requérir de SDK spécial. Vous pouvez exploiter divers fournisseurs d'identité, en sus de la protection assurée par le service {{site.data.keyword.amashort}}. L'intégration {{site.data.keyword.amashort}} permet à toute application Web, quelle que soit la technologie qu'elle implémente, de tirer parti du protocole OAuth2. Pour plus d'informations sur la configuration de votre application Web pour accéder au service {{site.data.keyword.amashort}} via des fournisseurs d'identité différents, voir :
+   Le service {{site.data.keyword.amashort}} peut protéger votre application Web, sans requérir de SDK spécial. Vous pouvez exploiter divers fournisseurs d'identité, en sus de la protection assurée par le service {{site.data.keyword.amashort}}. L'intégration {{site.data.keyword.amashort}} permet à toute application Web, quelle que soit la technologie qu'elle implémente, de tirer parti du protocole OAuth2. Pour plus d'informations sur la configuration de votre application Web {{site.data.keyword.amashort}} pour accéder au service {{site.data.keyword.amashort}}  via des fournisseurs d'identité différents, voir :
 
     * [Activation de l'authentification Facebook pour les applications Web](facebook-auth-web.html)
 

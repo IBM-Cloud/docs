@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016
-lastupdated: "2016-11-01"
+lastupdated: "2016-11-22"
 
 ---
 
@@ -63,8 +63,11 @@ Google Application ID および Secret を作成した後、{{site.data.keyword.
 
 許可プロセスを開始するには、以下のようにします。
 
-1. `VCAP_SERVICES` 環境変数に保管されたサービス資格情報から、許可エンドポイント (`authorizationEndpoint`) およびクライアント ID (`clientId`) を取り出します。`var cfEnv = require("cfenv");`
-	 `var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;` 
+1. `VCAP_SERVICES` 環境変数に保管されたサービス資格情報から、許可エンドポイント (`authorizationEndpoint`) およびクライアント ID (`clientId`) を取り出します。 
+
+	`var cfEnv = require("cfenv");` 
+	
+	`var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;` 
 
 	**注:** Web サポートが追加される前に {{site.data.keyword.amashort}} サービスをアプリケーションに追加した場合は、サービス資格情報にトークン・エンドポイントが含まれていないことがあります。代わりに、{{site.data.keyword.Bluemix_notm}} 地域に応じて、以下の URL を使用します。 
  
@@ -111,7 +114,8 @@ app.get("/protected", checkAuthentication, function(req, res, next){
 				res.redirect(redirectUrl); 
 			} 
 		} 
-	}
+	   	}
+       }
 	```
 	{: codeblock}
 
@@ -177,7 +181,7 @@ app.get("/protected", checkAuthentication, function(req, res, next){
 	```
 	{: codeblock}
 
-	`redirect_uri` パラメーターは、Google+ での認証が成功または失敗した後のリダイレクト用の URI であり、ステップ 1 の `redirect_uri` と一致する必要があります。  
+	`redirect_uri` パラメーターは、Google+ での認証が成功または失敗した後のリダイレクト用の URI であり、{{site.data.keyword.amashort}} ダッシュボードに定義されている `redirect_uri` に一致している必要があります。  
    
 	この POST 要求は、必ず 10 分以内に送信してください。10 分後に認可コードの有効期限が切れます。10 分を過ぎると新しいコードが必要です。
 

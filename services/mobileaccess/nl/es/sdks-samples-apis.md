@@ -2,11 +2,12 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-30"
+lastupdated: "2016-10-25"
 
 ---
-
 {:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 
 # {{site.data.keyword.amashort}} SDK, ejemplos y referencia de API
@@ -18,7 +19,7 @@ Para añadir SDK de {{site.data.keyword.amafull}} a la app de cliente, escoja lo
 ## Core SDK
 {: #coresdk}
 
-Core SDK incluye las API necesarias para la habilitación de la autenticación y el registro personalizados. 
+Core SDK incluye las API necesarias para la habilitación de la autenticación y el registro personalizados.
 
 ### Android
 {: #coresdk-android}

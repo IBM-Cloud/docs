@@ -2,11 +2,13 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-11-02"
+lastupdated: "2016-12-04"
 
 ---
+
 {:shortdesc: .shortdesc}
 {:screen: .screen}
+{:codeblock:.codeblock}
 
 # Configuration du SDK Swift iOS
 {: #getting-started-ios}
@@ -26,11 +28,11 @@ Swift.
 ## Avant de commencer
 {: #before-you-begin}
 Vous devez disposer des éléments suivants :
-* Une instance d'une application {{site.data.keyword.Bluemix_notm}}. 
-* Une instance d'un service {{site.data.keyword.amafull}}. 
+* Une instance d'une application {{site.data.keyword.Bluemix_notm}}.
+* Une instance d'un service {{site.data.keyword.amafull}}.
 * Valeur de votre **TenantID**. Ouvrez votre service dans le tableau de bord {{site.data.keyword.amashort}}. Cliquez sur **Options pour application mobile**. Les valeurs `tenantId` (qui portent également le nom d'`appGUID`) sont affichées dans la zone **App GUID / TenantId**. Vous aurez besoin de cette valeur pour initialiser le Gestionnaire des autorisations {{site.data.keyword.amashort}}.
 * Votre **Application Route**. Il s'agit de l'URL de votre application back end. Vous avez besoin de cette valeur pour envoyer des demandes à ses noeuds finaux protégés.
-* Votre **région** {{site.data.keyword.Bluemix_notm}}. Vous pouvez trouver votre région {{site.data.keyword.Bluemix_notm}} actuelle dans l'en-tête, en regard de l'icône **Avatar**![icône Avatar](images/face.jpg "icône Avatar"). La valeur de la région qui apparaît doit être l'une des suivantes : `US South`, `Sydney` ou `United Kingdom`, et correspondre aux valeurs SDK requises dans le code : `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` ou `BMSClient.Region.sydney`. Vous aurez besoin de cette valeur pour initialiser le SDK {{site.data.keyword.amashort}}.
+* Votre **région** {{site.data.keyword.Bluemix_notm}}.  Vous pouvez trouver votre région {{site.data.keyword.Bluemix_notm}} actuelle dans l'en-tête, en regard de l'icône **Avatar**![icône Avatar](images/face.jpg "icône Avatar"). La valeur de la région qui apparaît doit être l'une des suivantes : `US South`, `Sydney` ou `United Kingdom`, et correspondre aux valeurs SDK requises dans le code : `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` ou `BMSClient.Region.sydney`.  Vous aurez besoin de cette valeur pour initialiser le SDK {{site.data.keyword.amashort}}.
 * Un projet Xcode. Pour plus d'informations sur la configuration de votre environnement de développement iOS, consultez le [site Web Apple Developer](https://developer.apple.com/support/xcode/).
 
 
@@ -51,6 +53,7 @@ et vous pouvez passer à la section suivante pour installer le SDK.
 ```
 sudo gem install cocoapods
 ```
+{: codeblock}
 
 Pour plus d'informations, reportez-vous au [site Web CocoaPods](https://cocoapods.org/).
 
@@ -68,6 +71,7 @@ CocoaPods crée automatiquement un fichier `Podfile`, dans lequel vous définire
   use_frameworks!
   pod 'BMSSecurity'
 	```
+	{: codeblock}
 
   **Astuce :** Vous pouvez ajouter `use_frameworks!` à votre cible Xcode au lieu du Podfile.
 
@@ -113,6 +117,7 @@ Activez le partage de chaîne de certificats, `Keychain Sharing`. Accédez à l'
 	return true
 	}
  ```
+ {: codeblock}
 
 * Remplacez la valeur `tenantId` par la valeur que vous avez obtenue depuis **Options pour application mobile**. 
 * Remplacez `<applicationBluemixRegion>` par la région dans laquelle votre application {{site.data.keyword.Bluemix_notm}} est hébergée. 

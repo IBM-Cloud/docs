@@ -2,18 +2,19 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-11-03"
+lastupdated: "2016-12-05"
 
 ---
-
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
 {:codeblock: .codeblock}
+{:pre: .pre}
 
 #Configurando a autenticação customizada para aplicativos
 da web
 {{site.data.keyword.amashort}}
 {: #custom-web}
-
 
 Inclua a autenticação customizada e a funcionalidade de
 segurança do {{site.data.keyword.amafull}} em seu app da
@@ -28,9 +29,9 @@ Antes de iniciar, deve-se ter:
 * Um recurso que seja protegido por uma instância do
 serviço {{site.data.keyword.amashort}} que está
 configurado para usar um provedor de identidade customizado
-(consulte [Configurando autenticação customizada](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).   
-* Seu valor **TenantID**. Abra o seu serviço no painel do {{site.data.keyword.amashort}}. 
-Clique no botão **Opções móveis**. O valor
+(consulte
+[Configurando autenticação customizada](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).  
+* Seu valor **TenantID**. Abra o seu serviço no painel do {{site.data.keyword.amashort}}. Clique no botão **Opções móveis**. O valor
 `tenantId` (também conhecido como
 `appGUID`) é exibido no campo **App
 GUID / TenantId**. Você precisará desse valor para
@@ -38,8 +39,7 @@ inicializar o Gerenciador de Autorização.
 * Seu nome de **Domínio**. Este é o
 valor que você especificou no campo **Nome do
 domínio** da seção **Customizado**
-no guia **Gerenciamento** do
-painel {{site.data.keyword.amashort}}.
+no guia **Gerenciamento** do painel {{site.data.keyword.amashort}}.
 * A URL do seu aplicativo backend (**Rota de App**). Você precisará desse valor para enviar
 solicitações para os terminais protegido do seu aplicativo
 backend.
@@ -55,8 +55,7 @@ valores de SDK requeridos no código Javascript:
 `BMSClient.REGION_UK`. Você precisará desse
 valor para inicializar o cliente
 {{site.data.keyword.amashort}}.
-* O URI para o redirecionamento final (após o processo de autorização ser concluído). 
-Este é o valor **URIs de redirecionamento de aplicativo da
+* O URI para o redirecionamento final (após o processo de autorização ser concluído). Este é o valor **URIs de redirecionamento de aplicativo da
 web** que você inseriu na seção
 **Customizado** da guia
 **Gerenciamento**.
@@ -147,7 +146,7 @@ Após ter seu provedor de identidade customizado configurado, será possível at
 1. Abra o seu serviço no painel do {{site.data.keyword.amashort}}.
 1. Na guia **Gerenciar**, acione
 **Autorização**.
-1. Expanda a seção **Customizado**. 
+1. Expanda a seção **Customizado**.
 1. Insira o **Nome do domínio**,
 **URL do provedor de identidade customizado**. 
 1. Insira o valor **URIs de redirecionamento de
@@ -159,25 +158,23 @@ final após autorização bem-sucedida.
 ##Implementando o fluxo de autorização {{site.data.keyword.amashort}} usando um provedor de identidade customizado
 {: #custom-auth-flow}
 
-A variável de ambiente `VCAP_SERVICES` é criada automaticamente para cada instância de serviço do {{site.data.keyword.amashort}} e contém propriedades necessárias para o processo de autorização. 
-Ele consiste em um objeto JSON e pode ser visualizado na guia
+A variável de ambiente `VCAP_SERVICES` é criada automaticamente para cada instância de serviço do {{site.data.keyword.amashort}} e contém propriedades necessárias para o processo de autorização. Ele consiste em um objeto JSON e pode ser visualizado na guia
 **Credenciais de serviço** no painel
 {{site.data.keyword.amashort}}.
 
 Para solicitar autorização do usuário, redirecione o navegador para o terminal do servidor de autorizações. Para fazer isso: 
 
-1. Recupere o terminal de autorização (`authorizationEndpoint`) e clientId (`clientId`) das
-credenciais de serviço armazenadas na variável de ambiente `VCAP_SERVICES`. 
+1. Recupere o terminal de autorização (`authorizationEndpoint`) e o ID do cliente (`clientId`) por meio das credenciais de serviço armazenadas
+na variável de ambiente `VCAP_SERVICES`. 
 
 	`var cfEnv = require("cfenv");` 
-	
-	`var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;` 
 
+	`var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;` 
 
 	**Nota:** se você tiver incluído o serviço {{site.data.keyword.amashort}} em seu aplicativo antes de incluir o suporte da web, talvez você
 não tenha o
 terminal do token nas credenciais de serviço. Como alternativa, use as URLs a seguir, dependendo de sua região do {{site.data.keyword.Bluemix_notm}}: 
-  
+
 	Sul dos EUA: 
 
 	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization` 
@@ -196,7 +193,7 @@ terminal do token nas credenciais de serviço. Como alternativa, use as URLs a s
 3. Redirecione a partir do seu aplicativo da web para o
 URI gerado. 
 
-	O exemplo a seguir recupera os parâmetros da variável `VCAP_SERVICES`, constrói a URL e envia a solicitação de
+   O exemplo a seguir recupera os parâmetros da variável `VCAP_SERVICES`, constrói a URL e envia a solicitação de
 redirecionamento.
 
 	```Java
@@ -227,22 +224,19 @@ app.get("/protected", checkAuthentication, function(req, res, next){
  
 	Observe que o parâmetro `redirect_uri`
 representa seu URI de redirecionamento de aplicativo da web e
-deve ser igual àquele definido no painel
-{{site.data.keyword.amashort}}.
-  
+deve ser igual àquele
+definido no painel {{site.data.keyword.amashort}}.  
 
 	Um parâmetro `state` pode ser transmitido junto com a solicitação. Esse parâmetro será propagado para o método POST do
 provedor de identidade customizado e pode ser acessado a partir do corpo da solicitação (`req.body.stateId`).  
 
-	Após redirecionar para o terminal de autorização, o usuário obterá um formulário de login. 
-Após as credenciais do usuário terem sido autenticadas com o
+	Após redirecionar para o terminal de autorização, o usuário obterá um formulário de login. Após as credenciais do usuário terem sido autenticadas com o
 provedor de identidade customizado, o serviço
 {{site.data.keyword.amashort}} chamará seu URI
 de redirecionamento de aplicativo da web fornecendo o código de
 concessão como um parâmetro de consulta.  
 
-	Após redirecionar, o usuário obtém um formulário de login. 
-Após as credenciais do usuário serem autenticadas pelo provedor
+	Após redirecionar, o usuário obtém um formulário de login. Após as credenciais do usuário serem autenticadas pelo provedor
 de identidade customizado, o serviço
 {{site.data.keyword.amashort}} chamará o URI de
 redirecionamento de aplicativo da web, fornecendo o código de
@@ -262,15 +256,15 @@ antes de incluir o suporte da web, talvez você não tenha o
 terminal do token nas credenciais de serviço. Como alternativa, use as URLs a seguir, dependendo de sua região do {{site.data.keyword.Bluemix_notm}}: 
 
 	Sul dos EUA: 
-  
+
 	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/token`
- 
+
 	Londres: 
- 
+	
 	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token` 
  
 	Sydney: 
- 
+
 	`https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/token`
  
 2. Envie uma solicitação de POST para o URI do servidor de token com
@@ -343,7 +337,4 @@ O token de acesso permite comunicação com recursos protegidos pelos filtros de
 
 * O `<accessToken>` e o `<idToken>` devem ser separados por um espaço em branco.
 
-* O token de identidade é opcional. Se você não fornecer o token de identidade, o recurso protegido poderá ser acessado, mas não receberá nenhuma informação sobre o usuário autorizado. 
-
-
-
+* O token de identidade é opcional. Se você não fornecer o token de identidade, o recurso protegido poderá ser acessado, mas não receberá nenhuma informação sobre o usuário autorizado.

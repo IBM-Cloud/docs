@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016
-lastupdated: "2016-11-01"
+lastupdated: "2016-11-22"
 
 ---
 
@@ -47,10 +47,10 @@ Maintenant que vous disposez d'un ID d'application et d'une valeur confidentiell
 
 1. Ouvrez le tableau de bord de service {{site.data.keyword.amashort}}.
 1. Dans l'onglet **Gérer**, activez **Autorisation**.
-1. Développez la section **Google**. 
+1. Développez la section **Google**.
 1. Cochez la case **Ajouter Google à une application Web**
 4. Dans la section **Configure for Web** :   
-    * Notez la valeur dans la zone de texte **Mobile Client Access Redirect URI for Google Developer Console**. Il s'agit de la valeur que vous devez ajouter à la zone relative aux identificateurs **URI de redirection valides** de l'option portant sur les **restrictions dans l'ID client pour l'application Web** du **portail des développeurs Google**. 
+    * Notez la valeur dans la zone de texte **Mobile Client Access Redirect URI for Google Developer Console**. Il s'agit de la valeur que vous devez ajouter à la zone relative aux identificateurs **URI de redirection valides** de l'option portant sur les **restrictions dans l'ID client pour l'application Web** du **portail des développeurs Google**.
     * Entrez l'**ID client** et la **Valeur confidentielle du client**.
     * Entrez l'URI de redirection dans **URI de redirection de votre application Web**. Cette valeur est celle de l'URI de redirection à
 laquelle accéder à l'aboutissement du processus d'autorisation et est déterminée par le développeur.
@@ -68,8 +68,10 @@ Pour démarrer le processus d'autorisation :
 1. Identifiez le noeud final d'autorisation (`authorizationEndpoint`) et l'ID client
 (`clientId`) dans les données d'identification du service stockées dans la variable d'environnement
 `VCAP_SERVICES`. 
+
 	`var cfEnv = require("cfenv");` 
-	 `var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;` 
+	
+	`var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;` 
 
 	**Remarque :** si vous avez ajouté le service {{site.data.keyword.amashort}} dans votre application avant l'ajout de la prise en charge Web, il se peut que vous n'ayez pas de noeud final de jeton dans les données d'identification pour le service. A la place, utilisez les URL suivantes, selon votre région {{site.data.keyword.Bluemix_notm}} : 
  
@@ -117,8 +119,9 @@ Pour démarrer le processus d'autorisation :
 				redirectUrl += "&redirect_uri=" + redirectUri; 
 				res.redirect(redirectUrl); 
 			} 
-		} 
-	}
+		 	} 
+	   	}
+       }
 	```
 	{: codeblock}
 
@@ -187,7 +190,7 @@ parsedBody.access_token; 			req.session.idToken = parsedBody.id_token; 			var id
 	{: codeblock}
 
 	Le paramètre `redirect_uri` est l'URI de redirection après l'aboutissement ou l'échec de l'authentification avec
-Google+ et doit correspondre à l'élément `redirect_uri` de l'étape 1.  
+Google+ et doit correspondre à l'élément `redirect_uri` défini sur le tableau de bord {{site.data.keyword.amashort}}.  
    
 	Prenez soin d'envoyer cette demande POST dans les 10 minutes, qui correspond au délai d'expiration du code d'accord. Au bout de 10 minutes, un nouveau code est requis.
 

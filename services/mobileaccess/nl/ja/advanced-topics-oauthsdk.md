@@ -6,6 +6,8 @@ lastupdated: "2016-10-02"
 
 ---
 
+{:codeblock:.codeblock}
+
 # バックエンドのアプリケーションおよびサービス間の通信
 {: #backend-comm}
 
@@ -21,6 +23,7 @@ OAuth トークンを取得して要求に注入するには、`bms-mca-oauth-sd
 ```Bash
 npm install -save bms-mca-oauth-sdk
 ```
+{: codeblock}
 
 ## bms-mca-oauth-sdk モジュールの使用
 {: #using-sdk}
@@ -61,3 +64,4 @@ oauthSDK.getAuthorizationHeader(options).then(function(authHeader){
 });
 
 ```
+{: codeblock}

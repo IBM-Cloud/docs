@@ -2,27 +2,31 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-03"
+lastupdated: "2016-12-05"
 
 ---
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # Configuration du logiciel SDK Android
 {: #getting-started-android}
 
 Instrumentez votre application Android avec le SDK client de {{site.data.keyword.amafull}}, initialisez le SDK et envoyez des demandes à des ressources protégées et non protégées.
-
-{:shortdesc}
+{: shortdesc}
 
 ## Avant de commencer
 {: #before-you-begin}
+
 Vous devez disposer des éléments suivants :
-* Une instance d'une application {{site.data.keyword.Bluemix_notm}}. 
-* Une instance d'un service {{site.data.keyword.amafull}}. 
+
+* Une instance d'une application {{site.data.keyword.Bluemix_notm}}.
+* Une instance d'un service {{site.data.keyword.amafull}}.
 * Valeur de votre **TenantID**. Ouvrez votre service dans le tableau de bord de {{site.data.keyword.amafull}}. Cliquez sur le bouton **Options pour application mobile**. Les valeurs `tenantId` (qui portent également le nom d'`appGUID`) sont affichées dans la zone **App GUID / TenantId**. Vous aurez besoin de cette valeur pour initialiser le Gestionnaire des autorisations.
 * Votre **Application Route**. Il s'agit de l'URL de votre application back end. Vous avez besoin de cette valeur pour envoyer des demandes à ses noeuds finaux protégés.
-* Votre **région** {{site.data.keyword.Bluemix_notm}}. Vous pouvez trouver votre région {{site.data.keyword.Bluemix_notm}} actuelle dans l'en-tête, en regard de l'icône **Avatar**![icône Avatar](images/face.jpg "icône Avatar"). La valeur de la région qui apparaît doit être l'une des suivantes : `US South`, `Sydney` ou `United Kingdom`, et correspondre aux valeurs SDK requises dans le code : `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` ou `BMSClient.REGION_UK`. Vous aurez besoin de cette valeur pour initialiser le client {{site.data.keyword.amashort}}.
+* Votre **région** {{site.data.keyword.Bluemix_notm}}.  Vous pouvez trouver votre région {{site.data.keyword.Bluemix_notm}} actuelle dans l'en-tête, en regard de l'icône **Avatar**![icône Avatar](images/face.jpg "icône Avatar"). La valeur de la région qui apparaît doit être l'une des suivantes : `US South`, `Sydney` ou `United Kingdom`, et correspondre aux valeurs SDK requises dans le code : `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` ou `BMSClient.REGION_UK`. Vous aurez besoin de cette valeur pour initialiser le client {{site.data.keyword.amashort}}.
 * Un projet Android Studio, configuré pour fonctionner avec Gradle. Pour plus d'informations sur la configuration de votre environnement de développement Android,
 voir [Google Developer Tools](http://developer.android.com/sdk/index.html).
 
@@ -47,7 +51,8 @@ télécharge automatiquement des artefacts depuis les référentiels et les rend
         transitive: true
     	// other dependencies  
 	}
-```
+	```
+	{: codeblock}
 
 1. Synchronisez votre projet avec Gradle. Cliquez sur **Tools (Outils) &gt; Android &gt; Sync Project with Gradle Files (Synchroniser le projet avec les fichiers Gradle)**.
 
@@ -55,7 +60,8 @@ télécharge automatiquement des artefacts depuis les référentiels et les rend
 
 	```XML
 	<uses-permission android:name="android.permission.INTERNET" />
-```
+	```
+	{: codeblock}
 
 ## Initialisation du logiciel SDK client de {{site.data.keyword.amashort}}
 {: #initalize-mca-sdk}
@@ -66,13 +72,15 @@ principale dans votre application Android, bien que cet emplacement ne soit pas 
 ```Java
 	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
 
-  BMSClient.getInstance().setAuthorizationManager(
+BMSClient.getInstance().setAuthorizationManager(
 					MCAAuthorizationManager.createInstance(this, "<MCAServiceTenantId>"));
-
 ```
+{: codeblock}
 
-* Remplacez `<applicationBluemixRegion>` par la région dans laquelle votre service {{site.data.keyword.Bluemix_notm}} est hébergé. 
-* Remplacez `<MCAServiceTenantId>` par la valeur **tenantId** (pour plus d'informations sur ces valeurs, voir [Avant de commencer](#before-you-begin)).
+* Remplacez `<applicationBluemixRegion>` par la région dans laquelle votre service {{site.data.keyword.Bluemix_notm}} est hébergé.
+* Remplacez `<MCAServiceTenantId>` par la valeur **tenantId** 
+
+ (pour plus d'informations sur ces valeurs, voir [Avant de commencer](#before-you-begin)).
 
 ## Envoi d'une demande à votre application back end mobile
 {: #request}
@@ -109,6 +117,7 @@ navigateur vu que ce noeud final n'est accessible que par les applications mobil
 		}
 	});
 	```
+	{: codeblock}
 
 1. Si votre requête aboutit, la sortie suivante sera affichée dans l'utilitaire LogCat :
 
@@ -118,6 +127,7 @@ navigateur vu que ce noeud final n'est accessible que par les applications mobil
 {: #next-steps}
 
 Lorsque vous vous êtes connecté au noeud final protégé, les données d'identification n'ont pas été nécessaires. Pour obliger les utilisateurs à utiliser des données d'identification pour se connecter à votre application, vous devez configurer Facebook, Google ou l'authentification personnalisée.
+
 * [Facebook](facebook-auth-android.html)
 * [Google](google-auth-android.html)
 * [Authentification personnalisée](custom-auth-android.html)

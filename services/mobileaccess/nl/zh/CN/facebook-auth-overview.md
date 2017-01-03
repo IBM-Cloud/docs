@@ -25,7 +25,7 @@ Facebook SDK。
 ## {{site.data.keyword.amashort}} 请求流程
 {: #mca-facebook-sequence}
 
-### 移动客户端请求流
+### 移动客户端请求流程
 
 请参阅下图，以了解 {{site.data.keyword.amashort}} 如何从移动客户端应用程序与
 Facebook 集成进
@@ -46,10 +46,10 @@ Facebook 集成进
 * {{site.data.keyword.amashort}} 客户端 SDK 自动重新发送触发了授权流程的原始请求。
 * {{site.data.keyword.amashort}} 服务器 SDK 从请求中抽取 Authorization 头，通过 {{site.data.keyword.amashort}} 服务对其进行验证，然后授予对后端资源的访问权。
 
-### {{site.data.keyword.amashort}} Web 应用程序请求流
+### {{site.data.keyword.amashort}} Web 应用程序请求流程
 {: #mca-facebook-web-sequence}
 
-{{site.data.keyword.amashort}} Web 应用程序请求流类似于移动客户端流。但是，{{site.data.keyword.amashort}} 保护 Web 应用程序而非 {{site.data.keyword.Bluemix_notm}} 后端资源。
+{{site.data.keyword.amashort}} Web 应用程序请求流程类似于移动客户端的流程。但是，{{site.data.keyword.amashort}} 保护 Web 应用程序而非 {{site.data.keyword.Bluemix_notm}} 后端资源。
 
   * Web 应用程序会发送初始请求（例如，通过登录表单）。
   * 最终重定向会指向 Web 应用程序本身的受保护区域，而非后端受保护资源。

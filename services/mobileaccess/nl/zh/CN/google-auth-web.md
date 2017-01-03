@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016
-lastupdated: "2016-11-01"
+lastupdated: "2016-11-22"
 
 ---
 
@@ -47,10 +47,10 @@ lastupdated: "2016-11-01"
 1. 打开 **Google** 部分。
 1. 选中**向 Web 应用程序添加 Google**。
 4. 在**针对 Web 配置**部分中：   
-    * 记录 **Google 开发者控制台的 Mobile Client Access 重定向 URI** 文本框中的值。您需要将此值添加到 **Google 开发人员门户网站**的 **Web 应用程序客户端标识的限制**下的**授权重定向 URI** 框中。
+    * 记录 **Google 开发者控制台的 Mobile Client Access 重定向 URI** 文本框中的值。您需要将此值添加到 **Google 开发者门户网站**的 **Web 应用程序客户端标识的限制**下的**授权重定向 URI** 框中。
     * 输入**客户端标识**和**客户端私钥**。
     * 在 **Web 应用程序重定向 URI**中输入重定向 URI。
-此值用于在完成授权流程之后可访问重定向 URI，由开发者确定。
+此值是为了在完成授权流程之后可访问该重定向 URI，由开发者确定。
 5. 单击**保存**。
 
 
@@ -61,8 +61,11 @@ lastupdated: "2016-11-01"
 
 要启动授权过程：
 
-1. 从存储在 `VCAP_SERVICES` 环境变量的服务凭证中，检索授权端点 (`authorizationEndpoint`) 和客户端标识 (`clientId`)。`var cfEnv = require("cfenv");` 
-	 `var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;` 
+1. 从存储在 `VCAP_SERVICES` 环境变量的服务凭证中，检索授权端点 (`authorizationEndpoint`) 和客户端标识 (`clientId`)。 
+
+	`var cfEnv = require("cfenv");` 
+	
+	`var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;` 
 
 	**注：**如果在添加 Web 支持之前，您已向应用程序添加了 {{site.data.keyword.amashort}} 服务，那么可能在服务凭证中没有令牌端点。请改为使用下列 URL，具体取决于 {{site.data.keyword.Bluemix_notm}} 区域： 
  
@@ -71,13 +74,11 @@ lastupdated: "2016-11-01"
 	`  https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization
    ` 
 
-	  伦敦：
-   
+	伦敦： 
 
 	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization` 
 
-	  悉尼：
-   
+	悉尼： 
 
 	`https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization`
 	 
@@ -112,7 +113,8 @@ lastupdated: "2016-11-01"
 				res.redirect(redirectUrl); 
 			} 
 		} 
-	}
+	   	}
+       }
 	```
 	{: codeblock}
 
@@ -133,20 +135,15 @@ lastupdated: "2016-11-01"
 
 	美国南部： 
   
-	`     https://mobileclientaccess.ng.bluemix.net/oauth/v2/token   
- `
+	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/token`
  
-	  伦敦：
-   
+	伦敦： 
  
-	`     https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token
- ` 
+	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token` 
  
-	  悉尼：
-   
+	悉尼： 
  
-	`     https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/token 
- `
+	`https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/token`
 
 2. 使用 grant_type ("authorization_code")、client_id、redirect_uri 和 code 作为表单参数，向令牌服务器 URI 发送 post 请求。发送 `clientId` 和 `clientSecret` 作为基本 HTTP 认证凭证。
  
@@ -158,19 +155,19 @@ lastupdated: "2016-11-01"
   var request = require('request');
 
    app.get("/oauth/callback", function(req, res, next){ 
-	var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials; 
-	var tokenEndpoint = mcaCredentials.tokenEndpoint; 
-	var formData = { 
-		grant_type: "authorization_code", 
-			client_id: mcaCredentials.clientId, 
-			redirect_uri: "http://some-server/oauth/callback",// Your Web application redirect uri 
-			code: req.query.code 
-		} 
+	var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
+		var tokenEndpoint = mcaCredentials.tokenEndpoint;
+		var formData = {
+			grant_type: "authorization_code",
+			client_id: mcaCredentials.clientId,
+			redirect_uri: "http://some-server/oauth/callback",// Your Web application redirect uri
+			code: req.query.code
+		}
 
-		request.post({ 
-			url: tokenEndpoint, 
-		formData: formData 
-		}, function (err, response, body){ 
+		request.post({
+			url: tokenEndpoint,
+			formData: formData
+		}, function (err, response, body) {
 			var parsedBody = JSON.parse(body); 
 			req.session.accessToken = parsedBody.access_token; 
 			req.session.idToken = parsedBody.id_token; 
@@ -179,13 +176,13 @@ lastupdated: "2016-11-01"
 			req.session.userIdentity = JSON.parse(decodedIdentity)["imf.user"]; 
 			res.redirect("/"); 
 			}
-			).auth(mcaCredentials.clientId, mcaCredentials.secret); 
-  }
-); 
+			).auth(mcaCredentials.clientId, mcaCredentials.secret);
+		}
+	); 
 	```
 	{: codeblock}
 
-	`redirect_uri` 参数是 URI，用于在使用 Google+ 成功认证或认证失败之后进行重定向，且必须与步骤 1 中的 `redirect_uri` 匹配。  
+	`redirect_uri` 参数是 URI，用于在使用 Google+ 成功认证或认证失败之后进行重定向，且必须与 {{site.data.keyword.amashort}} 仪表板中定义的 `redirect_uri` 匹配。  
    
 	请确保在 10 分钟内发送此 POST 请求，因为随后授权代码将到期。
 10 分钟之后，需要新代码。

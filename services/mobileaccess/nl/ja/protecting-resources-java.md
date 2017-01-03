@@ -2,9 +2,10 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-12-04"
 
 ---
+{:codeblock:.codeblock}
 
 # {{site.data.keyword.amashort}} を使用した Liberty for Java リソースの保護
 {: #protecting-liberty}
@@ -40,6 +41,7 @@ lastupdated: "2016-10-02"
 	</featureManager>
 
 	```
+	{: codeblock}
 1. `server.xml` ファイルの編集を続行し、`OAuthTAI` フィーチャーを構成します。セキュリティー役割 `TAIUserRole` は、`ALL_AUTHENTICATED_USERS` という名前の特殊サブジェクトにマップされます。以下のスニペットは、`/protected` エンドポイントの GET メソッドの保護方法を示しています。
 
 	```XML
@@ -58,12 +60,14 @@ lastupdated: "2016-10-02"
 		</application-bnd>
 	</application>
 	```
+	{: codeblock}
 
 1. {{site.data.keyword.amashort}} サービス URL を含む以下のプロパティーを、バックエンド・アプリケーションの環境変数に追加します。この URL は、`manifest.yml` ファイルまたは `server.env` ファイルに追加できます。
 
 	```
 	imfServiceUrl=http://imf-authserver.{domainName}/imf-authserver
 	```
+	{: codeblock}
 
 ## Liberty for Java リソースの保護
 {: #protecting-liberty-resources}
@@ -88,6 +92,7 @@ Liberty for Java アプリケーションによってホストされているリ
 		<role-name>TAIUserRole</role-name>
 	</security-role>
 	```
+	{: codeblock}
 
 * アノテーションを使用して `TAIUserRole` を指定するには、以下の構文を使用します。
 
@@ -98,6 +103,7 @@ Liberty for Java アプリケーションによってホストされているリ
 	    // servlet code
 	}
 	```
+	{: codeblock}
 
 ### セキュリティー・コンテキスト・オブジェクトへのアクセス
 {: #accessing-security}
@@ -114,7 +120,11 @@ Subject callerSubject = WSSubject.getCallerSubject();
 WSCredential callerCredential =
     callerSubject.getPublicCredentials(WSCredential.class).iterator().next();
 ```
+{: codeblock}
+
 詳しくは、[WSCredential](http://www-01.ibm.com/support/knowledgecenter/api/content/nl/en-us/SSEQTP_7.0.0/com.ibm.websphere.javadoc.doc/web/apidocs/index.html?com/ibm/websphere/security/cred/WSCredential.html)を参照してください。
+
+
 
 #### com.worklight.oauth.tai.WLCredential プロパティー
 {: #WLCredential}
@@ -132,3 +142,4 @@ JSONObject imfDevice = securityContext.get("imf.device");
 JSONObject imfApplication = securityContext.get("imf.application");
 
 ```
+{: codeblock}

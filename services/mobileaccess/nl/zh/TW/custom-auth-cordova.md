@@ -2,21 +2,24 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-03"
+lastupdated: "2016-11-22"
 
 ---
+
+{:codeblock:.codeblock}
+
 
 # 配置適用於 {{site.data.keyword.amashort}} Cordova 應用程式的自訂鑑別
 {: #custom-cordova}
 
-檢測 Cordova 應用程式，以使用自訂鑑別，並檢測 {{site.data.keyword.amafull}} 用戶端 SDK，以存取受保護的應用程式。
+檢測 Cordova 應用程式，以使用自訂鑑別和 {{site.data.keyword.amafull}} 用戶端 SDK，存取受保護的應用程式。
 
 ## 開始之前
 {: #before-you-begin}
 * 配置為使用自訂身分提供者之 {{site.data.keyword.amashort}} 服務實例所保護的資源（請參閱[配置自訂鑑別](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)）。  
-* **租戶 ID** 值。在 {{site.data.keyword.amashort}} 儀表板中，開啟服務。按一下**行動選項**按鈕。`tenantId`（也稱為 `appGUID`）值會顯示在**應用程式 GUID/租戶 ID** 欄位中。您需要此值來起始設定「授權管理程式」。
+* **承租戶 ID** 值。在 {{site.data.keyword.amashort}} 儀表板中，開啟服務。按一下**行動選項**按鈕。`tenantId`（也稱為 `appGUID`）值會顯示在**應用程式 GUID/承租戶 ID** 欄位中。您需要此值來起始設定「授權管理程式」。
 * **領域**名稱。這是您在 {{site.data.keyword.amashort}} 儀表板的**管理**標籤上，**自訂**區段內的**領域名稱**欄位中指定的值。
-* {{site.data.keyword.Bluemix_notm}} **地區**。您可以在**虛擬人像**圖示 ![「虛擬人像」圖示](images/face.jpg "「虛擬人像」圖示") 旁邊的標頭中，找到您目前的 {{site.data.keyword.Bluemix_notm}} 地區。出現的地區值應該是下列其中一項：`US South`、`United Kingdom` 或 `Sydney`。程式碼範例中有提供相對應之 SDK 常數的確切語法。
+* {{site.data.keyword.Bluemix_notm}} **地區**。您可以在標頭中找到您目前的 {{site.data.keyword.Bluemix_notm}} 地區，就在**虛擬人像**圖示 ![「虛擬人像」圖示](images/face.jpg "「虛擬人像」圖示") 的旁邊。出現的地區值應該是下列其中一項：`美國南部`、`英國`或`雪梨`。程式碼範例中有提供相對應之 SDK 常數的確切語法。
 
 如需相關資訊，請參閱下列資訊：
  * [配置 {{site.data.keyword.amashort}} 以進行自訂鑑別](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)。這會為您示範如何設定 {{site.data.keyword.amashort}} 服務，以進行自訂鑑別。您要在這裡定義**領域**值。
@@ -32,6 +35,7 @@ lastupdated: "2016-11-03"
 ```JavaScript
 BMSClient.initialize("<applicationBluemixRegion>");
 ```
+{: codeblock}
 
 將 `<applicationBluemixRegion>` 取代為您的地區（請參閱[開始之前](#before-you-begin)）。 
  
@@ -48,6 +52,7 @@ var customAuthenticationListener = {
 	onAuthenticationFailure: function(info){...}
 }
 ```
+{: codeblock}
 
 每個方法會處理鑑別處理程序的不同階段。
 
@@ -57,6 +62,7 @@ var customAuthenticationListener = {
 ```JavaScript
 onAuthenticationChallengeReceived: function(authenticationContext, challenge) {...}
 ```
+{: codeblock}
 
 * `authenticationContext`：由 {{site.data.keyword.amashort}} 用戶端 SDK 所提供，讓開發人員可以在認證收集期間回報鑑別盤查回答或失敗（例如取消鑑別要求的使用者）。
 * `challenge`：JSON 物件，包含自訂身分提供者所傳回的自訂鑑別盤查。
@@ -66,14 +72,16 @@ onAuthenticationChallengeReceived: function(authenticationContext, challenge) {.
 ```JavaScript
 onAuthenticationSuccess: function(info){...}
 ```
+{: codeblock}
 
-在成功鑑別之後，會呼叫此方法。引數包括選用的 JSON 物件，其中包含有關鑑別成功的延伸資訊。
+在成功鑑別之後，會呼叫此方法。引數包含選用的 JSON 物件，其中包含有關鑑別成功的延伸資訊。
 
 ```JavaScript
 onAuthenticationFailure: function(info){...}
 ```
+{: codeblock}
 
-在鑑別失敗之後，會呼叫此方法。引數包括選用的 JSON 物件，其中包含有關鑑別失敗的延伸資訊。
+在鑑別失敗之後，會呼叫此方法。引數包含選用的 JSON 物件，其中包含有關鑑別失敗的延伸資訊。
 
 ### authenticationContext
 {: #custom-cordova-authcontext}
@@ -83,11 +91,17 @@ onAuthenticationFailure: function(info){...}
 ```JavaScript
 authenticationContext.submitAuthenticationChallengeAnswer(challengeAnswer);
 
+```
+{: codeblock}
+
+```JavaScript
 authenticationContext.submitAuthenticationFailure(info);
 ```
-下列程式碼示範客戶授權接聽器要如何收集認證、處理盤查，以及提供鑑別回應。
+{: codeblock}
 
-## 自訂鑑別接聽器工作流程的實作範例
+下列程式碼示範客戶鑑別接聽器要如何收集認證、處理盤查，以及提供鑑別回應。
+
+## 自訂鑑別接聽器工作流程的範例實作
 {: #custom-cordova-authlisten-sample}
 
 此鑑別接聽器範例設計成使用自訂身分提供者。您可以從[此 Github 儲存庫](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)下載自訂身分提供者。
@@ -125,6 +139,7 @@ var customAuthenticationListener = {
 	}
 }
 ```
+{: codeblock}
 
 ## 在 Cordova WebView 中登錄自訂鑑別接聽器
 {: #custom-cordova-authreg}
@@ -134,6 +149,7 @@ var customAuthenticationListener = {
 ```Java
 BMSClient.registerAuthenticationListener(<realmName>, customAuthenticationListener);
 ```
+{: codeblock}
 使用 {{site.data.keyword.amashort}} 儀表板中所指定的 `realmName`。
 
 ## 在原生程式碼中設定授權管理程式
@@ -147,6 +163,7 @@ String tenantId = "<tenantId>";
 MCAAuthorizationManager.createInstance(this.getApplicationContext(),tenantId);
 BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 ```
+{: codeblock}
 
 **iOS Objective-C**（新增至 `AppDelegate.m`）
 
@@ -162,10 +179,11 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
     //[CDVBMSClient initMCAAuthorizationManagerManagerWithTenantId:@"<tenantId>"];
  }
 ```
+{: codeblock}
 
-附註：將 `your_module_name` 取代為您專案的模組名稱，例如，如果模組名稱為 `Cordova`，則應為 `#import "Cordova-Swift.h"`。若要尋找模組名稱，請移至**建置設定 > 包裝 > 產品模組名稱**。
+附註：將 `your_module_name` 取代為您專案的模組名稱，例如，如果模組名稱為 `Cordova`，則應為 `#import "Cordova-Swift.h"`。若要尋找模組名稱，請移至 **Build Settings > Packaging > Product Module Name**。
 
-**附註：**將 `tenantId` 取代為您的租戶 ID（位在 {{site.data.keyword.amashort}} 服務儀表板上的**行動選項**按鈕中）。
+**附註：**將 `tenantId` 取代為您的承租戶 ID（位在 {{site.data.keyword.amashort}} 服務儀表板上的**行動選項**按鈕中）。
 
 
 ## 針對 iOS 啟用金鑰鏈共用
@@ -197,6 +215,7 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 	var request = new BMSRequest("<your-application-route>", BMSRequest.GET);
 	request.send(success, failure);
 	```
+	{: codeblock}
 	
 	將 `<your-application-route>` 取代為您的後端應用程式 URL（請參閱[開始之前](#before-you-begin)）。 
 

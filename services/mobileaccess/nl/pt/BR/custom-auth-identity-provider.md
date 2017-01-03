@@ -6,6 +6,8 @@ lastupdated: "2016-11-07"
 
 ---
 
+{:codeblock:.codeblock}
+
 # Criando um provedor de identidade customizado
 {: #custom-create}
 
@@ -27,6 +29,7 @@ do app {{site.data.keyword.Bluemix}} (`applicationGUID`).
 {: #custom-startauthorization}
 
 `POST <base_url>/apps/<tenant_id>/<realm_name>/startAuthorization`
+{: codeblock}
 
 A API `startAuthorization` é usada como uma primeira etapa do processo de autenticação. Um provedor de identidade customizado deve responder com um status "desafio", "sucesso" ou "falha".
 
@@ -40,6 +43,7 @@ Para permitir flexibilidade máxima do processo de autenticação, um provedor d
     }
 }
 ```
+{: codeblock}
 
 Um provedor de identidade customizado pode responder com um desafio de autenticação ou com sucesso ou falha imediato. O status de HTTP da resposta deve ser `HTTP 200` e o JSON de resposta deve conter as propriedades a seguir:
 
@@ -60,11 +64,13 @@ Por exemplo:
 	}
 }
 ```
+{: codeblock}
 
 ## `handleChallengeAnswer` API
 {: #custom-handleChallengeAnswer}
 
 `POST <base_url>/apps/<tenant_id>/<realm_name>/handleChallengeAnswer`
+{: codeblock}
 
 A API `handleChallengeAnswer` manipula uma resposta do desafio de autenticação do cliente móvel. Como a API `startAuthorization`, a API `handleChallengeAnswer` responde com o status `challenge`, `success` ou `failure`.
 
@@ -85,6 +91,7 @@ Da mesma forma que a solicitação `startAuthorization`, o provedor de identidad
  	}
 }
 ```
+{: codeblock}
 
 A resposta de uma API `handleChallengeAnswer` deve ter a mesma estrutura que a resposta da API `startAuthorization`.
 
@@ -108,6 +115,7 @@ Uma resposta a uma solicitação de autenticação bem-sucedida deve incluir um 
     }
 }
 ```
+{: codeblock}
 
 O objeto de identidade do usuário é usado pelo serviço {{site.data.keyword.amashort}} para gerar um token de ID que é enviado para o cliente móvel como parte do cabeçalho de autorização. Após a autenticação bem-sucedida, o cliente móvel possui acesso completo ao objeto de identidade do usuário.
 

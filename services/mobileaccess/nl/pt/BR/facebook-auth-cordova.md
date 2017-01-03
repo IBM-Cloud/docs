@@ -2,9 +2,10 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-06"
+lastupdated: "2016-11-24"
 
 ---
+
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -33,15 +34,14 @@ Você deve ter:
 instrumentado com o cliente SDK {{site.data.keyword.amashort}}, consulte
 [
 Configurando o plug-in do Cordova](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html#getting-started-cordova-plugin).
-* Uma instância de um aplicativo {{site.data.keyword.Bluemix_notm}} que seja protegida pelo serviço {{site.data.keyword.amashort}}. 
-Para obter mais informações sobre como criar um serviço de
+* Uma instância de um aplicativo {{site.data.keyword.Bluemix_notm}} que seja protegida pelo serviço {{site.data.keyword.amashort}}. Para obter mais informações sobre como criar um serviço de
 backend do {{site.data.keyword.Bluemix_notm}}, consulte
 [Introdução](index.html).
 * Sua rota do aplicativo. Esta é a URL do seu aplicativo
-backend. 
+backend.
 * O valor `tenantId`. Abra o painel de
-serviço do {{site.data.keyword.amashort}}. Clique em **Opções de dispositivo móvel**. 
-O valor `tenantId` (também conhecido como
+serviço do {{site.data.keyword.amashort}}. Clique em **Opções de dispositivo móvel**. O valor
+`tenantId` (também conhecido como
 `appGUID`) é exibido no campo **App
 GUID / TenantId**. Você precisará desses valores para
 inicializar o SDK e para enviar solicitações para o serviço de
@@ -54,7 +54,7 @@ próximo ao ícone **Avatar**
 ![ícone de avatar
 ](images/face.jpg "ícone de avatar") na barra de menus. O valor da região deve ser um destes: US South, Sydney ou UK. Os valores constantes de
 SDK exatos que correspondem a esses nomes são indicados nos exemplos de código.
-* Um ID do app Facebook. Para obter mais informações, veja
+* Um aplicativo do Facebook e um ID do app. Para obter mais informações, veja
 [Obtendo um ID do app Facebook a partir do Portal do desenvolvedor do Facebook](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
 
 
@@ -67,20 +67,17 @@ de um aplicativo Cordova para integração da autenticação do
 Facebook são muito semelhantes às etapas necessárias para
 aplicativos Android nativos. Para obter mais informações, veja [Ativando a autenticação do Facebook em apps Android](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-android.html). Execute as etapas a seguir:
 
-* 
-[Configurando
-seu aplicativo Facebook para a plataforma Android](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-android.html#facebook-auth-android-config). 
-Isso configura a autenticação do Facebook no site Facebook Developers para aplicativos Android.
-* 
-[Configurando
+* [Configurando
+seu aplicativo Facebook para a plataforma Android](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-android.html#facebook-auth-android-config). Isso configura a autenticação do Facebook no site Facebook Developers para aplicativos Android.
+* [Configurando
 MCA para autenticação no Facebook](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-android.html#facebook-auth-android-mca). Isso
 configura seu serviço {{site.data.keyword.amashort}} no
 servidor {{site.data.keyword.Bluemix}} para autenticação
 do Facebook Android.
 
 
-### Configurando o {{site.data.keyword.amashort}}
-Facebook client SDK para Android
+### Configurando o SDK do cliente do Facebook do {{site.data.keyword.amashort}}
+para a plataforma Android
 {: #configure_android}
 
 O {{site.data.keyword.amashort}} cliente
@@ -103,6 +100,7 @@ uma nova dependência de compilação para o SDK do cliente:
     	// other dependencies  
 	}
 	```
+	{: codeblock}
 
 2. Clique em **Ferramentas > Android >
 Sincronizar projeto com arquivos Gradle** para
@@ -119,6 +117,7 @@ Facebook.
 		<string name="facebook_app_id">"<facebook_app_id>"</string>
 	</resources>
 	```
+	{: codeblock}
 
 4. No arquivo `AndroidManifest.xml` do seu projeto Android
 (`android/manifests/AndroidManifest.xml`):
@@ -135,6 +134,7 @@ Facebook.
     <activity ...../>
     </application>
     ```
+    {: codeblock}
 
    * Inclua um elemento de Atividade do Facebook sob as atividades existentes:
 
@@ -150,6 +150,7 @@ Facebook.
         />
     </application>
     ```
+    {: codeblock}
 
 5. Inclua o seguinte em seu código Java da atividade.
 
@@ -161,13 +162,13 @@ Facebook.
 	      .onActivityResultCalled(requestCode, resultCode, data);
 	}
 	```
+	{: codeblock}
 
 ### Inicializar o Gerenciador de autorização em seu
 código Android nativo
 {: #initialize_android}
 
-A API `FacebookAuthenticationManager` ainda deve ser registrada em seu código nativo. 
-Inclua esse código ao método de atividade principal
+A API `FacebookAuthenticationManager` ainda deve ser registrada em seu código nativo. Inclua esse código ao método de atividade principal
 `onCreate`
 usando o `<tenantId>` (consulte
 [Antes de iniciar](#before-you-begin)).
@@ -178,6 +179,7 @@ MCAAuthorizationManager mcaAuthorizationManager = MCAAuthorizationManager.create
 BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 FacebookAuthenticationManager.getInstance().registerDefaultAuthenticationListener(this);
 ```
+{: codeblock}
 
 
 ## Configurando a plataforma iOS
@@ -186,26 +188,21 @@ FacebookAuthenticationManager.getInstance().registerDefaultAuthenticationListene
 As etapas necessárias para configurar a plataforma iOS do
 aplicativo Cordova para integração da autenticação do Facebook
 são semelhantes às etapas necessárias para aplicativos iOS Swift
-nativos. A principal diferença é que o Cordova CLI atualmente não suporta o gerenciador de dependência CocoaPods. 
-Deve-se incluir manualmente arquivos que sejam necessários
+nativos. A principal diferença é que o Cordova CLI atualmente não suporta o gerenciador de dependência CocoaPods. Deve-se incluir manualmente arquivos que sejam necessários
 para integrar o cliente {{site.data.keyword.amashort}}
 com a autenticação do Facebook. Para mais informações,
 consulte
-[Ativando a autenticação do Facebook para apps iOS (SDK Swift)](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios-swift-sdk.html). Execute as etapas a seguir:
+[Ativando a autenticação do Facebook para apps iOS (Swift SDK)](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios-swift-sdk.html). Execute as etapas a seguir:
 
-* 
-[Configurando
+* [Configurando
 seu aplicativo Facebook para a plataforma iOS](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios-swift-sdk.html#facebook-auth-ios-config). Isto
 configura o serviço de autenticação do Facebook no site Facebook
 Developers.
-* 
-[Configurando MCA para autenticação do Facebook](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios-swift-sdk.html#facebook-auth-ios-configmca). Isso
+* [Configurando MCA para autenticação do Facebook](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios-swift-sdk.html#facebook-auth-ios-configmca). Isso
 configura seu serviço {{site.data.keyword.amashort}} no servidor
 {{site.data.keyword.Bluemix}}.
-* 
-[Configurando o cliente SDK do Facebook MCA para iOS](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios-swift-sdk.html#facebook-auth-ios-sdk). Isso
-instala o SDK Swift {{site.data.keyword.amashort}} iOS
-para autorização do Facebook usando CocoaPods.
+* [Configurando o cliente SDK do Facebook MCA para iOS](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios-swift-sdk.html#facebook-auth-ios-sdk). Isso
+instala o {{site.data.keyword.amashort}} iOS Swift SDK para autorização do Facebook usando CocoaPods.
 
 
 ### Ativar Compartilhamento Keychain para iOS
@@ -250,6 +247,7 @@ código nativo Objective-C no arquivo `app-delegate.m `, de acordo com sua vers�
 	}
 
 ```
+{: codeblock}
 
 **Nota:** o nome do arquivo de
 cabeçalho importado é composto por seu nome de módulo concatenado
@@ -278,6 +276,7 @@ cliente SDK
 ```javascript
 BMSClient.initialize(<applicationBluemixRegion>);
 ```
+{: codeblock}
 
 Substitua
 `<applicationBluemixRegion>` pela sua
@@ -319,6 +318,7 @@ Starter e é protegido com o {{site.data.keyword.amashort}}. Uma mensagem `Unaut
 	var request = new BMSRequest("<applicationRoute}/protected>", BMSRequest.GET);
 	request.send(success, failure);
 	```
+	{: codeblock}
 
 1. Execute o aplicativo. Uma tela de login do Facebook é exibida:
 

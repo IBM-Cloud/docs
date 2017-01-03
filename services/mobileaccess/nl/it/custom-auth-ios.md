@@ -79,7 +79,7 @@ Un punto comune, seppure non obbligatorio, dove inserire il codice di inizializz
 	* Imposta il valore sull'ubicazione del tuo file `BridgingHeader.h`, ad esempio: `$(SRCROOT)/MyApp/BridgingHeader.h`
 	* Verifica che la tua intestazione di collegamento venga rilevata da Xcode compilando il tuo progetto.
 
-1. Inizializza l'SDK client. Sostituisci **Rotta applicaizone** (`applicationRoute`) e **TenantID** (`tenantID`) con i valori. Per ulteriori informazioni su come ottenere questi valori, consulta [Prima di cominciare](##before-you-begin).
+1. Inizializza l'SDK client. Sostituisci **Rotta applicazione** (`applicationRoute`) e **TenantID** (`tenantID`) con i valori. Per ulteriori informazioni su come ottenere questi valori, consulta [Prima di cominciare](##before-you-begin).
 
 	Objective-C:
 

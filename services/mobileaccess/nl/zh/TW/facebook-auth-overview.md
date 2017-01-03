@@ -18,7 +18,7 @@ lastupdated: "2016-10-02"
 
 {:shortdesc}
 
-**重要事項**：您不需要個別安裝 Facebook 所提供的 Client SDK。當您配置 {{site.data.keyword.amashort}} Facebook Client SDK 時，相依關係管理程式會自動安裝 Facebook SDK。
+**重要事項**：您不需要個別安裝 Facebook 所提供的用戶端 SDK。當您配置 {{site.data.keyword.amashort}} Facebook 用戶端 SDK 時，相依關係管理程式會自動安裝 Facebook SDK。
 
 ## {{site.data.keyword.amashort}} 要求流程
 {: #mca-facebook-sequence}
@@ -54,7 +54,7 @@ lastupdated: "2016-10-02"
 ## 在 Facebook for Developers 網站上建立應用程式
 {: #facebook-appID}
 
-若要開始使用 Facebook 作為身分提供者，請在 Facebook for Developers 網站上建立應用程式。在此處理程序期間，會建立「Facebook 應用程式 ID」。Facebook 使用這個唯一 ID 來知道哪一個應用程式正在嘗試連接。
+若要開始使用 Facebook 作為身分提供者，請在 Facebook for Developers 網站上建立應用程式。在此處理程序期間，會建立「Facebook 應用程式 ID」。Facebook 使用這個唯一 ID 來得知哪一個應用程式正在嘗試連接。
 
 您需要這個值來配置行動或 Web 應用程式的 Facebook 鑑別。
 

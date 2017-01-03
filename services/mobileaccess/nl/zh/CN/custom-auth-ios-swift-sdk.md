@@ -6,6 +6,9 @@ lastupdated: "2016-10-27"
 
 ---
 
+{:codeblock:.codeblock}
+
+
 # 针对 {{site.data.keyword.amashort}} iOS (Swift SDK) 应用程序配置定制认证
 {: #custom-ios}
 
@@ -22,7 +25,7 @@ lastupdated: "2016-10-27"
 * **TenantID** 值。在 {{site.data.keyword.amashort}}“仪表板”中打开服务。单击**移动选项**按钮。`tenantId`（也称为 `appGUID`）值会显示在**应用程序 GUID/TenantId** 字段中。您将需要此值来初始化授权管理器。
 * **域名**。这是在 {{site.data.keyword.amashort}}“仪表板”的**管理**选项卡中**定制**部分的**域名**字段中指定的值。
 * 后端应用程序的 URL（**应用程序路径**）。您将需要此值来向后端应用程序的受保护端点发送请求。
-* {{site.data.keyword.Bluemix_notm}} **区域**。您可以在**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标") 旁边的标题中找到当前 {{site.data.keyword.Bluemix_notm}} 区域。显示的区域值应为以下某个值：**美国南部**、**英国**或**悉尼**，并对应于代码中需要的常量：`BMSClient.Region.usSouth`、`BMSClient.Region.unitedKingdom` 或 `BMSClient.Region.sydney`。
+* {{site.data.keyword.Bluemix_notm}} **区域**。您可以在**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标") 旁边的头中找到当前 {{site.data.keyword.Bluemix_notm}} 区域。显示的区域值应为以下某个值：**美国南部**、**英国**或**悉尼**，并对应于代码中需要的常量：`BMSClient.Region.usSouth`、`BMSClient.Region.unitedKingdom` 或 `BMSClient.Region.sydney`。
 
 有关更多信息，请参阅以下信息：
  * [{{site.data.keyword.amashort}} 入门](https://console.{DomainName}/docs/services/mobileaccess/index.html)
@@ -30,6 +33,11 @@ lastupdated: "2016-10-27"
  * [使用定制身份提供者](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
  * [创建定制身份提供者](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
  * [配置 {{site.data.keyword.amashort}} 进行定制认证](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
+
+### 启用 iOS 的密钥链共享
+{: #enable_keychain}
+
+启用`密钥链共享`。转至`功能`选项卡，然后在 Xcode 项目中将`密钥链共享`切换为`开启`。
 
 
 ### 初始化客户端 SDK
@@ -44,6 +52,7 @@ lastupdated: "2016-10-27"
 	import BMSCore
 	import BMSSecurity
 	```
+	{: codeblock}
 
 1. 初始化 {{site.data.keyword.amashort}} 客户机 SDK，将授权管理器更改为 `MCAAuthorizationManager`，并定义和注册认证代表。
 
@@ -84,6 +93,7 @@ let mcaAuthManager = MCAAuthorizationManager.sharedInstance
 	     return true
  }
  ```
+{: codeblock}
 
 在代码中：
 * 将 `MCAServiceTenantId` 替换为 **TenantId** 值，并将 `<applicationBluemixRegion>` 替换为 {{site.data.keyword.amashort}} **区域**（请参阅[开始之前](##before-you-begin)）。 
@@ -111,7 +121,7 @@ let mcaAuthManager = MCAAuthorizationManager.sharedInstance
 
  
 
-	```Swift
+    ```Swift
 
 	let protectedResourceURL = "<your protected resource absolute path>"
 	let request = Request(url: protectedResourceURL, method: HttpMethod.GET)
@@ -119,13 +129,13 @@ let mcaAuthManager = MCAAuthorizationManager.sharedInstance
 	let callBack:BMSCompletionHandler = {(response: Response?, error: Error?) in
   if error == nil {
       print ("response:\(response?.responseText), no error")
-  } else {
-      print ("error: \(error)")
-  }
- }
-
+	    } else {
+	       print ("error: \(error)")
+	    }
+	}
 	request.send(completionHandler: callBack)
-	 ```
+ ```
+     {: codeblock}
 
 1. 请求成功后，将在 Xcode 控制台中看到以下输出：
 
@@ -140,12 +150,14 @@ let mcaAuthManager = MCAAuthorizationManager.sharedInstance
  })
  response:Optional("Hello Don Lon"), no error
  ```
+	 {: codeblock}
 
 1. 通过添加以下代码，您还可以添加注销功能：
 
 	 ```
 	 MCAAuthorizationManager.sharedInstance.logout(callBack)
- ```  
+ ``` 
+	 {: codeblock}
 
  如果您在用户登录之后调用此代码，那么用户将注销。用户在尝试重新登录时，必须重新回答服务器发出的质询。
 

@@ -334,6 +334,6 @@ return shouldHandleGoogleURL;
 	```
 {: codeblock}
 
-	如果您在用户登录 Google 之后调用此代码，并且用户尝试重新登录，那么系统将提示他们授予 {{site.data.keyword.amashort}} 权限，以使用 Google 进行认证。此时，用户可以单击<!--in the upper-right corner of the screen-->用户名，以选择其他用户并登录。
+	如果您在用户登录 Google 之后调用此代码，并且用户尝试重新登录，那么系统将提示他们授权 {{site.data.keyword.amashort}} 使用 Google 进行认证。此时，用户可以单击<!--in the upper-right corner of the screen-->用户名，以选择其他用户并登录。
 
 	您可以选择是否将 `callBack` 传递给注销功能。您还可以传递 `nil`。

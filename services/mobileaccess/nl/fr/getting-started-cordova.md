@@ -2,10 +2,12 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-13"
+lastupdated: "2016-12-04"
 
 ---
+
 {:shortdesc: .shortdesc}
+{:codeblock:.codeblock}
 
 # Configuration du plug-in Cordova
 {: #getting-started-cordova}
@@ -18,8 +20,8 @@ Instrumentez votre application client Cordova avec le SDK client d'{{site.data.k
 {: #before-you-begin}
 Vous devez disposer des éléments suivants :
 * Une instance d'une application {{site.data.keyword.Bluemix_notm}}. Pour plus d'informations sur la création d'un système de back end {{site.data.keyword.Bluemix_notm}}, voir [Initiation](index.html).
-* Une instance d'un service {{site.data.keyword.amafull}}. 
-* L'URL de votre application back-end (**Route de l'application**). Vous aurez besoin de ces valeurs pour envoyer des requêtes aux noeuds finaux protégés de votre application back end. 
+* Une instance d'un service {{site.data.keyword.amafull}}.
+* L'URL de votre application back-end (**Route de l'application**). Vous aurez besoin de ces valeurs pour envoyer des requêtes aux noeuds finaux protégés de votre application back end.
 * Valeur de votre **TenantID**. Ouvrez votre service dans le tableau de bord de {{site.data.keyword.amashort}}. Cliquez sur le bouton **Options pour application mobile**. La valeur `tenantId` (qui porte également le nom d'`appGUID`) est affichée dans la zone **App GUID / TenantId**. Vous aurez besoin de cette valeur pour initialiser le Gestionnaire des autorisations.
 * Votre **région** {{site.data.keyword.Bluemix_notm}}. Vous pouvez trouver votre région {{site.data.keyword.Bluemix_notm}} actuelle dans l'en-tête, en regard de l'icône **Avatar**![icône Avatar](images/face.jpg "icône Avatar"). La valeur de la région qui apparaît doit être l'une des suivantes : `US South`, `United Kingdom` ou `Sydney`, et correspondre aux valeurs requises dans le code Javascript de WebView : `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` ou `BMSClient.REGION_UK`. Vous aurez besoin de cette valeur pour initialiser le client {{site.data.keyword.amashort}}.
 * Une application Cordova ou un projet existant. Pour plus d'informations sur la configuration de votre application Cordova, consultez le [site Web Cordova](https://cordova.apache.org/).
@@ -39,6 +41,7 @@ CLI de Cordova télécharge automatiquement des plug-ins depuis les référentie
 	```
 	cordova platform add android
 	```
+	{: codeblock}
 
 	###iOS
 	{: #install-cordova-ios}
@@ -46,6 +49,7 @@ CLI de Cordova télécharge automatiquement des plug-ins depuis les référentie
 	```Bash
 	cordova platform add ios
 	```
+	{: codeblock}
 
 2. Si vous avez ajouté la plateforme Android, vous devez ajouter le niveau d'API minimal pris en charge au fichier `config.xml` de votre application Cordova. Ouvrez
 le fichier `config.xml` et ajoutez la ligne suivante à l'élément `<platform
@@ -58,6 +62,7 @@ name="android">` :
 		<!-- add minimum and target Android API level declaration -->
 	</platform>
 	```
+	{: codeblock}
 
 	La valeur de *minSdkVersion* doit être supérieure ou égale à `15`. La valeur *targetSdkVersion* doit être `23`. Actuellement, Cordova ne prend pas en charge les versions plus élevées que **Android-23**.
 	
@@ -69,12 +74,14 @@ name="android">` :
 		<!-- add deployment target declaration -->
 	 </platform>
 	```
+	{: codeblock}
 
 4. Installez le plug-in Cordova de {{site.data.keyword.amashort}} :
 
  	```Bash
 	cordova plugin add bms-core
 	```
+	{: codeblock}
 
 5. Configurez votre plateforme pour Android, iOS, ou les deux.
 
@@ -87,6 +94,7 @@ de génération.
 	```Bash
 	cordova build android
 	```
+	{: codeblock}
 
 	####iOS
 	{: #cordova-ios}
@@ -116,13 +124,14 @@ de génération.
 	```Bash
 	cordova plugin list
 	```
+	{: codeblock}
 	
 7. Activez le partage de chaîne de certificats pour iOS en basculant **Keychain Sharing** sur `On` dans l'onglet **Capabilities**.
   
 8. Activez **Defines Module** pour iOS en basculant **Defines Module** sur `YES` dans l'onglet **Build Settings** > **Packaging**.
 
 
-## Initialisation du client {{site.data.keyword.amashort}} dans le WebView Cordova (Javascript) 
+## Initialisation du client {{site.data.keyword.amashort}} dans le WebView Cordova (Javascript)
 {: #getting-started-cordova-initialize}
 
 Pour utiliser le SDK client de {{site.data.keyword.amashort}}, initialisez-le en lui transmettant le paramètre `applicationBluemixRegion`.
@@ -132,10 +141,11 @@ Ajoutez l'appel suivant à votre fichier `index.js` pour initialiser le SDK clie
 ```JavaScript
 BMSClient.initialize(<applicationBluemixRegion>);
 ```
+{: codeblock}
 
-**NB :** Remplacez `<applicationBluemixRegion>` par la région dans laquelle votre service {{site.data.keyword.Bluemix_notm}} est hébergé, voir [Avant de commencer](#before-you-begin). 
+**NB :** Remplacez `<applicationBluemixRegion>` par la région dans laquelle votre service {{site.data.keyword.Bluemix_notm}} est hébergé, voir [Avant de commencer](#before-you-begin).
 
-##Initialisation du gestionnaire AuthorizationManager {{site.data.keyword.amashort}} à partir de votre code natif  
+##Initialisation du gestionnaire AuthorizationManager {{site.data.keyword.amashort}} à partir de votre code natif
 {: #initializing-auth-manager}
 
 Pour utiliser `BMSAuthorizationManager`, vous devez ajouter l'extrait de code suivant. Le code natif suivant initialise le gestionnaire `BMSAuthorizationManager` avec le service {{site.data.keyword.amashort}}, `tenantId` (voir [Avant de commencer](#before-you-begin)).
@@ -147,12 +157,14 @@ Dans la méthode `OnCreate` du fichier `MainActivity.java`, ajoutez le code avan
 MCAAuthorizationManager mcaAuthorizationManager = MCAAuthorizationManager.createInstance(this.getApplicationContext(),"<tenantId>");
 BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 ```
+{: codeblock}
 ### iOS (Objective C)
 Ajoutez l'initialisation du Gestionnaire d'autorisations dans `AppDelegate.m` selon votre version de Xcode.
 
 ```Objective-C
   [CDVBMSClient initMCAAuthorizationManagerManagerWithTenantId:@"<tenantId>"]; 
 ```
+{: codeblock}
 
 
 ## Envoi d'une demande au service back end mobile
@@ -182,10 +194,11 @@ protégé par {{site.data.keyword.amashort}}. Un message signalant l'interdictio
 
 	 request.send(success, failure);
 	```
+	{: codeblock}
 
 3. Lorsque votre demande aboutit, la sortie suivante figure dans la console LogCat ou Xcode (selon la plateforme utilisée) :
 
-	![image](images/getting-started-android-success.png)
+	![message de succès](images/getting-started-android-success.png)
 
 	## Etapes suivantes
 	{: #next-steps}

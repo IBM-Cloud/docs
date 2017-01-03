@@ -2,10 +2,12 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-13"
+lastupdated: "2016-12-04"
 
 ---
+
 {:shortdesc: .shortdesc}
+{:codeblock:.codeblock}
 
 # Cordova 플러그인 설정
 {: #getting-started-cordova}
@@ -37,6 +39,7 @@ Cordova용 {{site.data.keyword.amashort}} 클라이언트 SDK는 원시 {{site.d
 	```
 	cordova platform add android
 	```
+	{: codeblock}
 
 	###iOS
 	{: #install-cordova-ios}
@@ -44,6 +47,7 @@ Cordova용 {{site.data.keyword.amashort}} 클라이언트 SDK는 원시 {{site.d
 	```Bash
 	cordova platform add ios
 	```
+	{: codeblock}
 
 2. Android 플랫폼을 추가한 경우 지원되는 최소 API를 Cordova 애플리케이션의 `config.xml` 파일에 추가해야 합니다. `config.xml` 파일을 열고 `<platform name="android">` 요소에 다음 행을 추가하십시오. 
 
@@ -54,6 +58,7 @@ Cordova용 {{site.data.keyword.amashort}} 클라이언트 SDK는 원시 {{site.d
 		<!-- add minimum and target Android API level declaration -->
 	</platform>
 	```
+	{: codeblock}
 
 	*minSdkVersion* 값은 `15` 이상이어야 합니다. *targetSdkVersion* 값은 `23`이어야 합니다. 현재 Cordova에서는 **Android-23** 이후 버전을 지원하지 않습니다. 
 	
@@ -65,12 +70,14 @@ Cordova용 {{site.data.keyword.amashort}} 클라이언트 SDK는 원시 {{site.d
 		<!-- add deployment target declaration -->
 	 </platform>
 	```
+	{: codeblock}
 
 4. {{site.data.keyword.amashort}} Cordova 플러그인을 설치하십시오. 
 
  	```Bash
 	cordova plugin add bms-core
 	```
+	{: codeblock}
 
 5. Android, iOS 또는 둘 다에 대해 플랫폼을 구성하십시오. 
 
@@ -82,6 +89,7 @@ Cordova용 {{site.data.keyword.amashort}} 클라이언트 SDK는 원시 {{site.d
 	```Bash
 	cordova build android
 	```
+	{: codeblock}
 
 	####iOS
 	{: #cordova-ios}
@@ -110,6 +118,7 @@ Cordova용 {{site.data.keyword.amashort}} 클라이언트 SDK는 원시 {{site.d
 	```Bash
 	cordova plugin list
 	```
+	{: codeblock}
 	
 7. **기능** 탭에서 **키 체인 공유**를 `On`으로 전환하여 iOS에 대해 키 체인 공유를 사용 가능하게 설정하십시오. 
   
@@ -126,6 +135,7 @@ Cordova용 {{site.data.keyword.amashort}} 클라이언트 SDK는 원시 {{site.d
 ```JavaScript
 BMSClient.initialize(<applicationBluemixRegion>);
 ```
+{: codeblock}
 
 **NB:** `<applicationBluemixRegion>`을 {{site.data.keyword.Bluemix_notm}} 서비스가 호스트되는 지역으로 대체하십시오([시작하기 전에](#before-you-begin) 참조).
 
@@ -141,12 +151,14 @@ BMSClient.initialize(<applicationBluemixRegion>);
 MCAAuthorizationManager mcaAuthorizationManager = MCAAuthorizationManager.createInstance(this.getApplicationContext(),"<tenantId>");
 BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 ```
+{: codeblock}
 ### iOS(Objective C)
 사용하는 Xcode의 버전에 따라 `AppDelegate.m`에서 권한 관리자 초기화를 추가하십시오. 
 
 ```Objective-C
   [CDVBMSClient initMCAAuthorizationManagerManagerWithTenantId:@"<tenantId>"]; 
 ```
+{: codeblock}
 
 
 ## 모바일 백엔드 서비스에 대한 요청 작성
@@ -173,10 +185,11 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 
 	 request.send(success, failure);
 	```
+	{: codeblock}
 
 3. 요청에 성공하는 경우 LogCat 또는 Xcode 콘솔에 다음 출력이 표시됩니다(사용 중인 플랫폼에 따라 다름). 
 
-	![이미지](images/getting-started-android-success.png)
+	![성공 메시지](images/getting-started-android-success.png)
 
 	## 다음 단계
 	{: #next-steps}

@@ -2,14 +2,14 @@
 
 copyright:
   year: 2016
-lastupdated: "2016-11-01"
+lastupdated: "2016-11-22"
 
 ---
 
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 
-# 為 Web 應用程式啟用 Google 鑑別
+# 啟用 Web 應用程式的 Google 鑑別
 {: #google-auth-web}
 
 在 Web 應用程式上使用「Google 登入」來鑑別使用者。新增 {{site.data.keyword.amafull}} 安全功能。 
@@ -51,7 +51,7 @@ lastupdated: "2016-11-01"
 1. 開啟 **Google** 區段。
 1. 勾選**新增 Google 至 Web 應用程式**。
 4. 在**為 Web 進行配置**區段中，請執行下列動作：   
-    * 記下 **Google Developer Console 的 Mobile Client Access 重新導向 URI** 文字框中的值。這是您需要新增至**授權重新導向 URI** 方框的值，此方框位於 **Google 開發人員入口網站**的**用戶端 ID 中針對 Web 應用程式的限制**中。
+    * 記下 **Google Developer Console 的 Mobile Client Access 重新導向 URI** 文字框中的值。這是您需要新增至**授權重新導向 URI** 方框的值，此方框位於 **Google 開發人員入口網站**的 **Web 應用程式用戶端 ID 的限制**中。
     * 輸入**用戶端 ID** 和**用戶端密碼**。
     * 在**您的 Web 應用程式重新導向 URI** 中輸入重新導向 URI。此值適用於要在授權處理程序完成之後存取的重新導向 URI，並由開發人員決定。
 5. 按一下**儲存**。
@@ -62,29 +62,27 @@ lastupdated: "2016-11-01"
 
 `VCAP_SERVICES` 環境變數是針對每一個 {{site.data.keyword.amashort}} 服務實例自動建立的，並且包含授權處理程序所需的內容。其由 JSON 物件組成，按一下 {{site.data.keyword.amashort}} 服務儀表板中的**服務認證**標籤，即可進行檢視。
 
-若要啟動授權處理程序，請執行下列動作：
+若要開始授權處理程序，請執行下列動作：
 
-1. 從 `VCAP_SERVICES` 環境變數中儲存的服務認證，擷取授權端點 (`authorizationEndpoint`) 及用戶端 ID (`clientId`)。`var cfEnv = require("cfenv");` 
-	 `var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;` 
+1. 從 `VCAP_SERVICES` 環境變數中儲存的服務認證，擷取授權端點 (`authorizationEndpoint`) 及用戶端 ID (`clientId`)。 
+
+	`var cfEnv = require("cfenv");` 
+	
+	`var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;` 
 
 	**附註：**如果您在新增 Web 支援之前，已將 {{site.data.keyword.amashort}} 服務新增至應用程式，則在服務認證中可能沒有記號端點。請改用下列 URL（視 {{site.data.keyword.Bluemix_notm}} 地區而定）： 
  
 	美國南部： 
 
-	`  https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization 
-  ` 
+	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization` 
 
-	  倫敦：
-   
+	倫敦： 
 
-	` https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization
-   ` 
+	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization` 
 
-	  雪梨：
-   
+	雪梨： 
 
-	`  https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization 
-  `
+	`https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization`
 	 
 2. 使用 `response_type("code")`、`client_id` 及 `redirect_uri` 作為查詢參數，來建置授權伺服器 URI。
 
@@ -93,37 +91,38 @@ lastupdated: "2016-11-01"
 	下列範例會擷取 `VCAP_SERVICES` 變數中的參數，並建置 URL，然後傳送重新導向要求。
   
 	```Java
-var cfEnv = require("cfenv"); 
-app.get("/protected", checkAuthentication, function(req, res, next){ 
-  res.send("Hello from protected endpoint"); 
- }); 
+	var cfEnv = require("cfenv");
+	app.get("/protected", checkAuthentication, function(req, res, next) {
+		res.send("Hello from protected endpoint");
+	});
 
- app.get("/protected", checkAuthentication, function(req, res, next){ 
- 	res.send("Hello from protected endpoint"); 
- 	function checkAuthentication(req, res, next){ 
+	app.get("/protected", checkAuthentication, function(req, res, next) {
+		res.send("Hello from protected endpoint");
+		function checkAuthentication(req, res, next) {
 
-	// Check if user is authenticated 
- 	if (req.session.userIdentity){ 
-		next() 
-	} else { 
-		// If not - redirect to authorization server 
-				var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials; 
-				var authorizationEndpoint = mcaCredentials.authorizationEndpoint; 
-				var clientId = mcaCredentials.clientId; 
-				var redirectUri = "http://some-server/oauth/callback"; // Your Web application redirect URI 
+			// Check if user is authenticated
+			if (req.session.userIdentity) {
+				next()
+			} else {
+				// If not - redirect to authorization server
+				var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
+				var authorizationEndpoint = mcaCredentials.authorizationEndpoint;
+				var clientId = mcaCredentials.clientId;
+				var redirectUri = "http://some-server/oauth/callback"; // Your Web application redirect URI
 				var redirectUrl = authorizationEndpoint + "?response_type=code";
-				redirectUrl += "&client_id=" + clientId; 
-				redirectUrl += "&redirect_uri=" + redirectUri; 
-				res.redirect(redirectUrl); 
-			} 
-		} 
-	}
+				redirectUrl += "&client_id=" + clientId;
+				redirectUrl += "&redirect_uri=" + redirectUri;
+				res.redirect(redirectUrl);
+				}
+		 	} 
+	   	}
+       }
 	```
 	{: codeblock}
 
 	請注意，`redirect_uri` 參數代表您的 Web 應用程式重新導向 URI，而且必須等於 {{site.data.keyword.amashort}} 儀表板中定義的 URI。
 
-	在重新導向至授權端點之後，使用者將從 Google 取得登入表單。在使用者授與使用其 Google 身分進行登入的許可權之後，{{site.data.keyword.amashort}} 服務會提供授權碼作為查詢參數，以呼叫您的 Web 應用程式重新導向 URI。
+	重新導向至授權端點之後，使用者將從 Google 取得登入表單。使用者授與使用其 Google 身分進行登入的許可權之後，{{site.data.keyword.amashort}} 服務會提供授權碼作為查詢參數，以呼叫您的 Web 應用程式重新導向 URI。
 
 ## 取得記號
 {: #google-auth-tokens}
@@ -136,65 +135,60 @@ app.get("/protected", checkAuthentication, function(req, res, next){
 
 	美國南部： 
   
-	`    https://mobileclientaccess.ng.bluemix.net/oauth/v2/token
-     `
+	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/token`
  
-	  倫敦：
-   
+	倫敦： 
  
-	`    https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token  
-     ` 
+	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token` 
  
-	  雪梨：
-   
+	雪梨： 
  
-	`     https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/token 
- `
+	`https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/token`
 
 2. 將 POST 要求傳送至記號伺服器 URI，並以 grant_type ("authorization_code")、client_id、redirect_uri 及 code 作為表單參數。傳送 `clientId` 及 `clientSecret` 作為基本 HTTP 鑑別認證。
  
 	下列程式碼會擷取必要值，並透過 POST 要求傳送它們。
     
 	```Java
-  var cfEnv = require("cfenv");
-  var base64url = require("base64url ");
-  var request = require('request');
+	var cfEnv = require("cfenv");
+	var base64url = require("base64url ");
+	var request = require('request');
 
-   app.get("/oauth/callback", function(req, res, next){ 
-	var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials; 
-	var tokenEndpoint = mcaCredentials.tokenEndpoint; 
-	var formData = { 
-		grant_type: "authorization_code", 
-			client_id: mcaCredentials.clientId, 
-			redirect_uri: "http://some-server/oauth/callback",// Your Web application redirect uri 
-			code: req.query.code 
-		} 
+	app.get("/oauth/callback", function(req, res, next) {
+		var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
+		var tokenEndpoint = mcaCredentials.tokenEndpoint;
+		var formData = {
+			grant_type: "authorization_code",
+			client_id: mcaCredentials.clientId,
+			redirect_uri: "http://some-server/oauth/callback",// Your Web application redirect uri
+			code: req.query.code
+		}
 
-		request.post({ 
-			url: tokenEndpoint, 
-		formData: formData 
-		}, function (err, response, body){ 
-			var parsedBody = JSON.parse(body); 
-			req.session.accessToken = parsedBody.access_token; 
-			req.session.idToken = parsedBody.id_token; 
-			var idTokenComponents = parsedBody.id_token.split("."); // [header, payload, signature] 
+		request.post({
+			url: tokenEndpoint,
+			formData: formData
+		}, function (err, response, body) {
+			var parsedBody = JSON.parse(body);
+			req.session.accessToken = parsedBody.access_token;
+			req.session.idToken = parsedBody.id_token;
+			var idTokenComponents = parsedBody.id_token.split("."); // [header, payload, signature]
 			var decodedIdentity= base64url.decode(idTokenComponents[1]);
-			req.session.userIdentity = JSON.parse(decodedIdentity)["imf.user"]; 
-			res.redirect("/"); 
+			req.session.userIdentity = JSON.parse(decodedIdentity)["imf.user"];
+			res.redirect("/");
 			}
-			).auth(mcaCredentials.clientId, mcaCredentials.secret); 
-  }
-); 
+			).auth(mcaCredentials.clientId, mcaCredentials.secret);
+		}
+	); 
 	```
 	{: codeblock}
 
-	`redirect_uri` 參數是使用 Google+ 進行成功或失敗鑑別之後用於重新導向的 URI，而且必須符合來自步驟 1 的 `redirect_uri`。  
+	`redirect_uri` 參數是使用 Google+ 進行成功或失敗鑑別之後用於重新導向的 URI，而且必須符合 {{site.data.keyword.amashort}} 儀表板中定義的 `redirect_uri`。  
    
 	確定在 10 分鐘內傳送此 POST 要求，在此時間後授權碼將到期。10 分鐘之後，需要新的授權碼。
 
 	POST 回應內文會包含以 base64 編碼的 `access_token` 及 `id_token`。
 
-	在收到存取權和身分記號之後，您可以將 Web 階段作業標示為已鑑別，並可選擇持續保存這些記號。  
+	收到存取權和身分記號之後，您可以將 Web 階段作業標示為已鑑別，並可選擇持續保存這些記號。  
 
 
 ##使用取得的存取及身分記號

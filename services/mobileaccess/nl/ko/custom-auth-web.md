@@ -2,16 +2,17 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-11-03"
+lastupdated: "2016-12-05"
 
 ---
-
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
 {:codeblock: .codeblock}
+{:pre: .pre}
 
 #{{site.data.keyword.amashort}} 웹 애플리케이션용 사용자 정의 인증 구성
 {: #custom-web}
-
 
 사용자 정의 인증 및 {{site.data.keyword.amafull}} 보안 기능을 웹 앱에 추가하십시오.
 
@@ -125,12 +126,11 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer', function(req
 1. 권한 엔드포인트(`authorizationEndpoint`) 및 클라이언트 ID(`clientId`)를 `VCAP_SERVICES` 환경 변수에 저장된 서비스 신임 정보에서 검색하십시오.  
 
 	`var cfEnv = require("cfenv");` 
-	
+
 	`var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;` 
 
-
 	**참고:** 웹 지원을 추가하기 전에 웹 애플리케이션에 {{site.data.keyword.amashort}} 서비스를 추가한 경우 서비스 신임 정보에 토큰 엔드포인트가 없을 수 있습니다. 대신, {{site.data.keyword.Bluemix_notm}} 지역에 따라 다음 URL을 사용하십시오. 
-  
+
 	미국 남부:  
 
 	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization` 
@@ -147,7 +147,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer', function(req
 
 3. 웹 앱에서 생성된 URI로 경로를 재지정하십시오.  
 
-	다음 예는 `VCAP_SERVICES` 변수에서 매개변수를 검색하고, URL을 빌드하고, 경로 재지정 요청을 전송합니다. 
+   다음 예는 `VCAP_SERVICES` 변수에서 매개변수를 검색하고, URL을 빌드하고, 경로 재지정 요청을 전송합니다. 
 
 	```Java
  var cfEnv = require("cfenv");
@@ -193,15 +193,15 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer', function(req
 	**참고:** 웹 지원을 추가하기 전에 애플리케이션에 {{site.data.keyword.amashort}} 서비스를 추가한 경우 서비스 신임 정보에 토큰 엔드포인트가 없을 수 있습니다. 대신, {{site.data.keyword.Bluemix_notm}} 지역에 따라 다음 URL을 사용하십시오. 
 
 	미국 남부:  
-  
+
 	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/token`
- 
+
 	런던: 
- 
+	
 	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token` 
  
 	시드니: 
- 
+
 	`https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/token`
  
 2. 양식 매개변수로 `grant_type`, `client_id`, `redirect_uri` 및 `code`를 사용하고 기본 HTTP 인증 신임 정보로 `clientId` 및 `secret`을 사용하여 POST 요청을 토큰 서버 URI에 전송하십시오. 
@@ -262,7 +262,4 @@ ID 토큰에는 사용자 ID에 대한 정보가 포함되어 있습니다. 사�
 
 * `<accessToken>` 및 `<idToken>`은 공백으로 구분해야 합니다.
 
-* ID 토큰은 선택사항입니다. ID 토큰을 제공하지 않는 경우 보호 리소스에 액세스할 수 있지만, 권한 부여된 사용자에 대한 정보는 수신하지 않습니다. 
-
-
-
+* ID 토큰은 선택사항입니다. ID 토큰을 제공하지 않는 경우 보호 리소스에 액세스할 수 있지만, 권한 부여된 사용자에 대한 정보는 수신하지 않습니다.

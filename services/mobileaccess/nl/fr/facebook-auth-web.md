@@ -2,9 +2,10 @@
 
 copyright:
   year: 2016
-lastupdated: "2016-11-07"
+lastupdated: "2016-12-04"
 
 ---
+
 {:screen: .screen}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
@@ -30,7 +31,8 @@ Vous devez disposer des éléments suivants :
 Pour utiliser Facebook comme fournisseur d'identité dans votre site Web, vous devez ajouter et configurer la plateforme de site Web sur votre application 
 Facebook.
 
-1. Connectez-vous à votre compte sur le site [Facebook for Developers](https://developers.facebook.com). Pour plus d'informations sur la création d'une nouvelle appli, voir [Création d'une application sur le site Web Facebook for Developers](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID). 
+1. Connectez-vous à votre compte sur le site [Facebook for Developers](https://developers.facebook.com). 
+	Pour plus d'informations sur la création d'une nouvelle appli, voir [Création d'une application sur le site Web Facebook for Developers](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID). 
 1. Notez les valeurs des zones **ID application** et **Valeur confidentielle de l'application**. Vous en aurez besoin pour configurer votre projet Web
 pour l'authentification Facebook dans le tableau de bord de Mobile Client Access.
 1. Dans **Products List**, sélectionnez **Facebook Login**.
@@ -47,8 +49,8 @@ Une fois que vous disposez de votre ID d'application et de la valeur confidentie
 
 1. Ouvrez le tableau de bord de service {{site.data.keyword.amashort}}.
 1. Dans l'onglet **Gérer**, activez **Autorisation**.
-1. Développez la section **Facebook**. 
-1. Sélectionnez **Ajouter Facebook à une application Web**. 
+1. Développez la section **Facebook**.
+1. Sélectionnez **Ajouter Facebook à une application Web**.
 5. Notez la valeur de la zone de texte **URI de redirection Mobile Client Access pour Facebook for Developers**. Vous devez ajouter cette valeur à la zone relative aux **URI de redirection OAuth valides** dans la **connexion Facebook** du portail des développeurs Facebook.
 6. Entrez l'**ID application** et la **Valeur confidentielle de l'application** obtenus sur le site Web Facebook for Developers.
 7. Entrez l'URI de redirection dans **URI de redirection de votre application Web**. Cette valeur est celle de l'URI de redirection à laquelle accéder

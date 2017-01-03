@@ -2,9 +2,12 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-03"
+lastupdated: "2016-11-22"
 
 ---
+
+{:codeblock:.codeblock}
+
 
 # Configurazione dell'autenticazione personalizzata per la tua applicazione Cordova {{site.data.keyword.amashort}}
 {: #custom-cordova}
@@ -20,11 +23,11 @@ Strumentazione della tua applicazione Cordova per utilizzare l'autenticazione pe
 
 Per ulteriori informazioni, consulta:
  * [Configurazione di {{site.data.keyword.amashort}} per l'autenticazione personalizzata](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html). Viene illustrato come configurare il servizio {{site.data.keyword.amashort}} per l'autenticazione personalizzata. Qui definisci il valore **Realm**.
- * [Configurazione dell'SDK Cordova](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html). Informazioni sulla configurazione dell'applicazione client Cordova. 
+ * [Configurazione dell'SDK Cordova](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html). Informazioni sulla configurazione dell'applicazione client Cordova.
  * [Utilizzo di un provider di identità personalizzato](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html). Come autenticare gli utenti a un provider di identità personalizzato.
- * [Creazione di un provider di identità personalizzato](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html). Alcuni esempi di come funziona un provider di identità personalizzato.  
+ * [Creazione di un provider di identità personalizzato](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html). Alcuni esempi di come funziona un provider di identità personalizzato. 
 
-## Configura il tuo codice Cordova WebView 
+## Configura il tuo codice Cordova WebView
 ### Inizializzazione dell'SDK client {{site.data.keyword.amashort}} in Cordova WebView
 {: #custom-cordova-sdk}
 Inizializza l'SDK passando il parametro `<applicationBluemixRegion>` nel file `index.js`.
@@ -32,6 +35,7 @@ Inizializza l'SDK passando il parametro `<applicationBluemixRegion>` nel file `i
 ```JavaScript
 BMSClient.initialize("<applicationBluemixRegion>");
 ```
+{: codeblock}
 
 Sostituisci `<applicationBluemixRegion>` con la tua regione (consulta [Prima di cominciare](#before-you-begin)). 
  
@@ -48,6 +52,7 @@ var customAuthenticationListener = {
 	onAuthenticationFailure: function(info){...}
 }
 ```
+{: codeblock}
 
 Ciascun metodo gestisce una fase differente di un processo di autenticazione.
 
@@ -57,6 +62,7 @@ Questo metodo viene richiamato quando viene ricevuta una richiesta di verifica d
 ```JavaScript
 onAuthenticationChallengeReceived: function(authenticationContext, challenge) {...}
 ```
+{: codeblock}
 
 * `authenticationContext`: fornito dall'SDK client {{site.data.keyword.amashort}} per consentire allo sviluppatore di notificare a sua volta le risposte alle richieste di verifica dell'autenticazione oppure un errore durante la raccolta di credenziali, come ad esempio l'utente che annulla la richiesta di autenticazione.
 * `challenge`: un oggetto JSON che contiene una richiesta di verifica dell'autenticazione personalizzata, come restituita da un provider di identità personalizzato.
@@ -66,12 +72,14 @@ Richiamando il metodo `onAuthenticationChallengeReceived`, l'SDK client {{site.d
 ```JavaScript
 onAuthenticationSuccess: function(info){...}
 ```
+{: codeblock}
 
 Questo metodo viene richiamato dopo un'autenticazione con esito positivo. Gli argomenti includono un oggetto JSON facoltativo che contiene informazioni estese sull'esito positivo dell'autenticazione.
 
 ```JavaScript
 onAuthenticationFailure: function(info){...}
 ```
+{: codeblock}
 
 Questo metodo viene richiamato dopo un esito negativo dell'autenticazione. Gli argomenti includono un oggetto JSON facoltativo che contiene informazioni estese sull'esito negativo dell'autenticazione.
 
@@ -83,10 +91,15 @@ un listener di autenticazione personalizzato. Lo sviluppatore deve raccogliere l
 
 ```JavaScript
 authenticationContext.submitAuthenticationChallengeAnswer(challengeAnswer);
+```
+{: codeblock}
 
+```JavaScript
 authenticationContext.submitAuthenticationFailure(info);
 ```
-Il seguente codice dimostra come un listener di autorizzazione del cliente può raccogliere le credenziali, gestire le difficoltà e fornire le risposte di autenticazione.
+{: codeblock}
+
+Il seguente codice illustra come un listener di autenticazione del cliente può raccogliere le credenziali, gestire le difficoltà e fornire le risposte di autenticazione.
 
 ## Implementazione di esempio di un flusso di lavoro del listener di autorizzazione personalizzato.
 {: #custom-cordova-authlisten-sample}
@@ -127,6 +140,7 @@ var customAuthenticationListener = {
 	}
 }
 ```
+{: codeblock}
 
 ## Registrazione di un listener di autenticazione personalizzato in Cordova WebView
 {: #custom-cordova-authreg}
@@ -137,6 +151,7 @@ inviare richieste alle tue risorse protette.
 ```Java
 BMSClient.registerAuthenticationListener(<realmName>, customAuthenticationListener);
 ```
+{: codeblock}
  Utilizza il `realmName` che hai specifico nel dashboard {{site.data.keyword.amashort}}.
 
 ## Configura il gestore autorizzazione nel codice nativo
@@ -150,6 +165,7 @@ String tenantId = "<tenantId>";
 MCAAuthorizationManager.createInstance(this.getApplicationContext(),tenantId);
 BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 ```
+{: codeblock}
 
 **iOS Objective-C** (aggiungi a `AppDelegate.m`)
 
@@ -165,6 +181,7 @@ Registra il tuo gestore autorizzazione in base alla tua versione di Xcode.
     //[CDVBMSClient initMCAAuthorizationManagerManagerWithTenantId:@"<tenantId>"];
  }
 ```
+{: codeblock}
 
 Nota: sostituisci ``your_module_name`` con il nome modulo del tuo progetto, ad esempio, se il tuo nome module è``Cordova` dovrebbe essere ``#import "Cordova-Swift.h"`. Per trovare il nome modulo vai a **Build Settings > Packagin` > Product Module Name**.
 
@@ -200,6 +217,7 @@ Devi disporre di un'applicazione creata con il contenitore tipo {{site.data.keyw
 	var request = new BMSRequest("<your-application-route>", BMSRequest.GET);
 	request.send(success, failure);
 	```
+	{: codeblock}
 	
 	Sostituisci `<your-application-route>` con il tuo URL dell'applicazione di back-end (consulta [Prima di cominciare](#before-you-begin)). 
 

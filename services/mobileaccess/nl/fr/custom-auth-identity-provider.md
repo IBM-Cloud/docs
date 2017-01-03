@@ -6,6 +6,8 @@ lastupdated: "2016-11-07"
 
 ---
 
+{:codeblock:.codeblock}
+
 # Création d'un fournisseur d'identité personnalisé
 {: #custom-create}
 
@@ -27,6 +29,7 @@ l'identificateur global unique de l'application {{site.data.keyword.Bluemix}} (`
 {: #custom-startauthorization}
 
 `POST <base_url>/apps/<tenant_id>/<realm_name>/startAuthorization`
+{: codeblock}
 
 L'API `startAuthorization` est la première étape du processus d'authentification. Un fournisseur d'identité personnalisé doit répondre par le statut "challenge", "success" ou "failure".
 
@@ -40,6 +43,7 @@ Pour garantir la souplesse maximale du processus d'authentification, un fourniss
     }
 }
 ```
+{: codeblock}
 
 Le fournisseur d'identité personnalisé peut répondre par une demande d'authentification, ou par un succès ou un échec immédiat. Le statut de la réponse HTTP doit être `HTTP 200`, et son JSON doit contenir les propriétés suivantes :
 
@@ -60,11 +64,13 @@ Exemple :
 	}
 }
 ```
+{: codeblock}
 
 ## API `handleChallengeAnswer`
 {: #custom-handleChallengeAnswer}
 
 `POST <base_url>/apps/<tenant_id>/<realm_name>/handleChallengeAnswer`
+{: codeblock}
 
 L'API `handleChallengeAnswer` gère la réponse à une demande d'authentification d'un client mobile. Comme l'API `startAuthorization`, l'API `handleChallengeAnswer` répond par le statut `challenge` (demande), `success` (succès) ou `failure` (échec).
 
@@ -85,6 +91,7 @@ Comme pour la demande `startAuthorization`, le fournisseur d'identité personnal
  	}
 }
 ```
+{: codeblock}
 
 La réponse d'une API `handleChallengeAnswer` doit avoir la même structure que celle de l'API `startAuthorization`.
 
@@ -108,6 +115,7 @@ La réponse à une demande d'authentification qui a abouti doit inclure un objet
     }
 }
 ```
+{: codeblock}
 
 L'objet identité de l'utilisateur est utilisé par le service {{site.data.keyword.amashort}} pour générer un jeton d'ID qui est envoyé au client mobile dans l'en-tête d'autorisation. Une fois l'authentification réussie, le client mobile dispose d'un accès complet à l'objet identité de l'utilisateur.
 

@@ -18,20 +18,20 @@ lastupdated: "2016-11-03"
 **注:** Objective-C SDK は現在も完全にサポートされており、{{site.data.keyword.Bluemix}} モバイル・サービス用の主要 SDK とされていますが、今年後半には廃止され、新しい Swift SDK が後継になる予定です ([iOS Swift SDK のセットアップ](facebook-auth-ios-swift-sdk.html)を参照してください)。
 
 ## 開始する前に
-{: #facebook-auth-ios-before}
+{: #before-you-begin}
 
 以下が必要です。
 * CocoaPods と連動して機能するようにセットアップされた iOS プロジェクト。詳しくは、[iOS SDK のセットアップ](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios.html)の **CocoaPods のインストール**を参照してください。
    **注:** 先に進む前にコア {{site.data.keyword.amashort}} Client SDK をインストールする必要はありません。
 * {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンドの作成方法について詳しくは、[概説](index.html)を参照してください。
 * **AppGUID** 値。{{site.data.keyword.amashort}} ダッシュボードでサービスを開きます。**「モバイル・オプション」**ボタンをクリックします。`appGUID` (`tenantId` とも呼ばれる) の値が、**「アプリ GUID」/「TenantId」**フィールドに表示されます。許可マネージャーを初期化するためにこの値が必要になります。
-* Facebook Application ID。詳しくは、[Facebook for Developers Web サイトでのアプリケーションの作成](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)を参照してください。
+* Facebook アプリケーションとアプリケーション ID。詳しくは、[Facebook for Developers Web サイトでのアプリケーションの作成](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)を参照してください。
 
 ## iOS プラットフォーム用の Facebook アプリケーションの構成
 {: #facebook-auth-ios-config}
 Facebook for Developers サイトで以下を行います。
 
-1. [Facebook for Developers](https://developers.facebook.com) で自分のアカウントにログインします。新規アプリケーションの作成については、https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID) を参照してください。 
+1. [Facebook for Developers](https://developers.facebook.com) で自分のアカウントにログインします。 
 
 1. iOS プラットフォームがアプリに追加済みであることを確認します。iOS プラットフォームを追加または構成する場合、iOS アプリケーションの **bundleId** を提供する必要があります。ご使用の iOS アプリケーションの **bundleId** を調べるには、`info.plist` ファイル内または Xcode プロジェクトの**「一般 (General)」**タブ内で**「バンドル ID (Bundle Identifier)」**を探します。
 
@@ -182,7 +182,7 @@ Facebook Application ID および Facebook アプリケーションを iOS ク�
 		1. 値を `BridgingHeader.h` ファイルの場所に設定します (例: `$(SRCROOT)/MyApp/BridgingHeader.h`)。 
 		1. プロジェクトをビルドすることで、Xcode によってご使用のブリッジング・ヘッダーが選択されることを確認してください。失敗メッセージは無いはずです。
 
-2. Client SDK を初期化します。`applicationRoute` および `applicationGUID` の取得については、[開始する前に](#before-you-begin)を参照してください。
+2. Client SDK を初期化します。`applicationRoute` と `applicationGUID` の取得について詳しくは、[開始する前に](#before-you-begin)を参照してください。
 
 	####Objective-C
 	{: #approute-objc}
@@ -201,7 +201,7 @@ Facebook Application ID および Facebook アプリケーションを iOS ク�
 	 							backendGUID: "applicationGUID")
 	```
 
-1. {{site.data.keyword.amashort}} サービスの `tenantId` パラメーターを渡すことによって、`AuthorizationManager` を初期化します。[開始する前に].(#before-you-begin)) を参照してください。
+1. {{site.data.keyword.amashort}} サービスの `tenantId` パラメーターを渡すことによって、`AuthorizationManager` を初期化します。[開始する前に](#before-you-begin)を参照してください。
 
 	####Objective-C
 	{: #authman-objc}

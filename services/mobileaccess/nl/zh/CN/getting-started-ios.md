@@ -84,7 +84,7 @@ sudo gem install cocoapods
 	{{site.data.keyword.amashort}} 客户端 SDK 将通过 Objective-C 实现。您可能需要将桥接头添加到 Swift 项目：
 	1. 在 Xcode 中右键单击项目，并选择**新建文件**。
 	1. 在 **iOS 源**类别中，单击**头文件**。将文件命名为 `BridgingHeader.h`。
-	1. 将这行添加到桥接头中：`#import <IMFCore/IMFCore.h>`。
+	1. 将此行添加到桥接头中：`#import <IMFCore/IMFCore.h>`。
 	1. 在 Xcode 中单击项目，然后选择**构建设置**选项卡。
 	1. 搜索 `Objective-C Bridging Header`。
 	1. 将值设置为您的 `BridgingHeader.h` 文件的位置，例如 `$(SRCROOT)/MyApp/BridgingHeader.h`。

@@ -2,15 +2,16 @@
 
 copyright:
   year: 2016
-lastupdated: "2016-11-07"
+lastupdated: "2016-12-04"
 
 ---
+
 {:screen: .screen}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 
 
-# 為 Web 應用程式啟用 Facebook 鑑別
+# 啟用 Web 應用程式的 Facebook 鑑別
 {: #facebook-auth-web}
 
 在 {{site.data.keyword.amafull}} Web 應用程式上使用 Facebook 來鑑別使用者。新增 {{site.data.keyword.amashort}} 安全功能。 
@@ -40,13 +41,13 @@ lastupdated: "2016-11-07"
 ## 配置 {{site.data.keyword.amashort}} 進行 Facebook 鑑別
 {: #facebook-auth-config-ama}
 
-在您有了「Facebook 應用程式 ID」和「應用程式密碼」，並已配置 Facebook for Developers 應用程式來服務 Web 用戶端之後，即可在 {{site.data.keyword.amashort}} 儀表板中啟用 Facebook 鑑別。
+您有了「Facebook 應用程式 ID」和「應用程式密碼」，並已配置 Facebook for Developers 應用程式來服務 Web 用戶端之後，即可在 {{site.data.keyword.amashort}} 儀表板中啟用 Facebook 鑑別。
 
 1. 開啟 {{site.data.keyword.amashort}} 服務儀表板。
 1. 在**管理**標籤中，將**授權**切換為開啟。
 1. 展開 **Facebook** 區段。
 1. 選取**新增 Facebook 至 Web 應用程式**。
-5. 記下 **Facebook for Developers 的 Mobile Client Access 重新導向 URI** 文字框中的值。您需要在「Facebook 開發人員入口網站」的 **Facebook 登入**中，將此值新增至**有效 OAuth 重新導向 URI** 方框。
+5. 記下 **Facebook for Developers 的 Mobile Client Access 重新導向 URI** 文字框中的值。您需要在 Facebook Developers 入口網站的 **Facebook 登入**中，將此值新增至**有效 OAuth 重新導向 URI** 方框。
 6. 輸入從 Facebook for Developers 網站取得的 Facebook **應用程式 ID** 和**應用程式密碼**。
 7. 在**您的 Web 應用程式重新導向 URI** 中輸入重新導向 URI。此值適用於要在授權處理程序完成之後存取的重新導向 URI，並由開發人員決定。
 8. 按一下**儲存**。
@@ -57,7 +58,7 @@ lastupdated: "2016-11-07"
 
 `VCAP_SERVICES` 環境變數是針對每一個 {{site.data.keyword.amashort}} 服務實例自動建立的，並且包含授權處理程序所需的內容。其由 JSON 物件組成，並可在 {{site.data.keyword.amashort}} 服務儀表板中的**服務認證**標籤中進行檢視。
 
-若要啟動授權處理程序，請執行下列動作：
+若要開始授權處理程序，請執行下列動作：
 
 1. 從 `VCAP_SERVICES` 環境變數中儲存的服務認證，擷取授權端點 (`authorizationEndpoint`) 及用戶端 ID (`clientId`)。 
 
@@ -122,7 +123,7 @@ lastupdated: "2016-11-07"
 
 	`redirect_uri` 參數是使用 Facebook 進行成功或不成功鑑別之後用於重新導向的 URI。   
 
-	重新導向至授權端點之後，使用者將從 Facebook 取得登入表單。在 Facebook 授權使用者的身分之後，{{site.data.keyword.amashort}} 服務將呼叫您的 Web 應用程式重新導向 URI，並提供授權碼作為查詢參數。  
+	重新導向至授權端點之後，使用者將從 Facebook 取得登入表單。Facebook 授權使用者的身分之後，{{site.data.keyword.amashort}} 服務將呼叫您的 Web 應用程式重新導向 URI，並提供授權碼作為查詢參數。  
 
 
 ## 取得記號
@@ -193,9 +194,9 @@ lastupdated: "2016-11-07"
 	請注意，`redirect_uri` 參數必須符合前一個授權要求所使用的 `redirect_uri`。`code` 參數值應該是來自授權要求之回應中收到的授權碼。授權碼的有效時間只有 10 分鐘，過了此時間則必須擷取新的授權碼。
 
 
-	回應內文將包含 JWT 格式的存取碼及記號 ID。(https://jwt.io/)
+	回應內文將包含 JWT 格式 (https://jwt.io/) 的存取碼及記號 ID。
 
-	在取得存取記號並收到身分記號之後，您就可以將 Web 階段作業標示為已鑑別，並可選擇性地持續保存這些記號。  
+	取得存取記號並收到身分記號之後，您就可以將 Web 階段作業標示為已鑑別，並可選擇性地持續保存這些記號。  
 
 ##使用取得的存取及身分記號
 {: #facebook-auth-using-token}
