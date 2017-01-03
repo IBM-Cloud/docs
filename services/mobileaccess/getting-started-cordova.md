@@ -62,7 +62,6 @@ The {{site.data.keyword.amashort}} client SDK for Cordova is a Cordova plug-in t
 	{: codeblock}
 	
 	The *minSdkVersion* value must be higher than `15`. Refer to the [Android Platform Guide](https://cordova.apache.org/docs/en/latest/guide/platforms/android/) to stay current with the supported *targetSdkVersion* for the Android SDK.
-
 	
 3. If you added the iOS operating system, update the `<platform name="ios">` element with a target declaration:
 
