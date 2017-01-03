@@ -25,9 +25,9 @@ lastupdated: "2016-10-21"
 
 若要快速開始進行「Weather 程式碼入門範本」，請遵循下列步驟：
 
-1. 在 {{site.data.keyword.Bluemix_notm}} 中建立 Mobile 儀表板專案。
+1. 在 {{site.data.keyword.Bluemix_notm}} 中建立行動儀表板專案。
 
-   1. 從 Mobile 儀表板的**開始使用**頁面中，按一下**建立專案**。
+   1. 從行動儀表板的**開始使用**頁面中，按一下**建立專案**。
 
       您也可以按一下**專案**頁面中的**新建專案**。
 

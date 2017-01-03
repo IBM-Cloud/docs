@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-11-08"
+lastupdated: "2016-12-06"
 
 ---
 {:new_window: target="_blank"}
@@ -51,7 +51,7 @@ The Mobile dashboard provides an integrated experience on {{site.data.keyword.Bl
 * [ブログ投稿: Introducing Bluemix Mobile Code Starters](https://www.ibm.com/blogs/bluemix/2016/10/rapid-dev-with-mobile-code-starters/){: new_window}
 * [ブログ投稿: Bluemix Mobile, Part 1: Creating a Store Catalog application](https://developer.ibm.com/bluemix/2016/07/13/bluemix-mobile-creating-store-catalog-app-part1/){: new_window}
 * [ブログ投稿: Bluemix Mobile, Part 2: Integrating custom Bluemix backend into the Store Catalog app](https://developer.ibm.com/bluemix/2016/07/14/bluemix-mobile-integrating-custom-backend-part2/){: new_window}
-* [developerWorks Recipe: IBM Bluemix Push Notification Service and Language Translator を使用して、天候の更新情報を自国語で受け取ります](https://developer.ibm.com/recipes/tutorials/receive-weather-updates-in-your-own-language-using-ibm-bluemix-push-notification-service-and-language-translator/){: new_window}
+* [developerWorks Recipe: Translated weather updates with Push Notifications and Language Translator](https://developer.ibm.com/recipes/tutorials/receive-weather-updates-in-your-own-language-using-ibm-bluemix-push-notification-service-and-language-translator/){: new_window}
 * [ビデオ・チュートリアル](https://www.youtube.com/channel/UCRW4t4Hzm9gzuiq5naERkCw){: new_window}
 
 ## 関連リンク
@@ -60,5 +60,5 @@ The Mobile dashboard provides an integrated experience on {{site.data.keyword.Bl
 * [Mobile Analytics (ベータ)](/docs/services/mobileanalytics/index.html){: new_window}
 * [Mobile Client Access](/docs/services/mobileaccess/index.html){: new_window}
 * [Mobile Foundation](/docs/services/mobilefoundation/index.html){: new_window}
-* [Mobile Quality Assurance)](/docs/services/MobileQualityAssurance/index.html){: new_window}
+* [Mobile Quality Assurance](/docs/services/MobileQualityAssurance/index.html){: new_window}
 * [Push Notifications](/docs/services/mobilepush/index.html){: new_window}

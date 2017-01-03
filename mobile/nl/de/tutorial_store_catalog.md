@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-21"
+lastupdated: "2016-12-01"
 
 ---
 {:new_window: target="_blank"}
@@ -79,7 +79,7 @@ Zur schnellen Einrichtung und Ausführung mit dem Benutzerschnittstellenstarter 
 
 		Ein Element, das in der Baumstruktur als *Formular* angegeben ist, ist unabhängig und kann integriert geändert werden. Es referenziert keine Informationen aus einer Datenquelle.
 
-   5. Wählen Sie in der Navigation die Option **Daten** aus, um die von der App verwendeten Daten anzuzeigen. Die Vorlage enthält Standardinformationen; Sie können die Quelle der Daten jedoch ändern, indem Sie **Neue erstellen** auswählen. Da Sie mehr als eine Datenquelle referenzieren können, geben Sie für jede Datenquelle, die Sie verwenden, einen Namen an. Sie können aus den folgenden Optionen für Datenquellen auswählen:
+   5. Wählen Sie in der Navigation die Option **Daten** aus, um die von der App verwendeten Daten anzuzeigen. Die Vorlage enthält Standardinformationen. Sie können die Quelle der Daten jedoch ändern, indem Sie **Neue erstellen** auswählen. Da Sie mehr als eine Datenquelle referenzieren können, geben Sie für jede Datenquelle, die Sie verwenden, einen Namen an. Sie können aus den folgenden Optionen für Datenquellen auswählen:
       * Cloud
       * Local
       * Cloudant
@@ -109,15 +109,15 @@ Zur schnellen Einrichtung und Ausführung mit dem Benutzerschnittstellenstarter 
 
    2. Unter Android können Sie nach der Code-Generierung aus folgenden Optionen auswählen:
 
-      **Code herunterladen**
+      * Code herunterladen
 
-      **APK herunterladen**
+      * APK herunterladen
 
-      **Mit QR-Code herunterladen**
+      * Mit QR-Code herunterladen
 
-   3. Unter iOS können Sie nach der Code-Generierung aus folgenden Optionen auswählen:
+   3. Für iOS können Sie nach der Generierung des Codes die folgende Option auswählen:
 
-      **Code herunterladen**
+      * Code herunterladen
 
 6. Führen Sie Ihre App auf Ihrem Gerät oder Simulator aus.
 

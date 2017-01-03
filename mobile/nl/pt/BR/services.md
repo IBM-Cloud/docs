@@ -35,8 +35,8 @@ Leia mais sobre a operação deste serviço na <a href="/docs/services/mobileana
 <tr>
 <td><img src="images/authentication_icon
 .png" alt="{{site.data.keyword.amashort}}ícone de serviço"><br/>{{site.data.keyword.amashort}}</td>
-<td valign="top">Use o serviço {{site.data.keyword.amafull}} para incluir a funcionalidade de segurança em seu aplicativo móvel. É possível configurar a autenticação de cliente e os provedores de identidade para que os usuários possam efetuar login no app com suas contas do Google ou Facebook existentes.<br/><br/>
-Leia mais sobre a operação deste serviço na <a href="/docs/services/mobileaccess/index.html" alt="{{site.data.keyword.amashort}} documentation link">documentação do {{site.data.keyword.amashort}}</a>.</td>
+<td valign="top">Use o serviço {{site.data.keyword.amafull}} para incluir funcionalidade de segurança no seu app móvel. É possível configurar a autenticação de cliente e os provedores de identidade para que os
+usuários possam efetuar login no app com suas contas do Google ou Facebook existentes.<br/><br/> Leia mais sobre a operação desse serviço na <a href="/docs/services/mobileaccess/index.html" alt="{{site.data.keyword.amashort}} documentation link">documentação do {{site.data.keyword.amashort}}</a>.</td>
 </tr>
 <tr>
 <td><img src="images/MFPFoundation_icon.png" alt="{{site.data.keyword.mobilefoundation_short}}ícone de serviço"><br/> {{site.data.keyword.mobilefoundation_short}}</td>

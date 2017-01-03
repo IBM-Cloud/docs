@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-11-08"
+lastupdated: "2016-12-06"
 
 ---
 {:new_window: target="_blank"}
@@ -31,7 +31,7 @@ Per iniziare ad utilizzare il dashboard Mobile, fai clic sulla categoria **Mobil
 
 Crea un progetto nella pagina **Introduzione** facendo clic su **Crea progetto**. Saranno visualizzate le opzioni [Starter](starters.html) che ti abilitano ad avviare velocemente la creazione della tua applicazione.
 
-Puoi visualizzare e gestire tutti i tuoi progetti in un solo posto selezionando la pagina dei progetti. I progetto conserva le informazioni per tutte le funzionalità che sono integrate (e che possono esserlo) con la tua applicazione mobile. Se disponibile, puoi semplicemente integrare e gestire i servizi mobili Push, Analytics e Authentication nel progetto, con ulteriori funzionalità disponibili nel prossimo futuro.
+Puoi visualizzare e gestire tutti i tuoi progetti in un solo posto selezionando la pagina dei progetti. Il progetto contiene le informazioni per tutte le funzionalità che sono (e possono essere) integrate con la tua applicazione mobile. Se disponibili, puoi facilmente integrare e gestire i servizi mobili Push, Analytics e Authentication nel progetto, con ulteriori funzionalità disponibili nel prossimo futuro.
 
 La vista [Servizi](services.html) mostra una vista operativa delle tue istanze del servizio mobile esistenti. Il dashboard Mobile supporta uno sviluppatore mobile e un utente di gestione dell'applicazione mobile.
 
@@ -51,7 +51,7 @@ La vista [Servizi](services.html) mostra una vista operativa delle tue istanze d
 * [Blog Post: Introducing Bluemix Mobile Code Starters](https://www.ibm.com/blogs/bluemix/2016/10/rapid-dev-with-mobile-code-starters/){: new_window}
 * [Blog Post: Bluemix Mobile, Part 1: Creating a Store Catalog application](https://developer.ibm.com/bluemix/2016/07/13/bluemix-mobile-creating-store-catalog-app-part1/){: new_window}
 * [Blog Post: Bluemix Mobile, Part 2: Integrating custom Bluemix backend into the Store Catalog app](https://developer.ibm.com/bluemix/2016/07/14/bluemix-mobile-integrating-custom-backend-part2/){: new_window}
-* [developerWorks Recipe: Receive weather updates in your own language using IBM Bluemix Push Notification Service and Language Translator](https://developer.ibm.com/recipes/tutorials/receive-weather-updates-in-your-own-language-using-ibm-bluemix-push-notification-service-and-language-translator/){: new_window}
+* [developerWorks Recipe: Translated weather updates with Push Notifications and Language Translator](https://developer.ibm.com/recipes/tutorials/receive-weather-updates-in-your-own-language-using-ibm-bluemix-push-notification-service-and-language-translator/){: new_window}
 * [Video dei supporti didattici](https://www.youtube.com/channel/UCRW4t4Hzm9gzuiq5naERkCw){: new_window}
 
 ## Link correlati
@@ -60,5 +60,5 @@ La vista [Servizi](services.html) mostra una vista operativa delle tue istanze d
 * [Mobile Analytics (Beta)](/docs/services/mobileanalytics/index.html){: new_window}
 * [Mobile Client Access](/docs/services/mobileaccess/index.html){: new_window}
 * [Mobile Foundation](/docs/services/mobilefoundation/index.html){: new_window}
-* [Mobile Quality Assurance)](/docs/services/MobileQualityAssurance/index.html){: new_window}
+* [Mobile Quality Assurance](/docs/services/MobileQualityAssurance/index.html){: new_window}
 * [Push Notifications](/docs/services/mobilepush/index.html){: new_window}

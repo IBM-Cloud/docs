@@ -24,7 +24,7 @@ copyright:
 2. GitHub からプロジェクトを入手します。オプションで、git clone コマンドを使用してプロジェクトを入手することも可能です。ご使用のコンピューターから、ターミナルを開いて次のコマンドを入力します。
     ```
     git clone https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld.git
-    ```
+```
 
 3. `try` ブロック内の `BMSClient.getInstance().initialize()` 関数内で、&lt;APPLICATION_ROUTE&gt; と &lt;APPLICATION_ID&gt; をご使用のアプリケーション経路と GUID に置き換えることで、プロジェクトを初期化します。
 ```

@@ -2,15 +2,15 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-21"
+lastupdated: "2016-11-22"
 
 ---
 {:new_window: target="_blank"}
 
-# {{site.data.keyword.visualrecognitionshort}} コード・スターターのエンドツーエンド・チュートリアル
+# ベーシック・コード・スターターのエンドツーエンド・チュートリアル
 {: #tutorial}
 
-以下のエンドツーエンド・チュートリアルでは、{{site.data.keyword.visualrecognitionshort}} コード・スターターからプロジェクトを作成するための手順を、インストールされている必要があるツールを含めて説明し、その後に、Xcode および Android Studio でスターターを実行するための手順を説明します。
+以下のエンドツーエンド・チュートリアルでは、インストールしておく必要があるツールを含め、ベーシック・コード・スターターからのプロジェクトの作成手順を段階的に説明し、その後に Xcode と Android Studio でのスターターの実行手順を説明します。
 
 
 ### 開発者ツールのインストール
@@ -19,20 +19,20 @@ lastupdated: "2016-10-21"
 [前提条件の開発者ツール](get_code.html#prereq-dev-tools){: new_window}がインストール済みであることを確認してください。
 
 
-### {{site.data.keyword.visualrecognitionshort}} コード・スターターからのプロジェクトの作成
+### ベーシック・コード・スターターからのプロジェクトの作成
 {: #create_project}
 
-1. {{site.data.keyword.Bluemix}} 「モバイル」ダッシュボードでプロジェクトを作成します。
+1. {{site.data.keyword.Bluemix}} でモバイル・ダッシュボード・プロジェクトを作成します。
 
-   1. 「モバイル」ダッシュボードの**「開始」**ページで**「プロジェクトの作成」**をクリックします。
+   1. モバイル・ダッシュボードの**「開始」**ページで**「プロジェクトの作成」**をクリックします。
 
       代替方法として、**「プロジェクト」**ページから**「プロジェクトの作成」**をクリックすることもできます。
 
    2. **「コード・スターター (Code Starters)」**をクリックします。
 
-   3. **「Visual Recognition」**を選択し、**「プロジェクトの作成」**をクリックします。
+   3. **「ベーシック (Basic)」**を選択し、**「プロジェクトの作成」**をクリックします。
 
-   4. プロジェクト名を入力します。このチュートリアルでは、`VisualRecognitionProject` を使用します。
+   4. プロジェクト名を入力します。このチュートリアルでは、`BasicProject` を使用します。
    
    5. **「作成」**をクリックします。
 
@@ -58,7 +58,7 @@ lastupdated: "2016-10-21"
    
    3. アプリを実行した後、**「デモ・モード」**をオフに切り替えて、分析データを確認できます。
    
-   4. Analytics (分析) の構成について詳しくは、[Getting started with {{site.data.keyword.mobileanalytics_short}}](/docs/services/mobileanalytics/index.html){: new_window} を参照してください。
+   4. Analytics (分析) の構成について詳しくは、[{{site.data.keyword.mobileanalytics_short}} 概説](/docs/services/mobileanalytics/index.html){: new_window}を参照してください。
   
 4. オプション: Authentication (認証) 機能を追加します。
 
@@ -72,7 +72,7 @@ lastupdated: "2016-10-21"
    
    4. ID プロバイダーを選択し、必要な情報を入力して構成します。ID プロバイダーは 1 つだけ有効にすることができます。
 
-   5. Authentication (認証) の構成について詳しくは、[Getting started with {{site.data.keyword.amashort}}](/docs/services/mobileaccess/index.html){: new_window} を参照してください。
+   5. Authentication (認証) の構成について詳しくは、[{{site.data.keyword.amashort}} 概説](/docs/services/mobileaccess/index.html){: new_window}を参照してください。
 
 5. プロジェクト・コードを生成します。
 
@@ -80,23 +80,25 @@ lastupdated: "2016-10-21"
    
       代替方法として、**「コード」**ページで以下をクリックすることもできます。
       
-   2. iOS の場合、**「iOS Swift」**をクリックします。
+   2. Objective-C の場合、**「iOS Obj-C」**をクリックします。
+
+   3. Swift の場合、**「iOS Swift」**をクリックします。
    
-   3. Android の場合、**「Android」**をクリックします。
+   4. Cordova の場合、**「Cordova」**をクリックします。
+
+   5. Android の場合、**「Android」**をクリックします。
    
-   4. プロジェクト・コードの生成が完了したら、**「コードのダウンロード」**をクリックして、プロジェクトのアーカイブをダウンロードします。
+   6. プロジェクト・コードの生成が完了したら、**「コードのダウンロード」**をクリックして、プロジェクトのアーカイブをダウンロードします。
 
 
-### Xcode でのプロジェクトの実行
-{: #run_xcode}
+### Xcode での Objective-C プロジェクトの実行
+{: #run_obj-c}
 
-1. `VisualRecognitionProject-Swift.zip` ファイルを解凍します。
+1. `BasicProject-ObjC.zip` ファイルを解凍します。
 
 2. Markdown ビューアーで `README.md` ファイルを開き、プロジェクトを構成する手順を確認します。
 
-   1. [{{site.data.keyword.visualrecognitionshort}}](https://console.{DomainName}/catalog/services/visual-recognition/){: new_window} サービス・インスタンスを作成します。
-   
-   2. ターミナルを開き、プロジェクト・フォルダーに移動します。
+   1. ターミナルを開き、プロジェクト・フォルダーに移動します。
    
       1. CocoaPods リポジトリーをセットアップする必要がある場合は、`pod setup` を実行します。
       
@@ -104,37 +106,63 @@ lastupdated: "2016-10-21"
       
       3. プロジェクトに必要な Pods をインストールするには、`pod install` を実行します。
       
-      4. {{site.data.keyword.ibmwatson}} Developer Cloud iOS SDK を使用するための依存関係およびフレームワークをビルドするには、`carthage update --platform iOS` を実行します。
-      
-   3. `VisualRecognitionProject.xcworkspace` Xcode ワークスペースを開きます。
-   
-   4. {{site.data.keyword.visualrecognitionshort}} サービス資格情報を追加します。
-   
-      1. {{site.data.keyword.visualrecognition}} サービス資格情報から `api_key` をコピーします。
-      
-      2. `api_key` を `WatsonCredentials.plist` ファイル内の `VisualRecognitionAPIKey` キーに貼り付けます。
+   2. `BasicProject.xcworkspace` Xcode ワークスペースを開きます。
       
 3. アプリを実行します。
 
 
-### Android Studio でのプロジェクトの実行
-{: #run_studio}
+### Xcode での Swift プロジェクトの実行
+{: #run_swift}
 
-1. `VisualRecognitionProject-Android.zip` ファイルを解凍します。
+1. `BasicProject-Swift.zip` ファイルを解凍します。
+
+2. Markdown ビューアーで `README.md` ファイルを開き、プロジェクトを構成する手順を確認します。
+
+   1. ターミナルを開き、プロジェクト・フォルダーに移動します。
+   
+      1. CocoaPods リポジトリーをセットアップする必要がある場合は、`pod setup` を実行します。
+      
+      2. 既存の Pods を更新する必要がある場合は、`pod update` を実行します。
+      
+      3. プロジェクトに必要な Pods をインストールするには、`pod install` を実行します。
+      
+   3. `BasicProject.xcworkspace` Xcode ワークスペースを開きます。
+      
+3. アプリを実行します。
+
+
+### Xcode での Cordova プロジェクトの実行
+{: #run_cordova_xcode}
+
+1. `BasicProject-Cordova.zip` ファイルを解凍します。
 
 2. Markdown ビューアーで `README.md` ファイルを開き、プロジェクトを構成します。
 
-   1. [{{site.data.keyword.visualrecognitionshort}}](https://console.{DomainName}/catalog/services/visual-recognition/){: new_window} サービス・インスタンスを作成します。
-   
-      {{site.data.keyword.visualrecognitionshort}} サービス・インスタンスが既にある場合は、このステップをスキップしてください。
-   
-   2. Android Studio で `VisualRecognitionProject-Android` プロジェクトを開きます。
-   
-   4. {{site.data.keyword.visualrecognitionshort}} サービス資格情報を追加します。
-   
-      1. {{site.data.keyword.visualrecognition}} サービス資格情報から `api_key` をコピーします。
+   1. Xcode で `platforms/ios` プロジェクトを開きます。
       
-      2. `api_key` を `res/values/watson_credentials.xml` ファイル内の `watson_visual_recognition_api_key` キーに貼り付けます。
+3. アプリを実行します。
+
+
+### Android Studio での Cordova プロジェクトの実行
+{: #run_cordova_studio}
+
+1. `BasicProject-Cordova.zip` ファイルを解凍します。
+
+2. Markdown ビューアーで `README.md` ファイルを開き、プロジェクトを構成します。
+
+   1. Android Studio で `platforms/android` プロジェクトを開きます。
+      
+3. アプリを実行します。
+
+
+### Android Studio での Android プロジェクトの実行
+{: #run_android}
+
+1. `BasicProject-Android.zip` ファイルを解凍します。
+
+2. Markdown ビューアーで `README.md` ファイルを開き、プロジェクトを構成します。
+
+   1. Android Studio で `BasicProject-Android` プロジェクトを開きます。
       
 3. アプリを実行します。
 
@@ -154,5 +182,6 @@ lastupdated: "2016-10-21"
 ### コード・スターターのチュートリアル
 {: #tutorials_Code}
 
+* [チュートリアル - {{site.data.keyword.visualrecognitionshort}}](tutorial_visual_recognition.html)
 * [チュートリアル - Watson Language](tutorial_watson_language.html)
 * [チュートリアル - Weather](tutorial_weather.html)

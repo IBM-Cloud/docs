@@ -13,18 +13,18 @@ lastupdated: "2016-10-18"
 # 服務
 {: #services}
 
-從 {{site.data.keyword.Bluemix}} Mobile 儀表板的**服務**視圖中，您可以檢視現有服務，或建立新服務。Mobile 儀表板提供單一位置，來檢視專案所管理的所有 Bluemix 服務。  
+從 {{site.data.keyword.Bluemix}} 行動儀表板的**服務**視圖中，您可以檢視現有服務，或建立新服務。行動儀表板提供單一位置，來檢視專案所管理的所有 Bluemix 服務。  
 
 如果您從**服務**視圖中刪除服務，則會中斷服務與相關聯專案的連線。如果您要將服務重新連接至專案，請建立新的服務實例。
 
-## {{site.data.keyword.Bluemix_notm}} Mobile 服務概觀
+## {{site.data.keyword.Bluemix_notm}} 行動服務概觀
 {: #mobile_services_overview}
 
-下表說明 {{site.data.keyword.Bluemix_notm}} Mobile 服務。您可以使用 {{site.data.keyword.Bluemix_notm}} 型錄中的個別服務，或者可以將它們整合至行動專案。
+下表說明 {{site.data.keyword.Bluemix_notm}} 行動服務。您可以使用 {{site.data.keyword.Bluemix_notm}} 型錄中的個別服務，或者可以將它們整合至行動專案。
 
-<table summary="此表格說明 {{site.data.keyword.Bluemix_notm}} Mobile 服務，並提供服務文件的鏈結">
-<caption>表格 1. {{site.data.keyword.Bluemix_notm}} Mobile 服務</caption>
-<th>{{site.data.keyword.Bluemix_notm}} Mobile 服務</th>
+<table summary="此表格說明 {{site.data.keyword.Bluemix_notm}} 行動服務，並提供服務文件的鏈結">
+<caption>表格 1. {{site.data.keyword.Bluemix_notm}} 行動服務</caption>
+<th>{{site.data.keyword.Bluemix_notm}} 行動服務</th>
 <th>說明</th>
 <tr>
 <td> <img src="images/mobile_analytics_icon.png" alt="{{site.data.keyword.mobileanalytics_short}}圖示"><br/>{{site.data.keyword.mobileanalytics_short}}（測試版）</td>
@@ -56,7 +56,7 @@ lastupdated: "2016-10-18"
 
 ## 整合行動服務
 {: #services_integration}
-您可以將現有 {{site.data.keyword.Bluemix_notm}} Mobile 服務（例如 {{site.data.keyword.cloudant}}）整合至專案中。
+您可以將現有 {{site.data.keyword.Bluemix_notm}} 行動服務（例如 {{site.data.keyword.cloudant}}）整合至專案中。
 
 
 #### 整合 {{site.data.keyword.cloudant}}
@@ -72,7 +72,7 @@ lastupdated: "2016-10-18"
    **附註**：不要複製超過您的資料庫名稱的內容。
 
 5. 按一下**許可權** > **產生 API 金鑰**，然後複製**金鑰**及**密碼**值。
-6. 導覽回到 Mobile 儀表板的**專案**視圖。
+6. 導覽回到行動儀表板的**專案**視圖。
 7. 按一下您的專案，以對其進行編輯。
 8. 按一下**資料** > **+ 資料來源** > **Cloudant**，提供您的資料來源名稱，然後按一下**新增**。
 9. 按一下 **Cloudant 配置**。

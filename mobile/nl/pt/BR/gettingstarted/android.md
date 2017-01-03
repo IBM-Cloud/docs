@@ -13,14 +13,13 @@ copyright:
 Última atualização: 27 de maio de 2016
 {: .last-updated}  
 
-Se desejar iniciar com um novo aplicativo Android, é possível usar o app HelloWorld. Esse app demonstra como se conectar ao backend do {{site.data.keyword.Bluemix}} a partir de um app móvel sem autenticação. O app já possui o SDK instalado. Quando você estiver pronto, poderá obter as bibliotecas específicas que deseja usar em seu app.
+Se você desejar começar a usar um novo aplicativo Android, poderá usar o app HelloWorld. Esse app demonstra como se conectar ao seu backend {{site.data.keyword.Bluemix}} por meio de um app móvel sem autenticação. O app já possui o SDK instalado. Quando você estiver pronto, poderá obter as bibliotecas específicas que deseja usar em seu app.
 
 1. Crie seu backend móvel em {{site.data.keyword.Bluemix_notm}}.
     1. Na seção Modelos do catálogo do {{site.data.keyword.Bluemix_notm}}, clique em MobileFirst Services Starter.
     2. Insira um nome e um host para seu app e clique em **Criar**.
     3. Clique em **Concluir**.
-2. Obtenha o projeto a partir do GitHub. Opcionalmente, é possível usar o comando git clone para obter o projeto. Em seu
-computador, abra o terminal e, em seguida, insira o comando a seguir:
+2. Obtenha o projeto a partir do GitHub. Opcionalmente, é possível usar o comando git clone para obter o projeto. Em seu computador, abra o terminal e, em seguida, insira o comando a seguir:
     ```
     git clone https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld.git
     ```

@@ -62,7 +62,7 @@ communiquer avec les services respectifs.
 - [SDK de serveur NodeJS {{site.data.keyword.mobilepushshort}}](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-nodejs)
 
 
-### SDK du serveur {{site.data.keyword.amashort}} 
+### SDK du serveur {{site.data.keyword.amashort}}
 {: #mca_sdk}
 
 - [SDK de serveur Swift {{site.data.keyword.amashort}}](https://github.com/ibm-bluemix-mobile-services/bms-mca-serversdk-swift)

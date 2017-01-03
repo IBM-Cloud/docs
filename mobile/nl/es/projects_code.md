@@ -38,7 +38,7 @@ Complete los pasos siguientes para crear un proyecto con un Iniciador de código
 	
 2. Realice las selecciones en la pantalla **Visión general del proyecto**.  La pantalla **Visión general del proyecto** muestra información sobre el proyecto y los servicios opcionales que puede añadir al mismo, como por ejemplo Notificaciones push y Autenticación.  
 
-	1. Opcional: Seleccione **Añadir** para añadir uno de los servicios listados al proyecto. Edite el **Nombre de servicio** para el servicio y pulse **Crear**. Cuando añade un servicio al proyecto, enlaza con la página de {{site.data.keyword.Bluemix_notm}} correspondiente a dicho servicio. Configure el servicio especificando la información necesaria para el mismo. 
+	1. Opcional: Seleccione **Añadir** para añadir uno de los servicios listados al proyecto. Edite el **Nombre de servicio** para el servicio y pulse **Crear**. Cuando añade un servicio al proyecto, enlaza con la página de {{site.data.keyword.Bluemix_notm}} correspondiente a dicho servicio. Configure el servicio especificando la información necesaria para el mismo.
 	
 	2. Opcional: Repita el paso *a* para cualquier prestación adicional que desee añadir al proyecto. 
 

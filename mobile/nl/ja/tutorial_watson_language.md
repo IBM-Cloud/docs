@@ -25,9 +25,9 @@ lastupdated: "2016-10-21"
 
 Watson Language コード・スターターを使用して素早く稼働中にするには、以下のステップに従ってください。
 
-1. {{site.data.keyword.Bluemix_notm}} 「モバイル」ダッシュボードでプロジェクトを作成します。
+1. {{site.data.keyword.Bluemix_notm}} でモバイル・ダッシュボード・プロジェクトを作成します。
 
-   1. 「モバイル」ダッシュボードの**「開始」**ページで**「プロジェクトの作成」**をクリックします。
+   1. モバイル・ダッシュボードの**「開始」**ページで**「プロジェクトの作成」**をクリックします。
 
       代替方法として、**「プロジェクト」**ページから**「プロジェクトの作成」**をクリックすることもできます。
 
@@ -71,7 +71,7 @@ Watson Language コード・スターターを使用して素早く稼働中に�
    
    4. ID プロバイダーを選択し、必要な情報を入力して構成します。ID プロバイダーは 1 つだけ有効にすることができます。
 
-   5. 認証の構成については、[Getting started with Mobile Client Access](/docs/services/mobileaccess/index.html){: new_window} を参照してください。
+   5. 認証の構成については、[Mobile Client Access 概説](/docs/services/mobileaccess/index.html){: new_window}を参照してください。
 
 5. プロジェクトをダウンロードします。
 

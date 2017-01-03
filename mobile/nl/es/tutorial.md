@@ -2,15 +2,15 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-21"
+lastupdated: "2016-11-22"
 
 ---
 {:new_window: target="_blank"}
 
-# Guía de aprendizaje del iniciador de código de {{site.data.keyword.visualrecognitionshort}}
+# Guía de aprendizaje del iniciador de código Basic
 {: #tutorial}
 
-En la siguiente guía de aprendizaje encontrará los pasos a seguir para crear un proyecto desde el iniciador de código de {{site.data.keyword.visualrecognitionshort}}, incluidas las herramientas que debe tener instaladas y, por lo tanto, los pasos para ejecutar el iniciador en Xcode y Android Studio.
+En la siguiente guía de aprendizaje encontrará los pasos a seguir para crear un proyecto desde el iniciador de código de Basic, incluidas las herramientas que debe tener instaladas y, por lo tanto, los pasos para ejecutar el iniciador en Xcode y Android Studio.
 
 
 ### Instalación de herramientas del desarrollador
@@ -19,7 +19,7 @@ En la siguiente guía de aprendizaje encontrará los pasos a seguir para crear u
 Asegúrese de haber instalado las [herramientas necesarias del desarrollador](get_code.html#prereq-dev-tools){: new_window}.
 
 
-### Creación de un proyecto desde el iniciador de código de {{site.data.keyword.visualrecognitionshort}}
+### Creación de un proyecto desde el iniciador de código de Basic
 {: #create_project}
 
 1. Cree un proyecto de panel de control de Mobile en {{site.data.keyword.Bluemix}}.
@@ -30,9 +30,9 @@ Asegúrese de haber instalado las [herramientas necesarias del desarrollador](ge
 
    2. Pulse **Iniciadores de código**.
 
-   3. Seleccione **Reconocimiento visual** y pulse **Crear proyecto**.
+   3. Seleccione **Basic** y pulse **Crear proyecto**.
 
-   4. Especifique el nombre del proyecto. En esta guía de aprendizaje utilizaremos `VisualRecognitionProject`.
+   4. Especifique el nombre del proyecto. En esta guía de aprendizaje utilizaremos `BasicProject`.
    
    5. Pulse **Crear**.
 
@@ -56,7 +56,7 @@ Asegúrese de haber instalado las [herramientas necesarias del desarrollador](ge
 
    2. Especifique el nombre del servicio y pulse **Crear**.
    
-   3. Desactive la **Modalidad de demostración** para ver los datos del análisis después de ejecutar la app. 
+   3. Desactive la **Modalidad de demostración** para ver los datos del análisis después de ejecutar la app.
    
    4. Consulte [Iniciación a {{site.data.keyword.mobileanalytics_short}}](/docs/services/mobileanalytics/index.html){: new_window} para obtener más información sobre cómo configurar el análisis.
   
@@ -70,71 +70,99 @@ Asegúrese de haber instalado las [herramientas necesarias del desarrollador](ge
    
    3. Active **Autenticación**.
    
-   4. Seleccione su proveedor de identidad y especifique la información necesaria para configurarlo. Solo puede habilitar un proveedor de identidad. 
+   4. Seleccione su proveedor de identidad y especifique la información necesaria para configurarlo. Solo puede habilitar un proveedor de identidad.
 
-   5. Consulte [Iniciación a {{site.data.keyword.amashort}}](/docs/services/mobileaccess/index.html){: new_window} para obtener más información sobre cómo configurar la autenticación. 
+   5. Consulte [Iniciación a {{site.data.keyword.amashort}}](/docs/services/mobileaccess/index.html){: new_window} para obtener más información sobre cómo configurar la autenticación.
 
-5. Genere el código del proyecto. 
+5. Genere el código del proyecto.
 
-   1. Pulse **Obtener código** en la página **Visión general del proyecto** para seleccionar la plataforma y el lenguaje. 
+   1. Pulse **Obtener código** en la página **Visión general del proyecto** para seleccionar la plataforma y el lenguaje.
    
-      Como alternativa, pulse la página **Código**. 
+      Como alternativa, pulse la página **Código**.
       
-   2. Para iOS, pulse **iOS Swift**.
+   2. Para Objective-C, pulse **iOS Obj-C**.
+
+   3. Para Swift, pulse **iOS Swift**.
    
-   3. Para Android, pulse **Android**.
+   4. Para Cordova, pulse **Cordova**.
+
+   5. Para Android, pulse **Android**.
    
-   4. Cuando se haya generado el código, pulse **Descargar código** para descargar el archivo del proyecto. 
+   6. Cuando se haya generado el código, pulse **Descargar código** para descargar el archivo del proyecto.
 
 
-### Ejecución del proyecto en Xcode
-{: #run_xcode}
+### Ejecución del proyecto Objective-C en Xcode
+{: #run_obj-c}
 
-1. Extraiga el archivo `VisualRecognitionProject-Swift.zip`. 
+1. Extraiga el archivo `BasicProject-ObjC.zip`. 
 
-2. Abra el archivo `README.md` en un visor Markdown para ver los pasos a seguir para configurar el proyecto. 
+2. Abra el archivo `README.md` en un visor Markdown para ver los pasos a seguir para configurar el proyecto.
 
-   1. Cree su instancia de servicio de [{{site.data.keyword.visualrecognitionshort}}](https://console.{DomainName}/catalog/services/visual-recognition/){: new_window}. 
+   1. Abra el terminar y vaya a la carpeta del proyecto.
    
-   2. Abra el terminar y vaya a la carpeta del proyecto. 
-   
-      1. Ejecute `pod setup` si tiene que configurar el repositorio de CocoaPods. 
+      1. Ejecute `pod setup` si tiene que configurar el repositorio de CocoaPods.
       
-      2. Ejecute `pod update` si tiene que actualizar los pods existentes. 
+      2. Ejecute `pod update` si tiene que actualizar los pods existentes.
       
-      3. Ejecute `pod install` para instalar los pods necesarios para el proyecto. 
+      3. Ejecute `pod install` para instalar los pods necesarios para el proyecto.
       
-      4. Ejecute `carthage update --platform iOS` para crear las dependencias e infraestructura que utilizará el SDK iOS de {{site.data.keyword.ibmwatson}} Developer Cloud. 
-      
-   3. Abra el espacio de trabajo Xcode `VisualRecognitionProject.xcworkspace`. 
-   
-   4. Añada las credenciales de servicio de {{site.data.keyword.visualrecognitionshort}}. 
-   
-      1. Copie el archivo `api_key` de las credenciales de servicio de {{site.data.keyword.visualrecognition}}. 
-      
-      2. Pegue el archivo `api_key` en la clave `VisualRecognitionAPIKey` en el archivo `WatsonCredentials.plist`. 
+   2. Abra el espacio de trabajo Xcode `BasicProject.xcworkspace`. 
       
 3. Ejecute la app.
 
 
-### Ejecución del proyecto en Android Studio
-{: #run_studio}
+### Ejecución del proyecto Swift en Xcode
+{: #run_swift}
 
-1. Extraiga el archivo `VisualRecognitionProject-Android.zip`. 
+1. Extraiga el archivo `BasicProject-Swift.zip`. 
 
-2. Abra el archivo `README.md` en un visor Markdown para configurar el proyecto. 
+2. Abra el archivo `README.md` en un visor Markdown para ver los pasos a seguir para configurar el proyecto.
 
-   1. Cree su instancia de servicio de [{{site.data.keyword.visualrecognitionshort}}](https://console.{DomainName}/catalog/services/visual-recognition/){: new_window}. 
+   1. Abra el terminar y vaya a la carpeta del proyecto.
    
-      Sáltese este paso si ya tiene una instancia de servicio de {{site.data.keyword.visualrecognitionshort}}. 
-   
-   2. Abra el proyecto `VisualRecognitionProject-Android` en Android Studio.
-   
-   4. Añada las credenciales de servicio de {{site.data.keyword.visualrecognitionshort}}. 
-   
-      1. Copie el archivo `api_key` de las credenciales de servicio de {{site.data.keyword.visualrecognition}}. 
+      1. Ejecute `pod setup` si tiene que configurar el repositorio de CocoaPods.
       
-      2. Pegue el archivo `api_key` en la clave `watson_visual_recognition_api_key` en el archivo `res/values/watson_credentials.xml`. 
+      2. Ejecute `pod update` si tiene que actualizar los pods existentes.
+      
+      3. Ejecute `pod install` para instalar los pods necesarios para el proyecto.
+      
+   3. Abra el espacio de trabajo Xcode `BasicProject.xcworkspace`. 
+      
+3. Ejecute la app.
+
+
+### Ejecución del proyecto Cordova en Xcode
+{: #run_cordova_xcode}
+
+1. Extraiga el archivo `BasicProject-Cordova.zip`. 
+
+2. Abra el archivo `README.md` en un visor Markdown para configurar el proyecto.
+
+   1. Abra el proyecto `platforms/ios` en Xcode. 
+      
+3. Ejecute la app.
+
+
+### Ejecución del proyecto Cordova en Android Studio
+{: #run_cordova_studio}
+
+1. Extraiga el archivo `BasicProject-Cordova.zip`. 
+
+2. Abra el archivo `README.md` en un visor Markdown para configurar el proyecto.
+
+   1. Abra el proyecto `platforms/android` en Android Studio.
+      
+3. Ejecute la app.
+
+
+### Ejecución del proyecto Android en Android Studio
+{: #run_android}
+
+1. Extraiga el archivo `BasicProject-Android.zip`. 
+
+2. Abra el archivo `README.md` en un visor Markdown para configurar el proyecto.
+
+   1. Abra el proyecto `BasicProject-Android` en Android Studio.
       
 3. Ejecute la app.
 
@@ -142,7 +170,7 @@ Asegúrese de haber instalado las [herramientas necesarias del desarrollador](ge
 ## Qué hacer a continuación
 {: #what_next}
 
-Consulte otras guías de aprendizaje. 
+Consulte otras guías de aprendizaje.
 
 
 ### Guías de aprendizaje del Iniciador de IU
@@ -154,5 +182,6 @@ Consulte otras guías de aprendizaje.
 ### Guías de aprendizaje del Iniciador de código
 {: #tutorials_Code}
 
+* [Guía de aprendizaje - {{site.data.keyword.visualrecognitionshort}}](tutorial_visual_recognition.html)
 * [Guía de aprendizaje: Lenguaje Watson](tutorial_watson_language.html)
 * [Guía de aprendizaje: Weather](tutorial_weather.html)

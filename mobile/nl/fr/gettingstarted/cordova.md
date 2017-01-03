@@ -12,7 +12,8 @@ copyright:
 Dernière mise à jour : 27 mai 2016
 {: .last-updated}
 
-Si vous voulez débuter avec une nouvelle application Cordova, vous pouvez utiliser l'application HelloWorld. Elle explique comment se connecter à votre système de back end mobile dans {{site.data.keyword.Bluemix}} depuis une application mobile sans authentification. Le logiciel SDK est déjà installé pour l'application. Une fois prêt, vous pouvez vous procurer les bibliothèques spécifiques que vous voulez utiliser dans votre application.
+Si vous voulez débuter avec une nouvelle application Cordova, vous pouvez utiliser l'application HelloWorld. Cette application illustre comment se connecter
+à votre système de back-end mobile sur {{site.data.keyword.Bluemix}} depuis une application mobile sans authentification. Le logiciel SDK est déjà installé pour l'application. Une fois prêt, vous pouvez vous procurer les bibliothèques spécifiques que vous voulez utiliser dans votre application.
 
 1. Créez votre application de back end mobile dans {{site.data.keyword.Bluemix_notm}}.
 
