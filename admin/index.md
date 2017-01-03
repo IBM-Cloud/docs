@@ -510,11 +510,11 @@ You can also manage the priority order of available buildpacks to be chosen base
 ### Registering a service broker
 {: #servicebrokerui}
 
-If you have a service that you want to display in your {{site.data.keyword.Bluemix_notm}} catalog, you must implement and register a [service broker](http://docs.cloudfoundry.org/services/api.html){: new_window}. After registering your broker, you can choose which orgs can access the service in your local or dedicated instance.
+If you have a service that you want to display in your {{site.data.keyword.Bluemix_notm}} catalog, you must implement and register a [service broker](http://docs.cloudfoundry.org/services/api.html){: new_window} ![External link icon](../icons/launch-glyph.svg). After registering your broker, you can choose which orgs can access the service in your local or dedicated instance.
 
 The methods for working with your service broker vary depending on how many services it manages, or whether it has already been registered with {{site.data.keyword.Bluemix_notm}}.
 
-- If your service broker manages one service, you can use the user interface to register it after you have implemented the [Service Broker API](http://docs.cloudfoundry.org/services/api.html){: new_window}. See [Registering a service broker that manages one service](index.html#registerbrokerui).
+- If your service broker manages one service, you can use the user interface to register it after you have implemented the [Service Broker API](http://docs.cloudfoundry.org/services/api.html){: new_window} ![External link icon](../icons/launch-glyph.svg). See [Registering a service broker that manages one service](index.html#registerbrokerui).
 - If your service broker manages multiple services, use the cf CLI with the [{{site.data.keyword.Bluemix_notm}} admin CLI](../cli/plugins/bluemix_admin/index.html) plug-in (`ba` subcommand), or use the [Custom service API](index.html#servicebrokerapi).
 - If your service broker is already registered, and you want to update or delete it, use the cf CLI with the [{{site.data.keyword.Bluemix_notm}} admin CLI](../cli/plugins/bluemix_admin/index.html) plug-in (`ba` subcommand), or use the [Custom service API](index.html#servicebrokerapi).
 
@@ -697,7 +697,7 @@ The following example shows how the JSON response of GET /v2/catalog is mapped t
 |name       | The name of the service plan that is used in the cf command line interface. For example, the plan name is displayed in the output of the cf marketplace command. The plan name must be in lowercase letters and must not contain spaces, and it must be unique within the service.  |
 |description       | The description of the service plan. The description is displayed after you select a plan on the service details page in the {{site.data.keyword.Bluemix_notm}} catalog. |
 |free      | A Boolean value that indicates whether the service plan is free. The default value is true. |
-|id       | The ID of the service plan. The ID must be unique within {: new_window}, and it must be a GUID.  |
+|id       | The ID of the service plan. The ID must be unique and it must be a GUID.  |
 |metadata (optional)    | The service plan metadata that is displayed in the {{site.data.keyword.Bluemix_notm}} catalog and in the pricing sheet. The metadata field is an optional field. You can specify the following fields within the metadata field: displayName, type (subscription, reservable, planDetails), bullets, costs (unitId, unit, partNumber), and paidOnly. See the following table for [Plan metadata fields](index.html#planmetadata) for more information. |
 {: caption="Table 12. Plan fields" caption-side="top"}
 
@@ -978,9 +978,9 @@ Though you can choose to use other tools, the following tools are prerequisites 
 use other tools as well.
 * cURL, to enter REST API requests as commands. cURL is a free utility that you can use to send
 HTTP requests to a server and receive the server responses through a command-line interface. You can
-download cURL from the [cURL Download site](http://curl.haxx.se/download.html){: new_window}.
+download cURL from the [cURL Download site](http://curl.haxx.se/download.html){: new_window} ![External link icon](../icons/launch-glyph.svg).
 * Python, to use the Python pretty-print JSON tool. This optional tool takes the JSON text as
-input and provides easy-to-read output. You can download Python from the [Python Downloads site](https://www.python.org/downloads){: new_window}.
+input and provides easy-to-read output. You can download Python from the [Python Downloads site](https://www.python.org/downloads){: new_window} ![External link icon](../icons/launch-glyph.svg).
 
 ### Logging in to the Admin Console
 
@@ -1006,10 +1006,8 @@ To log in to the Admin Console, run the following command:
 <dt class="pt dlterm">--user <em>user_id</em>:<em>password</em></dt>
 <dd class="pd">Accepts the user ID and password and sends a Basic Authorization header.</dd>
 
-
 <dt class="pt dlterm">-c <em>filename</em></dt>
 <dd class="pd">Stores the specified user ID and password as a cookie in the specified file.</dd>
-
 
 <dt class="pt dlterm">--header</dt>
 <dd class="pd">Sends an Accept header.</dd>
@@ -1820,7 +1818,7 @@ example, you can add users from an LDAP registry.
 
 Before you begin, install the cf command line interface. The
 {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in
-requires cf version 6.11.2 or later. [Download Cloud Foundry command line interface](https://github.com/cloudfoundry/cli/releases){: new_window}
+requires cf version 6.11.2 or later. [Download Cloud Foundry command line interface](https://github.com/cloudfoundry/cli/releases){: new_window} ![External link icon](../icons/launch-glyph.svg).
 
 **Restriction:** The Cloud Foundry command line interface is not supported by
 Cygwin. Use the Cloud Foundry command line interface in a command line window other than the Cygwin
