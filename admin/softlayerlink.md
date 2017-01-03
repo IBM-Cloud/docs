@@ -125,7 +125,7 @@ After your users switch to IBMid authentication, resellers and distributors can 
 **Note:** 
   * The master user of the account that is being linked must be an IBMid.
   * Log in to each end user account as the master user. Go to the user profile page, and click **Switch to IBMid**.
-  * Each account that you link to a {{site.data.keyword.Bluemix_notm}} account must be owned by a unique IBMid with a unique email address. Although one IBMid can own multiple SoftLayer accounts, you cannot link the accounts to {{site.data.keyword.Bluemix_notm}} accounts. If one IBMid is the master user for multiple SoftLayer accounts and you want to link those accounts to {{site.data.keyword.Bluemix_notm}} accounts, you must change the master users to be a unique IBMid for each account. Contact [IBM SoftLayer support](https://knowledgelayer.softlayer.com/topic/support) to change the master user on a SoftLayer account.
+  * Each account that you link to a {{site.data.keyword.Bluemix_notm}} account must be owned by a unique IBMid with a unique email address. Although one IBMid can own multiple SoftLayer accounts, you cannot link the accounts to {{site.data.keyword.Bluemix_notm}} accounts. If one IBMid is the master user for multiple SoftLayer accounts and you want to link those accounts to {{site.data.keyword.Bluemix_notm}} accounts, you must change the master users to be a unique IBMid for each account. Contact [IBM SoftLayer support](https://knowledgelayer.softlayer.com/topic/support){: new_window} ![External link icon](../icons/launch-glyph.svg) to change the master user on a SoftLayer account.
   
 Complete the following steps to link each account to a {{site.data.keyword.Bluemix_notm}} account: 
 
