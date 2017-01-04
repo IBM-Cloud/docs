@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-29"
+  years: 2015, 2017
+lastupdated: "2016-01-04"
 ---
 
 
@@ -45,29 +45,12 @@ To stage a new application, deploy the app with the **cf push** command:
 
 For more details on the **cf push** command, see [cf push](/docs/cli/reference/cfcommands/index.html#cf_push).
 
-Support for the DEA architecture will be removed. However, you can still deploy apps to the DEA architecture until support is removed:
-
-1. Deploy the application without starting it:
-```
-$ cf push APPLICATION_NAME --no-start
-```
-2. Set the Diego boolean to false to override the default architecture option:
-```
-$ cf curl /v2/apps/$(cf app APPLICATION_NAME --guid) -X PUT -d '{"diego":false}'
-```
-3. Start the application:
-```
-$ cf start APPLICATION_NAME
-```
-
 #### Migrating an existing app to Diego
 {: #migrateapp}
 
 Diego is the default Cloud Foundry architecture for {{site.data.keyword.Bluemix_notm}}, and support for DEAs will be removed, so you must migrate all of your existing applications by re-deploying each app. Start migrating your apps to Diego by deploying the application with the Diego flag. The application immediately starts running on Diego and will eventually stop running on the DEAs. 
 
 To limit downtime, perform a blue-green deploy by deploying a copy of your application to Diego, and then swapping routes and scaling down the DEA application. If you do not perform a blue-green deployment, you might experience some downtime.
-
-IBM will alert you of the upcoming mandatory migration period when DEA architecture support will be removed, and if you have not migrated your apps, the operations team will migrate all apps for you.
 
 Complete the following steps to migrate your app to Diego:
 
@@ -84,11 +67,22 @@ Complete the following steps to migrate your app to Diego:
 
 After you run the `cf start` command, verify that your app started. If your migrated app fails to start, it will remain offline until you identify and resolve the issue, and then restart the app.
 
-  Until support for the older DEA architecture is removed, you can run the following command to transition back to DEAs:
-  ```
-  $ cf disable-diego APPLICATION_NAME
-  ```
-  To validate which backend the application is running on:
+IBM will alert you of the upcoming mandatory migration period when DEA architecture support will be removed, and if you have not migrated your apps, the operations team will migrate all apps for you. Until support for the older DEA architecture is removed, you can run the following command to transition back to DEAs `cf disable-diego APPLICATION_NAME`. You can also still deploy apps to the DEA architecture until support is removed:
+
+1. Deploy the application without starting it:
+```
+$ cf push APPLICATION_NAME --no-start
+```
+2. Set the Diego boolean to false to override the default architecture option:
+```
+$ cf curl /v2/apps/$(cf app APPLICATION_NAME --guid) -X PUT -d '{"diego":false}'
+```
+3. Start the application:
+```
+$ cf start APPLICATION_NAME
+```
+  
+To validate which backend the application is running on:
   ```
   $ cf has-diego-enabled APPLICATION_NAME
   ```
