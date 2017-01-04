@@ -15,7 +15,7 @@ copyright:
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#Organisation et filtrage des éléments de travail{: #tp-organize}  
+#Organisation et filtrage des éléments de travail {: #tp-organize}  
 
 *Dernière mise à jour : 29 avril 2016*
 {: .last-updated}
