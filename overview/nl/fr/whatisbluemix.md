@@ -84,7 +84,6 @@ permettent :
 * De livrer de nouvelles applications innovantes plus vite et à moindre coût avec précisément les fonctions appropriées à l'aide de
 services
 {{site.data.keyword.IBM_notm}} DevOps et de la méthode {{site.data.keyword.Bluemix_notm}} Garage. Lorsque vous adoptez des pratiques DevOps et promouvez la culture de l'innovation et de l'agilité, vous pouvez appliquer des pratiques itératives et changer de direction en réponse au marché.
-
 * Blockchain est une technologie de grand livre distribuée d'égal à égal pour une nouvelle génération d'applications transactionnelles qui établit
 la fiabilité, la responsabilité et la transparence tout en rationalisant des processus métier.  
 * Watson donne à vos applications la puissance de l'informatique cognitive avec une suite complète d'API de service vocal, de visualisation et de données.  Résolvez vos problèmes métier les plus complexes en déployant une plateforme cognitive avec des services Watson.
@@ -272,9 +271,7 @@ Un préfixe unique est affecté à chaque région. {{site.data.keyword.Bluemix_n
 | Région Sud des Etats-Unis | Dallas, US | ng | api.ng.bluemix.net | console.ng.bluemix.net |
 | Région Royaume-Uni | Londres, Angleterre | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
 | Région Sydney | Sydney, Australie | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
-
-*Tableau 1. Liste des régions {{site.data.keyword.Bluemix_notm}}*
-
+{: caption="Table 1. {{site.data.keyword.Bluemix_notm}} - liste des régions" caption-side="top"}
 
 ### Résilience de {{site.data.keyword.Bluemix_notm}}
 {: #resiliency}
@@ -284,7 +281,7 @@ s'adapter à vos besoins, rester hautement disponibles et assurer une reprise ra
 les composants qui assurent le suivi de l'état des interactions (avec état) de ceux qui n'effectuent pas de suivi (sans état). Cette distinction permet à
 {{site.data.keyword.Bluemix_notm}} de déplacer des applications de façon souple en fonction des besoins pour assurer l'évolutivité et la résilience.
 
-Vous pouvez disposer d'une ou de plusieurs instances de votre application. Dans les deux cas, l'application est chargée une seule fois. Toutefois,
+Vous pouvez disposer d'une ou de plusieurs instances de votre application. Si vous disposez de plusieurs instances d'une seule application, l'application est chargée une seule fois. Toutefois,
 {{site.data.keyword.Bluemix_notm}} déploie le nombre d'instances de l'application demandé et distribue ces instances sur autant de serveurs
 virtuels que possible.
 

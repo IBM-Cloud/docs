@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016
-lastupdated: "2016-11-03"
+lastupdated: "2016-12-01"
  
 
 ---
@@ -24,7 +24,17 @@ procéder à la mise à niveau vers un compte {{site.data.keyword.Bluemix_notm}}
 Vous pouvez unifier vos comptes de facturation {{site.data.keyword.Bluemix_notm}} et SoftLayer en les liant. Lorsque vous liez vos
 comptes, vous êtes facturé via {{site.data.keyword.Bluemix_notm}} pour l'utilisation de ressources {{site.data.keyword.Bluemix_notm}} et
 SoftLayer.
-{:shortdesc}
+
+**Attention :** Un compte d'abonnement {{site.data.keyword.Bluemix_notm}} ne peut pas être lié à un compte SoftLayer. Pour
+accéder au tableau de bord Infrastructure, vous devez créer un compte Paiement
+à la carte, un second compte qui est automatiquement lié à un
+compte SoftLayer. Vous recevez ensuite deux factures, une pour chaque compte {{site.data.keyword.Bluemix_notm}}. Même
+si vos ressources d'infrastructure sont facturées dans un compte Paiement à la
+carte distinct, elles peuvent être utilisées avec les applications et les
+services de votre compte d'abonnement. Ainsi, si vous activez un service Watson
+dans votre compte d'abonnement, vous pouvez copier les données d'identification
+du service et les ajouter à votre application Bare Metal provenant de
+votre compte Paiement à la carte. {:shortdesc}
 
 ## Mise à niveau vers un compte {{site.data.keyword.Bluemix_notm}} Paiement à la carte
 {: #upgradetopayg}
@@ -88,16 +98,6 @@ applications et services figurant dans le catalogue {{site.data.keyword.Bluemix_
 d'exécution, sur le réseau public. Le transfert de données entre ces deux types d'offre est mesuré et facturé en fonction des tarifs de bande
 passante de réseau public
 standard.
-
-## Crédits pour l'utilisation de {{site.data.keyword.Bluemix_notm}} lorsque des comptes sont liés
-{: #slcredit}
-
-Lorsque vous liez votre compte {{site.data.keyword.Bluemix_notm}} depuis votre compte SoftLayer, vous recevez un crédit de 200 dollars que
-vous pouvez utiliser dans {{site.data.keyword.Bluemix_notm}} seulement. Ce crédit doit être utilisé dans les 30 jours suivant la liaison des
-comptes.
-
-Pour plus d'informations sur l'affichage des crédits et de leur date d'expiration, voir
-[Affichage des crédits](https://console.ng.bluemix.net/docs/pricing/index.html#credits).
 
 ## Invitation de membres d'équipe SoftLayer dans {{site.data.keyword.Bluemix_notm}}
 {: #invite_users}
@@ -193,8 +193,8 @@ applications. Vous pouvez aussi opter pour une approche DBaaS (database-as-a-ser
 
 Modernisez votre développement d'applications en utilisant des conteneurs avec des services tels que
 {{site.data.keyword.activedeployshort}} et {{site.data.keyword.deliverypipeline}}. Vous pourrez ensuite utiliser le service
-{{site.data.keyword.vpn_short}} pour regagner SoftLayer et connecter votre conteneur dans un réseau privé au réseau privé
-SoftLayer. Tous les frais d'utilisation des ressources de traitement et des services sont reflétés dans votre facture
+{{site.data.keyword.vpn_short}} pour communiquer avec SoftLayer et
+connecter votre conteneur dans un réseau privé au réseau privé SoftLayer. Tous les frais d'utilisation des ressources de traitement et des services sont reflétés dans votre facture
 {{site.data.keyword.Bluemix_notm}}. 
 
 ### Services {{site.data.keyword.Bluemix_notm}} reposant sur des API

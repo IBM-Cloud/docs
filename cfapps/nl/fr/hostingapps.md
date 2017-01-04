@@ -127,15 +127,13 @@ dans la commande cf push. Pour des détails, voir [Utilisation de packs de const
 Vous pouvez utiliser les outils et les services suivants mis à disposition par
 {{site.data.keyword.Bluemix_notm}} :
 
-*Tableau 1. Outils {{site.data.keyword.Bluemix_notm}}*
-
 | Outil	| Méthode |
 |:------|:--------|
 |Interface de ligne de commande Cloud Foundry (cf cli)	|Gérez votre code sur le client local et utilisez l'interface de ligne de commande Cloud Foundry pour envoyer votre application par commande push dans {{site.data.keyword.Bluemix_notm}} manuellement. Pour plus d'informations, voir [Téléchargement de votre application](/docs/starters/upload_app.html).|
 |Eclipse	|Gérez votre code dans Eclipse et utilisez IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} pour envoyer votre application par commande push.|
 |intégration Git	|Gérez votre code sur GitHub et intégrez Git dans {{site.data.keyword.Bluemix_notm}}. Vous pouvez collaborer avec d'autres développeurs. Votre application est déployée dans {{site.data.keyword.Bluemix_notm}} automatiquement lorsque vous validez les modifications dans le code. Il n'est pas nécessaire d'envoyer manuellement l'application par commande push.|
 |{{site.data.keyword.Bluemix_notm}} DevOps Delivery Pipeline	|Gérez votre code dans le référentiel DevOps GitHub et déployez votre application dans {{site.data.keyword.Bluemix_notm}} à l'aide de DevOps Delivery Pipeline.|
-
+{: caption="Table 1. {{site.data.keyword.Bluemix_notm}} - outils" caption-side="top"}
 
 Si la plateforme Cloud Foundry ne prend pas en charge les exigences relatives à votre application, vous pouvez utiliser un conteneur ou une machine
 virtuelle où le contexte d'exécution est défini, configuré et géré avec des options personnalisées supplémentaires.

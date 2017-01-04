@@ -56,8 +56,7 @@ obligée de fournir un correctif.|
 problèmes
 identifiés comme défauts dans un service bêta fourni par IBM sont pris en charge, mais IBM n'est pas obligée de fournir un correctif. De plus, le ticket de problème sera associé à une gravité de 3 ou 4 si
 applicable. Pour des informations sur la gravité des tickets, voir [Contacter le service de support](/docs/support/index.html#contacting-bluemix-support){: new_window}.|
-*Tableau 1. Informations sur le support des services {{site.data.keyword.Bluemix_notm}}*
-
+{: caption="Table 1. {{site.data.keyword.Bluemix_notm}} information du service de support" caption-side="top"}
 
 
 
@@ -160,6 +159,8 @@ services qui sont fournis par IBM.
 |{{site.data.keyword.workloadscheduler}}	|Oui		|Oui		|Non|
 |{{site.data.keyword.xpagesservice_short}}	|Oui		|Oui		|Non|
 *Tableau 2. Disponibilité des services*
+{: caption="Table 2. Service availability" caption-side="top"}
+
 
 
 # Ajout d'un service à votre application

@@ -29,7 +29,7 @@ gravité que vous définissez. Pour plus d'informations sur la gravité des tick
 |Tiers	|Service fourni par une société autre qu'IBM.	|Le support des services de tiers est assuré par le fournisseur de service. Si IBM examine un problème et détermine qu'il s'agit d'un défaut d'un service de tiers, elle n'est pas obligée de fournir un correctif. IBM partagera son analyse avec le fournisseur de service de tiers si nécessaire.|
 |Communauté	|Service fourni par une communauté open source.	|Le support des services de communauté est assuré par la communauté des développeurs {{site.data.keyword.Bluemix_notm}}. Si IBM examine un problème et détermine qu'il s'agit d'un défaut d'un service de communauté, elle n'est pas obligée de fournir un correctif.|
 |Bêta	|Service qui n'est pas prêt pour la phase de production et qui se trouve au stade d'essai de développement. Un service bêta peut aider les équipes de développement et marketing à évaluer la valeur d'un service avant de le rendre généralement disponible.	|Les problèmes identifiés comme défauts dans un service bêta fourni par IBM sont pris en charge, mais IBM n'est pas obligée de fournir un correctif. De plus, le ticket de problème sera associé à une gravité de 3 ou 4 si applicable. Pour des informations sur la gravité des tickets, voir [Contacter le service de support](/docs/support/index.html#contacting-bluemix-support){: new_window}.|
-*Tableau 1. Informations sur le support des services {{site.data.keyword.Bluemix_notm}}*
+{: caption="Table 1. {{site.data.keyword.Bluemix_notm}} information du service de support" caption-side="top"}
 
 ##Services expérimentaux
 {: #experimental_services}
@@ -145,7 +145,7 @@ IBM.
 |{{site.data.keyword.appserver_short}}	|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Hébergé à Sydney, en Australie |
 |{{site.data.keyword.workloadscheduler}}	|Hébergé à Dallas et à Washington, aux Etats-Unis		|Hébergé à Amsterdam, aux Pays-Bas et à Milan en Italie		|Hébergé à Melbourne, en Australie |
 |{{site.data.keyword.xpagesservice_short}}	|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Hébergé à Sydney, en Australie |
-*Tableau 2. Disponibilité des services*
+{: caption="Table 2. Service availability" caption-side="top"}
 
 
 ## Disponibilité ininterrompue des services

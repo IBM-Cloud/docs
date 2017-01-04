@@ -78,5 +78,3 @@ persistance.</dd>
 <tr><td>Nombre de routes</td> <td>500</td>
 </table>
 </dd></dl>
-
-*Tableau 1. Limites de ressources {{site.data.keyword.Bluemix_notm}} pour un compte d'essai*

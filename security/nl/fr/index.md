@@ -1,4 +1,4 @@
-﻿---
+---
 
  
 
@@ -481,8 +481,7 @@ Le tableau ci-dessous indique quels sont les services dans {{site.data.keyword.B
 |{{site.data.keyword.mql}}				|O	|O	|O	|	 		|
 |{{site.data.keyword.SecureGateway}}			|O	|O |	|	 		|
 |{{site.data.keyword.sescashort}}     |O |O |O	|  |
-
-*Tableau 1. Conformité de la plateforme et des services*
+{: caption="Table 1. Platform and service compliance" caption-side="top"}
 
 # Liens connexes
 {: #rellinks}

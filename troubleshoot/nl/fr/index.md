@@ -1,4 +1,4 @@
-﻿---
+---
 
 copyright:
   2015, 2016
@@ -795,7 +795,9 @@ de l'interface de ligne de commande cf.
     Si vous employez l'interface utilisateur {{site.data.keyword.Bluemix_notm}}, procédez comme suit :
 	  1. Dans le tableau de bord {{site.data.keyword.Bluemix_notm}}, sélectionnez votre application. La page des détails de l'application
 s'ouvre.
-	  2. Dans le panneau Contexte d'exécution, vous pouvez réduire la limite de mémoire maximale ou le nombre d'instances d'application, ou les deux, pour votre application. Si vous utilisez l'interface de ligne de commande cf, procédez comme suit :
+	  2. Dans le panneau Contexte d'exécution, vous pouvez réduire la limite de mémoire maximal ou le nombre d'instances d'application, ou les deux,
+pour votre application. 
+	Si vous utilisez l'interface de ligne de commande cf, procédez comme suit :
 	  1. Vérifiez la quantité de mémoire qui est utilisée par vos applications :
 	  ```
 	  cf apps
@@ -821,7 +823,9 @@ Une application n'est pas redémarrée automatiquement lorsqu'un service que vou
 	  
  
 
-Lorsqu'un service que vous liez à une application tombe en panne, des problèmes tels que des indisponibilités, des exceptions et des échecs de connexion peuvent survenir sur l'application. {{site.data.keyword.Bluemix_notm}} ne redémarre pas automatiquement l'application pour assurer la reprise suite à ces problèmes.
+Lorsqu'un service que vous liez à une application tombe en panne, des problèmes tels que des indisponibilités, des exceptions et des échecs de
+connexion peuvent survenir sur l'application. {{site.data.keyword.Bluemix_notm}} ne redémarre pas automatiquement l'application pour assurer la
+reprise suite à ces problèmes.
 {: tsSymptoms}
 
 
@@ -1128,8 +1132,9 @@ Effectuez les opérations suivantes en fonction de l'origine du problème :
   ...
         ```
 
-  * Vérifiez qu'un fichier `package.json` existe dans votre application Node.js pour que le pack de construction Node.js puisse reconnaître l'application. Placez également ce fichier dans le répertoire racine de votre application.	
-L'exemple suivant représente un fichier `package.json` simple :  
+  * Vérifiez qu'un fichier `package.json` existe dans votre application Node.js pour que le pack de construction Node.js puisse reconnaître
+l'application. Vous devez de plus placer ce fichier dans le répertoire racine de votre application.
+    L'exemple suivant représente un fichier `package.json` simple :  
 	```
 	{
         "name": "MonNoeudJsUnique01",
@@ -1177,7 +1182,8 @@ vous importez l'application dans Eclipse, le fichier `runtime-vars.xml` n'existe
 
  
 
-Pou résoudre ce problème, supprimez le fichier server.xml du projet. Le pack de construction crée le fichier `server.xml` de manière dynamique lorsque vous envoyez par commande push l'application sous forme d'application WAR. Pour plus d'informations, voir [Liberty for Java](/docs/runtimes/liberty/index.html){: new_window}.
+Pou résoudre ce problème, supprimez le fichier server.xml du projet. Le pack de construction crée le fichier `server.xml` de manière
+dynamique lorsque vous envoyez par commande push l'application sous forme d'application WAR. Pour plus d'informations, voir [Liberty for Java](/docs/runtimes/liberty/index.html){: new_window}.
 {: tsResolve}
 	
 	
@@ -1578,7 +1584,9 @@ Vous pouvez rencontrer des problèmes lorsque vous utilisez les contextes d'exé
 {: #ts_loading_bp}
 
 
-Il est possible que vous ne puissiez pas utiliser les derniers composants du pack de construction lorsque vous envoyez une application par commande push. Vous pouvez utiliser des packs de construction disposant de mécanismes intégrés pour empêcher le chargement de composants obsolètes ou supprimer le contenu du répertoire cache de votre application avant de l'envoyer par commande push ou de la reconstituer. 
+Il est possible que vous ne puissiez pas utiliser les derniers composants du pack de construction lorsque vous envoyez une application par commande push. Vous pouvez utiliser des packs de construction disposant de mécanismes intégrés
+pour empêcher le chargement de composants obsolètes ou supprimer le contenu du répertoire cache de votre application avant
+de l'envoyer par commande push ou de la reconstituer. 
 
  
 
@@ -1685,10 +1693,13 @@ l'application Python manquent.
 
  
 
-Pour résoudre le problème, ajoutez un fichier `requirements.txt` et un fichier `Procfile` dans le répertoire racine de votre application Python. Les informations suivantes supposent que vous importez la bibliothèque web.py : 
+Pour résoudre le problème, ajoutez un fichier `requirements.txt` et un fichier `Procfile` dans le répertoire racine
+de votre application Python. Les informations suivantes supposent que vous importiez la bibliothèque web.py :
 {: tsResolve}
 
-  1. Ajoutez un fichier `requirements.txt` dans le répertoire racine de votre application Python. Le fichier `requirements.txt` spécifie les packages de bibliothèque requis pour votre application Python ainsi que la version des packages. L'exemple
+  1. Ajoutez un fichier `requirements.txt` dans le répertoire racine de votre application Python.
+     Le fichier
+`requirements.txt` spécifie les packages de bibliothèque requis pour votre application Python ainsi que la version des packages. L'exemple
 ci-après illustre le contenu du fichier `requirements.txt`, où `web.py==0.37` indique que la version de la bibliothèque
 `web.py` qui sera téléchargée est la version 0.37 et `wsgiref==0.1.2` indique que la version de l'interface Web de
 Secure Gateway requise par la bibliothèque web.py est la version 0.1.2.
@@ -1700,7 +1711,9 @@ Secure Gateway requise par la bibliothèque web.py est la version 0.1.2.
 	 
   2. Ajoutez un fichier `Procfile` dans le répertoire racine de votre application Python.
 	Le fichier `Procfile`
-contient la commande de démarrage de votre application Python. Dans la commande ci-dessous, *nom_de_votre_app* est le nom de votre application Python et *PORT* est le numéro de port que votre application Python doit utiliser pour recevoir les demandes des utilisateurs de l'application. *$PORT*  est facultatif. Si vous ne spécifiez pas PORT dans la commande de démarrage, le numéro de port qui figure dans la
+contient la commande de démarrage de votre application Python. Dans la commande ci-dessous, *nom_de_votre_app* est le nom de votre application
+Python et *PORT* est le numéro de port que votre application Python doit utiliser pour recevoir les demandes des utilisateurs de
+l'application. *$PORT* est facultatif. Si vous ne spécifiez pas PORT dans la commande de démarrage, le numéro de port qui figure dans la
 variable d'environnement `VCAP_APP_PORT` dans l'application est utilisé à la place. 
 	```
 	web: python <nom_de_votre_app>.py $PORT

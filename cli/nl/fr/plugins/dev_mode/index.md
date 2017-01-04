@@ -100,7 +100,7 @@ Utilisez l'index de la table suivante pour consulter les commandes CLI dev_mode 
  </tr>
   </tbody>
  </table>
-*Tableau 1. Commandes dev_mode*
+{: caption="Table 1. dev_mode commands" caption-side="top"}
 
 
 

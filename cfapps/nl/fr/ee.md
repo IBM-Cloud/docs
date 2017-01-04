@@ -68,7 +68,8 @@ les variables d'environnement afin de traiter les problèmes.
 ## Liaison d'un service via l'interface utilisateur {{site.data.keyword.Bluemix_notm}}
 {: #ee_bindui}
 
-Une fois votre application créée, vous devez vous connecter à une base de données avec l'application. Ainsi, vous pouvez stocker et examiner les données d'application en utilisant le langage de requête de base de données. Dans le cadre de ce scénario, vous décidez d'utiliser le service
+Une fois votre application créée, vous devez vous connecter à une base de données avec l'application. Ainsi, vous pouvez stocker et examiner les
+données d'application en utilisant le langage de requête de base de données. Dans le cadre de ce scénario, vous décidez d'utiliser le service
 {{site.data.keyword.cloudant}} mis à disposition par {{site.data.keyword.Bluemix_notm}}.
 
 Pour utiliser des services dans l'application, vous devez créer une instance de service et lier votre application à l'instance de service en
@@ -120,7 +121,8 @@ application TestNode.
 
   1. Tout d'abord, téléchargez et développez le code de votre application.
 
-    1. Accédez à la page Commencer le codage de votre application. Cliquez sur le bouton **Télécharger le code du module de démarrage** pour télécharger le code de votre application.
+    1. Accédez à la page Commencer le codage de votre application. Cliquez sur le bouton **Télécharger le code du module de démarrage**
+pour télécharger le code de votre application.
     2. Procédez à l'extraction du fichier téléchargé dans un répertoire, par exemple `C:\test`.
     3. Développez le code dans votre environnement de développement intégré local.
 
@@ -170,8 +172,9 @@ vous êtes prêt à déployer votre application dans {{site.data.keyword.Bluemix
   http://TestNode.mybluemix.net
   ```
 
-Vous pouvez aussi choisir d'autres outils pour construire votre application, comme des outils Eclipse. Pour plus d'informations, voir la page
-Commencer le codage de votre application dans l'interface utilisateur {{site.data.keyword.Bluemix_notm}}.
+Vous pouvez aussi choisir d'autres outils pour construire votre application, comme des outils Eclipse. 
+Pour plus d'informations, voir la page Commencer le codage de votre application
+dans l'interface utilisateur {{site.data.keyword.Bluemix_notm}}.
 
 ## Liaison d'un service via l'interface de ligne de commande cf
 {: #ee_cfbind}

@@ -26,6 +26,23 @@ l'écriture de la logique d'application et à la création d'actions qui sont ex
 
 Pour plus de détails sur le fonctionnement d'{{site.data.keyword.openwhisk_short}}, voir [A propos d'{{site.data.keyword.openwhisk_short}}](./openwhisk_about.html).
 
+Vous pouvez utiliser le navigateur ou l'interface de ligne de commande
+pour développer vos applications {{site.data.keyword.openwhisk_short}}.
+Ces deux fonctions sont dotées de capacités similaires pour le développement
+d'applications. L'interface de ligne de commande offre cependant davantage de
+contrôle sur le déploiement et les opérations. 
+
+
+## Développer dans votre navigateur
+{: #openwhisk_start_editor}
+
+Essayez {{site.data.keyword.openwhisk_short}} dans votre
+[navigateur](https://console.{DomainName}/openwhisk/editor){: new_window}
+pour créer des actions, automatiser les actions à l'aide de déclencheurs et
+explorer des packages publics.
+Consultez la page [En savoir
+plus](https://console.{DomainName}/openwhisk/learn){: new_window} pour un tour d'horizon de l'interface utilisateur d'OpenWhisk. 
+
 ## Configuration de l'interface de ligne de commande d'{{site.data.keyword.openwhisk_short}}
 {: #openwhisk_start_configure_cli}
 
@@ -34,11 +51,11 @@ clé d'autorisation.
 Accédez à la page de [configuration de l'interface de ligne de commande](https://new-console.{DomainName}/openwhisk/cli){: new_window} et suivez les instructions d'installation.
 
 ### Configuration de l'interface de ligne de commande pour l'utilisation d'un proxy HTTPS
+{: #openwhisk_configure_https_proxy_cli}
 
 L'interface de ligne de commande peut être configurée en vue de l'utilisation d'un proxy HTTPS. Pour configurer un proxy HTTPS, vous devez créer une
 variable d'environnement appelée `HTTPS_PROXY`. Celle-ci doit avoir pour valeur l'adresse du proxy HTTPS et son port au format suivant :
 `{IP PROXY}:{PORT PROXY}`.
-
 
 Une fois {{site.data.keyword.openwhisk_short}} configuré avec l'interface de ligne de commande, vous pouvez commencer à l'utiliser à partir
 de la ligne de commande.

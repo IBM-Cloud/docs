@@ -36,10 +36,10 @@ Le package `/whisk.system/cloudant` permet d'utiliser une base de données Cloud
 
 | Entité | Type | Paramètres | Description |
 | --- | --- | --- | --- |
-| `/whisk.system/cloudant` | package | {{site.data.keyword.Bluemix_notm}}ServiceName, host, username, password, dbname, includeDoc, overwrite | Utiliser une base de données Cloudant |
+| `/whisk.system/cloudant` | package | {{site.data.keyword.Bluemix_notm}}ServiceName, host, username, password, dbname, overwrite | Utiliser une base de données Cloudant |
 | `/whisk.system/cloudant/read` | action | dbname, includeDoc, id | Lire un document à partir d'une base de données |
 | `/whisk.system/cloudant/write` | action | dbname, overwrite, doc | Ecrire un document dans une base de données |
-| `/whisk.system/cloudant/changes` | flux | dbname, includeDoc, maxTriggers | Exécuter des événements déclencheurs en cas de modification dans une base de données |
+| `/whisk.system/cloudant/changes` | flux | dbname, maxTriggers | Exécuter des événements déclencheurs en cas de modification dans une base de données |
 
 Les rubriques ci-après expliquent comment configurer une base de données Cloudant, comment configurer un package associé, et comment utiliser les
 actions et les flux du package `/whisk.system/cloudant`.
@@ -157,14 +157,13 @@ Vous pouvez utiliser le flux `changes` pour configurer un service afin d'exécut
 est apportée dans votre base de données Cloudant. Les paramètres sont les suivants :
 
 - `dbname` : nom de la base de données Cloudant.
-- `includeDoc` : si la valeur est true, chaque événement déclencheur qui est exécuté inclut le document Cloudant modifié. 
 - `maxTriggers` : l'exécution de déclencheurs s'arrête lorsque cette limite est atteinte. La valeur par défaut est 1000. La valeur maximale que vous pouvez définir est 10 000. Si vous tentez de définir une valeur supérieure à 10 000, la demande est rejetée.
 
 1. Créez un déclencheur avec le flux `changes` dans la liaison de package que vous avez créée précédemment. Prenez
 soin de remplacer `/monEspaceNom/monCloudant` par votre nom de package.
 
   ```
-  wsk trigger create monDéclencheurCloudant --feed /monEspaceNom/monCloudant/changes --param dbname bdtest --param includeDoc true
+  wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb
   ```
   {: pre}
   ```
@@ -189,22 +188,7 @@ Cloudant sont correctes.
 
 A présent, vous pouvez créer des règles et les associer à des actions afin de réagir aux mises à jour de document.
 
-Le contenu des événements générés dépend de la valeur du paramètre `includeDoc` lors de la création du déclencheur. Si la valeur
-est true, chaque événement déclencheur qui est exécuté inclut le document Cloudant modifié. Par exemple, imaginez le document modifié suivant :
-
-  ```
-  {
-    "_id": "6ca436c44074c4c2aa6a40c9a188b348",
-    "_rev": "3-bc4960fc13aa368afca8c8427a1c18a8",
-    "name": "Heisenberg"
-  }
-  ```
-  {: screen}
-
-Le code dans cet exemple génère un événement déclencheur avec les paramètres `_id`, `_rev` et
-`name` correspondants. En fait, la représentation JSON de l'événement déclencheur est identique au document.
-
-Sinon, si `includeDoc` a pour valeur false, les événements incluent les paramètres suivants :
+Le contenu des événements générés possède les paramètres suivants : 
 
 - `id` : ID de document.
 - `seq` : identificateur de séquence généré par Cloudant.
@@ -277,6 +261,67 @@ soin de remplacer `/monEspaceNom/monCloudant` par votre nom de package.
   ```
   {: screen}
 
+### Utilisation d'une séquence d'actions pour traiter un document à
+l'occasion d'un événement de changement provenant d'une base de données
+Cloudant
+
+Vous pouvez utiliser une séquence d'actions dans une règle pour extraire
+et traiter le document associé à un événement de changement Cloudant. 
+
+Créez une action qui traite un document provenant de Cloudant ; elle
+s'attend à un document comme paramètre.
+Voici un exemple de code d'une action qui traite un document :
+```
+function main(doc){
+  return { "isWalter:" : doc.name === "Walter White"};
+}
+```
+{: codeblock}
+```
+wsk action create myAction myAction.js
+```
+{: pre}
+Pour lire le document à partir de la base de données, vous pouvez utiliser
+l'action `read` dans le package cloudant. Cette action peut
+être incluse avec votre action `myAction` dans une séquence
+d'actions.
+Créez une séquence d'actions utilisant l'action `read`, puis
+appelez votre action `myAction` qui attend un document en
+entrée.
+```
+wsk action create sequenceAction --sequence /myNamespace/myCloudant/read,myAction
+```
+{: pre}
+
+Créez maintenant une règle qui associe votre déclencher à la nouvelle action
+`sequenceAction`.
+```
+wsk rule create myRule myCloudantTrigger sequenceAction
+```
+{: pre}
+
+La séquence d'actions doit maintenant connaître le nom de la base de
+données afin d'en extraire le document.
+Définissez un paramètre sur le déclencheur pour `dbname`.
+```
+wsk trigger update myCloudantTrigger --param dbname testdb
+```
+{: pre}
+
+**Remarque** Le déclencheur de changement Cloudant
+prenait en charge le paramètre `includeDoc`, mais cela n'est
+plus le cas.
+  Vous devez recréer les déclencheurs précédemment créés avec `includeDoc` :
+  Créez à nouveau le déclencheur sans le paramètre `includeDoc`. 
+  ```
+  wsk trigger delete myCloudantTrigger
+  wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb
+  ```
+  {: pre}
+Vous pouvez suivre les étapes ci-dessus pour créer une séquence d'actions
+permettant d'obtenir le document et appeler votre action existante.
+Mettez ensuite à jour votre règle de telle sorte qu'elle utilise la nouvelle
+séquence d'actions.
 
 ## Utilisation du package Alarm
 {: #openwhisk_catalog_alarm}
@@ -299,28 +344,37 @@ Le flux `/whisk.system/alarms/alarm` configure le service Alarm pour exécuter u
 spécifiée. Les paramètres sont les suivants :
 
 - `cron` : chaîne basée sur la syntaxe crontab UNIX, qui indique quand déclencher la tâche périodique (en temps universel coordonné). Il s'agit d'une
-séquence de six zones séparées par un espace : `X X X X X X `. Pour plus d'informations sur l'utilisation de la syntaxe cron, voir : https://github.com/ncb000gt/node-cron. Voici quelques exemples de la fréquence indiquée par la chaîne :
+séquence de cinq zones séparées par un espace :`X X X X X`.
+Pour plus d'informations sur l'utilisation de la syntaxe cron, voir : http://crontab.org. Voici quelques exemples de la fréquence indiquée par la chaîne :
 
-  - `* * * * * *` : chaque seconde.
-  - `0 * * * * *` : au début de chaque minute.
-  - `* 0 * * * *` : au début de chaque heure.
-  - `0 0 9 8 * *` à 9:00:00 du matin (UTC) le huitième jour de chaque mois.
+  - `* * * * *` : au début de chaque minute.
+  - `0 * * * *` : au début de chaque heure.
+  - `0 */2 * * *` : toutes les 2 heures (c'est-à-dire 02:00:00,
+04:00:00, ...)
+  - `0 9 8 * *` : à 9:00:00 du matin (UTC) le huitième jour de chaque mois.
 
 - `trigger_payload` : la valeur de ce paramètre devient le contenu du déclencheur à chaque fois que le déclencheur est exécuté.
 
 - `maxTriggers` : l'exécution de déclencheurs s'arrête lorsque cette limite est atteinte. La valeur par défaut est 1000. La valeur maximale que vous pouvez définir est 10 000. Si vous tentez de définir une valeur supérieure à 10 000, la demande est rejetée.
 
-Voici un exemple de création de déclencheur qui sera exécuté toutes les 20 secondes avec les valeurs `name` et
-`place` dans l'événement déclencheur :
+Voici un exemple de création de déclencheur qui sera exécuté toutes les 2
+minutes avec les valeurs `name` et `place`
+dans l'événement déclencheur :
 
   ```
-  wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron "*/20 * * * * *" --param trigger_payload "{\"name\":\"Odin\",\"place\":\"Asgard\"}"
+  wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron "*/2 * * * *" --param trigger_payload "{\"name\":\"Odin\",\"place\":\"Asgard\"}"
   ```
-  {: pre}
 
 Chaque événement généré inclut sous forme de paramètres les propriétés spécifiées dans la valeur `trigger_payload`. Dans ce cas,
 chaque événement déclencheur possède les paramètres `name=Odin` et `place=Asgard`.
 
+**Remarque** : Le paramètre `cron`
+prend également en charge une syntaxe personnalisée de six zones, dans laquelle
+la sixième zone représente les secondes.
+Pour plus de détails sur l'utilisation de cette syntaxe cron personnalisée,
+voir : https://github.com/ncb000gt/node-cron.
+Voici un exemple d'utilisation de la notation sur six zones : 
+  - `*/30 * * * * *` : toutes les trente secondes. 
 
 ## Utilisation du package Weather
 {: #openwhisk_catalog_weather}
@@ -392,48 +446,119 @@ Voici un exemple de création d'une liaison de package, puis d'obtention d'une p
   {: screen}
 
 
-## Utilisation du package Watson
+## Utilisation des packages Watson
 {: #openwhisk_catalog_watson}
+Les packages Watson permettent d'appeler diverses API Watson. 
 
-Le package `/whisk.system/watson` permet d'appeler diverses API Watson.
+Les packages Watson suivants sont fournis :
+
+| Package | Description |
+| --- | --- |
+| `/whisk.system/watson-translator`   | Actions des API Watson pour la traduction du texte et l'identification de la langue |
+| `/whisk.system/watson-textToSpeech` | Actions des API Watson pour la conversion du texte en parole |
+| `/whisk.system/watson-speechToText` | Actions des API Watson pour la conversion des paroles en texte |
+
+**Remarque** Le package `/whisk.system/watson` est actuellement obsolète ; vous devez le migrer vers les nouveaux packages mentionnés plus haut. Les nouvelles actions offrent la même interface.
+
+### Utilisation du package Watson Translator
+
+Le package `/whisk.system/watson-translator` permet
+d'appeler diverses API Watson pour la traduction.
 
 Le package inclut les actions ci-dessous.
 
 | Entité | Type | Paramètres | Description |
 | --- | --- | --- | --- |
-| `/whisk.system/watson` | package | username, password | Actions pour les API d'analyse Watson |
-| `/whisk.system/watson/translate` | action | translateFrom, translateTo, translateParam, username, password | Traduire le texte |
-| `/whisk.system/watson/languageId` | action | payload, username, password | Identifier la langue |
-| `/whisk.system/watson/speechToText` | action | payload, content_type, encoding, username, password, continuous, inactivity_timeout, interim_results, keywords, keywords_threshold, max_alternatives, model, timestamps, watson-token, word_alternatives_threshold, word_confidence, X-Watson-Learning-Opt-Out | Convertir le contenu audio en texte |
-| `/whisk.system/watson/textToSpeech` | action | payload, voice, accept, encoding, username, password | Convertir le texte en contenu audio |
+| `/whisk.system/watson-translator` | package | username, password | Actions des API Watson pour la traduction du texte et l'identification de la langue  |
+| `/whisk.system/watson-translator/translator` | action | payload, translateFrom, translateTo, translateParam, username, password | Traduire le texte |
+| `/whisk.system/watson-translator/languageId` | action | payload, username, password | Identifier la langue |
 
-Il est recommandé de créer une liaison de package avec les valeurs `username` et `password`. Ainsi, il n'est pas nécessaire de spécifier ces données d'identification à chaque fois que vous appelez les actions du package.
+**Remarque** : Le package
+`/whisk.system/watson` est obsolète, y compris les actions
+`/whisk.system/watson/translate` et `/whisk.system/watson/languageId`.
 
-### Traduction de texte
+#### Configuration du package Watson Translator dans Bluemix
+
+Si vous utilisez OpenWhisk depuis Bluemix, OpenWhisk crée
+automatiquement des liaisons de package pour vos instances de service Bluemix
+Watson.
+
+1. Créez une instance de service Watson Translator dans votre
+[tableau de bord](http://console.ng.Bluemix.net) Bluemix.
+
+  Mémorisez le nom de l'instance de service ainsi que l'organisation et
+l'espace Bluemix dans lesquels vous vous trouvez.
+
+2. Assurez-vous que votre interface de ligne de commande OpenWhisk se trouve dans l'espace de nom qui correspond
+à l'organisation et à l'espace Bluemix que vous avez utilisés à l'étape précédente.
+
+  ```
+  wsk property set --namespace myBluemixOrg_myBluemixSpace
+  ```
+  {: pre}
+
+  Vous pouvez aussi utiliser `wsk property set --namespace` pour définir un espace de nom à partir d'une liste des espaces de nom
+auxquels vous pouvez accéder.
+
+3. Actualisez les packages dans votre espace de nom. L'actualisation
+crée automatiquement une liaison de package pour l'instance de service Watson
+que vous avez créée.
+
+  ```
+  wsk package refresh
+  ```
+  {: pre}
+  ```
+  created bindings:
+  Bluemix_Watson_Translator_Credentials-1
+  ```
+  {: screen}
+
+  ```
+  wsk package list
+  ```
+  {: pre}
+  
+  ```
+  packages
+  /myBluemixOrg_myBluemixSpace/Bluemix_Watson_Translator_Credentials-1 private
+  ```
+  {: screen}
+
+
+#### Configuration d'un package Watson Translator hors de Bluemix
+
+Si vous n'utilisez pas OpenWhisk dans Bluemix ou si vous voulez configurer
+Watson Translator hors de Bluemix, vous devez créer une liaison de package
+manuellement pour votre service Watson Translator. Vous avez besoin du nom
+d'utilisateur du service et du mot de passe du service Watson
+Translator.
+
+- Créez une liaison de package configurée pour votre service Watson
+Translator.
+
+  ```
+  wsk package bind /whisk.system/watson-translator myWatsonTranslator -p username MYUSERNAME -p password MYPASSWORD
+  ```
+  {: pre}
+
+
+#### Traduction de texte
 {: #openwhisk_catalog_watson_translate}
 
-L'action `/whisk.system/watson/translate` traduit un texte d'une langue vers une autre. Les paramètres sont les suivants :
+L'action `/whisk.system/watson-translator/translator` traduit un texte d'une langue vers une autre. Les paramètres sont les suivants :
 
 - `username` : nom d'utilisateur de l'API Watson.
 - `password` : mot de passe de l'API Watson.
+- `payload` : texte à traduire.
 - `translateParam`: paramètre d'entrée indiquant le texte à traduire. Par exemple, si `translateParam=payload`, la valeur du paramètre `payload` qui est transmise à l'action est traduite.
 - `translateFrom` : code à deux chiffres de la langue source.
 - `translateTo` : code à deux chiffres de la langue cible.
 
-Voici un exemple de création d'une liaison de package et de traduction de texte.
-
-1. Créez une liaison de package avec vos données d'identification Watson.
+- Appelez l'action `translator` dans votre liaison de package pour traduire du texte anglais en français. 
 
   ```
-  wsk package bind /whisk.system/watson monWatson --param username MON_NOM_UTILISATEUR_WATSON --param password MON_MOT_DE_PASSE_WATSON
-  ```
-  {: pre}
-
-2. Appelez l'action `translate` dans votre liaison de package pour traduire du texte anglais en français.
-
-  ```
-  wsk action invoke myWatson/translate --blocking --result --param payload "Blue skies ahead" --param translateParam payload --param translateFrom en
---param translateTo fr
+  wsk action invoke myWatsonTranslator/translator --blocking --result --param payload 'Blue skies ahead' --param translateFrom 'en' --param translateTo 'fr'
   ```
   {: pre}
 
@@ -445,28 +570,19 @@ Voici un exemple de création d'une liaison de package et de traduction de texte
   {: screen}
 
 
-### Identification de la langue d'un texte
+#### Identification de la langue d'un texte
 {: #openwhisk_catalog_watson_identifylang}
 
-L'action `/whisk.system/watson/languageId` identifie la langue d'un texte. Les paramètres sont les suivants :
+L'action `/whisk.system/watson-translator/languageId` identifie la langue d'un texte. Les paramètres sont les suivants :
 
 - `username` : nom d'utilisateur de l'API Watson.
 - `password` : mot de passe de l'API Watson.
 - `payload` : texte à identifier.
 
-Voici un exemple de création de liaison de package et d'identification de la langue d'un texte :
-
-1. Créez une liaison de package avec vos données d'identification Watson.
+- Appelez l'action `languageId` dans votre liaison de package pour identifier la langue.
 
   ```
-  wsk package bind /whisk.system/watson monWatson -p username MON_NOM_UTILISATEUR_WATSON -p password MON_MOT_DE_PASSE_WATSON
-  ```
-  {: pre}
-
-2. Appelez l'action `languageId` dans votre liaison de package pour identifier la langue.
-
-  ```
-  wsk action invoke monWatson/languageId --blocking --result --param payload "Ciel bleu à venir"
+  wsk action invoke myWatsonTranslator/languageId --blocking --result --param payload 'Ciel bleu a venir'
   ```
   {: pre}
   ```
@@ -479,10 +595,90 @@ Voici un exemple de création de liaison de package et d'identification de la la
   {: screen}
 
 
-### Conversion de texte en paroles
+### Utilisation du package Watson Text to Speech
 {: #openwhisk_catalog_watson_texttospeech}
 
-L'action `/whisk.system/watson/textToSpeech` convertit du texte en contenu audio. Les paramètres sont les suivants :
+Le package `/whisk.system/watson-textToSpeech` permet
+d'appeler diverses API Watson pour convertir le texte en parole. 
+
+Le package inclut les actions ci-dessous.
+
+| Entité | Type | Paramètres | Description |
+| --- | --- | --- | --- |
+| `/whisk.system/watson-textToSpeech` | package | username, password | Actions des API Watson pour la conversion du texte en parole |
+| `/whisk.system/watson-textToSpeech/textToSpeech` | action | payload, voice, accept, encoding, username, password | Convertir le texte en contenu audio |
+
+**Remarque** : Le package `/whisk.system/watson` est obsolète, y compris l'action `/whisk.system/watson/textToSpeech`.
+
+#### Configuration du package Watson Text to Speech dans Bluemix
+
+Si vous utilisez OpenWhisk depuis Bluemix, OpenWhisk crée automatiquement
+des liaisons de package pour vos instances de service Bluemix Watson.
+
+1. Créez une instance de service Watson Text to Speech dans votre
+[tableau de bord](http://console.ng.Bluemix.net) Bluemix.
+
+  Mémorisez le nom de l'instance de service ainsi que l'organisation et
+l'espace Bluemix dans lesquels vous vous trouvez.
+
+2. Assurez-vous que votre interface de ligne de commande OpenWhisk se
+trouve dans l'espace de nom qui correspond à l'organisation et à l'espace
+Bluemix que vous avez utilisés à l'étape précédente.
+
+  ```
+  wsk property set --namespace myBluemixOrg_myBluemixSpace
+  ```
+  {: pre}
+
+  Vous pouvez aussi utiliser `wsk property set --namespace` pour définir un espace de nom à partir d'une liste des espaces de nom
+auxquels vous pouvez accéder.
+
+3. Actualisez les packages dans votre espace de nom. L'actualisation
+crée automatiquement une liaison de package pour l'instance de service Watson
+que vous avez créée.
+
+  ```
+  wsk package refresh
+  ```
+  {: pre}
+  ```
+  created bindings:
+  Bluemix_Watson_TextToSpeech_Credentials-1
+  ```
+  {: screen}
+
+  ```
+  wsk package list
+  ```
+  {: pre}
+  ```
+  packages
+  /myBluemixOrg_myBluemixSpace/Bluemix_Watson_TextToSpeec_Credentials-1 private
+  ```
+  {: screen}
+
+
+#### Configuration d'un package Watson Text to Speech hors de Bluemix
+
+Si vous n'utilisez pas OpenWhisk dans Bluemix ou si vous voulez
+configurer Watson Text to Speech hors de Bluemix, vous devez créer une liaison
+de package manuellement pour votre service Watson Text to Speech. Vous avez
+besoin du nom d'utilisateur du service et du mot de passe du service Watson
+Text to Speech.
+
+- Créez une liaison de package configurée pour votre service Watson
+Speech to Text.
+
+  ```
+  wsk package bind /whisk.system/watson-speechToText myWatsonTextToSpeech -p username MYUSERNAME -p password MYPASSWORD
+  ```
+  {: pre}
+
+
+#### Conversion de texte en paroles
+{: #openwhisk_catalog_watson_speechtotext}
+L'action `/whisk.system/watson-speechToText/textToSpeech`
+convertit du texte en contenu audio. Les paramètres sont les suivants :
 
 - `username` : nom d'utilisateur de l'API Watson.
 - `password` : mot de passe de l'API Watson.
@@ -491,19 +687,11 @@ L'action `/whisk.system/watson/textToSpeech` convertit du texte en contenu audio
 - `accept` : format du fichier vocal.
 - `encoding` : codage du fichier binaire vocal.
 
-Voici un exemple de création de liaison de package et de conversion d'un texte en paroles .
 
-1. Créez une liaison de package avec vos données d'identification Watson.
-
-  ```
-  wsk package bind /whisk.system/watson monWatson -p username MON_NOM_UTILISATEUR_WATSON -p password MON_MOT_DE_PASSE_WATSON
-  ```
-  {: pre}
-
-2. Appelez l'action `textToSpeech` dans votre liaison de package pour convertir le texte.
+- Appelez l'action `textToSpeech` dans votre liaison de package pour convertir le texte.
 
   ```
-  wsk action invoke monWatson/textToSpeech --blocking --result --param payload Hey. --param voice en-US_MichaelVoice --param accept audio/wav --param encoding base64
+  wsk action invoke myWatsonTextToSpeech/textToSpeech --blocking --result --param payload 'Hey.' --param voice 'en-US_MichaelVoice' --param accept 'audio/wav' --param encoding 'base64'
   ```
   {: pre}
   ```
@@ -513,11 +701,93 @@ Voici un exemple de création de liaison de package et de conversion d'un texte 
   ```
   {: screen}
 
-
-### Conversion de paroles en texte
+### Utilisation du package Watson Speech to Text
 {: #openwhisk_catalog_watson_speechtotext}
 
-L'action `/whisk.system/watson/speechToText` convertit un contenu audio en texte. Les paramètres sont les suivants :
+Le package `/whisk.system/watson-speechToText`
+permet d'appeler diverses API Watson pour convertir des paroles en texte. 
+
+Le package inclut les actions ci-dessous.
+
+| Entité | Type | Paramètres | Description |
+| --- | --- | --- | --- |
+| `/whisk.system/watson-speechToText` | package | username, password | Actions des API Watson pour la conversion des paroles en texte |
+| `/whisk.system/watson-speechToText/speechToText` | action | payload, content_type, encoding, username, password, continuous, inactivity_timeout, interim_results, keywords, keywords_threshold, max_alternatives, model, timestamps, watson-token, word_alternatives_threshold, word_confidence, X-Watson-Learning-Opt-Out | Convertir le contenu audio en texte |
+
+**Remarque** : Le package
+`/whisk.system/watson` est obsolète, y compris l'action
+`/whisk.system/watson/speechToText`.
+
+
+#### Configuration du package Watson Speech to Text dans Bluemix
+
+Si vous utilisez OpenWhisk depuis Bluemix, OpenWhisk crée automatiquement
+des liaisons de package pour vos instances de service Bluemix Watson.
+
+1. Créez une instance de service Watson Speech to Text dans votre
+[tableau de bord](http://console.ng.Bluemix.net) Bluemix.
+
+  Mémorisez le nom de l'instance de service ainsi que l'organisation et
+l'espace Bluemix dans lesquels vous vous trouvez.
+
+2. Assurez-vous que votre interface de ligne de commande OpenWhisk se
+trouve dans l'espace de nom qui correspond à l'organisation et à l'espace
+Bluemix que vous avez utilisés à l'étape précédente.
+
+  ```
+  wsk property set --namespace myBluemixOrg_myBluemixSpace
+  ```
+  {: pre}
+
+  Vous pouvez aussi utiliser `wsk property set --namespace` pour définir un espace de nom à partir d'une liste des espaces de nom
+auxquels vous pouvez accéder.
+
+3. Actualisez les packages dans votre espace de nom. L'actualisation
+crée automatiquement une liaison de package pour l'instance de service Watson
+que vous avez créée.
+
+  ```
+  wsk package refresh
+  ```
+  {: pre}
+  ```
+  created bindings:
+  Bluemix_Watson_SpeechToText_Credentials-1
+  ```
+  {: screen}
+
+  ```
+  wsk package list
+  ```
+  {: pre}
+  ```
+  packages
+  /myBluemixOrg_myBluemixSpace/Bluemix_Watson_SpeechToText_Credentials-1 private
+  ```
+  {: screen}
+
+
+#### Configuration d'un package Watson Speech to Text hors de Bluemix
+
+Si vous n'utilisez pas OpenWhisk dans Bluemix ou si vous voulez
+configurer Watson Speech to Text hors de Bluemix, vous devez créer une liaison de
+package manuellement pour votre service Watson Speech to Text. Vous avez besoin
+du nom d'utilisateur du service et du mot de passe du service Watson Speech to Text.
+
+- Créez une liaison de package configurée pour votre service Watson
+Speech to Text.
+
+  ```
+  wsk package bind /whisk.system/watson-speechToText myWatsonSpeechToText -p username MYUSERNAME -p password MYPASSWORD
+  ```
+  {: pre}
+
+
+
+#### Conversion de paroles en texte
+
+L'action `/whisk.system/watson-speechToText/speechToText` convertit un
+contenu audio en texte. Les paramètres sont les suivants :
 
 - `username` : nom d'utilisateur de l'API Watson.
 - `password` : mot de passe de l'API Watson.
@@ -539,20 +809,11 @@ comme alternative possible d'un mot.
 - `word_confidence` : indique si un niveau de fiabilité sur la plage 0 à 1 doit être renvoyé pour chaque mot.
 - `X-Watson-Learning-Opt-Out` : indique si la collecte de données doit être ignorée pour l'appel.
  
-Voici un exemple de création de liaison de package et de conversion de paroles en texte :
 
-1. Créez une liaison de package avec vos données d'identification Watson.
-
-  ```
-  wsk package bind /whisk.system/watson monWatson -p username MON_NOM_UTILISATEUR_WATSON -p password MON_MOT_DE_PASSE_WATSON
-  ```
-  {: pre}
-
-2. Appelez l'action `speechToText` dans votre liaison de package pour convertir le contenu audio codé.
+- Appelez l'action `speechToText` dans votre liaison de package pour convertir le contenu audio codé.
 
   ```
-  wsk action invoke monWatson/speechToText --blocking --result --param payload <codage base64 d'un fichier .wav> --param content_type audio/wav
---param encoding base64
+  wsk action invoke myWatsonSpeechToText/speechToText --blocking --result --param payload <base64 encoding of a .wav file> --param content_type 'audio/wav' --param encoding 'base64'
   ```
   {: pre}
   ```
@@ -561,7 +822,7 @@ Voici un exemple de création de liaison de package et de conversion de paroles 
   }
   ```
   {: screen}
-  
+ 
  
 ## Utilisation du package Slack
 {: #openwhisk_catalog_slack}

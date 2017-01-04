@@ -234,7 +234,8 @@ ligne de commande, indiquez une paire clé/valeur pour l'indicateur `param` :
   {: pre}
 
   La transmission des paramètres à partir d'un fichier nécessite la
-création d'un fichier comportant le contenu souhaité au format JSON. Le nom de fichier doit être
+création d'un fichier comportant le contenu souhaité au format JSON.
+  Le nom de fichier doit être
 ensuite transmis à l'indicateur `-param-file` :
 
   Exemple de fichier de paramètres nommé parameters.json :
@@ -322,7 +323,7 @@ retour de la fonction `main`. Pour cela, vous pouvez renvoyer une promesse (obje
   Notez que la fonction `main` renvoie une promesse (objet Promise), indiquant que l'activation n'est pas encore terminée, mais que cela est prévu.
 
   Dans ce cas, la fonction JavaScript `setTimeout()`
-attend deux secondes avant d'appeler la fonction de rappel. Cela représente le code asynchrone et s'insère dans la fonction de rappel de la promesse (objet Promise).
+attend deux secondes avant d'appeler la fonction de rappel.  Cela représente le code asynchrone et s'insère dans la fonction de rappel de la promesse (objet Promise).
 
   La fonction de rappel de la promesse (objet Promise) prend deux arguments, resolve et reject, qui sont tous les deux des fonctions.  L'appel vers `resolve()` satisfait la promesse (objet Promise) et indique que l'activation a abouti.
 
@@ -437,6 +438,7 @@ fois l'appel HTTP terminé, et est transmis sous forme d'argument à la fonction
   {: screen}
 
 ### Conditionnement d'une action dans un module Node.js
+{: #openwhisk_js_packaged_action}
 
 Comme alternative à l'écriture de l'ensemble du code de votre action dans un seul fichier source JavaScript, vous pouvez écrire une action en tant
 que package `npm`. Prenez par exemple un répertoire contenant les fichiers suivants :
@@ -711,7 +713,7 @@ public static com.google.gson.JsonObject main(com.google.gson.JsonObject);
 {: codeblock}
 
 Par exemple, créez un fichier Java nommé `Hello.java`
-avec le contenu suivant : 
+avec le contenu suivant :
 
 ```
 import com.google.gson.JsonObject;
@@ -738,10 +740,10 @@ jar cvf hello.jar Hello.class
 
 **Remarque :**
 [google-gson](https://github.com/google/gson) doit exister
-dans votre variable Java CLASSPATH lors de la compilation du fichier Java. 
+dans votre variable Java CLASSPATH lors de la compilation du fichier Java.
 
 Vous pouvez créer une action OpenWhisk nommée
-`helloJava` à partir de ce fichier JAR comme suit : 
+`helloJava` à partir de ce fichier JAR comme suit :
 
 ```
 wsk action create helloJava hello.jar
@@ -750,7 +752,7 @@ wsk action create helloJava hello.jar
 
 Lorsque vous utilisez la ligne de commande et un fichier source
 `.jar`, il n'est pas nécessaire de spécifier que vous créez
-une action Java ; l'outil le détermine à partir de l'extension de fichier. 
+une action Java ; l'outil le détermine à partir de l'extension de fichier.
 
 L'appel d'action est identique pour les actions Java et les actions Swift
 et JavaScript :

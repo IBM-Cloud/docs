@@ -1371,12 +1371,12 @@ cette commande :
 
 Vous pouvez employer deux API expérimentales pour regrouper des mesures
 relatives à votre environnement ou à vos applications. Ces deux API renvoient
-un tableau de points de données des mesures demandées sur la durée indiquée. 
+un tableau de points de données des mesures demandées sur la durée indiquée.
 
 **Remarques** :
 
 1. Un utilisateur peut effectuer jusqu'à 200 demandes d'API de mesures par heure.
-2. Chaque demande d'API renvoie jusqu'à 200 points de données par demande. Si des données supplémentaires sont disponibles, une URL est fournie en réponse au chargement de l'ensemble de données suivant. 
+2. Chaque demande d'API renvoie jusqu'à 200 points de données par demande. Si des données supplémentaires sont disponibles, une URL est fournie en réponse au chargement de l'ensemble de données suivant.
 
 ## Regroupement des mesures relatives à votre environnement 
 
@@ -1386,7 +1386,7 @@ période que vous définissez. Les points de données disponibles sur la durée
 indiquée sont renvoyés. Les données sont enregistrées environ toutes les
 heures. SI, par exemple, vous avez demandé six heures de données relatives à
 l'unité centrale de votre environnement, la réponse inclut les données
-relatives à l'unité centrale pour chacune des six heures demandées. 
+relatives à l'unité centrale pour chacune des six heures demandées.
 
 ### Paramètres de requête des mesures relatives à l'environnement
 
@@ -1399,20 +1399,19 @@ relatives à l'unité centrale, le disque, la mémoire, le réseau et les applic
 <dt class="pt dlterm">startTime</dt>
 <dd class="pd">Point le plus ancien dans le temps à partir duquel les données sont renvoyées. Si aucun paramètre startTime n'est indiqué, le point de données disponible le plus récent est inclus. Par exemple, pour regrouper les données situées entre 14h et 17h, indiquez la valeur correspondant à 14h pour startTime.</dd>
 <dt class="pt dlterm">endTime</dt>
-<dd class="pd">Point le plus récent dans le temps à partir duquel les données sont renvoyées. Si aucun paramètre endTime n'est indiqué, le point de données le plus récent est utilisé. 
-Par exemple, pour regrouper les données situées entre 14h et 17h, indiquez la valeur correspondant à 17h pour endTime.</dd>
+<dd class="pd">Point le plus récent dans le temps à partir duquel les données sont renvoyées. Si aucun paramètre endTime n'est indiqué, le point de données le plus récent est utilisé. Par exemple, pour regrouper les données situées entre 14h et 17h, indiquez la valeur correspondant à 17h pour endTime.</dd>
 <dt class="pt dlterm">sort</dt>
 <dd class="pd">Ordre dans lequel les données sont renvoyées. Les valeurs valides sont 'asc' (croissant) et 'desc' (décroissant). La
 valeur par défaut est l'ordre décroissant qui renvoie d'abord les données les
-plus récentes.  </dd>
+plus récentes. </dd>
 </dl>
 
 ### Format des données de mesure relatives à l'environnement
 
-Les sections suivantes indiquent le format des données. 
+Les sections suivantes indiquent le format des données.
 
  * Pour regrouper les enregistrements de données concernant
-l'utilisation de la mémoire, employez le format de données suivant : 
+l'utilisation de la mémoire, employez le format de données suivant :
  
 ```
 {
@@ -1464,7 +1463,7 @@ l'utilisation de la mémoire, employez le format de données suivant :
 {: screen}
 
  * Pour regrouper les enregistrements de données concernant
-l'utilisation du disque, employez le format de données suivant : 
+l'utilisation du disque, employez le format de données suivant :
  
 ```
 {
@@ -1516,7 +1515,7 @@ l'utilisation du disque, employez le format de données suivant :
 {: screen}
 
  * Pour regrouper les enregistrements de données concernant
-l'utilisation de l'unité centrale, employez le format de données suivant : 
+l'utilisation de l'unité centrale, employez le format de données suivant :
  
 ```
 {
@@ -1562,7 +1561,7 @@ l'utilisation de l'unité centrale, employez le format de données suivant :
 ```
 {: screen}
 
- * Pour regrouper les enregistrements de données concernant votre réseau, employez le format de données suivant : 
+ * Pour regrouper les enregistrements de données concernant votre réseau, employez le format de données suivant :
  
 ```
 {
@@ -1614,7 +1613,7 @@ l'utilisation de l'unité centrale, employez le format de données suivant :
 ```
 {: screen}
 
-* Pour regrouper les enregistrements de données concernant vos applications, employez le format de données suivant : 
+* Pour regrouper les enregistrements de données concernant vos applications, employez le format de données suivant :
  
 ```
 {
@@ -1648,18 +1647,18 @@ toutes les applications de chaque échantillon de données de la période
 indiquée, dans l'ordre décroissant de la mesure demandée. Par exemple, si vous
 demander la mesure relative à l'unité centrale de toutes les applications sur
 une période de six heures dans un environnement comportant 200 applications,
-120 enregistrements sont renvoyés : 200 par heure. 
+120 enregistrements sont renvoyés : 200 par heure.
 
 Pour réduire la quantité d'informations renvoyées pour chaque échantillon
 de données sur la période demandée, vous pouvez indiquer une option count. Si
 vous ajoutez l'option count avec une valeur égale à 5, l'exemple précédent
 renvoie 30 enregistrements, qui représentent les 5 applications les plus
-importantes par unité centrale de chaque échantillon de données. 
+importantes par unité centrale de chaque échantillon de données.
 
 ### Noeuds finaux des applications 
 
 Vous pouvez utiliser les noeuds finaux suivants pour appeler cette
-commande d'API : 
+commande d'API :
 * /api/v1/app/cpu/physical 
 * /api/v1/app/memory/physical
 * /api/v1/app/memory/reserved
@@ -1690,7 +1689,7 @@ Utilisez les paramètres de requête suivants pour regrouper des mesures concern
 ```
 {: screen}
 
-Chaque document renvoyé représente les mesures demandées pour une application de chaque échantillon de données, au moment de la demande. 
+Chaque document renvoyé représente les mesures demandées pour une application de chaque échantillon de données, au moment de la demande.
 
 
 ## API de service personnalisée

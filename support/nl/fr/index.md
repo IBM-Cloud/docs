@@ -218,7 +218,7 @@ bénéficient du support standard. | Prise en charge des environnements essentie
 Support des incidents à gravité élevée |  N/A | N/A | Inclus | Inclus
 Prise en charge de langues | Anglais | Anglais | Anglais | Anglais
 Responsable Client Success (CSM) affecté | Non inclus | Non inclus | Non inclus | Inclus avec<br> 8 heures par semaine
-*Tableau 1. Niveaux de support*
+{: caption="Table 1. Support levels" caption-side="top"}
 
 ### Ouverture d'un ticket de demande de service
 {: #open-ticket}
@@ -356,7 +356,7 @@ affectent son utilisation. Aucune incidence critique sur les opérations ne s'en
 Gravité 4 | <strong>Répercussion minime sur l'activité.</strong> <br> Question ou demande non technique. | <ul><li><strong>Gratuit :</strong> Pour le mieux </li><li><strong>De base :</strong> Pour le mieux</li><li><strong>Standard :</strong> Sous 8 heures</li><li><strong>Premium :</strong> Sous 4 heures</li></ul> | <ul><li><strong>Gratuit :</strong>
 Heures de service </li><li><strong>De base :</strong> Heures de service </li><li><strong>Standard :</strong> Heures de service </li><li><strong>Premium
 :</strong> Heures de service </li></ul>
-*Tableau 2. Définition de la gravité et temps de réponse*
+{: caption="Table 2. Severity definition and response time" caption-side="top"}
 
 
 ### Signalement d'une vulnérabilité de sécurité potentielle
@@ -442,8 +442,7 @@ Le tableau ci-dessous répertorie les langues nationales prises en charge ainsi 
 | Espagnol | es |
 | Chinois simplifié | zh_CN |
 | Chinois traditionnel | zh_TW |
-
-*Tableau 3. Langues nationales prises en charge et codes de langue*
+{: caption="Table 3. Supported national languages and language codes" caption-side="top"}
 
 
 ## Enquêtes de satisfaction sur le support {{site.data.keyword.Bluemix_notm}}  

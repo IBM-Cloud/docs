@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-lastupdated: "2016-10-20"  
+lastupdated: "2016-12-05"  
 
 
 ---
@@ -174,18 +174,47 @@ Procédez comme suit pour répertorier les membres d'un espace spécifique :
 ## Gestion du quota
 {: #managequota}
 
-En tant que propriétaire de compte ou responsable de l'organisation, vous pouvez afficher le quota alloué et le quota utilisé pour votre organisation. Le quota représente les limites de ressources pour l'organisation et est affecté lorsque l'organisation est créée. Toute application ou tout service dans un espace de l'organisation contribue à l'utilisation du quota.
+En tant que propriétaire de compte
+{{site.data.keyword.Bluemix_notm}} ou responsable de l'organisation, vous
+pouvez afficher le quota alloué et le quota utilisé pour une organisation. Le
+quota représente les limites de ressources pour l'organisation et est affecté
+lorsque l'organisation est créée. Selon que vous disposez d'un compte
+d'essai ou d'un compte facturable, les ressources disponibles pour une
+organisation varient. Toute application ou tout service dans un espace de
+l'organisation contribue à l'utilisation du quota alloué.
 
-Pour afficher le quota de votre organisation, procédez comme suit :
+Pour afficher le quota utilisé et le quota alloué d'une organisation,
+procédez comme suit :
 
 1. Cliquez sur **Compte** &gt; **Gérer les organisations**.
 2. Identifiez l'organisation pour laquelle afficher le quota, puis cliquez sur **Afficher les détails**.
 3. Cliquez sur **Editer l'organisation**.
-4. Sélectionnez l'onglet **QUOTA**.
+4. Si des espaces sont définis dans plusieurs régions, sélectionnez la
+région que vous souhaitez visualiser.
+5. Cliquez sur **QUOTA**. 
+6. Par défaut, la page du quota **Cloud
+Foundry** s'ouvre. Vous pouvez afficher les détails de quota des
+ressources suivantes : 
+ * MEMOIRE
+ * Services
+ * PLAN
+ * PRIX
+7. Cliquez sur **Conteneurs** pour afficher
+l'allocation des quotas de conteneur utilisé et disponible. L'allocation de
+conteneur varie en fonction du plan de tarification. Vous pouvez afficher les
+détails de quota des ressources suivantes : 
+ * MEMOIRE
+ * Adresse IP publique
 
-Afin de mettre à jour le quota pour votre organisation, vous devez ouvrir un ticket de demande de service. Pour plus d'informations sur l'ouverture d'un ticket de demande de service, voir [Support
-client](/docs/support/index.html#contacting-support). Pour plus d'informations sur le quota pour les conteneurs, voir
-[Quota](/docs/containers/container_planning_org_ov.html##container_planning_quota) dans la documentation relative aux conteneurs.
+**Remarque :** Les conteneurs ne sont pas
+disponibles dans la région {{site.data.keyword.Bluemix_notm}} Sydney. 
+
+Pour plus d'informations sur les conteneurs, reportez-vous à la rubrique
+[Quota](/docs/containers/container_planning_org_ov.html#container_planning_quota)
+dans la documentation sur les conteneurs.
+Pour modifier le quota alloué à une organisation, vous devez ouvrir un ticket
+de demande de service. Pour plus d'informations sur l'ouverture d'un ticket de
+demande de service, voir [Support client](/docs/support/index.html#contacting-support). 
 
 ## Gestion des domaines
 {: #managedomains}

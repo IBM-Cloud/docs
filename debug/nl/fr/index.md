@@ -155,7 +155,7 @@ répertoire logs. Recherchez les entrées portant respectivement le préfixe Sys
   * Pour les applications Node.js, vous pouvez redéfinir la fonction console.log pour écrire des données explicitement dans un fichier dans le
 répertoire logs.
   * Pour les applications PHP, vous pouvez utiliser la fonction error_log pour écrire des données dans un fichier dans le répertoire logs.
-  * Pour les applications Python, vous pouvez demander au consignateur d'écrire des données dans un fichier dans le répertoire logs : logging.basicConfig(filename='../../logs/example.log',level=logging.DEBUG)
+  * Pour les applications Python, vous pouvez demander au consignateur d'écrire des données dans un fichier dans le répertoire logs : `logging.basicConfig(filename='/docs/logs/example.log',level=logging.DEBUG)`
   * Pour les applications Ruby, vous pouvez demander au consignateur d'écrire des données dans un fichier dans le répertoire logs.
 
 

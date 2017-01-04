@@ -294,7 +294,8 @@ l'application *Blue* :
   ...
   ```
 
-  **Résultat :** le routeur CF arrête d'envoyer le trafic à l'application *Blue*. L'application *Green* répond aux deux adresses URL : `Green.mybluemix.net` et `Blue.mybluemix.net`.
+  **Résultat :** le routeur CF arrête d'envoyer le trafic à l'application *Blue*. L'application *Green*
+répond aux deux adresses URL : `Green.mybluemix.net` et `Blue.mybluemix.net`.
 
 5. Supprimez la route `Green.mybluemix.net` vers l'application *Green*.
 

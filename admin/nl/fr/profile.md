@@ -18,8 +18,8 @@ lastupdated: "2016-10-20"
 # Paramètres de profil
 {: #usersettings}
 
-Cliquez sur l'icône
-**{{site.data.keyword.avatar}}** ![icône Avatar](/docs/icons/i-avatar-icon.svg) &gt; **Profil utilisateur** pour mettre à jour vos paramètres de profil.
+Cliquez sur l'icône **{{site.data.keyword.avatar}}**
+![icône Avatar](../icons/i-avatar-icon.svg) &gt; **Profil utilisateur** pour mettre à jour vos paramètres de profil.
 {:shortdesc}
 
  Dans la page **Profil**, vous pouvez définir ou mettre à jour les informations suivantes :
@@ -33,9 +33,7 @@ Cliquez sur l'icône
 
 1. Cliquez sur l'icône
 **{{site.data.keyword.avatar}}**
-![Icône Avatar](/docs/icons/i-avatar-icon.svg) &gt;
-**Profil utilisateur**.
-
+![icône Avatar](../icons/i-avatar-icon.svg) &gt; **Profil utilisateur**.
 
 * Cliquez sur **Télécharger une photo** pour télécharger une photo.
 * Cliquez sur **Changer de photo** pour télécharger une nouvelle photo.
@@ -52,9 +50,8 @@ de passe ou le nom de votre société, procédez comme suit :
 
 1. Cliquez sur l'icône
 **{{site.data.keyword.avatar}}**
-![Icône Avatar](/docs/icons/i-avatar-icon.svg) &gt;
+![icône Avatar](../icons/i-avatar-icon.svg) &gt;
 **Profil utilisateur**.
-
 2. Cliquez sur l'option permettant d'**éditer votre IBMid**.
 3. Editez vos informations utilisateur.
 4. Cliquez sur **Sauvegarder**.
@@ -72,7 +69,6 @@ Afin de désactiver le suivi pour analyse, procédez comme suit :
 
 1. Cliquez sur l'icône
 **{{site.data.keyword.avatar}}**
-![Icône Avatar](/docs/icons/i-avatar-icon.svg) &gt;
+![icône Avatar](../icons/i-avatar-icon.svg) &gt;
 **Profil utilisateur**.
-
 2. Désactivez le suivi pour analyse en spécifiant **off**.

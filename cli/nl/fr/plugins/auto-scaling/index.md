@@ -45,7 +45,7 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 
 ## Association d'une règle de mise à l'échelle automatique
 
-Vous pouvez associer une règle de mise à l'échelle automatique à une application spécifique. Exécutez la commande suivante : 
+Vous pouvez associer une règle de mise à l'échelle automatique (Auto-Scaling policy) à une application spécifique. Exécutez la commande suivante :
 
 ```
 bx as policy-attach <NOM_APP> -p <fichier_règles>
@@ -72,7 +72,7 @@ bx as policy-create
 
 ## Affichage d'une règle de mise à l'échelle automatique
 
-Vous pouvez afficher la règle de mise à l'échelle automatique d'une application. Le contenu de la règle est affiché directement sur la ligne de commande. Exécutez la commande suivante :
+Vous pouvez afficher la règle de mise à l'échelle automatique d'une application. Le contenu de la règle s'imprime directement sur la ligne de commande. Exécutez la commande suivante :
 
 ```
 bx as policy-show <NOM_APP> [--json]
@@ -89,7 +89,7 @@ bx as policy-show <NOM_APP> [--json]
 
 ## Dissociation d'une règle de mise à l'échelle automatique
 
-Vous pouvez retirer une règle de mise à l'échelle automatique d'une application. Exécutez la commande suivante : 
+Vous pouvez retirer une règle de mise à l'échelle automatique d'une application. Exécutez la commande suivante :
 
 ```
 bx as policy-detach <NOM_APP>
@@ -104,7 +104,7 @@ bx as policy-detach <NOM_APP>
 
 ## Activation ou désactivation d'une règle de mise à l'échelle automatique
 
-Vous pouvez activer ou désactiver la règle de mise à l'échelle automatique d'une application spécifique. Exécutez la commande suivante : 
+Vous pouvez activer ou désactiver la règle de mise à l'échelle automatique d'une application spécifique. Exécutez la commande suivante :
 
 ```
 bx as policy-enable|policy-disable <NOM_APP>

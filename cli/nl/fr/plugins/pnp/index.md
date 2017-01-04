@@ -79,7 +79,7 @@ Procédez comme suit pour installer le plug-in depuis le référentiel Bluemix :
 	```  
 
 ## Liste des commandes d'appairage de réseau privé
-Les quatre commandes ci-après sont prises en charge. Utilisez la commande `bluemix network` pour afficher la liste des commandes disponibles :
+Les commandes ci-après sont prises en charge. Utilisez la commande `bluemix network` pour afficher la liste des commandes disponibles :
 
 | Commande     | Description                                    |
 |-------------|------------------------------------------------|
@@ -87,6 +87,8 @@ Les quatre commandes ci-après sont prises en charge. Utilisez la commande `blue
 | pnp-create  | Crée une connexion d'appairage de réseau privé   |
 | pnp-delete  | Supprime une connexion d'appairage de réseau privé   |
 | pnp-show    | Répertorie toutes les connexions d'appairage de réseau privé  |
+{: caption="Table 1. Private network peering commands" caption-side="top"}
+
 
 ### Syntaxe de la commande
 Afin d'afficher les informations d'aide pour les commandes, exécutez : `bluemix network [commande] -h`.

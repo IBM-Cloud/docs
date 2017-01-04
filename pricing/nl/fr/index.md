@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-lastupdated: "2016-11-02"
+lastupdated: "2016-11-30"
  
 
 ---
@@ -294,9 +294,7 @@ Dans le modèle à tranches simples, le prix unitaire est déterminé par la tra
 | Tranche 3 : 2001 à 3000                  |   0,75 $                       |
 | Tranche 4 : 3001 à 4000           |      0,60 $                    |
 |Tranche 5 : &gt; 4000 | 0,40 $ | 
-
-Tableau 1. Tableau de la tarification différenciée par tranches simples
-{: #pricing_table1}
+{:caption="Table 1. Simple tier pricing table" caption-side="top"}
 
 Le tableau suivant indique le montant que vous payez avec un plan qui s'appuie
 sur un modèle de tarification à tranches simples :
@@ -308,8 +306,7 @@ sur un modèle de tarification à tranches simples :
 |2500 |	2500 × 0,75 = 1875 |	1875 $|
 |... |	... |	...|
 |5200 |	5200 × 0,40 = 2080 |2080 $|
-Tableau 2. Calcul du prix avec le modèle de tarification à tranches simples
-{: #pricing_table2}
+{:caption="Table 2. Charge calculation by using the simple tier pricing model" caption-side="top"}
 
 ####Tranche graduée
 {: #graduated_tier}
@@ -324,8 +321,7 @@ correspond aux frais cumulés pour chaque niveau d'utilisation, c'est-à-dire la
 |    Tranche 3 : 2001 à 3000 |	0,75 $ |
 |    Tranche 4 : 3001 à 4000 |	0,60 $ |
 |    Tranche 5 : &gt; 4000 |	0,40 $ |
-Tableau 3. Tableau de tarification par tranches graduées
-{: #pricing_table3}
+{:caption="Table 3. Graduated tier pricing table" caption-side="top"}
 
 Le tableau suivant indique le montant que vous payez avec un plan qui s'appuie
 sur un modèle de tarification à tranches graduées :
@@ -337,8 +333,7 @@ sur un modèle de tarification à tranches graduées :
 |2500 |	(1000 × 1 (prix unitaire pour la tranche 1)) + (1000 × 0.90 (prix unitaire pour la tranche 2)) + (500 × 0.75 (prix unitaire pour la tranche 3)) = 2275 |	2275 $ |
 |... |	... |	...|
 |5200 |	(1000 × 1 (prix unitaire pour la tranche 1)) + (1000 × 0.90 (prix unitaire pour la tranche 2)) + (1000 × 0.75 (prix unitaire pour la tranche 3)) + (1000 × 0.60 (prix unitaire pour la tranche 4)) + (1200 × 0.40 (prix unitaire pour la tranche 5)) = 3730 |	3730 $|
-Tableau 4. Calcul du prix avec le modèle de tarification à tranches graduées
-{: #pricing_table4}
+{:caption="Table 4. Charge calculation by using the graduated tier pricing model" caption-side="top"}
 
 ####Tranche fixe
 {: #block_tier}
@@ -353,8 +348,7 @@ correspond aux frais pour votre niveau d'utilisation, quelle que soit votre util
 | Tranche 3 : &lt;= 3000 |	2800 $|
 | Tranche 4 : &lt;= 4000 |	3500 $|
 | Tranche 5 : &lt;= 10000 |	5000 $|
-Tableau 5. Tableau de tarification par tranches fixes
-{: #pricing_table5}
+{:caption="Table 5. Block tier pricing table" caption-side="top"}
 
 Le tableau suivant indique le montant que vous payez avec un plan qui s'appuie
 sur un modèle de tarification à tranches fixes :
@@ -365,8 +359,7 @@ sur un modèle de tarification à tranches fixes :
 |1500 |	Le nombre d'éléments correspond à la tranche 2 ; par conséquent, le prix total est 1900 $. |	1900 $|
 |... |	... |	...|
 |5200 |	Le nombre d'éléments correspond à la tranche 5 ; par conséquent, le prix total est 5000 $. |	5000 $|
-Tableau 6. Calcul du prix avec le modèle de tarification à tranches fixes
-{: #pricing_table6}
+{:caption="Table 6. Charge calculation by using the block tier pricing model" caption-side="top"}
 
 ### Franchises pour les serveurs virtuels
 {: #vms}
@@ -446,8 +439,7 @@ temps, par exemple sur un mois. La tarification dans cet exemple est en dollar.
 |Data Cache - Standard |	5 Go d'espace en cache et une réplique |	155,00 $/instance |
 |Data Cache - Premium |	25 Go d'espace en cache et une réplique |	505,00 $/instance|
 |IBM Cloudant® NoSQL DB for {{site.data.keyword.Bluemix_notm}} |	2 Go de stockage de données gratuits<br/>50 000 appels d'API légers gratuits par mois<br/>10 000 appels d'API lourds gratuits par mois | 1,00 $/Go<br/>0,03 $/1000 appels d'API légers<br/>0,15 $/1000 appels d'API lourds |
-Tableau 7. Fiche des prix
-{: #pricing_table7}
+{:caption="Table 7. Pricing sheet" caption-side="top"}
 
 ###Calcul du prix de l'application
 
@@ -519,8 +511,7 @@ tableau ci-dessous répertorie les devises prises en charge.
 |SEK |	  Couronne suédoise|
 |USD |    Dollar américain|
 |ZAR |	  Rand sud-africain|
-Tableau 8. Devises prises en charge
-{: #pricing_table8}
+{:caption="Table 8. Supported currencies" caption-side="top"}
 
 **Remarque :** si vous avez lié vos comptes {{site.data.keyword.Bluemix_notm}} et SoftLayer, la facture unique que vous
 recevez est en dollars américains (USD) seulement.  
@@ -555,11 +546,9 @@ tranche gratuite retirée.
 
 En tant que propriétaire de compte ou responsable de la facturation, vous pouvez utiliser la page **Tableau de bord de l'utilisation** afin de
 visualiser
-les crédits éventuels dont bénéficie votre compte. Vous pouvez disposer de crédits si, par exemple, vous avez lié un
-compte
-SoftLayer avec un compte {{site.data.keyword.Bluemix_notm}}.
+les crédits éventuels dont bénéficie votre compte. 
 
-Pour ouvrir la page **Tableau de bord de l'utilisation**, cliquez sur **Compte** > **Tableau de bord de l'utilisation**. La page présente vos crédits éventuels, ainsi que leur date d'expiration.
+Pour ouvrir la page **Tableau de bord de l'utilisation**, cliquez sur **Compte** &gt; **Tableau de bord de l'utilisation**. Le tableau de bord affiche les crédits éventuels, ainsi que leur date d'expiration.
 
 ##Notifications
 {: #notifications}
@@ -584,7 +573,7 @@ ensemble différent d'étapes à suivre si vous changez de plan.
 
 1. Pour changer de plan, dans le tableau de bord du service, cliquez sur **Plan**. En général, vous pouvez mettre à niveau votre plan ou passer à un plan de niveau inférieur.
 2. Après avoir changé de plan, vous devez effectuer un certain nombre d'étapes. Celles-ci varient selon le type de changement de plan et le service. Par
-exemple, si vous êtes passé à un plan de niveau inférieur, il peut être nécessaire de reconstituer votre application. Ou bien, si vous avez mis à niveau
+exemple, si vous êtes passé à un plan de niveau inférieur, il se peut que vous deviez reconstituer votre application. Ou bien, si vous avez mis à niveau
 votre plan, il peut être nécessaire de reconstituer votre application et de prendre d'autres mesures.<br/><br/>Pour reconstituer votre
 application, accédez au tableau de bord {{site.data.keyword.Bluemix_notm}} et recherchez l'application à laquelle le service est lié. Dans le menu
 de l'application, sélectionnez **Redémarrer l'application**.<br/><br/>Les actions à effectuer ensuite dépendent du service. Reportez-vous au tableau ci-dessous pour prendre connaissance des actions spécifiques à
@@ -593,8 +582,7 @@ exécuter.
 |Service |	Information|
 |--------|-------------|
 |Presence Insights 	|Si vous avez choisi un plan léger et que vous dépassez les franchises, un message 403 s'affiche ou est consigné afin d'indiquer que vous ne disposez plus des autorisations, et votre instance de service est désactivée. De plus, les appels d'API REST POST sont rejetés avec une réponse 403.<br/><br/>Si votre service est désactivé car vous avez dépassé les franchises, vous pouvez procéder à la mise à niveau du plan léger vers un plan payant. Votre service est réactivé dans les deux heures.<br/><br/>Si vous disposez d'un plan payant, vous pouvez passer à un plan inférieur, c'est-à-dire au plan léger, tant que votre utilisation ne dépasse pas la franchise du plan léger pour les événements et l'espace de stockage total.<br/><br/>Lorsque vous mettez un plan à niveau ou passez à un plan inférieur, il n'est pas nécessaire de reconstituer ou de redémarrer vos applications.|
-Tableau 9. Etapes à effectuer pour changer de plan
-{: #pricing_table9}
+{:caption="Table 9. Next steps for changing your plan" caption-side="top"}
 
 ###Changement de plan via l'interface de ligne de commande
 

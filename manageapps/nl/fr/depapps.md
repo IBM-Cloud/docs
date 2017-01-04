@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-18"
+lastupdated: "2016-12-07"
 ---
 
 
@@ -32,19 +32,19 @@ ne seront plus pris en charge dans l'agent DEA.
 Tous les composants Diego sont conçus pour être mis en cluster, ce qui
 signifie que vous pouvez facilement créer différentes zones de disponibilité. La
 communication sécurisée entre tous les composants Diego utilise le
-protocole TLS. 
+protocole TLS.
 
 Lors de la phase de constitution, Diego s'occupe de tous les aspects liés
 à l'orchestration des conteneurs. La distribution des instances d'application
 est effectuée par Diego Brain et le contrôleur de cloud constitue les
 applications. Diego Brain alloue les applications en cellules avec un accès SSH
-aux conteneurs. 
+aux conteneurs.
 
 Pour valider la santé des applications, Diego prend en charge les
 vérifications PORT utilisées pour l'agent DEA. Il est de plus conçu pour
 pouvoir fonctionner avec
 davantage d'options génériques comme les diagnostics d'intégrité basés sur les
-URL, qui devraient être activés ultérieurement. 
+URL, qui devraient être activés ultérieurement.
 
 Pour constituer des applications dans Diego, vous devez d'abord installer
 l'interface de ligne de commande cf et le
@@ -103,7 +103,7 @@ immédiatement sur Diego et s'arrête sur les agents DEA. Si vous souhaitez
 garantir le temps de disponibilité, nous vous conseillons d'effectuer un
 déploiement Blue-Green en déployant une copie de votre application sur Diego,
 puis en permutant les routes et en retirant l'application de l'agent
-DEA. 
+DEA.
 
   Pour configurer l'indicateur Diego et modifier votre application afin
 de l'exécuter sur Diego :
@@ -117,7 +117,7 @@ de l'exécuter sur Diego :
   ```
 
   Pour valider le système de back end sur lequel l'application est
-exécutée : 
+exécutée :
   ```
   $ cf has-diego-enabled NOM_APPLICATION
   ```
@@ -241,8 +241,6 @@ Le tableau suivant décrit les options prises en charge que vous pouvez utiliser
 cf push -f appManifest.yml
 ```
 
-<p>  </p>
-
 
 |Options	|Description	|Utilisation ou exemple|
 |:----------|:--------------|:---------------|
@@ -260,7 +258,7 @@ cf push -f appManifest.yml
 |**random-route**	|Valeur booléenne permettant d'affecter une route aléatoire à l'application. La valeur par défaut est **false**.	|`random-route: true`|
 |**services**	|Services à lier à l'application.	|`services:   - mysql_maptest`|
 |**env**	|Variables d'environnement personnalisées pour l'application.|`env: DEV_ENV: production`|
-*Tableau 1. Options prises en charge dans le fichier manifest.yml*
+{: caption="Table 1. Supported options in the manifest YAML file" caption-side="top"}
 
 ###Exemple de fichier `manifest.yml`
 

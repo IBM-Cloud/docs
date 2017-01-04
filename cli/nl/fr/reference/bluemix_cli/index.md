@@ -62,7 +62,7 @@ Utilisez les index des tableaux suivants pour examiner les commandes Bluemix fr�
  </tr>
   </tbody>
  </table>
-*Tableau 1. Commandes générales Bluemix*
+{: caption="Table 1. General bluemix commands" caption-side="top"}
 
 
 
@@ -101,7 +101,7 @@ Utilisez les index des tableaux suivants pour examiner les commandes Bluemix fr�
  </tr>
  </tbody>
  </table>
-*Tableau 2. Commandes pour gestion d'organisations, d'espaces et d'utilisateurs*
+ {: caption="Table 2. Commands for managing orgs, spaces, and users" caption-side="top"} 
 
 
 
@@ -140,7 +140,7 @@ Utilisez les index des tableaux suivants pour examiner les commandes Bluemix fr�
  </tr>
   </tbody>
  </table>
-*Tableau 3. Commandes pour gestion d'applications cf*
+{: caption="Table 3. Commands for managing cf apps" caption-side="top"}
 
 
 <table summary="Commandes Bluemix que vous pouvez utiliser pour gérer des services Bluemix.">
@@ -171,7 +171,7 @@ Utilisez les index des tableaux suivants pour examiner les commandes Bluemix fr�
  </tr>
   </tbody>
  </table>
-*Tableau 4. Commandes pour gestion de services Bluemix*
+{: caption="Table 4. Commands for managing Bluemix services" caption-side="top"}
 
 
 <table summary="Commandes Bluemix que vous pouvez utiliser pour gérer un catalogue, des plug-in, la facturation et les paramètres de sécurité Bluemix.">
@@ -207,7 +207,7 @@ Utilisez les index des tableaux suivants pour examiner les commandes Bluemix fr�
  </tr>
   </tbody>
  </table>
-*Tableau 5. Commandes pour gestion du catalogue, des plug-in, de la facturation et des paramètres de sécurité Bluemix*
+{: caption="Table 5. Commands for managing Bluemix catalog, plug-ins, billing, and security settings" caption-side="top"}
 
 
 
@@ -239,7 +239,7 @@ Utilisez les index des tableaux suivants pour examiner les commandes Bluemix fr�
  </tr>
   </tbody>
  </table>
-*Tableau 6. Commandes pour gestion des paramètres réseau*
+{: caption="Table 6. Commands for managing network settings" caption-side="top"}
 
 
 
@@ -327,7 +327,7 @@ Utilisez les index des tableaux suivants pour examiner les commandes Bluemix fr�
  </tr>
   </tbody>
  </table>
-*Tableau 7. Commandes pour gestion de conteneurs dans Bluemix*
+{: caption="Table 7. Commands for managing containers on Bluemix" caption-side="top"}
 
 
 
@@ -2137,7 +2137,7 @@ une application au conteneur. L'application est liée au service cible et sert d
 conteneur sans utiliser d'application de pont, utilisez CCS_BIND_SRV. Cette liaison permet à Bluemix d'injecter les informations VCAP_SERVICES dans
 l'instance de conteneur en cours d'exécution. Pour répertorier plusieurs services Bluemix, incluez-les dans la même variable d'environnement. |
 | LOG_LOCATIONS=*&lt;chemin_fichier&gt;* | Ajoutez un fichier journal à surveiller dans le conteneur. Incluez la variable d'environnement `LOG_LOCATIONS` avec un chemin d'accès au fichier journal. |
-*Tableau 8. Variables d'environnement couramment utilisées*
+{: caption="Table 8. Commonly used environment variables" caption-side="top"}
 
  <dl>
    <dt>--env-file <i>FICHIER_VARIABLE_ENVIRONNEMENT</i> (facultatif)</dt>
@@ -2968,7 +2968,7 @@ une application au conteneur. L'application est liée au service cible et sert d
 conteneur sans utiliser d'application de pont, utilisez CCS_BIND_SRV. Cette liaison permet à Bluemix d'injecter les informations VCAP_SERVICES dans
 l'instance de conteneur en cours d'exécution. Pour répertorier plusieurs services Bluemix, incluez-les dans la même variable d'environnement. |
 | LOG_LOCATIONS=*&lt;chemin_fichier&gt;* | Ajoutez un fichier journal à surveiller dans le conteneur. Incluez la variable d'environnement `LOG_LOCATIONS` avec un chemin d'accès au fichier journal. |
-*Tableau 9. Variables d'environnement couramment utilisées*
+{: caption="Table 9. Commonly used environment variables" caption-side="top"} 
 
 
    <dl>

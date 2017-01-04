@@ -19,16 +19,10 @@ lastupdated: "2016-11-14"
 # Commandes Cloud Foundry (cf)
 {: #cf}
 
-L'interface de ligne de commande Cloud Foundry (cf) fournit un ensemble de commandes permettant de gérer vos applications. Les informations ci-après
-répertorient les commandes cf le plus souvent utilisées pour gérer les applications avec leurs noms, leurs options, leur syntaxe, les éléments
-prérequis, leur description et des exemples. Pour afficher toutes les commandes cf et les informations d'aide associées, entrez `cf
-help`. Entrez `cf nom_commande -h` afin d'afficher des informations d'aide
-détaillées pour une commande particulière.
+L'interface de ligne de commande Cloud Foundry (cf) fournit un ensemble de commandes permettant de gérer vos applications. Les informations ci-après répertorient les commandes cf le plus souvent utilisées pour gérer les applications avec leurs noms, leurs options, leur syntaxe, les éléments prérequis, leur description et des exemples. Pour afficher toutes les commandes cf et les informations d'aide associées, entrez `cf help`. Entrez `cf nom_commande -h` afin d'afficher des informations d'aide détaillées pour une commande particulière.
 {: shortdesc}
 
-**Remarque** : sur votre réseau, si un serveur proxy HTTP se trouve entre l'hôte qui exécute les commandes cf et le noeud final
-d'API Cloud Foundry, vous devez spécifier le nom d'hôte ou l'adresse IP du serveur proxy en définissant la variable d'environnement
-`HTTP_PROXY`. Pour plus de détails, voir [Using the cf CLI with an HTTP Proxy Server](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html).
+**Remarque** : sur votre réseau, si un serveur proxy HTTP se trouve entre l'hôte qui exécute les commandes cf et le noeud final d'API Cloud Foundry, vous devez spécifier le nom d'hôte ou l'adresse IP du serveur proxy en définissant la variable d'environnement `HTTP_PROXY`. Pour plus de détails, voir [Using the cf CLI with an HTTP Proxy Server](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html).
 
 
 ## Index des commandes de l'interface de ligne de commande Cloud Foundry
@@ -51,7 +45,7 @@ Utilisez l'index du tableau suivant pour consulter les commandes Cloud Foundry f
  </tr>
    </tbody>
  </table>
-*Tableau 1. Commandes Cloud Foundry générales*
+{: caption="Table 1. General Cloud Foundry commands" caption-side="top"}
 
 
 <table summary="Commandes classées par ordre alphabétique pour la gestion des applications, des espaces et des services, avec un lien vers des informations supplémentaires.">
@@ -82,7 +76,7 @@ Utilisez l'index du tableau suivant pour consulter les commandes Cloud Foundry f
  </tr>
  </tbody>
  </table>
-*Tableau 2. Commandes pour la gestion des applications, des espaces et des services*
+{: caption="Table 2. Commands for managing apps, spaces, and services" caption-side="top"}
 
 
 ## cf api
@@ -100,10 +94,8 @@ cf api [URL_serveur_Bluemix] [--skip-ssl-validation] [--unset]
 
    <dl>
    <dt>URL_serveur_Bluemix (facultatif)</dt>
-   <dd>Adresse URL du noeud final d'API Bluemix que vous devez spécifier lorsque vous vous connectez à {{site.data.keyword.Bluemix_notm}}. En
-général, il s'agit de `https://api.{NomDomaine}`.
-   Si vous voulez afficher l'adresse URL du noeud final de l'API que vous utilisez actuellement, il n'est pas nécessaire de spécifier ce paramètre pour la
-commande cf api.</dd>
+   <dd>Adresse URL du noeud final d'API Bluemix que vous devez spécifier lorsque vous vous connectez à {{site.data.keyword.Bluemix_notm}}. En général, il s'agit de `https://api.{NomDomaine}`.
+   Si vous voulez afficher l'adresse URL du noeud final de l'API que vous utilisez actuellement, il n'est pas nécessaire de spécifier ce paramètre pour la commande cf api.</dd>
    <dt>* --skip-ssl-validation</dt>
    <dd>Désactive le processus de validation SSL. L'utilisation de ce paramètre peut entraîner des problèmes de sécurité.</dd>
    <dt>* --unset</dt>
