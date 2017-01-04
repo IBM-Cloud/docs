@@ -171,13 +171,13 @@ cómo los parámetros `name` y `place` se recuperan del objeto `params` en este 
 
 3.  Los parámetros se puede proporcionar explícitamente en la línea de mandatos o por medio de un archivo que contenga los parámetros que se quiere especificar
 
-  Para pasar los parámetros directamente a través de la línea de mandatos, especifique un par clave/valor para el distintivo `--param`: 
+  Para pasar los parámetros directamente a través de la línea de mandatos, especifique un par clave/valor para el distintivo `--param`:
   ```
   wsk action invoke --blocking --result hello --param name Bernie --param place Vermont
   ```
   {: pre}
 
-  Para poder utilizar un archivo que contenga parámetros, crear un archivo que contenga los parámetros en formato JSON. Luego se debe pasar el nombre del archivo al distintivo `param-file`: 
+  Para poder utilizar un archivo que contenga parámetros, crear un archivo que contenga los parámetros en formato JSON. Luego se debe pasar el nombre del archivo al distintivo `param-file`:
 
   Archivo de parámetros de ejemplo denominado parameters.json:
   ```
@@ -185,12 +185,12 @@ cómo los parámetros `name` y `place` se recuperan del objeto `params` en este 
       "name": "Bernie",
       "place": "Vermont"
   }
- ```
+  ```
   {: codeblock}
 
   ```
   wsk action invoke --blocking --result hello --param-file parameters.json
- ```
+  ```
   {: pre}
 
   ```
@@ -214,26 +214,27 @@ el parámetro *place* para que el valor predeterminado de la acción sea el luga
  
 1. Actualizar la acción usando la opción `--param` para enlazar valores de parámetros o pasando un archivo que contiene los parámetros a `--param-file`
 
-  Para especificar parámetros predeterminados explícitamente en la línea de mandatos, especifique un par clave/valor para el distintivo `param`: 
+  Para especificar parámetros predeterminados explícitamente en la línea de mandatos, especifique un par clave/valor para el distintivo `param`:
 
   ```
   wsk action update hello --param place Vermont
   ```
   {: pre}
 
-  Para pasar parámetros desde un archivo hay que crear un archivo con el contenido deseado en formato JSON. Luego se debe pasar el nombre del archivo al distintivo `-param-file`: 
+  Para pasar parámetros desde un archivo hay que crear un archivo con el contenido deseado en formato JSON.
+  Luego se debe pasar el nombre del archivo al distintivo `-param-file`:
 
   Archivo de parámetros de ejemplo denominado parameters.json:
   ```
   {
       "place": "Vermont"
   }
- ```
+  ```
   {: codeblock}
 
   ```
   wsk action update hello --param-file parameters.json
- ```
+  ```
   {: pre}
 
 2. Invocar la acción, pasando solo el parámetro `name` esta vez.
@@ -255,14 +256,14 @@ sobrescribir especificando el valor de parámetro en el momento de la invocació
 3. Invocar la acción, pasando los valores `name` y `place`. El segundo sobrescribe el
 valor enlazado a la acción.
 
-  Utilización del distintivo `--param`: 
+  Utilización del distintivo `--param`:
 
   ```
   wsk action invoke --blocking --result hello --param name Bernie --param place "Washington, DC"
   ```
   {: pre}
 
-  Utilización del distintivo `--param-file`: 
+  Utilización del distintivo `--param-file`:
 
   Archivo parameters.json:
   ```
@@ -270,13 +271,13 @@ valor enlazado a la acción.
     "name": "Bernie",
       "place": "Vermont"
   }
- ```
+  ```
   {: codeblock}
 
 
   ```
   wsk action invoke --blocking --result hello --param-file parameters.json
- ```
+  ```
   {: pre}
 
   ```
@@ -423,6 +424,7 @@ argumento a la función `resolve()`.
   {: screen}
 
 ### Empaquetado de una acción como un módulo Node.js
+{: #openwhisk_js_packaged_action}
 
 Como alternativa a grabar todo el código de acción en un único archivo de origen JavaScript, puede grabar una acción como un paquete `npm`. Piense como ejemplo un directorio con los archivos siguientes:
 
@@ -524,7 +526,7 @@ primera secuencia. Puede obtener más información sobre los paquetes en la secc
   ```
   {: screen}
   
-  En este ejemplo utilizará las acciones `split` y `sort`. 
+  En este ejemplo utilizará las acciones `split` y `sort`.
   
 2. Crear una secuencia de acciones para que el resultado de una acción se pase como argumento a la acción siguiente.
   

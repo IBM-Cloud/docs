@@ -1,12 +1,8 @@
 ---
 
- 
-
 copyright:
-
   years: 2015, 2016
-
- 
+lastupdated: "2016-11-29"
 
 ---
 
@@ -18,18 +14,17 @@ copyright:
 
 #Creación del botón Desplegar en {{site.data.keyword.Bluemix_notm}} {: #deploy-button} 
 
-*Última actualización: 2 de marzo de 2016*
-{: .last-updated} 
-
 El botón Desplegar en {{site.data.keyword.Bluemix}} es una manera fácil de compartir la app de origen Git público con otras personas para que puedan experimentar con el código
 y desplegarla en IBM {{site.data.keyword.Bluemix_notm}}. Este botón requiere una configuración mínima y puede insertarse en cualquier lugar que admita la marcación. El usuario que pulse el botón creará una copia del código en un nuevo repositorio Git, de manera que la app original no se verá afectada. 
 {: shortdesc} 
 
-**Consejo:** Si la estrategia de marca de su empresa es importante, puede [incluir Desplegar en flujo de {{site.data.keyword.Bluemix_notm}} iFrame](../develop/deploy_button_embed.html) en el contenido en lugar de insertar un botón. Si los usuarios crean una copia de su app de origen Git público, se quedan en el contenido en lugar de redirigirse al sitio web de bluemix.net. 
+**Consejo:** Si la estrategia de marca de su empresa es importante, puede [incluir Desplegar en flujo de {{site.data.keyword.Bluemix_notm}} iFrame](/docs/develop/deploy_button_embed.html) en el contenido en lugar de insertar un botón. Si los usuarios crean una copia de su app de origen Git público, se quedan en el contenido en lugar de redirigirse al sitio web de bluemix.net. 
+
+**Nota**: La característica de cadenas de herramientas ahora está disponible. Cualquiera que pulse el botón Desplegar en {{site.data.keyword.Bluemix_notm}} puede pulsar el enlace en el banner para intentar desplegar su aplicación mediante una cadena de herramientas.
 
 Cuando el usuario pulsa el botón tienen lugar las siguientes acciones: 
 
-1. El usuario deberá crear una cuenta de prueba de {{site.data.keyword.Bluemix}} si no dispone de una cuenta activa. 
+1. El usuario deberá crear una cuenta de prueba de {{site.data.keyword.Bluemix_notm}} si no dispone de una cuenta activa. 
 
 2. La persona puede seleccionar una región, organización espacio y nombre de app. El nombre de app recomendado se crea a partir del nombre de la app anterior, el nombre de usuario de la persona y la hora. 
 
@@ -177,8 +172,7 @@ En el archivo de manifiesto puede especificar:
 </pre>
    </li>
    </ul>
-	<li> Si se debe compilar el repositorio antes de que se despliegue la app, una compilación automatizada del código situada en el repositorio se activará antes del despliegue. Las compilaciones automatizadas son el resultado de la detección de un archivo de script de compilación en el directorio raíz del repositorio. 
-	
+	<li> Si la app debe compilarse antes de que se pueda desplegar, debe incluir un archivo de compilación en el repositorio. Si se detecta un archivo script de construcción en el directorio raíz del repositorio, se desencadenará una compilación automatizada del código antes del despliegue. 	
 	Compiladores soportados: 
 	    <ul>
 		<li> <a href="http://ant.apache.org/manual/using.html" target="_blank">Ant:</a> /<code>build.xml</code>, que crea la salida en la carpeta <code>./output/</code> </li>
@@ -198,8 +192,9 @@ En el archivo de manifiesto puede especificar:
 <li>En el directorio raíz del proyecto, cree un directorio <code>.bluemix</code>.</li>
 <li>Suba el archivo <code>pipeline.yml</code> al repositorio <code>.bluemix</code>.</li>
 </ol> </li>
-	<li>Si está desarrollando una app en un contenedor utilizando <strong>IBM Containers</strong>, debe incluir Dockerfile en el directorio raíz del repositorio y, en un directorio <code>.bluemix</code>, incluya un archivo <code>pipeline.yml</code>. 
+	<li>Para desplegar una app en un contenedor utilizando <strong>IBM Containers</strong>, debe incluir Dockerfile en el directorio raíz del repositorio y, en un directorio <code>.bluemix</code>, incluya un archivo <code>pipeline.yml</code>.
 	<ul>
+	    <li>El Dockerfile actúa como un tipo de script de construcción para la app. Si se detecta un Dockerfile en el repositorio, la app se creará automáticamente en una imagen antes de que se despliegue en un contenedor. Si la app debe compilarse antes de que se incorpore la app en una imagen, incluya un script de construcción para la app, así como un Dockerfile, como se ha descrito anteriormente.</li>
 	    <li> Para obtener más información sobre cómo crear Dockerfiles, <a href="https://docs.docker.com/reference/builder/" target="_blank">consulte la documentación de Docker</a>. </li>
 	    <li>Puede crear un archivo <code>pipeline.yml</code> manualmente o puede generar uno a partir de un proyecto existente de DevOps Services. Para crear un <code>pipeline.yml</code> manualmente que sea específicamente para contenedores, <a href="https://github.com/Puquios/" target="_blank">consulte los ejemplos en GitHub</a>. </li>
         </ul>
@@ -208,4 +203,5 @@ En el archivo de manifiesto puede especificar:
  </ul>
 </ul>
 
-Para la resolución de problemas, consulte [El botón Despliegue en Bluemix no se despliega en la app](../troubleshoot/index.html#deploytobluemixbuttondoesntdeployanapp){:new_window}.	
+Para la resolución de problemas, consulte [El botón Despliegue en Bluemix no se despliega en la app](/docs/troubleshoot/index.html#deploytobluemixbuttondoesntdeployanapp){:new_window}.	
+

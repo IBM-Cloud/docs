@@ -94,7 +94,7 @@ Utilice el índice en la siguiente tabla para hacer referencia a los mandatos de
  </tr>
   </tbody>
  </table>
-*Tabla 1. Mandatos de dev_mode*
+{: caption="Table 1. dev_mode commands" caption-side="top"}
 
 
 

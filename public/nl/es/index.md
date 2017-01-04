@@ -83,7 +83,7 @@ Cuando crea una app y la despliega en {{site.data.keyword.Bluemix_notm}}, el ent
 * La carga que ya soporta la máquina
 * Los tiempos de ejecución o infraestructuras que soporta dicho servidor virtual.
 
-Después de seleccionar un servidor virtual, un gestor de apps de cada servidor virtual instala la infraestructura y el tiempo de ejecución adecuados para la app. A partir de entonces la app se puede desplegar en la infraestructura. Cuando se completa el despliegue, se inician los artefactos de la app.
+Después de seleccionar un servidor virtual, un gestor de apps de cada servidor virtual instala la infraestructura y el tiempo de ejecución adecuados para la app. Luego la app se puede desplegar en esta infraestructura. Cuando se completa el despliegue, se inician los artefactos de la app.
 
 La siguiente figura
 muestra la estructura de un servidor virtual, también conocido como agente de ejecución de gotas (DEA), en el que se han desplegado varias apps:

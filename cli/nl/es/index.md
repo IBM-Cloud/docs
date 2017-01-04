@@ -6,7 +6,7 @@ copyright:
 
   years: 2015 2016
 
-lastupdated: "2016-10-24"
+lastupdated: "2016-11-29"
 
 
 ---
@@ -36,7 +36,8 @@ De forma predeterminada, ambas herramientas de CLI utilizan el puerto 443. Si ti
 
 | *{{site.data.keyword.Bluemix_notm}}: bx* | *Cloud Foundry: cf* |
 |---------------------|---------------|
-| [Descargue CLI](http://clis.ng.bluemix.net/) <br> [Ver docs](./reference/bluemix_cli/index.html)|  [Descargue CLI](https://github.com/cloudfoundry/cli/releases){: new_window}  <br> [Ver docs](./reference/cfcommands/index.html) |
+| [Descargue CLI](http://clis.ng.bluemix.net/) <br> [Ver docs](/docs/cli/reference/bluemix_cli/index.html)|  [Descargue CLI](https://github.com/cloudfoundry/cli/releases){: new_window}  <br> [Ver docs](/docs/cli/reference/cfcommands/index.html) |
+{: caption="Table 1. CLI download" caption-side="top"}
 
 
 ## ![](./images/CLI_Plugin.svg) Plug-ins de la interfaz de línea de mandatos
@@ -63,10 +64,15 @@ bluemix plugin install plugin_name -r bluemix-bx
 {: codeblock}
 
 
-| *{{site.data.keyword.activedeployshort}} CLI* | *{{site.data.keyword.autoscaling}} CLI* | *Grupos de seguridad de red* |
+| *{{site.data.keyword.activedeployshort}} CLI* | *{{site.data.keyword.autoscaling}} CLI* | *IBM Containers*  |
 |-----|-----|-----|
-| Nombre del plugin: active-deploy <br> [Ver docs](/docs/services/ActiveDeploy/cli.html#cli) | Nombre del plugin: escalado automático <br> [Ver docs](./plugins/auto-scaling/index.html) |  Nombre de plugin: nsg <br> [Ver docs](./plugins/networksecuritygroups/index.html)  |
+| Nombre del plugin: active-deploy <br> [Ver docs](/docs/services/ActiveDeploy/cli.html#cli) | Nombre del plugin: escalado automático <br> [Ver docs](/docs/cli/plugins/auto-scaling/index.html) |  Nombre del plugin: IBM-Containers  <br> [Ver docs](/docs/cli/plugins/containers/index.html) |
+{: caption="Table 2. Plug-ins" caption-side="top"}
 
+| *Grupos de seguridad de red* |  *Igualdad de red privada* | *VPN*  |  
+|-----|-----|-----|
+| Nombre del plugin: network-security-groups <br> [Ver docs](/docs/cli/plugins/networksecuritygroups/index.html) | Nombre del plugin: private-network-peering  <br> [Ver docs](/docs/cli/plugins/pnp/index.html) |Nombre del plugin: VPN  <br> [Ver docs](/docs/cli/plugins/bx_vpn/index.html) |
+{: caption="Table 3. Plug-ins" caption-side="top"}
 
 ### Ampliar la interfaz de línea de mandatos de Cloud Foundry : cf
 {: cli_cf_ext}
@@ -89,10 +95,13 @@ cf install-plugin plugin_name -r bluemix-cf
 | *Active Deploy* | *Consola de administración* |
 |-----------------|-----------------|
 | Nombre del plugin: active-deploy <br>  [Ver docs](/docs/services/ActiveDeploy/cli.html#cli) |  Nombre del plugin: bluemix-admin <br> [Ver docs](/docs/cli/plugins/bluemix_admin/index.html) |
+{: caption="Table 4. Plug-ins" caption-side="top"}
+
 
 | *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* | *VPN* |
 |-----------------|-----------------|
-| Nombre del plugin: ibm-containers <br> [Ver docs](https://www.{DomainName}/docs/containers/container_cli_cfic.html#container_cli_cfic) | Nombre del plugin: VPN <br> [Ver docs](./plugins/vpn/index.html) |
+| Nombre del plugin: ibm-containers <br> [Ver docs](https://www.{DomainName}/docs/containers/container_cli_cfic.html#container_cli_cfic) | Nombre del plugin: VPN <br> [Ver docs](/docs/cli/plugins/vpn/index.html) |
+{: caption="Table 5. Plug-ins" caption-side="top"}
 
 
 ## ![](./images/Integrated_Dev_Tools.svg) Herramientas para el desarrollo integrado
@@ -103,3 +112,4 @@ Descargue e instale plugins para integrar sus servicios favoritos de {{site.data
 |-------------|----------|----------|----------|
 | [Plugin de Egit Eclipse](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_egit){: new_window} <br> [Plugin de RTC Eclipse](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_rtc){: new_window} | [Plugin de Liberty Eclipse](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Plugin de Eclipse](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Plugin de Rules Designer
 Eclipse](/docs/services/rules/index.html#rulov002) |
+{: caption="Table 6. Plug-ins" caption-side="top"}

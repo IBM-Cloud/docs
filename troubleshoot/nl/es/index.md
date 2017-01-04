@@ -1003,7 +1003,7 @@ Emprenda una de las siguientes acciones en función de la causa del problema:
 
   * Asegúrese de que el archivo `package.json` exista en la app
 Node.js para permitir que el paquete de compilación Node.js reconozca la app. Además, debe colocar este archivo en el directorio raíz de la app.	
- El ejemplo siguiente muestra un archivo `package.json` sencillo:  
+    El ejemplo siguiente muestra un archivo `package.json` sencillo:  
 	```
 	{
         "name": "MyUniqueNodejs01",

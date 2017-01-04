@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-lastupdated: "2016-10-20"  
+lastupdated: "2016-12-05"  
 
 
 ---
@@ -149,16 +149,28 @@ Complete los siguientes pasos para listar los miembros para un espacio específi
 ## Gestión de cuota
 {: #managequota}
 
-Como propietario de cuenta o gestor de organización, puede ver la cuota asignada y utilizada para la organización. La cuota representa los límites de recursos para la organización que está asignada cuando se crea la organización. Cualquier app o servicio en un espacio de la organización contribuye al uso de la cuota.
+Como propietario de cuenta o gestor de organización de {{site.data.keyword.Bluemix_notm}}, puede ver la cuota utilizada y asignada para una organización. La cuota representa los límites de recursos para la organización que está asignada cuando se crea la organización. Según si tiene una cuenta de prueba o una cuenta facturable, los recursos que están disponibles para una organización varían. Cualquier aplicación o servicio de un espacio de la organización contribuye al uso de la cuota asignada.
 
-Para ver la cuota para la organización, complete los siguientes pasos:
+Para ver la cuota utilizada y asignada para una organización, realice los pasos siguientes:
 
 1. Pulse la página **Cuenta** &gt; **Gestionar organizaciones**.
 2. Identifique la organización para la que desea ver la cuota y pulse **Ver detalles**.
 3. Pulse **Editar organización**.
-4. Seleccione el separador **CUOTA**.
+4. Si tiene espacios definidos en más de una región, seleccione la región específica que desee ver.
+5. Pulse **CUOTA**. 
+6. De forma predeterminada, se abrirá la página de cuota **Cloud Foundry**. Puede ver los detalles de la cuota para los siguientes recursos:
+ * MEMORIA
+ * SERVICIOS
+ * PLAN
+ * PRECIO
+7. Pulse **Contenedores** para ver la asignación de cuota de contenedor utilizada y disponible. La asignación de contenedor varía en función del plan de precios. Puede ver los detalles de la cuota para los siguientes recursos:
+ * MEMORIA
+ * IP PÚBLICA
 
-Para actualizar la cuota para la organización, debe abrir una incidencia de soporte. Para obtener más información sobre cómo abrir una incidencia de soporte, consulte [Obtención de soporte al cliente](/docs/support/index.html#contacting-support). Para obtener más información sobre la cuota para los contenedores, consulte [Cuota](/docs/containers/container_planning_org_ov.html##container_planning_quota) en la documentación Contenedores.
+**Nota:** Los contenedores no están disponibles en la región Sídney de {{site.data.keyword.Bluemix_notm}}. 
+
+Para obtener más información sobre los contenedores, consulte [Cuota](/docs/containers/container_planning_org_ov.html#container_planning_quota) en la documentación de Contenedores.
+Para cambiar la cuota asignada para una organización, debe abrir una incidencia de soporte. Para obtener más información sobre la apertura de una incidencia de soporte, consulte [Obtención de soporte al cliente](/docs/support/index.html#contacting-support). 
 
 ## Gestión de dominios
 {: #managedomains}

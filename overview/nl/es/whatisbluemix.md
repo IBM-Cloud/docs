@@ -168,8 +168,7 @@ Cada región tienen asignado un prefijo exclusivo. {{site.data.keyword.Bluemix_n
 | Región EE.UU. sur | Dallas, EE.UU. | ng | api.ng.bluemix.net | console.ng.bluemix.net |
 | Región Reino Unido | Londres, Inglaterra | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
 | Región Sídney | Sídney, Australia | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
-
-*Tabla 1. Lista de regiones de {{site.data.keyword.Bluemix_notm}}*
+{: caption="Table 1. {{site.data.keyword.Bluemix_notm}} region list" caption-side="top"}
 
 
 ### Resiliencia de {{site.data.keyword.Bluemix_notm}}

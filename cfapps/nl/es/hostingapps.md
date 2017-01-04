@@ -162,8 +162,6 @@ mandato cf push. Para obtener detalles, consulte [Utilización de paquetes de co
 
 Puede utilizar las herramientas y servicios siguientes que {{site.data.keyword.Bluemix_notm}} proporciona:
 
-*Tabla 1. Herramientas de {{site.data.keyword.Bluemix_notm}}*
-
 | Herramienta	| Método |
 |:------|:--------|
 |Interfaz de línea de mandatos de Cloud Foundry (cf cli)	|Gestione su código en el cliente local y utilizar la
@@ -177,6 +175,7 @@ la app.|
 |{{site.data.keyword.Bluemix_notm}} DevOps
 Delivery Pipeline	|Gestione su código en el repositorio DevOps GitHub y despliegue su app en
 {{site.data.keyword.Bluemix_notm}} utilizando DevOps Delivery Pipeline.|
+{: caption="Table 1. {{site.data.keyword.Bluemix_notm}} tools" caption-side="top"}
 
 
 Si la plataforma Cloud Foundry no admite los requisitos de su app,

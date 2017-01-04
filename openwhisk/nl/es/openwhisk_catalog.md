@@ -33,10 +33,10 @@ El paquete `/whisk.system/cloudant` le permite trabajar con una base de datos Cl
 
 | Entidad | Tipo | Parámetros | Descripción |
 | --- | --- | --- | --- |
-| `/whisk.system/cloudant` | paquete | {{site.data.keyword.Bluemix_notm}}ServiceName, host, username, password, dbname, includeDoc, overwrite | Trabajar con una base de datos Cloudant |
+| `/whisk.system/cloudant` | paquete | {{site.data.keyword.Bluemix_notm}}ServiceName, host, username, password, dbname, overwrite | Trabajar con una base de datos Cloudant |
 | `/whisk.system/cloudant/read` | acción | dbname, includeDoc, id | Leer un documento de la base de datos |
 | `/whisk.system/cloudant/write` | acción | dbname, overwrite, doc | Escribir un documento en la base de datos |
-| `/whisk.system/cloudant/changes` | feed | dbname, includeDoc, maxTriggers | Activar sucesos desencadenantes para cambios en la BD |
+| `/whisk.system/cloudant/changes` | feed | dbname, maxTriggers | Activar sucesos desencadenantes para cambios en la BD |
 
 En los temas siguientes se muestra la configuración de una base de datos Cloudant, la configuración de un paquete asociado y el uso de acciones e información de entrada (feeds) en el paquete `/whisk.system/cloudant`.
 
@@ -151,8 +151,6 @@ Puede utilizar la información de entrada `changes` para configurar un servicio 
 para cada cambio de su base de datos Cloudant. Los parámetros son según se indica a continuación:
 
 - `dbname`: nombre de la base de datos Cloudant.
-- `includeDoc`: si se
-establece en true, cada suceso desencadenante que se activa incluye el documento Cloudant modificado. 
 - `maxTriggers`: dejar de activar desencadenantes cuando se alcanza este límite. El valor predeterminado es 1000. Puede establecerlo en un máximo de 10.000. Si intenta establecerlo en más de 10.000, se rechazará la solicitud.
 
 1. Crear un desencadenante con la información de entrada `changes` en el enlace de paquete que ha
@@ -160,7 +158,7 @@ creado anteriormente. Asegúrese de sustituir
 `/myNamespace/myCloudant` por el nombre de paquete.
 
   ```
-  wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb --param includeDoc true
+  wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb
   ```
   {: pre}
   ```
@@ -184,22 +182,7 @@ en una base de datos Cloudant. Probar los siguientes pasos de lectura y escritur
 
 Ahora puede crear reglas y asociarlas a acciones para reaccionar a actualizaciones de documento.
 
-El contenido de los eventos generados depende del valor del parámetro `includeDoc` al crear el desencadenante. Si el parámetro se
-establece en true, cada suceso desencadenante que se activa incluye el documento Cloudant modificado. Por ejemplo, pensemos en el
-documento modificado siguiente:
-
-  ```
-  {
-    "_id": "6ca436c44074c4c2aa6a40c9a188b348",
-    "_rev": "3-bc4960fc13aa368afca8c8427a1c18a8",
-    "name": "Heisenberg"
-  }
-  ```
-  {: screen}
-
-El código en este ejemplo genera un suceso desencadenante con los parámetros `_id`, `_rev` y `name` correspondientes. De hecho, la representación JSON del suceso desencadenante es idéntica al documento.
-
-De lo contrario, si `includeDoc` es falso, los sucesos incluyen los parámetros siguientes:
+El contenido de los sucesos generados tiene los siguientes parámetros:
 
 - `id`: el id. del documento
 - `seq`: el identificador de secuencia generado por Cloudant.
@@ -271,6 +254,53 @@ esta base de datos exista en su cuenta Cloudant.
   ```
   {: screen}
 
+### Utilización de una secuencia de acciones para procesar un documento en un suceso de cambio desde una base de datos Cloudant
+
+Puede utilizar una secuencia de acciones en una regla para captar y procesar el documento asociado a un suceso de cambio Cloudant.
+
+Cree una acción que procesará un documento desde Cloudant, esperará un documento como un parámetro.
+A continuación se muestra un código de ejemplo de una acción que maneja un documento:
+```
+function main(doc){
+  return { "isWalter:" : doc.name === "Walter White"};
+}
+```
+{: codeblock}
+```
+wsk action create myAction myAction.js
+```
+{: pre}
+Para leer el documento desde la base de datos, puede utilizar la acción `read` en el paquete cloudant, esta acción se puede incluir con la acción `myAction` en una secuencia de acciones.
+Cree una secuencia de acciones mediante la acción `read` y, a continuación, invoque la acción `myAction` que espera un documento como entrada.
+```
+wsk action create sequenceAction --sequence /myNamespace/myCloudant/read,myAction
+```
+{: pre}
+
+Ahora, cree una regla que asocie el desencadenante con la nueva acción `sequenceAction`
+```
+wsk rule create myRule myCloudantTrigger sequenceAction
+```
+{: pre}
+
+La secuencia de acciones necesitará saber el nombre de base de datos desde la que se captará el documento.
+Establezca un parámetro en el desencadenante para `dbname`
+```
+wsk trigger update myCloudantTrigger --param dbname testdb
+```
+{: pre}
+
+**Nota**: El desencadenante de cambio de Cloudant utilizado para dar soporte al parámetro `includeDoc`, ya no está soportado.
+  Necesitará volver a crear desencadenantes creados anteriormente con `includeDoc`:
+  Vuelva a crear el desencadenante sin el parámetro `includeDoc`
+  ```
+  wsk trigger delete myCloudantTrigger
+  wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb
+  ```
+  {: pre}
+  Puede seguir los pasos anteriores para crear una secuencia de acciones para obtener el documento e invocar la acción existente.
+  A continuación, actualice la regla para que utilice la nueva secuencia de acciones.
+
 
 ## Uso del paquete Alarm
 {: #openwhisk_catalog_alarm}
@@ -292,30 +322,32 @@ El paquete incluye la información de entrada siguiente.
 La información de entrada `/whisk.system/alarms/alarm` configura un servicio de alarma para activar un suceso desencadenante
 con una frecuencia especificada. Los parámetros son según se indica a continuación:
 
-- `cron`: una serie, basada en la sintaxis crontab de UNIX, que indica cuándo activar el desencadenante en Hora Universal Coordinada (UTC). La serie es una
-secuencia de seis campos separados por espacios: `X X X X X X `. Para obtener más detalles sobre cómo utilizar sintaxis cron, consulte: https://github.com/ncb000gt/node-cron. A continuación se muestran algunos ejemplos de la frecuencia indicada por la serie:
+- `cron`: una serie, basada en la sintaxis crontab de UNIX, que indica cuándo activar el desencadenante en Hora Universal Coordinada (UTC). La serie es una secuencia de cinco campos separados por espacios: `X X X X X`.
+Para obtener más detalles sobre cómo utilizar sintaxis cron, consulte: http://crontab.org. A continuación se muestran algunos ejemplos de la frecuencia indicada por la serie:
 
-  - `* * * * * *`: cada segundo.
-  - `0 * * * * *`: cada minuto en punto.
-  - `* 0 * * * *`: a cada hora en punto.
-  - `0 0 9 8 * *`: at 9:00:00AM (UTC) en el octavo día de cada mes
+  - `* * * * *`: cada minuto en punto.
+  - `0 * * * *`: a cada hora en punto.
+  - `0 */2 * * *`: cada 2 horas (p. ej. 02:00:00, 04:00:00, ...)
+  - `0 9 8 * *`: a las 9:00:00AM (UTC) en el octavo día de cada mes
 
 - `trigger_payload`: el valor de este parámetro pasa a ser el contenido del desencadenante cada vez que se activa
 el desencadenante.
 
 - `maxTriggers`: dejar de activar desencadenantes cuando se alcanza este límite. El valor predeterminado es 1000. Puede establecerlo en un máximo de 10.000. Si intenta establecerlo en más de 10.000, se rechazará la solicitud.
 
-A continuación se muestra un ejemplo de la creación de un desencadenante que se activará una vez cada 20 segundos con
-los valores `name` y `place` en el suceso desencadenante.
+A continuación se muestra un ejemplo de la creación de un desencadenante que se activará una vez cada 2 minutos con los valores `name` y `place` en el suceso desencadenante.
 
   ```
-  wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron "*/20 * * * * *" --param trigger_payload "{\"name\":\"Odin\",\"place\":\"Asgard\"}"
+  wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron "*/2 * * * *" --param trigger_payload "{\"name\":\"Odin\",\"place\":\"Asgard\"}"
   ```
-  {: pre}
 
 Cada suceso generado incluirá como parámetros las propiedades especificadas en el valor `trigger_payload`. En este caso,
 cada suceso desencadenante tendrá los parámetros `name=Odin` y `place=Asgard`.
 
+**Nota**: El parámetro `cron` también da soporte a una sintaxis personalizada de seis campos, donde el primer campo representa segundos.
+Para obtener más detalles sobre cómo utilizar esta sintaxis cron personalizada, consulte: https://github.com/ncb000gt/node-cron.
+A continuación se muestra un ejemplo que utiliza la notación de seis campos:
+  - `*/30 * * * * *`: cada treinta segundos.
 
 ## Uso del paquete Weather
 {: #openwhisk_catalog_weather}
@@ -385,47 +417,104 @@ A continuación se muestra un ejemplo de la creación de un enlace de paquete y 
   {: screen}
 
 
-## Uso del paquete Watson
+## Uso de los paquetes Watson
 {: #openwhisk_catalog_watson}
+Los paquetes Watson ofrecen una forma cómoda de invocar distintas API de Watson.
 
-El paquete `/whisk.system/watson` ofrece una forma cómoda de invocar distintas API de Watson.
+Se proporcionan los siguientes paquetes Watson:
+
+| Paquete | Descripción |
+| --- | --- |
+| `/whisk.system/watson-translator`   | Acciones para que las API Watson conviertan texto e identificación de idioma |
+| `/whisk.system/watson-textToSpeech` | Acciones para que las API Watson conviertan el texto a voz |
+| `/whisk.system/watson-speechToText` | Acciones para que las API Watson conviertan la voz a texto |
+
+**Nota**: El paquete `/whisk.system/watson` actualmente está en desuso, migre a los nuevos paquetes mencionados anteriormente, las nuevas acciones proporcionan la misma interfaz.
+
+### Uso del paquete de Watson Translator
+
+El paquete `/whisk.system/watson-translator` ofrece una forma cómoda de invocar API Watson a convertir.
 
 El paquete incluye las acciones siguientes.
 
 | Entidad | Tipo | Parámetros | Descripción |
 | --- | --- | --- | --- |
-| `/whisk.system/watson` | paquete | usuario, contraseña | Acciones para las API de analíticas de Watson |
-| `/whisk.system/watson/translate` | acción | translateFrom, translateTo, translateParam, username, password | Traducir texto |
-| `/whisk.system/watson/languageId` | acción | payload, username, password | Identificar idioma |
-| `/whisk.system/watson/speechToText` | acción | payload, content_type, encoding, username, password, continuous, inactivity_timeout, interim_results, keywords, keywords_threshold, max_alternatives, model, timestamps, watson-token, word_alternatives_threshold, word_confidence, X-Watson-Learning-Opt-Out | Convertir audio en texto |
-| `/whisk.system/watson/textToSpeech` | acción | payload, voice, accept, encoding, username, password | Convertir texto en audio |
+| `/whisk.system/watson-translator` | paquete | usuario, contraseña | Acciones para que las API Watson conviertan texto e identificación de idioma  |
+| `/whisk.system/watson-translator/translator` | acción | payload, translateFrom, translateTo, translateParam, username, password | Traducir texto |
+| `/whisk.system/watson-translator/languageId` | acción | payload, username, password | Identificar idioma |
 
-Se recomienda la creación de un enlace de paquete con los valores de `username` and `password`. Así, no necesita especificar estas credenciales cada vez que invoque las acciones del paquete.
+**Nota**: El paquete `/whisk.system/watson` está en desuso, incluidas las acciones `/whisk.system/watson/translate` y `/whisk.system/watson/languageId`.
 
-### Traducción de texto
+#### Configuración del paquete de Watson Translator en Bluemix
+
+Si utiliza OpenWhisk desde Bluemix, OpenWhisk crea automáticamente enlaces de paquete para sus instancias de servicio de Bluemix Watson.
+
+1. Cree una instancia de servicio de Watson Translator en su [panel de control](http://console.ng.Bluemix.net) de Bluemix.
+
+  Asegúrese de recordar el nombre de la instancia de servicio y la organización y el espacio de Bluemix en el que se encuentra.
+
+2. Asegúrese de que su CLI de OpenWhisk esté en el espacio de nombres correspondiente para la organización y espacio de Bluemix que ha utilizado en el paso anterior.
+
+  ```
+  wsk property set --namespace myBluemixOrg_myBluemixSpace
+  ```
+  {: pre}
+
+  Si quiere puede utilizar `wsk property set --namespace` para establecer un espacio de nombres de una lista de
+aquellos que tenga accesibles.
+
+3. Actualizar los paquetes de su espacio de nombres. La renovación crea automáticamente un enlace de paquete para la instancia de servicio de Watson que ha creado.
+
+  ```
+  wsk package refresh
+  ```
+  {: pre}
+  ```
+  created bindings:
+  Bluemix_Watson_Translator_Credentials-1
+  ```
+  {: screen}
+
+  ```
+  wsk package list
+  ```
+  {: pre}
+  
+  ```
+  packages
+  /myBluemixOrg_myBluemixSpace/Bluemix_Watson_Translator_Credentials-1 private
+  ```
+  {: screen}
+
+
+#### Configuración de un paquete de Watson Translator fuera de Bluemix
+
+Si no utiliza OpenWhisk en Bluemix o si quiere configurar Watson Translator fuera de Bluemix, debe crear manualmente un enlace de paquete para el servicio de Watson Translator. Necesita el nombre de usuario del servicio de Watson Translator y la contraseña.
+
+- Cree un enlace de paquete configurado para el servicio de Watson Translator.
+
+  ```
+  wsk package bind /whisk.system/watson-translator myWatsonTranslator -p username MYUSERNAME -p password MYPASSWORD
+  ```
+  {: pre}
+
+
+#### Traducción de texto
 {: #openwhisk_catalog_watson_translate}
 
-La acción `/whisk.system/watson/translate` traduce texto de un idioma a otro. Los parámetros son según se indica a continuación:
+La acción `/whisk.system/watson-translator/translator` traduce texto de un idioma a otro. Los parámetros son según se indica a continuación:
 
 - `username`: el nombre de usuario de la API de Watson.
 - `password`: contraseña de la API de Watson.
+- `payload`: el texto que se debe traducir.
 - `translateParam`: el parámetro de entrada que indica el texto a traducir. Por ejemplo, si es `translateParam=payload`, el valor del parámetro `payload` que se pasa a la acción, se traduce.
 - ` translateFrom`: un código de dos dígitos del lenguaje origen.
 - `translateTo`: un código de dos dígitos del idioma de destino.
 
-A continuación se muestra un ejemplo de la creación de un enlace de paquete y la traducción de algún texto.
-
-1. Crear un enlace de paquete con sus credenciales de Watson.
+- Invoque la acción `translator` en su enlace de paquete para traducir algún texto de inglés a español.
 
   ```
-  wsk package bind /whisk.system/watson myWatson --param username MY_WATSON_USERNAME --param password MY_WATSON_PASSWORD
-  ```
-  {: pre}
-
-2. Invocar la acción `translate` en su enlace de paquete para traducir algún texto de inglés a español.
-
-  ```
-  wsk action invoke myWatson/translate --blocking --result --param payload "Blue skies ahead" --param translateParam payload --param translateFrom en --param translateTo fr
+  wsk action invoke myWatsonTranslator/translator --blocking --result --param payload 'Blue skies ahead' --param translateFrom 'en' --param translateTo 'fr'
   ```
   {: pre}
 
@@ -437,28 +526,19 @@ A continuación se muestra un ejemplo de la creación de un enlace de paquete y 
   {: screen}
 
 
-### Identificación del idioma de un texto
+#### Identificación del idioma de un texto
 {: #openwhisk_catalog_watson_identifylang}
 
-La acción `/whisk.system/watson/languageId` identifica el idioma de un texto. Los parámetros son según se indica a continuación:
+La acción `/whisk.system/watson-translator/languageId` identifica el idioma de algún texto. Los parámetros son según se indica a continuación:
 
 - `username`: el nombre de usuario de la API de Watson.
 - `password`: contraseña de la API de Watson.
 - `payload`: el texto a identificar.
 
-A continuación se muestra un ejemplo de la creación de un enlace de paquete y la identificación del idioma de un texto.
-
-1. Crear un enlace de paquete con sus credenciales de Watson.
+- Invocar la acción `languageId` en su enlace de paquete para identificar el idioma.
 
   ```
-  wsk package bind /whisk.system/watson myWatson -p username MY_WATSON_USERNAME -p password MY_WATSON_PASSWORD
-  ```
-  {: pre}
-
-2. Invocar la acción `languageId` en su enlace de paquete para identificar el idioma.
-
-  ```
-  wsk action invoke myWatson/languageId --blocking --result --param payload "Ciel bleu a venir"
+  wsk action invoke myWatsonTranslator/languageId --blocking --result --param payload 'Ciel bleu a venir'
   ```
   {: pre}
   ```
@@ -471,10 +551,76 @@ A continuación se muestra un ejemplo de la creación de un enlace de paquete y 
   {: screen}
 
 
-### Conversión de texto a habla
+### Uso del paquete Watson Text to Speech
 {: #openwhisk_catalog_watson_texttospeech}
 
-La acción `/whisk.system/watson/textToSpeech` convierte texto en un texto hablado. Los parámetros son según se indica a continuación:
+El paquete `/whisk.system/watson-textToSpeech` ofrece una forma cómoda de invocar API Watson para convertir el texto a voz.
+
+El paquete incluye las acciones siguientes.
+
+| Entidad | Tipo | Parámetros | Descripción |
+| --- | --- | --- | --- |
+| `/whisk.system/watson-textToSpeech` | paquete | usuario, contraseña | Acciones para que las API Watson conviertan el texto a voz |
+| `/whisk.system/watson-textToSpeech/textToSpeech` | acción | payload, voice, accept, encoding, username, password | Convertir texto en audio |
+
+**Nota**: El paquete `/whisk.system/watson` está en desuso, incluida la acción `/whisk.system/watson/textToSpeech`.
+
+#### Configuración del paquete Watson Text to Speech en Bluemix
+
+Si utiliza OpenWhisk desde Bluemix, OpenWhisk crea automáticamente enlaces de paquete para sus instancias de servicio de Bluemix Watson.
+
+1. Cree una instancia de servicio Watson Text to Speech en el [panel de control](http://console.ng.Bluemix.net) de Bluemix.
+
+  Asegúrese de recordar el nombre de la instancia de servicio y la organización y el espacio de Bluemix en el que se encuentra.
+
+2. Asegúrese de que su CLI de OpenWhisk esté en el espacio de nombres correspondiente para la organización y espacio de Bluemix que ha utilizado en el paso anterior.
+
+  ```
+  wsk property set --namespace myBluemixOrg_myBluemixSpace
+  ```
+  {: pre}
+
+  Si quiere puede utilizar `wsk property set --namespace` para establecer un espacio de nombres de una lista de
+aquellos que tenga accesibles.
+
+3. Actualizar los paquetes de su espacio de nombres. La renovación crea automáticamente un enlace de paquete para la instancia de servicio de Watson que ha creado.
+
+  ```
+  wsk package refresh
+  ```
+  {: pre}
+  ```
+  created bindings:
+  Bluemix_Watson_TextToSpeech_Credentials-1
+  ```
+  {: screen}
+
+  ```
+  wsk package list
+  ```
+  {: pre}
+  ```
+  packages
+  /myBluemixOrg_myBluemixSpace/Bluemix_Watson_TextToSpeec_Credentials-1 private
+  ```
+  {: screen}
+
+
+#### Configuración de un paquete Watson Text to Speech fuera de Bluemix
+
+Si no utiliza OpenWhisk en Bluemix o si quiere configurar Watson Text to Speech fuera de Bluemix, debe crear manualmente un enlace de paquete para el servicio de Watson Text to Speech. Necesita el nombre de usuario del servicio de Watson Text to Speech y la contraseña.
+
+- Cree un enlace de paquete configurado para el servicio de Watson Speech to Text.
+
+  ```
+  wsk package bind /whisk.system/watson-speechToText myWatsonTextToSpeech -p username MYUSERNAME -p password MYPASSWORD
+  ```
+  {: pre}
+
+
+#### Conversión de texto a habla
+{: #openwhisk_catalog_watson_speechtotext}
+La acción `/whisk.system/watson-speechToText/textToSpeech` convierte texto en un texto hablado. Los parámetros son según se indica a continuación:
 
 - `username`: el nombre de usuario de la API de Watson.
 - `password`: contraseña de la API de Watson.
@@ -483,19 +629,11 @@ La acción `/whisk.system/watson/textToSpeech` convierte texto en un texto habla
 - `accept`: formato del archivo de audio.
 - `encoding`: codificación de los datos binarios del habla.
 
-A continuación se muestra un ejemplo de cómo crear un enlace de paquete y convertir texto en habla.
 
-1. Crear un enlace de paquete con sus credenciales de Watson.
-
-  ```
-  wsk package bind /whisk.system/watson myWatson -p username MY_WATSON_USERNAME -p password MY_WATSON_PASSWORD
-  ```
-  {: pre}
-
-2. Invoque la acción `textToSpeech` en el enlace del paquete para convertir el texto.
+- Invoque la acción `textToSpeech` en el enlace del paquete para convertir el texto.
 
   ```
-  wsk action invoke myWatson/textToSpeech --blocking --result --param payload Hey. --param voice en-US_MichaelVoice --param accept audio/wav --param encoding base64
+  wsk action invoke myWatsonTextToSpeech/textToSpeech --blocking --result --param payload 'Hey.' --param voice 'en-US_MichaelVoice' --param accept 'audio/wav' --param encoding 'base64'
   ```
   {: pre}
   ```
@@ -505,11 +643,78 @@ A continuación se muestra un ejemplo de cómo crear un enlace de paquete y conv
   ```
   {: screen}
 
-
-### Conversión de habla a texto
+### Uso del paquete Watson Speech to Text
 {: #openwhisk_catalog_watson_speechtotext}
 
-La acción `/whisk.system/watson/speechToText` convierte el audio en texto. Los parámetros son según se indica a continuación:
+El paquete `/whisk.system/watson-speechToText` ofrece una forma cómoda de invocar API Watson para convertir la voz a texto.
+
+El paquete incluye las acciones siguientes.
+
+| Entidad | Tipo | Parámetros | Descripción |
+| --- | --- | --- | --- |
+| `/whisk.system/watson-speechToText` | paquete | usuario, contraseña | Acciones para que las API Watson conviertan la voz a texto |
+| `/whisk.system/watson-speechToText/speechToText` | acción | payload, content_type, encoding, username, password, continuous, inactivity_timeout, interim_results, keywords, keywords_threshold, max_alternatives, model, timestamps, watson-token, word_alternatives_threshold, word_confidence, X-Watson-Learning-Opt-Out | Convertir audio en texto |
+
+**Nota**: El paquete `/whisk.system/watson` está en desuso, incluida la acción `/whisk.system/watson/speechToText`.
+
+
+#### Configuración del paquete Watson Speech to Text en Bluemix
+
+Si utiliza OpenWhisk desde Bluemix, OpenWhisk crea automáticamente enlaces de paquete para sus instancias de servicio de Bluemix Watson.
+
+1. Cree una instancia de servicio de Watson Speech to Text en el [panel de control](http://console.ng.Bluemix.net) de Bluemix.
+
+  Asegúrese de recordar el nombre de la instancia de servicio y la organización y el espacio de Bluemix en el que se encuentra.
+
+2. Asegúrese de que su CLI de OpenWhisk esté en el espacio de nombres correspondiente para la organización y espacio de Bluemix que ha utilizado en el paso anterior.
+
+  ```
+  wsk property set --namespace myBluemixOrg_myBluemixSpace
+  ```
+  {: pre}
+
+  Si quiere puede utilizar `wsk property set --namespace` para establecer un espacio de nombres de una lista de
+aquellos que tenga accesibles.
+
+3. Actualizar los paquetes de su espacio de nombres. La renovación crea automáticamente un enlace de paquete para la instancia de servicio de Watson que ha creado.
+
+  ```
+  wsk package refresh
+  ```
+  {: pre}
+  ```
+  created bindings:
+  Bluemix_Watson_SpeechToText_Credentials-1
+  ```
+  {: screen}
+
+  ```
+  wsk package list
+  ```
+  {: pre}
+  ```
+  packages
+  /myBluemixOrg_myBluemixSpace/Bluemix_Watson_SpeechToText_Credentials-1 private
+  ```
+  {: screen}
+
+
+#### Configuración de un paquete Watson Speech to Text fuera de Bluemix
+
+Si no utiliza OpenWhisk en Bluemix o si quiere configurar Watson Speech to Text fuera de Bluemix, debe crear manualmente un enlace de paquete para el servicio de Watson Speech to Text. Necesita el nombre de usuario del servicio de Watson Speech to Text y la contraseña.
+
+- Cree un enlace de paquete configurado para el servicio de Watson Speech to Text.
+
+  ```
+  wsk package bind /whisk.system/watson-speechToText myWatsonSpeechToText -p username MYUSERNAME -p password MYPASSWORD
+  ```
+  {: pre}
+
+
+
+#### Conversión de habla a texto
+
+La acción `/whisk.system/watson-speechToText/speechToText` convierte el audio en texto. Los parámetros son según se indica a continuación:
 
 - `username`: el nombre de usuario de la API de Watson.
 - `password`: contraseña de la API de Watson.
@@ -529,19 +734,11 @@ La acción `/whisk.system/watson/speechToText` convierte el audio en texto. Los 
 - `word_confidence`: indica si se devuelve para cada palabra una medida de confianza entre 0 y 1.
 - `X-Watson-Learning-Opt-Out`: indica si se debe renunciar a la recopilación de datos para la llamada.
  
-A continuación se muestra un ejemplo de cómo crear un enlace de paquete y convertir habla en texto.
 
-1. Crear un enlace de paquete con sus credenciales de Watson.
-
-  ```
-  wsk package bind /whisk.system/watson myWatson -p username MY_WATSON_USERNAME -p password MY_WATSON_PASSWORD
-  ```
-  {: pre}
-
-2. Invoque la acción `speechToText` en el enlace de paquete para convertir el audio codificado.
+- Invoque la acción `speechToText` en el enlace de paquete para convertir el audio codificado.
 
   ```
-  wsk action invoke myWatson/speechToText --blocking --result --param payload <base64 encoding of a .wav file> --param content_type audio/wav --param encoding base64
+  wsk action invoke myWatsonSpeechToText/speechToText --blocking --result --param payload <base64 encoding of a .wav file> --param content_type 'audio/wav' --param encoding 'base64'
   ```
   {: pre}
   ```
@@ -550,7 +747,7 @@ A continuación se muestra un ejemplo de cómo crear un enlace de paquete y conv
   }
   ```
   {: screen}
-  
+ 
  
 ## Uso del paquete Slack
 {: #openwhisk_catalog_slack}

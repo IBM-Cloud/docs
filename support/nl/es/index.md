@@ -183,7 +183,7 @@ Niveles | Gratuito |  Básico | Estándar | Premium
 --- | --- | --- | --- | --- |
 Descripción | Soporte para todos los clientes de prueba de Bluemix.  |  Soporte para entornos de no producción o cargas de trabajo donde no son necesarios las gravedades tradicionales ni los tiempos de respuesta. | Soporte para entornos con un número limitado de aplicaciones críticas de la empresa. Los clientes de {{site.data.keyword.Bluemix_notm}} dedicado y {{site.data.keyword.Bluemix_notm}} local reciben soporte estándar. | Soporte para entornos de misión crítica que tienen una dependencia estratégica en {{site.data.keyword.Bluemix_notm}}. 
 Soporte de gravedad alta |  N/A | N/A | Incluido | Idioma de soporte incluido | Inglés | Inglés | Inglés | CSM (Client Success Manager) asignado para el inglés | No se incluye | No se incluye | No se incluye | Se incluye a las<br> 8 horas por semana
-*Tabla 1. Niveles de soporte*
+{: caption="Table 1. Support levels" caption-side="top"}
 
 ### Apertura de una incidencia de soporte
 {: #open-ticket}
@@ -276,7 +276,7 @@ Gravedad 1 | <strong>El servicio o impacto empresarial crítico está inactivo.<
 Gravedad 2 | <strong>Impacto empresarial importante.</strong> <br> Una función o característica de servicio tiene el uso gravemente restringido o corre el peligro de no cumplir los plazos de la empresa. | <ul><li><strong>Gratuito:</strong> N/D</li><li><strong>Básico:</strong> N/D </li><li><strong>Estándar:</strong> Dentro de 2 horas</li><li><strong>Premium:</strong> Dentro de 90 minutos </li></ul> | <ul><li><strong>Gratuito:</strong> N/D</li><li><strong>Básico:</strong> N/D </li><li><strong>Estándar:</strong> Horas de operación </li><li><strong>Premium:</strong> Horas de operación </li></ul>
 Gravedad 3 | <strong>Impacto empresarial menor.</strong> <br> Una función o característica de servicio se puede utilizar, pero tiene algunos problemas que afectan su uso. No ha causado ningún impacto crítico en operaciones. | <ul><li><strong>Gratuito:</strong> N/D</li><li><strong>Básico:</strong> N/D </li><li><strong>Estándar:</strong> Dentro de 4 horas</li><li><strong>Premium:</strong> Dentro de 2 horas</li></ul> | <ul><li><strong>Gratuito:</strong> N/D</li><li><strong>Básico:</strong> N/D </li><li><strong>Estándar:</strong> Horas de operación </li><li><strong>Premium:</strong> Horas de operación </li></ul>
 Gravedad 4 | <strong>Impacto empresarial mínimo.</strong> <br> Una consulta o solicitud no técnica. | <ul><li><strong>Gratuito:</strong> Máximo esfuerzo </li><li><strong>Básico:</strong> Máximo esfuerzo</li><li><strong>Estándar:</strong> Dentro de 8 horas</li><li><strong>Premium:</strong> Dentro de 4 horas</li></ul> | <ul><li><strong>Gratuito:</strong> Horas de operación </li><li><strong>Básico:</strong> Horas de operación </li><li><strong>Estándar:</strong> Horas de operación </li><li><strong>Premium:</strong> Horas de operación </li></ul>
-*Tabla 2. Definición de gravedad y tiempo de respuesta*
+{: caption="Table 2. Severity definition and response time" caption-side="top"}
 
 
 ### Notificar una vulnerabilidad de seguridad potencial
@@ -355,8 +355,7 @@ La siguiente tabla lista los idiomas nacionales soportados y los códigos de idi
 | Español | es |
 | Chino simplificado | zh_CN |
 | Chino tradicional | zh_TW |
-
-*Tabla 3. Idiomas nacionales soportados y códigos de idioma*
+{: caption="Table 3. Supported national languages and language codes" caption-side="top"}
 
 
 ## Encuestas de satisfacción para el soporte de {{site.data.keyword.Bluemix_notm}}  

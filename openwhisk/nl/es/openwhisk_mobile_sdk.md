@@ -97,7 +97,7 @@ wsk sdk install iOS
 ```
 {: pre}
 
-Este mandato descarga un archivo comprimido que contiene la app de iniciador. Dentro del directorio del proyecto está el podfile. 
+Este mandato descarga un archivo comprimido que contiene la app de inicio. Dentro del directorio del proyecto está el podfile.
 
 Para instalar el SDK, especifique el mandato siguiente:
 ```

@@ -357,8 +357,7 @@ para cada uno de los estándares.
 |{{site.data.keyword.mql}}				|S	|S	|S	|	 		|
 |{{site.data.keyword.SecureGateway}}			|S	|S |	|	 		|
 |{{site.data.keyword.sescashort}}     |S |S |S	|  |
-
-*Tabla 1. Plataforma y conformidad de servicios*
+{: caption="Table 1. Platform and service compliance" caption-side="top"}
 
 # Enlaces relacionados
 {: #rellinks}

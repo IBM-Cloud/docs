@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016
-lastupdated: "2016-11-03"
+lastupdated: "2016-12-01"
  
 
 ---
@@ -21,6 +21,8 @@ lastupdated: "2016-11-03"
 Si tiene una cuenta de prueba de {{site.data.keyword.Bluemix_notm}} y desea acceder al panel de control Infraestructura, debe actualizar a una cuenta de Pago según uso de {{site.data.keyword.Bluemix_notm}}. También debe actualizar si desea utilizar otros recursos facturables que no están disponibles dentro de una cuenta de prueba, o si su cuenta de prueba finaliza. 
 
 Puede unificar las cuentas de facturación existentes de {{site.data.keyword.Bluemix_notm}} y SoftLayer enlazando las cuentas. Cuando enlace las cuentas, se le facturará mediante {{site.data.keyword.Bluemix_notm}} para ambos recursos de {{site.data.keyword.Bluemix_notm}} y SoftLayer.
+
+**Atención:** Una cuenta de suscripción de {{site.data.keyword.Bluemix_notm}} no se puede enlazar con una cuenta de SoftLayer. Para acceder al panel de control Infraestructura, debe crear una cuenta Pago según uso, una segunda cuenta, que se enlaza automáticamente con una cuenta SoftLayer. A continuación, recibirá dos facturas, una para cada cuenta de {{site.data.keyword.Bluemix_notm}}. Aunque los recursos de la infraestructura se facturarán en una cuenta Pago según uso independiente, los recursos se pueden utilizar con aplicaciones y servicios en su cuenta de suscripción. Por ejemplo, si activa un servicio de Watson en su cuenta de suscripción, puede copiar las credenciales de servicio y, a continuación, añadir las credenciales a la aplicación nativa que se obtiene de la cuenta Pago según uso.
 {:shortdesc}
 
 ## Actualización a una cuenta de Pago según uso de {{site.data.keyword.Bluemix_notm}}
@@ -67,13 +69,6 @@ Después de enlazar las cuentas, el enlace **Ir a {{site.data.keyword.Bluemix_no
 
 Las ofertas de infraestructura de {{site.data.keyword.Bluemix_notm}} están conectadas a una red de tres capas, que segmenta tráfico público, privado y de gestión. Las ofertas de infraestructura de una cuenta de {{site.data.keyword.Bluemix_notm}} del cliente pueden transferir datos entre sí mediante la red privada sin coste adicional. Las ofertas de infraestructura, como los servidores nativos, los servidores virtuales y el almacenamiento en nube, se conectan con otras aplicaciones y servicios del catálogo de {{site.data.keyword.Bluemix_notm}}, como por ejemplo servicios, contenedores o tiempos de ejecución de Watson, en la red pública. La transferencia de datos entre estos dos tipos de ofertas se mide y se carga en tasas estándares de ancho de banda de red públicas.
 
-## Uso de créditos para {{site.data.keyword.Bluemix_notm}} cuando las cuentas están enlazadas
-{: #slcredit}
-
-Cuando enlace la cuenta de {{site.data.keyword.Bluemix_notm}} desde su cuenta de SoftLayer, recibirá un crédito de 200,00 $ que puede utilizar sólo dentro de {{site.data.keyword.Bluemix_notm}}. El crédito debe utilizarse en el plazo de 30 días después de enlazar las cuentas.
-
-Para obtener información sobre cómo ver los créditos y la fecha de caducidad, consulte [Ver créditos](https://console.ng.bluemix.net/docs/pricing/index.html#credits).
-
 ## Invitación a miembros del equipo de SoftLayer a {{site.data.keyword.Bluemix_notm}}
 {: #invite_users}
 
@@ -111,7 +106,7 @@ Para empezar el cambio del nombre de usuario de SoftLayer existente a un ID de I
  
 Si es usted un cliente nuevo, se le pedirá una dirección de correo electrónico para la cuenta del ID de IBM existen, o para crear una cuenta nueva del ID de IBM, cuando finalice el pedido. 
 
-### Correlación de varias cuentas de SoftLayer en un ID de IBM
+### Correlación de varias cuentas de SoftLayer con un ID de IBM
 {: #map_multiple_accounts}
 
 Puede asociar un ID de IBM con varias cuentas de SoftLayer utilizando una dirección de correo electrónico de ID de IBM existente al configurar la cuenta. Sólo se puede correlacionar un usuario de SoftLayer para cada cuenta en el ID de IBM único. El ID de IBM debe ser exclusivo dentro de cada cuenta de SoftLayer. Sin embargo, un usuario con acceso a varias cuentas de SoftLayer puede utilizar un ID de IBM para acceder a varias cuentas de SoftLayer.
@@ -135,7 +130,7 @@ Por ejemplo, ¿ha querido alguna vez añadir capacidades cognitivas de Watson a 
 
 Puede obtener conocimientos sobre *Insights and Cognitive* invocando las API de Watson desde sus aplicaciones en SoftLayer para personalizarlas. O bien puede utilizar servicios de *Datos y análisis* para realizar un análisis más profundo del rendimiento para sus aplicaciones. Asimismo, puede seleccionar una base de datos como servicio cuando deje la gestión en manos de {{site.data.keyword.Bluemix_notm}}.
 
-Modernice el desarrollo de sus aplicaciones utilizando contenedores con servicios como {{site.data.keyword.activedeployshort}} y {{site.data.keyword.deliverypipeline}}. Luego puede utilizar el servicio {{site.data.keyword.vpn_short}} para regresar de nuevo a SoftLayer y conectar su contenedor de una red privada a la red privada de SoftLayer. Todos los cargos por uso de los recursos y servicios de cálculo se reflejan en la factura de {{site.data.keyword.Bluemix_notm}}. 
+Modernice el desarrollo de sus aplicaciones utilizando contenedores con servicios como {{site.data.keyword.activedeployshort}} y {{site.data.keyword.deliverypipeline}}. Luego puede utilizar el servicio {{site.data.keyword.vpn_short}} para comunicarse con SoftLayer para conectar el contenedor de una red privada a la red privada de SoftLayer. Todos los cargos por uso de los recursos y servicios de cálculo se reflejan en la factura de {{site.data.keyword.Bluemix_notm}}. 
 
 ### Servicios de {{site.data.keyword.Bluemix_notm}} basados en API
 No todos los servicios de {{site.data.keyword.Bluemix_notm}} pueden utilizarse con SoftLayer. Los siguientes servicios se pueden configurar para ejecutarse con el código de la aplicación:

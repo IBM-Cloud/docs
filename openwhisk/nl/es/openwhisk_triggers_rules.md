@@ -188,5 +188,17 @@ Como ejemplo, cree una regla que invoque la acción hello siempre que se publiqu
   Verá que la acción hello ha recibido la carga del suceso y ha devuelto la serie prevista.
 
 Puede crear varias reglas que se asocien con el mismo desencadenante con distintas acciones.
-El desencadenante y la acción que componen una regla deben estar en el mismo espacio de nombre y no pueden pertenecer a un paquete.
-Si desea utilizar una acción que pertenece a un paquete, puede copiar la acción en el espacio de nombres. Por ejemplo: `wsk action create echo --copy /whisk.system/utils/echo`.
+Los desencadenantes y reglas no pueden pertenecer a un paquete. La regla puede estar asociada a una acción
+que pertenece a un paquete; sin embargo, por ejemplo:
+  ```
+  wsk rule create recordLocation locationUpdate /whisk.system/utils/echo
+  ```
+  {: pre}
+
+También puede utilizar reglas con secuencias. Por ejemplo, se puede crear una secuencia de acción
+`recordLocationAndHello` que se active mediante la regla `anotherRule`.
+  ```
+  wsk action create recordLocationAndHello --sequence /whisk.system/utils/echo,hello
+  wsk rule create anotherRule locationUpdate recordLocationAndHello
+  ```
+  {: pre}

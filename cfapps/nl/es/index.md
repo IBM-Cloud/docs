@@ -65,5 +65,3 @@ Utilice los siguientes consejos para desarrollar apps web:
 <tr><td>Número de rutas</td> <td>500</td>
 </table>
 </dd></dl>
-
-*Tabla 1. Límites de recursos de {{site.data.keyword.Bluemix_notm}} para una cuenta de prueba*

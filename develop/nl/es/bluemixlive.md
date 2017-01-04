@@ -3,10 +3,8 @@
 
 
 copyright:
-
-  years: 2015 2016
-
-
+  years: 2015，2016
+lastupdated: "2016-10-19"
 
 ---
 
@@ -15,11 +13,10 @@ copyright:
 {:new_window: target="_blank"}
 {:pre: .pre}
 
-#{{site.data.keyword.Bluemix_notm}} Live Sync {: #live-sync}
+#{{site.data.keyword.Bluemix_notm}} Live Sync
+{: #live-sync}
 
-*Última actualización: 24 de junio de 2016*
-{: .last-updated}  
-
+ 
 Si está creando una app Node.js, puede utilizar {{site.data.keyword.Bluemix}} Live Sync para actualizar rápidamente la instancia de la app que se ejecuta en {{site.data.keyword.Bluemix_notm}} y desarrollarla como lo haría en el escritorio sin tener que volver a desplegarla.   
 {: shortdesc}
 
@@ -46,11 +43,11 @@ app en la modalidad de edición en directo, puede depurar la app en ejecución.
 
 En el siguiente diagrama se muestra el proceso de Bluemix Live Sync.
 
-*Figura 1. Proceso de Bluemix Live Sync*
+Figura 1. Proceso de Bluemix Live Sync
 ![Imagen del proceso de Bluemix Live Sync](images/bluemix-live-sync.png)
 
 Si está desarrollando una app Java
-que se ejecuta en Liberty, puede depurarla de forma remota mediante [Eclipse Tools for Bluemix](../manageapps/eclipsetools/eclipsetools.html#eclipsetools).
+que se ejecuta en Liberty, puede depurarla de forma remota mediante [Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html#eclipsetools).
 
 ##Desktop Sync {: #desktop-sync}
 
@@ -81,7 +78,7 @@ Para obtener más detalles sobre los mandatos, consulte [Mandatos de Bluemix Liv
 <pre class="codeblock">bl login</pre>
 
 <strong>Nota:</strong> su ID de usuario para DevOps Services puede ser un ID de IBM o un ID federado (ID corporativo). Si utiliza la autenticación federada para iniciar sesión en su cliente de línea de mandatos Bluemix Live Sync, debe utilizar una señal de acceso personal en lugar de una contraseña. Si no utiliza autenticación federada, el ID de IBM y la contraseña funcionarán con todos los clientes. Para obtener más información sobre la creación de una señal de acceso personal, consulte
-<a class="xref" href="https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/" target="_blank" alt="Bluemix DevOps Services"> ¿Qué es la autenticación federada y cómo me afecta?</a> 
+<a class="xref" href="https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/" target="_blank" alt="Bluemix DevOps Services"> ¿Qué es la autenticación federada y cómo me afecta?</a>
 </li>
 
 <li>Consulte la lista de proyectos disponibles para sincronizar {{site.data.keyword.Bluemix_notm}} Live Sync introduciendo el siguiente mandato:
@@ -228,7 +225,7 @@ Puede utilizar la interfaz de línea de mandatos **bl** para realizar las tareas
 * Ver la lista de los proyectos que se pueden sincronizar.
 * Ver el estado de las apps en ejecución.
 
-Para obtener más información sobre cómo descargar y utilizar el mandato bl, consulte [Bluemix Live Sync](../develop/bluemixlive.html).
+Para obtener más información sobre cómo descargar y utilizar el mandato bl, consulte [Bluemix Live Sync](/docs/develop/bluemixlive.html).
 
 ## Mandatos bl
 {: #bl_commands}

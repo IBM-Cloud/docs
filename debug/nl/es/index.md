@@ -131,7 +131,7 @@ Cloud Foundry en la que se aloja {{site.data.keyword.Bluemix_notm}}. Para que se
 SystemErr respectivamente.
   * Para apps Node.js, puede modificar la función console.log para que escriba específicamente en un archivo del directorio logs.
   * Para las apps PHP, puede utilizar la función error_log para escribir en un archivo del directorio de logs.
-  * Para las apps Python, puede hacer que el registrador escriba en un archivo del directorio logs: logging.basicConfig(filename='../../logs/example.log',level=logging.DEBUG)
+  * Para las aplicaciones Python, puede hacer que el registrador escriba en un archivo del directorio logs: `logging.basicConfig(filename='/docs/logs/example.log',level=logging.DEBUG)`
   * Para apps Ruby, puede hacer que el registrador escriba en un archivo del directorio logs.
 
 

@@ -25,7 +25,6 @@ Si tiene acceso de administrador para {{site.data.keyword.Bluemix}} Local o {{si
 
 *Tabla 1. Tareas administrativas para gestionar la instancia local o dedicada de {{site.data.keyword.Bluemix_notm}}*
 
-
 | ¿Qué puedo hacer? | Detalles |    
 |----------------|---------|
 |Supervisar el uso del sistema | Pulse **ADMINISTRACIÓN &gt; USO**. Visualice la información del sistema, supervise el uso de la CPU y planifique el uso para tomar las mejores decisiones para su empresa. Consulte [Visualización de información de uso](/docs/admin/index.html#oc_resource).|
@@ -440,7 +439,7 @@ organización que ha seleccionado, puede ver la información de uso siguiente:
 - Gráfico de asignación de aplicaciones que muestra qué aplicaciones se incluyen en la cuota de memoria utilizada.
 - Gráfico de uso de aplicaciones medidas que muestra un informe de tres meses de los GB-horas usados por app desplegada. Puede
 seleccionar la **Vista de lista** para ver los datos de todas las aplicaciones, incluyendo la asignación de memoria por app y
-el uso de GB-hora medido para los últimos tres meses. 
+el uso de GB-hora medido para los últimos tres meses.
 
 Para obtener más información sobre la visualización del uso por organización, el ajuste de planes de cuota y la gestión de sus
 organizaciones, consulte [Administración de organizaciones](../admin/index.html#oc_organizations).
@@ -857,7 +856,7 @@ organización que ha seleccionado, puede ver la información de uso siguiente:
   - Gráfico de asignación de aplicaciones que muestra qué aplicaciones se incluyen en la cuota de memoria utilizada.
   - Gráfico de uso de aplicaciones medidas que muestra un informe de tres meses de los GB-horas usados por app desplegada. Puede
 seleccionar la **Vista de lista** para ver los datos de todas las aplicaciones, incluyendo la asignación de memoria por app y
-el uso de GB-hora medido para los últimos tres meses. 
+el uso de GB-hora medido para los últimos tres meses.
 
 - Para editar el nombre de la organización y añadir o eliminar gestores, pulse el nombre de la organización en la lista y siga las indicaciones en pantalla.
 
@@ -1291,16 +1290,16 @@ El siguiente ejemplo muestra la salida de este mandato:
 ## API para métricas (experimental)
 {: #envappmetricsapi}
 
-Puede utilizar dos API experimentales para obtener métricas sobre el entorno o las aplicaciones. Ambas API devuelven una matriz de puntos de datos correspondientes a las métricas que ha solicitado durante el periodo de tiempo especificado. 
+Puede utilizar dos API experimentales para obtener métricas sobre el entorno o las aplicaciones. Ambas API devuelven una matriz de puntos de datos correspondientes a las métricas que ha solicitado durante el periodo de tiempo especificado.
 
 **Notas**:
 
-1. Un usuario puede realizar un máximo de 200 solicitudes de API para métricas por hora. 
-2. Cada solicitud de API devuelve un máximo de 200 puntos de datos por solicitud. Si hay más datos disponibles, se proporciona un URL en la respuesta para cargar el siguiente conjunto de datos. 
+1. Un usuario puede realizar un máximo de 200 solicitudes de API para métricas por hora.
+2. Cada solicitud de API devuelve un máximo de 200 puntos de datos por solicitud. Si hay más datos disponibles, se proporciona un URL en la respuesta para cargar el siguiente conjunto de datos.
 
 ## Obtención de métricas sobre el entorno 
 
-Puede utilizar la API de entorno experimental para obtener información sobre el entorno durante el periodo de tiempo que especifique. Se devuelven los puntos de datos disponibles dentro del periodo de tiempo que especifique. Se registran datos cada hora aproximadamente. Si, por ejemplo, ha solicitado seis horas de datos de CPI para el entorno, la respuesta incluirá datos de CPU correspondientes a cada una de las seis horas solicitadas. 
+Puede utilizar la API de entorno experimental para obtener información sobre el entorno durante el periodo de tiempo que especifique. Se devuelven los puntos de datos disponibles dentro del periodo de tiempo que especifique. Se registran datos cada hora aproximadamente. Si, por ejemplo, ha solicitado seis horas de datos de CPU para el entorno, la respuesta incluirá datos de CPU correspondientes a cada una de las seis horas solicitadas.
 
 ### Parámetros de consulta de métricas del entorno
 
@@ -1320,7 +1319,6 @@ Con los siguientes parámetros de consulta puede obtener métricas correspondien
 ### Formato de los datos de las métricas del entorno
 
 En las secciones siguientes se proporciona al formato de los datos.
-
 
  * Para obtener registros de datos sobre el uso de memoria, utilice el siguiente formato de datos:
  
@@ -1550,9 +1548,9 @@ En las secciones siguientes se proporciona al formato de los datos.
 
 ## Obtención de métricas sobre las aplicaciones
 
-Se registran datos para todas las aplicaciones aproximadamente cada hora. Una solicitud de una métrica en particular devuelve información correspondiente a todas las apps en cada muestra de datos del periodo de tiempo que especifique, que se guarda en orden descendente por orden de métrica solicitada. Por ejemplo, si se solicitan todas las apps por CPU durante un periodo de tiempo de 6 horas y hay 200 apps, se devuelven 1200 registros, en grupos de 200. 
+Se registran datos para todas las aplicaciones aproximadamente cada hora. Una solicitud de una métrica en particular devuelve información correspondiente a todas las apps en cada muestra de datos del periodo de tiempo que especifique, que se guarda en orden descendente por orden de métrica solicitada. Por ejemplo, si se solicitan todas las apps por CPU durante un periodo de tiempo de 6 horas y hay 200 apps, se devuelven 1200 registros, en grupos de 200.
 
-Para reducir la cantidad de información que se devuelve para cada muestra de datos en el periodo de tiempo solicitado, puede especificar una opción de recuento. Siguiendo con el ejemplo anterior, si añadimos una opción de recuento de 5 se devuelven 30 registros que representan las 5 primeras aplicaciones por CPU para cada muestra de datos. 
+Para reducir la cantidad de información que se devuelve para cada muestra de datos en el periodo de tiempo solicitado, puede especificar una opción de recuento. Siguiendo con el ejemplo anterior, si añadimos una opción de recuento de 5 se devuelven 30 registros que representan las 5 primeras aplicaciones por CPU para cada muestra de datos.
 
 ### Puntos finales de las aplicaciones 
 
@@ -1587,7 +1585,7 @@ Utilice los siguientes parámetros de consulta para obtener métricas correspond
 ```
 {: screen}
 
-Cada documento que se devuelve representa las métricas solicitadas para una aplicación en cada muestra de datos, en el momento de realizar la solicitud. 
+Cada documento que se devuelve representa las métricas solicitadas para una aplicación en cada muestra de datos, en el momento de realizar la solicitud.
 
 
 ## API de servicio personalizado

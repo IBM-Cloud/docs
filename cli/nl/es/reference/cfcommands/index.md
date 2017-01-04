@@ -46,7 +46,7 @@ Utilice el índice de la siguiente tabla para hacer referencia a los mandatos de
  </tr>
    </tbody>
  </table>
-*Tabla 1. Mandatos de Cloud Foundry generales*
+{: caption="Table 1. General Cloud Foundry commands" caption-side="top"}
 
 
 <table summary="Mandatos ordenados alfabéticamente para gestionar apps, espacios y servicios. Cada mandato tiene un enlace que le proporciona más información para el mandato.">
@@ -77,7 +77,7 @@ Utilice el índice de la siguiente tabla para hacer referencia a los mandatos de
  </tr>
  </tbody>
  </table>
-*Tabla 2. Mandatos para gestionar apps, espacios y servicios*
+{: caption="Table 2. Commands for managing apps, spaces, and services" caption-side="top"}
 
 
 ## cf api
@@ -694,7 +694,7 @@ También debe configurar el despliegue de Cloud Foundry para permitir el acceso 
 <dt>-i</dt>
 <dd>Destinado a una instancia específica de una aplicación.</dd>
 <dt>-L</dt>
-<dd>Permite el reenvío de puerto local, que vincula un puerto de salida de la máquina con un puerto de entrada de la VM de la aplicación. </dd>
+<dd>Permite el reenvío de puerto local, que vincula un puerto de salida de la máquina con un puerto de entrada de la VM de la aplicación.</dd>
 <dt>-N</dt>
 <dd>No ejecutar un mandato remoto.</dd>
 <dt>-t, -tt, o -T</dt>
