@@ -23,7 +23,7 @@ copyright:
 Il servizio {{site.data.keyword.trackplan}} comprende diverse opzioni per ordinare e organizzare i tuoi elementi di lavoro.
 {: shortdesc}
 
-##Filtro degli elementi di lavoro{: #tp-filteringwis}
+##Filtro degli elementi di lavoro {: #tp-filteringwis}
 
 Puoi filtrare gli elementi di lavoro in base a parole o valori per specifici attributi. 
 
@@ -54,7 +54,7 @@ Quando fai clic sul campo **Filtra elementi di lavoro per parola chiave**, vengo
 
 ![Filtro con opzioni di completamento automatico](images/filterMenu2.png)
 
-##Salvataggio delle viste personalizzate{: #tp-customviews}
+##Salvataggio delle viste personalizzate {: #tp-customviews}
 Puoi creare viste personalizzate applicando dei filtri. Puoi quindi condividere le viste con il tuo team.    
 
 1. Nel campo **Filtra elementi di lavoro**, digita la forma abbreviata di un tipo di attributo e un valore per quell'attributo, ad esempio `$high`. Alcune scelte di attributi vengono elencate automaticamente quando digiti la forma abbreviata, ad esempio *Type, $Priority e !Severity.
@@ -77,7 +77,7 @@ Le viste personalizzate restituiscono i risultati solo per lo sprint e lo stato 
 - Per visualizzare gli elementi di lavoro in base alla data di modifica, vai alla vista Il mio lavoro recente.
 - Per visualizzare l'attività degli elementi di lavoro, vai alla vista Le mie attività. La sezione I miei eventi elenca gli elementi di lavoro in cui sei stato menzionato. La sezione Le mie sottoscrizioni elenca tutte le modifiche che si sono verificate negli elementi di lavoro a cui hai sottoscritto. 
 
-##Valutazione degli elementi di lavoro{: #tp-triaging}
+##Valutazione degli elementi di lavoro {: #tp-triaging}
 
 Quando un elemento di lavoro viene creato ma non assegnato a uno sprint, tale elemento viene mostrato nella vista Lavoro in entrata.
 Non appena un elemento di lavoro viene assegnato a uno sprint, viene rimosso dalla vista Lavoro in entrata.
