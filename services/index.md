@@ -117,8 +117,6 @@ Not all services are available for purchase in every {{site.data.keyword.Bluemix
 |{{site.data.keyword.runbook_short}}				|Hosted in Dallas,US		|Hosted in London,UK			|Hosted in Sydney,AU |
 |{{site.data.keyword.SecureGateway}}		|Hosted in Dallas,US		|Hosted in London,UK		|Hosted in Sydney,AU |
 |{{site.data.keyword.sescashort}}		|Hosted in Dallas,US		|Hosted in London,UK		|Hosted in Sydney,AU |
-|{{site.data.keyword.servicediscoveryshort}}		|Hosted in Dallas,US		|Hosted in London,UK		|Not available in region|
-|{{site.data.keyword.serviceproxyshort}}		|Hosted in Dallas, US		|Hosted in London,UK		|Not available in region|
 |{{site.data.keyword.ssofull}}			|Hosted in Washington,US		|Not available in region		|Not available in region|
 |{{site.data.keyword.speechtotextshort}}	|Hosted in Dallas,US		|Hosted in Dallas,US		|Hosted in Dallas,US |
 |{{site.data.keyword.streaminganalyticsshort}}	|Hosted in Dallas,US		|Hosted in London,UK		|Hosted in London,UK|
