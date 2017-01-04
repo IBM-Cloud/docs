@@ -36,7 +36,7 @@ Gli elementi di lavoro hanno tre stati di base:
 - **In corso**: l'elemento di lavoro è stato avviato. Il suo stato è In corso.
 - **Risolto**: l'elemento di lavoro è terminato. Il suo stato è Completo o Non valido.
 
-##Visualizzazione degli elementi di lavoro{: #tp-widisplay}  
+##Visualizzazione degli elementi di lavoro {: #tp-widisplay}  
 
 Puoi visualizzare i tuoi elementi di lavoro in diversi modi.    
 
