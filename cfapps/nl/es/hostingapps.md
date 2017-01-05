@@ -35,36 +35,29 @@ que lo cumpla.
 
 * No codifique su app directamente en una topología específica.
 
-  En un
-entorno que no sea de nube, la app podría utilizar una topología de despliegue
+En un entorno que no sea de nube, la app podría utilizar una topología de despliegue
 concreta. No obstante, la topología de app podría cambiar en apps de nube,
 porque las apps y servicios listos para la nube permite cambios de escalabilidad
 inmediata. Los cambios de escalabilidad incluyen escalado dinámico y cambio manual del tamaño del
 número de instancias de una app.
 
-  Construya su app de forma que sea lo más
-genérica e independiente posible de estado, para evitar que se vea afectada por cambios
+Construya su app de forma que sea lo más genérica e independiente posible de estado, para evitar que se vea afectada por cambios
 de escalabilidad.
 
 * No presuponga que el sistema de archivos local es permanente.
 
-  Como una instancia de
-app en la nube se puede mover, suprimir o duplicar en cualquier momento,
+Como una instancia de app en la nube se puede mover, suprimir o duplicar en cualquier momento,
 no se base en archivos que se graben en el sistema de archivos. Si una app
 utiliza el sistema de archivos local como memoria caché de
 información usada con frecuencia incluyendo los registros de app, la
 información se pierde cuando se cierra la instancia y se reinicia en una ubicación
 distinta o en otra MV.
 
-  En lugar del sistema de archivos local, puede almacenar
-información en un servicio, como una base de datos SQL o NoSQL. En un entorno de nube dinámico, también es fundamental tener sus registros
-disponibles en un servicio que sobreviva a la instancia de la app
-desde la que se generan los registros.
+En lugar del sistema de archivos local, puede almacenar información en un servicio, como una base de datos SQL o NoSQL. En un entorno de nube dinámico, también es fundamental tener sus registros disponibles en un servicio que sobreviva a la instancia de la app desde la que se generan los registros.
 
 * No almacene el estado de sesión en su app.
 
-  El estado de
-su sistema lo definen sus bases de datos y almacenamientos compartidos,
+El estado de su sistema lo definen sus bases de datos y almacenamientos compartidos,
 y no cada instancia individual de app en ejecución. El uso de
 estados de cualquier tipo limita la escalabilidad de su app. Intente
 minimizar el impacto del estado de sesión almacenándolo en una ubicación
@@ -164,17 +157,12 @@ Puede utilizar las herramientas y servicios siguientes que {{site.data.keyword.B
 
 | Herramienta	| Método |
 |:------|:--------|
-|Interfaz de línea de mandatos de Cloud Foundry (cf cli)	|Gestione su código en el cliente local y utilizar la
-interfaz de línea de mandatos de Cloud Foundry para enviar por push su app manualmente a
-{{site.data.keyword.Bluemix_notm}}. Para obtener más información, consulte [Subir sus apps](/docs/starters/upload_app.html).|
+|Interfaz de línea de mandatos de Cloud Foundry (cf cli)	|Gestione su código en el cliente local y utilizar la interfaz de línea de mandatos de Cloud Foundry para enviar por push su app manualmente a {{site.data.keyword.Bluemix_notm}}. Para obtener más información, consulte [Subir sus apps](/docs/starters/upload_app.html).|
 |Eclipse	|Gestione su código en Eclipse y utilice IBM Eclipse tools for {{site.data.keyword.Bluemix_notm}} para
 enviar por push su app.|
-|Integración con Git	|Gestione su código en GitHub e integre Git en {{site.data.keyword.Bluemix_notm}}. Puede colaborar con otros desarrolladores. Su app se despliega automáticamente en
-{{site.data.keyword.Bluemix_notm}} cuando confirma los cambios en el código. No necesita enviar por push manualmente
-la app.|
-|{{site.data.keyword.Bluemix_notm}} DevOps
-Delivery Pipeline	|Gestione su código en el repositorio DevOps GitHub y despliegue su app en
-{{site.data.keyword.Bluemix_notm}} utilizando DevOps Delivery Pipeline.|
+|Integración con Git	|Gestione su código en GitHub e integre Git en {{site.data.keyword.Bluemix_notm}}. Puede colaborar con
+otros desarrolladores. Su app se despliega automáticamente en {{site.data.keyword.Bluemix_notm}} cuando confirma los cambios en el código. No necesita enviar por push manualmente la app.|
+|{{site.data.keyword.Bluemix_notm}} DevOps Delivery Pipeline	|Gestione su código en el repositorio DevOps GitHub y despliegue su app en {{site.data.keyword.Bluemix_notm}} utilizando DevOps Delivery Pipeline.|
 {: caption="Table 1. {{site.data.keyword.Bluemix_notm}} tools" caption-side="top"}
 
 
