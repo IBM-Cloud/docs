@@ -11,6 +11,8 @@ lastupdated: "2016-01-04"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
+
+
 # Deploying apps
 {: #deployingapps}
 
@@ -22,16 +24,19 @@ You can deploy applications to {{site.data.keyword.Bluemix}} by using various me
 
 Deploying an application to {{site.data.keyword.Bluemix_notm}} includes two phases, staging the application and starting the application.
 
-Cloud Foundry supports Diego, which is the new default runtime architecture that provides support for several container technologies including Garden and Windows containers. All new applications that you create will run on Diego, and you must start migrating your existing applications that run on DEAs to the new Diego architecture. For more information about the recent architecture upgrade, see [Bluemix Cloud Foundry upgrading from DEA to Diego architecture](https://www.ibm.com/blogs/bluemix/2016/11/bluemix-cloud-foundry-upgrading-dea-diego-architecture/){: new_window}.
+Cloud Foundry supports Diego, which is the new default runtime architecture that provides a set of capabilities that enhances the application development experience for hosting and constructing cloud platforms. This architecture update provides an improvement in the overall operation and performance of the Cloud Foundry platform. The new architecture provides support for several application container technologies, including Garden and Windows, an SSH package that allows direct login to the application container, and other innovative changes. For more information about the recent architecture upgrade, see [Bluemix Cloud Foundry upgrading from DEA to Diego architecture](https://www.ibm.com/blogs/bluemix/2016/11/bluemix-cloud-foundry-upgrading-dea-diego-architecture/){: new_window}.
 
-**Note**: The Cloud Foundry Diego architecture affects all {{site.data.keyword.Bluemix_notm}} Public regions. {{site.data.keyword.Bluemix_notm}} Dedicated and {{site.data.keyword.Bluemix_notm}} Local environments will be updated at a later date.
+
+All new applications that you create will run on Diego, and you must start migrating your existing applications that run on DEAs to the new Diego architecture.
+
+**Note**: The Cloud Foundry Diego architecture affects all {{site.data.keyword.Bluemix_notm}} Public region environments. {{site.data.keyword.Bluemix_notm}} Dedicated and {{site.data.keyword.Bluemix_notm}} Local environments will be updated at a later date.
 
 ### Staging an application
 {: #diego}
 
-During the staging phase, Diego takes care of all aspects related with container orchestration. Distribution of the app instances are done with Diego Brain, and the Cloud Controller is responsible for sending the staging request to the other components that complete the staging, such as Rep and Gardner. Diego Brain allocates the apps into cells with SSH access to the containers. All Diego components are designed to be clustered which means you can easily create different availability zones.
+During the staging phase, Diego takes care of all aspects related with application container orchestration. Distribution of the app instances are done with Diego Brain, and the Cloud Controller is responsible for sending the staging request to the other components that complete the staging, such as Rep and Gardner. Diego Brain allocates the apps into cells with SSH access to the application containers. All Diego components are designed to be clustered which means you can create different availability zones.
 
-To validate the app health, Diego supports the same PORT-based checks that were used for DEA. But, it is designed to be able to have more generic options like URL-based health checks, which should be enabled in the future.
+To validate the app health, Diego supports the same PORT-based checks that were used for DEA. However, Diego is also designed to be able to have more generic options like URL-based health checks, which might be enabled in the future.
 
 #### Staging a new app
 {: #stageapp}
@@ -48,9 +53,9 @@ For more details on the **cf push** command, see [cf push](/docs/cli/reference/c
 #### Migrating an existing app to Diego
 {: #migrateapp}
 
-Diego is the default Cloud Foundry architecture for {{site.data.keyword.Bluemix_notm}}, and support for DEAs will be removed, so you must migrate all of your existing applications by re-deploying each app. Start migrating your apps to Diego by deploying the application with the Diego flag. The application immediately starts running on Diego and will eventually stop running on the DEAs. 
+Diego is the default Cloud Foundry architecture for {{site.data.keyword.Bluemix_notm}}, and support for DEAs will be removed, so you must migrate all of your existing applications by updating each app. Start migrating your apps to Diego by updating the application with the Diego flag. The application immediately attempts to start running on Diego and stops running on the DEAs. 
 
-To limit downtime, perform a blue-green deploy by deploying a copy of your application to Diego, and then swapping routes and scaling down the DEA application. If you do not perform a blue-green deployment, you might experience some downtime.
+As your application is updated from DEA architecture to Diego, you might experience a short downtime, or a prolonged downtime, if the application is not compatible with Diego. To limit downtime, perform a [blue-green deploy](/docs/manageapps/updapps.html#blue_green) by deploying a copy of your application to Diego, and then swapping routes and scaling down the DEA application.
 
 Complete the following steps to migrate your app to Diego:
 
@@ -60,12 +65,8 @@ Complete the following steps to migrate your app to Diego:
   ```
   $ cf enable-diego APPLICATION_NAME
   ```
- 4. Start the application:
-   ```
-  $ cf start APPLICATION_NAME
-  ```
 
-After you run the `cf start` command, verify that your app started. If your migrated app fails to start, it will remain offline until you identify and resolve the issue, and then restart the app.
+After you update your app, verify that your app started. If your migrated app fails to start, it will remain offline until you identify and resolve the issue, and then restart the app.
 
 IBM will alert you of the upcoming mandatory migration period when DEA architecture support will be removed, and if you have not migrated your apps, the operations team will migrate all apps for you. Until support for the older DEA architecture is removed, you can run the following command to transition back to DEAs `cf disable-diego APPLICATION_NAME`. You can also still deploy apps to the DEA architecture until support is removed:
 
@@ -93,27 +94,28 @@ To validate which backend the application is running on:
 There are the following known issues that you might need to address when migrating your apps to Diego:
 
   * Worker applications deployed with the `--no-route` option do not report as healthy. To prevent this, disable the port-based health check with the `cf set-health-check APP_NAME none` command.
-  * Diego does not use the VCAP_APP_HOST environment variable. If your code references this variable, replace it with 0.0.0.0.
-  * Diego does not use the VCAP_APP_PORT environment variable. If your code references this variable, replace it with PORT, which is set to 8080 by default.
+  * Diego does not use the VCAP_APP_HOST environment variable. If your code references this variable, remove it.
+  * Diego does not use the VCAP_APP_PORT environment variable. If your code references this variable, replace it with PORT.
   * The **cf files** command is no longer supported. The replacement is the **cf ssh** command. For more details on the **cf ssh** command, see [cf ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh).
   * Some apps might use a high number of file descriptors (inodes). If you encounter this issue, you must increase disk quota for your app with the `cf scale APP_NAME [-k DISK]` command.
 
-For the comprehensive list of known issues, see [Migrating to Diego](https://github.com/cloudfoundry/diego-design-notes/blob/master/migrating-to-diego.md){: new_window}.
+For the comprehensive list of known issues, see the Cloud Foundry documentation page for  [Migrating to Diego](https://github.com/cloudfoundry/diego-design-notes/blob/master/migrating-to-diego.md){: new_window}.
 
 ### Starting an application
 {: #startapp}
 
-When an application is started, the instance or instances of the container are created. For applications running on Diego, you can use the **cf ssh** or **cf scp** command to access the file system of the container which includes the logs. The **cf files** command does not work for apps running on the Diego architecture.
+When an application is started, the instance or instances of the application container are created. For applications running on Diego, you can use the **cf ssh** or **cf scp** command to access the file system of the application container which includes the logs. The **cf files** command does not work for apps running on the Diego architecture.
 
-**Note** If you still have applications running on DEAs, you can use the **cf files** command to view the files within the container until support for DEAs is removed.
+**Note**: If you still have applications running on DEAs, you can use the **cf files** command to view the files within the application container until support for DEAs is removed.
 
-If the application fails to start, the application is stopped and the entire contents of your container are removed. Therefore, if an application stops or if the staging process of an application fails, log files will not be available for you to use.
+If the application fails to start, the application is stopped and the entire contents of your application container are removed. Therefore, if an application stops or if the staging process of an application fails, log files will not be available for you to use.
 
-If the logs for your application are no longer available so that the **cf ssh**, **cf scp**, or **cf files** commands can no longer be used to see the cause of the staging errors inside the container, you can use the **cf logs** command instead. The **cf logs** command uses the Cloud Foundry log aggregator to collect the details of your application logs and system logs, and you can see what was buffered within the log aggregator. For more information about the log aggregator, see [Logging in Cloud Foundry](http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html){:new_window}.
+If the logs for your application are no longer available so that the **cf ssh**, **cf scp**, or **cf files** commands can no longer be used to see the cause of the staging errors inside the application container, you can use the **cf logs** command instead. The **cf logs** command uses the Cloud Foundry log aggregator to collect the details of your application logs and system logs, and you can see what was buffered within the log aggregator. For more information about the log aggregator, see [Logging in Cloud Foundry](http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html){:new_window}.
 
 **Note:** The buffer size is limited. If an application runs for a long time and is not restarted, logs might not be displayed when you enter the `cf logs appname --recent` command because the log buffer might have been cleared. Therefore, to debug staging errors for a large application, you can enter the `cf logs appname` command in a separate command line from the cf command line interface to track the logs when you deploy the application.
 
 If you experience problems when you stage your applications on {{site.data.keyword.Bluemix_notm}}, you can follow the steps in [Debugging staging errors](/docs/debug/index.html#debugging-staging-errors) to resolve the problem.
+
 
 ## Deploying applications by using the cf command
 {: #dep_apps}
