@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-14"
+  years: 2014, 2017
+lastupdated: "2017-01-05"
 
 ---
 
@@ -27,7 +27,7 @@ A temporary URL is a long, difficult-to-guess URL that can be used for a specifi
   {: pre}
   **Note**: Take note of the full string behind *Account*, including `AUTH_`.
 
-2. Set a secret key. This key can be anything that you select, but a good practice is to select a long, random, and hard to guess string. To set the key, run the following command:
+2. Set a secret key. Choose a long, random, and hard to guess string. To set the key, run the following command:
 
   ```
   swift post -m "Temp-URL-Key:<key>"
