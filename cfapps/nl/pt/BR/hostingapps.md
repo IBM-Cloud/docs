@@ -160,18 +160,10 @@ um aplicativo Cloud Foundry, selecione um tempo de execução no catálogo {{sit
 
 | Ferramenta	| Método |
 |:------|:--------|
-|Interface da linha de comandos do Cloud Foundry (cf cli)	|Gerencie seu código no cliente local e use a interface
-da linha de comandos do Cloud Foundry para enviar o seu aplicativo por push para o {{site.data.keyword.Bluemix_notm}} manualmente. Para obter mais informações, consulte [Fazendo upload de seus apps](/docs/starters/upload_app.html).|
+|Interface da linha de comandos do Cloud Foundry (cf cli)	|Gerencie seu código no cliente local e use a interface da linha de comandos do Cloud Foundry para enviar o seu aplicativo por push para o {{site.data.keyword.Bluemix_notm}} manualmente. Para obter mais informações, consulte [Fazendo upload de seus apps](/docs/starters/upload_app.html).|
 |Eclipse	|Gerencie seu código no Eclipse e use o IBM Eclipse tools for {{site.data.keyword.Bluemix_notm}} para enviar seu aplicativo por push.|
-|Integração Git	|Gerencie seu código no GitHub e Git integrado
-no {{site.data.keyword.Bluemix_notm}}. É possível colaborar com outros desenvolvedores. Seu aplicativo será implementado
-no {{site.data.keyword.Bluemix_notm}} automaticamente,
-quando você confirmar as mudanças no código. Não é necessário enviar o aplicativo por push
-manualmente.|
-|{{site.data.keyword.Bluemix_notm}} DevOps
-Delivery Pipeline	|Gerencie seu código no repositório DevOps GitHub
-e implemente o aplicativo para {{site.data.keyword.Bluemix_notm}}
-usando o DevOps Delivery Pipeline.|
+|Integração Git	|Gerencie seu código no GitHub e Git integrado no {{site.data.keyword.Bluemix_notm}}. É possível colaborar com outros desenvolvedores. Seu aplicativo será implementado no {{site.data.keyword.Bluemix_notm}} automaticamente, quando você confirmar as mudanças no código. Não é necessário enviar o aplicativo por push manualmente.|
+|{{site.data.keyword.Bluemix_notm}} DevOps Delivery Pipeline	|Gerencie seu código no repositório DevOps GitHub e implemente o aplicativo para {{site.data.keyword.Bluemix_notm}} usando o DevOps Delivery Pipeline.|
 {: caption="Table 1. {{site.data.keyword.Bluemix_notm}} tools" caption-side="top"}
 
 
