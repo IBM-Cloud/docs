@@ -161,17 +161,10 @@ Puoi usare i seguenti servizi e strumenti forniti da {{site.data.keyword.Bluemix
 
 | Strumento	| Metodo |
 |:------|:--------|
-|Interfaccia riga di comando Cloud Foundry (cf cli)	|Gestisci il tuo codice su un client locale e utilizza l'interfaccia riga di comando
-Cloud Foundry per eseguire manualmente il push della tua applicazione su {{site.data.keyword.Bluemix_notm}}. Per ulteriori informazioni, vedi [Caricamento delle tue applicazioni](/docs/starters/upload_app.html).|
+|Interfaccia riga di comando Cloud Foundry (cf cli)	|Gestisci il tuo codice su un client locale e utilizza l'interfaccia riga di comando Cloud Foundry per eseguire manualmente il push della tua applicazione su {{site.data.keyword.Bluemix_notm}}. Per ulteriori informazioni, vedi [Caricamento delle tue applicazioni](/docs/starters/upload_app.html).|
 |Eclipse	|Gestisci il tuo codice in Eclipse e utilizza gli strumenti di IBM Eclipse per {{site.data.keyword.Bluemix_notm}} per distribuire la tua applicazione.|
-|Integrazione di Git	|Gestisci il tuo codice su GitHub e integra Git
-in {{site.data.keyword.Bluemix_notm}}. Puoi collaborare con altri sviluppatori. La tua applicazione viene distribuita
-automaticamente in {{site.data.keyword.Bluemix_notm}}
-quando esegui il commit delle modifiche nel codice. Non devi eseguire manualmente il push dell'applicazione.|
-|{{site.data.keyword.Bluemix_notm}} DevOps
-Delivery Pipeline	|Gestisci il tuo codice sul repository DevOps GitHub
-e distribuisci la tua applicazione su {{site.data.keyword.Bluemix_notm}}
-utilizzando DevOps Delivery Pipeline.|
+|Integrazione di Git	|Gestisci il tuo codice su GitHub e integra Git in {{site.data.keyword.Bluemix_notm}}. Puoi collaborare con altri sviluppatori. La tua applicazione viene distribuita automaticamente in {{site.data.keyword.Bluemix_notm}} quando esegui il commit delle modifiche nel codice. Non devi eseguire manualmente il push dell'applicazione.|
+|{{site.data.keyword.Bluemix_notm}} DevOps Delivery Pipeline	|Gestisci il tuo codice sul repository DevOps GitHub e distribuisci la tua applicazione su {{site.data.keyword.Bluemix_notm}} utilizzando DevOps Delivery Pipeline.|
 {: caption="Table 1. {{site.data.keyword.Bluemix_notm}} tools" caption-side="top"}
 
 
