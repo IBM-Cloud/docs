@@ -41,7 +41,7 @@ To validate the app health, Diego supports the same PORT-based checks that were 
 #### Staging a new app
 {: #stageapp}
 
-To stage a new application, deploy the app with the **cf push** command:
+All new apps are deployed to the Diego architecture. To stage a new application, deploy the app with the **cf push** command:
 
   1. Deploy the application:
   ```
@@ -50,7 +50,7 @@ To stage a new application, deploy the app with the **cf push** command:
 
 For more details on the **cf push** command, see [cf push](/docs/cli/reference/cfcommands/index.html#cf_push).
 
-#### Migrating an existing app to Diego
+### Migrating an existing app to Diego
 {: #migrateapp}
 
 Diego is the default Cloud Foundry architecture for {{site.data.keyword.Bluemix_notm}}, and support for DEAs will be removed, so you must migrate all of your existing applications by updating each app. Start migrating your apps to Diego by updating the application with the Diego flag. The application immediately attempts to start running on Diego and stops running on the DEAs. 
