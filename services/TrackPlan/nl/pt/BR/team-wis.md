@@ -15,7 +15,7 @@ copyright:
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#Planejando o trabalho de sua equipe{: #tp-teamwork}  
+#Planejando o trabalho de sua equipe {: #tp-teamwork}  
 
 *Última atualização: 28 de abril de 2016*
 {: .last-updated}
@@ -40,7 +40,7 @@ Também é possível revisar estatísticas sobre o progresso do sprint:
 Enquanto você planeja um sprint, revise os itens de trabalho nas visualizações Lista não processada e Planejamento de sprint para classificar os itens de
 trabalho. Classifique os itens de trabalho e designe pontos de história para eles arrastando itens de trabalho para o ranqueamento.
 
-##Revisando o progresso da equipe{: #progress}
+##Revisando o progresso da equipe {: #progress}
 É possível revisar todos os itens de trabalho que estão designados para a equipe na visualização Trabalho da equipe.
 
 Também é possível revisar estas estatísticas:
