@@ -74,9 +74,9 @@ IBM will alert you of the upcoming mandatory migration period when DEA architect
 ```
 $ cf push APPLICATION_NAME --no-start
 ```
-2. Set the Diego boolean to false to override the default architecture option:
+2. Run the disable-diego command:
 ```
-$ cf curl /v2/apps/$(cf app APPLICATION_NAME --guid) -X PUT -d '{"diego":false}'
+$ cf disable-diego APPLICATION_NAME
 ```
 3. Start the application:
 ```
