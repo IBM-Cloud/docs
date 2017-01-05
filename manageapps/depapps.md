@@ -68,7 +68,7 @@ Complete the following steps to migrate your app to Diego:
 
 After you update your app, verify that your app started. If your migrated app fails to start, it will remain offline until you identify and resolve the issue, and then restart the app.
 
-IBM will alert you of the upcoming mandatory migration period when DEA architecture support will be removed, and if you have not migrated your apps, the operations team will migrate all apps for you. Until support for the older DEA architecture is removed, you can run the following command to transition back to DEAs `cf disable-diego APPLICATION_NAME`. You can also still deploy apps to the DEA architecture until support is removed:
+IBM will alert you of the upcoming mandatory migration period when DEA architecture support will be removed, and if you have not migrated your apps, the operations team will migrate all apps for you. Until support for the older DEA architecture is removed, you can run the following command to transition back to DEAs: `cf disable-diego APPLICATION_NAME`. You can also still deploy apps to the DEA architecture until support is removed:
 
 1. Deploy the application without starting it:
 ```
