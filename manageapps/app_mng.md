@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
 lastupdated: "2016-12-15"
 
 ---
@@ -34,7 +34,7 @@ When enabled, the buildpack starts a proxy agent that is located between your ap
 #### noproxy
 {: #noproxy}
 
-The *noproxy* utility disables the *proxy* utility when it would have been automatically started by one of the other utilities. With Diego, the proxy is not necessary because Diego provides the capability to *ssh* directly to your application and set up port forwarding. 
+The *noproxy* utility disables the *proxy* utility when it would have been automatically started by one of the other utilities. With Diego, the proxy is not necessary because Diego provides the capability to *ssh* directly to your application and set up port forwarding.
 
 The *noproxy* utility is only applicable to applications running in a Diego cell.
 

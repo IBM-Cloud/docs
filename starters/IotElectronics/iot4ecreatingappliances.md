@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2016, 2017
 lastupdated: "2016-11-29"
 
 ---
@@ -23,7 +23,7 @@ Create simulated appliances in the {{site.data.keyword.iotelectronics_full}} sta
 
     ![{{site.data.keyword.iotelectronics}} in the dashboard.](images/IoT4E_bm_dashboard.svg "{{site.data.keyword.iotelectronics}} in the dashboard")
 
-2. Wait for the *Your app is running* status message in the header and then click **View App** to display the starter app.  
+2. Wait for the *Your app is running* status message in the header and then click **View App** to display the starter app.
 
     ![{{site.data.keyword.iotelectronics}} view app.](images/IoT4E_view_app.svg "{{site.data.keyword.iotelectronics}} view app")
 

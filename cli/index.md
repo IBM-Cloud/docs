@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2015，2016
+  years: 2015，2017
 
 lastupdated: "2016-11-29"
 
@@ -65,7 +65,7 @@ bluemix plugin install plugin_name -r bluemix-bx
 | Plug-in name: active-deploy <br> [View Docs](/docs/services/ActiveDeploy/cli.html#cli) | Plug-in name: auto-scaling <br> [View Docs](/docs/cli/plugins/auto-scaling/index.html) |  Plug-in name: IBM-Containers  <br> [View Docs](/docs/cli/plugins/containers/index.html) |
 {: caption="Table 2. Plug-ins" caption-side="top"}
 
-|  *Private network peering* | *VPN*  |  
+|  *Private network peering* | *VPN*  |
 |-----|-----|
 | Plug-in name: private-network-peering  <br> [View Docs](/docs/cli/plugins/pnp/index.html) |Plug-in name: VPN  <br> [View Docs](/docs/cli/plugins/bx_vpn/index.html) |
 {: caption="Table 3. Plug-ins" caption-side="top"}

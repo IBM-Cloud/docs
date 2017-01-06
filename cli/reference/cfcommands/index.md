@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2016
+  years: 2016, 2017
 
 lastupdated: "2016-11-14"
 
@@ -90,7 +90,7 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 
 <strong>Prerequisites</strong>: None.
 
-<strong>Command options</strong>:  
+<strong>Command options</strong>:
 
    <dl>
    <dt>BluemixServerURL (optional)</dt>
@@ -148,7 +148,7 @@ cf bind-service appname service_instance
 
 <strong>Prerequisites</strong>: `cf api`, `cf login`, `cf target`
 
-<strong>Command options</strong>:  
+<strong>Command options</strong>:
 
    <dl>
    <dt>appname (required)</dt>
@@ -177,7 +177,7 @@ cf create-service service_name service_plan service_instance
 
 <strong>Prerequisites</strong>: `cf api`, `cf login`, `cf target`
 
-<strong>Command options</strong>:  
+<strong>Command options</strong>:
 
    <dl>
    <dt>service_name (required)</dt>
@@ -208,7 +208,7 @@ cf create-space space_name [-o] [-q]
 
 <strong>Prerequisites</strong>: `cf api`, `cf login`
 
-<strong>Command options</strong>:  
+<strong>Command options</strong>:
 
    <dl>
    <dt>space_name (required)</dt>
@@ -239,7 +239,7 @@ cf delete appname [-f] [-r]
 
 <strong>Prerequisites</strong>: `cf api`, `cf login`, `cf target`
 
-<strong>Command options</strong>:  
+<strong>Command options</strong>:
 
    <dl>
    <dt>appname (required)</dt>
@@ -288,7 +288,7 @@ cf delete-space space_name [-f]
 
 <strong>Prerequisites</strong>: `cf api`, `cf login`
 
-<strong>Command options</strong>:  
+<strong>Command options</strong>:
 
    <dl>
    <dt>space_name (required)</dt>
@@ -336,7 +336,7 @@ cf events [appname]
 
 <strong>Prerequisites</strong>: `cf api`, `cf login`, `cf target`
 
-<strong>Command options</strong>:  
+<strong>Command options</strong>:
 
    <dl>
    <dt>appname</dt>
@@ -363,7 +363,7 @@ cf help [command_name]
 
 <strong>Prerequisites</strong>: None.
 
-<strong>Command options</strong>:  
+<strong>Command options</strong>:
 
    <dl>
    <dt>command_name (optional)</dt>

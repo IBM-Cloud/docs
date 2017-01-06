@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2016, 2017
 lastupdated: "2016-11-29"
 
 ---
@@ -36,12 +36,12 @@ Before you begin, you must deploy an instance of the {{site.data.keyword.iotelec
 
     - **Realm name**: `myRealm`
 
-    - **Custom Identity Provider Url**: Paste the URL of the API application that you copied in the first step in the following format:   **https://<*myIoT4eStarterApp*>.mybluemix.net**.  
+    - **Custom Identity Provider Url**: Paste the URL of the API application that you copied in the first step in the following format:   **https://<*myIoT4eStarterApp*>.mybluemix.net**.
 
     **Important:** Be sure that the URL uses the secure protocol `https` even if the value that you copied uses `http`.
 
     - **Your Web Application Redirect URIs**: Leave this field blank.
 
-   ![Configure {{site.data.keyword.amashort}}.](images/MCA_config_pg.svg "{{site.data.keyword.amashort}} Authentication page")  
+   ![Configure {{site.data.keyword.amashort}}.](images/MCA_config_pg.svg "{{site.data.keyword.amashort}} Authentication page")
 
 5. Save your settings. You can now return to the {{site.data.keyword.iotelectronics}} service console or your {{site.data.keyword.Bluemix_notm}} console.

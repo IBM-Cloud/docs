@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2016, 2017
 lastupdated: "2016-11-29"
 
 ---
@@ -21,7 +21,7 @@ lastupdated: "2016-11-29"
 Before you begin, you must deploy an instance of the {{site.data.keyword.iotelectronics}} in your {{site.data.keyword.Bluemix_notm}}
  organization. Deploying an instance automatically deploys the component applications and services of the starter.
 
- You can [find the {{site.data.keyword.iotelectronics}} starter](https://console.{DomainName}/catalog/starters/iot-for-electronics-starter/) in the Boilerplates section of the {{site.data.keyword.Bluemix_notm}} catalog.  
+ You can [find the {{site.data.keyword.iotelectronics}} starter](https://console.{DomainName}/catalog/starters/iot-for-electronics-starter/) in the Boilerplates section of the {{site.data.keyword.Bluemix_notm}} catalog.
 
 ## Getting started with {{site.data.keyword.iotelectronics}}
 To get started, complete the following tasks:

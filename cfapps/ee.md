@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2015，2016
+  years: 2015，2017
 
 lastupdated: "2016-10-18"
 
@@ -36,7 +36,7 @@ In {{site.data.keyword.Bluemix_notm}}, apps are associated with organizations an
 
 For this scenario, you want to develop a web app using Node.js. Assume that you are in the US and most of your app users are also in the US. You decide to build and run your app close to your user base, so that you can benefit from lower network latency. After logging in to {{site.data.keyword.Bluemix_notm}}, click the user account preferences link, then select the **US South** region. Then, you can take the following steps to create an app:
 
-  1. Go to **Catalog** 
+  1. Go to **Catalog**
   2. Select **Cloud Foundry Runtimes**.
   3. Select **SDK for Node.js**.
   4. Type a unique name for your app, for example, TestNode, and click **Create**. The app name must be unique in the whole {{site.data.keyword.Bluemix_notm}} environment.

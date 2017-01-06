@@ -1,12 +1,12 @@
 ---
 
- 
+
 
 copyright:
 
-  years: 2016
+  years: 2016, 2017
 
-lastupdated: "2016-12-21" 
+lastupdated: "2016-12-21"
 
 ---
 
@@ -34,4 +34,4 @@ navigate to the Cloud Foundry Apps section.
   * Take steps to redeploy the starter application.
 7. Modify the app and deploy again.
 
-The directory containing the starter application you downloaded contains a README file.  Refer to the README for a description of the files in the starter application package.  Make changes to the code, deploy the application again, then see the effect in your running app.  
+The directory containing the starter application you downloaded contains a README file.  Refer to the README for a description of the files in the starter application package.  Make changes to the code, deploy the application again, then see the effect in your running app.

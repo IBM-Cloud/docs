@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-08-25"
 
 ---
 
@@ -13,9 +14,6 @@ copyright:
 
 #Updating apps
 {: #updatingapps}
-
-Last updated: 25 August 2016
-{: .last-updated}
 
 
 You can use the cf push command or {{site.data.keyword.Bluemix}} DevOps Services to update the applications in {{site.data.keyword.Bluemix_notm}}. In many cases, even for the built-in buildpacks such as Node.js, you must also supply a -c parameter to specify which command is used to start your application.
@@ -37,7 +35,7 @@ You can create and use a custom domain in {{site.data.keyword.Bluemix_notm}} by 
 	1. Go to the **{{site.data.keyword.avatar}}** icon ![Avatar icon](../icons/i-avatar-icon.svg) &gt; **Manage Organizations** &gt; **View details** for your org &gt; **Edit Org** &gt; **Domains**.
 
 	2. On the **DOMAINS** tab, click **ADD DOMAIN**, enter your custom domain name, and click **SAVE**.
-	
+
 	**Note**: For example, you can use `mycompany.com` to associate the route `www.mycompany.com` to your app. You can also use `example.mycompany.com`to associate the route `www.example.mycompany.com` to your app.
 
   2. Add the route with the custom domain to an application.
@@ -47,7 +45,7 @@ You can create and use a custom domain in {{site.data.keyword.Bluemix_notm}} by 
 	2. From the **View App** menu, select **Edit Routes and Access**.
 
 	3. Click **Add route**, and specify the route that you want to use for the application.
-	4. Click **Save**. 
+	4. Click **Save**.
 
 * Use the cf command line interface:
 
@@ -70,7 +68,7 @@ You can create and use a custom domain in {{site.data.keyword.Bluemix_notm}} by 
     ```
     cf map-route myapp mydomain -n host_name
     ```
-    For container groups, type the following command:	
+    For container groups, type the following command:
      ```
      cf ic route map -n host_name -d mydomain mycontainergroup
      ```
@@ -85,10 +83,10 @@ You can create and use a custom domain in {{site.data.keyword.Bluemix_notm}} by 
     *host_name*
 
         The host name in the route that you want to use for your application.
-        
+
     *mycontainergroup*
-    
-        For container groups, the name of the container group.  
+
+        For container groups, the name of the container group.
 
 
 After you configure the custom domain in {{site.data.keyword.Bluemix_notm}}, you must map the custom domain to the {{site.data.keyword.Bluemix_notm}} system domain on your registered DNS server:
