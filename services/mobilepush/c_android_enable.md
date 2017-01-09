@@ -43,10 +43,17 @@ After creating and opening your mobile application, complete the following steps
 	import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPSimplePushNotification;
 	```
     {: codeblock}
+	- Add the following dependency to your Module level **build.gradle** file.
+	```
+	dependencies {
+	classpath 'com.google.gms.google-services'
+	}
+	```
+	{: codeblock}
 3. Add the following dependencies to your Project level **build.gradle** file.
 ```
 dependencies {
-    classpath 'com.android.tools.build:gradle:2.2.0'
+    classpath 'com.android.tools.build:gradle:3.0.0'
     classpath 'com.google.gms:google-services:3.0.0'
 }
 ``` 
