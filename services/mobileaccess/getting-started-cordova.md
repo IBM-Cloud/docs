@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-29"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
 
@@ -60,9 +60,9 @@ The {{site.data.keyword.amashort}} client SDK for Cordova is a Cordova plug-in t
 	</platform>
 	```
 	{: codeblock}
-	
+
 	The *minSdkVersion* value must be higher than `15`. Refer to the [Android Platform Guide](https://cordova.apache.org/docs/en/latest/guide/platforms/android/) to stay current with the supported *targetSdkVersion* for the Android SDK.
-	
+
 3. If you added the iOS operating system, update the `<platform name="ios">` element with a target declaration:
 
 	```XML
@@ -113,16 +113,16 @@ The {{site.data.keyword.amashort}} client SDK for Cordova is a Cordova plug-in t
 		The device type “iOS Simulator” requires that either “name” or “id” be specified.
 		Please supply either “name” or “id”.
 	```
-	
+
 6. Verify that the plug-in installed successfully by running the following command:
 
 	```Bash
 	cordova plugin list
 	```
 	{: codeblock}
-	
+
 7. Enable Keychain Sharing for iOS by switching **Keychain Sharing** to `On` in the **Capabilities** tab.
-  
+
 8. Enable **Defines Module** for iOS by switching **Defines Module** to `YES` in the **Build Settings** > **Packaging** tab.
 
 
@@ -157,9 +157,14 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 Add the Authorization Manager initialization in the `AppDelegate.m` according to your version of Xcode.
 
 ```Objective-C
-  [CDVBMSClient initMCAAuthorizationManagerManagerWithTenantId:@"<tenantId>"]; 
+  #import "<your_module_name>-Swift.h"
+  [CDVBMSClient initMCAAuthorizationManagerManagerWithTenantId:@"<tenantId>"];
 ```
 {: codeblock}
+
+**Note:** The imported header file name is composed of your module name concatenated to the string `-Swift.h`, for example, if your module name is `Cordova` then the import line would be `#import "Cordova-Swift.h"` To find the module name go to
+`Build Settings` > `Packaging` > `Product Module Name`.
+Replace `<tenantId>` your tenant id (see [Before you begin](#before-you-begin)).
 
 
 ## Making a request to the mobile back-end service

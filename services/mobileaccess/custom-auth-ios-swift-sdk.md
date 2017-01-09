@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-19"
+  years: 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
 
@@ -61,7 +61,7 @@ Initialize the SDK by passing the `applicationGUID` (**TenantId**) parameter. A 
 	let regionName = <applicationBluemixRegion>
 	let customRealm = "<yourProtectedRealm>"
 
-	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: 
+	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions:
 		[UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
 		let mcaAuthManager = MCAAuthorizationManager.sharedInstance
@@ -99,11 +99,11 @@ Initialize the SDK by passing the `applicationGUID` (**TenantId**) parameter. A 
 {: codeblock}
 
 In the code:
-* Replace `MCAServiceTenantId` with the **TenantId** value and `<applicationBluemixRegion>` with your {{site.data.keyword.amashort}} **Region** (see [Before you begin](##before-you-begin)). 
+* Replace `MCAServiceTenantId` with the **TenantId** value and `<applicationBluemixRegion>` with your {{site.data.keyword.amashort}} **Region** (see [Before you begin](##before-you-begin)).
 * Use the `realmName` that you specified in the {{site.data.keyword.amashort}} dashboard (see [Configuring custom authentication](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).
 * Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click the Avatar icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget.  The region value that appears should be one of the following: **US South**, **United Kingdom**, or **Sydney**, and correspond to the constants required in the code:  `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom`, or `BMSClient.Region.sydney`.
-   
-  
+
+
 ## Testing the authentication
 {: #custom-ios-testing}
 
@@ -156,7 +156,7 @@ After you initialize the client SDK and register a custom authentication delegat
 
 	 ```
 	 MCAAuthorizationManager.sharedInstance.logout(callBack)
-	 ``` 
+	 ```
 	 {: codeblock}
 
  If you call this code after a user is logged in, the user is logged out. When the user tries to log in again, they must answer the challenge received from the server again.

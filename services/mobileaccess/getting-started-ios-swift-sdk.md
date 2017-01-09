@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-15"
+  years: 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
 
@@ -110,10 +110,10 @@ Enable `Keychain Sharing`. Go to the `Capabilities` tab and switch the `Keychain
   ```
   {: codeblock}
 
-* Replace the `tenantId` with value you obtained from **Mobile options**. 
-* Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. 
+* Replace the `tenantId` with value you obtained from **Mobile options**.
+* Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted.
 
-For information about these values, see [Before you begin](#before-you-begin). 
+For information about these values, see [Before you begin](#before-you-begin).
 
 
 ## Making a request to your mobile back-end application
@@ -154,7 +154,7 @@ After the {{site.data.keyword.amashort}} client SDK is initialized, you can star
 ## Next steps
 {: #next-steps}
 When you connected to the protected endpoint, no credentials were required. To require your users to log in to your application, you must configure Facebook, Google, or custom authentication.
-  
+
   * [Facebook](facebook-auth-ios-swift-sdk.html)
   * [Google](google-auth-ios-swift-sdk.html)
   * [Custom](custom-auth-ios-swift-sdk.html)

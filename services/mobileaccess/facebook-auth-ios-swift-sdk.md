@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-18"
+  years: 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
 {:new_window: target="_blank"}
@@ -37,7 +37,7 @@ You must have
 
 On the Facebook for Developers site:
 
-1. Log in to your account on  [Facebook for Developers](https://developers.facebook.com). 
+1. Log in to your account on  [Facebook for Developers](https://developers.facebook.com).
 
 1. Ensure that the iOS platform has been added to your app. When you add or configure the iOS platform  you need to supply the **bundleId** of your iOS application. To find the **bundleId** of your iOS application, look for the **Bundle Identifier** in either the `info.plist` file or Xcode project **General** tab.
 
@@ -203,7 +203,7 @@ A common, though not mandatory, place to put the initialization code is in the `
 
    * Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted.
    * Replace `tenantId` with the **TenantId/App GUID** value.
- 
+
    For more information about these values, see [Before you begin](#before-you-begin)).
 
 1. Notify the Facebook SDK about the app activation and register the Facebook Authentication Handler by adding the following code to the `application:didFinishLaunchingWithOptions` method in your app delegate. Add this code after you initialize the BMSClient instance and register Facebook as the authentication manager.

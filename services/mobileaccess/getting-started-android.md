@@ -1,9 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-05"
-
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-08"
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -75,7 +74,7 @@ BMSClient.getInstance().setAuthorizationManager(
 {: codeblock}
 
 * Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} service is hosted.
-* Replace `<MCAServiceTenantId>` with the **tenantId** 
+* Replace `<MCAServiceTenantId>` with the **tenantId**
 
 For more information on these values, see [Before you begin](#before-you-begin).
 

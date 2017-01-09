@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-05"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
 {:new_window: target="_blank"}
@@ -25,7 +25,7 @@ You must have:
 * An instance of a  {{site.data.keyword.Bluemix_notm}} application that is protected by {{site.data.keyword.amashort}} service. For more information about how to create a {{site.data.keyword.Bluemix_notm}} back-end service, see [Getting started](index.html).
 * Your application route. This is the URL of your back-end application.
 * Your **TenantID**. Open your service in the {{site.data.keyword.Bluemix_notm}} dashboard. Click **Mobile Options**. The `tenantId`   (also known as `appGUID`) value is displayed in the **App GUID / TenantId** field. You will need this value for intializing the Authorization Manager.
-*  Find the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. You can find your current Bluemix region in the header, next to the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon"). The region value should be one of the following: **US South**, **Sydney**, or **UK**. The exact SDK constant values that correspond to these names are indicated in the code examples. 
+*  Find the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. You can find your current Bluemix region in the header, next to the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon"). The region value should be one of the following: **US South**, **Sydney**, or **UK**. The exact SDK constant values that correspond to these names are indicated in the code examples.
 * (optional) Get familiar with the following sections:
    * [Enabling Google authentication for Android apps](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html)
    * [Enabling Google authentication for iOS apps](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html)
@@ -55,10 +55,10 @@ The steps required to configure Android platform of a Cordova application for Go
 	}
 	```
 	{: codeblock}
-	
+
 1. Synchronize your project with Gradle by clicking **Tools > Android > Sync Project with Gradle Files**.
 
-1. The `GoogleAuthenticationManager` API must still be registered in your native code. Add this code to the main activity `onCreate` method: 
+1. The `GoogleAuthenticationManager` API must still be registered in your native code. Add this code to the main activity `onCreate` method:
 
 	```Java
 	String tenantId = "<tenantId>";
@@ -69,7 +69,7 @@ The steps required to configure Android platform of a Cordova application for Go
 	{: codeblock}
 
 1. Add the following code to your Activity:
- 
+
 	```Java
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -85,7 +85,7 @@ The steps required to configure Android platform of a Cordova application for Go
 
 The steps required to configure iOS Platform of Cordova application for Google authentication integration are similar to the steps for native applications. The major difference is that currently Cordova CLI does not support the CocoaPods dependency manager. You must manually add the required files for integrating with Google authentication. For more information, see  [Enabling Google authentication for iOS apps (Swift SDK)](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html). Complete the following steps:
 
-   * [Preparing your app for Google Sign-In](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html#google-sign-in-ios): Prepares the Google Sign-In for authenticating  {{site.data.keyword.amashort}} iOS applications. 
+   * [Preparing your app for Google Sign-In](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html#google-sign-in-ios): Prepares the Google Sign-In for authenticating  {{site.data.keyword.amashort}} iOS applications.
 
    * [Configuring MCA for Google authentication](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html#google-auth-ios-config): Configures your {{site.data.keyword.amashort}} service to work with the Google Sign-In.
 
@@ -97,14 +97,14 @@ The steps required to configure iOS Platform of Cordova application for Google a
 
 Enable `Keychain Sharing`. Go to the `Capabilities` tab and switch the `Keychain Sharing` to `On` in your Xcode project.
 
- 
+
 ### Initializing the Authorization Manager in your iOS code
 
 Initialize the {{site.data.keyword.amashort}} Authorization Manager in Objective-C in the `AppDelgate.m` file.
 
 ```
-#import "<your_module_name>-Swift.h" 
- 
+#import "<your_module_name>-Swift.h"
+
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 
 {
@@ -122,17 +122,17 @@ Initialize the {{site.data.keyword.amashort}} Authorization Manager in Objective
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 
 {
-	return [[GoogleAuthenticationManager sharedInstance] onOpenURLWithApplication:application url:url 
+	return [[GoogleAuthenticationManager sharedInstance] onOpenURLWithApplication:application url:url
 	sourceApplication:sourceApplication annotation:annotation];
 }
 ```
 {: codeblock}
 
-**Note:** 
+**Note:**
 
-* Replace `<your_module_name>` with the module name of your project. For example, if your module name is `Cordova`, then the import line should be `#import "Cordova-Swift.h"` Find the module name go to the 
+* Replace `<your_module_name>` with the module name of your project. For example, if your module name is `Cordova`, then the import line should be `#import "Cordova-Swift.h"` Find the module name go to the
 `Build Settings`  tab,  `Packaging` > `Product Module Name`.
-* Replace your `<tenantId>` with your tenant id (see [Before you begin](#before-you-begin)). 
+* Replace your `<tenantId>` with your tenant id (see [Before you begin](#before-you-begin)).
 
 
 ## Initializing the {{site.data.keyword.amashort}} client SDK in your Cordova WebView
@@ -145,7 +145,7 @@ BMSClient.initialize("<applicationBluemixRegion>");
 ```
 {: codeblock}
 
-Replace `<applicationBluemixRegion>` with your region (see [Before you begin](#before-you-begin)). 
+Replace `<applicationBluemixRegion>` with your region (see [Before you begin](#before-you-begin)).
 
 ## Testing the authentication
 {: #google-auth-cordova-test}
@@ -178,9 +178,9 @@ You must have a back-end application protected by {{site.data.keyword.amashort}}
 1. Run your application. The Google login screen displays.
 
 	![Google login screen](images/android-google-login.png)
-	
+
 	![Google login screen](images/ios-google-login.png)
-	
+
 	This screen might look slightly different if you do not have the Facebook app installed on your device, or if you are not currently logged in to Facebook.
 
 1. By clicking **OK** you are authorizing {{site.data.keyword.amashort}} to use your Google user identity for authentication purposes.
