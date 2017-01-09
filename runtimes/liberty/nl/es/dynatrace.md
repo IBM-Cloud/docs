@@ -83,13 +83,13 @@ El agente de Dynatrace debe estar alojado en un servidor web, y el paquete de co
 ### Configuración de la app de Liberty
 {: #configuring_liberty_app}
 
-La app de Liberty que desea supervisar deben estar configurada para localizar el servidor en el que se encuentra el jar del agente que ha establecido previamente. Puede configurar la app con la variable de entorno de **JBP_CONFIG_DYNATRACEAGENT**. La variable de entorno de **JBP_CONFIG_DYNATRACEAGENT** indica al paquete de compilación desde dónde se debe descargar el agente de Dynatrace. Para establecer la variable de entorno, siga estos pasos:
+La app de Liberty que desea supervisar deben estar configurada para localizar el servidor en el que se encuentra el jar del agente que ha establecido previamente. Puede configurar la app con la variable de entorno de **JBP_CONFIG_DYNATRACEAPPMONAGENT**. La variable de entorno de **JBP_CONFIG_DYNATRACEAPPMONAGENT** indica al paquete de compilación desde dónde se debe descargar el agente de Dynatrace. Para establecer la variable de entorno, siga estos pasos:
 <ol>
-   <li> Establezca la variable **JBP_CONFIG_DYNATRACEAGENT** para que tenga el valor
+   <li> Establezca la variable **JBP_CONFIG_DYNATRACEAPPMONAGENT** para que tenga el valor
    *"repository_root: URL_of_server_hosting_index.yml"*. Por ejemplo, después de enviar la aplicación, emita el siguiente mandato:
   
   <pre>   
-    $ cf se myApp JBP_CONFIG_DYNATRACEAGENT 'repository_root: https://my-dynatrace-agent-host.mybluemix.net'
+    $ cf se myApp JBP_CONFIG_DYNATRACEAPPMONAGENT 'repository_root: https://my-dynatrace-agent-host.mybluemix.net'
   </pre>
   {: codeblock}
 
