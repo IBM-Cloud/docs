@@ -66,22 +66,10 @@ Complete the following steps to migrate your app to Diego:
 
 After you update your app, verify that your app started. If your migrated app fails to start, it will remain offline until you identify and resolve the issue, and then restart the app.
 
-IBM will alert you of the upcoming mandatory migration period when DEA architecture support will be removed, and if you have not migrated your apps, the operations team will migrate all apps for you. Until support for the older DEA architecture is removed, you can run the following command to transition back to DEAs: `cf disable-diego APPLICATION_NAME`. You can also still deploy apps to the DEA architecture until support is removed:
-
-1. Deploy the application without starting it:
-```
-$ cf push APPLICATION_NAME --no-start
-```
-2. Run the disable-diego command:
-```
-$ cf disable-diego APPLICATION_NAME
-```
-3. Start the application:
-```
-$ cf start APPLICATION_NAME
-```
+IBM will alert you of the upcoming mandatory migration period when DEA architecture support will be removed, and if you have not migrated your apps, the operations team will migrate all apps for you.
   
-To validate which backend the application is running on:
+To validate which backend the application is running on, use the following command:
+
   ```
   $ cf has-diego-enabled APPLICATION_NAME
   ```
@@ -97,7 +85,22 @@ There are the following known issues that you might need to address when migrati
   * The **cf files** command is no longer supported. The replacement is the **cf ssh** command. For more details on the **cf ssh** command, see [cf ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh).
   * Some apps might use a high number of file descriptors (inodes). If you encounter this issue, you must increase disk quota for your app with the `cf scale APP_NAME [-k DISK]` command.
 
-For the comprehensive list of known issues, see the Cloud Foundry documentation page for [Migrating to Diego](https://github.com/cloudfoundry/diego-design-notes/blob/master/migrating-to-diego.md){: new_window}.
+For the comprehensive list of known issues, see the Cloud Foundry documentation page for  [Migrating to Diego](https://github.com/cloudfoundry/diego-design-notes/blob/master/migrating-to-diego.md){: new_window}.
+
+Until support for the older DEA architecture is removed, you can run the following command to transition back to DEAs: `cf disable-diego APPLICATION_NAME`. You can also still deploy apps to the DEA architecture until support is removed:
+
+1. Deploy the application without starting it:
+```
+$ cf push APPLICATION_NAME --no-start
+```
+2. Run the disable-diego command:
+```
+$ cf disable-diego APPLICATION_NAME
+```
+3. Start the application:
+```
+$ cf start APPLICATION_NAME
+```
 
 ### Starting an application
 {: #startapp}
