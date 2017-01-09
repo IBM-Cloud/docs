@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-19"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
 
@@ -26,7 +26,7 @@ For more information, see the following information:
  * [Configuring {{site.data.keyword.amashort}} for custom authentication](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html). This shows you how to set up the {{site.data.keyword.amashort}} service for custom authentication. Here you define the **Realm** value.
  * [Setting up Cordova SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html). Information on setting  up the Cordova client app.
  * [Using a custom identity provider](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html). How to authenticate users with a custom identity provider.
- * [Creating a custom identity provider](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html). Some examples of how a custom identity provider works. 
+ * [Creating a custom identity provider](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html). Some examples of how a custom identity provider works.
 
 ## Configure your Cordova WebView code
 ### Initializing the {{site.data.keyword.amashort}} client SDK in the Cordova WebView
@@ -38,8 +38,8 @@ BMSClient.initialize("<applicationBluemixRegion>");
 ```
 {: codeblock}
 
-Replace `<applicationBluemixRegion>` with your region (see [Before you begin](#before-you-begin)). 
- 
+Replace `<applicationBluemixRegion>` with your region (see [Before you begin](#before-you-begin)).
+
 
 ### Authentication listener interface
 {: #custom-cordva-auth}
@@ -175,7 +175,7 @@ Register your Authorization Manager according to your version of Xcode.
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 
 {  
-	
+
     //[CDVBMSClient initMCAAuthorizationManagerManagerWithTenantId:@"<tenantId>"];
  }
 ```
@@ -188,7 +188,7 @@ Note: For the correct Swift header file name, replace `your_module_name` with th
 
 ## Enable Keychain Sharing for iOS
 
-Enable `Keychain Sharing` by going to `Capabilities` tab and switch the `Keychain Sharing` to `On` in your Xcode project. 
+Enable `Keychain Sharing` by going to `Capabilities` tab and switch the `Keychain Sharing` to `On` in your Xcode project.
 
 
 ## Testing the authentication
@@ -216,8 +216,8 @@ You must have an application that was created with the {{site.data.keyword.mobil
 	request.send(success, failure);
 	```
 	{: codeblock}
-	
-	Replace `<your-application-route>` with your back-end application URL (see [Before you begin](#before-you-begin)). 
+
+	Replace `<your-application-route>` with your back-end application URL (see [Before you begin](#before-you-begin)).
 
 1. 	When your request succeeds, the following output is in the `LogCat` or Xcode console:
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-18"
+  years: 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
 {:new_window: target="_blank"}
@@ -167,8 +167,8 @@ A common, though not mandatory, place to put the initialization code is in the `
 	In the code:
 
       * Replace  `<serviceTenantID>` with the value you retrieved from the **Mobile options**.
-      * Replace `<applicationBluemixRegion>` with your {{site.data.keyword.Bluemix_notm}} **Region**. 
-	
+      * Replace `<applicationBluemixRegion>` with your {{site.data.keyword.Bluemix_notm}} **Region**.
+
 	For more information on obtaining these values see  [Before you begin](#before-you-begin).
 
 

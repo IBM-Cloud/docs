@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-25"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
 {:shortdesc: .shortdesc}
@@ -149,11 +149,11 @@ request.send(this, new ResponseListener() {
  let mcaAuthManager = MCAAuthorizationManager.sharedInstance
  mcaAuthManager.initialize(tenantId: tenantId, bluemixRegion: regionName)
  BMSClient.sharedInstance.authorizationManager = mcaAuthManager
-        
-        
+
+
  let requestPath = baseRequestUrl + "/protectedResource"
  let request = Request(url: requestPath, method: HttpMethod.GET)
-        
+
     request.send { (response, error) in
         if let error = error {
             print("Connection failure")

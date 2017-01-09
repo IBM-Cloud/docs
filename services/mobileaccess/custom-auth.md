@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-18"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
 
@@ -44,7 +44,7 @@ Create a custom identity provider that uses the {{site.data.keyword.amafull}} se
 The {{site.data.keyword.amashort}} Web application request flow is similar to the mobile client flow. However, {{site.data.keyword.amashort}} protects the web application, rather than a {{site.data.keyword.Bluemix_notm}} back-end resource.
 
   * The initial request is sent by the Web application (from a log-in form, for example).
-  * The final redirect is to the protected area of the Web application itself, rather than back-end protected resource. 
+  * The final redirect is to the protected area of the Web application itself, rather than back-end protected resource.
 
 ## Understanding custom identity providers
 {: #custom-id-about}
@@ -81,7 +81,7 @@ When you create a custom identity provider, you might:
 	}
 	```
 	{: codeblock}
-	
+
 1. Implement custom logic of validating supplied authentication challenge answer.
 
 1. Define a custom user identity object that contains any required custom properties. here is an example of a custom user identity object that is obtained by client after successful authentication:
@@ -135,4 +135,3 @@ A custom identity provider supports one custom authentication realm. To handle i
 * [Configuring custom authentication for Android](custom-auth-android.html)
 * [Configuring custom authentication for iOS (Swift SDK)](custom-auth-ios-swift-sdk.html)
 * [Configuring custom authentication for Cordova](custom-auth-cordova.html)
-

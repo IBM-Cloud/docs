@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-05"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
 {:new_window: target="_blank"}
@@ -36,11 +36,11 @@ You must have:
 
 From the Facebook for Developers website:
 
-1. Log in to your account on the Facebook for Developers website (https://developers.facebook.com). 
+1. Log in to your account on the Facebook for Developers website (https://developers.facebook.com).
 
 1. From the **Products List**, choose **Facebook Login**.
 
-1. Add or configure the Android platform. 
+1. Add or configure the Android platform.
 
 1. Specify the package name of your Android application in the Google Play Package Name prompt. To find the package name of your Android application look for `<manifest ..... package="{your-package-name}">` in  the `AndroidManifest.xml` file in Android Studio project.
 
@@ -57,13 +57,13 @@ From the Facebook for Developers website:
 	</activity>
 	```
 	{: codeblock}
-	
+
 1. For Facebook to ensure your application authenticity, you must specify a hash of your developer certificate SHA1.
 
 	**More about Android security:** The Android OS requires that all applications installed on an Android device are signed with a developer certificate. The Android application can be built in two modes: debug and release.
-	
+
 	Use different certificates for debug and release modes.  Certificates that are used for signing Android applications in debug mode are bundled with Android SDK, which is usually installed automatically by Android Studio. When you want to release your app to the Google Play store, you must sign your app with another certificate that you usually generate yourself.
-	
+
 	You can enter two sets of key hashes with Facebook: one key hash for applications that are built in debug mode with a debug certificate, and another key hash for applications that are built in release mode with a release certificate. For more information, see [signing your Android applications](http://developer.android.com/tools/publishing/app-signing.html).
 
 1. The keystore that contains the certificate you are using for the development environment is stored in the `~/.android/debug.keystore` file. The default keystore password is: `android`. Use this certificate to build applications in debug mode.
@@ -185,9 +185,9 @@ Your Android project might have two `build.gradle` files:  for the project and a
 	```
 	{: codeblock}
 
-   * Replace `BMSClient.REGION_UK` with the appropriate region. 
-   * Replace `<MCAServiceTenantId>` with the `tenantId` value 
-   
+   * Replace `BMSClient.REGION_UK` with the appropriate region.
+   * Replace `<MCAServiceTenantId>` with the `tenantId` value
+
 	For more information on obtaining these values see  [Before you begin](#before-you-begin)).
 
 	**Note:** If your Android application is targeting Android version 6.0 (API level 23) or higher, you must ensure that the application has an `android.permission.GET_ACCOUNTS` call before calling `register`. For more information, see [https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}.
@@ -215,7 +215,7 @@ After the client SDK is initialized and Facebook Authentication Manager is regis
 
 You must be using the {{site.data.keyword.mobilefirstbp}} boilerplate and already have a resource that is protected by {{site.data.keyword.amashort}} at the `/protected` endpoint. If you need to set up a `/protected` endpoint, see [Protecting resources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
 
-1. Try to send a request to a protected endpoint of your newly created mobile back-end application in your browser. Open the following URL: 
+1. Try to send a request to a protected endpoint of your newly created mobile back-end application in your browser. Open the following URL:
 
 	`{applicationRoute}/protected`. For example: `http://my-mobile-backend.mybluemix.net/protected`.  
 
@@ -244,7 +244,7 @@ You must be using the {{site.data.keyword.mobilefirstbp}} boilerplate and alread
 	});
 	```
 	{: codeblock}
-	
+
 1. Run your application. A Facebook login screen displays.
 
 	![image](images/android-facebook-login.png)

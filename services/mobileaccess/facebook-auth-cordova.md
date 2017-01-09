@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-18"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
 
@@ -173,13 +173,13 @@ The Authorization Manager must be initialized in the native Objective-C code in 
 
 	    return [super application:application didFinishLaunchingWithOptions:launchOptions];
 	}
-	
 
-	- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication 
+
+	- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication
 			annotation:(id)annotation
 	{
-	  
-	   return [[FacebookAuthenticationManager sharedInstance] onOpenURLWithApplication:application 
+
+	   return [[FacebookAuthenticationManager sharedInstance] onOpenURLWithApplication:application
 	   		url:url sourceApplication:sourceApplication annotation:annotation];
 	}
 

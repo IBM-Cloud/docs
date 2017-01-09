@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-02"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
 
@@ -74,7 +74,7 @@ Add the internet access permission under the `<manifest>` element:
 	{: codeblock}
 
 Replace the `BMSClient.REGION_UK` with the {{site.data.keyword.amashort}} region. For more information on obtaining these values see  [Before you begin](#before-you-begin)).
-	
+
 
 ## AuthenticationListener interface
 {: #custom-android-authlistener}
@@ -197,7 +197,7 @@ public class CustomAuthenticationListener implements AuthenticationListener {
 After you create a custom AuthenticationListener, register it with `BMSClient` before you start using the listener. Add the following code to your application. This code must be called before you send any requests to your protected resources.
 
 ```Java
-MCAAuthorizationManager mcaAuthorizationManager = 
+MCAAuthorizationManager mcaAuthorizationManager =
       MCAAuthorizationManager.createInstance(this.getApplicationContext(),"<MCAServiceTenantId>");
 mcaAuthorizationManager.registerAuthenticationListener(realmName, new CustomAuthenticationListener());
 BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
@@ -207,7 +207,7 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 
 
 In the code:
-* Replace `MCAServiceTenantId` with the **TenantId** value (see [Before you begin](##before-you-begin)). 
+* Replace `MCAServiceTenantId` with the **TenantId** value (see [Before you begin](##before-you-begin)).
 * Use the `realmName` that you specified in the {{site.data.keyword.amashort}} dashboard (see [Configuring custom authentication](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).
 
 
@@ -220,7 +220,7 @@ After the client SDK is initialized and a custom AuthenticationListener is regis
 You must have an application that has a resource that is protected by {{site.data.keyword.amashort}} at the `/protected` endpoint.
 
 
-1. Send a request to the protected endpoint (`{applicationRoute}/protected`) of your mobile back-end application from your browser, for example `http://my-mobile-backend.mybluemix.net/protected`. For information on obtaining the `{applicationRoute}` value, see   [Before you begin](#before-you-begin). 
+1. Send a request to the protected endpoint (`{applicationRoute}/protected`) of your mobile back-end application from your browser, for example `http://my-mobile-backend.mybluemix.net/protected`. For information on obtaining the `{applicationRoute}` value, see   [Before you begin](#before-you-begin).
 
 1. The `/protected` endpoint of a mobile back-end application that is created with the {{site.data.keyword.mobilefirstbp}} boilerplate is protected with {{site.data.keyword.amashort}}. The endpoint can  be accessed by only mobile applications that are instrumented with the {{site.data.keyword.amashort}} client SDK. As a result, an `Unauthorized` message displays in your  browser.
 
@@ -247,7 +247,7 @@ You must have an application that has a resource that is protected by {{site.dat
 	});
 	```
 	{: codeblock}
-	
+
 1. 	When your request succeeds, the following output is in the LogCat tool:
 
 	![image](images/android-custom-login-success.png)
