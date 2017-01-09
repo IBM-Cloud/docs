@@ -83,12 +83,12 @@ L'agent Dynatrace doit être hébergé sur un serveur Web, et le pack de constru
 ### Configuration de l'appli Liberty
 {: #configuring_liberty_app}
 
-L'appli Liberty que vous souhaitez surveiller doit être configurée pour localiser le serveur qui héberge le fichier JAR d'agent que vous avez précédemment configuré. Vous pouvez configurer l'appli avec la variable d'environnement **JBP_CONFIG_DYNATRACEAGENT**. La variable d'environnement **JBP_CONFIG_DYNATRACEAGENT** indique au pack de construction l'emplacement à partir duquel il doit télécharger l'agent Dynatrace. Pour définir la variable d'environnement, procédez comme suit :
+L'appli Liberty que vous souhaitez surveiller doit être configurée pour localiser le serveur qui héberge le fichier JAR d'agent que vous avez précédemment configuré. Vous pouvez configurer l'appli avec la variable d'environnement **JBP_CONFIG_DYNATRACEAPPMONAGENT**. La variable d'environnement **JBP_CONFIG_DYNATRACEAPPMONAGENT** indique au pack de construction l'emplacement à partir duquel il doit télécharger l'agent Dynatrace. Pour définir la variable d'environnement, procédez comme suit :
 <ol>
-   <li> Affectez à la variable **JBP_CONFIG_DYNATRACEAGENT** la valeur *"repository_root: URL_of_server_hosting_index.yml"*. Par exemple, après avoir envoyé par commande push votre application, exécutez la commande suivante :
+   <li> Affectez à la variable **JBP_CONFIG_DYNATRACEAPPMONAGENT** la valeur *"repository_root: URL_of_server_hosting_index.yml"*. Par exemple, après avoir envoyé par commande push votre application, exécutez la commande suivante :
   
   <pre>   
-    $ cf se myApp JBP_CONFIG_DYNATRACEAGENT 'repository_root: https://my-dynatrace-agent-host.mybluemix.net'
+    $ cf se myApp JBP_CONFIG_DYNATRACEAPPMONAGENT 'repository_root: https://my-dynatrace-agent-host.mybluemix.net'
   </pre>
   {: codeblock}
 
