@@ -12,7 +12,7 @@ years: 2015, 2016
 
 # Enabling Android applications to receive {{site.data.keyword.mobilepushshort}}
 {: #tag_based_notifications}
-Last updated: 08 December 2016
+Last updated: 09 January 2017
 {: .last-updated}
 
 You can enable Android applications to receive push notifications to your devices. Android Studio is a prerequisite and is the recommended method to build Android projects. A basic knowledge of Android Studio is essential.
@@ -29,7 +29,7 @@ After creating and opening your mobile application, complete the following steps
 1. Add dependencies to your Module level **build.gradle** file. 
 	- Add the following dependency to include the Bluemix™ Mobile services Push client SDK and the Google play services SDK to your compile scope dependencies.
 	```
-	com.ibm.mobilefirstplatform.clientsdk.android:push:2.+
+	com.ibm.mobilefirstplatform.clientsdk.android:push:3.+
 	```
     {: codeblock}
 	
