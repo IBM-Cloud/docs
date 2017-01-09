@@ -22,6 +22,8 @@ lastupdated: "2016-10-11"
 
 To access the {{site.data.keyword.iot_short_notm}} HTTP REST API and obtain more information about how to integrate devices into your organization, go to  https://docs.internetofthings.ibmcloud.com/swagger/v0002.html.
 
+To access the {{site.data.keyword.iot_short_notm}} HTTP Messaging API and obtain more information about how to configure your devices to publish events over HTTP, go to https://docs.internetofthings.ibmcloud.com/swagger/http-messaging.html.
+
 The only version of the {{site.data.keyword.iot_short_notm}} HTTP REST API that is supported is version 2. Ensure that your {{site.data.keyword.iot_short_notm}} solutions are using version 2.
 
 # HTTP REST messaging API for devices
