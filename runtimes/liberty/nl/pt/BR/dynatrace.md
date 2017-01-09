@@ -92,13 +92,13 @@ arquivo jar do agente apropriado para execução no Bluemix é o
 ### Configurando o app Liberty
 {: #configuring_liberty_app}
 
-O app Liberty que você deseja monitorar deve ser configurado para localizar o servidor que hospeda o jar do agente configurado anteriormente. É possível configurar o app com a variável de ambiente **JBP_CONFIG_DYNATRACEAGENT**. A variável de ambiente **JBP_CONFIG_DYNATRACEAGENT** instrui o buildpack a partir de onde fazer download do agente Dynatrace. Para configurar a variável de ambiente, conclua estas etapas:
+O app Liberty que você deseja monitorar deve ser configurado para localizar o servidor que hospeda o jar do agente configurado anteriormente. É possível configurar o app com a variável de ambiente **JBP_CONFIG_DYNATRACEAPPMONAGENT**. A variável de ambiente **JBP_CONFIG_DYNATRACEAPPMONAGENT** instrui o buildpack a partir de onde fazer download do agente Dynatrace. Para configurar a variável de ambiente, conclua estas etapas:
 <ol>
-   <li> Configure a variável **JBP_CONFIG_DYNATRACEAGENT** para que tenha o valor
+   <li> Configure a variável **JBP_CONFIG_DYNATRACEAPPMONAGENT** para que tenha o valor
    *"repository_root: URL_of_server_hosting_index.yml"*. Por exemplo, depois de enviar por push seu aplicativo, emita o comando a seguir:
   
   <pre>   
-    $ cf se myApp JBP_CONFIG_DYNATRACEAGENT 'repository_root: https://my-dynatrace-agent-host.mybluemix.net'
+    $ cf se myApp JBP_CONFIG_DYNATRACEAPPMONAGENT 'repository_root: https://my-dynatrace-agent-host.mybluemix.net'
   </pre>
   {: codeblock}
 
