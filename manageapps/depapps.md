@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2016-01-04"
+lastupdated: "2017-01-09"
 ---
 
 
@@ -10,8 +10,6 @@ lastupdated: "2016-01-04"
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
-
-
 
 # Deploying apps
 {: #deployingapps}
@@ -34,7 +32,7 @@ All new applications that you create will run on Diego, and you must start migra
 ### Staging an application
 {: #diego}
 
-During the staging phase, Diego takes care of all aspects related with application container orchestration. Distribution of the app instances are done with Diego Brain, and the Cloud Controller is responsible for sending the staging request to the other components that complete the staging, such as Rep and Gardner. Diego Brain allocates the apps into cells with SSH access to the application containers. All Diego components are designed to be clustered which means you can create different availability zones.
+During the staging phase, Diego takes care of all aspects related with application container orchestration. When you push an app, the Cloud Controller sends a staging request to Diego, which takes over the task of allocating the app instances. The Diego backend orchestrates application containers in a way to ensure fault-tolerance and long-term consistency, which balances the load across a series of virtual machines called cells. Additionally, Diego ensures that users can access the logs of their apps. All Diego components are designed to be clustered which means you can create different availability zones.
 
 To validate the app health, Diego supports the same PORT-based checks that were used for DEA. However, Diego is also designed to be able to have more generic options like URL-based health checks, which might be enabled in the future.
 
@@ -99,7 +97,7 @@ There are the following known issues that you might need to address when migrati
   * The **cf files** command is no longer supported. The replacement is the **cf ssh** command. For more details on the **cf ssh** command, see [cf ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh).
   * Some apps might use a high number of file descriptors (inodes). If you encounter this issue, you must increase disk quota for your app with the `cf scale APP_NAME [-k DISK]` command.
 
-For the comprehensive list of known issues, see the Cloud Foundry documentation page for  [Migrating to Diego](https://github.com/cloudfoundry/diego-design-notes/blob/master/migrating-to-diego.md){: new_window}.
+For the comprehensive list of known issues, see the Cloud Foundry documentation page for [Migrating to Diego](https://github.com/cloudfoundry/diego-design-notes/blob/master/migrating-to-diego.md){: new_window}.
 
 ### Starting an application
 {: #startapp}
