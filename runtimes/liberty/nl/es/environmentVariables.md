@@ -43,7 +43,7 @@ Variables de entorno admitidas por Liberty para Java.
 </tr>
 
 <tr>
-<td>JBP_CONFIG_DYNATRACEAGENT</td>
+<td>JBP_CONFIG_DYNATRACEAPPMONAGENT</td>
 <td>Configurar la [información sobre ubicación del agente de Dynatrace](dynatrace.html#configuring_liberty_app)</td>
 </tr>
 
