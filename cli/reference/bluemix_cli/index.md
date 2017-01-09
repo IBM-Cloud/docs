@@ -117,8 +117,8 @@ To install from a remote server, take the following steps:
 
 You can also install a plug-in from the repository. {{site.data.keyword.Bluemix_notm}} has repositories that host {{site.data.keyword.Bluemix_notm}} CLI plug-ins and Cloud Foundry CLI plug-ins:
 
-  * [Cloud Foundry CLI plug-ins repository](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){: new_window} ![External link icon](../../../icons/launch-glyph.svg), which hosts plug-ins for Cloud Foundry CLI.
-  * [{{site.data.keyword.Bluemix_notm}} CLI plug-ins repository](http://clis.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window} ![External link icon](../../../icons/launch-glyph.svg), which hosts plug-ins specifically for {{site.data.keyword.Bluemix_notm}} CLI.
+  * [Cloud Foundry CLI plug-ins repository](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){: new_window}, which hosts plug-ins for Cloud Foundry CLI.
+  * [{{site.data.keyword.Bluemix_notm}} CLI plug-ins repository](http://clis.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window}, which hosts plug-ins specifically for {{site.data.keyword.Bluemix_notm}} CLI.
 
 To install from the repository, take the following steps:
 
