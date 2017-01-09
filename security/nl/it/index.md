@@ -31,8 +31,7 @@ incidenti di sicurezza. Per i dettagli, consulta il sito [IBM Security Vulnerabi
 ospitando {{site.data.keyword.Bluemix_notm}} locale nel tuo data center dietro un firewall aziendale. Inoltre, {{site.data.keyword.Bluemix_notm}} aggiunge funzionalità di sicurezza a livello
 PaaS (Platform as a Service) in diverse categorie: piattaforma, dati e applicazione.
 
-## Sicurezza della piattaforma
-   {{site.data.keyword.Bluemix_notm}}
+## Sicurezza della piattaforma {{site.data.keyword.Bluemix_notm}}
 {: #platform-security}
 
 {{site.data.keyword.Bluemix_notm}} fornisce sicurezza funzionale, di infrastruttura, operativa e fisica (tramite {{site.data.keyword.BluSoftlayer}}) per la piattaforma di base. Tuttavia, {{site.data.keyword.Bluemix_notm}} locale è unico per il fatto che il cliente fornisce l'infrastruttura e il data center ed è di sua competenza la sicurezza fisica.
@@ -202,8 +201,7 @@ DataPower Gateway funge da proxy inverso e fornisce la terminazione SSL. Da lì 
 Come sviluppatore della tua applicazione, sei responsabile della sicurezza sia dei data-in-use
 che dei data-at-rest. Puoi usufruire dei diversi servizi correlati ai dati disponibili nel catalogo {{site.data.keyword.Bluemix_notm}} per informazioni a tale riguardo.
 
-## Sicurezza delle applicazioni
-               {{site.data.keyword.Bluemix_notm}}
+## Sicurezza delle applicazioni {{site.data.keyword.Bluemix_notm}}
 {: #application-security}
 
 In quanto sviluppatore di applicazioni, è tuo compito abilitare le configurazioni di sicurezza, compresa la
@@ -268,8 +266,7 @@ Per ulteriori informazioni, vedi [Introduzione a Secure Gateway](/docs/services/
 
 Puoi utilizzare gli strumenti SIEM (Security Information and Event Management) per analizzare gli avvisi di sicurezza nei log dell'applicazione. Uno di questi strumenti è IBM Security QRadar&reg; SIEM, che fornisce servizi di sicurezza in ambienti cloud. Per informazioni, vedi [IBM QRadar Security Intelligence Platform](http://www-01.ibm.com/support/knowledgecenter/SS42VS/welcome?lang=en){: new_window}.
 
-## Distribuzione della sicurezza
-{{site.data.keyword.Bluemix_notm}}
+## Distribuzione della sicurezza {{site.data.keyword.Bluemix_notm}}
 {: #security-deployment}
 
 L'architettura della distribuzione della sicurezza {{site.data.keyword.Bluemix_notm}}
