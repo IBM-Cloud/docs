@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2016-12-12"
+lastupdated: "2017-1-9"
 
 ---
 
@@ -14,15 +14,7 @@ lastupdated: "2016-12-12"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# {{site.data.keyword.Bluemix_notm}} (bx) commands
-{: #bluemix_cli}
-
-Version: 0.4.4
-
-The {{site.data.keyword.Bluemix_notm}} command line interface (CLI) provides a set of commands that are grouped by namespace for users to interact with {{site.data.keyword.Bluemix_notm}}. Some {{site.data.keyword.Bluemix_notm}} commands are wrappers of existing cf commands, while others provide extended capabilities for {{site.data.keyword.Bluemix_notm}} users. The following information lists commands that are supported by {{site.data.keyword.Bluemix_notm}} CLI, and includes their names, options, usage, prerequisites, descriptions, and examples.
-{:shortdesc}
-
-## Getting started with {{site.data.keyword.Bluemix_notm}} CLI
+# Getting started with {{site.data.keyword.Bluemix_notm}} CLI
 {: #getting-started}
 
 {{site.data.keyword.Bluemix_notm}} CLI provides a unified way for you to interact with your applications, virtual servers, containers, and other services in {{site.data.keyword.Bluemix_notm}} by using a command line interface. {{site.data.keyword.Bluemix_notm}} CLI also integrates community tools, such as Cloud Foundry CLI, Docker CLI, and OpenStack CLI, and initializes environment settings for you to interact with different compute types.
@@ -31,7 +23,7 @@ The {{site.data.keyword.Bluemix_notm}} command line interface (CLI) provides a s
 
 **Note**: If your network contains an HTTP proxy server between the host that runs the CLI and {{site.data.keyword.Bluemix_notm}}, you must specify the host name or IP address of the proxy server in the HTTP_PROXY environment variable.
 
-### Installing {{site.data.keyword.Bluemix_notm}} CLI
+## Installing {{site.data.keyword.Bluemix_notm}} CLI
 {: #install_bluemix_cli}
 
 Before you install {{site.data.keyword.Bluemix_notm}} CLI, ensure that the Cloud Foundry CLI is installed on your system.
@@ -69,7 +61,7 @@ For Linux, follow these steps:
 
 You can now get started with {{site.data.keyword.Bluemix_notm}} CLI or install additional plug-ins.
 
-### Installing a plug-in
+## Installing a plug-in
 {: #install_plug-in}
 
 Like Cloud Foundry CLI, {{site.data.keyword.Bluemix_notm}} CLI also supports a plug-in extension framework to integrate other commands besides the built-in ones.
@@ -156,7 +148,7 @@ To install from the repository, take the following steps:
   ~$
   ```
 
-### Logging in to {{site.data.keyword.Bluemix_notm}} CLI
+## Logging in to {{site.data.keyword.Bluemix_notm}} CLI
 {: #log_bmcli}
 
 After you installed {{site.data.keyword.Bluemix_notm}} CLI, you can log in to {{site.data.keyword.Bluemix_notm}} by using your {{site.data.keyword.Bluemix_notm}} account and password. For example:
@@ -188,10 +180,16 @@ xspHelloWorld           IBM XPages
 javacloudantbp          Java Cloudant Web Starter
 ```
 
-## {{site.data.keyword.Bluemix_notm}} (bx) commands
-{: #reference}
+# {{site.data.keyword.Bluemix_notm}} (bx) commands
+{: #bluemix_cli}
 
-In the command description, *Prerequisites* list which actions are required before using the command. Commands that have no prerequisite actions list **None**. Otherwise, prerequisites might include one or more of the following actions:
+Version: 0.4.4
+
+The {{site.data.keyword.Bluemix_notm}} command line interface (CLI) provides a set of commands that are grouped by namespace for users to interact with {{site.data.keyword.Bluemix_notm}}. Some {{site.data.keyword.Bluemix_notm}} commands are wrappers of existing cf commands, while others provide extended capabilities for {{site.data.keyword.Bluemix_notm}} users. The following information lists commands that are supported by {{site.data.keyword.Bluemix_notm}} CLI, and includes their names, options, usage, prerequisites, descriptions, and examples.
+{:shortdesc}
+
+**Note:** *Prerequisites* list which actions are required before using the command. Commands that have no prerequisite actions list **None**. Otherwise, prerequisites might include one or more of the following actions:
+
 <dl>
 <dt>Endpoint</dt>
 <dd>An API endpoint must be set through the <code>bluemix api</code> before using the command.</dd>
@@ -203,7 +201,8 @@ In the command description, *Prerequisites* list which actions are required befo
 <dd>The Docker CLI (docker) must be installed to run this command.</dd>
 </dl>
 
-### bluemix commands index
+
+## bluemix commands index
 {: #bx_commands_index}
 
 Use the indexes in the following tables to refer to the frequently used bluemix commands.
