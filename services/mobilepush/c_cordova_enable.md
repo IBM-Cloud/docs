@@ -12,7 +12,7 @@ copyright:
 
 # Enabling Cordova applications to receive push notifications
 {: #cordova_enable}
-Last updated: 15 December 2016
+Last updated: 05 January 2017
 {: .last-updated}
 
 Cordova is a platform for building hybrid applications with JavaScript, CSS, and HTML. The {{site.data.keyword.mobilepushshort}} service supports development of Cordova-based iOS and Android applications.
@@ -87,11 +87,20 @@ bms-push <version> "BMSPush"
 ```
 	{: codeblock}
 
-1. (iOS only) - Configure your iOS development environment.
+1. Configure your iOS development environment.
 2. Build and run your application with Xcode.
-1. (Android only)- Build your Android project by using the following command:
-**cordova build android**.
-
+1. Download your Firebase `google-services.json` for android, and place them in the root folder of your Cordova project, in `[your-app-name]/platforms/android.
+	1. Go to `[your-app-name]/platforms/android`.
+	2. Open file `build.gradle` (Path : platform > android > build.gradle).
+	3. Find `buildscript` text in `build.gradle` file.
+	4. After the classpath line, add the line, classpath 'com.google.gms:google-services:3.0.0'
+	5. Then find "dependencies". Select dependencies where you have text `compile` and where that dependencies is getting ended, just after that, add this line :apply plugin: 'com.google.gms.google-services'.
+	6. Prepare and build your Cordova Android project.
+		```
+		cordova prepare android
+		cordova build android
+		```
+			{: codeblock}
 	**Note**: Before opening your project in Android Studio, build your Cordova application through the Cordova CLI. This will help avoid build errors.
 
 ## Initializing the Cordova plug-in
@@ -103,8 +112,18 @@ Before you can use the {{site.data.keyword.mobilepushshort}} service Cordova plu
 
 ```
 onDeviceReady: function() {
-app.receivedEvent('deviceready');
-BMSClient.initialize("YOUR APP REGION");
+	app.receivedEvent('deviceready');
+	BMSClient.initialize("YOUR APP REGION");
+	var category =  {};
+	BMSPush.initialize(appGUID,clientSecret,category);
+	var success = function(message) { console.log("Success: " + message); };
+	var failure = function(message) { console.log("Error: " + message); };
+	BMSPush.registerDevice({}, success, failure);
+	var showNotification = function(notif)
+	{
+	alert(JSON.stringify(notif));
+	};
+	BMSPush.registerNotificationsCallback(showNotification);
     } 
 ```
 	{: codeblock}

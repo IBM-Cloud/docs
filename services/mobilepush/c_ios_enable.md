@@ -12,7 +12,7 @@ copyright:
 
 #Enabling iOS applications to send {{site.data.keyword.mobilepushshort}}
 {: #enable-push-ios-notifications}
-Last updated: 15 December 2016
+Last updated: 05 January 2017
 {: .last-updated}
 
 You can enable iOS applications to send {{site.data.keyword.mobilepushshort}} to your devices.
@@ -40,7 +40,7 @@ $ sudo gem install cocoapods
 	//Copy the following list as is and remove the dependencies you do not need.
 	use_frameworks!
 	target 'MyApp' do
-	platform :ios, '9.0'
+	platform :ios, '8.0'
 	pod 'BMSCore'
 	pod 'BMSPush'
 	pod 'BMSAnalyticsAPI'
@@ -125,7 +125,6 @@ A common place to put the initialization code is in the application delegate for
 // Initialize the Core SDK for Swift with IBM Bluemix GUID, route, and region
 let myBMSClient = BMSClient.sharedInstance
 myBMSClient.initialize(bluemixRegion: "Location where your app is hosted.") 
-myBMSClient.defaultRequestTimeout = 10.0 // Timeout in seconds
 ```
 	{: codeblock}
 
@@ -147,9 +146,9 @@ Specifies the unique key that is assigned to the application that you created on
 
 Specifies the location where the app is hosted. The `bluemixRegion` parameter specifies which Bluemix deployment you are using. You can set this value with a `BMSClient.REGION` static property and use one of three values:
 
-- BMSClient.REGION_US_SOUTH
-- BMSClient.REGION_UK
-- BMSClient.REGION_SYDNEY
+- BMSClient.Region.usSouth 
+- BMSClient.Region.unitedKingdom
+- BMSClient.Region.sydney
 
 ####AppGUID
 {: ios-AppGUID}
@@ -182,17 +181,8 @@ To register iOS applications and devices, you need to:
 ###Create a back-end application
 {: create-a-backend-app}
 
-Create a back-end application in the Boilerplates section Bluemix® catalog, which automatically binds the {{site.data.keyword.mobilepushshort}} service to this application. If you already created a back-end app, ensure that you bind the app to the {{site.data.keyword.mobilepushshort}} service.
+Create a back-end application in the Boilerplates section Bluemix® catalog, which automatically binds the {{site.data.keyword.mobilepushshort}} service to this application. If you have already created a back-end app, ensure that you bind the app to the {{site.data.keyword.mobilepushshort}} service.
 
-```
-//For Swift
-func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil) 
-   UIApplication.sharedApplication().registerUserNotificationSettings(settings)
-   UIApplication.sharedApplication().registerForRemoteNotifications()
-}
-```
-	{: codeblock}
 
 ###Passing tokens to {{site.data.keyword.mobilepushshort}}
 {: pass-token-push-notifications}
@@ -202,9 +192,8 @@ After the token is received from APNs, pass the token to {{site.data.keyword.mob
 After the token is received from APNs, pass the token to Push Notifications as part of the `didRegisterForRemoteNotificationsWithDeviceToken` method.
 
 ```
-func application (application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData){
+func application (_application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data){
    let push =  BMSPushClient.sharedInstance
-   push.initializeWithAppGUID("appGUID")
    push.registerWithDeviceToken(deviceToken) { (response, statusCode, error) -> Void in
       if error.isEmpty {
            print( "Response during device registration : \(response)")
@@ -225,11 +214,11 @@ func application (application: UIApplication, didRegisterForRemoteNotificationsW
 
 
 To receive push notifications on iOS devices, add the following Swift method to the application delegate of your application.
+
 ```
 // For Swift
-func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
-//UserInfo dictionary will contain data sent from the server
-    }
+func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) 
+{ //UserInfo dictionary will contain data sent from the server }
 ```
 	{: codeblock}
 
