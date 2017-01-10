@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-03"
+  years: 2016, 2017
+lastupdated: "2017-01-10"
 
 ---
 
@@ -114,7 +114,7 @@ Not all services are available in every {{site.data.keyword.Bluemix_notm}} regio
 |{{site.data.keyword.nlclassifierlshort}} 	|Yes 		|Yes 		|Yes|
 |{{site.data.keyword.objectstorageshort}}	|Yes		|No		|No|
 |{{site.data.keyword.personalityinsightsshort}}	|Yes		|Yes		|Yes|
-|{{site.data.keyword.mobilepush}}Push		|Yes		|Yes		|No|
+|{{site.data.keyword.mobilepush}}		|Yes		|Yes		|No|
 |Push for iOS 8					|Yes		|Yes		|No|
 |{{site.data.keyword.questionandanswershort}}	|Yes		|Yes		|Yes|
 |{{site.data.keyword.rapidApps}}		|Yes		|Yes		|No|
