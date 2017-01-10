@@ -48,7 +48,7 @@ Now you can configure the {{site.data.keyword.autoscaling}} policy, see the metr
 <dl>
 <dt>Policy Configuration</dt>
 <dd>Use this section to create or edit the scaling rules to specify the conditions in which certain scaling activities are to be triggered.<ul>
-<li> For Liberty for Java™ applications, you can define scaling rules for Heap, Memory, Response Time and Throughput.  
+<li> For Liberty for Java™ applications (running with IBM JDK) , you can define scaling rules for Heap, Memory, Response Time and Throughput.  
 <li> For Node.js applications, you can define scaling rules for Heap, Memory and Throughput.
 <li> For Ruby applications, you can define scaling rules for Memory.</ul>
 *Note:* You can define multiple scaling rules for more than one metric type. However, the {{site.data.keyword.autoscaling}} service does not detect conflicts between scaling policies. When you define the scaling policy, you must ensure that multiple scaling rules do not conflict with one another. Otherwise, you might see the total instance number fluctuates because the application scales in 1 minute and scales out the next.<br/><br/>
@@ -247,15 +247,17 @@ Table 1. Policy fields in the scaling policy
 
 | Metric name | Description | Supported application type |
 |-------------|----------------------| ------------------- |
-| *Heap* |	The usage percentage of the heap memory.	| Liberty for Java, Node.js SDK |
+| *Heap* |	The usage percentage of the heap memory.	| Liberty for Java (with IBM JDK), Node.js SDK |
 | *Memory*   |	The usage percentage of the memory.	|  All |
-| *Throughput* | The number of the processed requests per second.| Liberty for Java, Node.js SDK |
-| *Response time* |	The response time of the processed requests.	| Liberty for Java |
+| *Throughput* | The number of the processed requests per second.| Liberty for Java (with IBM JDK), Node.js SDK |
+| *Response time* |	The response time of the processed requests.	| Liberty for Java (with IBM JDK) |
 
 Table 2. Supported metric names
 
-*Note:* To collect Auto-Scaling metrics data, your application must be deployed as Liberty webapp so that measuring HTTP/HTTPS requests will be processed via Liberty web container.
+*Limitation:* To collect Auto-Scaling metrics data, your application must be deployed as Liberty webapp so that measuring HTTP/HTTPS requests will be processed via Liberty web container.
 For example, if you run a Spring Boot application as a "Main-Classs" app, the Liberty buildpack only provides java environment for you, and the app actually runs in the Spring embedded Tomcat container, thus no metrics data will be collected by the Auto-Scaling service. You must run your app as a Liberty WAR in order to work with Auto-Scaling service.
+
+*Limitation:* For Liberty application, Auto-Scaling only collect metric when the target app is running with IBM JDK. OpenJDK is not supported in current stage. 
 
 ## Error messages
 {: #err_msg}
