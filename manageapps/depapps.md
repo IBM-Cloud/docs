@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-09"
+lastupdated: "2017-01-10"
 ---
 
 
@@ -22,7 +22,7 @@ You can deploy applications to {{site.data.keyword.Bluemix}} by using various me
 
 Deploying an application to {{site.data.keyword.Bluemix_notm}} includes two phases, staging the application and starting the application.
 
-Cloud Foundry supports Diego, which is the new default runtime architecture that provides a set of capabilities that enhances the application development experience for hosting and constructing cloud platforms. This architecture update provides an improvement in the overall operation and performance of the Cloud Foundry platform. The new architecture provides support for several application container technologies, including Garden and Windows, an SSH package that allows direct login to the application container, and other innovative changes. For more information about the recent architecture upgrade, see [Bluemix Cloud Foundry upgrading from DEA to Diego architecture](https://www.ibm.com/blogs/bluemix/2016/11/bluemix-cloud-foundry-upgrading-dea-diego-architecture/){: new_window}.
+Cloud Foundry supports Diego, which is the new default runtime architecture that provides a set of capabilities that enhances the application development experience for hosting and constructing cloud platforms. This architecture update provides an improvement in the overall operation and performance of the Cloud Foundry platform. The new architecture provides support for several application container technologies, including Garden and Windows, an SSH package that allows direct login to the application container, and other innovative changes. For more information about the recent architecture upgrade, see [{{site.data.keyword.Bluemix_notm}} Cloud Foundry: Diego is live](https://www.ibm.com/blogs/bluemix/2017/01/bluemix-cloud-foundry-diego-live/){: new_window}.
 
 
 All new applications that you create will run on Diego, and you must start migrating your existing applications that run on DEAs to the new Diego architecture.
