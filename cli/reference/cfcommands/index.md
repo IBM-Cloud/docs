@@ -6,7 +6,8 @@ copyright:
 
   years: 2016, 2017
 
-lastupdated: "2016-11-14"
+lastupdated: "2017-01-06"
+
 
 ---
 
@@ -22,7 +23,7 @@ lastupdated: "2016-11-14"
 The Cloud Foundry (cf) command line interface (CLI) provides a set of commands for managing your apps. The following information lists the cf commands used most commonly for managing apps and includes their names, options, usage, prerequisites, descriptions, and examples. To list all of the cf commands and associated help information, use `cf help`. Use `cf command_name -h` to view detailed help information for a particular command.
 {: shortdesc}
 
-**Note**: If your network contains an HTTP proxy server between the host that runs the cf commands and the Cloud Foundry API endpoint, you must specify the host name or IP address of the proxy server by setting the `HTTP_PROXY` environment variable. For details, see [Using the cf CLI with an HTTP Proxy Server](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html).
+**Note**: If your network contains an HTTP proxy server between the host that runs the cf commands and the Cloud Foundry API endpoint, you must specify the host name or IP address of the proxy server by setting the `HTTP_PROXY` environment variable. For details, see [Using the cf CLI with an HTTP Proxy Server](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window} ![External link icon](../../../icons/launch-glyph.svg).
 
 
 ## Cloud Foundry CLI commands index
@@ -37,12 +38,12 @@ Use the index in the following table to refer to the frequently used Cloud Found
  </thead>
  <tbody>
  <tr>
- <td>[api](index.html#cf_api)</td>
- <td>[help](index.html#cf_help)</td>
- <td>[login](index.html#cf_login)</td>
- <td>[stacks](index.html#cf_stacks)</td>
- <td>[target](index.html#cf_target)</td>
- <td>[-v](index.html#cf_v)</td>
+ <td>[api](/docs/cli/reference/cfcommands/index.html#cf_api)</td>
+ <td>[help](/docs/cli/reference/cfcommands/index.html#cf_help)</td>
+ <td>[login](/docs/cli/reference/cfcommands/index.html#cf_login)</td>
+ <td>[stacks](/docs/cli/reference/cfcommands/index.html#cf_stacks)</td>
+ <td>[target](/docs/cli/reference/cfcommands/index.html#cf_target)</td>
+ <td>[-v](/docs/cli/reference/cfcommands/index.html#cf_v)</td>
  </tr>
    </tbody>
  </table>
@@ -55,29 +56,28 @@ Use the index in the following table to refer to the frequently used Cloud Found
  </thead>
  <tbody>
  <tr>
- <td>[apps](index.html#cf_apps)</td>
- <td>[bind-service](index.html#cf_bind-service)</td>
- <td>[create-service](index.html#cf_create-service)</td>
- <td>[create-space](index.html#cf_create-space)</td>
- <td>[delete](index.html#cf_delete)</td>
+ <td>[apps](/docs/cli/reference/cfcommands/index.html#cf_apps)</td>
+ <td>[bind-service](/docs/cli/reference/cfcommands/index.html#cf_bind-service)</td>
+ <td>[create-service](/docs/cli/reference/cfcommands/index.html#cf_create-service)</td>
+ <td>[create-space](/docs/cli/reference/cfcommands/index.html#cf_create-space)</td>
+ <td>[delete](/docs/cli/reference/cfcommands/index.html#cf_delete)</td>
   </tr>
  <tr>
- <td>[delete-space](index.html#cf_delete-space)</td>
- <td>[events](index.html#cf_events)</td>
- <td>[logs](index.html#cf_logs)</td>
- <td>[marketplace](index.html#cf_marketplace)</td>
- <td>[push](index.html#cf_push)</td>
+ <td>[delete-space](/docs/cli/reference/cfcommands/index.html#cf_delete-space)</td>
+ <td>[events](/docs/cli/reference/cfcommands/index.html#cf_events)</td>
+ <td>[logs](/docs/cli/reference/cfcommands/index.html#cf_logs)</td>
+ <td>[marketplace](/docs/cli/reference/cfcommands/index.html#cf_marketplace)</td>
+ <td>[push](/docs/cli/reference/cfcommands/index.html#cf_push)</td>
   </tr>
  <tr>
- <td>[scale](index.html#cf_scale)</td>
- <td>[services](index.html#cf_services)
- <td>[set-env](index.html#cf_set-env)</td>
+ <td>[scale](/docs/cli/reference/cfcommands/index.html#cf_scale)</td>
+ <td>[services](/docs/cli/reference/cfcommands/index.html#cf_services)
+ <td>[set-env](/docs/cli/reference/cfcommands/index.html#cf_set-env)</td>
  <td>[ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh)</td>
- <td>[stop](index.html#cf_stop)</td>
+ <td>[stop](/docs/cli/reference/cfcommands/index.html#cf_stop)</td>
  </tr>
  </tbody>
  </table>
-
 
 ## cf api
 {: #cf_api}
@@ -110,7 +110,7 @@ cf api
 ```
 {: codeblock}
 
-Remove connection to all API endspoints for api.ng.bluemix.net
+Remove connection to all API endpoints for api.ng.bluemix.net
 ```
 cf api api.ng.bluemix.network --unset
 ```
@@ -390,7 +390,7 @@ cf help events
 
 Logs you in to {{site.data.keyword.Bluemix_notm}}.
 
-**Note**: If you are logging in with a federated ID, you must use the single sign-on (SSO) parameter to log in.
+**Note**: If you are logging in with a [federated ID](/docs/admin/account.html#signup), you must use the single sign-on (SSO) parameter to log in.
 
 ```
 cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s space_name] [--skip-ssl-validation]
@@ -519,7 +519,7 @@ cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i in
 <dt>appname (required)</dt>
 <dd>The name of the application.</dd>
 <dt>*-b* buildpack_name (optional)</dt>
-<dd>The name of the buildpack. The buildpack_name can be a custom buildpack by name or a Git URL, for example, `my-buildpack` or `https://github.com/heroku/heroku-buildpack-play.git`.</dd>
+<dd>The name of the buildpack. The buildpack_name can be a custom buildpack by name (for example liberty-for-java), or a Git URL (for example https://github.com/cloudfoundry/java-buildpack.git), or a Git URL with a branch or tag (for example, https://github.com/cloudfoundry/java-buildpack.git#v3.3.0 for the v3.3.0 tag).</dd>
 <dt>*-c* start_command (optional)</dt>
 <dd>The start command of your application. To use the default start command, specify a value of null for this option. </dd>
 <dt>*-f* manifest_path (optional)</dt>
@@ -661,22 +661,24 @@ cf set-env my_app variable_a 123
 ## cf ssh
 {: #cf_ssh}
 
-Securely logs you into an application container. By default, SSH accesses the container running the first instance of the application, which is the instance with index 0.
+Securely access the application container. The `cf ssh` command can be used to set up an interactive SSH session, run remote commands, transfer files, and set up port forwarding with a specific application container instance.
 
 ```
 cf ssh
 ```
 <strong>Prerequisites</strong>: `cf api`, `cf login`, `cf target`
 
-You must also configure your Cloud Foundry deployment to allow SSH access to application instances. For details, see [Configuring SSH Access for Cloud Foundry](https://docs.cloudfoundry.org/running/config-ssh.html){:new_window}
+By default, SSH access is enabled for Diego applications. You can use the `cf ssh-enabled` command to verify if SSH access is enabled or the `cf enable-ssh` command to enable the access if it was disabled. 
 
 <strong>Command options</strong>:
 
 <dl>
 <dt>appname</dt>
-<dd>The name of the application. If SSH is allowed, you can use this option to start an interactive SSH session with a VM hosting the application.</dd>
+<dd>The name of the application.</dd>
+<dt>-c</dt>
+<dd>Specifies a remote command to run.</dd>
 <dt>-i</dt>
-<dd>Targets a specific instance of an application.</dd>
+<dd>Targets a specific instance of an application. If not specified, the first instance of the application is used (an instance with index 0).</dd>
 <dt>-L</dt>
 <dd>Enables local port forwarding, which binds an output port on your machine to an input port on the application VM.</dd>
 <dt>-N</dt>
@@ -687,12 +689,27 @@ You must also configure your Cloud Foundry deployment to allow SSH access to app
 
 <strong>Examples</strong>:
 
-Start an interactive SSH session with a VM hosting an application named `my_app`.
+Start an interactive SSH session with the container instance running the `my_app` application.
 ```
 $ cf ssh my_app
 ```
 {: codeblock}
 
+Run a single command on the `my_app` application container instance.
+```
+$ cf ssh my_app -c "ls -l"
+```
+
+Transfer a single file from the `my_app` application container instance.
+```
+$ cf ssh my_app -c "/bin/cat logs/messages.log" > messages.log
+```
+
+Setup port forwarding of the 7777 port on the local machine to the 8888 port on the `my_app` application container instance.
+```
+$ cf ssh -N -T -L 7777:localhost:8888 my_app
+
+```
 
 ## cf stacks
 {: #cf_stacks}
@@ -798,6 +815,6 @@ cf -v
 {: #general}
 
 * [Download Cloud Foundry CLI](https://github.com/cloudfoundry/cli/releases)
-{:new_window}
+{: new_window} ![External link icon](../../../icons/launch-glyph.svg)
 * [Quick Reference Card - cf commands](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html)
-{:new_window}
+{: new_window} ![External link icon](../../../icons/launch-glyph.svg)
