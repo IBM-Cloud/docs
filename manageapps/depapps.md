@@ -89,6 +89,8 @@ For the comprehensive list of known issues, see the Cloud Foundry documentation 
 
 Until support for the older DEA architecture is removed, you can run the following command to transition back to DEAs: `cf disable-diego APPLICATION_NAME`. You can also still deploy new apps to the DEA architecture until support is removed:
 
+**Note**: You must have both the [cf CLI](https://github.com/cloudfoundry/cli/releases){: new_window} and the [Diego-Enabler CLI Plugin](https://github.com/cloudfoundry-incubator/Diego-Enabler){:new_window} installed to use the `disable-diego` command.
+
 1. Deploy the application without starting it:
 ```
 $ cf push APPLICATION_NAME --no-start
