@@ -1,10 +1,12 @@
 ---
 
-
+ 
 
 copyright:
+
   years: 2016
 lastupdated: "2016-09-09"
+ 
 
 ---
 
@@ -16,7 +18,6 @@ lastupdated: "2016-09-09"
 
 # Implementing feeds
 {: #openwhisk_feeds}
-
 
 OpenWhisk supports an open API, where any user can expose an event producer service as a **feed** in a **package**.   This section describes architectural and implementation options for providing your own feed.
 

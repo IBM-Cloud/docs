@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2016
-lastupdated: "2016-09-09"
+  years: 2016, 2017
+lastupdated: "2017-01-04"
  
 
 ---
@@ -238,7 +238,6 @@ You can use an action to fetch a document from a Cloudant database called `testd
 
 You can use an action sequence in a rule to fetch and process the document associated with a Cloudant change event.
 
-Create an action that will process a document from Cloudant, it will expect a document as a parameter.
 Here is a sample code of an action that handles a document:
 ```
 function main(doc){
@@ -266,8 +265,6 @@ wsk rule create myRule myCloudantTrigger sequenceAction
 ```
 {: pre}
 
-
-
 **Note** The Cloudant `changes` trigger used to support the parameter `includeDoc` which is not longer supported.
   You will need to recreate triggers previously created with `includeDoc`. Follow these steps to recreate the trigger:
   ```
@@ -275,9 +272,9 @@ wsk rule create myRule myCloudantTrigger sequenceAction
   wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb
   ```
   {: pre}
+
   The example illustrated above may be used to create an action sequence to read the changed document and call your existing actions.
   Remember to disable any rules that may no longer be valid and create new ones using the action sequence pattern.
-
 
 ## Using the Alarm package
 {: #openwhisk_catalog_alarm}
@@ -314,6 +311,7 @@ The following is an example of creating a trigger that will be fired once every 
   ```
   wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron "*/2 * * * *" --param trigger_payload "{\"name\":\"Odin\",\"place\":\"Asgard\"}"
   ```
+  {: pre}
 
 Each generated event will include as parameters the properties specified in the `trigger_payload` value. In this case, each trigger event will have parameters `name=Odin` and `place=Asgard`.
 
@@ -391,15 +389,16 @@ The following is an example of creating a package binding and then getting a 10-
 
 ## Using the Watson packages
 {: #openwhisk_catalog_watson}
+
 The Watson packages offer a convenient way to call various Watson APIs.
 
 The following Watson packages are provided:
 
 | Package | Description |
 | --- | --- |
-| `/whisk.system/watson-translator`   | Actions for the Watson APIs to translate text and language identification |
-| `/whisk.system/watson-textToSpeech` | Actions for the Watson APIs to convert the text into speech |
-| `/whisk.system/watson-speechToText` | Actions for the Watson APIs to convert the speech into text |
+| `/whisk.system/watson-translator`   | Package for text translation and language identification |
+| `/whisk.system/watson-textToSpeech` | Package to convert text into speech |
+| `/whisk.system/watson-speechToText` | Package to convert speech into text |
 
 **Note** The package `/whisk.system/watson` is currently deprecated, migrate to the new packages mentioned above, the new actions provide the same interface.
 
@@ -411,7 +410,7 @@ The package includes the following actions.
 
 | Entity | Type | Parameters | Description |
 | --- | --- | --- | --- |
-| `/whisk.system/watson-translator` | package | username, password | Actions for the Watson APIs to translate text and language identification  |
+| `/whisk.system/watson-translator` | package | username, password | Package for text translation and language identification  |
 | `/whisk.system/watson-translator/translator` | action | payload, translateFrom, translateTo, translateParam, username, password | Translate text |
 | `/whisk.system/watson-translator/languageId` | action | payload, username, password | Identify language |
 
@@ -450,7 +449,6 @@ If you're using OpenWhisk from Bluemix, OpenWhisk automatically creates package 
   wsk package list
   ```
   {: pre}
-  
   ```
   packages
   /myBluemixOrg_myBluemixSpace/Bluemix_Watson_Translator_Credentials-1 private
@@ -531,7 +529,7 @@ The package includes the following actions.
 
 | Entity | Type | Parameters | Description |
 | --- | --- | --- | --- |
-| `/whisk.system/watson-textToSpeech` | package | username, password | Actions for the Watson APIs to convert the text into speech |
+| `/whisk.system/watson-textToSpeech` | package | username, password | Package to convert text into speech |
 | `/whisk.system/watson-textToSpeech/textToSpeech` | action | payload, voice, accept, encoding, username, password | Convert text into audio |
 
 **Note**: The package `/whisk.system/watson` is depracted including the action `/whisk.system/watson/textToSpeech`.
@@ -590,6 +588,7 @@ If you're not using OpenWhisk in Bluemix or if you want to set up your Watson Te
 
 #### Converting some text to speech
 {: #openwhisk_catalog_watson_speechtotext}
+
 The `/whisk.system/watson-speechToText/textToSpeech` action converts some text into an audio speech. The parameters are as follows:
 
 - `username`: The Watson API user name.
@@ -613,6 +612,7 @@ The `/whisk.system/watson-speechToText/textToSpeech` action converts some text i
   ```
   {: screen}
 
+
 ### Using the Watson Speech to Text package
 {: #openwhisk_catalog_watson_speechtotext}
 
@@ -622,11 +622,10 @@ The package includes the following actions.
 
 | Entity | Type | Parameters | Description |
 | --- | --- | --- | --- |
-| `/whisk.system/watson-speechToText` | package | username, password | Actions for the Watson APIs to convert the speech into text |
+| `/whisk.system/watson-speechToText` | package | username, password | Package to convert speech into text |
 | `/whisk.system/watson-speechToText/speechToText` | action | payload, content_type, encoding, username, password, continuous, inactivity_timeout, interim_results, keywords, keywords_threshold, max_alternatives, model, timestamps, watson-token, word_alternatives_threshold, word_confidence, X-Watson-Learning-Opt-Out | Convert audio into text |
 
 **Note**: The package `/whisk.system/watson` is depracted including the action `/whisk.system/watson/speechToText`.
-
 
 #### Setting up the Watson Speech to Text package in Bluemix
 
@@ -678,7 +677,6 @@ If you're not using OpenWhisk in Bluemix or if you want to set up your Watson Sp
   wsk package bind /whisk.system/watson-speechToText myWatsonSpeechToText -p username MYUSERNAME -p password MYPASSWORD
   ```
   {: pre}
-
 
 
 #### Converting speech to text

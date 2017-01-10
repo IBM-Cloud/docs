@@ -5,8 +5,8 @@
 copyright:
 
   years: 2016, 2017
-lastupdated: "2016-09-27"
- 
+lastupdated: "2017-01-04"
+
 
 ---
 
@@ -691,7 +691,7 @@ You can create a OpenWhisk action called `helloJava` from this JAR file as
 follows:
 
 ```
-wsk action create helloJava hello.jar  --main Hello
+wsk action create helloJava hello.jar --main Hello
 ```
 {: pre}
 
@@ -717,8 +717,6 @@ wsk action invoke --blocking --result helloJava --param name World
   }
 ```
 {: screen}
-
-**Note:** If the JAR file has more than one class with a main method matching required signature, the CLI tool uses the first one reported by `jar -tf`.
 
 
 ## Creating Docker actions

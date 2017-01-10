@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-09-27"
+  years: 2016, 2017
+lastupdated: "2017-01-04"
 
 ---
 
@@ -229,9 +229,9 @@ It is possible for an action to be synchronous on some inputs and asynchronous o
 
 Notice that regardless of whether an activation is synchronous or asynchronous, the invocation of the action can be blocking or non-blocking.
 
-### Additional SDK methods
+### JavaScript global whisk object deprecated
 
-The global object `whisk` is urrently deprecated, migrate your nodejs actions to use altenative methods.
+The global object `whisk` is urrently deprecated; migrate your nodejs actions to use altenative methods.
 For the functions `whisk.invoke()` and `whisk.trigger()` you can use the client library [openwhisk](https://www.npmjs.com/package/openwhisk).
 For the `whisk.getAuthKey()` you can get the API key value from the environment variable `__OW_API_KEY`.
 For the `whisk.error()` you can return a rejected Promise (i.e. Promise.reject).
@@ -266,6 +266,7 @@ The following packages are available to be used in the Node.js 6.9.1 environment
 - node-uuid v1.4.7
 - nodemailer v2.6.4
 - oauth2-server v2.4.1
+- openwhisk v3.0.0
 - pkgcloud v1.4.0
 - process v0.11.9
 - pug v2.0.0-beta6
@@ -317,6 +318,7 @@ The following packages are available to be used in the Node.js 0.12.17 environme
 - nano v5.10.0
 - node-uuid v1.4.2
 - oauth2-server v2.4.0
+- openwhisk v3.0.0
 - process v0.11.0
 - request v2.79.0
 - rimraf v2.5.1
@@ -454,7 +456,9 @@ The OpenWhisk API supports request-response calls from web clients. OpenWhisk re
 {: #openwhisk_syslimits}
 
 ### Actions
-{{site.data.keyword.openwhisk_short}} has a few system limits, including how much memory an action uses and how many action invocations are allowed per hour. The following table lists the default limits for actions.
+{{site.data.keyword.openwhisk_short}} has a few system limits, including how much memory an action can use and how many action invocations are allowed per minute. 
+
+The following table lists the default limits for actions.
 
 | limit | description | configurable | unit | default |
 | ----- | ----------- | ------------ | -----| ------- |
@@ -525,7 +529,7 @@ The OpenWhisk API supports request-response calls from web clients. OpenWhisk re
 
 ### Triggers
 
-Triggers are subject to a firing rate per minute and per hour as documented in the table below.
+Triggers are subject to a firing rate per minute as documented in the table below.
 
 | limit | description | configurable | unit | default |
 | ----- | ----------- | ------------ | -----| ------- |
