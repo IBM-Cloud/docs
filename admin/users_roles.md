@@ -34,7 +34,7 @@ At the account level, there are two roles that enable access to different accoun
 |Member | A member has access to their profile, team directory, and account credits and billing limits in the {{site.data.keyword.Bluemix_notm}} header. However, on the team directory page, a member can only view the team members within the account. |
 {:caption="Table 1. Account roles and permissions" caption-side="top"}
 
- All new team members are added as a member of the account. You can assign organization and space roles to invitees to enable specific views and permissions in {{site.data.keyword.Bluemix_notm}}. For a specific space, you can choose to assign the developer or auditor role to invitees. Once your invitees accept the invitation and join {{site.data.keyword.Bluemix_notm}}, you can edit their roles on the **Team Directory** page.
+ All new team members are added as a member of the account. You can assign organization and space roles to invitees to enable specific views and permissions in {{site.data.keyword.Bluemix_notm}}. New team members added to an organization are assigned the auditor organization role by default. For a specific space, you can choose to assign the developer or auditor role to invitees. Once your invitees accept the invitation and join {{site.data.keyword.Bluemix_notm}}, you can edit their roles on the **Team Directory** page.
 
 The following roles can be assigned at the organization level:
 
@@ -42,7 +42,7 @@ The following roles can be assigned at the organization level:
 |-------------------|-------------|
 |Manager | Organization managers can create, view, edit, or delete spaces within the organization, view the organization's usage and quota, invite team members to the organization, manage who has access to the organization and their roles in the organization, and manage custom domains for the organization. |
 |Billing manager | Billing managers can view runtime and service usage information for the organization on the Usage Dashboard page.  |
-|Auditor | Organization auditors can view application and service content in the organization. Auditors can also view the team members in the organization and their assigned roles, and the quota for the organization. |
+|Auditor | Organization auditors can view application and service content in the organization. Auditors can also view the team members in the organization and their assigned roles, and the quota for the organization. This role is assigned to all invitees by default. |
 {:caption="Table 2. Organization roles and permissions" caption-side="top"}
 
 The following roles can be assigned at the space level:
@@ -71,7 +71,7 @@ To change the visibility of the team directory page complete the following steps
 ## Inviting team members
 {: #inviteteammembers}
 
-Account owners and organization managers can invite team members to orgs from the Invite Team Members page. You can add or change the roles later on the Team Directory page. To invite a team member, complete these steps:
+Account owners and organization managers can invite team members to orgs from the Invite Team Members page. When you add new team members, they are assigned the auditor roles automatically. You can change the roles later on the Team Directory page. To invite a team member, complete these steps:
 
 <ol>
 <li>Click **Account** &gt; **Invite Team Members**.</li>
