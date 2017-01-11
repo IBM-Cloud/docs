@@ -672,7 +672,7 @@ bl stop –l “launchConfigurations/maconfiglancement.launch”
 
 ># Liens connexes {:class="linklist"}
 >## Tutoriels et exemples {:id="samples"}
->* [Test and debug a Node.js app with Bluemix Live Sync](https://hub.jazz.net/tutorials/livesync)
+>* [Testez et déboguez une application Node.js avec Bluemix Live Sync](https://hub.jazz.net/tutorials/livesync)
 >
 ># Liens connexes {:class="linklist"}
 >## Liens connexes {:id="general"}
