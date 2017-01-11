@@ -27,7 +27,7 @@ The Core SDK includes APIs for enabling custom authentication and logging.
 {: #coresdk-android}
 
 [GitHub repo](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core),
-[API reference](https://console.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html)
+
 
 #### Install the Core SDK with Gradle
 {: #coresdk-android-gradle}
