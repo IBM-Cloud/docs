@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-30"
+  years: 2016, 2017
+lastupdated: "2017-01-10"
 
 ---
 {:new_window: target="_blank"}
@@ -10,18 +10,25 @@ lastupdated: "2016-11-30"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Getting started with {{site.data.keyword.mobileanalytics_short}} (Beta)
+# Getting started with {{site.data.keyword.mobileanalytics_short}}
 
 {: #gettingstartedtemplate}
 
-{{site.data.keyword.mobileanalytics_full}} provides developers, IT administrators, and business stakeholders insight into how their mobile apps are performing and how they are being used. Monitor performance and usage of all your applications from your desktop or tablet. Quickly identify trends and anomalies, drill down to resolve issues, and trigger alerts when key metrics cross critical thresholds. 
+{{site.data.keyword.mobileanalytics_full}} provides developers, IT administrators, and business stakeholders insight into how their mobile apps are performing and how they are being used. {{site.data.keyword.mobileanalytics_short}} enables you to:
+
+* Monitor performance and usage of all your applications from your desktop or tablet. 
+* Quickly identify trends and anomalies, drill down to resolve issues, and trigger alerts when key metrics cross critical thresholds. 
 {: shortdesc}
 
-To get up and running quickly with the {{site.data.keyword.mobileanalytics_short}} service, follow these steps:
+**Important:** The {{site.data.keyword.mobileanalytics_short}} Console is not yet ready for the Internet Explorer browser, and some functionality might not work correctly. For the best experience, use Firefox, Chrome, or Safari.
+
+To quickly get the {{site.data.keyword.mobileanalytics_short}} service up and running, follow these steps:
 
 1. After you create an instance <!--[create an instance](https://console.{DomainName}/docs/services/reqnsi.html#req_instance)-->of the {{site.data.keyword.mobileanalytics_short}} service, you can access the {{site.data.keyword.mobileanalytics_short}} Console by clicking your tile in the **Services** section of the {{site.data.keyword.Bluemix}} Dashboard.
 
- The {{site.data.keyword.mobileanalytics_short}} service launches with **demo mode** enabled. Demo mode populates charts on the **APP DATA** and **ALERTS** pages, so you can see how your data will display. You can toggle demo mode off when you have your own data. The {{site.data.keyword.mobileanalytics_short}} console is read-only when in demo mode, therefore you will not be able to create new alert definitions.
+ To help you get an immediate feel of the various views and charts and the value they bring forth, we provide a **demo mode** option in the {{site.data.keyword.mobileanalytics_short}} console, whereby the views and charts display *demo data*. Demo data is the default mode of the console when it initially launches after the service is instantiated. When you have your own applications and analytics data populated into the service, you can toggle *off* the demo mode to view your applications' data in the different charts. The Mobile Analytics console is read-only when in demo mode, therefore you will not be able to create new alert definitions.
+ 
+<!-->The {{site.data.keyword.mobileanalytics_short}} service launches with **demo mode** enabled. Demo mode populates charts on the **APP DATA** and **ALERTS** pages, so you can see how your data will display. You can toggle demo mode off when you have your own data. The {{site.data.keyword.mobileanalytics_short}} console is read-only when in demo mode, therefore you will not be able to create new alert definitions.-->
 
 2. Install the {{site.data.keyword.mobileanalytics_short}} [Client SDKs](/docs/services/mobileanalytics/install-client-sdk.html). You can optionally use the {{site.data.keyword.mobileanalytics_short}} [REST API](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}.
 
@@ -75,6 +82,8 @@ To get up and running quickly with the {{site.data.keyword.mobileanalytics_short
     
  The **bluemixRegion** parameter specifies which {{site.data.keyword.Bluemix_notm}} deployment you are using, for example, `BMSClient.REGION_US_SOUTH` and `BMSClient.REGION_UK`. 
     <!-- , or `BMSClient.Region.Sydney`.-->
+    
+ Set the value for `hasUserContext` to **true** or **false**. If false (default value), each device is counted as an active user.
 
  #### iOS
  {: #ios-initialize}
@@ -89,6 +98,8 @@ To get up and running quickly with the {{site.data.keyword.mobileanalytics_short
 			
    The **bluemixRegion** parameter specifies which Bluemix deployment you are using, for example, `BMSClient.Region.usSouth` or `BMSClient.Region.unitedKingdom`.
 	<!-- , or `BMSClient.REGION_SYDNEY`. -->
+ 
+ Set the value for `hasUserContext` to **true** or **false**. If false (default value), each device is counted as an active user.
 	
  #### Cordova
  {: #cordova-initialize}
@@ -138,7 +149,7 @@ To get up and running quickly with the {{site.data.keyword.mobileanalytics_short
 	Use the `BMSAnalytics.send` method to send analytics data to the server. Place the `BMSAnalytics.send` method in a location that works best for your project.
 	
 	```
-	BMSAnalytics.send
+	BMSAnalytics.send()
 	```
 	{: codeblock}
 	

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-31"
+  years: 2015, 2017
+lastupdated: "2017-01-10"
 
 ---
 {:new_window: target="_blank"}
@@ -143,6 +143,8 @@ In this example, you use application crash data to create an alert definition. T
 	* Alert Name: Alert for Application Crashes
 	* Message: App Crash Alert
 	* Query Frequency: Application Crashes
+		* Query Frequency: 2 minutes
+	* Event Type: Application Crashes
 		* Application Name: Any application
 		* Application Version: Any version
     * Threshold
@@ -190,7 +192,7 @@ You can view information about your application crashes in the {{site.data.keywo
 ### Application crash monitoring
 {: #app-crash}
 
-The **Crash Overview** table shows the following data columns:
+On the **Crashes** page, The **Crash Overview** table shows the following data columns:
 
 * Application: application name
 * Crashes: total number of crashes for that app
@@ -207,7 +209,7 @@ You can display crash data in two ways:
 ### App crash troubleshooting
 {: #app-crash-troubleshooting}
 
-The **Troubleshooting** page in the <!-- **Applications** section of the --> {{site.data.keyword.mobileanalytics_short}} console offers a granular view of your app crashes.
+The **Troubleshooting** page in the <!-- **Applications** section of the --> {{site.data.keyword.mobileanalytics_short}} console offers a granular view of your app crashes, using the **Crash Summary** table.
 
 The **Crash Summary** table is sortable and includes the following data columns:
 
@@ -249,4 +251,7 @@ The metrics you see in the {{site.data.keyword.mobileanalytics_short}} console a
 
 Set up dashDB in the {{site.data.keyword.mobileanalytics_short}} console by clicking **DashDB** on the **Export** page. After you complete the setup, new data that is sent to {{site.data.keyword.mobileanalytics_short}} is also forwarded to dashDB within 1-2 hours. 
 
+<!--
+If you have existing DashDB instances, those instances will no longer accept new data because the incoming data no longer matches the schema. Manually add columns for the new data to resume incoming data. Modifying {{site.data.keyword.mobileanalytics_short}} collection tables by adding new columns also breaks the stream of incoming data.
+-->
 
