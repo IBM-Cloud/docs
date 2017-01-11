@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015, 2017
 
-lastupdated: "2016-12-20"
+lastupdated: "2017-01-11"
 
 
 ---
@@ -239,6 +239,13 @@ Problem determination and emergency maintenance
 The environment is completely visible to you, as the administrator, for incident, problem, change, capacity, and security management. You can access the information about your environment by using the Administration page. Relay technology keeps the Administration page current with the latest platform event data from QRadar. </p>
 </dd>
 </dl>
+
+### SSL inspection
+{: #sslinspection}
+
+Cloud Foundry and {{site.data.keyword.Bluemix_notm}} applications can work with SSL inspection certificates when accessing sources outside of the local environment. SSL content inspection is available for your environment, if you provide a trusted root certificate which is used to sign inspected SSL streams. 
+
+The {{site.data.keyword.Bluemix_notm}} deployment team can load the trusted root certificate to enable SSL inspection in the environment during the set up process. If this capability is not enabled during set up, you can request that it is enabled and work with the {{site.data.keyword.Bluemix_notm}} operations team who will load the SSL inspectiction certificate to all of your deployed components. Enabling SSL inspection during deployment does not add additional time for the deployment. However, enabling it for an existing environment can take two to four days depending on your available maintenance windows.
 
 
 ## Setting up your {{site.data.keyword.Bluemix_local_notm}} instance
