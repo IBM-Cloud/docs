@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-21"
+  years: 2016, 2017
+lastupdated: "2017-01-10"
 
 ---
 
@@ -133,13 +133,14 @@ Figure 2. DevOps Analytics gate
 
 After your pipeline is configured, start to use {{site.data.keyword.DRA_short}}. For instructions, see [Running the Delivery Pipeline](/docs/services/DevOpsInsights/pipeline_decision_reports.html#toolchain_reports).
 
-<!--## Performing static code scans and dynamic app scans
+## Performing static code scans and dynamic app scans
 {: #toolchain_pipeline_scan}
 
 You can integrate {{site.data.keyword.DRA_short}} with the IBM Security Static Analyzer and IBM AppScan Dynamic Analyzer services to perform static code scans and dynamic app scans. To perform these scans, your project must be associated with a {{site.data.keyword.contdelivery_short}} toolchain that includes the {{site.data.keyword.DRA_short}} and {{site.data.keyword.contdelivery_short}} services. The code and app scans run as test jobs in a pipeline; the results of those test jobs are sent to {{site.data.keyword.DRA_short}}.
 
 To add static code scans or dynamic app scans to your pipeline:
  1. Add the scan test jobs to your pipeline.
+   * For more information about running static code scans and dynamic app scans from pipelines, [see Extending the capabilities of your Build & Deploy pipeline](https://hub.jazz.net/docs/deploy_ext/).
  2. Add three new environment properties to whichever stages contain those jobs:
   <table><thead>
   <tr>
@@ -162,4 +163,4 @@ To add static code scans or dynamic app scans to your pipeline:
   </tbody></table>
 
 ![A pipeline stage that has the required environment properties for DevOps Insights and code or app scanning](images/insights-scan-properties.png)
--->
+Figure 3. A pipeline stage that has the required environment properties for DevOps Insights and code or app scanning
