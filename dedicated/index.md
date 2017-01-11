@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015, 2017
 
-lastupdated: "2016-12-15"
+lastupdated: "2016-01-11"
 
 ---
 
@@ -205,9 +205,7 @@ There are several options for creating the secured private network link which ar
 <br>
 The default connection from {{site.data.keyword.Bluemix_dedicated_notm}} to your enterprise network uses a Virtual Private Network (VPN). {{site.data.keyword.Bluemix_dedicated_notm}} has a Dedicated 1 Gbps Vyatta VPN termination configured for high availability.
 <br>
-In the default architecture for {{site.data.keyword.Bluemix_dedicated_notm}} as shown in [figure 1]{#figure01}, there is no inbound network traffic directly from the Internet. If your enterprise wishes to allow Internet access to applications hosted on {{site.data.keyword.Bluemix_dedicated_notm}}, the access must be configured through your Enterprise network.<br>
-<br>
-If required, {{site.data.keyword.Bluemix_dedicated_notm}} can be architected to allow inbound network traffic directly from the Internet. This architecture is shown in [figure 2](#figure02).
+In the default architecture for {{site.data.keyword.Bluemix_dedicated_notm}} as shown in [figure 1]{#figure01}, there is no inbound network traffic directly from the Internet. If your enterprise wishes to allow Internet access to applications hosted on {{site.data.keyword.Bluemix_dedicated_notm}}, the access must be configured through your Enterprise network.
 </dd>
 </dl>
 
