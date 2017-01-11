@@ -255,9 +255,7 @@ Table 1. Policy fields in the scaling policy
 Table 2. Supported metric names
 
 *Limitation:* To collect Auto-Scaling metrics data, your application must be deployed as Liberty webapp so that measuring HTTP/HTTPS requests will be processed via Liberty web container.
-For example, if you run a Spring Boot application as a "Main-Classs" app, the Liberty buildpack only provides java environment for you, and the app actually runs in the Spring embedded Tomcat container, thus no metrics data will be collected by the Auto-Scaling service. You must run your app as a Liberty WAR in order to work with Auto-Scaling service.
-
-*Limitation:* For Liberty application, Auto-Scaling only collect metric when the target app is running with IBM JDK. OpenJDK is not supported in current stage. 
+*Limitation:* For Liberty application, only IBM JDK is supported for auto-scaling.
 
 ## Error messages
 {: #err_msg}
