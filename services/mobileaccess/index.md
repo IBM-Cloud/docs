@@ -75,6 +75,4 @@ To get up and running with the {{site.data.keyword.amashort}} service:
 * [Custom authentication - simple sample](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample){: new_window}
 * [Custom authentication - advanced sample](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management){: new_window}
 
-## API Reference
-{: api}
-[Android](https://console.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html){: new_window}
+
