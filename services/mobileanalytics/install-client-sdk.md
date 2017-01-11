@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-01"
+  years: 2015, 2017
+lastupdated: "2017-01-09"
 
 ---
 {:new_window: target="_blank"}
@@ -48,6 +48,7 @@ The {{site.data.keyword.mobileanalytics_short}} Client SDK is distributed with G
 	 <uses-permission android:name="android.permission.INTERNET" />
    ```
    {: codeblock}
+   
 6. You have now installed the Android Client SDK. Next, [import and initialize](sdk.html#initalize-ma-sdk) the Analytics Client SDK.   
 
 ## Installing the Swift SDK
@@ -85,34 +86,40 @@ If you are not using using CocoaPods, you can add frameworks to your project usi
 
 The {{site.data.keyword.mobileanalytics_full}} Cordova plugin enables you to instrument your mobile application. 
 
-1. Add Android and iOS platforms to your Cordova application. Run one or both of the following commands from the command line:
+1. Create a [Cordova](http://cordova.apache.org/#getstarted) project or open an existing project.
 
-	```
-	cordova platform add android
-	```
-	{: codeblock}
-		
+2. Add Android and iOS platforms to your Cordova application. Run one or both of the following commands from the command line. Currently, Cordova-CLI V6.3.0 or earlier is supported:
+   
+   Android:
+
+	 ```
+	 cordova platform add android@5.2.2
+	 ```
+	 {: codeblock}
+	
+   iOS:
+   	
 	```
 	cordova platform add ios
 	```
    {: codeblock}
 	
-2. If you added the Android platform, you must add the minimum supported API level to the `config.xml` file of your Cordova application. Open the `config.xml` file and add the following line to the `<platform name="android">` element:
+3. If you added the Android platform, you must add the minimum supported API level to the `config.xml` file of your Cordova application. Open the `config.xml` file and add the following line to the `<platform name="android">` element:
 
-	```XML
+	```
 	<platform name="android">  
-  	<preference name="android-minSdkVersion" value="15"/>
-  	<preference name="android-targetSdkVersion" value="23"/>
-  	<!-- add minimum and target Android API level declaration -->
+  	 <preference name="android-minSdkVersion" value="15"/>
+  	 <preference name="android-targetSdkVersion" value="23"/>
+  	 <!-- add minimum and target Android API level declaration -->
   	</platform>
 	```
    {: codeblock}
 
  The *minSdkVersion* value must be higher than `15`. Refer to the [Android Platform Guide](https://cordova.apache.org/docs/en/latest/guide/platforms/android/) to stay current with the supported *targetSdkVersion* for the Android SDK.
 
-3. If you added the iOS operating system, update the `<platform name="ios">` element with a target declaration:
+4. If you added the iOS operating system, update the `<platform name="ios">` element with a target declaration:
 
-	```XML
+	```
 	<platform name="ios">
     <preference name="deployment-target" value="8.0"/>
      <!-- add deployment target declaration -->
@@ -120,21 +127,23 @@ The {{site.data.keyword.mobileanalytics_full}} Cordova plugin enables you to ins
 	```
 	{: codeblock}
 
-4. Install the {{site.data.keyword.mobileanalytics_short}} Cordova plugin. Currently, Cordova-CLI V6.3.0 or earlier is supported:
+5. Add the `bms-core` plugin.
+ 	
+	 ```
+	 cordova plugin add bms-core
+	 ```
+	 {: codeblock}
 
- 	```
-	cordova platform add android@5.2.2
-	```
-	{: codeblock}
-
-5. Verify that the plugin installed successfully by running the following command:
+6. Verify that the plugin installed successfully by running the following command:
 	
 	```
 	cordova plugin list
 	```
 	{: codeblock}
 	
-6. You have now installed the Cordova plugin. Next, [import and initialize](sdk.html#initalize-ma-sdk) the Analytics Client SDK.
+7. [Configure your Android and iOS environment](https://www.npmjs.com/package/bms-core#4-configuring-your-platform).
+
+8. You have now installed the Cordova plugin and configured your environments. Next, [import and initialize](sdk.html#initalize-ma-sdk) the Analytics Client SDK.
 
 # rellinks
 
