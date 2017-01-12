@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-23"
+  years: 2016, 2017
+lastupdated: "2017-01-11"
 ---
 
 {:shortdesc: .shortdesc}
@@ -243,9 +243,9 @@ Cloud Foundry command line interface, Version 6.5.1 or later
 {: #rellinks}
 ## general
 {: #general}
-* [What is {{site.data.keyword.Bluemix_notm}}](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){:new_window}
-* [Getting started](http://www.ibm.com/cloud-computing/bluemix/getting-started/)
+* [What is {{site.data.keyword.Bluemix_notm}} ![External link icon](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){:new_window}
+* [Getting started ![External link icon](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/getting-started/){:new_window}
 * [What's new in {{site.data.keyword.Bluemix_notm}}](/docs/whatsnew/index.html)
-* [Learn about the hybrid model](http://www.ibm.com/cloud-computing/bluemix/hybrid/)
+* [Learn about the hybrid model ![External link icon](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/hybrid/){:new_window}
 * [Managing your account](/docs/admin/adminpublic.html#mngacct)
 * [{{site.data.keyword.Bluemix_notm}} glossary](/docs/overview/glossary/index.html)
