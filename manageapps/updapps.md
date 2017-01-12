@@ -91,7 +91,7 @@ You can create and use a custom domain in {{site.data.keyword.Bluemix_notm}} by 
 
 After you configure the custom domain in {{site.data.keyword.Bluemix_notm}}, you must map the custom domain to the {{site.data.keyword.Bluemix_notm}} system domain on your registered DNS server:
 
-  1. Set up a 'CNAME' record for the custom domain name on your DNS server. Steps for setting up the CNAME record vary depending on your DNS provider. For example, if you are using GoDaddy, you follow the [Domains Help](https://www.godaddy.com/help/add-a-cname-record-19236){: new_window} guidance from GoDaddy.
+  1. Set up a 'CNAME' record for the custom domain name on your DNS server. Steps for setting up the CNAME record vary depending on your DNS provider. For example, if you are using GoDaddy, you follow the [Domains Help ![External link icon](../icons/launch-glyph.svg)](https://www.godaddy.com/help/add-a-cname-record-19236){: new_window} guidance from GoDaddy.
   2. Map the custom domain name to the secure endpoint for the {{site.data.keyword.Bluemix_notm}} region where your application is running. Use the following region endpoints to provide the URL route that is allocated to your organization in {{site.data.keyword.Bluemix_notm}}:
 
     * US-SOUTH: `secure.us-south.bluemix.net`
@@ -295,5 +295,5 @@ In this example, *Blue* is the previously deployed application and *Green* is th
 ## Related Links
 {: #general}
 
-* [Blue-green deployments](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
-* [IBM {{site.data.keyword.Bluemix_notm}} DevOps Services](https://hub.jazz.net/){:new_window}
+* [Blue-green deployments ![External link icon](../icons/launch-glyph.svg)](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
+* [IBM {{site.data.keyword.Bluemix_notm}} DevOps Services ![External link icon](../icons/launch-glyph.svg)](https://hub.jazz.net/){:new_window}
