@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,12 +12,12 @@ copyright:
 
 # Configuring credentials for web browsers
 {: #configure-credential-for-browsers}
-Last updated: 08 December 2016
+Last updated: 11 January 2017
 {: .last-updated}
 
 The IBM {{site.data.keyword.mobilepushshort}} service now extends capabilities to send notifications to your browser. 
 
-The website URL or the domain name of your website is required by the {{site.data.keyword.mobilepushshort}} service to identify the requests that need to be allowed. A {{site.data.keyword.mobilepushshort}} service instance supports only one domain name at a time. Hence ensure that the same value is set for Chrome, Firefox and Safari. 
+The website URL or the domain name of your website is required by the {{site.data.keyword.mobilepushshort}} service to identify the requests that need to be allowed. A {{site.data.keyword.mobilepushshort}} service instance supports only one domain name at a time. Hence, ensure that the same value is set for Chrome, Firefox and Safari. 
 
 Chrome and Safari browsers require additional configuration for web push. You would need an FCM API key, as an FCM endpoint is used to deliver messages in Chrome. To obtain your FCM API key, see [Configuring credentials for FCM](t_push_provider_android.html).
 

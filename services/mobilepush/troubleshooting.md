@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Troubleshooting
 {: #errors}
-Last updated: 12 December 2016
+Last updated: 11 January 2017
 {: .last-updated}
 
 Use this section as a guide to troubleshooting common {{site.data.keyword.mobilepushshort}} issues.

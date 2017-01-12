@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Next steps
 {: #next_steps_tags}
-Last updated: 06 December 2016
+Last updated: 11 January 2017
 {: .last-updated}
 
 After you have successfully set up basic notifications, you can configure tag-based notifications and advanced options.

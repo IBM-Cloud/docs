@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 #Enabling iOS applications to send {{site.data.keyword.mobilepushshort}}
 {: #enable-push-ios-notifications}
-Last updated: 05 January 2017
+Last updated: 11 January 2017
 {: .last-updated}
 
 You can enable iOS applications to send {{site.data.keyword.mobilepushshort}} to your devices.
@@ -28,8 +28,7 @@ To view the Swift Push readme file, go to [Readme](https://github.com/ibm-bluemi
 
 
 1. Install CocoaPods by using the following command in your Mac terminal.
-```
-$ sudo gem install cocoapods
+```$ sudo gem install cocoapods
 ```
 	{: codeblock}
 2. Enter the `pod init` command in the terminal to initialize CocoaPods. Ensure that you run the command from the directory where your Xcode project is. The `pod init` command creates a Podfile.  

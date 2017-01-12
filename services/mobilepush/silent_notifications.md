@@ -1,7 +1,7 @@
 ------
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,42 +12,12 @@ copyright:
 
 # Handling silent notifications for iOS
 {: #silent-notifications}
-Last updated: 06 December 2016
+Last updated: 11 January 2017
 {: .last-updated}
 
 Silent notifications do not appear on the device screen. These notifications are received by the application in the background, which wakes up the application for up to 30 seconds to perform the specified background task. A user might not be aware of the notification arrival. To send silent notifications for iOS, use the [REST API](https://mobile.{DomainName}/imfpush/).   
 
-1. To send silent push notifications, implement the following method in the `appDelegate.m` file in your project.
-
-```
-//For Objective C
- - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult result))handler
-   {
-   NSNumber *contentAvailable = userInfo[@"aps"][@"content-available"];
-   if([contentAvailable intValue]== 1)
-	{
-      [[IMFPushClient sharedInstance] application:application didReceiveRemoteNotification:userInfo];
-       //Perform background task
-       NSLog(@"Received a silent push..");
-       NSLog(@"userInfo: %@", userInfo.description);
-       _appDelegateVC.result.text = userInfo.description;
-       handler(UIBackgroundFetchResultNewData);
-    }
-    else
-	{
-    //Normal Notification
-    [[IMFPushAppManager get] notificationReceived:userInfo];
-    NSLog(@"Received a normal notification.");
-    NSLog(@"userInfo: %@", userInfo.description);
-     _appDelegateVC.result.text = userInfo.description;
-    handler(UIBackgroundFetchResultNoData);
-    }
-    //Success
-    }
-```
-    {: codeblock}
-
-For Swift, the `contentAvailable` value that is sent by the server for silent notifications is equal to 1.
+1. To send silent push notifications, implement the following method in the `appDelegate.m` file in your project. In Swift, the `contentAvailable` value that is sent by the server for silent notifications is equal to 1.
 ```
 //For Swift
 	 func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {

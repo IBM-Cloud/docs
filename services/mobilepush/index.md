@@ -1,7 +1,7 @@
 ---
 
 copyright:
-years: 2015, 2016
+years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ years: 2015, 2016
 
 # Getting started with {{site.data.keyword.mobilepushshort}}
 {: #gettingstartedtemplate}
-Last updated: 09 January 2017
+Last updated: 11 January 2017
 {: .last-updated}
 
 {:shortdesc}

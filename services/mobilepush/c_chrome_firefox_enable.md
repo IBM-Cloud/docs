@@ -1,7 +1,7 @@
 ---
 
 copyright:
-years: 2015, 2016
+years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ years: 2015, 2016
 
 # Enabling web applications to receive {{site.data.keyword.mobilepushshort}}
 {: #web_notifications}
-Last updated: 08 December 2016
+Last updated: 11 January 2017
 {: .last-updated}
 
 You can enable Google Chrome, Mozilla Firefox and Safari web applications to receive {{site.data.keyword.mobilepushshort}}.
@@ -50,14 +50,12 @@ Download the `BMSPushSDK.js`, `BMSPushServiceWorker.js` and `manifest_Website.js
 
 2. Change the `manifest_Website.json` file name to `manifest.json`.
 3. Add the `BMSPushSDK.js`, `BMSPushServiceWorker.js` and `manifest.json` to the  root directory of your website.
-3. Include the `manifest.json` in ``<head>`` tag of your html file .
-```
- <link rel="manifest" href="manifest.json">
+3. Include the `manifest.json` in ``<head>`` tag of your html file.
+```<link rel="manifest" href="manifest.json">
 ```
     {: codeblock}
 4. Include Bluemix Web push SDK in your web application.
-```
- <script src="BMSPushSDK.js" async></script>
+```<script src="BMSPushSDK.js" async></script>
 ```
     {: codeblock}
 
@@ -74,8 +72,7 @@ The `App Region` specifies the location where the {{site.data.keyword.mobilepush
  - For UK:			 `.eu-gb.bluemix.net`
  - For Sydney:		 `.au-syd.bluemix.net`
 
-```
- var bmsPush = new BMSPush();
+``` var bmsPush = new BMSPush();
  function callback(response) {
  alert(response.response)
  }
@@ -103,8 +100,7 @@ Use the **register()** API to register the device with {{site.data.keyword.mobil
 - For registering from Mozilla Firefox, add website URL in the Bluemix {{site.data.keyword.mobilepushshort}} service web configuration dashboard under Firefox setup.
 
 Use the following code snippet to register in Bluemix {{site.data.keyword.mobilepushshort}} service.
-```
-var bmsPush = new BMSPush();
+```var bmsPush = new BMSPush();
 function callback(response) {
      alert(response.response)
   }

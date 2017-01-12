@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Using REST APIs
 {: #push-api-rest}
-Last updated: 06 December 2016
+Last updated: 11 January 2017
 {: .last-updated}
 
 You can use a REST (Representational State Transfer) API (application program interface) for {{site.data.keyword.mobilepushshort}}. You can also use the SDK and [Push API](https://mobile.{DomainName}/imfpush/) to further develop your client applications.

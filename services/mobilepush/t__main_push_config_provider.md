@@ -2,7 +2,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -13,7 +13,7 @@ copyright:
 
 # Configuring credentials for a notification provider
 {: #create-push-credentials}
-Last updated: 06 December 2016
+Last updated: 11 January 2017
 {: .last-updated}
 
 To set up {{site.data.keyword.mobilepushshort}} service, obtain your credentials from your push notification provider. For example- Firebase Cloud Messaging (FCM) or Apple Push Notification service (APNs). 

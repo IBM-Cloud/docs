@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Tag-based Notifications 
 {: #push-ios-main-tags}
-Last updated: 06 December 2016
+Last updated: 11 January 2017
 {: .last-updated}
 
 Tag-based notification messages are targeted to all the devices that are subscribed to a particular tag. You can define tags and then send and receive messages using tags. 

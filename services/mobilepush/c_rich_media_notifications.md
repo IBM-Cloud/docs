@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Enabling Rich Media notifications
 {: #interactive-notifications}
-Last updated: 16 December 2016
+Last updated: 11 January 2017
 {: .last-updated}
 
 
@@ -26,4 +26,4 @@ To set up your application to receive rich push on iOS 10, complete the steps:
 BMSPushRichPushNotificationOptions.didReceive(request, withContentHandler: contentHandler)
 ```
 	
-To send a Rich Media {{site.data.keyword.mobilepushshort}} from the Push dashboard, ensure that you specify, message, title, subtitle, attachmentURL fields.
+To send a Rich Media {{site.data.keyword.mobilepushshort}} from the Push dashboard, ensure that you specify the message, title, subtitle, and attachmentURL fields.

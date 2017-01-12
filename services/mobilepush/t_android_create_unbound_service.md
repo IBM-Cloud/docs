@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Creating an unbound {{site.data.keyword.mobilepushshort}} service for Android
 {: #create_android_unbound}
-Last updated: 06 December 2016
+Last updated: 11 January 2017
 {: .last-updated}
 
 Create a {{site.data.keyword.mobilepushshort}} service instance. You can use the {{site.data.keyword.mobilepushshort}} service instance without binding to any back-end application.

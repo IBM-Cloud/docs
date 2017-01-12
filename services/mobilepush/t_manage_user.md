@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Registering a device with userId
 {: #register_device_with_userId}
-Last updated: 15 December 2016
+Last updated: 11 January 2017
 {: .last-updated}
 
 To register for userId-based notification, complete the following steps:
