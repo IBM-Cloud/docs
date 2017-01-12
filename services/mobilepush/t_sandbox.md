@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Sandbox and production modes
 {: #push-sandboxandproduction-modes}
-Last updated: 06 December 2016
+Last updated: 11 January 2017
 {: .last-updated}
 
 You can use {{site.data.keyword.mobilepushshort}} in either of the following modes: sandbox or production. Sandbox is a self-contained test environment to develop and test push API integration with the server application push service. 
@@ -25,8 +25,7 @@ To switch the mode of operation of the push service from sandbox to production:
 
 1. Use the PUT ApplicationID Settings REST API call
 2. In the JSON body, confirm that the mode was switched by using the [GET ApplicationID Settings REST](https://mobile.{DomainName}/imfpush/){: new_window} API call. The expected response is "mode": "PRODUCTION
-```
-    { 
+```{ 
     "mode": "PRODUCTION"
     }
 ```

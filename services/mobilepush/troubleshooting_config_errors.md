@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Resolving web push configuration errors
 {: #errors}
-Last updated: 08 December 2016
+Last updated: 11 January 2017
 {: .last-updated}
 
 Use this section as a guide to resolve commonly occurring web push configuration related errors. Web push errors from the `BMSPushSDK.js` contain information on the failure. 

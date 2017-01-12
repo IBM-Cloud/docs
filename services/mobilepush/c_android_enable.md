@@ -1,7 +1,7 @@
 ---
 
 copyright:
-years: 2015, 2016
+years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ years: 2015, 2016
 
 # Enabling Android applications to receive {{site.data.keyword.mobilepushshort}}
 {: #tag_based_notifications}
-Last updated: 09 January 2017
+Last updated: 11 January 2017
 {: .last-updated}
 
 You can enable Android applications to receive push notifications to your devices. Android Studio is a prerequisite and is the recommended method to build Android projects. A basic knowledge of Android Studio is essential.
@@ -26,12 +26,13 @@ Bluemix® Mobile Services Push SDK can be added using Gradle. Gradle automatical
 
 After creating and opening your mobile application, complete the following steps using the Android Studio.
 
-1. Add dependencies to your Module level **build.gradle** file. 
+1. Add dependencies to your Module level **build.gradle** file. 	
+
 	- Add the following dependency to include the Bluemix™ Mobile services Push client SDK and the Google play services SDK to your compile scope dependencies.
 	```
 	com.ibm.mobilefirstplatform.clientsdk.android:push:3.+
 	```
-    {: codeblock}
+    	{: codeblock}
 	
 	- Add the following dependencies to import statements that are required for code snippets.
 	```
@@ -42,14 +43,13 @@ After creating and opening your mobile application, complete the following steps
 	import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationListener;
 	import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPSimplePushNotification;
 	```
-    {: codeblock}
-	- Add the following dependency to your Module level **build.gradle** file.
+    	{: codeblock}
+
+	- Add the following dependency to your Module level **build.gradle** file at the end.
 	```
-	dependencies {
-	classpath 'com.google.gms.google-services'
-	}
+		apply plugin: 'com.google.gms.google-services'
 	```
-	{: codeblock}
+		{: codeblock}
 3. Add the following dependencies to your Project level **build.gradle** file.
 ```
 dependencies {

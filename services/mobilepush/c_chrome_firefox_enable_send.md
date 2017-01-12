@@ -1,7 +1,7 @@
 ---
 
 copyright:
-years: 2015, 2016
+years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ years: 2015, 2016
 
 # Sending basic notifications to web browsers
 {: #web_notifications}
-Last updated: 06 December 2016
+Last updated: 11 January 2017
 {: .last-updated}
 
 After you have developed your applications, you can send a push notification. 
