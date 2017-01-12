@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2016-12-15"
+lastupdated: "2017-01-11"
 
 ---
 
@@ -57,7 +57,7 @@ The *devconsole* utility also starts *proxy*.
 
 The (*hc*) Health Center agent enables your application to be monitored by the Health Center client.
 
-The Health Center supports analyzing the performance of your Liberty and Node.js applications by using the IBM Monitoring and Diagnostic Tools. For more information see [How to analyze the performance of Liberty Java or Node.js apps in {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/2015/07/03/how-to-analyze-performance-in-bluemix/){:new_window}.</p></li>
+The Health Center supports analyzing the performance of your Liberty and Node.js applications by using the IBM Monitoring and Diagnostic Tools. For more information see [How to analyze the performance of Liberty Java or Node.js apps in {{site.data.keyword.Bluemix_notm}} ![External link icon](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2015/07/03/how-to-analyze-performance-in-bluemix/){: new_window}.</p></li>
 
 The *hc* utility also starts *proxy*.
 
@@ -67,7 +67,7 @@ The *hc* utility can be used in conjunction with *noproxy*. To use Health Center
 $ cf ssh -N -T -L 1883:127.0.0.1:1883 <appName>
 ```
 
-Next, to connect with the Health Center client, use [MQTT connection](http://www.ibm.com/support/knowledgecenter/SS3KLZ/com.ibm.java.diagnostics.healthcenter.doc/topics/connectingtojvm.html) and specify the host as `127.0.0.1` and port as `1883`.
+Next, to connect with the Health Center client, use [MQTT connection ![External link icon](../icons/launch-glyph.svg)](http://www.ibm.com/support/knowledgecenter/SS3KLZ/com.ibm.java.diagnostics.healthcenter.doc/topics/connectingtojvm.html){: new_window} and specify the host as `127.0.0.1` and port as `1883`.
 
 #### shell
 {: #shell}
@@ -107,14 +107,14 @@ Next, to connect in Eclipse, use "Remote Java Configuration" and specify the hos
 
 The *jmx* utility enables the JMX REST Connector to allow a remote JMX client to manage the application by using {{site.data.keyword.Bluemix_notm}} user credentials.
 
-For more information on configuring a JMX connector, see [Configuring secure JMX connection to the Liberty profile.](https://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/twlp_admin_restconnector.html){:new_window}.
+For more information on configuring a JMX connector, see [Configuring secure JMX connection to the Liberty profile ![External link icon](../icons/launch-glyph.svg)](https://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/twlp_admin_restconnector.html){:new_window}.
 
 The *jmx* utility does not start proxy.
 
 #### localjmx
 {: #localjmx}
 
-The *localjmx* utility enables the [localConnector-1.0](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feature_localConnector-1.0.html){:new_window} Liberty feature. Combined with local port forwarding, this enables an alternate way of allowing a remote JMX client to manage the application.
+The *localjmx* utility enables the [localConnector-1.0 ![External link icon](../icons/launch-glyph.svg)](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feature_localConnector-1.0.html){:new_window} Liberty feature. Combined with local port forwarding, this enables an alternate way of allowing a remote JMX client to manage the application.
 
 The *localjmx* utility is only applicable to applications running on a Diego cell. To use *localjmx*, first establish port forwarding using the `cf ssh` command. For example:
 
@@ -131,9 +131,9 @@ Next, to connect with JConsole, choose "Remote Process", specify `127.0.0.1:5000
 #### inspector
 {: #inspector}
 
-For Node.js versions prior to 6.3.0, *inspector* enables the node inspector debugger interface. The *inspector* process runs in your application container. Use this utility to create CPU usage profiles, add breakpoints, and debug code, all while your application is running on {{site.data.keyword.Bluemix_notm}}. For more information about the node inspector module, see [node-inspector on GitHub](https://github.com/node-inspector/node-inspector){:new_window}.
+For Node.js versions prior to 6.3.0, *inspector* enables the node inspector debugger interface. The *inspector* process runs in your application container. Use this utility to create CPU usage profiles, add breakpoints, and debug code, all while your application is running on {{site.data.keyword.Bluemix_notm}}. For more information about the node inspector module, see [node-inspector on GitHub ![External link icon](../icons/launch-glyph.svg)](https://github.com/node-inspector/node-inspector){:new_window}.
 
-For Node.js versions 6.3.0 and greater, the *inspector* utilizes the [V8 Inspector Integration for Node.js](https://nodejs.org/dist/latest-v6.x/docs/api/debugger.html#debugger_v8_inspector_integration_for_node_js){:new_window}.
+For Node.js versions 6.3.0 and greater, the *inspector* utilizes the [V8 Inspector Integration for Node.js ![External link icon](../icons/launch-glyph.svg)](https://nodejs.org/dist/latest-v6.x/docs/api/debugger.html#debugger_v8_inspector_integration_for_node_js){:new_window}.
 
 The inspector utility starts *proxy* by default, but how you remotely debug will depend on the Node.js version and usage of *proxy* or *noproxy*.  The table that follows shows how to access remote debugging in the various scenarios.
 
