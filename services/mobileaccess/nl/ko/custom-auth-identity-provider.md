@@ -2,8 +2,11 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-11-07"
+
 ---
+
+{:codeblock:.codeblock}
 
 # 사용자 정의 ID 제공자 작성
 {: #custom-create}
@@ -16,7 +19,7 @@ lastupdated: "2016-10-02"
 * `base_url`: 사용자 정의 ID 제공자 웹 애플리케이션의 기본 URL입니다. 기본 URL은 {{site.data.keyword.amashort}} 대시보드에 등록할 URL입니다. 
 * `tenant_id`: 테넌트의 고유 ID입니다. {{site.data.keyword.amashort}}는 이 API를 호출할 때 항상 {{site.data.keyword.Bluemix}} 앱 GUID(`applicationGUID`)를 제공합니다.
 * `realm_name`: {{site.data.keyword.amashort}} 대시보드에 정의된 사용자 정의 영역 이름을 지정합니다. 
-* `request_type`: 다음 중 하나를 지정합니다. 
+* `request_type` : 다음 중 하나를 지정합니다. 
 	* `startAuthorization`: 인증 프로세스의 첫 번째 단계를 지정합니다. 사용자 정의 ID 제공자는 "challenge", "success" 또는 "failure" 상태로 응답해야 합니다. 
 	* `handleChallengeAnswer`: 모바일 클라이언트에서 인증 확인 응답을 처리합니다. 
 
@@ -24,6 +27,7 @@ lastupdated: "2016-10-02"
 {: #custom-startauthorization}
 
 `POST <base_url>/apps/<tenant_id>/<realm_name>/startAuthorization`
+{: codeblock}
 
 `startAuthorization` API는 인증 프로세스의 첫 번째 단계로 사용됩니다. 사용자 정의 ID 제공자는 "challenge", "success" 또는 "failure" 상태로 응답해야 합니다. 
 
@@ -37,6 +41,7 @@ lastupdated: "2016-10-02"
     }
 }
 ```
+{: codeblock}
 
 사용자 정의 ID 제공자는 인증 확인, 즉각적 성공, 실패 중 하나로 응답할 수 있습니다. 응답 HTTP 상태는 `HTTP 200`이어야 하고 응답 JSON이 다음과 같은 특성을 포함해야 합니다. 
 
@@ -57,11 +62,13 @@ lastupdated: "2016-10-02"
 	}
 }
 ```
+{: codeblock}
 
 ## `handleChallengeAnswer` API
 {: #custom-handleChallengeAnswer}
 
 `POST <base_url>/apps/<tenant_id>/<realm_name>/handleChallengeAnswer`
+{: codeblock}
 
 `handleChallengeAnswer` API는 모바일 클라이언트에서 인증 확인 응답을 처리합니다. `startAuthorization` API와 마찬가지로, `handleChallengeAnswer` API는 `challenge`, `success`, `failure` 상태 중 하나로 응답합니다. 
 
@@ -82,6 +89,7 @@ lastupdated: "2016-10-02"
  	}
 }
 ```
+{: codeblock}
 
 `handleChallengeAnswer` API의 응답은 `startAuthorization` API의 응답과 동일한 구조여야 합니다. 
 
@@ -105,6 +113,7 @@ lastupdated: "2016-10-02"
     }
 }
 ```
+{: codeblock}
 
 사용자 ID 오브젝트는 {{site.data.keyword.amashort}} 서비스가 모바일 클라이언트에 권한 헤더의 일부로 전송할 ID 토큰을 생성하는 데 사용됩니다. 인증에 성공하면 모바일 클라이언트가 사용자 ID 오브젝트에 대한 전체 액세스 권한을 갖게 됩니다. 
 

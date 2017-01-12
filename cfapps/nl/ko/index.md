@@ -27,7 +27,7 @@ lastupdated: "2016-04-18"
 및 런타임이라는 두 가지 유형의 스타터가 있습니다.
 
 *표준 유형*은 특정 도메인에 대한 애플리케이션 및 그 연관된 런타임 환경과
-사전 정의된 서비스의 컨테이너입니다. 예를 들어, Mobile Cloud 표준 유형에는
+사전 정의된 서비스의 컨테이너입니다. 예를 들어, 모바일 클라우드 표준 유형에는
 Mobile Data, Mobile Application Security 및 푸시 서비스 외에 Node.js 런타임이 포함되어 있습니다. 또한
 이러한 서비스에 액세스하는 모바일 앱 개발을 시작하기 위한 SDK 및 샘플 애플리케이션을 포함합니다. 
 
@@ -95,5 +95,3 @@ Track & Plan 및 Delivery Pipeline과 Web IDE 및 Git 호스팅도 포함됩니�
 <tr><td>라우트 수</td> <td>500</td>
 </table>
 </dd></dl>
-
-*표 1. 평가판 계정에 대한 {{site.data.keyword.Bluemix_notm}} 리소스 한계*

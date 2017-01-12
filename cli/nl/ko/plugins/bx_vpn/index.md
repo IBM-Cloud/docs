@@ -1,12 +1,13 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2015，2016
 
- 
+lastupdated: "2016-06-20"
+
 
 ---
 
@@ -15,9 +16,6 @@ copyright:
 {:new_window: target="_blank"}
 
 # {{site.data.keyword.Bluemix_notm}} CLI의 {{site.data.keyword.vpn_short}} 플러그인
-
-*마지막 업데이트 날짜: 2016년 6월 20일*
-{: .last-updated}
 
 *버전:* 1.4.0
 

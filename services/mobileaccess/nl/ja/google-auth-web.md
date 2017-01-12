@@ -2,7 +2,7 @@
 
 copyright:
   year: 2016
-lastupdated: "2016-10-03"
+lastupdated: "2016-11-22"
 
 ---
 
@@ -35,9 +35,9 @@ Google Sign-In を使用して、Web アプリケーションのユーザーを�
 Google を ID プロバイダーとして使用し始めるには、[Google Developer Console](https://console.developers.google.com) にプロジェクトを作成します。プロジェクト作成の一環として、**Google Client ID** および **Secret** を取得します。Google Client ID および Secret は、Google 認証によって使用される、アプリケーションの固有の識別子であり、{{site.data.keyword.amashort}} ダッシュボードのセットアップに必要です。
 
 1. Google Developer Console で Google アプリケーションを開きます。 
-3. Google+ API を追加します。 
+3. **Google+** API を追加します。 
 3. OAuth を使用して資格情報を作成します。アプリケーション・タイプに「Web application」を選択します。「承認済みのリダイレクト URI」ボックスに {{site.data.keyword.amashort}} リダイレクト URI を入力します。{{site.data.keyword.amashort}} リダイレクト許可 URI は、{{site.data.keyword.amashort}} ダッシュボードの Google 構成画面から取得します (下記の手順を参照してください)。 
-4. 変更を保存します。Google Client ID および Application Secret をメモします。
+4. 変更を保存します。**Google Client ID** および **Application Secret** をメモします。
 
 
 ## Google 認証用の {{site.data.keyword.amashort}} の構成
@@ -45,12 +45,13 @@ Google を ID プロバイダーとして使用し始めるには、[Google Deve
 
 Google Application ID および Secret を作成した後、{{site.data.keyword.amashort}} ダッシュボードで Google 認証を使用可能にすることができます。
 
-1. {{site.data.keyword.Bluemix_notm}}ダッシュボードでアプリを開きます。
-2. {{site.data.keyword.amashort}} タイルをクリックします。{{site.data.keyword.amashort}} ダッシュボードがロードされます。
-3. Google パネルでボタンをクリックします。
+1. {{site.data.keyword.amashort}} サービス・ダッシュボードを開きます。
+1. **「管理」**タブで、**「許可」**をオンに切り替えます。
+1. **「Google」**セクションを開きます。
+1. **「Web アプリへの Google の追加 (Add Google to a Web App)」**にチェック・マークを付けます。
 4. **「Web 用の構成 (Configure for Web)」**セクションで以下を行います。   
-    * **「Google Developer Console の Mobile Client Access リダイレクト URI (Mobile Client Access Redirect URI for Google Developer Console)」**テキスト・ボックス内の値をメモします。これは、ステップ 3 で **Google Developers ポータル**の**「Web アプリケーションのクライアント ID の制限 (Restrictions in the Client ID for Web application)」**の下の**「承認済みのリダイレクト URI (Authorized redirect URIs)」**ボックスに追加する必要のある値です。
-    * **Google Client ID** および **Client Secret** を入力します。
+    * **「Google Developer Console の Mobile Client Access リダイレクト URI (Mobile Client Access Redirect URI for Google Developer Console)」**テキスト・ボックス内の値をメモします。これは、**Google Developers ポータル**の**「Web アプリケーションのクライアント ID の制限 (Restrictions in the Client ID for Web application)」**の下の**「承認済みのリダイレクト URI (Authorized redirect URIs)」**ボックスに追加する必要のある値です。
+    * **Client ID** および **Client Secret** を入力します。
     * リダイレクト URI を**「Web アプリケーションのリダイレクト URI (Your Web Application Redirect URIs)」**に入力します。この値は、許可プロセス完了後にアクセスされるリダイレクト URI であり、開発者によって決定されます。
 5. **「保存」**をクリックします。
 
@@ -58,11 +59,15 @@ Google Application ID および Secret を作成した後、{{site.data.keyword.
 ## ID プロバイダーとして Google を使用した {{site.data.keyword.amashort}} 許可フローの実装
 {: #google-auth-flow}
 
-`VCAP_SERVICES` 環境変数が {{site.data.keyword.amashort}} サービス・インスタンスごとに自動的に作成され、許可プロセスに必要なプロパティーが含まれます。これは 1 つの JSON オブジェクトからなり、アプリケーションの左側のナビゲーターで**「環境変数」**をクリックすることによって表示できます。
+`VCAP_SERVICES` 環境変数が {{site.data.keyword.amashort}} サービス・インスタンスごとに自動的に作成され、許可プロセスに必要なプロパティーが含まれます。この環境変数は 1 つの JSON オブジェクトから成り、{{site.data.keyword.amashort}} サービス・ダッシュボードの **「サービス資格情報」**タブをクリックすることによって表示できます。
 
 許可プロセスを開始するには、以下のようにします。
 
 1. `VCAP_SERVICES` 環境変数に保管されたサービス資格情報から、許可エンドポイント (`authorizationEndpoint`) およびクライアント ID (`clientId`) を取り出します。 
+
+	`var cfEnv = require("cfenv");` 
+	
+	`var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;` 
 
 	**注:** Web サポートが追加される前に {{site.data.keyword.amashort}} サービスをアプリケーションに追加した場合は、サービス資格情報にトークン・エンドポイントが含まれていないことがあります。代わりに、{{site.data.keyword.Bluemix_notm}} 地域に応じて、以下の URL を使用します。 
  
@@ -96,20 +101,21 @@ app.get("/protected", checkAuthentication, function(req, res, next){
 
 	// Check if user is authenticated 
   if (req.session.userIdentity){ 
-    next() 
-  } else {
-// If not - redirect to authorization server 
-		var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials; 
-		var authorizationEndpoint = mcaCredentials.authorizationEndpoint; 
-		var clientId = mcaCredentials.clientId; 
-		var redirectUri = "http://some-server/oauth/callback"; // Your web application redirect URI 
-		var redirectUrl = authorizationEndpoint + "?response_type=code";
-		redirectUrl += "&client_id=" + clientId; 
-		redirectUrl += "&redirect_uri=" + redirectUri; 
-		res.redirect(redirectUrl); 
-	} 
-} 
-	}
+    next()
+			} else {
+				// If not - redirect to authorization server 
+				var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials; 
+				var authorizationEndpoint = mcaCredentials.authorizationEndpoint; 
+				var clientId = mcaCredentials.clientId; 
+				var redirectUri = "http://some-server/oauth/callback"; // Your Web application redirect URI 
+				var redirectUrl = authorizationEndpoint + "?response_type=code";
+				redirectUrl += "&client_id=" + clientId; 
+				redirectUrl += "&redirect_uri=" + redirectUri; 
+				res.redirect(redirectUrl); 
+			} 
+		} 
+	   	}
+       }
 	```
 	{: codeblock}
 
@@ -148,17 +154,17 @@ app.get("/protected", checkAuthentication, function(req, res, next){
   var request = require('request');
   
   app.get("/oauth/callback", function(req, res, next){ 
-    var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials; 
-    var tokenEndpoint = mcaCredentials.tokenEndpoint; 
-    var formData = { 
-      grant_type: "authorization_code", 
-      client_id: mcaCredentials.clientId, 
-      redirect_uri: "http://some-server/oauth/callback",   // Your web application redirect uri 
-      code: req.query.code 
-    } 
+    var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
+		var tokenEndpoint = mcaCredentials.tokenEndpoint;
+		var formData = {
+			grant_type: "authorization_code", 
+			client_id: mcaCredentials.clientId, 
+			redirect_uri: "http://some-server/oauth/callback",// Your Web application redirect uri 
+			code: req.query.code 
+		} 
 
-  request.post({ 
-    url: tokenEndpoint, 
+		request.post({ 
+			url: tokenEndpoint, 
     formData: formData 
     }, function (err, response, body){ 
       var parsedBody = JSON.parse(body); 
@@ -175,7 +181,7 @@ app.get("/protected", checkAuthentication, function(req, res, next){
 	```
 	{: codeblock}
 
-	`redirect_uri` パラメーターは、Google+ での認証が成功または失敗した後のリダイレクト用の URI であり、ステップ 1 の `redirect_uri` と一致する必要があります。  
+	`redirect_uri` パラメーターは、Google+ での認証が成功または失敗した後のリダイレクト用の URI であり、{{site.data.keyword.amashort}} ダッシュボードに定義されている `redirect_uri` に一致している必要があります。  
    
 	この POST 要求は、必ず 10 分以内に送信してください。10 分後に認可コードの有効期限が切れます。10 分を過ぎると新しいコードが必要です。
 

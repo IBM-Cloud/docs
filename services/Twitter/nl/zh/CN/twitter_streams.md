@@ -1,12 +1,17 @@
+---
+
+copyright:
+  years: 2015, 2016
+lastupdated: "2016-11-21"
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
 {:codeblock:.codeblock}
 
 # Decahose 和 PowerTrack 流 {: #decahose_powertrack}
-
-*上次更新时间：2016 年 5 月 13 日*
-{: .last-updated}
 
 {{site.data.keyword.twittershort}} 根据 {{site.data.keyword.Bluemix_notm}} 套餐注册，提供对 Twitter Decahose 和 PowerTrack 流的访问。这两种流都交付实时订阅源，但提供不同的特征以满足您的需求。
 {:shortdesc}
@@ -24,7 +29,7 @@ PowerTrack 流基于用户定义的基于规则的过滤器（称为跟踪），
 
 <dl>
 <dt>规则</dt>
-<dd>此跟踪中收集到的所有消息都至少与和此跟踪关联的其中一条规则相匹配。可以添加、编辑和删除此跟踪类型中的规则。基于规则的跟踪中支持 [GNIP PowerTrack 规则语法](http://support.gnip.com/apis/powertrack/rules.html)。所有查询必须符合 {{site.data.keyword.twittershort}} [查询语言](twitter_rest_apis.html#querylanguage "查询语言")。
+<dd>此跟踪中收集到的所有消息都至少与和此跟踪关联的其中一条规则相匹配。可以添加、编辑和删除此跟踪类型中的规则。基于规则的跟踪中支持 [GNIP PowerTrack 规则语法](http://support.gnip.com/apis/powertrack2.0/rules.html)。所有查询必须符合 {{site.data.keyword.twittershort}} [查询语言](twitter_rest_apis.html#querylanguage "查询语言")。
 </dd>
 
 <dt>聚合</dt>

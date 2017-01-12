@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated:  "2016-08-08"
+  years: 2016, 2017
+lastupdated:  "2017-01-09"
 
 ---
 
@@ -19,13 +19,12 @@ lastupdated:  "2016-08-08"
 
 The <!--container group is created with a--> URL or route is created with the default domain names based on the {{site.data.keyword.Bluemix_notm}} `Region`.
 
-*Table 1. Application domain names based on `Region` in  {{site.data.keyword.Bluemix_notm}}*
-
   |Domain |  Region  |    
   |:----- | :----- |    
   |`mybluemix.net` | US South |    
   |`eu-gb.mybluemix.net` | United Kingdom  |
   |`au-syd.mybluemix.net` | Sydney  |      
+  {: caption="Table 1. Application domain names based on Region in {{site.data.keyword.Bluemix_notm}}" caption-side="top"}
 
 To be able to use your own domain you will need to configure custom domain by performing the following steps:
 

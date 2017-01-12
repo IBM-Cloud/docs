@@ -4,7 +4,9 @@
 
 copyright:
 
-  anni: 2014, 2016
+  year: 2014, 2016
+  
+lastupdated: "2016-10-19"
 
  
 
@@ -15,8 +17,6 @@ copyright:
 
 # Sicurezza {{site.data.keyword.Bluemix_notm}}
 {: #security}
-Ultimo aggiornamento: 19 ottobre 2016
-{: .last-updated}
 
 Sviluppata con procedure di progettazione sicura, la piattaforma {{site.data.keyword.Bluemix}} offre diversi livelli di controlli di sicurezza tra
 la rete e l'infrastruttura. {{site.data.keyword.Bluemix_notm}} fornisce un gruppo di servizi di sicurezza che possono essere utilizzati dagli sviluppatori di applicazioni per proteggere le proprie applicazioni mobili e Web. Questi elementi si combinano per rendere {{site.data.keyword.Bluemix_notm}} una piattaforma con scelte chiare
@@ -27,12 +27,11 @@ per lo sviluppo di applicazioni sicure.
 procedure quali, ad esempio, scansione del codice sorgente, scansione dinamica, modellazione dei rischi e test di penetrazione. {{site.data.keyword.Bluemix_notm}} segue il processo IBM PSIRT (Product Security Incident Response Team) per la gestione degli
 incidenti di sicurezza. Per i dettagli, consulta il sito [IBM Security Vulnerability Management (PSIRT)](http://www-03.ibm.com/security/secure-engineering/process.html){: new_window}.
 
-{{site.data.keyword.Bluemix_notm}} pubblico e dedicato utilizzano i servizi cloud {{site.data.keyword.BluSoftlayer}} IaaS (Infrastructure-as-a-Service) e si avvalgono appieno della sua architettura di sicurezza. Per le tue applicazioni e i tuoi dati, {{site.data.keyword.BluSoftlayer}} IaaS fornisce molteplici livelli di protezione che si sovrappongono tra di loro.  Per {{site.data.keyword.Bluemix_notm}} locale, la sicurezza fisica è di tua competenza e fornisci l'infrastruttura
+{{site.data.keyword.Bluemix_notm}} pubblico e dedicato utilizzano i servizi cloud {{site.data.keyword.BluSoftlayer}} IaaS (Infrastructure-as-a-Service) e si avvalgono appieno della sua architettura di sicurezza. Per le tue applicazioni e i tuoi dati, {{site.data.keyword.BluSoftlayer}} IaaS fornisce molteplici livelli di protezione che si sovrappongono tra di loro. Per {{site.data.keyword.Bluemix_notm}} locale, la sicurezza fisica è di tua competenza e fornisci l'infrastruttura
 ospitando {{site.data.keyword.Bluemix_notm}} locale nel tuo data center dietro un firewall aziendale. Inoltre, {{site.data.keyword.Bluemix_notm}} aggiunge funzionalità di sicurezza a livello
 PaaS (Platform as a Service) in diverse categorie: piattaforma, dati e applicazione.
 
-## Sicurezza della piattaforma
-   {{site.data.keyword.Bluemix_notm}}
+## Sicurezza della piattaforma {{site.data.keyword.Bluemix_notm}}
 {: #platform-security}
 
 {{site.data.keyword.Bluemix_notm}} fornisce sicurezza funzionale, di infrastruttura, operativa e fisica (tramite {{site.data.keyword.BluSoftlayer}}) per la piattaforma di base. Tuttavia, {{site.data.keyword.Bluemix_notm}} locale è unico per il fatto che il cliente fornisce l'infrastruttura e il data center ed è di sua competenza la sicurezza fisica.
@@ -57,7 +56,7 @@ Con {{site.data.keyword.Bluemix_notm}} locale, ospiti {{site.data.keyword.Bluemi
 
 Figura 2. Panoramica della sicurezza della piattaforma {{site.data.keyword.Bluemix_notm}} locale
 
-IBM installa, esegue il monitoraggio in remoto e gestisce {{site.data.keyword.Bluemix_notm}} locale nel tuo data center attraverso Relay, una funzionalità di consegna inclusa in {{site.data.keyword.Bluemix_notm}} locale. Relay si connette in modo sicuro con i certificati specifici di ciascuna istanza {{site.data.keyword.Bluemix_notm}} locale. Per ulteriori informazioni su {{site.data.keyword.Bluemix_notm}} locale e Relay, vedi [Bluemix locale](../local/index.html).
+IBM installa, esegue il monitoraggio in remoto e gestisce {{site.data.keyword.Bluemix_notm}} locale nel tuo data center attraverso Relay, una funzionalità di consegna inclusa in {{site.data.keyword.Bluemix_notm}} locale. Relay si connette in modo sicuro con i certificati specifici di ciascuna istanza {{site.data.keyword.Bluemix_notm}} locale. Per ulteriori informazioni su {{site.data.keyword.Bluemix_notm}} locale e Relay, vedi [Bluemix locale](/docs/local/index.html).
 
 ### Sicurezza funzionale
 
@@ -159,7 +158,7 @@ monitorare i tentativi di accesso riusciti e non riusciti degli sviluppatori di 
 <dd>All'interno di {{site.data.keyword.Bluemix_notm}}, vengono seguite le linee guida di Separazione dei compiti per assegnare agli utenti dei privilegi di accesso granulari e per garantire che gli utenti dispongano soltanto dell'accesso richiesto per eseguire i propri lavori in base al principio del
 minimo privilegio.
 
-Negli ambienti {{site.data.keyword.Bluemix_notm}} dedicato e locale, gli amministratori assegnati possono gestire i ruoli e le autorizzazioni per gli utenti {{site.data.keyword.Bluemix_notm}} nella propria organizzazione utilizzando la Console di gestione. Per i dettagli, vedi [Gestione di {{site.data.keyword.Bluemix_notm}}](../admin/adminpublic.html#mng).
+Negli ambienti {{site.data.keyword.Bluemix_notm}} dedicato e locale, gli amministratori assegnati possono gestire i ruoli e le autorizzazioni per gli utenti {{site.data.keyword.Bluemix_notm}} nella propria organizzazione utilizzando la Console di gestione. Per i dettagli, vedi [Gestione di {{site.data.keyword.Bluemix_notm}}](/docs/admin/adminpublic.html#mng).
 </dd>
 </dl>
 
@@ -171,7 +170,7 @@ che i sistemi siano pienamente accessibili solo al personale autorizzato. Per {{
 Nella rete all'interno di una rete {{site.data.keyword.BluSoftlayer}}, il livello di rete pubblico gestisce il traffico pubblico a siti Web su host o risorse in linea. Il livello di rete privato consente una
 effettiva gestione fuori banda mediante un terzo vettore autonomo e distinto su gateway SSL, PPTP o IPSec VPN. Il livello di rete data center-data center fornisce una connettività gratuita e protetta tra server alloggiati in strutture {{site.data.keyword.BluSoftlayer}} separate.
 
-Ogni data center {{site.data.keyword.BluSoftlayer}} è pienamente protetto, con controlli che soddisfano i requisiti SSAE 16 e quelli riconosciuti dal settore, senza alcuna eccezione. 
+Ogni data center {{site.data.keyword.BluSoftlayer}} è pienamente protetto, con controlli che soddisfano i requisiti SSAE 16 e quelli riconosciuti dal settore, senza alcuna eccezione.
 
 ## Sicurezza dei dati
 {: #data-security}
@@ -197,13 +196,12 @@ Quando pianifichi la sicurezza dei dati, è necessario considerare ciascun tipo 
 
 La piattaforma {{site.data.keyword.Bluemix_notm}} protegge i data-in-transit proteggendo l'accesso dell'utente finale all'applicazione utilizzando SSL, per tutta la rete,
 finché i dati non raggiungono l'IBM DataPower Gateway al limite della rete interna {{site.data.keyword.Bluemix_notm}}. IBM
-DataPower Gateway funge da proxy inverso e fornisce la terminazione SSL. Da lì all'applicazione, IPSEC viene utilizzato per proteggere i dati mentre vengono trasmessi dall'IBM DataPower Gateway all'applicazione. 
+DataPower Gateway funge da proxy inverso e fornisce la terminazione SSL. Da lì all'applicazione, IPSEC viene utilizzato per proteggere i dati mentre vengono trasmessi dall'IBM DataPower Gateway all'applicazione.
 
 Come sviluppatore della tua applicazione, sei responsabile della sicurezza sia dei data-in-use
 che dei data-at-rest. Puoi usufruire dei diversi servizi correlati ai dati disponibili nel catalogo {{site.data.keyword.Bluemix_notm}} per informazioni a tale riguardo.
 
-## Sicurezza delle applicazioni
-               {{site.data.keyword.Bluemix_notm}}
+## Sicurezza delle applicazioni {{site.data.keyword.Bluemix_notm}}
 {: #application-security}
 
 In quanto sviluppatore di applicazioni, è tuo compito abilitare le configurazioni di sicurezza, compresa la
@@ -236,11 +234,11 @@ l'autenticazione.</dd>
 LinkedIn.</dd>
 </dl>
 
-Per ulteriori informazioni, vedi [Introduzione a Single Sign On](../services/SingleSignOn/index.html).
+Per ulteriori informazioni, vedi [Introduzione a Single Sign On](/docs/services/SingleSignOn/index.html).
 
 ### Application Security on Cloud
 
-Questo servizio fornisce un'analisi della sicurezza delle applicazioni Web e mobili e ti consente di scansionare il codice sorgente alla ricerca di vulnerabilità di sicurezza. Per ulteriori informazioni, vedi [Introduzione a Application Security on Cloud](../services/ApplicationSecurityonCloud/index.html).
+Questo servizio fornisce un'analisi della sicurezza delle applicazioni Web e mobili e ti consente di scansionare il codice sorgente alla ricerca di vulnerabilità di sicurezza. Per ulteriori informazioni, vedi [Introduzione a Application Security on Cloud](/docs/services/ApplicationSecurityonCloud/index.html).
 
 ### Plug-in IBM UrbanCode per il test di sicurezza delle applicazioni
 
@@ -252,7 +250,7 @@ Per ulteriori informazioni, vai a [IBM Application Security Testing for Bluemix]
 
 Il servizio dashDB utilizza un server LDAP integrato per l'autenticazione utente. La connessione tra le applicazioni e il database è protetta da certificati SSL. Questo servizio utilizza la capacità di crittografia nativa di DB2® per crittografare automaticamente il tuo database distribuito e i tuoi backup di database. La rotazione della chiave master è automatica e si verifica ogni 90 giorni.
 
-Per ulteriori informazioni, vedi [Introduzione a dashDB](../services/dashDB/index.html).
+Per ulteriori informazioni, vedi [Introduzione a dashDB](/docs/services/dashDB/index.html).
 
 ### Secure Gateway
 
@@ -262,14 +260,13 @@ e la posizione remota a cui vuoi connetterti. Puoi configurare
 e creare un gateway sicuro utilizzando l'interfaccia utente {{site.data.keyword.Bluemix_notm}}
 o un pacchetto API.
 
-Per ulteriori informazioni, vedi [Introduzione a Secure Gateway](../services/SecureGateway/secure_gateway.html).
+Per ulteriori informazioni, vedi [Introduzione a Secure Gateway](/docs/services/SecureGateway/secure_gateway.html).
 
 ### SIEM (Security Information and Event Management)
 
 Puoi utilizzare gli strumenti SIEM (Security Information and Event Management) per analizzare gli avvisi di sicurezza nei log dell'applicazione. Uno di questi strumenti è IBM Security QRadar&reg; SIEM, che fornisce servizi di sicurezza in ambienti cloud. Per informazioni, vedi [IBM QRadar Security Intelligence Platform](http://www-01.ibm.com/support/knowledgecenter/SS42VS/welcome?lang=en){: new_window}.
 
-## Distribuzione della sicurezza
-{{site.data.keyword.Bluemix_notm}}
+## Distribuzione della sicurezza {{site.data.keyword.Bluemix_notm}}
 {: #security-deployment}
 
 L'architettura della distribuzione della sicurezza {{site.data.keyword.Bluemix_notm}}
@@ -355,12 +352,12 @@ Per ulteriori informazioni o assistenza per ottenere, certificare e mantenere la
 
 ![ISO 27017](images/icon_ISO27017.png) ISO/IEC 27017:2015 fornisce linee guida per i controlli della sicurezza delle informazioni applicabili alla fornitura e all'uso dei servizi cloud. Fornisce inoltre delle indicazioni di implementazione per i fornitori e i clienti dei servizi cloud. ISO 27017 offre indicazioni di implementazione per i controlli rilevanti specificati in ISO/IEC 27002 nonché ulteriori controlli e indicazioni che si riferiscono specificamente ai servizi cloud.
 
-L'allineamento di {{site.data.keyword.Bluemix_notm}} con ISO 27017:2015 dimostra che IBM utilizza un sofisticato sistema di controlli specifici del cloud. Inoltre, mostra un impegno ad essere il migliore in campo IaaS, sia a livello nazionale che internazionale. 
+L'allineamento di {{site.data.keyword.Bluemix_notm}} con ISO 27017:2015 dimostra che IBM utilizza un sofisticato sistema di controlli specifici del cloud. Inoltre, mostra un impegno ad essere il migliore in campo IaaS, sia a livello nazionale che internazionale.
 
 
 ![ISO 27018](images/icon_ISO27018.png) ISO 27018:2014 stabilisce obiettivi di controllo, controlli e linee guida comunemente accettati per attuare misure atte a proteggere le informazioni personali. Queste misure sono conformi ai principi della privacy nell'ISO 29100 per l'ambiente di elaborazione cloud pubblico.
 
-In particolare, ISO 27018:2014 specifica le linee guida che si basano sull'ISO 27002. Le linee guida considerano i requisiti di regolamentazione per la protezione dei informazioni personali, che potrebbero essere applicabili nel contesto di ambienti a rischio di sicurezza delle informazioni di un fornitore di servizi cloud pubblici. 
+In particolare, ISO 27018:2014 specifica le linee guida che si basano sull'ISO 27002. Le linee guida considerano i requisiti di regolamentazione per la protezione dei informazioni personali, che potrebbero essere applicabili nel contesto di ambienti a rischio di sicurezza delle informazioni di un fornitore di servizi cloud pubblici.
 
 
 ![Cloud Security Alliance – STAR Registrant](images/icon_CSA.png) Cloud Security Alliance è un'organizzazione no profit la cui missione è quella di promuovere l'utilizzo di procedure ottimali per fornire garanzie di sicurezza all'interno di un ambiente di elaborazione cloud. Uno dei meccanismi utilizzati da Cloud Security Alliance per perseguire la sua missione è il registro STAR (Security, Trust, and Assurance Registry). STAR è un registro gratuito, accessibile al pubblico, che documenta i controlli di sicurezza forniti dalle varie offerte di elaborazione cloud.
@@ -387,8 +384,7 @@ La seguente tabella mostra quali servizi {{site.data.keyword.Bluemix_notm}} sono
 |{{site.data.keyword.mql}}				|S	|S	|S	|	 		|
 |{{site.data.keyword.SecureGateway}}			|S	|S |	|	 		|
 |{{site.data.keyword.sescashort}}     |S |S |S	|  |
-
-*Tabella 1. Conformità di servizi e piattaforme*
+{: caption="Table 1. Platform and service compliance" caption-side="top"}
 
 # Link correlati
 {: #rellinks}
@@ -397,4 +393,4 @@ La seguente tabella mostra quali servizi {{site.data.keyword.Bluemix_notm}} sono
 {: #general}
 
 * [Sicurezza IBM SaaS](http://www.ibm.com/cloud-computing/built-on-cloud/saas-security)
-* [Introduzione a Single Sign On](../services/SingleSignOn/index.html)
+* [Introduzione a Single Sign On](/docs/services/SingleSignOn/index.html)

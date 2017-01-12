@@ -1,14 +1,18 @@
 ---
 
 copyright:
-years: 2015 2016
+ years: 2015, 2016
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # Envío de notificaciones básicas a aplicaciones y extensiones de Chrome 
 {: #web_extensions_notifications}
-Última actualización: 15 de noviembre de 2016
+Última actualización: 06 de diciembre de 2016
 {: .last-updated}
 
 Una vez que haya desarrollado sus aplicaciones, puede enviar una notificación push. 
@@ -30,6 +34,6 @@ En la imagen siguiente se muestra la opción de notificaciones de apps y extensi
 ## Pasos siguientes
   {: #next_steps_tags}
 
-Una vez que haya configurado correctamente las notificaciones básicas, puede optar por configurar las notificaciones basadas en código y las opciones avanzadas. 
+Una vez que haya configurado correctamente las notificaciones básicas, puede optar por configurar las notificaciones basadas en código y las opciones avanzadas.
 
 Añada las características de servicio de {{site.data.keyword.mobilepushshort}} a la app. Para utilizar notificaciones basadas en código, consulte [Notificaciones basadas en código](c_tag_basednotifications.html). Para utilizar opciones de notificaciones avanzadas, consulte [Notificaciones avanzadas](t_advance_badge_sound_payload.html).

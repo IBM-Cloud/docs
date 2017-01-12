@@ -1,12 +1,17 @@
+---
+
+copyright:
+  years: 2015, 2016
+lastupdated: "2016-11-21"
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
 {:codeblock:.codeblock}
 
 # Decahose 및 PowerTrack 스트림 {: #decahose_powertrack}
-
-*마지막 업데이트 날짜: 2016년 5월 13일*
-{: .last-updated}
 
 {{site.data.keyword.twittershort}}에서는 {{site.data.keyword.Bluemix_notm}} 계획 등록에 기반하여 Twitter Decahose 및 PowerTrack 스트림에 대한 액세스 권한을 제공합니다.
 두 스트림 모두 사용자 요구에 맞게 실시간 피드 및 다른 특성을 전달합니다.
@@ -26,7 +31,7 @@ Entry Plan 사용자는 사용자 정의 가능한 추적을 작성하여 PowerT
 <dt>Rule</dt>
 <dd>이 추적에 수집된 모든 메시지는 추적과 연관된 하나 이상의 규칙과 일치합니다. 이 추적 유형 내에서 규칙을 추가, 편집 및 삭제할 수 있습니다.
 
-전체 [GNIP PowerTrack 규칙 구문](http://support.gnip.com/apis/powertrack/rules.html)이 규칙 기반 추적 내에서 지원됩니다. 모든 쿼리는 {{site.data.keyword.twittershort}} [쿼리 언어](twitter_rest_apis.html#querylanguage "쿼리 언어")에 부합해야 합니다.
+전체 [GNIP PowerTrack 규칙 구문](http://support.gnip.com/apis/powertrack2.0/rules.html)이 규칙 기반 추적 내에서 지원됩니다. 모든 쿼리는 {{site.data.keyword.twittershort}} [쿼리 언어](twitter_rest_apis.html#querylanguage "쿼리 언어")에 부합해야 합니다.
 </dd>
 
 <dt>Aggregated</dt>

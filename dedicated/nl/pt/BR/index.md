@@ -6,69 +6,76 @@ copyright:
 
   years: 2015, 2016
 
-lastupdated: "2016-10-26" 
+lastupdated: "2016-12-06" 
 
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-#{{site.data.keyword.Bluemix_notm}} Dedicated
+# {{site.data.keyword.Bluemix_dedicated_notm}}
 {: #dedicated}
+
 
 {{site.data.keyword.Bluemix}} é
 uma plataforma de padrão aberto, baseada em nuvem para construir, executar e
-gerenciar aplicativos. Com o {{site.data.keyword.Bluemix_notm}} Dedicated, você obtém o poder e a simplicidade do {{site.data.keyword.Bluemix_notm}}&mdash; em seu próprio ambiente do {{site.data.keyword.BluSoftlayer}} que está firmemente conectado tanto ao
-ambiente do {{site.data.keyword.Bluemix_notm}} Public quanto à sua própria rede.
+gerenciar aplicativos. Com o {{site.data.keyword.Bluemix_dedicated_notm}}, você obtém o poder e a simplicidade do
+{{site.data.keyword.Bluemix_notm}}&mdash; em seu próprio ambiente dedicado do SoftLayer que está seguramente conectado ao ambiente do
+{{site.data.keyword.Bluemix_notm}} Public e à sua própria rede.
 {:shortdesc}
-
 
 Todas as implementações dedicadas do {{site.data.keyword.Bluemix_notm}} incluem os benefícios e recursos a seguir sem nenhum custo adicional: VPN, rede local virtual (VLAN) privada, firewall, conectividade com seu LDAP, capacidade de alavancar bancos de dados e apps existentes no local, segurança no site 24x7, hardware dedicado e suporte padrão.
 
-Por padrão, o acesso à sua instância privada do {{site.data.keyword.Bluemix_notm}} é acessível apenas a partir de sua rede corporativa. Se você precisar que o ambiente do
-{{site.data.keyword.Bluemix_notm}} seja acessível diretamente a partir da Internet ou de um dispositivo móvel, por exemplo, então, um componente de segurança de rede adicional será necessário a um
-custo adicional.
+Por padrão, o acesso à sua instância privada do {{site.data.keyword.Bluemix_notm}} é acessível apenas a partir de sua rede corporativa. Se você precisar
+que o ambiente do {{site.data.keyword.Bluemix_notm}} seja acessível diretamente da Internet, de um dispositivo móvel ou de um banco de dados dedicado, por
+exemplo, então, um componente de segurança de rede adicional será necessário a um custo adicional.
 
-O {{site.data.keyword.Bluemix_notm}} Dedicated vem com todos os tempos de execução do {{site.data.keyword.Bluemix_notm}} incluídos e 64 GB de memória de recursos de cálculo.
+O {{site.data.keyword.Bluemix_dedicated_notm}} é fornecido com todos os tempos de execução do {{site.data.keyword.Bluemix_notm}} incluídos e 64
+GB de memória de recursos de cálculo.
 
-Além disso, há um conjunto de serviços e componentes que são incluídos ou opcionais para compra. Revise as tabelas a seguir para ver o que está incluído e o que você pode comprar opcionalmente.
+Além disso, há um conjunto de serviços e componentes que são incluídos ou opcionais para compra. Revise a tabela a seguir para ver o que está incluído e o que
+você pode comprar opcionalmente.
 
-*Tabela 1. Serviços dedicados*
-
-| **Tipo**        | **Nome**            | **Descrição** |      
+| **Tipo**        | **Nome**            | **Descrição** |
 |-----------------|-------------------|-------------------|
-|Incluído | [Tempos de execução do {{site.data.keyword.Bluemix_notm}}](/docs/cfapps/runtimes.html) | Use tempos de execução para colocar seu app funcionando rapidamente, sem necessidade de configurar e gerenciar as máquinas e os sistemas operacionais. Todos os tempos de execução do {{site.data.keyword.Bluemix_notm}} estão disponíveis para você usar em sua instância do {{site.data.keyword.Bluemix_notm}} Dedicated.|
-|Incluído | [{{site.data.keyword.autoscaling}}](/docs/services/Auto-Scaling/index.html) | Aumentar ou diminuir dinamicamente a capacidade de cálculo do aplicativo com base em políticas. Com esse serviço,
-você possui uso ilimitado no ambiente do {{site.data.keyword.Bluemix_notm}}
-Dedicated. |
+|Incluído | [Tempos de execução do {{site.data.keyword.Bluemix_notm}}](/docs/cfapps/runtimes.html) | Use tempos de execução para colocar seu app funcionando rapidamente, sem necessidade de configurar e gerenciar as máquinas e os sistemas operacionais. Todos
+os tempos de execução do {{site.data.keyword.Bluemix_notm}} estão disponíveis para você usar em sua
+instância do {{site.data.keyword.Bluemix_dedicated_notm}}.|
+| Incluído | [{{site.data.keyword.autoscaling}}](/docs/services/Auto-Scaling/index.html) | Aumentar ou diminuir dinamicamente a capacidade de
+cálculo do aplicativo com base em políticas. Com esse serviço, você tem uso ilimitado em seu ambiente do {{site.data.keyword.Bluemix_dedicated_notm}}. |
 |Opcional | [{{site.data.keyword.apiconnect_short}}](/docs/services/apiconnect/index.html) | ]O {{site.data.keyword.apiconnect_long}} integra o {{site.data.keyword.APIM}} e o IBM StrongLoop em uma única oferta que fornece uma solução abrangente para criar, executar, gerenciar e impingir APIs e microsserviços. |
 |Opcional | [{{site.data.keyword.cloudant}}](/docs/services/Cloudant/index.html#Cloudant) | O {{site.data.keyword.cloudant}} fornece acesso a uma camada de dados do JSON NoSQL totalmente gerenciada que sempre está ativa. Esse serviço é compatível com o CouchDB e acessível por meio de uma interface HTTP simples de usar para modelos de aplicativos móveis e da web. |
-|Opcional | [{{site.data.keyword.containershort}}](/docs/containers/container_index.html) | Execute os contêineres do Docker no {{site.data.keyword.Bluemix_notm}} Dedicated. Contêineres são objetos de software virtuais que incluem todos os elementos que um aplicativo precisa executar. Um contêiner tem os benefícios do isolamento e da alocação de recursos, mas é mais móvel e eficiente do que, por exemplo, uma máquina virtual. Para obter informações sobre requisitos de hardware, consulte [IBM {{site.data.keyword.containershort}} em {{site.data.keyword.Bluemix_notm}} Dedicated e Bluemix Local](/docs/containers/container_dl.html).|
-|Opcional | [{{site.data.keyword.dashdbshort}}](/docs/services/dashDB/dashDB.html) | Use dashDB para armazenar dados relacionais, incluindo tipos especiais como dados geoespaciais. Depois, analise esses dados com SQL ou análise integrada avançada como análise preditiva e mineração de dados, análise com R e análise geo-espacial. |
-|Opcional | [{{site.data.keyword.datacshort}}](/docs/services/DataCache/index.html#data_cache) | Esse serviço fornece uma grade de dados da memória que suporta cenários de armazenamento em cache distribuído para seus apps. Inclui
-50 GB de cache da memória. |
+|Opcional | [{{site.data.keyword.containershort}}](/docs/containers/container_index.html) | Execute os contêineres do Docker no {{site.data.keyword.Bluemix_dedicated_notm}}. Contêineres são objetos de software virtuais que incluem todos os elementos que um aplicativo precisa executar. Um contêiner tem os benefícios do isolamento e da alocação de recursos, mas é mais móvel e eficiente do que, por exemplo, uma máquina virtual. Para
+obter informações sobre requisitos de hardware, consulte [IBM {{site.data.keyword.containershort}} em
+{{site.data.keyword.Bluemix_dedicated_notm}} e Bluemix Local](/docs/containers/container_dl.html).|
+| Opcional | [{{site.data.keyword.contdelivery_short}}](/docs/services/ContinuousDelivery/index.html) | Use {{site.data.keyword.contdelivery_short}} Dedicated para automatizar construções, testes de unidade, implementações, etc. Edite e envie o código por push por meio do IDE avançado baseado na web. Crie cadeias de ferramentas para ativar integrações de ferramenta que suportam as tarefas de desenvolvimento, implementação e operações. |
+| Opcional | [{{site.data.keyword.dashdbshort}}](/docs/services/dashDB/dashDB.html) | O IBM {{site.data.keyword.dashdbshort}} for
+Analytics é um serviço de banco de dados de nuvem de SQL totalmente gerenciado, otimizado para data warehouse e cargas de trabalho de analítica. O IBM
+{{site.data.keyword.dashdbshort}} for Transactions é um serviço de banco de dados de nuvem de SQL totalmente gerenciado, otimizado para propósito geral, apps
+da web e cargas de trabalho transacionais. |
+| Opcional | [{{site.data.keyword.datacshort}}](/docs/services/DataCache/index.html#data_cache) | Esse serviço fornece uma grade de dados da memória que suporta cenários de armazenamento em cache distribuído para seus apps. Inclui
+50 GB de cache na memória. |
 | Opcional | [Dedicated GitHub Enterprise](/docs/services/ghededicated/index.html) | {{site.data.keyword.ghe_long}} é a versão hospedada em Nuvem IBM e completamente
-gerenciada do GitHub Enterprise que fornece a experiência social que os desenvolvedores amam. Esse serviço está disponível atualmente exclusivamente para ambientes do {{site.data.keyword.Bluemix_notm}}
-Dedicated. |
-| Opcional | [{{site.data.keyword.deliverypipeline}} (beta)](/docs/services/DeliveryPipeline/index.html) | O serviço {{site.data.keyword.deliverypipeline}} do IBM {{site.data.keyword.Bluemix_notm}} automatiza a implementação contínua de seus projetos {{site.data.keyword.Bluemix_notm}}. |
+gerenciada do GitHub Enterprise que fornece a experiência social que os desenvolvedores amam. Esse serviço atualmente está disponível exclusivamente para ambientes do {{site.data.keyword.Bluemix_dedicated_notm}}. |
 | Opcional (Beta) | [Registro de log](/docs/monitoringandlogging/cfapps_ml_logs_dedicated_ov.html#container_ml_logs_dedicated_ov) | Fornece logs para os aplicativos Cloud Foundry em sua interface com o usuário do {{site.data.keyword.Bluemix_notm}} e logs pesquisáveis e painéis em Kibana. |
-|Opcional | [{{site.data.keyword.messagehub}}](/docs/services/MessageHub/index.html#messagehub) | O {{site.data.keyword.messagehub}} é um barramento de mensagem escalável, distribuído, de alto rendimento, para unificar as suas tecnologias no
+| Opcional | [{{site.data.keyword.messagehub}}](/docs/services/MessageHub/index.html#messagehub) | O {{site.data.keyword.messagehub}} é um barramento de mensagem escalável, distribuído, de alto rendimento, para unificar as suas tecnologias no
 local e remotas. O {{site.data.keyword.messagehub}} é baseado no Apache Kafka, que é um mecanismo do sistema de mensagens em tempo real rápido, escalável e durável. |
 |Opcional | [{{site.data.keyword.mobilepush}}](/docs/services/mobilepush/index.html) | O {{site.data.keyword.mobilepush}} é um serviço que você pode usar para enviar notificações para iOS e dispositivo Android. É possível direcionar notificações para todos os usuários
 do aplicativo ou para um conjunto específico de usuários e dispositivos usando tags. É possível administrar dispositivos, tags e assinaturas. É
 possível também usar um SDK (kit de desenvolvimento de software) e interfaces de
 programação de aplicativo (APIs) Representational State Transfer (REST) para
-desenvolver ainda mais seus aplicativos cliente. |
+desenvolver ainda mais seus aplicativos cliente.|
 |Opcional | [{{site.data.keyword.SecureGateway}}](/docs/services/SecureGateway/secure_gateway.html) | O serviço {{site.data.keyword.SecureGateway}} fornece uma maneira segura de conectar aplicativos {{site.data.keyword.Bluemix_notm}} a locais remotos no local ou na nuvem.  |
 |Opcional | [{{site.data.keyword.sescashort}}](/docs/services/SessionCache/index.html#session_cache) | Para maior redundância, o {{site.data.keyword.sescashort}} fornece uma réplica de uma sessão armazenada no cache. Portanto, no caso de uma indisponibilidade de energia, seu aplicativo cliente manterá acesso à sessão no cache. O serviço suporta cenários de armazenamento em cache de sessão para aplicativos móveis e da web. |
-| Incluído | [ Cadeias de ferramentas (beta)](/docs/toolchains/toolchains_overview.html) | Uma cadeia de ferramentas é um conjunto de integrações de ferramenta que suporta as tarefas de desenvolvimento, implementação e operações. As cadeias de ferramentas estão disponíveis em ambientes dedicados, mas as integrações de ferramenta que estão disponíveis para você dependem de como o {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.jazzhub_short}} foi configurado em seu ambiente específico. |
-|Opcional | [{{site.data.keyword.iot_short}}](/docs/services/IoT/index.html) | Esse serviço permite que os apps se comuniquem e consumam dados coletados por seus dispositivos conectados, sensores e gateways. A oferta de base permite executar uma versão privada do {{site.data.keyword.iot_full}} no ambiente dedicado com uma capacidade de 100.000 dispositivos ou aplicativos conectados simultaneamente e 1,6 TB de troca de dados. |
+| Opcional | [{{site.data.keyword.iot_short}}](/docs/services/IoT/index.html) | Esse serviço permite que os apps se comuniquem e consumam dados coletados por seus dispositivos conectados, sensores e gateways. A oferta de base permite executar uma versão privada do {{site.data.keyword.iot_short}} no ambiente dedicado com uma capacidade de 100.000 dispositivos ou aplicativos conectados simultaneamente e 1,6 TB de troca de dados. |
+{: caption="Table 1. Dedicated Services" caption-side="top"}
+{: #table01}
+
+
 
 Há componentes opcionais que estão disponíveis para você comprar para escalar e ampliar a capacidade de seus recursos e serviços. É possível comprar qualquer um desses componentes entrando em contato com a equipe de vendas; acesse [Contate-nos](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs) para obter informações sobre como contatar um representante de vendas. Para aumentar seu plano para um serviço, é possível selecionar o plano a partir do ladrilho do serviço em seu catálogo.
 
-*Tabela 2. Componentes opcionais para compra: serviços*
-
-| **Nome**            | **Descrição** |      
+| **Nome**            | **Descrição** |
 |-------------------|-------------------|
 |Dedicated {{site.data.keyword.apiconnect_short}} Professional 5 milhões de Chamadas API | Um ambiente que permite executar uma versão privada do {{site.data.keyword.apiconnect_short}} dentro
 do ambiente dedicado com uma capacidade de 5 milhões de Chamadas API por mês, destinadas para projetos de API departamentais. |
@@ -79,52 +86,58 @@ do ambiente dedicado com uma capacidade de 25 milhões de Chamadas API por mês,
 |Dedicated {{site.data.keyword.apiconnect_short}} Enterprise aumento de 100 mil Chamadas API | Uma extensão do ambiente do {{site.data.keyword.apiconnect_short}} Enterprise, para fornecer
 capacidade adicional de 100 mil Chamadas API por mês. |
 |Aumento de capacidade de 1,6 TB do {{site.data.keyword.cloudant}} dedicado | Inclui a execução de uma versão privada do {{site.data.keyword.cloudantfull}} dentro do ambiente dedicado com uma capacidade de design de 1,6 terabyte.  |
+|Instância do {{site.data.keyword.contdelivery_short}} Dedicated | Uma versão privada do {{site.data.keyword.contdelivery_short}} em execução dentro
+de um ambiente dedicado. A capacidade é determinada pelas autorizações de Usuário Autorizado do {{site.data.keyword.contdelivery_short}} Dedicated. |
+|Usuário Autorizado do {{site.data.keyword.contdelivery_short}} Dedicated | Concede um acesso de Usuário Autorizado e para o uso de um ambiente do
+{{site.data.keyword.contdelivery_short}} Dedicated. Cada usuário que pertence a uma Organização do {{site.data.keyword.Bluemix_notm}} que contém uma
+instância de serviço do {{site.data.keyword.contdelivery_short}} deve ser autorizado. |
 |Aumento de capacidade de 50 GB do {{site.data.keyword.datacshort}} e {{site.data.keyword.sescashort}} dedicados | Um ambiente que permite implementar e executar as instâncias do {{site.data.keyword.datacshort}} e do {{site.data.keyword.sescashort}} até uma capacidade acumulativa de 50 GB. |
 |{{site.data.keyword.dashdbshort}} Enterprise 64,1 dedicado | Um banco de dados por instância de serviço em um servidor dedicado com 64 GB de RAM, 16 vCPUs. Recomendado para até 1 TB de dados de pré-carregamento, com base em compactação típica.  |
 |{{site.data.keyword.dashdbshort}} Enterprise 256,4 dedicado | Um banco de dados por instância de serviço em um servidor bare metal dedicada com 256 GB de RAM, 32 núcleos. recomendado para até 4 TB de dados de pré-carregamento, com base em compactação típica. |
 |{{site.data.keyword.dashdbshort}} Enterprise 256,12 dedicado  | Um banco de dados por instância de serviço em um servidor bare metal dedicada com 256 GB de RAM, 32 núcleos. Recomendado para até 12 TB de dados de pré-carregamento, com base em compactação típica. Este é um plano denso de armazenamento adequado para ambientes nos quais os volumes de dados são maiores e as consultas não precisam ser executadas em velocidades de memória. |
-|IBM {{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.dashdbshort}} Enterprise for Transactions 2.8.500 | Instância dedicada que suporta cargas de trabalho do Online
+|IBM {{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.dashdbshort}} Enterprise for Transactions 2.8.500 | Instância dedicada que suporta cargas de trabalho do Online
 Transaction Processing (OLTP) com 8 GB de RAM e 500 GB de espaço para dados e logs. |
-|IBM {{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.dashdbshort}} Enterprise for Transactions 12.128.1400 | Instância dedicada que suporta cargas de trabalho do Online
+|IBM {{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.dashdbshort}} Enterprise for Transactions 12.128.1400 | Instância dedicada que suporta cargas de trabalho do Online
 Transaction Processing (OLTP) com 128 GB de RAM e 1,4 TB de armazenamento de SSD para dados e logs. |
-|IBM {{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.dashdbshort}} Enterprise for Transactions High Availability 2.8.500 | Instância dedicada que suporta cargas de trabalho do
+|IBM {{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.dashdbshort}} Enterprise for Transactions High Availability 2.8.500 | Instância dedicada que suporta cargas de trabalho do
 Online Transaction Processing (OLTP) com 8 GB de RAM e 500 GB de espaço para dados e logs e ela inclui um servidor de Espera adicional para alta disponibilidade. |
-|IBM {{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.dashdbshort}} Enterprise for Transactions High Availability 12.128.1400 | Instância dedicada que suporta cargas de
+|IBM {{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.dashdbshort}} Enterprise for Transactions High Availability 12.128.1400 | Instância dedicada que suporta cargas de
 trabalho do Online Transaction Processing (OLTP) com 128 GB de RAM e 1,4 TB de armazenamento de SSD para dados e logs e ela inclui um servidor de Espera adicional para alta disponibilidade. |
-|Serviços de comunidade do {{site.data.keyword.Bluemix_notm}} Dedicated  | Um ambiente que permite implementar e executar serviços de comunidade até um total de 50 instâncias para cada serviço de comunidade.  |
-|Instância de cluster do {{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.cloudant}} | Este componente opcional inclui um cluster de 3 nós pelo qual você é responsável por fornecer a infraestrutura, e a capacidade de armazenamento e cálculo pode ser determinada com base em suas necessidades específicas. O {{site.data.keyword.cloudant}} fornece acesso a uma camada de dados do JSON NoSQL totalmente gerenciada que sempre está ativa. Esse serviço é compatível com o CouchDB e acessível por meio de uma interface HTTP simples de usar para modelos de aplicativos móveis e da web. |
-|IBM {{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.messagehub}} | Um ambiente que fornece publicação e assinatura de sistema de mensagens de até 10 GB por partição. As
+|Serviços da comunidade do {{site.data.keyword.Bluemix_dedicated_notm}}  | Um ambiente que permite implementar e executar serviços de comunidade até um total de 50 instâncias para cada serviço de comunidade.  |
+|Instância de Cluster do {{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.cloudant}} | Este componente opcional inclui um cluster de 3 nós pelo qual você é responsável por fornecer a infraestrutura, e a capacidade de armazenamento e cálculo pode ser determinada com base em suas necessidades específicas. O {{site.data.keyword.cloudant}} fornece acesso a uma camada de dados do JSON NoSQL totalmente gerenciada que sempre está ativa. Esse serviço é compatível com o CouchDB e acessível por meio de uma interface HTTP simples de usar para modelos de aplicativos móveis e da web. |
+|IBM {{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.messagehub}} | Um ambiente que fornece publicação e assinatura de sistema de mensagens de até 10 GB por partição. As
 mensagens são retidas e disponíveis para consumo por um máximo de 24 horas. |
 |IBM Bluemix Dedicated {{site.data.keyword.mobilepushshort}} | Um ambiente que permite a implementação e execução de instâncias do
 {{site.data.keyword.mobilepushshort}} com capacidade para aceitar 300 pedidos por segundo. |
 |Aumento incremental do {{site.data.keyword.iot_short}} Dedicated | Um aumento de ambiente que permite a execução de uma versão privada do {{site.data.keyword.iot_short}} no ambiente dedicado com uma capacidade de 100.000 dispositivos ou aplicativos conectados simultaneamente e 0,5 TB de troca de dados. |
-|IBM {{site.data.keyword.Bluemix_notm}} Dedicated {{site.data.keyword.deliverypipeline}} | O serviço {{site.data.keyword.deliverypipeline}} do IBM {{site.data.keyword.Bluemix_notm}} automatiza a implementação contínua de seus projetos {{site.data.keyword.Bluemix_notm}}. |
+{: caption="Table 2. Optional services components for purchase" caption-side="top"}
+{: #table02}
 
-*Tabela 3. Componentes opcionais para compra: complementos da plataforma*
 
-| **Nome**            | **Descrição** |      
+
+| **Nome**            | **Descrição** |
 |-------------------|-------------------|
 |Aumento de capacidade de 16 GB de tempos de execução dedicados  | Uma extensão do ambiente de tempo de execução para fornecer um extra de 16 GB de capacidade de tempo de execução. |
 |Capacidade de 1 Gbps de link direto dedicado | Um link de rede dedicado que conecta diretamente ao ponto de presença apropriado da rede do {{site.data.keyword.BluSoftlayer}} projetado para as transferências de dados de até 1 Gbps. |
 |Capacidade de 10 Gbps de link direto dedicado | Um link de rede dedicado que conecta diretamente ao ponto de presença apropriado da rede do {{site.data.keyword.BluSoftlayer}} projetado para as transferências de dados de até 10 Gbps. |
 |Firewall de hardware do IBM Bluemix Dedicated - Alta disponibilidade | Um firewall de hardware redundante de 1 Gbps configurado para proteção de um único, vários ou todos os servidores na mesma VLAN dentro do ambiente Dedicated. |
+{: caption="Table 3. Optional platform add-on components for purchase" caption-side="top"}
+{: #table03}
 
-**Nota**: Os componentes do {{site.data.keyword.Bluemix_notm}} Dedicated podem indicar uma capacidade configurada específica, como gigabytes ou transações por segundo. Como a capacidade real na prática para qualquer configuração do serviço de nuvem varia dependendo de vários fatores, a capacidade real pode ser mais ou menos que a capacidade configurada.
-
-
+**Nota**: componentes do {{site.data.keyword.Bluemix_dedicated_notm}} podem indicar uma capacidade configurada específica, como
+gigabytes ou transações por segundo. Como a capacidade real na prática para qualquer configuração do serviço de nuvem varia dependendo de vários fatores, a capacidade real pode ser mais ou menos que a capacidade configurada.
 
 ### Catálogo organizado
 {: #catalogdedicated}
 
-O {{site.data.keyword.Bluemix_notm}} Dedicated inclui um catálogo privado que reúne serviços aprovados ao longo de suas implementações públicas, dedicadas e locais. É possível publicar e
-gerenciar o acesso aos seus próprios serviços através do catálogo do {{site.data.keyword.Bluemix_notm}}. Você tem a opção de decidir quais serviços públicos atendem aos requisitos para seus negócios com base em sua privacidade de dados e critérios de segurança. 
+O {{site.data.keyword.Bluemix_dedicated_notm}} inclui um catálogo privado que reúne serviços aprovados ao longo de suas implementações públicas,
+dedicadas e locais. É possível publicar e
+gerenciar o acesso aos seus próprios serviços através do catálogo do {{site.data.keyword.Bluemix_notm}}. Você tem a opção de decidir quais serviços públicos atendem aos requisitos para seus negócios com base em sua privacidade de dados e critérios de segurança.
 
-Se você tiver uma instância privada do serviço para o seu ambiente dedicado, você verá uma identificação "Dedicado" associada com os nomes do serviço em seu catálogo. Da mesma forma, se ela for um serviço
+Se você tiver uma instância privada do serviço para o seu ambiente dedicado, verá uma identificação "Dedicado" com os nomes do serviço em seu catálogo. Da mesma forma, se ela for um serviço
 customizado, significando que você usou um broker de serviço para criá-la, você verá "Customizado" listado com o nome do serviço. Todos os outros serviços listados que não possuem uma identificação "dedicado"
 ou "customizado" estão disponíveis usando a organização do {{site.data.keyword.Bluemix_notm}} Public. Serviços organizados fornecem a função para criar aplicativos híbridos que consistem em
-serviços públicos e privados. 
-
-*Tabela 4. Serviços disponíveis para organização a partir do {{site.data.keyword.Bluemix_notm}} Public por região*
+serviços públicos e privados.
 
 |Serviço	|Disponível na região sul dos EUA	|Disponível na região do Reino Unido na Europa |Disponível na região de Sydney, na Austrália|
 |:----------|:------------------------------|:------------------|:------------------|
@@ -177,37 +190,89 @@ serviços públicos e privados.
 |{{site.data.keyword.iot_short}}		|Sim		|Sim		|Não|
 |{{site.data.keyword.weather_short}}		|Sim		|Sim		|Sim|
 |{{site.data.keyword.workloadscheduler}}	|Sim		|Sim		|Sim |
+{: caption="Table 4. Services available for syndication from {{site.data.keyword.Bluemix_notm}} Public by region" caption-side="top"}
+{: #table04}
 
 **Observação**: os serviços de terceiros não são incluídos na tabela. Verifique seu catálogo dedicado para obter as opções de serviço de terceiros.
 
-## Arquitetura do {{site.data.keyword.Bluemix_notm}} Dedicated
+
+
+## Arquitetura do {{site.data.keyword.Bluemix_dedicated_notm}}
 {: #dedicatedarch}
 
-O {{site.data.keyword.Bluemix_notm}} Dedicated é construído no {{site.data.keyword.BluSoftlayer}} para que você tenha o maior desempenho da infraestrutura de nuvem disponível. Cada datacenter possui segurança de 24 horas, 7 dias por semana e
-controles rigorosos. Você e a IBM acessam a instância do
-{{site.data.keyword.Bluemix_notm}} Dedicated usando um
-túnel VPN e uma VLAN privada.
+O {{site.data.keyword.Bluemix_dedicated_notm}} pode ser implementado em qualquer
+[{{site.data.keyword.IBM_notm}}
+datacenter do SoftLayer](http://www.softlayer.com/data-centers){: new_window} ao redor do mundo. O {{site.data.keyword.IBM_notm}} SoftLayer fornece a infraestrutura em nuvem de
+maior desempenho. Cada datacenter possui segurança de 24 horas, 7 dias por semana e
+controles rigorosos.
 
-O {{site.data.keyword.Bluemix_notm}} Dedicated
-é colocado em sua rede através de uma VPN ou uma conexão de rede direta. Seu hardware com locatário único pode ser configurado em qualquer datacenter do [{{site.data.keyword.BluSoftlayer}}](http://www.softlayer.com/data-centers){: new_window} ao redor do mundo. A {{site.data.keyword.IBM_notm}} gerencia a
-plataforma dedicada e os serviços dedicados, para que você possa se concentrar na construção de apps customizados. Além
-disso, a {{site.data.keyword.IBM_notm}} executa toda a manutenção às instâncias dedicadas durante uma janela de manutenção selecionada por você.
-
-![{{site.data.keyword.Bluemix_notm}} Dedicated](images/dedicated.png "{{site.data.keyword.Bluemix_notm}} Dedicated")
-
-*Figura 1. Diagrama detalhado do
-{{site.data.keyword.Bluemix_notm}}
-Dedicated*
-
-Ambientes do {{site.data.keyword.Bluemix_notm}} Dedicated
-possuem as mesmas normas de segurança que as do {{site.data.keyword.Bluemix_notm}} público em termos de segurança de infraestrutura, operacional e física. No entanto,
+Cada implementação do {{site.data.keyword.Bluemix_dedicated_notm}} é dedicada para uma única empresa no hardware dedicado do
+{{site.data.keyword.IBM_notm}} SoftLayer em sua própria rede privada. Ambientes do {{site.data.keyword.Bluemix_dedicated_notm}} têm os
+mesmos padrões de segurança que o {{site.data.keyword.Bluemix_notm}} público em termos de segurança de infraestrutura, operacional e física. No entanto,
 o acesso do desenvolvedor ao {{site.data.keyword.Bluemix_notm}} dedicado é
 controlado por suas políticas de LDAP, que podem ser configuradas pela equipe do {{site.data.keyword.Bluemix_notm}}
 quando configuram seu ambiente. No ambiente dedicado,
-é possível gerenciar funções e permissões do usuário. Consulte [Gerenciando usuários e permissões](/docs/admin/index.html#oc_useradmin) para obter detalhes.
+é possível gerenciar funções e permissões do usuário. Consulte [Gerenciando usuários e permissões](/docs/admin/index.html#oc_useradmin) para obter detalhes. A
+figura a seguir descreve a arquitetura lógica de uma implementação do {{site.data.keyword.Bluemix_dedicated_notm}} padrão.
+
+![{{site.data.keyword.Bluemix_dedicated_notm}}](images/bm_dedicated_arch.png "{{site.data.keyword.Bluemix_dedicated_notm}} default architecture")
+
+Figura 1. Arquitetura padrão de diagrama do {{site.data.keyword.Bluemix_dedicated_notm}} detalhado
+{: #figure01}
+
+Os componentes arquitetônicos significativos descritos no diagrama de arquitetura anterior incluem os seguintes:
+
+<dl>
+<dt>{{site.data.keyword.IBM_notm}} Cloud</dt>
+<dd>
+O {{site.data.keyword.IBM_notm}} Cloud representa coarrendamentos em {{site.data.keyword.BluSoftlayer}}. Dentro desses coarrendamentos há vários
+ambientes de interligação de redes. Os ambientes de rede significativos são:
+<ul>
+<li>{{site.data.keyword.Bluemix_dedicated_notm}}</li>
+<li>{{site.data.keyword.Bluemix_notm}} Public</li>
+<li>Operações da {{site.data.keyword.IBM_notm}}</li>
+</ul>
+</dd>
+<dt>{{site.data.keyword.Bluemix_dedicated_notm}}</dt>
+<dd>
+No mínimo, isso contém os componentes do Cloud Foundry e alguns serviços de aplicativos dedicados. O {{site.data.keyword.Bluemix_notm}} fornece o Cloud Foundry e ambientes de cálculo baseado no {{site.data.keyword.containerlong}}. 
+Uma empresa pode ter um ou ambos os ambientes de cálculo configurados.<br>
+Uma empresa pode incluir serviços de aplicativos dedicados adicionais.<br>
+Consulte a [tabela 2](#table02) para obter serviços adicionais e recursos de cálculo que podem ser incluídos.
+</dd>
+<dt>{{site.data.keyword.Bluemix_notm}} Public</dt>
+<dd>
+Um {{site.data.keyword.Bluemix_dedicated_notm}} pode incluir uma conexão de saída em uma região do {{site.data.keyword.Bluemix_notm}} Public. Isso
+fornece a organização de serviços públicos no catálogo dedicado. A organização de serviço do {{site.data.keyword.Bluemix_notm}} Public fornece um método
+conveniente para desenvolvedores construírem aplicativos hospedados em seu {{site.data.keyword.Bluemix_dedicated_notm}} da empresa, bem como acesso a serviços
+em execução no {{site.data.keyword.Bluemix_notm}} Public. A lista de serviços que podem ser organizados a partir do {{site.data.keyword.Bluemix_notm}} Public
+é mostrada na [tabela 4 da seção de Catálogo organizado](#catalogdedicated).
+</dd>
+<dt>Operações da {{site.data.keyword.IBM_notm}}</dt>
+<dd>
+O {{site.data.keyword.IBM_notm}} gerencia, monitora e mantém a plataforma dedicada e os serviços dedicados para que seja possível concentrar-se na construção
+de aplicativos inovadores. A equipe de Operations Support Services (OSS) da {{site.data.keyword.IBM_notm}} executa operações usando uma conexão de túnel VPN da rede de Operações da {{site.data.keyword.IBM_notm}}.
+</dd>
+<dt>Corporativo</dt>
+<dd>
+O ambiente de rede corporativa pode ter um link de rede bidirecional privado seguro para o
+{{site.data.keyword.Bluemix_dedicated_notm}}. Isso permite que os aplicativos hospedados no {{site.data.keyword.Bluemix_dedicated_notm}} acessem
+serviços e recursos na empresa, incluindo origens de dados e serviços corporativos. Esse link de rede também permite que o
+{{site.data.keyword.Bluemix_dedicated_notm}} use o seu LDAP para autenticação de seus desenvolvedores e administradores da empresa.<br>
+<br>
+A conexão padrão do {{site.data.keyword.Bluemix_dedicated_notm}} para a sua rede corporativa usa uma Rede privada virtual (VPN). O {{site.data.keyword.Bluemix_dedicated_notm}}
+tem uma terminação VPN Vyatta de 1 Gbps Dedicada configurada para alta disponibilidade.
+<br>
+Na arquitetura padrão para {{site.data.keyword.Bluemix_dedicated_notm}} conforme mostrado em [figura 1]{#figure01}, não há tráfego de rede de entrada
+diretamente da Internet. Se a sua empresa deseja permitir acesso à Internet para aplicativos hospedados no
+{{site.data.keyword.Bluemix_dedicated_notm}}, o
+acesso deverá ser configurado através de sua Rede corporativa. Além disso, se necessário, o {{site.data.keyword.Bluemix_dedicated_notm}} pode ser arquitetado para
+permitir o tráfego de rede de entrada diretamente da Internet.
+</dd>
+</dl>
 
 
-##Configurando o {{site.data.keyword.Bluemix_notm}} Dedicated
+## Configurando o {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #setupdedicated}
 
 O {{site.data.keyword.Bluemix_notm}} Dedicated
@@ -331,8 +396,6 @@ A fase de concepção é usada para estabelecer o ambiente do {{site.data.keywor
 - Definir e estabelecer conectividade de rede entre a rede corporativa e as operações do {{site.data.keyword.Bluemix_notm}}.
 - Identificar e designar funções para sua equipe administrativa.
 
-*Tabela 5. Tarefas da fase de concepção*
-
 | **Tarefa** | **Detalhes da tarefa** | **Parte responsável** |
 |----------|------------------|-----------------------|
 |Configurar padrões de conformidade | Identificar padrões corporativos do governo, da indústria e proprietários que são necessários para o ambiente. | Cliente |
@@ -359,6 +422,8 @@ A fase de concepção é usada para estabelecer o ambiente do {{site.data.keywor
 |Revisar a infraestrutura física | Revisar instalações físicas que hospedam os componentes da solução para ameaças e revisão de controles de segurança para proteger o datacenter. | Cliente |
 |Inspecionar software de monitoramento | Inspecionar componentes de monitoramento e gerenciamento, conforme definido no plano de escalada e de determinação de problema. | Cliente |
 |Inspecionar sistema operacional | Inspecionar para assegurar-se de que a imagem do sistema operacional atenda aos padrões de conformidade. A IBM fornece acesso à imagem do sistema operacional. | A IBM e o cliente compartilham a responsabilidade |
+{: caption="Table 5. Inception phase tasks" caption-side="top"}
+
 
 A fase seguinte é a de progressão. A fase de progressão descreve o relacionamento colaborativo em andamento, entre você e o IBM Cloud. Os objetivos principais dessa fase incluem os itens a seguir:
 
@@ -366,7 +431,6 @@ A fase seguinte é a de progressão. A fase de progressão descreve o relacionam
 - Revisar as melhorias de manutenção e plataforma.
 - Coordenar as atividades para resolução de problemas e análise de causa raiz.
 
-*Tabela 6. Tarefas da fase de progressão*
 
 | **Tarefa** | **Detalhes da tarefa** | **Parte responsável** |
 |----------|------------------|-----------------------|
@@ -385,6 +449,7 @@ trabalha para planejar a manutenção adequadamente. | A IBM e o cliente compart
 |Relato de status, coordenação de auditoria e reuniões de conformidade  | Concluir relato de status, coordenação de auditoria externa e representação em reuniões de status de revisão de conformidade. | IBM |
 |Verificação de emprego e de necessidade de negócios | Verificação completa do emprego trimestralmente e verificação da necessidade contínua de negócios para representantes IBM que possuem acesso ao ambiente do cliente. | IBM |
 |Resolução de vulnerabilidades de segurança | Resolver vulnerabilidades de segurança relatadas na plataforma. | IBM |
+{: caption="Table 6. Progression phase tasks" caption-side="top"}
 
 O estágio final da conclusão representa o término do relacionamento entre você e a IBM {{site.data.keyword.Bluemix_notm}}. As tarefas principais dessa fase incluem os itens a seguir:
 
@@ -392,14 +457,14 @@ O estágio final da conclusão representa o término do relacionamento entre voc
 * Remoção de todas as conexões de rede
 * Infraestrutura de reciclagem
 
-*Tabela 7. Tarefas da fase de conclusão*
-
 | **Tarefa** | **Detalhes da tarefa** | **Parte responsável** |
 |----------|------------------|-----------------------|
 |Terminar o contrato financeiro | Discutir e concordar com um término para o contrato financeiro. | A IBM e o cliente compartilham a responsabilidade |
 |Ambiente de desatribuição | Encerrar o acesso e as credenciais para o ambiente. | A IBM e o cliente compartilham a responsabilidade |
 |Remover conexões de rede do cliente | Remover conexões de rede entre a IBM e o ambiente do cliente. | A IBM e o cliente compartilham a responsabilidade |
 |Reciclar a infraestrutura | Seu ambiente é reciclado com base nos processos definidos pelo {{site.data.keyword.BluSoftlayer}}. | IBM |
+{: caption="Table 7. Completion phase tasks" caption-side="top"}
+
 
 ##Mantendo sua instância dedicada
 {: #maintaindedicated}
@@ -448,9 +513,9 @@ Os incidentes críticos são indisponibilidades de serviço urgentes e inesperad
 
 Se deseja integrar suas notificações a um serviço da web que suporta o ganchos da web, consulte [Notificações e inscrições de eventos](/docs/admin/index.html#oc_eventsubscription) para obter informações sobre como estender seus recursos de notificação.
 
-![Processo de resposta de incidente](/docs/local/images/incidentresponseprocess.png "Processo de resposta de incidente")
+![Processo de resposta de incidente](images/incidentresponseprocess.png "Processo de resposta de incidente")
 
-*Figura 2. Processo de resposta de incidente*
+Figura 2. Processo de resposta de incidente
 
 Dependendo do problema, você, a IBM ou ambos trabalham juntos para corrigir o problema. Se você tiver uma pergunta sobre o incidente ou se precisar de um representante IBM para ajudá-lo a resolver o problema, será possível, então, abrir um chamado de suporte. Para obter informações sobre como entrar em contato com o suporte, consulte [Contatando o suporte](/docs/support/index.html#contacting-bluemix-support-local).
 
@@ -543,7 +608,7 @@ Como a proteção de dados privados é crítica, a IBM precisa da sua colaboraç
 </ul>
 
 # rellinks
-## gerais
+## general
 * [Descobrir: {{site.data.keyword.Bluemix_notm}} Dedicated](http://www.ibm.com/cloud-computing/bluemix/hybrid/dedicated/)
 * [O que há de novo no {{site.data.keyword.Bluemix_notm}}](/docs/whatsnew/index.html)
 * [{{site.data.keyword.Bluemix_notm}} glossário](/docs/overview/glossary/index.html)

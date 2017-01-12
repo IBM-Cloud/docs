@@ -1,34 +1,40 @@
 ---
 
 copyright:
-  years: 2015, 2016 lastupdated: "2016-10-02"
+  years: 2015, 2016
+lastupdated: "2016-11-06"
+
 ---
 
 # Sobre {{site.data.keyword.amashort}}
 {: #mca-overview}
 
 
-O serviço {{site.data.keyword.amafull}} fornece serviços de autenticação e monitoramento para aplicativos móveis e da web que
-acessam recursos em nuvem hospedados no {{site.data.keyword.Bluemix_notm}}.
+O serviço {{site.data.keyword.amafull}} fornece
+autenticação para aplicativos móveis e da Web que acessam
+recursos em nuvem hospedados no
+{{site.data.keyword.Bluemix_notm}}.
 
-É possível usar o serviço {{site.data.keyword.amashort}} para proteger os aplicativos Node.js e Liberty for Java&trade; que são hospedados no {{site.data.keyword.Bluemix_notm}} com vários tipos de autenticação. Ao instrumentar seus aplicativos móveis com o {{site.data.keyword.amashort}} SDK, é possível usar os recursos de autenticação fornecidos pelo serviço {{site.data.keyword.amashort}}. Os logs do lado do cliente são reunidos automaticamente e enviados para o serviço {{site.data.keyword.amashort}} sob demanda. Use o painel {{site.data.keyword.amashort}} para configurar os vários tipos de autenticação e ver dados reunidos e enviados pelo SDK do lado do cliente.
+É possível usar o serviço {{site.data.keyword.amashort}} para proteger os aplicativos Node.js e Liberty for Java&trade; que são hospedados no {{site.data.keyword.Bluemix_notm}} com vários tipos de autenticação. Ao instrumentar seus aplicativos móveis com o {{site.data.keyword.amashort}} SDK, é possível usar os recursos de autenticação fornecidos pelo serviço {{site.data.keyword.amashort}}. Use o painel {{site.data.keyword.amashort}} para configurar os vários tipos de autenticação e ver dados reunidos e enviados pelo SDK do lado do cliente.
 
 **Nota**: o serviço {{site.data.keyword.amashort}} era conhecido anteriormente como Advanced Mobile Access.
 
 ## Componentes
 {: #components}
 
-* **Painel do {{site.data.keyword.amashort}}**: configure vários tipos de autenticação e monitore desempenho, analítica, estatísticas de uso e logs do dispositivo do aplicativo móvel.
-* **{{site.data.keyword.amashort}} client SDK**: instrumente aplicativos móveis para usar a funcionalidade do {{site.data.keyword.amashort}}. As
-plataformas suportadas são: iOS 8+, Android 4+ e Cordova.
+* **{{site.data.keyword.amashort}}
+dashboard**: configure vários tipos de autenticação
+* **{{site.data.keyword.amashort}} client SDK**: instrumente aplicativos móveis para usar a funcionalidade do {{site.data.keyword.amashort}}. As plataformas suportadas são: iOS 8 +, Android 4 +, Cordova e
+aplicativos da Web.
 * **{{site.data.keyword.amashort}} server SDK**: proteja os recursos hospedados no {{site.data.keyword.Bluemix_notm}}. Atualmente,
 os tempos de execução suportados são Node.js e Liberty for Java&trade;.
 
 ## Tipos de autenticação
 {: #authtypes}
 É possível usar os tipos de autenticação a seguir em seu app móvel:
-* **Facebook**: use o Facebook como um provedor de identidade. Os usuários efetuarão login no app móvel com suas credenciais do Facebook.
-* **Google**: use o Google como um provedor de identidade. Os usuários efetuarão login no app móvel com suas credenciais do Google+.
+* **Facebook**: use o Facebook como um provedor de identidade. Os usuários efetuarão login no app móvel ou da web com suas credenciais do Facebook.
+* **Google**: use o Google como um provedor de identidade. Seus usuários efetuam login ao app móvel ou da web
+com as credenciais que usam para o Google+.
 * **Customizado**: crie seu próprio provedor de identidade. Você controlará totalmente que tipo de informações serão reunidas e validadas.
 
 ## Visão geral da arquitetura

@@ -1,12 +1,13 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2015, 2016
 
- 
+lastupdated: "2016-10-24"
+
 ---
 
 
@@ -15,9 +16,6 @@ copyright:
 
 # Commandes {{site.data.keyword.Bluemix_notm}} (bx)
 {: #bluemix_cli}
-
-Dernière mise à jour : 25 octobre 2016
-{: .last-updated}
 
 Version : 0.4.1
 
@@ -64,7 +62,7 @@ Utilisez les index des tableaux suivants pour examiner les commandes Bluemix fr�
  </tr>
   </tbody>
  </table>
-*Tableau 1. Commandes générales Bluemix*
+{: caption="Table 1. General bluemix commands" caption-side="top"}
 
 
 
@@ -103,7 +101,7 @@ Utilisez les index des tableaux suivants pour examiner les commandes Bluemix fr�
  </tr>
  </tbody>
  </table>
-*Tableau 2. Commandes pour gestion d'organisations, d'espaces et d'utilisateurs*
+ {: caption="Table 2. Commands for managing orgs, spaces, and users" caption-side="top"} 
 
 
 
@@ -142,7 +140,7 @@ Utilisez les index des tableaux suivants pour examiner les commandes Bluemix fr�
  </tr>
   </tbody>
  </table>
-*Tableau 3. Commandes pour gestion d'applications cf*
+{: caption="Table 3. Commands for managing cf apps" caption-side="top"}
 
 
 <table summary="Commandes Bluemix que vous pouvez utiliser pour gérer des services Bluemix.">
@@ -173,7 +171,7 @@ Utilisez les index des tableaux suivants pour examiner les commandes Bluemix fr�
  </tr>
   </tbody>
  </table>
-*Tableau 4. Commandes pour gestion de services Bluemix*
+{: caption="Table 4. Commands for managing Bluemix services" caption-side="top"}
 
 
 <table summary="Commandes Bluemix que vous pouvez utiliser pour gérer un catalogue, des plug-in, la facturation et les paramètres de sécurité Bluemix.">
@@ -209,7 +207,7 @@ Utilisez les index des tableaux suivants pour examiner les commandes Bluemix fr�
  </tr>
   </tbody>
  </table>
-*Tableau 5. Commandes pour gestion du catalogue, des plug-in, de la facturation et des paramètres de sécurité Bluemix*
+{: caption="Table 5. Commands for managing Bluemix catalog, plug-ins, billing, and security settings" caption-side="top"}
 
 
 
@@ -241,7 +239,7 @@ Utilisez les index des tableaux suivants pour examiner les commandes Bluemix fr�
  </tr>
   </tbody>
  </table>
-*Tableau 6. Commandes pour gestion des paramètres réseau*
+{: caption="Table 6. Commands for managing network settings" caption-side="top"}
 
 
 
@@ -300,8 +298,8 @@ Utilisez les index des tableaux suivants pour examiner les commandes Bluemix fr�
  <td>[bluemix ic run](index.html#bluemix_ic_run)</td>
  </tr>
  <tr>
- <td>[bluemix ic service-bind](index.html#bluemix_ic_service_bind)</td>
- <td>[bluemix ic service-unbind](index.html#bluemix_ic_service_unbind)</td>
+ <td>[bluemix ic service-bind](index.html#bluemix_ic_service-bind)</td>
+ <td>[bluemix ic service-unbind](index.html#bluemix_ic_service-unbind)</td>
  <td>[bluemix ic start](index.html#ic_start)</td>
  <td>[bluemix ic stats](index.html#bluemix_ic_stats)</td>  
  <td>[bluemix ic stop](index.html#ic_stop)</td>
@@ -311,7 +309,7 @@ Utilisez les index des tableaux suivants pour examiner les commandes Bluemix fr�
  <td>[bluemix ic unpause](index.html#unpause)</td>
  <td>[bluemix ic unprovision](index.html#bluemix_ic_unprovision)</td>  
  <td>[bluemix ic volume-inspect](index.html#bluemix_ic_volume_inspect)</td>
- <td>[bluemix ic volume-create](index.html#bluemix_ic_volume_create)</td> 
+ <td>[bluemix ic volume-create](index.html#bluemix_ic_volume_create)</td>
  </tr>
  <tr>
  <td>[bluemix ic volume-fs](index.html#bluemix_ic_volume_fs)</td>
@@ -329,7 +327,7 @@ Utilisez les index des tableaux suivants pour examiner les commandes Bluemix fr�
  </tr>
   </tbody>
  </table>
-*Tableau 7. Commandes pour gestion de conteneurs dans Bluemix*
+{: caption="Table 7. Commands for managing containers on Bluemix" caption-side="top"}
 
 
 
@@ -2117,7 +2115,8 @@ bluemix ic group-create [--publish,-p PORT] --name NOM_GROUPE [--memory,-m TAILL
    <dd>Image à inclure dans chaque instance de conteneur dans le groupe de conteneurs. Vous pouvez spécifier des commandes après l'image, mais n'indiquez pas d'options. Incluez toutes les options avant de spécifier une image. <br><br>Si vous utilisez une image qui se trouve dans le référentiel {{site.data.keyword.Bluemix_notm}} privé de votre organisation, spécifiez l'image au format <i>registry.ng.bluemix.net/ESPACE_NOM/IMAGE</i>. <br><br>Si vous utilisez une image fournie par IBM Containers, n'incluez pas l'espace de nom de votre organisation. Spécifiez l'image au format <i>registry.ng.bluemix.net/IMAGE</i>. </dd>
    <dt>--name <i>NOM_GROUPE</i> (requis)</dt>
    <dd>Attribue un nom au groupe. <i>-n</i> est obsolète.<br>
-   <strong>Astuce :</strong> le nom de conteneur doit commencer par une lettre. Il peut inclure des lettres majuscules, des lettres minuscules, des chiffres, des points, des traits de soulignement (_) ou des traits d'union (-).</dd>
+   <strong>Astuce :</strong> le nom de conteneur doit commencer par une lettre. Il peut inclure des lettres majuscules, des
+lettres minuscules, des chiffres, des points, des traits de soulignement (_) ou des traits d'union (-).</dd>
    <dt>-m <i>TAILLE_MEMOIRE</i>|--memory <i>TAILLE_MEMOIRE</i> (facultatif)</dt>
    <dd>Affecte une limite de mémoire, en Mo, au groupe. Lorsque vous créez un groupe de conteneurs depuis l'interface de ligne de commande, la valeur par défaut pour chaque instance de conteneur est <i>64</i> Mo. Lorsque vous créez un groupe de conteneurs depuis le tableau de bord {{site.data.keyword.Bluemix_notm}}, la valeur par défaut pour chaque instance de conteneur est <i>256</i> Mo. Les valeurs admises sont <i>64</i>, <i>256</i>, <i>512</i>, <i>1024</i> et <i>2048</i>. Une fois que vous avez affecté une limite de mémoire, vous ne pouvez plus la modifier.</dd>
    <dt>-n <i>NOM_HOTE</i>|--hostname <i>NOM_HOTE</i> (facultatif)</dt>
@@ -2131,16 +2130,21 @@ bluemix ic group-create [--publish,-p PORT] --name NOM_GROUPE [--memory,-m TAILL
 
 |  Variable d'environnement                              |     Description                            |
 | :----------------------------- | :------------------------------ |
-| CCS_BIND_APP=*&lt;nom_app&gt;*       | Liez un service à un conteneur. Utilisez la variable d'environnement `CCS_BIND_APP` pour lier une application au conteneur. L'application est liée au service cible et sert de pont qui permet à {{site.data.keyword.Bluemix_notm}} de fournir les informations contenues dans la variable `VCAP_SERVICES` de votre application pont à votre instance de conteneur en cours d'exécution. Pour plus d'informations sur la création d'une application pont, voir [Liaison d'un service à un conteneur](../../../containers/container_integrations_binding.html){: new_window}. |
-| CCS_BIND_SRV=*&lt;nom_instance_service1&gt;*,*&lt;nom_instance_service2&gt;* | Pour lier un service Bluemix directement à un conteneur sans utiliser d'application de pont, utilisez CCS_BIND_SRV. Cette liaison permet à Bluemix d'injecter les informations VCAP_SERVICES dans l'instance de conteneur en cours d'exécution. Pour répertorier plusieurs services Bluemix, incluez-les dans la même variable d'environnement. |
+| CCS_BIND_APP=*&lt;nom_app&gt;*       | Liez un service à un conteneur. Utilisez la variable d'environnement `CCS_BIND_APP` pour lier
+une application au conteneur. L'application est liée au service cible et sert de pont qui permet à {{site.data.keyword.Bluemix_notm}} de fournir les informations contenues dans la variable `VCAP_SERVICES` de votre application pont à votre instance de conteneur en cours d'exécution. Pour plus d'informations sur la création d'une application pont, voir
+[Liaison d'un service à un conteneur](../../../containers/container_integrations_binding.html){: new_window}. |
+| CCS_BIND_SRV=*&lt;nom_instance_service1&gt;*,*&lt;nom_instance_service2&gt;* | Pour lier un service Bluemix directement à un
+conteneur sans utiliser d'application de pont, utilisez CCS_BIND_SRV. Cette liaison permet à Bluemix d'injecter les informations VCAP_SERVICES dans
+l'instance de conteneur en cours d'exécution. Pour répertorier plusieurs services Bluemix, incluez-les dans la même variable d'environnement. |
 | LOG_LOCATIONS=*&lt;chemin_fichier&gt;* | Ajoutez un fichier journal à surveiller dans le conteneur. Incluez la variable d'environnement `LOG_LOCATIONS` avec un chemin d'accès au fichier journal. |
-*Tableau 8. Variables d'environnement couramment utilisées*
+{: caption="Table 8. Commonly used environment variables" caption-side="top"}
 
  <dl>
    <dt>--env-file <i>FICHIER_VARIABLE_ENVIRONNEMENT</i> (facultatif)</dt>
    <dd> Importe les variables d'environnement d'un fichier, env-file étant le chemin d'accès au fichier sur le répertoire local. Chaque ligne du fichier représente une paire clé=valeur. </dd>
    <dt>--volume <i>VOLUME</i>:<i>CHEMIN_CONTENEUR</i>[:ro] (facultatif)</dt>
-   <dd>Rattache un volume à un conteneur en spécifiant ses détails sous le format <i>ID_volume:Chemin_conteneur[:ro]</i>. <ul>
+   <dd>Rattache un volume à un conteneur en spécifiant ses détails sous le format <i>ID_volume:Chemin_conteneur[:ro]</i>.
+   <ul>
    <li><i>VOLUME</i> : ID ou nom du volume.</li>
    <li><i>CHEMIN_CONTENEUR</i> : Chemin absolu du volume dans le conteneur.</li>
    <li>ro (facultatif) : La spécification de <i>ro</i> rend le volume accessible en lecture seule, au lieu de le laisser accessible par défaut en lecture/écriture.</li></ul>
@@ -2722,7 +2726,7 @@ bluemix ic rename ANCIEN_NOM NOUVEAU_NOM
 Recrée le service IBM Containers dans l'espace Bluemix auquel vous êtes connecté. Le quota d'origine pour l'espace est conservé.
 
 <strong>Important</strong> : lorsque vous exécutez cette commande, aucun de vos conteneurs et groupes de conteneurs contenus dans cet espace ne sera
-migrés vers l'espace qui est remis à disposition et vos conteneurs et groupes seront retirés lors du processus de migration. 
+migrés vers l'espace qui est remis à disposition et vos conteneurs et groupes seront retirés lors du processus de migration.
 
 ```
 bluemix ic reprovision [--force|-f] [ZONE_DISPONIBILITE]
@@ -2964,7 +2968,7 @@ une application au conteneur. L'application est liée au service cible et sert d
 conteneur sans utiliser d'application de pont, utilisez CCS_BIND_SRV. Cette liaison permet à Bluemix d'injecter les informations VCAP_SERVICES dans
 l'instance de conteneur en cours d'exécution. Pour répertorier plusieurs services Bluemix, incluez-les dans la même variable d'environnement. |
 | LOG_LOCATIONS=*&lt;chemin_fichier&gt;* | Ajoutez un fichier journal à surveiller dans le conteneur. Incluez la variable d'environnement `LOG_LOCATIONS` avec un chemin d'accès au fichier journal. |
-*Tableau 9. Variables d'environnement couramment utilisées*
+{: caption="Table 9. Commonly used environment variables" caption-side="top"} 
 
 
    <dl>

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-06-10"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # Usando o Dynatrace
 {: #using_dynatrace}
-
-Última atualização: 10 de junho de 2016
-{: .last-updated}
 
 Dynatrace é um serviço de terceiro que fornece monitoramento para seu app.
 

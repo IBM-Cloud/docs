@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-13"
+lastupdated: "2016-12-12"
 
 ---
 
@@ -67,7 +67,9 @@ To add a schema:
  `Float` or `Integer`.</li>
  <li>Property - A property identifier for the virtual property. For example:  
 `temp_virt`</li>
-    <li>Calculation - Add one or more components to define a valid function. You can use properties, numerical values, and mathematical operators such as +, -, \*, /, (, ), AVG, and Z-score to build your calculation. </br>The AVG component is used to calculate the average property value over a specified period of time. </br>The Z-score component returns the difference in standard deviation units between the datapoint and the mean datapoint value over a number of datapoints or over a time period.</br> **Important:**  The AVG and Z-score components only return property datapoints if the data for the selected property comes from a device that is connected to a gateway with an Edge Analytics Agent installed. For more information, see [Installing the edge analytics agent](gateways/dashboard.html#edge). In addition, rule conditions that compare AVG and Z-score values are not supported.</li>
+    <li>Calculation - Add one or more components to define a valid function. You can use properties, numerical values, and mathematical operators such as +, -, \*, /, (, and ).  
+    Click **Advanced** for a set of formulas for use with series of datapoints on edge devices. For more information about the advanced formulas, see [Advanced calculations for edge virtual properties](im_vir_calculations.html).  
+    **Important:** Rule conditions that compare virtual properties based on advanced formulas are not supported.</li>
     <li>Data unit - Optional: The unit of data of the property. For example: `C` or `Mph`</li>
     <li> Decimal places - Optional, float only: The number of decimals to include in the device data.</li>
    </ul>

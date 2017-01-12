@@ -2,9 +2,12 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-10"
+lastupdated: "2016-12-04"
+
 ---
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
+{:codeblock:.codeblock}
+
 
 # 로컬 개발 환경에서 {{site.data.keyword.amashort}} 사용
 {: #protecting-local}
@@ -13,17 +16,13 @@ lastupdated: "2016-10-10"
 
 ## 시작하기 전에
 {: #before-you-begin}
+
 다음이 있어야 합니다.
-
 * {{site.data.keyword.amashort}} 서비스를 통해 보호하는 {{site.data.keyword.Bluemix_notm}} 애플리케이션의 인스턴스. {{site.data.keyword.Bluemix_notm}} 백엔드 애플리케이션 작성 방법에 대한 자세한 정보는 [시작하기](index.html)를 참조하십시오.
-
-
-
-
-* 서비스 매개변수 값. {{site.data.keyword.Bluemix_notm}} 대시보드에서 서비스를 여십시오. **모바일 옵션**을 클릭하십시오. `applicationRoute` 값과 `appGUID`(`tenantId`라고도 함) 값이 **라우트** 필드와 **앱 GUID/TenantId** 필드에 표시됩니다. 이들 값은 SDK를 초기화하고 백엔드 애플리케이션에 요청을 보내는 데 필요합니다. 
-*  {{site.data.keyword.Bluemix_notm}} 애플리케이션이 호스팅되는 지역을 찾으십시오. {{site.data.keyword.Bluemix_notm}} 지역을 보려면 메뉴 표시줄의 **아바타** 아이콘 ![아바타 아이콘](images/face.jpg "아바타 아이콘")을 클릭하여 **계정 및 지원** 위젯을 여십시오.
-
-지역 값은 **미국 남부**, **시드니** 또는 **영국** 중 하나여야 합니다. 이들 이름에 해당하는 정확한 SDK 상수 값은 코드 예제에 표시되어 있습니다.  
+* **테넌트 ID**. {{site.data.keyword.amafull}} 대시보드에서 서비스를 여십시오. **모바일 옵션** 단추를 클릭하십시오. **앱 GUID / TenantId** 필드에 `tenantId`(`appGUID`라고도 함) 값이 표시됩니다. 이 값은 권한 관리자를 초기화하는 데 필요합니다. 
+* **애플리케이션 라우트**. 이는 백엔드 애플리케이션의 URL입니다. 이 값은 해당 보호 엔드포인트에 요청을 전송하는 데 필요합니다. 
+* {{site.data.keyword.Bluemix_notm}} **지역**. 헤더에서 **아바타** 아이콘 ![아바타 아이콘](images/face.jpg "아바타 아이콘") 옆에 현재 {{site.data.keyword.Bluemix_notm}} 지역이 표시됩니다. 표시되는 지역 값은 `US South`,  `Sydney` 또는 `United Kingdom` 중 하나여야 합니다. SDK에서 필요로 하는 정확한 구문은 코드 샘플의 주석을 참조하십시오. 이 값은 {{site.data.keyword.amashort}} 클라이언트를 초기화하는 데 필요합니다. 
+* Gradle과 작동하도록 설정된 Android Studio 프로젝트. Android 개발 환경을 설정하는 방법에 대한 자세한 정보는 [Google 개발자 도구](http://developer.android.com/sdk/index.html)를 참조하십시오. 
 
 ## 서버 SDK 설정
 {: #serversetup}
@@ -38,15 +37,14 @@ lastupdated: "2016-10-10"
 1. {{site.data.keyword.amashort}} 서비스로 보호되는 모바일 백엔드 애플리케이션의 {{site.data.keyword.Bluemix_notm}} 대시보드를 여십시오. 
 
 1. 로컬 개발 환경에 *VCAP_APPLICATION* 환경 변수를 설정하십시오. 변수는 단일 특성이 설정되어 있으며 문자열로 변환된 JSON 오브젝트를 포함해야 합니다. 
-```JavaScript
-{
-    application_id: "appGUID"
-}
-```
+	```JavaScript
+	{
+		application_id: "appGUID"
+	}
+	```
+	{: codeblock}
 
-*appGUID* 값을 [시작하기 전에](#before-you-begin)에서 얻은 `appGUID` 값으로 바꾸십시오.  
-
-1. {{site.data.keyword.Bluemix_notm}} 대시보드에서 모바일 백엔드 애플리케이션의 {{site.data.keyword.amashort}} 서비스 타일에 있는 **신임 정보 표시**를 클릭하십시오. JSON 오브젝트는 {{site.data.keyword.amashort}}에서 모바일 백엔드 애플리케이션에 제공하는 액세스 신임 정보와 함께 표시됩니다. 
+1. {{site.data.keyword.amashort}} 대시보드에서 **신임 정보 표시** 탭을 클릭하십시오. JSON 오브젝트는 {{site.data.keyword.amashort}}에서 모바일 백엔드 애플리케이션에 제공하는 액세스 신임 정보와 함께 표시됩니다. 
 
 1. 로컬 개발 환경에서 `VCAP_SERVICES` 환경 변수를 설정하십시오. 이 변수의 값은 {{site.data.keyword.amashort}} 신임 정보를 포함하는 문자열로 변환된 JSON 오브젝트여야 합니다. 자세한 정보는 다음 샘플을 참조하십시오. 
 
@@ -57,7 +55,7 @@ lastupdated: "2016-10-10"
 
 ```JavaScript
 var vcapApplication = {
-	application_id:"appGUID"
+	application_id:"tenantID"
 };
 
 var vcapServices = {
@@ -65,7 +63,7 @@ var vcapServices = {
 		{
 			"credentials": {
 				"admin_url": "https://mobile.ng.bluemix.net/imfmobileplatformdashboard/?appGuid=appGUID",
-				"clientId": "appGUID",
+				"clientId": "tenantID",
 				"secret": "secret",
 				"serverUrl": "https://imf-authserver.ng.bluemix.net/imf-authserver",
 				"tenantId": "tenantId"
@@ -83,8 +81,9 @@ var MCABackendStrategy =
 
 // 코드의 나머지 부분
 ```
+{: codeblock}
 
-*appGUID* 값을 [시작하기 전에](#before-you-begin)에서 얻은 `appGUID` 값으로 바꾸십시오.  
+*tenantID* 값 찾기에 대한 정보는 [시작하기 전에](#before-you-begin)를 참조하십시오.
 
 
 ## 로컬 개발 서버에 대해 작업할 수 있도록 {{site.data.keyword.amashort}} 애플리케이션 구성
@@ -94,7 +93,7 @@ var MCABackendStrategy =
 
 지역을 해당 지역으로 바꾸십시오. 
 
-*appGUID* 값과 *bluemixAppRoute* 값을 [시작하기 전에](#before-you-begin)에서 얻은 값으로 바꾸십시오.  
+*appGUID* 값과 *bluemixAppRoute* 값을 [시작하기 전에](#before-you-begin)에서 얻은 값으로 바꾸십시오. 
 
 다음 예제에서 `localhost`를 개발 서버의 실제 IP 주소로 변경해야 할 수 있습니다. 
 
@@ -106,13 +105,15 @@ String bluemixAppRoute = "http://myapp.mybluemix.net";
 String bluemixAppGUID = "your-bluemix-app-guid";
 String tenantId = "your-MCA-service-tenantID";
 
-BMSClient.getInstance().initialize(bluemixAppRoute, bluemixAppGUID, BMSClient.REGION_UK); 
-//  set your MCA application region here. Currently possible values are BMSClient.REGION_US_SOUTH, BMSClient.REGION_SYDNEY, or BMSClient.REGION_UK
-BMSClient.getInstance().setAuthorizationManager(
-                 MCAAuthorizationManager.createInstance(this, tenantId));
 
-Request request =
-			new Request(baseRequestUrl + "/resource/path", Request.GET);
+BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
+
+//  set your MCA application region here. Currently possible values are BMSClient.REGION_US_SOUTH, BMSClient.REGION_SYDNEY, or BMSClient.REGION_UK
+
+BMSClient.getInstance().setAuthorizationManager(
+					            MCAAuthorizationManager.createInstance(this, "<MCAServiceTenantId>"));
+						
+Request request = new Request(baseRequestUrl + "/resource/path", Request.GET);
 
 request.send(this, new ResponseListener() {
 	@Override
@@ -131,6 +132,7 @@ request.send(this, new ResponseListener() {
 	}
 });
 ```
+{: codeblock}
 
 
 
@@ -143,8 +145,7 @@ NSString *bluemixAppRoute = @"http://myapp.mybluemix.net";
 NSString *bluemixAppGUID = @"your-bluemix-app-guid";
 NSString *tenantId = "your-MCA-service-tenantID";
 
-[[IMFClient sharedInstance]
-			initializeWithBackendRoute:bluemixAppRoute
+[[IMFClient sharedInstance] initializeWithBackendRoute:bluemixAppRoute
 			backendGUID:bluemixAppGUID];
 
 [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: tenantId];
@@ -165,38 +166,39 @@ IMFResourceRequest *request =  [IMFResourceRequest
 	}
 }];
 ```
+{: codeblock}
 
 
 ### iOS - Swift
 {: #swift}
 
-```Swiftlet baseRequestUrl = "http://localhost:3000"
-let bluemixAppRoute = "http://myapp.mybluemix.net"
-let tenantId = "your-MCA-service-tenantID"
-let regionName = BMSClient.Region.usSouth
-// set your MCA application region here. Currently these can be BMSClient.Region.usSouth, BMSClient.Region.unitedKingdom, BMSClient.Region.sydney
+```Swift
 
-BMSClient.sharedInstance.initialize(bluemixAppRoute: bluemixAppRoute, bluemixAppGUID: tenantId, bluemixRegion: regionName)
-
-BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
-           
-let requestPath = baseRequestUrl + "/resource/path"               
-let request = Request(url: requestPath, method: HttpMethod.GET)
-            
-request.send { (response, error) in
+let baseRequestUrl = "http://localhost:3000";
+ let tenantId = "<serviceTenantID>"
+ let regionName = <applicationBluemixRegion>
+ //possible values: BMSClient.Region.usSouth, BMSClient.Region.unitedKingdom, or BMSClient.Region.sydney
+ let mcaAuthManager = MCAAuthorizationManager.sharedInstance
+ mcaAuthManager.initialize(tenantId: tenantId, bluemixRegion: regionName)
+ BMSClient.sharedInstance.authorizationManager = mcaAuthManager
+        
+        
+ let requestPath = baseRequestUrl + "/protectedResource"
+ let request = Request(url: requestPath, method: HttpMethod.GET)
+        
+    request.send { (response, error) in
 	if let error = error {
     			print("Connection failure")
      		print("Error :: \(error)");
      		print("Status :: \(response?.statusCode)");
     	} else {
            print("Connection success")
-           print("Response :: \(response?.responseText)")
-    }                
-}
-
-
+            print("Response :: \(response?.responseText)")
+        }
+    }
 
 ```
+{: codeblock}
 
 
 ### Cordova
@@ -208,7 +210,7 @@ var bluemixAppRoute = "http://myapp.mybluemix.net";
 var bluemixAppGUID = "your-bluemix-app-guid";
 Var tenantId = "your-MCA-service-tenantID";
 
-BMSClient.initialize(bluemixAppRoute, bluemixAppGUID);
+BMSClient.initialize(<applicationBluemixRegion>);
 
 var success = function(data){
    	console.log("success", data);
@@ -218,9 +220,8 @@ var failure = function(error){
 	console.log("failure", error);
 }
 
-var request = new MFPRequest(baseRequestUrl +
-							"/resource/path", MFPRequest.GET);
+var request = new MFPRequest(baseRequestUrl + "/resource/path", MFPRequest.GET);
 
 request.send(success, failure);
 ```
-
+{: codeblock}

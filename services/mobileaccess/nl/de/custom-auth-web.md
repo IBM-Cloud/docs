@@ -2,16 +2,17 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-03"
+lastupdated: "2016-12-05"
 
 ---
-
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
 {:codeblock: .codeblock}
+{:pre: .pre}
 
 #Angepasste Authentifizierung für {{site.data.keyword.amashort}}-Webanwendungen konfigurieren
 {: #custom-web}
-
 
 Sie können Ihrer Web-App eine angepasste Authentifizierung und die Sicherheitsfunktionalität von {{site.data.keyword.amafull}} hinzufügen.
 
@@ -20,9 +21,13 @@ Sie können Ihrer Web-App eine angepasste Authentifizierung und die Sicherheitsf
 
 Voraussetzungen:
 
-* Web-App. 
-* Instanz einer {{site.data.keyword.Bluemix_notm}}-Anwendung, die durch den {{site.data.keyword.amashort}}-Service geschützt ist. Weitere Informationen zur Erstellung einer {{site.data.keyword.Bluemix_notm}}-Back-End-Anwendung finden Sie in der [Einführung in {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html).
-* URI für die letzte Weiterleitung (nach Beendigung des Berechtigungsprozesses).
+* Eine Web-App.
+* Eine Ressource, die durch eine Instanz des {{site.data.keyword.amashort}}-Service geschützt wird, die zur Verwendung eines angepassten Identitätsproviders konfiguriert ist (siehe Veröffentlichung zur [Konfiguration der angepassten Authentifizierung](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).  
+* Der Wert für die Tenant-ID. Öffnen Sie den Service im {{site.data.keyword.amashort}}-Dashboard. Klicken Sie auf die Schaltfläche **Mobile Systemerweiterungen**. Im Feld **App-GUID/TenantId** wird der Wert `tenantId` (auch als `appGUID` bezeichnet) angezeigt. Sie benötigen diesen Wert für die Initialisierung von Authorization Manager.
+* Der Realname. Dies ist der Wert, den Sie im Feld **Realmname** des Abschnitts **Angepasst** auf der Registerkarte **Management** des {{site.data.keyword.amashort}}-Dashboards angegeben haben.
+* Die URL der Back-End-Anwendung (**App-Route**). Sie benötigen diese Werte zum Senden von Anforderungen an die geschützten Endpunkte der Back-End-Anwendung.
+* Die {{site.data.keyword.Bluemix_notm}}-**Region**. Ihre aktuelle {{site.data.keyword.Bluemix_notm}}-Region finden Sie im Header neben dem Symbol **Avatar** ![Avatarsymbol](images/face.jpg "Avatarsymbol"). Der Regionswert, der angezeigt wird, sollte einer der folgenden sein: `USA (Süden)`, `Vereinigtes Königreich` oder `Sydney`. Außerdem sollte er den im JavaScript-Code erforderlichen SDK-Werten entsprechen: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` oder `BMSClient.REGION_UK`. Sie benötigen diesen Wert für die Initialisierung des {{site.data.keyword.amashort}}-Clients.
+* URI für die letzte Weiterleitung (nach Beendigung des Berechtigungsprozesses). Dies ist der Wert für **Weiterleitungs-URIs Ihrer Webanwendung**, den Sie im Abschnitt **Angepasst** auf der Registerkarte **Management** eingegeben haben.
 
 Weitere Informationen finden Sie über die folgenden Links:
 
@@ -104,26 +109,29 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer',
 
 Nach der Konfiguration des angepassten Identitätsproviders können Sie die angepasste Authentifizierung im {{site.data.keyword.amashort}}-Dashboard aktivieren. 
 
-1. Öffnen Sie das {{site.data.keyword.Bluemix_notm}}-Dashboard. 
-2. Klicken Sie auf die entsprechende Kachel für die {{site.data.keyword.amashort}}-Anwendung. Das App-Dashboard wird geladen. 
-3. Klicken Sie auf die Schaltfläche **Konfigurieren** der Kachel 'Angepasst'. 
-4. Geben Sie im Textfeld **Realmname** den Realmnamen ein, der im Handlerendpunkt Ihres angepassten Identitätsproviders konfiguriert ist.
-5. Geben Sie die URL des angepassten Identitätsproviders ein. 
-6. Geben Sie den Weiterleitungs-URI der Webanwendung ein, der vom {{site.data.keyword.amashort}}-Dashboard nach der erfolgreichen Authentifizierung verwendet werden soll. 
-7. Klicken Sie auf 'Speichern'. 
+1. Öffnen Sie den Service im {{site.data.keyword.amashort}}-Dashboard.
+1. Aktivieren Sie auf der Registerkarte **Verwalten** die Option **Berechtigung**.
+1. Erweitern Sie den Abschnitt **Angepasst**.
+1. Geben Sie den **Realname** und die **angepasste Identitätsprovider-URL**. 
+1. Geben Sie den Wert für **Weiterleitungs-URIs Ihrer Webanwendung** ein. Dies ist der URI für die letzte Weiterleitung nach der erfolgreichen Autorisierung.
+1. Klicken Sie auf **Speichern**.
 
 
 ##{{site.data.keyword.amashort}}-Berechtigungsablauf mit einem angepassten Identitätsprovider implementieren
 {: #custom-auth-flow}
 
-Die Umgebungsvariable `VCAP_SERVICES` wird automatisch für jede {{site.data.keyword.amashort}}-Serviceinstanz erstellt und enthält Eigenschaften, die für den Berechtigungsprozess erforderlich sind. Sie besteht aus einem JSON-Objekt und kann durch Klicken auf **Umgebungsvariablen** in der Navigationsleiste auf der linken Seite Ihrer Anwendung angezeigt werden.
+Die Umgebungsvariable `VCAP_SERVICES` wird automatisch für jede {{site.data.keyword.amashort}}-Serviceinstanz erstellt und enthält Eigenschaften, die für den Berechtigungsprozess erforderlich sind. Sie besteht aus einem JSON-Objekt und kann auf die Registerkarte mit den Serviceberechtigungsnachweisen im {{site.data.keyword.amashort}}-Dashboard angezeigt werden.
 
 Wenn Sie eine Benutzerberechtigung anfordern wollen, leiten Sie den Browser an den Endpunkt des Berechtigungsservers weiter. Gehen Sie dazu wie folgt vor: 
 
 1. Rufen Sie den Berechtigungsendpunkt (`authorizationEndpoint`) und die Client-ID (`clientId`) von den Serviceberechtigungsnachweisen ab, die in der Umgebungsvariablen `VCAP_SERVICES` gespeichert sind. 
 
+	`var cfEnv = require("cfenv");` 
+
+	`var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;` 
+
 	**Hinweis:** Wenn Sie den {{site.data.keyword.amashort}}-Service vor der Webunterstützung zur Ihrer Anwendung hinzugefügt haben, ist möglicherweise kein Tokenendpunkt in den Serviceberechtigungsnachweisen enthalten. Verwenden Sie stattdessen die folgenden URLs, abhängig von Ihrer {{site.data.keyword.Bluemix_notm}}-Region: 
-  
+
 	USA (Süden): 
 
 	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization` 
@@ -140,7 +148,7 @@ Wenn Sie eine Benutzerberechtigung anfordern wollen, leiten Sie den Browser an d
 
 3. Leiten Sie von Ihrer Web-App zum generierten URI weiter. 
 
-	Im nachfolgenden Beispiel werden die Parameter von der Variablen `VCAP_SERVICES` abgerufen, außerdem wird die URL erstellt und die Weiterleitungsanforderung wird gesendet.
+   Im nachfolgenden Beispiel werden die Parameter von der Variablen `VCAP_SERVICES` abgerufen, außerdem wird die URL erstellt und die Weiterleitungsanforderung wird gesendet.
 
 	```Java
 var cfEnv = require("cfenv"); 
@@ -186,17 +194,17 @@ Im nächsten Schritt werden das Zugriffstoken und das Identitätstoken mithilfe 
 	**Hinweis:** Wenn Sie den {{site.data.keyword.amashort}}-Service vor der Webunterstützung zur Ihrer Anwendung hinzugefügt haben, ist möglicherweise kein Tokenendpunkt in den Serviceberechtigungsnachweisen enthalten. Verwenden Sie stattdessen die folgenden URLs, abhängig von Ihrer {{site.data.keyword.Bluemix_notm}}-Region: 
 
 	USA (Süden): 
-  
+
 	`     https://mobileclientaccess.ng.bluemix.net/oauth/v2/token   
  `
- 
+
 	London: 
- 
+	
 	`     https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token
  ` 
  
 	Sydney: 
- 
+
 	`     https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/token 
  `
  
@@ -212,13 +220,13 @@ app.get("/oauth/callback", function(req, res, next){
     var tokenEndpoint = mcaCredentials.tokenEndpoint; 
 
 		var formData = { 
-			grant_type: "authorization_code",
-      client_id: mcaCredentials.clientId,
-      redirect_uri: "http://some-server/oauth/callback",   // Weiterleitungs-URI Ihrer Webanwendung
-      code: req.query.code
-    }
+			grant_type: "authorization_code", 
+			client_id: mcaCredentials.clientId, 
+			redirect_uri: "http://some-server/oauth/callback",   // Your Web application redirect uri 
+			code: req.query.code 
+		} 
 
-  request.post({ 
+		request.post({ 
 			url: tokenEndpoint, 
     formData: formData 
     }, function (err, response, body){ 
@@ -258,7 +266,4 @@ Das Zugriffstoken ermöglicht die Kommunikation mit Ressourcen, die von den {{si
 
 * `<accessToken>` und `<idToken>` müssen durch ein Leerzeichen getrennt werden.
 
-* Das Identitätstoken ist optional. Wenn kein Identitätstoken angegeben wird, besteht zwar Zugriff auf die geschützte Ressource, es können jedoch keine Informationen zu dem berechtigten Benutzer abgerufen werden. 
-
-
-
+* Das Identitätstoken ist optional. Wenn kein Identitätstoken angegeben wird, besteht zwar Zugriff auf die geschützte Ressource, es können jedoch keine Informationen zu dem berechtigten Benutzer abgerufen werden.

@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-08-18"
 
 ---
 
@@ -19,8 +21,6 @@ copyright:
 # Traitement des incidents liés à la gestion des comptes
 {: #managingaccounts}
 
-Dernière mise à jour : 18 août 2016
-{: .last-updated}
 
 Vous pouvez rencontrer des problèmes lorsque vous gérez votre compte : par exemple, différentes applications partagent le même nom de domaine, les
 administrateurs ne peuvent pas afficher toutes les organisations. Toutefois, dans de nombreux cas, ces problèmes peuvent être résolus en quelques opérations simples.

@@ -1,12 +1,8 @@
 ---
 
- 
-
 copyright:
-
   years: 2015, 2016
-
- 
+lastupdated: "2016-11-29"
 
 ---
 
@@ -16,8 +12,6 @@ copyright:
 {:codeblock: .codeblock}
 
 #在 {{site.data.keyword.jazzhub_short}} 專案範例中共用以文字為基礎的管線 {: #share-pipeline}
-
-*前次更新：2015 年 12 月 7 日* 
 
 針對透過「部署至 {{site.data.keyword.Bluemix_notm}}」按鈕而部署至 {{site.data.keyword.Bluemix_notm}} 的專案範例，您可以定義 {{site.data.keyword.jazzhub_short}} 管線配置作為 YAML 檔案。可以共用定義為文字的管線，以便分出您的專案的人不必自行配置管線。此特性仍在開發中：YAML 格式和實作可能會隨時變更。目前，此特性只適用於具有 Git 及 GitHub 儲存庫且以 {{site.data.keyword.Bluemix_notm}} 為目標的專案。
 {: shortdesc} 
@@ -226,4 +220,3 @@ CF_APP	| 應用程式名稱
 這項呼叫不需要接受標頭。您可以從瀏覽器使用此呼叫。 
 
 **附註：**為了安全因素，產生的管線 YAML 檔案中會省略 secure-stage 環境內容值。 
-

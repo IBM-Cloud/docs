@@ -1,17 +1,21 @@
 ---
 
 copyright:
- years: 2015 2016
+ years: 2015, 2016
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # {{site.data.keyword.mobilepushshort}}을 수신하도록 웹 애플리케이션 설정
 {: #web_notifications}
-마지막 업데이트 날짜: 2016년 11월 15일
+마지막 업데이트 날짜: 2016년 12월 7일
 {: .last-updated}
 
-Google Chrome과 Mozilla Firefox 웹 애플리케이션에서 {{site.data.keyword.mobilepushshort}}을 수신하도록 설정할 수 있습니다. 
+Google Chrome, Mozilla Firefox 및 Safari 웹 애플리케이션을 사용하여 {{site.data.keyword.mobilepushshort}}을 수신할 수 있습니다.
 
 ## {{site.data.keyword.mobilepushshort}}을 위한 웹 브라우저 클라이언트 SDK 설치
 {: #web_install}
@@ -22,7 +26,7 @@ Google Chrome과 Mozilla Firefox 웹 애플리케이션에서 {{site.data.keywor
 
 Google Chrome 웹 애플리케이션에 Javascript SDK를 설치하려면 다음 단계를 완료하십시오.
 
-[Bluemix 웹 푸시 SDK](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master)에서 `BMSPushSDK.js`, `BMSPushServiceWorker.js`, `manifest_Website.json`을 다운로드하십시오. 
+[Bluemix 웹 푸시 SDK](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master)에서 `BMSPushSDK.js`, `BMSPushServiceWorker.js`, `manifest_Website.json` 파일을 다운로드하십시오. 
 
 1. `manifest_Website.json` 파일을 편집하십시오. 
 
@@ -80,19 +84,20 @@ Bluemix {{site.data.keyword.mobilepushshort}} 서비스 `app GUID` 및 `app Regi
       "appGUID":"push app GUID",
   "appRegion":"Region where service hosted",
    "clientSecret":"clientSecret of your push service"
+   "websitePushIDSafari": "Optional parameter for Safari Push Notifications only. The value should match the website Push ID provided during the server side configuration."
     }
   bmsPush.initialize(initParams, callback)
 ```
 	{: codeblock}
 
+**참고**: 웹 푸시 SDK의 FCM 신임 정보를 변경한 경우 Chrome 브라우저에 대한 메시지 전달이 실패할 수 있습니다. 실패를 방지하려면 `bmsPush.unRegisterDevice`를 호출하십시오. 
+
 ## 웹 애플리케이션 등록
 {: #web_register}
 
-{{site.data.keyword.mobilepushshort}} 서비스에 디바이스를 등록하려면 `register()` API를 사용하십시오. 사용하는 브라우저에 따라 다음 옵션을 사용하십시오. 
+{{site.data.keyword.mobilepushshort}} 서비스에 디바이스를 등록하려면 **register()** API를 사용하십시오. 사용하는 브라우저에 따라 다음 옵션을 사용하십시오. 
 
 - Google Chrome에서 등록하는 경우 Bluemix {{site.data.keyword.mobilepushshort}} 서비스 웹 구성 대시보드에 FCM(Firebase Cloud Messaging) 또는 GCM(Google Cloud Messaging) API 키와 웹 사이트 URL을 추가하십시오. 자세한 정보는 Chrome 설정 아래에 있는 [GCM(Google Cloud Messaging)의 신임 정보 구성](t_push_provider_android.html)을 참조하십시오.
-
-
 
 - Mozilla Firefox에서 등록하는 경우, Firefox 설정 아래의 Bluemix {{site.data.keyword.mobilepushshort}} 서비스 웹 구성 대시보드에 웹 사이트 URL을 추가하십시오.
 
@@ -106,6 +111,7 @@ Bluemix {{site.data.keyword.mobilepushshort}} 서비스에 등록하려면 다�
       "appGUID":"push app GUID",
   "appRegion":"Region where service hosted",
   "clientSecret":"clientSecret of your push service"
+  "websitePushIDSafari": "Optional parameter for Safari Push Notifications only. The value should match the website Push ID provided during the server side configuration."
   }
   bmsPush.initialize(params, callback)
     bmsPush.register(function(response) {

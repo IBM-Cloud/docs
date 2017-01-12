@@ -1,12 +1,13 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-30"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
-
 {:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 
 # {{site.data.keyword.amashort}} SDKs, samples, and API reference
@@ -26,7 +27,7 @@ The Core SDK includes APIs for enabling custom authentication and logging.
 {: #coresdk-android}
 
 [GitHub repo](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core),
-[API reference](https://console.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html)
+
 
 #### Install the Core SDK with Gradle
 {: #coresdk-android-gradle}
@@ -57,22 +58,6 @@ pod 'BMSSecurity'
 ```
 {: codeblock}
 
-### iOS (Objective-C SDK)
-{: #coresdk-ios}
-
-While the Objective-C SDK remains fully supported, and is still considered the primary SDK for {{site.data.keyword.Bluemix_notm}} Mobile Services, there are plans for discontinuing it later this year in favor of the new Swift SDK (see [Setting up the iOS Swift SDK](getting-started-ios-swift-sdk.html)).
-
-[Git repo](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master),
-[API reference](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html)
-
-#### Install the Core SDK with CocoaPods
-{: #coresdk-ios-cocoapods}
-
-Edit the Podfile and add the following line to the required targets and run:
-```Bash
-pod 'IMFCore'
-```
-{: codeblock}
 
 ### Cordova
 {: #coresdk-cordova}
@@ -125,22 +110,6 @@ pod 'BMSFacebookAuthentication'
  ```
 {: codeblock}
 
-### iOS (Objective-C SDK)
-{: #facebooksdk-ios}
-
-[Git repo](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk.git),
-[API reference](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFFacebookAuthentication_api-doc/html/index.html)
-
-**Note:** While the Objective-C SDK remains fully supported, and still considered the primary SDK for {{site.data.keyword.Bluemix_notm}} Mobile Services, there are plans to discontinue this SDK later this year in favor of the new Swift SDK. For new applications we highly recommend the Swift SDK (see Setting up the iOS Swift SDK).
-#### Install the Facebook SDK with CocoaPods
-{: #facebooksdk-ios-cocoapods}
-
-Edit the Podfile and add the following line and run:
-
-```Bash
-pod 'IMFFacebookAuthentication'
-```
-{: codeblock}
 
 ### Cordova
 {: #facebooksdk-cordova}
@@ -196,21 +165,6 @@ pod 'BMSGoogleAuthentication'
 ```
 {: codeblock}
 
-### iOS (Objective-C SDK - Deprecated)
-{: #googlesdk-ios}
-
-[Git repo](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk.git),
-[API reference](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFGoogleAuthentication_api-doc/html/index.html)
-
-#### Install the Google+ SDK with CocoaPods
-{: #googlesdk-ios-cocoapods}
-
-Edit the Podfile and add the following line and run:
-
-```Bash
-pod 'IMFGoogleAuthentication'
-```
-{: codeblock}
 
 ### Cordova
 {: #googlesdk-cordova}
@@ -278,17 +232,4 @@ npm install -save bms-mca-oauth-sdk
 
 [Advanced sample GitHub repo](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
 
-## IMFURLProtocol
-{: #IMFURLProtocol}
 
-[API reference](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFURLProtocol_api-doc/html/index.html)
-
-#### Install the IMFURLProtocol with CocoaPods
-{: #IMFURLProtocol-cocoapods}
-
-Edit the Podfile and add the following line and run:
-
-```Bash
-pod 'IMFURLProtocol'
-```
-{: codeblock}

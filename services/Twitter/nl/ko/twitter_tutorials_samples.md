@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+lastupdated: "2016-11-21"
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -5,9 +13,6 @@
 
 # Insights for Twitter 예제
 {: #examples}
-
-*마지막 업데이트 날짜: 2016년 5월 13일*
-{: .last-updated}
 
 {{site.data.keyword.twittershort}} 서비스를 시작하려면 제공된 샘플을 사용하여 서비스의 레버리지 활용 방법을 이해해야 합니다.
 {: shortdesc}

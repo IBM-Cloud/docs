@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-10-22"
 
 ---
 
@@ -12,8 +14,6 @@ copyright:
 # Kundenunterstützung abrufen
 {: #getting-customer-support}
 
-Letzte Aktualisierung: 22. Oktober 2016
-{: .last-updated}
 
 
 Wenn Probleme mit {{site.data.keyword.Bluemix}} auftreten, stehen Ihnen unterschiedliche Unterstützungsoptionen zur Verfügung, z. B. das Anfordern von Hilfe über ein Forum oder das Öffnen eines Support-Tickets.
@@ -87,7 +87,7 @@ Auf der Seite 'Status' sind die folgenden Informationen zu finden:
 
 Die Seite 'Status' wird angezeigt, wenn Sie eine der beiden folgenden Optionen auswählen:
 
-  * Melden Sie sich bei der {{site.data.keyword.Bluemix_notm}}-Konsole an. Klicken Sie in der Menüleiste auf **Support** und anschließend auf **Status**. Prüfen Sie die aufgelisteten Ressourcen auf das Symbol ![Probleme](images/some_issues.svg). Dieses Symbol könnte auf einen Ausfall hinweisen.
+  * Melden Sie sich bei der {{site.data.keyword.Bluemix_notm}}-Konsole an. Klicken Sie in der Menüleiste auf **Support** und anschließend auf **Status**.  Prüfen Sie die aufgelisteten Ressourcen auf das Symbol ![Probleme](images/some_issues.svg). Dieses Symbol könnte auf einen Ausfall hinweisen.
   * Greifen Sie direkt über [IBM {{site.data.keyword.Bluemix_notm}} - System Status](http://ibm.biz/bluemixstatus){: new_window} zu.
 
 
@@ -129,7 +129,7 @@ Für {{site.data.keyword.Bluemix_notm}} gibt es standardmäßig ungefähr 50 Upd
 ### E-Mail-Benachrichtigungen zu Vorfällen und Wartungsmaßnahmen einrichten
 {: #setting-up-notifications}
 
-Bei {{site.data.keyword.Bluemix_notm}} Public können Sie sich für Plattformbenachrichtigungen anmelden. Plattformbenachrichtigungen sind optionale E-Mail-Alerts für Vorfall- und Wartungsereignisse für die {{site.data.keyword.Bluemix_notm}}-Plattform. Sie können den Empfang solcher E-Mail-Benachrichtigungen auswählen, indem Sie auf das Menüelement **Konto** und auf die Optionen &gt; **Benachrichtigungen** &gt; **Plattform** klicken. Weitere Informationen zum Einrichten von Kontobenachrichtigungen finden Sie in [Benachrichtigungen einstellen](../admin/account.html#notifications).
+Bei {{site.data.keyword.Bluemix_notm}} Public können Sie sich für Plattformbenachrichtigungen anmelden. Plattformbenachrichtigungen sind optionale E-Mail-Alerts für Vorfall- und Wartungsereignisse für die {{site.data.keyword.Bluemix_notm}}-Plattform. Sie können den Empfang solcher E-Mail-Benachrichtigungen auswählen, indem Sie auf das Menüelement **Konto** und auf die Optionen &gt; **Benachrichtigungen** &gt; **Plattform** klicken. Weitere Informationen zum Einrichten von Kontobenachrichtigungen finden Sie in [Benachrichtigungen einstellen](/docs/admin/account.html#notifications).
 
 
 ### Bewährte Verfahren für die Statusüberwachung
@@ -179,7 +179,7 @@ Beschreibung | Support für alle Bluemix-Testkunden.  |  Support für Nicht-Prod
 Support mit hoher Priorität |  Nicht zutreffend | Nicht zutreffend | Inbegriffen | Inbegriffene
 Support-Sprache | Englisch | Englisch | Englisch | Englisch
 Zugeordneter Client Success Manager (CSM) | Nicht inbegriffen | Nicht inbegriffen | Nicht inbegriffen | Inbegriffen für<br> 8 Stunden pro Woche
-*Tabelle 1. Supportstufen*
+{: caption="Table 1. Support levels" caption-side="top"}
 
 ### Support-Ticket öffnen
 {: #open-ticket}
@@ -191,7 +191,7 @@ Wenn Sie Ihr technisches Problem nicht mithilfe der Fehlerbehebungs- und Hilfeop
 Wenn das Problem nicht auf einen Ausfall zurückzuführen ist, öffnen Sie ein Support-Ticket mit einer der folgenden Optionen:
 
   * Klicken Sie im Widget 'Support' auf **Hilfe anfordern**. Klicken Sie auf der angezeigten Seite auf **Kontakt aufnehmen**. Füllen Sie das Formular aus und geben Sie an, wofür genau Sie Unterstützung benötigen.
-  * Verwenden Sie die Hilfetextseite [IBM {{site.data.keyword.Bluemix_notm}}-Support](http://ibm.biz/bluemixsupport){: new_window}. Sie können Tickets für Probleme bei Vertrieb, Abrechnung, IBM ID und Anmeldung sowie für technische Unterstützung einreichen. Um technische Unterstützung zu erhalten, können Sie außerdem nach dem Klicken auf **Technical Support** eine technische Gruppe auswählen. Wenn Sie zum Beispiel Hilfe für Cloud Foundry-Apps, OpenWhisk, Container, virtuelle Server oder Bare-Metal-Server benötigen, können Sie **Application Services** auswählen. Wenn Sie Hilfe für einen bestimmten Service benötigen, wählen Sie die entsprechende Kategorie des Service aus. Zum Ermitteln der Kategorie, zu der Ihr Service gehört, finden Sie Kategorien unter [Services](../services/index.html){: new_window} im Navigationsbereich.  
+  * Verwenden Sie die Hilfetextseite [IBM {{site.data.keyword.Bluemix_notm}}-Support](http://ibm.biz/bluemixsupport){: new_window}. Sie können Tickets für Probleme bei Vertrieb, Abrechnung, IBM ID und Anmeldung sowie für technische Unterstützung einreichen. Um technische Unterstützung zu erhalten, können Sie außerdem nach dem Klicken auf **Technical Support** eine technische Gruppe auswählen. Wenn Sie zum Beispiel Hilfe für Cloud Foundry-Apps, OpenWhisk, Container, virtuelle Server oder Bare-Metal-Server benötigen, können Sie **Application Services** auswählen. Wenn Sie Hilfe für einen bestimmten Service benötigen, wählen Sie die entsprechende Kategorie des Service aus. Zum Ermitteln der Kategorie, zu der Ihr Service gehört, finden Sie Kategorien unter [Services](/docs/services/index.html){: new_window} im Navigationsbereich.  
   * Gehen Sie in [IBM Client Success Portal](https://support.ibmcloud.com){: new_window} wie folgt vor: Klicken Sie nach der Anmeldung bei dem Portal auf **Ticket öffnen** und füllen Sie das Support-Formular aus. 
   
 Stellen Sie beim Öffnen eines Support-Tickets sicher, dass Sie eine geeignete Priorität für das Ticket angeben. Die Priorität bestimmt, wie Ihr Ticket bearbeitet wird. Informationen zu den verschiedenen Prioritätsstufen finden Sie unter [Support-Ticket - Priorität und Reaktionszeit](index.html#support-ticket-severity){: new_window}. Wenn Ihre Anforderung dringend ist, Sie jedoch nur für die Supportstufe 'Free' oder 'Basic' berechtigt sind, können Sie Ihr Konto aktualisieren, um Tickets mit hoher Priorität (Stufe 1, 2 oder 3) einzureichen. Zum Aktualisieren Ihres Kontos auf eine höhere Supportstufe wenden Sie sich per E-Mail an Ihren IBM Vertriebsbeauftragten (sales@bluemix.net).
@@ -260,7 +260,7 @@ Priorität 1 | <strong>Kritischer Einfluss auf die Geschäftsabläufe oder Servi
 Priorität 2 | <strong>Signifikanter Einfluss auf die Geschäftsabläufe.</strong> <br> Die Verwendung eines Servicefeature oder einer Funktion ist sehr stark eingeschränkt oder die Einhaltung von Geschäftsterminen ist gefährdet. | <ul><li><strong>Free:</strong> Nicht zutreffend</li><li><strong>Basic:</strong> Nicht zutreffend </li><li><strong>Standard:</strong> Innerhalb von 2 Stunden</li><li><strong>Premium:</strong> Innerhalb von 90 Minuten </li></ul> | <ul><li><strong>Free:</strong> Nicht zutreffend</li><li><strong>Basic:</strong> Nicht zutreffend </li><li><strong>Standard:</strong> Betriebszeiten </li><li><strong>Premium:</strong> Betriebszeiten </li></ul>
 Priorität 3 | <strong>Geringfügiger Einfluss auf die Geschäftsabläufe.</strong> <br> Ein Servicefeature oder eine Funktion ist verwendbar, aber die Verwendbarkeit ist durch Probleme eingeschränkt. Es werden keine kritischen Auswirkungen auf Betriebsoperationen verursacht. | <ul><li><strong>Free:</strong> Nicht zutreffend</li><li><strong>Basic:</strong> Nicht zutreffend </li><li><strong>Standard:</strong> Innerhalb von 4 Stunden</li><li><strong>Premium:</strong> Innerhalb von 2 Stunden</li></ul> | <ul><li><strong>Free:</strong> Nicht zutreffend</li><li><strong>Basic:</strong> Nicht zutreffend </li><li><strong>Standard:</strong> Betriebszeiten </li><li><strong>Premium:</strong> Betriebszeiten </li></ul>
 Priorität 4 | <strong>Minimaler Einfluss auf die Geschäftsabläufe.</strong> <br> Eine Anfrage oder eine Anforderung nicht technischer Art. | <ul><li><strong>Free:</strong> Bestmöglich </li><li><strong>Basic:</strong> Bestmöglich</li><li><strong>Standard:</strong> Innerhalb von 8 Stunden</li><li><strong>Premium:</strong> Innerhalb von 4 Stunden</li></ul> | <ul><li><strong>Free:</strong> Betriebszeiten </li><li><strong>Basic:</strong> Betriebszeiten </li><li><strong>Standard:</strong> Betriebszeiten </li><li><strong>Premium:</strong> Betriebszeiten </li></ul>
-*Tabelle 2. Prioritätsdefinition und Reaktionszeit*
+{: caption="Table 2. Severity definition and response time" caption-side="top"}
 
 
 ### Potenzielle Sicherheitslücke melden
@@ -296,7 +296,7 @@ Beim Diagnostizieren und Beheben von Problemen mit {{site.data.keyword.Bluemix_n
 
 Führen Sie die folgenden Schritte aus, bevor Sie Diagnoseinformationen erfassen:
 
-  1. Stellen Sie sicher, dass die neueste cf-Befehlszeilenschnittstelle installiert ist. Weitere Informationen finden Sie unter [Befehlszeilenschnittstelle 'cf' installieren](../starters/install_cli.html){: new_window}.
+  1. Stellen Sie sicher, dass die neueste cf-Befehlszeilenschnittstelle installiert ist. Weitere Informationen finden Sie unter [Befehlszeilenschnittstelle 'cf' installieren](/docs/starters/install_cli.html){: new_window}.
 
      **Hinweis:** Wenn die neueste cf-Befehlszeilenschnittstelle nicht installiert ist, nachdem die cf-Befehlszeile mit {{site.data.keyword.Bluemix_notm}} verbunden ist, kann es vorkommen, dass bei Ausführung des Befehls `cf logs` keine Ausgabe zurückgegeben wird.
 
@@ -339,8 +339,7 @@ In der folgenden Tabelle sind die unterstützten Landessprachen und die Sprachen
 | Spanisch | es |
 | Vereinfachtes Chinesisch | zh_CN |
 | Traditionelles Chinesisch | zh_TW |
-
-*Tabelle 3. Unterstützte Landessprachen und Sprachencodes*
+{: caption="Table 3. Supported national languages and language codes" caption-side="top"}
 
 
 ## Zufriedenheitsumfragen für den {{site.data.keyword.Bluemix_notm}}-Support  
@@ -357,7 +356,7 @@ IBM sendet regelmäßig Umfragen an Bluemix-Kunden, um Feedback zu ihren jüngst
 
   * [Bluemix-Support-Portal](https://support.ibmcloud.com){: new_window} 
   * [dW Answers](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} 
-  * [cf-Befehlstool installieren](../starters/install_cli.html){: new_window} 
+  * [cf-Befehlstool installieren](/docs/starters/install_cli.html){: new_window} 
   * [Handbuch für SaaS-Support](http://www-01.ibm.com/software/support/handbook.html){: new_window}
   * [Stack Overflow](http://stackoverflow.com/questions/tagged/ibm-bluemix){: new_window} 
   

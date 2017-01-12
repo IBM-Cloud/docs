@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-06-21"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # Utilisation de l'environnement JRE Oracle
 {: #using_oraacle_jre}
-
-Dernière mise à jour : 21 juin 2016
-{: .last-updated}
 
 Vous pouvez exécuter votre application Liberty sur Bluemix avec l'environnement JRE Oracle, si vous le voulez.  Pour ce faire, vous devez :
 * héberger l'environnement JRE dans un emplacement à partir duquel le pack de construction peut le télécharger,

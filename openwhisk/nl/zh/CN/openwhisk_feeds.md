@@ -61,7 +61,7 @@ OpenWhisk 支持开放 API，通过此 API，任何用户都可以将事件发�
 
 `wsk trigger create T --feed mycloudant/changes -p dbName myTable`
 
-然后系统将隐蔽地执行等同于下面的操作：
+然后系统将在后台执行等同于下面的操作：
 
 `wsk action invoke mycloudant/changes -p lifecycleEvent CREATE -p triggerName T -p authKey <userAuthKey> -p password <password value from mycloudant binding> -p username <username value from mycloudant binding> -p dbName mytype`
 

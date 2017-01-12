@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-12-09"
 ---
 
 {:new_window: target="_blank"}
@@ -14,9 +14,6 @@ copyright:
 # Einführung in {{site.data.keyword.composeForRabbitMQ}}
 {: #getting-started-with-compose-for-rabbitmq}
 
-Letzte Aktualisierung: 20. September 2016
-{: .last-updated}
-
 RabbitMQ verarbeitet asynchron die Nachrichten zwischen Ihren Anwendungen und Datenbanken und ermöglicht damit die Trennung der Daten und Anwendungsebenen. Mit RabbitMQ haben Entwickler die Möglichkeit, Nachrichten mit anpassbaren Persistenzstufen, Bereitstellungseinstellungen und bestätigter Veröffentlichung weiterzuleiten, zu verfolgen und in die Warteschlange zu stellen. Durch die Verwendung von {{site.data.keyword.composeForRabbitMQ_full}} erhalten Sie Zugriff auf die leicht zu bedienende Verwaltungsschnittstelle mit einer Vielzahl von Verwaltungsfunktionen, wie z. B. Bereitstellungsüberwachung, Skalierung mit einem Mausklick, Benutzereinrichtung und Zugriff auf Protokolldateien.
 {:shortdesc}
 
@@ -26,7 +23,7 @@ Führen Sie zum Einstieg in {{site.data.keyword.composeForRabbitMQ}} die folgend
 
 1. [Erstellen Sie eine {{site.data.keyword.composeForRabbitMQ}}-Instanz](https://console.ng.bluemix.net/catalog/services/compose-for-rabbitmq/).
 
-  Wenn Sie eine Instanz des Service erstellen, achten Sie darauf, sowohl einen Namen für den Service als auch einen Namen für den Berechtigungsnachweis auszuwählen. Lassen Sie den Service ungebunden; Sie können später eine Anwendung mit Ihrem Service verbinden, indem Sie die Berechtigungsnachweise verwenden, die bei der Bereitstellung des Service angegeben wurden. Die verschiedenen Werte für die Berechtigungsnachweise sind im Abschnitt *Verfügbare Berechtigungsnachweise* aufgeführt.
+  Wenn Sie eine Instanz des Service erstellen, achten Sie darauf, sowohl einen Namen für den Service als auch einen Namen für den Berechtigungsnachweis auszuwählen. Lassen Sie den Service ungebunden; Sie können später eine Anwendung mit Ihrem Service verbinden, indem Sie die Berechtigungsnachweise verwenden, die bei der Bereitstellung des Service angegeben wurden.  Die verschiedenen Werte für die Berechtigungsnachweise sind im Abschnitt *Verfügbare Berechtigungsnachweise* aufgeführt.
 
 2. Stellen Sie eine Verbindung zu Ihrem {{site.data.keyword.composeForRabbitMQ}}-Service her.
 
@@ -49,6 +46,7 @@ Feldname|Beschreibung
 `deployment_id`|Eine interne ID für den Service, wie in Compose erstellt.
 `db_type`|Der Datenbanktyp, der vom Service angeboten wird, in diesem Fall `rabbitmq`.
 `name`|Der Name der Datenbankimplementierung.
+{: caption="Table 1. {{site.data.keyword.composeForRabbitMQ}} - Berechtigungsnachweise" caption-side="top"}
 
 # Zugehörige Links
 {: #rellinks}

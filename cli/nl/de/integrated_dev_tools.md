@@ -1,12 +1,13 @@
 ---
 
- 
+
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015，20166
 
- 
+lastupdated: "2015-11-10"
+
 
 ---
 
@@ -14,9 +15,6 @@ copyright:
 
 # Integrierte Entwicklungstools
 
-*Letzte Aktualisierung: 10. November 2015*
-
 
 Integrierte Entwicklungstools wie {{site.data.keyword.Bluemix}} ermöglichen es, die Anwendungsinstanz ohne großen Zeitaufwand in Bluemix zu aktualisieren und Entwicklungsprozesse wie auf dem Desktop durchzuführen, ohne dass eine erneute Bereitstellung erforderlich ist.
 {:shortdesc}
-

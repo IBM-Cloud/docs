@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-12-07"
 ---
 
 
@@ -11,11 +11,8 @@ copyright:
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#Implementando apps
+# Implementando apps
 {: #deployingapps}
-
--*Última atualização: 28 de julho de 2016*
--{: .last-updated}
 
 É possível implementar aplicativos no
 {{site.data.keyword.Bluemix}}
@@ -25,13 +22,72 @@ implementar aplicativos. Ao usar um manifest do aplicativo, reduza o número de 
 você deve especificar sempre que implementar um aplicativo no {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
 
-##Implementação do aplicativo
+## Implementação do aplicativo
 {: #appdeploy}
 
 Implementar um aplicativo para {{site.data.keyword.Bluemix_notm}} inclui duas fases, preparação e início do aplicativo.
 
-###Preparando um aplicativo
+O Cloud Foundry agora suporta o Diego, uma nova arquitetura de tempo de execução. O Diego fornece suporte para várias tecnologias de contêiner, incluindo contêineres Garden, Docker e Windows. Os futuros aprimoramentos e correções para o Cloud Foundry irão diretamente para o Diego e não serão suportados no DEA.
 
+### Montando um aplicativo com o Diego
+Todos os componentes do Diego são projetados para serem armazenados em cluster, o que significa que é possível criar facilmente diferentes zonas de disponibilidade. A comunicação segura entre todos os componentes do Diego usa TLS.
+
+Durante a fase de preparação, o Diego cuida de todos os aspectos relacionados à orquestração do contêiner. A distribuição das instâncias do app é feita com o Diego Brain e o Cloud Controller somente monta os apps. O Diego Brain aloca os apps para células com acesso SSH aos contêineres.
+
+Para validar o funcionamento do app, o Diego suporta as mesmas verificações baseadas em PORT que são usadas para DEA. Mas, ele está projetado para poder ter mais opções genéricas, como verificações de funcionamento baseado em URL, que devem ser ativadas no futuro.
+
+Para montar apps no Diego, deve-se instalar primeiro a CLI cf e o [Plug-in de CLI do Diego-Enabler](https://github.com/cloudfoundry-incubator/Diego-Enabler){:new_window}. Isso é necessário somente durante o período de migração.
+
+#### Problemas Conhecidos
+ Existem os problemas conhecidos a seguir com o uso do Diego:
+  * Os aplicativos trabalhadores implementados com a opção `--no-route` não são relatados como saudáveis. Para evitar isso, desative a verificação de funcionamento baseada em porta com o comando `cf set-health-check APP_NAME none`.
+  * O Diego não usa a variável de ambiente VCAP_APP_HOST. Se o seu código referenciar essa variável, substitua-a por 0.0.0.0.
+  * O Diego não usa a variável de ambiente VCAP_APP_PORT. Se o seu código referenciar essa variável, substitua-a por PORT, que é configurada como 8080 por padrão.
+  * O comando **cf files** não é mais suportado. A substituição é o comando **cf ssh**. Para obter mais detalhes sobre o comando **cf ssh**, veja [cf ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh).
+  * Alguns apps podem usar um número alto de descritores de arquivos (inodes). Caso encontre esse problema, deve-se aumentar a cota do disco para seu app com o comando `cf scale APP_NAME [-k DISK]`.
+
+#### Montando um novo app no Diego
+Para montar um novo aplicativo no Diego, deve-se implementar o aplicativo na linha de comandos com a sinalização para indicar o Diego como o backend.
+
+  1. Implemente o aplicativo sem iniciá-lo:
+  ```
+  $ cf push APPLICATION_NAME --no-start
+  ```
+  2. Configure o booleano do Diego:
+  ```
+  $ cf enable-diego APPLICATION_NAME
+  ```
+    ou alternativamente:
+  ```
+  $ cf curl /v2/apps/$(cf app APPLICATION_NAME --guid) -X PUT -d '{"diego":true}'
+  ```
+  3. Inicie o aplicativo:
+  ```
+  $ cf start APPLICATION_NAME
+  ```
+
+Para obter mais detalhes sobre o comando **cf push**, veja [cf push](/docs/cli/reference/cfcommands/index.html#cf_push).
+
+#### Mudando um app mudança para o Diego
+É possível fazer a transição de um app existente para o Diego implementando o aplicativo com a sinalização do Diego. O aplicativo iniciará imediatamente a execução no Diego e eventualmente parará a execução nos DEAs. Se desejar assegurar tempo de atividade, recomendamos executar uma implementação blue-green implementando uma cópia de seu aplicativo no Diego e, em seguida, trocando as rotas e reduzindo a escala no aplicativo DEA.
+
+  Para configurar a sinalização do Diego e mudar seu app para execução no Diego:
+  ```
+  $ cf enable-diego APPLICATION_NAME
+  ```
+
+  Para fazer a transição de volta para os DEAs:
+  ```
+  $ cf disable-diego APPLICATION_NAME
+  ```
+
+  Para validar em qual backend o aplicativo está em execução:
+  ```
+  $ cf has-diego-enabled APPLICATION_NAME
+  ```
+
+
+### Montando um aplicativo com o DEA
 Durante a fase de preparação, um
 Droplet Execution Agent (DEA) usa as informações que você fornece na interface de linha
 de comandos cf ou o arquivo `manifest.yml` para
@@ -47,7 +103,7 @@ obter mais informações, consulte
 [Como
 os aplicativos são preparados](http://docs.cloudfoundry.org/concepts/how-applications-are-staged.html){:new_window}.
 
-###Iniciando um aplicativo
+### Iniciando um aplicativo
 
 Quando um aplicativo é iniciado, a
 instância ou as instâncias do contêiner warden são criadas. É possível usar o comando
@@ -73,7 +129,7 @@ você tiver problemas ao preparar seus aplicativos no
 {{site.data.keyword.Bluemix_notm}}, é possível
 seguir as etapas em
 [Depurando
-erros de preparação](../debug/index.html#debugging-staging-errors) para resolver o problema.
+erros de preparação](/docs/debug/index.html#debugging-staging-errors) para resolver o problema.
 
 ##Implementando aplicativos usando o comando cf
 {: #dep_apps}
@@ -102,7 +158,7 @@ a partir do prompt de comandos.
   Para obter mais informações sobre
 o Liberty Buildpack, consulte
 [Liberty
-for Java](../runtimes/liberty/index.html).
+for Java](/docs/runtimes/liberty/index.html).
   
   * Para implementar aplicativos Java Tomcat no {{site.data.keyword.Bluemix_notm}}, use o comando a seguir:
   
@@ -211,8 +267,6 @@ nome do arquivo:
 cf push -f appManifest.yml
 ```
 
-<p>  </p>
-
 
 |Opções	|Descrição	|Uso ou exemplo|
 |:----------|:--------------|:---------------|
@@ -230,7 +284,7 @@ cf push -f appManifest.yml
 |**random-route**	|Um valor booleano para designar uma rota aleatória para o aplicativo. O valor padrão é **false**.	|`random-route: true`|
 |**Serviços**	|Os serviços a serem ligados ao aplicativo.	|`services:   - mysql_maptest`|
 |**env**	|As variáveis de ambiente customizadas do aplicativo.|`env: DEV_ENV: production`|
-*Tabela 1. Opções suportadas no arquivo manifest.yml*
+{: caption="Table 1. Supported options in the manifest YAML file" caption-side="top"}
 
 ###Um arquivo `manifest.yml` de amostra
 

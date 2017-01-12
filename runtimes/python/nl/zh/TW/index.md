@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -11,10 +12,9 @@ copyright:
 
 # Python
 {: #python_runtime}
-前次更新：2016 年 7 月 6 日
-{: .last-updated}
 
-{{site.data.keyword.Bluemix}} 上的 Python 運行環境是採用 python_buildpack 技術。python_buildpack 為 Python 2 和 Python 3 應用程式都有提供完整的運行環境。
+{{site.data.keyword.Bluemix}} 上的 Python 運行環境是採用 python_buildpack 技術。
+python_buildpack 為 Python 2 和 Python 3 應用程式都有提供完整的運行環境。
 {: shortdesc}
 
 如果您應用程式的根目錄包含 requirements.txt 檔案或 setup.py 檔案，將使用 python_buildpack。
@@ -22,7 +22,7 @@ copyright:
 ## 入門範本應用程式
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} 提供 Python 入門範本應用程式。Python 入門範本應用程式是簡單的 Python 應用程式，提供可以讓您用於應用程式的範本。您可以用入門範本應用程式進行實驗，並進行及推送對 {{site.data.keyword.Bluemix}} 環境的變更。如需關於使用入門範本應用程式的協助，請參閱[使用入門範本應用程式](../../cfapps/starter_app_usage.html)。
+{{site.data.keyword.Bluemix}} 提供 Python 入門範本應用程式。Python 入門範本應用程式是簡單的 Python 應用程式，提供可以讓您用於應用程式的範本。您可以用入門範本應用程式進行實驗，並進行及推送對 {{site.data.keyword.Bluemix}} 環境的變更。如需關於使用入門範本應用程式的協助，請參閱[使用入門範本應用程式](/docs/cfapps/starter_app_usage.html)。
 
 ## 運行環境版本
 {: #runtime_versions}

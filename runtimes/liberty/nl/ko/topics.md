@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-06-10"
 
 ---
 
@@ -11,9 +12,6 @@ copyright:
 
 # Liberty 주제
 {: #topics}
-
-마지막 업데이트 날짜: 2016년 6월 10일
-{: .last-updated}
 
 * [Liberty 런타임](index.html)
 * [발견](index.html#detection)

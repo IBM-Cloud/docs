@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-21"
+lastupdated: "2016-12-01"
 
 ---
 {:new_window: target="_blank"}
@@ -48,13 +48,13 @@ Per essere velocemente operativo con lo starter IU catalogo negozio, segui la se
 
    4. Per Android, [configura GCM (Google Cloud Messaging)](/docs/services/mobilepush/t_push_provider_android.html){: new_window}.
 
-3. Facoltativo: aggiungi altre funzionalità. 
+3. Facoltativo: aggiungi altre funzionalità.
 
-   1. Fai clic su **Aggiungi** per la funzionalità nella pagina **Panoramica progetto**. 
+   1. Fai clic su **Aggiungi** per la funzionalità nella pagina **Panoramica progetto**.
 
    2. Immetti il nome del tuo servizio e fai clic su **Crea**.
 
-   3. Segui le istruzioni fornite con il servizio per configurarlo. 
+   3. Segui le istruzioni fornite con il servizio per configurarlo.
 
 4. Progetta la tua applicazione.
 
@@ -66,7 +66,7 @@ Per essere velocemente operativo con lo starter IU catalogo negozio, segui la se
 
       È presente uno spazio di lavoro per la progettazione e una vista simulata dell'aspetto della tua applicazione.
 
-   3. Facoltativamente aggiungi nuove schermate selezionando **Crea schermata**. Denomina una nuova schermata per rendere più facile il riferimento alla tua applicazione. Le nuove schermate vengono create allo stesso livello della schermata principale, a seconda di cosa è selezionato nell'albero. Puoi anche selezionarla dai seguenti tipi di schermata:
+   3. Facoltativamente aggiungi nuove schermate selezionando **Crea schermata**. Denomina una nuova schermata per rendere più facile il riferimento alla tua applicazione. Le nuove schermate vengono create allo stesso livello della schermata principale, indipendentemente da ciò che è selezionato nell'albero. Puoi anche selezionarla dai seguenti tipi di schermata:
       * Menu
       * Elenco
       * Associazione
@@ -79,7 +79,7 @@ Per essere velocemente operativo con lo starter IU catalogo negozio, segui la se
 
 		Un elemento che viene identificato nell'albero come un *Modulo* è indipendente e può essere modificato inline. Non dispone di informazioni di riferimento da un'origine dati.
 
-   5. Seleziona **Dati** nella navigazione per visualizzare i dati che stanno venendo utilizzati dall'applicazione. Nel template sono disponibili informazioni predefinite; tuttavia, puoi modificare l'origine dei dati selezionando **Crea nuovo**. Puoi fare riferimento a più di una origine dati, in modo da fornire un nome per ogni origine che vuoi utilizzare. Puoi anche selezionarla dalla seguenti opzioni di origine dati
+   5. Seleziona **Dati** nella navigazione per visualizzare i dati che vengono utilizzati dall'applicazione. Nel template sono disponibili informazioni predefinite; tuttavia, puoi modificare l'origine dei dati selezionando **Crea nuovo**. Puoi fare riferimento a più di una origine dati, in modo da fornire un nome per ogni origine che vuoi utilizzare. Puoi anche selezionarla dalla seguenti opzioni di origine dati
       * Cloud
       * Locale
       * Cloudant
@@ -99,7 +99,7 @@ Per essere velocemente operativo con lo starter IU catalogo negozio, segui la se
 
    8. Se hai attivato lo switch per aggiungere IBM MobileFirst Platform Foundation al tuo progetto nella schermata *Impostazioni*, viene visualizzata una selezione **Foundation** nella navigazione. Seleziona **Foundation** e completa le informazioni necessarie specifiche per IBM MobileFirst Platform Foundation.
 
-   9. Seleziona **Pubblica** nel menu di navigazione per immettere le informazioni finali necessarie per creare la tua applicazione mobile. Puoi immettere il tuo identificativo bundle per iOS e l'identificativo applicazione per Android.
+   9. Seleziona **Pubblica** nel menu di navigazione per immettere le informazioni finali necessarie per creare la tua applicazione mobile. Puoi immettere il tuo identificativo Bundle per iOS e l'identificativo Applicazione per Android.
 
        Se stai creando un'applicazione iOS, devi ottenere il tuo identificativo bundle, il tuo certificato di distribuzione come ad esempio un file *.p12* e il tuo profilo di provisioning come un file *.mobileprovision* dal portale di provisioning di Apple. Possono essere creati contemporaneamente e con lo stesso computer che utilizzerai quando invierai la tua applicazione all'Apple store. Il certificato di distribuzione e il profilo di provisioning devono basarsi sull'identificativo bundle. 	
 
@@ -109,15 +109,15 @@ Per essere velocemente operativo con lo starter IU catalogo negozio, segui la se
 
    2. Per Android, puoi scegliere tra le seguenti opzioni dopo aver generato il codice:
 
-      **Scarica codice**
+      * Scarica il codice
 
-      **Scarica APK**
+      * Scarica APK
 
-      **Scarica con codice QR**
+      * Scarica con codice QR
 
-   3. Per iOS, puoi scegliere tra le seguenti opzioni dopo aver generato il codice:
+   3. Per iOS, puoi scegliere la seguente opzione dopo aver generato il codice:
 
-      **Scarica codice**
+      * Scarica il codice
 
 6. Esegui la tua applicazione sul tuo dispositivo o simulatore.
 

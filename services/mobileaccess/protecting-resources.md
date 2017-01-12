@@ -1,12 +1,13 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2016, 2017
 lastupdated: "2016-10-27"
 
 ---
 
-{:shortdesc: .shortdesc} {:codeblock:.codeblock}
+{:shortdesc: .shortdesc} 
+{:codeblock:.codeblock}
 
 # Protecting back-end resources with the {{site.data.keyword.amashort}} service
 {: #protecting-resources}

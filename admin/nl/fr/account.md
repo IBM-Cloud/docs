@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-  
+lastupdated: "2016-12-05"  
 
 
 ---
@@ -17,10 +17,9 @@ copyright:
 
 # Gestion de votre compte {{site.data.keyword.Bluemix_notm}}
 {: #mngacct}
-*Dernière mise à jour : 20 octobre 2016*
-{: .last-updated}
 
-Cliquez sur le lien **Compte** pour définir des notifications, afficher l'utilisation de votre compte ou consulter votre facture. {:shortdesc}
+Cliquez sur le lien **Compte** pour définir des notifications, afficher l'utilisation de votre compte ou consulter votre facture.
+{:shortdesc}
 
 ## Inscription à {{site.data.keyword.Bluemix_notm}}
 {: #signup}
@@ -29,13 +28,12 @@ Vous pouvez vous inscrire à un compte {{site.data.keyword.Bluemix_notm}} en uti
 
 Un ID fédéré peut être utilisé pour s'inscrire à {{site.data.keyword.Bluemix_notm}} uniquement si votre société a déjà travaillé avec IBM.  L'enregistrement du domaine d'une société auprès d'IBM permet aux utilisateurs de se connecter pour recevoir des produits et des services IBM en utilisant leurs données d'identification d'utilisateur de société existantes. L'authentification est alors gérée par le fournisseur d'identité de votre société. Lorsque vous vous connectez à {{site.data.keyword.Bluemix_notm}} avec un ID fédéré, vous êtes invité à le faire via la page de connexion de votre société. Pour savoir comment demander à enregistrer le domaine de votre société ou de votre organisation auprès d'IBM ou pour obtenir plus d'informations sur cette opération, voir [IBMid Enterprise Federation Adoption Guide](https://ibm.box.com/v/IBMid-Federation-Guide){: #new_window}. Un sponsor IBM, tel qu'un représentant du client ou un service de conseil, est requis lorsque vous demandez à enregistrer des ID fédérés.
 
-*Tableau 1. Méthodes d'inscription*
-
 | Méthodes d'inscription | Détails |    
 |-----------------|---------|
 |IBMid existant | Si vous possédez déjà un IBMid, inscrivez-vous à {{site.data.keyword.Bluemix_notm}} avec les données d'identification existantes que vous utilisez pour recevoir les autres produits et services IBM. Vous devez entrer un numéro de téléphone lorsque vous vous inscrivez. |
 |Nouvel IBMid | Si vous ne possédez pas encore d'IBMid, vous pouvez choisir d'en créer un. L'IBMid vous permet d'utiliser un seul et même nom d'utilisateur de connexion pour tous les produits et services IBM que vous utilisez, y compris {{site.data.keyword.Bluemix_notm}}. Vous devez entrer vos informations personnelles, y compris vos nom et prénom, votre numéro de téléphone et votre mot de passe pour les nouvelles données d'identification. Vous pouvez utiliser cet IBMid pour vous connecter lorsque vous utilisez d'autres produits et services IBM.  |
 |ID fédéré | Si votre société a demandé à enregistrer auprès d'IBM les données d'identification de l'utilisateur du domaine de votre société, vous pouvez vous inscrire à {{site.data.keyword.Bluemix_notm}} à l'aide des données d'identification dont vous vous servez déjà pour la connexion de votre société. Vous devez entrer un numéro de téléphone lorsque vous vous inscrivez. |
+{:caption="Table 1. Sign up methods" caption-side="top"}
 
 ## Définition de notifications
 {: #notifications}
@@ -48,8 +46,7 @@ Vous pouvez définir des notifications par courrier électronique de plateforme 
 ### Définition de notifications de plateforme
 
 Cliquez sur **Compte** &gt; **Notifications** &gt; **Plateforme** pour définir des
-notifications par courrier électronique relatives aux incidents {{site.data.keyword.Bluemix_notm}} et à la maintenance planifiée.
-Vous pouvez sélectionner ou désélectionner chaque option pour activer ou désactiver la notification par courrier électronique.
+notifications par courrier électronique relatives aux incidents {{site.data.keyword.Bluemix_notm}} et à la maintenance planifiée. Vous pouvez sélectionner ou désélectionner chaque option pour activer ou désactiver la notification par courrier électronique.
 
 ### Définition des notifications relatives aux dépenses
 {: #spendingnotifications}

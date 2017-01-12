@@ -2,13 +2,12 @@
 
 copyright:
   year: 2016
+lastupdated: "2016-06-15"
 
 ---
 
 # 启用 Web 应用程序的 Facebook 认证
-
-上次更新时间：2016 年 6 月 15 日
-{: .last-updated}
+{: #facebook_web}
 
 使用 Facebook 在 Web 应用程序上认证用户。
 
@@ -84,5 +83,3 @@ grant_type='authorization_code'
 ## 测试认证
 现在，您可以开始向受保护资源发出请求。
 对受保护资源的所有请求都应该在授权请求头字段中包含 `access_token`。
-
-

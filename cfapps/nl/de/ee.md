@@ -53,8 +53,7 @@ Umgebungsvariablen anzeigen, um Probleme zu beheben.
 ## Service mithilfe der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle binden
 {: #ee_bindui}
 
-Nachdem Sie Ihre App erstellt haben, stellen Sie mit der App eine Verbindung zur Datenbank her. Auf diese
-Weise können Sie die App-Daten mithilfe der Datenbankabfragesprache speichern und beobachten. In diesem Szenario
+Nachdem Sie Ihre App erstellt haben, stellen Sie mit der App eine Verbindung zu einer Datenbank her. Auf diese Weise können Sie die App-Daten mithilfe der Datenbankabfragesprache speichern und beobachten. In diesem Szenario
 entscheiden Sie sich dafür, den Service {{site.data.keyword.cloudant}}, der
 von {{site.data.keyword.Bluemix_notm}} bereitgestellt wird, zu verwenden.
 
@@ -99,7 +98,7 @@ TestNode zu beginnen.
 
   1. Laden Sie als erstes den Code Ihrer App herunter und entwickeln Sie ihn.
 
-    1. Wechseln Sie zur Seite 'Coding beginnen' Ihrer App. klicken Sie auf die Schaltfläche **Startercode herunterladen**, um den Code für Ihre App herunterzuladen.
+    1. Wechseln Sie zur Seite 'Coding beginnen' Ihrer App. Klicken Sie auf die Schaltfläche **Startercode herunterladen**, um den Code Ihrer App herunterzuladen.
     2. Extrahieren Sie die heruntergeladene Datei in ein Verzeichnis, z. B. `C:\test`.
     3. Entwickeln Sie den Code mit Ihrer lokalen integrierten Entwicklungsumgebung.
 
@@ -136,9 +135,9 @@ gespeichert.
   cf push TestNode
   ```
 
-  Weitere Informationen zum Befehl **cf push** finden Sie unter 'Anwendung hochladen'.
+  Weitere Informationen zum Befehl **cf push** finden Sie unter 'App hochladen'.
 
-  6. Nun können Sie auf die App zugreifen, indem Sie die folgende Anwendungs-URL in einen Browser eingeben:
+  6. Nun können Sie auf die App zugreifen, indem Sie die folgende App-URL in einen Browser eingeben:
   ```
   http://TestNode.mybluemix.net
   ```
@@ -271,8 +270,7 @@ hinzufügen, um {{site.data.keyword.Bluemix_notm}} weiterhin nutzen zu können. 
 
   * Klicken Sie in Ihrem Dashboard auf TestNode. Klicken Sie anschließend auf der Übersichtsseite auf **Kosten dieser Anwendung schätzen**, um den Preis für die Laufzeit **SDK for Node.js** und den monatlichen Gesamtpreis der App anzuzeigen.
 
-  * Geben Sie alternativ auf der Seite 'Preisliste' die monatliche Nutzung
-der Laufzeit und Services Ihrer App ein. Beispiel: 3 Instanzen von **SDK for Node.js** mit 1 GB Speicher pro Instanz. Der monatliche Preis wird berechnet und angezeigt.
+  * Geben Sie alternativ auf der Seite 'Preisliste' die monatliche Nutzung der Laufzeit und Services Ihrer App ein. Beispiel: 3 Instanzen von **SDK for Node.js** mit 1 GB Speicher pro Instanz. Der monatliche Preis wird berechnet und angezeigt.
 
 Sie können die App-Kosten auch manuell berechnen, indem Sie die Preise der Laufzeiten und Services zusammenrechnen und die kostenlosen Gratisleistungen abziehen. Weitere Informationen finden Sie unter 'Kosten manuell schätzen'.
 

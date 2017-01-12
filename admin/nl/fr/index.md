@@ -4,6 +4,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-25"
 
 
 ---
@@ -18,44 +19,42 @@ copyright:
 # Gestion de l'environnement {{site.data.keyword.Bluemix_notm}} local et de l'environnement {{site.data.keyword.Bluemix_notm}} dédié
 {: #mng}
 
-*Dernière mise à jour : 20 octobre 2016*
-{: .last-updated}
 
-Si vous disposez d'un accès administrateur pour l'environnement {{site.data.keyword.Bluemix}} local ou {{site.data.keyword.Bluemix_notm}} dédié, accédez à la page **Administration** pour gérer les ressources, surveiller l'utilisation des quotas, administrer des droits d'utilisateur, planifier des notifications de mise à niveau, afficher des rapports de sécurité et des journaux, etc. Vous pouvez gérer votre organisation en créant des espaces et en configurant des [rôles utilisateur et autorisations](index.html#oc_useradmin). Voir [Gestion de vos organisations](../admin/orgs_spaces.html).
+Si vous disposez d'un accès administrateur pour l'environnement {{site.data.keyword.Bluemix}} local ou {{site.data.keyword.Bluemix_notm}} dédié, accédez à la page **Administration** pour gérer les ressources, surveiller l'utilisation des quotas, administrer des droits d'utilisateur, planifier des notifications de mise à niveau, afficher des rapports de sécurité et des journaux, etc. Vous pouvez gérer votre organisation en créant des espaces et en configurant des [rôles utilisateur et autorisations](/docs/admin/index.html#oc_useradmin). Voir [Gestion de vos organisations](/docs/admin/orgs_spaces.html).
 {:shortdesc}
 
 *Tableau 1. Tâches d'administration pour la gestion de votre instance {{site.data.keyword.Bluemix_notm}} locale ou dédiée*
-{: #caption}
 
 | Que puis-je faire ? | Détails |    
 |----------------|---------|
-|Surveiller l'utilisation du système | Cliquez sur **ADMINISTRATION &gt; UTILISATION**. Affichez vos informations système, surveillez l'utilisation de l'unité centrale et planifiez l'utilisation afin de prendre les meilleures décisions pour votre entreprise. Voir [Affichage des informations relatives à l'utilisation](index.html#oc_resource).|
-|Gérer votre catalogue | Cliquez sur **ADMINISTRATION &gt; GESTION DES CATALOGUES** afin de gérer les services que vos utilisateurs et organisations peuvent voir. Voir [Gestion de votre catalogue](index.html#oc_catalog).|
-|Administrer des organisations | Cliquez sur **ADMINISTRATION &gt; ADMINISTRATION DES ORGANISATIONS** afin de créer des organisations, surveiller les quotas pour les organisations et prendre des décisions rapidement en fonction des besoins. Voir [Administration des organisations](index.html#oc_organizations).|
-|Créer des espaces et affecter des rôles utilisateur | Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![Avatar](../support/images/account_support.svg), puis sélectionnez **Gérer les organisations** afin de créer des espaces dans vos organisations. Ajoutez des utilisateurs et affectez des organisations et des espaces aux utilisateurs. Voir [Gestion de vos organisations](../admin/orgs_spaces.html). |
-|Gérer les droits d'administrateur | Cliquez sur **ADMINISTRATION &gt; ADMINISTRATION DES UTILISATEURS** pour ajouter des utilisateurs, retirer des utilisateurs et ajuster les droits des utilisateurs. Voir [Gestion des utilisateurs et des droits](index.html#oc_useradmin). |
-|Consulter les rapports et les journaux | Cliquez sur **ADMINISTRATION &gt; RAPPORTS ET JOURNAUX** afin d'afficher des rapports de sécurité et des journaux d'audit pour votre instance. Voir [Affichage des rapports](index.html#oc_report). |
-|Afficher les informations système | Cliquez sur **ADMINISTRATION &gt; INFORMATIONS SYSTEME** afin d'afficher des informations système, telles que les mises à jour de maintenance en attente, le nom et la version de votre instance, la région, l'adresse URL de l'API, l'adresse URL de l'interface de ligne de commande, les détails de la configuration LDAP, les mappages des groupes et des utilisateurs, des statistiques et les domaines partagés. Voir [Affichage des informations système](index.html#oc_system). |
-|Etendre des notifications et configurer des abonnements à des notifications  | Cliquez sur **ADMINISTRATION &gt; INFORMATIONS SYSTEME &gt; *Nombre* mises à jour en attente**. Vous
-pouvez utiliser des webhooks pour l'intégration à un service Web de votre choix afin de configurer un abonnement aux notifications d'événement pour une mise à jour ou un incident. Voir [Notifications et abonnements à des notifications](index.html#oc_eventsubscription). |
+|Surveiller l'utilisation du système | Cliquez sur **ADMINISTRATION &gt; UTILISATION**. Affichez vos informations système, surveillez l'utilisation de l'unité centrale et planifiez l'utilisation afin de prendre les meilleures décisions pour votre entreprise. Voir [Affichage des informations relatives à l'utilisation](/docs/admin/index.html#oc_resource).|
+|Gérer votre catalogue | Cliquez sur **ADMINISTRATION &gt; GESTION DES CATALOGUES** afin de gérer les services que vos utilisateurs et organisations peuvent voir. Voir [Gestion de votre catalogue](/docs/admin/index.html#oc_catalog).|
+|Administrer des organisations | Cliquez sur **ADMINISTRATION &gt; ADMINISTRATION DES ORGANISATIONS** afin de créer des organisations, surveiller les quotas pour les organisations et prendre des décisions rapidement en fonction des besoins. Voir [Administration des organisations](/docs/admin/index.html#oc_organizations).|
+|Créer des espaces et affecter des rôles utilisateur | Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![Avatar](../support/images/account_support.svg), puis sélectionnez **Gérer les organisations** afin de créer des espaces dans vos organisations. Ajoutez des utilisateurs et affectez des organisations et des espaces aux utilisateurs. Voir [Gestion de vos organisations](/docs/admin/orgs_spaces.html). |
+|Gérer les droits d'administrateur | Cliquez sur **ADMINISTRATION &gt; ADMINISTRATION DES UTILISATEURS** pour ajouter des utilisateurs, retirer des utilisateurs et ajuster les droits des utilisateurs. Voir [Gestion des utilisateurs et des droits](/docs/admin/index.html#oc_useradmin). |
+|Consulter les rapports et les journaux | Cliquez sur **ADMINISTRATION &gt; RAPPORTS ET JOURNAUX** afin d'afficher des rapports de sécurité et des journaux d'audit pour votre instance. Voir [Affichage des rapports](/docs/admin/index.html#oc_report). |
+|Afficher les informations système | Cliquez sur **ADMINISTRATION &gt; INFORMATIONS SYSTEME** afin d'afficher des informations système, telles que les mises à jour de maintenance en attente, le nom et la version de votre instance, la région, l'adresse URL de l'API, l'adresse URL de l'interface de ligne de commande, les détails de la configuration LDAP, les mappages des groupes et des utilisateurs, des statistiques et les domaines partagés. Voir [Affichage des informations système](/docs/admin/index.html#oc_system). |
+|Etendre des notifications et configurer des abonnements à des notifications | Cliquez sur **ADMINISTRATION &gt; INFORMATIONS SYSTEME &gt; *Nombre* mises à jour en attente**. Vous
+pouvez utiliser des webhooks pour l'intégration à un service Web de votre choix afin de configurer un abonnement aux notifications d'événement pour une mise à jour ou un incident. Voir [Notifications et abonnements à des notifications](/docs/admin/index.html#oc_eventsubscription). |
 
-**Astuce** : le tableau de bord Infrastructure dans la console {{site.data.keyword.Bluemix_notm}} n'est disponible
-que dans les comptes liés dans des environnements {{site.data.keyword.Bluemix_notm}} publics. 
+<!-- staging only for WoW start -->
+
+**Astuce** : le tableau de bord Infrastructure dans la console {{site.data.keyword.Bluemix_notm}} n'est disponible que dans les comptes liés dans des environnements {{site.data.keyword.Bluemix_notm}} publics.
 
 
-## Notifications et abonnements à des notifications 
+<!-- staging only for WoW end -->
+
+
+## Notifications et abonnements à des notifications
 {: #oc_eventsubscription}
 
-Vous pouvez prendre connaissance à tout moment du statut de votre environnement en consultant la page Statut. Les incidents et les événements de
-mise à jour de maintenance planifiés avec interruption sont signalés sur cette
-page au fur et à mesure qu'ils se produisent. {{site.data.keyword.Bluemix_notm}} envoie également des notifications à la zone Notifications sur la page Administration pour des événements tels que des mises à jour de maintenance planifiées ou en attente.
+Vous pouvez prendre connaissance à tout moment du statut de votre environnement en consultant la page Statut. Les incidents et les événements de mise à jour de maintenance planifiés avec interruption sont signalés sur cette page au fur et à mesure qu'ils se produisent. {{site.data.keyword.Bluemix_notm}} envoie également des notifications à la zone Notifications sur la page Administration pour des événements tels que des mises à jour de maintenance planifiées ou en attente.
 
 ### Notifications
 
 Vous pouvez afficher les notifications pour votre environnement local ou dédié pour surveiller le statut de votre environnement. Reportez-vous au tableau ci-dessous pour plus d'informations sur les différents types de notification et les emplacements où elles sont publiées.
 
 *Tableau 2. Types d'événement et méthodes de notification*
-{: #caption}
 
 | **Type d'événement** | **Méthode de notification** |       
 |-----------------|-------------------|
@@ -63,55 +62,36 @@ Vous pouvez afficher les notifications pour votre environnement local ou dédié
 |  | Vous êtes également prévenu en cas d'événements de mise à jour de maintenance planifiés avec interruption dans la page Statut. Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![Avatar](../support/images/account_support.svg), puis sélectionnez **Etat**.|
 |  | Vous pouvez étendre la capacité de notification en configurant un abonnement envoyant un courrier électronique aux destinataires de votre choix. Vous pouvez également configurer un abonnement utilisant des webhooks pour intégrer les notifications de la page Administration au service Web de votre choix.|
 | Incidents critiques | Vous êtes prévenu en cas d'incident critique dans la page Statut. Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![Avatar](../support/images/account_support.svg), puis sélectionnez **Etat**. Vous pouvez étendre la capacité de notification en configurant un abonnement aux notifications qui envoie un courrier électronique au destinataire de votre choix. Vous pouvez également configurer un abonnement utilisant des webhooks pour intégrer les notifications de la page Administration au service Web de votre choix.  |  
-| Evénements de seuil  | Vous pouvez configurer un abonnement à des événements qui envoie un courrier électronique au destinataire de votre choix lorsque les seuils de ressource pour le disque physique, la mémoire physique, le disque réservé ou la mémoire réservée sont atteints dans votre environnement. Vous pouvez également configurer un abonnement utilisant des webhooks pour intégrer les notifications au service Web de votre choix.  |  
+| Evénements de seuil | Vous pouvez configurer un abonnement à des événements qui envoie un courrier électronique au destinataire de votre choix lorsque les seuils de ressource pour le disque physique, la mémoire physique, le disque réservé ou la mémoire réservée sont atteints dans votre environnement. Vous pouvez également configurer un abonnement utilisant des webhooks pour intégrer les notifications au service Web de votre choix.  |  
 | Statut {{site.data.keyword.Bluemix_notm}} | Vous pouvez toujours examiner le statut le plus récent de la plateforme, des services et de votre instance {{site.data.keyword.Bluemix_notm}} sur la page Statut. Cliquez sur l'icône **{{site.data.keyword.avatar}}** ![Avatar](../support/images/account_support.svg), puis sélectionnez **Etat**.  |
 
-### Configuration d'abonnements à des notifications 
+### Configuration d'abonnements à des notifications
 {: #seteventsub}
 
-Vous pouvez étendre la fonctionnalité des notifications qui sont envoyées à la page Administration et à la page Statut en utilisant des abonnements à
-des notifications. Utilisez ces derniers pour configurer un courrier électronique personnalisé ou utiliser des webhooks à intégrer à l'outil de votre
-choix. 
- * Si vous sélectionnez l'option de courrier électronique, vos notifications sont envoyées aux adresses électroniques que vous spécifiez.
-Vous pouvez sélectionner des notifications d'incidents, de mises à jour de maintenance ou de seuils. Une notification par courrier électronique initiale est envoyée. 
-Ensuite, si l'événement est modifié, une autre notification comportant la modification est envoyée à chaque fois qu'une
-modification est effectuée.   
- * Si vous sélectionnez l'option webhooks, vos notifications sont acheminées directement à la destination de votre choix, par exemple à un numéro de téléphone (via un message SMS). 
-Vous pouvez personnaliser le type de notification, notamment pour les mises à jour de maintenance, les alertes relatives aux incidents critiques ou les
-seuils.
-Vous pouvez indiquer si vous voulez recevoir les nouvelles notifications ou les notifications sur les modifications des abonnements, et quelles
-informations doivent être incluses dans le corps de chaque notification. 
+Vous pouvez étendre la fonctionnalité des notifications qui sont envoyées à la page Administration et à la page Statut en utilisant des abonnements à des notifications. Utilisez ces derniers pour configurer un courrier électronique personnalisé ou utiliser des webhooks à intégrer à l'outil de votre choix.
+ * Si vous sélectionnez l'option de courrier électronique, vos notifications sont envoyées aux adresses électroniques que vous spécifiez. Vous pouvez sélectionner des notifications d'incidents, de mises à jour de maintenance ou de seuils. Une notification par courrier électronique initiale est envoyée. Ensuite, si l'événement est modifié, une autre notification comportant la modification est envoyée à chaque fois qu'une modification est effectuée.  
+ * Si vous sélectionnez l'option webhooks, vos notifications sont acheminées directement à la destination de votre choix, par exemple à un numéro de téléphone (via un message SMS). Vous pouvez personnaliser le type de notification, notamment pour les mises à jour de maintenance, les alertes relatives aux incidents critiques ou les seuils. Vous pouvez indiquer si vous voulez recevoir les nouvelles notifications ou les notifications sur les modifications des abonnements, et quelles informations doivent être incluses dans le corps de chaque notification.
 
-**Remarque** : seuls les utilisateurs disposant de l'autorisation de superutilisateur (`ops.admin`) peuvent
-configurer des abonnements à des notifications. 
+**Remarque** : seuls les utilisateurs disposant de l'autorisation de superutilisateur (`ops.admin`) peuvent configurer des abonnements à des notifications.
 
 Pour créer un abonnement par courrier électronique ou webhook depuis la page **Abonnements aux notifications**, procédez comme suit :
 
-1. Accédez à la page **Abonnements aux notifications**. Sélectionnez **INFORMATIONS SYSTEME &gt; Environnement &gt;
-Abonnements**.
+1. Accédez à la page **Abonnements aux notifications**.  Sélectionnez **INFORMATIONS SYSTEME &gt; Environnement &gt; Abonnements**.
 2. Cliquez sur **Ajouter un abonnement**.
-3. Remplissez le formulaire d'abonnement aux notifications. 
+3. Remplissez le formulaire d'abonnement aux notifications.
 
-  * Pour créer des abonnements à des notifications par courrier électronique sur les mises à jour de maintenance ou les incidents, voir les
-informations du [tableau 3](index.html#emailnotmaintinc).
-  * Pour créer des abonnements à des notifications par courrier électronique sur les seuils, voir les
-informations du [tableau 4](index.html#emailnottrhesh).
-  * Pour créer des abonnements à des notifications par webhook sur les mises à jour de maintenance ou les incidents, voir les
-informations du [tableau 5](index.html#webhooknotsub).
-  * Pour créer des abonnements à des notifications par webhook sur les seuils, voir les informations du
-[tableau 6](index.html#webhooknotthresh).
+  * Pour créer des abonnements à des notifications par courrier électronique sur les mises à jour de maintenance ou les incidents, voir les informations du [tableau 3](index.html#emailnotmaintinc).
+  * Pour créer des abonnements à des notifications par courrier électronique sur les seuils, voir les informations du [tableau 4](index.html#emailnottrhesh).
+  * Pour créer des abonnements à des notifications par webhook sur les mises à jour de maintenance ou les incidents, voir les informations du [tableau 5](index.html#webhooknotsub).
+  * Pour créer des abonnements à des notifications par webhook sur les seuils, voir les informations du [tableau 6](index.html#webhooknotthresh).
 
 4. Une fois que vous avez complété ce formulaire, vous pouvez choisir parmi les options suivantes :
 
-  * Cliquez sur **Sauvegarder** pour enregistrer l'abonnement dans votre liste d'abonnements à des notifications. 
+  * Cliquez sur **Sauvegarder** pour enregistrer l'abonnement dans votre liste d'abonnements à des notifications.
   * Cliquez sur **Sauvegarder et tester** pour enregistrer et tester la notification.
-  * Cliquez sur **Sauvegarder et fermer** pour enregistrer l'abonnement dans votre liste d'abonnements à des notifications
-et revenir
-à la page précédente.
+  * Cliquez sur **Sauvegarder et fermer** pour enregistrer l'abonnement dans votre liste d'abonnements à des notifications et revenir à la page précédente.
 
-*Tableau 3. Zones pour les abonnements à des notifications par courrier électronique sur les mises à jour de maintenance ou les
-incidents*
-{: #caption}
+*Tableau 3. Zones pour les abonnements à des notifications par courrier électronique sur les mises à jour de maintenance ou les incidents*
 {: #emailnotmaintinc}
 
 | **Zone** | **Description** |
@@ -126,7 +106,6 @@ incidents*
 | Description | Ajoutez une description unique pour l'abonnement que vous créez. |
 
 *Tableau 4. Zones pour les abonnements à des notifications par courrier électronique sur les seuils*
-{: #caption}
 {: #emailnottrhesh}
 
 | **Zone** | **Description** |
@@ -134,28 +113,20 @@ incidents*
 | Activé | Sélectionnez l'option d'activation des notifications par courrier électronique. Effacez la sélection pour désactiver la notification par courrier électronique. Les abonnements sont activés par défaut. |
 | Type | Sélectionnez **Courrier électronique**. |
 | Evénement | Sélectionnez **Seuil**. |
-| Seuil  | Sélectionnez le type de seuil pour lequel vous voulez recevoir des notifications : disque physique, mémoire physique, disque réservé ou mémoire réservée.  |
-| Direction du seuil  | Sélectionnez la direction dans laquelle les données doivent être classées, c'est-à-dire Croissant ou Décroissant, lorsqu'elles dépassent ou passent sous la valeur Notifier lors du dépassement du seuil/lors du passage sous le seuil que vous avez définie. Par exemple, si la valeur Notifier lors du dépassement du seuil/lors du passage sous le seuil est de 50 % et que la direction est décroissante, vous ne recevez de notification que si le pourcentage d'utilisation passe de 50 % ou plus à moins de 50 %. Si vous définissez la direction croissante, vous recevez une notification lorsque le pourcentage d'utilisation passe de de moins de 50 % à plus de 50 %.
-
-| Notifier lors du dépassement du seuil (%) | Entrez le seuil en pourcentage à partir duquel vous voulez recevoir une notification. Si vous avez choisi la
-propriété Croissant dans la zone Direction du seuil, la notification par courrier électronique est envoyée lorsque le seuil dépasse ce pourcentage.  |
-| Notifier lors du passage sous le seuil (%) | Entrez le seuil en pourcentage à partir duquel vous voulez recevoir une notification. Si vous avez choisi la propriété Décroissant dans la zone Direction du seuil, la notification par courrier électronique est envoyée lorsque le seuil passe sous ce pourcentage.  |
+| Seuil | Sélectionnez le type de seuil pour lequel vous voulez recevoir des notifications : disque physique, mémoire physique, disque réservé ou mémoire réservée. |
+| Direction du seuil | Sélectionnez la direction dans laquelle les données doivent être classées, c'est-à-dire Croissant ou Décroissant, lorsqu'elles dépassent ou passent sous la valeur Notifier lors du dépassement du seuil/lors du passage sous le seuil que vous avez définie. Par exemple, si la valeur Notifier lors du dépassement du seuil/lors du passage sous le seuil est de 50 % et que la direction est décroissante, vous ne recevez de notification que si le pourcentage d'utilisation passe de 50 % ou plus à moins de 50 %. Si vous définissez la direction croissante, vous recevez une notification lorsque le pourcentage d'utilisation passe de de moins de 50 % à plus de 50 %.
+| Notifier lors du dépassement du seuil (%) | Entrez le seuil en pourcentage à partir duquel vous voulez recevoir une notification. Si vous avez choisi la propriété Croissant dans la zone Direction du seuil, la notification par courrier électronique est envoyée lorsque le seuil dépasse ce pourcentage. |
+| Notifier lors du passage sous le seuil (%) | Entrez le seuil en pourcentage à partir duquel vous voulez recevoir une notification. Si vous avez choisi la propriété Décroissant dans la zone Direction du seuil, la notification par courrier électronique est envoyée lorsque le seuil passe sous ce pourcentage. |
 | Description | Ajoutez une description unique pour l'abonnement que vous créez. |
 | Objet | Renseignez la ligne d'objet du courrier électronique. Cette zone est obligatoire.  |
-| Corps du message  | Entrez le texte du corps du message à envoyer dans le message électronique. Vous pouvez utiliser les valeurs de contenu IBM pour alimenter la notification par courrier électronique avec les informations pertinentes. Voir le tableau [Valeurs de la section de contenu de seuil](index.html#threshpayload) pour identifier les valeurs que vous pouvez utiliser. Servez-vous des balises HTML élémentaires pour structurer votre courrier électronique. Cette zone est obligatoire. |
+| Corps du message | Entrez le texte du corps du message à envoyer dans le message électronique. Vous pouvez utiliser les valeurs de contenu IBM pour alimenter la notification par courrier électronique avec les informations pertinentes. Voir le tableau [Valeurs de la section de contenu de seuil](index.html#threshpayload) pour identifier les valeurs que vous pouvez utiliser. Servez-vous des balises HTML élémentaires pour structurer votre courrier électronique. Cette zone est obligatoire. |
 | A | Entrez l'adresse ou les adresses électroniques des destinataires de la notification par courrier électronique dans une liste séparée par des virgules. Développez les options "cc" ou "bcc" pour ajouter d'autres destinataires au courrier électronique. Cette zone est obligatoire. |
 
-Les données de seuil sont collectées toutes les six heures. Une notification n'est envoyée qu'une fois lorsque la valeur dépasse ou passe sous la
-valeur que vous avez définie. Aucune nouvelle notification n'est envoyée sauf si la valeur passe sous le seuil, si vous avez choisi la propriété Croissant,
-puis dépasse à nouveau le seuil. De même, si vous avez choisi la propriété Décroissant, vous ne recevez de nouvelle notification que si la valeur
-dépasse le seuil que vous avez défini, puis passe à nouveau sous le seuil.  
+Les données de seuil sont collectées toutes les six heures. Une notification n'est envoyée qu'une fois lorsque la valeur dépasse ou passe sous la valeur que vous avez définie. Aucune nouvelle notification n'est envoyée sauf si la valeur passe sous le seuil, si vous avez choisi la propriété Croissant, puis dépasse à nouveau le seuil. De même, si vous avez choisi la propriété Décroissant, vous ne recevez de nouvelle notification que si la valeur dépasse le seuil que vous avez défini, puis passe à nouveau sous le seuil. 
 
-Si vous ne voulez pas attendre six heures avant l'envoi de la notification lorsque le seuil est atteint, après avoir rempli les zones du formulaire,
-vous pouvez cliquer sur **Sauvegarder et tester** pour sauvegarder et tester la notification avec des exemples de données.
-
+Si vous ne voulez pas attendre six heures avant l'envoi de la notification lorsque le seuil est atteint, après avoir rempli les zones du formulaire, vous pouvez cliquer sur **Sauvegarder et tester** pour sauvegarder et tester la notification avec des exemples de données.
 
 *Tableau 5. Zones de formulaire pour un abonnement aux notifications par webhook sur la maintenance ou les incidents*
-{: #caption}
 {: #webhooknotsub}
 
 | **Zone** | **Description** |
@@ -163,27 +134,23 @@ vous pouvez cliquer sur **Sauvegarder et tester** pour sauvegarder et tester la 
 | Activé | Sélectionnez l'option d'activation de la notification. Effacez la sélection pour désactiver la notification. Les abonnements sont activés par défaut. |
 | Type | Sélectionnez **Webhook** |
 | Evénement | Choisissez de vous abonner aux notifications relatives à un événement **Maintenance** ou **Incident**. |
-| Autorisation | Choisissez d'activer ou non l'autorisation. Les options sont **De base** et **Aucune**. |
+| Autorisation | Choisissez d'activer ou non l'autorisation.  Les options sont **De base** et **Aucune**. |
 | Nom d'utilisateur | Si vous avez choisi l'autorisation **De base**, entrez votre nom d'utilisateur pour votre service Web. Si vous ne voulez pas utiliser vos données d'identification personnelles, vous pouvez configurer un ID fonctionnel à utiliser spécifiquement avec {{site.data.keyword.Bluemix_notm}}. |
-| Mot de passe | Si vous avez choisi l'autorisation **De base**, entrez le mot de passe pour votre service Web.  |
+| Mot de passe | Si vous avez choisi l'autorisation **De base**, entrez le mot de passe pour votre service Web. |
 | Description | Ajoutez une description unique pour l'abonnement que vous créez. |
-| Nouvel événement  | Sélectionnez cette option afin d'activer la notification pour les nouveaux événements de maintenance ou d'incident. Effacez la sélection pour désactiver la notification. |
+| Nouvel événement | Sélectionnez cette option afin d'activer la notification pour les nouveaux événements de maintenance ou d'incident. Effacez la sélection pour désactiver la notification. |
 | Méthode | Sélectionnez **GET**, **POST** ou **PUT**. |
 | URL | Entrez l'URL pour connexion à votre service Web. |
-| Propriété de réponse  | Cette zone facultative contient le nom de propriété qui identifie la ressource créée par votre service Web lorsqu'une demande POST
-ou PUT est envoyée. Si vous fournissez une propriété de réponse pour un nouvel événement et choisissez de créer un abonnement pour une modification
-apportée à un événement, vous devez aussi la fournir pour l'abonnement Modification d'événement. Selon le service Web que vous utilisez, vous pouvez la spécifier dans l'adresse URL ou sous forme de valeur de contenu.   |
+| Propriété de réponse | Cette zone facultative contient le nom de propriété qui identifie la ressource créée par votre service Web lorsqu'une demande POST ou PUT est envoyée. Si vous fournissez une propriété de réponse pour un nouvel événement et choisissez de créer un abonnement pour une modification apportée à un événement, vous devez aussi la fournir pour l'abonnement Modification d'événement. Selon le service Web que vous utilisez, vous pouvez la spécifier dans l'adresse URL ou sous forme de valeur de contenu.  |
 | Contenu | Si vous avez sélectionné la méthode POST ou PUT, entrez les propriétés spécifiques au service Web que vous utilisez, appariées aux valeurs de contenu utilisées pour la notification IBM. Voir le tableau [Valeurs de la section de contenu de maintenance et d'incident](index.html#payload) pour identifier les valeurs que vous pouvez utiliser. Si vous n'entrez pas d'informations dans cette section, vous recevrez une notification ne comportant pas d'information supplémentaire. |
-| Modification d'événement  | Sélectionnez cette option pour créer des abonnements à des notifications sur les modifications apportées aux événements de maintenance ou d'incident pour lesquels vous avez créé des abonnements. Effacez la sélection pour désactiver la notification. |
-| Utiliser les valeurs et le contenu du nouvel événement  | Utilise le contenu des zones Méthode, URL et Contenu de la section Nouvel événement. Si cette
-option est sélectionnée, ces zones ne peuvent pas être éditées dans la section Modification d'événement.  |
+| Modification d'événement | Sélectionnez cette option pour créer des abonnements à des notifications sur les modifications apportées aux événements de maintenance ou d'incident pour lesquels vous avez créé des abonnements. Effacez la sélection pour désactiver la notification. |
+| Utiliser les valeurs et le contenu du nouvel événement | Utilise le contenu des zones Méthode, URL et Contenu de la section Nouvel événement. Si cette option est sélectionnée, ces zones ne peuvent pas être éditées dans la section Modification d'événement. |
 | Méthode | Sélectionnez **GET**, **POST** ou **PUT**. |
 | URL | Entrez l'URL pour connexion à votre service Web. |
 | Contenu | Si vous avez sélectionné la méthode POST ou PUT, entrez les propriétés spécifiques au service Web que vous utilisez, appariées aux valeurs de contenu utilisées pour la notification IBM. Voir le tableau [Valeurs de la section de contenu de maintenance et d'incident](index.html#payload) pour identifier les valeurs que vous pouvez utiliser. Si vous n'entrez pas d'informations dans cette section, vous recevrez une notification ne comportant pas d'information supplémentaire. |
 | Combiner des notifications | Sélectionnez l'option permettant de combiner les notifications relatives aux incidents pour toutes les régions dans une seule notification. Cette option est disponible uniquement pour les incidents. |
 
 *Tableau 6. Zones de formulaire pour un abonnement aux notifications par webhook sur les seuils*
-{: #caption}
 {: #webhooknotthresh}
 
 | **Zone** | **Description** |
@@ -191,19 +158,18 @@ option est sélectionnée, ces zones ne peuvent pas être éditées dans la sect
 | Activé | Sélectionnez l'option d'activation de la notification. Effacez la sélection pour désactiver la notification. Les abonnements sont activés par défaut. |
 | Type | Sélectionnez **Webhook**. |
 | Evénement | Sélectionnez **Seuil**. |
-| Seuil  | Sélectionnez le type de seuil pour lequel vous voulez recevoir des notifications : disque physique, mémoire physique, disque réservé ou mémoire réservée.  |
-| Direction du seuil  | Indiquez si vous voulez afficher les données de seuil dans l'ordre croissant ou décroissant.   |
-| Notifier lors du passage sous le seuil (%) | Si vous avez sélectionné une **direction de seuil** **décroissante**, entrez le seuil en pourcentage à partir duquel vous voulez recevoir une notification. Lorsque le seuil passe sous ce pourcentage, la notification par webhook est envoyée.  |
-| Notifier lors du dépassement du seuil (%) | Si vous avez sélectionné une **direction de seuil** **croissante**, entrez le seuil en pourcentage à partir duquel vous voulez recevoir une notification. Lorsque le seuil dépasse ce pourcentage, la notification par webhook est envoyée.  |
+| Seuil | Sélectionnez le type de seuil pour lequel vous voulez recevoir des notifications : disque physique, mémoire physique, disque réservé ou mémoire réservée. |
+| Direction du seuil | Indiquez si vous voulez afficher les données de seuil dans l'ordre croissant ou décroissant.  |
+| Notifier lors du passage sous le seuil (%) | Si vous avez sélectionné une **direction de seuil** **décroissante**, entrez le seuil en pourcentage à partir duquel vous voulez recevoir une notification. Lorsque le seuil passe sous ce pourcentage, la notification par webhook est envoyée. |
+| Notifier lors du dépassement du seuil (%) | Si vous avez sélectionné une **direction de seuil** **croissante**, entrez le seuil en pourcentage à partir duquel vous voulez recevoir une notification. Lorsque le seuil dépasse ce pourcentage, la notification par webhook est envoyée. |
 | Description | Ajoutez une description unique pour l'abonnement que vous créez. |
-| Autorisation | Choisissez d'activer ou non l'autorisation. Les options sont **De base** et **Aucune**. |
+| Autorisation | Choisissez d'activer ou non l'autorisation.  Les options sont **De base** et **Aucune**. |
 | Nom d'utilisateur | Si vous avez choisi l'autorisation De base, entrez votre nom d'utilisateur pour votre service Web. Si vous ne voulez pas utiliser vos données d'identification personnelles, vous pouvez configurer un ID fonctionnel à utiliser spécifiquement avec {{site.data.keyword.Bluemix_notm}}. |
-| Mot de passe | Si vous avez choisi l'autorisation De base, entrez le mot de passe pour votre service Web.  |
+| Mot de passe | Si vous avez choisi l'autorisation De base, entrez le mot de passe pour votre service Web. |
 | Méthode | Sélectionnez **GET**, **POST** ou **PUT**. |
 | URL | Entrez l'URL pour connexion à votre service Web. |
 
 *Tableau 7. Valeurs de la section de contenu de maintenance et d'incident*
-{: #caption}
 {: #payload}
 
 | **Valeur IBM** | **Description** | **Type d'événement** |
@@ -221,66 +187,49 @@ option est sélectionnée, ces zones ne peuvent pas être éditées dans la sect
 | {{type}} | Mise à jour ou incident | Mise à jour de maintenance et incident |
 
 *Tableau 8. Valeurs de la section de contenu de seuil*
-{: #caption}
 {: #threshpayload}
 
 | **Valeur IBM** | **Description** | **Type d'événement** |
 |----------------|----------------|------------------------|
-| {{content.physical_disk}} | Seuil de disque physique | Seuil  |
-| {{content.physical_memory}} | Seuil de mémoire physique | Seuil  |  
-| {{content.reserved_disk}} | Seuil de disque réservé | Seuil  |
-| {{content.reserved_memory}} | Seuil de mémoire réservée  | Seuil  |
+| {{content.physical_disk}} | Seuil de disque physique | Seuil |
+| {{content.physical_memory}} | Seuil de mémoire physique | Seuil |  
+| {{content.reserved_disk}} | Seuil de disque réservé | Seuil |
+| {{content.reserved_memory}} | Seuil de mémoire réservée | Seuil |
 
-Une fois votre abonnement aux notifications sauvegardé, vous recevrez des notifications via la méthode configurée. Les notifications apparaissent
-toujours aux emplacements suivants :  
+Une fois votre abonnement aux notifications sauvegardé, vous recevrez des notifications via la méthode configurée. Les notifications apparaissent toujours aux emplacements suivants :  
  * Dans la page Statut pour les incidents
  * Dans la page Statut pour les événements de mise à jour de maintenance planifiés avec interruption
  * Dans la zone Notifications de la page Administration pour les mises à jour de maintenance
 
-Vous pouvez sélectionner n'importe quel abonnement aux notifications sauvegardé, examiner l'activité récente ou l'éditer selon vos
-besoins. Cliquez sur une entrée d'activité récente pour la développer et visualiser les détails de son historique.
+Vous pouvez sélectionner n'importe quel abonnement aux notifications sauvegardé, examiner l'activité récente ou l'éditer selon vos besoins. Cliquez sur une entrée d'activité récente pour la développer et visualiser les détails de son historique.
 
 ## Mises à jour de maintenance
 {: #oc_schedulemaintenance}
 
-Vous pouvez afficher les mises à jour de maintenance planifiées et en attente, si vous disposez du droit de
-superutilisateur (`ops.admin`), en cliquant sur **ADMINISTRATION &gt; INFORMATIONS SYSTEME &gt; *Nombre* en
-attente** pour accéder à la page **Mises à jour du système**.  Tous les utilisateurs de votre environnement peuvent afficher
-les événements de mise à jour de maintenance planifiés avec interruption en cliquant sur l'icône
-**{{site.data.keyword.avatar}}** ![Avatar](../support/images/account_support.svg), puis en sélectionnant
-**Statut**.
+Vous pouvez afficher les mises à jour de maintenance planifiées et en attente, si vous disposez du droit de superutilisateur (`ops.admin`), en cliquant sur **ADMINISTRATION &gt; INFORMATIONS SYSTEME &gt; *Nombre* en attente** pour accéder à la page **Mises à jour du système**.  Tous les utilisateurs de votre environnement peuvent afficher les événements de mise à jour de maintenance planifiés avec interruption en cliquant sur l'icône **{{site.data.keyword.avatar}}** ![Avatar](../support/images/account_support.svg), puis en sélectionnant **Statut**.
 
 **Remarque **: reportez-vous tout d'abord à la section [Définition de fenêtres de maintenance pré-approuvées](index.html#preapprovedmaintenance) ci-dessous. Ces fenêtres doivent être définies pour qu'IBM puisse planifier la maintenance de votre environnement.
 
 <dl>
 <dt>Mises à jour sans interruption</dt>
-<dd>Une mise à jour sans interruption n'a pas d'impact sur votre environnement, vos applications en cours d'exécution ou l'accès de vos utilisateurs à vos
-applications. Ce type de mise à jour ne requiert pas d'approbation au cas par cas et est appliquée au cours des fenêtres de disponibilité pré-approuvées pour la maintenance que vous avez définies dans la page Mises à jour du système.</dd>
+<dd>Une mise à jour sans interruption n'a pas d'impact sur votre environnement, vos applications en cours d'exécution ou l'accès de vos utilisateurs à vos applications. Ce type de mise à jour ne requiert pas d'approbation au cas par cas et est appliquée au cours des fenêtres de disponibilité pré-approuvées pour la maintenance que vous avez définies dans la page Mises à jour du système.</dd>
 <dt>Mises à jour avec interruption</dt>
-<dd>Une mise à jour avec interruption peut avoir un impact sur votre environnement, les applications en cours d'exécution ou l'accès de vos utilisateurs
-à vos applications. Vous devez planifier et approuver chacune de ces mises à jour de maintenance dans la fenêtre de maintenance de 21 jours allouée. Vous pouvez
-sélectionner la date et l'heure de déploiement suggérées, l'option pour n'importe laquelle de vos fenêtres pré-approuvées, ou bien ouvrir le calendrier afin de
-sélectionner trois dates et heures spécifiques parmi lesquelles IBM pourra choisir pour planifier la mise à jour.</dd>
+<dd>Une mise à jour avec interruption peut avoir un impact sur votre environnement, les applications en cours d'exécution ou l'accès de vos utilisateurs à vos applications. Vous devez planifier et approuver chacune de ces mises à jour de maintenance dans la fenêtre de maintenance de 21 jours allouée. Vous pouvez sélectionner la date et l'heure de déploiement suggérées, l'option pour n'importe laquelle de vos fenêtres pré-approuvées, ou bien ouvrir le calendrier afin de sélectionner trois dates et heures spécifiques parmi lesquelles IBM pourra choisir pour planifier la mise à jour.</dd>
 </dl>
 
 
 ### Définition de fenêtres de maintenance pré-approuvées
 {: #preapprovedmaintenance}
 
-L'exécution des mises à jour de maintenance sans interruption est planifiée au cours d'une fenêtre de temps préalablement approuvée. Par défaut,
-deux fenêtres de disponibilité pour les mises à jour par semaine sont créées pour votre système. En général, elles sont définies pour se reproduire tous les samedis et dimanches
-soir. Vous pouvez changer les paramètres par défaut de l'une des façons suivantes : 
- * Editez les fenêtres de mise à jour par défaut en choisissant un jour différent ou une heure de début différente, ou les deux. 
- * Créez une fenêtre de mise à jour, puis supprimez la fenêtre de mise à jour par défaut. 
+L'exécution des mises à jour de maintenance sans interruption est planifiée au cours d'une fenêtre de temps préalablement approuvée. Par défaut, deux fenêtres de disponibilité pour les mises à jour par semaine sont créées pour votre système. En général, elles sont définies pour se reproduire tous les samedis et dimanches soir. Vous pouvez changer les paramètres par défaut de l'une des façons suivantes :
+ * Editez les fenêtres de mise à jour par défaut en choisissant un jour différent ou une heure de début différente, ou les deux.
+ * Créez une fenêtre de mise à jour, puis supprimez la fenêtre de mise à jour par défaut.
 
-Pour sauvegarder vos modifications, vous devez tout de même atteindre le temps minimal requis chaque semaine. 
+Pour sauvegarder vos modifications, vous devez tout de même atteindre le temps minimal requis chaque semaine.
 
-Vous devez définir au minimum 12 heures disponibles réparties sur au moins deux jours de la semaine. Par exemple, vous pouvez définir des créneaux
-de six heures sur deux jours distincts, ou des créneaux de quatre heures sur trois jours distincts. Pour garantir que les créneaux soient assez longs pour
-l'application d'une mise à jour, la durée de chaque créneau doit être d'au moins quatre heures.  
+Vous devez définir au minimum 12 heures disponibles réparties sur au moins deux jours de la semaine. Par exemple, vous pouvez définir des créneaux de six heures sur deux jours distincts, ou des créneaux de quatre heures sur trois jours distincts. Pour garantir que les créneaux soient assez longs pour l'application d'une mise à jour, la durée de chaque créneau doit être d'au moins quatre heures.  
 
-**Remarque **: seuls les utilisateurs disposant de l'autorisation de superutilisateur (`ops.admin`) peuvent planifier et approuver
-des mises à jour de maintenance.
+**Remarque **: seuls les utilisateurs disposant de l'autorisation de superutilisateur (`ops.admin`) peuvent planifier et approuver des mises à jour de maintenance.
 
 1. Accédez à **ADMINISTRATION &gt; INFORMATIONS SYSTEME &gt; *Nombre* en attente &gt; Gérer la disponibilité**.
 2. Développez la section **Gérer les fenêtres de disponibilité pour les mises à jour**.
@@ -293,15 +242,9 @@ des mises à jour de maintenance.
 ### Définition de fenêtres d'indisponibilité pour la maintenance
 {: #blockpreapprovedmaintenance}
 
-Vous pouvez choisir de définir des fenêtres d'indisponibilité pour les mises à jour spécifiques au cours desquelles votre environnement ne peut pas
-faire l'objet de mises à jour de maintenance sans interruption. Par exemple, vous pouvez choisir un week-end ou un jour férié pendant lequel l'activité est
-élevée et vous ne voulez pas appliquer de maintenance, afin de garantir que vos applications seront disponibles pour vos utilisateurs.
+Vous pouvez choisir de définir des fenêtres d'indisponibilité pour les mises à jour spécifiques au cours desquelles votre environnement ne peut pas faire l'objet de mises à jour de maintenance sans interruption. Par exemple, vous pouvez choisir un week-end ou un jour férié pendant lequel l'activité est élevée et vous ne voulez pas appliquer de maintenance, afin de garantir que vos applications seront disponibles pour vos utilisateurs.
 
-Vous devez définir au minimum 12 heures disponibles réparties sur au moins deux jours de la semaine. Lorsque vous tentez de créer une fenêtre
-d'indisponibilité pour les mises à jour, il se peut que vous ne parveniez pas à sauvegarder vos modifications si avec cette nouvelle fenêtre, votre système
-passe sous le minimum hebdomadaire requis. Dans ce cas, vous devez d'abord supprimer certaines des fenêtres d'indisponibilité pour les mises à jour
-existantes et ajouter d'autres fenêtres de disponibilité pour les mises à jour avant de pouvoir sauvegarder la nouvelle fenêtre d'indisponibilité pour les
-mises à jour. Voir [Définition de fenêtres de maintenance pré-approuvées](index.html#preapprovedmaintenance) pour plus d'informations. 
+Vous devez définir au minimum 12 heures disponibles réparties sur au moins deux jours de la semaine. Lorsque vous tentez de créer une fenêtre d'indisponibilité pour les mises à jour, il se peut que vous ne parveniez pas à sauvegarder vos modifications si avec cette nouvelle fenêtre, votre système passe sous le minimum hebdomadaire requis. Dans ce cas, vous devez d'abord supprimer certaines des fenêtres d'indisponibilité pour les mises à jour existantes et ajouter d'autres fenêtres de disponibilité pour les mises à jour avant de pouvoir sauvegarder la nouvelle fenêtre d'indisponibilité pour les mises à jour. Voir [Définition de fenêtres de maintenance pré-approuvées](index.html#preapprovedmaintenance) pour plus d'informations.
 
 1. Accédez à **ADMINISTRATION &gt; INFORMATIONS SYSTEME &gt; *Nombre* en attente &gt; Gérer la disponibilité**.
 2. Développez la section **Gérer les fenêtres d'indisponibilité pour les mises à jour**.
@@ -312,9 +255,7 @@ mises à jour. Voir [Définition de fenêtres de maintenance pré-approuvées](i
 ### Planification et approbation des mises à jour
 {: #scheduleandapprove}
 
-Une fois que vous avez défini vos fenêtres de maintenance pré-approuvées, les mises à jour sans interruption sont planifiées automatiquement à ces
-heures. Votre approbation explicite pour ces types de mise à jour n'est pas requise. Toutefois, vous pouvez afficher les détails de chaque mise à jour de
-maintenance, notamment les éléments mis à jour, la durée de la mise à jour et l'heure de planification de la mise à jour.
+Une fois que vous avez défini vos fenêtres de maintenance pré-approuvées, les mises à jour sans interruption sont planifiées automatiquement à ces heures. Votre approbation explicite pour ces types de mise à jour n'est pas requise. Toutefois, vous pouvez afficher les détails de chaque mise à jour de maintenance, notamment les éléments mis à jour, la durée de la mise à jour et l'heure de planification de la mise à jour.
 
 Afin d'afficher les détails d'une mise à jour sans interruption, procédez comme suit :
 
@@ -322,26 +263,19 @@ Afin d'afficher les détails d'une mise à jour sans interruption, procédez com
 2. Identifiez les lignes pour lesquelles **Customer Scheduling Required** a pour valeur **No**.
 3. Sélectionnez la ligne de cette mise à jour pour afficher les détails.
 
-Une mise à jour avec interruption peut avoir un impact sur votre environnement, les applications en cours d'exécution ou l'accès de vos utilisateurs
-à vos applications. Vous devez planifier et approuver chacune de ces mises à jour de maintenance dans la fenêtre de maintenance de 21 jours allouée. Vous pouvez
-sélectionner la date et l'heure de déploiement suggérées, l'option pour n'importe laquelle de vos fenêtres pré-approuvées, ou bien ouvrir le calendrier afin de
-sélectionner trois dates et heures spécifiques parmi lesquelles IBM pourra choisir pour planifier la mise à jour.
+Une mise à jour avec interruption peut avoir un impact sur votre environnement, les applications en cours d'exécution ou l'accès de vos utilisateurs à vos applications. Vous devez planifier et approuver chacune de ces mises à jour de maintenance dans la fenêtre de maintenance de 21 jours allouée. Vous pouvez sélectionner la date et l'heure de déploiement suggérées, l'option pour n'importe laquelle de vos fenêtres pré-approuvées, ou bien ouvrir le calendrier afin de sélectionner trois dates et heures spécifiques parmi lesquelles IBM pourra choisir pour planifier la mise à jour.
 
 Pour les mises à jour avec interruption requérant votre approbation, procédez comme suit :
 
 1. Accédez à **ADMINISTRATION &gt; INFORMATIONS SYSTEME &gt; *Nombre * en attente**.
 2. Identifiez les lignes pour lesquelles **Customer Scheduling Required** a pour valeur **Yes**.
-3. Sélectionnez la ligne de cette mise à jour afin de consulter les détails de la mise à jour, notamment sa description, la date et l'heure suggérées
-pour la mise à jour, les composants affectés et la durée de la mise à jour.
+3. Sélectionnez la ligne de cette mise à jour afin de consulter les détails de la mise à jour, notamment sa description, la date et l'heure suggérées pour la mise à jour, les composants affectés et la durée de la mise à jour.
 4. Sélectionnez **Planifier et approuver**.
-5. Choisissez l'une des options suivantes : **Date suggérée**, **Autres dates** ou **Toute fenêtre pré-approuvée**. Si
-vous sélectionnez **Autres dates**, vous pouvez ouvrir le calendrier pour sélectionner trois options parmi lesquelles IBM pourra choisir.
+5. Choisissez l'une des options suivantes : **Date suggérée**, **Autres dates** ou **Toute fenêtre pré-approuvée**. Si vous sélectionnez **Autres dates**, vous pouvez ouvrir le calendrier pour sélectionner trois options parmi lesquelles IBM pourra choisir.
 6. Facultatif : dans la liste des autres dates sélectionnées dans le calendrier, sélectionnez celles que vous souhaitez définir comme date préférées pour le déploiement. Chaque date sélectionnée est indiquée comme date préférée pour le déployeur qui planifie le déploiement. IBM essaie de planifier la maintenance dans les fenêtres de mises à jour préférées.
 7. Quand vous avez terminé, cliquez sur **Soumettre**.
 
-En fonction de votre sélection, la mise à jour est planifiée pour son déploiement à la date suggérée que vous avez acceptée,
-lors d'une des fenêtres pré-approuvées ou à l'une des dates et heures spécifiques que vous avez sélectionnées. Lorsque la mise à jour est planifiée pour son
-déploiement par IBM, la date planifiée est indiquée dans les détails de la mise à jour sur la page **Mises à jour du système**. Vous pouvez replanifier un déploiement déjà planifié uniquement si un jour (24 heures) avant la date et l'heure de début planifiées est conservé. Une fois que vous avez replanifié un déploiement, vous ne pouvez plus le redéployer à nouveau.
+En fonction de votre sélection, la mise à jour est planifiée pour son déploiement à la date suggérée que vous avez acceptée, lors d'une des fenêtres pré-approuvées ou à l'une des dates et heures spécifiques que vous avez sélectionnées. Lorsque la mise à jour est planifiée pour son déploiement par IBM, la date planifiée est indiquée dans les détails de la mise à jour sur la page **Mises à jour du système**. Vous pouvez replanifier un déploiement déjà planifié uniquement si un jour (24 heures) avant la date et l'heure de début planifiées est conservé. Une fois que vous avez replanifié un déploiement, vous ne pouvez plus le redéployer à nouveau.
 
 
 ## Affichage des informations système
@@ -349,14 +283,11 @@ déploiement par IBM, la date planifiée est indiquée dans les détails de la m
 
 Pour afficher les informations système, cliquez sur **ADMINISTRATION &gt; INFORMATIONS SYSTEME**.
 
-Vous pouvez afficher diverses sections, notamment la section des mises à jour du système en attente, des informations système générales, des
-informations sur les API et l'interface de ligne de commande, et des détails sur la configuration LDAP.
-
+Vous pouvez afficher diverses sections, notamment la section des mises à jour du système en attente, des informations système générales, des informations sur les API et l'interface de ligne de commande, et des détails sur la configuration LDAP.
 
 ### Mises à jour du système en attente
 
-La section Mises à jour affiche le nombre de notifications relatives à des mises à jour en attente qui requièrent une intervention de votre part. Il
-existe deux types de mise à jour de maintenance :
+La section Mises à jour affiche le nombre de notifications relatives à des mises à jour en attente qui requièrent une intervention de votre part. Deux types peuvent s'afficher :
 
 <dl>
 <dt>Mises à jour sans interruption</dt>
@@ -397,8 +328,7 @@ Vous pouvez afficher différents types d'informations relatives à l'utilisation
 
 - Des informations sur les ressources, notamment l'espace disque, l'utilisation de l'unité centrale, l'utilisation du réseau et les temps de réponse moyens. Voir [Utilisation des ressources](index.html#resourceusage).
 - L'utilisation du compte par organisation, notamment le nombre d'applications de contexte d'exécution et leur utilisation, le nombre total de Go/heure consommé par les contextes d'exécution, ainsi que le nombre d'instances de service et leur utilisation. Voir [Utilisation du compte](index.html#accountusage).
-- L'utilisation du quota de mémoire des organisations, la mémoire allouée aux applications en fonction du quota de mémoire utilisé total, et une vue de la consommation de Go/heure par application pour une organisation spécifique. Vous pouvez aussi afficher l'utilisation du quota pour toutes les organisations dans la page Administration des organisations, dans la section **Surveillance
-des quotas**. Voir [Administration des organisations](../admin/index.html#orgusage).
+- L'utilisation du quota de mémoire des organisations, la mémoire allouée aux applications en fonction du quota de mémoire utilisé total, et une vue de la consommation de Go/heure par application pour une organisation spécifique. Vous pouvez aussi afficher l'utilisation du quota pour toutes les organisations dans la page Administration des organisations, dans la section **Surveillance des quotas**. Voir [Administration des organisations](../admin/index.html#orgusage).
 
 
 ### Utilisation des ressources
@@ -419,12 +349,11 @@ heures ou du dernier jour. Les données affichées dépendent de la somme du tra
 jour.
 - Le nombre moyen de transactions par seconde pour {{site.data.keyword.Bluemix_notm}} au cours des dix minutes précédentes, de l'heure précédente ou du jour précédent.
 
-#### Détails sur la mémoire, le disque et l'unité centrale 
+#### Détails sur la mémoire, le disque et l'unité centrale
 {: #resourceusagedetails}
 
 Dans la section **Utilisation des ressources**, vous pouvez afficher un récapitulatif des quantités
-**réservées** et **physiques** pour votre mémoire et votre disque.
-    
+**réservées** et **physiques** pour votre mémoire et votre disque.    
 	<dl>
 	<dt><strong>Physique</strong></dt>
 	<dd>Quantité de mémoire ou espace disque acheté pour votre environnement.</dd>
@@ -443,25 +372,25 @@ votre unité centrale par agent DEA, cliquez sur **Répartition**.
 Pour des informations plus détaillées sur votre utilisation de la mémoire réservée et physique ou du disque pour une période donnée, cliquez sur
 **Historique**. Vous
 pouvez choisir d'afficher les données hebdomadaires ou mensuelles. La vue de l'utilisation historique affiche un graphique de l'utilisation de la mémoire
-ou du disque pour la période que vous choisissez.
-  
+ou du disque pour la période que vous choisissez.  
 	<dl>
 	<dt><strong>Limite mémoire réservée</strong></dt>
 	<dd>Affichée sous forme de ligne en pointillés horizontale, la limite mémoire réservée est la quantité totale de mémoire ou d'espace disque qui peut être
 réservée
-collectivement par toutes les applications qui s'exécutent dans votre environnement. </dd>
-	<dt><strong>Réservé</strong></dt>
+collectivement par toutes les applications qui s'exécutent dans votre environnement.</dd>
+	<dt><strong>Réservée</strong></dt>
 	<dd>La zone Réservée indique la mémoire ou l'espace disque qui est réservé collectivement par toutes les applications qui s'exécutent dans votre
-environnement. <p>Pour
+environnement.
+	<p>Pour
 identifier les organisations qui ont réservé le plus de mémoire à un moment précis, passez votre souris sur le point à côté de la zone Réservée qui
 est associée à ce moment. Ensuite, vous pouvez cliquer sur une organisation dans le graphique circulaire pour afficher davantage d'informations sur cette
 organisation.</p></dd>
 	<dt><strong>Limite physique</strong></dt>
 	<dd>Affichée sous forme de ligne en pointillés horizontale, la limite physique indique la quantité de mémoire physique ou d'espace disque qui a été achetée
 pour votre
-environnement. </dd>
+environnement.</dd>
 	<dt><strong>Physique</strong></dt>
-	<dd>La zone Physique affiche la quantité de mémoire ou d'espace disque utilisée. </dd>
+	<dd>La zone Physique affiche la quantité de mémoire ou d'espace disque utilisée.</dd>
 	</dl>
 
 
@@ -528,9 +457,7 @@ sélectionnez une organisation dans **Liste des organisations**. La page **Gére
 - Le nombre de routes utilisées
 - Un graphique du quota de mémoire qui représente le quota utilisé et le quota non utilisé
 - Un graphique de l'allocation des applications qui indique quelles sont les applications incluses dans le quota de mémoire utilisé
-- Un graphique de l'utilisation des applications mesurée qui représente un rapport sur trois mois du nombre de Go/heure consommé par application
-déployée. Vous pouvez sélectionner la **vue Liste** pour examiner les données de toutes les applications, notamment l'allocation mémoire par
-application et l'utilisation mesurée en Go par heure au cours des trois derniers mois.
+- Un graphique de l'utilisation des applications mesurée qui représente un rapport sur trois mois du nombre de Go/heure consommé par application déployée. Vous pouvez sélectionner la **vue Liste** pour examiner les données de toutes les applications, notamment l'allocation mémoire par application et l'utilisation mesurée en Go par heure au cours des trois derniers mois.
 
 Pour plus d'informations sur l'affichage de l'utilisation par organisation, l'ajustement des plans d'établissement des quotas et la gestion de vos organisations, voir [Administration des organisations](../admin/index.html#oc_organizations).
 
@@ -553,7 +480,6 @@ console d'administration, à partir de laquelle vous pouvez y accéder. Au bout 
 disposition hors ligne sur demande pendant 9 mois. Au total, les rapports sont disponibles en vue de leur extraction pendant un an.
 
 *Tableau 9. Liste des rapports de sécurité*
-{: #caption}
 
 | **Catégorie** | **Rapport** | **Description** |      
 |-----------------|-------------------|---------------------|
@@ -757,7 +683,6 @@ compressées peuvent contenir respectivement jusqu'à 5 Go et 50 Go de données 
 Les tableaux ci-dessous peuvent vous aider à remplir le fichier JSON.
 
 *Tableau 10. Zones JSON*
-{: #caption}
 
 | **Zones JSON** | **Description** |
 |-----------------|-----------------|
@@ -772,7 +697,6 @@ pouvez pas le changer une fois le service enregistré auprès de {{site.data.key
 |plans | Tableau de définitions de plan de service. Voir le tableau suivant intitulé [Zones de plan](index.html#planfields) pour plus d'informations. |
 
 *Tableau 11. Zones de métadonnées*
-{: #caption}
 {: #metadatafields}
 
 | **Valeurs des métadonnées** | **Description** |
@@ -830,7 +754,6 @@ catalogue {{site.data.keyword.Bluemix_notm}} :
 ![Détails du service dans le catalogue.](images/metadata.png "Vue des détails du service dans le catalogue Bluemix")
 
 *Tableau 12. Zones de plan*
-{: #caption}
 {: #planfields}
 
 | **Valeurs de plan** | **Description** |
@@ -842,7 +765,6 @@ catalogue {{site.data.keyword.Bluemix_notm}} :
 |metadata (facultative)    | Métadonnées du plan de service qui s'affichent dans le catalogue {{site.data.keyword.Bluemix_notm}} et dans la fiche de prix. La zone metadata est facultative. Vous pouvez spécifier les zones suivantes dans la zone metadata : displayName, type (subscription, reservable, planDetails), bullets, costs (unitId, unit, partNumber) et paidOnly. Voir le tableau ci-après intitulé [Zones de métadonnées de plan](index.html#planmetadata) pour plus d'informations. |
 
 *Tableau 13. Zones de métadonnées de plan*
-{: #caption}
 {: #planmetadata}
 
 | **Valeurs des métadonnées de plan** | **Description** |
@@ -926,9 +848,9 @@ Vous pouvez développer la section **Surveillance des quotas** pour afficher les
 
 - L'utilisation de la mémoire de l'environnement présente en détail l'utilisation de la mémoire dans l'environnement système complet. Le graphique affiche les informations suivantes :
 <ul>
-<li>La mémoire physique qui est utilisée et la limite de mémoire physique qui est disponible </li>
-<li>Le quota de mémoire qui est actuellement réservée et la limite de mémoire qui peut être réservée </li>
-<li>Le quota total de mémoire pour vos organisations </li>
+<li>La mémoire physique qui est utilisée et la limite de mémoire physique qui est disponible</li>
+<li>Le quota de mémoire qui est actuellement réservée et la limite de mémoire qui peut être réservée</li>
+<li>Le quota total de mémoire pour vos organisations</li>
 </ul>
 Les types ci-après d'utilisation de la mémoire sont affichés dans le graphique.
 
@@ -983,9 +905,7 @@ l'organisation.
   - Le nombre de routes utilisées
   - Un graphique du quota de mémoire qui représente le quota utilisé et le quota non utilisé
   - Un graphique de l'allocation des applications qui indique quelles sont les applications incluses dans le quota de mémoire utilisé
-  - Un graphique de l'utilisation des applications mesurée qui représente un rapport sur trois mois du nombre de Go/heure consommé par application
-déployée. Vous pouvez sélectionner la **vue Liste** pour examiner les données de toutes les applications, notamment l'allocation mémoire par
-application et l'utilisation mesurée en Go par heure au cours des trois derniers mois.
+  - Un graphique de l'utilisation des applications mesurée qui représente un rapport sur trois mois du nombre de Go/heure consommé par application déployée. Vous pouvez sélectionner la **vue Liste** pour examiner les données de toutes les applications, notamment l'allocation mémoire par application et l'utilisation mesurée en Go par heure au cours des trois derniers mois.
 
 - Pour éditer le nom de l'organisation et ajouter ou retirer des responsables, cliquez sur le nom de l'organisation dans la liste et suivez les
 invites à l'écran.
@@ -1094,12 +1014,10 @@ derniers d'exécuter des tâches
 spécifiques dans la console d'administration.
 
 *Tableau 14. Droits*
-{: #caption}
 
 | **Droit d'utilisateur** | **Description** |       
 |-----------------|-------------------|
-| Superutilisateur | Les utilisateurs pour lesquels le droit **Superutilisateur** a pour valeur **Activé** sont autorisés à éditer des droits pour d'autres utilisateurs. Si le droit est activé, l'accès complet à tous les autres droits est automatiquement activé . 
-En plus des tâches décrites dans ce tableau pour chaque droit, ces utilisateurs peuvent également configurer des abonnements à des notifications afin de recevoir
+| Superutilisateur | Les utilisateurs pour lesquels le droit **Superutilisateur** a pour valeur **Activé** sont autorisés à éditer des droits pour d'autres utilisateurs. Si le droit est activé, l'accès complet à tous les autres droits est automatiquement activé . En plus des tâches décrites dans ce tableau pour chaque droit, ces utilisateurs peuvent également configurer des abonnements à des notifications afin de recevoir
 directement des alertes relatives à des opérations de maintenance ou à des incidents, planifier des tâches de maintenance, exécuter des vérifications sur
 les composants de console et créer des organisations et des espaces pour l'environnement. Ce droit équivaut au rôle d'administrateur (admin) pour la console d'administration.  |
 | Accès de base | Les utilisateurs pour lesquels le droit **Accès de base** a pour valeur **Activé** sont autorisés à afficher l'option de page d'administration dans l'interface utilisateur de {{site.data.keyword.Bluemix_notm}}. Les utilisateurs pour lesquels le droit est activé peuvent accéder aux vignettes [Informations système](#oc_system) et [Utilisation des ressources](#oc_resource). Sans ce droit, les utilisateurs ne peuvent pas voir l'option de menu d'administration ni y accéder. Ce droit équivaut au rôle d'administrateur (admin) pour la console d'administration. Il équivaut aussi au droit de connexion utilisé précédemment pour la console d'administration. |
@@ -1136,8 +1054,9 @@ Pour vous connecter à la console d'administration, vous pouvez utiliser l'authe
 
 Pour vous connecter à la console d'administration, exécutez la commande suivante :
 
-`curl --user <id_utilisateur>:<mot_de_passe> -c ./cookies.txt --header "Accept: application/json"
-https://<votre_hôte>.ibm.com/login | python -m json.tool`
+```
+curl --user <id_utilisateur>:<mot_de_passe> -c ./cookies.txt --header "Accept: application/json" https://<votre_hôte>.ibm.com/login | python -m json.tool
+```
 {: codeblock}
 
 <dl class="parml">
@@ -1157,6 +1076,7 @@ https://<votre_hôte>.ibm.com/login | python -m json.tool`
 
 Voici un exemple de sortie pour
 cette commande :
+
 ```
 {
     "message": "Logged in",
@@ -1176,7 +1096,9 @@ répertorier toutes les organisations. Vous devez disposer du droit **Utilisateu
 pouvoir
 répertorier les organisations. Pour répertorier toutes les organisations, exécutez la commande suivante :
 
-`curl -b ./cookies.txt https://<votre_hôte>.ibm.com/codi/v1/organizations | python -m json.tool`
+```
+curl -b ./cookies.txt https://<votre_hôte>.ibm.com/codi/v1/organizations | python -m json.tool
+```
 {: codeblock}
 
 <dl class="parml">
@@ -1221,7 +1143,9 @@ REST `Admin` afin de répertorier les utilisateurs enregistrés. Vous devez disp
 l'accès **Lecture** pour pouvoir répertorier les utilisateurs enregistrés. Pour répertorier tous les utilisateurs, exécutez la commande
 suivante :
 
-`curl -b ./cookies.txt https://<votre_hôte>.ibm.com/codi/v1/users | python -m json.tool`
+```
+curl -b ./cookies.txt https://<votre_hôte>.ibm.com/codi/v1/users | python -m json.tool
+```
 {: codeblock}
 
 <dl class="parml">
@@ -1313,7 +1237,9 @@ utilisateurs](index.html#listingusr) pour l'adresse électronique et l'ID utilis
 Vous
 fournissez les informations dans un fichier JSON.
 
-`curl -b ./cookies.txt https://<votre_hôte>.ibm.com/codi/v1/users | python -m json.tool`
+```
+curl -b ./cookies.txt https://<votre_hôte>.ibm.com/codi/v1/users | python -m json.tool
+```
 {: codeblock}
 
 <dl class="parml">
@@ -1406,8 +1332,9 @@ devez disposer du droit **Utilisateurs** avec l'accès **Ecriture** pour pouvoir
 Pour retirer un utilisateur, vous devez
 fournir l'ID de l'utilisateur. Exécutez la commande suivante :
 
-`curl -v -b ./cookies.txt -X DELETE
-https://<votre_hôte>.ibm.com/codi/v1/users?user_id=<un_id_utilisateur@domaine.com>`
+```
+curl -v -b ./cookies.txt -X DELETE https://<votre_hôte>.ibm.com/codi/v1/users?user_id=<un_id_utilisateur@domaine.com>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -1439,11 +1366,336 @@ cette commande :
  ```
 {: screen}
 
+## API pour les mesures (expérimental)
+{: #envappmetricsapi}
+
+Vous pouvez employer deux API expérimentales pour regrouper des mesures
+relatives à votre environnement ou à vos applications. Ces deux API renvoient
+un tableau de points de données des mesures demandées sur la durée indiquée.
+
+**Remarques** :
+
+1. Un utilisateur peut effectuer jusqu'à 200 demandes d'API de mesures par heure.
+2. Chaque demande d'API renvoie jusqu'à 200 points de données par demande. Si des données supplémentaires sont disponibles, une URL est fournie en réponse au chargement de l'ensemble de données suivant.
+
+## Regroupement des mesures relatives à votre environnement 
+
+Vous pouvez utiliser l'API d'environnement expérimentale pour regrouper
+des informations de niveau supérieur relatives à votre environnement sur une
+période que vous définissez. Les points de données disponibles sur la durée
+indiquée sont renvoyés. Les données sont enregistrées environ toutes les
+heures. SI, par exemple, vous avez demandé six heures de données relatives à
+l'unité centrale de votre environnement, la réponse inclut les données
+relatives à l'unité centrale pour chacune des six heures demandées.
+
+### Paramètres de requête des mesures relatives à l'environnement
+
+Les paramètres de requête suivants permettent de regrouper les mesures
+relatives à l'unité centrale, le disque, la mémoire, le réseau et les applications :
+
+<dl class="parml">
+<dt class="pt dlterm">metric</dt>
+<dd class="pd">Une ou plusieurs des valeurs suivantes, séparées par une virgule : 'memory', 'disk', 'cpu', 'network' et 'apps.'</dd>
+<dt class="pt dlterm">startTime</dt>
+<dd class="pd">Point le plus ancien dans le temps à partir duquel les données sont renvoyées. Si aucun paramètre startTime n'est indiqué, le point de données disponible le plus récent est inclus. Par exemple, pour regrouper les données situées entre 14h et 17h, indiquez la valeur correspondant à 14h pour startTime.</dd>
+<dt class="pt dlterm">endTime</dt>
+<dd class="pd">Point le plus récent dans le temps à partir duquel les données sont renvoyées. Si aucun paramètre endTime n'est indiqué, le point de données le plus récent est utilisé. Par exemple, pour regrouper les données situées entre 14h et 17h, indiquez la valeur correspondant à 17h pour endTime.</dd>
+<dt class="pt dlterm">sort</dt>
+<dd class="pd">Ordre dans lequel les données sont renvoyées. Les valeurs valides sont 'asc' (croissant) et 'desc' (décroissant). La
+valeur par défaut est l'ordre décroissant qui renvoie d'abord les données les
+plus récentes. </dd>
+</dl>
+
+### Format des données de mesure relatives à l'environnement
+
+Les sections suivantes indiquent le format des données.
+
+ * Pour regrouper les enregistrements de données concernant
+l'utilisation de la mémoire, employez le format de données suivant :
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "memory": {
+    "physical": {
+      "total_gb": 864,
+      "used": {
+        "value_gb": 336.84,
+        "percent": 38.99
+      }
+    },
+    "allocated": {
+      "reserved_gb": 1728,
+      "total_allocated": {
+        "value_gb": 1287.59,
+        "percent": 74.51
+      }
+    },
+    "memory_by_container": [
+      {
+        "name": "dea_next/0",
+        "type": "dea",
+        "ip": "169.53.225.93",
+        "percent": "47"
+      },
+      {
+        "name": "dea_next/1",
+        "type": "dea",
+        "ip": "169.53.225.89",
+        "percent": "51"
+      },
+      {
+        "name": "dea_next/2",
+        "type": "dea",
+        "ip": "169.53.230.49",
+        "percent": "45"
+      },
+      {
+        "name": "dea_next/3",
+        "type": "dea",
+        "ip": "169.44.109.231",
+        "percent": "43"
+      }
+    ]
+  }
+}
+```
+{: screen}
+
+ * Pour regrouper les enregistrements de données concernant
+l'utilisation du disque, employez le format de données suivant :
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "disk": {
+    "physical": {
+      "total_gb": 8100,
+      "used": {
+        "value_gb": 807,
+        "percent": 9.96
+      }
+    },
+    "allocated": {
+      "reserved_gb": 16200,
+      "total_allocated": {
+        "value_gb": 1989.5,
+        "percent": 12.28
+      }
+    },
+    "disk_by_container": [
+      {
+        "name": "dea_next/0",
+        "type": "dea",
+        "ip": "169.53.225.93",
+        "percent": "13"
+      },
+      {
+        "name": "dea_next/1",
+        "type": "dea",
+        "ip": "169.53.225.89",
+        "percent": "14"
+      },
+      {
+        "name": "dea_next/2",
+        "type": "dea",
+        "ip": "169.53.230.49",
+        "percent": "13"
+      },
+      {
+        "name": "dea_next/3",
+        "type": "dea",
+        "ip": "169.44.109.231",
+        "percent": "12"
+      }
+    ]
+  }
+}
+```
+{: screen}
+
+ * Pour regrouper les enregistrements de données concernant
+l'utilisation de l'unité centrale, employez le format de données suivant :
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "cpu": {
+    "average_percent_cpu_used": 27.288461538461544,
+    "cpu_by_container": [
+      {
+        "name": "dea_next/0",
+        "type": "dea",
+        "ip": "169.53.225.93",
+        "sys_percent": "8.4",
+        "user_percent": "2.7",
+        "wait_percent": "0.0"
+      },
+      {
+        "name": "dea_next/1",
+        "type": "dea",
+        "ip": "169.53.225.89",
+        "sys_percent": "7.4",
+        "user_percent": "2.4",
+        "wait_percent": "0.0"
+      },
+      {
+        "name": "dea_next/2",
+        "type": "dea",
+        "ip": "169.53.230.49",
+        "sys_percent": "5.3",
+        "user_percent": "1.9",
+        "wait_percent": "0.0"
+      },
+      {
+        "name": "dea_next/3",
+        "type": "dea",
+        "ip": "169.44.109.231",
+        "sys_percent": "8.2",
+        "user_percent": "22.6",
+        "wait_percent": "0.0"
+      }
+    ]
+  }
+}
+```
+{: screen}
+
+ * Pour regrouper les enregistrements de données concernant votre réseau, employez le format de données suivant :
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "network": {
+    "datapower": {
+    "response_times": [
+      {
+        "proxy": "custom_certificates",
+        "ten_seconds_ms": "0",
+        "one_minute_ms": "0",
+        "ten_minutes_ms": "0",
+        "one_hour_ms": "0",
+        "one_day_ms": "0"
+      },
+      {
+        "proxy": "bluemix",
+        "ten_seconds_ms": "90",
+        "one_minute_ms": "89",
+        "ten_minutes_ms": "83",
+        "one_hour_ms": "85",
+        "one_day_ms": "95"
+      }
+      ],
+        "transactions": [
+      {
+        "proxy": "custom_domains",
+        "ten_seconds_ms": "0",
+        "one_minute_ms": "0",
+        "ten_minutes_ms": "0",
+        "one_hour_ms": "0",
+        "one_day_ms": "0"
+      },
+      {
+        "proxy": "bluemix",
+        "ten_seconds_ms": "697",
+        "one_minute_ms": "747",
+        "ten_minutes_ms": "802",
+        "one_hour_ms": "794",
+        "one_day_ms": "730"
+      }
+      ],
+        "bandwidth": {
+        "in_mbps": 10855,
+        "out_mbps": 38090
+      }
+  }
+}
+```
+{: screen}
+
+* Pour regrouper les enregistrements de données concernant vos applications, employez le format de données suivant :
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "apps": {
+    "count": 1406,
+    "allocation": {
+      "memory_gb": 571.8,
+      "disk_gb": 1204
+    }
+  }
+}
+```
+{: screen}
+
+### Format de réponse des mesures relatives à l'environnement
+
+```
+{
+   docs: [],
+   next_url:
+}
+```
+{: screen}
+
+## Regroupement des mesures relatives à vos applications
+
+Les données sont enregistrées pour toutes les applications environ toutes
+les heures. Une demande de mesure particulière renvoie ces informations pour
+toutes les applications de chaque échantillon de données de la période
+indiquée, dans l'ordre décroissant de la mesure demandée. Par exemple, si vous
+demander la mesure relative à l'unité centrale de toutes les applications sur
+une période de six heures dans un environnement comportant 200 applications,
+120 enregistrements sont renvoyés : 200 par heure.
+
+Pour réduire la quantité d'informations renvoyées pour chaque échantillon
+de données sur la période demandée, vous pouvez indiquer une option count. Si
+vous ajoutez l'option count avec une valeur égale à 5, l'exemple précédent
+renvoie 30 enregistrements, qui représentent les 5 applications les plus
+importantes par unité centrale de chaque échantillon de données.
+
+### Noeuds finaux des applications 
+
+Vous pouvez utiliser les noeuds finaux suivants pour appeler cette
+commande d'API :
+* /api/v1/app/cpu/physical 
+* /api/v1/app/memory/physical
+* /api/v1/app/memory/reserved
+* /api/v1/app/disk/physical
+* /api/v1/app/disk/reserved
+
+### Paramètres de requête relatifs aux applications
+ 
+Utilisez les paramètres de requête suivants pour regrouper des mesures concernant vos applications :
+
+<dl class="parml">
+<dt class="pt dlterm">startTime</dt>
+<dd class="pd">Point le plus ancien dans le temps à partir duquel les données sont renvoyées. Si aucun paramètre startTime n'est indiqué, le point de données disponible le plus récent est inclus. Par exemple, pour regrouper les données situées entre 14h et 17h, indiquez la valeur correspondant à 14h pour startTime.</dd>
+<dt class="pt dlterm">endTime</dt>
+<dd class="pd">Point le plus récent dans le temps à partir duquel les données sont renvoyées. Si aucun paramètre endTime n'est indiqué, le point de données le plus récent est utilisé. Par exemple, pour regrouper les données situées entre 14h et 17h, indiquez la valeur correspondant à 17h pour endTime.</dd>
+<dt class="pt dlterm">count</dt>
+<dd class="pd">Nombre d'enregistrements à renvoyer pour chaque échantillon de données.
+</dd>
+</dl>
+
+### Format de réponse pour les applications
+
+```
+{
+   docs: [],
+   next_url:
+}
+```
+{: screen}
+
+Chaque document renvoyé représente les mesures demandées pour une application de chaque échantillon de données, au moment de la demande.
+
+
 ## API de service personnalisée
 {: #servicebrokerapi}
 
-Vous pouvez utiliser trois API pour enregistrer ou créer un service, mettre à jour un service et supprimer un
-service.
+Vous pouvez utiliser trois API pour enregistrer ou créer un service, mettre à jour un service et supprimer un service.
 
 Toutes les API sont relatives à <code>https://console.&lt;sous-domaine&gt;.bluemix.net/</code>.
 
@@ -1518,20 +1770,14 @@ Content-Type: application/json
 
 ```
 {
-  "entity": {
+    "_id": "2063580064-0ca80769-8e9e-4e1c-9b99-68bdcf1a2c68",
     "name": "Nom du courtier de services",
     "broker_url": "https://provision-broker.comp.bluemix.net/bmx/provisioning/brokers/2063580064-8f23230c-7f36-4ce5-a298-2ab4108f1120",
+    "proxy_broker_url": "https://provision-broker.dys0.bluemix.net/bmx/provisioning/brokers/2063580064-0ca80769-8e9e-4e1c-9b99-68bdcf1a2c68",
     "auth_username": "nom d'utilisateur",
-    "space_guid": null
-  },
-  "warnings": [],
-  "metadata": {
-    "guid": "49f3adcc-ecc2-46fa-83c1-03322f04b3b1",
-    "created_at": "2015-12-07T19:51:50Z",
-    "updated_at": null,
-    "url": "/v2/service_brokers/49f3adcc-ecc2-46fa-83c1-03322f04b3b1"
-  }
+    "created_on": "2016-09-30T16:45:56.304Z"
 }
+
 ```
 {: screen}
 
@@ -1542,14 +1788,15 @@ Utilisez l'API et les exemples de code suivants pour mettre à jour un service.
 ### Route
 {: #updateroute}
 
-`PUT /codi/v1/serviceBrokers`
+```
+PUT /codi/v1/serviceBrokers
+```
 {: screen}
 
 ### Demande
 {: #updaterequest}
 
 *Tableau 16. Zones*
-{: #caption}
 
 | **Nom** | **Description** |
 |-----------------|-------------------|
@@ -1599,19 +1846,12 @@ Content-Type: application/json
 
 ```
 {
-  "entity": {
+    "_id": "2063580064-0ca80769-8e9e-4e1c-9b99-68bdcf1a2c68",
     "name": "Nom du courtier de services",
     "broker_url": "https://provision-broker.dys0.bluemix.net/bmx/provisioning/brokers/2063580064-d11bdd84-7556-469f-858d-2098b531f7f2",
+    "proxy_broker_url": "https://provision-broker.dys0.bluemix.net/bmx/provisioning/brokers/2063580064-0ca80769-8e9e-4e1c-9b99-68bdcf1a2c68",
     "auth_username": "nom d'utilisateur",
-    "space_guid": null
-  },
-  "warnings": [],
-  "metadata": {
-    "guid": "2cbdb812-d37f-443b-894a-a96de31e5c38",
-    "created_at": "2015-12-07T20:11:08Z",
-    "updated_at": "2015-12-07T20:11:19Z",
-    "url": "/v2/service_brokers/2cbdb812-d37f-443b-894a-a96de31e5c38"
-  }
+    "created_on": "2016-09-30T16:45:56.304Z"
 }
 ```
 {: screen}
@@ -1621,7 +1861,6 @@ Content-Type: application/json
 Utilisez l'API et les exemples de code suivants pour supprimer un service.
 
 *Tableau 17. Paramètre*
-{: #caption}
 
 | **Nom** | **Description** |
 |-----------------|-------------------|
@@ -1661,9 +1900,7 @@ Content-Type: application/json
 ## Gestion des utilisateurs avec l'interface de ligne de commande cf
 {: #usingadmincli}
 
-Vous pouvez gérer les utilisateurs pour votre environnement {{site.data.keyword.Bluemix_notm}} via l'interface de ligne de commande
-Cloud Foundry, avec le plug-in d'interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}}. Par exemple, vous pouvez ajouter des utilisateurs depuis
-un registre LDAP.
+Vous pouvez gérer les utilisateurs pour votre environnement {{site.data.keyword.Bluemix_notm}} via l'interface de ligne de commande Cloud Foundry, avec le plug-in d'interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}}. Par exemple, vous pouvez ajouter des utilisateurs depuis un registre LDAP.
 
 Avant de commencer, installez l'interface de ligne de commande cf. Le plug-in d'interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}} requiert cf version 6.11.2 ou ultérieure. [Télécharger l'interface de ligne de commande Cloud Foundry](https://github.com/cloudfoundry/cli/releases){: new_window}
 
@@ -1671,16 +1908,15 @@ Avant de commencer, installez l'interface de ligne de commande cf. Le plug-in d'
 
 ### Ajout du plug-in d'interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}}
 
-Une fois l'interface de ligne de commande cf installée, vous pouvez ajouter le plug-in d'interface de ligne de commande d'administration
-{{site.data.keyword.Bluemix_notm}}.
+Une fois l'interface de ligne de commande cf installée, vous pouvez ajouter le plug-in d'interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}}.
 
-**Remarque** : si vous avez déjà installé le plug-in d'administration {{site.data.keyword.Bluemix_notm}}, il peut être
-nécessaire de le désinstaller, de supprimer le référentiel, puis de réinstaller le plug-in afin de bénéficier des mises à jour les plus récentes.
+**Remarque** : si vous avez déjà installé le plug-in d'administration {{site.data.keyword.Bluemix_notm}}, il peut être nécessaire de le désinstaller, de supprimer le référentiel, puis de réinstaller le plug-in afin de bénéficier des mises à jour les plus récentes.
 
 Procédez comme suit pour ajouter le référentiel et installer le plug-in :
 
 <ol>
-<li>Pour ajouter le référentiel de plug-in d'administration {{site.data.keyword.Bluemix_notm}}, exécutez la commande suivante : <br/><br/> <code>
+<li>Pour ajouter le référentiel de plug-in d'administration {{site.data.keyword.Bluemix_notm}}, exécutez la commande suivante : <br/><br/>
+<code>
 cf add-plugin-repo BluemixAdmin https://console.&lt;sous-domaine&gt;.bluemix.net/cli
 </code><br/><br/>
 <dl class="parml">
@@ -1688,16 +1924,18 @@ cf add-plugin-repo BluemixAdmin https://console.&lt;sous-domaine&gt;.bluemix.net
 <dd class="pd">Sous-domaine de l'adresse URL pour votre instance {{site.data.keyword.Bluemix_notm}}.</dd>
 </dl>
 </li>
-<li>Pour installer le plug-in d'interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}}, exécutez la commande suivante :<br/><br/> <code>
+<li>Pour installer le plug-in d'interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}}, exécutez la commande suivante :<br/><br/>
+<code>
 cf install-plugin bluemix-admin-cli -r BluemixAdmin
 </code>
 </li>
 </ol>
 
-Pour afficher la liste des commandes, exécutez la
-commande suivante :
+Pour afficher la liste des commandes, exécutez la commande suivante :
 
-`cf plugins`
+```
+cf plugins
+```
 {: codeblock}
 
 Pour obtenir de l'aide supplémentaire sur une commande, utilisez l'option `-help`.

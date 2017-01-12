@@ -5,6 +5,8 @@
 copyright:
 
   years: 2014, 2016
+  
+lastupdated: "2016-10-19"
 
  
 
@@ -15,8 +17,6 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} 安全
 {: #security}
-上次更新时间：2016 年 10 月 19 日
-{: .last-updated}
 
 {{site.data.keyword.Bluemix}} 平台是使用安全工程实践进行设计的，通过不同的层对整个网络和基础架构中的安全进行控制。{{site.data.keyword.Bluemix_notm}} 提供了一组安全服务，应用程序开发者可以使用这些服务来保护自己的移动和 Web 应用程序。这些优势组合在一起，使 {{site.data.keyword.Bluemix_notm}} 平台成为安全应用程序开发的不二选择。
 {:shortdesc}
@@ -49,7 +49,7 @@ copyright:
 
 图 2. {{site.data.keyword.Bluemix_notm}} Local 平台安全概况
 
-IBM 通过中继（{{site.data.keyword.Bluemix_notm}} Local 随附的一种交付功能）对您数据中心内的 {{site.data.keyword.Bluemix_notm}} Local 进行安装、远程监视和管理。中继通过特定于每个 {{site.data.keyword.Bluemix_notm}} Local 实例的证书进行安全连接。有关 {{site.data.keyword.Bluemix_notm}} Local 和中继的更多信息，请参阅 [Bluemix Local](../local/index.html)。
+IBM 通过中继（{{site.data.keyword.Bluemix_notm}} Local 随附的一种交付功能）对您数据中心内的 {{site.data.keyword.Bluemix_notm}} Local 进行安装、远程监视和管理。中继通过特定于每个 {{site.data.keyword.Bluemix_notm}} Local 实例的证书进行安全连接。有关 {{site.data.keyword.Bluemix_notm}} Local 和中继的更多信息，请参阅 [Bluemix Local](/docs/local/index.html)。
 
 ### 功能性安全
 
@@ -134,7 +134,7 @@ HTTP 不活动超时为 2 分钟。</dd>
 <dd>{{site.data.keyword.Bluemix_notm}} 使用 IBM Security QRadar® 工具来整合 Linux 日志，从而监视对 Linux 系统的特权访问。{{site.data.keyword.Bluemix_notm}} 还使用 IBM QRadar 安全信息和事件管理 (SIEM) 来监视应用程序开发者的成功和不成功登录尝试。</dd>
 
 <dt>用户访问管理</dt>
-<dd>在 {{site.data.keyword.Bluemix_notm}} 中，按照职责分离准则来为用户分配精细的访问特权，并根据最低特权原则，确保用户只拥有执行其作业所需的访问权。在 {{site.data.keyword.Bluemix_notm}} Dedicated 和 Local 环境中，指派的管理员可以使用管理控制台来管理 {{site.data.keyword.Bluemix_notm}} 用户在其组织中的角色和许可权。有关详细信息，请参阅[管理 {{site.data.keyword.Bluemix_notm}}](../admin/adminpublic.html#mng)。
+<dd>在 {{site.data.keyword.Bluemix_notm}} 中，按照职责分离准则来为用户分配精细的访问特权，并根据最低特权原则，确保用户只拥有执行其作业所需的访问权。在 {{site.data.keyword.Bluemix_notm}} Dedicated 和 Local 环境中，指派的管理员可以使用管理控制台来管理 {{site.data.keyword.Bluemix_notm}} 用户在其组织中的角色和许可权。有关详细信息，请参阅[管理 {{site.data.keyword.Bluemix_notm}}](/docs/admin/adminpublic.html#mng)。
 </dd>
 </dl>
 
@@ -196,11 +196,11 @@ Single Sign On 服务支持多个存储用户凭证的身份源：
 <dd> 由 Google、Facebook 和 LinkedIn 维护的用户注册表。</dd>
 </dl>
 
-有关更多信息，请参阅 [Single Sign On 入门](../services/SingleSignOn/index.html)。
+有关更多信息，请参阅 [Single Sign On 入门](/docs/services/SingleSignOn/index.html)。
 
 ### Application Security on Cloud
 
-此服务提供对移动和 Web 应用程序的安全性分析，并允许您扫描源代码来查找安全漏洞。有关更多信息，请参阅 [Application Security on Cloud 入门](../services/ApplicationSecurityonCloud/index.html)。
+此服务提供对移动和 Web 应用程序的安全性分析，并允许您扫描源代码来查找安全漏洞。有关更多信息，请参阅 [Application Security on Cloud 入门](/docs/services/ApplicationSecurityonCloud/index.html)。
 
 ### 用于应用程序安全测试的 IBM UrbanCode 插件
 
@@ -212,13 +212,13 @@ Single Sign On 服务支持多个存储用户凭证的身份源：
 
 dashDB 服务使用嵌入的 LDAP 服务器进行用户认证。应用程序和数据库之间的连接由 SSL 证书保护。此服务使用 DB2® 本机加密功能，以自动加密已部署的数据库和数据库备份。主密钥轮替每 90 天自动执行一次。
 
-有关更多信息，请参阅 [dashDB 入门](../services/dashDB/index.html)。
+有关更多信息，请参阅 [dashDB 入门](/docs/services/dashDB/index.html)。
 
 ### Secure Gateway
 
 通过 Secure Gateway 服务，可以将 {{site.data.keyword.Bluemix_notm}} 应用程序安全地连接到内部部署或云中的远程位置。该服务可提供安全连接，并在您的 {{site.data.keyword.Bluemix_notm}} 组织与要连接到的远程位置之间建立隧道。可以使用 {{site.data.keyword.Bluemix_notm}} 用户界面或 API 软件包来配置和创建安全网关。
 
-有关更多信息，请参阅 [Secure Gateway 入门](../services/SecureGateway/secure_gateway.html)。
+有关更多信息，请参阅 [Secure Gateway 入门](/docs/services/SecureGateway/secure_gateway.html)。
 
 ### 安全信息和事件管理
 
@@ -339,8 +339,7 @@ dashDB 服务使用嵌入的 LDAP 服务器进行用户认证。应用程序和�
 |{{site.data.keyword.mql}}				|是	|是	|是	|	 		|
 |{{site.data.keyword.SecureGateway}}			|是	|是 |	|	 		|
 |{{site.data.keyword.sescashort}}     |是 |是 |是	|  |
-
-*表 1. 平台和服务合规性*
+{: caption="Table 1. Platform and service compliance" caption-side="top"}
 
 # 相关链接
 {: #rellinks}
@@ -349,4 +348,4 @@ dashDB 服务使用嵌入的 LDAP 服务器进行用户认证。应用程序和�
 {: #general}
 
 * [IBM SaaS 安全性](http://www.ibm.com/cloud-computing/built-on-cloud/saas-security)
-* [Single Sign On 入门](../services/SingleSignOn/index.html)
+* [Single Sign On 入门](/docs/services/SingleSignOn/index.html)

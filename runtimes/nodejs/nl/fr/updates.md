@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -11,10 +12,12 @@ copyright:
 # Dernières mises à jour apportées au pack de construction sdk-for-nodejs
 {: #latest_updates}
 
-Dernière mise à jour : 26 août 2016
-{: .last-updated}
-
 Liste des dernières mises à jour apportées au pack de construction sdk-for-nodejs.
+## 7 octobre 2016 : Pack de construction Node.js v3.8-20161006-1211 mis à jour
+Cette édition du pack de construction prend en charge les versions d'exécution IBM SDK for Node.js suivantes : 0.10.46, 0.10.47, 0.12.15, 0.12.16, 4.5.0, 4.6.0, 6.6.0 et 6.7.0. La version par défaut est désormais 4.6.0.
+
+Outre les nouvelles exécutions, cette édition contient des correctifs de bogue pour le pack de construction. Parmi eux, le correctif du problème connu mentionné dans les mises à jour de l'édition v3.7-20160826-1101 relatif à l'utilisation de Node.js 6.x et du mode développement. Cette édition est totalement synchronisée avec le [pack de construction Cloud Foundry Node.js v1.5.20](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.20). 
+
 ## 26 août 2016 : Pack de construction Node.js v3.7-20160826-1101 mis à jour
 Cette édition du pack de construction prend en charge les versions d'exécution IBM SDK for Node.js : 0.10.45, 0.10.46, 0.12.14, 0.12.15, 4.4.7, 4.5.0, 6.2.2, et 6.4.0. La valeur par défaut est désormais 4.5.0.
 
@@ -22,7 +25,7 @@ Cette édition inclut des correctifs de bogue, dont ceux du [pack de constructio
 
 L'édition retire la prise en charge pour le gestionnaire StrongPM d'App Management, comme annoncé dans [Bluemix Node.js Buildpack v3.3 – FIPS mode and more](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/).
 
-Notez qu'un problème a été identifié lors de l'utilisation de Node.js 6.x et du [mode de développement](../../manageapps/app_mng.html#devmode). Pour contourner le problème, vous devez reconstituer votre application après activation du mode de développement avant de commencer à l'utiliser.
+Notez qu'un problème a été identifié lors de l'utilisation de Node.js 6.x et du [mode de développement](/docs/manageapps/app_mng.html#devmode). Pour contourner le problème, vous devez reconstituer votre application après activation du mode de développement avant de commencer à l'utiliser.
 
 ## 22 juillet 2016 : Pack de construction Node.js v3.6-20160715-0749 mis à jour
 Cette édition du pack de construction prend en charge les versions d'exécution IBM SDK for Node.js suivantes : 0.10.45, 0.10.46, 0.12.14, 0.12.15, 4.4.6, 4.4.7, 6.2.1 et 6.2.2. La version par défaut est désormais 4.4.7.
@@ -154,7 +157,7 @@ Dans cette édition, nous avons synchronisé notre pack de construction Node.js 
 [pack de construction Node.js de la communauté CF](https://github.com/cloudfoundry/nodejs-buildpack) le
 plus récent, qui est livré avec plusieurs nouvelles fonctions apportées par la communauté.
 De plus, nous avons réorganisé la fonction App Management du pack de construction Node.js, qui active des utilitaires tels que le shell,
-node-inspector, Bluemix Live Sync, etc. Voir [App Management](../../manageapps/app_mng.html) pour plus de détails.
+node-inspector, Bluemix Live Sync, etc. Voir [App Management](/docs/manageapps/app_mng.html) pour plus de détails.
 
 ## 5 mai 2015 : Pack de construction Node.js v1.17-20150429-1033 mis à jour
 
@@ -190,7 +193,7 @@ sur le bureau, sans avoir à les redéployer.
   * Live Edit : vous pouvez apporter des modifications à une application Node.js qui s'exécute dans Bluemix et les tester immédiatement dans votre navigateur.
   * Debug : ouvrez un shell dans votre environnement et procédez au débogage. Vous pouvez éditer le code dynamiquement, insérer des points d'arrêt, parcourir le
 code, redémarrer l'environnement d'exécution et effectuer d'autres opérations à l'aide du débogueur Node Inspector.
-  * Voir [App Management](../../manageapps/app_mng.html#Utilities) pour plus d'informations.
+  * Voir [App Management](/docs/manageapps/app_mng.html#Utilities) pour plus d'informations.
 * Nous avons extrait les modifications les plus récentes du [pack de construction Node.js de Cloud Foundry](https://github.com/cloudfoundry/nodejs-buildpack). Ces modifications sont fournies avec plusieurs correctifs de bogue et améliorations apportés par la communauté.
 * Désormais, le pack de construction Node.js est livré avec
 [IBM SDK for Node.js

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-12-06"
 
 ---
 {:new_window: target="_blank"}
@@ -10,139 +11,115 @@ copyright:
 {:screen: .screen}
 {:pre: .pre}
 
-# Utilisation de la gestion des versions d'objets {: #work-with-object-versioning}
 
-*Dernière mise à jour : 19 octobre 2016*
-{: .last-updated}
+# Configuration de la gestion des versions d'objets {: #setting-up-versioning}
 
-Avec la fonctionnalité de gestion des versions d'objets, vous êtes en mesure de conserver des versions séparées de vos objets sans renommer vos fichiers, ce qui vous permet de disposer d'un historique de chaque objet et d'effectuer un suivi des changements effectués.
+La gestion des versions d'objets vous permet de conserver les anciennes versions de vos objets en les stockant automatiquement dans un conteneur de sauvegarde, ce qui vous permet de disposer d'un historique de chaque objet et d'effectuer un suivi des changements apportés.
 {: shortdesc}
 
+Quand vous téléchargez une nouvelle version de votre fichier dans votre conteneur principal, la version précédente est automatiquement déplacée dans votre conteneur de sauvegarde. Si vous supprimez le fichier depuis votre conteneur principal, la version la plus récente est automatiquement déplacée depuis le conteneur de sauvegarde vers le conteneur principal pour remplacer le fichier supprimé.
 
-### Configuration de la gestion des versions d'objets {: #setting-up-versioning}
+1. Créez un conteneur et donnez-lui un nom. Remplacez la variable *nom_conteneur* par le nom que vous voulez donner à votre conteneur.
 
-Vous pouvez configurer des versions de chaque objet dans votre conteneur en utilisant le paramètre `X-Versions-Location`. Pour ce
-faire, créez un conteneur supplémentaire dans lequel placer les anciennes versions de vos objets comme suit.
+    ```
+    swift post <nom_conteneur>
+    ```
+    {: pre}
 
-Vous pouvez configurer la fonctionnalité de gestion des versions d'objets via le client Swift ou en utilisant des commandes cURL.
-* Si vous utilisez le client Swift, exécutez la commande suivante :
+2. Créez un second conteneur qui vous servira de conteneur de stockage et donnez-lui un nom.
+
+    ```
+    swift post <nom_conteneur_sauvegarde>
+    ```
+    {: pre}
+
+3. Configurez la gestion des versions.
+
+    Commande Swift :
 
     ```
     swift post <nom_conteneur> -H "X-Versions-Location:<nom_conteneur_sauvegarde>"
     ```
     {: pre}
-    
-* Si vous utilisez cURL, vous pouvez le configurer ainsi :
+
+    Commande cURL :
 
     ```
     curl -i -X PUT -H "X-Auth-Token: <jeton>" -H "X-Versions-Location:<nom_conteneur_sauvegarde>" https://<url-stockage-objet>/<nom_conteneur>
     ```
     {: pre}
-    
-**Remarque** : les objets de votre conteneur de sauvegarde sont nommés automatiquement selon le format suivant : `<Longueur><Nom_objet>/<Nom_objet>`.
-<table>
-  <tr>
-    <th> Attribut </th>
-    <th> Description </th>
-  </tr>
-  <tr>
-    <td> `Longueur` </td>
-    <td> Longueur du nom de votre objet. Il s'agit d'un nombre hexadécimal de trois caractères remplis avec des zéros. </td>
-  </tr>
-  <tr>
-    <td> `Nom_objet` </td>
-    <td> Nom de votre objet. </td>
-  </tr>
-  <tr>
-    <td> `Horodatage` </td>
-    <td> Horodatage du téléchargement initial de cette version particulière de l'objet. </td>
-  </tr>
-</table>
 
-### Désactivation de la gestion des versions d'objets{: #disabling-versioning}
+4. Téléchargez un objet dans votre conteneur principal, pour la première fois.
 
-Vous pouvez désactiver la gestion des versions via le client Swift ou en utilisant les commandes cURL.
+    ```
+    swift upload <nom_conteneur> <object>
+    ```
+    {: pre}
 
-* Pour utiliser le client Swift, exécutez la commande suivante :
+5. Modifiez votre objet.
+
+6. Téléchargez une nouvelle version de l'objet dans votre conteneur principal.
+
+    ```
+    swift upload <nom_conteneur> <object>
+    ```
+    {: pre}
+
+7.  Les objets de votre conteneur de sauvegarde sont nommés automatiquement selon le format suivant : `<Longueur><Nom_objet>/<Horodatage>`.
+  <table>
+    <tr>
+      <th> Attribut </th>
+      <th> Description </th>
+    </tr>
+    <tr>
+      <td> <i>Longueur</i> </td>
+      <td> Longueur du nom de votre objet. Il s'agit d'un nombre hexadécimal de trois caractères remplis avec des zéros. </td>
+    </tr>
+    <tr>
+      <td> <i>Nom_objet</i> </td>
+      <td> Nom de votre objet. </td>
+    </tr>
+    <tr>
+      <td> <i>Horodatage</i> </td>
+      <td> Horodatage du téléchargement initial de cette version particulière de l'objet. </td>
+    </tr>
+  </table>
+
+  Tableau 1 : description des attributs de noms
+
+6. Répertoriez les objets de votre conteneur principal pour voir la nouvelle version de votre fichier.
+
+    ```
+    swift list --lh <nom_conteneur>
+    ```
+    {: pre}
+
+7. Répertoriez les objets de votre conteneur de sauvegarde. Vous voyez la version précédente de votre fichier qui est stockée dans ce conteneur. Notez qu'un horodatage a été ajouté à votre fichier.
+
+    ```
+    swift list --lh <nom_conteneur_sauvegarde>
+    ```
+    {: pre}
+
+8. Supprimez l'objet dans votre conteneur principal. Quand vous supprimez l'objet, la version la plus récente qui se trouve dans votre conteneur de sauvegarde est automatiquement déplacée dans votre conteneur principal.
+
+    ```
+    swift delete <nom_conteneur> <object>
+    ```
+    {: pre}
+
+9. (Facultatif) - désactivez la gestion des versions d'objets.
+
+    Commande Swift :
 
     ```
     swift post <nom_conteneur> -H "X-Remove-Versions-Location:"
     ```
     {: pre}
-    
-* Exécutez la commande cURL suivante pour désactiver la gestion des versions :
+
+    Commande cURL :
 
     ```
     cURL -i -X POST -H "X-Auth-Token: <jeton>" -H "X-Remove-Versions-Location: anyvalue" https://<url-stockage-objet>/<nom_conteneur>
-    ```
-    {: pre}
-
-
-### Tutoriel relatif à la gestion des versions d'objets{: #versioning-tutorial}
-<!--- SHAWNA: This needs more background information. What are they doing? Why are they doing it? What is the outcome? --->
-
-Vous pouvez utiliser le tutoriel suivant pour comprendre comment se déroule le cycle de vie complet de la gestion des versions d'objets.
-
-1. Créez un conteneur intitulé `conteneur_un`.
-
-    ```
-    swift post conteneur_un
-    ```
-    {: pre}
-    
-3. Créez un second conteneur, intitulé `conteneur_deux`.
-
-    ```
-    swift post conteneur_deux
-    ```
-    {: pre}
-    
-2. Configurez la gestion des versions.
-
-    ```
-    swift post conteneur_un -H "X-Versions-Location:conteneur_deux"
-    ```
-    {: pre}
-    
-4. Téléchargez un objet dans votre conteneur principal, pour la première fois.
-
-    ```
-    swift upload conteneur_un object
-    ```
-    {: pre}
-    
-7. Téléchargez une nouvelle version de l'objet dans conteneur_un. Quand vous téléchargez une nouvelle version de votre fichier, la version précédente est automatiquement déplacée dans le conteneur de sauvegarde que vous avez spécifié quand vous avez configuré la gestion des versions.
-
-    ```
-    swift upload conteneur_un object
-    ```
-    {: pre}
-    
-8. Pour définir la nouvelle version de votre fichier dans le conteneur, répertoriez les objets de conteneur_un.
-
-    ```
-    swift list conteneur_un
-    ```
-    {: pre}
-    
-9. Répertoriez les objets de conteneur_deux. La version précédente de votre fichier sera stockée dans ce conteneur.
-
-    ```
-    swift list conteneur_deux
-    ```
-    {: pre}
-    
-10. Supprimez l'objet dans conteneur_un. Quand vous supprimez l'objet, la version précédente qui se trouve dans le conteneur de sauvegarde sera automatiquement déplacée dans votre conteneur principal.
-
-    ```
-    swift delete conteneur_un object
-    ```
-    {: pre}
-    
-11. Répertoriez le contenu des deux conteneurs. `conteneur_un` comporte votre fichier d'origine et `conteneur_deux` est vide.
-
-    ```
-    swift list conteneur_un
-    swift list conteneur_deux
     ```
     {: pre}

@@ -2,15 +2,15 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-21"
+lastupdated: "2016-11-22"
 
 ---
 {:new_window: target="_blank"}
 
-# {{site.data.keyword.visualrecognitionshort}} 代码入门模板端到端教程
+# 基本代码入门模板端到端教程
 {: #tutorial}
 
-以下端到端教程将引导您完成通过 {{site.data.keyword.visualrecognitionshort}}“代码入门模板”创建项目的步骤（包括必须安装的工具）以及在 Xcode 和 Android Studio 中运行入门模板的步骤。
+以下端到端教程将引导您完成通过“基本代码入门模板”创建项目的步骤（包括必须安装的工具）以及在 Xcode 和 Android Studio 中运行入门模板的步骤。
 
 
 ### 安装开发者工具
@@ -19,7 +19,7 @@ lastupdated: "2016-10-21"
 确保您已安装[必备开发者工具](get_code.html#prereq-dev-tools){: new_window}。
 
 
-### 通过 {{site.data.keyword.visualrecognitionshort}}“代码入门模板”创建项目
+### 通过“基本代码入门模板”创建项目
 {: #create_project}
 
 1. 在 {{site.data.keyword.Bluemix}} 中创建 Mobile 仪表板项目。
@@ -30,9 +30,9 @@ lastupdated: "2016-10-21"
 
    2. 单击**代码入门模板**。
 
-   3. 选择 **Visual Recognition** 并单击**创建项目**。
+   3. 选择**基本**并单击**创建项目**。
 
-   4. 输入项目名称。对于本教程，请使用 `VisualRecognitionProject`。
+   4. 输入项目名称。对于本教程，请使用 `BasicProject`。
    
    5. 单击**创建**。
 
@@ -80,23 +80,25 @@ lastupdated: "2016-10-21"
    
       或者，您可以在**代码**页面上单击。
       
-   2. 对于 iOS，单击 **iOS Swift**。
+   2. 对于 Objective-C，单击 **iOS Obj-C**。
+
+   3. 对于 Swift，单击 **iOS Swift**。
    
-   3. 对于 Android，单击 **Android**。
+   4. 对于 Cordova，单击 **Cordova**。
+
+   5. 对于 Android，单击 **Android**。
    
-   4. 项目代码完成生成后，单击**下载代码**以下载项目归档。
+   6. 项目代码完成生成后，单击**下载代码**以下载项目归档。
 
 
-### 在 Xcode 中运行项目
-{: #run_xcode}
+### 在 Xcode 中运行 Objective-C 项目
+{: #run_obj-c}
 
-1. 解压缩 `VisualRecognitionProject-Swift.zip` 文件。
+1. 解压缩 `BasicProject-ObjC.zip` 文件。
 
 2. 在 Markdown 查看器中打开 `README.md` 文件，以查看配置项目的步骤。
 
-   1. 创建 [{{site.data.keyword.visualrecognitionshort}}](https://console.{DomainName}/catalog/services/visual-recognition/){: new_window} 服务实例。
-   
-   2. 打开“终端”并浏览到项目文件夹。
+   1. 打开“终端”并浏览到项目文件夹。
    
       1. 如果需要设置 CocoaPods 存储库，请运行 `pod setup`。
       
@@ -104,37 +106,63 @@ lastupdated: "2016-10-21"
       
       3. 运行 `pod install` 以安装项目所需的 Pods。
       
-      4. 运行 `carthage update --platform iOS` 构建依赖关系和框架，以使用 {{site.data.keyword.ibmwatson}} Developer Cloud iOS SDK。
-      
-   3. 打开 `VisualRecognitionProject.xcworkspace` Xcode 工作空间。
-   
-   4. 添加 {{site.data.keyword.visualrecognitionshort}} 服务凭证。
-   
-      1. 从 {{site.data.keyword.visualrecognition}} 服务凭证中复制 `api_key`。
-      
-      2. 将 `api_key` 粘贴到 `WatsonCredentials.plist` 文件中的 `VisualRecognitionAPIKey` 密钥中。
+   2. 打开 `BasicProject.xcworkspace` Xcode 工作空间。
       
 3. 运行应用程序。
 
 
-### 在 Android Studio 中运行项目
-{: #run_studio}
+### 在 Xcode 中运行 Swift 项目
+{: #run_swift}
 
-1. 解压缩 `VisualRecognitionProject-Android.zip` 文件。
+1. 解压缩 `BasicProject-Swift.zip` 文件。
+
+2. 在 Markdown 查看器中打开 `README.md` 文件，以查看配置项目的步骤。
+
+   1. 打开“终端”并浏览到项目文件夹。
+   
+      1. 如果需要设置 CocoaPods 存储库，请运行 `pod setup`。
+      
+      2. 如果需要更新现有 Pods，请运行 `pod update`。
+      
+      3. 运行 `pod install` 以安装项目所需的 Pods。
+      
+   3. 打开 `BasicProject.xcworkspace` Xcode 工作空间。
+      
+3. 运行应用程序。
+
+
+### 在 Xcode 中运行 Cordova 项目
+{: #run_cordova_xcode}
+
+1. 解压缩 `BasicProject-Cordova.zip` 文件。
 
 2. 在 Markdown 查看器中打开 `README.md` 文件，以配置项目。
 
-   1. 创建 [{{site.data.keyword.visualrecognitionshort}}](https://console.{DomainName}/catalog/services/visual-recognition/){: new_window} 服务实例。
-   
-      如果已经有 {{site.data.keyword.visualrecognitionshort}} 服务实例，请跳过此步骤。
-   
-   2. 在 Android Studio 中打开 `VisualRecognitionProject-Android` 项目。
-   
-   4. 添加 {{site.data.keyword.visualrecognitionshort}} 服务凭证。
-   
-      1. 从 {{site.data.keyword.visualrecognition}} 服务凭证中复制 `api_key`。
+   1. 在 Xcode 中打开 `platforms/ios` 项目。
       
-      2. 将 `api_key` 粘贴到 `res/values/watson_credentials.xml` 文件中的 `watson_visual_recognition_api_key` 密钥中。
+3. 运行应用程序。
+
+
+### 在 Android Studio 中运行 Cordova 项目
+{: #run_cordova_studio}
+
+1. 解压缩 `BasicProject-Cordova.zip` 文件。
+
+2. 在 Markdown 查看器中打开 `README.md` 文件，以配置项目。
+
+   1. 在 Android Studio 中打开 `platforms/android` 项目。
+      
+3. 运行应用程序。
+
+
+### 在 Android Studio 中运行 Android 项目
+{: #run_android}
+
+1. 解压缩 `BasicProject-Android.zip` 文件。
+
+2. 在 Markdown 查看器中打开 `README.md` 文件，以配置项目。
+
+   1. 在 Android Studio 中打开 `BasicProject-Android` 项目。
       
 3. 运行应用程序。
 
@@ -154,5 +182,6 @@ lastupdated: "2016-10-21"
 ### 代码入门模板教程
 {: #tutorials_Code}
 
+* [教程 - {{site.data.keyword.visualrecognitionshort}}](tutorial_visual_recognition.html)
 * [教程 - Watson Language](tutorial_watson_language.html)
 * [教程 - Weather](tutorial_weather.html)

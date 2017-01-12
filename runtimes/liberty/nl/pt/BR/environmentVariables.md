@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -13,9 +14,6 @@ copyright:
 # Variáveis de ambiente
 {: #environment_variables}
 
-Última atualização: 10 de junho de 2016
-{: .last-updated}
-
 Variáveis de ambiente suportadas pelo Liberty for Java.
 
 <table>
@@ -26,12 +24,12 @@ Variáveis de ambiente suportadas pelo Liberty for Java.
 
 <tr>
 <td>BLUEMIX_APP_MGMT_ENABLE</td>
-<td>Ative os [utilitários de gerenciamento de app](../../manageapps/app_mng.html)</td>
+<td>Ative os [utilitários de gerenciamento de app](/docs/manageapps/app_mng.html)</td>
 </tr>
 
 <tr>
 <td>BLUEMIX_APP_MGMT_INSTALL</td>
-<td>Instale os [utilitários de gerenciamento de app](../../manageapps/app_mng.html)</td>
+<td>Instale os [utilitários de gerenciamento de app](/docs/manageapps/app_mng.html)</td>
 </tr>
 
 <tr>
@@ -82,6 +80,11 @@ Variáveis de ambiente suportadas pelo Liberty for Java.
 <tr>
 <td>JVM_ARGS</td>
 <td>Configure os [argumentos da JVM](customizingJRE.html)</td>
+</tr>
+
+<tr>
+<td>LBP_SERVICE_CONFIG_xxxx</td>
+<td>[Substituir a configuração de serviço](autoConfig.html#override_service_config)</td>
 </tr>
 
 <tr>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-08-03"
+lastupdated: "2016-11-22"
 
 ---
 
@@ -38,7 +38,7 @@ Client libraries are provided for each of the supported programming languages, a
 - [More documentation](https://github.com/ibm-watson-iot/iot-embeddedc/blob/master/README.md){:new_window}
 
 
-## Java
+## Java™
 - [Client library](https://github.com/ibm-watson-iot/iot-java){:new_window}
 - [Samples](https://github.com/ibm-watson-iot/iot-java#samples){:new_window}
 - [More documentation](https://github.com/ibm-watson-iot/iot-java/blob/master/README.md){:new_window}

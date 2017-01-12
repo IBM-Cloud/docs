@@ -1,18 +1,31 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # About {{site.data.keyword.mobilepushshort}}
 {: #overview-push}
-Last updated: 11 November 2016
+Last updated: 11 January 2017
 {: .last-updated}
 
-IBM {{site.data.keyword.mobilepushshort}} is a service that you can use to send notifications to iOS and Android mobile devices, to Google Chrome and Mozilla Firefox web browsers and also to Google Chrome Apps and Extensions. Notifications can be targeted to all application users or to a specific set of users and devices using tags. You can administer devices, tags, and subscriptions. You can also use an SDK (software development kit) and Representational State Transfer (REST) application program interface (APIs) to further develop your client applications. 
+IBM {{site.data.keyword.mobilepushshort}} is a service with which you can use to send notifications to devices and platforms. Notifications can be targeted to all application users or to a specific set of users and devices using tags. You can administer devices, tags, and subscriptions. You can also use an SDK (software development kit) and Representational State Transfer (REST) application program interface (APIs) to further develop your client applications. 
 
-{{site.data.keyword.mobilepushshort}} is also available as a Bluemix Dedicated service. For information about {{site.data.keyword.mobilepushshort}} as a dedicated service, see [Dedicated Services](/docs/dedicated/index.html). Note that the {{site.data.keyword.mobilepushshort}} monitoring tab does not show analytics data.
+{{site.data.keyword.mobilepushshort}} is available as a Bluemix Catalog service  in the Mobile category. It is also available as a part of MobileFirst Services Starter Boilerplate and as a Bluemix Dedicated service. For information about {{site.data.keyword.mobilepushshort}} as a dedicated service, see [Dedicated Services](/docs/dedicated/index.html). 
+
+You can use any of the following options to create a bound or unbound service:
+
+- By creating a Bluemix application using the MobileFirst Services Starter boilerplate from the catalog. This creates a Push Notifications service bound to a Bluemix back-end application.
+- By creating an unbound Push Notifications service directly from the Mobile catalog. You can later bind to an application or even choose to use it unbound. 
+- By using the [Mobile dashboard](https://console.ng.bluemix.net/docs/mobile/services.html).
+
+Note that the {{site.data.keyword.mobilepushshort}} monitoring tab does not show analytics data.
 
 The {{site.data.keyword.mobilepushshort}} service is now OpenWhisk enabled. For more information, see [OpenWhisk](/docs/openwhisk/index.html).
 
@@ -53,9 +66,14 @@ Platform specific Push Notifications cloud services such as FCM/GCM or Apple Pus
 ###Push Security
 {: push-security}
 
-{{site.data.keyword.mobilepushshort}} APIs are secured by two types of secrets - i) appSecret ii) clientSecret. The 'appSecret' protects APIs that are typically invoked by back end applications- such as the API to send {{site.data.keyword.mobilepushshort}} and the API to configure settings.   The'clientSecret' protects APIs that are typically invoked by mobile client applications. There is only one API related to registration of a device with an associated UserId that requires this 'clientSecret'. None of the other APIs invoked from mobile clients require the clientSecret. The 'appSecret' and 'clientSecret' are allocated to every service instance at the time of binding an application with {{site.data.keyword.mobilepushshort}} service. Refer the ReST API documentation for more information on how the secrets are to be passed and for what APIs.
+{{site.data.keyword.mobilepushshort}} APIs are secured by two types of secrets:
 
-Note: Earlier applications were required to pass the clientSecret only when registering or updating devices with userId field. All other APIs invoked by mobile and browser clients did not require clientSecret. These old applications can continue to use the clientSecret optionally for device registrations or updating calls. However, it is strongly recommended that clientSecret check is enforced for all client API calls. To enforce this in existing applications, there is a new 'verifyClientSecret' API that is published.  For new applications, clientSecret check will be enforced on all client API calls and this behavior cannot be changed with the 'verfiyClientSecret' API.
+- **appSecret**: The 'appSecret' protects APIs that are typically invoked by back end applications - such as the API to send {{site.data.keyword.mobilepushshort}} and the API to configure settings.
+- **clientSecret**:  The'clientSecret' protects APIs that are typically invoked by mobile client applications. There is only one API related to registration of a device with an associated UserId that requires this 'clientSecret'. None of the other APIs invoked from mobile clients require the clientSecret. 
+
+The 'appSecret' and 'clientSecret' are allocated to every service instance at the time of binding an application with {{site.data.keyword.mobilepushshort}} service. Refer to the [REST APIs](https://mobile.{DomainName}/imfpush/) documentation for information on how the secrets are to be passed and for what APIs.
+
+**Note**: Earlier applications were required to pass the clientSecret only when registering or updating devices with userId field. All other APIs invoked by mobile and browser clients did not require clientSecret. These old applications can continue to use the clientSecret optionally for device registrations or updating calls. However, it is strongly recommended that clientSecret check is enforced for all client API calls. To enforce this in existing applications, there is a new 'verifyClientSecret' API that is published.  For new applications, clientSecret check will be enforced on all client API calls and this behavior cannot be changed with the 'verfiyClientSecret' API.
 
 By default, client secret verification is enforced only in new apps. Both existing and new apps are allowed to enable or disable the client secret verification using the verifyClientSecret REST API. It is recommended that you enforce client secret verification to avoid exposing devices to users who might know the applicationId and deviceId.
 
@@ -91,8 +109,9 @@ To send a Unicast notifications through REST API, ensure that the deviceIds or u
 Notifications can be targeted to reach a particular device platform. For example, a notification can be sent to all Android users or Google Chrome users only. To send a platform-based notification that uses the REST API, make sure that the targeted platforms are provided when posting to a message resource. Specify the platforms as an array. The supported platforms are as follows:
 * A (Apple)
 * G (Google)
-* WEB_CHROME (Google Chrome Browser WebPush)
-* WEB_FIREFOX (Mozilla Firefox Browser WebPush)
+* WEB_CHROME (Google Chrome Browser Web Push)
+* WEB_FIREFOX (Mozilla Firefox Browser Web Push)
+* WEB_SAFARI (Safari Browser Web Push)
 * APPEXT_CHROME (Google Chrome Apps & Extensions)
 
 ## {{site.data.keyword.mobilepushshort}} message size
@@ -100,7 +119,7 @@ Notifications can be targeted to reach a particular device platform. For example
 
 The {{site.data.keyword.mobilepushshort}} message payload size is dependent on the constraints laid out by the Gateways (FCM/GCM, APNs) and client platforms. 
 
-###iOS
+### iOS and Safari
 {: ios-message-size}
 
 For iOS 8 and later, the maximum size allowed is 2 kilobytes. Apple Push Notification service does not send notifications that exceeds this limit.

@@ -7,30 +7,29 @@
     "id": "cfApp",
     "title": "Cloud Foundry 應用程式",
     "href": "cfapps/index.html",
-    "category_id": "運算"
+    "category_id": "compute"
   }, {
     "title": "運行環境",
     "href": "cfapps/runtimes.html",
-    "category_id": "運算"
+    "category_id": "compute"
   }, {
     "title": "樣板",
     "href": "cfapps/boilerplates.html",
-    "category_id": "運算"
+    "category_id": "compute"
   }, {
-    "id": "whisk",
     "title": "IBM OpenWhisk",
     "href": "openwhisk/index.html",
-    "category_id": "運算"
+    "category_id": "compute"
   }, {
-    "id": "容器",
-    "title": "IBM Containers",
+    "id": "container",
+    "title": "IBM Bluemix Container Service",
     "href": "containers/container_index.html",
-    "category_id": "運算"
+    "category_id": "compute"
   }, {
     "id": "vm",
     "title": "IBM Virtual Servers",
     "href": "virtualmachines/vm_index.html",
-    "category_id": "運算"
+    "category_id": "compute"
   }, {
     "type": "extra",
     "title": "嘗試處理資料",
@@ -38,17 +37,12 @@
     "category_id": "data"
   }, {
     "type": "extra",
-    "title": "嘗試工具鏈",
-    "href": "toolchains/toolchains_overview.html",
-    "category_id": "devops"
-  }, {
-    "type": "extra",
     "title": "嘗試專用 GitHub Enterprise",
     "href": "services/ghededicated/index.html",
     "category_id": "devops"
   }, {
     "type": "extra",
-    "title": "嘗試 Bluemix Mobile 儀表板",
+    "title": "嘗試建置行動專案",
     "href": "mobile/index.html",
     "category_id": "mobile"
   }]

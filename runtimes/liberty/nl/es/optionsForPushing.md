@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-11"
 
 ---
 
@@ -11,9 +12,6 @@ copyright:
 
 # Opciones para enviar aplicaciones Liberty
 {: #options_for_pushing}
-
-Última actualización: 10 de junio de 2016
-{: .last-updated}
 
 El comportamiento del servidor Liberty en Bluemix se controla mediante el paquete de compilación de Liberty. Los paquetes de compilación pueden ofrecer un entorno de tiempo de ejecución completo para una determinada clase de aplicaciones. Constituyen la clave para ofrecer portabilidad entre nubes y contribuir a una arquitectura de nube abierta. El paquete de compilación de Liberty proporciona un contenedor WebSphere Liberty capaz de ejecutar aplicaciones Java EE 7 y OSGi. Admite infraestructura extendidas, como Spring e incluye IBM JRE. WebSphere Liberty permite desarrollar rápidamente aplicaciones adaptadas a la nube. El paquete de compilación de Liberty da soporte a varias aplicaciones que se despliegan en un único servidor Liberty. Como parte de la integración del paquete de compilación de Liberty en Bluemix, el paquete de compilación garantiza que las variables de entorno para los servicios de enlace se muestran como variables de configuración en el servidor Liberty.
 
@@ -140,7 +138,7 @@ Importante: Para que los cambios en las variables de entorno de su entorno se ha
 En algunos casos, puede resultar necesario proporcionar una configuración personalizada del servidor Liberty con la aplicación. Esta configuración personalizada puede ser necesaria al desplegar un archivo WAR o EAR y el archivo server.xml predeterminado no tiene los valores determinados que necesita su aplicación.
 
 Si ha instalado el perfil de Liberty en la estación de trabajo y ya ha creado un servidor Liberty con la aplicación, puede enviar por push el contenido de dicho directorio a Bluemix.
-Por ejemplo, su el servidor Liberty se denomina defaultServer, ejecute el mandato:
+Por ejemplo, si el servidor Liberty se denomina defaultServer, ejecute el mandato:
 
 ```
     $ cf push <yourappname> -p wlp/usr/servers/defaultServer
@@ -196,7 +194,7 @@ Por ejemplo, si el servidor Liberty es defaultServer, ejecute el mandato:
 ```
 {: codeblock}
 
-Este mandato genera un archivo serverName.zip en el directorio del servidor. Si ha utilizado la opción ``--archive`` para especificar un archivo de archivado distinto, asegúrese de que tenga la extensión ``.zip` en lugar de ``.jar`. **El paquete de compilación no da soporte a los archivos del servidor empaquetados creados con la extensión `.jar`**.
+Este mandato genera un archivo serverName.zip en el directorio del servidor. Si ha utilizado la opción ``--archive`` para especificar un archivo de archivado distinto, asegúrese de que tenga la extensión ``.zip` en lugar de ``.jar`. **El paquete de compilación no da soporte a los archivos del servidor empaquetados creados con la extensión `.jar`**.
 
 Luego puede enviar por push el archivo `.zip` generado a Bluemix con el mandato `cf push`.
 Por ejemplo:
@@ -221,22 +219,20 @@ Cuando se envía un servidor empaquetado o un directorio del servidor Liberty, e
 ### Variables a las que se puede hacer referencia
 {: #referenceable_variables}
 
-Las siguientes variables están definidas en el archivo runtime-vars.xml y se hace referencia a las mismas desde un archivo server.xml enviado. Todas las variables son sensibles a mayúsculas y minúsculas.
+Las siguientes variables están definidas en el archivo `runtime-vars.xml` y se hace referencia a las mismas desde un archivo `server.xml` enviado. Todas las variables son sensibles a mayúsculas y minúsculas.
 
 * ${port}: el puerto HTTP en el que escucha el servidor Liberty.
-* ${vcap_console_port}: el puerto en el que se ejecuta la consola vcap (suele coincidir con ${port}).
-* ${vcap_app_port}: el puerto en el que escucha el servidor de app (suele coincidir con ${port}).
-* ${vcap_console_ip}: la dirección IP de la consola vcap (suele ser la dirección IP en la que escucha el servidor Liberty).
+* ${vcap_app_port}: Same as ${port}. No se establece si se ejecuta en Diego.
 * ${application_name}: el nombre de la aplicación, que se define mediante las opciones del mandato cf push.
-* ${application_version}: la versión de esta instancia de la aplicación, que tiene el formato de un UUID, como por ejemplo b687ea75-49f0-456e-b69d-e36e8a854caa. Esta variable cambia con cada envío sucesivo de la aplicación que contiene código nuevo o cambios en los artefactos de la aplicación.
-* ${host}: la dirección IP del DEA que está ejecutando la aplicación (suele coincidir con ${vcap_console_ip}).
+* ${application_version}: la versión de esta instancia de la aplicación, que tiene el formato de un UUID, como por ejemplo `b687ea75-49f0-456e-b69d-e36e8a854caa`. Esta variable cambia con cada envío sucesivo de la aplicación que contiene código nuevo o cambios en los artefactos de la aplicación.
+* ${host}: la dirección IP de la instancia de la aplicación. 
 * ${application_uris}: una matriz de tipo JSON de puntos finales que se puede utilizar para acceder a esta aplicación; por ejemplo: myapp.mydomain.com.
-* ${start}: la fecha y hora en que se ha iniciado la aplicación, con un formato parecido al siguiente: 2013-08-22 10:10:18 -0400.
+* ${start}: la fecha y hora en que se ha iniciado la aplicación, con un formato parecido al siguiente:`2013-08-22 10:10:18 -0400`. No se establece si se ejecuta en Diego.
 
 ### Acceso a la información de los servicios enlazados
 {: #accessing_info_of_bound_services}
 
-Cuando desee enlazar un servicio con la aplicación, se incluirá información acerca del servicio, como por ejemplo las credenciales de conexión, en la [variable de entorno VCAP_SERVICES](http://docs.run.pivotal.io/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES) que
+Cuando desee enlazar un servicio con la aplicación, se incluirá información acerca del servicio, como por ejemplo las credenciales de conexión, en la [variable de entorno VCAP_SERVICES](https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES) que
 				Cloud Foundry establece para la aplicación. Para [servicios configurados automáticamente](autoConfig.html), el paquete de compilación de Liberty generará o
 				actualizará entradas de enlace de servicios en el archivo server.xml. El contenido de las entradas de enlace de servicio
 				puede estar en una de las formas siguientes:
@@ -245,16 +241,16 @@ Cuando desee enlazar un servicio con la aplicación, se incluirá información a
 * cloud.services.&lt;service-name&gt;.connection.&lt;property&gt;, que describe la información de conexión para el servicio.
 
 El conjunto de información típico es el siguiente:
-* name: el nombre del servicio. Por ejemplo, mysql-e3abd.
-label: el tipo de servicio creado. Por ejemplo, mysql-5.5.
-* plan: el plan del servicio, indicado por el identificador exclusivo del plan. Por ejemplo, 100.
-connection.name: identificador exclusivo de la conexión, que adopta el formato de UUID. Por ejemplo, d01af3a5fabeb4d45bb321fe114d652ee.
-* connection.hostname: nombre de host del servidor que ejecuta el servicio. Por ejemplo, mysql-server.mydomain.com.
-* connection.host: la dirección IP del servidor que ejecuta el servicio. Por ejemplo, 9.37.193.2.
-* connection.port: el puerto en el que el servicio está a la escucha de conexiones entrantes. Por ejemplo, 3306,3307.
-* connection.user: el nombre de usuario que se utiliza para autenticar esta aplicación ante el servicio. Cloud Foundry genera automáticamente el nombre de usuario. Por ejemplo: unHwANpjAG5wT.
+* name: el nombre del servicio, por ejemplo mysql-e3abd.
+* label: el tipo del servicio creado, por ejemplo mysql-5.5.
+* plan: el plan del servicio, indicado por el identificador exclusivo del plan, por ejemplo 100. 
+* connection.name: identificador exclusivo de la conexión, que adopta el formato de UUID, por ejemplo d01af3a5fabeb4d45bb321fe114d652ee. 
+* connection.hostname: nombre de host del servidor que ejecuta el servicio, por ejemplo mysql-server.mydomain.com. 
+* connection.host: la dirección IP del servidor que ejecuta el servicio, por ejemplo 9.37.193.2. 
+* connection.port: el puerto en el que el servicio está a la escucha de conexiones entrantes, por ejemplo 3306,3307. 
+* connection.user: el nombre de usuario que se utiliza para autenticar esta aplicación ante el servicio. Cloud Foundry genera automáticamente el nombre de usuario, por ejemplo unHwANpjAG5wT. 
 * connection.username: alias de connection.user.
-* connection.password: la contraseña que se utiliza para autenticar esta aplicación ante el servicio. Cloud Foundry genera automáticamente la contraseña. Por ejemplo: pvyCY0YzX9pu5.
+* connection.password: la contraseña que se utiliza para autenticar esta aplicación ante el servicio. Cloud Foundry genera automáticamente la contraseña, por ejemplo pvyCY0YzX9pu5. 
 
 Para los servicios enlazados que el paquete de compilación de Liberty no configura automáticamente, la aplicación tiene que gestionar por su cuenta el acceso del recurso de fondo.
 

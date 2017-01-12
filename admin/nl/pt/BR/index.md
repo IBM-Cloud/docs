@@ -4,6 +4,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-25"
 
 
 ---
@@ -18,28 +19,30 @@ copyright:
 # Gerenciando o {{site.data.keyword.Bluemix_notm}} Local e {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #mng}
 
-*Última atualização: 20 de outubro de 2016*
-{: .last-updated}
 
-Se você tiver acesso de administrador para o {{site.data.keyword.Bluemix}} Local ou o {{site.data.keyword.Bluemix_notm}} Dedicated, acesse a página **Administração** para gerenciar recursos, monitorar o uso de cotas, administrar permissões de usuário, planejar notificações de upgrade, visualizar relatórios e logs de segurança e mais. É possível gerenciar suas organizações criando espaços e configurando [funções de usuário e permissões](index.html#oc_useradmin); veja [Gerenciando suas organizações](../admin/orgs_spaces.html).
+Se você tiver acesso de administrador para o {{site.data.keyword.Bluemix}} Local ou o {{site.data.keyword.Bluemix_notm}} Dedicated, acesse a página **Administração** para gerenciar recursos, monitorar o uso de cotas, administrar permissões de usuário, planejar notificações de upgrade, visualizar relatórios e logs de segurança e mais. É possível gerenciar suas organizações criando espaços e configurando [funções de usuário e permissões](/docs/admin/index.html#oc_useradmin); veja [Gerenciando suas organizações](/docs/admin/orgs_spaces.html).
 {:shortdesc}
 
-*Tabela 1. Tarefas administrativas para gerenciar sua instância local ou dedicada do {{site.data.keyword.Bluemix_notm}}*
-{: #caption}
+*Tabela 1. Tarefas administrativas para gerenciar a instância local ou dedicada do {{site.data.keyword.Bluemix_notm}}*
 
 | O que fazer? | Detalhes |    
 |----------------|---------|
-|Monitorar o uso do sistema | Clique em **ADMINISTRAÇÃO &gt; USO**. Visualize as informações do sistema, monitore o uso da CPU e o uso do plano para tomar as melhores decisões para seus negócios. Consulte [Visualizando informações de uso](index.html#oc_resource).|
-|Gerenciar seu catálogo | Clique em **ADMINISTRAÇÃO &gt; GERENCIAMENTO DO CATÁLOGO** para gerenciar quais serviços estão visíveis para seus usuários e organizações. Consulte [Gerenciando seu catálogo](index.html#oc_catalog).|
-|Administrar organizações | Clique em **ADMINISTRAÇÃO &gt; ADMINISTRAÇÃO DA ORGANIZAÇÃO** para criar organizações, monitorar cotas para organizações e tomar decisões baseadas em necessidades rapidamente. Consulte [Administrando organizações](index.html#oc_organizations).|
+|Monitorar o uso do sistema | Clique em **ADMINISTRAÇÃO &gt; USO**. Visualize as informações do sistema, monitore o uso da CPU e o uso do plano para tomar as melhores decisões para seus negócios. Consulte [Visualizando informações de uso](/docs/admin/index.html#oc_resource).|
+|Gerenciar seu catálogo | Clique em **ADMINISTRAÇÃO &gt; GERENCIAMENTO DO CATÁLOGO** para gerenciar quais serviços estão visíveis para seus usuários e organizações. Veja [Gerenciando seu catálogo](/docs/admin/index.html#oc_catalog).|
+|Administrar organizações | Clique em **ADMINISTRAÇÃO &gt; ADMINISTRAÇÃO DA ORGANIZAÇÃO** para criar organizações, monitorar cotas para organizações e tomar decisões baseadas em necessidades rapidamente. Consulte [Administrando organizações](/docs/admin/index.html#oc_organizations).|
 |Criar espaços e designar funções de usuário | Clique no ícone **{{site.data.keyword.avatar}}** ![ícone Avatar](../support/images/account_support.svg) e, em seguida, selecione **Gerenciar organizações** para criar espaços em suas organizações. Inclua usuários e designe funções de organização e espaço para os usuários. Consulte
-[Gerenciando as suas organizações](../admin/orgs_spaces.html). |
-|Gerenciar permissões de usuário administrativo | Clique em **ADMINISTRAÇÃO &gt; ADMINISTRAÇÃO DE USUÁRIO** para incluir usuários, remover usuários e ajustar permissões de usuários. Veja [Gerenciando usuários e permissões](index.html#oc_useradmin). |
-|Revisar relatórios e logs | Clique em **ADMINISTRAÇÃO &gt; RELATÓRIOS E LOGS** para visualizar relatórios de segurança e logs de auditoria para sua instância. Consulte [Visualizando relatórios](index.html#oc_report). |
-|Visualizar Informações do Sistema | Clique em **ADMINISTRAÇÃO &gt; INFORMAÇÕES DO SISTEMA** para visualizar informações do sistema, como atualizações de manutenção pendentes, nome e versão de sua instância, região, URL da API, URL da CLI, detalhes da configuração de LDAP, mapeamentos de grupos e de usuários, estatísticas e domínios compartilhados. Consulte [Visualizando informações do sistema](index.html#oc_system). |
-|Estender notificações e configurar assinaturas de notificação | Clique em **ADMINISTRAÇÃO &gt; INFORMAÇÕES DO SISTEMA &gt; *Número* pendente**. É possível usar webhooks para integração com um serviço da web de sua opção para configurar uma assinatura de notificação de eventos para uma atualização ou um incidente. Consulte [Notificações e assinaturas de notificação](index.html#oc_eventsubscription). |
+[Gerenciando as suas organizações](/docs/admin/orgs_spaces.html). |
+|Gerenciar permissões de usuário administrativo | Clique em **ADMINISTRAÇÃO &gt; ADMINISTRAÇÃO DE USUÁRIO** para incluir usuários, remover usuários e ajustar permissões de usuários. Consulte [Gerenciando usuários e permissões](/docs/admin/index.html#oc_useradmin). |
+|Revisar relatórios e logs | Clique em **ADMINISTRAÇÃO &gt; RELATÓRIOS E LOGS** para visualizar relatórios de segurança e logs de auditoria para sua instância. Consulte [Visualizando relatórios](/docs/admin/index.html#oc_report). |
+|Visualizar Informações do Sistema | Clique em **ADMINISTRAÇÃO &gt; INFORMAÇÕES DO SISTEMA** para visualizar informações do sistema, como atualizações de manutenção pendentes, nome e versão de sua instância, região, URL da API, URL da CLI, detalhes da configuração de LDAP, mapeamentos de grupos e de usuários, estatísticas e domínios compartilhados. Consulte [Visualizando informações do sistema](/docs/admin/index.html#oc_system). |
+|Estender notificações e configurar assinaturas de notificação | Clique em **ADMINISTRAÇÃO &gt; INFORMAÇÕES DO SISTEMA &gt; *Número* pendente**. É possível usar webhooks para integração com um serviço da web de sua opção para configurar uma assinatura de notificação de eventos para uma atualização ou um incidente. Consulte [Notificações e assinaturas de notificação](/docs/admin/index.html#oc_eventsubscription). |
+
+<!-- staging only for WoW start -->
 
 **Dica**: o painel Infraestrutura no console do {{site.data.keyword.Bluemix_notm}} está disponível apenas em contas vinculadas em ambientes {{site.data.keyword.Bluemix_notm}} Public.
+
+
+<!-- staging only for WoW end -->
 
 
 ## Notificações e assinaturas de notificação
@@ -55,7 +58,6 @@ também envia notificações para a área Notificações na página de Administr
 notificações e onde cada tipo de notificação é postado.
 
 *Tabela 2. Tipos de eventos e métodos de notificações*
-{: #caption}
 
 | **Tipo de evento** | **Método de Notificação** |       
 |-----------------|-------------------|
@@ -108,7 +110,6 @@ Para criar uma assinatura de e-mail ou webhook a partir da página **Assinaturas
   * Clique em **Salvar e fechar** para salvar a assinatura em sua lista de assinaturas de notificação e retornar para a página anterior.
 
 *Tabela 3. Campos para assinaturas de notificação de e-mail sobre atualizações de manutenção ou incidentes*
-{: #caption}
 {: #emailnotmaintinc}
 
 | **Campo** | **Descrição** |
@@ -124,7 +125,6 @@ para todas as regiões em uma única notificação. Essa opção está disponív
 | Descrição | Inclua uma descrição exclusiva para a assinatura que você está criando. |
 
 *Tabela 4. Campos para assinaturas de notificação por e-mail sobre limites*
-{: #caption}
 {: #emailnottrhesh}
 
 | **Campo** | **Descrição** |
@@ -148,7 +148,6 @@ Se não quiser esperar 6 horas para que a notificação seja enviada quando o li
 dados de amostra.
 
 *Tabela 5. Campos de formulário para uma assinatura de notificação de webhook sobre manutenção ou incidentes*
-{: #caption}
 {: #webhooknotsub}
 
 | **Campo** | **Descrição** |
@@ -177,7 +176,6 @@ notificação. |
 para todas as regiões em uma única notificação. Essa opção está disponível somente para incidentes. |
 
 *Tabela 6. Campos de formulário para uma assinatura de notificação de webhook sobre limites*
-{: #caption}
 {: #webhooknotthresh}
 
 | **Campo** | **Descrição** |
@@ -198,7 +196,6 @@ notificação. As assinaturas são ativadas por padrão. |
 | URL | Insira a URL para se conectar ao seu serviço da web. |
 
 *Tabela 7. Valores da seção Carga útil de manutenção e incidente*
-{: #caption}
 {: #payload}
 
 | **Valor IBM** | **Descrição** | **Tipo do evento** |
@@ -216,7 +213,6 @@ notificação. As assinaturas são ativadas por padrão. |
 | {{type}} | Atualização ou incidente | Atualização de manutenção e incidente |
 
 *Tabela 8. Valores da seção Carga útil de limite*
-{: #caption}
 {: #threshpayload}
 
 | **Valor IBM** | **Descrição** | **Tipo do evento** |
@@ -351,7 +347,7 @@ Para visualizar informações do sistema, clique em
 
 ### Atualizações do sistema pendentes
 
-Na seção Atualizações, é possível ver o número de notificações de atualizações pendentes que requerem ação de sua parte. Há dois tipos de atualizações de manutenção que você pode ver:
+Na seção Atualizações, é possível ver o número de notificações de atualizações pendentes que requerem ação de sua parte. Há dois tipos que você pode ver:
 
 <dl>
 <dt>Atualizações sem interrupção</dt>
@@ -427,7 +423,8 @@ Para ver informações mais detalhadas sobre sua memória física e reservada ou
 	<dt><strong>Limite reservado</strong></dt>
 	<dd>Mostrado como uma linha pontilhada horizontal, o Limite reservado é a quantia total de memória ou espaço em disco que pode ser coletivamente reservada por todos os aplicativos em execução em seu ambiente.</dd>
 	<dt><strong>Reservada</strong></dt>
-	<dd>A Área reservada mostra o espaço de memória ou disco que está atualmente reservada coletivamente por todos os aplicativos em execução em seu ambiente. 	<p>Para ver quais organizações reservaram mais memória em um determinado momento, passe o mouse sobre o ponto ao longo da Área reservada que está associado a esse momento. Em seguida, é possível clicar em uma
+	<dd>A Área reservada mostra o espaço de memória ou disco que está atualmente reservada coletivamente por todos os aplicativos em execução em seu ambiente.
+	<p>Para ver quais organizações reservaram mais memória em um determinado momento, passe o mouse sobre o ponto ao longo da Área reservada que está associado a esse momento. Em seguida, é possível clicar em uma
 organização no gráfico de pizza que é exibido para ver mais informações sobre essa organização.</p></dd>
 	<dt><strong>Limite físico</strong></dt>
 	<dd>Mostrado como uma linha pontilhada horizontal, o Limite físico mostra a quantia de memória física ou o espaço em disco que foi adquirido para seu ambiente.</dd>
@@ -493,7 +490,8 @@ Para visualizar o uso por organização, clique em **ADMINISTRAÇÃO &gt; ADMINI
 - Número de rotas que estão atualmente em uso.
 - Gráfico de cota de memória que mostra o quanto da cota está usado e quanto não está atualmente sendo usado.
 - Gráfico de alocação de aplicativos que mostra quais aplicativos estão incluídos na cota de memória usada.
-- Gráfico de uso de aplicativos medido que mostra um relatório trimestral de GB/horas usados por app implementado. É possível selecionar a **Visualização de lista** para ver dados de todos os apps, incluindo a alocação de memória por app e o uso de GB/hora medido para os últimos três meses.
+- Gráfico de uso de aplicativo medido que mostra um relatório trimestral de GB/horas usados por app implementado. É possível selecionar a
+**Visualização de lista** para ver dados para todos os apps, incluindo a alocação de memória por app e o uso de GB/hora medido para os últimos três meses.
 
 Para obter mais informações sobre como visualizar o uso por organização, ajustar planos de cotas e gerenciar suas organizações, consulte [Administrando organizações](../admin/index.html#oc_organizations).
 
@@ -523,7 +521,6 @@ administração para a sua recuperação. Após esses 90 dias, os relatórios es
 relatórios estarão disponíveis para recuperação por até 1 ano.
 
 *Tabela 9. Lista de relatórios de segurança*
-{: #caption}
 
 | **Categoria** | **Relatório** | **Descrição** |      
 |-----------------|-------------------|---------------------|
@@ -703,8 +700,7 @@ Quando você estiver implementando o broker de serviço, na resposta JSON de <co
 
 As tabelas a seguir podem ajudá-lo a preencher o arquivo de JSON.
 
-*Tabela 10. Campos JSON*
-{: #caption}
+*Tabela 10. Campos de JSON*
 
 | **Campos de JSON** | **Descrição** |
 |-----------------|-----------------|
@@ -719,7 +715,6 @@ serviço com o {{site.data.keyword.Bluemix_notm}}. |
 |planejamentos | Uma matriz de definições de plano de serviço. Consulte a tabela a seguir para [Campos de plano](index.html#planfields) para obter mais informações. |
 
 *Tabela 11. Campos de metadados*
-{: #caption}
 {: #metadatafields}
 
 | **Valores de metadados** | **Descrição** |
@@ -788,7 +783,6 @@ O exemplo a seguir mostra como a resposta de JSON de GET /v2/catalog é mapeada 
 ![Detalhes do serviço no catálogo.](images/metadata.png "Visualização de detalhes do serviço do catálogo do Bluemix")
 
 *Tabela 12. Campos de plano*
-{: #caption}
 {: #planfields}
 
 | **Valores de plano** | **Descrição** |
@@ -802,7 +796,6 @@ possível especificar os campos a seguir no campo de metadados: displayName, tip
 a seguir para [Campos de metadados de plano](index.html#planmetadata) para obter mais informações. |
 
 *Tabela 13. Campos de metadados de plano*
-{: #caption}
 {: #planmetadata}
 
 | **Valores de metadados de plano** | **Descrição** |
@@ -941,7 +934,9 @@ Na seção Lista de organizações, é possível visualizar todas as organizaç�
   - Número de rotas que estão atualmente em uso.
   - Gráfico de cota de memória que mostra o quanto da cota está usado e quanto não está atualmente sendo usado.
   - Gráfico de alocação de aplicativos que mostra quais aplicativos estão incluídos na cota de memória usada.
-  - Gráfico de uso de aplicativos medido que mostra um relatório trimestral de GB/horas usados por app implementado. É possível selecionar a **Visualização de lista** para ver dados de todos os apps, incluindo a alocação de memória por app e o uso de GB/hora medido para os últimos três meses.
+  - Gráfico de uso de aplicativo medido que mostra um relatório trimestral de GB/horas usados por app implementado. É possível selecionar a
+**Visualização de lista** para ver dados para todos os apps, incluindo a alocação de memória por app e o uso de GB/hora medido para os últimos três
+meses.
 
 - Para editar o nome da organização e incluir ou remover os gerenciadores, clique no nome da organização na lista e siga os prompts na tela.
 
@@ -1074,7 +1069,6 @@ Os usuários podem ser designados com as permissões a seguir com níveis de ace
 do administrador.
 
 *Tabela 14. Permissões*
-{: #caption}
 
 | **Permissão do usuário** | **Descrição** |       
 |-----------------|-------------------|
@@ -1135,7 +1129,9 @@ autenticação de acesso básico no terminal `https://<your_host>.ibm.com/login`
 
 Para efetuar login no Console administrativo, execute o comando a seguir:
 
-`curl --user <user_id>:<password> -c ./cookies.txt --header "Accept: application/json" https://<your_host>.ibm.com/login | python -m json.tool`
+```
+curl --user <user_id>:<password> -c ./cookies.txt --header "Accept: application/json" https://<your_host>.ibm.com/login | python -m json.tool
+```
 {: codeblock}
 
 <dl class="parml">
@@ -1155,6 +1151,7 @@ Para efetuar login no Console administrativo, execute o comando a seguir:
 
 O exemplo a seguir mostra a saída a partir deste
                 comando:
+
 ```
 {
     "message": "Logged in",
@@ -1174,7 +1171,9 @@ ter a permissão de **Usuários** com o acesso de
 **Leitura** para listar organizações. Para listar todas as
 organizações, execute o comando a seguir:
 
-`curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/organizations | python -m json.tool`
+```
+curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/organizations | python -m json.tool
+```
 {: codeblock}
 
 <dl class="parml">
@@ -1219,7 +1218,9 @@ a API REST `Admin` para listar usuários registrados. Deve-se ter
 permissão de **Usuários** com o acesso de **Leitura** para
 listar usuários registrados. Para listar todos os usuários, execute o comando a seguir:
 
-`curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/users | python -m json.tool`
+```
+curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/users | python -m json.tool
+```
 {: codeblock}
 
 <dl class="parml">
@@ -1320,7 +1321,9 @@ endereço de e-mail e o ID de usuário.
 
 Forneça as informações em um arquivo JSON.
 
-`curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/users | python -m json.tool`
+```
+curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/users | python -m json.tool
+```
 {: codeblock}
 
 <dl class="parml">
@@ -1412,9 +1415,11 @@ remover usuários da instância do {{site.data.keyword.Bluemix_notm}}. Deve-se t
 permissão de **Usuários** com acesso de
 **Gravação** para remover usuários.
 
-Para remover um usuário, deve-se fornecer o ID de usuário do usuário. Execute o seguinte comando:
+Para remover um usuário, deve-se fornecer o ID de usuário do usuário. Execute o comando a seguir:
 
-`curl -v -b ./cookies.txt -X DELETE https://<your_host>.ibm.com/codi/v1/users?user_id=<some_user_id@domain.com>`
+```
+curl -v -b ./cookies.txt -X DELETE https://<your_host>.ibm.com/codi/v1/users?user_id=<some_user_id@domain.com>
+```
 {: codeblock}
 
 <dl class="parml">
@@ -1445,6 +1450,307 @@ O exemplo a seguir mostra a saída a partir deste
  <
  ```
 {: screen}
+
+## API para métricas (experimental)
+{: #envappmetricsapi}
+
+É possível usar duas APIs experimentais para reunir métricas sobre seu ambiente ou aplicativos. Ambas as APIs retornam uma matriz de pontos de dados para as métricas solicitadas durante o tempo especificado.
+
+**Notas**:
+
+1. Um usuário pode fazer até 200 solicitações de API para métricas dentro de uma hora.
+2. Cada solicitação de API retorna até 200 pontos de dados por solicitação. Se mais dados estiverem disponíveis, uma URL será fornecida para carregar o próximo conjunto de dados.
+
+## Reunindo métricas sobre seu ambiente 
+
+É possível usar a API de ambiente experimental para reunir informações de alto nível do ambiente durante um período especificado. Os pontos de dados disponíveis dentro do tempo especificado são retornados. Os dados são registrados aproximadamente a cada hora. Se, por exemplo, você solicitasse seis horas de dados de CPU para o ambiente, a resposta incluiria dados de CPU para cada uma das seis horas solicitadas.
+
+### Parâmetros de consulta de métricas de ambiente
+
+Usando os parâmetros de consulta a seguir, é possível reunir métricas para seu disco, CPU, memória, rede e apps:
+
+<dl class="parml">
+<dt class="pt dlterm">métrico</dt>
+<dd class="pd">Um ou mais dos valores a seguir, separados por vírgulas: 'memory', 'disk', 'cpu', 'network' e 'apps.'</dd>
+<dt class="pt dlterm">startTime</dt>
+<dd class="pd">O momento mais antigo a partir do qual os dados são retornados. Se nenhum startTime for especificado, o ponto de dados disponível mais antigo será incluído. Por exemplo, para reunir dados entre 14h e 17h, especifique um startTime de 2 PM.</dd>
+<dt class="pt dlterm">endTime</dt>
+<dd class="pd">O momento mais recente a partir do qual os dados são retornados. Se nenhum endTime for especificado, o ponto de dados mais recente será usado. Por exemplo, para reunir dados entre 14h e 17h, especifique um endTime de 5 PM.</dd>
+<dt class="pt dlterm">ordenação</dt>
+<dd class="pd">A ordem na qual os dados são retornados. Os valores válidos são 'asc' (ascendente) e 'desc' (decrescente). O padrão é decrescente, retornando os dados mais recentes primeiro. </dd>
+</dl>
+
+### Formato de dados de métricas de ambiente
+
+As seções a seguir fornecem o formato de dados.
+
+ * Para reunir registros de dados sobre seu uso de memória, use o formato de dados a seguir:
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "memory": {
+    "physical": {
+      "total_gb": 864,
+      "used": {
+        "value_gb": 336.84,
+        "percent": 38.99
+      }
+    },
+    "allocated": {
+      "reserved_gb": 1728,
+      "total_allocated": {
+        "value_gb": 1287.59,
+        "percent": 74.51
+      }
+    },
+    "memory_by_container": [
+      {
+        "name": "dea_next/0",
+        "type": "dea",
+        "ip": "169.53.225.93",
+        "percent": "47"
+      },
+      {
+        "name": "dea_next/1",
+        "type": "dea",
+        "ip": "169.53.225.89",
+        "percent": "51"
+      },
+      {
+        "name": "dea_next/2",
+        "type": "dea",
+        "ip": "169.53.230.49",
+        "percent": "45"
+      },
+      {
+        "name": "dea_next/3",
+        "type": "dea",
+        "ip": "169.44.109.231",
+        "percent": "43"
+      }
+    ]
+  }
+}
+```
+{: screen}
+
+ * Para reunir registros de dados sobre seu uso de disco, use o formato de dados a seguir:
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "disk": {
+    "physical": {
+      "total_gb": 8100,
+      "used": {
+        "value_gb": 807,
+        "percent": 9.96
+      }
+    },
+    "allocated": {
+      "reserved_gb": 16200,
+      "total_allocated": {
+        "value_gb": 1989.5,
+        "percent": 12.28
+      }
+    },
+    "disk_by_container": [
+      {
+        "name": "dea_next/0",
+        "type": "dea",
+        "ip": "169.53.225.93",
+        "percent": "13"
+      },
+      {
+        "name": "dea_next/1",
+        "type": "dea",
+        "ip": "169.53.225.89",
+        "percent": "14"
+      },
+      {
+        "name": "dea_next/2",
+        "type": "dea",
+        "ip": "169.53.230.49",
+        "percent": "13"
+      },
+      {
+        "name": "dea_next/3",
+        "type": "dea",
+        "ip": "169.44.109.231",
+        "percent": "12"
+      }
+    ]
+  }
+}
+```
+{: screen}
+
+ * Para reunir registros de dados sobre seu uso de CPU, use o formato de dados a seguir:
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "cpu": {
+    "average_percent_cpu_used": 27.288461538461544,
+    "cpu_by_container": [
+      {
+        "name": "dea_next/0",
+        "type": "dea",
+        "ip": "169.53.225.93",
+        "sys_percent": "8.4",
+        "user_percent": "2.7",
+        "wait_percent": "0.0"
+      },
+      {
+        "name": "dea_next/1",
+        "type": "dea",
+        "ip": "169.53.225.89",
+        "sys_percent": "7.4",
+        "user_percent": "2.4",
+        "wait_percent": "0.0"
+      },
+      {
+        "name": "dea_next/2",
+        "type": "dea",
+        "ip": "169.53.230.49",
+        "sys_percent": "5.3",
+        "user_percent": "1.9",
+        "wait_percent": "0.0"
+      },
+      {
+        "name": "dea_next/3",
+        "type": "dea",
+        "ip": "169.44.109.231",
+        "sys_percent": "8.2",
+        "user_percent": "22.6",
+        "wait_percent": "0.0"
+      }
+    ]
+  }
+}
+```
+{: screen}
+
+ * Para reunir registros de dados sobre sua rede, use o formato de dados a seguir:
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "network": {
+    "datapower": {
+    "response_times": [
+      {
+        "proxy": "custom_certificates",
+        "ten_seconds_ms": "0",
+        "one_minute_ms": "0",
+        "ten_minutes_ms": "0",
+        "one_hour_ms": "0",
+        "one_day_ms": "0"
+      },
+      {
+        "proxy": "bluemix",
+        "ten_seconds_ms": "90",
+        "one_minute_ms": "89",
+        "ten_minutes_ms": "83",
+        "one_hour_ms": "85",
+        "one_day_ms": "95"
+      }
+      ],
+        "transactions": [
+      {
+        "proxy": "custom_domains",
+        "ten_seconds_ms": "0",
+        "one_minute_ms": "0",
+        "ten_minutes_ms": "0",
+        "one_hour_ms": "0",
+        "one_day_ms": "0"
+      },
+      {
+        "proxy": "bluemix",
+        "ten_seconds_ms": "697",
+        "one_minute_ms": "747",
+        "ten_minutes_ms": "802",
+        "one_hour_ms": "794",
+        "one_day_ms": "730"
+      }
+      ],
+        "bandwidth": {
+        "in_mbps": 10855,
+        "out_mbps": 38090
+      }
+  }
+}
+```
+{: screen}
+
+* Para reunir registros de dados sobre seus aplicativos, use o formato de dados a seguir:
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "apps": {
+    "count": 1406,
+    "allocation": {
+      "memory_gb": 571.8,
+      "disk_gb": 1204
+    }
+  }
+}
+```
+{: screen}
+
+### Formato de resposta de métricas de ambiente
+
+```
+{
+   docs: [],
+   next_url:
+}
+```
+{: screen}
+
+## Reunindo métricas sobre seus aplicativos
+
+Os dados são registrados para todos os aplicativos aproximadamente a cada hora. Uma solicitação para uma métrica específica retorna informações para todos os apps em cada amostra de dados no período especificado, que são classificadas em ordem decrescente pela métrica solicitada. Por exemplo, solicitar todos os apps por CPU durante um período de 6 horas em um ambiente que tem 200 apps retorna 1200 registros, 200 por vez.
+
+Para reduzir a quantia de informações que são retornadas para cada amostra de dados no período solicitado, é possível especificar uma opção de contagem. Usar o exemplo anterior e incluir uma opção de contagem de 5 retorna 30 registros que representam os 5 principais aplicativos por CPU para cada amostra de dados.
+
+### Terminais de aplicativos 
+
+É possível usar os terminais a seguir para chamar este comando de API:
+* /api/v1/app/cpu/physical 
+* /api/v1/app/memory/physical
+* /api/v1/app/memory/reserved
+* /api/v1/app/disk/physical
+* /api/v1/app/disk/reserved
+
+### Parâmetros de consulta de aplicativos
+ 
+Use os parâmetros de consulta a seguir para reunir métricas para seus aplicativos:
+
+<dl class="parml">
+<dt class="pt dlterm">startTime</dt>
+<dd class="pd">O momento mais antigo a partir do qual os dados são retornados. Se nenhum startTime for especificado, o ponto de dados disponível mais antigo será incluído. Por exemplo, para reunir dados entre 14h e 17h, especifique um startTime de 2 PM.</dd>
+<dt class="pt dlterm">endTime</dt>
+<dd class="pd">O momento mais recente a partir do qual os dados são retornados. Se nenhum endTime for especificado, o ponto de dados mais recente será usado. Por exemplo, para reunir dados entre 14h e 17h, especifique um endTime de 5 PM.</dd>
+<dt class="pt dlterm">Nativa</dt>
+<dd class="pd">O número de registros a serem retornados dentro de cada amostra de dados.
+</dd>
+</dl>
+
+### Formato de resposta de aplicativos
+
+```
+{
+   docs: [],
+   next_url:
+}
+```
+{: screen}
+
+Cada documento retornado representa as métricas solicitadas para um aplicativo em cada amostra de dados, no momento da solicitação.
+
 
 ## API de serviço customizado
 {: #servicebrokerapi}
@@ -1525,20 +1831,14 @@ Content-Type: application/json
 
 ```
 {
-  "entity": {
+    "_id": "2063580064-0ca80769-8e9e-4e1c-9b99-68bdcf1a2c68",
     "name": "Service broker's name",
     "broker_url": "https://provision-broker.comp.bluemix.net/bmx/provisioning/brokers/2063580064-8f23230c-7f36-4ce5-a298-2ab4108f1120",
+    "proxy_broker_url": "https://provision-broker.dys0.bluemix.net/bmx/provisioning/brokers/2063580064-0ca80769-8e9e-4e1c-9b99-68bdcf1a2c68",
     "auth_username": "username",
-    "space_guid": null
-  },
-  "warnings": [],
-  "metadata": {
-    "guid": "49f3adcc-ecc2-46fa-83c1-03322f04b3b1",
-    "created_at": "2015-12-07T19:51:50Z",
-    "updated_at": null,
-    "url": "/v2/service_brokers/49f3adcc-ecc2-46fa-83c1-03322f04b3b1"
-  }
+    "created_on": "2016-09-30T16:45:56.304Z"
 }
+
 ```
 {: screen}
 
@@ -1549,14 +1849,15 @@ Use a API a seguir e os exemplos de código para atualizar um serviço.
 ### Rotear
 {: #updateroute}
 
-`PUT /codi/v1/serviceBrokers`
+```
+PUT /codi/v1/serviceBrokers
+```
 {: screen}
 
 ### Pedido
 {: #updaterequest}
 
 *Tabela 16. Campos*
-{: #caption}
 
 | **Nome** | **Descrição** |
 |-----------------|-------------------|
@@ -1606,19 +1907,12 @@ Content-Type: application/json
 
 ```
 {
-  "entity": {
+    "_id": "2063580064-0ca80769-8e9e-4e1c-9b99-68bdcf1a2c68",
     "name": "Service Broker's name",
     "broker_url": "https://provision-broker.dys0.bluemix.net/bmx/provisioning/brokers/2063580064-d11bdd84-7556-469f-858d-2098b531f7f2",
+    "proxy_broker_url": "https://provision-broker.dys0.bluemix.net/bmx/provisioning/brokers/2063580064-0ca80769-8e9e-4e1c-9b99-68bdcf1a2c68",
     "auth_username": "username",
-    "space_guid": null
-  },
-  "warnings": [],
-  "metadata": {
-    "guid": "2cbdb812-d37f-443b-894a-a96de31e5c38",
-    "created_at": "2015-12-07T20:11:08Z",
-    "updated_at": "2015-12-07T20:11:19Z",
-    "url": "/v2/service_brokers/2cbdb812-d37f-443b-894a-a96de31e5c38"
-  }
+    "created_on": "2016-09-30T16:45:56.304Z"
 }
 ```
 {: screen}
@@ -1628,7 +1922,6 @@ Content-Type: application/json
 Use a API a seguir e os exemplos de código para excluir um serviço.
 
 *Tabela 17. Parâmetro*
-{: #caption}
 
 | **Nome** | **Descrição** |
 |-----------------|-------------------|
@@ -1692,13 +1985,15 @@ incluir o plug-in da CLI Admin do {{site.data.keyword.Bluemix_notm}}.
 anteriormente o plug-in Administrador do
 {{site.data.keyword.Bluemix_notm}}, poderá ser necessário desinstalar o plug-in, excluir o repositório e reinstalar para obter as atualizações mais recentes.
 
-Conclua as etapas a seguir para incluir o repositório e instalar o plug-in:
+Conclua as etapas a seguir para incluir o repositório e instalar
+o plug-in:
 
 <ol>
 <li>Para incluir o repositório do plug-in Administrador do {{site.data.keyword.Bluemix_notm}}, execute o comando a seguir:<br/><br/> <code> cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cli </code><br/><br/>
 <dl class="parml">
 <dt class="pt dlterm">&lt;subdomain&gt;</dt>
-<dd class="pd">Subdomínio da URL da sua instância do {{site.data.keyword.Bluemix_notm}}.</dd>
+<dd class="pd">Subdomínio da URL da sua instância do
+{{site.data.keyword.Bluemix_notm}}.</dd>
 </dl>
 </li>
 <li>Para instalar o plug-in CLI admin do
@@ -1712,7 +2007,9 @@ cf install-plugin bluemix-admin-cli -r BluemixAdmin
 Para ver uma lista de comandos, execute o comando
 a seguir:
 
-`cf plugins`
+```
+cf plugins
+```
 {: codeblock}
 
 Para obter mais ajuda para um comando, use a opção `-help`.

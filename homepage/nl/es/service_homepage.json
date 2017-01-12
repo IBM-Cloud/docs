@@ -17,13 +17,12 @@
     "href": "cfapps/boilerplates.html",
     "category_id": "compute"
   }, {
-    "id": "whisk",
     "title": "IBM OpenWhisk",
     "href": "openwhisk/index.html",
     "category_id": "compute"
   }, {
-    "id": "contenedor",
-    "title": "IBM Containers",
+    "id": "container",
+    "title": "Servicio de contenedor de IBM Bluemix",
     "href": "containers/container_index.html",
     "category_id": "compute"
   }, {
@@ -38,17 +37,12 @@
     "category_id": "data"
   }, {
     "type": "extra",
-    "title": "Pruebe las cadenas de herramientas",
-    "href": "toolchains/toolchains_overview.html",
-    "category_id": "devops"
-  }, {
-    "type": "extra",
     "title": "Pruebe Dedicated GitHub Enterprise",
     "href": "services/ghededicated/index.html",
     "category_id": "devops"
   }, {
     "type": "extra",
-    "title": "Pruebe el panel de control de Bluemix Mobile",
+    "title": "Try building mobile projects",
     "href": "mobile/index.html",
     "category_id": "mobile"
   }]

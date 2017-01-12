@@ -2,31 +2,32 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-11-06"
+
 ---
 
 # {{site.data.keyword.amashort}} 정보
 {: #mca-overview}
 
 
-{{site.data.keyword.amafull}} 서비스는 {{site.data.keyword.Bluemix_notm}}에서 호스팅되는 클라우드 리소스를 액세스하는 모바일 및 웹 애플리케이션에 대한 인증 및 모니터링 서비스를 제공합니다. 
+{{site.data.keyword.amafull}} 서비스는 {{site.data.keyword.Bluemix_notm}}에서 호스트되는 클라우드 리소스에 액세스하는 모바일 및 웹 애플리케이션에 대한 인증을 제공합니다. 
 
-{{site.data.keyword.amashort}} 서비스를 사용하여 다양한 인증 유형으로 {{site.data.keyword.Bluemix_notm}}에서 호스트되는 Node.js 및 Liberty for Java&trade; 애플리케이션을 보호할 수 있습니다. {{site.data.keyword.amashort}} SDK로 모바일 애플리케이션을 계측함으로써 {{site.data.keyword.amashort}} 서비스에서 제공하는 인증 기능을 사용할 수 있습니다. 클라이언트 측 로그가 자동으로 수집되어 요청 시 {{site.data.keyword.amashort}} 서비스에 전송됩니다. {{site.data.keyword.amashort}} 대시보드를 사용하여 다양한 인증 유형을 구성하고 클라이언트 측 SDK에서 수집하고 전송하는 데이터를 볼 수 있습니다. 
+{{site.data.keyword.amashort}} 서비스를 사용하여 다양한 인증 유형으로 {{site.data.keyword.Bluemix_notm}}에서 호스트되는 Node.js 및 Liberty for Java&trade; 애플리케이션을 보호할 수 있습니다. {{site.data.keyword.amashort}} SDK로 모바일 애플리케이션을 계측함으로써 {{site.data.keyword.amashort}} 서비스에서 제공하는 인증 기능을 사용할 수 있습니다. {{site.data.keyword.amashort}} 대시보드를 사용하여 다양한 인증 유형을 구성하고 클라이언트 측 SDK에서 수집하고 전송하는 데이터를 볼 수 있습니다. 
 
 **참고**: {{site.data.keyword.amashort}} 서비스를 이전에는 고급 모바일 액세스라고 했습니다. 
 
 ## 컴포넌트
 {: #components}
 
-* **{{site.data.keyword.amashort}} 대시보드**: 다양한 인증 유형을 구성하고 모바일 애플리케이션 성능, 분석, 사용 통계 및 디바이스 로그를 모니터링합니다. 
-* **{{site.data.keyword.amashort}} 클라이언트 SDK**: {{site.data.keyword.amashort}} 기능을 사용하기 위해 모바일 애플리케이션을 계측합니다. 지원되는 플랫폼은 iOS 8+, Android 4+ 및 Cordova입니다.
+* **{{site.data.keyword.amashort}} 대시보드**: 다양한 인증 유형을 구성합니다. 
+* **{{site.data.keyword.amashort}} 클라이언트 SDK**: {{site.data.keyword.amashort}} 기능을 사용하기 위해 모바일 애플리케이션을 계측합니다. 지원되는 플랫폼은 iOS 8+, Android 4+, Cordova 및 웹 애플리케이션입니다. 
 * **{{site.data.keyword.amashort}} 서버 SDK**: {{site.data.keyword.Bluemix_notm}}에서 호스트되는 리소스를 보호합니다. 현재 지원되는 런타임은 Node.js 및 Liberty for Java&trade;입니다. 
 
 ## 인증 유형
 {: #authtypes}
 사용자 모바일 앱에서 다음과 같은 인증 유형을 사용할 수 있습니다. 
-* **Facebook**: ID 제공자로 Facebook을 사용합니다. 사용자는 Facebook 신임 정보를 사용하여 모바일 앱에 로그인합니다. 
-* **Google**: ID 제공자로 Google을 사용합니다. 사용자는 Google+ 신임 정보를 사용하여 모바일 앱에 로그인합니다. 
+* **Facebook**: ID 제공자로 Facebook을 사용합니다. 사용자는 Facebook 신임 정보를 사용하여 모바일 또는 웹 앱에 로그인합니다. 
+* **Google**: ID 제공자로 Google을 사용합니다. 사용자는 Google+ 신임 정보를 사용하여 모바일 또는 웹 앱에 로그인합니다. 
 * **사용자 정의**: 자체 ID 제공자를 작성합니다. 어떤 유형의 정보를 수집하고 유효성을 검사하는지에 대해 완벽히 제어합니다. 
 
 ## 아키텍처 개요

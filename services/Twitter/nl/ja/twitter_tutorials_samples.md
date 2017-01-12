@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2015, 2016
+lastupdated: "2016-11-21"
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -5,9 +13,6 @@
 
 # Insights for Twitter の例
 {: #examples}
-
-*最終更新日: 2016 年 5 月 13 日*
-{: .last-updated}
 
 {{site.data.keyword.twittershort}} サービスを開始するには、提供されているサンプルを使用して、サービスの利用方法を確認してください。
 {: shortdesc}

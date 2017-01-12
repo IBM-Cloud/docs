@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -13,8 +14,41 @@ copyright:
 
 ## Uma lista das atualizações mais recentes no buildpack do Liberty.
 
-Última atualização: 13 de setembro de 2016
-{: .last-updated}
+### 1º de novembro de 2016: atualizado o buildpack do Liberty v3.4.1-20161030-2241
+* O buildpack contém uma correção para um problema iniciando em determinados tipos de aplicativos. 
+Especificamente, os aplicativos implementados como um diretório do servidor ou um servidor empacotado com os
+arquivos de aplicativos no diretório `dropins`.
+
+### 21 de outubro de 2016: atualizado o buildpack do Liberty v3.4-20161018-2004
+* A versão de runtime padrão do Liberty `16.0.0.3` foi
+atualizada para incluir os iFixes [PI68805](http://www-01.ibm.com/support/docview.wss?uid=swg1PI68805) e
+[PI69141](http://www-01.ibm.com/support/docview.wss?uid=swg1PI69141). 
+* A versão de runtime mensal do Liberty foi atualizada para a liberação
+[2016.9.0.1](https://developer.ibm.com/wasdev/blog/2016/09/23/beta-websphere-liberty-and-tools-october-2016/). 
+* O buildpack também contém uma versão atualizada do IBM JRE 8.0: SR3 FP12.
+* O IBM JRE 8.0 e 7.1 agora são configurados para ativar
+[todos
+os protocolos TLS quando SSLContext.getContext ("TLS") é chamado](https://www.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.security.component.80.doc/security-component/jsse2Docs/matchsslcontext_tls.html) para
+corresponder ao comportamento do JRE do Oracle. O IBM JRE 7.1 também é configurado para ativar
+[
+todos os protocolos TLS quando SSLContext.getDefault() é chamado](https://www.ibm.com/support/knowledgecenter/SSYKE2_7.1.0/com.ibm.java.security.component.71.doc/security-component/jsse2Docs/overrideSSLprotocol.html) para corresponder
+ao comportamento do JRE 8.0 da IBM.
+* O buildpack fornece um coletor de dados atualizado para o
+[serviço de
+Monitoramento e Analítica](/docs/services/monana/index.html#monana_oview).
+* O buildpack foi mudado de volta para fazer download do
+[driver MariaDB Connector/J
+JDBC](https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/) mais recente 1.5.x ao executar [configuração automática para
+o tipo de MySQL de serviços](autoConfig.html).
+* O buildpack apresenta o suporte para customizar o comportamento de configuração automática de serviço
+por meio da variável de ambiente `LBP_SERVICE_CONFIG_<>serviceType`.
+Por exemplo, ele pode ser usado para mudar o local ou a versão de um driver JDBC para download do serviço
+MySQL. Consulte a documentação de [serviços que suportam configuração
+automática](autoConfig.html) para obter mais informações. 
+* O buildpack também contém um número de melhorias do
+[Diego](https://docs.cloudfoundry.org/concepts/diego/diego-architecture.html)
+relacionadas à verificação de funcionamento do aplicativo e à
+funcionalidade do [Gerenciamento de aplicativo](/docs/manageapps/app_mng.html).
 
 ### 16 de setembro de 2016: atualizado o buildpack do Liberty v3.3-20160912-1729
 * A versão de runtime padrão do Liberty foi atualizada para a liberação
@@ -24,21 +58,23 @@ versão de runtime mensal do Liberty foi atualizada para a liberação
 essas atualizações, os recursos `cloudant-1.0` e
 `passwordUtilities-1.0` do Liberty, anteriormente disponíveis como
 recursos beta, agora estão disponíveis como recursos prontos para produção.
+* [Correções de segurança](http://www-01.ibm.com/support/docview.wss?uid=swg21990527)
+para o tempo de execução do Liberty são incluídas.
 * O buildpack também contém uma versão atualizada do IBM JRE 8.0: SR3 FP11.
 * O buildpack foi ajustado para fazer download do [driver JDBC MariaDB Connector/J](https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/) 1.4.x mais recente ao executar [configuração automática para tipo de serviços MySQL](autoConfig.html) devido a um problema com o driver 1.5.x mais recente.
 
 ### 26 de agosto de 2016: atualizado o buildpack do Liberty v3.2-20160822-2200
 * O buildpack contém versões atualizadas do IBM JRE: 8 SR3 FP10 e 7.1 SR3 FP50.
 * A versão de runtime mensal do Liberty foi atualizada para a liberação [2016.8.0.0](https://developer.ibm.com/wasdev/blog/2016/07/28/beta-websphere-liberty-and-tools-august-2016/).
-* O plug-in de serviço que fornece [suporte de configuração automática](autoConfig.html) para o serviço [SQL Database](../../services/SQLDB/index.html#SQLDB) foi atualizado para usar sempre os certificados confiáveis da JVM ao conectar-se ao serviço sobre TLS.
+* O plug-in de serviço que fornece [suporte de configuração automática](autoConfig.html) para o serviço [SQL Database](/docs/services/SQLDB/index.html#SQLDB) foi atualizado para usar sempre os certificados confiáveis da JVM ao conectar-se ao serviço sobre TLS.
 
 ### 22 de julho de 2016: atualizado o buildpack do Liberty v3.1-20160717-2254
-* A funcionalidade [Gerenciamento de app](../../manageapps/app_mng.html) foi atualizada para suportar autenticação federada. Além disso, o tempo de execução do Node.js que é usado pelos utilitários `devconsole` e `shell` foi atualizado para a versão mais recente `0.12.15`. 
+* A funcionalidade [Gerenciamento de app](/docs/manageapps/app_mng.html) foi atualizada para suportar autenticação federada. Além disso, o tempo de execução do Node.js que é usado pelos utilitários `devconsole` e `shell` foi atualizado para a versão mais recente `0.12.15`. 
 * O buildpack inclui suporte para o agente de monitoramento de aplicativo [Dynatrace Ruxit](http://www.dynatrace.com/en/ruxit/).
 * O buildpack fornece um coletor de dados atualizado para o
 [serviço de
-Monitoramento e Analítica](../../services/monana/index.html#monana_oview).
-* O buildpack também fornece uma versão atualizada do agente para o [Serviço de ajuste automático de escala](../../services/Auto-Scaling/index.html). 
+Monitoramento e Analítica](/docs/services/monana/index.html#monana_oview).
+* O buildpack também fornece uma versão atualizada do agente para o [Serviço de ajuste automático de escala](/docs/services/Auto-Scaling/index.html). 
 * A versão de runtime do Liberty mensal foi atualizada para a liberação [2016.7.0.0](https://developer.ibm.com/wasdev/blog/2016/06/30/beta-websphere-liberty-and-tools-july-2016/).
 
 ### 17 de junho de 2016: atualizado o buildpack do Liberty v3.0-20160608-1450
@@ -65,17 +101,17 @@ beta *logstashCollector-1.0* GA e *logmetCollector-1.0*.
 * O suporte do [Dynatrace](dynatrace.html) foi melhorado para simplificar a instalação do agente.
 * O buildpack fornece um coletor de dados atualizado para o
 [serviço de
-Monitoramento e Analítica](../../services/monana/index.html#monana_oview). Ele contém uma correção para um problema com a coleta
+Monitoramento e Analítica](/docs/services/monana/index.html#monana_oview). Ele contém uma correção para um problema com a coleta
 dos dados de heap máximo.
-* O tempo de execução Node.js que é usado pelos [utilitários de gerenciamento de app devconsole e shell](../../manageapps/app_mng.html#app_management) foi atualizado para a versão mais recente 0.12.13.
+* O tempo de execução Node.js que é usado pelos [utilitários de gerenciamento de app devconsole e shell](/docs/manageapps/app_mng.html#app_management) foi atualizado para a versão mais recente 0.12.13.
 
 ### 25 de março de 2016: Atualizado o buildpack do Liberty v2.7-20160321-1358
 * O buildpack contém uma versão atualizada do WebSphere Liberty com base no [beta de março](https://developer.ibm.com/wasdev/blog/2016/03/18/new-websphere-liberty-features-march-2016/). A versão atualizada do Liberty disponibiliza o recurso beta cloudant-1.0 no Bluemix.
 * O buildpack também contém versões atualizadas do IBM JRE: 8 SR2 FP12 e 7.1 SR3 FP32. 
-* O buildpack fornece uma versão atualizada do agente para o [serviço de ajuste automático de escala](../../services/Auto-Scaling/index.html). 
-* O buildpack agora vem com um novo coletor de dados para o [serviço Monitoring and Analytics](../../services/monana/index.html#monana_oview). O novo coletor permite a configuração de limites de monitoramento e contém uma série de correções de bug.
+* O buildpack fornece uma versão atualizada do agente para o [serviço de ajuste automático de escala](/docs/services/Auto-Scaling/index.html). 
+* O buildpack agora vem com um novo coletor de dados para o [serviço Monitoring and Analytics](/docs/services/monana/index.html#monana_oview). O novo coletor permite a configuração de limites de monitoramento e contém uma série de correções de bug.
 * O buildpack fornece um driver JDBC atualizado do DB2® versão 4.19.49. 
-* O tempo de execução do Node.js que é usado pelos [utilitários devconsole e shell do App Management](../../manageapps/app_mng.html#app_management) foi atualizado para a versão mais recente 0.12.12.
+* O tempo de execução do Node.js que é usado pelos [utilitários devconsole e shell do App Management](/docs/manageapps/app_mng.html#app_management) foi atualizado para a versão mais recente 0.12.12.
 
 ### 7 de março de 2016: Atualizado o buildpack do Liberty v2.6-20160225-1649
 * O buildpack inclui suporte para o monitoramento de aplicativos Dynatrace. Veja [Usando o Dynatrace](dynatrace.html) para obter detalhes.
@@ -98,7 +134,7 @@ dos dados de heap máximo.
 * O buildpack contém uma versão atualizada do tempo de execução do perfil Liberty e do WebSphere eXtreme Scale Client com correções de segurança para a [Vulnerabilidade do Apache Commons Collection](http://www-01.ibm.com/support/docview.wss?uid=swg21971426).
 * O buildpack também contém uma versão atualizada do [Driver Java MongoDB](https://docs.mongodb.org/ecosystem/drivers/java/), v2.13.3. O novo driver é compatível
 com MongoDB versão 2.4, 2.6 e 3.0.
-* O buildpack também fornece uma versão atualizada do coletor de dados para o [serviço Monitoring and Analytics](../../services/monana/index.html). O
+* O buildpack também fornece uma versão atualizada do coletor de dados para o [serviço Monitoring and Analytics](/docs/services/monana/index.html). O
 coletor de dados atualizado melhorou as capacidades de rastreio do método.
 
 ### 16 de outubro de 2015: Atualizado o buildpack Liberty v2.1-20151006-0912
@@ -106,7 +142,7 @@ coletor de dados atualizado melhorou as capacidades de rastreio do método.
 * O buildpack também contém um IBM JRE 8 SR1 FP11 atualizado.
 * O buildpack também fornece um número de otimizações e melhorias de desempenho:
   * O recurso de varredura de bean archive implícito [CDI 1.2](optionsForPushing.html) é desativado por padrão ao implementar os arquivos WAR ou EAR.
-  * Para reduzir o tamanho do droplet, os [Utilitários do App Management](../../manageapps/app_mng.html) devconsole e shell requerem uma operação de remontagem em vez de uma reinicialização.
+  * Para reduzir o tamanho do droplet, os [Utilitários do App Management](/docs/manageapps/app_mng.html) devconsole e shell requerem uma operação de remontagem em vez de uma reinicialização.
   * O cache de classe compartilhada do IBM JRE foi desativado porque não estava sendo reutilizado no ambiente do Bluemix.
 
 ### 18 de setembro de 2015: Atualizado o buildpack Liberty v2.0-20150914-1535
@@ -128,7 +164,7 @@ quando fizer download de vários componentes de buildpack.
 * O buildpack contém versões atualizadas de IBM JREs: 7.1 SR1 FP10 e 8 SR1 FP10.
 Os JREs atualizados contêm as
 [mais recentes correções de segurança](http://www-01.ibm.com/support/docview.wss?uid=swg21964161) e outras melhorias.
-* O plug-in de serviço que fornece [suporte de configuração automática](autoConfig.html) para o serviço [Cloudant NoSQL Database](../../services/Cloudant/index.html#Cloudant) foi atualizado para assegurar que as conexões com o serviço sejam estabelecidas por meio de um canal seguro.
+* O plug-in de serviço que fornece [suporte de configuração automática](autoConfig.html) para o serviço [Cloudant NoSQL Database](/docs/services/Cloudant/index.html#Cloudant) foi atualizado para assegurar que as conexões com o serviço sejam estabelecidas por meio de um canal seguro.
 
 ### 21 de julho de 2015: Buildpack do Liberty v1.20-20150713-1450 atualizado
 * O buildpack contém uma versão atualizada do perfil Liberty na [liberação 8.5.5.6](https://developer.ibm.com/wasdev/blog/2015/06/25/java-ee-7-has-landed-in-was-liberty/). Com essa liberação, todos os recursos Java EE 7 Liberty
@@ -136,7 +172,7 @@ disponíveis anteriormente como recursos beta, agora estão disponíveis como re
 de porta e outras restrições no Bluemix, alguns recursos como, por exemplo, EJBs remotos não são
 totalmente suportados na plataforma.
 * O buildpack reconhece e executa aplicativos em pacote no [distZip-style](https://docs.gradle.org/current/userguide/application_plugin.html).
-* O buildpack contém um coletor de dados atualizado para o [Monitoring and Analytics Service](../../services/monana/index.html) e o Cliente WebSphere eXtreme Scale que suportam o nova
+* O buildpack contém um coletor de dados atualizado para o [Monitoring and Analytics Service](/docs/services/monana/index.html) e o Cliente WebSphere eXtreme Scale que suportam o nova
 versão de tempo de execução do Liberty.
 
 ### 30 de junho de 2015: Buildpack do Liberty v1.19.1-20150622-1509 atualizado
@@ -146,8 +182,8 @@ fornece integração aprimorada com o tempo de execução do perfil Liberty.
 
 ### 14 de junho de 2015: Buildpack do Liberty v1.19-20150608-1717 atualizado
 * O buildpack contém inúmeros aprimoramentos de gerenciamento de aplicativo que incluem suporte para o console de
-desenvolvimento e acesso de shell baseado na web. Consulte a [documentação do App Management](../../manageapps/app_mng.html) para obter detalhes.
-* O buildpack também contém uma correção para um problema em que o recurso Liberty para o [Monitoring and Analytics Service](../../services/monana/index.html) não pôde ser localizado.
+desenvolvimento e acesso de shell baseado na web. Consulte a [documentação do App Management](/docs/manageapps/app_mng.html) para obter detalhes.
+* O buildpack também contém uma correção para um problema em que o recurso Liberty para o [Monitoring and Analytics Service](/docs/services/monana/index.html) não pôde ser localizado.
 
 ### 27 de maio de 2015: Buildpack do Liberty v1.18-20150519-1642 atualizado
 * O buildpack contém uma versão atualizada do perfil Liberty com base no [beta de maio](https://developer.ibm.com/wasdev/blog/2015/05/08/beta-liberty-and-tools-may-2015/).
@@ -157,7 +193,7 @@ desenvolvimento e acesso de shell baseado na web. Consulte a [documentação do 
 * O buildpack também fornece suporte inicial para Java 8. O IBM JRE 7.1 permanece o JRE padrão, mas o IBM JRE 8 pode ser ativado para um aplicativo configurando a variável de ambiente JBP_CONFIG_IBMJDK. A configuração da versão do OpenJDK também é suportada. Consulte [Customizando o JRE](customizingJRE.html) para obter todos os detalhes.
 * O buildpack fornece uma nova variável de ambiente JBP_CONFIG_LIBERTY que pode ser usada para substituir
 a configuração padrão dos recursos Liberty ativados para um aplicativo quando implementa um arquivo WAR ou EAR. Consulte [Aplicativos independentes](optionsForPushing.html#stand_alone_apps) para obter mais informações.
-* O plug-in de serviço para o [Monitoring and Analytics Service](../../services/monana/index.html) foi atualizado para reduzir o tamanho de logs que são gerados para o serviço.
+* O plug-in de serviço para o [Monitoring and Analytics Service](/docs/services/monana/index.html) foi atualizado para reduzir o tamanho de logs que são gerados para o serviço.
 * Com essa versão do buildpack, foi mudada a maneira como os arquivos de aplicativo são colocados no droplet. A
 mudança na estrutura do arquivo eliminou a complexidade relacionada à manutenção dos links simbólicos e não deve ter
 impacto nos aplicativos.
@@ -174,7 +210,7 @@ sob um contexto diferente com base nas configurações no arquivo **ibm-web-ext.
 * O buildpack contém uma versão atualizada do perfil Liberty
 com base no [beta de março](https://developer.ibm.com/wasdev/blog/2015/03/13/announcing-liberty-beta-tools-march-2015/). A versão atualizada dos perfis Liberty torna o recurso beta jsf-2.2 disponível no Bluemix.
 * O buildpack também contém uma versão atualizada do coletor de dados
-para o [Monitoring and Analytics Service](../../services/monana/index.html).
+para o [Monitoring and Analytics Service](/docs/services/monana/index.html).
 
 ### 20 de março de 2015: Buildpack do Liberty v1.14-20150319-1159 atualizado
 * Essa versão do buildpack contém um IBM JRE 7.1.2.11 atualizado com uma correção de segurança para a [vulnerabilidade FREAK](http://www-01.ibm.com/support/docview.wss?uid=swg21699864).
@@ -193,13 +229,13 @@ MongoDB que em certos casos gerou uma configuração **server.xml** inválida.
 * O buildpack contém correções de segurança para as [vulnerabilidades do Apache HttpComponents e do recurso de sobreposição Java](https://www-304.ibm.com/connections/blogs/PSIRT/entry/ibm_security_bulletin_multiple_vulnerabilities_fixed_in_liberty_for_java_for_ibm_bluemix_cve_2012_6153_cve_2014_3577_cve_2015_0178?lang=en_us).
 * O buildpack contém uma versão atualizada do perfil Liberty
 com base no [beta de fevereiro](https://developer.ibm.com/wasdev/blog/2015/02/13/announcing-liberty-beta-tools-february-2015/). A versão atualizada do perfil Liberty fornece uma versão atualizada do recurso WebSocket GA websocket-1.1. Ela também disponibiliza os recursos beta do Java EE 7 a seguir no Bluemix:
-  * cdi-1.2, el-3.0, jsp-2.3, jca-1.7, jacc-1.5 e jaspic-1.1
+  * cdi-1.2, el-3.0, jsp-2.3,  jca-1.7, jacc-1.5 e jaspic-1.1
 * O buildpack fornece integração com a [ferramenta JRebel do ZeroTrunaround](http://zeroturnaround.com/software/jrebel/). A integração facilita usar o JRebel com aplicativos Bluemix e executar atualizações instantâneas do aplicativo sem reimplementar ou remontar o aplicativo. Somente os aplicativos da web independentes são suportados.
 
 ### 6 de fevereiro de 2015: Buildpack do Liberty v1.12-20150130-1016 atualizado
 * O buildpack contém uma versão atualizada do perfil Liberty
 com base no [beta de janeiro](https://developer.ibm.com/wasdev/blog/2015/01/16/announcing-liberty-beta-tools-january-2015/).
-* O buildpack contém uma versão aparada do coletor de dados para o [serviço Monitoring and Analytics](../../services/monana/index.html#gettingstartedtemplate).
+* O buildpack contém uma versão aparada do coletor de dados para o [serviço Monitoring and Analytics](/docs/services/monana/index.html#gettingstartedtemplate).
 
 ### 23 de janeiro de 2015: Buildpack do Liberty v1.11-20150119-1511 atualizado
 * O buildpack contém um IBM JRE versão 7.1 SR2 FP1 atualizado.
@@ -248,7 +284,7 @@ Analytics.
 * Ele fornece também uma correção de um problema que impediu a implementação de aplicativos com a configuração do servidor que continha caracteres Unicode.
 
 ### 23 de outubro de 2014: Buildpack do Liberty atualizado v1.6-20141013-1628
-* Agora, o buildpack vem com um novo coletor de dados para o [Monitoring and Analytics](../../services/monana/index.html). O novo coletor de dados coleta informações mais abrangentes de diagnóstico, permitindo que os usuários do plano de Diagnósticos
+* Agora, o buildpack vem com um novo coletor de dados para o [Monitoring and Analytics](/docs/services/monana/index.html). O novo coletor de dados coleta informações mais abrangentes de diagnóstico, permitindo que os usuários do plano de Diagnósticos
 do serviço diagnostiquem problemas com seus aplicativos, indo diretamente para a linha específica do código.
 * O buildpack contém versões atualizadas dos agentes de gerenciamento e
 de ajuste automático de escala, que incluem correções de bugs e outras melhorias. Também inclui uma versão atualizada do [perfil Liberty](https://developer.ibm.com/wasdev/) e [Java MongoDB Driver](https://docs.mongodb.org/ecosystem/drivers/java/), v2.12.3.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-12-09"
 ---
 
 {:new_window: target="_blank"}
@@ -13,9 +13,6 @@ copyright:
 
 # 開始使用 {{site.data.keyword.composeForRedis}}
 {: #getting-started-with-compose-for-redis}
-
-前次更新：2016 年 9 月 20 日
-{: .last-updated}
 
 Redis 是開放程式碼記憶體內鍵值儲存庫。Redis 中的值可以是簡式字串、雜湊、清單，以及集合或強大的點陣圖、hyperloglogs 和地理空間索引。Redis 最適合用作應用程式快取或快速回應資料儲存庫。{{site.data.keyword.composeForRedis_full}} 提供已預先針對高可用性及磁碟內存持續性進行調整的配置，全部都透過額外安全特性鎖定。
 {:shortdesc}
@@ -43,6 +40,7 @@ Redis 是開放程式碼記憶體內鍵值儲存庫。Redis 中的值可以是�
 `deployment_id`|Compose 內所建立之服務的內部 ID。
 `db_type`|服務所提供的資料庫類型；在此情況下，為 `redis`。
 `name`|資料庫部署名稱。
+{: caption="Table 1. {{site.data.keyword.composeForRedis}} credentials" caption-side="top"}
 
 # 相關鏈結
 {: #rellinks}

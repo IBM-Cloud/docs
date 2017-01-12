@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2015
+  
+lastupdated: "2016-08-12"
 
 
 ---
@@ -17,8 +19,6 @@ copyright:
 # Problèmes d'ordre général liés aux services
 {: #general}
 
-*Dernière mise à jour : 12 août 2016*
-{: .last-updated}
 
 Des problèmes liés aux services {{site.data.keyword.Bluemix}} peuvent survenir :
 par exemple, une erreur de dépassement de délai d'attente de la passerelle peut se produire lorsque vous supprimez une instance de service. Toutefois, dans de nombreux cas, ces problèmes peuvent être résolus en quelques opérations simples.

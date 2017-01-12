@@ -2,11 +2,11 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-09-09"
+lastupdated: "2016-11-18"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -36,9 +36,12 @@ Your MQTT client identifies itself to the {{site.data.keyword.iot_short_notm}} s
 
 Applications and devices work with different MQTT topic spaces.  Devices work within a device-scoped topic space, whereas applications have full access to the topic space for an entire organization. For more information, see the following topics:
 
-- [Devices](../../devices/mqtt.html)
-- [Applications](../../applications/mqtt.html)
-- [Gateways](../../gateways/mqtt.html)
+- [MQTT messaging for devices](../../devices/mqtt.html)
+- [MQTT messaging for applications](../../applications/mqtt.html)
+- [MQTT messaging for gateways](../../gateways/mqtt.html)
+
+### Retained messages
+{{site.data.keyword.iot_short_notm}} provides limited support for the retained messages feature of MQTT messaging. If the retained message flag is set to true in an MQTT message that is sent from a device, gateway, or application to {{site.data.keyword.iot_short_notm}}, the message is handled as an unretained message. {{site.data.keyword.iot_short_notm}} organizations are not authorized to publish retained messages. The {{site.data.keyword.iot_short_notm}} service overrides the retained message flag when it is set to true and processes the message as if the retained message flag is set to false.
 
 ## Quality of service levels
 {: #qos-levels}

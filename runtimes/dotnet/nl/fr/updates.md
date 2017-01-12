@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-06"
 
 ---
 
@@ -11,9 +12,13 @@ copyright:
 # Dernières mises à jour apportées au pack de construction ASP.NET Core
 {: #latest_updates}
 
-Dernière mise à jour : 26 août 2016
 
 Liste des dernières mises à jour apportées au pack de construction aspnet.
+
+## 10 octobre 2016 : Pack de construction ASP.NET Core v1.0.1-20161005-1225 mis à jour
+
+* Ajout de la prise en charge de .NET Core 1.0.1
+* Correction d'un problème intermittent à l'origine de l'échec du déploiement lors de la mise en cache de packages NuGet
 
 ## 31 août 2016 : Pack de construction ASP.NET Core v1.0-20160826-1345 mis à jour
 

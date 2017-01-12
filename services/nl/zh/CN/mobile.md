@@ -1,17 +1,16 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 # 移动
 {: #mobile}
-
-*上次更新时间：2015 年 12 月 9 日*
 
 使用移动服务可构建多平台、本机或混合、Android 和 iOS 应用程序。
 {:shortdesc}
@@ -20,3 +19,4 @@ copyright:
 对用户体验的洞察达到前所未有的程度 | 确保应用程序安全 | 扩展与同步数据
 ---- | ---- | ----
 在用户回放的每个步骤中获取反馈。通过对实时性能进行分析，持续改进应用程序。 | 先于您的用户识别安全问题。管理用户访问权。确保与企业系统之间的通信是安全的。 | 使数据在所有设备之间同步，并使数据脱机。无需对数据库进行优化，即可正常使用。
+{: caption="Table 1. Benefits of using mobile services" caption-side="top"}

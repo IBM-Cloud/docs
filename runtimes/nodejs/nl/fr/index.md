@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 
 # SDK for Nodejs
 {: #nodejs_runtime}
-Dernière mise à jour : 29 août 2016
-{: .last-updated}
 
 L'environnement d'exécution Node.js sur {{site.data.keyword.Bluemix}} utilise la technologie du pack de construction sdk-for-nodejs.
 Le pack de construction sdk-for-nodejs fournit un environnement d'exécution complet pour les applis Node.js.
@@ -24,7 +23,7 @@ Le pack de construction sdk-for-nodejs est utilisé lorsque l'application contie
 ## Application de démarrage
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} contient une application de démarrage Node.js.  L'application de démarrage Node.js est une appli Node.js simple qui peut servir de modèle pour votre appli. Vous pouvez expérimenter cette appli et effectuer des modifications, puis les envoyer par commande push vers l'environnement Bluemix. Voir [Utilisation des applications de démarrage](../../cfapps/starter_app_usage.html) pour obtenir de l'aide.
+{{site.data.keyword.Bluemix}} contient une application de démarrage Node.js.  L'application de démarrage Node.js est une appli Node.js simple qui peut servir de modèle pour votre appli. Vous pouvez expérimenter cette application de démarrage et effectuer des modifications, puis les envoyer par commande push vers l'environnement Bluemix. Pour obtenir de l'aide sur son utilisation, voir [Utilisation des applications de démarrage](/docs/cfapps/starter_app_usage.html).
 
 ## Commande de démarrage
 {: #starup_commmand}
@@ -69,13 +68,11 @@ Les informations ci-dessous permettent d'exécuter l'application Node.js à la f
 
 L'exemple suivant montre une partie du code source d'un fichier **js** :
 ```
-var port = (process.env.VCAP_APP_PORT || 3000);
-var host = (process.env.VCAP_APP_HOST || 'localhost');
+var port = (process.env.PORT || 3000);
 ```
 {: codeblock}
 
-Avec ce code, lorsque l'application s'exécute sur Bluemix,
-les variables d'environnement VCAP_APP_HOST et VCAP_APP_PORT contiennent des valeurs d'hôte et de port internes à Bluemix, sur lesquelles l'app est à l'écoute des connexions entrantes. Lorsque l'application s'exécute en local, VCAP_APP_HOST et VCAP_APP_PORT ne sont pas définies. L'hôte utilisé est **localhost** et le port est **3000**. Le code rédigé ainsi permet d'exécuter l'application localement à des fins de test et sur Bluemix sans autres modifications.
+Avec ce code, lorsque l'application s'exécute sur Bluemix, la variable d'environnement PORT contient la valeur de port interne à Bluemix, sur laquelle l'appli est à l'écoute des connexions entrantes. Lorsque l'application s'exécute en local, PORT n'est pas définie. La valeur **3000** est donc utilisée comme numéro de port. Le code rédigé ainsi permet d'exécuter l'application localement à des fins de test et sur Bluemix sans autres modifications.
 
 ## Mode Hors ligne
 {: #offline_mode}
@@ -83,15 +80,15 @@ les variables d'environnement VCAP_APP_HOST et VCAP_APP_PORT contiennent des val
 Voir [Mode Hors ligne](offlineMode.html) pour plus d'informations sur le contrôle de l'accès du pack de construction aux sites externes. 
 
 ## App Management
-{{site.data.keyword.Bluemix}} fournit un certain nombre d'utilitaires pour la gestion et le débogage de l'appli Node.js.  Voir [App Management](../../manageapps/app_mng.html) pour des informations plus complètes.
+{{site.data.keyword.Bluemix}} fournit un certain nombre d'utilitaires pour la gestion et le débogage de l'appli Node.js. Pour plus de détails, voir [App Management](/docs/manageapps/app_mng.html).
 
 ## Versions disponibles
 {: #available_versions}
 
 {{site.data.keyword.Bluemix}} fournit tous les
-[contextes d'exécution Node.js disponibles actuellement](http://nodejs.org/dist/). Pour ceux-ci, IBM propose des versions comportant des améliorations et des correctifs. Pour plus d'informations, voir [Mises à jour les plus récentes du pack de construction Node.js](../../runtimes/nodejs/updates.html).
+[contextes d'exécution Node.js disponibles actuellement](http://nodejs.org/dist/). Pour ceux-ci, IBM propose des versions comportant des améliorations et des correctifs. Pour plus d'informations, voir [Mises à jour les plus récentes du pack de construction Node.js](/docs/runtimes/nodejs/updates.html).
 
-Le pack de construction IBM Node.js met en cache toutes les versions de l'environnement d'exécution IBM. Par conséquent, si vous utilisez l'environnement d'exécution IBM SDK for Node.js dans votre
+Le pack de construction IBM Node.js met en cache les versions de l'environnement d'exécution IBM. Par conséquent, si vous utilisez l'environnement d'exécution IBM SDK for Node.js dans votre
 application, vous obtenez de meilleures performances pour l'application lorsque celle-ci est envoyée dans Bluemix.
 
 Utilisez le paramètre **node** de la section **engines** du fichier **package.json** pour définir la version
@@ -126,7 +123,7 @@ NPM est doté d'une fonction permettant d'exécuter des scripts, y compris les s
 
 ### Comportement du cache
 {: #cache_behavior}
-{{site.data.keyword.Bluemix}} gère un répertoire de cache par application node, qui est conservé d'une génération à l'autre. Le cache stocke les dépendances résolues pour qu'elles ne soient pas téléchargées et installées à chaque déploiement de l'app.  Supposons, par exemple, que myapp dépende d'**express**.  Lors du premier déploiement de myapp, le module **express** est téléchargé. Lors des déploiements suivants, l'instance d'**express** mise en cache est utilisée. Le comportement par défaut consiste à mettre en cache tous les modules node_modules installés par NPM et tous les composants bower_components installés par bower.
+{{site.data.keyword.Bluemix}} gère un répertoire de cache par application node, qui est conservé d'une génération à l'autre. Le cache stocke les dépendances résolues pour qu'elles ne soient pas téléchargées et installées à chaque déploiement de l'appli.  Supposons, par exemple, que myapp dépende d'**express**.  Lors du premier déploiement de myapp, le module **express** est téléchargé.  Lors des déploiements suivants, l'instance d'**express** mise en cache est utilisée. Le comportement par défaut consiste à mettre en cache tous les modules node_modules installés par NPM et tous les composants bower_components installés par bower.
 
 Utilisez la variable NODE_MODULES_CACHE pour déterminer si le pack de construction Node utilise ou ignore le cache des générations précédentes. La valeur par défaut est true.  Pour désactiver la mise en cache, définissez NODE_MODULES_CACHE sur false, par exemple par la ligne de commande cf :
 ```
@@ -163,7 +160,7 @@ Il est important de comprendre que lorsque la variable d'environnement FIPS_MODE
 {: codeblock}
 Voir cet [article stackoverflow](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js) pour plus d'informations.
 
-**REMARQUE** : les variables d'environnement [App Management](../../manageapps/app_mng.html) et FIPS_MODE ne peuvent *PAS* être utilisées en même temps.  Si la variable d'environnement BLUEMIX_APP_MGMT_ENABLE est définie et que la variable d'environnement FIPS_MODE a pour valeur true, la reconstitution de l'application échoue.
+**REMARQUE** : Les variables d'environnement [App Management](/docs/manageapps/app_mng.html) et FIPS_MODE *NE PEUVENT PAS* être utilisées en même temps. Si la variable d'environnement BLUEMIX_APP_MGMT_ENABLE est définie et que la variable d'environnement FIPS_MODE a pour valeur true, la reconstitution de l'application échoue.
 
 Il existe diverses méthodes permettant de vérifier l'état de FIPS_MODE :
 <ul>
@@ -287,7 +284,7 @@ Généralement, le pack de construction **sdk-for-nodejs** en cours et une versi
 {: #rellinks}
 ## general
 {: #general}
-* [Mises à jour les plus récentes du pack de construction Node.js](../../runtimes/nodejs/updates.html)
-* [App Management](../../manageapps/app_mng.html)
+* [Mises à jour les plus récentes du pack de construction Node.js](/docs/runtimes/nodejs/updates.html)
+* [App Management](/docs/manageapps/app_mng.html)
 * [Node.js](https://nodejs.org)
 * [IBM API Connect](https://strongloop.com/)

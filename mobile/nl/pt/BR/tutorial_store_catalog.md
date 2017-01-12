@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-21"
+lastupdated: "2016-12-01"
 
 ---
 {:new_window: target="_blank"}
@@ -10,10 +10,7 @@ lastupdated: "2016-10-21"
 # Tutorial - Iniciador de UI (interface com o usuário) de catálogo de loja
 {: #tutorial_store_catalog}
 
-O Iniciador de UI (interface com o usuário) de catálogo de loja do {{site.data.keyword.Bluemix}}
-fornece uma estrutura básica de app de vendas que é possível customizar e dá a você
-pontos de integração para cada um dos serviços do
-{{site.data.keyword.Bluemix_notm}} Mobile.
+O Iniciador de UI (interface com o usuário) de catálogo de loja do {{site.data.keyword.Bluemix}} fornece uma estrutura básica de app de vendas que é possível customizar e dá a você pontos de integração para cada um dos serviços do {{site.data.keyword.Bluemix_notm}} Mobile.
 
 
 ## Requisitos
@@ -69,18 +66,17 @@ para configurá-lo.
 customizar o design de seu app.
    
 		**Dica:** para visualizar uma visão
-geral rápida do Construtor de UI, selecione **Mostre-me como
-funciona** na navegação após selecionar o Construtor de UI.
+geral rápida do Construtor de UI, selecione **Mostre-me
+como funciona** na navegação após selecionar o Construtor
+de UI.
 
    2. Selecione a guia **Design** na navegação.
 
       Há uma área de trabalho para o design de seu app e uma visualização simulada da aparência do seu app.
 
    3. Como opção, inclua novas telas selecionando **Criar
-tela**. Nomeie uma
-nova tela para facilitar a consulta em seu app. As novas
-telas são criadas no mesmo nível que a tela principal, independentemente do que está
-selecionado na árvore. É possível selecionar dentre os tipos de
+tela**. Nomeie uma nova tela para facilitar a consulta em seu app. As novas telas são criadas no
+mesmo nível que a tela principal, independentemente do que estiver selecionado na árvore. É possível selecionar dentre os tipos de
 telas a seguir:
       * Menu
       * Listar
@@ -105,9 +101,9 @@ Origens de dados que são identificadas na visualização **Dados**.*
 		Um item identificado na árvore como *Formulário* é independente e
 pode ser modificado sequencialmente. Ele não faz referência a informações de Origem de dados.
 
-   5. Selecione **Dados** na navegação para visualizar os dados
-que estão sendo usados pelo aplicativo. Há informações padrão no modelo; no entanto, é
-possível mudar a origem dos dados selecionando **Criar novo**. É
+   5. Selecione **Dados** na navegação para visualizar os dados que estiverem sendo
+usados pelo app. Há informações padrão no modelo; no entanto, é possível mudar a origem dos dados selecionando
+**Criar novo**. É
 possível referenciar mais de uma origem de dados; por isso, forneça um nome para cada uma
 que você usar. É possível selecionar dentre as opções de origem de dados a seguir:
       * Cloud
@@ -145,9 +141,9 @@ Foundation em seu projeto na tela *Configurações*, uma seleção
 **Foundation** e conclua as informações necessárias que são
 específicas do IBM MobileFirst Platform Foundation.
 
-   9. Selecione **Publicar** no menu de navegação para inserir
-as informações finais que são necessárias para criar seu app móvel. É possível inserir seu identificador de
-pacote configurável para iOS e o identificador do aplicativo para Android.
+   9. Selecione **Publicar** no menu de navegação para inserir as informações finais
+que são necessárias para criar seu app móvel. É possível inserir seu identificador de Pacote configurável para
+iOS e o identificador de Aplicativo para Android.
 
        Se você estiver criando um app iOS, deverá obter o Identificador de pacote
 configurável, o Certificado de distribuição como um arquivo *.p12* e o
@@ -162,15 +158,15 @@ distribuição e o Perfil de fornecimento devem ser baseados no Identificador de
 
    2. Para Android, é possível escolher dentre as opções a seguir após o código ser gerado:
 
-      **Fazer download do código**
+      * Fazer download do código
 
-      **Fazer download do APK**
+      * Fazer download do APK
 
-      **Fazer download com o código QR**
+      * Fazer download com o Código Quick Response
 
    3. Para iOS, é possível escolher dentre as opções a seguir após o código ser gerado:
 
-      **Fazer download do código**
+      * Fazer download do código
 
 6. Execute seu app no dispositivo ou no simulador.
 

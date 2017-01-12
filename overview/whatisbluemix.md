@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-23"
+  years: 2016, 2017
+lastupdated: "2017-01-11"
 ---
 
 {:shortdesc: .shortdesc}
@@ -164,8 +164,7 @@ A unique prefix is assigned to each region. {{site.data.keyword.Bluemix_notm}} p
 | US South region | Dallas, US | ng | api.ng.bluemix.net | console.ng.bluemix.net |
 | United Kingdom region | London, England | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
 | Sydney region | Sydney, Australia | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
-
-*Table 1. {{site.data.keyword.Bluemix_notm}} region list*
+{: caption="Table 1. {{site.data.keyword.Bluemix_notm}} region list" caption-side="top"}
 
 
 ### {{site.data.keyword.Bluemix_notm}} resilience
@@ -199,7 +198,7 @@ To integrate a system of record with the app that you create in {{site.data.keyw
 
 <dl>
 <dt>Cloud Integration API</dt>
-    <dd>A Cloud Integration API provides secured access to the systems of record that reside behind a firewall through web APIs. When you create the Cloud Integration API, you choose the resource that you want to access through the web API, specify the operations that are permitted, and include SDKs and samples to access the API. For more information about how to create a Cloud Integration API, see [Creating Cloud Integration APIs](/docs/services/CloudIntegration/index.html#cloudint_add_service).</dd>
+    <dd>A Cloud Integration API provides secured access to the systems of record that reside behind a firewall through web APIs. When you create the Cloud Integration API, you choose the resource that you want to access through the web API, specify the operations that are permitted, and include SDKs and samples to access the API. For more information about how to create a Cloud Integration API, see [Getting started with Cloud Integration](/docs/services/CloudIntegration/CldInt_GetStart.html).</dd>
 <dt>Private service</dt>
     <dd>A private service consists of a Cloud Integration API, SDKs, and entitlement policies. The private service might also  contain documentation or other items from the service provider. Only the organization manager can publish a Cloud Integration API as a private service. To see the private services that are available to you, select the Private checkbox in the {{site.data.keyword.Bluemix_notm}} catalog. You can select and bind a private service to an app without connecting to the Cloud Integration service. You bind private services to your app in the same way as you do for other {{site.data.keyword.Bluemix_notm}} services. For information about how to publish an API as a private service, see Publishing an API as a private service.</dd>
 </dl>
@@ -244,9 +243,9 @@ Cloud Foundry command line interface, Version 6.5.1 or later
 {: #rellinks}
 ## general
 {: #general}
-* [What is {{site.data.keyword.Bluemix_notm}}](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){:new_window}
-* [Getting started](http://www.ibm.com/cloud-computing/bluemix/getting-started/)
+* [What is {{site.data.keyword.Bluemix_notm}} ![External link icon](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){:new_window}
+* [Getting started ![External link icon](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/getting-started/){:new_window}
 * [What's new in {{site.data.keyword.Bluemix_notm}}](/docs/whatsnew/index.html)
-* [Learn about the hybrid model](http://www.ibm.com/cloud-computing/bluemix/hybrid/)
+* [Learn about the hybrid model ![External link icon](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/hybrid/){:new_window}
 * [Managing your account](/docs/admin/adminpublic.html#mngacct)
 * [{{site.data.keyword.Bluemix_notm}} glossary](/docs/overview/glossary/index.html)

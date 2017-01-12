@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-17"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 #通过 Cloud Foundry 进行监视和日志记录
 {: #monitoringandlogging}
 
-上次更新时间：2016 年 10 月 28 日
-{: .last-updated}
 
 通过监视应用程序和复查日志，您可以跟进应用程序的执行和数据流，从而更好地了解部署情况。此外，还可以减少找到任何问题并进行修复所需的时间和精力。
 {:shortdesc}
@@ -38,11 +37,12 @@ copyright:
 ###监视 Cloud Foundry 上运行的应用程序
 {: #monitoring_bluemix_apps}
 
-使用 Cloud Foundry 基础架构在 {{site.data.keyword.Bluemix_notm}} 上运行应用程序时，您会希望实时了解性能信息，例如运行状态、资源使用情况和流量度量值。通过这些性能信息，您可以相应地进行决策或执行操作。
+使用 Cloud Foundry 基础架构在 {{site.data.keyword.Bluemix_notm}} 上运行应用程序时，您会希望实时了解应用程序可用性和应用程序性能信息，其是通过浏览器查看的基于 Web 的应用程序，还是移动应用程序连接到的一组 API。使用 [Bluemix Availability Monitoring](https://console.ng.bluemix.net/catalog/services/availability-monitoring){:new_window}，可以从全球 15 个不同的地理位置监视应用程序。
 
-要监视 {{site.data.keyword.Bluemix_notm}} 应用程序，请使用以下某种方法：
+要监视 {{site.data.keyword.Bluemix_notm}} 应用程序的资源使用情况度量值，请使用以下某种方法：
 
-* {{site.data.keyword.Bluemix_notm}} 服务。Monitoring and Analytics 提供了可用于监视应用程序性能的服务。此外，此服务还提供了分析功能，例如日志分析。有关更多信息，请参阅 [Monitoring and Analytics](../services/monana/index.html)。
+* Bluemix Monitoring and Analytics 提供了可用于监视资源并从基于 Node、Liberty 或 Ruby 的应用程序获取诊断的服务。有关更多信息，请参阅 [Monitoring and
+Analytics](/docs/services/monana/index.html)。
 * 第三方选项。例如，[New Relic](http://newrelic.com/){:new_window}。
 
 ###为 Cloud Foundry 上运行的应用程序进行日志记录
@@ -50,17 +50,15 @@ copyright:
 
 使用 Cloud Foundry 基础架构在 {{site.data.keyword.Bluemix_notm}} 上运行应用程序时，会自动创建日志文件。在从部署到运行时的任何阶段遇到错误时，都可以检查日志，以获取可能有助于解决问题的线索。
 
-###日志保留时间
-{: #log_retention}
-
-在 {{site.data.keyword.Bluemix_notm}} Public Cloud Foundry 应用程序中，缺省情况下日志数据存储 7 天。
 
 <!-- 2016.1.27: original shortdes: Log files are automatically created when you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}. You can view logs from the {{site.data.keyword.Bluemix_notm}} Dashboard, the cf command line interface, or external hosts. You can also filter the logs to see the parts that you are interested in. -->
 
 
 
-###日志格式
+###日志格式和保留时间
 {: #log_format}
+
+在 {{site.data.keyword.Bluemix_notm}} Public Cloud Foundry 应用程序中，缺省情况下日志数据存储 7 天。
 
 {{site.data.keyword.Bluemix_notm}} 应用程序的日志以固定格式显示，类似于以下模式：
 
@@ -130,9 +128,9 @@ yyyy-MM-ddTHH:mm:ss:SS-0500 [App/0]      OUT <message>
 
 您可以在三个位置查看 Cloud Foundry 应用程序的日志：
 
-  * [{{site.data.keyword.Bluemix_notm}} 仪表板](#viewing_logs_UI){:new_window}
-  * [命令行界面](#viewing_logs_cli){:new_window}
-  * [外部日志主机](#thirdparty_logging){:new_window}
+  * {{site.data.keyword.Bluemix_notm}} 仪表板
+  * 命令行界面
+  * 外部日志主机
 
 #### 在 {{site.data.keyword.Bluemix_notm}} 仪表板中查看日志
 {: #viewing_logs_UI}
@@ -190,9 +188,15 @@ yyyy-MM-ddTHH:mm:ss:SS-0500 [App/0]      OUT <message>
 </li></ul>
 
 
-**注：**有关如何启用应用程序日志记录的信息，请参阅[调试运行时错误](../debug/index.html#debugging-runtime-errors)。
+**注：**有关如何启用应用程序日志记录的信息，请参阅[调试运行时错误](/docs/debug/index.html#debugging-runtime-errors)。
 
+#### 查看外部主机中的日志
+{: #viewing_logs_external}
 
+	 
+生成日志后，经过短暂延迟即可查看外部日志主机中的消息，这些消息类似于在 {{site.data.keyword.Bluemix_notm}} 用户界面中或通过 cf 命令行界面查看的消息。如果您有应用程序的多个实例，那么会聚集日志，这样就可以查看该应用程序的所有日志。此外，在两次应用程序崩溃和部署之间，不会持久存储日志。
+
+**注：**您在命令行界面中查看的日志并不是 syslog 格式，并且可能与外部日志主机中显示的消息不完全一致。 
 
 
 ###过滤日志
@@ -283,18 +287,11 @@ cf logs appname --recent | grep '\[App'
 	 
   4. 重新编译打包应用程序。键入 `cf restage appname` 以使更改生效。 
 
-#### 查看外部主机中的日志
-{: #viewing_logs_external}
-
-	 
-生成日志后，经过短暂延迟即可查看外部日志主机中的消息，这些消息类似于在 {{site.data.keyword.Bluemix_notm}} 用户界面中或通过 cf 命令行界面查看的消息。如果您有应用程序的多个实例，那么会聚集日志，这样就可以查看该应用程序的所有日志。此外，在两次应用程序崩溃和部署之间，不会持久存储日志。
-
-**注：**您在命令行界面中查看的日志并不是 syslog 格式，并且可能与外部日志主机中显示的消息不完全一致。 
 
 ### 示例：将 Cloud Foundry 应用程序日志以流方式传送到 Splunk 
 {: #splunk}
 
-在本示例中，名为 Jane 的开发人员使用 IBM Virtual Servers Beta 和 Ubuntu 映像，创建了一个虚拟服务器。Jane 尝试以流方式，将 Cloud Foundry 应用程序日志从 {{site.data.keyword.Bluemix_notm}} 传送到 Splunk。 
+在本示例中，名为 Jane 的开发者使用 IBM Virtual Servers Beta 和 Ubuntu 映像，创建了一个虚拟服务器。Jane 尝试以流方式，将 Cloud Foundry 应用程序日志从 {{site.data.keyword.Bluemix_notm}} 传送到 Splunk。 
 
   1. 要开始该操作，Jane 设置了 Splunk。
 
@@ -389,6 +386,48 @@ source="tcp:5140" index="bluemix" sourcetype="rfc5424_syslog"
 
 Jane 在其 Splunk Web 界面中看到日志流。虽然 Jane 安装的 Splunk 是 Splunk Light，但是她仍可以每天保留 500MB 日志。  
 
+## 在 {{site.data.keyword.Bluemix_dedicated_notm}} 和 {{site.data.keyword.Bluemix_local_notm}} 中为 Cloud Foundry 应用程序进行日志记录
+{: #hybrid_apps_logs_ov}
 
+
+在 {{site.data.keyword.Bluemix_dedicated_notm}} 和 {{site.data.keyword.Bluemix_local_notm}} 中，Cloud Foundry 应用程序随附内置日志记录功能。您可以在 {{site.data.keyword.Bluemix_notm}} 控制台上查看从应用程序收集的数据。
+{:shortdesc}
+
+Cloud Foundry 应用程序使用 Cloud Foundry loggregator 从应用程序外部监视和转发日志。您无需在应用程序内部安装代理程序。
+
+### 硬件需求
+
+
+| **需求** |    **1 个节点**     | **3 个节点（针对高可用性）** |
+|-----------------|-------------------|-------------------|
+| vCPU | 19 | 57 |
+| 内存 | 80 GB | 240 GB |
+| 本地存储器 | 2.98 TB | 8.94 TB |
+{: caption="Table 1. Logging hardware requirements for {{site.data.keyword.Bluemix_local_notm}}" caption-side="top"}
+
+### 设置
+
+在 {{site.data.keyword.Bluemix_dedicated_notm}} 和 {{site.data.keyword.Bluemix_local_notm}} 中，缺省情况下所有应用程序的日志都处于活动状态。要查看有关读取标准日志的信息，请参阅[为 Cloud Foundry 上运行的应用程序进行日志记录](#logging_for_bluemix_apps)。此外，还可以在 {{site.data.keyword.Bluemix_dedicated_notm}} 和 {{site.data.keyword.Bluemix_local_notm}} 环境中启用高级日志记录功能。
+
+* 要确认是否在 {{site.data.keyword.Bluemix_dedicated_notm}} 和 {{site.data.keyword.Bluemix_local_notm}} 环境中启用了高级日志记录功能，请执行[查看日志](#hybrid_apps_logs_dash)中的步骤。如果没有**高级视图**按钮，说明此功能未启用。
+
+* 要向环境添加高级日志记录功能，请执行 [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) 或 [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local) 文档中的步骤。 
+
+### 日志保留时间
+
+在 {{site.data.keyword.Bluemix_dedicated_notm}} 和 {{site.data.keyword.Bluemix_local_notm}} Cloud Foundry 应用程序中，缺省情况下日志数据存储 30 天。
+
+## 在 {{site.data.keyword.Bluemix_dedicated_notm}} 和 {{site.data.keyword.Bluemix_local_notm}} 中查看 Cloud Foundry 应用程序的日志
+{: #hybrid_apps_logs_dash}
+
+您可以查看正在 {{site.data.keyword.Bluemix_dedicated_notm}} 和 {{site.data.keyword.Bluemix_local_notm}} 上运行的应用程序的日志。
+{:shortdesc}
+
+要查看应用程序日志，请执行以下步骤。
+1. 选择正在运行的应用程序。
+2. 单击**日志**。在**日志**视图中，可以查看正在运行的应用程序的日志。
+4. 单击**高级视图**按钮。**高级视图**将使用 Kibana 来显示日志的更详细视图；Kibana 是使用日志和带时间戳记的数据来创建定制可视化的可视化工具。有关使用高级视图的更多信息，请参阅 [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html) 文档。
+
+接下来，可以定制 Kibana 仪表板。有关更多信息，请参阅[在 Kibana 仪表板中定制日志显示](/docs/containers/monitoringandlogging/container_ml_logs.html#container_ml_dash_logs_custom)。
 
 

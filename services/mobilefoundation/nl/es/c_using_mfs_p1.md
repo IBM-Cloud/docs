@@ -3,13 +3,11 @@
 copyright:
   years: 2016
 lastupdated:  "2016-09-12"
+
 ---
 
 #	Utilización del plan Developer
 {: #using_mobilefoundation_p1}
-
-<!--Last updated: 12 September 2016
-{: .last-updated}-->
 
 Después de crear la instancia de servicio {{site.data.keyword.mobilefoundation_short}}: Developer, en pocos segundos, puede acceder a la página `Visión general` en {{site.data.keyword.Bluemix_notm}}, que le ofrece guías de aprendizaje y vídeos para ayudarle a aprender a utilizar el servicio {{site.data.keyword.mobilefoundation_short}}.
 

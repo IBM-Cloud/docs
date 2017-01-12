@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  années : 2015, 2016
+  years: 2015, 2016
+lastupdated: "2016-11-21"
 
 ---
 
@@ -13,10 +14,7 @@ copyright:
 # Utilisation des API REST Insights for Twitter
 {: #rest_apis}
 
-*Dernière mise à jour : 13 mai 2016*
-{: .last-updated}
-
-Le service {{site.data.keyword.twittershort}} comporte des API RESTful permettant de rechercher et de consommer un contenu Twitter. La section relative au langage de requête ci-dessous répertorie les termes de requête qui sont pris en charge par les API de service. Des exemples sont fournis pour montrer la façon dont les requêtes peuvent être construites.
+Le service {{site.data.keyword.twittershort}} comporte des API RESTful permettant de rechercher et de consommer un contenu Twitter. Le tableau [Langage d'interrogation](twitter_rest_apis.html#querylanguage){: new.window} répertorie les termes de requête qui sont pris en charge par les API de service. Des exemples sont fournis pour montrer la façon dont les requêtes peuvent être construites.
 {:shortdesc}
 
 ## Documentation de l'API REST {: #rest_api}
@@ -35,7 +33,7 @@ Dans la documentation de référence, cliquez sur **List Operations** pour affic
 
 **Remarque** : une entrée incorrecte des données d'identification génère le message "Non autorisé" dans le corps de la réponse.
 
-**Important** : les suivis actifs créés en utilisant la fonction **Try it out!** collectent les tweets de Twitter, qui sont alors pris en compte dans votre relevé mensuel.Lorsque des suivis deviennent inutiles, faites-les passer à l'état **Inactive** ou supprimez-les tout simplement.
+**Important** : les suivis actifs créés en utilisant la fonction **Try it out!** collectent les tweets de Twitter, qui sont alors pris en compte dans votre relevé mensuel. Lorsque des suivis deviennent inutiles, faites-les passer à l'état **Inactive** ou supprimez-les tout simplement.
 
 
 ## Langage d'interrogation {: #querylanguage}
@@ -66,22 +64,24 @@ Le tableau ci-dessous répertorie les termes de requête pris en charge actuelle
 | `bio_lang:language` 	| Recherche les tweets des utilisateurs dont les paramètres de langue du profil correspondent au code de langue indiqué.  Voir `lang:` pour une liste des langues prises en charge. 	| `bio_lang:en` 	|
 | `bio_location:"location"` 	| Recherche les tweets des utilisateurs dont le paramètre de résidence du profil contient la référence `location` spécifiée. 	| `bio_location:"New York"` 	|
 | `country_code:country-code` 	| Recherche les utilisateurs dont les étiquettes de localisation et de lieu correspondent au code pays indiqué. </br>**Pour connaître la liste des codes pays pris en charge, voir **: http://en.wikipedia.org/wiki/ISO_3166-1 	| `country_code:us` 	|
-| `followers_count: lowerLimit,upperLimit` 	| Recherche les tweets des utilisateurs qui ont un nombre de suiveurs compris dans la plage définie. La limite supérieure est facultative et les deux limites sont inclusives. 	| `followers_count:500` 	|
-| `friends_count: lowerLimit,upperLimit` 	| Recherche les tweets des utilisateurs qui suivent un nombre d'utilisateurs compris dans la plage définie. La limite supérieure est facultative et les deux limites sont inclusives. 	| `friends_count:1000,3000` 	|
+| `followers_count: lowerLimit,upperLimit` 	| Recherche les tweets des utilisateurs qui ont un nombre de suiveurs compris dans la plage définie. upperLimit est facultatif et les deux limites sont inclusives.  	| `followers_count:500` 	|
+| `friends_count: lowerLimit,upperLimit` 	| Recherche les tweets des utilisateurs qui suivent un nombre d'utilisateurs compris dans la plage définie. upperLimit est facultatif et les deux limites sont inclusives.  	| `friends_count:1000,3000` 	|
 | `from:twitterHandle` 	| Recherche les tweets des utilisateurs dont le nom d'utilisateur préféré est *twitterHandle*. Ne doit pas contenir le symbole &commat;. 	| `from:alexlang11` 	|
 | `has:children` 	| Recherche les tweets des utilisateurs qui ont des enfants. 	| `has:children` 	|
 | `is:married` 	| Recherche les tweets des utilisateurs qui sont mariés. 	| `is:married` 	|
 | `is:verified` 	| Recherche les tweets dont l'auteur a été vérifié par Twitter. 	| `analytics is:verified` 	|
 | `lang:language-code` 	| Recherche les tweets dans une langue particulière. Les codes de langue pris en charge sont les suivants : <ul><li>`ar` (arabe)</li><li>`zh` (chinois)</li><li>`da` (danois)</li><li>`dl` (néerlandais)</li><li>`en` (anglais)</li><li>`fi` (finnois)</li><li>`fr` (français)</li><li>`de` (allemand)</li><li>`el` (grec)</li><li>`he` (hébreu)</li><li>`id` (indonésien)</li><li>`it` (italien)</li><li>`ja` (japonais)</li><li>`ko` (coréen)</li><li>`no` (norvégien)</li><li>`fa` (persan)</li><li>`pl` (polonais)</li><li>`pt` (portugais)</li><li>`ru` (russe)</li><li>`es` (espagnol)</li><li>`sv` (suédois)</li><li>`th` (thaï)</li><li>`tr` (turc)</li><li>`uk` (ukrainien)</li></ul>    | `lang:de` (pour rechercher des tweets en allemand) 	|
-| `listed_count: lowerLimit,upperLimit` 	| Recherche les tweets dont la liste Twitter de l'auteur est comprise dans la plage définie. La limite supérieure est facultative et les deux limites sont inclusives. 	| `listed_count:1000,3000` 	|
+| `listed_count: lowerLimit,upperLimit` 	| Recherche les tweets dont la liste Twitter de l'auteur est comprise dans la plage définie. upperLimit est facultatif et les deux limites sont inclusives.  	| `listed_count:1000,3000` 	|
 | `point_radius:[longitude latitude radius]` 	| Recherche les tweets d'une zone géographique, en fonction de la longitude, de la latitude et d'un rayon. </br></br>Toutes les coordonnées sont représentées en degrés décimaux. La `longitude`  doit être comprise entre -180 et +180, tandis que la `latitude` doit être comprise entre -90 et +90. La spécification d'une valeur en dehors des plages prises en charge retourne une erreur. Les valeurs doivent être saisies sous forme de nombres à virgule flottante. Les nombres entiers ne sont pas pris en charge. </br></br>Le rayon de la zone doit être défini en miles (mi) ou en kilomètres (km). 	| `point_radius:[41.128611 -73.707778 5.0mi]` 	|
-| `posted:startTime  posted:startTime,endTime` 	| Recherche les tweets qui ont été postés à ou après "startTime". "endTime" est facultatif et les deux limites sont inclusives. Les horodatages doivent être exprimés dans l'un des formats suivants :  </br>"yyyy-mm-dd" ou "yyyy-mm-ddTHH:MM:SSZ" </br>  Le fuseau horaire est au format UTC (Coordinated Universal Time). Quand vous spécifiez des heures, des minutes et des secondes, elles doivent être encadrées par "T" et "Z", comme dans le format indiqué. 	| `posted:2014-12-01,2014-12-12` 	|
+| `posted:startTime  posted:startTime,endTime` 	| Recherche les tweets qui ont été postés à ou après "startTime". "endTime" est facultatif et les deux limites sont inclusives. Les
+horodatages doivent être exprimés dans l'un des formats suivants :  </br>"yyyy-mm-dd" ou "yyyy-mm-ddTHH:MM:SSZ" </br>  Le fuseau horaire est au format UTC (Coordinated
+Universal Time). Quand vous spécifiez des heures, des minutes et des secondes, elles doivent être encadrées par "T" et "Z", comme dans le format indiqué. 	| `posted:2014-12-01,2014-12-12` 	|
 | `sentiment:sentiment-value` 	| Recherche les tweets exprimant un sentiment particulier. Les valeurs prises en charge sont les suivantes : </br><dl>positive</dl> <dlentry>Le tweet contient plus de phrases de sentiment positives que négatives.</dlentry> </br></br><dl>negative</dl> <dlentry>Le tweet contient plus de phrases de sentiment négatives que positives.</dlentry>  </br></br><dl>neutral</dl>  <dlentry>Le tweet ne contient pas de sentiment ou est dans une langue qui ne propose pas de détection de sentiment.</dlentry> </br></br><dl>ambivalent</dl>  <dlentry>Le tweet contient un nombre égal de phrases de sentiments positives et négatives.</dlentry> 	| `sentiment:positive` 	|
-| `statuses_count: lowerLimit,upperLimit` 	| Recherche les tweets des utilisateurs qui ont posté un nombre de statuts compris dans la plage définie. La limite supérieure est facultative et les deux limites sont inclusives. 	| `statuses_count:1000,3000` 	|
+| `statuses_count: lowerLimit,upperLimit` 	| Recherche les tweets des utilisateurs qui ont posté un nombre de statuts compris dans la plage définie. upperLimit est facultatif et les deux limites sont inclusives.  	| `statuses_count:1000,3000` 	|
 | `time_zone:timeZone` 	| Recherche les tweets des utilisateurs dont les paramètres du profil correspondent au fuseau horaire indiqué. 	| `time_zone:"Eastern Time (US & Canada)"` 	|
 | `time_zone:city` 	| Recherche les tweets des utilisateurs dont les paramètres du profil correspondent à la ville indiquée. 	| `time_zone:"Dublin"` 	|
 *Tableau 2. Termes de requête*
 
-Tous les termes de requête pris en charge peuvent être combinés avec les opérateurs booléens ci-dessus. Par exemple,
+Tous les termes de requête pris en charge peuvent être combinés avec les opérateurs booléens décrits ci-dessus. Par exemple,
 
 `ibm -apple followers_count:500`

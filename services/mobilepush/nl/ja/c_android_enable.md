@@ -1,14 +1,18 @@
 ---
 
 copyright:
- years: 2015 2016
+ years: 2015, 2016
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # Android アプリケーションによる{{site.data.keyword.mobilepushshort}}受け取りの可能化
 {: #tag_based_notifications}
-最終更新日: 2016 年 11 月 16 日
+最終更新日: 2016 年 12 月 07 日
 {: .last-updated}
 
 Android アプリケーションでデバイスへのプッシュ通知を受け取れるようにすることができます。Android Studio が前提条件であり、Android プロジェクトをビルドするための推奨方式です。Android Studio の基本知識が必要です。
@@ -29,11 +33,6 @@ Bluemix® Mobile Services Push SDK は、Gradle を使用して追加できま�
 ```
     {: codeblock}
 	
-	- 以下の依存関係は、ファイルの末尾にのみ追加します。
-	```
-	'com.google.gms.google-services'
-	```
-    {: codeblock}
 	- コード・スニペットに必要なインポート・ステートメントに、以下の依存関係を追加します。
 	```
 	import com.ibm.mobilefirstplatform.clientsdk.android.core.api.BMSClient;
@@ -103,23 +102,21 @@ FCM プロジェクトのセットアップおよび資格情報の取得につ�
 
 1. Firebase コンソールで、**「Project Settings (プロジェクト設定)」** アイコンをクリックします。![Firebase のプロジェクト設定](images/FCM_4.jpg)
 
-3. アプリケーション・ペインの「General (一般)」タブから、**「ADD APP」**または**「Add Firebase to your Android app (Android アプリへの Firebase の追加)」アイコン**を選択します。
+3. アプリケーション・ペインの「General (一般)」タブから、**「ADD APP」**または**「Android アプリへの Firebase の追加 (Add Firebase to your Android app)」アイコン**を選択します。![Android への Firebase の追加](images/FCM_5.jpg)
 
-	![Android への Firebase の追加](images/FCM_5.jpg)
+4. 「Android アプリへの Firebase の追加 (Add Firebase to your Android app)」ウィンドウで、パッケージ名として **com.ibm.mobilefirstplatform.clientsdk.android.push** を追加します。「アプリのニックネーム (App nickname)」フィールドはオプションです。**「ADD APP」**をクリックします。![「Android への Firebase の追加」ウィンドウ](images/FCM_1.jpg)
 
-4. 「Add Firebase to your Android app (Android アプリへの Firebase の追加)」ウィンドウで、パッケージ名として **com.ibm.mobilefirstplatform.clientsdk.android.push** を追加します。ステップ 2 を繰り返して、アプリケーションのパッケージ名も追加します。
+5. 「Android アプリへの Firebase の追加 (Add Firebase to your Android app)」ウィンドウにパッケージ名を入力して、アプリケーションのパッケージ名を組み込みます。「アプリのニックネーム (App nickname)」フィールドはオプションです。**「ADD APP」**をクリックします。Firebase では、追加するパッケージごとに、パッケージ名を追加して `build.gradle` を変更する必要があります。
 
-	![「Android への Firebase の追加」ウィンドウ](images/FCM_1.jpg)
+	![アプリケーションのパッケージ名の追加](images/FCM_2.jpg)
 
-5. **「Continue (続行)」**をクリックして、構成ファイルをコピーします。 
-6. **「Finish (完了)」**をクリックして、**build.gradle** ファイルを追加します。
-7. 生成された **google-services.json** ファイルをダウンロードします。
+6. `google-services.json` ファイルが生成されます。`google-services.json` ファイルを Android アプリケーション・モジュールのルート・ディレクトリーにコピーします。この `google-service.json` ファイルには、追加されたパッケージ名が含まれていることに注意してください。
 
-	![google-services.json ファイル](images/FCM_3.jpg)
+    ![アプリケーションのルート・ディレクトリーへの json ファイルの追加](images/FCM_7.jpg)
 
-8. **google-services.json** ファイルをアプリケーションのルート・ディレクトリーに追加します。
+5. 「Android アプリへの Firebase の追加 (Add Firebase to your Android app)」ウィンドウで、**「続行」**をクリックして、**「終了 (Finish)」**をクリックします。 
 
-	![アプリケーションのルート・ディレクトリーへの json ファイルの追加](images/FCM_7.jpg)
+  
 
 アプリケーションをビルドして、実行します。
 
@@ -228,6 +225,79 @@ protected void onPause() {
 2. プロジェクトをビルドし、デバイスまたはエミュレーター上で実行します。register() メソッド内で応答リスナーに対する onSuccess() メソッドが呼び出されたら、デバイスは{{site.data.keyword.mobilepushshort}}サービスに正常に登録されていると確定されます。この時点で、『基本プッシュ通知の送信』に説明されている方法でメッセージを送信できます。
 3. デバイスが通知を受信していることを確認します。アプリケーションがフォアグラウンドにある場合は、通知は **MFPPushNotificationListener** により処理されます。アプリケーションがバックグラウンドにある場合は、メッセージが通知バーに表示されます。
 
+## Android デバイスでのプッシュ通知のモニター
+{: #android_monitor}
+
+アプリケーション内で通知の現在の状況をモニターするには、`com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationStatusListener` インターフェースを実装し、メソッド onStatusChange(String messageId, MFPPushNotificationStatus status) を定義します。 
+
+**messageId** は、サーバーから送信されたメッセージの ID です。**MFPPushNotificationStatus** は、以下のように、通知の状況を値として定義します。
+
+- **RECEIVED** - アプリは通知を受信済みです。 
+- **QUEUED** - アプリは通知リスナーを呼び出すために、通知をキューに入れました。 
+- **OPENED** - ユーザーが、トレイ内の通知をクリックするか、アプリ・アイコンから起動するか、またはアプリがフォアグラウンドにあるときに起動して、通知を開きました。 
+- **DISMISSED** - ユーザーがトレイ内の通知をクリアまたは破棄しました。
+
+**com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationStatusListener** クラスを MFPPush に登録する必要があります。
+
+```
+push.setNotificationStatusListener(new MFPPushNotificationStatusListener() {
+@Override
+public void onStatusChange(String messageId, MFPPushNotificationStatus status) {
+// Handle status change
+}
+});
+```
+    {: codeblock}
+
+
+### DISMISSED 状況の listen
+
+以下のいずれかの条件に基づいて DISMISSED 状況を listen することを選択できます。
+
+- アプリがアクティブのとき (フォアグラウンドまたはバックグラウンドで実行中)
+
+  次のスニペットを `AndroidManifest.xml` ファイルに追加します。
+
+```
+<receiver android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationDismissHandler">
+<intent-filter>
+<action android:name="Your_Android_Package_Name.Cancel_IBMPushNotification"/>
+</intent-filter>
+</receiver>
+```
+	{: codeblock}
+
+- アプリがアクティブのとき (フォアグラウンドまたはバックグラウンドで実行中) と未実行 (クローズ済み) のときの両方
+
+**com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationDismissHandler** ブロードキャスト・レシーバーを拡張して、メソッド **onReceive()** をオーバーライドする必要があります。ここで、**MFPPushNotificationStatusListener** は、基本クラスのメソッド **onReceive()** を呼び出す前に登録しておく必要があります。
+
+```
+public class MyDismissHandler extends MFPPushNotificationDismissHandler {
+@Override
+public void onReceive(Context context, Intent intent) {
+MFPPush.getInstance().setNotificationStatusListener(new MFPPushNotificationStatusListener() {
+@Override
+public void onStatusChange(String messageId, MFPPushNotificationStatus status) {
+// Handle status change
+}
+});
+super.onReceive(context, intent);
+}
+}
+```
+    {: codeblock}
+
+
+以下のスニペットを `AndroidManifest.xml` ファイルに追加します。
+
+```
+<receiver android:name="Your_Android_Package_Name.Your_Handler">
+<intent-filter>
+<action android:name="Your_Android_Package_Name.Cancel_IBMPushNotification"/>
+</intent-filter>
+</receiver>
+```
+    {: codeblock}
 
 ## 基本{{site.data.keyword.mobilepushshort}}の送信
 {: #send}
@@ -254,7 +324,7 @@ protected void onPause() {
 
 ![Android 上のバックグラウンドのプッシュ通知](images/background.jpg)
 
-### 通知を送信するためのオプションの設定
+### 通知を送信するためのオプションの Android 設定
 {: #send_otpional_setting}
 
 Android デバイスに通知を送信するための{{site.data.keyword.mobilepushshort}}設定をさらに詳細にカスタマイズできます。以下の任意指定のカスタマイズ・オプションがサポートされます。

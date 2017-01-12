@@ -11,7 +11,7 @@ copyright:
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#Anwendungen entwickeln
+#Apps entwickeln
 {: #developingapps}
 
 *Letzte Aktualisierung: 17. März 2016*

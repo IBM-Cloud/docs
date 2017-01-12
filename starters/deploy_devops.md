@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2015，2016
+  years: 2015，2017
 
 lastupdated: "2016-03-02"
 
@@ -22,26 +22,26 @@ You can create a hosted Git repository that deploys to {{site.data.keyword.Bluem
 {:shortdesc}
 
 1. To get started, on the app's Overview page, click **Add Git Repo and Pipeline**, or in the {{site.data.keyword.Bluemix_notm}} Classic Experience, click **ADD GIT**.
-2. In the window that opens, make sure that the **Populate the repo with the starter app package and enable the Build & Deploy pipeline** check box is selected. The Git repository is created. If starter code is available, it is loaded into the repository. In addition, the application is deployed by the Delivery Pipeline service running in {{site.data.keyword.jazzhub}}.  
-3. To update your app, you can use the command line or the Web IDE.  
-   **If you use the command line:**  
-   a. Clone your Git repository from the Git URL on the app's Overview page.  
-   b. In your favorite editor, update the code.  
-   c. From the Git command line interface, push your changes.  
+2. In the window that opens, make sure that the **Populate the repo with the starter app package and enable the Build & Deploy pipeline** check box is selected. The Git repository is created. If starter code is available, it is loaded into the repository. In addition, the application is deployed by the Delivery Pipeline service running in {{site.data.keyword.jazzhub}}.
+3. To update your app, you can use the command line or the Web IDE.
+   **If you use the command line:**
+   a. Clone your Git repository from the Git URL on the app's Overview page.
+   b. In your favorite editor, update the code.
+   c. From the Git command line interface, push your changes.
 
-   **If you use the Web IDE:**  
-   a. On the app's Overview page, click **Edit Code**. Your project opens in the Web IDE.  
-   b. Make changes as needed, and then push by using the built-in Git support.  
+   **If you use the Web IDE:**
+   a. On the app's Overview page, click **Edit Code**. Your project opens in the Web IDE.
+   b. Make changes as needed, and then push by using the built-in Git support.
 
-The updated app is redeployed to {{site.data.keyword.Bluemix_notm}}.  
+The updated app is redeployed to {{site.data.keyword.Bluemix_notm}}.
 
-For step-by-step directions, see [Set up Git integration and auto-deploy in DevOps Services](https://hub.jazz.net/tutorials/jazzeditor/#git_integration_and_autodeployment).  
+For step-by-step directions, see [Set up Git integration and auto-deploy in DevOps Services](https://hub.jazz.net/tutorials/jazzeditor/#git_integration_and_autodeployment).
 
-## Added Git? Try {{site.data.keyword.Bluemix_notm}} Live Sync  
+## Added Git? Try {{site.data.keyword.Bluemix_notm}} Live Sync
 
-If you are building a Node.js app, you can use {{site.data.keyword.Bluemix_notm}} Live Sync to quickly update the app instance on {{site.data.keyword.Bluemix_notm}} and develop as you would on the desktop.  
+If you are building a Node.js app, you can use {{site.data.keyword.Bluemix_notm}} Live Sync to quickly update the app instance on {{site.data.keyword.Bluemix_notm}} and develop as you would on the desktop.
 
-To learn more about {{site.data.keyword.Bluemix_notm}} Live Sync, see [{{site.data.keyword.Bluemix_notm}} Live Sync](/docs/develop/bluemixlive.html). For more details on the commands, see the [{{site.data.keyword.Bluemix_notm}} Live Sync CLI doc](/docs/cli/reference/bl/index.html). To use {{site.data.keyword.Bluemix_notm}} Live Sync with the Web IDE, see [Live Edit](/docs/develop/bluemixlive.html).  
+To learn more about {{site.data.keyword.Bluemix_notm}} Live Sync, see [{{site.data.keyword.Bluemix_notm}} Live Sync](/docs/develop/bluemixlive.html). For more details on the commands, see the [{{site.data.keyword.Bluemix_notm}} Live Sync CLI doc](/docs/cli/reference/bl/index.html). To use {{site.data.keyword.Bluemix_notm}} Live Sync with the Web IDE, see [Live Edit](/docs/develop/bluemixlive.html).
 
 Before you begin, download and install the {{site.data.keyword.Bluemix_notm}} Live Sync bl command line.
 
@@ -74,7 +74,7 @@ This command continues to run (and synchronization continues) until you enter a 
 4. In another command line window, in your local directory, deploy the application to {{site.data.keyword.Bluemix_notm}} in Live Edit mode by entering the following command:
 ```
 bl start
-```  
+```
 
 When you change the files in your local directory, the changes are automatically propagated to both the application that is running on {{site.data.keyword.Bluemix_notm}} and the project cloud workspace. If you need to restart the Node application, then you can use the following command:
 ```

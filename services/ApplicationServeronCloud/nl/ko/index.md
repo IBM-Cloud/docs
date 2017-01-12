@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-11-01"
 ---
 
 {:shortdesc: .shortdesc}
@@ -11,8 +11,6 @@ copyright:
 
 # IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 시작하기
 {: #getting_started}
-마지막 업데이트 날짜: 2016년 8월 25일
-{: .last-updated}
 
 {{site.data.keyword.IBM}} WebSphere Application Server for {{site.data.keyword.Bluemix}}는 {{site.data.keyword.Bluemix_notm}}에 호스팅된 클라우드 환경에서 사전 구성된 WebSphere Application Server Liberty, Traditional Network Deployment 또는 Traditional WebSphere Java EE 인스턴스에 대한 신속한 설정을 용이하게 해주는 서비스입니다.
 {: shortdesc}
@@ -20,19 +18,17 @@ copyright:
 ## WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}의 개요
 {: #overview}
 
-WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}에서는 이용자에게 사전 구성된 Traditional WebSphere 및 Liberty Profile 서버를 제공합니다. 이는 게스트 운영 체제에 대한 루트 액세스 권한이
-있는 가상 머신 게스트에서 호스팅됩니다. 서비스를 작성하는 경우 *Liberty*, *Traditional ND* 또는 *Traditional WebSphere* 중에서 선택하십시오. 
+WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}에서는 이용자에게 사전 구성된 Traditional WebSphere 및 Liberty Profile 서버를 제공합니다. 이는 게스트 운영 체제에 대한 루트 액세스 권한이 있는 가상 머신 게스트에서 호스팅됩니다. 서비스를 작성할 때는 *Liberty*, *Traditional ND* 또는 *Traditional WebSphere* 중에서 선택하십시오. 
 
 **참고:** 이제 이용자는 새 *Traditional ND* 또는 *Traditional WebSphere* 인스턴스를 작성할 때 V8.5 및 V9.0 중에 선택할 수 있습니다. 
 
 사용자에게 비슷한 WebSphere 관리 환경이 제공되며 기본 운영 체제에 대한
 전체 액세스 권한이 있습니다. 기존 스크립트를 재사용하고 자체 프레임워크 또는 써드파티
-프레임워크에서 작업하도록 필요에 따라 시스템을 약간 수정할 수 있습니다. 사내 구축형 WebSphere 구성과 마찬가지로 WebSphere Application Server Liberty, ND 또는 Traditional 서비스를 관리하도록 Admin Center와 Admin Console이 제공됩니다.
+프레임워크에서 작업하도록 필요에 따라 시스템을 약간 수정할 수 있습니다. 온프레미스 WebSphere 구성과 마찬가지로 WebSphere Application Server Liberty, ND 또는 Traditional 서비스를 관리하도록 Admin Center와 Admin Console이 제공됩니다.
 
 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Network Deployment 플랜은 두 개 이상의 가상 머신이 있는 WebSphere Application Server Network Deployment 셀 환경으로 구성됩니다. 첫 번째 가상 머신에는 배치 관리자와 IBM HTTP Server가 포함되어 있고, 나머지 가상 머신에는 배치 관리자에 연합된 사용자 정의 노드(노드 에이전트)가 포함되어 있습니다. 기존 wsadmin 스크립트를 사용하여 WebSphere 구성을 작성하거나
-WebSphere Admin Console을 사용하여 수동으로 환경을 구성하십시오. 해당 새 기능을
-사용하면 고가용성, 장애 복구 및 확장성을 위한 클러스터형 환경을 설정할 수 있습니다. 클러스터링은
-미들웨어 엔터프라이즈 애플리케이션의 중요한 요소이며, 이제 클라이언트에서 두 개 이상의
+WebSphere Admin Console을 사용하여 수동으로 환경을 구성하십시오. 해당 새 기능은
+사용자가 클러스터형 환경을 설정할 수 있으며, 이는 미들웨어 엔터프라이즈 애플리케이션의 중요한 측면입니다. 이제 클라이언트에서 두 개 이상의
 인스턴스에 있는 로드 밸런스 요청으로 토폴로지를 클러스터링하도록 선택할 수 있습니다.
 
 
@@ -45,14 +41,19 @@ WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Liberty 코�
 
 다음 그림은 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Network Deployment 셀의 아키텍처 및 Liberty Collective 환경을 나타냅니다.
 
+그림 1. Network Deployment 셀 및 Liberty Collective 아키텍처
+
 ![그림1. Network Deployment 셀의 아키텍처 및 Liberty Collective](images/CellCollectiveDiagram.gif)
+
+**참고**: 위의 *그림 1*에서 IBM HTTP Server와 함께 Collective Controller 또는 배치 관리자의 배치를 표현하는 패턴은 개발 및 테스트 목적입니다. WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}에서는 온프레미스에서와 마찬가지로 사용자의 프로덕션 애플리케이션 및 운영상의 요구사항을 충족하도록 사전에 설치된 소프트웨어를 자유롭게 다시 구성할 수 있습니다. 게다가 가장 엄격한 프로덕션 요구사항의 경우에는 격리된 네트워킹 및 컴퓨팅 리소스를 제공하는 단일 테넌트 IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 오퍼링을 담당하는 IBM 영업 담당자에게 문의하십시오. 
+
 
 ## 운영 환경
 {: #operational_environment}
 
 IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}는 이용자가 애플리케이션을 배치하도록 공유 환경에 게스트(가상 머신)를 리턴하는 서비스입니다. VPN은
 일반 포트 스캔 및 기타 원치 않는 네트워크 기반 공격으로부터 공용 서비스를 보호합니다.
-하지만 서비스 인스턴스에 액세스하는 데 사용하는 서비스 VPN은 여러 {{site.data.keyword.Bluemix_notm}} 조직 및 사용자 간에 공유될 수 있음을 유의하십시오. 가상 머신은 IaaS 리소스의 공유 풀에서 오는 컴퓨팅, 메모리 및 I/O 리소스를 제공합니다. 개인용 환경에서 애플리케이션을 실행하려는 경우 전용 IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 오퍼링을 담당하는 IBM 영업 담당자와 문의하십시오. 
+하지만 서비스 인스턴스에 액세스하는 데 사용하는 서비스 VPN은 여러 {{site.data.keyword.Bluemix_notm}} 조직 및 사용자 간에 공유될 수 있음을 유의하십시오. 가상 머신은 IaaS 리소스의 공유 풀에서 오는 컴퓨팅, 메모리 및 I/O 리소스를 제공합니다. 
 
 공유 환경에서 가상 머신이 특정 컴퓨팅, 메모리 및 I/O 리소스를 실행하므로
 서비스 구성이 다를 수 있습니다. 각 특정 서비스 인스턴스의 구성은 IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 서비스 대시보드 및 포털을 통해 볼 수 있습니다.

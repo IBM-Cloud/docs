@@ -1,12 +1,13 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2015, 2016
 
- 
+lastupdated: "2016-10-24"
+
 ---
 
 
@@ -15,9 +16,6 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} (bx) 指令
 {: #bluemix_cli}
-
-前次更新：2016 年 10 月 25 日
-{: .last-updated}
 
 版本：0.4.1
 
@@ -64,7 +62,7 @@ copyright:
  </tr>
   </tbody>
  </table>
-*表 1. 一般 bluemix 指令*
+{: caption="Table 1. General bluemix commands" caption-side="top"}
 
 
 
@@ -103,7 +101,7 @@ copyright:
  </tr>
  </tbody>
  </table>
-*表 2. 用來管理組織、空間和使用者的指令*
+ {: caption="Table 2. Commands for managing orgs, spaces, and users" caption-side="top"} 
 
 
 
@@ -142,7 +140,7 @@ copyright:
  </tr>
   </tbody>
  </table>
-*表 3. 用來管理 cf 應用程式的指令*
+{: caption="Table 3. Commands for managing cf apps" caption-side="top"}
 
 
 <table summary="您可以用來管理 Bluemix 服務的 bluemix 指令。">
@@ -173,7 +171,7 @@ copyright:
  </tr>
   </tbody>
  </table>
-*表 4. 用來管理 Bluemix 服務的指令*
+{: caption="Table 4. Commands for managing Bluemix services" caption-side="top"}
 
 
 <table summary="您可以用來管理 Bluemix 型錄、外掛程式、帳單和安全設定的 bluemix 指令。">
@@ -209,7 +207,7 @@ copyright:
  </tr>
   </tbody>
  </table>
-*表 5. 用來管理 Bluemix 型錄、外掛程式、帳單和安全設定的指令*
+{: caption="Table 5. Commands for managing Bluemix catalog, plug-ins, billing, and security settings" caption-side="top"}
 
 
 
@@ -241,7 +239,7 @@ copyright:
  </tr>
   </tbody>
  </table>
-*表 6. 用來管理網路設定的指令*
+{: caption="Table 6. Commands for managing network settings" caption-side="top"}
 
 
 
@@ -300,8 +298,8 @@ copyright:
  <td>[bluemix ic run](index.html#bluemix_ic_run)</td>
  </tr>
  <tr>
- <td>[bluemix ic service-bind](index.html#bluemix_ic_service_bind)</td>
- <td>[bluemix ic service-unbind](index.html#bluemix_ic_service_unbind)</td>
+ <td>[bluemix ic service-bind](index.html#bluemix_ic_service-bind)</td>
+ <td>[bluemix ic service-unbind](index.html#bluemix_ic_service-unbind)</td>
  <td>[bluemix ic start](index.html#ic_start)</td>
  <td>[bluemix ic stats](index.html#bluemix_ic_stats)</td>  
  <td>[bluemix ic stop](index.html#ic_stop)</td>
@@ -311,7 +309,7 @@ copyright:
  <td>[bluemix ic unpause](index.html#unpause)</td>
  <td>[bluemix ic unprovision](index.html#bluemix_ic_unprovision)</td>  
  <td>[bluemix ic volume-inspect](index.html#bluemix_ic_volume_inspect)</td>
- <td>[bluemix ic volume-create](index.html#bluemix_ic_volume_create)</td> 
+ <td>[bluemix ic volume-create](index.html#bluemix_ic_volume_create)</td>
  </tr>
  <tr>
  <td>[bluemix ic volume-fs](index.html#bluemix_ic_volume_fs)</td>
@@ -329,7 +327,7 @@ copyright:
  </tr>
   </tbody>
  </table>
-*表 7. 用來在 Bluemix 上管理容器的指令*
+{: caption="Table 7. Commands for managing containers on Bluemix" caption-side="top"}
 
 
 
@@ -2094,16 +2092,16 @@ bluemix ic group-create [--publish,-p PORT] --name GROUP_NAME [--memory,-m MEMOR
 <strong>指令選項</strong>：
    <dl>
     <dt><i>IMAGE_NAME</i>（必要）</dt>
-   <dd>要併入容器群組中之每個容器實例的映像檔。您可以在映像檔之後列出指令，但不能在映像檔之後放置任何選項。請在指定映像檔之前併入所有選項。<br><br>如果您使用組織專用 {{site.data.keyword.Bluemix_notm}} 儲存庫中的映像檔，請以下列格式指定映像檔：<i>registry.ng.bluemix.net/NAMESPACE/IMAGE</i>。<br><br>如果您使用 IBM Containers 所提供的映像檔，請不要併入您組織的名稱空間。請以下列格式指定映像檔：<i>registry.ng.bluemix.net/IMAGE</i>。</dd>
+   <dd>要包含在容器群組中之每個容器實例的映像檔。您可以在映像檔之後列出指令，但不能在映像檔之後放置任何選項。請在指定映像檔之前併入所有選項。<br><br>如果您使用組織專用 {{site.data.keyword.Bluemix_notm}} 儲存庫中的映像檔，請以下列格式指定映像檔：<i>registry.ng.bluemix.net/NAMESPACE/IMAGE</i>。<br><br>如果您使用 IBM Containers 所提供的映像檔，請不要併入您組織的名稱空間。請以下列格式指定映像檔：<i>registry.ng.bluemix.net/IMAGE</i>。</dd>
    <dt>--name <i>GROUP_NAME</i>（必要）</dt>
    <dd>將名稱指派給群組。<i>-n</i> 已淘汰。<br>
    <strong>提示：</strong>容器名稱必須以字母開頭。名稱可以包含大寫字母、小寫字母、數字、句點 .、底線 _ 或連字號 -。</dd>
    <dt>-m <i>MEMORY_SIZE</i>|--memory <i>MEMORY_SIZE</i>（選用）</dt>
    <dd>將記憶體限制指派給群組 (MB)。從 CLI 建立容器群組時，每一個容器實例的預設值都是 <i>64</i> MB。從 {{site.data.keyword.Bluemix_notm}}「儀表板」建立容器群組時，每一個容器實例的預設值都是 <i>256</i> MB。接受值是 <i>64</i>、<i>256</i>、<i>512</i>、<i>1024</i> 及 <i>2048</i>。指派記憶體限制之後，即無法變更其值。</dd>
    <dt>-n <i>HOSTNAME</i>|--hostname <i>HOSTNAME</i>（選用）</dt>
-   <dd>主機名稱，例如 <i>mycontainerhost</i>。主機與網域合併構成完整的公用路徑 URL，例如 <i>http://mycontainerhost.mybluemix.net</i>。在使用 <i>bluemix ic group-inspect</i> 指令檢閱容器群組的詳細資料時，主機與網域會一起列出，作為路徑。</dd>
+   <dd>主機名稱，例如 <i>mycontainerhost</i>。主機與網域會結合，以構成完整公用路徑 URL，例如 <i>http://mycontainerhost.mybluemix.net</i>。在使用 <i>bluemix ic group-inspect</i> 指令檢閱容器群組的詳細資料時，主機與網域會一起列出，作為路徑。</dd>
    <dt>-d <i>DOMAIN</i>|--domain <i>DOMAIN</i>（選用）</dt>
-   <dd>通常網域為 <i>.mybluemix.net</i>。主機與網域會合併，以構成完整公用路徑 URL，例如 <i>http://mycontainerhost.mybluemix.net</i>。在使用 <i>bluemix ic group-inspect</i> 指令檢閱容器群組的詳細資料時，主機與網域會一起列出，作為路徑。</dd>
+   <dd>通常網域為 <i>.mybluemix.net</i>。主機與網域會結合，以構成完整公用路徑 URL，例如 <i>http://mycontainerhost.mybluemix.net</i>。在使用 <i>bluemix ic group-inspect</i> 指令檢閱容器群組的詳細資料時，主機與網域會一起列出，作為路徑。</dd>
    <dt>-e <i>ENV_KEY=ENV_VAL</i>|--env <i>ENV_KEY=ENV_VAL</i>（選用）</dt>
    <dd>設定環境變數。個別列出多個索引鍵。如果包含引號，請用它們括住環境變數名稱及值。例如：`-e "key1=value1" -e "key2=value2" -e "key3=value3"`。下表顯示一些您可以指定的常用環境變數：</dd>
     </dl>
@@ -2111,12 +2109,12 @@ bluemix ic group-create [--publish,-p PORT] --name GROUP_NAME [--memory,-m MEMOR
 
 |  環境變數                              |     說明                            |
 | :----------------------------- | :------------------------------ |
-| CCS_BIND_APP=*&lt;appname&gt;*       | 將服務連結至容器。請使用 `CCS_BIND_APP` 環境變數，將應用程式連結至容器。應用程式會連結至目標服務，並作為橋接器，以容許 {{site.data.keyword.Bluemix_notm}} 將您橋接器應用程式的 `VCAP_SERVICES` 資訊帶入執行中容器實例。如需建立橋接器應用程式的相關資訊，請參閱[將服務連結至容器](../../../containers/container_integrations_binding.html){: new_window}。 |
-| CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | 若要將 Bluemix 服務直接連結至容器，而不使用橋接器應用程式，請使用 CCS_BIND_SRV。此連結容許 Bluemix 將 VCAP_SERVICES 資訊注入執行中容器實例。若要列出多個 Bluemix 服務，請將它們併入為相同環境變數的一部分。 |
+| CCS_BIND_APP=*&lt;appname&gt;*       | 將服務連結至容器。請使用 `CCS_BIND_APP` 環境變數，將應用程式連結至容器。應用程式會連結至目標服務，並作為橋接器，以容許 {{site.data.keyword.Bluemix_notm}} 將您橋接應用程式的 `VCAP_SERVICES` 資訊帶入執行中容器實例。如需建立橋接應用程式的相關資訊，請參閱[將服務連結至容器](../../../containers/container_integrations_binding.html){: new_window}。 |
+| CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | 若要將 Bluemix 服務直接連結至容器，而不使用橋接應用程式，請使用 CCS_BIND_SRV。此連結容許 Bluemix 將 VCAP_SERVICES 資訊注入執行中容器實例。若要列出多個 Bluemix 服務，請將它們併入為相同環境變數的一部分。 |
 | LOG_LOCATIONS=*&lt;path_to_file&gt;* | 新增要在容器中監視的日誌檔。包括含有日誌檔路徑的 `LOG_LOCATIONS` 環境變數。 |
-*表 8. 常用環境變數*
+{: caption="Table 8. Commonly used environment variables" caption-side="top"}
 
-   <dl>
+ <dl>
    <dt>--env-file <i>ENVIRONMENT_VARIABLE_FILE</i>（選用）</dt>
    <dd> 從檔案匯入環境變數，其中 ENVFILE 是本端目錄上檔案的路徑。檔案中的每一行都代表一個 key=value 配對。</dd>
    <dt>--volume <i>VOLUME</i>:<i>CONTAINER_PATH</i>[:ro]（選用）</dt>
@@ -2667,7 +2665,7 @@ bluemix ic ps [-a|--all] [--filter env=SEARCH_CRITERIA] [-s|--size] [-l NUM|--li
    <dt>-a|--all（選用）</dt>
    <dd>顯示所有容器（包括執行中及已停止）。</dd>
    <dt>--filter env=<i>SEARCH_CRITERIA</i>（選用）</dt>
-   <dd>搜尋具有特定環境變數值的容器。當您檢查容器時，可以依 CLI 回應之 Env 區段中所列出的任何環境變數索引鍵或值來過濾容器。請將 SEARCH_CRITERIA 取代為您所尋找的索引鍵或值。您的搜尋準則不需要完全相符。</dd>
+   <dd>搜尋具有特定環境變數值的容器。您可以依照檢查容器時 CLI 回應之 Env 區段中所列出的任何環境變數索引鍵或值來過濾容器。請將 SEARCH_CRITERIA 取代為您所尋找的索引鍵或值。您的搜尋準則不需要完全相符。</dd>
    <dt>-s|--size（選用）</dt>
    <dd>列出容器的大小。</dd>
    <dt>-l <i>NUM</i>|--limit <i>NUM</i>（選用）</dt>
@@ -2708,10 +2706,10 @@ bluemix ic rename OLD_NAME NEW_NAME
 
 在您已登入的 Bluemix 空間中，重建 IBM Containers 服務。會維護空間的原始配額。
 
-<strong>重要事項</strong>：當您執行此指令時，此空間中您的單一容器及群組都不會移轉至重新佈建的空間，而且將會在移轉處理程序期間予以移除。 
+<strong>重要事項</strong>：當您執行此指令時，此空間中您的單一容器及群組都不會移轉至重新佈建的空間，而且將會在移轉處理程序期間予以移除。
 
 ```
-bluemix ic reprovision [--force|-f] [ENVIRONMENT_NAME]
+bluemix ic reprovision [--force|-f] [AVAILABILITY_ZONE]
 ```
 <strong>指令選項</strong>：<dl>
    <dt>--force|-f（選用）</dt>
@@ -2938,10 +2936,10 @@ bluemix ic run [-p PORT|--publish PORT] [-P] [-m MEMORY|--memory MEMORY] [-e ENV
 
 |      環境變數                          |   說明                              |
 | :----------------------------- | :------------------------------ |
-| CCS_BIND_APP=*&lt;appname&gt;*       | 將服務連結至容器。請使用 `CCS_BIND_APP` 環境變數，將應用程式連結至容器。應用程式會連結至目標服務，並作為橋接器，以容許 {{site.data.keyword.Bluemix_notm}} 將您橋接器應用程式的 `VCAP_SERVICES` 資訊帶入執行中容器實例。如需建立橋接器應用程式的相關資訊，請參閱[將服務連結至容器](../../../containers/container_integrations_binding.html){: new_window}。 |
-| CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | 若要將 Bluemix 服務直接連結至容器，而不使用橋接器應用程式，請使用 CCS_BIND_SRV。此連結容許 Bluemix 將 VCAP_SERVICES 資訊注入執行中容器實例。若要列出多個 Bluemix 服務，請將它們併入為相同環境變數的一部分。 |
+| CCS_BIND_APP=*&lt;appname&gt;*       | 將服務連結至容器。請使用 `CCS_BIND_APP` 環境變數，將應用程式連結至容器。應用程式會連結至目標服務，並作為橋接器，以容許 {{site.data.keyword.Bluemix_notm}} 將您橋接應用程式的 `VCAP_SERVICES` 資訊帶入執行中容器實例。如需建立橋接應用程式的相關資訊，請參閱[將服務連結至容器](../../../containers/container_integrations_binding.html){: new_window}。 |
+| CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | 若要將 Bluemix 服務直接連結至容器，而不使用橋接應用程式，請使用 CCS_BIND_SRV。此連結容許 Bluemix 將 VCAP_SERVICES 資訊注入執行中容器實例。若要列出多個 Bluemix 服務，請將它們併入為相同環境變數的一部分。 |
 | LOG_LOCATIONS=*&lt;path_to_file&gt;* | 新增要在容器中監視的日誌檔。包括含有日誌檔路徑的 `LOG_LOCATIONS` 環境變數。 |
-*表 9. 常用環境變數*
+{: caption="Table 9. Commonly used environment variables" caption-side="top"} 
 
 
    <dl>

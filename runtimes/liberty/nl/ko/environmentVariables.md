@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -13,9 +14,6 @@ copyright:
 # 환경 변수 
 {: #environment_variables}
 
-마지막 업데이트 날짜: 2016년 6월 10일
-{: .last-updated}
-
 Java용 Liberty에서 지원하는 환경 변수
 
 <table>
@@ -26,12 +24,12 @@ Java용 Liberty에서 지원하는 환경 변수
 
 <tr>
 <td>BLUEMIX_APP_MGMT_ENABLE</td>
-<td>[앱 관리 유틸리티](../../manageapps/app_mng.html)를 사용으로 설정합니다. </td>
+<td>[앱 관리 유틸리티](/docs/manageapps/app_mng.html)를 사용으로 설정합니다. </td>
 </tr>
 
 <tr>
 <td>BLUEMIX_APP_MGMT_INSTALL</td>
-<td>[앱 관리 유틸리티](../../manageapps/app_mng.html)를 설치합니다. </td>
+<td>[앱 관리 유틸리티](/docs/manageapps/app_mng.html)를 설치합니다. </td>
 </tr>
 
 <tr>
@@ -82,6 +80,11 @@ Java용 Liberty에서 지원하는 환경 변수
 <tr>
 <td>JVM_ARGS</td>
 <td>[JVM 인수](customizingJRE.html)를 설정합니다. </td>
+</tr>
+
+<tr>
+<td>LBP_SERVICE_CONFIG_xxxx</td>
+<td>[서비스 구성을 대체합니다. ](autoConfig.html#override_service_config)</td>
 </tr>
 
 <tr>

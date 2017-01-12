@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  années : 2015, 2016
+  years: 2015, 2016
+lastupdated: "2016-11-21"
 
 ---
 
@@ -13,15 +14,12 @@ copyright:
 # A propos de {{site.data.keyword.twittershort}}
 {: #about_twitter}
 
-*Dernière mise à jour : 13 mai 2016*
-{: .last-updated}
-
-Utilisez {{site.data.keyword.twitterfull}} pour incorporer un contenu Twitter depuis les flux [Decahose](http://support.gnip.com/apis/firehose/overview.html){: new_window} ou [PowerTrack](http://support.gnip.com/apis/powertrack/overview.html){: new_window} de  Twitter dans vos applications {{site.data.keyword.Bluemix}}.
+Utilisez {{site.data.keyword.twitterfull}} pour incorporer un contenu Twitter depuis les flux [Decahose](http://support.gnip.com/gnip2.0/){: new_window} ou [PowerTrack](http://support.gnip.com/apis/powertrack2.0/){: new_window} de  Twitter dans vos applications {{site.data.keyword.Bluemix}}.
 {:shortdesc}
 
 Le magasin de contenu est actualisé et indexé en temps réel, ce qui rend les recherches dynamiques et rapides. Le service apporte à Tweets divers enrichissements comme la possibilité d'exprimer un sentiment particulier ou d'autres idées de ce type, pour plusieurs langues différentes, qui reposent sur des algorithmes de traitement du langage naturel approfondi provenant d'[IBM Social Media Analytics](http://www.ibm.com/software/products/en/social-media-analytics/){: new_window}. Le traitement en temps réel des flux de données Twitter est entièrement pris en charge et peut être configuré via un ensemble riche de paramètres de requête et de mots clés. {{site.data.keyword.twittershort}}
 inclut des API RESTful qui vous permettent de personnaliser vos recherches et renvoie des tweets et des enrichissements au format JSON. Les
-tweets renvoyés sont au format [flux d'activités Gnip](http://support.gnip.com/sources/twitter/data_format.html){: new_window} pour les données Twitter.
+tweets renvoyés sont au format [flux d'activités Gnip](http://support.gnip.com/){: new_window} pour les données Twitter.
 
 Le service {{site.data.keyword.twittershort}} analyse les flux Twitter Decahose et PowerTrack en temps réel pour fournir les enrichissements suivants à l'auteur de chaque tweet :
 * Sexe
@@ -38,13 +36,12 @@ qui confirme l'accessibilité d'un tweet particulier sur Twitter.
 ## Commentaires en retour et support 
 {: #feedback_support}
 
-L'équipe {{site.data.keyword.twitterfull}} souhaite recueillir vos commentaires.
+Si vous rencontrez des problèmes ou si vous avez des questions, vous pouvez obtenir de l'aide en recherchant des informations ou en posant des questions via un forum. Vous pouvez également ouvrir un ticket de demande de service.
 
-Si vous rencontrez des problèmes avec ce service, visitez le forum [developerWorks Answers](https://developer.ibm.com/answers/topics/insights-twitter/?smartspace=bluemix){: new.window}. Consultez les réponses aux questions déjà posées ou ajoutez une question.
-Incluez les étiquettes **insights-twitter** et **bluemix** pour améliorer le temps de réponse.
+Si vous utilisez les forums pour poser une question, marquez votre question pour être sûr qu'elle soit vue par les équipes de développement IBM Bluemix. 
+* Si vous avez des questions d'ordre technique sur le développement et le déploiement d'une application avec {{site.data.keyword.twittershort}}, postez votre question sur Stack Overflow et affectez-lui les étiquettes **bluemix** et **twitter**. 
+* Pour les questions relatives au service et aux instructions de mise en route, utilisez le forum IBM [developerWorks dW Answers](https://developer.ibm.com/answers/topics/insights-twitter/?smartspace=bluemix){: new.window}. Incluez les étiquettes **insights-twitter** et **bluemix**.
 
-Si vous avez des questions pour lesquelles aucune réponse n'est fournie dans developerWorks Answers, postez votre question sur
-[stackoverflow](http://stackoverflow.com/search?q=twitter+bluemix){: new.window} et étiquetez vos questions avec **twitter** et **bluemix**.
+Pour plus d'informations sur l'utilisation des forums, voir [Comment obtenir de l'aide](https://new-console.ng.bluemix.net/docs/support/index.html#getting-help){: new.window}. 
 
-Vous pouvez afficher le statut de la plateforme [Bluemix Platform](https://developer.ibm.com/bluemix/support/#status){: new.window}
-ou [ouvrir un ticket de demande de service](https://cloudoe.support.ibmcloud.com/ics/support/default.asp?deptid=31036&offering=ibmbluemix){: new.window}. Pour plus d'informations, voir la [rubrique de traitement des incidents](https://console.{DomainName}/docs/troubleshoot/troubleshoot.html){: new_window}.
+Pour des informations sur l'ouverture d'un ticket de demande de service IBM, ou sur les niveaux de support et les degrés de gravité des tickets, voir [Contacter le service de support](https://new-console.ng.bluemix.net/docs/support/index.html#contacting-support){: new.window}.

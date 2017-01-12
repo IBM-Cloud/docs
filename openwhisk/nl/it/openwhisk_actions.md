@@ -4,8 +4,8 @@
 
 copyright:
 
-  anni: 2016
-ultimo aggiornamento: "27-09-2016"
+  years: 2016
+lastupdated: "2016-09-27"
  
 
 ---
@@ -157,10 +157,32 @@ Consulta la procedura e gli esempi di seguito riportati per creare la tua prima 
   wsk action update hello hello.js
   ```
   {: pre}
+
+3.  I parametri possono essere forniti esplicitamente nella riga di comando o fornendo un file contenente i parametri desiderati.
+
+  Per passare i parametri direttamente tramite la riga di comando, fornisci una coppia chiave/valore all'indicatore `--param`:
   ```
   wsk action invoke --blocking --result hello --param name Bernie --param place Vermont
   ```
   {: pre}
+
+  Per poter utilizzare un file contenente il contenuto del parametro, crea il file che contiene i parametri nel formato JSON. Il nome file
+  deve essere passato all'indicatore `param-file`:
+
+  File del parametro di esempio denominato parameters.json:
+  ```
+  {
+      "name": "Bernie",
+      "place": "Vermont"
+  }
+  ```
+  {: codeblock}
+
+  ```
+  wsk action invoke --blocking --result hello --param-file parameters.json
+  ```
+  {: pre}
+
   ```
   {
       "payload": "Hello, Bernie from Vermont"
@@ -168,7 +190,7 @@ Consulta la procedura e gli esempi di seguito riportati per creare la tua prima 
   ```
   {: screen}
 
-  Osserva l'uso dell'opzione `--param` per specificare il nome e il valore del parametro e dell'opzione `--result` per visualizzare solo il risultato della chiamata.
+  Osserva l'uso dell'opzione `--result` per visualizzare solo il risultato della chiamata.
 
 ### Impostazione dei parametri predefiniti
 {: #openwhisk_binding_actions}
@@ -177,10 +199,28 @@ Le azioni possono essere richiamate con più parametri. Ricorda che l'azione `he
 
 Anziché trasmettere ogni volta tutti i parametri a un'azione, puoi eseguire il bind di determinati parametri. Il seguente esempio esegue il bind del parametro *place*, cosicché l'azione assuma come valore predefinito il luogo "Vermont":
  
-1. Aggiorna l'azione utilizzando l'opzione `--param` per eseguire il bind dei valori di parametro.
+1. Aggiorna l'azione utilizzando l'opzione `--param` per eseguire il bind dei valori di parametro o passando un file che contiene i parametri a `--param-file`
+
+  Per specificare i parametri predefiniti esplicitamente nella riga di comando, fornisci una coppia chiave/valore all'indicatore `param`:
 
   ```
   wsk action update hello --param place Vermont
+  ```
+  {: pre}
+
+  La trasmissione dei parametri a un file richiede la creazione di un file con il contenuto desiderato nel formato JSON.
+  Il nome file deve essere passato all'indicatore `-param-file`:
+
+  File del parametro di esempio denominato parameters.json:
+  ```
+  {
+      "place": "Vermont"
+  }
+  ```
+  {: codeblock}
+
+  ```
+  wsk action update hello --param-file parameters.json
   ```
   {: pre}
 
@@ -201,10 +241,30 @@ Anziché trasmettere ogni volta tutti i parametri a un'azione, puoi eseguire il 
 
 3. Richiama l'azione, trasmettendo il valore sia di `name` che di `place`. Quest'ultimo sovrascrive il valore associato mediante bind all'azione.
 
+  Utilizzo dell'indicatore `--param`:
+
   ```
   wsk action invoke --blocking --result hello --param name Bernie --param place "Washington, DC"
   ```
   {: pre}
+
+  Utilizzo dell'indicatore `--param-file`:
+
+  File parameters.json:
+  ```
+  {
+    "name": "Bernie",
+    "place": "Vermont"
+  }
+  ```
+  {: codeblock}
+
+
+  ```
+  wsk action invoke --blocking --result hello --param-file parameters.json
+  ```
+  {: pre}
+
   ```
   {  
       "payload": "Hello, Bernie from Washington, DC"
@@ -232,7 +292,7 @@ Le funzioni JavaScript eseguite in modo asincrono potrebbero dover restituire il
 
   Nota che la funzione `main` restituisce una Promessa, che indica che l'attivazione non è stata ancora completata, ma il suo completamento è previsto in futuro.
 
-  In questo caso, la funzione JavaScript `setTimeout()` attende venti secondi prima di richiamare la funzione di callback.  Questo rappresenta il codice asincrono e va all'interno della funzione di callback della Promessa.
+  In questo caso, la funzione JavaScript `setTimeout()` attende due secondi prima di richiamare la funzione di callback.  Questo rappresenta il codice asincrono e va all'interno della funzione di callback della Promessa.
 
   Il callback della Promessa utilizza due argomenti, resolve e reject, che sono entrambe funzioni.  La chiamata a `resolve()` soddisfa la Promessa e indica che l'attivazione è stata completata normalmente.
 
@@ -342,6 +402,7 @@ Questo esempio richiama un servizio Yahoo Meteo per ottenere le condizioni attua
   {: screen}
 
 ### Creazione pacchetto di un'azione come modulo Node.js
+{: #openwhisk_js_packaged_action}
 
 Come alternativa alla scrittura di tutto il tuo codice di azione in un unico file di origine JavaScript, puoi scrivere un'azione come pacchetto `npm`. Considera come esempio una directory con i seguenti file:
 
@@ -417,8 +478,8 @@ Per creare un'azione OpenWhisk da questo pacchetto:
   {: screen}
 
 Infine, nota che mentre la maggior parte dei pacchetti `npm` installa le origini JavaScript su `npm install`, altri installano e compilano anche delle risorse binarie. Il caricamento dei file di archivio attualmente non supporta le dipendenze binarie, ma solo le dipendenze JavaScript. Le chiamate di azioni potrebbero non riuscire se l'archivio include dipendenze binarie.
-    
-### Creazione di sequenze di azioni
+
+## Creazione di sequenze di azioni
 {: #openwhisk_create_action_sequence}
 
 Puoi creare un'azione che concatena una sequenza di azioni.
@@ -583,6 +644,75 @@ wsk action invoke --blocking --result helloSwift --param name World
 
 **Attenzione:** le azioni Swift vengono eseguite in un ambiente Linux. L'uso su Linux è ancora in fase di
 sviluppo e {{site.data.keyword.openwhisk_short}} di solito utilizza la release più recente disponibile, che non è necessariamente stabile. Inoltre, la versione di Swift utilizzata con {{site.data.keyword.openwhisk_short}} potrebbe essere incoerente con le versioni di Swift delle release stabili di XCode su MacOS.
+
+## Creazione di azioni Java
+{: #openwhisk_actions_java}
+
+Il processo di creazione di azioni Java è analogo a quello delle azioni JavaScript e Swift. Le seguenti sezioni ti guidano lungo la creazione e la chiamata di una singola azione Java e l'aggiunta di parametri a tale azione.
+
+Per compilare, verificare e archiviare i file Java, devi disporre di [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html) installato localmente.
+
+### Creazione e chiamata di un'azione
+{: #openwhisk_actions_java_invoke}
+
+Un'azione Java è un programma Java con un metodo denominato `main` con la firma esatta come nel seguente esempio:
+```
+public static com.google.gson.JsonObject main(com.google.gson.JsonObject);
+```
+{: codeblock}
+
+Ad esempio, crea un file Java denominato `Hello.java` con il seguente contenuto:
+
+```
+import com.google.gson.JsonObject;
+public class Hello {
+    public static JsonObject main(JsonObject args) {
+        String name = "stranger";
+        if (args.has("name"))
+            name = args.getAsJsonPrimitive("name").getAsString();
+        JsonObject response = new JsonObject();
+        response.addProperty("greeting", "Hello " + name + "!");
+        return response;
+    }
+}
+```
+{: codeblock}
+
+Quindi, compila `Hello.java` in un file JAR `hello.jar` nel seguente modo:
+```
+javac Hello.java
+jar cvf hello.jar Hello.class
+```
+{: pre}
+
+**Nota:** [google-gson](https://github.com/google/gson) deve essere presente nel tuo CLASSPATH Java durante la compilazione del file Java.
+
+Puoi creare un'azione OpenWhisk denominata `helloJava` da questo file JAR nel seguente modo:
+
+```
+wsk action create helloJava hello.jar
+```
+{: pre}
+
+Quando utilizzi la riga di comando e un file di origine `.jar`, non devi necessariamente
+specificare che stai creando un'azione Java;
+lo strumento lo desume dall'estensione del file.
+
+Le azioni Java vengono richiamate come le azioni JavaScript e Swift:
+
+```
+wsk action invoke --blocking --result helloJava --param name World
+```
+{: pre}
+
+```
+  {
+      "greeting": "Hello World!"
+  }
+```
+{: screen}
+
+**Nota:** se il file JAR dispone di più di una classe con un metodo main corrispondente alla firma necessaria, lo strumento CLI utilizza la prima classe riportata da `jar -tf`.
 
 
 ## Creazione di azioni Docker

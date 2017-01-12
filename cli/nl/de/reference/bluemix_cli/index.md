@@ -1,12 +1,13 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2015, 2016
 
- 
+lastupdated: "2016-10-24"
+
 ---
 
 
@@ -15,9 +16,6 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}}-Befehle (bx)
 {: #bluemix_cli}
-
-Letzte Aktualisierung: 25. Oktober 2016
-{: .last-updated}
 
 Version: 0.4.1
 
@@ -64,7 +62,7 @@ Verwenden Sie die Indizes in den folgenden Tabellen als Referenz für die häufi
  </tr>
   </tbody>
  </table>
-*Tabelle 1. Allgemeine Bluemix-Befehle*
+{: caption="Table 1. General bluemix commands" caption-side="top"}
 
 
 
@@ -103,7 +101,7 @@ Verwenden Sie die Indizes in den folgenden Tabellen als Referenz für die häufi
  </tr>
  </tbody>
  </table>
-*Tabelle 2. Befehle zur Verwaltung von Organisationen, Bereichen und Benutzern*
+ {: caption="Table 2. Commands for managing orgs, spaces, and users" caption-side="top"} 
 
 
 
@@ -142,7 +140,7 @@ Verwenden Sie die Indizes in den folgenden Tabellen als Referenz für die häufi
  </tr>
   </tbody>
  </table>
-*Tabelle 3. Befehle zur Verwaltung von CF-Apps*
+{: caption="Table 3. Commands for managing cf apps" caption-side="top"}
 
 
 <table summary="Bluemix-Befehle zur Verwaltung von Bluemix-Services">
@@ -173,7 +171,7 @@ Verwenden Sie die Indizes in den folgenden Tabellen als Referenz für die häufi
  </tr>
   </tbody>
  </table>
-*Tabelle 4. Befehle zur Verwaltung von Bluemix-Services*
+{: caption="Table 4. Commands for managing Bluemix services" caption-side="top"}
 
 
 <table summary="Bluemix-Befehle zur Verwaltung der Bluemix-Einstellungen für Kataloge, Plug-ins, Abrechnungen und Sicherheit.">
@@ -209,7 +207,7 @@ Verwenden Sie die Indizes in den folgenden Tabellen als Referenz für die häufi
  </tr>
   </tbody>
  </table>
-*Tabelle 5. Befehle zur Verwaltung von Bluemix-Katalogen, Plug-ins, Abrechnungen und Sicherheitseinstellungen*
+{: caption="Table 5. Commands for managing Bluemix catalog, plug-ins, billing, and security settings" caption-side="top"}
 
 
 
@@ -241,7 +239,7 @@ Verwenden Sie die Indizes in den folgenden Tabellen als Referenz für die häufi
  </tr>
   </tbody>
  </table>
-*Tabelle 6. Befehle zur Verwaltung von Netzeinstellungen*
+{: caption="Table 6. Commands for managing network settings" caption-side="top"}
 
 
 
@@ -300,8 +298,8 @@ Verwenden Sie die Indizes in den folgenden Tabellen als Referenz für die häufi
  <td>[bluemix ic run](index.html#bluemix_ic_run)</td>
  </tr>
  <tr>
- <td>[bluemix ic service-bind](index.html#bluemix_ic_service_bind)</td>
- <td>[bluemix ic service-unbind](index.html#bluemix_ic_service_unbind)</td>
+ <td>[bluemix ic service-bind](index.html#bluemix_ic_service-bind)</td>
+ <td>[bluemix ic service-unbind](index.html#bluemix_ic_service-unbind)</td>
  <td>[bluemix ic start](index.html#ic_start)</td>
  <td>[bluemix ic stats](index.html#bluemix_ic_stats)</td>  
  <td>[bluemix ic stop](index.html#ic_stop)</td>
@@ -311,7 +309,7 @@ Verwenden Sie die Indizes in den folgenden Tabellen als Referenz für die häufi
  <td>[bluemix ic unpause](index.html#unpause)</td>
  <td>[bluemix ic unprovision](index.html#bluemix_ic_unprovision)</td>  
  <td>[bluemix ic volume-inspect](index.html#bluemix_ic_volume_inspect)</td>
- <td>[bluemix ic volume-create](index.html#bluemix_ic_volume_create)</td> 
+ <td>[bluemix ic volume-create](index.html#bluemix_ic_volume_create)</td>
  </tr>
  <tr>
  <td>[bluemix ic volume-fs](index.html#bluemix_ic_volume_fs)</td>
@@ -329,7 +327,7 @@ Verwenden Sie die Indizes in den folgenden Tabellen als Referenz für die häufi
  </tr>
   </tbody>
  </table>
-*Tabelle 7. Befehle zur Verwaltung von Containern in Bluemix*
+{: caption="Table 7. Commands for managing containers on Bluemix" caption-side="top"}
 
 
 
@@ -604,7 +602,7 @@ Alle Containerinstanzen auflisten:
 bluemix list containers
 ```
 
-Alle Anwendungen, Container, Containergruppen und VM-Gruppen auflisten:
+Alle Apps, Container, Containergruppen und VM-Gruppen auflisten:
 
 ```
 bluemix list
@@ -1622,7 +1620,7 @@ bluemix bss account-usage -d 2016-06
 ## bluemix bss org-usage
 {: #bluemix_bss_org_usage}
 
-Monatliche Nutzungsdetails einer Organisation anzeigen. Diese Operation kann nur von einem Abrechnungsmanager der Organisation ausgeführt werden.
+Monatliche Nutzungsdetails einer Organisation anzeigen. Diese Operation kann nur von einem Abrechnungsmanager der Organisation ausgeführt werden. 
 
 ```
 bluemix bss org-usage ORG_NAME [-d YYYY-MM] [-r REGION_NAME] [--json]
@@ -2122,7 +2120,7 @@ bluemix ic group-create [--publish,-p PORT] --name GROUP_NAME [--memory,-m MEMOR
 | CCS_BIND_APP=*&lt;appname&gt;*       | Bindet einen Service an einen Container. Mit der Umgebungsvariablen `CCS_BIND_APP` können Sie eine App an den Container binden. Die App wird an den Zielservice gebunden und fungiert als Bridge, über die {{site.data.keyword.Bluemix_notm}} die Informationen aus der Umgebungsvariablen `VCAP_SERVICES` Ihrer Bridge-App in die aktive Containerinstanz übertragen kann. Weitere Informationen zur Erstellung einer Bridge-App finden Sie unter [Service an einen Container binden](../../../containers/container_integrations_binding.html){: new_window}. |
 | CCS_BIND_SRV=*&lt;service_instanzname1&gt;*,*&lt;service_instanzname2&gt;* | Um einen Bluemix-Service ohne Zuhilfenahme einer Bridge-App direkt an einen Container zu binden, verwenden Sie CCS_BIND_SRV. Diese Bindung ermöglicht Bluemix das Einfügen von VCAP_SERVICES-Informationen in die aktive Containerinstanz. Zum Auflisten mehrerer Bluemix-Services schließen Sie diese als Teil derselben Umgebungsvariablen ein. |
 | LOG_LOCATIONS=*&lt;dateipfad&gt;* | Fügt eine Protokolldatei für die Überwachung im Container hinzu. Fügen Sie die Umgebungsvariable `LOG_LOCATIONS` mit einem Pfad zu der Protokolldatei ein. |
-*Tabelle 8. Häufig verwendete Umgebungsvariablen*
+{: caption="Table 8. Commonly used environment variables" caption-side="top"}
 
  <dl>
    <dt>--env-file <i>ENVIRONMENT_VARIABLE_FILE</i> (optional)</dt>
@@ -2665,7 +2663,7 @@ bluemix ic ps [-a|--all] [--filter env=SEARCH_CRITERIA] [-s|--size] [-l NUM|--li
    <dt>-a|--all (optional)</dt>
    <dd>Alle Container anzeigen, d. h. aktive und gestoppte Container.</dd>
    <dt>--filter env=<i>SEARCH_CRITERIA</i> (optional)</dt>
-   <dd>Suchcontainer mit einem bestimmten Wert für die Umgebungsvariable. Sie können Ihre Container nach jedem Umgebungsvariablen-Schlüssel oder -Wert filtern, der im Abschnitt 'Env' Ihrer CLI-Antwort aufgelistet wird, wenn Sie einen Container untersuchen. Ersetzen Sie SEARCH_CRITERIA durch den Schlüssel oder Wert, den Sie suchen. Ihre Suchkriterien müssen keine exakten Übereinstimmungen darstellen.</dd>
+   <dd>Suchcontainer mit einem bestimmten Wert für die Umgebungsvariable. Sie können Ihre Container nach jedem Umgebungsvariablen-Schlüssel oder -Wert filtern, der im Abschnitt 'Env' Ihrer CLI-Antwort aufgelistet wird, wenn Sie einen Container untersuchen. Ersetzen Sie SEARCH_CRITERIA durch den Schlüssel oder Wert, den Sie suchen. Ihre Suchkriterien müssen keine exakten Übereinstimmungen darstellen. </dd>
    <dt>-s|--size (optional)</dt>
    <dd>Die Größen der Container auflisten.</dd>
    <dt>-l <i>NUM</i>|--limit <i>NUM</i> (optional)</dt>
@@ -2707,10 +2705,10 @@ bluemix ic rename OLD_NAME NEW_NAME
 
 Erstellt den IBM Containers-Service erneut in dem Bluemix-Bereich, an dem Sie angemeldet sind. Das ursprüngliche Kontingent für den Bereich wird beibehalten.
 
-<strong>Wichtig</strong>: Bei Ausführung dieses Befehls wird keine(r) Ihrer einzelnen Container und Gruppen in diesem Bereich auf den neu bereitgestellten Bereich migriert, sondern während des Migrationsprozesses entfernt. 
+<strong>Wichtig</strong>: Bei Ausführung dieses Befehls wird keine(r) Ihrer einzelnen Container und Gruppen in diesem Bereich auf den neu bereitgestellten Bereich migriert, sondern während des Migrationsprozesses entfernt.
 
 ```
-bluemix ic reprovision [--force|-f] [ENVIRONMENT_NAME]
+bluemix ic reprovision [--force|-f] [AVAILABILITY_ZONE]
 ```
 <strong>Befehlsoptionen</strong>:
 
@@ -2940,7 +2938,7 @@ bluemix ic run [-p PORT|--publish PORT] [-P] [-m MEMORY|--memory MEMORY] [-e ENV
 | CCS_BIND_APP=*&lt;appname&gt;*       | Bindet einen Service an einen Container. Mit der Umgebungsvariablen `CCS_BIND_APP` können Sie eine App an den Container binden. Die App wird an den Zielservice gebunden und fungiert als Bridge, über die {{site.data.keyword.Bluemix_notm}} die Informationen aus der Umgebungsvariablen `VCAP_SERVICES` Ihrer Bridge-App in die aktive Containerinstanz übertragen kann. Weitere Informationen zur Erstellung einer Bridge-App finden Sie unter [Service an einen Container binden](../../../containers/container_integrations_binding.html){: new_window}. |
 | CCS_BIND_SRV=*&lt;service_instanzname1&gt;*,*&lt;service_instanzname2&gt;* | Um einen Bluemix-Service ohne Zuhilfenahme einer Bridge-App direkt an einen Container zu binden, verwenden Sie CCS_BIND_SRV. Diese Bindung ermöglicht Bluemix das Einfügen von VCAP_SERVICES-Informationen in die aktive Containerinstanz. Zum Auflisten mehrerer Bluemix-Services schließen Sie diese als Teil derselben Umgebungsvariablen ein. |
 | LOG_LOCATIONS=*&lt;dateipfad&gt;* | Fügt eine Protokolldatei für die Überwachung im Container hinzu. Fügen Sie die Umgebungsvariable `LOG_LOCATIONS` mit einem Pfad zu der Protokolldatei ein. |
-*Tabelle 9. Häufig verwendete Umgebungsvariablen*
+{: caption="Table 9. Commonly used environment variables" caption-side="top"} 
 
 
    <dl>
@@ -3222,7 +3220,7 @@ bluemix ic version
 
 <strong>Voraussetzungen</strong>: Docker
 
-Zum Anzeigen der Version von IBM Containers führen Sie den Befehl `bluemix ic info` aus. Weitere Informationen finden Sie unter dem Befehl [version](https://docs.docker.com/engine/reference/commandline/version/){: new_window} in der Docker-Hilfe.
+Zum Anzeigen der Version von IBM Containers führen Sie den Befehl `bluemix ic info` aus. Weitere Informationen finden Sie unter dem Befehl [version](https://docs.docker.com/engine/reference/commandline/version/){: new_window} in der Docker-Hilfe. 
 
 
 ## bluemix ic volume-create
@@ -3317,7 +3315,7 @@ bluemix ic volume-fs-inspect FILE_SHARE_NAME
 
   <dl>
   <dt><i>FILE_SHARE_NAME</i> (erforderlich)</dt>
-   <dd>Der Name der Dateifreigabe. </dd>
+   <dd>Der Name der Dateifreigabe.</dd>
    </dl>
 
 <strong>Beispiele</strong>:
@@ -3343,7 +3341,7 @@ bluemix ic volume-fs-remove FILE_SHARE_NAME
 
    <dl>
    <dt><i>FILE_SHARE_NAME</i> (erforderlich)</dt>
-   <dd>Der Name der Dateifreigabe. </dd>
+   <dd>Der Name der Dateifreigabe.</dd>
    </dl>
 
 <strong>Beispiele</strong>:

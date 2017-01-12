@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-09-27"
+  years: 2016, 2017
+lastupdated: "2017-01-04"
 
 ---
 
@@ -134,7 +134,7 @@ An activation record contains the following fields:
 ### Function prototype
 {: #openwhisk_ref_javascript_fnproto}
 
-{{site.data.keyword.openwhisk_short}} JavaScript actions run in a Node.js runtime, currently version 6.2.0.
+{{site.data.keyword.openwhisk_short}} JavaScript actions run in a Node.js runtime.
 
 Actions written in JavaScript must be confined to a single file. The file can contain multiple functions but by convention a function called `main` must exist and is the one called when the action is invoked. For example, the following is an example of an action with multiple functions.
 
@@ -172,7 +172,7 @@ function main(params) {
   } else if (params.payload == 1) {
      return {payload: 'Hello, World!'};
   } else if (params.payload == 2) {
-    return whisk.error();   // indicates abnormal completion
+    return {error: 'payload must be 0 or 1'};
   }
 }
 ```
@@ -229,56 +229,12 @@ It is possible for an action to be synchronous on some inputs and asynchronous o
 
 Notice that regardless of whether an activation is synchronous or asynchronous, the invocation of the action can be blocking or non-blocking.
 
-### Additional SDK methods
+### JavaScript global whisk object deprecated
 
-The `whisk.invoke()` function invokes another action and returns a Promise for the resulting activation. It takes as an argument a dictionary that defines the following parameters:
-
-- *name*: The fully qualified name of the action to invoke,
-- *parameters*: A JSON object that represents the input to the invoked action. If omitted, defaults to an empty object.
-- *apiKey*: The authorization key with which to invoke the action. Defaults to `whisk.getAuthKey()`.
-- *blocking*: Whether the action should be invoked in blocking or non-blocking mode. When `blocking` is true, invoke will wait for the result of the invoked action before resolving the returned Promise. Defaults to `false`, indicating a non-blocking invocation.
-
-`whisk.invoke()` returns a Promise. In order to make the OpenWhisk system wait for the invoke to finish, you must return this Promise from your action's `main` function.
-- If the invocation fails, the promise will reject with an object describing the failed invocation. It will potentially have two fields:
-  - *error*: An object describing the error - usually a string.
-  - *activation*: An optional dictionary that may or may not be present depending on the nature of the invocation failure. If present, it will have the following fields:
-    - *activationId*: The activation ID:
-    - *result*: If the action was invoked in blocking mode: The action result as a JSON object, else `undefined`.
-- If the invocation succeeds, the promise will resolve with a dictionary describing the activation with fields *activationId* and *result* as described above.
-
-Below is an example of a blocking invocation that utilizes the returned promise:
-```javascript
-return whisk.invoke({
-  name: 'myAction',
-  blocking: true
-})
-.then(function (activation) {
-    // activation completed successfully, activation contains the result
-    console.log('Activation ' + activation.activationId + ' completed successfully and here is the result ' + activation.result);
-})
-.catch(function (reason) {
-    console.log('An error has occured ' + reason.error);
-
-    if(reason.activation) {
-      console.log('Please check activation ' + reason.activation.activationId + ' for details.');
-    } else {
-      console.log('Failed to create activation.');
-    }
-});
-```
-{: codeblock}
-
-The `whisk.trigger()` function fires a trigger and returns a Promise for the resulting activation. It takes as an argument a JSON object with the following parameters:
-
-- *name*: The fully qualified name of trigger to invoke.
-- *parameters*: A JSON object that represents the input to the trigger. If omitted, defaults to an empty object.
-- *apiKey*: The authorization key with which to fire the trigger. Defaults to `whisk.getAuthKey()`.
-
-`whisk.trigger()` returns a Promise. If you require the OpenWhisk system to wait for the trigger to complete, you should return this Promise from your action's `main` function.
-- If the trigger fails, the promise will reject with an object describing the error.
-- If the trigger succeeds, the promise will resolve with a dictionary with an `activationId` field containing the activation ID.
-
-The `whisk.getAuthKey()` function returns the authorization key under which the action is running. Usually, you do not need to invoke this function directly because it is used implicitly by the `whisk.invoke()` and `whisk.trigger()` functions.
+The global object `whisk` is urrently deprecated; migrate your nodejs actions to use altenative methods.
+For the functions `whisk.invoke()` and `whisk.trigger()` you can use the client library [openwhisk](https://www.npmjs.com/package/openwhisk).
+For the `whisk.getAuthKey()` you can get the API key value from the environment variable `__OW_API_KEY`.
+For the `whisk.error()` you can return a rejected Promise (i.e. Promise.reject).
 
 ### JavaScript runtime environments
 {: #openwhisk_ref_javascript_environments}
@@ -288,7 +244,6 @@ The following packages are available to be used in the Node.js 6.9.1 environment
 
 - apn v2.1.2
 - async v2.1.4
-- body-parser v1.15.2
 - btoa v1.1.2
 - cheerio v0.22.0
 - cloudant v1.6.2
@@ -297,8 +252,6 @@ The following packages are available to be used in the Node.js 6.9.1 environment
 - cookie-parser v1.4.3
 - cradle v0.7.1
 - errorhandler v1.5.0
-- express v4.14.0
-- express-session v1.14.2
 - glob v7.1.1
 - gm v1.23.0
 - lodash v4.17.2
@@ -313,6 +266,7 @@ The following packages are available to be used in the Node.js 6.9.1 environment
 - node-uuid v1.4.7
 - nodemailer v2.6.4
 - oauth2-server v2.4.1
+- openwhisk v3.0.0
 - pkgcloud v1.4.0
 - process v0.11.9
 - pug v2.0.0-beta6
@@ -343,9 +297,10 @@ The following packages are available to be used in the Node.js 6.9.1 environment
 The Node.js version 0.12.17 environment will be used for an action if the `--kind` flag is explicitly specified with a value of 'nodejs' when creating/updating the action.
 The following packages are available to be used in the Node.js 0.12.17 environment:
 
+**Note**: The Node.js version 0.12.x is deprecated, migrate all your Node.js action to use Node.js version 6.x.
+
 - apn v1.7.4
 - async v1.5.2
-- body-parser v1.15.2
 - btoa v1.1.2
 - cheerio v0.20.0
 - cloudant v1.4.1
@@ -354,8 +309,6 @@ The following packages are available to be used in the Node.js 0.12.17 environme
 - cookie-parser v1.3.4
 - cradle v0.6.7
 - errorhandler v1.3.5
-- express v4.14.0
-- express-session v1.11.1
 - gm v1.20.0
 - jade v1.9.2
 - log4js v0.6.38
@@ -365,6 +318,7 @@ The following packages are available to be used in the Node.js 0.12.17 environme
 - nano v5.10.0
 - node-uuid v1.4.2
 - oauth2-server v2.4.0
+- openwhisk v3.0.0
 - process v0.11.0
 - request v2.79.0
 - rimraf v2.5.1
@@ -502,7 +456,9 @@ The OpenWhisk API supports request-response calls from web clients. OpenWhisk re
 {: #openwhisk_syslimits}
 
 ### Actions
-{{site.data.keyword.openwhisk_short}} has a few system limits, including how much memory an action uses and how many action invocations are allowed per hour. The following table lists the default limits for actions.
+{{site.data.keyword.openwhisk_short}} has a few system limits, including how much memory an action can use and how many action invocations are allowed per minute. 
+
+The following table lists the default limits for actions.
 
 | limit | description | configurable | unit | default |
 | ----- | ----------- | ------------ | -----| ------- |
@@ -573,7 +529,7 @@ The OpenWhisk API supports request-response calls from web clients. OpenWhisk re
 
 ### Triggers
 
-Triggers are subject to a firing rate per minute and per hour as documented in the table below.
+Triggers are subject to a firing rate per minute as documented in the table below.
 
 | limit | description | configurable | unit | default |
 | ----- | ----------- | ------------ | -----| ------- |

@@ -35,7 +35,7 @@ Ihrer mobilen Apps.<br/><br/> Weitere Informationen zum Betrieb dieses Service f
 <tr>
 <td><img src="images/authentication_icon
 .png" alt="{{site.data.keyword.amashort}}-Servicesymbol"><br/>{{site.data.keyword.amashort}}</td>
-<td valign="top">Mithilfe des Service {{site.data.keyword.amafull}} können Sie Sicherheitsfunktionen zu Ihrer mobilen App hinzufügen. Sie können Clientauthentifizierung und Identitätsprovider konfigurieren, damit sich Benutzer bei der App mit ihren bereits vorhandenen Google- oder Facebook-Konten anmelden können.<br/><br/>
+<td valign="top">Verwenden Sie den Service {{site.data.keyword.amafull}}, um Ihrer mobilen App Sicherheitsfunktionalität hinzuzufügen. Sie können Clientauthentifizierung und Identitätsprovider konfigurieren, damit sich Benutzer bei der App mit ihren bereits vorhandenen Google- oder Facebook-Konten anmelden können.<br/><br/>
 Weitere Informationen zum Betrieb dieses Service finden Sie in der <a href="/docs/services/mobileaccess/index.html" alt="Link zur {{site.data.keyword.amashort}}-Dokumentation">{{site.data.keyword.amashort}}-Dokumentation</a>.</td>
 </tr>
 <tr>

@@ -14,127 +14,105 @@ years: 2016
 
 # HFC SDK for Node.js
 {: #etn_sdk}
-前次更新：2016 年 10 月 07 日
+上次更新时间：2016 年 11 月 9 日
 {: .last-updated}
 
-Hyperledger Fabric Client (HFC) SDK 可讓應用程式開發人員建置與區塊鏈網路互動的 Node.js 應用程式。運用 HFC SDK 的 Node.js 應用程式可以用來執行下列網路作業：
+Hyperledger Fabric Client (HFC) SDK 支持应用程序开发者构建与区块链网络进行交互的 Node.js 应用程序。利用 HFC SDK 的 Node.js 应用程序可以用于执行以下网络任务：
 {:shortdesc}
 
-* 安全地登錄及登記使用者。具有 `registrar` 權限的 Web 應用程式管理者可以動態登錄及登記已向 Web 應用程式鑑別的使用者。
-* 將交易（deploy、invoke 及 query）提交至區塊鏈網路。在沒有 'auditor' 權限的情況下，所有交易都是匿名、機密且可解除鏈結的。
-* 將機密私密金鑰及憑證儲存至任何位置（例如不在區塊鏈上的資料庫）。這需要實作一個簡單的金鑰值儲存庫介面。
+* 安全地注册并登记用户。具有 `registrar` 权限的 Web 应用程序管理员可通过动态方式注册并登记已向该 Web 应用程序认证的用户。
+* 向区块链网络提交交易（部署、调用和查询）。所有交易都是匿名且机密的，只能通过“auditor”权限进行链接。
+* 在任意位置（例如，区块链外的数据库）存储敏感专用密钥和证书。这需要实现简单的键/值存储器接口。
 
-HFC SDK 提供 API，而應用程式透過此 API 與 Hyperledger Fabric 區塊鏈網路互動。這些 API 的設計是要支援兩種可外掛元件：
+HFC SDK 提供了多个 API，应用程序可通过这些 API 与 Hyperledger Fabric 区块链网络进行交互。这些 API 设计为支持两种可插拔组件：
 
-1. 可外掛金鑰值儲存庫，用來擷取及儲存與成員相關聯的金鑰。`chain.setKeyValStore()` 方法會置換預設的檔案型金鑰值儲存庫實作。鏈結金鑰值儲存庫是用來將機密私密金鑰存入倉儲中，因此必須適當地保護存取權。
-2. 可外掛成員服務，用來登錄及登記成員。`chain.setMemberServices()` 方法會置換 `MemberServices` 中的預設實作。成員服務會將 Hyperledger Fabric 實作為具有許可權的區塊鏈網路，以提供匿名、交易不可鏈結性及機密性。
+1. 可插拔键/值存储器，用于检索和存储与成员关联的键。`chain.setKeyValStore()` 方法覆盖基于文件的缺省键/值存储器实现。链键/值存储器用于存放敏感专用密钥，因此对此存储器的访问必须得到相应保护。
+2. 可插拔成员服务，用于注册并登记成员。`chain.setMemberServices()` 方法覆盖 `MemberServices` 中的缺省实现。成员服务将 Hyperledger Fabric 实现为经许可的区块链网络，这将提供匿名性、交易不可链接性和机密性。
 
-您可以使用離線方法或 npm 方法，以在 Node.js 應用程式中包含 HFC SDK：
-*  離線方法：先將檔案從 Hyperledger Fabric 來源樹狀結構 (https://github.com/hyperledger/fabric/tree/master/sdk/node/lib) 複製到 Node.js 應用程式 `/lib` 目錄。然後，新增下列程式碼 Snippet，以在應用程式中包含 HFC SDK：
+可以使用脱机方法或 npm 方法，在 Node.js 应用程序中包含 HFC SDK：
+*  脱机方法：首先将 Hyperledger Fabric 源树 (https://github.com/hyperledger/fabric/tree/v0.6/sdk/node/lib) 中的文件复制到 Node.js 应用程序 `/lib` 目录。然后，通过添加以下代码片段，在应用程序中包含 HFC SDK：
 
 ```js
 var hfc = require("./lib/hfc");
 ```
 
-* npm 方法：從指令行中，先使用下列 Snippet，從 npm 安裝 HFC SDK：
+* npm 方法：在命令行中，首先使用以下片段通过 npm 来安装 HFC SDK：
 
 ```
-npm install hfc@0.5.3 
+npm install hfc@0.6.5
 ```
 
-然後，使用下列程式碼 Snippet，在應用程式中包含 HFC SDK：
+然后，通过以下代码片段，在应用程序中包含 HFC SDK：
 
 ```js
 var hfc = require('hfc');
 ```  
 <br>
-## HFC 物件
+## HFC 对象
 {: #objects}
 
-高階說明下列 HFC 物件（類別及介面），以協助引導您瞭解物件階層：
+以下 HFC 对象（类和接口）在高级别进行了描述，以帮助指导您逐步了解对象层次结构：
 
-* 最上層類別是 `Chain`，即區塊鏈網路的用戶端呈現。HFC 可讓您與多個網路互動，以及視需要與多個 `Chain` 物件共用單一 `KeyValStore` 及 `MemberServices` 物件。對於每一個區塊鏈網路，您將會新增一個以上的 `Peer` 物件，這代表 HFC 所連接以提交交易的端點。
-* HFC 使用 `KeyValStore` 介面來儲存及擷取所有持續性資料。此資料包括必須保持安全的私密金鑰。預設實作是位於 `FileKeyValStore` 類別中的檔案型版本。
-* `MemberServices` 介面是透過 `MemberServicesImpl` 類別所實作，並提供安全及身分相關特性（例如隱私權、不可鏈結性及機密性）。此實作會發出 *eCerts*（成員登記憑證）及 *tCerts*（每一個成員的交易憑證）。
-* `Member` 類別代表在網路上進行交易的一般使用者，以及其他類型的成員，例如對等節點（peer，也就是節點、node）。使用與 `MemberServices` 物件互動的 `Member` 類別，以*登錄* 及*登記* 成員和使用者。您也可以與 `Peer` 物件進行交易，以直接從 'Member' 類別部署、查詢及呼叫鏈碼；此實作只是將工作委派給暫時性的 `TransactionContext` 物件。
-* `TransactionContext` 類別會實作大多數的 deploy、invoke 及 query 邏輯。每個 `TransactionContext` 實例會從 `MemberServices` 收到唯一 tCert，並且一律用它來提交交易。若要使用相同的 tCert 來發出多個交易，請直接從 Member 物件中擷取 `TransactionContext` 物件，以及發出多個 deploy、invoke 及 query 作業。不過，針對多個交易使用單一 tCert 時會鏈結交易，因此，可以將它們識別為牽涉同一個匿名使用者。若要避免交易鏈結，請在 `User` 或 `Member` 物件上呼叫 deploy、invoke 及 query。  
+* 顶级类为 `Chain`，这是区块链网络的客户机表示。HFC 允许您根据需要与多个网络进行交互，以及与多个 `Chain` 对象共享单个 `KeyValStore` 和 `MemberServices` 对象。对于每个区块链网络，您将添加一个或多个 `Peer` 对象，这些对象表示 HFC 为了提交交易而连接到的端点。
+* `KeyValStore` 接口由 HFC 用于存储和检索所有持久数据。这些数据包含专用密钥，因此必须始终保证安全。缺省实现是基于文件的版本，位于 `FileKeyValStore` 类中。
+* `MemberServices` 接口由 `MemberServicesImpl` 类实现，用于提供安全性以及与身份相关的功能，例如隐私性、不可链接性和机密性。此实现会发出 *eCert*（成员登记证书）和 *tCert*（每个成员的交易证书）。
+* `Member` 类表示在网络上执行交易的最终用户以及其他类型的成员，例如同级（节点）。使用 `Member` 类（该类与 `MemberServices` 对象进行交互）来*注册*并*登记*成员和用户。您还可以通过与 `Peer` 对象进行交易，直接从“Member”类部署、查询和调用链代码；此实现只是将工作委派给临时的 `TransactionContext` 对象。
+* `TransactionContext` 类实现了部署、调用和查询逻辑的大部分内容。每个 `TransactionContext` 实例都会收到来自 `MemberServices` 的唯一 tCert，该实例始终使用此 tCert 来提交交易。要使用同一 tCert 发出多个交易，请直接在 Member 对象中检索 `TransactionContext` 对象，然后发出多个 deploy、invoke 和 query 操作（即“部署”、“调用”和“查询”操作）。但是，将单个 tCert 用于多个交易会将这些交易链接在一起，从而使这些交易由于涉及同一匿名用户而易于识别。为了避免交易链接，请在 `User` 或 `Member` 对象上调用 deploy、invoke 和 query 操作。  
 
 <br>
-## 範例 Node.js 應用程式
+
+## 样本 Node.js 应用程序
 {: #nodesample}
 
-下列範例 Node.js 應用程式運用 HFC SDK API，以與 Bluemix 區塊鏈網路互動。此程式使用兩種區塊鏈網路方案（入門範本及 HSBN）運作，並且可以搭配任何用戶端作業系統。
+以下样本 Node.js 应用程序利用 HFC SDK API 以与 Bluemix 区块链网络进行交互。该程序针对两种区块链网络套餐（入门模板和 HSBN）以及任何客户机端操作系统均可正常运行。
 
-目標是使用 JavaScript 應用程式 ([helloblockchain.js](https://github.com/IBM-Blockchain/SDK-Demo/blob/master/helloblockchain.js)) 將鏈碼 ([chaincode_example02](https://github.com/IBM-Blockchain/SDK-Demo/blob/master/chaincode_example02.go)) 順利部署至 Bluemix 網路，後面接著呼叫及查詢。  
+目标是使用 JavaScript 应用程序 [helloblockchain.js](https://github.com/IBM-Blockchain/SDK-Demo/blob/master/helloblockchain.js) 将一段链代码 [chaincode_example02](https://github.com/IBM-Blockchain/SDK-Demo/blob/master/src/chaincode/chaincode_example02.go) 成功部署到 Bluemix 网络，随后执行调用和查询。  
 
-1. 此程式需要 Node.js 及 npm JavaScript 套件管理程式。安裝最新版本的 [Node.js](https://nodejs.org/en/) 將自動包括 npm。  
+1. 此程序需要 Node.js 和 npm JavaScript 包管理器。安装最新版本的 [Node.js](https://nodejs.org/en/) 时将自动包含 npm。  
 
-1. 開啟終端機並建立目錄 (workspace)，以在其中放置 helloblockchain.js 原始碼及 node 模組。例如：
+1. 打开终端，然后创建将放置此演示的源代码的目录（工作空间）。例如：
 
     ```
     mkdir -p $HOME/workspace
     ```
 
-1. 使用下列指令，以移至新建立的 workspace 資料夾，並安裝 HFC 0.5.3 版：
+1. 转至新创建的目录，并克隆 [SDK-Demo](https://github.com/IBM-Blockchain/SDK-Demo) 存储库。执行 `git clone` 命令之前，确保您为操作系统安装的 [Git](https://git-scm.com/downloads) 的版本正确：
 
      ```
      cd $HOME/workspace
-     npm install hfc@0.5.3
+     git clone https://github.com/IBM-Blockchain/SDK-Demo.git
+     ```
+ 如果网络运行的是 Hyperledger Fabric V0.5，请在克隆后检出 V0.5 分支：
+
+     ```
+     cd $HOME/workspace/SDK-Demo
+     git checkout v0.5
      ```
 
-1. 複製 [helloblockchain.js](https://github.com/IBM-Blockchain/SDK-Demo/blob/master/helloblockchain.js) 程式，並將其儲存至 workspace 資料夾。
-   `/workspace` 目錄應該會與下面的擷取畫面類似：
+1. 现在，需要利用区块链实例中的服务凭证。
 
-   ![Node 工作區](images/nodeworkspace.PNG "Node 工作區")
+1. 如果尚未这样做，请访问 Bluemix 中的[区块链](https://console.ng.bluemix.net/catalog/services/blockchain/)磁贴，然后创建该服务的实例。选择**入门模板开发者**套餐或**高安全性业务网络**套餐。一旦组织网络后，即可单击**创建**按钮。这将打开“服务仪表板”。单击页面靠上部分的**服务凭证**选项卡，以访问网络的同级和用户登记数据。**注**：对于 HSBN 网络，可能不会自动生成“服务凭证”。请单击**新建凭证**按钮，这将打开新窗口。然后，单击窗口底部的**添加**。这将填充包含“服务凭证”的 JSON 有效内容。
 
-1. 如果您尚未這麼做，請存取 Bluemix 中的 [Blockchain](https://console.ng.bluemix.net/catalog/services/blockchain/) 磚，以及建立該服務的實例。選取**入門範本開發人員**方案或**高安全性商業網路**方案（核准時為 ![](images/green_dot.png)）。按一下**建立**按鈕，然後複製並貼上 JSON 檔案以取得**服務認證**；將它儲存為本端 '/workspace' 目錄中的 ServiceCredentials.json。請確定複製整個 JSON 有效負載；在標準編輯器中，它應該是 202 行。**附註**：針對 Bluemix [新主控台](https://new-console.ng.bluemix.net/#overview)格式執行區塊鏈實例時，您會在**服務認證**輸出中注意到差異。即，物件中已移除 "credentials" 行。若要修正此問題，請將下列 Snippet 新增至 ServiceCredentials.json 檔案的第 2 行：
+1. 使用新凭证更新克隆 SDK-Demo 存储库时收到的 ServiceCredentials.json 文件。
 
-	```
-	"credentials": {
-	```
+1. 程序运行时，HFC SDK 会在 $HOME/workspace/SDK-Demo 内创建 `keyValStore-<network-id>` 目录。此 `keyValStore-<network-id>` 目录包含每个已登记用户的密钥。连接到新的 Bluemix 网络时，无需删除 `keyValStore` 目录，系统将会为每个 Bluemix 实例创建唯一的 `keyValStore-<network-id>` 目录。在删除或重置网络之前，**请勿**删除此加密资料。没有此数据，客户机将无法与 Bluemix CA 服务器进行通信，并且登记将失败。
 
-1. 然後，將最後一個右 `}` 新增至第 202 行以關閉物件。ServiceCredentials.json 的佈置應該會鏡映範例 [ServiceCredentials.json](https://github.com/IBM-Blockchain/SDK-Demo/blob/master/ServiceCredentials.json) 的佈置，讓您具有 202 行的有效負載。如果您從衍生自 Bluemix [典型主控台](https://console.ng.bluemix.net/)格式的區塊鏈實例取得認證，則不需要擔心這項分歧。下面的擷取畫面說明兩種佈置的差異，其中，第一個顯示*新主控台*，後者則顯示*典型*：
-
-     ![服務認證新主控台](images/servicecreds1.png "服務認證新主控台")
-
-     ![服務認證](images/servicecreds.png "服務認證")
-
-1. 新增 ServiceCredentials.json 時，`/workspace` 目錄應該會與下列擷取畫面類似：
-
-     ![Node 工作區 2](images/nodeworkspace2.PNG "Node 工作區 2")
-
-1. 程式執行時，HFC SDK 會在 $HOME/workspace 內建立 `keyValStore` 目錄。此 `keyValStore` 目錄包含每一個已登記使用者的加密金鑰。連接至新 Bluemix 網路時，您不需要刪除 `keyValStore` 目錄，而是會針對每個 Bluemix 實例建立唯一的 `keyValStore` 目錄。  
-
-1. 在 $GOPATH 下建立鏈碼目錄，如下所示。如果您尚未在機器上設定 $GOPATH，請遵循[這裡](https://github.com/golang/go/wiki/GOPGATH)的指示。
+1. 从 SDK-Demo 文件夹中，运行 node 程序：
 
 	```
-	mkdir -p $GOPATH/src/chaincode_example02
+	node helloblockchain.js
+	```
+	启用调试日志：
+```
+	DEBUG=hfc node helloblockchain.js
 	```
 
-1. 將 [chaincode_example02.go](https://github.com/IBM-Blockchain/SDK-Demo/blob/master/chaincode_example02.go) 複製到這個新目錄：`$GOPATH/src/chaincode_example02`。這是執行程式後將部署至 Bluemix 網路的實際鏈碼。  
-
-1. 擷取 [vendor.zip](https://github.com/IBM-Blockchain/SDK-Demo/blob/master/vendor.zip)，並將它儲存至相同的目錄：`$GOPATH/src/chaincode_example02`。vendor.zip 套件包含 Hyperledger Fabric 0.5 版程式碼庫中的程式庫及相依關係。預設 Windows 擷取會建立與下面類似的路徑：**C:\GOPATH\src\chaincode_example02\vendor**。擷取之前，您必須從此路徑中刪除 `\vendor` 目錄，否則鏈碼部署將失敗。Windows 上的正確路徑會與下面類似：**C:\GOPATH\src\chaincode_example02\vendor\github.com\hyperledger\fabric**（附註：一個 `\vendor` 目錄是正確的）。Linux 或 OS X 上不會發生有第二個 `\vendor` 目錄的不穩定性。
-
-1. 您現在於 $GOPATH 內應該會有與下列範例類似的目錄：
-
-    ![Node $GOPATH](images/nodegopath.PNG "Node $GOPATH")
-
-1. 從本端 '/workspace' 目錄中，執行 node 程式：
-
+	启用 gRPC 跟踪：
 	```
-	node helloblockchain.js -c chaincode_example02
-	```
-	啟用除錯日誌：
-	```
-	DEBUG=hfc node helloblockchain.js -c chaincode_example02
+	GRPC_TRACE=all DEBUG=hfc node helloblockchain.js
 	```
 
-	啟用 gRPC 追蹤：
-	```
-	GRPC_TRACE=all DEBUG=hfc node helloblockchain.js -c chaincode_example02
-	```
-
-如果 `deploy`、`invoke` 及 `query` 交易成功，您將會在終端機中看到下列訊息：
+如果 `deploy`、`invoke` 和 `query` 交易成功，您将在终端中看到以下消息：
 
 ```
 Successfully deployed chaincode: request={"fcn":"init","args":["a","100","b","200"],"certificatePath":"/certs/blockchain-cert.pem","chaincodePath":"github.com/chaincode_example02/"}, response={"uuid":"2d6ad8d6-1390-4c60-a01b-f4c301175eb7","chaincodeID":"9be0a0ed3f1788e8728c8911c747d2f6d0e205fa63422dc598d498fe709b9b8d","result":"TODO: get actual results; waited 120 seconds and assumed deploy was successful"}
@@ -146,46 +124,53 @@ Successfully completed chaincode invoke transaction: request={"chaincodeID":"9be
 Successfully queried  chaincode function: request={"chaincodeID":"9be0a0ed3f1788e8728c8911c747d2f6d0e205fa63422dc598d498fe709b9b8d","fcn":"query","args":["a"]}, value=99
 ```
 
-請注意，在「入門範本開發人員」網路上執行時，有時最多可能需要十分鐘的時間，才能讓鏈碼容器啟動。不過，啟動之後，後續部署及呼叫將立即執行，因為必要檔案已經儲存在區塊鏈實例的主機上。  
+**注**：链代码源代码保存在 SDK-Demo 存储库中的 **src/chaincode** 文件夹下。此文件夹**还**包含 **/vendor** 文件夹，其中含有 Hyperledger Fabric 代码库中的库和依赖项。如果将当前链代码文件 chaincode_example02.go 替换为自己的链代码，请确保保留 **/vendor** 文件夹。这些依赖项对于同级成功编译链代码并创建容器是必需的。此外，如果您具有任何从属库，请确保将其添加到 **/vendor** 文件夹下。
 
-從**網路主控台**中，導覽至 **Blockchain** 標籤。此視圖會顯示正在將區塊附加至區塊鏈分類帳，因為 helloblockchain.js 程式發出 deploy 及 invoke 交易。下列擷取畫面顯示 helloblockchain.js 使用預設引數 "a" 及 "b" 執行兩次的結果：
+请注意，在“入门模板开发者”网络上运行时，有时可能需要更长的时间才能成功部署并启动链代码容器。但是，一旦启动后，后续部署和调用将立即执行，因为必备文件已存储在区块链实例的主机上。  
 
-   ![Node 工作區 3](images/nodeworkspace3.PNG "Node 工作區 3")  
+浏览到**网络控制台**中的**区块链**选项卡。此视图显示 helloblockchain.js 程序发出 deploy 和 invoke 交易时，要附加到区块链分类帐的区块。以下屏幕快照显示的是运行 helloblockchain.js 两次（使用“a”和“b”的缺省自变量）的结果：
+
+   ![节点工作空间 3](images/nodeworkspace3.PNG "节点工作空间 3")  
 
 <br>
-## 疑難排解
-從 **/workspace** 目錄發出下列一個指令，確保您是執行 **hfc@0.5.3**：
-  * npm list | grep hfc
-  * npm list -g | grep hfc（如果已使用廣域 `-g` 旗標安裝的話）
 
-如果您收到查詢訊息，請使用下列程序：
+## 故障诊断
+通过从 **/workspace** 目录发出以下任一命令，确保运行的是 **hfc@0.5.4** 或 **hfc@0.6.5**：
+  * npm list | grep hfc
+  * npm list -g | grep hfc（如果是使用全局 `-g` 标志安装的）
+
+使用 V0.5 分支的网络将需要更早的 hfc 版本 - 0.5.4
+
+如果收到查询消息，请使用以下过程：
 
   ```
 Failed to query chaincode, function: request={"chaincodeID":"9be0a0ed3f1788e8728c8911c747d2f6d0e205fa63422dc598d498fe709b9b8d","fcn":"query","args":["a"]}, error={"error":{"status":"FAILURE","msg":{"type":"Buffer","data":[69,114,114,111,114,58,70,97,105,108,101,100,32,116,111,32,108,97,117,110,99,104,32,99,104,97,105,110,99,111,100,101,32,115,112,101,99,40,112,114,101,109,97,116,117,114,101,32,101,120,101,99,117,116,105,111,110,32,45,32,99,104,97,105,110,99,111,100,101,32,40,57,98,101,48,97,48,101,100,51,102,49,55,56,56,101,56,55,50,56,99,56,57,49,49,99,55,52,55,100,50,102,54,100,48,101,50,48,53,102,97,54,51,52,50,50,100,99,53,57,56,100,52,57,56,102,101,55,48,57,98,57,98,56,100,41,32,105,115,32,98,101,105,110,103,32,108,97,117,110,99,104,101,100,41]}},"msg":"Error:Failed to launch chaincode spec(premature execution - chaincode (9be0a0ed3f1788e8728c8911c747d2f6d0e205fa63422dc598d498fe709b9b8d) is being launched)"}
   ```
 
-在 Node.js 應用程式中，增加部署等待時間。預設值設為 60 秒，但可能需要較長的時間，才能適當地部署程式碼、編譯程式碼，以及開始在 Docker 容器中執行。請嘗試將部署等待時間增加為 120 秒。因為在管理區塊鏈實例的機器上共用運算資源，所以這項特性只會在「入門範本開發人員」方案上觀察到：
+在 Node.js 应用程序中增大部署等待时间。缺省值设置为 60 秒，但代码在 Docker 容器中正确部署、编译和开始运行可能需要更长时间。请尝试将部署等待时间增大到 120 秒。仅在“入门模板开发者”套餐上会观察到此特点，因为托管区块链实例的机器上使用的是共享计算资源：
 
   ```js
 chain.setDeployWaitTime(120);
   ```
 
-在網路上順利部署鏈碼之後，即可將部署等待時間減少為額定量（例如幾秒鐘）。
+一旦链代码成功部署在网络上，即可将部署等待时间减小到正常时间长度，例如若干秒。
 
-如果您收到信號交換錯誤，請嘗試不同的 `grpc` 版本。您可以使用下列任一指令來存取 grpc 版本：
+如果收到握手错误，请尝试其他 `grpc` 版本。可以通过以下任一命令访问您的 grpc 版本：
     - `npm list | grep grpc`
     - `npm list -g | grep grpc`  
 
+
+
 <br>
-## 公開和私密金鑰
+## 公用密钥和专用密钥
 {: #keys}
 
-Hyperledger Fabric 使用憑證管理中心及其基礎公開和私密金鑰，以符合透過共用區塊鏈營運之企業的安全需求。成員身分管理、角色管理及交易隱私全都可以透過 HFC SDK 控制。
+Hyperledger Fabric 使用认证中心及其底层公用密钥和专用密钥来满足共享区块链上运行的业务的安全需求。成员身份管理、角色管理和交易性隐私全部可以通过 HFC SDK 进行控制。
 
-共用區塊鏈上的使用者及交易隱私是透過實作 PKI（公開金鑰基礎架構）架構來進行管理。PKI 透過憑證管理中心管理金鑰及數位憑證的產生、配送及撤銷。Hyperledger Fabric 0.5 版[通訊協定規格](https://github.com/hyperledger/fabric/blob/master/docs/protocol-spec.md)的安全小節中說明 PKI 及「成員資格服務」的完整技術規格。Hyperledger Fabric PKI 的基本宗旨說明如下：
+共享区块链上的用户和交易性隐私是通过实现 PKI（公用密钥基础架构）框架进行管理的。PKI 通过认证中心来管理密钥和数字证书的生成、分发和撤销。PKI 和成员资格服务的完整技术规范在 Hyperledger Fabric V0.6 [协议规范](http://hyperledger-fabric.readthedocs.io/en/v0.6/protocol-spec/)的“安全性”部分中进行了描述。下面说明了 Hyperledger Fabric PKI 的基本原则：
 
-1. 「登錄管理中心 (RA)」會驗證要求存取區塊鏈網路的使用者的身分。這可以透過具有 `registrar` 權限的使用者動態完成，或透過編輯 membersrvc.yaml 檔案手動完成。登錄程序是在頻外發生，並透過 `RegisterUser` 函數執行。RA 會將登記認證（`<enrollID>` 及 `<enrollPWD>`）指派給使用者。
+1. 注册中心 (RA) 对请求访问区块链网络的用户的身份进行验证。这可以由具有 `registrar` 权限的用户以动态方式执行，也可以通过编辑 membersrvc.yaml 文件来手动执行。注册过程在频带外通过 `RegisterUser` 函数执行。RA 会将登记凭证 `<enrollID>` 和 `<enrollPWD>` 分配给用户。
 
-2. 使用者接著會使用 `CreateCertificatePair` 函數，將登記要求傳送給「登記憑證管理中心 (ECA)」。此有效負載包含使用者的一次性 `<enrollPWD>`、「公開簽章驗證金鑰」及「公開加密金鑰」，並且透過使用者的「私密簽章驗證金鑰」進行簽署。<br><br>收到登記要求時，ECA 會發出已加密的盤查給使用者，這項盤查只能利用使用者的「私密加密金鑰」進行解密。解密盤查之後，使用者就可以重新傳送憑證要求。ECA（視正確解密的回應而定）會傳回使用其數位簽章簽署的已鑑別憑證配對。<br><br>數位簽章的產生方式是使用 SHA-2 演算法加密雜湊憑證要求（訊息）來產生「摘要」。此「訊息摘要」接著會使用 ECA 的私密簽章金鑰進行加密。網路成員接著可以使用 ECA 的公開簽章金鑰將數位簽章解密，以進行鑑別。傳回的登記憑證 (eCert) 配對包含一個憑證進行資料簽署（私密）以及一個憑證進行資料加密（公開）。此 eCert 配對是靜態且長期的，而且可讓交易看到或看不到。
+2. 接着，该用户使用 `CreateCertificatePair` 函数向登记认证中心 (ECA) 发送登记请求。此有效内容包含用户的一次性 `<enrollPWD>`、公用签名验证密钥和公用加密密钥，并且是使用用户的专用签名验证密钥进行签名的。<br><br>收到登记请求时，ECA 会向用户发出加密的质询，此质询只能使用该用户的专用加密密钥进行解密。对质询解密后，用户会重新发送证书请求。ECA 在响应得到准确解密的情况下，返回使用其数字签名进行签名的已认证证书对。<br><br>数字签名是通过使用 SHA-2 算法生成“摘要”，以加密方式对证书请求（消息）进行散列而生成的。随后，将使用 ECA 的专用签名密钥对此“消息摘要”加密。网络成员接着可以通过使用 ECA 的公用签名密钥对数字签名解密来认证该数字签名。返回的登记证书 (eCert) 对包含一个用于数据签名的证书（专用）和一个用于数据加密的证书（公用）。此 eCert 对是静态的长期证书，可以对交易可视或不可视。
 
-3. 若要在任何區塊鏈網路上進行交易，每一位使用者也必須具有交易憑證 (tCert)。成功登記時，使用者會提交要求給「交易憑證管理中心 (TCA)」以取得一批 tCert。tCert 是短期且某個交易特有的，用戶端可以使用 API 進行修改。驗證使用者的 eCert 之後，TCA 會指派一批 tCert 以及一個 KeyDF_Key（金鑰衍生功能金鑰），以容許使用者將其私密金鑰解密。雖然單一 KeyDF_Key 用於批次中的每個 tCert，但後續產生的私密金鑰則是每個 tCert 所獨有。若要進行交易，用戶端必須可以使用已解密的私密金鑰來簽署交易有效負載。如此才會將交易轉遞給網路驗證對等節點以取得共識。
+3. 要在任何区块链网络上进行交易，每个用户还必须具有交易证书 (tCert)。成功登记后，用户将向交易认证中心 (TCA) 提交请求以获取批量 tCert。tCert 是特定于一个交易的短期证书，可以由客户机使用 API 进行修改。验证用户的 eCert 后，TCA 会分配批量 tCert 和 KeyDF_Key（密钥派生函数密钥），以允许用户对其专用密钥解密。单个 KeyDF_Key 用于批次中的每个 tCert 时，生成的后续专用密钥对于每个 tCert 是唯一的。要进行交易，客户机必须能够使用解密的专用密钥对交易有效内容进行签名。只有这时，交易才会转发到网络验证同级以便达成共识。

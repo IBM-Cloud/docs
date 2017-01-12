@@ -1,12 +1,13 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2015, 2016
 
- 
+lastupdated: "2016-02-24"
+
 
 ---
 
@@ -21,7 +22,7 @@ copyright:
 {: .last-updated}
 
 
-您可以利用 {{site.data.keyword.autoscaling}} CLI for {{site.data.keyword.Bluemix_notm}} 來配置 {{site.data.keyword.autoscaling}} 服務。{{site.data.keyword.autoscaling}} CLI 支援 Linux64、Win64 及 OSX，並提供類似於自動擴充 RESTful API 所提供的功能。
+您可以利用 {{site.data.keyword.autoscaling}} CLI for {{site.data.keyword.Bluemix_notm}} 來配置 {{site.data.keyword.autoscaling}} 服務。{{site.data.keyword.autoscaling}} CLI 支援 Linux64、Win64 及 OSX，並提供類似於 Auto-Scaling RESTful API 所提供的功能。
 {: shortdesc}
 
 開始之前，請先安裝 {{site.data.keyword.Bluemix_notm}} CLI。如需指示，請參閱[下載 {{site.data.keyword.Bluemix_notm}} CLI](http://plugins.ng.bluemix.net/ui/home.html){: new_window}。
@@ -145,8 +146,6 @@ bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<en
 {: rellinks}
 ## 一般
 {: general}
-* [{{site.data.keyword.autoscaling}} 服務](../../../services/Auto-Scaling/index.html)
+* [{{site.data.keyword.autoscaling}} 服務](/docs/services/Auto-Scaling/index.html)
 * [{{site.data.keyword.Bluemix_notm}} CLI](http://plugins.ng.bluemix.net/ui/home.html){: new_window}
 * [W3C 日期和時間格式標準](https://www.w3.org/TR/NOTE-datetime){: new_window}
-
-

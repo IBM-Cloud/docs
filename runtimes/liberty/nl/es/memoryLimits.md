@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-06-10"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # Límites de memoria y el paquete de compilación de Liberty
 {: #memory_limits}
-
-Última actualización: 10 de junio de 2016
-{: .last-updated}
 
 Se debe especificar un límite de memoria cuando se despliega una aplicación con el paquete de compilación de Liberty.
 

@@ -12,7 +12,7 @@ lastupdated: "2016-10-19"
 Vous pouvez utiliser chacun des services {{site.data.keyword.Bluemix}} Mobile indépendamment. Il vous est aussi possible de les utiliser ensemble, avec le conteneur boilerplate {{site.data.keyword.mobilefirstbp}} Starter, pour en tirer le meilleur
 profit.
 
-Pour commencer, utilisez {{site.data.keyword.mobilefirstbp}} Starter afin de créer votre application. Le conteneur boilerplate vous permet de réaliser les actions suivantes : 
+Pour commencer, utilisez {{site.data.keyword.mobilefirstbp}} Starter afin de créer votre application. Le conteneur boilerplate vous permet de réaliser les actions suivantes :
 
 * Création d'un contexte d'exécution Node.js avec un modèle d'application. Vous pouvez utiliser cette application pour fournir des fonctions côté serveur,
 comme des API RESTful et des fichiers statiques.<!-- You can read more about operating this application in the Developing Mobile Backend section.-->

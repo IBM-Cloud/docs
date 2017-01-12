@@ -1,12 +1,13 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2015，2016
 
- 
+lastupdated: "2016-02-24"
+
 
 ---
 
@@ -31,7 +32,8 @@ Antes de iniciar, instale o {{site.data.keyword.Bluemix_notm}} CLI. Consulte [CL
 
 Após o {{site.data.keyword.Bluemix_notm}} CLI ser instalado, é possível incluir o plug-in {{site.data.keyword.autoscaling}} CLI.
 
-Conclua as etapas a seguir para incluir o repositório e instalar o plug-in:
+Conclua as etapas a seguir para incluir o repositório e instalar
+o plug-in:
 1. Para incluir o repositório do plug-in {{site.data.keyword.Bluemix_notm}} CLI, execute o comando a seguir:
 ```
 bluemix plugin repo-add bluemix-plugin-repo https://plugins.ng.bluemix.net
@@ -43,7 +45,7 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 
 ## Anexando uma política de ajuste automático de escala
 
-É possível anexar uma política de ajuste automático de escala a um app específico. Execute o seguinte comando:
+É possível anexar uma política de ajuste automático de escala a um app específico. Execute o comando a seguir:
 
 ```
 bx as policy-attach <APP_NAME> -p <policy_file>
@@ -70,7 +72,7 @@ bx as policy-create
 
 ## Exibindo uma política de ajuste automático de escala
 
-É possível mostrar a política de ajuste automático de escala de um app. O conteúdo da política é impresso na linha de comandos diretamente. Execute o seguinte comando:
+É possível mostrar a política de ajuste automático de escala de um app. O conteúdo da política é impresso diretamente na linha de comandos. Execute o seguinte comando:
 
 ```
 bx as policy-show <APP_NAME> [--json]
@@ -87,7 +89,7 @@ bx as policy-show <APP_NAME> [--json]
 
 ## Removendo uma política de ajuste automático de escala
 
-É possível remover uma política de ajuste automático de escala de um app. Execute o seguinte comando:
+É possível remover uma política de ajuste automático de escala de um app. Execute o comando a seguir:
 
 ```
 bx as policy-detach <APP_NAME>
@@ -102,7 +104,7 @@ bx as policy-detach <APP_NAME>
 
 ## Ativando ou desativando uma política de ajuste automático de escala
 
-É possível ativar ou desativar a política de ajuste automático de escala de um app específico. Execute o seguinte comando:
+É possível ativar ou desativar a política de ajuste automático de escala de um app específico. Execute o comando a seguir:
 
 ```
 bx as policy-enable|policy-disable <APP_NAME>
@@ -128,9 +130,9 @@ bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<en
 <dt class="pt dlterm">&lt;APP_NAME&gt;</dt>
 <dd class="pd">O nome do app para o qual você deseja mostrar o histórico da política de ajuste automático de escala.
 <dt class="pt dlterm">&lt;start_timestamp&gt;</dt>
-<dd class="pd">O registro de data e hora do início do intervalo de histórico. Os formatos suportados são `yyyy-MM-ddTHH:mm:ss+/-hhmm, yyyy-MM-ddTHH:mm:ssZ`. Por padrão, o registro de data e hora está configurado para 50 horas à frente do horário atual. Veja o <a href="https://www.w3.org/TR/NOTE-datetime" target="_blank">Padrão de formatos de data e hora do W3C</a> para obter detalhes sobre o formato do registro de data e hora. 
+<dd class="pd">O registro de data e hora do início do intervalo de histórico. Os formatos suportados são `yyyy-MM-ddTHH:mm:ss+/-hhmm, yyyy-MM-ddTHH:mm:ssZ`. Por padrão, o registro de data e hora está configurado para 50 horas à frente do horário atual. Veja o <a href="https://www.w3.org/TR/NOTE-datetime" target="_blank">Padrão de formatos de data e hora do W3C</a> para obter detalhes sobre o formato do registro de data e hora.
 <dt class="pt dlterm">&lt;end_timestamp&gt;</dt>
-<dd class="pd">O registro de data e hora do término do intervalo de histórico. Os formatos suportados são `yyyy-MM-ddTHH:mm:ss+/-hhmm, yyyy-MM-ddTHH:mm:ssZ`. Por padrão, o registro de data e hora está configurado para o horário atual. Veja o <a href="https://www.w3.org/TR/NOTE-datetime" target="_blank">Padrão de formatos de data e hora do W3C</a> para obter detalhes sobre o formato do registro de data e hora. 
+<dd class="pd">O registro de data e hora do término do intervalo de histórico. Os formatos suportados são `yyyy-MM-ddTHH:mm:ss+/-hhmm, yyyy-MM-ddTHH:mm:ssZ`. Por padrão, o registro de data e hora está configurado para o horário atual. Veja o <a href="https://www.w3.org/TR/NOTE-datetime" target="_blank">Padrão de formatos de data e hora do W3C</a> para obter detalhes sobre o formato do registro de data e hora.
 </dl>
 
 
@@ -141,8 +143,6 @@ bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<en
 {: rellinks}
 ## gerais
 {: general}
-* [{{site.data.keyword.autoscaling}} serviço](../../../services/Auto-Scaling/index.html)
+* [{{site.data.keyword.autoscaling}} serviço](/docs/services/Auto-Scaling/index.html)
 * [{{site.data.keyword.Bluemix_notm}} CLI](http://plugins.ng.bluemix.net/ui/home.html){: new_window}
 * [Padrão de formatos de data e hora do W3C](https://www.w3.org/TR/NOTE-datetime){: new_window}
-
-

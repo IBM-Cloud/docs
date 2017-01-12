@@ -63,7 +63,7 @@ Führen Sie die folgenden Schritte aus, um ein Projekt mit einem Benutzerschnitt
 		
 		Ein Element, das in der Baumstruktur als *Formular* angegeben ist, ist unabhängig und kann integriert geändert werden. Es referenziert keine Informationen aus einer Datenquelle.
 	
-	5. Wählen Sie in der Navigation die Option **Daten** aus, um die von der App verwendeten Daten anzuzeigen. Die Vorlage enthält Standardinformationen; Sie können die Quelle der Daten jedoch ändern, indem Sie **Neue erstellen** auswählen. Da Sie mehr als eine Datenquelle referenzieren können, geben Sie für jede Datenquelle, die Sie verwenden, einen Namen an. Sie können aus den folgenden Optionen für Datenquellen auswählen:
+	5. Wählen Sie in der Navigation die Option **Daten** aus, um die von der App verwendeten Daten anzuzeigen. Die Vorlage enthält Standardinformationen. Sie können die Quelle der Daten jedoch ändern, indem Sie **Neue erstellen** auswählen. Da Sie mehr als eine Datenquelle referenzieren können, geben Sie für jede Datenquelle, die Sie verwenden, einen Namen an. Sie können aus den folgenden Optionen für Datenquellen auswählen:
 		* Cloud
 		* Local
 		* Cloudant
@@ -83,7 +83,7 @@ Führen Sie die folgenden Schritte aus, um ein Projekt mit einem Benutzerschnitt
 		
 	8. Wenn Sie den Switch umgeschaltet haben, um Ihrem Projekt in der Anzeige *Einstellungen* IBM MobileFirst Platform Foundation hinzuzufügen, wird in der Navigation die Auswahl **Foundation** angezeigt. Wählen Sie **Foundation** aus und füllen Sie die für IBM MobileFirst Platform Foundation spezifischen erforderlichen Informationen aus.
 	
-	9. Wählen Sie im Navigationsmenü die Option **Veröffentlichen** aus, um die endgültigen Informationen für die Erstellung Ihrer mobilen App einzugeben. Sie können Ihre Bundle-ID für iOS und die Anwendungs-ID für Android eingeben.
+	9. Wählen Sie im Navigationsmenü die Option **Veröffentlichen** aus, um die endgültigen für die Erstellung Ihrer mobilen App erforderlichen Informationen einzugeben. Sie können Ihre Bundle-ID für iOS und die Anwendungs-ID für Android eingeben.
 	
 	Wenn Sie eine iOS-App erstellen, müssen Sie Ihre Bundle-ID, Ihr Verteilungszertifikat in Form einer *.p12*-Datei und Ihr Bereitstellungsprofil in Form einer *.mobileprovision*-Datei aus dem Apple-Bereitstellungsportal abrufen. Diese drei sollten zum selben Zeitpunkt und mit demselben Computer erstellt werden, der auch zum Posten Ihrer App im Apple-Store verwendet werden soll. Das Verteilungszertifikat und das Bereitstellungsprofil müssen auf der Bundle-ID basieren. 	
 

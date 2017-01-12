@@ -1,12 +1,14 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2015，2016
 
- 
+lastupdated: "2016-05-12"
+
+
 
 ---
 
@@ -17,15 +19,12 @@ copyright:
 # (Descontinuada) CLI do Modo de desenvolvimento
 {: #devmodecli}
 
-*Última atualização: 23 de junho de 2016*
-{: .last-updated}
-
 **Esta CLI foi descontinuada:** em vez de usar a CLI de Modo de desenvolvimento (dev_mode), use IBM Eclipse Tools for Bluemix ou DevOps Web IDE. É possível continuar a usar a CLI dev_mode até 30 de junho de 2016.
 
 Com a interface da linha de comandos do modo de desenvolvimento do Bluemix (CLI dev_mode), é possível atualizar seus apps enquanto eles estão sendo executados na nuvem. A CLI dev_mode é construída como um plug-in de CLI cf
 e suporta ambos os apps Liberty e IBM Node.js.
 {: shortdesc}
- 
+
 
 É possível executar as tarefas a seguir com a CLI dev_mode:
 - Alternação entre modo dev e modo normal de seu app.
@@ -35,35 +34,34 @@ e suporta ambos os apps Liberty e IBM Node.js.
 ## Instalando o plug-in dev_mode
 **Pré-requisito:** Antes de iniciar, instale a CLI do Cloud Foundry. Consulte
 [Começar a codificar com a interface de linha de comandos do Cloud Foundry](https://github.com/cloudfoundry/cli) para obter
-detalhes. 
+detalhes.
 
 
 Use um dos métodos a seguir para instalar a ferramenta de linha de comandos dev_mode:
 - Instalar localmente.
   1. Faça o download do plug-in dev_mode para sua plataforma a partir do [Repositório de
 Plug-ins de CLI do IBM Bluemix](http://plugins.ng.bluemix.net).
-  2. Acesse a pasta em que o plug-in dev_mode está salvo e instale o plug-in dev_mode usando o comando cf install-plugin. Por
-exemplo: 
-  
+  2. Acesse a pasta em que o plug-in dev_mode está salvo e instale o plug-in dev_mode usando o comando cf install-plugin. Por exemplo:
+
         ```
         cf install-plugin dev_mode-linux64
         ```
 
 - Instale a partir do repositório da CLI do Bluemix.
   1. Inclua o repositório bluemix-repo nos repositórios de CLI do Cloud Foundry usando o comando a seguir:
-  
+
         ```
         cf add-plugin-repo bluemix-repo http://plugins.ng.bluemix.net
         ```
 
   2. Digite cf repo-plugins. O plug-in dev_mode aparecerá no repositório bluemix-repo.
-		
+
 		```
         cf repo-plugins
         ```
-  
+
   3. Instale o plug-in dev_mode nos plug-ins de CLI do Cloud Foundry usando o comando a seguir:
-  
+
         ```
         cf install-plugin dev_mode -r bluemix-repo
         ```
@@ -81,26 +79,26 @@ cf plugins
 
 Use o índice na tabela a seguir para referir-se aos comandos da CLI dev_mode usados frequentemente:
 
-<table summary="índice de comandos do dev_mode"> 
+<table summary="índice de comandos do dev_mode">
  <thead>
  <th colspan="4">Comandos do dev_mode</th>
  </thead>
- <tbody> 
- <tr> 
- <td>[help](#help)</td> 
- <td>[mode](#mode)</td> 
+ <tbody>
+ <tr>
+ <td>[help](#help)</td>
+ <td>[mode](#mode)</td>
  <td>[status](#status)</td>
  <td>[update-file](#update_file)</td>
- </tr> 
- <tr> 
+ </tr>
+ <tr>
  <td>[delete-file](#delete_file)</td>
  <td>[start-inplace](#start_inplace)</td>
  <td>[stop-inplace](#stop_inplace)</td>
  <td>[restart-inplace](#restart_inplace)</td>
  </tr>
-  </tbody> 
- </table> 
-*Tabela 1. Comandos do dev_mode*
+  </tbody>
+ </table>
+{: caption="Table 1. dev_mode commands" caption-side="top"}
 
 
 
@@ -162,7 +160,7 @@ cf update-file <remotePath> <localPath> [command_options]
    </dl>
 
 
-  
+
 ## delete-file
 {: #delete_file}
 
@@ -218,5 +216,3 @@ cf restart-inplace <appName>
 {: #general}
 * [CLI do Modo de desenvolvimento](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){:new_window}
 * [DevOps Web IDE](https://hub.jazz.net/docs/deploy/){:new_window}
-
-

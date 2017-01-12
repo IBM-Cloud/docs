@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-12-07"
 ---
 
 
@@ -11,27 +11,83 @@ copyright:
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#部署應用程式
+# 部署應用程式
 {: #deployingapps}
-
-*前次更新：2016 年 7 月 28 日*
-{: .last-updated}
 
 若要將應用程式部署至 {{site.data.keyword.Bluemix}}，您可以使用各種方式，例如，指令行介面及整合開發環境 (IDE)。還可以使用應用程式資訊清單來部署應用程式。使用應用程式資訊清單，可讓您減少每次將應用程式部署至 {{site.data.keyword.Bluemix_notm}} 時，所必須指定的部署詳細資料數量。
 {:shortdesc}
 
-##應用程式部署
+## 應用程式部署
 {: #appdeploy}
 
 將應用程式部署至 {{site.data.keyword.Bluemix_notm}} 包含兩個階段：編譯打包應用程式及啟動應用程式。
 
-###編譯打包應用程式
+Cloud Foundry 現在支援 Diego，其為新的運行環境架構。Diego 支援數個容器技術，包括 Garden、Docker 及 Windows 容器。Cloud Foundry 未來的加強功能及修正程式將直接移至 Diego，而 DEA 中將不支援。
 
+### 使用 Diego 編譯打包應用程式
+所有 Diego 元件的設計旨在叢集化，表示您可以輕鬆地建立不同的可用性區域。所有 Diego 元件之間的安全通訊均使用 TLS。
+
+在編譯打包階段期間，Diego 會處理所有與容器編排相關的層面。配送應用程式實例是使用 Diego Brain 來執行，而「雲端控制器」只會編譯打包應用程式。Diego Brain 會將應用程式配置為可透過 SSH 存取容器的 Cell。
+
+為了驗證應用程式性能，Diego 支援用於 DEA 的相同 PORT 型檢查。但是，其設計將能夠具有更多的一般選項，如 URL 型性能檢查，在未來應該會啟用此選項。
+
+若要在 Diego 中編譯打包應用程式，首先您必須同時安裝 cf CLI 及 [Diego-Enabler CLI 外掛程式](https://github.com/cloudfoundry-incubator/Diego-Enabler){:new_window}。只有在移轉期間才需要這樣做。
+
+#### 已知問題
+ 使用 Diego 時有下列已知問題：
+  * 使用 `--no-route` 選項部署的工作者應用程式不會報告為健全。若要防止此問題，請使用 `cf set-health-check APP_NAME none` 指令，停用埠型性能檢查。
+  * Diego 不會使用 VCAP_APP_HOST 環境變數。如果您的程式碼參照此變數，請將它取代為 0.0.0.0。
+  * Diego 不會使用 VCAP_APP_PORT 環境變數。如果您的程式碼參照此變數，請將它取代為 PORT，預設會設為 8080。
+  * 不再支援 **cf files** 指令。**cf ssh** 指令將取而代之。如需 **cf ssh** 指令的詳細資料，請參閱 [cf ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh)。
+  * 部分應用程式可能使用大量的檔案描述子 (inode)。如果發生此問題，您必須使用 `cf scale APP_NAME [-k DISK]` 指令，增加應用程式的磁碟限額。
+
+#### 在 Diego 上編譯打包新的應用程式
+若要在 Diego 上編譯打包新的應用程式，您必須在指令行部署應用程式，並搭配一個旗標以指出 Diego 作為後端。
+
+  1. 部署應用程式而不啟動它：
+  ```
+  $ cf push APPLICATION_NAME --no-start
+  ```
+  2. 設定 Diego 布林：
+  ```
+  $ cf enable-diego APPLICATION_NAME
+  ```
+    或者：
+  ```
+  $ cf curl /v2/apps/$(cf app APPLICATION_NAME --guid) -X PUT -d '{"diego":true}'
+  ```
+  3. 啟動應用程式：
+  ```
+  $ cf start APPLICATION_NAME
+  ```
+
+如需 **cf push** 指令的詳細資料，請參閱 [cf push](/docs/cli/reference/cfcommands/index.html#cf_push)。
+
+#### 將現有應用程式變更為 Diego
+您可以將現有應用程式轉移至 Diego，方法為使用 Diego 旗標部署應用程式。應用程式將立即開始在 Diego 上執行，而且最終將停止在 DEA 上執行。如果想要確定執行時間，建議執行藍綠部署，方法為將應用程式的副本部署至 Diego，然後交換路徑並縮減 DEA 應用程式。
+
+  若要設定 Diego 旗標，並將應用程式變更為在 Diego 上執行，請執行下列指令：
+  ```
+  $ cf enable-diego APPLICATION_NAME
+  ```
+
+  若要轉移回到 DEA，請執行下列指令：
+  ```
+  $ cf disable-diego APPLICATION_NAME
+  ```
+
+  若要驗證應用程式正在哪個後端上執行，請執行下列指令：
+  ```
+  $ cf has-diego-enabled APPLICATION_NAME
+  ```
+
+
+### 使用 DEA 編譯打包應用程式
 在編譯打包階段期間，Droplet Execution Agent (DEA) 會使用您在 cf 指令行介面或 `manifest.yml` 檔案中提供的資訊，決定應用程式編譯打包所要建立的項目。DEA 會選取適當的建置套件來編譯打包應用程式，而編譯打包處理程序的結果則為 Droplet。如需將應用程式部署至 {{site.data.keyword.Bluemix_notm}} 的相關資訊，請參閱 [{{site.data.keyword.Bluemix_notm}} 的運作方式](/docs/overview/whatisbluemix.html#howwork)。
 
 在編譯打包處理程序期間，DEA 會檢查建置套件是否符合應用程式。例如，.war 檔的 Liberty 運行環境，或 .js 檔的 Node.js 運行環境。然後，DEA 會建立隔離的容器，其中包含建置套件及應用程式碼。容器是由 Warden 元件管理。如需相關資訊，請參閱[應用程式編譯打包方式](http://docs.cloudfoundry.org/concepts/how-applications-are-staged.html){:new_window}。
 
-###啟動應用程式
+### 啟動應用程式
 
 啟動應用程式時，即會建立 Warden 容器實例。您可以使用 **cf files** 指令來查看儲存在 Warden 容器檔案系統中的檔案，例如日誌。如果應用程式無法啟動，則 DEA 會停止該應用程式並移除 Warden 容器的所有內容。因此，如果應用程式停止或應用程式的編譯打包處理程序失敗，您將無法使用日誌檔。
 
@@ -39,7 +95,7 @@ copyright:
 
 **附註：**緩衝區大小有限制。如果應用程式執行一段很長的時間且未重新啟動，則當您輸入 `cf logs appname --recent` 時，可能不會顯示日誌，因為日誌緩衝區可能已被清除。因此，若要針對大型應用程式編譯打包錯誤進行除錯，您可以在不同於 cf 指令行介面的個別指令行中輸入 `cf logs appname`，以在部署應用程式時追蹤日誌。
 
-如果您在 {{site.data.keyword.Bluemix_notm}} 中編譯打包應用程式時遇到問題，可以遵循[針對編譯打包錯誤進行除錯](../debug/index.html#debugging-staging-errors)中的步驟來解決問題。
+如果您在 {{site.data.keyword.Bluemix_notm}} 中編譯打包應用程式時遇到問題，可以遵循[針對編譯打包錯誤進行除錯](/docs/debug/index.html#debugging-staging-errors)中的步驟來解決問題。
 
 ##使用 cf 指令來部署應用程式
 {: #dep_apps}
@@ -56,7 +112,7 @@ copyright:
 cf push
   ```
   
-  如需「Liberty 建置套件」的相關資訊，請參閱 [Liberty for Java](../runtimes/liberty/index.html)。
+  如需「Liberty 建置套件」的相關資訊，請參閱 [Liberty for Java](/docs/runtimes/liberty/index.html)。
   
   * 若要將 Java Tomcat 應用程式部署至 {{site.data.keyword.Bluemix_notm}}，請使用下列指令：
   
@@ -140,8 +196,6 @@ cf push appname
 cf push -f appManifest.yml
 ```
 
-<p>  </p>
-
 
 |選項	|說明	|用法或範例|
 |:----------|:--------------|:---------------|
@@ -159,7 +213,7 @@ cf push -f appManifest.yml
 |**random-route**	|布林值，將隨機路徑指派給應用程式。預設值為 **false**。	|`random-route: true`|
 |**services**	|要連結至應用程式的服務。	|`services:   - mysql_maptest`|
 |**env**	|應用程式的自訂環境變數。|`env: DEV_ENV: production`|
-*表 1. manifest.yml 檔案中支援的選項*
+{: caption="Table 1. Supported options in the manifest YAML file" caption-side="top"}
 
 ###範例 `manifest.yml` 檔案
 

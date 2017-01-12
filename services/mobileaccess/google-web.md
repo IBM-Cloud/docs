@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  year: 2016
-lastupdated: "2016-09-07"
+  year: 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
 
@@ -81,5 +81,3 @@ The `POST` response body should contain the `access_token` and the `id_token` en
 
 Now you can start making requests to your protected resources.
 All request to protected resources should contain the access token in the authorization request header field.
-
-

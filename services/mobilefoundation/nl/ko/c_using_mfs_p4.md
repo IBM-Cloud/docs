@@ -3,13 +3,11 @@
 copyright:
   years: 2016
 lastupdated: "2016-10-14"
+
 ---
 
 #	Professional Per Capacity 플랜 사용
 {: #using_mobilefoundation_p4}
-
-<!--Last updated: 12 September 2016
-{: .last-updated} -->
 
 Professional Per Capacity 플랜을 사용하면 여러 모바일 운영 체제가 있는 모바일 애플리케이션을 수에 관계 없이 원하는 만큼 작성할 수 있습니다.
 {{site.data.keyword.mobilefoundation_short}}: Professional Per Capacity 서비스 인스턴스를 작성한 후 다음 프로시저를 읽고 서비스를 시작하십시오. 
@@ -86,7 +84,7 @@ Professional Per Capacity 플랜을 사용하면 여러 모바일 운영 체제�
 
  데이터를 유지하기 위해 컨테이너에 볼륨도 연결할 수 있습니다. 볼륨을 한 번 선택하면 변경할 수 없습니다. 사용 가능한 기본 파일 공유 영역은 20GB입니다. 사용자가 분석 데이터를 유지할 추가 스토리지 영역이 필요하면 추가 파일 공유를 구매하고 이 파일 공유를 사용하여 볼륨을 작성해야 합니다. 그런 다음 분석 서버를 배치하는 동안 이 새 볼륨을 선택할 수 있습니다.
 
- {{site.data.keyword.containerlong}}에 볼륨을 추가하는 데 대한 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} 대시보드를 사용하여 볼륨에 지속적 데이터 저장](https://new-console.ng.bluemix.net/docs/containers/container_volumes_ui.html){: new_window}을 참조하십시오.
+ {{site.data.keyword.containerlong}}에 볼륨을 추가하는 데 대한 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} 대시보드를 사용하여 볼륨에 지속적 데이터 저장](https://console.ng.bluemix.net/docs/containers/container_volumes_ui.html){: new_window}을 참조하십시오.
 
 * **분석 추가**를 클릭하여 {{site.data.keyword.mobilefoundation_short}} 서비스 인스턴스에 Mobile Analytics 서버를 추가하십시오.
 

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-06"
 
 ---
 
@@ -11,9 +12,13 @@ copyright:
 # ASP.NET Core 建置套件的最新更新項目
 {: #latest_updates}
 
-前次更新：2016 年 8 月 26 日
 
 aspnet 建置套件中的最新更新項目清單。
+
+## 2016 年 10 月 10 日：已更新 ASP.NET Core 建置套件 v1.0.1-20161005-1225
+
+* 新增 .NET Core 1.0.1 支援
+* 修正在快取 NuGet 套件時導致部署失敗的間歇性問題
 
 ## 2016 年 8 月 31 日：已更新 ASP.NET Core 建置套件 v1.0-20160826-1345
 

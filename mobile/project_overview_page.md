@@ -10,6 +10,10 @@ lastupdated: "2016-12-16"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 # Project Overview page
 {: #project_overview}
 
@@ -22,4 +26,9 @@ The Project Overview page displays a tile for each service that is configured or
 
 If the service is already associated with this project, the name of the associated service instance is displayed on the tile after the type of service. This makes it easy to find which service instance is related to this project on your {{site.data.keyword.Bluemix_notm}} dashboard. The actions that are available on the actions button are **View** and **Remove** when the service is already associated with the project. Removing a service instance only removes the association to this project and does not delete the instance of the service from your {{site.data.keyword.Bluemix_notm}} dashboard.
 
+<<<<<<< HEAD
 Select **Get Code** on the Build tile to download the code for your project. For more information about downloading the code, see [Get code](get_code.html). 
+=======
+Select **Get Code** on the Build tile to download the code for your project. For more information about downloading the code, see [Get code](get_code.html). 
+
+>>>>>>> origin/master

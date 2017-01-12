@@ -2,6 +2,7 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-12-06"
 
 ---
 {:new_window: target="_blank"}
@@ -14,8 +15,6 @@ copyright:
 # Risoluzione dei problemi di {{site.data.keyword.objectstorageshort}}
 {: #troubleshooting}
 
-*Ultimo aggiornamento: 19 ottobre 2016*
-{: .last-updated}
 
 Queste sono le risposte alle domande sulla risoluzione dei problemi comuni riguardanti l'utilizzo di {{site.data.keyword.objectstoragefull}}.
 {: shortdesc}
@@ -24,7 +23,7 @@ Queste sono le risposte alle domande sulla risoluzione dei problemi comuni rigua
 {: #unrecognized_token}
 
 
-È possibile che si verifichi la seguente traccia di stack quando utilizzi openstack4j con il profilo Liberty: 
+È possibile che si verifichi la seguente traccia di stack quando utilizzi openstack4j con il profilo Liberty:
 ```
 Exception thrown by application class 'org.openstack4j.connectors.okhttp.HttpResponseImpl.readEntity:124'
 org.openstack4j.api.exceptions.ClientResponseException: Unrecognized token 'contentpack': was expecting ('true', 'false' or 'null') at [Source: contentpack ; line: 1, column: 12]
@@ -50,8 +49,8 @@ Questo problema è causato da un errore di caricamento della classe, dove la lib
 
 Puoi risolvere questo problema nei seguenti modi:
 {: tsResolve}
-  * Utilizzando il caricamento della classe inverso (parentLast). 
-  * Escludendo jaxrs dalle funzioni abilitate. 
+  * Utilizzando il caricamento della classe inverso (parentLast).
+  * Escludendo jaxrs dalle funzioni abilitate.
 
 
 ## Come ottenere aiuto e supporto per {{site.data.keyword.objectstorageshort}}
@@ -67,7 +66,7 @@ inserisci la tua domanda in [Stack Overflow](http://stackoverflow.com/search?q=o
 e contrassegnala con le  tag "ibm-bluemix" e "object-storage".
 * Per domande sul servizio e sulle istruzioni per l'utilizzo iniziale, utilizza il forum [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/objectstorage/?smartspace=bluemix){: new_window}. Includi le tag "objectstorage" e "bluemix".
 
-Consulta [Come ottenere supporto](https://console.ng.bluemix.net/docs/support/index.html#getting-help){: new_window} per ulteriori dettagli sull'utilizzo dei forum.
+Consulta [Come ottenere supporto](/docs/support/index.html#getting-help) per ulteriori dettagli sull'utilizzo dei forum.
 
 Per informazioni su come aprire un ticket di supporto IBM o sui livelli di supporto e sulla gravità dei ticket, consulta
-[Come contattare il supporto](https://console.ng.bluemix.net/docs/support/index.html#contacting-support){: new_window}.
+[Come contattare il supporto](/docs/support/index.html#contacting-support).

@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
   
-lastupdated: "2016-10-23"
+lastupdated: "2017-01-11"
 
 ---
 
@@ -49,10 +49,10 @@ Follow the sign up process to create a {{site.data.keyword.Bluemix_notm}} accoun
 {: tsResolve}
 
 Depending on how your account is set up, some of these log in options might apply to you: 
- * SoftLayer users with SoftLayer IDs must log in through the [Customer Portal](https://control.softlayer.com).
- * SoftLayer users with an IBMid and with or without a linked Bluemix account can log in through the [Customer Portal](https://control.softlayer.com) to open the SoftLayer Customer Portal or through the [Bluemix console](https://console.{DomainName}) to open the Infrastructure dashboard. 
+ * SoftLayer users with SoftLayer IDs must log in through the [Customer Portal ![External link icon](../icons/launch-glyph.svg)](https://control.softlayer.com){: new_window}.
+ * SoftLayer users with an IBMid and with or without a linked Bluemix account can log in through the [Customer Portal ![External link icon](../icons/launch-glyph.svg)](https://control.softlayer.com){: new_window} to open the SoftLayer Customer Portal or through the [Bluemix console ![External link icon](../icons/launch-glyph.svg)](https://console.{DomainName}){: new_window} to open the Infrastructure dashboard. 
  * Bluemix users without a linked SoftLayer account must log in through the Bluemix console.
- * Bluemix users with a linked SoftLayer account can log in through the [Bluemix console](https://console.{DomainName}) or the [Customer Portal](https://control.softlayer.com).
+ * Bluemix users with a linked SoftLayer account can log in through the [Bluemix console ![External link icon](../icons/launch-glyph.svg)](https://console.{DomainName}){: new_window} or the [Customer Portal ![External link icon](../icons/launch-glyph.svg)](https://control.softlayer.com){: new_window}.
  
 
 ## Password is invalid
@@ -151,13 +151,13 @@ If your account is pending, you cannot log in to {{site.data.keyword.Bluemix_not
 After you register for a {{site.data.keyword.Bluemix_notm}} trial account, you might not be able to log in to {{site.data.keyword.Bluemix_notm}}. Instead, you see the following message:
 {: tsSymptoms}
 
-<code>Your account is pending. Please wait up to 24 hours for email confirmation and also check your spam folder. If you still have not received your email confirmation, contact <a href="http://ibm.biz/bluemixsupport.com" target="_blank">Bluemix Support</a>.</code>
+<code>Your account is pending. Please wait up to 24 hours for email confirmation and also check your spam folder. If you still have not received your email confirmation, contact <a href="http://ibm.biz/bluemixsupport.com" target="_blank">Bluemix Support <img src="../icons/launch-glyph.svg" alt="External link icon"></a>.</code>
 
 
 After you register for a {{site.data.keyword.Bluemix_notm}} trial account, you receive a confirmation email. You must click the link that is in the confirmation email to complete the registration process.
 {: tsCauses} 
 
-The confirmation email is sent to the email address that you provided. Check your inbox and your junk mail folder. If you haven't received the confirmation email, contact [{{site.data.keyword.Bluemix_notm}} Support](http://ibm.biz/bluemixsupport.com){: new_window}.  
+The confirmation email is sent to the email address that you provided. Check your inbox and your junk mail folder. If you haven't received the confirmation email, contact [{{site.data.keyword.Bluemix_notm}} Support ![External link icon](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}.  
 {: tsResolve}
 
 
@@ -201,7 +201,7 @@ If you are unable to invite users to your organization and need a different role
   
 If you are unable to invite users because you are a collaborator and not a member, you must delete your previous {{site.data.keyword.Bluemix_notm}} account and then be invited to join the account as a member of the organization. To delete your previous account and join the account as a member, complete the following steps: 
 
-  1. Contact [{{site.data.keyword.Bluemix_notm}} Support](http://ibm.biz/bluemixsupport){: new_window} to open a support ticket and request that your account be deleted. If you have data that is associated with your old account that you want to save and move to the new account, include this information in your email. 
+  1. Contact [{{site.data.keyword.Bluemix_notm}} Support ![External link icon](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window} to open a support ticket and request that your account be deleted. If you have data that is associated with your old account that you want to save and move to the new account, include this information in your email. 
   2. After your account is deleted, have a user with the organization manager role invite you to the organization as an organization manager. Then, sign up for {{site.data.keyword.Bluemix_notm}} from the invitation. 
 
 
@@ -251,7 +251,7 @@ You can complete one or more of the following actions as necessary:
   * Log out of {{site.data.keyword.Bluemix_notm}} and log in again.
   * Use the private browsing mode of your browser. 
   * Clear the cookies and the cache of the browser.
-  * Use a different browser. For information about the versions of the browsers that are supported by {{site.data.keyword.Bluemix_notm}}, see [{{site.data.keyword.Bluemix_notm}} Prerequisites](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}.
+  * Use a different browser. For information about the versions of the browsers that are supported by {{site.data.keyword.Bluemix_notm}}, see [{{site.data.keyword.Bluemix_notm}} Prerequisites ![External link icon](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}.
   * If you have installed the cf command line interface, enter the `cf apps` command to see whether your application is running.
   
   

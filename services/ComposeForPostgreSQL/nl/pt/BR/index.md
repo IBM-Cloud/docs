@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-12-09"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -20,9 +20,6 @@ copyright:
 
 # Introdução ao {{site.data.keyword.composeForPostgreSQL}}
 {: #getting-started-with-compose-for-postgreSQL}
-
-Última atualização: 20 de setembro de 2016
-{: .last-updated}
 
 O {{site.data.keyword.composeForPostgreSQL}} fornece um poderoso banco
 de dados objeto-relacional de software livre que é altamente customizável. Com Postgres, o
@@ -80,6 +77,7 @@ no Compose.
 `db_type`|O tipo de banco de dados que é oferecido pelo serviço; nesse
 caso, `postgresql`.
 `name`|O nome da implementação do banco de dados.
+{: caption="Table 1. {{site.data.keyword.composeForPostgreSQL}} credentials" caption-side="top"}
 
 # Links Relacionados
 {: #rellinks}

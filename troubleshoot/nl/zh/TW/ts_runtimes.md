@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-08-18"
 
 ---
 
@@ -19,8 +21,6 @@ copyright:
 # 運行環境疑難排解
 {: #runtimes}
 
-前次更新：2016 年 8 月 18 日
-{: .last-updated}
 
 
 您在使用 IBM® Bluemix™ 運行環境時可能會遇到問題。然而，在許多情況下，您可以依照下列一些簡單的步驟，從這些問題中回復。

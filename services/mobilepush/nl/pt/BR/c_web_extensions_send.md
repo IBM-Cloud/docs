@@ -1,15 +1,19 @@
 ---
 
 copyright:
- years: 2015 2016
+ years: 2015, 2016
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # Enviando notificações básicas para Apps e extensões do
 Chrome 
 {: #web_extensions_notifications}
-Última atualização: 15 de novembro de 2016
+Última atualização: 06 de dezembro de 2016
 {: .last-updated}
 
 Depois de ter desenvolvido seus aplicativos, é possível enviar uma notificação push. 
@@ -30,7 +34,7 @@ dispositivo estiver inativo. Configure esse valor como `false` para assegurar a 
 A imagem a seguir mostra a opção Notificações de apps e
 extensões do Chrome no painel.
 
-  ![Tela Notificações](images/push_chrome_extns.jpg)
+  ![Tela de notificações](images/push_chrome_extns.jpg)
   
 ## Etapas Seguintes
   {: #next_steps_tags}
@@ -38,5 +42,7 @@ extensões do Chrome no painel.
 Após ter configurado com sucesso as notificações básicas,
 será possível configurar notificações baseadas em tag e opções avançadas.
 
-Inclua esses recursos do serviço {{site.data.keyword.mobilepushshort}} em seu app. Para usar notificações baseadas em tag, consulte [Notificações baseadas em tag](c_tag_basednotifications.html). Para
+Inclua esses recursos de serviço do {{site.data.keyword.mobilepushshort}} no seu app. Para usar
+notificações baseadas em tag, consulte [Notificações baseadas em
+tag](c_tag_basednotifications.html). Para
 usar opções de notificações avançadas, veja [Notificações avançadas](t_advance_badge_sound_payload.html).

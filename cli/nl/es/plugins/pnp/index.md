@@ -79,7 +79,7 @@ Siga estos pasos para instalar el plug-in desde el repositorio de Bluemix:
 	```  
 
 ## Lista de mandatos de igualdad de red privada
-Se da soporte a los siguientes cuatro mandatos. Utilice el mandato `bluemix network` para ver la lista de mandatos disponibles:
+Se da soporte a los mandatos siguientes. Utilice el mandato `bluemix network` para ver la lista de mandatos disponibles:
 
 | Mandato     | Descripción                                    |
 |-------------|------------------------------------------------|
@@ -87,6 +87,8 @@ Se da soporte a los siguientes cuatro mandatos. Utilice el mandato `bluemix netw
 | pnp-create  | Crea una conexión de igualdad de red privada   |
 | pnp-delete  | Suprime una conexión de igualdad de red privada   |
 | pnp-show    | Lista todas las conexiones de igualdad de red privada  |
+{: caption="Table 1. Private network peering commands" caption-side="top"}
+
 
 ### Utilización del mandato
 Para ver la información de ayuda para los mandatos, ejecute: `bluemix network [command] -h`.

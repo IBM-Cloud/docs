@@ -1,14 +1,18 @@
 ---
 
 copyright:
- years: 2015 2016
+ years: 2015, 2016
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # Web ブラウザーへの基本通知の送信
 {: #web_notifications}
-最終更新日: 2016 年 11 月 15 日
+最終更新日: 2016 年 12 月 06 日
 {: .last-updated}
 
 アプリケーションの開発が完了したら、プッシュ通知を送信できます。 
@@ -18,12 +22,16 @@ copyright:
 3. 以下のオプションの設定を指定することを選択できます。
   - **通知タイトル (Notification Title)**: メッセージ・アラートの見出しとして表示されるテキストです。
   - **通知アイコン URL (Notification Icon URL)**: メッセージにアプリ通知アイコンを付けて配信する必要がある場合、このフィールドにアイコンへのリンクを指定します。
-  - **追加のペイロード (Additional payload)**: 通知用のカスタム・ペイロードの値を指定します。
-
+  - **存続時間 (Time to live)**: メッセージの有効期間をサーバーに通知します。
+4. Safari ブラウザーに送信される Web 通知の場合、以下のようにいくつかの追加情報が必要です。
+  - **アクション (Action)**: これは、アクション・ボタンのラベルです。
+  - **URL 引数 (URL Arguments)**: この通知で使用する必要がある URL 引数。これは、必ず JSON 配列形式で指定してください。 
+ 
 以下のイメージは、ダッシュボードの Web 通知オプションを示しています。
 
   ![「通知」画面](images/DashboardWebpush.jpg)
-  
+
+
 ## 次のステップ
   {: #next_steps_tags}
 

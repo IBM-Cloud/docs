@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-11-01"
+
 ---
 
 {:screen: .screen}
@@ -15,16 +16,14 @@ lastupdated: "2016-10-02"
 
 Utilisez Google Sign-In pour authentifier les utilisateurs sur votre application iOS {{site.data.keyword.amafull}}.
 
-**Remarque :** Bien que le SDK Objective-C reste complètement pris en charge et soit toujours considéré comme le SDK principal pour
-{{site.data.keyword.Bluemix_notm}} Mobile Services, il est envisagé de le retirer plus tard dans l'année et de le remplacer par le
-nouveau SDK
-Swift. Pour les nouvelles applications, il est vivement recommandé d'utiliser le SDK Swift. Les instructions de cette page s'appliquent au SDK client Objective-C de {{site.data.keyword.amashort}}. Pour les instructions d'utilisation du SDK Swift, voir [Activation de l'authentification Google dans les applications iOS (SDK Swift)](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html).
+**Remarque :** Bien que le SDK Objective-C reste complètement pris en charge et soit toujours considéré comme le SDK principal pour {{site.data.keyword.Bluemix_notm}} Mobile Services, il est envisagé de le retirer plus tard dans l'année et de le remplacer par le nouveau SDK Swift. Pour les nouvelles applications, il est vivement recommandé d'utiliser le SDK Swift. Les instructions de cette page s'appliquent au SDK client Objective-C de {{site.data.keyword.amashort}}. Pour les instructions d'utilisation du SDK Swift, voir [Activation de l'authentification Google dans les applications iOS (SDK Swift)](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html).
 
 ## Avant de commencer
-{: #google-auth-ios-before}
+{: #before-you-begin}
 Vous devez disposer des éléments suivants :
-* Un projet IOS en Xcode. Il n'a pas besoin d'être instrumenté avec le SDK client de {{site.data.keyword.amashort}}.
-* Une instance d'une application {{site.data.keyword.Bluemix_notm}} qui est protégée par le service {{site.data.keyword.amashort}}. Pour plus d'informations sur la création d'un système de back end {{site.data.keyword.Bluemix_notm}}, voir [Initiation](index.html).
+* Une instance d'un service {{site.data.keyword.amafull}} et une application {{site.data.keyword.Bluemix_notm}}. Pour plus d'informations sur la création d'un système de back end {{site.data.keyword.Bluemix_notm}}, voir [Initiation](index.html).
+* L'URL de votre application back-end (**Route de l'application**). Vous aurez besoin de ces valeurs pour envoyer des requêtes aux noeuds finaux protégés de votre application back end.
+* Valeur de votre **TenantID**. Ouvrez votre service dans le tableau de bord de {{site.data.keyword.amashort}}. Cliquez sur le bouton **Options pour application mobile**. La valeur `tenantId` (qui porte également le nom d'`appGUID`) est affichée dans la zone **App GUID / TenantId**. Vous aurez besoin de cette valeur pour initialiser le Gestionnaire des autorisations.
 
 ## Configuration d'un projet Google pour la plateforme iOS
 {: #google-auth-ios-project}
@@ -34,7 +33,7 @@ Pour commencer à utiliser Google en tant que fournisseur d'identité, vous deve
 
 1. Dans la liste **API pour les réseaux sociaux**, choisissez **Google+ API** et cliquez sur **Activer**.
 
-1. Dans la liste relative aux données d'identification, cliquez sur le bouton de création de données d'identification et choisissez l'option relative à l'ID client OAuth.
+1. Dans la liste relative aux **données d'identification**, cliquez sur le bouton de **création de données d'identification** et choisissez l'option relative à l'**ID client OAuth**.
 
 1. Puis, vous serez invité à choisir un type d'application. Sélectionnez **iOS**.
 
@@ -50,16 +49,11 @@ Pour commencer à utiliser Google en tant que fournisseur d'identité, vous deve
 
 Maintenant que vous disposez d'un ID client Google, vous pouvez activer l'authentification Google dans le tableau de bord {{site.data.keyword.Bluemix_notm}}.
 
-1. Ouvrez votre appli dans le tableau de bord {{site.data.keyword.Bluemix_notm}}.
-
-1. Cliquez sur **Options pour application mobile** et notez la valeur de **Route** (`applicationRoute`)
-et **Identificateur global unique de l'application** (`applicationGUID`). Vous aurez besoin de ces valeurs lors de l'initialisation du SDK.
-
-1. Cliquez sur la vignette {{site.data.keyword.amashort}}. Le tableau de bord {{site.data.keyword.amashort}} se charge.
-
-1. Cliquez sur la vignette **Google** .
-
-1. Dans la zone relative à l'ID application pour iOS, spécifiez votre ID client pour iOS et cliquez sur **Sauvegarder**.
+1. Ouvrez votre service dans le tableau de bord {{site.data.keyword.amashort}}.
+1. Dans l'onglet **Gérer**, activez **Autorisation**.
+1. Développez la section **Google**.
+1. Dans la zone **ID application pour iOS**, spécifiez votre ID client pour iOS.
+1. Cliquez sur **Sauvegarder**.
 
 
 ## Configuration du SDK client Google de {{site.data.keyword.amashort}} pour iOS
@@ -85,12 +79,9 @@ et **Identificateur global unique de l'application** (`applicationGUID`). Vous a
 
 ### Configuration d'un projet iOS pour l'authentification Google
 {: #google-auth-ios-googleauth}
-Configurez l'intégration Google en mettant à jour le fichier `info.plist`. Le fichier `info.plist` est généralement situé dans
-le dossier `Supporting files` de votre projet Xcode. Vous pouvez éditer ce fichier à l'aide de l'éditeur de liste de propriétés ou d'un éditeur de
-texte.
+Configurez l'intégration Google en mettant à jour le fichier `info.plist`. Le fichier `info.plist` est généralement situé dans le dossier `Supporting files` de votre projet Xcode. Vous pouvez éditer ce fichier à l'aide de l'éditeur de liste de propriétés ou d'un éditeur de texte.
 
-* Configurez l'intégration Google en ajoutant les schémas d'URL suivants à votre fichier
-`info.plist`.
+* Configurez l'intégration Google en ajoutant les schémas d'URL suivants à votre fichier `info.plist`.
 	![Fichier info.plist](images/ios-google-infoplist-settings.png)
 
 	Le premier schéma d'URL est une version inversée de l'ID client dans Google Developer Console.  Par exemple, si votre ID client est `123123-abcabc.apps.googleusercontent.com`, votre schéma d'URL sera : `com.googleusercontent.apps.123123-abcabc`.
@@ -125,22 +116,16 @@ texte.
 
 	Mettez à jour les deux schémas d'URL.
 
-	**Important** : Ne modifiez pas les propriétés existantes dans le fichier `info.plist`. Si certaines propriétés se
-chevauchent, vous devrez les fusionner manuellement. Pour plus d'informations, voir [Try Sign-In
-for iOS](https://developers.google.com/identity/sign-in/ios/start).
+	**Important** : Ne modifiez pas les propriétés existantes dans le fichier `info.plist`. Si certaines propriétés se chevauchent, vous devrez les fusionner manuellement. Pour plus d'informations, voir [Try Sign-In for iOS](https://developers.google.com/identity/sign-in/ios/start).
 
 ## Initialisation du logiciel SDK client de {{site.data.keyword.amashort}}
 {: #google-auth-ios-initialize}
 
-Pour utiliser le SDK client de {{site.data.keyword.amashort}}, initialisez-le en lui transmettant les paramètres applicationGUID et applicationRoute.
+Pour utiliser le SDK client de {{site.data.keyword.amashort}}, initialisez-le en lui transmettant les paramètres TenantID et App Route.
 
 En général, vous pouvez placer le code d'initialisation dans la méthode `application:didFinishLaunchingWithOptions` du délégué de l'application, bien que cet emplacement ne soit pas obligatoire.
 
-1. Identifiez les valeurs de applicationGUID et applicationRoute. Dans le tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur votre
-application. Cliquez sur **Options pour application mobile**. Les valeurs de *Route de l'application* et d'*Identificateur global unique de l'application* sont affichées.
-
-1. Importez les structures requises dans la classe où vous comptez utiliser le SDK client {{site.data.keyword.amashort}}. Ajoutez les en-têtes
-suivants :
+1. Importez les structures requises dans la classe où vous comptez utiliser le SDK client {{site.data.keyword.amashort}}. Ajoutez les en-têtes suivants :
 
 	#### Objective-C :
 
@@ -161,12 +146,11 @@ suivants :
 	3. Nommez-le `BridgingHeader.h`.
 
 	4. Ajoutez les importations suivantes votre en-tête de pontage :
-
-	```Swift
-	#import <IMFCore/IMFCore.h>
-	#import <IMFGoogleAuthentication/IMFGoogleAuthenticationHandler.h>
-	```
-
+		
+	   `#import <IMFCore/IMFCore.h>`
+		
+	   `#import <IMFGoogleAuthentication/IMFGoogleAuthenticationHandler.h>`
+	
 	5. Cliquez sur votre projet dans Xcode et sélectionnez l'onglet **Build Settings (Paramètres de génération)**.
 
 	6. Recherchez `Objective-C Bridging Header`.
@@ -176,28 +160,26 @@ suivants :
 
 	8. Vérifiez que l'en-tête de pontage est prélevé par Xcode lors de la génération de votre projet.
 
-3. Utilisez le code suivant pour initialiser le SDK client.  Remplacez `applicationRoute` et `applicationGUID` par les valeurs de
-**Route** et **Identificateur global unique de l'application** de la section **Options pour application mobile**.
+3. Utilisez le code suivant pour initialiser le SDK client.  Remplacez `<applicationRoute>` and `<TenantID>` par vos valeurs **Route** et **TenantID**.
 
 	#### Objective-C :
 
 	```Objective-C
 	[[IMFClient sharedInstance]
-			initializeWithBackendRoute:@"applicationRoute"
-			backendGUID:@"applicationGUID"];
+			initializeWithBackendRoute:@"<applicationRoute>"
+			backendGUID:@"<TenantID>"];
 	```
 {: codeblock}
 
 	#### Swift :
 
 	```Swift
-	IMFClient.sharedInstance().initializeWithBackendRoute("applicationRoute",
-	 							backendGUID: "applicationGUID")
+	IMFClient.sharedInstance().initializeWithBackendRoute("<applicationRoute>",
+	 							backendGUID: "<TenantID>")
 	```
 {: codeblock}
 
-1. Initialisez le gestionnaire `AuthorizationManager` en passant le paramètre `tenantId` du service {{site.data.keyword.amashort}}. Vous pouvez trouver cette valeur en cliquant sur le bouton **Afficher les données d'identification** sur la vignette du service  {{site.data.keyword.amashort}}.
-
+1. Initialisez le gestionnaire `AuthorizationManager` en transmettant le paramètre `tenantId` du service {{site.data.keyword.amashort}}. 
   ####Objective-C
 	
   ```Objective-C
@@ -212,8 +194,7 @@ suivants :
   ```
  {: codeblock}
 
-1. Enregistrez le gestionnaire d'authentification en ajoutant le code suivant à la méthode `application:didFinishLaunchingWithOptions`
-dans votre délégué d'application. Ajoutez ce code immédiatement après l'initialisation d'IMFClient :
+1. Enregistrez le gestionnaire d'authentification en ajoutant le code suivant à la méthode `application:didFinishLaunchingWithOptions` dans votre délégué d'application. Ajoutez ce code immédiatement après l'initialisation d'IMFClient :
 
 	#### Objective-C :
 
@@ -322,7 +303,7 @@ Vous devez utiliser le conteneur boilerplate {{site.data.keyword.mobilefirstbp}}
 
 	![image](images/ios-google-login.png)
 
-	Cet écran peut être légèrement différent si l'appli Facebook n'est pas installée sur votre périphérique, ou si vous n'y êtes pas connecté.
+	Cet écran peut être légèrement différent si l'appli Facebook n'est pas installée sur votre appareil, ou si vous n'y êtes pas connecté.
 
 1. Cliquez sur **OK** pour autoriser {{site.data.keyword.amashort}} à utiliser votre ID utilisateur Google pour l'authentification.
 
@@ -346,8 +327,6 @@ Vous devez utiliser le conteneur boilerplate {{site.data.keyword.mobilefirstbp}}
 	```
 {: codeblock}
 
-	Si vous appelez ce code alors que l'utilisateur était connecté via Google et qu'il tente à nouveau de se connecter, il est invité à autoriser
-{{site.data.keyword.amashort}} à utiliser Google aux fins d'authentification. A ce stade, l'utilisateur peut cliquer sur un nom d'utilisateur <!--in the upper-right corner of the screen--> pour sélectionner et se connecter sous un autre nom d'utilisateur.
+	Si vous appelez ce code alors que l'utilisateur était connecté via Google et qu'il tente à nouveau de se connecter, il est invité à autoriser {{site.data.keyword.amashort}} à utiliser Google aux fins d'authentification. A ce stade, l'utilisateur peut cliquer sur un nom d'utilisateur <!--in the upper-right corner of the screen--> pour sélectionner et se connecter sous un autre nom d'utilisateur.
 
-	La transmission de `callBack` à la fonction de déconnexion est facultative. Vous pouvez également transmettre
-la valeur `nil`.
+	La transmission de `callBack` à la fonction de déconnexion est facultative. Vous pouvez également transmettre la valeur `nil`.

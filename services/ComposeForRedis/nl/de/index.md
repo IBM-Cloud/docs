@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-12-09"
 ---
 
 {:new_window: target="_blank"}
@@ -13,9 +13,6 @@ copyright:
 
 # Einführung in {{site.data.keyword.composeForRedis}}
 {: #getting-started-with-compose-for-redis}
-
-Letzte Aktualisierung: 20. September 2016
-{: .last-updated}
 
 Redis ist ein speicherinterner Open-Source-Schlüssel/Wert-Speicher. Die Werte in Redis können einfache Zeichenfolgen, Hashwerte, Listen und Gruppen oder leistungsfähige Bitmapdateien, HyperLOG-Protokolle und geografisch-räumliche Indizes sein. Redis eignet sich ideal als Anwendungscache oder als Datenspeicher für schnelle Antworten. {{site.data.keyword.composeForRedis_full}} bietet Ihnen eine Konfiguration, die für hohe Verfügbarkeit und persistente Plattenspeicherung voreingestellt ist, alles mit speziellen Sicherheitsfunktionen gesichert.
 {:shortdesc}
@@ -43,6 +40,7 @@ Feldname|Beschreibung
 `deployment_id`|Eine interne ID für den Service, wie in Compose erstellt.
 `db_type`|Der Datenbanktyp, der vom Service angeboten wird, in diesem Fall `redis`.
 `name`|Der Name der Datenbankimplementierung.
+{: caption="Table 1. {{site.data.keyword.composeForRedis}} - Berechtigungsnachweise" caption-side="top"}
 
 # Zugehörige Links
 {: #rellinks}

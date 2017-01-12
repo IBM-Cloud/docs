@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-06-10"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # Usando os recursos beta
 {: #using_beta_features}
-
-Última atualização: 10 de junho de 2016
-{: .last-updated}
 
 Os recursos beta do Liberty fornecem um acesso antecipado aos novos
 modelos de programação e de funcionalidade que podem ser incluídos em uma liberação futura

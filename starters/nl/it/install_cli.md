@@ -1,12 +1,14 @@
 ---
 
- 
+
 
 copyright:
 
-  anni: 2015，2016
+  year: 2015，2016
 
- 
+lastupdated: "2016-10-05"
+
+
 
 ---
 
@@ -28,7 +30,7 @@ copyright:
 {:user_ID: data-hd-keyref="user_ID"}
 
 # Distribuzione della tua applicazione con l'interfaccia riga di comando
-Ultimo aggiornamento: 15 settembre 2016
+Ultimo aggiornamento: 5 ottobre 2016
 {: .last-updated}
 
 Puoi usare l'interfaccia riga di comando per distribuire e modificare applicazioni e istanze del servizio.
@@ -37,7 +39,7 @@ Puoi usare l'interfaccia riga di comando per distribuire e modificare applicazio
 Prima di iniziare, installa le interfacce riga di comando {{site.data.keyword.Bluemix}} e Cloud Foundry.
 
 <p>
-<a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(Si apre in una nuova scheda o finestra)"><img class="image" src="images/btn_bx_commandline.svg" alt="Scarica l'interfaccia riga di comando {{site.data.keyword.Bluemix}}" /> </a>  <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(Si apre in una nuova scheda o finestra)"><img class="image" src="images/btn_cf_commandline.svg" alt="Scarica l'interfaccia riga di comando Cloud Foundry" /> </a> 
+<a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(Si apre in una nuova scheda o finestra)"><img class="image" src="images/btn_bx_commandline.svg" alt="Scarica l'interfaccia riga di comando {{site.data.keyword.Bluemix}}" /> </a>  <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(Si apre in una nuova scheda o finestra)"><img class="image" src="images/btn_cf_commandline.svg" alt="Scarica l'interfaccia riga di comando Cloud Foundry" /> </a>
 </p>
 
 **Limitazione:** gli strumenti della riga di comando non sono supportati da Cygwin. Utilizzali in una finestra della riga di comando diversa da quella di Cygwin.
@@ -46,28 +48,32 @@ Prima di iniziare, installa le interfacce riga di comando {{site.data.keyword.Bl
 Una volta installate le interfacce riga di comando, puoi iniziare a lavorare:
 
   1. {: download} Scarica il tuo codice starter ed estrai il pacchetto in una nuova directory per configurare il tuo ambiente di sviluppo.
-      
+
     <a class="xref" href="http://bluemix.net" target="_blank" title="(si apre in una nuova scheda o finestra)"><img class="image" src="images/btn_starter-code.svg" alt="Scarica codice di starter" /> </a>
-  
+
   2. Passa alla directory in cui si trova il codice.
-  
+
   <pre class="pre">cd <var class="keyword varname">your_new_directory</var></pre>
-  
+
   3.  Apporta le modifiche al codice della tua applicazione, adattandolo. Ti suggeriamo di accertarti che l'applicazione venga eseguita in locale prima di eseguirne la distribuzione a {{site.data.keyword.Bluemix}}.<br><br>Presta particolare attenzione al file `manifest.yml`. Quando ridistribuisci la tua applicazione a {{site.data.keyword.Bluemix}}, questo file viene utilizzato per determinare l'URL, l'allocazione di memoria, il numero di istanze e altri parametri fondamentali della tua applicazione. Per [ulteriori informazioni sul file manifest](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){: new_window}, consulta la documentazione Cloud Foundry.
-  
+
   4. Stabilisci una connessione a {{site.data.keyword.Bluemix}}.
-  
+
   <pre class="pre">bluemix api https://api.<span class="keyword" data-hd-keyref="DomainName">DomainName</span></pre>
-  
+
   5. Accedi a {{site.data.keyword.Bluemix_notm}}.
- 
-  <pre class="pre">bluemix login -u <var class="keyword varname" data-hd-keyref="user_ID">username</var> -o "<var class="keyword varname" data-hd-keyref="org_name">org_name</var>" -s "<var class="keyword varname" data-hd-keyref="space_name">space_name</var>"</pre>
-  
+
+  <pre class="pre">bluemix login -u <var class="keyword varname" data-hd-keyref="user_ID">nome_utente</var> -o <var class="keyword varname" data-hd-keyref="org_name">nome_organizzazione</var> -s <var class="keyword varname" data-hd-keyref="space_name">nome_spazio</var></pre>
+
+  Se stai utilizzando un ID federato, usa l'opzione -sso.
+
+  <pre class="pre">bluemix login -u <var class="keyword varname" data-hd-keyref="user_ID">username</var> -o "<var class="keyword varname" data-hd-keyref="org_name">org_name</var>" -s "<var class="keyword varname" data-hd-keyref="space_name">space_name</var>" -sso</pre>
+
   6. Distribuisci la tua applicazione a {{site.data.keyword.Bluemix_notm}}. Per ulteriori informazioni sul comando cf push, vedi [Caricamento della tua applicazione](/docs/starters/upload_app.html).
-  
+
   <pre class="pre">cf push "<var class="keyword varname" data-hd-keyref="app_name">app_name</var>"</pre>
-  
+
   7. Accedi alla tua applicazione immettendo il seguente URL
 nel browser:
-  
+
   <pre class="codeblock"><code><var class="keyword varname" data-hd-keyref="host">host</var>.<span class="keyword" data-hd-keyref="APPDomain">AppDomainName</span></code></pre>

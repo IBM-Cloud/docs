@@ -42,7 +42,7 @@ Si empieza con un Iniciador de código, continúe con [Utilización de un inicia
 ## Guías de aprendizaje
 {: #tutorials}
 
-Para ver instrucciones detalladas sobre cómo crear apps con iniciadores, puede utilizar las guías de aprendizaje.  
+Para ver instrucciones detalladas sobre cómo crear apps con iniciadores, puede utilizar las guías de aprendizaje. 
 
 ### Guías de aprendizaje del Iniciador de IU
 {: #tutorials_UI}

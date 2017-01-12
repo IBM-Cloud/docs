@@ -6,7 +6,7 @@ copyright:
 
   years: 2016
 
-
+lastupdated: "2016-11-14"
 
 ---
 
@@ -18,9 +18,6 @@ copyright:
 
 # Comandi Cloud Foundry (cf)
 {: #cf}
-
-Ultimo aggiornamento: 20 ottobre 2016
-{: .last-updated}
 
 L'interfaccia di riga comando (CLI) Cloud Foundry (cf) fornisce una serie di comandi per gestire le tue applicazioni. Le seguenti informazioni elencano i comandi cf più utilizzati per la gestione delle applicazioni e includono i relativi nomi, opzioni, utilizzo, prerequisiti, descrizioni ed esempi. Per elencare tutti i comandi cf e le informazioni di guida associate, utilizza `cf help`. Utilizza `cf nome_comando -h` per visualizzare delle informazioni di guida dettagliate per uno specifico comando.
 {: shortdesc}
@@ -48,7 +45,7 @@ Utilizza l'indice nella seguente tabella per fare riferimento ai comandi Cloud F
  </tr>
    </tbody>
  </table>
-*Tabella 1. Comandi generali di Cloud Foundry*
+{: caption="Table 1. General Cloud Foundry commands" caption-side="top"}
 
 
 <table summary="Comandi in ordine alfabetico per la gestione di applicazioni, spazi e servizi. Ogni comando ha un link che porta a ulteriori informazioni sul comando.">
@@ -74,11 +71,12 @@ Utilizza l'indice nella seguente tabella per fare riferimento ai comandi Cloud F
  <td>[ingrandire](index.html#cf_scale)</td>
  <td>[services](index.html#cf_services)
  <td>[set-env](index.html#cf_set-env)</td>
+ <td>[ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh)</td>
  <td>[stop](index.html#cf_stop)</td>
  </tr>
  </tbody>
  </table>
-*Tabella 2. Comandi per la gestione di applicazioni, spazi e servizi*
+{: caption="Table 2. Commands for managing apps, spaces, and services" caption-side="top"}
 
 
 ## cf api
@@ -400,7 +398,7 @@ Ti fa accedere a {{site.data.keyword.Bluemix_notm}}.
 **Nota**: se stai eseguendo l'accesso con un ID federato, devi utilizzare il parametro SSO (single sign-on) per accedere.
 
 ```
-cf login [-a url] [-u nome_utente] [-p password] [-sso] [-o nome_organizzazione] [-s nome_spazio] [--skip-ssl-validation]
+cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s space_name] [--skip-ssl-validation]
 ```
 
 <strong>Prerequisiti</strong>: Nessuno.
@@ -518,7 +516,7 @@ cf marketplace
 Distribuisce una nuova applicazione a {{site.data.keyword.Bluemix_notm}} oppure aggiorna un'applicazione esistente in {{site.data.keyword.Bluemix_notm}}.
 
 ```
-cf push appname [-b nome_pacchettodibuild] [-c comando_di_avvio] [-f percorso_manifest] [-i numero_istanze] [-k limite_disco] [-m limite_memoria] [-n nome_host] [-p percorso_applicazione] [-s nome_stack] [-t lunghezza_timeout] [--no-hostname] [--no-manifest] [--no-route] [--no-start] [--random-route]
+cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i instance_number] [-k disk_limit] [-m memory_limit] [-n host_name] [-p app_path] [-s stack_name] [-t timeout_length] [--no-hostname] [--no-manifest] [--no-route] [--no-start] [--random-route]
 ```
 
 <strong>Prerequisiti</strong>: `cf api`, `cf login`, `cf target`
@@ -584,7 +582,7 @@ Visualizza o modifica il numero di istanze,
 il limite di spazio su disco e il limite di memoria per un'applicazione.
 
 ```
-cf scale appname [-i numero_istanze] [-k limite_disco] [-m limite_memoria] [-f]
+cf scale appname [-i instance_number] [-k disk_limit] [-m memory_limit] [-f]
 ```
 
 <strong>Prerequisiti</strong>: `cf api`, `cf login`, `cf target`
@@ -671,6 +669,42 @@ cf set-env my_app variable_a 123
 {: codeblock}
 
 
+## cf ssh
+{: #cf_ssh}
+
+Ti fa accedere in modo sicuro in un contenitore dell'applicazione. Per impostazione predefinita, SSH accede al contenitore in cui è in esecuzione la prima istanza dell'applicazione, che è l'istanza con indice 0.
+
+```
+cf ssh
+```
+<strong>Prerequisiti</strong>: `cf api`, `cf login`, `cf target`
+
+Devi inoltre configurare la tua distribuzione Cloud Foundry per consentire l'accesso SSH alle istanze dell'applicazione. Per i dettagli, vedi [Configuring SSH Access for Cloud Foundry](https://docs.cloudfoundry.org/running/config-ssh.html){:new_window}
+
+<strong>Opzioni del comando</strong>:
+
+<dl>
+<dt>nomeapplicazione</dt>
+<dd>Il nome dell'applicazione. Se è consentito SSH, puoi utilizzare questa opzione per avviare una sessione SSH interattiva con una VM che ospita l'applicazione.</dd>
+<dt>-i</dt>
+<dd>Indirizza un'istanza specifica di un'applicazione.</dd>
+<dt>-L</dt>
+<dd>Abilita l'inoltro alla porta locale, che esegue il bind di una porta di output sulla tua macchina a una porta di input nella VM dell'applicazione.</dd>
+<dt>-N</dt>
+<dd>Non esegue un comando remoto.</dd>
+<dt>-t, -tt o -T</dt>
+<dd>Ti abilita ad eseguire una sessione SSH in modalità pseudo-tty che genera l'output di riga del terminale.<dd>
+</dl>
+
+<strong>Esempi</strong>:
+
+Avvia una sessione SSH interattiva con una VM che ospita un'applicazione denominata `my_app`.
+```
+$ cf ssh my_app
+```
+{: codeblock}
+
+
 ## cf stacks
 {: #cf_stacks}
 
@@ -726,7 +760,7 @@ cf stop my_app
 Imposta o visualizza l'organizzazione o spazio di destinazione
 
 ```
-cf target [-o nome_organizzazione] [-s nome_spazio]
+cf target [-o org_name] [-s space_name]
 ```
 <strong>Prerequisiti</strong>: `cf api`, `cf login`
 

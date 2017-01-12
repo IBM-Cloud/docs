@@ -1,16 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 # Data & Analytics
 {: #data_analytics}
-
-*Última atualização: 9 de março de 2016*
 
 Faça mais com serviços analíticos
 e bancos de dados em nuvem integrados e ricos. Além de explorar os serviços, é possível usar o console
@@ -22,3 +21,4 @@ e analisar seus dados, todos em um local central. Basta clicar em [TRABALHAR COM
 Construa mais | Cresça mais | Dormiria mais
 ---- | ---- | ----
 Fique focado nas coisas divertidas... criando novos apps, não na administração do sistema. | Escale seus dados no IBM Cloud. | Fique tranquilo enquanto os especialistas IBM mantêm seus dados em execução 24 horas por dia, sete dias por semana.
+{: caption="Table 1. Benefits of using the Work with Data console" caption-side="top"}

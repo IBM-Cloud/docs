@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-
+lastupdated: "2016-12-05"
 
 
 ---
@@ -17,11 +17,9 @@ copyright:
 
 # Gerenciando membros da equipe e funções
 {: #userroles}
-Última atualização: 20 de outubro de 2016
-{: .last-updated}
 
 A partir da página de **Diretório da equipe** para a sua conta, é possível gerenciar membros da equipe existentes e suas funções em sua organização e espaços, bem como convidar novos
-membros da equipe. Para acessar o diretório da equipe de sua conta, clique em **Conta** &gt; **Diretório de equipe**.
+membros da equipe. Para acessar o diretório da equipe de sua conta, clique em **Conta** &gt; **Diretório de equipe**. 
 {:shortdesc}
 
 Proprietários da conta executam todas as operações nas organizações e espaços, incluindo o gerenciamento de membros da equipe e de suas funções designadas. Gerenciadores de organização têm acesso para
@@ -34,8 +32,6 @@ funções. Verifique as informações a seguir, para saber mais sobre funções.
 
 No nível de conta, há duas funções que permitem o acesso a diferentes recursos de gerenciamento de conta:
 
-*Tabela 1. Funções e permissões da conta*
-
 | Função da conta | Permissões |    
 |----------------|---------|
 |Proprietário | Um proprietário para a conta tem acesso ao seu perfil, diretório da equipe, às suas informações de faturamento, notificações de gastos e ao seu painel de uso. A partir da página de diretório da
@@ -43,6 +39,7 @@ equipe, o proprietário pode convidar novos membros da equipe e ajustar funçõe
 serviço e gerenciar organizações e espaços. |
 |Membro | Um membro tem acesso ao seu perfil, diretório da equipe, ao seus créditos da conta e limites de faturamento no cabeçalho do {{site.data.keyword.Bluemix_notm}}. No entanto, na página de
 diretório da equipe, um membro pode apenas visualizar os membros da equipe dentro da conta. |
+{:caption="Table 1. Account roles and permissions" caption-side="top"}
 
  Todos os novos membros da equipe são incluídos como um membro da conta. É possível designar funções de organização e espaço para convidados, a fim de ativar visualizações e permissões específicas no
 {{site.data.keyword.Bluemix_notm}}. Novos membros da equipe incluídos em uma organização são designados com a função de organização de auditor por padrão. Para um espaço específico, é possível optar por
@@ -51,8 +48,6 @@ funções na página **Diretório da equipe**.
 
 As funções a seguir podem ser designadas no nível de organização:
 
-*Tabela 2. Funções e permissões de organização*
-
 | Função organizacional | Permissões |    
 |-------------------|-------------|
 |Gerente | Gerenciadores de organização podem criar, visualizar, editar ou excluir espaços dentro da organização, visualizar o uso e a cota da organização, convidar membros da equipe para a organização,
@@ -60,10 +55,9 @@ gerenciar quem tem acesso à organização e às suas funções na organização
 |Gerenciador de faturamento | Gerenciadores de faturamento podem visualizar informações de uso de tempo de execução e serviço para a organização na página de Painel de uso.  |
 |Auditor | Auditores da organização podem visualizar o conteúdo do aplicativo e do serviço na organização. Auditores também podem visualizar os membros da equipe na organização e as suas funções designadas e a
 cota para a organização. Essa função é designada para todos os convidados por padrão.|
+{:caption="Table 2. Organization roles and permissions" caption-side="top"}
 
 As funções a seguir podem ser designadas no nível de espaço:
-
-*Tabela 3. Funções e permissões de espaço*
 
 | Função de espaço | Permissões |    
 |------------|-------------|
@@ -74,6 +68,7 @@ aplicativos, renomear um aplicativo, excluir um aplicativo, renomear um espaço,
 para cada aplicativo no espaço. Além disso, o desenvolvedor de espaço pode associar uma URL interna ou externa com um aplicativo no espaço.   |
 |Auditor | Auditores de espaço têm acesso somente leitura a todas as informações sobre o espaço, como informações sobre o número de instâncias, ligações de serviço e uso de recurso para cada aplicativo no
 espaço. |
+{:caption="Table 3. Space roles and permissions" caption-side="top"}
 
 **Nota**: membros da equipe que são designados com a função de espaço de gerenciador ou desenvolvedor podem acessar a variável de ambiente VCAP_SERVICES. No entanto, um membro da
 equipe designado com a função de auditor não pode acessar VCAP_SERVICES.

@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2016
 
-ultimo aggiornamento: "18-04-2016" 
+lastupdated: "2016-04-18" 
 
 ---
 
@@ -85,5 +85,3 @@ può utilizzare. I limiti sono i seguenti:
 <tr><td>Numero di rotte</td> <td>500</td>
 </table>
 </dd></dl>
-
-*Tabella 1. Limiti delle risorse {{site.data.keyword.Bluemix_notm}} per un account di prova*

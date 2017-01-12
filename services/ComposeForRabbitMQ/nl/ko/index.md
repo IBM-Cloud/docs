@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-12-09"
 ---
 
 {:new_window: target="_blank"}
@@ -13,9 +13,6 @@ copyright:
 
 # {{site.data.keyword.composeForRabbitMQ}} 시작하기
 {: #getting-started-with-compose-for-rabbitmq}
-
-마지막 업데이트 날짜: 2016년 9월 20일
-{: .last-updated}
 
 RabbitMQ는 데이터와 애플리케이션 계층의 분리를 사용하여 애플리케이션과 데이터베이스 간 메시지를 비동기로 처리합니다. 개발자는 RabbitMQ를 사용하여 사용자 정의할 수 있는 지속성 레벨, 전달 설정, 확인된 문서가 있는 메시지를 라우트하고 추적하며 큐에 대기시킬 수 있습니다. {{site.data.keyword.composeForRabbitMQ_full}}를 사용하면 배치 모니터링, 단추를 클릭하여 실행하는 스케일링, 사용자 설정, 로그 파일 액세스와 같은 관리 기능을 갖춘 사용이 간편한 관리 인터페이스에 액세스할 수 있습니다.
 {:shortdesc}
@@ -49,6 +46,7 @@ RabbitMQ는 데이터와 애플리케이션 계층의 분리를 사용하여 애
 `deployment_id`|Compose에서 작성된 서비스의 내부 ID입니다.
 `db_type`|서비스에서 제공하는 데이터베이스의 유형입니다. 이 경우 `rabbitmq`입니다.
 `이름`|데이터베이스 배치 이름입니다.
+{: caption="Table 1. {{site.data.keyword.composeForRabbitMQ}} credentials" caption-side="top"}
 
 # 관련 링크
 {: #rellinks}

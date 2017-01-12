@@ -1,10 +1,11 @@
 ---
 
 copyright:
-  year: 2016
-lastupdated: "2016-11-07"
+  year: 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
+
 {:screen: .screen}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
@@ -13,13 +14,13 @@ lastupdated: "2016-11-07"
 # Enabling Facebook authentication for Web applications
 {: #facebook-auth-web}
 
-Use Facebook to authenticate users on your {{site.data.keyword.amafull}}  Web application. Add {{site.data.keyword.amashort}} security functionality. 
+Use Facebook to authenticate users on your {{site.data.keyword.amafull}}  Web application. Add {{site.data.keyword.amashort}} security functionality.
 
 ## Before you begin
 {: #facebook-auth-android-before}
 You must have:
 
-* A Web app. 
+* A Web app.
 * An {{site.data.keyword.amashort}} service. For more information, see [Getting started](index.html).
 * The URI for the final redirect (after the authorization process completes).
 
@@ -29,8 +30,8 @@ You must have:
 
 To use Facebook as an identity provider on your website, you must add and configure the website platform on your Facebook application.
 
-1. Log in to your account on the [Facebook for Developers](https://developers.facebook.com) site. 
-	For information on creating a new app, see [Creating an application on the Facebook for Developers website](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID). 
+1. Log in to your account on the [Facebook for Developers](https://developers.facebook.com) site.
+	For information on creating a new app, see [Creating an application on the Facebook for Developers website](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
 1. Note the **App ID** and **App Secret**. You need these values when you configure your Web project for Facebook authentication in the Mobile Client Access dashboard.
 1. From the **Products List**, choose **Facebook Login**.
 4. Add the **Web** platform, if it does not exist.
@@ -60,41 +61,41 @@ The `VCAP_SERVICES` environment variable is created automatically for each {{sit
 
 To start the process of authorization:
 
-1. Retrieve the authorization endpoint (`authorizationEndpoint`) and client id (`clientId`) from the service credentials stored in the `VCAP_SERVICES` environment variable. 
+1. Retrieve the authorization endpoint (`authorizationEndpoint`) and client id (`clientId`) from the service credentials stored in the `VCAP_SERVICES` environment variable.
 
-	`var cfEnv = require("cfenv");` 
+	`var cfEnv = require("cfenv");`
 
-	**Note:** If you added the {{site.data.keyword.amashort}} service to your application prior to adding Web support, you might not have token endpoint in the **Service Credentials**. Instead, use the following URLs, depending on your {{site.data.keyword.Bluemix_notm}} region: 
- 
-	US South: 
+	**Note:** If you added the {{site.data.keyword.amashort}} service to your application prior to adding Web support, you might not have token endpoint in the **Service Credentials**. Instead, use the following URLs, depending on your {{site.data.keyword.Bluemix_notm}} region:
 
-	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization` 
+	US South:
 
-	London: 
+	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization`
 
-	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization` 
+	London:
 
-	Sydney: 
+	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization`
 
-	`https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization` 
+	Sydney:
 
-2. Build the authorization server URI using `response_type("code")`, `client_id`, and `redirect_uri` as query parameters. 
+	`https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization`
+
+2. Build the authorization server URI using `response_type("code")`, `client_id`, and `redirect_uri` as query parameters.
 
 3. Redirect from your Web app to the generated URI.
 
 	The following example retrieves the parameters from the `VCAP_SERVICES` variable, building the URL, and sending the redirect request.
 
 	```Java
-	var cfEnv = require("cfenv"); 
+	var cfEnv = require("cfenv");
 
 	app.get("/protected", checkAuthentication, function(req, res, next) {  
-		res.send("Hello from protected endpoint"); 
+		res.send("Hello from protected endpoint");
 		}
-	); 
-  
+	);
+
 	function checkAuthentication(req, res, next) {
-		// Check if user is authenticated 
-  
+		// Check if user is authenticated
+
 		if (req.session.userIdentity) {   
 			next()  
 		} else {   
@@ -102,16 +103,16 @@ To start the process of authorization:
 			var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;   
 			var authorizationEndpoint = mcaCredentials.authorizationEndpoint;   
 			var clientId = mcaCredentials.clientId;   
-			var redirectUri = "http://some-server/oauth/callback"; 
+			var redirectUri = "http://some-server/oauth/callback";
 			// Your Web application redirect URI   
 
 			var redirectUrl = authorizationEndpoint + "?response_type=code";
 			redirectUrl += "&client_id=" + clientId;   
 			redirectUrl += "&redirect_uri=" + redirectUri;   
-  
+
 			res.redirect(redirectUrl);  
-  
-		} 
+
+		}
 	}
 	```
 	{: codeblock}
@@ -126,56 +127,56 @@ To start the process of authorization:
 
 The next step is to obtain the access and identity tokens using the previously received grant code:
 
-1.  Retrieve token `tokenEndpoint`, `clientId`, and `secret`  from service credentials stored in `VCAP_SERVICES` environment variable. 
- 
-	**Note:** If you used {{site.data.keyword.amashort}} before web support was added, you might not have a token endpoint in service credentials. Instead, use the following URLs, depending on your Bluemix region: 
+1.  Retrieve token `tokenEndpoint`, `clientId`, and `secret`  from service credentials stored in `VCAP_SERVICES` environment variable.
 
-	US South: 
-  
+	**Note:** If you used {{site.data.keyword.amashort}} before web support was added, you might not have a token endpoint in service credentials. Instead, use the following URLs, depending on your Bluemix region:
+
+	US South:
+
 	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/token`
- 
-	London: 
- 
-	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token` 
- 
-	Sydney: 
- 
+
+	London:
+
+	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token`
+
+	Sydney:
+
 	`https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/token`
- 
+
 2. Send a POST request to the token server URI with grant type ("authorization_code"), `clientId`, and your redirect URI  as form parameters. Send the `clientId` and `secret` as basic HTTP authentication credentials.
- 
+
 	The following code retrieves the necessary values, and sends them with a POST request.
 
 	```Java
 	var cfEnv = require("cfenv");
 	var base64url = require("base64url");
 	var request = require('request');
-  
-	app.get("/oauth/callback", function(req, res, next) { 
-		var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials; 
-		var tokenEndpoint = mcaCredentials.tokenEndpoint; 
-		var formData = { 
-			grant_type: "authorization_code", 
-			client_id: mcaCredentials.clientId, 
-			redirect_uri: "http://some-server/oauth/callback",
-			// Your web application redirect uri 
-			code: req.query.code 
-		} 
 
-		request.post( { 
-			url: tokenEndpoint, 
-			formData: formData 
-		}, function (err, response, body) { 
-			var parsedBody = JSON.parse(body); 
-			req.session.accessToken = parsedBody.access_token; 
+	app.get("/oauth/callback", function(req, res, next) {
+		var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
+		var tokenEndpoint = mcaCredentials.tokenEndpoint;
+		var formData = {
+			grant_type: "authorization_code",
+			client_id: mcaCredentials.clientId,
+			redirect_uri: "http://some-server/oauth/callback",
+			// Your web application redirect uri
+			code: req.query.code
+		}
+
+		request.post( {
+			url: tokenEndpoint,
+			formData: formData
+		}, function (err, response, body) {
+			var parsedBody = JSON.parse(body);
+			req.session.accessToken = parsedBody.access_token;
 			req.session.idToken = parsedBody.id_token;
-			var idTokenComponents = parsedBody.id_token.split("."); 
-			// [header, payload, signature] 
+			var idTokenComponents = parsedBody.id_token.split(".");
+			// [header, payload, signature]
 			var decodedIdentity= base64url.decode(idTokenComponents[1]);
-			req.session.userIdentity = JSON.parse(decodedIdentity)["imf.user"]; 
+			req.session.userIdentity = JSON.parse(decodedIdentity)["imf.user"];
 			res.redirect("/");
 		}
-		).auth(mcaCredentials.clientId, mcaCredentials.secret); 
+		).auth(mcaCredentials.clientId, mcaCredentials.secret);
 		}
 	);
 	```
@@ -194,17 +195,13 @@ The identity token contains information about user identity. In case of Facebook
 
 The access token enables communications with resources protected by {{site.data.keyword.amashort}} authorization filters, see [Protecting Resources](protecting-resources.html).
 
-To make requests to protected resources, add an authorization header to requests with the following structure: 
+To make requests to protected resources, add an authorization header to requests with the following structure:
 
 `Authorization=Bearer <accessToken> <idToken>`
 
 #### Tips
-{: #tips} 
+{: #tips}
 
 * You must separate the `accessToken` and `idToken` with a white space.
 
-* The `idToken` is optional. If you do not supply the identity token, the protected resource can be accessed, but will not receive any information about the authorized user. 
- 
-
-
-
+* The `idToken` is optional. If you do not supply the identity token, the protected resource can be accessed, but will not receive any information about the authorized user.

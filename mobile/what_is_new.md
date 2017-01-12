@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016, 2017
+
 lastupdated: "2016-12-15"
 
 ---
@@ -9,6 +10,7 @@ lastupdated: "2016-12-15"
 
 # What's new in the Mobile dashboard
 {: #what_is_new}
+
 
 ### New as of: December 2016
 {: #dec-2016}
@@ -21,6 +23,8 @@ The December 2016 update of the {{site.data.keyword.Bluemix}} Mobile dashboard i
    * Where it is supported, you can create or connect an existing Object Storage service as a data source for your project.
    * You can customize the navigation design of the app that you are creating with a UI starter. 
    
+
+
 
 ### New as of: November 2016
 {: #nov-2016}

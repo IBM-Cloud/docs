@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-11"
 
 ---
 
@@ -11,9 +12,6 @@ copyright:
 
 # Opções para enviar por push os apps Liberty
 {: #options_for_pushing}
-
-Última atualização: 10 de junho de 2016
-{: .last-updated}
 
 O comportamento do servidor Liberty no Bluemix é controlado pelo buildpack do Liberty. Os buildpacks podem fornecer um ambiente de tempo de execução completo para uma classe específica de aplicativos. Eles são a chave para fornecer a portabilidade nas nuvens e para contribuir com uma arquitetura de nuvem aberta. O buildpack do Liberty fornece um contêiner do WebSphere Liberty capaz de executar os aplicativos Java EE 7 e OSGi. Ele suporta estruturas populares como Spring e inclui o IBM JRE. O WebSphere Liberty permite o desenvolvimento rápido de aplicativo que é adequado para a nuvem. O buildpack do Liberty suporta diversos aplicativos que são implementados em um único servidor do Liberty. Como parte da integração do buildpack do Liberty no Bluemix, o buildpack assegura que as variáveis de ambiente para os serviços de ligação sejam mostradas como variáveis de configuração no servidor Liberty.
 
@@ -223,37 +221,43 @@ Quando um servidor em pacote ou um diretório do servidor Liberty é enviado por
 ### Variáveis referenciáveis
 {: #referenceable_variables}
 
-As variáveis a seguir são definidas no arquivo runtime-vars.xml e referenciadas a partir de um arquivo server.xml enviado por push. Todas as variáveis fazem distinção entre maiúsculas e minúsculas.
+As variáveis a seguir são definidas no arquivo `runtime-vars.xml` e referenciadas a partir de um arquivo
+`server.xml` enviado por push. Todas as variáveis fazem distinção entre maiúsculas e minúsculas.
 
 * ${port}: a porta HTTP em que o servidor Liberty está atendendo.
-* ${vcap_console_port}: a porta em que o console vcap está em execução (geralmente igual a ${port}).
-* ${vcap_app_port}: a porta em que o servidor app está atendendo (geralmente igual a ${port}).
-* ${vcap_console_ip}: o endereço IP do console vcap (geralmente é o endereço IP no qual o servidor Liberty está atendendo).
+* ${vcap_app_port}: o mesmo que ${port}. Não configurado ao executar no Diego.
 * ${application_name}: o nome do aplicativo, conforme definido usando as opções no comando cf push.
-* ${application_version}: a versão dessa instância do aplicativo, que assume a forma de um UUID, como, por exemplo, b687ea75-49f0-456e-b69d-e36e8a854caa. Esta variável muda à cada envio sucessivo por push do aplicativo que contém uma codificação nova ou muda para os artefatos de aplicativo.
-* ${host}: o endereço IP do DEA que está executando o aplicativo (geralmente é o mesmo que ${vcap_console_ip}).
+* ${application_version}: a versão desta instância do aplicativo, que usa a forma de um
+UUID, como `b687ea75-49f0-456e-b69d-e36e8a854caa`. Esta variável muda à cada envio sucessivo por push do aplicativo que contém uma codificação nova ou muda para os artefatos de aplicativo.
+* ${host}: o endereço IP da instância do aplicativo.
 * ${application_uris}: uma matriz de estilo JSON dos terminais que podem ser usados para acessar esse aplicativo. Por exemplo: myapp.mydomain.com.
-* ${start}: a data e a hora em que o aplicativo foi iniciado, assumindo uma forma semelhante a 2013-08-22 10:10:18 -0400.
+* ${start}: a data e hora em que o aplicativo foi iniciado, assumindo uma forma semelhante a
+`2013-08-22 10:10:18 -0400`. Não configurado ao executar no Diego.
 
 ### Acessando informações de serviços ligados
 {: #accessing_info_of_bound_services}
 
-Quando desejar ligar um serviço a seu aplicativo, as informações sobre o serviço, como as credenciais de conexão, são incluídas na [Variável de ambiente VCAP_SERVICES](http://docs.run.pivotal.io/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES) que o Cloud Foundry configura para o aplicativo. Para os [serviços automaticamente configurados](autoConfig.html), o buildpack Liberty gera ou atualiza entradas de ligação de serviço no arquivo server.xml. O conteúdo das entradas de ligação de serviço pode estar em um dos formatos a seguir:
+Quando desejar ligar um serviço a seu aplicativo, as informações sobre o serviço, como as credenciais de conexão, são incluídas na [Variável de ambiente VCAP_SERVICES](https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES) que o Cloud Foundry configura para o aplicativo. Para os [serviços automaticamente configurados](autoConfig.html), o buildpack Liberty gera ou atualiza entradas de ligação de serviço no arquivo server.xml. O conteúdo das entradas de ligação de serviço pode estar em um dos formatos a seguir:
 
 * cloud.services.&lt;service-name&gt;.&lt;property&gt;, que descreve as informações como o nome, o tipo e o plano do serviço.
 * cloud.services.&lt;service-name&gt;.connection.&lt;property&gt;, que descreve as informações de conexão para o serviço.
 
 O conjunto de informações típico é o seguinte:
-* name: o nome do serviço. Por exemplo, mysql-e3abd.
-label: o tipo do serviço criado. Por exemplo, mysql-5.5.
-* plan: o plano de serviço, conforme indicado pelo identificador exclusivo para esse plano. Por exemplo, 100.
-connection.name: um identificador exclusivo para a conexão, que assume a forma de um UUID. Por exemplo, d01af3a5fabeb4d45bb321fe114d652ee.
-* connection.hostname: o nome do host do servidor que está executando o serviço. Por exemplo, mysql-server.mydomain.com.
-* connection.host: o endereço IP do servidor que está executando o serviço. Por exemplo, 9.37.193.2.
-* connection.port: a porta na qual o serviço está atendendo para conexões recebidas. Por exemplo, 3306,3307.
-* connection.user: o nome do usuário que é usado para autenticar esse aplicativo para o serviço. O nome do usuário é gerado automaticamente pelo Cloud Foundry. Por exemplo: unHwANpjAG5wT.
+* name: o nome do serviço, por exemplo, mysql-e3abd.
+* label: o tipo do serviço criado, por exemplo, mysql-5.5.
+* plan: o plano de serviço, conforme indicado pelo identificador exclusivo para esse plano, por
+exemplo, 100.
+* connection.name: um identificador exclusivo para a conexão, que assume a forma de um UUID, por
+exemplo, d01af3a5fabeb4d45bb321fe114d652ee.
+* connection.hostname: o nome do host do servidor que está executando o serviço, por exemplo,
+mysql-server.mydomain.com.
+* connection.host: o endereço IP do servidor que está executando o serviço, por exemplo, 9.37.193.2.
+* connection.port: a porta na qual o serviço está atendendo conexões recebidas, por exemplo, 3306,3307.
+* connection.user: o nome do usuário que é usado para autenticar esse aplicativo para o serviço. O nome
+do usuário é gerado automaticamente pelo Cloud Foundry, por exemplo, unHwANpjAG5wT.
 * connection.username: um alias para connection.user.
-* connection.password: a senha que é usada para autenticar esse aplicativo para o serviço. A senha é gerada automaticamente pelo Cloud Foundry. Por exemplo: pvyCY0YzX9pu5.
+* connection.password: a senha que é usada para autenticar esse aplicativo para o serviço. A senha é
+gerada automaticamente pelo Cloud Foundry, por exemplo, pvyCY0YzX9pu5.
 
 Para serviços ligados que não sejam automaticamente configurados pelo buildpack do Liberty, o aplicativo precisa gerenciar o acesso do recurso de backend sozinho.
 

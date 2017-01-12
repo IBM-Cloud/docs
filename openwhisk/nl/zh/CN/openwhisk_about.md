@@ -48,7 +48,7 @@ lastupdated: "2016-08-02"
 
 {{site.data.keyword.openwhisk_short}} 提供的执行模型支持各种用例。以下各部分包含典型的示例。
 
-### 将应用程序分解成微型服务
+### 将应用程序分解成微服务
 {: #openwhisk_use_cases_decomp}
 
 {{site.data.keyword.openwhisk_short}} 具有模块化和固有的可扩展性质，因此适用于在操作中实现细颗粒度的逻辑片段。例如，{{site.data.keyword.openwhisk_short}} 很适合用于从前端代码中除去装入密集型、潜在高峰（后台）任务并将这些任务作为操作实现。

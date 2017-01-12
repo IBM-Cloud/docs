@@ -1,12 +1,13 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2015，2016
 
- 
+lastupdated: "2016-06-20"
+
 
 ---
 
@@ -15,9 +16,6 @@ copyright:
 {:new_window: target="_blank"}
 
 # {{site.data.keyword.Bluemix_notm}} CLI 的 {{site.data.keyword.vpn_short}} 插件
-
-*上次更新时间：2016 年 6 月 20 日*
-{: .last-updated}
 
 *版本：*1.4.0
 

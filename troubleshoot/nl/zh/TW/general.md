@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2015
+  
+lastupdated: "2016-08-12"
 
 
 ---
@@ -17,8 +19,6 @@ copyright:
 # 一般服務問題
 {: #general}
 
-*前次更新：2016 年 8 月 12 日*
-{: .last-updated}
 
 {{site.data.keyword.Bluemix}} 服務問題可能包括刪除服務實例時發生的閘道逾時錯誤。然而，在許多情況下，您可以依照下列一些簡單的步驟，從這些問題中回復。
 {:shortdesc}

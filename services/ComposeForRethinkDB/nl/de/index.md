@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-12-09"
 ---
 
 {:new_window: target="_blank"}
@@ -13,9 +13,6 @@ copyright:
 
 # Einführung in {{site.data.keyword.composeForRethinkDB}}
 {: #getting-started-with-compose-for-rethinkdb}
-
-Letzte Aktualisierung: 20. September 2016
-{: .last-updated}
 
 {{site.data.keyword.composeForRethinkDB}} bietet Ihnen eine JSON-Dokument-basierte verteilte Datenbank mit integrierter Verwaltung und einer Untersuchungskonsole. RethinkDB verwendet die ReQL-Abfragesprache, die um Funktionsketten aufgebaut ist und in Clientbibliotheken für Java, JavaScript, Python und Ruby zur Verfügung steht. Mit ReQL besteht die Möglichkeit, serverseitige Funktionen von RethinkDB wie z. B. verteilte Joins und Unterabfragen über Clusterknoten hinweg zu verwenden. RethinkDB unterstützt außerdem sekundäre Indizes für eine bessere Lese-Abfrageleistung. Die leistungsfähigste Funktion von RethinkDB, Changefeeds, ermöglicht die Umwandlung vieler ReQL-Abfragen in Echtzeit-Feeds.
 {:shortdesc}
@@ -44,6 +41,7 @@ Feldname|Beschreibung
 `deployment_id`|Eine interne ID für den Service, wie in Compose erstellt.
 `db_type`|Der Datenbanktyp, der vom Service angeboten wird, in diesem Fall `rethink`.
 `name`|Der Name der Datenbankimplementierung.
+{: caption="Table 1. {{site.data.keyword.composeForRethinkDB}} - Berechtigungsnachweise" caption-side="top"}
 
 # Zugehörige Links
 {: #rellinks}

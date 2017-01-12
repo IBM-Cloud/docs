@@ -2,8 +2,11 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"  
+lastupdated: "2016-10-02"
+
 ---
+
+{:codeblock:.codeblock}
 
 # Kommunikation zwischen Back-End-Anwendungen und -Services
 {: #backend-comm}
@@ -20,6 +23,7 @@ Verwenden Sie das Modul `bms-mca-oauth-sdk npmjs`, um OAuth-Tokens abzurufen und
 ```Bash
 npm install -save bms-mca-oauth-sdk
 ```
+{: codeblock}
 
 ## Modul 'bms-mca-oauth-sdk' verwenden
 {: #using-sdk}
@@ -43,7 +47,7 @@ var options = {
 	// Alternativ können Sie diese Eigenschaftswerte ermitteln, indem Sie auf
 	// 'Berechtigungsnachweise anzeigen' auf der Kachel für den {{site.data.keyword.amashort}}-Service in Ihrem {{site.data.keyword.Bluemix_notm}}-Anwendungsdashboard klicken.
 
-	appId: "appId",				// Bluemix applicationGUID, auch: tenantId
+	appId: "tenantID",				// a.k.a. Bluemix applicationGUID
 	clientId: "clientId",			
 	secret: "secret",
 	serverUrl: "serverUrl"
@@ -61,3 +65,4 @@ oauthSDK.getAuthorizationHeader(options).then(function(authHeader){
 });
 
 ```
+{: codeblock}

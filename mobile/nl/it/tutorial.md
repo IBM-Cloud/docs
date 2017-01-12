@@ -2,15 +2,15 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-21"
+lastupdated: "2016-11-22"
 
 ---
 {:new_window: target="_blank"}
 
-# Esercitazione end-to-end dello starter codice {{site.data.keyword.visualrecognitionshort}} 
+# Esercitazione end-to-end dello starter codice di base
 {: #tutorial}
 
-La seguente esercitazione end-to-end spiega i passi per creare un progetto da uno starter codice {{site.data.keyword.visualrecognitionshort}}, inclusi gli strumenti che devi avere installati e di conseguenza, i passi per eseguire lo starter in Xcode e Android Studio.
+La seguente esercitazione end-to-end spiega i passi per creare un progetto da uno starter codice di base, inclusi gli strumenti che devi avere installato e, successivamente, i passi per eseguire lo starter in Xcode e Android Studio.
 
 
 ### Installazione degli strumenti per sviluppatori
@@ -19,7 +19,7 @@ La seguente esercitazione end-to-end spiega i passi per creare un progetto da un
 Assicurati di aver installato gli [strumenti per sviluppatori prerequisiti](get_code.html#prereq-dev-tools){: new_window}.
 
 
-### Creazione di un progetto da uno starter codice {{site.data.keyword.visualrecognitionshort}}
+### Creazione di un progetto dallo starter codice di base
 {: #create_project}
 
 1. rea un progetto dashboard Mobile in {{site.data.keyword.Bluemix}}.
@@ -30,9 +30,9 @@ Assicurati di aver installato gli [strumenti per sviluppatori prerequisiti](get_
 
    2. Fai clic su **Starter codice**.
 
-   3. Seleziona **Visual Recognition** e fai clic su **Crea progetto**.
+   3. Seleziona **Di base** e fai clic su **Crea progetto**.
 
-   4. Immetti il nome del tuo progetto. Per questa esercitazione, utilizza `VisualRecognitionProject`.
+   4. Immetti il nome del tuo progetto. Per questa esercitazione, utilizza `BasicProject`.
    
    5. Fai clic su **Crea**.
 
@@ -48,11 +48,11 @@ Assicurati di aver installato gli [strumenti per sviluppatori prerequisiti](get_
 
    4. Per Android, [configura FCM (Firebase Cloud Messaging)](/docs/services/mobilepush/t_push_provider_android.html){: new_window}.
    
-3. Facoltativo: aggiungi la funzionalità Analytics. 
+3. Facoltativo: aggiungi la funzionalità Analytics.
 
-   1. Fai clic su **Aggiungi** per **Analytics** dalla pagina **Panoramica progetto**. 
+   1. Fai clic su **Aggiungi** per **Analytics** dalla pagina **Panoramica progetto**.
 
-      In alternativa puoi fare clic su **Crea** dalla pagina **Analytics**. 
+      In alternativa puoi fare clic su **Crea** dalla pagina **Analytics**.
 
    2. Immetti il nome del tuo servizio e fai clic su **Crea**.
    
@@ -60,11 +60,11 @@ Assicurati di aver installato gli [strumenti per sviluppatori prerequisiti](get_
    
    4. Consulta [Introduzione a {{site.data.keyword.mobileanalytics_short}}](/docs/services/mobileanalytics/index.html){: new_window} per ulteriori informazioni sulla configurazione di Analytics.
   
-4. Facoltativo: aggiungi la funzionalità Authentication. 
+4. Facoltativo: aggiungi la funzionalità Authentication.
 
-   1. Fai clic su **Aggiungi** per **Authentication** nella pagina **Panoramica progetto**. 
+   1. Fai clic su **Aggiungi** per **Authentication** nella pagina **Panoramica progetto**.
 
-      In alternativa puoi selezionare **Crea** nella pagina **Authentication Notifications**. 
+      In alternativa puoi selezionare **Crea** nella pagina **Authentication Notifications**.
 
    2. Immetti il nome del tuo servizio e fai clic su **Crea**.
    
@@ -78,25 +78,27 @@ Assicurati di aver installato gli [strumenti per sviluppatori prerequisiti](get_
 
    1. Fai clic su **Richiama codice** nella pagina **Panoramica progetto** per selezionare la piattaforma e la lingua.
    
-      In alternativa puoi fare clic sula pagina **Codice**.
+      In alternativa puoi fare clic sulla pagina **Codice**.
       
-   2. Per iOS, fai clic su **iOS Swift**.
+   2. Per Objective-C, fai clic su **iOS Obj-C**.
+
+   3. Per Swift, fai clic su **iOS Swift**.
    
-   3. Per Android, fai clic su **Android**.
+   4. Per Cordova, fai clic su **Cordova**.
+
+   5. Per Android, fai clic su **Android**.
    
-   4. Quando il codice del progetto ha terminato la generazione, fai clic su **Scarica codice** per scaricare il tuo archivio del progetto.
+   6. Quando il codice del progetto ha terminato la generazione, fai clic su **Scarica codice** per scaricare il tuo archivio del progetto.
 
 
-### Esecuzione del tuo progetto in Xcode
-{: #run_xcode}
+### Esecuzione del tuo progetto Objective-C in Xcode
+{: #run_obj-c}
 
-1. Estrai il file `VisualRecognitionProject-Swift.zip`.
+1. Estrai il file `BasicProject-ObjC.zip`.
 
 2. Apri il file `README.md` in un visualizzatore Markdown per rivedere i passi di configurazione del progetto.
 
-   1. Crea la tua istanza del servizio [{{site.data.keyword.visualrecognitionshort}}](https://console.{DomainName}/catalog/services/visual-recognition/){: new_window}.
-   
-   2. Apri il tuo terminale e passa alla tua cartella del progetto.
+   1. Apri il tuo terminale e passa alla tua cartella del progetto.
    
       1. Esegui `pod setup` se hai bisogno di configurare il repository CocoaPods.
       
@@ -104,37 +106,63 @@ Assicurati di aver installato gli [strumenti per sviluppatori prerequisiti](get_
       
       3. Esegui `pod install` per installare i pod obbligatori per il tuo progetto.
       
-      4. Esegui `carthage update --platform iOS` per creare le dipendenze e i framework da utilizzare con l'SDK {{site.data.keyword.ibmwatson}} Developer Cloud iOS.
-      
-   3. Apri il tuo spazio di lavoro `VisualRecognitionProject.xcworkspace` Xcode.
-   
-   4. Aggiungi le tue credenziali del servizio {{site.data.keyword.visualrecognitionshort}}.
-   
-      1. Copia la tua `api_key` dalle tue credenziali del servizio {{site.data.keyword.visualrecognition}}.
-      
-      2. Incolla la tua `api_key` nella chiave `VisualRecognitionAPIKey` nel file `WatsonCredentials.plist`.
+   2. Apri il tuo spazio di lavoro `BasicProject.xcworkspace` Xcode.
       
 3. Esegui la tua applicazione.
 
 
-### Esecuzione del tuo progetto in Android Studio
-{: #run_studio}
+### Esecuzione del tuo progetto Swift in Xcode
+{: #run_swift}
 
-1. Estrai il file `VisualRecognitionProject-Android.zip`.
+1. Estrai il file `BasicProject-Swift.zip`.
 
-2. Apri il file `README.md` in un visualizzatore Markdown perconfigurare il tuo progetto. 
+2. Apri il file `README.md` in un visualizzatore Markdown per rivedere i passi di configurazione del progetto.
 
-   1. Crea la tua istanza del servizio [{{site.data.keyword.visualrecognitionshort}}](https://console.{DomainName}/catalog/services/visual-recognition/){: new_window}.
+   1. Apri il tuo terminale e passa alla tua cartella del progetto.
    
-      Salta questo passo se hai già un'istanza del servizio {{site.data.keyword.visualrecognitionshort}}.
-   
-   2. Apri il tuo progetto `VisualRecognitionProject-Android` in Android Studio.
-   
-   4. Aggiungi le tue credenziali del servizio {{site.data.keyword.visualrecognitionshort}}.
-   
-      1. Copia la tua `api_key` dalle tue credenziali del servizio {{site.data.keyword.visualrecognition}}.
+      1. Esegui `pod setup` se hai bisogno di configurare il repository CocoaPods.
       
-      2. Incolla la tua `api_key` nella chiave `watson_visual_recognition_api_key` nel file `res/values/watson_credentials.xml`.
+      2. Esegui `pod update` se hai bisogno di aggiornare i tuoi pod esistenti.
+      
+      3. Esegui `pod install` per installare i pod obbligatori per il tuo progetto.
+      
+   3. Apri il tuo spazio di lavoro `BasicProject.xcworkspace` Xcode.
+      
+3. Esegui la tua applicazione.
+
+
+### Esecuzione del tuo progetto Cordova in Xcode
+{: #run_cordova_xcode}
+
+1. Estrai il file `BasicProject-Cordova.zip`.
+
+2. Apri il file `README.md` in un visualizzatore Markdown per configurare il tuo progetto.
+
+   1. Apri il tuo progetto `platforms/ios` in Xcode.
+      
+3. Esegui la tua applicazione.
+
+
+### Esecuzione del tuo progetto Cordova in Android Studio
+{: #run_cordova_studio}
+
+1. Estrai il file `BasicProject-Cordova.zip`.
+
+2. Apri il file `README.md` in un visualizzatore Markdown per configurare il tuo progetto.
+
+   1. Apri il tuo progetto `platforms/android` in Android Studio.
+      
+3. Esegui la tua applicazione.
+
+
+### Esecuzione del tuo progetto Android in Android Studio
+{: #run_android}
+
+1. Estrai il file `BasicProject-Android.zip`.
+
+2. Apri il file `README.md` in un visualizzatore Markdown per configurare il tuo progetto.
+
+   1. Apri il tuo progetto `BasicProject-Android` in Android Studio.
       
 3. Esegui la tua applicazione.
 
@@ -154,5 +182,6 @@ Visualizza altre esercitazioni.
 ### Esercitazioni starter codice
 {: #tutorials_Code}
 
+* [Esercitazione - {{site.data.keyword.visualrecognitionshort}}](tutorial_visual_recognition.html)
 * [Esercitazione - Linguaggio Watson](tutorial_watson_language.html)
 * [Esercitazione - Weather ](tutorial_weather.html)

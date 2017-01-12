@@ -5,6 +5,8 @@
 copyright:
 
   years: 2014, 2016
+  
+lastupdated: "2016-10-19"
 
  
 
@@ -15,8 +17,6 @@ copyright:
 
 # Segurança do {{site.data.keyword.Bluemix_notm}}
 {: #security}
-Última atualização: 19 de outubro de 2016
-{: .last-updated}
 
 Projetada com práticas seguras de engenharia, a plataforma do {{site.data.keyword.Bluemix}} possui controles de segurança em camadas na rede e na infraestrutura. O {{site.data.keyword.Bluemix_notm}} fornece um grupo de serviços de segurança que podem ser usados por desenvolvedores de aplicativos para proteger seus apps móveis e da web. Esses elementos são combinados para fazer do {{site.data.keyword.Bluemix_notm}} uma plataforma com opções claras para desenvolvimento seguro do aplicativo.
 {:shortdesc}
@@ -49,7 +49,7 @@ Com o {{site.data.keyword.Bluemix_notm}} Local, você hospeda o {{site.data.keyw
 
 Figura 2. Visão geral de segurança da plataforma do {{site.data.keyword.Bluemix_notm}} Local
 
-A IBM instala, monitora remotamente e gerencia o {{site.data.keyword.Bluemix_notm}} Local em seu datacenter por meio de Retransmissão, um recurso de entrega incluído com o {{site.data.keyword.Bluemix_notm}} Local. A Retransmissão se conecta com segurança a certificados específicos de cada instância do {{site.data.keyword.Bluemix_notm}} Local. Para obter mais informações sobre o {{site.data.keyword.Bluemix_notm}} Local e Retransmissão, consulte [Bluemix Local](../local/index.html).
+A IBM instala, monitora remotamente e gerencia o {{site.data.keyword.Bluemix_notm}} Local em seu datacenter por meio de Retransmissão, um recurso de entrega incluído com o {{site.data.keyword.Bluemix_notm}} Local. A Retransmissão se conecta com segurança a certificados específicos de cada instância do {{site.data.keyword.Bluemix_notm}} Local. Para obter mais informações sobre o {{site.data.keyword.Bluemix_notm}} Local e Retransmissão, consulte [Bluemix Local](/docs/local/index.html).
 
 ### Segurança funcional
 
@@ -144,7 +144,7 @@ de segurança e gerenciamento de eventos (SIEM) do IBM QRadar para monitorar ten
 Nos ambientes do {{site.data.keyword.Bluemix_notm}} Dedicated e Local,
 administradores designados podem gerenciar funções e permissões para os usuários do
 {{site.data.keyword.Bluemix_notm}} em suas organizações usando o Console
-administrativo. Consulte [Gerenciando o {{site.data.keyword.Bluemix_notm}}](../admin/adminpublic.html#mng) para obter detalhes.
+administrativo. Veja [Gerenciando o {{site.data.keyword.Bluemix_notm}}](/docs/admin/adminpublic.html#mng) para obter detalhes.
 </dd>
 </dl>
 
@@ -209,11 +209,11 @@ O serviço de Single Sign On suporta várias fontes de identidade em que as cred
 <dd> Os registros de usuário que são mantidos pelo Google, Facebook e LinkedIn.</dd>
 </dl>
 
-Para obter mais informações, consulte [Introdução à conexão única](../services/SingleSignOn/index.html).
+Para obter mais informações, consulte [Introdução à conexão única](/docs/services/SingleSignOn/index.html).
 
 ### Segurança do aplicativo em nuvem
 
-Esse serviço fornece uma análise de segurança de apps móveis e da web e permite varrer o código-fonte para vulnerabilidades de segurança. Para obter mais informações, consulte [Introdução à segurança do aplicativo na nuvem](../services/ApplicationSecurityonCloud/index.html).
+Esse serviço fornece uma análise de segurança de apps móveis e da web e permite varrer o código-fonte para vulnerabilidades de segurança. Para obter mais informações, consulte [Introdução à segurança do aplicativo na nuvem](/docs/services/ApplicationSecurityonCloud/index.html).
 
 ### Plug-in do IBM UrbanCode para teste de segurança do aplicativo
 
@@ -225,13 +225,13 @@ Para obter mais informações, acesse [IBM Application Security Testing for Blue
 
 O serviço dashDB usa um servidor LDAP integrado para autenticação do usuário. A conexão entre os aplicativos e o banco de dados é protegida pelos certificados SSL. Esse serviço usa o recurso de criptografia nativa do DB2® para criptografar automaticamente seu banco de dados implementado e os backups de banco de dados. A rotação da chave mestra é automática e acontece a cada 90 dias.
 
-Para obter mais informações, consulte [Introdução ao dashDB](../services/dashDB/index.html).
+Para obter mais informações, consulte [Introdução ao dashDB](/docs/services/dashDB/index.html).
 
 ### Secure Gateway
 
 O serviço Secure Gateway permite que você conecte de forma segura apps {{site.data.keyword.Bluemix_notm}} em locais remotos, no local ou na nuvem. Ele fornece conectividade segura e estabelece um túnel entre a organização do {{site.data.keyword.Bluemix_notm}} e o local remoto ao qual você deseja se conectar. É possível configurar e criar um gateway seguro usando a interface com o usuário do {{site.data.keyword.Bluemix_notm}} ou um pacote de API.
 
-Para obter mais informações, consulte [Introdução ao Secure Gateway](../services/SecureGateway/secure_gateway.html).
+Para obter mais informações, consulte [Introdução ao Secure Gateway](/docs/services/SecureGateway/secure_gateway.html).
 
 ### Security information and event management
 
@@ -362,8 +362,7 @@ A tabela a seguir exibe quais serviços do {{site.data.keyword.Bluemix_notm}} s�
 |{{site.data.keyword.mql}}				|A	|A	|A	|	 		|
 |{{site.data.keyword.SecureGateway}}			|A	|A |	|	 		|
 |{{site.data.keyword.sescashort}}     |A |A |A	|  |
-
-*Tabela 1. Conformidade de plataforma e serviço*
+{: caption="Table 1. Platform and service compliance" caption-side="top"}
 
 # Links Relacionados
 {: #rellinks}
@@ -372,4 +371,4 @@ A tabela a seguir exibe quais serviços do {{site.data.keyword.Bluemix_notm}} s�
 {: #general}
 
 * [Segurança do IBM SaaS](http://www.ibm.com/cloud-computing/built-on-cloud/saas-security)
-* [Introdução ao Single Sign On](../services/SingleSignOn/index.html)
+* [Introdução ao Single Sign                                                                                         On](/docs/services/SingleSignOn/index.html)

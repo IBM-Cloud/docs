@@ -1,17 +1,16 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 # 行動
 {: #mobile}
-
-*前次更新：2015 年 12 月 9 日*
 
 使用行動服務建置多平台、原生或混合式、Android 及 iOS 應用程式。
 {:shortdesc}
@@ -20,3 +19,4 @@ copyright:
 對使用者經驗的空前見解 | 維持應用程式安全 | 擴充及同步資料
 ---- | ---- | ----
 從使用者作業的每一步取得意見。透過分析即時效能，持續地改善應用程式。 | 比使用者早一步識別出安全問題。管理使用者存取。確保與企業系統的通訊安全。 | 讓資料在您的所有裝置中保持同步，然後讓資料離線。不需要最佳化該資料庫。如此即可運作。
+{: caption="Table 1. Benefits of using mobile services" caption-side="top"}

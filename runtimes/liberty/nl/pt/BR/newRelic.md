@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-06-10"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # Usando o New Relic
 {: #new_relic}
-
-Última atualização: 10 de junho de 2016
-{: .last-updated}
 
 New Relic é um serviço de terceiro que fornece
 métricas de monitoramento para o seu aplicativo. Para obter mais

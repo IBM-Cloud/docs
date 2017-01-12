@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -11,10 +12,12 @@ copyright:
 # sdk-for-nodejs 建置套件的最新更新項目
 {: #latest_updates}
 
-前次更新：2016 年 8 月 26 日
-{: .last-updated}
-
 sdk-for-nodejs 建置套件中的最新更新項目清單。
+## 2016 年 10 月 7 日：已更新 Node.js 建置套件 v3.8-20161006-1211
+這個版本的建置套件支援 IBM SDK for Node.js 運行環境版本：0.10.46、0.10.47、0.12.15、0.12.16、4.5.0、4.6.0、6.6.0 及 6.7.0。預設值現在是 4.6.0。
+
+除了新的運行環境之外，這個版本還包含建置套件錯誤修正程式。使用 Node.js 6.x 以及 v3.7-20160826-1101 版更新項目所提及的「開發模型」時的已知問題修正程式就是其中一個。這個版本同時還與 [Cloud Foundry Node.js 建置套件 v1.5.20](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.20) 同步。 
+
 ## 2016 年 8 月 26 日：已更新 Node.js 建置套件 v3.7-20160826-1101
 這個版本的建置套件支援 IBM SDK for Node.js 運行環境版本：0.10.45、0.10.46、0.12.14、0.12.15、4.4.7、4.5.0、6.2.2 和 6.4.0。預設值現在是 4.5.0。
 
@@ -22,7 +25,7 @@ sdk-for-nodejs 建置套件中的最新更新項目清單。
 
 這個版本不再支援 [Bluemix Node.js 建置套件 3.3 版 - FIPS 模式及其他項目](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/)中所發表的 strongpm「應用程式管理」處理程式。
 
-請注意，使用 Node.js 6.x 及[開發模型](../../manageapps/app_mng.html#devmode)時，有一個已知問題。作為暫行解決方法，您將需要在啟用「開發模型」之後重新編譯打包您的應用程式，然後才能開始使用它。
+請注意，使用 Node.js 6.x 及[開發模型](/docs/manageapps/app_mng.html#devmode)時，有一個已知問題。作為暫行解決方法，您將需要在啟用「開發模型」之後重新編譯打包您的應用程式，然後才能開始使用它。
 
 ## 2016 年 7 月 22 日：已更新 Node.js 建置套件 v3.6-20160715-0749
 這個版本的建置套件支援 IBM SDK for Node.js 運行環境版本：0.10.45, 0.10.46、0.12.14、0.12.15、4.4.6、4.4.7、6.2.1 和 6.2.2。現在預設值為 4.4.7。
@@ -143,7 +146,7 @@ Node.js 2.6.1 版引進了 [StrongPM 應用程式管理處理程式](https://dev
 ## 2015 年 6 月 15 日：已更新 Node.js 建置套件 v2.0-20150608-1503
 
 在這個版本中，我們的 Node.js 建置套件已與最新 [CF 社群 Node.js 建置套件](https://github.com/cloudfoundry/nodejs-buildpack)同步化，後者具有許多來自社群的新特性。
-此外，我們也改良了 Node.js 建置套件中的「應用程式管理」特性，它能夠啟用 Shell、node-inspector、Bluemix Live Sync 等這類公用程式。如需詳細資料，請參閱[應用程式管理](../../manageapps/app_mng.html)。
+此外，我們也改良了 Node.js 建置套件中的「應用程式管理」特性，它能夠啟用 Shell、node-inspector、Bluemix Live Sync 等這類公用程式。如需詳細資料，請參閱[應用程式管理](/docs/manageapps/app_mng.html)。
 
 ## 2015 年 5 月 5 日：已更新 Node.js 建置套件 v1.17-20150429-1033
 
@@ -171,7 +174,7 @@ Node.js 2.6.1 版引進了 [StrongPM 應用程式管理處理程式](https://dev
   * 桌面同步：使任何 (Windows) 桌面樹狀結構與雲端型專案工作區同步
   * 即時編輯：可讓您變更在 Bluemix 中執行的 Node.js 應用程式，並立刻在瀏覽器中測試它們。
   * 除錯：開啟 Shell 進入您的環境並進行除錯！您可以使用 Node Inspector 除錯器，動態地編輯程式碼、插入中斷點、逐步執行程式碼、重新啟動運行環境等等
-  * 如需相關資訊，請參閱[應用程式管理](../../manageapps/app_mng.html#Utilities)。
+  * 如需相關資訊，請參閱[應用程式管理](/docs/manageapps/app_mng.html#Utilities)。
 * 我們已經加入來自 [Cloud Foundry 的 Node.js 建置套件](https://github.com/cloudfoundry/nodejs-buildpack)的最新變更。這項變更附有由社群所提出的許多錯誤修正程式和改良功能。
 * 現在，Node.js 建置套件隨附了 [IBM SDK for Node.js 1.1.0.13 版](https://developer.ibm.com/node/sdk/)。
 

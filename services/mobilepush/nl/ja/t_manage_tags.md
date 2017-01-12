@@ -5,9 +5,14 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # タグの管理
 {: #manage_tags}
-最終更新日: 2016 年 10 月 17 日
+最終更新日: 2016 年 12 月 07 日
 {: .last-updated}
 
 {{site.data.keyword.mobilepushshort}}ダッシュボードを使用して、ご使用のアプリケーション向けのタグを作成および削除し、タグ・ベースの通知を開始します。タグ・ベースの通知は、タグにサブスクライブしているデバイスが受け取ります。
@@ -45,7 +50,7 @@ copyright:
 
 タグは、ユーザーの関心に基づいてターゲットを絞った通知をユーザーに送信する手段となります。この点は、すべてのアプリケーションに送信される一般ブロードキャストと異なります。タグを作成および管理するには、{{site.data.keyword.mobilepushshort}}ダッシュボードの「タグ」タブを使用するか、または REST API を使用します。コード・スニペットを使用して、モバイル・アプリケーションのタグ・サブスクリプションを管理および照会できます。以下のコード・スニペットを使用して、サブスクリプションの取得、タグへのサブスクライブ、タグからのアンサブスクライブ、または使用可能なタグのリストの取得を行うことができます。以下のコード・スニペットをモバイル・アプリケーションにコピーしてください。
 
-## Android
+## Android 上でのタグの取得
 {: android-get-tags}
 
 **getTags** API は、デバイスをサブスクライブできる対象として使用可能なタグのリストを返します。デバイスを特定のタグにサブスクライブすると、そのタグに送られる{{site.data.keyword.mobilepushshort}}をそのデバイスは受け取ることができるようになります。
@@ -92,30 +97,30 @@ push.getSubscriptions(new MFPPushResponseListener<List<String>>() {
 	```
 	{: codeblock}
 
-## Cordova
+## Cordova 上でのタグの取得
 {: cordova-get-tags}
 
 デバイスがサブスクライブしているタグのリストを取得したり、使用可能なタグのリストを取得したりするには、モバイル・アプリケーションに以下のコード・スニペットをコピーします。
 
-サブスクライブ対象として使用可能なタグの配列を取得します。
+サブスクリプションに使用可能なタグの配列を取得します。
 
 ```
 //Get a list of available tags to which the device can subscribe
-	MFPPush.retrieveAvailableTags(function(tags) {
-    alert(tags);
-}, null);
+BMSPush.retrieveAvailableTags(function(tags) {
+  alert(tags);
+}, failure);
 ```
 	{: codeblock}
 
 ```
 //Get a list of available tags to which the device is subscribed.
-MFPPush.getSubscriptionStatus(function(tags) {
-    alert(tags);
-}, null);
+BMSPush.retrieveSubscriptions(function(tags) {
+   alert(tags);
+}, failure);
 ```
 	{: codeblock}
 
-## Objective-C
+## Objective-C 上でのタグの取得
 {: objc-get-tags}
 
 デバイスがサブスクライブしているタグのリストを取得したり、デバイスがサブスクライブできる使用可能なタグのリストを取得したりするには、Objective-C を使用して開発された iOS アプリケーションに以下のコード・スニペットをコピーします。
@@ -157,7 +162,7 @@ MFPPush.getSubscriptionStatus(function(tags) {
   ```
 	{: codeblock}
 
-## Swift
+## Swift 上でのタグの取得
 {: swift-get-tags}
 
 **retrieveAvailableTagsWithCompletionHandler** API は、デバイスをサブスクライブできる対象として使用可能なタグのリストを返します。デバイスを特定のタグにサブスクライブすると、そのタグに送られる{{site.data.keyword.mobilepushshort}}をそのデバイスは受け取ることができるようになります。
@@ -199,7 +204,7 @@ MFPPush.getSubscriptionStatus(function(tags) {
 ```
 	{: codeblock}
 
-## Google Chrome と Mozilla Firefox
+## Google Chrome、Safari、および Mozilla Firefox
 {: web-get-tags}
 
 お客様がサブスクライブできる、使用可能なタグのリストを取得するには、以下のコードを使用します。
@@ -220,16 +225,6 @@ MFPPush.getSubscriptionStatus(function(tags) {
 ```
 	{: codeblock}
 
-お客様がサブスクライブしているタグのリストを取得するには、以下のコード・スニペットを Google Chrome アプリケーションおよびエクステンションにコピーします。
-
-```
-  var bmsPush = new BMSPush();
-  bmsPush.retrieveSubscriptions(function(response) 
-	{
-    alert(response.response)
-  })
-```
-	{: codeblock}
 
 ## Google Chrome アプリケーションおよびエクステンション
 {: web-get-tags}
@@ -264,12 +259,12 @@ MFPPush.getSubscriptionStatus(function(tags) {
 	{: codeblock}
 
 
-# タグのサブスクライブとアンサブスクライブ
+# タグへのサブスクライブとアンサブスクライブ
 {: #Subscribe_tags}
 
 以下のコード・スニペットを使用して、デバイスのサブスクリプションの取得、タグへのサブスクライブ、およびタグからのアンサブスクライブを可能にします。
 
-## Android
+## Android 上でのタグのサブスクライブとアンサブスクライブ
 {: android-subscribe-tags}
 
 このコード・スニペットを Android モバイル・アプリケーションにコピー・アンド・ペーストします。
@@ -306,19 +301,19 @@ push.unsubscribe(tag, new MFPPushResponseListener<String>() {
 ```
 	{: codeblock}
 
-## Cordova
+## Cordova 上でのタグのサブスクライブとアンサブスクライブ
 {: cordova-subscribe-tags}
 
 このコード・スニペットを Cordova モバイル・アプリケーションにコピー・アンド・ペーストします。
 
 ```
 var tag = "YourTag";
-MFPPush.subscribe(tag, success, failure);
-MFPPush.unsubscribe(tag, success, failure);
+BMSPush.subscribe(tag, success, failure);
+BMSPush.unsubscribe(tag, success, failure);
 ```
 	{: codeblock}
 
-## Objective-C
+## Objective-C 上でのタグのサブスクライブとアンサブスクライブ
 {: objc-subscribe-tags}
 
 このコード・スニペットを Objective-C モバイル・アプリケーションにコピー・アンド・ペーストします。
@@ -356,7 +351,7 @@ MFPPush.unsubscribe(tag, success, failure);
 ```
 	{: codeblock}
 
-## Swift
+## Swift 上でのタグのサブスクライブとアンサブスクライブ
 {: swift-subscribe-tags}
 
 このコード・スニペットを Swift モバイル・アプリケーションにコピー・アンド・ペーストします。
@@ -366,13 +361,15 @@ MFPPush.unsubscribe(tag, success, failure);
 タグにサブスクライブするには、**subscribeToTags** API を使用します。
 
 ```
-push.subscribeToTags(tagsArray: tags) { (response: IMFResponse!, error: NSError!) -> Void in
-	if (error != nil) {
-		//error while subscribing to tags
-	} else {
-		//successfully subscribed to tags var subStatus = response.subscribeStatus();
-	}
-	}
+push.subscribeToTags(tagsArray: ["MyTag"], completionHandler: { (response, statusCode, error) -> Void in
+    if error.isEmpty {
+        print("Response when subscribing to tags: \(response?.description)")
+        print("Status code when subscribing to tags: \(statusCode)")
+    } else {
+        print("Error when subscribing to tags: \(error) ")
+        print("Error status code when subscribing to tags: \(statusCode)")
+    }
+})
 ```
 	{: codeblock}
 
@@ -421,9 +418,6 @@ var tagsArray = ["tag1", "Tag2"]
 {: #using_tags}
 
 タグ・ベースの通知は、特定のタグにサブスクライブしているすべてのデバイスをターゲットとするメッセージです。各デバイスは、任意の数のタグにサブスクライブできます。このトピックでは、タグ・ベースの通知の送信方法を説明します。サブスクリプションは、{{site.data.keyword.mobilepushshort}}サービス Bluemix インスタンスによって維持されます。タグが削除されると、そのタグに関連付けられているすべての情報 (サブスクライバーやデバイスを含む) が削除されます。このタグはもはや存在せず、クライアント・サイドから必要な追加アクションはないので、このタグの自動アンサブスクライブは必要ありません。
-
-###始めに
-{: before-you-begin}
 
 **「タグ」**画面でタグを作成します。タグの作成方法については、[「タグの作成」](t_manage_tags.html)を参照してください。
 

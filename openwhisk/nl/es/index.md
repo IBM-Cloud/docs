@@ -25,6 +25,16 @@ y ejecutar el sistema usted mismo.
 
 Para obtener más detalles sobre como funciona {{site.data.keyword.openwhisk_short}}, consulte [Acerca de {{site.data.keyword.openwhisk_short}}](./openwhisk_about.html).
 
+Puede utilizar el navegador o la CLI para desarrollar sus aplicaciones de {{site.data.keyword.openwhisk_short}}.
+Ambos tienen prestaciones similares para desarrollar aplicaciones; la CLI ofrece más control sobre el despliegue y las operaciones.
+
+
+## Desarrollar en el navegador
+{: #openwhisk_start_editor}
+
+Pruebe {{site.data.keyword.openwhisk_short}} en el [Navegador](https://console.{DomainName}/openwhisk/editor){: new_window} para crear acciones, automatizar acciones utilizando desencadenantes, y explorar paquetes públicos.
+Visite la página [más información](https://console.{DomainName}/openwhisk/learn){: new_window} para realizar una visita rápida de la interfaz de usuario de OpenWhisk.
+
 ## Configuración de la CLI de {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_start_configure_cli}
 
@@ -33,17 +43,17 @@ Acceda a [Configurar CLI](https://new-console.{DomainName}/openwhisk/cli){: new_
 siga las instrucciones para instalarlo.
 
 ### Configure la CLI para utilizar un proxy HTTPS
+{: #openwhisk_configure_https_proxy_cli}
 
-The CLI can be setup to use an HTTPS proxy. Para configurar un proxy HTTPS, se debe crear una variable de entorno llamada `HTTPS_PROXY`. La variable se debe establecer en la dirección del proxy HTTPS y el puerto correspondiente utilizando el siguiente formato:
+La CLI se puede configurar para utilizar un proxy HTTPS. Para configurar un proxy HTTPS, se debe crear una variable de entorno llamada `HTTPS_PROXY`. La variable se debe establecer en la dirección del proxy HTTPS y el puerto correspondiente utilizando el siguiente formato:
 `{PROXY IP}:{PROXY PORT}`.
-
 
 Una vez que {{site.data.keyword.openwhisk_short}} esté configurado con la CLI, puede empezar a usarlo desde la línea de mandatos.
 
 ## Uso de la CLI de {{site.data.keyword.openwhisk_short}}
 {: #openwhisk_start_using_cli}
 
-Tras haber configurado su entorno, puede empezar a usar la CLI de {{site.data.keyword.openwhisk_short}} para hacer lo siguiente:
+Tras haber [configurado su entorno](https://new-console.{DomainName}/openwhisk/cli){: new_window}, puede empezar a usar la CLI de {{site.data.keyword.openwhisk_short}} para hacer lo siguiente:
 
 * Ejecutar sus fragmentos de código, o acciones, en {{site.data.keyword.openwhisk_short}}. Consulte
 [Creación e invocación de acciones](./openwhisk_actions.html).

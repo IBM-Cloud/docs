@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-08-18"
 
 ---
 
@@ -19,8 +21,6 @@ copyright:
 # Traitement des incidents liés aux contextes d'exécution
 {: #runtimes}
 
-Dernière mise à jour : 18 août 2016
-{: .last-updated}
 
 
 Vous pouvez rencontrer des problèmes lorsque vous utilisez les contextes d'exécution IBM® Bluemix.. Toutefois, dans de nombreux cas, ces problèmes peuvent être résolus en quelques opérations simples.
@@ -31,8 +31,8 @@ Vous pouvez rencontrer des problèmes lorsque vous utilisez les contextes d'exé
 {: #ts_loading_bp}
 
 
-Il est possible que vous ne puissiez pas utiliser les derniers composants du pack de construction
-lorsque vous envoyez une application par commande push. Vous pouvez utiliser des packs de construction disposant de mécanismes intégrés
+Il est possible que vous ne puissiez pas utiliser les derniers composants
+du pack de construction lorsque vous envoyez une application par commande push. Vous pouvez utiliser des packs de construction disposant de mécanismes intégrés
 pour empêcher le chargement de composants obsolètes ou supprimer le contenu du répertoire cache de votre application avant
 de l'envoyer par commande push ou de la reconstituer. 
 
@@ -142,7 +142,8 @@ l'application Python manquent.
  
 
 Pour résoudre le problème, ajoutez un fichier `requirements.txt` et un fichier `Procfile` dans le répertoire racine
-de votre application Python. Les informations suivantes supposent que vous importez la bibliothèque web.py :
+de votre application Python. Les informations suivantes supposent que vous
+importiez la bibliothèque web.py :
 {: tsResolve}
 
   1. Ajoutez un fichier `requirements.txt` dans le répertoire racine de votre application Python.

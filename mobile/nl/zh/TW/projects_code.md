@@ -13,18 +13,18 @@ lastupdated: "2016-10-13"
 # 以程式碼入門範本建立專案
 {: #projects_code}
 
-您可以在 {{site.data.keyword.Bluemix}} Mobile 儀表板中使用[程式碼入門範本](starters.html#Code_Starter)，以在 {{site.data.keyword.Bluemix_notm}} 環境中建立專案。此程序不適用於利用「使用者介面入門範本」的專案。如需「使用者介面入門範本」的指示，請參閱[以使用者介面入門範本建立專案](projects_ui.html)。
+您可以在 {{site.data.keyword.Bluemix}} 行動儀表板中使用[程式碼入門範本](starters.html#Code_Starter)，以在 {{site.data.keyword.Bluemix_notm}} 環境中建立專案。此程序不適用於利用「使用者介面入門範本」的專案。如需「使用者介面入門範本」的指示，請參閱[以使用者介面入門範本建立專案](projects_ui.html)。
 {:shortdesc}
 
 請完成下列步驟，以使用「程式碼入門範本」來建立專案：
 
-1. 在 {{site.data.keyword.Bluemix_notm}} 中建立新的 Mobile 儀表板專案。
+1. 在 {{site.data.keyword.Bluemix_notm}} 中建立新的行動儀表板專案。
 
- 在您選取 Mobile 型錄之後，即可從*開始使用* 標籤開始。提供您可使用之已選取入門範本的說明，並且提供不同的方法，根據您所需的協助來建立專案。如果您只是想要開始使用，請選取**建立專案**。
+ 在您選取「行動」型錄之後，即可從*開始使用* 標籤開始。提供您可使用之已選取入門範本的說明，並且提供不同的方法，根據您所需的協助來建立專案。如果您只是想要開始使用，請選取**建立專案**。
 
- 如果您已有專案，則也可以從選取*專案* 標籤開始。從 {{site.data.keyword.Bluemix_notm}} Mobile 儀表板的**專案**視圖中，您可以選取要使用的專案、使用專案的*動作* 來刪除專案或下載其程式碼，或者建立新的專案。
+ 如果您已有專案，則也可以從選取*專案* 標籤開始。從 {{site.data.keyword.Bluemix_notm}} 行動儀表板的**專案**視圖中，您可以選取要使用的專案、使用專案的*動作* 來刪除專案或下載其程式碼，或者建立新的專案。
 
-	1. 在「{{site.data.keyword.Bluemix_notm}} 主控台」上，於您展開 {{site.data.keyword.Bluemix_notm}} 標誌旁內含三行的功能表之後選取 **Mobile**。 
+	1. 在「{{site.data.keyword.Bluemix_notm}} 主控台」上，於您展開 {{site.data.keyword.Bluemix_notm}} 標誌旁內含三行的功能表之後選取**行動**。 
 	
 	2. 選取**建立專案**。 
 

@@ -153,8 +153,7 @@ uma explicação da falha.
 ### Protótipo de função
 {: #openwhisk_ref_javascript_fnproto}
 
-As ações JavaScript do {{site.data.keyword.openwhisk_short}} são executadas
-em um tempo de execução Node.js, atualmente versão 6.2.0.
+As ações de JavaScript do {{site.data.keyword.openwhisk_short}} são executadas em um tempo de execução do Node.js.
 
 Ações escritas em JavaScript devem ser confinadas a um único arquivo. O arquivo pode conter várias funções, mas por convenção uma função chamada `main` deve existir e é a chamada quando a ação for chamada. Por exemplo, a seguir está um exemplo de uma ação com várias funções.
 
@@ -319,65 +318,69 @@ implicitamente pelas funções `whisk.invoke()` e
 ### Ambientes de tempo de execução do JavaScript
 {: #openwhisk_ref_javascript_environments}
 
-As ações JavaScript são executadas por padrão em um ambiente Node.js versão 6.2.0.  O
-ambiente 6.2.0 também será usado para uma ação se a sinalização `--kind`
-for explicitamente especificada com um valor 'nodejs:6' ao criar/atualizar a ação.
-Os
-pacotes a seguir estão disponíveis para serem usados no ambiente Node.js 6.2.0:
+As ações de JavaScript são executadas por padrão em um ambiente do Node.js versão 6.9.1. O
+ambiente 6.9.1 também será usado para uma ação se a sinalização `--kind` for explicitamente especificada com um valor 'nodejs:6' ao criar/atualizar a ação.
+Os pacotes a seguir estão disponíveis para serem usados no ambiente do Node.js 6.9.1:
 
-- apn v1.7.5
-- async v1.5.2
-- body-parser v1.15.1
+- apn v2.1.2
+- async v2.1.4
 - btoa v1.1.2
-- cheerio v0.20.0
-- cloudant v1.4.1
+- cheerio v0.22.0
+- cloudant v1.6.2
 - commander v2.9.0
-- consul v0.25.0
-- cookie-parser v1.4.2
+- consul v0.27.0
+- cookie-parser v1.4.3
 - cradle v0.7.1
-- errorhandler v1.4.3
-- express v4.13.4
-- express-session v1.12.1
-- gm v1.22.0
-- log4js v0.6.36
-- iconv-lite v0.4.13
+- errorhandler v1.5.0
+- glob v7.1.1
+- gm v1.23.0
+- lodash v4.17.2
+- log4js v0.6.38
+- iconv-lite v0.4.15
+- marked v0.3.6
 - merge v1.2.0
-- moment v2.13.0
-- mustache v2.2.1
+- moment v2.17.0
+- mongodb v2.2.11
+- mustache v2.3.0
 - nano v6.2.0
 - node-uuid v1.4.7
-- nodemailer v2.5.0
+- nodemailer v2.6.4
 - oauth2-server v2.4.1
-- pkgcloud v1.3.0
-- process v0.11.3
-- pug v2.0.0
-- request v2.72.0
-- rimraf v2.5.2
-- semver v5.1.0
-- sendgrid v3.0.11
-- serve-favicon v2.3.0
-- socket.io v1.4.6
-- socket.io-client v1.4.6
-- superagent v1.8.3
+- pkgcloud v1.4.0
+- process v0.11.9
+- pug v2.0.0-beta6
+- redis v2.6.3
+- request v2.79.0
+- request-promise v4.1.1
+- rimraf v2.5.4
+- semver v5.3.0
+- sendgrid v4.7.1
+- serve-favicon v2.3.2
+- socket.io v1.6.0
+- socket.io-client v1.6.0
+- superagent v3.0.0
 - swagger-tools v0.10.1
-- tmp v0.0.28
-- twilio v2.9.1
-- watson-developer-cloud v1.12.4
+- tmp v0.0.31
+- twilio v2.11.1
+- underscore v1.8.3
+- uuid v3.0.0
+- validator v6.1.0
+- watson-developer-cloud v2.9.0
 - when v3.7.7
-- ws v1.1.0
-- xml2js v0.4.16
+- winston v2.3.0
+- ws v1.1.1
+- xml2js v0.4.17
 - xmlhttprequest v1.8.0
-- yauzl v2.4.2
+- yauzl v2.7.0
 
-O ambiente Node.js versão 0.12.14 será usado para uma ação se a sinalização
-`--kind` for explicitamente especificada com um valor 'nodejs' ao
+O ambiente do Node.js versão 0.12.17 será usado para uma ação se a sinalização `--kind` for explicitamente especificada com um valor 'nodejs' ao
 criar/atualizar a ação.
-Os pacotes a seguir estão disponíveis para serem usados no
-ambiente Node.js 0.12.14:
+Os pacotes a seguir estão disponíveis para serem usados no ambiente do Node.js 0.12.17:
+
+**Nota**: O Node.js versão 0.12.x está descontinuado; migre toda a sua ação do Node.js para usar o Node.js versão 6.x.
 
 - apn v1.7.4
 - async v1.5.2
-- body-parser v1.12.0
 - btoa v1.1.2
 - cheerio v0.20.0
 - cloudant v1.4.1
@@ -386,11 +389,9 @@ ambiente Node.js 0.12.14:
 - cookie-parser v1.3.4
 - cradle v0.6.7
 - errorhandler v1.3.5
-- express v4.12.2
-- express-session v1.11.1
 - gm v1.20.0
 - jade v1.9.2
-- log4js v0.6.25
+- log4js v0.6.38
 - merge v1.2.0
 - moment v2.8.1
 - mustache v2.1.3
@@ -398,7 +399,7 @@ ambiente Node.js 0.12.14:
 - node-uuid v1.4.2
 - oauth2-server v2.4.0
 - process v0.11.0
-- request v2.60.0
+- request v2.79.0
 - rimraf v2.5.1
 - semver v4.3.6
 - serve-favicon v2.2.0

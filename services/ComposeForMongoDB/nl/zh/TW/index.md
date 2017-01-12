@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-12-09"
 ---
 
 {:new_window: target="_blank"}
@@ -13,9 +13,6 @@ copyright:
 
 # 開始使用 Compose for MongoDB
 {: #getting-started-with-compose-for-mongodb}
-
-前次更新：2016 年 9 月 20 日
-{: .last-updated}
 
 {{site.data.keyword.composeForMongoDB_full}} 使用 MongoDB 的強大編製索引及查詢、聚集及廣泛驅動程式支援，讓 MongoDB 成為許多新創事業和企業的首選 JSON 資料儲存庫。{{site.data.keyword.composeForMongoDB}} 提供簡單的自動調整部署系統。它提供高可用性及備援、自動化及隨需應變持續備份、監視工具、整合至警示系統、效能分析視圖等，全部都是透過全新的簡單使用者介面完成。
 {:shortdesc}
@@ -45,6 +42,7 @@ copyright:
 `deployment_id`|Compose 內所建立之服務的內部 ID。
 `db_type`|服務所提供的資料庫類型；在此情況下，為 `mongodb`。
 `name`|資料庫部署名稱。
+{: caption="Table 1. {{site.data.keyword.composeForMongoDB}} credentials" caption-side="top"}
 
 # 相關鏈結
 {: #rellinks}

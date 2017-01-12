@@ -1,14 +1,18 @@
 ---
 
 copyright:
- years: 2015 2016
+years: 2015, 2017
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # Enabling Android applications to receive {{site.data.keyword.mobilepushshort}}
 {: #tag_based_notifications}
-Last updated: 23 November 2016
+Last updated: 11 January 2017
 {: .last-updated}
 
 You can enable Android applications to receive push notifications to your devices. Android Studio is a prerequisite and is the recommended method to build Android projects. A basic knowledge of Android Studio is essential.
@@ -22,12 +26,13 @@ Bluemix® Mobile Services Push SDK can be added using Gradle. Gradle automatical
 
 After creating and opening your mobile application, complete the following steps using the Android Studio.
 
-1. Add dependencies to your Module level **build.gradle** file. 
+1. Add dependencies to your Module level **build.gradle** file. 	
+
 	- Add the following dependency to include the Bluemix™ Mobile services Push client SDK and the Google play services SDK to your compile scope dependencies.
 	```
-	com.ibm.mobilefirstplatform.clientsdk.android:push:2.+
+	com.ibm.mobilefirstplatform.clientsdk.android:push:3.+
 	```
-    {: codeblock}
+    	{: codeblock}
 	
 	- Add the following dependencies to import statements that are required for code snippets.
 	```
@@ -38,11 +43,17 @@ After creating and opening your mobile application, complete the following steps
 	import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationListener;
 	import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPSimplePushNotification;
 	```
-    {: codeblock}
+    	{: codeblock}
+
+	- Add the following dependency to your Module level **build.gradle** file at the end.
+	```
+		apply plugin: 'com.google.gms.google-services'
+	```
+		{: codeblock}
 3. Add the following dependencies to your Project level **build.gradle** file.
 ```
 dependencies {
-    classpath 'com.android.tools.build:gradle:2.2.0'
+    classpath 'com.android.tools.build:gradle:3.0.0'
     classpath 'com.google.gms:google-services:3.0.0'
 }
 ``` 
@@ -98,25 +109,25 @@ android:theme="@android:style/Theme.NoDisplay"/>
 To setup the FCM project and obtain your credentials, see [Getting Your Sender ID and API key](t_push_provider_android.html). Complete the following steps using the Firebase Cloud Messaging (FCM) console.
 
 1. In the Firebase console, click the **Project Settings** icon.
-	![Firebase Project Settings](images/FCM_4.jpg)
+    ![Firebase Project Settings](images/FCM_4.jpg)
 
 3. Select **ADD APP** or **Add Firebase to your Android app icon** from the General tab on the Your apps pane.
+    ![Adding Firebase to Android](images/FCM_5.jpg)
 
-	![Adding Firebase to Android](images/FCM_5.jpg)
+4. In Add Firebase to your Android app window, add **com.ibm.mobilefirstplatform.clientsdk.android.push** as the Package Name. The App nickname field is optional. Click **ADD APP**. 
+    ![Adding Firebase to your Android window](images/FCM_1.jpg)
 
-4. In Add Firebase to your Android app window, add **com.ibm.mobilefirstplatform.clientsdk.android.push** as the package name. Also add the package name of your application by repeating the step 2.
+5. Include the package name of your application, by entering the package name in Add Firebase to your Android app window. The App nickname field is optional. Click **ADD APP**. 
 
-	![Adding Firebase to your Android window](images/FCM_1.jpg)
+	![Adding the package name of your application](images/FCM_2.jpg)
 
-5. Click **Continue** to copy the config file. 
-6. Click **Finish** to add the **build.gradle** file.
-7. Download the generated **google-services.json** file.
+6. The `google-services.json` file is generated. Copy the `google-services.json` file to your Android application module root directory. Note that the `google-service.json` file includes the added package names.
 
-	![The google-services.json file](images/FCM_3.jpg)
+    ![Adding the json file to the root directory of your application](images/FCM_7.jpg)
 
-8. Add the **google-services.json** file to the root directory of your application.
+5. In Add Firebase to your Android app window, click **Continue** and then **Finish**. 
 
-	![Adding the json file to the root directory of your application](images/FCM_7.jpg)
+  
 
 Build and run your application.
 
@@ -225,6 +236,79 @@ protected void onPause() {
 2. Build the project and run it on the device or emulator. When the onSuccess() method for the response listener in the register() method is invoked, it confirms that the device has successfully registered with {{site.data.keyword.mobilepushshort}} service. At this time you can send a message as described in Sending basic push notifications.
 3. Verify that your devices have received your notification. If the application is in the foreground, the notification is handled by the **MFPPushNotificationListener**. If the application is in the background, a message is displayed in the notification bar.
 
+## Monitoring push notifications on Android devices
+{: #android_monitor}
+
+To monitor the current status of the notification within the application, you can implement the  `com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationStatusListener` interface and define the method onStatusChange(String messageId, MFPPushNotificationStatus status). 
+
+The **messageId** is the identifier of the message sent from the server.  **MFPPushNotificationStatus** defines the status of the notifications as values:
+
+- **RECEIVED** - App has received the notification. 
+- **QUEUED** - App queues the notification for invoking the notification listener. 
+- **OPENED** - User opens the notification by clicking the notification in the tray or by launching it from app icon or when the app is in foreground. 
+- **DISMISSED** - User clears/dismisses the notification in the tray.
+
+You need to register the **com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationStatusListener** class with MFPPush.
+
+```
+push.setNotificationStatusListener(new MFPPushNotificationStatusListener() {
+@Override
+public void onStatusChange(String messageId, MFPPushNotificationStatus status) {
+// Handle status change
+}
+});
+```
+    {: codeblock}
+
+
+### Listening to the DISMISSED status
+
+You can choose to listen to the DISMISSED status on either of the following conditions:
+
+- When the app is active (running in foreground or background)
+
+  Add the snippet to your `AndroidManifest.xml` file:
+
+```
+<receiver android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationDismissHandler">
+<intent-filter>
+<action android:name="Your_Android_Package_Name.Cancel_IBMPushNotification"/>
+</intent-filter>
+</receiver>
+```
+	{: codeblock}
+
+- When the app is both active (running in foreground or background) and not running (closed)
+
+You need to extend the  **com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationDismissHandler** broadcast receiver and override the method **onReceive()**, where the **MFPPushNotificationStatusListener** should be registered before calling  method **onReceive()**of the base class.
+
+```
+public class MyDismissHandler extends MFPPushNotificationDismissHandler {
+@Override
+public void onReceive(Context context, Intent intent) {
+MFPPush.getInstance().setNotificationStatusListener(new MFPPushNotificationStatusListener() {
+@Override
+public void onStatusChange(String messageId, MFPPushNotificationStatus status) {
+// Handle status change
+}
+});
+super.onReceive(context, intent);
+}
+}
+```
+    {: codeblock}
+
+
+Add the following snippet to you `AndroidManifest.xml` file:
+
+```
+<receiver android:name="Your_Android_Package_Name.Your_Handler">
+<intent-filter>
+<action android:name="Your_Android_Package_Name.Cancel_IBMPushNotification"/>
+</intent-filter>
+</receiver>
+```
+    {: codeblock}
 
 ## Sending basic {{site.data.keyword.mobilepushshort}}
 {: #send}
@@ -250,7 +334,7 @@ The following following screen shot shows a push notification in the background 
 
 ![Background push notification on Android](images/background.jpg)
 
-### Optional settings for sending notifications
+### Optional Android settings for sending notifications
 {: #send_otpional_setting}
 
 You can further customize the {{site.data.keyword.mobilepushshort}} settings for sending notifications to Android devices. The following optional customization options are supported.

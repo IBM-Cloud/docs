@@ -2,9 +2,10 @@
 
 copyright:
   year: 2016
-lastupdated: "2016-10-03"
+lastupdated: "2016-12-04"
 
 ---
+
 {:screen: .screen}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
@@ -19,36 +20,36 @@ Sie können Benutzer über Facebook für Ihre {{site.data.keyword.amafull}}-Weba
 {: #facebook-auth-android-before}
 Voraussetzungen:
 
-* Web-App. 
-* Instanz einer {{site.data.keyword.Bluemix_notm}}-Anwendung, die durch den {{site.data.keyword.amashort}}-Service geschützt ist. Weitere Informationen zur Erstellung einer {{site.data.keyword.Bluemix_notm}}-Back-End-Anwendung finden Sie in der [Einführung](index.html).
+* Eine Web-App. 
+* Ein {{site.data.keyword.amashort}}-Service. Weitere Informationen finden Sie in der [Einführung](index.html).
 * URI für die letzte Weiterleitung (nach Beendigung des Berechtigungsprozesses).
 
 
-## Facebook-Anwendung für die Website konfigurieren
+## Anwendung auf der Site 'Facebook for Developers' konfigurieren
 {: #facebook-auth-config}
 
 Zur Verwendung von Facebook als Identitätsprovider auf Ihrer Website müssen Sie die Website-Plattform Ihrer Facebook-Anwendung hinzufügen und sie konfigurieren.
 
-1. Melden Sie sich bei der Site [Facebook for Developers](https://developers.facebook.com) an.
-2. Öffnen Sie Ihre App oder erstellen Sie diese.
-3. Notieren Sie die **App-ID** und den **geheimen Schlüssel der App**. Sie benötigen diese Werte beim Konfigurieren Ihres Webprojekts für die Facebook-Authentifizierung im {{site.data.keyword.amashort}}-Dashboard.
-4. Fügen Sie die **Website**-Plattform hinzu, falls sie nicht vorhanden ist.
-5. Fügen Sie die **Facebook-Anmeldung** aus der Liste **Produkte** hinzu oder öffnen Sie diese.
-6. Geben Sie den Callback-Endpunkt-URI des Berechtigungsservers im Feld **Valid OAuth redirect URIs** ein. Suchen Sie diesen Weiterleitungs-URI für die Berechtigung in den nachfolgend beschriebenen Schritten zur Konfiguration des {{site.data.keyword.amashort}}-Dashboards.
+1. Melden Sie sich auf der Site [Facebook for Developers](https://developers.facebook.com) bei Ihrem Konto an. 
+	Informationen zum Erstellen einer neuen App finden Sie unter [Anwendung auf der Site 'Facebook for Developers' erstellen](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID). 
+1. Notieren Sie die **App-ID** und den **geheimen Schlüssel der App**. Sie benötigen diese Werte beim Konfigurieren Ihres Webprojekts für die Facebook-Authentifizierung im Mobile Client Access-Dashboard.
+1. Wählen Sie unter **Products List** die Option **Facebook Login** aus.
+4. Fügen Sie die **Web**-Plattform hinzu, falls sie nicht vorhanden ist.
+6. Geben Sie den Callback-Endpunkt-URI des Berechtigungsservers im Feld **Valid OAuth redirect URIs** ein. Sie können diesen Wert nach der Konfiguration des {{site.data.keyword.amashort}}-Service anhand der nachfolgenden Schritte konfigurieren.
 7. Speichern Sie die Änderungen.
 
 
 ## {{site.data.keyword.amashort}} für die Facebook-Authentifizierung konfigurieren
 {: #facebook-auth-config-ama}
 
-Nachdem Sie Ihre Facebook-App-ID und den geheimen Schlüssel der App erhalten haben und Ihre Facebook-Anwendung zur Bedienung von Web-Clients konfiguriert wurde, können Sie die Facebook-Authentifizierung im {{site.data.keyword.Bluemix_notm}}-Dashboard aktivieren.
+Nachdem Sie Ihre Facebook-App-ID und den geheimen Schlüssel der App erhalten haben und Ihre Facebook for Developers-Anwendung zur Bedienung von Web-Clients konfiguriert wurde, können Sie die Facebook-Authentifizierung im {{site.data.keyword.amashort}}-Dashboard aktivieren.
 
-1. Öffnen Sie das {{site.data.keyword.Bluemix_notm}}-Dashboard.
-2. Klicken Sie auf die entsprechende App-Kachel, um die App zu laden.
-3. Klicken Sie auf die Kachel für den {{site.data.keyword.amashort}}-Service.
-4. Klicken Sie auf die Schaltfläche **Konfigurieren** in der Anzeige **Facebook**.
-5. Notieren Sie den Wert im Textfeld **Mobile Client Access-Weiterleitungs-URI für Facebook Developer Console**. Sie müssen diesen Wert in das Feld **Valid OAuth redirect URIs** bei der **Facebook-Anmeldung** des Facebook-Entwicklerportals in Schritt 6 bei der Konfiguration einer Facebook-Anwendung für Ihre Website eingeben.
-6. Geben Sie die **Anwendungs-ID** und den **geheimen Schlüssel der App** für Facebook ein.
+1. Öffnen Sie das {{site.data.keyword.amashort}}-Service-Dashboard.
+1. Aktivieren Sie auf der Registerkarte **Verwalten** die Option **Berechtigung**.
+1. Erweitern Sie den Abschnitt **Facebook**.
+1. Wählen Sie die Option zum Hinzufügen von Facebook zu einer Web-App aus.
+5. Notieren Sie den Wert im Textfeld **Mobile Client Access-Weiterleitungs-URI für Facebook for Developers**. Sie müssen diesen Wert in das Feld **Valid OAuth redirect URIs** bei der **Facebook-Anmeldung** des Facebook-Entwicklerportals eingeben.
+6. Geben Sie die Werte für **Anwendungs-ID** und **Geheimer Schlüssel der App** für Facebook ein, die Sie von der Site 'Facebook for Developers' abgerufen haben.
 7. Geben Sie den Weiterleitungs-URI in das Feld **Weiterleitungs-URIs Ihrer Webanwendung** ein. Dies ist der Wert für den Weiterleitungs-URI, auf den nach Beendigung des Berechtigungsprozesses zugegriffen wird. Er wird vom Entwickler festgelegt.
 8. Klicken Sie auf **Speichern**.
 
@@ -56,13 +57,15 @@ Nachdem Sie Ihre Facebook-App-ID und den geheimen Schlüssel der App erhalten ha
 ## {{site.data.keyword.amashort}}-Berechtigungsablauf mit Facebook als Identitätsprovider implementieren
 {: #facebook-auth-flow}
 
-Die Umgebungsvariable `VCAP_SERVICES` wird automatisch für jede {{site.data.keyword.amashort}}-Serviceinstanz erstellt und enthält Eigenschaften, die für den Berechtigungsprozess erforderlich sind. Sie besteht aus einem JSON-Objekt und kann durch Klicken auf **Umgebungsvariablen** in Ihrer Anwendung angezeigt werden.
+Die Umgebungsvariable `VCAP_SERVICES` wird automatisch für jede {{site.data.keyword.amashort}}-Serviceinstanz erstellt und enthält Eigenschaften, die für den Berechtigungsprozess erforderlich sind. Sie besteht aus einem JSON-Objekt und kann auf die Registerkarte mit den Serviceberechtigungsnachweisen im {{site.data.keyword.amashort}}-Service-Dashboard angezeigt werden.
 
 Gehen Sie wie folgt vor, um den Berechtigungsprozess zu starten:
 
 1. Rufen Sie den Berechtigungsendpunkt (`authorizationEndpoint`) und die Client-ID (`clientId`) von den Serviceberechtigungsnachweisen ab, die in der Umgebungsvariablen `VCAP_SERVICES` gespeichert sind. 
 
-	**Hinweis:** Wenn Sie den {{site.data.keyword.amashort}}-Service vor der Webunterstützung zur Ihrer Anwendung hinzugefügt haben, ist möglicherweise kein Tokenendpunkt in den Serviceberechtigungsnachweisen enthalten. Verwenden Sie stattdessen die folgenden URLs, abhängig von Ihrer {{site.data.keyword.Bluemix_notm}}-Region: 
+	`var cfEnv = require("cfenv");` 
+
+	**Hinweis:** Wenn Sie den {{site.data.keyword.amashort}}-Service vor der Webunterstützung zur Ihrer Anwendung hinzugefügt haben, ist möglicherweise kein Tokenendpunkt in den **Serviceberechtigungsnachweisen** enthalten. Verwenden Sie stattdessen die folgenden URLs, abhängig von Ihrer {{site.data.keyword.Bluemix_notm}}-Region: 
  
 	USA (Süden): 
 
@@ -91,17 +94,17 @@ Gehen Sie wie folgt vor, um den Berechtigungsprozess zu starten:
 	); 
   
 	function checkAuthentication(req, res, next){
-		// Prüfen, ob Benutzer authentifiziert ist
-
+		// Prüfen, ob Benutzer authentifiziert ist 
+  
 		if (req.session.userIdentity){   
 			next()  
-     } else {
-  // Falls nicht - Weiterleitung an Berechtigungsserver
-        var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
-        var authorizationEndpoint = mcaCredentials.authorizationEndpoint;
-        var clientId = mcaCredentials.clientId;
-        var redirectUri = "http://some-server/oauth/callback";
-         // Weiterleitungs-URI Ihrer Webanwendung   
+     } else {   
+			// If not - redirect to authorization server   
+			var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;   
+			var authorizationEndpoint = mcaCredentials.authorizationEndpoint;   
+			var clientId = mcaCredentials.clientId;   
+			var redirectUri = "http://some-server/oauth/callback"; 
+			// Your Web application redirect URI   
 
 			var redirectUrl = authorizationEndpoint + "?response_type=code";
         redirectUrl += "&client_id=" + clientId;   
@@ -163,7 +166,7 @@ Im nächsten Schritt werden das Zugriffs- und das Identitätstoken mithilfe des 
 			code: req.query.code
 		}
 
-		request.post( {
+		request.post( { 
 			url: tokenEndpoint, 
     formData: formData 
     }, function (err, response, body){ 

@@ -60,5 +60,3 @@ lastupdated: "2016-04-18"
 <tr><td>路径数</td> <td>500</td>
 </table>
 </dd></dl>
-
-*表 1. 试用帐户的 {{site.data.keyword.Bluemix_notm}} 资源限制*

@@ -6,9 +6,13 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Criando um serviço {{site.data.keyword.mobilepushshort}} desvinculado para Android
 {: #create_android_unbound}
-Última atualização: 17 de outubro de 2016
+Última atualização: 06 de dezembro de 2016
 {: .last-updated}
 
 Crie uma instância de serviço do {{site.data.keyword.mobilepushshort}}. É possível usar a instância de serviço do {{site.data.keyword.mobilepushshort}} sem ligar a nenhum aplicativo backend.
@@ -16,7 +20,7 @@ Crie uma instância de serviço do {{site.data.keyword.mobilepushshort}}. É pos
 1. Ligue a instância de serviço do {{site.data.keyword.mobilepushshort}} a um aplicativo Bluemix. Ao ligar, você será capaz de ver que todos os detalhes relacionados ao serviço são armazenados no formato JSON na variável de ambiente VCAP_SERVICES. 
 
 ![Ligando um serviço Push Notification](images/unbound_1.jpg)
- 2. Clique em **Ligar** e escolha a instância de serviço do {{site.data.keyword.mobilepushshort}} a ser ligada. Quando o aplicativo é ligado ao serviço {{site.data.keyword.mobilepushshort}}, as informações sobre o serviço são armazenadas no formato JSON na variável de ambiente VCAP_SERVICES do app. Por exemplo: 
+ 2. Clique em **Ligar** e escolha a instância de serviço do {{site.data.keyword.mobilepushshort}} a ser ligada. Quando o aplicativo é ligado ao serviço {{site.data.keyword.mobilepushshort}}, as informações sobre o serviço são armazenadas no formato JSON na variável de ambiente VCAP_SERVICES do app, por exemplo:  
 ```
  	{
     "imfpush_Dev": [

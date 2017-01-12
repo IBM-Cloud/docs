@@ -5,9 +5,14 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # 保存 Android 的通知
 {: #hold-notifications-android}
-前次更新：2016 年 10 月 17 日
+前次更新：2016 年 12 月 6 日
 {: .last-updated}
 
 在應用程式進入背景時，您可能會想要 {{site.data.keyword.mobilepushshort}} Service 保留傳送給應用程式的通知。若要保留通知，請在處理 {{site.data.keyword.mobilepushshort}} 之活動的 onPause() 方法中呼叫 hold() 方法。

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-11-08"
+lastupdated: "2016-12-06"
 
 ---
 {:new_window: target="_blank"}
@@ -57,7 +57,8 @@ utilisateur de gestion d'applications mobiles.
 * [Article de blogue : Introducing Bluemix Mobile Code Starters](https://www.ibm.com/blogs/bluemix/2016/10/rapid-dev-with-mobile-code-starters/){: new_window}
 * [Article de blogue : Bluemix Mobile, Part 1: Creating a Store Catalog application](https://developer.ibm.com/bluemix/2016/07/13/bluemix-mobile-creating-store-catalog-app-part1/){: new_window}
 * [Article de blogue : Bluemix Mobile, Part 2: Integrating custom Bluemix backend into the Store Catalog app](https://developer.ibm.com/bluemix/2016/07/14/bluemix-mobile-integrating-custom-backend-part2/){: new_window}
-* [Recette de developerWorks : Recevez des mises à jour météorologiques dans votre propre langue à l'aide du service de notification Push et du traducteur d'IBM Bluemix](https://developer.ibm.com/recipes/tutorials/receive-weather-updates-in-your-own-language-using-ibm-bluemix-push-notification-service-and-language-translator/){: new_window}
+* [developerWorks
+Recipe : Translated weather updates with Push Notifications and Language Translator](https://developer.ibm.com/recipes/tutorials/receive-weather-updates-in-your-own-language-using-ibm-bluemix-push-notification-service-and-language-translator/){: new_window}
 * [Tutoriels vidéos](https://www.youtube.com/channel/UCRW4t4Hzm9gzuiq5naERkCw){: new_window}
 
 ## Liens connexes
@@ -66,5 +67,5 @@ utilisateur de gestion d'applications mobiles.
 * [Mobile Analytics (Bêta)](/docs/services/mobileanalytics/index.html){: new_window}
 * [Mobile Client Access](/docs/services/mobileaccess/index.html){: new_window}
 * [Mobile Foundation](/docs/services/mobilefoundation/index.html){: new_window}
-* [Mobile Quality Assurance)](/docs/services/MobileQualityAssurance/index.html){: new_window}
+* [Mobile Quality Assurance](/docs/services/MobileQualityAssurance/index.html){: new_window}
 * [Push Notifications](/docs/services/mobilepush/index.html){: new_window}

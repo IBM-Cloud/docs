@@ -1,14 +1,18 @@
 ---
 
 copyright:
- years: 2015 2016
+ years: 2015, 2016
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # Ativando os Apps Chrome e Extensões para receber {{site.data.keyword.mobilepushshort}}
 {: #web_notifications}
-Última atualização: 15 de novembro de 2016
+Última atualização: 06 de dezembro de 2016
 {: .last-updated}
 
 Agora é possível ativar os Apps Chrome e Extensões para receber {{site.data.keyword.mobilepushshort}}.

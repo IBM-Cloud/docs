@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-09"
 
 ---
 
@@ -11,9 +12,6 @@ copyright:
 
 # ロギングとトレース
 {: #logging_tracing}
-
-最終更新日: 2016 年 6 月 21 日
-{: .last-updated}
 
 ## ログ・ファイル
 {: #log_files}
@@ -32,11 +30,55 @@ copyright:
 
 IBM Bluemix ユーザー・インターフェースには、トレース機能およびダンプ機能があります。
 * トレースを使用すると、実行しているアプリケーション・インスタンスの Liberty ロギングおよびトレース仕様を表示および更新できます。
-* ダンプを使用すると、実行しているアプリケーション・インスタンスのスレッド・ダンプおよびヒープ・ダンプを作成および操作できます。
+* ダンプを使用すると、実行しているアプリケーション・インスタンスのスレッド・ダンプおよびヒープ・ダンプを作成できます。
 
 このアクションを行うには、ユーザー・インターフェースで Liberty アプリケーションを選択します。
 ナビゲーションにあるカテゴリー「ランタイム」で、インスタンスの詳細を開くことができます。1 つまたは複数のインスタンスを選択してください。
 「アクション」メニューで、TRACE または DUMP を選択できます。
+
+## ダンプ・ファイルのダウンロード
+{: #download_dumps}
+
+<strong>前提条件:</strong>
+* [CF CLI のインストール](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html)
+* [Diego-Enabler プラグインのインストール](https://github.com/cloudfoundry-incubator/Diego-Enabler) (アプリケーションを Diego で実行する場合)
+
+<strong>アプリケーションを DEA で実行する場合、以下の手順を使用します。</strong>
+  
+1. app_guid を取得します
+```
+$ cf app <app_name> --guid
+```
+
+2. ダンプ・ファイルをダウンロードします
+```
+$ cf curl /v2/apps/<app_guid>/instances/<instance_id>/files/dumps/<dump_file_name> --output <local_dump_file_name>
+```
+
+<strong>アプリケーションを Diego で実行する場合、以下の手順を使用します。</strong>
+  
+1. app_guid を取得します
+```
+$ cf app <app_name> --guid
+```
+
+2. app_ssh_endpoint(host および port) および app_ssh_host_key_fingerprint を取得します
+```
+$ cf curl /v2/info
+```
+
+3. scp コマンド用の ssh-code を取得します
+```
+$ cf ssh-code
+```
+
+4. scp を実行してリモート・ダンプ・ファイルをローカルにコピーし、パスワードを要求されたら ssh-code を使用します
+```
+$ scp -P <app_ssh_endpoint_port> -o User=cf:<app_guid>/<instance_id> <app_ssh_endpoint_host>:/home/vcap/dumps/<dump_file_name> <local_dump_file_name>
+```
+
+詳しくは、[Accessing Apps with SSH](https://docs.cloudfoundry.org/devguide/deploy-apps/ssh-apps.html) を参照してください。
+
 
 # 関連リンク
 {: #rellinks}
@@ -44,3 +86,4 @@ IBM Bluemix ユーザー・インターフェースには、トレース機能�
 {: #general}
 * [Liberty ランタイム](index.html)
 * [Liberty プロファイル概要](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+

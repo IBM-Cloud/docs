@@ -20,22 +20,32 @@ lastupdated: "2016-09-09"
 
 如需 {{site.data.keyword.openwhisk_short}} 運作方式的詳細資料，請參閱[關於 {{site.data.keyword.openwhisk_short}}](./openwhisk_about.html)。
 
+您可以使用「瀏覽器」或 CLI 來開發 {{site.data.keyword.openwhisk_short}} 應用程式。
+這兩者具有類似的功能可用來開發應用程式；CLI 可讓您進一步控制部署及作業。
+
+
+## 在瀏覽器中開發
+{: #openwhisk_start_editor}
+
+請在[瀏覽器](https://console.{DomainName}/openwhisk/editor){: new_window}中試用 {{site.data.keyword.openwhisk_short}} 來建立動作、使用觸發程式自動化動作，以及探索公用套件。
+如需「OpenWhisk 使用者介面」的快速導覽，請造訪[進一步瞭解](https://console.{DomainName}/openwhisk/learn){: new_window}頁面。
+
 ## 設定 {{site.data.keyword.openwhisk_short}} CLI
 {: #openwhisk_start_configure_cli}
 
 您可以使用 {{site.data.keyword.openwhisk_short}} 指令行介面 (CLI) 來設定名稱空間及授權金鑰。移至[配置 CLI](https://new-console.{DomainName}/openwhisk/cli){: new_window}，並遵循指示進行安裝。
 
 ### 配置 CLI 以使用 HTTPS Proxy
+{: #openwhisk_configure_https_proxy_cli}
 
 CLI 可以設定成使用 HTTPS Proxy。若要設定 HTTPS Proxy，必須建立稱為 `HTTPS_PROXY` 的環境變數。變數必須設為 HTTPS Proxy 的位址，而其埠的格式如下：`{PROXY IP}:{PROXY PORT}`。
-
 
 使用 CLI 設定 {{site.data.keyword.openwhisk_short}} 之後，您可以從指令行開始使用它。
 
 ## 使用 {{site.data.keyword.openwhisk_short}} CLI
 {: #openwhisk_start_using_cli}
 
-完成您環境的配置之後，就可以開始使用 {{site.data.keyword.openwhisk_short}} CLI 來執行下列動作：
+在您[已配置環境](https://new-console.{DomainName}/openwhisk/cli){: new_window}之後，可以開始使用 {{site.data.keyword.openwhisk_short}} CLI 來執行下列動作：
 
 * 在 {{site.data.keyword.openwhisk_short}} 上，執行您的程式碼 Snippet 或動作。請參閱[建立及呼叫動作](./openwhisk_actions.html)。
 * 使用觸發程式及規則，讓動作回應事件。請參閱[建立觸發程式及規則](./openwhisk_triggers_rules.html)。

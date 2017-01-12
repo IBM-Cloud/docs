@@ -1,12 +1,8 @@
 ---
 
- 
-
 copyright:
-
   years: 2015, 2016
-
- 
+lastupdated: "2016-11-29"
 
 ---
 
@@ -16,8 +12,6 @@ copyright:
 {:codeblock: .codeblock}
 
 #Compartición de conductos en proyectos de ejemplo de {{site.data.keyword.jazzhub_short}} {: #share-pipeline}
-
-*Última actualización: 7 de diciembre de 2015* 
 
 Para proyectos de ejemplo desplegados en {{site.data.keyword.Bluemix_notm}} por medio del botón Desplegar en {{site.data.keyword.Bluemix_notm}}, puede definir las configuraciones de interconexión (conductos) de {{site.data.keyword.jazzhub_short}} como archivos YAML. Los conductos definidos como texto se pueden compartir, de forma que las personas que bifurcan (fork) su proyecto no tengan que configurar sus propios conductos. Esta característica está en desarrollo: el formato de YAML y la implementación podrían cambiar en cualquier momento. Actualmente, esta característica solo está disponible para proyectos con repositorios Git y GitHub cuyo objetivo sea {{site.data.keyword.Bluemix_notm}}. 
 {: shortdesc} 
@@ -220,4 +214,3 @@ Genere el archivo a partir de un conducto existente con URL con el siguiente for
 Esta llamada no precisa de una cabecera de aceptación (accept). Puede utilizar esta llamada desde un navegador. 
 
 **Nota:** Por motivos de seguridad, los valores de la propiedad del entorno secure-stage se omiten de los archivos YAML generados del conducto. 
-

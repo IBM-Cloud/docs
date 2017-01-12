@@ -6,7 +6,7 @@ copyright:
 
   years: 2016
 
-
+lastupdated: "2016-11-14"
 
 ---
 
@@ -18,9 +18,6 @@ copyright:
 
 # Mandatos de Cloud Foundry (cf)
 {: #cf}
-
-Última actualización: 20 de octubre de 2016
-{: .last-updated}
 
 La interfaz de línea de mandatos (CLI) de Cloud Foundry (cf) proporciona un conjunto de mandatos para gestionar las apps. En la siguiente información se indican los mandatos cf más comúnmente utilizados para gestionar aplicaciones e incluye sus nombres, opciones, uso, requisitos previos, descripciones y ejemplos. Para ver una lista de todos los mandatos cf y su información de ayuda asociada, utilice `cf help`. Utilice `cf nombre_mandato -h` para ver información de ayuda detallada sobre un determinado mandato.
 {: shortdesc}
@@ -49,7 +46,7 @@ Utilice el índice de la siguiente tabla para hacer referencia a los mandatos de
  </tr>
    </tbody>
  </table>
-*Tabla 1. Mandatos de Cloud Foundry generales*
+{: caption="Table 1. General Cloud Foundry commands" caption-side="top"}
 
 
 <table summary="Mandatos ordenados alfabéticamente para gestionar apps, espacios y servicios. Cada mandato tiene un enlace que le proporciona más información para el mandato.">
@@ -75,11 +72,13 @@ Utilice el índice de la siguiente tabla para hacer referencia a los mandatos de
  <td>[escalar](index.html#cf_scale)</td>
  <td>[services](index.html#cf_services)
  <td>[set-env](index.html#cf_set-env)</td>
+ <td>[ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh)</td>
  <td>[stop](index.html#cf_stop)</td>
  </tr>
  </tbody>
  </table>
-*Tabla 2. Mandatos para gestionar apps, espacios y servicios*
+{: caption="Table 2. Commands for managing apps, spaces, and services" caption-side="top"}
+
 
 ## cf api
 {: #cf_api}
@@ -251,7 +250,7 @@ cf delete appname [-f] [-r]
    <dt>appname (necesario)</dt>
    <dd>El nombre de la app.</dd>
    <dt>*-f* (opcional)</dt>
-   <dd>Fuerza la supresión de la app sin ninguna confirmación. </dd>
+   <dd>Fuerza la supresión de la app sin ninguna confirmación.</dd>
    <dt>*-r* (opcional)</dt>
    <dd>Suprime todos los nombres de dominio asociados a la app. </dd>
     </dl>
@@ -671,6 +670,42 @@ cf set-env nombre_app nombre_variable valor_variable
 Defina una variable de entorno denominada `variable_a` con un valor de `123` para la aplicación denominada `my_app`.
 ```
 cf set-env my_app variable_a 123
+```
+{: codeblock}
+
+
+## cf ssh
+{: #cf_ssh}
+
+Inicia una sesión de forma segura en un contenedor de aplicaciones. De forma predeterminada, SSH accede al contenedor que ejecuta la primera instancia de la aplicación, que es la instancia con el índice 0.
+
+```
+cf ssh
+```
+<strong>Requisitos previos</strong>: `cf api`, `cf login`, `cf target`
+
+También debe configurar el despliegue de Cloud Foundry para permitir el acceso SSH a las instancias de la aplicación. Para obtener información detallada, consulte [Configuración del acceso SSH para Cloud Foundry](https://docs.cloudfoundry.org/running/config-ssh.html){:new_window}.
+
+<strong>Opciones de mandato</strong>:
+
+<dl>
+<dt>nombre_app</dt>
+<dd>El nombre de la app. Si se permite SSH, puede utilizar esta opción para iniciar una sesión de SSH interactiva con una VM que aloja la aplicación.</dd>
+<dt>-i</dt>
+<dd>Destinado a una instancia específica de una aplicación.</dd>
+<dt>-L</dt>
+<dd>Permite el reenvío de puerto local, que vincula un puerto de salida de la máquina con un puerto de entrada de la VM de la aplicación.</dd>
+<dt>-N</dt>
+<dd>No ejecutar un mandato remoto.</dd>
+<dt>-t, -tt, o -T</dt>
+<dd>Le permite ejecutar una sesión SSH en modalidad pseudo tty en lugar de generar salida de línea de terminal.<dd>
+</dl>
+
+<strong>Ejemplos</strong>:
+
+Inicio de una sesión SSH interactiva con una VM que alojan una aplicación llamada `my_app`.
+```
+$ cf ssh my_app
 ```
 {: codeblock}
 

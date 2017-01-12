@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-26"
+lastupdated: "2016-12-8"
 ---
 
 {:new_window: target="_blank"}
@@ -14,7 +14,7 @@ lastupdated: "2016-10-26"
 # Editing code with the Eclipse Orion {{site.data.keyword.webide}}
 {: #web_ide}
 
-The Eclipse Orion {{site.data.keyword.webide}} is a browser-based development environment where you can develop for the web. You can develop in JavaScript, HTML, and CSS with the help of content assist, code completion, and error checking. The {{site.data.keyword.webide}} works with nearly any language and offers syntax highlighting for most [file types (Link opens in a new window)](https://hub.jazz.net/docs/overview/#dev_support){: new_window}. Source control is built in through Git or Jazz SCM, and you can deploy code locally to test and debug your apps.
+The Eclipse Orion {{site.data.keyword.webide}} is a browser-based development environment where you can develop for the web. You can develop in JavaScript, HTML, and CSS with the help of content assist, code completion, and error checking. The {{site.data.keyword.webide}} works with nearly any language and offers syntax highlighting for most [file types](https://hub.jazz.net/docs/overview/#dev_support){: new_window} ![External link icon, link opens in a new window](images/launch--glyph.svg). Source control is built in through Git or Jazz SCM, and you can deploy code locally to test and debug your apps.
 {:shortdesc}
 
 Best of all, the {{site.data.keyword.webide}} is powered by the web. You have nothing to install, nothing to maintain, and nothing to scale. You can develop anywhere that you have an internet connection.
@@ -39,9 +39,6 @@ By default, the settings for the editor style and font size are always shown. To
 ![Editor Settings toggle](images/webide_editor_settings_toggle_light.png)
 
 
-![Editor Settings toggle](images/webide_editor_settings_toggle_light.png)
-
-
 ## Editing code
 {: #editcode}
 
@@ -54,7 +51,7 @@ The second section is the editor pane on the right. The editor provides several 
 ![Web IDE](images/webide_light.png)
 
 ### Working with multiple files
-1. To work with two files at the same time, click the **Change split editor mode** icon <img class="inline" src="./images/webide_split_editor_icon_light.png"  alt="Split Editor icon"> at the top of the editor.
+1. To work with two files at the same time, click the **Change split editor mode** icon <img class="inline" src="images/webide_split_editor_icon_light.png"  alt="Split Editor icon"> at the top of the editor.
 2. From the menu that opens, select a view.
 
  After you select a view, if a file was already open in the editor, it is shown in both editor views.
@@ -71,25 +68,25 @@ To see a list of the keyboard shortcuts in the editor, press Alt+Shift+?. If you
 ## Managing source code
 {: #sourcecontrol}
 
-The {{site.data.keyword.webide}} is integrated with source code management tools. To work with your Git repository, click the **Git Repository** icon <img class="inline" src="./images/webide_git_icon_light.png"  alt="The Git Repository icon">. For more information, see [Source control with Git (Link opens in a new window)](https://hub.jazz.net/docs/git/){: new_window}.
+The {{site.data.keyword.webide}} is integrated with source code management tools. To work with your Git repository, click the **Git Repository** icon <img class="inline" src="images/webide_git_icon_light.png"  alt="The Git Repository icon">. For more information, see [Source control with Git](https://hub.jazz.net/docs/git/){: new_window} ![External link icon, link opens in new window](images/launch--glyph.svg).
 
 
 ## Deploying an app from your workspace
 {: #deploy}
 
-1. To deploy your app, from the run bar, either select or [create (Link opens in a new window)](https://hub.jazz.net/tutorials/livesync/#launch_configuration){: new_window} a launch configuration.
-1. Click the deploy icon <img class="inline" src="./images/webide_deploy_button_light.png"  alt="The deploy icon">. An instance of your app is deployed by using the current contents of your workspace and the environment that is defined in your launch configuration. 
+1. To deploy your app, from the run bar, either select or [create](https://hub.jazz.net/tutorials/livesync/#launch_configuration){: new_window} ![External link icon, link opens in new window](images/launch--glyph.svg) a launch configuration.
+1. Click the deploy icon <img class="inline" src="images/webide_deploy_button_light.png"  alt="The deploy icon">. An instance of your app is deployed by using the current contents of your workspace and the environment that is defined in your launch configuration. 
 2. After your app is deployed, you can use the run bar to stop, restart, or debug your app, view logs, and more.
-![Run bar](images/webide_runbar_light.png)
+![Run bar](images/webide_runbar_light.png)    
 
- ## Editing outside of the {{site.data.keyword.webide}}
+## Editing outside of the {{site.data.keyword.webide}}
 {: #editlocal}
 
 To use an editor besides the {{site.data.keyword.webide}}, set up {{site.data.keyword.Bluemix_live}} so that you can work directly with your project files in any tool. {{site.data.keyword.Bluemix_live_notm}} is a command-line application that synchronizes the changes in your local file system with your cloud workspace in {{site.data.keyword.jazzhub}}. 
 
 ### Before you begin 
 
-Download and install the [{{site.data.keyword.Bluemix_live_notm}} command-line interface (Link opens in a new window)](http://livesyncdownload.ng.bluemix.net){: new_window}.
+Download and install the [{{site.data.keyword.Bluemix_live_notm}} command-line interface](http://livesyncdownload.ng.bluemix.net){: new_window} ![External link icon, link opens in new window](images/launch--glyph.svg).
 
 ### Synchronizing your local environment with {{site.data.keyword.Bluemix_notm}}
 {: #edit_local_download}

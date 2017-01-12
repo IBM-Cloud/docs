@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-06-10"
 
 ---
 
@@ -11,9 +12,6 @@ copyright:
 
 # Padrões de buildpack
 {: #buildpack_defauts}
-
-Última atualização: 10 de junho de 2016
-{: .last-updated}
 
 O buildpack do Liberty é atualizado frequentemente no Bluemix. Cada liberação pode conter correções de segurança ou aprimoramentos de recurso.
 

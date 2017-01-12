@@ -45,8 +45,8 @@ solicitações de seu domínio customizado serão roteadas para seu aplicativo n
 
 	2. Na guia **DOMÍNIOS**, clique em **INCLUIR DOMÍNIO**, insira o nome do domínio customizado e clique em **SALVAR**.
 	
-	**Nota**: Por exemplo, é possível usar `mycompany.com` para associar a rota `www.mycompany.com` ao seu aplicativo. Também é possível usar
-`example.mycompany.com` para associar a rota `www.example.mycompany.com` ao seu aplicativo.
+	**Nota**: Por exemplo, é possível usar `mycompany.com` para associar a rota `www.mycompany.com` ao seu
+app. Também é possível usar `example.mycompany.com` para associar a rota `www.example.mycompany.com` ao seu app.
 
   2. Inclua a rota com o domínio customizado para um aplicativo.
 
@@ -297,7 +297,8 @@ estiver em vigor.
   ...
   ```
 
-  **Resultado:** O Roteador CF para de enviar o tráfego para o app *Blue*. O app *Green* está respondendo a ambas as URLs: `Green.mybluemix.net` e `Blue.mybluemix.net`.
+  **Resultado:** O Roteador CF para de enviar tráfego para o app *Azul*. O app *Verde* está respondendo para ambas
+as URLs: `Green.mybluemix.net` e `Blue.mybluemix.net`.
 
 5. Remova a rota `Green.mybluemix.net` para o app *Green*.
 
@@ -305,7 +306,8 @@ estiver em vigor.
   cf unmap-route Green mybluemix.net -n Green
   ```
 
-  **Resultado:** O Roteador CF para de enviar o tráfego para o app *Blue*. O app *Green* está respondendo à URL `Blue.mybluemix.net`.
+  **Resultado:** O Roteador CF para de enviar tráfego para o app *Azul*. O app *Verde* está respondendo para
+a URL `Blue.mybluemix.net`.
 
 6. Opcional: se desejar excluir a versão antiga (*Blue*) do aplicativo, use o comando `cf delete`.
 

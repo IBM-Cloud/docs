@@ -14,7 +14,7 @@ copyright:
 
 # A propos de la chaîne de blocs
 {: #ibmblockchain_overview}
-Dernière mise à jour : 23 septembre 2016
+Dernière mise à jour : 03 novembre 2016
 {: .last-updated}
 
 ## Qu'est-ce qu'une chaîne de blocs ?
@@ -47,7 +47,6 @@ Les termes suivants sont essentiels à la compréhension complète des concepts 
 
 **Réseau privé** : Réseau de blockchain dans lequel chaque noeud est requis pour gérer l'identité des membres sur le réseau, et chaque noeud n'a accès qu'aux seules transactions autorisées par ses droits.  
 
-<br>
 ## Concepts clés
 {: #keyconcepts}
 
@@ -79,6 +78,7 @@ La figure 1 illustre les participants d'un réseau typique sur un marché d'acti
 2. Les transactions peuvent être déclenchées depuis n'importe quel noeud réseau, mais elles sont toujours transférées vers le noeud de validation principal, lequel classe les transactions. Le noeud principal diffuse les transactions classées vers tous les homologues de validation à fins de consensus, ou d'accord, sur le classement proposé.
 3. Si le classement des transactions est approuvé, les transactions sont exécutées et ajoutées dans le registre sur chaque noeud de validation. Le registre est ensuite répliqué sur tous les noeuds réseau.  
 
+<br>
 ## Architecture du réseau et des applications
 {: #architecture}
 
@@ -118,4 +118,4 @@ Une chaîne de blocs privée nécessite des entités pour l'enregistrement des d
 
 **Services de code blockchain** : Ces services constituent une méthode simple et sécurisée pour l'exécution de code blockchain bac à sable sur les noeuds de validation. L'environnement est un conteneur “verrouillé” et sécurisé, associé à un ensemble d'images de base signées contenant le système d'exploitation sécurisé et le langage de code blockchain, les couches d'exécution et SDK pour Go, Java et Node.js. D'autres langages peuvent être activés, si nécessaire.
 
-Pour en savoir plus sur l'implémentation de la chaîne de blocs par IBM, consultez la [spécification de protocole](https://github.com/hyperledger/fabric/blob/master/docs/protocol-spec.md#fabric) relative à Hyperledger Fabric 0.5.
+Pour en savoir plus sur l'implémentation de la chaîne de blocs par IBM, consultez la [spécification de protocole](https://github.com/hyperledger/fabric/blob/v0.6/docs/protocol-spec.md#fabric) relative à Hyperledger Fabric 0.5.

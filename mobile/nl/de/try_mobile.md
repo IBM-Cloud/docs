@@ -11,7 +11,7 @@ lastupdated: "2016-10-19"
 
 Jeder {{site.data.keyword.Bluemix}} Mobile-Service kann unabhängig verwendet werden. Durch die kombinierte Verwendung mit der {{site.data.keyword.mobilefirstbp}} Starter-Boilerplate können Sie den größten Nutzen erzielen.
 
-Erstellen Sie zu Beginn mit dem {{site.data.keyword.mobilefirstbp}} Starter eine eigene App. Mit der Boilerplate können Sie die folgenden Aktionen durchführen:
+Erstellen Sie zu Beginn mit dem {{site.data.keyword.mobilefirstbp}}-Starter Ihre App. Die Boilerplate ermöglicht Ihnen die Durchführung der folgenden Aktionen:
 
 * Erstellen Sie eine Node.js-Laufzeit mit einer Vorlagenanwendung. Mithilfe dieser Anwendung können Sie serverseitige Funktionen wie REST-konforme APIs und statische Dateien bereitstellen. <!-- You can read more about operating this application in the Developing Mobile Backend section.-->
 * Stellen Sie eine Instanz für jeden der {{site.data.keyword.Bluemix_notm}} Mobile-Services bereit und binden Sie den Service an die Node.js-Anwendung.

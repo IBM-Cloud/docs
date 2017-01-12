@@ -1,13 +1,18 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Enabling tag-based notifications
 {: #tag_based_notifications}
-Last updated: 21 November 2016
+Last updated: 11 January 2017
 {: .last-updated}
 
 Tag-based notification messages are targeted to all devices that are subscribed to a particular tag. 

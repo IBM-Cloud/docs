@@ -2,8 +2,11 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"  
+lastupdated: "2016-10-02"
+
 ---
+
+{:codeblock:.codeblock}
 
 # Communication entre applications de back end et services
 {: #backend-comm}
@@ -20,6 +23,7 @@ Sur une ligne de commande, ouvrez le répertoire de l'application Node.js et lan
 ```Bash
 npm install -save bms-mca-oauth-sdk
 ```
+{: codeblock}
 
 ## Utilisation du module bms-mca-oauth-sdk
 {: #using-sdk}
@@ -42,7 +46,7 @@ var options = {
 	// Alternatively, you can get these property values by clicking Show Credentials
 	// on the {{site.data.keyword.amashort}} Service tile in your {{site.data.keyword.Bluemix_notm}} application dashboard
 
-	appId: "appId",				// Bleumix applicationGUID, a.k.a tenantId
+	appId: "tenantID",				// a.k.a. Bluemix applicationGUID
 	clientId: "clientId",			
 	secret: "secret",
 	serverUrl: "serverUrl"
@@ -60,3 +64,4 @@ oauthSDK.getAuthorizationHeader(options).then(function(authHeader){
 });
 
 ```
+{: codeblock}

@@ -1,16 +1,16 @@
 ---
 
- 
+
 
 copyright:
 
-  years: 2015，2016
+  years: 2015，2017
 
-lastupdated: "2016-05-09" 
+lastupdated: "2016-05-09"
 
 ---
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -76,20 +76,18 @@ If all of the following principles are observed in your application, the applica
 
   At a minimum, capture your application installation as a uniform set of scripts that are independent of the operating system. Keep your application installation small and portable to adapt to different automation techniques. Also, minimize the dependencies that are required by the application installation.
 
-For more information about cloud-ready applications, see [The 12-factor application](http://12factor.net/){:new_window}.
+For more information about cloud-ready applications, see [The 12-factor application ![External link icon](../icons/launch-glyph.svg)](http://12factor.net/){: new_window}.
 
 ##Migrating your apps
 {: #ht_hostapp}
 
 You can migrate your applications to {{site.data.keyword.Bluemix_notm}} in an incremental way, instead of shifting the application completely to the cloud environment. You can migrate a portion of your application first and connect to the existing data or system of records by using the Cloud Integration service.
 
-In your cloud applications, you might need to access the backend data or services, for example, a system of record. In {{site.data.keyword.Bluemix_notm}}, you can use the Secure Gateway service to establish a secured tunnel between a {{site.data.keyword.Bluemix_notm}} organization and the enterprise backend network. The service enables the applications on {{site.data.keyword.Bluemix_notm}} to access the backend network’s data and services. For details, see [Reaching enterprise backend with Bluemix Secure Gateway via console](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){:new_window}.
+In your cloud applications, you might need to access the backend data or services, for example, a system of record. In {{site.data.keyword.Bluemix_notm}}, you can use the Secure Gateway service to establish a secured tunnel between a {{site.data.keyword.Bluemix_notm}} organization and the enterprise backend network. The service enables the applications on {{site.data.keyword.Bluemix_notm}} to access the backend network’s data and services. For details, see [Reaching enterprise backend with Bluemix Secure Gateway via console ![External link icon](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window}.
 
 To deploy your application to {{site.data.keyword.Bluemix_notm}} as a Cloud Foundry application, select a runtime from the {{site.data.keyword.Bluemix_notm}} Catalog. The runtime contains a starter Hello World application that you can replace with your own application. If you cannot find a starter that provides the runtime you want, you can bring a custom, Cloud Foundry-compatible buildpack to {{site.data.keyword.Bluemix_notm}} by using the –b option with the cf push command. For details, see [Using community buildpacks](/docs/cfapps/byob.html).
 
 You can use the following tools and services that {{site.data.keyword.Bluemix_notm}} provides:
-
-*Table 1. {{site.data.keyword.Bluemix_notm}} tools*
 
 | Tool	| Method |
 |:------|:--------|
@@ -97,6 +95,7 @@ You can use the following tools and services that {{site.data.keyword.Bluemix_no
 |Eclipse	|Manage your code in Eclipse and use the IBM Eclipse tools for {{site.data.keyword.Bluemix_notm}} to push your application.|
 |Git integration	|Manage your code on GitHub and integrate Git into {{site.data.keyword.Bluemix_notm}}. You can collaborate with other developers. Your application is deployed to {{site.data.keyword.Bluemix_notm}} automatically when you commit changes in the code. You do not need to push the application manually.|
 |{{site.data.keyword.Bluemix_notm}} DevOps Delivery Pipeline	|Manage your code on DevOps GitHub repository and deploy your application to {{site.data.keyword.Bluemix_notm}} by using the DevOps Delivery Pipeline.|
+{: caption="Table 1. {{site.data.keyword.Bluemix_notm}} tools" caption-side="top"}
 
 
 If the Cloud Foundry platform does not support your application requirements, you can use a container or VM where the runtime is set up, configured, and maintained with more customized options.
@@ -176,7 +175,7 @@ services = JSON.parse(ENV['VCAP_SERVICES'], :symbolize_names => true)
             end
           end
         end.flatten!.first
-```		
+```
 {:codeblock}
 
 To ensure that your application can run in a local environment after you modify the application for {{site.data.keyword.Bluemix_notm}}, check for the presence of the VCAP_SERVICES environment variable, which is set for all {{site.data.keyword.Bluemix_notm}} Cloud Foundry applications.
@@ -192,5 +191,5 @@ To ensure that your application can run in a local environment after you modify 
 * [Virtual Machines](/docs/virtualmachines/vm_index.html)
 * [Getting started with Delivery Pipeline](/docs/services/DeliveryPipeline/index.html)
 * [Deploying apps with IBM Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html)
-* [The twelve-factor app](http://12factor.net/){:new_window}
-* [Reaching enterprise backend with Bluemix Secure Gateway via console](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){:new_window}
+* [The twelve-factor app ![External link icon](../icons/launch-glyph.svg)](http://12factor.net/){: new_window}
+* [Reaching enterprise backend with Bluemix Secure Gateway via console ![External link icon](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window}

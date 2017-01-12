@@ -2,8 +2,12 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-10-27"
+
 ---
+
+{:shortdesc: .shortdesc} 
+{:codeblock:.codeblock}
 
 # 通过 {{site.data.keyword.amashort}} 保护 Node.js 资源
 {: #protecting-resources-nodejs}
@@ -35,6 +39,7 @@ npm install -save express
 npm install -save passport
 npm install -save bms-mca-token-validation-strategy
 ```
+{: codeblock}
 
 ## 在 Node.js 中保护资源
 {: #protecting-resources-nodesdk}
@@ -56,3 +61,4 @@ app.use(passport.initialize());app.get('/protected', passport.authenticate('mca-
 
 app.listen(process.env.PORT);
 ```
+{: codeblock}

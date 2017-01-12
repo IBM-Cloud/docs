@@ -1,7 +1,9 @@
 ---
 
 copyright:
-  anni: 2015, 2016
+  years: 2015, 2016
+  
+lastupdated: "2016-10-22"
 
 ---
 
@@ -12,8 +14,6 @@ copyright:
 # Richiesta di assistenza clienti
 {: #getting-customer-support}
 
-Ultimo aggiornamento: 22 ottobre 2016
-{: .last-updated}
 
 
 Se riscontri dei problemi con {{site.data.keyword.Bluemix}}, hai diverse opzioni di supporto, quali l'ottenimento di una guida mediante un forum o l'apertura di un ticket di supporto.
@@ -143,7 +143,7 @@ ha circa 50 aggiornamenti al mese.
 ### Configurazione di notifiche e-mail per incidenti e manutenzione
 {: #setting-up-notifications}
 
-Per {{site.data.keyword.Bluemix_notm}} pubblico, puoi registrarti per ricevere le notifiche della piattaforma. Le notifiche della piattaforma sono avvisi e-mail facoltativi per eventi di incidenti e manutenzione relativi alla piattaforma {{site.data.keyword.Bluemix_notm}}. Puoi scegliere di ricevere queste notifiche e-mail facendo clic sulle opzioni della voce di menu **Account**  &gt; **Notifiche** &gt; **Piattaforma**. Per ulteriori informazioni sull'impostazione delle notifiche di account, vai a [Impostazione delle notifiche](../admin/account.html#notifications).
+Per {{site.data.keyword.Bluemix_notm}} pubblico, puoi registrarti per ricevere le notifiche della piattaforma. Le notifiche della piattaforma sono avvisi e-mail facoltativi per eventi di incidenti e manutenzione relativi alla piattaforma {{site.data.keyword.Bluemix_notm}}. Puoi scegliere di ricevere queste notifiche e-mail facendo clic sulle opzioni della voce di menu **Account**  &gt; **Notifiche** &gt; **Piattaforma**. Per ulteriori informazioni sull'impostazione delle notifiche di account, vai a [Impostazione delle notifiche](/docs/admin/account.html#notifications).
 
 
 ### Procedure consigliate per il monitoraggio dello stato
@@ -201,7 +201,7 @@ Descrizione | Supporto per tutti i clienti in prova di Bluemix.  |  Supporto per
 Supporto di severità elevata |  N/D | N/D | Incluso | Include
 il supporto lingua | Inglese | Inglese | Inglese | CSM (client success manager)
 assegnato inglese | Non incluso | Non incluso | Non incluso | Incluso per<br> 8 ore a settimana
-*Tabella 1. Livelli di supporto*
+{: caption="Table 1. Support levels" caption-side="top"}
 
 ### Apertura di un ticket di supporto
 {: #open-ticket}
@@ -213,7 +213,7 @@ Se non sei riuscito a risolvere il tuo problema tecnico con le opzioni di risolu
 Se il problema non è dovuto a un'interruzione, apri un ticket di supporto attraverso una delle seguenti opzioni:
 
   * Dal widget Supporto, fai clic su **Richiedi assistenza**. Nella pagina così visualizzata, fai clic su **CONTATTA**. Compila il modulo per indicare per cosa hai bisogno di supporto tecnico.
-  * Utilizza la pagina di assistenza del [supporto IBM {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport){: new_window}. Puoi inoltrare ticket per problemi relativi a vendite, fatturazione, ID IBM e accesso e supporto tecnico. Per questi ultimi, una volta fatto clic su **Supporto tecnico** puoi selezionare un gruppo tecnico. Ad esempio, se hai bisogno di assistenza per le applicazioni Cloud Foundry, OpenWhisk, Containers o Virtual Servers o per i server Bare Metal, puoi selezionare **Servizi dell'applicazione**. Se hai bisogno di aiuto per un servizio specifico, seleziona la categoria di servizi corrispondente. Per determinare la categoria di appartenenza del tuo servizio, consulta le categorie riportate in [Servizi](../services/index.html){: new_window} nel riquadro di navigazione.  
+  * Utilizza la pagina di assistenza del [supporto IBM {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport){: new_window}. Puoi inoltrare ticket per problemi relativi a vendite, fatturazione, ID IBM e accesso e supporto tecnico. Per questi ultimi, una volta fatto clic su **Supporto tecnico** puoi selezionare un gruppo tecnico. Ad esempio, se hai bisogno di assistenza per le applicazioni Cloud Foundry, OpenWhisk, Containers o Virtual Servers o per i server Bare Metal, puoi selezionare **Servizi dell'applicazione**. Se hai bisogno di aiuto per un servizio specifico, seleziona la categoria di servizi corrispondente. Per determinare la categoria di appartenenza del tuo servizio, consulta le categorie riportate in [Servizi](/docs/services/index.html){: new_window} nel riquadro di navigazione.  
   * Da [IBM Client Success Portal](https://support.ibmcloud.com){: new_window}. Dopo aver eseguito l'accesso al portale, fai clic su **Apri ticket** e quindi riempi il modulo di supporto. 
   
 Quando apri un ticket di supporto, accertati di indicare una gravità appropriata per il tuo ticket. Quest'ultima determina il modo in cui il tuo ticket viene gestito. Per informazioni sui diversi livelli di severità, vedi [Severità e tempo di risposta del ticket di supporto](index.html#support-ticket-severity){: new_window}. Se la tua richiesta è urgente, ma hai solo un supporto di base o gratuito, puoi eseguire l'upgrade del tuo account e inviare ticket di elevata severità (livello 1, 2 e 3). Per eseguire l'upgrade a un livello di supporto superiore, contatta il tuo rappresentante delle vendite IBM per email a sales@bluemix.net.
@@ -284,7 +284,7 @@ Severità 1 | <strong>Impatto sul business critico o il servizio non funziona.</
 Severità 2 | <strong>Impatto sul business significativo.</strong> <br> L'utilizzo di una funzione o funzionalità è severamente limitato o sei a rischio di saltare delle scadenze di business. | <ul><li><strong>Gratuito:</strong> N/D</li><li><strong>Di base:</strong> N/D </li><li><strong>Standard:</strong> in 2 ore</li><li><strong>Premium:</strong> in 90 minuti </li></ul> | <ul><li><strong>Gratuito:</strong> N/D</li><li><strong>Di base:</strong> N/D </li><li><strong>Standard:</strong> Orario di operatività </li><li><strong>Premium:</strong> Orario di operatività </li></ul>
 Severità 3 | <strong>Impatto sul business minore.</strong> <br> Una funzione o funzionalità è utilizzabile ma riscontra dei problemi che ne influenzano l'utilizzo. Non viene causato alcun impatto critico sulle operazioni. | <ul><li><strong>Gratuito:</strong> N/D</li><li><strong>Di base:</strong> N/D </li><li><strong>Standard:</strong> in 4 ore</li><li><strong>Premium:</strong> in 2 ore</li></ul> | <ul><li><strong>Gratuito:</strong> N/D</li><li><strong>Di base:</strong> N/D </li><li><strong>Standard:</strong> Orario di operatività </li><li><strong>Premium:</strong> Orario di operatività </li></ul>
 Severità 4 | <strong>Impatto sul business minimo.</strong> <br> Una domanda o una richiesta non tecnica. | <ul><li><strong>Gratuito:</strong> Massimo impegno </li><li><strong>Di base:</strong> Massimo impegno</li><li><strong>Standard:</strong> in 8 ore</li><li><strong>Premium:</strong> in 4 ore</li></ul> | <ul><li><strong>Gratuito:</strong> Orario di operatività </li><li><strong>Di base:</strong> Orario di operatività </li><li><strong>Standard:</strong> Orario di operatività </li><li><strong>Premium:</strong> Orario di operatività </li></ul>
-*Tabella 2. Definizione di severità e tempo di risposta*
+{: caption="Table 2. Severity definition and response time" caption-side="top"}
 
 
 ### Notifica di una vulnerabilità di sicurezza potenziale
@@ -324,7 +324,7 @@ Prima di raccogliere le informazioni di diagnostica, completa la
 seguente procedura:
 
   1. Assicurati di aver installato l'interfaccia riga di comando cf più recente. Per ulteriori informazioni, vedi [Installing the cf
-command line interface](../starters/install_cli.html){: new_window}.
+command line interface](/docs/starters/install_cli.html){: new_window}.
 
      **Nota:** se non hai installato l'interfaccia riga di comando cf più recente, dopo aver connesso la riga di comando cf a {{site.data.keyword.Bluemix_notm}}, il comando `cf logs` potrebbe non restituire alcun input.
 
@@ -370,8 +370,7 @@ La seguente tabella elenca le lingue nazionali supportate e i codici lingua per 
 | Spagnolo | es |
 | Cinese semplificato | zh_CN |
 | Cinese tradizionale | zh_TW |
-
-*Tabella 3. Lingue nazionali supportate e codici lingua*
+{: caption="Table 3. Supported national languages and language codes" caption-side="top"}
 
 
 ## Sondaggio sulla soddisfazione per il supporto {{site.data.keyword.Bluemix_notm}}  
@@ -388,7 +387,7 @@ IBM invia periodicamente i sondaggi ai clienti Bluemix per ottenere i loro feedb
 
   * [Portale di supporto Bluemix](https://support.ibmcloud.com){: new_window} 
   * [Riposte dW](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} 
-  * [Installazione dello strumento di comando cf](../starters/install_cli.html){: new_window} 
+  * [Installazione dello strumento di comando cf](/docs/starters/install_cli.html){: new_window} 
   * [SaaS Support Handbook](http://www-01.ibm.com/software/support/handbook.html){: new_window}
   * [Overflow dello stack](http://stackoverflow.com/questions/tagged/ibm-bluemix){: new_window} 
   

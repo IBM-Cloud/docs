@@ -5,9 +5,14 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Tagbasierte Benachrichtigungen aktivieren
 {: #tag_based_notifications}
-Letzte Aktualisierung: 18. Oktober 2016
+Letzte Aktualisierung: 06. Dezember 2016
 {: .last-updated}
 
 Tagbasierte Benachrichtigungen haben all diejenigen Geräte zum Ziel, die einen bestimmten Tag subskribiert haben. 

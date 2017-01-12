@@ -1,23 +1,28 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Interactive notifications
 {: #interactive-notifications}
-Last updated: 17 October 2016
+Last updated: 11 January 2017
 {: .last-updated}
 
-Interactive notifications allow users to act when a notification arrives without opening the application. When an interactive notification arrives, the device shows the action buttons along with the notification message. Interactive notifications are supported on iOS devices with version 8 and later. If an interactive notification is sent to iOS devices with version lesser than 8, the notification actions are not displayed.
+Interactive notifications allow users to act when a notification arrives without opening the application. When an interactive notification arrives, the device shows the action buttons along with the notification message. Interactive notifications are supported on iOS devices with version 8 and later. If an interactive notification is sent to iOS devices with version earlier than 8, the notification actions are not displayed.
 
 ##Sending interactive {{site.data.keyword.mobilepushshort}}
 
 
 Interactive notification can be sent by using the Push dashboard or by using the [REST API documentation](t_restapi.html).
 
-From Push Console: 
+From the {{site.data.keyword.mobilepushshort}} console: 
 
 1. Under the notification tab in Push dashboard, click **Send Notification**. 
 2. Choose your notification recipients and click **Next**. 
@@ -25,32 +30,54 @@ From Push Console:
 
 ## Handling interactive {{site.data.keyword.mobilepushshort}} in an iOS application
 
+
+### Swift
+
 Complete the steps to receive interactive notifications:
 
-1. Enable the application capability to perform background tasks on receiving the remote notifications. This step is required if some of the actions are background-enabled.
-1. In the AppDelegate (application: didRegisterForRemoteNotificationsWithDeviceTokenapplication:), set the categories before you set the `deviceToken` on `WLPush Object`.
-```
-if([application respondsToSelector:@selector(registerUserNotificationSettings:)]){
- UIUserNotificationType userNotificationTypes = UIUserNotificationTypeNone | UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge;
- UIMutableUserNotificationAction *acceptAction = [[UIMutableUserNotificationAction alloc] init];
- acceptAction.identifier = @"OK";
- acceptAction.title = @"OK";
- UIMutableUserNotificationAction *rejetAction = [[UIMutableUserNotificationAction alloc] init];
- rejetAction.identifier = @"NOK";
- rejetAction.title = @"NOK";
- UIMutableUserNotificationCategory *cateogory = [[UIMutableUserNotificationCategory alloc] init];
- cateogory.identifier = @"poll";
- [cateogory setActions:@[acceptAction,rejetAction] forContext:UIUserNotificationActionContextDefault];
- [cateogory setActions:@[acceptAction,rejetAction] forContext:UIUserNotificationActionContextMinimal];
- NSSet *catgories = [NSSet setWithObject:cateogory];
- [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:userNotificationTypes categories:catgories]];
-}
-```
-	{: codeblock}
-
-1. Implement new callback method on AppDelegate:
+1. Enable the application capability to perform background tasks on receiving the remote notifications. 
+1. Initialize the `BMSPush` SDK with your action category.
 	```
-	 -(void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forRemoteNotification:(NSDictionary *)userInfo completionHandler:(void (ˆ)())completionHandler
+	let myBMSClient = BMSClient.sharedInstance
+	myBMSClient.initialize(bluemixRegion: BMSClient.Region.usSouth)
+	let push =  BMSPushClient.sharedInstance
+    let actionOne = BMSPushNotificationAction(identifierName: "FIRST", buttonTitle: "Accept", isAuthenticationRequired: false, defineActivationMode: UIUserNotificationActivationMode.background)
+   	let actionTwo = BMSPushNotificationAction(identifierName: "SECOND", buttonTitle: "Reject", isAuthenticationRequired: false, defineActivationMode: UIUserNotificationActivationMode.background)
+   	let category = BMSPushNotificationActionCategory(identifierName: "category", buttonActions: [actionOne, actionTwo])
+   	let notifOptions = BMSPushClientOptions(categoryName: [category])
+	push.initializeWithAppGUID(appGUID: "YOUR_APP_GUID", clientSecret:"YOUR_APP_CLIENT_SECRET", options: notifOptions)
+	```
+		{: codeblock}
+
+1. Implement the new callback method on AppDelegate:
+	```
+	 func userNotificationCenter(_ center: UNUserNotificationCenter,
+       didReceive response: UNNotificationResponse,
+       withCompletionHandler completionHandler: @escaping () -> Void) {
+            switch response.actionIdentifier {
+		    case "FIRST":
+		      print("FIRST")
+		    case "SECOND":
+		      print("SECOND")  
+		    default:
+		      print("Unknown action")
+		    }
+		completionHandler
+	}
 	```
 	{: codeblock} 
 5. This new callback method is invoked when user clicks the action button. The implementation of this method must perform tasks associated with the specified identifier and execute the block in the `completionHandler` parameter.
+
+
+### Cordova
+
+To get actionable notification in an Cordova iOS application, complete the steps:
+
+1. Add category field inside `BMSPush.initialize` method.
+   ```
+	var category =  {"Category_Name":[{"IdentifierName_1":"actionName_1"},{"IdentifierName_2":"actionName_2"}]}
+       BMSPush.initialize(appGUID,clientSecret,category);
+    ```
+	{: codeblock} 
+2. Implement the new callback method on AppDelegate.
+3. This new callback method is invoked when user clicks the action button. The implementation of this method must perform tasks associated with the specified identifier and execute the block in the completionHandler parameter.

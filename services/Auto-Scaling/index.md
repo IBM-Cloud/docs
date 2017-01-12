@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2015，2016
-lastupdated: "2016-11-02"  
+  years: 2015，2017
+lastupdated: "2017-01-12"  
  
 
 ---
@@ -16,8 +16,6 @@ lastupdated: "2016-11-02"
 
 # Getting started with the {{site.data.keyword.autoscaling}} service
 {: #autoscaling}
-Last updated: 02 November 2016
-{: .last-updated}
 
 In {{site.data.keyword.Bluemix_notm}}, you can automatically manage your application capacity. Use the {{site.data.keyword.autoscaling}} service to automatically increase or decrease the compute capacity of your application. The number of application instances are adjusted dynamically based on the {{site.data.keyword.autoscaling}} policy that you define.
 {:shortdesc} 
@@ -242,20 +240,19 @@ The {{site.data.keyword.autoscaling}} CLI provides similar functionality as {{si
 | *Minimum Instance Count* |	The minimum number of instances that can be started for the application during the specified time period in the schedule. |
 | *Start Date&Time* |	The start date and time of the schedule set up on a specific date. |
 | *End Date&Time* |	The end date and time of the schedule set up on a specific date.	|
+{: caption="Table 1. Policy fields in the scaling policy" caption-side="top"}
 
-Table 1. Policy fields in the scaling policy
 
 | Metric name | Description | Supported application type |
 |-------------|----------------------| ------------------- |
-| *Heap* |	The usage percentage of the heap memory.	| Liberty for Java, Node.js SDK |
+| *Heap* |	The usage percentage of the heap memory.	| Liberty for Java (with IBM JDK), Node.js SDK |
 | *Memory*   |	The usage percentage of the memory.	|  All |
-| *Throughput* | The number of the processed requests per second.| Liberty for Java, Node.js SDK |
+| *Throughput* | The number of the processed requests per second.| Liberty for Java (with IBM JDK), Node.js SDK |
 | *Response time* |	The response time of the processed requests.	| Liberty for Java |
+{: caption="Table 2. Supported metric names" caption-side="top"}
 
-Table 2. Supported metric names
-
-*Note:* To collect Auto-Scaling metrics data, your application must be deployed as Liberty webapp so that measuring HTTP/HTTPS requests will be processed via Liberty web container.
-For example, if you run a Spring Boot application as a "Main-Classs" app, the Liberty buildpack only provides java environment for you, and the app actually runs in the Spring embedded Tomcat container, thus no metrics data will be collected by the Auto-Scaling service. You must run your app as a Liberty WAR in order to work with Auto-Scaling service.
+*Limitation:* To collect Auto-Scaling metrics data, your application must be deployed as Liberty webapp so that measuring HTTP/HTTPS requests will be processed via Liberty web container.
++*Limitation:* For Liberty application, only IBM JDK is supported for auto-scaling.
 
 ## Error messages
 {: #err_msg}

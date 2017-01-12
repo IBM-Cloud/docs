@@ -1,14 +1,13 @@
 ---
 
 copyright:
-  years: 2016 lastupdated:  "2016-10-14"
+  years: 2016
+lastupdated:  "2016-10-14"
+
 ---
 
 #	Usando o plano Professional Per Capacity
 {: #using_mobilefoundation_p4}
-
-<!--Last updated: 12 September 2016
-{: .last-updated} -->
 
 Com o plano Professional Per Capacity, os usuários podem criar qualquer número de aplicativos móveis com vários sistemas operacionais de dispositivos móveis.
 Após criar a instância de serviço do {{site.data.keyword.mobilefoundation_short}}: Professional Per Capacity, leia o procedimento a seguir para iniciar o serviço.
@@ -97,9 +96,7 @@ no ícone **Mostrar senha** para visualizá-lo.
 usuário. Se o usuário precisar de espaço de armazenamento adicional para persistir dados de analítica, ele precisará comprar compartilhamento de arquivo adicional e criar um volume usando esse
 compartilhamento de arquivo. Ele poderá, então, selecionar esse novo volume enquanto implementa o servidor analítico.
 
- Para obter mais informações sobre a inclusão de volumes no {{site.data.keyword.containerlong}}, consulte
-[Armazenando
-dados persistentes em um volume usando o Painel do {{site.data.keyword.Bluemix_notm}} ](https://new-console.ng.bluemix.net/docs/containers/container_volumes_ui.html){: new_window}.
+ Para obter mais informações sobre incluir volumes no {{site.data.keyword.containerlong}}, consulte [Armazenando dados persistentes em um volume usando o {{site.data.keyword.Bluemix_notm}} Dashboard](https://console.ng.bluemix.net/docs/containers/container_volumes_ui.html){: new_window}.
 
 * Clique em **Incluir Analytics** para incluir o servidor Mobile Analytics na instância de serviço do {{site.data.keyword.mobilefoundation_short}}.
 

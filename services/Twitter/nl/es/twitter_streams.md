@@ -1,12 +1,17 @@
+---
+
+copyright:
+  years: 2015, 2016
+lastupdated: "2016-11-21"
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
 {:codeblock:.codeblock}
 
 # Flujos Decahose y PowerTrack {: #decahose_powertrack}
-
-*Última actualización: 13 de mayo de 2016*
-{: .last-updated}
 
 {{site.data.keyword.twittershort}}
 proporciona acceso a los flujos de datos
@@ -31,13 +36,11 @@ las acciones soportadas que puede realizar en los seguimientos, como
 edición, supresión, etc.
 
 **Nota**: La indexación del flujo de datos PowerTrack se limita a un
-millón de tuits por mes de calendario. Una vez que se alcanza el límite, se detiene la indexación para el mes.
-Al principio del mes
+millón de tuits por mes de calendario. Una vez que se alcanza el límite, se detiene la indexación para el mes. Al principio del mes
 siguiente, puede volver a activar los seguimientos; no se activan
 automáticamente. Para maximizar el uso del flujo, se recomienda
 encarecidamente una gestión adecuada de los seguimientos. Por
 ejemplo, los seguimientos redundantes se pueden convertir en inactivos.
-
 
 ## Tipos de seguimiento {: #track_types}
 
@@ -53,7 +56,7 @@ al menos una de las reglas asociadas con el seguimiento. Puede
 añadir, editar y suprimir reglas dentro de este tipo de seguimiento.
 
 La sintaxis de reglas
-[GNIP PowerTrack](http://support.gnip.com/apis/powertrack/rules.html) completa se admite dentro de
+[GNIP PowerTrack](http://support.gnip.com/apis/powertrack2.0/rules.html) completa se admite dentro de
 los seguimientos basados en reglas. Todas las consultas deben ajustarse al   {{site.data.keyword.twittershort}} [Lenguaje de consulta](twitter_rest_apis.html#querylanguage "Lenguaje de consulta").
 </dd>
 
@@ -73,18 +76,19 @@ seguimientos agregados.
 
 <dl>
 <dt>createdDate</dt>
-<dd>Indica cuándo se ha creado el seguimiento; se especifica como `AAAAMMDDHHMM`. </dd>
+<dd>Indica cuándo se ha creado el seguimiento; se especifica como `AAAAMMDDHHMM`.</dd>
 
 <dt>endDate</dt>
 <dd>Indica cuándo el seguimiento dejará de recopilar mensajes. El valor especificado debe estar en el futuro y cumplir con uno de los siguientes formatos: `AAAA-MM-DD` o `AAAA-MM-DDTHH:MM:SSZ`. Si se especifica
 una fecha en el pasado se devolverá un error HTTP 400.
+
 Esta propiedad no se aplica a seguimientos agregados.</dd>
 
 <dt>id</dt>
 <dd>Una referencia de ID exclusivo que se asigna a un seguimiento
 después de la creación. El ID se representa en un formato de serie
 GUID (por ejemplo, 3F2504E0-4F89-41D3-9A0C-0305E82C3301) para
-seguimientos agregados y de reglas. </dd>
+seguimientos agregados y de reglas.</dd>
 
 <dt>name</dt>
 <dd>Nombre descriptivo del seguimiento. La exclusividad de esta propiedad no se garantiza.</dd>

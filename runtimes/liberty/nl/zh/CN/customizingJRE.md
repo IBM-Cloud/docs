@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-15"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # 定制 JRE
 {: #customizing_jre}
-
-上次更新时间：2016 年 8 月 15 日
-{: .last-updated}
 
 应用程序在 Liberty buildpack 提供和配置的 Java 运行时环境 (JRE) 中运行。通过 Liberty buildpack，还可以配置 JRE 版本或类型，定制 JVM 选项或覆盖 JRE 功能。
 
@@ -112,7 +110,7 @@ Liberty buildpack 在配置缺省 JVM 选项时会考虑以下内容：
 <tr>
 <td> OpenJDK</td>
 <td>基于 HotSpot 运行时，其中包含 -X（表示非标准）、-XX（表示开发者选项）符号表示法，以及用于启用或禁用该选项的布尔标志</td>
-<td>[HotSpot 运行时概述](http://openjdk.java.net/groups/hotspot/docs/RuntimeOverview.html)</td>
+<td>[HotSpot 运行时概述](http://openjdk.java.net/groups/hotspot//docs/RuntimeOverview.html)</td>
 </tr>
 </table>
 

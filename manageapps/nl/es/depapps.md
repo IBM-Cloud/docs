@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-12-07"
 ---
 
 
@@ -11,28 +11,84 @@ copyright:
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#Despliegue de apps
+# Despliegue de apps
 {: #deployingapps}
-
--*Última actualización: 28 de julio de 2016*
--{: .last-updated}
 
 Puede desplegar apps en {{site.data.keyword.Bluemix}} utilizando varios métodos, como por ejemplo la interfaz de línea de mandatos y los entornos de desarrollo integrado (IDE). También puede utilizar manifiestos de app para desplegar apps. Si utiliza un manifiesto de app debe reducir el número de detalles de despliegue que debe especificar cada vez que despliega una app en {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
 
-##Despliegue de aplicaciones
+## Despliegue de aplicaciones
 {: #appdeploy}
 
 El despliegue de una app en {{site.data.keyword.Bluemix_notm}} incluye dos fases: transferencia de la app e inicio de la app.
 
-###Transferencia de una app
+Ahora Cloud Foundry da soporte a Diego, una nueva arquitectura de tiempo de ejecución. Diego proporciona soporte para varias tecnologías de contenedor, que incluyen contenedores Garden, Docker y Windows. Las futuras mejoras y arreglos correspondientes a Cloud Foundry irán directamente a Diego y recibirán soporte en DEA.
 
+### Transferencia de una aplicación con Diego
+Todos los componentes de Diego están diseñados para poderse agrupar en clúster, lo que significa que puede crear fácilmente distintas zonas de disponibilidad. La comunicación segura entre todos los componentes de Diego utiliza TLS.
+
+Durante la fase de transferencia, Diego se encarga de todos los aspectos relacionados con la orquestación del contenedor. La distribución de las instancias de la app se realiza con Diego Brain y el controlador de nube solo transfiere las apps. Diego Brain asigna las apps en celdas con acceso SSH a los contenedores.
+
+Para validar el estado de las apps, Diego da soporte a las mismas comprobaciones basadas en puerto que se utilizan para DEA. Pero está diseñado para poder tener opciones más genéricas, como comprobaciones de estado basadas en URL, que se habilitarán en el futuro.
+
+Para transferir apps en Diego, primero debe instalar la CLI cf y el [plugin de CLI de habilitador de Diego](https://github.com/cloudfoundry-incubator/Diego-Enabler){:new_window}. Esto solo es necesario durante el periodo de migración.
+
+#### Problemas conocidos
+ Existen los siguientes problemas conocidos con el uso de Diego:
+  * Las aplicaciones de Worker desplegadas con la opción `--no-route` no se indican como aplicaciones en buen estado. Para evitar este problema, inhabilite la comprobación de estado basada en puerto con el mandato `cf set-health-check APP_NAME none`.
+  * Diego no utiliza la variable de entorno VCAP_APP_HOST. Si el código hace referencia a esta variable, sustitúyala por 0.0.0.0.
+  * Diego no utiliza la variable de entorno VCAP_APP_PORT. Si el código hace referencia a esta variable, sustitúyala por PORT, que la establece en 8080 de forma predeterminada.
+  * El mandato **cf files** ya no recibe soporte. Se ha sustituido por el mandato **cf ssh**. Para ver más detalles sobre el mandato **cf ssh**, consulte [cf ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh).
+  * Algunas apps utilizan un número alto de descriptores de archivo (inodes). Si detecta este problema, debe aumentar la cuota de disco para la app con el mandato `cf scale APP_NAME [-k DISK]`.
+
+#### Transferencia de una nueva app en Diego
+Para transferir una nueva aplicación en Diego, debe desplegar la aplicación en la línea de mandatos con un distintivo que indique que Diego es el destino final.
+
+  1. Despliegue la aplicación sin iniciarla:
+  ```
+  $ cf push APPLICATION_NAME --no-start
+  ```
+  2. Establezca el valor booleano de Diego:
+  ```
+  $ cf enable-diego APPLICATION_NAME
+  ```
+    o como alternativa:
+  ```
+  $ cf curl /v2/apps/$(cf app APPLICATION_NAME --guid) -X PUT -d '{"diego":true}'
+  ```
+  3. Inicie la aplicación:
+  ```
+  $ cf start APPLICATION_NAME
+  ```
+
+Para ver más detalles sobre el mandato **cf push**, consulte [cf push](/docs/cli/reference/cfcommands/index.html#cf_push).
+
+#### Cambio de una app existente por Diego
+Puede convertir una app existente en Diego desplegando la aplicación con el distintivo Diego. La aplicación comenzará a ejecutarse de inmediato en Diego y dejará de ejecutarse en los DEA. Si desea asegurar el tiempo de actividad, le recomendamos que realice un despliegue de tipo blue-green desplegando una copia de la aplicación en Diego y luego intercambiando rutas y escalando hacia abajo la aplicación DEA.
+
+  Para establecer el distintivo Diego y cambiar la app para que se ejecute en Diego:
+  ```
+  $ cf enable-diego APPLICATION_NAME
+  ```
+
+  Para volver a los DEA:
+  ```
+  $ cf disable-diego APPLICATION_NAME
+  ```
+
+  Para validar el destino final en el que se ejecuta la aplicación:
+  ```
+  $ cf has-diego-enabled APPLICATION_NAME
+  ```
+
+
+### Transferencia de una aplicación con DEA
 Durante la fase de transferencia, un agente de ejecución de gotas (DEA) utiliza la información que especifica el usuario en la interfaz de la línea de mandatos cf o en el archivo `manifest.yml` para decidir qué se debe crear para la fase de transferencia. El DEA selecciona un paquete de compilación adecuado para transferir la app y el resultado del proceso de transferencia es una gota. Para obtener más información sobre cómo desplegar una app en {{site.data.keyword.Bluemix_notm}}, consulte [Cómo funciona {{site.data.keyword.Bluemix_notm}}](/docs/overview/whatisbluemix.html#howwork).
 
 Durante el proceso de transferencia, el DEA comprueba si el paquete de compilación coincide con la app. Por ejemplo, un tiempo de ejecución de Liberty para un archivo .war o un tiempo de ejecución Node.js para archivos .js. El DEA crea a continuación un contenedor aislado que contiene el paquete de compilación y el código de app. El componente
 Warden es el encargado de gestionar el contenedor. Para obtener más información, consulte [Cómo se transfieren las apps](http://docs.cloudfoundry.org/concepts/how-applications-are-staged.html){:new_window}.
 
-###Inicio de una app
+### Inicio de una app
 
 Cuando se inicia una app, se crea la instancia o instancias del contenedor warden. Puede utilizar el mandato **cf files** para ver los archivos almacenados en el sistema de archivos del contenedor Warden, como por ejemplo registros. Si la app no se puede iniciar, el DEA detiene la app y todo el contenido del contenedor Warden se elimina. Por lo tanto, si una app se detiene o si el proceso de transferencia de una app falla, no dispondrá de archivos de registro.
 
@@ -41,7 +97,7 @@ logs** utiliza el agregador de registros de Cloud Foundry para recopilar detalle
 
 **Nota:** El tamaño del almacenamiento intermedio está limitado. Si una app se ejecuta durante mucho rato y no se reinicia, es posible que no se muestren registros cuando se especifique `cf logs nombreapp --recent` ya que puede que el almacenamiento intermedio de registros se haya borrado. Por lo tanto, para depurar errores de transferencia de una app grande, puede especificar `cf logs nombreapp` en una línea de mandatos que no sea la interfaz de línea de mandatos cf para efectuar un seguimiento de los registros cuando despliegue la app.
 
-Si tiene problemas para transferir sus apps en {{site.data.keyword.Bluemix_notm}}, siga los pasos del apartado [Depuración de errores de transferencia](../debug/index.html#debugging-staging-errors) para solucionar el problema.
+Si tiene problemas para transferir sus apps en {{site.data.keyword.Bluemix_notm}}, siga los pasos del apartado [Depuración de errores de transferencia](/docs/debug/index.html#debugging-staging-errors) para solucionar el problema.
 
 ##Despliegue de apps mediante el mandato cf
 {: #dep_apps}
@@ -58,7 +114,7 @@ Si utiliza un paquete de compilación externo, debe especificar el URL del paque
   cf push
   ```
   
-  Para obtener más información sobre el paquete de compilación de Liberty, consulte el apartado [Liberty para Java](../runtimes/liberty/index.html).
+  Para obtener más información sobre el paquete de compilación de Liberty, consulte el apartado [Liberty para Java](/docs/runtimes/liberty/index.html).
   
   * Para desplegar apps Java Tomcat en {{site.data.keyword.Bluemix_notm}}, utilice el mandato siguiente:
   
@@ -146,8 +202,6 @@ La tabla siguiente muestra las opciones soportadas que puede utilizar en un arch
 cf push -f appManifest.yml
 ```
 
-<p>  </p>
-
 
 |Opciones	|Descripción	|Uso o ejemplo|
 |:----------|:--------------|:---------------|
@@ -165,7 +219,7 @@ cf push -f appManifest.yml
 |**random-route**	|Un valor booleano para asignar una ruta aleatoria a la app. El valor predeterminado es **false**.	|`random-route: true`|
 |**services**	|Los servicios que se van a enlazar a la app.	|`services: - mysql_maptest`|
 |**env**	|Las variables de entorno personalizadas de la app.|`env: DEV_ENV: production`|
-*Tabla 1. Opciones admitidas en el archivo manifest.yml*
+{: caption="Table 1. Supported options in the manifest YAML file" caption-side="top"}
 
 ###Un ejemplo de archivo `manifest.yml`
 

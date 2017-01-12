@@ -129,7 +129,7 @@ lastupdated: "2016-09-27"
 ### 函数原型
 {: #openwhisk_ref_javascript_fnproto}
 
-{{site.data.keyword.openwhisk_short}} JavaScript 操作在 Node.js 运行时中运行，此运行时当前版本为 6.2.0。
+{{site.data.keyword.openwhisk_short}} JavaScript 操作在 Node.js 运行时中运行。
 
 用 JavaScript 编写的操作必须限制为单个文件。该文件可以包含多个函数，但根据约定，必须存在名为 `main` 的函数，并且此函数是调用操作时调用的函数。例如，下面是具有多个函数的操作的示例。
 
@@ -277,59 +277,67 @@ return whisk.invoke({
 ### JavaScript 运行时环境
 {: #openwhisk_ref_javascript_environments}
 
-JavaScript 操作缺省情况下在 Node.js V6.2.0 环境中执行。如果在创建/更新操作时使用“nodejs:6”值明确指定 `--kind` 标记，那么 6.2.0 环境也将用于操作。
-以下包可在 Node.js 6.2.0 环境中使用：
+JavaScript 操作缺省情况下在 Node.js V6.9.1 环境中执行。如果在创建/更新操作时使用“nodejs:6”值明确指定 `--kind` 标记，那么 6.9.1 环境也将用于操作。
+以下包可在 Node.js 6.9.1 环境中使用：
 
-- apn v1.7.5
-- async v1.5.2
-- body-parser v1.15.1
+- apn v2.1.2
+- async v2.1.4
 - btoa v1.1.2
-- cheerio v0.20.0
-- cloudant v1.4.1
+- cheerio v0.22.0
+- cloudant v1.6.2
 - commander v2.9.0
-- consul v0.25.0
-- cookie-parser v1.4.2
+- consul v0.27.0
+- cookie-parser v1.4.3
 - cradle v0.7.1
-- errorhandler v1.4.3
-- express v4.13.4
-- express-session v1.12.1
-- gm v1.22.0
-- log4js v0.6.36
-- iconv-lite v0.4.13
+- errorhandler v1.5.0
+- glob v7.1.1
+- gm v1.23.0
+- lodash v4.17.2
+- log4js v0.6.38
+- iconv-lite v0.4.15
+- marked v0.3.6
 - merge v1.2.0
-- moment v2.13.0
-- mustache v2.2.1
+- moment v2.17.0
+- mongodb v2.2.11
+- mustache v2.3.0
 - nano v6.2.0
 - node-uuid v1.4.7
-- nodemailer v2.5.0
+- nodemailer v2.6.4
 - oauth2-server v2.4.1
-- pkgcloud v1.3.0
-- process v0.11.3
-- pug v2.0.0
-- request v2.72.0
-- rimraf v2.5.2
-- semver v5.1.0
-- sendgrid v3.0.11
-- serve-favicon v2.3.0
-- socket.io v1.4.6
-- socket.io-client v1.4.6
-- superagent v1.8.3
+- pkgcloud v1.4.0
+- process v0.11.9
+- pug v2.0.0-beta6
+- redis v2.6.3
+- request v2.79.0
+- request-promise v4.1.1
+- rimraf v2.5.4
+- semver v5.3.0
+- sendgrid v4.7.1
+- serve-favicon v2.3.2
+- socket.io v1.6.0
+- socket.io-client v1.6.0
+- superagent v3.0.0
 - swagger-tools v0.10.1
-- tmp v0.0.28
-- twilio v2.9.1
-- watson-developer-cloud v1.12.4
+- tmp v0.0.31
+- twilio v2.11.1
+- underscore v1.8.3
+- uuid v3.0.0
+- validator v6.1.0
+- watson-developer-cloud v2.9.0
 - when v3.7.7
-- ws v1.1.0
-- xml2js v0.4.16
+- winston v2.3.0
+- ws v1.1.1
+- xml2js v0.4.17
 - xmlhttprequest v1.8.0
-- yauzl v2.4.2
+- yauzl v2.7.0
 
-如果在创建/更新操作时使用“nodejs”值明确指定 `--kind` 标记，那么 Node.js V0.12.14 环境将用于操作。
-以下包可在 Node.js 0.12.14 环境中使用：
+如果在创建/更新操作时使用“nodejs”值明确指定 `--kind` 标记，那么 Node.js V0.12.17 环境将用于操作。
+以下包可在 Node.js 0.12.17 环境中使用：
+
+**注**：不推荐使用 Node.js V0.12.x，请迁移所有 Node.js 操作以使用 Node.js V6.x。
 
 - apn v1.7.4
 - async v1.5.2
-- body-parser v1.12.0
 - btoa v1.1.2
 - cheerio v0.20.0
 - cloudant v1.4.1
@@ -338,11 +346,9 @@ JavaScript 操作缺省情况下在 Node.js V6.2.0 环境中执行。如果在�
 - cookie-parser v1.3.4
 - cradle v0.6.7
 - errorhandler v1.3.5
-- express v4.12.2
-- express-session v1.11.1
 - gm v1.20.0
 - jade v1.9.2
-- log4js v0.6.25
+- log4js v0.6.38
 - merge v1.2.0
 - moment v2.8.1
 - mustache v2.1.3
@@ -350,7 +356,7 @@ JavaScript 操作缺省情况下在 Node.js V6.2.0 环境中执行。如果在�
 - node-uuid v1.4.2
 - oauth2-server v2.4.0
 - process v0.11.0
-- request v2.60.0
+- request v2.79.0
 - rimraf v2.5.1
 - semver v4.3.6
 - serve-favicon v2.2.0

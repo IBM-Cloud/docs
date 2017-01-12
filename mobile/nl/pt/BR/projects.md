@@ -34,5 +34,5 @@ seguir as instruções para configurá-lo, ele será automaticamente
 associado ao seu aplicativo.
 
 Imediatamente após criar seu projeto, deve-se selecionar um
-iniciador para ele. Para saber mais sobre Iniciadores,
+iniciador para ele.  Para saber mais sobre Iniciadores,
 consulte [Iniciadores](starters.html).

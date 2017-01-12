@@ -2,11 +2,13 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-09"
+lastupdated: "2016-11-02"
+
 ---
+
 {:shortdesc: .shortdesc}
 {:screen:.screen}
-
+{:codeblock:.codeblock}
 
 
 # {{site.data.keyword.amashort}} Android アプリ用のカスタム認証の構成
@@ -17,7 +19,15 @@ lastupdated: "2016-10-09"
 
 ## 開始する前に
 {: #before-you-begin}
-カスタム ID プロバイダーを使用するように構成済みの{{site.data.keyword.amashort}} サービスのインスタンスにより保護されているリソースを持っている必要があります。また、モバイル・アプリに {{site.data.keyword.amashort}} Client SDK が装備されている必要があります。詳しくは、以下の情報を参照してください。
+開始する前に以下が必要です。
+
+* カスタム ID プロバイダーを使用するように構成済みの {{site.data.keyword.amashort}} サービスのインスタンスによって保護されているリソース ([カスタム認証の構成](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)を参照してください)。  
+* **TenantID** 値。{{site.data.keyword.amashort}} ダッシュボードでサービスを開きます。**「モバイル・オプション」**ボタンをクリックします。`tenantId` (`appGUID` とも呼ばれる) の値が、**「アプリ GUID」/「TenantId」**フィールドに表示されます。許可マネージャーを初期化するためにこの値が必要になります。
+* **「レルム」**名。これは、{{site.data.keyword.amashort}} ダッシュボードの**「管理」**タブで、**「カスタム」**セクションの**「レルム名」**フィールドに指定した値です。
+* バックエンド・アプリケーションの URL (**「アプリの経路 (App Route)」**)。バックエンド・アプリケーションの保護されたエンドポイントに要求を送信するためにこの値が必要になります。
+* {{site.data.keyword.Bluemix_notm}} **「地域」**。**「アバター」**アイコン![「アバター」アイコン](images/face.jpg "「アバター」アイコン") の横のヘッダー内に現在の {{site.data.keyword.Bluemix_notm}} 地域が表示されます。表示される地域の値は、`「米国南部」`、`「英国」`、または`「シドニー」`のいずれかでなければならず、また WebView Javascript コードで必要な SDK 値 (`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_SYDNEY`、または `BMSClient.REGION_UK`) に対応している必要があります。{{site.data.keyword.amashort}} クライアントを初期化するためにこの値が必要になります。
+
+詳しくは、以下の情報を参照してください。
 
  * [{{site.data.keyword.amashort}} 概説](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
  * [Android SDK のセットアップ](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html)
@@ -25,10 +35,11 @@ lastupdated: "2016-10-09"
  * [カスタム ID プロバイダーの作成](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
  * [カスタム認証用の {{site.data.keyword.amashort}} の構成 ](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
 
-サービス・パラメーター値をメモします。{{site.data.keyword.Bluemix_notm}} ダッシュボードでサービスを開きます。**「モバイル・オプション」**をクリックします。`applicationRoute` および `tenantId` (`appGUID` とも呼ばれる) の値が、**「経路」**および**「アプリ GUID」/「TenantId」**フィールドに表示されます。これらの値は、SDK を初期化するため、および要求をバックエンド・アプリケーションに送信するために必要になります。
+
 
 ## {{site.data.keyword.amashort}} Client SDK の初期化
 {: #custom-android-initialize}
+{{site.data.keyword.amashort}} Android SDK が装備された Android アプリケーションがある場合は、このセクションをスキップできます。
 1. Android Studio にある Android プロジェクトで、アプリケーション・モジュールの `build.gradle` ファイルを開きます (プロジェクト `build.gradle` ではありません)。
 
 1. `build.gradle` ファイル内で `dependencies` セクションを見つけて、以下の依存関係があるか確認します。
@@ -43,6 +54,7 @@ lastupdated: "2016-10-09"
     	// other dependencies  
 	}
 	```
+	{: codeblock}
 
 1. プロジェクトを Gradle と同期化します。**「ツール」>「Android」>「プロジェクトを Gradle ファイルと同期 (Sync Project with Gradle Files)」**とクリックします。
 
@@ -52,20 +64,17 @@ lastupdated: "2016-10-09"
 	```XML
 	<uses-permission android:name="android.permission.INTERNET" />
 	```
+	{: codeblock}
 
 1. SDK を初期化します。初期化コードを入れる一般的な場所 (ただし、必須ではない) は、Android アプリケーション内のメイン・アクティビティーの `onCreate` メソッド内です。
 
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
-```
 
-`BMSClient.REGION_UK` は適切な地域に置き換えてください。
-	
+	```
+	{: codeblock}
 
-{{site.data.keyword.Bluemix_notm}} 地域を表示するには、メニュー・バーにある**「アバター」**アイコン ![「アバター」アイコン](images/face.jpg "「アバター」アイコン") をクリックして、**「アカウントとサポート」**ウィジェットを開きます。	
-	
-
-地域値は、`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_SYDNEY`、または `BMSClient.REGION_UK` のうちいずれかのはずです。				
+`BMSClient.REGION_UK` を {{site.data.keyword.amashort}} 地域に置き換えます。これらの値の取得について詳しくは、[開始する前に](#before-you-begin)を参照してください。
 	
 
 ## AuthenticationListener インターフェース
@@ -80,6 +89,7 @@ lastupdated: "2016-10-09"
 ```Java
 void onAuthenticationChallengeReceived(AuthenticationContext authContext, JSONObject challenge, Context context);
 ```
+{: codeblock}
 
 
 #### 引数
@@ -98,6 +108,7 @@ void onAuthenticationChallengeReceived(AuthenticationContext authContext, JSONOb
 ```Java
 void onAuthenticationSuccess(Context context, JSONObject info);
 ```
+{: codeblock}
 
 ### onAuthenticationFailure メソッド
 {: #custom-android-authlistener-onfail}
@@ -106,6 +117,7 @@ void onAuthenticationSuccess(Context context, JSONObject info);
 ```Java
 void onAuthenticationFailure(Context context, JSONObject info);
 ```
+{: codeblock}
 
 ## AuthenticationContext インターフェース
 {: #custom-android-authcontext}
@@ -115,10 +127,12 @@ void onAuthenticationFailure(Context context, JSONObject info);
 ```Java
 void submitAuthenticationChallengeAnswer(JSONObject answer);
 ```
+{: codeblock}
 
 ```Java
 void submitAuthenticationFailure (JSONObject info);
 ```
+{: codeblock}
 
 ## カスタム AuthenticationListener の実装例
 {: #custom-android-samplecustom}
@@ -178,6 +192,7 @@ public class CustomAuthenticationListener implements AuthenticationListener {
 	}
 }
 ```
+{: codeblock}
 
 ## カスタム AuthenticationListener の登録
 {: #custom-android-register}
@@ -191,11 +206,12 @@ mcaAuthorizationManager.registerAuthenticationListener(realmName, new CustomAuth
 BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 
 ```
+{: codeblock}
 
 
 コードの中で次のようにします。
-* `MCAServiceTenantId` を `tenantId` 値 (『[開始する前に](##before-you-begin)』を参照) に置き換えます。 
-* `realmName` には {{site.data.keyword.amashort}} ダッシュボードで指定したものを使用してください。
+* `MCAServiceTenantId` を **TenantId** 値 (『[開始する前に](##before-you-begin)』を参照) に置き換えます。 
+* `realmName` には {{site.data.keyword.amashort}} ダッシュボードで指定したものを使用します ([カスタム認証の構成](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)を参照してください)。
 
 
 ## 認証のテスト
@@ -204,7 +220,7 @@ Client SDK が初期化され、カスタム AuthenticationListener の登録が
 
 ### テストする前に
 {: #custom-android-testing-before}
-{{site.data.keyword.mobilefirstbp}} ボイラープレートを使用して作成されたアプリケーションと、 `/protected` エンドポイントで{{site.data.keyword.amashort}} により保護されているリソースを持っている必要があります。
+`/protected` エンドポイントで {{site.data.keyword.amashort}} によって保護されているリソースを持つアプリケーションを用意する必要があります。
 
 
 1. モバイル・バックエンド・アプリケーションの保護エンドポイント (`{applicationRoute}/protected`) にブラウザーから要求を送信します。例えば、`http://my-mobile-backend.mybluemix.net/protected` です。`{applicationRoute}` 値の取得については、『[開始する前に](#before-you-begin)』を参照してください。 
@@ -232,8 +248,8 @@ Client SDK が初期化され、カスタム AuthenticationListener の登録が
 			}
 		}
 	});
-```
-
+	```
+	{: codeblock}
 	
 1. 	要求が成功したら、LogCat ツールで以下のように出力されます。
 
@@ -244,6 +260,7 @@ Client SDK が初期化され、カスタム AuthenticationListener の登録が
  ```Java
  MCAAuthorizationManager.getInstance().logout(getApplicationContext(), listener);
  ```
+ {: codeblock}
 
 
  ユーザーのログイン後に、このコードを呼び出すと、そのユーザーはログアウトされます。そのユーザーが再度ログインしようとする場合は、サーバーから受信した要求に再度応じる必要があります。

@@ -5,6 +5,7 @@ copyright:
 lastupdated: "2016-12-02"
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -50,6 +51,11 @@ Ensure that you have installed the [prerequisite developer tools](get_code.html#
 
    3. Optional: If you chose to add an existing service instance, select your service instance from the list and click **Add Existing**.
 
+<<<<<<< HEAD
+=======
+  
+
+>>>>>>> origin/master
    4. Click the **Menu** icon in your service tile and select **Launch...** to launch your service instance.
 
       1. Click **LAUNCH** to launch your {{site.data.keyword.cloudant}} console.

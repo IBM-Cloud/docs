@@ -55,7 +55,7 @@ Después de crear la app, tiene algunas opciones para continuar añadiendo servi
 Utilice los siguientes consejos para desarrollar apps web:
 
 <dl><dt>Persistencia</dt>
-<dd>No especifique ningún almacenamiento local para las apps. Cada instancia de la aplicación, aunque sólo haya una instancia en ejecución, se puede reiniciar o mover a otra máquina virtual en cualquier momento, normalmente para equilibrar la carga. Todo lo que se almacena en almacenamiento local se borra cuando la aplicación se mueve o se suprime. Utilice uno de los servicios de almacén de datos de {{site.data.keyword.Bluemix_notm}} para conservar los datos. </dd>
+<dd>No especifique ningún almacenamiento local para las apps. Cada instancia de la aplicación, aunque sólo haya una instancia en ejecución, se puede reiniciar o mover a otra máquina virtual en cualquier momento, normalmente para equilibrar la carga. Todo lo que se almacena en almacenamiento local se borra cuando la aplicación se mueve o se suprime. Utilice uno de los servicios de almacén de datos de {{site.data.keyword.Bluemix_notm}} para conservar los datos.</dd>
 <dt>Límites de recursos</dt>
 <dd>Tenga en cuenta los límites sobre las cantidades de recursos que puede utilizar una cuenta de prueba. Los límites son los siguientes:
 <table style="width:100%">
@@ -65,5 +65,3 @@ Utilice los siguientes consejos para desarrollar apps web:
 <tr><td>Número de rutas</td> <td>500</td>
 </table>
 </dd></dl>
-
-*Tabla 1. Límites de recursos de {{site.data.keyword.Bluemix_notm}} para una cuenta de prueba*

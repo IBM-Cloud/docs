@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-
+lastupdated: "2016-10-23"
 
 
 ---
@@ -18,8 +18,6 @@ copyright:
 
 # Eigenes Konto einrichten
 {: #account}
-Letzte Aktualisierung: 23. Oktober 2016
-{: .last-updated}
 
 Nachdem Sie sich bei {{site.data.keyword.Bluemix_notm}} angemeldet haben, müssen Sie Ihr Konto einrichten, um schnell zur Bereitstellung der Infrastruktur oder Erstellung von Anwendungen übergehen zu können.
 {:shortdesc}
@@ -34,7 +32,7 @@ Sie können sich auch für den Erhalt von Benachrichtigungen registrieren. Prüf
 
 - **Benachrichtigungen** 
   
-  Registrieren Sie sich für den Erhalt von Benachrichtigungen über Wartungsaktualisierungen an den öffentlichen Regionen der {{site.data.keyword.Bluemix_notm}}-Plattform und den zugeordneten Services sowie über Vorfälle, Sicherheitsbenachrichtigungen und andere Ankündigungen. Sie können Ihren RSS-Feed-Reader auf den RSS-Link auf der [Bluemix-Statusseite](http://ibm.biz/Bluemixstatus) verweisen, um über Änderungen an {{site.data.keyword.Bluemix_notm}} Public auf dem neuesten Stand zu bleiben. Weitere Details zum Festlegen von Benachrichtigungen finden Sie im Abschnitt [Bluemix-Status anzeigen](/docs/support/index.html#viewing-bluemix-status).
+  Registrieren Sie sich für den Erhalt von Benachrichtigungen über Wartungsaktualisierungen an den öffentlichen Regionen der {{site.data.keyword.Bluemix_notm}}-Plattform und den zugeordneten Services sowie über Vorfälle, Sicherheitsbenachrichtigungen und andere Ankündigungen. Sie können Ihren RSS-Feed-Reader auf den RSS-Link auf der [Bluemix-Statusseite](http://ibm.biz/Bluemixstatus) verweisen, um über Änderungen an {{site.data.keyword.Bluemix_notm}} Public auf dem neuesten Stand zu bleiben.  Weitere Details zum Festlegen von Benachrichtigungen finden Sie im Abschnitt [Bluemix-Status anzeigen](/docs/support/index.html#viewing-bluemix-status).
 
 - **Support-Optionen** 
   

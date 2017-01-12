@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
@@ -12,7 +13,6 @@ copyright:
 
 #서비스
 {: #services}
-*마지막 업데이트 날짜: 2016년 10월 23일*
 
 {{site.data.keyword.Bluemix_notm}}에서는 서비스 및 앱을 손쉽게 구현, 호스팅 및 스케일링할 수 있습니다. 애플리케이션 로직 및 애플리케이션 디자인에 집중할 수 있습니다.
 {:shortdesc}
@@ -21,11 +21,11 @@ copyright:
 
 |유형	|설명	|지원 세부사항|
 |:------|:--------------|:--------------|
-|IBM	|IBM에서 제공하는 GA(Generally Available)된 서비스입니다. 	|GA(Generally Available)된 IBM 제공 서비스에서 결함으로 판별된 문제점은 지원됩니다. 제공되는 지원은 설정한 심각도에 따라 다릅니다. 티켓 심각도에 대한 자세한 정보는 [지원 문의](../support/index.html#contacting-bluemix-support){: new_window}를 참조하십시오.|
+|IBM	|IBM에서 제공하는 GA(Generally Available)된 서비스입니다. 	|GA(Generally Available)된 IBM 제공 서비스에서 결함으로 판별된 문제점은 지원됩니다. 제공되는 지원은 설정한 심각도에 따라 다릅니다. 티켓 심각도에 대한 자세한 정보는 [지원 문의](/docs/support/index.html#contacting-bluemix-support){: new_window}를 참조하십시오.|
 |써드파티	|IBM이 아닌 다른 회사에서 제공하는 서비스입니다. 	|써드파티 서비스에 대한 지원은 해당 서비스 제공업체에서 제공합니다. IBM에서 문제점을 조사한 결과 써드파티 서비스의 결함으로 판별될 경우 IBM이 수정사항을 제공할 의무는 없습니다. IBM은 필요한 경우 해당 써드파티 서비스 제공업체와 분석 내용을 공유합니다.|
 |커뮤니티	|오픈 소스 커뮤니티에서 제공하는 서비스입니다. 	|보안 서비스에 대한 지원은 {{site.data.keyword.Bluemix_notm}} 개발자 커뮤니티에서 제공합니다. IBM에서 문제점을 조사한 결과 커뮤니티 서비스의 결함으로 판별될 경우 IBM이 수정사항을 제공할 의무는 없습니다.|
-|베타	|프로덕션에 사용할 준비가 되지 않았으며 개발의 시험 단계에 있는 서비스입니다. 베타 서비스는 개발 및 마케팅 팀이 서비스를 GA(Generally Available)하기 전에 서비스의 가치를 평가하는 데 도움이 됩니다. 	|IBM에서 제공한 베타 서비스의 결함으로 판별된 문제점은 지원되지만, IBM이 수정사항을 제공할 의무는 없습니다. 또한 문제점 티켓에 심각도 3 또는 4가 지정됩니다(해당하는 경우). 티켓 심각도에 대한 정보는 [지원 문의](../support/index.html#contacting-bluemix-support){: new_window}를 참조하십시오.|
-*표 1. {{site.data.keyword.Bluemix_notm}} 서비스 지원 정보*
+|베타	|프로덕션에 사용할 준비가 되지 않았으며 개발의 시험 단계에 있는 서비스입니다. 베타 서비스는 개발 및 마케팅 팀이 서비스를 GA(Generally Available)하기 전에 서비스의 가치를 평가하는 데 도움이 됩니다. 	|IBM에서 제공한 베타 서비스의 결함으로 판별된 문제점은 지원되지만, IBM이 수정사항을 제공할 의무는 없습니다. 또한 문제점 티켓에 심각도 3 또는 4가 지정됩니다(해당하는 경우). 티켓 심각도에 대한 정보는 [지원 문의](/docs/support/index.html#contacting-bluemix-support){: new_window}를 참조하십시오.|
+{: caption="Table 1. {{site.data.keyword.Bluemix_notm}} services support information" caption-side="top"}
 
 ##시범 서비스
 {: #experimental_services}
@@ -81,7 +81,7 @@ copyright:
 |{{site.data.keyword.GlobalizationPipeline_short}}	|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|시드니, 호주에서 호스팅됨 |
 |{{site.data.keyword.dataworks_short}}		|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|지역에서 사용할 수 없음 |
 |{{site.data.keyword.openwhisk}}		|댈러스, 미국에서 호스팅됨		|지역에서 사용할 수 없음		|지역에서 사용할 수 없음 |
-|{{site.data.keyword.containerlong}}		|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|시드니, 호주에서 호스팅됨 |
+|{{site.data.keyword.containerlong}}		|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|지역에서 사용할 수 없음 |
 |{{site.data.keyword.datastagefull}}		|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|시드니, 호주에서 호스팅됨 |
 |{{site.data.keyword.graphshort}}       |댈러스, 미국에서 호스팅됨		|댈러스, 미국에서 호스팅됨		|지역에서 사용할 수 없음 |
 |{{site.data.keyword.mdmcloudfull}}		|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|시드니, 호주에서 호스팅됨 |
@@ -132,12 +132,12 @@ copyright:
 |{{site.data.keyword.appserver_short}}	|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|시드니, 호주에서 호스팅됨 |
 |{{site.data.keyword.workloadscheduler}}	|댈러스, 미국 및 워싱턴, 미국에서 호스팅됨		|암스테르담, 네덜란드 및 밀라노, 이탈리아에서 호스팅됨		|멜버른 호주에서 호스팅됨 |
 |{{site.data.keyword.xpagesservice_short}}	|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|시드니, 호주에서 호스팅됨 |
-*표 2. 서비스 공급 여부*
+{: caption="Table 2. Service availability" caption-side="top"}
 
 
 ## 지속적 서비스 가용성
 {: #services_availability}
-{{site.data.keyword.Bluemix_notm}}에서 서비스 세트를 계층 1로 식별했습니다. IBM은 동일한 기능을 사용 가능하게 하거나 서비스 중단을 5년 이상 알린 후에 계층 1 서비스를 중단합니다. 
+{{site.data.keyword.Bluemix_notm}}에서 서비스 세트를 계층 1로 식별했습니다. IBM은 동일한 기능을 사용 가능하게 하거나 서비스 중단을 5년 이상 알린 후에 계층 1 서비스를 중단합니다.
 
 계층 1로 분류되는 서비스는 다음과 같습니다.
   * {{site.data.keyword.apiconnect_short}}
@@ -151,9 +151,9 @@ copyright:
   * PostgresSQL by Compose
   * {{site.data.keyword.ssofull}}
 
-서비스 이용 약관에 대한 세부사항을 읽어보려면 [{{site.data.keyword.Bluemix_notm}} 이용 약관](../navigation/notices.html#terms)을 참조하십시오.
+서비스 이용 약관에 대한 세부사항을 읽어보려면 [{{site.data.keyword.Bluemix_notm}} 이용 약관](/docs/navigation/notices.html#terms)을 참조하십시오.
 
 ## 서비스 지원 중단
 {: #service_deprecation}
 
-일반적으로 사용되는 서비스를 중단하거나 대체할 예정인 경우 IBM은 최소한 30일 이전에 이를 공지합니다. 동등한 대체 수단이 마련되지 않은 경우, 해당 공지 날짜로부터 최소한 12개월간 IBM은 상용으로 제공되는 적절한 수단을 활용하여 이전에 배치된 서비스 인스턴스의 운영과 지원을 계속 제공합니다.  
+일반적으로 사용되는 서비스를 중단하거나 대체할 예정인 경우 IBM은 최소한 30일 이전에 이를 공지합니다. 동등한 대체 수단이 마련되지 않은 경우, 해당 공지 날짜로부터 최소한 12개월간 IBM은 상용으로 제공되는 적절한 수단을 활용하여 이전에 배치된 서비스 인스턴스의 운영과 지원을 계속 제공합니다. 

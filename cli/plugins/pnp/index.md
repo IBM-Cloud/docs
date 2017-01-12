@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2016
+  years: 2016, 2017
 
-lastupdated: "2016-10-14"
+lastupdated: "2017-01-12"
 
 ---
 
@@ -39,25 +39,25 @@ Install the private network peering plug-in by using the following command:
 
 **Note**: Either switch to the location of the plug-in or specify the path to the plug-in location.
 
-* For Microsoft Windows OS:  
+* For Microsoft Windows OS:
 
 ```
 bluemix plugin install private-network-peering-windows-amd64.exe
 ```
 
-* For Apple MAC OS:  
+* For Apple MAC OS:
 
 ```
 bluemix plugin install private-network-peering-darwin-amd64
 ```
 
-* For Linux OS:  
+* For Linux OS:
 
 ```
 bluemix plugin install private-network-peering-linux-amd64
 ```
 
-**Note**: While you are installing the plug-in for Linux OS, if you see an error message that shows permission is denied, then run the following command and change the permissions:  
+**Note**: While you are installing the plug-in for Linux OS, if you see an error message that shows permission is denied, then run the following command and change the permissions:
 
 ```
 chmod a+x ./private-network-peering-linux-amd64
@@ -67,19 +67,19 @@ chmod a+x ./private-network-peering-linux-amd64
 
 Follow these steps to install the plug-in from the Bluemix repository:
 
-1. Add the Bluemix plug-in registry endpoint:  
+1. Add the Bluemix plug-in registry endpoint:
 	```
 	bluemix plugin repo-add bluemix-bx http://plugins.ng.bluemix.net
-	```  
+	```
 
 2. Run the following command:
 
 	```
 	bluemix plugin install private-network-peering -r bluemix-bx
-	```  
+	```
 
 ## List of private network peering commands
-The following four commands are supported. Use the `bluemix network` command to see the list of available commands:
+The following commands are supported. Use the `bluemix network` command to see the list of available commands:
 
 | Command     | Description                                    |
 |-------------|------------------------------------------------|
@@ -87,6 +87,8 @@ The following four commands are supported. Use the `bluemix network` command to 
 | pnp-create  | Creates a private network peering connection   |
 | pnp-delete  | Deletes a private network peering connection   |
 | pnp-show    | Lists all private network peering connections  |
+{: caption="Table 1. Private network peering commands" caption-side="top"}
+
 
 ### Command usage
 To view help information for the commands, run: `bluemix network [command] -h`.
@@ -104,7 +106,7 @@ bluemix network pnp-routers [--verbose (or -v)]
 ######Command example
 {: #ex1}
 
-To view network information about all routers:  
+To view network information about all routers:
 
 	$ bluemix network pnp-routers
 	Listing available routers ...
@@ -116,7 +118,7 @@ To view network information about all routers:
 	129.41.238.212  default-router  Container  United-Kingdom  ywu@us.ibm.com  demo3
 
 
-To view detailed network information about all routers:  
+To view detailed network information about all routers:
 
 
 	$ bluemix network pnp-routers -v
@@ -214,7 +216,7 @@ bluemix network pnp-show [--verbose (or -v)]
 ######Command example
 {: #ex4}
 
-View basic information:  
+View basic information:
 
 	$ bluemix network pnp-show
 	Listing private network peering connections ...

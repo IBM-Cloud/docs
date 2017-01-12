@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-10-23"
 
 ---
 
@@ -17,8 +19,6 @@ copyright:
 # Resolução de problemas para acessar o {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-Última atualização: 23 de outubro de 2016
-{: .last-updated} 
 
 Problemas gerais com o acesso ao {{site.data.keyword.Bluemix}}
 podem incluir um usuário que não foi capaz de efetuar login no {{site.data.keyword.Bluemix_notm}},
@@ -32,7 +32,7 @@ problemas seguindo algumas etapas simples.
 Deve-se ter uma conta válida do {{site.data.keyword.Bluemix_notm}} para efetuar login.
 
 
-Ao tentar efetuar login no {{site.data.keyword.Bluemix_notm}}, você verá uma das mensagens de erro a seguir:
+Ao tentar efetuar login no {{site.data.keyword.Bluemix_notm}}, você verá uma das mensagens de erro a seguir: 
 {: tsSymptoms} 
 
  * No Portal do Cliente
@@ -44,11 +44,11 @@ Ao tentar efetuar login no {{site.data.keyword.Bluemix_notm}}, você verá uma d
   `You have reached this page because your authentication was successful, however, this IBMid is not associated with any  {{site.data.keyword.Bluemix_notm}} accounts.`
 
 
-Uma das razões mais prováveis para obter esta mensagem de erro é que você ainda não tem uma conta do {{site.data.keyword.Bluemix_notm}} criada ou você precisa mudar para a autenticação do IBMid.
+Uma das razões mais prováveis para obter esta mensagem de erro é que você ainda não tem uma conta do {{site.data.keyword.Bluemix_notm}} criada ou você precisa mudar para a autenticação do IBMid. 
 {: tsCauses} 
  
 
-Siga o processo de inscrição para criar uma conta do {{site.data.keyword.Bluemix_notm}} ou entre em contato com o usuário principal ou com o administrador da conta para alternar para o IBMid.
+Siga o processo de inscrição para criar uma conta do {{site.data.keyword.Bluemix_notm}} ou entre em contato com o usuário principal ou com o administrador da conta para alternar para o IBMid. 
 {: tsResolve}
 
 Dependendo de como sua conta foi configurada, algumas dessas opções de login podem se aplicar a você: 
@@ -64,7 +64,7 @@ Dependendo de como sua conta foi configurada, algumas dessas opções de login p
 
 Deve-se ter um IBMid válido para efetuar login no console do {{site.data.keyword.Bluemix_notm}}.
 
-Ao tentar efetuar login no {{site.data.keyword.Bluemix_notm}}, você verá a mensagem de erro a seguir:
+Ao tentar efetuar login no {{site.data.keyword.Bluemix_notm}}, você verá a mensagem de erro a seguir: 
 {: tsSymptoms} 
 
 `A senha inserida não está correta.`
@@ -88,7 +88,7 @@ Deve-se ter um ID IBM e uma senha válidos para efetuar login no
 {{site.data.keyword.Bluemix_notm}}.
 
 
-Ao tentar efetuar login no console do {{site.data.keyword.Bluemix_notm}} com seu nome de usuário do Softlayer, você receberá a seguinte mensagem:
+Ao tentar efetuar login no console do {{site.data.keyword.Bluemix_notm}} com seu nome de usuário do Softlayer, você receberá a seguinte mensagem: 
 {: tsSymptoms} 
 
 `Nós não reconhecemos este IBMid ou e-mail. `
@@ -98,7 +98,7 @@ Deve-se ter um IBMid para efetuar login para usar o painel Infraestrutura no con
  
 Se você for um usuário do SoftLayer que está usando um ID do SoftLayer, deverá alternar para a autenticação do IBMid no Portal do Cliente dentro de cada conta que você tem acesso antes de ser capaz de efetuar login usando a autenticação do IBMid. 
 
-Entre em contato com o usuário principal ou com o administrador da conta para alternar para o IBMid.
+Entre em contato com o usuário principal ou com o administrador da conta para alternar para o IBMid. 
 {: tsResolve}
 
 

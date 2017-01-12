@@ -2,36 +2,44 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-09"
+lastupdated: "2016-11-02"
+
 ---
+
 {:shortdesc: .shortdesc}
 {:screen:.screen}
+{:codeblock:.codeblock}
 
 
-
-# Configuration d'une authentification personnalisée pour votre application {{site.data.keyword.amashort}}
-Android
+# Configuration d'une authentification personnalisée pour votre application {{site.data.keyword.amashort}} Android
 {: #custom-android}
 
 
-Configurez votre application Android avec authentification personnalisée afin d'utiliser le SDK client
-{{site.data.keyword.amashort}} et connectez votre application à {{site.data.keyword.Bluemix}}.
+Configurez votre application Android avec authentification personnalisée afin d'utiliser le SDK client {{site.data.keyword.amashort}} et connectez votre application à {{site.data.keyword.Bluemix}}.
 
 ## Avant de commencer
 {: #before-you-begin}
-Vous devez disposer d'une ressource protégée par une instance du service {{site.data.keyword.amashort}} qui est configuré pour utiliser un fournisseur d'identité personnalisé.  Votre appli mobile doit aussi être instrumentée à l'aide du SDK client de {{site.data.keyword.amashort}}.  Pour plus d'informations, voir les sujets suivants :
+Avant de commencer, vous devez disposer des éléments suivants :
+
+* Ressource protégée par une instance du service {{site.data.keyword.amashort}} qui est configurée pour utiliser un fournisseur d'identité personnalisé (voir [Configuration de l'authentification personnalisée](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).  
+* Valeur de votre **TenantID**. Ouvrez votre service dans le tableau de bord de {{site.data.keyword.amashort}}. Cliquez sur le bouton **Options pour application mobile**. La valeur `tenantId` (qui porte également le nom d'`appGUID`) est affichée dans la zone **App GUID / TenantId**. Vous aurez besoin de cette valeur pour initialiser le Gestionnaire des autorisations.
+* Nom de votre **Realm**. Il s'agit de la valeur que vous avez spécifiée dans la zone **Nom du domaine** de la section **Personnalisé** dans l'onglet **Gestion** du tableau de bord de {{site.data.keyword.amashort}}.
+* L'URL de votre application back-end (**Route de l'application**). Vous aurez besoin de ces valeurs pour envoyer des requêtes aux noeuds finaux protégés de votre application back end.
+* Votre **région** {{site.data.keyword.Bluemix_notm}}. Vous pouvez trouver votre région {{site.data.keyword.Bluemix_notm}} actuelle dans l'en-tête, en regard de l'icône **Avatar**![icône Avatar](images/face.jpg "icône Avatar"). La valeur de la région qui apparaît doit être l'une des suivantes : `US South`, `United Kingdom` ou `Sydney`, et correspondre aux valeurs requises dans le code Javascript de WebView : `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` ou `BMSClient.REGION_UK`. Vous aurez besoin de cette valeur pour initialiser le client {{site.data.keyword.amashort}}.
+
+Pour plus d'informations, voir les sujets suivants :
  * [Initiation à {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
  * [Configuration du SDK Android](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html)
  * [Utilisation d'un fournisseur d'identité personnalisé](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
  * [Création d'un fournisseur d'identité personnalisé](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
  * [Configuration de {{site.data.keyword.amashort}} pour l'authentification personnalisée](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
 
-Notez les valeurs de paramètres de service. Ouvrez votre service dans le tableau de bord {{site.data.keyword.Bluemix_notm}}. Cliquez sur **Options pour application mobile**. Les valeurs `applicationRoute` et `tenantId` (qui portent également le nom d'`appGUID`) s'affichent dans les zones **Route** et **Identificateur global unique de l'application / ID titulaire**. Vous aurez besoin de ces valeurs pour l'initialisation du logiciel SDK et l'envoi de demandes à l'application de back-end.
+
 
 ## Initialisation du logiciel SDK client de {{site.data.keyword.amashort}}
 {: #custom-android-initialize}
-1. Dans votre projet Android dans Android Studio, ouvrez le fichier `build.gradle` de votre module d'application (et non pas le fichier
-`build.gradle` du projet).
+Si vous disposez d'une application Android équipée du SDK Android {{site.data.keyword.amashort}}, vous pouvez ignorer cette section.
+1. Dans votre projet Android dans Android Studio, ouvrez le fichier `build.gradle` de votre module d'application (et non pas le fichier `build.gradle` du projet).
 
 1. Dans le fichier `build.gradle`, localisez la section `dependencies` et vérifiez que la dépendance suivante existe :
 
@@ -45,6 +53,7 @@ Notez les valeurs de paramètres de service. Ouvrez votre service dans le tablea
     	// other dependencies  
 	}
 	```
+	{: codeblock}
 
 1. Synchronisez votre projet avec Gradle. Cliquez sur **Tools (Outils) > Android > Sync Project with Gradle Files (Synchroniser le projet avec les fichiers Gradle)**.
 
@@ -54,16 +63,17 @@ Ajoutez le droit d'accès à Internet sous l'élément `<manifest>` :
 	```XML
 	<uses-permission android:name="android.permission.INTERNET" />
 	```
+	{: codeblock}
 
 1. Initialisez le logiciel SDK.  
-	En général, vous pouvez placer le code d'initialisation dans la méthode `onCreate` de l'activité
-principale dans votre application Android, bien que cet emplacement ne soit pas obligatoire.
+	En général, vous pouvez placer le code d'initialisation dans la méthode `onCreate` de l'activité principale dans votre application Android, bien que cet emplacement ne soit pas obligatoire.
 
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
-```
+	```
+	{: codeblock}
 
-Remplacez `BMSClient.REGION_UK` par la région appropriée.	 Pour afficher votre région {{site.data.keyword.Bluemix_notm}}, cliquez sur l'icône **Avatar**  ![icône Avatar](images/face.jpg "icône Avatar")  dans la barre de menu pour ouvrir le widget **Compte et support**.  La valeur de région doit être l'une des suivantes : `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` ou `BMSClient.REGION_UK`.				
+Remplacez `BMSClient.REGION_UK` par la région {{site.data.keyword.amashort}}. Pour plus d'informations sur l'obtention de ces valeurs, voir [Avant de commencer](#before-you-begin)).
 	
 
 ## Interface du programme d'écoute d'authentification
@@ -78,6 +88,7 @@ Appelez cette méthode lorsqu'une demande d'authentification personnalisée reç
 ```Java
 void onAuthenticationChallengeReceived(AuthenticationContext authContext, JSONObject challenge, Context context);
 ```
+{: codeblock}
 
 
 #### Arguments
@@ -95,6 +106,7 @@ Appelez cette méthode après une authentification réussie. Les arguments compr
 ```Java
 void onAuthenticationSuccess(Context context, JSONObject info);
 ```
+{: codeblock}
 
 ### Méthode onAuthenticationFailure
 {: #custom-android-authlistener-onfail}
@@ -102,6 +114,7 @@ Appelez cette méthode en cas d'échec de l'authentification. Les arguments comp
 ```Java
 void onAuthenticationFailure(Context context, JSONObject info);
 ```
+{: codeblock}
 
 ## Interface AuthenticationContext
 {: #custom-android-authcontext}
@@ -111,10 +124,12 @@ void onAuthenticationFailure(Context context, JSONObject info);
 ```Java
 void submitAuthenticationChallengeAnswer(JSONObject answer);
 ```
+{: codeblock}
 
 ```Java
 void submitAuthenticationFailure (JSONObject info);
 ```
+{: codeblock}
 
 ## Exemple d'implémentation d'un programme d'écoute d'authentification personnalisé
 {: #custom-android-samplecustom}
@@ -174,6 +189,7 @@ public class CustomAuthenticationListener implements AuthenticationListener {
 	}
 }
 ```
+{: codeblock}
 
 ## Enregistrement d'un programme d'écoute d'authentification personnalisé
 {: #custom-android-register}
@@ -187,11 +203,12 @@ mcaAuthorizationManager.registerAuthenticationListener(realmName, new CustomAuth
 BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 
 ```
+{: codeblock}
 
 
 Dans le code :
-* Remplacez `MCAServiceTenantId` par la valeur `tenantId` (voir [Avant de commencer](##before-you-begin)). 
-* Utilisez le nom de domaine que vous avez spécifié dans le tableau de bord {{site.data.keyword.amashort}}.
+* Remplacez `MCAServiceTenantId` par la valeur **TenantId** (voir [Avant de commencer](##before-you-begin)). 
+* Utilisez le nom de domaine, `realmName`, que vous avez spécifié dans le tableau de bord {{site.data.keyword.amashort}} (voir [Configuration de l'authentification personnalisée](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).
 
 
 ## Test de l'authentification
@@ -200,11 +217,10 @@ Une fois que le SDK client est initialisé et qu'un programme AuthenticationList
 
 ### Avant de tester
 {: #custom-android-testing-before}
-Vous devez disposer d'une application créée avec un conteneur boilerplate {{site.data.keyword.mobilefirstbp}} et d'une ressource protégée par {{site.data.keyword.amashort}} sur le noeud final `/protected`.
+Vous devez disposer d'une application qui possède une ressource protégée par {{site.data.keyword.amashort}} sur le noeud final `/protected`.
 
 
-1. Envoyez une requête au noeud final protégé (`{applicationRoute}/protected`) de votre application back end mobile
-depuis votre navigateur. Par exemple : `http://my-mobile-backend.mybluemix.net/protected`. Pour plus d'informations sur l'obtention de la valeur `{applicationRoute}`, voir [Avant de commencer](#before-you-begin). 
+1. Envoyez une requête au noeud final protégé (`{applicationRoute}/protected`) de votre application back end mobile depuis votre navigateur. Par exemple : `http://my-mobile-backend.mybluemix.net/protected`. Pour plus d'informations sur l'obtention de la valeur `{applicationRoute}`, voir [Avant de commencer](#before-you-begin). 
 
 1. Le noeud final `/protected` d'une application de back end mobile qui a été créée avec le conteneur boilerplate {{site.data.keyword.mobilefirstbp}} est protégé par {{site.data.keyword.amashort}}. Ce noeud final n'est accessible qu'aux applications mobiles instrumentées avec le SDK client de {{site.data.keyword.amashort}}. En conséquence, un message `Unauthorized` s'affiche dans le navigateur.
 
@@ -229,8 +245,8 @@ depuis votre navigateur. Par exemple : `http://my-mobile-backend.mybluemix.net/p
 			}
 		}
 	});
-```
-
+	```
+	{: codeblock}
 	
 1. 	Lorsque votre demande aboutit, la sortie suivante figure dans l'outil LogCat :
 
@@ -241,9 +257,9 @@ depuis votre navigateur. Par exemple : `http://my-mobile-backend.mybluemix.net/p
  ```Java
  MCAAuthorizationManager.getInstance().logout(getApplicationContext(), listener);
  ```
+ {: codeblock}
 
 
- Si vous appelez ce code alors qu'un utilisateur est connecté, l'utilisateur est déconnecté. Si l'utilisateur tente à nouveau de se connecter, il doit à
-nouveau soumettre ses données d'identification au serveur.
+ Si vous appelez ce code alors qu'un utilisateur est connecté, l'utilisateur est déconnecté. Si l'utilisateur tente à nouveau de se connecter, il doit à nouveau soumettre ses données d'identification au serveur.
 
  La valeur `listener` transmise à la fonction de déconnexion peut être `null`.

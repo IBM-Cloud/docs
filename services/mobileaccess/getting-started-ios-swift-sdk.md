@@ -1,26 +1,27 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-02"
+  years: 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
+
 {:shortdesc: .shortdesc}
 {:screen: .screen}
+{:codeblock:.codeblock}
 
 # Setting up the iOS Swift SDK
 {: #getting-started-ios}
 
-{{site.data.keyword.amafull}} has released a new Swift SDK, that adds to, and improves, the functionality provided by the existing {{site.data.keyword.amashort}} Objective-C SDK, making it easier to authenticate your app and providing better protection for your back-end resources. Instrument your iOS Swift application with the {{site.data.keyword.amashort}} SDK, initialize the SDK, and make requests to protected and unprotected resources.
+Instrument your iOS Swift application with the {{site.data.keyword.amashort}} SDK, initialize the SDK, and make requests to protected and unprotected resources.
 
 {:shortdesc}
-
-While the Objective-C SDK remains fully supported, and is still considered the primary SDK for  {{site.data.keyword.Bluemix_notm}} Mobile Services, there are plans to discontinue the Objective-C SDK later this year in favor of this new Swift SDK.
 
 
 ## Before you begin
 {: #before-you-begin}
 You must have:
+
 * An instance of a {{site.data.keyword.Bluemix_notm}} application.
 * An instance of a {{site.data.keyword.amafull}} service.
 * Your **TenantID**. Open your service in the {{site.data.keyword.amashort}} dashboard. Click **Mobile Options**. The `tenantId` (also known as `appGUID`)  values are displayed in the  **App GUID / TenantId** field. You will need this value for intializing the {{site.data.keyword.amashort}} Authorization Manager.
@@ -44,6 +45,7 @@ The {{site.data.keyword.amashort}} SDK is distributed with CocoaPods, a dependen
 ```
 sudo gem install cocoapods
 ```
+{: codeblock}
 
 For more information, see the [CocoaPods website](https://cocoapods.org/).
 
@@ -61,6 +63,7 @@ For more information, see the [CocoaPods website](https://cocoapods.org/).
   use_frameworks!
   pod 'BMSSecurity'
 	```
+	{: codeblock}
 
   **Tip:** You can add `use_frameworks!` to your Xcode target instead of having it in the Podfile.
 
@@ -91,7 +94,7 @@ Enable `Keychain Sharing`. Go to the `Capabilities` tab and switch the `Keychain
 
 1. Initialize the {{site.data.keyword.amashort}} client SDK.
 
-```Swift
+ ```Swift
 	let tenantId = "<serviceTenantID>"
 	let regionName = <applicationBluemixRegion>
 
@@ -104,12 +107,13 @@ Enable `Keychain Sharing`. Go to the `Capabilities` tab and switch the `Keychain
 	BMSClient.sharedInstance.authorizationManager = mcaAuthManager
 	return true
 	}
- ```
+  ```
+  {: codeblock}
 
-* Replace the `tenantId` with value you obtained from **Mobile options**. 
-* Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. 
+* Replace the `tenantId` with value you obtained from **Mobile options**.
+* Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted.
 
-For information about these values, see [Before you begin](#before-you-begin). 
+For information about these values, see [Before you begin](#before-you-begin).
 
 
 ## Making a request to your mobile back-end application
@@ -150,6 +154,7 @@ After the {{site.data.keyword.amashort}} client SDK is initialized, you can star
 ## Next steps
 {: #next-steps}
 When you connected to the protected endpoint, no credentials were required. To require your users to log in to your application, you must configure Facebook, Google, or custom authentication.
+
   * [Facebook](facebook-auth-ios-swift-sdk.html)
   * [Google](google-auth-ios-swift-sdk.html)
   * [Custom](custom-auth-ios-swift-sdk.html)

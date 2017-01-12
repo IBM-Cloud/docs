@@ -1,7 +1,8 @@
 ---
 
-copyright:
-  years: 2015, 2016
+Copyright:
+  Jahre: 2015, 2016
+Letzte Aktualisierung: 28.10.2016
 
 ---
 

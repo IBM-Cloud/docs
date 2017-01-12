@@ -5,10 +5,14 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # Registrando um dispositivo com userId
 {: #register_device_with_userId}
-Última atualização: 17 de outubro de 2016
+Última atualização: 07 de dezembro de 2016
 {: .last-updated}
 
 Para registrar-se para notificação baseada em userId, conclua as etapas a seguir:
@@ -24,17 +28,13 @@ push.initialize(getApplicationContext(),"AppGUID", "clientSecret");
 ```
 	{: codeblock}
 
-####AppGUID
-{: push-app-guid}
 
-Esta é a chave AppGUID do serviço {{site.data.keyword.mobilepushshort}}.
+- **AppGUID**: esta é a chave AppGUID do serviço
+{{site.data.keyword.mobilepushshort}}. 
+- **clientSecret**: esta é a chave clientSecret do serviço
+{{site.data.keyword.mobilepushshort}}. 
 
-####clientSecret
-{: android-client-secret}
-
-Esta é a chave clientSecret do serviço {{site.data.keyword.mobilepushshort}}.
-
-Use a API **registerDeviceWithUserId** para registrar o dispositivo para {{site.data.keyword.mobilepushshort}}.
+  Use a API **registerDeviceWithUserId** para registrar o dispositivo para {{site.data.keyword.mobilepushshort}}.
 ```
 // Register the device to {{site.data.keyword.mobilepushshort}}.
 push.registerDeviceWithUserId("userId",new MFPPushResponseListener<String>() {
@@ -51,10 +51,8 @@ push.registerDeviceWithUserId("userId",new MFPPushResponseListener<String>() {
 ```
 	{: codeblock}
 
-####userId
-{: android-user-id}
 
-Passe o valor exclusivo de userId para registrar-se para {{site.data.keyword.mobilepushshort}}.
+- **userId**: transmita o valor exclusivo de userId para registrar-se no {{site.data.keyword.mobilepushshort}}.
 
 **Nota:** para ativar
 {{site.data.keyword.mobilepushshort}} destinado por UserId, assegure-se de
@@ -62,11 +60,27 @@ registrar o dispositivo com um userId e também de passar o 'clientSecret'
 que é alocado quando os serviços {{site.data.keyword.mobilepushshort}} são
 provisionados. O registro do dispositivo falhará sem um clientSecret válido.
 
+## Cordova
+{: cordova}
+
+Use as APIs a seguir para registrar para {{site.data.keyword.mobilepushshort}} baseadas em UserId.
+
+```
+// Register device for push notification with UserId
+var options = {"userId": "Your User Id value"};
+BMSPush.registerDevice(options,success, failure); 
+```
+	{: codeblock}
+
+
+- **userId**: transmita o valor exclusivo de userId para registrar-se no {{site.data.keyword.mobilepushshort}}.
+
 
 ## Objective-C
 {: objc-register}
 
-Use as APIs a seguir para registrar para {{site.data.keyword.mobilepushshort}} baseadas em UserId.
+Use as APIs a seguir para registrar-se para {{site.data.keyword.mobilepushshort}} baseado em
+UserId.
 ```
 // Initialize the MFPPush
 IMFPushClient* push = [IMFPushClient sharedInstance];
@@ -74,15 +88,11 @@ IMFPushClient* push = [IMFPushClient sharedInstance];
 ```
 	{: codeblock}
 
-###AppGUID
-{: objc-pushappguid}
 
-Esta é a chave AppGUID do serviço {{site.data.keyword.mobilepushshort}}.
-
-####clientSecret
-{: objc-client-secret}
-
-Esta é a chave clientSecret do serviço {{site.data.keyword.mobilepushshort}}.
+- **AppGUID**: esta é a chave AppGUID do serviço
+{{site.data.keyword.mobilepushshort}}. 
+- **clientSecret**: esta é a chave clientSecret do serviço
+{{site.data.keyword.mobilepushshort}}. 
 
 Use a API **registerWithUserId** para registrar o dispositivo para {{site.data.keyword.mobilepushshort}}.
 ```
@@ -100,10 +110,9 @@ Use a API **registerWithUserId** para registrar o dispositivo para {{site.data.k
 ```
 	{: codeblock}
 
-####userId
-{: objc-user-id}
 
-Passe o valor exclusivo de userId para registrar-se para {{site.data.keyword.mobilepushshort}}.
+- **userId**: transmita o valor exclusivo de userId para registrar-se no
+{{site.data.keyword.mobilepushshort}}.
 
 ## Swift
 {: swift-register}
@@ -115,14 +124,11 @@ push.initializeWithAppGUID("appGUID", clientSecret:"clientSecret")
 ```
 	{: codeblock}
 
-####AppGUID
-{: swift-pushappguid}
-Esta é a chave AppGUID do serviço {{site.data.keyword.mobilepushshort}}.
 
-####clientSecret
-{: swift-client-secret}
-
-Esta é a chave clientSecret do serviço {{site.data.keyword.mobilepushshort}}.
+- **AppGUID**: esta é a chave AppGUID do serviço
+{{site.data.keyword.mobilepushshort}}. 
+- **clientSecret**: esta é a chave clientSecret do serviço
+{{site.data.keyword.mobilepushshort}}. 
 
 Use a API **registerWithUserId** para registrar o dispositivo para {{site.data.keyword.mobilepushshort}}.
 
@@ -139,12 +145,10 @@ if error.isEmpty {
 ```
 	{: codeblock}
 
-####userId
-{: swift-user-id}
+- **userId**: transmita o valor exclusivo de userId para registrar-se no
+{{site.data.keyword.mobilepushshort}}.
 
-Passe o valor exclusivo de userId para registrar-se para {{site.data.keyword.mobilepushshort}}.
-
-## Google Chrome e Mozilla Firefox
+## Google Chrome, Safari e Mozilla Firefox
 {: web-register}
 
 Use as APIs a seguir para registrar-se para notificações baseadas em userId. Inicialize
@@ -193,7 +197,7 @@ var params = {
 ```
 	{: codeblock}
   
-Após inicializado com sucesso o registro do aplicativo da web com o userId.
+Após a inicialização bem-sucedida, será necessário registrar o aplicativo da web com o userId.
 
 ```
 bmsPush.registerWithUserId("UserId", function(response) {
@@ -204,7 +208,6 @@ bmsPush.registerWithUserId("UserId", function(response) {
 
 # Usando notificações baseadas em userId
 {: #using_userid}
-
 
 As notificações baseadas em userId são mensagens de notificação destinadas a
 um usuário específico. Muitos dispositivos podem ser

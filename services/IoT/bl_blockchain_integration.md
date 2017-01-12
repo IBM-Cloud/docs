@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-11-18"
+lastupdated: "2016-12-08"
 
 ---
 
@@ -44,11 +44,7 @@ The following diagram illustrates the general {{site.data.keyword.iot_short_notm
 {: #byb}
 
 - Get an overview of {{site.data.keyword.iot_short_notm}}, how it relates to the general blockchain concept, and what it can do for you at [{{site.data.keyword.iot_short_notm}}](http://www.ibm.com/blockchain/) on IBM.com.
-- Enable {{site.data.keyword.iot_short_notm}} blockchain integration.  
- Blockchain integration is not enabled by default but must be requested for each {{site.data.keyword.iot_short_notm}} organization.
-  1. Go to [Explore Watson IoT with Blockchain](http://www.ibm.com/internet-of-things/iot-news/announcements/private-blockchain/).  
-  2. Click **Kick-start your blockchain project** to fill out and submit the *Explore the potential of IoT and Blockchain* form.  
-  3. After your request is approved, IBM will contact you to enable blockchain integration for your organization.
+- [Enable {{site.data.keyword.iot_short_notm}} blockchain integration](reference/extensions/index.html#blockchain) for your organization.
 - Connect devices that produce data that you want to write to the blockchain ledger.  
 Follow the instructions in the [Connecting devices](iotplatform_task.html) topic to connect your devices.
 - Install the Monitoring UI.
@@ -81,10 +77,12 @@ The following architecture diagram illustrates the components that are required 
 Because {{site.data.keyword.iot_short_notm}} blockchain integration is enabled, you can now connect to blockchain fabrics that are hosted by {{site.data.keyword.blockchainfull_notm}} or the Linux Foundation Hyperledger.
 
 
-Follow the instructions provided by your IBM blockchain contact to connect to your blockchain fabric.   
-
-The following information is required to connect:  
-
+To connect to a blockchain fabric:
+1. From the {{site.data.keyword.iot_short_notm}} dashboard, select **Extensions**.
+2. In the **Extensions** page, in the Blockchain tile, click **Setup**.
+3. In the **Extensions** page, in the Blockchain tile, click **Setup**, or click ![Gear icon](images/gear.png "Configure") if you already have fabrics linked, and then enter the fabric information.
+ 1. In the **Fabric** tab, enter a name to identify the fabric in {{site.data.keyword.iot_short_notm}}, then click **Next**.   
+ 2. In the **Peer** tab, enter the peer information:  
 <table>
 <thead>
 <tr>
@@ -94,20 +92,16 @@ The following information is required to connect:
 </thead>
 <tbody>
 <tr>
-<td>Fabric Name</td>
-<td>Enter a name to identify the fabric in {{site.data.keyword.iot_short_notm}}.</td>
+<td>Name</td>
+<td>Enter a name to identify the peer in {{site.data.keyword.iot_short_notm}}.</td>
 </tr>
 <tr>
-<td>Peer Host</td>
+<td>Host</td>
 <td>The `api_host` address for the Validating Peer 1 server</td>
 </tr>
 <tr>
-<td>Port Number</td>
+<td>Port</td>
 <td>The `api_port` number<ul><li>Use port 80 if your implementation does not use TLS.</li><li>Use port 443 if your implementation uses TLS.</li></ul></td>
-</tr>
-<tr>
-<td>Use TLS</td>
-<td>On or Off</br>Use Transport Layer Security to encrypt the communication between {{site.data.keyword.iot_short_notm}} and the contract in the fabric. The default port numbers are set by the deployed {{site.data.keyword.iot_short_notm}} instance that you are connecting to.</td>
 </tr>
 <tr>
 <td>User ID</td>
@@ -117,8 +111,14 @@ The following information is required to connect:
 <td>Secret Key</td>
 <td>The `secret` string for the user</td>
 </tr>
-</tbody>
-</table>
+<tr>
+<td>Use TLS</td>
+<td>On or Off</br>Use Transport Layer Security to encrypt the communication between {{site.data.keyword.iot_short_notm}} and the contract in the fabric. The default port numbers are set by the deployed {{site.data.keyword.iot_short_notm}} instance that you are connecting to.</td>
+</tr></tbody>
+</table>  
+ 3. Click **Finish**.
+3. In the Configure blockchain section, click **Done** to save the fabric information.
+
 
 **IBM basic scenario:** To connect to the IBM-provided fabric, use the connection details for the Sample Contract that are provided in the [IoT Blockchain Connection Info](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections) wiki page in the Watson IoT Blockchain community. If needed, contact your IBM blockchain contact to get access to the community.
 
@@ -136,7 +136,7 @@ To map device data to a contract:
  **Tip:** The default event name for the sample  Node-RED blockchain device is obc. To find the event types for a device, from the {{site.data.keyword.iot_short_notm}} dashboard, select **Devices** and click the device name to open the device details page. Scroll down to the **Sensor Information** section to see a list of the available events and data points for the device. You can change the event name that the Node-RED device publishes by updating the Topic field in the Publish to IoT mqtt out node.  
  6. Click **Next**.
  6. Select the fabric instance that you created earlier.
- 7. Enter the contract ID and a contract name.  
+ 7. Enter a contract name and the contract ID.  
 <table>
 <thead>
 <tr>
@@ -146,14 +146,14 @@ To map device data to a contract:
 </thead>
 <tbody>
 <tr>
+<td>Contract name</td>
+<td>A name that is used to identify the contract in {{site.data.keyword.iot_short_notm}}.</td>
+</tr>
+<tr>
 <td>Contract ID</td>
 <td>The unique 128-character ID of the mapped contract. </br> **Important:** The contract that you map must at a minimum support the following methods:
 - updateAsset
 - readAssetSchemas  </td>
-</tr>
-<tr>
-<td>Contract name</td>
-<td>A name that is used to identify the contract in {{site.data.keyword.iot_short_notm}}.</td>
 </tr>
 </tbody>
 </table>

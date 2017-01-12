@@ -13,7 +13,7 @@ copyright:
 
 # Initiation à IBM {{site.data.keyword.blockchain}}
 {: #gettingstartedtemplate}
-Dernière mise à jour : 13 octobre 2016
+Dernière mise à jour : 10 novembre 2016
 {: .last-updated}
 
 **ATTENTION :** Avant d'utiliser le plan développeur du module de démarrage (Starter Developer) (Beta) ou le Plan du réseau d'entreprise de haute sécurité (High Security Business Network) (GA), vous devez lire les informations techniques et de support dans [Ce que vous devez savoir](needtoknow.html).
@@ -21,12 +21,20 @@ Dernière mise à jour : 13 octobre 2016
 
 ## Statut des plans de l'offre
 
-Le plan Starter Developer est une version bêta, et il fournit un environnement de développement à service partagé. La date de disponibilité générale du plan High Security Business Network est le 20 octobre 2016. Le plan High Business Network fournit un environnement LinuxONE on z hautement sécurisé, à service exclusif, avec un isolement de code utilisant [IBM Secure Service Container](etn_ssc.html).
+Le plan Starter Developer est une version bêta, et il fournit un environnement de développement à service partagé. 
+Le plan High Security Business Network est une édition en
+disponibilité générale. Le plan High Business Network fournit un environnement LinuxONE on z hautement sécurisé, à service exclusif, avec un isolement de code utilisant [IBM Secure Service Container](etn_ssc.html).
 <br><br>
 
 ## IBM Blockchain on Bluemix
 
-Avec le service {{site.data.keyword.blockchainfull}} sur Bluemix&reg;, vous accédez d'un simple clic à un réseau de blockchain de développement et de test composé de quatre noeuds. Au lieu de créer un tout nouveau réseau de blockchain, les développeurs peuvent immédiatement commencer à écrire des applications et à déployer du code blockchain. Le service IBM Blockchain sur Bluemix est un réseau privé d'égal à égal, bâti à partir du code [Hyperledger Fabric v0.5](https://github.com/hyperledger-archives/fabric/tree/v0.5-developer-preview) du projet Hyperledger de Linux Foundation.
+Avec le service {{site.data.keyword.blockchainfull}},
+vous accédez d'un simple clic à deux réseaux de
+blockchain de développement et de test composé de quatre noeuds. Au lieu de créer un tout nouveau réseau de blockchain, les développeurs peuvent immédiatement commencer à écrire des applications et à déployer du code blockchain. 
+Le service IBM Blockchain sur Bluemix est un réseau privé d'égal à
+égal, bâti à partir du code
+[Hyperledger
+Fabric v0.6.1](https://github.com/hyperledger/fabric/tree/v0.6) du projet Hyperledger de Linux Foundation.
 {:shortdesc}
 
 Les réseaux de blockchain sont utilisés pour permettre l'échange et le suivi à la fois sécurisé et efficace des actifs numériques, et enregistrer de manière définitive toutes les transactions dans le registre partagé. Pour plus de détails sur la chaîne de blocs, voir la rubrique [A propos de la chaîne de blocs](ibmblockchain_overview.html) .
@@ -41,7 +49,7 @@ Vous avez le choix entre deux plans IBM Blockchain sur Bluemix : **Starter Devel
 
 | Plan Bluemix :      | Starter Developer Network       | High Security Business Network
 | ------------------------- |:--------------------------:|:-----:|
-| Statut :    | Bêta      | Disponibilité générale (GA) |
+| Statut :    | Bêta     | Disponibilité générale (GA) |
 | Objectif :  |  Développement et test des niveaux de sécurité, performance et disponibilité |  Simulation d'un réseau d'entreprise, et test des niveaux de sécurité, performance et disponibilité |
 | Noeuds :    | 4 noeuds + Autorité de certification     | 4 noeuds + Autorité de certification |
 | [Moniteur du Tableau de bord :](ibmblockchainmonitor.html) | Oui | Oui |
@@ -85,14 +93,16 @@ service non lié de réseau de blockchain.  Votre réseau inclut un environnemen
 ## Informations de référence sur l'API
 {: #api}
 * [Interface utilisateur swagger](https://obc-service-broker-staging.stage1.mybluemix.net/swagger)
-* [API de matrice Hyperledger (GitHub)](https://github.com/hyperledger/fabric/tree/master/docs/API)
-* [HFC SDK pour Node.js](https://github.com/hyperledger/fabric/tree/master/sdk/node)
+* [API de matrice Hyperledger (GitHub)](https://github.com/hyperledger/fabric/tree/v0.6/docs/API)
+* 
+[Logiciel
+SDK HFC pour Node.js](https://github.com/hyperledger/fabric/tree/v0.6/sdk/node)
 
 ## Liens connexes
 {: #general}
 * [Code matrice](https://github.com/hyperledger/fabric)
 * [Livre blanc](https://github.com/hyperledger/hyperledger/wiki/Whitepaper-WG)
-* [Spécifications de protocole et doc associée](https://github.com/hyperledger/fabric/tree/master/docs)
+* [Spécifications de protocole et doc associée](https://github.com/hyperledger/fabric/tree/v0.6/docs)
 * [Dépassement de la capacité de pile](http://stackoverflow.com/questions/tagged/hyperledger)
 * [Linux Foundation](https://www.hyperledger.org/)
 * [Nouveautés dans les services Bluemix](http://www.ng.bluemix.net/docs/whatsnew/index.html#services_category){:new_window}

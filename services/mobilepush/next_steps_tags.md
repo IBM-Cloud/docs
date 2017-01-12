@@ -1,13 +1,18 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Next steps
 {: #next_steps_tags}
-Last updated: 17 October 2016
+Last updated: 11 January 2017
 {: .last-updated}
 
 After you have successfully set up basic notifications, you can configure tag-based notifications and advanced options.

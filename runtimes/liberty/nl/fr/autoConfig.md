@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -11,9 +12,6 @@ copyright:
 
 # Configuration automatique des services liés
 {: #auto_config}
-
-Dernière mise à jour : 10 juin 2016
-{: .last-updated}
 
 Vous pouvez lier divers services à votre application Liberty. Les services peuvent être gérés par le conteneur, gérés par l'application, ou les deux, selon le souhait du développeur.
 
@@ -28,20 +26,20 @@ Un service géré par le conteneur désigne un service qui est géré par l'envi
 Ce processus est dénommé configuration automatique.
 Le pack de construction Liberty se charge de la configuration automatique des types de service suivants :
 
-* [SQL Database](../../services/SQLDB/index.html#SQLDB)
+* [SQL Database](/docs/services/SQLDB/index.html#SQLDB)
 * Base de données ClearDB MySQL
-* [MySQL](../../services/MySQL/index.html#MySQL)
+* [MySQL](/docs/services/MySQL/index.html#MySQL)
 * ElephantSQL
-* [PostgreSQL](../../services/PostgreSQL/index.html#PostgreSQL)
-* [Cloudant NoSQL Database](../../services/Cloudant/index.html#Cloudant)
+* [PostgreSQL](/docs/services/PostgreSQL/index.html#PostgreSQL)
+* [Cloudant NoSQL Database](/docs/services/Cloudant/index.html#Cloudant)
 * MongoLab
-* [dashDB](../../services/dashDB/index.html#dashDB)
-* [Data Cache](../../services/DataCache/index.html#data_cache)
-* [Session Cache](../../services/SessionCache/index.html#session_cache)
-* [MQ Light](../../services/MQLight/index.html#mqlight010)
-* [Monitoring and Analytics](../..//services/monana/index.html#gettingstartedtemplate)
-* [Auto-Scaling](../../services/Auto-Scaling/index.html#autoscaling)
-* [Single Sign On](../../services/SingleSignOn/index.html#sso_gettingstarted)
+* [dashDB](/docs/services/dashDB/index.html#dashDB)
+* [Data Cache](/docs/services/DataCache/index.html#data_cache)
+* [Session Cache](/docs/services/SessionCache/index.html#session_cache)
+* [MQ Light](/docs/services/MQLight/index.html#mqlight010)
+* [Monitoring and Analytics](/docs/services/monana/index.html#gettingstartedtemplate)
+* [Auto-Scaling](/docs/services/Auto-Scaling/index.html#autoscaling)
+* [Single Sign On](/docs/services/SingleSignOn/index.html#sso_gettingstarted)
 * [New Relic](newRelic.html)
 * [Dynatrace](dynatrace.html)
 
@@ -122,6 +120,37 @@ Ci-dessous figurent des exemples de définition de la variable d'environnement s
     $ cf set-env myapp services_autoconfig_excludes "sqldb=config mongodb-2.2=all"
 ```
 {: codeblock}
+
+## Remplacement de la configuration du service
+{: #override_service_config}
+
+Dans certains cas, il peut être souhaitable de remplacer la configuration par défaut d'un service généré par la configuration automatique. Cette opération peut être effectuée à l'aide de la variable d'environnement **LBP_SERVICE_CONFIG_xxxx**, où "xxxx" est le nom du service en majuscules. Par exemple, pour remplacer la version par défaut du service *mysql* et la définir sur la version 1.4.+, émettez une commande semblable à la suivante :
+
+```
+    $ cf set-env myapp LBP_SERVICE_CONFIG_MYSQL "{driver: { version: 1.4.+ }}"
+```
+{: codeblock}
+
+Le tableau suivant indique la syntaxe permettant de remplacer certaines options de configuration de service : 
+
+<table>
+<tr>
+<th align="left">Nom de la variable d'environnement</th>
+<th align="left">Syntaxe de la configuration</th>
+</tr>
+
+<tr>
+<td>LBP_SERVICE_CONFIG_MYSQL</td>
+<td>"{driver: { version: x.y.z }, connection_pool_size: 15}"</td>
+</tr>
+
+<tr>
+<td>LBP_SERVICE_CONFIG_POSTGRESQL</td>
+<td>"{driver: { version: x.y.z }}"</td>
+</tr>
+</table>
+
+
 
 # rellinks
 {: #rellinks}

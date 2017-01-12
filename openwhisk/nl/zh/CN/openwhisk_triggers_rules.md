@@ -179,5 +179,15 @@ wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
 
   您将看到 hello 操作收到了事件有效内容，并返回了期望的字符串。
 
-可以创建多个规则，用于将同一触发器与不同操作相关联。制定规则的触发器和操作必须位于相同的名称空间，且不能属于包。
-如果您想要使用属于包的操作，那么您可以将该操作复制到名称空间。例如：`wsk action create echo --copy /whisk.system/utils/echo`。
+可以创建多个规则，用于将同一触发器与不同操作相关联。触发器和规则不能属于包。但是，规则可能与属于包的操作相关联，例如：
+  ```
+  wsk rule create recordLocation locationUpdate /whisk.system/utils/echo
+  ```
+  {: pre}
+
+您还可以搭配使用规则与序列。例如，您可以创建由规则 `anotherRule` 激活的操作序列 `recordLocationAndHello`。
+  ```
+  wsk action create recordLocationAndHello --sequence /whisk.system/utils/echo,hello
+  wsk rule create anotherRule locationUpdate recordLocationAndHello
+  ```
+  {: pre}

@@ -1,14 +1,13 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
 # DevOps
 {: #devops}
-
-*Dernière mise à jour : 9 décembre 2015*
 
 Accélération de la distribution des applications | Choix du codage | Déploiement en toute confiance
 ---- | ---- | ----
@@ -18,3 +17,4 @@ mensuelle. | Codez dans le cloud : éditez facilement n'importe quel script ou f
 probablement, mais vous pouvez aussi apporter vos propres outils. Et si vous possédez un code source existant dans un référentiel Github, connectez-vous à
 votre projet {{site.data.keyword.Bluemix_notm}} DevOps Services pour effectuer le suivi des
 modifications. | Construisez, analysez, testez, intégrez et conditionnez des applications avant le déploiement, gérez la distribution continue du code de production dans {{site.data.keyword.Bluemix_notm}}, et garantissez un retour rapide des utilisateurs et des mesures de qualité à tous les stades du développement.
+{: caption="Table 1. Options for using DevOps" caption-side="top"}

@@ -26,12 +26,12 @@ lastupdated: "2016-11-07"
   ```
   {: codeblock}
 
-2. Android 애플리케이션의 기본 활동의 `onCreate` 메소드 내 또는 프로젝트에 가장 적합한 위치에 초기화 코드를 추가하여 Android 애플리케이션에서 `BMSCore` SDK를 초기화하십시오.
+2. Android 애플리케이션의 기본 활동의 `onCreate` 메소드 내 또는 프로젝트에 가장 적합한 위치에 초기화 코드를 추가하여 Android 애플리케이션에서 `BMSClient` SDK를 초기화하십시오.
 
-	```Java
+  ```Java
 	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_US_SOUTH); // Make sure that you point to your region
 	```
-	{: codeblock}
+  {: codeblock}
 
   **bluemixRegion** 매개변수를 사용하여 `BMSClient`를 초기화해야 합니다. 초기자(initializer)에서 **bluemixRegion** 값은 사용 중인 {{site.data.keyword.Bluemix_notm}} 배치를 지정합니다(예: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK` 또는 `BMSClient.REGION_SYDNEY`). 
 
@@ -69,7 +69,7 @@ lastupdated: "2016-11-07"
 
   3. 빌드가 완료되면 Carthage 지시사항의 [3단계](https://github.com/Carthage/Carthage#getting-started)에 따라 프로젝트에 `BMSCore.framework`를 추가하십시오. 
 
-  Swift 2.3으로 빌드된 애플리케이션의 경우 `carthage update --toolchain com.apple.dt.toolchain.Swift_2_3` 명령을 사용하십시오. 그 외의 경우에는 `carthage update` 명령을 사용하십시오. 
+      Swift 2.3으로 빌드된 애플리케이션의 경우 `carthage update --toolchain com.apple.dt.toolchain.Swift_2_3` 명령을 사용하십시오. 그 외의 경우에는 `carthage update` 명령을 사용하십시오. 
 
 3. 모듈을 가져오십시오. 
 
@@ -82,9 +82,40 @@ lastupdated: "2016-11-07"
 
   애플리케이션 위임의 `application(_:didFinishLaunchingWithOptions:)` 메소드 또는 프로젝트에 가장 적합한 위치에 초기화 코드를 배치하십시오.
 
-    ```Swift
+  ```Swift
     BMSClient.sharedInstance.initialize(bluemixRegion: BMSClient.Region.usSouth) // Make sure that you point to your region
     ```
-   {: codeblock}
+  {: codeblock}
 
-    {{site.data.keyword.mobileanalytics_short}} 클라이언트 SDK를 사용하려면 **bluemixRegion** 매개변수를 사용하여 `BMSClient`를 초기화해야 합니다. 초기자(initializer)에서 **bluemixRegion** 값은 사용 중인 {{site.data.keyword.Bluemix_notm}} 배치를 지정합니다(예: `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` 또는 `BMSClient.Region.sydney`). 
+  **bluemixRegion** 매개변수를 사용하여 `BMSClient`를 초기화해야 합니다. 초기자(initializer)에서 **bluemixRegion** 값은 사용 중인 {{site.data.keyword.Bluemix_notm}} 배치를 지정합니다(예: `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` 또는 `BMSClient.Region.sydney`). 
+
+
+## Cordova 애플리케이션 초기화
+{: #init-BMSClient-cordova}
+
+1. Cordova 애플리케이션 루트 디렉토리에서 다음 명령을 실행하여 Cordova 플러그인을 추가하십시오. 
+
+  ```
+  cordova plugin add bms-core
+  ```
+  {: codeblock}
+
+2. 기본 JavaScript 파일에서나 프로젝트에 대해 최적으로 작동하는 위치에서 초기화 코드를 추가하여 Cordova 애플리케이션에서 `BMSClient` 클래스를 초기화하십시오. 
+
+  ```
+  BMSClient.initialize(BMSClient.REGION_US_SOUTH);
+  ```
+  {: codeblock}
+	
+  **bluemixRegion** 매개변수를 사용하여 `BMSClient`를 초기화해야 합니다. 초기자(initializer)에서 **bluemixRegion** 값은 사용 중인 {{site.data.keyword.Bluemix_notm}} 배치를 지정합니다(예: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK` 또는 `BMSClient.REGION_SYDNEY`). 
+
+
+# 관련 링크
+{: #rellinks}
+
+## 관련 링크
+{: #general}
+
+* [BMSCore Android SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window}
+* [BMSCore iOS SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}
+* [BMSCore Cordova 플러그인](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window}

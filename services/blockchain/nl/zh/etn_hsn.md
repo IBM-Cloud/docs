@@ -12,14 +12,14 @@ years: 2016
 {:pre: .pre}
 
 
-# 高安全性商業網路
+# 高安全性业务网络
 {: #etn_overview}
-前次更新：2016 年 10 月 13 日
+上次更新时间：2016 年 10 月 13 日
 {: .last-updated}
 
-IBM Blockchain「高安全性商業網路」是在隔離且高度安全的環境中執行，這讓它與其他雲端管理的供應項目不同。作業系統、網狀架構及節點全部存在於 IBM Secure Service Container，可提供企業客戶預期從 z Systems 技術獲得的安全與屹立不搖等級。IBM Secure Service Container 也會提供對等式通訊、可用性、可擴充性、硬體加密、防竄改加密金鑰以及安全加密 VM 等的效能最佳化。  
+IBM Blockchain“高安全性业务网络”在隔离的高度安全环境中运行，从而有别于其他云托管的产品。操作系统、Fabric 和节点全部位于 IBM Secure Service Container 中，从而提供了企业客户采用 z Systems 技术所能获得的安全性和坚固性。IBM Secure Service Container 还能为对等通信、可用性、可伸缩性、硬件加密、防篡改加密密钥和安全加密的 VM 提供性能优化。  
 {:shortdesc}
 
-環境 (LinuxONE on z) 包含有四個對等節點、實作 PBFT 並啟用「成員資格服務」的網路，並且是在應用程式容器中執行。應用程式容器會保護在系統內執行的區塊鏈軟體、鏈碼及資料。可以簽署、認證及加密安全啟動內的區塊鏈軟體；而且一旦安裝在應用程式容器中之後即不可竄改。平台的 root 使用者及系統管理者無法存取或查看安全容器內容。LinuxONE on z 提供 FIPS 相符性、高「評估保證層次」保護、高度可審核的作業環境，以及加密最佳化。
+环境 (LinuxONE on z) 由实现 PBFT 且启用了“成员资格服务”的包含四个同级的网络构成，该网络在一个应用程序容器中运行。应用程序容器会保护系统中运行的区块链软件、链代码和数据。可以对安全引导内的区块链软件进行签名、验证和加密；区块链软件一旦安装在应用程序容器中，即具有防篡改功能。平台的 root 用户和系统管理员无法访问或查看安全容器内容。LinuxONE on z 还提供了 FIPS 合规性、高评估保证级别保护、高度可审计操作系统以及加密优化。
 
-如需安全特性的詳細資料，請參閱 [IBM Secure Service Container](etn_ssc.html) 小節。
+请参阅 [IBM Secure Service Container](etn_ssc.html) 部分，以获取有关安全功能的更多详细信息。

@@ -3,8 +3,8 @@
  
 
 copyright:
-
-  years: 2014，2016
+  years: 2016
+lastupdated: "2016-10-31"
 
  
 
@@ -15,9 +15,6 @@ copyright:
 
 # Termos do glossário para {{site.data.keyword.Bluemix_notm}} 
 {: #glossary}
-
-Última atualização: 02 de setembro de 2016
-{: .last-updated}
 
 Este glossário fornece termos e definições para o {{site.data.keyword.Bluemix}}.
 {:shortdesc}
@@ -120,7 +117,7 @@ Um nome curto exclusivo, visível publicamente e usado em clientes de desktop e 
 ### Antiafinidade
 {: #x8888040}
 
-Duas ou mais instâncias do grupo de contêiner que são executadas em nós de rede diferentes para assegurar alta disponibilidade para um aplicativo. Consulte também
+Duas ou mais instâncias do grupo de contêiner que são executadas em nós de rede diferentes para assegurar alta disponibilidade para um app. Consulte também
 [afinidade](#x2149238).
 
 ### API
@@ -947,7 +944,8 @@ A entrega de uma plataforma de computação, incluindo aplicativos, middleware o
 ### biblioteca de pré-produção
 {: #x7290106}
 
-Uma coleção de recursos de teste de app que coletam detalhes sobre questões e problemas com um app. Os recursos de teste identificam o dispositivo e o usuário que está tendo erros para que os desenvolvedores possam obter logs e outras informações para corrigir os problemas. Consulte também [modo de pré-produção](#x7290124).
+Uma coleção de recursos de teste de app que coletam detalhes sobre questões e problemas com um app. Os recursos de teste identificam o dispositivo e o usuário
+que estão tendo erros para que os desenvolvedores possam obter logs e outras informações para corrigir os problemas. Consulte também [modo de pré-produção](#x7290124).
 
 ### modo de pré-produção
 {: #x7290124}
@@ -1234,7 +1232,8 @@ Um aspecto do gerenciamento de configuração de software que envolve gerenciar 
 ### espaço
 {: #x2039442}
 
-- Um subgrupo dentro de uma organização do Bluemix. Usuários que são membros de uma organização recebem acesso a um ou mais de seus espaços, com permissões associadas a uma determinada função (como desenvolvedor, gerenciador ou auditor). Qualquer membro do espaço pode visualizar apps, mas somente membros com a função de desenvolvedor podem criar apps e incluir instâncias de serviço no espaço. Apps e instâncias de serviço são associados a espaços. Consulte também [organização](#x2032585).
+- Um subgrupo dentro de uma organização do Bluemix. Usuários que são membros de uma organização recebem acesso a um ou mais de seus espaços, com permissões
+associadas com uma determinada função (como desenvolvedor, gerenciador ou auditor). Qualquer membro do espaço pode visualizar apps, mas somente membros com a função de desenvolvedor podem criar apps e incluir instâncias de serviço no espaço. Apps e instâncias de serviço são associados a espaços. Consulte também [organização](#x2032585).
 - Uma unidade organizacional que contém aplicativos e serviços na infraestrutura do Cloud Foundry e que pode ser usada para armazenar e controlar recursos de aplicativo.
 - Uma área de acesso controlado dentro de uma conta na qual os artefatos do Blueworks Live podem ser criados e organizados.
 

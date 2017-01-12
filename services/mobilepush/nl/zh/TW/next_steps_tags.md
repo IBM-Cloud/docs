@@ -5,9 +5,14 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # 後續步驟
 {: #next_steps_tags}
-前次更新：2016 年 10 月 17 日
+前次更新：2016 年 12 月 6 日
 {: .last-updated}
 
 順利設定基本通知之後，即可配置標籤型通知及進階選項。

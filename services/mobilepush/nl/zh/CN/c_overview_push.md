@@ -5,12 +5,17 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # 关于 {{site.data.keyword.mobilepushshort}}
 {: #overview-push}
-上次更新时间：2016 年 11 月 11 日
+上次更新时间：2016 年 12 月 6 日
 {: .last-updated}
 
-IBM {{site.data.keyword.mobilepushshort}} 是可用于将通知发送至 iOS 和 Android 移动设备、Google Chrome 和 Mozilla Firefox Web 浏览器，以及 Google Chrome Apps and Extensions 的服务。通知可以针对所有应用程序用户，也可以针对一组使用标记的特定用户和设备。您可以管理设备、标记和预订。还可以使用 SDK（软件开发包）和具象状态传输 (REST) 应用程序编程接口 (API) 来进一步开发您的客户机应用程序。 
+IBM {{site.data.keyword.mobilepushshort}} 是可用于将通知发送至 iOS 和 Android 移动设备、Google Chrome、Mozilla Firefox 和 Safari Web 浏览器，以及 Google Chrome Apps and Extensions 的服务。通知可以针对所有应用程序用户，也可以针对一组使用标记的特定用户和设备。您可以管理设备、标记和预订。还可以使用 SDK（软件开发包）和具象状态传输 (REST) 应用程序编程接口 (API) 来进一步开发您的客户机应用程序。 
 
 此外，{{site.data.keyword.mobilepushshort}} 还作为一种 Bluemix Dedicated 服务提供。有关 {{site.data.keyword.mobilepushshort}} 专用服务的信息，请参阅[专用服务](/docs/dedicated/index.html)。请注意，{{site.data.keyword.mobilepushshort}} 监视选项卡并不显示分析数据。
 

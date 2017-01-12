@@ -3,13 +3,11 @@
 copyright:
   years: 2016
 lastupdated:  "2016-08-03"
+
 ---
 
 #	关于 {{site.data.keyword.mobilefoundation_short}}
 {: #overview_mobilefoundation}
-
-<!--Last updated: 03 August 2016
-{: .last-updated}-->
 
 {{site.data.keyword.mobilefoundation_short}} 服务提供在 {{site.data.keyword.Bluemix}} 上快速设置 {{site.data.keyword.mobilefirst}} 服务器环境的方法。然后，可以从此云环境开发、测试和管理移动应用程序。
 

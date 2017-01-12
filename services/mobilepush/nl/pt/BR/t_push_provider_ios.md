@@ -1,4 +1,3 @@
-
 ---
 
 copyright:
@@ -7,9 +6,13 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Configurando credenciais para o APNs
 {: #create-push-credentials-apns}
-Última atualização: 10 de novembro de 2016
+Última atualização: 07 de dezembro de 2016
 {: .last-updated}
 
 O Apple Push Notification Service (APNs) permite que os desenvolvedores de aplicativos enviem notificações remotas da instância do serviço {{site.data.keyword.mobilepushshort}} no Bluemix (o provedor) para dispositivos e aplicativos do iOS. Mensagens são enviadas para um aplicativo de
@@ -55,9 +58,7 @@ distribuição.
 ##Crie um certificado SSL de APNs de desenvolvimento e distribuição
 {: #create-push-credentials-apns-ssl}
 
-Antes de poder obter um certificado de APNs, primeiro, deve-se gerar uma solicitação de
-assinatura de certificado (CSR) e enviá-la para a Apple, a autoridade de certificação (CA). A CSR contém informações que identificam sua empresa e sua chave pública e privada usadas para assinar suas notificações push da Apple. Depois, gere o certificado SSL no
-            portal de Desenvolvedor de iOS. O certificado, junto com
+Antes de obter um certificado APNs, deve-se primeiro gerar uma solicitação de assinatura de certificado (CSR) e enviá-la para Apple, a autoridade de certificação (CA). A CSR contém informações que identificam sua empresa e suas chaves pública e privada usadas para assinar suas notificações push da Apple. Depois, gere o certificado SSL no portal de Desenvolvedor de iOS. O certificado, junto com
 seu público e chave privada, é armazenado no Keychain Access.
 
 <!-- ###Before you begin -->
@@ -156,13 +157,8 @@ distribuição. Xcode usa o perfil de fornecimento de desenvolvimento
 para determinar quais desenvolvedores podem criar o aplicativo e
 quais dispositivos podem ser testados no aplicativo.
 
-###Antes de começar
-{: before-you-begin-provisioning-file}
-
-Certifique-se de registrar um ID
-de app, de ativá-lo para Push Notification Service e de configurá-lo
-para
-usar um certificado APNs SSL de desenvolvimento e produção.
+Certifique-se de registrar um ID de app, de ativá-lo para o serviço {{site.data.keyword.mobilepushshort}} e de configurá-lo para
+usar um certificado SSL APNs de desenvolvimento e produção.
 
 Crie um perfil de fornecimento de desenvolvimento, da seguinte forma:
 
@@ -200,15 +196,11 @@ transferido por download para instalá-lo em Xcode.
 Para usar o serviço {{site.data.keyword.mobilepushshort}} para enviar notificações, faça upload dos certificados SSL necessários para o Apple Push Notification Service (APNs). A API REST também pode ser
 usada para fazer upload de um certificado APNs.
 
-
-###Antes de começar
-{: before-you-begin-dashboard}
-
-
 <!-- Get your development and production APNs SSL certificate and the password associated with each type of certificate. For information, see Creating and configuring push credentials for APNs.-->
 
-Os certificados necessários para APNs são certificados `.p12`, que contêm a chave
-privada e os certificados SSL necessários para construir e publicar o aplicativo. Deve-se gerar os certificados a partir do Member Center do
+Os certificados necessários para APNs são certificados `.p12`. Esses certificados
+contêm a chave privada e os certificados SSL que são necessários
+para construir e publicar seu aplicativo. Deve-se gerar os certificados a partir do Member Center do
 website do Apple Developer (para o qual é necessária uma conta válida do Apple Developer). São necessários certificados separados para o
 ambiente de desenvolvimento (ambiente de
 simulação) e para o ambiente de produção (distribuição).

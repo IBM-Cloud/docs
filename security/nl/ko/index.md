@@ -5,6 +5,8 @@
 copyright:
 
   years: 2014, 2016
+  
+lastupdated: "2016-10-19"
 
  
 
@@ -15,8 +17,6 @@ copyright:
 
 # {{site.data.keyword.Bluemix_notm}} 보안
 {: #security}
-마지막 업데이트 날짜: 2016년 10월 19일
-{: .last-updated}
 
 보안 엔지니어링 방식으로 디자인된
 {{site.data.keyword.Bluemix}} 플랫폼에는
@@ -57,10 +57,10 @@ copyright:
 
 ![Bluemix 로컬 플랫폼 보안 개요](images/security_local_platform.svg)
 
-그림 2. {{site.data.keyword.Bluemix_notm}} Local 플랫폼 보안 개요
+그림 2. {{site.data.keyword.Bluemix_notm}} 로컬 플랫폼 보안 개요
 
-IBM은 {{site.data.keyword.Bluemix_notm}} 로컬에 포함된 전달 기능인 Relay를 통해 데이터 센터에 {{site.data.keyword.Bluemix_notm}} 로컬을 설치하고
-원격으로 모니터하고 관리합니다. Relay는 각 {{site.data.keyword.Bluemix_notm}} 로컬 인스턴스에 고유한 인증서를 안전하게 연결합니다. {{site.data.keyword.Bluemix_notm}} 로컬 및 Relay에 대한 자세한 정보는 [Bluemix 로컬](../local/index.html)을 참조하십시오. 
+IBM은 {{site.data.keyword.Bluemix_notm}} 로컬에 포함된 전달 기능인 릴레이를 통해 데이터 센터에 {{site.data.keyword.Bluemix_notm}} 로컬을 설치하고
+원격으로 모니터하고 관리합니다. 릴레이는 각 {{site.data.keyword.Bluemix_notm}} 로컬 인스턴스에 고유한 인증서를 안전하게 연결합니다. {{site.data.keyword.Bluemix_notm}} 로컬 및 릴레이에 대한 자세한 정보는 [Bluemix 로컬](/docs/local/index.html)을 참조하십시오. 
 
 ### 기능적 보안
 
@@ -152,7 +152,7 @@ HTTP 비활성 제한시간은 2분입니다.</dd>
 <dt>사용자 액세스 관리</dt>
 <dd>{{site.data.keyword.Bluemix_notm}} 내에서는 업무 분리 가이드라인에 따라 사용자에게 세부 단위의 액세스 권한을 지정하며 사용자가 최소 권한 원칙에 따라 자체 작업의 수행에 필요한 액세스 권한만 갖도록 보장합니다.
 
-{{site.data.keyword.Bluemix_notm}} 데디케이티드 환경과 로컬 환경에서는 지정된 관리자가 관리 콘솔을 사용하여 조직 내 {{site.data.keyword.Bluemix_notm}} 사용자의 역할과 권한을 관리할 수 있습니다. 세부사항은 [{{site.data.keyword.Bluemix_notm}}](../admin/adminpublic.html#mng) 관리를 참조하십시오.
+{{site.data.keyword.Bluemix_notm}} 데디케이티드 환경과 로컬 환경에서는 지정된 관리자가 관리 콘솔을 사용하여 조직 내 {{site.data.keyword.Bluemix_notm}} 사용자의 역할과 권한을 관리할 수 있습니다. 세부사항은 [{{site.data.keyword.Bluemix_notm}} 관리](/docs/admin/adminpublic.html#mng)를 참조하십시오.
 </dd>
 </dl>
 
@@ -221,11 +221,11 @@ Single Sign On 서비스는 사용자의 신임 정보가 저장된 다수의 ID
 <dd> Google, Facebook 및 LinkedIn에서 유지보수하는 사용자 레지스트리입니다.</dd>
 </dl>
 
-자세한 정보는 [Single Sign-On 시작하기](../services/SingleSignOn/index.html)를 참조하십시오.
+자세한 정보는 [Single Sign-On 시작하기](/docs/services/SingleSignOn/index.html)를 참조하십시오.
 
 ### Application Security on Cloud
 
-이 서비스는 모바일 및 웹 앱에 대한 보안 분석을 제공하며 사용자가 보안 취약점에 대한 소스 코드를 스캔할 수 있도록 허용합니다. 자세한 정보는 [Application Security on Cloud 시작하기](../services/ApplicationSecurityonCloud/index.html)를 참조하십시오.
+이 서비스는 모바일 및 웹 앱에 대한 보안 분석을 제공하며 사용자가 보안 취약점에 대한 소스 코드를 스캔할 수 있도록 허용합니다. 자세한 정보는 [Application Security on Cloud 시작하기](/docs/services/ApplicationSecurityonCloud/index.html)를 참조하십시오.
 
 ### 애플리케이션 보안 테스트를 위한 IBM UrbanCode 플러그인
 
@@ -239,14 +239,14 @@ dashDB 서비스는 사용자 인증을 위한 내장된 LDAP 서버를 사용�
 SSL 인증서에 의해 보호됩니다. 이 서비스는 배치된 데이터베이스와 데이터베이스 백업을 자동으로 암호화하기 위해 DB2® 원시 암호화 기능을 사용합니다. 마스터 키 회전은 자동이고 90일마다
 수행됩니다.
 
-자세한 정보는 [dashDB 시작하기](../services/dashDB/index.html)를 참조하십시오.
+자세한 정보는 [dashDB 시작하기](/docs/services/dashDB/index.html)를 참조하십시오.
 
 ### Secure Gateway
 
-Secure Gateway 서비스를 사용하면 사내 구축형 또는 클라우드에서 원격 위치에 {{site.data.keyword.Bluemix_notm}} 앱을 안전하게 연결할 수 있습니다. 이는 보안 연결을 제공하며 {{site.data.keyword.Bluemix_notm}} 조직 및
+Secure Gateway 서비스를 사용하면 온프레미스 또는 클라우드에서 원격 위치에 {{site.data.keyword.Bluemix_notm}} 앱을 안전하게 연결할 수 있습니다. 이는 보안 연결을 제공하며 {{site.data.keyword.Bluemix_notm}} 조직 및
 연결하고자 하는 원격 위치 간에 터널을 설정합니다. {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스 또는 API 패키지를 사용하여 Secure Gateway를 구성하고 작성할 수 있습니다.
 
-자세한 정보는 [Secure Gateway 시작하기](../services/SecureGateway/secure_gateway.html)를 참조하십시오.
+자세한 정보는 [Secure Gateway 시작하기](/docs/services/SecureGateway/secure_gateway.html)를 참조하십시오.
 
 ### 보안 정보 및 이벤트 관리
 
@@ -274,7 +274,7 @@ Secure Gateway 서비스를 사용하면 사내 구축형 또는 클라우드에
 플로우는 다음과 같습니다.
       1. IBM Single Sign On 서비스를 통해.
       2. IBM 웹 ID를 통해.
-    * {{site.data.keyword.Bluemix_notm}} 데디케이티드 또는 로컬에 로그인한 개발자의 경우 플로우는 엔터프라이즈 LDAP를 통합니다.
+    * {{site.data.keyword.Bluemix_notm}} 데디케이티드 또는 로컬에 로그인한 개발자의 경우 플로우는 엔터프라이즈 LDAP을 통합니다.
  * **개발 및 배치 플로우**는 다음과 같습니다.
     1. 방화벽을 통해(침입 방지 및 네트워크 보안이 적절히 갖춰져 있음). {{site.data.keyword.Bluemix_notm}} 데디케이티드에만 적용됩니다.
     2. IBM DataPower Gateway를 통해(리버스 프록시 및 SSL 종료 프록시 포함).
@@ -373,8 +373,7 @@ Bluemix 환경에 대한 HIPAA 규제 준수를 이행하고, 증명하며, 관�
 |{{site.data.keyword.mql}}				|Y	|Y	|Y	|	 		|
 |{{site.data.keyword.SecureGateway}}			|Y	|Y |	|	 		|
 |{{site.data.keyword.sescashort}}     |Y |Y |Y	|  |
-
-*표 1. 플랫폼 및 서비스 준수*
+{: caption="Table 1. Platform and service compliance" caption-side="top"}
 
 # 관련 링크
 {: #rellinks}
@@ -383,4 +382,4 @@ Bluemix 환경에 대한 HIPAA 규제 준수를 이행하고, 증명하며, 관�
 {: #general}
 
 * [IBM SaaS 보안](http://www.ibm.com/cloud-computing/built-on-cloud/saas-security)
-* [Single Sign On 시작하기](../services/SingleSignOn/index.html)
+* [Single Sign On 시작하기](/docs/services/SingleSignOn/index.html)

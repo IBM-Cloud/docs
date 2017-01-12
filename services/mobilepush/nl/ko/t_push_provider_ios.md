@@ -1,4 +1,3 @@
-
 ---
 
 copyright:
@@ -7,9 +6,13 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # APNs의 신임 정보 구성
 {: #create-push-credentials-apns}
-마지막 업데이트 날짜: 2016년 11월 10일
+마지막 업데이트 날짜: 2016년 12월 7일
 {: .last-updated}
 
 애플리케이션 개발자는 APNs(Apple Push Notification Service)를 이용하여 Bluemix의 {{site.data.keyword.mobilepushshort}} 서비스 인스턴스(제공자)에서 iOS 디바이스와 애플리케이션으로 원격 알림을 전송할 수 있습니다. 디바이스의 대상 애플리케이션으로 메시지가 전송됩니다.  
@@ -98,10 +101,7 @@ APNs 인증서를 획득하려면 먼저 인증서 서명 요청(CSR)을 작성�
 
 프로비저닝 프로파일은 APP ID와 함께 작동하여 사용자 앱을 설치하고 실행할 수 있는 디바이스 및 사용자 앱에서 액세스할 수 있는 서비스를 판별합니다. 각 앱 ID에 대해 개발 및 배포용으로 두 개의 프로비저닝 프로파일을 작성하십시오. Xcode는 개발 프로비저닝 프로파일을 사용하여 애플리케이션을 빌드할 수 있는 개발자와 애플리케이션을 테스트할 수 있는 디바이스를 판별합니다.
 
-###시작하기 전에
-{: before-you-begin-provisioning-file}
-
-앱 ID를 등록하고 이를 푸시 알림 서비스에 사용할 수 있도록 설정하였으며 개발 및 프로덕션 APNs SSL 인증서를 사용하도록 구성했는지 확인하십시오.
+앱 ID를 등록하고 이를 {{site.data.keyword.mobilepushshort}} 서비스에 사용할 수 있도록 설정하였으며 개발 및 프로덕션 APNs SSL 인증서를 사용하도록 구성했는지 확인하십시오.
 
 개발 프로비저닝 프로파일을 다음과 같이 작성하십시오.
 
@@ -126,14 +126,9 @@ APNs 인증서를 획득하려면 먼저 인증서 서명 요청(CSR)을 작성�
 
 {{site.data.keyword.mobilepushshort}} 서비스를 사용하여 알림을 전송하려면 APNs(Apple Push Notification Service)에 필요한 SSL 인증서를 업로드하십시오. REST API를 사용하여 APNs 인증서를 업로드할 수도 있습니다. 
 
-
-###시작하기 전에
-{: before-you-begin-dashboard}
-
-
 <!-- Get your development and production APNs SSL certificate and the password associated with each type of certificate. For information, see Creating and configuring push credentials for APNs.-->
 
-APNs에 필요한 인증서는 `.p12` 인증서이며 이 인증서에는 애플리케이션을 빌드하고 공개하는 데 필요한 SSL 인증서와 개인 키가 포함되어 있습니다. Apple Developer 웹 사이트의 Member Center에서 인증서를 생성해야 합니다(유효한 Apple Developer 계정 필요). 개발 환경(샌드박스)과 프로덕션(배포) 환경에 대해 별도의 인증서가 필요합니다.
+APNs에 필요한 인증서는 `.p12` 인증서입니다. 이러한 인증서에는 애플리케이션 빌드와 공개에 필요한 개인 키와 SSL 인증서가 있습니다. Apple Developer 웹 사이트의 Member Center에서 인증서를 생성해야 합니다(유효한 Apple Developer 계정 필요). 개발 환경(샌드박스)과 프로덕션(배포) 환경에 대해 별도의 인증서가 필요합니다.
 
 **참고**: `.cer` 파일이 키 체인 액세스에 있으면 이를 컴퓨터로 내보내서 `.p12` 인증서를 작성하십시오.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-24"
+lastupdated: "2016-11-22"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2016-10-24"
 {: #java}
 
 
-You can build and customize applications that interact with your organization on {{site.data.keyword.iot_full}} by using Java. A Java client library for {{site.data.keyword.iot_short_notm}}, documentation, and examples are provided to help you get started with application development.
+You can build and customize applications that interact with your organization on {{site.data.keyword.iot_full}} by using Java™. A Java client library for {{site.data.keyword.iot_short_notm}}, documentation, and examples are provided to help you get started with application development.
 
 {:shortdesc}
 

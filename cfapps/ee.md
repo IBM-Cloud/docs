@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015，2016
+  years: 2015，2017
 
-lastupdated: "2016-10-18"
+lastupdated: "2017-01-11"
 
 ---
 
@@ -25,7 +25,7 @@ You can use the {{site.data.keyword.Bluemix}} user interface, platform, and a se
 ## Signing up
 {: #ee_start}
 
-Before you can get started, you sign up for an IBMid from [https://console.ng.bluemix.net/](https://console.ng.bluemix.net/). After that, you log in to {{site.data.keyword.Bluemix_notm}} and start your 30-day free trial. {{site.data.keyword.Bluemix_notm}} provides an allowance of 2 GB runtime memory and 10 service instances for your free trial.
+Before you can get started, you sign up for an IBMid from [https://console.ng.bluemix.net/ ![External link icon](../icons/launch-glyph.svg)](https://console.ng.bluemix.net/){: new_window}. After that, you log in to {{site.data.keyword.Bluemix_notm}} and start your 30-day free trial. {{site.data.keyword.Bluemix_notm}} provides an allowance of 2 GB runtime memory and 10 service instances for your free trial.
 
 ## Creating your web app by using {{site.data.keyword.Bluemix_notm}} user interface
 {: #ee_appui}
@@ -36,7 +36,7 @@ In {{site.data.keyword.Bluemix_notm}}, apps are associated with organizations an
 
 For this scenario, you want to develop a web app using Node.js. Assume that you are in the US and most of your app users are also in the US. You decide to build and run your app close to your user base, so that you can benefit from lower network latency. After logging in to {{site.data.keyword.Bluemix_notm}}, click the user account preferences link, then select the **US South** region. Then, you can take the following steps to create an app:
 
-  1. Go to **Catalog** 
+  1. Go to **Catalog**
   2. Select **Cloud Foundry Runtimes**.
   3. Select **SDK for Node.js**.
   4. Type a unique name for your app, for example, TestNode, and click **Create**. The app name must be unique in the whole {{site.data.keyword.Bluemix_notm}} environment.
@@ -176,7 +176,7 @@ To use the {{site.data.keyword.cloudant}} service within your app, you need to c
   <dt>password</dt>
   <dd>b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424</dd>
   <dt>url</dt>
-  <dd>https://d72837bb-b341-4038-9c8e-7f7232916197-bluemix:b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424@d72837bb-b341-4038-9c8e-7f7232916197-bluemix.cloudant.com</dd></dt></dl>
+  <dd>https://d72837bb-b341-4038-9c8e-7f7232916197-bluemix:b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424@d72837bb-b341-4038-9c8e-7f7232916197-bluemix.cloudant.com</dd></dl>
 
   For example, your Node.js app might access this information as follows:
   ```

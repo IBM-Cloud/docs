@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-06-10"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # 메모리 제한 및 Liberty 빌드팩
 {: #memory_limits}
-
-마지막 업데이트 날짜: 2016년 6월 10일
-{: .last-updated}
 
 Liberty 빌드팩을 사용하여 애플리케이션을 배치할 때 메모리 제한을 지정해야 합니다.
 

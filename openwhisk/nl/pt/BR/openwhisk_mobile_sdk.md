@@ -49,7 +49,7 @@ aplicativo para abrir o projeto no Xcode.
 
 Após a instalação, abra a área de trabalho do seu projeto.  É possível obter o seguinte aviso ao construir:
 `Use Legacy Swift Language Version” (SWIFT_VERSION) is required to be configured correctly for targets which use Swift. Use the [Edit > Convert > To Current Swift Syntax…] menu to choose a Swift version or use the Build Settings editor to configure the build setting directly.`
-Isso ocorrerá se o Cocoapods não atualizar a versão do Swift no projeto Pods. Para corrigir, selecione o projeto Pods e o destino {{site.data.keyword.openwhisk_short}}.  Acesse Configurações de construção e mude a configuração `Use Legacy Swift Language Version` para `no`. Como alternativa, é possível incluir as seguintes instruções de instalação no final do seu arquivo pod:
+Isso ocorrerá se o Cocoapods não atualizar a versão do Swift no projeto Pods.  Para corrigir, selecione o projeto Pods e o destino {{site.data.keyword.openwhisk_short}}.  Acesse Configurações de construção e mude a configuração `Use Legacy Swift Language Version` para `no`. Como alternativa, é possível incluir as seguintes instruções de instalação no final do seu arquivo pod:
 
 ```
 post_install do |installer|
@@ -96,8 +96,7 @@ wsk sdk install iOS
 ```
 {: pre}
 
-Esse comando faz download de um arquivo compactado que contém o app iniciador. Dentro
-do diretório de projeto está um podfile.
+Esse comando faz download de um arquivo compactado que contém o app iniciador. Dentro do diretório de projeto há um arquivo pod.
 
 Para instalar o SDK, insira o comando a seguir:
 ```

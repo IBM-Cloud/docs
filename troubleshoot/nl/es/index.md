@@ -3,6 +3,8 @@
 copyright:
   years: 2015, 2016
   
+lastupdated: "2016-08-11"
+  
 
 ---
 
@@ -16,8 +18,6 @@ copyright:
 # Resolución de problemas de acceso a {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-Última actualización: 11 de agosto de 2016
-{: .last-updated}
 
 
 Algunos de los problemas generales de acceso a {{site.data.keyword.Bluemix}} pueden ser que un usuario no pueda iniciar una sesión en {{site.data.keyword.Bluemix_notm}}, que una cuenta se haya bloqueado en estado pendiente, etc. Sin embargo, en muchos de los casos, puede solucionar estos problemas siguiendo unos sencillos pasos. 
@@ -413,7 +413,7 @@ Para obtener el nivel de autorización adecuado, utilice uno de estos métodos:
 {: tsResolve}
  * Seleccione otra organización y otro espacio de los que tenga el rol de desarrollador. 
  * Pida al gestor de la organización que le cambie el rol a desarrollador o que cree un espacio y le asigne un rol de desarrollador. Consulte
-[Gestión de organizaciones y espacios](../admin/orgs_spaces.html){: new_window} para obtener detalles.
+[Gestión de organizaciones y espacios](/docs/admin/orgs_spaces.html){: new_window} para obtener detalles.
  
 
  
@@ -494,7 +494,7 @@ Otras causas menos habituales de un error de pasarela errónea son caídas del I
  
 
 Si cree que algún servicio de {{site.data.keyword.Bluemix_notm}} no está disponible, compruebe primero la página
-[Estado de {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixstatus){: new_window}. Como método alternativo, es posible que desee utilizar el servicio en otra región de {{site.data.keyword.Bluemix_notm}}. Hay disponible información detallada en [Utilización de servicios en otra región](../services/reqnsi.html#cross_region_service){: new_window}. Si el estado del servicio es normal, pruebe los pasos siguientes para resolver el problema: 
+[Estado de {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixstatus){: new_window}. Como método alternativo, es posible que desee utilizar el servicio en otra región de {{site.data.keyword.Bluemix_notm}}. Hay disponible información detallada en [Utilización de servicios en otra región](/docs/services/reqnsi.html#cross_region_service){: new_window}. Si el estado del servicio es normal, pruebe los pasos siguientes para resolver el problema: 
 {: tsResolve}
 
   * Reintente la acción:
@@ -502,7 +502,7 @@ Si cree que algún servicio de {{site.data.keyword.Bluemix_notm}} no está dispo
 	* Utilice otro navegador.
 	* Rearranque el direccionador, el módem y el sistema. Rearrancar estos dispositivos puede borrar varios errores que provocan el error 502. 
   * Espere y vuelva a intentarlo más adelante. En algunas instancias, pueden ocurrir problemas temporales en el proveedor de servicios de Internet o en los servicios de {{site.data.keyword.Bluemix_notm}}. Puede esperar a que se resuelvan los problemas temporales.
-  * Si el problema todavía existe, póngase en contacto con el equipo de soporte de {{site.data.keyword.Bluemix_notm}}. Consulte [Cómo ponerse en contacto con el equipo de soporte de {{site.data.keyword.Bluemix_notm}}](../support/index.html#contacting-bluemix-support){: new_window} para obtener más información. 
+  * Si el problema todavía existe, póngase en contacto con el equipo de soporte de {{site.data.keyword.Bluemix_notm}}. Consulte [Cómo ponerse en contacto con el equipo de soporte de {{site.data.keyword.Bluemix_notm}}](/docs/support/index.html#contacting-bluemix-support){: new_window} para obtener más información. 
 
 
 
@@ -522,7 +522,7 @@ La cuota de disco predeterminada que se asigna para una app es de 1 GB. Si neces
 {: tsCauses}
 
  
-Utilice uno de estos métodos para especificar la cuota de disco. La cuota de disco máxima que puede especificar es de 2 GB. Si 2 GB todavía no es suficiente, pruebe un servicio externo, como [Object Store](../services/ObjectStorage/index.html){: new_window}.
+Utilice uno de estos métodos para especificar la cuota de disco. La cuota de disco máxima que puede especificar es de 2 GB. Si 2 GB todavía no es suficiente, pruebe un servicio externo, como [Object Store](/docs/services/ObjectStorage/index.html){: new_window}.
 {: tsResolve}
 
   * En el archivo manifest.yml, añada el elemento siguiente:
@@ -623,7 +623,7 @@ unbind-service <nombre_app> <nombre_instancia_servicio>`.
 	  2. Suprima la instancia de servicio escribiendo `cf delete-service <nombre_instancia_servicio>`.
 	  3. Después de suprimir la instancia de servicio, vuelva a transferir la app a la cual estaba enlazada la instancia de servicio escribiendo `cf
 restage <nombre_app>`.
-  * Para eliminar el límite del número de instancias de servicios que tiene, convierta su cuenta de prueba en una cuenta de pago. Para obtener más información sobre cómo convertir su cuenta de prueba en una cuenta de pago, consulte [Cómo cambiar su plan](../pricing/index.html#changing){: new_window}.
+  * Para eliminar el límite del número de instancias de servicios que tiene, convierta su cuenta de prueba en una cuenta de pago. Para obtener más información sobre cómo convertir su cuenta de prueba en una cuenta de pago, consulte [Cómo cambiar su plan](/docs/pricing/index.html#changing){: new_window}.
 
   
   
@@ -679,12 +679,11 @@ Este error se produce cuando la cantidad de memoria que queda para la organizaci
 Puede aumentar la cuota de memoria de su cuenta o reducir la memoria que utilizan las apps.
 {: tsResolve} 
 
-  * Para aumentar la cuota de memoria de su cuenta, convierta su cuenta de prueba en una cuenta de pago. Para obtener más información sobre cómo convertir su cuenta de prueba en una cuenta de pago, consulte [Cuentas de pago](../pricing/index.html#pay-accounts){: new_window}. 
+  * Para aumentar la cuota de memoria de su cuenta, convierta su cuenta de prueba en una cuenta de pago. Para obtener más información sobre cómo convertir su cuenta de prueba en una cuenta de pago, consulte [Cuentas de pago](/docs/pricing/index.html#pay-accounts){: new_window}. 
   * Para reducir la memoria que utilizan las apps, utilice la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} o la interfaz de línea de mandatos cf.
     Si utiliza la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}, siga estos pasos:
 	  1. En el Panel de control de {{site.data.keyword.Bluemix_notm}}, seleccione la app. Se abre la página de detalles de la app.
-	  2. En el panel tiempo de ejecución, puede reducir el límite máximo de memoria o el número de instancias de la app, o ambos, para la app que desee. 
-	Si utiliza la interfaz de línea de mandatos cf, siga estos pasos:
+	  2. En el panel tiempo de ejecución, puede reducir el límite máximo de memoria o el número de instancias de la app, o ambos, para la app que desee. Si utiliza la interfaz de línea de mandatos cf, siga estos pasos:
 	  1. Compruebe cuánta memoria están utilizando las apps:
 	  ```
 	  cf apps
@@ -838,7 +837,7 @@ envía por push su app a {{site.data.keyword.Bluemix_notm}} utilizando
 las herramientas de Eclipse, primero debe crear un servidor de {{site.data.keyword.Bluemix_notm}}
 y especificar el punto final API de la región de {{site.data.keyword.Bluemix_notm}}
 en la que se ha creado su organización. Para obtener más información
-sobre el uso de las herramientas de Eclipse, consulte [Despliegue de apps con IBM Eclipse Tools for Bluemix](../manageapps/eclipsetools/eclipsetools.html){: new_window}.  
+sobre el uso de las herramientas de Eclipse, consulte [Despliegue de apps con IBM Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html){: new_window}.  
   
   
 
@@ -1045,7 +1044,7 @@ El paquete de compilación de Liberty utiliza el archivo `server.xml` para confi
 
  
 
-Puede resolver este problema eliminando el archivo server.xml del proyecto. El paquete de compilación crea el archivo `server.xml` de forma dinámica cuando se envía la app como una aplicación WAR. Para obtener más información, consulte [Liberty for Java](../runtimes/liberty/index.html){: new_window}.
+Puede resolver este problema eliminando el archivo server.xml del proyecto. El paquete de compilación crea el archivo `server.xml` de forma dinámica cuando se envía la app como una aplicación WAR. Para obtener más información, consulte [Liberty for Java](/docs/runtimes/liberty/index.html){: new_window}.
 {: tsResolve}
 	
 	
@@ -1088,7 +1087,7 @@ Este problema puede deberse a que DevOps Services necesita un archivo `manifest.
 
  
 
-Para solucionar este problema, debe crear un archivo `manifest.yml`. Para obtener más información sobre cómo crear un archivo `manifest.yml`, consulte [Manifiesto de la app](../manageapps/depapps.html#appmanifest){: new_window}.
+Para solucionar este problema, debe crear un archivo `manifest.yml`. Para obtener más información sobre cómo crear un archivo `manifest.yml`, consulte [Manifiesto de la app](/docs/manageapps/depapps.html#appmanifest){: new_window}.
 {: tsResolve}	
 	
 
@@ -1522,8 +1521,7 @@ Este problema se produce cuando falta la información de configuración de la ap
 Para solucionar el problema, añada un archivo `requirements.txt` y un archivo `Procfile` al directorio raíz de la app Python. La información siguiente da por supuesto que está importando una biblioteca web.py:
 {: tsResolve}
 
-  1. Añada un archivo `requirements.txt` al directorio raíz de la app Python.
-     El archivo `requirements.txt` especifica los paquetes de la biblioteca que la app Python requiere y la versión de los paquetes. El ejemplo siguiente muestra el contenido del archivo `requirements.txt`, donde `web.py==0.37` indica que la versión de la biblioteca `web.py` que se descargará es la 0.37, y `wsgiref==0.1.2` indica que la versión de la interfaz de la pasarela del servidor web que la biblioteca web.py requiere es la 0.1.2.
+  1. Añada un archivo `requirements.txt` al directorio raíz de la app Python. El archivo `requirements.txt` especifica los paquetes de la biblioteca que la app Python requiere y la versión de los paquetes. El ejemplo siguiente muestra el contenido del archivo `requirements.txt`, donde `web.py==0.37` indica que la versión de la biblioteca `web.py` que se descargará es la 0.37, y `wsgiref==0.1.2` indica que la versión de la interfaz de la pasarela del servidor web que la biblioteca web.py requiere es la 0.1.2.
 	 ```
 	 web.py==0.37
      wsgiref==0.1.2

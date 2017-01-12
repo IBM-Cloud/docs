@@ -21,7 +21,6 @@ Dernière mise à jour : 13 octobre 2016
 Le plan Starter Developer et le plan High Security Business Network vous permettent de tester le protocole de consensus Practical Byzantine Fault Tolerance (PBFT) sur un réseau de blockchain à quatre noeuds. Les rubriques ci-après fournissent des détails sur le consensus en général, et sur PBFT en particulier. Dès que vous êtes prêt à démarrer les tests, des scénarios de test PBFT sont fournis.  
 {:shortdesc}  
 
-<br>
 ## Qu'est-ce que le consensus ?
 
 Le consensus est une méthode qui permet de valider le classement des demandes, ou transactions (deploy et invoke), sur un réseau de blockchain. Le classement correct des transactions est essentiel, car de nombreuses transactions dépendent d'une ou de plusieurs transactions préalables (les comptes de débit dépendent souvent de crédits préalables, par exemple).
@@ -32,12 +31,12 @@ de toutes les transactions du réseau de blockchain.
 
 * Cette garantie dépend de variables, notamment le protocole de consensus spécifique implémenté et le nombre de noeuds dans le réseau de blockchain. Les deux plans Blockchain sur Bluemix mettent en oeuvre le protocole de consensus PBFT.  
 
-<br><br>
+<br>
 ## Qu'est-ce que le protocole PBFT ?
 
 Le protocole PBFT (Practical Byzantine Fault Tolerance) est une version du protocole de consensus. La fonction d'un protocole de consensus est de maintenir le classement des transactions sur un réseau de blockchain, malgré les menaces qui pèsent sur ce classement. L'une de ces menaces peut être la défaillance simultanée arbitraire (type de défaillance de noeud Byzantine) de plusieurs noeuds réseau. Avec le protocole PBFT, un réseau de blockchain de (N) noeuds peut supporter un nombre (f) de noeuds Byzantine, où f = (N-1)/3. En d'autres termes, PBFT garantit qu'au moins 2\*f + 1 noeuds parviennent à un consensus sur le classement des transactions avant de les ajouter dans le registre partagé. Une règle dérive de ces formules, selon laquelle un réseau PBFT garantit la cohérence et l'intégrité des données malgré des défaillances Byzantine sur moins d'un tiers de tous les noeuds réseau.  
 
-<br><br>
+<br>
 ## PBFT et votre réseau de blockchain
 
 La règle PBFT 2\*f + 1 a les implications suivantes pour le plan Starter Developer et le plan High Security Business Network :
@@ -65,5 +64,10 @@ Attention : Passez en revue les remarques suivantes avec de démarrer vos tests 
 ![](images/stopstartpeer.png "Démarrage et arrêt des homologues")
 *Figure 1. Démarrage et arrêt des homologues*
 
-- Les scénarios de test utilisent **chaincode_example02**, par défaut, de l'adresse : https://github.com/hyperledger/fabric/blob/master/examples/chaincode/go/chaincode_example02/chaincode_example02.go. Toutefois, vous pouvez utiliser votre propre code blockchain, ou l'un des exemples de code blockchain à l'adresse : https://github.com/hyperledger/fabric/tree/master/examples/chaincode/go.
+- Les scénarios de test utilisent
+**chaincode_example02**, par défaut, de l'adresse
+https://github.com/hyperledger/fabric/tree/v0.6/examples/chaincode/go/chaincode_example02. 
+Toutefois, vous pouvez utiliser votre propre code blockchain, ou l'un
+des exemples de code blockchain à l'adresse :
+https://github.com/hyperledger/fabric/tree/v0.6/examples/chaincode/go.
 - Les demandes sont regroupées par lot dans une transaction à des fins de traitement. Toutefois, vous pouvez garantir un traitement immédiat en vous basant sur la valeur de délai de traitement par lots ; si vous patientez au moins deux secondes avant de soumettre la demande suivante, la transaction sera traitée immédiatement.

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-15"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # Personalizzazione del JRE
 {: #customizing_jre}
-
-Ultimo aggiornamento: 15 agosto 2016
-{: .last-updated}
 
 Le applicazioni vengono eseguite in un JRE (Java runtime
 environment) fornito e configurato dal pacchetto di build Liberty. Il pacchetto di build Liberty rende anche possibile configurare la versione o il tipo di JRE, personalizzare
@@ -126,7 +124,7 @@ Le applicazioni possono personalizzare le opzioni JVM con le specifiche definite
 <td>è basato sul runtime HotSpot che ha la notazione di
 -X per non standard, -XX per le opzioni sviluppatore e i flag booleani
 per abilitare o disabilitare l'opzione </td>
-<td>[Panoramica di runtime di HotSpot](http://openjdk.java.net/groups/hotspot/docs/RuntimeOverview.html) </td>
+<td>[Panoramica di runtime di HotSpot](http://openjdk.java.net/groups/hotspot//docs/RuntimeOverview.html) </td>
 </tr>
 </table>
 

@@ -6,9 +6,13 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # 基本プッシュ通知の送信
 {: #push-send-notifications}
-最終更新日: 2016 年 10 月 17 日
+最終更新日: 2016 年 12 月 06 日
 {: .last-updated}
 
 アプリケーションを開発したら、(タグ、バッジ、追加のペイロード、音声ファイルを使用することなく) 基本プッシュ通知を送信できます。

@@ -172,8 +172,9 @@ vous êtes prêt à déployer votre application dans {{site.data.keyword.Bluemix
   http://TestNode.mybluemix.net
   ```
 
-Vous pouvez aussi choisir d'autres outils pour construire votre application, comme des outils Eclipse. Pour plus d'informations, voir la page
-Commencer le codage de votre application dans l'interface utilisateur {{site.data.keyword.Bluemix_notm}}.
+Vous pouvez aussi choisir d'autres outils pour construire votre application, comme des outils Eclipse. 
+Pour plus d'informations, voir la page Commencer le codage de votre application
+dans l'interface utilisateur {{site.data.keyword.Bluemix_notm}}.
 
 ## Liaison d'un service via l'interface de ligne de commande cf
 {: #ee_cfbind}
@@ -306,8 +307,7 @@ application** pour examiner la tarification de l'environnement d'exécution et d
 total de
 votre application.
 
-  * Ou bien, dans la page Fiche des prix, entrez l'utilisation mensuelle du contexte d'exécution et des services pour votre application, par
-exemple 3 instances de **SDK for Node.js** avec 1 Go de mémoire pour chaque instance. Le prix mensuel est calculé et affiché.
+  * Ou bien, dans la page Fiche des prix, entrez l'utilisation mensuelle du contexte d'exécution et des services pour votre application, par exemple 3 instances de **SDK for Node.js** avec 1 Go de mémoire pour chaque instance. Le prix mensuel est calculé et affiché.
 
 Vous pouvez aussi calculer le coût de votre application manuellement en ajoutant les prix de vos contextes d'exécution et de vos services et en
 déduisant les franchises. Pour plus d'informations, voir Calcul manuel de vos coûts.

@@ -2,20 +2,21 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-11-14"
+
 ---
-{:new_window: target="_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
+
 
 
 # Introduzione a {{site.data.keyword.objectstorageshort}} {: #getting-started-with-object-storage}
 
-*Ultimo aggiornamento: 19 ottobre 2016*
-{: .last-updated}
 
 {{site.data.keyword.objectstoragefull}} fornisce un'archivio dati cloud non strutturato. Puoi archiviare e accedere al tuo contenuto così come comporre e collegare le tue applicazioni e servizi.
 {: shortdesc}
 
-Alcuni casi di utilizzo comuni per il servizio {{site.data.keyword.objectstorageshort}} sono: 
+Alcuni casi di utilizzo comuni per il servizio {{site.data.keyword.objectstorageshort}} sono:
 
 * Backup dei dati di volume dalle tue istanze
 * Utilizzo di un'ubicazione intermedia in fase di trasferimento di grandi quantità di dati
@@ -23,15 +24,14 @@ Alcuni casi di utilizzo comuni per il servizio {{site.data.keyword.objectstorage
 * Funzione di repository centrale
 
 
+{{site.data.keyword.Bluemix_notm}} Pubblico {{site.data.keyword.objectstorageshort}} ti fornisce l'accesso a un account Swift {{site.data.keyword.objectstorageshort}} con provisioning completo per gestire i tuoi dati. La crittografia lato provider non è fornita.
 
-{{site.data.keyword.Bluemix_notm}} Pubblico {{site.data.keyword.objectstorageshort}} ti fornisce l'accesso a un account Swift {{site.data.keyword.objectstorageshort}} con provisioning completo per gestire i tuoi dati. La crittografia lato provider non è fornita. 
 
-
-1.	Esegui il provisioning della tua istanza del servizio dal catalogo {{site.data.keyword.Bluemix_notm}}. Configura la tua istanza e fai clic su **Crea**. e inizialmente scegli l'opzione **Lascia senza binding** per il campo **Applicazione**, puoi ancora eseguire il bind dell'istanza del servizio alla tua applicazione {{site.data.keyword.Bluemix_notm}} successivamente. 
+1.	Esegui il provisioning della tua istanza del servizio dal catalogo {{site.data.keyword.Bluemix_notm}}. Configura la tua istanza e fai clic su **Crea**. e inizialmente scegli l'opzione **Lascia senza binding** per il campo **Applicazione**, puoi ancora eseguire il bind dell'istanza del servizio alla tua applicazione {{site.data.keyword.Bluemix_notm}} successivamente.
 2. Nel tuo dashboard dell'istanza del servizio, crea un contenitore per iniziare ad archiviare gli oggetti.
-3. Aggiungi un file al tuo contenitore o bucket dal menu a discesa **Azioni**.
+3. ggiungi un file al tuo contenitore dal menu a discesa **Azioni**.
 4. Per verificare l'accesso ai tuoi oggetti, fai clic su **Scarica** e rivedi i file.
-5. Quando sei pronto per collegare la tua istanza a un'applicazione, configura le tue credenziali del servizio e [esegui il bind del servizio](https://new-console.stage1.ng.bluemix.net/docs/services/reqnsi.html#add_service).
+5. Quando sei pronto per collegare la tua istanza a un'applicazione, configura le tue credenziali del servizio e [esegui il bind del servizio](/docs/services/reqnsi.html#add_service).
 
 
 

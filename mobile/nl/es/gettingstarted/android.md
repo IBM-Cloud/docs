@@ -31,8 +31,7 @@ BMSClient.getInstance().initialize(this, "<RUTA_APLICACIÓN>", "<ID_APLICACIÓN>
 ```
 4. Ejecute el ejemplo en el entorno de desarrollo.
 En la barra de herramientas de Android Studio, pulse el botón **Reproducir** y seleccione un simulador.
-5. En el simulador, pulse **Ping
-                {{site.data.keyword.Bluemix_notm}}**. La app de ejemplo envía una solicitud Get al tiempo de ejecución de `Node.js` en {{site.data.keyword.Bluemix_notm}}. Si la solicitud es satisfactoria, la conexión se verifica y el texto del simulador se actualiza.
+5. En el simulador, pulse **Ping {{site.data.keyword.Bluemix_notm}}**. La app de ejemplo envía una solicitud Get al tiempo de ejecución de `Node.js` en {{site.data.keyword.Bluemix_notm}}. Si la solicitud es satisfactoria, la conexión se verifica y el texto del simulador se actualiza.
 
   **Nota:** El código de tiempo de ejecución de `Node.js` se proporciona en el contenedor modelo de MobileFirst Services Starter. Si la aplicación de fondo no se ha creado con el contenedor modelo de MobileFirst Services Starter, la aplicación no se conectará satisfactoriamente.
 
@@ -44,8 +43,8 @@ En la barra de herramientas de Android Studio, pulse el botón **Reproducir** y 
   ![Hello World application successfully connected to {{site.data.keyword.Bluemix_notm}}](images/yayconnected.jpg "Figure 1. Hello World application successfully connected to Bluemix")
   -->
 
-  Si la conexión falla, verá:
-  `Bummer. Something went wrong`
+  Si la conexión falla, verá el mensaje:
+  `Algo salió mal`
   {: screen}
 
 <!--

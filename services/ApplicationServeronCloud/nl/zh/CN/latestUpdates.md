@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-08"
 
 ---
 
@@ -11,10 +12,31 @@ copyright:
 
 # 最新更新
 {: #latest_updates}
-上次更新时间：2016 年 8 月 17 日
-{: .last-updated}
 
 服务的最新更新的列表。
+
+## 2016 年 11 月 8 日：更新了 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
+
+* 已添加客户机为 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} VM 请求[公共 IP](networkEnvironment.html#networkEnvironment) 地址的功能 
+* 解决了影响 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 的[若干安全漏洞](http://www-01.ibm.com/support/docview.wss?uid=swg21993842){: new_window}，包括：
+  * IBM WebSphere Application Server 中可能允许远程黑客使用不可信源的序列化对象执行任意 Java 代码的漏洞。
+  * TS_OBJ_print_bio 函数不限制读取导致的拒绝服务漏洞。远程黑客可能使用特别创建的时间戳记文件利用此漏洞导致应用程序崩溃。
+  * OpenSSL 中可能允许远程黑客获取敏感信息的潜在漏洞，该漏洞由用作 SSL/TLS 协议一部分的 64 位块密码上的三重 DES 中错误引起的。通过捕获 SSL/TLS 服务器和客户机之间的大量加密流量，能够进行中间人攻击的远程黑客可能利用此漏洞恢复纯文本数据与获取敏感信息。此漏洞称为“SWEET32 生日”攻击。
+  * OpenSSL 中拒绝服务漏洞。远程认证黑客通过重复请求重谈，可能发送过量的 OCSP 状态请求扩展，以使用所有可用内存资源。
+  * OpenSSL 中拒绝服务漏洞，这是由 MDC2_Update 函数中整数溢出导致的。远程黑客使用未知的攻击矢量，利用此漏洞发出无限制写入，导致应用程序崩溃。
+  * OpenSSL 中允许远程黑客获取敏感信息的潜在漏洞，这是由于 DSA 实施中允许特定操作的非常量时间代码路径追踪错误引起的。黑客使用高速缓存时序攻击利用此漏洞，来恢复私有 DSA 密钥。
+  * OpenSSL 中拒绝服务漏洞，这是由解析证书时没有进行消息长度检查导致的。远程认证黑客可利用此漏洞发出无限制读取，并导致拒绝服务。
+
+## 2016 年 9 月 19 日：更新了 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
+
+* 升级了 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 二进制文件，以便 WebSphere Application Server Liberty（核心和 ND 套餐）的新实例将安装 FP16.0.0.3。
+* 解决了影响 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 的[若干安全漏洞](http://www-01.ibm.com/support/docview.wss?uid=swg21990236){: new_window}，包括：
+  *  IBM WebSphere Application Server Liberty 中允许远程黑客进行钓鱼攻击的漏洞。
+  * IBM WebSphere Application Server Liberty 中跨站点在 OpenID Connect 客户机进行脚本编制的漏洞。
+  * IBM WebSphere Application Server Liberty 中允许远程黑客获取敏感信息的潜在漏洞，这是由于缺省错误页面不存在时不正当地处理异常导致的。
+  * Apache Tomcat 中拒绝服务漏洞，由 Apache Commons FileUpload 组件中的错误导致。
+  * IBM WebSphere Application Server 和 IBM WebSphere Application Server Liberty 中的漏洞，该漏洞可能允许远程黑客获取敏感信息，由特定条件下对响应的不当处理导致的。
+  * 与无机密性影响、低完整性影响和无可用性的 Networking 组件相关的未指定漏洞。
 
 ## 2016 年 8 月 17 日：更新了 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
 
@@ -31,7 +53,7 @@ copyright:
 ## 2016 年 6 月 24 日：更新了 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
 
 * 为客户新增了在创建新的*传统 ND* 或*传统 WebSphere* 实例时，可以选择 V8.5 或 V9.0 的能力。
-* 升级了 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 二进制文件，以便 WebSphere Application Server Liberty（核心和 ND 套餐）的新实例将安装 FP16.0.0.2。16.0.0.2 是 8.5.5.9 之后的下一个修订包。从 16.0.0.2 开始，缺省情况下将安装这些套餐支持的所有授权 Liberty 可选功能部件。
+* 升级了 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 二进制文件，以便 WebSphere Application Server Liberty（核心和 ND 套餐）的新实例安装 FP16.0.0.2。16.0.0.2 是 8.5.5.9 之后的下一个修订包。从 16.0.0.2 开始，缺省情况下将安装这些套餐支持的所有授权 Liberty 可选功能部件。
 * 解决了影响 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 的[若干安全漏洞](http://www-01.ibm.com/support/docview.wss?uid=swg21984977){: new_window}，包括：
   * Apache Standard Taglibs 中的 XML 外部实体注入 (XXE) 漏洞，该漏洞会影响到 IBM WebSphere Application Server。
   * 使用 WebSphere Application Server Liberty 概要文件 API 发现功能部件和 Swagger 文档时，可能会导致降低预期安全性的漏洞。

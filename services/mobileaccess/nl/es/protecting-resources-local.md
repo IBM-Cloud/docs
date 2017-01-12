@@ -2,9 +2,12 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-10"
+lastupdated: "2016-12-04"
+
 ---
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
+{:codeblock:.codeblock}
+
 
 # Uso de {{site.data.keyword.amashort}} con un entorno de desarrollo local
 {: #protecting-local}
@@ -13,11 +16,13 @@ Puede configurar su desarrollo local para que utilice el servicio de {{site.data
 
 ## Antes de empezar
 {: #before-you-begin}
-Debe tener lo siguiente:
 
+Debe tener lo siguiente:
 * Una instancia de una aplicación {{site.data.keyword.Bluemix_notm}} que esté protegida por el servicio {{site.data.keyword.amashort}}. Para obtener más información sobre la creación de una aplicación de fondo {{site.data.keyword.Bluemix_notm}}, consulte [Cómo empezar](index.html).
-* Los valores del parámetro de servicio. Abra el servicio en el panel de control de {{site.data.keyword.Bluemix_notm}}. Pulse **Opciones móviles**. Los valores `applicationRoute` y `appGUID` (también conocidos como `tenantId`) se muestran en los campos **Ruta** y **GUID de app / TenantId**. Necesitará estos valores para inicializar el SDK y para enviar solicitudes a la aplicación de fondo.
-*  Busque la región en la que se aloja su aplicación {{site.data.keyword.Bluemix_notm}}. Para ver la región de {{site.data.keyword.Bluemix_notm}}, pulse el icono de **Avatar** ![Icono de Avatar](images/face.jpg "Icono de Avatar") de la barra de menús para abrir el widget **Cuenta y soporte**. El valor de región debe ser uno de los siguientes: **EE.UU. sur**, **Sídney** o **Reino Unido**. Los valores constantes de SDK exactos que se corresponden con estos nombres se indican en los ejemplos de código. 
+* Su **TenantID**. Abra el servicio en el panel de control de {{site.data.keyword.amafull}}. Pulse el botón **Opciones móviles**. Los valores `tenantId` (también conocidos como `appGUID`) se muestran en el campo **GUID de app / TenantId**. Necesitará este valor para inicializar el gestor de autorización.
+* Su **Ruta de aplicación**. Es el URL de la aplicación de programa de fondo. Necesita este valor para enviar solicitudes a sus puntos finales protegidos.
+* Su {{site.data.keyword.Bluemix_notm}} **Región**.  Encontrará su región de {{site.data.keyword.Bluemix_notm}} actual en la cabecera, junto al icono **Avatar** ![icono Avatar](images/face.jpg "icono Avatar"). El valor de la región que aparece debe ser uno de los siguientes: `EE.UU. Sur`, `Sídney` o `Reino Unido`. Para ver la sintaxis exacta requerida por el SDK, consulte los comentarios de los ejemplos de código. Necesitará este valor para inicializar el cliente {{site.data.keyword.amashort}}.
+* Un proyecto de Android Studio, configurado para funcionar con Gradle. Para obtener más información sobre la configuración del entorno de desarrollo de Android, consulte las [Herramientas del desarrollador de Google](http://developer.android.com/sdk/index.html).
 
 ## Configuración del SDK del servidor
 {: #serversetup}
@@ -32,15 +37,14 @@ Para utilizar {{site.data.keyword.amashort}} con un servidor de desarrollo local
 1. Abra el panel de control de {{site.data.keyword.Bluemix_notm}} de la aplicación de programa de fondo móvil protegida con el servicio de {{site.data.keyword.amashort}}.
 
 1. En el entorno de desarrollo local, defina la variable de entorno *VCAP_APPLICATION*. La variable debe contener un objeto JSON en serie con una sola propiedad.
-```JavaScript
-{
-    application_id: "appGUID"
-}
-```
+	```JavaScript
+	{
+	    application_id: "appGUID"
+	}
+	```
+	{: codeblock}
 
-Sustituya el valor *appGUID* por el valor `appGUID` obtenido en [Antes de empezar](#before-you-begin). 
-
-1. Pulse **Mostrar credenciales** en el icono de servicios de {{site.data.keyword.amashort}} en la aplicación de fondo móvil en el panel de control de {{site.data.keyword.Bluemix_notm}}. Se muestra un objeto JSON con las credenciales de acceso que proporciona {{site.data.keyword.amashort}} a la aplicación de fondo móvil.
+1. Pulse el separador **Mostrar credenciales** en el panel de control de {{site.data.keyword.amashort}}. Se muestra un objeto JSON con las credenciales de acceso que proporciona {{site.data.keyword.amashort}} a la aplicación de fondo móvil.
 
 1. En el entorno de desarrollo local, defina la variable de entorno `VCAP_SERVICES`. El valor de esta variable debe ser un objeto JSON en serie que contenga las credenciales de {{site.data.keyword.amashort}}.  Consulte el ejemplo siguiente para obtener más información.
 
@@ -51,7 +55,7 @@ Para utilizar el servicio de {{site.data.keyword.amashort}} en un entorno de des
 
 ```JavaScript
 var vcapApplication = {
-	application_id:"appGUID"
+	application_id:"tenantID"
 };
 
 var vcapServices = {
@@ -59,7 +63,7 @@ var vcapServices = {
 		{
 			"credentials": {
 				"admin_url": "https://mobile.ng.bluemix.net/imfmobileplatformdashboard/?appGuid=appGUID",
-				"clientId": "appGUID",
+				"clientId": "tenantID",
 				"secret": "secret",
 				"serverUrl": "https://imf-authserver.ng.bluemix.net/imf-authserver",
 				"tenantId": "tenantId"
@@ -77,8 +81,9 @@ var MCABackendStrategy =
 
 // Resto del código
 ```
+{: codeblock}
 
-Sustituya el valor *appGUID* por el valor `appGUID` obtenido en [Antes de empezar](#before-you-begin). 
+Para obtener información sobre cómo buscar el valor *tenantID*, consulte [Antes de empezar](#before-you-begin).
 
 
 ## Configuración de aplicaciones de {{site.data.keyword.amashort}} para que funcionen con un servidor de desarrollo local
@@ -88,7 +93,7 @@ Inicialice los SDK del cliente de {{site.data.keyword.amashort}} con el URL real
 
 Sustituya la región por la región adecuada.
 
-Sustituya los valores *appGUID* y *bluemixAppRoute* por los valores obtenidos en [Antes de comenzar](#before-you-begin). 
+Sustituya los valores *appGUID* y *bluemixAppRoute* por los valores obtenidos en [Antes de comenzar](#before-you-begin).
 
 Es posible que tenga que cambiar `localhost` por una dirección IP real del servidor de desarrollo en los ejemplos siguientes.
 
@@ -100,9 +105,13 @@ String bluemixAppRoute = "http://myapp.mybluemix.net";
 String bluemixAppGUID = "your-bluemix-app-guid";
 String tenantId = "your-MCA-service-tenantID";
 
-BMSClient.getInstance().initialize(bluemixAppRoute, bluemixAppGUID, BMSClient.REGION_UK);
-// establezca la región de la aplicación MCA aquí. En este momento, los valores posibles son BMSClient.REGION_US_SOUTH, BMSClient.REGION_SYDNEY, o BMSClient.REGION_UK BMSClient.getInstance().setAuthorizationManager(
-                 MCAAuthorizationManager.createInstance(this, tenantId));
+
+BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
+
+//  establezca la región de la aplicación MCA aquí. En este momento, los valores posibles son BMSClient.REGION_US_SOUTH, BMSClient.REGION_SYDNEY, o BMSClient.REGION_UK
+
+BMSClient.getInstance().setAuthorizationManager(
+					MCAAuthorizationManager.createInstance(this, "<MCAServiceTenantId>"));
 
 Request request =
 			new Request(baseRequestUrl + "/resource/path", Request.GET);
@@ -124,6 +133,7 @@ request.send(this, new ResponseListener() {
 	}
 });
 ```
+{: codeblock}
 
 
 
@@ -139,7 +149,7 @@ NSString *tenantId = "your-MCA-service-tenantID";
 [[IMFClient sharedInstance]
 			initializeWithBackendRoute:bluemixAppRoute
 			backendGUID:bluemixAppGUID];
-			
+
 [[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: tenantId];
 
 
@@ -158,6 +168,7 @@ IMFResourceRequest *request =  [IMFResourceRequest
 	}
 }];
 ```
+{: codeblock}
 
 
 ### iOS - Swift
@@ -165,32 +176,31 @@ IMFResourceRequest *request =  [IMFResourceRequest
 
 ```Swift
 
-let baseRequestUrl = "http://localhost:3000"
-let bluemixAppRoute = "http://myapp.mybluemix.net"
-let tenantId = "your-MCA-service-tenantID"
-let regionName = BMSClient.Region.usSouth
-// establezca la región de la aplicación MCA aquí. En este momento, puede ser BMSClient.Region.usSouth, BMSClient.Region.unitedKingdom, BMSClient.Region.sydney
-BMSClient.sharedInstance.initialize(bluemixAppRoute: bluemixAppRoute, bluemixAppGUID: tenantId, bluemixRegion: regionName)
-
-BMSClient.sharedInstance.authorizationManager = MCAAuthorizationManager.sharedInstance
-           
-let requestPath = baseRequestUrl + "/resource/path"               
-let request = Request(url: requestPath, method: HttpMethod.GET)
-            
-request.send { (response, error) in
+ let baseRequestUrl = "http://localhost:3000";
+ let tenantId = "<serviceTenantID>"
+ let regionName = <applicationBluemixRegion>
+ //possible values: BMSClient.Region.usSouth, BMSClient.Region.unitedKingdom, or BMSClient.Region.sydney
+ let mcaAuthManager = MCAAuthorizationManager.sharedInstance
+ mcaAuthManager.initialize(tenantId: tenantId, bluemixRegion: regionName)
+ BMSClient.sharedInstance.authorizationManager = mcaAuthManager
+        
+        
+ let requestPath = baseRequestUrl + "/protectedResource"
+ let request = Request(url: requestPath, method: HttpMethod.GET)
+        
+    request.send { (response, error) in
 	if let error = error {
-    			print("Connection failure")
+            print("Connection failure")
      		print("Error :: \(error)");
      		print("Status :: \(response?.statusCode)");
     	} else {
-           print("Connection success")
-           print("Response :: \(response?.responseText)")
-    }                
-}
-
-
+            print("Connection success")
+            print("Response :: \(response?.responseText)")
+        }
+    }
 
 ```
+{: codeblock}
 
 
 ### Cordova
@@ -202,7 +212,7 @@ var bluemixAppRoute = "http://myapp.mybluemix.net";
 var bluemixAppGUID = "your-bluemix-app-guid";
 Var tenantId = "your-MCA-service-tenantID";
 
-BMSClient.initialize(bluemixAppRoute, bluemixAppGUID);
+BMSClient.initialize(<applicationBluemixRegion>);
 
 var success = function(data){
    	console.log("success", data);
@@ -217,4 +227,4 @@ var request = new MFPRequest(baseRequestUrl +
 
 request.send(success, failure);
 ```
-
+{: codeblock}

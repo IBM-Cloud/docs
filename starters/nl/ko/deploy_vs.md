@@ -1,12 +1,14 @@
 ---
 
- 
+
 
 copyright:
 
-  years: 2016
+  years: 2015，2016
 
- 
+lastupdated: "2016-06-25"
+
+
 
 ---
 
@@ -14,8 +16,6 @@ copyright:
 {:new_window: target="_blank"}
 
 # Visual Studio로 개발
-
-*마지막 업데이트 날짜: 2016년 6월 23일*
 
   1. Visual Studio가 아직 없으면, 지시사항 [여기](https://msdn.microsoft.com/en-us/library/e2h7fzkw.aspx){: new_window}에 따라 Visual Studio 2015 또는 Visual Studio Code를 설치하십시오.
 

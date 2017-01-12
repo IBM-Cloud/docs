@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-11-14"
 ---
 
 {:shortdesc: .shortdesc}
@@ -12,7 +12,6 @@ copyright:
 
 # ASP.NET Core 
 {: #dotnet_core}
-Letzte Aktualisierung: 30. Mai 2016
 
 Die Laufzeit von ASP.NET Core in {{site.data.keyword.Bluemix}} basiert auf dem Buildpack 'ASP.NET Core'. ASP.NET Core
 ist ein modulares Open-Source-Framework zum Erstellen von .NET-Webanwendungen.
@@ -20,21 +19,29 @@ ist ein modulares Open-Source-Framework zum Erstellen von .NET-Webanwendungen.
 Gemeinsam ermöglichen sie moderne, cloudbasierte Webanwendungen.
 {: shortdesc}
 
+# Unterstützte Versionen
+{: #supported_versions}
+Dieses Buildpack unterstützt die folgenden Versionen. Versionen, die als veraltet markiert sind, werden in einem künftigen Release des Buildpacks entfernt. 
+
+1. .NET Core 1.0.0-rc2-final (Betaversion) (veraltet)
+2. .NET Core 1.0.0
+3. .NET Core 1.0.1
+
 ## Erkennung
 {: #detection}
-Das Bluemix-Buildpack 'ASP.NET Core' wird verwendet, wenn mindestens ein Ordner sowohl eine Datei project.json und mindestens eine Datei .cs in der Anwendung enthält wenn die Anwendung mit einer Push-Operation aus dem Ausgabeverzeichnis des Befehls *dotnet publish* übertragen wird.
+Das Bluemix-Buildpack 'ASP.NET Core' wird verwendet, wenn mindestens ein Ordner sowohl eine Datei 'project.json' und mindestens eine Datei mit der Erweiterung .cs in der Anwendung enthält wenn die Anwendung mit einer Push-Operation aus dem Ausgabeverzeichnis des Befehls *dotnet publish* übertragen wird.
 
 ## Starteranwendung
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} stellt eine ASP.NET Core-Starteranwendung bereit.  Die ASP.NET Core-Starteranwendung ist eine einfache App, die eine Schablone bereitstellt, die Sie verwenden können. Sie können mit der Starter-App experimentieren, Änderungen an der Bluemix-Umgebung vornehmen und diese mit einer Push-Operation übertragen.  Hilfe zur Verwendung der Starteranwendung finden Sie in [Starteranwendungen verwenden](../../cfapps/starter_app_usage.html).
+{{site.data.keyword.Bluemix}} stellt eine ASP.NET Core-Starteranwendung bereit.  Die ASP.NET Core-Starteranwendung ist eine einfache App, die eine Schablone bereitstellt, die Sie verwenden können. Sie können mit der Starter-App experimentieren, Änderungen an der Bluemix-Umgebung vornehmen und diese mit einer Push-Operation übertragen.  Hilfe zur Verwendung der Starteranwendung finden Sie in [Starteranwendungen verwenden](/docs/cfapps/starter_app_usage.html).
 
 ## Laufzeitversionen
 {: #runtime_versions}
 
 ### .NET-CLI-Version angeben
 
-Steuern Sie die .NET-CLI-Version mit einer optionalen Datei global.json im Stammverzeichnis der Anwendung. Beispiel:
+Steuern Sie die .NET-CLI-Version mit einer optionalen Datei 'global.json' im Stammverzeichnis der Anwendung. Beispiel:
 ```
    {
       "projects": [ "src" ],
@@ -45,7 +52,7 @@ Steuern Sie die .NET-CLI-Version mit einer optionalen Datei global.json im Stamm
 ```
 {: codeblock}
 
-Wenn keine Angabe erfolgt, wird die aktuellste stabile Vor-Releaseversion verwendet.
+Eine Liste unterstützter CLI-Versionen finden Sie unter [Neueste Aktualisierungen für das Buildpack 'ASP.NET Core'](/docs/runtimes/dotnet/updates.html). Wenn keine Angabe erfolgt, wird die aktuellste stabile Vor-Releaseversion verwendet.
 
 ### NuGet-Paketquellen anpassen
 
@@ -70,13 +77,14 @@ Um der Ausführung der Anwendung in Bluemix am nächsten zu kommen, führen Sie 
 Das Tool Yeoman kann zum Generieren neuer Projektvorlagen verwendet werden, wie in
 [Projekte mit Yeoman erstellen](http://docs.asp.net/en/latest/client-side/yeoman.html) beschrieben.
 
-Informationen zur lokalen Entwicklung mit Visual Studio finden Sie im Abschnitt zum Thema [Mit Visual Studio entwickeln](../../starters/deploy_vs.html){: new_window}.
+Informationen zur lokalen Entwicklung mit Visual Studio finden Sie im Abschnitt zum Thema [Mit Visual Studio entwickeln](/docs/starters/deploy_vs.html){: new_window}.
 
 ## Veröffentlichte Anwendung mit einer Push-Operation übertragen
+{: #pushing_published_app}
 
 Wenn Sie möchten, dass Ihre Anwendung alle erforderlichen Binärdateien enthält, sodass das Buildpack keine
 externen Binärdateien herunterlädt, können Sie eine veröffentlichte *eigenständige* Anwendung mit einer Push-Operation
-übertragen. Weitere Informationen zu eigenständigen Anwendungen finden Sie unter dem Thema [.NET Core App-Typen](https://docs.microsoft.com/en-us/dotnet/articles/core/app-types){: new_window}.
+übertragen.  Weitere Informationen zu eigenständigen Anwendungen finden Sie unter dem Thema [.NET Core App-Typen](https://docs.microsoft.com/en-us/dotnet/articles/core/app-types){: new_window}.
 
 Geben Sie zum Veröffentlichen einer Anwendung einen Befehl wie den folgenden ein:
 ```
@@ -94,6 +102,7 @@ Die App kann dann mit einer Push-Operation aus dem Verzeichnis
 Beachten Sie auch, dass Sie, wenn Sie in Ihrer Anwendung eine Datei manifest.yml verwenden, den Pfad des Ausgabeordners 'publish' in Ihrer Datei manifest.yml angeben können.  In diesem Fall müssen Sie sich nicht in diesem Ordner befinden, wenn Sie die Anwendung mit einer Push-Operation übertragen.
 
 ## Apps mit mehreren Projekten bereitstellen
+{: #developing_apps_with_multiple_projects}
 
 Wenn Sie eine App bereitstellen, die mehrere Projekte enthält, müssen Sie angeben, welches Projekt das Buildpack als Hauptprojekt ausführen soll. Dies kann erfolgen, indem eine .deployment-Datei im Stammordner der Lösung erstellt wird, in der der Pfad für das Hauptprojekt angegeben wird. Der Pfad für das Hauptprojekt kann über den Projektordner oder die Projektdatei (.xproj bzw. .csproj) angegeben werden.
 
@@ -104,13 +113,14 @@ Wenn beispielsweise eine Lösung die drei Projekte *MyApp.DAL*, *MyApp.Services*
 ```
 {: codeblock}
 
-In diesem Beispiel würde das Buildpack automatisch die Projekte *MyApp.DAL* und *MyApp.Services* kompilieren, wenn sie in der Datei project.json für *MyApp.Web* als Abhängigkeiten aufgelistet sind, aber das Buildpack würde nur versuchen, das Hauptprojekt, *MyApp.Web*, mit dotnet run -p src/MyApp.Web auszuführen. Der Pfad für *MyApp.Web* könnte, falls es sich bei diesem Projekt um ein xproj-Projekt handelt, auch wie folgt angegeben werden: 
+In diesem Beispiel würde das Buildpack automatisch die Projekte *MyApp.DAL* und *MyApp.Services* kompilieren, wenn sie in der Datei 'project.json' für *MyApp.Web* als Abhängigkeiten aufgelistet sind, aber das Buildpack würde nur versuchen, das Hauptprojekt, *MyApp.Web*, mit dotnet run -p src/MyApp.Web auszuführen. Der Pfad für *MyApp.Web* könnte, falls es sich bei diesem Projekt um ein xproj-Projekt handelt, auch wie folgt angegeben werden: 
 ```
   project = src/MyApp.Web/MyApp.Web.xproj 
 ```
 {: codeblock}
 
 ## Ihre Anwendung für die Überwachung des richtigen Ports konfigurieren
+{: #configuring_listen_proper_port}
 
 Das Buildpack führt Ihre Anwendung mit dem Befehl *dotnet run* aus und übergibt das folgende Befehlszeilenargument:
 ```
@@ -142,13 +152,13 @@ und die von Visual Studio bereitgestellten Vorlagen vor der Bereitstellung für 
 </pre>
 {: codeblock}
 
-Fügen Sie die folgende Abhängigkeit der Datei project.json hinzu: 
+Fügen Sie die folgende Abhängigkeit der Datei 'project.json' hinzu: 
 ```
   "Microsoft.Extensions.Configuration.CommandLine": "1.0.0",
 ```
 {: codeblock}
 
-Fügen Sie die folgende Eigenschaft zum Abschnitt `buildOptions` in der Datei project.json hinzu:
+Fügen Sie die folgende Eigenschaft zum Abschnitt `buildOptions` in der Datei 'project.json' hinzu:
 ```
   "copyToOutput": {
     "include": [
@@ -173,13 +183,20 @@ Entfernen Sie folgende Zeile in der `Startup`-Methode Startup.cs:
 ```
 {: codeblock}
 
-Entfernen Sie folgende Zeile in der `Main`-Methode Program.cs: 
+Entfernen Sie folgende Zeile in der `Main`-Methode Program.cs:
 ```
   .UseContentRoot(Directory.GetCurrentDirectory())
 ```
 {: codeblock}
 
-Diese Änderungen sollte der .NET-CLI ermöglichen, die `Sichten` Ihrer Anwendung zu finden, da diese jetzt in die Buildausgabe kopiert werden, wenn der Befehl `dotnet run` ausgeführt wird. Wenn Ihre Anwendung über andere Dateien wie beispielsweise json-Konfigurationsdateien verfügt, die zur Laufzeit erforderlich sind, dann sollten Sie auch diese zum Abschnitt `include` von `copyToOutput` in der Datei project.json hinzufügen.
+Diese Änderungen sollte der .NET-CLI ermöglichen, die `Sichten` Ihrer Anwendung zu finden, da diese jetzt in die Buildausgabe kopiert werden, wenn der Befehl `dotnet run` ausgeführt wird.  Wenn Ihre Anwendung über andere Dateien wie beispielsweise json-Konfigurationsdateien verfügt, die zur Laufzeit erforderlich sind, dann sollten Sie auch diese zum Abschnitt `include` von `copyToOutput` in der Datei 'project.json' hinzufügen.
+
+## Fehlerbehebung - Häufig gestellte Fragen (FAQ)
+{: #troubleshooting_faq}
+
+**F**: Meine Anwendung schlägt bei der Bereitstellung mit folgender Nachricht fehl: `API/0App instance exited ... payload: {... "reason"=>"CRASHED", "exit_status"=>-1, . ..}`.  Was bedeutet das? 
+
+**A**: Falls Sie eine ähnliche Nachricht erhalten, wenn Sie eine Push-Operation für Ihre Anwendung durchführen, wird dies vermutlich dadurch verursacht, dass Ihre Anwendung entweder den Grenzwert für den Speicher oder für das Datenträgerkontingent überschreitet. Dieses Problem kann durch Erhöhung der Größenbeschränkung für Ihre Anwendung behoben werden. 
 
 # Zugehörige Links
 {: #rellinks}

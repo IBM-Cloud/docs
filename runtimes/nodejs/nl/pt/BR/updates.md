@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -11,10 +12,17 @@ copyright:
 # Atualizações mais recentes para o buildpack sdk-for-nodejs
 {: #latest_updates}
 
-Última atualização: 26 de agosto de 2016
-{: .last-updated}
-
 Uma lista das atualizações mais recentes no buildpack sdk-for-nodejs.
+## 7 de outubro de 2016: atualizado o buildpack do Node.js v3.8-20161006-1211
+Esta liberação do buildpack suporta as versões de runtime do IBM SDK for Node.js: 0.10.46, 0.10.47, 0.12.15,
+0.12.16, 4.5.0, 4.6.0, 6.6.0 e 6.7.0. O padrão agora é 4.6.0.
+
+Além dos novos tempos de execução, esta liberação contém correções de erro do buildpack.
+Uma correção para o problema conhecido ao usar o Node.js 6.x e o Modo de desenvolvimento que foi mencionado
+nas atualizações de liberação v3.7-20160826-1101 é uma delas. Ela também é sincronizada com o
+[Buildpack do Cloud Foundry Node.js
+v1.5.20](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.20). 
+
 ## 26 de agosto de 2016: atualizado o buildpack do Node.js v3.7-20160826-1101
 Esta liberação do buildpack suporta as versões de runtime do IBM SDK for Node.js: 0.10.45, 0.10.46, 0.12.14, 0.12.15, 4.4.7, 4.5.0, 6.2.2 e 6.4.0. O padrão agora é 4.5.0.
 
@@ -27,7 +35,7 @@ A liberação remove o suporte do manipulador de gerenciamento de app strongpm c
 Node.js Buildpack v3.3 – modo FIPS e mais](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/).
 
 Observe que há um problema conhecido ao usar o Node.js 6.x e o
-[Modo de desenvolvimento](../../manageapps/app_mng.html#devmode). Como
+[Modo de desenvolvimento](/docs/manageapps/app_mng.html#devmode). Como
 solução alternativa, será necessário remontar seu aplicativo depois de ativar o modo de
 desenvolvimento para poder começar a utilizá-lo.
 
@@ -180,7 +188,7 @@ Nesta liberação, nós sincronizamos nosso buildpack do Node.js com o mais rece
 [Buildpack do Node.js da
 comunidade CF](https://github.com/cloudfoundry/nodejs-buildpack), que é fornecido com inúmeros novos recursos da comunidade.
 Além disso, reforçamos o recurso Gerenciamento de app no buildpack do Node.js, que
-permite utilitários como shell, node-inspector, Bluemix Live Sync e muito mais. Consulte [Gerenciamento de App](../../manageapps/app_mng.html) para obter detalhes.
+permite utilitários como shell, node-inspector, Bluemix Live Sync e muito mais. Consulte [Gerenciamento de App](/docs/manageapps/app_mng.html) para obter detalhes.
 
 ## 5 de maio de 2015: atualizado o buildpack do Node.js v1.17-20150429-1033
 
@@ -211,7 +219,7 @@ mostrado.
   * Sincronização da Área de Trabalho: Sincronize qualquer árvore da área de trabalho (Windows) para uma área de trabalho do projeto baseado em nuvem
   * Edição em tempo real: permite que você faça mudanças em um aplicativo Node.js que é executado no Bluemix e teste-as imediatamente em seu navegador.
   * Depuração: Execute shell em seu ambiente e depure! É possível editar o código dinamicamente, inserir pontos de interrupção, percorrer o código, reiniciar o tempo de execução e muito mais, usando o depurador Node Inspector
-  * Consulte [Gerenciamento de App](../../manageapps/app_mng.html#Utilities) para obter mais informações.
+  * Consulte [Gerenciamento de App](/docs/manageapps/app_mng.html#Utilities) para obter mais informações.
 * Nós obtivemos as mudanças mais recentes do [buildpack do Node.js do Cloud Foundry](https://github.com/cloudfoundry/nodejs-buildpack). Essa mudança vem com várias correções de erro e melhorias feitas pela comunidade.
 * Agora, o buildpack Node.js vem com o [IBM SDK for Node.js v1.1.0.13](https://developer.ibm.com/node/sdk/).
 

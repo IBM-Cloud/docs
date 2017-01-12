@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-10-22"
 
 ---
 
@@ -12,8 +14,6 @@ copyright:
 # Obtendo suporte ao cliente
 {: #getting-customer-support}
 
-Última atualização: 22 de outubro de 2016
-{: .last-updated}
 
 
 Se você tiver problemas com o {{site.data.keyword.Bluemix}}, há várias opções de suporte, como obter ajuda por meio de um fórum ou abrir um chamado de suporte.
@@ -155,7 +155,7 @@ para notificações de plataforma. As notificações de plataforma são alertas 
 opcionais para eventos de incidente e manutenção da plataforma
 {{site.data.keyword.Bluemix_notm}}. É possível escolher receber essas notificações por e-mail, clicando no item de menu **Conta** &gt; **Notificações** &gt; **Plataforma**. Para obter
 mais informações sobre como configurar notificações de conta, acesse
-[Configurando notificações](../admin/account.html#notifications).
+[Configurando notificações](/docs/admin/account.html#notifications).
 
 
 ### Melhores práticas para monitorar o status
@@ -215,7 +215,7 @@ Descrição | Suporte para todos os clientes de avaliação do Bluemix.  |  Supo
 Suporte de alta severidade |  N/A | N/A | Incluído | Incluído
 Idioma de suporte | Inglês | Inglês | Inglês | Inglês
 Client Success Manager (CSM) designado | Não incluído | Não incluído | Não incluído | Incluído em<br> 8 horas por semana
-*Tabela 1. Níveis de suporte*
+{: caption="Table 1. Support levels" caption-side="top"}
 
 ### Abrindo um chamado de suporte
 {: #open-ticket}
@@ -232,7 +232,7 @@ do suporte técnico.
 possível enviar chamados para problemas de vendas, faturamento, ID IBM, login e suporte
 técnico. Para problemas de suporte técnico, é possível selecionar um grupo técnico após clicar em **Suporte técnico**. Por exemplo, se você precisar de ajuda com apps Cloud Foundry, OpenWhisk, contêineres, servidores virtuais ou servidores bare metal, será possível escolher **Application Services**. Se precisar de ajuda com um serviço específico, selecione a categoria de serviço correspondente. Para
 determinar a categoria à qual seu serviço pertence, consulte as categorias sob
-[Serviços](../services/index.html){: new_window} na área de janela
+[Serviços](/docs/services/index.html){: new_window} na área de janela
 de navegação.  
   * A partir do [IBM Client Success Portal](https://support.ibmcloud.com){: new_window}. Depois de conectar-se ao portal, clique em **Abrir chamado** e, em seguida, preencha o formulário de suporte. 
   
@@ -308,7 +308,7 @@ Severidade 1 | <strong>Impacto crítico nos negócios ou o serviço está inativ
 Severidade 2 | <strong>Impacto significativo nos negócios.</strong> <br> Um recurso ou função de serviço está seriamente restrito em seu uso ou há o risco de perder os prazos finais dos negócios. | <ul><li><strong>Grátis:</strong> N/D</li><li><strong>Básico:</strong> N/D </li><li><strong>Padrão:</strong> Dentro de 2 horas</li><li><strong>Premium:</strong> Dentro de 90 minutos </li></ul> | <ul><li><strong>Grátis:</strong> N/D</li><li><strong>Básico:</strong> N/D </li><li><strong>Padrão:</strong> Horas de operação </li><li><strong>Premium:</strong> Horas de operação </li></ul>
 Severidade 3 | <strong>Impacto menor nos negócios.</strong> <br> Um recurso ou função de serviço é utilizável, mas tem alguns problemas que afetam seu uso. Nenhum impacto crítico é causado nas operações. | <ul><li><strong>Grátis:</strong> N/D</li><li><strong>Básico:</strong> N/D </li><li><strong>Padrão:</strong> Dentro de 4 horas</li><li><strong>Premium:</strong> Dentro de 2 horas</li></ul> | <ul><li><strong>Grátis:</strong> N/D</li><li><strong>Básico:</strong> N/D </li><li><strong>Padrão:</strong> Horas de operação </li><li><strong>Premium:</strong> Horas de operação </li></ul>
 Severidade 4 | <strong>Impacto mínimo nos negócios.</strong> <br> Uma consulta ou solicitação não técnica. | <ul><li><strong>Grátis:</strong> Melhor esforço </li><li><strong>Básico:</strong> Melhor esforço</li><li><strong>Padrão:</strong> Dentro de 8 horas</li><li><strong>Premium:</strong> Dentro de 4 horas</li></ul> | <ul><li><strong>Livre:</strong> Horas de operação </li><li><strong>Básico:</strong> Horas de operação </li><li><strong>Padrão:</strong> Horas de operação </li><li><strong>Premium:</strong> Horas de operação </li></ul>
-*Tabela 2. Definição e tempo de resposta de severidade*
+{: caption="Table 2. Severity definition and response time" caption-side="top"}
 
 
 ### Relatando uma potencial vulnerabilidade de segurança
@@ -346,8 +346,7 @@ pode solicitar que você colete informações de diagnóstico.
 
 Antes de coletar informações de diagnóstico, conclua as etapas a seguir:
 
-  1. Assegure-se de que tenha instalado a interface da linha de comandos cf mais recente. Para obter mais informações, consulte [Instalando a interface
-de linha de comandos cf](../starters/install_cli.html){: new_window}.
+  1. Assegure-se de que tenha instalado a interface da linha de comandos cf mais recente. Para obter mais informações, veja [Instalando a interface da linha de comandos cf](/docs/starters/install_cli.html){: new_window}.
 
      **Nota:** Se você não tiver a interface de linha de comandos cf mais recente instalada, após a linha de comandos cf ser conectada ao {{site.data.keyword.Bluemix_notm}}, o comando `cf logs` pode não retornar saída.
 
@@ -394,8 +393,7 @@ A tabela a seguir lista os idiomas nacionais suportados e os códigos de idioma 
 | Espanhol | es |
 | Chinês Simplificado | zh_CN |
 | Chinês Tradicional | zh_TW |
-
-*Tabela 3. Idiomas nacionais suportados e códigos de idioma*
+{: caption="Table 3. Supported national languages and language codes" caption-side="top"}
 
 
 ## Pesquisas de opinião de satisfação para o suporte do {{site.data.keyword.Bluemix_notm}}  
@@ -407,12 +405,12 @@ Periodicamente, a IBM envia pesquisas de opinião aos clientes do Bluemix para o
 # rellinks
 {: #rellinks}
 
-## gerais
+## general
 {: #general}
 
   * [Porta de suporte do Bluemix](https://support.ibmcloud.com){: new_window} 
   * [dW Answers](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} 
-  * [Instalando a ferramenta de comando cf](../starters/install_cli.html){: new_window} 
+  * [Instalando a ferramenta de comando cf](/docs/starters/install_cli.html){: new_window} 
   * [SaaS Support Handbook](http://www-01.ibm.com/software/support/handbook.html){: new_window}
   * [Stack Overflow](http://stackoverflow.com/questions/tagged/ibm-bluemix){: new_window} 
   

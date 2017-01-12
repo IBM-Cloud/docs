@@ -1,17 +1,16 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 # Analyse métier
 {: #businessanalytics}
-
-*Dernière mise à jour : 9 décembre 2015*
 
 Ces services permettent d'imbriquer des informations décisionnelles dans vos applications afin de dégager des perspectives plus rapidement et plus facilement quel que
 soit le type de données.

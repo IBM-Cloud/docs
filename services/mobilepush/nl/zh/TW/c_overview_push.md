@@ -5,12 +5,17 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # 關於 {{site.data.keyword.mobilepushshort}}
 {: #overview-push}
-前次更新：2016 年 11 月 11 日
+前次更新：2016 年 12 月 6 日
 {: .last-updated}
 
-IBM {{site.data.keyword.mobilepushshort}} 是一項服務，可用來將通知傳送給 iOS 和 Android 行動裝置、Google Chrome 和 Mozilla Firefox Web 瀏覽器以及 Google Chrome Apps and Extensions。通知可以使用標籤，以所有應用程式使用者或一組特定使用者及裝置為目標。您可以管理裝置、標籤及訂閱。您也可以使用 SDK（軟體開發套件）及「具象狀態傳輸 (REST)」應用程式介面 (API) 來進一步開發用戶端應用程式。 
+IBM {{site.data.keyword.mobilepushshort}} 是一項服務，可用來將通知傳送給 iOS 和 Android 行動裝置、Google Chrome、Mozilla Firefox 及 Safari Web 瀏覽器以及 Google Chrome Apps and Extensions。通知可以使用標籤，以所有應用程式使用者或一組特定使用者及裝置為目標。您可以管理裝置、標籤及訂閱。您也可以使用 SDK（軟體開發套件）及「具象狀態傳輸 (REST)」應用程式介面 (API) 來進一步開發用戶端應用程式。 
 
 {{site.data.keyword.mobilepushshort}} 也可以當作「Bluemix 專用」服務使用。如需將 {{site.data.keyword.mobilepushshort}} 當作專用服務的相關資訊，請參閱[專用服務](/docs/dedicated/index.html)。請注意，{{site.data.keyword.mobilepushshort}} 監視標籤不會顯示分析資料。
 

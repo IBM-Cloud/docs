@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-21"
 
 ---
 
@@ -13,10 +14,7 @@ copyright:
 # 使用 Insights for Twitter REST API
 {: #rest_apis}
 
-*前次更新：2016 年 5 月 13 日*
-{: .last-updated}
-
-{{site.data.keyword.twittershort}} 服務包含 RESTful API，來搜尋及耗用 Twitter 內容。下方的查詢語言區段列出服務 API 所支援的查詢詞彙。我們提供了範例，示範如何建構查詢。
+{{site.data.keyword.twittershort}} 服務包含 RESTful API，來搜尋及耗用 Twitter 內容。[查詢語言](twitter_rest_apis.html#querylanguage){: new.window}表格列出服務 API 所支援的查詢詞彙。我們提供了範例，示範如何建構查詢。
 {:shortdesc}
 
 ## REST API 文件 {: #rest_api}
@@ -62,18 +60,18 @@ REST API 文件是使用 Swagger 所建置，而後者可讓您測試 API 作業
 | `bio_lang:language` 	| 符合其設定檔語言設定符合指定的語言代碼之使用者的推文。如需支援的語言清單，請參閱 `lang:`。 	| `bio_lang:en` 	|
 | `bio_location:"location"` 	| 符合設定檔位置設定包含指定 `location` 參照之使用者的推文。 	| `bio_location:"New York"` 	|
 | `country_code:country-code` 	| 符合其標籤位置或位置符合指定的國碼的推文。</br>**如需支援國碼的清單，請參閱**：http://en.wikipedia.org/wiki/ISO_3166-1 	| `country_code:us` 	|
-| `followers_count: lowerLimit,upperLimit` 	| 符合擁有屬於指定範圍內一些關注者的使用者推文。上限是選用的，而且兩個限制都內含。 	| `followers_count:500` 	|
-| `friends_count: lowerLimit,upperLimit` 	| 符合追蹤屬於指定範圍內一些使用者的使用者推文。上限是選用的，而且兩個限制都內含。 	| `friends_count:1000,3000` 	|
+| `followers_count: lowerLimit,upperLimit` 	| 符合擁有屬於指定範圍內一些關注者的使用者推文。upperLimit 是選用的，而且兩個限制都內含。 	| `followers_count:500` 	|
+| `friends_count: lowerLimit,upperLimit` 	| 符合追蹤屬於指定範圍內一些使用者的使用者推文。upperLimit 是選用的，而且兩個限制都內含。 	| `friends_count:1000,3000` 	|
 | `from:twitterHandle` 	| 符合具有偏好使用者名稱 *twitterHandle* 之使用者的推文。不得包含 &commat; 符號。 	| `from:alexlang11` 	|
 | `has:children` 	| 符合擁有小孩的使用者推文。 	| `has:children` 	|
 | `is:married` 	| 符合已婚的使用者推文。 	| `is:married` 	|
 | `is:verified` 	| 符合其中由 Twitter 所驗證之作者的推文。 	| `analytics is:verified` 	|
 | `lang:language-code` 	| 符合特定語言的推文。支援的語言碼清單如下：<ul><li>`ar`（阿拉伯文）</li><li>`zh`（中文）</li><li>`da`（丹麥文）</li><li>`dl`（荷蘭文）</li><li>`en`（英文）</li><li>`fi`（芬蘭文）</li><li>`fr`（法文）</li><li>`de`（德文）</li><li>`el`（希臘文）</li><li>`he`（希伯來文）</li><li>`id`（印尼文）</li><li>`it`（義大利文）</li><li>`ja`（日文）</li><li>`ko`（韓文）</li><li>`no`（挪威文）</li><li>`fa`（波斯文）</li><li>`pl`（波蘭文）</li><li>`pt`（葡萄牙文）</li><li>`ru`（俄文）</li><li>`es`（西班牙文）</li><li>`sv`（瑞典文）</li><li>`th`（泰文）</li><li>`tr`（土耳其文）</li><li>`uk`（烏克蘭文）</li></ul>    | `lang:de`（符合德文的推文） 	|
-| `listed_count: lowerLimit,upperLimit` 	| 符合屬於指定範圍內 Twitter 作者清單的推文。上限是選用的，而且兩個限制都內含。 	| `listed_count:1000,3000` 	|
+| `listed_count: lowerLimit,upperLimit` 	| 符合屬於指定範圍內 Twitter 作者清單的推文。upperLimit 是選用的，而且兩個限制都內含。 	| `listed_count:1000,3000` 	|
 | `point_radius:[longitude latitude radius]` 	| 符合由其經度與緯度座標及半徑所指定的地理區域的推文。</br></br>所有座標均以十進位來代表。`longitude` 必須是介於 -180 及 +180 之間的值，而 `latitude` 必須是介於 -90 及 +90 之間的值。指定支援範圍之外的值會傳回錯誤。這些值必須輸入為浮點數；不支援整數。</br></br>周圍區域的半徑必須指定為以哩 (mi) 或 公里 (km) 為單位。 	| `point_radius:[41.128611 -73.707778 5.0mi]` 	|
 | `posted:startTime  posted:startTime,endTime` 	| 符合在 "startTime" 當時或之後張貼的推文。"endTime" 是選用的，而且兩個限制皆為內含。時間戳記必須為下列其中一種格式：</br>"yyyy-mm-dd" 或 "yyyy-mm-ddTHH:MM:SSZ" </br>  時區係根據 UTC（世界標準時間）。指定小時、分鐘及秒時，根據規定的格式，時間必須以 T 及 Z 括住，如同指定格式。 	| `posted:2014-12-01,2014-12-12` 	|
 | `sentiment:sentiment-value` 	| 符合具有特定觀感的推文。支援的值如下：</br><dl>positive</dl> <dlentry>推文所含的正面觀感詞組多於負面觀感詞組。</dlentry> </br></br><dl>negative</dl> <dlentry>推文所含的負面觀感詞組多於正面觀感詞組。</dlentry>  </br></br><dl>neutral</dl>  <dlentry>推文不包含任何觀感，或為不提供觀感偵測的語言。</dlentry> </br></br><dl>ambivalent</dl>  <dlentry>推文包含等量的正面及負面觀感詞組。</dlentry> 	| `sentiment:positive` 	|
-| `statuses_count: lowerLimit,upperLimit` 	| 比對已張貼屬於指定範圍內一些狀態的使用者推文。上限是選用的，而且兩個限制都內含。 	| `statuses_count:1000,3000` 	|
+| `statuses_count: lowerLimit,upperLimit` 	| 比對已張貼屬於指定範圍內一些狀態的使用者推文。upperLimit 是選用的，而且兩個限制都內含。 	| `statuses_count:1000,3000` 	|
 | `time_zone:timeZone` 	| 比對其設定檔設定符合指定時區之使用者的推文。 	| `time_zone:"Eastern Time (US & Canada)"` 	|
 | `time_zone:city` 	| 比對其設定檔設定符合指定城市之使用者的推文。 	| `time_zone:"Dublin"` 	|
 

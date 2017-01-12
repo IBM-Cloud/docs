@@ -127,7 +127,7 @@ lastupdated: "2016-09-27"
 ### 函數原型
 {: #openwhisk_ref_javascript_fnproto}
 
-{{site.data.keyword.openwhisk_short}} JavaScript 動作是在 Node.js 運行環境（目前為 6.2.0 版）中執行。
+{{site.data.keyword.openwhisk_short}} JavaScript 動作是在 Node.js 運行環境中執行。
 
 以 JavaScript 撰寫的動作必須限制於單一檔案。此檔案可以包含多個函數，但依慣例，必須要有稱為 `main` 的函數，而且此函數是在呼叫動作時呼叫。例如，以下是具有多個函數的動作的範例。
 
@@ -275,59 +275,67 @@ return whisk.invoke({
 ### JavaScript 運行環境
 {: #openwhisk_ref_javascript_environments}
 
-在 Node.js 6.2.0 版環境中，預設會執行 JavaScript 動作。如果在建立/更新動作時明確指定值為 'nodejs:6' 的 `--kind` 旗標，則 6.2.0 環境也會用於動作。
-下列套件可在 Node.js 6.2.0 環境中使用：
+在 Node.js 6.9.1 版環境中，預設會執行 JavaScript 動作。如果在建立/更新動作時明確指定值為 'nodejs:6' 的 `--kind` 旗標，則 6.9.1 環境也會用於動作。
+下列套件適用於 Node.js 6.9.1 環境：
 
-- apn 1.7.5 版
-- async 1.5.2 版
-- body-parser 1.15.1 版
+- apn 2.1.2 版
+- async 2.1.4 版
 - btoa 1.1.2 版
-- cheerio 0.20.0 版
-- cloudant 1.4.1 版
+- cheerio 0.22.0 版
+- cloudant 1.6.2 版
 - commander 2.9.0 版
-- consul 0.25.0 版
-- cookie-parser 1.4.2 版
+- consul 0.27.0 版
+- cookie-parser 1.4.3 版
 - cradle 0.7.1 版
-- errorhandler 1.4.3 版
-- express 4.13.4 版
-- express-session 1.12.1 版
-- gm 1.22.0 版
-- log4js 0.6.36 版
-- iconv-lite 0.4.13 版
+- errorhandler 1.5.0 版
+- glob 7.1.1 版
+- gm 1.23.0 版
+- lodash 4.17.2 版
+- log4js 0.6.38 版
+- iconv-lite 0.4.15 版
+- marked 0.3.6 版
 - merge 1.2.0 版
-- moment 2.13.0 版
-- mustache 2.2.1 版
+- moment 2.17.0 版
+- mongodb 2.2.11 版
+- mustache 2.3.0 版
 - nano 6.2.0 版
 - node-uuid 1.4.7 版
-- nodemailer 2.5.0 版
+- nodemailer 2.6.4 版
 - oauth2-server 2.4.1 版
-- pkgcloud 1.3.0 版
-- process 0.11.3 版
-- pug 2.0.0  版
-- request 2.72.0 版
-- rimraf 2.5.2 版
-- semver 5.1.0 版
-- sendgrid 3.0.11 版
-- serve-favicon 2.3.0 版
-- socket.io 1.4.6 版
-- socket.io-client 1.4.6 版
-- superagent 1.8.3 版
+- pkgcloud 1.4.0 版
+- process 0.11.9 版
+- pug 2.0.0-beta6 版
+- redis 2.6.3 版
+- request 2.79.0 版
+- request-promise 4.1.1 版
+- rimraf 2.5.4 版
+- semver 5.3.0 版
+- sendgrid 4.7.1 版
+- serve-favicon 2.3.2 版
+- socket.io 1.6.0 版
+- socket.io-client 1.6.0 版
+- superagent 3.0.0 版
 - swagger-tools 0.10.1 版
-- tmp 0.0.28 版
-- twilio 2.9.1 版
-- watson-developer-cloud 1.12.4 版
+- tmp 0.0.31 版
+- twilio 2.11.1 版
+- underscore 1.8.3 版
+- uuid 3.0.0 版
+- validator 6.1.0 版
+- watson-developer-cloud 2.9.0 版
 - when 3.7.7 版
-- ws 1.1.0 版
-- xml2js 0.4.16 版
+- winston 2.3.0 版
+- ws 1.1.1 版
+- xml2js 0.4.17 版
 - xmlhttprequest 1.8.0 版
-- yauzl 2.4.2 版
+- yauzl 2.7.0 版
 
-如果在建立/更新動作時明確指定值為 'nodejs' 的 `--kind` 旗標，則 Node.js 0.12.14 版環境將會用於動作。
-下列套件可在 Node.js 0.12.14 環境中使用：
+如果在建立/更新動作時明確指定值為 'nodejs' 的 `--kind` 旗標，則 Node.js 0.12.17 版環境將會用於動作。
+下列套件適用於 Node.js 0.12.17 環境：
+
+**附註**：已淘汰 Node.js 0.12.x 版，請移轉所有 Node.js 動作以使用 Node.js 6.x 版。
 
 - apn 1.7.4 版
 - async 1.5.2 版
-- body-parser 1.12.0 版
 - btoa 1.1.2 版
 - cheerio 0.20.0 版
 - cloudant 1.4.1 版
@@ -336,11 +344,9 @@ return whisk.invoke({
 - cookie-parser 1.3.4 版
 - cradle 0.6.7 版
 - errorhandler 1.3.5 版
-- express 4.12.2 版
-- express-session 1.11.1 版
 - gm 1.20.0 版
 - jade 1.9.2 版
-- log4js 0.6.25 版
+- log4js 0.6.38 版
 - merge 1.2.0 版
 - moment 2.8.1 版
 - mustache 2.1.3 版
@@ -348,7 +354,7 @@ return whisk.invoke({
 - node-uuid 1.4.2 版
 - oauth2-server 2.4.0 版
 - process 0.11.0 版
-- request 2.60.0 版
+- request 2.79.0 版
 - rimraf 2.5.1 版
 - semver 4.3.6 版
 - serve-favicon 2.2.0 版
@@ -413,7 +419,7 @@ Docker 架構是建置 OpenWhisk 相容 Docker 映像檔的一種簡便方式。
 
 主要二進位程式必須位在容器的 `/action/exec` 中。執行檔會透過 `stdin` 接收到輸入引數，而且必須透過 `stdout` 來傳回結果。
 
-透過修改 `dockerSkeleton` 中所含的 `Dockerfile`，即可包括任何編譯步驟或相依關係。
+透過修改 `dockerSkeleton` 中所含的 `Dockerfile`，即可包含任何編譯步驟或相依關係。
 
 ## REST API
 {: #openwhisk_ref_restapi}

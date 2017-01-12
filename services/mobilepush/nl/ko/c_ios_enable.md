@@ -5,12 +5,17 @@ copyright:
 
 ---
 
-#{{site.data.keyword.mobilepushshort}}을 수신하고 전송하도록 iOS 애플리케이션 설정
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
+#{{site.data.keyword.mobilepushshort}}을 전송하도록 iOS 애플리케이션 설정
 {: #enable-push-ios-notifications}
-마지막 업데이트 날짜: 2016년 10월 19일
+마지막 업데이트 날짜: 2016년 12월 7일
 {: .last-updated}
 
-iOS 애플리케이션이 {{site.data.keyword.mobilepushshort}}을 수신하고 사용자 디바이스에 전송하도록 설정할 수 있습니다.
+iOS 애플리케이션이 {{site.data.keyword.mobilepushshort}}을 사용자 디바이스에 전송하도록 설정할 수 있습니다.
 
 
 ##CocoaPods 설치
@@ -66,7 +71,7 @@ $ open App.xcworkspace
 
 작업공간에는 원래 프로젝트 및 종속 항목이 포함된 Pods 프로젝트가 있습니다. Bluemix Mobile Services 소스 폴더를 수정하려는 경우 Pods 프로젝트의 `Pods/yourImportedSourceFolder`에서 이 폴더를 찾을 수 있습니다(예: `Pods/BMSPush`).
 
-##Carthage
+##Carthage를 사용하여 프레임워크 추가
 {: #carthage}
 
 [Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos)를 사용하여 프로젝트에 프레임워크를 추가하십시오. Xcode8의 Carthage는 지원되지 않습니다. 
@@ -79,6 +84,18 @@ github "github "ibm-bluemix-mobile-services/bms-clientsdk-swift-push" ~> 1.0"
 2. `carthage update` 명령을 실행하십시오. 빌드가 완료되면 `BMSPush.framework`, `BMSCore.framework`, `BMSAnalyticsAPI.framework`를 Xcode 프로젝트로 끌어오십시오. 
 3. [Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos) 사이트의 지시사항에 따라 통합을 완료하십시오.
 
+##iOS SDK 설정
+{: ios-sdk}
+
+iOS SDK를 설치하고 다음 코드를 애플리케이션의 **AppDelegate.swift** 파일에 추가하십시오. 
+```
+func application(_ application: UIApplication,
+didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
+  {
+  BMSPushClient.sharedInstance.setupPush()
+  }
+```
+    {: codeblock}
 
 ##가져온 프레임워크 및 소스 폴더 사용
 {: using-imported-frameworks}
@@ -210,7 +227,7 @@ iOS 애플리케이션과 디바이스를 등록하려면 다음을 수행해야
 2. 토큰을 {{site.data.keyword.mobilepushshort}}에 전달하십시오. 
 
 
-###백엔드 애플리케이션 작성
+###백엔드 애플리케이션을 작성하십시오. 
 {: create-a-backend-app}
 
 Boilerplates 섹션 Bluemix® 카탈로그에서 {{site.data.keyword.mobilepushshort}} 서비스를 이 애플리케이션에 자동으로 바인드하는 백엔드 애플리케이션을 작성하십시오. 백엔드 앱을 이미 작성한 경우에는 앱을 {{site.data.keyword.mobilepushshort}} 서비스에 바인드했는지 확인하십시오. 
@@ -351,12 +368,46 @@ iOS 디바이스에 알림을 전송하기 위해 {{site.data.keyword.mobilepush
 - **사운드**: 알림을 수신할 때 재생되는 사운드 클립을 표시합니다. 기본값 또는 앱에 번들링된 사운드 리소스의 이름을 지원합니다.
 - **추가 페이로드**: 알림에 대한 사용자 정의 페이로드 값을 지정합니다.
 
+##대화식 알림 사용
+
+대화식 알림을 설정하여 이미지, 맵 또는 응답 단추 추가와 같은 추가 세부사항으로 iOS 알림을 보강할 수 있습니다. 이를 통해 현재 컨텍스트를 종료하지 않고도 즉시 조치를 수행할 수 있는 기능과 추가 컨텍스트를 제공할 수 있습니다.   
+
+대화식 알림을 설정하려면 다음 코드를 사용하십시오. 
+
+```
+// This defines the button action.
+let actionOne = BMSPushNotificationAction(identifierName: "ACCEPT", buttonTitle: "Accept", isAuthenticationRequired: false, defineActivationMode: UIUserNotificationActivationMode.background)
+ let actionTwo = BMSPushNotificationAction(identifierName: "DECLINE", buttonTitle: "Decline", isAuthenticationRequired: false, defineActivationMode: UIUserNotificationActivationMode.background)
+```
+	{: codeblock}
+```
+// This defines category for the buttons
+let category = BMSPushNotificationActionCategory(identifierName: "category", buttonActions: [actionOne, actionTwo])
+```
+	{: codeblock}
+```
+// This updates the registration to include the buttonsPass the defined category into iOS BMSPushClientOptions
+let notificationOptions = BMSPushClientOptions(categoryName: [category])
+let push = BMSPushClient.sharedInstance
+push.notificationOptions = notificationOptions
+```
+	{: codeblock}
+
+대화식 알림을 보내려면 다음 단계를 완료하십시오. 
+
+1. 작성 섹션의 받는 사람 드롭 다운 목록에서 **iOS 디바이스**를 선택합니다. 
+2. 보내려는 알림 메시지를 입력합니다. 
+3. 선택적 설정 섹션에서 **모바일**을 선택하고 **iOS**를 클릭합니다.
+4. 유형 드롭 다운 목록에서 **혼합**을 선택합니다.
+5. 카테고리 필드에서 앱에서 정의한 알림 유형을 지정합니다.  
+
+![iOS용 대화식 알림](images/push_ios_notification_interactive.jpg) 
 
 ## 다음 단계
 {: #next_steps_tags}
 
 정상적으로 기본 알림을 설정한 후 태그 기반 알림 및 고급 옵션을 구성할 수 있습니다. 
 
-다음의 푸시 알림 서비스 기능을 사용자의 앱에 추가하십시오.
+이러한 푸시 알림 서비스 기능을 앱에 추가하십시오.
 태그 기반 알림을 사용하려면 [태그 기반 알림](c_tag_basednotifications.html)을 참조하십시오.
 고급 알림 옵션을 사용하려면 [고급 푸시 알림 사용](t_advance_badge_sound_payload.html)의 내용을 참조하십시오. 

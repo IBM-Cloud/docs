@@ -2,11 +2,13 @@
 
 copyright:
   years: 2015, 2016
-  
+lastupdated: "2016-10-27"
+
 ---
 
 # Recursos avançados do {{site.data.keyword.amashort}}
 {: #before-you-begin}
+
 O serviço {{site.data.keyword.amashort}} fornece recursos para usar em cenários avançados.
 * [Assegurando autorização com o Touch ID](advanced-topics-touchid.html)
 * [Usando IMFURLProtocol em aplicativos iOS](advanced-topics-IMFURLProtocol.html)

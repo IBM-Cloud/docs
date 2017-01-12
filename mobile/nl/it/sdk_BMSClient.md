@@ -14,7 +14,7 @@ lastupdated: "2016-11-07"
 `BMSCore` fornisce l'infrastruttura HTTP che le altre SDK client dei servizi {{site.data.keyword.Bluemix}} Mobile utilizzano per comunicare con i loro servizi {{site.data.keyword.Bluemix_notm}} corrispondenti.
 
 
-## Inizializzazione della tua applicazione Android 
+## Inizializzazione della tua applicazione Android
 {: #init-BMSClient-android}
 
 Puoi sia scaricare che importare il pacchetto `BMSCore` del tuo progetto Android Studio o utilizzare Gradle.
@@ -26,17 +26,17 @@ Puoi sia scaricare che importare il pacchetto `BMSCore` del tuo progetto Android
   ```
   {: codeblock}
 
-2. Inizializza l'SDK `BMSCore` nella tua applicazione Android aggiungendo il codice di inizializzazione nel metodo `onCreate` dell'attività principale nella tua applicazione Android o in un'ubicazione che ritieni più adatta per il tuo progetto.
+2. Inizializza l'SDK `BMSClient` nella tua applicazione Android aggiungendo il codice di inizializzazione nel metodo `onCreate` dell'attività principale nell'applicazione Android o in un'ubicazione che ritieni più adatta per il tuo progetto.
 
-	```Java
+  ```Java
 	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_US_SOUTH); // Assicurati che punti alla tua regione
-	```
-	{: codeblock}
+  ```
+  {: codeblock}
 
-  Devi inizializzare il `BMSClient` con il parametro **bluemixRegion**. Nel programma di inizializzazione, il valore **bluemixRegion** specifica quale distribuzione {{site.data.keyword.Bluemix_notm}} stai utilizzando, ad esempio `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK` o `BMSClient.REGION_SYDNEY`. 
+  Devi inizializzare il `BMSClient` con il parametro **bluemixRegion**. Nel programma di inizializzazione, il valore **bluemixRegion** specifica quale distribuzione {{site.data.keyword.Bluemix_notm}} stai utilizzando, ad esempio `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK` o `BMSClient.REGION_SYDNEY`.
 
 
-## Inizializzazione della tua applicazione iOS 
+## Inizializzazione della tua applicazione iOS
 {: #init-BMSClient-ios}
 
 Puoi utilizzare [CocoaPods](https://cocoapods.org){: new_window} o [Carthage](https://github.com/Carthage/Carthage){: new_window} per ottenere il pacchetto `BMSCore`.
@@ -69,7 +69,7 @@ Puoi utilizzare [CocoaPods](https://cocoapods.org){: new_window} o [Carthage](ht
 
   3. Dopo aver terminato la build, aggiungi `BMSCore.framework` al tuo progetto seguendo il [Passo 3](https://github.com/Carthage/Carthage#getting-started) nelle istruzioni Carthage.
 
-  Per le applicazioni che sono generate con Swift 2.3, utilizza il comando `carthage update --toolchain com.apple.dt.toolchain.Swift_2_3`. Altrimenti, utilizza il comando `carthage update`.
+      Per le applicazioni che sono generate con Swift 2.3, utilizza il comando `carthage update --toolchain com.apple.dt.toolchain.Swift_2_3`. Altrimenti, utilizza il comando `carthage update`.
 
 3. Importa il modulo.
 
@@ -82,9 +82,40 @@ Puoi utilizzare [CocoaPods](https://cocoapods.org){: new_window} o [Carthage](ht
 
   Posiziona il codice di inizializzazione nel metodo `application(_:didFinishLaunchingWithOptions:)` nel tuo delegato dell'applicazione o in un'ubicazione che ritieni più adatta per il tuo progetto.
 
-    ```Swift
+  ```Swift
     BMSClient.sharedInstance.initialize(bluemixRegion: BMSClient.Region.usSouth) // Assicurati che punti alla tua regione
-    ```
-   {: codeblock}
+  ```
+  {: codeblock}
 
-    Per utilizzare l'SDK client {{site.data.keyword.mobileanalytics_short}}, devi inizializzare il `BMSClient` con il parametro **bluemixRegion**. Nel programma di inizializzazione, il valore **bluemixRegion** specifica quale distribuzione {{site.data.keyword.Bluemix_notm}} stai utilizzando, ad esempio `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` o `BMSClient.Region.sydney`. 
+  Devi inizializzare il `BMSClient` con il parametro **bluemixRegion**. Nel programma di inizializzazione, il valore **bluemixRegion** specifica quale distribuzione {{site.data.keyword.Bluemix_notm}} stai utilizzando, ad esempio `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` o `BMSClient.Region.sydney`.
+
+
+## Inizializzazione della tua applicazione Cordova
+{: #init-BMSClient-cordova}
+
+1. Aggiungi il plugin Cordova eseguendo questo comando dalla directory root della tua applicazione Cordova:
+
+  ```
+  cordova plugin add bms-core
+  ```
+  {: codeblock}
+
+2. Inizializza la classe `BMSClient` nella tua applicazione Cordova aggiungendo il codice di inizializzazione nel file JavaScript principale o in un'ubicazione che ritieni più adatta per il tuo progetto.
+
+  ```
+  BMSClient.initialize(BMSClient.REGION_US_SOUTH);
+  ```
+  {: codeblock}
+	
+  Devi inizializzare il `BMSClient` con il parametro **bluemixRegion**. Nel programma di inizializzazione, il valore **bluemixRegion** specifica quale distribuzione {{site.data.keyword.Bluemix_notm}} stai utilizzando, ad esempio `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK` o `BMSClient.REGION_SYDNEY`.
+
+
+# Link correlati
+{: #rellinks}
+
+## Link correlati
+{: #general}
+
+* [BMSCore Android SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window}
+* [BMSCore iOS SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}
+* [BMSCore Cordova Plugin](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core){: new_window}

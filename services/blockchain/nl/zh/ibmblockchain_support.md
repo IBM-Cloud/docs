@@ -12,41 +12,42 @@ years: 2016
 {:pre: .pre}
 
 
-# 支援及已知問題
+# 支持和已知问题
 {: #ibmblockchain_support}
-前次更新：2016 年 9 月 28 日
+上次更新时间：2016 年 9 月 28 日
 {: .last-updated}
 
-有數種機制可用來取得支援，以及疑難排解與 Bluemix 的區塊鏈實例相關聯的問題：
+有多种可用的机制，可以获取与 Bluemix 上区块链实例相关联的支持和故障诊断问题：
 {:shortdesc}
 
-## 非瑕疵問題
+## 非缺陷问题
 
-1. 最便利的方法是從**儀表板監視器**導覽至**支援**標籤（顯示於圖 1）。  
+1. 最有效的应急方法是从**仪表板监视器**导航到**支持**选项卡（如下图 1 所示）。  
 
-![](images/IBC_BMX_Monitor_Support.png "支援標籤")
-*圖 1. 支援標籤*
+![](images/IBC_BMX_Monitor_Support.png "“支持”选项卡")
+*图 1.“支持”选项卡*
 
-* 使用[服務狀態](https://bluemix-service-status.blockchain.ibm.com)頁面來調查網路及服務的已知問題。開發和品質保證團隊會主動更新這些頁面來反映服務內的所有現行異常。這個頁面也包含新確定 Hyperledger Fabric 程式碼的版本注意事項。
-* 使用 [dW Answers](https://developer.ibm.com/answers/smartspace/blockchain/) 來搜尋從先前所提出問題的回答，或提交新的查詢。請務必要將 **blockchain** 關鍵字併入問題中。
-* 使用 [GitHub 問題](https://github.com/IBM-Blockchain/ibm-blockchain-issues/issues)以呼叫區塊鏈開發團隊。請從特定的 Bluemix 實例中共用詳細資料及程式碼 Snippet。  
-* 使用 [Hyperledger Slack](https://hyperledgerproject.slack.com/messages/general/) 通道，以發出 Hyperledger Fabric 程式碼的相關問題。  
+* 使用[服务状态](https://bluemix-service-status.blockchain.ibm.com)页面，可以调查网络和服务的已知问题。开发和质量保证团队可更新这些页面，以反映服务内的任何当前异常情况。此页面还包含 Hyperledger Fabric 代码新落实的发行说明。
+* 使用 [dW Answers](https://developer.ibm.com/answers/smartspace/blockchain/) 搜索之前所引起的问题的响应，或者提交新查询。请确保在问题中包含关键字**区块链**。
+* 使用 [GitHub 问题](https://github.com/IBM-Blockchain/ibm-blockchain-issues/issues)，来联系区块链开发团队。从特定 Bluemix 实例共享详细信息和代码片段。  
+* 使用 [Hyperledger Slack](https://hyperledgerproject.slack.com/messages/general/) 通道提出有关 Hyperledger Fabric 代码的问题。  
 
-## 軟體瑕疵問題
 
-若為軟體瑕疵問題，或者如果上述任一途徑無法解決您的問題，則遵循下列步驟以提交協助問題單：
+## 软件缺陷问题
 
-* 在**功能表列**（顯示於圖 1）的右上角，按一下**帳戶及支援**圖示（顯示於圖 2）。
+对于软件缺陷，或者如果上述任何方法都无法解决您的问题，请遵循以下步骤，提交帮助凭单：
 
-![](images/menubar.PNG "功能表列")  
-*圖 1. 功能表列*
+* 在**菜单栏**的右上角（如图 1 所示）中，单击**帐户和支持**图标（如图 2 所示）。
 
-![](images/avatar.PNG "帳戶及支援")  
-*圖 2. 帳戶及支援*
+![](images/menubar.PNG "菜单栏")
+*图 1. 菜单栏*
 
-1. 按一下支援區段中的**取得協助**按鈕；即會呈現一個新的畫面。
-1. 按一下**保持聯繫**。
-1. 在下一個畫面中，按一下**我需要的技術支援是關於：**標題下的**服務**按鈕；即會呈現另一個畫面。
-1. 輸入問題的詳細資料，然後選取**下一步**按鈕。  
-1. 在這個畫面上，選擇問題的嚴重性，然後按一下**提交**按鈕。
-1. 您會在幾分鐘的時間內收到已針對您的要求開啟服務問題單的電子郵件通知。如需針對問題進行額外交流，請遵循電子郵件中的指示。
+![](images/avatar.PNG "帐户和支持")  
+*图 2. 帐户和支持*
+
+1. 单击支持部分的**获取帮助**按钮；此时将显示新面板。
+1. 单击**取得联系**按钮。
+1. 在下一个面板上，单击**我需要以下方面的技术支持**标题下的**服务**；此时将显示另一个面板。
+1. 输入问题的详细信息并选择**下一步**按钮。  
+1. 在此面板上，选择问题的严重性，并单击**提交**按钮。
+1. 您将在几分钟内收到针对您的请求所打开的服务凭单的电子邮件通知。请遵循电子邮件中的指示信息，以获取有关问题的其他通信。

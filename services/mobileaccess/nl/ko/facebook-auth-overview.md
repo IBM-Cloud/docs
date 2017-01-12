@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2016
 lastupdated: "2016-10-02"
+
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -12,10 +13,7 @@ lastupdated: "2016-10-02"
 # Facebook 신임 정보로 사용자 인증
 {: #facebook-auth-overview}
 
-
-
 ID 제공자로 Facebook을 사용하여 리소스를 보호하도록 {{site.data.keyword.amafull}} 서비스를 구성할 수 있습니다. 모바일 또는 웹 애플리케이션 사용자는 인증을 위해 Facebook 신임 정보를 사용할 수 있습니다.
-
 
 {:shortdesc}
 
@@ -49,13 +47,13 @@ ID 제공자로 Facebook을 사용하여 리소스를 보호하도록 {{site.dat
 {{site.data.keyword.amashort}} 웹 애플리케이션 요청 플로우는 모바일 클라이언트 플로우와 유사합니다. 그러나 {{site.data.keyword.amashort}}는 {{site.data.keyword.Bluemix_notm}} 백엔드 리소스 대신 웹 애플리케이션을 보호합니다. 
 
   * 초기 요청은 웹 애플리케이션에서 전송합니다(예: 로그인 양식에서).
-  * 최종 경로는 백엔드 보호 리소스보다 웹 애플리케이션 자체의 보호 영역으로 재지정됩니다. 
+  * 최종 경로는 백엔드 보호 리소스보다 웹 애플리케이션 자체의 보호 영역으로 재지정됩니다.
 
 
-## Facebook for Developers 웹 사이트에서 Facebook 앱 ID 얻기
+## 개발자용 Facebook 웹 사이트에서 애플리케이션 작성
 {: #facebook-appID}
 
-Facebook을 ID 제공자로 사용하려면 개발자용 Facebook 웹 사이트에서 애플리케이션을 작성하십시오. 이 프로세스 중에 Facebook 앱 ID가 작성됩니다. 이 ID는 연결을 시도하는 애플리케이션을 알기 위해 Facebook에서 사용되는 고유 ID입니다.  
+Facebook을 ID 제공자로 사용하려면 개발자용 Facebook 웹 사이트에서 애플리케이션을 작성하십시오. 이 프로세스 중에 Facebook 앱 ID가 작성됩니다. 이 ID는 연결을 시도하는 애플리케이션을 알기 위해 Facebook에서 사용되는 고유 ID입니다. 
 
 모바일 또는 웹 앱에 적합하게 Facebook 인증을 구성하는 데 이 값이 필요합니다. 
 
@@ -69,7 +67,7 @@ Facebook을 ID 제공자로 사용하려면 개발자용 Facebook 웹 사이트�
 
 1. 보안 검사가 표시됩니다. 요청되는 조치를 수행하십시오. 
 
-1. **제품 설정** 페이지가 표시됩니다. 표시되는 **앱 ID**를 복사하십시오.  
+1. **제품 설정** 페이지가 표시됩니다. 표시되는 **앱 ID**를 복사하십시오. 
 
 ## 다음 단계
 {: #next-steps}

@@ -34,7 +34,7 @@ depuis votre **Moniteur de tableau de bord**.
 * Utilisez la page
 [Statut
 du service](https://bluemix-service-status.blockchain.ibm.com) pour rechercher les problèmes connus concernant
-les réseaux et le service. Les équipes de développement et
+les réseaux et le service.  Les équipes de développement et
 d'assurance qualité tiennent ces pages à jour de manière active afin
 d'indiquer toutes les anomalies en cours au sein du service.  Cette
 page contient également les notes sur l'édition relatives aux
@@ -49,12 +49,13 @@ question.
 * Utilisez les
 [incidents
 GitHub](https://github.com/IBM-Blockchain/ibm-blockchain-issues/issues) pour joindre l"équipe de développement de chaîne
-de blocs. Partagez les détails et les fragments de code de votre
+de blocs.  Partagez les détails et les fragments de code de votre
 instance Bluemix spécifique.  
 * Utilisez le canal
 [Hyperledger
 slack](https://hyperledgerproject.slack.com/messages/general/) pour soulever des questions concernant le code
 Hyperledger Fabric.  
+
 
 ## Problèmes liés aux incidents de logiciel
 
@@ -67,7 +68,7 @@ menus** (illustrée dans la Figure 1), cliquez sur l'icône
 **Compte et support** (illustré dans la Figure
 2).
 
-![](images/menubar.PNG "Barre de menus")  
+![](images/menubar.PNG "Barre de menu")
 *Figure 1. Barre de menus*
 
 ![](images/avatar.PNG "Compte et support")  
@@ -85,6 +86,6 @@ le bouton **Suivant**.
 1. Sur ce panneau, choisissez la gravité du problème et
 cliquez sur le bouton **Soumettre**.
 1. Quelques minutes plus tard, vous recevez une notification par
-e-mail concernant le Ticket de service ouvert pour votre demande. Suivez
+e-mail concernant le Ticket de service ouvert pour votre demande.  Suivez
 les instructions de l'e-mail pour plus d'informations sur le
 problème.

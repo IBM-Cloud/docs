@@ -13,7 +13,7 @@ lastupdated: "2016-10-21"
 # 入門範本
 {: #starters}
 
-使用 {{site.data.keyword.Bluemix}} Mobile 儀表板，即可利用「使用者介面入門範本」或「程式碼入門範本」來建立專案。
+使用 {{site.data.keyword.Bluemix}} 行動儀表板，即可利用「使用者介面入門範本」或「程式碼入門範本」來建立專案。
 
 
 ## 使用者介面入門範本

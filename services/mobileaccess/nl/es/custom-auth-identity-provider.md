@@ -2,8 +2,11 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-11-07"
+
 ---
+
+{:codeblock:.codeblock}
 
 # Creación de un proveedor de identidad personalizado
 {: #custom-create}
@@ -24,6 +27,7 @@ Para crear un proveedor de identidad personalizado, desarrolle una aplicación w
 {: #custom-startauthorization}
 
 `POST <url_base>/apps/<id_arrendatario>/<nombre_reino>/startAuthorization`
+{: codeblock}
 
 La API `startAuthorization` se utiliza como primer paso del proceso de autenticación. Un proveedor de identidad personalizado debe responder con el estado "challenge", "success" o "failure".
 
@@ -37,6 +41,7 @@ Para permitir la máxima flexibilidad del proceso de autenticación, el proveedo
     }
 }
 ```
+{: codeblock}
 
 El proveedor de identidad personalizada puede responder con un cambio de autenticación o un error o éxito inmediatos. El estado HTTP de respuesta debe ser `HTTP 200` y JSON de respuesta debe incluir las propiedades siguientes:
 
@@ -57,11 +62,13 @@ Por ejemplo:
 	}
 }
 ```
+{: codeblock}
 
 ## API `handleChallengeAnswer`
 {: #custom-handleChallengeAnswer}
 
 `POST <url_base>/apps/<id_arrendatario>/<nombre_reino>/handleChallengeAnswer`
+{: codeblock}
 
 La API `handleChallengeAnswer` gestiona una respuesta a un cambio de autenticación desde el cliente móvil. Igual que la API `startAuthorization`, la API `handleChallengeAnswer` responde con el estado `challenge`, `success` o `failure`.
 
@@ -82,6 +89,7 @@ De forma similar a la solicitud `startAuthorization`, el proveedor de identidad 
  	}
 }
 ```
+{: codeblock}
 
 La respuesta de la API `handleChallengeAnswer` debe tener la misma estructura que la respuesta de la API `startAuthorization`.
 
@@ -105,6 +113,7 @@ Una respuesta a una solicitud de autenticación con éxito debe incluir un objet
     }
 }
 ```
+{: codeblock}
 
 El objeto de identidad de usuario se utiliza en el servicio de {{site.data.keyword.amashort}} para generar una señal de ID que se envía al cliente móvil como parte de la cabecera de autorización. Después de una autenticación satisfactoria, el cliente móvil tendrá acceso al objeto de identidad de usuario.
 

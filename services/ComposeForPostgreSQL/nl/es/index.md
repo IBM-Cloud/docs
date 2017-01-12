@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-12-09"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -21,15 +21,12 @@ copyright:
 # Iniciación a {{site.data.keyword.composeForPostgreSQL}}
 {: #getting-started-with-compose-for-postgreSQL}
 
-Última actualización: 20 de septiembre de 2016
-{: .last-updated}
-
 {{site.data.keyword.composeForPostgreSQL}} proporciona una potente base de datos relacional de objetos de código abierto que se puede personalizar mucho. Con Postgres, el desarrollo es rápido y fácilmente escalable. Puede desarrollar en un lenguaje con el que esté cómodo, como por ejemplo C/C++, Perl, Python, TCL/TK, Delphi/Kylix, VB, PHP, ASP y Java. Obtendrá una base de datos empresarial rica en características con soporte de JSON, que le proporciona lo mejor de los mundos SQL y NoSQL.
 {:shortdesc}
 
 **Nota:** Cualquier instancia de servicio de Compose proporcionada antes del 14 de septiembre de 2016 que siga activa se puede seguir utilizando y se puede acceder a ella directamente en [https://www.compose.com/](https://www.compose.com). Se puede acceder directamente a cualquier instancia de servicio de Compose que se proporcione desde este momento en adelante y se utilizará dentro de la cuenta de Bluemix.
 
-Finalice estos pasos para iniciarse a Compose for PostgreSQL:
+Siga estos pasos para iniciarse a Compose for PostgreSQL:
 
 1. [Cree una instancia de {{site.data.keyword.composeForPostgreSQL}}](https://console.ng.bluemix.net/catalog/services/compose-for-postgresql/).
 
@@ -51,6 +48,7 @@ Nombre de campo|Descripción
 `deployment_id`|Un identificador interno para el servicio, tal como se ha creado en Compose.
 `db_type`|El tipo de base de datos que ofrece el servicio; en este caso, `postgresql`.
 `name`|El nombre del despliegue de la base de datos.
+{: caption="Table 1. {{site.data.keyword.composeForPostgreSQL}} credentials" caption-side="top"}
 
 # Enlaces relacionados
 {: #rellinks}

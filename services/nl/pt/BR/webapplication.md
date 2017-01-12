@@ -1,19 +1,18 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 # Web and Application
 {: #webapplication}
 
-*Última atualização: 9 de dezembro de 2015*
-
-Use esses serviços para incluir ou remover recursos rapidamente enquanto você desenvolve aplicativos da web na nuvem. Também é possível simplificar tarefas de gerenciamento e organizar os seus processos e regras de negócios. 
+Use esses serviços para incluir ou remover recursos rapidamente enquanto você desenvolve aplicativos da web na nuvem. Também é possível simplificar tarefas de gerenciamento e organizar os seus processos e regras de negócios.
 {:shortdesc}
 
 
@@ -29,3 +28,4 @@ nas plataformas existentes no local e nas nuvens com serviços consistentes. | C
 na lógica e captura codificada de políticas, práticas e regulamentações de negócios. Expresse
 facilmente a lógica de negócios com as regras de negócios para automatizar as decisões com a
 fidelidade de um especialista no assunto.
+{: caption="Table 1. Options for using web app services" caption-side="top"}

@@ -5,12 +5,17 @@ copyright:
 
 ---
 
-#iOS-Anwendungen für den Empfang und das Senden von {{site.data.keyword.mobilepushshort}} aktivieren
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
+#iOS-Anwendungen für das Senden von Push-Benachrichtigungen aktivieren
 {: #enable-push-ios-notifications}
-Letzte Aktualisierung: 19. Oktober 2016
+Letzte Aktualisierung: 07. Dezember 2016
 {: .last-updated}
 
-Sie können iOS-Anwendungen zum Empfangen und Senden von {{site.data.keyword.mobilepushshort}} von bzw. an Ihre Geräte aktivieren.
+Sie können iOS-Anwendungen für das Senden von Push-Benachrichtigungen an Ihre Geräte aktivieren.
 
 
 ##CocoaPods installieren
@@ -66,7 +71,7 @@ $ open App.xcworkspace
 
 Der Arbeitsbereich enthält Ihr ursprüngliches Projekt und das Projekt 'Pods', das Ihre Abhängigkeiten enthält. Wenn Sie den Bluemix mobile Services-Quellenordner ändern möchten, finden Sie diesen in Ihrem Projekt 'Pods' unter `Pods/yourImportedSourceFolder`, zum Beispiel: `Pods/BMSPush`.
 
-##Carthage
+##Frameworks mit Carthage hinzufügen
 {: #carthage}
 
 Fügen Sie mithilfe von [Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos) Frameworks zu Ihrem Projekt hinzu. Beachten Sie, dass Carthage in Xcode8 nicht unterstützt wird.
@@ -79,6 +84,17 @@ github "github "ibm-bluemix-mobile-services/bms-clientsdk-swift-push" ~> 1.0"
 2. Führen Sie den Befehl `carthage update` aus. Wenn der Build abgeschlossen ist, ziehen Sie `BMSPush.framework`, `BMSCore.framework` und `BMSAnalyticsAPI.framework` in das Xcode-Projekt.
 3. Gehen Sie den Anweisungen auf der [Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos)-Site entsprechend vor, um die Integration abzuschließen.
 
+##iOS-SDK einrichten
+{: ios-sdk}
+
+Richten Sie das iOS-SDK ein. Fügen Sie den folgenden Code der Datei **AppDelegate.swift** in Ihrer Anwendung hinzu.
+```
+func application(_ application: UIApplication,
+didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {  
+ BMSPushClient.sharedInstance.setupPush()
+  }
+```
+    {: codeblock}
 
 ##Importierte Frameworks und Quellenordner verwenden
 {: using-imported-frameworks}
@@ -349,12 +365,46 @@ Sie können die {{site.data.keyword.mobilepushshort}}-Einstellungen zum Senden v
 - **Sound** (Audio): Gibt einen Soundclip an, der beim Empfang einer Benachrichtigung abgespielt wird. Unterstützt den Standard oder den Namen einer Soundressource, die in der App gebündelt ist.
 - **Additional payload** (Zusätzliche Nutzdaten): Gibt die angepassten Werte für Nutzdaten für Ihre Benachrichtigungen an.
 
+##Interaktive Benachrichtigungen aktivieren
+
+Sie können jetzt Ihre iOS-Benachrichtigungen durch zusätzliche Details wie das Hinzufügen eines Bildes, einer Karte oder einer Antwortschaltfläche attraktiver gestalten, indem Sie interaktive Benachrichtigungen aktivieren. Dadurch wird den Kunden mehr Kontext geboten, verbunden mit der Möglichkeit sofortiger Maßnahmen ohne Verlassen des aktuellen Kontexts.  
+
+Verwenden Sie den folgenden Code zum Aktivieren interaktiver Benachrichtigungen:
+
+```
+// This defines the button action.
+let actionOne = BMSPushNotificationAction(identifierName: "ACCEPT", buttonTitle: "Accept", isAuthenticationRequired: false, defineActivationMode: UIUserNotificationActivationMode.background)
+ let actionTwo = BMSPushNotificationAction(identifierName: "DECLINE", buttonTitle: "Decline", isAuthenticationRequired: false, defineActivationMode: UIUserNotificationActivationMode.background)
+```
+	{: codeblock}
+```
+// This defines category for the buttons
+let category = BMSPushNotificationActionCategory(identifierName: "category", buttonActions: [actionOne, actionTwo])
+```
+	{: codeblock}
+```
+// This updates the registration to include the buttonsPass the defined category into iOS BMSPushClientOptions
+let notificationOptions = BMSPushClientOptions(categoryName: [category])
+let push = BMSPushClient.sharedInstance
+push.notificationOptions = notificationOptions
+```
+	{: codeblock}
+
+Führen Sie die folgenden Schritte aus, um eine interaktive Benachrichtigung zu senden:
+
+1. Wählen Sie im Abschnitt zum Erstellen für die Dropdown-Liste 'Senden an' **iOS-Geräte** aus.
+2. Geben Sie die Benachrichtigungsnachricht ein, die Sie senden möchten.
+3. Wählen Sie im Abschnitt mit den optionalen Einstellungen **Mobile** aus und klicken Sie auf **iOS**.
+4. Wählen Sie in der Dropdown-Liste 'Typ' **Gemischt** aus.
+5. Geben Sie im Feld 'Kategorie' den Benachrichtigungstyp an, den Sie in Ihrer App definiert haben. 
+
+![Interaktive Benachrichtigung für iOS](images/push_ios_notification_interactive.jpg) 
 
 ## Nächste Schritte
 {: #next_steps_tags}
 
 Nachdem Sie einfache Benachrichtigungen erfolgreich eingerichtet haben, können Sie tagbasierte Benachrichtigungen und erweiterte Optionen konfigurieren.
 
-Fügen Sie die folgenden Funktionen von Push Notifications Service zu Ihrer App hinzu.
+Fügen Sie diese Funktionen des Push Notifications-Service Ihrer App hinzu.
 Informationen zur Verwendung tagbasierter Benachrichtigungen finden Sie in [Tagbasierte Benachrichtigungen](c_tag_basednotifications.html).
 Informationen zur Verwendung erweiterter Benachrichtigungsoptionen finden Sie in [Erweiterte Push-Benachrichtigungen aktivieren](t_advance_badge_sound_payload.html).

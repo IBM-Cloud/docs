@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02" 
+lastupdated: "2016-11-07"
+
 ---
 
 # Configurazione di {{site.data.keyword.amashort}} per l'autenticazione personalizzata
@@ -13,23 +14,18 @@ Per utilizzare l'autenticazione personalizzata con la tua applicazione mobile, d
 
 ## Prima di cominciare
 {: #custom-dash-begin}
-* Leggi [Introduzione](index.html).
-* Proteggi la tua applicazione di back-end con l'SDK server {{site.data.keyword.amashort}}.  Per ulteriori informazioni, vedi [Protezione delle risorse](protecting-resources.html).
-* Fai in modo che ci sia un'applicazione del provider di identità personalizzato in esecuzione.
+È necessario disporre di:
+* Un'istanza di un servizio {{site.data.keyword.amafull}}.
+* Un'applicazione provider di identità personalizzata.
 
-## Configura l'autenticazione personalizzata nel dashboard {{site.data.keyword.Bluemix}}
+## Configura l'autenticazione personalizzata nel dashboard {{site.data.keyword.amafull}}
 {: #custom-dash-config}
-Utilizza il dashboard {{site.data.keyword.Bluemix}} per configurare l'autenticazione personalizzata.
+Utilizza il dashboard {{site.data.keyword.amafull}} per configurare l'autenticazione personalizzata.
 
-1. Apri la tua applicazione nel dashboard {{site.data.keyword.Bluemix}}.
-
-1. Fai clic su **Opzioni mobili** e annota la tua **Rotta** (`applicationRoute`) e il tuo **GUID applicazione** (`applicationGUID`). Questi valori ti servono per inizializzare l'SDK.
-
-1. Fai clic sul tile {{site.data.keyword.amashort}}. Il dashboard {{site.data.keyword.amashort}} viene caricato.
-
-1. Fai clic sul tile **Custom**.
-
-1. Immetti il nome dell'area di autenticazione (**Realm name**) e l'URL di base (**Base URL**) del tuo provider di identità personalizzato e salva le tue modifiche.
+1. Apri il tuo servizio nel dashboard {{site.data.keyword.amafull}}.
+1. Dalla scheda **Gestione**, attiva **Autorizzazione**.
+1. Espandi la sezione **Personalizzato**.
+1. Immetti **Nome realm**, **URL provider di identità personalizzato**. Il valore **I tuoi URI di reindirizzamento dell'applicazione web** è obbligatorio solo per le applicazioni web.
 
 ## Fasi successive
 {: #next-steps}

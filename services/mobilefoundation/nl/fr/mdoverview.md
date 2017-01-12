@@ -3,13 +3,11 @@
 copyright:
   years: 2016
 lastupdated:  "2016-08-03"
+
 ---
 
 #	A propos de {{site.data.keyword.mobilefoundation_short}}
 {: #overview_mobilefoundation}
-
-<!--Last updated: 03 August 2016
-{: .last-updated}-->
 
 Le service {{site.data.keyword.mobilefoundation_short}} permet de
 configurer rapidement un environnement de serveur

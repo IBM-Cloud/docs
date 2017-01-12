@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-
+lastupdated: "2016-12-07"
 ---
 
 
@@ -11,29 +11,126 @@ copyright:
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#Déploiement d'applications
+# Déploiement d'applications
 {: #deployingapps}
-
--*Dernière mise à jour : 28 juillet 2016*
--{: .last-updated}
 
 Vous pouvez déployer des applications dans {{site.data.keyword.Bluemix}} via diverses méthodes, notamment en utilisant l'interface de ligne de commande et des environnements de développement intégré (IDE). Vous pouvez également utiliser des manifestes d'application afin de déployer des applications. L'utilisation d'un manifeste d'application vous permet de réduire le nombre d'informations de déploiement que vous devez spécifier à chaque fois que vous déployez une application dans {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
 
-##Déploiement d'application
+## Déploiement d'application
 {: #appdeploy}
 
 Le déploiement d'une application dans {{site.data.keyword.Bluemix_notm}} comporte deux étapes : la constitution de l'application et le démarrage de l'application.
 
-###Constitution d'une application
+Cloud Foundry prend désormais en charge Diego, une nouvelle architecture
+d'exécution. Diego prend en charge plusieurs technologies de conteneur,
+comme les conteneurs Garden, Docker et Windows. Les améliorations et
+correctifs futurs de Cloud Foundry seront directement intégrés dans Diego, et
+ne seront plus pris en charge dans l'agent DEA.
 
+### Constitution d'une application avec Diego
+Tous les composants Diego sont conçus pour être mis en cluster, ce qui
+signifie que vous pouvez facilement créer différentes zones de disponibilité. La
+communication sécurisée entre tous les composants Diego utilise le
+protocole TLS.
+
+Lors de la phase de constitution, Diego s'occupe de tous les aspects liés
+à l'orchestration des conteneurs. La distribution des instances d'application
+est effectuée par Diego Brain et le contrôleur de cloud constitue les
+applications. Diego Brain alloue les applications en cellules avec un accès SSH
+aux conteneurs.
+
+Pour valider la santé des applications, Diego prend en charge les
+vérifications PORT utilisées pour l'agent DEA. Il est de plus conçu pour
+pouvoir fonctionner avec
+davantage d'options génériques comme les diagnostics d'intégrité basés sur les
+URL, qui devraient être activés ultérieurement.
+
+Pour constituer des applications dans Diego, vous devez d'abord installer
+l'interface de ligne de commande cf et le
+plug-in [Diego-Enabler CLI Plugin](https://github.com/cloudfoundry-incubator/Diego-Enabler){:new_window}. Ce
+dernier est requis uniquement pendant la migration.
+
+#### Problèmes connus
+ Les problèmes connus liés à l'utilisation de Diego sont les suivants :
+  * Les applications de type travailleur déployées avec l’option
+`--no-route` ne sont pas indiquées comme en bon état de
+fonctionnement. Pour éviter cela, désactivez le diagnostic d'intégrité basé sur
+les ports à l'aide de la commande `cf set-health-check NOM_APP none`.
+  * Diego n'utilise pas la variable d'environnement VCAP_APP_HOST. Si
+votre code fait référence à cette variable, remplacez-la par 0.0.0.0.
+  * Diego n'utilise pas la variable d'environnement VCAP_APP_PORT. Si
+votre code fait référence à cette variable, remplacez-la par PORT, défini
+par défaut sur 8080.
+  * La commande **cf files** n'est plus prise en
+charge. La commande **cf ssh** est utilisée à la
+place. Pour plus de détails sur la commande **cf ssh**, voir
+[cf ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh).
+  * Certaines applications peuvent utiliser un nombre élevé de
+descripteurs de fichier (i-nodes). Si vous rencontrez ce problème, vous devez
+augmenter le quota de disque de votre application à l'aide de la commande
+`cf scale NOM_APP [-k DISK]`.
+
+#### Constitution d'une nouvelle application sur Diego
+Pour constituer une nouvelle application sur Diego, vous devez déployer
+l'application sur la ligne de commande avec un indicateur spécifiant Diego
+comme back end.
+
+  1. Déployez l'application sans la démarrer :
+  ```
+  $ cf push NOM_APPLICATION --no-start
+  ```
+  2. Définissez le booléen Diego :
+  ```
+  $ cf enable-diego NOM_APPLICATION
+  ```
+    ou :
+  ```
+  $ cf curl /v2/apps/$(cf app NOM_APPLICATION --guid) -X PUT -d '{"diego":true}'
+  ```
+  3. Démarrez l'application :
+  ```
+  $ cf start NOM_APPLICATION
+  ```
+
+Pour plus de détails sur la commande **cf push**, voir
+[cf push](/docs/cli/reference/cfcommands/index.html#cf_push).
+
+#### Modification d'une application existante vers Diego
+Vous pouvez effectuer une transition d'une application existante vers
+Diego en la déployant avec l'indicateur Diego. L'application démarre alors
+immédiatement sur Diego et s'arrête sur les agents DEA. Si vous souhaitez
+garantir le temps de disponibilité, nous vous conseillons d'effectuer un
+déploiement Blue-Green en déployant une copie de votre application sur Diego,
+puis en permutant les routes et en retirant l'application de l'agent
+DEA.
+
+  Pour configurer l'indicateur Diego et modifier votre application afin
+de l'exécuter sur Diego :
+  ```
+  $ cf enable-diego NOM_APPLICATION
+  ```
+
+  Pour annuler la transition et revenir aux agents DEA :
+  ```
+  $ cf disable-diego NOM_APPLICATION
+  ```
+
+  Pour valider le système de back end sur lequel l'application est
+exécutée :
+  ```
+  $ cf has-diego-enabled NOM_APPLICATION
+  ```
+
+
+### Constitution d'une application avec l'agent DEA
 Lors de la phase de constitution, un agent DEA (Droplet Execution Agent) utilise les informations que vous avez soumises dans l'interface de ligne de commande cf ou le fichier `manifest.yml` pour déterminer ce qu'il doit créer pour la constitution de l'application. L'agent DEA sélectionne un pack de construction approprié pour la constitution de votre application et le processus de constitution génère un droplet. Pour
 plus d'informations sur le déploiement d'une application dans {{site.data.keyword.Bluemix_notm}}, voir
 [Fonctionnement de {{site.data.keyword.Bluemix_notm}}](/docs/overview/whatisbluemix.html#howwork).
 
 Lors du processus de constitution, l'agent DEA vérifie si le pack de construction correspond à l'application, par exemple un contexte d'exécution Liberty pour un fichier .war, ou un contexte d'exécution Node.js pour des fichiers js. L'agent DEA crée ensuite un conteneur isolé, qui contient le pack de construction et le code de l'application. Le conteneur est géré par le composant Warden. Pour plus d'informations, voir [How Applications Are Staged](http://docs.cloudfoundry.org/concepts/how-applications-are-staged.html){:new_window}.
 
-###Démarrage d'une application
+### Démarrage d'une application
 
 Lorsqu'une application est démarrée, l'instance ou les instances du conteneur Warden sont créées. Vous pouvez utiliser la commande **cf files** pour examiner les fichiers stockés sur le système de fichiers du conteneur Warden (par exemple, les journaux). Si le démarrage de l'application échoue, l'agent DEA arrête l'application, et le contenu complet de votre conteneur Warden est supprimé. Par conséquent, si une application s'arrête ou que le processus de constitution d'une application échoue, vous ne pourrez pas utiliser ses fichiers journaux.
 
@@ -41,7 +138,7 @@ Si les journaux de votre application ne sont plus disponibles et que vous ne pou
 
 **Remarque :** La taille de la mémoire tampon est limitée. Si une application s'exécute pendant longtemps et n'est pas redémarrée, il se peut que des journaux ne s'affichent pas lorsque vous entrez la commande `cf logs nom_app --recent`, car il est possible que la mémoire tampon des journaux ait été nettoyée. Par conséquent, pour déboguer les erreurs de constitution d'une application volumineuse, vous pouvez entrer la commande `cf logs nom_app` sur une ligne de commande distincte de l'interface de ligne de commande cf afin d'effectuer le suivi des journaux lorsque vous déployez l'application.
 
-Si vous rencontrez des problèmes lors de la constitution de vos applications dans {{site.data.keyword.Bluemix_notm}}, vous pouvez suivre la procédure [Débogage des erreurs de constitution](../debug/index.html#debugging-staging-errors) afin de résoudre le problème.
+Si vous rencontrez des problèmes lors de la constitution de vos applications dans {{site.data.keyword.Bluemix_notm}}, vous pouvez suivre la procédure [Débogage des erreurs de constitution](/docs/debug/index.html#debugging-staging-errors) afin de résoudre le problème.
 
 ##Déploiement d'applications avec la commande cf
 {: #dep_apps}
@@ -58,7 +155,7 @@ Si vous utilisez un pack de construction externe, vous devez spécifier son URL 
   cf push
   ```
   
-  Pour plus d'informations sur le pack de construction Liberty, voir [Liberty for Java](../runtimes/liberty/index.html).
+  Pour plus d'informations sur le pack de construction Liberty, voir [Liberty for Java](/docs/runtimes/liberty/index.html).
   
   * Pour déployer des applications Java Tomcat dans {{site.data.keyword.Bluemix_notm}}, utilisez la commande suivante :
   
@@ -144,8 +241,6 @@ Le tableau suivant décrit les options prises en charge que vous pouvez utiliser
 cf push -f appManifest.yml
 ```
 
-<p>  </p>
-
 
 |Options	|Description	|Utilisation ou exemple|
 |:----------|:--------------|:---------------|
@@ -163,7 +258,7 @@ cf push -f appManifest.yml
 |**random-route**	|Valeur booléenne permettant d'affecter une route aléatoire à l'application. La valeur par défaut est **false**.	|`random-route: true`|
 |**services**	|Services à lier à l'application.	|`services:   - mysql_maptest`|
 |**env**	|Variables d'environnement personnalisées pour l'application.|`env: DEV_ENV: production`|
-*Tableau 1. Options prises en charge dans le fichier manifest.yml*
+{: caption="Table 1. Supported options in the manifest YAML file" caption-side="top"}
 
 ###Exemple de fichier `manifest.yml`
 

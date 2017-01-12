@@ -1,13 +1,18 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Enabling Cordova applications to receive push notifications
 {: #cordova_enable}
-Last updated: 23 November 2016
+Last updated: 11 January 2017
 {: .last-updated}
 
 Cordova is a platform for building hybrid applications with JavaScript, CSS, and HTML. The {{site.data.keyword.mobilepushshort}} service supports development of Cordova-based iOS and Android applications.
@@ -27,8 +32,7 @@ Install and use the client push plug-in to further develop your Cordova applicat
 1. Install the Node.js and Node Package Manager (NPM) tool. The NPM command-line tool is bundled with Node.js. For information about how to download and install Node.js, see [Node.js](https://nodejs.org/en/download/).
 1. From the command line, install the Cordova command-line tools by using the **npm install -g cordova** command. This is required to use the Cordova push plug-in. For information about how to install Cordova and set up your Cordova app, see [Cordova Apache](https://cordova.apache.org/#getstarted). For more information, see the Cordova push plug-in [Readme file](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push).
 1. Change to the folder that you want to create your Cordova app in and run the following command to create a Cordova application. If you have an existing Cordova app, go to step 3.
-```
-cordova create your_app_name
+```cordova create your_app_name
 cd your_app_name
 ```
 	{: codeblock}
@@ -82,11 +86,20 @@ bms-push <version> "BMSPush"
 ```
 	{: codeblock}
 
-1. (iOS only) - Configure your iOS development environment.
+1. Configure your iOS development environment.
 2. Build and run your application with Xcode.
-1. (Android only)- Build your Android project by using the following command:
-**cordova build android**.
-
+1. Download your Firebase `google-services.json` for android, and place them in the root folder of your Cordova project, in `[your-app-name]/platforms/android.
+	1. Go to `[your-app-name]/platforms/android`.
+	2. Open file `build.gradle` (Path : platform > android > build.gradle).
+	3. Find `buildscript` text in `build.gradle` file.
+	4. After the classpath line, add the line, classpath 'com.google.gms:google-services:3.0.0'
+	5. Then find "dependencies". Select dependencies where you have text `compile` and where that dependencies is getting ended, just after that, add this line :apply plugin: 'com.google.gms.google-services'.
+	6. Prepare and build your Cordova Android project.
+		```
+		cordova prepare android
+		cordova build android
+		```
+			{: codeblock}
 	**Note**: Before opening your project in Android Studio, build your Cordova application through the Cordova CLI. This will help avoid build errors.
 
 ## Initializing the Cordova plug-in
@@ -98,8 +111,18 @@ Before you can use the {{site.data.keyword.mobilepushshort}} service Cordova plu
 
 ```
 onDeviceReady: function() {
-app.receivedEvent('deviceready');
-BMSClient.initialize("YOUR APP REGION");
+	app.receivedEvent('deviceready');
+	BMSClient.initialize("YOUR APP REGION");
+	var category =  {};
+	BMSPush.initialize(appGUID,clientSecret,category);
+	var success = function(message) { console.log("Success: " + message); };
+	var failure = function(message) { console.log("Error: " + message); };
+	BMSPush.registerDevice({}, success, failure);
+	var showNotification = function(notif)
+	{
+	alert(JSON.stringify(notif));
+	};
+	BMSPush.registerNotificationsCallback(showNotification);
     } 
 ```
 	{: codeblock}
@@ -152,27 +175,6 @@ BMSPush.registerDevice({}, success, failure);
 BMSPush.registerNotificationsCallback(showNotification); 
 ```
 	{: codeblock}
-
-### Objective-C
-{: #cordova_register_objective}
-Add the following Objective-C code snippet to your application delegate class.
-
-```
-// Register the device token with Bluemix Push Notification Service
-	- (void)application:(UIApplication *)application
-     didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
-       [[CDVBMSPush sharedInstance] didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
-} 
-// Handle error when failed to register device token with APNs
-	- (void)application:(UIApplication*)application
-     didFailToRegisterForRemoteNotificationsWithError:(NSError*)error {
-      [[CDVBMSPush sharedInstance] didFailToRegisterForRemoteNotificationsWithError:error];
-} 
-```
-	{: codeblock}
-
-###Swift
-{: #cordova_register_swift}
 
 Add the following Swift code snippet to your application delegate class.
 
@@ -256,33 +258,6 @@ action-loc-key - The string is used as a key to get a localized string in the cu
 * **badge** - The number to display as the badge of the app icon. If this property is absent, the badge is not changed. To remove the badge, set the value of this property to 0.
 * **sound** - The name of a sound file in the app bundle or in the Library/Sounds folder of the app data container.
 
-###Objective-C
-
-Add the following Objective-C code snippets to your application delegate class.
-
-```
-//Handle receiving a remote notification
--(void)application:(UIApplication *)application
-  didReceiveRemoteNotification:(NSDictionary *)userInfo
-  fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
-   [[CDVBMSPush sharedInstance] didReceiveRemoteNotificationWithNotification:userInfo];
-} 
-```
-	{: codeblock}
-
-
-
-```
-//Handle receiving a remote notification on launch
-- (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions {
-  if (launchOptions != nil) {
-   [[CDVBMSPush sharedInstance] didReceiveRemoteNotificationOnLaunchWithLaunchOptions:launchOptions];
-     }
- }
-```
-	{: codeblock}
-
-###Swift
 
 Add the following Swift code snippets to your application delegate class.
 ```

@@ -1,7 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2016 lastupdated: "2016-10-02"  
+  years: 2015, 2016
+lastupdated: "2016-10-27" 
+
 ---
 
 # Autorizando acesso com o Touch ID

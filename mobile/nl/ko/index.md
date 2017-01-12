@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-11-08"
+lastupdated: "2016-12-06"
 
 ---
 {:new_window: target="_blank"}
@@ -31,7 +31,7 @@ The Mobile dashboard provides an integrated experience on {{site.data.keyword.Bl
 
 **프로젝트 작성**을 클릭하여 **시작하기** 페이지에서 프로젝트를 작성하십시오. 앱 작성을 빠르게 시작할 수 있는 [스타터](starters.html) 옵션이 제공됩니다. 
 
-프로젝트 페이지를 선택하여 한 곳에서 모든 프로젝트를 보고 관리할 수 있습니다. 프로젝트에는 모바일 앱과 통합되는 (그리고 통합 가능한) 모든 기능에 대한 정보가 포함됩니다. 사용 가능한 경우, 프로젝트에서 푸시, 분석, 인증 모바일 서비스를 간편하게 통합하고 관리할 수 있으며 추후에 추가 기능이 제공됩니다. 
+프로젝트 페이지를 선택하여 한 곳에서 모든 프로젝트를 보고 관리할 수 있습니다. 프로젝트에는 모바일 앱과 통합되는 (그리고 통합 가능한) 모든 기능에 대한 정보가 포함됩니다. 사용 가능한 경우, 프로젝트에서 푸시, 분석, 인증 모바일 서비스를 간편하게 통합하고 관리할 수 있으며 추후에 추가 기능이 제공됩니다.
 
 [서비스](services.html) 보기는 기존 모바일 서비스 인스턴스의 운영 뷰를 표시합니다. 모바일 대시보드는 모바일 개발자와 모바일 앱 관리 사용자를 지원합니다. 
 
@@ -51,7 +51,7 @@ The Mobile dashboard provides an integrated experience on {{site.data.keyword.Bl
 * [블로그 게시물: Introducing Bluemix Mobile Code Starters](https://www.ibm.com/blogs/bluemix/2016/10/rapid-dev-with-mobile-code-starters/){: new_window}
 * [블로그 게시물: Bluemix Mobile, Part 1: Creating a Store Catalog application](https://developer.ibm.com/bluemix/2016/07/13/bluemix-mobile-creating-store-catalog-app-part1/){: new_window}
 * [블로그 게시물: Bluemix Mobile, Part 2: Integrating custom Bluemix backend into the Store Catalog app](https://developer.ibm.com/bluemix/2016/07/14/bluemix-mobile-integrating-custom-backend-part2/){: new_window}
-* [developerWorks 레시피: Receive weather updates in your own language using IBM Bluemix Push Notification Service and Language Translator](https://developer.ibm.com/recipes/tutorials/receive-weather-updates-in-your-own-language-using-ibm-bluemix-push-notification-service-and-language-translator/){: new_window}
+* [developerWorks 레시피: Translated weather updates with Push Notifications and Language Translator](https://developer.ibm.com/recipes/tutorials/receive-weather-updates-in-your-own-language-using-ibm-bluemix-push-notification-service-and-language-translator/){: new_window}
 * [동영상 튜토리얼](https://www.youtube.com/channel/UCRW4t4Hzm9gzuiq5naERkCw){: new_window}
 
 ## 관련 링크

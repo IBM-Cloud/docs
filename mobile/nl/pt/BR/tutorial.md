@@ -2,18 +2,15 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-21"
+lastupdated: "2016-11-22"
 
 ---
 {:new_window: target="_blank"}
 
-# Tutorial de ponta a ponta do
-Iniciador de código
-do {{site.data.keyword.visualrecognitionshort}} 
+# Tutorial de ponta a ponta do Iniciador de código Basic
 {: #tutorial}
 
-O tutorial de ponta a ponta a seguir percorre as etapas para criar um projeto do Iniciador de código do {{site.data.keyword.visualrecognitionshort}}, incluindo as ferramentas que se deve ter instalado e, posteriormente, as
-etapas para executar o iniciador em Xcode e Android Studio.
+O tutorial de ponta a ponta a seguir percorre as etapas para criar um projeto por meio do Iniciador de código Basic, incluindo as ferramentas que deverão ser instaladas e, posteriormente, as etapas para executar o iniciador no Xcode e no Android Studio.
 
 
 ### Instalando ferramentas do desenvolvedor
@@ -22,7 +19,7 @@ etapas para executar o iniciador em Xcode e Android Studio.
 Assegure-se de que você tenha instalado as [ferramentas de desenvolvedor de pré-requisito](get_code.html#prereq-dev-tools){: new_window}.
 
 
-### Criando um projeto do Iniciador de código do {{site.data.keyword.visualrecognitionshort}}
+### Criando um projeto por meio do Iniciador de código Basic
 {: #create_project}
 
 1. Crie um projeto do painel Móvel no {{site.data.keyword.Bluemix}}.
@@ -33,9 +30,9 @@ Assegure-se de que você tenha instalado as [ferramentas de desenvolvedor de pr�
 
    2. Clique em **Iniciadores de código**.
 
-   3. Selecione **Reconhecimento visual** e clique em **Criar projeto**.
+   3. Selecione **Basic** e clique em **Criar projeto**.
 
-   4. Insira o nome do projeto. Para este tutorial, use `VisualRecognitionProject`.
+   4. Insira o nome do projeto. Para este tutorial, use `BasicProject`.
    
    5. Clique em **Criar**.
 
@@ -55,128 +52,140 @@ o Firebase Cloud Messaging](/docs/services/mobilepush/t_push_provider_android.ht
    
 3. Opcional: inclua o recurso de Analítica.
 
-   1. Clique em **Incluir** para
-**Analítica** na página **Visão geral
-do projeto**.
+   1. Clique em **Incluir** para **Analítica** na página **Visão geral do projeto**.
 
-      Como alternativa, é possível clicar em
-**Criar** a partir da página
-**Analítica**.
+      Como alternativa, é possível clicar em **Criar** a partir da página **Analítica**.
 
    2. Insira o nome do serviço e clique em **Criar**.
    
-   3. Desligue o **Modo demo** para ver os
-seus lados de analítica após executar o seu aplicativo.
+   3. Desligue o **Modo demo** para ver os seus lados de analítica após executar seu aplicativo.
    
    4. Consulte [Introdução ao {{site.data.keyword.mobileanalytics_short}}](/docs/services/mobileanalytics/index.html){: new_window} para obter mais informações sobre a configuração Analítica.
   
 4. Opcional: inclua o recurso Autenticação.
 
-   1. Clique em **Incluir** para
-**Autenticação** na página **Visão
-geral do projeto**.
+   1. Clique em **Incluir** para **Autenticação** na página **Visão geral do projeto**.
 
-      Como alternativa, é possível selecionar
-**Criar** na página
-**Autenticação**.
+      Como alternativa, é possível selecionar **Criar** na página **Autenticação**.
 
    2. Insira o nome do serviço e clique em **Criar**.
    
-   3. Alterne em
-**Autenticação**.
+   3. Alterne em **Autenticação**.
    
-   4. Selecione seu provedor de identidade e insira as
-informações requeridas para configurá-lo. É possível ativar apenas um provedor de identidade.
+   4. Selecione seu provedor de identidade e insira as informações requeridas para configurá-lo. É possível ativar apenas um provedor de identidade.
 
    5. Consulte
 [Introdução
 ao {{site.data.keyword.amashort}}](/docs/services/mobileaccess/index.html){: new_window}
 para obter mais informações sobre a configuração Autenticação.
 
-5. Gere o seu código do projeto.
+5. Gere seu código do projeto.
 
    1. Clique em **Obter código** na
 página **Visão geral do projeto** para selecionar sua plataforma e idioma.
    
       Como alternativa, é possível clicar na página **Código**.
       
-   2. Para iOS, clique em **iOS Swift**.
+   2. Para Objective-C, clique em **iOS Obj-C**.
+
+   3. Para Swift, clique em **iOS Swift**.
    
-   3. Para Android, clique em **Android**.
+   4. Para Cordova, clique em **Cordova**.
+
+   5. Para Android, clique em **Android**.
    
-   4. Quando o código do projeto concluir a geração, clique
+   6. Quando o código do projeto concluir a geração, clique
 em **Fazer download do código** para fazer
 download do seu archive de projeto.
 
 
-### Executando o seu projeto do Xcode
-{: #run_xcode}
+### Executando seu projeto do Objective-C no Xcode
+{: #run_obj-c}
 
-1. Extraia o arquivo `VisualRecognitionProject-Swift.zip`.
+1. Extraia o arquivo `BasicProject-ObjC.zip`.
 
 2. Abra o arquivo `README.md` em um
-visualizador Redução para revisar as etapas para configurar o seu
+visualizador Redução para revisar as etapas para configurar seu
 projeto.
 
-   1. Crie a sua instância de serviço do [{{site.data.keyword.visualrecognitionshort}}](https://console.{DomainName}/catalog/services/visual-recognition/){: new_window}.
-   
-   2. Abra o seu Terminal e navegue para a sua pasta de
+   1. Abra seu Terminal e navegue para sua pasta de
 projeto.
    
       1. Execute `pod setup` se precisar
-configurar o seu repositório CocoaPods.
+configurar seu repositório CocoaPods.
       
       2. Execute `pod update` se precisar
 atualizar os seus módulos existentes.
       
       3. Execute `pod install` para instalar
-os módulos requeridos para o seu projeto.
+os módulos requeridos para seu projeto.
       
-      4. Execute `carthage update --platform
-iOS` para construir as dependências e estruturas para usar o
-SDK do iOS {{site.data.keyword.ibmwatson}} Developer Cloud.
-      
-   3. Abra a sua área de trabalho Xcode `VisualRecognitionProject.xcworkspace`.
-   
-   4. Inclua as suas credenciais de serviço
-do {{site.data.keyword.visualrecognitionshort}}.
-   
-      1. Copie o seu `api_key` a partir das
-suas credenciais de serviço
-do {{site.data.keyword.visualrecognition}}.
-      
-      2. Cole o `api_key` na chave
-`VisualRecognitionAPIKey` no arquivo `WatsonCredentials.plist`.
+   2. Abra sua área de trabalho do Xcode `BasicProject.xcworkspace`.
       
 3. Execute seu app.
 
 
-### Execute o seu projeto no Android Studio
-{: #run_studio}
+### Executando seu projeto do Swift no Xcode
+{: #run_swift}
 
-1. Extraia o arquivo `VisualRecognitionProject-Android.zip`.
+1. Extraia o arquivo `BasicProject-Swift.zip`.
+
+2. Abra o arquivo `README.md` em um
+visualizador Redução para revisar as etapas para configurar seu
+projeto.
+
+   1. Abra seu Terminal e navegue para sua pasta de
+projeto.
+   
+      1. Execute `pod setup` se precisar
+configurar seu repositório CocoaPods.
+      
+      2. Execute `pod update` se precisar
+atualizar os seus módulos existentes.
+      
+      3. Execute `pod install` para instalar
+os módulos requeridos para seu projeto.
+      
+   3. Abra sua área de trabalho do Xcode `BasicProject.xcworkspace`.
+      
+3. Execute seu app.
+
+
+### Executando seu projeto do Cordova no Xcode
+{: #run_cordova_xcode}
+
+1. Extraia o arquivo `BasicProject-Cordova.zip`.
 
 2. Abra o arquivo `README.md` no
-visualizador Redução para configurar o seu projeto.
+visualizador Redução para configurar seu projeto.
 
-   1. Crie a sua instância de serviço do
-[{{site.data.keyword.visualrecognitionshort}}](https://console.{DomainName}/catalog/services/visual-recognition/){: new_window}.
-   
-      Pule esta etapa se você já tiver uma instância de
-serviço do {{site.data.keyword.visualrecognitionshort}}.
-   
-   2. Abra o seu projeto
-`VisualRecognitionProject-Android` no Android Studio.
-   
-   4. Inclua as suas credenciais de serviço do
-{{site.data.keyword.visualrecognitionshort}}.
-   
-      1. Copie o seu `api_key` a partir das
-suas credenciais de serviço do
-{{site.data.keyword.visualrecognition}}.
+   1. Abra seu projeto `platforms/ios` no Xcode.
       
-      2. Cole o seu `api_key` na chave
-`watson_visual_recognition_api_key` no arquivo `res/values/watson_credentials.xml`.
+3. Execute seu app.
+
+
+### Executando seu projeto do Cordova no Android Studio
+{: #run_cordova_studio}
+
+1. Extraia o arquivo `BasicProject-Cordova.zip`.
+
+2. Abra o arquivo `README.md` no
+visualizador Redução para configurar seu projeto.
+
+   1. Abra seu projeto `platforms/android` no Android Studio.
+      
+3. Execute seu app.
+
+
+### Executando seu projeto do Android no Android Studio
+{: #run_android}
+
+1. Extraia o arquivo `BasicProject-Android.zip`.
+
+2. Abra o arquivo `README.md` no
+visualizador Redução para configurar seu projeto.
+
+   1. Abra seu projeto `BasicProject-Android` no Android Studio.
       
 3. Execute seu app.
 
@@ -196,5 +205,6 @@ Visualize outros tutoriais.
 ### Tutoriais do iniciador de código
 {: #tutorials_Code}
 
+* [Tutorial - {{site.data.keyword.visualrecognitionshort}}](tutorial_visual_recognition.html)
 * [Tutorial - Idioma do Watson](tutorial_watson_language.html)
 * [Tutorial - Clima](tutorial_weather.html)

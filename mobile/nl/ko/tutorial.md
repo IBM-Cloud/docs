@@ -2,15 +2,15 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-10-21"
+lastupdated: "2016-11-22"
 
 ---
 {:new_window: target="_blank"}
 
-# {{site.data.keyword.visualrecognitionshort}} 코드 스타터의 엔드-투-엔드 튜토리얼
+# 기본 코드 스타터의 엔드-투-엔드 튜토리얼
 {: #tutorial}
 
-다음 엔드-투-엔드 튜토리얼에서는 설치해야 할 도구를 포함하여 {{site.data.keyword.visualrecognitionshort}} 코드 스타터에서 프로젝트를 작성하는 전체 단계와 그에 이어 Xcode 및 Android Studio에서 스타터를 실행하는 단계를 안내합니다. 
+다음 엔드-투-엔드 튜토리얼에서는 설치해야 할 도구를 포함하여 기본 코드 스타터에서 프로젝트를 작성하는 전체 단계와 그에 이어 Xcode 및 Android Studio에서 스타터를 실행하는 단계를 안내합니다. 
 
 
 ### 개발자 도구 설치
@@ -19,7 +19,7 @@ lastupdated: "2016-10-21"
 [전제조건 개발자 도구](get_code.html#prereq-dev-tools){: new_window}를 설치했는지 확인하십시오. 
 
 
-### {{site.data.keyword.visualrecognitionshort}} 코드 스타터에서 프로젝트 작성
+### 기본 코드 스타터에서 프로젝트 작성
 {: #create_project}
 
 1. {{site.data.keyword.Bluemix}}에서 모바일 대시보드 프로젝트를 작성하십시오. 
@@ -30,9 +30,9 @@ lastupdated: "2016-10-21"
 
    2. **코드 스타터**를 클릭하십시오. 
 
-   3. **Visual Recognition**을 선택하고 **프로젝트 작성**을 클릭하십시오. 
+   3. **기본**을 선택하고 **프로젝트 작성**을 클릭하십시오. 
 
-   4. 프로젝트 이름을 입력하십시오. 이 튜토리얼의 경우 `VisualRecognitionProject`를 사용하십시오. 
+   4. 프로젝트 이름을 입력하십시오. 이 튜토리얼의 경우 `BasicProject`를 사용하십시오. 
    
    5. **작성**을 클릭하십시오.
 
@@ -80,23 +80,25 @@ lastupdated: "2016-10-21"
    
       또는 **코드** 페이지를 클릭할 수 있습니다.
       
-   2. iOS의 경우 **iOS Swift**를 클릭하십시오.
+   2. Objective-C의 경우 **iOS Obj-C**를 클릭하십시오.
+
+   3. Swift의 경우 **iOS Swift**를 클릭하십시오.
    
-   3. Android의 경우 **Android**를 클릭하십시오.
+   4. Cordova의 경우 **Cordova**를 클릭하십시오.
+
+   5. Android의 경우 **Android**를 클릭하십시오.
    
-   4. 프로젝트 코드 생성이 완료되면 **코드 다운로드**를 클릭하여 프로젝트 아카이브를 다운로드하십시오.
+   6. 프로젝트 코드 생성이 완료되면 **코드 다운로드**를 클릭하여 프로젝트 아카이브를 다운로드하십시오.
 
 
-### Xcode에서 프로젝트 실행
-{: #run_xcode}
+### Xcode에서 Objective-C 프로젝트 실행
+{: #run_obj-c}
 
-1. `VisualRecognitionProject-Swift.zip` 파일의 압축을 푸십시오.
+1. `BasicProject-ObjC.zip` 파일의 압축을 푸십시오.
 
 2. Markdown 뷰어에서 `README.md` 파일을 열어 프로젝트를 구성하는 단계를 검토하십시오. 
 
-   1. [{{site.data.keyword.visualrecognitionshort}}](https://console.{DomainName}/catalog/services/visual-recognition/){: new_window} 서비스 인스턴스를 작성하십시오.
-   
-   2. 터미널을 열고 프로젝트 폴더로 이동하십시오. 
+   1. 터미널을 열고 프로젝트 폴더로 이동하십시오. 
    
       1. CocoaPods 저장소를 설정해야 하는 경우 `pod setup`을 실행하십시오. 
       
@@ -104,37 +106,63 @@ lastupdated: "2016-10-21"
       
       3. 프로젝트에 필요한 pod를 설치하려면 `pod install`을 실행하십시오.
       
-      4. {{site.data.keyword.ibmwatson}} Developer Cloud iOS SDK를 사용하기 위한 종속 항목 및 프레임워크를 빌드하려면 `carthage update --platform iOS`를 실행하십시오. 
-      
-   3. `VisualRecognitionProject.xcworkspace` Xcode 작업공간을 여십시오.
-   
-   4. {{site.data.keyword.visualrecognitionshort}} 서비스 신임 정보를 추가하십시오. 
-   
-      1. {{site.data.keyword.visualrecognition}} 서비스 신임 정보에서 `api_key`를 복사하십시오. 
-      
-      2. `api_key`를 `VisualRecognitionAPIKey` 키에 붙여넣어 `WatsonCredentials.plist` 파일에 추가하십시오. 
+   2. `BasicProject.xcworkspace` Xcode 작업공간을 여십시오.
       
 3. 앱을 실행하십시오. 
 
 
-### Android Studio에서 프로젝트 실행
-{: #run_studio}
+### Xcode에서 Swift 프로젝트 실행
+{: #run_swift}
 
-1. `VisualRecognitionProject-Android.zip` 파일의 압축을 푸십시오.
+1. `BasicProject-Swift.zip` 파일의 압축을 푸십시오.
+
+2. Markdown 뷰어에서 `README.md` 파일을 열어 프로젝트를 구성하는 단계를 검토하십시오. 
+
+   1. 터미널을 열고 프로젝트 폴더로 이동하십시오. 
+   
+      1. CocoaPods 저장소를 설정해야 하는 경우 `pod setup`을 실행하십시오. 
+      
+      2. 기존 pod를 업데이트해야 하는 경우 `pod update`를 실행하십시오. 
+      
+      3. 프로젝트에 필요한 pod를 설치하려면 `pod install`을 실행하십시오.
+      
+   3. `BasicProject.xcworkspace` Xcode 작업공간을 여십시오.
+      
+3. 앱을 실행하십시오. 
+
+
+### Xcode에서 Cordova 프로젝트 실행
+{: #run_cordova_xcode}
+
+1. `BasicProject-Cordova.zip` 파일의 압축을 푸십시오.
 
 2. Markdown 뷰어에서 `README.md` 파일을 열어 프로젝트를 구성하십시오. 
 
-   1. [{{site.data.keyword.visualrecognitionshort}}](https://console.{DomainName}/catalog/services/visual-recognition/){: new_window} 서비스 인스턴스를 작성하십시오.
-   
-      {{site.data.keyword.visualrecognitionshort}} 서비스 인스턴스가 이미 있으면 이 단계를 건너뛰십시오. 
-   
-   2. Android Studio에서 `VisualRecognitionProject-Android` 프로젝트를 여십시오.
-   
-   4. {{site.data.keyword.visualrecognitionshort}} 서비스 신임 정보를 추가하십시오. 
-   
-      1. {{site.data.keyword.visualrecognition}} 서비스 신임 정보에서 `api_key`를 복사하십시오. 
+   1. Xcode에서 `platforms/ios` 프로젝트를 여십시오.
       
-      2. `api_key`를 `watson_visual_recognition_api_key` 키에 붙여넣어 `res/values/watson_credentials.xml` 파일에 추가하십시오. 
+3. 앱을 실행하십시오. 
+
+
+### Android Studio에서 Cordova 프로젝트 실행
+{: #run_cordova_studio}
+
+1. `BasicProject-Cordova.zip` 파일의 압축을 푸십시오.
+
+2. Markdown 뷰어에서 `README.md` 파일을 열어 프로젝트를 구성하십시오. 
+
+   1. Android Studio에서 `platforms/android` 프로젝트를 여십시오.
+      
+3. 앱을 실행하십시오. 
+
+
+### Android Studio에서 Android 프로젝트 실행
+{: #run_android}
+
+1. `BasicProject-Android.zip` 파일의 압축을 푸십시오.
+
+2. Markdown 뷰어에서 `README.md` 파일을 열어 프로젝트를 구성하십시오. 
+
+   1. Android Studio에서 `BasicProject-Android` 프로젝트를 여십시오.
       
 3. 앱을 실행하십시오. 
 
@@ -154,5 +182,6 @@ lastupdated: "2016-10-21"
 ### 코드 스타터 튜토리얼
 {: #tutorials_Code}
 
+* [튜토리얼 - {{site.data.keyword.visualrecognitionshort}}](tutorial_visual_recognition.html)
 * [튜토리얼 - Watson Language](tutorial_watson_language.html)
 * [튜토리얼 - Weather](tutorial_weather.html)

@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015，2016
+  years: 2015，2017
 
-lastupdated: "2016-05-12"
+lastupdated: "2017-01-12"
 
 
 
@@ -76,6 +76,7 @@ cf plugins
 Use the index in the following table to refer to the frequently used dev_mode CLI commands:
 
 <table summary="dev_mode commands index">
+<caption>Table 1. dev_mode commands</caption>
  <thead>
  <th colspan="4">dev_mode commands</th>
  </thead>
@@ -94,8 +95,6 @@ Use the index in the following table to refer to the frequently used dev_mode CL
  </tr>
   </tbody>
  </table>
-*Table 1. dev_mode commands*
-
 
 
 ## help
@@ -210,5 +209,5 @@ cf restart-inplace <appName>
 
 ## Related Links
 {: #general}
-* [Development mode CLI](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){:new_window}
-* [DevOps Web IDE](https://hub.jazz.net/docs/deploy/){:new_window}
+* [Development mode CLI ![External link icon](../icons/launch-glyph.svg)]](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){:new_window}
+* [DevOps Web IDE ![External link icon](../icons/launch-glyph.svg)]](https://hub.jazz.net/docs/deploy/){:new_window}

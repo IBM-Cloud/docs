@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-17"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 #Surveillance et journalisation avec Cloud Foundry
 {: #monitoringandlogging}
 
-Dernière mise à jour : 28 octobre 2016
-{: .last-updated}
 
 En surveillant vos applications et en consultant les journaux, vous pouvez suivre l'exécution des applications et le flux de données afin de mieux
 comprendre votre déploiement. De plus, vous pouvez réduire le temps et l'effort qui sont requis pour identifier les problèmes et les résoudre.
@@ -29,12 +28,10 @@ applications et la consultation des journaux sont essentielles pour la gestion d
 {: #monitoring_logging_bluemix_apps}
 
 {{site.data.keyword.Bluemix_notm}} intègre un mécanisme de journalisation qui génère des fichiers journaux pour vos applications, au cours de
-leur exécution. Ces journaux comportent les erreurs, les avertissements et les messages d'information qui sont générés pour votre application. De plus,
-vous pouvez également configurer votre application pour qu'elle écrive des messages de journal dans le fichier journal. Pour plus d'informations sur les formats des
+leur exécution. Ces journaux comportent les erreurs, les avertissements et les messages d'information qui sont générés pour votre application. De plus, vous pouvez également configurer votre application pour qu'elle écrive des messages de journal dans le fichier journal. Pour plus d'informations sur les formats des
 journaux et sur leur affichage, voir [Journalisation pour les applications qui s'exécutent dans Cloud Foundry](#logging_for_bluemix_apps).
 
-La surveillance de votre application vous permet d'afficher et de contrôler son déploiement. Elle permet d'effectuer les tâches
-suivantes :
+La surveillance de votre application vous permet d'afficher et de contrôler son déploiement. Elle permet d'effectuer les tâches suivantes :
 
 * Collecter et surveiller les informations sur les performances pour les instances d'application et vérifier si elles sont opérationnelles.
 * En savoir plus sur le fonctionnement de l'application, par exemple détecter les goulots d'étranglement potentiels ou déterminer la
@@ -49,13 +46,21 @@ et utilisez des services ou des outils de surveillance et de journalisation lors
 {: #monitoring_bluemix_apps}
 
 Lorsque vous utilisez l'infrastructure Cloud Foundry pour exécuter vos applications dans {{site.data.keyword.Bluemix_notm}}, il est
-souhaitable d'avoir connaissance des informations sur les performances, telles que l'état de santé, l'utilisation des ressources et les mesures du trafic. Elles
-vous permettent de prendre des décisions ou des mesures en conséquence.
+souhaitable d'avoir connaissance des informations sur la disponibilité et
+les performances d'une application, de savoir s'il s'agit d'une application Web
+affichée grâce à un navigateur ou de pouvoir définir un ensemble d'API
+auxquelles les applications mobiles se connectent. Utilisez la
+[surveillance
+de disponibilité Bluemix](https://console.ng.bluemix.net/catalog/services/availability-monitoring){:new_window} pour surveiller votre
+application depuis quinze emplacements géographiques différents à travers le
+monde. 
 
-Pour surveiller des applications {{site.data.keyword.Bluemix_notm}}, appliquez l'une des méthodes suivantes :
+Pour surveiller les statistiques d'utilisation des ressources de vos
+applications {{site.data.keyword.Bluemix_notm}}, appliquez l'une des méthodes suivantes : 
 
-* Services {{site.data.keyword.Bluemix_notm}}. Monitoring and Analytics propose un service que vous pouvez utiliser pour surveiller les
-performances de votre application. De plus, ce service fournit également des fonctions d'analyse telles que l'analyse de journal. Pour plus d'informations, voir [Monitoring and Analytics](../services/monana/index.html).
+* Bluemix Monitoring and Analytics propose un service que vous pouvez
+utiliser pour surveiller les ressources et obtenir des diagnostics de votre
+application basée sur Node, Liberty ou Ruby. Pour plus d'informations, voir [Monitoring and Analytics](/docs/services/monana/index.html).
 * Options de tiers. Exemple : [New Relic](http://newrelic.com/){:new_window}.
 
 ###Journalisation pour les applications qui s'exécutent dans Cloud Foundry
@@ -65,19 +70,16 @@ Des fichiers journaux sont créés automatiquement lorsque vous utilisez l'infra
 Foundry pour exécuter vos applications dans {{site.data.keyword.Bluemix_notm}}. Si vous rencontrez des erreurs au cours d'une étape entre le
 déploiement et l'exécution, vous pouvez consulter les journaux pour déterminer comment résoudre le problème.
 
-###Conservation dans le journal
-{: #log_retention}
-
-Dans les applications Cloud Foundry de l'environnement {{site.data.keyword.Bluemix_notm}} public, les données de journal sont stockées par
-défaut pendant 7 jours.
-
 
 <!-- 2016.1.27: original shortdes: Log files are automatically created when you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}. You can view logs from the {{site.data.keyword.Bluemix_notm}} Dashboard, the cf command line interface, or external hosts. You can also filter the logs to see the parts that you are interested in. -->
 
 
 
-###Format de journal
+###Format et conservation du journal
 {: #log_format}
+
+Dans les applications Cloud Foundry de l'environnement {{site.data.keyword.Bluemix_notm}} public, les données de journal sont stockées par
+défaut pendant 7 jours.
 
 Les journaux pour les applications {{site.data.keyword.Bluemix_notm}} sont affichés dans un format fixe similaire au modèle suivant :
 
@@ -149,9 +151,9 @@ deuxième instance, etc.</dd>
 
 Vous pouvez afficher les journaux pour vos applications Cloud Foundry à trois endroits :
 
-  * [Dans le tableau de bord {{site.data.keyword.Bluemix_notm}}](#viewing_logs_UI){:new_window}
-  * [Dans l'interface de ligne de commande](#viewing_logs_cli){:new_window}
-  * [Sur des hôtes de journaux externes](#thirdparty_logging){:new_window}
+  * Dans le tableau de bord {{site.data.keyword.Bluemix_notm}}
+  * Dans l'interface de ligne de commande
+  * Sur des hôtes de journaux externes
 
 #### Affichage des journaux dans le tableau de bord {{site.data.keyword.Bluemix_notm}}
 {: #viewing_logs_UI}
@@ -219,9 +221,19 @@ identifier les problèmes liés à la constitution.</p>
 </li></ul>
 
 
-**Remarque :** pour des informations sur l'activation de la journalisation des applications, voir [Débogage d'erreurs d'exécution](../debug/index.html#debugging-runtime-errors).
+**Remarque :** pour des informations sur l'activation de la journalisation des applications, voir [Débogage d'erreurs d'exécution](/docs/debug/index.html#debugging-runtime-errors).
 
+#### Affichage des journaux à partir d'hôtes externes
+{: #viewing_logs_external}
 
+	 
+Lorsque des journaux sont générés, vous pouvez consulter les messages après un bref délai sur votre hôte de journaux externe. Ceux-ci sont similaires
+aux messages que vous pouvez afficher dans l'interface utilisateur de {{site.data.keyword.Bluemix_notm}} ou dans l'interface de ligne de commande
+cf.  S'il existe plusieurs instances de votre application, les journaux sont regroupés et vous pouvez tous les afficher. De plus, ils sont conservés en cas
+de panne et après un déploiement.
+
+**Remarque :** les journaux que vous affichez dans l'interface de ligne de commande ne sont pas au format syslog et il se peut
+qu'ils ne correspondent pas exactement aux messages qui sont affichés sur votre hôte de journaux externe. 
 
 
 ###Filtrage des journaux
@@ -323,20 +335,8 @@ pour Papertrail.</td>
 	 
 	 Nom de l'instance de service fournie par l'utilisateur.
 	 
-  4. Reconstituez l'application. 
-     Entrez `cf restage nom_app` pour que les modifications soient appliquées. 
+  4. Reconstituez l'application. Entrez `cf restage nom_app` pour que les modifications soient appliquées. 
 
-#### Affichage des journaux à partir d'hôtes externes
-{: #viewing_logs_external}
-
-	 
-Lorsque des journaux sont générés, vous pouvez consulter les messages après un bref délai sur votre hôte de journaux externe. Ceux-ci sont similaires
-aux messages que vous pouvez afficher dans l'interface utilisateur de {{site.data.keyword.Bluemix_notm}} ou dans l'interface de ligne de commande
-cf.  S'il existe plusieurs instances de votre application, les journaux sont regroupés et vous pouvez tous les afficher. De plus, ils sont conservés en cas
-de panne et après un déploiement.
-
-**Remarque :** les journaux que vous affichez dans l'interface de ligne de commande ne sont pas au format syslog et il se peut
-qu'ils ne correspondent pas exactement aux messages qui sont affichés sur votre hôte de journaux externe. 
 
 ### Exemple : transmission des journaux d'application Cloud Foundry à Splunk 
 {: #splunk}
@@ -451,6 +451,85 @@ source="tcp:5140" index="bluemix" sourcetype="rfc5424_syslog"
 Jeanne observe un flux de journaux dans son interface Web Splunk. Bien qu'elle ait installé la version Splunk Light, Jeanne dispose toujours d'une capacité
 de 500 Mo par jour pour ses journaux.  
 
+## Journalisation pour les applications Cloud Foundry dans
+{{site.data.keyword.Bluemix_dedicated_notm}} et {{site.data.keyword.Bluemix_local_notm}}
+{: #hybrid_apps_logs_ov}
 
+
+Dans {{site.data.keyword.Bluemix_dedicated_notm}} et
+{{site.data.keyword.Bluemix_local_notm}}, la journalisation est
+intégrée dans les applications Cloud Foundry. Vous pouvez examiner les données
+collectées par vos applications dans la console {{site.data.keyword.Bluemix_notm}}.
+{:shortdesc}
+
+Les applications Cloud Foundry utilisent Cloud Foundry
+loggregator pour surveiller et réacheminer les journaux vers l'extérieur de
+votre application. Il n'est pas nécessaire d'installer des agents au sein de
+l'application.
+
+### Configuration matérielle requise
+
+
+| **Condition requise** |    **1 noeud**     | **3 noeuds pour haute disponibilité** |
+|-----------------|-------------------|-------------------|
+| UC virtuelle | 19 | 57 |
+| Mémoire | 80 Go | 240 Go |
+| Stockage local | 2,98 To | 8,94 To |
+{: caption="Table 1. Logging hardware requirements for {{site.data.keyword.Bluemix_local_notm}}" caption-side="top"}
+
+### Configuration
+
+Dans {{site.data.keyword.Bluemix_dedicated_notm}} et
+{{site.data.keyword.Bluemix_local_notm}}, les journaux sont activés par
+défaut pour toutes les applications. Pour plus d'informations sur la lecture
+des journaux standard, voir
+[Journalisation pour les applications qui s'exécutent dans Cloud Foundry](#logging_for_bluemix_apps). En
+outre, il est possible d'activer la journalisation avancée dans les
+environnements {{site.data.keyword.Bluemix_dedicated_notm}} et {{site.data.keyword.Bluemix_local_notm}}.
+
+* Pour avoir confirmation de l'activation de la journalisation avancée
+dans vos environnements {{site.data.keyword.Bluemix_dedicated_notm}} et
+{{site.data.keyword.Bluemix_local_notm}}, suivez les étapes décrites
+dans [Affichage des journaux](#hybrid_apps_logs_dash). Si vous
+ne disposez pas du bouton **Vue avancée**, la fonction n'est
+pas activée.
+
+* Pour activer la journalisation avancée dans votre environnement,
+suivez les étapes indiquées dans la documentation de
+[{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated)
+ou de [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local). 
+
+### Conservation des journaux
+
+Dans les applications Cloud Foundry de
+{{site.data.keyword.Bluemix_dedicated_notm}} et de
+{{site.data.keyword.Bluemix_local_notm}}, les données de journal sont
+stockées pendant 30 jours par défaut.
+
+## Affichage des journaux des applications Cloud Foundry dans
+{{site.data.keyword.Bluemix_dedicated_notm}} et {{site.data.keyword.Bluemix_local_notm}}
+{: #hybrid_apps_logs_dash}
+
+Vous pouvez consulter les journaux des applications que vous exécutez
+sur {{site.data.keyword.Bluemix_dedicated_notm}} et
+{{site.data.keyword.Bluemix_local_notm}}.
+{:shortdesc}
+
+Pour afficher les journaux de vos applications, procédez comme suit :
+1. Sélectionnez une application en cours d'exécution.
+2. Cliquez sur **Journaux**. La vue
+**Journaux** contient les journaux de votre application en
+cours d'exécution.
+4. Cliquez sur le bouton **Vue avancée**. La
+**Vue avancée** est une vue plus détaillée des journaux ;
+elle utilise Kibana, un outil de visualisation qui se sert des journaux
+et des données d'horodatage pour créer des visualisations personnalisées. Pour
+plus d'informations sur l'utilisation de la vue avancée, voir la documentation
+[Kibana](https://www.elastic.co/guide/en/kibana/current/index.html).
+
+Vous pouvez ensuite personnaliser un tableau de bord Kibana. Pour plus
+d'informations, voir
+[Personnalisation
+de l'affichage des journaux dans le tableau de bord Kibana](/docs/containers/monitoringandlogging/container_ml_logs.html#container_ml_dash_logs_custom).
 
 

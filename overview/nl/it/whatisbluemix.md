@@ -2,8 +2,8 @@
 
 
 copyright:
-  anni: 2016
-ultimo aggiornamento: "23-10-2016"
+  years: 2016
+lastupdated: "2016-10-23"
 ---
 
 {:shortdesc: .shortdesc}
@@ -35,7 +35,7 @@ Tutte le risorse cloud {{site.data.keyword.IBM_notm}} distribuite negli ambienti
 
 Il dashboard Applicazioni ti fornisce tutto il necessario per rendere operative le tue applicazioni e per gestirle mentre sono in esecuzione. {{site.data.keyword.Bluemix_notm}} fornisce diversi contenitori tipo e runtime:
 
-* Un contenitore tipo è un template per un'applicazione e il suo ambiente di runtime associato e i servizi predefiniti per uno specifico dominio.  
+* Un contenitore tipo è un template per un'applicazione e il suo ambiente di runtime associato e i servizi predefiniti per uno specifico dominio. 
 * Un runtime è la serie di risorse utilizzata per eseguire un'applicazione, fornito in forma di contenitori per i diversi tipi di applicazioni.
 
 {{site.data.keyword.Bluemix_notm}} ti fornisce vari modi per eseguire le tue applicazioni, ad esempio Cloud Foundry e {{site.data.keyword.containerlong}}. Utilizza {{site.data.keyword.containerlong}} per eseguire i contenitori Docker in un ambiente cloud ospitato su {{site.data.keyword.Bluemix_notm}}. 
@@ -49,9 +49,9 @@ Puoi utilizzare i servizi mobili {{site.data.keyword.Bluemix_notm}} per incorpor
 
 Il dashboard Servizi fornisce l'accesso ai servizi {{site.data.keyword.Bluemix_notm}} disponibili dai provider {{site.data.keyword.IBM}} e di terze parti. Questi includono i servizi Watson, Internet delle cose, Analytics, Mobile e DevOps:
 
-* Fornisci nuove applicazioni innovative in modo rapido ed economico con solo le funzioni appropriate utilizzando i servizi {{site.data.keyword.IBM_notm}} DevOps e {{site.data.keyword.Bluemix_notm}} Garage Method. Quando adotti le procedure DevOps e crei una cultura di innovazione e agilità, puoi provare e riprovare in risposta al mercato.
-* Blockchain è una tecnologia ledger distribuita peer-to-peer per una nuova generazione di applicazioni transazionali che stabilisce sicurezza, responsabilità e trasparenza durante l'ottimizzazione dei processi di business.   
-* Watson conferisce alle tue applicazioni la potenza del calcolo cognitivo con una suite di completa di API vocali, visive e di dati. Risolvi i tuoi problemi di business più complessi distribuendo una piattaforma cognitiva con i servizi Watson.
+* Fornisci nuove applicazioni innovative in modo rapido ed economico con solo le funzioni appropriate utilizzando i servizi {{site.data.keyword.IBM_notm}} DevOps e {{site.data.keyword.Bluemix_notm}} Garage Method. Quando adotti le procedure DevOps e crei una cultura di innovazione e agilità, puoi utilizzare le esercitazioni interattive e cambiare direzione in risposta al mercato.
+* Blockchain è una tecnologia ledger distribuita peer-to-peer per una nuova generazione di applicazioni transazionali che stabilisce sicurezza, responsabilità e trasparenza durante l'ottimizzazione dei processi di business.  
+* Watson conferisce alle tue applicazioni la potenza del calcolo cognitivo con una suite di completa di API vocali, visive e di dati.  Risolvi i tuoi problemi di business più complessi distribuendo una piattaforma cognitiva con i servizi Watson.
 * {{site.data.keyword.IBM_notm}} ti consente di fare di più con i potenti database cloud e servizi Data & Analytics integrati. 
 * Il servizio Internet delle cose {{site.data.keyword.IBM_notm}} consente alle tue applicazioni di comunicare con i tuoi dispositivi, sensori e gateway connessi e di utilizzare i dati raccolti. Le nostre "ricette" rendono più facile la connessione dei dispositivi con il cloud Internet delle cose. Le tue applicazioni possono quindi utilizzare le nostre API in tempo reale e REST per comunicare con i dispositivi e utilizzare i dati che hai impostato per la raccolta. 
 * {{site.data.keyword.IBM_notm}} offre un'infrastruttura di backend mobile dove puoi creare applicazioni multipiattaforma, native o ibride e allo stesso tempo monitorarle e testarle. Puoi anche migliorare la tua applicazione con l'analisi, la sicurezza, le informazioni utente e la fornitura continua. 
@@ -64,20 +64,20 @@ Il dashboard Servizi fornisce l'accesso ai servizi {{site.data.keyword.Bluemix_n
 
 Il dashboard Infrastruttura fornisce diversi servizi che rispondono alle esigenze della tua infrastruttura cloud.
 
-L'infrastruttura {{site.data.keyword.Bluemix_notm}} fornisce l'infrastruttura cloud dalle prestazioni più elevate. L'infrastruttura {{site.data.keyword.Bluemix_notm}} è una piattaforma che utilizza i data center di tutto il mondo che includono la più vasta gamma di opzioni di elaborazione cloud e che quindi integra e automatizza il tutto. {{site.data.keyword.CloudDataCents_notm}} sono ricchi di dispositivi di elaborazione, archiviazione e rete di prima classe. Ogni posizione viene costruita, compilata e gestita allo stesso modo cosicché tu possa ottenere esattamente le stesse funzionalità e disponibilità in ogni parte del nostro mercato. Le posizioni sono collegate mediante la topologia di settore più avanzata di rete all'interno di una rete, che integra le diverse reti pubbliche, private e di gestione interna per fornire una riduzione dei costi totali di rete, un migliore accesso e una maggiore velocità. Inoltre, i data center e la rete condividono un unico sistema di gestione proprietario. Un solo strumento di gestione consente di controllare tutto - tutti i server bare metal, server virtuali e dispositivi di memorizzazione - accessibili mediante API, portale e applicazioni mobili.
+L'infrastruttura {{site.data.keyword.Bluemix_notm}} fornisce l'infrastruttura cloud dalle prestazioni più elevate. L'infrastruttura {{site.data.keyword.Bluemix_notm}} è una piattaforma che utilizza i data center di tutto il mondo che includono la più vasta gamma di opzioni di elaborazione cloud e che quindi integra e automatizza il tutto. {{site.data.keyword.CloudDataCents_notm}} sono ricchi di dispositivi di elaborazione, archiviazione e rete di prima classe. Ogni posizione viene costruita, compilata e gestita allo stesso modo cosicché tu possa ottenere esattamente le stesse funzionalità e disponibilità ovunque siamo presenti. Le posizioni sono collegate mediante la topologia di settore più avanzata di rete all'interno di una rete, che integra le diverse reti pubbliche, private e di gestione interna per fornire una riduzione dei costi totali di rete, un migliore accesso e una maggiore velocità. Inoltre, i data center e la rete condividono un unico sistema di gestione proprietario. Un solo strumento di gestione consente di controllare tutto - tutti i server bare metal, server virtuali e dispositivi di memorizzazione - accessibili mediante API, portale e applicazioni mobili.
 
 L'infrastruttura {{site.data.keyword.Bluemix_notm}} offre potenti server bare metal e server virtuali flessibili in un'unica piattaforma senza soluzione di continuità. Ogni server viene fornito su richiesta e fatturato su base mensile o oraria. I server bare metal forniscono una potenza pura per i tuoi carichi di lavoro che richiedono un uso intensivo del processore e dell'I/O del disco e possono essere configurati in base alle tue specifiche esatte. I server virtuali consentono un'alta velocità di distribuzione, scalabilità flessibile e fatturazione a consumo. Per l'elaborazione ad alte prestazioni, dai una spinta al tuo cloud con i server GPU (graphics processing unit), disponibili per uso orario o mensile. 
 
-Le offerte dell'infrastruttura {{site.data.keyword.Bluemix_notm}} sono collegate a una rete a tre livelli, segmentando il traffico pubblico, privato e di gestione. L'infrastruttura sull'account {{site.data.keyword.Bluemix_notm}} di un cliente potrebbe trasferire i dati da uno all'altro attraverso la rete privata a costo zero. Le offerte dell'infrastruttura, quali i server bare metal, i server virtuali e l'archiviazione cloud, si collegano ad altre applicazioni e altri servizi nel catalogo {{site.data.keyword.Bluemix_notm}}, ad esempio i servizi Watson, contenitori o runtime, attraverso al rete pubblica. Il trasferimento dati tra questi due tipi di offerte viene misurato e addebitato a tariffe di larghezza di banda della rete pubblica standard.
+Le offerte dell'infrastruttura {{site.data.keyword.Bluemix_notm}} sono collegate a una rete a tre livelli, segmentando il traffico pubblico, privato e di gestione. L'infrastruttura sull'account {{site.data.keyword.Bluemix_notm}} di un cliente potrebbe trasferire i dati in questa infrastruttura attraverso la rete privata a costo zero. Le offerte dell'infrastruttura, quali i server bare metal, i server virtuali e l'archiviazione cloud, si collegano ad altre applicazioni e altri servizi nel catalogo {{site.data.keyword.Bluemix_notm}}, ad esempio i servizi Watson, contenitori o runtime, attraverso al rete pubblica. Il trasferimento dati tra questi due tipi di offerte viene misurato e addebitato a tariffe di larghezza di banda della rete pubblica standard.
 
 ## Utilizzo della console {{site.data.keyword.Bluemix_notm}}
 {: #bluemixoverviewui}
 
 Quando accedi alla console {{site.data.keyword.Bluemix_notm}}, la barra dei menu visualizza link o pulsanti per eseguire la registrazione o l'accesso e per accedere alla documentazione e al catalogo. Dopo aver eseguito l'accesso, la barra dei menu contiene un menu hamburger ![Icona Hamburger](../icons/icon_hamburger.svg) e ulteriori link, a seconda del tuo tipo di account:
 
-* Se sei un nuovo utente di {{site.data.keyword.Bluemix_notm}}, puoi utilizzare il menu hamburger ![Icona Hamburger](../icons/icon_hamburger.svg) per passare tra i dashboard Applicazioni, Servizi o Infrastruttura. Vengono visualizzati dei link alle opzioni di supporto e account e puoi utilizzare il link **Catalogo** per accedere ai servizi {{site.data.keyword.Bluemix_notm}}, di elaborazione e dell'infrastruttura.  
-* Se sei un utente esistente e hai collegato i tuoi account {{site.data.keyword.Bluemix_notm}} e {{site.data.keyword.BluSoftlayer}}, puoi utilizzare il menu hamburger ![Icona Hamburger](../icons/icon_hamburger.svg) per passare tra i dashboard Applicazioni, Servizi o Infrastruttura. Vengono visualizzati dei link alle opzioni di supporto e account e puoi utilizzare il link **Catalogo** per accedere ai servizi {{site.data.keyword.Bluemix_notm}}, di elaborazione e dell'infrastruttura.  
-* Se sei un utente esistente con un account {{site.data.keyword.Bluemix_notm}}, puoi utilizzare il menu hamburger ![Icona Hamburger](../icons/icon_hamburger.svg) per passare tra i dashboard Applicazioni e Servizi. Vengono visualizzati dei link alle opzioni di supporto e account e puoi utilizzare il link **Catalogo** per accedere ai servizi {{site.data.keyword.Bluemix_notm}} e di elaborazione.  
+* Se sei un nuovo utente di {{site.data.keyword.Bluemix_notm}}, puoi utilizzare il menu hamburger ![Icona Hamburger](../icons/icon_hamburger.svg) per passare tra i dashboard Applicazioni, Servizi o Infrastruttura. Vengono visualizzati dei link alle opzioni di supporto e account e puoi utilizzare il link **Catalogo** per accedere ai servizi {{site.data.keyword.Bluemix_notm}}, di elaborazione e dell'infrastruttura. 
+* Se sei un utente esistente e hai collegato i tuoi account {{site.data.keyword.Bluemix_notm}} e {{site.data.keyword.BluSoftlayer}}, puoi utilizzare il menu hamburger ![Icona Hamburger](../icons/icon_hamburger.svg) per passare tra i dashboard Applicazioni, Servizi o Infrastruttura. Vengono visualizzati dei link alle opzioni di supporto e account e puoi utilizzare il link **Catalogo** per accedere ai servizi {{site.data.keyword.Bluemix_notm}}, di elaborazione e dell'infrastruttura. 
+* Se sei un utente esistente con un account {{site.data.keyword.Bluemix_notm}}, puoi utilizzare il menu hamburger ![Icona Hamburger](../icons/icon_hamburger.svg) per passare tra i dashboard Applicazioni e Servizi. Vengono visualizzati dei link alle opzioni di supporto e account e puoi utilizzare il link **Catalogo** per accedere ai servizi {{site.data.keyword.Bluemix_notm}} e di elaborazione. 
 * Se sei un utente esistente con un account {{site.data.keyword.BluSoftlayer}} e non hai collegato il tuo account a {{site.data.keyword.Bluemix_notm}}, la barra dei menu visualizza i link che erano disponibili in precedenza in  {{site.data.keyword.BluSoftlayer}}, come l'accesso alla guida KnowledgeLayer, le opzioni di contatto, le notifiche, l'apertura di ticket e l'accesso. Inoltre, vengono visualizzati un link al dashboard Infrastruttura e dei link alle opzioni di supporto e account. 
 
 ## Architettura {{site.data.keyword.Bluemix_notm}} Cloud Foundry
@@ -113,9 +113,9 @@ Figura 2. Distribuzione di applicazioni a più regioni
 ## Modalità di funzionamento di {{site.data.keyword.Bluemix_notm}} Cloud Foundry
 {: #howwork}
 
-Quando distribuisci un'applicazione a {{site.data.keyword.Bluemix_notm}} Cloud Foundry, devi configurare {{site.data.keyword.Bluemix_notm}} con una quantità sufficiente di informazioni per supportare l'applicazione. 
+Quando distribuisci un'applicazione a {{site.data.keyword.Bluemix_notm}} Cloud Foundry, devi configurare {{site.data.keyword.Bluemix_notm}} con una quantità sufficiente di informazioni per supportare l'applicazione.
 
-* Per un'applicazione mobile, {{site.data.keyword.Bluemix_notm}} contiene una risorsa che rappresenta il back-end dell'applicazione mobile, ad esempio i servizi utilizzati dall'applicazione mobile per comunicare con un server. 
+* Per un'applicazione mobile, {{site.data.keyword.Bluemix_notm}} contiene una risorsa che rappresenta il back-end dell'applicazione mobile, ad esempio i servizi utilizzati dall'applicazione mobile per comunicare con un server.
 * Per un'applicazione web, devi assicurarti che le informazioni sul runtime e sul framework siano comunicate a {{site.data.keyword.Bluemix_notm}}, in modo che {{site.data.keyword.Bluemix_notm}} possa configurare l'ambiente di esecuzione appropriato per eseguire l'applicazione.
 
 Ogni ambiente di esecuzione, compresi sia quello mobile sia quello web, è isolato dall'ambiente di esecuzione di altre applicazioni. Gli ambienti di esecuzione sono isolati anche se tali applicazioni si trovano sulla stessa macchina fisica. La seguente figura mostra il flusso di base del modo in cui {{site.data.keyword.Bluemix_notm}} Cloud Foundry gestisce la distribuzione di applicazioni:
@@ -129,7 +129,7 @@ Quando crei un'applicazione e la distribuisci a {{site.data.keyword.Bluemix_notm
 * Il carico già sulla macchina
 * I runtime o i framework supportati da tale server virtuale.
 
-Una volta selezionato un server virtuale, su ciascun server virtuale un gestore dell'applicazione installa il framework e il runtime appropriati per l'applicazione. L'applicazione può quindi essere distribuita in tale framework. Una volta completata la distribuzione, le risorse dell'applicazione vengono avviate.
+Una volta selezionato un server virtuale, su ciascun server virtuale un gestore dell'applicazione installa il framework e il runtime appropriati per l'applicazione. Quindi, l'applicazione può essere distribuita in tale framework. Una volta completata la distribuzione, le risorse dell'applicazione vengono avviate.
 
 La seguente figura mostra la struttura di un server virtuale, nota anche come DEA (Droplet Execution Agent), su cui sono distribuite più applicazioni:
 
@@ -172,8 +172,7 @@ seguenti regioni e i seguenti prefissi di regione.
 | Regione Stati Uniti Sud | Dallas, Stati Uniti | ng | api.ng.bluemix.net | console.ng.bluemix.net |
 | Regione Regno Unito | Londra, Inghilterra | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
 | Regione Sydney | Sydney, Australia | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
-
-*Tabella 1. Elenco di regioni {{site.data.keyword.Bluemix_notm}}*
+{: caption="Table 1. {{site.data.keyword.Bluemix_notm}} region list" caption-side="top"}
 
 
 ### Resilienza {{site.data.keyword.Bluemix_notm}}

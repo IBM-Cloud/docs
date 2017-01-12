@@ -35,23 +35,23 @@ Leggi maggiori informazioni sull'utilizzo di questo servizio nella <a href="/doc
 <tr>
 <td><img src="images/authentication_icon
 .png" alt="{{site.data.keyword.amashort}} icona servizio"><br/>{{site.data.keyword.amashort}}</td>
-<td valign="top">Utilizza il servizio {{site.data.keyword.amafull}} per aggiungere funzionalità di sicurezza alla tua applicazione mobile. Puoi configurare l'autenticazione client e l'identità dei fornitori in modo che gli utenti possano accedere all'applicazione con i propri account Google o Facebook.<br/><br/>
-Leggi maggiori informazioni sull'utilizzo di questo servizio nella <a href="/docs/services/mobileaccess/index.html" alt="{{site.data.keyword.amashort}} link documentazione">{{site.data.keyword.amashort}} documentazione</a>.</td>
+<td valign="top">Utilizza il servizio {{site.data.keyword.amafull}} per aggiungere funzionalità di sicurezza alla tua applicazione mobile. Puoi configurare l'autenticazione client e i provider di identità in modo che gli utenti possano accedere all'applicazione con i loro account Google o Facebook esistenti.<br/><br/>
+Leggi maggiori informazioni sull'utilizzo di questo servizio nella documentazione <a href="/docs/services/mobileaccess/index.html" alt="{{site.data.keyword.amashort}} link documentazione">{{site.data.keyword.amashort}}</a>.</td>
 </tr>
 <tr>
 <td><img src="images/MFPFoundation_icon.png" alt="{{site.data.keyword.mobilefoundation_short}} icona servizio"><br/> {{site.data.keyword.mobilefoundation_short}}</td>
 <td valign="top">Utilizza il servizio {{site.data.keyword.mobilefoundation_long}} per velocizzare la configurazione di un ambiente {{site.data.keyword.mfp_full}} da cui puoi sviluppare, testare e operare applicazioni mobili aziendali.<br/><br/>
-Leggi maggiori informazioni sull'utilizzo di questo servizio nella <a href="/docs/services/mobilefoundation/index.html" alt="{{site.data.keyword.mobilefoundation_short}} link documentazione">{{site.data.keyword.mobilefoundation_short}} documentazione</a>.</td>
+Leggi maggiori informazioni sull'utilizzo di questo servizio nella documentazione <a href="/docs/services/mobilefoundation/index.html" alt="{{site.data.keyword.mobilefoundation_short}} link documentazione">{{site.data.keyword.mobilefoundation_short}}</a>.</td>
 </tr>
 <tr>
 <td><img src="images/mqa_icon.png" alt="{{site.data.keyword.mqa}} icona servizio"><br/>{{site.data.keyword.mqa}}</td>
 <td valign="top">Utilizza il servizio {{site.data.keyword.mqafull}} per scoprire e configurare i servizi di qualità mobili per le tue applicazioni. Puoi visualizzare le metriche di qualità di alto livello per le applicazioni mobili per comprendere rapidamente i problemi relativi alle applicazioni su cui stai lavorando. Queste metriche includono informazioni su arresti anomali, bug, feedback e sensazioni degli utenti. Visualizzando queste informazioni per le applicazioni, puoi stabilire se analizzare ulteriormente gli specifici problemi.<br/><br/>
-Leggi maggiori informazioni sull'utilizzo di questo servizio nella <a href="/docs/services/MobileQualityAssurance/index.html" alt="{{site.data.keyword.mqa}} link documentazione">{{site.data.keyword.mqa}} documentazione</a>.</td>
+Leggi maggiori informazioni sull'utilizzo di questo servizio nella documentazione <a href="/docs/services/MobileQualityAssurance/index.html" alt="{{site.data.keyword.mqa}} link documentazione">{{site.data.keyword.mqa}}</a>.</td>
 </tr>
 <tr>
 <td><img src="images/push_icon.png" alt="icona servizio Push Notifications"><br/>{{site.data.keyword.mobilepushshort}}</td>
 <td valign="top">Utilizza il servizio {{site.data.keyword.mobilepushfull}} per inviare e gestire notifiche di push mobili mirate a piattaforme iOS e Android. Questo servizio gestisce l'associazione dei tuoi utenti delle applicazioni ai loro dispositivi e alla loro piattaforma del dispositivo e gestisce l'invio delle notifiche di push ai dispositivi. Con questo servizio, puoi inviare broadcast, unicast (basati su ID utente e ID dispositivo) e tag (o argomenti) basati sulle notifiche di push ai tuoi utenti delle applicazioni mobili.<br/><br/>
-Leggi maggiori informazioni sull'utilizzo di questo servizio nella <a href="/docs/services/mobilepush/index.html" alt="{{site.data.keyword.mobilepushshort}} link documentazione">{{site.data.keyword.mobilepushshort}} documentazione</a>.</td>
+Leggi maggiori informazioni sull'utilizzo di questo servizio nella documentazione <a href="/docs/services/mobilepush/index.html" alt="{{site.data.keyword.mobilepushshort}} link documentazione">{{site.data.keyword.mobilepushshort}}</a>.</td>
 </table>
 
 ## Integrazione dei servizi mobili

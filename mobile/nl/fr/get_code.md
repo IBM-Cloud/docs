@@ -17,11 +17,7 @@ Une fois que vous avez terminé la configuration de votre projet mobile avec les
 projet téléchargé est préconfiguré avec les dépendances aux logiciels SDK
 requises et les données d'identification de chaque fonction configurée.
 
-Vous devez terminer les données d'identification des services services
-qui ne sont pas configurables dans le projet téléchargé. Le fichier
-`README.md` du projet du module de démarrage contient les
-instructions associées. Consultez le fichier `README.md` dans
-un afficheur Markdown afin de terminer la configuration.
+Vous devez terminer les données d'identification des services qui ne sont pas configurables dans le projet téléchargé. Le fichier `README.md` du projet du module de démarrage contient les instructions associées. Consultez le fichier `README.md` dans un afficheur Markdown afin de terminer la configuration.
 
 ### Outils prérequis pour le développeur
 {: #prereq-dev-tools}

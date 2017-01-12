@@ -183,5 +183,15 @@ wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
 
   您看到 hello 動作接收到事件有效負載並傳回預期字串。
 
-您可以建立多個規則，來建立相同觸發程式與不同動作的關聯。觸發程式與建立規則的動作必須在相同的名稱空間中，而不能屬於套件。
-如果您要使用屬於套件的動作，可以將動作複製到名稱空間中。例如：`wsk action create echo --copy /whisk.system/utils/echo`。
+您可以建立多個規則，來建立相同觸發程式與不同動作的關聯。觸發程式及規則不能屬於套件。不過，規則可能與屬於套件的動作相關聯，例如：
+  ```
+  wsk rule create recordLocation locationUpdate /whisk.system/utils/echo
+  ```
+  {: pre}
+
+您也可以搭配使用規則與序列。例如，某人可以建立透過規則 `anotherRule` 所啟動的動作序列 `recordLocationAndHello`。
+  ```
+  wsk action create recordLocationAndHello --sequence /whisk.system/utils/echo,hello
+  wsk rule create anotherRule locationUpdate recordLocationAndHello
+  ```
+  {: pre}

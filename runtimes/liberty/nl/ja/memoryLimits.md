@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-06-10"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # メモリー制限および Liberty ビルドパック
 {: #memory_limits}
-
-最終更新日: 2016 年 6 月 10 日
-{: .last-updated}
 
 Liberty ビルドパックでアプリケーションをデプロイするときには、メモリー限度を指定する必要があります。
 

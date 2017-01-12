@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-17"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 #Supervisión y registro con Cloud Foundry
 {: #monitoringandlogging}
 
-Última actualización: 28 de octubre de 2016
-{: .last-updated}
 
 Al supervisar sus apps y revisar los registros, puede seguir la ejecución de la aplicación y el flujo de datos para comprender mejor su despliegue. Además, puede reducir el tiempo y esfuerzo necesarios para localizar cualquier problema y repararlo.
 {:shortdesc}
@@ -25,7 +24,7 @@ Las apps de {{site.data.keyword.Bluemix}} se pueden distribuir ampliamente (apli
 ##Supervisión y registro de apps de Cloud Foundry
 {: #monitoring_logging_bluemix_apps}
 
-{{site.data.keyword.Bluemix_notm}} tiene un mecanismo de registro incorporado para producir archivos de registro para las apps a medida que se ejecutan. En los registros puede ver los errores, avisos y mensajes informativos que se generan para la app. Además, también puede configurar la app para escribir mensajes de registro en el archivo de registro. Para obtener más información sobre los formatos de registro y cómo ver registros, consulte [Registro de apps que se ejecutan en on Cloud Foundry](#logging_for_bluemix_apps).
+{{site.data.keyword.Bluemix_notm}} tiene un mecanismo de registro incorporado para producir archivos de registro para las apps a medida que se ejecutan. En los registros puede ver los errores, avisos y mensajes informativos que se generan para la app. Además, también puede configurar la app para escribir mensajes de registro en el archivo de registro. Para obtener más información sobre los formatos de registro y cómo ver registros, consulte [Registro de apps que se ejecutan en Cloud Foundry](#logging_for_bluemix_apps).
 
 La supervisión de la app le permite ver y controlar el despliegue de la aplicación. Con la supervisión puede llevar a cabo las siguientes tareas:
 
@@ -38,11 +37,11 @@ Para las operaciones estables de sus despliegues en la plataforma {{site.data.ke
 ###Apps de supervisión en ejecución en Cloud Foundry
 {: #monitoring_bluemix_apps}
 
-Cuando utiliza la infraestructura Cloud Foundry para ejecutar sus apps en {{site.data.keyword.Bluemix_notm}}, desea mantenerse al día con la información del rendimiento (como, por ejemplo, el estado, el uso de recursos y las métricas de tráfico). Con esta información de rendimiento puede tomar decisiones o llevar a cabo acciones según convenga.
+Cuando utiliza la infraestructura Cloud Foundry para ejecutar sus apps en {{site.data.keyword.Bluemix_notm}}, desea mantenerse al día con la disponibilidad de la aplicación y el rendimiento de la aplicación, si se trata de una aplicación basada en web que se visualiza desde un navegador, o un conjunto de API a las que se conectan las aplicaciones móviles. Utilice [Bluemix Availability Monitoring](https://console.ng.bluemix.net/catalog/services/availability-monitoring){:new_window} para supervisar la aplicación desde quince ubicaciones geográficas distintas de todo el mundo.
 
-Para supervisar apps de {{site.data.keyword.Bluemix_notm}}, utilice uno de los siguientes métodos:
+Para supervisar métricas de uso de recursos para las apps de {{site.data.keyword.Bluemix_notm}}, utilice uno de los siguientes métodos:
 
-* Servicios de {{site.data.keyword.Bluemix_notm}}. Monitoring and Analytics ofrece un servicio que puede utilizar para supervisar el rendimiento de sus apps. Además, este servicio también proporciona características como, por ejemplo, análisis de registros. Para obtener más información, consulte [Supervisión y análisis](../services/monana/index.html).
+* Bluemix Monitoring and Analytics ofrece un servicio que puede utilizar para supervisar recursos y obtener un diagnóstico de su aplicación basada en Node, Liberty o Ruby. Para obtener más información, consulte [Supervisión y análisis](/docs/services/monana/index.html).
 * Opciones de terceros. Por ejemplo, [New Relic](http://newrelic.com/){:new_window}.
 
 ###Registro para apps en ejecución en Cloud Foundry
@@ -51,17 +50,15 @@ Para supervisar apps de {{site.data.keyword.Bluemix_notm}}, utilice uno de los s
 Los archivos de registro se crean automáticamente al utilizar la infraestructura Cloud Foundry para ejecutar sus apps en {{site.data.keyword.Bluemix_notm}}. Cuando encuentra errores en cualquier etapa del despliegue al tiempo de ejecución, puede
 comprobar los registros en busca de pistas que pudieran ayudar a solucionar su problema.
 
-###Retención de registros
-{: #log_retention}
-
-En las apps de {{site.data.keyword.Bluemix_notm}} Public Cloud Foundry, los datos de registro se almacenan durante 7 días de forma predeterminada.
 
 <!-- 2016.1.27: original shortdes: Log files are automatically created when you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}. You can view logs from the {{site.data.keyword.Bluemix_notm}} Dashboard, the cf command line interface, or external hosts. You can also filter the logs to see the parts that you are interested in. -->
 
 
 
-###Formato de anotación
+###Formato de registro y retención
 {: #log_format}
+
+En las apps de {{site.data.keyword.Bluemix_notm}} Public Cloud Foundry, los datos de registro se almacenan durante 7 días de forma predeterminada.
 
 Los registros de las apps de {{site.data.keyword.Bluemix_notm}} se muestran en un formato fijo, parecido al siguiente patrón:
 
@@ -131,15 +128,15 @@ Cada entrada de registro contiene cuatro campos. Consulte la siguiente lista par
 
 Puede ver los registros para sus apps de Cloud Foundry en tres lugares:
 
-  * [Panel de control de {{site.data.keyword.Bluemix_notm}}](#viewing_logs_UI){:new_window}
-  * [Interfaz de línea de mandatos](#viewing_logs_cli){:new_window}
-  * [Host de registro externo](#thirdparty_logging){:new_window}
+  * Panel de control de {{site.data.keyword.Bluemix_notm}}
+  * Interfaz de línea de mandatos
+  * Hosts de registro externo
 
 #### Visualización de registros desde el panel de control de {{site.data.keyword.Bluemix_notm}}
 {: #viewing_logs_UI}
 
 Para ver los registros de despliegue o de tiempo de ejecución, realice los pasos siguientes:
-1. Inicie sesión en {{site.data.keyword.Bluemix_notm}}, y a continuación pulse en el mosaico de su app. Se mostrará la página de detalles de la app.
+1. Inicie sesión en {{site.data.keyword.Bluemix_notm}}, y a continuación pulse en el mosaico de su app. Se muestra la página de detalles de la app.
 2. En la barra de navegación, pulse **Registros**.
 
 En la consola **Registros**, puede ver los registros recientes para su app o la parte más reciente de los registros en tiempo real. Además, puede filtrar registros por tipo de registro y canal.
@@ -194,9 +191,18 @@ registros en tiempo real. </div>
 </li></ul>
 
 
-**Nota:** Para obtener información sobre cómo habilitar el registro de aplicación, consulte [Depuración de errores de tiempo de ejecución](../debug/index.html#debugging-runtime-errors).
+**Nota:** Para obtener información sobre cómo habilitar el registro de aplicación, consulte [Depuración de errores de tiempo de ejecución](/docs/debug/index.html#debugging-runtime-errors).
 
+#### Visualización de registros de hosts externos
+{: #viewing_logs_external}
 
+	 
+Cuando se generan los registros, tras un breve retardo, puede ver los mensajes en su host de registros externo, que es parecido a los mensajes
+que ve desde la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} o desde la interfaz de línea de mandatos cf.  Si tiene varias
+instancias de su app, los registros se agregan y puede ver todos los registros de su app. Además, los registros se conservan
+después de una detención anómala de la app, o tras su redespliegue.
+
+**Nota:** Los registros que ve en la interfaz de línea de mandatos no tienen el formato de syslog y es posible que no coincidan exactamente con los mensajes que se muestran en su host de registro externo. 
 
 
 ###Filtrado de registros
@@ -290,19 +296,8 @@ para sustituir *punto_final_registro* por su valor:
 	 
 	 El nombre de la instancia de servicio proporcionado por el usuario.
 	 
-  4. Volver a transferir la app. 
-     Escriba `cf restage appname` para que se apliquen los cambios. 
+  4. Vuelva a transferir la app. Escriba `cf restage appname` para que se apliquen los cambios. 
 
-#### Visualización de registros de hosts externos
-{: #viewing_logs_external}
-
-	 
-Cuando se generan los registros, tras un breve retardo, puede ver los mensajes en su host de registros externo, que es parecido a los mensajes
-que ve desde la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} o desde la interfaz de línea de mandatos cf.  Si tiene varias
-instancias de su app, los registros se agregan y puede ver todos los registros de su app. Además, los registros se conservan
-después de una detención anómala de la app, o tras su redespliegue.
-
-**Nota:** Los registros que ve en la interfaz de línea de mandatos no tienen el formato de syslog y es posible que no coincidan exactamente con los mensajes que se muestran en su host de registro externo. 
 
 ### Ejemplo: Transmisión de registros de aplicación de Cloud Foundry a Splunk 
 {: #splunk}
@@ -401,6 +396,48 @@ source="tcp:5140" index="bluemix" sourcetype="rfc5424_syslog"
 
 Jane ve una secuencia de registros en su interfaz web de Splunk. Aunque la versión de Splunk que Jane instala es Splunk Light, puede mantener 500 MB de registros al día.  
 
+## Registro para apps Cloud Foundry en {{site.data.keyword.Bluemix_dedicated_notm}} y {{site.data.keyword.Bluemix_local_notm}}
+{: #hybrid_apps_logs_ov}
 
+
+En {{site.data.keyword.Bluemix_dedicated_notm}} y {{site.data.keyword.Bluemix_local_notm}}, las apps Cloud Foundry se suministran con registro incorporado. Puede revisar los datos que recopilan las apps en la consola de {{site.data.keyword.Bluemix_notm}}.
+{:shortdesc}
+
+Las apps Cloud Foundry utilizan loggregator de Cloud Foundry para supervisar los registros desde fuera de la app. No es necesario que instale agentes dentro de la app.
+
+### Requisitos de hardware
+
+
+| **Requisito** |    **1 nodo**     | **3 nodos para la alta disponibilidad** |
+|-----------------|-------------------|-------------------|
+| vCPU | 19 | 57 |
+| Memoria | 80 GB | 240 GB |
+| Almacenamiento local | 2,98 TB | 8,94 TB |
+{: caption="Table 1. Logging hardware requirements for {{site.data.keyword.Bluemix_local_notm}}" caption-side="top"}
+
+### Instalación
+
+En {{site.data.keyword.Bluemix_dedicated_notm}} y {{site.data.keyword.Bluemix_local_notm}}, los registros están activos para todas de apps de forma predeterminada. Para obtener más información sobre cómo leer los registros estándares, consulte [Registro de apps que se ejecutan en Cloud Foundry](#logging_for_bluemix_apps). Además, el registro avanzado se puede habilitar en los entornos {{site.data.keyword.Bluemix_dedicated_notm}} y {{site.data.keyword.Bluemix_local_notm}}.
+
+* Para confirmar que el registro avanzado está habilitado en los entornos {{site.data.keyword.Bluemix_dedicated_notm}} entornos y {{site.data.keyword.Bluemix_local_notm}}, siga los pasos del apartado [Visualización de registros](#hybrid_apps_logs_dash). Si no tiene el botón **Vista avanzada**, significa que esta función no está habilitada.
+
+* Para añadir el registro avanzada al entorno, siga los pasos de la documentación de [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) o de [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local). 
+
+### Retención de registros
+
+En las apps de {{site.data.keyword.Bluemix_dedicated_notm}} y {{site.data.keyword.Bluemix_local_notm}} Cloud Foundry, los datos de registro se almacenan durante 30 días de forma predeterminada.
+
+## Visualización de registros para apps Cloud Foundry en {{site.data.keyword.Bluemix_dedicated_notm}} y {{site.data.keyword.Bluemix_local_notm}}
+{: #hybrid_apps_logs_dash}
+
+Puede revisar los registros de las apps que ejecutan en {{site.data.keyword.Bluemix_dedicated_notm}} y {{site.data.keyword.Bluemix_local_notm}}.
+{:shortdesc}
+
+Para ver los registros de una app, siga estos pasos:
+1. Seleccione una app en ejecución.
+2. Pulse **Registros**. En la vista **Registros** puede ver los registros de la app en ejecución.
+4. Pulse el botón **Vista avanzada**. **Vista avanzada** muestra una vista más detallada de los registros mediante Kibana, una herramienta de visualización que utiliza registros y datos con indicación de hora para crear visualizaciones personalizadas. Para obtener más información sobre cómo utilizar la vista avanzada, consulte la documentación de [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html).
+
+Luego puede personalizar un panel de instrumentos de Kibana. Consulte [Personalización de la visualización de registros en un panel de control de Kibana](/docs/containers/monitoringandlogging/container_ml_logs.html#container_ml_dash_logs_custom) para obtener más información.
 
 

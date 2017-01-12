@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  anni: 2016
-ultimo aggiornamento: "26-08-2016"
+  years: 2016
+lastupdated: "2016-08-26"
 
 ---
 
@@ -45,7 +45,7 @@ end
 
 Nella riga di comando, digita `pod install`. Questo comando installa l'SDK per un'applicazione iOS con un'estensione watchOS.  Utilizza il file spazio di lavoro creato da CocoaPods per la tua applicazione, per l'apertura del progetto in Xcode.
 
-Al termine dell'installazione, apri lo spazio di lavoro del tuo progetto. Durante la creazione, potresti visualizzare la seguente avvertenza:
+Al termine dell'installazione, apri lo spazio di lavoro del tuo progetto.  Durante la creazione, potresti visualizzare la seguente avvertenza:
 `Use Legacy Swift Language Version” (SWIFT_VERSION) is required to be configured correctly for targets which use Swift. Use the [Edit > Convert > To Current Swift Syntax…] menu to choose a Swift version or use the Build Settings editor to configure the build setting directly.`
 Questo si verifica se Cocoapods non aggiorna la versione Swift nel progetto Pods.  Per correggere il problema, seleziona il progetto Pods e la destinazione {{site.data.keyword.openwhisk_short}}.  Vai a Build Settings e modifica l'impostazione `Use Legacy Swift Language Version` su `no`. In alternativa, puoi aggiungere le seguenti istruzioni di post installazione alla fine del tuo Podfile:
 
@@ -92,7 +92,7 @@ wsk sdk install iOS
 ```
 {: pre}
 
-Questo comando scarica un file compresso che contiene l'applicazione starter. Nella directory del progetto è presente un podfile.
+Questo comando scarica un file compresso che contiene l'applicazione starter. Nella directory del progetto è presente un Podfile.
 
 Per installare l'SDK, immetti il seguente comando:
 ```

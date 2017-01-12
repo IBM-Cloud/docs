@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-  
+lastupdated: "2016-12-05"  
 
 
 ---
@@ -17,8 +17,6 @@ copyright:
 
 # 管理組織和空間
 {: #orgsspacesusers}
-前次更新：2016 年 10 月 20 日
-{: .last-updated}
 
 身為帳戶擁有者，您可以管理組織，方法是移至**管理組織**頁面。組織管理員也可以使用「管理組織」頁面來管理將他們設為管理員的任何組織。
 {:shortdesc}
@@ -61,7 +59,7 @@ copyright:
 
 您必須聯絡 [{{site.data.keyword.Bluemix_notm}} 支援中心](http://ibm.biz/bluemixsupport){: new_window}，以刪除組織。當您要求支援團隊刪除組織時，會刪除組織內的所有空間、應用程式及服務。
 
-可以將下列[使用者角色](users_roles.html#userrolesinfo)指派給組織中的團隊成員：
+可以將下列[使用者角色](/docs/admin/users_roles.html#userrolesinfo)指派給組織中的團隊成員：
 
 <ul>
 <li>組織管理員</li>
@@ -76,7 +74,7 @@ copyright:
 
 在組織內，您可以使用空間來群組一組應用程式、服務及團隊成員。在 {{site.data.keyword.Bluemix_notm}} 中，空間關聯於特定地區。
 
-將團隊成員新增至組織之後，即可將空間的許可權授與他們。與組織類似，空間也會有一組[使用者角色](users_roles.html#userrolesinfo)，其具有指派給團隊成員的特定許可權：
+將團隊成員新增至組織之後，即可將空間的許可權授與他們。與組織類似，空間也會有一組[使用者角色](/docs/admin/users_roles.html#userrolesinfo)，其具有指派給團隊成員的特定許可權：
 
 <ul>
 <li>空間管理員</li>
@@ -153,16 +151,28 @@ copyright:
 ## 管理配額
 {: #managequota}
 
-身為帳戶擁有者或組織管理員，您可以檢視針對組織所配置及使用的配額。此配額代表建立組織時指派給組織的資源限制。組織空間中的任何應用程式或服務都會影響配額使用。
+身為 {{site.data.keyword.Bluemix_notm}} 帳戶擁有者或組織管理員，您可以檢視針對組織所使用及配置的配額。此配額代表建立組織時指派給組織的資源限制。根據您具有的是試用帳戶還是可入帳帳戶，組織可用的資源會不同。組織空間中的任何應用程式或服務都會影響已配置配額的使用。
 
-若要檢視您組織的配額，請完成下列步驟：
+若要檢視針對組織所使用及配置的配額，請完成下列步驟：
 
 1. 按一下**帳戶** &gt; **管理組織**頁面。
 2. 識別您要檢視其配額的組織，然後按一下**檢視詳細資料**。
 3. 按一下**編輯組織**。
-4. 選取**配額**標籤。
+4. 如果您的空間定義在多個地區中，請選取您要檢視的特定地區。
+5. 按一下**配額**。 
+6. 預設會開啟 **Cloud Foundry** 配額頁面。您可以檢視下列資源的配額詳細資料：
+ * 記憶體
+ * 服務
+ * 方案
+ * 價格
+7. 按一下**容器**，以檢視已使用及可用的容器配額配置。容器配置會根據定價方案而不同。您可以檢視下列資源的配額詳細資料：
+ * 記憶體
+ * 公用 IP
 
-若要更新您組織的配額，您必須開啟支援問題單。如需開啟支援問題單的相關資訊，請參閱[取得客戶支援](../support/index.html#contacting-support)。如需容器配額的相關資訊，請參閱「容器」文件中的[配額](../containers/container_planning_org_ov.html##container_planning_quota)。
+**附註：**{{site.data.keyword.Bluemix_notm}} 雪梨地區尚無法使用容器。 
+
+如需容器的相關資訊，請參閱「容器」文件中的[配額](/docs/containers/container_planning_org_ov.html#container_planning_quota)。
+若要變更配置給組織的配額，您必須開啟支援問題單。如需開啟支援問題單的相關資訊，請參閱[取得客戶支援](/docs/support/index.html#contacting-support)。 
 
 ## 管理網域
 {: #managedomains}

@@ -1,7 +1,8 @@
 ---
 
-copyright: anos: 2016
-
+copyright:
+  years: 2016
+lastupdated: "2016-12-09"
 ---
 
 {:new_window: target="_blank"}
@@ -12,9 +13,6 @@ copyright: anos: 2016
 
 # Introdução ao {{site.data.keyword.composeForEtcd}}
 {: #getting-started-with-compose-for-etcd}
-
-Última atualização: 20 de setembro de 2016
-{: .last-updated}
 
 etcd é um armazenamento de valores de chave que contém os dados sempre corretos necessários para coordenar e gerenciar seu cluster de servidores para gerenciamento de
 configuração de servidor distribuído. O etcd usa o algoritmo RAFT de consenso para
@@ -61,8 +59,7 @@ Campo de nome|Descrição
 ----------|-----------
 `ca_certificate_base64`|Um certificado autoassinado que é usado para
 confirmar se um app está se conectando ao servidor apropriado. O certificado é codificado
-em base64. Deve-se decodificar a chave antes de usá-la, conforme mostrado no
-app de amostra.
+em base64. Deve-se decodificar a chave antes de usá-la, conforme mostrado no aplicativo de amostra.
 `deployment_id`|Um identificador interno para o serviço conforme criado
 no Compose.
 `db_type`|O tipo de banco de dados que é oferecido pelo serviço; nesse caso, `etcd`.
@@ -70,6 +67,8 @@ no Compose.
 `uri`|O URI a ser usado na conexão com o serviço. `uri`
 inclui o esquema (`amqps:), o nome do usuário administrativo e a senha, o nome do
 host do servidor, o número da porta à qual se conectar e o `nome do vhost.
+{: caption="Table 1. {{site.data.keyword.composeForEtcd}} credentials" caption-side="top"}
+
 # Links Relacionados
 {: #rellinks}
 

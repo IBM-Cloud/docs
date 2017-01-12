@@ -2,18 +2,18 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-11-06"
+
 ---
 
 # À propos de {{site.data.keyword.amashort}}
 {: #mca-overview}
 
 
-Le service {{site.data.keyword.amafull}} fournit des services d'authentification et de surveillance aux applications mobiles et Web accédant au
+Le service {{site.data.keyword.amafull}} fournit un service d'authentification aux applications mobiles et Web accédant au
 ressources de cloud hébergées sur {{site.data.keyword.Bluemix_notm}}.
 
-Vous pouvez utiliser le service {{site.data.keyword.amashort}} pour protéger les applications Node.js et Liberty for Java&trade; hébergées sur {{site.data.keyword.Bluemix_notm}} avec différents types d'authentification. L'instrumentation de vos applications mobiles avec le SDK de {{site.data.keyword.amashort}} vous permet d'utiliser les capacités d'authentification du service {{site.data.keyword.amashort}}. Les
-journaux côté client sont collectés automatiquement et envoyés au service {{site.data.keyword.amashort}} à la demande. Utilisez le tableau de bord
+Vous pouvez utiliser le service {{site.data.keyword.amashort}} pour protéger les applications Node.js et Liberty for Java&trade; hébergées sur {{site.data.keyword.Bluemix_notm}} avec différents types d'authentification. L'instrumentation de vos applications mobiles avec le SDK de {{site.data.keyword.amashort}} vous permet d'utiliser les capacités d'authentification du service {{site.data.keyword.amashort}}. Utilisez le tableau de bord
 {{site.data.keyword.amashort}} pour configurer les divers types d'authentification et examiner les données
 collectées et envoyées par le SDK côté client.
 
@@ -22,16 +22,16 @@ collectées et envoyées par le SDK côté client.
 ## Composants
 {: #components}
 
-* **Tableau de bord {{site.data.keyword.amashort}}** : Configurer différents types d'authentification et surveiller les performances, les fonctions d'analyse, les statistiques d'utilisation et les journaux d'unité des applications mobiles.
+* **Tableau de bord {{site.data.keyword.amashort}}** : configurez différents types d'authentification
 * **SDK client de {{site.data.keyword.amashort}}** : Instrumenter les applications mobiles pour leur permettre d'utiliser les fonctionnalités {{site.data.keyword.amashort}}. Plateformes
-prises en charge : iOS 8+, Android 4+ et Cordova.
+prises en charge : iOS 8+, Android 4+, Cordova et applications Web.
 * **SDK serveur de {{site.data.keyword.amashort}}** : Protéger les ressources hébergées sur {{site.data.keyword.Bluemix_notm}}. Les contextes d'exécution pris en charge actuellement sont Node.js et Liberty for Java&trade;.
 
 ## Types d'authentification
 {: #authtypes}
 Vous pouvez utiliser les types d'authentification suivants dans votre appli mobile :
-* **Facebook** : Utilisez Facebook en tant que fournisseur d'identité. Vos utilisateurs se connectent à l'appli mobile avec leurs données d'identification Facebook.
-* **Google** : Utilisez Google en tant que fournisseur d'identité. Vos utilisateurs se connectent à l'appli mobile avec leurs données d'identification Google+.
+* **Facebook** : Utilisez Facebook en tant que fournisseur d'identité. Vos utilisateurs se connectent à l'appli mobile ou Web avec leurs données d'identification Facebook.
+* **Google** : Utilisez Google en tant que fournisseur d'identité. Vos utilisateurs se connectent à l'appli mobile ou Web avec leurs données d'identification Google+.
 * **Personnalisée**: Créez votre propre fournisseur d'identité. Vous contrôlez entièrement les types d'informations collectées et validées.
 
 ## Présentation de l'architecture
@@ -73,7 +73,7 @@ mobile et les fournisseurs d'identité.
 * La réponse à la demande d'authentification obtenue est envoyée au service {{site.data.keyword.amashort}}.
 * Le service valide la réponse à la demande d'authentification auprès du fournisseur d'identité concerné (Facebook/Google/authentification personnalisée).
 * Si la validation aboutit, le service {{site.data.keyword.amashort}} génère un en-tête d'autorisation et le renvoie au SDK client de
-{{site.data.keyword.amashort}}. L'en-tête d'autorisation contient deux jetons : un jeton qui contient des informations sur les droits d'accès, et un autre jeton qui contient des informations sur l'utilisateur, le périphérique et l'application.
+{{site.data.keyword.amashort}}. L'en-tête d'autorisation contient deux jetons : un jeton qui contient des informations sur les droits d'accès, et un autre jeton qui contient des informations sur l'utilisateur, l'appareil et l'application.
 * A partir de ce moment, toutes les demandes faites avec le SDK client de {{site.data.keyword.amashort}} contiennent un nouvel en-tête d'autorisation.
 * Le SDK client de {{site.data.keyword.amashort}} renvoie automatiquement la demande d'origine qui avait déclenché le flux d'autorisation.
 * Le SDK serveur de {{site.data.keyword.amashort}} extrait l'en-tête d'autorisation de la demande, la valide auprès du service {{site.data.keyword.amashort}} et donne l'accès à la ressource de back end.

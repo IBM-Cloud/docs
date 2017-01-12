@@ -1,3 +1,11 @@
+---
+
+copyright:
+  years: 2016
+lastupdated: "2016-11-21"
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -5,14 +13,11 @@
 
 # Introdução ao Insights for Twitter {: #insights_twitter_overview}
 
-*Última atualização: 13 de maio de 2016*
-{: .last-updated}
-
 Use {{site.data.keyword.twitterfull}} para incorporar o conteúdo do Twitter
-a partir dos fluxos do Twitter [Decahose](http://support.gnip.com/apis/firehose/overview.html){: new_window} ou [PowerTrack](http://support.gnip.com/apis/powertrack/overview.html){: new_window} aos aplicativos {{site.data.keyword.Bluemix}}.
+a partir dos fluxos do Twitter [Decahose](http://support.gnip.com/gnip2.0/){: new_window} ou [PowerTrack](http://support.gnip.com/apis/powertrack2.0/){: new_window} aos aplicativos {{site.data.keyword.Bluemix}}.
 {:shortdesc}
 
-Para iniciar a utilização do {{site.data.keyword.twittershort}}, crie primeiramente seu aplicativo da web do Bluemix com um tempo de execução do tipo Liberty for Java e, em seguida, inclua o serviço {{site.data.keyword.twittershort}} no app. Quando o serviço {{site.data.keyword.twittershort}} estiver ligado ao app, a instância de serviço será provisionada com credenciais exclusivas. Seu app usa essas credenciais com APIs REST para procurar e consumir conteúdo do Twitter. Siga estas etapas para recuperar as credenciais de VCAP_SERVICES e integrar a instância de serviço ao app.
+Para começar a usar o {{site.data.keyword.twittershort}}, primeiro crie seu aplicativo da Web do Bluemix com um tempo de execução como o Liberty for Java, em seguida, inclua o serviço {{site.data.keyword.twittershort}} em seu app. Quando o serviço {{site.data.keyword.twittershort}} estiver ligado ao seu app, a instância de serviço será provisionada com credenciais exclusivas. Seu app usa essas credenciais com APIs REST para procurar e consumir conteúdo do Twitter.  Siga estas etapas para recuperar as credenciais de VCAP_SERVICES e integrar a instância de serviço ao app.
 
 1. Navegue para a página de visão geral do seu aplicativo.
 2. Acesse a seção **Variáveis de Ambiente**. As informações de `VCAP_SERVICES` para cada um de seus serviços são exibidas.
@@ -37,42 +42,19 @@ Para iniciar a utilização do {{site.data.keyword.twittershort}}, crie primeira
 }
 ```
 
-<!--
-## Adding Insights for Twitter to your application {: #adding_twitter}
-
-The following instructions guide you through the process of creating an application, binding the application to the {{site.data.keyword.twittershort}} service, and retrieving the service credentials to interact with REST API operations in the provided API reference documentation.
-
-### Create an application
-For demonstration purposes, you'll create an application using the Liberty for Java&trade;  runtime, but the general process described below can be applied to other runtimes. If you don't have an existing application, click **CREATE AN APP** in the dashboard. When asked to confirm the type of app, click **WEB**.
-
-1. Open the **Catalog** menu.
-2. From the **Runtimes** section, click **Liberty for Java**.
-3. Click **Create**.
-4. In the **App Name** field, specify the name of your app.
-5. Click **Finish**. Wait for your application to provision.
-
-### Add the Insights for Twitter service
-Follow these steps to add the {{site.data.keyword.twittershort}} service to your app.
-
-1. Open the **Catalog** menu.
-2. From the **Data & Analytics** section, click the {{site.data.keyword.twittershort}} tile.
-3. In the **App** field, select the name of your app.
-4. Click **Create**.
-5. When prompted, click **Restage** to restart your application.
--->
-
 # rellinks
 {: #rellinks}
-## amostras
+## SAMPLEs
 {: #samples}
 * [Demo de procura do decahose interativo](https://cdetestapp.mybluemix.net/){: new_window}
 * [developerWorks: tutorial e código-fonte do demo de procura do decahose](http://www.ibm.com/developerworks/cloud/library/cl-twitter-search-insights-bluemix-trs/index.html){: new_window}
 * [Analisando os dados de bilheteria de "Sniper americano" (YouTube)](https://www.youtube.com/watch?v=Gfk5quglXvI){: new_window}
 * [Aulas práticas em laboratório do Places Insights](https://github.com/IBM-Bluemix/places-insights-lab){: new_window}
 
-## API
+## api
 {: #api}
-* [API REST](https://cdeservice.{APPDomain}/rest-api/){: new_window}
+* [API REST
+](https://cdeservice.{APPDomain}/rest-api/){: new_window}
 
 ## tempos de execução compatíveis
 {: #buildpacks}
@@ -82,7 +64,8 @@ Follow these steps to add the {{site.data.keyword.twittershort}} service to your
 * [PHP](https://console.{DomainName}/docs/runtimes/php/index.html){: new_window}
 * [Python](https://console.{DomainName}/docs/runtimes/python/index.html){: new_window}
 * [Ruby](https://console.{DomainName}/docs/runtimes/ruby/index.html){: new_window}
-* [Swift](https://console.{DomainName}/docs/runtimes/swift/index.html){: new_window}
+* [Swift
+](https://console.{DomainName}/docs/runtimes/swift/index.html){: new_window}
 * [Tomcat ](https://console.{DomainName}/docs/runtimes/tomcat/index.html){: new_window}
 
 ## gerais

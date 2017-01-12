@@ -2,15 +2,16 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-11-14"
+
 ---
-{:new_window: target="_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
+
 
 
 # Cómo empezar con {{site.data.keyword.objectstorageshort}} {: #getting-started-with-object-storage}
 
-*Última actualización: 19 de octubre de 2016*
-{: .last-updated}
 
 {{site.data.keyword.objectstoragefull}} proporciona almacenamiento de datos de nube no estructurado. Puede almacenar y acceder al contenido, al igual que crear y conectarse de forma interactiva a las aplicaciones y servicios.
 {: shortdesc}
@@ -23,15 +24,14 @@ Algunos casos de uso comunes para el servicio de {{site.data.keyword.objectstora
 * Función de repositorio central
 
 
-
 {{site.data.keyword.objectstorageshort}} público de {{site.data.keyword.Bluemix_notm}} proporciona acceso a una cuenta Swift {{site.data.keyword.objectstorageshort}} completa para gestionar los datos. El cifrado del lado del proveedor no se proporciona.
 
 
 1.	Suministre la instancia de servicio desde el catálogo de {{site.data.keyword.Bluemix_notm}}. Configure la instancia y pulse **Crear**. Si al principio ha seleccionado la opción **Dejar sin enlazar** en el campo **App**, aún puede enlazar la instancia de servicio a su aplicación {{site.data.keyword.Bluemix_notm}} más tarde.
 2. En el panel de control de la instancia del servicio, cree un contenedor para empezar a almacenar objetos.
-3. Añada un archivo al contenedor o grupo desde el menú desplegable **Acciones**.
+3. Añada un archivo al contenedor desde el menú desplegable **Acciones**.
 4. Para probar el acceso a los objetos, pulse **Descargar** y revise el archivo.
-5. Cuando esté listo para conectar la instancia a una aplicación, configure las credenciales de servicio y [enlace el servicio](https://new-console.stage1.ng.bluemix.net/docs/services/reqnsi.html#add_service).
+5. Cuando esté listo para conectar la instancia a una aplicación, configure las credenciales de servicio y [enlace el servicio](/docs/services/reqnsi.html#add_service).
 
 
 

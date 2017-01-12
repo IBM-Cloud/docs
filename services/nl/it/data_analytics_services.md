@@ -1,13 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016
+lastupdated: "2016-11-03"
 
 ---
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 
 # Servizi Data & Analytics
 {: #data_analytics_services}
-
-*Ultimo aggiornamento: 7 aprile 2016*

@@ -129,9 +129,7 @@ facteurs, dont :
 * La charge actuelle de la machine
 * Les environnements d'exécution ou les infrastructures pris en charge par le serveur virtuel
 
-Une fois le serveur virtuel choisi, un gestionnaire d'application sur chaque serveur virtuel installe l'infrastructure et l'environnement
-d'exécution requis pour
-l'application. Celle-ci peut alors être déployée
+Une fois le serveur virtuel choisi, un gestionnaire d'application sur chaque serveur virtuel installe l'infrastructure et l'environnement d'exécution requis pour l'application. Celle-ci peut alors être déployée
 dans cette infrastructure. Ensuite, les artefacts d'application sont démarrés.
 
 La figure suivante présente la structure d'un serveur virtuel, aussi appelé agent DEA (Droplet Execution Agent), sur lequel

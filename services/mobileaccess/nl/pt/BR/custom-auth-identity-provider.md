@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016 lastupdated: "2016-10-02"
+  years: 2015, 2016
+lastupdated: "2016-11-07"
+
 ---
+
+{:codeblock:.codeblock}
 
 # Criando um provedor de identidade customizado
 {: #custom-create}
@@ -17,7 +21,7 @@ Para criar um provedor de identidade customizado, desenvolva um aplicativo da we
 o {{site.data.keyword.amashort}} chama essa API, ele sempre fornece o GUID
 do app {{site.data.keyword.Bluemix}} (`applicationGUID`).
 * `realm_name`: especifica o nome do domínio customizado definido no painel do {{site.data.keyword.amashort}}.
-* `request_type`: especifica um de:
+* `request_type`: especifica um destes:
 	* `startAuthorization`: especifica uma primeira etapa do processo de autenticação. O provedor de identidade customizado deve responder com um status "desafio", "sucesso" ou "falha".
 	* `handleChallengeAnswer`: manipula uma resposta do desafio de autenticação do cliente móvel.
 
@@ -25,6 +29,7 @@ do app {{site.data.keyword.Bluemix}} (`applicationGUID`).
 {: #custom-startauthorization}
 
 `POST <base_url>/apps/<tenant_id>/<realm_name>/startAuthorization`
+{: codeblock}
 
 A API `startAuthorization` é usada como uma primeira etapa do processo de autenticação. Um provedor de identidade customizado deve responder com um status "desafio", "sucesso" ou "falha".
 
@@ -38,13 +43,14 @@ Para permitir flexibilidade máxima do processo de autenticação, um provedor d
     }
 }
 ```
+{: codeblock}
 
 Um provedor de identidade customizado pode responder com um desafio de autenticação ou com sucesso ou falha imediato. O status de HTTP da resposta deve ser `HTTP 200` e o JSON de resposta deve conter as propriedades a seguir:
 
 * `status`: especifica `success`, `challenge` ou `failure` da solicitação.
 * `stateId` (opcional): especifica um identificador de sequência gerado aleatoriamente para identificar a sessão de autenticação com o cliente móvel. Esse atributo poderá ser omitido se o provedor de identidade customizado não armazenar nenhum estado.
 * `challenge`: especifica um objeto JSON que representa um desafio de autenticação a ser enviado de volta para o cliente móvel. Esse atributo só será enviado para o cliente se o status estiver configurado como `challenge`.
-* `userIdentity`: especifica um objeto JSON que representa uma identidade do usuário.  A identidade do usuário consiste em propriedades, como `userName`, `displayName` e atributos.  Para obter mais informações, veja [Objeto de identidade do usuário](#custom-user-identity). Esta propriedade só será enviada para o cliente móvel se o status estiver configurado como `success`.
+* `userIdentity`: especifica um objeto JSON que representa uma identidade do usuário.  A identidade do usuário consiste em propriedades, como `userName`, `displayName` e atributos.  Para obter mais informações, consulte [Objeto de identidade do usuário](#custom-user-identity). Esta propriedade só será enviada para o cliente móvel se o status estiver configurado como `success`.
 
 Por exemplo:
 
@@ -58,11 +64,13 @@ Por exemplo:
 	}
 }
 ```
+{: codeblock}
 
 ## `handleChallengeAnswer` API
 {: #custom-handleChallengeAnswer}
 
 `POST <base_url>/apps/<tenant_id>/<realm_name>/handleChallengeAnswer`
+{: codeblock}
 
 A API `handleChallengeAnswer` manipula uma resposta do desafio de autenticação do cliente móvel. Como a API `startAuthorization`, a API `handleChallengeAnswer` responde com o status `challenge`, `success` ou `failure`.
 
@@ -83,6 +91,7 @@ Da mesma forma que a solicitação `startAuthorization`, o provedor de identidad
  	}
 }
 ```
+{: codeblock}
 
 A resposta de uma API `handleChallengeAnswer` deve ter a mesma estrutura que a resposta da API `startAuthorization`.
 
@@ -106,6 +115,7 @@ Uma resposta a uma solicitação de autenticação bem-sucedida deve incluir um 
     }
 }
 ```
+{: codeblock}
 
 O objeto de identidade do usuário é usado pelo serviço {{site.data.keyword.amashort}} para gerar um token de ID que é enviado para o cliente móvel como parte do cabeçalho de autorização. Após a autenticação bem-sucedida, o cliente móvel possui acesso completo ao objeto de identidade do usuário.
 
@@ -116,7 +126,7 @@ Cada solicitação do serviço {{site.data.keyword.amashort}} para um provedor d
 implementado com o Node.js ou o Liberty for Java&trade; e executado no
 {{site.data.keyword.Bluemix_notm}}.
 
-O cabeçalho de autorização contém informações sobre o cliente móvel e o app móvel que acionou o processo de autenticação. É possível usar o contexto de segurança para recuperar esses dados. Para obter mais informações, veja [Protegendo recursos](protecting-resources.html).
+O cabeçalho de autorização contém informações sobre o cliente móvel e o app móvel que acionou o processo de autenticação. É possível usar o contexto de segurança para recuperar esses dados. Para obter mais informações, consulte [Protegendo recursos](protecting-resources.html).
 
 ## Implementação de amostra do provedor de identidade customizado
 {: #custom-sample}

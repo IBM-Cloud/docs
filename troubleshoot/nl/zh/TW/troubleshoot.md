@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-10-20"
 
 
 ---
@@ -14,8 +16,6 @@ copyright:
 # 疑難排解
 {: #troubleshooting}
 
-前次更新：2016 年 10 月 20 日
-{: .last-updated}
 
 如果您遇到 {{site.data.keyword.Bluemix}} 問題，則可以執行疑難排解作業來判定要採取的更正動作。
 

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-06-10"
 
 ---
 
@@ -11,9 +12,6 @@ copyright:
 
 # Buildpack-Standardwerte
 {: #buildpack_defauts}
-
-Letzte Aktualisierung: 10. Juni 2016
-{: .last-updated}
 
 Das Liberty-Buildpack wird in Bluemix häufig aktualisiert. Jedes Release kann Sicherheitskorrekturen oder Feature-Erweiterungen enthalten.
 

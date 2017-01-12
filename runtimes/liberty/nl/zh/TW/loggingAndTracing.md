@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-09"
 
 ---
 
@@ -11,9 +12,6 @@ copyright:
 
 # 記載和追蹤
 {: #logging_tracing}
-
-前次更新：2016 年 6 月 21 日
-{: .last-updated}
 
 ## 日誌檔
 {: #log_files}
@@ -32,10 +30,54 @@ $ cf files <yourappname> logs/messages.log
 
 在 IBM Bluemix 使用者介面中，有 trace 及 dump 功能。
 * 使用 Trace 可以檢視及更新執行中之應用程式實例上的 Liberty 記載 traceSpecification。
-* 使用 Dump 可以在執行中的應用程式實例上建立及操作執行緒與資料堆傾出。
+* 使用 Dump 可以在執行中應用程式實例上建立執行緒與資料堆傾出。
 
 若要執行此動作，請在使用者介面中選取 Liberty 應用程式。在導覽中的「運行環境」種類中，您可以開啟實例詳細資料。
 請選取一個或多個實例。在「動作」功能表中，您可以選擇 TRACE 或 DUMP。
+
+## 下載傾出檔案
+{: #download_dumps}
+
+<strong>必要條件：</strong>
+* [安裝 CF CLI](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html)
+* 如果您的應用程式在 Diego 中執行，請[安裝 Diego-Enabler 外掛程式](https://github.com/cloudfoundry-incubator/Diego-Enabler)
+
+<strong>如果您的應用程式在 DEA 中執行，請使用下列步驟：</strong>
+  
+1. 取得 app_guid
+```
+$ cf app <app_name> --guid
+```
+
+2. 下載傾出檔案
+```
+$ cf curl /v2/apps/<app_guid>/instances/<instance_id>/files/dumps/<dump_file_name> --output <local_dump_file_name>
+```
+
+<strong>如果您的應用程式在 Diego 中執行，請使用下列步驟：</strong>
+  
+1. 取得 app_guid
+```
+$ cf app <app_name> --guid
+```
+
+2. 取得 app_ssh_endpoint（主機和埠）及 app_ssh_host_key_fingerprint
+```
+$ cf curl /v2/info
+```
+
+3. 取得 scp 指令的 ssh-code
+```
+$ cf ssh-code
+```
+
+4. scp 遠端傾出檔案到本端，並在提示輸入密碼時使用 ssh-code
+```
+$ scp -P <app_ssh_endpoint_port> -o User=cf:<app_guid>/<instance_id> <app_ssh_endpoint_host>:/home/vcap/dumps/<dump_file_name> <local_dump_file_name>
+```
+
+如需詳細資料，請參閱[使用 SSH 存取應用程式](https://docs.cloudfoundry.org/devguide/deploy-apps/ssh-apps.html)
+
 
 # 相關鏈結
 {: #rellinks}
@@ -43,3 +85,4 @@ $ cf files <yourappname> logs/messages.log
 {: #general}
 * [Liberty 運行環境](index.html)
 * [Liberty 設定檔概觀](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+

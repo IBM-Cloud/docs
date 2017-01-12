@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-06"
 
 ---
 
@@ -11,9 +12,13 @@ copyright:
 # ASP.NET Core ビルドパックに対する最新の更新
 {: #latest_updates}
 
-最終更新日: 2016 年 8 月 26 日
 
 aspnet ビルドパックの最新更新のリスト。
+
+## 2016 年 10 月 10 日: ASP.NET Core ビルドパック v1.0.1-20161005-1225 の更新
+
+* .NET Core 1.0.1 のサポートの追加
+* NuGet パッケージのキャッシュ時にデプロイメントが失敗する原因になった偶発的な問題の修正
 
 ## 2016 年 8 月 31 日: 更新された ASP.NET Core ビルドパック v1.0-20160826-1345
 
@@ -47,7 +52,7 @@ aspnet ビルドパックの最新更新のリスト。
 * このバージョンのビルドパックは Beta 7 DNX の変更に対応しており、以下のカスタム開始コマンドを使用して、以前のベータ版に依存するアプリケーションを実行できます。
 
 ```
-dnx src/dotnetstarter kestrel --server.urls http://${VCAP_APP_HOST}:${PORT}
+   dnx src/dotnetstarter kestrel --server.urls http://${VCAP_APP_HOST}:${PORT}
 ```
 {: codeblock}
 

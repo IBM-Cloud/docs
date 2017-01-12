@@ -14,7 +14,8 @@ lastupdated: "2016-10-13"
 {: #projects_code}
 
 Vous pouvez utiliser un [module de démarrage pour le code](starters.html#Code_Starter) dans le tableau de bord {{site.data.keyword.Bluemix}} Mobile afin de créer un projet dans l'environnement {{site.data.keyword.Bluemix_notm}}. Cette procédure ne s'applique pas
-aux projets qui utilisent les modules de démarrage pour l'interface utilisateur. Pour obtenir les instructions relatives aux modules de démarrage pour l'interface utilisateur, voir [Création d'un projet avec un  module de démarrage pour l'interface utilisateur](projects_ui.html).  {:shortdesc}
+aux projets qui utilisent les modules de démarrage pour l'interface utilisateur. Pour obtenir les instructions relatives aux modules de démarrage pour l'interface utilisateur, voir [Création d'un projet avec un  module de démarrage pour l'interface utilisateur](projects_ui.html). 
+{:shortdesc}
 
 Effectuez les étapes suivantes pour créer un projet avec un module de démarrage pour le code :
 
@@ -45,7 +46,7 @@ leur utilisation, voir [Modules de démarrage](starters.html).
 	5. Entrez le nom de votre projet et sélectionnez
 **Créer**.
 	
-2. Effectuez vos sélections dans l'écran **Présentation du projet**. Cet écran affiche des informations sur votre projet, ainsi que les services facultatifs que vous pouvez y ajouter, comme Notifications push et Authentification.  
+2. Effectuez vos sélections dans l'écran **Présentation du projet**.  Cet écran affiche des informations sur votre projet, ainsi que les services facultatifs que vous pouvez y ajouter, comme Notifications push et Authentification.  
 
 	1. Facultatif : sélectionnez **Ajouter** pour
 ajouter un des services répertoriés à votre projet. Editez le **Nom

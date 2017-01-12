@@ -1,13 +1,14 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-02"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
+
 {:shortdesc: .shortdesc}
 {:screen:.screen}
-
+{:codeblock:.codeblock}
 
 
 # Configuring custom authentication for your {{site.data.keyword.amashort}} Android app
@@ -52,6 +53,7 @@ If you have an Android app instrumented with the {{site.data.keyword.amashort}} 
     	// other dependencies  
 	}
 	```
+	{: codeblock}
 
 1. Synchronize your project with Gradle. Click **Tools > Android > Sync Project with Gradle Files**.
 
@@ -61,16 +63,18 @@ Add the internet access permission under the `<manifest>` element:
 	```XML
 	<uses-permission android:name="android.permission.INTERNET" />
 	```
+	{: codeblock}
 
 1. Initialize the SDK.  
 	A common, though not mandatory, place to put the initialization code is in the `onCreate` method of the main activity in your Android application.
 
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
-```
+	```
+	{: codeblock}
 
 Replace the `BMSClient.REGION_UK` with the {{site.data.keyword.amashort}} region. For more information on obtaining these values see  [Before you begin](#before-you-begin)).
-	
+
 
 ## AuthenticationListener interface
 {: #custom-android-authlistener}
@@ -84,6 +88,7 @@ Call this method when a custom authentication challenge is received from the {{s
 ```Java
 void onAuthenticationChallengeReceived(AuthenticationContext authContext, JSONObject challenge, Context context);
 ```
+{: codeblock}
 
 
 #### Arguments
@@ -101,6 +106,7 @@ Call this method after a successful authentication. The arguments include the An
 ```Java
 void onAuthenticationSuccess(Context context, JSONObject info);
 ```
+{: codeblock}
 
 ### onAuthenticationFailure method
 {: #custom-android-authlistener-onfail}
@@ -108,6 +114,7 @@ Call this method after authentication fails. The arguments include Android Conte
 ```Java
 void onAuthenticationFailure(Context context, JSONObject info);
 ```
+{: codeblock}
 
 ## AuthenticationContext interface
 {: #custom-android-authcontext}
@@ -117,10 +124,12 @@ The `AuthenticationContext` is supplied as an argument to the `onAuthenticationC
 ```Java
 void submitAuthenticationChallengeAnswer(JSONObject answer);
 ```
+{: codeblock}
 
 ```Java
 void submitAuthenticationFailure (JSONObject info);
 ```
+{: codeblock}
 
 ## Sample implementation of a custom AuthenticationListener
 {: #custom-android-samplecustom}
@@ -180,6 +189,7 @@ public class CustomAuthenticationListener implements AuthenticationListener {
 	}
 }
 ```
+{: codeblock}
 
 ## Registering a custom AuthenticationListener
 {: #custom-android-register}
@@ -187,16 +197,17 @@ public class CustomAuthenticationListener implements AuthenticationListener {
 After you create a custom AuthenticationListener, register it with `BMSClient` before you start using the listener. Add the following code to your application. This code must be called before you send any requests to your protected resources.
 
 ```Java
-MCAAuthorizationManager mcaAuthorizationManager = 
+MCAAuthorizationManager mcaAuthorizationManager =
       MCAAuthorizationManager.createInstance(this.getApplicationContext(),"<MCAServiceTenantId>");
 mcaAuthorizationManager.registerAuthenticationListener(realmName, new CustomAuthenticationListener());
 BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 
 ```
+{: codeblock}
 
 
 In the code:
-* Replace `MCAServiceTenantId` with the **TenantId** value (see [Before you begin](##before-you-begin)). 
+* Replace `MCAServiceTenantId` with the **TenantId** value (see [Before you begin](##before-you-begin)).
 * Use the `realmName` that you specified in the {{site.data.keyword.amashort}} dashboard (see [Configuring custom authentication](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).
 
 
@@ -209,7 +220,7 @@ After the client SDK is initialized and a custom AuthenticationListener is regis
 You must have an application that has a resource that is protected by {{site.data.keyword.amashort}} at the `/protected` endpoint.
 
 
-1. Send a request to the protected endpoint (`{applicationRoute}/protected`) of your mobile back-end application from your browser, for example `http://my-mobile-backend.mybluemix.net/protected`. For information on obtaining the `{applicationRoute}` value, see   [Before you begin](#before-you-begin). 
+1. Send a request to the protected endpoint (`{applicationRoute}/protected`) of your mobile back-end application from your browser, for example `http://my-mobile-backend.mybluemix.net/protected`. For information on obtaining the `{applicationRoute}` value, see   [Before you begin](#before-you-begin).
 
 1. The `/protected` endpoint of a mobile back-end application that is created with the {{site.data.keyword.mobilefirstbp}} boilerplate is protected with {{site.data.keyword.amashort}}. The endpoint can  be accessed by only mobile applications that are instrumented with the {{site.data.keyword.amashort}} client SDK. As a result, an `Unauthorized` message displays in your  browser.
 
@@ -234,8 +245,9 @@ You must have an application that has a resource that is protected by {{site.dat
 			}
 		}
 	});
-```
-	
+	```
+	{: codeblock}
+
 1. 	When your request succeeds, the following output is in the LogCat tool:
 
 	![image](images/android-custom-login-success.png)
@@ -245,6 +257,7 @@ You must have an application that has a resource that is protected by {{site.dat
  ```Java
  MCAAuthorizationManager.getInstance().logout(getApplicationContext(), listener);
  ```
+ {: codeblock}
 
 
  If you call this code after a user is logged in, the user is logged out. When the user tries to log in again, they must answer the challenge that is received from the server again.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-12-09"
 ---
 
 {:new_window: target="_blank"}
@@ -14,15 +14,12 @@ copyright:
 # Guía de inicio con Compose for Elasticsearch
 {: #getting-started-with-compose-for-elasticsearch}
 
-Última actualización: 20 de septiembre de 2016
-{: .last-updated}
-
 {{site.data.keyword.composeForElasticsearch_full}} combina la potencia de un motor de búsqueda de texto completo con la fuerza de indexación de una base de datos de documentos JSON. Juntos, crean una herramienta potente para el análisis de datos enriquecidos en grandes volúmenes de datos. Con Elasticsearch, su búsqueda se puede puntuar para su exactitud, permitiéndole indagar en el conjunto de datos para las coincidencias casi exactas que no puede conseguir.
 {:shortdesc}
 
 **Nota:** Cualquier instancia de servicio de Compose proporcionada antes del 14 de septiembre de 2016 que siga activa se puede seguir utilizando y se puede acceder a ella directamente en [https://www.compose.com/](https://www.compose.com). Se puede acceder directamente a cualquier instancia de servicio de Compose que se proporcione desde este momento en adelante y se utilizará dentro de la cuenta de Bluemix.
 
-Finalice estos pasos para iniciarse a {{site.data.keyword.composeForElasticsearch}}:
+Siga estos pasos para iniciarse a {{site.data.keyword.composeForElasticsearch}}:
 
 1. [Cree una instancia de {{site.data.keyword.composeForElasticsearch}}](https://console.ng.bluemix.net/catalog/services/compose-for-elasticsearch/).
 
@@ -46,6 +43,7 @@ Nombre de campo|Descripción
 `deployment_id`|Un identificador interno para el servicio, tal como se ha creado en Compose.
 `db_type`|El tipo de base de datos que ofrece el servicio; en este caso, `elastic_search`.
 `name`|El nombre del despliegue de la base de datos.
+{: caption="Table 1. {{site.data.keyword.composeForElasticsearch}} credentials" caption-side="top"}
 
 **Nota:** Dos portales `haproxy` proporcionan acceso al clúster Elasticsearch. Tanto `uri` como `uri_direct_1` pueden utilizarse para conectarse al clúster. En las aplicaciones, conmute entre `uri` y `uri_direct_1` para gestionar respuestas a fallos de conexión.
 

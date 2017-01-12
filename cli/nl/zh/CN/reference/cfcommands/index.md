@@ -6,7 +6,7 @@ copyright:
 
   years: 2016
 
-
+lastupdated: "2016-11-14"
 
 ---
 
@@ -18,9 +18,6 @@ copyright:
 
 # Cloud Foundry (cf) 命令
 {: #cf}
-
-上次更新时间：2016 年 10 月 20 日
-{: .last-updated}
 
 Cloud Foundry (cf) 命令行界面 (CLI) 提供了一组用于管理应用程序的命令。以下信息列出了管理应用程序最常用的 cf 命令，并包含命令名称、选项、用法、先决条件、描述和示例。要列出所有 cf 命令及其关联的帮助信息，请使用 `cf help`。使用 `cf command_name -h` 可查看特定命令的详细帮助信息。
 {: shortdesc}
@@ -48,7 +45,7 @@ Cloud Foundry (cf) 命令行界面 (CLI) 提供了一组用于管理应用程序
  </tr>
    </tbody>
  </table>
-*表 1. 常规 Cloud Foundry 命令*
+{: caption="Table 1. General Cloud Foundry commands" caption-side="top"}
 
 
 <table summary="按字母顺序列出的用于管理应用程序、空间和服务的命令。每个命令都具有可获取命令更多信息的链接。">
@@ -74,11 +71,12 @@ Cloud Foundry (cf) 命令行界面 (CLI) 提供了一组用于管理应用程序
  <td>[scale](index.html#cf_scale)</td>
  <td>[services](index.html#cf_services)
  <td>[set-env](index.html#cf_set-env)</td>
+ <td>[ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh)</td>
  <td>[stop](index.html#cf_stop)</td>
  </tr>
  </tbody>
  </table>
-*表 2. 用于管理应用程序、空间和服务的命令*
+{: caption="Table 2. Commands for managing apps, spaces, and services" caption-side="top"}
 
 
 ## cf api
@@ -666,6 +664,42 @@ cf set-env appname var_name var_value
 对于名为 `my_app` 的应用程序，将名为 `variable_a` 的环境变量设置为值 `123`。
 ```
 cf set-env my_app variable_a 123
+```
+{: codeblock}
+
+
+## cf ssh
+{: #cf_ssh}
+
+使您以安全方式登录到应用程序容器。缺省情况下，SSH 会访问运行应用程序第一个实例的容器，也就是索引号为 0 的实例。
+
+```
+cf ssh
+```
+<strong>先决条件</strong>：`cf api`、`cf login` 和 `cf target`
+
+此外，还必须配置 Cloud Foundry 部署，以允许对应用程序实例进行 SSH 访问。有关详细信息，请参阅[针对 Cloud Foundry 配置 SSH 访问](https://docs.cloudfoundry.org/running/config-ssh.html){:new_window}。
+
+<strong>命令选项</strong>：
+
+<dl>
+<dt>appname</dt>
+<dd>应用程序的名称。如果允许使用 SSH，那么可以使用此选项来启动与托管应用程序的 VM 的交互式 SSH 会话。</dd>
+<dt>-i</dt>
+<dd>将应用程序的特定实例设为目标。</dd>
+<dt>-L</dt>
+<dd>启用本地端口转发，这会将计算机上的输出端口绑定到应用程序 VM 的输入端口。</dd>
+<dt>-N</dt>
+<dd>不运行远程命令。</dd>
+<dt>-t、-tt 或 -T</dt>
+<dd>支持在伪 tty 方式下运行 SSH 会话，而不生成终端行输出。<dd>
+</dl>
+
+<strong>示例</strong>：
+
+启动与托管名为 `my_app` 的应用程序的 VM 的交互式 SSH 会话。
+```
+$ cf ssh my_app
 ```
 {: codeblock}
 

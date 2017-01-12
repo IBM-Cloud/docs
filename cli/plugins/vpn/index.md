@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015, 2017
 
-lastupdated: "2016-06-23"
+lastupdated: "2017-01-12"
 
 ---
 
@@ -15,14 +15,14 @@ lastupdated: "2016-06-23"
 # {{site.data.keyword.vpn_short}} CLI plug-in for cf CLI
 
 
-You can use the command line interface (CLI) to configure and manage your {{site.data.keyword.vpn_full}} service. The {{site.data.keyword.vpn_short}} CLI plug-in is available in two versions: one for use with the Cloud Foundry CLI plug-in and the other for use with the {{site.data.keyword.Bluemix}} CLI plug-in. Both versions of the plug-in provide the same functionality.  
+You can use the command line interface (CLI) to configure and manage your {{site.data.keyword.vpn_full}} service. The {{site.data.keyword.vpn_short}} CLI plug-in is available in two versions: one for use with the Cloud Foundry CLI plug-in and the other for use with the {{site.data.keyword.Bluemix}} CLI plug-in. Both versions of the plug-in provide the same functionality.
 {:shortdesc}
 
 The {{site.data.keyword.vpn_short}} plug-in is available for Windows, MAC, and Linux operating systems. Ensure that you use the one that is applicable to you.
 
 The instructions that follow are for working with the Cloud Foundry (cf) CLI plug-in. To use the plug-in with the  {{site.data.keyword.Bluemix_notm}} CLI plug-in, see [{{site.data.keyword.vpn_short}} plug-in for {{site.data.keyword.Bluemix_notm}} CLI](https://console.{DomainName}/docs/cli/plugins/bx_vpn/index.html).
 
-## Install the cf CLI plug-in  
+## Install the cf CLI plug-in
 Before you begin, install the cf CLI. See [Cloud Foundry command line interface](https://console.{DomainName}/docs/cli/downloads.html) for details.
 
 ##Install the {{site.data.keyword.vpn_short}} CLI plug-in
@@ -30,31 +30,31 @@ Before you begin, install the cf CLI. See [Cloud Foundry command line interface]
 
 ```
 cf uninstall-plugin vpn
-```  
+```
 
 ### Install locally
 
 1. Download the {{site.data.keyword.vpn_short}} plug-in for your platform from [IBM Bluemix CLI Plug-in Repository](http://plugins.ng.bluemix.net/ui/repository.html#cf-plugins).
-2. Install the {{site.data.keyword.vpn_short}} plug-in by using the following command:  
-**Note:** Either switch to the location of the {{site.data.keyword.vpn_short}} plug-in or specify the path to the plug-in location.  
+2. Install the {{site.data.keyword.vpn_short}} plug-in by using the following command:
+**Note:** Either switch to the location of the {{site.data.keyword.vpn_short}} plug-in or specify the path to the plug-in location.
 
 	- For MS Windows OS:
 
 	```
 	cf install-plugin vpn_windows64.exe
-	```  
+	```
 
 	- For Apple MAC OS:
 
 	```
 	cf install-plugin vpn_mac_os_amd64
-	```  
+	```
 
 	- For Linux OS:
 
 	```
 	cf install-plugin vpn_linuxamd64
-	```  
+	```
 
 
 ### Install from Bluemix repository
@@ -63,8 +63,8 @@ cf uninstall-plugin vpn
 
 	```
 	cf add-plugin-repo bluemix http://plugins.ng.bluemix.net
-	```  
-2. Run the following command:  
+	```
+2. Run the following command:
 
 	```
 	cf install-plugin vpn -r bluemix
@@ -171,7 +171,7 @@ Name of the gateway.
 
 **-d:** Description of the parameters specified.
 
-**-pfs:** Diffie-Hellman (DH) group identifier. Values: Group2; Group5; Group14. Default value: Group2  
+**-pfs:** Diffie-Hellman (DH) group identifier. Values: Group2; Group5; Group14. Default value: Group2
 
 **-e:** Encryption algorithm. Values: aes-128; aes-192; aes-256; 3des. Default value: aes-128
 
@@ -414,7 +414,7 @@ IP address of the gateway.
 Subnet address in CIDR format.
 
 # rellinks
-## general  
-{: #general}  
+## general
+{: #general}
 * [IBM VPN service](/docs/services/vpn/index.html)
 * [Cloud Foundry CLI](https://console.{DomainName}/docs/cli/downloads.html){: new_window}

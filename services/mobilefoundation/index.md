@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated:  "2016-11-16"
+  years: 2016, 2017
+lastupdated:  "2016-12-12"
 
 ---
 
@@ -33,7 +33,7 @@ After you create an instance of the {{site.data.keyword.mobilefoundation_short}}
 
 After you create an instance of the {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application service, you can start building your mobile channel by completing the following steps.
 
-1.  Connect to an existing {{site.data.keyword.dashdbshort}}: Enterprise Transactional service on {{site.data.keyword.Bluemix_notm}}.
+1.  Connect to an existing {{site.data.keyword.dashdbshort}} for Transactions service on {{site.data.keyword.Bluemix_notm}}.
 
     1.  Select the {{site.data.keyword.Bluemix_notm}} `Organization` where the {{site.data.keyword.dashdbshort_notm}} service instance exists.
 
@@ -41,9 +41,9 @@ After you create an instance of the {{site.data.keyword.mobilefoundation_short}}
 
     + Select the {{site.data.keyword.dashdbshort_notm}} `Service Name` and `Credentials` to connect to the existing  {{site.data.keyword.dashdbshort_notm}} service instance.
 
-    + Test the connection to the selected {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional service instance by clicking **Test Connection**.
+    + Test the connection to the selected {{site.data.keyword.dashdbshort_notm}} for Transactions service instance by clicking **Test Connection**.
 
-    + Click **Add**, followed by **Continue** on the pop up window asking for confirmation on the selected {{site.data.keyword.dashdbshort_notm}} service. This action creates the required tables in the configured {{site.data.keyword.dashdbshort_notm}} database service instance.
+    + Click **Add**, followed by **Continue** on the pop up window asking for confirmation on the selected {{site.data.keyword.dashdbshort_notm}} for Transactions service. This action creates the required tables in the configured {{site.data.keyword.dashdbshort_notm}} database service instance.
 
     **Note:** After you add a {{site.data.keyword.dashdbshort_notm}} connection to the {{site.data.keyword.mobilefoundation_short}} instance you will not be able to change it.
 
@@ -54,6 +54,65 @@ After you create an instance of the {{site.data.keyword.mobilefoundation_short}}
       `The basic server instance includes a single node, 1 GB of memory.`
 
     * To create a {{site.data.keyword.mobilefirst_notm}} server instance with advanced configuration for topology, security, and other server configuration, click **Start Server with Advanced Configuration**. See [Setting up advanced configuration](c_using_mfs_p2.html#using_mfs_advanced_p2), for more information.
+
+## Getting started with {{site.data.keyword.mobilefoundation_short}}: Developer Pro plan
+
+After you create an instance of the {{site.data.keyword.mobilefoundation_short}}: Developer Pro service, you can start building your mobile channel by completing the following steps.
+
+  1.  Connect to an existing {{site.data.keyword.dashdbshort}} for Transactions service on {{site.data.keyword.Bluemix_notm}}.
+
+      1.  Select the {{site.data.keyword.Bluemix_notm}} `Organization` where the {{site.data.keyword.dashdbshort_notm}} service instance exists.
+
+      + Select the {{site.data.keyword.Bluemix_notm}} `Space` where the {{site.data.keyword.dashdbshort_notm}} service instance exists, from the list of spaces available in the selected `Organization`.
+
+      + Select the {{site.data.keyword.dashdbshort_notm}} `Service Name` and `Credentials` to connect to the existing  {{site.data.keyword.dashdbshort_notm}} service instance.
+
+      + Test the connection to the selected {{site.data.keyword.dashdbshort_notm}} for Transactions service instance by clicking **Test Connection**.
+
+      + Click **Add**, followed by **Continue** on the pop up window asking for confirmation on the selected {{site.data.keyword.dashdbshort_notm}} for Transactions service. This action creates the required tables in the configured {{site.data.keyword.dashdbshort_notm}} database service instance.
+
+      **Note:** After you add a {{site.data.keyword.dashdbshort_notm}} connection to the {{site.data.keyword.mobilefoundation_short}} instance you will not be able to change it.
+
+  2.  Create and start the server.
+
+      * To create a {{site.data.keyword.mobilefirst_notm}} server instance with the default configuration, click **Start Basic Server**.
+
+      * This selection provisions an {{site.data.keyword.mfserver_long_notm}} with the following settings:
+
+          - Single Node with 1 GB of memory. This size is enough for development, moderate testing activities, and small scale production workloads.
+
+          -	The `username` and `password` are automatically generated for you. You have access to them when the server is up and running.
+
+      * To create a {{site.data.keyword.mobilefirst_notm}} server instance with advanced configuration for topology, security, and other server configuration, click **Start Server with Advanced Configuration**. See [Setting up advanced configuration](c_using_mfs_p3.html#using_mfs_advanced_p3), for more information.
+
+## Getting started with {{site.data.keyword.mobilefoundation_short}}: Professional Per Capacity plan
+
+After you create an instance of the {{site.data.keyword.mobilefoundation_short}}: Professional Per Capacity service, you can start building your mobile channel by completing the following steps.
+
+  1.  Connect to an existing {{site.data.keyword.dashdbshort}} for Transactions service on {{site.data.keyword.Bluemix_notm}}.
+
+      1.  Select the {{site.data.keyword.Bluemix_notm}} `Organization` where the {{site.data.keyword.dashdbshort_notm}} service instance exists.
+
+      + Select the {{site.data.keyword.Bluemix_notm}} `Space` where the {{site.data.keyword.dashdbshort_notm}} service instance exists, from the list of spaces available in the selected `Organization`.
+
+      + Select the {{site.data.keyword.dashdbshort_notm}} `Service Name` and `Credentials` to connect to the existing  {{site.data.keyword.dashdbshort_notm}} service instance.
+
+      + Test the connection to the selected {{site.data.keyword.dashdbshort_notm}} for Transactions service instance by clicking **Test Connection**.
+
+      + Click **Add**, followed by **Continue** on the pop up window asking for confirmation on the selected {{site.data.keyword.dashdbshort_notm}}  for Transactions service. This action creates the required tables in the configured {{site.data.keyword.dashdbshort_notm}} database service instance.
+
+      **Note:** After you add a {{site.data.keyword.dashdbshort_notm}} connection to the {{site.data.keyword.mobilefoundation_short}} instance you will not be able to change it.
+
+  2.  Create and start the server.
+
+      * To create a {{site.data.keyword.mobilefirst_notm}} server instance with the default configuration, click **Start Basic Server**.
+
+      * This selection provisions an {{site.data.keyword.mfserver_long_notm}} with the following settings:
+          -  2 nodes with 1 GB memory each. This size is good for development, moderate testing activities and small scale production workloads.
+
+          -	The `username` and `password` are automatically generated for you. You have access to them when the server is up and running.
+
+      * To create a {{site.data.keyword.mobilefirst_notm}} server instance with advanced configuration for topology, security, and other server configuration, click **Start Server with Advanced Configuration**. See [Setting up advanced configuration](c_using_mfs_p4.html#using_mfs_advanced_p4), for more information.
 
 Go to [Using the Mobile Foundation service to set up MobileFirst Server<!-- on IBM Containers-->](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/bluemix/using-mobile-foundation/) to learn more about how to get started with {{site.data.keyword.mobilefoundation_short}}.
 

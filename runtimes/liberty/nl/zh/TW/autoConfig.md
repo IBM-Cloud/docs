@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -11,9 +12,6 @@ copyright:
 
 # 自動配置已連結的服務
 {: #auto_config}
-
-前次更新：2016 年 6 月 10 日
-{: .last-updated}
 
 您可以將各種服務連結到您的 Liberty 應用程式。依據開發人員的需求，服務可以由容器管理及/或由應用程式管理。
 
@@ -28,39 +26,39 @@ copyright:
 
 這個處理程序稱為自動配置。Liberty 建置套件提供下列服務類型的自動配置：
 
-* [SQL Database](../../services/SQLDB/index.html#SQLDB)
+* [SQL Database](/docs/services/SQLDB/index.html#SQLDB)
 * ClearDB MySQL Database
-* [MySQL](../../services/MySQL/index.html#MySQL)
+* [MySQL](/docs/services/MySQL/index.html#MySQL)
 * ElephantSQL
-* [PostgreSQL](../../services/PostgreSQL/index.html#PostgreSQL)
-* [Cloudant NoSQL Database](../../services/Cloudant/index.html#Cloudant)
+* [PostgreSQL](/docs/services/PostgreSQL/index.html#PostgreSQL)
+* [Cloudant NoSQL Database](/docs/services/Cloudant/index.html#Cloudant)
 * MongoLab
-* [dashDB](../../services/dashDB/index.html#dashDB)
-* [Data Cache](../../services/DataCache/index.html#data_cache)
-* [Session Cache](../../services/SessionCache/index.html#session_cache)
-* [MQ Light](../../services/MQLight/index.html#mqlight010)
-* [Monitoring and Analytics](../..//services/monana/index.html#gettingstartedtemplate)
-* [Auto-Scaling](../../services/Auto-Scaling/index.html#autoscaling)
-* [Single Sign On](../../services/SingleSignOn/index.html#sso_gettingstarted)
+* [dashDB](/docs/services/dashDB/index.html#dashDB)
+* [Data Cache](/docs/services/DataCache/index.html#data_cache)
+* [Session Cache](/docs/services/SessionCache/index.html#session_cache)
+* [MQ Light](/docs/services/MQLight/index.html#mqlight010)
+* [Monitoring and Analytics](/docs/services/monana/index.html#gettingstartedtemplate)
+* [Auto-Scaling](/docs/services/Auto-Scaling/index.html#autoscaling)
+* [Single Sign On](/docs/services/SingleSignOn/index.html#sso_gettingstarted)
 * [New Relic](newRelic.html)
 * [Dynatrace](dynatrace.html)
 
-如前所述，部分服務可以由應用程式管理，也可以由容器管理。Mongo 和 SQLDB 便是此類服務的範例。依預設，Liberty 建置套件會假設這些服務是由容器管理，並自動加以配置。
+如前所述，部分服務可以由應用程式管理，也可以由儲存器管理。Mongo 和 SQLDB 便是此類服務的範例。依預設，Liberty 建置套件會假設這些服務是由儲存器管理，並自動加以配置。
 如果您要讓應用程式管理服務，則可以設定 services_autoconfig_excludes 環境變數，拒絕自動配置服務。如需相關資訊，請參閱[拒絕服務自動配置](autoConfig.html#opting_out)。
 
 ## 安裝 Liberty 特性及用戶端存取程式碼
 {: #installation_of_liberty_features}
 
-當您連結至容器管理的服務時，該服務可能會要求得在 server.xml 檔案的 featureManager 段落中配置 Liberty 特性。Liberty 建置套件會更新 featureManager 段落，並安裝必要的支援二進位檔。如果服務需要用戶端驅動程式 Jar，會將 Jar 下載到 Liberty 安裝中的已知位置。
+當您連結至儲存器管理的服務時，該服務可能會要求得在 server.xml 檔案的 featureManager 段落中配置 Liberty 特性。Liberty 建置套件會更新 featureManager 段落，並安裝必要的支援二進位檔。如果服務需要用戶端驅動程式 Jar，會將 Jar 下載到 Liberty 安裝中的已知位置。
 
 如需詳細資料，請參閱已連結之服務類型的文件。
 
 ## 產生或更新 server.xml 配置段落
 {: #generating_or_updating_serverxml}
 
-當您推送獨立式應用程式時，Liberty 建置套件會如[推送 Liberty 應用程式的選項](optionsForPushing.html#options_for_pushing)中所述，產生 server.xml 段落。當您推送獨立式應用程式並連結至容器管理的服務時，Liberty 建置套件會為已連結的服務產生必要的 server.xml 段落。
+當您推送獨立式應用程式時，Liberty 建置套件會如[推送 Liberty 應用程式的選項](optionsForPushing.html#options_for_pushing)中所述，產生 server.xml 段落。當您推送獨立式應用程式並連結至儲存器管理的服務時，Liberty 建置套件會為已連結的服務產生必要的 server.xml 段落。
 
-當您提供 server.xml 檔案並連結至容器管理的服務時，Liberty 建置套件會執行下列動作：
+當您提供 server.xml 檔案並連結至儲存器管理的服務時，Liberty 建置套件會執行下列動作：
 
 * 如果所提供的 server.xml 檔案不包含已連結服務的配置段落，則會為已連結的服務產生配置。
 * 如果所提供的 server.xml 檔案包含已連結服務的配置段落，則會為已連結的服務更新配置。
@@ -72,12 +70,14 @@ copyright:
 
 在某些情況下，您可能會不想讓 Liberty 建置套件自動配置已連結的服務。請考慮下列情境。
 
-* 我的應用程式使用 MongoDB，但我想要應用程式直接管理資料庫連線。應用程式中包含必要的用戶端驅動程式 jar。我不想讓 Liberty 建置套件自動配置 Mongo 服務。
+* 我的應用程式使用 MongoDB，但我想要應用程式直接管理資料庫連線。
+應用程式中包含必要的用戶端驅動程式 jar。我不想讓 Liberty 建置套件自動配置 Mongo 服務。
 * 我有提供 server.xml 檔案，而且已經為 SQLDB 實例提供配置段落，因為我需要非標準的資料來源配置。我不想要 Liberty 建置套件更新我的 server.xml 檔案，但是我仍然需要 Liberty 建置套件確定已經安裝適當的支援軟體。
 
 若要拒絕自動服務配置，請使用 services_autoconfig_excludes 環境變數。您可以在 manifest.yml 中包含此環境變數，或使用 cf 用戶端設定它。
 
-您可以針對每個服務類型來拒絕服務的自動配置。您可以選擇完全拒絕（例如在 Mongo 情境中）或只拒絕 server.xml 檔案配置更新（例如在 SQLDB 情境中）。您為 services_autoconfig_excludes 環境變數指定的值是字串，如下所示。
+您可以針對每個服務類型來拒絕服務的自動配置。
+您可以選擇完全拒絕（例如在 Mongo 情境中）或只拒絕 server.xml 檔案配置更新（例如在 SQLDB 情境中）。您為 services_autoconfig_excludes 環境變數指定的值是字串，如下所示。
 
 * 字串可以包含一個以上服務的拒絕規格。
 * 特定服務的拒絕規格是 service_type=option，其中：
@@ -117,6 +117,38 @@ env:
     $ cf set-env myapp services_autoconfig_excludes "sqldb=config mongodb-2.2=all"
 ```
 {: codeblock}
+
+## 置換服務配置
+{: #override_service_config}
+
+在某些情況下，可能要置換自動配置所產生的服務的預設配置。
+這可以使用 **LBP_SERVICE_CONFIG_xxxx** 環境變數完成，其中 "xxxx" 是全大寫的服務名稱。例如，若要置換 *mysql* 服務的預設版本，並將它設為 1.4.+ 版，請發出與下面類似的指令：
+
+```
+    $ cf set-env myapp LBP_SERVICE_CONFIG_MYSQL "{driver: { version: 1.4.+ }}"
+```
+{: codeblock}
+
+下列表格顯示用於置換部分服務配置選項的語法：
+
+<table>
+<tr>
+<th align="left">環境變數名稱</th>
+<th align="left">配置語法</th>
+</tr>
+
+<tr>
+<td>LBP_SERVICE_CONFIG_MYSQL</td>
+<td>"{driver: { version: x.y.z }, connection_pool_size: 15}"</td>
+</tr>
+
+<tr>
+<td>LBP_SERVICE_CONFIG_POSTGRESQL</td>
+<td>"{driver: { version: x.y.z }}"</td>
+</tr>
+</table>
+
+
 
 # 相關鏈結
 {: #rellinks}

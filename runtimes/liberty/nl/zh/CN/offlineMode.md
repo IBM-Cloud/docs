@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -12,10 +13,8 @@ copyright:
 
 # Liberty 的脱机方式
 {: #offline_mode}
-上次更新时间：2016 年 7 月 20 日
-{: .last-updated}
 
-将 Liberty 应用程序推送到 {{site.data.keyword.Bluemix}} 后，Liberty buildpack 就可以访问 Bluemix 外部站点来获取应用程序所需的工件。下面是 Liberty buildpack 可以访问的外部站点。在 [Bluemix Dedicated](../../dedicated/index.html#dedicated) 和 [Bluemix Local](../../local/index.html#local) 环境中，可能需要将这些站点*列入白名单*。
+将 Liberty 应用程序推送到 {{site.data.keyword.Bluemix}} 后，Liberty buildpack 就可以访问 Bluemix 外部站点来获取应用程序所需的工件。下面是 Liberty buildpack 可以访问的外部站点。在 [Bluemix Dedicated](/docs/dedicated/index.html#dedicated) 和 [Bluemix Local](/docs/local/index.html#local) 环境中，可能需要将这些站点*列入白名单*。
 
 * https://download.run.pivotal.io 和 https://java-buildpack.cloudfoundry.org，用于访问以下产品的组件：
   * [AppDynamics 代理程序](https://www.appdynamics.com/)
@@ -30,7 +29,7 @@ copyright:
 ## 使用代理
 {: #working_with_proxy}
 
-在某些环境（如 [Bluemix Dedicated](../../dedicated/index.html#dedicated) 和 [Bluemix Local](../../local/index.html#local)）中，可以配置代理。有关更多详细信息，请参阅[使用代理](../../manageapps/workingWithProxy.html)。
+在某些环境（如 [Bluemix Dedicated](/docs/dedicated/index.html#dedicated) 和 [Bluemix Local](/docs/local/index.html#local)）中，可以配置代理。有关更多详细信息，请参阅[使用代理](/docs/manageapps/workingWithProxy.html)。
 
 # 相关链接
 {: #rellinks}

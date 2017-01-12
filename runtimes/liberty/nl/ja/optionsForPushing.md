@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-11"
 
 ---
 
@@ -11,9 +12,6 @@ copyright:
 
 # Liberty アプリケーションのプッシュのオプション
 {: #options_for_pushing}
-
-最終更新日: 2016 年 6 月 10 日
-{: .last-updated}
 
 Bluemix における Liberty サーバーの動作は、Liberty ビルドパックによって制御されます。 ビルドパックは、特定のクラスのアプリケーションに対して、完全なランタイム環境を提供することができます。また、
 クラウド間の移植性を可能にし、また、オープンなクラウド・アーキテクチャーに寄与する上で要となります。Liberty ビルドパックは、Java EE 7 アプリケーションおよび OSGi アプリケーションを実行することのできる WebSphere Liberty コンテナーを提供します。また、Spring などの一般的なフレームワークをサポートし、IBM JRE を含んでいます。WebSphere Liberty は素早いアプリケーション開発を可能にし、これはクラウドに適しています。
@@ -170,7 +168,8 @@ Liberty プロファイルをワークステーションにインストールし
         </featureManager>
 
         <httpEndpoint id="defaultHttpEndpoint" host="*" httpPort="8080" />
-<application name="myapp" context-root="/" type="war" location="myapp.war"/>
+
+        <application name="myapp" context-root="/" type="war" location="myapp.war"/>
     </server>
 ```
 {: codeblock}
@@ -227,22 +226,20 @@ Liberty サーバーをパッケージするには、Liberty インストール�
 ### 参照可能変数
 {: #referenceable_variables}
 
-以下の変数は、runtime-vars.xml ファイル内に定義され、プッシュされた server.xml ファイルから参照されます。すべての変数で大/小文字の区別があります。
+以下の変数は、`runtime-vars.xml` ファイル内に定義され、プッシュされた `server.xml` ファイルから参照されます。すべての変数で大/小文字の区別があります。
 
 * ${port}: Liberty サーバーが listen を行う HTTP ポート。
-* ${vcap_console_port}: vcap コンソールが稼働しているポート (通常は ${port} と同じ)。
-* ${vcap_app_port}: app サーバーが listen を行うポート (通常は ${port} と同じ)。
-* ${vcap_console_ip}: vcap コンソールの IP アドレス (通常は Liberty サーバーが listen を行う IP アドレス)。
+* ${vcap_app_port}: ${port} と同じ。Diego で実行する場合は設定されません。
 * ${application_name}: cf push コマンドでオプションを使用して定義された、アプリケーションの名前。
-* ${application_version}: アプリケーションのこのインスタンスのバージョン。形式は UUID です (例: b687ea75-49f0-456e-b69d-e36e8a854caa)。この変数は、新規コードを含んでいるか、アプリケーション成果物への変更を含んでいるアプリケーションが次にプッシュされるたびに変更されます。
-* ${host}: アプリケーションを実行している DEA の IP アドレス (通常は ${vcap_console_ip} と同じ)。
+* ${application_version}: アプリケーションのこのインスタンスのバージョン。形式は UUID です (例: `b687ea75-49f0-456e-b69d-e36e8a854caa`)。この変数は、新規コードを含んでいるか、アプリケーション成果物への変更を含んでいるアプリケーションが次にプッシュされるたびに変更されます。
+* ${host}: アプリケーション・インスタンスの IP アドレス。
 * ${application_uris}: このアプリケーションにアクセスするために使用できるエンドポイントの JSON スタイルの配列 (例: myapp.mydomain.com)。
-* ${start}: アプリケーションが開始した日時。2013-08-22 10:10:18 -0400 のような形式で表されます。
+* ${start}: アプリケーションが開始された日時。形式は `2013-08-22 10:10:18 -0400` のようになります。Diego で実行する場合は設定されません。
 
 ### バインドされたサービスのアクセス情報
 {: #accessing_info_of_bound_services}
 
-アプリケーションにサービスをバインドしたい場合、そのサービスについての情報 (接続資格情報など) は [VCAP_SERVICES 環境変数](http://docs.run.pivotal.io/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES)に含まれ、
+アプリケーションにサービスをバインドしたい場合、そのサービスについての情報 (接続資格情報など) は [VCAP_SERVICES 環境変数](https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES)に含まれ、
 それを Cloud Foundry がアプリケーション用に設定します。[自動構成されるサービス](autoConfig.html)の場合、
 Liberty ビルドパックが server.xml ファイル内のサービス・バインディングのエントリーを生成または更新します。サービス・バインディングのエントリーの内容は、以下のいずれかの形式です。
 
@@ -250,14 +247,16 @@ Liberty ビルドパックが server.xml ファイル内のサービス・バイ
 * cloud.services.&lt;service-name&gt;.connection.&lt;property&gt; は、サービスの接続情報を記述します。
 
 情報の典型的なセットは、次のとおりです。
-* name: サービスの名前。例えば、mysql-e3abd です。label: 作成されたサービスのタイプ。例えば、mysql-5.5 です。
-* plan: サービス・プラン。そのプランの固有 ID によって識別されます。例えば、100 です。connection.name: UUID の形式で表される接続の固有 ID。例えば、d01af3a5fabeb4d45bb321fe114d652ee です。
-* connection.hostname: サービスを実行しているサーバーのホスト名。例えば、mysql-server.mydomain.com です。
-* connection.host: サービスを実行しているサーバーの IP アドレス。例えば、9.37.193.2 です。
-* connection.port: サービスが着信接続を listen するポート。例えば、3306,3307 です。
-* connection.user: このアプリケーションをサービスに対して認証するために使用されるユーザー名。このユーザー名は Cloud Foundry によって自動生成されます。例えば、unHwANpjAG5wT です。
+* name: サービスの名前 (例: mysql-e3abd)。
+* label: 作成されたサービスのタイプ (例: mysql-5.5)。
+* plan: サービス・プラン。そのプランの固有 ID によって示されます (例: 100)。
+* connection.name: 接続の固有 ID。形式は UUID です (例: d01af3a5fabeb4d45bb321fe114d652ee)。
+* connection.hostname: サービスを実行しているサーバーのホスト名 (例: mysql-server.mydomain.com)。
+* connection.host: サービスを実行しているサーバーの IP アドレス (例: 9.37.193.2)。
+* connection.port: サービスが着信接続を listen するポート (例: 3306,3307)。
+* connection.user: このアプリケーションをサービスに対して認証するために使用されるユーザー名。ユーザー名は Cloud Foundry によって自動生成されます (例: unHwANpjAG5wT)。
 * connection.username: connection.user の別名。
-* connection.password: このアプリケーションをサービスに対して認証するために使用されるパスワード。このパスワードは Cloud Foundry によって自動生成されます。例えば、pvyCY0YzX9pu5 です。
+* connection.password: このアプリケーションをサービスに対して認証するために使用されるパスワード。パスワードは Cloud Foundry によって自動生成されます (例: pvyCY0YzX9pu5)。
 
 バインドされたサービスが Liberty ビルドパックによって自動構成されないサービスの場合、アプリケーション自体がバックエンド・リソースのアクセスを管理する必要があります。
 

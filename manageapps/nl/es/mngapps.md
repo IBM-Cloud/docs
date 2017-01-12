@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2015-03-17"
 
 ---
 
@@ -11,8 +12,6 @@ copyright:
 
 #Gestión de app
 {: #manageapps}
-
-*Última actualización: 17 de marzo de 2015*
 
 Puede utilizar el panel de control de la interfaz de usuario de {{site.data.keyword.Bluemix}} para ver y gestionar sus apps y servicios y para supervisar el uso de recursos mediante los indicadores de cuota.
 {:shortdesc}

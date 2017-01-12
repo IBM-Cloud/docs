@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
   
-lastupdated: "2016-08-18"
+lastupdated: "2017-01-11"
 
 ---
 
@@ -44,7 +44,7 @@ The status of your {{site.data.keyword.Bluemix_notm}} account becomes inactive w
 
  
 
-To reactivate your account, contact [{{site.data.keyword.Bluemix_notm}} Support](http://ibm.biz/bluemixsupport.com){: new_window}. In the email, you must include the following information:
+To reactivate your account, contact [{{site.data.keyword.Bluemix_notm}} Support ![External link icon](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}. In the email, you must include the following information:
 {: tsResolve}
 
   * The IBMid that you use to log in to {{site.data.keyword.Bluemix_notm}}.

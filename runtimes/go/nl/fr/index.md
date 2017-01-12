@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -12,7 +13,6 @@ copyright:
 
 # Go
 {: #go_runtime}
-Dernière mise à jour : 06 juillet 2016
 
 L'environnement d'exécution Go dans {{site.data.keyword.Bluemix}} repose sur le pack go_buildpack.
 Le pack go_buildpack fournit un environnement d'exécution complet pour les applis Go.
@@ -23,7 +23,7 @@ Le pack go_buildpack est utilisé si votre application contient un fichier nomm�
 ## Application de démarrage
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} propose une application de démarrage Go.  L'application de démarrage Go est une appli Go simple qui fournit un modèle que vous pouvez utiliser pour votre appli. Vous pouvez expérimenter cette appli et effectuer des modifications, puis les envoyer par commande push vers l'environnement Bluemix. Voir [Utilisation des applications de démarrage](../../cfapps/starter_app_usage.html) pour obtenir de l'aide.
+{{site.data.keyword.Bluemix}} propose une application de démarrage Go.  L'application de démarrage Go est une appli Go simple qui peut servir de modèle pour votre appli. Vous pouvez expérimenter cette application de démarrage et effectuer des modifications, puis les envoyer par commande push vers l'environnement Bluemix. Pour obtenir de l'aide sur son utilisation, voir [Utilisation des applications de démarrage](/docs/cfapps/starter_app_usage.html).
 
 ## Versions d'environnement d'exécution
 {: #runtime_versions}

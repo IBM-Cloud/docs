@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -12,7 +13,6 @@ copyright:
 
 # Go
 {: #go_runtime}
-上次更新时间：2016 年 7 月 6 日
 
 {{site.data.keyword.Bluemix}} 上的 Go 运行时由 go_buildpack 提供支持。go_buildpack 为 Go 应用程序提供了一个完整的运行时环境。
 {: shortdesc}
@@ -22,7 +22,7 @@ copyright:
 ## 入门模板应用程序
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} 提供了 Go 入门模板应用程序。Go 入门模板应用程序是一个简单的 Go 应用程序，它提供了一个可供您的应用程序使用的模板。您可以体验该入门模板应用程序，对其进行更改并将更改推送到 Bluemix 环境。请参阅[使用入门模板应用程序](../../cfapps/starter_app_usage.html)，以获取有关使用入门模板应用程序的帮助。
+{{site.data.keyword.Bluemix}} 提供了 Go 入门模板应用程序。Go 入门模板应用程序是一个简单的 Go 应用程序，它提供了一个可供您的应用程序使用的模板。您可以体验该入门模板应用程序，对其进行更改并将更改推送到 Bluemix 环境。请参阅[使用入门模板应用程序](/docs/cfapps/starter_app_usage.html)，以获取有关使用入门模板应用程序的帮助。
 
 ## 运行时版本
 {: #runtime_versions}

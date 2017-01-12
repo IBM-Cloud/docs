@@ -4,7 +4,7 @@ copyright:
 
   years: 2016
 
-ultimo aggiornamento: "14-10-2016"
+lastupdated: "2016-10-14"
 
 ---
 
@@ -79,7 +79,7 @@ Completa questa procedura per installare il plug-in dal repository Bluemix:
 	```  
 
 ## Elenco di comandi per il peering della rete privata
-Sono supportati i seguenti quattro comandi. Utilizza il comando `bluemix network` per visualizzare l'elenco di comandi disponibili:
+Sono supportati i seguenti comandi. Utilizza il comando `bluemix network` per visualizzare l'elenco di comandi disponibili:
 
 | Comando     | Descrizione                                    |
 |-------------|------------------------------------------------|
@@ -87,6 +87,8 @@ Sono supportati i seguenti quattro comandi. Utilizza il comando `bluemix network
 | pnp-create  | Crea una connessione peering della rete privata   |
 | pnp-delete  | Elimina una connessione peering della rete privata   |
 | pnp-show    | Elenca tutte le connessioni peering della rete privata  |
+{: caption="Table 1. Private network peering commands" caption-side="top"}
+
 
 ### Utilizzo dei comandi
 Per visualizzare le informazioni di guida per i comandi, esegui: `bluemix network [command] -h`.

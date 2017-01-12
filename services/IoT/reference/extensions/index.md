@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-18"
+lastupdated: "2016-12-04"
 
 ---
 
@@ -263,7 +263,7 @@ Device management is a core feature of the {{site.data.keyword.iot_short_notm}},
 
 The device management extension allows you to install custom functions for device management. For more information on custom device management functions, see [device management custom extensions](../../devices/device_mgmt/custom_actions.html){: new_window}.
 
-<!--
+
 ## Blockchain
 {: #blockchain}
 
@@ -276,16 +276,17 @@ The device management extension allows you to install custom functions for devic
 
 ### Configuration for Blockchain
 
-{{site.data.keyword.iot_short_notm}} blockchain integration is a services offering  that is not activated by default in {{site.data.keyword.iot_short_notm}}. To activate the feature in your environment, complete the following steps:
+{{site.data.keyword.iot_short_notm}} blockchain integration is a services offering  that is not activated by default in {{site.data.keyword.iot_short_notm}}. To activate the feature in your organization, complete the following steps:
  1. From the {{site.data.keyword.iot_short_notm}} dashboard, select **Extensions**.
  2. In the **Extensions** page, click **Add Extension**.
  3. Click **Add** next to the Blockchain extension.
- 2. Click the **Tell me more** link next to the Blockchain extension to go to the IoT Blockchain Services Offering page.
- 3. Fill out and submit the service request form.   
-The service approval typically takes approximately one day. After your request is approved, you receive an email with instructions on how to activate blockchain integration in your {{site.data.keyword.iot_short_notm}} organization.
- 5. Return to the {{site.data.keyword.iot_short_notm}} dashboard for your organization to complete the setup. For more information, see [{{site.data.keyword.iot_short_notm}} blockchain integration](../../bl_blockchain_integration.html).
+ 4. In the Blockchain tile, click **Setup**.
+ 3. In the **Activate Blockchain** section, click the **Learn more** link to go to the [IoT Blockchain Services Offering page](http://www.ibm.com/internet-of-things/iot-news/announcements/private-blockchain/).
+ 4. Click **Kick-start your blockchain project** to fill out and submit the *Explore the potential of IoT and Blockchain* form.  
+ 5. After your request is approved, IBM will contact you to enable blockchain integration for your organization.
+ 6. Return to the {{site.data.keyword.iot_short_notm}} dashboard for your organization to complete the setup by following the steps in [{{site.data.keyword.iot_short_notm}} blockchain integration](../../bl_blockchain_integration.html).
 
--->
+
 
 ## The Weather Company
 {: #weathercompany}

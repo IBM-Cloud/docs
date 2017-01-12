@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2016
+  
+lastupdated: "2016-10-23"
 
 ---
 
@@ -17,8 +19,6 @@ copyright:
 # Resolución de problemas de acceso a {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
-Última actualización: 23 de octubre de 2016
-{: .last-updated} 
 
 Algunos de los problemas generales de acceso a {{site.data.keyword.Bluemix}} pueden ser que un usuario no pueda iniciar una sesión en {{site.data.keyword.Bluemix_notm}}, que una cuenta se haya bloqueado en estado pendiente, etc. Sin embargo, en muchos de los casos, puede solucionar estos problemas siguiendo unos sencillos pasos. 
 {:shortdesc}
@@ -29,7 +29,7 @@ Algunos de los problemas generales de acceso a {{site.data.keyword.Bluemix}} pue
 Debe tener una cuenta válida de {{site.data.keyword.Bluemix_notm}} para iniciar sesión.
 
 
-Cuando intente iniciar sesión en {{site.data.keyword.Bluemix_notm}}, verá uno de los siguientes mensajes de error:
+Cuando intente iniciar sesión en {{site.data.keyword.Bluemix_notm}}, verá uno de los siguientes mensajes de error: 
 {: tsSymptoms} 
 
  * Desde el Portal de cliente
@@ -41,11 +41,11 @@ Cuando intente iniciar sesión en {{site.data.keyword.Bluemix_notm}}, verá uno 
   `Ha llegado a esta página porque la autenticación ha sido satisfactoria; sin embargo, este ID de IBM no está asociado a ninguna cuenta de {{site.data.keyword.Bluemix_notm}}.`
 
 
-Uno de los motivos más probables por los que ha obtenido este mensaje de error es que aún no tiene creada ninguna cuenta de {{site.data.keyword.Bluemix_notm}} o tiene que conmutar a la autenticación del ID de IBM.
+Uno de los motivos más probables por los que ha obtenido este mensaje de error es que aún no tiene creada ninguna cuenta de {{site.data.keyword.Bluemix_notm}} o tiene que conmutar a la autenticación del ID de IBM. 
 {: tsCauses} 
  
 
-Siga el proceso de registro para crear una cuenta de {{site.data.keyword.Bluemix_notm}} o póngase en contacto con el usuario maestro o con el administrador de la cuenta para cambiar al ID de IBM.
+Siga el proceso de registro para crear una cuenta de {{site.data.keyword.Bluemix_notm}} o póngase en contacto con el usuario maestro o con el administrador de la cuenta para cambiar al ID de IBM. 
 {: tsResolve}
 
 En función de cómo se haya configurado su cuenta, se podrán aplicar algunas de estas opciones de inicio de sesión: 
@@ -60,7 +60,7 @@ En función de cómo se haya configurado su cuenta, se podrán aplicar algunas d
 
 Debe tener un ID de IBM válido para poder iniciar sesión en la consola de {{site.data.keyword.Bluemix_notm}}.
 
-Cuando intente iniciar sesión en {{site.data.keyword.Bluemix_notm}}, verá el siguiente mensaje de error:
+Cuando intente iniciar sesión en {{site.data.keyword.Bluemix_notm}}, verá el siguiente mensaje de error: 
 {: tsSymptoms} 
 
 `La contraseña introducida no es correcta.
@@ -82,7 +82,7 @@ Para obtener un ID de IBM y una contraseña válidos, vaya a la página Mi perfi
 Debe tener un ID de IBM y contraseña válidos para poder iniciar una sesión en {{site.data.keyword.Bluemix_notm}}.
 
 
-Al intentar iniciar sesión en la consola de {{site.data.keyword.Bluemix_notm}} con el nombre de usuario de Softlayer, recibirá el mensaje siguiente:
+Al intentar iniciar sesión en la consola de {{site.data.keyword.Bluemix_notm}} con el nombre de usuario de Softlayer, recibirá el mensaje siguiente: 
 {: tsSymptoms} 
 
 `No hemos reconocido este ID de IBM o correo electrónico.`
@@ -92,7 +92,7 @@ Debe tener un ID de IBM para iniciar sesión para utilizar el panel de control I
  
 Si es un usuario de SoftLayer que está utilizando un ID de SoftLayer, debe conmutar a la autenticación del ID de IBM en el Portal de cliente de cada cuenta que tiene acceso antes de poder iniciar sesión utilizando la autenticación del ID de IBM. 
 
-Póngase en contacto con el usuario maestro o con el administrador de la cuenta para cambiar al ID de IBM.
+Póngase en contacto con el usuario maestro o con el administrador de la cuenta para cambiar al ID de IBM. 
 {: tsResolve}
 
 

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -11,9 +12,6 @@ copyright:
 
 # 自动配置绑定服务
 {: #auto_config}
-
-上次更新时间：2016 年 6 月 10 日
-{: .last-updated}
 
 您可以将各种服务绑定到 Liberty 应用程序。可以是容器管理服务和/或应用程序管理服务，具体取决于开发者的需要。
 
@@ -27,20 +25,20 @@ copyright:
 
 此过程称为自动配置。Liberty buildpack 提供以下服务类型的自动配置：
 
-* [SQL Database](../../services/SQLDB/index.html#SQLDB)
+* [SQL Database](/docs/services/SQLDB/index.html#SQLDB)
 * ClearDB MySQL Database
-* [MySQL](../../services/MySQL/index.html#MySQL)
+* [MySQL](/docs/services/MySQL/index.html#MySQL)
 * ElephantSQL
-* [PostgreSQL](../../services/PostgreSQL/index.html#PostgreSQL)
-* [Cloudant NoSQL Database](../../services/Cloudant/index.html#Cloudant)
+* [PostgreSQL](/docs/services/PostgreSQL/index.html#PostgreSQL)
+* [Cloudant NoSQL Database](/docs/services/Cloudant/index.html#Cloudant)
 * MongoLab
-* [dashDB](../../services/dashDB/index.html#dashDB)
-* [Data Cache](../../services/DataCache/index.html#data_cache)
-* [Session Cache](../../services/SessionCache/index.html#session_cache)
-* [MQ Light](../../services/MQLight/index.html#mqlight010)
-* [Monitoring and Analytics](../..//services/monana/index.html#gettingstartedtemplate)
-* [Auto-Scaling](../../services/Auto-Scaling/index.html#autoscaling)
-* [Single Sign On](../../services/SingleSignOn/index.html#sso_gettingstarted)
+* [dashDB](/docs/services/dashDB/index.html#dashDB)
+* [Data Cache](/docs/services/DataCache/index.html#data_cache)
+* [Session Cache](/docs/services/SessionCache/index.html#session_cache)
+* [MQ Light](/docs/services/MQLight/index.html#mqlight010)
+* [Monitoring and Analytics](/docs/services/monana/index.html#gettingstartedtemplate)
+* [Auto-Scaling](/docs/services/Auto-Scaling/index.html#autoscaling)
+* [Single Sign On](/docs/services/SingleSignOn/index.html#sso_gettingstarted)
 * [New Relic](newRelic.html)
 * [Dynatrace](dynatrace.html)
 
@@ -115,6 +113,39 @@ $ cf set-env myapp services_autoconfig_excludes sqldb=config
     $ cf set-env myapp services_autoconfig_excludes "sqldb=config mongodb-2.2=all"
 ```
 {: codeblock}
+
+## 覆盖服务配置
+{: #override_service_config}
+
+在某些情况下，覆盖针对自动配置所生成的服务的缺省配置是可取的。
+使用 **LBP_SERVICE_CONFIG_xxxx** 环境变量可以完成此操作，其中“xxxx”是全大写的服务名称。
+例如，要覆盖 *mysql* 服务的缺省版本，并将其设置为 1.4.+ 版，请发出类似如下的命令：
+
+```
+    $ cf set-env myapp LBP_SERVICE_CONFIG_MYSQL "{driver: { version: 1.4.+ }}"
+```
+{: codeblock}
+
+下表显示用于覆盖一些服务配置选项的语法：
+
+<table>
+<tr>
+<th align="left">环境变量名</th>
+<th align="left">配置语法</th>
+</tr>
+
+<tr>
+<td>LBP_SERVICE_CONFIG_MYSQL</td>
+<td>"{driver: { version: x.y.z }, connection_pool_size: 15}"</td>
+</tr>
+
+<tr>
+<td>LBP_SERVICE_CONFIG_POSTGRESQL</td>
+<td>"{driver: { version: x.y.z }}"</td>
+</tr>
+</table>
+
+
 
 # 相关链接
 {: #rellinks}

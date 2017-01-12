@@ -1,7 +1,9 @@
 ---
 
 copyright:
-  anni: 2015, 2016
+  year: 2015, 2016
+  
+lastupdated: "2016-10-20"
 
 
 ---
@@ -14,8 +16,6 @@ copyright:
 # Risoluzione dei problemi
 {: #troubleshooting}
 
-Ultimo aggiornamento: 20 ottobre 2016
-{: .last-updated}
 
 Se riscontri dei problemi con l'utilizzo di {{site.data.keyword.Bluemix}},
 puoi utilizzare le attività di risoluzione dei problemi per determinare l'azione correttiva da

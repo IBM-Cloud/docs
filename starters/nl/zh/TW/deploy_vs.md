@@ -1,12 +1,14 @@
 ---
 
- 
+
 
 copyright:
 
-  years: 2016
+  years: 2015, 2016
 
- 
+lastupdated: "2016-06-25"
+
+
 
 ---
 
@@ -14,8 +16,6 @@ copyright:
 {:new_window: target="_blank"}
 
 # 使用 Visual Studio 進行開發
-
-*前次更新：2016 年 6 月 23 日*
 
   1. 如果您還沒有 Visual Studio，請遵循[這裡](https://msdn.microsoft.com/en-us/library/e2h7fzkw.aspx){: new_window}提供的指示來安裝 Visual Studio 2015 或 Visual Studio Code。
 

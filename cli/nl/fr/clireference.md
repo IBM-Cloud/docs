@@ -1,12 +1,14 @@
 ---
 
- 
+
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015，2016
 
- 
+lastupdated: "2016-02-17"
+
+
 
 ---
 
@@ -16,10 +18,6 @@ copyright:
 {:new_window: target="_blank"}
 
 # Référence de l'interface de ligne de commande
-
-
-*Dernière mise à jour : 17 février 2016*
-{: .last-updated}
 
 {{site.data.keyword.IBM}} {{site.data.keyword.Bluemix_short}} utilise l'interface de ligne de commande Cloud Foundry, cf, pour modifier des applications, des instances de service et des liaisons de service. Vous
 pouvez aussi utiliser l'outil de ligne de commande {{site.data.keyword.Bluemix_notm}} qui permet de gérer l'environnement

@@ -456,7 +456,7 @@ Sie können Standardparameter für alle Entitäten in einem Paket festlegen. Daz
 ## Paket gemeinsam nutzen
 {: #openwhisk_packages_share}
 
-Wenn die Aktionen und Feeds, die ein Paket bilden, auf Fehler geprüft und getestet wurden, kann das Paket zur gemeinsamen Nutzung durch alle {{site.data.keyword.openwhisk_short}}-Benutzer bereitgestellt werden. Durch die gemeinsame Nutzung haben Benutzer die Möglichkeit, das Paket zu binden, Aktionen in dem Paket aufzurufen sowie {{site.data.keyword.openwhisk_short}}-Regeln zu verfassen und Aktionsfolgen zu erstellen.
+Wenn die Aktionen und Feeds, die ein Paket bilden, auf Fehler geprüft und getestet wurden, kann das Paket zur gemeinsamen Nutzung durch alle {{site.data.keyword.openwhisk_short}}-Benutzer bereitgestellt werden. Durch die gemeinsame Nutzung haben Benutzer die Möglichkeit, das Paket zu binden, Aktionen in dem Paket aufzurufen sowie {{site.data.keyword.openwhisk_short}}-Regeln zu verfassen und Aktionssequenzen zu erstellen.
 
 1. Stellen Sie das Paket zur gemeinsamen Nutzung durch alle Benutzer bereit:
 

@@ -5,6 +5,8 @@
 copyright:
 
   years: 2014, 2016
+  
+lastupdated: "2016-10-19"
 
  
 
@@ -15,8 +17,6 @@ copyright:
 
 # Seguridad de {{site.data.keyword.Bluemix_notm}}
 {: #security}
-Última actualización: 19 de octubre de 2016
-{: .last-updated}
 
 Diseñada con prácticas de ingeniería seguras, la plataforma {{site.data.keyword.Bluemix}} dispone de controles de seguridad de varios niveles de la red y de la infraestructura. {{site.data.keyword.Bluemix_notm}} ofrece una serie de servicios de seguridad que pueden utilizar los desarrolladores de apps para proteger sus apps móviles y web. Estos elementos se combinan para convertir {{site.data.keyword.Bluemix_notm}} en una plataforma con opciones claras para el desarrollo de apps seguras.
 {:shortdesc}
@@ -51,7 +51,7 @@ Con {{site.data.keyword.Bluemix_notm}} local, puede alojar {{site.data.keyword.B
 
 Figura 2. Visión general de seguridad de la plataforma {{site.data.keyword.Bluemix_notm}} Local
 
-IBM instala, supervisa de forma remota y gestiona {{site.data.keyword.Bluemix_notm}} local en el centro de datos mediante Relay (relé), una funcionalidad de entrega incluida con {{site.data.keyword.Bluemix_notm}} local. El relé se conecta de forma segura con certificados específicos de cada instancia de {{site.data.keyword.Bluemix_notm}} local. Para obtener más información sobre {{site.data.keyword.Bluemix_notm}} local y Relay, consulte [Bluemix local](../local/index.html).
+IBM instala, supervisa de forma remota y gestiona {{site.data.keyword.Bluemix_notm}} local en el centro de datos mediante Relay (relé), una funcionalidad de entrega incluida con {{site.data.keyword.Bluemix_notm}} local. El relé se conecta de forma segura con certificados específicos de cada instancia de {{site.data.keyword.Bluemix_notm}} local. Para obtener más información sobre {{site.data.keyword.Bluemix_notm}} local y Relay, consulte [Bluemix local](/docs/local/index.html).
 
 ### Seguridad funcional
 
@@ -145,7 +145,7 @@ Nessus, para detectar cualquier problema en la configuración de la red y del ho
 <dt>Gestión de accesos de usuario</dt>
 <dd>Dentro de {{site.data.keyword.Bluemix_notm}}, se siguen directrices de separación de responsabilidades para asignar a los usuarios privilegios de acceso granulares y para garantizar que los usuarios solo tienen el acceso que necesitan para realizar su trabajo según el principio de privilegio menor.
 
-En los entornos {{site.data.keyword.Bluemix_notm}} dedicado y local, los administradores asignados pueden gestionar roles y permisos para los usuarios de {{site.data.keyword.Bluemix_notm}} en su organización mediante la Consola de administración. Consulte [Gestión de {{site.data.keyword.Bluemix_notm}}](../admin/adminpublic.html#mng) para obtener más detalles.
+En los entornos {{site.data.keyword.Bluemix_notm}} dedicado y local, los administradores asignados pueden gestionar roles y permisos para los usuarios de {{site.data.keyword.Bluemix_notm}} en su organización mediante la Consola de administración. Consulte [Gestión de {{site.data.keyword.Bluemix_notm}}](/docs/admin/adminpublic.html#mng) para obtener más detalles.
 </dd>
 </dl>
 
@@ -211,12 +211,12 @@ El servicio Single Sign On da soporte a varios orígenes de identidad donde se a
 <dd> Los registros de usuarios que mantienen Google, Facebook y LinkedIn.</dd>
 </dl>
 
-Para obtener más información, consulte [Guía de iniciación a Single Sign On](../services/SingleSignOn/index.html).
+Para obtener más información, consulte [Guía de iniciación a Single Sign On](/docs/services/SingleSignOn/index.html).
 
 ### Seguridad de aplicaciones en la nube
 
 Este servicio proporciona un análisis de seguridad para apps web y móviles, y le permite explorar el código fuente en busca
-de vulnerabilidad de seguridad. Para obtener más información, consulte [Guía de iniciación para seguridad de aplicaciones en la nube](../services/ApplicationSecurityonCloud/index.html).
+de vulnerabilidad de seguridad. Para obtener más información, consulte [Guía de iniciación para seguridad de aplicaciones en la nube](/docs/services/ApplicationSecurityonCloud/index.html).
 
 ### Plug-in IBM UrbanCode para la prueba de seguridad de apps
 
@@ -229,17 +229,17 @@ Para obtener más información, vaya a [IBM Application Security Testing for Blu
 El servicio de dashDB utiliza un servidor LDAP incorporado para la autenticación de usuario. La conexión entre
 las apps y la base de datos está protegida mediante certificados SSL. Este servicio utiliza la capacidad de cifrado nativo de DB2® para cifrar de forma automática la base de datos desplegada y las copias de seguridad de la base de datos. La rotación de claves maestras se ejecuta automáticamente cada 90 días.
 
-Para obtener más información, consulte [Guía de iniciación a dashDB](../services/dashDB/index.html).
+Para obtener más información, consulte [Guía de iniciación a dashDB](/docs/services/dashDB/index.html).
 
 ### Secure Gateway
 
 El servicio Secure Gateway le permite conectar de forma segura apps {{site.data.keyword.Bluemix_notm}} con ubicaciones remotas, tanto locales como en la nube. Proporciona conectividad segura y establece un túnel entre la organización {{site.data.keyword.Bluemix_notm}} y la ubicación remota a la que desea conectarse. Puede configurar y crear una pasarela segura mediante la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} o un paquete de API.
 
-Para obtener más información, consulte [Guía de iniciación a Secure Gateway](../services/SecureGateway/secure_gateway.html).
+Para obtener más información, consulte [Guía de iniciación a Secure Gateway](/docs/services/SecureGateway/secure_gateway.html).
 
 ### Información sobre seguridad y gestión de sucesos
 
-Puede utilizar las herramientas de información de seguridad y gestión de sucesos (SIEM) para analizar las alertas de seguridad en los registros de app. Una de ellas es IBM Security QRadar&reg; SIEM, que proporciona inteligencia de seguridad en entornos de nube. Para obtener información, consulte [IBM QRadar Security Intelligence Platform](http://www-01.ibm.com/support/knowledgecenter/SS42VS/welcome?lang=en){: new_window}.
+Puede utilizar las herramientas de información de seguridad y gestión de sucesos (SIEM) para analizar las alertas de seguridad en los registros de app. Una de ellas es IBM Security QRadar&reg; SIEM, que proporciona inteligencia y seguridad en entornos de nube. Para obtener información, consulte [IBM QRadar Security Intelligence Platform](http://www-01.ibm.com/support/knowledgecenter/SS42VS/welcome?lang=en){: new_window}.
 
 ## Despliegue de la seguridad de {{site.data.keyword.Bluemix_notm}}
 {: #security-deployment}
@@ -357,8 +357,7 @@ para cada uno de los estándares.
 |{{site.data.keyword.mql}}				|S	|S	|S	|	 		|
 |{{site.data.keyword.SecureGateway}}			|S	|S |	|	 		|
 |{{site.data.keyword.sescashort}}     |S |S |S	|  |
-
-*Tabla 1. Plataforma y conformidad de servicios*
+{: caption="Table 1. Platform and service compliance" caption-side="top"}
 
 # Enlaces relacionados
 {: #rellinks}
@@ -367,4 +366,4 @@ para cada uno de los estándares.
 {: #general}
 
 * [Seguridad de IBM SaaS](http://www.ibm.com/cloud-computing/built-on-cloud/saas-security)
-* [Guía de iniciación a Single Sign On](../services/SingleSignOn/index.html)
+* [Guía de iniciación a Single Sign On](/docs/services/SingleSignOn/index.html)

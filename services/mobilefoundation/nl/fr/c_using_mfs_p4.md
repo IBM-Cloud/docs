@@ -3,13 +3,11 @@
 copyright:
   years: 2016
 lastupdated:  "2016-10-14"
+
 ---
 
 #	Utilisation du plan Professional Per Capacity
 {: #using_mobilefoundation_p4}
-
-<!--Last updated: 12 September 2016
-{: .last-updated} -->
 
 Avec le plan Professional Per Capacity, les utilisateurs
 peuvent créer un certain nombre d'applications mobiles avec
@@ -68,8 +66,7 @@ pour la connexion à l'instance de service
 {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional
 indiquée.
 
-+  Cliquez sur **Ajouter**.
-Cela permet de créer les tables requises dans l'instance de service de base de
++  Cliquez sur **Ajouter**. Cela permet de créer les tables requises dans l'instance de service de base de
 données {{site.data.keyword.dashdbshort_notm}} configurée.
 
 **Remarque** : Vous ne pouvez pas modifier l'instance de service {{site.data.keyword.dashdbshort_notm}} configurée pour être utilisée par votre instance de service {{site.data.keyword.mobilefoundation_short}}. Vous pouvez toutefois utiliser la même instance de service {{site.data.keyword.dashdbshort_notm}} sur plusieurs instances de service {{site.data.keyword.mobilefoundation_short}}, car chaque instance de service {{site.data.keyword.mobilefoundation_short}} crée son propre schéma dans l'instance de service {{site.data.keyword.dashdbshort_notm}} sélectionnée.
@@ -101,8 +98,7 @@ L'implantation de votre serveur débute. Ce processus prend environ 10 minutes e
 *	Cliquez sur **Launch Console** pour ouvrir la console {{site.data.keyword.mfp_oc_short_notm}}.
 
 
-<!--This console runs inside the container.--> 
-Elle vous permet de gérer vos applications, adaptateurs et
+<!--This console runs inside the container.--> Elle vous permet de gérer vos applications, adaptateurs et
 périphériques mobiles, ainsi que l'utilisation de votre serveur en
 tant que serveur dorsal mobile, l'envoi de notifications push, etc.
 
@@ -118,7 +114,7 @@ le groupe de conteneurs.
 
  Les utilisateurs peuvent aussi connecter des volumes aux conteneurs pour conserver les données. Le volume une fois sélectionné ne peut être changé. L'espace de partage de fichiers par défaut disponible pour l'utilisateur est de 20 Go. Si l'utilisateur a besoin d'un espace de stockage supplémentaire pour conserver des données d'analyse, il est invité à acheter un partage de fichiers supplémentaire et à créer un volume en utilisant ce partage de fichier. Il peut ensuite sélectionner ce nouveau volume lors du déploiement du serveur d'analyse.
 
- Pour plus d'informations sur l'ajout de volumes dans {{site.data.keyword.containerlong}}, voir [Stockage de données persistantes dans un volume à l'aide du tableau de bord {{site.data.keyword.Bluemix_notm}} ](https://new-console.ng.bluemix.net/docs/containers/container_volumes_ui.html){: new_window}.
+ Pour plus d'informations sur l'ajout de volumes dans {{site.data.keyword.containerlong}}, voir [Stockage de données persistantes dans un volume à l'aide du tableau de bord {{site.data.keyword.Bluemix_notm}} ](https://console.ng.bluemix.net/docs/containers/container_volumes_ui.html){: new_window}.
 
 * Cliquez sur commande d'ajout d'analyse pour ajouter le serveur Mobile Analytics à l'instance de service {{site.data.keyword.mobilefoundation_short}}.
 
@@ -134,8 +130,7 @@ message indique la progression de l'opération.
 
 * Lancez MobileFirst Analytics depuis {{site.data.keyword.mfp_oc_short_notm}}.
 
-* La connexion unique est activée entre {{site.data.keyword.mfserver_short_notm}} et le serveur Mobile Analytics. Le serveur Mobile Analytics est configuré avec les mêmes clés LTPA et données d'identification de l'utilisateur que celles du serveur {{site.data.keyword.mfserver_short_notm}}. 
-Vous pouvez vous servir des mêmes
+* La connexion unique est activée entre {{site.data.keyword.mfserver_short_notm}} et le serveur Mobile Analytics. Le serveur Mobile Analytics est configuré avec les mêmes clés LTPA et données d'identification de l'utilisateur que celles du serveur {{site.data.keyword.mfserver_short_notm}}. Vous pouvez vous servir des mêmes
 `nom_d'utilisateur` et
 `mot_de_passe` pour vous connecter à la console
 Mobile Analytics que ceux utilisés pour la connexion à
@@ -168,8 +163,7 @@ L'option **Start Server with Advanced Configuration** de la page `Overview` perm
 
   - **Nodes** affiche le nombre de noeuds créés.
 
-      - Vous pouvez créer un parc de serveurs {{site.data.keyword.mobilefirst}} en configurant le nombre de noeuds à cet endroit. 
-La configuration minimum prise en charge est de 2 noeuds avec un 1 Go
+      - Vous pouvez créer un parc de serveurs {{site.data.keyword.mobilefirst}} en configurant le nombre de noeuds à cet endroit. La configuration minimum prise en charge est de 2 noeuds avec un 1 Go
 de mémoire chacun, et la configuration
 maximum prise en charge est de 32 noeuds avec 16 Go de mémoire chacun.
 

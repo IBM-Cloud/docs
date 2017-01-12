@@ -1,12 +1,8 @@
 ﻿---
 
- 
-
 copyright:
-
   years: 2015, 2016
-
- 
+lastupdated: "2016-11-29"
 
 ---
 
@@ -18,18 +14,21 @@ copyright:
 
 #Création d'un bouton Déployer dans {{site.data.keyword.Bluemix_notm}} {: #deploy-button} 
 
-*Dernière mise à jour : 2 mars 2016*
-{: .last-updated} 
-
 Le bouton Déployer dans {{site.data.keyword.Bluemix}} est un moyen efficace de partager votre application publique hébergée par Git de sorte que d'autres personnes puissent tester le code
 et le déployer dans {{site.data.keyword.Bluemix_notm}}. Il nécessite une configuration minimale et vous pouvez l'insérer à n'importe quel emplacement prenant en charge le balisage. Un utilisateur qui clique sur le bouton crée une copie clonée du code dans un nouveau référentiel Git pour que votre application d'origine ne soit pas affectée. 
 {: shortdesc} 
 
-**Astuce :** si l'image de marque de votre entreprise est importante, vous pouvez [incorporer un flux de trame d'information Déployer dans {{site.data.keyword.Bluemix_notm}}](../develop/deploy_button_embed.html) à votre contenu plutôt qu'insérer un bouton. Lorsque des personnes créent une copie clonée de votre application publique hébergée par Git, elles restent dans votre contenu au lieu d'être redirigées vers le site Web bluemix.net. 
+**Astuce :** si l'image de marque de votre entreprise est importante, vous pouvez [incorporer un flux de trame d'information Déployer dans {{site.data.keyword.Bluemix_notm}}](/docs/develop/deploy_button_embed.html) à votre contenu plutôt qu'insérer un bouton. Lorsque des personnes créent une copie clonée de votre application publique hébergée par Git, elles restent dans votre contenu au lieu d'être redirigées vers le site Web bluemix.net. 
+
+**Remarque** : La fonction des chaînes d'outils est désormais disponible. N'importe
+quel utilisateur cliquant sur le lien Déployer dans
+{{site.data.keyword.Bluemix_notm}} peut cliquer sur le lien situé dans
+la bannière pour essayer de déployer son application à l'aide d'une chaîne
+d'outils. 
 
 Lorsqu'un utilisateur clique sur votre bouton, les actions suivantes se produisent : 
 
-1. Si la personne ne possède pas de compte {{site.data.keyword.Bluemix}} actif, un compte d'essai doit être créé. 
+1. Si la personne ne possède pas de compte {{site.data.keyword.Bluemix_notm}} actif, un compte d'essai doit être créé. 
 
 2. La personne peut sélectionner une région, une organisation, un espace et un nom d'application. Le nom d'application suggéré est construit à partir du nom d'application précédent, du nom d'utilisateur de la personne et de l'heure. 
 
@@ -132,7 +131,7 @@ Le fichier manifeste vous permet d'indiquer :
     <ul>
     <li>Un nom d'application unique.</li>  
     <li>Des services déclarés : une extension de manifeste, qui crée ou recherche les services requis ou facultatifs devant être configurés avant le déploiement de l'application, comme un service de cache de données. Vous pouvez afficher la liste des services, des libellés et des plans {{site.data.keyword.Bluemix_notm}} éligibles à l'aide de l'<a href="https://github.com/cloudfoundry/cli/releases">interface de ligne de commande CF</a>, en exécutant la commande <code>cf marketplace</code> ou en parcourant le <a href="https://console.ng.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-_-dWdevcenter-_-devops-services-_-lp#/store">catalogue {{site.data.keyword.Bluemix_notm}}</a>. 
-
+    
     <strong>Remarque :</strong> les services déclarés constituent une extension IBM du format de manifeste Cloud Foundry standard. Cette extension est susceptible d'être révisée dans une édition ultérieure, parallèlement à l'évolution et à l'amélioration de la fonction.
 	
 	<a href="http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html#minimal-manifest" target="_blank">Apprenez à créer un fichier <code>manifest.yml</code>.</a>  
@@ -167,8 +166,10 @@ Le fichier manifeste vous permet d'indiquer :
 </pre>
    </li>
    </ul>
-	<li> Si le référentiel doit être généré avant le déploiement de l'application, une génération automatisée du code dans le référentiel est déclenchée avant le déploiement. Les
-générations automatisées ont lieu lorsqu'un fichier script de génération est détecté dans le répertoire racine du référentiel. 
+	<li> Si l'application doit être construite pour pouvoir être déployée, vous devez inclure un fichier de génération dans votre référentiel. Si
+un fichier script de génération est détecté dans le répertoire racine du
+référentiel, une génération automatisée du code est déclenchée avant le
+déploiement.
 	
 	Générateurs pris en charge : 
 	    <ul>
@@ -190,9 +191,16 @@ génère la sortie dans le dossier <code>. </code> </li>
 <li>Dans le répertoire racine de votre projet, créez un répertoire <code>.bluemix</code>.</li>
 <li>Téléchargez le fichier <code>pipeline.yml</code> dans le référentiel <code>.bluemix</code>.</li>
 </ol> </li>
-	<li>Si vous déployez une application dans un conteneur en utilisant <strong>IBM Containers</strong>, vous devez inclure le document Dockerfile dans
-le répertoire racine du référentiel et inclure un fichier <code>pipeline.yml</code> dans un répertoire <code>.bluemix</code>. 
+	<li>Pour déployer une application dans un conteneur à l'aide d'<strong>IBM
+Containers</strong>, vous devez inclure un document Dockerfile dans le répertoire
+racine du référentiel, et, dans un répertoire <code>.bluemix</code>, inclure un fichier <code>pipeline.yml</code>.
 	<ul>
+	    <li>Le document Dockerfile agit comme une sorte de script de génération
+pour l'application. Si un document Dockerfile est détecté dans le référentiel,
+l'application est générée automatiquement en image avant d'être déployée dans
+un conteneur. Si l'application elle-même doit être générée avant la génération
+de l'image, incluez un script de génération, ainsi qu'un document Dockerfile,
+comme décrit précédemment.</li>
 	    <li> Pour en savoir plus sur la création de documents Dockerfile, <a href="https://docs.docker.com/reference/builder/" target="_blank">voir la documentation Docker</a>. </li>
 	    <li>Vous pouvez créer un fichier <code>pipeline.yml</code> manuellement ou en générer un à partir d'un projet DevOps Services existant. Pour créer manuellement un fichier <code>pipeline.yml</code> propre à des conteneurs, <a href="https://github.com/Puquios/" target="_blank">consultez les exemples dans GitHub</a>. </li>
         </ul>
@@ -201,4 +209,5 @@ le répertoire racine du référentiel et inclure un fichier <code>pipeline.yml<
  </ul>
 </ul>
 
-Pour obtenir de l'aide relative au traitement des incidents, voir [Le bouton Déployer dans Bluemix ne déploie pas d'application](../troubleshoot/index.html#deploytobluemixbuttondoesntdeployanapp){:new_window}.	
+Pour obtenir de l'aide relative au traitement des incidents, voir [Le bouton Déployer dans Bluemix ne déploie pas d'application](/docs/troubleshoot/index.html#deploytobluemixbuttondoesntdeployanapp){:new_window}.	
+

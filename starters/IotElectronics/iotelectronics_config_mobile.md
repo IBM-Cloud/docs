@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-28"
+  years: 2016, 2017
+lastupdated: "2016-11-29"
 
 ---
 
@@ -43,21 +43,21 @@ To connect the mobile app to your environment and register your appliances, perf
 
 2. Select **Remotely control your connected appliances**.
 
-    ![{{site.data.keyword.iotelectronics}} starter experience](images/IoT4E_remotely_option.png "{{site.data.keyword.iotelectronics}} starter experience")
+    ![{{site.data.keyword.iotelectronics}} starter experience](images/IoT4E_remotely_option.svg "{{site.data.keyword.iotelectronics}} starter experience")
 
 3. Create one or more washers by scrolling to the section that is labeled **Next, choose or add new simulated washer** and then by clicking the + icon. A new washer is created.
 
-    ![Add washer](images/IoT4E_add_washer.png "Add washer")
+    ![Add washer](images/IoT4E_add_washer.svg "Add washer")
 
 4.	Scroll to the Connection QR code and scan it using your mobile device. The Connection QR code is located in the section labeled **To connect the app to the environment, you'll be asked to scan this QR Code**.
 
-  ![Connection QR code.](images/iot4e_mobile_connect_QR.png "{{site.data.keyword.iotelectronics}} Connection QR code")
+  ![Connection QR code.](images/iot4e_mobile_connect_QR.svg "{{site.data.keyword.iotelectronics}} Connection QR code")
 
 5. On your mobile device, enter login credentials. Your user ID and password can be any length. Remember your login credentials for future sessions. Your mobile device is now registered to your {{site.data.keyword.iotelectronics}} environment, and you are ready to register individual appliances.
 
 6. On your computer, scroll to a simulated washer and click it to display its data and Appliance QR code.
 
-  ![Select a washer.](images/IoT4E_mobile_washer_QR.png "Select a washer.")
+  ![Select a washer.](images/IoT4E_mobile_washer_QR.svg "Select a washer.")
 
 7.	Use your mobile device to scan the QR code of the washer. The washer is now registered, and the washer status appears on your mobile device.
 

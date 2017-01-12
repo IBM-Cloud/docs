@@ -5,9 +5,14 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # REST-APIs verwenden
 {: #push-api-rest}
-Letzte Aktualisierung: 17. Oktober 2016
+Letzte Aktualisierung: 06. Dezember 2016
 {: .last-updated}
 
 Sie können eine REST-API (REST = Representational State Transfer; API = Application Program Interface) für Push-Benachrichtigungen verwenden. Sie können auch das Software Development Kit (SDK) und die [Push-API](https://mobile.{DomainName}/imfpush/) verwenden, um Ihre Clientanwendungen weiter zu entwickeln.
@@ -19,12 +24,13 @@ Mit der Push-REST-API können Back-End-Serveranwendungen und -Clients auf Funkti
 - Nachrichten
 - Subskriptionen
 - Tags
+- Webhooks
 
 Führen Sie die folgenden Schritte aus, um die Basis-URL für die REST-API abzurufen:
 
 1. Erstellen Sie im Bluemix®-Katalog im Abschnitt 'Boilerplates' eine Back-End-Anwendung. Wählen Sie dazu 'MobileFirst Services Starter' aus. Hierdurch wird der {{site.data.keyword.mobilepushshort}}-Service an die Anwendung gebunden. Sie können auch eine Serviceinstanz von Push erstellen und diese ungebunden lassen. 
 1. Navigieren Sie auf der Hauptseite des Bluemix-Dashboards zum Bereich **Anwendungen** und wählen Sie dort Ihre App aus.
-3. Klicken Sie auf **Mobile Systemerweiterungen**. Die Werte für die Route und für die App-GUID werden am Anfang der Detailseite für Ihre App angezeigt. In der Anzeige 'Berechtigungsnachweise anzeigen' werden Informationen zu 'appSecret' angezeigt. Für manche APIs können Sie den geheimen Anwendungsschlüssel sowie den geheimen Clientschlüssel über 'Mobile Systemerweiterungen' abrufen.
+3. Klicken Sie auf **Mobile Systemerweiterungen**. Die Werte für die Route und für die App-GUID werden am Anfang der Detailseite für Ihre App angezeigt. In der Anzeige 'Berechtigungsnachweise anzeigen' werden Informationen über 'AppSecret' angezeigt. Für manche APIs können Sie den geheimen Anwendungsschlüssel sowie den geheimen Clientschlüssel über 'Mobile Systemerweiterungen' abrufen.
 
 Sie können auch die Befehlszeile verwenden, um die Serviceberechtigungsnachweise abzurufen:
 
@@ -43,7 +49,7 @@ Der Header für das Akzeptieren der Sprache gibt an, welche Sprache für die Feh
 ## appSecret 
 {: #push-api-rest-secret}
 
-Beim Binden einer Anwendung an {{site.data.keyword.mobilepushshort}} generiert der Service den eindeutigen Schlüssel 'appSecret' und übergibt diesen mit dem Antwortheader. Wenn Sie die REST-API von IBM {{site.data.keyword.mobilepushshort}} for Bluemix verwenden, finden Sie in der Referenz für die REST-API Informationen dazu, welche APIs geschützt werden müssen. Informationen zur REST-API enthält die REST-API-Referenz.
+Beim Binden einer Anwendung an {{site.data.keyword.mobilepushshort}} generiert der Service den eindeutigen Schlüssel 'appSecret' und übergibt diesen mit dem Antwortheader. Wenn Sie die REST-API von IBM {{site.data.keyword.mobilepushshort}} for Bluemix verwenden, finden Sie in der Referenz für die REST-API Informationen dazu, welche APIs geschützt werden müssen. Informationen hierzu finden Sie in [Push-REST-API](https://mobile.{DomainName}/imfpush/).
 
 Der Anforderungsheader muss 'appSecret' enthalten. Andernfalls gibt der Server den Fehlercode 401 ('Unauthorized Error') zurück. Beim Hinzufügen von {{site.data.keyword.mobilepushshort}} zu einer Anwendung wird eine spezifische App-ID erstellt. Sie erhalten als Teil der Antwort einen Header mit dem Namen 'appSecret', der für die Erstellung von Tags oder das Senden von Nachrichten verwendet wird. Diese Operation erfolgt über Services im Katalog oder in der Boilerplate.
 

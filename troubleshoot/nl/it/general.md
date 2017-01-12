@@ -1,7 +1,9 @@
 ---
 
 copyright:
-  anni: 2015, 2015
+  year: 2015, 2015
+  
+lastupdated: "2016-08-12"
 
 
 ---
@@ -17,8 +19,6 @@ copyright:
 # Problemi dei servizi generali
 {: #general}
 
-*Ultimo aggiornamento: 12 agosto 2016*
-{: .last-updated}
 
 I problemi relativi ai servizi {{site.data.keyword.Bluemix}}
 potrebbero includere un errore di timeout del gateway che si verifica quando elimini

@@ -47,9 +47,8 @@ l'interface utilisateur {{site.data.keyword.Bluemix_notm}} ou l'interface de lig
 	2. Dans l'onglet **Domaines**, cliquez sur **Ajouter un domaine**, entrez votre nom de domaine personnalisé et
 cliquez sur **Sauvegarder**.
 	
-	**Remarque** : par exemple, vous pouvez utiliser `mon_entreprise.com` pour associer la route
-`www.mon_entreprise.com` à votre application. Vous pouvez aussi utiliser `exemple.mon_entreprise.com` pour associer la route
-`www.exemple.mon_entreprise.com` à votre application.
+	**Remarque** : Par exemple, vous pouvez utiliser `mon_entreprise.com` pour associer la route `www.mon_entreprise.com` à votre application.
+Vous pouvez aussi utiliser `exemple.mon_entreprise.com` pour associer la route `www.exemple.mon_entreprise.com` à votre application.
 
   2. Ajoutez la route avec le domaine personnalisé à une application.
 
@@ -304,8 +303,7 @@ répond aux deux adresses URL : `Green.mybluemix.net` et `Blue.mybluemix.net`.
   cf unmap-route Green mybluemix.net -n Green
   ```
 
-  **Résultat :** le routeur CF arrête d'envoyer le trafic à l'application *Blue*. L'application *Green*
-répond à l'adresse URL `Blue.mybluemix.net`.
+  **Résultat :** le routeur CF arrête d'envoyer le trafic à l'application *Blue*. L'application *Green* répond à l'adresse URL `Blue.mybluemix.net`.
 
 6. Facultatif : si vous voulez supprimer l'ancienne version (*Blue*) de l'application, utilisez la commande `cf
 delete`.

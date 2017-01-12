@@ -2,6 +2,7 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-12-06"
 
 ---
 {:new_window: target="_blank"}
@@ -14,8 +15,6 @@ copyright:
 # Resolución de problemas de {{site.data.keyword.objectstorageshort}}
 {: #troubleshooting}
 
-*Última actualización: 19 de octubre de 2016*
-{: .last-updated}
 
 A continuación, encontrará las respuestas a las preguntas sobre resolución de problemas más comunes sobre el uso de {{site.data.keyword.objectstoragefull}}.
 {: shortdesc}
@@ -64,6 +63,6 @@ Al utilizar los foros para formular una pregunta, añada una etiqueta para que l
 * Si tiene preguntas técnicas sobre {{site.data.keyword.objectstorageshort}}, publique su pregunta en [Stack Overflow](http://stackoverflow.com/search?q=object-storage+ibm-bluemix){: new_window} y añada las etiquetas "ibm-bluemix" y "object-storage".
 * Para formular preguntas sobre el servicio y obtener instrucciones de iniciación, utilice el foro [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/objectstorage/?smartspace=bluemix){: new_window}. Incluya las etiquetas "objectstorage" y "bluemix".
 
-Consulte [Obtener ayuda](https://console.ng.bluemix.net/docs/support/index.html#getting-help){: new_window} para obtener más información sobre el uso de los foros.
+Consulte [Obtener ayuda](/docs/support/index.html#getting-help) para obtener más información sobre el uso de los foros.
 
-Para obtener más información sobre cómo abrir una incidencia de soporte de IBM, o sobre los niveles de soporte y las gravedades de las incidencias, consulte [Contacto con soporte](https://console.ng.bluemix.net/docs/support/index.html#contacting-support){: new_window}.
+Para obtener más información sobre cómo abrir una incidencia de soporte de IBM, o sobre los niveles de soporte y las gravedades de las incidencias, consulte [Contacto con soporte](/docs/support/index.html#contacting-support).

@@ -1,12 +1,17 @@
+---
+
+copyright:
+  years: 2015, 2016
+lastupdated: "2016-11-21"
+
+---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
 {:codeblock:.codeblock}
 
 # Decahose および PowerTrack ストリーム {: #decahose_powertrack}
-
-*最終更新日: 2016 年 5 月 13 日*
-{: .last-updated}
 
 {{site.data.keyword.twittershort}} は、
 {{site.data.keyword.Bluemix_notm}} プランの登録に基づいて Twitter Decahose および PowerTrack ストリームへのアクセスを提供します。両方の
@@ -27,7 +32,7 @@ PowerTrack ストリームでは、トラックと呼ばれるユーザー定義
 
 <dl>
 <dt>ルール</dt>
-<dd>このトラックで収集されたすべてのメッセージは、トラックに関連付けられたルールの少なくとも 1 つと一致します。このトラック・タイプ内で、ルールを追加、編集、および削除できます。完全な [GNIP PowerTrack Rules の構文](http://support.gnip.com/apis/powertrack/rules.html)が、ルール・ベースのトラック内でサポートされています。すべてのクエリーは、{{site.data.keyword.twittershort}} [クエリー言語](twitter_rest_apis.html#querylanguage "クエリー言語")に準拠している必要があります。
+<dd>このトラックで収集されたすべてのメッセージは、トラックに関連付けられたルールの少なくとも 1 つと一致します。このトラック・タイプ内で、ルールを追加、編集、および削除できます。完全な [GNIP PowerTrack Rules の構文](http://support.gnip.com/apis/powertrack2.0/rules.html)が、ルール・ベースのトラック内でサポートされています。すべてのクエリーは、{{site.data.keyword.twittershort}} [クエリー言語](twitter_rest_apis.html#querylanguage "クエリー言語")に準拠している必要があります。
 </dd>
 
 <dt>集計</dt>

@@ -1,12 +1,13 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2015 2016
 
- 
+lastupdated: "2016-02-24"
+
 
 ---
 
@@ -116,7 +117,7 @@ bx as policy-enable|policy-disable <APP_NAME>
 
 ## Visualización del historial de escalado automático de una app
 
-Puede mostrar el historial de la actividad de escalado automático de una app específica. Se muestra una tabla de historial de registros de escalado automático en la interfaz de línea de mandatos.
+Puede mostrar el historial de la actividad de escalado automático de una app específica. Ejecute el mandato siguiente:
 
 ```
 bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<end_timestamp>]  [--json]
@@ -127,9 +128,9 @@ bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<en
 <dt class="pt dlterm">&lt;APP_NAME&gt;</dt>
 <dd class="pd">El nombre de la app para la que desea mostrar el historial de la política de escalado automático.
 <dt class="pt dlterm">&lt;start_timestamp&gt;</dt>
-<dd class="pd">La indicación de fecha y hora del comienzo del rango del historial. Los formatos admitidos son `yyyy-MM-ddTHH:mm:ss+/-hhmm, yyyy-MM-ddTHH:mm:ssZ`. De manera predeterminada, la indicación de fecha y hora se define hasta 50 horas por delante de la hora actual. Consulte los <a href="https://www.w3.org/TR/NOTE-datetime" target="_blank">Formatos estándar de fecha y hora W3C</a> para obtener más detalles sobre el formato de la indicación de fecha y hora. 
+<dd class="pd">La indicación de fecha y hora del comienzo del rango del historial. Los formatos admitidos son `yyyy-MM-ddTHH:mm:ss+/-hhmm, yyyy-MM-ddTHH:mm:ssZ`. De manera predeterminada, la indicación de fecha y hora se define hasta 50 horas por delante de la hora actual. Consulte los <a href="https://www.w3.org/TR/NOTE-datetime" target="_blank">Formatos estándar de fecha y hora W3C</a> para obtener más detalles sobre el formato de la indicación de fecha y hora.
 <dt class="pt dlterm">&lt;end_timestamp&gt;</dt>
-<dd class="pd">La indicación de fecha y hora del final del rango del historial. Los formatos admitidos son `yyyy-MM-ddTHH:mm:ss+/-hhmm, yyyy-MM-ddTHH:mm:ssZ`. De manera predeterminada, la indicación de fecha y hora está definida a la hora actual. Consulte los <a href="https://www.w3.org/TR/NOTE-datetime" target="_blank">Formatos estándar de fecha y hora W3C</a> para obtener más detalles sobre el formato de la indicación de fecha y hora. 
+<dd class="pd">La indicación de fecha y hora del final del rango del historial. Los formatos admitidos son `yyyy-MM-ddTHH:mm:ss+/-hhmm, yyyy-MM-ddTHH:mm:ssZ`. De manera predeterminada, la indicación de fecha y hora está definida a la hora actual. Consulte los <a href="https://www.w3.org/TR/NOTE-datetime" target="_blank">Formatos estándar de fecha y hora W3C</a> para obtener más detalles sobre el formato de la indicación de fecha y hora.
 </dl>
 
 
@@ -140,8 +141,6 @@ bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<en
 {: rellinks}
 ## general
 {: general}
-* [{{site.data.keyword.autoscaling}} servicio](../../../services/Auto-Scaling/index.html)
+* [{{site.data.keyword.autoscaling}} servicio](/docs/services/Auto-Scaling/index.html)
 * [{{site.data.keyword.Bluemix_notm}} CLI](http://plugins.ng.bluemix.net/ui/home.html){: new_window}
 * [Formatos estándar de fecha y hora W3C](https://www.w3.org/TR/NOTE-datetime){: new_window}
-
-

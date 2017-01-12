@@ -1,21 +1,19 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2015，2016
 
- 
+lastupdated: "2016-03-15"
+
 
 ---
 
 {:shortdesc: .shortdesc}
 
 # VCAP 服务
-
-*上次更新时间：2016 年 3 月 15 日*
-{: .last-updated}
 
 
 VCAP_SERVICES 环境变量是一个 JSON 对象，包含可用于与 {{site.data.keyword.Bluemix_notm}} 中的服务实例进行交互的信息。

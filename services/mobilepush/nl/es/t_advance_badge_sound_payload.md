@@ -6,10 +6,12 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
-
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 #Habilitación de notificaciones push avanzadas
-Última actualización: 17 de octubre de 2016
+Última actualización: 06 de diciembre de 2016
 {: .last-updated}
 
 Configure un identificador de iOS, un sonido, una carga útil de JSON adicional, notificaciones accionables y notificaciones retenidas.
@@ -21,7 +23,7 @@ Configure un identificador y un sonido de iOS, y carga útil adicional de JSON.
 
 1. En el panel de control {{site.data.keyword.mobilepushshort}}, vaya al separador **Notificaciones**.
 2. Vaya a la sección **Campos opcionales** para configurar las características de {{site.data.keyword.mobilepushshort}}. 
-	- **Archivo de sonido**: Escriba una serie que apunte al archivo de sonido de la app móvil. En la carga útil, especifique el nombre de serie del archivo de sonido a utilizar. 
+	- **Archivo de sonido**: Escriba una serie que apunte al archivo de sonido de la app móvil. En la carga útil, especifique el nombre de serie del archivo de sonido a utilizar.
 	- **Identificador iOS**: Para dispositivos iOS, el número que se mostrará como el identificador del icono de app. Si falta esta propiedad, el identificador no se modificará. Para eliminar el identificador, establezca el valor de esta propiedad en 0.
 	
 ###Android
@@ -183,7 +185,7 @@ Swift
 
 Al recibir una notificación que necesita reacciones, el control se pasa al siguiente método según el identificador seleccionado.
 
-###Objective-C
+Objective-C
 
 ```
 (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forRemoteNotification:
@@ -196,7 +198,7 @@ Al recibir una notificación que necesita reacciones, el control se pasa al sigu
 ```
 	{: codeblock}
 
-###Swift
+Swift
  
 ```
 func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], completionHandler: () -> Void) {

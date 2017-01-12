@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-11"
 
 ---
 
@@ -11,9 +12,6 @@ copyright:
 
 # 用于推送 Liberty 应用程序的选项
 {: #options_for_pushing}
-
-上次更新时间：2016 年 6 月 10 日
-{: .last-updated}
 
 Bluemix 中 Liberty 服务器的行为由 Liberty buildpack 进行控制。buildpack 可以为特定类的应用程序提供完整运行时环境。这些 buildpack 是在云中提供可移植性并构成开放式云体系结构的关键所在。Liberty buildpack 提供了能够运行 Java EE 7 和 OSGi 应用程序的 WebSphere Liberty 容器。
 它支持 Spring 等流行框架，并包含 IBM JRE。WebSphere Liberty 支持适合云的快速应用程序开发。Liberty buildpack 支持多个部署到单个 Liberty 服务器的应用程序。作为 Liberty buildpack 集成到 Bluemix 的一部分，该 buildpack 会确保用于绑定服务的环境变量在 Liberty 服务器中显示为配置变量。
@@ -220,37 +218,35 @@ $ cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
 ### 可引用的变量
 {: #referenceable_variables}
 
-以下变量是在 runtime-vars.xml 文件中定义的，而且是从推送的 server.xml 文件中引用的。所有变量均区分大小写。
+以下变量是 `runtime-vars.xml` 文件中定义的变量，以及从推送的 `server.xml` 文件中引用的变量。所有变量均区分大小写。
 
 * ${port}：Liberty 服务器正在侦听的 HTTP 端口。
-* ${vcap_console_port}：正在运行 vcap 控制台的端口（通常与 ${port} 相同）。
-* ${vcap_app_port}：应用程序服务器正在侦听的端口（通常与 ${port} 相同）。
-* ${vcap_console_ip}：vcap 控制台的 IP 地址（通常是 Liberty 服务器正在侦听的 IP 地址）。
+* ${vcap_app_port}：与 ${port} 相同。在 Diego 上运行时未设置。
 * ${application_name}：应用程序名称，它是使用 cf push 命令中的选项定义的。
-* ${application_version}：此应用程序实例的版本，采用 UUID 格式，例如 b687ea75-49f0-456e-b69d-e36e8a854caa。后续每次推送包含新代码或应用程序工件更改的应用程序时，此变量都会更改。
-* ${host}：正在运行应用程序的 DEA 的 IP 地址（通常与 ${vcap_console_ip} 相同）。
+* ${application_version}：此应用程序实例的版本，采用 UUID 格式，例如 `b687ea75-49f0-456e-b69d-e36e8a854caa`。后续每次推送包含新代码或应用程序工件更改的应用程序时，此变量都会更改。
+* ${host}：应用程序实例的 IP 地址。
 * ${application_uris}：可用于访问此应用程序的端点的 JSON 样式数组，例如：myapp.mydomain.com。
-* ${start}：启动应用程序的时间与日期，采用类似于 2013-08-22 10:10:18 -0400 的格式。
+* ${start}：启动应用程序的时间与日期，采用类似于 `2013-08-22 10:10:18 -0400` 的格式。在 Diego 上运行时未设置。
 
 ### 访问绑定服务的信息
 {: #accessing_info_of_bound_services}
 
-要将服务绑定到应用程序时，有关该服务的信息（例如，连接凭证）会包含在 Cloud Foundry 为应用程序设置的 [VCAP_SERVICES 环境变量](http://docs.run.pivotal.io/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES)中。对于[自动配置的服务](autoConfig.html)，Liberty buildpack 会在 server.xml 文件中生成或更新服务绑定条目。服务绑定条目的内容可以使用下列其中一种格式：
+要将服务绑定到应用程序时，有关该服务的信息（例如，连接凭证）会包含在 Cloud Foundry 为应用程序设置的 [VCAP_SERVICES 环境变量](https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES)中。对于[自动配置的服务](autoConfig.html)，Liberty buildpack 会在 server.xml 文件中生成或更新服务绑定条目。服务绑定条目的内容可以使用下列其中一种格式：
 
 * cloud.services.&lt;service-name&gt;.&lt;property&gt;，描述诸如服务的名称、类型和计划之类的信息。
 * cloud.services.&lt;service-name&gt;.connection.&lt;property&gt;，描述服务的连接信息。
 
 典型的信息集如下所示：
-* name：服务名称。例如，mysql-e3abd。
-* label：所创建服务的类型。例如，mysql-5.5。
-* plan：服务计划，如该计划的唯一标识所示。例如，100。
-* connection.name：连接的唯一标识，采用 UUID 格式。例如，d01af3a5fabeb4d45bb321fe114d652ee。
-* connection.hostname：正在运行服务的服务器的主机名。例如，mysql-server.mydomain.com。
-* connection.host：正在运行服务的服务器的 IP 地址。例如，9.37.193.2。
-* connection.port：服务正在侦听入局连接的端口。例如，3306,3307。
-* connection.user：用于向服务认证此应用程序的用户名。用户名由 Cloud Foundry 自动生成。例如：unHwANpjAG5wT。
+* name：服务的名称，例如 mysql-e3abd。
+* label：所创建服务的类型，例如 mysql-5.5。
+* plan：服务套餐，由该套餐的唯一标识来指示，例如 100。
+* connection.name：连接的唯一标识，采用 UUID 格式，例如 d01af3a5fabeb4d45bb321fe114d652ee。
+* connection.hostname：正在运行服务的服务器的主机名，例如 mysql-server.mydomain.com。
+* connection.host：正在运行服务的服务器的 IP 地址，例如 9.37.193.2。
+* connection.port：服务正在侦听入局连接的端口，例如 3306、3307。
+* connection.user：用于向服务认证此应用程序的用户名。用户名由 Cloud Foundry 自动生成，例如 unHwANpjAG5wT。
 * connection.username：connection.user 的别名。
-* connection.password：用于向服务认证此应用程序的密码。密码由 Cloud Foundry 自动生成。例如：pvyCY0YzX9pu5。
+* connection.password：用于向服务认证此应用程序的密码。密码由 Cloud Foundry 自动生成，例如 pvyCY0YzX9pu5。
 
 对于 Liberty buildpack 未自动配置的绑定服务，应用程序需要自己管理后端资源的访问。
 

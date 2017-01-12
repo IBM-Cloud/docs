@@ -1,8 +1,7 @@
 ---
-
 copyright:
   years: 2016
-
+lastupdated: "2016-12-09"
 ---
 
 {:new_window: target="_blank"}
@@ -13,9 +12,6 @@ copyright:
 
 # Compose for MongoDB の概説
 {: #getting-started-with-compose-for-mongodb}
-
-最終更新日: 2016 年 9 月 20 日
-{: .last-updated}
 
 {{site.data.keyword.composeForMongoDB_full}} では、JSON データ・ストアとして多くの新規事業や企業に支持されている MongoDB の、強力な索引作成と照会、集約、幅広いドライバーのサポートを利用します。{{site.data.keyword.composeForMongoDB}} は、使いやすい自動スケーリング・デプロイメント・システムを提供します。高可用性と冗長性、自動およびオンデマンドのノンストップ・バックアップ、モニタリング・ツール、アラート・システムへの組み込み、パフォーマンス分析ビュー、その他の機能をすべて、整理されたシンプルなユーザー・インターフェースで提供します。
 {:shortdesc}
@@ -45,6 +41,7 @@ copyright:
 `deployment_id`|Compose 内で作成された、サービスの内部 ID。
 `db_type`|サービスによって提供されるデータベースのタイプ。この場合は、`mongodb`。
 `name`|データベース・デプロイメント名。
+{: caption="Table 1. {{site.data.keyword.composeForMongoDB}} credentials" caption-side="top"}
 
 # 関連リンク
 {: #rellinks}

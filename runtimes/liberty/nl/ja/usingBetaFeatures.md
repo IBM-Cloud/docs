@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-06-10"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # ベータ・フィーチャーの使用
 {: #using_beta_features}
-
-最終更新日: 2016 年 6 月 10 日
-{: .last-updated}
 
 Liberty ベータ・フィーチャーによって、将来の Liberty リリースに含まれる可能性のある新しい機能およびプログラミング・モデルに早期にアクセスできます。大部分のベータ・フィーチャーは、Bluemix にデプロイされたアプリケーションでも使用できます。
 
@@ -52,24 +50,26 @@ Bluemix で Liberty ベータ・フィーチャーを使用するには、以下
 2.  **IBM_LIBERTY_BETA** 環境変数を **true** に設定します。この変数は、アプリケーション用にベータ・フィーチャーをインストールして使用可能にするよう Liberty ビルドパックに指示します。例えば、以下のように指定します。
   * cf コマンド・ライン・ツールを使用する場合
 ```
-$ cf set-env <yourappname> IBM_LIBERTY_BETA true```
+       $ cf set-env <yourappname> IBM_LIBERTY_BETA true
+```
 {: #codeblock}
 
   * manifest.yml ファイルを使用する場合
 ```
-env:
-          IBM_LIBERTY_BETA: "true"```
+      env:
+          IBM_LIBERTY_BETA: "true"
+```
 
 3. **JBP_CONFIG_LIBERTY** 環境変数を **"version: +"** に設定します。この変数は、ベータ・フィーチャーをサポートする [Liberty 月次ランタイム](buildpackDefaults.html#liberty_versions)を使用可能にします。例えば、以下のように指定します。
   * cf コマンド・ライン・ツールを使用する場合
 ```
-$ cf set-env <yourappname> JBP_CONFIG_LIBERTY "version: +"
+       $ cf set-env <yourappname> JBP_CONFIG_LIBERTY "version: +"
 ```
 {: #codeblock}
 
   * manifest.yml ファイルを使用する場合
 ```
-env:
+      env:
           JBP_CONFIG_LIBERTY: "version: +"
 ```
 

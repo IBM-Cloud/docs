@@ -28,7 +28,7 @@ lastupdated: "2016-10-23"
 * 在全球的安全 {{site.data.keyword.CloudDataCents_notm}} 中部署高效能運算及儲存基礎架構。
 * 測試及採用 {{site.data.keyword.IBM_notm}}、開放程式碼社群及協力廠商開發人員的大範圍雲端服務及功能。
 * 透過專用網路及 API 功能，從單一可擴充雲端平台連接至所有舊式系統及應用程式。
-* 根據您的商業需求或工作量需求變更，即時加快及調降資源。
+* 根據您的商業需求或工作負載需求變更，即時加快及調降資源。
 
 ### 應用程式
 {: #bluemixoverviewapplications}
@@ -49,8 +49,8 @@ lastupdated: "2016-10-23"
 
 「服務」儀表板可以存取 {{site.data.keyword.IBM}} 及協力廠商提供者提供的 {{site.data.keyword.Bluemix_notm}} 服務。這些服務包括 Watson、Internet of Things、Analytics、Mobile 及 DevOps Services：
 
-* 只要使用 {{site.data.keyword.IBM_notm}} DevOps Services 及 {{site.data.keyword.Bluemix_notm}} Garage Method 的正確特性，即可透過更快速且更便宜的方式提供創新應用程式。如果您採用 DevOps 常規，並建立創新且靈活的文化，即可因應市場反覆進行及轉移。
-* Blockchain 是新一代交易式應用程式的對等式分散式分類帳技術，可建立簡化商業程序時的信任、責任及透明度。  
+* 只要使用 {{site.data.keyword.IBM_notm}} DevOps Services 及 {{site.data.keyword.Bluemix_notm}} Garage Method 的正確特性，即可透過更快速且更便宜的方式提供創新的應用程式。當您採用 DevOps 作法，並建立創新且靈活的文化，即可使用反覆運算作法，並因應市場而改變方向。
+* 區塊鏈是新一代交易式應用程式的對等式分散式分類帳技術，可建立信任、可究責性及透明度，同時簡化商業程序。  
 * Watson 讓您的應用程式具有一組完整語音、願景及資料 API 套組的認知運算。使用 Watson 服務部署認知平台，即可解決大部分複雜的商業問題。
 * {{site.data.keyword.IBM_notm}} 可讓您利用豐富的整合式雲端資料庫以及「資料及分析」服務來執行其他作業。 
 * {{site.data.keyword.IBM_notm}} Internet of Things 服務可讓您的應用程式與已連接的裝置、感應器及閘道進行通訊，並且使用這些項目所收集的資料。我們的秘訣是簡化裝置連接至 Internet of Things 雲端的方式。然後，您的應用程式即可使用我們的即時 API 及 REST API 來與裝置通訊，並且使用裝置所設定收集的資料。 
@@ -64,11 +64,11 @@ lastupdated: "2016-10-23"
 
 「基礎架構」儀表板提供各種服務以符合您的雲端基礎架構需求。
 
-{{site.data.keyword.Bluemix_notm}} 基礎架構提供可用的最高執行雲端基礎架構。{{site.data.keyword.Bluemix_notm}} 基礎架構是一個平台，可取得具有最多雲端運算選項的全球資料中心，然後整合並自動化所有項目。{{site.data.keyword.CloudDataCents_notm}} 會填入第一級運算、儲存及網路設備。每一個位置都是使用相同的方式進行建置、裝備及操作，因此，不管您在我們覆蓋區的哪個地方，都會有完全相同的功能及可用性。位置是透過業界最先進的網中網所連接，這種網路會整合特殊公用、專用及內部管理網路，以提供較低的總網路成本、更好的存取，以及更快的速度。而且，資料中心及網路共用單一專有管理系統。其中一個管理工具可讓您控制所有項目（每部裸機伺服器、虛擬伺服器及儲存裝置），這些項目都可以透過 API、入口網站及行動應用程式進行存取。
+{{site.data.keyword.Bluemix_notm}} 基礎架構提供可用的最高執行雲端基礎架構。{{site.data.keyword.Bluemix_notm}} 基礎架構是一個平台，它會納入全球具有最多雲端運算選項的資料中心，然後整合並自動化所有項目。{{site.data.keyword.CloudDataCents_notm}} 充滿了頂級的運算、儲存及網路設備。每一個位置都是使用相同的方式進行建置、裝備及操作，因此，您在我們有提供服務的任何位置，都能得到完全相同的功能及可用性。位置是透過業界最先進的網中網所連接，這種網路會整合不同的公用、專用及內部管理網路，以提供較低的總網路成本、更好的存取，以及更快的速度。此外，資料中心及網路共用單一的專有管理系統。一項管理工具即可讓您控制一切－每部裸機伺服器、虛擬伺服器及儲存裝置，這些項目全都可以透過 API、入口網站及行動應用程式進行存取。
 
 {{site.data.keyword.Bluemix_notm}} 基礎架構透過單一無縫式平台提供功能強大的裸機伺服器及彈性的虛擬伺服器。全部都是視需求提供，並按月或小時計費。裸機伺服器提供處理器密集及磁碟 I/O 密集工作負載的原始處理能力，而且可以配置成您的確切規格。虛擬伺服器則容許高速部署、彈性可擴充性及隨收隨付制計費。針對高效能運算，使用圖形處理裝置 (GPU) 伺服器來提高雲端的運算能力，頻率為每小時或每月。 
 
-{{site.data.keyword.Bluemix_notm}} 基礎架構供應項目是連接至分成公用、專用及管理資料流量的三層網路。客戶 {{site.data.keyword.Bluemix_notm}} 帳戶的基礎架構可能會跨專用網路彼此傳送資料，而沒有任何成本。基礎架構供應項目（例如裸機伺服器、虛擬伺服器及雲端儲存空間）會跨公用網路連接至 {{site.data.keyword.Bluemix_notm}} 型錄中的其他應用程式及服務（例如 Watson 服務、容器或運行環境）。這兩種類型供應項目之間的資料傳送是依標準公用網路頻寬速率進行計量及收費。
+{{site.data.keyword.Bluemix_notm}} 基礎架構供應項目是連接至分成公用、專用及管理資料流量的三層網路。客戶 {{site.data.keyword.Bluemix_notm}} 帳戶的基礎架構可能會跨專用網路在這類基礎架構之間傳送資料，而無需任何成本。基礎架構供應項目（例如裸機伺服器、虛擬伺服器及雲端儲存空間）會跨公用網路連接至 {{site.data.keyword.Bluemix_notm}} 型錄中的其他應用程式及服務（例如 Watson 服務、容器或運行環境）。這兩種類型供應項目之間的資料傳送是依標準公用網路頻寬速率進行計量及收費。
 
 ## 使用 {{site.data.keyword.Bluemix_notm}} 主控台
 {: #bluemixoverviewui}
@@ -131,7 +131,7 @@ lastupdated: "2016-10-23"
 
 圖 4. 虛擬伺服器的設計
 
-在每一個虛擬伺服器中，應用程式管理程式都會與 {{site.data.keyword.Bluemix_notm}} 基礎架構的其餘部分進行通訊，並管理部署至此虛擬伺服器的應用程式。每一個虛擬伺服器都具有容器，用以隔離及保護應用程式。在每一個容器中，{{site.data.keyword.Bluemix_notm}} 會安裝每一個應用程式所需的適當架構及運行環境。
+在每一台虛擬伺服器中，應用程式管理程式都會與 {{site.data.keyword.Bluemix_notm}} 基礎架構的其餘部分進行通訊，並管理部署至此虛擬伺服器的應用程式。每一台虛擬伺服器都具有容器，用以隔離及保護應用程式。在每一個容器中，{{site.data.keyword.Bluemix_notm}} 會安裝每一個應用程式所需的適當架構及運行環境。
 
 部署應用程式時，如果該應用程式具有 Web 介面（例如，Java Web 應用程式）或其他 REST 型服務（例如，向行動應用程式公開的行動服務），則應用程式的使用者就可利用正常的 HTTP 要求與其進行通訊。
 
@@ -165,8 +165,7 @@ cf api https://api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net
 | 美國南部地區 | 美國達拉斯 | ng | api.ng.bluemix.net | console.ng.bluemix.net |
 | 英國地區 | 英國倫敦 | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
 | 雪梨地區 | 澳洲雪梨 | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
-
-*表 1. {{site.data.keyword.Bluemix_notm}} 地區清單*
+{: caption="Table 1. {{site.data.keyword.Bluemix_notm}} region list" caption-side="top"}
 
 
 ### {{site.data.keyword.Bluemix_notm}} 備援

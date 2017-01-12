@@ -1,12 +1,13 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2015, 2016
 
- 
+lastupdated: "2016-10-24"
+
 ---
 
 
@@ -15,9 +16,6 @@ copyright:
 
 # Mandatos {{site.data.keyword.Bluemix_notm}} (bx)
 {: #bluemix_cli}
-
-Última actualización: 25 de octubre de 2016
-{: .last-updated}
 
 Versión: 0.4.1
 
@@ -65,7 +63,7 @@ Utilice los índices de las tablas siguientes para consultar los mandatos de Blu
  </tr>
   </tbody>
  </table>
-*Tabla 1. Mandatos generales bluemix*
+{: caption="Table 1. General bluemix commands" caption-side="top"}
 
 
 
@@ -104,7 +102,7 @@ Utilice los índices de las tablas siguientes para consultar los mandatos de Blu
  </tr>
  </tbody>
  </table>
-*Tabla 2. Mandatos para gestionar organizaciones, espacios y usuarios*
+ {: caption="Table 2. Commands for managing orgs, spaces, and users" caption-side="top"} 
 
 
 
@@ -143,7 +141,7 @@ Utilice los índices de las tablas siguientes para consultar los mandatos de Blu
  </tr>
   </tbody>
  </table>
-*Tabla 3. Mandatos para gestionar aplicaciones cf*
+{: caption="Table 3. Commands for managing cf apps" caption-side="top"}
 
 
 <table summary="Mandatos bluemix que se pueden utilizar para gestionar servicios Bluemix.">
@@ -174,7 +172,7 @@ Utilice los índices de las tablas siguientes para consultar los mandatos de Blu
  </tr>
   </tbody>
  </table>
-*Tabla 4. Mandatos para gestionar servicios Bluemix*
+{: caption="Table 4. Commands for managing Bluemix services" caption-side="top"}
 
 
 <table summary="Mandatos bluemix que puede utilizar para gestionar los valores de catálogo, plug-ins, facturación y seguridad de Bluemix.">
@@ -210,7 +208,7 @@ Utilice los índices de las tablas siguientes para consultar los mandatos de Blu
  </tr>
   </tbody>
  </table>
-*Tabla 5. Mandatos para gestionar los valores de catálogo, plug-ins, facturación y seguridad de Bluemix*
+{: caption="Table 5. Commands for managing Bluemix catalog, plug-ins, billing, and security settings" caption-side="top"}
 
 
 
@@ -242,7 +240,7 @@ Utilice los índices de las tablas siguientes para consultar los mandatos de Blu
  </tr>
   </tbody>
  </table>
-*Tabla 6. Mandatos para gestionar la configuración de la red*
+{: caption="Table 6. Commands for managing network settings" caption-side="top"}
 
 
 
@@ -301,8 +299,8 @@ Utilice los índices de las tablas siguientes para consultar los mandatos de Blu
  <td>[bluemix ic run](index.html#bluemix_ic_run)</td>
  </tr>
  <tr>
- <td>[bluemix ic service-bind](index.html#bluemix_ic_service_bind)</td>
- <td>[bluemix ic service-unbind](index.html#bluemix_ic_service_unbind)</td>
+ <td>[bluemix ic service-bind](index.html#bluemix_ic_service-bind)</td>
+ <td>[bluemix ic service-unbind](index.html#bluemix_ic_service-unbind)</td>
  <td>[bluemix ic start](index.html#ic_start)</td>
  <td>[bluemix ic stats](index.html#bluemix_ic_stats)</td>  
  <td>[bluemix ic stop](index.html#ic_stop)</td>
@@ -312,7 +310,7 @@ Utilice los índices de las tablas siguientes para consultar los mandatos de Blu
  <td>[bluemix ic unpause](index.html#unpause)</td>
  <td>[bluemix ic unprovision](index.html#bluemix_ic_unprovision)</td>  
  <td>[bluemix ic volume-inspect](index.html#bluemix_ic_volume_inspect)</td>
- <td>[bluemix ic volume-create](index.html#bluemix_ic_volume_create)</td> 
+ <td>[bluemix ic volume-create](index.html#bluemix_ic_volume_create)</td>
  </tr>
  <tr>
  <td>[bluemix ic volume-fs](index.html#bluemix_ic_volume_fs)</td>
@@ -330,7 +328,7 @@ Utilice los índices de las tablas siguientes para consultar los mandatos de Blu
  </tr>
   </tbody>
  </table>
-*Tabla 7. Mandatos para gestionar contenedores en Bluemix*
+{: caption="Table 7. Commands for managing containers on Bluemix" caption-side="top"}
 
 
 
@@ -2131,7 +2129,7 @@ bluemix ic group-create [--publish,-p PORT] --name GROUP_NAME [--memory,-m MEMOR
 contenedor](../../../containers/container_integrations_binding.html){: new_window}. |
 | CCS_BIND_SRV=*&lt;nombre_instancia_servicio1&gt;*,*&lt;nombre_instancia_servicio2&gt;* | Para enlazar un servicio de Bluemix directamente a un contenedor sin utilizar una app puente, utilice CCS_BIND_SRV. Este enlace permite a Bluemix inyectar la información de VCAP_SERVICES en la instancia del contenedor de ejecución. Para proporcionar una lista de varios servicios de Bluemix, inclúyalos como parte de la misma variable de entorno. |
 | LOG_LOCATIONS=*&lt;vía_al_archivo&gt;* | Añadir un archivo de registro para supervisar en el contenedor. Incluir la variable de entorno de `LOG_LOCATIONS` con una vía de acceso al archivo de registro. |
-*Tabla 8. Variables de entorno utilizadas con frecuencia*
+{: caption="Table 8. Commonly used environment variables" caption-side="top"}
 
  <dl>
    <dt>--env-file <i>ENVIRONMENT_VARIABLE_FILE</i> (opcional)</dt>
@@ -2723,10 +2721,10 @@ bluemix ic rename OLD_NAME NEW_NAME
 
 Volver a crear el servicio IBM Containers en el espacio de Bluemix en el que ha iniciado la sesión. La cuota original del espacio se mantiene.
 
-<strong>Importante</strong>: al ejecutar este mandato, no se migrará ninguno de los contenedores individuales y grupos de este espacio al espacio que se ha vuelto a aprovisionar y se eliminarán durante el proceso de migración. 
+<strong>Importante</strong>: al ejecutar este mandato, no se migrará ninguno de los contenedores individuales y grupos de este espacio al espacio que se ha vuelto a aprovisionar y se eliminarán durante el proceso de migración.
 
 ```
-bluemix ic reprovision [--force|-f] [ENVIRONMENT_NAME]
+bluemix ic reprovision [--force|-f] [AVAILABILITY_ZONE]
 ```
 <strong>Opciones de mandato</strong>:
 
@@ -2957,7 +2955,7 @@ bluemix ic run [-p PORT|--publish PORT] [-P] [-m MEMORY|--memory MEMORY] [-e ENV
 contenedor](../../../containers/container_integrations_binding.html){: new_window}. |
 | CCS_BIND_SRV=*&lt;nombre_instancia_servicio1&gt;*,*&lt;nombre_instancia_servicio2&gt;* | Para enlazar un servicio de Bluemix directamente a un contenedor sin utilizar una app puente, utilice CCS_BIND_SRV. Este enlace permite a Bluemix inyectar la información de VCAP_SERVICES en la instancia del contenedor de ejecución. Para proporcionar una lista de varios servicios de Bluemix, inclúyalos como parte de la misma variable de entorno. |
 | LOG_LOCATIONS=*&lt;vía_al_archivo&gt;* | Añadir un archivo de registro para supervisar en el contenedor. Incluir la variable de entorno de `LOG_LOCATIONS` con una vía de acceso al archivo de registro. |
-*Tabla 9. Variables de entorno utilizadas con frecuencia*
+{: caption="Table 9. Commonly used environment variables" caption-side="top"} 
 
 
    <dl>
@@ -3337,7 +3335,7 @@ bluemix ic volume-fs-inspect FILE_SHARE_NAME
 
   <dl>
   <dt><i>FILE_SHARE_NAME</i> (necesario)</dt>
-   <dd>El nombre de compartición de archivos. </dd>
+   <dd>El nombre de compartición de archivos.</dd>
    </dl>
 
 <strong>Ejemplos</strong>:
@@ -3363,7 +3361,7 @@ bluemix ic volume-fs-remove FILE_SHARE_NAME
 
    <dl>
    <dt><i>FILE_SHARE_NAME</i> (necesario)</dt>
-   <dd>El nombre de compartición de archivos. </dd>
+   <dd>El nombre de compartición de archivos.</dd>
    </dl>
 
 <strong>Ejemplos</strong>:

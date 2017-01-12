@@ -2,15 +2,16 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-11-14"
+
 ---
-{:new_window: target="_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
+
 
 
 # 開始使用 {{site.data.keyword.objectstorageshort}}  {: #getting-started-with-object-storage}
 
-*前次更新：2016 年 10 月 19 日*
-{: .last-updated}
 
 {{site.data.keyword.objectstoragefull}} 提供非結構化雲端資料儲存空間。您可以儲存及存取內容，以及透過互動方式組合及連接至應用程式和服務。
 {: shortdesc}
@@ -23,15 +24,14 @@ copyright:
 * 充當中央儲存庫
 
 
-
 「{{site.data.keyword.Bluemix_notm}} 公用 {{site.data.keyword.objectstorageshort}}」可讓您存取完整佈建的 Swift {{site.data.keyword.objectstorageshort}} 帳戶，以管理您的資料。並不提供提供者端加密。
 
 
 1.	從 {{site.data.keyword.Bluemix_notm}} 型錄中佈建服務實例。請配置實例，然後按一下**建立**。如果您一開始在**應用程式**欄位中選擇**維持不連結**選項，稍後仍然可以將服務實例連結至 {{site.data.keyword.Bluemix_notm}} 應用程式。
 2. 在服務實例儀表板中，建立容器，以開始儲存物件。
-3. 從**動作**下拉功能表中，將檔案新增至容器或儲存區。
+3. 從**動作**下拉功能表中，將檔案新增至容器。
 4. 若要測試對您物件的存取，請按一下**下載**，並檢閱檔案。
-5. 當您準備好將實例連接至應用程式時，請設定服務認證，並[連結服務](https://new-console.stage1.ng.bluemix.net/docs/services/reqnsi.html#add_service)。
+5. 當您準備好將實例連接至應用程式時，請設定服務認證，並[連結服務](/docs/services/reqnsi.html#add_service)。
 
 
 

@@ -2,6 +2,8 @@
 
 copyright:
   years: 2015, 2015
+  
+lastupdated: "2016-08-12"
 
 
 ---
@@ -17,8 +19,6 @@ copyright:
 # 일반 서비스 문제점
 {: #general}
 
-*마지막 업데이트 날짜: 2016년 8월 12일*
-{: .last-updated}
 
 {{site.data.keyword.Bluemix}} 서비스 문제점으로는 서비스 인스턴스를 삭제할 때 발생하는 게이트웨이 제한시간 초과 오류가 있습니다. 그러나 대부분의 경우 몇 가지 간단한 단계를 수행하여 이러한 문제점에서 복구할 수 있습니다.
 {:shortdesc}

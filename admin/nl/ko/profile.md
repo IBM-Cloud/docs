@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2016
-
+lastupdated: "2016-10-20"
 
 
 ---
@@ -17,8 +17,6 @@ copyright:
 
 # 프로파일 설정
 {: #usersettings}
-마지막 업데이트 날짜: 2016년 10월 20일
-{: .last-updated}
 
 프로파일 설정을 업데이트하려면 **{{site.data.keyword.avatar}}** 아이콘 ![아바타 아이콘](../icons/i-avatar-icon.svg) &gt; **사용자 프로파일**로 이동하십시오.
 {:shortdesc}
@@ -53,7 +51,7 @@ IBM ID를 변경할 수 없으나 관련된 프로파일 정보를 편집할 수
 ## 분석 추적 설정
 {: #tracking}
 
-기본적으로 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스의 조치는 추적됩니다. 추적을 통해 {{site.data.keyword.Bluemix_notm}} 팀은 사용자를 위해 더 나은 경험을 쌓고 더 나은 지원을 제공합니다. 수집된 데이터는 다른 목적으로 사용되거나 공유되지 않습니다.
+기본적으로 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스의 조치는 추적됩니다. 추적을 통해 {{site.data.keyword.Bluemix_notm}} 팀은 사용자에게 더 나은 인터페이스를 만들어 더 나은 지원을 제공합니다. 수집된 데이터는 다른 목적으로 사용되거나 공유되지 않습니다.
 
 추적을 사용 안함으로 선택하면 {{site.data.keyword.Bluemix_notm}}의 일부 기능(예: 대화 통신)을 사용하지 못할 수도 있습니다.
 

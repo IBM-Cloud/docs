@@ -1,13 +1,18 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Using REST APIs
 {: #push-api-rest}
-Last updated: 17 October 2016
+Last updated: 11 January 2017
 {: .last-updated}
 
 You can use a REST (Representational State Transfer) API (application program interface) for {{site.data.keyword.mobilepushshort}}. You can also use the SDK and [Push API](https://mobile.{DomainName}/imfpush/) to further develop your client applications.
@@ -19,6 +24,7 @@ With the Push REST API, backend server applications and clients can access {{sit
 - Messages
 - Subscriptions
 - Tags
+- Webhooks
 
 To obtain the base URL for the REST API, complete the steps:
 
@@ -42,9 +48,9 @@ The "Accept-Language" header specifies which language to use for the error messa
 ## appSecret 
 {: #push-api-rest-secret}
 
-When an application binds to the {{site.data.keyword.mobilepushshort}}, the service generates an appSecret (a unique key) and passes it in the response header. If you are using the IBM {{site.data.keyword.mobilepushshort}} for Bluemix Rest API, use the REST API reference to obtain information on which APIs you need to secure. For information about the REST API, see REST API Reference.
+When an application binds to the {{site.data.keyword.mobilepushshort}}, the service generates an appSecret (a unique key) and passes it in the response header. If you are using the IBM {{site.data.keyword.mobilepushshort}} for Bluemix Rest API, use the REST API reference to obtain information on which APIs you need to secure. For information, see the [Push REST API](https://mobile.{DomainName}/imfpush/).
 
-The request header must contain the appSecret. If not, the server returns a 401 Unauthorized Error code. When the {{site.data.keyword.mobilepushshort}} is added to an application, a specific AppID is created. As part of the response, you get a header called appSecret that is used for creating Tags or sending messages. The operation happens through services in the catalog or the boilerplate.
+The request header must contain the appSecret. If not, the server returns a 401 Unauthorized Error code. When the {{site.data.keyword.mobilepushshort}} is added to an application, a specific AppID is created. As part of the response, you get a header called appSecret that is used for creating tags or sending messages. The operation happens through services in the catalog or the boilerplate.
 
 To get the appSecret value:
 

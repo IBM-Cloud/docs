@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-lastupdated: "2016-11-21"
+lastupdated: "2016-12-02"
 
 ---
 
@@ -27,17 +27,18 @@ A Liberty application fails to start with “Failed to start accepting connectio
 {: tsSymptoms}
 
 ```
-   2016-11-14T14:44:58.45+0000 [API/0]      OUT App instance exited with guid 21ac63eb-9595-428a-94c7-b0b02aaf77cc payload: {"cc_partition"=>"default", "droplet"=>"21ac63eb-9595-428a-94c7-b0b02aaf77cc", "version"=>"b2772438-92de-4d47-b680-ea772ac2288a", "instance"=>"f4799c8c89214bbd8067883c3ffe23e0", "index"=>0, "reason"=>"CRASHED", "exit_status"=>255, "exit_description"=>"failed to accept connections within health check timeout", "crash_timestamp"=>1479134698} 2016-11-14T14:45:07.50+0000 [DEA/4]      ERR Instance (index 0) failed to start accepting connections
+   2016-11-14T14:44:58.45+0000 [API/0]      OUT App instance exited with guid 21ac63eb-9595-428a-94c7-b0b02aaf77cc payload: {"cc_partition"=>"default", "droplet"=>"21ac63eb-9595-428a-94c7-b0b02aaf77cc", "version"=>"b2772438-92de-4d47-b680-ea772ac2288a", "instance"=>"f4799c8c89214bbd8067883c3ffe23e0", "index"=>0, "reason"=>"CRASHED", "exit_status"=>255, "exit_description"=>"failed to accept connections within health check timeout", "crash_timestamp"=>1479134698}
+   2016-11-14T14:45:07.50+0000 [DEA/4]      ERR Instance (index 0) failed to start accepting connections
 ```
 {: #codeblock}
 
-Bluemix performs a health check on the application to see if it has successfully started. The health check tests if the application is listening on the port assigned to the application. The default timeout for this check is 60 seconds and some applications might take longer than 60 seconds to start up.
+Bluemix performs a health check on the application to see if it has successfully started. The health check tests if the application is listening on the port assigned to the application. The default timeout for this check is 60 seconds and some applications might take longer than 60 seconds to start.  There are a number of reasons why the application might take longer to start. For example, binding services such as [Monitoring and Analytics](/docs/services/monana/index.html#gettingstartedtemplate) or [New Relic](/docs/runtimes/liberty/newRelic.html) or [enabling the debugger](/docs/manageapps/app_mng.html#debug) will increase the start up time. The application might also perform initialization steps that may take a long time to finish.
 {: tsCauses}
 
 First, examine the logs for any obvious errors that might have caused the Liberty application to fail. If no obvious errors are found then try the following:
 {: tsResolve}
 
-#### **Increase the health check timeout.** 
+#### **Increase the health check timeout.**
 
 * When deploying the application using the “cf push” command specify a longer application start timeout using the “-t” option. For example:
 
@@ -60,11 +61,11 @@ $ cf set-env myApp JBP_CONFIG_LIBERTY “app_state: false”
 ```
 {: #codeblock}
 
-#### **Consider re-factoring the application.** 
+#### **Consider re-factoring the application.**
 
 If your application takes a long time to initialize, you might have to re-factor the application to do lazy and/or asynchronous initialization.
 
-#### **Deploy with the “no-route” option.** 
+#### **Deploy with the “no-route” option.**
 
 1. Deploy your application with “--no-route” option. This will disable the port health check. For example:
 
@@ -84,29 +85,32 @@ The following errors are visible in the logs and the application may fail to sta
 {: tsSymptoms}
 
 ```
-   2016-11-03T12:32:44.82-0200 [App/0]      ERR java.security.cert.CertPathValidatorException: Certificate chaining error 2016-11-03T12:32:44.83-0200 [App/0]      ERR [ERROR   ] CWPKI0022E: SSL HANDSHAKE FAILURE:  A signer with SubjectDN CN=*.gateway.prd.na.ca.ibmserviceengage.com, O=International Business Machines Corp., L=Armonk, ST=New York, C=US was sent from the target host.  The signer might need to be added to local trust store /home/vcap/app/wlp/usr/servers/defaultServer/resources/security/key.jks, located in SSL configuration alias defaultSSLConfig.  The extended error message from the SSL handshake exception is: PKIX path building failed: java.security.cert.CertPathBuilderException: PKIXCertPathBuilderImpl could not build a valid CertPath.; internal cause is: 2016-11-03T12:32:44.83-0200 [App/0]      ERR java.security.cert.CertPathValidatorException: The certificate issued by CN=DigiCert Global Root CA, OU=www.digicert.com, O=DigiCert Inc, C=US is not trusted; internal cause is: 2016-11-03T12:32:44.83-0200 [App/0]      ERR java.security.cert.CertPathValidatorException: Certificate chaining error
+    2016-11-03T12:32:44.82-0200 [App/0]      ERR java.security.cert.CertPathValidatorException: Certificate chaining error
+    2016-11-03T12:32:44.83-0200 [App/0]      ERR [ERROR   ] CWPKI0022E: SSL HANDSHAKE FAILURE:  A signer with SubjectDN CN=*.gateway.prd.na.ca.ibmserviceengage.com, O=International Business Machines Corp., L=Armonk, ST=New York, C=US was sent from the target host.  The signer might need to be added to local trust store /home/vcap/app/wlp/usr/servers/defaultServer/resources/security/key.jks, located in SSL configuration alias defaultSSLConfig.  The extended error message from the SSL handshake exception is: PKIX path building failed: java.security.cert.CertPathBuilderException: PKIXCertPathBuilderImpl could not build a valid CertPath.; internal cause is:
+    2016-11-03T12:32:44.83-0200 [App/0]      ERR java.security.cert.CertPathValidatorException: The certificate issued by CN=DigiCert Global Root CA, OU=www.digicert.com, O=DigiCert Inc, C=US is not trusted; internal cause is:
+    2016-11-03T12:32:44.83-0200 [App/0]      ERR java.security.cert.CertPathValidatorException: Certificate chaining error
 ```
 {: codeblock}
 
 The errors can be generated once the Monitoring & Analytics service is bound to a Liberty application and the Liberty application was deployed as a server directory or packaged server that contains server.xml that configures the Liberty ssl-1.0 feature. Binding the Monitoring & Analytics service to the Liberty application causes the runtime to connect to the service over a secure connection. That secure connection is established using the default SSL settings. Since, the default SSL settings are specified in the Liberty's server.xml, the configured trust store may not trust the certificate used by the  Monitoring & Analytics service.
 {: tsCauses}
 
-Modify configuration to use the JVM's trust store.
+Modify configuration to use the JVM's trust store with one of the options that follow.  Be sure to restage your application after making the change.
 {: tsResolve}
 
-1. Update Liberty's server.xml to use JVM's cacerts file as the trust store. Add the following to your server.xml:
+#### Update Liberty's server.xml
+
+Update the server.xml to use JVM's cacerts file as the trust store. Add the following to your server.xml:
 
         <ssl id="defaultSSLConfig" trustStoreRef="defaultTrustStore"/>
         <keyStore id="defaultTrustStoretore" location="${java.home}/lib/security/cacerts"/>
         {: codeblock}
 
-2. Update the configured trust store to trust the DigitCert ROOT CA.
+#### Update the configured trust store
+
+Modify the configured trust store to trust the DigitCert ROOT CA.
   1. Download the DigiCert Root CA from https://www.digicert.com/CACerts/DigiCertGlobalRootCA.crt.
   2. Assuming the resources/security/key.jks is used as the trust store, import the CA into the key using the Java's keytool utility:
 
-            $ keytool -importcert --storepass <keyStorePassword> -keystore &lt;path&gt;/resources/security/key.jks -file DigiCertGlobalRootCA.crt
+            $ keytool -importcert --storepass <keyStorePassword> -keystore <path>/resources/security/key.jks -file DigiCertGlobalRootCA.crt
             {: codeblock}
-
-3. Restage your application after making these changes.
-
-

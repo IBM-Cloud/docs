@@ -49,21 +49,21 @@ Per essere velocemente operativo con lo starter codice Weather, segui la seguent
 
    4. Per Android, [configura GCM (Google Cloud Messaging)](/docs/services/mobilepush/t_push_provider_android.html){: new_window}.
    
-3. Facoltativo: aggiungi la funzionalità Analytics. 
+3. Facoltativo: aggiungi la funzionalità Analytics.
 
-   1. Fai clic su **Aggiungi** per **Analytics** dalla pagina **Panoramica progetto**. 
+   1. Fai clic su **Aggiungi** per **Analytics** dalla pagina **Panoramica progetto**.
 
-      In alternativa puoi fare clic su **Crea** dalla pagina **Analytics**. 
+      In alternativa puoi fare clic su **Crea** dalla pagina **Analytics**.
 
    2. Immetti il nome del tuo servizio e fai clic su **Crea**.
    
    3. Disattiva la **Modalità demo** per visualizzare i tuoi dati di analisi dopo l'esecuzione della tua applicazione.
 
-4. Facoltativo: aggiungi la funzionalità Authentication. 
+4. Facoltativo: aggiungi la funzionalità Authentication.
 
-   1. Fai clic su **Aggiungi** per **Authentication** nella pagina **Panoramica progetto**. 
+   1. Fai clic su **Aggiungi** per **Authentication** nella pagina **Panoramica progetto**.
 
-      In alternativa puoi selezionare **Crea** nella pagina **Authentication Notifications**. 
+      In alternativa puoi selezionare **Crea** nella pagina **Authentication Notifications**.
 
    2. Immetti il nome del tuo servizio e fai clic su **Crea**.
    

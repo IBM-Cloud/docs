@@ -1,13 +1,18 @@
-﻿---
+---
 
 copyright:
  years: 2015, 2016
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Utilisation des API REST
 {: #push-api-rest}
-Dernière mise à jour : 17 octobre 2016
+Dernière mise à jour : 6 décembre 2016
 {: .last-updated}
 
 Vous pouvez utiliser une interface de programmation d'application REST (Representational State Transfer) pour {{site.data.keyword.mobilepushshort}}. Vous pouvez aussi utiliser le logiciel SDK et les [API Push](https://mobile.{DomainName}/imfpush/) pour développer davantage vos applications client.
@@ -19,6 +24,7 @@ Avec l'API REST Push, les applications serveur de back end et les clients peuven
 - Messages
 - Abonnements
 - Balises
+- Webhooks
 
 Pour obtenir l'URL de base pour l'API REST, procédez comme suit :
 
@@ -43,9 +49,9 @@ L'en-tête "Accept-Language" spécifie la langue à utiliser pour les messages d
 ## Valeur confidentielle d'application 
 {: #push-api-rest-secret}
 
-Quand une application est liée à {{site.data.keyword.mobilepushshort}}, le service génère une valeur confidentielle appSecret (clé unique) et la transmet dans l'en-tête de réponse. Si vous utilisez l'API REST IBM {{site.data.keyword.mobilepushshort}} for Bluemix, servez-vous de la référence de l'API REST pour savoir quelles sont les API que vous devez sécuriser. Pour obtenir des informations sur l'API REST, voir la référence de l'API REST.
+Quand une application est liée à {{site.data.keyword.mobilepushshort}}, le service génère une valeur confidentielle appSecret (clé unique) et la transmet dans l'en-tête de réponse. Si vous utilisez l'API REST IBM {{site.data.keyword.mobilepushshort}} for Bluemix, servez-vous de la référence de l'API REST pour savoir quelles sont les API que vous devez sécuriser. Pour plus d'informations, reportez-vous à l'[API REST Push](https://mobile.{DomainName}/imfpush/).
 
-L'en-tête de demande doit contenir la valeur appSecret. Si tel n'est pas le cas, le serveur renvoie le code d'erreur 401 Unauthorized. Quand {{site.data.keyword.mobilepushshort}} est ajouté à une application, un ID d'application spécifique est créé. Dans le cadre de la réponse, vous obtenez un en-tête appelé appSecret (valeur confidentielle d'application) qui est utilisé pour créer des balises ou envoyer des messages. L'opération est effectuée via des services dans le catalogue ou le conteneur boilerplate.
+L'en-tête de demande doit contenir la valeur appSecret. Si tel n'est pas le cas, le serveur renvoie le code d'erreur 401 Unauthorized. Quand {{site.data.keyword.mobilepushshort}} est ajouté à une application, un ID d'application spécifique est créé. Dans le cadre de la réponse, vous obtenez un en-tête intitulé appSecret (valeur confidentielle d'application) qui est utilisé pour créer des balises ou envoyer des messages. L'opération est effectuée via des services dans le catalogue ou le conteneur boilerplate.
 
 Pour obtenir la valeur appSecret :
 

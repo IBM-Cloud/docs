@@ -1,14 +1,18 @@
 ---
 
 copyright:
- years: 2015 2016
+ years: 2015, 2016
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
 
 # Android-Anwendungen für den Empfang von Push-Benachrichtigungen aktivieren
 {: #tag_based_notifications}
-Letzte Aktualisierung: 16. November 2016
+Letzte Aktualisierung: 07. Dezember 2016
 {: .last-updated}
 
 Sie können Android-Anwendungen für den Empfang von Push-Benachrichtigungen auf Ihren Geräten aktivieren. Android Studio ist dafür Voraussetzung und auch die empfohlene Methode für die Erstellung von Android-Projekten. Grundlegende Kenntnisse von Android Studio sind erforderlich.
@@ -29,11 +33,6 @@ Führen Sie nach der Erstellung und Öffnung Ihrer mobilen Anwendung mithilfe vo
 	```
     {: codeblock}
 	
-	- Fügen Sie die folgende Abhängigkeit nur an das Ende der Datei hinzu.
-	```
-	'com.google.gms.google-services'
-	```
-    {: codeblock}
 	- Fügen Sie die folgenden Abhängigkeiten zu Importanweisungen hinzu, die für Codeausschnitte erforderlich sind.
 	```
 	import com.ibm.mobilefirstplatform.clientsdk.android.core.api.BMSClient;
@@ -72,7 +71,7 @@ finden Sie in [Android helloPush Sample Application](https://github.com/ibm-blue
 </intent-filter>
 ```
 	{: codeblock}
-**Hinweis**: Ersetzen Sie in der obigen Aktion *ihr_android-paketname* durch den Namen des Anwendungspakets, der in Ihrer Anwendung verwendet wird.
+**Hinweis**: Ersetzen Sie in der obigen Aktion *Your_Android_Package_Name* durch den Namen des Anwendungspakets, der in Ihrer Anwendung verwendet wird.
 
 5. Fügen Sie den Absichtsservice und die Absichtsfilter von Firebase Cloud Messaging (FCM) bzw. Google Cloud Messaging (GCM) für Ereignisbenachrichtigungen des Typs RECEIVE und REGISTRATION hinzu.
 ```
@@ -104,25 +103,25 @@ android:theme="@android:style/Theme.NoDisplay"/>
 Informationen zum Einrichten des FCM-Projekts und zum Abrufen Ihrer Berechtigungsnachweise finden Sie in [Absender-ID und API-Schlüssel abrufen](t_push_provider_android.html). Führen Sie die folgenden Schritte mit der FCM-Konsole (Firebase Cloud Messaging) aus.
 
 1. Klicken Sie in der Firebase-Konsole auf das Symbol für die **Projekteinstellungen**.
-	![Firebase-Projekteinstellungen](images/FCM_4.jpg)
+    ![Firebase-Projekteinstellungen](images/FCM_4.jpg)
 
 3. Wählen Sie auf der Registerkarte 'Allgemein' im Fenster mit Ihren Apps die Option **ADD APP** oder **Add Firebase to your Android app** aus.
+    ![Firebase zu Android hinzufügen](images/FCM_5.jpg)
 
-	![Firebase zu Android hinzufügen](images/FCM_5.jpg)
+4. Fügen Sie im Fenster 'Add Firebase to your Android app' **com.ibm.mobilefirstplatform.clientsdk.android.push** als Paketnamen hinzu. Das Feld 'App nickname' ist optional. Klicken Sie auf **ADD APP**.
+    ![Fenster 'Adding Firebase to your Android app'](images/FCM_1.jpg)
 
-4. Fügen Sie im Fenster 'Add Firebase to your Android app' **com.ibm.mobilefirstplatform.clientsdk.android.push** als Paketnamen hinzu. Fügen Sie außerdem den Paketnamen Ihrer Anwendung hinzu, indem Sie Schritt 2 wiederholen.
+5. Geben Sie den Paketnamen Ihrer Anwendung an, indem Sie ihn im Fenster 'Add Firebase to your Android app' eingeben. Das Feld 'App nickname' ist optional. Klicken Sie auf **ADD APP**. Für jedes hinzugefügte Paket muss für Firebase die Datei `build.gradle` geändert werden, indem der Paketname hinzugefügt wird. 
 
-	![Fenster 'Adding Firebase to your Android app'](images/FCM_1.jpg)
+	![Paketnamen Ihrer Anwendung hinzufügen](images/FCM_2.jpg)
 
-5. Klicken Sie auf **Continue**, um die Konfigurationsdatei zu kopieren. 
-6. Klicken Sie auf **Finish**, um die Datei **build.gradle** hinzuzufügen.
-7. Laden Sie die generierte Datei **google-services.json** herunter.
+6. Die Datei `google-services.json` wird generiert. Kopieren Sie die Datei `google-services.json` in das Stammverzeichnis Ihres Android-Anwendungsmoduls. Beachten Sie, dass die Datei `google-service.json` die hinzugefügten Paketnamen enthält. 
 
-	![Datei google-services.json](images/FCM_3.jpg)
+    ![JSON-Datei zum Stammverzeichnis Ihrer Anwendung hinzufügen](images/FCM_7.jpg)
 
-8. Fügen Sie die Datei **google-services.json** zum Stammverzeichnis Ihrer Anwendung hinzu.
+5. Klicken Sie im Fenster 'Add Firebase to your Android app' auf **Continue** und dann auf **Finish**. 
 
-	![JSON-Datei zum Stammverzeichnis Ihrer Anwendung hinzufügen](images/FCM_7.jpg)
+  
 
 Bauen Sie Ihre Anwendung auf und führen Sie sie aus.
 
@@ -231,6 +230,79 @@ protected void onPause() {
 2. Erstellen Sie einen Build für das Projekt und führen Sie ihn in dem Gerät oder im Emulator aus. Wenn die Methode onSuccess() für den Antwortlistener in der Methode register() aufgerufen wird, wird bestätigt, dass das Gerät erfolgreich für den {{site.data.keyword.mobilepushshort}}-Service registriert wurde. An diesem Punkt können Sie gemäß der in 'Einfache Push-Benachrichtigungen senden' beschriebenen Anleitung eine Nachricht senden.
 3. Überprüfen Sie, ob die Geräte Ihre Benachrichtigung empfangen haben. Wenn die Anwendung im Vordergrund ausgeführt wird, wird die Benachrichtigung von **MFPPushNotificationListener** verarbeitet. Wenn die Anwendung im Hintergrund ausgeführt wird, wird eine Nachricht in der Benachrichtigungsleiste angezeigt.
 
+## Push-Benachrichtigungen in Android-Geräten überwachen
+{: #android_monitor}
+
+Wenn Sie den aktuellen Status der Benachrichtigung innerhalb der Anwendung überwachen möchten, können Sie die Schnittstelle `com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationStatusListener` implementieren und die Methode onStatusChange(String messageId, MFPPushNotificationStatus status) definieren. 
+
+Die **messageId** ist die Kennung der vom Server gesendeten Nachricht. **MFPPushNotificationStatus** definiert den Status der Benachrichtigungen als Werte:
+
+- **RECEIVED** - Die App hat die Benachrichtigung empfangen. 
+- **QUEUED** - Die App hat die Benachrichtigung in die Warteschlange gestellt, um den Listener für Benachrichtigungen aufzurufen. 
+- **OPENED** - Der Benutzer öffnet die Benachrichtigung, indem er im Fach auf die Benachrichtigung klickt oder indem er sie über das App-Symbol startet oder wenn sich die App im Vordergrund befindet. 
+- **DISMISSED** - Der Benutzer löscht/verwirft die Benachrichtigung im Fach.
+
+Sie müssen die Klasse **com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationStatusListener** für MFPPush registrieren.
+
+```
+push.setNotificationStatusListener(new MFPPushNotificationStatusListener() {
+@Override
+public void onStatusChange(String messageId, MFPPushNotificationStatus status) {
+// Handle status change
+}
+});
+```
+    {: codeblock}
+
+
+### Empfangsbereitschaft für Status DISMISSED
+
+Sie können für den Status DISMISSED unter jeder der folgenden Bedingungen empfangsbereit sein:
+
+- Wenn die App aktiv ist (im Vordergrund oder Hintergrund ausgeführt wird)
+
+  Fügen Sie das Snippet Ihrer Datei `AndroidManifest.xml` hinzu:
+
+```
+<receiver android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationDismissHandler">
+<intent-filter>
+<action android:name="Your_Android_Package_Name.Cancel_IBMPushNotification"/>
+</intent-filter>
+</receiver>
+```
+	{: codeblock}
+
+- Wenn die App aktiv ist (im Vordergrund oder Hintergrund ausgeführt wird) und wenn sie nicht ausgeführt wird (geschlossen ist)
+
+Sie müssen den Rundsendungsempfänger **com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationDismissHandler** erweitern und die Methode **onReceive()** überschreiben, wobei **MFPPushNotificationStatusListener** vor dem Aufrufen der Methode **onReceive()** der Basisklasse registriert werden sollte.
+
+```
+public class MyDismissHandler extends MFPPushNotificationDismissHandler {
+@Override
+public void onReceive(Context context, Intent intent) {
+MFPPush.getInstance().setNotificationStatusListener(new MFPPushNotificationStatusListener() {
+@Override
+public void onStatusChange(String messageId, MFPPushNotificationStatus status) {
+// Handle status change
+}
+});
+super.onReceive(context, intent);
+}
+}
+```
+    {: codeblock}
+
+
+Fügen Sie das folgende Snippet Ihrer Datei `AndroidManifest.xml` hinzu:
+
+```
+<receiver android:name="Your_Android_Package_Name.Your_Handler">
+<intent-filter>
+<action android:name="Your_Android_Package_Name.Cancel_IBMPushNotification"/>
+</intent-filter>
+</receiver>
+```
+    {: codeblock}
 
 ## Einfache Push-Benachrichtigungen senden
 {: #send}
@@ -256,7 +328,7 @@ Der folgende Screenshot zeigt eine Push-Benachrichtigung im Hintergrund auf eine
 
 ![Push-Benachrichtigung im Hintergrund auf einem Android-Gerät](images/background.jpg)
 
-### Optionale Einstellungen beim Senden von Benachrichtigungen
+### Optionale Android-Einstellungen beim Senden von Benachrichtigungen
 {: #send_otpional_setting}
 
 Sie können die {{site.data.keyword.mobilepushshort}}-Einstellungen zum Senden von Benachrichtigung an Android-Geräte anpassen. Die folgenden optionalen Anpassungsoptionen werden unterstützt:
@@ -279,6 +351,6 @@ Sie können die {{site.data.keyword.mobilepushshort}}-Einstellungen zum Senden v
 Nachdem Sie einfache Benachrichtigungen erfolgreich eingerichtet haben, können Sie tagbasierte
 Benachrichtigungen und erweiterte Optionen konfigurieren.
 
-Fügen Sie die folgenden Funktionen des Push Notifications Service zu Ihrer App hinzu.
+Fügen Sie diese Funktionen des Push Notifications-Service Ihrer App hinzu.
 Informationen zur Verwendung tagbasierter Benachrichtigungen finden Sie in [Tagbasierte Benachrichtigungen](c_tag_basednotifications.html).
 Informationen zur Verwendung erweiterter Benachrichtigungsoptionen finden Sie in [Erweiterte Push-Benachrichtigungen aktivieren](t_advance_badge_sound_payload.html).

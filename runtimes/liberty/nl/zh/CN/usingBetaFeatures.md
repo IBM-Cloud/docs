@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-06-10"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # 使用 Beta 功能
 {: #using_beta_features}
-
-上次更新时间：2016 年 6 月 10 日
-{: .last-updated}
 
 Liberty Beta 功能让您可以提早使用未来 Liberty 发行版中可能会包含的新功能和编程模型。大部分 Beta 功能还可以在部署到 Bluemix 的应用程序中使用。
 

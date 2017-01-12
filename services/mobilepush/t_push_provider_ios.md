@@ -1,15 +1,18 @@
-
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Configuring credentials for APNs
 {: #create-push-credentials-apns}
-Last updated: 10 November 2016
+Last updated: 11 January 2017
 {: .last-updated}
 
 Apple Push Notification Service (APNs) allows application developers to send remote notifications from the {{site.data.keyword.mobilepushshort}} service instance on Bluemix (the provider) to iOS devices and applications. Messages are sent to a target application on the device. 
@@ -48,7 +51,7 @@ When you register an App ID, select the following options:
 ##Create a development and distribution APNs SSL certificate
 {: #create-push-credentials-apns-ssl}
 
-Before you can obtain an APNs certificate, you must first generate a certificate signing request (CSR) and submit it to Apple, the certificate authority (CA). The CSR contains information that identifies your company and your public and private key that you use to sign for your Apple push notifications. Then, generate the SSL certificate on the iOS Developer Portal. The certificate, along with its public and private key, is stored in Keychain Access.
+Before you obtain an APNs certificate, you must first generate a certificate signing request (CSR) and submit it to Apple, the certificate authority (CA). The CSR contains information that identifies your company and your public and private key that you use to sign for your Apple push notifications. Then, generate the SSL certificate on the iOS Developer Portal. The certificate, along with its public and private key, is stored in Keychain Access.
 
 <!-- ###Before you begin -->
 <!-- {: before-you-begin-certificate} -->
@@ -98,10 +101,7 @@ You must obtain separate certificates for your development and distribution envi
 
 The provisioning profile works with the App ID to determine which devices can install and run your app and which services your app can access. For each App ID, you create two provisioning profiles: one for development and the other for distribution. Xcode uses the development provisioning profile to determine which developers are allowed to build the application and which devices are allowed to be tested on the application.
 
-###Before you begin
-{: before-you-begin-provisioning-file}
-
-Make sure you have registered an App ID, enabled it for Push Notification Service, and configured it to use a development and production APNs SSL certificate.
+Ensure that you have registered an App ID, enabled it for {{site.data.keyword.mobilepushshort}} service, and configured it to use a development and production APNs SSL certificate.
 
 Create a development provisioning profile, as follows:
 
@@ -126,14 +126,9 @@ Use the store provisioning profile to submit your app for distribution to the Ap
 
 To use the {{site.data.keyword.mobilepushshort}} service to send notifications, upload the SSL certificates that are required for Apple Push Notification Service (APNs). You can also use the REST API to upload an APNs certificate.
 
-
-###Before you begin
-{: before-you-begin-dashboard}
-
-
 <!-- Get your development and production APNs SSL certificate and the password associated with each type of certificate. For information, see Creating and configuring push credentials for APNs.-->
 
-The certificates that are needed for APNs are `.p12` certificates, which contain the private key and SSL certificates that are required to build and publish your application. You must generate the certificates from the Member Center of the Apple Developer website (for which a valid Apple Developer account is required). Separate certificates are required for the development environment (sandbox) and the production (distribution) environment.
+The certificates required for APNs are `.p12` certificates. These certificates contain the private key and SSL certificates that are required to build and publish your application. You must generate the certificates from the Member Center of the Apple Developer website (for which a valid Apple Developer account is required). Separate certificates are required for the development environment (sandbox) and the production (distribution) environment.
 
 **Note**: After the `.cer` file is in your key chain access, export it to your computer to create a `.p12` certificate.
 

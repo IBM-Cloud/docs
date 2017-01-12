@@ -5,9 +5,14 @@ copyright:
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # 태그 관리
 {: #manage_tags}
-마지막 업데이트 날짜: 2016년 10월 17일
+마지막 업데이트 날짜: 2016년 12월 7일
 {: .last-updated}
 
 {{site.data.keyword.mobilepushshort}} 대시보드를 사용하여 애플리케이션의 태그를 작성 및 삭제하고 태그 기반 알림을 시작합니다. 태그를 구독하는 디바이스에서 태그 기반 알림이 수신됩니다.
@@ -45,7 +50,7 @@ copyright:
 
 태그는 모든 애플리케이션에 전송되는 일반 브로드캐스트와 달리 관심사를 기반으로 수신인에게 맞춤형 알림을 전송하는 방법을 제공합니다. {{site.data.keyword.mobilepushshort}} 대시보드의 태그 탭을 사용하여 태그를 작성 및 관리하거나 REST API를 사용할 수 있습니다. 코드 스니펫을 사용하여 모바일 애플리케이션에 대한 태그 구독을 관리 및 조회할 수 있습니다. 이러한 코드 스니펫을 사용하여 구독을 가져오고 태그를 구독하며 태그 구독을 취소하고 사용 가능한 태그 목록을 가져올 수 있습니다. 이러한 코드 스니펫을 모바일 애플리케이션에 복사하십시오. 
 
-## Android
+## Android에서 태그 가져오기
 {: android-get-tags}
 
 **getTags** API는 디바이스를 구독할 수 있는 사용 가능한 태그 목록을 리턴합니다. 디바이스에서 특정 태그를 구독하면 디바이스가 해당 태그와 관련하여 전송되는 {{site.data.keyword.mobilepushshort}}을 수신할 수 있습니다. 
@@ -92,7 +97,7 @@ push.getSubscriptions(new MFPPushResponseListener<List<String>>() {
 	```
 	{: codeblock}
 
-## Cordova
+## Cordova에서 태그 가져오기
 {: cordova-get-tags}
 
 디바이스가 구독하는 태그 목록과 사용 가능한 태그 목록을 가져오려면 다음 코드 스니펫을 모바일 애플리케이션에 복사하십시오. 
@@ -101,21 +106,21 @@ push.getSubscriptions(new MFPPushResponseListener<List<String>>() {
 
 ```
 //Get a list of available tags to which the device can subscribe
-MFPPush.retrieveAvailableTags(function(tags) {
-alert(tags);
-}, null);
+BMSPush.retrieveAvailableTags(function(tags) {
+  alert(tags);
+}, failure); 
 ```
 	{: codeblock}
 
 ```
 //Get a list of available tags to which the device is subscribed.
-MFPPush.getSubscriptionStatus(function(tags) {
-alert(tags);
-}, null);
+BMSPush.retrieveSubscriptions(function(tags) {
+   alert(tags); 
+}, failure); 
 ```
 	{: codeblock}
 
-## Objective-C
+## Objective-C에서 태그 가져오기
 {: objc-get-tags}
 
 디바이스가 구독하는 태그 목록을 가져오고 디바이스가 구독할 수 있는 사용 가능한 태그 목록을 가져오려면 Objective-C를 사용하여 개발된 iOS 애플리케이션에 다음 코드 스니펫을 복사하십시오. 
@@ -157,7 +162,7 @@ subscribedTags = [response subscriptions];
   ```
 	{: codeblock}
 
-## Swift
+## Swift에서 태그 가져오기
 {: swift-get-tags}
 
 **retrieveAvailableTagsWithCompletionHandler** API는 디바이스가 구독하는 데 사용할 수 있는 모든 태그의 목록을 리턴합니다. 디바이스에서 특정 태그를 구독하면 디바이스가 해당 태그와 관련하여 전송되는 {{site.data.keyword.mobilepushshort}}을 수신할 수 있습니다. 
@@ -199,7 +204,7 @@ push.retrieveSubscriptionsWithCompletionHandler { (response, statusCode, error) 
 ```
 	{: codeblock}
 
-## Google Chrome 및 Mozilla Firefox
+## Google Chrome, Safari 및 Mozilla Firefox
 {: web-get-tags}
 
 고객이 구독할 수 있는 사용 가능한 태그 목록을 얻으려면 다음 코드를 사용하십시오. 
@@ -220,16 +225,6 @@ push.retrieveSubscriptionsWithCompletionHandler { (response, statusCode, error) 
 ```
 	{: codeblock}
 
-고객이 구독한 태그 목록을 가져오려면 다음 코드 스니펫을 Google Chrome 앱과 확장 프로그램에 복사하십시오. 
-
-```
-  var bmsPush = new BMSPush();
-  bmsPush.retrieveSubscriptions(function(response) 
-	{
-    alert(response.response)
-})
-```
-	{: codeblock}
 
 ## Google Chrome 앱 및 확장 프로그램
 {: web-get-tags}
@@ -269,7 +264,7 @@ push.retrieveSubscriptionsWithCompletionHandler { (response, statusCode, error) 
 
 다음 코드 스니펫을 사용하여 사용자 디바이스가 구독을 가져오고, 태그를 구독하고, 태그를 구독 해지할 수 있도록 합니다.
 
-## Android
+## Android에서 태그 구독 및 구독 해지
 {: android-subscribe-tags}
 
 다음 코드 스니펫을 복사하여 Android 모바일 애플리케이션에 붙여넣으십시오. 
@@ -306,19 +301,19 @@ push.unsubscribe(tag, new MFPPushResponseListener<String>() {
 ```
 	{: codeblock}
 
-## Cordova
+## Cordova에서 태그 구독 및 구독 해지
 {: cordova-subscribe-tags}
 
 다음 코드 스니펫을 복사하여 Cordova 모바일 애플리케이션에 붙여넣으십시오. 
 
 ```
 var tag = "YourTag";
-MFPPush.subscribe(tag, success, failure);
-MFPPush.unsubscribe(tag, success, failure);
+BMSPush.subscribe(tag, success, failure);
+BMSPush.unsubscribe(tag, success, failure);
 ```
 	{: codeblock}
 
-## Objective-C
+## Objective-C에서 태그 구독 및 구독 해지
 {: objc-subscribe-tags}
 
 다음 코드 스니펫을 복사하여 Objective-C 모바일 애플리케이션에 붙여넣으십시오. 
@@ -356,7 +351,7 @@ MFPPush.unsubscribe(tag, success, failure);
 ```
 	{: codeblock}
 
-## Swift
+## Swift에서 태그 구독 및 구독 해지
 {: swift-subscribe-tags}
 
 다음 코드 스니펫을 복사하여 Swift 모바일 애플리케이션에 붙여넣으십시오. 
@@ -366,13 +361,15 @@ MFPPush.unsubscribe(tag, success, failure);
 태그를 구독하려면 **subscribeToTags** API를 사용하십시오.
 
 ```
-push.subscribeToTags(tagsArray: tags) { (response: IMFResponse!, error: NSError!) -> Void in
-	if (error != nil) {
-		//error while subscribing to tags
-	} else {
-		//successfully subscribed to tags var subStatus = response.subscribeStatus();
-	}
-}
+push.subscribeToTags(tagsArray: ["MyTag"], completionHandler: { (response, statusCode, error) -> Void in
+    if error.isEmpty {
+        print("Response when subscribing to tags: \(response?.description)")
+        print("Status code when subscribing to tags: \(statusCode)")
+    } else {
+        print("Error when subscribing to tags: \(error) ")
+        print("Error status code when subscribing to tags: \(statusCode)")
+    }
+})
 ```
 	{: codeblock}
 
@@ -421,9 +418,6 @@ var tagsArray = ["tag1", "Tag2"]
 {: #using_tags}
 
 태그 기반 알림은 특정 태그를 구독하는 모든 디바이스를 대상으로 하는 메시지입니다. 각 디바이스는 원하는 수만큼의 태그에 대해 구독이 가능합니다. 이 주제에서는 태그 기반 알림의 전송 방법에 대해 설명합니다. {{site.data.keyword.mobilepushshort}} 서비스 Bluemix 인스턴스에서 구독을 유지보수합니다. 태그가 삭제되면 태그 구독자와 디바이스를 비롯한 해당 태그와 연관된 모든 정보가 삭제됩니다. 이 태그가 더 이상 존재하지 않고 클라이언트측에서 추가 조치가 필요하지 않으므로 이 태그에 대해 자동 구독 해지 조치가 필요하지 않습니다. 
-
-###시작하기 전에
-{: before-you-begin}
 
 **태그** 화면에서 태그를 작성하십시오. 태그 작성 방법에 대한 정보는 [태그 작성](t_manage_tags.html)을 참조하십시오. 
 

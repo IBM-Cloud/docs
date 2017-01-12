@@ -2,8 +2,11 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-11-07"
+
 ---
+
+{:codeblock:.codeblock}
 
 # カスタム ID プロバイダーの作成
 {: #custom-create}
@@ -24,6 +27,7 @@ lastupdated: "2016-10-02"
 {: #custom-startauthorization}
 
 `POST <base_url>/apps/<tenant_id>/<realm_name>/startAuthorization`
+{: codeblock}
 
 `startAuthorization` API は、認証プロセスの最初のステップとして使用されます。カスタム ID プロバイダーは、「challenge」、「success」、または「failure」のいずれかの状況とともに応答する必要があります。
 
@@ -37,6 +41,7 @@ lastupdated: "2016-10-02"
     }
 }
 ```
+{: codeblock}
 
 カスタム ID プロバイダーは、認証チャレンジとともに応答を返すか、または、即時成功または失敗を返します。応答 HTTP 状況は `HTTP 200` でなければならず、応答 JSON には以下のプロパティーが含まれている必要があります。
 
@@ -57,11 +62,13 @@ lastupdated: "2016-10-02"
 	}
 }
 ```
+{: codeblock}
 
 ## `handleChallengeAnswer` API
 {: #custom-handleChallengeAnswer}
 
 `POST <base_url>/apps/<tenant_id>/<realm_name>/handleChallengeAnswer`
+{: codeblock}
 
 `handleChallengeAnswer` API は、モバイル・クライアントからの認証チャレンジ応答を処理します。`startAuthorization` API と同様に、`handleChallengeAnswer` API は、`challenge`、`success`、または `failure` のいずれかの状況で応答します。
 
@@ -82,6 +89,7 @@ lastupdated: "2016-10-02"
  	}
 }
 ```
+{: codeblock}
 
 `handleChallengeAnswer` API からの応答は、`startAuthorization` API の応答と同じ構造でなければなりません。
 
@@ -105,6 +113,7 @@ lastupdated: "2016-10-02"
     }
 }
 ```
+{: codeblock}
 
 ユーザー ID オブジェクトは、許可ヘッダーの一部としてモバイル・クライアントに送信される ID トークンを生成するために、{{site.data.keyword.amashort}} サービスによって使用されます。認証が成功した後、モバイル・クライアントはユーザー ID オブジェクトへの全アクセス権限を持ちます。
 

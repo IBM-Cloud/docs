@@ -1,12 +1,14 @@
 ---
 
- 
+
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015，2016
 
- 
+lastupdated: "2016-02-17"
+
+
 
 ---
 
@@ -16,10 +18,6 @@ copyright:
 {:new_window: target="_blank"}
 
 # 명령행 인터페이스 참조
-
-
-*마지막 업데이트 날짜: 2016년 2월 17일*
-{: .last-updated}
 
 {{site.data.keyword.IBM}} {{site.data.keyword.Bluemix_short}}에서는
 Cloud Foundry 명령행 인터페이스인 cf를 사용하여 애플리케이션,

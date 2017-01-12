@@ -6,9 +6,13 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # 发送基本推送通知
 {: #push-send-notifications}
-上次更新时间：2016 年 10 月 17 日
+上次更新时间：2016 年 12 月 6 日
 {: .last-updated}
 
 开发应用程序后，可以发送基本推送通知（不使用标记、角标、其他有效内容或声音文件）。

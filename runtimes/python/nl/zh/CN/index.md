@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -11,8 +12,6 @@ copyright:
 
 # Python
 {: #python_runtime}
-上次更新时间：2016 年 7 月 6 日
-{: .last-updated}
 
 {{site.data.keyword.Bluemix}} 上的 Python 运行时由 python_buildpack 提供支持。python_buildpack 为 Python 2 和 Python 3 应用程序提供了一个完整的运行时环境。
 {: shortdesc}
@@ -22,7 +21,7 @@ copyright:
 ## 入门模板应用程序
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} 提供了 Python 入门模板应用程序。Python 入门模板应用程序是一个简单的 Python 应用程序，它提供了一个可供您的应用程序使用的模板。您可以尝试使用该入门模板应用程序来进行更改并将更改推送到 {{site.data.keyword.Bluemix}} 环境。有关使用入门模板应用程序的帮助，请参阅[使用入门模板应用程序](../../cfapps/starter_app_usage.html)。
+{{site.data.keyword.Bluemix}} 提供了 Python 入门模板应用程序。Python 入门模板应用程序是一个简单的 Python 应用程序，它提供了一个可供您的应用程序使用的模板。您可以尝试使用该入门模板应用程序来进行更改并将更改推送到 {{site.data.keyword.Bluemix}} 环境。有关使用入门模板应用程序的帮助，请参阅[使用入门模板应用程序](/docs/cfapps/starter_app_usage.html)。
 
 ## 运行时版本
 {: #runtime_versions}

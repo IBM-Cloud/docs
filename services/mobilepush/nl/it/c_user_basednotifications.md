@@ -1,15 +1,21 @@
 ---
+
 copyright:
  years: 2015, 2016
 
 ---
 
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # Abilitazione delle notifiche basate sull'utente
 {: #user_based_notifications}
-Ultimo aggiornamento: 18 ottobre 2016
+Ultimo aggiornamento: 06 dicembre 2016
 {: .last-updated}
 
-Le {{site.data.keyword.mobilepushshort}} basate su ID utente sono destinate agli utenti dell'applicazione mobile con messaggi personalizzati. Con le notifiche basate sull'utente, puo iscegliere di inviare la notifica a delle persone specifiche in base alle rispettive preferenze.
+Le {{site.data.keyword.mobilepushshort}} basate su ID utente sono destinate agli utenti dell'applicazione mobile con messaggi personalizzati. Con le notifiche basate sull'utente, puoi scegliere di inviare la notifica a delle persone specifiche in base alle rispettive preferenze.
 
 ## Registrazione del dispositivo con l'ID utente
 Per abilitare le notifiche di push indirizzate dall'ID utente, assicurati di aver registrato il dispositivo con un campo ID utente impostato.     

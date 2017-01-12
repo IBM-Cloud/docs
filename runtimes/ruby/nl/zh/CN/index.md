@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -11,8 +12,6 @@ copyright:
 
 # Ruby
 {: #ruby_runtime}
-上次更新时间：2016 年 7 月 6 日
-{: .last-updated}
 
 {{site.data.keyword.Bluemix}} 上的 Ruby 运行时由 ruby_buildpack 提供支持。ruby_buildpack 为 Ruby 应用程序提供了完整的运行时环境。
 {: shortdesc}
@@ -22,7 +21,7 @@ copyright:
 ## 入门模板应用程序
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} 提供了 Ruby 入门模板应用程序。Ruby 入门模板应用程序是一个简单的 Ruby 应用程序，它提供了一个可供您的应用程序使用的模板。您可以尝试使用该入门模板应用程序来进行更改并将更改推送到 {{site.data.keyword.Bluemix}} 环境。有关使用入门模板应用程序的帮助，请参阅[使用入门模板应用程序](../../cfapps/starter_app_usage.html)。
+{{site.data.keyword.Bluemix}} 提供了 Ruby 入门模板应用程序。Ruby 入门模板应用程序是一个简单的 Ruby 应用程序，它提供了一个可供您的应用程序使用的模板。您可以尝试使用该入门模板应用程序来进行更改并将更改推送到 {{site.data.keyword.Bluemix}} 环境。有关使用入门模板应用程序的帮助，请参阅[使用入门模板应用程序](/docs/cfapps/starter_app_usage.html)。
 
 ## 运行时版本
 {: #runtime_versions}

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-06-10"
 
 ---
 
@@ -11,9 +12,6 @@ copyright:
 
 # Valori predefiniti dei pacchetti di build
 {: #buildpack_defauts}
-
-Ultimo aggiornamento: 10 giugno 2016
-{: .last-updated}
 
 Il pacchetto di build Liberty viene aggiornato frequentemente in Bluemix. Ogni release può contenere delle correzioni per la protezione o dei miglioramenti delle funzioni.
 

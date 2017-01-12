@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 
 # SDK for Node.js
 {: #nodejs_runtime}
-Última actualización: 29 de agosto de 2016
-{: .last-updated}
 
 El tiempo de ejecución de Node.js en {{site.data.keyword.Bluemix}} está basado en el paquete de compilación de sdk-for-nodejs.
 El paquete de compilación sdk-for-nodejs proporciona un entorno de ejecución completo para apps Node.js.
@@ -24,7 +23,7 @@ El paquete de compilación sdk-for-nodejs se utiliza cuando la aplicación conti
 ## Aplicación de inicio
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} proporciona una aplicación de inicio Node.js.  La aplicación de inicio Node.js es una app Node.js sencilla que proporciona una plantilla que puede utilizar para la app. Puede experimentar con la app de inicio, y realizar y enviar los cambios al entorno de Bluemix. Consulte [Utilización de las aplicaciones de iniciador](../../cfapps/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de inicio.
+{{site.data.keyword.Bluemix}} proporciona una aplicación de inicio Node.js.  La aplicación de inicio Node.js es una sencilla app Node.js que ofrece una plantilla que puede utilizar para su app. Puede experimentar con la app de inicio, y realizar y enviar los cambios al entorno de Bluemix. Consulte [Utilización de las aplicaciones de iniciador](/docs/cfapps/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de inicio.
 
 ## Mandato de inicio
 {: #starup_commmand}
@@ -66,12 +65,11 @@ Utilice esta información para facilitar la ejecución de la aplicación Node.js
 
 El ejemplo siguiente muestra parte de la fuente para un archivo **js**:
 ```
-var port = (process.env.VCAP_APP_PORT || 3000);
-var host = (process.env.VCAP_APP_HOST || 'localhost');
+var port = (process.env.PORT || 3000);
 ```
 {: codeblock}
 
-Con este código, cuando la aplicación se esté ejecutando en Bluemix, las variables de entorno VCAP_APP_HOST y VCAP_APP_PORT contienen los valores host y puerto que son internos para Bluemix, y en el que la app escucha conexiones entrantes. Cuando la aplicación se ejecute de manera local, VCAP_APP_HOST y VCAP_APP_PORT no están definidas, de modo que **localhost** se utiliza como el host y **3000** se utiliza como el número de puerto. Grabados de esta forma, puede ejecutar la aplicación localmente a efectos de prueba y en Bluemix sin realizar más cambios.
+Con este código, cuando la aplicación se esté ejecutando en Bluemix, la variable de entorno PORT contiene el valor de puerto que es interno de Bluemix y en el que la app escucha conexiones entrantes. Cuando la aplicación se ejecuta localmente, PORT no está definido, de modo que se utiliza **3000** como número de puerto. Grabados de esta forma, puede ejecutar la aplicación localmente a efectos de prueba y en Bluemix sin realizar más cambios.
 
 ## Modo fuera de línea
 {: #offline_mode}
@@ -79,15 +77,15 @@ Con este código, cuando la aplicación se esté ejecutando en Bluemix, las vari
 Consulte [Modo fuera de línea](offlineMode.html) para ver información sobre el control del acceso al paquete de compilación a sitios externos. 
 
 ## App Management
-{{site.data.keyword.Bluemix}} proporciona un número de programas de utilidad para gestionar y depurar la app de Node.js.  Consulte [App Management](../../manageapps/app_mng.html) para obtener más detalles.
+{{site.data.keyword.Bluemix}} proporciona un número de programas de utilidad para gestionar y depurar la app de Node.js. Consulte [Gestión de app](/docs/manageapps/app_mng.html) para ver más detalles.   
 
 ## Versiones disponibles
 {: #available_versions}
 
 {{site.data.keyword.Bluemix}} proporciona todos los [modos de ejecución de Node.js
-disponibles actualmente](http://nodejs.org/dist/). De esos, IBM proporciona versiones que contienen las mejoras y los arreglos de errores. Consulte [Últimas actualizaciones del paquete de compilación Node.js](../../runtimes/nodejs/updates.html) para obtener más información.
+disponibles actualmente](http://nodejs.org/dist/). De esos, IBM proporciona versiones que contienen las mejoras y los arreglos de errores. Consulte [Últimas actualizaciones del paquete de compilación Node.js](/docs/runtimes/nodejs/updates.html) para obtener más información.
 
-El paquete de compilación Node.js de IBM almacena en caché todas las versiones de tiempo de ejecución de IBM. Por este motivo, si utiliza IBM SDK para el tiempo de ejecución Node.js en la aplicación, obtiene el rendimiento de la aplicación más rápido si la aplicación se envía por push a Bluemix.
+El paquete de compilación Node.js de IBM almacena en caché las versiones de tiempo de ejecución de IBM. Por este motivo, si utiliza IBM SDK para el tiempo de ejecución Node.js en la aplicación, obtiene el rendimiento de la aplicación más rápido si la aplicación se envía por push a Bluemix.
 
 Utilice el parámetro **nodo** en la sección **motores** del archivo **package.json** para especificar la versión de tiempo de ejecución de Node.js que desee ejecutar.
 
@@ -119,7 +117,7 @@ NPM proporciona un recurso de creación de scripts que le permite ejecutar scrip
 
 ### Comportamiento de la memoria caché
 {: #cache_behavior}
-{{site.data.keyword.Bluemix}} mantiene un directorio de memoria caché por aplicación de nodo, que es persistente entre las compilaciones. La memoria caché almacena dependencias resueltas para que no se descargue ni se instale cada vez que se despliegue la app.  Por ejemplo, suponga que myapp depende de **express**.  A continuación, la primera vez que se despliegue myapp, se descargará el módulo **express**. En los despliegues posteriores de myapp, se utilizará la instancia en memoria caché de **express**. El comportamiento predeterminado es almacenar en memoria caché todos los node_modules instalados por NPM y los bower_components instalados por bower.
+{{site.data.keyword.Bluemix}} mantiene un directorio de memoria caché por aplicación de nodo, que es persistente entre las compilaciones. La memoria caché almacena dependencias resueltas para que no se descargue ni se instale cada vez que se despliegue la app.  Por ejemplo, suponga que myapp depende de **express**.  A continuación, la primera vez que se despliegue myapp, se descargará el módulo **express**.  En los despliegues posteriores de myapp, se utilizará la instancia en memoria caché de **express**. El comportamiento predeterminado es almacenar en memoria caché todos los node_modules instalados por NPM y los bower_components instalados por bower.
 
 Utilice la variable NODE_MODULES_CACHE para determinar si el paquete de compilación de nodos utiliza o no tiene en cuenta la memoria caché desde compilaciones anteriores. El valor predeterminado es true.  Para inhabilitar el almacenamiento en memoria caché del conjunto NODE_MODULES_CACHE en false, por ejemplo a través de la línea de mandatos de cf:
 ```
@@ -158,11 +156,12 @@ Expess puede ayudar a solucionarlo. Por ejemplo, puede realizar lo siguiente en 
 Consulte esta [publicación de stackoverflow](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js)
 para obtener más información.
 
-**NOTE** [App Management](../../manageapps/app_mng.html) y FIPS_MODE *NO* están soportados simultáneamente.  Si se ha establecido la variable de entorno BLUEMIX_APP_MGMT_ENABLE y las variables de entorno se han establecido en true, la app no se podrá transferir.
+**NOTA** [App Management](/docs/manageapps/app_mng.html) y FIPS_MODE *NO* están soportados simultáneamente.  Si se ha establecido la variable de entorno BLUEMIX_APP_MGMT_ENABLE y la variable de entorno FIPS_MODE se ha establecido en true, la app no se podrá transferir.
 
 A continuación se muestran varios métodos para comprobar el estado de FIPS_MODE:
 <ul>
-<li> Puede comprobar staging_task.log para la aplicación para obtener un mensaje parecido al siguiente:    
+<li> Puede comprobar staging_task.log para la aplicación para obtener un mensaje parecido al siguiente:
+    
 
   <pre>
   Instalación de IBM SDK habilitado para FIPS para Node.js (4.4.3) desde la memoria caché
@@ -189,7 +188,7 @@ Si la versión SSL contiene "fips", la versión de SSL que está en uso da sopor
   </pre>
   {: codeblock}
 
-Si el valor devuelto es 1, FIPS está en uso. Tenga en cuenta que crypto.fips devolverá n *undefined* para las versiones de node.js anteriores a 6.
+Si el valor devuelto es 1, FIPS está en uso. Tenga en cuenta que crypto.fips devolverá *undefined* para las versiones de node.js anteriores a 6.
 </li>
 </ul>
 
@@ -259,7 +258,7 @@ La siguiente tabla explica el comportamiento de node.js v6 con FIPS.
 
 Bluemix proporciona varias versiones del paquete de compilación Node.js.
 * El paquete de compilación **sdk-for-nodejs** creado por IBM es el paquete de compilación predeterminado que se utiliza para aplicaciones Node.js en Bluemix.
-* **nodejs_buildpack** es un paquete de compilación de comunidad proporcionado por la comunidad de Cloud. 
+* **nodejs_buildpack** es un paquete de compilación de comunidad proporcionado por la comunidad de Cloud Foundry.
 
 El paquete de compilación **sdk-for-nodejs** tendrá precedencia sobre el **nodejs_buildpack** en Bluemix. Si desea utilizar **nodejs_buildpack** con la aplicación en lugar del paquete de compilación **sdk-for-nodejs**, debe especificar el paquete de compilación, por ejemplo, utilizando la opción -b con el mandato **cf push**.
 
@@ -280,7 +279,7 @@ Normalmente, están disponibles el paquete de compilación **sdk-for-nodejs** ac
 {: #rellinks}
 ## general
 {: #general}
-* [Últimas actualizaciones del paquete de compilación Node.js](../../runtimes/nodejs/updates.html)
-* [App Management](../../manageapps/app_mng.html)
+* [Últimas actualizaciones del paquete de compilación Node.js](/docs/runtimes/nodejs/updates.html)
+* [App Management](/docs/manageapps/app_mng.html)
 * [Node.js](https://nodejs.org)
 * [IBM API Connect](https://strongloop.com/)

@@ -49,8 +49,8 @@ lastupdated: "2016-10-23"
 
 通过“服务”仪表板，可访问 {{site.data.keyword.IBM}} 和第三方提供者提供的 {{site.data.keyword.Bluemix_notm}} 服务，包括 Watson、Internet of Things、Analytics、Mobile 和 DevOps 服务：
 
-* 使用 {{site.data.keyword.IBM_notm}} DevOps 服务和 {{site.data.keyword.Bluemix_notm}} Garage Method，以更快速度、更低价格交付只包含所需功能的创新型新应用程序。采用 DevOps 实践并创造了创新和敏捷性文化后，可以执行迭代和透视功能来应对市场情况。
-* 区块链是一种点对点分布式分类帐技术，用于实现新一代的交易应用程序，这些应用程序可建立信任、责任和透明度，同时简化业务流程。  
+* 使用 {{site.data.keyword.IBM_notm}} DevOps 服务和 {{site.data.keyword.Bluemix_notm}} Garage Method，以更快速度、更低价格交付新的具备适当功能的创新型应用程序。如果您采用了 DevOps 做法并打造了具有创新性和灵活性的文化，那么在应对市场变化时，您既可以采用反复迭代的做法，也可以改变方向。
+* 区块链是一种点对点分布式账本技术，用于实现新一代的交易应用程序，这些应用程序可建立信任、责任和透明度，同时简化业务流程。  
 * Watson 将为应用程序提供认知计算能力，以及一套完整的语音、视觉和数据 API。通过使用 Watson 服务部署认知平台，可解决最复杂的业务问题。
 * {{site.data.keyword.IBM_notm}} 支持您通过丰富的集成云数据库以及数据和分析服务来执行更多操作。 
 * {{site.data.keyword.IBM_notm}} Internet of Things 服务允许应用程序与连接的设备、传感器和网关进行通信，以及使用这些设备、传感器和网关收集的数据。通过我们的诀窍，能轻松将设备连接到我们的 Internet of Things 云。随后，您的应用程序可以使用实时 API 和 REST API 来与设备进行通信，并使用您将这些设备设置为要收集的数据。 
@@ -64,11 +64,11 @@ lastupdated: "2016-10-23"
 
 “基础架构”仪表板提供了各种服务来满足云基础架构的需要。
 
-{{site.data.keyword.Bluemix_notm}} 基础架构提供了能达到最高性能的云基础架构。{{site.data.keyword.Bluemix_notm}} 基础架构是一种平台，可利用全球各地具有最丰富云计算选项的数据中心，然后集成并自动执行所有功能。{{site.data.keyword.CloudDataCents_notm}} 中处处是一流的计算、存储和联网设备。每个位置都以相同的方式进行构建、配备和运行，使您能在我们覆盖范围内的任意位置获得完全相同的功能和可用性。各个位置通过业内最先进的网中网结构进行连接，可集成不同的公共、专用和内部管理网络，使联网总成本更低、访问性更好、速度更快。此外，数据中心和网络还共享单个专有管理系统。您可通过一个管理工具来控制一切 - 每个裸机服务器、虚拟服务器和存储设备，这些设备全部可通过 API、门户网站和移动应用程序进行访问。
+{{site.data.keyword.Bluemix_notm}} 基础架构提供了能达到最高性能的云基础架构。{{site.data.keyword.Bluemix_notm}} 基础架构是一种平台，可利用全球各地具有最丰富云计算选项的数据中心，然后集成并自动执行所有功能。{{site.data.keyword.CloudDataCents_notm}} 中处处是一流的计算、存储和联网设备。因为每个位置都以相同的方式进行构建、配备和运行，所以无论在任何位置使用我们的产品，都能实现完全相同的功能性和可用性。各个位置通过业内最先进的网中网结构进行连接，可集成不同的公共、专用和内部管理网络，使联网总成本更低、访问性更好、速度更快。此外，数据中心和网络还共享单个专有管理系统。您可通过一个管理工具来控制一切 - 每个裸机服务器、虚拟服务器和存储设备，这些设备全部可通过 API、门户网站和移动应用程序进行访问。
 
 {{site.data.keyword.Bluemix_notm}} 基础架构在单个无缝平台中提供了功能强大的裸机服务器和灵活的虚拟服务器。所有这些服务器都将按需提供，并按月或按小时计费。裸机服务器为处理器密集型和磁盘 I/O 密集型工作负载提供了原动力，可以严格按照您的规范进行配置。虚拟服务器支持高速部署、灵活扩展以及按使用量计费。对于高性能计算，通过图形处理单元 (GPU) 服务器极大提高了云的能力，这些服务器可按小时或按月使用。 
 
-{{site.data.keyword.Bluemix_notm}} 基础架构产品连接到一个三层网络，对公共、专用和管理流量进行分段处理。客户的 {{site.data.keyword.Bluemix_notm}} 帐户上的基础架构可在专用网络上免费相互传输数据。基础架构产品（例如，裸机服务器、虚拟服务器和云存储器）在公用网络上连接到 {{site.data.keyword.Bluemix_notm}}“目录”中的其他应用程序和服务，如 Watson 服务、容器或运行时。这两种类型的产品之间的数据传输按标准公用网络带宽费率计量并收费。
+{{site.data.keyword.Bluemix_notm}} 基础架构产品连接到一个三层网络，对公共、专用和管理流量进行分段处理。客户的 {{site.data.keyword.Bluemix_notm}} 帐户上的基础架构可在专用网络上的此类基础架构之间免费传输数据。基础架构产品（例如，裸机服务器、虚拟服务器和云存储器）在公用网络上连接到 {{site.data.keyword.Bluemix_notm}}“目录”中的其他应用程序和服务，如 Watson 服务、容器或运行时。这两种类型的产品之间的数据传输按标准公用网络带宽费率计量并收费。
 
 ## 使用 {{site.data.keyword.Bluemix_notm}} 控制台
 {: #bluemixoverviewui}
@@ -164,8 +164,7 @@ cf api https://api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net
 | 美国南部区域 | 美国达拉斯 | ng | api.ng.bluemix.net | console.ng.bluemix.net |
 | 英国区域 | 英国伦敦 | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
 | 悉尼区域 | 澳大利亚悉尼 | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
-
-*表 1. {{site.data.keyword.Bluemix_notm}} 区域列表*
+{: caption="Table 1. {{site.data.keyword.Bluemix_notm}} region list" caption-side="top"}
 
 
 ### {{site.data.keyword.Bluemix_notm}} 弹性

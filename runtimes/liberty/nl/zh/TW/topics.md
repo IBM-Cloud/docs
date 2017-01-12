@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-06-10"
 
 ---
 
@@ -11,9 +12,6 @@ copyright:
 
 # Liberty 主題
 {: #topics}
-
-前次更新：2016 年 6 月 10 日
-{: .last-updated}
 
 * [Liberty 運行環境](index.html)
 * [偵測](index.html#detection)

@@ -70,8 +70,7 @@ SDK do servidor NodeJS](https://github.com/ibm-bluemix-mobile-services/bms-pushn
 ### {{site.data.keyword.amashort}} SDK do servidor
 {: #mca_sdk}
 
-- 
-[{{site.data.keyword.amashort}}SDK
+- [{{site.data.keyword.amashort}}SDK
 do servidor Swift](https://github.com/ibm-bluemix-mobile-services/bms-mca-serversdk-swift)
 
 

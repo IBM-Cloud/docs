@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-11-14"
 
 ---
 
@@ -11,9 +12,6 @@ copyright:
 
 # バインドされたサービスの自動構成
 {: #auto_config}
-
-最終更新日: 2016 年 6 月 10 日
-{: .last-updated}
 
 さまざまなサービスを Liberty アプリケーションにバインドすることができます。
 サービスは開発者の希望によって、コンテナー管理、アプリケーション管理、またはその両方にできます。
@@ -31,20 +29,20 @@ VCAP_SERVICES を読み取って、バインドされたサービスについて
 
 このプロセスは自動構成と呼ばれます。Liberty ビルドパックは、以下のサービス・タイプに対して自動構成を提供します。
 
-* [SQL Database](../../services/SQLDB/index.html#SQLDB)
+* [SQL Database](/docs/services/SQLDB/index.html#SQLDB)
 * ClearDB MySQL Database
-* [MySQL](../../services/MySQL/index.html#MySQL)
+* [MySQL](/docs/services/MySQL/index.html#MySQL)
 * ElephantSQL
-* [PostgreSQL](../../services/PostgreSQL/index.html#PostgreSQL)
-* [Cloudant NoSQL Database](../../services/Cloudant/index.html#Cloudant)
+* [PostgreSQL](/docs/services/PostgreSQL/index.html#PostgreSQL)
+* [Cloudant NoSQL Database](/docs/services/Cloudant/index.html#Cloudant)
 * MongoLab
-* [dashDB](../../services/dashDB/index.html#dashDB)
-* [Data Cache](../../services/DataCache/index.html#data_cache)
-* [Session Cache](../../services/SessionCache/index.html#session_cache)
-* [MQ Light](../../services/MQLight/index.html#mqlight010)
-* [Monitoring and Analytics](../..//services/monana/index.html#gettingstartedtemplate)
-* [Auto-Scaling](../../services/Auto-Scaling/index.html#autoscaling)
-* [Single Sign On](../../services/SingleSignOn/index.html#sso_gettingstarted)
+* [dashDB](/docs/services/dashDB/index.html#dashDB)
+* [Data Cache](/docs/services/DataCache/index.html#data_cache)
+* [Session Cache](/docs/services/SessionCache/index.html#session_cache)
+* [MQ Light](/docs/services/MQLight/index.html#mqlight010)
+* [Monitoring and Analytics](/docs/services/monana/index.html#gettingstartedtemplate)
+* [Auto-Scaling](/docs/services/Auto-Scaling/index.html#autoscaling)
+* [Single Sign On](/docs/services/SingleSignOn/index.html#sso_gettingstarted)
 * [New Relic](newRelic.html)
 * [Dynatrace](dynatrace.html)
 
@@ -132,6 +130,38 @@ services_autoconfig_excludes 環境変数を使用します。この環境変数
     $ cf set-env myapp services_autoconfig_excludes "sqldb=config mongodb-2.2=all"
 ```
 {: codeblock}
+
+## サービス構成のオーバーライド
+{: #override_service_config}
+
+場合によっては、自動構成で生成されたサービスのデフォルト構成をオーバーライドするのが望ましいことがあります。
+これは、**LBP_SERVICE_CONFIG_xxxx** 環境変数を使用して行えます。ここで、「xxxx」は、すべて大文字のサービスの名前です。例えば、*mysql* サービスのデフォルト・バージョンをオーバーライドしてバージョン 1.4.+ に設定するには、次のようなコマンドを発行します。
+
+```
+    $ cf set-env myapp LBP_SERVICE_CONFIG_MYSQL "{driver: { version: 1.4.+ }}"
+```
+{: codeblock}
+
+いくつかのサービス構成オプションをオーバーライドするための構文を、以下の表に示します。
+
+<table>
+<tr>
+<th align="left">環境変数名</th>
+<th align="left">構成の構文</th>
+</tr>
+
+<tr>
+<td>LBP_SERVICE_CONFIG_MYSQL</td>
+<td>"{driver: { version: x.y.z }, connection_pool_size: 15}"</td>
+</tr>
+
+<tr>
+<td>LBP_SERVICE_CONFIG_POSTGRESQL</td>
+<td>"{driver: { version: x.y.z }}"</td>
+</tr>
+</table>
+
+
 
 # 関連リンク
 {: #rellinks}

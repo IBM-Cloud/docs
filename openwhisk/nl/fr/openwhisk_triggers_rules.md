@@ -192,7 +192,19 @@ d'événement.
   Vous constatez que l'action hello a reçu le contenu de l'événement et a renvoyé la chaîne attendue.
 
 Vous pouvez créer plusieurs règles qui associent le même déclencheur à des actions différentes.
-Le déclencheur et l'action qui constituent une règle doivent figurer dans le même espace de noms et ne peuvent pas appartenir à un package.
-Si vous souhaitez utiliser une action qui appartient à un package, vous pouvez copier l'action dans votre espace de noms. Exemple : `wsk
-action
-create echo --copy /whisk.system/utils/echo`.
+Les déclencheurs et les règles ne peuvent pas appartenir à un package. Cependant,
+la règle peut être associée à une action qui appartient à un package, par
+exemple : 
+  ```
+  wsk rule create recordLocation locationUpdate /whisk.system/utils/echo
+  ```
+  {: pre}
+
+Vous pouvez également utiliser des règles avec des séquences. Vous
+pouvez ainsi créer une séquence d'actions
+`recordLocationAndHello`, qui est activée par la règle `anotherRule`.
+  ```
+  wsk action create recordLocationAndHello --sequence /whisk.system/utils/echo,hello
+  wsk rule create anotherRule locationUpdate recordLocationAndHello
+  ```
+  {: pre}

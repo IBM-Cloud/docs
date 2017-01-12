@@ -40,6 +40,8 @@ The {{site.data.keyword.iot_short_notm}} HTTP REST API supports the following ca
 
 To access the {{site.data.keyword.iot_short_notm}} HTTP REST API and obtain more information about how to build and customize your applications, go to  https://docs.internetofthings.ibmcloud.com/swagger/v0002.html.
 
+To access the {{site.data.keyword.iot_short_notm}} HTTP Messaging API and obtain more information about how to configure your applications to publish events and commands over HTTP, go to https://docs.internetofthings.ibmcloud.com/swagger/http-messaging.html.
+
 The only version of the {{site.data.keyword.iot_short_notm}} HTTP REST API that is supported is version 2. Ensure that your {{site.data.keyword.iot_short_notm}} solutions are using version 2.
 
 

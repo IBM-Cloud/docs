@@ -2,15 +2,16 @@
 
 copyright:
   years: 2014, 2016
+lastupdated: "2016-11-14"
+
 ---
-{:new_window: target="_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
+
 
 
 # {{site.data.keyword.objectstorageshort}} 概説 {: #getting-started-with-object-storage}
 
-*最終更新日: 2016 年 10 月 19 日*
-{: .last-updated}
 
 {{site.data.keyword.objectstoragefull}} では、構造化されていないクラウド・データ・ストレージを提供します。コンテンツを保管してアクセスするほかに、アプリおよびサービスを対話的に構成して接続することが可能です。
 {: shortdesc}
@@ -23,15 +24,14 @@ copyright:
 * 中央リポジトリーとして機能
 
 
-
 {{site.data.keyword.Bluemix_notm}} Public {{site.data.keyword.objectstorageshort}} を利用すると、完全にプロビジョンされた Swift {{site.data.keyword.objectstorageshort}} アカウントにアクセスしてデータを管理することができます。プロバイダー・サイドの暗号化は提供されません。
 
 
 1.	{{site.data.keyword.Bluemix_notm}} カタログからサービス・インスタンスをプロビジョンします。インスタンスを構成し、**「作成」**をクリックします。最初に**「アプリ」**フィールドで**「アンバインドのまま」**オプションを選択した場合でも、後でサービス・インスタンスを {{site.data.keyword.Bluemix_notm}} アプリにバインドすることができます。
 2. サービス・インスタンス・ダッシュボードで、オブジェクトの保管を開始するためのコンテナーを作成します。
-3. **「アクション」**ドロップダウン・メニューからコンテナーまたはバケットにファイルを追加します。
+3. **「アクション」**ドロップダウン・メニューからコンテナーにファイルを追加します。
 4. オブジェクトへのアクセスをテストするには、**「ダウンロード」**をクリックしてファイルを確認します。
-5. インスタンスをアプリケーションに接続する準備ができたら、サービス資格情報をセットアップして[サービスをバインドします](https://new-console.stage1.ng.bluemix.net/docs/services/reqnsi.html#add_service)。
+5. インスタンスをアプリケーションに接続する準備ができたら、サービス資格情報をセットアップして[サービスをバインドします](/docs/services/reqnsi.html#add_service)。
 
 
 

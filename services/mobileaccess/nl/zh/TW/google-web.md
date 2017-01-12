@@ -42,14 +42,14 @@ lastupdated: "2016-09-07"
 
 
 ## 使用 {{site.data.keyword.amashort}} 進行 Google Web 鑑別
-若要啟動授權處理程序，請執行下列動作：
+若要開始授權處理程序，請執行下列動作：
 
 1. 從您的 Web 應用程式重新導向至授權伺服器的下列端點：  
   https://imf-newauthserver.bluemix.net/oauth/v2/authorization
 
   使用下列查詢參數：
 	```
-response_type='authorization_code'
+   response_type='authorization_code'
    client_id= <bluemix_app_guid>
    redirect_uri= <uri which you want to return to after getting a grant code>
    scope= 'openid'
@@ -72,10 +72,9 @@ response_type='authorization_code'
     redirect_uri= <redirect_uri >
     code= <authorization code>
 	```
-`redirect_uri` 參數必須符合步驟 1 中的 `redirect_uri`，而 `<authorization code>` 值是接收自回應。
-因為授權碼的有效時間最多為 10 分鐘，所以請一定要在 10 分鐘內傳送此 `POST` 要求。
+`redirect_uri` 參數必須符合步驟 1 中的 `redirect_uri`，而 `<authorization code>` 值是接收自回應。因為授權碼的有效時間最多為 10 分鐘，所以請一定要在 10 分鐘內傳送此 `POST` 要求。
 
-`POST` 回應主體應該包含以 base64 編碼的 `access_token` 及 `id_token`。
+`POST` 回應內文應該包含以 base64 編碼的 `access_token` 及 `id_token`。
 
 ## 測試鑑別
 

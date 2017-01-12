@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-06-10"
 
 ---
 
@@ -10,9 +11,6 @@ copyright:
 
 # 베타 기능 사용
 {: #using_beta_features}
-
-마지막 업데이트 날짜: 2016년 6월 10일
-{: .last-updated}
 
 Liberty 베타 기능은 향후 Liberty 릴리스에 포함될 수 있는 새로운 기능과 프로그래밍 모델을 미리 사용해 볼 수 있도록 합니다. Bluemix에 배치된 애플리케이션에서도 대부분의 베타 기능을 사용할 수 있습니다. 
 

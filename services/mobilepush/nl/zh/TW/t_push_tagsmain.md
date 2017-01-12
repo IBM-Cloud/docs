@@ -6,9 +6,15 @@ copyright:
 ---
 
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
 # 標籤型通知 
 {: #push-ios-main-tags}
-前次更新：2016 年 10 月 17 日
+前次更新：2016 年 12 月 6 日
 {: .last-updated}
 
-以所有訂閱特定標籤之裝置為目標的標籤型通知訊息。您可以定義標籤，然後使用標籤來傳送及接收訊息。您必須先建立應用程式的標籤、設定標籤訂閱，然後起始標籤型通知。若要使用 [REST API](https://mobile.{DomainName}/imfpush/) 傳送標籤型通知，請確定在公佈至訊息資源時已提供 "tagName"。 
+標籤型通知訊息是指以所有訂閱特定標籤之裝置為目標的訊息。您可以定義標籤，然後使用標籤來傳送及接收訊息。 
+
+您必須先建立應用程式的標籤、設定標籤訂閱，然後起始標籤型通知。若要使用 [REST API](https://mobile.{DomainName}/imfpush/) 傳送標籤型通知，請確定在公佈至訊息資源時已提供 "tagName"。 

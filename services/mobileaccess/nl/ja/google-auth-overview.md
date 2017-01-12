@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-02"
+lastupdated: "2016-11-03"
+
 ---
 {:screen:  .screen}
 {:shortdesc: .shortdesc}
@@ -10,7 +11,6 @@ lastupdated: "2016-10-02"
 
 # Google 資格情報を使用したユーザーの認証
 {: #google-auth}
-
 
 Google を ID プロバイダーとして使用してリソースを保護するように {{site.data.keyword.amafull}} サービスを構成できます。それにより、モバイル・アプリケーション・ユーザーまたは Web アプリケーション・ユーザーは、Google の資格情報を認証に使用できるようになります。
 {:shortdesc}
@@ -45,7 +45,7 @@ Google を ID プロバイダーとして使用してリソースを保護する
 {{site.data.keyword.amashort}} Web アプリケーション要求フローは、モバイル・クライアントのフローに似ています。ただし、{{site.data.keyword.amashort}} は、{{site.data.keyword.Bluemix_notm}} バックエンド・リソースではなくて Web アプリケーションを保護します。
 
   * 最初の要求は Web アプリケーションによって (例えばログイン・フォームから) 送信されます。
-  * 最終のリダイレクトは、バックエンド保護リソースではなく Web アプリケーション自体の保護領域へのリダイレクトです。 
+  * 最終のリダイレクトは、バックエンド保護リソースではなく Web アプリケーション自体の保護領域へのリダイレクトです。
 
 
 
@@ -56,4 +56,3 @@ Google を ID プロバイダーとして使用してリソースを保護する
 * [iOS アプリ用の Google 認証の使用可能化 (Swift SDK)](google-auth-ios-swift-sdk.html)
 * [iOS アプリ用の Google 認証の使用可能化 (Objective-C SDK)](google-auth-ios.html)
 * [Cordova アプリ用の Google 認証の使用可能化](google-auth-cordova.html)
-
