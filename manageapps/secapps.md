@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2016-05-09"
+lastupdated: "2017-01-11"
 
 ---
 
@@ -30,7 +30,7 @@ For the CSR to be valid, the following information must be entered when generati
 
 **Country name**
 
-  A two-digit code that represents the country or region. For example, "US" represents the United States. For other countries or regions, check the [list of ISO country codes](https://www.iso.org/obp/ui/#search){:new_window} before you create the CSR.
+  A two-digit code that represents the country or region. For example, "US" represents the United States. For other countries or regions, check the [list of ISO country codes ![External link icon](../icons/launch-glyph.svg)](https://www.iso.org/obp/ui/#search){:new_window} before you create the CSR.
 
 **State or Province**
 
@@ -52,7 +52,7 @@ For the CSR to be valid, the following information must be entered when generati
 
   The fully qualified domain name (FQDN) for which you are requesting the SSL certificate.
 
-The methods for creating a CSR vary depending on your operating system. The following example shows how to create a CSR by using [the OpenSSL command line tool](http://www.openssl.org/){:new_window}:
+The methods for creating a CSR vary depending on your operating system. The following example shows how to create a CSR by using [the OpenSSL command line tool ![External link icon](../icons/launch-glyph.svg)](http://www.openssl.org/){:new_window}:
 
 ```
 openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
@@ -122,7 +122,7 @@ To upload a certificate for your application:
 
     If you enable this option, a user who tries to access an SSL protected domain is requested to provide a client-side certificate. For example, in a web browser, when a user tries to access an SSL protected domain, the web browser prompts the user to provide a client certificate for the domain. Use the **Client certificate trust store** file upload option to define the client-side certificates that you allow to access your custom domain.
 
-  **Note:** The custom certificate feature in {{site.data.keyword.Bluemix_notm}} domain management depends on the Server Name Indication (SNI) extension of the Transport Layer Security (TLS) protocol. Therefore, the client code that accesses {{site.data.keyword.Bluemix_notm}} applications protected by custom certificates must support the SNI extension in the TLS implementation. For more information, see [section 7.4.2 of RFC 4346](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window}.
+  **Note:** The custom certificate feature in {{site.data.keyword.Bluemix_notm}} domain management depends on the Server Name Indication (SNI) extension of the Transport Layer Security (TLS) protocol. Therefore, the client code that accesses {{site.data.keyword.Bluemix_notm}} applications protected by custom certificates must support the SNI extension in the TLS implementation. For more information, see [section 7.4.2 of RFC 4346 ![External link icon](../icons/launch-glyph.svg)](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window}.
 
   **Client certificate trust store**
 
