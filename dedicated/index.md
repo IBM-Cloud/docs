@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2016-01-11"
+lastupdated: "2017-01-11"
 
 ---
 
@@ -162,7 +162,7 @@ If you have a private instance of the service for your dedicated environment, yo
 ## {{site.data.keyword.Bluemix_dedicated_notm}} architecture
 {: #dedicatedarch}
 
-{{site.data.keyword.Bluemix_dedicated_notm}} can be deployed in any [{{site.data.keyword.IBM_notm}} SoftLayer data center](http://www.softlayer.com/data-centers){: new_window} around the world. {{site.data.keyword.IBM_notm}} SoftLayer provides the highest performing cloud infrastructure. Each data center has 24 hour, 7 days a week security, and rigorous controls.
+{{site.data.keyword.Bluemix_dedicated_notm}} can be deployed in any [{{site.data.keyword.IBM_notm}} SoftLayer data center ![External link icon](../icons/launch-glyph.svg)](http://www.softlayer.com/data-centers){: new_window} around the world. {{site.data.keyword.IBM_notm}} SoftLayer provides the highest performing cloud infrastructure. Each data center has 24 hour, 7 days a week security, and rigorous controls.
 
 Each {{site.data.keyword.Bluemix_dedicated_notm}} deployment is dedicated to a single enterprise on {{site.data.keyword.IBM_notm}} SoftLayer dedicated hardware in it's own private network. {{site.data.keyword.Bluemix_dedicated_notm}} environments have the same security standards as the public {{site.data.keyword.Bluemix_notm}} in terms of infrastructure, operational, and physical security. However, developer access to the dedicated {{site.data.keyword.Bluemix_notm}} is controlled by your LDAP policies, which can be configured by the {{site.data.keyword.Bluemix_notm}} team when they set up your environment. Within the dedicated environment, you can manage user roles and permissions. See [Managing users and permissions](/docs/admin/index.html#oc_useradmin) for details. The following figure depicts the logical architecture of a default {{site.data.keyword.Bluemix_dedicated_notm}} deployment.
 
@@ -220,10 +220,10 @@ IBM provides you access to {{site.data.keyword.Bluemix_dedicated_notm}} by using
 To set up your private version of {{site.data.keyword.Bluemix_notm}}:
 
 <ol>
-<li>Contact your IBM designated account representative or <a href="https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs" target="_blank">contact {{site.data.keyword.Bluemix_notm}}</a> to get started.</li>
+<li>Contact your IBM designated account representative or <a href="https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs" target="_blank">contact {{site.data.keyword.Bluemix_notm}} <img src="../icons/launch-glyph.svg" alt="External link icon"></a> to get started.</li>
 <li>Work with IBM on your fee for your {{site.data.keyword.Bluemix_dedicated_notm}} instance. The monthly recurring fee is based on the dedicated services that you want to use, plus a subscription to all {{site.data.keyword.Bluemix_notm}} public services. You then receive an invoice for anything that you use beyond that subscription agreement.</li>
-<li>Identify the deadlines for each phase of setting up your {{site.data.keyword.Bluemix_dedicated_notm}} instance. For information about each phase and the tasks involved, see <a href="/docs/dedicated/index.html#rolesresponsibilities" target="_blank">{{site.data.keyword.Bluemix_dedicated_notm}} roles and responsibilities</a>.</li>
-<li>You select the <a href="http://www.softlayer.com/data-centers" target="_blank">{{site.data.keyword.BluSoftlayer}} data center location</a> for your dedicated instance. Then, your dedicated platform and account are created. For your account, you identify the people in your organization for the roles that are needed to get your dedicated instance up and running. For information about the roles that you assign, see <a href="/docs/dedicated/index.html#rolesresponsibilities" target="_blank">{{site.data.keyword.Bluemix_dedicated_notm}} roles and responsibilities</a>.
+<li>Identify the deadlines for each phase of setting up your {{site.data.keyword.Bluemix_dedicated_notm}} instance. For information about each phase and the tasks involved, see <a href="/docs/dedicated/index.html#rolesresponsibilities">{{site.data.keyword.Bluemix_dedicated_notm}} roles and responsibilities</a>.</li>
+<li>You select the <a href="http://www.softlayer.com/data-centers" target="_blank">{{site.data.keyword.BluSoftlayer}} data center location <img src="../icons/launch-glyph.svg" alt="External link icon"></a> for your dedicated instance. Then, your dedicated platform and account are created. For your account, you identify the people in your organization for the roles that are needed to get your dedicated instance up and running. For information about the roles that you assign, see <a href="/docs/dedicated/index.html#rolesresponsibilities">{{site.data.keyword.Bluemix_dedicated_notm}} roles and responsibilities</a>.
 </li>
 <li>Define and establish network connectivity between your corporate network and your {{site.data.keyword.Bluemix_dedicated_notm}} instance. There is a mandatory network security appliance that includes firewall and intrusion prevention capabilities with an associated cost for this option.
 	<ol type="a">
@@ -244,7 +244,7 @@ To set up your private version of {{site.data.keyword.Bluemix_notm}}:
 You can expect a process similar to the following list for the initial deployment and configuration for your environment. For details about who is responsible for each task, see [Roles and responsibilities](index.html#rolesresponsibilities).
 
 <ol>
-<li>You select which data center to use to host your dedicated instance. For information about data center options, see <a href="http://www.softlayer.com/data-centers" target="_blank">{{site.data.keyword.BluSoftlayer}} data center location</a>.</li>
+<li>You select which data center to use to host your dedicated instance. For information about data center options, see <a href="http://www.softlayer.com/data-centers" target="_blank">{{site.data.keyword.BluSoftlayer}} data center location <img src="../icons/launch-glyph.svg" alt="External link icon"></a>.</li>
 <li>You specify the domain names for the deployment, and the IDs that you want to use. You get three domains when you set up your {{site.data.keyword.Bluemix_notm}} instance. You pick the prefix for the <code>*mycompany*.*region*.bluemix.net</code> and <code>*mycompany*.*region*.mybluemix.net</code>. And, you choose the full name for the third domain.<br />
 <p>You can choose as many custom domains as you want. However, you are responsible for the certificates for the custom domains. For information about creating your custom domain, see <a href="/docs/manageapps/updapps.html#domain">Creating and using a custom domain</a>.</p></li>
 <li>You identify an owner for the public account that is used to represent your company in {{site.data.keyword.Bluemix_notm}} Public. IBM uses this account for tracking syndicated services usage.</li>
@@ -252,7 +252,7 @@ You can expect a process similar to the following list for the initial deploymen
 <li>You decide whether there will be any access to your dedicated environment from the public Internet.</li>
 <li>You select the type of authentication that will be used. You can select from IBMid or Active Directory. For information about using and registering for an IBMid, see the <a href="https://www.ibm.com/account/profile/us?page=regfaqhelp#4">Help and FAQ</a> page.
 </li>
-<li>You identify and assign roles for your administrative team for the environment. For information about the roles that you must assign, see <a href="/docs/dedicated/index.html#rolesresponsibilities" target="_blank">{{site.data.keyword.Bluemix_dedicated_notm}} roles and responsibilities</a>.</li>
+<li>You identify and assign roles for your administrative team for the environment. For information about the roles that you must assign, see <a href="/docs/dedicated/index.html#rolesresponsibilities">{{site.data.keyword.Bluemix_dedicated_notm}} roles and responsibilities</a>.</li>
 <li>IBM deploys the core platform that includes the elastic runtimes, console, administration feature, and monitoring.</li>
 <li>IBM configures your administrative access to the environment.</li>
 <li>You can start using your dedicated instance that is monitored by the IBM operations team in order to respond to alerts.</li>
@@ -462,7 +462,7 @@ A global load balancer not only ensures continuous availability and is required 
 * Provides site failover based on application health check
 * Uses weighted routing between endpoints
 
-You can choose a global load balancer such as Akamai or Dyn. For more about using Akamai as a global load balancer, see [Global traffic management](https://www.akamai.com/us/en/solutions/products/web-performance/global-traffic-management.jsp "Opens in new window"){: new_window}. For more about using Dyn as a global load balancer, see [4 Reasons Businesses Are Taking Global Load Balancing to the Cloud](http://dyn.com/blog/4-reasons-businesses-are-taking-global-load-balancing-to-the-cloud/){: new_window}.
+You can choose a global load balancer such as Akamai or Dyn. For more about using Akamai as a global load balancer, see [Global traffic management ![External link icon](../icons/launch-glyph.svg)](https://www.akamai.com/us/en/solutions/products/web-performance/global-traffic-management.jsp "Opens in new window"){: new_window}. For more about using Dyn as a global load balancer, see [4 Reasons Businesses Are Taking Global Load Balancing to the Cloud ![External link icon](../icons/launch-glyph.svg)](http://dyn.com/blog/4-reasons-businesses-are-taking-global-load-balancing-to-the-cloud/){: new_window}.
 
 ### High availability
 {: #ha}
@@ -473,7 +473,7 @@ These technologies include the following:
 
 <dl>
 <dt>DEA Scalability in Cloud Foundry</dt>
-<dd>A Cloud Foundry <a href="https://docs.cloudfoundry.org/concepts/architecture/execution-agent.html" target="_blank">Droplet Execution Agent (DEA)</a> performs health checks on the apps running within it. If there is a problem with the app or the DEA itself, it deploys additional instances of the app to an alternate DEA to address the issue. For more information, see <a href="https://docs.cloudfoundry.org/concepts/high-availability.html" target="_blank">Configuring CF for High Availability with Redundancy</a>.
+<dd>A Cloud Foundry <a href="https://docs.cloudfoundry.org/concepts/architecture/execution-agent.html" target="_blank">Droplet Execution Agent (DEA) <img src="../icons/launch-glyph.svg" alt="External link icon"></a> performs health checks on the apps running within it. If there is a problem with the app or the DEA itself, it deploys additional instances of the app to an alternate DEA to address the issue. For more information, see <a href="https://docs.cloudfoundry.org/concepts/high-availability.html" target="_blank">Configuring CF for High Availability with Redundancy <img src="../icons/launch-glyph.svg" alt="External link icon"></a>.
 <p>To ensure high availability for your applications, you need enough compute resources to balance the load, and you might also require additional compute resources to support a possible failure. If you need to scale your environment by increasing your DEA pool to be prepared for a failure or address a spike in the load for your app instances, you can work with your IBM representative to order additional DEAs and ensure that you have the appropriate hardware to support the added resources.
 </p>
 </dd>
