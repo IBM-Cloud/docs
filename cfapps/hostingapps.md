@@ -76,14 +76,14 @@ If all of the following principles are observed in your application, the applica
 
   At a minimum, capture your application installation as a uniform set of scripts that are independent of the operating system. Keep your application installation small and portable to adapt to different automation techniques. Also, minimize the dependencies that are required by the application installation.
 
-For more information about cloud-ready applications, see [The 12-factor application](http://12factor.net/){: new_window} ![External link icon](../icons/launch-glyph.svg).
+For more information about cloud-ready applications, see [The 12-factor application ![External link icon](../icons/launch-glyph.svg)](http://12factor.net/){: new_window}.
 
 ##Migrating your apps
 {: #ht_hostapp}
 
 You can migrate your applications to {{site.data.keyword.Bluemix_notm}} in an incremental way, instead of shifting the application completely to the cloud environment. You can migrate a portion of your application first and connect to the existing data or system of records by using the Cloud Integration service.
 
-In your cloud applications, you might need to access the backend data or services, for example, a system of record. In {{site.data.keyword.Bluemix_notm}}, you can use the Secure Gateway service to establish a secured tunnel between a {{site.data.keyword.Bluemix_notm}} organization and the enterprise backend network. The service enables the applications on {{site.data.keyword.Bluemix_notm}} to access the backend network’s data and services. For details, see [Reaching enterprise backend with Bluemix Secure Gateway via console](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window} ![External link icon](../icons/launch-glyph.svg).
+In your cloud applications, you might need to access the backend data or services, for example, a system of record. In {{site.data.keyword.Bluemix_notm}}, you can use the Secure Gateway service to establish a secured tunnel between a {{site.data.keyword.Bluemix_notm}} organization and the enterprise backend network. The service enables the applications on {{site.data.keyword.Bluemix_notm}} to access the backend network’s data and services. For details, see [Reaching enterprise backend with Bluemix Secure Gateway via console ![External link icon](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window}.
 
 To deploy your application to {{site.data.keyword.Bluemix_notm}} as a Cloud Foundry application, select a runtime from the {{site.data.keyword.Bluemix_notm}} Catalog. The runtime contains a starter Hello World application that you can replace with your own application. If you cannot find a starter that provides the runtime you want, you can bring a custom, Cloud Foundry-compatible buildpack to {{site.data.keyword.Bluemix_notm}} by using the –b option with the cf push command. For details, see [Using community buildpacks](/docs/cfapps/byob.html).
 
@@ -191,5 +191,5 @@ To ensure that your application can run in a local environment after you modify 
 * [Virtual Machines](/docs/virtualmachines/vm_index.html)
 * [Getting started with Delivery Pipeline](/docs/services/DeliveryPipeline/index.html)
 * [Deploying apps with IBM Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html)
-* [The twelve-factor app](http://12factor.net/){: new_window} ![External link icon](../icons/launch-glyph.svg)
-* [Reaching enterprise backend with Bluemix Secure Gateway via console](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window} ![External link icon](../icons/launch-glyph.svg)
+* [The twelve-factor app ![External link icon](../icons/launch-glyph.svg)](http://12factor.net/){: new_window}
+* [Reaching enterprise backend with Bluemix Secure Gateway via console ![External link icon](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window}
