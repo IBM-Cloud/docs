@@ -3,8 +3,8 @@
 
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-05"
+  years: 2016, 2017
+lastupdated: "2017-01-11"
 
 
 ---
@@ -32,7 +32,7 @@ Use the following introductory sentence and list for this section.  If your prod
 
 <!-- The following official statement can only be used IF we are fully compliant
 
-{{site.data.keyword.Bluemix_notm}} uses the latest W3C Standard, [WAI-ARIA 1.0](http://www.w3.org/TR/wai-aria/){: new_window} to ensure compliance to [US Section 508](https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-section-508-standards/section-508-standards){: new_window} and [Web Content Accessibility Guidelines (WCAG) 2.0](http://www.w3.org/TR/WCAG20/){: new_window}. To take advantage of accessibility features, use the latest release of your screen reader in combination with the latest Internet Explorer web browser that is supported by this product.
+{{site.data.keyword.Bluemix_notm}} uses the latest W3C Standard, [WAI-ARIA 1.0 ![External link icon](../icons/launch-glyph.svg)](http://www.w3.org/TR/wai-aria/){: new_window} to ensure compliance to [US Section 508 ![External link icon](../icons/launch-glyph.svg)](https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-section-508-standards/section-508-standards){: new_window} and [Web Content Accessibility Guidelines (WCAG) 2.0 ![External link icon](../icons/launch-glyph.svg)](http://www.w3.org/TR/WCAG20/){: new_window}. To take advantage of accessibility features, use the latest release of your screen reader in combination with the latest Internet Explorer web browser that is supported by this product.
 
 The {{site.data.keyword.Bluemix_notm}} online product documentation and the {{site.data.keyword.Bluemix_notm}} user interface framework is enabled for accessibility.
 
@@ -124,9 +124,9 @@ If your mobile application has custom gestures, describe the gesture and the how
 
 ## Related accessibility information
 
-The {{site.data.keyword.Bluemix_notm}} web user interface accessibility compliance status is specifically for the {{site.data.keyword.Bluemix_notm}} product platform. There are sub-sections of the user interface that are owned by third party products or services that host content within the platform, for which the {{site.data.keyword.Bluemix_notm}} compliance record does not maintain or own the accessibility compliance status. This means that if you are accessing any user interface or documentation for a service, you must request the compliance statements for that service. For example, if you are using the OpenWhisk dashboard, an interface for IBM Containers, the Administration console for a local or dedicated environment, or an IoT service, you must request [product accessibility information](http://www-03.ibm.com/able/product_accessibility/index.html){: new_window} for that interface or documentation.
+The {{site.data.keyword.Bluemix_notm}} web user interface accessibility compliance status is specifically for the {{site.data.keyword.Bluemix_notm}} product platform. There are sub-sections of the user interface that are owned by third party products or services that host content within the platform, for which the {{site.data.keyword.Bluemix_notm}} compliance record does not maintain or own the accessibility compliance status. This means that if you are accessing any user interface or documentation for a service, you must request the compliance statements for that service. For example, if you are using the OpenWhisk dashboard, an interface for IBM Containers, the Administration console for a local or dedicated environment, or an IoT service, you must request [product accessibility information ![External link icon](../icons/launch-glyph.svg)](http://www-03.ibm.com/able/product_accessibility/index.html){: new_window} for that interface or documentation.
 
-The {{site.data.keyword.Bluemix_notm}} documentation accessibility compliance is specifically for the {{site.data.keyword.Bluemix_notm}} core platform information, and it does not extend to any services. From the homepage, the content is separated into two sections: "How to use the {{site.data.keyword.Bluemix_notm}} platform" and "How to use {{site.data.keyword.Bluemix_notm}} services." The available documentation for the {{site.data.keyword.Bluemix_notm}} platform is managed and reported in the {{site.data.keyword.Bluemix_notm}} product accessibility information that is available upon request. For compliance status for any service, you must request [product accessibility information](http://www-03.ibm.com/able/product_accessibility/index.html){: new_window}.
+The {{site.data.keyword.Bluemix_notm}} documentation accessibility compliance is specifically for the {{site.data.keyword.Bluemix_notm}} core platform information, and it does not extend to any services. From the homepage, the content is separated into two sections: "How to use the {{site.data.keyword.Bluemix_notm}} platform" and "How to use {{site.data.keyword.Bluemix_notm}} services." The available documentation for the {{site.data.keyword.Bluemix_notm}} platform is managed and reported in the {{site.data.keyword.Bluemix_notm}} product accessibility information that is available upon request. For compliance status for any service, you must request [product accessibility information ![External link icon](../icons/launch-glyph.svg)](http://www-03.ibm.com/able/product_accessibility/index.html){: new_window}.
 
 In addition to standard IBM help desk and support websites, IBM has established a TTY telephone service for use by deaf or hard of hearing customers to access sales and support services:
 
@@ -136,7 +136,7 @@ TTY service
 
 ## IBM and accessibility
 
-For more information about the commitment that IBM has to accessibility, see [IBM Accessibility](www.ibm.com/able){: new_window}
+For more information about the commitment that IBM has to accessibility, see [IBM Accessibility ![External link icon](../icons/launch-glyph.svg)](www.ibm.com/able){: new_window}
 
 
 <!-- Add related links (at the bottom of this topic) to product documentation or online help that describes interface information (hardware or software) that pertains to the product accessibility features or functions.  For example, interface information might include wording similar to the following samples (these are excerpts from announcement letters):
