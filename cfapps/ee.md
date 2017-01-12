@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2016-10-18"
+lastupdated: "2017-01-11"
 
 ---
 
@@ -25,7 +25,7 @@ You can use the {{site.data.keyword.Bluemix}} user interface, platform, and a se
 ## Signing up
 {: #ee_start}
 
-Before you can get started, you sign up for an IBMid from [https://console.ng.bluemix.net/](https://console.ng.bluemix.net/){: new_window} ![External link icon](../icons/launch-glyph.svg). After that, you log in to {{site.data.keyword.Bluemix_notm}} and start your 30-day free trial. {{site.data.keyword.Bluemix_notm}} provides an allowance of 2 GB runtime memory and 10 service instances for your free trial.
+Before you can get started, you sign up for an IBMid from [https://console.ng.bluemix.net/ ![External link icon](../icons/launch-glyph.svg)](https://console.ng.bluemix.net/){: new_window}. After that, you log in to {{site.data.keyword.Bluemix_notm}} and start your 30-day free trial. {{site.data.keyword.Bluemix_notm}} provides an allowance of 2 GB runtime memory and 10 service instances for your free trial.
 
 ## Creating your web app by using {{site.data.keyword.Bluemix_notm}} user interface
 {: #ee_appui}
@@ -176,7 +176,7 @@ To use the {{site.data.keyword.cloudant}} service within your app, you need to c
   <dt>password</dt>
   <dd>b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424</dd>
   <dt>url</dt>
-  <dd>https://d72837bb-b341-4038-9c8e-7f7232916197-bluemix:b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424@d72837bb-b341-4038-9c8e-7f7232916197-bluemix.cloudant.com</dd></dt></dl>
+  <dd>https://d72837bb-b341-4038-9c8e-7f7232916197-bluemix:b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424@d72837bb-b341-4038-9c8e-7f7232916197-bluemix.cloudant.com</dd></dl>
 
   For example, your Node.js app might access this information as follows:
   ```
