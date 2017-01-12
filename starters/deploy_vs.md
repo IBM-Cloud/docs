@@ -17,7 +17,7 @@ lastupdated: "2016-06-25"
 
 # Developing with Visual Studio
 
-  1. If you don't already have Visual Studio, install Visual Studio 2015 or Visual Studio Code by following the instructions [here](https://msdn.microsoft.com/en-us/library/e2h7fzkw.aspx){: new_window}.
+  1. If you don't already have Visual Studio, install Visual Studio 2015 or Visual Studio Code by following the instructions [here ![External link icon](../icons/launch-glyph.svg)](https://msdn.microsoft.com/en-us/library/e2h7fzkw.aspx){: new_window}.
 
   1. {: download} Download your starter code and extract it into a folder on your hard drive.
 
@@ -28,4 +28,4 @@ lastupdated: "2016-06-25"
 
   1. Once you've modified your code you can redeploy it using the CF or Bluemix CLI tools
 
-For step-by-step directions in deploying apps, see [Deploying apps with CF CLI](./install_cli.html){: new_window}.
+For step-by-step directions in deploying apps, see [Deploying apps with CF CLI ![External link icon](../icons/launch-glyph.svg)](./install_cli.html){: new_window}.
