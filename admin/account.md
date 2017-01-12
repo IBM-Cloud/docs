@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-01-09"  
+lastupdated: "2017-01-09"
 
 
 ---
@@ -26,7 +26,7 @@ Go to the **Account** link to set notifications, view your account usage, or vie
 
 You can sign up for a {{site.data.keyword.Bluemix_notm}} account by using an existing IBMid, by creating a new IBMid, or by using a federated ID. A federated ID is an ID within a company's domain that has been registered with IBM so that the domain and user credentials can be used to access IBM web applications.  
 
-A federated ID can be used to sign up for {{site.data.keyword.Bluemix_notm}} only if your company has already worked with IBM to register.  Registering a company's domain with IBM enables users to log in to IBM products and services by using their existing company user credentials. Authentication is then handled by your company's identity provider. When you log in to {{site.data.keyword.Bluemix_notm}} with a federated ID, you are prompted to log in through your company's login page. For information about requesting to register your company or organization's domain with IBM, or for more information about the process, see [IBMid Enterprise Federation Adoption Guide](https://ibm.box.com/v/IBMid-Federation-Guide){: new_window} ![External link icon](../icons/launch-glyph.svg). An IBM sponsor, such as an offering advocate or client advocate, is required when you request to register federated IDs.
+A federated ID can be used to sign up for {{site.data.keyword.Bluemix_notm}} only if your company has already worked with IBM to register.  Registering a company's domain with IBM enables users to log in to IBM products and services by using their existing company user credentials. Authentication is then handled by your company's identity provider. When you log in to {{site.data.keyword.Bluemix_notm}} with a federated ID, you are prompted to log in through your company's login page. For information about requesting to register your company or organization's domain with IBM, or for more information about the process, see [IBMid Enterprise Federation Adoption Guide ![External link icon](../icons/launch-glyph.svg)](https://ibm.box.com/v/IBMid-Federation-Guide){: new_window}. An IBM sponsor, such as an offering advocate or client advocate, is required when you request to register federated IDs.
 
 | Sign up methods | Details |    
 |-----------------|---------|
@@ -45,6 +45,20 @@ You can set platform email notifications for {{site.data.keyword.Bluemix_notm}} 
 ### Setting platform notifications
 
 Click **Account** &gt; **Notifications** &gt; **Platform** to set email notifications for {{site.data.keyword.Bluemix_notm}} incidents and planned maintenance. You can select or clear each option to enable or disable the email notification.
+
+<!-- staging only
+
+**Note**: You are always alerted by email about emergencies and pricing changes.
+
+On the **Platform** tab you can also customize notifications for your orgs, spaces, or applications. Complete the following steps to add a customized notification:
+
+<ol>
+<li>Select **Add a Notification**.</li>
+<li>Use the search field to find the org, application, service, or resource that you want to set a notification for, or expand the item in the pre-populated list.</li>
+<li>Select *Email* to set the notification type.</li>
+</ol>
+
+staging only end -->
 
 ### Setting spending notifications
 {: #spendingnotifications}
@@ -72,9 +86,9 @@ Complete the following steps to set up email notifications for spending limits:
 ## Viewing usage
 {: #acctusage}
 
-As an account owner or a billing manager for an org, you can use the Usage Dashboard view to see the real-time charges for the runtimes, containers, services, and support that are used per month in your organizations. You can see the runtime GB-hours and service consumption in all regions, or you can select to see a particular region.
+As an account owner or a billing manager for an org, you can use the Usage Dashboard page to see the real-time charges for the runtimes, containers, services, and support that are used per month in your organizations. You can see the runtime GB-hours and service consumption in all regions, or you can select to see a particular region.
 
-To open the Usage Dashboard view, click **Account** &gt; *your_account_name* &gt; **Usage Dashboard**. Billing managers can see the details for only the organizations in which they are billing managers.
+To open the Usage Dashboard page, click **Account** &gt; *your_account_name* &gt; **Usage Dashboard**. Billing managers can see the details for only the organizations in which they are billing managers.
 
 The account owner is charged for the total usage that is incurred across all organizations at the end of each billing cycle. As an account owner, you can filter the usage summary by region and organization. You can also click a particular month to see the usage for that month. Select **All Organizations** from the **Organization** list to see the usage for all organizations in the account.
 
