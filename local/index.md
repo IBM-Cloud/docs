@@ -34,7 +34,7 @@ In addition, there is a set of services that are available as {{site.data.keywor
 |Included | [{{site.data.keyword.Bluemix_notm}} runtimes](/docs/cfapps/runtimes.html) | Use runtimes to get your app up and running quickly, with no need to set up and manage machines and operating systems. All {{site.data.keyword.Bluemix_notm}} runtimes are available for you to use in your {{site.data.keyword.Bluemix_notm}} Local instance.|
 |Included | [{{site.data.keyword.autoscaling}}](/docs/services/Auto-Scaling/index.html)| Dynamically increase or decrease the compute capacity of your application based on policies. With this service, you have unlimited use in your {{site.data.keyword.Bluemix}} Local environment.|
 |Optional | [{{site.data.keyword.apiconnect_short}}](/docs/services/apiconnect/index.html) | {{site.data.keyword.apiconnect_long}} integrates {{site.data.keyword.APIM}} and IBM StrongLoop into a single offering that provides a comprehensive solution to create, run, manage, and enforce APIs and microservices. |
-|Optional | [{{site.data.keyword.cloudant}}](/docs/services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}} provides access to a fully managed NoSQL JSON data layer that's always on. This service is compatible with CouchDB, and accessible through a simple to use HTTP interface for mobile and web application models. For more information, see the full [documentation](http://docs.cloudant.com/BluemixLocal.html){: new_window} and the [hardware requirements](http://docs.cloudant.com/BluemixLocalHardware.html){: new_window} for a local environment. |
+|Optional | [{{site.data.keyword.cloudant}}](/docs/services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}} provides access to a fully managed NoSQL JSON data layer that's always on. This service is compatible with CouchDB, and accessible through a simple to use HTTP interface for mobile and web application models. For more information, see the full [documentation ![External link icon](../icons/launch-glyph.svg)](http://docs.cloudant.com/BluemixLocal.html){: new_window} and the [hardware requirements ![External link icon](../icons/launch-glyph.svg)](http://docs.cloudant.com/BluemixLocalHardware.html){: new_window} for a local environment. |
 |Optional | [{{site.data.keyword.containershort}}](/docs/containers/container_index.html) | Run Docker containers on {{site.data.keyword.Bluemix_notm}} Local. Containers are virtual software objects that include all of the elements that an app needs to run. A container has the benefits of resource isolation and allocation, but is more portable and efficient than, for example, a virtual machine. For information about the hardware requirements, see [IBM {{site.data.keyword.containershort}} in {{site.data.keyword.Bluemix_notm}} Dedicated and Bluemix Local](/docs/containers/container_dl.html). |
 |Optional | [{{site.data.keyword.datacshort}}](/docs/services/DataCache/index.html#data_cache) | This service provides an in-memory data grid that supports distributed caching scenarios for your apps. Includes 50 GB of in-memory cache. |
 | Optional (Beta) | [Logging](/docs/monitoringandlogging/cfapps_ml_logs_dedicated_ov.html#container_ml_logs_dedicated_ov) | Provides logs for your Cloud Foundry apps in your {{site.data.keyword.Bluemix_notm}} user interface and searchable logs and dashboards in Kibana. |
@@ -219,7 +219,7 @@ Deployment and maintenance updates
 </dt>
 <dd>
 Except for the initial installation of the inception VM that is installed at the early stage of the deployment process, the deployment of most of the other components is automated using UrbanCode Deploy.<br>
-<p>For the deployment activity, UrbanCode Deploy relies on [BOSH](https://bosh.cloudfoundry.org/){:new_window}, with the BOSH components being among the first components deployed from the inception VM. The continuous delivery capability of UrbanCode Deploy is used to deliver platform updates through a consistent testing and validation process.</p>
+<p>For the deployment activity, UrbanCode Deploy relies on [BOSH ![External link icon](../icons/launch-glyph.svg)](https://bosh.cloudfoundry.org/){:new_window}, with the BOSH components being among the first components deployed from the inception VM. The continuous delivery capability of UrbanCode Deploy is used to deliver platform updates through a consistent testing and validation process.</p>
 <p>Scripts and packages are transferred from the {{site.data.keyword.IBM_notm}} Operations center to your local {{site.data.keyword.Bluemix_notm}} platform over the Relay.</p>
 </dd>
 <dt>
@@ -251,7 +251,7 @@ The {{site.data.keyword.Bluemix_notm}} deployment team can load the trusted root
 ## Setting up your {{site.data.keyword.Bluemix_local_notm}} instance
 {: #setuplocal}
 
-{{site.data.keyword.Bluemix_local_notm}} is designed to provide a private version of the {{site.data.keyword.Bluemix_notm}} Public offering that is hosted on your hardware of your choice. The two commonly supported options are for you to supply the hardware in the form of VMware, or you can choose to order the {{site.data.keyword.Bluemix_notm}} Local System, which is built on a pre-configured PureApplication appliance that you can order through {{site.data.keyword.IBM_notm}}. For more information about the PureApplication appliance options, see [IBM Bluemix Local System W3500 and W3550 models run cloud native services, enabled middleware, and open pattern workloads concurrently](https://www-01.ibm.com/common/ssi/rep_ca/5/897/ENUS216-325/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
+{{site.data.keyword.Bluemix_local_notm}} is designed to provide a private version of the {{site.data.keyword.Bluemix_notm}} Public offering that is hosted on your hardware of your choice. The two commonly supported options are for you to supply the hardware in the form of VMware, or you can choose to order the {{site.data.keyword.Bluemix_notm}} Local System, which is built on a pre-configured PureApplication appliance that you can order through {{site.data.keyword.IBM_notm}}. For more information about the PureApplication appliance options, see [IBM {{site.data.keyword.Bluemix_notm}} Local System W3500 and W3550 models run cloud native services, enabled middleware, and open pattern workloads concurrently ![External link icon](../icons/launch-glyph.svg)](https://www-01.ibm.com/common/ssi/rep_ca/5/897/ENUS216-325/){: new_window}.
 
 For {{site.data.keyword.Bluemix_local_notm}}, you can use the {{site.data.keyword.Bluemix_notm}} services and runtimes to support your computing needs in a secure, customer-hosted and managed cloud environment. {{site.data.keyword.IBM_notm}} provides you access to {{site.data.keyword.Bluemix_local_notm}} by using a password-secured login. You can access the services, runtimes, and associated resources, and deploy and remove {{site.data.keyword.Bluemix_notm}} apps. Review the following steps for working with your {{site.data.keyword.IBM_notm}} representative to set up your local instance of {{site.data.keyword.Bluemix_notm}}.
 
@@ -261,14 +261,15 @@ To set up your private version of {{site.data.keyword.Bluemix_notm}}:
 
 <ol>
 <li>Review the <a href="index.html#localinfra" title="Opens in new window">{{site.data.keyword.Bluemix_local_notm}} infrastructure requirements</a> for setting up your local instance.</li>
-<li>Contact your {{site.data.keyword.IBM_notm}} designated account representative or contact <a href="https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs" target="_blank">{{site.data.keyword.Bluemix_notm}}</a> to get started.</li>
+<li>Contact your {{site.data.keyword.IBM_notm}} designated account representative or <a href="https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs" target="_blank">contact {{site.data.keyword.Bluemix_notm}} <img src="../icons/launch-glyph.svg" alt="External link icon">
+</a> to get started.</li>
 <li>Establish your {{site.data.keyword.Bluemix_local_notm}} agreement with {{site.data.keyword.IBM_notm}} that includes milestone dates for delivery.
 	<ol type="a">
 	<li>Work with IBM on your one-time set up and recurring monthly fees for your {{site.data.keyword.Bluemix_notm}} Local instance. The monthly recurring fee is based on the local services that you want to use, plus a subscription to all {{site.data.keyword.Bluemix_notm}} public services. You then receive an invoice for anything that you use beyond that subscription agreement.</li>
 	<li>Identify the deadlines for each phase of setting up your {{site.data.keyword.Bluemix_local_notm}} instance.</li>
 	</ol>
 	</li>
-<li>After your platform and account are created, you identify the people in your organization for the roles that are needed to get your local instance up and running. For more information about the roles that you assign, see <a href="/docs/local/index.html#rolesresponsibilities" target="_blank">{{site.data.keyword.Bluemix_notm}} Local roles and responsibilities</a>.
+<li>After your platform and account are created, you identify the people in your organization for the roles that are needed to get your local instance up and running. For more information about the roles that you assign, see <a href="/docs/local/index.html#rolesresponsibilities">{{site.data.keyword.Bluemix_notm}} Local roles and responsibilities</a>.
 </li>
 <li>You provide the hardware, and {{site.data.keyword.IBM_notm}} helps you define and establish network connectivity between your corporate network and your {{site.data.keyword.Bluemix_local_notm}} instance. For more information about infrastructure requirements, see <a href="index.html#localinfra">{{site.data.keyword.Bluemix_local_notm}} infrastructure requirements</a>.
 	<ol type="a">
@@ -436,7 +437,7 @@ The final stage of completion represents the end of the relationship between you
 ## {{site.data.keyword.Bluemix_local_notm}} infrastructure requirements
 {: #localinfra}
 
-For {{site.data.keyword.Bluemix_local_notm}}, you own the physical security and the infrastructure for hosting the local instance. The infrastructure requirements are the same whether you choose to use and manage your own VMware or purchase the {{site.data.keyword.Bluemix_local_notm}} System which includes a PureApp appliance ordered from IBM. However, there are two PureApp appliance options you choose from when ordering, and the process of scaling your environment does differ for VMware and the {{site.data.keyword.Bluemix_local_notm}} System. For more information about the PureApp appliance options, see [IBM Bluemix Local System W3500 and W3550 models run cloud native services, enabled middleware, and open pattern workloads concurrently](https://www-01.ibm.com/common/ssi/rep_ca/5/897/ENUS216-325/){: new_window}.
+For {{site.data.keyword.Bluemix_local_notm}}, you own the physical security and the infrastructure for hosting the local instance. The infrastructure requirements are the same whether you choose to use and manage your own VMware or purchase the {{site.data.keyword.Bluemix_local_notm}} System which includes a PureApp appliance ordered from IBM. However, there are two PureApp appliance options you choose from when ordering, and the process of scaling your environment does differ for VMware and the {{site.data.keyword.Bluemix_local_notm}} System. For more information about the PureApp appliance options, see [IBM {{site.data.keyword.Bluemix_notm}} Local System W3500 and W3550 models run cloud native services, enabled middleware, and open pattern workloads concurrently ![External link icon](../icons/launch-glyph.svg)](https://www-01.ibm.com/common/ssi/rep_ca/5/897/ENUS216-325/){: new_window}.
 
 {{site.data.keyword.IBM_notm}} sets the following minimum requirements for setting up {{site.data.keyword.Bluemix_local_notm}}.
 
@@ -659,7 +660,7 @@ A global load balancer not only ensures continuous availability and is required 
 * Provides site failover based on application health check
 * Uses weighted routing between endpoints
 
-You can choose a global load balancer such as Akamai or Dyn. For more about using Akamai as a global load balancer, see [Global traffic management](https://www.akamai.com/us/en/solutions/products/web-performance/global-traffic-management.jsp){: new_window}. For more about using Dyn as a global load balancer, see [4 Reasons Businesses Are Taking Global Load Balancing to the Cloud](http://dyn.com/blog/4-reasons-businesses-are-taking-global-load-balancing-to-the-cloud/){: new_window}.
+You can choose a global load balancer such as Akamai or Dyn. For more about using Akamai as a global load balancer, see [Global traffic management ![External link icon](../icons/launch-glyph.svg)](https://www.akamai.com/us/en/solutions/products/web-performance/global-traffic-management.jsp){: new_window}. For more about using Dyn as a global load balancer, see [4 Reasons Businesses Are Taking Global Load Balancing to the Cloud ![External link icon](../icons/launch-glyph.svg)](http://dyn.com/blog/4-reasons-businesses-are-taking-global-load-balancing-to-the-cloud/){: new_window}.
 
 ### High availability
 {: #ha}
@@ -670,7 +671,9 @@ These technologies include the following:
 
 <dl>
 <dt>DEA Scalability in Cloud Foundry</dt>
-<dd>A Cloud Foundry <a href="https://docs.cloudfoundry.org/concepts/architecture/execution-agent.html" target="_blank">Droplet Execution Agent (DEA)</a> performs health checks on the apps running within it. If there is a problem with the app or the DEA itself, it deploys additional instances of the app to an alternate DEA to address the issue. For more information, see <a href="https://docs.cloudfoundry.org/concepts/high-availability.html" target="_blank">Configuring CF for High Availability with Redundancy</a>.
+<dd>A Cloud Foundry <a href="https://docs.cloudfoundry.org/concepts/architecture/execution-agent.html" target="_blank">Droplet Execution Agent (DEA) <img src="../icons/launch-glyph.svg" alt="External link icon">
+</a> performs health checks on the apps running within it. If there is a problem with the app or the DEA itself, it deploys additional instances of the app to an alternate DEA to address the issue. For more information, see <a href="https://docs.cloudfoundry.org/concepts/high-availability.html" target="_blank">Configuring CF for High Availability with Redundancy <img src="../icons/launch-glyph.svg" alt="External link icon">
+</a>.
 <p>To ensure high availability for your applications, you need enough compute resources to balance the load, and you might also require additional compute resources to support a possible failure. If you need to scale your environment by increasing your DEA pool to be prepared for a failure or address a spike in the load for your app instances, you can work with your IBM representative to order additional DEAs and ensure that you have the appropriate hardware to support the added resources.
 </p>
 </dd>
@@ -704,8 +707,8 @@ Because protection of private data is critical, {{site.data.keyword.IBM_notm}} n
 {: rellinks}
 ## general
 {: general}
-* [Discover: {{site.data.keyword.Bluemix_local_notm}}](http://www.ibm.com/cloud-computing/bluemix/hybrid/local/)
+* [Discover: {{site.data.keyword.Bluemix_local_notm}} ![External link icon](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/hybrid/local/){: new_window}
 * [What's new in {{site.data.keyword.Bluemix_notm}}](/docs/whatsnew/index.html)
 * [{{site.data.keyword.Bluemix_notm}} glossary](/docs/overview/glossary/index.html)
-* [Managing {{site.data.keyword.Bluemix_local_notm}} and {{site.data.keyword.Bluemix_notm}} Dedicated](../admin/index.html#mng)
+* [Managing {{site.data.keyword.Bluemix_local_notm}} and {{site.data.keyword.Bluemix_notm}} Dedicated](/docs/admin/index.html#mng)
 * [Contacting support](/docs/support/index.html#getting-customer-support)
