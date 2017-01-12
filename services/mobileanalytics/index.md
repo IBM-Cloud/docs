@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-10"
+lastupdated: "2017-01-12"
 
 ---
 {:new_window: target="_blank"}
@@ -27,8 +27,6 @@ To quickly get the {{site.data.keyword.mobileanalytics_short}} service up and ru
 1. After you create an instance <!--[create an instance](https://console.{DomainName}/docs/services/reqnsi.html#req_instance)-->of the {{site.data.keyword.mobileanalytics_short}} service, you can access the {{site.data.keyword.mobileanalytics_short}} Console by clicking your tile in the **Services** section of the {{site.data.keyword.Bluemix}} Dashboard.
 
  To help you get an immediate feel of the various views and charts and the value they bring forth, we provide a **demo mode** option in the {{site.data.keyword.mobileanalytics_short}} console, whereby the views and charts display *demo data*. Demo data is the default mode of the console when it initially launches after the service is instantiated. When you have your own applications and analytics data populated into the service, you can toggle *off* the demo mode to view your applications' data in the different charts. The Mobile Analytics console is read-only when in demo mode, therefore you will not be able to create new alert definitions.
- 
-<!-->The {{site.data.keyword.mobileanalytics_short}} service launches with **demo mode** enabled. Demo mode populates charts on the **APP DATA** and **ALERTS** pages, so you can see how your data will display. You can toggle demo mode off when you have your own data. The {{site.data.keyword.mobileanalytics_short}} console is read-only when in demo mode, therefore you will not be able to create new alert definitions.-->
 
 2. Install the {{site.data.keyword.mobileanalytics_short}} [Client SDKs](/docs/services/mobileanalytics/install-client-sdk.html). You can optionally use the {{site.data.keyword.mobileanalytics_short}} [REST API](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}.
 
