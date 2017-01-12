@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2016-12-12"
+lastupdated: "2017-01-12"
 
 
 
@@ -209,5 +209,5 @@ cf restart-inplace <appName>
 
 ## Related Links
 {: #general}
-* [Development mode CLI](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){:new_window}
-* [DevOps Web IDE](https://hub.jazz.net/docs/deploy/){:new_window}
+* [Development mode CLI ![External link icon](../icons/launch-glyph.svg)]](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){:new_window}
+* [DevOps Web IDE ![External link icon](../icons/launch-glyph.svg)]](https://hub.jazz.net/docs/deploy/){:new_window}
