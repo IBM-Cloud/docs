@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2016-02-17"
+lastupdated: "2017-01-12"
 
 
 
@@ -55,4 +55,4 @@ When a **cf push** command is issued, the **cf** command line interface provides
 
   2. If you change your application, you can upload those changes by entering the cf push command again. The cf command line interface uses your previous options and your responses to the prompts to update any running instances of your application with the new bits of code.
 
-**Tip:** You can also upload or deploy an application from DevOps Services. See [Developing a {{site.data.keyword.Bluemix_notm}} application in Node.js with the Web IDE](https://hub.jazz.net/tutorials/devopsweb/){: new_window}.
+**Tip:** You can also upload or deploy an application from DevOps Services. See [Developing a {{site.data.keyword.Bluemix_notm}} application in Node.js with the Web IDE ![External link icon](../icons/launch-glyph.svg)](https://hub.jazz.net/tutorials/devopsweb/){: new_window}.
