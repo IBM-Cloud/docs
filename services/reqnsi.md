@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-10"
+lastupdated: "2017-01-11"
 
 ---
 
@@ -39,10 +39,10 @@ Predefined services are available in {{site.data.keyword.Bluemix_notm}} for mobi
 
 |Type	|Description	|Support details|
 |:------|:--------------|:--------------|
-|IBM	|A service that is provided by IBM and is generally available.	|Problems that are determined to be a defect in an IBM-provided service that is generally available are supported. Support is provided based on the severity that you set. For more information about ticket severity, see [Contacting support](/docs/support/index.html#contacting-bluemix-support){: new_window}.|
+|IBM	|A service that is provided by IBM and is generally available.	|Problems that are determined to be a defect in an IBM-provided service that is generally available are supported. Support is provided based on the severity that you set. For more information about ticket severity, see [Contacting support](/docs/support/index.html#contacting-bluemix-support).|
 |Third Party	|A service that is provided by a company other than IBM.	|Support for third-party services is provided by the service provider. If a problem is investigated by IBM and the problem is determined to be a defect in a third-party service, IBM is not obligated to provide a fix. IBM will share analysis with the third-party service provider if needed.|
 |Community	|A service that is provided by an open source community.	|Support for community services is provided by the {{site.data.keyword.Bluemix_notm}} Developers Community. If a problem is investigated by IBM and the problem is determined to be a defect in a community service, IBM is not obligated to provide a fix.|
-|Beta	|A service that is not production-ready and is in a trial stage of development. A Beta service can help the development and marketing teams assess the value of the services before they make the service generally available.	|Problems that are determined to be a defect in an IBM-provided beta service are supported, but IBM is not obligated to provide a fix. In addition, the problem ticket will be assigned a severity 3 or 4 where applicable. For information about ticket severity, see [Contacting support](/docs/support/index.html#contacting-bluemix-support){: new_window}.|
+|Beta	|A service that is not production-ready and is in a trial stage of development. A Beta service can help the development and marketing teams assess the value of the services before they make the service generally available.	|Problems that are determined to be a defect in an IBM-provided beta service are supported, but IBM is not obligated to provide a fix. In addition, the problem ticket will be assigned a severity 3 or 4 where applicable. For information about ticket severity, see [Contacting support](/docs/support/index.html#contacting-bluemix-support).|
 {: caption="Table 1. {{site.data.keyword.Bluemix_notm}} services support information" caption-side="top"}
 
 
@@ -152,7 +152,7 @@ You can see all the services that are available in {{site.data.keyword.Bluemix_n
 
 * From the {{site.data.keyword.Bluemix_notm}} user interface. View the {{site.data.keyword.Bluemix_notm}} Catalog.
 * From the cf command line interface. Use the **cf marketplace** command.
-* From your own application. Use the [GET /v2/services Services API](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}.
+* From your own application. Use the [GET /v2/services Services API ![External link icon](../icons/launch-glyph.svg)](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}.
 
 You can select the service that you need when you develop applications. Upon your selection, {{site.data.keyword.Bluemix_notm}} interacts with the service and takes necessary steps to provision resources of the service. The provisioning process might be different for different types of services. For example, a database service creates a database, and a push notification service for mobile applications generates configuration information.
 
@@ -195,7 +195,7 @@ If you use the cf command line interface to request a service instance, complete
     cf bind-service appname service_instance
     ```
 
-You can bind a service instance to only those app instances that are in the same space or org. However, you can use service instances from other spaces or orgs in the same way that an external app does. Instead of creating a binding, use the credentials to directly configure your app instance. For more information about how external apps use {{site.data.keyword.Bluemix_notm}} services, see [Enabling external apps to use {{site.data.keyword.Bluemix_notm}} services](#accser_external){: new_window}.
+You can bind a service instance to only those app instances that are in the same space or org. However, you can use service instances from other spaces or orgs in the same way that an external app does. Instead of creating a binding, use the credentials to directly configure your app instance. For more information about how external apps use {{site.data.keyword.Bluemix_notm}} services, see [Enabling external apps to use {{site.data.keyword.Bluemix_notm}} services ](#accser_external).
 
 
 ## Configuring your application to interact with a service
@@ -290,7 +290,7 @@ You can now configure your application to use the external resources. For inform
 
 If you have a service instance that is created and bound to apps in one region, you can use this service instance in another region by one of the following methods:
 
-  * Use the service credentials to configure your app instance directly. See [Enabling external apps to use {{site.data.keyword.Bluemix_notm}} service](#accser_external){: new_window} for details.
+  * Use the service credentials to configure your app instance directly. See [Enabling external apps to use {{site.data.keyword.Bluemix_notm}} service](#accser_external) for details.
   * Create a user-provided service as a bridge.
 
 	Assume that you are starting in the region where you want to use the service instance. To use a service instance that exists in another region, complete the following steps:
@@ -304,7 +304,7 @@ If you have a service instance that is created and bound to apps in one region, 
 
       3. Switch to the region where you want to use the service instance. In the {{site.data.keyword.Bluemix_notm}} menu bar, expand **Region** or click the **Region** icon, and then select the region where you want to use the service instance.
 
-      4. Create a user-provided service instance by using the credentials and connection parameters that you recorded from the *VCAP_SERVICES* environment variable. For information about how to create a user-provided service instance, see [Creating a user-provided service instance](#user_provide_services){: new_window}.
+      4. Create a user-provided service instance by using the credentials and connection parameters that you recorded from the *VCAP_SERVICES* environment variable. For information about how to create a user-provided service instance, see [Creating a user-provided service instance](#user_provide_services).
 
       5. Bind the user-provided service instance to your app by using the following command:
 
