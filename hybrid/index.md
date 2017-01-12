@@ -29,8 +29,8 @@ With {{site.data.keyword.Bluemix_notm}} Local, you can take advantage of the tru
 {: #rellinks}
 ## general
 {: #general}
-* [What is {{site.data.keyword.Bluemix_notm}}](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){:new_window}
-* [Getting started](http://www.ibm.com/cloud-computing/bluemix/getting-started/)
-* [Learn about the hybrid model](http://www.ibm.com/cloud-computing/bluemix/hybrid/)
+* [What is {{site.data.keyword.Bluemix_notm}} ![External link icon](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){:new_window}
+* [Getting started ![External link icon](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/getting-started/){:new_window}
+* [Learn about the hybrid model ![External link icon](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/hybrid/){:new_window}
 * [What's new in {{site.data.keyword.Bluemix_notm}}](/docs/whatsnew/index.html)
 * [{{site.data.keyword.Bluemix_notm}} glossary](/docs/overview/glossary/index.html)
