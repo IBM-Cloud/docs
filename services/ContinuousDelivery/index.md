@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-14"
+  years: 2015, 2017
+lastupdated: "2017-1-11"
 
 ---
  
@@ -79,7 +79,7 @@ To create and configure a continuous delivery toolchain from a [template](https:
 1. Click **Create**. Several steps run automatically to set up your toolchain. The tool integrations that are set up are different depending on which toolchain template you selected and whether you are using {{site.data.keyword.Bluemix_notm}} Public or {{site.data.keyword.Bluemix_notm}} Dedicated. For example, when you create a Microservices toolchain on {{site.data.keyword.Bluemix_notm}} Public, these steps are run: 
 
  * The toolchain is created.
- * If you configured Delivery Pipeline, the pipelines are created and triggered.
+ * If you configured Delivery Pipeline, the pipelines are created and run.
  * If you configured Sauce Labs, the toolchain is set up to add Sauce Labs test jobs to the pipelines.
  * If you configured PagerDuty, the toolchain is set up to send alert notifications to the PagerDuty service that you specified.
  * If you configured Slack, the toolchain is set up to send notifications about deployment status to the Slack channel that you specified.
