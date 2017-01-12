@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2016-12-20"
+lastupdated: "2017-01-11"
 
 ---
 
@@ -43,7 +43,8 @@ When you are using the Cloud Foundry infrastructure to run your apps on {{site.d
 To monitor {{site.data.keyword.Bluemix_notm}} apps, use one of the following methods:
 
 * {{site.data.keyword.Bluemix_notm}} services. Monitoring and Analytics offers a service that you can use to monitor your application performance. In addition, this service also provides analytic features such as log analysis. For more information, see [Monitoring and Analytics](/docs/services/monana/index.html#gettingstartedtemplate).
-* Third-party options. For example, [New Relic](http://newrelic.com/){:new_window}.
+* Third-party options. For example, [New Relic 
+![External link icon](../icons/launch-glyph.svg)](http://newrelic.com/){:new_window}.
 
 ### Logging for apps running on Cloud Foundry
 {: #logging_for_bluemix_apps}
@@ -159,7 +160,7 @@ Create a custom dashboard to display, in a simple or creative manner, the logs f
   2. Enter a name for the dashboard.
   3. Next to the name field, click the **Save** icon.
 
-For more information about customizing a Kibana dashboard, see [this blog post](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/) or the [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html) documentation.
+For more information about customizing a Kibana dashboard, see [this blog post ![External link icon](../icons/launch-glyph.svg)](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/){: new_window} or the [Kibana ![External link icon](../icons/launch-glyph.svg)](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window} documentation.
 
 
 #### Viewing logs from the command line interface
@@ -169,7 +170,7 @@ Choose from the following options to view logs from the command line interface:
 
 <ul>
 <li>Tailing logs when you deploy apps.
-<p>Use the **cf logs** command to display logs from your app and from the system components that interact with your app when you deploy apps to {{site.data.keyword.Bluemix_notm}}. You can type the following commands in the cf command line interface. For more information about cf logs, see <a href="http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html" target=" _blank">Log Types and Their Messages in Cloud Foundry</a> </p>
+<p>Use the **cf logs** command to display logs from your app and from the system components that interact with your app when you deploy apps to {{site.data.keyword.Bluemix_notm}}. You can type the following commands in the cf command line interface. For more information about cf logs, see <a href="http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html" target=" _blank">Log Types and Their Messages in Cloud Foundry <img src="../icons/launch-glyph.svg" alt="External link icon"></a> </p>
 <dl>
 <dt><strong>cf logs <var class="keyword varname">appname</var> --recent</strong></dt>
 <dd>Display logs from the recent past.</dd>
@@ -188,19 +189,19 @@ the logs in real time. </div>
 
 <p>If application logging is enabled, you can view the following application logs if you encounter problems with your app at run time. Application logs can help to determine the cause of the error.</p>
 
-<dl><strong>buildpack.log</strong></dt>
+<dl>
+<dt><strong>buildpack.log</strong></dt>
 <dd>
 <p>This log file records  fine-grained informational events for
 debugging. You can  use this log to troubleshoot buildpack execution
 problems.</p>
 <p>To generate data to the <span class="ph filepath">buildpack.log</span> file, you must enable buildpack tracing by using the following command:
    <pre class="pre">cf set-env <var class="keyword varname">appname</var> JBP_LOG_LEVEL DEBUG</pre>
-<p>
+</p>
 <p>To view this log, enter the following command:
 <pre class="pre">cf files <var class="keyword varname">appname</var> app/.buildpack-diagnostics/buildpack.log</pre>
 </p>
 </dd>
-
 <dt><strong>staging_task.log</strong></dt>
 <dd><p>This log file records messages after the major steps of the
 staging task. You can use this log to troubleshoot staging problems.</p>
@@ -322,13 +323,15 @@ In this example, a developer named Jane creates a virtual server by using IBM Vi
 
   1. To begin, Jane sets up Splunk.
 
-     a. Jane downloads Splunk Light from the [Download Splunk Light site](https://www.splunk.com/en_us/download/splunk-light.html){:new_window}, and then installs it by using the following command. The software is installed on */opt/splunk*.
+     a. Jane downloads Splunk Light from the [Download Splunk Light site 
+![External link icon](../icons/launch-glyph.svg)](https://www.splunk.com/en_us/download/splunk-light.html){:new_window}, and then installs it by using the following command. The software is installed on */opt/splunk*.
 
 	    ```
         dpkg -i  ~/splunklight-6.3.0-aa7d4b1ccb80-linux-2.6-amd64.deb
         ```
 
-     b. Jane installs and patches the RFC5424 syslog technology add-on to integrate with {{site.data.keyword.Bluemix_notm}}. For more information about the instructions for installing the add-on, see the [Cloud Foundry guideline](https://docs.cloudfoundry.org/devguide/services/integrate-splunk.html){:new_window}.
+     b. Jane installs and patches the RFC5424 syslog technology add-on to integrate with {{site.data.keyword.Bluemix_notm}}. For more information about the instructions for installing the add-on, see the [Cloud Foundry guideline 
+![External link icon](../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/devguide/services/integrate-splunk.html){:new_window}.
 
 	    Jane installs the add-on by using the following commands:
 
@@ -354,7 +357,8 @@ In this example, a developer named Jane creates a virtual server by using IBM Vi
 
      c. After Splunk is set up, Jane must open some ports on the Ubuntu machine to accept the incoming syslog drain (port 5140) and Splunk web UI (port 8000) because {{site.data.keyword.Bluemix_notm}} virtual server has the firewall set up by default.
 
-	    **Note:** The iptable confiration is done here for Jane's evaluation purpose and is temporary. To configure the firewall setting in Bluemix virtual server in production, see the [Network Security Groups](https://new-console.ng.bluemix.net/docs/services/networksecuritygroups/index.html){:new_window} documentation for details.
+	    **Note:** The iptable confiration is done here for Jane's evaluation purpose and is temporary. To configure the firewall setting in Bluemix virtual server in production, see the [Network Security Groups 
+![External link icon](../icons/launch-glyph.svg)](https://new-console.ng.bluemix.net/docs/services/networksecuritygroups/index.html){:new_window} documentation for details.
 
 	   ```
 	   iptables -A INPUT -p tcp --dport 5140 -j ACCEPT
@@ -452,6 +456,6 @@ You can review logs for the apps that you are running on {{site.data.keyword.Blu
 To view your app logs, follow these steps.
 1. Select a running app.
 2. Click **Logs**. In the **Logs** view, you can view logs from your running app..
-4. Click the **Advanced View** button. **Advanced View** shows a more detailed view of the logs by using Kibana, a visualization tool that uses logs and time-stamped data to create custom visualizations. For more information about using the advanced view, see the [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html) documentation.
+4. Click the **Advanced View** button. **Advanced View** shows a more detailed view of the logs by using Kibana, a visualization tool that uses logs and time-stamped data to create custom visualizations. For more information about using the advanced view, see the [Kibana ![External link icon](../icons/launch-glyph.svg)](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window} documentation.
 
 Next, you can customize a Kibana dashboard. See [Customizing log display in Kibana dashboard](/docs/containers/monitoringandlogging/container_ml_logs.html#container_ml_dash_logs_custom) for more information.
