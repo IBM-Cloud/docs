@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2015, 2016
-lastupdated: "2016-12-12"
+  years: 2015, 2017
+lastupdated: "2017-01-11"
  
 
 ---
@@ -116,7 +116,7 @@ You can convert your free trial into a billable account at any time. All of your
 
 After you create a billable account, you can edit the information that you provided. Click the **Profile Settings icon**, then click **Account &gt; Account Type** to edit your information.
 
-If you encounter any problems with {{site.data.keyword.Bluemix_notm}} when you are using a Pay-As-You-Go or a Subscription account, see [Getting online help](https://www.ng.bluemix.net/docs/troubleshoot/getting_customer_support.html#online_help) for more information.
+If you encounter any problems with {{site.data.keyword.Bluemix_notm}} when you are using a Pay-As-You-Go or a Subscription account, see [Getting online help](/docs/troubleshoot/getting_customer_support.html#online_help) for more information.
 
 **Note:** If you link your {{site.data.keyword.Bluemix_notm}} billing account with a SoftLayer account, starting on the first of the next month, your {{site.data.keyword.Bluemix_notm}} and SoftLayer charges will be on your {{site.data.keyword.Bluemix_notm}} invoice. For more details, see [Viewing credits](/docs/admin//softlayerlink.html#bill_usage).
 
@@ -462,6 +462,6 @@ cf update-service <service_name> [-p <new_plan>]
 ## general
 {: general} 
 * [{{site.data.keyword.Bluemix_notm}} Pricing Sheet](https://console.{DomainName}/pricing/)
-* [{{site.data.keyword.Bluemix_notm}} Developers Community Forum](https://developer.ibm.com/bluemix/)
+* [{{site.data.keyword.Bluemix_notm}} Developers Community Forum ![External link icon](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/){: new_window}
 * [Getting online help](https://www.{DomainName}/docs/troubleshoot/getting_customer_support.html#online_help)
 * [Contact us](https://console.{DomainName}/#/contactUs/cloudOEPaneId=contactUs)
