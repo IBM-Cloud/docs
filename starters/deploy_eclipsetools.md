@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2015-11-11"
+lastupdated: "2017-01-12"
 
 
 
@@ -30,4 +30,4 @@ lastupdated: "2015-11-11"
 
     <a class="xref" href="http://bluemix.net" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/btn_starter-code.svg" alt="Download Starter Code" /> </a>
 
-For step-by-step directions in deploying apps, see [Deploying apps with IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](/docs/manageapps/eclipsetools/eclipsetools.html#eclipsetools){: new_window}.
+For step-by-step directions in deploying apps, see [Deploying apps with IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} ![External link icon](../icons/launch-glyph.svg)](/docs/manageapps/eclipsetools/eclipsetools.html#eclipsetools){: new_window}.
