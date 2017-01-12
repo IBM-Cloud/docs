@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
   
-lastupdated: "2016-10-11"
+lastupdated: "2017-01-11"
 
 ---
 
@@ -100,7 +100,7 @@ To check the version of Java that IBM Eclipse Tools for Bluemix runs, complete t
 
 If your workbench JVM is IBM JVM 7 or 8, or a previous version of Oracle JVM 8, complete the following steps to switch to Oracle JVM 8:
 
-  1. Download and then install Oracle JVM 8, see [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window} for details.
+  1. Download and then install Oracle JVM 8, see [Java SE Downloads ![External link icon](../icons/launch-glyph.svg)](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window} for details.
   2. Restart Eclipse.
   3. Check whether the `eclipse.vm` property points to your new installation of Oracle JVM 8.
 
@@ -160,7 +160,7 @@ Ensure that you created a space in your current organization.  To create a space
   * From the menu bar, click **Account** &gt; **Manage Organizations.** Select the organization that you want to create the space in, and then click **Create a Space**.
   * In the cf command line interface, type `cf create-space <space_name> -o <organization_name>`.
 
-Try again. If you see this message again, go to the [Bluemix status](http://ibm.biz/bluemixstatus){: new_window} page to check whether a service or component has an issue.
+Try again. If you see this message again, go to the [Bluemix status ![External link icon](../icons/launch-glyph.svg)](http://ibm.biz/bluemixstatus){: new_window} page to check whether a service or component has an issue.
 
 
 
@@ -188,7 +188,7 @@ You do not have the appropriate level of authority that is required to perform t
 To obtain the appropriate authority level, use one of the following methods: 
 {: tsResolve}
  * Select another organization and space for which you have the developer role. 
- * Ask the org manager to change your role to developer or to create a space and then assign you a developer role. See [Managing organizations and spaces](/docs/admin/orgs_spaces.html){: new_window} for details.
+ * Ask the org manager to change your role to developer or to create a space and then assign you a developer role. See [Managing organizations and spaces](/docs/admin/orgs_spaces.html) for details.
  
 
 
@@ -211,7 +211,7 @@ Instead of hardcoding the credentials in your app, use connection parameters fro
 ```
 process.env.VCAP_SERVICES
 ```
-For more information about the commands that you can use in other program languages, see [Java](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} and [Ruby](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}. 
+For more information about the commands that you can use in other program languages, see [Java ![External link icon](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} and [Ruby ![External link icon](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}. 
  
 
  
@@ -262,7 +262,7 @@ Other less common causes of a Bad Gateway error are Internet service provider (I
 
  
 
-If you suspect that a {{site.data.keyword.Bluemix_notm}} service is down, first check the [{{site.data.keyword.Bluemix_notm}} status](http://ibm.biz/bluemixstatus){: new_window} page. You might want to use the service in another {{site.data.keyword.Bluemix_notm}} region as a workaround. Detailed information is available in [Using services in another region](/docs/services/reqnsi.html#cross_region_service){: new_window}. If the service status is normal, try the following steps to solve the problem: 
+If you suspect that a {{site.data.keyword.Bluemix_notm}} service is down, first check the [{{site.data.keyword.Bluemix_notm}} status ![External link icon](../icons/launch-glyph.svg)](http://ibm.biz/bluemixstatus){: new_window} page. You might want to use the service in another {{site.data.keyword.Bluemix_notm}} region as a workaround. Detailed information is available in [Using services in another region](/docs/services/reqnsi.html#cross_region_service). If the service status is normal, try the following steps to solve the problem: 
 {: tsResolve}
 
   * Retry the action:
@@ -270,7 +270,7 @@ If you suspect that a {{site.data.keyword.Bluemix_notm}} service is down, first 
 	* Use a different browser.
 	* Reboot your router, your modem, and your computer. Rebooting these devices can clear up various errors that lead to the error 502. 
   * Wait and try again later. In some instances, temporary problems might occur with your Internet service provider or the {{site.data.keyword.Bluemix_notm}} services. You can wait until the temporary problems are solved.
-  * If the problem still exists, contact {{site.data.keyword.Bluemix_notm}} support. See [Contacting {{site.data.keyword.Bluemix_notm}} Support](/docs/support/index.html#contacting-bluemix-support){: new_window} for more information. 
+  * If the problem still exists, contact {{site.data.keyword.Bluemix_notm}} support. See [Contacting {{site.data.keyword.Bluemix_notm}} Support ![External link icon](../icons/launch-glyph.svg)](/docs/support/index.html#contacting-bluemix-support){: new_window} for more information. 
 
 
 
@@ -290,7 +290,7 @@ The default disk quota that is allocated for an app is 1 GB. If you need more di
 {: tsCauses}
 
  
-Use one of the following methods to specify your disk quota. The maximum disk quota that you can specify is 2 GB. If 2 GB is still not enough, try an external service such as [Object Store](/docs/services/ObjectStorage/index.html){: new_window}.
+Use one of the following methods to specify your disk quota. The maximum disk quota that you can specify is 2 GB. If 2 GB is still not enough, try an external service such as [Object Store](/docs/services/ObjectStorage/index.html).
 {: tsResolve}
 
   * In the manifest.yml file, add the following item:
@@ -315,7 +315,7 @@ IBM {{site.data.keyword.mobilepushshort}} service uses the Google Cloud Messagin
 {: tsCauses}
 
  
-Use third-party services that do not rely on the GCM service as a workaround, for example, [Pushy](https://pushy.me){: new_window}, [igetui](http://www.getui.com/){: new_window}, and [jpush](https://www.jpush.cn/){: new_window}.
+Use third-party services that do not rely on the GCM service as a workaround, for example, [Pushy ![External link icon](../icons/launch-glyph.svg)](https://pushy.me){: new_window}, [igetui ![External link icon](../icons/launch-glyph.svg)](http://www.getui.com/){: new_window}, and [jpush ![External link icon](../icons/launch-glyph.svg)](https://www.jpush.cn/){: new_window}.
 {: tsResolve}
 
 
@@ -350,7 +350,7 @@ Delete any services instances that are not needed, or remove the limit on the nu
 	  1. Unbind the service instance from an application by typing `cf unbind-service <appname> <service_instance_name>`.
 	  2. Delete the service instance by typing `cf delete-service <service_instance_name>`.
 	  3. After you delete the service instance, you might want to restage your application that the service instance was bound to by typing `cf restage <appname>`.
-  * To remove the limit on the number of service instances that you can have, convert your trial account to a pay account. For information about how to convert your trial account to a pay account, see [How to change your plan](/docs/pricing/index.html#changing){: new_window}.
+  * To remove the limit on the number of service instances that you can have, convert your trial account to a pay account. For information about how to convert your trial account to a pay account, see [How to change your plan](/docs/pricing/index.html#changing).
 
   
   
@@ -405,7 +405,7 @@ This error occurs when the amount of memory that is remaining for your organizat
 You can either increase the memory quota of your account, or reduce the memory that your apps use.
 {: tsResolve} 
 
-  * To increase the memory quota of your account, convert your trial account to a pay account. For information about how to convert your trial account to a pay account, see [Pay accounts](/docs/pricing/index.html#pay-accounts){: new_window}. 
+  * To increase the memory quota of your account, convert your trial account to a pay account. For information about how to convert your trial account to a pay account, see [Pay accounts](/docs/pricing/index.html#pay-accounts). 
   * To reduce the memory that your apps use, use either the {{site.data.keyword.Bluemix_notm}} console or the cf command line interface.
     If you use the {{site.data.keyword.Bluemix_notm}} console, complete the following steps:
 	  1. On the {{site.data.keyword.Bluemix_notm}} Dashboard, select your application. The app details page opens.
@@ -534,7 +534,7 @@ The Debug feature cannot be enabled in these situations:
 Use one of the following options to resolve the issue: 
 {: tsResolve}
 
-  * The recommended practice is to use the IBM Node.js buildpack to start the app. For more information, see the Startup command section of the [Deploying a Node.js application to {{site.data.keyword.Bluemix_notm}}](/docs/runtimes/nodejs/index.html#nodejs_runtime){: new_window} topic. 
+  * The recommended practice is to use the IBM Node.js buildpack to start the app. For more information, see the Startup command section of the [Deploying a Node.js application to {{site.data.keyword.Bluemix_notm}}](/docs/runtimes/nodejs/index.html#nodejs_runtime) topic. 
   * Disable the command for your existing app either by revising the command attribute in your `manifest.yml` to command: null or by editing your push command to include `-c null`. 
   * Remove the **command** attribute from the `manifest.yml`. Then delete the current app from {{site.data.keyword.Bluemix_notm}} and push the app again.
   
@@ -578,7 +578,7 @@ If you are pushing your application to {{site.data.keyword.Bluemix_notm}} by usi
 ```
 cf api https://api.eu-gb.bluemix.net
 ```
-If you are pushing your application to {{site.data.keyword.Bluemix_notm}} by using the Eclipse tools, you must first create a {{site.data.keyword.Bluemix_notm}} server and specify the API endpoint of the {{site.data.keyword.Bluemix_notm}} region that your organization was created in. For more information about using the Eclipse tools, see [Deploying apps with IBM Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html){: new_window}.  
+If you are pushing your application to {{site.data.keyword.Bluemix_notm}} by using the Eclipse tools, you must first create a {{site.data.keyword.Bluemix_notm}} server and specify the API endpoint of the {{site.data.keyword.Bluemix_notm}} region that your organization was created in. For more information about using the Eclipse tools, see [Deploying apps with IBM Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html).  
   
   
 
@@ -717,7 +717,7 @@ Take the following actions based on the cause that leads to the problem:
         ```
 		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 		```
-	  * Use the [package.json](https://docs.npmjs.com/json){: new_window} file. For example:
+	  * Use the [package.json ![External link icon](../icons/launch-glyph.svg)](https://docs.npmjs.com/json){: new_window} file. For example:
 	    ```
 		{
       ...
@@ -755,7 +755,7 @@ Take the following actions based on the cause that leads to the problem:
  }
     ```
 	
-For more tips about Node.js apps, see [Tips for Node.js Applications](http://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}.	
+For more tips about Node.js apps, see [Tips for Node.js Applications ![External link icon](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}.	
 
 
 
@@ -777,7 +777,7 @@ Liberty buildpack uses the `server.xml` file to configure the app and generates 
 
  
 
-You can resolve this problem by removing the server.xml file from the project. The buildpack creates the `server.xml` file dynamically when you push the app as a WAR app. For more information, see [Liberty for Java](/docs/runtimes/liberty/index.html){: new_window}.
+You can resolve this problem by removing the server.xml file from the project. The buildpack creates the `server.xml` file dynamically when you push the app as a WAR app. For more information, see [Liberty for Java](/docs/runtimes/liberty/index.html).
 {: tsResolve}
 	
 	
@@ -797,7 +797,7 @@ This problem might happen if scripts, such as the detect script, the compile scr
 
  
 
-You can use the [git update](http://git-scm.com/docs/git-update-index){: new_window} command to change the permission of each script to executable. For example, you can type `git update --chmod=+x script.sh`.
+You can use the [git update ![External link icon](../icons/launch-glyph.svg)](http://git-scm.com/docs/git-update-index){: new_window} command to change the permission of each script to executable. For example, you can type `git update --chmod=+x script.sh`.
 {: tsResolve}
 	
 	
@@ -819,7 +819,7 @@ This problem might happen because DevOps Services requires a `manifest.yml` file
 
  
 
-To resolve this problem, you must create a `manifest.yml` file. For more information about how to create a `manifest.yml` file, see [Application manifest](/docs/manageapps/depapps.html#appmanifest){: new_window}.
+To resolve this problem, you must create a `manifest.yml` file. For more information about how to create a `manifest.yml` file, see [Application manifest](/docs/manageapps/depapps.html#appmanifest).
 {: tsResolve}	
 	
 
@@ -1018,7 +1018,7 @@ If you configured your GitHub project to create work-item links when you push co
 6. Verify that there are no errors by checking the status icon again.
    ![Status icon without errors](images/githubResolved_small.png)
 
-For more information, see [Setting up GitHub for Bluemix DevOps Services projects](https://hub.jazz.net/docs/githubhooks/){: new_window}.
+For more information, see [Setting up GitHub for Bluemix DevOps Services projects ![External link icon](../icons/launch-glyph.svg)](https://hub.jazz.net/docs/githubhooks/){: new_window}.
 
 
 # Troubleshooting for managing accounts
@@ -1046,7 +1046,7 @@ The status of your {{site.data.keyword.Bluemix_notm}} account becomes inactive w
 
  
 
-To reactivate your account, contact [{{site.data.keyword.Bluemix_notm}} Support](http://ibm.biz/bluemixsupport.com){: new_window}. In the email, you must include the following information:
+To reactivate your account, contact [{{site.data.keyword.Bluemix_notm}} Support ![External link icon](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}. In the email, you must include the following information:
 {: tsResolve}
 
   * The IBMid that you use to log in to {{site.data.keyword.Bluemix_notm}}.
@@ -1186,14 +1186,14 @@ Some buildpacks are not configured to automatically download all updated compone
 You can use buildpacks that have built-in mechanisms to avoid loading obsolete components. The following buildpacks are two examples: 
 {: tsResolve}
 
-  * [Cloud Foundry Java buildpack](https://github.com/cloudfoundry/java-buildpack){: new_window}. This buildpack has a built-in mechanism to ensure that the latest version of the buildpack is used. For more information about how this mechanism works, see [extending-caches.md](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}. 
-  * [Cloud Foundry Node.js buildpack](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}. This buildpack has similar functionality by using environment variables. To enable the Node.js buildpack to download node modules from the internet every time, type the following command in the cf command line interface: 	
+  * [Cloud Foundry Java buildpack ![External link icon](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack){: new_window}. This buildpack has a built-in mechanism to ensure that the latest version of the buildpack is used. For more information about how this mechanism works, see [extending-caches.md ![External link icon](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}. 
+  * [Cloud Foundry Node.js buildpack ![External link icon](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}. This buildpack has similar functionality by using environment variables. To enable the Node.js buildpack to download node modules from the internet every time, type the following command in the cf command line interface: 	
   ```
   set NODE_MODULES_CACHE=false
   ```
 If the buildpack that you are using does not provide a mechanism to load the latest components automatically, you can manually delete the contents in the cache directory and push your app again by taking the following steps:
-  1. Check out a branch of a null buildpack, for example, https://github.com/ryandotsmith/null-buildpack. For information about how to check out a branch, see [Git Basics - Getting a Git Repository](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}.  
-  2. Add the following line to the `null-buildpack/bin/compile` file and commit the changes. For information about how to commit changes, see [Git Basics - Recording Changes to the Repository](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}.
+  1. Check out a branch of a null buildpack, for example, https://github.com/ryandotsmith/null-buildpack. For information about how to check out a branch, see [Git Basics - Getting a Git Repository ![External link icon](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}.  
+  2. Add the following line to the `null-buildpack/bin/compile` file and commit the changes. For information about how to commit changes, see [Git Basics - Recording Changes to the Repository ![External link icon](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}.
   ```
   rm -rfv $2/*
   ```
@@ -1228,7 +1228,7 @@ When you push an application to Bluemix by using a PHP buildpack, you might see 
 
 
 
-In the PHP buildpack, the error_log parameter is used to define the logging level. By default, the value of the `error_log` parameter is **stderr notice**. The following example shows the default logging level configuration in the `nginx-defaults.conf` file of the PHP buildpack that is provided by Cloud Foundry. For more information, see [cloudfoundry/php-buildpack](https://github.com/cloudfoundry/php-buildpack/blob/ff71ea41d00c1226d339e83cf2c7d6dda6c590ef/defaults/config/nginx/1.5.x/nginx-defaults.conf){: new_window}.
+In the PHP buildpack, the error_log parameter is used to define the logging level. By default, the value of the `error_log` parameter is **stderr notice**. The following example shows the default logging level configuration in the `nginx-defaults.conf` file of the PHP buildpack that is provided by Cloud Foundry. For more information, see [cloudfoundry/php-buildpack ![External link icon](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/php-buildpack/blob/ff71ea41d00c1226d339e83cf2c7d6dda6c590ef/defaults/config/nginx/1.5.x/nginx-defaults.conf){: new_window}.
 {: tsCauses} 
 
 ```
@@ -1247,7 +1247,7 @@ daemon off;
 error_log stderr error;
 pid @{HOME}/nginx/logs/nginx.pid;
 ```
-For more information about how to change the default logging configuration, see [error_log](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}.
+For more information about how to change the default logging configuration, see [error_log ![External link icon](../icons/launch-glyph.svg)](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}.
 	
 
 ## Unable to import a third-party Python library into {{site.data.keyword.Bluemix_notm}}
