@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2016-10-05"
+lastupdated: "2017-01-12"
 
 
 
@@ -30,8 +30,6 @@ lastupdated: "2016-10-05"
 {:user_ID: data-hd-keyref="user_ID"}
 
 # Deploying your app with the command line interface
-Last updated: 5 October 2016
-{: .last-updated}
 
 You can use the command line interface to deploy and modify applications and service instances.
 {:shortdesc}
