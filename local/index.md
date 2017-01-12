@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-01-11"
+lastupdated: "2017-01-12"
 
 
 ---
@@ -243,9 +243,9 @@ The environment is completely visible to you, as the administrator, for incident
 ### SSL inspection
 {: #sslinspection}
 
-Cloud Foundry and {{site.data.keyword.Bluemix_notm}} applications can work with SSL inspection certificates when accessing sources outside of the local environment. SSL content inspection is available for your environment, if you provide a trusted root certificate which is used to sign inspected SSL streams. 
+Cloud Foundry and {{site.data.keyword.Bluemix_notm}} applications can work with SSL inspection certificates when accessing sources outside of the local environment. SSL content inspection is available for your environment, if you provide a root certificate which is used to sign inspected SSL streams. 
 
-The {{site.data.keyword.Bluemix_notm}} deployment team can load the trusted root certificate to enable SSL inspection in the environment during the set up process. If this capability is not enabled during set up, you can request that it is enabled and work with the {{site.data.keyword.Bluemix_notm}} operations team who will load the SSL inspectiction certificate to all of your deployed components. Enabling SSL inspection during deployment does not add additional time for the deployment. However, enabling it for an existing environment can take two to four days depending on your available maintenance windows.
+The {{site.data.keyword.Bluemix_notm}} deployment team loads the root certificate to enable SSL inspection in the environment during the deployment process for your local environment. Enabling SSL inspection during the environment set up process does not add additional time for the deployment. If this capability is not enabled during the initial deployment, you can request that it is enabled; however, there might be an additional cost associated and it can take two to four days to complete depending on your available maintenance windows.
 
 
 ## Setting up your {{site.data.keyword.Bluemix_local_notm}} instance
@@ -301,8 +301,9 @@ You can expect a process similar to the following list for the initial deploymen
 <li>{{site.data.keyword.IBM_notm}} provides a URL whitelist that must be allowed through your web proxy before starting the deployment.<br />
 <p>**Note**: To ensure that your existing or new applications can access the necessary resources, you might have to take additional steps to bundle the resources with the buildpack, or work with your security team to whitelist the URLs needed to run your applications. For more information about working with node.js and Liberty for Java buildpacks, see <a href="../runtimes/nodejs/offlineMode.html">Offline mode for node.js</a> and <a href="../runtimes/liberty/offlineMode.html">Offline mode for Liberty for Java</a>.</p>
 </li>
-<li>You specify the domain names for the deployment, and the IDs that you want to use. You get two partially defined domains when you set up your local instance, and you pick the prefix for the two domains. For example, you pick the prefix for  <code>*mycompany*.bluemix.net</code> and <code>*mycompany*.mybluemix.net</code>. And, then you can also choose the full domain to create a custom domain.<br />
-<p>You can choose as many custom domains as you want. However, you are responsible for the certificates for the custom domains. For information about creating your custom domain, see <a href="../manageapps/updapps.html#domain">Creating and using a custom domain</a>.</p></li>
+<li>You specify the domain names for the deployment, and the IDs that you want to use. You get two partially defined domains when you set up your local instance, and you pick the prefix for the two domains. For example, you pick the prefix for  <code>*mycompany*.bluemix.net</code> and <code>*mycompany*.mybluemix.net</code>.<br />
+You can also define a fully custom domain, such as mycustombmx.mycompany.com and application.mycompany.com. You are required to provide the SSL certificate, certificate key, and root certificate before the environment is deployed. The provided root certificate can also be used to set up <a href="index.html#sslinspection">SSL inspection</a> for your environment upon request. <br />
+You can choose as many custom domains for your applications as you want, as long as you provide the certificates for the custom domains. For information about creating your custom domain, see <a href="../manageapps/updapps.html#domain">Creating and using a custom domain</a>.</li>
 <li>You choose which technology, IPSec or OpenVPN tunnel, to use to configure Relay to connect back to the {{site.data.keyword.IBM_notm}} operations center.</li>
 <li>{{site.data.keyword.IBM_notm}} installs and starts up the inception virtual machine within the {{site.data.keyword.Bluemix_notm}} cluster. If you provide your own VMware, then an {{site.data.keyword.IBM_notm}} representative helps your customer representative to complete this task. If you ordered the {{site.data.keyword.Bluemix_notm}} Local System hardware option, an IBM representative completes this task.</li>
 <li>{{site.data.keyword.IBM_notm}} configures the Relay to communicate back to the {{site.data.keyword.IBM_notm}} operations center.</li>
