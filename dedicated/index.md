@@ -201,7 +201,7 @@ An {{site.data.keyword.Bluemix_dedicated_notm}} might include an outbound connec
 <dd>
 The enterprise network environment may have a secured private bi-directional network link to {{site.data.keyword.Bluemix_dedicated_notm}}. This allows applications hosted in {{site.data.keyword.Bluemix_dedicated_notm}} to access services and resources in the enterprise, including data sources and enterprise services. This network link also allows {{site.data.keyword.Bluemix_dedicated_notm}} to use your LDAP for authentication of your enterprise's developers and administrators.<br>
 <br>
-There are several options for creating the secured private network link which are described in [Networking options](#arch-networking). Talk to your IBM technical specialist about the best networking option for your enterprise.<br>
+There are several options for creating the secured private network link. Talk to your IBM technical specialist about the best networking option for your enterprise.<br>
 <br>
 The default connection from {{site.data.keyword.Bluemix_dedicated_notm}} to your enterprise network uses a Virtual Private Network (VPN). {{site.data.keyword.Bluemix_dedicated_notm}} has a Dedicated 1 Gbps Vyatta VPN termination configured for high availability.
 <br>
