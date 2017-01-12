@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-20"
+  years: 2016, 2017
+lastupdated: "2016-12-15"
 
 ---
 {:new_window: target="_blank"}
@@ -34,7 +34,7 @@ Complete the following steps to create a project with a UI Starter:
 	
 	4. Enter a name for your project and select **Create**.
 	
-2. Make your selections on the **Project Overview** screen.  The **Project Overview** screen displays information about your project and the optional capabilities that you can add to your project, like Push Notifications.  
+2. Make your selections on the **Project Overview** screen.  The **Project Overview** screen displays information about your project and the optional capabilities that you can add to your project, like {{site.data.keyword.mobilepushshort}}.  
 
 	1. Optional: Select **Add** to add one of the listed capabilities to your project. Edit the **Service name** for your service and click **Create**. When you add services to your project, you link to the {{site.data.keyword.Bluemix_notm}} page for that service. Configure the service by providing the information that is required for the service.
 	
@@ -75,15 +75,17 @@ Complete the following steps to create a project with a UI Starter:
 	     
 		 Notice: If you import data that does not match the structure of the default data, turn on the *Replace schema* slider. An example of this is a .csv file that has fewer columns than the data that is provided with your starter.
 		 
-	6. Select **User Access** in the navigation to modify the access requirements of your project. You can toggle user access on and off with the switch. When user access is on, you can set the inactive user timeout and the credentials of users who can access the app.
+	6. Select **Navigation** to customize the navigation actions in your app. This is optional because the navigation actions for many of the screens are automatically created based on the relationships of the screens. You can change the target screen by first selecting the screen or field that you want to navigate *from* in the Menu items list. Then select the screen that you want it to navigate *to* in the Target screen field. 
+		 
+	7. Select **User Access** in the navigation to modify the access requirements of your project. You can toggle user access on and off with the switch. When user access is on, you can set the inactive user timeout and the credentials of users who can access the app.
 	
-	7. Select **Settings** in the navigation menu to modify the overall information about and colors for your project. This screen is where you enter your Google API key, if it is required for the capabilities that you added to your project. This screen is also where you add your unique bundle identifier that is registered with the Apple Store or the Google Play Store.
+	8. Select **Settings** in the navigation menu to modify the overall information about and colors for your project. This screen is where you enter your Google API key, if it is required for the capabilities that you added to your project. This screen is also where you add your unique bundle identifier that is registered with the Apple Store or the Google Play Store.
 	
 		If you want to add the IBM MobileFirst Foundation SDK to your project, toggle the switch on.
 		
-	8. If you toggled the switch to add IBM MobileFirst Platform Foundation to your project in the *Settings* screen, a **Foundation** selection displays in the navigation. Select **Foundation** and complete the required information that is specific to IBM MobileFirst Platform Foundation.
+	9. If you toggled the switch to add IBM MobileFirst Platform Foundation to your project in the *Settings* screen, a **Foundation** selection displays in the navigation. Select **Foundation** and complete the required information that is specific to IBM MobileFirst Platform Foundation.
 	
-	9. Select **Publish** in the navigation menu to enter the final information to create your mobile app. You can enter your Bundle identifier for iOS and the Application identifier for Android.
+	10. Select **Publish** in the navigation menu to enter the final information to create your mobile app. You can enter your Bundle identifier for iOS and the Application identifier for Android.
 	
 	If you are creating an iOS app, you must obtain your Bundle Identifier, your Distribution Certificate as a *.p12* file, and your Provisioning Profile as a *.mobileprovision* file from the Apple provisioning portal. The three should be created at the same time and with the same computer that you plan to use when you post your app to the Apple store. The Distribution Certificate and the Provisioning Profile must be based on the Bundle Identifier. 	
 

@@ -1,11 +1,15 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-22"
+  years: 2016, 2017
+lastupdated: "2016-12-13"
 
 ---
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # End-to-end tutorial of the Basic Code Starter
 {: #tutorial}
@@ -36,11 +40,11 @@ Ensure that you have installed the [prerequisite developer tools](get_code.html#
    
    5. Click **Create**.
 
-2. Optional: Add the Push Notifications capability.
+2. Optional: Add the {{site.data.keyword.mobilepushshort}} capability.
 
-   1. Click **Add** for **Push Notifications** in the **Project Overview** page.
+   1. Click **Add** for **{{site.data.keyword.mobilepushshort}}** in the **Project Overview** page.
 
-      You can alternatively click **Create** from the **Push Notifications** page.
+      You can alternatively click **Create** from the **{{site.data.keyword.mobilepushshort}}** page.
 
    2. Enter your service name and click **Create**.
 
@@ -182,6 +186,8 @@ View other tutorials.
 ### Code Starter tutorials
 {: #tutorials_Code}
 
+* [Tutorial - Cloudant Sync](tutorial_cloudant_synd.html)
+* [Tutorial - {{site.data.keyword.openwhisk_short}}](tutorial_openwhisk.html)
 * [Tutorial - {{site.data.keyword.visualrecognitionshort}}](tutorial_visual_recognition.html)
 * [Tutorial - Watson Language](tutorial_watson_language.html)
 * [Tutorial - Weather](tutorial_weather.html)

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-18"
+  years: 2016, 2017
+lastupdated: "2017-01-11"
 
 ---
 {:new_window: target="_blank"}
@@ -27,7 +27,7 @@ The following table depicts  {{site.data.keyword.Bluemix_notm}} Mobile services.
 <th>{{site.data.keyword.Bluemix_notm}} Mobile service</th>
 <th>Description</th>
 <tr>
-<td> <img src="images/mobile_analytics_icon.png" alt="{{site.data.keyword.mobileanalytics_short}}icon"><br/>{{site.data.keyword.mobileanalytics_short}} (Beta)</td>
+<td> <img src="images/mobile_analytics_icon.png" alt="{{site.data.keyword.mobileanalytics_short}}icon"><br/>{{site.data.keyword.mobileanalytics_short}}</td>
 <td valign="top">Use the {{site.data.keyword.mobileanalytics_full}} service to gain insight into how your mobile apps are performing and how they are being used.<br/><br/>
 Read more about operating this service in the <a href="/docs/services/mobileanalytics/index.html" alt="{{site.data.keyword.mobileanalytics_short}} documentation link">{{site.data.keyword.mobileanalytics_short}} documentation</a>.
 </td>
@@ -49,8 +49,11 @@ Read more about operating this service in the <a href="/docs/services/mobilefoun
 Read more about operating this service in the <a href="/docs/services/MobileQualityAssurance/index.html" alt="{{site.data.keyword.mqa}} documentation link">{{site.data.keyword.mqa}} documentation</a>.</td>
 </tr>
 <tr>
-<td><img src="images/push_icon.png" alt="Push Notifications service icon"><br/>{{site.data.keyword.mobilepushshort}}</td>
-<td valign="top">Use the {{site.data.keyword.mobilepushfull}} service to send and manage mobile push notifications that are targeted to iOS and Android platforms. This service manages the mapping of your application users to their devices, device platform, and handles dispatching push notifications to the devices. With this service, you can send broadcasts, unicasts (based on userID, deviceID), and tags (or topics) based on push notifications to your mobile application users.<br/><br/>
+<td><img src="images/push_icon.png" alt="{{site.data.keyword.mobilepushshort}} service icon"><br/>{{site.data.keyword.mobilepushshort}}</td>
+<td valign="top">The {{site.data.keyword.mobilepushfull}} service provides a unified platform to send and manage mobile and web push notifications that are targeted across platforms.
+<br/><br/>
+The {{site.data.keyword.mobilepushshort}} manages the mapping of your application users to their devices, device platform, web browsers and handles dispatching push notifications to them. You can send broadcasts, unicasts (based on deviceID and userID), and also tags (or topics) as push notifications to your mobile and web browser application users. You can also use an SDK and REST APIs to further develop your client applications.
+<br/><br/>
 Read more about operating this service in the <a href="/docs/services/mobilepush/index.html" alt="{{site.data.keyword.mobilepushshort}} documentation link">{{site.data.keyword.mobilepushshort}} documentation</a>.</td>
 </table>
 

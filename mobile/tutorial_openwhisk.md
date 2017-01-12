@@ -2,15 +2,19 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-10-21"
+lastupdated: "2016-12-13"
 
 ---
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
-# End-to-end tutorial of the {{site.data.keyword.visualrecognitionshort}} Code Starter
-{: #tutorial_vr}
+# End-to-end tutorial of the {{site.data.keyword.openwhisk_short}} Starter
+{: #tutorial}
 
-The following end-to-end tutorial walks through the steps to create a project from the {{site.data.keyword.visualrecognitionshort}} Code Starter, including the tools that you must have installed, and subsequently, the steps to run the starter in Xcode and Android Studio.
+The following end-to-end tutorial walks through the steps to create a project from the {{site.data.keyword.openwhisk_short}} Code Starter, including the tools that you must have installed, and subsequently, the steps to run the starter in Xcode and Android Studio.
 
 
 ### Installing developer tools
@@ -19,7 +23,7 @@ The following end-to-end tutorial walks through the steps to create a project fr
 Ensure that you have installed the [prerequisite developer tools](get_code.html#prereq-dev-tools){: new_window}.
 
 
-### Creating a project from the {{site.data.keyword.visualrecognitionshort}} Code Starter
+### Creating a project from the {{site.data.keyword.openwhisk_short}} Code Starter
 {: #create_project}
 
 1. Create a Mobile dashboard project in {{site.data.keyword.Bluemix}}.
@@ -30,13 +34,15 @@ Ensure that you have installed the [prerequisite developer tools](get_code.html#
 
    2. Click **Code Starters**.
 
-   3. Select **Visual Recognition** and click **Create Project**.
+   3. Select **{{site.data.keyword.openwhisk_short}}** and click **Create Project**.
 
-   4. Enter your project name. For this tutorial, use `VisualRecognitionProject`.
+   4. Enter your project name. For this tutorial, use `{{site.data.keyword.openwhisk_short}}Project`.
    
    5. Click **Create**.
 
 2. Optional: Add the {{site.data.keyword.mobilepushshort}} capability.
+
+   **Note**: If you want to run `pushAction`, you must add and configure {{site.data.keyword.mobilepushshort}}.
 
    1. Click **Add** for **{{site.data.keyword.mobilepushshort}}** in the **Project Overview** page.
 
@@ -79,24 +85,22 @@ Ensure that you have installed the [prerequisite developer tools](get_code.html#
    1. Click **Get Code** on the **Project Overview** page to select your platform and language.
    
       You can alternatively click on the **Code** page.
-      
-   2. For iOS, click **iOS Swift**.
+
+   2. For Swift, click **iOS Swift**.
    
    3. For Android, click **Android**.
    
    4. When the project code is finished generating, click **Download Code** to download your project archive.
 
 
-### Running your project in Xcode
-{: #run_xcode}
+### Running your Swift project in Xcode
+{: #run_swift}
 
-1. Extract the `VisualRecognitionProject-Swift.zip` file.
+1. Extract the `{{site.data.keyword.openwhisk_short}}Project-Swift.zip` file.
 
 2. Open the `README.md` file in a Markdown viewer to review the steps to configure your project.
 
-   1. Create your [{{site.data.keyword.visualrecognitionshort}}](https://console.{DomainName}/catalog/services/visual-recognition/){: new_window} service instance.
-   
-   2. Open your Terminal and navigate to your project folder.
+   1. Open your Terminal and navigate to your project folder.
    
       1. Run `pod setup` if you need to set up your CocoaPods repository.
       
@@ -104,37 +108,23 @@ Ensure that you have installed the [prerequisite developer tools](get_code.html#
       
       3. Run `pod install` to install the pods that are required for your project.
       
-      4. Run `carthage update --platform iOS` to build the dependencies and frameworks to use the {{site.data.keyword.ibmwatson}} Developer Cloud iOS SDK.
-      
-   3. Open your `VisualRecognitionProject.xcworkspace` Xcode workspace.
-   
-   4. Add your {{site.data.keyword.visualrecognitionshort}} service credentials.
-   
-      1. Copy your `api_key` from  your {{site.data.keyword.visualrecognition}} service credentials.
-      
-      2. Paste your `api_key` into the `VisualRecognitionAPIKey` key into the `WatsonCredentials.plist` file.
+   3. Open your `{{site.data.keyword.openwhisk_short}}Project.xcworkspace` Xcode workspace.
+
+   4. If you want to run `pushAction`, you must configure {{site.data.keyword.mobilepush}}.
       
 3. Run your app.
 
 
-### Running your project in Android Studio
-{: #run_studio}
+### Running your Android project in Android Studio
+{: #run_android}
 
-1. Extract the `VisualRecognitionProject-Android.zip` file.
+1. Extract the `{{site.data.keyword.openwhisk_short}}Project-Android.zip` file.
 
 2. Open the `README.md` file in a Markdown viewer to configure your project.
 
-   1. Create your [{{site.data.keyword.visualrecognitionshort}}](https://console.{DomainName}/catalog/services/visual-recognition/){: new_window} service instance.
-   
-      Skip this step if you already have a {{site.data.keyword.visualrecognitionshort}} service instance.
-   
-   2. Open your `VisualRecognitionProject-Android` project in Android Studio.
-   
-   4. Add your {{site.data.keyword.visualrecognitionshort}} service credentials.
-   
-      1. Copy your `api_key` from  your {{site.data.keyword.visualrecognitionshort}} service credentials.
-      
-      2. Paste your `api_key` into the `watson_visual_recognition_api_key` key into the `res/values/watson_credentials.xml` file.
+   1. Open your `{{site.data.keyword.openwhisk_short}}Project-Android` project in Android Studio.
+
+   2. If you want to run `pushAction`, you must configure {{site.data.keyword.mobilepush}}.
       
 3. Run your app.
 
@@ -156,7 +146,6 @@ View other tutorials.
 
 * [Tutorial - Basic](tutorial.html)
 * [Tutorial - Cloudant Sync](tutorial_cloudant_synd.html)
-* [Tutorial - {{site.data.keyword.openwhisk_short}}](tutorial_openwhisk.html)
+* [Tutorial - {{site.data.keyword.visualrecognitionshort}}](tutorial_visual_recognition.html)
 * [Tutorial - Watson Language](tutorial_watson_language.html)
 * [Tutorial - Weather](tutorial_weather.html)
-
