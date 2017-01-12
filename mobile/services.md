@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-18"
+  years: 2016, 2017
+lastupdated: "2017-01-11"
 
 ---
 {:new_window: target="_blank"}
@@ -27,7 +27,7 @@ The following table depicts  {{site.data.keyword.Bluemix_notm}} Mobile services.
 <th>{{site.data.keyword.Bluemix_notm}} Mobile service</th>
 <th>Description</th>
 <tr>
-<td> <img src="images/mobile_analytics_icon.png" alt="{{site.data.keyword.mobileanalytics_short}}icon"><br/>{{site.data.keyword.mobileanalytics_short}} (Beta)</td>
+<td> <img src="images/mobile_analytics_icon.png" alt="{{site.data.keyword.mobileanalytics_short}}icon"><br/>{{site.data.keyword.mobileanalytics_short}}</td>
 <td valign="top">Use the {{site.data.keyword.mobileanalytics_full}} service to gain insight into how your mobile apps are performing and how they are being used.<br/><br/>
 Read more about operating this service in the <a href="/docs/services/mobileanalytics/index.html" alt="{{site.data.keyword.mobileanalytics_short}} documentation link">{{site.data.keyword.mobileanalytics_short}} documentation</a>.
 </td>

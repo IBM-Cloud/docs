@@ -1,12 +1,11 @@
 ---
 
 copyright:
-  years: 2016
-
+  years: 2016, 2017
 lastupdated: "2016-12-15"
 
-
 ---
+
 {:new_window: target="_blank"}
 
 # Tutorial - Store Catalog UI Starter
