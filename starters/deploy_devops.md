@@ -35,7 +35,7 @@ You can create a hosted Git repository that deploys to {{site.data.keyword.Bluem
 
 The updated app is redeployed to {{site.data.keyword.Bluemix_notm}}.
 
-For step-by-step directions, see [Set up Git integration and auto-deploy in DevOps Services](https://hub.jazz.net/tutorials/jazzeditor/#git_integration_and_autodeployment).
+For step-by-step directions, see [Set up Git integration and auto-deploy in DevOps Services ![External link icon](../icons/launch-glyph.svg)](https://hub.jazz.net/tutorials/jazzeditor/#git_integration_and_autodeployment){: new_window}.
 
 ## Added Git? Try {{site.data.keyword.Bluemix_notm}} Live Sync
 
