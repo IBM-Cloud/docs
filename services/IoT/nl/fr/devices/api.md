@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-11"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # API REST HTTP pour les terminaux
 {: #api}
-Dernière mise à jour : 11 octobre 2016
-{: .last-updated}
 
 **Important :** La fonction d'API REST HTTP {{site.data.keyword.iot_full}} pour les terminaux est disponible uniquement dans le cadre d'un programme bêta limité. Il est possible que des mises à jour ultérieures incluent des modifications incompatibles avec la version en cours de cette fonction. Essayez-la et [dites-nous ce que vous en pensez](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html).
 
@@ -86,13 +85,13 @@ Pour plus d'informations sur le protocole MQTT et les niveaux de qualité de ser
 
 
 <--!
-Déplacé de la rubrique de développement Fonctions obsolètes. Emplacement à déterminer avec le développement. 
+Déplacé de la rubrique de développement Fonctions obsolètes. Emplacement à déterminer avec le développement.
 ## Dernier cache d'événement
 {: #last-event-cache}
 
 A l'aide de l'API de dernier cache d'événement {{site.data.keyword.iot_short_notm}}, vous pouvez extraire le dernier événement qui a été envoyé par un terminal. Cela fonctionne alors que le terminal est en ligne ou hors ligne, ce qui vous permet d'extraire le statut de terminal, quel que soit l'emplacement physique ou le statut d'utilisation du terminal. Vous pouvez extraire la dernière valeur enregistrée d'un ID d'événement pour un terminal spécifique ou la dernière valeur enregistrée pour chaque ID d'événement signalé par un terminal spécifique. Les données de dernier événement d'un terminal peuvent être extraites pour n'importe quel événement spécifique qui s'est produit au cours des 365 derniers jours.
 
-Pour obtenir la valeur la plus récente d'un ID d'événement spécifique, utilisez la demande d'API ci-après, qui renvoie la dernière valeur enregistrée pour l'ID d'événement "power". 
+Pour obtenir la valeur la plus récente d'un ID d'événement spécifique, utilisez la demande d'API ci-après, qui renvoie la dernière valeur enregistrée pour l'ID d'événement "power".
 
 ```
 GET /api/v0002/device/types/<device-type>/devices/<device-id>/events/power
@@ -111,7 +110,7 @@ La réponse est renvoyée au format JSON suivant :
 }
 ```
 
-**Remarque :** Si la réponse d'API est au format JSON, les contenus d'événement quant à eux peuvent être écrits dans n'importe quel format. Les contenus renvoyés par l'API de dernier cache d'événement sont codés en base 64. 
+**Remarque :** Si la réponse d'API est au format JSON, les contenus d'événement quant à eux peuvent être écrits dans n'importe quel format. Les contenus renvoyés par l'API de dernier cache d'événement sont codés en base 64.
 
 Pour obtenir la valeur la plus récente de chaque ID d'événement signalé par un terminal, utilisez la demande d'API suivante :
 
@@ -119,7 +118,7 @@ Pour obtenir la valeur la plus récente de chaque ID d'événement signalé par 
 GET /api/v0002/device/types/<device-type>/devices/<device-id>/events
 ```
 
-La réponse inclut tous les ID d'événement qui ont été envoyés par le terminal. Dans l'exemple suivant, des valeurs sont renvoyées pour les événements "power" et "temperature". 
+La réponse inclut tous les ID d'événement qui ont été envoyés par le terminal. Dans l'exemple suivant, des valeurs sont renvoyées pour les événements "power" et "temperature".
 
 ```
 [

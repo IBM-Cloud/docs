@@ -1,7 +1,8 @@
 ---
 
-copyright :
-  2016
+copyright:
+  years: 2016
+lastupdated: "2016-10-16"
 
 ---
 
@@ -12,8 +13,6 @@ copyright :
 {:pre: .pre}
 
 # Niveaux d'accès pour les rôles de passerelle
-Dernière mise à jour : 16 septembre 2016
-{: .last-updated}
 
 Les tableaux ci-après illustrent le niveau d'accès de chacun des rôles de passerelle.
 
@@ -92,14 +91,14 @@ Afficher les informations d'utilisation de l'organisation|-|-
 Opérations de contrôle d'accès || Rôles de passerelle|
 :--------: | ---------------------|------------------------
            | **Passerelle standard** | **Passerelle privilégiée**
-Afficher les propriétés utilisateur (y compris les droits d'accès)|-|-
+Afficher les propriétés utilisateur (y compris les droits d'accès) |-|-
 Afficher les propriétés des utilisateurs (y compris les droits d'accès)|-|-
-Gérer les utilisateurs (y compris les droits d'accès)|-|-
-Afficher les propriétés de clé d'API (y compris les droits d'accès)|-|-
-Afficher les propriétés des clés d'API (y compris les droits d'accès)|-|-
-Créer, mettre à jour ou supprimer des clés d'API (y compris les droits d'accès)|-|-
+Gérer les utilisateurs( y compris les droits d'accès) |-|-
+Afficher les propriétés de clé d'API (y compris les droits d'accès) |-|-
+Afficher les propriétés des clés d'API (y compris les droits d'accès) |-|-
+Créer, mettre à jour ou supprimer des clés d'API (y compris les droits d'accès) |-|-
 Afficher les propriétés de terminal (y compris les droits d'accès)|X|X
-Afficher les propriétés des terminaux (y compris les droits d'accès)|X|X
+Afficher les propriétés des terminaux (y compris les droits d'accès) |X|X
 Créer, mettre à jour, supprimer un terminal (y compris les droits d'accès)|-|X
 Afficher les rôles|-|-
 Créer, mettre à jour, supprimer des rôles personnalisés|-|-

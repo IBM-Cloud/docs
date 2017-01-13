@@ -1,7 +1,8 @@
 ---
 
-Copyright :
-  Années : 2015, 2016
+copyright:
+  years: 2015, 2016
+lastupdated: "2016-09-08"
 
 ---
 
@@ -13,8 +14,6 @@ Copyright :
 
 # Connexions d'application, de terminal et de passerelle à {{site.data.keyword.iot_short_notm}}
 {: #connect_devices_apps_gw}
-Dernière mise à jour : 8 septembre 2016
-{: .last-updated}
 
 Les applications, les terminaux et les passerelles peuvent se connecter à {{site.data.keyword.iot_full}} via le protocole MQTT. Les terminaux peuvent également se connecter à et publier des événements sur {{site.data.keyword.iot_short_notm}} via l'API HTTP.
 {: shortdesc}

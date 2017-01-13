@@ -31,7 +31,7 @@ Le document suivant répond à certaines questions courantes relatives à la fa�
 ## {{site.data.keyword.iot_short_notm}} et {{site.data.keyword.Bluemix_notm}}
 {: #iot-bluemix-sec}
 
-{{site.data.keyword.iot_short_notm}} s'exécute dans la plateforme {{site.data.keyword.Bluemix_notm}} et s'appuie donc à la fois sur {{site.data.keyword.Bluemix_notm}} et sur {{site.data.keyword.BluSoftlayer_full}} pour l'accès et la connectivité. La dépendance à {{site.data.keyword.Bluemix_notm}} et à {{site.data.keyword.BluSoftlayer}} rend la sécurité et la fiabilité de {{site.data.keyword.Bluemix_notm}} et d'{{site.data.keyword.BluSoftlayer}} essentielles pour les utilisateurs de {{site.data.keyword.iot_short_notm}}. 
+{{site.data.keyword.iot_short_notm}} s'exécute dans la plateforme {{site.data.keyword.Bluemix_notm}} et s'appuie donc à la fois sur {{site.data.keyword.Bluemix_notm}} et sur {{site.data.keyword.BluSoftlayer_full}} pour l'accès et la connectivité. La dépendance à {{site.data.keyword.Bluemix_notm}} et à {{site.data.keyword.BluSoftlayer}} rend la sécurité et la fiabilité de {{site.data.keyword.Bluemix_notm}} et d'{{site.data.keyword.BluSoftlayer}} essentielles pour les utilisateurs de {{site.data.keyword.iot_short_notm}}.
 
 Pour plus d'informations sur la sécurité de {{site.data.keyword.Bluemix_notm}}, voir [Sécurité de la plateforme {{site.data.keyword.Bluemix_notm}}](https://console.ng.bluemix.net/docs/security/index.html#platform-security).
 
@@ -73,7 +73,7 @@ Les terminaux connectés utilisent une combinaison clientId/jeton d'authentifica
 
 ![image](connectivity_platform.svg)
 
-Pour plus d'informations sur les exigences relatives à TLS et aux suites de chiffrement, voir la section [Exigences TLS](https://console.ng.bluemix.net/docs/services/IoT/reference/security/connect_devices_apps_gw.html#tls_requirements) dans la documentation `Connexions d'application, de terminal et de passerelle à Watson IoT Platform`. 
+Pour plus d'informations sur les exigences relatives à TLS et aux suites de chiffrement, voir la section [Exigences TLS](https://console.ng.bluemix.net/docs/services/IoT/reference/security/connect_devices_apps_gw.html#tls_requirements) dans la documentation `Connexions d'application, de terminal et de passerelle à Watson IoT Platform`.
 
 ## Comment évitons-nous la fuite des données entre des terminaux IoT ?
 {: #prevent-leak-devices}

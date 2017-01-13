@@ -17,7 +17,8 @@ lastupdated: "2016-10-21"
 Dernière mise à jour : 21 octobre 2016
 {: .last-updated}
 
-{{site.data.keyword.iot_full}} est un service disponible dans {{site.data.keyword.Bluemix}}. Vous pouvez accéder à votre tableau de bord d'organisation {{site.data.keyword.iot_short_notm}} en utilisant le tableau de bord {{site.data.keyword.Bluemix_notm}}. En tant que service {{site.data.keyword.Bluemix_notm}}, {{site.data.keyword.iot_short_notm}} peut être intégré à d'autres services hébergés sur {{site.data.keyword.Bluemix_notm}}. Les informations concernant des intégrations de service de tiers spécifiques sont décrites dans la rubrique [Intégrations de service externe](/extensions/index.html). {:shortdesc}
+{{site.data.keyword.iot_full}} est un service disponible dans {{site.data.keyword.Bluemix}}. Vous pouvez accéder à votre tableau de bord d'organisation {{site.data.keyword.iot_short_notm}} en utilisant le tableau de bord {{site.data.keyword.Bluemix_notm}}. En tant que service {{site.data.keyword.Bluemix_notm}}, {{site.data.keyword.iot_short_notm}} peut être intégré à d'autres services hébergés sur {{site.data.keyword.Bluemix_notm}}. Les informations concernant des intégrations de service de tiers spécifiques sont décrites dans la rubrique [Intégrations de service externe](/extensions/index.html).
+{:shortdesc}
 
 ## Fonctionnement de {{site.data.keyword.iot_short_notm}} avec {{site.data.keyword.Bluemix_notm}}
 {: #iot-bluemix-work}
@@ -38,7 +39,7 @@ Des instances de {{site.data.keyword.iot_short_notm}} peuvent être créées dan
 
 {{site.data.keyword.iot_short_notm}} offre deux modèles de tarification : gratuit et standard. Le modèle de tarification gratuit de {{site.data.keyword.iot_short_notm}} autorise jusqu'à 20 terminaux enregistrés, 100 Mo de données échangées et 10 applications liées.
 
-Le modèle de tarification de {{site.data.keyword.iot_short_notm}} autorise un nombre illimité de terminaux enregistrés, 100 Mo de données échangées gratuitement et un coût par Mo de données échangées après les 100 premiers mégaoctets. 
+Le modèle de tarification de {{site.data.keyword.iot_short_notm}} autorise un nombre illimité de terminaux enregistrés, 100 Mo de données échangées gratuitement et un coût par Mo de données échangées après les 100 premiers mégaoctets.
 
 Pour plus d'informations sur le modèle de tarification de {{site.data.keyword.iot_short_notm}} :
 

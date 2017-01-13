@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-16"
 
 ---
 
@@ -14,17 +15,15 @@ copyright:
 
 # Modèle de terminal
 {: #device_model}
-Dernière mise à jour : 16 septembre 2016
-{: .last-updated}
 
-Le modèle de terminal décrit les métadonnées et les caractéristiques de gestion d'un terminal. La base de données de terminaux d'{{site.data.keyword.iot_full}} représente la principale source d'informations sur les terminaux. Les applications et les terminaux gérés peuvent envoyer des mises à jour, y compris les modifications d'emplacement ou la progression d'une mise à jour de microprogramme, à la base de données de terminaux. Dès que ces mises à jour sont reçues par {{site.data.keyword.iot_short_notm}}, la base de données est mise à jour et les informations sont disponibles pour les applications. 
+Le modèle de terminal décrit les métadonnées et les caractéristiques de gestion d'un terminal. La base de données de terminaux d'{{site.data.keyword.iot_full}} représente la principale source d'informations sur les terminaux. Les applications et les terminaux gérés peuvent envoyer des mises à jour, y compris les modifications d'emplacement ou la progression d'une mise à jour de microprogramme, à la base de données de terminaux. Dès que ces mises à jour sont reçues par {{site.data.keyword.iot_short_notm}}, la base de données est mise à jour et les informations sont disponibles pour les applications.
 
 **Remarque :** A l'exception de l'[extension des terminaux](#devicemanagementextension), la totalité du modèle de terminal est disponible pour les terminaux gérés et non gérés. Toutefois, un terminal non géré ne peut pas mettre à jour directement son modèle de terminal dans la base de données.
 
 ## Identification du terminal
 {: #device_id}
 
-Des attributs `typeId` et `deviceId` sont affectés à chaque terminal. En général, `typeId` représente le modèle de votre terminal, tandis que `deviceId` peut représenter son numéro de série. Dans votre organisation {{site.data.keyword.iot_short_notm}}, la combinaison des attributs `typeId` et `deviceId` doit être unique pour chaque terminal. 
+Des attributs `typeId` et `deviceId` sont affectés à chaque terminal. En général, `typeId` représente le modèle de votre terminal, tandis que `deviceId` peut représenter son numéro de série. Dans votre organisation {{site.data.keyword.iot_short_notm}}, la combinaison des attributs `typeId` et `deviceId` doit être unique pour chaque terminal.
 
 Outre ces attributs, {{site.data.keyword.iot_short_notm}} construit un autre identificateur pour chaque terminal. Cet identificateur s'appelle `clientId`. L'attribut `clientId` est basé sur l'attribut `organizationId` et sur les valeurs `typeId` et `deviceId` spécifiques du terminal. L'attribut `clientId` permet d'identifier de manière unique chaque terminal. Les caractères pouvant être utilisés dans ces identificateurs sont restreints de manière à assurer la compatibilité de ces derniers avec les protocoles de communication et les API REST.
 
@@ -42,17 +41,16 @@ Pour obtenir plus d'informations sur les identificateurs, ainsi que des descript
 ## Identificateurs et types de terminal
 {: #id_and_device_types}
 
-Chaque terminal qui est connecté à {{site.data.keyword.iot_short_notm}} est associé à un type de terminal. Les types de terminal sont des groupes de terminaux ayant des caractéristiques ou des comportements communs. 
+Chaque terminal qui est connecté à {{site.data.keyword.iot_short_notm}} est associé à un type de terminal. Les types de terminal sont des groupes de terminaux ayant des caractéristiques ou des comportements communs.
 
-Un type de terminal possède un ensemble d'attributs. Lorsqu'un terminal est ajouté à {{site.data.keyword.iot_short_notm}}, les attributs définis dans son type de terminal sont utilisés en tant que modèle. Si une valeur est associée au périphérique, elle est utilisée. Si aucune valeur n'est associée au périphérique, la valeur de type de terminal est utilisée. Par exemple, le type de terminal peut inclure une valeur pour l'attribut `deviceInfo.fwVersion` indiquant la version du microprogramme installé au moment de la fabrication du terminal.
-Cette valeur est copiée à partir du type de terminal sur les terminaux au moment de leur ajout. Lorsqu'un terminal est ajouté, si l'attribut `deviceInfo.fwVersion` possède déjà une valeur, celle-ci n'est pas remplacée. 
+Un type de terminal possède un ensemble d'attributs. Lorsqu'un terminal est ajouté à {{site.data.keyword.iot_short_notm}}, les attributs définis dans son type de terminal sont utilisés en tant que modèle. Si une valeur est associée au terminal, elle est utilisée. Si aucune valeur n'est associée au terminal, la valeur de type de terminal est utilisée. Par exemple, le type de terminal peut inclure une valeur pour l'attribut `deviceInfo.fwVersion` indiquant la version du microprogramme installé au moment de la fabrication du terminal. Cette valeur est copiée à partir du type de terminal sur les terminaux au moment de leur ajout. Lorsqu'un terminal est ajouté, si l'attribut `deviceInfo.fwVersion` possède déjà une valeur, celle-ci n'est pas remplacée.
 
-Lorsqu'un attribut de type de terminal est mis à jour, seuls les nouveaux terminaux enregistrés héritent des modifications apportées au modèle de type de terminal. 
+Lorsqu'un attribut de type de terminal est mis à jour, seuls les nouveaux terminaux enregistrés héritent des modifications apportées au modèle de type de terminal.
 
 ## Attributs
 {: #attributes}
 
-Le tableau ci-dessous présente la liste des attributs qui peuvent s'appliquer aux terminaux de {{site.data.keyword.iot_short_notm}}. Les attributs en italique peuvent également s'appliquer à des types de terminal. 
+Le tableau ci-dessous présente la liste des attributs qui peuvent s'appliquer aux terminaux de {{site.data.keyword.iot_short_notm}}. Les attributs en italique peuvent également s'appliquer à des types de terminal.
 
 Légende :
   - API : Peut être mis à jour à l'aide d'API
@@ -104,9 +102,9 @@ Nom d'extension    | Préfixe des attributs | Objet
 ### Extension Diagnostics
 
 
-Les attributs de diagnostic sont facultatifs et sont disponibles uniquement pour les terminaux qui incluent des informations du journal des erreurs. Ces attributs permettent de diagnostiquer des incidents liés aux terminaux et non pas de traiter les incidents de connectivité avec {{site.data.keyword.iot_short_notm}}. La quantité d'informations stockées dans les attributs de diagnostic peut être importante et les requêtes portant sur ces informations doivent être spécifiques. 
+Les attributs de diagnostic sont facultatifs et sont disponibles uniquement pour les terminaux qui incluent des informations du journal des erreurs. Ces attributs permettent de diagnostiquer des incidents liés aux terminaux et non pas de traiter les incidents de connectivité avec {{site.data.keyword.iot_short_notm}}. La quantité d'informations stockées dans les attributs de diagnostic peut être importante et les requêtes portant sur ces informations doivent être spécifiques.
 
-Les informations des journaux de diagnostic sont stockées sous la forme de tableau d'entrées. Chaque entrée se compose d'un message, d'un niveau de gravité, d'un horodatage et d'un tableau d'octets facultatif pour les données. Vous pouvez ajouter des entrées à l'aide d'une API. Toutefois, l'ajout d'entrées peut entraîner la perte d'entrées précédentes afin que la taille des journaux de diagnostics reste gérable. 
+Les informations des journaux de diagnostic sont stockées sous la forme de tableau d'entrées. Chaque entrée se compose d'un message, d'un niveau de gravité, d'un horodatage et d'un tableau d'octets facultatif pour les données. Vous pouvez ajouter des entrées à l'aide d'une API. Toutefois, l'ajout d'entrées peut entraîner la perte d'entrées précédentes afin que la taille des journaux de diagnostics reste gérable.
 
 
 Attribut            | Type       | Description                                                 | API | AGT
@@ -121,10 +119,9 @@ Attribut            | Type       | Description                                  
 
 ### Extension Emplacement
 
-Les attributs d'emplacement sont facultatifs et sont disponibles uniquement pour les terminaux qui incluent des informations d'emplacement. Les informations d'emplacement sont stockées séparément pour permettre une utilisation des mécanismes de stockage mieux adaptée aux informations dynamiques. Cela peut s'avérer essentiel dans le cas d'informations fréquemment mises à jour, par exemple sur un terminal mobile. 
+Les attributs d'emplacement sont facultatifs et sont disponibles uniquement pour les terminaux qui incluent des informations d'emplacement. Les informations d'emplacement sont stockées séparément pour permettre une utilisation des mécanismes de stockage mieux adaptée aux informations dynamiques. Cela peut s'avérer essentiel dans le cas d'informations fréquemment mises à jour, par exemple sur un terminal mobile.
 
 Dans les solutions où les mises à jour d'emplacement sont particulièrement fréquentes, l'emplacement doit être traité avec le contenu des événements du terminal pour permettre des fréquences de mise à jour plus élevées et simplifier les mécanismes de stockage d'historique et les analyses de données.
-
 
 
 Attribut                 | Type   | Description                                             | API | AGT

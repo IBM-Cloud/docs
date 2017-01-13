@@ -2,10 +2,11 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-18"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -13,8 +14,6 @@ copyright:
 
 # Intégrations de service externe
 {: #ref-index}
-Dernière mise à jour : 26 septembre 2016
-{: .last-updated}
 
 L'intégration de service externe vous permet d'accéder à des données et des opérations à partir de services tiers ou externes au sein de votre organisation {{site.data.keyword.iot_full}}.
 
@@ -39,6 +38,8 @@ L'intégration Jasper fournie par notre plateforme assure la prise en charge des
 
 Les opérations prises en charge sont accessibles dans le menu d'exploration d'un terminal connecté via Jasper, après l'exécution des étapes de configuration ci-dessous.
 
+### API REST pour Jasper
+Pour accéder à l'API REST pour Jasper, reportez-vous à la section Jasper Extension dans la documentation [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension).
 
 ### Configuration pour Jasper
 
@@ -49,7 +50,7 @@ Pour connecter votre terminal Jasper à votre organisation {{site.data.keyword.i
   1. Dans le tableau de bord {{site.data.keyword.iot_short_notm}}, sélectionnez **Extensions**.
   2. Sur la page **Extensions**, cliquez sur **Ajouter une extension**.
   3. Cliquez sur **Ajouter** en regard de Jasper.
-  4. Entrez votre nom d'utilisateur, mot de passe, clé d'accès et ID de domaine Jasper. 
+  4. Entrez votre nom d'utilisateur, mot de passe, clé d'accès et ID de domaine Jasper.
   5. Cliquez sur **Terminé**.
 
 2. Configurez vos terminaux
@@ -61,7 +62,7 @@ Pour configurer vos terminaux connectés via Jasper, procédez comme suit :
  3. Faites défiler l'écran jusqu'à *Configuration d'une extension*.
  4. Entrez la configuration d'extension au format JSON ci-dessous, puis cliquez sur **Confirmation des modifications** pour sauvegarder votre configuration.  
 
-```json  
+```json
     {
         "jasper": {
             "iccid": "string"
@@ -89,6 +90,9 @@ L'extension AT&T permet d'effectuer les opérations AT&T suivantes
 - Envoi d'un SMS à un terminal SIM
 - Modification du plan tarifaire
 
+### API REST pour AT&T
+Pour accéder à l'API REST pour AT&T, reportez-vous à la section AT&T Extension dans la documentation [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension).
+
 ### Configuration pour AT&T
 
 Pour connecter votre organisation {{site.data.keyword.iot_short_notm}} à &T, vous devez effectuer une configuration d'organisation et une configuration de terminal.
@@ -106,7 +110,7 @@ Pour connecter votre organisation {{site.data.keyword.iot_short_notm}} à votre 
 
 
 2. Configurez vos terminaux
-Vous pouvez configurer les terminaux connectés à votre organisation {{site.data.keyword.iot_short_notm}}  et à votre compte AT&T afin d'afficher les données provenant d'AT&T dans le tableau de bord {{site.data.keyword.iot_short_notm}}.  
+Vous pouvez configurer les terminaux connectés à votre organisation {{site.data.keyword.iot_short_notm}} et à votre compte AT&T afin d'afficher les données provenant d'AT&T dans le tableau de bord {{site.data.keyword.iot_short_notm}}.
 **Important :** La configuration d'AT&T ne peut pas être appliquée dans le cadre du processus d'ajout de terminal. Seuls les terminaux précédemment connectés peuvent être configurés avec AT&T.  
 Pour configurer vos terminaux connectés via AT&T, procédez comme suit :
  1. Sur l'onglet Terminaux de votre tableau de bord {{site.data.keyword.iot_short_notm}}, localisez le terminal connecté via AT&T à configurer.
@@ -125,11 +129,10 @@ Pour configurer vos terminaux connectés via AT&T, procédez comme suit :
 
 Une fois l'organisation correctement configurée, la section *Extensions* s'affiche sous la section *Configuration des extensions* dans la vue *Exploration du terminal*.
 
-
 ## ARM mbed Connector
 {: #arm}
 
-ARM mbed Connector vous permet de connecter votre terminal ARM mbed à votre {{site.data.keyword.iot_short_notm}}. L'extension ARM mbed permet au portail ARM mbed et à {{site.data.keyword.iot_short_notm}} d'envoyer et de recevoir des données depuis le portail ARM mbed. 
+ARM mbed Connector vous permet de connecter votre terminal ARM mbed à votre {{site.data.keyword.iot_short_notm}}. L'extension ARM mbed permet au portail ARM mbed et à {{site.data.keyword.iot_short_notm}} d'envoyer et de recevoir des données depuis le portail ARM mbed.
 
 ### Configuration de l'installation
 
@@ -137,14 +140,14 @@ ARM mbed Connector vous permet de connecter votre terminal ARM mbed à votre {{s
 1. Activez l'extension ARM mbed Connector. Pour ce faire, procédez comme suit :
   1. Dans le tableau de bord {{site.data.keyword.iot_short_notm}}, sélectionnez **Paramètres** et accédez à **Extensions**.
   2. Dans le menu **Extensions**, cliquez sur **Ajouter une extension**.
-  3. Cliquez sur **Ajouter** en regard de l'extension ARM mbed Connector. 
+  3. Cliquez sur **Ajouter** en regard de l'extension ARM mbed Connector.
   4. Entrez votre clé d'accès et ID de domaine ARM mbed. Ces informations se trouvent sur le portail ARM mbed (https://connector.mbed.com).
-  5. Vérifiez que les données d'identification sont correctes en cliquant sur le bouton **Vérifier la connexion**. 
+  5. Vérifiez que les données d'identification sont correctes en cliquant sur le bouton **Vérifier la connexion**.
   6. Cliquez sur **Terminé**.
 
 ### Format de contenu
 
-Il existe deux types de messages entrants à partir de la plateforme ARM mbed, des notifications et des réponses asynchrones. {{site.data.keyword.iot_short_notm}} peut envoyer des commandes à des terminaux qui sont connectés à la plateforme ARM mbed. 
+Il existe deux types de messages entrants à partir de la plateforme ARM mbed, des notifications et des réponses asynchrones. {{site.data.keyword.iot_short_notm}} peut envoyer des commandes à des terminaux qui sont connectés à la plateforme ARM mbed.
 
 #### Notifications
 
@@ -219,9 +222,10 @@ Si vous disposez d'un terminal connecté à votre service {{site.data.keyword.io
 - Dernière actualisation de statut
 - Statut d'emplacement
 
+### API REST pour Orange
+Pour accéder à l'API REST pour Orange, reportez-vous à la section Orange Extension dans la documentation [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension).
+
 ### Configuration pour Orange
-
-
 
 Pour activer l'extension Orange :
 
@@ -250,7 +254,7 @@ Une fois l'organisation correctement configurée, la section *Extensions* s'affi
 ## Stockage des données d'historique
 {: #historical_data}
 
-L'extension de stockage de données historiques vous permet de localiser et configurer des services de stockage de message compatibles, par exemple, [{{site.data.keyword.cloudantfull}}](../../cloudant_connector.html) ou [{{site.data.keyword.messagehub_full}}](../../message_hub.html) pour vos données IoT. 
+L'extension de stockage de données historiques vous permet de localiser et configurer des services de stockage de message compatibles, par exemple, [{{site.data.keyword.cloudantfull}}](../../cloudant_connector.html) ou [{{site.data.keyword.messagehub_full}}](../../message_hub.html) pour vos données IoT.
 
 ## Packages de gestion des terminaux personnalisés
 {: #device_mgmt}
@@ -281,20 +285,23 @@ L'approbation du service prend généralement une journée. Une fois votre deman
 ## The Weather Company
 {: #weathercompany}
 
-L'extension The Weather Company associe des données météorologiques à vos terminaux {{site.data.keyword.iot_short_notm}} existants. Les données météorologiques de The Weather Company apparaissent dans la vue de détails du terminal si une demande de mise à jour d'emplacement a été émise par l'API ou si le terminal a déjà défini son emplacement à l'aide d'un message de gestion de terminaux. 
+L'extension The Weather Company associe des données météorologiques à vos terminaux {{site.data.keyword.iot_short_notm}} existants. Les données météorologiques de The Weather Company apparaissent dans la vue de détails du terminal si une demande de mise à jour d'emplacement a été émise par l'API ou si le terminal a déjà défini son emplacement à l'aide d'un message de gestion de terminaux.
 
 **Remarque :** Seuls les terminaux gérés peuvent définir leurs propres emplacements. Les emplacements de tous les terminaux non gérés doivent être définis manuellement à l'aide de l'API. Pour plus d'informations sur la définition d'un emplacement de terminal, voir [Demandes de mise à jour d'emplacement](../../devices/device_mgmt/index.html#update-location).
+
+### API REST pour The Weather Company
+Pour accéder à l'API REST pour The Weather Company, reportez-vous à la section Device Location Weather dans la documentation [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather).
 
 ### Données météorologiques
 
 Pour afficher les données météorologiques extraites pour un emplacement de terminal, localisez le terminal dans le panneau **Devices** et cliquez dessus. Dans la vue de détails du terminal, faites défiler l'écran jusqu'à la section **Extensions**. Les données météorologiques suivantes sont répertoriées :
 
-- Météo en cours. 
+- Météo en cours.
 - Température en cours.
-- Températures maximale et minimale prévues. 
+- Températures maximale et minimale prévues.
 - Humidité relative.
 - Pression.
-- Visibilité. 
+- Visibilité.
 - Vitesse du vent.
 - Direction du vent.
 - Latitude.

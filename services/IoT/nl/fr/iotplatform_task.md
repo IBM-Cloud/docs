@@ -1,7 +1,8 @@
 ---
 
-copyright :
-  2016
+copyright:
+  years: 2016
+lastupdated: "2016-10-27"
 
 ---
 
@@ -13,8 +14,6 @@ copyright :
 
 # Connexion de terminaux
 {: #iotplatform_task}
-Dernière mise à jour : 8 septembre 2016
-{: .last-updated}
 
 Avant de pouvoir commencer à recevoir des données depuis vos terminaux IoT, vous devez les connecter à {{site.data.keyword.iot_full}}. Connecter un terminal à {{site.data.keyword.iot_short_notm}} implique de l'enregistrer auprès de {{site.data.keyword.iot_short_notm}} et d'utiliser les informations d'enregistrement pour configurer le terminal afin qu'il se connecte à {{site.data.keyword.iot_short_notm}}.
 {:shortdesc}
@@ -25,7 +24,7 @@ Avant de pouvoir commencer à recevoir des données depuis vos terminaux IoT, vo
 Avant de commencer le processus de connexion, vous devez vous assurer que vos terminaux sont conformes aux exigences suivantes relatives à la communication avec {{site.data.keyword.iot_short_notm}} :
 
 - Votre terminal doit pouvoir communiquer en envoyant des messages de terminal au [format MQTT](reference/mqtt/index.html).
-- Les messages de terminal doivent être conformes aux exigences de [contenu de message](reference/mqtt/index.html#/message-payload) de {{site.data.keyword.iot_short_notm}}. 
+- Les messages de terminal doivent être conformes aux exigences de [contenu de message](reference/mqtt/index.html#/message-payload) de {{site.data.keyword.iot_short_notm}}.
 
 Pour connecter votre terminal à {{site.data.keyword.iot_short_notm}}, procédez comme suit :
 
@@ -51,20 +50,47 @@ Pour ajouter un terminal depuis le tableau de bord {{site.data.keyword.iot_short
 Chaque terminal connecté à {{site.data.keyword.iot_short_notm}} doit être associé à un type de terminal. Les types de terminal sont des groupes de terminaux ayant des caractéristiques communes.  
 Lorsque vous ajoutez votre premier terminal à votre organisation {{site.data.keyword.iot_short_notm}}, aucun type de terminal n'est disponible dans le menu **Type de terminal**. Vous devez d'abord créer un type de terminal :
  1. Cliquez sur **Créer un type de terminal**.
- 2. Entrez un nom, par exemple, `my_device_type`, et une description pour le type de terminal.
+ 2. Entrez un nom de type de terminal, par exemple, `my_device_type`, et une description pour le type de terminal. **Important :** Le nom du type de terminal ne doit pas dépasser 36 caractères et peut uniquement contenir les caractères suivants :
+ <ul>
+  <li>Caractères alphanumériques (a-z, A-Z, 0-9)</li>
+  <li>Traits d'union (-)</li>
+  <li>Traits de soulignement (&lowbar;)</li>
+  <li>Points (.)</li>
+  </ul>
  3. Facultatif : Entrez des métadonnées et des attributs de type de terminal.    
  **Astuce :** Vous pouvez ajouter et éditer des attributs et des métadonnées ultérieurement.
  4. Cliquez sur **Créer** pour ajouter le nouveau type de terminal.
 10. Cliquez sur **Suivant** pour commencer le processus d'ajout de votre terminal avec le type de terminal sélectionné.
-11. Entrez un ID de terminal. **Astuce :** Pour les terminaux connectés à un réseau, cela pourrait être par exemple l'adresse MAC du terminal sans aucun deux-points de séparation.  
-L'ID de terminal permet d'identifier le terminal dans le tableau de bord {{site.data.keyword.iot_short_notm}} et représente également un paramètre requis pour la connexion de votre terminal à {{site.data.keyword.iot_short_notm}}.
+11. Entrez un ID de terminal, tel que `my_first_device`. L'ID de terminal permet d'identifier le terminal dans le tableau de bord {{site.data.keyword.iot_short_notm}} et représente également un paramètre requis pour la connexion de votre terminal à {{site.data.keyword.iot_short_notm}}.  
+**Important :** L'ID de terminal ne doit pas dépasser 36 caractères et peut uniquement contenir les caractères suivants :
+ <ul>
+ <li>Caractères alphanumériques (a-z, A-Z, 0-9)</li>
+ <li>Traits d'union (-)</li>
+ <li>Traits de soulignement (&lowbar;)</li>
+ <li>Points (.)</li>  
+ </ul>
+ **Astuce :** Pour les terminaux connectés à un réseau, l'ID de terminal pourrait être par exemple l'adresse MAC du terminal sans aucun deux-points de séparation.
+  
 12. Facultatif : Cliquez sur **Zones supplémentaires** pour ajouter des informations de terminal, par exemple, le numéro de série, le fabricant, le modèle, etc.  
  **Astuce :** Vous pouvez ajouter et éditer ces informations ultérieurement.
 12. Facultatif : Entrez les métadonnées JSON de terminal.  
  **Astuce :** Vous pouvez ajouter et éditer des métadonnées de terminal ultérieurement.
 13. Cliquez sur **Suivant** pour finaliser l'ajout de votre terminal.
 14. Vérifiez que les informations récapitulatives sont correctes, puis cliquez sur **Ajouter** pour ajouter la connexion.  
-**Astuce :** Vous avez la possibilité d'accepter un jeton d'authentification généré automatiquement ou de fournir vous-même un jeton d'authentification. Si vous choisissez de créer votre propre jeton, celui-ci doit comporter uniquement des caractères alphanumériques et les caractères spéciaux suivants : trait d'union (-), trait de soulignement (_), point d'exclamation (!), perluète (&), signe at (@), point d'interrogation (?), astérisque (*), signe plus (+), point (.) ou des parenthèses ouvrantes et fermantes. Le jeton ne doit pas contenir des séquences de caractères répétés, des mots de dictionnaire, des noms d'utilisateur ni d'autres séquences prédéfinies.
+**Astuce :** Vous avez la possibilité d'accepter un jeton d'authentification généré automatiquement ou de fournir vous-même un jeton d'authentification.  
+Si vous choisissez de créer votre propre jeton, celui-ci doit comporter uniquement des caractères alphanumériques et les caractères spéciaux suivants : 
+ - Trait d'union (-)
+ - Trait de soulignement (&lowbar;)
+ - Point d'exclamation (!)
+ - Perluète (&)
+ - Arobase (@)
+ - Point d'interrogation (?)
+ - Astérisque (\*)
+ - Signe Plus (+)
+ - Point (.)
+ - Parenthèses ouvrantes et fermantes.  
+
+ **Important :** Le jeton ne doit pas contenir des séquences de caractères répétés, des mots de dictionnaire, des noms d'utilisateur ni d'autres séquences prédéfinies.
 15. Sur la page Informations sur le terminal, copiez et sauvegardez les informations de terminal suivantes :  
  - ID d'organisation, par exemple, `tubo8x`
  - Type de terminal, par exemple, `my_device_type`
@@ -84,7 +110,7 @@ Après avoir enregistré un terminal auprès de {{site.data.keyword.iot_short_no
 - Configurer votre terminal pour la messagerie MQTT et utiliser l'ID d'organisation, le jeton d'authentification, le type de terminal et l'ID de terminal pour l'authentification.  
 - Envoyer des messages de terminal à votre organisation {{site.data.keyword.iot_short_notm}} à l'aide du protocole MQTT.
 
-**Astuce :** Un grand nombre de recettes de connexion sont disponibles pour les terminaux couramment utilisés. Pour obtenir une liste de recettes, voir les [recettes de connexion de terminal](https://developer.ibm.com/recipes/?post_type=tutorials&s=IoT) disponibles sur IBM.com.
+**Astuce :** Un grand nombre de recettes de connexion sont disponibles pour les terminaux couramment utilisés. Pour obtenir une liste de recettes, voir les [recettes de connexion de terminal](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/) disponibles sur IBM.com.
 
 Les informations suivantes sont requises lors de la connexion de votre terminal :
 - URL : *org_id*.messaging.internetofthings.ibmcloud.com

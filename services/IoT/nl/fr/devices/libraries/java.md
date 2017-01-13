@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-18"
 
 ---
 
@@ -14,11 +15,8 @@ copyright:
 # Java pour les développeurs de terminaux
 {: #java}
 
-Dernière mise à jour : 18 octobre 2016
-{: .last-updated}
-
-
-Vous pouvez créer et personnaliser des terminaux qui interagissent avec votre organisation sur {{site.data.keyword.iot_full}} en utilisant Java. Une bibliothèque client Java pour {{site.data.keyword.iot_short_notm}}, de la documentation, ainsi que des exemples vous sont fournis pour vous permettre de vous initier au développement de terminal. {:shortdesc}
+Vous pouvez créer et personnaliser des terminaux qui interagissent avec votre organisation sur {{site.data.keyword.iot_full}} en utilisant Java. Une bibliothèque client Java pour {{site.data.keyword.iot_short_notm}}, de la documentation, ainsi que des exemples vous sont fournis pour vous permettre de vous initier au développement de terminal.
+{:shortdesc}
 
 ## Téléchargement du client et des ressources Java
 {: #java_client_download}
@@ -28,15 +26,15 @@ Pour accéder aux bibliothèques et exemples client Java pour {{site.data.keywor
 ## Constructeur
 {: #constructor}
 
-Le constructeur génère l'instance client et accepte l'objet `Propriétés` contenant les définitions suivantes : 
+Le constructeur génère l'instance client et accepte l'objet `Propriétés` contenant les définitions suivantes :
 
 |Définition |Description |
 |:----|:----|
 |`org` |Valeur requise qui doit être définie avec votre ID d'organisation. Si vous utilisez un flux Quickstart, spécifiez `quickstart`.|
-|`type`  |Valeur requise qui spécifie le type du terminal. |
-|`id`  |Valeur requise qui spécifie l'ID unique du terminal. |
+|`type`  |Valeur requise qui spécifie le type du terminal.|
+|`id`  |Valeur requise qui spécifie l'ID unique du terminal.|
 |`auth-method`  |Méthode d'authentification à utiliser. La seule méthode prise en charge est `token`.|
-|`auth-token`   |Jeton d'authentification permettant d'établir une connexion sécurisée entre votre terminal et {{site.data.keyword.iot_short_notm}}. |
+|`auth-token`   |Jeton d'authentification permettant d'établir une connexion sécurisée entre votre terminal et {{site.data.keyword.iot_short_notm}}.|
 |`clean-session`|Valeur true ou false requise uniquement si vous souhaitez connecter l'application en mode d'abonnement durable. Par défaut, `clean-session` a pour valeur true.|
 |`Port`|Numéro de port auquel se connecter. Indiquez 8883 ou 443. Si vous n'indiquez pas de numéro de port, le client se connecte à {{site.data.keyword.iot_short_notm}} sur le numéro de port 8883 par défaut.|
 |`MaxInflightMessages`  |Définit le nombre maximal de messages en cours pour la connexion. La valeur par défaut est 100.|
@@ -47,7 +45,7 @@ Le constructeur génère l'instance client et accepte l'objet `Propriétés` con
 
 L'objet `Propriétés` crée des définitions qui sont utilisées pour interagir avec le module {{site.data.keyword.iot_short_notm}}.
 
-L'exemple de code suivant montre comment les terminaux peuvent publier des événements en mode Quickstart. 
+L'exemple de code suivant montre comment les terminaux peuvent publier des événements en mode Quickstart.
 
 ```
 package com.ibm.iotf.sample.client.device;
@@ -141,7 +139,7 @@ public class RegisteredDeviceEventPublish {
 
 ### Utilisation d'un fichier de configuration
 
-Au lieu d'utiliser directement l'objet `Properties`, vous pouvez utiliser un fichier de configuration contenant les paires nom-valeur pour les propriétés. Si vous utilisez un fichier de configuration contenant un objet `Properties`, utilisez le format de code suivant : 
+Au lieu d'utiliser directement l'objet `Properties`, vous pouvez utiliser un fichier de configuration contenant les paires nom-valeur pour les propriétés. Si vous utilisez un fichier de configuration contenant un objet `Properties`, utilisez le format de code suivant :
 
 ```
 package com.ibm.iotf.sample.client.device;
@@ -199,7 +197,7 @@ Le fichier de configuration de l'application doit posséder le format suivant :
 
 Pour établir la connexion à {{site.data.keyword.iot_short_notm}}, utilisez la fonction `connect()`. La fonction `connect()` inclut un paramètre booléen facultatif appelé `autoRetry`, qui détermine si la bibliothèque tente de se reconnecter si un échec de connexion MqttException se produit. Par défaut, `autoRetry` a pour valeur true. Si une connexion MqttSecurityException échoue en raison de détails d'enregistrement de terminal incorrects, la bibliothèque ne tente pas de se reconnecter, même si `autoRetry` a pour valeur true.
 
-Afin de définir l'intervalle 'keep alive' pour MQTT, vous pouvez éventuellement utiliser la méthode `setKeepAliveInterval(int)` avant d'appeler la fonction `connect()`. La valeur `setKeepAliveInterval(int)` est mesurée en secondes et définit l'intervalle de temps maximal entre les messages envoyés ou reçus. Lorsque cette valeur d'intervalle est utilisée, le client peut détecter à quel moment le serveur n'est plus disponible sans avoir à attendre la fin du délai d'attente TCP/IP. Le client s'assure qu'au moins un message transite par le réseau au cours de chaque période d'intervalle 'keep alive'. Si aucun message relatif aux données n'est reçu pendant le délai d'attente, le client envoie un petit message `ping` dont le serveur accuse réception. Par défaut, le paramètre `setKeepAliveInterval(int)` prend la valeur 60 secondes. Pour désactiver la fonction de traitement 'keep alive' sur le client, affectez la valeur 0 au paramètre `setKeepAliveInterval(int)`. 
+Afin de définir l'intervalle 'keep alive' pour MQTT, vous pouvez éventuellement utiliser la méthode `setKeepAliveInterval(int)` avant d'appeler la fonction `connect()`. La valeur `setKeepAliveInterval(int)` est mesurée en secondes et définit l'intervalle de temps maximal entre les messages envoyés ou reçus. Lorsque cette valeur d'intervalle est utilisée, le client peut détecter à quel moment le serveur n'est plus disponible sans avoir à attendre la fin du délai d'attente TCP/IP. Le client s'assure qu'au moins un message transite par le réseau au cours de chaque période d'intervalle 'keep alive'. Si aucun message relatif aux données n'est reçu pendant le délai d'attente, le client envoie un petit message `ping` dont le serveur accuse réception. Par défaut, le paramètre `setKeepAliveInterval(int)` prend la valeur 60 secondes. Pour désactiver la fonction de traitement 'keep alive' sur le client, affectez la valeur 0 au paramètre `setKeepAliveInterval(int)`.
 
 
 ```
@@ -208,7 +206,7 @@ myClient.setKeepAliveInterval(120);
 myClient.connect(true);
 ```
 
-Pour contrôler le nombre de tentatives en cas d'échec d'une connexion, utilisez la fonction overloaded connect(int numberOfTimesToRetry). 
+Pour contrôler le nombre de tentatives en cas d'échec d'une connexion, utilisez la fonction overloaded connect(int numberOfTimesToRetry).
 
 
 ```
@@ -217,7 +215,7 @@ myClient.setKeepAliveInterval(120);
 myClient.connect(10);
 ```
 
-Une fois qu'ils sont connectés à {{site.data.keyword.iot_short_notm}}, vos terminaux peuvent publier des événements et s'abonner afin de recevoir des commandes de terminal d'une application. 
+Une fois qu'ils sont connectés à {{site.data.keyword.iot_short_notm}}, vos terminaux peuvent publier des événements et s'abonner afin de recevoir des commandes de terminal d'une application.
 
 
 ## Publication d'événements
@@ -245,7 +243,7 @@ myClient.publishEvent("status", event);
 
 ### Augmentation du niveau QoS pour un événement
 
-Vous pouvez augmenter les [niveaux QoS](../../reference/mqtt/index.html#qos-levels) des événements qui sont publiés. La publication des événements dont le niveau QoS est supérieur à zéro peut prendre plus de temps, en raison des informations de réception de confirmation supplémentaires qui sont incluses. 
+Vous pouvez augmenter les [niveaux QoS](../../reference/mqtt/index.html#qos-levels) des événements qui sont publiés. La publication des événements dont le niveau QoS est supérieur à zéro peut prendre plus de temps, en raison des informations de réception de confirmation supplémentaires qui sont incluses.
 
 ```
 myClient.connect();
@@ -272,8 +270,6 @@ status = myClient.publishEvent("load", data, "text", 2);
 
 **Remarque :** Dans l'exemple de code précédent, le contenu de l'événement doit être au format chaîne.
 
-
-
 Toutes les données XML peuvent être converties au format chaîne et publiées comme suit :
 
 ```
@@ -293,9 +289,9 @@ status = myClient.publishEvent("blink", cpuLoad , "binary", 1);
 {: #publishing_events_http}
 
 
-Outre l'utilisation de MQTT, vous pouvez également configurer vos terminaux pour qu'ils publient des événements sur {{site.data.keyword.iot_short_notm}} via HTTP. Les étapes suivantes permettent de publier des événements via HTTP : 
+Outre l'utilisation de MQTT, vous pouvez également configurer vos terminaux pour qu'ils publient des événements sur {{site.data.keyword.iot_short_notm}} via HTTP. Les étapes suivantes permettent de publier des événements via HTTP :
 
-1. Construire une instance `DeviceClient` à l'aide du fichier de propriétés. 
+1. Construire une instance `DeviceClient` à l'aide du fichier de propriétés.
 2. Construire un événement à publier.
 3. Spécifier le nom d'événement et publier l'événement à l'aide de la méthode `publishEventOverHTTP()`, comme illustré dans le code suivant :
 
@@ -310,11 +306,11 @@ event.addProperty("mem",  70);
 boolean response  = myClient.api().publishDeviceEventOverHTTP("blink", event, ContentType.json);
 ```
 
-Pour visualiser la totalité du code, voir l'exemple de terminal [HttpDeviceEventPublish]. 
+Pour visualiser la totalité du code, voir l'exemple de terminal [HttpDeviceEventPublish].
 
-En fonction des paramètres définis dans le fichier de propriétés, la méthode `publishEventOverHTTP()` publie l'événement en mode Quickstart ou en mode de flux enregistré. Lorsque l'ID d'organisation défini dans le fichier de propriétés a pour valeur `quickstart`, la méthode `publishEventOverHTTP()` publie l'événement sur le service Quickstart de l'exemple de terminal au format HTTP normal. Lorsqu'une organisation enregistrée valide est spécifiée dans le fichier de propriétés, les événements sont publiés de manière sécurisée via HTTPS. 
+En fonction des paramètres définis dans le fichier de propriétés, la méthode `publishEventOverHTTP()` publie l'événement en mode Quickstart ou en mode de flux enregistré. Lorsque l'ID d'organisation défini dans le fichier de propriétés a pour valeur `quickstart`, la méthode `publishEventOverHTTP()` publie l'événement sur le service Quickstart de l'exemple de terminal au format HTTP normal. Lorsqu'une organisation enregistrée valide est spécifiée dans le fichier de propriétés, les événements sont publiés de manière sécurisée via HTTPS.
 
-Le protocole HTTP fournit une distribution de type 'une fois tout au plus', semblable au niveau de qualité de service 'une fois tout au plus' (QoS 0) du protocole MQTT. Lorsque vous utilisez la distribution de type 'une fois tout au plus' pour publier des événements, l'application doit implémenter une logique de relance au cas où une erreur se produirait. 
+Le protocole HTTP fournit une distribution de type 'une fois tout au plus', semblable au niveau de qualité de service 'une fois tout au plus' (QoS 0) du protocole MQTT. Lorsque vous utilisez la distribution de type 'une fois tout au plus' pour publier des événements, l'application doit implémenter une logique de relance au cas où une erreur se produirait.
 
 [HttpDeviceEventPublish]: https://github.com/ibm-messaging/iot-device-samples/blob/master/java/device-samples/src/main/java/com/ibm/iotf/sample/client/device/HttpDeviceEventPublish.java
 
@@ -322,7 +318,7 @@ Le protocole HTTP fournit une distribution de type 'une fois tout au plus', semb
 {: #handling_commands}
 
 Lorsque le client du terminal se connecte, il s'abonne automatiquement aux commandes de ce terminal. Pour traiter des commandes spécifiques, vous devez enregistrer une méthode de rappel de commande.
-Les messages sont renvoyés en tant qu'instance de la classe `Command` qui possède les propriétés suivantes : 
+Les messages sont renvoyés en tant qu'instance de la classe `Command` qui possède les propriétés suivantes :
 
 | Propriété     |Type de données     | Description|
 |----------------|----------------|

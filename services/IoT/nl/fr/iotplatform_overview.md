@@ -1,7 +1,8 @@
 ---
 
-copyright :
-  2016
+copyright:
+  years: 2016
+lastupdated: "2016-08-01"
 
 ---
 
@@ -13,8 +14,6 @@ copyright :
 
 # A propos de {{site.data.keyword.iot_short_notm}}
 {: #about_iotplatform}
-Dernière mise à jour : 1er août 2016
-{: .last-updated}
 
 {{site.data.keyword.iot_full}} fournit aux applications un accès puissant aux terminaux et aux données IoT afin de vous aider à composer rapidement des applications d'analyse, des tableaux de bord de visualisation et des applications IoT mobiles.
 {:shortdesc}

@@ -1,7 +1,8 @@
 ---
 
-copyright :
-  2016
+copyright:
+  years: 2016
+lastupdated: "2016-08-30"
 
 ---
 
@@ -13,10 +14,7 @@ copyright :
 
 
 # Développement de contrats intelligents pour l'intégration de chaîne de blocs {{site.data.keyword.iot_short_notm}}
-
 {: #iotblockchain_link}
-Dernière mise à jour : 30 août 2016
-{: .last-updated}
 
 Utilisez {{site.data.keyword.blockchainfull}} et l'environnement de développement Hyperledger pour créer et tester vos propres contrats intelligents à partir d'exemples de contrat fournis par IBM.
 {:shortdesc}
@@ -62,7 +60,7 @@ Un certain nombre d'exemples de contrats peuvent être téléchargés depuis le 
 |Exemple de contrat |Description |
 |:---|:---|
 |[De base : Contrat simple](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/basic/simple_contract) | Version simplifiée du contrat avancé qui vous permet de suivre et stocker des données d'actif de terminal sur la chaîne de blocs.
-|[Avancé : Exemple de contrat générique IoT](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/advanced/iot_sample_contract) | Exemple de contrat avancé doté de nombreuses fonctions et dont le modèle de données et le comportement revêtent un aspect **commercial**. |
+|[Avancé : Exemple de contrat générique IoT](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/contracts/advanced/iot_sample_contract) | Exemple de contrat avancé doté de nombreuses fonctions et dont le modèle de données et le comportement revêtent un aspect **commercial**.|
 
 
 ## Configuration de votre environnement {{site.data.keyword.blockchainfull_notm}}

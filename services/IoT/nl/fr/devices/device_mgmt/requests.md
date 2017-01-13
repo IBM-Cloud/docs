@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-08"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # Demandes de gestion des terminaux
 {: #requests}
-Dernière mise à jour : 8 septembre 2016
-{: .last-updated}
 
 
 {{site.data.keyword.iot_full}} fournit des actions qui peuvent être lancées pour un ou plusieurs terminaux. Ces actions peuvent être lancées à l'aide du tableau de bord ou de l'API REST. Les types d'action disponibles sont les **actions sur les terminaux** et les **actions sur le microprogramme**.
@@ -467,14 +466,15 @@ Message:
 {
    "reqId" : "909b477c-cd37-4bee-83fa-1d568664fbe8",
       "d" : {
-      "fields" : [ {
+      "fields" : [
+         {
             "field" : "mgmt.firmware"
          }
       ]
    }
 }
 
-   Réponse sortante depuis le terminal :
+Réponse sortante depuis le terminal :
 
 Topic: iotdevice-1/response
 Message:
@@ -484,7 +484,7 @@ Message:
    "d" : {
       "fields" : [{
             "field" : "mgmt.firmware",
-         "value" : {
+            "value" : {
                "state" : 0,
                "updateStatus" : 0
             }

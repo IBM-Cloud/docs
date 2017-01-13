@@ -2,10 +2,11 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-05"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -13,23 +14,19 @@ copyright:
 
 # Extension de la gestion des terminaux
 {: #custom_actions}
-Dernière mise à jour : 11 juillet 2016
-{: .last-updated}
 
-Vous pouvez étendre les fonctions de gestion des terminaux dans {{site.data.keyword.iot_full}} en fonction de vos besoins en ajoutant des extensions de gestion des terminaux à l'aide de l'API REST ou du tableau de bord qui est fourni dans {{site.data.keyword.Bluemix_notm}}.
+Vous pouvez étendre les fonctions de gestion des terminaux dans {{site.data.keyword.iot_full}} en fonction de vos besoins en ajoutant des extensions de gestion des terminaux. Les extensions de gestion des terminaux peuvent être ajoutées à l'aide de l'API REST ou du tableau de bord {{site.data.keyword.iot_short_notm}}.
 
-Par défaut, les actions de gestion des terminaux suivantes sont fournies et prises en charge par {{site.data.keyword.iot_short_notm}} :
+Par défaut, les actions de gestion des terminaux suivantes sont prises en charge par {{site.data.keyword.iot_short_notm}} :
 - Réamorçage de terminal
 - Réinitialisation avec les paramètres d'usine
 - Téléchargement de microprogramme
 - Mise à jour de microprogramme
 
-Si les actions de terminal par défaut qui sont fournies par {{site.data.keyword.iot_short_notm}} ne sont pas suffisantes pour vos terminaux et vos applications, vous pouvez développer des fonctions de gestion de terminaux supplémentaires en implémentant un package d'extension de gestion des terminaux.
-
 ## Packages d'extension de gestion des terminaux
 {: #device_management_ext}
 
-Un package d'extension de gestion des terminaux est un document JSON qui définit un ensemble d'actions de gestion des terminaux. Les actions peuvent être lancées sur un ou plusieurs terminaux qui prennent en charge les actions. Les actions sont lancées à l'aide du tableau de bord {{site.data.keyword.iot_short_notm}} ou des commandes d'API REST de gestion des terminaux.
+Un package d'extension de gestion des terminaux est un document JSON qui définit au moins une action de gestion des terminaux. Les actions peuvent être lancées sur tous les terminaux prenant en charge les actions en utilisant le tableau de bord {{site.data.keyword.iot_short_notm}} ou l'API REST.
 
 L'exemple de code suivant présente le format standard d'un package d'extension de gestion des terminaux :
 
@@ -76,7 +73,7 @@ Un package d'extension de gestion des terminaux contient les propriétés suivan
 |`bundleId`|Identificateur unique d'une extension de gestion des terminaux.|Oui|
 |`version`|Chaîne de version d'une extension de gestion des terminaux.|Non|
 |`provider`|Chaîne de fournisseur d'une extension de gestion des terminaux, limitée à 1024 caractères.|Non|
-|`displayName`|Mappe de paires clé-valeur `locale`:`String` affichées dans le tableau de bord {{site.data.keyword.iot_short_notm}}. Vous devez spécifier au moins une entrée.|Oui|
+|`displayName`|Mappe de paires valeur-clé `locale`:`String` affichées dans le tableau de bord {{site.data.keyword.iot_short_notm}}. Vous devez spécifier au moins une entrée.|Oui|
 |`description`|Mappe de paires clé-valeur `locale`:`String` utilisées à des fins d'affichage dans le tableau de bord {{site.data.keyword.iot_short_notm}}. Si cette propriété est définie, vous devez spécifier au moins une entrée.|Non|
 |`actions`| Mappe de paires clé-valeur `actionId`:`<action>` qui définissent les actions contenues dans une extension de gestion des terminaux. Vous devez spécifier au moins une entrée.|Oui|
 
@@ -121,12 +118,12 @@ Utilisez les commandes d'API REST {{site.data.keyword.iot_short_notm}} suivantes
 Pour plus d'informations sur les API REST pour les packages d'extension de gestion des terminaux, voir la [documentation {{site.data.keyword.iot_short_notm}} API V2](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 
-##Prise en charge des actions de gestion des terminaux personnalisées
+## Prise en charge des actions de gestion des terminaux personnalisées
 {: #supporting_custom_device_management_actions}
 
 Les actions de gestion des terminaux qui sont définies dans vos packages d'extension ne peuvent être lancées que par des terminaux qui prennent en charge ces actions. Lorsqu'un terminal publie une demande de gestion sur {{site.data.keyword.iot_short_notm}}, le terminal spécifie les types d'action qu'il peut prendre en charge.
 
-Pour recevoir des actions personnalisées d'un package d'extension, le terminal doit spécifier l'identificateur de bundle du package d'extension dans l'objet supports de la demande, comme illustré dans l'exemple suivant :
+Pour indiquer des actions personnalisées d'un package d'extension, le terminal doit spécifier l'identificateur de bundle du package d'extension dans l'objet supports de la demande, comme illustré dans l'exemple suivant :
 
 ```
 	Message sortant depuis le terminal :

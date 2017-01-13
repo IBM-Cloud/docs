@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-14"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # Node.js pour les développeurs de terminaux
 {: #nodejs}
-Dernière mise à jour : 14 septembre 2016
-{: .last-updated}
 
 Vous pouvez adapter les bibliothèques et exemples client dans Node.js afin de générer et développer un code de terminal qui interagit avec votre organisation sur {{site.data.keyword.iot_full}}.
 {:shortdesc}

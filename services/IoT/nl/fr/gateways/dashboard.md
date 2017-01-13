@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-27"
 
 ---
 
@@ -14,7 +15,6 @@ copyright:
 
 # Connexion de passerelles
 {: #IoT_connectGateway}
-Dernière mise à jour : 28 juillet 2016
 
 Avant de pouvoir commencer à recevoir des données depuis des terminaux connectés à vos passerelles, vous devez connecter la passerelle à {{site.data.keyword.iot_full}}. Connecter une passerelle à {{site.data.keyword.iot_short_notm}} implique de créer un type de terminal de passerelle et d'enregistrer la passerelle auprès de {{site.data.keyword.iot_short_notm}}. Vous pouvez ensuite utiliser les informations d'enregistrement pour connecter la passerelle à {{site.data.keyword.iot_short_notm}}.
 {:shortdesc}
@@ -26,7 +26,7 @@ Les passerelles représentent une classe spécialisée de terminal dans {{site.d
 {: #Prerequisites}
 
 Les terminaux de passerelle possèdent des autorisations supplémentaires par rapport aux terminaux réguliers et peuvent exécuter les fonctions suivantes :
-- Enregistrer de nouveaux terminaux sur Watson IoT Platform
+- Enregistrer de nouveaux terminaux sur {{site.data.keyword.iot_short_notm}} 
 - Envoyer et recevoir leurs propres données de détection, tout comme un terminal connecté
 - Envoyer et recevoir des données pour le compte des terminaux qui leur sont connectés
 - Exécuter un agent de gestion des terminaux, de manière à pouvoir le gérer, et gérer les terminaux qui lui sont connectés  
@@ -48,13 +48,26 @@ Pour ajouter une passerelle depuis le tableau de bord {{site.data.keyword.iot_sh
 3. Sélectionnez ou créez un type de terminal pour le terminal que vous ajoutez.  
 Chaque terminal connecté à {{site.data.keyword.iot_short_notm}} doit être associé à un type de terminal. Les types de terminal sont des groupes de terminaux ayant des caractéristiques communes.  
  1. Cliquez sur **Créer un type de terminal**, puis sur **Créer un type de passerelle**.
- 2. Entrez un nom, par exemple, `my_gateway_type`, et une description pour le type de passerelle.
- 3. Facultatif : Entrez des métadonnées et des attributs de type de passerelle.    
+ 2. Entrez un nom de type de terminal, par exemple, `my_gateway_type`, et une description pour le type de passerelle.**Important :** Le nom du type de terminal ne doit pas dépasser 36 caractères et peut uniquement contenir les caractères suivants :
+ <ul>
+  <li>Caractères alphanumériques (a-z, A-Z, 0-9)</li>
+  <li>Traits d'union (-)</li>
+  <li>Traits de soulignement (&lowbar;)</li>
+  <li>Points (.)</li>
+  </ul>3. Facultatif : Entrez des métadonnées et des attributs de type de passerelle.     
  **Astuce :** Vous pouvez ajouter et éditer des attributs et des métadonnées ultérieurement.
  4. Cliquez sur **Créer** pour ajouter le nouveau type de passerelle.
 10. Cliquez sur **Suivant** pour commencer le processus d'ajout de votre terminal de passerelle avec le type de passerelle sélectionné.
-11. Entrez un ID de passerelle, par exemple, `my_gateway_device`.  
-L'ID de terminal permet d'identifier le terminal de passerelle dans le tableau de bord {{site.data.keyword.iot_short_notm}} et représente également un paramètre requis pour la connexion de votre terminal de passerelle à {{site.data.keyword.iot_short_notm}}.
+11. Entrez un ID de terminal, tel que `my_gateway_device`.  L'ID de terminal permet d'identifier le terminal de passerelle dans le tableau de bord {{site.data.keyword.iot_short_notm}} et représente également un paramètre requis pour la connexion de votre terminal de passerelle à {{site.data.keyword.iot_short_notm}}.  
+**Important :** L'ID de terminal ne doit pas dépasser 36 caractères et peut uniquement contenir les caractères suivants :
+ <ul>
+ <li>Caractères alphanumériques (a-z, A-Z, 0-9)</li>
+ <li>Traits d'union (-)</li>
+ <li>Traits de soulignement (&lowbar;)</li>
+ <li>Points (.)</li>  
+ </ul>
+ **Astuce :** Pour les terminaux connectés à un réseau, l'ID de terminal pourrait être par exemple l'adresse MAC du terminal sans aucun deux-points de séparation.
+  
 12. Facultatif : Cliquez sur **Zones supplémentaires** pour ajouter des informations de terminal de passerelle, par exemple, le numéro de série, le fabricant, le modèle, etc.  
  **Astuce :** Vous pouvez ajouter et éditer ces informations ultérieurement.
 12. Facultatif : Entrez les métadonnées JSON de terminal.  
@@ -79,7 +92,7 @@ Après avoir enregistré une passerelle auprès de {{site.data.keyword.iot_short
 
 Pour plus d'informations sur la connexion de votre passerelle à {{site.data.keyword.iot_short_notm}}, voir [Connectivité MQTT pour les passerelles](mqtt.html).
 
-**Astuce :** Il existe une gamme de recettes disponibles pour la connexion de terminaux à {{site.data.keyword.iot_short_notm}}. Pour obtenir une liste de recettes, voir les [recettes de connexion de terminal](https://developer.ibm.com/recipes/?post_type=tutorials&s=IoT) disponibles sur IBM.com.
+**Astuce :** Il existe une gamme de recettes disponibles pour la connexion de terminaux à {{site.data.keyword.iot_short_notm}}. Pour obtenir une liste de recettes, voir les [recettes de connexion de terminal](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/) disponibles sur IBM.com.
 
 
 ## Etape 3 : Connexion de terminaux via la passerelle
@@ -116,7 +129,9 @@ Pour installer l'agent EAA sur votre passerelle :
 Vous pouvez utiliser le fichier config.properties de l'agent EAA pour définir des paramètres de configuration logicielle de base.
 
 Pour mettre à jour la configuration de l'agent EAA :
-1. Sur le système de passerelle sur lequel s'exécute l'agent EAA, localisez le fichier config.properties de ce dernier.
+1. Sur le système de passerelle sur lequel s'exécute l'agent EAA, localisez le fichier config.properties de ce dernier.  
+Par exemple :
+`../dglux-server/dslinks/ibm-watson-iot-edge-analytics-dslink-java-0.0.1/config.properties`
 2. Avant de commencer à éditer les paramètres, faites une copie de sauvegarde du fichier.
 3. Ouvrez le fichier config.properties pour l'éditer.
 4. Editez les paramètres de configuration pour votre environnement :

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-14"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # Connectivité MQTT pour les passerelles
 {: #mqtt}
-Dernière mise à jour : 14 septembre 2016
-{: .last-updated}
 
 MQTT est le principal protocole utilisé par les terminaux et les applications pour communiquer avec {{site.data.keyword.iot_full}}. Des bibliothèques client, des informations et des exemples vous sont fournis afin de vous aider à utiliser les clients MQTT en tant que passerelles pour la connexion de vos terminaux à {{site.data.keyword.iot_short_notm}}.
 {:shortdesc}

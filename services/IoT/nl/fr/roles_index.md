@@ -1,7 +1,8 @@
 ---
 
-copyright :
-  2016
+copyright:
+  years: 2016
+lastupdated: "2016-09-16"
 
 ---
 
@@ -12,8 +13,6 @@ copyright :
 {:pre: .pre}
 
 # Rôles d'utilisateur, d'application et de passerelle
-Dernière mise à jour : 16 septembre 2016
-{: .last-updated}
 
 Les rôles sont des ensembles de droits que vous pouvez utiliser pour accorder ou restreindre l'accès à certaines opérations. Vous pouvez utiliser des rôles afin de gérer des droits pour des groupes d'utilisateurs, d'applications et de passerelles.
 {:shortdesc}
@@ -27,7 +26,7 @@ Les rôles d'utilisateur standard suivants sont disponibles :
 
 Rôle d'utilisateur | Description
 ------------- | -------------
-Administrateur | Rôle de superutilisateur qui accorde un accès à toutes les API liées aux utilisateurs. Les administrateurs ne peuvent pas accéder à des opérations qui sont limitées à des terminaux et à des applications. 
+Administrateur | Rôle de superutilisateur qui accorde un accès à toutes les API liées aux utilisateurs. Les administrateurs ne peuvent pas accéder à des opérations qui sont limitées à des terminaux et à des applications.
 Opérateur | Destiné aux utilisateurs de l'organisation principale. Accorde un accès à la plupart des opérations d'organisation, de contrôle d'accès, d'analyse, de service de tiers et de gestion des risques.
 Développeur | Accorde un accès illimité aux opérations de terminal, de journal, de cache, d'historique, d'analyse et de service de tiers. Il fournit un accès limité aux opérations d'organisation, de contrôle d'accès et de gestion des risques.
 Analyste | Accorde un accès aux opérations d'analyse, y compris la création, la mise à jour et la suppression de règles, d'actions et de schémas.

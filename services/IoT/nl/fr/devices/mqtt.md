@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-21"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # Connectivité MQTT pour les terminaux
 {: #mqtt}
-Dernière mise à jour : 21 septembre 2016
-{: .last-updated}
 
 MQTT est le principal protocole utilisé par les terminaux et les applications pour communiquer avec {{site.data.keyword.iot_full}}. Des bibliothèques client, des exemples et des informations vous sont fournis afin de vous aider à connecter et intégrer vos terminaux à {{site.data.keyword.iot_short_notm}}.
 {:shortdesc}

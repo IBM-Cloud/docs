@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-02"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # Embedded C pour les développeurs de terminaux
 {: #embedded_c}
-Dernière mise à jour : 2 août 2016
-{: .last-updated}
 
 Vous pouvez utiliser Embedded C pour générer et personnaliser des terminaux qui interagissent avec votre organisation sur {{site.data.keyword.iot_full}}. Utilisez les informations et les exemples fournis pour commencer à développer vos terminaux à l'aide de Embedded C.
 {:shortdesc}
@@ -37,7 +36,7 @@ Pour accéder aux bibliothèques et exemples client Embedded C pour {{site.data.
 ## Installation
 {: #installation}
 
-Pour installer la bibliothèque client {{site.data.keyword.iot_full}} pour Embedded C, exécutez les instructions suivantes :
+Pour installer la bibliothèque client {{site.data.keyword.iot_short_notm}} pour Embedded C, exécutez les instructions suivantes :
 
 1. Pour installer la dernière version de la bibliothèque, entrez le code suivant sur la ligne de commande :
 ```

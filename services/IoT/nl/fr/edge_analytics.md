@@ -1,7 +1,8 @@
 ---
 
-copyright :
-  2016
+copyright:
+  years: 2016
+lastupdated: "2016-10-27"
 
 ---
 
@@ -14,8 +15,6 @@ copyright :
 
 # Edge analytics
 {: #edge_analytics}
-Dernière mise à jour : 1er août 2016
-{: .last-updated}
 
 Avec Edge Analytics, le processus d'analyse déclenché par des règles depuis le cloud est remplacé par une passerelle sur laquelle Edge Analytics est activé. Cela peut vous permettre de réduire considérablement la quantité de données de terminal envoyées vers le cloud car le traitement des analyses est exécutée à proximité du terminal.
 {:shortdesk}
@@ -33,7 +32,7 @@ Le diagramme suivant illustre l'architecture générale d'un environnement {{sit
 Avant de commencer à créer des règles et des actions Edge :
 - Assurez-vous que votre passerelle est connectée à {{site.data.keyword.iot_short}} et que les données de terminal sont transmises. Pour plus d'informations, voir [Connexion de passerelles](gateways/dashboard.html).
 - Installez l'agent Edge Analytics Agent (EAA) sur votre passerelle. Pour plus d'informations, voir [Installation de l'agent Edge Analytics Agent](gateways/dashboard.html#edge). </br> **Astuce : ** Les passerelles sur lesquelles l'agent EAA est activé fournissent des données de diagnostic EAA sous la forme de messages de terminal de passerelle. Pour plus d'informations, voir [Mesures de diagnostic Edge Analytics Agent](#eaa_metrics).
-- Assurez-vous que les propriétés de terminal que vous souhaitez utiliser comme conditions dans vos règles ont été mappées à des schémas. Pour plus d'informations, voir [Connexion de terminaux](iotplatform_task.html) et [Création de schémas](im_schemas.html).
+- Assurez-vous que les propriétés de terminal que vous souhaitez utiliser comme conditions dans vos règles sont mappées à des schémas. Pour plus d'informations, voir [Connexion de terminaux](iotplatform_task.html) et [Création de schémas](im_schemas.html).
 
 ## Gestion des règles et des actions Edge  
 {: #managing_rules}
@@ -42,14 +41,14 @@ Les règles Edge sont gérées à l'aide des éléments suivants :
 - Le tableau de bord **Règles** vous permet de créer et d'éditer des règles et des actions Cloud et Edge pour vos terminaux et vos passerelles.
 - Le tableau **Passerelles de règles Edge** vous permet d'activer, de désactiver, de mettre à jour et de retirer une règle Edge sur vos passerelles. Pour accéder à ce tableau, depuis le tableau de bord Règles, cliquez sur **Gérer la règle** pour la règle Edge que vous souhaitez gérer. Pour plus d'informations, voir [Activation, désactivation et gestion des règles Edge pour vos passerelles](#manage).
 
-Pour obtenir une présentation des règles et des alertes Edge déclenchées pour vos terminaux connectés via une passerelle, utilisez les tableaux suivants :
+Pour obtenir une présentation des règles et des alertes Edge qui ont été déclenchées pour vos terminaux connectés à une passerelle, utilisez les tableaux suivants :
 
- |Nom de tableau | Description |  
+|Nom de tableau | Description |  
  |:---|:---|  
   |Analyse centrée sur la règle | Affiche les règles de votre organisation, y compris les règles Edge. Des cartes supplémentaires recensent les alertes Edge transmises, les terminaux associés, les propriétés de terminal et les informations sur les alertes Edge transmises. |  
  |Analyse centrée sur le terminal | Affiche les terminaux qui sont connectés à votre organisation. Des cartes supplémentaires affichent les alertes transmises pour un terminal Edge sélectionné, les informations relatives à celui-ci, les propriétés du terminal et les informations sur les alertes transmises. |
 
- Pour plus d'informations sur les cartes d'analyse par défaut, voir [Visualisation des données en temps réel à l'aide de tableaux et de cartes](data_visualization.html#default_boards).
+Pour plus d'informations sur les cartes d'analyse par défaut, voir [Visualisation des données en temps réel à l'aide de tableaux et de cartes](data_visualization.html#default_boards).
 
 
 ## Création de règles Edge
@@ -65,12 +64,14 @@ Pour créer une règle :
 3. Configurez la logique de règle.  
 Ajoutez une ou plusieurs conditions IF à utiliser comme déclencheurs de la règle.  
 Vous pouvez ajouter des conditions sur des lignes parallèles afin de les appliquer en tant que conditions OR ou vous pouvez ajouter des conditions dans des colonnes séquentielles afin de les appliquer en tant que conditions AND.  
-**Remarque :** Pour qu'une propriété de terminal puisse être sélectionnée en tant qu'entrée d'une règle, elle doit être mappée à un schéma. Pour plus d'informations, voir [Création de schémas](im_schemas.html).   
-**Important :** Pour déclencher une condition qui déclenche au moins deux conditions de propriété combinées de manière séquentielle à l'aide de l'opérateur AND, les points de données de déclenchement doivent être inclus dans le même message de terminal. S les données sont reçues dans plusieurs messages, les conditions séquentielles ne se déclenchent pas.  
-**Exemples :**
-Une règle simple peut déclencher une alerte si une valeur de paramètre est supérieure à une valeur spécifiée :
-`temp>80`
-Une règle plus complexe peut déclencher une alerte lorsqu'une combinaison de seuils est atteinte :
+**Remarque :** Pour qu'une propriété de terminal puisse être sélectionnée en tant qu'entrée d'une règle, elle doit être mappée à un schéma. Pour plus d'informations, voir [Création de schémas](im_schemas.html).  
+
+**Important :** Pour déclencher une condition qui compare deux propriétés ou pour déclencher au moins deux conditions de propriété combinées de manière séquentielle à l'aide de l'opérateur AND, les points de données de déclenchement doivent être inclus dans le même message de terminal. Si les données sont reçues dans plusieurs messages, la condition ou les conditions séquentielles ne se déclenchent pas.  
+
+**Exemples :**   
+Une règle simple peut déclencher une alerte si une valeur de paramètre est supérieure à une valeur spécifiée :  
+`temp>80`  
+Une règle plus complexe peut être déclenchée lorsqu'une combinaison de seuils est atteinte :  
 `temp>60 AND capacity>50`   
 
 4. Configurez les exigences de déclenchement conditionnel pour votre règle.  
@@ -187,30 +188,25 @@ Pour consulter des informations sur l'état de la passerelle :
  - Consultez la section **Sensor information** pour afficher les informations de diagnostic détaillées provenant de la passerelle. Le tableau suivant décrit les différentes propriétés qui peuvent être incluses dans les messages de terminal de passerelle.
 
 
-Propriété | Description
---- | ---
-`MsgInCount` |Nombre de messages ayant été envoyés à l'agent Edge Analytics Agent (EAA).
-`MsgInRate`, `MsgInRate1Min`, `MessageInRate5Min`, `MsgInRate15Min`, `MsgInMeanRate` | Nombre estimé de messages par seconde ayant été envoyés à l'agent EAA durant la période précédente.  </br>**Remarque :** `MsgInRate` est un alias pour `MsgInRate1Min`. `MsgInMeanRate` est le débit de messages moyen depuis le démarrage.
-`LastHeartBeat` | Horodatage en millisecondes correspondant à la dernière fois que le message de contact a été généré. Un message de contact est généré au moins toutes les 10 secondes.
-`CurrentTimestamp` | Horodatage en millisecondes correspondant à la dernière fois que le message de surveillance en cours a été généré.
+ Propriété | Description
+ --- | ---
+ `MsgInCount` |Nombre de messages ayant été envoyés à l'agent Edge Analytics Agent (EAA).
+ `MsgInRate` | Nombre estimé de messages par seconde ayant été envoyés à l'agent EAA durant la minute précédente.    
+ `LastHeartBeat` | Horodatage en millisecondes correspondant à la génération du dernier message de contact. Un message de contact est généré au moins toutes les 10 secondes.
+`CurrentTimestamp` | Horodatage en millisecondes correspondant à la génération du message de surveillance en cours.
 `IsAlive` | Cette propriété a pour valeur 0 si la différence entre `LastHeartBeat` et `CurrentTimestamp` est supérieure à 20 secondes.
-`BytesOutCount` | Nombre d'octets de message envoyés par l'agent EAA à {{site.data.keyword.iot_short}}.
-`BytesOutRate`, `BytesOutRate1Min`, `BytesOutRate15Min`, `BytesOutRate5Min`, `BytesOutMeanRate` | Nombre estimé d'octets de message par seconde ayant été envoyés par l'agent EAA à {{site.data.keyword.iot_short}} durant la période précédente. </br>**Remarque :** `BytesOutRate` est un alias pour `BytesOutRate1Min`. `BytesOutMeanRate` est le débit moyen depuis le démarrage.
-`BytesInCount` | Nombre d'octets de message envoyés par {{site.data.keyword.iot_short}} à l'agent EAA.
-`BytesInMeanRate`, `BytesInRate1Min`, `BytesInRate`, `BytesInRate15Min`, `BytesInRate5Min` | Nombre estimé d'octets de message par seconde ayant été envoyés par {{site.data.keyword.iot_short}} à l'agent EAA durant la période précédente. </br>**Remarque :** BytesOutRate est un alias pour BytesOutRate1Min. BytesOutMeanRate calcule le débit moyen depuis le démarrage.
-`RuleBytesInCount` |Nombre d'octets de message envoyés au coeur du moteur de règles EAA. </br> **Remarque :** Si aucune règle n'est définie pour un type de terminal, les messages pour ce type de terminal ne sont pas envoyés au coeur du moteur de règles.
-`RuleBytesInRate5Min`, `RuleBytesInRate`, `RuleBytesInMeanRate`, `RuleBytesInRate1Min`, `RuleBytesInRate15Min` | Nombre estimé d'octets de message par seconde ayant été envoyés au coeur du moteur de règles EAA durant la période précédente. </br> **Remarque :** `RuleBytesInMeanRate` est le débit moyen depuis le démarrage.
-`MsgOutCount` | Nombre de messages ayant été envoyés par l'agent EAA à {{site.data.keyword.iot_short}}.
-`MsgOutRate`, `MsgOutMeanRate`, `MsgOutRate1Min`, `MessageOutRate5Min`, `MsgOutRate15Min` | Nombre estimé d'octets de messages par seconde envoyés par l'agent EAA à {{site.data.keyword.iot_short}} durant la période précédente.</br> **Remarque :** `MsgOutRate` est un alias pour `MsgOutRate1Min`. `MsgOutMeanRate` est le débit moyen depuis le démarrage.
-`MsgReducePercent` | Différence de pourcentage entre les messages entrants et sortants. </br>La formule suivante est utilisée pour le calcul : `(msgIn - msgOut) / msgIn`
+ `BytesOutCount` | Nombre d'octets de message envoyés par l'agent EAA à {{site.data.keyword.iot_short}}.
+ `BytesOutRate` | Nombre estimé d'octets de message par seconde ayant été envoyés par l'agent EAA à {{site.data.keyword.iot_short}} durant la minute précédente. `BytesInCount` | Nombre d'octets de message envoyés par {{site.data.keyword.iot_short}} à l'agent EAA.
+ `BytesInRate` | Nombre estimé d'octets de message par seconde ayant été envoyés par {{site.data.keyword.iot_short}} à l'agent EAA durant la minute précédente. `RuleBytesInCount` |Nombre d'octets de message envoyés au coeur du moteur de règles EAA. </br> **Remarque :** Si aucune règle n'est définie pour un type de terminal, les messages pour ce type de terminal ne sont pas envoyés au coeur du moteur de règles.
+ `RuleBytesInRate` | Nombre estimé d'octets de message par seconde ayant été envoyés au coeur du moteur de règles EAA durant la minute précédente. `MsgOutCount` | Nombre de messages ayant été envoyés par l'agent EAA à {{site.data.keyword.iot_short}}.
+ `MsgOutRate` | Nombre estimé d'octets de messages par seconde envoyés par l'agent EAA à {{site.data.keyword.iot_short}} durant la minute précédente.`MsgReducePercent` | Différence de pourcentage entre les messages entrants et sortants. </br>La formule suivante est utilisée pour le calcul : `(msgIn - msgOut) / msgIn`
 `BytesReducePercent` | Différence de pourcentage entre les octets entrants et sortants. </br>La formule suivante est utilisée pour le calcul : `(bytesIn - bytesOut) / bytesIn`
 `MsgRateReduce` | Différence de pourcentage entre le débit de message entrant et sortant. </br>La formule suivante est utilisée pour le calcul : `(msgInRate - msgOutRate) / msgInRate`
 `BytesRateReduce` | Différence de pourcentage entre les octets de message entrants et sortants. </br>La formule suivante est utilisée pour le calcul : `(bytesInRate - bytesOutRate) / bytesInRate`
-`SystemLoad` | Charge de système en cours pour le système sur lequel l'agent EAA est en cours d'exécution. **Remarque :** Le débit de l'unité de centrale est envoyé uniquement si la commande `mpstat` est disponible sur le système sur lequel l'agent EAA est en cours d'exécution. Sinon, la charge de système moyenne pour la dernière minute est envoyée. </br>“La charge de système moyenne totalise le nombre d'entités exécutables placées en file d'attente pour les processeurs disponibles et le nombre d'entités exécutables qui s'exécutent sur les processeurs disponibles en moyenne sur une période. La façon dont est calculée la charge moyenne est spécifique du système d'exploitation mais il s'agit généralement d'une moyenne avec contrainte horaire amortie. Si la charge moyenne n'est pas disponible, une valeur négative est renvoyée. ”  
-Depuis Javadoc pour ManagementFactory.getOperatingSystemMXBean
-`FreeMemory` | Nombre d'octets de mémoire disponible pour la machine virtuelle Java sur laquelle l'agent EAA est en cours d'exécution.
+`SystemLoad` | Charge de système en cours pour le système sur lequel l'agent EAA est en cours d'exécution. **Remarque :** Le débit de l'unité de centrale est envoyé uniquement si la commande `mpstat` est disponible sur le système sur lequel l'agent EAA est en cours d'exécution. Sinon, la charge de système moyenne pour la dernière minute est envoyée. </br>“La charge de système moyenne totalise le nombre d'entités exécutables placées en file d'attente pour les processeurs disponibles et le nombre d'entités exécutables qui s'exécutent sur les processeurs disponibles en moyenne sur une période. La façon dont est calculée la charge moyenne est spécifique du système d'exploitation mais il s'agit généralement d'une moyenne avec contrainte horaire amortie. Si la charge moyenne n'est pas disponible, une valeur négative est renvoyée. ” - javadoc for *ManagementFactory.getOperatingSystemMXBean*.
+ `FreeMemory` | Nombre d'octets de mémoire disponible pour la machine virtuelle Java sur laquelle l'agent EAA est en cours d'exécution.
 `MemoryUsed` | Nombre d'octets de mémoire de machine virtuelle Java utilisés par l'agent EAA.
-`InQueueSize` | Nombre de messages placés en file d'attente pour le traitement par l'agent EAA.
-`RuleNumber` | Nombre de règles définies dans le coeur du moteur de règles.
-`ProcessorNumber` | A utiliser à des fins de débogage. Nombre de processeurs définis dans le coeur du moteur de règles </br>**Remarque :** Un processeur est l'unité d'exécution minimale dans le coeur du moteur de règles.
-`DataPointsInWindow` | Nombre total de points de données définis dans la fenêtre de temps. La taille d'octet d'un point de données varie en fonction de son type de données. Par exemple, la taille d'un point de données de type flottant/entier est égal à 8 octets tandis que celle d'un point de données de type chaîne varie en fonction de la longueur de la chaîne. Dans la plupart des cas, vous pouvez estimer l'utilisation de la mémoire de la fenêtre de temps à l'aide de la formule suivante : `DataPointsInWindow * 8`.
+ `InQueueSize` | Nombre de messages placés en file d'attente pour le traitement par l'agent EAA.
+ `RuleNumber` | Nombre de règles définies dans le coeur du moteur de règles.
+ `ProcessorNumber` | A utiliser à des fins de débogage. Nombre de processeurs définis dans le coeur du moteur de règles </br>**Remarque :** Un processeur est l'unité d'exécution minimale dans le coeur du moteur de règles.
+ `DataPointsInWindow` | Nombre total de points de données définis dans la fenêtre de temps. La taille d'octet d'un point de données varie en fonction de son type de données. Par exemple, la taille d'un point de données de type flottant/entier est égal à 8 octets tandis que celle d'un point de données de type chaîne varie en fonction de la longueur de la chaîne.  Dans la plupart des cas, vous pouvez estimer l'utilisation de la mémoire de la fenêtre de temps à l'aide de la formule suivante : `DataPointsInWindow * 8`.
