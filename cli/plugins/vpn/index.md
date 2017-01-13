@@ -417,4 +417,4 @@ Subnet address in CIDR format.
 ## general
 {: #general}
 * [IBM VPN service](/docs/services/vpn/index.html)
-* [Cloud Foundry CLI](https://console.{DomainName}/docs/cli/downloads.html){: new_window}
+* [Cloud Foundry CLI ![External link icon](../../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/cli/downloads.html){: new_window}
