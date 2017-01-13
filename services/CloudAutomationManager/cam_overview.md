@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-20"
+  years: 2016, 2017
+lastupdated: "2017-01-13"
 
 ---
 <!-- Copyright info and last updated date at top of file: REQUIRED
@@ -34,6 +34,8 @@ With the Cloud Automation Manager service, you can accelerate application delive
 <p>Cloud resource templates capture application infrastructure, cloud resources, Bluemix services, and their relationships, in a declarative text format that can be placed under version control.</p>
 
 <p>Service blueprints are cloud resource templates with additional software configuration controls that enable automated configuration of highly individualized, fit-for-purpose application environments with no programming required.</p>
+
+<p>The Cloud Automation Manager service supports the Bluemix resources that are supported by SoftLayer. For information about the SoftLayer resources, see <a href="https://github.com/softlayer/terraform-provider-softlayer/tree/master/docs/resources" target="_blank">https://github.com/softlayer/terraform-provider-softlayer/tree/master/docs/resources</a>. The only difference between the Bluemix resources and the SoftLayer resources is the actual name of the resource type, where `softlayer` is replaced by `bluemix_infrastructure`. For example the `softlayer_ssh_key` resource in SoftLayer is the `bluemix_infrastructure_ssh_key` resource in Bluemix.
 
 <!-- ## Concept title
 {: #cam_concept} -->
