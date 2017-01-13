@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-23"
+  years: 2016, 2017
+lastupdated: "2017-01-10"
 
 ---
 
@@ -20,11 +20,11 @@ By using {{site.data.keyword.iot_short}} cloud analytics, you specify rule condi
 
 For example, you might create a rule to ensure that when the device is dropped or when the temperature of the device spikes, an alert is sent to the dashboard on a user's device, and an email is sent to the administrator.
 
-**Important:** The analytics features are merged in from the {{site.data.keyword.iotrtinsights_full}} service. If your {{site.data.keyword.iot_short_notm}} organization is used as a data source for an existing {{site.data.keyword.iotrtinsights_short}} instance, Cloud and Edge Analytics is not enabled until after the existing {{site.data.keyword.iotrtinsights_short}} instances have been migrated. Continue to use the {{site.data.keyword.iotrtinsights_short}} dashboard for your analytics needs until the migration is complete. For more information, see the [IBM Watson IoT Platform blog](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} on IBM developerWorks and your existing {{site.data.keyword.iotrtinsights_short}} instance dashboards.  
-
 ## Before you begin
 {: #byb}
 Make sure that the device properties that you want to use as conditions in your rules have been mapped to schemas. See [Connecting devices](iotplatform_task.html) and [Creating schemas](im_schemas.html) for more information.
+
+Also review the recipe [Using Rules and Actions with {{site.data.keyword.iot_short}} Cloud Analytics](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/) to get feel of what are rules and actions used in Cloud Analytics.
 
 
 ## Managing rules and actions  
@@ -324,3 +324,17 @@ Variable | Description
 `{{ruleDescription}}`| The description of the rule that includes the action.
 `{{ruleCondition}}` | The rule condition that triggered the action.
 `{{message}}` | The raw device message that included the data point value that triggered the rule.
+
+## Recipes on Cloud Analytics
+
+The following recipes describe how to use Cloud Analytics features for different use cases:
+
+- [Real Time Data Analysis Using IBM Watson™ IoT Platform Analytics](https://developer.ibm.com/recipes/tutorials/real-time-data-analysis-using-ibm-watson-iot-platform-analytics/)
+
+- [Predictive Analytics on IOT Sample Data](https://developer.ibm.com/recipes/tutorials/predictive-analytics-on-iot-sample-data/)
+
+- [Device List Card SIMPLIFIES Real Time Device Monitoring on WIoTP Dashboard](https://developer.ibm.com/recipes/tutorials/device-list-card-simplifies-real-time-device-monitoring-on-wiotp-dashboard/)
+
+- [Perform Actions in IBM Watson IoT Platform Cloud Analytics](https://developer.ibm.com/recipes/tutorials/perform-actions-in-ibm-watson-iot-platform-cloud-analytics/)
+
+- [Use IBM Data Science Experience to detect time series anomalies](https://developer.ibm.com/recipes/tutorials/use-ibm-data-science-experience-to-detect-time-series-anomalies/)

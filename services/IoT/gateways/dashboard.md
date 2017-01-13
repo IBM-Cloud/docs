@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-27"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-10"
 
 ---
 
@@ -86,6 +86,8 @@ The device ID is used to identify the gateway device in the {{site.data.keyword.
 
 Congratulations, you registered your gateway device. Now you can configure your gateway device to connect to {{site.data.keyword.iot_short_notm}}
 
+Refer to the [How to Register Gateways in IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/how-to-register-gateways-in-ibm-watson-iot-platform/) recipe for step-by-step instructions that demonstrate the flow that is required to register a gateway.
+
 ## Step 2: Connecting your gateway to {{site.data.keyword.iot_short_notm}}
 {: #connect_gateway}
 
@@ -106,6 +108,8 @@ For information about device auto registration and publishing and receiving data
 
 
 When a device is successfully connected to your gateway, it displays on the dashboard of your {{site.data.keyword.iot_short_notm}} organization.
+
+Refer to recipe [Connecting Raspberry Pi as a Gateway to Watson IoT](https://developer.ibm.com/recipes/tutorials/connecting-raspberry-pi-as-a-gateway-to-watson-iot-using-node-red/) for detailed flow and description. 
 
 **Note:** In the {{site.data.keyword.iot_short_notm}} dashboard, devices and gateways that are connected directly to the {{site.data.keyword.iot_short_notm}} display a status icon to indicate that they are connected. The dashboard displays devices that are connected indirectly through a gateway as disconnected as it does not have any knowledge of a devices connectivity to the gateway.
 

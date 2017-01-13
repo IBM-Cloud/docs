@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-16"
+  years: 2016, 2017
+lastupdated: "2017-01-10"
 
 ---
 
@@ -33,8 +33,8 @@ Before you begin creating edge rules and actions:
 - Make sure that the device properties that you want to use as conditions in your rules are mapped to schemas. See [Connecting devices](iotplatform_task.html) and [Creating schemas](im_schemas.html) for more information.
 - Review Edge Analytics recipes  
 In our Recipes portal, a couple of recipes describe the steps that are required to carry out IBM Edge Analytics. The recipes clearly describe about how to install and configure IBM Edge Analytics Agent on a device that is built on top of Apache Edgent to run analytics close to an IoT data source.
- - [Getting Started with Edge Analytics in IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/getting-started-with-edge-analytics-in-watson-iot-platform/) recipe is the beginning of this series. This recipe describes setting up Cisco DSA Platform on a Laptop System and Raspberry Pi 3 Device, installing and configuring IBM Edge Analytics Agent to connect to {{site.data.keyword.iot_short}}, installing System DS Link and configuring it to connect to Edge Gateway on {{site.data.keyword.iot_short}} as an attched device, defining and Activating the Edge Rule on the Edge Gateway, and the mangement of the Edge Rule from {{site.data.keyword.iot_short}}.
- - To illustrate an advanced usage of Edge Analytics, the [Handling Alerts and Device Actions with Edge Analytics in IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/handling-alerts-and-device-actions-with-edge-analytics-in-ibm-watson-iot-platform/) recipe show cases building our own DS Link to get data from an Arduino Uno as attached device to Raspberry Pi 3 Device. Then the recipe shows case data filtering and handling of local device actions as part of the Edge Rule alert in the recipe.
+ - [Getting Started with Edge Analytics in IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/getting-started-with-edge-analytics-in-watson-iot-platform/) recipe is the beginning of this series. This recipe describes setting up Cisco DSA Platform on a Laptop System and Raspberry Pi 3 Device, installing and configuring IBM Edge Analytics Agent to connect to {{site.data.keyword.iot_short}}, installing System DS Link and configuring it to connect to Edge Gateway on {{site.data.keyword.iot_short}} as an attached device, defining and Activating the Edge Rule on the Edge Gateway, and the management of the Edge Rule from {{site.data.keyword.iot_short}}.
+ - To illustrate an advanced usage of Edge Analytics, the [Handling Alerts and Device Actions with Edge Analytics in IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/handling-alerts-and-device-actions-with-edge-analytics-in-ibm-watson-iot-platform/) recipe showcases how to build your own DS Link to transfer data from a connected Arduino Uno device to a Raspberry Pi 3 device. The recipe also showcases data filtering and handling local device actions as part of the Edge Rule alert.
 
 ## Managing edge rules and actions  
 {: #managing_rules}

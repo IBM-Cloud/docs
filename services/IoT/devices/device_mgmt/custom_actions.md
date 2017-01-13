@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-05"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-12"
 
 ---
 
@@ -450,3 +450,9 @@ Use the following API requests to manage your devices:
 - To view the status of a particular device management request:
 
 `curl -XGET -H "Content-Type: application/json" -u "<apiKey>:<apiToken>" https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/requests/<requestId>`
+
+## Recipes on Device Management Extensions
+
+The following recipes demonstrate the flow that is required to handle Device Management Extensions:
+
+- [Device Management Extension Packages in WIoT Platform](https://developer.ibm.com/recipes/tutorials/device-management-extension-packages-in-wiot-platform/) recipe provides instructions to register a managed device with {{site.data.keyword.iot_short}} so that the device can receive and handle Device Management Extension actions. The code samples in the recipe are written using the Python Client Library.	

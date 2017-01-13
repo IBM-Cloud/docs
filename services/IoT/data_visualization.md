@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-09-01"
+  years: 2016, 2017
+lastupdated: "2017-01-10"
 
 ---
 
@@ -196,3 +196,5 @@ For certain card types, you can click **Settings** to configure additional visua
 7.	Finally, position the new card on your board by dragging it to a good location.  
 
 Great! You can now see the real-time data of your device!
+
+For step-by-step instructions about how to display real-time device data, see the [Configuring Boards & Cards in the new Watson IoT Dashboard](https://developer.ibm.com/recipes/tutorials/configuring-the-cards-in-the-new-watson-iot-dashboard/) recipe.
