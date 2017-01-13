@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-14"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # Conectividad de MQTT para pasarelas
 {: #mqtt}
-Última actualización: 14 de septiembre de 2016
-{: .last-updated}
 
 MQTT es el protocolo primario que utilizan los dispositivos y las aplicaciones para comunicarse con el {{site.data.keyword.iot_full}}. Las bibliotecas de cliente, la información y los ejemplos se proporcionan para ayudarle a utilizar clientes de MQTT como pasarelas para conectar dispositivos a {{site.data.keyword.iot_short_notm}}.
 {:shortdesc}

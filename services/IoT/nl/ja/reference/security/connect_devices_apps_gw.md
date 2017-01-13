@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015,2016
+  years: 2015, 2016
+lastupdated: "2016-09-08"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # {{site.data.keyword.iot_short_notm}} へのアプリケーション、デバイス、ゲートウェイの接続
 {: #connect_devices_apps_gw}
-最終更新日: 2016 年 9 月 8 日
-{: .last-updated}
 
 アプリケーション、デバイス、ゲートウェイは MQTT プロトコルを使用して {{site.data.keyword.iot_full}} に接続できます。デバイスは HTTP API を介して {{site.data.keyword.iot_short_notm}} に接続してイベントをパブリッシュできます。
 {: shortdesc}

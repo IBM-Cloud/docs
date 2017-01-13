@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-10-19"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # Einführung in {{site.data.keyword.iot_short_notm}}
 {: #gettingstartedtemplate}
-Letzte Aktualisierung: 29. September 2016
-{: .last-updated}
 
 {{site.data.keyword.iot_full}} für {{site.data.keyword.Bluemix_notm}} ist ein vielseitiges Toolkit, das Gateway-Geräte, Gerätemanagement und leistungsfähigen Anwendungszugriff zur Verfügung stellt. Durch Verwendung von {{site.data.keyword.iot_short_notm}} können Sie Daten zu verbundenen Geräten erfassen und Echtzeitdaten aus Ihrer Organisation analysieren.
 {:shortdesc}
@@ -37,7 +36,7 @@ Um den Service betriebsbereit zu machen, müssen Sie folgende Optionen betrachte
   ------------- | -------------
   **Ich verfüge über ein Gerät, das ich verbinden kann** | [Verbinden Sie Ihr Gerät mit {{site.data.keyword.iot_short_notm}}](iotplatform_task.html#iotplatform_task).| Untersuchen Sie die Geräteverbindung in [Organisationsdemo wiedergeben](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window}.
   **Ich verfüge nicht über ein Gerät, das ich verbinden kann** | [Erstellen und verbinden Sie einen Node-RED-Gerätesimulator](nodereddevice_sample.html){:new_window}. | Beginnen Sie mit [Watson IoT Platform Starter](https://console.ng.bluemix.net/docs/starters/IoT/iot500.html){:new_window}.
-Weitere Informationen zur Vorgehensweise beim Verbinden bestimmter Gerätetypen mit {{site.data.keyword.iot_short_notm}} finden Sie in [developerWorks Recipes](https://developer.ibm.com/recipes/?post_type=tutorials&s=iot){:new_window}.  
+Weitere Informationen zur Vorgehensweise beim Verbinden bestimmter Gerätetypen mit {{site.data.keyword.iot_short_notm}} finden Sie in [developerWorks Recipes](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}.  
 
 Entwicklerdokumentation für Geräteverbindungen siehe
 - [MQTT-Konnektivität für Geräte](devices/mqtt.html).
@@ -71,7 +70,7 @@ Weitere Informationen finden Sie in den folgenden Abschnitten:
 {: #rellinks}
 ## Lernprogramme und Beispiele
 {: #samples}
-* [Anleitungen für das Verbinden Ihrer Geräte](https://developer.ibm.com/recipes/?post_type=tutorials&s=iot){:new_window}
+* [Anleitungen für das Verbinden Ihrer Geräte](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}
 * [{{site.data.keyword.iot_short_notm}}-Organisation zum Spielen](https://play.internetofthings.ibmcloud.com/){:new_window}
 * [Intel Galileo mit {{site.data.keyword.iot_short_notm}} verbinden](https://developer.ibm.com/recipes/tutorials/connect-an-intel-galileo-to-the-internet-of-things-foundation-connect/){:new_window}
 * [ARM® mbed™ IoT Starter Kit verbinden](https://developer.ibm.com/recipes/tutorials/arm-mbed-iot-starter-kit-part-1/){:new_window}

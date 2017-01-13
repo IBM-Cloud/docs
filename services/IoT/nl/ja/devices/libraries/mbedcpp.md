@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-02"
 
 ---
 
@@ -14,9 +15,6 @@ copyright:
 
 # デバイス開発者用の mBed C++
 {: #mbedcpp}
-
-最終更新日: 2016 年 8 月 2 日
-{: .last-updated}
 
 [mBed C++ クライアント・ライブラリー](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/)を使用すると、[mBed デバイス](https://www.mbed.com/en/) ([LPC1768](https://developer.mbed.org/platforms/mbed-LPC1768/) や [FRDM-K64F](https://developer.mbed.org/platforms/FRDM-K64F/) など) を {{site.data.keyword.iot_full}} サービスに簡単に接続できます。
 {:shortdesc}
@@ -73,7 +71,7 @@ ARM mBed NXP LPC 1768 マイクロコントローラーを {{site.data.keyword.i
   // Create DeviceClient
   IoTF::DeviceClient client(organization, deviceType, deviceId);
 
-  // Get the DeviceID(MAC Address) if we are in quickstart mode and device id is not specified
+  // Get the DeviceID(MAC Address) if we are in quickstart mode and device ID is not specified
   if((strcmp(organization, QUICKSTART) == 0) && (strcmp("", deviceId) == 0))
   {
   	char tmpBuf[50];

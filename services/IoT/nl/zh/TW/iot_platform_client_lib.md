@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-03"
 
 ---
 
@@ -14,13 +15,10 @@ copyright:
 # 適用於 {{site.data.keyword.iot_short}} 開發的用戶端程式庫
 {: #iot_platform_client_lib}
 
-前次更新：2016 年 8 月 3 日
-{: .last-updated}
-
-用戶端程式庫提供建置及開發程式碼所需的工具和檔案，用來整合及連接 {{site.data.keyword.iot_full}} 上的裝置與應用程式。
+用戶端程式庫提供建置及開發程式碼所需的工具和檔案，用來整合及連接您的裝置與 {{site.data.keyword.iot_full}} 上的應用程式。
 {:shortdesc}
 
-對於支援的每一種程式設計語言，都有提供用戶端程式庫，您可以自 [{{site.data.keyword.iot_short_notm}} GitHub 儲存庫](https://github.com/ibm-watson-iot)或從下列直接鏈結存取：
+我們對於支援的每一種程式設計語言提供了用戶端程式庫，您可以自 [{{site.data.keyword.iot_short_notm}} GitHub 儲存庫](https://github.com/ibm-watson-iot)或從下列直接鏈結存取：
 
 ## C++
 

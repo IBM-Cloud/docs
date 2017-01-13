@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-10-05"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 {:pre: .pre}
 
 # Configurazione e utilizzo di {{site.data.keyword.ssoshort}}
-Ultimo aggiornamento: 05 ottobre 2016
-{: .last-updated}
 
 Il servizio {{site.data.keyword.ssofull}} può essere configurato per supportare provider di autenticazione utente alternativi per {{site.data.keyword.iot_full}}. {{site.data.keyword.ssoshort}} supporta SAML 2.0, IBM Cloud Directory, i provider sociali (Facebook, LinkedIn, Google+) e Github.
 {: .shortdesc}

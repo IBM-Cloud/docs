@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015,2016
+  years: 2016
+lastupdated: "2016-10-13"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # Schemas für Gerätetypen erstellen
 {: #iotrtinsights_task}
-Letzte Aktualisierung: 1. August 2016
-{: .last-updated}
 
 Zum Verwenden von {{site.data.keyword.iot_short}}-Funktionen wie beispielsweise Regeln und Aktionen müssen Sie ein Schema erstellen, um Geräteeigenschaften benutzerfreundlichen Eigenschaftsnamen zuzuordnen, Dateneinheiten für die Eigenschaften festlegen und einen Nachrichtentyp angeben, der mit dem Schema verwendet werden soll.
 {: shortdesc}
@@ -68,7 +67,7 @@ Gehen Sie wie folgt vor, um ein Schema hinzuzufügen:
  `Float` oder `Integer`.</li>
  <li>Eigenschaft - Eigenschafts-ID für die virtuelle Eigenschaft. Beispiel:  
 `temp_virt`</li>
-    <li>Berechngung - Fügen Sie mindestens eine Komponente hinzu, um eine gültige Funktion zu definieren. Sie können Eigenschaften, numerische Werte und mathematische Operatoren wie beispielsweise +, -, \*, /, (, ) und AVG verwenden, um Ihre Berechnung zu erstellen. Die AVG-Komponente wird zum Berechnen des Eigenschaftswerts verwenden, der für einen festgelegten Zeitraum durchschnittlich auftritt.</br> **Wichtig:** Die AVG-Komponente gibt Eigenschaftsdatenpunkte nur zurück, wenn die Daten für die ausgewählte Eigenschaften von einem Gerät stammen, das mit einem Gateway verbunden ist, auf dem ein Edge Analytics-Agent installiert ist. Weitere Informationen finden Sie in [Edge Analytics-Agent installieren](gateways/dashboard.html#edge).</li>
+    <li>Berechngung - Fügen Sie mindestens eine Komponente hinzu, um eine gültige Funktion zu definieren. Sie können Eigenschaften, numerische Werte und mathematische Operatoren wie beispielsweise +, -, \*, /, (, ), AVG und z-Faktorwerte verwenden, um Ihre Berechnung zu erstellen. </br>Die AVG-Komponente wird zum Berechnen des Eigenschaftswerts verwenden, der für einen festgelegten Zeitraum durchschnittlich auftritt. </br>Die z-Faktorwert-Komponente gibt die Differenz in Standardabweichungseinheiten zwischen dem Datenpunkt und dem durchschnittlichen Datenpunktwert in Bezug auf eine Anzahl von Datenpunkten oder einen bestimmten Zeitraum zurück.</br> **Wichtig:** Die AVG- und z-Faktorwert-Komponenten geben Eigenschaftsdatenpunkte nur zurück, wenn die Daten für die ausgewählte Eigenschaften von einem Gerät stammen, das mit einem Gateway verbunden ist, auf dem ein Edge Analytics-Agent installiert ist. Weitere Informationen finden Sie in [Edge Analytics-Agent installieren](gateways/dashboard.html#edge). Regelbedingungen, die AVG- und z-Faktorwert-Werte vergleichen, werden nicht unterstützt.</li>
     <li>Dateneinheit - Optional: Die Einheit für die Daten der Eigenschaft. Beispiel: `C` oder `Mph`</li>
     <li> Dezimalstellen - Optional, nur Gleitkommawert: Die Anzahl der in die Gerätedaten einzuschließenden Dezimalstellen.</li>
    </ul>

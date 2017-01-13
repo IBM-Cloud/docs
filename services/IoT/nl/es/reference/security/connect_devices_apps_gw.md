@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015,2016
+  years: 2015, 2016
+lastupdated: "2016-09-08"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # Conexiones de aplicaciones, dispositivos y pasarelas a {{site.data.keyword.iot_short_notm}}
 {: #connect_devices_apps_gw}
-Última actualización: 08 de septiembre de 2016
-{: .last-updated}
 
 Las aplicaciones, los dispositivos y las pasarelas se pueden conectar a {{site.data.keyword.iot_full}} mediante el protocolo de MQTT. Los dispositivos también pueden conectarse y publicar sucesos en {{site.data.keyword.iot_short_notm}} a través de la API de HTTP.
 {: shortdesc}

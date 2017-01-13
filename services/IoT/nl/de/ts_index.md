@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-01"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # {{site.data.keyword.iot_short_notm}} - Fehlerbehebung
 {: #ts}
-Letzte Aktualisierung: 1. August 2016
-{: .last-updated}
 
 Hier finden Sie Antworten auf allgemeine Fragen zur Fehlerbehebung bei der Verwendung von {{site.data.keyword.iot_full}} in {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}

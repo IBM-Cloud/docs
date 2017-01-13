@@ -1,7 +1,8 @@
 ---
 
-copyright :
-  2016
+copyright:
+  years: 2016
+lastupdated: "2016-08-30"
 
 ---
 
@@ -14,8 +15,6 @@ copyright :
 
 # Intégration de chaîne de blocs {{site.data.keyword.iot_short_notm}}
 {: #gettingstartedtemplate}
-Dernière mise à jour : 30 août 2016
-{: .last-updated}
 
 L'intégration de chaîne de blocs {{site.data.keyword.iot_short_notm}} permet aux terminaux IoT de fournir des données aux transactions de chaîne de blocs, ainsi, les données sont stockées dans le grand livre non modifiable de la chaîne de blocs et sont utilisées dans des règles métier implémentées dans les contrats intelligents de la chaîne de blocs.
 {:shortdesc}
@@ -119,7 +118,7 @@ L'intégration de chaîne de blocs {{site.data.keyword.iot_short_notm}} étant a
 </table>
 **Scénario IBM de base :** Pour vous connecter à la matrice fournie par IBM, utilisez les informations de connexion de l'exemple de contrat fournies sur la page wiki [IoT Blockchain Connection Info](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections) de la communauté Watson IoT Blockchain.
 
- 6. Cliquez sur **Sauvegarder**
+ 6. Cliquez sur **Sauvegarder**.
  **Remarque :** Si la matrice n'est pas créée, vous avez peut-être entré des informations incorrectes. Si nécessaire, cliquez sur le commutateur de chaîne de blocs afin de réactiver le proxy de chaîne de blocs, puis créez de nouveau la matrice.  
  6. Cliquez sur **Confirmer toutes les modifications**
   La table de matrice est renseignée avec la nouvelle entrée.

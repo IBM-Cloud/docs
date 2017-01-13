@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-02"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # C# pour les développeurs de terminaux
 {: #c_sharp}
-Dernière mise à jour : 2 août 2016
-{: .last-updated}
 
 Vous pouvez utiliser C# pour générer et personnaliser des terminaux qui interagissent avec votre organisation sur {{site.data.keyword.iot_full}}. Utilisez les informations et les exemples fournis pour commencer à développer vos terminaux à l'aide de C#.
 {:shortdesc}

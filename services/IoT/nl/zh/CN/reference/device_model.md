@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-16"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # 设备模型
 {: #device_model}
-上次更新时间：2016 年 9 月 16 日
-{: .last-updated}
 
 设备模型描述了设备的元数据和管理特征。{{site.data.keyword.iot_full}} 中的设备数据库是设备信息的主来源。应用程序和受管设备可将更新（包括位置更改或固件更新的进度）发送到设备数据库。{{site.data.keyword.iot_short_notm}} 收到这些更新后，会立即更新数据库，从而使这些信息可用于应用程序。
 
@@ -128,7 +127,7 @@ copyright:
 属性                 | 类型   | 描述                                             | API | DMA
 ------------- | ------------- | ------------- | ------------- | -------------
  location.longitude        | 数值                | 使用 WGS84 的经度（以十进制度为单位）                       |  W  |  W  
- location.latitude         | 数值          | 使用 WGS84 的纬度（以十进制度为单位）                       |  W  |  W  
+ location.latitude         | 数值                | 使用 WGS84 的纬度（以十进制度为单位）                       |  W  |  W  
  location.elevation        | 数值                | 使用 WGS84 的海拔（以米为单位）                         |  W  |  W  
  location.measuredDateTime | 字符串 | ISO8601 日期时间：位置测量的日期和时间                      |  W  |  W  
  location.updatedDateTime  | 字符串 | ISO8601 日期时间：日期和时间                                |  R  |   

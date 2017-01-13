@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-27"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # Python pour les développeurs de terminaux
 {: #python}
-Dernière mise à jour : 29 juillet 2016
-{: .last-updated}
 
 Vous pouvez utiliser Python pour générer et développer un code de terminal afin d'interagir avec votre organisation sur {{site.data.keyword.iot_full}}. Le client Python pour {{site.data.keyword.iot_short_notm}} fournit une API qui facilite l'interaction simple avec les fonctions {{site.data.keyword.iot_short_notm}} en faisant abstraction des protocoles sous-jacents, tels que MQTT et HTTP.
 {:shortdesc}
@@ -35,12 +34,13 @@ Le dictionnaire d'options crée des définitions utilisées pour interagir avec 
 |Définition|Description |
 |:---|:---|
 |`orgId`|ID de votre organisation.|
-|`type`|Type de votre terminal. Généralement, deviceType regroupe des terminaux qui effectuent une tâche spécifique, par exemple, "weatherballoon".|
-|`id`|ID de votre terminal. Généralement, pour un type de terminal donné, deviceId est un identificateur unique, par exemple, un numéro de série ou une adresse MAC.|
-|`auth-method`|Méthode d'authentification à utiliser. La seule valeur actuellement prise en charge est `token`.|
-|`auth-token`|Jeton d'authentification permettant d'établir une connexion sécurisée entre votre terminal et Watson IoT Platform.|
+|`type`|Type du terminal. Le type de terminal est un regroupement pour les terminaux qui exécutent une tâche spécifique, par exemple, "weatherballoon".|
+|`id`|ID unique pour identifier un terminal. Généralement, pour un type de terminal donné, l'ID de terminal est un identificateur unique de ce terminal, par exemple, un numéro de série ou une adresse MAC.|
+|`auth-method`|Méthode d'authentification. La seule méthode prise en charge est `apikey`.|
+|`auth-token`|Jeton de clé d'API qui est également requis lorsque vous affectez la valeur `apikey` au paramètre auth-method.|
+|`clean-session`|Valeur true ou false requise uniquement si vous souhaitez connecter l'application en mode d'abonnement durable. Par défaut, `clean-session` a pour valeur true.|
 
-Si aucun dictionnaire d'options n'est fourni, le client se connecte au service QuickStart de Watson IoT Platform en tant que terminal non enregistré.
+Si aucun dictionnaire d'options n'est fourni, le client se connecte au service QuickStart de {{site.data.keyword.iot_short_notm}} en tant que terminal non enregistré.
 
 ```python
 
@@ -51,7 +51,8 @@ try:
     "type": deviceType,
     "id": deviceId,
     "auth-method": authMethod,
-    "auth-token": authToken
+    "auth-token": authToken,
+    "clean-session": true
   }
   client = ibmiotf.device.Client(options)
 except ibmiotf.ConnectionException  as e:
@@ -82,7 +83,7 @@ type=deviceType
 id=deviceId
 auth-method=token
 auth-token=token
-
+clean-session=true/false
 ```
 
 ## Publication d'événements

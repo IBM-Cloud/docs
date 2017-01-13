@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-26"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 # Node-RED デバイス・シミュレーターの作成と接続
 Node-RED を使用して、デバイス・シミュレーターを作成し、シミュレートしたデバイス・データを {{site.data.keyword.iot_full}} 組織に送信します。  
 {:shortdesc}
-最終更新日: 2016 年 8 月 26 日
-{: .last-updated}
 
 Node-RED は、ハードウェア・デバイス、API、オンライン・サービスを、新しい興味深い方法で接続するツールです。詳しくは、[Node-RED](http://nodered.org/) の Web サイトを参照してください。  
 

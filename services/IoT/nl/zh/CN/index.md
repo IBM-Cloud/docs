@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-10-19"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # {{site.data.keyword.iot_short_notm}} 入门
 {: #gettingstartedtemplate}
-上次更新时间：2016 年 9 月 29 日
-{: .last-updated}
 
 {{site.data.keyword.iot_full}} for {{site.data.keyword.Bluemix_notm}} 为您提供多功能工具箱，其中包括网关设备、设备管理和强大的应用程序访问。通过使用 {{site.data.keyword.iot_short_notm}}，您可以从组织收集已连接的设备数据，并对实时数据执行分析。
 {:shortdesc}
@@ -36,7 +35,7 @@ copyright:
    |   已部署此服务 | 未部署此服务
   ------------- | -------------
   **我有要连接的设备** | [将设备连接到 {{site.data.keyword.iot_short_notm}}](iotplatform_task.html#iotplatform_task)。| 在[播放组织演示](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window}中研究设备连接。**我没有要连接的设备** | [创建并连接 Node-RED 设备模拟器](nodereddevice_sample.html){:new_window}。 | 开始使用 [Watson IoT Platform 入门模板](https://console.ng.bluemix.net/docs/starters/IoT/iot500.html){:new_window}。
-有关如何将特定设备类型连接到 {{site.data.keyword.iot_short_notm}} 的更多信息，请参阅 [developerWorks 诀窍](https://developer.ibm.com/recipes/?post_type=tutorials&s=iot){:new_window}。  
+有关如何将特定设备类型连接到 {{site.data.keyword.iot_short_notm}} 的更多信息，请参阅 [developerWorks 诀窍](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}。  
 
 有关设备连接开发者文档，请参阅：
 - [设备的 MQTT 连接](devices/mqtt.html)。
@@ -70,7 +69,7 @@ copyright:
 {: #rellinks}
 ## 教程和样本
 {: #samples}
-* [连接设备的诀窍](https://developer.ibm.com/recipes/?post_type=tutorials&s=iot){:new_window}
+* [连接设备的诀窍](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}
 * [{{site.data.keyword.iot_short_notm}} Play 组织](https://play.internetofthings.ibmcloud.com/){:new_window}
 * [将 Intel Galileo 连接到 {{site.data.keyword.iot_short_notm}}](https://developer.ibm.com/recipes/tutorials/connect-an-intel-galileo-to-the-internet-of-things-foundation-connect/){:new_window}
 * [连接 ARM® mbed™ IoT 入门模板套件](https://developer.ibm.com/recipes/tutorials/arm-mbed-iot-starter-kit-part-1/){:new_window}

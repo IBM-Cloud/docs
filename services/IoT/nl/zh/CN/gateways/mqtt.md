@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-14"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # 针对网关的 MQTT 连接
 {: #mqtt}
-上次更新时间：2016 年 9 月 14 日
-{: .last-updated}
 
 MQTT 是设备和应用程序用于与 {{site.data.keyword.iot_full}} 通信的主要协议。提供的客户机库、信息和样本可帮助您将 MQTT 客户机用作网关，以将设备连接到 {{site.data.keyword.iot_short_notm}}。
 {:shortdesc}
@@ -29,7 +28,7 @@ MQTT 是设备和应用程序用于与 {{site.data.keyword.iot_full}} 通信的�
 {: #authentication}
 对于网关和设备，{{site.data.keyword.iot_short_notm}} 将使用 MQTT 基于令牌的认证。
 
-要启用 MQTT 认证，请在发起 MQTT 连接时提交用户名和密码。
+要启用 MQTT 认证，请在进行 MQTT 连接时提交用户名和密码。
 
 ### 用户名
 {: #username}

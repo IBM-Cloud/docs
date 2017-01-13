@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-03"
 
 ---
 
@@ -13,9 +14,6 @@ copyright:
 
 # Librerie client per lo sviluppo {{site.data.keyword.iot_short}}
 {: #iot_platform_client_lib}
-
-Ultimo aggiornamento: 3 agosto 2016
-{: .last-updated}
 
 Le librerie client forniscono gli strumenti e i file necessari per creare e sviluppare il codice per l'integrazione e la connettività dei tuoi dispositivi e applicazioni su {{site.data.keyword.iot_full}}.
 {:shortdesc}

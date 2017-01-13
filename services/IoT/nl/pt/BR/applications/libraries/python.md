@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-27"
 
 ---
 
@@ -15,8 +16,6 @@ copyright:
 # Python para desenvolvedores de aplicativos
 {: #python}
 
-Última atualização: 29 de julho de 2016
-{: .last-updated}
 
 É possível usar Python para construir e desenvolver aplicativos que interagem com sua organização no {{site.data.keyword.iot_full}}. O cliente Python para o {{site.data.keyword.iot_short_notm}} fornece uma API (interface de programação de aplicativos) para facilitar interação simples com recursos do {{site.data.keyword.iot_short_notm}} abstraindo os protocolos subjacentes, como MQTT e HTTP (Protocolo de Transporte de Hipertexto).
 
@@ -36,11 +35,13 @@ O dicionário de opções cria definições que são usadas para interagir com o
 
 |Definição|Descrição |
 |:-----|:-----|
-|`orgId`|O ID de sua organização|
-|`appId`|O ID exclusivo de um aplicativo em sua organização|
-|`auth-method`|Método de autenticação no qual o único valor suportado é `apikey`|
-|`auth-key`|Uma chave API (interface de programação de aplicativos) opcional necessária quando auth-method estiver configurado como `apikey`|
-|`auth-token`|Um token de chave API (interface de programação de aplicativos) necessário quando auth-method estiver configurado como `apikey`|
+|`orgId`|O ID de sua organização.|
+|`appId`|O ID exclusivo de um aplicativo em sua organização.|
+|`auth-method`|O método de autenticação. O único método que é suportado é `apikey`.|
+|`auth-key`|Uma chave API opcional que se deve especificar ao configurar o valor de método de autenticação para `apikey`.|
+|`auth-token`|Um token de chave API que também é necessário ao configurar o valor de método de autenticação para `apikey`.|
+|`clean-session`|Um valor true ou false necessário somente se você desejar se conectar ao aplicativo no modo de assinatura durável. Por padrão, `clean-session` é configurado como true.|
+
 
 Se nenhum dicionário de opções for fornecido, o cliente conecta-se ao serviço de iniciação rápida do {{site.data.keyword.iot_short_notm}} como um dispositivo não registrado.
 
@@ -53,7 +54,8 @@ try:
     "id": appId,
     "auth-method": authMethod,
     "auth-key": authKey,
-    "auth-token": authToken
+    "auth-token": authToken,
+    "clean-session": true
   }
   client = ibmiotf.application.Client(options)
 except ibmiotf.ConnectionException  as e:
@@ -84,6 +86,7 @@ id=myApplication
 auth-method=apikey
 auth-key=key
 auth-token=token
+clean-session=true/false
 
 ```
 

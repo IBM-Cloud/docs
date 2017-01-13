@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-14"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # Node.js für Geräteentwickler
 {: #nodejs}
-Letzte Aktualisierung: 14. September 2016
-{: .last-updated}
 
 Sie können die Clientbibliotheken und Beispiele in Node.js anpassen, um Gerätecode zu erstellen und zu entwickeln, der mit Ihrer Organisation in {{site.data.keyword.iot_full}} interagiert.
 {:shortdesc}
@@ -96,7 +95,7 @@ Sie können eine Verbindung zu {{site.data.keyword.iot_short_notm}} herstellen, 
 
 	var deviceClient = new iotf.IotfDevice(config);
 
-	//Als Protokollstufe 'debug' festlegen. Standardmäßig ist dies 'warn'
+	//Als Protokollebene 'debug' festlegen. Standardmäßig ist dies 'warn'
 	deviceClient.log.setLevel('debug');
 
 	deviceClient.connect();
@@ -195,7 +194,7 @@ Wenn der Geräteclient eine Verbindung herstellt, subskribiert er automatisch al
 	deviceClient.connect();
 
 	deviceClient.on("connect", function () {
-		//Ereignis mis standardmäßiger Servicequalität publizieren
+		//Ereignis mit standardmäßiger Servicequalität publizieren
 		deviceClient.publish("status","json",'{"d" : { "cpu" : 60, "mem" : 50 }}');
 
 	});

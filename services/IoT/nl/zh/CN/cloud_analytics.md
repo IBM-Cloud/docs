@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-23"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # 云分析
 {: #cloud_analytics}
-上次更新时间：2016 年 8 月 23 日
-{: .last-updated}
 
 通过使用 {{site.data.keyword.iot_short}} 云分析，可指定基于实时设备数据并且在满足条件时将触发警报和可选操作的规则条件。    
 {: shortdesc}
@@ -220,7 +219,8 @@ copyright:
 描述 | 操作的简短描述。
 URL | 目标 Node-RED HTTP 输入节点的 URL。
 用户名 | Node-RED 服务需要时包含。
-密码 | Node-RED 服务需要时包含。**重要信息：**密码是以明文形式发送的。
+密码 | Node-RED 服务需要时包含。
+**重要信息：**密码是以明文形式发送的。
 主体 | 缺省情况下，“主体”字段预填充了[变量替换](#variable_substitution)中列出的所有变量。
 
 #### 示例：使用 Node-RED 发送短信
@@ -259,7 +259,7 @@ URL | 目标 Node-RED HTTP 输入节点的 URL。
  ```json
  {"text":"*某个设备需要您的关注*\n 时间：{{timestamp}}\n {{site.data.keyword.iot_short}} 实例：{{tenantId}}\n 设备：{{deviceId}}\n 规则：{{ruleName}}\n 描述：{{ruleDescription}}\n 条件：{{ruleCondition}}\n 原始设备消息：\n{{message}}"}
  ```  
-5. 单击**完成**以保存操作。 
+5. 单击**完成**以保存操作。
 
 
 
@@ -279,7 +279,8 @@ URL | 目标 Node-RED HTTP 输入节点的 URL。
 URL | 支持 Webhook 的目标服务器的 URL。**提示：**您可以使用[变量替换](#variable_substitution)在 URL 中动态包含更多数据。
 方法 | 要运行的 Webhook 调用的类型。选择以下某种类型：GET、HEAD、OPTIONS、PATCH、PUT、POST 或 DELETE。
 用户名 | Web Service 需要时包含。
-密码 | Web Service 需要时包含。**重要信息：**密码是以明文形式发送的。
+密码 | Web Service 需要时包含。
+**重要信息：**密码是以明文形式发送的。
 头 | 头由键值对构成。**提示：**您可以使用[变量替换](#variable_substitution)在头中动态包含更多数据。
 内容类型 | 主体内容的类型：JSON、XML、WWW 表单 URL 编码的内容或纯文本。适用于 OPTIONS、PATCH、PUT、POST 和 DELETE 方法。
 主体 | Webhook 调用的主体。适用于 OPTIONS、PATCH、PUT、POST 和 DELETE 方法。缺省情况下，“主体”字段预填充了[变量替换](#variable_substitution)中列出的所有变量。

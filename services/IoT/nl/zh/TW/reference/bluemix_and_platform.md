@@ -39,7 +39,7 @@ lastupdated: "2016-10-21"
 
 {{site.data.keyword.iot_short_notm}} 提供兩種定價模型：「免費」和「標準」。「{{site.data.keyword.iot_short_notm}} 免費」最多容許 20 個登錄裝置、100MB 的交換資料，以及最多 10 個連結應用程式。
 
-{{site.data.keyword.iot_short_notm}} 定價不限登錄裝置數目，容許 100 MB 的免費交換資料，而且會在使用完前 100 MB 之後，依每 MB 的交換資料收費。
+{{site.data.keyword.iot_short_notm}} 定價不限登錄裝置數目、容許 100 MB 的免費交換資料，而且會在使用完前 100 MB 之後，依每 MB 的交換資料收費。
 
 如需 {{site.data.keyword.iot_short_notm}} 定價的相關資訊，請執行下列動作：
 

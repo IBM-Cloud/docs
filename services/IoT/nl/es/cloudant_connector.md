@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-09-16"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # Conexión y configuración de un servicio de historian mediante un {{site.data.keyword.cloudant_short_notm}}  
 {: #cloudant_main}
-Última actualización: 16 de septiembre de 2016
-{: .last-updated}
 
 La conexión de un servicio {{site.data.keyword.cloudantfull}} a {{site.data.keyword.iot_full}} le permite almacenar y acceder a los datos de dispositivo. Los datos de dispositivo se almacenan en bases de datos diarias, semanales o mensuales en función del intervalo de receptáculo seleccionado.
 
@@ -82,9 +81,9 @@ Siga estos pasos para conectar un {{site.data.keyword.cloudant_short_notm}}:
  +  * `<orgID>` es el ID de organización.
  +  * `<dbname>` es su opción para esta parte de nombre de base de datos controlados por el campo `Nombre de base de datos`.
  +  * `<bucket_name>` es una serie determinada por la selección para el campo `Intervalo de receptáculo`:
- +    * Para los intervalos de receptáculo `day`, `<bucket_name>` será `aaaa-mm-dd`. Por ejemplo, `2016-07-06` para sucesos el 6 de julio de 2016.
- +    * Para intervalos de receptáculo `week`, `<bucket_name>` será `aaaa-'w'ww` donde `'w'ww` indica un número de semana. Por ejemplo, `2016-w03` para sucesos en la tercera semana de 2016.
- +    * Para intervalos de receptáculos `month`, `<bucket_name>` será `aaaa-mm`. Por ejemplo, `2016-07` para sucesos en julio de 2016.
+ +    * Para los intervalos de receptáculo `day`, `<bucket_name>` será `aaaa-mm-dd`.  Por ejemplo, `2016-07-06` para sucesos el 6 de julio de 2016.
+ +    * Para intervalos de receptáculo `week`, `<bucket_name>` será `aaaa-'w'ww` donde `'w'ww` indica un número de semana.  Por ejemplo, `2016-w03` para sucesos en la tercera semana de 2016.
+ +    * Para intervalos de receptáculos `month`, `<bucket_name>` será `aaaa-mm`.  Por ejemplo, `2016-07` para sucesos en julio de 2016.
 
 5. Pulse en **Autorizar**.
 6. Pulse **Confirmar** en el recuadro de diálogo de la autorización.

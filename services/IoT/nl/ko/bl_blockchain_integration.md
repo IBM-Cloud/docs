@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-30"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # {{site.data.keyword.iot_short_notm}} 블록체인 통합
 {: #gettingstartedtemplate}
-마지막 업데이트 날짜: 2016년 8월 30일
-{: .last-updated}
 
 {{site.data.keyword.iot_short_notm}} 블록체인 통합을 사용하여 IoT 디바이스는 블록체인 트랜잭션에 데이터를 제공할 수 있으며, 블록체인 트랜잭션은 블록체인의 불변 원장에 데이터를 저장하고 블록체인의 스마트 계약에서 구현된 비즈니스 규칙에서 해당 데이터를 사용합니다.
 {:shortdesc}

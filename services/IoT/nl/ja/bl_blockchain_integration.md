@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-30"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # {{site.data.keyword.iot_short_notm}} ブロック・チェーン統合
 {: #gettingstartedtemplate}
-最終更新日: 2016 年 8 月 30 日
-{: .last-updated}
 
 {{site.data.keyword.iot_short_notm}} ブロック・チェーン統合を採用すると、IoT デバイスがブロック・チェーンのトランザクションにデータを提供できるようになるので、ブロック・チェーンの変更不能な台帳にデータが格納され、ブロック・チェーンのスマート・コントラクトに実装されたビジネス・ルールで使用することができます。
 {:shortdesc}

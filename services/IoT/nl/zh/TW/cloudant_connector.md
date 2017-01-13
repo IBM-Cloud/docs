@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-09-16"
 
 ---
 
@@ -13,12 +14,10 @@ copyright:
 
 # 使用 {{site.data.keyword.cloudant_short_notm}} 連接及配置歷程服務  
 {: #cloudant_main}
-前次更新：2016 年 9 月 16 日
-{: .last-updated}
 
 將 {{site.data.keyword.cloudantfull}} 服務連接至 {{site.data.keyword.iot_full}}，可讓您儲存及存取裝置資料。根據選取的儲存區間隔，裝置資料會儲存在每日、每週或每月資料庫中。
 
-開始使用 {{site.data.keyword.cloudant_short_notm}} 來儲存裝置資料時，會自動建立三個資料庫：一個資料庫是針對現行儲存區間隔建立、一個是針對未來間隔建立，以及一個配置資料庫。設計文件可以新增至配置資料庫，而且會在建立時複製到新的資料庫。到達間隔尾端時，新間隔的裝置資料會儲存在儲存區資料庫中，並為下列間隔建立新的資料庫。
+開始使用 {{site.data.keyword.cloudant_short_notm}} 來儲存裝置資料時，會自動建立三個資料庫：一個資料庫是針對現行儲存區間隔建立、一個是針對未來間隔建立，還有一個是配置資料庫。設計文件可以新增至配置資料庫，而且會在建立時複製到新的資料庫。到達間隔尾端時，新間隔的裝置資料會儲存在儲存區資料庫中，並為接下來的間隔建立新的資料庫。
 
 裝置資料在傳送至資料庫時，可以透過其中一種方式（共兩種）儲存。如果資料是有效的 JSON，而且裝置事件的格式設為 `JSON`，則會以下列格式儲存裝置資料：
 
@@ -63,7 +62,7 @@ copyright:
 
 - 使用「Bluemix 型錄」，在與 {{site.data.keyword.iot_short_notm}} 相同的 Bluemix 空間中設定 {{site.data.keyword.cloudant_short_notm}}。
 
-請確定您具有 Bluemix 組織中的開發人員專用權，並且透過 Bluemix 登入。如果您未透過 Bluemix 登入，或沒有此 Bluemix 組織中的開發人員專用權，則無法授權 {{site.data.keyword.cloudant_short_notm}} 及 {{site.data.keyword.iot_short_notm}} 的連結。
+請確定您具有 Bluemix 組織中的開發人員專用權，並且透過 Bluemix 登入。如果您未透過 Bluemix 登入，或沒有此 Bluemix 組織中的開發人員專用權，則無法授權連結 {{site.data.keyword.cloudant_short_notm}} 及 {{site.data.keyword.iot_short_notm}}。
 
 請完成下列步驟，以連接 {{site.data.keyword.cloudant_short_notm}}：
 
@@ -75,7 +74,7 @@ copyright:
 
   a. 選取儲存區間隔。儲存區間隔可控制建立新資料庫來儲存裝置資料的頻率。使用選取的儲存區間隔，在所選取時區的午夜建立新的儲存區。
 
-  b. 選取時區。所選取時區的時間將會用來決定應該放入裝置資料的儲存區，而不是裝置的本機時間。決定在其中輸入資料的資料庫時，會將正在傳送至 {{site.data.keyword.cloudant_short_notm}} 之裝置資料的時間戳記轉換成選取的時區。
+  b. 選取時區。所選取時區的時間將會用來決定應該放入裝置資料的儲存區，而不會使用裝置的本機時間。決定在其中輸入資料的資料庫時，會將正在傳送至 {{site.data.keyword.cloudant_short_notm}} 之裝置資料的時間戳記轉換成選取的時區。
 
   c. 選擇可決定資料庫名稱的選項。資料庫名稱將是 `iotp_<orgID>_<dbname>_<bucket_name>`，其中：
 
@@ -94,7 +93,7 @@ copyright:
 ## 建立新的設計文件  
 {: #design_docs}
 
-新的設計文件包含在配置資料庫中，並且會複製到每個建立的資料庫。配置資料庫名稱是 'iotp_<orgid>_<choice>_configuration'，其使用與「開始之前」小節的步驟 3b 所述的資料庫名稱相同的參數。
+新的設計文件包含在配置資料庫中，並且會複製到每個建立的資料庫。配置資料庫名稱是 `iotp_<orgid>_<choice>_configuration`，其使用與「開始之前」小節的步驟 3b 所述的資料庫名稱相同的參數。
 
 {{site.data.keyword.iot_short_notm}} 內所含的預設設計文件會實作現行歷程中可用的查詢（不含彙總函數）。
 

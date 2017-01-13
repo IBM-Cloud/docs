@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-09-14"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 {:pre: .pre}
 
 # アプリケーション接続
-最終更新日: 2016 年 9 月 14 日
-{: .last-updated}
 
 アプリケーションを {{site.data.keyword.iot_full}} に接続するには、API キーとトークンを使用することにより、または {{site.data.keyword.Bluemix_notm}} でアプリケーションを直接 {{site.data.keyword.iot_short_notm}} にバインドすることにより、接続する必要があります。アクセス・ダッシュボードを使用して、アクセス権限を付与します。
 {:shortdesc}

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-27"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # Python para desenvolvedores de dispositivos
 {: #python}
-Última atualização: 29 de julho de 2016
-{: .last-updated}
 
 É possível usar Python para construir e desenvolver código de dispositivo para interagir com sua organização no {{site.data.keyword.iot_full}}. O cliente Python para o {{site.data.keyword.iot_short_notm}} fornece uma API (interface de programação de aplicativos) para facilitar interação simples com recursos do {{site.data.keyword.iot_short_notm}} abstraindo os protocolos subjacentes, como MQTT e HTTP (Protocolo de Transporte de Hipertexto).
 {:shortdesc}
@@ -35,12 +34,13 @@ O dicionário de opções cria definições que são usadas para interagir com o
 |Definição|Descrição |
 |:---|:---|
 |`orgId`|O ID de sua organização.|
-|`type`|O tipo de seu dispositivo. Normalmente, o deviceType é um agrupamento de dispositivos que executam uma tarefa específica, por exemplo, "weatherballoon".|
-|`id`|O ID de seu dispositivo. Normalmente, para um tipo de dispositivo especificado, o deviceId é um identificador exclusivo desse dispositivo, por exemplo, um número de série ou um endereço de Controle de Acesso à Mídia.|
-|`auth-method`|O método de autenticação a ser usado. O único valor atualmente suportado é `token`.|
-|`auth-token`|Um token de autenticação para conectar seu dispositivo de forma segura ao Watson IoT Platform.|
+|`type`|O tipo do dispositivo. O tipo de dispositivo é um agrupamento para dispositivos que executam uma tarefa específica, por exemplo, "weatherballoon".|
+|`id`|Um ID exclusivo para identificar um dispositivo. Geralmente, para um tipo de dispositivo especificado, o ID do dispositivo é um identificador exclusivo desse dispositivo, por exemplo, um número de série ou endereço MAC.|
+|`auth-method`|O método de autenticação. O único método que é suportado é `apikey`.|
+|`auth-token`|Um token de chave API que também é necessário ao configurar o valor de método de autenticação para `apikey`.|
+|`clean-session`|Um valor true ou false necessário somente se você desejar se conectar ao aplicativo no modo de assinatura durável. Por padrão, `clean-session` é configurado como true.|
 
-Se nenhum dicionário de opções for fornecido, o cliente conecta-se ao serviço de iniciação rápida do Watson IoT Platform como um dispositivo não registrado.
+Se nenhum dicionário de opções for fornecido, o cliente conecta-se ao serviço de iniciação rápida do {{site.data.keyword.iot_short_notm}} como um dispositivo não registrado.
 
 ```python
 
@@ -51,7 +51,8 @@ try:
     "type": deviceType,
     "id": deviceId,
     "auth-method": authMethod,
-    "auth-token": authToken
+    "auth-token": authToken,
+    "clean-session": true
   }
   client = ibmiotf.device.Client(options)
 except ibmiotf.ConnectionException  as e:
@@ -82,7 +83,7 @@ type=deviceType
 id=deviceId
 auth-method=token
 auth-token=token
-
+clean-session=true/false
 ```
 
 ## Publicando eventos

@@ -2,10 +2,11 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-01"
 
 ---
 
-{:new_window: target="blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -13,9 +14,6 @@ copyright:
 
 # Node-RED를 사용하여 {{site.data.keyword.iot_short_notm}} 개발
 {: #dev_nodered}
-
-마지막 업데이트 날짜: 2016년 9월 1일
-{: .last-updated}
 
 Node-RED는 {{site.data.keyword.iot_full}}에서 애플리케이션, 디바이스 및 게이트웨이를 개발하는 데 사용할 수 있는 시각적 도구입니다. Node-RED는 새롭고 흥미로운 방식으로 하드웨어 디바이스, API 및 온라인 서비스를 연결하기 위한 기능을 제공합니다. Node-RED는 Node.js 위에서 빌드되며, 대형 노드 모듈 에코시스템을 활용하여 여러 다양한 시스템을 통합할 수 있는 도구를 제공합니다.
 {:shortdesc}

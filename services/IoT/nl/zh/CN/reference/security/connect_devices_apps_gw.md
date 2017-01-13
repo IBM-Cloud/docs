@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015,2016
+  years: 2015, 2016
+lastupdated: "2016-09-08"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # 与 {{site.data.keyword.iot_short_notm}} 的应用程序、设备和网关连接
 {: #connect_devices_apps_gw}
-上次更新时间：2016 年 9 月 8 日
-{: .last-updated}
 
 应用程序、设备和网关可通过 MQTT 协议连接到 {{site.data.keyword.iot_full}}。设备还可通过 HTTP API 连接到 {{site.data.keyword.iot_short_notm}} 并向其发布事件。
 {: shortdesc}
@@ -83,7 +82,7 @@ MQTT 客户机通过使用相应凭证（例如，针对设备的设备认证令
 |设备|d|<pre class="pre">d:<var class="keyword varname">orgId</var>:<var class="keyword varname">deviceType</var>:<var class="keyword varname">deviceId</var></pre>|
 |网关|g|<pre class="pre">g:<var class="keyword varname">orgId</var>:<var class="keyword varname">typeId</var>:<var class="keyword varname">deviceId</var></pre>|
 
-其中，
+其中：
 - *orgId* 是注册服务时生成的 6 字符唯一组织标识。
 - *appId* 是客户机的用户定义唯一字符串标识。
 - *deviceId* 在所有类型中唯一标识某个设备或网关，与序列号相似。
@@ -110,7 +109,7 @@ MQTT 客户机通过使用相应凭证（例如，针对设备的设备认证令
 <pre class="pre">a-<var class="keyword varname">orgId</var>-a84ps90Ajs</pre>
 {: codeblock}
 
-以下示例显示典型认证令牌：
+以下示例显示了典型的认证令牌：
 
 ```
  MP$08VKz!8rXwnR-Q*

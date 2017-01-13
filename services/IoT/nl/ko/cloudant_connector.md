@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-09-16"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # {{site.data.keyword.cloudant_short_notm}}를 사용하여 히스토리언 서비스 연결 및 구성  
 {: #cloudant_main}
-마지막 업데이트 날짜: 2016년 9월 16일
-{: .last-updated}
 
 {{site.data.keyword.cloudantfull}} 서비스를 {{site.data.keyword.iot_full}}에 연결하면 디바이스 데이터를 저장하고 이에 액세스할 수 있습니다. 디바이스 데이터는 선택된 버킷 간격에 따라 일간, 주간 또는 월간 데이터베이스에 저장됩니다. 
 

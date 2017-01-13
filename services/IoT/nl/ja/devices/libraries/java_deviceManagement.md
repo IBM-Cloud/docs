@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-02"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # Java クライアント・ライブラリー - 管理対象デバイス
 {: #java_deviceManagement}
-最終更新日: 2016 年 8 月 2 日
-{: .last-updated}
 
 ##概要
 {: #introduction}

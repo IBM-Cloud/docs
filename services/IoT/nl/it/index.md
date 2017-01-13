@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-10-19"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # Introduzione a {{site.data.keyword.iot_short_notm}}
 {: #gettingstartedtemplate}
-Ultimo aggiornamento: 29 settembre 2016
-{: .last-updated}
 
 {{site.data.keyword.iot_full}} per {{site.data.keyword.Bluemix_notm}} ti fornisce un toolkit versatile che include i dispositivi gateway, la gestione del dispositivo e l'accesso all'applicazione potente. Utilizzando {{site.data.keyword.iot_short_notm}}, puoi collegare i dati dei dispositivi connessi ed eseguire analisi dei dati in tempo reale per la tua organizzazione.
 {:shortdesc}
@@ -37,7 +36,7 @@ Per essere operativo con il servizio, esplora le seguenti opzioni in base alla t
   ------------- | -------------
   **Ho un dispositivo da collegare** | [Collega il tuo dispositivo a {{site.data.keyword.iot_short_notm}}](iotplatform_task.html#iotplatform_task).| Esplora la connessione del dispositivo nella demo [Play organization](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window}.
   **Non ho un dispositivo da collegare** | [Crea e collega un simulatore del dispositivo Node-RED](nodereddevice_sample.html){:new_window}. | Introduzione a [Watson IoT Platform Starter](https://console.ng.bluemix.net/docs/starters/IoT/iot500.html){:new_window}.
-Per ulteriori informazioni su come collegare tipi di dispositivi specifici a {{site.data.keyword.iot_short_notm}}, consulta [developerWorks recipes](https://developer.ibm.com/recipes/?post_type=tutorials&s=iot){:new_window}.  
+Per ulteriori informazioni su come collegare tipi di dispositivi specifici a {{site.data.keyword.iot_short_notm}}, consulta [developerWorks recipes](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}.  
 
 Per la documentazione dello sviluppatore per la connessione del dispositivo, consulta:
 - [Connettività MQTT per i dispositivi](devices/mqtt.html).
@@ -71,7 +70,7 @@ Per ulteriori informazioni, consulta i seguenti argomenti:
 {: #rellinks}
 ## Esercitazioni ed esempi
 {: #samples}
-* [Recipes for connecting your devices](https://developer.ibm.com/recipes/?post_type=tutorials&s=iot){:new_window}
+* [Recipes for connecting your devices](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}
 * [{{site.data.keyword.iot_short_notm}} Play organization](https://play.internetofthings.ibmcloud.com/){:new_window}
 * [Connecting an Intel Galileo to the {{site.data.keyword.iot_short_notm}}](https://developer.ibm.com/recipes/tutorials/connect-an-intel-galileo-to-the-internet-of-things-foundation-connect/){:new_window}
 * [Connecting an ARM® mbed™ IoT Starter Kit](https://developer.ibm.com/recipes/tutorials/arm-mbed-iot-starter-kit-part-1/){:new_window}

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-13"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # Protocollo di gestione dispositivo
 {: #index}
-Ultimo aggiornamento: 13 settembre 2016
-{: .last-updated}
 
 ## Introduzione
 {: #introduction}

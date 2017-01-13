@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-23"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # Analisi cloud
 {: #cloud_analytics}
-Ultimo aggiornamento: 23 agosto 2016
-{: .last-updated}
 
 Utilizzando le analisi cloud {{site.data.keyword.iot_short}}, specifichi le condizioni della regola basate sui dati del dispositivo in tempo reale e che attivano gli avvisi e le azioni facoltative quando incontrate.    
 {: shortdesc}

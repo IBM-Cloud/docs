@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-21"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # デバイスの MQTT 接続
 {: #mqtt}
-最終更新日: 2016 年 9 月 21 日
-{: .last-updated}
 
 MQTT は、デバイスとアプリケーションが {{site.data.keyword.iot_full}} と通信するために使用する主要なプロトコルです。デバイスを {{site.data.keyword.iot_short_notm}} と接続/統合する際に役立つクライアント・ライブラリー、情報、サンプルが提供されています。
 {:shortdesc}

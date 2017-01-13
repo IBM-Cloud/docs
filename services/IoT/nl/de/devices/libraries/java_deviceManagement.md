@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-02"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # Java-Clientbibliothek - verwaltete Geräte
 {: #java_deviceManagement}
-Letzte Aktualisierung: 2. August 2016
-{: .last-updated}
 
 ##Einführung
 {: #introduction}

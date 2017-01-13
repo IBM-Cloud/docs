@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-09-14"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 {:pre: .pre}
 
 # 应用程序连接
-上次更新时间：2016 年 9 月 14 日
-{: .last-updated}
 
 要将应用程序连接到 {{site.data.keyword.iot_full}}，必须通过使用 API 密钥和令牌或在 {{site.data.keyword.Bluemix_notm}} 中将应用程序直接绑定到 {{site.data.keyword.iot_short_notm}} 进行连接。使用访问仪表板授予访问权。
 {:shortdesc}

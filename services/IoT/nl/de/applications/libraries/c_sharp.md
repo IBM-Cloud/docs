@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-07-28"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # C# für Anwendungsentwickler
 {: #c_sharp}
-Letzte Aktualisierung: 28. Juli 2016
-{: .last-updated}
 
 
 Verwenden Sie C#, um Anwendungen zu erstellen und anzupassen, die in {{site.data.keyword.iot_full}} mit Ihrer Organisation interagieren. Verwenden Sie die bereitgestellten Informationen und Beispiele, um mit der Entwicklung von Anwendungen mithilfe von C# zu beginnen.

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-07"
 
 ---
 
@@ -13,9 +14,6 @@ copyright:
 
 # API REST HTTP pour les applications
 {: #api}
-
-Dernière mise à jour : 7 septembre 2016
-{: .last-updated}
 
 Utilisez l'API REST HTTP {{site.data.keyword.iot_full}} pour générer et personnaliser des applications qui interagissent avec votre organisation sur {{site.data.keyword.iot_short_notm}}.
 {:shortdesc}

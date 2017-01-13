@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-10-05"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 {:pre: .pre}
 
 # 配置和使用 {{site.data.keyword.ssoshort}}
-上次更新时间：2016 年 10 月 5 日
-{: .last-updated}
 
 {{site.data.keyword.ssofull}} 服务可配置为支持将替代用户认证服务提供者用于 {{site.data.keyword.iot_full}}。{{site.data.keyword.ssoshort}} 支持 SAML 2.0、IBM Cloud Directory、社交提供者（Facebook、LinkedIn 和 Google+）以及 Github。
 {: .shortdesc}

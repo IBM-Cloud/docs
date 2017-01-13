@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-09-29"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # {{site.data.keyword.messagehub}}를 사용하여 히스토리언 서비스 연결 및 구성  
 {: #messagehub_main}
-마지막 업데이트 날짜: 2016년 9월 29일
-{: .last-updated}
 
 {{site.data.keyword.messagehub_full}}를 {{site.data.keyword.iot_short}}에 연결하면 히스토리 데이터 스토리지에 확장 가능한 대용량 메시지 버스가 제공됩니다. {{site.data.keyword.messagehub}}는 실시간 데이터 피드 처리를 위해 지연시간이 짧은 플랫폼을 제공하는 오픈 소스 대용량 메시징 시스템인 Apache Kafka를 기반으로 빌드됩니다.
 

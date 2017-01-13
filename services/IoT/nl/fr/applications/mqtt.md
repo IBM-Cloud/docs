@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-30"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # Connectivité MQTT pour les applications
 {: #mqtt}
-Dernière mise à jour : 31 août 2016
-{: .last-updated}
 
 MQTT est le principal protocole utilisé par les terminaux et les applications pour communiquer avec {{site.data.keyword.iot_full}}. Des bibliothèques client, des exemples et des informations vous sont fournis afin de vous aider à connecter et intégrer vos applications {{site.data.keyword.iot_short_notm}}.
 {:shortdesc}
@@ -141,7 +140,7 @@ Pour activer l'équilibrage de charge, assurez-vous que l'abonnement à une appl
 
 Où :
 -  Le caractère **A** indique que le client est une application évolutive.
--  *orgId* est l'ID d'organisation unique composé de six caractères ayant été généré lorsque vous avez enregistré la chaîne alphanumérique de service affectée lors du premier enregistrement du service.
+-  *orgId* est l'ID d'organisation unique composé de six caractères ayant été généré lorsque vous avez enregistré le chaîne.
 -  *appId* est un identificateur de chaîne unique défini par l'utilisateur pour le client. La chaîne ne peut contenir que des caractères alphanumériques (a-z, A-Z, 0-9), ainsi que les caractères spéciaux suivants : tiret (-), trait de soulignement (_) et point (.).
 
 **Important :**

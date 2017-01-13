@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-11"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # 디바이스용 HTTP REST API
 {: #api}
-마지막 업데이트 날짜: 2016년 10월 11일
-{: .last-updated}
 
 **중요:** 디바이스용 {{site.data.keyword.iot_full}} HTTP REST API 기능은 제한된 베타 프로그램의 일부로서만 사용 가능합니다. 향후 업데이트에는 이 기능의 현재 버전과 호환 가능한 변경사항이 포함될 수 있습니다. 이를 시도해 보고 [의견을 알려 주십시오](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html). 
 

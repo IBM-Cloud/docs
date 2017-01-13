@@ -1,7 +1,8 @@
 ---
 
-copyright :
-  2016
+copyright:
+  years: 2016
+lastupdated: "2016-06-29"
 
 ---
 
@@ -13,9 +14,6 @@ copyright :
 
 # Présentation des fonctions {{site.data.keyword.iot_short_notm}}
 {: #feature_overview}
-
-Dernière mise à jour : 29 juin 2016
-{: .last-updated}
 
 {{site.data.keyword.iot_full}} repose sur les fonctionnalités suivantes :
 
@@ -31,19 +29,15 @@ La fonctionnalité de connexion de {{site.data.keyword.iot_short_notm}} est le p
 
 ### Terminaux de passerelle
 
-A l'aide d'une passerelle, vous pouvez connecter des terminaux à {{site.data.keyword.iot_short_notm}}, faute de quoi, ils ne peuvent pas se connecter à Internet. Les terminaux de passerelle combinent la fonction d'un terminal et d'une application. Les passerelles peuvent recevoir des commandes et envoyer des données de terminal de la même manière qu'un terminal, mais elles peuvent aussi envoyer des commandes à d'autres terminaux qui lui sont connectés, tout comme le ferait une application.
-
-Les terminaux qui ne peuvent pas se connecter directement à Internet peuvent être connectés à un terminal de passerelle et leurs données de terminal peuvent être envoyées au terminal de passerelle, qui peut alors les envoyer à votre service {{site.data.keyword.iot_short_notm}}.
+A l'aide d'une passerelle, vous pouvez connecter des terminaux à {{site.data.keyword.iot_short_notm}}, faute de quoi, ils ne peuvent pas se connecter à Internet. Les passerelles ont toutes les fonctions d'un terminal, mais peuvent également publier et s'abonner pour le compte des terminaux qui y sont connectés. Les terminaux de passerelle permettent à des groupes de capteurs qui ne peuvent pas se connecter à Internet de se connecter à votre {{site.data.keyword.iot_short_notm}} en envoyant leurs données à une passerelle. Pour plus d'informations, voir la rubrique relative au [développement pour les passerelles](https://console.ng.bluemix.net/docs/services/IoT/gateways/gw_dev_index.html).
 
 ### Gestion des terminaux
 
-Les fonctions de gestion des terminaux sont fournies via la combinaison d'une API de gestion des terminaux et d'un agent de gestion des terminaux qui est installé sur les terminaux. Les terminaux gérés peuvent effectuer des actions de gestion des terminaux, lesquelles peuvent être déclenchées via le principal tableau de bord {{site.data.keyword.iot_short_notm}}.
+Les fonctions de gestion des terminaux sont fournies via une API de gestion des terminaux et un agent de gestion des terminaux qui est installé sur les terminaux. Les terminaux avec un agent de gestion de terminaux peuvent effectuer des actions de gestion des terminaux, lesquelles peuvent être déclenchées via le principal tableau de bord {{site.data.keyword.iot_short_notm}} ou l'API de gestion des terminaux. Les actions de gestion des terminaux comprennent le réamorçage, le téléchargement et l'installation des mises à jour du microcode et la réinitialisation des terminaux aux paramètres d'usine. La gestion des terminaux peut également être étendue pour inclure des actions personnalisées de gestion de terminaux. Pour plus d'informations, voir la [documentation sur la gestion des terminaux](https://console.ng.bluemix.net/docs/services/IoT/devices/device_mgmt/index.html).
 
-La gestion des terminaux vous offre la possibilité de réamorcer des terminaux, de télécharger et d'installer les mises à jour de microprogramme, et de réinitialiser à distance les terminaux avec les paramètres d'usine, le tout à partir de l'interface utilisateur de {{site.data.keyword.iot_short_notm}}.
+### Extensions et intégrations de services
 
-### Intégrations de services de tiers
-
-L'intégration de service de tiers repose sur {{site.data.keyword.iot_short_notm}}, y compris la prise en charge des services d'emplacement de données météorologiques de The Weather Company, qui vous permet de rechercher les données météorologiques en cours pour un emplacement de terminal.
+Les extensions et l'intégration de services permettent d'ajouter des services externes et des extensions définies par l'utilisateur de services de base à une instance de {{site.data.keyword.iot_short_notm}}. Les services externes qui peuvent être intégrés à {{site.data.keyword.iot_short_notm}} comprennent les services de localisation météorologiques de The Weather Company, vous permettant de trouver la météo en cours dans la zone géographique d'un terminal, les données Jasper SIM et {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.ssoshort}}. Pour plus d'informations sur les extensions et les intégrations de services tiers, reportez-vous à la section relative à l'[intégration de services externes](https://console.ng.bluemix.net/docs/services/IoT/reference/extensions/index.html).
 
 ---
 
@@ -58,7 +52,7 @@ A l'aide de l'API de dernier cache d'événement {{site.data.keyword.iot_short_n
 
 ### Stockage de données d'événement de terminal
 
-Les données de stockage d'événement de terminal de votre service {{site.data.keyword.iot_short_notm}} peuvent être stockées pour être utilisées ultérieurement. Le stockage de données est une première étape essentielle vers l'exécution d'analyses éclairées destinées à vous permettre d'obtenir des informations à partir de ces données.  Par exemple, vous pouvez effectuer le suivi de modifications sur des périodes plus longues et stocker des ensembles de données destinés à être utilisés avec des outils d'analyse puissants, y compris pour une utilisation avec l'API Watson et l'informatique cognitive.
+Les données de stockage d'événement de terminal de votre service {{site.data.keyword.iot_short_notm}} peuvent être stockées pour être utilisées ultérieurement. Le stockage de données est une première étape essentielle vers l'exécution d'analyses éclairées destinées à vous permettre d'obtenir des informations à partir de ces données.  Par exemple, vous pouvez effectuer le suivi de modifications sur des périodes plus longues et stocker des ensembles de données destinés à être utilisés avec des outils d'analyse puissants, y compris pour une utilisation avec l'API Watson et l'informatique cognitive. Pour plus d'informations, voir la rubrique relative à la [connexion d'un service historique {{site.data.keyword.cloudant_short_notm}}](https://console.ng.bluemix.net/docs/services/IoT/cloudant_connector.html) ou à la [connexion d'un service historique {{site.data.keyword.messagehub}}](https://console.ng.bluemix.net/docs/services/IoT/message_hub.html).
 
 ---
 
@@ -67,7 +61,13 @@ Les données de stockage d'événement de terminal de votre service {{site.data.
 
 ### Visualisation de données de terminal en temps réel
 
-Vous pouvez visualiser et afficher des données de terminal en temps réel à l'aide de cartes de tableau de bord. Les cartes de tableau de bord surveillent et affichent des données de terminal en temps réel, ce qui vous permet d'assurer le suivi des principaux terminaux ou des données de terminal. Ces visualisations sont affichées sur le tableau de bord {{site.data.keyword.iot_short_notm}} principal pour vous permettre d'accéder rapidement au contexte et au statut des données de terminal en temps réel.
+Vous pouvez visualiser et afficher des données de terminal en temps réel à l'aide de cartes de tableau de bord. Les cartes de tableau de bord surveillent et affichent des données de terminal en temps réel, ce qui vous permet d'assurer le suivi des principaux terminaux ou des données de terminal. Ces visualisations sont affichées sur le tableau de bord {{site.data.keyword.iot_short_notm}} principal pour vous permettre d'accéder rapidement au contexte et au statut des données de terminal en temps réel. Pour plus d'informations, voir la rubrique relative à la [visualisation des données en temps réel](https://console.ng.bluemix.net/docs/services/IoT/data_visualization.html).
+
+### Edge Analytics et Cloud Analytics
+
+En utilisant {{site.data.keyword.iot_short_notm}} Cloud Analytics, vous spécifiez des conditions de règle qui sont basées sur les données de terminal en temps réel et qui déclenchent des alertes et des actions facultatives lorsqu'elles sont réunies. Par exemple, vous pouvez créer une règle garantissant que lorsque le terminal est supprimé ou que la température du terminal augmente, une alerte est envoyée au tableau de bord du terminal de l'utilisateur et un courrier électronique est envoyé à l'administrateur. Pour plus d'informations, voir la [documentation Cloud Analytics](https://console.ng.bluemix.net/docs/services/IoT/cloud_analytics.html).
+
+Avec Edge Analytics, le processus d'analyse déclenché par des règles depuis le cloud est remplacé par une passerelle sur laquelle Edge Analytics est activé. Cela peut vous permettre de réduire considérablement la quantité de données de terminal envoyées vers le cloud car le traitement des analyses est exécutée à proximité du terminal. Pour plus d'informations, voir la [documentation Edge Analytics](https://console.ng.bluemix.net/docs/services/IoT/edge_analytics.html).
 
 ---
 
@@ -76,6 +76,8 @@ Vous pouvez visualiser et afficher des données de terminal en temps réel à l'
 
 ### Connectivité et architecture sécurisées
 
-L'architecture de {{site.data.keyword.iot_short_notm}} est conçue pour empêcher les terminaux de simuler les droits d'accès d'autres terminaux, garantissant ainsi l'intégrité de vos données de terminal. Les terminaux se connectent à {{site.data.keyword.iot_short_notm}} à l'aide d'une combinaison d'un ID de client et d'un jeton d'authentification connue de vous seul. Une fois les terminaux enregistrés ou les clés d'API générées, le jeton d'authentification est soumis à une opération de hachage et de salage pour garantir la sécurité de vos données d'identification. La connectivité via TLS v1.2 est entièrement prise en charge.
+L'architecture de {{site.data.keyword.iot_short_notm}} est conçue pour empêcher les terminaux de simuler les droits d'accès d'autres terminaux, garantissant ainsi l'intégrité de vos données de terminal. Les terminaux se connectent à {{site.data.keyword.iot_short_notm}} à l'aide d'une combinaison d'un ID de client et d'un jeton d'authentification connue de vous seul. Une fois les terminaux enregistrés ou les clés d'API générées, le jeton d'authentification est soumis à une opération de hachage et de salage pour garantir la sécurité de vos données d'identification.
+
+Le module complémentaire de Gestion des risques et de la sécurité vous permet d'améliorer la sécurité de {{site.data.keyword.iot_short_notm}} pour vous assurer que tous les points de connexion entre le serveur et les terminaux sont authentifiés avec des données d'identification certifiées. Avec ce module complémentaire, les certificats et l'authentification TLS (Transport Layer security) sont utilisés, en plus des ID utilisateur et des jetons utilisés par {{site.data.keyword.iot_short_notm}}. Lors de la communication entre les terminaux et le serveur, tous les terminaux ne disposant pas de certificats valides avec accès au serveur, tels que configurés dans le module complémentaire Gestion des risques et de la sécurité, se voient refuser l'accès, même s'ils utilisent des ID utilisateur et des mots de passe valides.
 
 ---

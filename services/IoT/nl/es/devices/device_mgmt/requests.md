@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-08"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # Solicitudes de gestión de dispositivos
 {: #requests}
-Última actualización: 08 de septiembre de 2016
-{: .last-updated}
 
 
 El {{site.data.keyword.iot_full}} proporciona acciones que se pueden iniciar para uno o varios dispositivos. Estas acciones se pueden iniciar mediante el panel de instrumentos o la API REST. Los tipos de acciones disponibles son **acciones de dispositivos** y **acciones de firmware**.

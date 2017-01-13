@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-27"
 
 ---
 
@@ -14,7 +15,6 @@ copyright:
 
 # Gateways verbinden
 {: #IoT_connectGateway}
-Letzte Aktualisierung: 28. Juli 2016
 
 Bevor Sie beginnen können, Daten von Geräten zu empfangen, die mit Ihren Gateways verbunden sind, müssen Sie das Gateway mit {{site.data.keyword.iot_full}} verbinden. Zum Herstellen einer Verbindung zwischen einem Gateway und {{site.data.keyword.iot_short_notm}} gehört die Erstellung eines Gateway-Gerätetyps und die Registrierung des Gateways in {{site.data.keyword.iot_short_notm}}. Sie können die Registrierungsinformationen anschließend verwenden, um das Gateway mit {{site.data.keyword.iot_short_notm}} zu verbinden.
 {:shortdesc}
@@ -26,7 +26,7 @@ Gateways sind in {{site.data.keyword.iot_short_notm}} eine besondere Geräteklas
 {: #Prerequisites}
 
 Gateway-Geräte haben im Vergleich zu regulären Geräten zusätzliche Berechtigungen und können folgende Funktionen ausführen:
-- Registrieren neuer Geräte in Watson IoT Platform
+- Registrieren neuer Geräte in {{site.data.keyword.iot_short_notm}}
 - Senden und Empfangen der eigenen Sensordaten wie ein direkt verbundenes Gerät
 - Senden und Empfangen von Daten im Namen der mit ihnen verbundenen Geräte
 - Ausführen eines Gerätemanagementagenten, sodass sie ebenso wie die verbundenen Geräte verwaltet werden können  
@@ -48,13 +48,25 @@ Gehen Sie wie folgt vor, um ein Gateway über das {{site.data.keyword.iot_short_
 3. Wählen oder erstellen Sie einen Gerätetyp für das Gerät, das Sie hinzufügen.  
 Jedem Gerät, das mit {{site.data.keyword.iot_short_notm}} verbunden ist, muss ein Gerätetyp zugeordnet sein. Gerätetypen sind Gruppen von Geräten, denen allgemeine Merkmale gemeinsam sind.  
  1. Klicken Sie auf **Gerätetyp erstellen** und anschließend auf **Gateway-Typ erstellen**.
- 2. Geben Sie einen Namen wie beispielsweise `my_gateway_type` und eine Beschreibung des Gateway-Typs ein.
- 3. Optional: Geben Sie Attribute und Metadaten zu dem Gateway-Typ ein.    
+ 2. Geben Sie einen Namen für den Gerätetyp, wie beispielsweise `my_gateway_type`, und eine Beschreibung des Gateway-Typs ein.**Wichtig:** Der Name des Gerätetyps darf maximal 36 Zeichen umfassen und nur folgende Zeichen enthalten:
+ <ul>
+  <li>Alphanumerische Zeichen (a-z, A-Z, 0-9)</li>
+  <li>Bindestriche (-)</li>
+  <li>Unterstreichungszeichen (&lowbar;)</li>
+  <li>Punkte (.)</li>
+  </ul>3. Optional: Geben Sie Attribute und Metadaten zu dem Gateway-Typ ein.    
  **Tipp:** Sie können Attribute und Metadaten später hinzufügen und bearbeiten.
  4. Klicken Sie auf **Erstellen**, um den neuen Gateway-Typ hinzuzufügen.
 10. Klicken Sie auf **Weiter**, um mit dem Hinzufügen Ihres Gateway-Geräts mit dem ausgewählten Gateway-Typ zu beginnen.
-11. Geben Sie eine Geräte-ID wie beispielsweise `my_gateway_device` ein.  
-Die Geräte-ID wird zum Ermitteln des Gateway-Geräts im {{site.data.keyword.iot_short_notm}}-Dashboard verwendet und ist auch ein erforderlicher Parameter für das Herstellen einer Verbindung zwischen Ihrem Gateway-Gerät und {{site.data.keyword.iot_short_notm}}.
+11. Geben Sie eine Geräte-ID, wie beispielsweise `my_gateway_device`, ein. Die Geräte-ID wird zum Ermitteln des Gateway-Geräts im {{site.data.keyword.iot_short_notm}}-Dashboard verwendet und ist auch ein erforderlicher Parameter für das Herstellen einer Verbindung zwischen Ihrem Gateway-Gerät und {{site.data.keyword.iot_short_notm}}.  
+**Wichtig:** Die Geräte-ID darf maximal 36 Zeichen umfassen und nur folgende Zeichen enthalten:
+ <ul>
+ <li>Alphanumerische Zeichen (a-z, A-Z, 0-9)</li>
+ <li>Bindestriche (-)</li>
+ <li>Unterstreichungszeichen (&lowbar;)</li>
+ <li>Punkte (.)</li>  
+ </ul>
+ **Tipp:** Bei netzverbundenen Geräten kann die Geräte-ID beispielsweise die MAC-Adresse des Geräts ohne trennende Doppelpunkte sein.  
 12. Optional: Klicken Sie auf **Zusätzliche Felder**, um Informationen zum Gateway-Gerät hinzuzufügen, wie beispielsweise Seriennummer, Hersteller, Modell usw.  
  **Tipp:** Sie können diese Informationen später hinzufügen und bearbeiten.
 12. Optional: Geben Sie JSON-Metadaten zum Gerät ein.  
@@ -79,7 +91,7 @@ Nach dem Registrieren eines Gateways in {{site.data.keyword.iot_short_notm}} ver
 
 Informationen zum Herstellen einer Verbindung zu {{site.data.keyword.iot_short_notm}} finden Sie in [MQTT-Konnektivität für Gateways](mqtt.html).
 
-**Tipp:** Es gibt eine Reihe von Anleitungen, die für das Herstellen einer Verbindung zwischen Geräten und {{site.data.keyword.iot_short_notm}} zur Verfügung stehen. Lesen Sie die [Anleitungen für das Verbinden von Geräten](https://developer.ibm.com/recipes/?post_type=tutorials&s=IoT), die unter IBM.com zur Verfügung stehen.
+**Tipp:** Es gibt eine Reihe von Anleitungen, die für das Herstellen einer Verbindung zwischen Geräten und {{site.data.keyword.iot_short_notm}} zur Verfügung stehen. Lesen Sie die [Anleitungen für das Verbinden von Geräten](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/), die unter IBM.com zur Verfügung stehen.
 
 
 ## Schritt 3: Verbinden der Geräte über das Gateway
@@ -116,7 +128,9 @@ Gehen Sie wie folgt vor, um den Edge Analytics-Agenten in Ihrem Gateway zu insta
 Sie können die für EAA geltende config.properties-Datei verwenden, um Konfigurationsparameter für die Basissoftware festzulegen.
 
 Gehen Sie wie folgt vor, um die EAA-Konfiguration zu aktualisieren:
-1. Suchen Sie in dem Gateway-System, auf dem der EAA ausgeführt wird, die EAA-Datei 'config.properties'.
+1. Suchen Sie in dem Gateway-System, auf dem der EAA ausgeführt wird, die EAA-Datei 'config.properties'.  
+Beispiel:
+`../dglux-server/dslinks/ibm-watson-iot-edge-analytics-dslink-java-0.0.1/config.properties`
 2. Erstellen Sie vor dem Bearbeiten der Einstellungen eine Sicherungskopie der Datei.
 3. Öffnen Sie die config.properties-Datei zur Bearbeitung.
 4. Bearbeiten Sie die Konfigurationsparameter für Ihre Umgebung:

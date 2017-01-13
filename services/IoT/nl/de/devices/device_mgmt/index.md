@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-13"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # Gerätemanagementprotokoll
 {: #index}
-Letzte Aktualisierung: 13. September 2016
-{: .last-updated}
 
 ## Einführung
 {: #introduction}
@@ -138,7 +137,7 @@ Topic: iotdm-1/response
 |200   |Die Operation war erfolgreich.|
 |400   |Die Eingabenachricht stimmt nicht mit dem erwarteten Format überein oder einer der Werte liegt außerhalb des gültigen Bereichs.|
 |404   |Der Topicname ist falsch oder das Gerät ist nicht in der Datenbank vorhanden.|
-|409   |Ein Konflikt trat bei der Gerätedatenbankaktualisierung auf. Vereinfachen Sie, falls erforderlich, die Operation, um den Konflikt zu lösen.|
+|409   |Bei der Gerätedatenbankaktualisierung trat ein Konflikt auf. Vereinfachen Sie, falls erforderlich, die Operation, um den Konflikt zu lösen.|
 
 
 ## Anforderungen des Typs 'Gerät nicht verwalten'
@@ -193,7 +192,7 @@ Topic: iotdm-1/response
 |Antwortcode |Nachricht |
 |:---|:---|
 |200   |Die Operation war erfolgreich.|
-|400   |Die Eingabenachricht stimmt nicht mit dem erwarteten Format überein, oder einer der Werte liegt außerhalb des gültigen Bereichs.|
+|400   |Die Eingabenachricht stimmt nicht mit dem erwarteten Format überein oder einer der Werte liegt außerhalb des gültigen Bereichs.|
 |404   |Der Topicname ist falsch oder das Gerät ist nicht in der Datenbank vorhanden.|
 |409   |Bei der Gerätedatenbankaktualisierung trat ein Konflikt auf. Vereinfachen Sie, falls erforderlich, die Operation, um den Konflikt zu lösen.|
 
@@ -296,7 +295,7 @@ Topic: iotdm-1/response
 |200   |Die Operation war erfolgreich.|
 |400   |Die Eingabenachricht stimmt nicht mit dem erwarteten Format überein oder einer der Werte liegt außerhalb des gültigen Bereichs.|
 |404   |Der Topicname ist falsch oder das Gerät ist nicht in der Datenbank vorhanden.|
-|409   |Ein Konflikt trat bei der Gerätedatenbankaktualisierung auf. Vereinfachen Sie, falls erforderlich, die Operation, um den Konflikt zu lösen.|
+|409   |Bei der Gerätedatenbankaktualisierung trat ein Konflikt auf. Vereinfachen Sie, falls erforderlich, die Operation, um den Konflikt zu lösen.|
 
 
 ### Positionsaktualisierungen, die von Benutzern oder Apps ausgelöst werden
@@ -425,7 +424,7 @@ Topic: iotdm-1/response
 |200   |Die Operation war erfolgreich.|
 |400   |Die Eingabenachricht stimmt nicht mit dem erwarteten Format überein oder einer der Werte liegt außerhalb des gültigen Bereichs.|
 |404   |Der Topicname ist falsch oder das Gerät ist nicht in der Datenbank vorhanden.|
-|409   |Ein Konflikt trat bei der Gerätedatenbankaktualisierung auf. Vereinfachen Sie, falls erforderlich, die Operation, um den Konflikt zu lösen.|
+|409   |Bei der Gerätedatenbankaktualisierung trat ein Konflikt auf. Vereinfachen Sie, falls erforderlich, die Operation, um den Konflikt zu lösen.|
 
 
 ## Anforderungen des Typs 'Fehlercodes löschen'
@@ -475,7 +474,7 @@ Topic: iotdm-1/response
 |200   |Die Operation war erfolgreich.|
 |400   |Die Eingabenachricht stimmt nicht mit dem erwarteten Format überein oder einer der Werte liegt außerhalb des gültigen Bereichs.|
 |404   |Der Topicname ist falsch oder das Gerät ist nicht in der Datenbank vorhanden.|
-|409   |Ein Konflikt trat bei der Gerätedatenbankaktualisierung auf. Vereinfachen Sie, falls erforderlich, die Operation, um den Konflikt zu lösen.|
+|409   |Bei der Gerätedatenbankaktualisierung trat ein Konflikt auf. Vereinfachen Sie, falls erforderlich, die Operation, um den Konflikt zu lösen.|
 
 
 ## Anforderungen des Typs 'Protokoll hinzufügen'
@@ -540,7 +539,7 @@ Topic: iotdm-1/response
 |200   |Die Operation war erfolgreich.|
 |400   |Die Eingabenachricht stimmt nicht mit dem erwarteten Format überein oder einer der Werte liegt außerhalb des gültigen Bereichs.|
 |404   |Der Topicname ist falsch oder das Gerät ist nicht in der Datenbank vorhanden.|
-|409   |Ein Konflikt trat bei der Gerätedatenbankaktualisierung auf. Vereinfachen Sie, falls erforderlich, die Operation, um den Konflikt zu lösen.|
+|409   |Bei der Gerätedatenbankaktualisierung trat ein Konflikt auf. Vereinfachen Sie, falls erforderlich, die Operation, um den Konflikt zu lösen.|
 
 ## Anforderungen des Typs 'Protokolle löschen'
 {: #diag-clear-logs}
@@ -589,7 +588,7 @@ Topic: iotdm-1/response
 |200   |Die Operation war erfolgreich.|
 |400   |Die Eingabenachricht stimmt nicht mit dem erwarteten Format überein oder einer der Werte liegt außerhalb des gültigen Bereichs.|
 |404   |Der Topicname ist falsch oder das Gerät ist nicht in der Datenbank vorhanden.|
-|409   |Ein Konflikt trat bei der Gerätedatenbankaktualisierung auf. Vereinfachen Sie, falls erforderlich, die Operation, um den Konflikt zu lösen.|
+|409   |Bei der Gerätedatenbankaktualisierung trat ein Konflikt auf. Vereinfachen Sie, falls erforderlich, die Operation, um den Konflikt zu lösen.|
 
 ## Anforderungen des Typs 'Attributänderungen beobachten'
 {: #observations-observe}
@@ -764,5 +763,5 @@ Topic: iotdm-1/response
 |200   |Die Operation war erfolgreich.|
 |400   |Die Eingabenachricht stimmt nicht mit dem erwarteten Format überein oder einer der Werte liegt außerhalb des gültigen Bereichs.|
 |404   |Der Topicname ist falsch, das Gerät ist nicht in der Datenbank vorhanden oder es gibt für das Feld keine berichtete Beobachtung.|
-|409   |Ein Konflikt trat bei der Gerätedatenbankaktualisierung auf. Vereinfachen Sie, falls erforderlich, die Operation, um den Konflikt zu lösen.|
+|409   |Bei der Gerätedatenbankaktualisierung trat ein Konflikt auf. Vereinfachen Sie, falls erforderlich, die Operation, um den Konflikt zu lösen.|
 |500   |Es ist ein interner Fehler aufgetreten.|

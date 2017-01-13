@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-09-16"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # Conectando e configurando um serviço historiador usando um {{site.data.keyword.cloudant_short_notm}}  
 {: #cloudant_main}
-Última atualização: 16 de setembro de 2016
-{: .last-updated}
 
 Conectar um serviço do {{site.data.keyword.cloudantfull}} ao seu {{site.data.keyword.iot_full}} permite armazenar e acessar os dados de seu dispositivo. Os dados do dispositivo são armazenados em bancos de dados diários, semanais ou mensais, dependendo do intervalo de seu depósito selecionado.
 
@@ -82,7 +81,7 @@ Conclua as etapas a seguir para conectar um {{site.data.keyword.cloudant_short_n
  +  * `<orgID>` é o ID da sua organização.
  +  * `<dbname>` é a sua opção para essa parte do nome do banco de dados controlada pelo campo `Nome do banco de dados`.
  +  * `<bucket_name>` é uma sequência determinada pela sua opção para o campo `Intervalo de depósitos`:
- +    * Para os intervalos de depósito `day`, `<bucket_name>` será `yyy-mm-dd`. Por exemplo, `2016-07-06` para eventos em 6 de julho de 2016.
+ +    * Para os intervalos de depósito `day`, `<bucket_name>` será `yyy-mm-dd`.  Por exemplo, `2016-07-06` para eventos em 6 de julho de 2016.
  +    * Para os intervalos de depósito `week`, `<bucket_name>` será `yyyy-'w'ww` em que `'w'ww` indica um número da semana.  Por exemplo, `2016-w03` para eventos na terceira semana de 2016.
  +    * Para os intervalos de depósito `month`, `< bucket_name>` será `yyyy-mm`.  Por exemplo, `2016-07` para eventos em julho de 2016.
 

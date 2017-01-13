@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-09-01"
 
 ---
 
@@ -13,13 +14,13 @@ copyright:
 
 # Visualización de datos en tiempo real utilizando paneles y tarjetas
 {: #boards_and_cards}
-Última actualización: 21 de junio de 2016
-{: .last-updated}
 
 Crear tableros y tarjetas para crear y compartir sus propios paneles de instrumentos que visualizan los datos de dispositivo en tiempo real.
 {:shortdesc}
 
 Al utilizar los tableros y las tarjetas, puede visualizar gráficamente valores de conjuntos de datos de uno o varios dispositivos para proporcionar una visión general rápida y mejorar la comprensión de los datos. Cree tableros y añada tarjetas que muestren los datos como números en bruto, gráficos en tiempo real, indicadores, etc. Añada miembros a los tableros para compartirlos con otros usuarios de su organización. Organice las tarjetas y añada divisores de texto explicativo para ajustar la presentación.  
+
+También puede expandir el conjunto predeterminado de tarjetas proporcionadas por IBM mediante la [creación de sus propias tarjetas personalizadas](custom_cards/custom-cards.html).
 
 ![Mostrando datos en tiempo real con tarjetas.](images/boards_and_cards.svg "Mostrando datos en tiempo real con tarjetas.")
 
@@ -32,6 +33,7 @@ El panel de control de {{site.data.keyword.iot_full}} tiene los siguientes table
 |Visión general del uso  | Muestra estadísticas de uso para su organización. Lista tipos de dispositivos y los datos que se consumen.
 |Analítica centrada en las reglas | Muestra las reglas para su organización. Las alertas desencadenadas de lista de tarjetas adicionales, los dispositivos asociados, las propiedades de dispositivos y la información de alertas. |  
 |Analítica centradas en los dispositivos | Muestra los dispositivos conectados a su organización. Las tarjetas adicionales muestran alertas para un dispositivo seleccionado, información para un dispositivo seleccionado, propiedades de dispositivos e información de alerta. |
+|Gestión de riesgos y de seguridad | Muestra tarjetas que resumen el estado general de la seguridad. Las operaciones de sistemas y los analistas de seguridad pueden ver detalles sobre la conformidad, el estado de conexión de dispositivos, las causas de las anomalías de conexión y los dispositivos que están bloqueados o que se permiten mediante una lista negra o una lista blanca. Desde la tarjeta de conformidad de conexión, el usuario puede acceder a un informe detallado sobre los dispositivos no conformes y puede exportar el informe a Excel. |
 
 Puede actualizar estos tableros añadiendo, actualizando y eliminando tarjetas.
 

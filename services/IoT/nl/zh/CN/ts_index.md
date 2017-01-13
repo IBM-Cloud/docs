@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-01"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # {{site.data.keyword.iot_short_notm}} 故障诊断
 {: #ts}
-上次更新时间：2016 年 8 月 1 日
-{: .last-updated}
 
 此处提供了有关在 {{site.data.keyword.Bluemix_notm}} 上使用 {{site.data.keyword.iot_full}} 的常见故障诊断问题的解答。
 {:shortdesc}

@@ -2,10 +2,11 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-18"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -13,8 +14,6 @@ copyright:
 
 # Integrações de serviços externos
 {: #ref-index}
-Última atualização: 26 de setembro de 2016
-{: .last-updated}
 
 A integração de serviços externos permite acessar dados e operações de terceiros ou serviços externos em sua organização do {{site.data.keyword.iot_full}}.
 
@@ -39,6 +38,8 @@ A integração de Jasper integrada fornecida por nossa plataforma fornece suport
 
 É possível acessar as operações suportadas no drill down de dispositivo de um dispositivo conectado Jasper após a conclusão das etapas de configuração a seguir.
 
+### APIs de REST para Jasper
+Para acessar a API de REST para Jasper, consulte a seção Jasper Extension na documentação [{{site.data.keyword.iot_short_notm}} API de REST HTTP](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension).
 
 ### Configuração para Jasper
 
@@ -89,6 +90,9 @@ A extensão AT&T permite as operações a seguir da AT&T:
 - Enviar SMS para o SIM
 - Alterar o plano de taxa
 
+### APIs de REST para AT&T
+Para acessar a API de REST para AT&T, consulte a seção AT&T Extension na documentação [{{site.data.keyword.iot_short_notm}} API de REST HTTP](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension).
+
 ### Configuração para a AT&T
 
 Para conectar sua organização do {{site.data.keyword.iot_short_notm}} ao AT&T, deve-se concluir a configuração da organização e a configuração do dispositivo.
@@ -107,7 +111,7 @@ Para conectar sua organização do {{site.data.keyword.iot_short_notm}} à sua c
 
 2. Configure seus dispositivos
 É possível configurar os dispositivos que estão conectados à sua organização do {{site.data.keyword.iot_short_notm}} e à sua conta da AT&T para exibir dados da AT&T no painel do {{site.data.keyword.iot_short_notm}}.  
-**Importante:** A configuração da AT&T não pode ser aplicada como parte do processo Incluir dispositivo, apenas dispositivos conectados anteriormente podem ser configurados com a AT&T.
+**Importante:** A configuração da AT&T não pode ser aplicada como parte do processo Incluir dispositivo, apenas dispositivos conectados anteriormente podem ser configurados com a AT&T.  
 Para configurar seus dispositivos conectados ao AT&T, conclua as etapas a seguir:
  1. Na guia dispositivos do painel do {{site.data.keyword.iot_short_notm}}, localize o dispositivo conectado ao AT&T a ser configurado.
  2. Selecione o dispositivo para abrir a visualização *Drill down de dispositivo*.
@@ -124,7 +128,6 @@ Para configurar seus dispositivos conectados ao AT&T, conclua as etapas a seguir
 ```
 
 Quando a organização estiver configurada com sucesso, a seção *Extensões* será exibida na seção *Configuração de extensões* na visualização *Drill down de dispositivo*.
-
 
 ## Conector ARM mbed
 {: #arm}
@@ -193,6 +196,8 @@ O {{site.data.keyword.iot_short_notm}} pode enviar comandos para dispositivos co
 }
 ```
 O método escolhido faz distinção entre maiúsculas e minúsculas. O caractere inicial '/' do caminho de recurso deve ser ignorado.
+
+
 A carga útil deve ser publicada no tópico a seguir:
 
 ```
@@ -217,9 +222,10 @@ Se você tiver um dispositivo que esteja conectado ao serviço do {{site.data.ke
 - Última atualização do status
 - Status do Local
 
+### APIs de REST para Orange
+Para acessar a API de REST para Orange, consulte a seção Orange Extension na documentação [{{site.data.keyword.iot_short_notm}} API de REST HTTP](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension).
+
 ### Configuração para a Orange
-
-
 
 Para ativar a extensão da Orange:
 
@@ -284,7 +290,11 @@ A extensão Weather Company combina dados de clima com seus dispositivos {{site.
 
 **Observação:** apenas dispositivos gerenciados podem configurar suas próprias localizações. Todos os dispositivos não gerenciados devem ter seus locais configurados manualmente usando a API. Para obter mais informações sobre a configuração de um local do dispositivo, consulte [Atualizar solicitações de localização](../../devices/device_mgmt/index.html#update-location).
 
-### Dados Meteorológicos
+### APIs de REST para The Weather Company
+Para acessar a API de REST para The Weather Company, consulte a seção
+Device Location Weather na documentação [{{site.data.keyword.iot_short_notm}} API de REST HTTP](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather).
+
+### Dados de clima
 
 Para visualizar os dados de clima recuperados para um local do dispositivo, localize o dispositivo na área de janela **Dispositivos** e clique nele. Na visualização de dispositivo detalhada, role para baixo para a seção **Extensões**. Os dados de clima a seguir são listados:
 

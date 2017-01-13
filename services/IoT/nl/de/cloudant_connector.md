@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-09-16"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # Archivierungsfunktion mithilfe von {{site.data.keyword.cloudant_short_notm}} verbinden und konfigurieren  
 {: #cloudant_main}
-Letzte Aktualisierung: 16. September 2016
-{: .last-updated}
 
 Durch Herstellen einer Verbindung zwischen einem {{site.data.keyword.cloudantfull}}-Service und Ihrer Instanz von {{site.data.keyword.iot_full}} können Sie Ihre Gerätedaten speichern und auf sie zugreifen. Gerätedaten werden je nach dem von Ihnen gewählten Bucketintervall in Datenbanken gespeichert, die auf der Grundlage 'Tag', 'Woche' oder 'Monat' arbeiten.
 
@@ -82,9 +81,9 @@ Führen Sie folgende Schritte aus, um für eine {{site.data.keyword.cloudant_sho
  +  * `<Organisations-ID>` ist die ID Ihrer Organisation.
  +  * `<Datenbankname>` ist Ihre Auswahl für diesen Teil des Datenbanknamens, der durch das Feld für den Datenbanknamen (`Database Name`) gesteuert wird.
  +  * `<Bucketname>` ist eine Zeichenfolge, die durch Ihre Auswahl für das Feld für das Bucketintervall (`Bucket Interval`) festgelegt ist:
- +    * Für ein tägliches Bucketintervall (`day`) nimmt `<Bucketname>` den Wert `jjjj-mm-tt` an. Beispielsweise `2016-07-06` für Ereignisse am 6. Juli 2016.
- +    * Für ein wöchentliches Bucketintervall (`week`) nimmt `<Bucketname>` den Wert `jjjj-'w'ww` an, wobei `'w'ww` die Nummer einer Woche angibt. Beispielsweise `2016-w03` für Ereignisse in der dritten Kalenderwoche in 2016.
- +    * Für ein monatliches Bucketintervall (`month`) nimmt `<Bucketname>` den Wert `jjjj-mm` an. Beispielsweise `2016-07` für Ereignisse im Juli 2016.
+ +    * Für ein tägliches Bucketintervall (`day`) nimmt `<Bucketname>` den Wert `jjjj-mm-tt` an.  Beispielsweise `2016-07-06` für Ereignisse am 6. Juli 2016.
+ +    * Für ein wöchentliches Bucketintervall (`week`) nimmt `<Bucketname>` den Wert `jjjj-'w'ww` an, wobei `'w'ww` die Nummer einer Woche angibt.  Beispielsweise `2016-w03` für Ereignisse in der dritten Kalenderwoche in 2016.
+ +    * Für ein monatliches Bucketintervall (`month`) nimmt `<Bucketname>` den Wert `jjjj-mm` an.  Beispielsweise `2016-07` für Ereignisse im Juli 2016.
 
 5. Klicken Sie auf **Berechtigen**.
 6. Klicken Sie im Dialogfeld 'Berechtigung' auf **Bestätigen**.
@@ -95,7 +94,6 @@ Ihre Gerätedaten werden nun in Ihrer {{site.data.keyword.cloudant}}-Datenbank g
 {: #design_docs}
 
 Neue Designdokumente, die in der Konfigurationsdatenbank enthalten sind, werden in jede erstellte Datenbank kopiert. Der Name der Konfigurationsdatenbank lautet 'iotp_<Organisations-ID>_<Auswahl>_configuration', wobei dieselben Parameter wie für die in Schritt 3b des Abschnitts 'Vorbereitende Schritte' beschriebenen Datenbanknamen verwendet werden.
-
 
 Die standardmäßig in {{site.data.keyword.iot_short_notm}} enthaltenen Designdokumente implementieren neben der Zusammenfassungsfunktion Abfragen, die in der aktuellen Archivierungsfunktion zur Verfügung stehen.
 

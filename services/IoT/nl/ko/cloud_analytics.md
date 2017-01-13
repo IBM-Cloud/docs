@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-23"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # 클라우드 분석
 {: #cloud_analytics}
-마지막 업데이트 날짜: 2016년 8월 23일
-{: .last-updated}
 
 {{site.data.keyword.iot_short}} 클라우드 분석을 사용하면 실시간 디바이스 데이터를 기반으로 하며 충족 시에 경보 및 선택적 조치를 트리거하는 규칙 조건을 지정합니다.     
 {: shortdesc}

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-10-16"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 {:pre: .pre}
 
 # 网关角色的访问级别
-上次更新时间：2016 年 9 月 16 日
-{: .last-updated}
 
 以下各表说明各个网关角色的访问级别。
 

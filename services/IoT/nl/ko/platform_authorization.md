@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-09-14"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 {:pre: .pre}
 
 # 애플리케이션 연결
-마지막 업데이트 날짜: 2016년 9월 14일
-{: .last-updated}
 
 {{site.data.keyword.iot_full}}에 애플리케이션을 연결하려면 API 키 및 토큰을 사용하거나 애플리케이션을 {{site.data.keyword.Bluemix_notm}}의 {{site.data.keyword.iot_short_notm}}에 직접 바인딩하여 연결해야 합니다. 액세스 대시보드를 사용하여 액세스를 부여합니다.
 {:shortdesc}

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-09-16"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 {:pre: .pre}
 
 # Benutzerzugriff verwalten
-Letzte Aktualisierung: 16. September 2016
-{: .last-updated}
 
 Über das Zugriffsdashboard können Sie den Zugriff auf Ihre {{site.data.keyword.iot_full}}-Organisation steuern und verwalten. Sie können Benutzer hinzufügen, indem Sie sie hinzufügen, einladen, registrieren oder importieren. Durch die Zuweisung von Rollen können Sie Ihren Benutzern unterschiedliche Zugriffsebenen zuordnen.
 {:shortdesc}
@@ -73,7 +72,7 @@ Gehen Sie wie folgt vor, um ein Mitglied in Ihrer {{site.data.keyword.iot_short_
 2. Klicken Sie auf **Mitglied hinzufügen** und wählen Sie **Einladen** aus.
 3. Geben Sie die E-Mail-Adresse des Mitglieds ein.
 4. Wählen Sie eine Rolle für dieses Mitglied aus.
-5. Geben Sie den Betreff, den Realmnamen und den Aussteller ein. 
+5. Geben Sie den Betreff, den Realmnamen und den Aussteller ein.
    **Wichtig:** Stellen Sie sicher, dass die Felder für den Betreff (`Subject`), den Realmnamen (`Realm Name`) und den Aussteller (`Issuer`) die Empfehlungen und Standards von OpenID Connect einhalten. Weitere Informationen finden Sie auf der Website von [OpenID Connect](http://openid.net/connect/).
 6. Optional: Legen Sie ein Ablaufdatum für das Mitglied fest.
 7. Klicken Sie auf **Benutzer registrieren**.

@@ -1,7 +1,8 @@
 ---
 
-copyright :
-  2016
+copyright:
+  years: 2016
+lastupdated: "2016-09-14"
 
 ---
 
@@ -12,8 +13,6 @@ copyright :
 {:pre: .pre}
 
 # Connexion d'application
-Dernière mise à jour : 14 septembre 2016
-{: .last-updated}
 
 Pour connecter votre application à {{site.data.keyword.iot_full}}, vous devez utiliser des clés d'API et des jetons ou lier votre application directement à {{site.data.keyword.iot_short_notm}} dans {{site.data.keyword.Bluemix_notm}}. Pour accorder des droits d'accès, utilisez le tableau de bord des accès.
 {:shortdesc}

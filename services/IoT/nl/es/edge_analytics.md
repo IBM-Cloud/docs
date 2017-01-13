@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-10-27"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # Analíticas de extremo
 {: #edge_analytics}
-Última actualización: 1 de agosto de 2016
-{: .last-updated}
 
 Con las analíticas de extremo, mueva el proceso de desencadenamiento de reglas de analíticas desde la nube a una pasarela habilitada para analíticas de extremo que pueden reducir drásticamente la cantidad de tráfico de datos de dispositivo en la nube haciendo que el proceso de analíticas se cierre en el dispositivo.
 {:shortdesk}
@@ -33,7 +32,7 @@ El diagrama siguiente ilustra la arquitectura general de un entorno de análisis
 Para empezar a crear las acciones y las reglas de extremo:
 - Asegúrese de que la pasarela esté conectada a {{site.data.keyword.iot_short}} y de que los datos de dispositivos se estén transmitiendo. Consulte [Conexión de pasarelas](gateways/dashboard.html) para obtener más información.
 - Instale Edge Analytics Agent (EAA) en la pasarela. Para obtener información, consulte [Instalación de Edge Analytics Agent](gateways/dashboard.html#edge). </br> **Consejo:** Las pasarelas habilitadas por EAA proporcionan datos de diagnóstico de EAA en forma de mensajes de dispositivos de pasarela. Para obtener información, consulte [Métricas de diagnóstico de Edge Analytics Agent](#eaa_metrics).
-- Asegúrese de que las propiedades de dispositivos que desea utilizar como condiciones en las reglas se hayan correlacionado con esquemas. Consulte [Conexión de dispositivos](iotplatform_task.html) y [Creación de esquemas](im_schemas.html) para obtener más información.
+- Asegúrese de que las propiedades de dispositivos que desea utilizar como condiciones en las reglas estén correlacionadas con esquemas. Consulte [Conexión de dispositivos](iotplatform_task.html) y [Creación de esquemas](im_schemas.html) para obtener más información.
 
 ## Gestión de reglas y acciones de extremo  
 {: #managing_rules}
@@ -42,14 +41,14 @@ Las reglas de extremo se gestionan utilizando lo siguiente:
 - El panel de instrumentos **Reglas** se utiliza para crear y editar las acciones de reglas de extremo y de nube para los dispositivos y las pasarelas.
 - El panel **Pasarelas de reglas de extremo** se utiliza para activar, desactivar, actualizar y eliminar una regla de extremo en las pasarelas. Para acceder al panel de instrumentos Pasarelas de reglas de extremo, desde el panel de instrumentos Reglas, pulse **Gestionar regla** para la regla de extremo que desee gestionar. Para obtener más información, consulte [Activación, desactivación y gestión de reglas de extremo para las pasarelas](#manage).
 
-Para obtener una visión general de las alertas y las reglas de extremo para los dispositivos conectados de la pasarela, utilice los paneles siguientes:
+Para obtener una visión general de las reglas y las alertas que se han desencadenado para los dispositivos conectados a la pasarela, utilice los paneles siguientes:
 
- |Nombre del tablero | Descripción |  
+|Nombre del tablero | Descripción |  
  |:---|:---|  
   |Analítica centrada en las reglas | Muestra las reglas para la organización, incluidas las reglas de extremo. Las tarjetas adicionales listan las alertas de extremo reenviadas, los dispositivos asociados, las propiedades de dispositivos y la información de alertas de extremo reenviada. |  
  |Analítica centradas en los dispositivos | Muestra los dispositivos conectados a su organización. Las tarjetas adicionales muestran alertas reenviadas para un dispositivo de extremo seleccionado, información para un dispositivo seleccionado, propiedades de dispositivos e información de alertas reenviada. |
 
- Para obtener más información sobre los paneles de analítica predeterminados, consulte [Visualización de datos en tiempo real utilizando paneles y tarjetas](data_visualization.html#default_boards).
+Para obtener más información sobre los paneles de analítica predeterminados, consulte [Visualización de datos en tiempo real utilizando paneles y tarjetas](data_visualization.html#default_boards).
 
 
 ## Creación de reglas de extremo
@@ -65,12 +64,16 @@ Para crear una regla:
 3. Configure la lógica de reglas.  
 Añada una o varias condiciones IF para utilizar como desencadenadores para la regla.  
 Puede añadir condiciones en filas paralelas para aplicarlas como condiciones OR, o puede añadir condiciones en columnas secuenciales para aplicarlas como condiciones AND.  
-**Nota:** Para poder seleccionar una propiedad de dispositivo como entrada para una regla, la propiedad debe estar correlacionada con un esquema. Consulte [Creación de esquemas](im_schemas.html) para obtener más información.   
-**Importante:** Para desencadenar una condición que desencadene dos o más condiciones de propiedades combinadas secuencialmente utilizando AND, los puntos de datos desencadenantes deben estar incluidos en el mismo mensaje de dispositivos. Si los datos se reciben en más de un mensaje, las condiciones secuenciales no se desencadenan.  
-**Ejemplos:**
+**Nota:** Para poder seleccionar una propiedad de dispositivo como entrada para una regla, la propiedad debe estar correlacionada con un esquema. Consulte [Creación de esquemas](im_schemas.html) para obtener más información.  
+
+**Importante:** Para desencadenar una condición que compara dos propiedades o para desencadenar dos o más condiciones de propiedades que se combinan secuencialmente utilizando AND, deben incluirse los puntos de datos desencadenantes en el mismo mensaje de dispositivos. Si los datos se reciben en más de un mensaje, la condición o las condiciones secuenciales no se desencadenarán.  
+
+**Ejemplos:**  
 Una regla sencilla puede desencadenar una alerta si un valor de parámetro es mayor que un valor especificado:
-`temp>80`
+  
+`temp>80`  
 Una regla más compleja puede desencadenarse cuando se cumple una combinación de umbrales:
+  
 `temp>60 AND capacity>50`   
 
 4. Configure requisitos desencadenantes condicionales para la regla.  
@@ -187,30 +190,29 @@ Para ver información sobre el estado de la pasarela:
  - Consulte la sección **Información de sensor** para obtener información de diagnóstico detallada de la pasarela. En la tabla siguiente se describen las distintas propiedades que pueden incluirse en los mensajes de dispositivo de pasarela.
 
 
-Propiedad | Descripción
---- | ---
-`MsgInCount` |El número de mensajes que se han enviado Edge Analytics Agent (EAA).
-`MsgInRate`, `MsgInRate1Min`, `MessageInRate5Min`, `MsgInRate15Min`, `MsgInMeanRate` | El número estimado de mensajes por segundo que se han enviado al EAA durante el último periodo de tiempo.  </br>**Nota:** `MsgInRate` es un alias para `MsgInRate1Min`. `MsgInMeanRate` es el promedio de tasa de mensajes desde el inicio.
-`LastHeartBeat` | La indicación de fecha y hora en milisegundos cuando se ha generado el último mensaje de latido. Un mensaje de latido se genera cada 10 segundos como mínimo.
+ Propiedad | Descripción
+ --- | ---
+ `MsgInCount` |El número de mensajes que se han enviado Edge Analytics Agent (EAA).
+ `MsgInRate` | El número estimado de mensajes por segundo que se han enviado al EAA durante el último minuto.  
+ `LastHeartBeat` | La indicación de fecha y hora en milisegundos cuando se ha generado el último mensaje de latido. Se genera un mensaje de latido cada 10 segundos como mínimo.
 `CurrentTimestamp` | La indicación de fecha y hora en milisegundos cuando se ha generado el mensaje de supervisión actual.
 `IsAlive` | Esta propiedad es 0 si la diferencia entre `LastHeartBeat` y `CurrentTimestamp` es mayor que 20 segundos.
-`BytesOutCount` | El número de bytes de mensajes que envía el EAA a {{site.data.keyword.iot_short}}.
-`BytesOutRate`, `BytesOutRate1Min`, `BytesOutRate15Min`, `BytesOutRate5Min`, `BytesOutMeanRate` | El número estimado de bytes de mensajes por segundo que envió el EAA a {{site.data.keyword.iot_short}} durante el último periodo de tiempo. </br>**Nota:** `BytesOutRate` es un alias para `BytesOutRate1Min`. `BytesOutMeanRate` es el promedio de tasa desde el inicio.
+ `BytesOutCount` | El número de bytes de mensajes que envía el EAA a {{site.data.keyword.iot_short}}.
+ `BytesOutRate` | El número estimado de bytes de mensajes por segundo que envió el EAA a {{site.data.keyword.iot_short}} durante el último minuto.
 `BytesInCount` | El número de bytes de mensaje que ha enviado {{site.data.keyword.iot_short}} al EAA.
-`BytesInMeanRate`, `BytesInRate1Min`, `BytesInRate`, `BytesInRate15Min`, `BytesInRate5Min` | El número de bytes de mensajes estimados por segundo que ha enviado {{site.data.keyword.iot_short}} al EAA en el último periodo de tiempo. </br>**Nota:** BytesOutRate es un alias para BytesOutRate1Min. BytesOutMeanRate hace un recuento del promedio de tasa desde el inicio.
+ `BytesInRate` | El número de bytes de mensajes estimados por segundo que ha enviado {{site.data.keyword.iot_short}} al EAA en el último minuto.
 `RuleBytesInCount` |El número de bytes de mensaje que se han enviado al núcleo de motor de reglas de EAA. </br> **Nota:** Si no se ha establecido una regla para un tipo de dispositivo, no se enviarán mensajes para dicho tipo de dispositivo al núcleo de motor de reglas.
-`RuleBytesInRate5Min`, `RuleBytesInRate`, `RuleBytesInMeanRate`, `RuleBytesInRate1Min`, `RuleBytesInRate15Min` | El número estimado de bytes de mensaje por segundo que se han enviado al núcleo del motor de reglas de EAA durante el último periodo de tiempo. </br> **Nota:** `RuleBytesInMeanRate` es el promedio de tasa desde el inicio.
+ `RuleBytesInRate` | El número estimado de bytes de mensaje por segundo que se han enviado al núcleo del motor de reglas de EAA durante el último minuto.
 `MsgOutCount` | El número de mensajes que se enviado el EAA a {{site.data.keyword.iot_short}}.
-`MsgOutRate`, `MsgOutMeanRate`, `MsgOutRate1Min`, `MessageOutRate5Min`, `MsgOutRate15Min` | El número estimado de bytes de mensajes por segundos que ha enviado el EAA a {{site.data.keyword.iot_short}} durante el último periodo de tiempo.</br> **Nota:** `MsgOutRate` es un alias para `MsgOutRate1Min`. `MsgOutMeanRate` es el promedio de tasa desde el inicio.
+ `MsgOutRate` | El número estimado de bytes de mensajes por segundos que ha enviado el EAA a {{site.data.keyword.iot_short}} durante el último minuto.
 `MsgReducePercent` | La diferencia de porcentaje entre los mensajes entrantes y salientes. </br>La fórmula siguiente se utiliza para el cálculo: `(msgIn - msgOut) / msgIn`
 `BytesReducePercent` | La diferencia de porcentaje entre los bytes entrantes y salientes. </br>La fórmula siguiente se utiliza para el cálculo: `(bytesIn - bytesOut) / bytesIn`
 `MsgRateReduce` | La diferencia de porcentaje entre el promedio de mensajes entrantes y salientes. </br>La fórmula siguiente se utiliza para el cálculo: `(msgInRate - msgOutRate) / msgInRate`
 `BytesRateReduce` | La diferencia de porcentaje entre los bytes de mensajes entrantes y salientes. </br>La fórmula siguiente se utiliza para el cálculo: `(bytesInRate - bytesOutRate) / bytesInRate`
-`SystemLoad` | La carga del sistema actual para el sistema donde se está ejecutando el EAA. **Nota:** La tasa de CPU que sólo se enviará si el mandato `mpstat` está disponible en el sistema donde se está ejecutando el EAA. De lo contrario, se enviará el promedio de carga del sistema para el último minuto. </br>“El promedio de carga del sistema es la suma del número de entidades ejecutables en cola para los procesadores disponibles y el número de entidades ejecutables que se ejecutan en el promedio de los procesadores disponibles durante un tiempo. El modo en que se calcula el promedio de carga es específico del sistema operativo, pero es normalmente un promedio amortiguado dependiente del tiempo. Si el promedio de carga no está disponible, se devolverá un valor negativo. ”  
-Desde javadoc para ManagementFactory.getOperatingSystemMXBean
-`FreeMemory` | El número de bytes de memoria libre para la máquina virtual Java (JVM) donde EAA se encuentra en ejecución.
+`SystemLoad` | La carga del sistema actual para el sistema donde se está ejecutando el EAA. **Nota:** La tasa de CPU que sólo se enviará si el mandato `mpstat` está disponible en el sistema donde se está ejecutando el EAA. De lo contrario, se enviará el promedio de carga del sistema para el último minuto. </br>“El promedio de carga del sistema es la suma del número de entidades ejecutables en cola para los procesadores disponibles y el número de entidades ejecutables que se ejecutan en el promedio de los procesadores disponibles durante un periodo de tiempo. El modo en que se calcula el promedio de carga es específico del sistema operativo, pero es normalmente un promedio amortiguado dependiente del tiempo. Si el promedio de carga no está disponible, se devolverá un valor negativo. ” - javadoc for *ManagementFactory.getOperatingSystemMXBean*.
+ `FreeMemory` | El número de bytes de memoria libre para la máquina virtual Java (JVM) donde EAA se encuentra en ejecución.
 `MemoryUsed` | El número de bytes de memoria de JVM que utiliza EAA.
-`InQueueSize` | El número de mensajes que se ponen en cola para el proceso de EAA.
-`RuleNumber` | El número de reglas definidas en el núcleo del motor de reglas.
-`ProcessorNumber` | Para uso de depuración. El número de procesadores definidos en el núcleo del motor de reglas. </br>**Nota:** Un procesador es la unidad de ejecución mínima en el núcleo del motor de reglas.
-`DataPointsInWindow` | El número total de puntos de datos que se colocan en almacenamiento intermedio en la ventana de tiempo. El tamaño de bytes de un punto de datos difiere en función de su tipo de datos. Por ejemplo, un tamaño de punto de datos float/int es 8 bytes, mientras que un tamaño de punto de datos de serie difiere en función de su longitud. En la mayoría de los casos, puede estimar el uso de memoria de la ventana de tiempo utilizando la fórmula siguiente: `DataPointsInWindow * 8`.
+ `InQueueSize` | El número de mensajes que se ponen en cola para el proceso de EAA.
+ `RuleNumber` | El número de reglas definidas en el núcleo del motor de reglas.
+ `ProcessorNumber` | Para uso de depuración. El número de procesadores definidos en el núcleo del motor de reglas. </br>**Nota:** Un procesador es la unidad de ejecución mínima en el núcleo del motor de reglas.
+ `DataPointsInWindow` | El número total de puntos de datos que se colocan en almacenamiento intermedio en la ventana de tiempo. El tamaño de bytes de un punto de datos difiere en función de su tipo de datos. Por ejemplo, un tamaño de punto de datos float/int es 8 bytes, mientras que un tamaño de punto de datos de serie difiere en función de su longitud.  En la mayoría de los casos, puede estimar el uso de memoria de la ventana de tiempo utilizando la fórmula siguiente: `DataPointsInWindow * 8`.

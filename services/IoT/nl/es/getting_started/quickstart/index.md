@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-19"
 
 ---
 
@@ -12,10 +13,6 @@ copyright:
 {:pre: .pre}
 
 # Inicio rápido
-
-Última actualización: 19 de septiembre de 2016
-{: .last-updated}
-
 
 [Inicio rápido](https://quickstart.internetofthings.ibmcloud.com/#/) es un recinto de pruebas abierto que puede utilizar para conectarse rápidamente a los dispositivos en el {{site.data.keyword.iot_full}}. Si los dispositivos dan soporte al protocolo de mensajería de MQTT, se pueden conectar fácilmente a Inicio rápido.
 

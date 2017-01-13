@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-27"
 
 ---
 
@@ -11,15 +12,27 @@ copyright:
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Sviluppo dei gateway su {{site.data.keyword.iot_short}}
+# Sviluppo dei gateway su {{site.data.keyword.iot_short_notm}}
 {: #gw_dev_index}
 
-Ultimo aggiornamento: 26 agosto 2016
-{: .last-updated}
-
-Se i tuoi dispositivi non possono collegarsi direttamente a internet, puoi creare un dispositivo gateway per richiamare e inviare dati per le applicazioni nella tua organizzazione {{site.data.keyword.iot_full}}.
+Se i tuoi dispositivi non possono collegarsi direttamente a internet, puoi creare un dispositivo gateway per richiamare e inviare dati per le applicazioni nella tua organizzazione {{site.data.keyword.iot_full}}. Vengono forniti esempi, librerie client e informazioni per aiutarti nel collegamento dei gateway del dispositivo alla tua organizzazione e applicazioni {{site.data.keyword.iot_full}}.
 {:shortdesc}
 
-Il protocollo di messaggistica MQTT è supportato per lo sviluppo del gateway in {{site.data.keyword.iot_short}}.
+## Protocolli di connessione
+Gateway collegati a {{site.data.keyword.iot_short_notm}} utilizzando il protocollo di messaggistica MQTT. Connessione dei gateway a {{site.data.keyword.iot_short_notm}} utilizzando la messaggistica HTTP non è supportata. Solo i dispositivi si possono collegare utilizzando la messaggistica HTTP.
 
-Per ulteriori informazioni e link alle librerie client disponibili per lo sviluppo su {{site.data.keyword.iot_short}}, consulta [Librerie client per lo sviluppo {{site.data.keyword.iot_short}}](../iot_platform_client_lib.html).
+## Librerie client 
+Le librerie client per lo sviluppo dei gateway che possono collegarsi a {{site.data.keyword.iot_short_notm}} sono disponibili nelle seguenti lingue:
+
+|Libreria client |Link alla libreria per ulteriore documentazione
+|:---|:---
+|C++| https://github.com/ibm-watson-iot/iot-cpp
+|C#| https://github.com/ibm-watson-iot/iot-csharp
+|Embedded C| https://github.com/ibm-watson-iot/iot-embeddedc
+|Java|https://github.com/ibm-watson-iot/iot-java
+|mBed C++|https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/
+|Node.js|https://github.com/ibm-watson-iot/iot-nodejs
+|Node-RED|https://github.com/ibm-watson-iot/iot-nodered
+|Python|https://github.com/ibm-watson-iot/iot-python
+
+Per ulteriori informazioni e link alle librerie client disponibili, consulta [Librerie client per lo sviluppo {{site.data.keyword.iot_short_notm}}](../iot_platform_client_lib.html).

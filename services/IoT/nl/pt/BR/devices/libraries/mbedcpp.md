@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-02"
 
 ---
 
@@ -14,9 +15,6 @@ copyright:
 
 # mBed C++ para desenvolvedores de dispositivos
 {: #mbedcpp}
-
-Última atualização: 02 de agosto de 2016
-{: .last-updated}
 
 Use a [biblioteca do cliente mBed C++](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/) para conectar [dispositivos mBed](https://www.mbed.com/en/), como [LPC1768](https://developer.mbed.org/platforms/mbed-LPC1768/) ou [FRDM-K64F](https://developer.mbed.org/platforms/FRDM-K64F/), facilmente ao serviço do {{site.data.keyword.iot_full}}.
 {:shortdesc}
@@ -73,7 +71,7 @@ A amostra de código a seguir descreve como uma instância de DeviceClient pode 
   // Create DeviceClient
   IoTF::DeviceClient client(organization, deviceType, deviceId);
 
-  // Get the DeviceID(MAC Address) if we are in quickstart mode and device id is not specified
+  // Get the DeviceID(MAC Address) if we are in quickstart mode and device ID is not specified
   if((strcmp(organization, QUICKSTART) == 0) && (strcmp("", deviceId) == 0))
   {
   	char tmpBuf[50];

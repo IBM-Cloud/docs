@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-11"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # 分析
 {: #analytics}  
-最終更新日: 2016 年 8 月 11 日
-{: .last-updated}
 
 Watson {{site.data.keyword.iot_full}} 分析を使用して、デバイスで生成された未加工のデータから、必要な分析情報を取得できます。  
 {: shortdesc}

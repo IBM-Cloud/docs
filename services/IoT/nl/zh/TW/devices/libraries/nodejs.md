@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-14"
 
 ---
 
@@ -14,13 +15,11 @@ copyright:
 
 # 適用於裝置開發人員的 Node.js
 {: #nodejs}
-前次更新：2016 年 9 月 14 日
-{: .last-updated}
 
-您可以在 {{site.data.keyword.iot_full}} 上調整 Node.js 中的用戶端程式庫及範例，來建置及開發與組織互動的裝置程式碼。
+您可以用 Node.js 調整用戶端程式庫及範例，來建置及開發裝置程式碼，在 {{site.data.keyword.iot_full}} 上與組織互動。
 {:shortdesc}
 
-使用提供的資訊及範例，利用 Node.js 開始開發您的裝置。
+請使用所提供的資訊及範例，利用 Node.js 開始開發您的裝置。
 
 ## 下載 Node.js 用戶端及資源
 {: #node.js_client_downloads}
@@ -41,12 +40,12 @@ copyright:
 |定義 |說明 |
 |:---|:---|
 |`org` |您的組織 ID。|
-|`type`  |您的裝置類型。一般而言，deviceType 是執行特定作業（例如，"weatherballoon"）的裝置分組。|
+|`type`  |您的裝置類型。一般而言，deviceType 是執行特定作業的裝置分組，例如，"weatherballoon"。|
 |`id`  |您的裝置 ID。一般而言，針對給定的裝置類型，deviceId 是該裝置的唯一 ID（例如，序號或 MAC 位址）。|
 |`auth-method`   |要使用的鑑別方法。目前唯一支援的值是 `token`。|
 |`auth-token`   |將裝置安全地連接至 Watson IoT Platform 的鑑別記號。如果 `auth-method` 為 `token`，則這是必要欄位。|
 
-**附註：**如果您想要使用「快速入門」服務，則只需要提交前三個內容。
+**附註：**如果您想要使用 Quickstart 服務，則只需要提交前三個內容。
 
 ```
     var iotf = require("ibmiotf");
@@ -141,13 +140,13 @@ copyright:
 ## 發佈事件
 {: #publishing_events}
 
-事件是裝置用來將資料發佈至 {{site.data.keyword.iot_short_notm}} 的機制。裝置會控制事件的內容，並指派所傳送之每一個事件的名稱。
+事件是裝置用來將資料發佈至 {{site.data.keyword.iot_short_notm}} 的機制。裝置會控制事件的內容，並指派名稱給它傳送的每個事件。
 
-{{site.data.keyword.iot_short_notm}} 實例接收到事件時，所收到事件的認證可識別傳送端裝置，這表示，裝置無法假冒另一個裝置。
+{{site.data.keyword.iot_short_notm}} 實例收到事件時，所收到事件的認證可識別傳送端裝置，這表示，裝置無法假冒另一個裝置。
 
-您可以為發佈的事件提高服務品質 (QoS) 水準。QoS 水準高於 `0` 的事件可能需要較長的發佈時間，因為包括額外的確認接收資訊。
+您可以為發佈的事件提高服務品質 (QoS) 水準。QoS 水準高於 `0` 的事件可能需要較長的發佈時間，因為包含額外的確認接收資訊。
 
-**附註：**「快速入門」流程模式僅支援 QoS 水準 `0`。
+**附註：**Quickstart 流程模式僅支援 QoS 水準 `0`。
 
 
 事件可以搭配下列內容發佈：
@@ -179,14 +178,14 @@ copyright:
 ## 處理指令
 {: #handling_commands}
 
-當裝置用戶端連接時，它會自動訂閱此裝置的任何指令。若要處理特定指令，您必須登錄指令回呼函數。接收到指令時，裝置用戶端會呼叫指令回呼函數。回呼函數具有下列內容：
+當裝置用戶端連接時，它會自動訂閱此裝置的任何指令。若要處理特定指令，您必須登錄指令回呼函數。收到指令時，裝置用戶端會呼叫指令回呼函數。回呼函數具有下列內容：
 
 |內容 |說明|
 |:---|:---|
 |`commandName`  | 字串，指定呼叫的指令名稱。 |  
 |`format`  | 字串，指定事件的格式，例如，JSON。 |
 |`payload`  | 字串，指定指令有效負載的資料。  |
-|`topic`  | 發佈為裝置時，主題字串不包括裝置類型或裝置 ID；這些是取自用戶端 ID。例如，`iot-2/evt/event_id/fmt/format_string`。代表裝置發佈為應用程式或閘道時，主題必須包括裝置類型及裝置 ID。例如，`iot-2/type/device_type/id/device_id/evt/event_id/fmt/format_string`。|
+|`topic`  | 發佈為裝置時，主題字串不包含裝置類型或裝置 ID；這些是取自用戶端 ID。例如，`iot-2/evt/event_id/fmt/format_string`。代表裝置發佈為應用程式或閘道時，主題必須包含裝置類型及裝置 ID。例如，`iot-2/type/device_type/id/device_id/evt/event_id/fmt/format_string`。|
 
 
 ```

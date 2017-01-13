@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-10-27"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # 边缘分析
 {: #edge_analytics}
-上次更新时间：2016 年 8 月 1 日
-{: .last-updated}
 
 通过边缘分析，可将分析规则触发过程从云移至支持边缘分析的网关，通过执行靠近设备的分析处理，可显著降低上传到云的设备数据流量。
 {:shortdesk}
@@ -42,14 +41,14 @@ copyright:
 - **规则**仪表板用于创建和编辑设备和网关的云以及边缘规则和操作。
 - **边缘规则网关**板用于激活、停用、更新和除去网关上的边缘规则。要访问“边缘规则网关”板，请在“规则”仪表板中单击**管理规则**以获取要管理的边缘规则。有关更多信息，请参阅[激活、停用和管理网关的边缘规则](#manage)。
 
-要获取有关网关所连接设备的边缘规则和警报的概述，请使用以下板：
+要获取有关已对网关连接设备触发的边缘规则和警报的概述，请使用以下板：
 
- |板名称 | 描述 |  
+|板名称 | 描述 |  
  |:---|:---|  
   |以规则为中心的分析 | 显示组织的规则，包括边缘规则。其他卡会列出已转发的边缘警报、关联的设备、设备属性和已转发的边缘警报信息。 |  
  |以设备为中心的分析 | 显示连接到组织的设备。其他卡会显示所选边缘设备的已转发警报、所选设备的信息、设备属性和已转发警报信息。 |
 
- 有关缺省分析板的更多信息，请参阅[使用板和卡可视化实时数据](data_visualization.html#default_boards)。
+有关缺省分析板的更多信息，请参阅[使用板和卡可视化实时数据](data_visualization.html#default_boards)。
 
 
 ## 创建边缘规则
@@ -64,11 +63,17 @@ copyright:
 2. 单击**创建边缘规则**，为规则命名，提供描述，选择要应用规则的边缘设备类型，然后单击**下一步**。  
 3. 设置规则逻辑。
 添加一个或多个 IF 条件以用作规则的触发器。可以通过并列行的方式添加条件以将其应用为 OR 条件，也可以通过顺序列的方式添加条件以将其应用为 AND 条件。
-**注：**为了能够选择设备属性作为规则的输入，必须将该属性映射到模式。请参阅[创建模式](im_schemas.html)以获取更多信息。**重要信息：**要触发一个条件，而该条件触发使用 AND 以顺序方式组合的两个或更多属性条件，触发数据点必须包含在同一设备消息中。如果数据是在多条消息中收到的，那么不会触发这些顺序条件。
-**示例：**
+**注：**为了能够选择设备属性作为规则的输入，必须将该属性映射到模式。请参阅[创建模式](im_schemas.html)以获取更多信息。  
+
+**重要信息：**要触发用于比较两个属性的条件，或者触发使用 AND 以顺序方式组合的两个或更多属性条件，触发数据点必须包含在同一设备消息中。如果数据是在多个消息中收到的，那么不会触发该条件或这些顺序条件。
+  
+
+**示例：**  
 如果参数值大于指定值，那么可使用简单规则来触发警报：
-`temp>80`
+  
+`temp>80`  
 如果满足阈值组合条件，那么可使用更复杂的规则来触发警报：
+  
 `temp>60 AND capacity>50`   
 
 4. 为规则配置有条件触发需求。
@@ -185,27 +190,22 @@ copyright:
 
 
 属性 | 描述
---- | ---
-`MsgInCount` |向 Edge Analytics Agent (EAA) 发送的消息数。
-`MsgInRate`、`MsgInRate1Min`、`MessageInRate5Min`、`MsgInRate15Min` 和 `MsgInMeanRate` | 在上一个时间段期间，每秒向 EAA 发送的估计消息数。</br>**注：**`MsgInRate` 是 `MsgInRate1Min` 的别名。`MsgInMeanRate` 是自启动以来的平均消息速率。
-`LastHeartBeat` | 生成上一个脉动信号消息时的时间戳记（以毫秒为单位）。脉动信号消息至少每 10 秒生成一次。
-`CurrentTimestamp` | 生成当前监视消息时的时间戳记（以毫秒为单位）。
+ --- | ---
+ `MsgInCount` |向 Edge Analytics Agent (EAA) 发送的消息数。
+`MsgInRate` | 在上一分钟，每秒向 EAA 发送的估计消息数。  
+ `LastHeartBeat` | 上次生成脉动信号消息时的毫秒时间戳记。脉动信号消息至少每 10 秒生成一次。
+`CurrentTimestamp` | 生成当前监视消息时的毫秒时间戳记。
 `IsAlive` | 如果 `LastHeartBeat` 与 `CurrentTimestamp` 之间的差值大于 20 秒，那么此属性为 0。
 `BytesOutCount` | EAA 向 {{site.data.keyword.iot_short}} 发送的消息字节数。
-`BytesOutRate`、`BytesOutRate1Min`、`BytesOutRate15Min`、`BytesOutRate5Min` 和 `BytesOutMeanRate` | 在上一个时间段期间，每秒 EAA 向 {{site.data.keyword.iot_short}} 发送的估计消息字节数。</br>**注：**`BytesOutRate` 是 `BytesOutRate1Min` 的别名。`BytesOutMeanRate` 是自启动以来的平均速率。
-`BytesInCount` | {{site.data.keyword.iot_short}} 向 EAA 发送的消息字节数。
-`BytesInMeanRate`、`BytesInRate1Min`、`BytesInRate`、`BytesInRate15Min` 和 `BytesInRate5Min` | 在上一个时间段内，每秒 {{site.data.keyword.iot_short}} 向 EAA 发送的估计消息字节数。</br>**注：**BytesOutRate 是 BytesOutRate1Min 的别名。BytesOutMeanRate 统计自启动以来的平均速率。
-`RuleBytesInCount` |向 EAA 规则引擎核心发送的消息字节数。</br> **注：**如果没有为设备类型设置规则，那么该设备类型的消息不会发送到规则引擎核心。
-`RuleBytesInRate5Min`、`RuleBytesInRate`、`RuleBytesInMeanRate`、`RuleBytesInRate1Min` 和 `RuleBytesInRate15Min` | 在上一个时间段期间，每秒向 EAA 规则引擎核心发送的估计消息字节数。</br> **注：**`RuleBytesInMeanRate` 是自启动以来的平均速率。
-`MsgOutCount` | EAA 向 {{site.data.keyword.iot_short}} 发送的消息数。
-`MsgOutRate`、`MsgOutMeanRate`、`MsgOutRate1Min`、`MessageOutRate5Min` 和 `MsgOutRate15Min` | 在上一个时间段期间，每秒 EAA 向 {{site.data.keyword.iot_short}} 发送的估计消息字节数。</br> **注：**`MsgOutRate` 是 `MsgOutRate1Min` 的别名。`MsgOutMeanRate` 是自启动以来的平均速率。
-`MsgReducePercent` | 入局和出局消息之间的百分比差值。</br>计算公式如下：`(msgIn - msgOut) / msgIn`
+`BytesOutRate` | 在上一个分钟，每秒 EAA 向 {{site.data.keyword.iot_short}} 发送的估计消息字节数。`BytesInCount` | {{site.data.keyword.iot_short}} 向 EAA 发送的消息字节数。
+`BytesInRate` | 在上一分钟，每秒 {{site.data.keyword.iot_short}} 向 EAA 发送的估计消息字节数。`RuleBytesInCount` |向 EAA 规则引擎核心发送的消息字节数。</br> **注：**如果没有为设备类型设置规则，那么该设备类型的消息不会发送到规则引擎核心。
+`RuleBytesInRate` | 在上一分钟，每秒向 EAA 规则引擎核心发送的估计消息字节数。`MsgOutCount` | EAA 向 {{site.data.keyword.iot_short}} 发送的消息数。
+`MsgOutRate` | 在上一分钟，每秒 EAA 向 {{site.data.keyword.iot_short}} 发送的估计消息字节数。`MsgReducePercent` | 入局和出局消息之间的百分比差值。</br>计算公式如下：`(msgIn - msgOut) / msgIn`
 `BytesReducePercent` | 入局和出局字节之间的百分比差值。</br>计算公式如下：`(bytesIn - bytesOut) / bytesIn`
 `MsgRateReduce` | 入局和出局消息速率之间的百分比差值。</br>计算公式如下：`(msgInRate - msgOutRate) / msgInRate`
 `BytesRateReduce` | 入局和出局消息字节之间的百分比差值。</br>计算公式如下：`(bytesInRate - bytesOutRate) / bytesInRate`
-`SystemLoad` | 运行 EAA 的系统的当前系统负载。**注：**仅当 `mpstat` 命令在运行 EAA 的系统上可用时，才会发送 CPU 速率。否则会发送上一分钟的系统负载平均值。</br>“系统负载平均值等于在一段时间内，排队等待可用处理器的可运行实体数与在可用处理器上运行的可运行实体数之和的平均值。平均负载的计算方法是特定于操作系统的，但通常为呈衰减趋势且与时间相关的平均值。如果负载平均值不可用，那么将返回负值。”  
-在 ManagementFactory.getOperatingSystemMXBean 的 javadoc 中
-`FreeMemory` | 运行 EAA 的 Java 虚拟机 (JVM) 的可用内存字节数。
+`SystemLoad` | 运行 EAA 的系统的当前系统负载。**注：**仅当 `mpstat` 命令在运行 EAA 的系统上可用时，才会发送 CPU 速率。否则会发送上一分钟的系统负载平均值。</br>“系统负载平均值等于在一段时间内，排队等待可用处理器的可运行实体数与在可用处理器上运行的可运行实体数之和的平均值。平均负载的计算方法是特定于操作系统的，但通常为呈衰减趋势且与时间相关的平均值。如果负载平均值不可用，那么将返回负值。” -
+*ManagementFactory.getOperatingSystemMXBean* 的 javadoc。`FreeMemory` | 运行 EAA 的 Java 虚拟机 (JVM) 的可用内存字节数。
 `MemoryUsed` | EAA 使用的 JVM 内存的字节数。
 `InQueueSize` | 排队等待 EAA 处理的消息数。
 `RuleNumber` | 在规则引擎核心中定义的规则数。

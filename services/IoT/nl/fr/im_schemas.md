@@ -1,7 +1,8 @@
 ---
 
-Copyright :
-  Années : 2015, 2016
+copyright:
+  years: 2016
+lastupdated: "2016-10-13"
 
 ---
 
@@ -13,8 +14,6 @@ Copyright :
 
 # Création de schémas de type de terminal
 {: #iotrtinsights_task}
-Dernière mise à jour : 1er août 2016
-{: .last-updated}
 
 Pour utiliser les fonctions {{site.data.keyword.iot_short}}, telles que des règles et des actions, vous devez créer un schéma pour mapper des propriétés de terminal à des noms de propriété conviviaux, définir les unités de données pour les propriétés et spécifier un type de message à utiliser avec le schéma.
 {: shortdesc}
@@ -68,7 +67,7 @@ Pour ajouter un schéma :
  `Flottant` ou `Entier`.</li>
  <li>Propriété - Identificateur de la propriété virtuelle. Par exemple :  
 `temp_virt`</li>
-    <li>Calcul - Ajoutez un ou plusieurs composants afin de définir une fonction valide. Vous pouvez utiliser des propriétés, des valeurs numériques et des opérateurs mathématiques, tels que +, -, \*, /, (, ) et AVG, pour construire votre calcul. Le composant AVG permet de calculer la valeur de propriété moyenne sur une période donnée.</br> **Important :** Le composant AVG renvoie uniquement des points de données de propriété si les données pour la propriété sélectionnée proviennent d'un terminal connecté à une passerelle sur laquelle un agent Edge Analytics Agent est installé. Pour plus d'informations, voir [Installation de l'agent Edge Analytics Agent](gateways/dashboard.html#edge).</li>
+    <li>Calcul - Ajoutez un ou plusieurs composants afin de définir une fonction valide. Vous pouvez utiliser des propriétés, des valeurs numériques et des opérateurs mathématiques, tels que +, -, \*, /, (, ), AVG et Z-score, pour construire votre calcul. </br>Le composant AVG permet de calculer la valeur de propriété moyenne sur une période donnée. </br>Le composant Z-score renvoie la différence des unités d'écart type entre le point de données et la valeur moyenne de point de données pour un nombre de points de données ou une période. </br> **Important :** Les composants AVG et Z-score renvoient uniquement des points de données de propriété si les données pour la propriété sélectionnée proviennent d'un terminal connecté à une passerelle sur laquelle un agent Edge Analytics Agent est installé. Pour plus d'informations, voir [Installation de l'agent Edge Analytics Agent](gateways/dashboard.html#edge). De plus, les conditions des règles qui comparent les valeurs d'AVG et de Z-score ne sont pas prises en charge.</li>
     <li>Unité de données - Facultatif. Unité de données de la propriété. Par exemple : `C` ou `Mph`</li>
     <li> Positions décimales (facultatif) - Type Flottant uniquement : nombre de positions décimales à inclure dans les données d'unité.</li>
    </ul>

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-02"
 
 ---
 
@@ -14,10 +15,8 @@ copyright:
 
 # 適用於裝置開發人員的嵌入式 C
 {: #embedded_c}
-前次更新：2016 年 8 月 2 日
-{: .last-updated}
 
-您可以在 {{site.data.keyword.iot_full}} 上使用嵌入式 C 來建置及自訂與組織互動的裝置。使用提供的資訊及範例，利用嵌入式 C 開始開發您的裝置。
+您可以使用嵌入式 C 來建置及自訂裝置，在 {{site.data.keyword.iot_full}} 上與組織互動。請使用所提供的資訊及範例，利用嵌入式 C 開始開發您的裝置。
 {:shortdesc}
 
 ## 下載嵌入式 C 用戶端及資源
@@ -37,7 +36,7 @@ copyright:
 ## 安裝
 {: #installation}
 
-若要安裝嵌入式 C 的 {{site.data.keyword.iot_full}} 用戶端程式庫，請完成下列指示：
+若要安裝嵌入式 C 的 {{site.data.keyword.iot_short_notm}} 用戶端程式庫，請完成下列指示：
 
 1. 若要安裝最新版的程式庫，請在指令行上輸入下列程式碼：
 ```
@@ -180,7 +179,7 @@ copyright:
 	....
 
 ```
-**附註：**`yield()` 函數可讓裝置接收來自 Watson IoT Platform 的指令，並保持連線作用中。如果未在 keepAlive 間隔所指定的時間範圍內呼叫 `yield()` 函數，則裝置將不會收到從平台送出的任何指令。指派給 `yield()` 函數的值指定在將控制權還給應用程式之前，可從 Socket 讀取資料的時間長度（毫秒）。
+**附註：**`yield()` 函數可讓裝置接收來自 Watson IoT Platform 的指令，並保持連線作用中。如果未在 keepAlive 間隔所指定的時間範圍內呼叫 `yield()` 函數，則裝置將不會收到從平台送出的任何指令。指派給 `yield()` 函數的值，會指定在將控制權還給應用程式之前，可從 Socket 讀取資料的時間長度（毫秒）。
 
 ## 發佈事件
 {: #publishing_events}

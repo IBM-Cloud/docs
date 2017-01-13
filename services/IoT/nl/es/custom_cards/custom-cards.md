@@ -21,7 +21,7 @@ Utilice tarjetas personalizadas para visualizar sus datos de Internet of Things 
 ## Arquitectura
 {: #architecture}  
 
-Las tarjetas personalizadas las ha desarrollado usted y se han desplegado utilizando su propio repositorio de servidor HTTP de tarjetas personalizadas. Se puede acceder a este servidor mediante el navegador de un usuario como se muestra y procesa paneles de control de {{site.data.keyword.iot_short_notm}}. {{site.data.keyword.iot_short_notm}} gestiona la conexión del navegador mediante la ampliación de las tarjetas personalizadas pero no se conecta él mismo al servidor de tarjetas personalizado.
+Las tarjetas personalizadas las ha desarrollado usted y se han desplegado utilizando su propio repositorio de servidor HTTP de tarjetas personalizadas.  Se puede acceder a este servidor mediante el navegador de un usuario como se muestra y procesa paneles de control de {{site.data.keyword.iot_short_notm}}. {{site.data.keyword.iot_short_notm}} gestiona la conexión del navegador mediante la ampliación de las tarjetas personalizadas pero no se conecta él mismo al servidor de tarjetas personalizado.
 
 El navegador que está ejecutando paneles de control de {{site.data.keyword.iot_short_notm}} recupera todos los recursos necesarios directamente del servidor de tarjetas personalizado. Las tarjetas personalizadas se ofrecen en el diálogo “Añadir tarjeta” y se visualizan en los paneles creados por el usuario que los usuarios han configurado.
 
@@ -38,7 +38,7 @@ Para compilar las tarjetas, debe configurar un entorno de desarrollo local basad
 ## Seguridad
 {: #security}
 
-No hay restricciones colocadas en el código JavaScript que pueda elegir para desplegar en las tarjetas del servidor de tarjetas personalizado. El código Javascript en las tarjetas personalizadas tiene acceso a toda la información guardada en el navegador, como cualquier otra tarjeta que se ejecute en el panel de control. Asegúrese de que el servidor de tarjetas personalizadas correcto facilite el código al navegador para mostrar y procesar las tarjetas personalizadas.
+No hay restricciones colocadas en el código JavaScript que pueda elegir para desplegar en las tarjetas del servidor de tarjetas personalizado. El código Javascript en las tarjetas personalizadas tiene acceso a toda la información guardada en el navegador, como cualquier otra tarjeta que se ejecute en el panel de control.  Asegúrese de que el servidor de tarjetas personalizadas correcto facilite el código al navegador para mostrar y procesar las tarjetas personalizadas.
 
 Las tarjetas ejecutan su código en la sesión del navegador {{site.data.keyword.iot_short_notm}} exactamente como se ha escrito. Además, se crea la conexión del servidor de tarjetas personalizadas sin credenciales proporcionadas al servidor de tarjetas personalizado. Un navegador de usuarios puede conectarse a cualquier servidor de tarjetas personalizadas configurado.
 
@@ -55,8 +55,8 @@ Para probar la característica de tarjetas personalizadas con el {{site.data.key
 
 Para conectarse al servidor de tarjetas personalizadas de ejemplo:
 1. Inicie sesión en el panel de control de {{site.data.keyword.iot_short_notm}} como usuario administrativo.
-2. Habilite las características experimentales.
-Las tarjetas personalizadas se ofrecen actualmente como una característica experimental.
+2. Habilite las características experimentales.  
+Las tarjetas personalizadas se ofrecen actualmente como una característica experimental.  
 **Importante:** La extensión de tarjetas personalizadas experimental debe estar habilitada por sesión de navegador. Las conexiones de tarjetas personalizadas y los paquetes de tarjetas no se comparten globalmente en la organización de {{site.data.keyword.iot_short_notm}}.
  1. Vaya a **Configuración**.
  2. En la sección Características experimentales, verifique que **Activar características experimentales** esté habilitado.
@@ -64,19 +64,19 @@ Las tarjetas personalizadas se ofrecen actualmente como una característica expe
  2. Vaya a **Extensiones**.
  3. Pulse **Añadir extensión** y seleccione la extensión **Tarjetas personalizadas**.
  4. En el mosaico **Tarjeta personalizada**, pulse **Configuración**.
- 5. En la sección Configurar tarjetas personalizadas, pulse **Añadir** y especifique el URL seguro (HTTPS) para el servidor de tarjetas de ejemplo en el campo de servidor.
-Si se está conectando a su propio servidor, especifique el URL de dicho servidor.
+ 5. En la sección Configurar tarjetas personalizadas, pulse **Añadir** y especifique el URL seguro (HTTPS) para el servidor de tarjetas de ejemplo en el campo de servidor.  
+Si se está conectando a su propio servidor, especifique el URL de dicho servidor.    
 **Consejo:** El URL del servidor de tarjetas de ejemplo de IBM es: `https://customcards.mybluemix.net`  
- 6. Pulse **Recuperar certificado** para conectarse al servidor de tarjetas personalizadas y recuperar la información de certificados de seguridad para el servidor.
+ 6. Pulse **Recuperar certificado** para conectarse al servidor de tarjetas personalizadas y recuperar la información de certificados de seguridad para el servidor.  
  **Importante:** Utilice la información de certificado para verificar que se está conectando al servidor de tarjetas personalizadas protegido y conocido.
  4. Pulse **Terminado** para añadir la conexión del servidor.
 5. Cree una tarjeta nueva que se base en las tarjetas de ejemplo.
  1. En el panel de control de {{site.data.keyword.iot_short_notm}}, vaya a **Paneles**.
- 2. Pulse **Crear nuevo panel**.
+ 2. Pulse **Crear nuevo panel**.  
  Complete el recuadro de diálogo Crear nuevo panel. Para obtener información, consulte [Creación de paneles y tarjetas](../data_visualization.html#visualizing_data).
  3. Abra el panel nuevo.
  4. Pulse **Añadir nueva tarjeta**.  
- 5. Desplácese hacia abajo hasta **Tarjetas personalizadas** y seleccione una de las tarjetas de ejemplo.
+ 5. Desplácese hacia abajo hasta **Tarjetas personalizadas** y seleccione una de las tarjetas de ejemplo.  
  Complete el proceso de creación de tarjetas. Para obtener información, consulte [Creación de paneles y tarjetas](../data_visualization.html#visualizing_data).  
 
  Su nueva tarjeta personalizada se encuentra ahora en el nuevo panel.  
@@ -93,12 +93,12 @@ Para prepararse para el desarrollo de tarjetas personalizadas, puede configurar 
 Para crear un servidor de tarjetas personalizado y desplegar las tarjetas de ejemplo de IBM, siga las instrucciones detalladas en el readme [repositorio de tarjetas personalizadas](https://github.com/ibm-watson-iot/custom-cards/blob/master/README.md).
 
 El proceso implica los siguientes pasos de alto nivel:
-1. Asegúrese de que el entorno de desarrollo local tenga Node.js con el gestor de paquetes de nodo npm.
+1. Asegúrese de que el entorno de desarrollo local tenga Node.js con el gestor de paquetes de nodo npm.  
 Para obtener información sobre la instalación de Node.js, incluidos los enlaces de descarga, vaya aquí: https://nodejs.org
 2. Configure un servidor HTTP para que aloje el paquete de tarjetas personalizado.    
   - El directorio que sirve el contenido de tarjetas personalizadas en el servidor no debe requerir credenciales para acceder.
   - El servidor debe utilizar el protocolo HTTPS.
-  - El servidor debe soportar conexiones CORS (Cross-Origin Resource Sharing).
+  - El servidor debe soportar conexiones CORS (Cross-Origin Resource Sharing).  
 **Consejo:** Para la prueba del trabajo de concepto, puede utilizar el servidor node.js de ejemplo incorporado, que se configura para cumplir estos requisitos.
 3. Cree su propio repositorio.
 Bifurque y clone el repositorio de tarjetas personalizadas de ejemplo en: https://github.com/ibm-watson-iot/custom-cards
@@ -110,15 +110,15 @@ Su paquete de tarjetas personalizadas puede contener varios módulos. Debe hacer
 Para hacer que su tarjeta esté disponible en los paneles de la organización de {{site.data.keyword.iot_short_notm}}, debe añadir los detalles de configuración de tarjetas en el archivo `DashboardConfig.json`.
 7. Compile el paquete de tarjeta.
 Utilice Gulp para configurar un motor de construcción automatizado.
-8. Despliegue su paquete de tarjetas en el servidor de tarjetas.
-Para poder utilizar las tarjetas en {{site.data.keyword.iot_short_notm}}, debe desplegar el paquete de tarjetas en el servidor HTTP de las tarjetas personalizadas.
+8. Despliegue su paquete de tarjetas en el servidor de tarjetas.  
+Para poder utilizar las tarjetas en {{site.data.keyword.iot_short_notm}}, debe desplegar el paquete de tarjetas en el servidor HTTP de las tarjetas personalizadas.  
 **Consejo:** Puede añadir nuevas tarjetas o eliminar tarjetas obsoletas sobre la marcha volviendo a desplegar el paquete de tarjetas en el servidor de tarjetas.
 9. Enlace el servidor de tarjetas a {{site.data.keyword.iot_short_notm}}.
-Enlace el servidor de tarjetas personalizadas recién desplegado a {{site.data.keyword.iot_short_notm}}.
+Enlace el servidor de tarjetas personalizadas recién desplegado a {{site.data.keyword.iot_short_notm}}.  
 **Consejo:** Como el servidor de tarjetas personalizadas puede ser una réplica completa del servidor de tarjetas de ejemplo, es posible que vea tarjetas duplicadas en el entorno. Elimine la conexión del servidor de tarjetas de ejemplo para ver sólo las tarjetas del servidor de tarjetas personalizadas.
  1. Vaya a **Extensiones**.
  2. En el mosaico **Tarjeta personalizada**, pulse el icono de engranaje para actualizar la configuración.
- 4. En la sección Configurar tarjetas personalizadas, pulse **Añadir** y especifique el URL seguro (HTTPS) para el servidor de tarjetas personalizado en el campo de servidor.
+ 4. En la sección Configurar tarjetas personalizadas, pulse **Añadir** y especifique el URL seguro (HTTPS) para el servidor de tarjetas personalizado en el campo de servidor.  
 **Importante:** Verifique que se está conectando al servidor de tarjetas personalizadas protegido y conocido.
 4. Pulse **Terminado** para añadir la conexión del servidor.
 10. La tarjeta personalizada HelloWorld ahora está disponible para utilizarse con los paneles.
@@ -144,14 +144,14 @@ Los siguientes pasos de alto nivel crean una nueva tarjeta:
 **Consejo:** Para ver los pasos detallados, consulte [Readme Creación de tarjetas personalizadas](https://github.com/ibm-watson-iot/custom-cards/blob/master/README.md) en el repositorio de tarjetas personalizadas de ejemplo.
 1. Cree su propio módulo de tarjetas.
  1. Utilice uno de los módulos de tarjetas de ejemplo como plantilla para el módulo.
- 2. Actualice todas las instancias del nombre del módulo en los nuevos nombres de archivos y contenido de archivos del módulo.
+ 2. Actualice todas las instancias del nombre del módulo en los nuevos nombres de archivos y contenido de archivos del módulo.  
  Por ejemplo, sustituya `HelloWorld` por el nombre de módulo en todos los nombres de archivo e instancias de contenido de archivo.
 2. Haga referencia al módulo nuevo en el archivo Modules.jsx.
 3. Registre el nuevo módulo en el archivo DashboardConfig.json.
 4. Actualice el código de tarjeta personalizada para que se ajuste a sus necesidades de tarjeta.
-4. Compile el paquete de tarjeta.
+4. Compile el paquete de tarjeta.  
 En función de su configuración, el proceso de construcción puede ser automático utilizando gulp, o es posible que tenga que desencadenar manualmente una compilación.
-3. Despliegue la nueva tarjeta.
+3. Despliegue la nueva tarjeta.  
 Si está utilizando un servidor de tarjetas personalizadas externo, ahora debe desplegar el paquete en el servidor.  
 
 Ha creado su primera tarjeta personalizada y la ha desplegado en el servidor de tarjetas personalizadas. La tarjeta está ahora disponible para ser utilizada en la organización {{site.data.keyword.iot_short_notm}}.

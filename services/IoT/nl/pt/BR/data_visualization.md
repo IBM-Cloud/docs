@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-09-01"
 
 ---
 
@@ -13,13 +14,13 @@ copyright:
 
 # Visualizando dados em tempo real usando placas e cartões
 {: #boards_and_cards}
-Última atualização: 21 de junho de 2016
-{: .last-updated}
 
 Crie placas e cartões para criar e compartilhar seus próprios painéis que visualizam os dados de seu dispositivo de tempo real.
 {:shortdesc}
 
 Usando placas e cartões, é possível visualizar graficamente valores do conjunto de dados de um ou mais dispositivos para fornecer uma visão geral rápida e aprimorar o entendimento dos dados. Crie placas e inclua cartões que exibam os dados como números brutos, gráficos em tempo real, medidores e mais. Inclua membros em suas placas para compartilhá-los com outros usuários em sua organização. Organize os cartões e inclua divisórias de texto explicativo para fazer um ajuste fino de sua apresentação.  
+
+É possível também expandir o conjunto padrão de cartões fornecidos pela IBM [criando seus próprios cartões customizados](custom_cards/custom-cards.html).
 
 ![Mostrando dados em tempo real com cartões.](images/boards_and_cards.svg "Mostrando dados em tempo real com cartões.")
 
@@ -32,6 +33,7 @@ O painel do {{site.data.keyword.iot_full}} têm as placas padrão a seguir:
 |Visão Geral do Uso  | Mostra estatísticas de uso para sua organização. Lista os tipos de dispositivo e os dados que são consumidos.
 |Análise de dados central da regra | Mostra as regras para sua organização. Cartões adicionais listam alertas acionados, dispositivos associados, propriedades dos dispositivos e informações de alerta. |  
 |Análise de dados central do dispositivo | Mostra os dispositivos que estão conectados à sua organização. Cartões adicionais mostram alertas para um dispositivo selecionado, informações para um dispositivo selecionado, propriedades do dispositivo e informações de alerta. |
+|Gerenciamento de risco e segurança | Mostra cartões que resumem o status de segurança geral. Os operadores do sistema e os analistas de segurança podem visualizar detalhes de conformidade, status de conexão para dispositivos, as causas das falhas de conexão e os dispositivos bloqueados ou permitidos por meio de uma lista de bloqueio ou uma lista de desbloqueio. No cartão Conformidade de conexão, o usuário pode realizar drill down para um relatório detalhado sobre dispositivos fora de conformidade e pode exportar o relatório para o Excel.  |
 
 É possível atualizar essas placas incluindo, atualizando e removendo cartões.
 

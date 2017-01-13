@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-16"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # Modelo do dispositivo
 {: #device_model}
-Última atualização: 16 de setembro de 2016
-{: .last-updated}
 
 O modelo de dispositivo descreve as características de metadados e de gerenciamento de um dispositivo. O banco de dados de dispositivos no {{site.data.keyword.iot_full}} é a principal fonte de informações dos dispositivos. Aplicativos e dispositivos gerenciados podem enviar atualizações, incluindo mudanças de localização ou o progresso de uma atualização de firmware para o banco de dados do dispositivo. Assim que essas atualizações forem recebidas pelo {{site.data.keyword.iot_short_notm}}, o banco de dados será atualizado e as informações serão disponibilizadas aos aplicativos.
 

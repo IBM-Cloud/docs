@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-11"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # 分析
 {: #analytics}  
-上次更新时间：2016 年 8 月 11 日
-{: .last-updated}
 
 使用 Watson {{site.data.keyword.iot_full}} Analytics 可从设备生成的原始数据中获取所需的分析信息。  
 {: shortdesc}

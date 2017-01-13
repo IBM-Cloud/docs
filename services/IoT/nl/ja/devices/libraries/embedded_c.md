@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-02"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # デバイス開発者のための Embedded C
 {: #embedded_c}
-最終更新日: 2016 年 8 月 2 日
-{: .last-updated}
 
 Embedded C を使用して、{{site.data.keyword.iot_full}} 上で組織と対話するデバイスを構築してカスタマイズできます。Embedded C を使用してデバイスの開発を始める場合は、提供されている情報と例を活用してください。
 {:shortdesc}
@@ -37,7 +36,7 @@ Embedded C を使用して、{{site.data.keyword.iot_full}} 上で組織と対�
 ## インストール
 {: #installation}
 
-Embedded C 用 {{site.data.keyword.iot_full}} クライアント・ライブラリーをインストールするには、以下の手順を実行します。
+Embedded C 用 {{site.data.keyword.iot_short_notm}} クライアント・ライブラリーをインストールするには、以下の手順を実行します。
 
 1. 最新バージョンのライブラリーをインストールするには、コマンド・ラインに次のコードを入力します。
 ```

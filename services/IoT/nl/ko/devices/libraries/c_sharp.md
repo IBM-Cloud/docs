@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-02"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # 디바이스 개발자용 C#
 {: #c_sharp}
-마지막 업데이트 날짜: 2016년 8월 2일
-{: .last-updated}
 
 C#을 사용하여 {{site.data.keyword.iot_full}}에서 조직과 상호작용하는 디바이스를 빌드하고 사용자 정의할 수 있습니다. 제공된 정보와 예제를 사용하면 C#을 사용한 디바이스 개발을 시작할 수 있습니다.
 {:shortdesc}

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-26"
 
 ---
 
@@ -14,12 +15,10 @@ copyright:
 # 建立及連接 Node-RED 裝置模擬器
 使用 Node-RED 來建立裝置模擬器，並將模擬的裝置資料傳送至 {{site.data.keyword.iot_full}} 組織。  
 {:shortdesc}
-前次更新：2016 年 8 月 26 日
-{: .last-updated}
 
 Node-RED 是一種工具，以全新且有趣的方式，將硬體裝置、API 和線上服務連接在一起。如需相關資訊，請參閱 [Node-RED](http://nodered.org/) 網站。  
 
-您可以在自己的環境中執行 Node-RED 實例，或是將其用作 {{site.data.keyword.Bluemix_notm}} 應用程式。下列程序包括 {{site.data.keyword.Bluemix_notm}} 的指示。
+您可以在自己的環境中執行 Node-RED 實例，或是將其用來作為 {{site.data.keyword.Bluemix_notm}} 應用程式。下列程序包含 {{site.data.keyword.Bluemix_notm}} 的指示。
 
 若要建立及連接 Node-RED 裝置模擬器，請執行下列動作：
 
@@ -112,7 +111,7 @@ Node-RED 是一種工具，以全新且有趣的方式，將硬體裝置、API �
   {:codeblock}  
 
  3. 在右窗格的除錯標籤中，驗證已建立訊息。  
- 4. 回到 {{site.data.keyword.iot_short_notm}} 裝置資訊頁面，裝置現在應該已連接。驗證您看到從裝置接收到相同的資料點。  
+ 4. 回到 {{site.data.keyword.iot_short_notm}} 裝置資訊頁面，裝置現在應該已連接。驗證您看到從裝置所收到的相同資料點。  
  ```
  Event	Datapoint	 Value	Time Received
  event_name	d.name	My Device	May 16, 2016 2:22:18 PM

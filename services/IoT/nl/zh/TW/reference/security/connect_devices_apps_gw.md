@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015,2016
+  years: 2015, 2016
+lastupdated: "2016-09-08"
 
 ---
 
@@ -11,10 +12,8 @@ copyright:
 {:codeblock:.codeblock}
 {:pre: .pre}
 
-# 連線至 {{site.data.keyword.iot_short_notm}} 的應用程式、裝置及閘道
+# {{site.data.keyword.iot_short_notm}} 的應用程式、裝置及閘道連線
 {: #connect_devices_apps_gw}
-前次更新：2016 年 9 月 8 日
-{: .last-updated}
 
 應用程式、裝置及閘道可以透過 MQTT 通訊協定連接至 {{site.data.keyword.iot_full}}。裝置也可以透過 HTTP API 連接及發佈事件至 {{site.data.keyword.iot_short_notm}}。
 {: shortdesc}
@@ -37,7 +36,7 @@ copyright:
 
 **附註**
 - *orgId* 是在登錄服務實例時，所產生的唯一組織 ID。
-- 如果您要將裝置或應用程式連接至「快速入門」服務，請指定 'quickstart' 作為 *orgId* 值。
+- 如果您要將裝置或應用程式連接至 Quickstart 服務，請指定 'quickstart' 作為 *orgId* 值。
 
 ## 埠安全
 {: #client_port_security}
@@ -57,7 +56,7 @@ MQTT 用戶端會使用適當的認證來連接，例如適用於裝置的裝置
 
 ## 傳輸層安全 (TLS) 需求
 {: #tls_requirements}
-部分「傳輸層安全 (TLS)」用戶端程式庫不支援包括萬用字元的網域。如果您無法順利變更程式庫，請停用憑證檢查。
+部分「傳輸層安全 (TLS)」用戶端程式庫不支援包含萬用字元的網域。如果您無法順利變更程式庫，請停用憑證檢查。
 
 {{site.data.keyword.iot_short_notm}} 需要傳輸層安全 (TLS) 1.2 版及下列密碼組合：
 - ECDHE-RSA-AES256-GCM-SHA384
@@ -86,7 +85,7 @@ MQTT 用戶端會使用適當的認證來連接，例如適用於裝置的裝置
 其中
 - *orgId* 是在登錄服務時，所產生的唯一 6 個字元組織 ID。
 - *appId* 是用戶端的使用者定義唯一字串 ID。
-- *deviceId* 跨所有類型用來唯一識別裝置或閘道，類似序號。
+- *deviceId* 在所有類型中唯一地識別裝置或閘道，類似序號。
 - *device_type* 是連接且類似型號的裝置類型 ID。
 - *typeId* 是連接且類似型號的閘道類型 ID。
 
@@ -97,7 +96,7 @@ MQTT 用戶端會使用適當的認證來連接，例如適用於裝置的裝置
 - 句點 ( . )
 
 **附註：**
-- 當您連接至「快速入門」服務時，不需要鑑別。
+- 當您連接至 Quickstart 服務時，不需要鑑別。
 - 在連接之前，您不需要登錄應用程式。
 
 
@@ -128,7 +127,7 @@ MQTT 用戶端會使用適當的認證來連接，例如適用於裝置的裝置
 
 #### 使用者名稱
 {{site.data.keyword.iot_short_notm}} 服務僅支援裝置的記號型鑑別；因此每一個裝置都只有一個有效使用者名稱。
-`use-token-auth` 的值向服務指出，閘道或裝置的鑑別記號會用作 MQTT 連線的密碼。
+`use-token-auth` 的值向服務指出，閘道或裝置的鑑別記號會用來作為 MQTT 連線的密碼。
 
 如需相關資訊，請參閱[裝置的 MQTT 連線功能](../../devices/mqtt.html)
 

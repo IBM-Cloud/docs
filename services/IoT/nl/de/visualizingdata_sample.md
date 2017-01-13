@@ -2,21 +2,24 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-06-29"
 
 ---
 
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # Gerätedaten visualisieren
 {: #visualizingdata_data}
-*Letzte Aktualisierung: 20. April 2016*
-{: .last-updated}
 
 Dieses Beispiel hilft Ihnen dabei, Echtzeitdaten und archivierte Daten von registrierten Geräten in Ihrer {{site.data.keyword.iot_full}}-Organisation zu visualisieren.
 {:shortdesc}
 
 ## Vorbereitende Schritte
+{: #byb}
 
 Bevor Sie Ihre Daten visualisieren können, müssen Sie folgende Aktionen ausführen:
 
@@ -26,6 +29,7 @@ Bevor Sie Ihre Daten visualisieren können, müssen Sie folgende Aktionen ausfü
 - [Installieren Sie das Befehlszeilentool 'cf'](../../starters/install_cli.html) von {{site.data.keyword.Bluemix_notm}}.
 
 ## Beispiel in {{site.data.keyword.Bluemix_notm}} ausführen
+{: #running_sample}
 
 1. Erstellen Sie in {{site.data.keyword.Bluemix_notm}} eine Anwendung mithilfe des Node.js-SDK. Notieren Sie den Anwendungsnamen und den Hostnamen der Anwendung; diese Informationen sind erforderlich, um die Anwendung in {{site.data.keyword.Bluemix_notm}} hochzuladen.
 2. Binden Sie die Node.js-Anwendung in Ihrem {{site.data.keyword.Bluemix_notm}}-Dashboard an Ihre {{site.data.keyword.iot_short_notm}}-Instanz und führen Sie folgende Schritte aus:
@@ -69,7 +73,8 @@ http://<Name_Ihrer_Anwendung>.mybluemix.net
 
 Alle Geräte in Ihrer Organisation sind im Dropdown-Menü des Geräts aufgelistet. Ist ein Gerät ausgewählt, wird die Echtzeitvisualisierung der Daten angezeigt, die dieses Gerät an Ihren {{site.data.keyword.iot_short_notm}}-Service sendet. Zum Anzeigen von archivierten Daten klicken Sie auf die Schaltfläche für die Option für historische Daten.
 
-### Beispiel anpassen
+## Beispiel anpassen
+{: #customize_sample}
 
 Die Beispielanwendung ist eine eigenständige Webanwendung, die im Node.js-Framework geschrieben wurde. Mit dem Beispiel werden Ereignisse visualisiert, die von registrierten Geräten in {{site.data.keyword.iot_short_notm}} gesendet wurden. Im Beispiel werden folgende Tools verwendet:
 
@@ -92,7 +97,8 @@ Die Beispielanwendung wird durch folgende Verzeichnisse strukturiert:
 - Views: in Jade geschriebene Benutzerschnittstellendateien
 - Die Rickshaw-Bibliothek für die Diagrammerstellung wird zum Darstellen des Diagramms für Echtzeit- und archivierte Daten verwendet.
 
-### Anzeige von Echtzeitdaten anpassen
+## Anzeige von Echtzeitdaten anpassen
+{: #customize_real_time_display}
 
 Das Verzeichnis mit dem grafischen Visualisierungscode für Echtzeitdaten lautet `public/ja/realtime`. Die Logik für die grafische Darstellung kann durch Bearbeiten von `public/js/historian/realtimeGraph.js` angepasst werden.
 
@@ -100,7 +106,8 @@ Die Datei, die auf die Paho-MQTT-Bibliothek verweist, um Gerätetopics zu subskr
 
 Geräteereignisse werden an die Datei `realtimeGraph.js` gesendet, um das Diagramm grafisch darzustellen.
 
-### Anzeige von archivierten Daten anpassen
+## Anzeige von archivierten Daten anpassen
+{: #customize_historical_display}
 
 Das Verzeichnis, das den Code für die grafische Visualisierung für archivierte Gerätedaten enthält, lautet `public/js/historian`. Die Logik für die grafische Darstellung kann durch Bearbeiten von `public/js/historian/historianGraph.js` angepasst werden.
 

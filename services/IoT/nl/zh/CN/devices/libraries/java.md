@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-18"
 
 ---
 
@@ -13,10 +14,6 @@ copyright:
 
 # 针对设备开发者的 Java
 {: #java}
-
-上次更新时间：2016 年 10 月 18 日
-{: .last-updated}
-
 
 您可以使用 Java 来构建和定制设备，以用于在 {{site.data.keyword.iot_full}} 上与您的组织进行交互。提供的 {{site.data.keyword.iot_short_notm}} Java 客户机库、文档和示例可帮助您开始进行设备开发。
 {:shortdesc}
@@ -228,7 +225,7 @@ myClient.connect(10);
 
 {{site.data.keyword.iot_short_notm}} 实例接收到事件时，所接收事件的凭证会识别发送设备，这意味着一台设备无法冒充其他设备。
 
-可以在三个[服务质量 (QoS) 级别](../../reference/mqtt/index.html#qos-levels)中的任一级别发布事件，服务质量级别由 MQTT 协议进行定义。缺省情况下，事件在 QoS=0 级别发布。
+可以在 MQTT 协议定义的三个[服务质量 (QoS) 级别](../../reference/mqtt/index.html#qos-levels)中的任一级别发布事件。缺省情况下，事件在 QoS=0 级别发布。
 
 ### 在缺省 QoS 级别发布事件
 

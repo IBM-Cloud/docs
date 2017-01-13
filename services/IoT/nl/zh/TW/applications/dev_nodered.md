@@ -2,10 +2,11 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-01"
 
 ---
 
-{:new_window: target="blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -13,9 +14,6 @@ copyright:
 
 # 使用 Node-RED 開發 {{site.data.keyword.iot_short_notm}}
 {: #dev_nodered}
-
-前次更新：2016 年 9 月 1 日
-{: .last-updated}
 
 Node-RED 是一種視覺化工具，您可以用來在 {{site.data.keyword.iot_full}} 上開發應用程式、裝置及閘道。Node-RED 可讓您以全新且有趣的方式來連接硬體裝置、API 及線上服務。Node-RED 以 Node.js 為建置基礎，充分運用巨型 node 模組生態系統，提供一種可以整合許多不同系統的工具。
 {:shortdesc}

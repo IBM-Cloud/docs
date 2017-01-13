@@ -2,10 +2,11 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-18"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -13,8 +14,6 @@ copyright:
 
 # 外部服务集成
 {: #ref-index}
-上次更新时间：2016 年 9 月 26 日
-{: .last-updated}
 
 通过外部服务集成，可在 {{site.data.keyword.iot_full}} 组织中访问第三方或外部服务中的数据和操作。
 
@@ -39,6 +38,8 @@ Jasper 是一款用于 SIM 设备的管理平台。Jasper 集成到 {{site.data.
 
 完成以下配置步骤后，可在连接了 Jasper 的设备的设备向下钻取中访问受支持的操作。
 
+### 用于 Jasper 的 REST API
+要访问用于 Jasper 的 REST API，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension) 文档的“Jasper 扩展”部分。
 
 ### Jasper 的配置
 
@@ -53,7 +54,8 @@ Jasper 是一款用于 SIM 设备的管理平台。Jasper 集成到 {{site.data.
   5. 单击**完成**。
 
 2. 配置设备
-您可以配置同时连接到您的 {{site.data.keyword.iot_short_notm}} 组织和 Jasper 帐户的设备以在 {{site.data.keyword.iot_short_notm}} 仪表板中显示 Jasper 中的数据。**重要信息：**在执行“添加设备”过程时，无法应用 Jasper 配置，只有先前连接的设备可使用 Jasper 进行配置。
+您可以配置同时连接到您的 {{site.data.keyword.iot_short_notm}} 组织和 Jasper 帐户的设备以在 {{site.data.keyword.iot_short_notm}} 仪表板中显示 Jasper 中的数据。
+**重要信息：**在执行“添加设备”过程时，无法应用 Jasper 配置，只有先前连接的设备可使用 Jasper 进行配置。
 要配置连接了 Jasper 的设备，请完成以下步骤：
  1. 在 {{site.data.keyword.iot_short_notm}} 仪表板的“设备”选项卡中，找到要配置的连接了 Jasper 的设备。
  2. 选择此设备以打开*设备向下钻取*视图。
@@ -87,6 +89,9 @@ AT&T 扩展支持以下 AT&T 操作：
   - 可以使用 YYYY-MM-DD 格式设置周期开始日期。
 - 将 SMS 发送到 SIM
 - 更改套餐
+
+### 用于 AT&T 的 REST API
+要访问用于 AT&T 的 REST API，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension) 文档中的“AT&T 扩展”部分。
 
 ### AT&T 的配置
 
@@ -122,7 +127,6 @@ AT&T 扩展支持以下 AT&T 操作：
 ```
 
 成功配置组织后，会在*设备向下钻取*视图中*扩展配置*部分下显示*扩展*部分。
-
 
 ## ARM mbed 连接器
 {: #arm}
@@ -217,9 +221,10 @@ https://developer.ibm.com/iotplatform/2016/03/30/watson-iot-platform-integration
 - 上次状态刷新
 - 位置状态
 
+### 用于 Orange 的 REST API
+要访问用于 Orange 的 REST API，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension) 文档的“Orange 扩展”部分。
+
 ### Orange 的配置
-
-
 
 要启用 Orange 扩展，请执行以下操作：
 
@@ -283,6 +288,10 @@ https://developer.ibm.com/iotplatform/2016/03/30/watson-iot-platform-integration
 The Weather Company 扩展将天气数据与现有 {{site.data.keyword.iot_short_notm}} 设备相组合。如果使用 API 发起了更新位置请求，或者设备已使用设备管理消息设置其位置，那么来自 The Weather Company 的天气数据会显示在设备详细信息视图中。
 
 **注：**只有受管设备可以设置其自己的位置。所有非受管设备必须使用 API 手动设置其位置。有关设置设备位置的更多信息，请参阅[更新位置请求](../../devices/device_mgmt/index.html#update-location)。
+
+### 用于 The Weather Company 的 REST API 
+要访问用于 The Weather Company 的 REST API，请参阅
+[{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather) 文档的“设备位置天气”部分。
 
 ### 天气数据
 

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-02"
 
 ---
 
@@ -14,9 +15,6 @@ copyright:
 
 # 디바이스 개발자용 mBed C++
 {: #mbedcpp}
-
-마지막 업데이트 날짜: 2016년 8월 2일
-{: .last-updated}
 
 [mBed C++ 클라이언트 라이브러리](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/)를 사용하여 [mBed 디바이스](https://www.mbed.com/en/)(예: [LPC1768](https://developer.mbed.org/platforms/mbed-LPC1768/) 또는 [FRDM-K64F](https://developer.mbed.org/platforms/FRDM-K64F/))를 {{site.data.keyword.iot_full}} 서비스에 쉽게 연결하십시오.
 {:shortdesc}
@@ -73,7 +71,7 @@ ARM mBed NXP LPC 1768 마이크로 컨트롤러를 {{site.data.keyword.iot_short
   // Create DeviceClient
   IoTF::DeviceClient client(organization, deviceType, deviceId);
 
-  // Get the DeviceID(MAC Address) if we are in quickstart mode and device id is not specified
+  // Get the DeviceID(MAC Address) if we are in quickstart mode and device ID is not specified
   if((strcmp(organization, QUICKSTART) == 0) && (strcmp("", deviceId) == 0))
   {
   	char tmpBuf[50];
@@ -140,7 +138,7 @@ ARM mBed NXP LPC 1768 마이크로 컨트롤러를 {{site.data.keyword.iot_short
 
 {{site.data.keyword.iot_short_notm}} 인스턴스에서 이벤트를 수신할 때 수신된 이벤트의 신임 정보는 전송 중인 디바이스를 식별하며, 이는 디바이스가 다른 디바이스로 위장할 수 없음을 의미합니다. 
 
-이벤트는 MQTT 프로토콜을 통해 정의한 세 개의 [서비스 품질(QoS) 레벨](../../reference/mqtt/index.html#qos-levels)에서 공개할 수 있습니다. 기본적으로 이벤트는 QoS 0에서 공개됩니다.
+이벤트는 MQTT 프로토콜을 통해 정의한 세 개의 [서비스 품질(QoS) 레벨](../../reference/mqtt/index.html#qos-levels)에서 공개할 수 있습니다. 기본적으로, 이벤트는 QoS 0에서 공개됩니다. 
 
 ### 기본 서비스 품질(QoS)을 사용하여 이벤트 공개
 
@@ -223,7 +221,7 @@ ARM mBed NXP LPC 1768 마이크로 컨트롤러를 {{site.data.keyword.iot_short
 |특성 |설명 |
 |:---|:---|
 |`command` | 호출된 명령의 이름입니다.|  
-|`format`  |이벤트의 형식입니다. 형식은 임의의 문자열(예: JSON)일 수 있습니다. |
+|`format`  |이벤트의 형식입니다. 형식은 임의의 문자열일 수 있습니다(예: JSON).  |
 |`payload`  |명령 페이로드의 데이터입니다. 최대 길이는 131072바이트입니다. |
 
 

@@ -2,10 +2,11 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-05"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -13,23 +14,19 @@ copyright:
 
 # デバイス管理の拡張
 {: #custom_actions}
-最終更新日: 2016 年 7 月 11 日
-{: .last-updated}
 
-REST API を使用するか、{{site.data.keyword.Bluemix_notm}} で提供されるダッシュボードを使用して、デバイス管理拡張を追加することにより、目的の要件を満たすように {{site.data.keyword.iot_full}} のデバイス管理機能を拡張できます。
+デバイス管理拡張を追加することによって、{{site.data.keyword.iot_full}} のデバイス管理機能を要件に合わせて拡張できます。デバイス管理拡張を追加するには、REST API または {{site.data.keyword.iot_short_notm}} ダッシュボードを使用します。
 
-デフォルトでは、{{site.data.keyword.iot_short_notm}} によって以下のデバイス管理アクションが提供され、サポートされます。
+デフォルトでは、以下のデバイス管理アクションが {{site.data.keyword.iot_short_notm}} でサポートされています。
 - デバイスのリブート
 - 工場出荷時設定にリセット
 - ファームウェア・ダウンロード
 - ファームウェア更新
 
-{{site.data.keyword.iot_short_notm}} によって提供されるデフォルトのデバイス・アクションが、目的のデバイスやアプリケーションにとって不十分な場合は、デバイス管理拡張パッケージを実装することによって、追加のデバイス管理機能を開発できます。
-
 ## デバイス管理拡張パッケージ
 {: #device_management_ext}
 
-デバイス管理拡張パッケージは、デバイス管理アクションのセットを定義する JSON 文書です。これらのアクションをサポートする 1 つ以上のデバイスに対してアクションを開始できます。アクションの開始には、{{site.data.keyword.iot_short_notm}} ダッシュボードを使用するか、デバイス管理 REST API コマンドを使用します。
+デバイス管理拡張パッケージとは、1 つ以上のデバイス管理アクションを定義した JSON 文書です。定義されたアクションは、{{site.data.keyword.iot_short_notm}} ダッシュボードまたは REST API を使用して、そのアクションに対応している任意のデバイスで開始できます。
 
 次のコード・サンプルは、デバイス管理拡張パッケージの標準的な形式を示しています。
 
@@ -99,7 +96,7 @@ REST API を使用するか、{{site.data.keyword.Bluemix_notm}} で提供され
 
 **注:** `bundleId`、`version`、`actionId`、`parameterId` の各値に使用できる文字数は 255 文字までに制限されています。また、英数字 (a-z、A-Z、0-9) と次の特殊文字だけで構成する必要があります。
  - ダッシュ (-)
- - 下線 (_)
+ - 下線 (\_)
  - ドット (.)
 
 ## REST API
@@ -121,12 +118,12 @@ REST API を使用するか、{{site.data.keyword.Bluemix_notm}} で提供され
 デバイス管理拡張パッケージ用 REST API について詳しくは、[{{site.data.keyword.iot_short_notm}} API V2](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} のドキュメントを参照してください。
 
 
-##カスタム・デバイス管理アクションのサポート
+## カスタム・デバイス管理アクションのサポート
 {: #supporting_custom_device_management_actions}
 
-拡張パッケージで定義されたデバイス管理アクションは、それらのアクションをサポートするデバイスだけが開始できます。デバイスは {{site.data.keyword.iot_short_notm}} に管理要求をパブリッシュするときに、サポートできるアクションのタイプを指定します。
+拡張パッケージで定義されたデバイス管理アクションは、それらのアクションをサポートするデバイスだけが開始できます。デバイスから {{site.data.keyword.iot_short_notm}} に管理要求をパブリッシュするときに、そのデバイスでサポートできるアクションのタイプを指定します。
 
-拡張パッケージに含まれるカスタム・アクションを受け取るには、次の例に示すように、デバイスからの要求の supports オブジェクトで拡張パッケージのバンドル ID を指定する必要があります。
+拡張パッケージに含まれているカスタム・アクションを指定するには、次の例に示すように、デバイスからの要求の supports オブジェクトで拡張パッケージのバンドル ID を指定する必要があります。
 
 ```
 	デバイスからの出力メッセージ:
@@ -331,7 +328,7 @@ REST API を使用するか、{{site.data.keyword.Bluemix_notm}} で提供され
 組織 `<orgID>` に登録されているデバイスは、管理要求をパブリッシュするときに、`exampleDeviceType-actions-v1` アクションをサポートしていることを指定できます。以下に例を示します。
 
 ```
-	Outgoing message from device:
+	デバイスからの出力メッセージ:
 
 	Topic: iotdevice-1/mgmt/manage
 	{

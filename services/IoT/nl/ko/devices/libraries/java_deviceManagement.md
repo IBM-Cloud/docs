@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-02"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # Java 클라이언트 라이브러리 - 관리 디바이스
 {: #java_deviceManagement}
-마지막 업데이트 날짜: 2016년 8월 2일
-{: .last-updated}
 
 ##소개
 {: #introduction}
@@ -97,8 +96,8 @@ Constructor One은 `DeviceData`와 다음 필수 특성을 모두 승인하여 {
 |특성 |설명  |
 |:---|:---|
 |`Organization-ID` |조직 ID|
-|`Device-Type` |디바이스 유형입니다. 일반적으로 deviceType은 특정 태스크를 수행하는 디바이스를 그룹화한 것입니다(예: "weatherballoon").|
-|`Device-ID` |디바이스 ID입니다. 일반적으로 지정된 디바이스 유형의 디바이스 ID는 해당 디바이스의 고유한 ID입니다(예: 일련 번호 또는 MAC 주소).|
+|`Device-Type` |디바이스 유형입니다. 일반적으로, deviceType은 특정 태스크를 수행하는 디바이스의 그룹화입니다(예: "weatherballoon"). |
+|`Device-ID` |디바이스 ID입니다. 일반적으로, 제공된 디바이스 유형의 경우 deviceId는 해당 디바이스의 고유 ID입니다(예: 일련 번호 또는 MAC 주소). |
 |`Authentication-Method` |사용할 인증 메소드입니다. 현재 지원되는 값은 `token`입니다.|
 |`Authentication-Token` |디바이스를 Watson IoT Platform에 안전하게 연결하기 위한 인증 토큰입니다.|
 
@@ -538,14 +537,14 @@ deviceData.addFirmwareHandler(fwHandler);
 
 {{site.data.keyword.iot_short_notm}}에서는 다음 디바이스 조치를 지원합니다.
 
-* 다시 부팅
+* 재부팅
 * 팩토리 재설정
 
 디바이스에서 디바이스 조치를 지원하려면 다음 활동을 수행해야 합니다.
 
 **1. 서버에 디바이스 조치 지원에 대해 알림**
 
-다시 부팅 및 팩토리 재설정을 수행하려면 디바이스에서 먼저 {{site.data.keyword.iot_short_notm}}에 해당 지원에 대해 알려야 합니다. 부울 값으로 다음 메소드를 호출하면 가능합니다. 
+재부팅 및 팩토리 재설정을 수행하려면 디바이스에서 먼저 {{site.data.keyword.iot_short_notm}}에 해당 지원에 대해 알려야 합니다. 부울 값으로 다음 메소드를 호출하면 가능합니다. 
 
 ```
 managedDevice.supportsDeviceActions(true);
@@ -565,7 +564,7 @@ public abstract void handleFactoryReset(DeviceAction action);
 
 **2.1 handleReboot의 샘플 구현**
 
-구현 시 DeviceAction 오브젝트를 통해 디바이스를 다시 부팅하고 다시 부팅 상태를 보고하는 로직을 추가해야 합니다. 디바이스는 실패한 경우에만 선택적 메시지와 함께 상태를 업데이트해야 합니다(오퍼레이션에 성공하면 디바이스를 다시 부팅하고 디바이스 코드를 통해 {{site.data.keyword.iot_short_notm}}을 업데이트할 제어 기능이 없기 때문). Raspberry Pi 디바이스의 샘플 다시 부팅 구현은 다음과 같습니다. 
+구현 시 DeviceAction 오브젝트를 통해 디바이스를 재부팅하고 재부팅 상태를 보고하는 로직을 추가해야 합니다. 디바이스는 실패한 경우에만 선택적 메시지와 함께 상태를 업데이트해야 합니다(오퍼레이션에 성공하면 디바이스를 재부팅하고 디바이스 코드를 통해 {{site.data.keyword.iot_short_notm}}을 업데이트할 제어 기능이 없기 때문). Raspberry Pi 디바이스의 샘플 재부팅 구현은 다음과 같습니다. 
 
 ```
 public void handleReboot(DeviceAction action) {
@@ -594,7 +593,7 @@ public void handleReboot(DeviceAction action) {
 
 **2.2 handleFactoryReset의 샘플 구현**
 
-구현 시 DeviceAction 오브젝트를 통해 디바이스를 팩토리 설정으로 재설정하고 상태를 보고하는 로직을 추가해야 합니다. 디바이스는 실패한 경우에만 선택적 메시지와 함께 상태를 업데이트해야 합니다(이 프로세스의 일부로 디바이스가 다시 부팅되고 디바이스에서 {{site.data.keyword.iot_short_notm}}의 상태를 업데이트할 제어 기능이 없기 때문). 팩토리 재설정 구현의 스켈레톤은 다음과 같습니다. 
+구현 시 DeviceAction 오브젝트를 통해 디바이스를 팩토리 설정으로 재설정하고 상태를 보고하는 로직을 추가해야 합니다. 디바이스는 실패한 경우에만 선택적 메시지와 함께 상태를 업데이트해야 합니다(이 프로세스의 일부로 디바이스가 재부팅되고 디바이스에서 {{site.data.keyword.iot_short_notm}}의 상태를 업데이트할 제어 기능이 없기 때문). 팩토리 재설정 구현의 스켈레톤은 다음과 같습니다. 
 
 ```
 public void handleFactoryReset(DeviceAction action) {

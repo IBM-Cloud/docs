@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-27"
 
 ---
 
@@ -14,7 +15,6 @@ copyright:
 
 # Conectando gateways
 {: #IoT_connectGateway}
-Última atualização: 28 de julho de 2016
 
 Antes que possa iniciar o recebimento de dados de dispositivos conectados a seus gateways, deve-se conectar o gateway ao {{site.data.keyword.iot_full}}. Conectar um gateway ao {{site.data.keyword.iot_short_notm}} envolve a criação de um tipo de dispositivo de gateway e o registro do gateway com o {{site.data.keyword.iot_short_notm}}. É possível usar então as informações de registro para conectar o gateway ao {{site.data.keyword.iot_short_notm}}.
 {:shortdesc}
@@ -26,7 +26,7 @@ Gateways são uma classe especializada de dispositivos no {{site.data.keyword.io
 {: #Prerequisites}
 
 Dispositivos de gateway têm permissões adicionais quando comparados a dispositivos regulares e podem executar as funções a seguir:
-- Registrar novos dispositivos no Watson IoT Platform
+- Registrar novos dispositivos no {{site.data.keyword.iot_short_notm}}
 - Enviar e receber seus próprios dados de sensor como um dispositivo diretamente conectado
 - Enviar e receber dados em nome dos dispositivos conectados a ele
 - Executar um agente de gerenciamento de dispositivo para que possa ser gerenciado e também gerenciar os dispositivos conectados a ele.  
@@ -48,13 +48,27 @@ Para incluir um gateway a partir do painel do {{site.data.keyword.iot_short_notm
 3. Selecione ou crie um tipo de dispositivo para o dispositivo que você está incluindo.  
 Cada dispositivo conectado ao {{site.data.keyword.iot_short_notm}} deve estar associado a um tipo de dispositivo. Tipos de dispositivos são grupos de dispositivos que compartilham características.  
  1. Clique em **Criar tipo de dispositivo**, em seguida, em **Criar tipo de gateway**.
- 2. Insira um nome, como `my_gateway_type`, e uma descrição para o tipo de gateway.
- 3. Opcional: insira atributos e metadados de tipo de gateway.    
+ 2. Insira um nome de tipo de dispositivo como `my_gateway_type` e uma descrição para o tipo de gateway.
+ **Importante:** O nome de tipo de dispositivo deve ter no máximo 36 caracteres e pode conter apenas:
+ <ul>
+  <li>Caracteres alfanuméricos (a-z, A-Z, 0-9)</li>
+  <li>Hifens (-)</li>
+  <li>Sublinhados (&lowbar;)</li>
+  <li>Pontos (.)</li>
+  </ul>3. Opcional: Insira metadados e atributos de tipo de gateway.    
  **Dica:** é possível incluir e editar atributos e metadados posteriormente.
  4. Clique em **Criar** para incluir o novo tipo de gateway.
 10. Clique em **Avançar** para iniciar o processo de incluir seu dispositivo de gateway com o tipo de gateway selecionado.
-11. Insira um ID do dispositivo, como `my_gateway_device`.  
-O ID do dispositivo é usado para identificar o dispositivo de gateway no painel do {{site.data.keyword.iot_short_notm}} e também é um parâmetro necessário para conectar seu dispositivo de gateway ao {{site.data.keyword.iot_short_notm}}.
+11. Insira um ID do dispositivo, como `my_gateway_device`.
+O ID do dispositivo é usado para identificar o dispositivo de gateway no painel do {{site.data.keyword.iot_short_notm}} e também é um parâmetro necessário para conectar seu dispositivo de gateway ao {{site.data.keyword.iot_short_notm}}.  
+**Importante:** O ID do dispositivo deve ter no máximo 36 caracteres e pode conter apenas:
+ <ul>
+ <li>Caracteres alfanuméricos (a-z, A-Z, 0-9)</li>
+ <li>Hifens (-)</li>
+ <li>Sublinhados (&lowbar;)</li>
+ <li>Pontos (.)</li>  
+ </ul>
+ **Dica:** para dispositivos conectados à rede, o ID do dispositivo poderia, por exemplo, ser o endereço de Controle de Acesso à Mídia do dispositivo sem dois pontos separando.  
 12. Opcional: clique em **Campos adicionais** para incluir informações de dispositivo de gateway, como número de série, fabricante, modelo, etc.  
  **Dica:** é possível incluir e editar essas informações posteriormente.
 12. Opcional: insira os metadados JSON do dispositivo.  
@@ -79,7 +93,7 @@ Após registrar um gateway com o {{site.data.keyword.iot_short_notm}}, use as in
 
 Para obter informações sobre como conectar seu gateway ao {{site.data.keyword.iot_short_notm}}, consulte [Conectividade MQTT para gateways](mqtt.html).
 
-**Dica:** há uma gama de receitas disponíveis para conectar dispositivos ao {{site.data.keyword.iot_short_notm}}. Para obter uma lista de receitas, consulte as [Receitas de conexão de dispositivo](https://developer.ibm.com/recipes/?post_type=tutorials&s=IoT) que estão disponíveis em IBM.com.
+**Dica:** há uma gama de receitas disponíveis para conectar dispositivos ao {{site.data.keyword.iot_short_notm}}. Para obter uma lista de receitas, consulte as [Receitas de conexão de dispositivo](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/) que estão disponíveis em IBM.com.
 
 
 ## Etapa 3: conectando dispositivos por meio do gateway
@@ -116,7 +130,9 @@ Para instalar o EAA em seu gateway:
 É possível usar o arquivo config.properties do EAA para configurar os parâmetros básicos de configuração de software.
 
 Para atualizar a configuração do EAA:
-1. No sistema de gateway no qual o EAA está em execução, localize o arquivo config.properties do EAA.
+1. No sistema de gateway no qual o EAA está em execução, localize o arquivo config.properties do EAA.  
+Por exemplo:
+`../dglux-server/dslinks/ibm-watson-iot-edge-analytics-dslink-java-0.0.1/config.properties`
 2. Antes de iniciar a edição das configurações, faça uma cópia de backup do arquivo.
 3. Abra o arquivo config.properties para edição.
 4. Edite os parâmetros de configuração para seu ambiente:

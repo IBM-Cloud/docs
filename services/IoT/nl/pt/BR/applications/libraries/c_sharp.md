@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-07-28"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # ﻿C# para desenvolvedor de aplicativos
 {: #c_sharp}
-Última atualização: 28 de julho de 2016
-{: .last-updated}
 
 
 É possível usar o C# para construir e customizar aplicativos que interagem com sua organização no {{site.data.keyword.iot_full}}. Use as informações e os exemplos fornecidos para iniciar o desenvolvimento de seus aplicativos usando o C#.

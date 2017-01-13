@@ -1,7 +1,8 @@
 ---
 
-copyright :
-  2016
+copyright:
+  years: 2016
+lastupdated: "2016-09-16"
 
 ---
 
@@ -12,8 +13,6 @@ copyright :
 {:pre: .pre}
 
 # Gestion des accès utilisateur
-Dernière mise à jour : 16 septembre 2016
-{: .last-updated}
 
 Le tableau de bord d'accès vous permet de contrôler et gérer les accès à votre organisation {{site.data.keyword.iot_full}}. Vous pouvez ajouter des utilisateurs en les ajoutant, en les invitant, en les enregistrant ou en les important. Vous pouvez également accorder différents niveaux d'accès à vos utilisateurs en affectant des rôles.
 {:shortdesc}
@@ -73,7 +72,7 @@ Pour enregistrer un membre auprès de votre organisation {{site.data.keyword.iot
 2. Cliquez sur **Ajouter un membre** et sélectionnez **Inviter**.
 3. Entrez l'adresse électronique du membre.
 4. Sélectionnez un rôle pour ce membre.
-5. Entrez l'objet, le nom de domaine et l'émetteur. 
+5. Entrez l'objet, le nom de domaine et l'émetteur.
    **Important :** Assurez-vous que les zones `Objet`, `Nom de domaine` et `Emetteur` sont conformes aux recommandations et aux normes d'OpenID Connect. Pour plus d'informations, voir le site Web [OpenID Connect](http://openid.net/connect/).
 6. Facultatif : Définissez une date d'expiration pour le membre.
 7. Cliquez sur **Enregistrer un membre**.

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-07"
 
 ---
 
@@ -13,9 +14,6 @@ copyright:
 
 # 针对应用程序的 HTTP REST API
 {: #api}
-
-上次更新时间：2016 年 9 月 7 日
-{: .last-updated}
 
 使用 {{site.data.keyword.iot_full}} HTTP REST API 可构建和定制应用程序，以用于与 {{site.data.keyword.iot_short_notm}} 上的组织进行交互。
 {:shortdesc}

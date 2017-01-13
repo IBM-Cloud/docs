@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-11"
 
 ---
 
@@ -13,10 +14,8 @@ copyright:
 
 # 裝置的 HTTP REST API
 {: #api}
-前次更新：2016 年 10 月 11 日
-{: .last-updated}
 
-**重要事項：**裝置的 {{site.data.keyword.iot_full}} HTTP REST API 特性僅是有限測試版程式的一部分。未來更新可能包括與此特性的目前版本不相容的變更。請試用，並且[讓我們知道您的想法](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html)。
+**重要事項：**裝置的 {{site.data.keyword.iot_full}} HTTP REST API 特性僅是有限測試版程式的一部分。未來更新可能包含與此特性的目前版本不相容的變更。請試用，並且[讓我們知道您的想法](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html)。
 
 ## 存取 HTTP REST API
 {: #api_link}
@@ -43,13 +42,13 @@ copyright:
 <pre class="pre">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
 {: codeblock}
 
-如果您要將裝置或應用程式連接至「快速入門」服務，請改用下列其中一個 URL：
+如果您要將裝置或應用程式連接至 Quickstart 服務，請改用下列其中一個 URL：
 
-### 連接至快速入門的未受保護 POST 要求
+### 連接至 Quickstart 的未受保護 POST 要求
 <pre class="pre">http://quickstart.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
 {: codeblock}
 
-### 連接至快速入門的安全 POST 要求
+### 連接至 Quickstart 的安全 POST 要求
 <pre class="pre">https://quickstart.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
 {: codeblock}
 
@@ -59,7 +58,7 @@ copyright:
 
 ### 鑑別
 
-所有要求都必須包括授權標頭。基本鑑別是唯一支援的方法。裝置透過 {{site.data.keyword.iot_short_notm}} HTTP REST API 提出 HTTP 要求時，需要下列認證：
+所有要求都必須包含授權標頭。基本鑑別是唯一支援的方法。裝置透過 {{site.data.keyword.iot_short_notm}} HTTP REST API 提出 HTTP 要求時，需要下列認證：
 
 |認證|必要輸入|
 |:---|:---|
@@ -80,7 +79,7 @@ copyright:
 
 ### 服務品質
 
-與 MQTT 服務品質「最多一次」遞送服務水準 0 類似，HTTP REST 傳訊提供非持續訊息遞送，但會驗證要求正確無誤，並驗證要求會先遞送至伺服器，再傳送 HTTP 回應。包含 HTTP 狀態碼 200 的回覆確認已將訊息遞送至伺服器。當您使用「最多一次」MQTT 服務品質水準或 HTTP 對等項目來遞送事件訊息時，裝置或應用程式必須實作重試邏輯來保證遞送。
+與 MQTT 服務品質「最多一次」遞送服務水準 0 類似，HTTP REST 傳訊提供非持續訊息遞送，但會驗證要求正確無誤，並驗證要求會先遞送至伺服器，再傳送 HTTP 回應。包含 HTTP 狀態碼 200 的回覆會確認已將訊息遞送至伺服器。當您使用「最多一次」的 MQTT 服務品質水準或 HTTP 對等項目來遞送事件訊息時，裝置或應用程式必須實作重試邏輯以保證遞送。
 
 如需 {{site.data.keyword.iot_short_notm}} 的 MQTT 通訊協定及服務品質水準的相關資訊，請參閱 [MQTT 傳訊](../reference/mqtt/index.html)。
 
@@ -113,13 +112,13 @@ GET /api/v0002/device/types/<device-type>/devices/<device-id>/events/power
 
 **附註：**API 回應為 JSON 格式時，可以使用任何格式來撰寫事件有效負載。「前次事件快取 API」所傳回的有效負載會使用 base64 進行編碼。
 
-若要要求裝置所報告之每一個事件 ID 的最新值，請使用下列 API 要求：
+若要要求裝置所報告之每個事件 ID 的最新值，請使用下列 API 要求：
 
 ```
 GET /api/v0002/device/types/<device-type>/devices/<device-id>/events
 ```
 
-回應將會包括裝置所傳送的所有事件 ID。在下列範例中，會傳回 "power" 及 "temperature" 事件的值。
+回應將會包含裝置所傳送的所有事件 ID。在下列範例中，會傳回 "power" 及 "temperature" 事件的值。
 
 ```
 [

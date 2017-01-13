@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-26"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 # Creazione e collegamento di un simulatore del dispositivo Node-RED
 Utilizza Node-RED per creare un simulatore del dispositivo e per inviare i dati del dispositivo simulato alla tua organizzazione {{site.data.keyword.iot_full}}.  
 {:shortdesc}
-Ultimo aggiornamento: 26 agosto 2016
-{: .last-updated}
 
 Node-RED è uno strumento per collegare dispositivi hardware, API o servizi online in modi nuovi e interessanti. Per ulteriori informazioni, consulta il sito web [Node-RED](http://nodered.org/).  
 

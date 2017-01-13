@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-16"
 
 ---
 
@@ -12,19 +13,17 @@ copyright:
 {:pre: .pre}
 
 
-# 裝置模型
+# 裝置機型
 {: #device_model}
-前次更新：2016 年 9 月 16 日
-{: .last-updated}
 
-裝置模型說明裝置的 meta 資料及管理性質。{{site.data.keyword.iot_full}} 中的裝置資料庫是裝置資訊的主要來源。應用程式及受管理裝置可以將更新項目（包括位置變更）或韌體更新的進度傳送至裝置資料庫。{{site.data.keyword.iot_short_notm}} 收到這些更新項目之後，就會更新資料庫，而應用程式就能使用該資訊。
+裝置機型說明裝置的 meta 資料及管理性質。{{site.data.keyword.iot_full}} 中的裝置資料庫是裝置資訊的主要來源。應用程式及受管理裝置可以將更新（包括位置變更或韌體更新的進度）傳送至裝置資料庫。{{site.data.keyword.iot_short_notm}} 收到這些更新之後，就會更新資料庫，而應用程式就能使用該資訊。
 
-**附註：**除了[裝置管理延伸規格](#devicemanagementextension)之外，整個裝置模型都可用於受管理和未受管理的裝置。不過，未受管理裝置無法直接更新其在資料庫中的裝置模型。
+**附註：**除了[裝置管理延伸規格](#devicemanagementextension)之外，整個裝置機型都可用於受管理和未受管理的裝置。不過，未受管理裝置無法直接更新其在資料庫中的裝置機型。
 
 ## 裝置識別
 {: #device_id}
 
-每個裝置都有 `typeId` 和 `deviceId` 屬性。一般而言，`typeId` 代表裝置的模型，而 `deviceId` 可以代表其序號。在 {{site.data.keyword.iot_short_notm}} 組織中，每一個裝置的 `typeId` 與 `deviceId` 組合都必須是唯一的。
+每個裝置都有 `typeId` 和 `deviceId` 屬性。一般而言，`typeId` 代表裝置的機型，而 `deviceId` 可以代表其序號。在 {{site.data.keyword.iot_short_notm}} 組織中，每一個裝置的 `typeId` 與 `deviceId` 組合都必須是唯一的。
 
 除了這些屬性之外，{{site.data.keyword.iot_short_notm}} 會為每一個裝置建構另一個 ID。此 ID 稱為 `clientId`。`clientId` 是根據 `organizationId` 以及裝置的 `typeId` 及 `deviceId` 值。`clientId` 提供可唯一識別個別裝置的方式。這些 ID 中可使用的字元受限制，使它們能夠與通訊協定和 REST API 相容。
 
@@ -71,7 +70,7 @@ copyright:
  status.alert                     | 布林    | 指出裝置是否有警示                   |  W  |  -   
  *deviceInfo.serialNumber*        | 字串     | 裝置的序號                   |  W  |  W    
  *deviceInfo.manufacturer*        | 字串     | 裝置的製造商                    |  W  |  W   
- *deviceInfo.model*               | 字串     | 裝置的模型                           |  W  |  W  
+ *deviceInfo.model*               | 字串     | 裝置的機型                           |  W  |  W  
  *deviceInfo.deviceClass*         | 字串     | 裝置的類別                           |  W  |  W  
  *deviceInfo.description*         | 字串     | 裝置的敘述性名稱                |  W  |  W  
  *deviceInfo.fwVersion*           | 字串     | 裝置上目前已知的韌體版本    |  W  |  W  
@@ -90,7 +89,7 @@ copyright:
 ## 延伸屬性
 {: #extended_attributes}
 
-除了「屬性」區段上方所列的核心屬性之外，還有其他屬性被視為核心裝置模型的延伸規格。與裝置相關的簡單查詢會從核心裝置模型傳回資訊，但不會傳回延伸規格。來自延伸規格的資訊必須明確要求。
+除了上方「屬性」一節所列的核心屬性之外，還有其他屬性被視為核心裝置模型的延伸規格。與裝置相關的簡單查詢會從核心裝置機型傳回資訊，但不會傳回延伸規格。來自延伸規格的資訊必須明確要求。
 
 
 延伸規格名稱    | 屬性的字首 | 目的      
@@ -120,19 +119,19 @@ copyright:
 
 ### 位置延伸規格
 
-位置屬性是選用項目，只有包含位置資訊的裝置才有這些屬性。位置資訊會個別儲存，讓使用儲存體機制時更適合動態資訊。經常更新資訊時（例如行動裝置），這可能十分重要。
+位置屬性是選用項目，只有包含位置資訊的裝置才有這些屬性。位置資訊會個別儲存，讓使用儲存機制時更適合動態資訊。經常更新資訊時（例如行動裝置），這可能十分重要。
 
-若為極度重視頻繁更新位置的解決方案，應該會將位置視為裝置事件有效負載的一部分，以啟用較高的更新率、更簡單的歷程儲存，以及更輕鬆的資料分析。
+若為極度重視頻繁更新位置的解決方案，應該會將位置視為裝置事件有效負載的一部分，以便達到較高的更新率、更簡單的歷程儲存，以及更輕鬆的資料分析。
 
 
 屬性                 | 類型   | 說明                                             | API | DMA
 ------------- | ------------- | ------------- | ------------- | -------------
- location.longitude        | 數值 | 經度，使用 WGS84 的十進位制                |  W  |  W  
- location.latitude         | 數值 | 緯度，使用 WGS84 的十進位制                 |  W  |  W  
- location.elevation        | 數值 | 海拔高度，使用 WGS84 的公尺數                         |  W  |  W  
+ location.longitude        | 數值 | 使用 WGS84 的經度（十進位度數）                |  W  |  W  
+ location.latitude         | 數值 | 使用 WGS84 的緯度（十進位度數）                 |  W  |  W  
+ location.elevation        | 數值 | 使用 WGS84 的海拔高度（公尺）                         |  W  |  W  
  location.measuredDateTime | 字串 |ISO8601 日期時間：測量位置的日期和時間 |  W  |  W  
  location.updatedDateTime  | 字串 | ISO8601 日期時間：日期和時間                        |  R  |   
- location.accuracy         | 數值 | 位置的正確性（公尺）                      |  W  |  W  
+ location.accuracy         | 數值 | 位置的精確度（公尺）                      |  W  |  W  
 
 
 ### 裝置管理延伸規格
@@ -140,7 +139,7 @@ copyright:
 
 只有受管理裝置才會有管理屬性。當受管理裝置變成休眠時，就會變成未受管理，並刪除 `mgmt.` 屬性。{{site.data.keyword.iot_short_notm}} 會在處理裝置管理要求之後，設定 `mgmt.` 屬性。無法使用 API 直接撰寫這些屬性。
 
-裝置具有管理生命週期，依其狀態定義為受管理裝置。裝置上的裝置管理代理程式會負責使用裝置管理通訊協定來傳送「管理裝置」要求。若要處理大型裝置母體中的已廢止裝置，可以設定受管理裝置來定期傳送「管理裝置」要求。如果在指定的一段時間未將此要求傳送至 {{site.data.keyword.iot_short_notm}}，則受管理裝置會變成休眠。為了協助進行這項功能，「管理裝置」要求有一個選用性的生命期限參數。{{site.data.keyword.iot_short_notm}} 收到已設定生命期限參數的「管理裝置」要求時，會計算需要另一個「管理裝置」要求之前的時間，並將其儲存在 `mgmt.dormantDateTime` 屬性中。
+裝置具有管理生命週期，依其狀態定義為受管理裝置。裝置上的裝置管理代理程式會負責使用裝置管理通訊協定來傳送「管理裝置」要求。若要處理大型裝置母體中的已廢止裝置，可以設定受管理裝置來定期傳送「管理裝置」要求。如果在指定的一段時間未將此要求傳送至 {{site.data.keyword.iot_short_notm}}，則受管理裝置會變成休眠。為了協助進行這項功能，「管理裝置」要求有一個選用性的 lifetime 參數。{{site.data.keyword.iot_short_notm}} 收到已設定 lifetime 參數的「管理裝置」要求時，會計算需要另一個「管理裝置」要求之前的時間，並將其儲存在 `mgmt.dormantDateTime` 屬性中。
 
 
 屬性                     | 類型    | 說明                             | API | DMA

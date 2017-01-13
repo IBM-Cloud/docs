@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-01"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # {{site.data.keyword.iot_short_notm}} について
 {: #about_iotplatform}
-最終更新日: 2016 年 8 月 1 日
-{: .last-updated}
 
 {{site.data.keyword.iot_full}} には、IoT のデバイスやデータに対する強力なアプリケーション・アクセス機能が用意されています。この機能は、分析アプリケーション、視覚化ダッシュボード、モバイル IoT アプリを短時間で作成するのに役立ちます。
 {:shortdesc}

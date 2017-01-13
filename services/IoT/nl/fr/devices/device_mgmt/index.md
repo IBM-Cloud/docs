@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-13"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # Protocoles de gestion des terminaux
 {: #index}
-Dernière mise à jour : 13 septembre 2016
-{: .last-updated}
 
 ## Introduction
 {: #introduction}
@@ -60,7 +59,7 @@ Le tableau suivant répertorie les codes retour qui sont générés aux cours de
 
 Un terminal utilise la demande Gérer le terminal pour devenir un terminal géré. La demande Gérer le terminal doit être la première demande de gestion des terminaux envoyée par le terminal après la connexion à {{site.data.keyword.iot_short_notm}}. Un agent de gestion des terminaux envoie généralement ce type de demande chaque fois qu'il démarre ou redémarrer.
 
-**Important :** La prise en charge de cette opération est obligatoire pour tous les appareils gérés.
+**Important :** La prise en charge de cette opération est obligatoire pour tous les terminaux gérés.
 
 
 ### Sujet pour une demande Gérer le terminal
@@ -146,7 +145,7 @@ Topic: iotdm-1/response
 
 
 Un terminal utilise une demande Annuler la gestion du terminal lorsqu'il n'a plus besoin d'être géré. Lorsqu'un terminal devient non géré, {{site.data.keyword.iot_short_notm}} n'envoie plus de nouvelles demandes de gestion des terminaux au terminal. Les terminaux non gérés continuent de publier des codes d'erreur, des messages de journal et des messages d'emplacement.
-**Important :** La prise en charge de cette opération est obligatoire pour tous les appareils gérés.
+**Important :** La prise en charge de cette opération est obligatoire pour tous les terminaux gérés.
 
 ### Sujet pour une demande Annuler la gestion du terminal
 

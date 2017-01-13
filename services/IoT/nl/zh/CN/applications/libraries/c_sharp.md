@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-07-28"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # 针对应用程序开发者的 C#
 {: #c_sharp}
-上次更新时间：2016 年 7 月 28 日
-{: .last-updated}
 
 
 您可以使用 C# 来构建和定制应用程序，以用于在 {{site.data.keyword.iot_full}} 上与您的组织进行交互。使用提供的信息和示例通过 C# 开始开发应用程序。

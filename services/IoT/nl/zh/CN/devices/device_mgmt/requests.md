@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-08"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # 设备管理请求
 {: #requests}
-上次更新时间：2016 年 9 月 8 日
-{: .last-updated}
 
 
 {{site.data.keyword.iot_full}} 提供了可以对一个或多个设备启动的操作。这些操作可以使用仪表板或 REST API 来启动。可用操作的类型为**设备操作**和**固件操作**。

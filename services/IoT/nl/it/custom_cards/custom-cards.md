@@ -110,15 +110,15 @@ Il tuo pacchetto delle schede personalizzate può contenere più moduli. Devi fa
 Per rendere la tua scheda disponibile nelle tabelle della tua organizzazione {{site.data.keyword.iot_short_notm}}, devi aggiungere i dettagli di configurazione della scheda nel file `DashboardConfig.json`.
 7. Crea il tuo pacchetto delle schede.
 Utilizza Gulp per configurare un motore di build automatizzato.
-8. Distribuisci il tuo pacchetto delle schede al tuo server delle schede.
-Prima di poter utilizzare le tue schede in {{site.data.keyword.iot_short_notm}}, devi distribuire il pacchetto delle schede al tuo server HTTP delle schede personalizzate.
+8. Distribuisci il tuo pacchetto delle schede al tuo server delle schede.  
+Prima di poter utilizzare le tue schede in {{site.data.keyword.iot_short_notm}}, devi distribuire il pacchetto delle schede al tuo server HTTP delle schede personalizzate.  
 **Suggerimento:** puoi aggiungere nuove schede o rimuoverne di obsolete in tempo reale ridistribuendo il pacchetto delle schede al server delle schede.
 9. Collega il tuo server delle schede a {{site.data.keyword.iot_short_notm}}.
-Collega il tuo server delle schede personalizzate appena distribuito a {{site.data.keyword.iot_short_notm}}.
+Collega il tuo server delle schede personalizzate appena distribuito a {{site.data.keyword.iot_short_notm}}.  
 **Suggerimento:** se il tuo server delle schede personalizzate è una replica completa del server delle schede di esempio, potresti visualizzare schede duplicate nel tuo ambiente. Rimuovi la connessione al server delle schede personalizzate per visualizzare solo le schede dal tuo server delle schede personalizzate.
  1. Vai a **Extensions**.
- 2. Nel tile **Custom Card**, fai clic sull'icona ingranaggio per aggiornare la configurazione. 
- 4. Nella sezione di configurazione delle schede personalizzate, fai clic su **Add** e immetti l'URL (HTTPS) sicuro per il tuo server delle schede personalizzate nel campo server.
+ 2. Nel tile **Custom Card**, fai clic sull'icona ingranaggio per aggiornare la configurazione.
+ 4. Nella sezione di configurazione delle schede personalizzate, fai clic su **Add** e immetti l'URL (HTTPS) sicuro per il tuo server delle schede personalizzate nel campo server.  
 **Importante:** verifica che ti stai collegando a un server delle schede personalizzate sicuro, conosciuto e previsto.
 4. Fai clic su **Done** per aggiungere la connessione al server.
 10. La scheda personalizzata HelloWorld è ora disponibile per l'utilizzo con le tue tabelle.
@@ -144,14 +144,14 @@ I seguenti passi avanzati creano una nuova scheda:
 **Suggerimento:** per i passi dettagliati, consulta [Creating custom cards Readme](https://github.com/ibm-watson-iot/custom-cards/blob/master/README.md) nel repository delle schede personalizzate di esempio.
 1. Crea il tuo proprio modulo della scheda.
  1. Utilizza uno dei moduli della scheda di esempio come template per il tuo modulo.
- 2. Aggiorna tutte le istanze del nome del modulo nei tuoi nuovi nomi del file modulo e contenuto dei file.
+ 2. Aggiorna tutte le istanze del nome del modulo nei tuoi nuovi nomi del file modulo e contenuto dei file.  
  Ad esempio, sostituisci `HelloWorld` con il tuo nome del modulo in tutti i nomi del file e le istanze del contenuto dei file.
 2. Fai riferimento al nuovo modulo nel file Modules.jsx.
 3. Registra il nuovo modulo nel file DashboardConfig.json.
 4. Aggiorna il codice della scheda personalizzato per soddisfare i bisogni della tua scheda.
-4. Crea il pacchetto delle schede.
+4. Crea il pacchetto delle schede.  
 A seconda della tua configurazione, il processo di build potrebbe utilizzare gulp in automatico o potresti dover attivare manualmente una build.
-3. Distribuisci la nuova scheda.
+3. Distribuisci la nuova scheda.  
 Se stai utilizzando un server delle schede personalizzate esterno, devi ora distribuire il pacchetto al server.  
 
 Hai creato la tua prima scheda personalizzata e l'hai distribuita al tuo server delle schede personalizzate. La scheda è ora disponibile per l'utilizzo nella tua organizzazione {{site.data.keyword.iot_short_notm}}.

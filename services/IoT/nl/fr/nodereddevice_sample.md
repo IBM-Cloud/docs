@@ -1,7 +1,8 @@
 ---
 
-copyright :
-  2016
+copyright:
+  years: 2016
+lastupdated: "2016-08-26"
 
 ---
 
@@ -14,8 +15,6 @@ copyright :
 # Création et connexion d'un simulateur de terminal Node-RED
 Utilisez Node-RED pour créer un simulateur de terminal et envoyer des données de terminal simulé à votre organisation {{site.data.keyword.iot_full}}.  
 {:shortdesc}
-Dernière mise à jour : 26 août 2016
-{: .last-updated}
 
 Node-RED est un outil qui permet de relier des terminaux matériels, des API et des services en ligne selon des méthodes inédites et intéressantes. Pour plus d'informations, voir le site Web [Node-RED](http://nodered.org/).  
 

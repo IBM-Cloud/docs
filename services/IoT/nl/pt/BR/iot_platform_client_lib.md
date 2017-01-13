@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-03"
 
 ---
 
@@ -13,9 +14,6 @@ copyright:
 
 # Bibliotecas do cliente para desenvolvimento do {{site.data.keyword.iot_short}}
 {: #iot_platform_client_lib}
-
-Última atualização: 3 de agosto de 2016
-{: .last-updated}
 
 As bibliotecas do cliente fornecem ferramentas e arquivos para os quais você precisa construir e desenvolver código para integrar e conectar seus dispositivos e aplicativos no {{site.data.keyword.iot_full}}.
 {:shortdesc}

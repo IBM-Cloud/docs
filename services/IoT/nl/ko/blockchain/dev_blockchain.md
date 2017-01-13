@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-30"
 
 ---
 
@@ -13,10 +14,7 @@ copyright:
 
 
 # {{site.data.keyword.iot_short_notm}} 블록체인 통합을 위한 스마트 계약 개발
-
 {: #iotblockchain_link}
-마지막 업데이트 날짜: 2016년 8월 30일
-{: .last-updated}
 
 {{site.data.keyword.blockchainfull}} 및 Hyperledger 개발 환경을 사용하여 IBM 제공 샘플 계약에서 파생된 자체 스마트 계약을 작성하고 테스트할 수 있습니다.
 {:shortdesc}

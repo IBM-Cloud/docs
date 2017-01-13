@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-19"
 
 ---
 
@@ -12,10 +13,6 @@ copyright:
 {:pre: .pre}
 
 # Quickstart
-
-Dernière mise à jour : 19 septembre 2016
-{: .last-updated}
-
 
 [Quickstart](https://quickstart.internetofthings.ibmcloud.com/#/) est un bac à sable ouvert que vous pouvez utiliser pour connecter rapidement vos terminaux à {{site.data.keyword.iot_full}}. Si vos terminaux prennent en charge le protocole de messagerie MQTT, ils peuvent être facilement connectés au service Quickstart.
 

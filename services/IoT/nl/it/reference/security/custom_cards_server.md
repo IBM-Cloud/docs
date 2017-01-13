@@ -25,14 +25,14 @@ I server delle schede personalizzate sono server web standard che ospitano il co
 
 Devi disporre dei diritti da amministratore {{site.data.keyword.iot_short_notm}} per creare una connessione al server delle schede personalizzate.
 
-## Considerazioni sulla sicurezza server delle schede personalizzate 
+## Considerazioni sulla sicurezza server delle schede personalizzate
 {: #server_requirements}
 
 I seguenti requisiti vengono impostati da {{site.data.keyword.iot_short_notm}}:
 - La directory che utilizza il contenuto della scheda personalizzata sul server non deve richiedere credenziali di accesso.  
 Nessuna autenticazione richiesta al server delle schede personalizzate durante il collegamento per accedere e caricare le schede personalizzate.
 - Il server deve utilizzare il protocollo di sicurezza HTTP (HTTPS).
-- Il server deve supportare le connessioni CORS (Cross-origin resource sharing).   
+- Il server deve supportare le connessioni CORS (Cross-origin resource sharing).  
 
 Per proteggere il codice delle schede personalizzate e il server delle schede stesso, il server delle schede deve essere individuato e protetto utilizzando delle misure difensive valide. Questo include la protezione firewall per limitare l'accesso al server delle schede personalizzate.
 

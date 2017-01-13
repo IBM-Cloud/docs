@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-10-19"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # {{site.data.keyword.iot_short_notm}} の概説
 {: #gettingstartedtemplate}
-最終更新日: 2016 年 9 月 29 日
-{: .last-updated}
 
 {{site.data.keyword.iot_full}} for {{site.data.keyword.Bluemix_notm}} には、ゲートウェイ・デバイス、デバイス管理機能、強力なアプリケーション・アクセス機能など、便利なツールキットが用意されています。{{site.data.keyword.iot_short_notm}} を使用すれば、接続先デバイスのデータを収集し、組織のリアルタイム・データに基づく分析を実行できます。
 {:shortdesc}
@@ -37,7 +36,7 @@ copyright:
   ------------- | -------------
   **接続するデバイスがある** | [デバイスを {{site.data.keyword.iot_short_notm}}](iotplatform_task.html#iotplatform_task) に接続します。| [Play organization demo](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window} でデバイス接続を調べます。
   **接続するデバイスがない** | [Node-RED デバイス・シミュレーターを作成して接続します](nodereddevice_sample.html){:new_window}。 | [Watson IoT Platform Starter](https://console.ng.bluemix.net/docs/starters/IoT/iot500.html){:new_window} で作業を開始します。
-特定のデバイス・タイプを {{site.data.keyword.iot_short_notm}} に接続する方法について詳しくは、[developerWorks recipes](https://developer.ibm.com/recipes/?post_type=tutorials&s=iot){:new_window} を参照してください。  
+特定のデバイス・タイプを {{site.data.keyword.iot_short_notm}} に接続する方法について詳しくは、[developerWorks recipes](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window} を参照してください。  
 
 デバイス接続の開発者資料については、以下のリンク先をご覧ください。
 - [デバイスの MQTT 接続](devices/mqtt.html)。
@@ -71,7 +70,7 @@ copyright:
 {: #rellinks}
 ## チュートリアルとサンプル
 {: #samples}
-* [デバイス接続のレシピ](https://developer.ibm.com/recipes/?post_type=tutorials&s=iot){:new_window}
+* [デバイス接続のレシピ](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}
 * [{{site.data.keyword.iot_short_notm}} Play organization](https://play.internetofthings.ibmcloud.com/){:new_window}
 * [Connecting an Intel Galileo to the {{site.data.keyword.iot_short_notm}}](https://developer.ibm.com/recipes/tutorials/connect-an-intel-galileo-to-the-internet-of-things-foundation-connect/){:new_window}
 * [Connecting an ARM® mbed™ IoT Starter Kit](https://developer.ibm.com/recipes/tutorials/arm-mbed-iot-starter-kit-part-1/){:new_window}

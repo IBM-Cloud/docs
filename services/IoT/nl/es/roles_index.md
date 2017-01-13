@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-09-16"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 {:pre: .pre}
 
 # Roles de usuario, aplicación y pasarela
-Última actualización: 16 de septiembre de 2016
-{: .last-updated}
 
 Los roles son conjuntos de permisos que se pueden utilizar para otorgar o restringir el acceso a operaciones específicas. Los roles se pueden utilizar para gestionar permisos para grupos de usuarios, aplicaciones y pasarelas.
 {:shortdesc}
@@ -27,7 +26,7 @@ Están disponibles los siguientes roles de usuario estándares:
 
 Rol de usuario | Descripción
 ------------- | -------------
-Administrador | Un rol 'superusuario' que otorga acceso a todas las API relacionadas con el usuario. Los administradores no pueden acceder a operaciones restringidas a dispositivos y aplicaciones. 
+Administrador | Un rol 'superusuario' que otorga acceso a todas las API relacionadas con el usuario. Los administradores no pueden acceder a operaciones restringidas a dispositivos y aplicaciones.
 Operador | Pensado para usuarios de organizaciones frontales. Otorga acceso a la mayoría de las operaciones de organización, operaciones de control de acceso, operaciones de analíticas, operaciones de terceros y operaciones de gestión de riesgos.
 Desarrollador | Otorga acceso no restringido a operaciones de dispositivo, operaciones de registro, operaciones de memoria caché, operaciones de historian, operaciones de analíticas y operaciones de servicio de terceros. El rol proporciona acceso limitado a las operaciones de la organización, control de acceso y gestión de riesgos.
 Analista | Otorga acceso a las operaciones de analíticas, incluidas la creación, actualización y supresión de reglas, acciones y esquemas.

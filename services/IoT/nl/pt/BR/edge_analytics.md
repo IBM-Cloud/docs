@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-10-27"
 
 ---
 
@@ -14,13 +15,11 @@ copyright:
 
 # Edge Analytics
 {: #edge_analytics}
-Última atualização: 1 de agosto de 2016
-{: .last-updated}
 
 Com Edge Analytics, você move o processo de acionamento da regra de análise de dados da nuvem para um gateway ativado por Edge Analytics que pode reduzir de forma drástica a quantia de tráfego de dados do dispositivo para a nuvem executando o processamento de análise de dados próximo ao dispositivo.
 {:shortdesk}
 
-Os dispositivos enviam seus dados a um gateway ativado por Edge Analytics em que as regras de Edge Analytics analisam os dados. Dependendo de sua regra e da ação da mesma, dados críticos e alertas podem ser enviados ao {{site.data.keyword.iot_full}}, acionar um alerta no gateway ou ser gravados em um arquivo de texto local no gateway.
+Os dispositivos enviam seus dados a um gateway ativado por Edge Analytics em que as regras de Edge Analytics analisam os dados. Dependendo da função e sua ação, dados críticos e alertas podem ser enviados ao {{site.data.keyword.iot_full}}, acionarem um alerta no gateway ou serem gravados em um arquivo de texto que é local para o gateway.
 
 O diagrama a seguir ilustra a arquitetura geral de um ambiente de Edge Analytics do {{site.data.keyword.iot_full}}.
 ![IBM Watson IoT Platform para arquitetura de Edge Analytics](images/architecture_platform_edge.svg "IBM Watson IoT Platform com arquitetura de Edge Analytics")
@@ -33,7 +32,7 @@ O diagrama a seguir ilustra a arquitetura geral de um ambiente de Edge Analytics
 Antes de iniciar a criação de regras e ações de Edge Analytics:
 - Certifique-se de que o gateway esteja conectado ao {{site.data.keyword.iot_short}} e que os dados do dispositivo estejam sendo transmitidos. Consulte [Conectando gateways](gateways/dashboard.html) para obter mais informações.
 - Instale o Edge Analytics Agent (EAA) em seu gateway. Para obter informações, consulte [Instalando o Edge Analytics Agent](gateways/dashboard.html#edge). </br> **Dica:** gateways ativados para o EAA fornecem dados de diagnóstico do EAA no formato de mensagens do dispositivo de gateway. Para obter informações, consulte [Métricas de diagnóstico do Edge Analytics Agent](#eaa_metrics).
-- Certifique-se de que as propriedades do dispositivo que você deseja usar como condições em suas regras tenham sido mapeadas para esquemas. Consulte [Conectando dispositivos](iotplatform_task.html) e [Criando esquemas](im_schemas.html) para obter mais informações.
+- Certifique-se de que as propriedades do dispositivo que você deseja usar como condições em suas regras sejam mapeadas para esquemas. Consulte [Conectando dispositivos](iotplatform_task.html) e [Criando esquemas](im_schemas.html) para obter mais informações.
 
 ## Gerenciando regras e ações de borda  
 {: #managing_rules}
@@ -42,14 +41,14 @@ As regras de Edge Analytics são gerenciadas usando o seguinte:
 - O painel **Regras** é usado para criar e editar regras e ações de nuvem e de Edge Analytics para seus dispositivos e gateways.
 - O painel **Gateways de regras de Edge Analytics** é usado para ativar, desativar, atualizar e remover uma regra de Edge Analytics em seus gateways. Para acessar o painel Gateways de regras de Edge Analytics, no painel Regras, clique em **Gerenciar regra** para a regra de Edge Analytics que deseja gerenciar. Para obter mais informações, consulte [Ativando, desativando e gerenciando regras de Edge Analytics para seus gateways](#manage).
 
-Para obter uma visão geral das regras e alertas de Edge Analytics para seus dispositivos conectados pelo gateway, use as placas a seguir:
+Para obter uma visão geral das regras e alertas de Edge que foram acionados para seus dispositivos conectados por gateway, use as placas a seguir:
 
- |Nome do Painel | Descrição |  
+|Nome do Painel | Descrição |  
  |:---|:---|  
   |Análise de dados central da regra | Mostra as regras para sua organização, incluindo regras de Edge Analytics. Cartões adicionais listam alertas de Edge Analytics encaminhados, dispositivos associados, propriedades do dispositivo e informações de alerta de Edge Analytics encaminhado. |  
  |Análise de dados central do dispositivo | Mostra os dispositivos que estão conectados à sua organização. Cartões adicionais mostram alertas encaminhados para um dispositivo de Edge Analytics selecionado, informações para um dispositivo selecionado, propriedades do dispositivo e informações de alerta encaminhado. |
 
- Para obter mais informações sobre as placas de análise de dados padrão, consulte [Visualizando dados em tempo real usando placas e cartões](data_visualization.html#default_boards).
+Para obter mais informações sobre as placas de análise de dados padrão, consulte [Visualizando dados em tempo real usando placas e cartões](data_visualization.html#default_boards).
 
 
 ## Criando regras de borda
@@ -65,12 +64,14 @@ Para criar uma regra:
 3. Configure a lógica de regra.  
 Inclua uma ou mais condições IF para usar como acionadores para a regra.  
 É possível incluir condições em linhas paralelas para aplicá-las como condições OR ou incluir condições em colunas sequenciais para aplicá-las como condições AND.  
-**Nota:** para poder selecionar uma propriedade do dispositivo como entrada para uma regra, a propriedade deve ser mapeada para um esquema. Consulte [Criando esquemas](im_schemas.html) para obter mais informações.   
-**Importante:** para acionar uma condição que aciona duas ou mais condições de propriedade combinadas em sequência usando AND, os pontos de dados de acionamento devem ser incluídos na mesma mensagem do dispositivo. Se os dados forem recebidos em mais de uma mensagem, as condições sequenciais não serão acionadas.  
-**Exemplos:**
-uma regra simples pode acionar um alerta se um valor de parâmetro for maior que um valor especificado:
-`temp>80`
-uma regra mais complexa pode ser acionada quando uma combinação de limites for atendida:
+**Nota:** para poder selecionar uma propriedade do dispositivo como entrada para uma regra, a propriedade deve ser mapeada para um esquema. Consulte [Criando esquemas](im_schemas.html) para obter mais informações.  
+
+**Importante:** para acionar uma condição que compara duas propriedades ou para acionar duas ou mais condições de propriedade combinadas em sequência usando AND, os pontos de dados de acionamento devem ser incluídos na mesma mensagem do dispositivo. Se os dados forem recebidos em mais de uma mensagem, a condição ou condições sequenciais não serão acionadas.  
+
+**Exemplos:**   
+Uma regra simples poderá acionar um alerta se um valor de parâmetro for maior que um valor especificado:  
+`temp>80`  
+Uma regra mais complexa pode ser acionada quando uma combinação de limites é atendida:  
 `temp>60 AND capacity>50`   
 
 4. Configure os requisitos de acionador condicional para a sua regra.  
@@ -187,27 +188,26 @@ Para ver informações sobre o estado do gateway:
  - Consulte a seção **Informações de sensor** para obter informações de diagnóstico detalhadas do gateway. A tabela a seguir descreve as diferentes propriedades que podem ser incluídas nas mensagens do dispositivo de gateway.
 
 
-Propriedade | Descrição
---- | ---
-`MsgInCount` |O número de mensagens que foram enviadas ao Edge Analytics Agent (EAA).
-`MsgInRate`, `MsgInRate1Min`, `MessageInRate5Min`, `MsgInRate15Min`, `MsgInMeanRate` | O número estimado de mensagens por segundo que foram enviadas ao EAA durante o último período.  </br>**Nota:** `MsgInRate` é um alias de `MsgInRate1Min`. `MsgInMeanRate` é a taxa média de mensagens desde a inicialização.
-`LastHeartBeat` | O registro de data e hora em milissegundos quando a última mensagem de pulsação foi gerada. Uma mensagem de pulsação é gerada a cada 10 segundos no mínimo.
-`CurrentTimestamp` | O registro de data e hora em milissegundos quando a mensagem de monitoramento atual foi gerada.
-`IsAlive` | Essa propriedade será 0 se a diferença entre `LastHeartBeat` e `CurrentTimestamp` for maior que 20 segundos.
-`BytesOutCount` | O número de bytes de mensagens que são enviados pelo EAA ao {{site.data.keyword.iot_short}}.
-`BytesOutRate`, `BytesOutRate1Min`, `BytesOutRate15Min`, `BytesOutRate5Min`, `BytesOutMeanRate` | O número estimado de bytes de mensagens por segundo que foram enviados pelo EAA ao {{site.data.keyword.iot_short}} durante o último período. </br>**Nota:** `BytesOutRate` é um alias de `BytesOutRate1Min`. `BytesOutMeanRate` é a taxa média desde a inicialização.
-`BytesInCount` | O número de bytes de mensagens que foram enviados pelo {{site.data.keyword.iot_short}} ao EAA.
-`BytesInMeanRate`, `BytesInRate1Min`, `BytesInRate`, `BytesInRate15Min`, `BytesInRate5Min` | O número estimado de bytes de mensagens por segundo que foram enviados pelo {{site.data.keyword.iot_short}} ao EAA no último período. </br>**Nota:** BytesOutRate é um alias de BytesOutRate1Min. BytesOutMeanRate conta a taxa média desde a inicialização.
-`RuleBytesInCount` |O número de bytes de mensagens que foram enviados ao núcleo do mecanismo de regras do EAA. </br> **Nota:** se nenhuma regra for configurada para um tipo de dispositivo, as mensagens para esse tipo de dispositivo não serão enviadas ao núcleo do mecanismo de regras.
-`RuleBytesInRate5Min`, `RuleBytesInRate`, `RuleBytesInMeanRate`, `RuleBytesInRate1Min`, `RuleBytesInRate15Min` | O número estimado de bytes de mensagens por segundo que foram enviados ao núcleo de mecanismos de regras do EAA durante o último período. </br> **Nota:** `RuleBytesInMeanRate` é a taxa média desde a inicialização.
-`MsgOutCount` | O número de mensagens que foram enviadas pelo EAA ao {{site.data.keyword.iot_short}}.
-`MsgOutRate`, `MsgOutMeanRate`, `MsgOutRate1Min`, `MessageOutRate5Min`, `MsgOutRate15Min` | O número estimado de bytes de mensagens por segundo que são enviados pelo EAA ao {{site.data.keyword.iot_short}} durante o último período.</br> **Nota:** `MsgOutRate` é um alias de `MsgOutRate1Min`. `MsgOutMeanRate` é a taxa média desde a inicialização.
-`MsgReducePercent` | A diferença de porcentagem entre mensagens recebidas e não enviadas. </br>A fórmula a seguir é usada para o cálculo: `(msgIn - msgOut) / msgIn` `BytesReducePercent` | A diferença de porcentagem entre bytes recebidos e de saída. </br>A fórmula a seguir é usada para o cálculo: `(bytesIn - bytesOut) / bytesIn`
-`MsgRateReduce` | A diferença de porcentagem entre a taxa de mensagens recebidas e não enviadas. </br>A fórmula a seguir é usada para o cálculo: `(msgInRate - msgOutRate) / msgInRate` `BytesRateReduce` | A diferença de porcentagem entre bytes de mensagens recebidas e não enviadas. </br>A fórmula a seguir é usada para o cálculo: `(bytesInRate - bytesOutRate) / bytesInRate` `SystemLoad` | O carregamento do sistema atual para o sistema no qual o EAA está em execução. **Nota:** a taxa da CPU (unidade central de processamento) será enviada apenas se o comando `mpstat` estiver disponível no sistema no qual o EAA está em execução. Caso contrário, a média de carregamento do sistema para o último minuto será enviada. </br>"A média de carregamento do sistema é a soma do número de entidades executáveis enfileiradas para os processadores disponíveis e do número de entidades executáveis que são executadas nos processadores disponíveis em média ao longo de um tempo. A maneira na qual a média de carregamento é calculada é específica do sistema operacional, mas geralmente é uma média controlada dependente de tempo. Se a média de carregamento não estiver disponível, um valor negativo será retornado. ”  
-De javadoc para ManagementFactory.getOperatingSystemMXBean
-`FreeMemory` | O número de bytes de memória livre para a Java Virtual Machine (JVM) na qual o EAA está em execução.
-`MemoryUsed` | O número de bytes de memória da JVM usado pelo EAA.
-`InQueueSize` | O número de mensagens que são enfileiradas para processamento pelo EAA.
-`RuleNumber` | O número de regras definidas no núcleo do mecanismo de regras.
-`ProcessorNumber` | Para uso de depuração. O número de processadores definidos no núcleo do mecanismo de regras. </br>**Nota:** um processador é a unidade mínima de execução no núcleo do mecanismo de regras.
-`DataPointsInWindow` | O número total de pontos de dados que são armazenados em buffer no espaço de tempo. O tamanho em bytes de um ponto de dados difere dependendo de seu tipo de dados. Por exemplo, o tamanho de um ponto de dados float/int é 8 bytes, enquanto que o tamanho de um ponto de dados string difere dependendo de seu comprimento. Na maioria dos casos, é possível estimar o uso de memória para o espaço de tempo usando a fórmula a seguir: `DataPointsInWindow * 8`.
+ Propriedade | Descrição
+ --- | ---
+ `MsgInCount` |O número de mensagens que foram enviadas ao Edge Analytics Agent (EAA).
+ `MsgInRate` | O número estimado de mensagens por segundo que foram enviadas ao EAA durante o último período.  
+ `LastHeartBeat` | O registro de data e hora em milissegundos quando a última mensagem de pulsação foi gerada. Uma mensagem de pulsação é gerada a cada 10 segundos no mínimo.
+ `CurrentTimestamp` | O registro de data e hora em milissegundos quando a mensagem de monitoramento atual foi gerada.
+ `IsAlive` | Essa propriedade será 0 se a diferença entre `LastHeartBeat` e `CurrentTimestamp` for maior que 20 segundos.
+ `BytesOutCount` | O número de bytes de mensagens que são enviados pelo EAA ao {{site.data.keyword.iot_short}}.
+ `BytesOutRate` | O número estimado de bytes de mensagens por segundo que foram enviados pelo EAA ao {{site.data.keyword.iot_short}} durante o último minuto.
+ `BytesInCount` | O número de bytes de mensagens que foram enviados pelo {{site.data.keyword.iot_short}} ao EAA.
+ `BytesInRate` | O número estimado de bytes de mensagens por segundo que foram enviados pelo {{site.data.keyword.iot_short}} ao EAA no último minuto.
+ `RuleBytesInCount` |O número de bytes de mensagens que foram enviados ao núcleo do mecanismo de regras do EAA. </br> **Nota:** se nenhuma regra for configurada para um tipo de dispositivo, as mensagens para esse tipo de dispositivo não serão enviadas ao núcleo do mecanismo de regras.
+ `RuleBytesInRate` | O número estimado de bytes de mensagens por segundo que foram enviados ao núcleo do mecanismo de regras do EAA durante o último minuto.
+ `MsgOutCount` | O número de mensagens que foram enviadas pelo EAA ao {{site.data.keyword.iot_short}}.
+ `MsgOutRate` | O número estimado de bytes de mensagens por segundo que são enviados pelo EAA ao {{site.data.keyword.iot_short}} durante o último minuto.
+ `MsgReducePercent` | A diferença de porcentagem entre mensagens recebidas e não enviadas. </br>A fórmula a seguir é usada para o cálculo: `(msgIn - msgOut) / msgIn` `BytesReducePercent` | A diferença de porcentagem entre bytes recebidos e de saída. </br>A fórmula a seguir é usada para o cálculo: `(bytesIn - bytesOut) / bytesIn`
+`MsgRateReduce` | A diferença de porcentagem entre a taxa de mensagens recebidas e não enviadas. </br>A fórmula a seguir é usada para o cálculo: `(msgInRate - msgOutRate) / msgInRate` `BytesRateReduce` | A diferença de porcentagem entre bytes de mensagens recebidas e não enviadas. </br>A fórmula a seguir é usada para o cálculo: `(bytesInRate - bytesOutRate) / bytesInRate` `SystemLoad` | O carregamento do sistema atual para o sistema no qual o EAA está em execução.**Nota:** a taxa da CPU (unidade central de processamento) será enviada apenas se o comando `mpstat` estiver disponível no sistema no qual o EAA está em execução. Caso contrário, a média de carregamento do sistema para o último minuto será enviada. </br>“A média de carregamento do sistema é a soma do número de entidades executáveis enfileiradas para os processadores disponíveis e o número de entidades executáveis em execução nos processadores disponíveis em média durante um período de tempo. A maneira na qual a média de carregamento é calculada é específica do sistema operacional, mas geralmente é uma média controlada dependente de tempo. Se a média de carregamento não estiver disponível, um valor negativo será retornado. ” - javadoc para *ManagementFactory.getOperatingSystemMXBean*.
+ `FreeMemory` | O número de bytes de memória livre para a Java Virtual Machine (JVM) em que o EAA está em execução.
+ `MemoryUsed` | O número de bytes de memória da JVM usado pelo EAA.
+ `InQueueSize` | O número de mensagens que são enfileiradas para processamento pelo EAA.
+ `RuleNumber` | O número de regras definidas no núcleo do mecanismo de regras.
+ `ProcessorNumber` | Para uso de depuração. O número de processadores definidos no núcleo do mecanismo de regras. </br>**Nota:** um processador é a unidade mínima de execução no núcleo do mecanismo de regras.
+ `DataPointsInWindow` | O número total de pontos de dados que são armazenados em buffer no espaço de tempo. O tamanho em bytes de um ponto de dados difere dependendo de seu tipo de dados. Por exemplo, o tamanho de um ponto de dados float/int é 8 bytes, enquanto que o tamanho de um ponto de dados string difere dependendo de seu comprimento.  Na maioria dos casos, é possível estimar o uso de memória para o espaço de tempo usando a fórmula a seguir: `DataPointsInWindow * 8`.

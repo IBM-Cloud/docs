@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-14"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # 针对设备开发者的 Node.js
 {: #nodejs}
-上次更新时间：2016 年 9 月 14 日
-{: .last-updated}
 
 您可以调整 Node.js 中的客户机库和样本来构建和开发设备代码，以用于在 {{site.data.keyword.iot_full}} 上与您的组织进行交互。
 {:shortdesc}
@@ -141,7 +140,7 @@ copyright:
 ## 发布事件
 {: #publishing_events}
 
-事件是设备用于将数据发布到 {{site.data.keyword.iot_short_notm}} 的机制。设备控制事件内容，并为其发送的每个事件指定名称。
+事件是设备将数据发布到 {{site.data.keyword.iot_short_notm}} 时所采用的机制。设备控制事件内容，并为其发送的每个事件指定名称。
 
 {{site.data.keyword.iot_short_notm}} 实例接收到事件时，所接收事件的凭证会识别发送设备，这意味着一台设备无法冒充其他设备。
 

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-10-19"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # Introdução ao {{site.data.keyword.iot_short_notm}}
 {: #gettingstartedtemplate}
-Última atualização: 29 de setembro de 2016
-{: .last-updated}
 
 O {{site.data.keyword.iot_full}} for {{site.data.keyword.Bluemix_notm}} fornece um kit de ferramentas versátil que inclui dispositivos de gateway, gerenciamento de dispositivo e acesso ao aplicativo poderoso. Usando o {{site.data.keyword.iot_short_notm}}, é possível coletar dados do dispositivo conectados e executar analítica em dados em tempo real a partir de sua organização.
 {:shortdesc}
@@ -22,8 +21,7 @@ O {{site.data.keyword.iot_full}} for {{site.data.keyword.Bluemix_notm}} fornece 
 ## Antes de iniciar
 {: #byb}
 
-Antes de conectar dispositivos e utilizar dados, registre uma conta {{site.data.keyword.Bluemix_notm}} e crie uma instância do serviço {{site.data.keyword.iot_short_notm}} em sua organização {{site.data.keyword.Bluemix_notm}}. 
-É possível criar uma instância do {{site.data.keyword.iot_short_notm}} diretamente da página [{{site.data.keyword.iot_short_notm}} no Catálogo de serviços Bluemix](https://console.{DomainName}/catalog/services/internet-of-things-platform/).  
+Antes de conectar dispositivos e utilizar dados, registre uma conta {{site.data.keyword.Bluemix_notm}} e crie uma instância do serviço {{site.data.keyword.iot_short_notm}} em sua organização {{site.data.keyword.Bluemix_notm}}. É possível criar uma instância do {{site.data.keyword.iot_short_notm}} diretamente da página [{{site.data.keyword.iot_short_notm}} no Catálogo de serviços Bluemix](https://console.{DomainName}/catalog/services/internet-of-things-platform/).  
 
 Para obter informações detalhadas sobre como inscrever-se em conta no {{site.data.keyword.Bluemix_notm}}, configurar regiões e outras definições de gerenciamento, consulte [Gerenciando
 sua conta Bluemix](https://console.ng.bluemix.net/docs/admin/account.html#signup).
@@ -40,7 +38,7 @@ Para colocar o serviço em funcionamento, explore as opções a seguir, dependen
   ------------- | -------------
   **Tenho um dispositivo para conectar** | [Conecte seu dispositivo ao {{site.data.keyword.iot_short_notm}}](iotplatform_task.html#iotplatform_task).| Explore conexão de dispositivo em [no demo da organização Play](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window}.
   **Não tenho um dispositivo para conectar** | [Crie e conecte um simulador de dispositivo Node-RED](nodereddevice_sample.html){:new_window}. | Introdução ao [Watson IoT Platform Starter](https://console.ng.bluemix.net/docs/starters/IoT/iot500.html){:new_window}.
-Para obter mais informações sobre como conectar tipos de dispositivo específicos ao {{site.data.keyword.iot_short_notm}}, consulte [Receitas do developerWorks](https://developer.ibm.com/recipes/?post_type=tutorials&s=iot){:new_window}.  
+Para obter mais informações sobre como conectar tipos de dispositivo específicos ao {{site.data.keyword.iot_short_notm}}, consulte [Receitas do developerWorks](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}.  
 
 Para obter a documentação para desenvolvedor de conexão de dispositivo, consulte:
 - [Conectividade MQTT para dispositivos](devices/mqtt.html).
@@ -75,7 +73,7 @@ seguintes tópicos:
 {: #rellinks}
 ## Tutoriais e amostras
 {: #samples}
-* [Receitas para conectar os seus dispositivos](https://developer.ibm.com/recipes/?post_type=tutorials&s=iot){:new_window}
+* [Receitas para conectar os seus dispositivos](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}
 * [Organização Play do {{site.data.keyword.iot_short_notm}}](https://play.internetofthings.ibmcloud.com/){:new_window}
 * [Conectando um Intel Galileo ao {{site.data.keyword.iot_short_notm}}](https://developer.ibm.com/recipes/tutorials/connect-an-intel-galileo-to-the-internet-of-things-foundation-connect/){:new_window}
 * [Conectando um ARM® mbed™ IoT Starter Kit](https://developer.ibm.com/recipes/tutorials/arm-mbed-iot-starter-kit-part-1/){:new_window}

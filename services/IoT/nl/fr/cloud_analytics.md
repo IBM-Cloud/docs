@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-23"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # Cloud Analytics
 {: #cloud_analytics}
-Dernière mise à jour : 23 août 2016
-{: .last-updated}
 
 En utilisant {{site.data.keyword.iot_short}} Cloud Analytics, vous spécifiez des conditions de règle qui sont basées sur les données de terminal en temps réel et qui déclenchent des alertes et des actions facultatives lorsqu'elles sont réunies.    
 {: shortdesc}

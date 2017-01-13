@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-09-29"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # 使用 {{site.data.keyword.messagehub}} 連接及配置歷程服務  
 {: #messagehub_main}
-前次更新：2016 年 9 月 29 日
-{: .last-updated}
 
 將 {{site.data.keyword.messagehub_full}} 連接至 {{site.data.keyword.iot_short}} 可提供可擴充的高傳輸量訊息匯流排，以進行歷程資料儲存。{{site.data.keyword.messagehub}} 是以 Apache Kafka 為建置基礎，而後者是開放程式碼的高傳輸量傳訊系統，可提供低延遲平台來處理即時資料資訊來源。
 

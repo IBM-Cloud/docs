@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-21"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # 设备的 MQTT 连接
 {: #mqtt}
-上次更新时间：2016 年 9 月 21 日
-{: .last-updated}
 
 MQTT 是设备和应用程序用于与 {{site.data.keyword.iot_full}} 通信的主要协议。提供的客户机库、信息和样本可帮助您将设备与 {{site.data.keyword.iot_short_notm}} 连接并集成。
 {:shortdesc}
@@ -45,7 +44,7 @@ Quickstart 服务是速度最快的服务级别。它无需确认接收，也不
 
 对于网关和设备，{{site.data.keyword.iot_short_notm}} 将使用 MQTT 基于令牌的认证。
 
-要启用 MQTT 认证，请在进行 MQTT 连接时，提交用户名和密码。
+要启用 MQTT 认证，请在进行 MQTT 连接时提交用户名和密码。
 
 ### 用户名
 
@@ -63,7 +62,7 @@ Quickstart 服务是速度最快的服务级别。它无需确认接收，也不
 <pre class="pre">iot-2/evt/<var class="keyword varname">event_id</var>/fmt/<var class="keyword varname">format_string</var></pre>
 {: codeblock}
 
-其中，
+其中：
 
 -  **event_id** 是事件的标识，例如 `status`。事件标识可以是在 MQTT 中有效的任何字符串。如果未使用通配符，那么订户应用程序必须在其预订主题中使用此字符串，才能接收在其主题上发布的事件。
 -  **format_string** 是一个字符串，用于定义消息有效内容的内容类型，以便消息接收方可以确定如何解析内容。常见的内容类型值包括但不限于“json”、“xml”、“txt”和“csv”。值可以是在 MQTT 中有效的任何字符串。
@@ -79,7 +78,7 @@ Quickstart 服务是速度最快的服务级别。它无需确认接收，也不
 <pre class="pre">iot-2/cmd/<var class="keyword varname">command_id</var>/fmt/<var class="keyword varname">format_string</var></pre>
 {: codeblock}
 
-其中，
+其中：
  - **command_id** 是命令的标识，例如 `update`。命令标识可以是在 MQTT 协议中有效的任何字符串。如果未使用通配符，那么设备必须在其预订主题中使用此字符串，才能接收在其主题上发布的命令。
  - **format_string** 是一个字符串，用于定义命令有效内容的内容类型，以便命令接收方可以确定如何解析内容。常见的内容类型值包括但不限于“json”、“xml”、“txt”和“csv”。值可以是在 MQTT 中有效的任何字符串。
 
@@ -88,7 +87,7 @@ Quickstart 服务是速度最快的服务级别。它无需确认接收，也不
 ## 受管设备
 {: #managed-devices}
 
-可以选择支持设备生命周期管理。设备管理协议使用的 MQTT 连接与设备已经用于事件和命令控制的 MQTT 连接相同。
+对设备生命周期管理的支持是可选的。设备管理协议使用的 MQTT 连接与设备已经用于事件和命令控制的 MQTT 连接相同。
 
 ### 服务质量级别和干净会话
 

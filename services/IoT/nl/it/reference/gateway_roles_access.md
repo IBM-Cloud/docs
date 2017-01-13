@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-10-16"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 {:pre: .pre}
 
 # Livelli di accesso per i ruoli gateway
-Ultimo aggiornamento: 16 settembre 2016
-{: .last-updated}
 
 Le seguenti tabelle mostrano il livello di accesso per ogni ruolo del gateway.
 

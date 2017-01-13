@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-13"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # 디바이스 관리 프로토콜
 {: #index}
-마지막 업데이트 날짜: 2016년 9월 13일
-{: .last-updated}
 
 ## 소개
 {: #introduction}

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-30"
 
 ---
 
@@ -13,10 +14,7 @@ copyright:
 
 
 # {{site.data.keyword.iot_short_notm}} ブロック・チェーン統合のスマート・コントラクトの作成
-
 {: #iotblockchain_link}
-最終更新日: 2016 年 8 月 30 日
-{: .last-updated}
 
 {{site.data.keyword.blockchainfull}} と Hyperledger 開発環境を使用して、IBM 提供のサンプル・コントラクトを基に独自のスマート・コントラクトを作成し、テストすることができます。
 {:shortdesc}

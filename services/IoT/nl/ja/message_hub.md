@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-09-29"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # {{site.data.keyword.messagehub}} を使用したヒストリアン・サービスの接続と構成  
 {: #messagehub_main}
-最終更新日: 2016 年 9 月 29 日
-{: .last-updated}
 
 {{site.data.keyword.messagehub_full}} を {{site.data.keyword.iot_short}} に接続すると、履歴データ・ストレージ用のスケーラブルで高スループットのメッセージ・バスが提供されます。{{site.data.keyword.messagehub}} は Apache Kafka で作成されています。これは、リアルタイムでデータ・フィードを扱うための待ち時間の少ないプラットフォームを提供する、オープン・ソースの高スループット・メッセージング・システムです。
 

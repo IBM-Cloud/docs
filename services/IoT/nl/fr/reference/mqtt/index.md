@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-09"
 
 ---
 
@@ -11,11 +12,8 @@ copyright:
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-
 # Messagerie MQTT
 {: #ref-mqtt}
-Dernière mise à jour : 13 septembre 2016
-{: .last-updated}
 
 MQTT est le principal protocole utilisé par les terminaux et les applications pour communiquer avec {{site.data.keyword.iot_full}}. MQTT est un protocole de transport de messagerie de publication et d'abonnement conçu pour optimiser les échanges de données en temps réel entre le capteur et les terminaux mobiles.
 {:shortdesc}
@@ -27,26 +25,16 @@ MQTT s'exécute sur TCP/IP, et bien qu'il soit possible d'effectuer directement 
 
 ## Support de version
 {: #version-support}
-
-{{site.data.keyword.iot_short_notm}} prend en charge les versions suivantes du protocole de messagerie MQTT :
-
-Version MQTT | Ecarts | Notes
---- | --- | ---
-[3.1.1](https://www.oasis-open.org/standards#mqttv3.1.1) (recommandé) | Les messages conservés ne sont pas pris en charge, par exemple, les abonnements partagés. | <ul><li>Norme  OASIS.<li>Norme ISO (ISO/IEC PRF 20922) <li>Interopérabilité améliorée entre plusieurs clients et serveurs en raison d'une définition plus précise du protocole par rapport à la version 3.1.   <li>La longueur maximale de l'identificateur de client MQTT (CientId) passe de 23 caractères (nombre imposé par la version 3.1) à 256 caractères. </br>Le service {{site.data.keyword.iot_short_notm}} requiert souvent des ID de client (ClientId) plus longs. </br>Les ID de client développés sont pris en charge quelle que soit la version du protocole MQTT, toutefois, certaines bibliothèques client de la version 3.1 vérifient la longueur de la valeur ClientId et imposent un nombre limite de caractères égal à 23.</ul>
-3.1 | - | MQTT V3.1 est la version du protocole la plus utilisée.
-
-{{site.data.keyword.iot_short_notm}} prend en charge tout contenu autorisé par la norme MQTT. MQTT est indépendant des données, par conséquent, il est possible d'envoyer des images, des textes dans n'importe quel codage, des données chiffrées et pratiquement tout type de données au format binaire. Pour plus d'informations sur les normes MQTT, voir les ressources suivantes :
-- [MQTT.org](http://mqtt.org/)
-- [HiveMQ: Introducing MQTT](http://www.hivemq.com/blog/mqtt-essentials-part-1-introducing-mqtt)
+Pour plus d'informations sur les versions de MQTT prises en charge par {{site.data.keyword.iot_short_notm}}, voir [Normes et exigences](../standards_and_requirements.html#mqtt).
 
 ## Clients d'application, de terminal et de passerelle
 {: #device-app-clients}
 
 Dans {{site.data.keyword.iot_short_notm}}, les principales classes d'objet sont des terminaux et des applications. Une passerelle est une sous-classe de terminal.
 
-Classe d'objets identifiée par votre client MQTT pour le terminal conformément aux fonctions de votre client lorsqu'il est connecté. La classe d'objets détermine également le mécanisme d'authentification de client.
+Votre client MQTT s'identifie auprès du service {{site.data.keyword.iot_short_notm}} en tant que classe de chose. La classe de chose détermine les fonctionnalités du client quand il est connecté. La classe d'objets détermine également le mécanisme d'authentification de client.
 
-Les applications et les terminaux fonctionnent avec des espaces de sujet MQTT différents.  Les terminaux fonctionnent dans un espace de sujet délimité pour les terminaux alors que les applications disposent d'un accès complet à l'espace de sujet de l'ensemble de l'organisation. Pour plus d'informations, voir les rubriques suivantes :
+Les applications et les terminaux fonctionnent avec des espaces de sujet MQTT différents. Les terminaux fonctionnent dans un espace de sujet délimité pour les terminaux alors que les applications disposent d'un accès complet à l'espace de sujet de l'ensemble de l'organisation. Pour plus d'informations, voir les rubriques suivantes :
 
 - [Terminaux](../../devices/mqtt.html)
 - [Applications](../../applications/mqtt.html)
@@ -56,13 +44,13 @@ Les applications et les terminaux fonctionnent avec des espaces de sujet MQTT di
 {: #qos-levels}
 
 Le protocole MQTT fournit trois qualités de service pour la distribution de messages entre les clients et les serveurs : "Une fois tout au plus" "Au moins une fois" et "Une fois exactement".
-Vous pouvez envoyer des événements et des commandes en utilisant n'importe quel niveau de qualité de service. Toutefois, vous devez identifier minutieusement le niveau adapté à vos besoins. La qualité de service de niveau 2 n'est pas toujours une option préférable au niveau zéro.
+Vous pouvez envoyer des événements et des commandes en utilisant n'importe quel niveau de qualité de service. Toutefois, vous devez identifier minutieusement le niveau adapté à vos besoins. La qualité de service de niveau '2' n'est pas toujours une option préférable au niveau '0'.
 
 ### Une fois tout au plus (QoS0)
 
 Parfois appelé "fire and forget", le niveau "Une fois tout au plus" (QoS0) de la qualité de service représente le mode de transmission le plus rapide. Le message est distribué une fois tout au plus et il est possible qu'il ne soit pas distribué du tout. La distribution sur le réseau ne donne pas lieu à l'émission d'un accusé de réception et le message n'est pas stocké. Le message peut être perdu si le client est déconnecté ou si le serveur échoue.
 
-Le protocole MQTT ne requiert pas que les serveurs réacheminent des publications avec le niveau de qualité de service zéro à un client. Si le client est déconnecté au moment où le serveur reçoit la publication, la publication risque d'être supprimée, selon la mise en oeuvre du serveur.
+Le protocole MQTT ne requiert pas que les serveurs réacheminent des publications avec le niveau de qualité de service '0' à un client. Si le client est déconnecté au moment où le serveur reçoit la publication, la publication risque d'être supprimée, selon la mise en oeuvre du serveur.
 
 **Astuce :** Lors de l'envoi de données en temps réel au cours d'un intervalle donné, utilisez la qualité de service de niveau 0. Si un seul message est manquant, cela n'a pas vraiment d'importance car un autre message contenant des données plus récentes sera rapidement envoyé par la suite. Dans ce scénario, le surcoût entraîné par l'utilisation d'une qualité de service supérieure ne présente pas de réel avantage.
 
@@ -72,7 +60,7 @@ Avec la qualité de service de niveau 1 {QoS1}, le message est toujours distribu
 
 ### Une fois exactement (QoS2)
 
-La qualité de service "Une fois exactement" (QoS2) est le mode de transmission le plus sûr mais le plus lent. Le message est toujours distribué une fois exactement et doit également être stocké en local au niveau de l'expéditeur jusqu'à ce que ce dernier reçoive une confirmation indiquant que le message a été publié par le destinataire. Le message est stocké au cas où il devrait être une nouvelle fois envoyé. La qualité de service de niveau 2 utilise une séquence plus complexe que la qualité de service QoS1, avec l'établissement d'une liaison et l'émission d'un accusé de réception, pour s'assurer qu'il n'y pas une duplication des messages.
+La qualité de service "Une fois exactement" 2 (QoS2) est le mode de transmission le plus sûr mais le plus lent. Le message est toujours distribué une fois exactement et doit également être stocké en local au niveau de l'expéditeur jusqu'à ce que ce dernier reçoive une confirmation indiquant que le message a été publié par le destinataire. Le message est stocké au cas où il devrait être une nouvelle fois envoyé. La qualité de service de niveau 2 utilise une séquence plus complexe que la qualité de service QoS1, avec l'établissement d'une liaison et l'émission d'un accusé de réception, pour s'assurer qu'il n'y pas une duplication des messages.
 
 **Astuce :** Lors de l'envoi de commandes, si vous souhaitez recevoir la confirmation que seule la commande spécifiée sera activée et qu'elle ne sera activée qu'une fois, utilisez la qualité de service de niveau 2. Il s'agit d'un exemple illustrant dans quelles circonstances les temps système supplémentaires liés au niveau 2 peuvent être avantageux par rapport aux autres niveaux.
 
@@ -110,3 +98,10 @@ Binaire | Aucune restriction.
 **Important :** La taille maximale de contenu de message sur {{site.data.keyword.iot_short_notm}} est 131072 octets. les messages dont le contenu est supérieur à la limite sont rejetés. Le client en cours de connexion est déconnecté et un message s'affiche dans les journaux de diagnostic, comme illustré dans l'exemple de message de terminal suivant :
 
 `Connexion fermée à partir de x.x.x.x. La taille du message est trop importante pour ce noeud final. `
+
+## Intervalle de signal de présence MQTT
+{: #mqtt-keep-alive}
+
+L'intervalle de signal de présence, mesuré en secondes, définit le temps maximum qui peut passer sans communication entre le client et le courtier. Le client MQTT doit s'assurer que, en l'absence de toute autre communication avec le courtier, un paquet PINGREQ est envoyé. L'intervalle de signal de présence permet à la fois au client et au courtier de détecter que le réseau a échoué, ce qui entraîne une connexion brisée, sans avoir à attendre que le délai de time-out TCP/IP soit atteint.
+
+Si vos clients MQTT {{site.data.keyword.iot_short_notm}} utilisent des abonnements partagés, la valeur d'intervalle de signal de présence peut uniquement être définie entre 1 et 3600 secondes. Si une valeur de 0 ou une valeur supérieure à 3600 est demandée, le courtier {{site.data.keyword.iot_short_notm}} définit l'intervalle de signal de présence à 3600 secondes.

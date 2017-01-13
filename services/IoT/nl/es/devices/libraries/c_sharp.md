@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-02"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # ﻿C# for device developers
 {: #c_sharp}
-Última actualización: 02 de agosto de 2016
-{: .last-updated}
 
 Puede utilizar C# para crear y personalizar dispositivos que interactúan con su organización en {{site.data.keyword.iot_full}}. Utilice la información y los ejemplos que se proporcionan para empezar a desarrollar los dispositivos mediante C#.
 {:shortdesc}

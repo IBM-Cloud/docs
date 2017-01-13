@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-30"
 
 ---
 
@@ -14,13 +15,11 @@ copyright:
 
 # {{site.data.keyword.iot_short_notm}} 區塊鏈整合
 {: #gettingstartedtemplate}
-前次更新：2016 年 8 月 30 日
-{: .last-updated}
 
-{{site.data.keyword.iot_short_notm}} 區塊鏈整合會讓 IoT 裝置將資料提供給區塊鏈交易，這樣會將資料儲存在區塊鏈的不可變分類帳中，並將它用在區塊鏈的智慧型合約所實作的商業規則中。
+{{site.data.keyword.iot_short_notm}} 區塊鏈整合會讓 IoT 裝置將資料提供給區塊鏈交易，這樣會將資料儲存在區塊鏈的不可變分類帳中，並將它用於區塊鏈智慧型合約所實作的商業規則。
 {:shortdesc}
 
-平台會採用其原生 MQTT 格式的裝置資料、將它對映至區塊鏈智慧型合約所需的資料格式，並將它傳遞至區塊鏈網狀架構，以儲存在區塊鏈分類帳中。區塊鏈網狀架構是構成 {{site.data.keyword.blockchainfull}} 實例及 Hyperledger 之對等節點和憑證節點的集合。
+平台會採用原生 MQTT 格式的裝置資料、將它對映至區塊鏈智慧型合約所需的資料格式，並將它傳遞至區塊鏈網狀架構，以儲存在區塊鏈分類帳中。區塊鏈網狀架構是構成 {{site.data.keyword.blockchainfull}} 實例及 Hyperledger 之對等節點和憑證節點的集合。
 
 ## 區塊鏈整合架構  
 {: #architecture}
@@ -52,7 +51,7 @@ copyright:
 
 ### 使用 IBM 基本情境以快速開始
 
-若要快速開始測試 {{site.data.keyword.iot_short_notm}} 區塊鏈整合，您可以連接至 IBM 所提供的網路，並將 Node-RED 範例裝置對映至 IBM 所提供的範例合約。在本主題中，此情境所需的步驟標示為 **IBM 基本情境**。  
+若要快速開始測試 {{site.data.keyword.iot_short_notm}} 區塊鏈整合，您可以連接至 IBM 所提供的網狀架構，並將 Node-RED 範例裝置對映至 IBM 所提供的範例合約。在本主題中，此情境所需的步驟標示為 **IBM 基本情境**。  
 **重要事項：**請注意，所有範例區塊鏈使用者都可以看到 IBM 所提供的範例區塊鏈分類帳及其所有資料。請不要將任何機密性資訊儲存在 IBM 所提供的範例區塊鏈中。此外，支援範例及貿易航線合約的範例網狀架構，包括每個對等節點的連線資訊，也可能會改變。Watson IoT Blockchain 社群的 [IoT Blockchain Connection Info](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections) Wiki 頁面中提供連線詳細資料。
 
 IBM 所提供的基本 {{site.data.keyword.iot_short_notm}} 區塊鏈整合環境包含下列元件：
@@ -157,11 +156,11 @@ IBM 所提供的基本 {{site.data.keyword.iot_short_notm}} 區塊鏈整合環�
 </tr>
 </tbody>
 </table>
-**IBM 基本情境：**範例預先部署的智慧型合約可讓您將裝置資料點對映至特定合約屬性，以在區塊鏈分類帳中儲存資料點值。請先使用範例合約來測試裝置資料對映，再嘗試更進階的貿易航線合約或自行撰寫合約。Watson IoT Blockchain 社群的 [IoT Blockchain Connection Info](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections) Wiki 頁面中提供合約 ID。
+**IBM 基本情境：**預先部署的範例智慧型合約可讓您將裝置資料點對映至特定合約屬性，以在區塊鏈分類帳中儲存資料點值。請先使用範例合約來測試裝置資料對映，再嘗試更進階的貿易航線合約或自行撰寫合約。Watson IoT Blockchain 社群的 [IoT Blockchain Connection Info](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections) Wiki 頁面中提供合約 ID。
 
 
  8. 建立將裝置內容對映至合約參數的路徑。會匯入合約中可用的參數。針對每一個參數，輸入對應的事件內容。  
- **重要事項：**請不要包括附加到裝置訊息中資料點前面的 `d.`。
+ **重要事項：**請不要包含附加到裝置訊息中資料點前面的 `d.`。
  **IBM 基本情境：**如果您使用的是 IBM 所提供的合約，請對映 Watson IoT Blockchain 社群的 [Data mapping](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Data%20Mapping) Wiki 頁面中所列的下列參數。
  9. 在摘要頁面中，驗證已正確地輸入所有資訊。
  10. 區塊鏈頁面會顯示裝置資料與合約的對映。
@@ -189,7 +188,7 @@ IBM 所提供的基本 {{site.data.keyword.iot_short_notm}} 區塊鏈整合環�
 <tr>
 <td>鏈碼 ID</td>
 <td>合約 ID 是對應至「合約 ID」項目的 128 個字元的英數字串。  
-**重要事項：**當您剪下並貼上鏈碼 ID 時，請確定 ID 中不包括任何空格。如果未正確地輸入 ID，則會顯示區塊鏈分類帳項目，但資產搜尋功能不會運作。
+**重要事項：**當您剪下並貼上鏈碼 ID 時，請確定 ID 中不包含任何空格。如果未正確地輸入 ID，則會顯示區塊鏈分類帳項目，但資產搜尋功能不會運作。
 </td>
 </tr>
 <tr>
@@ -205,12 +204,12 @@ IBM 所提供的基本 {{site.data.keyword.iot_short_notm}} 區塊鏈整合環�
 **提示：**若要取得連續資料流程，請按兩下注入節點、將 Repeat 參數設為 `interval`，並配置適當的間隔（例如每 1 分鐘）。
 3. 在「監視使用者介面」中，驗證裝置資料如預期地以區塊鏈區塊方式顯示。  
   1. 驗證當您從裝置中注入資料時，會將區塊新增至鏈結。  
-  **重要事項：**請不要使用瀏覽器的「重新整理」按鈕來重新整理「監視使用者介面」。每隔幾秒即會自動重新整理使用者介面。使用瀏覽器的「重新整理」按鈕會將使用者介面設定重設為其預設值，而且您必須重新配置「監視使用者介面」以查看合約區塊鏈。
-  2. 若要查看資產的最新分類帳資訊，請在「資產 ID 搜尋」欄位中輸入資產 ID，然後按一下**提交**。範例：`CON123`  
+  **重要事項：**請不要使用瀏覽器的「重新整理」按鈕來重新整理「監視使用者介面」。每隔幾秒即會自動重新整理使用者介面。使用瀏覽器的「重新整理」按鈕會將使用者介面設定重設為其預設值，而且您必須重新配置「監視使用者介面」才能看到您的合約區塊鏈。
+  2. 若要查看資產的最新分類帳資訊，請在「資產 ID」搜尋欄位中輸入資產 ID，然後按一下**提交**。範例：`CON123`  
   若要查看多個使用相同合約之資產的區塊鏈資料，請輸入該資產名稱，然後按一下**提交**。按一下**重設**，以重新開始。  
   **提示：**
-    - 開啟「輪詢變更」特性將確保使用者介面會持續輪詢所觀察/監視之資產的任何變更，並在區塊鏈中確定變更時盡快重新整理資料。
-    - 區塊鏈裝置的預設 assetID 是 "CON123"。如果您已修改裝置訊息或已更新 Node-RED 裝置模擬器中的 assetID，則可以在 {{site.data.keyword.iot_short_notm}} 中查閱 assetID。移至**裝置**頁面，然後按一下裝置以開啟裝置詳細資料頁面。向下捲動至**感應器資訊**區段，以查看裝置的資料點清單。使用 `d.assetID` 資料點的值作為您的 assetID。
+    - 開啟「輪詢變更」特性將確保使用者介面會持續輪詢所觀察/監視之資產的任何變更，並在區塊鏈中確定變更時立即重新整理資料。
+    - 區塊鏈裝置的預設 assetID 是 "CON123"。如果您已在 Node-RED 裝置模擬器中修改裝置訊息或更新 assetID，則可以在 {{site.data.keyword.iot_short_notm}} 中查閱 assetID。移至**裝置**頁面，然後按一下裝置以開啟裝置詳細資料頁面。向下捲動至**感應器資訊**區段，以查看裝置的資料點清單。使用 `d.assetID` 資料點的值作為您的 assetID。
 
 ## 後續步驟  
 {: #next_steps}  

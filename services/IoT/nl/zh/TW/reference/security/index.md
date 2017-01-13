@@ -38,7 +38,7 @@ lastupdated: "2016-10-21"
 ## {{site.data.keyword.iot_short_notm}} 安全規範
 {: #compliance}  
 ![ISO 27K 圖示](../../images/icon_iso27k1.png "ISO 27K 圖示")   
-{{site.data.keyword.iot_short_notm}} 經「國際標準組織」(ISO) 27001 標準認證，此標準定義了資訊安全管理程序的最佳作法。ISO 27001 標準根據個別組織的需要，指定建立、實作和記載「資訊安全管理系統」(ISMS) 的需求，以及實作安全控制項的需求。ISO 27000 系列標準包含標定風險的程序和資產的估價，目標是要保護書面、口述和電子資訊的機密性、完整性和可用性。
+{{site.data.keyword.iot_short_notm}} 經「國際標準組織」(ISO) 27001 標準認證，此標準定義了資訊安全管理程序的最佳作法。ISO 27001 標準根據個別組織的需要，指定建立、實作和記錄「資訊安全管理系統」(ISMS) 的需求，以及實作安全控制措施的需求。ISO 27000 系列標準包含標定風險和資產評估的程序，目標是要保護書面、口述和電子資訊的機密性、完整性和可用性。
 
 {{site.data.keyword.iot_short_notm}} 是由第三方安全公司審核，符合 ISO 27001 的所有需求：{{site.data.keyword.iot_short_notm}} ISO 27001:2013 登錄憑證。
 
@@ -52,7 +52,7 @@ lastupdated: "2016-10-21"
 ## 我們如何保護您組織內的 IoT 資訊管理？
 {: #secure-org}
 
-瀏覽器型 GUI 和 REST API 前置 HTTPS，具有 DigiCert 簽署的憑證，因此您可以放心您是連接至真正的 {{site.data.keyword.iot_short_notm}}。若要存取 Web 型 GUI，需以您的 IBM ID 或 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.ssoshort}} 來鑑別。若要使用 REST API，需要透過 GUI 產生的 API 金鑰，您可以用它來對您的組織進行鑑別的 REST API 呼叫。
+以瀏覽器為基礎的 GUI 和 REST API 前面會使用 HTTPS，且具有 DigiCert 簽署的憑證，因此您可以放心您是連接到真正的 {{site.data.keyword.iot_short_notm}}。若要存取 Web 型 GUI，需以您的 IBM ID 或 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.ssoshort}} 來鑑別。若要使用 REST API，需要透過 GUI 產生的 API 金鑰，您可以用它來對您的組織進行鑑別的 REST API 呼叫。
 
 ![影像](management_platform.svg)
 
@@ -60,7 +60,7 @@ lastupdated: "2016-10-21"
 ## 我們如何保護您的裝置和應用程式認證？
 {: #secure-credentials}
 
-當登錄裝置或產生 API 金鑰時，鑑別記號以隨機雜湊方式產生。這表示，即使 {{site.data.keyword.iot_short_notm}} 受損（雖然不太可能發生這種事），也永遠無法從我們的系統回復您組織的認證。
+當登錄裝置或產生 API 金鑰時，鑑別記號以隨機雜湊方式產生。這表示，即使 {{site.data.keyword.iot_short_notm}} 遭到入侵（雖然不太可能發生這種事），也絕對無法從我們的系統回復您組織的認證。
 
 裝置認證和 API 金鑰如已受損，可以個別予以撤銷。
 
@@ -69,16 +69,16 @@ lastupdated: "2016-10-21"
 ## 我們如何確保您的裝置安全地連接至 {{site.data.keyword.iot_short_notm}}？
 {: #secure-device-connection}
 
-所連接的裝置使用 clientId 與鑑別記號（將裝置新增至平台時所產生）的組合。使用的 MQTT 3.1.1 版可讓許多平台和語言進行簡單的交互作業。{{site.data.keyword.iot_short_notm}} 支援傳輸層安全 (TLS) 1.2 版連線功能。
+所連接的裝置使用 clientId 與鑑別記號的組合（鑑別記號是在將裝置新增至平台時所產生）。使用的 MQTT 3.1.1 版可讓許多平台和語言進行簡單的交互作業。{{site.data.keyword.iot_short_notm}} 支援傳輸層安全 (TLS) 1.2 版連線功能。
 
 ![影像](connectivity_platform.svg)
 
-如需 TLS 及密碼組合需求的相關資訊，請參閱 `Watson IoT Platform 的應用程式、裝置及閘道連線`文件中的 [TLS 需求](https://console.ng.bluemix.net/docs/services/IoT/reference/security/connect_devices_apps_gw.html#tls_requirements)小節。
+如需 TLS 及密碼組合需求的相關資訊，請參閱「Watson IoT Platform 的應用程式、裝置及閘道連線」文件中的[傳輸層安全 (TLS) 需求](https://console.ng.bluemix.net/docs/services/IoT/reference/security/connect_devices_apps_gw.html#tls_requirements)小節。
 
 ## 我們如何防止 IoT 裝置之間的資料洩漏？
 {: #prevent-leak-devices}
 
-內置安全傳訊型樣。裝置經鑑別之後，只能發佈及訂閱有限的主題空間：
+內置安全傳訊型樣。裝置經鑑別之後，只有權發佈及訂閱有限的主題空間：
 
 * '/iot-2/evt/<event_id>/fmt/<format_string>'
 * '/iot-2/cmd/<command_id>/fmt/<format_string>'
@@ -91,7 +91,7 @@ lastupdated: "2016-10-21"
 ![影像](device_scope_platform.svg)
 
 
-應用程式可以針對組織中的所有裝置，訂閱及發佈事件和指令主題。應用程式可以同步分析許多裝置的資料，也可以模擬或 Proxy 裝置，以及形成全雙工通訊迴圈的互補方。
+應用程式可以針對組織中的所有裝置，訂閱及發佈事件和指令主題。應用程式可以同時分析來自許多裝置的資料，也可以模擬或 Proxy 裝置，以及補足全雙工通訊迴圈。
 
 
 ## 我們如何防止組織之間的 IoT 資料洩漏？

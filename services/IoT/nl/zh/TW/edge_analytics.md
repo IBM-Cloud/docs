@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-10-27"
 
 ---
 
@@ -14,18 +15,16 @@ copyright:
 
 # 邊緣分析
 {: #edge_analytics}
-前次更新：2016 年 8 月 1 日
-{: .last-updated}
 
 使用邊緣分析，您可以將雲端中的分析規則觸發程序移至啟用邊緣分析功能的閘道，如此即可透過在接近裝置之處進行分析處理，顯著減少傳送至雲端的裝置資料流量。
 {:shortdesk}
 
-裝置可將其資料傳送至啟用邊緣分析功能的閘道，在這裡邊緣分析規則會剖析資料。根據您的規則及其動作，重要資料及警示可能會傳送至 {{site.data.keyword.iot_full}}、在閘道上觸發警示，或寫入至閘道本端的文字檔。
+裝置可將其資料傳送至啟用邊緣分析功能的閘道，在這裡，邊緣分析規則會剖析資料。根據您的規則及其動作，重要資料及警示可能會傳送至 {{site.data.keyword.iot_full}}、在閘道上觸發警示，或寫入閘道本端的文字檔。
 
 下圖說明 {{site.data.keyword.iot_full}} 邊緣分析環境的一般架構。
 ![具有邊緣分析架構的 IBM Watson IoT Platform](images/architecture_platform_edge.svg "具有邊緣分析架構的 IBM Watson IoT Platform")
 
-**重要事項：**合併的分析特性來自 {{site.data.keyword.iotrtinsights_full}} 服務。如果您的 {{site.data.keyword.iot_short_notm}} 組織被用作現有 {{site.data.keyword.iotrtinsights_short}} 實例的資料來源，則除非移轉現有 {{site.data.keyword.iotrtinsights_short}} 實例，否則不會啟用「雲端和邊緣分析」。在移轉完成之前，請繼續使用 {{site.data.keyword.iotrtinsights_short}} 儀表板來因應分析的需求。如需相關資訊，請參閱 IBM developerWorks 上的 [IBM Watson IoT Platform 部落格](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window}，以及您的現有 {{site.data.keyword.iotrtinsights_short}} 實例儀表板。  
+**重要事項：**合併的分析特性來自 {{site.data.keyword.iotrtinsights_full}} 服務。如果您的 {{site.data.keyword.iot_short_notm}} 組織用來作為現有 {{site.data.keyword.iotrtinsights_short}} 實例的資料來源，則除非移轉現有 {{site.data.keyword.iotrtinsights_short}} 實例，否則不會啟用「雲端和邊緣分析」。在移轉完成之前，請繼續使用 {{site.data.keyword.iotrtinsights_short}} 儀表板來因應分析的需求。如需相關資訊，請參閱 IBM developerWorks 上的 [IBM Watson IoT Platform 部落格](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window}，以及您的現有 {{site.data.keyword.iotrtinsights_short}} 實例儀表板。  
 
 ## 開始之前
 {: #byb}
@@ -33,7 +32,7 @@ copyright:
 在開始建立邊緣規則及動作之前，請：
 - 確定您的閘道已連接至 {{site.data.keyword.iot_short}}，而且裝置資料正在傳送中。如需相關資訊，請參閱[連接閘道](gateways/dashboard.html)。
 - 在您的閘道上安裝「邊緣分析代理程式 (EAA)」。如需相關資訊，請參閱[安裝邊緣分析代理程式](gateways/dashboard.html#edge)。</br> **提示：**啟用 EAA 功能的閘道會以閘道裝置訊息的形式提供 EAA 診斷資料。如需相關資訊，請參閱[邊緣分析代理程式診斷度量](#eaa_metrics)。
-- 確定要在規則中用作條件的裝置內容已對映至綱目。如需相關資訊，請參閱[連接裝置](iotplatform_task.html)及[建立綱目](im_schemas.html)。
+- 確定您要在規則中用來作為條件的裝置內容，已對映至綱目。如需相關資訊，請參閱[連接裝置](iotplatform_task.html)及[建立綱目](im_schemas.html)。
 
 ## 管理邊緣規則及動作  
 {: #managing_rules}
@@ -42,14 +41,14 @@ copyright:
 - **規則**儀表板用來為您的裝置與閘道建立及編輯雲端與邊緣規則和動作。
 - **邊緣規則閘道**板用來啟動、取消啟動、更新及移除閘道上的邊緣規則。若要存取「邊緣規則閘道」板，請從「規則」儀表板中，對您要管理的邊緣規則按一下**管理規則**。如需相關資訊，請參閱[啟動、取消啟動及管理閘道的邊緣規則](#manage)。
 
-若要針對閘道連接的裝置取得邊緣規則及警示的概觀，請使用下列板：
+若要取得已針對閘道連接裝置所觸發之邊緣規則及警示的概觀，請使用下列板：
 
- |板名稱 | 說明 |  
+|板名稱 | 說明 |  
  |:---|:---|  
   |以規則為主的分析 | 顯示您組織的規則，包括邊緣規則。其他卡片會列出轉遞的邊緣警示、關聯的裝置、裝置內容及轉遞的邊緣警示資訊。 |  
  |以裝置為主的分析 | 顯示連接至您組織的裝置。其他卡片會顯示所選取邊緣裝置轉遞的警示、所選取裝置的資訊、裝置內容及轉遞的警示資訊。 |
 
- 如需預設分析板的相關資訊，請參閱[使用板及卡片視覺化即時資料](data_visualization.html#default_boards)。
+如需預設分析板的相關資訊，請參閱[使用板及卡片視覺化即時資料](data_visualization.html#default_boards)。
 
 
 ## 建立邊緣規則
@@ -62,18 +61,22 @@ copyright:
 若要建立規則，請執行下列動作：
 1. 在 {{site.data.keyword.iot_short}} 儀表板中，移至**規則**。
 2. 按一下**建立邊緣規則**、指定規則名稱、提供說明、選取要套用規則的邊緣裝置類型，然後按**下一步**。  
-3. 設定規則邏輯。新增一個以上的 IF 條件，用作規則的觸發程式。您可以在平行列中新增條件，將它們套用為 OR 條件，或您可以在循序欄中新增條件，將它們套用為 AND 條件。  
+3. 設定規則邏輯。新增一個以上的 IF 條件，用來作為規則的觸發程式。您可以在平行列中新增條件，將它們套用為 OR 條件，或者在循序欄中新增條件，將它們套用為 AND 條件。
 **附註：**若要能夠選取一個裝置內容作為規則的輸入，內容必須對映至綱目。如需相關資訊，請參閱[建立綱目](im_schemas.html)。  
-**重要事項：**若要觸發一個條件，而該條件會觸發兩個以上使用 AND 循序結合的內容條件，則觸發資料點必須包含在相同的裝置訊息中。如果在多則訊息中收到資料，則不會觸發循序條件。  
-**範例：**  
-如果參數值大於指定的值，則簡式規則可能觸發警示：  
+  
+
+**重要事項：**若要觸發一個條件，而該條件會比較兩個內容，或觸發兩個以上使用 AND 循序結合的內容條件，則觸發資料點必須包含在相同的裝置訊息中。如果在多則訊息中收到資料，則不會觸發條件或循序條件。  
+  
+
+**範例：**   
+如果參數值大於指定值，簡單的規則可能會觸發警示：  
 `temp>80`  
-符合臨界值組合時，可能會觸發較複雜的規則：  
+在達到臨界值的組合時，可能會觸發較複雜的規則：  
 `temp>60 AND capacity>50`   
 
-4. 配置規則的條件式觸發程式需求。若要控制一段時間針對規則所觸發的警示及動作數目，您可以配置規則的條件式觸發程式需求。  
-**重要事項：**條件式觸發會對規則中的任何條件採取動作。例如，如果規則有五個使用 OR 設定的不同平行條件，則每一個符合的條件都會列入條件式觸發程式計數的計算中。若要設定規則的條件式觸發，請執行下列動作：
- 1. 在規則編輯器中，按一下預設**每次符合條件時觸發**鏈結，以開啟「設定頻率需求」對話框。
+4. 配置規則的條件式觸發需求。若要控制一段時間針對規則所觸發的警示及動作數目，您可以配置規則的條件式觸發需求。  
+**重要事項：**條件式觸發會對規則中的任何條件採取動作。例如，如果規則有五個使用 OR 設定的不同平行條件，則每一個符合的條件都會列入條件式觸發計數的計算中。若要設定規則的條件式觸發，請執行下列動作：
+ 1. 在規則編輯器中，按一下預設的**每次符合條件時觸發**鏈結，以開啟「設定頻率需求」對話框。
  2. 選取並配置您要在規則中使用的條件式觸發程式。
  <ul>
  <li>每次符合條件時觸發</li>
@@ -99,7 +102,7 @@ copyright:
 <dl>
 <dt>將事件轉遞至雲端</dt>  
 <dd>裝置事件會傳送至 {{site.data.keyword.iot_short}}，在這裡它可以用於板及卡片中，以及符合雲端分析規則。如需相關資訊，請參閱[與雲端分析整合](#integrate_with_cloud_analytics)。    
-**提示：**使用將事件轉遞至雲端動作，可以減少傳送至雲端的裝置資料數量，方法為直接在閘道裝置過濾掉較不重要的資料。</dd>
+**提示：**使用將事件轉遞至雲端動作，可以減少傳送至雲端的裝置資料量，因為已直接在閘道裝置過濾掉較不重要的資料。</dd>
 <dt>警示</dt>  
 <dd>警示是在閘道裝置上建立的。</dd>
 </dl>
@@ -142,7 +145,7 @@ copyright:
 
 現在規則作用在閘道上，因此當符合規則條件時，配置的動作即會觸發。
 
-**提示：**若要管理多個閘道上的規則，您可以選取「閘道」直欄標頭旁的「全選」方框。清除您不想要包含的所有閘道，然後從**選取作業**功能表（位於具有相同名稱之直欄的頂端）挑選作業。
+**提示：**若要管理多個閘道上的規則，您可以選取「閘道」直欄標頭旁的「全選」方框。清除您不想要包含的所有閘道，然後從同名直欄頂端的**選取作業**功能表挑選作業。
 
 除了啟動規則之外，您還可以在閘道上執行下列規則管理作業：
 
@@ -157,9 +160,9 @@ copyright:
 ## 與雲端分析整合
 {: #integrate_with_cloud_analytics}
 
-使用在啟用 EAA 功能的閘道上執行的邊緣規則觸發動作，可以過濾流至雲端的資料，並將閘道產生的警示轉遞至雲端，以與 {{site.data.keyword.iot_short}} 板及卡片搭配使用。  
+使用在啟用 EAA 功能的閘道上執行的邊緣規則觸發動作，可以過濾流至雲端的資料，並將閘道產生的警示轉遞至雲端，以便與 {{site.data.keyword.iot_short}} 板及卡片搭配使用。  
 
-您也可以使用 {{site.data.keyword.iot_short}}，對從閘道傳送至雲端的裝置資料執行雲端分析。如果您在邊緣規則中使用 `Forward event to cloud` 動作，則建立的訊息可以用作雲端分析規則的輸入，就好像是提供已觸發邊緣規則之資料的裝置已直接連接至 {{site.data.keyword.iot_short}} 一般。
+您也可以使用 {{site.data.keyword.iot_short}}，對從閘道傳送至雲端的裝置資料執行雲端分析。如果您在邊緣規則中使用 `Forward event to cloud` 動作，則建立的訊息可以用來作為雲端分析規則的輸入，就彷彿提供已觸發邊緣規則之資料的裝置，已直接連接至 {{site.data.keyword.iot_short}} 一般。
 
 如需如何建立雲端分析規則及動作的相關資訊，請參閱[雲端分析](cloud_analytics.html)。
 
@@ -178,28 +181,27 @@ copyright:
 
 
 內容 | 說明
---- | ---
-`MsgInCount` |已傳送至「邊緣分析代理程式 (EAA)」的訊息數目。
-`MsgInRate`、`MsgInRate1Min`、`MessageInRate5Min`、`MsgInRate15Min`、`MsgInMeanRate` | 最後時段傳送至 EAA 之訊息的每秒預估數。</br>**附註：** `MsgInRate` 是 `MsgInRate1Min` 的別名。`MsgInMeanRate` 是自從啟動以來的平均訊息速率。
-`LastHeartBeat` | 產生最後一則活動訊號訊息的毫秒時間戳記。最少每 10 秒會產生一則活動訊號訊息。
-`CurrentTimestamp` | 產生現行監視訊息的毫秒時間戳記。
-`IsAlive` | 如果 `LastHeartBeat` 與 `CurrentTimestamp` 之間的差異大於 20 秒，則此內容為 0。
+ --- | ---
+ `MsgInCount` |已傳送至「邊緣分析代理程式 (EAA)」的訊息數目。
+`MsgInRate` | 前一分鐘內傳送至 EAA 的每秒預估訊息數。  
+ `LastHeartBeat` | 前次產生活動訊號訊息時的毫秒時間戳記。最少每 10 秒會產生一則活動訊號訊息。
+ `CurrentTimestamp` | 產生現行監視訊息時的毫秒時間戳記。
+ `IsAlive` | 如果 `LastHeartBeat` 與 `CurrentTimestamp` 之間的差異大於 20 秒，則此內容為 0。
 `BytesOutCount` | EAA 傳送至 {{site.data.keyword.iot_short}} 的訊息位元組數。
-`BytesOutRate`、`BytesOutRate1Min`、`BytesOutRate15Min`、`BytesOutRate5Min`、`BytesOutMeanRate` | 最後時段 EAA 傳送至 {{site.data.keyword.iot_short}} 之訊息位元組的每秒預估數。</br>**附註：**`BytesOutRate` 是 `BytesOutRate1Min` 的別名。`BytesOutMeanRate` 是自從啟動以來的平均速率。
-`BytesInCount` | {{site.data.keyword.iot_short}} 傳送至 EAA 的訊息位元組數。
-`BytesInMeanRate`、`BytesInRate1Min`、`BytesInRate`、`BytesInRate15Min`、`BytesInRate5Min` | 最後時段 {{site.data.keyword.iot_short}} 傳送至 EAA 之訊息位元組的每秒預估數。</br>**附註：**BytesOutRate 是 BytesOutRate1Min 的別名。BytesOutMeanRate 計算自從啟動以來的平均速率。
-`RuleBytesInCount` |傳送至 EAA 規則引擎核心的訊息位元組數。</br> **附註：**如果未對裝置類型設定規則，則該裝置類型的訊息不會傳送至規則引擎核心。
-`RuleBytesInRate5Min`、`RuleBytesInRate`、`RuleBytesInMeanRate`、`RuleBytesInRate1Min`、`RuleBytesInRate15Min` | 最後時段傳送至 EAA 規則引擎核心之訊息位元組的每秒預估數。</br> **附註：**`RuleBytesInMeanRate` 是自從啟動以來的平均速率。
-`MsgOutCount` | EAA 傳送至 {{site.data.keyword.iot_short}} 的訊息數目。
-`MsgOutRate`、`MsgOutMeanRate`、`MsgOutRate1Min`、`MessageOutRate5Min`、`MsgOutRate15Min` | 最後時段 EAA 傳送至 {{site.data.keyword.iot_short}} 之訊息位元組的每秒預估數。</br> **附註：**`MsgOutRate` 是 `MsgOutRate1Min` 的別名。`MsgOutMeanRate` 是自從啟動以來的平均速率。
-`MsgReducePercent` | 送入訊息與送出訊息之間的百分比差異。</br>下列公式用於計算：`(msgIn - msgOut) / msgIn`
+`BytesOutRate` | 前一分鐘內由 EAA 傳送至 {{site.data.keyword.iot_short}} 的每秒預估訊息位元組數。
+ `BytesInCount` | {{site.data.keyword.iot_short}} 傳送至 EAA 的訊息位元組數。
+`BytesInRate` | 前一分鐘內由 {{site.data.keyword.iot_short}} 傳送至 EAA 的每秒預估訊息位元組數。
+ `RuleBytesInCount` |傳送至 EAA 規則引擎核心的訊息位元組數。</br> **附註：**如果未對裝置類型設定規則，則該裝置類型的訊息不會傳送至規則引擎核心。
+`RuleBytesInRate` | 前一分鐘內傳送至 EAA 規則引擎核心的每秒預估訊息位元組數。
+ `MsgOutCount` | EAA 傳送至 {{site.data.keyword.iot_short}} 的訊息數目。
+`MsgOutRate` | 前一分鐘內由 EAA 傳送至 {{site.data.keyword.iot_short}} 的每秒預估訊息位元組數。
+ `MsgReducePercent` | 送入訊息與送出訊息之間的百分比差異。</br>下列公式用於計算：`(msgIn - msgOut) / msgIn`
 `BytesReducePercent` | 送入位元組與送出位元組之間的百分比差異。</br>下列公式用於計算：`(bytesIn - bytesOut) / bytesIn`
 `MsgRateReduce` | 送入訊息速率與送出訊息速率之間的百分比差異。</br>下列公式用於計算：`(msgInRate - msgOutRate) / msgInRate`
 `BytesRateReduce` | 送入訊息位元組與送出訊息位元組之間的百分比差異。</br>下列公式用於計算：`(bytesInRate - bytesOutRate) / bytesInRate`
-`SystemLoad` | EAA 執行所在之系統的現行系統負載。**附註：**只在 EAA 執行所在之系統上可以使用 `mpstat` 指令時，才能傳送 CPU 速率。否則，傳送前 1 分鐘的系統負載平均值。</br>「系統負載平均值是下列兩個數目的總和：為了可用處理器而置入佇列之可執行實體的數目，以及平均時間內在可用處理器上執行之可執行實體的數目。計算負載平均值的方式是作業系統特有的，但通常是衰减的時間相依平均值。如果沒有可用的負載平均值，則會傳回負值。」  
-來自 ManagementFactory.getOperatingSystemMXBean 的 javadoc
-`FreeMemory` | EAA 執行所在之「Java 虛擬機器 (JVM)」的可用記憶體的位元組數。
-`MemoryUsed` | EAA 所使用之 JVM 記憶體的位元組數。
+`SystemLoad` | 執行 EAA 之系統的現行系統負載。**附註：**只有在 EAA 執行所在系統上可以使用 `mpstat` 指令時，才會傳送 CPU 速率。否則，傳送前 1 分鐘的系統負載平均值。</br>「系統負載平均值是下列兩個數目的總和：為了可用處理器而置入佇列之可執行實體的數目，以及一段時間內在平均可用處理器上執行之可執行實體的數目。計算負載平均值的方式是作業系統特有的，但通常是衰减的時間相依平均值。如果沒有可用的負載平均值，則會傳回負值。」- javadoc for *ManagementFactory.getOperatingSystemMXBean*。
+ `FreeMemory` | 執行 EAA 之「Java 虛擬機器 (JVM)」的可用記憶體位元組數。
+ `MemoryUsed` | EAA 所使用之 JVM 記憶體的位元組數。
 `InQueueSize` | 置入佇列以供 EAA 處理之訊息的數目。
 `RuleNumber` | 規則引擎核心中已定義的規則數目。
 `ProcessorNumber` | 用於除錯。規則引擎核心中已定義的處理器數目。</br>**附註：**處理器是規則引擎核心中的最小執行單位。

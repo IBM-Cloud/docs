@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-30"
 
 ---
 
@@ -13,10 +14,7 @@ copyright:
 
 
 # 针对 {{site.data.keyword.iot_short_notm}} 区块链集成开发智能合同
-
 {: #iotblockchain_link}
-上次更新时间：2016 年 8 月 30 日
-{: .last-updated}
 
 使用 {{site.data.keyword.blockchainfull}} 和 Hyperledger 开发环境可创建并测试从 IBM 提供的样本合同派生的自己的智能合同。
 {:shortdesc}

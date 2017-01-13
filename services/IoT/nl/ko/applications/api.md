@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-07"
 
 ---
 
@@ -13,9 +14,6 @@ copyright:
 
 # 애플리케이션용 HTTP REST API
 {: #api}
-
-마지막 업데이트 날짜: 2016년 9월 7일
-{: .last-updated}
 
 {{site.data.keyword.iot_full}} HTTP REST API를 사용하여 {{site.data.keyword.iot_short_notm}}에서 조직과 상호작용하는 애플리케이션을 빌드하고 사용자 정의할 수 있습니다.
 {:shortdesc}

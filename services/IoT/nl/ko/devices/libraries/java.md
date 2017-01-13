@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-18"
 
 ---
 
@@ -13,10 +14,6 @@ copyright:
 
 # 디바이스 개발자용 Java
 {: #java}
-
-마지막 업데이트 날짜: 2016년 10월 18일
-{: .last-updated}
-
 
 Java를 사용하여 {{site.data.keyword.iot_full}}에서 조직과 상호작용하는 디바이스를 빌드하고 사용자 정의할 수 있습니다. 디바이스 개발을 시작하는 데 도움이 되도록 {{site.data.keyword.iot_short_notm}}의 Java 클라이언트 라이브러리, 문서 및 예가 제공됩니다.
 {:shortdesc}
@@ -326,7 +323,7 @@ HTTP 프로토콜은 '최대 한 번' 전달을 제공하며, 이는 MQTT 프로
 | 특성     |데이터 유형     | 설명 |
 |----------------|----------------|
 |`payload` |java.lang.String| 메시지 페이로드의 데이터입니다.|
-|`format`  |java.lang.String| 형식은 임의의 문자열(예: JSON)일 수 있습니다.|
+|`format`  |java.lang.String| 형식은 임의의 문자열일 수 있습니다(예: JSON). |
 |`command`   |java.lang.String|명령을 식별합니다.|
 |`timestamp`   |org.joda.time.DateTime|이벤트의 날짜 및 시간입니다.|
 

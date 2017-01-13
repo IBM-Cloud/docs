@@ -2,21 +2,24 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-06-29"
 
 ---
 
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # Visualización de datos de dispositivos
 {: #visualizingdata_data}
-*Última actualización: 20 de abril de 2016*
-{: .last-updated}
 
 Este ejemplo le ayuda a visualizar los datos históricos y en tiempo real desde los dispositivos registrados en la organización de {{site.data.keyword.iot_full}}.
 {:shortdesc}
 
 ## Antes de empezar
+{: #byb}
 
 Para poder visualizar los datos, debe realizar las acciones siguientes:
 
@@ -26,6 +29,7 @@ Para poder visualizar los datos, debe realizar las acciones siguientes:
 - [Instalar la herramienta de línea de mandatos cf](../../starters/install_cli.html) desde {{site.data.keyword.Bluemix_notm}}.
 
 ## Ejecución del ejemplo en {{site.data.keyword.Bluemix_notm}}
+{: #running_sample}
 
 1. Cree una aplicación en {{site.data.keyword.Bluemix_notm}} utilizando el SDK Node.js. Anote el nombre de la aplicación y el nombre de host de la aplicación. Esta información es necesaria para cargar la aplicación en {{site.data.keyword.Bluemix_notm}}.
 2. Enlace la aplicación node.JS a la instancia de {{site.data.keyword.iot_short_notm}} en el panel de instrumentos de {{site.data.keyword.Bluemix_notm}} completando los pasos siguientes:
@@ -69,7 +73,8 @@ http://<your_application_name>.mybluemix.net
 
 Todos los dispositivos de su organización se listan en el menú desplegable del dispositivo. Cuando esta opción esté seleccionada, debería ver la visualización de los datos en tiempo real que el dispositivo envía al servicio de {{site.data.keyword.iot_short_notm}}. Para ver los datos históricos, pulse el botón **Datos históricos**.
 
-### Personalización del ejemplo
+## Personalización del ejemplo
+{: #customize_sample}
 
 Esta aplicación de ejemplo es una aplicación web autónoma, grabada en la infraestructura node.js. El ejemplo muestra sucesos que se envían mediante dispositivos registrados en el {{site.data.keyword.iot_short_notm}}. En el ejemplo se utilizan las siguientes herramientas:
 
@@ -92,7 +97,8 @@ La aplicación de ejemplo está estructurada con los directorios siguientes:
 - Views: archivos de interfaz de usuario, escritos en Jade
 - La biblioteca de gráficos Rickshaw se utiliza para trazar el gráfico para datos en tiempo real e históricos.
 
-### Personalización de la visualización de datos en tiempo real
+## Personalización de la visualización de datos en tiempo real
+{: #customize_real_time_display}
 
 El directorio que contiene el código de visualización gráfica para los datos en tiempo real es `public/ja/realtime`. La lógica de gráficos se puede personalizar editando `public/js/historian/realtimeGraph.js`.
 
@@ -100,7 +106,8 @@ El archivo que hace referencia a la biblioteca de MQTT de Paho para suscribirse 
 
 Los sucesos de dispositivos se pasan al archivo `realtimeGraph.js` para trazar el gráfico.
 
-### Personalización de la visualización de datos históricos
+## Personalización de la visualización de datos históricos
+{: #customize_historical_display}
 
 El directorio que contiene el código de visualización gráfica para los datos de dispositivos históricos es `public/js/historian`. La lógica de gráficos se puede personalizar editando `public/js/historian/historianGraph.js`.
 

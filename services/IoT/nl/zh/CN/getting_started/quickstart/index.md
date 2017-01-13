@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-19"
 
 ---
 
@@ -12,10 +13,6 @@ copyright:
 {:pre: .pre}
 
 # Quickstart
-
-上次更新时间：2016 年 9 月 19 日
-{: .last-updated}
-
 
 [Quickstart](https://quickstart.internetofthings.ibmcloud.com/#/) 是一种开放式沙箱，可用于将设备快速连接到 {{site.data.keyword.iot_full}}。如果设备支持 MQTT 消息传递协议，那么可将其轻松连接到 Quickstart。
 

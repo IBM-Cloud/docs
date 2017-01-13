@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-30"
 
 ---
 
@@ -13,10 +14,7 @@ copyright:
 
 
 # Sviluppo degli smart contract per l'integrazione blockchain {{site.data.keyword.iot_short_notm}}
-
 {: #iotblockchain_link}
-Ultimo aggiornamento: 30 agosto 2016
-{: .last-updated}
 
 Utilizza {{site.data.keyword.blockchainfull}} e l'ambiente di sviluppo Hyperledger per creare e verificare i tuoi propri smart contract derivati dai contratti semplici forniti da IBM.
 {:shortdesc}

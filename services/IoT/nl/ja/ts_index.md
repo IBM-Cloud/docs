@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-01"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # {{site.data.keyword.iot_short_notm}} のトラブルシューティング
 {: #ts}
-最終更新日: 2016 年 8 月 1 日
-{: .last-updated}
 
 {{site.data.keyword.Bluemix_notm}} 上での {{site.data.keyword.iot_full}} の使用についての一般的なトラブルシューティングの質問に対する答えを提供します。
 {:shortdesc}

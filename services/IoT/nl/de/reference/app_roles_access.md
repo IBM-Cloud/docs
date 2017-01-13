@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-10-16"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 {:pre: .pre}
 
 # Zugriffsebenen für Anwendungsrollen
-Letzte Aktualisierung: 16. September 2016
-{: .last-updated}
 
 Die folgende Tabelle zeigt die Zugriffsebenen der einzelnen Anwendungsrollen.
 

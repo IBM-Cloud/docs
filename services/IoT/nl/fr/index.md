@@ -1,7 +1,8 @@
 ---
 
-copyright :
-  2016
+copyright:
+  years: 2016
+lastupdated: "2016-10-19"
 
 ---
 
@@ -13,8 +14,6 @@ copyright :
 
 # Initiation à {{site.data.keyword.iot_short_notm}}
 {: #gettingstartedtemplate}
-Dernière mise à jour : 29 septembre 2016
-{: .last-updated}
 
 {{site.data.keyword.iot_full}} for {{site.data.keyword.Bluemix_notm}} fournit un kit d'outils polyvalent comportant des terminaux de passerelle, la gestion des terminaux et un accès puissant aux applications. {{site.data.keyword.iot_short_notm}} vous permet de collecter des données relatives à des terminaux connectés et d'effectuer des analyses sur des données temps réel à partir de votre organisation.
 {:shortdesc}
@@ -37,7 +36,7 @@ Pour être rapidement opérationnel avec le service, examinez les options suivan
   ------------- | -------------
   **J'ai un terminal à connecter** | [Connectez votre terminal à {{site.data.keyword.iot_short_notm}}](iotplatform_task.html#iotplatform_task).| Explorez la connexion de terminal dans la [démonstration Play organization](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window}.
   **Je n'ai aucun terminal à connecter** | [Créer et connecter un simulateur de terminal Node-RED](nodereddevice_sample.html){:new_window} | Commencez à utiliser [Watson IoT Platform Starter](https://console.ng.bluemix.net/docs/starters/IoT/iot500.html){:new_window}.
-Pour plus d'informations sur la connexion de types de terminal spécifiques à {{site.data.keyword.iot_short_notm}}, voir les [recettes developerWorks](https://developer.ibm.com/recipes/?post_type=tutorials&s=iot){:new_window}.  
+Pour plus d'informations sur la connexion de types de terminal spécifiques à {{site.data.keyword.iot_short_notm}}, voir les [recettes developerWorks](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}.  
 
 Pour la documentation du développeur de connexion de terminal, voir :
 - [Connectivité MQTT pour les terminaux](devices/mqtt.html)
@@ -71,7 +70,7 @@ Pour plus d'informations, voir les rubriques suivantes :
 {: #rellinks}
 ## Tutoriels et exemples
 {: #samples}
-* [Recettes relatives à la connexion de vos terminaux](https://developer.ibm.com/recipes/?post_type=tutorials&s=iot){:new_window}
+* [Recettes relatives à la connexion de vos terminaux](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}
 * [{{site.data.keyword.iot_short_notm}} Play organization](https://play.internetofthings.ibmcloud.com/){:new_window}
 * [Connexion d'un Intel Galileo à {{site.data.keyword.iot_short_notm}}](https://developer.ibm.com/recipes/tutorials/connect-an-intel-galileo-to-the-internet-of-things-foundation-connect/){:new_window}
 * [Connexion d'un kit de démarrage ARM® mbed™ IoT Starter Kit](https://developer.ibm.com/recipes/tutorials/arm-mbed-iot-starter-kit-part-1/){:new_window}

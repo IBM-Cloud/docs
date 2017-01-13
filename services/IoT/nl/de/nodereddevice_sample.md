@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-26"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 # Node-RED-Gerätesimulator erstellen und verbinden
 Verwenden Sie Node-RED, um einen Gerätesimulator zu erstellen und Daten zum simulierten Gerät an Ihre {{site.data.keyword.iot_full}}-Organisation zu senden.  
 {:shortdesc}
-Letzte Aktualisierung: 26. August 2016
-{: .last-updated}
 
 Node-RED ist ein Tool, mit dem Hardware-Geräte, APIs und Online-Services auf eine neue und interessante Weise miteinander verbunden werden können. Weitere Informationen finden Sie auf der Website von [Node-RED](http://nodered.org/).  
 

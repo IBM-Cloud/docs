@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-31"
 
 ---
 
@@ -11,16 +12,13 @@ copyright:
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# 在 {{site.data.keyword.iot_short}} 上开发应用程序
+# 开发应用程序
 {: #app_dev_index}
-
-上次更新时间：2016 年 8 月 26 日
-{: .last-updated}
 
 提供的客户机库、样本和信息可帮助您为 {{site.data.keyword.iot_full}} 组织构建应用程序。
 {:shortdesc}
 
-您可以使用以下受支持的协议和标准来编写代码，用于构建和管理与 {{site.data.keyword.iot_short}} 中的已连接设备进行交互并使用其中信息的应用程序：
+您可以使用以下受支持的协议和标准来编写代码，用于构建和管理与 {{site.data.keyword.iot_short_notm}} 中的已连接设备进行交互并使用其中信息的应用程序：
 
 - C#
 - Java
@@ -29,4 +27,4 @@ copyright:
 - Node-RED
 - Python
 
-有关可用于在 {{site.data.keyword.iot_short}} 上进行开发的客户机库的更多信息和链接，请参阅[用于开发 {{site.data.keyword.iot_short}} 的客户机库](../iot_platform_client_lib.html)。
+有关可用客户机库的更多信息和链接，请参阅[用于开发 {{site.data.keyword.iot_short_notm}} 的客户机库](../iot_platform_client_lib.html)。

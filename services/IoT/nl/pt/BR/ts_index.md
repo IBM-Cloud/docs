@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-01"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # Resolução de problemas do {{site.data.keyword.iot_short_notm}}
 {: #ts}
-Última atualização: 1 de agosto de 2016
-{: .last-updated}
 
 Aqui estão as respostas às perguntas comuns de resolução de problemas sobre o
 uso do {{site.data.keyword.iot_full}} no

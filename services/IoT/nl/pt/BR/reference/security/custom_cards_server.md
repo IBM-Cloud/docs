@@ -29,7 +29,7 @@ Deve-se ter direitos de administrador do {{site.data.keyword.iot_short_notm}} pa
 {: #server_requirements}
 
 Os seguintes requisitos são configurados pelo {{site.data.keyword.iot_short_notm}}:
-- O diretório que serve o conteúdo do cartão customizado no servidor não deve requerer credenciais para acessar.
+- O diretório que serve o conteúdo do cartão customizado no servidor não deve requerer credenciais para acessar.  
 Nenhuma autenticação é fornecida para o servidor de cartões customizados ao conectar para acessar e carregar cartões customizados.
 - O servidor deve usar o protocolo HTTP Secure (HTTPS).
 - O servidor deve suportar conexões de compartilhamento de recurso de origem cruzada (CORS).  

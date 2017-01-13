@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-10-27"
 
 ---
 
@@ -14,13 +15,11 @@ copyright:
 
 # Analisi edge
 {: #edge_analytics}
-Ultimo aggiornamento: 1 agosto 2016
-{: .last-updated}
 
 Con le analisi edge, puoi spostare il processo di attivazione della regola di analisi dal cloud al gateway abilitato per l'analisi edge che riduce drasticamente la quantità di traffico dati del dispositivo nel cloud eseguendo l'elaborazione delle analisi vicino al dispositivo.
 {:shortdesk}
 
-I dispositivi inviano i loro dati a un gateway abilitato per l'analisi edge in cui le regole di analisi edge analizzano i dati. In base alla tua regola e alle relative azioni, i dati critici e gli avvisi possono essere inviati a {{site.data.keyword.iot_full}}, possono essere attivati nel gateway o essere scritti in un file di testo locale nel gateway.
+I dispositivi inviano i loro dati a un gateway abilitato per l'analisi edge in cui le regole di analisi edge analizzano i dati. In base alla tua regola e alle relative azioni, i dati critici e gli avvisi possono essere inviati a {{site.data.keyword.iot_full}}, possono essere attivati nel gateway o essere scritti in un file di testo locale nel gateway. 
 
 Il seguente diagramma illustra l'architettura generale di un ambiente di analisi edge {{site.data.keyword.iot_full}}.
 ![IBM Watson IoT Platform con l'architettura di analisi edge](images/architecture_platform_edge.svg "IBM Watson IoT Platform con l'architettura di analisi edge")
@@ -33,7 +32,7 @@ Il seguente diagramma illustra l'architettura generale di un ambiente di analisi
 Prima di iniziare la creazione di regole e azioni edge:
 - Assicurati che il tuo gateway sia collegato a {{site.data.keyword.iot_short}} e che i dati del dispositivo siano stati trasmessi. Consulta [Connessione ai gateway](gateways/dashboard.html) per ulteriori informazioni.
 - Installa EAA (Edge Analytics Agent) sul tuo gateway. Per informazioni, consulta [Installazione dell'agent di analisi edge](gateways/dashboard.html#edge). </br> **Suggerimento:** i gateway abilitati EAA forniscono dati di diagnostica EAA sotto forma di messaggi del dispositivo gateway. Per informazioni, consulta [Metriche di diagnostica di EAA (Edge Analytics Agent)](#eaa_metrics).
-- Assicurati che le proprietà del dispositivo che desideri utilizzare come le condizioni nelle tue regole siano state associate agli schemi. Consulta [Connessione dispositivi](iotplatform_task.html) e [Creazione di schemi](im_schemas.html) per ulteriori informazioni.
+- Assicurati che le proprietà del dispositivo che desideri utilizzare come le condizioni nelle tue regole siano associate agli schemi. Consulta [Connessione dispositivi](iotplatform_task.html) e [Creazione di schemi](im_schemas.html) per ulteriori informazioni.
 
 ## Gestione delle regole e delle azioni edge  
 {: #managing_rules}
@@ -42,14 +41,14 @@ Le regole edge sono gestite nel seguente modo:
 - Il dashboard **Rules** viene utilizzato per creare e modificare le regole e le azioni edge e cloud per i tuoi dispositivi e gateway.
 - La tabella **Edge Rules Gateways** viene utilizzata per attivare, disattivare, aggiornare e rimuovere una regola edge dai tuoi gateway. Per accedere alla tabella Edge Rules Gateways, dal dashboard Rules fai clic su **Manage Rule** per la regola edge che desideri gestire. Per ulteriori informazioni, consulta [ Attivazione, disattivazione e gestione delle regole edge per i tuoi gateway](#manage).
 
-Per ottenere una panoramica delle regole e degli avvisi edge dei tuoi dispositivi collegati ai gateway, utilizza le seguenti tabelle:
+Per ottenere una panoramica delle regole e degli avvisi edge che sono stati attivati dai tuoi dispositivi collegati al gateway, utilizza le seguenti tabelle: 
 
- |Nome tabella | Descrizione |  
+|Nome tabella | Descrizione |  
  |:---|:---|  
   |Analisi incentrata sulla regola | Visualizza le regole per la tua organizzazione, incluse le regole edge. Ulteriori schede elencano gli avvisi edge inoltrati, i dispositivi associati, le proprietà del dispositivo e le informazioni sull'avviso edge inoltrato. |  
  |Analisi incentrata sul dispositivo | Visualizza i dispositivi collegati alla tua organizzazione. Ulteriori schede mostrano gli avvisi inoltrati per un dispositivo edge selezionato, le informazioni per un dispositivo selezionato, le proprietà del dispositivo e le informazioni sull'avviso inoltrato. |
 
- Per ulteriori informazioni sulle tabelle di analisi predefinite, consulta [Visualizzazione dei dati in tempo reale utilizzando le tabelle e le schede](data_visualization.html#default_boards).
+Per ulteriori informazioni sulle tabelle di analisi predefinite, consulta [Visualizzazione dei dati in tempo reale utilizzando le tabelle e le schede](data_visualization.html#default_boards).
 
 
 ## Creazione delle regole edge
@@ -65,12 +64,16 @@ Per creare una regola:
 3. Configura la logica della regola.  
 Aggiungi una o più condizioni IF da utilizzare come trigger per la regola.  
 Puoi aggiungere condizioni in righe parallele per applicarle come condizioni OR o puoi aggiungere le condizioni in colonne sequenziali per applicarle come condizioni AND.  
-**Nota:** per poter selezionare una proprietà del dispositivo come input per un regola, la proprietà deve essere associata a uno schema. Consulta [Creazione di schemi](im_schemas.html) per ulteriori informazioni.   
-**Importante:** per attivare una condizione che attiva due o più condizioni della proprietà combinate sequenzialmente utilizzando AND, i punti dei dati di attivazione devono essere inclusi nello stesso messaggio del dispositivo. Se i dati sono ricevuti in più di un messaggio, le condizioni in sequenza non vengono attivate.  
-**Esempi:**
+**Nota:** per poter selezionare una proprietà del dispositivo come input per un regola, la proprietà deve essere associata a uno schema. Consulta [Creazione di schemi](im_schemas.html) per ulteriori informazioni.  
+
+**Importante:** per attivare una condizione che confronta due proprietà o per attivare due o più condizioni della proprietà combinate sequenzialmente utilizzando AND, i punti dei dati di attivazione devono essere inclusi nello stesso messaggio del dispositivo. Se i dati sono ricevuti in più di un messaggio, la condizione o le condizioni in sequenza non vengono attivate.  
+
+**Esempi:**  
 Una regola semplice può attivare una avviso se un valore del parametro è maggiore di un valore specificato:
-`temp>80`
+  
+`temp>80`  
 Una regola più complessa può essere attivata quando viene soddisfatta una combinazione di soglie:
+  
 `temp>60 AND capacity>50`   
 
 4. Configura i requisiti di attivazione condizionali per la tua regola.  
@@ -187,30 +190,29 @@ Per visualizzare le informazioni sullo stato del gateway:
  - Consulta la sezione **Sensor information** per informazioni di diagnostica dettagliate dal gateway. La seguente tabella descrive le differenti proprietà che possono essere incluse nei messaggi del dispositivo gateway:
 
 
-Proprietà | Descrizione
---- | ---
-`MsgInCount` |Il numero di messaggi che sono stati inviati a EEA (Edge Analytics Agent).
-`MsgInRate`, `MsgInRate1Min`, `MessageInRate5Min`, `MsgInRate15Min`, `MsgInMeanRate` | Il numero stimato di messaggi al secondo che sono stati inviati al EAA nell'ultimo periodo di tempo.  </br>**Nota:** `MsgInRate` è un alias per `MsgInRate1Min`. `MsgInMeanRate` è la frequenza di messaggi principale dall'avvio.
-`LastHeartBeat` | La data/ora in millisecondi in cui è stato generato l'ultimo messaggio di heartbeat. Un messaggio di heartbeat viene generato almeno ogni 10 secondi.
+ Proprietà | Descrizione
+ --- | ---
+ `MsgInCount` |Il numero di messaggi che sono stati inviati a EEA (Edge Analytics Agent).
+ `MsgInRate` | Il numero stimato di messaggi al secondo che sono stati inviati al EAA nell'ultimo minuto.   
+ `LastHeartBeat` | La data/ora in millisecondi in cui è stat ogenerato l'ultimo messaggio di heartbeat. Un messaggio di heartbeat viene generato almeno ogni 10 secondi.
 `CurrentTimestamp` | La data/ora in millisecondi in cui è stato generato il corrente messaggio di monitoraggio.
 `IsAlive` | Questa proprietà è 0 se la differenza tra `LastHeartBeat` e `CurrentTimestamp` è maggiore di 20 secondi.
-`BytesOutCount` | Il numero di byte del messaggio inviati da EAA a {{site.data.keyword.iot_short}}.
-`BytesOutRate`, `BytesOutRate1Min`, `BytesOutRate15Min`, `BytesOutRate5Min`, `BytesOutMeanRate` | Il numero stimato di byte del messaggio al secondo inviati da EAA a {{site.data.keyword.iot_short}} durante l'ultimo periodo di tempo. </br>**Nota:** `BytesOutRate` è un alias per `BytesOutRate1Min`. `BytesOutMeanRate` è la frequenza principale dall'avvio.
+ `BytesOutCount` | Il numero di byte del messaggio inviati da EAA a {{site.data.keyword.iot_short}}.
+ `BytesOutRate` | Il numero stimato di byte del messaggio al secondo inviati da EAA a {{site.data.keyword.iot_short}} durante l'ultimo minuto.
 `BytesInCount` | Il numero di byte del messaggio che sono stati inviati da {{site.data.keyword.iot_short}} a EAA.
-`BytesInMeanRate`, `BytesInRate1Min`, `BytesInRate`, `BytesInRate15Min`, `BytesInRate5Min` | Il numero stimato di byte del messaggio al secondo che sono stati inviati da {{site.data.keyword.iot_short}} a EAA nell'ultimo periodo di tempo. </br>**Nota:** BytesOutRate è un alias per BytesOutRate1Min. BytesOutMeanRate conta la frequenza principale dall'avvio.
+ `BytesInRate` | Il numero stimato di byte del messaggio al secondo che sono stati inviati da {{site.data.keyword.iot_short}} a EAA nell'ultimo minuto.
 `RuleBytesInCount` |Il numero di byte del messaggio che sono stati inviati da EAA al core del motore della regola. </br> **Nota:** se non è impostata alcuna regola per un tipo di dispositivo, i messaggi per tale tipo di dispositivo non sono inviati al core del motore della regola.
-`RuleBytesInRate5Min`, `RuleBytesInRate`, `RuleBytesInMeanRate`, `RuleBytesInRate1Min`, `RuleBytesInRate15Min` | Il numero stimato di byte del messaggio al secondo inviati al core del motore della regola EAA durante l'ultimo periodo di tempo. </br> **Nota:** `RuleBytesInMeanRate` è la frequenza principale dall'avvio.
+ `RuleBytesInRate` | Il numero stimato di byte del messaggio al secondo inviati al core del motore della regola EAA durante l'ultimo minuto.
 `MsgOutCount` | Il numero di messaggi che sono stati inviati da EAA a {{site.data.keyword.iot_short}}.
-`MsgOutRate`, `MsgOutMeanRate`, `MsgOutRate1Min`, `MessageOutRate5Min`, `MsgOutRate15Min` | Il numero stimato di byte dei messaggi al secondo inviati da EAA a {{site.data.keyword.iot_short}} durante l'ultimo periodo di tempo.</br> **Nota:** `MsgOutRate` è un alias per `MsgOutRate1Min`. `MsgOutMeanRate` è la frequenza principale dall'avvio.
+ `MsgOutRate` | Il numero stimato di byte dei messaggi al secondo inviati da EAA a {{site.data.keyword.iot_short}} durante l'ultimo minuto.
 `MsgReducePercent` | La differenza percentuale tra i messaggi in entrata e in uscita. </br>La seguente formula viene utilizzata per il calcolo: `(msgIn - msgOut) / msgIn`
 `BytesReducePercent` | La differenza percentuale tra i byte in entrata e in uscita. </br>La seguente formula viene utilizzata per il calcolo: `(bytesIn - bytesOut) / bytesIn`
 `MsgRateReduce` | La differenza percentuale tra la frequenza dl messaggio in entrata e in uscita. </br>La seguente formula viene utilizzata per il calcolo: `(msgInRate - msgOutRate) / msgInRate`
 `BytesRateReduce` | La differenza percentuale tra i byte dei messaggi in entrata e in uscita. </br>La seguente formula viene utilizzata per il calcolo: `(bytesInRate - bytesOutRate) / bytesInRate`
-`SystemLoad` | Il carico di sistema corrente per il sistema in cui è in esecuzione EAA. **Nota:** la velocità della CPU sarà inviata solo se il comando `mpstat` è disponibile nel sistema in cui è in esecuzione EAA. Altrimenti, viene inviato il carico del sistema medio per l'ultimo minuto. </br>“Il carico del sistema medio è la somma del numero di entità eseguibili accodato ai processori disponibili e il numero di entità eseguibili in esecuzione sui processori disponibili come media in un periodo di tempo. Il modo in cui viene calcolato il carico medio è il sistema operativo specifico ma è normalmente una media moderata dipendente dal tempo. Se il carico medio non è disponibile, viene restituito un valore negativo. ”  
-Da javadoc per ManagementFactory.getOperatingSystemMXBean
-`FreeMemory` | Il numero di byte di memoria libera per la JVM (Java Virtual Machine) dove è in esecuzione EAA.
+`SystemLoad` | Il carico di sistema corrente per il sistema in cui è in esecuzione EAA. **Nota:** la velocità della CPU sarà inviata solo se il comando `mpstat` è disponibile nel sistema in cui è in esecuzione EAA. Altrimenti, viene inviato il carico del sistema medio per l'ultimo minuto. </br>“Il carico del sistema medio è la somma del numero di entità eseguibili accodato ai processori disponibili e il numero di entità eseguibili in esecuzione sui processori disponibili come media in un periodo di tempo. Il modo in cui viene calcolato il carico medio è il sistema operativo specifico ma è normalmente una media moderata dipendente dal tempo. Se il carico medio non è disponibile, viene restituito un valore negativo. ” - javadoc per *ManagementFactory.getOperatingSystemMXBean*.
+ `FreeMemory` | Il numero di byte di memoria libera per la JVM (Java Virtual Machine) dove è in esecuzione EAA.
 `MemoryUsed` | Il numero di byte di memoria JVM utilizzato da EAA.
-`InQueueSize` | Il numero di messaggi in coda per l'elaborazione EAA.
-`RuleNumber` | Il numero di regole definite nel core del motore della regola.
-`ProcessorNumber` | Per l'utilizzo di debug. Il numero di processori definiti nel core del motore della regola. </br>**Nota:** un processore è un'unità di esecuzione minima nel core del motore della regola.
-`DataPointsInWindow` | Il numero totale di punti dati memorizzati nella finestra di tempo. La dimensione in byte di un punto dati differisce a seconda del proprio tipo di dati. Ad esempio, la dimensione di un punto dati float/int è 8 byte mentre la dimensione di un punto dati della stringa è differente in base alla relativa lunghezza. In molti casi puoi stimare l'utilizzo della memoria nella finestra di tempo utilizzando la seguente formula: `DataPointsInWindow * 8`.
+ `InQueueSize` | Il numero di messaggi in coda per l'elaborazione EAA.
+ `RuleNumber` | Il numero di regole definite nel core del motore della regola.
+ `ProcessorNumber` | Per l'utilizzo di debug. Il numero di processori definiti nel core del motore della regola. </br>**Nota:** un processore è un'unità di esecuzione minima nel core del motore della regola.
+ `DataPointsInWindow` | Il numero totale di punti dati memorizzati nella finestra di tempo. La dimensione in byte di un punto dati differisce a seconda del proprio tipo di dati. Ad esempio, la dimensione di un punto dati float/int è 8 byte mentre la dimensione di un punto dati della stringa è differente in base alla relativa lunghezza.  In molti casi puoi stimare l'utilizzo della memoria nella finestra di tempo utilizzando la seguente formula: `DataPointsInWindow * 8`.

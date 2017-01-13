@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-18"
 
 ---
 
@@ -14,11 +15,8 @@ copyright:
 # Java für Geräteentwickler
 {: #java}
 
-Letzte Aktualisierung: 18. Oktober 2016
-{: .last-updated}
-
-
-Sie können mithilfe von Java Geräte erstellen und anpassen, die in {{site.data.keyword.iot_full}} mit Ihrer Organisation interagieren. Es werden eine Java-Clientbibliothek für {{site.data.keyword.iot_short_notm}}, Dokumentation und Beispiele bereitgestellt, die Sie bei den ersten Schritten der Geräteentwicklung unterstützen.{:shortdesc}
+Sie können mithilfe von Java Geräte erstellen und anpassen, die in {{site.data.keyword.iot_full}} mit Ihrer Organisation interagieren. Es werden eine Java-Clientbibliothek für {{site.data.keyword.iot_short_notm}}, Dokumentation und Beispiele bereitgestellt, die Sie bei den ersten Schritten der Geräteentwicklung unterstützen.
+{:shortdesc}
 
 ## Java-Client und Ressourcen herunterladen
 {: #java_client_download}
@@ -271,7 +269,6 @@ status = myClient.publishEvent("load", data, "text", 2);
 ```
 
 **Hinweis:** Im oben stehenden Codebeispiel müssen die Nutzdaten des Ereignisses das Zeichenfolgeformat aufweisen.
-
 
 Alle XML-Daten können in das Zeichenfolgeformat konvertiert und wie folgt publiziert werden:
 

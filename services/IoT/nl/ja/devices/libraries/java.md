@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-18"
 
 ---
 
@@ -13,10 +14,6 @@ copyright:
 
 # デバイス開発者用の Java
 {: #java}
-
-最終更新日: 2016 年 10 月 18 日
-{: .last-updated}
-
 
 Java を使用して、{{site.data.keyword.iot_full}} の組織と対話するデバイスを作成し、カスタマイズできます。デバイス開発を簡単に始められるように、{{site.data.keyword.iot_short_notm}} に対応した Java クライアント・ライブラリー、資料、サンプルが用意されています。
 {:shortdesc}

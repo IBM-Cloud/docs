@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-14"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # 게이트웨이용 MQTT 연결
 {: #mqtt}
-마지막 업데이트 날짜: 2016년 9월 14일
-{: .last-updated}
 
 MQTT는 디바이스와 애플리케이션이 {{site.data.keyword.iot_full}}과 통신하는 데 사용하는 기본 프로토콜입니다. {{site.data.keyword.iot_short_notm}}에 디바이스를 연결하기 위한 게이트웨이로 MQTT 클라이언트를 사용하는 데 도움이 되는 클라이언트 라이브러리, 정보 및 샘플이 제공됩니다.
 {:shortdesc}

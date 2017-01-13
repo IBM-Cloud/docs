@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015,2016
+  years: 2015, 2016
+lastupdated: "2016-09-08"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # {{site.data.keyword.iot_short_notm}}에 애플리케이션, 디바이스 및 게이트웨이 연결
 {: #connect_devices_apps_gw}
-마지막 업데이트 날짜: 2016년 9월 8일
-{: .last-updated}
 
 MQTT 프로토콜을 통해 애플리케이션, 디바이스 및 게이트웨이를 {{site.data.keyword.iot_full}}에 연결할 수 있습니다. 디바이스에서 HTTP API를 통해 {{site.data.keyword.iot_short_notm}}에 연결하고 이벤트를 공개할 수 있습니다.
 {: shortdesc}
@@ -111,7 +110,7 @@ MQTT 클라이언트에서는 디바이스 인증 토큰(디바이스의 경우)
 <pre class="pre">a-<var class="keyword varname">orgId</var>-a84ps90Ajs</pre>
 {: codeblock}
 
-다음 예는 일반적인 인증 토큰을 보여줍니다.
+다음 예제는 일반적인 인증 토큰을 보여줍니다.
 
 ```
  MP$08VKz!8rXwnR-Q*

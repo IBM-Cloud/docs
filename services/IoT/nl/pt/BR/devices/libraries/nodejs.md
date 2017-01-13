@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-14"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # Node.js para desenvolvedores de dispositivos
 {: #nodejs}
-Última atualização: 14 de setembro de 2016
-{: .last-updated}
 
 É possível adaptar as bibliotecas do cliente e as amostras em Node.js para construir e desenvolver código do dispositivo que interaja com sua organização no {{site.data.keyword.iot_full}}.
 {:shortdesc}

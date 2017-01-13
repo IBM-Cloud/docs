@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-08"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # Gerätemanagementanforderungen
 {: #requests}
-Letzte Aktualisierung: 8. September 2016
-{: .last-updated}
 
 
 {{site.data.keyword.iot_full}} bietet Aktionen, die für ein oder mehrere Geräte initiiert werden können. Diese Aktionen können mithilfe des Dashboards oder mithilfe der REST-API initiiert werden. Zu den verfügbaren Aktionstypen gehören **Geräteaktionen** und **Firmwareaktionen**.

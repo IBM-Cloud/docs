@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-16"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # Gerätemodell
 {: #device_model}
-Letzte Aktualisierung: 16. September 2016
-{: .last-updated}
 
 Im Gerätemodell werden die Metadaten und die Managementmerkmale eines Geräts beschrieben. Die Gerätedatenbank in {{site.data.keyword.iot_full}} ist die Masterquelle für Geräteinformationen. Anwendungen und verwaltete Geräte können Aktualisierungen einschließlich Positionsänderungen oder den Fortschritt eines Firmware-Updates an die Datenbank des Geräts senden. Sobald diese Aktualisierungen von {{site.data.keyword.iot_short_notm}} empfangen werden, wird die Datenbank aktualisiert und die Informationen werden Anwendungen zur Verfügung gestellt.
 

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-02"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # 针对设备开发者的 C#
 {: #c_sharp}
-上次更新时间：2016 年 8 月 2 日
-{: .last-updated}
 
 您可以使用 C# 来构建和定制设备，以用于在 {{site.data.keyword.iot_full}} 上与您的组织进行交互。使用提供的信息和示例通过 C# 开始开发设备。
 {:shortdesc}

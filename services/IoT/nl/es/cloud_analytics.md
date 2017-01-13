@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-23"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # Cloud Analytics
 {: #cloud_analytics}
-Última actualización: 23 de agosto de 2016
-{: .last-updated}
 
 Al utilizar cloud analytics de {{site.data.keyword.iot_short}}, especifique condiciones de reglas basadas en datos de dispositivos en tiempo real y que activen alertas y acciones opcionales cuando se cumplan.    
 {: shortdesc}

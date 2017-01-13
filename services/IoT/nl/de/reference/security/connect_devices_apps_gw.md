@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015,2016
+  years: 2015, 2016
+lastupdated: "2016-09-08"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # Verbindungen zu {{site.data.keyword.iot_short_notm}} für Anwendungen, Geräte und Gateways
 {: #connect_devices_apps_gw}
-Letzte Aktualisierung: 8. September 2016
-{: .last-updated}
 
 Anwendungen, Geräte und Gateways können über das MQTT-Protokoll eine Verbindung zu {{site.data.keyword.iot_full}} herstellen. Geräte können auch über die HTTP-API eine Verbindung zu {{site.data.keyword.iot_short_notm}} herstellen und Ereignisse publizieren.
 {: shortdesc}

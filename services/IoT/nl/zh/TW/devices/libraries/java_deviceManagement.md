@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-02"
 
 ---
 
@@ -13,15 +14,13 @@ copyright:
 
 # Java 用戶端程式庫 - 受管理裝置
 {: #java_deviceManagement}
-前次更新：2016 年 8 月 2 日
-{: .last-updated}
 
 ##簡介
 {: #introduction}
 
 此用戶端程式庫說明如何搭配使用裝置與 Java 'ibmiotf' 用戶端程式庫。如需開始使用此模組的說明，請參閱 [Java 用戶端程式庫 - 簡介](../java/javaintro.html)。
 
-本節包含裝置如何使用 Java 執行「{{site.data.keyword.iot_full}} 裝置管理」服務，以及執行裝置管理作業（如「韌體更新」、位置更新及診斷更新）的相關資訊。
+本節包含裝置如何使用 Java 執行 {{site.data.keyword.iot_full}} Device Management 服務，以及執行裝置管理作業（如「韌體更新」、位置更新及診斷更新）的相關資訊。
 
 「裝置」區段包含裝置如何使用「Java ibmiotf 用戶端程式庫」來發佈事件及處理指令的相關資訊。
 
@@ -30,20 +29,20 @@ copyright:
 ## 裝置管理
 {: #device_management}
 
-[裝置管理](../reference/device_mgmt.html)功能透過管理裝置的其他功能來加強 {{site.data.keyword.iot_short_notm}} 功能。裝置管理會區別受管理與未受管理的裝置：
+[裝置管理](../reference/device_mgmt.html)功能透過管理裝置的其他功能來加強 {{site.data.keyword.iot_short_notm}} 服務。裝置管理會區別受管理與未受管理的裝置：
 
 -   **受管理裝置**定義為已安裝管理代理程式的裝置。管理代理程式會傳送及接收裝置 meta 資料，並回應來自 {{site.data.keyword.iot_short_notm}} 的裝置管理指令。
--   **未受管理裝置**是任何沒有裝置管理代理程式的裝置。所有裝置都以未受管理裝置開始其生命週期，可以透過將裝置管理代理程式中的訊息傳送至 {{site.data.keyword.iot_short_notm}}，來轉移為受管理裝置。
+-   **未受管理裝置**是任何沒有裝置管理代理程式的裝置。所有裝置在生命週期開始時都是未受管理的裝置，並且可以透過將裝置管理代理程式中的訊息傳送至 {{site.data.keyword.iot_short_notm}}，來轉移為受管理裝置。
 
-## 連接至 {{site.data.keyword.iot_short_notm}} 裝置管理服務
+## 連接至 {{site.data.keyword.iot_short_notm}} Device Management 服務
 {: #connecting_dm_service}
 
 ## 建立裝置資料
 {: #creating_device_data}
 
-[裝置模型](../reference/device_model.html)說明裝置的 meta 資料及管理性質。{{site.data.keyword.iot_short_notm}} 中的裝置資料庫是裝置資訊的主要來源。應用程式和受管理裝置能夠將更新項目傳送至資料庫，例如「韌體更新」的位置或進度。{{site.data.keyword.iot_short_notm}} 收到這些更新項目之後，就會更新裝置資料庫，而應用程式就能使用該資訊。
+[裝置機型](../reference/device_model.html)說明裝置的 meta 資料及管理性質。{{site.data.keyword.iot_short_notm}} 中的裝置資料庫是裝置資訊的主要來源。應用程式和受管理裝置能夠將更新傳送至資料庫，例如位置或「韌體更新」的進度。{{site.data.keyword.iot_short_notm}} 收到這些更新之後，就會更新裝置資料庫，而應用程式就能使用該資訊。
 
-`DeviceData` 是 ibmiotf 用戶端程式庫中的裝置模型，包括下列物件：
+`DeviceData` 是 ibmiotf 用戶端程式庫中的裝置機型，包括下列物件：
 
 -   DeviceInfo（必要）
 -   DeviceLocation（如果裝置支援位置更新，則為必要）
@@ -74,7 +73,7 @@ data.addProperty("customField", "customValue");
 DeviceMetadata metadata = new DeviceMetadata(data);
 ```
 
-使用下列程式碼範例來建立 `DeviceData` 物件，其中包括您在前一個範例中建立的 `DeviceInfo` 及 `DeviceMetadata` 物件。
+使用下列程式碼範例來建立 `DeviceData` 物件，其中包含您在前一個範例中建立的 `DeviceInfo` 及 `DeviceMetadata` 物件。
 
   ```
   DeviceData deviceData = new DeviceData.Builder().
@@ -97,7 +96,7 @@ DeviceMetadata metadata = new DeviceMetadata(data);
 |內容 |說明 |
 |:---|:---|
 |`Organization-ID` |您的組織 ID|
-|`Device-Type` |您的裝置類型。一般而言，deviceType 是執行特定作業（例如，"weatherballoon"）的裝置分組。|
+|`Device-Type` |您的裝置類型。一般而言，deviceType 是執行特定作業的裝置分組，例如，"weatherballoon"。|
 |`Device-ID` |您的裝置 ID。一般而言，針對給定的裝置類型，deviceId 是該裝置的唯一 ID（例如，序號或 MAC 位址）。|
 |`Authentication-Method` |要使用的鑑別方法。目前唯一支援的值是 `token`。|
 |`Authentication-Token` |將裝置安全地連接至 Watson IoT Platform 的鑑別記號。|
@@ -116,7 +115,7 @@ options.setProperty("Authentication-Token", "AUTH TOKEN FOR DEVICE");
 ManagedDevice managedDevice = new ManagedDevice(options, deviceData);
 ```
 
-如果已使用 `DeviceClient` 實例，您將注意到內容的名稱略有不同，而且會將名稱鏡映在 {{site.data.keyword.iot_short_notm}} 儀表板中。若要從 `DeviceClient` 移轉至 `ManagedDevice`，您可以建構 `ManagedDevice` 實例來繼續使用早期格式，如下列範例所述：
+如果已使用 `DeviceClient` 實例，您將注意到內容的名稱略有不同，而且會鏡映 {{site.data.keyword.iot_short_notm}} 儀表板中的名稱。若要從 `DeviceClient` 移轉至 `ManagedDevice`，您可以建構 `ManagedDevice` 實例來繼續使用早期格式，如下列範例所概述：
 
 ```
 Properties options = new Properties();
@@ -158,7 +157,7 @@ ManagedDevice managedDevice = new ManagedDevice(mqttClient, deviceData);
 managedDevice.manage();
 ```
 
-裝置可以使用超載管理（生命期限）方法，為給定的時間範圍登錄裝置。時間範圍指定時間長度，指出裝置必須在此時間長度內傳送另一個**受管理裝置**要求，來避免被回復為未受管理裝置並標示為休眠。
+裝置可以使用超載管理 (lifetime) 方法，為給定的時間範圍登錄裝置。時間範圍指定時間長度，裝置必須在這段時間內傳送另一個**管理裝置**要求，來避免被回復為未受管理裝置並標示為休眠。
 
 ```
 managedDevice.manage(3600);
@@ -207,7 +206,7 @@ if(rc == 200) {
 }
 ```
 
-後續可以更新裝置位置，方法為修改 `DeviceLocation` 物件的內容，如下列範例所概述：
+對於裝置位置的後續更新，可以藉由修改 `DeviceLocation` 物件的內容來進行，如下列範例所概述：
 
 ```
 int rc = deviceLocation.update(40.28, -98.33, 11);
@@ -239,13 +238,13 @@ DeviceData deviceData = new DeviceData.Builder().
              build();
 ```
 
-裝置一連接至 {{site.data.keyword.iot_short_notm}} 時，就可以呼叫 send() 方法來傳送 `ErrorCode`，如下所示：
+裝置一連接至 {{site.data.keyword.iot_short_notm}} 後，就可以呼叫 send() 方法來傳送 `ErrorCode`，如下所示：
 
 ```
 errorCode.send();
 ```
 
-稍後，可以呼叫 append 方法，將任何新的 `ErrorCodes` 輕鬆地新增至 {{site.data.keyword.iot_short_notm}}，如下所示：
+稍後，可以呼叫 append 方法，將任何新的 `ErrorCode` 輕鬆地新增至 {{site.data.keyword.iot_short_notm}}，如下所示：
 
 ```
 int rc = errorCode.append(500);
@@ -269,7 +268,7 @@ if(rc == 200) {
 
 ## 附加及清除日誌訊息
 
-裝置可以選擇新增日誌項目，以將變更通知 {{site.data.keyword.iot_short_notm}}。日誌項目包括下列資訊：
+裝置可以選擇新增日誌項目，以將變更通知 {{site.data.keyword.iot_short_notm}}。日誌項目包含下列資訊：
 - 日誌訊息
 - 時間戳記
 - 嚴重性
@@ -290,7 +289,7 @@ DeviceData deviceData = new DeviceData.Builder().
              build();
 ```
 
-裝置一連接至 {{site.data.keyword.iot_short_notm}} 時，就可以呼叫 send() 方法來傳送日誌訊息，如下列範例所概述：
+裝置一連接至 {{site.data.keyword.iot_short_notm}} 後，就可以呼叫 send() 方法來傳送日誌訊息，如下列範例所概述：
 
 ```
 log.send();
@@ -367,7 +366,7 @@ managedDevice.supportsFirmwareActions(true);
 managedDevice.manage();
 ```
 
-當管理要求將韌體動作支援通知 {{site.data.keyword.iot_short_notm}} 時，在設定韌體動作支援之後，需要立即呼叫 manage() 方法。
+當管理要求通知 {{site.data.keyword.iot_short_notm}} 韌體動作支援相關事宜時，在設定韌體動作支援之後，需要立即呼叫 manage() 方法。
 
 **3. 建立韌體動作處理程式**
 
@@ -525,7 +524,7 @@ public void updateFirmware(DeviceFirmware deviceFirmware) {
 
 **4. 將處理程式新增至 ManagedDevice**
 
-已建立的處理程式需要新增至 ManagedDevice 實例，以在有一個來自 {{site.data.keyword.iot_short_notm}} 的「韌體」動作要求時，ibmiotf 用戶端程式庫即會呼叫對應方法。
+已建立的處理程式需要新增至 ManagedDevice 實例，以便在有一個來自 {{site.data.keyword.iot_short_notm}} 的「韌體」動作要求時，ibmiotf 用戶端程式庫會呼叫對應方法。
 
 ```
 DeviceFirmwareHandlerSample fwHandler = new DeviceFirmwareHandlerSample();
@@ -552,7 +551,7 @@ managedDevice.supportsDeviceActions(true);
     managedDevice.manage();
 ```
 
-當管理要求將裝置動作支援通知 {{site.data.keyword.iot_short_notm}} 時，在設定裝置動作支援之後，需要立即呼叫 manage() 方法。
+當管理要求通知 {{site.data.keyword.iot_short_notm}} 裝置動作支援相關事宜時，在設定裝置動作支援之後，需要立即呼叫 manage() 方法。
 
 **2. 建立裝置動作處理程式**
 
@@ -565,7 +564,7 @@ public abstract void handleFactoryReset(DeviceAction action);
 
 **2.1 handleReboot 的範例實作**
 
-實作必須新增邏輯以重新開啟裝置，並透過 DeviceAction 物件報告重新開機的狀態。只有在發生失敗時，裝置才需要更新狀態以及選用性訊息（因為成功作業會將裝置重新開機，而且裝置程式碼將沒有控制項來更新 {{site.data.keyword.iot_short_notm}}）。下面顯示 Raspberry Pi 裝置的重新開機實作範例：
+實作必須新增邏輯，透過 DeviceAction 物件重新開啟裝置，並報告重新開機的狀態。只有在發生失敗時，裝置才需要更新狀態以及選用性訊息（因為成功作業會將裝置重新開機，而且裝置程式碼將沒有控制權可更新 {{site.data.keyword.iot_short_notm}}）。下面顯示 Raspberry Pi 裝置的重新開機實作範例：
 
 ```
 public void handleReboot(DeviceAction action) {
@@ -594,7 +593,7 @@ public void handleReboot(DeviceAction action) {
 
 **2.2 handleFactoryReset 的範例實作**
 
-實作必須新增邏輯，將裝置重設為原廠設定，並透過 DeviceAction 物件報告狀態。只有在發生失敗時，裝置才需要更新狀態以及選用性訊息（因為在此過程中，裝置會重新開機，而且裝置程式碼將沒有控制項來更新 {{site.data.keyword.iot_short_notm}} 的狀態）。「重設為原廠設定」實作的架構如下所示：
+實作必須新增邏輯，透過 DeviceAction 物件將裝置重設為原廠設定，並報告狀態。只有在發生失敗時，裝置才需要更新狀態以及選用性訊息（因為在此過程中，裝置會重新開機，而且裝置程式碼將沒有控制權可更新 {{site.data.keyword.iot_short_notm}} 的狀態）。「重設為原廠設定」實作的架構如下所示：
 
 ```
 public void handleFactoryReset(DeviceAction action) {
@@ -611,7 +610,7 @@ public void handleFactoryReset(DeviceAction action) {
 
 **3. 將處理程式新增至 ManagedDevice**
 
-已建立的處理程式需要新增至 ManagedDevice 實例，以在有一個來自 {{site.data.keyword.iot_short_notm}} 的裝置動作要求時，ibmiotf 用戶端程式庫即會呼叫對應方法。
+已建立的處理程式需要新增至 ManagedDevice 實例，以便在有一個來自 {{site.data.keyword.iot_short_notm}} 的裝置動作要求時，ibmiotf 用戶端程式庫會呼叫對應方法。
 
 ```
 DeviceActionHandlerSample actionHandler = new DeviceActionHandlerSample();

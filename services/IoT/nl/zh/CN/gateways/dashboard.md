@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-27"
 
 ---
 
@@ -14,7 +15,6 @@ copyright:
 
 # 连接网关
 {: #IoT_connectGateway}
-上次更新时间：2016 年 7 月 28 日
 
 您必须将网关连接到 {{site.data.keyword.iot_full}}，然后才能开始从连接到网关的设备接收数据。将网关连接到 {{site.data.keyword.iot_short_notm}} 涉及创建网关设备类型和向 {{site.data.keyword.iot_short_notm}} 注册网关。然后，可以使用注册信息将网关连接到 {{site.data.keyword.iot_short_notm}}。
 {:shortdesc}
@@ -26,17 +26,18 @@ copyright:
 {: #Prerequisites}
 
 网关设备具有的许可权多于常规设备，可以执行以下功能：
-- 向 Watson IoT Platform 注册新设备
+- 向 {{site.data.keyword.iot_short_notm}} 注册新设备
 - 像直接连接的设备一样，发送和接收自己的传感器数据
 - 代表与其连接的设备发送和接收数据
-- 运行设备管理代理程序，以便可以对其进行管理，还可管理与其连接的设备。有关网关开发者的信息，请参阅[网关的 MQTT 连接](mqtt.html)。
+- 运行设备管理代理程序，以便可以对其进行管理，还可管理与其连接的设备。
+有关网关开发者的信息，请参阅[网关的 MQTT 连接](mqtt.html)。
 
 您还可以使用网关对网关设备发送的数据执行边缘分析。有关更多信息，请参阅[边缘分析](../edge_analytics.html)和[安装 Edge Analytics Agent](#edge)。
 
 ## 步骤 1：向 {{site.data.keyword.iot_short_notm}} 注册网关  
 {: #register_gateway}
 
-注册网关涉及将设备分类为网关类型，为网关命名，以及提供网关信息。然后，提供连接令牌或接受 {{site.data.keyword.iot_short_notm}} 生成的令牌。
+注册网关涉及将设备分类为网关类型，为网关命名，以及提供网关信息。然后，提供连接令牌，或接受 {{site.data.keyword.iot_short_notm}} 生成的令牌。
 
 **提示：**可以在 {{site.data.keyword.iot_short_notm}} 仪表板中一次添加一个网关，也可以使用 [{{site.data.keyword.iot_short_notm}} API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/post_bulk_devices_add) 一次添加一个或多个网关。
 
@@ -47,20 +48,34 @@ copyright:
 3. 为要添加的设备选择或创建设备类型。
 连接到 {{site.data.keyword.iot_short_notm}} 的每个设备都必须与一种设备类型相关联。设备类型是共享公共特征的设备组。  
  1. 单击**创建设备类型**，然后单击**创建网关类型**。
- 2. 输入网关类型的名称（例如，`my_gateway_type`）和描述。
- 3. 可选：输入网关类型属性和元数据。
- **提示：**以后可以添加和编辑属性与元数据。
+ 2. 输入设备类型名称（例如，`my_gateway_type`）和网关类型描述。
+**重要信息**：设备类型名称不得超过 36 个字符，仅可包含以下字符：
+ <ul>
+  <li>字母数字字符（a-z、A-Z 和 0-9）</li>
+  <li>连字符（-）</li>
+  <li>下划线 (&lowbar;)</li>
+  <li>句点 (.)</li>
+  </ul>3. 可选：输入网关类型属性和元数据。    
+ **提示：**您可以稍后添加和编辑属性及元数据。
  4. 单击**创建**以添加新的网关类型。
 10. 单击**下一步**以开始添加具有所选网关类型的网关设备的过程。
 11. 输入设备标识，例如 `my_gateway_device`。
 设备标识用于在 {{site.data.keyword.iot_short_notm}} 仪表板中标识网关设备；设备标识也是用于将网关设备连接到 {{site.data.keyword.iot_short_notm}} 的必需参数。
+**重要信息**：设备标识不得超过 36 个字符，仅可包含以下字符：
+ <ul>
+ <li>字母数字字符（a-z、A-Z 和 0-9）</li>
+ <li>连字符 (-)</li>
+ <li>下划线 (&lowbar;)</li>
+ <li>句点 (.)</li>  
+ </ul>
+ **提示：**对于连接网络的设备，设备标识可以是（例如）不带任何分隔冒号的设备 MAC 地址。  
 12. 可选：单击**其他字段**以添加网关设备信息，例如序列号、制造商、型号等。
- **提示：**以后可以添加和编辑这些信息。
+ **提示：**您可以稍后添加和编辑此信息。
 12. 可选：输入设备 JSON 元数据。
- **提示：**以后可以添加和编辑设备元数据。
+ **提示：**您可以稍后添加和编辑设备元数据。
 13. 单击**下一步**以完成添加网关设备的操作。
 14. 验证摘要信息是否正确，然后单击**添加**以添加网关设备。
-**提示：**您可以选择接受自动生成的认证令牌，或自己提供认证令牌。如果选择创建自己的令牌，请确保令牌的长度介于 8 到 36 个字符之间，包含大小写字母、数字、连字符、下划线或句点的混合。令牌不能包含重复的字符序列、字典单词、用户名或其他预定义的序列。
+**提示：**您可以选择接受自动生成的认证令牌，或自己提供认证令牌。如果选择创建自己的令牌，请确保令牌的长度介于 8 到 36 个字符之间，包含大小写字母、数字、连字符、下划线或句点的混合。此令牌不得包含重复的字符序列、字典单词、用户名或其他预定义序列。
 15. 在设备信息页面中，复制并保存以下设备信息：  
  - 组织标识，例如 `tubo8x`
  - 设备类型，例如 `my_gateway_type`
@@ -78,7 +93,7 @@ copyright:
 
 有关将网关连接到 {{site.data.keyword.iot_short_notm}} 的信息，请参阅[网关的 MQTT 连接](mqtt.html)。
 
-**提示：**有一系列的诀窍可用于将设备连接到 {{site.data.keyword.iot_short_notm}}。有关诀窍的列表，请参阅 IBM.com 上提供的[设备连接诀窍](https://developer.ibm.com/recipes/?post_type=tutorials&s=IoT)。
+**提示：**有一系列的诀窍可用于将设备连接到 {{site.data.keyword.iot_short_notm}}。有关诀窍的列表，请参阅 IBM.com 上提供的[设备连接诀窍](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/)。
 
 
 ## 步骤 3：通过网关连接设备
@@ -115,7 +130,7 @@ Edge Analytics Agent (EAA) 是基于 [Apache Quarks](http://quarks.incubator.apa
 可以使用 EAA config.properties 文件来设置基本软件配置参数。
 
 要更新 EAA 配置，请执行以下操作：
-1. 在运行 EAA 的网关系统上，找到 EAA config.properties 文件。
+1. 在运行 EAA 的网关系统上，找到 EAA config.properties 文件。例如：`../dglux-server/dslinks/ibm-watson-iot-edge-analytics-dslink-java-0.0.1/config.properties`
 2. 开始编辑设置之前，请先制作该文件的备份副本。
 3. 打开 config.properties 文件进行编辑。
 4. 编辑环境的配置参数：

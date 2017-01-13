@@ -1,4 +1,4 @@
-﻿---
+---
 
 copyright:
   years: 2015, 2016
@@ -16,7 +16,7 @@ lastupdated: "2016-10-24"
 {: #java}
 
 
-Vous pouvez créer et personnaliser des applications qui interagissent avec votre organisation sur {{site.data.keyword.iot_full}} en utilisant Java. Une bibliothèque client Java pour {{site.data.keyword.iot_short_notm}}, de la documentation, ainsi que des exemples vous sont fournis pour vous permettre de vous initier au développement d'application. 
+Vous pouvez créer et personnaliser des applications qui interagissent avec votre organisation sur {{site.data.keyword.iot_full}} en utilisant Java. Une bibliothèque client Java pour {{site.data.keyword.iot_short_notm}}, de la documentation, ainsi que des exemples vous sont fournis pour vous permettre de vous initier au développement d'application.
 
 {:shortdesc}
 
@@ -32,7 +32,7 @@ Pour accéder aux bibliothèques et exemples client Java pour {{site.data.keywor
 ## Constructeur
 {: #constructor}
 
-Le constructeur génère l'instance client et accepte l'objet `Propriétés` contenant les définitions suivantes : 
+Le constructeur génère l'instance client et accepte l'objet `Propriétés` contenant les définitions suivantes :
 
 | Définition     |Description     |
 |----------------|----------------|
@@ -40,7 +40,7 @@ Le constructeur génère l'instance client et accepte l'objet `Propriétés` con
 |`id` |ID unique de l'application au sein de votre organisation.|
 |`auth-method`  |Méthode d'authentification. La seule méthode prise en charge est `apikey`.|
 |`auth-key`   |Clé d'API facultative qui est requise lorsque vous affectez la valeur `apikey` au paramètre auth-method.|
-|`auth-token`   |Jeton de clé d'API qui est également requis lorsque vous affectez la valeur `apikey` au paramètre auth-method.  |
+|`auth-token`   |Jeton de clé d'API qui est également requis lorsque vous affectez la valeur `apikey` au paramètre auth-method. |
 |`clean-session`|Valeur true ou false requise uniquement si vous souhaitez connecter l'application en mode d'abonnement durable. Par défaut, `clean-session` prend la valeur `true`.|
 |`Port`|Numéro de port auquel se connecter. Indiquez 8883 ou 443. Si vous n'indiquez pas de numéro de port, le client se connecte à {{site.data.keyword.iot_short_notm}} sur le numéro de port 8883 par défaut.|
 |`MaxInflightMessages`  |Définit le nombre maximal de messages en cours pour la connexion. La valeur par défaut est 100.|
@@ -77,7 +77,7 @@ L'exemple de code suivant vous montre comment construire l'instance de client d'
 
 ### Utilisation d'un fichier de configuration
 
-Au lieu d'inclure directement l'objet `Propriétés`, vous pouvez utiliser un fichier de configuration qui contient les paires nom-valeur pour l'objet `Propriétés`, comme décrit dans l'exemple de code suivant : 
+Au lieu d'inclure directement l'objet `Propriétés`, vous pouvez utiliser un fichier de configuration qui contient les paires nom-valeur pour l'objet `Propriétés`, comme décrit dans l'exemple de code suivant :
 
 ```
     Properties props = ApplicationClient.parsePropertiesFile(new File("C:\\temp\\application.prop"));
@@ -101,7 +101,7 @@ Le fichier de configuration d'application spécifié doit être au format suivan
 
 Pour établir la connexion à {{site.data.keyword.iot_short_notm}}, utilisez la fonction `connect()`. La fonction `connect()` inclut un paramètre booléen facultatif appelé `autoRetry`, qui détermine si la bibliothèque tente de se reconnecter si un échec de connexion MqttException se produit. Par défaut, `autoRetry` a pour valeur true. Si une connexion MqttSecurityException échoue en raison de détails d'enregistrement de terminal incorrects, la bibliothèque ne tente pas de se reconnecter, même si `autoRetry` a pour valeur true.
 
-Afin de définir l'intervalle 'keep alive' pour MQTT, vous pouvez éventuellement utiliser la méthode `setKeepAliveInterval(int)` avant d'appeler la fonction `connect()`. La valeur `setKeepAliveInterval(int)` est mesurée en secondes et définit l'intervalle de temps maximal entre les messages envoyés ou reçus. Lorsque cette valeur d'intervalle est utilisée, le client peut détecter à quel moment le serveur n'est plus disponible sans avoir à attendre la fin du délai d'attente TCP/IP. Le client s'assure qu'au moins un message transite par le réseau au cours de chaque période d'intervalle 'keep alive'. Si aucun message relatif aux données n'est reçu pendant le délai d'attente, le client envoie un petit message `ping` dont le serveur accuse réception. Par défaut, le paramètre `setKeepAliveInterval(int)` prend la valeur 60 secondes. Pour désactiver la fonction de traitement 'keep alive' sur le client, affectez la valeur 0 au paramètre `setKeepAliveInterval(int)`. 
+Afin de définir l'intervalle 'keep alive' pour MQTT, vous pouvez éventuellement utiliser la méthode `setKeepAliveInterval(int)` avant d'appeler la fonction `connect()`. La valeur `setKeepAliveInterval(int)` est mesurée en secondes et définit l'intervalle de temps maximal entre les messages envoyés ou reçus. Lorsque cette valeur d'intervalle est utilisée, le client peut détecter à quel moment le serveur n'est plus disponible sans avoir à attendre la fin du délai d'attente TCP/IP. Le client s'assure qu'au moins un message transite par le réseau au cours de chaque période d'intervalle 'keep alive'. Si aucun message relatif aux données n'est reçu pendant le délai d'attente, le client envoie un petit message `ping` dont le serveur accuse réception. Par défaut, le paramètre `setKeepAliveInterval(int)` prend la valeur 60 secondes. Pour désactiver la fonction de traitement 'keep alive' sur le client, affectez la valeur 0 au paramètre `setKeepAliveInterval(int)`.
 
 ```
     Properties props = ApplicationClient.parsePropertiesFile(new File("C:\\temp\\application.prop"));
@@ -110,7 +110,7 @@ Afin de définir l'intervalle 'keep alive' pour MQTT, vous pouvez éventuellemen
     myClient.connect();
 ```
 
-Pour contrôler le nombre de tentatives en cas d'échec d'une connexion, spécifiez un nombre entier dans la fonction myClient.connect(), comme indiqué dans le fragment de code suivant : 
+Pour contrôler le nombre de tentatives en cas d'échec d'une connexion, spécifiez un nombre entier dans la fonction myClient.connect(), comme indiqué dans le fragment de code suivant :
 
 ```
     DeviceClient myClient = new DeviceClient(options);
@@ -118,7 +118,7 @@ Pour contrôler le nombre de tentatives en cas d'échec d'une connexion, spécif
     myClient.connect(10);
 ```
 
-Une fois connectés au service {{site.data.keyword.iot_short_notm}}, vos clients d'application peuvent s'abonner à des événements et à des statuts de terminal et publier des événements et des commandes de terminal. 
+Une fois connectés au service {{site.data.keyword.iot_short_notm}}, vos clients d'application peuvent s'abonner à des événements et à des statuts de terminal et publier des événements et des commandes de terminal.
 
 ## Abonnement aux événements d'un terminal
 {: #subscribing_device_events}
@@ -182,7 +182,7 @@ Pour traiter les événements reçus par vos abonnements, enregistrez une métho
 |:---|:---|
 |`event.device`|Chaîne|Identifie le terminal de manière unique parmi tous les types de terminal dans l'organisation.|
 |`event.deviceType`|Chaîne|Identifie le type de terminal. Généralement, deviceType regroupe des terminaux qui effectuent une tâche spécifique, par exemple, "weatherballoon".|
-|`event.deviceId`|Chaîne|Représente l'ID du terminal. Généralement, pour un type de terminal donné, deviceId est un identificateur unique, par exemple, un numéro de série ou une adresse MAC. |
+|`event.deviceId`|Chaîne|Représente l'ID du terminal. Généralement, pour un type de terminal donné, deviceId est un identificateur unique, par exemple, un numéro de série ou une adresse MAC.|
 |`event.event`|Chaîne|Utilisé généralement pour regrouper des événements spécifiques, par exemple, "status", "warning" et "data".|
 |`event.format`|Chaîne|Le format peut être n'importe quelle chaîne, par exemple, JSON.  |
 |`event.data`|Dictionnaire|Données du contenu du message. La longueur maximale est de 131072 octets.|
@@ -410,11 +410,11 @@ De même, pour publier des événements au format binaire, utilisez le tableau d
 ### Publication d'événements à l'aide de HTTP
 {: #publishing_events_http}
 
-Outre l'utilisation de MQTT, vous pouvez également configurer vos applications pour qu'elles publient des événements de terminal sur {{site.data.keyword.iot_short_notm}} via HTTP. Les étapes suivantes permettent de publier des événements de terminal via HTTP : 
+Outre l'utilisation de MQTT, vous pouvez également configurer vos applications pour qu'elles publient des événements de terminal sur {{site.data.keyword.iot_short_notm}} via HTTP. Les étapes suivantes permettent de publier des événements de terminal via HTTP :
 
-1. Construire l'instance ApplicationClient à l'aide du fichier de propriétés. 
-2. Construire l'événement qui doit être publié. 
-3. Spécifier le nom d'événement, le type de terminal et l'ID de terminal. 
+1. Construire l'instance ApplicationClient à l'aide du fichier de propriétés.
+2. Construire l'événement qui doit être publié.
+3. Spécifier le nom d'événement, le type de terminal et l'ID de terminal.
 4. Publier l'événement à l'aide de la méthode `publishEventOverHTTP`(), comme illustré dans l'exemple de code suivant :
 
 ```
@@ -428,7 +428,7 @@ Outre l'utilisation de MQTT, vous pouvez également configurer vos applications 
     	boolean status = myClient.publishApplicationEventforDeviceOverHTTP(deviceId, deviceType, "blink", event, ContentType.json);
 ```
 
-Pour la totalité de l'exemple de code, voir l'exemple d'application [HttpApplicationDeviceEventPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpApplicationDeviceEventPublish.java). 
+Pour la totalité de l'exemple de code, voir l'exemple d'application [HttpApplicationDeviceEventPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpApplicationDeviceEventPublish.java).
 
 En fonction des paramètres définis dans le fichier de propriétés, la méthode `publishEventOverHTTP()` publie l'événement en mode Quickstart ou en mode de flux enregistré. Lorsque `quickstart` est spécifié comme ID d'organisation dans le fichier de propriétés, la méthode `publishEventOverHTTP()` publie l'événement sur le service Quickstart de {{site.data.keyword.iot_short_notm}} au format HTTP normal. Lorsqu'une organisation enregistrée valide est spécifiée dans le fichier de propriétés, l'événement est toujours publié à l'aide de HTTPS de sorte que toutes les communications soient sécurisées.
 
@@ -456,7 +456,7 @@ Les applications peuvent publier des commandes sur des terminaux connectés, com
 ### Publication de commandes à l'aide de HTTP
 {: #publishing_commands_http}
 
-Outre l'utilisation de MQTT, vous pouvez également configurer vos applications pour qu'elles publient des commandes sur le terminal connecté via HTTP. Les étapes suivantes permettent de publier des événements de terminal via HTTP : 
+Outre l'utilisation de MQTT, vous pouvez également configurer vos applications pour qu'elles publient des commandes sur le terminal connecté via HTTP. Les étapes suivantes permettent de publier des événements de terminal via HTTP :
 
 1. Construire l'instance ApplicationClient à l'aide du fichier de propriétés
 2. Construire la commande qui doit être publiée
@@ -474,7 +474,7 @@ Outre l'utilisation de MQTT, vous pouvez également configurer vos applications 
 	boolean response = myClient.publishCommandOverHTTP("execute", event);
 ```
 
-Pour afficher la totalité de l'exemple de code, voir l'exemple d'application [HttpCommandPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpCommandPublish.java). 
+Pour afficher la totalité de l'exemple de code, voir l'exemple d'application [HttpCommandPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpCommandPublish.java).
 
 Le protocole HTTP fournit une distribution de type 'une fois tout au plus', semblable au niveau de qualité de service 'une fois tout au plus' (QoS 0) du protocole MQTT. Lorsque vous utilisez la distribution de type 'une fois tout au plus' pour publier des commandes, l'application doit implémenter une logique de relance au cas où une erreur se produirait. Pour plus d'informations, voir [API REST HTTP pour les applications](../api.html).
 

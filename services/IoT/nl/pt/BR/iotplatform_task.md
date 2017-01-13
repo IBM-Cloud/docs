@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-10-27"
 
 ---
 
@@ -13,10 +14,9 @@ copyright:
 
 # Conectando dispositivos
 {: #iotplatform_task}
-Última atualização: 08 de setembro de 2016
-{: .last-updated}
 
-Antes que possa iniciar o recebimento de dados de seus dispositivos IoT, deve-se conectá-los ao {{site.data.keyword.iot_full}}. A conexão de um dispositivo ao {{site.data.keyword.iot_short_notm}} envolve registrar o dispositivo com o {{site.data.keyword.iot_short_notm}} e, em seguida, usar as informações de registro para configurar o dispositivo para se conectar ao {{site.data.keyword.iot_short_notm}}. {:shortdesc}
+Antes que possa iniciar o recebimento de dados de seus dispositivos IoT, deve-se conectá-los ao {{site.data.keyword.iot_full}}. A conexão de um dispositivo ao {{site.data.keyword.iot_short_notm}} envolve registrar o dispositivo com o {{site.data.keyword.iot_short_notm}} e, em seguida, usar as informações de registro para configurar o dispositivo para se conectar ao {{site.data.keyword.iot_short_notm}}.
+{:shortdesc}
 
 ## Antes de iniciar
 {: #byb}
@@ -50,20 +50,48 @@ Para incluir um dispositivo a partir do painel do {{site.data.keyword.iot_short_
 Cada dispositivo conectado ao {{site.data.keyword.iot_short_notm}} deve estar associado a um tipo de dispositivo. Tipos de dispositivos são grupos de dispositivos que compartilham características.  
 Quando você incluir seu primeiro dispositivo em sua organização do {{site.data.keyword.iot_short_notm}}, nenhum tipo de dispositivo estará disponível no menu **Tipo de dispositivo**. Você deve primeiramente criar um tipo de dispositivo:
  1. Clique em **Criar tipo de dispositivo**.
- 2. Insira um nome, como `my_device_type`, e uma descrição para o tipo de dispositivo.
+ 2. Insira um nome de tipo de dispositivo, como `my_device_type`, e uma descrição para o tipo de dispositivo.
+ **Importante:** O nome de tipo de dispositivo deve ter no máximo 36 caracteres e pode conter apenas:
+ <ul>
+  <li>Caracteres alfanuméricos (a-z, A-Z, 0-9)</li>
+  <li>Hifens (-)</li>
+  <li>Sublinhados (&lowbar;)</li>
+  <li>Pontos (.)</li>
+  </ul>
  3. Opcional: insira atributos e metadados de tipo de dispositivo.    
  **Dica:** é possível incluir e editar atributos e metadados posteriormente.
  4. Clique em **Criar** para incluir o novo tipo de dispositivo.
 10. Clique em **Avançar** para iniciar o processo de incluir seu dispositivo com o tipo de dispositivo selecionado.
-11. Insira um ID do dispositivo. **Dica:** para dispositivos conectados à rede, isso poderia por exemplo ser o endereço de Controle de Acesso à Mídia (MAC) do dispositivo sem dois pontos separando.  
-O ID do dispositivo é usado para identificar o dispositivo no painel do {{site.data.keyword.iot_short_notm}} e também é um parâmetro necessário para conectar seu dispositivo ao {{site.data.keyword.iot_short_notm}}.
+11. Insira um ID do dispositivo, como `my_first_device`.
+O ID do dispositivo é usado para identificar o dispositivo no painel do {{site.data.keyword.iot_short_notm}} e também é um parâmetro necessário para conectar seu dispositivo ao {{site.data.keyword.iot_short_notm}}.  
+**Importante:** O ID do dispositivo deve ter no máximo 36 caracteres e pode conter apenas:
+ <ul>
+ <li>Caracteres alfanuméricos (a-z, A-Z, 0-9)</li>
+ <li>Hifens (-)</li>
+ <li>Sublinhados (&lowbar;)</li>
+ <li>Pontos (.)</li>  
+ </ul>
+ **Dica:** para dispositivos conectados à rede, o ID do dispositivo poderia, por exemplo, ser o endereço de Controle de Acesso à Mídia do dispositivo sem dois pontos separando.  
 12. Opcional: clique em **Campos adicionais** para incluir informações de dispositivo, como número de série, fabricante, modelo, etc.  
  **Dica:** é possível incluir e editar essas informações posteriormente.
 12. Opcional: insira os metadados JSON do dispositivo.  
  **Dica:** é possível incluir e editar metadados do dispositivo posteriormente.
 13. Clique em **Avançar** para concluir a inclusão de seu dispositivo.
 14. Verifique se as informações de resumo estão corretas e, em seguida, clique em **Incluir** para incluir a conexão.  
-**Dica:** você tem a opção para aceitar um token de autenticação gerado automaticamente ou você mesmo fornecer um token de autenticação. Se você escolher criar seu próprio token, certifique-se de que ele consiste apenas em caracteres alfanuméricos numéricos e os seguintes caracteres especiais: hífen (-), sublinhado (_), ponto de exclamação (!), e comercial (&), arroba (@), ponto de interrogação (?), asterisco (*), sinal de mais (+), ponto (.) ou parêntese direito e esquerdo. O token não deve conter sequências de caracteres repetidos, palavras de dicionário, nomes de usuário ou outras sequências predefinidas.
+**Dica:** você tem a opção para aceitar um token de autenticação gerado automaticamente ou você mesmo fornecer um token de autenticação.  
+Se você optar por criar seu próprio token, certifique-se de que ele tenha entre 8 e 36 caracteres de comprimento e consista apenas em caracteres alfanuméricos e nos seguintes caracteres especiais:
+ - Hífen (-)
+ - Sublinhado (&lowbar;)
+ - Ponto de exclamação (!)
+ - E comercial (&)
+ - Sinal de arroba (@)
+ - Ponto de interrogação (?)
+ - Asterisco (\*)
+ - Sinal de mais (+)
+ - Ponto (.)
+ - Parênteses direito e esquerdo.  
+
+ **Importante:** O token não deve conter sequências de caracteres repetidos, palavras de dicionário, nomes de usuário ou outras sequências predefinidas.
 15. Na página de informações do dispositivo, copie e salve as informações do dispositivo a seguir:  
  - ID da organização, como `tubo8x`
  - Tipo de dispositivo, como `my_device_type`
@@ -83,7 +111,7 @@ O {{site.data.keyword.iot_short_notm}} suporta muitos tipos de dispositivos. O p
 - Configure seu dispositivo para o sistema de mensagens MQTT e use ID da organização, Token de autenticação, Tipo de dispositivo e ID do dispositivo para autenticar.  
 - Envie mensagens do dispositivo para sua organização do {{site.data.keyword.iot_short_notm}} usando o protocolo MQTT.
 
-**Dica:** muitas receitas de conexão estão disponíveis para os dispositivos comumente usados. Para obter uma lista de receitas, consulte as [Receitas de conexão de dispositivo](https://developer.ibm.com/recipes/?post_type=tutorials&s=IoT) que estão disponíveis em IBM.com.
+**Dica:** muitas receitas de conexão estão disponíveis para os dispositivos comumente usados. Para obter uma lista de receitas, consulte as [Receitas de conexão de dispositivo](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/) que estão disponíveis em IBM.com.
 
 As informações a seguir são necessárias ao conectar seu dispositivo:
 - URL (Localizador Uniforme de Recursos): *org_id*.messaging.internetofthings.ibmcloud.com

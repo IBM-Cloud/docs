@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-09-16"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 {:pre: .pre}
 
 # Rollen für Benutzer, Anwendungen und Gateways
-Letzte Aktualisierung: 16. September 2016
-{: .last-updated}
 
 Rollen sind Gruppen von Berechtigungen, die Sie zum Erteilen oder Einschränken von Zugriff auf bestimmte Operationen verwenden können. Sie können Rollen verwenden, um Berechtigungen für Gruppen aus Benutzern, Anwendungen und Gateways zu verwalten.
 {:shortdesc}
@@ -27,7 +26,7 @@ Folgende standardmäßigen Benutzerrollen sind verfügbar:
 
 Benutzerrolle | Beschreibung
 ------------- | -------------
-Administrator | Eine 'Superuser'-Rolle, die Zugriff auf alle benutzerbezogenen APIs gewährt. Administratoren können nicht auf Operationen zugreifen, die auf Geräte und Anwendungen eingeschränkt sind. 
+Administrator | Eine 'Superuser'-Rolle, die Zugriff auf alle benutzerbezogenen APIs gewährt. Administratoren können nicht auf Operationen zugreifen, die auf Geräte und Anwendungen eingeschränkt sind.
 Operator | Für Front-End-Benutzer der Organisation bestimmt. Gewährt Zugriff auf den größten Teil der Organisationsoperationen, Zugriffssteuerungsoperationen, Analyseoperationen, Operationen von Drittanbietern und Risikomanagementoperationen.
 Entwickler | Gewährt unbeschränkten Zugriff auf Geräteoperationen, Protokolloperationen, Operationen der Archivierungsfunktion, Analyseoperationen und Operationen von Drittanbieterservices. Die Rolle bietet eingeschränkten Zugriff auf Operationen der Organisation, der Zugriffssteuerung und des Risikomanagements.
 Analyst | Gewährt Zugriff auf Analyseoperationen, einschließlich der Erstellung, Aktualisierung und dem Löschen von Regeln, Aktionen und Schemas.
