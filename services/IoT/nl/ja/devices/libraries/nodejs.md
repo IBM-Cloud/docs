@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-14"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # デバイス開発者用の Node.js
 {: #nodejs}
-最終更新日: 2016 年 9 月 14 日
-{: .last-updated}
 
 Node.js でクライアント・ライブラリーとサンプルを利用して、{{site.data.keyword.iot_full}} で組織と対話するデバイス・コードをビルド/開発することができます。
 {:shortdesc}

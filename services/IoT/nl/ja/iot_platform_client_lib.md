@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-03"
 
 ---
 
@@ -13,9 +14,6 @@ copyright:
 
 # {{site.data.keyword.iot_short}} 開発用のクライアント・ライブラリー
 {: #iot_platform_client_lib}
-
-最終更新日: 2016 年 8 月 3 日
-{: .last-updated}
 
 クライアント・ライブラリーには、{{site.data.keyword.iot_full}} でデバイスやアプリケーションを統合して接続するコードを作成したり開発したりするために必要なツールやファイルが用意されています。
 {:shortdesc}

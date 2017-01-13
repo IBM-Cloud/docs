@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-10-05"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 {:pre: .pre}
 
 # {{site.data.keyword.ssoshort}} の構成と使用
-最終更新日: 2016 年 10 月 5 日
-{: .last-updated}
 
 {{site.data.keyword.iot_full}} の代替ユーザー認証プロバイダーをサポートするよう {{site.data.keyword.ssofull}} サービスを構成することができます。{{site.data.keyword.ssoshort}} は、SAML 2.0、IBM Cloud Directory、ソーシャル・プロバイダー (Facebook、LinkedIn、Google+)、および Github をサポートします。
 {: .shortdesc}

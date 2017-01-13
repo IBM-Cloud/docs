@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-13"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # デバイス管理プロトコル
 {: #index}
-最終更新日: 2016 年 9 月 13 日
-{: .last-updated}
 
 ## 概要
 {: #introduction}

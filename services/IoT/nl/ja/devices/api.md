@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-11"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # デバイス用の HTTP REST API
 {: #api}
-最終更新日: 2016 年 10 月 11 日
-{: .last-updated}
 
 **重要:** デバイス用の {{site.data.keyword.iot_full}} HTTP REST API 機能は、限定されたベータ・プログラムの一部としてのみ使用できます。今後の更新によって、この機能の現行バージョンと互換性のない変更が行われる可能性があります。この機能を試して、[ご意見をお寄せください](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html)。
 

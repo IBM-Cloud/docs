@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-19"
 
 ---
 
@@ -12,10 +13,6 @@ copyright:
 {:pre: .pre}
 
 # Quickstart
-
-最終更新日: 2016 年 9 月 19 日
-{: .last-updated}
-
 
 [Quickstart](https://quickstart.internetofthings.ibmcloud.com/#/) は、デバイスを素早く {{site.data.keyword.iot_full}} に接続するために使用できるオープン・サンドボックスです。MQTT メッセージ・プロトコルをサポートしているデバイスなら、簡単に Quickstart に接続できます。
 

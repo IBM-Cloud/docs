@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-02"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # デバイス開発者のための C#
 {: #c_sharp}
-最終更新日: 2016 年 8 月 2 日
-{: .last-updated}
 
 C# を使用して、{{site.data.keyword.iot_full}} 上で組織と対話するデバイスを構築してカスタマイズできます。C# を使用してデバイスの開発を始める場合は、提供されている情報と例を活用してください。
 {:shortdesc}

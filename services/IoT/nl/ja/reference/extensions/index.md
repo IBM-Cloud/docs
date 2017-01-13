@@ -2,10 +2,11 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-18"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -13,8 +14,6 @@ copyright:
 
 # 外部サービスの統合
 {: #ref-index}
-最終更新日: 2016 年 9 月 26 日
-{: .last-updated}
 
 外部サービスの統合は、{{site.data.keyword.iot_full}} 組織内で、サード・パーティーまたは外部サービスからデータや操作にアクセスするためのものです。
 
@@ -39,6 +38,8 @@ Jasper は SIM デバイスの管理プラットフォームです。Jasper は 
 
 以下に示す構成手順を実行すると、それ以降、Jasper 接続デバイスのデバイス・ドリルダウンの中で、サポートされている操作にアクセスできるようになります。
 
+### Jasper 用の REST API
+Jasper 用の REST API にアクセスする場合は、[{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension) の資料にある Jasper 拡張のセクションを参照してください。
 
 ### Jasper 用の構成
 
@@ -89,6 +90,9 @@ AT&T 拡張により、以下の AT&T 操作が有効になります。
 - SMS から SIM への送信。
 - 料金プランの変更
 
+### AT&T 用の REST API
+AT&T 用の REST API にアクセスする場合は、[{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension) の資料にある AT&T 拡張のセクションを参照してください。
+
 ### AT&T 用の構成
 
 {{site.data.keyword.iot_short_notm}} 組織を AT&T に接続するには、組織の構成とデバイスの構成を完了する必要があります。
@@ -124,7 +128,6 @@ AT&T 接続済みデバイスを構成するには、以下の手順を実行し
 ```
 
 組織が正常に構成されると、*「デバイス・ドリルダウン (Device Drilldown)」*ビューの*「拡張構成」*セクションに*「拡張」*セクションが表示されます。
-
 
 ## ARM mbed コネクター
 {: #arm}
@@ -219,9 +222,10 @@ Orange SIM カードを持つ、{{site.data.keyword.iot_short_notm}} サービ�
 - 最後の状況リフレッシュ
 - ロケーション状況
 
+### Orange 用の REST API
+Orange 用の REST API にアクセスする場合は、[{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension) の資料にある Orange 拡張のセクションを参照してください。
+
 ### Orange 用の構成
-
-
 
 Orange 拡張を有効にするには、以下のようにします。
 
@@ -284,6 +288,9 @@ Orange 拡張が有効になった後、Orange SIM カードを持つ各デバ�
 The Weather Company 拡張は、気象データを既存の {{site.data.keyword.iot_short_notm}} デバイスに結合します。API を使用して「ロケーションの更新」要求が出されるか、デバイス管理メッセージを使用してデバイスでそのロケーションが既に設定されている場合、The Weather Company からの気象データがデバイスの詳細ビューに表示されます。
 
 **注:** 管理対象デバイスだけがデバイス側でロケーションを設定できます。非管理対象デバイスでは、すべて API を使用して手動でロケーションを設定する必要があります。デバイス・ロケーションの設定について詳しくは、[「ロケーションの更新」要求](../../devices/device_mgmt/index.html#update-location)を参照してください。
+
+### The Weather Company 用の REST API
+The Weather Company 用の REST API にアクセスする場合は、[{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather) の資料の『Device Location Weather』のセクションを参照してください。
 
 ### 気象データ
 

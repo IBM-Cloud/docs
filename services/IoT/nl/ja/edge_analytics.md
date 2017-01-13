@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-10-27"
 
 ---
 
@@ -14,13 +15,11 @@ copyright:
 
 # エッジ分析
 {: #edge_analytics}
-最終更新日: 2016 年 8 月 1 日
-{: .last-updated}
 
 エッジ分析を使用して、ルール・トリガー・プロセスをクラウドからエッジ分析対応のゲートウェイに移動します。こうしてデバイスの近くで分析処理を行うことで、クラウドへのデバイス・データ・トラフィックの量が大幅に削減される可能性があります。
 {:shortdesk}
 
-デバイスは、エッジ分析ルールでデータを解析するエッジ分析対応のゲートウェイにデータを送信します。ルールとそのアクションに応じて、重要なデータとアラートが {{site.data.keyword.iot_full}} に送信されるか、ゲートウェイでアラートをトリガーするか、ゲートウェイにとってローカルのテキスト・ファイルに書き込まれます。
+デバイスは、エッジ分析ルールでデータを解析するエッジ分析対応のゲートウェイにデータを送信します。ルールとアクションに応じて、重要なデータとアラートが {{site.data.keyword.iot_full}} に送信されるか、ゲートウェイでアラートがトリガーされるか、ゲートウェイのローカルのテキスト・ファイルに書き込まれます。
 
 以下の図は、{{site.data.keyword.iot_full}} エッジ分析環境の一般的なアーキテクチャーを示しています。
 ![エッジ分析アーキテクチャーのための IBM Watson IoT Platform](images/architecture_platform_edge.svg "エッジ分析アーキテクチャーを持つ IBM Watson IoT Platform")
@@ -42,14 +41,14 @@ copyright:
 - **「ルール」**ダッシュボードは、デバイスやゲートウェイのクラウド/エッジ・ルールやアクションを作成したり編集したりするために使用されます。
 - **「エッジ・ルールのゲートウェイ (Edge Rules Gateways)」**ボードは、ゲートウェイのエッジ・ルールをアクティブ化、非アクティブ化、更新、削除するために使用されます。「ルール」ダッシュボードから「エッジ・ルールのゲートウェイ (Edge Rules Gateways)」にアクセスするには、管理するエッジ・ルールの**「ルールの管理 (Manage Rule)」**をクリックします。詳しくは、[ゲートウェイのエッジ・ルールのアクティブ化、非アクティブ化、管理](#manage)を参照してください。
 
-ゲートウェイに接続されたデバイスのエッジ・ルールとアラートの概要を入手するには、以下のボードを使用します。
+ゲートウェイに接続されたデバイスについてトリガーされたエッジ・ルールとアラートの概要を確認するには、以下のボードを使用します。
 
- |ボード名 | 説明 |  
+|ボード名 | 説明 |  
  |:---|:---|  
   |ルール中心型の分析 | エッジ・ルールを含む、組織のルールを表示します。追加のカードには、転送されたエッジ・アラート、関連付けられているデバイス、デバイスのプロパティー、転送されたエッジ・アラート情報がリストされます。 |  
  |デバイス中心型の分析 | 組織に接続されているデバイスを表示します。追加のカードには、選択されたエッジ・デバイスの転送されたアラート、選択されたデバイスの情報、デバイスのプロパティー、転送されたアラート情報が表示されます。 |
 
- デフォルトの分析ボートについて詳しくは、[ボードとカードを使用したリアルタイム・データの視覚化](data_visualization.html#default_boards)を参照してください。
+デフォルトの分析ボートについて詳しくは、[ボードとカードを使用したリアルタイム・データの視覚化](data_visualization.html#default_boards)を参照してください。
 
 
 ## エッジ・ルールの作成
@@ -66,11 +65,17 @@ copyright:
 ルールのトリガーとして使用する 1 つ以上の IF 条件を追加します。
 並列行に条件を追加して OR 条件として適用したり、順次列に条件を追加して AND 条件として適用したりすることもできます。
 **注: **ルールの入力としてデバイス・プロパティーを選択できるようにするには、プロパティーをスキーマにマップする必要があります。詳しくは、[スキーマの作成](im_schemas.html)を参照してください。
-**重要:** AND を使用して順次結合される複数のプロパティー条件をトリガーする条件をトリガーするには、トリガー・データ・ポイントを同じデバイス・メッセージに含める必要があります。複数のメッセージでデータを受信する場合、順次条件はトリガーしません。
-**例:**
+  
+
+**重要:** 2 つのプロパティーを比較する条件をトリガーしたり、AND を使用して順次に結合された 2 つ以上のプロパティー条件をトリガーしたりする場合は、トリガーするデータ・ポイントを同じデバイス・メッセージに含める必要があります。複数のメッセージでデータを受け取った場合、条件または順次条件はトリガーしません。
+  
+
+**例:**  
 パラメーター値が 1 つの指定値を上回った場合にアラートをトリガーする場合、ルールは単純です。
-`temp>80`
+  
+`temp>80`  
 しきい値の組み合わせが満たされたときにトリガーする場合、ルールはもう少し複雑になります。
+  
 `temp>60 AND capacity>50`
    
 
@@ -189,26 +194,25 @@ EAA 対応のゲートウェイで実行されるエッジ・ルール・トリ�
 
 
 プロパティー | 説明
---- | ---
-`MsgInCount` | エッジ分析エージェント (EAA) に送信されたメッセージの数。
-`MsgInRate`、`MsgInRate1Min`、`MessageInRate5Min`、`MsgInRate15Min`、`MsgInMeanRate` | 最後の時間枠で EAA に送信された 1 秒あたりのメッセージの推定数。</br>**注:** `MsgInRate` は `MsgInRate1Min` の別名です。`MsgInMeanRate` は、開始以降の平均メッセージ・レートです。
-`LastHeartBeat` | 最後のハートビート・メッセージが生成されたミリ秒のタイム・スタンプ。ハートビート・メッセージは、少なくとも 10 秒ごとに生成されます。
-`CurrentTimestamp` | 現在のモニター・メッセージが生成されたミリ秒のタイム・スタンプ。
+ --- | ---
+ `MsgInCount` | エッジ分析エージェント (EAA) に送信されたメッセージの数。
+`MsgInRate` | 最近 1 分間に EAA に送信された 1 秒あたりの推定メッセージ数。  
+ `LastHeartBeat` | 最後のハートビート・メッセージが生成されたときのタイム・スタンプ (ミリ秒)。ハートビート・メッセージは、少なくとも 10 秒ごとに生成されます。
+`CurrentTimestamp` | 現在のモニター・メッセージが生成されたときのタイム・スタンプ (ミリ秒)。
 `IsAlive` | `LastHeartBeat` と `CurrentTimestamp` の差異が 20 秒より大きい場合、このプロパティーは 0 です。
 `BytesOutCount` | EAA によって {{site.data.keyword.iot_short}} に送信されるメッセージ・バイト数。
-`BytesOutRate`、`BytesOutRate1Min`、`BytesOutRate15Min`、`BytesOutRate5Min`、`BytesOutMeanRate` | 最後の時間枠で EAA によって {{site.data.keyword.iot_short}} に送信された 1 秒あたりの推定メッセージ・バイト数。</br>**注:** `BytesOutRate` は `BytesOutRate1Min` の別名です。`BytesOutMeanRate` は、開始以降の平均レートです。
+`BytesOutRate` | 最近 1 分間に EAA から {{site.data.keyword.iot_short}} に送信された 1 秒あたりの推定メッセージ・バイト数。
 `BytesInCount` | {{site.data.keyword.iot_short}} から EAA に送信されたメッセージ・バイト数。
-`BytesInMeanRate`、`BytesInRate1Min`、`BytesInRate`、`BytesInRate15Min`、`BytesInRate5Min` | 最後の時間枠で {{site.data.keyword.iot_short}} によって EAA に送信された 1 秒あたりの推定メッセージ・バイト数。</br>**注:** BytesOutRate は、BytesOutRate1Min の別名です。BytesOutMeanRate は、開始以降の平均レートをカウントします。
+`BytesInRate` | 最近 1 分間に {{site.data.keyword.iot_short}} から EAA に送信された 1 秒あたりの推定メッセージ・バイト数。
 `RuleBytesInCount` |EAA ルール・エンジン・コアに送信されたメッセージ・バイト数。</br> **注:** デバイス・タイプにルールが設定されていない場合、そのデバイス・タイプのメッセージは、ルール・エンジン・コアに送信されません。
-`RuleBytesInRate5Min`、`RuleBytesInRate`、`RuleBytesInMeanRate`、`RuleBytesInRate1Min`、`RuleBytesInRate15Min` | 最後の時間枠で EAA ルール・エンジン・コアに送信された 1 秒あたりの推定メッセージ・バイト数。</br> **注:** `RuleBytesInMeanRate` は、開始以降の平均レートです。
+`RuleBytesInRate` | 最近 1 分間に EAA ルール・エンジン・コアに送信された 1 秒あたりの推定メッセージ・バイト数。
 `MsgOutCount` | EAA によって {{site.data.keyword.iot_short}} に送信されたメッセージ数。
-`MsgOutRate`、`MsgOutMeanRate`、`MsgOutRate1Min`、`MessageOutRate5Min`、`MsgOutRate15Min` | 最後の時間枠で EAA によって {{site.data.keyword.iot_short}} に送信される 1 秒あたりの推定メッセージ・バイト数。</br> **注:** `MsgOutRate` は `MsgOutRate1Min` の別名です。`MsgOutMeanRate` は開始以降の平均レートです。
+`MsgOutRate` | 最近 1 分間に EAA から {{site.data.keyword.iot_short}} に送信された 1 秒あたりの推定メッセージ・バイト数。
 `MsgReducePercent` | 着信メッセージと出力メッセージの間のパーセンテージの差異。</br>計算には、以下の数式が使用されます。`(msgIn - msgOut) / msgIn`
 `BytesReducePercent` | 着信バイトと出力バイトの間のパーセンテージの差異。</br>計算には、以下の数式が使用されます。`(bytesIn - bytesOut) / bytesIn`
 `MsgRateReduce` | 着信メッセージ・レートと出力メッセージ・レートの間のパーセンテージの差異。</br>計算には、以下の数式が使用されます。`(msgInRate - msgOutRate) / msgInRate`
 `BytesRateReduce` | 着信メッセージ・バイトと出力メッセージ・バイトの間のパーセンテージの差異。</br>計算には、以下の数式が使用されます。`(bytesInRate - bytesOutRate) / bytesInRate`
-`SystemLoad` | EAA が実行されているシステムの現行システム負荷。**注:** CPU レートは、EAA が実行されているシステムで `mpstat` コマンドが使用可能な場合にのみ送信されます。それ以外の場合は、最近 1 分間のシステム負荷の平均が送信されます。</br>“システム負荷の平均は、使用可能なプロセッサーのキューに入れられる実行可能なエンティティーの数と、一定期間で平均化された使用可能なプロセッサーで実行される実行可能なエンティティーの数の合計です。負荷平均を計算する方法はオペレーティング・システムに固有ですが、通常は、ダンプ時間に依存する平均です。負荷平均が使用できない場合には、負の値が戻されます。”  
-ManagementFactory.getOperatingSystemMXBean の javadoc から:
+`SystemLoad` | EAA が実行されているシステムの現在のシステム負荷。**注:** CPU レートは、EAA が実行されているシステムで `mpstat` コマンドが使用可能な場合にのみ送信されます。それ以外の場合は、最近 1 分間のシステム負荷の平均が送信されます。</br>「システム負荷の平均は、使用可能なプロセッサーのキューに入れられている実行可能なエンティティーの数と、使用可能なプロセッサーで実行されている実行可能なエンティティーの数の合計の一定期間の平均値です。負荷平均を計算する方法はオペレーティング・システムに固有ですが、通常は、ダンプ時間に依存する平均です。負荷平均が使用できない場合には、負の値が戻されます。」- *ManagementFactory.getOperatingSystemMXBean* の javadoc。
 `FreeMemory` | EAA が実行されている Java 仮想マシン (JVM) の空きメモリーのバイト数。
 `MemoryUsed` | EAA によって使用される JVM メモリーのバイト数。
 `InQueueSize` | EAA 処理のためにキューに入れられるメッセージの数。

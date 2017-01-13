@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-09-16"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 {:pre: .pre}
 
 # ユーザー役割の管理
-最終更新日: 2016 年 9 月 16 日
-{: .last-updated}
 
 ユーザー役割によって、ユーザーが実行できる操作を制限できます。ユーザーに割り当てた役割を変更する場合は、{{site.data.keyword.iot_full}} ダッシュボードまたは {{site.data.keyword.iot_short_notm}} API を使用します。
 
@@ -23,7 +22,7 @@ copyright:
 2. 更新するユーザーの横にある**「編集」**アイコンをクリックします。
 3. 役割を選択して、**「完了」**をクリックします。
 
-<!-- 
+<!--
 ## Changing a user role by using the API
 
 For information on using the API to change a user role, see the [{{site.data.keyword.iot_short_notm}} API documentation](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html).

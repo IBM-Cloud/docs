@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-27"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # デバイス開発者用の Python
 {: #python}
-最終更新日: 2016 年 7 月 29 日
-{: .last-updated}
 
 Python を使用して、{{site.data.keyword.iot_full}} で組織と対話するデバイス・コードをビルド/開発することができます。{{site.data.keyword.iot_short_notm}} 用の Python クライアントは、MQTT や HTTP などの基礎的なプロトコルを抽象化することで、{{site.data.keyword.iot_short_notm}} 機能とのシンプルな対話を促進する API を備えています。{:shortdesc}
 
@@ -34,12 +33,13 @@ options 辞書は、{{site.data.keyword.iot_short_notm}} モジュールと対�
 |定義|説明 |
 |:---|:---|
 |`orgId`|組織 ID。|
-|`type`|デバイスのタイプ。通常、deviceType は、特定のタスクを実行するデバイスのグループです (例えば "weatherballoon")。|
-|`id`|デバイスの ID。通常、特定のデバイス・タイプにおいて、deviceId はそのデバイスの固有 ID です (シリアル番号や MAC アドレスなど)。|
-|`auth-method`|使用する認証の方式。現在サポートされている値は、`token` のみです。|
-|`auth-token`|デバイスを Watson IoT Platform に安全に接続するための認証トークン。|
+|`type`|デバイスのタイプ。デバイスのタイプとは、特定のタスクを実行するデバイスのグループです (「weatherballoon」など)。|
+|`id`|デバイスを特定するための固有の ID。通常、特定のデバイス・タイプにおいて、デバイス ID はそのデバイスの固有の ID です (シリアル番号や MAC アドレスなど)。|
+|`auth-method`|認証の方式。サポートされている唯一の方式は `apikey` です。|
+|`auth-token`|API キー・トークン。auth-method の値を `apikey` に設定する場合は、これも指定する必要があります。|
+|`clean-session`|true または false 値。永続サブスクリプション・モードでアプリケーションを接続する場合のみ必要です。デフォルトでは、`clean-session` は true に設定されます。|
 
-options 辞書が提供されない場合、クライアントは未登録デバイスとして Watson IoT Platform Quickstart サービスに接続されます。
+options 辞書が提供されない場合、クライアントは未登録デバイスとして {{site.data.keyword.iot_short_notm}} Quickstart サービスに接続されます。
 
 ```python
 
@@ -50,7 +50,8 @@ try:
     "type": deviceType,
     "id": deviceId,
     "auth-method": authMethod,
-    "auth-token": authToken
+    "auth-token": authToken,
+    "clean-session": true
   }
   client = ibmiotf.device.Client(options)
 except ibmiotf.ConnectionException  as e:
@@ -81,7 +82,7 @@ type=deviceType
 id=deviceId
 auth-method=token
 auth-token=token
-
+clean-session=true/false
 ```
 
 ## イベントのパブリッシュ

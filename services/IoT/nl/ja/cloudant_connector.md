@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-09-16"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # {{site.data.keyword.cloudant_short_notm}} を使用したヒストリアン・サービスの接続と構成  
 {: #cloudant_main}
-最終更新日: 2016 年 9 月 16 日
-{: .last-updated}
 
 {{site.data.keyword.cloudantfull}} サービスを {{site.data.keyword.iot_full}} に接続することによって、デバイス・データの保管とアクセスが可能になります。デバイス・データは、選択されたバケット間隔に従って、毎日、毎週、または毎月データベースに保管されます。
 

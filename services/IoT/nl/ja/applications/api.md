@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-07"
 
 ---
 
@@ -13,9 +14,6 @@ copyright:
 
 # アプリケーションの HTTP REST API
 {: #api}
-
-最終更新日: 2016 年 9 月 7 日
-{: .last-updated}
 
 {{site.data.keyword.iot_full}} HTTP REST API を使用して、{{site.data.keyword.iot_short_notm}} の組織と対話するアプリケーションを作成し、カスタマイズできます。
 {:shortdesc}
