@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-27"
 
 ---
 
@@ -15,10 +16,8 @@ copyright:
 # 애플리케이션 개발자용 Python
 {: #python}
 
-마지막 업데이트 날짜: 2016년 7월 29일
-{: .last-updated}
 
-Python을 사용하여 {{site.data.keyword.iot_full}}에서 조직과 상호작용하는 애플리케이션을 빌드하고 개발할 수 있습니다. {{site.data.keyword.iot_short_notm}}용 Python 클라이언트는 MQTT 및 HTTP 등의 기본 프로토콜을 우회하여 {{site.data.keyword.iot_short_notm}} 기능과의 단순 상호작용을 용이하게 하는 API를 제공합니다. 
+Python을 사용하여 {{site.data.keyword.iot_full}}에서 조직과 상호작용하는 애플리케이션을 빌드하고 개발할 수 있습니다. {{site.data.keyword.iot_short_notm}}용 Python 클라이언트는 기본 프로토콜(예: MQTT 및 HTTP)을 추상화하여 {{site.data.keyword.iot_short_notm}} 기능과의 단순 상호작용을 용이하게 하는 API를 제공합니다. 
 
 {:shortdesc}
 
@@ -32,15 +31,17 @@ Python을 사용하여 {{site.data.keyword.iot_full}}에서 조직과 상호작�
 ## 생성자
 {: #constructor}
 
-옵션 사전은 {{site.data.keyword.iot_short_notm}} 모듈과 상호작용하는 데 사용되는 정의를 작성합니다. 생성자는 클라이언트 인스턴스를 빌드하며 다음 정의가 포함된 옵션 사전을 허용합니다. 
+옵션 사전은 {{site.data.keyword.iot_short_notm}} 모듈과 상호작용하는 데 사용되는 정의를 작성합니다. 생성자가 클라이언트 인스턴스를 빌드하고 다음 정의가 포함된 옵션 사전을 승인합니다. 
 
 |정의|설명 |
 |:-----|:-----|
-|`orgId`|조직 ID|
-|`appId`|조직에서 애플리케이션의 고유 ID|
-|`auth-method`|지원되는 유일한 값이 `apikey`인 인증의 메소드|
-|`auth-key`|auth-method가 `apikey`로 설정될 때 필요한 선택적 API 키|
-|`auth-token`|auth-method가 `apikey`로 설정될 때 필요한 API 키 토큰|
+|`orgId`|조직 ID입니다. |
+|`appId`|조직에서 애플리케이션의 고유 ID입니다. |
+|`auth-method`|인증 메소드입니다. 지원되는 유일한 메소드는 `apikey`입니다.|
+|`auth-key`|auth-method의 값을 `apikey`로 설정할 때 지정해야 하는 선택적 API 키입니다.|
+|`auth-token`|auth-method의 값을 `apikey`로 설정할 때 필수인 API 키 토큰입니다.|
+|`clean-session`|지속 가능한 구독 모드로 애플리케이션에 연결을 원하는 경우에만 필요한 true 또는 false 값입니다. 기본적으로 `clean-session`은 true로 설정됩니다.|
+
 
 옵션 사전이 제공되지 않은 경우, 클라이언트는 미등록 디바이스로서 {{site.data.keyword.iot_short_notm}} Quickstart 서비스에 연결됩니다. 
 
@@ -53,7 +54,8 @@ try:
     "id": appId,
     "auth-method": authMethod,
     "auth-key": authKey,
-    "auth-token": authToken
+    "auth-token": authToken,
+    "clean-session": true
   }
   client = ibmiotf.application.Client(options)
 except ibmiotf.ConnectionException  as e:
@@ -84,6 +86,7 @@ id=myApplication
 auth-method=apikey
 auth-key=key
 auth-token=token
+clean-session=true/false
 
 ```
 
@@ -461,7 +464,7 @@ except IoTFCReSTException as e:
 ### 모든 디바이스 유형 검색
 
 `getAllDeviceTypes()` 메소드를 사용하여 {{site.data.keyword.iot_short_notm}} 조직에 있는 모든 디바이스 유형을 검색할 수 있습니다.
-응답의 사전 결과를 사용하여 리턴된 디바이스의 배열을 가져오십시오. 응답의 기타 매개변수는 추가 호출을 작성하는 데 필요합니다. 예를 들어, `_bookmark` 요소를 사용하여 결과 페이지를 넘겨볼 수 있습니다. 책갈피를 지정하지 않고 첫 번째 요청을 제출한 후에 응답에서 리턴된 책갈피를 가져와서 이를 다음 페이지에 대한 요청에서 제공하십시오. 결과 세트의 끝까지 이 프로세스를 반복하십시오. 책갈피가 없으면 끝입니다. 각 요청은 기타 매개변수에 대해 동일한 값을 사용해야 하며, 그렇지 않으면 결과가 정의되지 않습니다. 
+응답의 사전 결과를 사용하면 리턴된 디바이스의 배열을 가져올 수 있습니다. 응답의 기타 매개변수는 추가 호출을 작성하는 데 필요합니다. 예를 들어, `_bookmark` 요소를 사용하여 결과 페이지를 넘겨볼 수 있습니다. 책갈피를 지정하지 않고 첫 번째 요청을 제출한 후에 응답에서 리턴된 책갈피를 가져와서 이를 다음 페이지에 대한 요청에서 제공하십시오. 결과 세트의 끝까지 이 프로세스를 반복하십시오. 책갈피가 없으면 끝입니다. 각 요청은 기타 매개변수에 대해 동일한 값을 사용해야 하며, 그렇지 않으면 결과가 정의되지 않습니다. 
 
 ```python
 

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-11"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # 분석
 {: #analytics}  
-마지막 업데이트 날짜: 2016년 8월 11일
-{: .last-updated}
 
 Watson {{site.data.keyword.iot_full}} 분석을 사용하여 디바이스가 생성하는 원시 데이터에서 필요한 분석 정보를 가져올 수 있습니다.   
 {: shortdesc}

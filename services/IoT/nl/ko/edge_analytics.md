@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-10-27"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # 에지 분석
 {: #edge_analytics}
-마지막 업데이트 날짜: 2016년 8월 1일
-{: .last-updated}
 
 에지 분석을 사용하여 클라우드에서 에지 분석 사용 게이트웨이로 분석 규칙 트리거 프로세스를 이동하면 디바이스 가까이에서 분석 처리를 수행하여 클라우드에 대한 디바이스 데이터 트래픽 양을 현저히 줄일 수 있습니다.
 {:shortdesk}
@@ -42,14 +41,14 @@ copyright:
 - **규칙** 대시보드를 사용하여 디바이스와 게이트웨이의 클라우드 및 에지 규칙과 조치를 작성하고 편집합니다.
 - **에지 규칙 게이트웨이** 보드는 게이트웨이에서 에지 규칙을 활성화, 비활성화, 업데이트 및 제거하는 데 사용합니다. 에지 규칙 게이트웨이 보드에 액세스하려면 규칙 대시보드에서 관리할 에지 규칙의 **규칙 관리**를 클릭하십시오. 자세한 정보는 [게이트웨이의 에지 규칙 활성화, 비활성화 및 관리](#manage)를 참조하십시오.
 
-게이트웨이 연결 디바이스의 트리거된 에지 규칙과 경보에 대한 개요는 다음 보드를 사용하십시오.
+게이트웨이에 연결된 디바이스의 트리거된 에지 규칙 및 경보에 대한 개요를 가져오려면 다음 보드를 사용하십시오. 
 
- |보드 이름 | 설명  |  
+|보드 이름 | 설명  |  
  |:---|:---|  
   |규칙 중심 분석 | 에지 규칙을 포함하여 조직의 규칙을 표시합니다. 추가 카드는 전달된 에지 경보, 연관된 디바이스, 디바이스 특성 및 전달된 에지 경보 정보를 나열합니다. |  
  |디바이스 중심 분석 | 조직에 연결된 디바이스를 표시합니다. 추가 카드는 선택한 에지 디바이스에 대해 전달된 경보, 선택한 디바이스 정보, 디바이스 특성 및 전달된 경보 정보를 표시합니다. |
 
- 기본 분석 보드에 대한 자세한 정보는 [보드 및 카드를 사용하여 실시간 데이터 시각화](data_visualization.html#default_boards)를 참조하십시오.
+기본 분석 보드에 대한 자세한 정보는 [보드 및 카드를 사용하여 실시간 데이터 시각화](data_visualization.html#default_boards)를 참조하십시오.
 
 
 ## 에지 규칙 작성
@@ -66,10 +65,17 @@ copyright:
 규칙의 트리거로 사용할 IF 조건을 하나 이상 추가하십시오.
 병렬 행에서 조건을 추가하여 이를 OR 조건으로 적용하거나, 순차 열에서 조건을 추가하여 이를 AND 조건으로 적용할 수 있습니다.
 **참고:** 규칙의 입력으로 디바이스 특성을 선택할 수 있으려면 특성을 스키마에 맵핑해야 합니다. 자세한 정보는 [스키마 작성](im_schemas.html)을 참조하십시오.
-**중요:** 두 개의 특성을 비교하는 조건을 트리거하거나 AND를 사용하여 순차적으로 결합된 둘 이상의 특성 조건을 트리거하려면 트리거링 데이터 점이 동일한 디바이스 메시지에 포함되어 있어야 합니다. 데이터가 두 개 이상의 메시지로 수신되면 순차 조건이 트리거되지 않습니다. **예:**
+  
+
+**중요:** 두 개의 특성을 비교하는 조건을 트리거하거나 AND를 사용하여 순차적으로 결합된 둘 이상의 특성 조건을 트리거하려면 트리거링 데이터 점이 동일한 디바이스 메시지에 포함되어 있어야 합니다. 데이터가 둘 이상의 메시지에서 수신되면, 조건 또는 순차 조건이 트리거되지 않습니다.
+  
+
+**예:**  
 매개변수 값이 다음과 같이 지정된 값보다 크면 간단한 규칙을 통해 경보를 트리거할 수 있습니다.
-`temp>80`
+  
+`temp>80`  
 다음과 같은 임계값 조합이 충족되면 더욱 복잡한 규칙이 트리거할 수 있습니다.
+  
 `temp>60 AND capacity>50`   
 
 4. 규칙에 대한 조건부 트리거 요구사항을 구성하십시오.
@@ -182,32 +188,31 @@ EAA 사용 게이트웨이에서 실행되는 에지 규칙 트리거 조치를 
 3. 다음과 같이 게이트웨이 진단 정보에 액세스하십시오.  
  - 게이트웨이에서 보낸 최근 메시지 목록은 **최근 이벤트** 섹션을 참조하십시오.
  - 게이트웨이 경고 및 다른 진단 메시지는 **진단 로그** 섹션을 참조하십시오.
- - 게이트웨이의 자세한 진단 정보는 **센서 정보** 섹션을 참조하십시오. 다음 테이블에서는 게이트웨이 디바이스 메시지에 포함될 수 있는 여러 다른 특성에 대해 설명합니다.
+ - 게이트웨이의 자세한 진단 정보는 **센서 정보** 섹션을 참조하십시오. 다음 표에서는 게이트웨이 디바이스 메시지에 포함될 수 있는 여러 다른 특성에 대해 설명합니다.
 
 
 특성 | 설명
---- | ---
-`MsgInCount` |EAA(Edge Analytics Agent)에 보낸 메시지 수입니다.
-`MsgInRate`, `MsgInRate1Min`, `MessageInRate5Min`, `MsgInRate15Min`, `MsgInMeanRate` | 마지막 기간 동안 EAA에 전송된 것으로 추정되는 초당 메시지 수입니다.</br>**참고:** `MsgInRate`는 `MsgInRate1Min`의 별명입니다. `MsgInMeanRate`는 시작된 이후의 평균 메시지 비율입니다.
-`LastHeartBeat` | 마지막 하트비트 메시지가 생성된 밀리초 시간소인입니다. 하트비트 메시지는 최소 10초마다 생성됩니다.
+ --- | ---
+ `MsgInCount` |EAA(Edge Analytics Agent)에 보낸 메시지 수입니다.
+`MsgInRate` | 마지막 기간 동안 EAA에 전송된 것으로 추정되는 초당 메시지 수입니다.  
+ `LastHeartBeat` | 마지막 하트비트 메시지가 생성된 밀리초 시간소인입니다. 하트비트 메시지는 최소 10초마다 생성됩니다.
 `CurrentTimestamp` | 현재 모니터링 메시지가 생성된 밀리초 시간소인입니다.
 `IsAlive` | `LastHeartBeat`와 `CurrentTimestamp` 사이의 차이가 20초보다 큰 경우 이 특성은 0입니다.
 `BytesOutCount` | EAA에서 {{site.data.keyword.iot_short}}로 보낸 메시지 바이트 수입니다.
-`BytesOutRate`, `BytesOutRate1Min`, `BytesOutRate15Min`, `BytesOutRate5Min`, `BytesOutMeanRate` | 마지막 기간 동안 EAA에서 {{site.data.keyword.iot_short}}에 보낸 것으로 추정되는 초당 메시지 바이트 수입니다. </br>**참고:** `BytesOutRate`는 `BytesOutRate1Min`의 별명입니다. `BytesOutMeanRate`는 시작된 이후의 평균 비율입니다.
+`BytesOutRate` | 마지막 기간 동안 EAA에서 {{site.data.keyword.iot_short}}에 전송한 것으로 추정되는 초당 메시지 바이트 수입니다.
 `BytesInCount` | {{site.data.keyword.iot_short}}에서 EAA에 보낸 메시지 바이트 수입니다.
-`BytesInMeanRate`, `BytesInRate1Min`, `BytesInRate`, `BytesInRate15Min`, `BytesInRate5Min` | 마지막 기간 동안 {{site.data.keyword.iot_short}}에서 EAA로 전송된 것으로 추정되는 초당 메시지 바이트 수입니다. </br>**참고:** BytesOutRate는 BytesOutRate1Min의 별명입니다. BytesOutMeanRate는 시동부터 평균 비율을 계수합니다.
+`BytesInRate` | 마지막 기간 동안 {{site.data.keyword.iot_short}}에서 EAA에 전송한 것으로 추정되는 초당 메시지 바이트 수입니다.
 `RuleBytesInCount` |EAA 규칙 엔진 코어에 전송된 메시지 바이트 수입니다. </br> **참고:** 디바이스 유형에 대해 규칙이 설정되지 않은 경우 해당 디바이스 유형의 메시지가 규칙 엔진 코어에 전송되지 않습니다.
-`RuleBytesInRate5Min`, `RuleBytesInRate`, `RuleBytesInMeanRate`, `RuleBytesInRate1Min`, `RuleBytesInRate15Min` | 마지막 기간 동안 EAA 규칙 엔진 코어에 보낸 것으로 추정되는 초당 메시지 바이트 수입니다. </br> **참고:** `RuleBytesInMeanRate`는 시동 이후의 평균 비율입니다.
+`RuleBytesInRate` | 마지막 기간 동안 EAA 규칙 엔진 코어에 전송된 것으로 추정되는 초당 메시지 바이트 수입니다.
 `MsgOutCount` | EAA에서 {{site.data.keyword.iot_short}}에 보낸 메시지 수입니다.
-`MsgOutRate`, `MsgOutMeanRate`, `MsgOutRate1Min`, `MessageOutRate5Min`, `MsgOutRate15Min` | 마지막 기간 동안 EAA에서 {{site.data.keyword.iot_short}}에 보낸 것으로 추정되는 초당 메시지 바이트 수입니다. </br> **참고:** `MsgOutRate`는 `MsgOutRate1Min`의 별칭입니다. `MsgOutMeanRate`는 시동된 이후의 평균 비율입니다.
+`MsgOutRate` | 마지막 기간 동안 EAA에서 {{site.data.keyword.iot_short}}에 전송하는 것으로 추정되는 초당 메시지 바이트 수입니다.
 `MsgReducePercent` | 입력 메시지와 출력 메시지 사이의 차이(백분율)입니다. </br>다음 공식을 사용하여 계산합니다. `(msgIn - msgOut) / msgIn`
 `BytesReducePercent` | 입력 바이트와 출력 바이트 사이의 차이(백분율)입니다. </br>다음 공식을 사용하여 계산합니다. `(bytesIn - bytesOut) / bytesIn`
 `MsgRateReduce` | 입력 메시지 비율과 출력 메시지 비율 사이의 차이(백분율)입니다. </br>다음 공식을 사용하여 계산합니다. `(msgInRate - msgOutRate) / msgInRate`
 `BytesRateReduce` | 입력 메시지 바이트와 출력 메시지 바이트 사이의 차이(백분율)입니다. </br>다음 공식을 사용하여 계산합니다. `(bytesInRate - bytesOutRate) / bytesInRate`
-`SystemLoad` | EAA가 실행 중인 시스템의 현재 시스템 로드입니다. **참고:** EAA가 실행 중인 시스템에서 `mpstat` 명령을 사용할 수 있는 경우에만 CPU 비율이 전송됩니다. 그렇지 않으면 마지막 순간의 시스템 로드 평균이 전송됩니다. </br>“시스템 로드 평균은 사용 가능한 프로세서에 큐된 실행 가능한 엔티티 수와 일정 기간 동안 평균을 낸 사용 가능한 프로세서에서 실행되는 실행 가능 엔티티 수의 합계입니다. 로드 평균을 계산하는 방법은 운영 체제별로 다르지만 일반적으로 감쇠 시간 종속 평균입니다. 로드 평균을 사용할 수 없으면 음수 값이 리턴됩니다. ”  
-ManagementFactory.getOperatingSystemMXBean용 javadoc에서
-`FreeMemory` | EAA가 실행 중인 JVM(Java Virtual Machine)의 사용 가능한 메모리 수(바이트)입니다.
-`MemoryUsed` | EAA에서 사용하는 JBM 메모리의 바이트 수입니다.
+`SystemLoad` | EAA가 실행 중인 시스템의 현재 시스템 로드입니다. **참고:** EAA가 실행 중인 시스템에서 `mpstat` 명령을 사용할 수 있는 경우에만 CPU 비율이 전송됩니다. 그렇지 않으면 마지막 순간의 시스템 로드 평균이 전송됩니다. </br>“시스템 로드 평균은 사용 가능한 프로세서에 큐된 실행 가능한 엔티티 수와 일정 기간 동안 평균을 낸 사용 가능한 프로세서에서 실행되는 실행 가능 엔티티 수의 합계입니다. 로드 평균을 계산하는 방법은 운영 체제별로 다르지만 일반적으로 감쇠 시간 종속 평균입니다. 로드 평균을 사용할 수 없으면 음수 값이 리턴됩니다. ” - *ManagementFactory.getOperatingSystemMXBean*에 대한 javadoc.
+ `FreeMemory` | EAA가 실행 중인 JVM(Java Virtual Machine)의 사용 가능한 메모리 바이트 수입니다.
+ `MemoryUsed` | EAA에서 사용하는 JBM 메모리의 바이트 수입니다.
 `InQueueSize` | EAA 처리를 위해 큐된 메시지 수입니다.
 `RuleNumber` | 규칙 엔진 코어에 정의된 규칙 수입니다.
 `ProcessorNumber` | 디버그용입니다. 규칙 엔진 코어에 정의된 프로세서 수입니다. </br>**참고:** 프로세서는 규칙 엔진 코어의 최소 실행 단위입니다.

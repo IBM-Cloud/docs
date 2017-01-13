@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-02"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # 디바이스 개발자용 Embedded C
 {: #embedded_c}
-마지막 업데이트 날짜: 2016년 8월 2일
-{: .last-updated}
 
 Embedded C를 사용하여 {{site.data.keyword.iot_full}}에서 조직과 상호작용하는 디바이스를 빌드하고 사용자 정의할 수 있습니다. 제공된 정보와 예제를 사용하면 Embedded C를 사용한 디바이스 개발을 시작할 수 있습니다.
 {:shortdesc}
@@ -37,7 +36,7 @@ Embedded C를 사용하여 {{site.data.keyword.iot_full}}에서 조직과 상호
 ## 설치
 {: #installation}
 
-Embedded C의 {{site.data.keyword.iot_full}} 클라이언트 라이브러리를 설치하려면 다음 지시사항을 완료하십시오. 
+Embedded C의 {{site.data.keyword.iot_short_notm}} 클라이언트 라이브러리를 설치하려면 다음 지시사항을 완료하십시오. 
 
 1. 라이브러리의 최신 버전을 설치하려면 명령행에서 다음 코드를 입력하십시오. 
 ```
@@ -152,7 +151,7 @@ Embedded C의 {{site.data.keyword.iot_full}} 클라이언트 라이브러리를 
 ## 명령 처리
 {: #handling_commands}
 
-디바이스 클라이언트가 연결되면 이는 자동으로 이 디바이스에 대한 명령을 구독합니다. 특정 명령을 처리하려면 `setCommandHandler` 함수를 호출하여 명령 콜백 함수를 등록해야 합니다. 콜백 함수의 특성은 다음과 같습니다. 
+디바이스 클라이언트가 연결되면 이 디바이스에 대한 명령을 자동으로 구독합니다. 특정 명령을 처리하려면 `setCommandHandler` 함수를 호출하여 명령 콜백 함수를 등록해야 합니다. 콜백 함수의 특성은 다음과 같습니다. 
 
 |특성 |설명|
 |:---|:---|
@@ -185,7 +184,7 @@ Embedded C의 {{site.data.keyword.iot_full}} 클라이언트 라이브러리를 
 ## 이벤트 공개
 {: #publishing_events}
 
-이벤트는 다음 특성으로 공개될 수 있습니다. 
+다음 특성을 사용하여 이벤트를 공개할 수 있습니다.
 
 |특성 |설명|
 |:---|:---|

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-27"
 
 ---
 
@@ -14,10 +15,8 @@ copyright:
 
 # 디바이스 개발자용 Python
 {: #python}
-마지막 업데이트 날짜: 2016년 7월 29일
-{: .last-updated}
 
-{{site.data.keyword.iot_full}}에서 조직과 상호작용하는 디바이스 코드를 빌드하고 개발하는 데 Python을 사용할 수 있습니다. {{site.data.keyword.iot_short_notm}}용 Python 클라이언트는 기본 프로토콜(예: MQTT 및 HTTP)을 추상화하여 {{site.data.keyword.iot_short_notm}} 기능과 간단하게 상호작용하는 데 사용할 수 있는 API를 제공합니다.
+{{site.data.keyword.iot_full}}에서 조직과 상호작용하는 디바이스 코드를 빌드하고 개발하는 데 Python을 사용할 수 있습니다. {{site.data.keyword.iot_short_notm}}용 Python 클라이언트는 기본 프로토콜(예: MQTT 및 HTTP)을 추상화하여 {{site.data.keyword.iot_short_notm}} 기능과의 단순 상호작용을 용이하게 하는 API를 제공합니다.
 {:shortdesc}
 
 Python를 사용하여 디바이스 디버깅을 시작하도록 제공된 예와 정보를 사용하십시오.
@@ -30,17 +29,18 @@ Python를 사용하여 디바이스 디버깅을 시작하도록 제공된 예�
 ## 생성자
 {: #constructor}
 
-옵션 사전이 {{site.data.keyword.iot_short_notm}} 모듈과 상호작용하는 데 사용하는 정의를 작성합니다. 생성자가 클라이언트 인스턴스를 빌드하고 다음 정의를 포함하는 옵션 사전을 승인합니다.
+옵션 사전이 {{site.data.keyword.iot_short_notm}} 모듈과 상호작용하는 데 사용하는 정의를 작성합니다. 생성자가 클라이언트 인스턴스를 빌드하고 다음 정의가 포함된 옵션 사전을 승인합니다.
 
 |정의|설명  |
 |:---|:---|
 |`orgId`|조직 ID입니다. |
-|`type`|디바이스 유형입니다. 일반적으로 deviceType은 특정 태스크를 수행하는 디바이스를 그룹화한 것입니다(예: "weatherballoon").|
-|`id`|디바이스 ID입니다. 일반적으로 지정된 디바이스 유형의 디바이스 ID는 해당 디바이스의 고유한 ID입니다(예: 일련 번호 또는 MAC 주소).|
-|`auth-method`|사용할 인증 메소드입니다. 현재 지원되는 값은 `token`입니다.|
-|`auth-token`|디바이스를 Watson IoT Platform에 안전하게 연결하기 위한 인증 토큰입니다.|
+|`type`|디바이스의 유형입니다. 디바이스 유형은 특정 태스크를 수행하는 디바이스를 그룹화한 것입니다(예: "weatherballoon").|
+|`id`|디바이스를 식별하는 고유 ID입니다. 일반적으로, 특정 디바이스 유형이 지정된 경우 디바이스 ID는 해당 디바이스의 고유 ID입니다(예: 일련 번호 또는 MAC 주소).|
+|`auth-method`|인증 메소드입니다. 지원되는 유일한 메소드는 `apikey`입니다.|
+|`auth-token`|auth-method의 값을 `apikey`로 설정할 때 필수인 API 키 토큰입니다.|
+|`clean-session`|지속 가능한 구독 모드로 애플리케이션에 연결을 원하는 경우에만 필요한 true 또는 false 값입니다. 기본적으로 `clean-session`은 true로 설정됩니다.|
 
-옵션 사전이 제공되지 않으면 클라이언트에서 등록되지 않은 디바이스로 Watson IoT Platform Quickstart 서비스에 연결합니다.
+옵션 사전이 제공되지 않은 경우, 클라이언트는 미등록 디바이스로서 {{site.data.keyword.iot_short_notm}} Quickstart 서비스에 연결됩니다. 
 
 ```python
 
@@ -51,7 +51,8 @@ try:
     "type": deviceType,
     "id": deviceId,
     "auth-method": authMethod,
-    "auth-token": authToken
+    "auth-token": authToken,
+    "clean-session": true
   }
   client = ibmiotf.device.Client(options)
 except ibmiotf.ConnectionException  as e:
@@ -82,7 +83,7 @@ type=deviceType
 id=deviceId
 auth-method=token
 auth-token=token
-
+clean-session=true/false
 ```
 
 ## 이벤트 공개
@@ -123,7 +124,7 @@ client.publishEvent("status", "json", myData, myQosLevel)
 |특성|데이터 유형|설명 |
 |:---|:---|
 |`command`|문자열|명령을 식별합니다.|
-|`format`|문자열|형식은 임의의 문자열(예: JSON)일 수 있습니다.|
+|`format`|문자열|형식은 임의의 문자열일 수 있습니다(예: JSON). |
 |`data`|사전|페이로드의 데이터입니다. 최대 길이는 131072바이트입니다.|
 |`timestamp`|날짜 및 시간|이벤트의 날짜 및 시간입니다.|
 

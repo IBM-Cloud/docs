@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-16"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # 디바이스 모델
 {: #device_model}
-마지막 업데이트 날짜: 2016년 9월 16일
-{: .last-updated}
 
 디바이스 모델은 디바이스의 관리 특성 및 메타데이터에 대해 설명합니다. {{site.data.keyword.iot_full}}의 디바이스 데이터베이스는
 디바이스 정보의 마스터 소스입니다. 애플리케이션과 관리 디바이스는 위치 변경 등의 업데이트 또는 펌웨어 업데이트 진행상태를 디바이스 데이터베이스로 보낼 수 있습니다. {{site.data.keyword.iot_short_notm}}에서 이러한 업데이트를 받는 즉시 데이터베이스가 업데이트되고 애플리케이션에서 정보를 사용할 수 있게 됩니다.
@@ -53,7 +52,7 @@ ID에 대한 자세한 정보와 다른 디바이스 관리 표준에 정의된 
 ## 속성
 {: #attributes}
 
-다음 테이블에서는 {{site.data.keyword.iot_short_notm}}의 디바이스에 적용할 수 있는 속성 목록을 표시합니다. 이탤릭체 속성은 디바이스 유형에도 적용될 수 있습니다.
+다음 표에서는 {{site.data.keyword.iot_short_notm}}의 디바이스에 적용할 수 있는 속성 목록을 표시합니다. 이탤릭체 속성은 디바이스 유형에도 적용될 수 있습니다.
 
 키:
   - API : API를 사용하여 업데이트할 수 있음
@@ -153,7 +152,7 @@ ID에 대한 자세한 정보와 다른 디바이스 관리 표준에 정의된 
  mgmt.dormant                   | 부울    | 디바이스가 휴면 상태가 되었는지 여부 표시                  |  R  |  -
  mgmt.dormantDateTime           | 문자열  | ISO8601 date-time: 관리 디바이스가 휴면 상태가 되는 날짜 및 시간   |  R  |  -   
  mgmt.lastActivityDateTime      | 문자열  | ISO8601 date-time: 마지막 활동의 날짜 및 시간으로 정기적으로 업데이트됨    |  R  |    -
- mgmt.supports.deviceActions    | 부울    | 디바이스가 다시 부팅 및 팩토리 재설정 조치를 지원하는지 여부 표시  |  R  |   -  
+ mgmt.supports.deviceActions    | 부울    | 디바이스가 재부팅 및 팩토리 재설정 조치를 지원하는지 여부 표시  |  R  |   -  
  mgmt.supports.firmwareActions  | 부울    | 디바이스가 펌웨어 다운로드 및 펌웨어 업데이트 조치를 지원하는지 여부 표시    |  R  |     -
  mgmt.firmware.version          | 문자열  | 디바이스의 펌웨어 버전              |  R  |  W  
  mgmt.firmware.name             | 문자열  | 디바이스에서 사용되는 펌웨어의 이름      |  R  |  W  

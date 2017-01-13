@@ -2,10 +2,11 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-18"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -13,8 +14,6 @@ copyright:
 
 # 외부 서비스 통합
 {: #ref-index}
-마지막 업데이트 날짜: 2016년 9월 26일
-{: .last-updated}
 
 외부 서비스 통합을 사용하면 {{site.data.keyword.iot_full}} 조직에 있는 써드파티 또는 외부 서비스의 오퍼레이션과 데이터에 액세스할 수 있습니다.
 
@@ -39,6 +38,8 @@ IBM 플랫폼을 통해 제공되는 기본 제공 Jasper 통합에서는 다음
 
 다음 구성 단계가 완료된 후 Jasper에 연결된 디바이스의 디바이스 드릴 다운에서 지원되는 오퍼레이션에 액세스할 수 있습니다.
 
+### Jasper용 REST API
+Jasper용 REST API에 액세스하려면 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension) 문서의 Jasper Extension 절을 참조하십시오. 
 
 ### Jasper 구성
 
@@ -61,7 +62,7 @@ Jasper 연결 디바이스를 구성하려면 다음 단계를 완료하십시�
  3. *확장기능 구성*까지 아래로 화면이동하십시오.
  4. 다음 JSON 형식을 사용하여 확장기능 구성을 입력한 다음 **변경 확인**을 클릭하여 구성을 저장하십시오.  
 
-```json  
+```json
     {
         "jasper": {
             "iccid": "string"
@@ -88,6 +89,9 @@ AT&T 확장기능을 사용하면 다음 AT&T 오퍼레이션을 수행할 수 �
   - 주기 시작 날짜는 YYYY-MM-DD 형식을 사용하여 설정할 수 있습니다.
 - SIM에 SMS 전송
 - 요금제 변경
+
+### AT&T용 REST API
+AT&T용 REST API에 액세스하려면 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension) 문서의 AT&T Extension 절을 참조하십시오. 
 
 ### AT&T의 구성
 
@@ -124,7 +128,6 @@ AT&T 연결 디바이스를 구성하려면 다음 단계를 완료하십시오.
 ```
 
 조직이 정상적으로 구성되면 *확장기능* 섹션이 *디바이스 드릴 다운* 보기의 *확장기능 구성* 섹션에 표시됩니다.
-
 
 ## ARM mbed 커넥터
 {: #arm}
@@ -219,9 +222,10 @@ https://developer.ibm.com/iotplatform/2016/03/30/watson-iot-platform-integration
 - 마지막 상태 새로 고치기
 - 위치 상태
 
+### Orange용 REST API
+Orange용 REST API에 액세스하려면 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension) 문서의 Orange Extension 절을 참조하십시오. 
+
 ### Orange 구성
-
-
 
 Orange 확장기능을 사용하려면 다음을 수행하십시오.
 
@@ -286,6 +290,9 @@ Weather Company 확장기능은 기존 {{site.data.keyword.iot_short_notm}} 디�
 
 **참고:** 관리 디바이스만 고유 위치를 설정할 수 있습니다. 모든 비관리 디바이스에 API를 사용하여 수동으로 설정된 위치가 있어야 합니다. 디바이스 위치 설정에 대한 자세한 정보는 [위치 찾기 요청](../../devices/device_mgmt/index.html#update-location)을 참조하십시오.
 
+### Weather Company용 REST API
+Weather Company용 REST API에 액세스하려면 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather) 문서의 Device Location Weather 절을 참조하십시오. 
+
 ### 날씨 데이터
 
 디바이스 위치에 대해 검색된 날씨 데이터를 보려면 **디바이스** 분할창에서 디바이스를 찾고 이를 클릭하십시오. 상세 디바이스 보기에서 **확장기능** 섹션까지 아래로 화면이동하십시오. 다음 날씨 데이터가 나열됩니다.
@@ -299,6 +306,6 @@ Weather Company 확장기능은 기존 {{site.data.keyword.iot_short_notm}} 디�
 - 풍속.
 - 풍향.
 - 위도.
-- 경고.
+- 경도.
 
 <!-- Weather data from The Weather Company extension can be retrieved by using the API. For information on the Weather Company API, see [The Weather Company API documentation](https://docs.internetofthings.ibmcloud.com/swagger/ext-twc.html). -->

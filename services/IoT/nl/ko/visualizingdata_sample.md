@@ -2,21 +2,24 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-06-29"
 
 ---
 
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # 디바이스 데이터 시각화
 {: #visualizingdata_data}
-*마지막 업데이트 날짜: 2016년 4월 20일*
-{: .last-updated}
 
 이 샘플을 사용하면 {{site.data.keyword.iot_full}} 조직의 등록된 디바이스에서 실시간 데이터와 히스토리 데이터를 시각화할 수 있습니다.
 {:shortdesc}
 
 ## 시작하기 전에
+{: #byb}
 
 데이터를 시각화하려면 다음 조치를 취해야 합니다.
 
@@ -26,6 +29,7 @@ copyright:
 - {{site.data.keyword.Bluemix_notm}}에서 [cf 명령행 도구 설치](../../starters/install_cli.html)를 수행합니다.
 
 ## {{site.data.keyword.Bluemix_notm}}에서 샘플 실행
+{: #running_sample}
 
 1. Node.js SDK를 사용하여 {{site.data.keyword.Bluemix_notm}}에서 애플리케이션을 작성합니다. 애플리케이션의 이름과 호스트 이름을 기록해 두십시오. 이 정보는 {{site.data.keyword.Bluemix_notm}}에 애플리케이션을 업로드하는 데 필요합니다.
 2. 다음 단계를 완료하여 {{site.data.keyword.Bluemix_notm}}의 {{site.data.keyword.iot_short_notm}} 인스턴스에 node.JS 애플리케이션을 바인드합니다.
@@ -69,7 +73,8 @@ http://<your_application_name>.mybluemix.net
 
 조직의 모든 디바이스가 디바이스 드롭다운 메뉴에 나열됩니다. 선택하면 디바이스에서 {{site.data.keyword.iot_short_notm}} 서비스에 전송 중인 데이터의 실시간 시각화가 표시되어야 합니다. 히스토리 데이터를 보려면 **히스토리 데이터** 단추를 클릭하십시오.
 
-### 샘플 사용자 정의
+## 샘플 사용자 정의
+{: #customize_sample}
 
 이 샘플 애플리케이션은 node.js 프레임워크에 작성된 독립형 웹 애플리케이션입니다. 이 샘플은 {{site.data.keyword.iot_short_notm}}에서 등록된 디바이스가 전송한 이벤트를 시각화합니다. 샘플에서는 다음 도구를 사용합니다.
 
@@ -92,7 +97,8 @@ http://<your_application_name>.mybluemix.net
 - Views: Jade로 작성된 사용자 인터페이스 파일
 - Rickshaw 차트 작성 라이브러리는 실시간의 히스토리 데이터에 대한 그래프를 작성하는 데 사용합니다.
 
-### 실시간 데이터 표시 사용자 정의
+## 실시간 데이터 표시 사용자 정의
+{: #customize_real_time_display}
 
 실시간 데이터의 그래픽 시각화 코드를 포함하는 디렉토리는 `public/ja/realtime`입니다. 그래프 작성 로직은 `public/js/historian/realtimeGraph.js`를 편집하여 사용자 정의할 수 있습니다.
 
@@ -100,7 +106,8 @@ http://<your_application_name>.mybluemix.net
 
 디바이스 이벤트는 그래프를 작성하기 위해 `realtimeGraph.js` 파일에 전달됩니다.
 
-### 히스토리 데이터 표시 사용자 정의
+## 히스토리 데이터 표시 사용자 정의
+{: #customize_historical_display}
 
 히스토리 디바이스 데이터의 그래픽 시각화 코드를 포함하는 디렉토리는 `public/js/historian`입니다. 그래프 작성 로직은 `public/js/historian/historianGraph.js`를 편집하여 사용자 정의할 수 있습니다.
 

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-26"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 # Node-RED 디바이스 시뮬레이터 작성 및 연결
 Node-RED를 사용하여 디바이스 시뮬레이터를 작성하고 시뮬레이션된 디바이스 데이터를 {{site.data.keyword.iot_full}} 조직에 보냅니다.  
 {:shortdesc}
-마지막 업데이트 날짜: 2016년 8월 26일
-{: .last-updated}
 
 Node-RED는 새롭고 흥미로운 방식으로 하드웨어 디바이스, API 및 온라인 서비스를 함께 연결하는 데 사용하는 도구입니다. 자세한 정보는 [Node-RED](http://nodered.org/) 웹 사이트를 참조하십시오.  
 

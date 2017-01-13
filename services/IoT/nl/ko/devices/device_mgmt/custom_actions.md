@@ -2,10 +2,11 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-05"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -13,24 +14,19 @@ copyright:
 
 # 디바이스 관리 확장
 {: #custom_actions}
-마지막 업데이트 날짜: 2016년 7월 11일
-{: .last-updated}
 
-{{site.data.keyword.Bluemix_notm}}에서 제공되는 대시보드 또는 REST API를 사용하여 디바이스 관리 확장을 추가함으로써 요구사항을 충족하도록 {{site.data.keyword.iot_full}}의 디바이스 관리 기능을 확장할 수 있습니다. 
+디바이스 관리 확장기능을 추가하여 요구사항을 충족하도록 {{site.data.keyword.iot_full}}의 디바이스 관리 기능을 확장할 수 있습니다. REST API 또는 {{site.data.keyword.iot_short_notm}} 대시보드를 사용하여 디바이스 관리 확장기능을 추가할 수 있습니다. 
 
-기본적으로, 다음의 디바이스 관리 조치를 {{site.data.keyword.iot_short_notm}}에서 제공하고 지원합니다. 
+{{site.data.keyword.iot_short_notm}}에서는 기본적으로 다음과 같은 디바이스 관리 조치를 지원합니다. 
 - 디바이스 재부팅
 - 팩토리 재설정
 - 펌웨어 다운로드
 - 펌웨어 업데이트
 
-{{site.data.keyword.iot_short_notm}}에서 제공하는 기본 디바이스 조치가 디바이스 및 애플리케이션에 충분하지 않은 경우에는 디바이스 관리 확장 패키지를 구현하여 추가 디바이스 관리 기능을 개발할 수 있습니다. 
-
 ## 디바이스 관리 확장 패키지
 {: #device_management_ext}
 
-디바이스 관리 확장 패키지는 디바이스 관리 조치 세트를 정의하는 JSON 문서입니다. 조치는 조치를 지원하는 하나 이상의 디바이스에서 시작될 수 있습니다. 
-조치는 {{site.data.keyword.iot_short_notm}} 대시보드 또는 디바이스 관리 REST API 명령을 사용하여 시작됩니다. 
+디바이스 관리 확장 패키지는 하나 이상의 디바이스 관리 조치를 정의하는 JSON 문서입니다. {{site.data.keyword.iot_short_notm}} 대시보드 또는 REST API를 사용하여 조치를 지원하는 디바이스에서 조치를 시작할 수 있습니다. 
 
 다음 코드 샘플은 디바이스 관리 확장 패키지의 일반 형식을 표시합니다. 
 
@@ -100,7 +96,7 @@ copyright:
 
 **참고:** `bundleId`, `version`, `actionId` 및 `parameterId` 값에는 최대 255자까지 포함될 수 있으며, 영숫자 문자(a-z, A-Z, 0-9) 및 다음의 특수 문자로만 구성될 수 있습니다. 
  - 대시(-)
- - 밑줄(_)
+ - 밑줄(\_)
  - 점(.)
 
 ## REST API
@@ -122,12 +118,12 @@ copyright:
 디바이스 관리 확장 패키지의 REST API에 대한 자세한 정보는 [{{site.data.keyword.iot_short_notm}} API V2](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} 문서를 참조하십시오. 
 
 
-##사용자 정의 디바이스 관리 조치 지원
+## 사용자 정의 디바이스 관리 조치 지원
 {: #supporting_custom_device_management_actions}
 
-확장 패키지에 정의된 디바이스 관리 조치는 해당 조치를 지원하는 디바이스에 의해서만 시작될 수 있습니다. 디바이스가 {{site.data.keyword.iot_short_notm}}에 대해 관리 요청을 공개하는 경우, 디바이스는 지원이 가능한 조치 유형을 지정합니다. 
+확장 패키지에 정의된 디바이스 관리 조치는 해당 조치를 지원하는 디바이스에 의해서만 시작될 수 있습니다. 디바이스는 {{site.data.keyword.iot_short_notm}}에 관리 요청을 공개할 때 지원 가능한 조치 유형을 지정합니다. 
 
-확장 패키지에서 사용자 정의 조치를 수신하려면, 다음 예제에 표시된 대로 디바이스가 요청의 지원 오브젝트에서 확장 패키지의 번들 ID를 지정해야 합니다. 
+확장 패키지의 사용자 정의 조치를 지정하려면 다음 예제에 표시된 대로 디바이스가 요청의 supports 오브젝트에 확장 패키지의 번들 ID를 지정해야 합니다. 
 
 ```
 	Outgoing message from device:

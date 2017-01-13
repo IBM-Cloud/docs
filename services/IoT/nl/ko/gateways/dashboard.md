@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-27"
 
 ---
 
@@ -14,7 +15,6 @@ copyright:
 
 # 게이트웨이 연결
 {: #IoT_connectGateway}
-마지막 업데이트 날짜: 2016년 7월 28일
 
 게이트웨이에 연결된 디바이스에서 데이터 수신을 시작할 수 있으려면 {{site.data.keyword.iot_full}}에 게이트웨이를 연결해야 합니다. {{site.data.keyword.iot_short_notm}}에 게이트웨이를 연결하려면 게이트웨이 디바이스 유형을 작성하고 게이트웨이를 {{site.data.keyword.iot_short_notm}}에 등록해야 합니다. 그러면 등록 정보를 사용하여 게이트웨이를 {{site.data.keyword.iot_short_notm}}에 연결할 수 있습니다.
 {:shortdesc}
@@ -26,7 +26,7 @@ copyright:
 {: #Prerequisites}
 
 일반 디바이스와 비교해 볼 때 게이트웨이 디바이스에는 추가 권한이 있으며 다음 기능을 수행할 수 있습니다.
-- Watson IoT Platform에 새 디바이스를 등록합니다.
+- {{site.data.keyword.iot_short_notm}}에 새 디바이스를 등록합니다.
 - 직접 연결된 디바이스와 같이 고유 센서 데이터를 전송 및 수신합니다.
 - 연결된 디바이스 대신 데이터를 전송 및 수신합니다.
 - 디바이스 관리하고 연결된 디바이스도 관리할 수 있도록 디바이스 관리 에이전트를 실행합니다.
@@ -48,13 +48,24 @@ copyright:
 3. 추가할 디바이스의 디바이스 유형을 선택하거나 작성합니다.
 {{site.data.keyword.iot_short_notm}}에 연결된 각 디바이스는 디바이스 유형과 연관되어야 합니다. 디바이스 유형은 공통 특성을 공유하는 디바이스 그룹입니다.  
  1. **디바이스 유형 작성**을 클릭한 다음 **게이트웨이 유형 작성**을 클릭합니다.
- 2. `my_gateway_type`과 같은 이름과 게이트웨이 유형에 대한 설명을 입력합니다.
- 3. 선택사항: 게이트웨이 유형 속성 및 메타데이터를 입력합니다.
- **팁:** 속성과 메타데이터는 나중에 추가하고 편집할 수 있습니다.
- 4. **작성**을 클릭하여 새 게이트웨이 유형을 추가합니다.
+ 2. 디바이스 유형 이름(예: `my_gateway_type`)과 게이트웨이 유형에 대한 설명을 입력합니다. **중요:** 디바이스 유형 이름은 36자 이하여야 하며 다음 문자만 포함할 수 있습니다.
+ <ul>
+  <li>영숫자 문자(a-z, A-Z, 0-9)</li>
+  <li>하이픈(-)</li>
+  <li>밑줄(&lowbar;)</li>
+  <li>마침표(.)</li>
+  </ul>3. 선택사항: 게이트웨이 유형 속성 및 메타데이터를 입력합니다.     
+ **팁:** 속성과 메타데이터는 나중에 추가하고 편집할 수 있습니다. 4. **작성**을 클릭하여 새 게이트웨이 유형을 추가합니다.
 10. **다음**을 클릭하여 선택한 게이트웨이 유형의 게이트웨이 디바이스를 추가하는 프로세스를 시작합니다.
-11. `my_gateway_device`와 같이 디바이스 ID를 입력합니다.
-디바이스 ID는 {{site.data.keyword.iot_short_notm}} 대시보드에서 게이트웨이 디바이스를 식별하는 데 사용하고 게이트웨이 디바이스를 {{site.data.keyword.iot_short_notm}}에 연결하는 데도 필요한 매개변수입니다.
+11. 디바이스 ID(예: `my_gateway_device`)를 입력합니다.
+디바이스 ID는 {{site.data.keyword.iot_short_notm}} 대시보드에서 게이트웨이 디바이스를 식별하는 데 사용하고 게이트웨이 디바이스를 {{site.data.keyword.iot_short_notm}}에 연결하는 데도 필요한 매개변수입니다.**중요:** 디바이스 ID는 36자 이하여야 하며 다음 문자만 포함할 수 있습니다.
+ <ul>
+ <li>영숫자 문자(a-z, A-Z, 0-9)</li>
+ <li>하이픈(-)</li>
+ <li>밑줄(&lowbar;)</li>
+ <li>마침표(.)</li>  
+ </ul>
+ **팁:** 네트워크 연결 디바이스의 경우 디바이스 ID는 예를 들어, 구분하는 콜론이 없는 디바이스 MAC 주소일 수 있습니다.  
 12. 선택사항: **추가 필드**를 클릭하여 일련 번호, 제조업체, 모델 등의 게이트웨이 디바이스 정보를 추가합니다.
  **팁:** 이 정보는 나중에 추가하고 편집할 수 있습니다.
 12. 선택사항: 디바이스 JSON 메타데이터를 입력합니다.
@@ -66,7 +77,7 @@ copyright:
 15. 디바이스 정보 페이지에서 다음 디바이스 정보를 복사하고 저장합니다.  
  - 조직 ID(예: `tubo8x`)
  - 디바이스 유형(예: `my_gateway_type`)
- - 디바이스 ID **팁:** 네트워크 연결 디바이스의 경우 구분하는 콜론이 없는 MAC 주소 등이 될 수 있습니다.
+ - 디바이스 ID **팁:** 네트워크 연결 디바이스의 경우 디바이스 ID는 예를 들어, 구분하는 콜론이 없는 디바이스 MAC 주소일 수 있습니다.
  - 인증 메소드(예: `token`)
  - 인증 토큰(예: `PtBVriRqIg4uh)_-Kl`)
   **팁:** {{site.data.keyword.iot_short_notm}}에 연결하도록 디바이스를 구성하는 데 조직 ID, 인증 토큰, 디바이스 유형 및 디바이스 ID가 필요합니다.  
@@ -81,7 +92,7 @@ copyright:
 {{site.data.keyword.iot_short_notm}}에 게이트웨이를 연결하는 데 관한 정보는 [게이트웨이용 MQTT 연결](mqtt.html)을 참조하십시오.
 
 **팁:** {{site.data.keyword.iot_short_notm}}에 디바이스를 연결하는 데 사용할 수 있는 지침서는 다양합니다. 지침서 목록은
-IBM.com에서 사용 가능한 [디바이스 연결 지침서](https://developer.ibm.com/recipes/?post_type=tutorials&s=IoT)를 참조하십시오.
+IBM.com에서 사용 가능한 [디바이스 연결 지침서](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/)를 참조하십시오.
 
 
 ## 3단계: 게이트웨이를 통해 디바이스 연결
@@ -118,7 +129,8 @@ EAA(Edge Analytics Agent)는 {{site.data.keyword.iot_short_notm}} 대시보드�
 EAA config.properties 파일을 사용하여 기본 소프트웨어 구성 매개변수를 설정할 수 있습니다.
 
 EAA 구성을 업데이트합니다.
-1. EAA가 실행 중인 게이트웨이 시스템에서 EAA config.properties 파일을 찾습니다.
+1. EAA가 실행 중인 게이트웨이 시스템에서 EAA config.properties 파일을 찾습니다.예:
+`../dglux-server/dslinks/ibm-watson-iot-edge-analytics-dslink-java-0.0.1/config.properties`
 2. 설정 편집을 시작하기 전에 파일의 백업 사본을 작성합니다.
 3. 편집할 config.properties 파일을 엽니다.
 4. 환경에 맞게 구성 매개변수를 편집합니다.

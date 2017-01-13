@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-03"
 
 ---
 
@@ -13,9 +14,6 @@ copyright:
 
 # {{site.data.keyword.iot_short}} 개발용 클라이언트 라이브러리
 {: #iot_platform_client_lib}
-
-마지막 업데이트 날짜: 2016년 8월 3일
-{: .last-updated}
 
 클라이언트 라이브러리에서는 {{site.data.keyword.iot_full}}에서 디바이스와 애플리케이션을 통합하고 연결하기 위한 코드를 빌드하고 개발하는 데 필요한 도구와 파일을 제공합니다.
 {:shortdesc}

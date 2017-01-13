@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-10-05"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 {:pre: .pre}
 
 # {{site.data.keyword.ssoshort}} 구성 및 사용
-마지막 업데이트 날짜: 2016년 10월 05일
-{: .last-updated}
 
 {{site.data.keyword.iot_full}}에 대한 대체 사용자 인증 제공자를 지원하도록 {{site.data.keyword.ssofull}} 서비스를 구성할 수 있습니다. {{site.data.keyword.ssoshort}}는 SAML 2.0, IBM Cloud Directory, 소셜 제공업체(Facebook, LinkedIn, Google+) 및 Github를 지원합니다.
 {: .shortdesc}

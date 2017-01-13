@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-08"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # 디바이스 관리 요청
 {: #requests}
-마지막 업데이트 날짜: 2016년 9월 8일
-{: .last-updated}
 
 
 {{site.data.keyword.iot_full}}은 하나 이상의 디바이스에 시작할 수 있는 조치를 제공합니다. 이러한 조치는 대시보드 또는 REST API를 사용하여 시작될 수 있습니다. 사용할 수 있는 조치의 유형은 **디바이스 조치** 및 **펌웨어 조치**입니다. 
