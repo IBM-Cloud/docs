@@ -29,7 +29,7 @@ Sie müssen für {{site.data.keyword.iot_short_notm}} über Administratorrechte 
 {: #server_requirements}
 
 Folgende Anforderungen sind von {{site.data.keyword.iot_short_notm}} festgelegt:
-- Für den Zugriff auf das Verzeichnis, in dem der Inhalt aus angepassten Karten auf dem Server bereitgestellt werden soll, dürfen keine Berechtigungsnachweise erforderlich sein.
+- Für den Zugriff auf das Verzeichnis, in dem der Inhalt aus angepassten Karten auf dem Server bereitgestellt werden soll, dürfen keine Berechtigungsnachweise erforderlich sein.  
 Für den Server für angepasste Karten ist beim Herstellen einer Verbindung für den Zugriff auf angepasste Karten und das Laden dieser Karten keine Authentifizierung erforderlich.
 - Der Server muss das Protokoll HTTP Secure (HTTPS) verwenden.
 - Der Server muss Cross-Origin Resource Sharing-Verbindungen (CORS) unterstützen.  
@@ -38,7 +38,7 @@ Um den Code für angepasste Karten und den Kartenserver selbst zu schützen, sol
 
 Die Verarbeitung angepasster Karten findet stets zwischen dem Browser eines Benutzers und dem Server für angepasste Karten statt. Das {{site.data.keyword.iot_short_notm}}-Back-End wird zu keinem Zeitpunkt in die Verarbeitung oder Anpassung von Informationen und Code für angepasste Karten einbezogen.
 
-Für den JavaScript-Code, mit dem Sie Ihre Karten auf Ihrem Server für angepasste Karten implementieren möchten, bestehen keine Einschränkungen. Mit Javascript-Code in angepassten Karten kann auf alle im Browser enthaltenen Informationen zugegriffen werden, genau wie dies bei allen anderen Karten möglich ist, die im Dashboard ausgeführt werden. Stellen Sie sicher, dass der für den Browser angegebene Code zum Anzeigen und Verarbeiten der angepassten Karten vom richtigen Server für angepasste Karten bereitgestellt wird.
+Für den JavaScript-Code, mit dem Sie Ihre Karten auf Ihrem Server für angepasste Karten implementieren möchten, bestehen keine Einschränkungen. Mit Javascript-Code in angepassten Karten kann auf alle im Browser enthaltenen Informationen zugegriffen werden, genau wie dies bei allen anderen Karten möglich ist, die im Dashboard ausgeführt werden.  Stellen Sie sicher, dass der für den Browser angegebene Code zum Anzeigen und Verarbeiten der angepassten Karten vom richtigen Server für angepasste Karten bereitgestellt wird.
 
 Der Code der Karten wird in Ihrer {{site.data.keyword.iot_short_notm}}-Browsersitzung genau so ausgeführt, wie er geschrieben wurde. Darüber hinaus wird die Verbindung zum Server für angepasste Karten hergestellt, ohne dass für den Server für angepasste Karten Berechtigungsnachweise bereitgestellt werden. Der Browser eines Benutzers kann eine Verbindung zu jedem konfigurierten Server für angepasste Karten herstellen.
 

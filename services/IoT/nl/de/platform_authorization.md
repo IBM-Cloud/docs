@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-09-14"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 {:pre: .pre}
 
 # Anwendungsverbindung
-Letzte Aktualisierung: 14. September 2016
-{: .last-updated}
 
 Um eine Verbindung zwischen Ihrer Anwendung und {{site.data.keyword.iot_full}} herzustellen, müssen Sie die Verbindung über API-Schlüssel und Token herstellen oder Ihre Anwendung in {{site.data.keyword.Bluemix_notm}} direkt mit {{site.data.keyword.iot_short_notm}} verbinden. Verwenden Sie das Zugriffsdashboard, um Zugriff zu erteilen.
 {:shortdesc}

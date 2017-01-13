@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-11"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # HTTP-REST-API für Geräte
 {: #api}
-Letzte Aktualisierung: 11. Oktober 2016
-{: .last-updated}
 
 **Wichtig:** Die {{site.data.keyword.iot_full}}-Funktion 'HTTP-REST-API für Geräte' steht nur als Bestandteil des eingeschränkten Beta-Programms zur Verfügung. Zukünftige Aktualisierungen enthalten möglicherweise Änderungen, die mit der aktuellen Version dieser Funktion nicht kompatibel sind. Starten Sie einen Versuch und [senden Sie uns Ihren Erfahrungsbericht](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html).
 

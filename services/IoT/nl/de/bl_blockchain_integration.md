@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-30"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # {{site.data.keyword.iot_short_notm}}-Blockchain-Integration
 {: #gettingstartedtemplate}
-Letzte Aktualisierung: 30. August 2016
-{: .last-updated}
 
 Durch die {{site.data.keyword.iot_short_notm}}-Integration von Blockchain ist es möglich, dass IoT-Geräte Daten für Blockchain-Transaktionen bereitstellen; dadurch werden die Daten im nicht veränderbaren Blockchain-Konto gespeichert und in den Geschäftsregeln verwendet, die in den intelligenten Blockchain-Verträgen implementiert sind.
 {:shortdesc}

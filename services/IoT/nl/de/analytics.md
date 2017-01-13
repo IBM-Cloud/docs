@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-11"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # Analytics
 {: #analytics}  
-Letzte Aktualisierung: 11. August 2016
-{: .last-updated}
 
 Verwenden Sie {{site.data.keyword.iot_full}} Analytics (Analyse), um aus den von Ihrem Gerät erzeugten Rohdaten die für Sie erforderlichen Analyseinformationen abzurufen.  
 {: shortdesc}

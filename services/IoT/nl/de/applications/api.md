@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-07"
 
 ---
 
@@ -13,9 +14,6 @@ copyright:
 
 # HTTP-REST-API für Anwendungen
 {: #api}
-
-Letzte Aktualisierung: 7. September 2016
-{: .last-updated}
 
 Verwenden Sie die {{site.data.keyword.iot_full}}-HTTP-REST-API, um Anwendungen zu erstellen und anzupassen, die mit Ihrer in {{site.data.keyword.iot_short_notm}} vorhandenen Organisation interagieren.
 {:shortdesc}

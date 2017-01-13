@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-10-05"
 
 ---
 
@@ -12,10 +13,8 @@ copyright:
 {:pre: .pre}
 
 # {{site.data.keyword.ssoshort}} konfigurieren und verwenden
-Letzte Aktualisierung: 5. Oktober 2016
-{: .last-updated}
 
-Der Service {{site.data.keyword.ssofull}} kann so konfiguriert werden, dass alternative Provider für die Benutzerauthentifizierung in {{site.data.keyword.iot_full}} unterstützt werden.{{site.data.keyword.ssoshort}} unterstützt SAML 2.0, IBM Cloud Directory, Provider sozialer Netzwerke (Facebook, LinkedIn, Google+) und Github.
+Der Service {{site.data.keyword.ssofull}} kann so konfiguriert werden, dass alternative Provider für die Benutzerauthentifizierung in {{site.data.keyword.iot_full}} unterstützt werden. {{site.data.keyword.ssoshort}} unterstützt SAML 2.0, IBM Cloud Directory, Provider sozialer Netzwerke (Facebook, LinkedIn, Google+) und Github.
 {: .shortdesc}
 
 ## {{site.data.keyword.ssoshort}} einrichten

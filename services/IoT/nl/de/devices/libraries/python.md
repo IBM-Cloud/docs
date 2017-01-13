@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-27"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # Python für Geräteentwickler
 {: #python}
-Letzte Aktualisierung: 29. Juli 2016
-{: .last-updated}
 
 Verwenden Sie Python, um Gerätecode zu erstellen und zu entwickeln, der in {{site.data.keyword.iot_full}} mit Ihrer Organisation interagiert. Der Python-Client für {{site.data.keyword.iot_short_notm}} stellt eine API bereit, die eine einfache Interaktion mit {{site.data.keyword.iot_short_notm}}-Funktionen ermöglicht, indem die zugrunde liegenden Protokolle wie MQTT und HTTP herausgezogen werden.
 {:shortdesc}
@@ -35,12 +34,13 @@ Das Optionsverzeichnis erstellt Definitionen, die für die Interaktion mit dem {
 |Definition|Beschreibung |
 |:---|:---|
 |`orgId`|Die ID Ihrer Organisation.|
-|`type`|Der Typ Ihres Geräts. In der Regel ist 'deviceType' eine Zusammenfassung von Geräten, die eine bestimmte Aufgabe ausführen, beispielsweise 'Wetterballon'.|
-|`id`|Die ID Ihres Geräts. In der Regel ist 'deviceId' bei vorgegebenem Gerätetyp eine eindeutige Kennung des betreffenden Geräts, beispielsweise die Seriennummer oder MAC-Adresse.|
-|`auth-method`|Die zu verwendende Authentifizierungsmethode. Der einzige Wert, der aktuell unterstützt ist, lautet `token`.|
-|`auth-token`|Ein Authentifizierungstoken zum Herstellen einer sicheren Verbindung zwischen Ihrem Gerät und Watson IoT Platform.|
+|`type`|Der Typ des Geräts. Der Gerätetyp ist eine Gruppierung von Geräten, die eine bestimmte Aufgabe ausführen, beispielsweise 'Wetterballon'.|
+|`id`|Eine eindeutige ID zur Angabe eines Geräts. In der Regel ist die Geräte-ID bei vorgegebenem Gerätetyp eine eindeutige Kennung des betreffenden Geräts, beispielsweise die Seriennummer oder MAC-Adresse.|
+|`auth-method`|Die Methode der Authentifizierung. Die einzige Methode, die unterstützt ist, lautet `apikey`.|
+|`auth-token`|API-Schlüsseltoken, das ebenfalls erforderlich ist, wenn Sie `apikey` als Wert für 'auth-method' festlegen.|
+|`clean-session`|Der Wert 'true' oder 'false', der nur erforderlich ist, wenn Sie die Anwendung im Modus der permanenten Subskription verbinden möchten. Für `clean-session` ist standardmäßig der Wert 'true' festgelegt.|
 
-Wenn kein Optionsverzeichnis bereitgestellt wird, wird der Client als nicht registriertes Gerät mit dem Quickstart-Service von Watson IoT Platform verbunden.
+Steht kein Optionsverzeichnis zur Verfügung, wird der Client als nicht registriertes Gerät mit dem Quickstart-Service von {{site.data.keyword.iot_short_notm}} verbunden.
 
 ```python
 
@@ -51,7 +51,8 @@ try:
     "type": deviceType,
     "id": deviceId,
     "auth-method": authMethod,
-    "auth-token": authToken
+    "auth-token": authToken,
+    "clean-session": true
   }
   client = ibmiotf.device.Client(options)
 except ibmiotf.ConnectionException  as e:
@@ -82,7 +83,7 @@ type=deviceType
 id=deviceId
 auth-method=token
 auth-token=token
-
+clean-session=true/false
 ```
 
 ## Ereignisse publizieren

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-03"
 
 ---
 
@@ -13,9 +14,6 @@ copyright:
 
 # Clientbibliotheken für die {{site.data.keyword.iot_short}}-Entwicklung
 {: #iot_platform_client_lib}
-
-Letzte Aktualisierung: 3. August 2016
-{: .last-updated}
 
 Clientbibliotheken stellen Tools und Dateien zur Verfügung, die Sie zum Erstellen und Entwickeln von Code für die Integration und das Verbinden Ihrer Geräte und Anwendungen in {{site.data.keyword.iot_full}} benötigen.
 {:shortdesc}

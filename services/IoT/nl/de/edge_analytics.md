@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-10-27"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # Edge Analytics
 {: #edge_analytics}
-Letzte Aktualisierung: 1. August 2016
-{: .last-updated}
 
 Mit Edge Analytics verschieben Sie den regelauslösenden Prozess der Analyse von der Cloud in ein für Edge Analytics aktiviertes Gateway, das den Gerätedatenverkehr zur Cloud stark reduzieren könnte, indem die Analyseverarbeitung gerätenah ausgeführt wird.
 {:shortdesk}
@@ -33,7 +32,7 @@ Das folgende Diagramm veranschaulicht die allgemeine Architektur einer {{site.da
 Bevor Sie mit der Erstellung von Edge-Regeln und -Aktionen beginnen:
 - Stellen Sie sicher, dass Ihr Gateway mit {{site.data.keyword.iot_short}} verbunden ist und dass Gerätedaten übertragen werden. Weitere Informationen finden Sie in [Gateways verbinden](gateways/dashboard.html).
 - Installieren Sie Edge Analytics Agent (EAA) in Ihrem Gateway. Informationen finden Sie in [Edge Analytics-Agent installieren](gateways/dashboard.html#edge). </br> **Tipp:** Für EAA aktivierte Gateways stellen EAA-Diagnosedaten in Form von Gerätenachrichten von Gateways zur Verfügung. Informationen finden Sie in [Diagnosemesswerte des Edge Analytics-Agenten](#eaa_metrics).
-- Stellen Sie sicher, dass die Geräteeigenschaften, die Sie als Bedingungen in Ihren Regeln verwenden möchten, Schemas zugeordnet wurden. Weitere Informationen finden Sie in [Geräte verbinden](iotplatform_task.html) und [Schemas erstellen](im_schemas.html).
+- Stellen Sie sicher, dass die Geräteeigenschaften, die Sie als Bedingungen in Ihren Regeln verwenden möchten, Schemas zugeordnet sind. Weitere Informationen finden Sie in [Geräte verbinden](iotplatform_task.html) und [Schemas erstellen](im_schemas.html).
 
 ## Edge-Regeln und -Aktionen verwalten  
 {: #managing_rules}
@@ -42,14 +41,14 @@ Edge-Regeln werden mithilfe des Folgenden verwaltet:
 - Das Dashboard **Regeln** wird zum Erstellen und Bearbeiten von Cloud- und Edge-Regeln und -Aktionen für Ihre Geräte und Gateways verwendet.
 - Das Board **Edge-Regel-Gateways** wird zum Aktivieren, Inaktivieren, Aktualisieren und Entfernen einer Edge-Regel in Ihren Gateways verwendet. Für den Zugriff auf das Board 'Edge-Regel-Gateways' klicken Sie im Dashboard 'Regeln' für die Edge-Regel, die Sie verwalten möchten, auf **Regel verwalten**. Weitere Informationen finden Sie in [Edge-Regeln für Ihre Gateways aktivieren, inaktivieren und verwalten](#manage).
 
-Verwenden Sie folgende Boards, um eine Übersicht über Edge-Regeln und -Alerts zu erhalten, die für Ihre über ein Gateway verbundenen Geräte ausgelöst wurden:
+Verwenden Sie folgende Boards, um eine Übersicht der Edge-Regeln und -Alerts zu erhalten, die für Ihre über ein Gateway verbundenen Geräte ausgelöst wurden:
 
- |Boardname | Beschreibung |  
+|Boardname | Beschreibung |  
  |:---|:---|  
   |Regelbasierte Analyse | Zeigt die für Ihre Organisationen geltenden Regeln einschließlich Edge-Regeln an. Zusätzliche Karten listen weitergeleitete Edge-Alerts, zugeordnete Geräte, Geräteeigenschaften und weitergeleitete Edge-Alertinformationen auf. |  
  |Gerätebezogene Analyse | Zeigt die mit Ihrer Organisation verbundenen Geräte an. Zusätzliche Karten zeigen weitergeleitete Alerts für ein ausgewähltes Edge-Gerät, Informationen zu einem ausgewählten Gerät, Geräteeigenschaften und weitergeleitete Alertinformationen an. |
 
- Weitere Informationen zu den standardmäßigen Analyseboards finden Sie in [Echtzeitdaten mithilfe von Boards und Karten visualisieren](data_visualization.html#default_boards).
+Weitere Informationen zu den standardmäßigen Analyseboards finden Sie in [Echtzeitdaten mithilfe von Boards und Karten visualisieren](data_visualization.html#default_boards).
 
 
 ## Edge-Regeln erstellen
@@ -65,12 +64,16 @@ Gehen Sie wie folgt vor, um eine Regel zu erstellen:
 3. Richten Sie die Regellogik ein.  
 Fügen Sie mindestens eine IF-Bedingung hinzu, um sie als Auslöser für die Regel zu verwenden.  
 Sie können Bedingungen in parallelen Reihen hinzufügen, um sie als OR-Bedingungen anzuwenden, oder Sie können Bedingungen in sequenziellen Spalten hinzufügen, um sie als AND-Bedingungen anzuwenden.  
-**Hinweis:** Damit eine Geräteeigenschaft als Eingabe für eine Regel ausgewählt werden kann, muss die Eigenschaft einem Schema zugeordnet werden. Weitere Informationen finden Sie in [Schemas erstellen](im_schemas.html).   
-**Wichtig:** Um eine Bedingung auszulösen, die zwei Eigenschaften vergleicht, oder um zwei oder mehr Eigenschaftsbedingungen auszulösen, die sequenziell durch AND verbunden sind, müssen die auslösenden Datenpunkte in dieselbe Gerätenachricht eingeschlossen werden. Wenn die Daten in mehr als einer Nachricht empfangen werden, werden die sequenziellen Bedingungen nicht ausgelöst.  
-**Beispiele:**
+**Hinweis:** Damit eine Geräteeigenschaft als Eingabe für eine Regel ausgewählt werden kann, muss die Eigenschaft einem Schema zugeordnet werden. Weitere Informationen finden Sie in [Schemas erstellen](im_schemas.html).  
+
+**Wichtig:** Um eine Bedingung auszulösen, die zwei Eigenschaften vergleicht, oder um mindestens zwei Eigenschaftsbedingungen auszulösen, die sequenziell durch AND verbunden sind, müssen die auslösenden Datenpunkte in dieselbe Gerätenachricht eingeschlossen werden. Wenn die Daten in mehr als einer Nachricht empfangen werden, werden die Bedingung oder die sequenziellen Bedingungen nicht ausgelöst.  
+
+**Beispiele:**  
 Eine einfache Regel kann einen Alert auslösen, wenn ein Parameterwert größer als ein angegebener Wert ist:
-`temp>80`
+  
+`temp>80`  
 Eine komplexere Regel kann zu einem Auslösen führen, wenn eine Übereinstimmung mit einer Kombination aus Schwellenwerten auftritt:
+  
 `temp>60 AND capacity>50`   
 
 4. Konfigurieren Sie für Ihre Regel Anforderungen für bedingte Auslöser.  
@@ -187,30 +190,25 @@ Gehen Sie wie folgt vor, um Informationen zum Status des Gateways anzuzeigen:
  - Lesen Sie den Abschnitt **Sensorinformationen**, in dem Sie detaillierte Diagnoseinformationen zum Gateway finden. In der folgenden Tabelle werden die verschiedenen Eigenschaften beschrieben, die in den Gerätenachrichten des Gateways enthalten sein können.
 
 
-Eigenschaft | Beschreibung
---- | ---
-`MsgInCount` |Die Anzahl der an den Edge Analytics-Agenten (EAA) gesendeten Nachrichten.
-`MsgInRate`, `MsgInRate1Min`, `MessageInRate5Min`, `MsgInRate15Min`, `MsgInMeanRate` | Die geschätzte Anzahl von Nachrichten pro Sekunde, die während des vergangenen Zeitraums an den Edge Analytics-Agenten gesendet wurden.  </br>**Hinweis:** `MsgInRate` ist ein Alias für `MsgInRate1Min`. `MsgInMeanRate` ist der Mittelwert für die Nachrichtenrate seit dem Start.
-`LastHeartBeat` | Die Zeitmarke in Millisekunden des Zeitpunkts, an dem die letzte Heartbeatnachricht generiert wurde. Mindestens alle 10 Sekunden wird eine Heartbeatnachricht generiert.
+ Eigenschaft | Beschreibung
+ --- | ---
+ `MsgInCount` |Die Anzahl der an den Edge Analytics-Agenten (EAA) gesendeten Nachrichten.
+ `MsgInRate` | Die geschätzte Anzahl von Nachrichten pro Sekunde, die in der vergangenen Minute an den Edge Analytics-Agenten gesendet wurden.    
+ `LastHeartBeat` | Die Zeitmarke in Millisekunden des Zeitpunkts, an dem die letzte Heartbeatnachricht generiert wurde. Mindestens alle 10 Sekunden wird eine Heartbeatnachricht generiert.
 `CurrentTimestamp` | Die Zeitmarke in Millisekunden des Zeitpunkts, an dem die aktuelle Überwachungsnachricht generiert wurde.
-`IsAlive` | Diese Eigenschaft hat den Wert '0', wenn der Unterschied zwischen `LastHeartBeat` und `CurrentTimestamp` größer als 20 Sekunden ist.
-`BytesOutCount` | Die Anzahl der Nachrichtenbyte, die vom EAA an {{site.data.keyword.iot_short}} gesendet werden.
-`BytesOutRate`, `BytesOutRate1Min`, `BytesOutRate15Min`, `BytesOutRate5Min`, `BytesOutMeanRate` | Die geschätzte Anzahl der Nachrichtenbyte pro Sekunde, die vom EAA während des vergangenen Zeitraums an {{site.data.keyword.iot_short}} gesendet wurden. </br>**Hinweis:** `BytesOutRate` ist ein Alias für `BytesOutRate1Min`. `BytesOutMeanRate` ist der seit dem Start gemessene Mittelwert.
-`BytesInCount` | Die Anzahl der Nachrichtenbyte, die von {{site.data.keyword.iot_short}} an den EAA gesendet wurden.
-`BytesInMeanRate`, `BytesInRate1Min`, `BytesInRate`, `BytesInRate15Min`, `BytesInRate5Min` | Die geschätzte Anzahl der Nachrichtenbyte pro Sekunde, die im vergangenen Zeitraum von {{site.data.keyword.iot_short}} an den EAA gesendet wurden. </br>**Hinweis:** 'BytesOutRate' ist ein Alias für 'BytesOutRate1Min'. 'BytesOutMeanRate' zählt den Mittelwert seit dem Start.
-`RuleBytesInCount` |Die Anzahl der Nachrichtenbyte, die an die Basis der EAA-Regelengine gesendet wurden. </br> **Hinweis:** Falls für einen Gerätetyp keine Regel festgelegt wurde, werden Nachrichten für diesen Gerätetyp nicht an die Basis der Regelengine gesendet.
-`RuleBytesInRate5Min`, `RuleBytesInRate`, `RuleBytesInMeanRate`, `RuleBytesInRate1Min`, `RuleBytesInRate15Min` | Die geschätzte Anzahl von Nachrichtenbyte pro Sekunde, die während des vergangenen Zeitraums an die Basis der EAA-Regelengine gesendet wurden. </br> **Hinweis:** `RuleBytesInMeanRate` ist der seit dem Start gemessene Mittelwert.
-`MsgOutCount` | Die Anzahl der Nachrichten, die vom Edge Analytics-Agenten (EAA) an {{site.data.keyword.iot_short}} gesendet wurden.
-`MsgOutRate`, `MsgOutMeanRate`, `MsgOutRate1Min`, `MessageOutRate5Min`, `MsgOutRate15Min` | Die geschätzte Anzahl von Nachrichtenbyte pro Sekunde, die während des vergangenen Zeitraums vom Edge Analytics-Agenten (EAA) an {{site.data.keyword.iot_short}} gesendet wurden.</br> **Hinweis:** `MsgOutRate` ist ein Alias für `MsgOutRate1Min`. `MsgOutMeanRate` ist der seit dem Start gemessene Mittelwert.
-`MsgReducePercent` | Die prozentuale Differenz zwischen eingehenden und ausgehenden Nachrichten. </br>Für die Berechnung wird folgende Formel verwendet: `(msgIn - msgOut) / msgIn`
+ `IsAlive` | Diese Eigenschaft hat den Wert '0', wenn der Unterschied zwischen `LastHeartBeat` und `CurrentTimestamp` größer als 20 Sekunden ist.
+ `BytesOutCount` | Die Anzahl der Nachrichtenbyte, die vom EAA an {{site.data.keyword.iot_short}} gesendet werden.
+ `BytesOutRate` | Die geschätzte Anzahl der Nachrichtenbyte pro Sekunde, die vom EAA in der vergangenen Minute an {{site.data.keyword.iot_short}} gesendet wurden. `BytesInCount` | Die Anzahl der Nachrichtenbyte, die von {{site.data.keyword.iot_short}} an den EAA gesendet wurden.
+ `BytesInRate` | Die geschätzte Anzahl der Nachrichtenbyte pro Sekunde, die in der vergangenen Minute von {{site.data.keyword.iot_short}} an den EAA gesendet wurden. `RuleBytesInCount` |Die Anzahl der Nachrichtenbyte, die an die Basis der EAA-Regelengine gesendet wurden. </br> **Hinweis:** Falls für einen Gerätetyp keine Regel festgelegt wurde, werden Nachrichten für diesen Gerätetyp nicht an die Basis der Regelengine gesendet.
+ `RuleBytesInRate` | Die geschätzte Anzahl von Nachrichtenbyte pro Sekunde, die in der vergangenen Minute an die Basis der EAA-Regelengine gesendet wurden. `MsgOutCount` | Die Anzahl der Nachrichten, die vom Edge Analytics-Agenten (EAA) an {{site.data.keyword.iot_short}} gesendet wurden.
+ `MsgOutRate` | Die geschätzte Anzahl von Nachrichtenbyte pro Sekunde, die in der vergangenen Minute vom Edge Analytics-Agenten (EAA) an {{site.data.keyword.iot_short}} gesendet wurden.`MsgReducePercent` | Die prozentuale Differenz zwischen eingehenden und ausgehenden Nachrichten. </br>Für die Berechnung wird folgende Formel verwendet: `(msgIn - msgOut) / msgIn`
 `BytesReducePercent` | Die prozentuale Differenz zwischen eingehenden und ausgehenden Byte. </br>Für die Berechnung wird folgende Formel verwendet: `(bytesIn - bytesOut) / bytesIn`
 `MsgRateReduce` | Die prozentuale Differenz zwischen der eingehenden und der ausgehenden Nachrichtenrate. </br>Für die Berechnung wird folgende Formel verwendet: `(msgInRate - msgOutRate) / msgInRate`
 `BytesRateReduce` | Die prozentuale Differenz zwischen eingehenden und ausgehenden Nachrichtenbyte. </br>Für die Berechnung wird folgende Formel verwendet: `(bytesInRate - bytesOutRate) / bytesInRate`
-`SystemLoad` | Die aktuelle Systembelastung des Systems, auf dem der Edge Analytics-Agent (EAA) ausgeführt wird. **Hinweis:** Die CPU-Rate wird nur gesendet, wenn auf dem System, auf dem der Edge Analytics-Agent ausgeführt wird, der Befehl `mpstat` vorhanden ist. Andernfalls wird die durchschnittliche Systembelastung der vergangenen Minute gesendet. </br>'Die durchschnittliche Systembelastung ist die für einen bestimmten Zeitraum geltende durchschnittliche Summe der Anzahl von ausführbaren Entitäten, die sich in der Warteschlange für die verfügbaren Prozessoren befinden, und der Anzahl von ausführbaren Entitäten, die auf den verfügbaren Prozessen aktiv sind. Es hängt vom Betriebssystem ab, wie die durchschnittliche Last berechnet wird; es handelt sich in der Regel jedoch um einen geglätteten zeitabhängigen Durchschnitt. Wenn die durchschnittliche Last nicht verfügbar ist, wird ein negativer Wert zurückgegeben.'  
-Von Javadoc für 'ManagementFactory.getOperatingSystemMXBean'
-`FreeMemory` | Die Anzahl der Byte des freien Speichers für die Java Virtual Machine (JVM), auf der der Edge Analytics-Agent (EAA) ausgeführt wird.
-`MemoryUsed` | Die Anzahl der Byte des JVM-Speichers, die vom Edge Analytics-Agenten (EAA) verwendet wird.
-`InQueueSize` | Die Anzahl der Nachrichten, die zur Verarbeitung durch den Edge Analytics-Agenten in die Warteschlange gestellt wurden.
-`RuleNumber` | Die Anzahl der definierten Regeln in der Basis der Regelengine.
-`ProcessorNumber` | Für Debugzwecke. Die Anzahl der definierten Prozessoren in der Basis der Regelengine. </br>**Hinweis:** Ein Prozessor ist die minimale Ausführungseinheit in der Basis der Regelengine.
-`DataPointsInWindow` | Die Gesamtzahl der Datenpunkte, die im Zeitfenster gepuffert werden. Die Bytegröße eines Datenpunkts ist je nach seinem Datentyp unterschiedlich. Die Größe eines Datenpunkts mit dem Format 'float' oder 'int' beträgt beispielsweise 8 Byte, während die Größe eines Datenpunkts mit dem Typ 'string' abhängig von seiner Länge unterschiedlich ist. In den meisten Fällen können Sie die Speicherbelegung des Zeitfensters mithilfe der folgenden Formel schätzen: `DataPointsInWindow * 8`.
+`SystemLoad` | Die aktuelle Systembelastung des Systems, auf dem der Edge Analytics-Agent (EAA) ausgeführt wird. **Hinweis:** Die CPU-Rate wird nur gesendet, wenn auf dem System, auf dem der Edge Analytics-Agent ausgeführt wird, der Befehl `mpstat` vorhanden ist. Andernfalls wird die durchschnittliche Systembelastung der vergangenen Minute gesendet. </br>'Die durchschnittliche Systembelastung ist die für einen bestimmten Zeitraum geltende durchschnittliche Summe der Anzahl von ausführbaren Entitäten, die sich in der Warteschlange für die verfügbaren Prozessoren befinden, und der Anzahl von ausführbaren Entitäten, die auf den verfügbaren Prozessen aktiv sind. Es hängt vom Betriebssystem ab, wie die durchschnittliche Last berechnet wird; es handelt sich in der Regel jedoch um einen geglätteten zeitabhängigen Durchschnitt. Wenn die durchschnittliche Last nicht verfügbar ist, wird ein negativer Wert zurückgegeben.' - Javadoc für *ManagementFactory.getOperatingSystemMXBean*.
+ `FreeMemory` | Die Anzahl der Byte des freien Speichers für die Java Virtual Machine (JVM), auf der der Edge Analytics-Agent (EAA) ausgeführt wird.
+ `MemoryUsed` | Die Anzahl der Byte des JVM-Speichers, die vom Edge Analytics-Agenten (EAA) verwendet wird.
+ `InQueueSize` | Die Anzahl der Nachrichten, die zur Verarbeitung durch den Edge Analytics-Agenten in die Warteschlange gestellt wurden.
+ `RuleNumber` | Die Anzahl der definierten Regeln in der Basis der Regelengine.
+ `ProcessorNumber` | Für Debugzwecke. Die Anzahl der definierten Prozessoren in der Basis der Regelengine. </br>**Hinweis:** Ein Prozessor ist die minimale Ausführungseinheit in der Basis der Regelengine.
+ `DataPointsInWindow` | Die Gesamtzahl der Datenpunkte, die im Zeitfenster gepuffert werden. Die Bytegröße eines Datenpunkts ist je nach seinem Datentyp unterschiedlich. Die Größe eines Datenpunkts mit dem Format 'float' oder 'int' beträgt beispielsweise 8 Byte, während die Größe eines Datenpunkts mit dem Typ 'string' abhängig von seiner Länge unterschiedlich ist.  In den meisten Fällen können Sie die Speicherbelegung des Zeitfensters mithilfe der folgenden Formel schätzen: `DataPointsInWindow * 8`.

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-09-01"
 
 ---
 
@@ -13,13 +14,13 @@ copyright:
 
 # Echtzeitdaten mithilfe von Boards und Karten visualisieren
 {: #boards_and_cards}
-Letzte Aktualisierung: 21. Juni 2016
-{: .last-updated}
 
 Erstellen Sie Boards und Karten, um eigene Dashboards zu erstellen und gemeinsam zu nutzen, die Ihre Gerätedaten in Echtzeit visualisieren.
 {:shortdesc}
 
 Mithilfe von Boards und Karten können Sie Datasetwerte, die von mindestens einem Gerät stammen, grafisch darstellen, um eine schnelle Übersicht bereitzustellen und das Verständnis der Daten zu verbessern. Erstellen Sie Boards und fügen Sie Karten hinzu, die Daten als unbearbeitete Zahlen, Echtzeit-Grafiken, Messanzeigen und anderes anzeigen. Fügen Sie Ihren Boards Mitglieder hinzu, um die Boards mit anderen Benutzern in Ihrer Organisation gemeinsam zu nutzen. Ordnen Sie die Karten an und fügen Sie Trennlinien für den erklärenden Text hinzu, um Ihre Präsentation zu optimieren.  
+
+Sie können den Standardsatz der von IBM bereitgestellten Karten durch das [Erstellen eigener angepasster Karten](custom_cards/custom-cards.html) erweitern.
 
 ![Echtzeitdaten mit Karten anzeigen.](images/boards_and_cards.svg "Echtzeitdaten mit Karten anzeigen.")
 
@@ -32,6 +33,7 @@ Das {{site.data.keyword.iot_full}}-Dashboard weist folgende Standardboards auf:
 |Nutzungsübersicht  | Zeigt Nutzungsstatistiken für Ihre Organisation an. Listet Gerätetypen und verarbeitete Daten auf.
 |Regelbasierte Analyse | Zeigt die für Ihre Organisation geltenden Regeln an. Zusätzliche Karten listen ausgelöste Alerts, zugeordnete Geräte, Geräteeigenschaften und Alertinformationen auf. |  
 |Gerätebezogene Analyse | Zeigt die mit Ihrer Organisation verbundenen Geräte an. Zusätzliche Karten zeigen Alerts für ausgewählte Geräte, Informationen zu einem ausgewählten Gerät, Geräteeigenschaften und Alertinformationen an. |
+|Risiko- und Sicherheitsmanagement | Zeigt Karten, die den allgemeinen Sicherheitsstatus zusammenfassen. Systembediener und Sicherheitsanalysten können Details zu Konformität, Verbindungsstatus für Geräte, Ursachen von Verbindungsfehlern und Geräten, die durch eine Blacklist oder Whitelist blockiert und zugelassen sind, anzeigen. Über die Karte für die Verbindungskonformität kann der Benutzer einen Drilldown auf einen detaillierten Bericht zu nicht konformen Geräten durchführen und den Bericht nach Excel exportieren. |
 
 Sie können diese Boards aktualisieren, indem Sie Karten hinzufügen, aktualisieren und entfernen.
 

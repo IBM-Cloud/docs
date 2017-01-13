@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-23"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # Cloud Analytics
 {: #cloud_analytics}
-Letzte Aktualisierung: 23. August 2016
-{: .last-updated}
 
 Mithilfe von Cloud Analytics für {{site.data.keyword.iot_short}} geben Sie Regelbedingungen an, die auf Echtzeitdaten von Geräten basieren, und die Alerts und optionale Aktionen auslösen, wenn die Bedingungen erfüllt sind.    
 {: shortdesc}

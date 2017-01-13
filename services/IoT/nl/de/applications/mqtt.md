@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-30"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # MQTT-Konnektivität für Anwendungen
 {: #mqtt}
-Letzte Aktualisierung: 31. August 2016
-{: .last-updated}
 
 MQTT ist das primäre Protokoll, das Geräte und Anwendungen für die Kommunikation mit {{site.data.keyword.iot_full}} verwenden. Es werden Clientbibliotheken, Informationen und Beispiele bereitgestellt, die Sie verwenden können, um für Ihre {{site.data.keyword.iot_short_notm}}-Anwendungen Verbindungen herzustellen und sie zu integrieren.
 {:shortdesc}
@@ -141,7 +140,7 @@ Stellen Sie zum Aktivieren der Lastverteilung sicher, dass die Anwendungssubskri
 
 Dabei gilt:
 -  Das Zeichen **A** gibt an, dass es sich bei dem Client um eine skalierbare Anwendung handelt.
--  *Organisations-ID* ist die aus sechs Zeichen bestehende eindeutige Organisations-ID, die generiert wurde, als Sie die beim ersten Registrieren des Service zugeordnete alphanumerische Zeichenfolge des Service registriert haben.
+-  *Organisations-ID* ist die aus sechs Zeichen bestehende eindeutige Organisations-ID, die beim Registrieren des Service generiert wurde.
 -  *Anwendungs-ID* ist eine benutzerdefinierte eindeutige Zeichenfolge-ID für den Client. Die Zeichenfolge kann nur alphanumerische Zeichen (a-z, A-Z, 0-9) und als Sonderzeichen den Gedankenstrich (-), das Unterstreichungszeichen (_) und den Punkt (.) enthalten.
 
 **Wichtig:**

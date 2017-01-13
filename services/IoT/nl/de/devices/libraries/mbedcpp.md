@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-02"
 
 ---
 
@@ -14,9 +15,6 @@ copyright:
 
 # mBed C++ für Geräteentwickler
 {: #mbedcpp}
-
-Letzte Aktualisierung: 2. August 2016
-{: .last-updated}
 
 Verwenden Sie die [mBed C++-Clientbibliothek](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/), um ohne großen Aufwand eine Verbindung zwischen [mBed-Geräten](https://www.mbed.com/en/) wie beispielsweise [LPC1768](https://developer.mbed.org/platforms/mbed-LPC1768/) oder [FRDM-K64F](https://developer.mbed.org/platforms/FRDM-K64F/) und dem {{site.data.keyword.iot_full}}-Service herzustellen.
 {:shortdesc}

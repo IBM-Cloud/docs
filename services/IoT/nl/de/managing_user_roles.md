@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-09-16"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 {:pre: .pre}
 
 # Benutzerrollen verwalten
-Letzte Aktualisierung: 16. September 2016
-{: .last-updated}
 
 Benutzerrollen legen fest, welche Operationen ein bestimmter Benutzer ausführen darf. Sie können die einem Benutzer zugeordnete Rolle mithilfe des {{site.data.keyword.iot_full}}-Dashboards oder mithilfe der {{site.data.keyword.iot_short_notm}}-API ändern.
 
@@ -23,7 +22,7 @@ Benutzerrollen legen fest, welche Operationen ein bestimmter Benutzer ausführen
 2. Klicken Sie auf das Symbol **Bearbeiten**, das neben dem Benutzer steht, den Sie aktualisieren möchten.
 3. Wählen Sie eine Rolle aus und klicken Sie auf **Fertig**.
 
-<!-- 
+<!--
 ## Changing a user role by using the API
 
 For information on using the API to change a user role, see the [{{site.data.keyword.iot_short_notm}} API documentation](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html).

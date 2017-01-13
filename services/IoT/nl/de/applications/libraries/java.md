@@ -110,7 +110,7 @@ Zum Festlegen des Keepalive-Intervalls für MQTT können Sie vor dem Aufrufen de
     myClient.connect();
 ```
 
-Zum Steuern der Anzahl von Wiederholungen, die bei Auftreten eines Verbindungsfehlers erfolgen sollen, geben Sie in der Funktion 'myClient.connect()' wie im folgenden Codesnippet gezeigt eine ganze Zahl an: 
+Zum Steuern der Anzahl von Wiederholungen, die bei Auftreten eines Verbindungsfehlers erfolgen sollen, geben Sie in der Funktion 'myClient.connect()' wie im folgenden Codesnippet gezeigt eine ganze Zahl an:
 
 ```
     DeviceClient myClient = new DeviceClient(options);
@@ -355,12 +355,15 @@ Ist das Status-Callback zum Anwendungsclient hinzugefügt, wird stets die Method
     myClient.subscribeToDeviceStatus();
 ```
 Anwendungen können beliebige andere Anwendungsstatus subskribieren, wie beispielsweise Statusdaten zum Herstellen und Trennen von Verbindungen zwischen Anwendungen und {{site.data.keyword.iot_short_notm}}. Das folgende Codesnippet zeigt, wie der Anwendungsstatus einer {{site.data.keyword.iot_short_notm}}-Organisation subskribiert wird:
+
 ```
     myClient.connect()
     myClient.setEventCallback(new MyEventCallback());
     myClient.subscribeToApplicationStatus();
 ```
 Mit der überladenen Methode kann die Subskription des Status einer bestimmten Anwendung gesteuert werden. Die Methode `processApplicationStatus()` wird stets aufgerufen, wenn für eine Anwendung, die den Kriterien entspricht, eine Verbindung zu {{site.data.keyword.iot_short_notm}} hergestellt wird bzw. diese getrennt wird.
+
+
 ## Ereignisse von Geräten publizieren
 {: #publishing_events_devices}
 
@@ -390,7 +393,7 @@ Ereignisse können in verschiedenen Formaten publiziert werden, beispielsweise J
 ```
 **Hinweis:** Im oben stehenden Codebeispiel müssen die Nutzdaten des Ereignisses das Zeichenfolgeformat aufweisen.
 
-Alle XML-Daten können in das Zeichenfolgeformat konvertiert und wie folgt publiziert werden: 
+Alle XML-Daten können in das Zeichenfolgeformat konvertiert und wie folgt publiziert werden:
 
 ```
     status = myClient.publishEvent("load", xmlConvertedString, "xml", 2);

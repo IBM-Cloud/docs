@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-27"
 
 ---
 
@@ -15,8 +16,6 @@ copyright:
 # Python für Anwendungsentwickler
 {: #python}
 
-Letzte Aktualisierung: 29. Juli 2016
-{: .last-updated}
 
 Verwenden Sie Python, um Anwendungen zu erstellen und zu entwickeln, die in {{site.data.keyword.iot_full}} mit Ihrer Organisation interagieren. Der Python-Client für {{site.data.keyword.iot_short_notm}} stellt eine API bereit, die eine einfache Interaktion mit {{site.data.keyword.iot_short_notm}}-Funktionen ermöglicht, indem die zugrunde liegenden Protokolle wie MQTT und HTTP herausgezogen werden.
 
@@ -38,9 +37,11 @@ Das Optionsverzeichnis erstellt Definitionen, die für die Interaktion mit dem {
 |:-----|:-----|
 |`orgId`|Die ID Ihrer Organisation.|
 |`appId`|Die eindeutige ID einer Anwendung in Ihrer Organisation.|
-|`auth-method`|Die Authentifizierungsmethode, deren einziger unterstützter Wert `apikey` lautet.|
-|`auth-key`|Optionaler API-Schlüssel, der erforderlich ist, wenn für 'auth-method' die Einstellung `apikey` festgelegt ist.|
-|`auth-token`|API-Schlüsseltoken, das erforderlich ist, wenn für 'auth-method' die Einstellung `apikey` festgelegt ist.|
+|`auth-method`|Die Methode der Authentifizierung. Die einzige Methode, die unterstützt ist, lautet `apikey`.|
+|`auth-key`|Optionaler API-Schlüssel, den Sie angeben müssen, wenn `apikey` als Wert für 'auth-method' festgelegt ist.|
+|`auth-token`|API-Schlüsseltoken, das ebenfalls erforderlich ist, wenn Sie `apikey` als Wert für 'auth-method' festlegen.|
+|`clean-session`|Der Wert 'true' oder 'false', der nur erforderlich ist, wenn Sie die Anwendung im Modus der permanenten Subskription verbinden möchten. Für `clean-session` ist standardmäßig der Wert 'true' festgelegt.|
+
 
 Steht kein Optionsverzeichnis zur Verfügung, wird der Client als nicht registriertes Gerät mit dem Quickstart-Service von {{site.data.keyword.iot_short_notm}} verbunden.
 
@@ -53,7 +54,8 @@ try:
     "id": appId,
     "auth-method": authMethod,
     "auth-key": authKey,
-    "auth-token": authToken
+    "auth-token": authToken,
+    "clean-session": true
   }
   client = ibmiotf.application.Client(options)
 except ibmiotf.ConnectionException  as e:
@@ -84,6 +86,7 @@ id=myApplication
 auth-method=apikey
 auth-key=key
 auth-token=token
+clean-session=true/false
 
 ```
 

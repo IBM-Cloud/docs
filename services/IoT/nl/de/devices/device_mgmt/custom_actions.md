@@ -2,10 +2,11 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-05"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -13,23 +14,19 @@ copyright:
 
 # Gerätemanagement erweitern
 {: #custom_actions}
-Letzte Aktualisierung: 11. Juli 2016
-{: .last-updated}
 
-Sie können die Gerätemanagementfunktionen in {{site.data.keyword.iot_full}} erweitern, damit sie Ihren Anforderungen entsprechen, indem Sie entweder mithilfe der REST-API oder des in {{site.data.keyword.Bluemix_notm}} bereitgestellten Dashboards Erweiterungen für das Gerätemanagement hinzufügen.
+Sie können die Gerätemanagementfunktionen in {{site.data.keyword.iot_full}} erweitern, damit sie Ihren Anforderungen entsprechen. Gerätemanagementerweiterungen können über die REST-API oder das in {{site.data.keyword.iot_short_notm}} bereitgestellte Dashboard hinzugefügt werden.
 
-Folgende Aktionen für das Gerätemanagement werden standardmäßig von {{site.data.keyword.iot_short_notm}} bereitgestellt und unterstützt:
+Folgende Aktionen für das Gerätemanagement werden standardmäßig von {{site.data.keyword.iot_short_notm}} unterstützt:
 - Neustart für Geräte
 - Zurücksetzen auf Werkseinstellungen
 - Firmware-Download
 - Firmware-Update
 
-Wenn die von {{site.data.keyword.iot_short_notm}} standardmäßig bereitgestellten Geräteaktionen für Ihre Geräte und Anwendungen nicht ausreichend sind, können Sie durch Implementieren eines Erweiterungspackages für das Gerätemanagement zusätzliche Gerätemanagementfunktionen entwickeln.
-
 ## Erweiterungspackages für das Gerätemanagement
 {: #device_management_ext}
 
-Ein Erweiterungspackage für das Gerätemanagement ist ein JSON-Dokument, das eine Gruppe von Gerätemanagementaktionen definiert. Die Aktionen können auf mindestens einem Gerät, das die Aktionen unterstützt, initiiert werden. Die Aktionen werden entweder mithilfe des {{site.data.keyword.iot_short_notm}}-Dashboards oder der REST-API-Befehle für das Gerätemanagement initiiert.
+Ein Erweiterungspackage für das Gerätemanagement ist ein JSON-Dokument, das mindestens eine Gerätemanagementaktion definiert. Die Aktionen können auf allen Geräten, die die Aktionen unterstützen, über das {{site.data.keyword.iot_short_notm}}-Dashboard oder die REST-API initiiert werden.
 
 Das folgende Codebeispiel zeigt das typische Format eines Erweiterungspackages für das Gerätemanagement:
 
@@ -99,7 +96,7 @@ Ein Erweiterungspackage für das Gerätemanagement enthält folgende Eigenschaft
 
 **Hinweis:** Die Werte für `bundleId`, `version`, `actionId` und `parameterId` sind auf 255 Zeichen beschränkt und müssen ausschließlich aus alphanumerischen Zeichen (a-z, A-Z, 0-9) sowie den folgenden Sonderzeichen bestehen:
  - Gedankenstrich (-)
- - Unterstreichungszeichen (_)
+ - Unterstreichungszeichen (\_)
  - Punkt (.)
 
 ## REST-APIs
@@ -121,12 +118,12 @@ Verwenden Sie zum Verwalten Ihrer Erweiterungspackages folgende {{site.data.keyw
 Weitere Informationen zu den REST-APIs für Erweiterungspackages für das Gerätemanagement finden Sie in der Dokumentation zur [{{site.data.keyword.iot_short_notm}}-API Version 2](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 
-##Unterstützung für angepasste Gerätemanagementaktionen bereitstellen
+## Unterstützung für angepasste Gerätemanagementaktionen bereitstellen
 {: #supporting_custom_device_management_actions}
 
 Gerätemanagementaktionen, die in Ihren Erweiterungspackages definiert sind, können nur von Geräten initiiert werden, die diese Aktionen unterstützen. Wenn ein Gerät eine Managementanforderung an {{site.data.keyword.iot_short_notm}} publiziert, gibt das Gerät die Aktionstypen an, die von ihm unterstützt werden können.
 
-Um angepasste Aktionen aus einem Erweiterungspackage zu erhalten, muss das Gerät die Bundle-ID für das Erweiterungspackage wie im folgenden Beispiel gezeigt im Objekt 'supports' der Anforderung angeben:
+Um angepasste Aktionen aus einem Erweiterungspackage anzugeben, muss das Gerät die Bundle-ID für das Erweiterungspackage wie im folgenden Beispiel gezeigt im Objekt 'supports' der Anforderung angeben:
 
 ```
 	Ausgehende Nachricht vom Gerät:
