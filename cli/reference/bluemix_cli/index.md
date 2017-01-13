@@ -117,8 +117,8 @@ To install from a remote server, take the following steps:
 
 You can also install a plug-in from the repository. {{site.data.keyword.Bluemix_notm}} has repositories that host {{site.data.keyword.Bluemix_notm}} CLI plug-ins and Cloud Foundry CLI plug-ins:
 
-  * [Cloud Foundry CLI plug-ins repository ![External link icon](../icons/launch-glyph.svg)]](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){: new_window}, which hosts plug-ins for Cloud Foundry CLI.
-  * [{{site.data.keyword.Bluemix_notm}} CLI plug-ins repository ![External link icon](../icons/launch-glyph.svg)]](http://clis.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window}, which hosts plug-ins specifically for {{site.data.keyword.Bluemix_notm}} CLI.
+  * [Cloud Foundry CLI plug-ins repository ![External link icon](../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){: new_window}, which hosts plug-ins for Cloud Foundry CLI.
+  * [{{site.data.keyword.Bluemix_notm}} CLI plug-ins repository ![External link icon](../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window}, which hosts plug-ins specifically for {{site.data.keyword.Bluemix_notm}} CLI.
 
 To install from the repository, take the following steps:
 
@@ -825,7 +825,7 @@ bluemix scale my-java-app -i 3 -k 8G -m 1024M
 ### bluemix curl
 {: #bluemix_curl}
 
-Execute a raw HTTP request to {{site.data.keyword.Bluemix_notm}}. *Content-Type* is set to *application/json* by default. This command sends the request to {{site.data.keyword.Bluemix_notm}} Multi-Cloud Control Proxy. For supported paths, refer to the API path definitions in the [CloudFoundry API document ![External link icon](../icons/launch-glyph.svg)]](http://apidocs.cloudfoundry.org/){: new_window}.
+Execute a raw HTTP request to {{site.data.keyword.Bluemix_notm}}. *Content-Type* is set to *application/json* by default. This command sends the request to {{site.data.keyword.Bluemix_notm}} Multi-Cloud Control Proxy. For supported paths, refer to the API path definitions in the [CloudFoundry API document ![External link icon](../icons/launch-glyph.svg)](http://apidocs.cloudfoundry.org/){: new_window}.
 
 ```
 bluemix curl PATH [OPTIONS...]
@@ -2114,7 +2114,7 @@ bluemix plugin uninstall IBM-Containers
 ### bluemix ic attach
 {: #bluemix_ic_attach}
 
-Control a running container or view its output. Use `CTRL+C` to exit and stop the container. This command calls the Docker CLI. For more information, see the [attach ![External link icon](../icons/launch-glyph.svg)]](https://docs.docker.com/engine/reference/commandline/attach/){: new_window} command in the Docker help.
+Control a running container or view its output. Use `CTRL+C` to exit and stop the container. This command calls the Docker CLI. For more information, see the [attach ![External link icon](../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/attach/){: new_window} command in the Docker help.
 
 ```
 bluemix ic attach [--no-stdin] [--sig-proxy] CONTAINER
@@ -2144,7 +2144,7 @@ bluemix ic attach my_container
 ### bluemix ic build
 {: #bluemix_ic_build}
 
-Call the IBM Containers build service to build a Docker image locally or in your private {{site.data.keyword.Bluemix_notm}} repository. This command calls the Docker CLI. For more information, see the [build ![External link icon](../icons/launch-glyph.svg)]](https://docs.docker.com/engine/reference/commandline/build/){: new_window} command in the Docker help.
+Call the IBM Containers build service to build a Docker image locally or in your private {{site.data.keyword.Bluemix_notm}} repository. This command calls the Docker CLI. For more information, see the [build ![External link icon](../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/build/){: new_window} command in the Docker help.
 
 ```
 bluemix ic build -t TAG|--tag TAG [--no-cache] [-p|--pull] [-q|--quiet] DOCKERFILE_LOCATION
@@ -2176,7 +2176,7 @@ bluemix ic build -t registry.ng.bluemix.net/mynamespace/myimage .
 
 ### bluemix ic cp
 {: #bluemix_ic_cp}
-Copy files or folders between a container and the local filesystem. This command calls the Docker CLI. For more information, see the [cp ![External link icon](../icons/launch-glyph.svg)]](https://docs.docker.com/engine/reference/commandline/cp/){: new_window} command in the Docker help.
+Copy files or folders between a container and the local filesystem. This command calls the Docker CLI. For more information, see the [cp ![External link icon](../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/cp/){: new_window} command in the Docker help.
 
 
 ### bluemix ic cpi
@@ -2216,7 +2216,7 @@ bluemix ic cpi training/sinatra registry.ng.bluemix.net/mynamespace/mysinatra:v1
 ### bluemix ic exec
 {: #bluemix_ic_exec}
 
-Execute a command within a container. For more information, see the [exec ![External link icon](../icons/launch-glyph.svg)]](https://docs.docker.com/engine/reference/commandline/exec/){: new_window} command in the Docker help.
+Execute a command within a container. For more information, see the [exec ![External link icon](../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/exec/){: new_window} command in the Docker help.
 
 ```
 bluemix ic exec [-d|--detach] [-it] [-u USER|--user USER] CONTAINER [CMD]
@@ -2484,7 +2484,7 @@ bluemix ic groups [-q]
 ### bluemix ic images
 {: #bluemix_ic_images}
 
-View a list of all available images in the organization's private {{site.data.keyword.Bluemix_notm}} repository. For more information, see the [images ![External link icon](../icons/launch-glyph.svg)]](https://docs.docker.com/engine/reference/commandline/images){: new_window} command in the Docker help. The list includes the image ID, the created date, and the image name.
+View a list of all available images in the organization's private {{site.data.keyword.Bluemix_notm}} repository. For more information, see the [images ![External link icon](../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/images){: new_window} command in the Docker help. The list includes the image ID, the created date, and the image name.
 
 ```
 bluemix ic images [-a|--all] [-f CONDITION] [--no-trunc] [-q|--quiet]
@@ -2550,7 +2550,7 @@ bluemix region-set us-south
 ### bluemix ic inspect
 {: #bluemix_ic_inspect}
 
-View the information about a container. For more information, see the [inspect ![External link icon](../icons/launch-glyph.svg)]](https://docs.docker.com/engine/reference/commandline/inspect){: new_window} command in the Docker help.
+View the information about a container. For more information, see the [inspect ![External link icon](../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/inspect){: new_window} command in the Docker help.
 
 ```
 bluemix ic inspect [IMAGE|images|CONTAINER]
@@ -2704,7 +2704,7 @@ bluemix ic ips -q
 ### bluemix ic kill
 {: #bluemix_ic_kill}
 
-Stop a running process in a container without stopping the container. For more information, see the [kill ![External link icon](../icons/launch-glyph.svg)]](https://docs.docker.com/engine/reference/commandline/kill/){: new_window} command in the Docker help.
+Stop a running process in a container without stopping the container. For more information, see the [kill ![External link icon](../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/kill/){: new_window} command in the Docker help.
 
 ```
 bluemix ic kill [-s CMD|--signal CMD] CONTAINER
@@ -2733,7 +2733,7 @@ bluemix ic kill proxy
 ### bluemix ic logs
 {: #bluemix_ic_logs}
 
-Show the output or error logs for a running container. For more information, see the [logs ![External link icon](../icons/launch-glyph.svg)]](https://docs.docker.com/engine/reference/commandline/logs/){: new_window} command in the Docker help.
+Show the output or error logs for a running container. For more information, see the [logs ![External link icon](../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/logs/){: new_window} command in the Docker help.
 ```
 bluemix ic logs [OPTIONS] CONTAINER
 ```
@@ -2775,7 +2775,7 @@ bluemix ic namespace-set NAME
 ### bluemix ic pause
 {: #pause}
 
-Pause all processes within a running container. For more information, see the [pause ![External link icon](../icons/launch-glyph.svg)]](https://docs.docker.com/engine/reference/commandline/pause/){: new_window} command in the Docker help. To stop a container, see the [bluemix ic unpause](#unpause) command.
+Pause all processes within a running container. For more information, see the [pause ![External link icon](../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/pause/){: new_window} command in the Docker help. To stop a container, see the [bluemix ic unpause](#unpause) command.
 
 ```
 bluemix ic pause CONTAINER
@@ -2812,7 +2812,7 @@ bluemix ic pause proxy
 ### bluemix ic port
 {: #bluemix_ic_port}
 
-List port mappings or a specific mapping for the container. This command wraps the `docker port` command. For more information, see the [port ![External link icon](../icons/launch-glyph.svg)]](https://docs.docker.com/engine/reference/commandline/port/){: new_window} command in the Docker help.
+List port mappings or a specific mapping for the container. This command wraps the `docker port` command. For more information, see the [port ![External link icon](../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/port/){: new_window} command in the Docker help.
 
 
 ### bluemix ic ps
@@ -2851,7 +2851,7 @@ bluemix ic ps -a
 
 ### bluemix ic rename
 {: #bluemix_ic_rename}
-Rename a container. For more information, see the [rename ![External link icon](../icons/launch-glyph.svg)]](https://docs.docker.com/engine/reference/commandline/rename/){: new_window} command in the Docker help.
+Rename a container. For more information, see the [rename ![External link icon](../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/rename/){: new_window} command in the Docker help.
 
 ```
 bluemix ic rename OLD_NAME NEW_NAME
@@ -2891,7 +2891,7 @@ bluemix ic reprovision [--force|-f] [AVAILABILITY_ZONE]
 ### bluemix ic restart
 {: #bluemix_ic_restart}
 
-Restart a container. For more information, see the [restart ![External link icon](../icons/launch-glyph.svg)]](https://docs.docker.com/engine/reference/commandline/restart/){: new_window} command in the Docker help.
+Restart a container. For more information, see the [restart ![External link icon](../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/restart/){: new_window} command in the Docker help.
 
 ```
 bluemix ic restart CONTAINER [-t SECS|--time SECS]
@@ -2932,7 +2932,7 @@ bluemix ic restart proxy
 ### bluemix ic rm
 {: #bluemix_ic_rm}
 
-Remove a container. For more information, see the [rm ![External link icon](../icons/launch-glyph.svg)]](https://docs.docker.com/engine/reference/commandline/rm/){: new_window} command in the Docker help.
+Remove a container. For more information, see the [rm ![External link icon](../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/rm/){: new_window} command in the Docker help.
 
 ```
 bluemix ic rm [-f|--force] CONTAINER
@@ -2972,7 +2972,7 @@ bluemix ic rm proxy
 ### bluemix ic rmi
 {: #bluemix_ic_rmi}
 
-Remove an image from the logged-in user's namespace. For more information, see the [rmi ![External link icon](../icons/launch-glyph.svg)]](https://docs.docker.com/engine/reference/commandline/rmi/){: new_window} command in the Docker help.
+Remove an image from the logged-in user's namespace. For more information, see the [rmi ![External link icon](../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/rmi/){: new_window} command in the Docker help.
 
 ```
 bluemix ic rmi [-R REGISTRY|--registry REGISTRY] IMAGE
@@ -3076,7 +3076,7 @@ bluemix ic route-unmap -n my_host -d organization.com GROUP1
 ### bluemix ic run
 {: #bluemix_ic_run}
 
-Start a new container in the container cloud service from an image name. For more information, see the [run ![External link icon](../icons/launch-glyph.svg)]](https://docs.docker.com/engine/reference/commandline/run/){: new_window} command in the Docker help.
+Start a new container in the container cloud service from an image name. For more information, see the [run ![External link icon](../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/run/){: new_window} command in the Docker help.
 
 
 ```
@@ -3192,7 +3192,7 @@ bluemix ic service-unbind GROUP_NAME SERVICE_INSTANCE
 
 ### bluemix ic start
 {: #ic_start}
-Start a stopped container. For more information, see the [start ![External link icon](../icons/launch-glyph.svg)]](https://docs.docker.com/engine/reference/commandline/start/){: new_window} command in the Docker help. To stop a container, see the [bluemix ic stop](#ic_stop) command.
+Start a stopped container. For more information, see the [start ![External link icon](../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/start/){: new_window} command in the Docker help. To stop a container, see the [bluemix ic stop](#ic_stop) command.
 
 ```
 bluemix ic start CONTAINER
@@ -3231,7 +3231,7 @@ bluemix ic start proxy
 ### bluemix ic stats
 {: #bluemix_ic_stats}
 
-For one or more containers, view live usage statistics. Use `CTRL+C` to exit. For more information, see the [stats ![External link icon](../icons/launch-glyph.svg)]](https://docs.docker.com/engine/reference/commandline/stats/){: new_window} command in the Docker help.
+For one or more containers, view live usage statistics. Use `CTRL+C` to exit. For more information, see the [stats ![External link icon](../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/stats/){: new_window} command in the Docker help.
 
 ```
 bluemix ic stats [--no-stream] CONTAINER [CONTAINER]
@@ -3258,7 +3258,7 @@ bluemix ic stats --no-stream my_container
 
 ### bluemix ic stop
 {: #ic_stop}
-Stop a running container. For more information, see the [stop ![External link icon](../icons/launch-glyph.svg)]](https://docs.docker.com/engine/reference/commandline/stop/){: new_window} command in the Docker help. To start a container, see the [bluemix ic start](#ic_start) command.
+Stop a running container. For more information, see the [stop ![External link icon](../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/stop/){: new_window} command in the Docker help. To start a container, see the [bluemix ic start](#ic_start) command.
 
 ```
 bluemix ic stop CONTAINER [-t SECS|--time SECS]
@@ -3298,7 +3298,7 @@ bluemix ic stop proxy
 ### bluemix ic top
 {: #bluemix_ic_top}
 
-Show the processes that are running in the container. For more information, see the [top ![External link icon](../icons/launch-glyph.svg)]](https://docs.docker.com/engine/reference/commandline/top/){: new_window} command in the Docker help.
+Show the processes that are running in the container. For more information, see the [top ![External link icon](../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/top/){: new_window} command in the Docker help.
 
 ```
 bluemix ic top CONTAINER [CONTAINER]
@@ -3324,7 +3324,7 @@ bluemix ic top my_container
 ### bluemix ic unpause
 {: #unpause}
 
-Unpause all processes within a running container. For more information, see the [unpause ![External link icon](../icons/launch-glyph.svg)]](https://docs.docker.com/engine/reference/commandline/unpause/){: new_window} command in the Docker help. To pause a container, see the [bluemix ic pause](#pause) command.
+Unpause all processes within a running container. For more information, see the [unpause ![External link icon](../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/unpause/){: new_window} command in the Docker help. To pause a container, see the [bluemix ic pause](#pause) command.
 
 ```
 bluemix ic unpause CONTAINER
@@ -3388,7 +3388,7 @@ bluemix ic version
 
 <strong>Prerequisites</strong>:  Docker
 
-To see the version of the IBM Containers, run `bluemix ic info`. For more information, see the [version ![External link icon](../icons/launch-glyph.svg)]](https://docs.docker.com/engine/reference/commandline/version/){: new_window} command in the Docker help.
+To see the version of the IBM Containers, run `bluemix ic info`. For more information, see the [version ![External link icon](../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/version/){: new_window} command in the Docker help.
 
 
 ### bluemix ic volume-create
@@ -3587,7 +3587,7 @@ bluemix ic volumes
 ### bluemix ic wait
 {: #bluemix_ic_wait}
 
-Exit a container and display the exit code as confirmation. For more information, see the [wait ![External link icon](../icons/launch-glyph.svg)]](https://docs.docker.com/engine/reference/commandline/wait/){: new_window} command in the Docker help.
+Exit a container and display the exit code as confirmation. For more information, see the [wait ![External link icon](../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/wait/){: new_window} command in the Docker help.
 
 ```
 bluemix ic wait CONTAINER [CONTAINER]
@@ -3643,4 +3643,4 @@ bluemix ic wait my_container
 ## Related Links
 {: #general}
 
-* [bx tool ![External link icon](../icons/launch-glyph.svg)]](http://clis.ng.bluemix.net/ui/home.html){:new_window}
+* [bx tool ![External link icon](../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/home.html){:new_window}
