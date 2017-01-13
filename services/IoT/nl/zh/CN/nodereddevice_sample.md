@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-26"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 # 创建并连接 Node-RED 设备模拟器
 使用 Node-RED 创建设备模拟器并将模拟设备数据发送到 {{site.data.keyword.iot_full}} 组织。  
 {:shortdesc}
-上次更新时间：2016 年 8 月 26 日
-{: .last-updated}
 
 Node-RED 是一款以全新且有趣的方法，将硬件设备、API 和在线服务连接在一起的工具。有关更多信息，请参阅 [Node-RED](http://nodered.org/) Web 站点。  
 

@@ -15,6 +15,7 @@ lastupdated: "2016-10-13"
 # 确保定制卡服务器的安全
 {: #securing_custom_cards}
 
+
 定制卡服务器是标准 Web 服务器，用于托管定制卡 JavaScript 代码。要确保 {{site.data.keyword.iot_short_notm}} 环境的完整性，您应该如本主题中所述，通过采取步骤确保卡源安全，从而确保定制卡服务器的安全。
 {:shortdesc}
 

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-09-16"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # 使用 {{site.data.keyword.cloudant_short_notm}} 连接和配置历史服务  
 {: #cloudant_main}
-上次更新时间：2016 年 9 月 16 日
-{: .last-updated}
 
 通过将 {{site.data.keyword.cloudantfull}} 服务连接到 {{site.data.keyword.iot_full}}，您可以存储和访问设备数据。根据所选的存储区时间间隔，设备数据会存储在每天、每周或每月数据库中。
 

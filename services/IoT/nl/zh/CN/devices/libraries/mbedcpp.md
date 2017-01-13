@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-02"
 
 ---
 
@@ -14,9 +15,6 @@ copyright:
 
 # 针对设备开发者的 mBed C++
 {: #mbedcpp}
-
-上次更新时间：2016 年 8 月 2 日
-{: .last-updated}
 
 使用 [mBed C++ 客户机库](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/)可轻松将 [mBed 设备](https://www.mbed.com/en/)（例如，[LPC1768](https://developer.mbed.org/platforms/mbed-LPC1768/) 或 [FRDM-K64F](https://developer.mbed.org/platforms/FRDM-K64F/)）连接到 {{site.data.keyword.iot_full}} 服务。
 {:shortdesc}
@@ -73,7 +71,7 @@ copyright:
   // Create DeviceClient
   IoTF::DeviceClient client(organization, deviceType, deviceId);
 
-  // Get the DeviceID(MAC Address) if we are in quickstart mode and device id is not specified
+  // Get the DeviceID(MAC Address) if we are in quickstart mode and device ID is not specified
   if((strcmp(organization, QUICKSTART) == 0) && (strcmp("", deviceId) == 0))
   {
   	char tmpBuf[50];
@@ -135,7 +133,7 @@ copyright:
 ## 发布事件
 {: #publishing_events}
 
-事件是设备用于将数据发布到 {{site.data.keyword.iot_short_notm}} 的机制。设备控制事件内容，并为其发送的每个事件指定名称。
+事件是设备将数据发布到 {{site.data.keyword.iot_short_notm}} 时所采用的机制。设备控制事件内容，并为其发送的每个事件指定名称。
 
 {{site.data.keyword.iot_short_notm}} 实例接收到事件时，所接收事件的凭证会识别发送设备，这意味着一台设备无法冒充其他设备。
 

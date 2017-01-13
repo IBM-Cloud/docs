@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-09-16"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 {:pre: .pre}
 
 # 管理用户访问权
-上次更新时间：2016 年 9 月 16 日
-{: .last-updated}
 
 在“访问权”仪表板中，可以控制和管理对 {{site.data.keyword.iot_full}} 组织的访问权。您可以通过添加、邀请、注册或导入用户来添加用户。还可以通过分配角色来向用户授予不同的访问级别。
 {:shortdesc}

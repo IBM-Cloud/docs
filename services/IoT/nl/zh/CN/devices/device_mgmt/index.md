@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-13"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # 设备管理协议
 {: #index}
-上次更新时间：2016 年 9 月 13 日
-{: .last-updated}
 
 ## 简介
 {: #introduction}

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-02"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # 针对设备开发者的 Embedded C
 {: #embedded_c}
-上次更新时间：2016 年 8 月 2 日
-{: .last-updated}
 
 您可以使用 Embedded C 来构建和定制设备，以用于在 {{site.data.keyword.iot_full}} 上与您的组织进行交互。使用提供的信息和示例通过 Embedded C 开始开发设备。
 {:shortdesc}
@@ -37,7 +36,7 @@ copyright:
 ## 安装
 {: #installation}
 
-要安装 Embedded C 的 {{site.data.keyword.iot_full}} 客户机库，请完成以下指示信息：
+要安装 Embedded C 的 {{site.data.keyword.iot_short_notm}} 客户机库，请完成以下指示信息：
 
 1. 要安装最新版本的库，请在命令行上输入以下代码：
 ```

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-27"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # 针对设备开发者的 Python
 {: #python}
-上次更新时间：2016 年 7 月 29 日
-{: .last-updated}
 
 您可以使用 Python 来构建和开发设备代码，以用于在 {{site.data.keyword.iot_full}} 上与您的组织进行交互。{{site.data.keyword.iot_short_notm}} 的 Python 客户机提供了 API，通过剥离底层协议（例如，MQTT 和 HTTP）来帮助与 {{site.data.keyword.iot_short_notm}} 功能进行简单交互。
 {:shortdesc}
@@ -35,12 +34,13 @@ copyright:
 |定义|描述 |
 |:---|:---|
 |`orgId`|组织标识。|
-|`type`|设备类型。通常，deviceType 是对执行特定任务的设备的一种分组，例如“weatherballoon”。|
-|`id`|设备的标识。通常，对于给定设备类型，deviceId 是该设备的唯一标识，例如序列号或 MAC 地址。|
-|`auth-method`|要使用的认证方法。当前支持的唯一值是 `token`。|
-|`auth-token`|用于将设备安全连接到 Watson IoT Platform 的认证令牌。|
+|`type`|设备的类型。设备类型是对执行特定任务的设备的一种分组，例如“weatherballoon”。|
+|`id`|用于识别设备的唯一标识。通常，对于给定设备类型，设备标识是该设备的唯一标识，例如，序列号或 MAC 地址。|
+|`auth-method`|认证方法。支持的唯一方法是 `apikey`。|
+|`auth-token`|API 密钥令牌，将 auth-method 的值设置为 `apikey` 时，此参数也是必需的。|
+|`clean-session`|true 或 false 值，仅当要以持久预订方式连接应用程序时是必需的。缺省情况下，`clean-session` 设置为 true。|
 
-如果未提供选项字典，那么客户机将作为未注册的设备连接到 Watson IoT Platform Quickstart 服务。
+如果未提供选项字典，那么客户机将作为未注册的设备连接到 {{site.data.keyword.iot_short_notm}} Quickstart 服务。
 
 ```python
 
@@ -51,7 +51,8 @@ try:
     "type": deviceType,
     "id": deviceId,
     "auth-method": authMethod,
-    "auth-token": authToken
+    "auth-token": authToken,
+    "clean-session": true
   }
   client = ibmiotf.device.Client(options)
 except ibmiotf.ConnectionException  as e:
@@ -82,13 +83,13 @@ type=deviceType
 id=deviceId
 auth-method=token
 auth-token=token
-
+clean-session=true/false
 ```
 
 ## 发布事件
 {: #publishing_events}
 
-事件是设备用于将数据发布到 {{site.data.keyword.iot_short_notm}} 的机制。设备控制事件内容，并为其发送的每个事件指定名称。
+事件是设备将数据发布到 {{site.data.keyword.iot_short_notm}} 时所采用的机制。设备控制事件内容，并为其发送的每个事件指定名称。
 
 {{site.data.keyword.iot_short_notm}} 实例接收到事件时，所接收事件的凭证会识别发送设备，这意味着一台设备无法冒充其他设备。
 

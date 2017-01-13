@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-03"
 
 ---
 
@@ -13,9 +14,6 @@ copyright:
 
 # 用于 {{site.data.keyword.iot_short}} 开发的客户机库
 {: #iot_platform_client_lib}
-
-上次更新时间：2016 年 8 月 3 日
-{: .last-updated}
 
 客户机库提供工具和文件来构建和开发代码，从而在 {{site.data.keyword.iot_full}} 上集成和连接设备及应用程序。
 {:shortdesc}

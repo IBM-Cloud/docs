@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-02"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # Java 客户机库 - 受管设备
 {: #java_deviceManagement}
-上次更新时间：2016 年 8 月 2 日
-{: .last-updated}
 
 ##简介
 {: #introduction}
@@ -97,7 +96,7 @@ DeviceMetadata metadata = new DeviceMetadata(data);
 |属性 |描述 |
 |:---|:---|
 |`Organization-ID` |组织的标识|
-|`Device-Type` |设备类型。通常，deviceType 是一组执行特定任务的设备，例如“weatherballoon”。|
+|`Device-Type` |设备类型。通常，deviceType 是对执行特定任务的设备的一种分组，例如“weatherballoon”。|
 |`Device-ID` |设备的标识。通常，对于给定设备类型，deviceId 是该设备的唯一标识，例如序列号或 MAC 地址。|
 |`Authentication-Method` |要使用的认证方法。当前支持的唯一值是 `token`。|
 |`Authentication-Token` |用于将设备安全连接到 Watson IoT Platform 的认证令牌。|

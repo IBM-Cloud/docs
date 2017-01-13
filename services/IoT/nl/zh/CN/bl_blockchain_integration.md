@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-30"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # {{site.data.keyword.iot_short_notm}} 区块链集成
 {: #gettingstartedtemplate}
-上次更新时间：2016 年 8 月 30 日
-{: .last-updated}
 
 {{site.data.keyword.iot_short_notm}} 区块链集成支持 IoT 设备向区块链交易提供数据，这会将数据存储在区块链的不可变分类帐中，并将其用于在区块链智能合同中实现的业务规则。
 {:shortdesc}

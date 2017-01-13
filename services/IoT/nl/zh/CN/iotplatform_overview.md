@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-01"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # 关于 {{site.data.keyword.iot_short_notm}}
 {: #about_iotplatform}
-上次更新时间：2016 年 8 月 1 日
-{: .last-updated}
 
 {{site.data.keyword.iot_full}} 提供对 IoT 设备和数据的强大应用程序访问，可帮助您快速编写分析应用程序、可视化仪表板和移动 IoT 应用程序。
 {:shortdesc}

@@ -474,7 +474,7 @@ HTTP 协议提供“至多一次”传递，这类似于 MQTT 协议的“至多
 
 要查看完整的代码样本，请参阅 [HttpCommandPublish](https://github.com/ibm-messaging/iot-application-samples/blob/master/java/standalone-samples/src/main/java/com/ibm/iotf/sample/client/application/HttpCommandPublish.java) 应用程序示例。
 
-HTTP 协议提供“至多一次”传递，这类似于 MQTT 协议的“至多一次”(QoS 0) 服务质量级别。使用“至多一次”传递来发布命令时，应用程序必须实现出错情况下的重试逻辑。有关更多信息，请参阅[应用程序的 HTTP REST API](../api.html)。
+HTTP 协议提供“至多一次”传递，这类似于 MQTT 协议的“至多一次”(QoS 0) 服务质量级别。使用“至多一次”传递来发布命令时，应用程序必须实现出错情况下的重试逻辑。有关更多信息，请参阅[针对应用程序的 HTTP REST API](../api.html)。
 
 
 ## 样本

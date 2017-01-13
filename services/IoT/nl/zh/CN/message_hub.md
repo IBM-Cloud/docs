@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-09-29"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # 使用 {{site.data.keyword.messagehub}} 连接并配置历史服务  
 {: #messagehub_main}
-上次更新时间：2016 年 9 月 29 日
-{: .last-updated}
 
 将 {{site.data.keyword.messagehub_full}} 连接到 {{site.data.keyword.iot_short}} 为历史数据存储提供了可扩展的高吞吐量消息传递总线。{{site.data.keyword.messagehub}} 基于 Apache Kafka 构建，这是一种高吞吐量的开放式源代码消息传递系统，提供了等待时间短的平台，用于处理实时数据订阅源。
 

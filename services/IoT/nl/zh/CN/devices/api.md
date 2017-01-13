@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-11"
 
 ---
 
@@ -11,10 +12,8 @@ copyright:
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# 设备的 HTTP REST API
+# 针对设备的 HTTP REST API
 {: #api}
-上次更新时间：2016 年 10 月 11 日
-{: .last-updated}
 
 **重要信息：**针对设备的 {{site.data.keyword.iot_full}} HTTP REST API 功能只作为受限 Beta 程序的一部分提供。未来更新可能会包含与此功能当前版本不兼容的更改。请尝试此功能，[让我们了解您的想法](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html)。
 
@@ -23,7 +22,7 @@ copyright:
 
 要访问 {{site.data.keyword.iot_short_notm}} HTTP REST API，并获取有关如何将设备集成到组织中的更多信息，请转至 https://docs.internetofthings.ibmcloud.com/swagger/v0002.html。
 
-{{site.data.keyword.iot_short_notm}} HTTP REST API V2 是唯一支持的版本。请确保您的 {{site.data.keyword.iot_short_notm}} 解决方案使用的是 V2。
+{{site.data.keyword.iot_short_notm}} HTTP REST API 的唯一受支持版本是 V2。请确保您的 {{site.data.keyword.iot_short_notm}} 解决方案使用的是 V2。
 
 # 针对设备的 HTTP REST 消息传递 API
 {: #rest_messaging_api}
@@ -59,7 +58,7 @@ copyright:
 
 ### 认证
 
-所有请求都必须包含授权头。仅支持基本认证方法。设备通过 {{site.data.keyword.iot_short_notm}} HTTP REST API 发起 HTTP 请求时，以下凭证是必需的：
+所有请求都必须包含授权头。基本认证是唯一受支持的方法。设备通过 {{site.data.keyword.iot_short_notm}} HTTP REST API 发起 HTTP 请求时，以下凭证是必需的：
 
 |凭证|必需的输入|
 |:---|:---|

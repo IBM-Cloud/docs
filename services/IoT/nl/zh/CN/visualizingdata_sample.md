@@ -2,21 +2,24 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-06-29"
 
 ---
 
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # 可视化设备数据
 {: #visualizingdata_data}
-*上次更新时间：2016 年 4 月 20 日*
-{: .last-updated}
 
 此样本帮助您从 {{site.data.keyword.iot_full}} 组织中已注册设备可视化实时数据和历史数据。
 {:shortdesc}
 
 ## 开始之前
+{: #byb}
 
 可视化数据之前，必须执行以下操作：
 
@@ -26,6 +29,7 @@ copyright:
 - 从 {{site.data.keyword.Bluemix_notm}} [安装 cf 命令行工具](../../starters/install_cli.html)。
 
 ## 在 {{site.data.keyword.Bluemix_notm}} 中运行样本
+{: #running_sample}
 
 1. 使用 Node.js SDK 在 {{site.data.keyword.Bluemix_notm}} 中创建应用程序。记录应用程序的应用程序名称和主机名，需要此信息以将应用程序上传到 {{site.data.keyword.Bluemix_notm}}。
 2. 通过完成以下步骤，在 {{site.data.keyword.Bluemix_notm}} 仪表板中将 node.JS 应用程序绑定到 {{site.data.keyword.iot_short_notm}} 实例：
@@ -69,7 +73,8 @@ http://<your_application_name>.mybluemix.net
 
 组织中的所有设备会在设备下拉菜单中列出。进行选择时，应该会看到设备将发送到 {{site.data.keyword.iot_short_notm}} 服务的数据的实时可视化。要查看历史数据，请单击**历史数据**按钮。
 
-### 定制样本
+## 定制样本
+{: #customize_sample}
 
 此样本应用程序是在 node.js 框架上编写的独立 Web 应用程序。此样本可视化通过 {{site.data.keyword.iot_short_notm}} 中已注册设备发送的事件。此样本使用以下工具：
 
@@ -92,7 +97,8 @@ http://<your_application_name>.mybluemix.net
 - Views：以 Jade 编写的用户界面文件
 - Rickshaw 图表库用于绘制实时数据和历史数据的图形。
 
-### 定制实时数据显示
+## 定制实时数据显示
+{: #customize_real_time_display}
 
 包含实时数据的图形可视化代码的目录为 `public/ja/realtime`。可以通过编辑 `public/js/historian/realtimeGraph.js` 对图形逻辑进行定制。
 
@@ -100,7 +106,8 @@ http://<your_application_name>.mybluemix.net
 
 设备事件将传递给 `realtimeGraph.js` 文件以绘制图形。
 
-### 定制历史数据显示
+## 定制历史数据显示
+{: #customize_historical_display}
 
 包含历史设备数据的图形可视化代码的目录为 `public/js/historian`。可以通过编辑 `public/js/historian/historianGraph.js` 对图形逻辑进行定制。
 

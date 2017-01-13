@@ -2,10 +2,11 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-05"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -13,23 +14,19 @@ copyright:
 
 # 扩展设备管理
 {: #custom_actions}
-上次更新时间：2016 年 7 月 11 日
-{: .last-updated}
 
-您可以通过使用 REST API 或 {{site.data.keyword.Bluemix_notm}} 中提供的仪表板，添加设备管理扩展来扩展 {{site.data.keyword.iot_full}} 中的设备管理功能，以满足您的需求。
+您可以通过添加设备管理扩展在 {{site.data.keyword.iot_full}} 中扩展设备管理功能，从而满足您的需求。可以使用 REST API 或 {{site.data.keyword.iot_short_notm}} 仪表板来添加设备管理扩展。
 
-缺省情况下，{{site.data.keyword.iot_short_notm}} 提供并支持以下设备管理操作：
+缺省情况下，{{site.data.keyword.iot_short_notm}} 支持以下设备管理操作：
 - 设备重新引导
-- 恢复工厂设置
+- 恢复出厂设置
 - 固件下载
 - 固件更新
-
-如果 {{site.data.keyword.iot_short_notm}} 提供的缺省设备操作对于您的设备和应用程序还不够，那么可以通过实现设备管理扩展包来开发更多设备管理功能。
 
 ## 设备管理扩展包
 {: #device_management_ext}
 
-设备管理扩展包是一种 JSON 文档，用于定义一组设备管理操作。这些操作可以在支持这些操作的一个或多个设备上启动。这些操作可使用 {{site.data.keyword.iot_short_notm}} 仪表板或设备管理 REST API 命令来启动。
+设备管理扩展包是一种 JSON 文档，用于定义至少一个设备管理操作。通过使用 {{site.data.keyword.iot_short_notm}} 仪表板或 REST API，可以在支持这些操作的任何设备上启动操作。
 
 以下代码样本显示设备管理扩展包的典型格式：
 
@@ -99,7 +96,7 @@ copyright:
 
 **注：**值可以包含的 `bundleId`、`version`、`actionId` 和 `parameterId` 限制为 255 个字符，并且只能由字母数字字符（a-z、A-Z 和 0-9）和以下特殊字符组成：
  - 短划线 (-)
- - 下划线 (_)
+ - 下划线 (\_)
  - 点 (.)
 
 ## REST API
@@ -121,12 +118,12 @@ copyright:
 有关设备管理扩展包的 REST API 的更多信息，请参阅 [{{site.data.keyword.iot_short_notm}} API V2](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} 文档。
 
 
-##支持定制设备管理操作
+## 支持定制设备管理操作
 {: #supporting_custom_device_management_actions}
 
-扩展包中定义的设备管理操作只能由支持这些操作的设备启动。设备将管理请求发布到 {{site.data.keyword.iot_short_notm}} 时，该设备会指定其可以支持的操作的类型。
+扩展包中定义的设备管理操作只能由支持这些操作的设备启动。设备将管理请求发布到 {{site.data.keyword.iot_short_notm}} 时，该设备会指定其可以支持的操作类型。
 
-要接收来自扩展包的定制操作，设备必须在请求的 supports 对象中指定扩展包的捆绑标识，如以下示例中所示：
+要指定来自扩展包的定制操作，设备必须在请求的支持对象中指定扩展包的捆绑标识，如以下示例中所示：
 
 ```
 	来自设备的出局消息：

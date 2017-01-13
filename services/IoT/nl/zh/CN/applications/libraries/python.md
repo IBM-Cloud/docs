@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-27"
 
 ---
 
@@ -15,8 +16,6 @@ copyright:
 # 针对应用程序开发者的 Python
 {: #python}
 
-上次更新时间：2016 年 7 月 29 日
-{: .last-updated}
 
 您可以使用 Python 来构建和开发应用程序，以在 {{site.data.keyword.iot_full}} 上与您的组织进行交互。{{site.data.keyword.iot_short_notm}} 的 Python 客户机提供了 API，通过剥离底层协议（例如，MQTT 和 HTTP）来帮助与 {{site.data.keyword.iot_short_notm}} 功能进行简单交互。
 
@@ -32,15 +31,17 @@ copyright:
 ## 构造方法
 {: #constructor}
 
-选项字典创建用于与 {{site.data.keyword.iot_short_notm}} 模块进行交互的定义。构造方法构建客户机实例，并接受包含以下定义的选项字典：
+使用选项字典可创建用于与 {{site.data.keyword.iot_short_notm}} 模块进行交互的定义。构造方法用于构建客户机实例，并接受包含以下定义的选项字典：
 
 |定义|描述 |
 |:-----|:-----|
-|`orgId`|组织的标识|
-|`appId`|组织中应用程序的唯一标识|
-|`auth-method`|仅支持值 `apikey` 的认证方法|
-|`auth-key`|可选的 API 密钥，auth-method 设置为 `apikey` 时是必需的|
-|`auth-token`|API 密钥令牌，auth-method 设置为 `apikey` 时是必需的|
+|`orgId`|组织标识。|
+|`appId`|组织中应用程序的唯一标识。|
+|`auth-method`|认证方法。支持的唯一方法是 `apikey`。|
+|`auth-key`|可选的 API 密钥，将 auth-method 的值设置为 `apikey` 时必须指定。|
+|`auth-token`|API 密钥令牌，将 auth-method 的值设置为 `apikey` 时，此参数也是必需的。|
+|`clean-session`|true 或 false 值，仅当要以持久预订方式连接应用程序时是必需的。缺省情况下，`clean-session` 设置为 true。|
+
 
 如果未提供选项字典，那么客户机将作为未注册的设备连接到 {{site.data.keyword.iot_short_notm}} Quickstart 服务。
 
@@ -53,7 +54,8 @@ try:
     "id": appId,
     "auth-method": authMethod,
     "auth-key": authKey,
-    "auth-token": authToken
+    "auth-token": authToken,
+    "clean-session": true
   }
   client = ibmiotf.application.Client(options)
 except ibmiotf.ConnectionException  as e:
@@ -84,6 +86,7 @@ id=myApplication
 auth-method=apikey
 auth-key=key
 auth-token=token
+clean-session=true/false
 
 ```
 
@@ -189,7 +192,7 @@ client.subscribeToDeviceEvents(deviceType=myDeviceType, deviceId=myDeviceId, msg
 |属性|数据类型|描述|
 |:---|:---|
 |`event.device`|字符串|在组织内所有类型的设备中作为该设备的唯一标识。|
-|`event.deviceType`|字符串|标识设备类型。通常，deviceType 是一组执行特定任务的设备，例如“weatherballoon”。|
+|`event.deviceType`|字符串|标识设备类型。通常，deviceType 是对执行特定任务的设备的一种分组，例如“weatherballoon”。|
 |`event.deviceId`|字符串|表示设备的标识。通常，对于给定设备类型，deviceId 是该设备的唯一标识，例如序列号或 MAC 地址。|
 |`event.event`|字符串|通常用于对特定事件分组，例如“status”、“warning”和“data”。
 |`event.format`|字符串|格式可以为任意字符串，例如 JSON。
