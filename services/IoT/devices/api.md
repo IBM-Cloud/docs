@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-11"
+  years: 2015, 2017
+lastupdated: "2017-01-10"
 
 ---
 
@@ -17,14 +17,17 @@ lastupdated: "2016-10-11"
 
 **Important:** The {{site.data.keyword.iot_full}} HTTP REST API for devices feature is available only as part of a limited beta program. Future updates might include changes that are incompatible with the current version of this feature. Try it out and [let us know what you think](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html).
 
-## Accessing the HTTP REST API
+## Accessing the HTTP REST API documentation
 {: #api_link}
 
-To access the {{site.data.keyword.iot_short_notm}} HTTP REST API and obtain more information about how to integrate devices into your organization, go to  https://docs.internetofthings.ibmcloud.com/swagger/v0002.html.
-
-To access the {{site.data.keyword.iot_short_notm}} HTTP Messaging API and obtain more information about how to configure your devices to publish events over HTTP, go to https://docs.internetofthings.ibmcloud.com/swagger/http-messaging.html.
+To access the {{site.data.keyword.iot_short_notm}} HTTP REST API documentation and obtain more information about how to integrate devices into your organization, go to  https://docs.internetofthings.ibmcloud.com/swagger/v0002.html.
 
 The only version of the {{site.data.keyword.iot_short_notm}} HTTP REST API that is supported is version 2. Ensure that your {{site.data.keyword.iot_short_notm}} solutions are using version 2.
+
+## Client connections
+{: #client_connections}
+
+For information about client security and how to connect clients to devices in {{site.data.keyword.iot_short_notm}}, see [Connecting applications, devices, and gateways to {{site.data.keyword.iot_short_notm}}](../reference/security/connect_devices_apps_gw.html).
 
 # HTTP REST messaging API for devices
 {: #rest_messaging_api}
@@ -44,6 +47,8 @@ Use one of the following URLs to submit a ``POST`` request from a device that is
 <pre class="pre">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
 {: codeblock}
 
+**Note: **Port 443, the default SSL port, can also be specified for secure HTTP API calls.
+
 If you are connecting a device or application to the Quickstart service, use one of the following URLs instead:
 
 ### Non-secure POST request to Quickstart
@@ -57,6 +62,7 @@ If you are connecting a device or application to the Quickstart service, use one
 **Important notes:**
 - In the current HTTP REST API version, you can submit device events only by using HTTP messaging. Use the MQTT messaging protocol to submit requests for other device management and control features.
 - HTTP connections can be reused to publish events for the same device only as the authorization HTTP header cannot be changed.
+- Port 443, the default SSL port, can also be specified for secure HTTP API calls.
 
 ### Authentication
 
@@ -85,9 +91,6 @@ Similar to the MQTT quality of service "at most once" delivery service level 0, 
 
 For more information about the MQTT protocol and the quality of service levels for {{site.data.keyword.iot_short_notm}}, see [MQTT messaging](../reference/mqtt/index.html).
 
-
-<--!
-Moved from the obsolete Features dev topic. Location to be discussed with dev.
 ## Last event cache
 {: #last-event-cache}
 
@@ -142,4 +145,3 @@ The response will include all event IDs that were sent by the device. In the fol
     }
 ]
 ```
--->

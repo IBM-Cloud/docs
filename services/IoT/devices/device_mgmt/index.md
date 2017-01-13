@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-13"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-12"
 
 ---
 
@@ -36,6 +36,8 @@ The Device Management Protocol is built on top of the MQTT messaging protocol. F
 4. A device can communicate updates about its location, diagnostic information, and error codes by using the Device Management Protocol.
 5. To handle defunct devices in large device populations, the **managed devices** operation request includes an optional lifetime parameter. The lifetime parameter is the number of seconds in which the device must make another **managed devices** request to avoid being classified as dormant and becoming an unmanaged device.
 6. When a device is decommissioned, you can remove it from the {{site.data.keyword.iot_short_notm}} by using the dashboard or the REST API.
+
+Refer to recipe [Connect Raspberry Pi as Managed Device to IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-managed-device-to-ibm-iot-foundation/).
 
 ### Return code summary
 
