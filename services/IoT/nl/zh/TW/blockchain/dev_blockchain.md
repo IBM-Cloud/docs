@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-30"
 
 ---
 
@@ -13,15 +14,12 @@ copyright:
 
 
 # 開發 {{site.data.keyword.iot_short_notm}} 區塊鏈整合的智慧型合約
-
 {: #iotblockchain_link}
-前次更新：2016 年 8 月 30 日
-{: .last-updated}
 
 使用 {{site.data.keyword.blockchainfull}} 及 Hyperledger 開發環境，以建立及測試您衍生自 IBM 所提供範例合約的專屬智慧型合約。
 {:shortdesc}
 
-開發及部署 Golang 鏈碼執行檔形式的智慧型合約。使用 {{site.data.keyword.iot_short_notm}} 區塊鏈整合，以利用裝置事件資料來觸發合約更新及商業邏輯執行，並且將新分類帳狀態寫入每一個交易的區塊鏈。
+開發及部署 Golang 鏈碼執行檔形式的智慧型合約。使用 {{site.data.keyword.iot_short_notm}} 區塊鏈整合，針對每個交易利用裝置事件資料來觸發合約更新及商業邏輯執行，並且將新的分類帳狀態寫入區塊鏈。
 
 {{site.data.keyword.iot_short_notm}} 區塊鏈整合開發環境包含下列元件：
 
@@ -34,7 +32,7 @@ copyright:
 **附註：**您也可以使用本端部署的 Node-RED 環境來執行模擬器。
 
 - 本端環境：
-  - 開發及測試智慧型合約鏈碼的 Hyperledger 開發環境。環境包括 GoLang。
+  - 開發及測試智慧型合約鏈碼的 Hyperledger 開發環境。環境包含 GoLang。
   - 區塊鏈監視使用者介面
 - GitHub 環境：
   - IBM 所提供之範例智慧型合約的 GitHub 儲存庫
@@ -51,13 +49,13 @@ copyright:
 - IBM.com 上的 [{{site.data.keyword.blockchainfull_notm}}](http://www.ibm.com/blockchain/)。
 - [{{site.data.keyword.blockchainfull_notm}} DOCS](https://console.ng.bluemix.net/docs/services/blockchain/index.html) - 開始使用 {{site.data.keyword.blockchainfull_notm}} 服務
 - [{{site.data.keyword.blockchainfull_notm}} API](https://ibmblockchainapi.mybluemix.net/swagger/ui.html?scheme=http&host=127.0.0.1:3000&basepath=/) - {{site.data.keyword.blockchainfull_notm}} API 的概觀。
-- [{{site.data.keyword.blockchainfull_notm}} for Developers](http://www.ibm.com/blockchain/for_developers.html) - 區塊鏈如何融入您開發環境的概觀，包括即時展示以及可部署以在 {{site.data.keyword.Bluemix_notm}} 上執行的程式碼的逐步演練。
+- [{{site.data.keyword.blockchainfull_notm}} for Developers](http://www.ibm.com/blockchain/for_developers.html) - 區塊鏈如何融入您開發環境的概觀，包括即時展示以及可部署以在 {{site.data.keyword.Bluemix_notm}} 上執行之程式碼的逐步演練。
 
 ## 範例智慧型合約
 
 {: #samples}
 
-您可以從 [https://github.com/ibm-watson-iot/blockchain-samples](https://github.com/ibm-watson-iot/blockchain-samples) 下載若干範例合約。您可以使用範例合約作為基礎，以將您自己的使用案例開發為可部署的鏈碼：
+您可以從 [https://github.com/ibm-watson-iot/blockchain-samples](https://github.com/ibm-watson-iot/blockchain-samples) 下載許多範例合約。您可以使用範例合約作為基礎，以將您自己的使用案例開發為可部署的鏈碼：
 
 |範例合約 |說明 |
 |:---|:---|
@@ -148,36 +146,34 @@ copyright:
 ## 建立、測試及部署智慧型合約
 {: #test_contracts}
 
-您現在可以在 GoLang 中建立自己的智慧型合約、在沙盤推演環境中進行測試，以及在自己的 {{site.data.keyword.blockchainfull_notm}} 網狀架構上進行部署與測試。
+您現在可以在 GoLang 中建立自己的智慧型合約、在沙盤推演環境中進行測試，然後在自己的 {{site.data.keyword.blockchainfull_notm}} 網狀架構上進行部署與測試。
 
 1. 建立 GitHub 專案，以儲存智慧型合約鏈碼。
 您要部署的智慧型合約必須在公用 GitHub 儲存庫中。如需相關資訊，請參閱 https://github.com/。
 2.  設定本端 Hyperledger 開發及測試環境。
-若要先開發及測試您自己的鏈碼，再將它部署至 {{site.data.keyword.blockchainfull_notm}}，您必須設定本端開發環境。此環境包括 GoLang，以用來撰寫合約的鏈碼。
+若要先開發及測試您自己的鏈碼，再將它部署至 {{site.data.keyword.blockchainfull_notm}}，您必須設定本端開發環境。此環境包含 GoLang，以用來撰寫合約的鏈碼。
  1. 設定開發環境。
- 開發環境包括在 GoLang 中使用鏈碼建置來開發智慧型合約所需的工具。如需相關資訊，請參閱 Hyperledger 文件中的[設定開發環境](https://github.com/hyperledger/fabric/blob/master/docs/dev-setup/devenv.md)。
+ 開發環境包含在 GoLang 中使用鏈碼建置來開發智慧型合約所需的工具。如需相關資訊，請參閱 Hyperledger 文件中的 [Setting up the development environment](https://github.com/hyperledger/fabric/blob/master/docs/dev-setup/devenv.md)。
  2. 安裝鏈碼除錯環境。
- 除錯環境提供智慧型合約在部署至 {{site.data.keyword.blockchainfull_notm}} 之前進行測試及除錯所需的工具。如需相關資訊，請參閱 Hyperledger 文件中的[在開發環境中撰寫、建置及執行鏈碼](https://github.com/hyperledger/fabric/blob/master/docs/Setup/Chaincode-setup.md)。
+ 除錯環境提供智慧型合約在部署至 {{site.data.keyword.blockchainfull_notm}} 之前進行測試及除錯所需的工具。如需相關資訊，請參閱 Hyperledger 文件中的 [Writing, Building, and Running Chaincode in a Development Environment](https://github.com/hyperledger/fabric/blob/master/docs/Setup/Chaincode-setup.md)。
  3. 設定進行開發的網路。
- 進行開發的網路提供更嚴格的正式作業類似環境，用來進行智慧型合約的最終測試。使用此環境來進行已測試及已除錯合約的最終測試，再將它們部署至 {{site.data.keyword.blockchainfull_notm}}。如需相關資訊，請參閱 Hyperledger 文件中的[設定網路](https://github.com/hyperledger/fabric/blob/master/docs/Setup/Network-setup.md)。
+ 進行開發的網路提供更嚴格的正式作業類似環境，用來進行智慧型合約的最終測試。使用此環境來進行已測試及已除錯合約的最終測試，再將它們部署至 {{site.data.keyword.blockchainfull_notm}}。如需相關資訊，請參閱 Hyperledger 文件中的 [Setting Up a Network](https://github.com/hyperledger/fabric/blob/master/docs/Setup/Network-setup.md)。
 
-3. 選用項目：下載 IBM 所提供的範例智慧型合約。
-IBM 提供一些智慧型合約，您可以下載且直接依現狀使用，或進行修改以符合您的組織目標。
-若要下載範例合約，請執行下列動作：
- 1. 移至 Blockchain Samples GitHub 儲存庫，網址為：https://github.com/ibm-watson-iot/blockchain-samples/
+3. 選用項目：下載 IBM 所提供的範例智慧型合約。IBM 提供許多智慧型合約，您可以下載且直接依現狀使用，或進行修改以符合您的組織目標。若要下載範例合約，請執行下列動作：
+ 1. 移至 Blockchain Samples GitHub 儲存庫，網址為：https://github.com/ibm-watson-iot/blockchain-samples/  
  basic_contract_hyperledger 及 trade_lane_contract_hyperledger 資料夾分別包含基本及貿易航線合約。
  3. 在終端機中使用 `git clone`，以複製 https://github.com/ibm-watson-iot/blockchain-samples 專案。  
  **提示：**您也可以按一下專案頁面中的**下載 ZIP**，來下載專案的壓縮檔。
 
-6. 建立及測試智慧型合約。您可以使用 {{site.data.keyword.iot_short_notm}} 區塊鏈整合，將鏈碼執行檔形式的智慧型合約上傳至 {{site.data.keyword.blockchainfull_notm}}，以在寫入至區塊鏈的裝置資料上執行商業邏輯。智慧型合約鏈碼是使用 GoLang 開發的。範例合約著重在將感興趣事件的 IoT 裝置資料寫入至區塊鏈以與協力廠商共用，或建立防竄改日誌項目。
+6. 建立及測試智慧型合約。您可以使用 {{site.data.keyword.iot_short_notm}} 區塊鏈整合，將鏈碼執行檔形式的智慧型合約上傳至 {{site.data.keyword.blockchainfull_notm}}，以在寫入至區塊鏈的裝置資料上執行商業邏輯。智慧型合約鏈碼是使用 GoLang 開發的。範例合約著重在將感興趣事件的 IoT 裝置資料寫入區塊鏈以便與協力廠商共用，或建立防竄改日誌項目。
 2. 建立合約執行檔。合約程式碼必須先轉換成執行檔，才能將它部署在區塊鏈上。  
   **附註：**已產生並且可以依現狀部署範例合約 (sample_contract_hyperledger)。請完成下列步驟：
    1. 開啟指令行，然後導覽至合約資料夾。
    2. 執行 `go generate` 指令。此指令會執行任何存在於程式碼中的 'go generate' 指令。go generate 是容許預先建置產生程式碼的 go 程式工具。在 IBM 提供的範例合約中，使用 go generate 來建立概述合約綱目的 schemas.go 檔案以及 sample.go 合約檔案。  
-   **重要事項：**schemas.go 檔案是 {{site.data.keyword.iot_short_notm}} 區塊鏈整合的重要元件。此檔案可讓平台確認合約與整合規格相容，並且可讓對映程式看到可對映裝置事件的合約 API。
+   **重要事項：**schemas.go 檔案是 {{site.data.keyword.iot_short_notm}} 區塊鏈整合的重要元件。此檔案可讓平台確認合約符合整合規格，並且可讓對映程式看到裝置事件可對映到的合約 API。
    2. 執行 `go build` 指令。此指令會建立與資料夾同名的執行檔。此檔案是將部署在區塊鏈上的合約執行檔。
 
-6. 在 Hyperledger 沙盤推演中，測試智慧型合約。在您將已完成的智慧型合約部署至 {{site.data.keyword.blockchainfull_notm}} 之前，可以在安裝為開發環境一部分的 Hyperledger 沙盤推演中測試及除錯鏈碼。  
+6. 在 Hyperledger 沙盤推演中，測試智慧型合約。在您將已完成的智慧型合約部署至 {{site.data.keyword.blockchainfull_notm}} 之前，可以在安裝為開發環境一部分的 Hyperledger 沙盤推演中，進行鏈碼的測試和除錯。  
 
 6. 將智慧型合約鏈碼部署至 {{site.data.keyword.blockchainfull_notm}}。在您於本端測試及驗證合約之後，可以將它部署至 {{site.data.keyword.blockchainfull_notm}} 網狀架構來進行測試。
   1. 將合約上傳至公用 GitHub 儲存庫。例如，將 sample.go 檔案上傳至：  
@@ -239,7 +235,7 @@ IBM 提供一些智慧型合約，您可以下載且直接依現狀使用，或�
      **提示：**若要尋找裝置的事件類型，請移至**裝置**頁面，然後按一下裝置名稱以開啟裝置詳細資料頁面。向下捲動至**感應器資訊**區段，以查看裝置的可用事件及資料點清單。
 
    11. 將可用的裝置內容對映至合約參數。  
-   **重要事項：**請驗證每一個所對映資料點的資料類型都對應至其所對映合約參數所需的資料類型。例如，合約內容（例如 string 類型的「資產 ID」）必須對映至 string 類型的內容。合約參數需求定義於合約 go-code 的 `type` 定義中。例如，基本 IBM 所提供的合約具有下列合約參數需求：
+   **重要事項：**請驗證每一個所對映資料點的資料類型，都對應到其所對映合約參數需要的資料類型。例如，合約內容（例如 string 類型的「資產 ID」）必須對映至 string 類型的內容。合約參數需求定義於合約 go-code 的 `type` 定義中。例如，基本 IBM 所提供的合約具有下列合約參數需求：
     <ul>
     <li>  資產 ID - string
     <li>  位置 - Geolocation
@@ -276,7 +272,7 @@ IBM 提供一些智慧型合約，您可以下載且直接依現狀使用，或�
 <td>鏈碼 ID</td>
 <td>登錄合約時所傳回的合約 ID。</td>
 <td>合約 ID 是對應至「合約 ID」項目的 128 個字元的英數字串。  
-**重要事項：**當您剪下並貼上合約 ID 時，請確定 ID 中不包括任何空格。如果未正確地輸入 ID，則會顯示區塊鏈分類帳項目，但資產搜尋功能不會運作。
+**重要事項：**當您剪下並貼上合約 ID 時，請確定 ID 中不包含任何空格。如果未正確地輸入 ID，則會顯示區塊鏈分類帳項目，但資產搜尋功能不會運作。
 </td>
 </tr>
 <tr>
@@ -297,16 +293,16 @@ IBM 提供一些智慧型合約，您可以下載且直接依現狀使用，或�
 
 3. 在「監視使用者介面」中，驗證設定如預期運作。使用「監視使用者介面」元件，以與區塊鏈合約互動：  
  - 鏈碼作業。  
- 驗證合約特定鏈碼作業可以如預期執行。例如，針對「基本合約」，驗證執行 `createAsset` 函數會將資產新增至區塊鏈。
+ 驗證合約特有鏈碼作業可以如預期執行。例如，針對「基本合約」，驗證執行 `createAsset` 函數會將資產新增至區塊鏈。
  - 回應有效負載。  
  驗證當您從「鏈碼作業」標籤提交 REST 要求時，對等節點要求回應會如預期顯示。
  - 區塊鏈。  
-驗證當您從鏈結的裝置中注入資料時，或當您使用「鏈碼作業」元件時，會將區塊新增至鏈結。    
+ 驗證當您從鏈結的裝置中注入資料時，或當您使用「鏈碼作業」元件時，會將區塊新增至鏈結。    
 
 ## 後續步驟
 {: #next_steps}
 
-您現在已部署及瀏覽範例 IBM 所提供的智慧型合約。不過，基本及貿易航線合約只提供有限的範例，設計良好的智慧型合約鏈碼還開啟了許多可能性。現在已經可以實驗商業情境，並將其對應至 {{site.data.keyword.blockchainfull_notm}} 中的鏈碼合約。然後，您可以搭配使用 {{site.data.keyword.iot_short_notm}} 與 IoT 區塊鏈整合，以將裝置資料寫入至區塊鏈分類帳，並且執行儲存為智慧型合約的商業邏輯，來回應資料。     
+您現在已部署及瀏覽範例 IBM 所提供的智慧型合約。不過，設計良好的智慧型合約鏈碼開啟了許多可能性，而基本及貿易航線合約只提供其中有限的範例。現在已經可以實驗商業情境，並將其對應至 {{site.data.keyword.blockchainfull_notm}} 中的鏈碼合約。然後，您可以搭配使用 {{site.data.keyword.iot_short_notm}} 與 IoT 區塊鏈整合，以將裝置資料寫入區塊鏈分類帳，並且執行儲存為智慧型合約的商業邏輯，來回應資料。     
 
 
 盡情使用區塊鏈吧！

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-10-16"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 {:pre: .pre}
 
 # 閘道角色的存取權層次
-前次更新：2016 年 9 月 16 日
-{: .last-updated}
 
 下表顯示各閘道角色的存取權層次。
 

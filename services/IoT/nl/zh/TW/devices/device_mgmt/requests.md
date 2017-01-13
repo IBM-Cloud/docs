@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-08"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # 裝置管理要求
 {: #requests}
-前次更新：2016 年 9 月 8 日
-{: .last-updated}
 
 
 {{site.data.keyword.iot_full}} 提供可針對一個以上的裝置而起始的動作。使用儀表板或 REST API，即可起始這些動作。可用動作的類型為**裝置動作**及**韌體動作**。
@@ -253,7 +252,7 @@ Topic: iotdevice-1/response
 }
 ```
 
-{{site.data.keyword.iot_short_notm}} 中的裝置管理伺服器使用「裝置管理通訊協定」將要求傳送至裝置，以起始韌體下載。下載處理程序包含下列步驟：
+{{site.data.keyword.iot_short_notm}} 中的裝置管理伺服器使用「裝置管理通訊協定」將要求傳送至裝置，如此便會起始韌體下載。下載處理程序包含下列步驟：
 
 1. 在主題 `iotdm-1/device/update` 上傳送韌體詳細資料更新要求。
 更新要求可讓裝置驗證所要求的韌體是否與目前安裝的韌體不同。如果不同，請將 `rc` 參數設為 `204`，即轉換為狀態 `Changed`。
@@ -293,7 +292,7 @@ Topic: iotdevice-1/response
    ```
    此回應會觸發下一個要求。
 2. 傳送韌體下載狀態 `iotdm-1/observe` 的觀察要求。
-觀察要求會驗證裝置是否準備好啟動韌體下載。可以立即啟動下載時，請將 `rc` 參數設為 `200`（`正常`）、將 `mgmt.firmware.state` 屬性設為 `0`（`閒置`），並將 `mgmt.firmware.updateStatus` 屬性設為 `0`（`閒置`）。下列程式碼是 {{site.data.keyword.iot_short_notm}} 與裝置之間的範例交換：
+觀察要求會驗證裝置是否準備好啟動韌體下載。可以立即開始下載時，請將 `rc` 參數設為 `200`（正常）、將 `mgmt.firmware.state` 屬性設為 `0`（閒置），並將 `mgmt.firmware.updateStatus` 屬性設為 `0`（閒置）。下列程式碼是 {{site.data.keyword.iot_short_notm}} 與裝置之間的範例交換：
    ```
    Incoming request from the {{site.data.keyword.iot_short_notm}}:
 
@@ -521,7 +520,7 @@ Message:
 }
 ```
 
-若要完成韌體更新要求，裝置會使用在其 `iotdevice-1/notify` 主題上發佈的狀態訊息，向 {{site.data.keyword.iot_short_notm}} 報告其更新狀態。
+若要完成韌體更新要求，裝置會使用針對其 `iotdevice-1/notify` 主題發佈的狀態訊息，向 {{site.data.keyword.iot_short_notm}} 報告其更新狀態。
 完成韌體更新時，會將 `mgmt.firmware.updateStatus` 屬性設為 `0`（成功），並將 `mgmt.firmware.state` 屬性設為 `0`（閒置）。然後，即可從裝置中刪除所下載的韌體映像檔，並將 `deviceInfo.fwVersion` 屬性設為 `mgmt.firmware.version` 屬性的值。
 
 下列程式碼提供通知訊息的範例：
@@ -546,7 +545,7 @@ Message:
 }
 ```
 
-{{site.data.keyword.iot_short_notm}} 接收到已完成韌體更新的通知時，會在 `iotdm-1/cancel` 主題上觸發最後一個要求，以取消 `mgmt.firmware` 屬性的觀察。
+{{site.data.keyword.iot_short_notm}} 收到已完成韌體更新的通知時，會在 `iotdm-1/cancel` 主題上觸發最後一個要求，以取消 `mgmt.firmware` 屬性的觀察。
 
 
 傳送 `rc` 參數設為 `200` 的回應時，韌體更新要求即完成，如下列範例所示：
@@ -589,4 +588,4 @@ Message:
   - `5`（映像檔不受支援）
 
 
-**重要事項：**必須同時設定列為 `mgmt.firmware` 屬性一部分的所有參數，因此，如果目前有 `mgmt.firmware` 的觀察，則只會傳送單一通知訊息。
+**重要事項：**必須同時設定列為 `mgmt.firmware` 屬性一部分的所有參數，以便在有 `mgmt.firmware` 的目前觀察時，只傳送單一通知訊息。

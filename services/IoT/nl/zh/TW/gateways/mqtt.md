@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-14"
 
 ---
 
@@ -14,10 +15,8 @@ copyright:
 
 # 閘道的 MQTT 連線功能
 {: #mqtt}
-前次更新：2016 年 9 月 14 日
-{: .last-updated}
 
-MQTT 是裝置及應用程式用來與 {{site.data.keyword.iot_full}} 通訊的主要通訊協定。提供用戶端程式庫、資訊及範例，旨在協助您使用 MQTT 用戶端作為閘道，以將裝置連接至 {{site.data.keyword.iot_short_notm}}。
+MQTT 是裝置及應用程式用來與 {{site.data.keyword.iot_full}} 通訊的主要通訊協定。我們提供了用戶端程式庫、資訊及範例，以協助您使用 MQTT 用戶端作為閘道，將裝置連接至 {{site.data.keyword.iot_short_notm}}。
 {:shortdesc}
 
 ## 用戶端連線
@@ -34,7 +33,7 @@ MQTT 是裝置及應用程式用來與 {{site.data.keyword.iot_full}} 通訊的�
 ### 使用者名稱
 {: #username}
 
-所有閘道的使用者名稱值皆相同：`use-token-auth`。這個值會導致 {{site.data.keyword.iot_short_notm}} 使用閘道的鑑別記號（指定作為密碼）。
+所有閘道的使用者名稱值皆相同：`use-token-auth`。這個值會使 {{site.data.keyword.iot_short_notm}} 使用閘道的鑑別記號（已指定作為密碼）。
 
 ### 密碼
 {: #password}
@@ -87,10 +86,10 @@ MQTT `+` 萬用字元可用來讓 `typeId`、`deviceId`、`commandId` 和 `forma
     `iot-2/type/mygateway/id/gateway1/cmd/+/fmt/+`
 -   「閘道 1」可以訂閱傳送至「裝置 1」的指令：
     `iot-2/type/mydevice/id/device1/cmd/+/fmt/+`
--   「閘道 1」可以訂閱傳送至 `mydevice` 類型之裝置的任何指令：
+-   「閘道 1」可以訂閱傳送至 `mydevice` 類型之裝置的任何指令：  
      `iot-2/type/mydevice/id/+/cmd/+/fmt/+`
 
-**重要事項：**指定為 `cleansession=false` 的 MQTT 持續性階段作業，不會搜尋連接至閘道的裝置。如果裝置連接至閘道 A，之後又連接至閘道 B，則不會收到在其斷線時，針對該裝置發佈到閘道 A 的任何訊息。閘道擁有 MQTT 用戶端和訂閱，但不擁有連接至閘道的裝置。
+**重要事項：**指定為 `cleansession=false` 的 MQTT 持續性階段作業，不會搜尋連接至閘道的裝置。如果裝置連接至閘道 A，之後又連接至閘道 B，則它不會收到在其中斷連線時針對該裝置發佈到閘道 A 的任何訊息。閘道擁有 MQTT 用戶端和訂閱，但不擁有連接至閘道的裝置。
 
 ## 閘道自動登錄
 {: #auto-reg}
@@ -101,7 +100,7 @@ MQTT `+` 萬用字元可用來讓 `typeId`、`deviceId`、`commandId` 和 `forma
 
 **警告**
 
-如果閘道無法自動登錄裝置，則短時間內不會再嘗試登錄該裝置。來自失敗裝置的任何訊息或訂閱都會在當時被捨棄。
+如果閘道無法自動登錄裝置，則短時間內不會再嘗試登錄該裝置。來自失敗裝置的任何訊息或訂閱都會在當時捨棄。
 
 ## 閘道通知
 {: #notification}

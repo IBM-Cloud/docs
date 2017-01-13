@@ -2,10 +2,11 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-05"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -13,23 +14,19 @@ copyright:
 
 # 延伸裝置管理
 {: #custom_actions}
-前次更新：2016 年 7 月 11 日
-{: .last-updated}
 
-您可以使用 REST API 或 {{site.data.keyword.Bluemix_notm}} 中提供的儀表板，透過新增裝置管理延伸規格，以在 {{site.data.keyword.iot_full}} 中延伸裝置管理功能來符合需求。
+您可以新增裝置管理延伸規格，將 {{site.data.keyword.iot_full}} 中的裝置管理功能延伸，以符合您的需求。您可以使用 REST API 或 {{site.data.keyword.iot_short_notm}} 儀表板來新增裝置管理延伸規格。
 
-{{site.data.keyword.iot_short_notm}} 預設會提供及支援下列裝置管理動作：
+依預設，{{site.data.keyword.iot_short_notm}} 可支援下列裝置管理動作：
 - 裝置重新開機
 - 重設為原廠設定
 - 韌體下載
 - 韌體更新
 
-如果 {{site.data.keyword.iot_short_notm}} 所提供的預設裝置動作無法滿足您的裝置及應用程式，您可以實作裝置管理延伸規格套件來開發其他裝置管理功能。
-
 ## 裝置管理延伸規格套件
 {: #device_management_ext}
 
-裝置管理延伸規格套件是定義一組裝置管理動作的 JSON 文件。可以在支援動作的一個以上裝置上起始動作。使用 {{site.data.keyword.iot_short_notm}} 儀表板或裝置管理 REST API 指令，即可起始動作。
+裝置管理延伸規格套件是至少定義一個裝置管理動作的 JSON 文件。支援那些動作的任何裝置，都可以使用 {{site.data.keyword.iot_short_notm}} 儀表板或 REST API 來起始那些動作。
 
 下列程式碼範例顯示裝置管理延伸規格套件的一般格式：
 
@@ -99,7 +96,7 @@ copyright:
 
 **附註：**`bundleId`、`version`、`actionId` 及 `parameterId` 值限制為只能包含 255 個字元，而且只能包含英數字元（a-z、A-Z、0-9）以及下列特殊字元：
  - 橫線 (-)
- - 底線 (_)
+ - 底線 (\_)
  - 點 (.)
 
 ## REST API
@@ -121,12 +118,12 @@ copyright:
 如需裝置管理延伸規格套件之 REST API 的相關資訊，請參閱 [{{site.data.keyword.iot_short_notm}} API 第 2 版](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}文件。
 
 
-##支援自訂裝置管理動作
+## 支援自訂裝置管理動作
 {: #supporting_custom_device_management_actions}
 
-只有支援延伸規格套件中所定義之裝置管理動作的裝置，才能起始那些動作。裝置將管理要求發佈至 {{site.data.keyword.iot_short_notm}} 時，裝置會指定可支援的動作類型。
+只有支援延伸規格套件中所定義之裝置管理動作的裝置，才能起始那些動作。裝置將管理要求發佈至 {{site.data.keyword.iot_short_notm}} 時，裝置會指定其可支援的動作類型。
 
-若要接收延伸規格套件的自訂動作，裝置必須在要求的 supports 物件中指定延伸規格套件的軟體組 ID，如下列範例所示：
+若要指定延伸規格套件的自訂動作，裝置必須在要求的 supports 物件中指定延伸規格套件的軟體組 ID，如下列範例所示：
 
 ```
 	Outgoing message from device:
@@ -158,7 +155,7 @@ copyright:
 ## 起始自訂裝置管理動作
 {: #initiating_custom_dm_actions}
 
-若要起始自訂裝置管理動作，請使用下列 REST API 指令（即用於起始裝置管理動作的預設指令）：
+若要起始自訂裝置管理動作，請使用下列 REST API 指令（它是用於起始裝置管理動作的預設指令）：
 
 `POST https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/requests`
 
@@ -193,7 +190,7 @@ copyright:
 ## 處理自訂裝置管理動作
 {: #handling_custom_dm_actions}
 
-在裝置上起始自訂動作時，會將 MQTT 訊息發佈至裝置。MQTT 訊息包含已指定為要求一部分的任何參數。裝置接收到 MQTT 訊息時，會執行動作或回應錯誤碼，該錯誤指出目前無法完成動作的原因。
+在裝置上起始自訂動作時，會將 MQTT 訊息發佈至裝置。MQTT 訊息包含已指定為要求一部分的任何參數。裝置接收到 MQTT 訊息時，會執行動作或回應錯誤碼，指出目前無法完成動作的原因。
 
 順利完成裝置動作時，裝置會發佈 `rc` 值設為 `200` 的回應。
 
@@ -344,7 +341,7 @@ copyright:
 	}
 
 ```
-裝置接收到來自 {{site.data.keyword.iot_short_notm}} 的下列回應：
+裝置收到來自 {{site.data.keyword.iot_short_notm}} 的下列回應：
 
 ```
 	Incoming message from server:
@@ -390,7 +387,7 @@ copyright:
 
 `POST https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/requests`
 
-提交指令時，類型 `exampleDeviceType` 的裝置 `device0` 及 `device1` 會接收到下列 MQTT 訊息：
+提交指令時，類型 `exampleDeviceType` 的裝置 `device0` 及 `device1` 會收到下列 MQTT 訊息：
 
 ```
 	Incoming message from server:

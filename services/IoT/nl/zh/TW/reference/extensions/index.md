@@ -2,10 +2,11 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-18"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -13,8 +14,6 @@ copyright:
 
 # 外部服務整合
 {: #ref-index}
-前次更新：2016 年 9 月 26 日
-{: .last-updated}
 
 外部服務整合可讓您從協力廠商或 {{site.data.keyword.iot_full}} 組織中的外部服務存取資料與作業。
 
@@ -39,6 +38,8 @@ Jasper 是 SIM 裝置的系統管理和管理平台。Jasper 整合在 {{site.da
 
 完成下列配置步驟之後，您可以在 Jasper 連接裝置的裝置往下探查中，存取支援的作業：
 
+### Jasper 的 REST API
+若要存取 Jasper 的 REST API，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension) 文件中的「Jasper 延伸規格」區段。
 
 ### Jasper 的配置
 
@@ -60,7 +61,7 @@ Jasper 是 SIM 裝置的系統管理和管理平台。Jasper 整合在 {{site.da
  3. 向下捲動至*延伸配置*。
  4. 使用下列 JSON 格式來輸入延伸配置，然後按一下**確認變更**，以儲存配置。  
 
-```json
+```json  
     {
         "jasper": {
             "iccid": "string"
@@ -74,11 +75,11 @@ Jasper 是 SIM 裝置的系統管理和管理平台。Jasper 整合在 {{site.da
 ## AT&T
 {: #att}
 
-### 支援的 AT&AMP;T 作業
+### 支援的 AT&T 作業
 
-AT&AMP;T 延伸規格可讓您執行下列 AT&AMP;T 作業：
+AT&T 延伸規格可讓您執行下列 AT&T 作業：
 
-- 檢視整體 AT&AMP;T 資料
+- 檢視整體 AT&T 資料
   - 顯示：狀態、費率方案、月初至今的資料使用情形、月初至今的 SMS 使用情形、月初至今的語音使用情形、超額限制、新增日期和修改日期。
 - 變更 SIM 啟動狀態。
   - 從下列項目中選取：庫存、啟動就緒、已啟動、已關閉、已淘汰。
@@ -88,13 +89,16 @@ AT&AMP;T 延伸規格可讓您執行下列 AT&AMP;T 作業：
 - 傳送 SMS 至 SIM
 - 變更費率方案
 
-### AT&AMP;T 的配置
+### AT&T 的 REST API
+若要存取 AT&T 的 REST API，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension) 文件中的「AT&T 延伸規格」區段。
 
-為了能夠將 {{site.data.keyword.iot_short_notm}} 組織連接至 AT&AMP;T，您必須完成組織配置和裝置配置。
+### AT&T 的配置
+
+為了能夠將 {{site.data.keyword.iot_short_notm}} 組織連接至 AT&T，您必須完成組織配置和裝置配置。
 
 若要配置 {{site.data.keyword.iot_short_notm}} 平台，請完成下列步驟。
 
-1. 啟用 AT&AMP;T 延伸規格。若要讓 AT&AMP;T 與 {{site.data.keyword.iot_short_notm}} 組織整合，請完成下列步驟：
+1. 啟用 AT&T 延伸規格。若要讓 AT&T 與 {{site.data.keyword.iot_short_notm}} 組織整合，請完成下列步驟：
   1. 從 {{site.data.keyword.iot_short_notm}} 儀表板選取**延伸規格**。
   2. 在**延伸規格**頁面中，按一下**新增延伸規格**。
   3. 按一下 AT&T 旁的**新增**。
@@ -122,7 +126,6 @@ AT&AMP;T 延伸規格可讓您執行下列 AT&AMP;T 作業：
 ```
 
 順利配置組織之後，*延伸規格*區段會顯示在*裝置往下探查*視圖中的*延伸配置*區段之下。
-
 
 ## ARM mbed 連接器
 {: #arm}
@@ -217,9 +220,10 @@ https://developer.ibm.com/iotplatform/2016/03/30/watson-iot-platform-integration
 - 前次狀態重新整理
 - 位置狀態
 
+### Orange 的 REST API
+若要存取 Orange 的 REST API，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension) 文件中的「Orange 延伸規格」區段。
+
 ### Orange 的配置
-
-
 
 若要啟用 Orange 延伸規格，請執行下列動作：
 
@@ -260,10 +264,10 @@ https://developer.ibm.com/iotplatform/2016/03/30/watson-iot-platform-integration
 ## 區塊鏈
 {: #blockchain}
 
-{{site.data.keyword.iot_short_notm}} 與區塊鏈可讓 IoT 裝置提供資料給區塊鏈交易，這樣會將資料儲存在區塊鏈的不可變分類帳中，並將它用在智慧型合約商業規則中。{{site.data.keyword.iot_short_notm}} 會將裝置資料對映至區塊鏈智慧型合約所需的資料格式，並將它傳遞至區塊鏈網狀架構，以儲存在區塊鏈分類帳中。
+{{site.data.keyword.iot_short_notm}} 與區塊鏈可讓 IoT 裝置提供資料給區塊鏈交易，區塊鏈交易會將資料儲存在區塊鏈的不可變分類帳中，並將它用在智慧型合約商業規則中。{{site.data.keyword.iot_short_notm}} 會將裝置資料對映成區塊鏈智慧型合約所需的資料格式，並將它傳遞至區塊鏈網狀架構，以儲存在區塊鏈分類帳中。
 
 ### 支援的區塊鏈作業
-- 以裝置事件來觸發智慧型合約更新項目。
+- 以裝置事件來觸發智慧型合約更新。
 - 執行智慧型合約商業邏輯，使用裝置事件資料來更新分類帳狀態。
 - 使用監視使用者介面來監視區塊鏈、交易和分類帳狀態。
 
@@ -281,6 +285,9 @@ https://developer.ibm.com/iotplatform/2016/03/30/watson-iot-platform-integration
 The Weather Company 延伸規格結合天氣資料與現有 {{site.data.keyword.iot_short_notm}} 裝置。如果已使用 API 提出更新位置要求，或裝置已使用裝置管理訊息設定其位置，則 The Weather Company 的天氣資料會出現在裝置詳細資料視圖中。
 
 **附註：**只有受管理裝置才能設定其專屬位置。所有未受管理裝置都必須使用 API 手動設定其位置。如需設定裝置位置的相關資訊，請參閱[更新位置要求](../../devices/device_mgmt/index.html#update-location)。
+
+### The Weather Company 的 REST API
+若要存取 The Weather Company 的 REST API，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather) 文件中的「裝置位置天氣」區段。
 
 ### 天氣資料
 

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-02"
 
 ---
 
@@ -14,10 +15,8 @@ copyright:
 
 # 適用於裝置開發人員的 C#
 {: #c_sharp}
-前次更新：2016 年 8 月 2 日
-{: .last-updated}
 
-您可以在 {{site.data.keyword.iot_full}} 上使用 C# 來建置及自訂與組織互動的裝置。使用提供的資訊及範例，利用 C# 開始開發您的裝置。
+您可以使用 C# 來建置及自訂裝置，在 {{site.data.keyword.iot_full}} 上與組織互動。請使用所提供的資訊及範例，利用 C# 開始開發您的裝置。
 {:shortdesc}
 
 ## 下載 C# 用戶端及資源
@@ -40,7 +39,7 @@ copyright:
 |`auth-token`   |將裝置安全地連接至 Watson IoT Platform 的鑑別記號。|
 
 
-如果 `deviceId` 及 `deviceType` 是唯一提供的引數，則用戶端會連接至 {{site.data.keyword.iot_short_notm}} 的「快速入門」服務，作為已取消登錄的裝置。引數清單定義用戶端如何連接至 {{site.data.keyword.iot_short_notm}} 模組。
+如果 `deviceId` 及 `deviceType` 是唯一提供的引數，則用戶端會連接至 {{site.data.keyword.iot_short_notm}} 的 Quickstart 服務，作為已取消登錄的裝置。引數清單定義用戶端如何連接至 {{site.data.keyword.iot_short_notm}} 模組。
 
 
 ```
@@ -56,11 +55,11 @@ public DeviceClient(string orgId, string deviceType, string deviceID, string aut
 ## 發佈事件
 {: #publishing-events}
 
-裝置會使用事件來將資料發佈至 {{site.data.keyword.iot_short_notm}} 實例。裝置會控制事件的內容，並指派派所傳送之每一個事件的名稱。
+裝置會使用事件來將資料發佈至 {{site.data.keyword.iot_short_notm}} 實例。裝置會控制事件的內容，並指派名稱給它傳送的每個事件。
 
-{{site.data.keyword.iot_short_notm}} 實例接收到事件時，送入事件的認證可識別傳送端裝置，這表示，裝置無法假冒另一個裝置。
+{{site.data.keyword.iot_short_notm}} 實例收到事件時，送入事件的認證可識別傳送端裝置，這表示，裝置無法假冒另一個裝置。
 
-可在三個[服務品質 (QoS) 水準](../mqtt.html#managed-devices)的任一個上發佈事件，這些水準由 MQTT 通訊協定予以定義。依預設，事件是在 QoS 0 時發佈。
+可使用三種[服務品質 (QoS) 水準](../mqtt.html#managed-devices)的任一種發佈事件，這些水準由 MQTT 通訊協定定義。依預設，事件是以 QoS 0 來發佈。
 
 
 ## 使用預設服務品質水準發佈事件
@@ -75,7 +74,7 @@ deviceClient.publishEvent("event", "json", "{temp:23}");
 ## 使用使用者定義的服務品質水準發佈事件
 {: #publish_event_user_qos}
 
-發佈事件的 MQTT QoS 水準若大於 `0`（包括額外的接收確認資訊），則所需的發佈時間可能超過 QoS 水準為 `0` 的事件。
+以 MQTT QoS 水準大於 `0` 發佈的事件，會包含額外的接收確認資訊，且所需的發佈時間可能會比 QoS 水準為 `0` 的事件還久。
 
 
 ```

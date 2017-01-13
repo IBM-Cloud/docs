@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-07-28"
 
 ---
 
@@ -14,11 +15,9 @@ copyright:
 
 # 適用於應用程式開發人員的 C#
 {: #c_sharp}
-前次更新：2016 年 7 月 28 日
-{: .last-updated}
 
 
-您可以在 {{site.data.keyword.iot_full}} 上使用 C# 來建置及自訂與組織互動的應用程式。使用提供的資訊及範例，利用 C# 開始開發您的應用程式。
+您可以使用 C# 來建置及自訂應用程式，在 {{site.data.keyword.iot_full}} 上與組織互動。請使用所提供的資訊及範例，利用 C# 開始開發您的應用程式。
 {:shortdesc}
 
 ## 下載 C# 用戶端及資源
@@ -39,7 +38,7 @@ copyright:
 |`auth-key`   |將應用程式安全地連接至 Watson IoT Platform 的 API 金鑰。|
 |`auth-token`   |將應用程式安全地連接至 Watson IoT Platform 的 API 金鑰記號。|
 
-如果 `appId` 是唯一提供的引數，用戶端會連接至 {{site.data.keyword.iot_short_notm}} 的「快速入門」服務，作為已取消登錄的裝置。引數清單定義用戶端如何連接至 {{site.data.keyword.iot_short_notm}} 模組。
+如果 `appId` 是唯一提供的引數，用戶端會連接至 {{site.data.keyword.iot_short_notm}} 的 Quickstart 服務，作為已取消登錄的裝置。引數清單定義用戶端如何連接至 {{site.data.keyword.iot_short_notm}} 模組。
 
 ```
 ApplicationClient applicationClient = new ApplicationClient(orgId, appId, apiKey, authToken);  
@@ -50,11 +49,11 @@ applicationClient.connect();
 ## 訂閱裝置事件
 {: #subscribe_device_events}
 
-裝置會使用事件來將資料發佈至 {{site.data.keyword.iot_short_notm}} 實例。裝置會控制事件的內容，並指派派所傳送之每一個事件的名稱。
+裝置會使用事件來將資料發佈至 {{site.data.keyword.iot_short_notm}} 實例。裝置會控制事件的內容，並指派名稱給它傳送的每個事件。
 
-{{site.data.keyword.iot_short_notm}} 實例接收到事件時，所收到事件的認證可識別傳送端裝置，這表示，裝置無法假冒另一個裝置。
+{{site.data.keyword.iot_short_notm}} 實例收到事件時，所收到事件的認證可識別傳送端裝置，這表示，裝置無法假冒另一個裝置。
 
-應用程式預設會訂閱所有已連接裝置的所有事件。使用裝置類型、裝置 ID、事件及訊息格式參數，以控制訂閱的範圍。下列程式碼範例顯示如何使用這些參數來定義訂閱的範圍：
+應用程式預設會訂閱所有已連接裝置的所有事件。請使用裝置類型、裝置 ID、事件及訊息格式參數，以控制訂閱的範圍。下列程式碼範例顯示如何使用這些參數來定義訂閱的範圍：
 
 ### 訂閱所有裝置的所有事件
 
@@ -63,7 +62,7 @@ applicationClient.connect();
 applicationClient.subscribeToDeviceEvents();
 ```
 
-### 訂閱特定類型的所有裝置的所有事件
+### 訂閱特定類型之所有裝置的所有事件
 
 ```
 applicationClient.connect();
@@ -117,7 +116,7 @@ applicationClient.subscribeToDeviceEvents();
 ## 訂閱裝置狀態
 {: #subscribe_device_status}
 
-訂閱預設為接收所有已連接裝置的狀態更新。使用裝置類型及裝置 ID 參數，以控制訂閱的範圍。下列程式碼範例顯示如何使用這些參數來定義訂閱的範圍：
+訂閱預設為接收所有已連接裝置的狀態更新。請使用裝置類型及裝置 ID 參數，以控制訂閱的範圍。下列程式碼範例顯示如何使用這些參數來定義訂閱的範圍：
 
 ### 訂閱所有裝置的狀態更新
 
@@ -151,10 +150,10 @@ applicationClient.appStatusCallback += processAppStatus;
 applicationClient.subscribeToApplicationStatus();
 ```
 
-## 發佈來自裝置的事件
+## 發佈裝置的事件
 {: #publish_events_devices}
 
-應用程式可以發佈事件，就像事件是源自裝置。
+應用程式可以發佈事件，就彷彿事件是源自裝置一樣。
 
 ```
 applicationClient.connect();
@@ -166,7 +165,7 @@ applicationClient.publishEvent(deviceType, deviceId, evt, data, 0);
 
 |參數|資料類型|說明|
 |:---|:---|
-|`deviceType`|字串| 裝置類型。一般而言，deviceType 是執行特定作業（例如，"weatherballoon"）的裝置分組。|
+|`deviceType`|字串| 裝置類型。一般而言，deviceType 是執行特定作業的裝置分組，例如，"weatherballoon"。|
 |`deviceId`|字串| 裝置的 ID。一般而言，針對給定的裝置類型，deviceId 是該裝置的唯一 ID（例如，序號或 MAC 位址）。|
 |`evt`|字串| 事件的名稱。|
 |`format`|字串| 格式可以是任何字串（例如，JSON）。|
@@ -187,7 +186,7 @@ applicationClient.publishCommand(deviceType, deviceId, "testcmd", "json", data, 
 
 |參數|資料類型|說明|
 |:---|:---|
-|`deviceType`|字串| 裝置類型。一般而言，deviceType 是執行特定作業（例如，"weatherballoon"）的裝置分組。|
+|`deviceType`|字串| 裝置類型。一般而言，deviceType 是執行特定作業的裝置分組，例如，"weatherballoon"。|
 |`deviceId`|字串| 裝置的 ID。一般而言，針對給定的裝置類型，deviceId 是該裝置的唯一 ID（例如，序號或 MAC 位址）。|
 |`command`|字串| 指令的名稱。|
 |`format`|字串| 格式可以是任何字串（例如，JSON）。|

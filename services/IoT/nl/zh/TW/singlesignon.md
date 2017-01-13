@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-10-05"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 {:pre: .pre}
 
 # 配置及使用 {{site.data.keyword.ssoshort}}
-前次更新：2016 年 10 月 5 日
-{: .last-updated}
 
 {{site.data.keyword.ssofull}} 服務可以配置成支援 {{site.data.keyword.iot_full}} 的替代使用者鑑別提供者。{{site.data.keyword.ssoshort}} 支援 SAML 2.0、IBM Cloud Directory、社交提供者（Facebook、LinkedIn、Google+）及 Github。
 {: .shortdesc}
@@ -76,7 +75,7 @@ copyright:
 
 ### 使用 API 配置 {{site.data.keyword.ssoshort}} 的 {{site.data.keyword.iot_short_notm}}
 
-若要使用 API 配置 {{site.data.keyword.ssoshort}} 的 {{site.data.keyword.iot_short_notm}}，方法必須是 `POST`、URL 必須是 `https://<orgID>.internetofthings.ibmcloud.com/api/v0002/authentication/ssoconfig`，其中 `<orgID>` 是 {{site.data.keyword.iot_short_notm}} 組織 ID。授權必須是使用 API 金鑰 ID 及記號的「無鑑別」或「基本鑑別」。主體必須以下列格式包含 JSON 形式的 `secret`、`clientId` 及 `issuerIdentifier` 配置資料：
+若要使用 API 配置 {{site.data.keyword.ssoshort}} 的 {{site.data.keyword.iot_short_notm}}，方法必須是 `POST`、URL 必須是 `https://<orgID>.internetofthings.ibmcloud.com/api/v0002/authentication/ssoconfig`，其中 `<orgID>` 是 {{site.data.keyword.iot_short_notm}} 組織 ID。授權必須是使用 API 金鑰 ID 及記號的「無鑑別」或「基本鑑別」。內文必須以下列格式包含 JSON 形式的 `secret`、`clientId` 及 `issuerIdentifier` 配置資料：
 ```
 {
  "secret": "myclientpwd",

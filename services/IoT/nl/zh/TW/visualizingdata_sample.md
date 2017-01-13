@@ -2,21 +2,24 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-06-29"
 
 ---
 
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # 將裝置資料視覺化
 {: #visualizingdata_data}
-*前次更新：2016 年 4 月 20 日*
-{: .last-updated}
 
 此範例可協助您將 {{site.data.keyword.iot_full}} 組織中已登錄裝置的即時及歷程資料視覺化。
 {:shortdesc}
 
 ## 開始之前
+{: #byb}
 
 您必須先進行下列動作，才能將資料視覺化：
 
@@ -26,6 +29,7 @@ copyright:
 - 從 {{site.data.keyword.Bluemix_notm}} [安裝 cf 指令行工具](../../starters/install_cli.html)。
 
 ## 在 {{site.data.keyword.Bluemix_notm}} 中執行範例
+{: #running_sample}
 
 1. 使用 Node.js SDK，在 {{site.data.keyword.Bluemix_notm}} 中建立應用程式。記下應用程式名稱和應用程式的主機名稱，將應用程式上傳至 {{site.data.keyword.Bluemix_notm}} 時，會需要此資訊。
 2. 完成下列步驟，以將 node.JS 應用程式連結至 {{site.data.keyword.Bluemix_notm}} 儀表板中的 {{site.data.keyword.iot_short_notm}} 實例：
@@ -33,7 +37,7 @@ copyright:
   a. 在 {{site.data.keyword.Bluemix_notm}} 儀表板中，按一下您已建立的 Node.JS 應用程式。
 
   b. 按一下**連結服務或 API**，然後選取 {{site.data.keyword.iot_short_notm}} 服務，並按一下**新增**。
-3. 使用 cf 指令行工具，將目錄變更為已解壓縮的視覺化範例套件，並執行下列指令，以連接至 {{site.data.keyword.Bluemix_notm}}。
+3. 使用 cf 指令行工具，切換目錄到已解壓縮的視覺化範例套件，並執行下列指令，以連接至 {{site.data.keyword.Bluemix_notm}}。
 ```
 cf api https://api.ng.bluemix.net
 ```
@@ -69,7 +73,8 @@ http://<your_application_name>.mybluemix.net
 
 組織中的所有裝置都會列在裝置下拉功能表中。選取時，您應該會看到裝置傳送至 {{site.data.keyword.iot_short_notm}} 服務的即時視覺化資料。若要查看歷程資料，請按一下**歷程資料**按鈕。
 
-### 自訂範例
+## 自訂範例
+{: #customize_sample}
 
 這個範例應用程式是以 node.js 架構撰寫的獨立式 Web 應用程式。此範例會將 {{site.data.keyword.iot_short_notm}} 中已登錄裝置所傳送的事件視覺化。此範例使用下列工具：
 
@@ -92,7 +97,8 @@ http://<your_application_name>.mybluemix.net
 - Views：使用者介面檔案，以 Jade 撰寫
 - Rickshaw 圖表程式庫可用來繪圖即時和歷程資料的圖形。
 
-### 自訂即時資料顯示畫面
+## 自訂即時資料顯示畫面
+{: #customize_real_time_display}
 
 包含即時資料之圖形視覺化程式碼的目錄為 `public/ja/realtime`。若要自訂圖形邏輯，可以編輯 `public/js/historian/realtimeGraph.js`。
 
@@ -100,7 +106,8 @@ http://<your_application_name>.mybluemix.net
 
 裝置事件會傳遞至 `realtimeGraph.js` 檔案，以繪製圖形。
 
-### 自訂歷程資料顯示畫面
+## 自訂歷程資料顯示畫面
+{: #customize_historical_display}
 
 包含歷程裝置資料之圖形視覺化程式碼的目錄為 `public/js/historian`。若要自訂圖形邏輯，可以編輯 `public/js/historian/historianGraph.js`。
 
@@ -108,4 +115,4 @@ http://<your_application_name>.mybluemix.net
 
 歷程資料會傳遞至 `historianGraph.js` 檔案，以繪製圖形。
 
-如需更詳細的開發人員指南，請造訪 Github iot-visualization Wiki。
+如需更詳細的開發人員指引，請造訪 Github iot-visualization Wiki。

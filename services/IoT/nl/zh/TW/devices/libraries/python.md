@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-27"
 
 ---
 
@@ -14,13 +15,11 @@ copyright:
 
 # 適用於裝置開發人員的 Python
 {: #python}
-前次更新：2016 年 7 月 29 日
-{: .last-updated}
 
-您可以在 {{site.data.keyword.iot_full}} 上使用 Python 來建置及開發與組織互動的裝置程式碼。適用於 {{site.data.keyword.iot_short_notm}} 的 Python 用戶端提供 API，透過抽出基礎通訊協定（例如 MQTT 及 HTTP）來協助與 {{site.data.keyword.iot_short_notm}} 特性的簡單互動。
+您可以使用 Python 來建置及開發裝置程式碼，在 {{site.data.keyword.iot_full}} 上與組織互動。適用於 {{site.data.keyword.iot_short_notm}} 的 Python 用戶端提供 API，透過抽離基礎通訊協定（例如 MQTT 及 HTTP），來協助與 {{site.data.keyword.iot_short_notm}} 特性的簡單互動。
 {:shortdesc}
 
-使用提供的資訊及範例，利用 Python 開始開發您的裝置。
+請使用所提供的資訊及範例，利用 Python 開始開發您的裝置。
 
 ## 下載 Python 用戶端及資源
 {: #python_client_download}
@@ -35,12 +34,13 @@ options 字典會建立用來與 {{site.data.keyword.iot_short_notm}} 模組互�
 |定義|說明 |
 |:---|:---|
 |`orgId`|您的組織 ID。|
-|`type`|您的裝置類型。一般而言，deviceType 是執行特定作業（例如，"weatherballoon"）的裝置分組。|
-|`id`|您的裝置 ID。一般而言，針對給定的裝置類型，deviceId 是該裝置的唯一 ID（例如，序號或 MAC 位址）。|
-|`auth-method`|要使用的鑑別方法。目前唯一支援的值是 `token`。|
-|`auth-token`|將裝置安全地連接至 Watson IoT Platform 的鑑別記號。|
+|`type`|裝置的類型。裝置類型是執行特定作業的裝置分組（例如，"weatherballoon"）。|
+|`id`|用來識別裝置的唯一 ID。一般而言，針對給定的裝置類型，裝置 ID 是該裝置的唯一 ID（例如，序號或 MAC 位址）。|
+|`auth-method`|鑑別方法。唯一支援的方法是 `apikey`。|
+|`auth-token`|API 金鑰記號，當 auth-method 的值設為 `apikey` 時也為必要項目。|
+|`clean-session`|true 或 false 值，只有在要於可延續訂閱模式中連接應用程式時才是必要項目。`clean-session` 預設為 true。|
 
-如果未提供 options 字典，用戶端會連接至 Watson IoT Platform 的「快速入門」服務，作為已取消登錄的裝置。
+如果未提供 options 字典，用戶端會連接至 {{site.data.keyword.iot_short_notm}} 的 Quickstart 服務，作為已取消登錄的裝置。
 
 ```python
 
@@ -51,7 +51,8 @@ try:
     "type": deviceType,
     "id": deviceId,
     "auth-method": authMethod,
-    "auth-token": authToken
+    "auth-token": authToken,
+    "clean-session": true
   }
   client = ibmiotf.device.Client(options)
 except ibmiotf.ConnectionException  as e:
@@ -82,17 +83,17 @@ type=deviceType
 id=deviceId
 auth-method=token
 auth-token=token
-
+clean-session=true/false
 ```
 
 ## 發佈事件
 {: #publishing_events}
 
-事件是裝置用來將資料發佈至 {{site.data.keyword.iot_short_notm}} 的機制。裝置會控制事件的內容，並指派所傳送之每一個事件的名稱。
+事件是裝置用來將資料發佈至 {{site.data.keyword.iot_short_notm}} 的機制。裝置會控制事件的內容，並指派名稱給它傳送的每個事件。
 
-{{site.data.keyword.iot_short_notm}} 實例接收到事件時，所收到事件的認證可識別傳送端裝置，這表示，裝置無法假冒另一個裝置。
+{{site.data.keyword.iot_short_notm}} 實例收到事件時，所收到事件的認證可識別傳送端裝置，這表示，裝置無法假冒另一個裝置。
 
-可在三個服務品質 (QoS) 水準的任一個上發佈事件，這些水準由 MQTT 通訊協定予以定義。依預設，事件是在 QoS 水準 `0` 時發佈。
+可使用三種服務品質 (QoS) 水準的任一種發佈事件，這些水準由 MQTT 通訊協定定義。依預設，事件是以 QoS 水準 `0` 來發佈。
 
 ### 使用預設服務品質發佈事件
 
@@ -104,9 +105,9 @@ client.publishEvent("status", "json", myData)
 
 ### 提高事件的 QoS 水準
 
-您可以為發佈的事件提高[服務品質 (QoS) 水準](../../reference/mqtt/index.html#qos-levels)。QoS 水準高於 `0` 的事件可能需要較長的發佈時間，因為包括額外的確認接收資訊。
+您可以為發佈的事件提高[服務品質 (QoS) 水準](../../reference/mqtt/index.html#qos-levels)。QoS 水準高於 `0` 的事件可能需要較長的發佈時間，因為包含額外的確認接收資訊。
 
-**附註：**「快速入門」流程模式僅支援 QoS 水準 `0`。
+**附註：**Quickstart 流程模式僅支援 QoS 水準 `0`。
 
 ```
 client.connect()
@@ -151,7 +152,7 @@ client.commandCallback = myCommandCallback
 ## 自訂訊息格式支援
 {: #custom_message_format}
 
-訊息格式預設為 `json`，這表示，程式庫支援 JSON 格式的編碼及解碼 Python 字典物件。當訊息格式設為 `json-iotf` 時，訊息會根據 {{site.data.keyword.iot_short_notm}}「JSON 有效負載」規格進行編碼。若要為您自己的自訂訊息格式新增支援，請參閱 GitHub 中的[自訂訊息格式範例](https://github.com/ibm-watson-iot/iot-python/tree/master/samples/customMessageFormat)。
+訊息格式預設為 `json`，這表示，程式庫支援 JSON 格式的 Python 字典物件編碼及解碼。當訊息格式設為 `json-iotf` 時，訊息會根據 {{site.data.keyword.iot_short_notm}}「JSON 有效負載」規格進行編碼。若要為您自己的自訂訊息格式新增支援，請參閱 GitHub 中的[自訂訊息格式範例](https://github.com/ibm-watson-iot/iot-python/tree/master/samples/customMessageFormat)。
 
 建立自訂編碼器模組時，您必須在裝置用戶端中登錄它，如下列範例所概述：
 

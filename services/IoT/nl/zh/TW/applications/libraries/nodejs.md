@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-07-29"
 
 ---
 
@@ -19,10 +20,10 @@ copyright:
 前次更新：2016 年 7 月 29 日
 {: .last-updated}
 
-您可以在 {{site.data.keyword.iot_full}} 上調整 Node.js 中的用戶端程式庫及範例，來建置及自訂與組織互動的應用程式。
+您可以調整 Node.js 中的用戶端程式庫及範例，來建置及自訂應用程式，在 {{site.data.keyword.iot_full}} 上與組織互動。
 {:shortdesc}
 
-使用提供的資訊及範例，利用 Node.js 開始開發您的應用程式。
+請使用所提供的資訊及範例，利用 Node.js 開始開發您的應用程式。
 
 ## 下載 Node.js 用戶端及資源
 {: #nodejs_client_download}
@@ -50,7 +51,7 @@ copyright:
 |`type`  |訂閱的類型。指定 `shared`，以啟用共用訂閱。|
 
 
-若要使用「快速入門」，只需要前兩個內容。
+若要使用 Quickstart，只需要前兩個內容。
 
 ```
   var Client = require("ibmiotf");
@@ -68,7 +69,7 @@ copyright:
 ### 使用配置檔
 
 
-您也可以使用配置檔，而非直接傳遞 JSON 內容，如下列程式碼範例所述：
+您也可以使用配置檔，而非直接傳遞 JSON 內容，如下列程式碼範例所概述：
 
 ```
 
@@ -92,7 +93,7 @@ copyright:
 ## 連接至 {{site.data.keyword.iot_short_notm}}
 {: #connecting_to_iotp}
 
-若要連接至 {{site.data.keyword.iot_short_notm}}，請提交 *connect* 要求，如下所示：
+若要連接至 {{site.data.keyword.iot_short_notm}}，請提交*連接* 要求，如下所示：
 
 ```
   var appClient = new Client.IotfApplication(appClientConfig);
@@ -139,7 +140,7 @@ copyright:
 ## 共用訂閱
 {: #shared_subscriptions}
 
-使用共用訂閱特性建置可擴充應用程式來平衡多個應用程式實例的訊息負載。若要啟用負載平衡，請將 `type` 欄位設為 `shared`，如下列範例所示：
+請使用共用訂閱特性建置可擴充應用程式，來平衡多個應用程式實例之間的訊息負載。若要啟用負載平衡，請將 `type` 欄位設為 `shared`，如下列範例所示：
 
 ```
 
@@ -185,12 +186,12 @@ copyright:
 ## 訂閱裝置事件
 {: #subscribing_device_events}
 
-事件是裝置用來將資料發佈至 {{site.data.keyword.iot_short_notm}} 實例的機制。裝置會控制事件的內容，並指派所傳送之每一個事件的名稱。
+事件是裝置用來將資料發佈至 {{site.data.keyword.iot_short_notm}} 實例的機制。裝置會控制事件的內容，並指派名稱給它傳送的每個事件。
 
-{{site.data.keyword.iot_short_notm}} 實例接收到事件時，所收到事件的認證可識別傳送端裝置，這表示，裝置無法假冒另一個裝置。
+{{site.data.keyword.iot_short_notm}} 實例收到事件時，所收到事件的認證可識別傳送端裝置，這表示，裝置無法假冒另一個裝置。
 
 
-應用程式預設會訂閱所有已連接裝置的所有事件。使用裝置類型、裝置 ID、事件及訊息格式參數，以控制訂閱的範圍。下列程式碼範例顯示如何使用這些參數來定義訂閱的範圍：
+應用程式預設會訂閱所有已連接裝置的所有事件。請使用裝置類型、裝置 ID、事件及訊息格式參數，以控制訂閱的範圍。下列程式碼範例顯示如何使用這些參數來定義訂閱的範圍：
 
 ### 訂閱所有裝置的所有事件
 
@@ -207,7 +208,7 @@ copyright:
 	});
 ```
 
-### 訂閱特定類型的所有裝置的所有事件
+### 訂閱特定類型之所有裝置的所有事件
 
 ```
 
@@ -303,7 +304,7 @@ copyright:
 ## 訂閱裝置狀態
 {: #subscribing_device_status}
 
-依預設，當您訂閱裝置狀態時，會收到所有已連接裝置的狀態更新。使用 type 及 ID 參數，以控制訂閱的範圍。單一用戶端可支援多個訂閱。
+依預設，當您訂閱裝置狀態時，會收到所有已連接裝置的狀態更新。請使用 type 及 ID 參數，以控制訂閱的範圍。單一用戶端可支援多個訂閱。
 
 ### 訂閱所有裝置的狀態更新
 
@@ -320,7 +321,7 @@ copyright:
 	});
 ```
 
-### 訂閱特定類型的所有裝置的狀態更新
+### 訂閱特定類型之所有裝置的狀態更新
 
 
 ```
@@ -381,11 +382,11 @@ copyright:
 ```
 
 
-## 發佈來自裝置的事件
+## 發佈裝置的事件
 {: #publishing_device_events}
 
 
-應用程式可以發佈事件，就像事件是源自裝置。此函數需要下列內容：
+應用程式可以發佈事件，就彷彿事件是源自裝置一樣。此函數需要下列內容：
 
 -   deviceType
 -   deviceId
@@ -465,10 +466,10 @@ copyright:
 
 |參數|資料類型|說明|
 |:---|:---|
-|`deviceType`|字串|裝置類型。一般而言，deviceType 是執行特定作業（例如，"weatherballoon"）的裝置分組。|
+|`deviceType`|字串|裝置類型。一般而言，deviceType 是執行特定作業的裝置分組，例如，"weatherballoon"。|
 |`deviceId`|字串|裝置的 ID。一般而言，針對給定的裝置類型，deviceId 是該裝置的唯一 ID（例如，序號或 MAC 位址）。|
-|`eventType`|字串|特定事件群組（例如，"status"、"warning" 及 "data"）。|
-|`format`|字串|格式可以是任何字串（例如，JSON）。  |
+|`eventType`|字串|特定事件群組，例如 "status"、"warning" 及 "data"。|
+|`format`|字串|格式可以是任何字串，例如 JSON。  |
 |`data`|字典|訊息有效負載的資料。長度上限是 131072 個位元組。|
 |`payload`|字串|訊息有效負載的資料。長度上限是 131072 個位元組。|
-|`topic`|字串|發佈為裝置時，主題字串不包括裝置類型或裝置 ID；這些是取自用戶端 ID。例如，`iot-2/evt/event_id/fmt/format_string`。代表裝置發佈為應用程式或閘道時，主題必須包括裝置類型及裝置 ID。例如，`iot-2/type/device_type/id/device_id/evt/event_id/fmt/format_string`。|
+|`topic`|字串|發佈為裝置時，主題字串不包含裝置類型或裝置 ID；這些是取自用戶端 ID。例如，`iot-2/evt/event_id/fmt/format_string`。代表裝置發佈為應用程式或閘道時，主題必須包含裝置類型及裝置 ID。例如，`iot-2/type/device_type/id/device_id/evt/event_id/fmt/format_string`。|

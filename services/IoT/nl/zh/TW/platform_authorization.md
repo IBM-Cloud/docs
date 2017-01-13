@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-09-14"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 {:pre: .pre}
 
 # 應用程式連線
-前次更新：2016 年 9 月 14 日
-{: .last-updated}
 
 若要將應用程式連接至 {{site.data.keyword.iot_full}}，您必須使用 API 金鑰和記號來連接，或在 {{site.data.keyword.Bluemix_notm}} 中直接將應用程式連結至 {{site.data.keyword.iot_short_notm}}。您可以使用存取儀表板來授與存取權。
 {:shortdesc}
@@ -37,7 +36,7 @@ copyright:
 
 ## Bluemix 連結連線
 {: #bluemix-binding}
-您可以從 {{site.data.keyword.Bluemix_notm}} 將應用程式連結至 {{site.data.keyword.iot_short_notm}} 組織。透過連結應用程式，它就只能與相同空間或組織中的服務實例通訊。您可以在 VCAP_SERVICES 環境變數中，找到應用程式與服務實例通訊所需的全部資料。如果您的應用程式連結至多個服務，則 VCAP_SERVICES 變數會包括每一個服務實例的連線資訊。  
+您可以從 {{site.data.keyword.Bluemix_notm}} 將應用程式連結至 {{site.data.keyword.iot_short_notm}} 組織。透過連結應用程式，它就只能與相同空間或組織中的服務實例通訊。您可以在 VCAP_SERVICES 環境變數中，找到應用程式與服務實例通訊所需的全部資料。如果您的應用程式連結至多個服務，則 VCAP_SERVICES 變數會包含每一個服務實例的連線資訊。  
 
 不過，您可以使用其他空間或組織中的服務實例，方法與外部應用程式相同。如果不建立連結，您可以使用認證來直接配置應用程式實例。如需相關資訊，請參閱 {{site.data.keyword.Bluemix_notm}} 文件中的[要求新的服務實例](https://console.{DomainName}/docs/services/reqnsi.html#req_instance)。
 

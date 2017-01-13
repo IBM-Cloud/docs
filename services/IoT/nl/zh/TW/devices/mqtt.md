@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-21"
 
 ---
 
@@ -14,10 +15,8 @@ copyright:
 
 # 裝置的 MQTT 連線功能
 {: #mqtt}
-前次更新：2016 年 9 月 21 日
-{: .last-updated}
 
-MQTT 是裝置及應用程式用來與 {{site.data.keyword.iot_full}} 通訊的主要通訊協定。提供用戶端程式庫、資訊及範例，旨在協助您連接及整合裝置與 {{site.data.keyword.iot_short_notm}}。
+MQTT 是裝置及應用程式用來與 {{site.data.keyword.iot_full}} 通訊的主要通訊協定。我們提供了用戶端程式庫、資訊及範例，以協助您連接及整合裝置與 {{site.data.keyword.iot_short_notm}}。
 {:shortdesc}
 
 ## 用戶端連線
@@ -26,12 +25,12 @@ MQTT 是裝置及應用程式用來與 {{site.data.keyword.iot_full}} 通訊的�
 如需用戶端安全以及如何將 MQTT 用戶端連接至 {{site.data.keyword.iot_short_notm}} 中裝置的相關資訊，請參閱[將應用程式、裝置及閘道連接至 {{site.data.keyword.iot_short_notm}}](../reference/security/connect_devices_apps_gw.html)。
 
 
-## 將裝置連接至快速入門服務
+## 將裝置連接至 Quickstart 服務
 {: #connecting_devices}
 
-「快速入門」服務是最快速的服務水準。它不提供任何接收確認，也不支援大於零的 MQTT 服務品質 (QoS) 水準。當您連接至「快速入門」服務時，不需要鑑別或登錄，而且 `orgId` 必須設為 `quickstart`。
+Quickstart 服務是最快速的服務水準。它不提供任何接收確認，也不支援大於零的 MQTT 服務品質 (QoS) 水準。當您連接至 Quickstart 服務時，不需要鑑別或登錄，而且 `orgId` 必須設為 `quickstart`。
 
-如果您是撰寫要與「快速入門」搭配使用的裝置程式碼，請注意，「快速入門」模式中不支援下列 {{site.data.keyword.iot_short_notm}} 服務特性：
+如果您是撰寫要與 Quickstart 搭配使用的裝置程式碼，請注意，Quickstart 模式中不支援下列 {{site.data.keyword.iot_short_notm}} 服務特性：
 
 -  訂閱指令
 -  裝置管理通訊協定
@@ -49,7 +48,7 @@ MQTT 是裝置及應用程式用來與 {{site.data.keyword.iot_full}} 通訊的�
 
 ### 使用者名稱
 
-所有裝置的使用者名稱值皆相同：`use-token-auth`。這個值會導致 {{site.data.keyword.iot_short_notm}} 使用裝置的鑑別記號（指定作為密碼）。
+所有裝置的使用者名稱值皆相同：`use-token-auth`。這個值會使 {{site.data.keyword.iot_short_notm}} 使用裝置的鑑別記號（已指定作為密碼）。
 
 ### 密碼
 
@@ -65,8 +64,8 @@ MQTT 是裝置及應用程式用來與 {{site.data.keyword.iot_full}} 通訊的�
 
 其中
 
--  **event_id** 是事件的 ID，例如，`status`。事件 ID 可以是 MQTT 中任何有效的字串。如果未使用萬用字元，則訂閱者應用程式必須在其訂閱主題中使用此字串，才能接收在其主題上發佈的事件。
--  **format_string** 是定義訊息有效負載之內容類型的字串，讓訊息接收者可以決定如何剖析內容。共用內容類型值包括但不限制 "json"、"xml"、"txt" 及 "csv"。值可以是 MQTT 中任何有效的字串。
+-  **event_id** 是事件的 ID，例如，`status`。事件 ID 可以是 MQTT 中任何有效的字串。如果未使用萬用字元，則訂閱者應用程式必須在其訂閱主題中使用此字串，才能收到針對其主題發佈的事件。
+-  **format_string** 是定義訊息有效負載之內容類型的字串，讓訊息接收者可以決定如何剖析內容。共用內容類型值包含但不限於 "json"、"xml"、"txt" 及 "csv"。值可以是 MQTT 中任何有效的字串。
 
 **重要事項：**訊息有效負載上限為 131072 個位元組。大於此限制的訊息都會被拒絕。
 
@@ -80,10 +79,10 @@ MQTT 是裝置及應用程式用來與 {{site.data.keyword.iot_full}} 通訊的�
 {: codeblock}
 
 其中
- - **command_id** 是指令的 ID，例如，`update`。指令 ID 可以是 MQTT 通訊協定中任何有效的字串。如果未使用萬用字元，則裝置必須在其訂閱主題中使用此字串，才能接收在其主題上發佈的指令。
- - **format_string** 是定義指令有效負載之內容類型的字串，讓指令接收者可以決定如何剖析內容。共用內容類型值包括但不限制 "json"、"xml"、"txt" 及 "csv"。值可以是 MQTT 中任何有效的字串。
+ - **command_id** 是指令的 ID，例如，`update`。指令 ID 可以是 MQTT 通訊協定中任何有效的字串。如果未使用萬用字元，則裝置必須在其訂閱主題中使用此字串，才能收到針對其主題發佈的指令。
+ - **format_string** 是定義指令有效負載之內容類型的字串，讓指令接收者可以決定如何剖析內容。共用內容類型值包含但不限於 "json"、"xml"、"txt" 及 "csv"。值可以是 MQTT 中任何有效的字串。
 
-裝置無法從其他裝置訂閱事件。裝置只會接收發佈至其專屬裝置的指令。
+裝置無法訂閱來自其他裝置的事件。裝置只會接收發佈至其專屬裝置的指令。
 
 ## 受管理裝置
 {: #managed-devices}
@@ -145,6 +144,6 @@ iotdm-1/#
  - **rc** 是原始要求的結果碼。
  - **message** 是含有回應碼文字說明的選用性元素。
  - **d** 是隨附於回應的選用性資料元素。
- - **reqId** 是原始要求的要求 ID，用來產生回應與要求的關聯。裝置必須確保所有要求 ID 都是唯一。{{site.data.keyword.iot_short_notm}} 要求的回應必須包括正確的 **reqId** 值。
+ - **reqId** 是原始要求的要求 ID，用來產生回應與要求的關聯。裝置必須確保所有要求 ID 都是唯一。{{site.data.keyword.iot_short_notm}} 要求的回應必須包含正確的 **reqId** 值。
 
 如需特定要求及回應訊息的相關資訊，請參閱[裝置管理通訊協定](device_mgmt/index.html)及[裝置管理要求](device_mgmt/requests.html)。

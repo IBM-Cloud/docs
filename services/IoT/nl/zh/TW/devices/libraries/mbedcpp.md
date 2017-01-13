@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-02"
 
 ---
 
@@ -14,9 +15,6 @@ copyright:
 
 # 適用於裝置開發人員的 mBed C++
 {: #mbedcpp}
-
-前次更新：2016 年 8 月 2 日
-{: .last-updated}
 
 使用 [mBed C++ 用戶端程式庫](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/)，可以輕鬆地將 [mBed 裝置](https://www.mbed.com/en/)（例如 [LPC1768](https://developer.mbed.org/platforms/mbed-LPC1768/) 或 [FRDM-K64F](https://developer.mbed.org/platforms/FRDM-K64F/)）連接至 {{site.data.keyword.iot_full}} 服務。
 {:shortdesc}
@@ -31,7 +29,7 @@ copyright:
 
 |相依關係 |說明|
 |:---|:---|
-|[Eclipse Paho MQTT 程式庫](https://developer.mbed.org/teams/mqtt/code/MQTT/)|提供 mBed 裝置的 MQTT 用戶端程式庫。如需相關資訊，請參閱[嵌入式 MQTT C/C++ 用戶端程式庫](http://www.eclipse.org/paho/clients/c/embedded/)。|
+|[Eclipse Paho MQTT 程式庫](https://developer.mbed.org/teams/mqtt/code/MQTT/)|提供 mBed 裝置的 MQTT 用戶端程式庫。如需相關資訊，請參閱 [Embedded MQTT C/C++ Client Libraries](http://www.eclipse.org/paho/clients/c/embedded/)。|
 |[EthernetInterface 程式庫](https://developer.mbed.org/users/mbed_official/code/EthernetInterface/)|透過乙太網路的 mBed IP 程式庫。|
 
 ## 如何使用程式庫
@@ -50,7 +48,7 @@ copyright:
 
 |參數 |說明 |
 |:---|:---|
-|`org` |您的組織 ID。這是必要值。如果您使用的是「快速入門」流程，請指定 `quickstart`。|
+|`org` |您的組織 ID。這是必要值。如果您使用的是 Quickstart 流程，請指定 `quickstart`。|
 |`type`   |您的裝置類型。這是必要欄位。|
 |`id`   |您的裝置 ID。這是必要欄位。|
 |`auth-method`   |鑑別方法，這是選用欄位，只有已登錄流程需要此欄位。目前唯一支援的值是 `token`。|
@@ -58,7 +56,7 @@ copyright:
 
 這些參數會建立用來與 {{site.data.keyword.iot_short_notm}} 服務互動的定義。
 
-下列程式碼範例概述 DeviceClient 實例如何與 {{site.data.keyword.iot_short_notm}} 的「快速入門」服務互動：
+下列程式碼範例概述 DeviceClient 實例如何與 {{site.data.keyword.iot_short_notm}} 的 Quickstart 服務互動：
 
 ```
   #include "DeviceClient.h"
@@ -73,7 +71,7 @@ copyright:
   // Create DeviceClient
   IoTF::DeviceClient client(organization, deviceType, deviceId);
 
-  // Get the DeviceID(MAC Address) if we are in quickstart mode and device id is not specified
+  // Get the DeviceID(MAC Address) if we are in quickstart mode and device ID is not specified
   if((strcmp(organization, QUICKSTART) == 0) && (strcmp("", deviceId) == 0))
   {
   	char tmpBuf[50];
@@ -136,11 +134,11 @@ copyright:
 ## 發佈事件
 {: #publishing_events}
 
-事件是裝置用來將資料發佈至 {{site.data.keyword.iot_short_notm}} 的機制。裝置會控制事件的內容，並指派所傳送之每一個事件的名稱。
+事件是裝置用來將資料發佈至 {{site.data.keyword.iot_short_notm}} 的機制。裝置會控制事件的內容，並指派名稱給它傳送的每個事件。
 
-{{site.data.keyword.iot_short_notm}} 實例接收到事件時，所收到事件的認證可識別傳送端裝置，這表示，裝置無法假冒另一個裝置。
+{{site.data.keyword.iot_short_notm}} 實例收到事件時，所收到事件的認證可識別傳送端裝置，這表示，裝置無法假冒另一個裝置。
 
-可在三個[服務品質 (QoS) 水準](../../reference/mqtt/index.html#qos-levels)的任一個上發佈事件，這些水準由 MQTT 通訊協定予以定義。依預設，事件是在 QoS 0 時發佈。
+可使用三種[服務品質 (QoS) 水準](../../reference/mqtt/index.html#qos-levels)的任一種發佈事件，這些水準由 MQTT 通訊協定定義。依預設，事件是以 QoS 0 來發佈。
 
 ### 使用預設服務品質發佈事件
 
@@ -166,11 +164,12 @@ copyright:
 	....
 ```
 如需完整範例，請參閱 [IBMIoTClientLibrarySample](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTClientLibrarySample/file/e58533b6bc6b/src/Main.cpp)。
+
 ### 提高事件的 QoS 水準
 
-您可以為發佈的事件提高 [QoS 水準](../../reference/mqtt/index.html#qos-levels)。QoS 水準大於 `0` 的事件可能需要較長的發佈時間，因為包括額外的確認接收資訊。
+您可以為發佈的事件提高 [QoS 水準](../../reference/mqtt/index.html#qos-levels)。QoS 水準大於 `0` 的事件可能需要較長的發佈時間，因為包含額外的確認接收資訊。
 
-**附註：**「快速入門」流程模式僅支援 QoS 0。
+**附註：**Quickstart 流程模式僅支援 QoS 0。
 
 ```
 	#include "MQTTClient.h"

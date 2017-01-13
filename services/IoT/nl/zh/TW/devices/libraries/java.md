@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-18"
 
 ---
 
@@ -14,11 +15,7 @@ copyright:
 # 適用於裝置開發人員的 Java
 {: #java}
 
-前次更新：2016 年 10 月 18 日
-{: .last-updated}
-
-
-您可以在 {{site.data.keyword.iot_full}} 上使用 Java 來建置及自訂與組織互動的裝置。提供 {{site.data.keyword.iot_short_notm}} 的 Java 用戶端程式庫、文件及範例，以協助您開始使用裝置開發。
+您可以使用 Java 來建置及自訂裝置，在 {{site.data.keyword.iot_full}} 上與組織互動。我們提供了 {{site.data.keyword.iot_short_notm}} 的 Java 用戶端程式庫、文件及範例，以協助您開始進行裝置開發。
 {:shortdesc}
 
 ## 下載 Java 用戶端及資源
@@ -33,7 +30,7 @@ copyright:
 
 |定義 |說明 |
 |:----|:----|
-|`org` |必須設為組織 ID 的必要值。如果您使用的是「快速入門」流程，請指定 `quickstart`。|
+|`org` |必須設為組織 ID 的必要值。如果您使用的是 Quickstart 流程，請指定 `quickstart`。|
 |`type`  |指定裝置類型的必要值。|
 |`id`  |指定裝置唯一 ID 的必要值。|
 |`auth-method`  |要使用的鑑別方法。唯一支援的方法是 `token`。|
@@ -48,7 +45,7 @@ copyright:
 
 `Properties` 物件會建立用來與 {{site.data.keyword.iot_short_notm}} 模組互動的定義。
 
-下列程式碼範例顯示裝置如何以「快速入門」模式發佈事件。
+下列程式碼範例顯示裝置如何以 Quickstart 模式發佈事件。
 
 ```
 package com.ibm.iotf.sample.client.device;
@@ -198,9 +195,9 @@ public class RegisteredDeviceEventPublishPropertiesFile {
 {: #connecting_to_iotp}
 
 
-若要連接至 {{site.data.keyword.iot_short_notm}}，請使用 `connect()` 函數。`connect()` 函數包括稱為 `autoRetry` 的選用性布林參數，以決定程式庫是否在 MqttException 連線失敗時嘗試重新連接。`autoRetry` 預設為 true。如果 MqttSecurityException 連線因為傳遞的裝置登錄詳細資料不正確而失敗，則程式庫不會嘗試重新連接，即使 `autoRetry` 設為 true。
+若要連接至 {{site.data.keyword.iot_short_notm}}，請使用 `connect()` 函數。`connect()` 函數包含稱為 `autoRetry` 的選用性布林參數，它會決定程式庫是否在有 MqttException 連線失敗時嘗試重新連接。`autoRetry` 預設為 true。如果 MqttSecurityException 連線因為傳遞的裝置登錄詳細資料不正確而失敗，則程式庫不會嘗試重新連接，即使 `autoRetry` 設為 true 也一樣。
 
-若要設定 MQTT 的「保留作用中」間隔，您可以選擇性地使用 `setKeepAliveInterval(int)` 方法，然後再呼叫 `connect()` 函數。`setKeepAliveInterval(int)` 值的測量單位為秒，並且定義傳送訊息或接收訊息之間的時間間隔上限。使用時，用戶端可以偵測伺服器何時無法再使用，而不用等待 TCP/IP 逾時期間結束。用戶端確保在每一個「保留作用中」間隔期間至少有一個訊息在網路之間流動。如果在逾時期間接收到零資料相關訊息，則用戶端會傳送伺服器所確認的小型 `ping` 訊息。`setKeepAliveInterval(int)` 預設為 60 秒。若要停用用戶端上的「保留作用中」處理特性，請將 `setKeepAliveInterval(int)` 值設為 0。
+若要設定 MQTT 的「保留作用中」間隔，您可以選擇性地使用 `setKeepAliveInterval(int)` 方法，然後再呼叫 `connect()` 函數。`setKeepAliveInterval(int)` 值的測量單位為秒，它定義傳送訊息或接收訊息之間的時間間隔上限。使用時，用戶端可以偵測伺服器何時無法再使用，而不用等待 TCP/IP 逾時期間結束。用戶端確保在每一個「保留作用中」間隔期間至少有一個訊息在網路之間流動。如果在逾時期間沒有收到任何資料相關訊息，則用戶端會傳送伺服器所確認的小型 `ping` 訊息。`setKeepAliveInterval(int)` 預設為 60 秒。若要停用用戶端上的「保留作用中」處理特性，請將 `setKeepAliveInterval(int)` 值設為 0。
 
 
 ```
@@ -209,7 +206,7 @@ myClient.setKeepAliveInterval(120);
 myClient.connect(true);
 ```
 
-若要控制連線失敗時的重試次數，請使用超載的 connect(int numberOfTimesToRetry) 函數。
+若要控制連線失敗時發生的重試次數，請使用超載的 connect(int numberOfTimesToRetry) 函數。
 
 
 ```
@@ -224,11 +221,11 @@ myClient.connect(10);
 ## 發佈事件
 {: #publishing_events}
 
-事件是裝置用來將資料發佈至 {{site.data.keyword.iot_short_notm}} 的機制。裝置會控制事件的內容，並指派所傳送之每一個事件的名稱。
+事件是裝置用來將資料發佈至 {{site.data.keyword.iot_short_notm}} 的機制。裝置會控制事件的內容，並指派名稱給它傳送的每個事件。
 
-{{site.data.keyword.iot_short_notm}} 實例接收到事件時，所收到事件的認證可識別傳送端裝置，這表示，裝置無法假冒另一個裝置。
+{{site.data.keyword.iot_short_notm}} 實例收到事件時，所收到事件的認證可識別傳送端裝置，這表示，裝置無法假冒另一個裝置。
 
-可在三個[服務品質 (QoS) 水準](../../reference/mqtt/index.html#qos-levels)的任一個上發佈事件，這些水準由 MQTT 通訊協定予以定義。依預設，事件是在 QoS=0 時發佈。
+可使用三種[服務品質 (QoS) 水準](../../reference/mqtt/index.html#qos-levels)的任一種發佈事件，這些水準由 MQTT 通訊協定定義。依預設，事件是以 QoS=0 來發佈。
 
 ### 在預設 QoS 水準發佈事件
 
@@ -246,7 +243,7 @@ myClient.publishEvent("status", event);
 
 ### 提高事件的 QoS 水準
 
-您可以為發佈的事件提高 [QoS 水準](../../reference/mqtt/index.html#qos-levels)。QoS 水準大於零的事件可能需要較長的發佈時間，因為包括額外的確認接收資訊。
+您可以為發佈的事件提高 [QoS 水準](../../reference/mqtt/index.html#qos-levels)。QoS 水準大於零的事件可能需要較長的發佈時間，因為包含額外的確認接收資訊。
 
 ```
 myClient.connect();
@@ -262,7 +259,7 @@ myClient.publishEvent("status", event, 2);
 
 ### 以自訂格式發佈事件
 
-事件可以透過不同的格式（例如，JSON、字串、二進位等）進行發佈。程式庫預設會以 JSON 格式發佈事件，但是，如果您願意，可以指定不同格式的資料。例如，若要以字串格式發佈資料，請使用下列程式碼 Snippet。
+事件可以透過不同的格式（例如，JSON、字串、二進位等）進行發佈。程式庫預設會以 JSON 格式發佈事件，但如果您想要，可以指定不同格式的資料。例如，若要以字串格式發佈資料，請使用下列程式碼 Snippet。
 
 ```
 myClient.connect();
@@ -293,7 +290,7 @@ status = myClient.publishEvent("blink", cpuLoad , "binary", 1);
 {: #publishing_events_http}
 
 
-除了使用 MQTT 之外，您還可以配置裝置透過 HTTP 將事件發佈至 {{site.data.keyword.iot_short_notm}}。下列步驟概述透過 HTTP 發佈事件的序列：
+除了使用 MQTT 之外，您還可以配置裝置透過 HTTP 將事件發佈至 {{site.data.keyword.iot_short_notm}}。下列步驟概述透過 HTTP 發佈事件的順序：
 
 1. 使用內容檔建構 `DeviceClient` 實例。
 2. 建構需要發佈的事件。
@@ -312,7 +309,7 @@ boolean response  = myClient.api().publishDeviceEventOverHTTP("blink", event, Co
 
 若要檢視整個程式碼，請參閱 [HttpDeviceEventPublish] 裝置範例。
 
-根據內容檔中的設定，`publishEventOverHTTP()` 方法會以「快速入門」模式或已登錄流程模式發佈事件。內容檔的組織 ID 設為 `quickstart` 時，`publishEventOverHTTP()` 方法會將事件發佈至裝置範例快速入門服務，並以一般 HTTP 格式發佈事件。在內容檔中指定有效的已登錄組織時，會透過 HTTPS 安全地發佈事件。
+根據內容檔中的設定，`publishEventOverHTTP()` 方法會以 Quickstart 模式或已登錄流程模式發佈事件。內容檔的組織 ID 設為 `quickstart` 時，`publishEventOverHTTP()` 方法會將事件發佈至裝置範例 Quickstart 服務，並以一般 HTTP 格式發佈事件。在內容檔中指定有效的已登錄組織時，會透過 HTTPS 安全地發佈事件。
 
 HTTP 通訊協定提供「最多一次」遞送，這與 MQTT 通訊協定的「最多一次」(QoS 0) 服務品質水準類似。當您使用「最多一次」遞送來發佈事件時，應用程式只要發生錯誤就必須實作重試邏輯。
 

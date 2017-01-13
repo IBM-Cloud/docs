@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-27"
 
 ---
 
@@ -15,15 +16,13 @@ copyright:
 # 適用於應用程式開發人員的 Python
 {: #python}
 
-前次更新：2016 年 7 月 29 日
-{: .last-updated}
 
-您可以在 {{site.data.keyword.iot_full}} 上使用 Python 來建置及開發與組織互動的應用程式。適用於 {{site.data.keyword.iot_short_notm}} 的 Python 用戶端提供 API，透過抽出基礎通訊協定（例如 MQTT 及 HTTP）來協助與 {{site.data.keyword.iot_short_notm}} 特性的簡單互動。
+您可以使用 Python 來建置及開發應用程式，在 {{site.data.keyword.iot_full}} 上與組織互動。適用於 {{site.data.keyword.iot_short_notm}} 的 Python 用戶端提供 API，透過抽離基礎通訊協定（例如 MQTT 及 HTTP），來協助與 {{site.data.keyword.iot_short_notm}} 特性的簡單互動。
 
 
 {:shortdesc}
 
-使用提供的資訊及範例，利用 Python 開始開發您的應用程式。
+請使用所提供的資訊及範例，利用 Python 開始開發您的應用程式。
 
 ## 下載 Python 用戶端及資源
 {: #python_client_download}
@@ -37,13 +36,15 @@ options 字典會建立用來與 {{site.data.keyword.iot_short_notm}} 模組互�
 
 |定義|說明 |
 |:-----|:-----|
-|`orgId`|您的組織 ID|
-|`appId`|組織中應用程式的唯一 ID|
-|`auth-method`|鑑別方法，唯一支援的值是 `apikey`|
-|`auth-key`|選用性的 API 金鑰，當 auth-method 設為 `apikey` 時為必要項目|
-|`auth-token`|API 金鑰記號，當 auth-method 設為 `apikey` 時為必要項目|
+|`orgId`|您的組織 ID。|
+|`appId`|組織中應用程式的唯一 ID。|
+|`auth-method`|鑑別方法。唯一支援的方法是 `apikey`。|
+|`auth-key`|選用性的 API 金鑰，當 auth-method 的值設為 `apikey` 時必須指定的項目。|
+|`auth-token`|API 金鑰記號，當 auth-method 的值設為 `apikey` 時也為必要項目。|
+|`clean-session`|true 或 false 值，只有在要於可延續訂閱模式中連接應用程式時才是必要項目。`clean-session` 預設為 true。|
 
-如果未提供 options 字典，用戶端會連接至 {{site.data.keyword.iot_short_notm}} 的「快速入門」服務，作為已取消登錄的裝置。
+
+如果未提供 options 字典，用戶端會連接至 {{site.data.keyword.iot_short_notm}} 的 Quickstart 服務，作為已取消登錄的裝置。
 
 ```python
 
@@ -54,7 +55,8 @@ try:
     "id": appId,
     "auth-method": authMethod,
     "auth-key": authKey,
-    "auth-token": authToken
+    "auth-token": authToken,
+    "clean-session": true
   }
   client = ibmiotf.application.Client(options)
 except ibmiotf.ConnectionException  as e:
@@ -64,7 +66,7 @@ except ibmiotf.ConnectionException  as e:
 ### 使用配置檔
 
 
-如果您不是使用 options 字典，則必須包括含有下列程式碼格式之 options 字典的配置檔：
+如果您不是使用 options 字典，則必須包含一個配置檔，內含下列程式碼格式的 options 字典：
 
 ```python
 
@@ -85,6 +87,7 @@ id=myApplication
 auth-method=apikey
 auth-key=key
 auth-token=token
+clean-session=true/false
 
 ```
 
@@ -107,11 +110,11 @@ API 用戶端中的每一種方法都會回應：
 ## 訂閱裝置事件
 {: #subscribe_device_events}
 
-事件是裝置用來將資料發佈至 {{site.data.keyword.iot_short_notm}} 實例的機制。裝置會控制事件的內容，並指派所傳送之每一個事件的名稱。
+事件是裝置用來將資料發佈至 {{site.data.keyword.iot_short_notm}} 實例的機制。裝置會控制事件的內容，並指派名稱給它傳送的每個事件。
 
-{{site.data.keyword.iot_short_notm}} 實例接收到事件時，所收到事件的認證可識別傳送端裝置，讓裝置無法假冒另一個裝置。
+{{site.data.keyword.iot_short_notm}} 實例收到事件時，所收到事件的認證可識別傳送端裝置，讓裝置無法假冒另一個裝置。
 
-應用程式預設會訂閱所有已連接裝置的所有事件。使用 deviceType、deviceId、event 及 msgFormat 參數，以控制訂閱的範圍。單一用戶端可支援多個訂閱。下列程式碼範例顯示如何使用 deviceType、deviceId、event 及 msgFormat 參數來定義訂閱的範圍：
+應用程式預設會訂閱所有已連接裝置的所有事件。請使用 deviceType、deviceId、event 及 msgFormat 參數，以控制訂閱的範圍。單一用戶端可支援多個訂閱。下列程式碼範例顯示如何使用 deviceType、deviceId、event 及 msgFormat 參數來定義訂閱的範圍：
 
 
 ### 訂閱所有裝置的所有事件
@@ -127,7 +130,7 @@ client.connect()
 client.subscribeToDeviceEvents()
 ```
 
-### 訂閱特定類型的所有裝置的所有事件
+### 訂閱特定類型之所有裝置的所有事件
 
 
 ```python
@@ -189,8 +192,8 @@ client.subscribeToDeviceEvents(deviceType=myDeviceType, deviceId=myDeviceId, msg
 
 |內容|資料類型|說明|
 |:---|:---|
-|`event.device`|字串|唯一識別組織中所有類型裝置的裝置|
-|`event.deviceType`|字串|識別裝置類型。一般而言，deviceType 是執行特定作業（例如，"weatherballoon"）的裝置分組。|
+|`event.device`|字串|在組織所有類型裝置中唯一地識別出該裝置。|
+|`event.deviceType`|字串|識別裝置類型。一般而言，deviceType 是執行特定作業的裝置分組，例如，"weatherballoon"。|
 |`event.deviceId`|字串|代表裝置的 ID。一般而言，針對給定的裝置類型，deviceId 是該裝置的唯一 ID（例如，序號或 MAC 位址）。|
 |`event.event`|字串|一般用來將特定事件分組（例如，"status"、"warning" 及 "data"）。
 |`event.format`|字串|格式可以是任何字串（例如，JSON）。
@@ -219,7 +222,7 @@ client.subscribeToDeviceEvents()
 {: #subscribe_device_status}
 
 
-依預設，當您訂閱裝置狀態時，會收到所有已連接裝置的狀態更新。使用 type 及 ID 參數，以控制訂閱的範圍。單一用戶端可支援多個訂閱。
+依預設，當您訂閱裝置狀態時，會收到所有已連接裝置的狀態更新。請使用 type 及 ID 參數，以控制訂閱的範圍。單一用戶端可支援多個訂閱。
 
 ### 訂閱所有裝置的狀態更新
 
@@ -235,7 +238,7 @@ client.connect()
 client.subscribeToDeviceStatus()
 ```
 
-### 訂閱特定類型的所有裝置的狀態更新
+### 訂閱特定類型之所有裝置的狀態更新
 
 
 ```python
@@ -271,7 +274,7 @@ client.subscribeToDeviceStatus(deviceType=myOtherDeviceType, deviceId=myOtherDev
 
 若要處理訂閱所收到的狀態更新，您需要登錄事件回呼方法。會以 Status 類別的實例傳回訊息。
 
-有兩種類型的狀態事件：`Connect` 事件及 `Disconnect` 事件。所有狀態事件都包括下列內容：
+有兩種類型的狀態事件：`Connect` 事件及 `Disconnect` 事件。所有狀態事件都包含下列內容：
 
 |內容|資料類型|
 |:---|:---|
@@ -287,7 +290,7 @@ client.subscribeToDeviceStatus(deviceType=myOtherDeviceType, deviceId=myOtherDev
 
 `status.action` 內容可決定狀態事件的類型是 `Connect` 還是 `Disconnect`。
 
-`Disconnect` 狀態事件包括下列額外內容：
+`Disconnect` 狀態事件包含下列額外內容：
 
 |內容|資料類型|
 |:---|:---|
@@ -318,10 +321,10 @@ client.subscribeToDeviceStstus()
 ```
 
 
-## 發佈來自裝置的事件
+## 發佈裝置的事件
 {: #publishing_device_events}
 
-應用程式可以發佈事件，就像事件是源自裝置。
+應用程式可以發佈事件，就彷彿事件是源自裝置一樣。
 
 ```python
 
@@ -373,7 +376,7 @@ except IoTFCReSTException as e:
     print("ERROR [" + e.httpcode + "] " + e.message)
 ```
 
-如需要求和回應模型以及 HTTP 狀態碼的相關資訊，請參閱 [{{site.data.keyword.iot_short_notm}} API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html) 的「組織配置」小節。
+如需要求和回應模型以及 HTTP 狀態碼的相關資訊，請參閱 [{{site.data.keyword.iot_short_notm}} API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html) 的 Organization Configuration 小節。
 
 
 ## 大量裝置作業
@@ -381,7 +384,7 @@ except IoTFCReSTException as e:
 
 您的應用程式可以使用大量作業，以同時取得、新增或移除多個裝置。
 
-如需查詢參數清單、要求和回應模型以及 HTTP 狀態碼的相關資訊，請參閱 [{{site.data.keyword.iot_short_notm}} API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/) 的「大量作業」小節。
+如需查詢參數清單、要求和回應模型以及 HTTP 狀態碼的相關資訊，請參閱 [{{site.data.keyword.iot_short_notm}} API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/) 的 Bulk Operations 小節。
 
 
 ### 擷取裝置資訊
@@ -406,7 +409,7 @@ except IoTFCReSTException as e:
 ### 新增多個裝置
 
 
-使用 `addMultipleDevices()` 方法，將一個以上的裝置新增至 {{site.data.keyword.iot_short_notm}} 組織。要求不可以超過 512 KB。回應包含針對每一個裝置所產生的鑑別記號。請確定您製作了鑑別記號的副本，因為，如果遺失鑑別記號，則無法進行擷取。
+使用 `addMultipleDevices()` 方法，將一個以上的裝置新增至 {{site.data.keyword.iot_short_notm}} 組織。要求不可以超過 512 KB。回應包含針對每一個裝置所產生的鑑別記號。請確定您已複製鑑別記號，因為如果遺失鑑別記號，便無法擷取它們。
 
 
 ```python
@@ -456,7 +459,7 @@ except IoTFCReSTException as e:
 
 您在組織中建立的裝置類型可以用來建立用於新增裝置的範本。使用 {{site.data.keyword.iot_short_notm}} API 特性，您的應用程式可以列出、建立、刪除、檢視或更新組織中的裝置類型。
 
-如需查詢參數、要求和回應模型以及 HTTP 狀態碼的相關資訊，請參閱 [{{site.data.keyword.iot_short_notm}} API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html) 文件的「裝置類型」小節。
+如需查詢參數、要求和回應模型以及 HTTP 狀態碼的相關資訊，請參閱 [{{site.data.keyword.iot_short_notm}} API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html) 文件的 Device Types 小節。
 
 
 ### 擷取所有裝置類型
@@ -486,7 +489,7 @@ except IoTFCReSTException as e:
 
 ### 新增裝置類型
 
-使用 `addDeviceType()` 方法，以向 {{site.data.keyword.iot_short_notm}} 實例登錄裝置類型。在每一個要求中，您必須先定義要套用至所有這類型裝置的裝置資訊及裝置 meta 資料元素。裝置資訊元素包含數個變數，包括序號、製造商、模型、類別、說明、韌體、硬體版本及敘述性位置。meta 資料元素包含使用者可以定義的自訂變數及值。
+使用 `addDeviceType()` 方法，以向 {{site.data.keyword.iot_short_notm}} 實例登錄裝置類型。在每一個要求中，您必須先定義要套用至所有這類型裝置的裝置資訊及裝置 meta 資料元素。裝置資訊元素包含數個變數，包括序號、製造商、機型、類別、說明、韌體、硬體版本及敘述性位置。meta 資料元素包含使用者可以定義的自訂變數及值。
 
 
 ```python
@@ -595,9 +598,9 @@ except IoTFCReSTException as e:
 ## 裝置作業
 {: #device_ops}
 
-API 中可用的裝置作業，包括列出、新增、移除、檢視、更新、檢視位置，以及檢視 {{site.data.keyword.iot_short_notm}} 組織中裝置的裝置管理資訊。
+API 中可用的裝置作業，包括針對 {{site.data.keyword.iot_short_notm}} 組織中裝置的裝置進行列出、新增、移除、檢視、更新、檢視位置，以及檢視管理資訊。
 
-如需查詢參數、要求和回應模型以及 HTTP 狀態碼的相關資訊，請參閱 [{{site.data.keyword.iot_short_notm}} API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html) 的「裝置」小節。
+如需查詢參數、要求和回應模型以及 HTTP 狀態碼的相關資訊，請參閱 [{{site.data.keyword.iot_short_notm}} API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html) 的 Devices 小節。
 
 
 ### 擷取特定裝置類型的裝置
@@ -628,9 +631,9 @@ response = apiClient.retrieveDevices("iotsample-arduino", parameters);
 
 |參數|需求|說明
 |:---|:---|
-|`deviceTypeId`|選用|將裝置類型指派給裝置。如果裝置類型所定義的變數與 `deviceInfo` 變數所定義的變數之間發生衝突，則會優先使用裝置特定變數。|
+|`deviceTypeId`|選用|將裝置類型指派給裝置。如果裝置類型所定義的變數與 `deviceInfo` 變數所定義的變數之間發生衝突，則會優先使用裝置特有的變數。|
 |`deviceId`|必要||
-|`authToken`|選用|如果未提供，鑑別記號會產生並包括在回應中。|
+|`authToken`|選用|如果未提供，鑑別記號會產生並包含在回應中。|
 |`deviceInfo`|選用|包含含有 serialNumber、manufacturer、model、deviceClass、description、descriptiveLocation、firmware 及硬體版本的數個變數。|
 |`metadata`|選用|自訂欄位值字串配對，如[新增裝置類型的範例程式碼](#sample_device_type)中所概述。|
 |`location`|選用|包含 longitude、latitude、elevation、accuracy 及 measuredDateTime 變數。|
@@ -837,7 +840,7 @@ apiCli.clearAllErrorCodes(deviceTypeId, deviceId)
 使用 `addErrorCode()` 方法，以將錯誤碼新增至與裝置相關聯的錯誤碼清單。新增項目時，即可刪改清單。此方法中所需的參數是 deviceTypeId、deviceId 及 errorCode。errorCode 參數包含下列變數：
 
 - errorCode：這是必要的變數，應設為整數。此變數會設定所建立的錯誤碼數目。
-- timestamp：這是選用性的變數，而且包含 ISO8601 格式之日誌項目的日期和時間。如果未包括此變數，將會以現行日期和時間自動加以新增。
+- timestamp：這是選用性的變數，而且包含 ISO8601 格式之日誌項目的日期和時間。如果未包含此變數，將會以現行日期和時間自動加以新增。
 
 ```python
 errorCode = { "errorCode": 1234, "timestamp": "2015-10-29T05:43:57.112Z" }
@@ -853,4 +856,4 @@ apiCli.addErrorCode(deviceTypeId, deviceId, errorCode)
 apiCli.getDeviceConnectionLogs(deviceTypeId, deviceId)
 ```
 
-回應包括內含日誌訊息及時間戳記的日誌項目清單。
+回應包含內含日誌訊息及時間戳記的日誌項目清單。

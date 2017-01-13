@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-10-19"
 
 ---
 
@@ -13,10 +14,8 @@ copyright:
 
 # 開始使用 {{site.data.keyword.iot_short_notm}}
 {: #gettingstartedtemplate}
-前次更新：2016 年 9 月 29 日
-{: .last-updated}
 
-{{site.data.keyword.iot_full}} for {{site.data.keyword.Bluemix_notm}} 提供一個多用途的工具箱，其包括閘道裝置、裝置管理，以及功能強大的應用程式存取權。您可以使用 {{site.data.keyword.iot_short_notm}}，收集連接裝置的資料以及分析組織產生的即時資料。
+{{site.data.keyword.iot_full}} for {{site.data.keyword.Bluemix_notm}} 提供一個多用途的工具箱，其包含閘道裝置、裝置管理，以及功能強大的應用程式存取權。您可以使用 {{site.data.keyword.iot_short_notm}}，收集連接裝置的資料以及分析組織產生的即時資料。
 {:shortdesc}
 
 ## 開始之前
@@ -37,7 +36,7 @@ copyright:
   ------------- | -------------
   **我有要連接的裝置** | [將您的裝置連接至 {{site.data.keyword.iot_short_notm}}](iotplatform_task.html#iotplatform_task)。| 在[播放組織示範](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window}中探索裝置連線。
   **我沒有要連接的裝置** | [建立並連接 Node-RED 裝置模擬器](nodereddevice_sample.html){:new_window}。 | 開始使用 [Watson IoT Platform 入門範本](https://console.ng.bluemix.net/docs/starters/IoT/iot500.html){:new_window}。
-如需有關如何將特定裝置類型連接至 {{site.data.keyword.iot_short_notm}} 的詳細資訊，請參閱 [developerWorks 秘訣](https://developer.ibm.com/recipes/?post_type=tutorials&s=iot){:new_window}。  
+如需有關如何將特定裝置類型連接至 {{site.data.keyword.iot_short_notm}} 的詳細資訊，請參閱 [developerWorks Recipes](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}。  
 
 如需裝置連線開發人員文件，請參閱：
 - [裝置的 MQTT 連線功能](devices/mqtt.html)。
@@ -48,11 +47,11 @@ copyright:
 
 開始探索裝置傳送至 {{site.data.keyword.iot_short_notm}} 的即時資料。
 
-{{site.data.keyword.iot_short_notm}} 包括下列分析工具：  
+{{site.data.keyword.iot_short_notm}} 包含下列分析工具：  
 - [板和卡片](data_visualization.html)可將即時裝置資料視覺化。
 - 即時裝置資料觸發的[規則及動作](analytics.html)。
 
-如需快速開始使用範例，請參閱[使用「規則及動作」與「IBM Watson IoT Platform 雲端分析」](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/){:new_window} developerWorks 秘訣。
+如需快速開始使用的範例，請參閱 [Using Rules and Actions with IBM Watson IoT Platform Cloud Analytics](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/){:new_window} developerWorks 秘訣。
 
 ## 步驟 3：建立應用程式來使用您的裝置資料
 {: #develop_applications}
@@ -71,7 +70,7 @@ copyright:
 {: #rellinks}
 ## 指導教學及範例
 {: #samples}
-* [連接裝置的秘訣](https://developer.ibm.com/recipes/?post_type=tutorials&s=iot){:new_window}
+* [連接裝置的秘訣](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}
 * [{{site.data.keyword.iot_short_notm}} 播放組織](https://play.internetofthings.ibmcloud.com/){:new_window}
 * [將 Intel Galileo 連接至 {{site.data.keyword.iot_short_notm}}](https://developer.ibm.com/recipes/tutorials/connect-an-intel-galileo-to-the-internet-of-things-foundation-connect/){:new_window}
 * [連接 ARM® mbed™ IoT 入門範本套件](https://developer.ibm.com/recipes/tutorials/arm-mbed-iot-starter-kit-part-1/){:new_window}
