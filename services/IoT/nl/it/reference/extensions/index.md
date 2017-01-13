@@ -2,10 +2,11 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-18"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -13,8 +14,6 @@ copyright:
 
 # Integrazioni del servizio esterno
 {: #ref-index}
-Ultimo aggiornamento: 26 settembre 2016
-{: .last-updated}
 
 L'integrazione del servizio esterno ti consente di accedere ai dati e alle operazioni da servizi di terze parti o esterni nella tua organizzazione {{site.data.keyword.iot_full}}.
 
@@ -39,6 +38,8 @@ L'integrazione Jasper integrata fornita dalla nostra piattaforma fornisce suppor
 
 Puoi accedere alle operazioni supportate nel drilldown del dispositivo di un dispositivo collegato a Jasper dopo che sono state completate le seguenti istruzioni di configurazione:
 
+### API REST per Jasper
+Per accedere all'API REST per Jasper, consulta la sezione dell'estensione Jasper nella [ {{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension) documentation.
 
 ### Configurazione di Jasper
 
@@ -89,6 +90,9 @@ L'estensione AT&T abilita le seguenti operazioni AT&T:
 - Inviare SMS alla SIM
 - Modificare il piano tariffario
 
+### API REST per AT&T
+Per accedere all'API REST per AT&T, consulta la sezione dell'estensione AT&T nella [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension) documentation.
+
 ### Configurazione di AT&T
 
 Per collegare la tua organizzazione {{site.data.keyword.iot_short_notm}} a AT&T devi completare la configurazione dell'organizzazione e del dispositivo.
@@ -125,7 +129,6 @@ Per configurare i tuoi dispositivi collegati a AT&T, completa la seguente proced
 
 Quando l'organizzazione è stata configurata correttamente, viene visualizzata la sezione *Extensions* nella sezione *Extensions Configuration* nella vista *Device Drilldown*.
 
-
 ## Connettore ARM mbed
 {: #arm}
 
@@ -142,7 +145,7 @@ Il connettore ARM mbed ti consente di collegare il tuo dispositivo ARM mbed a {{
   5. Verifica che le credenziali siano corrette facendo clic sul pulsante **Check Connection**.
   6. Fai clic su **Done**.
 
-### Formato payload 
+### Formato payload
 
 Esistono due tipi di messaggi in entrata dalla piattaforma ARM mbed, le notifiche e le risposte asincrone. {{site.data.keyword.iot_short_notm}} può inviare i comandi ai dispositivi collegati alla piattaforma ARM mbed.
 
@@ -162,7 +165,7 @@ Il seguente esempio di codice mostra il formato del payload per una notifica inv
 }
 ```
 
-#### Risposte asincrone 
+#### Risposte asincrone
 
 Quando {{site.data.keyword.iot_short_notm}} invia un comando a un dispositivo collegato alla piattaforma ARM mbed, il dispositivo restituisce un messaggio di conferma a {{site.data.keyword.iot_short_notm}}. Questo messaggio di conferma viene denominato *risposta asincrona* e utilizza il tipo di evento `asyncResponse`.
 
@@ -219,9 +222,10 @@ Se hai un dispositivo collegato al tuo servizio {{site.data.keyword.iot_short_no
 - Ultimo aggiornamento stato
 - Stato ubicazione
 
+### API REST per Orange
+Per accedere all'API REST per Orange, consulta la sezione dell'estensione Orange nella [ {{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension) documentation.
+
 ### Configurazione di Orange
-
-
 
 Per abilitare l'estensione Orange:
 
@@ -285,6 +289,10 @@ L'estensione Weather Company combina i dati meteo con i tuoi dispositivi {{site.
 
 **Nota:** solo i dispositivi gestiti possono impostare le proprie ubicazioni. Tutti i dispositivi non gestiti devono avere le loro ubicazioni impostate manualmente utilizzando l'API. Per ulteriori informazioni sull'impostazione di un'ubicazione del dispositivo, consulta [Richieste di aggiornamento dell'ubicazione](../../devices/device_mgmt/index.html#update-location).
 
+### API REST per Weather Company
+Per accedere all'API REST per Weather Company, consulta la sezione
+Device Location Weather nella [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather) documentation.
+
 ### Dati meteo
 
 Per visualizzare i dati meteo richiamati per un'ubicazione del dispositivo, trova il dispositivo nel pannello **Devices** e fai clic su di esso. Nella vista del dispositivo dettagliata scorri fino alla sezione **Extensions**. Sono elencati i seguenti dati meteo:
@@ -292,11 +300,11 @@ Per visualizzare i dati meteo richiamati per un'ubicazione del dispositivo, trov
 - Meteo corrente.
 - Temperatura corrente.
 - Temperatura massima e minima previste.
-- Umidità relativa. 
-- Pressione. 
-- Visibilità. 
-- Velocità del vento. 
-- Direzione del vento. 
+- Umidità relativa.
+- Pressione.
+- Visibilità.
+- Velocità del vento.
+- Direzione del vento.
 - Latitudine.
 - Longitudine.
 

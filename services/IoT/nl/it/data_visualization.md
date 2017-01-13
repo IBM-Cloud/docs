@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-09-01"
 
 ---
 
@@ -13,13 +14,13 @@ copyright:
 
 # Visualizzazione dei dati in tempo reale utilizzando le tabelle e le schede
 {: #boards_and_cards}
-Ultimo aggiornamento: 21 giugno 2016
-{: .last-updated}
 
 Crea le tabelle e le schede per creare e condividere i tuoi propri dashboard che visualizzano i tuoi dati del dispositivo in tempo reale.
 {:shortdesc}
 
 Utilizzando le schede e le tabelle, puoi visualizzare i valori dei dataset graficamente da uno o più dispositivi per avere una veloce panoramica e una migliore comprensione dei dati. Crea tabelle e aggiungi schede che visualizzano i dati come numeri non elaborati, grafici in tempo reale, misuratori e altro. Aggiungi membri alle tue tabelle per condividerle con altri utenti nella tua organizzazione. Ordina le schede e aggiungi divisori di testo esplicativi per ottimizzare la tua presentazione.  
+
+Puoi anche espandere la serie predefinita di schede fornite da IBM [creando le tue proprie schede personalizzate](custom_cards/custom-cards.html).
 
 ![Visualizzazione dei dati in tempo reale con le schede.](images/boards_and_cards.svg "Visualizzazione dei dati in tempo reale con le schede.")
 
@@ -32,6 +33,7 @@ Il dashboard {{site.data.keyword.iot_full}} dispone delle seguenti tabelle prede
 |Panoramica sull'utilizzo  | Visualizza le statistiche di utilizzo per la tua organizzazione. Elenca i tipi di dispositivo e i dati utilizzati.
 |Analisi incentrata sulla regola | Visualizza le regole per la tua organizzazione. Ulteriori schede elencano gli avvisi attivati, i dispositivi associati, le proprietà del dispositivo e le informazione sull'avviso. |  
 |Analisi incentrata sul dispositivo | Visualizza i dispositivi collegati alla tua organizzazione. Ulteriori schede mostrano gli avvisi e le informazioni per un dispositivo selezionato, le proprietà del dispositivo e le informazioni sull'avviso. |
+|Gestione della sicurezza e del rischio  | Mostra le schede che riepilogano lo stato di sicurezza generale. Gli operatori di sistema e gli analisti della sicurezza possono visualizzare i dettagli di conformità, lo stato della connessione dei dispositivi, le cause dei problemi di connessione e i dispositivi bloccati o consentiti tramite una una whitelist o una blacklist.  Dalla scheda di conformità della connessione, l'utente può eseguire il drilldown di un report dettagliato sui dispositivi non conformi e può esportare il report in Excel. |
 
 Puoi aggiornare queste tabelle aggiungendo, aggiornando e rimuovendo schede.
 

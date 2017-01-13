@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-01"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # Risoluzione dei problemi di {{site.data.keyword.iot_short_notm}}
 {: #ts}
-Ultimo aggiornamento: 1 agosto 2016
-{: .last-updated}
 
 Queste sono le risposte a domande sulla risoluzione dei problemi comuni riguardo l'utilizzo di {{site.data.keyword.iot_full}} su {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-19"
 
 ---
 
@@ -12,10 +13,6 @@ copyright:
 {:pre: .pre}
 
 # Quickstart
-
-Ultimo aggiornamento: 19 settembre 2016
-{: .last-updated}
-
 
 [Quickstart](https://quickstart.internetofthings.ibmcloud.com/#/) è un sandbox gratuito che puoi utilizzare per collegare velocemente i tuoi dispositivi a {{site.data.keyword.iot_full}}. Se i tuoi dispositivi supportano il protocollo di messaggistica MQTT, possono essere facilmente collegati a Quickstart.
 

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-09-16"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # Connessione e configurazione di un servizio storico utilizzando un {{site.data.keyword.cloudant_short_notm}}  
 {: #cloudant_main}
-Ultimo aggiornamento: 16 settembre 2016
-{: .last-updated}
 
 La connessione di un servizio {{site.data.keyword.cloudantfull}} al tuo {{site.data.keyword.iot_full}} ti consente di archiviare e accedere ai tuoi dati del dispositivo. I dati del dispositivo sono archiviati nei database giornalmente, settimanalmente o mensilmente a seconda dell'intervallo bucket selezionato.
 

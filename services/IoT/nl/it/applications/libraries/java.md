@@ -32,7 +32,7 @@ Per accedere agli esempi e alle librerie client Java per {{site.data.keyword.iot
 ## Constructor
 {: #constructor}
 
-Il constructor crea l'istanza client e accetta l'oggetto `Properties` che contiene le seguenti definizioni: 
+Il constructor crea l'istanza client e accetta l'oggetto `Properties` che contiene le seguenti definizioni:
 
 | Definizione     |Descrizione     |
 |----------------|----------------|
@@ -43,7 +43,7 @@ Il constructor crea l'istanza client e accetta l'oggetto `Properties` che contie
 |`auth-token`   |Un token chiave API, che è inoltre obbligatorio quando imposti il valore di auth-method su `apikey`. |
 |`clean-session`|Un valore true o false obbligatorio solo se desideri collegarti all'applicazione con il metodo di sottoscrizione durevole. Per impostazione predefinita, `clean-session` è impostato su `true`.|
 |`Porta`|Il numero di porta a cui collegarsi. Specifica 8883 o 443. Se non specifichi un numero di porta, il client si collega a {{site.data.keyword.iot_short_notm}} nel numero di porta 8883 per impostazione predefinita.|
-|`MaxInflightMessages`  |Imposta il numero massimo di messaggi in elaborazione per la connessione. Il valore predefinito è 100. |
+|`MaxInflightMessages`  |Imposta il numero massimo di messaggi in elaborazione per la connessione. Il valore predefinito è 100.|
 |`Automatic-Reconnect`  |Un valore true o false obbligatorio quando desideri ricollegare automaticamente il dispositivo a {{site.data.keyword.iot_short_notm}} mentre è in uno stato disconnesso. Il valore predefinito è false.|
 |`Disconnected-Buffer-Size`|Il numero massimo di messaggi che possono essere archiviati nella memoria mentre il client è disconnesso. Il valore predefinito è 5000.|
 |`shared-subscription`|Un valore booleano che deve essere impostato su true se desideri creare applicazioni scalabili che bilanciano il carico dei messaggi tra più istanze dell'applicazione. Per ulteriori informazioni, consulta [Applicazioni scalabili](../mqtt.html#scalable_apps).
@@ -99,7 +99,7 @@ Il file di configurazione dell'applicazione specificata deve essere nel seguente
 ## Connessione a {{site.data.keyword.iot_short_notm}}
 {: #connecting_to_iotp}
 
-Per collegarti a {{site.data.keyword.iot_short_notm}}, utilizza la funzione `connect()`. a funzione `connect()` include un parametro booleano facoltativo denominato `autoRetry` che determina se la libreria tenta di ricollegarsi nel caso di un errore di connessione MqttException. Per impostazione predefinita, `autoRetry` è impostato su true. Se una connessione MqttSecurityException ha esito negativo perché vengono trasmessi i dettagli di registrazione del dispositivo non corretti, la libreria non tenta di ricollegarsi, anche se `autoRetry` è impostato su true. 
+Per collegarti a {{site.data.keyword.iot_short_notm}}, utilizza la funzione `connect()`. La funzione `connect()` include un parametro booleano facoltativo denominato `autoRetry` che determina se la libreria tenta di ricollegarsi nel caso di un errore di connessione MqttException. Per impostazione predefinita, `autoRetry` è impostato su true. Se una connessione MqttSecurityException ha esito negativo perché vengono trasmessi i dettagli di registrazione del dispositivo non corretti, la libreria non tenta di ricollegarsi, anche se `autoRetry` è impostato su true.
 
 Per impostare l'intervallo 'keepalive' per MQTT, puoi facoltativamente utilizzare il metodo `setKeepAliveInterval(int)` prima di richiamare la funzione `connect()`. Il valore `setKeepAliveInterval(int)` viene misurato in secondi e definisce l'intervallo di tempo massimo tra i messaggi inviati o ricevuti. Quando utilizzato, il client può rilevare quando il server non è più disponibile senza attendere che venga raggiunta la fine del periodo di timeout TCP/IP. Il client assicura che almeno un messaggio sia trasmesso in rete in ogni periodo di intervallo 'keepalive'. Se i messaggi correlati a zero dati vengono ricevuti durante il periodo di timeout, il client invia un piccolo messaggio `ping`, che il server riconosce. `setKeepAliveInterval(int)` è impostato su 60 secondi per impostazione predefinita. Per disabilitare la funzione di elaborazione 'keepalive' sul client, impostata il valore `setKeepAliveInterval(int)` su 0.
 
@@ -182,7 +182,7 @@ Per elaborare gli eventi ricevuti dalle tue sottoscrizioni, registra un metodo d
 |:---|:---|
 |`event.device`|Stringa|Identifica univocamente il dispositivo tra tutti i tipi di dispositivi nell'organizzazione.|
 |`event.deviceType`|Stringa|Identifica il tipo di dispositivo. Generalmente, il deviceType è un raggruppamento di dispositivi che esegue un'attività specifica, ad esempio, "weatherballoon" può essere un tipo di dispositivo.|
-|`event.deviceId`|Stringa|Rappresenta l'ID del dispositivo. Generalmente, per un tipo di dispositivo specifico, il deviceId è un identificativo univoco di tale dispositivo, ad esempio un numero seriale o un indirizzo MAC. |
+|`event.deviceId`|Stringa|Rappresenta l'ID del dispositivo. Generalmente, per un tipo di dispositivo specifico, il deviceId è un identificativo univoco di tale dispositivo, ad esempio un numero seriale o un indirizzo MAC.|
 |`event.event`|Stringa|Solitamente viene utilizzato per raggruppare gli eventi specifici, ad esempio "status", "warning" e "data".|
 |`event.format`|Stringa|Il formato può essere qualsiasi stringa, ad esempio JSON.  |
 |`event.data`|Dizionario|I dati per il payload del messaggio. La lunghezza massima è di 131072 byte.|
@@ -346,7 +346,7 @@ Il seguente esempio di codice fornisce un'implementazione di esempio del callbac
   }
 ```
 
-Quando il callback dello stato viene aggiunto al client dell'applicazione, viene richiamato il metodo `processDeviceStatus()` se viene collegato o scollegato un dispositivo che corrisponde ai criteri da {{site.data.keyword.iot_short_notm}}. Il seguente esempio di codice mostra come puoi aggiungere l'istanza di callback dello stato al client dell'applicazione: 
+Quando il callback dello stato viene aggiunto al client dell'applicazione, viene richiamato il metodo `processDeviceStatus()` se viene collegato o scollegato un dispositivo che corrisponde ai criteri da {{site.data.keyword.iot_short_notm}}. Il seguente esempio di codice mostra come puoi aggiungere l'istanza di callback dello stato al client dell'applicazione:
 
 ```
 
@@ -412,10 +412,10 @@ In modo simile, per pubblicare gli eventi nel formato binario, utilizza un array
 
 In aggiunta all'utilizzo di MQTT, puoi anche configurare le tue applicazioni in modo che pubblichino gli eventi del dispositivo in {{site.data.keyword.iot_short_notm}} tramite HTTP. La seguente procedura descrive la sequenza per la pubblicazione degli eventi del dispositivo tramite HTTP:
 
-1. Crea l'istanza ApplicationClient utilizzando il file delle proprietà. 
-2. Crea l'evento che deve essere pubblicato. 
-3. Specifica il nome dell'evento, il tipo di dispositivo e l'ID del dispositivo. 
-4. Pubblica l'evento utilizzando il metodo `publishEventOverHTTP`(), come mostrato nel seguente esempio di codice: 
+1. Crea l'istanza ApplicationClient utilizzando il file delle proprietà.
+2. Crea l'evento che deve essere pubblicato.
+3. Specifica il nome dell'evento, il tipo di dispositivo e l'ID del dispositivo.
+4. Pubblica l'evento utilizzando il metodo `publishEventOverHTTP`(), come mostrato nel seguente esempio di codice:
 
 ```
     	ApplicationClient myClient = new ApplicationClient(props);
@@ -453,15 +453,15 @@ Le applicazioni possono pubblicare i comandi sui dispositivi connessi, come most
     myAppClient.publishCommand(deviceType, deviceId, "stop", data);
 ```
 
-### Pubblica i comandi utilizzando l'HTTP 
+### Pubblica i comandi utilizzando l'HTTP
 {: #publishing_commands_http}
 
-In aggiunta all'utilizzo di MQTT, puoi anche configurare le tue applicazioni in modo che pubblichino i comandi al dispositivo collegato tramite HTTP. La seguente procedura descrive la sequenza per la pubblicazione degli eventi del dispositivo utilizzando HTTP: 
+In aggiunta all'utilizzo di MQTT, puoi anche configurare le tue applicazioni in modo che pubblichino i comandi al dispositivo collegato tramite HTTP. La seguente procedura descrive la sequenza per la pubblicazione degli eventi del dispositivo utilizzando HTTP:
 
 1. Crea l'istanza ApplicationClient utilizzando il file delle proprietà
-2. Crea il comando che deve essere pubblicato 
-3. Specifica il nome del comando, il tipo di dispositivo e l'ID del dispositivo 
-4. Pubblica il comando utilizzando il metodo `publishCommandOverHTTP`(), come mostrato nel seguente codice: 
+2. Crea il comando che deve essere pubblicato
+3. Specifica il nome del comando, il tipo di dispositivo e l'ID del dispositivo
+4. Pubblica il comando utilizzando il metodo `publishCommandOverHTTP`(), come mostrato nel seguente codice:
 
 ```
 

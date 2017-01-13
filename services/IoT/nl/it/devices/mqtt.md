@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-21"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # Connettività MQTT per i dispositivi
 {: #mqtt}
-Ultimo aggiornamento: 21 settembre 2016
-{: .last-updated}
 
 MQTT è il protocollo primario che i dispositivi e le applicazioni utilizzano per comunicare con {{site.data.keyword.iot_full}}. Le librerie client, le informazioni e gli esempi sono forniti per aiutarti nel collegarti e integrare i tuoi dispositivi con {{site.data.keyword.iot_short_notm}}.
 {:shortdesc}
@@ -66,7 +65,7 @@ I dispositivi eseguono la pubblicazione degli argomenti dell'evento nel seguente
 Dove
 
 -  **event_id** è l'ID dell'evento, ad esempio `status`.  L'ID evento può essere qualsiasi stringa che è valida in MQTT. Se non sono utilizzati i caratteri jolly, le applicazioni del sottoscrittore devono utilizzare questa stringa nel loro argomento di sottoscrizione per ricevere gli eventi che vengono pubblicati nei loro argomenti.
--  **format_string** è una stringa che definisce il tipo di contenuto del payload del messaggio in modo che il ricevente del messaggio possa determinare come analizzare il contenuto. I valori di tipo di contenuto includono ma non sono limitati a "json", "xml", "txt" e "csv". Il valore può essere qualsiasi stringa che è valida in MQTT. 
+-  **format_string** è una stringa che definisce il tipo di contenuto del payload del messaggio in modo che il ricevente del messaggio possa determinare come analizzare il contenuto. I valori di tipo di contenuto includono ma non sono limitati a "json", "xml", "txt" e "csv". Il valore può essere qualsiasi stringa che è valida in MQTT.
 
 **Importante:** il payload dei messaggi è limitato ad un massimo di 131072 byte. I messaggi che superano questo limite vengono rifiutati.
 
@@ -81,7 +80,7 @@ I dispositivi possono sottoscriversi agli argomenti del comando nel seguente for
 
 Dove
  - **command_id** è l'ID del comando, ad esempio, `update`. L'ID comando può essere qualsiasi stringa che è valida nel protocollo MQTT.  Se non sono utilizzati i caratteri jolly, un dispositivo deve utilizzare questa stringa nel proprio argomento di sottoscrizione per ricevere i comandi che vengono pubblicati nel loro argomento.
- - **format_string** è una stringa che definisce il tipo di contenuto del payload del comando in modo che il ricevente del comando possa determinare come analizzare il contenuto. I valori di tipo di contenuto includono ma non sono limitati a "json", "xml", "txt" e "csv". Il valore può essere qualsiasi stringa che è valida in MQTT. 
+ - **format_string** è una stringa che definisce il tipo di contenuto del payload del comando in modo che il ricevente del comando possa determinare come analizzare il contenuto. I valori di tipo di contenuto includono ma non sono limitati a "json", "xml", "txt" e "csv". Il valore può essere qualsiasi stringa che è valida in MQTT.
 
 I dispositivi possono sottoscriversi agli eventi da altri dispositivi. Un dispositivo riceve i comandi che vengono pubblicati soltanto per il proprio dispositivo.
 

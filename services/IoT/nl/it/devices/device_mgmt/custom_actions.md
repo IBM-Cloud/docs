@@ -2,10 +2,11 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-05"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -13,23 +14,19 @@ copyright:
 
 # Estensione della gestione del dispositivo
 {: #custom_actions}
-Ultimo aggiornamento: 11 luglio 2016
-{: .last-updated}
 
-Puoi estendere le funzionalità di gestione del dispositivo in {{site.data.keyword.iot_full}} per soddisfare i tuoi requisiti aggiungendo le estensioni di gestione del dispositivo utilizzando l'API REST o il dashboard fornito in {{site.data.keyword.Bluemix_notm}}.
+Puoi estendere le funzionalità di gestione del dispositivo in {{site.data.keyword.iot_full}} per soddisfare i tuoi requisiti aggiungendo le estensioni di gestione del dispositivo. Le estensioni di gestione del dispositivo possono essere aggiunte uilizzando l'API REST o il dashboard {{site.data.keyword.iot_short_notm}}.
 
-Per impostazione predefinita, le seguenti azioni di gestione del dispositivo vengono fornite e supportate da {{site.data.keyword.iot_short_notm}}:
+Per impostazione predefinita, le seguenti azioni di gestione del dispositivo vengono supportate da {{site.data.keyword.iot_short_notm}}:
 - Riavvio dispositivo
 - Reimpostazione fabric
 - Scaricamento firmware
 - Aggiornamento firmware
 
-Se le azioni del dispositivo predefinite fornite da {{site.data.keyword.iot_short_notm}} non sono sufficienti per le tue applicazioni e i tuoi dispositivi, puoi sviluppare ulteriori funzionalità di gestione del dispositivo implementando un pacchetto di estensione di gestione del dispositivo.
-
 ## Pacchetti di estensione della gestione del dispositivo
 {: #device_management_ext}
 
-Un pacchetto di estensione di gestione del dispositivo è un documento JSON che definisce una serie di azioni di gestione del dispositivo. Le azioni possono essere inizializzate su uno o più dispositivi che supportano le azioni. Le azioni vengono avviate utilizzando il dashboard {{site.data.keyword.iot_short_notm}} o i comandi dell'API REST di gestione del dispositivo.
+Un pacchetto di estensione di gestione del dispositivo è un documento JSON che definisce almeno una azione di gestione del dispositivo. Le azioni possono inizializzare qualsiasi dispositivo che le supporta utilizzando il dashboard {{site.data.keyword.iot_short_notm}} o l'API REST.
 
 Il seguente esempio di codice mostra il formato tipico di un pacchetto di estensione di gestione del dispositivo:
 
@@ -99,7 +96,7 @@ Un pacchetto di estensione di gestione del dispositivo contiene le seguenti prop
 
 **Nota:** i valori `bundleId`, `version`, `actionId` e `parameterId` possono contenere un massimo di 255 caratteri e possono essere formati da solo caratteri alfanumerici (a-z, A-Z, 0-9) e dai seguenti caratteri speciali:
  - trattino (-)
- - segno di sottolineatura (_)
+ - segno di sottolineatura (\_)
  - punto (.)
 
 ## API REST
@@ -121,12 +118,12 @@ Utilizza i seguenti comandi API REST {{site.data.keyword.iot_short_notm}} per ge
 Per ulteriori informazioni sulle API REST per i pacchetti di estensione di gestione del dispositivo, consulta la documentazione [{{site.data.keyword.iot_short_notm}} API V2](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 
-##Supporto di azioni di gestione del dispositivo personalizzate
+## Supporto di azioni di gestione del dispositivo personalizzate
 {: #supporting_custom_device_management_actions}
 
-Le azioni di gestione del dispositivo definite nei tuoi pacchetti di estensione possono essere avviate solo dai dispositivi che supportano tali azioni. Quando un dispositivo pubblica una richiesta di gestione in {{site.data.keyword.iot_short_notm}}, il dispositivo specifica il tipo di azioni che può supportare.
+Le azioni di gestione del dispositivo definite nei tuoi pacchetti di estensione possono essere avviate solo dai dispositivi che supportano tali azioni. Quando un dispositivo pubblica una richiesta di gestione in {{site.data.keyword.iot_short_notm}}, il dispositivo specifica il tipo di azioni che può supportare. 
 
-Per ricevere azioni personalizzate dal pacchetto di estensione, il dispositivo deve specificare l'identificativo bundle per il pacchetto di estensione nell'oggetto supports della richiesta, come mostrato nel seguente esempio:
+Per specificare le azioni personalizzate dal pacchetto di estensione, il dispositivo deve specificare l'identificativo bundle per il pacchetto di estensione nell'oggetto supports della richiesta, come mostrato nel seguente esempio: 
 
 ```
 	Outgoing message from device:

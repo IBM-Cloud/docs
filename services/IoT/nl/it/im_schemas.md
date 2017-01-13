@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015,2016
+  years: 2016
+lastupdated: "2016-10-13"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # Crea schemi di tipo di dispositivi
 {: #iotrtinsights_task}
-Ultimo aggiornamento: 1 agosto 2016
-{: .last-updated}
 
 Per utilizzare le funzioni {{site.data.keyword.iot_short}} come le regole e le azioni, devi creare uno schema per associare le proprietà del dispositivo ai nomi delle proprietà semplici da usare, impostare le unità di dati per le proprietà e specificare il tipo di messaggio da utilizzare con lo schema.
 {: shortdesc}
@@ -68,7 +67,7 @@ Per aggiungere uno schema:
  `Float` o `Integer`.</li>
  <li>Proprietà - Un identificativo della proprietà per la proprietà virtuale. Ad esempio:  
 `temp_virt`</li>
-    <li>Calcolo - Aggiungi uno o più componenti per definire una funzione valida. Puoi utilizzare le proprietà, i valori numerici e gli operatori matematici come +, -, \*, /, (, ) e AVG per creare il tuo calcolo. Il componente AVG viene utilizzato per calcolare il valore della proprietà medio per un periodo di tempo specificato.</br> **Importante:** il componente AVG restituisce solo i punti dati della proprietà se i dati per la proprietà selezionata provengono da un dispositivo collegato a un gateway con installato un EAA (Edge Analytics Agent). Per ulteriori informazioni, consulta [Installazione dell'agent di analisi edge](gateways/dashboard.html#edge).</li>
+    <li>Calcolo - Aggiungi uno o più componenti per definire una funzione valida. Puoi utilizzare le proprietà, i valori numerici e gli operatori matematici come +, -, \*, /, (, ), AVG e Z-score per creare il tuo calcolo. </br>Il componente AVG viene utilizzato per calcolare il valore della proprietà medio per un periodo di tempo specificato. </br>Il componente Z-score restituisce la differenza nelle unità di deviazione standard tra il punto dati i valore del punto dati principale in un numero di punti dati o in un intervallo di tempo.</br> **Importante:**  i componenti restituiscono solo i punti dati della proprietà se i dati per la proprietà selezionata provengono da un dispositivo collegato a un gateway con installato un EAA (Edge Analytics Agent). Per ulteriori informazioni, consulta [Installazione dell'agent di analisi edge](gateways/dashboard.html#edge). In aggiunta, le condizioni della regola che confrontano i valori AVG e Z-score non sono supportate.</li>
     <li>Unità di dati - Facoltativo: l'unità di dati della proprietà. Ad esempio: `C` o `Mph`</li>
     <li> Posizioni decimali - Facoltativo, solo float: il numero di numeri decimali da includere nel dati del dispositivo.</li>
    </ul>

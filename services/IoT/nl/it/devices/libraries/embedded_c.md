@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-02"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # Embedded C per gli sviluppatori dei dispositivi
 {: #embedded_c}
-Ultimo aggiornamento: 02 agosto 2016
-{: .last-updated}
 
 Puoi utilizzare Embedded C per creare e personalizzare i dispositivi che interagiscono con la tua organizzazione su {{site.data.keyword.iot_full}}. Utilizza le informazioni e gli esempi forniti per iniziare a sviluppare i tuoi dispositivi utilizzando Embedded C.
 {:shortdesc}
@@ -37,7 +36,7 @@ Per accedere agli esempi e alle librerie client Embedded C per {{site.data.keywo
 ## Installazione
 {: #installation}
 
-Per installare la libreria client {{site.data.keyword.iot_full}} per Embedded C, completa le seguenti istruzioni:
+Per installare la libreria client {{site.data.keyword.iot_short_notm}} per Embedded C, completa le seguenti istruzioni:
 
 1. Per installare l'ultima versione della libreria, immetti il seguente codice nella riga di comando:
 ```

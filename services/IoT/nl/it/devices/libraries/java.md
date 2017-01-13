@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-18"
 
 ---
 
@@ -13,10 +14,6 @@ copyright:
 
 # Java per gli sviluppatori dei dispositivi
 {: #java}
-
-Ultimo aggiornamento: 18 ottobre 2016
-{: .last-updated}
-
 
 Puoi utilizzare Java per creare e personalizzare i dispositivi che interagiscono con la tua organizzazione su {{site.data.keyword.iot_full}}. Una libreria client Java per {{site.data.keyword.iot_short_notm}}, la documentazione e gli esempi ti vengono forniti per iniziare ad utilizzare lo sviluppo del dispositivo.
 {:shortdesc}
@@ -35,10 +32,10 @@ Il constructor crea l'istanza client e accetta l'oggetto `Properties` che contie
 |:----|:----|
 |`org` |Un valore obbligatorio che deve essere impostato nel tuo ID dell'organizzazione. Se stai utilizzando un flusso Quickstart, specifica `quickstart`.|
 |`type`  |Un valore obbligatorio che specifica il tipo del dispositivo.|
-|`id`  |Un valore obbligatorio che specifica l'ID univoco del dispositivo. |
+|`id`  |Un valore obbligatorio che specifica l'ID univoco del dispositivo.|
 |`auth-method`  |Il metodo di autenticazione da utilizzare. L'unico metodo supportato è `token`.|
 |`auth-token`   |Un token di autenticazione per la connessione sicura al tuo dispositivo a {{site.data.keyword.iot_short_notm}}.|
-|`clean-session`|Un valore true o false obbligatorio solo se desideri collegarti all'applicazione con il metodo di sottoscrizione durevole. Per impostazione predefinita, `clean-session` è impostato su true. |
+|`clean-session`|Un valore true o false obbligatorio solo se desideri collegarti all'applicazione con il metodo di sottoscrizione durevole. Per impostazione predefinita, `clean-session` è impostato su true.|
 |`Porta`|Il numero di porta a cui collegarsi. Specifica 8883 o 443. Se non specifichi un numero di porta, il client si collega a {{site.data.keyword.iot_short_notm}} nel numero di porta 8883 per impostazione predefinita.|
 |`MaxInflightMessages`  |Imposta il numero massimo di messaggi in elaborazione per la connessione. Il valore predefinito è 100.|
 |`Automatic-Reconnect`  |Un valore true o false obbligatorio quando desideri ricollegare automaticamente il dispositivo a {{site.data.keyword.iot_short_notm}} mentre è in uno stato disconnesso. Il valore predefinito è false.|
@@ -142,7 +139,7 @@ public class RegisteredDeviceEventPublish {
 
 ### Utilizzo di un file di configurazione
 
-Invece di utilizzare direttamente un oggetto `Properties`, puoi anche utilizzare un file di configurazione che contiene le coppie nome-valore per le proprietà. Se stai utilizzando un file delle proprietà che contiene un oggetto `Properties`, utilizza il seguente formato del codice: 
+Invece di utilizzare direttamente un oggetto `Properties`, puoi anche utilizzare un file di configurazione che contiene le coppie nome-valore per le proprietà. Se stai utilizzando un file delle proprietà che contiene un oggetto `Properties`, utilizza il seguente formato del codice:
 
 ```
 package com.ibm.iotf.sample.client.device;
@@ -246,7 +243,7 @@ myClient.publishEvent("status", event);
 
 ### Aumento del livello QoS per un evento
 
-Puoi aumentare i [livelli QoS](../../reference/mqtt/index.html#qos-levels) per gli eventi che sono stati pubblicati. Gli eventi con un livello QoS maggiore di zero possono impiegare più tempo per la pubblicazione, perché sono incluse ulteriori informazioni di ricezione della conferma. 
+Puoi aumentare i [livelli QoS](../../reference/mqtt/index.html#qos-levels) per gli eventi che sono stati pubblicati. Gli eventi con un livello QoS maggiore di zero possono impiegare più tempo per la pubblicazione, perché sono incluse ulteriori informazioni di ricezione della conferma.
 
 ```
 myClient.connect();
@@ -273,13 +270,13 @@ status = myClient.publishEvent("load", data, "text", 2);
 
 **Nota:** nel precedente esempio di codice, il payload dell'evento deve essere nel formato stringa:
 
-Tutti i dati XML possono essere convertiti nel formato stringa e pubblicati nel seguente modo, 
+Tutti i dati XML possono essere convertiti nel formato stringa e pubblicati nel seguente modo,
 
 ```
 status = myClient.publishEvent("load", xmlConvertedString, "xml", 2);
 ```
 
-In modo simile, per pubblicare gli eventi nel formato binario, utilizza un array di byte descritto nel seguente esempio: 
+In modo simile, per pubblicare gli eventi nel formato binario, utilizza un array di byte descritto nel seguente esempio:
 
 ```
 myClient.connect();
@@ -292,11 +289,11 @@ status = myClient.publishEvent("blink", cpuLoad , "binary", 1);
 {: #publishing_events_http}
 
 
-In aggiunta all'utilizzo di MQTT, puoi anche configurare i tuoi dispositivi in modo che pubblichino gli eventi in {{site.data.keyword.iot_short_notm}} tramite HTTP. La seguente procedura descrive la sequenza per la pubblicazione degli eventi tramite HTTP: 
+In aggiunta all'utilizzo di MQTT, puoi anche configurare i tuoi dispositivi in modo che pubblichino gli eventi in {{site.data.keyword.iot_short_notm}} tramite HTTP. La seguente procedura descrive la sequenza per la pubblicazione degli eventi tramite HTTP:
 
 1. Crea un'istanza `DeviceClient` utilizzando il file delle proprietà.
 2. Crea un evento che deve essere pubblicato.
-3. Specifica il nome dell'evento e quindi pubblicalo utilizzando il metodo `publishEventOverHTTP()`, come mostrato nel seguente esempio di codice: 
+3. Specifica il nome dell'evento e quindi pubblicalo utilizzando il metodo `publishEventOverHTTP()`, come mostrato nel seguente esempio di codice:
 
 ``` sourceCode
 DeviceClient myClient = new DeviceClient(deviceProps);
@@ -313,7 +310,7 @@ Per visualizzare il codice completo, consulta l'esempio del dispositivo [HttpDev
 
 In base alle impostazioni nel file delle proprietà, il metodo `publishEventOverHTTP()` pubblica l'evento in modalità Quickstart o nella modalità del flusso registrato. Quando l'ID dell'organizzazione nel file delle proprietà è impostato su `quickstart`, il metodo `publishEventOverHTTP()` pubblica l'evento nel servizio quickstart di esempio del dispositivo e lo pubblica nel formato HTTP semplice. Quando viene specificata un'organizzazione registrata valida nel file delle proprietà, gli eventi sono pubblicati in modo sicuro tramite HTTPS.
 
-Il protocollo HTTP fornisce la distribuzione 'at most once', che è simile al livello di QOS (quality of service) 'at most once' del protocollo MQTT. Quando utilizzi la distribuzione 'at most once' per pubblicare gli eventi, l'applicazione deve implementare la logica del nuovo tentativo se si verifica un errore. 
+Il protocollo HTTP fornisce la distribuzione 'at most once', che è simile al livello di QOS (quality of service) 'at most once' del protocollo MQTT. Quando utilizzi la distribuzione 'at most once' per pubblicare gli eventi, l'applicazione deve implementare la logica del nuovo tentativo se si verifica un errore.
 
 [HttpDeviceEventPublish]: https://github.com/ibm-messaging/iot-device-samples/blob/master/java/device-samples/src/main/java/com/ibm/iotf/sample/client/device/HttpDeviceEventPublish.java
 

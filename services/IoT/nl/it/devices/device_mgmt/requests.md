@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-08"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # Richieste di gestione del dispositivo
 {: #requests}
-Ultimo aggiornamento: 08 settembre 2016
-{: .last-updated}
 
 
 {{site.data.keyword.iot_full}} fornisce azioni che possono essere avviate per uno o più dispositivi. Queste azioni possono essere avviate utilizzando il dashboard o l'API REST. I tipi di azioni disponibili sono **azioni dispositivo** e **azioni firmware**.

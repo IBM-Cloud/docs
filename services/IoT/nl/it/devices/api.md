@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-11"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # API REST HTTP per i dispositivi
 {: #api}
-Ultimo aggiornamento: 11 ottobre 2016
-{: .last-updated}
 
 **Importante:** l'API REST HTTP {{site.data.keyword.iot_full}} per la funzione dei dispositivi è disponibile solo come parte di un programma beta limitato. Futuri aggiornamenti possono includere modifiche incompatibili con la versione corrente di questa funzione. Provala e [facci sapere cosa ne pensi](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html).
 

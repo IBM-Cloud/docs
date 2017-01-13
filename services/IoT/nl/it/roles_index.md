@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-09-16"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 {:pre: .pre}
 
 # Ruoli utente, applicazione e gateway
-Ultimo aggiornamento: 16 settembre 2016
-{: .last-updated}
 
 I ruoli sono serie di autorizzazioni che puoi utilizzare per concedere o restringere l'accesso a operazioni specifiche. Puoi utilizzare i ruoli per gestire le autorizzazioni per i gruppi di utenti, applicazioni e gateway.
 {:shortdesc}
@@ -27,7 +26,7 @@ I seguenti ruoli utente standard sono disponibili:
 
 Ruolo utente | Descrizione
 ------------- | -------------
-Amministratore | Un ruolo 'super-utente' che concede l'accesso a tutte le API correlate all'utente. Gli amministratori non possono accedere alle operazioni limitate ai dispositivi e alle applicazioni. 
+Amministratore | Un ruolo 'super-utente' che concede l'accesso a tutte le API correlate all'utente. Gli amministratori non possono accedere alle operazioni limitate ai dispositivi e alle applicazioni.
 Operatore | Destinato agli utenti dell'organizzazione di front-end. Concede l'accesso alla maggior parte delle operazioni dell'organizzazione, alle operazioni di controllo dell'accesso, di terze parti e di gestione del rischio.
 Sviluppatore | Concede accesso limitato alle operazioni del dispositivo, di log, di cache, storiche, di analisi e dei servizi di terze parti. Il ruolo fornisce l'accesso all'organizzazione, al controllo dell'accesso e alle operazioni di gestione del rischio.
 Analista | Concede accesso alle operazioni di analisi, inclusi la creazione, l'aggiornamento e l'eliminazione di regole, azioni e schemi.
