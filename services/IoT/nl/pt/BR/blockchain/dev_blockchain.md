@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-30"
 
 ---
 
@@ -13,10 +14,7 @@ copyright:
 
 
 # Desenvolvendo contratos inteligentes para integração de blockchain ao {{site.data.keyword.iot_short_notm}}
-
 {: #iotblockchain_link}
-Última atualização: 30 de agosto de 2016
-{: .last-updated}
 
 Use o {{site.data.keyword.blockchainfull}} e o ambiente de desenvolvimento do Hyperledger para criar e testar seus próprios contratos inteligentes derivados dos contratos de amostra fornecidos pela IBM.
 {:shortdesc}
@@ -28,10 +26,9 @@ Um ambiente de desenvolvimento de integração de blockchain ao {{site.data.keyw
 - Organização do {{site.data.keyword.Bluemix_notm}}:
   - Serviço do {{site.data.keyword.iot_short_notm}} com integração de blockchain de IoT ativada
   - Malha de {{site.data.keyword.blockchainfull_notm}}
-  - Aplicativo Node-RED executando o simulador de dispositivo IoT
-  
+  - Aplicativo Node-RED executando o simulador de dispositivo IoT  
 
-**Nota:** também é possível usar um ambiente Node-RED implementado localmente para executar o simulador.
+**Nota:** É possível também usar um ambiente Node-RED implementado localmente para executar o simulador.
 
 - Ambiente local:
   - Ambiente de desenvolvimento do Hyperledger para desenvolver e testar o código da cadeia do contrato inteligente. O ambiente inclui o GoLang.

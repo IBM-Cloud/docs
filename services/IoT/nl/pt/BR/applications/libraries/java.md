@@ -86,6 +86,7 @@ Em vez de incluir o objeto `Properties` diretamente, é possível usar um arquiv
     ...
 ```
 O arquivo de configuração do aplicativo especificado deve estar no formato a seguir:
+
 ```
     [application]
     org=$orgId
@@ -356,12 +357,15 @@ Quando o retorno de chamada de status é incluído no aplicativo cliente, o mét
     myClient.subscribeToDeviceStatus();
 ```
 Os aplicativos podem assinar qualquer outro status de aplicativo, como conexão e desconexão do aplicativo para {{site.data.keyword.iot_short_notm}}. O fragmento de código a seguir mostra como assinar o status do aplicativo de uma organização {{site.data.keyword.iot_short_notm}}:
+
 ```
     myClient.connect()
     myClient.setEventCallback(new MyEventCallback());
     myClient.subscribeToApplicationStatus();
 ```
 O método sobrecarregado está disponível para controlar a assinatura de status para um aplicativo específico. O método `processApplicationStatus()` é chamado sempre que um aplicativo que corresponde aos critérios é conectado ou desconectado do {{site.data.keyword.iot_short_notm}}.
+
+
 ## Publicando eventos a partir de dispositivos
 {: #publishing_events_devices}
 
@@ -390,6 +394,7 @@ Os eventos podem ser publicados em diferentes formatos, por exemplo, JSON, sequ�
     status = myClient.publishEvent("load", data, "text", 2);
 ```
 **Observação:** no exemplo de código anterior, a carga útil do evento deve estar no formato de sequência.
+
 Qualquer dado XML pode ser convertido para sequência e publicado como a seguir:
 
 ```

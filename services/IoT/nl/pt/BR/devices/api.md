@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-11"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # API REST HTTP para dispositivos
 {: #api}
-Última atualização: 11 de outubro de 2016
-{: .last-updated}
 
 **Importante:** o recurso API (interface de programação de aplicativos) REST HTTP (Protocolo de Transporte de Hipertexto) do {{site.data.keyword.iot_full}} para dispositivos está disponível apenas como parte de um programa beta limitado. Atualizações futuras podem incluir mudanças incompatíveis com a versão atual desse recurso. Experimente e [informe-nos o que acha](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html).
 
@@ -65,6 +64,8 @@ Todas as solicitações devem incluir um cabeçalho de autorização. Autentica�
 |:---|:---|
 |User name|`use-token-auth`
 |Password| O token de autenticação que foi gerado automaticamente ou manualmente especificado quando você registrou o dispositivo.
+
+
 ### Cabeçalhos de solicitação Content-Type
 
 Um cabeçalho de solicitação `Content-Type` deve ser fornecido com a solicitação. A tabela a seguir mostra como os tipos suportados são mapeados para os formatos internos do{{site.data.keyword.iot_short_notm}}.

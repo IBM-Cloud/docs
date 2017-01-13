@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-18"
 
 ---
 
@@ -13,10 +14,6 @@ copyright:
 
 # Java para desenvolvedores de dispositivos
 {: #java}
-
-Última atualização: 18 de outubro de 2016
-{: .last-updated}
-
 
 É possível construir e customizar dispositivos que interagem com sua organização no {{site.data.keyword.iot_full}} usando Java. Uma biblioteca do cliente Java para {{site.data.keyword.iot_short_notm}}, documentação e exemplos são fornecidos para ajudá-lo a começar com o desenvolvimento do dispositivo.
 {:shortdesc}

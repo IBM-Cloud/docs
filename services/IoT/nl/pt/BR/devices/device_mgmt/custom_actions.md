@@ -2,10 +2,11 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-05"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -13,23 +14,19 @@ copyright:
 
 # Ampliando o gerenciamento de dispositivo
 {: #custom_actions}
-Última atualização: 11 de julho de 2016
-{: .last-updated}
 
-É possível estender as capacidades de gerenciamento de dispositivo no {{site.data.keyword.iot_full}} para atender seus requisitos incluindo extensões de gerenciamento de dispositivo usando a API (interface de programação de aplicativos) REST ou o painel fornecido no {{site.data.keyword.Bluemix_notm}}.
+É possível estender os recursos de gerenciamento de dispositivo no {{site.data.keyword.iot_full}} para atender seus requisitos incluindo extensões de gerenciamento de dispositivo. As extensões de gerenciamento de dispositivo podem ser incluídas usando a API de REST ou o painel {{site.data.keyword.iot_short_notm}}.
 
-Por padrão, as ações de gerenciamento de dispositivo a seguir são fornecidos e suportados pelo {{site.data.keyword.iot_short_notm}}:
+Por padrão, as ações de gerenciamento de dispositivo a seguir são suportadas pelo {{site.data.keyword.iot_short_notm}}:
 - Reinicialização do dispositivo
 - Reconfiguração de fábrica
 - Download de firmware
 - Atualização de Firmware
 
-Se as ações padrão do dispositivo fornecidas pelo {{site.data.keyword.iot_short_notm}} não forem suficientes para seus dispositivos e aplicativos, será possível desenvolver recursos adicionais de gerenciamento de dispositivo implementando um pacote de extensão de gerenciamento de dispositivo.
-
 ## Pacotes de extensão de gerenciamento de dispositivo
 {: #device_management_ext}
 
-Um pacote de extensão de gerenciamento de dispositivo é um documento JSON que define um conjunto de ações de gerenciamento de dispositivo. As ações podem ser iniciadas em um ou mais dispositivos que suportam as ações. As ações são iniciadas usando o painel do {{site.data.keyword.iot_short_notm}} os comandos da API (interface de programação de aplicativos) REST de gerenciamento de dispositivo.
+Um pacote de extensão de gerenciamento de dispositivo é um documento JSON que define pelo menos uma ação de gerenciamento de dispositivo. As ações podem ser iniciadas em quaisquer dispositivos que suportem as ações usando o painel {{site.data.keyword.iot_short_notm}} ou a API de REST.
 
 A amostra de código a seguir mostra o formato típico de um pacote de extensão de gerenciamento de dispositivo:
 
@@ -99,8 +96,7 @@ Um pacote de extensão de gerenciamento de dispositivo contém as propriedades a
 
 **Nota:** os valores de `bundleId`, `version`, `actionId` e `parameterId` são limitados a 255 caracteres e podem consistir somente em caracteres alfanuméricos (a-z, A-Z, 0-9) e os caracteres especiais a seguir:
  - travessão (-)
- - sublinhado
-(_)
+ - sublinhado (\_)
  - ponto (.)
 
 ## APIs REST
@@ -122,12 +118,12 @@ Use os comandos da API (interface de programação de aplicativos) REST do {{sit
 Para obter mais informações sobre as APIs (interfaces de programação de aplicativos) REST para os pacotes de extensão de gerenciamento de dispositivo, consulte a documentação do [{{site.data.keyword.iot_short_notm}} API V2](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 
-##Suportando ações de gerenciamento de dispositivo customizadas
+## Suportando ações de gerenciamento de dispositivo customizadas
 {: #supporting_custom_device_management_actions}
 
 As ações de gerenciamento de dispositivo definidas em seus pacotes de extensão podem ser iniciadas somente por dispositivos que suportam essas ações. Quando um dispositivo publica uma solicitação de gerenciamento no {{site.data.keyword.iot_short_notm}}, o dispositivo especifica os tipos de ações que ele pode suportar.
 
-Para receber ações customizadas de um pacote de extensão, o dispositivo deve especificar o identificador do pacote configurável para o pacote de extensão no objeto de suporte da solicitação, conforme mostrado no exemplo a seguir:
+Para especificar ações customizadas de um pacote de extensão, o dispositivo deve especificar o identificador de pacote configurável para o pacote de extensão no objeto de suporte da solicitação, conforme mostrado no exemplo a seguir:
 
 ```
 	Outgoing message from device:

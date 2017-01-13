@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-14"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # Conectividade MQTT para gateways
 {: #mqtt}
-Última atualização: 14 de setembro de 2016
-{: .last-updated}
 
 MQTT é o protocolo primário que dispositivos e aplicativos usam para se comunicar com o {{site.data.keyword.iot_full}}. As bibliotecas do cliente, informações e amostras são fornecidas para ajudá-lo a usar clientes MQTT como gateways para conectar seus dispositivos ao {{site.data.keyword.iot_short_notm}}.
 {:shortdesc}

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-02"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # Biblioteca do cliente Java - dispositivos gerenciados
 {: #java_deviceManagement}
-Última atualização: 02 de agosto de 2016
-{: .last-updated}
 
 ##Introdução
 {: #introduction}

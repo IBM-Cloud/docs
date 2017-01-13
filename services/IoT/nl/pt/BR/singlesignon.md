@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-10-05"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 {:pre: .pre}
 
 # Configurando e usando o {{site.data.keyword.ssoshort}}
-Última atualização: 05 de outubro de 2016
-{: .last-updated}
 
 O serviço {{site.data.keyword.ssofull}} pode ser configurado para suportar provedores de autenticação do usuário alternativos para o {{site.data.keyword.iot_full}}. O {{site.data.keyword.ssoshort}} suporta SAML 2.0, IBM Cloud Directory, provedores sociais (Facebook, LinkedIn, Google +) e Github.
 {: .shortdesc}
@@ -40,8 +39,7 @@ O serviço {{site.data.keyword.ssoshort}} não pode ser ligado diretamente a out
 
 ## Configurando o {{site.data.keyword.iot_short_notm}} for {{site.data.keyword.ssoshort}}
 
-Após ligar e configurar o aplicativo {{site.data.keyword.sdk4nodefull}} e o serviço {{site.data.keyword.ssoshort}}, o {{site.data.keyword.iot_short_notm}} deve ser configurado. O {{site.data.keyword.iot_short_notm}} pode ser configurado usando a UI do {{site.data.keyword.iot_short_notm}} ou usando a API do {{site.data.keyword.iot_short_notm}}. 
-As etapas a seguir devem ser executadas antes de configurar usando a UI ou a API:
+Após ligar e configurar o aplicativo {{site.data.keyword.sdk4nodefull}} e o serviço {{site.data.keyword.ssoshort}}, o {{site.data.keyword.iot_short_notm}} deve ser configurado. O {{site.data.keyword.iot_short_notm}} pode ser configurado usando a UI do {{site.data.keyword.iot_short_notm}} ou usando a API do {{site.data.keyword.iot_short_notm}}. As etapas a seguir devem ser executadas antes de configurar usando a UI ou a API:
 
 1. Clique no aplicativo {{site.data.keyword.sdk4nodefull}} no painel {{site.data.keyword.Bluemix_notm}}.
 2. Clique em **Variáveis de ambiente** na barra de navegação.

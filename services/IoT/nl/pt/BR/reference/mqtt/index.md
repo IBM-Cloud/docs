@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-09"
 
 ---
 
@@ -11,11 +12,8 @@ copyright:
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-
 # Sistema de mensagens MQTT
 {: #ref-mqtt}
-Última atualização: 13 de setembro de 2016
-{: .last-updated}
 
 MQTT é o protocolo primário que dispositivos e aplicativos usam para se comunicar com o {{site.data.keyword.iot_full}}. MQTT é um protocolo de transporte de sistema de mensagens de publicação e assinatura projetado para a troca eficiente de dados em tempo real entre sensor e dispositivos móveis.
 {:shortdesc}
@@ -27,26 +25,16 @@ MQTT é executado por TCP/IP e, embora seja possível codificar diretamente para
 
 ## Suporte à versão
 {: #version-support}
-
-O {{site.data.keyword.iot_short_notm}} suporta as versões a seguir do protocolo de sistema de mensagens MQTT:
-
-Versão de MQTT | Desvios | Notas
---- | --- | ---
-[3.1.1](https://www.oasis-open.org/standards#mqttv3.1.1) (recomendada) | Mensagens retidas não são suportadas, por exemplo, assinaturas compartilhadas. | <ul><li>OASIS Standard.<li>Norma ISO (organização internacional para normatização) (ISO/IEC PRF 20922) <li>Interoperabilidade melhorada entre vários clientes e servidores devido a uma definição mais precisado protocolo em comparação à V3.1.   <li>O comprimento máximo do identificador de cliente MQTT (ClientId) aumentou para 256 do limite de 23 caracteres imposto pela V3.1. </br>O serviço do {{site.data.keyword.iot_short_notm}} frequentemente requer IDs de clientes mais longos (ClientId). </br>IDs de clientes longos são suportados, independentemente da versão de protocolo MQTT, no entanto, algumas bibliotecas do cliente V3.1 verificam o comprimento do valor do ClientId e aplicam o limite de 23 caracteres.</ul>
-3.1 | - | O MQTT V3.1 é a versão do protocolo que está em uso mais amplo hoje.
-
-O {{site.data.keyword.iot_short_notm}} suporta qualquer conteúdo permitido pelo padrão MQTT. MQTT é agnóstico com relação a dados, portanto, é possível enviar imagens, textos em qualquer codificação, dados criptografados e praticamente todo tipo de dados em formato binário. Para obter mais informações sobre o padrão MQTT, consulte os recursos a seguir:
-- [MQTT.org](http://mqtt.org/)
-- [HiveMQ: introdução a MQTT](http://www.hivemq.com/blog/mqtt-essentials-part-1-introducing-mqtt)
+Para obter informações sobre as versões do MQTT que são suportadas pelo {{site.data.keyword.iot_short_notm}}, consulte [Padrões e requisitos](../standards_and_requirements.html#mqtt).
 
 ## Clientes de aplicativo, dispositivo e gateway
 {: #device-app-clients}
 
 No {{site.data.keyword.iot_short_notm}}, as principais classes de coisas são dispositivos e aplicativos. Um gateway é uma subclasse de dispositivo.
 
-A classe de coisa com a qual seu cliente MQTT se identifica para o serviço determina os recursos de seu cliente quando conectado. A classe de coisa também determina o mecanismo para a autenticação de cliente.
+O cliente MQTT se identifica para o serviço {{site.data.keyword.iot_short_notm}} como uma classe de coisa. A classe de coisa determina os recursos do cliente quando ele está conectado. A classe de coisa também determina o mecanismo para a autenticação de cliente.
 
-Os aplicativos e dispositivos também funcionam com diferentes espaços de tópicos MQTT.  Os dispositivos funcionam dentro de um espaço de tópico com escopo do dispositivo, enquanto os aplicativos têm acesso total ao espaço de tópico para uma organização inteira. Para obter informações adicionais, consulte os
+Aplicativos e dispositivos funcionam com espaços de tópico MQTT diferentes. Os dispositivos funcionam dentro de um espaço de tópico com escopo do dispositivo, enquanto os aplicativos têm acesso total ao espaço de tópico para uma organização inteira. Para obter informações adicionais, consulte os
 seguintes tópicos:
 
 - [Dispositivos](../../devices/mqtt.html)
@@ -57,13 +45,13 @@ seguintes tópicos:
 {: #qos-levels}
 
 O protocolo MQTT fornece três qualidades de serviço para entregar mensagens entre clientes e servidores: "no máximo uma vez", "pelo menos uma vez" e "exatamente uma vez".
-Embora seja possível enviar eventos e comandos usando qualquer qualidade de nível de serviço, deve-se considerar cuidadosamente qual é o nível de serviço para suas necessidades. A qualidade de serviço de nível 2 nem sempre é uma melhor opção do que o nível zero.
+Embora seja possível enviar eventos e comandos usando qualquer qualidade de nível de serviço, deve-se considerar cuidadosamente qual é o nível de serviço para suas necessidades. O nível '2' da qualidade de serviço não é sempre uma opção melhor que o nível '0'.
 
 ### No máximo uma vez (QoS0)
 
 O nível da qualidade de serviço "no máximo uma vez" (QoS0) é o modo mais rápido de transferência e às vezes é chamado de "disparar e esquecer". A mensagem é entregue no máximo uma vez ou pode não ser entregue definitivamente. A entrega pela rede não é reconhecida e a mensagem não é armazenada. A mensagem poderá ser perdida se o cliente for desconectado ou se o servidor falhar.
 
-O protocolo MQTT não requer servidores para encaminhar publicações na qualidade de serviço de nível zero para um cliente. Se o cliente estiver desconectado no momento em que o servidor recebe a publicação, a publicação poderá ser descartada, dependendo da implementação do servidor.
+O protocolo MQTT não requer servidores para encaminhar publicações no nível '0' de qualidade de serviço para um cliente. Se o cliente estiver desconectado no momento em que o servidor recebe a publicação, a publicação poderá ser descartada, dependendo da implementação do servidor.
 
 **Dica:** ao enviar dados em tempo real em um intervalo, use a qualidade de serviço de nível 0. Se uma única mensagem desaparecer, não importa muito porque outra mensagem contendo dados mais novos será enviada pouco depois. Neste cenário, o custo extra de usar uma qualidade de serviço mais alta não resulta em qualquer benefício tangível.
 
@@ -73,7 +61,7 @@ Com qualidade de serviço de nível 1 (QoS1), a mensagem é sempre entregue pelo
 
 ### Exatamente uma vez (QoS2)
 
-O nível da qualidade de serviço "exatamente uma vez" (QoS2) é o modo mais seguro, mas mais lento de transferência. A mensagem é sempre entregue exatamente uma vez e também deve ser armazenada localmente no remetente, até que o remetente receba confirmação de que a mensagem foi publicada pelo destinatário. A mensagem é armazenada para o caso de ser necessário enviá-la novamente. Com a qualidade de serviço de nível 2, uma sequência de handshaking e confirmação mais sofisticada é usada do que para o nível 1 para assegurar que as mensagens não sejam duplicadas.
+O nível 2 da qualidade de serviço (QoS2) "exatamente uma vez" é o mais seguro, mas o modo mais lento de transferência. A mensagem é sempre entregue exatamente uma vez e também deve ser armazenada localmente no remetente, até que o remetente receba confirmação de que a mensagem foi publicada pelo destinatário. A mensagem é armazenada para o caso de ser necessário enviá-la novamente. Com a qualidade de serviço de nível 2, uma sequência de handshaking e confirmação mais sofisticada é usada do que para o nível 1 para assegurar que as mensagens não sejam duplicadas.
 
 **Dica:** ao enviar comandos, se você desejar confirmação de que apenas o comando especificado será acionado e que será acionado apenas uma vez, use a qualidade de serviço de nível 2. Este é um exemplo de quando s sobrecargas adicionais de nível 2 podem ser vantajosas com relação aos outros níveis.
 
@@ -111,3 +99,10 @@ Binary | Sem restrições.
 **Importante:** o tamanho máximo de carga útil no {{site.data.keyword.iot_short_notm}} é 131072 bytes. Mensagens com uma carga útil maior que o limite são rejeitadas. O cliente de conexão também é desconectado e uma mensagem aparece nos logs de diagnóstico, conforme esboçado no exemplo de mensagem do dispositivo a seguir:
 
 `Closed connection from x.x.x.x. The message size is too large for this endpoint.`
+
+## Intervalo keep-alive MQTT
+{: #mqtt-keep-alive}
+
+O intervalo keep-alive MQTT, que é medido em segundos, define o tempo máximo que pode passar sem comunicação entre o cliente e o broker. O cliente MQTT deve assegurar que, na ausência de qualquer outra comunicação com o broker, um pacote PINGREQ seja enviado. O intervalo keep-alive permite que tanto o cliente quanto o broker detectem que a rede falhou, resultando em uma conexão interrompida, sem precisar esperar que o período de tempo limite de TCP/IP seja atingido.
+
+Se seus clientes MQTT {{site.data.keyword.iot_short_notm}} usarem assinaturas compartilhadas, o valor do intervalo keep-alive poderá ser configurado apenas entre 1 e 3600 segundos. Se um valor de 0 ou um valor maior que 3600 for solicitado, o broker {{site.data.keyword.iot_short_notm}} configurará o intervalo keep-alive para 3600 segundos.

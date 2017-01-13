@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-23"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # Cloud Analytics
 {: #cloud_analytics}
-Última atualização: 23 de agosto de 2016
-{: .last-updated}
 
 Usando análise de dados de nuvem do {{site.data.keyword.iot_short}}, você especifica as condições das regras que são baseadas em dados do dispositivo de tempo real e que acionam alertas e ações opcionais quando atendidas.    
 {: shortdesc}

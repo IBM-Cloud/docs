@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-10-16"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 {:pre: .pre}
 
 # Níveis de acesso para funções de aplicativo
-Última atualização: 16 de setembro de 2016
-{: .last-updated}
 
 As tabelas a seguir mostram o nível de acesso para cada uma das funções de aplicativo.
 

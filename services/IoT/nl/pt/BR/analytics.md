@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-11"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # Analytics
 {: #analytics}  
-Última atualização: 11 de agosto de 2016
-{: .last-updated}
 
 Use o Watson {{site.data.keyword.iot_full}} Analytics para obter as informações analíticas necessárias dos dados brutos produzidos por seus dispositivos.  
 {: shortdesc}

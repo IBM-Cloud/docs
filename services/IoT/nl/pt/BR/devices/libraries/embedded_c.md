@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-02"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # Embedded C para desenvolvedores de dispositivos
 {: #embedded_c}
-Última atualização: 02 de agosto de 2016
-{: .last-updated}
 
 É possível usar o Embedded C para construir e customizar dispositivos que interagem com sua organização no {{site.data.keyword.iot_full}}. Use as informações e os exemplos fornecidos para iniciar o desenvolvimento de seus dispositivos usando o Embedded C.
 {:shortdesc}
@@ -37,7 +36,7 @@ Para acessar as bibliotecas do cliente Embedded C e as amostras para o {{site.da
 ## Instalação
 {: #installation}
 
-Para instalar a biblioteca do cliente do {{site.data.keyword.iot_full}} para Embedded C, conclua as instruções a seguir:
+Para instalar a biblioteca do cliente do {{site.data.keyword.iot_short_notm}} para Embedded C, conclua as instruções a seguir:
 
 1. Para instalar a versão mais recente da biblioteca, insira o código a seguir na linha de comandos:
 ```

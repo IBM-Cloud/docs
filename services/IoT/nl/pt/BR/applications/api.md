@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-07"
 
 ---
 
@@ -13,9 +14,6 @@ copyright:
 
 # API REST HTTP para aplicativos
 {: #api}
-
-Última atualização: 07 de setembro de 2016
-{: .last-updated}
 
 Use a API (interface de programação de aplicativos) REST HTTP (Protocolo de Transporte de Hipertexto) do {{site.data.keyword.iot_full}} para construir e customizar aplicativos que interagem com sua organização no {{site.data.keyword.iot_short_notm}}.
 {:shortdesc}
