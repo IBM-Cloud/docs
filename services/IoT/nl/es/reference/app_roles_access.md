@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-10-16"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 {:pre: .pre}
 
 # Niveles de acceso para los roles de aplicaciones
-Última actualización: 16 de septiembre de 2016
-{: .last-updated}
 
 Las tablas siguientes muestran el nivel de acceso para cada uno de los roles de la aplicación.
 

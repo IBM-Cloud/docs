@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015,2016
+  years: 2016
+lastupdated: "2016-10-13"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # Crear esquemas de tipo de dispositivo
 {: #iotrtinsights_task}
-Última actualización: 1 de agosto de 2016
-{: .last-updated}
 
 Para utilizar características de {{site.data.keyword.iot_short}} como, por ejemplo, reglas y acciones, debe crear un esquema para correlacionar las propiedades de dispositivos a nombres de propiedades sencillos para el usuario, para establecer las unidades de datos para las propiedades, y para especificar un tipo de mensaje para utilizar con el esquema.
 {: shortdesc}
@@ -68,7 +67,7 @@ Para añadir un esquema:
  `Flotante` o `Entero`.</li>
  <li>Propiedad: Un identificador de propiedad para la propiedad virtual. Por ejemplo:  
 `temp_virt`</li>
-    <li>Cálculo: Añada uno o varios componentes para definir una función válida. Puede utilizar propiedades, valores numéricos y operadores matemáticos como por ejemplo +, -, \*, /, (, ) y AVG para crear el cálculo. El componente AVG se utiliza para calcular el valor de propiedad promedio durante un periodo de tiempo especificado.</br> **Importante:** El componente AVG sólo devuelve puntos de datos de propiedades si los datos para la propiedad seleccionada proviene de un dispositivo que está conectado a una pasarela con Edge Analytics Agent instalado. Para obtener más información, consulte [Instalación de Edge Analytics Agent](gateways/dashboard.html#edge).</li>
+    <li>Cálculo: Añada uno o varios componentes para definir una función válida. Puede utilizar propiedades, valores numéricos y operadores matemáticos como por ejemplo +, -, \*, /, (, ), AVG y Z-score para crear el cálculo. </br>El componente AVG se utiliza para calcular el valor de propiedad promedio durante un periodo de tiempo especificado. </br>El componente Z-score devuelve la diferencia en unidades de desviación estándar entre el punto de datos y el valor medio de punto de datos sobre un número de puntos de datos o sobre un periodo de tiempo. </br> **Importante:** Los componentes AVG y z-score sólo devuelven puntos de datos de propiedades si los datos para la propiedad seleccionada proviene de un dispositivo que está conectado a una pasarela con Edge Analytics Agent instalado. Para obtener más información, consulte [Instalación de Edge Analytics Agent](gateways/dashboard.html#edge). Además, no se da soporte a las condiciones de regla que comparan los valores de AVG y Z-score. </li>
     <li>Unidad de datos - Opcional: La unidad de datos de la propiedad. Por ejemplo: `C` o `Mph`</li>
     <li> Posiciones decimales - Opcional, sólo flotante: El número de decimales a incluir en los datos de dispositivo.</li>
    </ul>

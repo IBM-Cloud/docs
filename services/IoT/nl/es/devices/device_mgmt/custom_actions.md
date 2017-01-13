@@ -2,10 +2,11 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-09-05"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -13,23 +14,19 @@ copyright:
 
 # Ampliación de la gestión de dispositivos
 {: #custom_actions}
-Última actualización: 11 de julio de 2016
-{: .last-updated}
 
-Puede ampliar las funciones de gestión de dispositivos en {{site.data.keyword.iot_full}} para que cumplan sus requisitos añadiendo extensiones de gestión de dispositivos mediante la API REST o el panel de instrumentos que se proporciona en {{site.data.keyword.Bluemix_notm}}.
+Puede ampliar las funciones de gestión de dispositivos en {{site.data.keyword.iot_full}} para que cumplan sus requisitos añadiendo extensiones de gestión de dispositivos. Las extensiones de gestión de dispositivos se pueden añadir mediante la API REST o el panel de control de {{site.data.keyword.iot_short_notm}}. 
 
-De forma predeterminada, se proporcionan las siguientes acciones de gestión de dispositivos y están soportadas por el {{site.data.keyword.iot_short_notm}}:
+De forma predeterminada, las siguientes acciones de gestión de dispositivos reciben soporte de {{site.data.keyword.iot_short_notm}}:
 - Rearranque de dispositivo
 - Restablecimiento de fábrica
 - Descarga de firmware
 - Actualización de firmware
 
-Si las acciones de dispositivos predeterminadas proporcionadas por {{site.data.keyword.iot_short_notm}} no son suficientes para los dispositivos y aplicaciones, puede desarrollar funciones de gestión de dispositivos adicionales implementando un paquete de ampliación de gestión de dispositivos.
-
 ## Paquetes de ampliación de gestión de dispositivos
 {: #device_management_ext}
 
-Un paquete de ampliación de gestión de dispositivos es un documento JSON que define un conjunto de acciones de gestión de dispositivos. Las acciones se pueden iniciar en uno o varios dispositivos que dan soporte a las acciones. Las acciones se inician utilizando el panel de instrumentos de {{site.data.keyword.iot_short_notm}} o los mandatos de la API REST de gestión de dispositivos.
+Un paquete de ampliación de gestión de dispositivos es un documento JSON que define al menos una acción de gestión de dispositivos. Puede iniciar las acciones cualquier dispositivo que dé soporte a las acciones mediante el panel de control de {{site.data.keyword.iot_short_notm}} o la API REST.
 
 El ejemplo de código siguiente muestra el formato típico de un paquete de ampliación de gestión de dispositivos:
 
@@ -99,7 +96,7 @@ Un paquete de ampliación de gestión de dispositivos contiene las siguientes pr
 
 **Nota:** Los valores `bundleId`, `version`, `actionId` y `parameterId` están limitados a 255 caracteres y pueden constar de sólo caracteres alfanuméricos (a-z, A-Z, 0-9) y de los siguientes caracteres especiales:
  - guión (-)
- - subrayado (_)
+ - signo de subrayado (_)
  - punto (.)
 
 ## API REST
@@ -121,12 +118,12 @@ Utilice los siguientes mandatos de la API REST de {{site.data.keyword.iot_short_
 Para obtener más información sobre las API REST para los paquetes de ampliación de gestión de dispositivos, consulte la documentación de [{{site.data.keyword.iot_short_notm}} API V2](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 
-##Soporte de acciones de gestión de dispositivos personalizada
+## Soporte de acciones de gestión de dispositivos personalizada
 {: #supporting_custom_device_management_actions}
 
 Las acciones de gestión de dispositivos definidas en los paquetes de ampliación las pueden iniciar únicamente los dispositivos que dan soporte a dichas acciones. Cuando un dispositivo publica una solicitud de gestión en el {{site.data.keyword.iot_short_notm}}, el dispositivo especifica los tipos de acciones a las que puede dar soporte.
 
-Para recibir acciones personalizadas desde un paquete de ampliación, el dispositivo debe especificar el identificador de paquetes para el paquete de ampliación en el objeto supports de la solicitud, tal como se muestra en el ejemplo siguiente:
+Para especificar acciones personalizadas desde un paquete de ampliación, el dispositivo debe especificar el identificador de paquetes para el paquete de ampliación en el objeto supports de la solicitud, tal como se muestra en el ejemplo siguiente:
 
 ```
 	Mensaje saliente del dispositivo:

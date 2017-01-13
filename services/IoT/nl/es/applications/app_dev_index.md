@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-08-31"
 
 ---
 
@@ -11,16 +12,13 @@ copyright:
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Desarrollo de aplicaciones en {{site.data.keyword.iot_short}}
+# Desarrollo de aplicaciones
 {: #app_dev_index}
-
-Última actualización: 26 de agosto de 2016
-{: .last-updated}
 
 Las bibliotecas de cliente, los ejemplos y la información se proporcionan para ayudarle a crear aplicaciones para la organización de {{site.data.keyword.iot_full}}.
 {:shortdesc}
 
-Puede grabar código para crear y gestionar aplicaciones que interactúen y utilicen información de dispositivos conectados en {{site.data.keyword.iot_short}} utilizando los siguientes protocolos y estándares soportados:
+Puede grabar código para crear y gestionar aplicaciones que interactúen y utilicen información de dispositivos conectados en {{site.data.keyword.iot_short_notm}} utilizando los siguientes protocolos y estándares soportados:
 
 - C#
 - Java
@@ -29,4 +27,4 @@ Puede grabar código para crear y gestionar aplicaciones que interactúen y util
 - Node-RED
 - Python
 
-Para obtener más información y enlaces a las bibliotecas del cliente que están disponibles para desarrollarse en {{site.data.keyword.iot_short}}, consulte [Bibliotecas de cliente para desarrollo de {{site.data.keyword.iot_short}}](../iot_platform_client_lib.html).
+Para obtener más información y ver enlaces con las bibliotecas de cliente disponibles, consulte [Bibliotecas de cliente para el desarrollo de {{site.data.keyword.iot_short_notm}}](../iot_platform_client_lib.html).

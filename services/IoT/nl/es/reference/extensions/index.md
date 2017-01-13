@@ -2,10 +2,11 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-18"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -13,8 +14,6 @@ copyright:
 
 # Integraciones de servicios externos
 {: #ref-index}
-Última actualización: 26 de septiembre de 2016
-{: .last-updated}
 
 La integración de servicios externos le permite acceder a los datos y operaciones de terceros o servicios externos dentro de la organización de {{site.data.keyword.iot_full}}.
 
@@ -39,6 +38,8 @@ La integración incorporada de Jasper que proporciona nuestra plataforma proporc
 
 Puede acceder a las operaciones soportadas en los detalles de dispositivo de un dispositivo conectado a Jasper una vez que finalicen los siguientes pasos de configuración.
 
+### API REST para Jasper
+Para acceder a la API REST para Jasper, consulte la sección sobre la extensión Jasper de la documentación de [API REST HTTP de {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension). 
 
 ### Configuración para Jasper
 
@@ -89,6 +90,9 @@ La ampliación de AT&T permite realizar las siguientes operaciones de AT&T:
 - Enviar SMS a SIM
 - Cambiar el plan de tarifas
 
+### API REST para AT&T
+Para acceder a la API REST para AT&T, consulte la sección sobre la extensión AT&de la [documentación de API REST HTTP de {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension). 
+
 ### Configuración para AT&T
 
 Para conectar la organización de {{site.data.keyword.iot_short_notm}} a AT&T, debe completar la configuración de la organización y la configuración del dispositivo.
@@ -124,7 +128,6 @@ Para configurar los dispositivos conectados a AT&T, lleve a cabo los pasos sigui
 ```
 
 Cuando la organización se ha configurado correctamente, se muestra la sección *Ampliaciones* debajo de la sección *Configuración de ampliaciones* de la vista *Detalle de dispositivo*.
-
 
 ## Conector ARM mbed
 {: #arm}
@@ -219,9 +222,10 @@ Si tiene un dispositivo que está conectado a su servicio de {{site.data.keyword
 - Última renovación de estado
 - Estado de la ubicación
 
+### API REST para Orange
+Para acceder a la API REST para Orange, consulte la sección sobre la extensión Orange en la [documentación de API REST HTTP de {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension).
+
 ### Configuración para Orange
-
-
 
 Para habilitar la extensión de Orange:
 
@@ -284,6 +288,10 @@ La aprobación de servicio normalmente tarda, aproximadamente, un día. Una vez 
 La extensión Weather Company combina información meteorológica con los dispositivos existentes de {{site.data.keyword.iot_short_notm}}. La información meteorológica de The Weather Company aparece en la vista de detalles del dispositivo si se ha realizado una solicitud Update Location mediante la API, o si el dispositivo ya ha establecido su ubicación mediante un mensaje de gestión de dispositivos.
 
 **Nota:** Sólo los dispositivos gestionados pueden definir sus propias ubicaciones. Todos los dispositivos no gestionados deben tener sus ubicaciones establecidas manualmente mediante la API. Para obtener más información sobre cómo configurar una ubicación de dispositivo, consulte [Solicitudes Update Location](../../devices/device_mgmt/index.html#update-location).
+
+### API REST para The Weather Company
+Para acceder a la API REST para The Weather Company, consulte la sección sobre
+Device Location Weather en la [documentación de API REST HTTP de {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather).
 
 ### Datos meteorológicos
 

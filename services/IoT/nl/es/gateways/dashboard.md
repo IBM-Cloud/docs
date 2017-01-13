@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-27"
 
 ---
 
@@ -14,7 +15,6 @@ copyright:
 
 # Conexión de pasarelas
 {: #IoT_connectGateway}
-Última actualización: 28 de julio de 2016
 
 Antes de empezar a recibir datos de dispositivos conectados a las pasarelas, debe conectar la pasarela a {{site.data.keyword.iot_full}}. La conexión de una pasarela a {{site.data.keyword.iot_short_notm}} implica crear un tipo de dispositivo de pasarela y registrar la pasarela con {{site.data.keyword.iot_short_notm}}. A continuación, puede utilizar la información de registro para conectar la pasarela a {{site.data.keyword.iot_short_notm}}.
 {:shortdesc}
@@ -26,7 +26,7 @@ Las pasarelas son una clase especializada de dispositivos de {{site.data.keyword
 {: #Prerequisites}
 
 Los dispositivos de pasarela tienen permisos adicionales cuando se comparan con dispositivos normales y pueden realizar las funciones siguientes:
-- Registrar nuevos dispositivos en Watson IoT Platform
+- Registrar nuevos dispositivos en {{site.data.keyword.iot_short_notm}}
 - Enviar y recibir datos de su propio sensor como un dispositivo conectado directamente,
 - Enviar y recibir datos en nombre de los dispositivos
 - Ejecutar un agente de gestión de dispositivos, para que se pueda gestionar, y también gestionar los dispositivos conectados.  
@@ -48,13 +48,27 @@ Para añadir una pasarela desde el panel de instrumentos de {{site.data.keyword.
 3. Seleccione o cree un tipo de dispositivo para el dispositivo que está añadiendo.  
 Cada dispositivo conectado al {{site.data.keyword.iot_short_notm}} debe estar asociado con un tipo de dispositivo. Los tipos de dispositivos son grupos de dispositivos que comparten características comunes.  
  1. Pulse **Crear tipo de dispositivo** y, a continuación, **Crear tipo de pasarela**.
- 2. Especifique un nombre como, por ejemplo, `my_gateway_type` y una descripción para el tipo de pasarela.
- 3. Opcional: Especifique los metadatos y los atributos de tipo de pasarela.    
+ 2. Especifique un nombre de tipo de dispositivo como, por ejemplo, `my_gateway_type` y una descripción para el tipo de pasarela.**Importante:** el nombre del tipo de dispositivo no debe tener más de 36 caracteres y sólo puede contener:
+ <ul>
+  <li>Caracteres alfanuméricos (a-z, A-Z, 0-9)</li>
+  <li>Guiones (-)</li>
+  <li>Signos de subrayado (&lowbar;)</li>
+  <li>Puntos (.)</li>
+  </ul>3. Opcional: Especifique los metadatos y los atributos de tipo de pasarela.
+     
  **Consejo:** Puede añadir y editar atributos y metadatos más tarde.
  4. Pulse **Crear** para añadir el nuevo tipo de pasarela.
 10. Pulse **Siguiente** para comenzar el proceso de adición del dispositivo de pasarela con el tipo de pasarela seleccionado.
-11. Especifique un ID de dispositivo, como por ejemplo `my_gateway_device`.  
-El ID de dispositivo se utiliza para identificar el dispositivo de pasarela en el panel de instrumentos de {{site.data.keyword.iot_short_notm}} y también es un parámetro obligatorio para conectar el dispositivo de pasarela a {{site.data.keyword.iot_short_notm}}.
+11. Especifique un ID de dispositivo como por ejemplo `my_gateway_device`.El ID de dispositivo se utiliza para identificar el dispositivo de pasarela en el panel de instrumentos de {{site.data.keyword.iot_short_notm}} y también es un parámetro obligatorio para conectar el dispositivo de pasarela a {{site.data.keyword.iot_short_notm}}.  
+**Importante:** el ID de dispositivo no debe tener más de 36 caracteres y sólo puede contener:
+ <ul>
+ <li>Caracteres alfanuméricos (a-z, A-Z, 0-9)</li>
+ <li>Guiones (-).</li>
+ <li>Signos de subrayado (&lowbar;)</li>
+ <li>Puntos (.)</li>  
+ </ul>
+ **Consejo:** para los dispositivos conectados a la red, el ID de dispositivo podría ser, por ejemplo, la dirección MAC del dispositivo sin dos puntos de separación.
+  
 12. Opcional: Pulse **Campos adicionales** para añadir información de dispositivo de pasarela, como por ejemplo el número de serie, el fabricante, el modelo, etc.  
  **Consejo:** Puede añadir y editar esta información más tarde.
 12. Opcional: Especifique los metadatos JSON de dispositivo.  
@@ -80,7 +94,7 @@ Después de registrar una pasarela con {{site.data.keyword.iot_short_notm}}, uti
 Para obtener información sobre la conexión de la pasarela a {{site.data.keyword.iot_short_notm}}, consulte [Conectividad de MQTT para pasarelas](mqtt.html).
 
 **Consejo:** Hay un rango de recetas disponibles para conectar dispositivos a {{site.data.keyword.iot_short_notm}}. Para obtener una lista de recetas, consulte las
-[Recetas de conexión de dispositivos](https://developer.ibm.com/recipes/?post_type=tutorials&s=IoT) disponibles en IBM.com.
+[Recetas de conexión de dispositivos](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/) disponibles en IBM.com.
 
 
 ## Paso 3: Conexión de dispositivos a través de la pasarela
@@ -117,7 +131,9 @@ Para instalar EAA en la pasarela:
 Puede utilizar el archivo config.properties de EAA para establecer parámetros de configuración de software básicos.
 
 Para actualizar la configuración de EAA:
-1. En el sistema de pasarela en el que se está ejecutando el EAA, localice el archivo config.properties de EAA.
+1. En el sistema de pasarela en el que se está ejecutando el EAA, localice el archivo config.properties de EAA.  
+Por ejemplo:
+`../dglux-server/dslinks/ibm-watson-iot-edge-analytics-dslink-java-0.0.1/config.properties`
 2. Antes de empezar a editar los valores, realice una copia de seguridad del archivo.
 3. Abra el archivo config.properties para su edición.
 4. Edite los parámetros de configuración para su entorno:

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2015, 2016
+lastupdated: "2016-10-11"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # API REST HTTP para dispositivos
 {: #api}
-Última actualización: 11 de octubre de 2016
-{: .last-updated}
 
 **Importante:** La API REST HTTP de {{site.data.keyword.iot_full}} para la característica de dispositivos sólo está disponible como parte de un programa beta limitado. Las actualizaciones futuras pueden incluir cambios que no son compatibles con la versión actual de esta característica. Pruébela y [denos su opinión](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html).
 
@@ -65,6 +64,7 @@ Todas las solicitudes deben incluir una cabecera de autorización. La autenticac
 |:---|:---|
 |Nombre de usuario|`use-token-auth`
 |Contraseña| La señal de autenticación que se ha generado automáticamente o que se ha especificado manualmente al registrar el dispositivo.
+
 
 ### Cabeceras de solicitud Content-Type
 

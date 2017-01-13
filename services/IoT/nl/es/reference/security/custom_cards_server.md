@@ -29,7 +29,7 @@ Debe tener derechos de administrador de {{site.data.keyword.iot_short_notm}} par
 {: #server_requirements}
 
 {{site.data.keyword.iot_short_notm}} establece los siguientes requisitos:
-- El directorio que sirve el contenido de tarjetas personalizadas en el servidor no debe requerir credenciales para acceder.
+- El directorio que sirve el contenido de tarjetas personalizadas en el servidor no debe requerir credenciales para acceder.  
 No se proporciona autenticación para el servidor de tarjetas personalizadas cuando se conecta para acceder y cargar tarjetas personalizadas.
 - El servidor debe utilizar el protocolo HTTP Secure (HTTPS).
 - El servidor debe soportar conexiones CORS (Cross-Origin Resource Sharing).  
@@ -38,7 +38,7 @@ Para proteger el código de tarjetas personalizadas y el propio servidor de tarj
 
 El proceso de tarjetas personalizadas se encuentra siempre entre el navegador de un usuario y el servidor de tarjetas personalizadas. El programa de fondo de {{site.data.keyword.iot_short_notm}} nunca está implicado en el proceso o en el ajuste del código y de la información de tarjetas personalizadas.
 
-No hay restricciones colocadas en el código JavaScript que pueda elegir para desplegar en las tarjetas del servidor de tarjetas personalizado. El código Javascript en las tarjetas personalizadas tiene acceso a toda la información guardada en el navegador, como cualquier otra tarjeta que se ejecute en el panel de control. Asegúrese de que el servidor de tarjetas personalizadas correcto facilite el código al navegador para mostrar y procesar las tarjetas personalizadas.
+No hay restricciones colocadas en el código JavaScript que pueda elegir para desplegar en las tarjetas del servidor de tarjetas personalizado. El código Javascript en las tarjetas personalizadas tiene acceso a toda la información guardada en el navegador, como cualquier otra tarjeta que se ejecute en el panel de control.  Asegúrese de que el servidor de tarjetas personalizadas correcto facilite el código al navegador para mostrar y procesar las tarjetas personalizadas.
 
 Las tarjetas ejecutan su código en la sesión del navegador {{site.data.keyword.iot_short_notm}} exactamente como se ha escrito. Además, se crea la conexión del servidor de tarjetas personalizadas sin credenciales proporcionadas al servidor de tarjetas personalizado. Un navegador de usuarios puede conectarse a cualquier servidor de tarjetas personalizadas configurado.
 

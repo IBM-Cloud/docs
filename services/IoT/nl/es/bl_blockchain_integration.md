@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-30"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 
 # Integración de blockchain de {{site.data.keyword.iot_short_notm}}
 {: #gettingstartedtemplate}
-Última actualización: 30 de agosto de 2016
-{: .last-updated}
 
 La integración de blockchain de {{site.data.keyword.iot_short_notm}} permite a los dispositivos IoT proporcionar datos a transacciones de blockchain, que almacena los datos en el libro mayor inmutable de blockchain y lo utiliza en las reglas empresariales que se implementan en los contratos inteligentes de blockchain.
 {:shortdesc}

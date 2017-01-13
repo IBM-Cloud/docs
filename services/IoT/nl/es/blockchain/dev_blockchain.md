@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-08-30"
 
 ---
 
@@ -13,10 +14,7 @@ copyright:
 
 
 # Desarrollo de contratos inteligentes para la integración de blockchain de {{site.data.keyword.iot_short_notm}}
-
 {: #iotblockchain_link}
-Última actualización: 30 de agosto de 2016
-{: .last-updated}
 
 Utilice {{site.data.keyword.blockchainfull}} y el entorno de desarrollo de Hyperledger para crear y probar sus propios contratos inteligentes que derivan de contratos de ejemplo proporcionados por IBM.
 {:shortdesc}

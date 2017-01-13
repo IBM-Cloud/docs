@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-09-14"
 
 ---
 
@@ -12,8 +13,6 @@ copyright:
 {:pre: .pre}
 
 # Conexión de la aplicación
-Última actualización: 14 de septiembre de 2016
-{: .last-updated}
 
 Para conectar la aplicación a {{site.data.keyword.iot_full}}, debe conectarse utilizando las claves y las señales de la API o enlazando la aplicación directamente a {{site.data.keyword.iot_short_notm}} en {{site.data.keyword.Bluemix_notm}}. Utilice el panel de control de acceso para otorgar acceso.
 {:shortdesc}
