@@ -56,8 +56,6 @@ To get up and running with the {{site.data.keyword.amashort}} service:
    * [Authenticating users with Google credentials](google-auth-overview.html)
    * [Authenticating users with a custom identity provider](custom-auth.html)
 
-## Related Links
-{: #rellinks}
 
 ## Tutorials and Samples
 {: #samples}
