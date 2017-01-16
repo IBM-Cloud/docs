@@ -16,7 +16,7 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="IoT4E_architecture.svg"
-   inkscape:export-filename="C:\Users\IBM_ADMIN\GitHub\IoT\Blockchain-DOCS\iotblockchain_scratch\images\architecture_contracts.png"
+   inkscape:export-filename="C:\Users\IBM_ADMIN\GitHub\IoT\Blockchain-DOCS\iotblockchain_scratch\images\architecture_contracts.svg"
    inkscape:export-xdpi="299.98132"
    inkscape:export-ydpi="299.98132">
   <defs
@@ -1785,13 +1785,13 @@
      inkscape:pageshadow="2"
      inkscape:zoom="1.44"
      inkscape:cx="360.42883"
-     inkscape:cy="253.45878"
+     inkscape:cy="31.236558"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="px"
-     inkscape:window-width="1920"
-     inkscape:window-height="1028"
+     inkscape:window-width="1440"
+     inkscape:window-height="848"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -1951,7 +1951,7 @@
        x="147.10008"
        font-size="13"
        id="text56812"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">IBM® IoT for Electronics Starter</text>
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Module de démarrage IBM® IoT for Electronics</text>
     <flowRoot
        xml:space="preserve"
        id="flowRoot7059"
@@ -2051,13 +2051,17 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        x="291.50089"
-       y="431.56644"
+       y="423.56644"
        id="text44241"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          x="291.50089"
-         y="431.56644"
-         id="tspan6702">Sample mobile app</tspan></text>
+         y="423.56644"
+         id="tspan6702">Application mobile </tspan><tspan
+         sodipodi:role="line"
+         x="291.50089"
+         y="437.31644"
+         id="tspan3819">exemple</tspan></text>
     <g
        id="g6649-4-6"
        transform="matrix(0.49001738,0,0,0.46831598,179.48691,211.85984)">
@@ -2175,11 +2179,11 @@
            id="tspan6702-6"
            y="425.04944"
            x="486.05368"
-           sodipodi:role="line">Mobile Client Access </tspan><tspan
+           sodipodi:role="line">Service</tspan><tspan
            id="tspan4579"
            y="438.79944"
            x="486.05368"
-           sodipodi:role="line">Service</tspan></text>
+           sodipodi:role="line">Mobile Client Access</tspan></text>
     </g>
     <g
        id="g4731-3"
@@ -2197,7 +2201,7 @@
            id="tspan6702-1"
            y="509.96609"
            x="61.470284"
-           sodipodi:role="line">Consumer</tspan></text>
+           sodipodi:role="line">Consommateur</tspan></text>
       <rect
          style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none"
          id="rect79371-1-6-6-9-8-7-3-5-1-4-5"
@@ -2272,7 +2276,7 @@
            style="font-size:11.25000095px"
            sodipodi:role="line"
            x="461.03171"
-           y="3.7135651">IoT device manufacturer</tspan><tspan
+           y="3.7135651">Fabricant d'appareil IoT</tspan><tspan
            id="tspan7318-8-6-0"
            sodipodi:role="line"
            x="461.03171"
@@ -2308,7 +2312,7 @@
          sodipodi:role="line"
          id="tspan7308"
          x="499.67679"
-         y="92.553978"> </tspan></text>
+         y="92.553978" /></text>
     <rect
        ry="0"
        rx="0"
@@ -2328,11 +2332,11 @@
          sodipodi:role="line"
          x="499.79694"
          y="89.618675"
-         id="tspan5792">Watson IoT Platform</tspan><tspan
+         id="tspan5792">Tableau de bord</tspan><tspan
          sodipodi:role="line"
          x="499.79694"
          y="103.36868"
-         id="tspan9810">Dashboard</tspan></text>
+         id="tspan9810">Watson IoT Platform</tspan></text>
     <g
        id="g5722"
        transform="matrix(0.08090742,0,0,0.08307112,454.6233,71.786196)"
@@ -2391,11 +2395,11 @@
          id="tspan44239-7"
          y="216.68509"
          x="509.94742"
-         sodipodi:role="line">Rest &amp; </tspan><tspan
+         sodipodi:role="line">API Rest &amp; </tspan><tspan
          y="230.43509"
          x="509.94742"
          sodipodi:role="line"
-         id="tspan7973">Real-time APIs</tspan><tspan
+         id="tspan7973">en temps réel</tspan><tspan
          y="244.18509"
          x="509.94742"
          sodipodi:role="line"
@@ -2585,11 +2589,11 @@
          id="tspan4579-7-5"
          y="171.24385"
          x="702.77588"
-         sodipodi:role="line">Simulated sample </tspan><tspan
+         sodipodi:role="line">Appareils exemple</tspan><tspan
          y="184.99385"
          x="702.77588"
          sodipodi:role="line"
-         id="tspan4890">devices</tspan></text>
+         id="tspan4890">simulés</tspan></text>
     <g
        transform="matrix(0.88229753,0,0,0.8706004,649.54495,164.80866)"
        id="g3-96">
@@ -2681,27 +2685,31 @@
     <rect
        ry="0"
        rx="0"
-       y="310.91327"
+       y="300.49661"
        x="296.58774"
-       height="32.638905"
+       height="43.055573"
        width="109.37553"
        id="rect79371-1-6-6-9-8-7-3-5-2-2-9-1-9-6-3-1"
        style="fill:#c2edfb;fill-opacity:1;fill-rule:evenodd;stroke:none" />
     <text
        sodipodi:linespacing="125%"
        id="text44241-1-5-9-1"
-       y="324.47162"
+       y="312.47162"
        x="300.1373"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
        xml:space="preserve"><tspan
-         y="324.47162"
+         y="312.47162"
          x="300.1373"
          sodipodi:role="line"
-         id="tspan4890-1">IoT for Electronics</tspan><tspan
-         y="338.22162"
+         id="tspan4890-1">Application de </tspan><tspan
+         y="326.22162"
          x="300.1373"
          sodipodi:role="line"
-         id="tspan7488">Starter app</tspan></text>
+         id="tspan3821">démarrage</tspan><tspan
+         y="339.97162"
+         x="300.1373"
+         sodipodi:role="line"
+         id="tspan7488">IoT for Electronics</tspan></text>
     <g
        transform="matrix(0.88229753,0,0,0.8706004,246.21183,317.84197)"
        id="g3-96-0">
@@ -2745,61 +2753,58 @@
        width="166.00305"
        id="rect79371-1-6-6-9-8-7-3-5-1-8-2-9"
        style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" />
-    <g
-       id="g5515"
-       transform="translate(7.888884,2.3611072)">
-      <rect
-         style="fill:#c2edfb;fill-opacity:1;fill-rule:evenodd;stroke:none"
-         id="rect79371-1-6-6-9-8-7-3-5-2-2-9-1"
-         width="152.43105"
-         height="32.638893"
-         x="246.28754"
-         y="113.80494"
-         rx="0"
-         ry="0" />
-      <text
-         sodipodi:linespacing="125%"
-         id="text18189-5-9-6"
-         y="125.51817"
-         x="261.233"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-         xml:space="preserve"><tspan
-           style="font-size:11.25000095px"
-           id="tspan4945-3"
-           y="125.51817"
-           x="261.233"
-           sodipodi:role="line">Consumer electronics</tspan><tspan
-           style="font-size:11.25000095px"
-           id="tspan5228"
-           y="139.58067"
-           x="261.233"
-           sodipodi:role="line">registration service</tspan></text>
-    </g>
-    <g
-       id="g5499"
-       transform="translate(9.972218,-76.694453)">
-      <rect
-         style="fill:#c2edfb;fill-opacity:1;fill-rule:evenodd;stroke:none"
-         id="rect79371-1-6-6-9-8-7-3-5-2-2-9-1-9-6-4"
-         width="152.43109"
-         height="32.638905"
-         x="244.20416"
-         y="236.54108"
-         rx="0"
-         ry="0" />
-      <text
-         sodipodi:linespacing="125%"
-         id="text18189-5-9-6-7-8-7"
-         y="257.88394"
-         x="260.74411"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-         xml:space="preserve"><tspan
-           style="font-size:11.25000095px"
-           id="tspan5558"
-           y="257.88394"
-           x="260.74411"
-           sodipodi:role="line">IoT consumer access</tspan></text>
-    </g>
+    <rect
+       ry="0"
+       rx="0"
+       y="111.99939"
+       x="254.17642"
+       height="42.361118"
+       width="152.43105"
+       id="rect79371-1-6-6-9-8-7-3-5-2-2-9-1"
+       style="fill:#c2edfb;fill-opacity:1;fill-rule:evenodd;stroke:none" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       x="269.12189"
+       y="121.87928"
+       id="text18189-5-9-6"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="269.12189"
+         y="121.87928"
+         id="tspan4945-3"
+         style="font-size:11.25000095px">Service d'enregistrement</tspan><tspan
+         sodipodi:role="line"
+         x="269.12189"
+         y="135.94179"
+         id="tspan5228"
+         style="font-size:11.25000095px">d'appareils électroniques </tspan><tspan
+         sodipodi:role="line"
+         x="269.12189"
+         y="150.00429"
+         style="font-size:11.25000095px"
+         id="tspan3830">grand public</tspan></text>
+    <rect
+       ry="0"
+       rx="0"
+       y="159.84662"
+       x="254.17638"
+       height="32.638905"
+       width="152.43109"
+       id="rect79371-1-6-6-9-8-7-3-5-2-2-9-1-9-6-4"
+       style="fill:#c2edfb;fill-opacity:1;fill-rule:evenodd;stroke:none" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       x="268.71634"
+       y="181.18948"
+       id="text18189-5-9-6-7-8-7"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="268.71634"
+         y="181.18948"
+         id="tspan5558"
+         style="font-size:11.25000095px">Accès consommateur IoT</tspan></text>
     <g
        id="g4161"
        transform="translate(234.50303,105.03828)">
@@ -2869,12 +2874,12 @@
          x="298.36966"
          y="90.261307"
          id="tspan5228-6"
-         style="font-weight:bold;font-size:11.25000095px">IoT for Electronics</tspan><tspan
+         style="font-weight:bold;font-size:11.25000095px">Service</tspan><tspan
          sodipodi:role="line"
          x="298.36966"
          y="104.32381"
          id="tspan7485"
-         style="font-weight:bold;font-size:11.25000095px">Service</tspan></text>
+         style="font-weight:bold;font-size:11.25000095px">IoT for Electronics</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text44235-7-4"
@@ -2885,7 +2890,7 @@
          y="226.88509"
          x="301.00787"
          sodipodi:role="line"
-         id="tspan7973-9">Rest  APIs</tspan><tspan
+         id="tspan7973-9">API Rest</tspan><tspan
          y="240.63509"
          x="301.00787"
          sodipodi:role="line"

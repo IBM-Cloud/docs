@@ -25,7 +25,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -40,8 +40,8 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1920"
-     inkscape:window-height="1028"
+     inkscape:window-width="1440"
+     inkscape:window-height="848"
      id="namedview4926"
      showgrid="false"
      inkscape:zoom="1.8404536"
@@ -71,14 +71,7 @@
      y="24.937744"
      x="66.306923"
      id="image4958"
-     xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAigAAABNCAIAAAADyQgSAAAAA3NCSVQICAjb4U/gAAABNElEQVR4
-nO3VMQEAIAzAMMC/5+GiHCQK+nXPzAKAynkdAMBfjAeAlPEAkDIeAFLGA0DKeABIGQ8AKeMBIGU8
-AKSMB4CU8QCQMh4AUsYDQMp4AEgZDwAp4wEgZTwApIwHgJTxAJAyHgBSxgNAyngASBkPACnjASBl
-PACkjAeAlPEAkDIeAFLGA0DKeABIGQ8AKeMBIGU8AKSMB4CU8QCQMh4AUsYDQMp4AEgZDwAp4wEg
-ZTwApIwHgJTxAJAyHgBSxgNAyngASBkPACnjASBlPACkjAeAlPEAkDIeAFLGA0DKeABIGQ8AKeMB
-IGU8AKSMB4CU8QCQMh4AUsYDQMp4AEgZDwAp4wEgZTwApIwHgJTxAJAyHgBSxgNAyngASBkPACnj
-ASBlPACkjAeAlPEAkDIeAFIXjMQDl+k1k1oAAAAASUVORK5CYII=
-"
+     xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAigAAABNCAIAAAADyQgSAAAAA3NCSVQICAjb4U/gAAABNElEQVR4 nO3VMQEAIAzAMMC/5+GiHCQK+nXPzAKAynkdAMBfjAeAlPEAkDIeAFLGA0DKeABIGQ8AKeMBIGU8 AKSMB4CU8QCQMh4AUsYDQMp4AEgZDwAp4wEgZTwApIwHgJTxAJAyHgBSxgNAyngASBkPACnjASBl PACkjAeAlPEAkDIeAFLGA0DKeABIGQ8AKeMBIGU8AKSMB4CU8QCQMh4AUsYDQMp4AEgZDwAp4wEg ZTwApIwHgJTxAJAyHgBSxgNAyngASBkPACnjASBlPACkjAeAlPEAkDIeAFLGA0DKeABIGQ8AKeMB IGU8AKSMB4CU8QCQMh4AUsYDQMp4AEgZDwAp4wEgZTwApIwHgJTxAJAyHgBSxgNAyngASBkPACnj ASBlPACkjAeAlPEAkDIeAFIXjMQDl+k1k1oAAAAASUVORK5CYII= "
      style="image-rendering:optimizeQuality"
      preserveAspectRatio="none"
      height="37.879208"
@@ -108,7 +101,7 @@ ASBlPACkjAeAlPEAkDIeAFIXjMQDl+k1k1oAAAAASUVORK5CYII=
        x="244.68317"
        y="49.830318"
        id="tspan6489-0"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:15px;font-family:Arial;-inkscape-font-specification:'Arial Bold'">接着，选择或添加新的模拟洗衣机</tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:15px;font-family:Arial;-inkscape-font-specification:'Arial Bold'">Ensuite, choisissez ou ajoutez un nouveau lave-linge simulé</tspan></text>
   <image
      y="74.38208"
      x="166.28227"
@@ -125,42 +118,41 @@ ASBlPACkjAeAlPEAkDIeAFIXjMQDl+k1k1oAAAAASUVORK5CYII=
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="244.59663"
+       x="234.59663"
        y="82.690964"
        id="text4614"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="244.59663"
+         x="234.59663"
          y="82.690964"
          id="tspan6489"
-         style="font-size:10px">最多可以添加五台洗衣机</tspan></text>
-    <g
-       id="g5900"
-       transform="translate(0,-18)">
-      <text
-         sodipodi:linespacing="125%"
-         id="text4614-7-1"
-         y="186.14461"
+         style="font-size:10px">Vous pouvez ajouter jusqu'à cinq lave-linge</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="81.828247"
+       y="168.14461"
+       id="text4614-7-1"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
          x="81.828247"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.25px;font-family:Arial;-inkscape-font-specification:'Arial Bold'"
-           id="tspan6489-0-2"
-           y="186.14461"
-           x="83.388306"
-           sodipodi:role="line">您的洗衣机</tspan></text>
-      <text
-         sodipodi:linespacing="125%"
-         id="text4614-5"
-         y="186.5809"
-         x="271.26059"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           style="font-size:9.375px"
-           id="tspan6489-8"
-           y="186.5809"
-           x="271.26059"
-           sodipodi:role="line">选择要控制其模拟数据的洗衣机。此时将打开新窗口。</tspan></text>
-    </g>
+         y="168.14461"
+         id="tspan6489-0-2"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.25px;font-family:Arial;-inkscape-font-specification:'Arial Bold'">Vos lave-linge</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="123.26059"
+       y="168.5809"
+       id="text4614-5"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3352"
+         x="123.26059"
+         y="168.5809">Sélectionnez un lave-linge pour contrôler ses données simulées. </tspan><tspan
+         sodipodi:role="line"
+         id="tspan3354"
+         x="123.26059"
+         y="184.2059">Une nouvelle fenêtre s'ouvre.</tspan></text>
   </g>
 </svg>

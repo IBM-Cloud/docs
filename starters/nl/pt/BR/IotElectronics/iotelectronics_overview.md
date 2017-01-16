@@ -2,16 +2,14 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-11-29"
 ---
 
 {:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 
-# Sobre {{site.data.keyword.iotelectronics}}
+# Sobre o {{site.data.keyword.iotelectronics}}
 {: #iotelectronics_about}
-*Última atualização: 19 de setembro de 2016*
-{: .last-updated}
 
 {{site.data.keyword.iotelectronics_full}} é uma instância de produção IoT totalmente integrada que permite que os aplicativos
 se comuniquem e consumam dados coletados por seus dispositivos, sensores e gateways conectados.
@@ -33,11 +31,11 @@ Explore rapidamente os recursos da solução {{site.data.keyword.iotelectronics}
 
 ### Conectar dispositivos simulados
 Crie dispositivos simulados e conecte-os à plataforma para ver os dados em transmissão em tempo real. Use um aplicativo baseado na web para
-simular como um dispositivo recebe comandos e executa operações. Simule falhas para gerar avisos e alertas. Para fins de demonstração, as arruelas são usadas como o dispositivo simulado dentro do iniciador do
-{{site.data.keyword.iotelectronics}}. O dispositivo que você optar por conectar poderia ser qualquer tipo de dispositivo eletrônico inteligente.  
+simular como um dispositivo recebe comandos e executa operações. Simule falhas para gerar avisos e alertas. Para fins de demonstração, as arruelas são usadas como o dispositivo simulado dentro do iniciador do {{site.data.keyword.iotelectronics}}. O dispositivo
+que você optar por conectar poderia ser qualquer tipo de dispositivo eletrônico inteligente.  
 
 ### Tentar um aplicativo móvel do consumidor de amostra
-Use um telefone iOS para ver como um proprietário de dispositivo pode interagir com o dispositivo. Envie comandos para o dispositivo e
+Use seu dispositivo móvel iOS ou Android para ver como um proprietário de dispositivo pode interagir com o dispositivo. Envie comandos para o dispositivo e
 receba atualizações do dispositivo usando a plataforma e {{site.data.keyword.Bluemix_notm}}. Simule eventos de falha e visualize os
 resultados no aplicativo móvel.
 
@@ -72,19 +70,19 @@ sociais existentes e assegura que as comunicações com os sistemas backend seja
 **{{site.data.keyword.sdk4nodefull}}** permite desenvolver, implementar e ajustar a escala de aplicativos
 JavaScript&reg; do lado do servidor e fornece desempenho, segurança e capacidade de manutenção aprimorados.
 
-O **aplicativo móvel de amostra** permite que você visualize o status e se comunique com um dispositivo simulado usando seu telefone do iOS. Descubra como conseguir o aplicativo móvel em
+O **App móvel de amostra** permite visualizar o status e se comunicar com um dispositivo simulado usando seu dispositivo móvel, como um telefone inteligente ou tablet. Descubra como conseguir o aplicativo móvel em
 [Usando o aplicativo móvel](iotelectronics_config_mobile.html).
 
 # Links Relacionados
 {: #rellinks}
-## afetados
+## Componentes
 {: #general}
-* [ Documentação do {{site.data.keyword.iot_short}}](https://new-console.ng.bluemix.net/docs/services/IoT/index.html#gettingstartedtemplate)
-* [Documentação do {{site.data.keyword.amafull}}](https://new-console.ng.bluemix.net/docs/services/mobileaccess/index.html)
-* [Documentação do {{site.data.keyword.sdk4nodefull}}](https://new-console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime)
+* [{{site.data.keyword.iot_short}} documentação](https://console.ng.bluemix.net/docs/services/IoT/index.html#gettingstartedtemplate)
+* [{{site.data.keyword.amafull}} documentação](https://console.ng.bluemix.net/docs/services/mobileaccess/index.html)
+* [{{site.data.keyword.sdk4nodefull}} documentação](https://console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime)
 
 
-## documentação da API
+## Documentação da API
 {: #api}
 *  [API do {{site.data.keyword.iotelectronics}}](http://ibmiotforelectronics.mybluemix.net/public/iot4eregistrationapi.html)  
 *  [API do {{site.data.keyword.iot_short}}](https://developer.ibm.com/iotfoundation/recipes/api-documentation/)

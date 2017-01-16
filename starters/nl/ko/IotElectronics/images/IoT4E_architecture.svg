@@ -16,7 +16,7 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="IoT4E_architecture.svg"
-   inkscape:export-filename="C:\Users\IBM_ADMIN\GitHub\IoT\Blockchain-DOCS\iotblockchain_scratch\images\architecture_contracts.png"
+   inkscape:export-filename="C:\Users\IBM_ADMIN\GitHub\IoT\Blockchain-DOCS\iotblockchain_scratch\images\architecture_contracts.svg"
    inkscape:export-xdpi="299.98132"
    inkscape:export-ydpi="299.98132">
   <defs
@@ -1951,7 +1951,7 @@
        x="147.10008"
        font-size="13"
        id="text56812"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">IBM® IoT for Electronics 스타터</text>
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">IBM® IoT for Electronics Starter</text>
     <flowRoot
        xml:space="preserve"
        id="flowRoot7059"
@@ -2175,7 +2175,7 @@
            id="tspan6702-6"
            y="425.04944"
            x="486.05368"
-           sodipodi:role="line">모바일 클라이언트 액세스</tspan><tspan
+           sodipodi:role="line">Mobile Client Access </tspan><tspan
            id="tspan4579"
            y="438.79944"
            x="486.05368"
@@ -2768,7 +2768,7 @@
            id="tspan4945-3"
            y="125.51817"
            x="261.233"
-           sodipodi:role="line">이용자 가전</tspan><tspan
+           sodipodi:role="line">가전제품</tspan><tspan
            style="font-size:11.25000095px"
            id="tspan5228"
            y="139.58067"
