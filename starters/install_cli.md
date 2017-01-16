@@ -9,7 +9,6 @@ copyright:
 lastupdated: "2017-01-12"
 
 
-
 ---
 
 {:new_window: target="_blank"}
@@ -29,48 +28,50 @@ lastupdated: "2017-01-12"
 {:service_instance_name: data-hd-keyref="service_instance_name"}
 {:user_ID: data-hd-keyref="user_ID"}
 
-# Deploying your app with the command line interface
+# Download, modify, and redeploy your Cloud Foundry app with the command line interface
 
-You can use the command line interface to deploy and modify applications and service instances.
+Use the Cloud Foundry command line interface to download, modify, and redeploy your Cloud Foundry applications and service instances.
 {:shortdesc}
 
-Before you begin, install the {{site.data.keyword.Bluemix}} and Cloud Foundry command line interfaces.
+Before you begin, download and install the Cloud Foundry command line interface. 
 
 <p>
-<a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/btn_bx_commandline.svg" alt="Download {{site.data.keyword.Bluemix}} command line interface" /> </a>  <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/btn_cf_commandline.svg" alt="Download Cloud Foundry command line interface" /> </a>
+<a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/btn_cf_commandline.svg" alt="Download Cloud Foundry command line interface" /> </a>
 </p>
 
-**Restriction:** The command line tools are not supported by Cygwin. Use the tools in a command line window other than the Cygwin command line window.
+**Restriction:** The command line tool is not supported by Cygwin. Use the tool in a command line window other than the Cygwin command line window.
 {:prereq}
 
-After the command line interfaces are installed, you can get started:
+After you install the command line interface, you can get started:
 
-  1. {: download} Download your starter code, and extract the package to a new directory to set up your development environment.
-
-    <a class="xref" href="http://bluemix.net" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/btn_starter-code.svg" alt="Download starter code" /> </a>
+  1. {: download} Download the code for your app to a new directory to set up your development environment.
+  
+    <a class="xref" href="http://bluemix.net" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/btn_starter-code.svg" alt="Download application code" /> </a>
 
   2. Change to the directory where your code is located.
 
   <pre class="pre">cd <var class="keyword varname">your_new_directory</var></pre>
 
-  3.  Make changes to your app code as you see fit. We suggest making sure the app runs locally before you deploy it back to {{site.data.keyword.Bluemix}}.<br><br>One file you should take note of is the `manifest.yml` file. When deploying your app back to {{site.data.keyword.Bluemix}}, this file is used to determine your application’s URL, memory allocation, number of instances, and other crucial parameters. You can [read more about the manifest file](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){: new_window} in the Cloud Foundry documentation.
+  3.  Make changes to your app code as you see fit. For example, if you are using a {{site.data.keyword.Bluemix}} sample application and your app contains the `src/main/webapp/index.html` file, you can modify it and edit "Thanks for creating ..." to say something new. Ensure the app runs locally before you deploy it back to {{site.data.keyword.Bluemix_notm}}.
 
-  4. Connect to {{site.data.keyword.Bluemix}}.
+    Take note of the `manifest.yml` file. When deploying your app back to {{site.data.keyword.Bluemix_notm}}, this file is used to determine your application’s URL, memory allocation, number of instances, and other crucial parameters. You can [read more about the manifest file ![External link icon](../icons/launch-glyph.svg "External link icon")](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){: new_window} in the Cloud Foundry documentation.
 
-  <pre class="pre">bluemix api https://api.<span class="keyword" data-hd-keyref="DomainName">DomainName</span></pre>
+    Also pay attention to the `README.md` file, which contains details such as build instructions if applicable.
 
-  5. Log in to {{site.data.keyword.Bluemix_notm}}.
+    Note: If your application is a Liberty app, you must build it before redeploying.
 
-  <pre class="pre">bluemix login -u <var class="keyword varname" data-hd-keyref="user_ID">username</var> -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var></pre>
+  4. Connect and log in to {{site.data.keyword.Bluemix_notm}}.
 
-  If you are using a federated ID, use the -sso option.
+  <pre class="pre">cf api https://api.<span class="keyword" data-hd-keyref="DomainName">DomainName</span></pre>
 
-  <pre class="pre">bluemix login -u <var class="keyword varname" data-hd-keyref="user_ID">username</var> -o "<var class="keyword varname" data-hd-keyref="org_name">org_name</var>" -s "<var class="keyword varname" data-hd-keyref="space_name">space_name</var>" -sso</pre>
+  <pre class="pre">cf login -u <var class="keyword varname" data-hd-keyref="user_ID">username</var> -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var></pre>
 
-  6. Deploy your app to {{site.data.keyword.Bluemix_notm}}. For more information about the cf push command, see [Uploading your application](/docs/starters/upload_app.html).
+  If you are using a federated ID, use the `-sso` option.
 
-  <pre class="pre">cf push "<var class="keyword varname" data-hd-keyref="app_name">app_name</var>"</pre>
+  <pre class="pre">cf login -u <var class="keyword varname" data-hd-keyref="user_ID">username</var> -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var> -sso</pre>
 
-  7. Access your app by entering the following URL into your browser:
+  5. From <var class="keyword varname">your_new_directory</var>, redeploy your app to {{site.data.keyword.Bluemix_notm}} by using the `cf push` command. For more information about the `cf push` command, see [Uploading your application](/docs/starters/upload_app.html).
 
-  <pre class="codeblock"><code><var class="keyword varname" data-hd-keyref="host">host</var>.<span class="keyword" data-hd-keyref="APPDomain">AppDomainName</span></code></pre>
+  <pre class="pre">cf push <var class="keyword varname" data-hd-keyref="app_name">app_name</var></pre>
+
+  6. Access your app by browsing to https://<var class="keyword varname" data-hd-keyref="app_name">app_name</var>.<span class="keyword" data-hd-keyref="APPDomain">AppDomainName</span>.
