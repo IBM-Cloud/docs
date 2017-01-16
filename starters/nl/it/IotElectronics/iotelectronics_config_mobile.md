@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  anni: 2016
+  years: 2016
+lastupdated: "2016-11-29"
 
 ---
 
@@ -14,59 +15,53 @@ copyright:
 
 # Utilizzo dell'applicazione mobile
 {: #iot4e_using_mobile}
-*Ultimo aggiornamento: 19 settembre 2016*
-{: .last-updated}
 
-Introduzione all'applicazione mobile {{site.data.keyword.iotelectronics_full}} per vedere come ricevere avvisi, inviare comandi e controllare lo stato delle tue applicazioni collegate.
+Introduzione all'applicazione mobile {{site.data.keyword.iotelectronics_full}} per vedere come ricevere avvisi, inviare comandi e controllare lo stato delle tue applicazioni collegate utilizzando il tuo dispositivo mobile, come uno smartphone o un tablet.
 {:shortdesc}
 
-## Prima di iniziare
-
 Prima di poter utilizzare l'applicazione mobile, devi completare le seguenti attività:
-  - Distribuisci un'istanza dello starter {{site.data.keyword.iotelectronics}} nella tua organizzazione {{site.data.keyword.Bluemix_notm}}. La distribuzione di un'istanza dello starter distribuisce automaticamente le applicazioni e i servizi componenti dello starter.
-  - [Abilita le comunicazioni e la sicurezza mobile](iotelectronics_config_mca.html) configurando {{site.data.keyword.amafull}}.
+  - Distribuire un'istanza dello starter di {{site.data.keyword.iotelectronics}} nella tua organizzazione {{site.data.keyword.Bluemix_notm}}. La distribuzione di un'istanza dello starter in automatico distribuisce le applicazioni del componente dello starter.
+  - [Abilitare la sicurezza e le comunicazioni mobili](iotelectronics_config_mca.html) configurando {{site.data.keyword.amafull}}.
 
-## Introduzione all'applicazione mobile
-Per iniziare a utilizzare l'applicazione mobile, completa le seguenti attività:
-1. [Scarica l'applicazione mobile](#iot4e_downloadmobile) nel tuo dispositivo mobile.
-2. [Connetti l'applicazione mobile all'ambiente {{site.data.keyword.iotelectronics}}](#iot4e_connecting_mobile) e registra le tue applicazioni.
-
-
- ### Scaricamento dell'applicazione mobile
- {: #iot4e_downloadmobile}
- Per ottenere l'applicazione mobile, scaricala e installala sul tuo telefono dall'Apple App store.  Sul tuo telefono, apri l'App store e cerca "ibm iot". Scegli **IBM IoT for Electronics** e installa.
-
- In alternativa, puoi installarla nel tuo telefono utilizzando [iTunes](https://itunes.apple.com/us/app/ibm-iot-for-electronics/id1103404928?ls=1&mt=8).
+Per un introduzione all'applicazione mobile, completa le seguenti attività:
+1. [Scarica l'applicazione mobile](#iot4e_downloadmobile) sul tuo dispositivo mobile.
+2. [Collega l'applicazione mobile all'ambiente {{site.data.keyword.iotelectronics}}](#iot4e_connecting_mobile) e registra i tuoi elettrodomestici.
 
 
-### Connessione dell'applicazione mobile
+## Scaricamento dell'applicazione mobile
+{: #iot4e_downloadmobile}
+Puoi ottenere l'applicazione mobile per i dispositivi mobili iOS o Android.
+- **Dispositivi iOS** - Scarica l'applicazione dall'Apple App Store.  Sul tuo dispositivo mobile, apri l'App store e cerca "ibm iot". Scegli **IBM IoT for Electronics** e installa.  In alternativa, puoi installarla nel tuo dispositivo mobile utilizzando [iTunes](https://itunes.apple.com/us/app/ibm-iot-for-electronics/id1103404928?ls=1&mt=8).
+- **Dispositivi Android** - Scarica l'applicazione dal Google Play Store. Sul tuo dispositivo mobile, apri l'App store e cerca "ibm iot". Scegli **IBM IoT for Electronics** e installa.
+
+## Connessione dell'applicazione mobile
 {: #iot4e_connecting_mobile}
 
-Per connettere l'applicazione mobile al tuo ambiente e registrare le tue applicazioni, completa le seguenti attività:
+Per collegare l'applicazione mobile al tuo ambiente e registrare i tuoi elettrodomestici, completa le seguenti attività:
 
-1. Apri la tua applicazione starter {{site.data.keyword.itoelectronics}}. Per istruzioni, vedi [Apertura dell'applicazione starter](iot4ecreatingappliances.html#iot4e_openAppMain).
+1. Apri la tua applicazione starter {{site.data.keyword.itoelectronics}}. Per le istruzioni, consulta [Apertura dell'applicazione starter](iot4ecreatingappliances.html#iot4e_openAppMain).
 
 2. Seleziona **Controlla in remoto le tue applicazioni collegate**.
 
-    ![{{site.data.keyword.iotelectronics}} esperienza starter](images/IoT4E_remotely_option.png "{{site.data.keyword.iotelectronics}} esperienza starter")
+    ![{{site.data.keyword.iotelectronics}} prova lo starter](images/IoT4E_remotely_option.svg "{{site.data.keyword.iotelectronics}} prova lo starter")
 
-3. Crea una o più rondelle scorrendo alla sezione etichettata **Successivamente, scegli o aggiungi una nuova rondella simulata** e fai clic sull'icona +. Viene creata una nuova rondella.
+3. Crea una o più lavatrici passando nella sezione etichettata **Successivo, scegli o aggiungi una nuova lavatrice simulata** e quindi fai clic sull'icona +. Viene creata una nuova lavatrice.
 
-    ![Aggiungi rondella](images/IoT4E_add_washer.png "Aggiungi rondella")
+    ![Aggiungi lavatrice](images/IoT4E_add_washer.svg "Aggiungi lavatrice")
 
 4.	Passa al codice QR di connessione e scansionalo utilizzando il tuo dispositivo mobile. Il codice QR di connessione è posizionato nella sezione etichettata **Per collegare l'applicazione all'ambiente, ti verrà richiesto di scansionare questo codice QR**.
 
-  ![Codice QR di connessione.](images/iot4e_mobile_connect_QR.png "{{site.data.keyword.iotelectronics}} Codice QR di connessione")
+  ![Codice QR di connessione.](images/iot4e_mobile_connect_QR.svg "{{site.data.keyword.iotelectronics}} Codice QR di connessione")
 
-5. Nel tuo dispositivo mobile, immetti le credenziali di accesso. I tuoi ID e password possono essere di qualsiasi lunghezza. Ricorda le tue credenziali di accesso per sessioni future. Il dispositivo mobile è ora registrato al tuo ambiente {{site.data.keyword.iotelectronics}} e sei pronto per registrare le singole applicazioni.
+5. Nel tuo dispositivo mobile, immetti le credenziali di accesso. I tuoi ID e password possono essere di qualsiasi lunghezza. Ricorda le tue credenziali di accesso per sessioni future. Il tuo dispositivo mobile è ora registrato nel tuo ambiente {{site.data.keyword.iotelectronics}} e sei pronto per registrare elettrodomestici individuali.
 
 6. Sul tuo computer, passa a una rondella simulata e fai clic su di essa per visualizzarne i dati e il codice QR dell'applicazione.
 
-  ![Seleziona una rondella.](images/IoT4E_mobile_washer_QR.png "Seleziona una rondella.")
+  ![Seleziona una rondella.](images/IoT4E_mobile_washer_QR.svg "Seleziona una rondella.")
 
-7.	Utilizza il tuo dispositivo mobile per eseguire la scansione del codice QR della rondella. La rondella viene registrata e il suo stato viene visualizzato sul tuo cellulare.
+7.	Utilizza il tuo dispositivo mobile per scansionare il codice QR della lavatrice. La lavatrice è ora registrata e il suo stato viene visualizzato nel tuo dispositivo mobile.
 
-#### Operazioni successive
-Puoi ora visualizzare gli avvisi e controllare la rondella mediante il tuo dispositivo mobile. Per farlo, completa questa procedura:
-  - Sul tuo computer, seleziona un problema con la rondella, come Board Failure o Strong Vibration. Il problema invia un avviso al tuo cellulare.
-  - Sul tuo dispositivo mobile, fai clic su **Avvia lavaggio** per avviare la macchina. Puoi vedere la modifica dello stato della rondella sul tuo computer man mano si procede con il ciclo di lavaggio.
+**Operazioni successive**
+Puoi ora visualizzare gli avvisi e controllare la lavatrice utilizzando il tuo dispositivo mobile. Prova come con la seguente procedura:
+  - Sul tuo computer, seleziona un problema con la rondella, come Board Failure o Strong Vibration. Il problema invia un avviso al tuo dispositivo mobile.
+  - Sul tuo dispositivo mobile, fai clic su **Avvia lavatrice** per avviare la macchina. Puoi visualizzare la modifica dello stato della lavatrice sul tuo computer e i relativi cicli di lavaggio.

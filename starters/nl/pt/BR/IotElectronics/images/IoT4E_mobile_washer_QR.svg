@@ -45,8 +45,8 @@
      id="namedview4"
      showgrid="false"
      inkscape:zoom="1.7159609"
-     inkscape:cx="237.36889"
-     inkscape:cy="186.4413"
+     inkscape:cx="157.54916"
+     inkscape:cy="187.02406"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -171,7 +171,8 @@
          sodipodi:role="line"
          x="242.82529"
          y="22.03492"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:18.75px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';fill:#000007;fill-opacity:0.9395349"
+         
+style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:18.75px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';fill:#000007;fill-opacity:0.9395349"
          id="tspan4742">Comandar e controlar sua arruela simulada</tspan></text>
     <text
        xml:space="preserve"
@@ -207,39 +208,45 @@
          sodipodi:role="line"
          x="311.56635"
          y="302.40128"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:11.25px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
+         
+style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:13.75px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4202">Quando você testa o app do consumidor,</tspan><tspan
          sodipodi:role="line"
          x="311.56635"
          y="319.58878"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:11.25px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
+         
+style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:13.75px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4206">é possível varrer o código QR</tspan><tspan
          sodipodi:role="line"
          x="311.56635"
          y="336.77628"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:11.25px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
+         
+style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:13.75px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4208">para ver o status dessa</tspan><tspan
          sodipodi:role="line"
          x="311.56635"
          y="353.96378"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:11.25px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
+         
+style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:13.75px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4210">arruela e outros eventos no</tspan><tspan
          sodipodi:role="line"
          x="311.56635"
          y="371.15128"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:11.25px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:13.75px;font-family:Arial;-inkscape-font-specification:'Arial Bold
+Condensed';text-align:start;text-anchor:start"
          id="tspan4212">seu telefone.</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="189.30008"
+       x="205.30008"
        y="362.17877"
        id="text4614-7-8-3-5"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="189.30008"
+         x="205.30008"
          y="362.17877"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:12.5px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
+         
+style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:12.5px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4212-8">Código do dispositivo</tspan></text>
     <text
        xml:space="preserve"
@@ -251,27 +258,32 @@
          sodipodi:role="line"
          x="24.060518"
          y="102.84886"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
+         
+style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4212-7">Assista à mudança do status</tspan><tspan
          sodipodi:role="line"
          x="24.060518"
          y="115.34886"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
+         
+style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4302">da sua arruela. Quando você testar o app</tspan><tspan
          sodipodi:role="line"
          x="24.060518"
          y="127.84886"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
+         
+style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4304">do consumidor, uma mensagem de mudança</tspan><tspan
          sodipodi:role="line"
          x="24.060518"
          y="140.34886"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
+         
+style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4306">de status será automaticamente</tspan><tspan
          sodipodi:role="line"
          x="24.060518"
          y="152.84886"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
+         
+style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4308">enviada ao seu telefone.</tspan></text>
     <text
        xml:space="preserve"
@@ -283,7 +295,8 @@
          sodipodi:role="line"
          x="69.869423"
          y="182.37349"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
+         
+style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4308-6">Falha na placa</tspan></text>
     <text
        xml:space="preserve"
@@ -295,7 +308,8 @@
          sodipodi:role="line"
          x="69.536407"
          y="227.07661"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
+         
+style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4308-6-8">Vibração forte</tspan></text>
     <text
        xml:space="preserve"
@@ -307,7 +321,8 @@
          sodipodi:role="line"
          x="70.701935"
          y="270.78391"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
+         
+style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4308-6-5">Vazamento de água</tspan></text>
     <text
        xml:space="preserve"
@@ -319,7 +334,8 @@
          sodipodi:role="line"
          x="59.04665"
          y="309.24631"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start;fill:#000000;fill-opacity:0.56744187"
+         
+style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start;fill:#000000;fill-opacity:0.56744187"
          id="tspan4308-6-0">Fixar arruela</tspan></text>
     <text
        xml:space="preserve"
@@ -331,7 +347,8 @@
          sodipodi:role="line"
          x="52.63625"
          y="337.21899"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
+         
+style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4308-6-6">Excluir arruela</tspan></text>
     <text
        xml:space="preserve"
@@ -343,7 +360,8 @@
          sodipodi:role="line"
          x="321.87314"
          y="104.11344"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
+         
+style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4308-6-1">ID do dispositivo</tspan></text>
     <text
        xml:space="preserve"
@@ -355,7 +373,8 @@
          sodipodi:role="line"
          x="319.62146"
          y="121.59634"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
+         
+style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4308-6-11">Número de série</tspan></text>
     <text
        xml:space="preserve"
@@ -367,7 +386,8 @@
          sodipodi:role="line"
          x="321.87317"
          y="151.31731"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
+         
+style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4308-6-67">Fazer, modelo</tspan></text>
     <text
        xml:space="preserve"
@@ -379,7 +399,8 @@
          sodipodi:role="line"
          x="323.03867"
          y="203.76607"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
+         
+style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4308-6-2">Status geral</tspan></text>
     <text
        xml:space="preserve"
@@ -391,7 +412,8 @@
          sodipodi:role="line"
          x="323.62143"
          y="222.99727"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
+         
+style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4308-6-7">Vibração</tspan></text>
     <text
        xml:space="preserve"
@@ -403,7 +425,8 @@
          sodipodi:role="line"
          x="323.62143"
          y="240.48018"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
+         
+style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4308-6-12">Pressão da água</tspan></text>
   </g>
 </svg>

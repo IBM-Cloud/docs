@@ -12,11 +12,11 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    id="svg2"
    version="1.1"
-   inkscape:version="0.47 r22583"
+   inkscape:version="0.91 r13725"
    width="501"
    height="389"
    viewBox="0 0 501 389"
-   sodipodi:docname="iot4e_mobile_washer_qr.svg">
+   sodipodi:docname="IoT4E_mobile_washer_QR.svg">
   <metadata
      id="metadata8">
     <rdf:RDF>
@@ -30,15 +30,7 @@
     </rdf:RDF>
   </metadata>
   <defs
-     id="defs6">
-    <inkscape:perspective
-       sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="0 : 194.5 : 1"
-       inkscape:vp_y="0 : 1000 : 0"
-       inkscape:vp_z="501 : 194.5 : 1"
-       inkscape:persp3d-origin="250.5 : 129.66667 : 1"
-       id="perspective61" />
-  </defs>
+     id="defs6" />
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -48,13 +40,13 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1440"
-     inkscape:window-height="878"
+     inkscape:window-width="1645"
+     inkscape:window-height="968"
      id="namedview4"
      showgrid="false"
      inkscape:zoom="1.7159609"
      inkscape:cx="157.54916"
-     inkscape:cy="178.4011"
+     inkscape:cy="187.02406"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -179,19 +171,19 @@
          sodipodi:role="line"
          x="242.82529"
          y="22.03492"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:18.75000000000000000px;font-family:SimHei;-inkscape-font-specification:SimHei;fill:#000007;fill-opacity:0.93953489999999995"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:18.75px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';fill:#000007;fill-opacity:0.9395349"
          id="tspan4742">指挥和控制模拟洗衣机</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:12.5px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Arial;-inkscape-font-specification:'Arial, Normal'"
-       x="64.532684"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="80.532684"
        y="79.742577"
        id="text4614-7-8"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="64.532684"
+         x="80.532684"
          y="79.742577"
-         style="font-size:16.25px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-family:SimHei;-inkscape-font-specification:SimHei"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:16.25px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed'"
          id="tspan4742-0">选择问题</tspan></text>
     <text
        xml:space="preserve"
@@ -203,55 +195,51 @@
          sodipodi:role="line"
          x="369.65875"
          y="179.43811"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:16.25000000000000000px;font-family:SimHei;-inkscape-font-specification:SimHei"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:16.25px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed'"
          id="tspan4742-0-8">洗衣机状态</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:12.5px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Arial;-inkscape-font-specification:'Arial, Normal'"
-       x="299.56635"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="311.56635"
        y="302.40128"
        id="text4614-7-8-3"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="299.56635"
+         x="311.56635"
          y="302.40128"
-         style="font-size:13.75px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;text-align:start;text-anchor:start;font-family:SimHei;-inkscape-font-specification:SimHei"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:13.75px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4202">尝试使用消费者应用程序时，</tspan><tspan
          sodipodi:role="line"
-         x="299.56635"
+         x="311.56635"
          y="319.58878"
-         style="font-size:13.75px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;text-align:start;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial Bold Condensed"
-         id="tspan4206"><tspan
-   style="font-family:SimHei;-inkscape-font-specification:SimHei"
-   id="tspan2867">可以在手机上扫描</tspan> QR <tspan
-   style="font-family:SimHei;-inkscape-font-specification:SimHei"
-   id="tspan2869">码来</tspan></tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:13.75px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
+         id="tspan4206">可以在手机上扫描 QR 码来</tspan><tspan
          sodipodi:role="line"
-         x="299.56635"
-         y="338.23663"
-         style="font-size:13.75px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;text-align:start;text-anchor:start;font-family:SimHei;-inkscape-font-specification:SimHei"
+         x="311.56635"
+         y="336.77628"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:13.75px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4208">查看此洗衣机的状态和其他事件。</tspan><tspan
          sodipodi:role="line"
-         x="299.56635"
-         y="355.42413"
-         style="font-size:13.75px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;text-align:start;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial Bold Condensed"
-         id="tspan4210" /><tspan
+         x="311.56635"
+         y="353.96378"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:13.75px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
+         id="tspan4210"></tspan><tspan
          sodipodi:role="line"
-         x="299.56635"
-         y="372.61163"
-         style="font-size:13.75px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;text-align:start;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial Bold Condensed"
-         id="tspan4212" /></text>
+         x="311.56635"
+         y="371.15128"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:13.75px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
+         id="tspan4212"></tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:12.5px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Arial;-inkscape-font-specification:'Arial, Normal'"
-       x="219.30008"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="205.30008"
        y="362.17877"
        id="text4614-7-8-3-5"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="219.30008"
+         x="205.30008"
          y="362.17877"
-         style="font-size:12.5px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;text-align:start;text-anchor:start;font-family:SimHei;-inkscape-font-specification:SimHei"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:12.5px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4212-8">家电代码</tspan></text>
     <text
        xml:space="preserve"
@@ -263,27 +251,27 @@
          sodipodi:role="line"
          x="24.060518"
          y="102.84886"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:SimHei;-inkscape-font-specification:SimHei;text-align:start;text-anchor:start"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4212-7">监视洗衣机的状态</tspan><tspan
          sodipodi:role="line"
          x="24.060518"
          y="115.34886"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:SimHei;-inkscape-font-specification:SimHei;text-align:start;text-anchor:start"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4302">变化。尝试使用消费</tspan><tspan
          sodipodi:role="line"
          x="24.060518"
          y="127.84886"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:SimHei;-inkscape-font-specification:SimHei;text-align:start;text-anchor:start"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4304">者应用程序后，状态</tspan><tspan
          sodipodi:role="line"
          x="24.060518"
          y="140.34886"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:SimHei;-inkscape-font-specification:SimHei;text-align:start;text-anchor:start"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4306">变化消息将自动发送</tspan><tspan
          sodipodi:role="line"
          x="24.060518"
          y="152.84886"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:SimHei;-inkscape-font-specification:SimHei;text-align:start;text-anchor:start"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4308">到您的手机。</tspan></text>
     <text
        xml:space="preserve"
@@ -295,7 +283,7 @@
          sodipodi:role="line"
          x="69.869423"
          y="182.37349"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:SimHei;-inkscape-font-specification:SimHei;text-align:start;text-anchor:start"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4308-6">电路板故障</tspan></text>
     <text
        xml:space="preserve"
@@ -307,7 +295,7 @@
          sodipodi:role="line"
          x="69.536407"
          y="227.07661"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:SimHei;-inkscape-font-specification:SimHei;text-align:start;text-anchor:start"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4308-6-8">强烈振动</tspan></text>
     <text
        xml:space="preserve"
@@ -319,19 +307,19 @@
          sodipodi:role="line"
          x="70.701935"
          y="270.78391"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:SimHei;-inkscape-font-specification:SimHei;text-align:start;text-anchor:start"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4308-6-5">漏水</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:12.5px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Arial;-inkscape-font-specification:'Arial, Normal'"
-       x="53.04665"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="59.04665"
        y="309.24631"
        id="text4614-7-8-3-6-4-5"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="53.04665"
+         x="59.04665"
          y="309.24631"
-         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;text-align:start;text-anchor:start;fill:#000000;fill-opacity:0.56744187;font-family:SimHei;-inkscape-font-specification:SimHei"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start;fill:#000000;fill-opacity:0.56744187"
          id="tspan4308-6-0">修理洗衣机</tspan></text>
     <text
        xml:space="preserve"
@@ -343,7 +331,7 @@
          sodipodi:role="line"
          x="52.63625"
          y="337.21899"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:SimHei;-inkscape-font-specification:SimHei;text-align:start;text-anchor:start"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4308-6-6">删除洗衣机</tspan></text>
     <text
        xml:space="preserve"
@@ -355,23 +343,23 @@
          sodipodi:role="line"
          x="321.87314"
          y="104.11344"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:SimHei;-inkscape-font-specification:SimHei;text-align:start;text-anchor:start"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4308-6-1">设备标识</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:12.5px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Arial;-inkscape-font-specification:'Arial, Normal'"
-       x="321.62146"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="319.62146"
        y="121.59634"
        id="text4614-7-8-3-6-4-2"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="321.62146"
+         x="319.62146"
          y="121.59634"
-         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;text-align:start;text-anchor:start;font-family:SimHei;-inkscape-font-specification:SimHei"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4308-6-11">序列号</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:12.5px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Arial;-inkscape-font-specification:'Arial, Normal'"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="321.87317"
        y="151.31731"
        id="text4614-7-8-3-6-4-28"
@@ -379,7 +367,7 @@
          sodipodi:role="line"
          x="321.87317"
          y="151.31731"
-         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;text-align:start;text-anchor:start;font-family:SimHei;-inkscape-font-specification:SimHei"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4308-6-67">生产型号</tspan></text>
     <text
        xml:space="preserve"
@@ -391,7 +379,7 @@
          sodipodi:role="line"
          x="323.03867"
          y="203.76607"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:SimHei;-inkscape-font-specification:SimHei;text-align:start;text-anchor:start"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4308-6-2">总体状态</tspan></text>
     <text
        xml:space="preserve"
@@ -403,7 +391,7 @@
          sodipodi:role="line"
          x="323.62143"
          y="222.99727"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:SimHei;-inkscape-font-specification:SimHei;text-align:start;text-anchor:start"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4308-6-7">振动</tspan></text>
     <text
        xml:space="preserve"
@@ -415,7 +403,7 @@
          sodipodi:role="line"
          x="323.62143"
          y="240.48018"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:SimHei;-inkscape-font-specification:SimHei;text-align:start;text-anchor:start"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4308-6-12">水压</tspan></text>
   </g>
 </svg>

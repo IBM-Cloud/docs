@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-11-29"
 
 ---
 
@@ -11,8 +12,6 @@ copyright:
 
 
 # Creación de apps con el iniciador de {{site.data.keyword.iotelectronics}}
-*Última actualización: 19 de septiembre de 2016*
-{: .last-updated}
 
 {{site.data.keyword.iotelectronics_full}} es una solución integrada de extremo a extremo que permite a las apps comunicarse con, controlar, analizar y actualizar dispositivos conectados. El iniciador incluye una app de inicio que le permite crear y controlar dispositivos simulados y una app para móvil de ejemplo que le permite controlar estos dispositivos desde el dispositivo móvil.
 {:shortdesc}
@@ -24,37 +23,37 @@ Antes de empezar, debe desplegar una instancia de {{site.data.keyword.Bluemix_no
  Puede [encontrar el {{site.data.keyword.iotelectronics}} iniciador](https://console.{DomainName}/catalog/starters/iot-for-electronics-starter/) en la sección Contenedores modelo del catálogo {{site.data.keyword.Bluemix_notm}}.  
 
 ## Iniciación a {{site.data.keyword.iotelectronics}}
-Para
-empezar, realice las tareas siguientes: 
+Para empezar, realice las tareas siguientes:
 
 1. [Habilite las comunicaciones móviles y la seguridad](iotelectronics_config_mca.html) configurando {{site.data.keyword.amafull}}.
-2. [Cree dispositivos simulados](iot4ecreatingappliances.html) utilizando la aplicación web de iniciador de {{site.data.keyword.iotelectronics}}. Para fines de demostración, las arandelas se utilizan como el dispositivo simulado dentro del iniciador de {{site.data.keyword.iotelectronics}}. El dispositivo que elija para conectarse puede ser cualquier tipo de dispositivo electrónico inteligente.
-3. [Descargue y conecte](iotelectronics_config_mobile.html) la aplicación para móvil de ejemplo.
+2. [Cree dispositivos simulados](iot4ecreatingappliances.html) mediante la aplicación web de inicio {{site.data.keyword.iotelectronics}}. Para fines de demostración, las lavadoras se utilizan como el dispositivo simulado dentro del iniciador de {{site.data.keyword.iotelectronics}}. El dispositivo que elija para conectarse puede ser cualquier tipo de dispositivo electrónico inteligente.
+3. [Descargue y conecte](iotelectronics_config_mobile.html) la app para móvil de ejemplo.
 
 
 ## Qué hacer a continuación
 Vea lo que puede hacer con {{site.data.keyword.iotelectronics}}.
 
-- [Explorar la app de inicio](iot4ecreatingappliances.html) para experimentare cómo una empresa de producción puede supervisar dispositivos conectados a {{site.data.keyword.iot_short_notm}}.
-- [Explorar la app para móvil de ejemplo](iotelectronics_config_mobile.html) para experimentar cómo pueden registrar e interactuar con sus dispositivos los propietarios de aplicaciones.
-- [Explorar las API](http://ibmiotforelectronics.mybluemix.net/public/iot4eregistrationapi.html) para descubrir cómo puede personalizar y ampliar sus aplicaciones de {{site.data.keyword.iotelectronics}}.
+- [Explorar la app de inicio](iot4ecreatingappliances.html) para experimentar cómo una empresa de producción puede supervisar dispositivos conectados a {{site.data.keyword.iot_short_notm}}.
+- [Explorar la app para móvil](iotelectronics_config_mobile.html) para experimentar cómo pueden registrar e interactuar con sus dispositivos los propietarios de aplicaciones.
+- [Explorar las API](http://ibmiotforelectronics.mybluemix.net/public/iot4eregistrationapi.html) para descubrir cómo puede personalizar y ampliar sus apps de {{site.data.keyword.iotelectronics}}.
 
 # Enlaces relacionados
 {: #rellinks}
+<!-- Related Links last updated 23 October 2016 - new API source -->
 ## Documentación de la API
 {: #api}
-* [{{site.data.keyword.iotelectronics}}API](http://ibmiotforelectronics.mybluemix.net/public/iot4eregistrationapi.html)
-* [{{site.data.keyword.iot_short}}API](https://developer.ibm.com/iotfoundation/recipes/api-documentation/)
+* [API de {{site.data.keyword.iotelectronics}}](https://broker-uss-iot4e.electronics.internetofthings.ibmcloud.com/public/iot4eregistrationapi.html){:new_window}
+* [API de {{site.data.keyword.iot_short}}](https://developer.ibm.com/iotfoundation/recipes/api-documentation/){:new_window}
 
 
 ## Componentes
 {: #general}
 
-* [Documentación de {{site.data.keyword.iotelectronics}}](iotelectronics_overview.html)
-* [Documentación de {{site.data.keyword.iot_full}}](https://new-console.ng.bluemix.net/docs/services/IoT/index.html)
-*  [Documentación de {{site.data.keyword.amashort}}](https://new-console.ng.bluemix.net/docs/services/mobileaccess/overview.html)
-* [Documentación de {{site.data.keyword.sdk4nodefull}}](https://new-console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime)
+* [Documentación de {{site.data.keyword.iotelectronics}}](iotelectronics_overview.html){:new_window}
+* [Documentación de {{site.data.keyword.iot_full}}](https://console.ng.bluemix.net/docs/services/IoT/index.html){:new_window}
+*  [Documentación de {{site.data.keyword.amashort}}](https://console.ng.bluemix.net/docs/services/mobileaccess/overview.html){:new_window}
+* [Documentación de {{site.data.keyword.sdk4nodefull}}](https://console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime){:new_window}
 
 ## Ejemplos
 {: #samples}
-* [App para móvil de ejemplo](https://new-console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html)
+* [App para móvil de ejemplo](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html){:new_window}

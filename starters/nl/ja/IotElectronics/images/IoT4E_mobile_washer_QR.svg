@@ -45,12 +45,12 @@
      id="namedview4"
      showgrid="false"
      inkscape:zoom="1.7159609"
-     inkscape:cx="236.01093"
-     inkscape:cy="186.4413"
+     inkscape:cx="157.54916"
+     inkscape:cy="187.02406"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
-     inkscape:current-layer="svg2" />
+     inkscape:current-layer="layer2" />
   <image
      width="501"
      height="389"
@@ -103,7 +103,7 @@
        width="69.340546" />
     <image
        y="92.58049"
-       x="311.10706"
+       x="321.10706"
        id="image4538"
        xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKIAAABXCAIAAAAIzwnmAAAAA3NCSVQICAjb4U/gAAAA40lEQVR4 nO3RgQkAIRDAsPf33/ncQsEmExS6Zubjdf/tAE6wOcHmBJsTbE6wOcHmBJsTbE6wOcHmBJsTbE6w OcHmBJsTbE6wOcHmBJsTbE6wOcHmBJsTbE6wOcHmBJsTbE6wOcHmBJsTbE6wOcHmBJsTbE6wOcHm BJsTbE6wOcHmBJsTbE6wOcHmBJsTbE6wOcHmBJsTbE6wOcHmBJsTbE6wOcHmBJsTbE6wOcHmBJsT bE6wOcHmBJsTbE6wOcHmBJsTbE6wOcHmBJsTbE6wOcHmBJsTbE6wOcHmBJsTbE6wOWEDkSQDq9pt SUMAAAAASUVORK5CYII= "
        style="image-rendering:optimizeQuality"
@@ -112,7 +112,7 @@
        width="66.426727" />
     <image
        y="165.42596"
-       x="308.776"
+       x="318.776"
        id="image4549"
        xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKIAAABXCAIAAAAIzwnmAAAAA3NCSVQICAjb4U/gAAAA40lEQVR4 nO3RgQkAIRDAsPf33/ncQsEmExS6Zubjdf/tAE6wOcHmBJsTbE6wOcHmBJsTbE6wOcHmBJsTbE6w OcHmBJsTbE6wOcHmBJsTbE6wOcHmBJsTbE6wOcHmBJsTbE6wOcHmBJsTbE6wOcHmBJsTbE6wOcHm BJsTbE6wOcHmBJsTbE6wOcHmBJsTbE6wOcHmBJsTbE6wOcHmBJsTbE6wOcHmBJsTbE6wOcHmBJsT bE6wOcHmBJsTbE6wOcHmBJsTbE6wOcHmBJsTbE6wOcHmBJsTbE6wOcHmBJsTbE6wOWEDkSQDq9pt SUMAAAAASUVORK5CYII= "
        style="image-rendering:optimizeQuality"
@@ -121,7 +121,7 @@
        width="106.05467" />
     <image
        y="188.90471"
-       x="308.776"
+       x="318.776"
        id="image4560"
        xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKIAAABXCAIAAAAIzwnmAAAAA3NCSVQICAjb4U/gAAAA40lEQVR4 nO3RgQkAIRDAsPf33/ncQsEmExS6Zubjdf/tAE6wOcHmBJsTbE6wOcHmBJsTbE6wOcHmBJsTbE6w OcHmBJsTbE6wOcHmBJsTbE6wOcHmBJsTbE6wOcHmBJsTbE6wOcHmBJsTbE6wOcHmBJsTbE6wOcHm BJsTbE6wOcHmBJsTbE6wOcHmBJsTbE6wOcHmBJsTbE6wOcHmBJsTbE6wOcHmBJsTbE6wOcHmBJsT bE6wOcHmBJsTbE6wOcHmBJsTbE6wOcHmBJsTbE6wOcHmBJsTbE6wOcHmBJsTbE6wOWEDkSQDq9pt SUMAAAAASUVORK5CYII= "
        style="image-rendering:optimizeQuality"
@@ -188,12 +188,12 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="359.65875"
+       x="369.65875"
        y="179.43811"
        id="text4614-7-8-0"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="359.65875"
+         x="369.65875"
          y="179.43811"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:16.25px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed'"
          id="tspan4742-0-8">洗濯機の状況</tspan></text>
@@ -207,39 +207,39 @@
          sodipodi:role="line"
          x="311.56635"
          y="302.40128"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:11.25px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:13.75px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4202">コンシューマー・アプリを</tspan><tspan
          sodipodi:role="line"
          x="311.56635"
          y="319.58878"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:11.25px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:13.75px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4206">試すときは、QR コードを</tspan><tspan
          sodipodi:role="line"
          x="311.56635"
          y="336.77628"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:11.25px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:13.75px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4208">スキャンして、電話で</tspan><tspan
          sodipodi:role="line"
          x="311.56635"
          y="353.96378"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:11.25px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:13.75px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4210">その洗濯機の状況やその他の</tspan><tspan
          sodipodi:role="line"
          x="311.56635"
          y="371.15128"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:11.25px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:13.75px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4212">イベントを調べることができます。</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="184.90335"
-       y="360.43048"
+       x="205.30008"
+       y="362.17877"
        id="text4614-7-8-3-5"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="184.90335"
-         y="360.43048"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
+         x="205.30008"
+         y="362.17877"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:12.5px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4212-8">アプライアンス・コード</tspan></text>
     <text
        xml:space="preserve"
@@ -312,96 +312,96 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="43.04665"
+       x="59.04665"
        y="309.24631"
        id="text4614-7-8-3-6-4-5"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="43.04665"
+         x="59.04665"
          y="309.24631"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start;fill:#000000;fill-opacity:0.56744187"
          id="tspan4308-6-0">洗濯機を修理する</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="36.63625"
+       x="52.63625"
        y="337.21899"
        id="text4614-7-8-3-6-4-7"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="36.63625"
+         x="52.63625"
          y="337.21899"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4308-6-6">洗濯機を破棄する</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="311.87314"
+       x="321.87314"
        y="104.11344"
        id="text4614-7-8-3-6-4-8"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="311.87314"
+         x="321.87314"
          y="104.11344"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4308-6-1">デバイス ID</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="309.62146"
+       x="319.62146"
        y="121.59634"
        id="text4614-7-8-3-6-4-2"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="309.62146"
+         x="319.62146"
          y="121.59634"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4308-6-11">シリアル番号</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="311.87317"
+       x="321.87317"
        y="151.31731"
        id="text4614-7-8-3-6-4-28"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="311.87317"
+         x="321.87317"
          y="151.31731"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4308-6-67">メーカー、モデル</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="313.03867"
+       x="323.03867"
        y="203.76607"
        id="text4614-7-8-3-6-4-4"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="313.03867"
+         x="323.03867"
          y="203.76607"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4308-6-2">全体の状況</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="313.62143"
+       x="323.62143"
        y="222.99727"
        id="text4614-7-8-3-6-4-45"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="313.62143"
+         x="323.62143"
          y="222.99727"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4308-6-7">振動</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="313.62143"
+       x="323.62143"
        y="240.48018"
        id="text4614-7-8-3-6-4-3"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="313.62143"
+         x="323.62143"
          y="240.48018"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:10px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:start;text-anchor:start"
          id="tspan4308-6-12">水圧</tspan></text>

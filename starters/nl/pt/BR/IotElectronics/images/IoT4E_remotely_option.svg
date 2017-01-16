@@ -16,7 +16,7 @@
    width="501"
    height="397"
    viewBox="0 0 501 397"
-   sodipodi:docname="IoT4E_remotely_option.svg">
+   sodipodi:docname="IoT4E_remotely_option1.svg">
   <metadata
      id="metadata8">
     <rdf:RDF>
@@ -25,7 +25,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -45,8 +45,8 @@
      id="namedview4"
      showgrid="false"
      inkscape:zoom="1.6813824"
-     inkscape:cx="317.53134"
-     inkscape:cy="195.52625"
+     inkscape:cx="134.82581"
+     inkscape:cy="196.121"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -154,19 +154,19 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="384.43561"
+       x="394.43561"
        y="269.08749"
        id="text4614-7-3-6"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="384.43561"
+         x="394.43561"
          y="269.08749"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:13.75px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed'"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:15px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed'"
          id="tspan5352-6">Controlar remotamente seus</tspan><tspan
          sodipodi:role="line"
-         x="384.43561"
-         y="286.27499"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:13.75px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed'"
+         x="394.43561"
+         y="287.83749"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:15px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed'"
          id="tspan5377">dispositivos conectados</tspan></text>
     <text
        xml:space="preserve"
@@ -193,34 +193,34 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="385.61722"
+       x="379.61722"
        y="306.0809"
        id="text4614-7-3-3-6"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="385.61722"
+         x="379.61722"
          y="306.0809"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:11.25px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:center;text-anchor:middle"
          id="tspan5393-6">Usar um app móvel para ver como um</tspan><tspan
          sodipodi:role="line"
-         x="385.61722"
+         x="379.61722"
          y="320.1434"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:11.25px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:center;text-anchor:middle"
          id="tspan5424">consumidor experimentará a</tspan><tspan
          sodipodi:role="line"
-         x="385.61722"
+         x="379.61722"
          y="334.2059"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:11.25px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:center;text-anchor:middle"
          id="tspan5426">solução.</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#ffffff;fill-opacity:0.94117647;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="129.92778"
+       x="117.92778"
        y="22.385773"
        id="text4614-7-3-3-0"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="129.92778"
+         x="117.92778"
          y="22.385773"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:13.75px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:0.94117647"
          id="tspan5393-8">Experiência do iniciante no IoT for Electronics</tspan></text>
