@@ -213,7 +213,7 @@ After the client SDK is initialized and Facebook Authentication Manager is regis
 ### Before you begin testing
 {: #facebook-auth-android-testing-before}
 
-You must be using the {{site.data.keyword.mobilefirstbp}} boilerplate and already have a resource that is protected by {{site.data.keyword.amashort}} at the `/protected` endpoint. If you need to set up a `/protected` endpoint, see [Protecting resources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
+You must be using the {{site.data.keyword.mobilefirstbp}} boilerplate and already have a resource that is protected by {{site.data.keyword.amashort}} at the `/protected` endpoint. If you need to set up a `/protected` endpoint, see [Protecting resources](protecting-resources.html).
 
 1. Try to send a request to a protected endpoint of your newly created mobile back-end application in your browser. Open the following URL:
 
