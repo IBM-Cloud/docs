@@ -12,7 +12,7 @@ years: 2015, 2017
 
 # Enabling web applications to receive {{site.data.keyword.mobilepushshort}}
 {: #web_notifications}
-Last updated: 11 January 2017
+Last updated: 16 January 2017
 {: .last-updated}
 
 You can enable Google Chrome, Mozilla Firefox and Safari web applications to receive {{site.data.keyword.mobilepushshort}}.
@@ -26,7 +26,7 @@ This topic describes how to install and use the client JavaScript Push SDK to fu
 
 For installing the Javascript SDK in Google Chrome Web application, complete the steps:
 
-Download the `BMSPushSDK.js`, `BMSPushServiceWorker.js` and `manifest_Website.json` files from the [Bluemix Web push SDK](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master).
+Download the `BMSPushSDK.js`, `BMSPushServiceWorker.js` and `manifest_Website.json` files from the [Bluemix Web push SDK](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master){: new_window}.
 
 1. Edit the `manifest_Website.json` file.
 	- For Google Chrome browser, change `name` to your site's name. For example, `www.dailynewsupdates.com`. Change the `gcm_sender_id` to your Firebase Cloud Messaging (FCM) or Google Cloud Messaging (GCM) sender_ID. For more information, see [Getting Your Sender ID and API key](t_push_provider_android.html). The gcm_sender_id value contains only numbers.
