@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-01-15"
 
 ---
 {:new_window: target="_blank"}
@@ -57,7 +57,7 @@ To start using Facebook as identity provider, create an application on the Faceb
 
 You need this value to configure Facebook authentication for your mobile or web app.
 
-1. Access the [Facebook for Developers](https://developers.facebook.com) site.
+1. Access the [Facebook for Developers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developers.facebook.com){: new_window} site.
 
 1. Open the **My Apps** pull-down list and select **Add a New App**.
 

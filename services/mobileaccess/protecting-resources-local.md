@@ -5,8 +5,11 @@ copyright:
 lastupdated: "2017-01-08"
 
 ---
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 
 # Using {{site.data.keyword.amashort}} with a local development environment
@@ -23,7 +26,7 @@ You must have:
 * Your **TenantID**. Open your service in the  {{site.data.keyword.amafull}} dashboard. Click the **Mobile Options** button. The `tenantId` (also known as `appGUID`)  values are displayed in the  **App GUID / TenantId** field. You will need this value for intializing the Authorization Manager.
 * Your **Application Route**. This is the URL of your back-end application. You need this value for for sending requests to its protected endpoints.
 * Your {{site.data.keyword.Bluemix_notm}} **Region**.  You can find your current {{site.data.keyword.Bluemix_notm}} region in the header, next to the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon"). The region value that appears should be one of the following: `US South`,  `Sydney`, or  `United Kingdom`. For the exact syntax required by the SDK, see the comments in the code samples. You will need this value for initializing the {{site.data.keyword.amashort}} client.
-* An Android Studio project, set up to work with Gradle. For more information about how to set up your Android development environment, see [Google Developer Tools](http://developer.android.com/sdk/index.html).
+* An Android Studio project, set up to work with Gradle. For more information about how to set up your Android development environment, see [Google Developer Tools ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://developer.android.com/sdk/index.html){: new_window}.
 
 ## Setting up the server SDK
 {: #serversetup}

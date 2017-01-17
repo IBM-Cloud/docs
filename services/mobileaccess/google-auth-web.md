@@ -2,12 +2,15 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-01-15"
 
 ---
 
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
 {:codeblock: .codeblock}
+{:pre: .pre}
 
 # Enabling Google authentication for Web applications
 {: #google-auth-web}
@@ -28,7 +31,7 @@ You must have:
 ## Configuring a Google application for your website
 {: #google-auth-config}
 
-To start using Google as an identity provider, create a project in the [Google Developer Console](https://console.developers.google.com). Part of creating a project is to obtain a **Google Client ID** and **Secret**. The Google Client ID and Secret are the unique identifiers for your application used by Google authentication, and are needed for setting up the {{site.data.keyword.amashort}} dashboard.
+To start using Google as an identity provider, create a project in the [Google Developer Console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.developers.google.com){: new_window}. Part of creating a project is to obtain a **Google Client ID** and **Secret**. The Google Client ID and Secret are the unique identifiers for your application used by Google authentication, and are needed for setting up the {{site.data.keyword.amashort}} dashboard.
 
 1. Open your Google application in the Google Developer Console.
 3. Add the **Google+** API.

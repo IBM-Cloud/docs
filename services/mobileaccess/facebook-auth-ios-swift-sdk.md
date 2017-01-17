@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-01-15"
 
 ---
 {:new_window: target="_blank"}
@@ -28,7 +28,7 @@ You must have
 * Your {{site.data.keyword.Bluemix_notm}} **Region**. You can find your current {{site.data.keyword.Bluemix_notm}} region in the header, next to the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon"). The region value that appears should be one of the following: `US South`, `United Kingdom`, or `Sydney`, and correspond to the SDK values required for the Swift SDK: `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom`, or `BMSClient.Region.sydney`. You will need this value for initializing the {{site.data.keyword.amashort}} client.
 * An iOS project that is seft up to work with CocoaPods.  For more information, see **Install CocoaPods** in  [Setting up the iOS Swift SDK](getting-started-ios-swift-sdk.html).  
    **Note:** You do not need to install the core {{site.data.keyword.amashort}}  client SDK before proceeding.
-* A Facebook application on the [Facebook for Developers](https://developers.facebook.com) website.
+* A Facebook application on the [Facebook for Developers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developers.facebook.com){: new_window} website.
 
 **Important:** You do not need to separately install the Facebook SDK (`com.facebook.FacebookSdk`). The Facebook SDK  installs automatically with the {{site.data.keyword.amashort}} `BMSFacebookAuthentication` pod. You can skip the **Add the Facebook SDK to your Xcode Project** step when you add or configure your app on the Facebook for Developers website.
 
@@ -37,7 +37,7 @@ You must have
 
 On the Facebook for Developers site:
 
-1. Log in to your account on  [Facebook for Developers](https://developers.facebook.com).
+1. Log in to your account on  [Facebook for Developers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developers.facebook.com){: new_window}.
 
 1. Ensure that the iOS platform has been added to your app. When you add or configure the iOS platform  you need to supply the **bundleId** of your iOS application. To find the **bundleId** of your iOS application, look for the **Bundle Identifier** in either the `info.plist` file or Xcode project **General** tab.
 
@@ -70,7 +70,7 @@ After you configure the Facebook App ID and your Facebook Application to serve i
    ```
    {: codeblock}
 
-For more information, see the [CocoaPods website](https://cocoapods.org/).
+For more information, see the [CocoaPods website ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cocoapods.org/){: new_window}.
 
 ### Installing the {{site.data.keyword.amashort}} client Swift SDK with CocoaPods
 {: #facebook-auth-install-swift-cocoapods}
@@ -164,7 +164,7 @@ Enable `Keychain Sharing`. Go to the `Capabilities` tab and switch the `Keychain
 
    Update the `CFBundleURLSchemes` and `FacebookappID` properties with your Facebook Application ID. Update the `FacebookDisplayName` with the name of your Facebook application.
 
-   **Important**: Make sure you are not overriding any existing properties in  the `info.plist` file. If you have overlapping properties, you must merge manually. For more information, see [Configure Xcode Project](https://developers.facebook.com/docs/ios/getting-started/) and [Preparing Your Apps for iOS9](https://developers.facebook.com/docs/ios/ios9).
+   **Important**: Make sure you are not overriding any existing properties in  the `info.plist` file. If you have overlapping properties, you must merge manually. For more information, see [Configure Xcode Project ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developers.facebook.com/docs/ios/getting-started/){: new_window} and [Preparing Your Apps for iOS9 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developers.facebook.com/docs/ios/ios9){: new_window}.
 
 ## Initializing the {{site.data.keyword.amashort}} client Swift SDK
 {: #facebook-auth-ios-initalize-swift}
@@ -204,7 +204,7 @@ A common, though not mandatory, place to put the initialization code is in the `
    * Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted.
    * Replace `tenantId` with the **TenantId/App GUID** value.
 
-   For more information about these values, see [Before you begin](#before-you-begin)).
+   For more information about these values, see [Before you begin](#before-you-begin).
 
 1. Notify the Facebook SDK about the app activation and register the Facebook Authentication Handler by adding the following code to the `application:didFinishLaunchingWithOptions` method in your app delegate. Add this code after you initialize the BMSClient instance and register Facebook as the authentication manager.
 

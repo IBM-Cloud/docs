@@ -2,13 +2,15 @@
 
 copyright:
   year: 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-01-15"
 
 ---
 
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
 {:codeblock: .codeblock}
+{:pre: .pre}
 
 
 # Enabling Facebook authentication for Web applications
@@ -184,7 +186,7 @@ The next step is to obtain the access and identity tokens using the previously r
 
 	Note that the `redirect_uri` parameter must match the `redirect_uri` used for the previous authorization request. The `code` parameter value should be the grant code received in the response from  the authorization request. The grant code is valid for 10 minutes, after which a new code must be be retrieved.
 
-	The response body will contain the access code and token ID in JWT format (https://jwt.io/).
+	The response body will contain the access code and token ID in JWT format (see the [JWT website ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://jwt.io/){: new_window}.
 
 	Once you have gained access and received the identity tokens, you can flag web session as authenticated, and optionally persist these tokens.  
 

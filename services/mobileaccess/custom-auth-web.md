@@ -22,7 +22,7 @@ Add custom authentication and {{site.data.keyword.amafull}} security functionali
 Before you begin,  you must have:
 
 * A Web app.
-* A resource that is protected by an instance of the {{site.data.keyword.amashort}} service that is configured to use a custom identity provider (see [Configuring custom authentication](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).  
+* A resource that is protected by an instance of the {{site.data.keyword.amashort}} service that is configured to use a custom identity provider (see [Configuring custom authentication](custom-auth-config-mca.html)).  
 * Your **TenantID** value. Open your service in the  {{site.data.keyword.amashort}} dashboard. Click the **Mobile Options** button. The `tenantId` (also known as `appGUID`)  value is displayed in the **App GUID / TenantId** field. You will need this value for intializing the Authorization Manager.
 * Your **Realm** name. This is the value you you specificed in the **Realm Name** field of the **Custom** section in the **Management** tab of the {{site.data.keyword.amashort}} dashboard.
 * The URL of your back-end application (**App Route**). You will need this values for sending requests to the protected endpoints of your back-end application.
@@ -31,10 +31,10 @@ Before you begin,  you must have:
 
 For more information:
 
-* [Getting started with {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
-* [Using a custom identity provider](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
-* [Creating a custom identity provider](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
-* [Configuring {{site.data.keyword.amashort}} for custom authentication](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
+* [Getting started with {{site.data.keyword.amashort}}](getting-started.html)
+* [Using a custom identity provider](custom-auth.html)
+* [Creating a custom identity provider](custom-auth-identity-provider.html)
+* [Configuring {{site.data.keyword.amashort}} for custom authentication](custom-auth-config-mca.html)
 
 
 ##Configuring a custom identity provider
@@ -243,7 +243,7 @@ The next step is to obtain the access token and identity token using the previou
 
 	Note that the `redirect_uri` parameter must match the `redirect_uri` used in authorization request previously. The code parameter value should be the grant code received in the response at the end of authorization request. The grant code is valid for 10 minutes only, after which you will need to obtain a new code.
 
-	The response body will contain `access_token` and `id_token` in JWT format (https://jwt.io/).
+	The response body will contain `access_token` and `id_token` in JWT format see the [JWT website ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://jwt.io){: new_window}.
 
 	Once you have received access, and identity the tokens, you can flag Web session as authenticated and optionally persist these tokens
 

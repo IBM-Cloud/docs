@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-01-15"
 
 ---
 {:new_window: target="_blank"}
@@ -27,7 +27,7 @@ You must have:
 * Your **TenantID** value. Open your service in the  {{site.data.keyword.amashort}} dashboard. Click the **Mobile Options** button. The `tenantId` (also known as `appGUID`)  value is displayed in the **App GUID / TenantId** field. You will need this value for intializing the Authorization Manager.
 * Your {{site.data.keyword.Bluemix_notm}} **Region**. You can find your current {{site.data.keyword.Bluemix_notm}} region in the header, next to the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon"). The region value that appears should be one of the following: `US South`, `United Kingdom`, or `Sydney`, and correspond to the SDK value required in the WebView Javascript code: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY`, or `BMSClient.REGION_UK`. You will need this value for initializing the {{site.data.keyword.amashort}} client.
 * An Android project that is configured to work with Gradle. The project does not need to be instrumented with {{site.data.keyword.amashort}} client SDK.  
-* A Facebook app with an Android platform on the Facebook for Developers site (https://developers.facebook.com).
+* A Facebook app with an Android platform on the [Facebook for Developers site ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developers.facebook.com/){: new_window} .
 
 **Important:** You do not need to separately install the Facebook SDK (`com.facebook.FacebookSdk`). The Facebook SDK is installed automatically by Gradle when you add the {{site.data.keyword.amashort}} Facebook client SDK. You can skip this step when you add the Android platform in the Facebook for Developers site.
 
@@ -36,7 +36,7 @@ You must have:
 
 From the Facebook for Developers website:
 
-1. Log in to your account on the Facebook for Developers website (https://developers.facebook.com).
+1. Log in to your account on the [Facebook for Developers website ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developers.facebook.com){: new_window}.
 
 1. From the **Products List**, choose **Facebook Login**.
 
@@ -64,7 +64,7 @@ From the Facebook for Developers website:
 
 	Use different certificates for debug and release modes.  Certificates that are used for signing Android applications in debug mode are bundled with Android SDK, which is usually installed automatically by Android Studio. When you want to release your app to the Google Play store, you must sign your app with another certificate that you usually generate yourself.
 
-	You can enter two sets of key hashes with Facebook: one key hash for applications that are built in debug mode with a debug certificate, and another key hash for applications that are built in release mode with a release certificate. For more information, see [signing your Android applications](http://developer.android.com/tools/publishing/app-signing.html).
+	You can enter two sets of key hashes with Facebook: one key hash for applications that are built in debug mode with a debug certificate, and another key hash for applications that are built in release mode with a release certificate. For more information, see [signing your Android applications ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://developer.android.com/tools/publishing/app-signing.html){: new_window}.
 
 1. The keystore that contains the certificate you are using for the development environment is stored in the `~/.android/debug.keystore` file. The default keystore password is: `android`. Use this certificate to build applications in debug mode.
 
@@ -190,7 +190,7 @@ Your Android project might have two `build.gradle` files:  for the project and a
 
 	For more information on obtaining these values see  [Before you begin](#before-you-begin)).
 
-	**Note:** If your Android application is targeting Android version 6.0 (API level 23) or higher, you must ensure that the application has an `android.permission.GET_ACCOUNTS` call before calling `register`. For more information, see [https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}.
+	**Note:** If your Android application is targeting Android version 6.0 (API level 23) or higher, you must ensure that the application has an `android.permission.GET_ACCOUNTS` call before calling `register`. For more information, see the [this topic ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.android.com/training/permissions/requesting.html){: new_window} on the Android Developers site.
 
 1. Add the following code to your Activity:
 
