@@ -788,10 +788,6 @@ For the instructions that follow, assume that the Docker user ID is `janesmith` 
   ```
   {: pre}
   ```
-  chmod +x buildAndPush.sh
-  ```
-  {: pre}
-  ```
   ./buildAndPush.sh janesmith/blackboxdemo
   ```
   {: pre}
