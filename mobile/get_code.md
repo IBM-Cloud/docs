@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-10-13"
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -23,20 +23,20 @@ You will need to complete credentials for services that are not configurable in 
 The following developer tools are needed when you are working with generated code from the {{site.data.keyword.Bluemix_notm}} Mobile dashboard:
 
 #### Android
-* [Android Studio 2.2](https://developer.android.com/studio)
-	* Install the latest [Android 7.0](https://www.android.com/versions/nougat-7-0/) runtime.
+* [Android Studio 2.2 ![External link icon](../icons/launch-glyph.svg "External link icon")](https://developer.android.com/studio)
+	* Install the latest [Android 7.0 ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.android.com/versions/nougat-7-0/) runtime.
 
 #### iOS
-* [Xcode 8.0](https://developer.apple.com/xcode/) (recommended)
-	* Install the latest [iOS 10](http://www.apple.com/ios/ios-10/) runtime.
-* [Homebrew](http://brew.sh/)
+* [Xcode 8.0 ![External link icon](../icons/launch-glyph.svg "External link icon")](https://developer.apple.com/xcode/) (recommended)
+	* Install the latest [iOS 10 ![External link icon](../icons/launch-glyph.svg "External link icon")](http://www.apple.com/ios/ios-10/) runtime.
+* [Homebrew ![External link icon](../icons/launch-glyph.svg "External link icon")](http://brew.sh/)
 	* Command line tool to assist in the installation of other tools and runtimes, such as CocoaPods and Carthage, for Apple developers.
-* [CocoaPods](https://cocoapods.org/) dependency manager for installing iOS SDK dependencies. Use the latest version:
+* [CocoaPods ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cocoapods.org/) dependency manager for installing iOS SDK dependencies. Use the latest version:
 
 	```
 	$ sudo gem install cocoapods --pre
 	```
-* [Carthage](https://github.com/Carthage/Carthage) dependency manager for installing Watson Developer Cloud SDKs.
+* [Carthage ![External link icon](../icons/launch-glyph.svg "External link icon")](https://github.com/Carthage/Carthage) dependency manager for installing Watson Developer Cloud SDKs.
 
 	```
 	$ brew install carthage
@@ -50,5 +50,5 @@ The following developer tools are needed when you are working with generated cod
 	$ brew install Node5
 	```
 
-* [Bluemix CLI Tools](http://clis.ng.bluemix.net/ui/home.html).
+* [Bluemix CLI Tools ![External link icon](../icons/launch-glyph.svg "External link icon")](http://clis.ng.bluemix.net/ui/home.html).
 Command line tools to easily deploy Cloud Foundry runtimes from a command line interface with Bluemix.  

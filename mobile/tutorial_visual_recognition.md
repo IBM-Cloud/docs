@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-10-21"
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -16,7 +16,7 @@ The following end-to-end tutorial walks through the steps to create a project fr
 ### Installing developer tools
 {: #dev_tools}
 
-Ensure that you have installed the [prerequisite developer tools](get_code.html#prereq-dev-tools){: new_window}.
+Ensure that you have installed the [prerequisite developer tools ![External link icon](../icons/launch-glyph.svg "External link icon")](get_code.html#prereq-dev-tools){: new_window}.
 
 
 ### Creating a project from the {{site.data.keyword.visualrecognitionshort}} Code Starter
@@ -44,9 +44,9 @@ Ensure that you have installed the [prerequisite developer tools](get_code.html#
 
    2. Enter your service name and click **Create**.
 
-   3. For iOS, [configure Apple Push Notification Service](/docs/services/mobilepush/t_push_provider_ios.html){: new_window}.
+   3. For iOS, [configure Apple Push Notification Service ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/mobilepush/t_push_provider_ios.html){: new_window}.
 
-   4. For Android, [configure Firebase Cloud Messaging](/docs/services/mobilepush/t_push_provider_android.html){: new_window}.
+   4. For Android, [configure Firebase Cloud Messaging ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/mobilepush/t_push_provider_android.html){: new_window}.
    
 3. Optional: Add the Analytics capability.
 
@@ -58,7 +58,7 @@ Ensure that you have installed the [prerequisite developer tools](get_code.html#
    
    3. Toggle off **Demo Mode** to see your analytics data after you run your app.
    
-   4. See [Getting started with {{site.data.keyword.mobileanalytics_short}}](/docs/services/mobileanalytics/index.html){: new_window} for more information about configuring Analytics.
+   4. See [Getting started with {{site.data.keyword.mobileanalytics_short}} ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/mobileanalytics/index.html){: new_window} for more information about configuring Analytics.
   
 4. Optional: Add the Authentication capability.
 
@@ -72,7 +72,7 @@ Ensure that you have installed the [prerequisite developer tools](get_code.html#
    
    4. Select your identity provider and enter the required information to configure it. You can enable only one identity provider.
 
-   5. See [Getting started with {{site.data.keyword.amashort}}](/docs/services/mobileaccess/index.html){: new_window} for more information about configuring Authentication.
+   5. See [Getting started with {{site.data.keyword.amashort}} ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/mobileaccess/index.html){: new_window} for more information about configuring Authentication.
 
 5. Generate your project code.
 
@@ -94,7 +94,7 @@ Ensure that you have installed the [prerequisite developer tools](get_code.html#
 
 2. Open the `README.md` file in a Markdown viewer to review the steps to configure your project.
 
-   1. Create your [{{site.data.keyword.visualrecognitionshort}}](https://console.{DomainName}/catalog/services/visual-recognition/){: new_window} service instance.
+   1. Create your [{{site.data.keyword.visualrecognitionshort}} ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/catalog/services/visual-recognition/){: new_window} service instance.
    
    2. Open your Terminal and navigate to your project folder.
    
@@ -124,7 +124,7 @@ Ensure that you have installed the [prerequisite developer tools](get_code.html#
 
 2. Open the `README.md` file in a Markdown viewer to configure your project.
 
-   1. Create your [{{site.data.keyword.visualrecognitionshort}}](https://console.{DomainName}/catalog/services/visual-recognition/){: new_window} service instance.
+   1. Create your [{{site.data.keyword.visualrecognitionshort}} ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/catalog/services/visual-recognition/){: new_window} service instance.
    
       Skip this step if you already have a {{site.data.keyword.visualrecognitionshort}} service instance.
    

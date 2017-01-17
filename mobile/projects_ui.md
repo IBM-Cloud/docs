@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-12-15"
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -42,7 +42,7 @@ Complete the following steps to create a project with a UI Starter:
 
 3. Design your user interface using the UI Builder.
 
-   Note: Because the Code Starters do not have a customizable user interface, the *Design* tab is not available.
+   **Note:** Because the Code Starters do not have a customizable user interface, the *Design* tab is not available.
 
     1. Select **UI Builder** in the navigation menu to customize the design of your app. 
 	
@@ -51,7 +51,7 @@ Complete the following steps to create a project with a UI Starter:
 	2. Customize your app layout from the **Screens** tab.
 	
 	3. Add new screens by selecting **Create Screen**. Name a new screen to make it easier to refer to in your app. You can select from the following types of screens: 
-	    * Menu
+		* Menu
 		* List
 		* Map
 		* Custom 
@@ -71,9 +71,9 @@ Complete the following steps to create a project with a UI Starter:
 		* Excel Online
 		* Google Drive
 	
-	You can also import, export, or modify the content that is in the table, if it is local, by using the buttons and selecting the content in the table.
+		You can also import, export, or modify the content that is in the table, if it is local, by using the buttons and selecting the content in the table.
 	     
-		 Notice: If you import data that does not match the structure of the default data, turn on the *Replace schema* slider. An example of this is a .csv file that has fewer columns than the data that is provided with your starter.
+		**Note:** If you import data that does not match the structure of the default data, turn on the *Replace schema* slider. An example of this is a .csv file that has fewer columns than the data that is provided with your starter.
 		 
 	6. Select **Navigation** to customize the navigation actions in your app. This is optional because the navigation actions for many of the screens are automatically created based on the relationships of the screens. You can change the target screen by first selecting the screen or field that you want to navigate *from* in the Menu items list. Then select the screen that you want it to navigate *to* in the Target screen field. 
 		 
@@ -87,8 +87,7 @@ Complete the following steps to create a project with a UI Starter:
 	
 	10. Select **Publish** in the navigation menu to enter the final information to create your mobile app. You can enter your Bundle identifier for iOS and the Application identifier for Android.
 	
-	If you are creating an iOS app, you must obtain your Bundle Identifier, your Distribution Certificate as a *.p12* file, and your Provisioning Profile as a *.mobileprovision* file from the Apple provisioning portal. The three should be created at the same time and with the same computer that you plan to use when you post your app to the Apple store. The Distribution Certificate and the Provisioning Profile must be based on the Bundle Identifier. 	
-
-4.  Go back to the *Project Overview* screen to retrieve the code for your app and try it out! You can download the code directly for the iOS or Android operating systems, or by scanning a QR code for the Android operating system. 
+		If you are creating an iOS app, you must obtain your Bundle Identifier, your Distribution Certificate as a `.p12` file, and your Provisioning Profile as a `.mobileprovision` file from the Apple provisioning portal. The three should be created at the same time and with the same computer that you plan to use when you post your app to the Apple store. The Distribution Certificate and the Provisioning Profile must be based on the Bundle Identifier. 	
+4. Go back to the *Project Overview* screen to retrieve the code for your app and try it out! You can download the code directly for the iOS or Android operating systems, or by scanning a QR code for the Android operating system. 
 
 
