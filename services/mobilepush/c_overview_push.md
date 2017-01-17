@@ -12,7 +12,7 @@ copyright:
 
 # About {{site.data.keyword.mobilepushshort}}
 {: #overview-push}
-Last updated: 11 January 2017
+Last updated: 16 January 2017
 {: .last-updated}
 
 IBM {{site.data.keyword.mobilepushshort}} is a service with which you can use to send notifications to devices and platforms. Notifications can be targeted to all application users or to a specific set of users and devices using tags. You can administer devices, tags, and subscriptions. You can also use an SDK (software development kit) and Representational State Transfer (REST) application program interface (APIs) to further develop your client applications. 
@@ -23,7 +23,7 @@ You can use any of the following options to create a bound or unbound service:
 
 - By creating a Bluemix application using the MobileFirst Services Starter boilerplate from the catalog. This creates a Push Notifications service bound to a Bluemix back-end application.
 - By creating an unbound Push Notifications service directly from the Mobile catalog. You can later bind to an application or even choose to use it unbound. 
-- By using the [Mobile dashboard](https://console.ng.bluemix.net/docs/mobile/services.html).
+- By using the [Mobile dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/docs/mobile/services.html){: new_window}.
 
 Note that the {{site.data.keyword.mobilepushshort}} monitoring tab does not show analytics data.
 
@@ -71,7 +71,7 @@ Platform specific Push Notifications cloud services such as FCM/GCM or Apple Pus
 - **appSecret**: The 'appSecret' protects APIs that are typically invoked by back end applications - such as the API to send {{site.data.keyword.mobilepushshort}} and the API to configure settings.
 - **clientSecret**:  The'clientSecret' protects APIs that are typically invoked by mobile client applications. There is only one API related to registration of a device with an associated UserId that requires this 'clientSecret'. None of the other APIs invoked from mobile clients require the clientSecret. 
 
-The 'appSecret' and 'clientSecret' are allocated to every service instance at the time of binding an application with {{site.data.keyword.mobilepushshort}} service. Refer to the [REST APIs](https://mobile.{DomainName}/imfpush/) documentation for information on how the secrets are to be passed and for what APIs.
+The 'appSecret' and 'clientSecret' are allocated to every service instance at the time of binding an application with {{site.data.keyword.mobilepushshort}} service. Refer to the [REST APIs ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://mobile.{DomainName}/imfpush/) documentation for information on how the secrets are to be passed and for what APIs.
 
 **Note**: Earlier applications were required to pass the clientSecret only when registering or updating devices with userId field. All other APIs invoked by mobile and browser clients did not require clientSecret. These old applications can continue to use the clientSecret optionally for device registrations or updating calls. However, it is strongly recommended that clientSecret check is enforced for all client API calls. To enforce this in existing applications, there is a new 'verifyClientSecret' API that is published.  For new applications, clientSecret check will be enforced on all client API calls and this behavior cannot be changed with the 'verfiyClientSecret' API.
 

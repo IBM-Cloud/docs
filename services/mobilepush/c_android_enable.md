@@ -12,7 +12,7 @@ years: 2015, 2017
 
 # Enabling Android applications to receive {{site.data.keyword.mobilepushshort}}
 {: #tag_based_notifications}
-Last updated: 11 January 2017
+Last updated: 16 January 2017
 {: .last-updated}
 
 You can enable Android applications to receive push notifications to your devices. Android Studio is a prerequisite and is the recommended method to build Android projects. A basic knowledge of Android Studio is essential.
@@ -22,7 +22,7 @@ You can enable Android applications to receive push notifications to your device
 
 This section describes how to install and use the client Push SDK to further develop your Android applications.
 
-Bluemix® Mobile Services Push SDK can be added using Gradle. Gradle automatically downloads artifacts from repositories and makes them available to your Android application. Ensure that you correctly set up Android Studio and the Android Studio SDK. For more information about how to set up your system, see [Android Studio Overview](https://developer.android.com/tools/studio/index.html). For information about Gradle, see [Configuring Gradle Builds](http://developer.android.com/tools/building/configuring-gradle.html).
+Bluemix® Mobile Services Push SDK can be added using Gradle. Gradle automatically downloads artifacts from repositories and makes them available to your Android application. Ensure that you correctly set up Android Studio and the Android Studio SDK. For more information about how to set up your system, see [Android Studio Overview ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.android.com/tools/studio/index.html){: new_window}. For information about Gradle, see [Configuring Gradle Builds ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://developer.android.com/tools/building/configuring-gradle.html){: new_window}.
 
 After creating and opening your mobile application, complete the following steps using the Android Studio.
 
@@ -58,7 +58,7 @@ dependencies {
 }
 ``` 
     {: codeblock}
-5. In the **AndroidManifest.xml** file, add the following permissions. To view a sample manifest, see [Android helloPush Sample Application](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml). To view a sample Gradle file, see [Sample Build Gradle file](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle).
+5. In the **AndroidManifest.xml** file, add the following permissions. To view a sample manifest, see [Android helloPush Sample Application ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml){: new_window}. To view a sample Gradle file, see [Sample Build Gradle file ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle){: new_window}.
 ```
 <uses-permission android:name="android.permission.INTERNET"/>
 <uses-permission android:name="android.permission.GET_ACCOUNTS" />
@@ -67,7 +67,7 @@ dependencies {
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 ```
 	{: codeblock}
- Read more about [Android permissions](http://developer.android.com/guide/topics/security/permissions.html) here.
+ Read more about [Android permissions ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://developer.android.com/guide/topics/security/permissions.html){: new_window} here.
 
 4. Add the notification intent settings for the activity. This setting starts the application when the user clicks the received notification from the notification area.
 ```

@@ -12,7 +12,7 @@ copyright:
 
 # Enabling Chrome Apps and Extensions to receive {{site.data.keyword.mobilepushshort}}
 {: #web_notifications}
-Last updated: 11 January 2017
+Last updated: 16 January 2017
 {: .last-updated}
 
 You can now enable Google Chrome Apps and Extensions to receive  {{site.data.keyword.mobilepushshort}}.
@@ -26,7 +26,7 @@ This topic describes how to install and use the client JavaScript Push SDK to fu
 
 For installing the Javascript SDK in Chrome Apps and Extensions, complete the steps:
 
-Download the `BMSPushSDK.js` and `manifest_Chrome_Ext.json` (For chrome Extensions) or `manifest_Chrome_App.json` (for Chrome Apps) from the [Bluemix Web push SDK](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master).
+Download the `BMSPushSDK.js` and `manifest_Chrome_Ext.json` (For chrome Extensions) or `manifest_Chrome_App.json` (for Chrome Apps) from the [Bluemix Web push SDK ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master){: new_window}.
 
 
 

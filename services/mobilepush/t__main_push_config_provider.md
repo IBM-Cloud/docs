@@ -13,9 +13,9 @@ copyright:
 
 # Configuring credentials for a notification provider
 {: #create-push-credentials}
-Last updated: 11 January 2017
+Last updated: 16 January 2017
 {: .last-updated}
 
 To set up {{site.data.keyword.mobilepushshort}} service, obtain your credentials from your push notification provider. For example- Firebase Cloud Messaging (FCM) or Apple Push Notification service (APNs). 
 
-You can set up {{site.data.keyword.mobilepushshort}} on either the **IBM Bluemix Services** Dashboard or by using the [REST APIs](https://mobile.{DomainName}/imfpush/).
+You can set up {{site.data.keyword.mobilepushshort}} on either the **IBM Bluemix Services** Dashboard or by using the [REST APIs ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://mobile.{DomainName}/imfpush/){: new_window}.

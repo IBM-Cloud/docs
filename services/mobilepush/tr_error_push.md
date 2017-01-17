@@ -12,7 +12,7 @@ copyright:
 
 # {{site.data.keyword.mobilepushshort}} service error messages
 {: #errors}
-Last updated: 11 January 2017
+Last updated: 16 January 2017
 {: .last-updated}
 
 
@@ -51,7 +51,7 @@ To obtain additional information about an error, search the docs for the related
 
 **Explanation**: Prerequisite configuration for {{site.data.keyword.mobilepushshort}} service is not complete. You might be attempting to get Apple Push Notification service (APNs) credentials before they are configured.
 
-**User response**: Ensure that {{site.data.keyword.mobilepushshort}} service has been configured with valid security certificates for the APNs. For more information, see [Configuring credentials for APNs](t_push_provider_ios.html){: new_window}.
+**User response**: Ensure that {{site.data.keyword.mobilepushshort}} service has been configured with valid security certificates for the APNs. For more information, see [Configuring credentials for APNs ![External link icon](../../icons/launch-glyph.svg "External link icon")](t_push_provider_ios.html){: new_window}.
 
 
 ## FPWSE0004E
@@ -80,7 +80,7 @@ To obtain additional information about an error, search the docs for the related
 **Explanation**: The JSON body of the request has parameters that are not understood by the {{site.data.keyword.mobilepushshort}} server.
 
 
-**User response**: Verify that the JSON body in the request follows the format of the request that is expected by the {{site.data.keyword.mobilepushshort}} server. For more information, see [REST APIs](https://mobile.{DomainName}/imfpush/).
+**User response**: Verify that the JSON body in the request follows the format of the request that is expected by the {{site.data.keyword.mobilepushshort}} server. For more information, see [REST APIs ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://mobile.{DomainName}/imfpush/){: new_window}.
 
 
 
@@ -90,7 +90,7 @@ To obtain additional information about an error, search the docs for the related
 **Explanation**: The request URL has a query string with unrecognized parameters. For example, if the request for deleting the subscription has parameters other than deviceId and tagName, this error might occur.
 
 
-**User response**:  Verify that the JSON body in the request follows the format of the request that is expected by the {{site.data.keyword.mobilepushshort}} server. For more information, see [REST APIs](https://mobile.{DomainName}/imfpush/).
+**User response**:  Verify that the JSON body in the request follows the format of the request that is expected by the {{site.data.keyword.mobilepushshort}} server. For more information, see [REST APIs ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://mobile.{DomainName}/imfpush/){: new_window}.
 
 
 
@@ -100,7 +100,7 @@ To obtain additional information about an error, search the docs for the related
 **Explanation**: The request URL has a query string with missing required parameters. For example, the deviceId and tagName parameters might be missing from the request for deleting the subscription.
 
 
-**User response**:  Verify that the JSON body in the request follows the format of the request that is expected by the {{site.data.keyword.mobilepushshort}} server. For more information, see [REST APIs](https://mobile.{DomainName}/imfpush/).
+**User response**:  Verify that the JSON body in the request follows the format of the request that is expected by the {{site.data.keyword.mobilepushshort}} server. For more information, see [REST APIs ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://mobile.{DomainName}/imfpush/){: new_window}.
 
 
 

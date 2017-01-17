@@ -12,14 +12,14 @@ copyright:
 
 # Configuring credentials for APNs
 {: #create-push-credentials-apns}
-Last updated: 11 January 2017
+Last updated: 16 January 2017
 {: .last-updated}
 
 Apple Push Notification Service (APNs) allows application developers to send remote notifications from the {{site.data.keyword.mobilepushshort}} service instance on Bluemix (the provider) to iOS devices and applications. Messages are sent to a target application on the device. 
 
 Obtain and configure your APNs credentials. The APNs certificates are securely managed by {{site.data.keyword.mobilepushshort}} service and used to connect to APNs server as a provider.
 
-<!-- 1. Obtain an [Apple Developers](https://developer.apple.com/) account.-->
+<!-- 1. Obtain an [Apple Developers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.apple.com/){: new_window} account.-->
 
 <!--2. [Register an App ID](#create-push-credentials-apns-register)
 3. [Create a development and distribution APNs SSL certificate](#create-push-credentials-apns-ssl)
@@ -36,9 +36,9 @@ Obtain and configure your APNs credentials. The APNs certificates are securely m
 
 The App ID (the bundle identifier) is a unique identifier that identifies a specific application. Each application requires an App ID. Services like the {{site.data.keyword.mobilepushshort}} service are configured to the App ID.
 
-1. Make sure you have an [Apple Developers](https://developer.apple.com/) account.
-2. Go to the [Apple Developer](https://developer.apple.com) portal, click **Member Center**, and select **Certificates, Identifiers & Profiles**.
-3. Go to the **Registering App IDs** section in the [Apple Developer Library](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW991), and follow the instructions to register the App ID.
+1. Make sure you have an [Apple Developers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.apple.com/){: new_window} account.
+2. Go to the [Apple Developer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.apple.com){: new_window} portal, click **Member Center**, and select **Certificates, Identifiers & Profiles**.
+3. Go to the **Registering App IDs** section in the [Apple Developer Library ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW991){: new_window}, and follow the instructions to register the App ID.
 
 When you register an App ID, select the following options:
 
@@ -67,7 +67,7 @@ You must obtain separate certificates for your development and distribution envi
 
 <!-- Create a development and distribution SSL certificate. -->
 
-1. Go to the [Apple Developer](https://developer.apple.com) website, click **Member Center**, and select **Certificates, Identifiers & Profiles**.
+1. Go to the [Apple Developer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.apple.com){: new_window} website, click **Member Center**, and select **Certificates, Identifiers & Profiles**.
 2. In the **Identifiers** area, click **App IDs**.
 3. From your list of App IDs, select your <!--newly created--> App ID, then select **Settings**.
 4. In the **Push Notifications** area, create a Development SSL certificate and then a Production SSL certificate.
@@ -105,8 +105,8 @@ Ensure that you have registered an App ID, enabled it for {{site.data.keyword.mo
 
 Create a development provisioning profile, as follows:
 
-1. Go to the [Apple Developer](https://developer.apple.com) portal, click **Member Center**, and select **Certificates, Identifiers & Profiles**.
-2. Go to the [Mac Developer Library ](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW62site) , scroll to the **Creating Development Provisioning Profiles** section, and follow the instructions to create a development profile.
+1. Go to the [Apple Developer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.apple.com){: new_window} portal, click **Member Center**, and select **Certificates, Identifiers & Profiles**.
+2. Go to the [Mac Developer Library ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW62site){: new_window} , scroll to the **Creating Development Provisioning Profiles** section, and follow the instructions to create a development profile.
 **Note**: When you configure a development provision profile, select the following options:
 	* **iOS App Development**
 	* **For iOS and watchOS apps**
@@ -118,7 +118,7 @@ Create a development provisioning profile, as follows:
 
 Use the store provisioning profile to submit your app for distribution to the App Store.
 
-1. Go to the [Apple Developer](https://developer.apple.com) portal, click **Member Center**, and select **Certificates, Identifiers & Profiles**.
+1. Go to the [Apple Developer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.apple.com){: new_window} portal, click **Member Center**, and select **Certificates, Identifiers & Profiles**.
 2. Double-click the downloaded provisioning profile to install it into Xcode.
 
 ##Setting up APNs on the {{site.data.keyword.mobilepushshort}} Dashboard
@@ -132,7 +132,7 @@ The certificates required for APNs are `.p12` certificates. These certificates c
 
 **Note**: After the `.cer` file is in your key chain access, export it to your computer to create a `.p12` certificate.
 
-For more information about using the APNs, see [iOS Developer Library: Local and Push Notification Programming Guide](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ProvisioningDevelopment.html#//apple_ref/doc/uid/TP40008194-CH104-SW4).
+For more information about using the APNs, see [iOS Developer Library: Local and Push Notification Programming Guide ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ProvisioningDevelopment.html#//apple_ref/doc/uid/TP40008194-CH104-SW4){: new_window}.
 
 To set up APNs on the Push Notification services dashboard, complete the steps:
 

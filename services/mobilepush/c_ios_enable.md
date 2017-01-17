@@ -12,7 +12,7 @@ copyright:
 
 #Enabling iOS applications to send {{site.data.keyword.mobilepushshort}}
 {: #enable-push-ios-notifications}
-Last updated: 11 January 2017
+Last updated: 16 January 2017
 {: .last-updated}
 
 You can enable iOS applications to send {{site.data.keyword.mobilepushshort}} to your devices.
@@ -23,7 +23,7 @@ You can enable iOS applications to send {{site.data.keyword.mobilepushshort}} to
 
 For an existing Xcode project, you can set up the Bluemix Mobile services client SDK using the CocoaPods dependency management tool. An alternative is to install the SDK manually.
 
-To view the Swift Push readme file, go to [Readme](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/tree/master).
+To view the Swift Push readme file, go to [Readme ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/tree/master){: new_window}.
 
 
 
@@ -61,7 +61,7 @@ The workspace contains your original project and Pods project that contains your
 ##Adding frameworks using Carthage
 {: #carthage}
 
-Add frameworks to your project using [Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos). Note that Carthage in Xcode8 is not supported.
+Add frameworks to your project using [Carthage ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos){: new_window}. Note that Carthage in Xcode8 is not supported.
 
 1. Add `BMSPush` frameworks to your Cartfile:
 ```
@@ -69,7 +69,7 @@ github "github "ibm-bluemix-mobile-services/bms-clientsdk-swift-push" ~> 1.0"
 ```
 	{: codeblock}
 2. Run the `carthage update` command. When the build completes, drag `BMSPush.framework`, `BMSCore.framework` and `BMSAnalyticsAPI.framework` into your Xcode project.
-3. Follow the instructions on the [Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos) site to complete the integration.
+3. Follow the instructions on the [Carthage ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos){: new_window} site to complete the integration.
 
 ##Setting up the iOS SDK
 {: ios-sdk}
@@ -99,7 +99,7 @@ Write `#import` directives for the relevant headers, for example:
 	```
 		{: codeblock}
 
-To read the Swift Push readme file, see [Readme](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/tree/master).
+To read the Swift Push readme file, see [Readme ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/tree/master){: new_window}.
 
 **Note**: Updating your Pods project using the CocoaPods commands `pod install` or `pod update` might override the Bluemix Mobile services source folders. If you want to retain your customized versions of the original files, ensure that they are backed up before you issue one of these commands.
 
@@ -109,7 +109,7 @@ To read the Swift Push readme file, see [Readme](https://github.com/ibm-bluemix-
 
 Go to **Xcode > Build Settings > Build Options and Set Enable Bitcode** to **No**.
 
-**Attention**: As of iOS 9, changes to the App Transport Security (ATS) feature might affect the way you handle the authentication process. The following blog posts describe more information about the changes: [ATS and Bitcode in iOS 9](https://developer.ibm.com/mobilefirstplatform/2015/09/09/ats-and-bitcode-in-ios9/) and [Connect your iOS 9 app to Bluemix today](https://developer.ibm.com/bluemix/2015/09/16/connect-your-ios-9-app-to-bluemix/).
+**Attention**: As of iOS 9, changes to the App Transport Security (ATS) feature might affect the way you handle the authentication process. The following blog posts describe more information about the changes: [ATS and Bitcode in iOS 9 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/mobilefirstplatform/2015/09/09/ats-and-bitcode-in-ios9/){: new_window} and [Connect your iOS 9 app to Bluemix today ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/bluemix/2015/09/16/connect-your-ios-9-app-to-bluemix/){: new_window}.
 
 ## Initializing Push SDK for iOS apps
 {: #enable-push-ios-notifications-initialize}

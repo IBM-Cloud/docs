@@ -12,7 +12,7 @@ copyright:
 
 # Monitoring for Push Notifications 
 {: #monitor-notifications}
-Last updated: 11 January 2017
+Last updated: 16 January 2017
 {: .last-updated}
 
 
