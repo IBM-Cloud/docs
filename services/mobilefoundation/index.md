@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated:  "2016-12-12"
+lastupdated:  "2017-01-17"
 
 ---
 
@@ -114,7 +114,7 @@ After you create an instance of the {{site.data.keyword.mobilefoundation_short}}
 
       * To create a {{site.data.keyword.mobilefirst_notm}} server instance with advanced configuration for topology, security, and other server configuration, click **Start Server with Advanced Configuration**. See [Setting up advanced configuration](c_using_mfs_p4.html#using_mfs_advanced_p4), for more information.
 
-Go to [Using the Mobile Foundation service to set up MobileFirst Server<!-- on IBM Containers-->](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/bluemix/using-mobile-foundation/) to learn more about how to get started with {{site.data.keyword.mobilefoundation_short}}.
+Go to [Using the Mobile Foundation service to set up MobileFirst Server<!-- on IBM Containers--> ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/bluemix/using-mobile-foundation/){: new_window} to learn more about how to get started with {{site.data.keyword.mobilefoundation_short}}.
 
 ##  Known limitations
 
@@ -127,5 +127,5 @@ Go to [Using the Mobile Foundation service to set up MobileFirst Server<!-- on I
 ## Related Links
 {: #general}
 
-*	[IBM MobileFirst Platform Foundation V8.0.0 product documentation](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html){: new_window}
-*	[IBM MobileFirst Platform Developer Center](https://mobilefirstplatform.ibmcloud.com){: new_window}
+*	[IBM MobileFirst Platform Foundation V8.0.0 product documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html){: new_window}
+*	[IBM MobileFirst Platform Developer Center ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://mobilefirstplatform.ibmcloud.com){: new_window}
