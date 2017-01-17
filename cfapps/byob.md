@@ -87,6 +87,7 @@ If is also possbile to edit your project's `manifest.yml` file to add a `buildpa
 ```
   buildpack: https://github.com/cloudfoundry/python-buildpack.git
 ```
+{:pre}
 
 
 ## Specifying the Java buildpack version
