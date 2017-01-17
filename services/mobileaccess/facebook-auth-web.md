@@ -31,7 +31,7 @@ You must have:
 To use Facebook as an identity provider on your website, you must add and configure the website platform on your Facebook application.
 
 1. Log in to your account on the [Facebook for Developers](https://developers.facebook.com) site.
-	For information on creating a new app, see [Creating an application on the Facebook for Developers website](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
+	For information on creating a new app, see [Creating an application on the Facebook for Developers website](facebook-auth-overview.html#facebook-appID).
 1. Note the **App ID** and **App Secret**. You need these values when you configure your Web project for Facebook authentication in the Mobile Client Access dashboard.
 1. From the **Products List**, choose **Facebook Login**.
 4. Add the **Web** platform, if it does not exist.
