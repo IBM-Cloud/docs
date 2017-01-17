@@ -2,13 +2,16 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-01-15"
 
 ---
 
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
+{:pre: .pre}
+
 
 # Enabling Facebook authentication for Cordova apps
 {: #facebook-auth-cordova}
@@ -148,8 +151,6 @@ The steps required to configure iOS Platform of Cordova application for Facebook
 
 Enable `Keychain Sharing`. Go to the `Capabilities` tab and switch the `Keychain Sharing` to `On` in your Xcode project.
 
-
-
 ### Initialize the {{site.data.keyword.amashort}} Authorization Manager in Objective-C
 {: #initialize_objc}
 
@@ -189,7 +190,7 @@ The Authorization Manager must be initialized in the native Objective-C code in 
 **Note:** The imported header file name is composed of your module name concatenated to the string `-Swift.h`, for example, if your module name is `Cordova` then the import line would be `#import "Cordova-Swift.h"` To find the module name go to
 `Build Settings` > `Packaging` > `Product Module Name`.
 
-Replace `<tenantId>` with your tenant id (see [Before you begin](#facebook-auth-before)).
+Replace `<tenantId>` your tenant id (see [Before you begin](#facebook-auth-before)).
 
 
 ##Initializing the  {{site.data.keyword.amashort}} client SDK in the Cordova WebView
@@ -203,7 +204,6 @@ BMSClient.initialize(<applicationBluemixRegion>);
 {: codeblock}
 
 Replace `<applicationBluemixRegion>` with your region (see [Before you begin](#facebook-auth-before)).
-
 
 ## Testing the authentication
 {: #facebook-auth-cordova-test}

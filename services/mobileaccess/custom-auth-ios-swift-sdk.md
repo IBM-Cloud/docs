@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-01-16"
 
 ---
 
@@ -20,18 +20,18 @@ Configure your iOS application that is using custom authentication to use the {{
 
 Before you begin you must have:
 
-* A resource that is protected by an instance of the {{site.data.keyword.amashort}} service that is configured to use a custom identity provider (see [Configuring custom authentication](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).  
+* A resource that is protected by an instance of the {{site.data.keyword.amashort}} service that is configured to use a custom identity provider (see [Configuring custom authentication](custom-auth-config-mca.html)).  
 * Your **TenantID** value. Open your service in the  {{site.data.keyword.amashort}} dashboard. Click the **Mobile Options** button. The `tenantId` (also known as `appGUID`)  value is displayed in the **App GUID / TenantId** field. You will need this value for intializing the Authorization Manager.
 * Your **Realm** name. This is the value you you specificed in the **Realm Name** field of the **Custom** section in the **Management** tab of the {{site.data.keyword.amashort}} dashboard.
 * The URL of your back-end application (**App Route**). You will need this values for sending requests to the protected endpoints of your back-end application.
 * Your {{site.data.keyword.Bluemix_notm}} **Region**. You can find your current {{site.data.keyword.Bluemix_notm}} region in the header, next to the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon"). The region value that appears should be one of the following: **US South**, **United Kingdom**, or **Sydney**, and correspond to the constants required in the code:  `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom`, or `BMSClient.Region.sydney`.
 
 For more information, see the following information:
- * [Getting started with {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/index.html)
- * [Setting up the iOS Swift SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html)
- * [Using a custom identity provider](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
- * [Creating a custom identity provider](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
- * [Configuring {{site.data.keyword.amashort}} for custom authentication](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
+ * [Getting started with {{site.data.keyword.amashort}}](index.html)
+ * [Setting up the iOS Swift SDK](getting-started-ios-swift-sdk.html)
+ * [Using a custom identity provider](custom-auth.html)
+ * [Creating a custom identity provider](custom-auth-identity-provider.html)
+ * [Configuring {{site.data.keyword.amashort}} for custom authentication](custom-auth-config-mca.html)
 
 ### Enable Keychain Sharing for iOS
 {: #enable_keychain}
@@ -100,7 +100,7 @@ Initialize the SDK by passing the `applicationGUID` (**TenantId**) parameter. A 
 
 In the code:
 * Replace `MCAServiceTenantId` with the **TenantId** value and `<applicationBluemixRegion>` with your {{site.data.keyword.amashort}} **Region** (see [Before you begin](##before-you-begin)).
-* Use the `realmName` that you specified in the {{site.data.keyword.amashort}} dashboard (see [Configuring custom authentication](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).
+* Use the `realmName` that you specified in the {{site.data.keyword.amashort}} dashboard (see [Configuring custom authentication](custom-auth-config-mca.html)).
 * Replace `<applicationBluemixRegion>` with the region where your {{site.data.keyword.Bluemix_notm}} application is hosted. To view your {{site.data.keyword.Bluemix_notm}} region, click the Avatar icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar to open the **Account and Support** widget.  The region value that appears should be one of the following: **US South**, **United Kingdom**, or **Sydney**, and correspond to the constants required in the code:  `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom`, or `BMSClient.Region.sydney`.
 
 

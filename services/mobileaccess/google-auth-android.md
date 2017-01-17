@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-01-15"
 
 ---
 {:new_window: target="_blank"}
@@ -35,7 +35,7 @@ Setting up Google authentication for your {{site.data.keyword.amashort}} Android
 ## Creating a project on the Google Developer Console
 {: #create-google-project}
 
-To start using Google as an identity provider, create a project in the [Google Developer Console](https://console.developers.google.com).
+To start using Google as an identity provider, create a project in the [Google Developer Console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.developers.google.com){: new_window}.
 Part of creating a project is to obtain a Google Client ID.  The Google Client ID is a unique identifier for your application used by Google authentication, and is needed for setting up the{{site.data.keyword.amashort}} service.
 
 From the console:
@@ -53,7 +53,7 @@ To complete the credentials creation, you need to add the **signing certificate 
 
 For Google to verify your application authenticity, you must specify a signing certificate fingerprint.
 
-The Android OS requires all applications that are installed on an Android device to be signed with a developer certificate. An Android application can be built in two modes: debug and release. It is usually advised to have different certificates for debug and release modes.  Certificates that are used for signing Android applications in debug mode are bundled with Android SDK.  The Android SDK is usually installed automatically by Android Studio. When you want to release your application to Google Play, you must sign the app with another certificate, which you usually generate yourself. For more information, see [signing your Android applications](http://developer.android.com/tools/publishing/app-signing.html).
+The Android OS requires all applications that are installed on an Android device to be signed with a developer certificate. An Android application can be built in two modes: debug and release. It is usually advised to have different certificates for debug and release modes.  Certificates that are used for signing Android applications in debug mode are bundled with Android SDK.  The Android SDK is usually installed automatically by Android Studio. When you want to release your application to Google Play, you must sign the app with another certificate, which you usually generate yourself. For more information, see [signing your Android applications ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://developer.android.com/tools/publishing/app-signing.html){: new_window}.
 
 A keystore that contains a certificate for development environments is stored in a `~/.android/debug.keystore` file. The default keystore password is `android`. This certificate is used to build applications in debug mode.
 
@@ -156,7 +156,7 @@ From your Android Studio project.
 
 	For more information on obtaining these values, see [Before you begin](##before-you-begin).
 
-	**Note:** If your Android application is targeting Android version 6.0 (API level 23) or higher, you must ensure that the application has an `android.permission.GET_ACCOUNTS` call before calling `register`. For more information, see [https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}.
+	**Note:** If your Android application is targeting Android version 6.0 (API level 23) or higher, you must ensure that the application has an `android.permission.GET_ACCOUNTS` call before calling `register`. For more information, see [Requesting permissions on Android ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.android.com/training/permissions/requesting.html){: new_window}.
 
 1. Add the following code to your Activity:
 
@@ -175,7 +175,7 @@ From your Android Studio project.
 
 After the client SDK is initialized and the Google Authentication Manager is registered, you can start making requests to your back-end application.
 
-Before you begin testing, you must have a mobile back-end application that was created with the **MobileFirst Services Starter** boilerplate, and already have a resource protected by the {{site.data.keyword.amashort}} `/protected` endpoint. For more information, see [Protecting resources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
+Before you begin testing, you must have a mobile back-end application that was created with the **MobileFirst Services Starter** boilerplate, and already have a resource protected by the {{site.data.keyword.amashort}} `/protected` endpoint. For more information, see [Protecting resources](protecting-resources.html).
 
 1. Try to send a request to the protected endpoint of your mobile back-end application in your desktop browser by opening `{applicationRoute}/protected`, for example: `http://my-mobile-backend.mybluemix.net/protected`.  For information on obtaining the `{applicationRoute}` value, see [Before you begin](#before-you-begin).
 

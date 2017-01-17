@@ -19,14 +19,14 @@ You can use the {{site.data.keyword.amashort}} server SDK to protect resources i
 {: #before-you-begin}
 
 * You must be familiar with developing Node.js applications on {{site.data.keyword.Bluemix_notm}}. For more information, see [Creating apps with SDK for Node.js](https://console.{DomainName}/docs/runtimes/nodejs/index.html#nodejs_runtime).
-* The {{site.data.keyword.amashort}} server SDK requires that your Node.js server is implemented with the `Express` framework. Note that there are other frameworks that use `Express` frameworks, such as LoopBack. You can use the {{site.data.keyword.amashort}} server SDK with any of these frameworks. For more information about the Express framework, see [Expressjs.com](http://expressjs.com/).
+* The {{site.data.keyword.amashort}} server SDK requires that your Node.js server is implemented with the `Express` framework. Note that there are other frameworks that use `Express` frameworks, such as LoopBack. You can use the {{site.data.keyword.amashort}} server SDK with any of these frameworks. For more information about the Express framework, see [Expressjs.com ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://expressjs.com/){: new_window}.
 
 ## About the  server SDK
 {: #about}
 
 The {{site.data.keyword.amashort}} server SDK provides a `MCABackendStrategy` passport strategy, to be used in back-end applications deployed on IBM {{site.data.keyword.Bluemix_notm}}. To protect your app from unauthorized access and get monitoring information, you must instrument your Node.js server with the `MCABackendStrategy`. The `bms-mca-token-validation-strategy` npm module provides the `MCABackendStrategy` passport strategy and verification method to validate the access token and ID token that was issued by {{site.data.keyword.amashort}}. This module also automatically supplies monitoring information about security events.
 
-The {{site.data.keyword.amashort}} server SDK uses the `Passport` framework to enforce authorization.  For more information, see [Passportjs.org](http://passportjs.org/).
+The {{site.data.keyword.amashort}} server SDK uses the `Passport` framework to enforce authorization.  For more information, see [Passportjs.org ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://passportjs.org/){: new_window}.
 
 ## Installing the  server SDK
 {: #protecting-resources-serversdk}

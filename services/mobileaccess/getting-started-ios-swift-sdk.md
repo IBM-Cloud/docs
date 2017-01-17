@@ -2,13 +2,16 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-01-15"
 
 ---
 
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:codeblock:.codeblock}
+{:codeblock: .codeblock}
+{:pre: .pre}
+
 
 # Setting up the iOS Swift SDK
 {: #getting-started-ios}
@@ -27,7 +30,7 @@ You must have:
 * Your **TenantID**. Open your service in the {{site.data.keyword.amashort}} dashboard. Click **Mobile Options**. The `tenantId` (also known as `appGUID`)  values are displayed in the  **App GUID / TenantId** field. You will need this value for intializing the {{site.data.keyword.amashort}} Authorization Manager.
 * Your **Application Route**. This is the URL of your back-end application. You need this value for for sending requests to its protected endpoints.
 * Your {{site.data.keyword.Bluemix_notm}} **Region**.  You can find your current {{site.data.keyword.Bluemix_notm}} region in the header, next to the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon"). The region value that appears should be one of the following: `US South`,  `Sydney`, or  `United Kingdom`, and correspond to the SDK values required in the code: `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom`, or `BMSClient.Region.sydney`.  You will need this value for intializing the {{site.data.keyword.amashort}}  SDK.
-* An Xcode project. For more information about how to set up your iOS development environment, see the [Apple Developer website](https://developer.apple.com/support/xcode/).
+* An Xcode project. For more information about how to set up your iOS development environment, see the [Apple Developer website ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.apple.com/support/xcode/){: new_window}.
 
 
 ## Installing the {{site.data.keyword.amashort}} client SDK
@@ -47,7 +50,7 @@ sudo gem install cocoapods
 ```
 {: codeblock}
 
-For more information, see the [CocoaPods website](https://cocoapods.org/).
+For more information, see the [CocoaPods website ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cocoapods.org/){: new_window}.
 
 ### Install the {{site.data.keyword.amashort}} client SDK with CocoaPods
 {: #install-sdk-cocoapods}

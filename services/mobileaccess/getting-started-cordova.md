@@ -2,12 +2,16 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-01-15"
 
 ---
 
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
 {:codeblock: .codeblock}
+{:pre: .pre}
+
 
 # Setting up the Cordova plug-in
 {: #getting-started-cordova}
@@ -25,7 +29,7 @@ You must have:
 * The URL of your back-end application (**App Route**). You will need this values for sending requests to the protected endpoints of your back-end application.
 * Your **TenantID** value. Open your service in the  {{site.data.keyword.amashort}} dashboard. Click the **Mobile Options** button. The `tenantId` (also known as `appGUID`)  value is displayed in the **App GUID / TenantId** field. You will need this value for intializing the Authorization Manager.
 * Your {{site.data.keyword.Bluemix_notm}} **Region**. You can find your current {{site.data.keyword.Bluemix_notm}} region in the header, next to the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon"). The region value that appears should be one of the following: `US South`, `United Kingdom`, or `Sydney`, and correspond to the SDK values required in the WebView Javascript code: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY`, or `BMSClient.REGION_UK`. You will need this value for initializing the {{site.data.keyword.amashort}} client.
-* A  Cordova application or an existing project. For more information about how to set up your Cordova application, see the [Cordova website](https://cordova.apache.org/).
+* A  Cordova application or an existing project. For more information about how to set up your Cordova application, see the [Cordova website ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cordova.apache.org/){: new_window}.
 
 ## Installing the {{site.data.keyword.amashort}} Cordova plug-in
 {: #getting-started-cordova-plugin}
@@ -61,7 +65,7 @@ The {{site.data.keyword.amashort}} client SDK for Cordova is a Cordova plug-in t
 	```
 	{: codeblock}
 
-	The *minSdkVersion* value must be higher than `15`. Refer to the [Android Platform Guide](https://cordova.apache.org/docs/en/latest/guide/platforms/android/) to stay current with the supported *targetSdkVersion* for the Android SDK.
+	The *minSdkVersion* value must be `15` or higher. Refer to the [Android Platform Guide ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cordova.apache.org/docs/en/latest/guide/platforms/android/){: new_window} to stay current with the supported *targetSdkVersion* for the Android SDK.
 
 3. If you added the iOS operating system, update the `<platform name="ios">` element with a target declaration:
 
@@ -103,7 +107,7 @@ The {{site.data.keyword.amashort}} client SDK for Cordova is a Cordova plug-in t
 
 	2. Build and run your application with Xcode.
 
-	**Note**: You may receive the following error when running `cordova build ios`. This issue is due to a bug in a dependency plugin which is being tracked in [Issue 12](https://github.com/blakgeek/cordova-plugin-cocoapods-support/issues/12). You can still run the iOS project in XCode through a simulator or device.
+	**Note**: You may receive the following error when running `cordova build ios`. This issue is due to a bug in a dependency plugin which is being tracked in [Issue 12 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/blakgeek/cordova-plugin-cocoapods-support/issues/12){: new_window}. You can still run the iOS project in XCode through a simulator or device.
 
 	```
 	xcodebuild: error: Unable to find a destination matching the provided destination specifier:

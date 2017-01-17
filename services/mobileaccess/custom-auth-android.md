@@ -2,13 +2,16 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-08"
+lastupdated: "2017-01-15"
 
 ---
 
+
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 
 # Configuring custom authentication for your {{site.data.keyword.amashort}} Android app
@@ -21,18 +24,18 @@ Configure your Android application with custom authentication to use the {{site.
 {: #before-you-begin}
 Before you begin you must have:
 
-* A resource that is protected by an instance of the {{site.data.keyword.amashort}} service that is configured to use a custom identity provider (see [Configuring custom authentication](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).  
+* A resource that is protected by an instance of the {{site.data.keyword.amashort}} service that is configured to use a custom identity provider (see [Configuring custom authentication](custom-auth-config-mca.html)).  
 * Your **TenantID** value. Open your service in the  {{site.data.keyword.amashort}} dashboard. Click the **Mobile Options** button. The `tenantId` (also known as `appGUID`)  value is displayed in the **App GUID / TenantId** field. You will need this value for intializing the Authorization Manager.
 * Your **Realm** name. This is the value you you specificed in the **Realm Name** field of the **Custom** section in the **Management** tab of the {{site.data.keyword.amashort}} dashboard.
 * The URL of your back-end application (**App Route**). You will need this values for sending requests to the protected endpoints of your back-end application.
 * Your {{site.data.keyword.Bluemix_notm}} **Region**. You can find your current {{site.data.keyword.Bluemix_notm}} region in the header, next to the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon"). The region value that appears should be one of the following: `US South`, `United Kingdom`, or `Sydney`, and correspond to the SDK values required in the WebView Javascript code: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY`, or `BMSClient.REGION_UK`. You will need this value for initializing the {{site.data.keyword.amashort}} client.
 
 For more information, see the following information:
- * [Getting started with {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
- * [Setting up Android SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html)
- * [Using a custom identity provider](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
- * [Creating a custom identity provider](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
- * [Configuring {{site.data.keyword.amashort}} for custom authentication](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
+ * [Getting started with {{site.data.keyword.amashort}}](getting-started.html)
+ * [Setting up Android SDK](getting-started-android.html)
+ * [Using a custom identity provider](custom-auth.html)
+ * [Creating a custom identity provider](custom-auth-identity-provider.html)
+ * [Configuring {{site.data.keyword.amashort}} for custom authentication](custom-auth-config-mca.html)
 
 
 
@@ -73,7 +76,7 @@ Add the internet access permission under the `<manifest>` element:
 	```
 	{: codeblock}
 
-Replace the `BMSClient.REGION_UK` with the {{site.data.keyword.amashort}} region. For more information on obtaining these values see  [Before you begin](#before-you-begin)).
+Replace the `BMSClient.REGION_UK` with the {{site.data.keyword.amashort}} region. For more information on obtaining these values see  [Before you begin](#before-you-begin).
 
 
 ## AuthenticationListener interface
@@ -110,7 +113,7 @@ void onAuthenticationSuccess(Context context, JSONObject info);
 
 ### onAuthenticationFailure method
 {: #custom-android-authlistener-onfail}
-Call this method after authentication fails. The arguments include Android Context and an optional JSONObject that contains extended information about authentication failure.
+Call this method after authentication fails. The arguments include Android Context and an optional `JSONObject` that contains extended information about authentication failure.
 ```Java
 void onAuthenticationFailure(Context context, JSONObject info);
 ```
@@ -134,7 +137,7 @@ void submitAuthenticationFailure (JSONObject info);
 ## Sample implementation of a custom AuthenticationListener
 {: #custom-android-samplecustom}
 
-This AuthenticationListener sample is designed to work with a custom identity provider. You can download this sample from the [Github repository](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample).
+This AuthenticationListener sample is designed to work with a custom identity provider. You can download this sample from the [Github repository ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample){: new_window}.
 
 ```Java
 package com.ibm.helloworld;
@@ -208,7 +211,7 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 
 In the code:
 * Replace `MCAServiceTenantId` with the **TenantId** value (see [Before you begin](##before-you-begin)).
-* Use the `realmName` that you specified in the {{site.data.keyword.amashort}} dashboard (see [Configuring custom authentication](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).
+* Use the `realmName` that you specified in the {{site.data.keyword.amashort}} dashboard (see [Configuring custom authentication](custom-auth-config-mca.html)).
 
 
 ## Testing the authentication
