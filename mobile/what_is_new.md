@@ -2,15 +2,13 @@
 
 copyright:
   years: 2016, 2017
-
-lastupdated: "2016-12-15"
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
 
 # What's new in the Mobile dashboard
 {: #what_is_new}
-
 
 ### New as of: December 2016
 {: #dec-2016}
@@ -24,8 +22,6 @@ The December 2016 update of the {{site.data.keyword.Bluemix}} Mobile dashboard i
    * You can customize the navigation design of the app that you are creating with a UI starter. 
    
 
-
-
 ### New as of: November 2016
 {: #nov-2016}
 
@@ -33,8 +29,8 @@ The November 2016 update of the {{site.data.keyword.Bluemix}} Mobile dashboard i
 
    * You can now generate SDK artifacts for your projects from the **Code** page.
    * Cordova is now supported for the Basic Code Starter.
-   * You can now [report network events](/docs/services/mobileanalytics/sdk.html#network-requests){: new_window} and [monitor network requests](/docs/services/mobileanalytics/app-monitoring.html#monitor-network-requests){: new_window} in the **Network Requests** page of the {{site.data.keyword.mobileanalytics_short}} Console.
-   * You can now [export data to dashDB](/docs/services/mobileanalytics/app-monitoring.html#dashdb){: new_window} in the {{site.data.keyword.mobileanalytics_short}} Console.
+   * You can now [report network events ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/mobileanalytics/sdk.html#network-requests){: new_window} and [monitor network requests ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/mobileanalytics/app-monitoring.html#monitor-network-requests){: new_window} in the **Network Requests** page of the {{site.data.keyword.mobileanalytics_short}} Console.
+   * You can now [export data to dashDB ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/mobileanalytics/app-monitoring.html#dashdb){: new_window} in the {{site.data.keyword.mobileanalytics_short}} Console.
 
 
 ### New as of October 2016

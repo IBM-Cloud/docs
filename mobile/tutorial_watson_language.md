@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-10-21"
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -16,8 +16,8 @@ The {{site.data.keyword.Bluemix}} Mobile Code Starter for Watson Language showca
 ## Requirements
 {: #tutorial_requirements}
 
-* A [Bluemix](http://bluemix.net) Account
-* [Language Translator](https://console.{DomainName}/catalog/services/language-translator/) and [Text to Speech](https://console.{DomainName}/catalog/services/text-to-speech/) service instances obtained from the [Bluemix Catalog](https://console.{DomainName}/catalog/)
+* A [Bluemix ![External link icon](../icons/launch-glyph.svg "External link icon")](http://bluemix.net) Account
+* [Language Translator ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/catalog/services/language-translator/) and [Text to Speech ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/catalog/services/text-to-speech/) service instances obtained from the [Bluemix Catalog ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/catalog/)
 
 
 ## Getting Started
@@ -45,9 +45,9 @@ To get up and running quickly with the Watson Language Code Starter, follow thes
 
    2. Enter your service name and click **Create**.
 
-   3. For iOS, [configure Apple Push Notification Service](/docs/services/mobilepush/t_push_provider_ios.html){: new_window}.
+   3. For iOS, [configure Apple Push Notification Service ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/mobilepush/t_push_provider_ios.html){: new_window}.
 
-   4. For Android, [configure Google Cloud Messaging](/docs/services/mobilepush/t_push_provider_android.html){: new_window}.
+   4. For Android, [configure Google Cloud Messaging ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/mobilepush/t_push_provider_android.html){: new_window}.
    
 3. Optional: Add the Analytics capability.
 
@@ -58,6 +58,8 @@ To get up and running quickly with the Watson Language Code Starter, follow thes
    2. Enter your service name and click **Create**.
    
    3. Toggle off **Demo Mode** to see your analytics data after you run your app.
+
+   4. See [Getting started with {{site.data.keyword.mobileanalytics_short}} ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/mobileanalytics/index.html){: new_window} for more information about configuring Analytics.
 
 4. Optional: Add the Authentication capability.
 
@@ -71,7 +73,7 @@ To get up and running quickly with the Watson Language Code Starter, follow thes
    
    4. Select your identity provider and enter the required information to configure it. You can enable only one identity provider.
 
-   5. See [Getting started with Mobile Client Access](/docs/services/mobileaccess/index.html){: new_window} for more information about configuring authentication.
+   5. See [Getting started with Mobile Client Access ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/mobileaccess/index.html){: new_window} for more information about configuring authentication.
 
 5. Download your project.
 
@@ -85,7 +87,7 @@ To get up and running quickly with the Watson Language Code Starter, follow thes
 ## What to do next
 {: #tutorial_next}
 
-[Try it out!](http://console.{DomainName}/mobile/create-project?starter=512568a1-72db-35c7-b9c4-4f3e3bc89375){: new_window}
+[Try it out! ![External link icon](../icons/launch-glyph.svg "External link icon")](http://console.{DomainName}/mobile/create-project?starter=512568a1-72db-35c7-b9c4-4f3e3bc89375){: new_window}
 
 
 

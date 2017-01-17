@@ -2,10 +2,9 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-12-02"
+lastupdated: "2017-01-17"
 
 ---
-
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -21,7 +20,7 @@ The following end-to-end tutorial walks through the steps to create a project fr
 ### Installing developer tools
 {: #dev_tools}
 
-Ensure that you have installed the [prerequisite developer tools](get_code.html#prereq-dev-tools){: new_window}.
+Ensure that you have installed the [prerequisite developer tools ![External link icon](../icons/launch-glyph.svg "External link icon")](get_code.html#prereq-dev-tools){: new_window}.
 
 
 ### Creating a project from the Cloudant Sync Code Starter
@@ -51,8 +50,6 @@ Ensure that you have installed the [prerequisite developer tools](get_code.html#
 
    3. Optional: If you chose to add an existing service instance, select your service instance from the list and click **Add Existing**.
 
-  
-
    4. Click the **Menu** icon in your service tile and select **Launch...** to launch your service instance.
 
       1. Click **LAUNCH** to launch your {{site.data.keyword.cloudant}} console.
@@ -69,7 +66,7 @@ Ensure that you have installed the [prerequisite developer tools](get_code.html#
 
    2. Enter your service name and click **Create**.
 
-   3. For Android, [configure Firebase Cloud Messaging](/docs/services/mobilepush/t_push_provider_android.html){: new_window}.
+   3. For Android, [configure Firebase Cloud Messaging ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/mobilepush/t_push_provider_android.html){: new_window}.
    
 4. Optional: Add the Analytics capability.
 
@@ -81,7 +78,7 @@ Ensure that you have installed the [prerequisite developer tools](get_code.html#
    
    3. Toggle off **Demo Mode** to see your analytics data after you run your app.
    
-   4. See [Getting started with {{site.data.keyword.mobileanalytics_short}}](/docs/services/mobileanalytics/index.html){: new_window} for more information about configuring Analytics.
+   4. See [Getting started with {{site.data.keyword.mobileanalytics_short}} ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/mobileanalytics/index.html){: new_window} for more information about configuring Analytics.
   
 5. Optional: Add the Authentication capability.
 
@@ -95,7 +92,7 @@ Ensure that you have installed the [prerequisite developer tools](get_code.html#
    
    4. Select your identity provider and enter the required information to configure it. You can enable only one identity provider.
 
-   5. See [Getting started with {{site.data.keyword.amashort}}](/docs/services/mobileaccess/index.html){: new_window} for more information about configuring Authentication.
+   5. See [Getting started with {{site.data.keyword.amashort}} ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/mobileaccess/index.html){: new_window} for more information about configuring Authentication.
 
 6. Generate your project code.
 

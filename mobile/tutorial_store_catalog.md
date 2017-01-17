@@ -5,7 +5,6 @@ copyright:
 lastupdated: "2016-12-15"
 
 ---
-
 {:new_window: target="_blank"}
 
 # Tutorial - Store Catalog UI Starter
@@ -17,7 +16,7 @@ The {{site.data.keyword.Bluemix}} Store Catalog UI Starter provides a basic sale
 ## Requirements
 {: #tutorial_requirements}
 
-* A [Bluemix](http://bluemix.net) Account
+* A [Bluemix ![External link icon](../icons/launch-glyph.svg "External link icon")](http://bluemix.net) Account
 
 
 ## Getting Started
@@ -45,9 +44,9 @@ To get up and running quickly with the Store Catalog UI Starter, follow these st
 
    2. Enter your service name and click **Create**.
 
-   3. For iOS, [configure Apple Push Notification Service](/docs/services/mobilepush/t_push_provider_ios.html){: new_window}.
+   3. For iOS, [configure Apple Push Notification Service ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/mobilepush/t_push_provider_ios.html){: new_window}.
 
-   4. For Android, [configure Google Cloud Messaging](/docs/services/mobilepush/t_push_provider_android.html){: new_window}.
+   4. For Android, [configure Google Cloud Messaging ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/mobilepush/t_push_provider_android.html){: new_window}.
 
 3. Optional: Add other capabilities.
 
@@ -128,7 +127,7 @@ To get up and running quickly with the Store Catalog UI Starter, follow these st
 ## What to do next
 {: #tutorial_next}
 
-[Try it out!](http://console.{DomainName}/mobile/create-project?starter=fb5e31a9-1186-4d46-939e-2f620f35b83b){: new_window}
+[Try it out! ![External link icon](../icons/launch-glyph.svg "External link icon")](http://console.{DomainName}/mobile/create-project?starter=fb5e31a9-1186-4d46-939e-2f620f35b83b){: new_window}
 
 
 ### UI Starter tutorials
