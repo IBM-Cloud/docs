@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-05"
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -18,7 +18,7 @@ If the {{site.data.keyword.objectstorageshort}} service is bound to your Cloud F
 
 You can maintain your saved data and unbind the service from your Cloud Foundry app. The {{site.data.keyword.objectstorageshort}} account is not deleted until the service is deprovisioned.
 
-**Attention**: If you unbind an {{site.data.keyword.objectstorageshort}} instance from a {{site.data.keyword.Bluemix_notm}} application, or delete the service key, all of your credentials for that instance are deleted, and cannot be restored. You can generate new cloud credentials by rebinding or creating a new service key.
+**Attention**: If you unbind an {{site.data.keyword.objectstorageshort}} instance from a {{site.data.keyword.Bluemix_notm}} application, or delete the service key, all of your credentials for that instance are deleted, and cannot be restored. You can generate new cloud credentials by rebinding your instance, or by creating a new service key.
 
 1. To see the services that are bound to your app, click the connections tab in your Cloud Foundry application.
 2. Locate the service you that you want to unbind and click the menu button on the service tile.

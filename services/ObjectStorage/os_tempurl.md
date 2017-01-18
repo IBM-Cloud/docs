@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-05"
+lastupdated: "2017-01-17"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2017-01-05"
 
 # Creating a temporary URL {: #create-temporary-url}
 
-A temporary URL is a long, difficult-to-guess URL that can be used for a specified period to download objects without requiring further authentication.
+A temporary URL is a long, difficult-to-guess URL that can be used for a specified period of time to download objects without requiring further authentication or giving full access to the storage account.
 {: shortdesc}
 
 
