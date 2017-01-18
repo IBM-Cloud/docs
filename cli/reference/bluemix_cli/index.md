@@ -117,8 +117,8 @@ To install from a remote server, take the following steps:
 
 You can also install a plug-in from the repository. {{site.data.keyword.Bluemix_notm}} has repositories that host {{site.data.keyword.Bluemix_notm}} CLI plug-ins and Cloud Foundry CLI plug-ins:
 
-  * [Cloud Foundry CLI plug-ins repository ![External link icon](![External link icon](../../../icons/launch-glyph.svg)../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){: new_window}, which hosts plug-ins for Cloud Foundry CLI.
-  * [{{site.data.keyword.Bluemix_notm}} CLI plug-ins repository ![External link icon](![External link icon](../../../icons/launch-glyph.svg)../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window}, which hosts plug-ins specifically for {{site.data.keyword.Bluemix_notm}} CLI.
+  * [Cloud Foundry CLI plug-ins repository ![External link icon](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){: new_window}, which hosts plug-ins for Cloud Foundry CLI.
+  * [{{site.data.keyword.Bluemix_notm}} CLI plug-ins repository ![External link icon](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window}, which hosts plug-ins specifically for {{site.data.keyword.Bluemix_notm}} CLI.
 
 To install from the repository, take the following steps:
 
@@ -825,7 +825,7 @@ bluemix scale my-java-app -i 3 -k 8G -m 1024M
 ### bluemix curl
 {: #bluemix_curl}
 
-Execute a raw HTTP request to {{site.data.keyword.Bluemix_notm}}. *Content-Type* is set to *application/json* by default. This command sends the request to {{site.data.keyword.Bluemix_notm}} Multi-Cloud Control Proxy. For supported paths, refer to the API path definitions in the [CloudFoundry API document ![External link icon](..![External link icon](../../../icons/launch-glyph.svg)/icons/launch-glyph.svg)](http://apidocs.cloudfoundry.org/){: new_window}.
+Execute a raw HTTP request to {{site.data.keyword.Bluemix_notm}}. *Content-Type* is set to *application/json* by default. This command sends the request to {{site.data.keyword.Bluemix_notm}} Multi-Cloud Control Proxy. For supported paths, refer to the API path definitions in the [CloudFoundry API document ![External link icon](../../../icons/launch-glyph.svg)](http://apidocs.cloudfoundry.org/){: new_window}.
 
 ```
 bluemix curl PATH [OPTIONS...]
