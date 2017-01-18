@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-11-29"
 
 ---
 
@@ -11,63 +12,39 @@ copyright:
 
 
 # Starter-App verwenden
-*Letzte Aktualisierung: 15. September 2016*
-{: .last-updated}
-
-Erstellen Sie in der Starter-App für {{site.data.keyword.iotelectronics_full}} simulierte Appliances. Erfahren Sie, wie ein Produktionsunternehmen Appliances überwachen kann, die mit {{site.data.keyword.iot_short_notm}} verbunden sind. Interagieren Sie manuell mit simulierten Appliances, um Alerts, Benachrichtigungen und Aktionen auszulösen.
+Erstellen Sie simulierte Appliances in der {{site.data.keyword.iotelectronics_full}}-Starter-App und bekommen Sie einen Eindruck davon, wie ein EM (Enterprise Manufacturer) Appliances überwachen kann, die mit der {{site.data.keyword.iot_short_notm}} verbunden sind. Sie können manuell mit der simulierten Appliance interagieren, um Alerts, Benachrichtigungen und Aktionen auszulösen.
 {:shortdesc}
 
 
 ## Starter-App öffnen
-{: #iot4e_openAppMain}
-
-Da der Prozess zum Öffnen der Starter-App je nach Version Ihrer {{site.data.keyword.Bluemix_notm}}-Konsole variiert, lesen Sie die Anweisungen zur entsprechenden Version.
-
-Sie können die verwendete Version bestimmen, indem Sie nach den folgenden Optionen suchen:
-  - [Neue {{site.data.keyword.Bluemix_notm}}](#iot4e_openApp)-Ansicht. Wenn Sie die neue {{site.data.keyword.Bluemix_notm}}-Ansicht verwenden, wird **Neue Bluemix-Ansicht testen** *nicht* im Abschnitt oben angezeigt.
-  - [Klassische {{site.data.keyword.Bluemix_notm}}](#iot4e_openApp_c)-Ansicht. Wenn Sie die klassische {{site.data.keyword.Bluemix_notm}}-Ansicht verwenden, wird **Neue Bluemix-Ansicht testen** im Abschnitt oben angezeigt.  
-
-**Tipp:** Um zur klassischen {{site.data.keyword.Bluemix_notm}}-Ansicht zu wechseln, klicken Sie im Abschnitt oben auf den Benutzernamen, blättern Sie nach unten und klicken Sie auf **Zu klassischer Ansicht wechseln**. Um zur neuen {{site.data.keyword.Bluemix_notm}}-Ansicht zu wechseln, klicken Sie auf **Neue Bluemix-Ansicht testen** im Abschnitt oben.
-
-### Öffnen Sie die Starter-App in der neuen {{site.data.keyword.Bluemix_notm}}-Ansicht.
 {: #iot4e_openApp}
-1. Starten Sie im {{site.data.keyword.Bluemix_notm}}-Dashboard Ihre {{site.data.keyword.iotelectronics}}-Starteranwendung, indem Sie auf die Kachel für die Starteranwendung klicken.
 
-    ![{{site.data.keyword.iotelectronics}} im Dashboard, neue Ansicht.](images/IoT4E_bm_dashboard.png "{{site.data.keyword.iotelectronics}} im Dashboard, neue Ansicht")
+1. Starten Sie in Ihrem {{site.data.keyword.Bluemix_notm}}-Dashboard Ihre {{site.data.keyword.iotelectronics}}-Starteranwendung, indem Sie auf die Kachel für die Starteranwendung klicken.
 
-2. Warten Sie, bis die Statusnachricht *Ihre App ist aktiv* im Header angezeigt wird, und klicken Sie anschließend auf **App anzeigen**, um die Starter-App anzuzeigen.   
+    ![{{site.data.keyword.iotelectronics}} im Dashboard.](images/IoT4E_bm_dashboard.svg "{{site.data.keyword.iotelectronics}} im Dashboard")
 
-    ![{{site.data.keyword.iotelectronics}} im Dashboard, neue Ansicht.](images/IoT4E_view_app.png "{{site.data.keyword.iotelectronics}} im Dashboard, neue Ansicht")
+2. Warten Sie, bis die Statusnachricht *Ihre App ist aktiv* im Header angezeigt wird, und klicken Sie anschließend auf **App anzeigen**, um die Starter-App anzuzeigen.  
 
-### Öffnen Sie die Starter-App in der klassischen {{site.data.keyword.Bluemix_notm}}-Ansicht.
-{: #iot4e_openApp_c}
+    ![{{site.data.keyword.iotelectronics}} - App anzeigen.](images/IoT4E_view_app.svg "{{site.data.keyword.iotelectronics}} - App anzeigen")
 
-1. Starten Sie im {{site.data.keyword.Bluemix_notm}}-Dashboard Ihre {{site.data.keyword.iotelectronics}}-Starteranwendung, indem Sie auf die Kachel für die Starteranwendung klicken.
+## Simulierte Appliances erstellen
+{: #create_sim}
 
-    ![{{site.data.keyword.iotelectronics}} im Dashboard, klassische Ansicht.](images/IoT4E_bm_dashboard_c.png "{{site.data.keyword.iotelectronics}} im Dashboard, klassische Ansicht")
+In der Starter-App können Sie simulierte Appliances wie der Appliancehersteller oder ein Konsument erstellen und steuern. Status- und Ereignisdaten für diese simulierten Appliances werden gespeichert und können in {{site.data.keyword.iot_full}} angezeigt werden.
 
-2. Warten Sie, bis die Statusnachricht *Ihre App ist aktiv* im Abschnitt 'Anwendungsstatus' angezeigt wird, und klicken Sie im Hauptfenster beim Anwendungsnamen auf die **Routes**-URL, um die Starter-App anzuzeigen.  
+1. Wählen Sie eine der folgenden Optionen aus:
+    - **Verbinden und verwalten simulierter Appliances** zur Erstellung simulierter Appliances wie der Appliancehersteller
+    - **Steuern der eigenen verbundenen Appliances per Fernzugriff** zur Erstellung simulierter Appliances sowie zur Herstellung einer Verbindung mit dem [Beispiel einer mobilen App](iotelectronics_config_mobile.html) wie der Applianceeigner.
 
-    ![{{site.data.keyword.iotelectronics}} im Dashboard, klassische Ansicht.](images/IoT4E_view_app_c.png "{{site.data.keyword.iotelectronics}} im Dashboard")
+    ![{{site.data.keyword.iotelectronics}} Starter Experience](images/IoT4E_remotely_option.svg "{{site.data.keyword.iotelectronics}} Starter Experience")
 
-## Simulierte Appliance erstellen
-{: #iot4eCreateAppliances}
+2. Blättern Sie bis zu dem Abschnitt mit dem Titel **Wählen Sie nun eine simulierte Waschmaschine aus oder erstellen Sie eine neue Waschmaschine** und klicken Sie auf das Plussymbol. Es wird eine neue Waschmaschine erstellt.
 
-In der Starter-App können Sie simulierte Appliances als Appliance-Hersteller oder als Nutzer erstellen und steuern. Die Status- und Ereignisdaten für diese simulierten Appliances werden gespeichert und können in {{site.data.keyword.iot_full}} angezeigt werden.
+    ![Waschmaschine hinzufügen.](images/IoT4E_add_washer.svg "Waschmaschine hinzufügen")
 
-1. Wählen Sie eine der folgenden Optionen:
-    - **Verbinden und verwalten Sie simulierte Appliances**, um als Appliance-Hersteller simulierte Appliances zu erstellen.
-    - **Steuern Sie Ihre verbundenen Appliances über Fernzugriff**, um als Appliance-Eigentümer simulierte Appliances zu erstellen und mit der [mobilen Beispiel-App](iotelectronics_config_mobile.html) zu verbinden.
+3. Um Details zu Ihrer Waschmaschine anzuzeigen, Befehle abzusetzen und Fehler zu verursachen, klicken Sie auf eine Waschmaschine.
 
-    ![{{site.data.keyword.iotelectronics}} Starter-Erfahrung](images/IoT4E_remotely_option.png "{{site.data.keyword.iotelectronics}} Starter-Erfahrung")
-
-2. Blättern Sie zum Abschnitt mit der Bezeichnung **Wählen Sie nun eine simulierte Waschmaschine aus oder erstellen Sie eine neue Waschmaschine** und klicken Sie auf das Symbol '+'. Eine neue Waschmaschine wird erstellt.
-
-    ![Waschmaschine hinzufügen.](images/IoT4E_add_washer.png "Waschmaschine hinzufügen")
-
-3. Klicken Sie auf eine Waschmaschine, um Details zur Waschmaschine, Ausgabebefehle und Fehlerursachen anzuzeigen.
-
-  ![Waschmaschinen-Statusdetails.](images/IoT4E_washer_control.png "Waschmaschinen-Statusdetails")
+  ![Details zum Status der Waschmaschine.](images/IoT4E_washer_control.svg "Details zum Status der Waschmaschine")
 
 
 # Zugehörige Links
@@ -75,18 +52,18 @@ In der Starter-App können Sie simulierte Appliances als Appliance-Hersteller od
 
 ## API-Dokumentation
 {: #api}
-* [{{site.data.keyword.iotelectronics}} API](http://ibmiotforelectronics.mybluemix.net/public/iot4eregistrationapi.html)
-* [{{site.data.keyword.iot_short}} API](https://developer.ibm.com/iotfoundation/recipes/api-documentation/)
+* [{{site.data.keyword.iotelectronics}}-API](http://ibmiotforelectronics.mybluemix.net/public/iot4eregistrationapi.html)
+* [{{site.data.keyword.iot_short}}-API](https://developer.ibm.com/iotfoundation/recipes/api-documentation/)
 
 
 ## Komponenten
 {: #general}
 
 * [{{site.data.keyword.iotelectronics}}-Dokumentation](iotelectronics_overview.html)
-* [{{site.data.keyword.iot_full}}-Dokumentation](https://new-console.ng.bluemix.net/docs/services/IoT/index.html)
-*  [{{site.data.keyword.amashort}}-Dokumentation](https://new-console.ng.bluemix.net/docs/services/mobileaccess/overview.html)
-* [{{site.data.keyword.sdk4nodefull}}-Dokumentation](https://new-console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime)
+* [{{site.data.keyword.iot_full}}-Dokumentation](https://console.ng.bluemix.net/docs/services/IoT/index.html)
+*  [{{site.data.keyword.amashort}}-Dokumentation](https://console.ng.bluemix.net/docs/services/mobileaccess/overview.html)
+* [{{site.data.keyword.sdk4nodefull}}-Dokumentation](https://console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime)
 
 ## Beispiele
 {: #samples}
-* [Beispiel für mobile App](https://new-console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html)
+* [Beispiel für mobile App](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html)

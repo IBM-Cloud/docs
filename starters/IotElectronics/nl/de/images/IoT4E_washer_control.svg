@@ -16,7 +16,10 @@
    width="501"
    height="389"
    viewBox="0 0 501 389"
-   sodipodi:docname="iot4e_washer_control.svg">
+   sodipodi:docname="iot4e_washer_control.svg"
+   inkscape:export-filename="C:\2.DTP\BM110ABD121 - 0,5 + 2\ge\iot4e_washer_control.png"
+   inkscape:export-xdpi="299"
+   inkscape:export-ydpi="299">
   <metadata
      id="metadata8">
     <rdf:RDF>
@@ -45,7 +48,7 @@
      id="namedview4"
      showgrid="false"
      inkscape:zoom="1.8843188"
-     inkscape:cx="275.55856"
+     inkscape:cx="250.5"
      inkscape:cy="194.5"
      inkscape:window-x="0"
      inkscape:window-y="0"
@@ -185,12 +188,12 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="80.532684"
+       x="86.532684"
        y="79.742577"
        id="text4614-7-8"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="80.532684"
+         x="86.532684"
          y="79.742577"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:16.25px;font-family:Arial;-inkscape-font-specification:'Arial Bold Condensed'"
          id="tspan4742-0">Problem auswählen</tspan></text>
@@ -232,7 +235,7 @@
          sodipodi:role="line"
          id="tspan3406"
          x="311.56635"
-         y="365.15128"> weitere Ereignisse auf dem</tspan><tspan
+         y="365.15128">weitere Ereignisse auf dem</tspan><tspan
          sodipodi:role="line"
          id="tspan3408"
          x="311.56635"
