@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016
+lastupdated: "2016-11-29"
 
 ---
 
@@ -15,81 +16,32 @@ copyright:
 # Mobile Konnektivität und Sicherheit konfigurieren
 {: #iot4e_configureMCA}
 
-*Letzte Aktualisierung: 19. September 2016*
-{: .last-updated}
-
-Aktivieren Sie die mobile Kommunikation und Sicherheit durch die Konfiguration von {{site.data.keyword.amafull}}. Diese Task ist erforderlich, damit Sie die mobile Beispiel-App verwenden können. Diese Task muss nur ein Mal durchgeführt werden.
+Ermöglichen Sie die mobile Kommunikation und Sicherheit, indem Sie {{site.data.keyword.amafull}} konfigurieren. Diese Task ist für die Verwendung des Beispiels für eine mobile App erforderlich und muss nur ein einziges Mal durchgeführt werden.
 {:shortdesc}
 
-## Vorbereitende Schritte
+Bevor Sie starten, müssen Sie eine Instanz des {{site.data.keyword.iotelectronics}}-Starters in Ihrer {{site.data.keyword.Bluemix_notm}}-Organisation
+ bereitstellen. Durch die Bereitstellung einer Instanz des Starters werden die Komponentenanwendungen und Services einschließlich {{site.data.keyword.amafull}} automatisch bereitgestellt.
 
-Bevor Sie damit beginnen, müssen Sie die folgenden Tasks durchführen:
-  - Stellen Sie eine Instanz des {{site.data.keyword.iotelectronics}}-Starters in Ihrer {{site.data.keyword.Bluemix_notm}}-Organisation bereit. Mit der Bereitstellung einer Starterinstanz werden automatisch die Komponentenanwendungen und Services, einschließlich {{site.data.keyword.amafull}}, bereitgestellt.
+1. Wenn Sie nur den {{site.data.keyword.iotelectronics}}-Starter bereitgestellt haben, wird die Registerkarte 'Einführung' der Starter-App angezeigt und Sie müssen mit dem nächsten Schritt dieser Anweisungen fortfahren. Wird die Starter-App nicht angezeigt, öffnen Sie Ihr {{site.data.keyword.Bluemix_notm}}-Dashboard und starten Sie Ihre {{site.data.keyword.iotelectronics}}-Starteranwendung durch Klicken auf den Namen der Starteranwendung.
 
-  - Da der Konfigurationsprozess je nach Version Ihrer {{site.data.keyword.Bluemix_notm}}-Konsole variiert, lesen Sie die Anweisungen zur entsprechenden Version.
+    ![{{site.data.keyword.iotelectronics}} im Dashboard](images/IoT4E_bm_dashboard.svg "{{site.data.keyword.iotelectronics}} im Dashboard")
 
-  Sie können die verwendete Version bestimmen, indem Sie nach den folgenden Optionen suchen:
-    - [Neue {{site.data.keyword.Bluemix_notm}}](#configMCAnew)-Ansicht. Wenn Sie die neue {{site.data.keyword.Bluemix_notm}}-Ansicht verwenden, wird die Option **Zur klassischen Ansicht wechseln** im Dashboard oben angezeigt.
-    - [Klassische {{site.data.keyword.Bluemix_notm}}](#configMCAclassic)-Ansicht. Wenn Sie die klassische {{site.data.keyword.Bluemix_notm}}-Ansicht verwenden, wird die Option **Try to the New Bluemix** im oben angezeigt.
+2. Kopieren Sie die URL der {{site.data.keyword.iotelectronics}}-Web-App, indem Sie mit der rechten Maustaste auf **App anzeigen** klicken und die Option zum Kopieren der Linkposition auswählen.
 
-## {{site.data.keyword.amashort}} in der neuen {{site.data.keyword.Bluemix_notm}}-Ansicht konfigurieren
-{: #configMCAnew}
+3. Klicken Sie auf der Registerkarte **Verbindungen** auf den Service {{site.data.keyword.amashort}}, um ihn zu öffnen.
 
-  1. Wenn Sie vor kurzem den {{site.data.keyword.iotelectronics}}-Starter bereitgestellt haben, wird die Registerkarte 'Einführung' der Starter-App angezeigt. Fahren Sie mit dem nächsten Schritt in den Anweisungen fort. Wenn die Starter-App nicht angezeigt wird, öffnen Sie das {{site.data.keyword.Bluemix_notm}}-Dashboard und starten Sie Ihre {{site.data.keyword.iotelectronics}}-Starter-Anwendung, indem Sie auf die Kachel für die Starteranwendung klicken.
+3. Aktivieren Sie die Authentifizierung auf der Seite für die {{site.data.keyword.amashort}}-Authentifizierung, indem Sie auf **Ein** klicken.
 
-    ![{{site.data.keyword.iotelectronics}} im Dashboard, neue Ansicht](images/IoT4E_bm_dashboard.png "{{site.data.keyword.iotelectronics}} im Dashboard, neue Ansicht")
+4. Geben Sie im Abschnitt **Angepasst** die folgenden Authentifizierungsnachweise ein:
 
-  2. Klicken Sie auf der Registerkarte **Verbindungen** auf den {{site.data.keyword.amashort}}-Service, um ihn zu öffnen.
+    - **Realmname**: `myRealm`
 
-    ![Vorgehensweise für die Suche nach {{site.data.keyword.amashort}}.](images/IoT4E_Connections.png "{{site.data.keyword.iotelectronics}}-Verbindungen")
+    - **URL des angepassten Identitätsproviders**: Fügen Sie die URL der API-Anwendung, die Sie im ersten Schritt kopiert haben, im folgenden Format ein:   **https://<*myIoT4eStarterApp*>.mybluemix.net**.  
 
-  3. Suchen Sie auf der Seite **Setup Authentication** die URL zu Ihrer {{site.data.keyword.iotelectronics}}-Starter-App, in dem Sie auf **Mobile Systemerweiterungen** klicken. Kopieren Sie die URL aus dem Feld **Route**.
+    **Wichtig:** Stellen Sie sicher, dass die URL das sichere Protokoll `https` nutzt, auch wenn für den von Ihnen kopierten Wert `http` verwendet wird.
 
-    ![{{site.data.keyword.amashort}} Mobile Systemerweiterungen](images/MCA_config_mobileoptions.png "{{site.data.keyword.amashort}} Mobile Systemerweiterungen")  
+    - **Weiterleitungs-URIs Ihrer Webanwendung**: Lassen dieses Feld leer.
 
-  4. Im **Abschnitt 'Angepasst' der Seite **Setup Authentication** klicken Sie auf **Konfigurieren**.
+   ![{{site.data.keyword.amashort}} konfigurieren.](images/MCA_config_pg.svg "{{site.data.keyword.amashort}}-Seite zur Authentifizierung")  
 
-       ![Konfigurieren Sie {{site.data.keyword.amashort}}.](images/MCA_config_pg.png "{{site.data.keyword.amashort}} Seite 'Setup Authentication'")  
-
-  5. Geben Sie die folgenden Berechtigungsnachweise zur Authentifizierung ein und klicken Sie dann auf **Speichern**:
-    - **Realmname**: Geben Sie **myRealm** ein.
-    - **Angepasste ID-Provider-URL**: Geben Sie die URL ein, die Sie zuvor kopiert haben, um Ihre {{site.data.keyword.iotelectronics}}-Starter-App im folgenden Format zu identifizieren: **https://<*myIoT4eStarterApp*>.mybluemix.net**
-    - **Weiterleitungs-URIs für Webanwendung**: Lassen Sie dieses Feld leer.
-
-      ![{{site.data.keyword.amashort}} Eintrag für angepasste Authentifizierung.](images/MCA_config_pg2.png "{{site.data.keyword.amashort}} Eintrag für angepasste Authentifizierung")  
-
-  6. Kehren Sie zur Registerkarte 'Verbindungen' der {{site.data.keyword.iotelectronics}}-Starter-Konsole zurück, indem Sie auf den Namen der Starter-App klicken, die oben angezeigt wird.
-
-   ![{{site.data.keyword.amashort}} Breadcrumb.](images/MCA_breadcrumb.png "{{site.data.keyword.amashort}} Breadcrumb")
-
-## {{site.data.keyword.amashort}} in der klassischen {{site.data.keyword.Bluemix_notm}}-Ansicht konfigurieren
-{: #configMCAclassic}
-
-1. Starten Sie im {{site.data.keyword.Bluemix_notm}}-Dashboard Ihre {{site.data.keyword.iotelectronics}}-Starteranwendung, indem Sie auf die Kachel für die Starteranwendung klicken.
-
-    ![{{site.data.keyword.iotelectronics}} im Dashboard, klassische Ansicht.](images/IoT4E_bm_dashboard_c.png "{{site.data.keyword.iotelectronics}} im Dashboard, klassische Ansicht")
-
-2. Klicken Sie in Ihrer Instanz von {{site.data.keyword.iotelectronics}} auf den {{site.data.keyword.amashort}}-Service, um ihn zu öffnen.   
-
-  ![Vorgehensweise für die Suche nach {{site.data.keyword.amashort}}.](images/IoT4E_Connections_c.png "{{site.data.keyword.iotelectronics}}-Verbindungen")
-
-2. Suchen Sie auf der Seite **Setup Authentication** die URL zu Ihrer {{site.data.keyword.iotelectronics}}-Starter-App, in dem Sie auf **Mobile Systemerweiterungen** klicken. Kopieren Sie die URL aus dem Feld **Route**.
-
-  ![{{site.data.keyword.amashort}} Mobile Systemerweiterungen](images/MCA_config_mobileoptions.png "{{site.data.keyword.amashort}} Mobile Systemerweiterungen")  
-
-3. Im **Abschnitt 'Angepasst' der Seite **Setup Authentication** klicken Sie auf **Konfigurieren**.
-
- ![Konfigurieren Sie {{site.data.keyword.amashort}}.](images/MCA_config_pg.png "{{site.data.keyword.amashort}} Seite 'Setup Authentication'")  
-
-4. Geben Sie die folgenden Berechtigungsnachweise zur Authentifizierung ein und klicken Sie dann auf **Speichern**:
-   - **Realmname**: Geben Sie **myRealm** ein.
-   - **Angepasste ID-Provider-URL**: Geben Sie die URL ein, die Sie zuvor kopiert haben, um Ihre {{site.data.keyword.iotelectronics}}-Starter-App im folgenden Format zu identifizieren: **https://<*myIoT4eStarterApp*>.mybluemix.net**
-   - **Weiterleitungs-URIs für Webanwendung**: Lassen Sie dieses Feld leer.
-
-    ![{{site.data.keyword.amashort}} Eintrag für angepasste Authentifizierung.](images/MCA_config_pg2.png "{{site.data.keyword.amashort}} Eintrag für angepasste Authentifizierung")  
-
-5. Führen Sie die folgenden Schritte aus, um zur Registerkarte 'Verbindungen' der {{site.data.keyword.iotelectronics}}-Starter-Konsole zurückzukehren:
-  1. Klicken Sie zum Anzeigen des Menüs auf die Doppelpfeile neben der Option **Zurück zum Dashboard** im Abschnitt oben.
-  2. Klicken Sie auf **Übersicht**, um zur Starter-Konsole zurückzukehren.  
-
-    ![{{site.data.keyword.amashort}} Breadcrumb.](images/MCA_breadcrumb_c.png "{{site.data.keyword.amashort}} Breadcrumb")
+5. Speichern Sie Ihre Einstellungen. Sie können nun zur {{site.data.keyword.iotelectronics}}-Servicekonsole oder zu Ihrer {{site.data.keyword.Bluemix_notm}}-Konsole zurückkehren.

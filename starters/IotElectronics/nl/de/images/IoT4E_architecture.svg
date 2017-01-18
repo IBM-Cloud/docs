@@ -15,8 +15,8 @@
    id="svg5645"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="IoT4E_architecture.svg"
-   inkscape:export-filename="C:\Users\IBM_ADMIN\GitHub\IoT\Blockchain-DOCS\iotblockchain_scratch\images\architecture_contracts.png"
+   sodipodi:docname="iot4e_architecture.svg"
+   inkscape:export-filename="C:\2.DTP\BM110ABD121\ge\iotelectronics\images\bitmap.png"
    inkscape:export-xdpi="299.98132"
    inkscape:export-ydpi="299.98132">
   <defs
@@ -1783,15 +1783,15 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.44"
-     inkscape:cx="360.42883"
-     inkscape:cy="253.45878"
+     inkscape:zoom="1.3182253"
+     inkscape:cx="394.96889"
+     inkscape:cy="258.50185"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="px"
-     inkscape:window-width="1920"
-     inkscape:window-height="1028"
+     inkscape:window-width="1600"
+     inkscape:window-height="848"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -2057,7 +2057,7 @@
          sodipodi:role="line"
          x="291.50089"
          y="431.56644"
-         id="tspan6702">Sample mobile app</tspan></text>
+         id="tspan6702">Beispiel für mobile App</tspan></text>
     <g
        id="g6649-4-6"
        transform="matrix(0.49001738,0,0,0.46831598,179.48691,211.85984)">
@@ -2175,7 +2175,7 @@
            id="tspan6702-6"
            y="425.04944"
            x="486.05368"
-           sodipodi:role="line">Mobile Client Access </tspan><tspan
+           sodipodi:role="line">Mobile Client Access-</tspan><tspan
            id="tspan4579"
            y="438.79944"
            x="486.05368"
@@ -2184,44 +2184,40 @@
     <g
        id="g4731-3"
        transform="translate(17.361123,-20.138893)" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       x="49.107388"
+       y="456.93829"
+       id="text44241-2"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="49.107388"
+         y="456.93829"
+         id="tspan6702-1">Nutzer</tspan></text>
+    <rect
+       ry="0"
+       rx="0"
+       y="404.41608"
+       x="41.489098"
+       height="41.666676"
+       width="47.166702"
+       id="rect79371-1-6-6-9-8-7-3-5-1-4-5"
+       style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" />
     <g
-       id="g13249"
-       transform="translate(-22.055558,-53.02779)">
-      <text
-         sodipodi:linespacing="125%"
-         id="text44241-2"
-         y="509.96609"
-         x="61.470284"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-         xml:space="preserve"><tspan
-           id="tspan6702-1"
-           y="509.96609"
-           x="61.470284"
-           sodipodi:role="line">Consumer</tspan></text>
-      <rect
-         style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none"
-         id="rect79371-1-6-6-9-8-7-3-5-1-4-5"
-         width="47.166702"
-         height="41.666676"
-         x="63.544655"
-         y="457.44388"
-         rx="0"
-         ry="0" />
-      <g
-         style="fill:#ffffff"
-         id="g3"
-         transform="matrix(0.46469903,0,0,0.43287032,72.257637,464.42536)">
-        <path
-           style="fill:#ffffff"
-           id="path5"
-           d="M 32,42 C 43.047,42 52,33.047 52,22 52,10.953 43.047,2 32,2 20.953,2 12,10.953 12,22 12,33.047 20.953,42 32,42 Z M 32,4 c 9.926,0 18,8.075 18,18 0,9.925 -8.074,18 -18,18 C 22.074,40 14,31.925 14,22 14,12.075 22.074,4 32,4 Z"
-           inkscape:connector-curvature="0" />
-        <path
-           style="fill:#ffffff"
-           id="path7"
-           d="m 48,46 -32,0 c -4.418,0 -8,3.582 -8,8 l 0,8 48,0 0,-8 c 0,-4.418 -3.582,-8 -8,-8 z"
-           inkscape:connector-curvature="0" />
-      </g>
+       transform="matrix(0.46469903,0,0,0.43287032,50.202079,411.39757)"
+       id="g3"
+       style="fill:#ffffff">
+      <path
+         inkscape:connector-curvature="0"
+         d="M 32,42 C 43.047,42 52,33.047 52,22 52,10.953 43.047,2 32,2 20.953,2 12,10.953 12,22 12,33.047 20.953,42 32,42 Z M 32,4 c 9.926,0 18,8.075 18,18 0,9.925 -8.074,18 -18,18 C 22.074,40 14,31.925 14,22 14,12.075 22.074,4 32,4 Z"
+         id="path5"
+         style="fill:#ffffff" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m 48,46 -32,0 c -4.418,0 -8,3.582 -8,8 l 0,8 48,0 0,-8 c 0,-4.418 -3.582,-8 -8,-8 z"
+         id="path7"
+         style="fill:#ffffff" />
     </g>
     <path
        inkscape:connector-curvature="0"
@@ -2229,63 +2225,59 @@
        d="m 536.3671,16.187888 -0.3543,46.122997"
        style="fill:none;stroke:#000000;stroke-width:1.49671447;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM-17-4-6);marker-end:url(#TriangleOutM-96-1-0)"
        sodipodi:nodetypes="cc" />
+    <rect
+       ry="0"
+       rx="0"
+       y="-42.931622"
+       x="512.67792"
+       height="41.666676"
+       width="47.166702"
+       id="rect79371-1-6-6-9-8-7-3-5-1-4-5-8"
+       style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" />
     <g
-       id="g11626"
-       transform="translate(14.000001,6.0000006)">
-      <rect
-         style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none"
-         id="rect79371-1-6-6-9-8-7-3-5-1-4-5-8"
-         width="47.166702"
-         height="41.666676"
-         x="498.67789"
-         y="-48.931622"
-         rx="0"
-         ry="0" />
-      <g
-         transform="translate(506.26126,-45.083949)"
-         id="g3-7"
-         style="fill:#ffffff">
-        <path
-           inkscape:connector-curvature="0"
-           d="M 18,5 18,1 14,1 14,5 6,5 6,31 26,31 26,5 18,5 Z M 16,2 c 0.552,0 1,0.448 1,1 0,0.552 -0.448,1 -1,1 -0.552,0 -1,-0.448 -1,-1 0,-0.552 0.448,-1 1,-1 z m 8,27 -16,0 0,-22 6,0 0,2 4,0 0,-2 6,0 0,22 z"
-           id="path5-3"
-           style="fill:#ffffff" />
-        <path
-           inkscape:connector-curvature="0"
-           d="m 16,11 c -2.762,0 -5,2.238 -5,5 0,2.762 2.238,5 5,5 2.762,0 5,-2.238 5,-5 0,-2.762 -2.238,-5 -5,-5 z m 0,8 c -1.654,0 -3,-1.346 -3,-3 0,-1.654 1.346,-3 3,-3 1.654,0 3,1.346 3,3 0,1.654 -1.346,3 -3,3 z"
-           id="path7-81"
-           style="fill:#ffffff" />
-        <path
-           inkscape:connector-curvature="0"
-           d="m 12,23 c -1.104,0 -2,0.896 -2,2 l 0,2 12,0 0,-2 c 0,-1.104 -0.896,-2 -2,-2 l -8,0 z"
-           id="path9-7"
-           style="fill:#ffffff" />
-      </g>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-         x="461.03171"
-         y="3.7135651"
-         id="text44235-7-3-6-4-0-2-7-0"
-         sodipodi:linespacing="125%"><tspan
-           id="tspan7345-7-3-0"
-           style="font-size:11.25000095px"
-           sodipodi:role="line"
-           x="461.03171"
-           y="3.7135651">IoT device manufacturer</tspan><tspan
-           id="tspan7318-8-6-0"
-           sodipodi:role="line"
-           x="461.03171"
-           y="17.776066" /><tspan
-           id="tspan7312-8-7-6"
-           sodipodi:role="line"
-           x="461.03171"
-           y="31.838568" /><tspan
-           id="tspan6445-3-9-6-2-1-1-7-0"
-           sodipodi:role="line"
-           x="461.03171"
-           y="45.90107" /></text>
+       style="fill:#ffffff"
+       id="g3-7"
+       transform="translate(520.26126,-39.083948)">
+      <path
+         style="fill:#ffffff"
+         id="path5-3"
+         d="M 18,5 18,1 14,1 14,5 6,5 6,31 26,31 26,5 18,5 Z M 16,2 c 0.552,0 1,0.448 1,1 0,0.552 -0.448,1 -1,1 -0.552,0 -1,-0.448 -1,-1 0,-0.552 0.448,-1 1,-1 z m 8,27 -16,0 0,-22 6,0 0,2 4,0 0,-2 6,0 0,22 z"
+         inkscape:connector-curvature="0" />
+      <path
+         style="fill:#ffffff"
+         id="path7-81"
+         d="m 16,11 c -2.762,0 -5,2.238 -5,5 0,2.762 2.238,5 5,5 2.762,0 5,-2.238 5,-5 0,-2.762 -2.238,-5 -5,-5 z m 0,8 c -1.654,0 -3,-1.346 -3,-3 0,-1.654 1.346,-3 3,-3 1.654,0 3,1.346 3,3 0,1.654 -1.346,3 -3,3 z"
+         inkscape:connector-curvature="0" />
+      <path
+         style="fill:#ffffff"
+         id="path9-7"
+         d="m 12,23 c -1.104,0 -2,0.896 -2,2 l 0,2 12,0 0,-2 c 0,-1.104 -0.896,-2 -2,-2 l -8,0 z"
+         inkscape:connector-curvature="0" />
     </g>
+    <text
+       sodipodi:linespacing="125%"
+       id="text44235-7-3-6-4-0-2-7-0"
+       y="9.7135658"
+       x="485.03171"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         y="9.7135658"
+         x="485.03171"
+         sodipodi:role="line"
+         style="font-size:11.25000095px"
+         id="tspan7345-7-3-0">IoT-Gerätehersteller</tspan><tspan
+         y="23.776068"
+         x="485.03171"
+         sodipodi:role="line"
+         id="tspan7318-8-6-0" /><tspan
+         y="37.83857"
+         x="485.03171"
+         sodipodi:role="line"
+         id="tspan7312-8-7-6" /><tspan
+         y="51.90107"
+         x="485.03171"
+         sodipodi:role="line"
+         id="tspan6445-3-9-6-2-1-1-7-0" /></text>
     <path
        inkscape:connector-curvature="0"
        id="path8199-4-4-0-5"
@@ -2308,7 +2300,7 @@
          sodipodi:role="line"
          id="tspan7308"
          x="499.67679"
-         y="92.553978"> </tspan></text>
+         y="92.553978" /></text>
     <rect
        ry="0"
        rx="0"
@@ -2328,7 +2320,7 @@
          sodipodi:role="line"
          x="499.79694"
          y="89.618675"
-         id="tspan5792">Watson IoT Platform</tspan><tspan
+         id="tspan5792">Watson IoT Platform-</tspan><tspan
          sodipodi:role="line"
          x="499.79694"
          y="103.36868"
@@ -2391,11 +2383,11 @@
          id="tspan44239-7"
          y="216.68509"
          x="509.94742"
-         sodipodi:role="line">Rest &amp; </tspan><tspan
+         sodipodi:role="line">Rest-APIs und</tspan><tspan
          y="230.43509"
          x="509.94742"
          sodipodi:role="line"
-         id="tspan7973">Real-time APIs</tspan><tspan
+         id="tspan7973">Echtzeit-APIs</tspan><tspan
          y="244.18509"
          x="509.94742"
          sodipodi:role="line"
@@ -2585,11 +2577,11 @@
          id="tspan4579-7-5"
          y="171.24385"
          x="702.77588"
-         sodipodi:role="line">Simulated sample </tspan><tspan
+         sodipodi:role="line">Simulierte Beispiel-</tspan><tspan
          y="184.99385"
          x="702.77588"
          sodipodi:role="line"
-         id="tspan4890">devices</tspan></text>
+         id="tspan4890">geräte</tspan></text>
     <g
        transform="matrix(0.88229753,0,0,0.8706004,649.54495,164.80866)"
        id="g3-96">
@@ -2701,7 +2693,7 @@
          y="338.22162"
          x="300.1373"
          sodipodi:role="line"
-         id="tspan7488">Starter app</tspan></text>
+         id="tspan7488">Starter-App</tspan></text>
     <g
        transform="matrix(0.88229753,0,0,0.8706004,246.21183,317.84197)"
        id="g3-96-0">
@@ -2768,12 +2760,12 @@
            id="tspan4945-3"
            y="125.51817"
            x="261.233"
-           sodipodi:role="line">Consumer electronics</tspan><tspan
+           sodipodi:role="line">Registrierungsservice für</tspan><tspan
            style="font-size:11.25000095px"
            id="tspan5228"
            y="139.58067"
            x="261.233"
-           sodipodi:role="line">registration service</tspan></text>
+           sodipodi:role="line">Unterhaltungselektronik</tspan></text>
     </g>
     <g
        id="g5499"
@@ -2798,7 +2790,7 @@
            id="tspan5558"
            y="257.88394"
            x="260.74411"
-           sodipodi:role="line">IoT consumer access</tspan></text>
+           sodipodi:role="line">IoT-Nutzerzugriff</tspan></text>
     </g>
     <g
        id="g4161"
@@ -2869,7 +2861,7 @@
          x="298.36966"
          y="90.261307"
          id="tspan5228-6"
-         style="font-weight:bold;font-size:11.25000095px">IoT for Electronics</tspan><tspan
+         style="font-weight:bold;font-size:11.25000095px">IoT for Electronics-</tspan><tspan
          sodipodi:role="line"
          x="298.36966"
          y="104.32381"
@@ -2885,7 +2877,7 @@
          y="226.88509"
          x="301.00787"
          sodipodi:role="line"
-         id="tspan7973-9">Rest  APIs</tspan><tspan
+         id="tspan7973-9">Rest-APIs</tspan><tspan
          y="240.63509"
          x="301.00787"
          sodipodi:role="line"
