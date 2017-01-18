@@ -164,7 +164,7 @@ Authenticating...
 OK
 ```
 
-You are now ready to use {{site.data.keyword.Bluemix_notm}} built-in commands. For example:
+You are now ready to use {{site.data.keyword.Bluemix_notm}} built-in commands. For example, run the `bluemix catalog templates` command to list all the available {{site.data.keyword.Bluemix_notm}} boilerplate templates:
 
 ```
 ~$ bluemix catalog templates
