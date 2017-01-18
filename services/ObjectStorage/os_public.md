@@ -22,4 +22,3 @@ To get started with Object Storage, complete the following tasks:
 
 Now, you're ready to manage [objects](/docs/services/ObjectStorage/os_managing.html) and [access](/docs/services/ObjectStorage/os_security.html).
 
-To learn more about how the service works, see [About Public Object Storage](/docs/services/ObjectStorage/os_works_public.html).
