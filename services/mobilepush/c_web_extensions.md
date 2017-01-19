@@ -12,10 +12,10 @@ copyright:
 
 # Enabling Chrome Apps and Extensions to receive {{site.data.keyword.mobilepushshort}}
 {: #web_notifications}
-Last updated: 16 January 2017
+Last updated: 18 January 2017
 {: .last-updated}
 
-You can now enable Google Chrome Apps and Extensions to receive  {{site.data.keyword.mobilepushshort}}.
+You can enable Google Chrome Apps and Extensions to receive  {{site.data.keyword.mobilepushshort}}. Ensure that you have gone through [Configuring credentials for a notification provider](t__main_push_config_provider.html) before proceeding with the steps.
 
 ## Installing client SDK for {{site.data.keyword.mobilepushshort}}
 {: #web_install}

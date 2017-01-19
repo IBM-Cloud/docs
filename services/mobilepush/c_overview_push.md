@@ -12,12 +12,10 @@ copyright:
 
 # About {{site.data.keyword.mobilepushshort}}
 {: #overview-push}
-Last updated: 16 January 2017
+Last updated: 18 January 2017
 {: .last-updated}
 
-IBM {{site.data.keyword.mobilepushshort}} is a service with which you can use to send notifications to devices and platforms. Notifications can be targeted to all application users or to a specific set of users and devices using tags. You can administer devices, tags, and subscriptions. You can also use an SDK (software development kit) and Representational State Transfer (REST) application program interface (APIs) to further develop your client applications. 
-
-{{site.data.keyword.mobilepushshort}} is available as a Bluemix Catalog service  in the Mobile category. It is also available as a part of MobileFirst Services Starter Boilerplate and as a Bluemix Dedicated service. For information about {{site.data.keyword.mobilepushshort}} as a dedicated service, see [Dedicated Services](/docs/dedicated/index.html). 
+IBM {{site.data.keyword.mobilepushshort}} is a service with which you can use to send notifications to devices and platforms. Notifications can be targeted to all application users or to a specific set of users and devices using tags. You can administer devices, tags, and subscriptions.  
 
 You can use any of the following options to create a bound or unbound service:
 

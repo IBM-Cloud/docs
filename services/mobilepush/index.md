@@ -12,18 +12,22 @@ years: 2015, 2017
 
 # Getting started with {{site.data.keyword.mobilepushshort}}
 {: #gettingstartedtemplate}
-Last updated: 16 January 2017
+Last updated: 19 January 2017
 {: .last-updated}
 
 {:shortdesc}
 
-The {{site.data.keyword.mobilepushshort}} service provides a unified platform to send and manage mobile and web push notifications that are targeted to the following platforms:
+The {{site.data.keyword.mobilepushshort}} is available as a Bluemix Catalog service  in the Mobile category and enables you to send and manage mobile and web push notifications. The service manages mapping of your application users to their devices, device platform and web browsers while handling dispatch of notifications.
 
-- iOS and Android mobile devices
-- Google Chrome, Mozilla Firefox and Safari web browsers
-- Google Chrome Apps and Extensions
+ {{site.data.keyword.mobilepushshort}} is available as a part of MobileFirst Services Starter Boilerplate and as Bluemix [Dedicated Services](/docs/dedicated/index.html). You can use the service to send broadcasts, unicasts (based on deviceID and userID), tag-based notification, webhooks event-based notification, as well as Rich Media notifications and interactive notifications to your mobile and web browser application users. You can also use an SDK (software development kit) and [REST APIs ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://mobile.{DomainName}/imfpush/){: new_window} to further develop your client applications.
 
-The {{site.data.keyword.mobilepushshort}} service manages the mapping of your application users to their devices, device platform, web browsers and handles dispatching push notifications to them. With this service, you can send broadcasts, unicasts (based on deviceID and userID), and also tags (or topics) as push notifications to your mobile and web browser application users. You can also use an SDK and [REST APIs ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://mobile.{DomainName}/imfpush/){: new_window} to further develop your client applications.
+The service also provides you with monitoring capabilities that helps you monitor Push Notification performance by generating graphs and reports from your user data. See [Monitoring for Push Notifications](/docs/services/mobilepush/t_push_monitoring.html).
+
+The {{site.data.keyword.mobilepushshort}} service is supported across the following platforms:
+
+- [iOS and Android mobile devices](/docs/services/mobilepush/c_enable_push.html)
+- [Google Chrome, Mozilla Firefox and Safari web browsers](/docs/services/mobilepush/c_chrome_firefox_enable.html)
+- [Google Chrome Apps and Extensions](/docs/services/mobilepush/c_web_extensions.html)
 
 
 # Related Links

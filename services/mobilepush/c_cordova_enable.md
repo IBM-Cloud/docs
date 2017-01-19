@@ -12,7 +12,7 @@ copyright:
 
 # Enabling Cordova applications to receive push notifications
 {: #cordova_enable}
-Last updated: 16 January 2017
+Last updated: 18 January 2017
 {: .last-updated}
 
 Cordova is a platform for building hybrid applications with JavaScript, CSS, and HTML. The {{site.data.keyword.mobilepushshort}} service supports development of Cordova-based iOS and Android applications.
@@ -45,25 +45,27 @@ Ensure that you specify the correct Bundle ID. The following error messages migh
 
 1. Add the minimum supported API or the deployment target declaration to the config.xml file for your Cordova application. The minSdkVersion value must be higher than 15. The targetSdkVersion value must always reflect the latest Android SDK that is available from Google.
 	
-	* Android - With your editor, open the config.xml file and update the
+	* Android - With your editor, open the **config.xml** file and update the
 `<platform name="android">` element with minimum and target SDK versions:
 
-```
-< !-- add deployment target declaration --> 
-add deployment target declaration <preference name="android-minSdkVersion" value="15" />
-  <preference name="android-targetSdkVersion" value="23" />
-</platform>
-```
-    {: codeblock}
+	```
+	<platform name="android">
+    	<preference name="android-minSdkVersion" value="15" />
+    	<preference name="android-targetSdkVersion" value="23" />
+    	<!-- add minimum and target Android API level declaration -->
+	</platform> 
+	```
+    	{: codeblock}
 
    * iOS - Update the <platform name="ios"> element with a deployment target declaration:
 
-```
-<platform name ="ios">
-<preference name=deployment-target" value="8.0" /> <!-- other properties -->
-</ platform>
-```
-	{: codeblock}
+	```
+	<platform name="ios">
+	    <preference name="deployment-target" value="8.0" />
+	    <!-- add deployment target declaration -->
+	</platform>
+	```
+		{: codeblock}
 
 1. From the Cordova command-line interface (CLI), add your platforms: iOS, Android, or both by using the command:
 ```
