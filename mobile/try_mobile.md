@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2016-10-19"
+lastupdated: "2017-01-19"
 
 ---
 
@@ -29,6 +29,8 @@ You can either use all of the {{site.data.keyword.Bluemix_notm}} Mobile services
 
 ![{{site.data.keyword.Bluemix_notm}} mobile services architecture](images/bms_architecture.jpg)
 
+Figure 1: {{site.data.keyword.Bluemix_notm}} Mobile services architecture
+
 <table summary="This table describes {{site.data.keyword.Bluemix_notm}} Mobile services">
 <caption>Table 1. {{site.data.keyword.Bluemix_notm}} and enterprise systems</caption>
 <th>{{site.data.keyword.Bluemix_notm}}</th>
@@ -49,7 +51,7 @@ You can either use all of the {{site.data.keyword.Bluemix_notm}} Mobile services
 <td valign="top"><b>User identity providers</b> <br/>You can use the following identity providers: <ul><li>Facebook</li><li>Google</li><li> Custom </li></ul></td>
 </tr>
 <tr>
-<td><img src="images/push_icon.png" alt="{{site.data.keyword.mobilepushshort}} service icon"> <b>{{site.data.keyword.mobilepushshort}}</b><br/>The  {{site.data.keyword.mobilepushfull}} service provides a unified platform to send and manage push notifications targeted to Mobile (iOS & Android) platforms, and Web browser applications. This service manages the mapping of your application users to their devices, device platform, and browsers, and handles dispatching push notifications to subscribers. With this service, you can send broadcasts, unicasts (based on userID, deviceID), and tags (or topics) based on push notifications to your customers.</td>
+<td><img src="images/push_icon.png" alt="{{site.data.keyword.mobilepushshort}} service icon"> <b>{{site.data.keyword.mobilepushshort}}</b><br/>The {{site.data.keyword.mobilepushfull}} service provides a unified platform to send and manage push notifications targeted to Mobile (iOS & Android) platforms, and Web browser applications. This service manages the mapping of your application users to their devices, device platform, and browsers, and handles dispatching push notifications to subscribers. With this service, you can send broadcasts, unicasts (based on userID, deviceID), and tags (or topics) based on push notifications to your customers.</td>
 <td valign="top"><b>Push service providers</b><ul><li>Apple Push Notifications Service</li><li>Firebase Cloud Messaging</li></ul></td>
 </tr>
 <tr>
