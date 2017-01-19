@@ -50,7 +50,8 @@ Ensure that you specify the correct Bundle ID. The following error messages migh
 
 ```
 < !-- add deployment target declaration --> 
-add deployment target declaration <preference name="android-minSdkVersion" value="15" />
+<platform name="android">
+  <preference name="android-minSdkVersion" value="15" />
   <preference name="android-targetSdkVersion" value="23" />
 </platform>
 ```
@@ -59,9 +60,9 @@ add deployment target declaration <preference name="android-minSdkVersion" value
    * iOS - Update the <platform name="ios"> element with a deployment target declaration:
 
 ```
-<platform name ="ios">
-<preference name=deployment-target" value="8.0" /> <!-- other properties -->
-</ platform>
+<platform name="ios">
+	<preference name="deployment-target" value="8.0" /> <!-- other properties -->
+</platform>
 ```
 	{: codeblock}
 
