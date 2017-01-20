@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-09-08"
+lastupdated: "2017-01-19"
 
 ---
 
@@ -12,10 +12,10 @@ lastupdated: "2016-09-08"
 {:codeblock:.codeblock}
 {:pre: .pre}
 
-# Application, device, and gateway connections to {{site.data.keyword.iot_short_notm}}
+# Connecting applications, devices, and gateways to {{site.data.keyword.iot_short_notm}}
 {: #connect_devices_apps_gw}
 
-Applications, devices, and gateways can connect to {{site.data.keyword.iot_full}} through the MQTT protocol. Devices can also connect and publish events to {{site.data.keyword.iot_short_notm}} through the HTTP API.
+You can connect applications, devices, and gateways to {{site.data.keyword.iot_full}} through the MQTT protocol. You can also use the HTTP REST API to connect devices to {{site.data.keyword.iot_short_notm}}.
 {: shortdesc}
 
 
@@ -35,13 +35,13 @@ To connect device, application, and gateway clients to your {{site.data.keyword.
 {: codeblock}
 
 **Notes**
-- *orgId* is the unique organization ID that was generated when you registered the service instance.
+- Where *orgId* is the unique organization ID that was generated when you registered the service instance.
 - If you are connecting a device or application to the Quickstart service, specify 'quickstart' as the *orgId* value.
 
 ## Port security
 {: #client_port_security}
 
-Ensure that the required ports are open and enabled for communication.
+Ensure that the required ports are open and enabled for communication. Ports 8883 and 443 support secure connections using TLS with the MQTT and HTTP protocol. Port 1883 supports non-secure connections with the MQTT and HTTP protocol. Information about connection type and associated port numbers is summarized in the following table:   
 
 |Connection type |Port number|
 |:---|:---|
@@ -49,20 +49,55 @@ Ensure that the required ports are open and enabled for communication.
 |Secure|8883|
 |Secure|443|
 
-MQTT clients connect by using appropriate credentials, such as device authentication tokens for devices and API keys and tokens for applications. Because MQTT messaging to the insecure port 1883 sends these credentials in plain text, always use the secure alternatives 8883 or 443 instead. The secure ports force encryption of the TLS credentials. Be aware that you must enable TLS in the application by using the tls_set() method in the Python MQTT library. Otherwise, the data might be sent insecurely.
+MQTT is supported over TCP and WebSockets. MQTT clients connect by using appropriate credentials, such as device authentication tokens for devices and API keys and tokens for applications. Because MQTT messaging to the insecure port 1883 sends these credentials in plain text, always use the secure alternatives 8883 or 443 instead. The TLS credentials are always encypted when sent over secure ports. Be aware that you must enable TLS in the application by using the tls_set() method that is in the Python MQTT library. Otherwise, the data might be sent insecurely.
 
 When you use secure MQTT messaging on ports 8883 or 443, newer client libraries automatically trust the certificate that is presented by {{site.data.keyword.iot_short_notm}}. If this is not the case for your client environment, you can download and use the full certificate chain from [messaging.pem](https://github.com/ibm-messaging/iot-python/blob/master/src/ibmiotf/messaging.pem).
 
 
 ## TLS requirements
 {: #tls_requirements}
+
 Some Transport Layer Security (TLS) client libraries do not support domains that include a wildcard. If you cannot successfully change libraries, disable certificate checking.
 
-{{site.data.keyword.iot_short_notm}} requires TLS V1.2 and the following cipher suites:
-- ECDHE-RSA-AES256-GCM-SHA384
-- AES256-GCM-SHA384
-- ECDHE-RSA-AES128-GCM-SHA256
-- AES128-GCM-SHA256
+Your TLS requirements depend on whether you are connecting to {{site.data.keyword.iot_short_notm}} with the MQTT or HTTP protocol. The following sections show the cipher suites that are supported if the default server certificate is used. If you are using your own client
+certificate, the cipher suites that are supported depend on the certificate that is used.
+
+### TLS requirements for MQTT connections
+
+{{site.data.keyword.iot_short_notm}} requires TLS v1.2 and the following cipher suites:
+
+
+- TLS_RSA_WITH_AES_128_CBC_SHA
+- TLS_DHE_RSA_WITH_AES_128_CBC_SHA
+- TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+- TLS_RSA_WITH_AES_128_CBC_SHA256
+- TLS_DHE_RSA_WITH_AES_128_CBC_SHA256
+- TLS_RSA_WITH_AES_128_GCM_SHA256
+- TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
+- TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
+- TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+- TLS_RSA_WITH_AES_256_CBC_SHA
+- TLS_DHE_RSA_WITH_AES_256_CBC_SHA
+- TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+- TLS_RSA_WITH_AES_256_CBC_SHA256
+- TLS_DHE_RSA_WITH_AES_256_CBC_SHA256
+- TLS_RSA_WITH_AES_256_GCM_SHA384
+- TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+- TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+- TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+
+### TLS requirements for HTTP connections
+
+If you are using the default server certificate, {{site.data.keyword.iot_short_notm}} requires TLS v1, TLS v1.1, or TLS v1.2 and the following cipher suites:
+
+
+- TLS_RSA_WITH_AES_128_CBC_SHA
+- TLS_RSA_WITH_AES_128_CBC_SHA256
+- TLS_RSA_WITH_AES_128_GCM_SHA256
+- TLS_RSA_WITH_AES_256_CBC_SHA
+- TLS_RSA_WITH_AES_256_CBC_SHA256
+- TLS_RSA_WITH_AES_256_GCM_SHA384
+
 
 ## MQTT client authentication
 {: #mqtt_authentication}
@@ -129,7 +164,7 @@ For more information, see [MQTT connectivity for applications](../../application
 The {{site.data.keyword.iot_short_notm}} service supports only token-based authentication for devices; therefore, each device has only one valid user name.
 A value of `use-token-auth` indicates to the service that the authentication token for the gateway or device is used as the password for the MQTT connection.
 
-For more information, see [MQTT connectivity for devices](../../devices/mqtt.html)
+For more information, see [MQTT connectivity for devices](../../devices/mqtt.html).
 
 #### Passwords
 If the client is using token based authentication, submit the device authentication token as the password for all MQTT connections.
