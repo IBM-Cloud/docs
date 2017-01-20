@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-10"
+lastupdated: "2017-01-16"
 
 ---
 
@@ -24,8 +24,7 @@ For example, you might create a rule to ensure that when the device is dropped o
 {: #byb}
 Make sure that the device properties that you want to use as conditions in your rules have been mapped to schemas. See [Connecting devices](iotplatform_task.html) and [Creating schemas](im_schemas.html) for more information.
 
-Also review the recipe [Using Rules and Actions with {{site.data.keyword.iot_short}} Cloud Analytics](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/) to get feel of what are rules and actions used in Cloud Analytics.
-
+Also, review the recipe [Using Rules and Actions with {{site.data.keyword.iot_short}} Cloud Analytics](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/) to understand the rules and actions that are used in Cloud Analytics.
 
 ## Managing rules and actions  
 {: #managing_rules}
