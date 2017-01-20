@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-12"
+lastupdated: "2017-01-20"
 
 ---
 {:new_window: target="_blank"}
@@ -20,15 +20,13 @@ lastupdated: "2017-01-12"
 * Quickly identify trends and anomalies, drill down to resolve issues, and trigger alerts when key metrics cross critical thresholds. 
 {: shortdesc}
 
-**Important:** The {{site.data.keyword.mobileanalytics_short}} Console is not yet ready for the Internet Explorer browser, and some functionality might not work correctly. For the best experience, use Firefox, Chrome, or Safari.
-
 To quickly get the {{site.data.keyword.mobileanalytics_short}} service up and running, follow these steps:
 
 1. After you create an instance <!--[create an instance](https://console.{DomainName}/docs/services/reqnsi.html#req_instance)-->of the {{site.data.keyword.mobileanalytics_short}} service, you can access the {{site.data.keyword.mobileanalytics_short}} Console by clicking your tile in the **Services** section of the {{site.data.keyword.Bluemix}} Dashboard.
 
  To help you get an immediate feel of the various views and charts and the value they bring forth, we provide a **demo mode** option in the {{site.data.keyword.mobileanalytics_short}} console, whereby the views and charts display *demo data*. Demo data is the default mode of the console when it initially launches after the service is instantiated. When you have your own applications and analytics data populated into the service, you can toggle *off* the demo mode to view your applications' data in the different charts. The Mobile Analytics console is read-only when in demo mode, therefore you will not be able to create new alert definitions.
 
-2. Install the {{site.data.keyword.mobileanalytics_short}} [Client SDKs](/docs/services/mobileanalytics/install-client-sdk.html). You can optionally use the {{site.data.keyword.mobileanalytics_short}} [REST API](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}.
+2. Install the {{site.data.keyword.mobileanalytics_short}} [Client SDKs](/docs/services/mobileanalytics/install-client-sdk.html). You can optionally use the {{site.data.keyword.mobileanalytics_short}} [REST API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}.
 
 3. Import the Client SDKs and initialize them with the following code snippet to record usage analytics:
 
@@ -161,10 +159,10 @@ To quickly get the {{site.data.keyword.mobileanalytics_short}} service up and ru
 # rellinks
 
 ## SDK
-* [Android SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics){: new_window}  
-* [iOS SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics){: new_window}
-* [Cordova Plugin Core SDK](https://www.npmjs.com/package/bms-core){: new_window}
+* [Android SDK ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics){: new_window}  
+* [iOS SDK ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics){: new_window}
+* [Cordova Plugin Core SDK ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.npmjs.com/package/bms-core){: new_window}
 
 ## API Reference
 {: #api}
-* [REST API](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}
+* [REST API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}
