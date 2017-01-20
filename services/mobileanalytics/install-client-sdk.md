@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-09"
+lastupdated: "2017-01-13"
 
 ---
 {:new_window: target="_blank"}
@@ -24,7 +24,7 @@ Client SDKs are currently available for Android, iOS, WatchOS, and Cordova.
 
 The {{site.data.keyword.mobileanalytics_short}} Client SDK is distributed with Gradle, a dependency manager for Android projects. Gradle automatically downloads artifacts from repositories and makes them available to your Android application.
 
-1. Create an [Android Studio](http://developer.android.com/sdk/index.html) project or open an existing project.
+1. Create an [Android Studio ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://developer.android.com/sdk/index.html){: new_window} project or open an existing project.
 
 2. Open the `build.gradle` file that is in your **app module**.
 
@@ -61,23 +61,23 @@ The {{site.data.keyword.mobileanalytics_full}} SDK enables you to instrument you
 ### Before you begin
 {: #before-you-begin-ios}
 
-Make sure that you correctly set up Xcode. To learn how to set up your iOS development environment, see the [Apple Developer website](https://developer.apple.com/support/xcode/). Read about the [Xcode requirements](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/tree/development#requirements) for Client SDK Swift Analytics.
+Make sure that you correctly set up Xcode. To learn how to set up your iOS development environment, see the [Apple Developer website ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.apple.com/support/xcode/){: new_window}. Read about the [Xcode requirements ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/tree/development#requirements){: new_window} for Client SDK Swift Analytics.
 
-The {{site.data.keyword.mobileanalytics_short}} SDK is distributed with [CocoaPods](https://cocoapods.org/) and [Carthage](https://github.com/Carthage/Carthage#getting-started), which are dependency managers for Cocoa projects. CocoaPods and Carthage automatically download artifacts from repositories and makes them available to your application. Select CocoaPods or Carthage:
+The {{site.data.keyword.mobileanalytics_short}} SDK is distributed with [CocoaPods ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cocoapods.org/){: new_window} and [Carthage ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/Carthage/Carthage#getting-started){: new_window}, which are dependency managers for Cocoa projects. CocoaPods and Carthage automatically download artifacts from repositories and makes them available to your application. Select CocoaPods or Carthage:
 
 #### CocoaPods
 {: #cocoapods}
 
-1. Follow the [{{site.data.keyword.Bluemix_notm}} Mobile Services Swift SDK instructions](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/tree/development#cocoapods) on GitHub to install `BMSAnalytics` using Cocoapods and add it to your Podfile. 
+1. Follow the [{{site.data.keyword.Bluemix_notm}} Mobile Services Swift SDK instructions ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/tree/development#cocoapods){: new_window} on GitHub to install `BMSAnalytics` using Cocoapods and add it to your Podfile. 
 	
 2. After you have installed the iOS Client SDK,  [import and initialize](sdk.html#initalize-ma-sdk) the Analytics Client SDK.   
 
 #### Carthage
 {: #carthage}
 
-If you are not using using CocoaPods, you can add frameworks to your project using [Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos).
+If you are not using using CocoaPods, you can add frameworks to your project using [Carthage ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos){: new_window}.
 
-1. Follow the [Carthage installation instructions](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/tree/development#carthage) on GitHub to install `BMSAnalytics`.
+1. Follow the [Carthage installation instructions ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics/tree/development#carthage){: new_window} on GitHub to install `BMSAnalytics`.
 
 2. After you have installed the iOS Client SDK,  [import and initialize](sdk.html#initalize-ma-sdk) the Analytics Client SDK.
 
@@ -86,7 +86,7 @@ If you are not using using CocoaPods, you can add frameworks to your project usi
 
 The {{site.data.keyword.mobileanalytics_full}} Cordova plugin enables you to instrument your mobile application. 
 
-1. Create a [Cordova](http://cordova.apache.org/#getstarted) project or open an existing project.
+1. Create a [Cordova ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://cordova.apache.org/#getstarted){: new_window} project or open an existing project.
 
 2. Add Android and iOS platforms to your Cordova application. Run one or both of the following commands from the command line. Currently, Cordova-CLI V6.3.0 or earlier is supported:
    
@@ -115,7 +115,7 @@ The {{site.data.keyword.mobileanalytics_full}} Cordova plugin enables you to ins
 	```
    {: codeblock}
 
- The *minSdkVersion* value must be higher than `15`. Refer to the [Android Platform Guide](https://cordova.apache.org/docs/en/latest/guide/platforms/android/) to stay current with the supported *targetSdkVersion* for the Android SDK.
+ The *minSdkVersion* value must be version `15` or higher. Refer to the [Android Platform Guide ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cordova.apache.org/docs/en/latest/guide/platforms/android/){: new_window} to stay current with the supported *targetSdkVersion* for the Android SDK.
 
 4. If you added the iOS operating system, update the `<platform name="ios">` element with a target declaration:
 
@@ -141,17 +141,17 @@ The {{site.data.keyword.mobileanalytics_full}} Cordova plugin enables you to ins
 	```
 	{: codeblock}
 	
-7. [Configure your Android and iOS environment](https://www.npmjs.com/package/bms-core#4-configuring-your-platform).
+7. [Configure your Android and iOS environment ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.npmjs.com/package/bms-core#4-configuring-your-platform){: new_window}.
 
 8. You have now installed the Cordova plugin and configured your environments. Next, [import and initialize](sdk.html#initalize-ma-sdk) the Analytics Client SDK.
 
 # rellinks
 
 ## SDK
-* [Android SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics){: new_window}  
-* [iOS SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics){: new_window}
-* [Cordova Plugin Core SDK](https://www.npmjs.com/package/bms-core){: new_window}
+* [Android SDK ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics){: new_window}  
+* [iOS SDK ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics){: new_window}
+* [Cordova Plugin Core SDK ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.npmjs.com/package/bms-core){: new_window}
 
 ## API Reference
 {: #api}
-* [REST API](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}
+* [REST API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}
