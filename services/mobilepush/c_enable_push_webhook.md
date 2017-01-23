@@ -10,9 +10,9 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Enabling webhooks event-based notification
+# Enabling webhooks 
 {: #tag_based_notifications}
-Last updated: 16 January 2017
+Last updated: 23 January 2017
 {: .last-updated}
 
 
