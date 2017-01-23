@@ -1,4 +1,4 @@
-ka---
+---
 
 copyright:
  years: 2015, 2017
@@ -12,7 +12,7 @@ copyright:
 
 # Interactive notifications
 {: #interactive-notifications}
-Last updated: 18 January 2017
+Last updated: 23 January 2017
 {: .last-updated}
 
 Interactive notifications enable users to respond to a notification without opening the application. When an interactive notification arrives, the device shows the action buttons along with the notification message. Interactive notifications are supported on iOS devices with version 8 or later. For interactive notifications sent to iOS devices that are earlier than version 8, the notification actions are not displayed.
@@ -24,7 +24,7 @@ Interactive notification can be sent by using the Push dashboard or by using the
 
 From the {{site.data.keyword.mobilepushshort}} console: 
 
-1. Under the notification tab in Push dashboard, click **Send Notification**. 
+1. On the notification tab in Push dashboard, click **Send Notification**. 
 2. Choose your notification recipients and click **Next**. 
 3. In the compose notification page, interactive push can be sent by setting the Type to either Default or Mixed and specifying the Category value under Advanced Options tab. To configure the category value on the client, check **Handling interactive {{site.data.keyword.mobilepushshort}}** in native iOS application section.
 
