@@ -43,7 +43,7 @@ Java용 Liberty에서 지원하는 환경 변수
 </tr>
 
 <tr>
-<td>JBP_CONFIG_DYNATRACEAGENT</td>
+<td>JBP_CONFIG_DYNATRACEAPPMONAGENT</td>
 <td>[Dynatrace 에이전트 위치 정보](dynatrace.html#configuring_liberty_app)를 구성합니다.</td>
 </tr>
 

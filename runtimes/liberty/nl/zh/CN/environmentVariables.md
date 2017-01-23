@@ -43,7 +43,7 @@ Liberty for Java 支持的环境变量。
 </tr>
 
 <tr>
-<td>JBP_CONFIG_DYNATRACEAGENT</td>
+<td>JBP_CONFIG_DYNATRACEAPPMONAGENT</td>
 <td>配置 [Dynatrace 代理程序位置信息](dynatrace.html#configuring_liberty_app)</td>
 </tr>
 

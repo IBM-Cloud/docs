@@ -80,12 +80,12 @@ Dynatrace エージェントは Web サーバー上でホストされる必要�
 ### Liberty アプリケーションの構成
 {: #configuring_liberty_app}
 
-モニター対象の Liberty アプリケーションは、以前にセットアップしたエージェント jar をホストするサーバーを検出するように構成する必要があります。**JBP_CONFIG_DYNATRACEAGENT** 環境変数を使用してアプリケーションを構成できます。**JBP_CONFIG_DYNATRACEAGENT** 環境変数は、Dynatrace エージェントのダウンロード元となるビルドパックを指示します。この環境変数を設定するには、以下の手順に従ってください。
+モニター対象の Liberty アプリケーションは、以前にセットアップしたエージェント jar をホストするサーバーを検出するように構成する必要があります。**JBP_CONFIG_DYNATRACEAPPMONAGENT** 環境変数を使用してアプリケーションを構成できます。**JBP_CONFIG_DYNATRACEAPPMONAGENT** 環境変数は、Dynatrace エージェントのダウンロード元となるビルドパックを指示します。この環境変数を設定するには、以下の手順に従ってください。
 <ol>
-   <li> 値が *"repository_root: URL_of_server_hosting_index.yml"* になるように変数 **JBP_CONFIG_DYNATRACEAGENT** を設定します。例えば、アプリケーションのプッシュ後に次のコマンドを発行します。
+   <li> 値が *"repository_root: URL_of_server_hosting_index.yml"* になるように変数 **JBP_CONFIG_DYNATRACEAPPMONAGENT** を設定します。例えば、アプリケーションのプッシュ後に次のコマンドを発行します。
   
   <pre>   
-    $ cf se myApp JBP_CONFIG_DYNATRACEAGENT 'repository_root: https://my-dynatrace-agent-host.mybluemix.net'
+    $ cf se myApp JBP_CONFIG_DYNATRACEAPPMONAGENT 'repository_root: https://my-dynatrace-agent-host.mybluemix.net'
   </pre>
   {: codeblock}
 

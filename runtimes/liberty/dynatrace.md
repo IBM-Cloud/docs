@@ -75,11 +75,11 @@ The Dynatrace agent must be hosted on a web server, and the Liberty buildpack mu
 ### Configuring the Liberty app
 {: #configuring_liberty_app}
 
-The Liberty app you want to monitor must be configured to locate the server hosting the agent jar you previously set up. You can configure the app with the **JBP_CONFIG_DYNATRACEAGENT** environment variable. The **JBP_CONFIG_DYNATRACEAGENT** environment variable tells the buildpack where to download the Dynatrace agent from. To set the environment variable, complete these steps:
+The Liberty app you want to monitor must be configured to locate the server hosting the agent jar you previously set up. You can configure the app with the **JBP_CONFIG_DYNATRACEAPPMONAGENT** environment variable. The **JBP_CONFIG_DYNATRACEAPPMONAGENT** environment variable tells the buildpack where to download the Dynatrace agent from. To set the environment variable, complete these steps:
 
-1. Set the variable **JBP_CONFIG_DYNATRACEAGENT** so it has the value *"repository_root: URL_of_server_hosting_index.yml"*. For example, after pushing your application issue the following command:
+1. Set the variable **JBP_CONFIG_DYNATRACEAPPMONAGENT** so it has the value *"repository_root: URL_of_server_hosting_index.yml"*. For example, after pushing your application issue the following command:
   
-        $ cf se myApp JBP_CONFIG_DYNATRACEAGENT 'repository_root: https://my-dynatrace-agent-host.mybluemix.net'
+        $ cf se myApp JBP_CONFIG_DYNATRACEAPPMONAGENT 'repository_root: https://my-dynatrace-agent-host.mybluemix.net'
         {: codeblock}
 
     In this example, *my-dynatrace-agent-host.mybluemix.net* is the URL of the `index.yml` file hosted by the server that you previously configured.

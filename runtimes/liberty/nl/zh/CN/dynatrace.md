@@ -78,12 +78,12 @@ Dynatrace 代理程序必须在 Web 服务器上进行托管，并且 Liberty bu
 ### 配置 Liberty 应用程序
 {: #configuring_liberty_app}
 
-必须将要监视的 Liberty 应用程序配置为可找到先前设置的托管代理程序 jar 的服务器。可以使用 **JBP_CONFIG_DYNATRACEAGENT** 环境变量来配置应用程序。**JBP_CONFIG_DYNATRACEAGENT** 环境变量会通知 buildpack 从什么位置下载 Dynatrace 代理程序。要设置该环境变量，请完成以下步骤：
+必须将要监视的 Liberty 应用程序配置为可找到先前设置的托管代理程序 jar 的服务器。可以使用 **JBP_CONFIG_DYNATRACEAPPMONAGENT** 环境变量来配置应用程序。**JBP_CONFIG_DYNATRACEAPPMONAGENT** 环境变量会通知 buildpack 从什么位置下载 Dynatrace 代理程序。要设置该环境变量，请完成以下步骤：
 <ol>
-   <li> 设置变量 **JBP_CONFIG_DYNATRACEAGENT**，使其具有值 *"repository_root: URL_of_server_hosting_index.yml"*。例如，推送应用程序后，发出以下命令：
+   <li> 设置变量 **JBP_CONFIG_DYNATRACEAPPMONAGENT**，使其具有值 *"repository_root: URL_of_server_hosting_index.yml"*。例如，推送应用程序后，发出以下命令：
   
   <pre>   
-$ cf se myApp JBP_CONFIG_DYNATRACEAGENT 'repository_root: https://my-dynatrace-agent-host.mybluemix.net'  </pre>
+$ cf se myApp JBP_CONFIG_DYNATRACEAPPMONAGENT 'repository_root: https://my-dynatrace-agent-host.mybluemix.net'  </pre>
   {: codeblock}
 
   在此示例中，*my-dynatrace-agent-host.mybluemix.net* 是先前配置的服务器托管的 index.yml 文件的 URL。

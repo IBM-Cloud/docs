@@ -90,12 +90,12 @@ Der Dynatrace-Agent muss als Host einen Web-Server haben und das Liberty-Buildpa
 ### Liberty-App konfigurieren
 {: #configuring_liberty_app}
 
-Die zu überwachende Liberty-App muss konfiguriert werden, sodass sie nach der Agenten-JAR-Datei sucht, die Sie zuvor eingerichtet haben. Sie können die App mit der Umgebungsvariablen **JBP_CONFIG_DYNATRACEAGENT** konfigurieren. Die Umgebungsvariable **JBP_CONFIG_DYNATRACEAGENT** weist das Buildpack an, von welcher Position der Dynatrace-Agent herunterzuladen ist. Führen Sie zum Festlegen der Umgebungsvariablen folgende Schritte aus:
+Die zu überwachende Liberty-App muss konfiguriert werden, sodass sie nach der Agenten-JAR-Datei sucht, die Sie zuvor eingerichtet haben. Sie können die App mit der Umgebungsvariablen **JBP_CONFIG_DYNATRACEAPPMONAGENT** konfigurieren. Die Umgebungsvariable **JBP_CONFIG_DYNATRACEAPPMONAGENT** weist das Buildpack an, von welcher Position der Dynatrace-Agent herunterzuladen ist. Führen Sie zum Festlegen der Umgebungsvariablen folgende Schritte aus:
 <ol>
-   <li> Legen Sie die Variable **JBP_CONFIG_DYNATRACEAGENT** fest, sodass sie folgenden Wert aufweist: *"repository_root: URL_of_server_hosting_index.yml"*. Setzen Sie beispielsweise folgenden Befehl ab, nachdem Sie für Ihre Anwendung eine Push-Operation durchgeführt haben:
+   <li> Legen Sie die Variable **JBP_CONFIG_DYNATRACEAPPMONAGENT** fest, sodass sie folgenden Wert aufweist: *"repository_root: URL_of_server_hosting_index.yml"*. Setzen Sie beispielsweise folgenden Befehl ab, nachdem Sie für Ihre Anwendung eine Push-Operation durchgeführt haben:
   
   <pre>   
-    $ cf se myApp JBP_CONFIG_DYNATRACEAGENT 'repository_root: https://my-dynatrace-agent-host.mybluemix.net'
+    $ cf se myApp JBP_CONFIG_DYNATRACEAPPMONAGENT 'repository_root: https://my-dynatrace-agent-host.mybluemix.net'
   </pre>
   {: codeblock}
 

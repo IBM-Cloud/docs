@@ -80,13 +80,13 @@ Dynatrace 에이전트는 웹 서버에 호스트되어야 하며, Liberty 빌�
 ### Liberty 앱 구성
 {: #configuring_liberty_app}
 
-이전에 설정한 에이전트 jar를 호스트하는 서버를 찾으려면 모니터할 Liberty 앱이 구성되어야 합니다. **JBP_CONFIG_DYNATRACEAGENT** 환경 변수를 사용하여 앱을 구성할 수 있습니다. **JBP_CONFIG_DYNATRACEAGENT** 환경 변수는 Dynatrace 에이전트를 다운로드할 소스 빌드팩을 알려줍니다. 이 환경 변수를 설정하려면 다음 단계를 완료하십시오. 
+이전에 설정한 에이전트 jar를 호스트하는 서버를 찾으려면 모니터할 Liberty 앱이 구성되어야 합니다. **JBP_CONFIG_DYNATRACEAPPMONAGENT** 환경 변수를 사용하여 앱을 구성할 수 있습니다. **JBP_CONFIG_DYNATRACEAPPMONAGENT** 환경 변수는 Dynatrace 에이전트를 다운로드할 소스 빌드팩을 알려줍니다. 이 환경 변수를 설정하려면 다음 단계를 완료하십시오. 
 <ol>
-   <li> **JBP_CONFIG_DYNATRACEAGENT** 변수에
+   <li> **JBP_CONFIG_DYNATRACEAPPMONAGENT** 변수에
 *"repository_root: URL_of_server_hosting_index.yml"* 값을 설정하십시오. 예를 들어 애플리케이션을 푸시한 후 다음 명령을 실행하십시오.
   
   <pre>   
-$ cf se myApp JBP_CONFIG_DYNATRACEAGENT 'repository_root: https://my-dynatrace-agent-host.mybluemix.net'
+$ cf se myApp JBP_CONFIG_DYNATRACEAPPMONAGENT 'repository_root: https://my-dynatrace-agent-host.mybluemix.net'
   </pre>
   {: codeblock}
 
