@@ -195,4 +195,4 @@ sequence `recordLocationAndHello` that is activated by the rule `anotherRule`.
   wsk action create recordLocationAndHello --sequence /whisk.system/utils/echo,hello
   wsk rule create anotherRule locationUpdate recordLocationAndHello
   ```
-  {: pre}
+ 
