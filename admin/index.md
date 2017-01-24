@@ -1337,19 +1337,37 @@ The following sections provide the data format.
 {
   "sample_time": 1477494000000,
   "memory": {
-    "physical": {
-      "total_gb": 864,
-      "used": {
-        "value_gb": 336.84,
-        "percent": 38.99
-      }
+    "cell": {
+      "physical": {
+        "total_gb": 864,
+        "used": {
+          "value_gb": 336.84,
+          "percent": 38.99
+        }
+      },
+      "allocated": {
+        "reserved_gb": 1728,
+        "total_allocated": {
+          "value_gb": 1287.59,
+          "percent": 74.51
+        }
+      },
     },
-    "allocated": {
-      "reserved_gb": 1728,
-      "total_allocated": {
-        "value_gb": 1287.59,
-        "percent": 74.51
-      }
+    "dea": {
+      "physical": {
+      	"total_gb": 864,
+        "used": {
+          "value_gb": 336.84,
+          "percent": 38.99
+        }
+      },
+      "allocated": {
+        "reserved_gb": 1728,
+        "total_allocated": {
+          "value_gb": 1287.59,
+          "percent": 74.51
+        }
+      },
     },
     "memory_by_container": [
       {
@@ -1388,19 +1406,37 @@ The following sections provide the data format.
 {
   "sample_time": 1477494000000,
   "disk": {
-    "physical": {
-      "total_gb": 8100,
-      "used": {
-        "value_gb": 807,
-        "percent": 9.96
-      }
+    "cell": {
+      "physical": {
+        "total_gb": 8100,
+        "used": {
+          "value_gb": 807,
+          "percent": 9.96
+        }
+      },
+      "allocated": {
+        "reserved_gb": 16200,
+        "total_allocated": {
+          "value_gb": 1989.5,
+          "percent": 12.28
+        }
+      },
     },
-    "allocated": {
-      "reserved_gb": 16200,
-      "total_allocated": {
-        "value_gb": 1989.5,
-        "percent": 12.28
-      }
+    "dea": {
+      "physical": {
+        "total_gb": 8100,
+        "used": {
+          "value_gb": 807,
+          "percent": 9.96
+        }
+      },
+      "allocated": {
+        "reserved_gb": 16200,
+        "total_allocated": {
+          "value_gb": 1989.5,
+          "percent": 12.28
+        }
+      },
     },
     "disk_by_container": [
       {
@@ -1439,7 +1475,12 @@ The following sections provide the data format.
 {
   "sample_time": 1477494000000,
   "cpu": {
-    "average_percent_cpu_used": 27.288461538461544,
+    "cell": {
+      "average_percent_cpu_used": 27.288461538461544
+    },
+    "dea": {
+      "average_percent_cpu_used": 27.288461538461544
+    },
     "cpu_by_container": [
       {
         "name": "dea_next/0",
@@ -1584,6 +1625,9 @@ Use the following query parameters to gather metrics for your applications:
 <dd class="pd">The latest point in time from which data is returned. If no endTime is specified, the most recent data point is used. For example, to gather data between 2 PM and 5 PM, specify an endTime of 5 PM.</dd>
 <dt class="pt dlterm">count</dt>
 <dd class="pd">The number of records to return within each data sample.
+</dd>
+<dt class="pt dlterm">minValue</dt>
+<dd class="pd">The smallest value to return for the specified metric.  If no minValue is specified, all values are returned.  For example, to gather applications using at least 20000 bytes of physical memory, specify a minValue of 20000.
 </dd>
 </dl>
 
