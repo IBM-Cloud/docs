@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-01-24"
 
 ---
 
@@ -1299,9 +1299,8 @@ You can use two experimental APIs to gather metrics about your environment or ap
 
 The Metrics APIs that are described in the following sections can be accessed from the region-specific endpoint, for example: 
 
- ```
-https://console.<region>.bluemix.net.
- ```
+ `https://console.<region>.bluemix.net/admin/metrics`
+{: codeblock}
 
 **Notes**:
 
@@ -1312,20 +1311,31 @@ https://console.<region>.bluemix.net.
 
 You can use the experimental environment API to gather high-level environment information over a time period that you specify. Available data points within the time that you specify are returned. Data is recorded approximately every hour. If, for example, you requested six hours of CPU data for the environment, the response would include CPU data for each of the six requested hours.
 
+ ### Environment endpoints 
+ 
+You can use the following endpoint to invoke this API command:  `/api/v1/env`
+
 ### Environment metrics query parameters
 
 Using the following query parameters, you can gather metrics for your CPU, disk, memory, network, and apps:
 
 <dl class="parml">
 <dt class="pt dlterm">metric</dt>
-<dd class="pd">One or more of the following values, separated by commas: 'memory', 'disk', 'cpu', 'network' and 'apps.'</dd>
+<dd class="pd">One or more of the following values, separated by commas: `memory`, `disk`, `cpu`, `network` and `apps`.</dd>
 <dt class="pt dlterm">startTime</dt>
 <dd class="pd">The earliest point in time from which data is returned. If no startTime is specified, the earliest available data point is included. For example, to gather data between 2 PM and 5 PM, specify a startTime of 2 PM.</dd>
 <dt class="pt dlterm">endTime</dt>
 <dd class="pd">The latest point in time from which data is returned. If no endTime is specified, the most recent data point is used. For example, to gather data between 2 PM and 5 PM, specify an endTime of 5 PM.</dd>
 <dt class="pt dlterm">sort</dt>
-<dd class="pd">The order in which the data is returned. Valid values are 'asc' (ascending) and 'desc' (descending). The default is descending, returning the most recent data first. </dd>
+<dd class="pd">The order in which the data is returned. Valid values are `asc` (ascending) and `desc` (descending). The default is descending, returning the most recent data first. </dd>
 </dl>
+
+ The following example uses the query parameters to gather metrics about your environment:
+ 
+ ```
+ curl -b ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/admin/metrics/api/v1/env?metric=cpu,network,disk,apps,memory
+ ```
+{: codeblock}
 
 ### Environment metrics data format
 
@@ -1573,7 +1583,7 @@ The following sections provide the data format.
 {: screen}
 
 * To gather data records about your applications, use the following data format:
- 
+
 ```
 {
   "sample_time": 1477494000000,
@@ -1607,11 +1617,11 @@ To reduce the amount of information that is returned for each data sample in the
 ### Applications endpoints 
 
 You can use the following endpoints to invoke this API command:
-* /api/v1/app/cpu/physical 
-* /api/v1/app/memory/physical
-* /api/v1/app/memory/reserved
-* /api/v1/app/disk/physical
-* /api/v1/app/disk/reserved
+* `/api/v1/app/cpu/physical` 
+* `/api/v1/app/memory/physical`
+* `/api/v1/app/memory/reserved`
+* `/api/v1/app/disk/physical`
+* `/api/v1/app/disk/reserved`
 
 
 ### Applications query parameters
@@ -1630,6 +1640,13 @@ Use the following query parameters to gather metrics for your applications:
 <dd class="pd">The smallest value to return for the specified metric.  If no minValue is specified, all values are returned.  For example, to gather applications using at least 20000 bytes of physical memory, specify a minValue of 20000.
 </dd>
 </dl>
+
+The following example gathers metrics about your applications:
+
+```
+curl -b ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/admin/metrics/api/v1/app/cpu/physical?count=5&startTime=2016-12-02T16:54:09.467Z
+```
+{: codeblock}
 
 ### Applications response format
 
