@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2016, 2017
 lastupdated: "2016-12-02"
 
 ---
@@ -112,5 +112,5 @@ Modify the configured trust store to trust the DigitCert ROOT CA.
   1. Download the DigiCert Root CA from https://www.digicert.com/CACerts/DigiCertGlobalRootCA.crt.
   2. Assuming the resources/security/key.jks is used as the trust store, import the CA into the key using the Java's keytool utility:
 
-            $ keytool -importcert --storepass <keyStorePassword> -keystore <path>/resources/security/key.jks -file DigiCertGlobalRootCA.crt
+            $ keytool -importcert --storepass <keyStorePassword> -keystore &lt;path&gt;/resources/security/key.jks -file DigiCertGlobalRootCA.crt
             {: codeblock}

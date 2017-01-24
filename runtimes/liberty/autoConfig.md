@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
 lastupdated: "2016-12-12"
 
 ---
@@ -41,6 +41,7 @@ The Liberty buildpack provides automatic configuration for the following service
 * [New Relic](newRelic.html)
 * [Dynatrace](dynatrace.html)
 * [Compose for PostgreSQL](/docs/services/ComposeForPostgreSQL/index.html)
+* [Compose for MongoDB](/docs/services/ComposeForMongoDB/index.html) (Currently only available with the monthly Liberty runtime).
 
 As noted, some services can be application managed, or container managed. Mongo and SQLDB are examples of such services. By default, the Liberty buildpack assumes that these services are container managed and automatically configures them. If you want the application to manage the service, you can opt-out of automatic configuration for the service by setting the services_autoconfig_excludes environment variable. For more information, see [Opting out of service auto-configuration](autoConfig.html#opting_out).
 
