@@ -130,7 +130,7 @@ curl -X GET https://2ef15285-gws.api-gw.mybluemix.net/club/books
 ### Exporting configuration
 Let's export API named `Book Club` into a file that we can use as a base to to re-create the APIs using a file as input. 
 ```
-wsk api get "Book Club" > club-swagger.json
+wsk api-experimental get "Book Club" > club-swagger.json
 ```
 {: pre}
 
@@ -147,7 +147,7 @@ ok: deleted API /club
 
 Now let's restore the API named `Book Club` by using the file `club-swagger.json`
 ```
-wsk api create --config-file club-swagger.json
+wsk api-experimental create --config-file club-swagger.json
 ```
 {: pre}
 ```
@@ -164,7 +164,7 @@ https://2ef15285-gws.api-gw.mybluemix.net/club/books
 
 We can verify that the API has been re-created
 ```
-wsk api list /club
+wsk api-experimental list /club
 ```
 {: pre}
 ```
