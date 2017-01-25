@@ -24,7 +24,7 @@ To quickly get the {{site.data.keyword.mobileanalytics_short}} service up and ru
 
 1. After you create an instance <!--[create an instance](https://console.{DomainName}/docs/services/reqnsi.html#req_instance)-->of the {{site.data.keyword.mobileanalytics_short}} service, you can access the {{site.data.keyword.mobileanalytics_short}} Console by clicking your tile in the **Services** section of the {{site.data.keyword.Bluemix}} Dashboard.
 
- To help you get an immediate feel of the various views and charts and the value they bring forth, we provide a **demo mode** option in the {{site.data.keyword.mobileanalytics_short}} console, whereby the views and charts display *demo data*. Demo data is the default mode of the console when it initially launches after the service is instantiated. When you have your own applications and analytics data populated into the service, you can toggle *off* the demo mode to view your applications' data in the different charts. The Mobile Analytics console is read-only when in demo mode, therefore you will not be able to create new alert definitions.
+ To help you get an immediate feel of the various views and charts and the value they bring forth, we provide a **demo mode** option in the {{site.data.keyword.mobileanalytics_short}} console, whereby the views and charts display *demo data*. Demo mode is the default mode of the console when it initially launches after the service is instantiated. When you have your own applications and analytics data populated into the service, you can toggle *off* the demo mode to view your applications' data in the different charts. The {{site.data.keyword.mobileanalytics_short}} console is read-only when in demo mode, therefore you will not be able to create new alert definitions.
 
 2. Install the {{site.data.keyword.mobileanalytics_short}} [Client SDKs](/docs/services/mobileanalytics/install-client-sdk.html). You can optionally use the {{site.data.keyword.mobileanalytics_short}} [REST API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}.
 
@@ -115,7 +115,7 @@ To quickly get the {{site.data.keyword.mobileanalytics_short}} service up and ru
   
  **Note:** The name that you select for your application (`your_app_name_here`) displays in the {{site.data.keyword.mobileanalytics_short}} console as the application name. The application name is used as a filter to search for application logs in the dashboard. When you use the same application name across platforms (for example, Android and iOS), you can see all logs from that application under the same name, regardless of which platform the logs were sent from.
 
-5. Send recorded usage analytics to the Mobile Analytics Service. A simple way to test your analytics is to run the following code when your application starts:
+5. Send recorded usage analytics to the {{site.data.keyword.mobileanalytics_short}} Service. A simple way to test your analytics is to run the following code when your application starts:
 
 	#### Android
 	{: #android-send}
