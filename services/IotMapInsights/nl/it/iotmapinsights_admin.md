@@ -13,33 +13,35 @@ copyright:
 
 
 # Amministrazione
-{: #1stanchor}
-*Ultimo aggiornamento: 6 maggio 2016*
+{: #iotmapinsights_admin}
+Ultimo aggiornamento: 22 giugno 2016
+{: .last-updated}
 
-
-L'amministrazione di {{site.data.keyword.iotmapinsights_full}} include le seguenti attività:
-- Visualizzazione delle informazioni sul tenant
-- Reimpostazione della password del tenant
+Gestisci la tua istanza del servizio {{site.data.keyword.iotmapinsights_full}} utilizzando la console di gestione sul dashboard {{site.data.keyword.Bluemix_notm}}. Dalla console di gestione, puoi configurare i parametri per  {{site.data.keyword.iotmapinsights_short}} e gestire i dati memorizzati nel servizio. Puoi anche visualizzare le informazioni sul tenant e reimpostare la password del tenant.
 {:shortdesc}
 
-Puoi lavorare con queste attività utilizzando la console di gestione **{{site.data.keyword.iotmapinsights_full}}**.
+## Avvio della console di gestione
+{: #start_admin_console}
 
-Per accedere alla **Console di gestione**:
+Per accedere alla console di gestione per il servizio {{site.data.keyword.iotmapinsights_short}}:
 
-1. Vai alla vista **Gestisci** della tua istanza del servizio.
-2. Fai clic su **Avvia**. La **Console di gestione** viene visualizzata come una nuova finestra.
-3. Immetti i tuoi *nomeutente* e *password* come mostrato nella vista **Gestisci** e fai quindi clic su **ACCEDI**.
+1. Sul dashboard {{site.data.keyword.Bluemix_notm}}, fai clic sul tile del servizio {{site.data.keyword.iotmapinsights_short}}.
+2. Seleziona la vista **Gestisci** della tua istanza del servizio.
+Prendi nota delle credenziali di nome utente e password che ti serviranno in seguito. Per accedere alla console di gestione è richiesto il tuo ID IBM, che potrebbe non essere uguale a quello delle tue credenziali {{site.data.keyword.Bluemix_notm}}.
+3. Fai clic su **Avvia** e, quando richiesto, immetti le credenziali ID IBM.
+4. Fai clic su **ACCEDI**. Viene visualizzata la finestra **Console di gestione**.
 
-## Visualizzazione delle informazioni sul tenant
-{: #viewtenantinfo}
+## Gestione delle informazioni sul tenant
+{: #view_tenant_info}
 
-Dopo che hai eseguito l'accesso alla **Console di gestione**, puoi vedere la vista **Informazioni sul tenant** che contiene le tue informazioni sul tenant.
+Per visualizzare le informazioni sul tenant, fai clic su **Informazioni sul tenant**.
 
-## Reimpostazione della password del tenant
-{: #resettenantpassword}
+### Reimpostazione della password del tenant
+{: #reset_tenant_password}
 
-Nella vista **Informazioni sul tenant**:
+Per reimpostare la password del tenant:
 
-1. Fai clic su **REIMPOSTA**.
-2. Nella finestra di dialogo di conferma, fai clic su **OK**. La nuova password viene quindi visualizzata nella vista **Informazioni sul tenant**.
-3. Se vuoi uscire dalla **Console di gestione**, fai clic su **DISCONNETTITI** nella vista.
+1. Nella finestra **Informazioni sul tenant**, fai clic su **REIMPOSTA**.
+2. Nella finestra di dialogo, fai clic su **OK**.
+Viene generata una nuova password e viene visualizzata nella vista **Informazioni sul tenant**.
+**Importante:** assicurati di aggiornare la password in tutte le tue applicazioni che accedono all'API {{site.data.keyword.iotmapinsights_short}}.
