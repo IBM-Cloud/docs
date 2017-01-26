@@ -80,8 +80,6 @@ To validate which backend the application is running on, use the following comma
 There are the following known issues that you might need to address when migrating your apps to Diego:
 
   * Worker applications deployed with the `--no-route` option do not report as healthy. To prevent this, disable the port-based health check with the `cf set-health-check APP_NAME none` command.
-  * Diego does not use the VCAP_APP_HOST environment variable. If your code references this variable, remove it.
-  * Diego does not use the VCAP_APP_PORT environment variable. If your code references this variable, replace it with PORT.
   * The **cf files** command is no longer supported. The replacement is the **cf ssh** command. For more details on the **cf ssh** command, see [cf ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh).
   * Some apps might use a high number of file descriptors (inodes). If you encounter this issue, you must increase disk quota for your app with the `cf scale APP_NAME [-k DISK]` command.
 
