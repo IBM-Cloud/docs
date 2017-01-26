@@ -68,9 +68,9 @@
    inkscape:window-height="731"
    id="namedview829"
    showgrid="false"
-   inkscape:zoom="0.98433313"
-   inkscape:cx="450.64271"
-   inkscape:cy="206.32332"
+   inkscape:zoom="1.3920573"
+   inkscape:cx="370.72464"
+   inkscape:cy="399.73929"
    inkscape:window-x="104"
    inkscape:window-y="14"
    inkscape:window-maximized="0"
@@ -218,68 +218,15 @@
    id="g501"
    clip-path="url(#SVGID_72_)">
 		<text
-   transform="translate(161.5913,104.2935)"
-   id="text503"><tspan
-     x="0"
-     y="0"
+   id="text503"
+   x="147.94243"
+   y="104.2935"><tspan
+     x="147.94243"
+     y="104.2935"
      class="st35 st36 st37"
      id="tspan505"
-     style="font-size:12px;fill:#5c5c5c;font-family:HelvNeueRomanforIBM">Bluemix </tspan><tspan
-     x="44.349998"
-     y="0"
-     class="st35 st36 st37"
-     id="tspan507"
-     style="font-size:12px;fill:#5c5c5c;font-family:HelvNeueRomanforIBM">s</tspan><tspan
-     x="50.27"
-     y="0"
-     class="st35 st36 st37"
-     id="tspan509"
-     style="font-size:12px;fill:#5c5c5c;font-family:HelvNeueRomanforIBM">e</tspan><tspan
-     x="56.720001"
-     y="0"
-     class="st35 st36 st37"
-     id="tspan511"
-     style="font-size:12px;fill:#5c5c5c;font-family:HelvNeueRomanforIBM">n</tspan><tspan
-     x="63.07"
-     y="0"
-     class="st35 st36 st37"
-     id="tspan513"
-     style="font-size:12px;fill:#5c5c5c;font-family:HelvNeueRomanforIBM">det </tspan><tspan
-     x="78.730003"
-     y="0"
-     class="st35 st36 st37"
-     id="tspan515"
-     style="font-size:12px;fill:#5c5c5c;font-family:HelvNeueRomanforIBM">B</tspan><tspan
-     x="85.089996"
-     y="0"
-     class="st35 st36 st37"
-     id="tspan517"
-     style="font-size:12px;fill:#5c5c5c;font-family:HelvNeueRomanforIBM">e</tspan><tspan
-     x="91.75"
-     y="0"
-     class="st35 st36 st37"
-     id="tspan519"
-     style="font-size:12px;fill:#5c5c5c;font-family:HelvNeueRomanforIBM">n</tspan><tspan
-     x="95.449997"
-     y="0"
-     class="st35 st36 st37"
-     id="tspan521"
-     style="font-size:12px;fill:#5c5c5c;font-family:HelvNeueRomanforIBM">a</tspan><tspan
-     x="97.980003"
-     y="0"
-     class="st35 st36 st37"
-     id="tspan523"
-     style="font-size:12px;fill:#5c5c5c;font-family:HelvNeueRomanforIBM">chrich</tspan><tspan
-     x="110.29"
-     y="0"
-     class="st35 st36 st37"
-     id="tspan525"
-     style="font-size:12px;fill:#5c5c5c;font-family:HelvNeueRomanforIBM">ti</tspan><tspan
-     x="116.59"
-     y="0"
-     class="st35 st36 st37"
-     id="tspan527"
-     style="font-size:12px;fill:#5c5c5c;font-family:HelvNeueRomanforIBM">gung</tspan></text>
+     style="font-size:12px;fill:#5c5c5c;font-family:HelvNeueRomanforIBM">Bluemix sendet Benachrichtigung</tspan></text>
+
 
 	</g>
 </g><g
@@ -1024,6 +971,7 @@
      y="0"
      x="0">Optional: Kunde öffnet ein Ticket </tspan></text>
 
+
 	</g><g
    clip-path="url(#SVGID_66_)"
    id="g345"
@@ -1037,6 +985,7 @@
      class="st35 st36 st37"
      y="0"
      x="2.8599999">Vorfall erkannt in </tspan></text>
+
 
 	</g><g
    clip-path="url(#SVGID_66_)"
@@ -1052,6 +1001,7 @@
      class="st35 st36 st37"
      y="300.65689"
      x="13.622563">Kundenumgebung</tspan></text>
+
 
 	</g><g
    clip-path="url(#SVGID_66_)"
@@ -1070,6 +1020,7 @@
      y="323.12396"
      x="300.04697">24/7-Zusammenarbeit</tspan></text>
 
+
 	</g><g
    clip-path="url(#SVGID_66_)"
    id="g429"
@@ -1080,6 +1031,7 @@
    id="text431"
    class="st35 st38 st39"
    transform="translate(426.6889,234.468)">Bluemix</text>
+
 
 	</g><g
    clip-path="url(#SVGID_66_)"
@@ -1115,6 +1067,7 @@
      y="0"
      x="21.690001">tionen</tspan></text>
 
+
 	</g><g
    clip-path="url(#SVGID_66_)"
    id="g447"
@@ -1125,6 +1078,7 @@
    id="text449"
    class="st35 st38 st39"
    transform="translate(347.6339,234.2215)">Bluemix</text>
+
 
 	</g><g
    clip-path="url(#SVGID_66_)"
@@ -1159,6 +1113,7 @@
      class="st35 st36 st39"
      y="0"
      x="26.139999">t</tspan></text>
+
 
 	</g>
 <g
@@ -1336,6 +1291,7 @@
      y="0"
      class="st35 st36 st49"
      id="tspan587"> Alert</tspan></text>
+
 
 </g>
 <g
