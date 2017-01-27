@@ -16,13 +16,15 @@ lastupdated: "2017-01-25"
 
 When you are building a cloud native digital channel application for mobile and Web, the best practice is to have a Backend for Frontend (BFF) that is either dedicated to your digital channel or offers the same data and logic integration support for both Web and mobile client apps. For more information about this architecture, see [Microservices for web and mobile ![External link icon](../icons/launch-glyph.svg)](https://www.ibm.com/devops/method/content/architecture/omnichannelArchitecture).
 
-The following diagram shows an overview of the BFF architecture.
+<!-- The following diagram shows an overview of the BFF architecture.
 
 ![BFF architecture](images/bff-arch.png)
 
-Figure 1: BFF architecture
+Figure 1: BFF architecture -->
 
-The concept of a BFF is to abstract away common business logic and integration logic from you microservices or high-value {{site.data.keyword.Bluemix}} cloud services.With this architecture, you can deploy and release updates to your mobile or Web application and deploy new versions of your BFF by using continous delivery pipelines with the dev ops service.
+The concept of a BFF is to abstract away common business logic and integration logic from you microservices or high-value {{site.data.keyword.Bluemix}} cloud services.
+
+With this architecture, you can deploy and release updates to your mobile or Web application and deploy new versions of your BFF by using continous delivery pipelines with the dev ops service.
 
 If you have one BFF for iOS and a separate BFF for Android, the engineering teams that are delivering the function for these apps are not constrained to release features by a centralized API release schedule. This is a common goal for microservice and digital channel architectures - to free the teams to release function and features often, without being tightly coupled to another team's release schedule.
 
