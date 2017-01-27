@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -20,7 +20,7 @@ lastupdated: "2016-12-06"
 
 Para uma lista abrangente das opções e exemplos da API de REST do {{site.data.keyword.objectstorageshort}}, veja a [Referência completa da API do OpenStack Swift](http://developer.openstack.org/api-ref-objectstorage-v1.html).
 
-Quando você autenticou sua instância de serviço com o Keystone, anotou a resposta do catálogo. Ela deve ser semelhante ao exemplo a seguir.
+Antes de editar a URL, deve-se [autenticar](/docs/services/ObjectStorage/os_authenticate.html) a instância de serviço com o Keystone. Certifique-se de observar o seu catálogo de resposta. Ele será semelhante ao exemplo a seguir.
 
 ```
 {
@@ -36,5 +36,6 @@ Quando você autenticou sua instância de serviço com o Keystone, anotou a resp
 
 Inclua o namespace de seu contêiner e do objeto no final da URL do {{site.data.keyword.objectstorageshort}} conforme mostrado na imagem a seguir.
 
-  Partes da URL do ![{{site.data.keyword.objectstorageshort}} mostradas em uma imagem de exemplo](images/swift_URL.png)
-  Figura 1: Exemplo da URL do {{site.data.keyword.objectstorageshort}}
+Partes da URL do ![{{site.data.keyword.objectstorageshort}} mostradas em uma imagem de exemplo](images/Swift_URL.png)
+
+Figura 1. {{site.data.keyword.objectstorageshort}} Exemplo de URL

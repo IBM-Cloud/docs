@@ -1,83 +1,82 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
 
-# Configurazione della CLI per utilizzare i comandi Swift e Cloud Foundry
+# Configuring the CLI to use Swift and Cloud Foundry commands
 
-Per interagire con il servizio {{site.data.keyword.objectstorageshort}} utilizzando i comandi Swift o Cloud Foundry, devi installare il software prerequisito.
+To interact with the {{site.data.keyword.objectstorageshort}} service by using Swift or Cloud Foundry commands, you must install the prerequisite software.
 {: shortdesc}
 
 
-## Installazione del client Swift {: #install-swift-client}
+## Installing the Swift client {: #install-swift-client}
 
-Se non lo hai già fatto, installa il seguente software prerequisito.
-* Python 2.7 o successive
-* Package setuptools
-* Package pip
-* CLI Cloud Foundry
+If you haven't already, install the following prerequisite software.
+* Python 2.7 or later
+* setuptools package
+* pip package
+* Cloud Foundry CLI
 
 
-Per installare il client Python Swift, esegui il seguente comando:
+To install the Python Swift client, run the following command:
 ```
 pip install python-swiftclient
 ```
 {: pre}
 
-Per installare il client Python Keystone, esegui il seguente comando:
+To install the Python Keystone client, run the following command:
 ```
 pip install python-keystoneclient
 ```
 {: pre}
 
-Per ulteriori informazioni sui requisiti, consulta [la documentazione Openstack](http://docs.openstack.org/user-guide/common/cli_install_openstack_command_line_clients.html#install-the-prerequisite-software){: new_window}.
+For more information about the prerequisites, see [the Openstack documentation](http://docs.openstack.org/user-guide/common/cli_install_openstack_command_line_clients.html#install-the-prerequisite-software){: new_window}.
 
 
-## Impostazione del client {: #setup-swift-client}
+## Setting up the client {: #setup-swift-client}
 
-Per configurare il client Swift, devi `esportare` le tue informazioni di autenticazione. Puoi [generare le credenziali](/docs/services/ObjectStorage/os_credentials.html) tramite la CLI utilizzando i comandi Cloud Foundry o cURL o tramite la IU {{site.data.keyword.Bluemix_notm}}. Il client prende le informazioni di autenticazione dalle variabili di ambiente nella seguente tabella. 
-
+To configure the Swift client, you must `export` your authentication information. You can [generate credentials](/docs/services/ObjectStorage/os_credentials.html) through the CLI by using Cloud Foundry or cURL commands or through the {{site.data.keyword.Bluemix_notm}} UI. The client takes the information from the environment variables in the following table.
 
 <table>
+<caption> Table 1. Environment variables and descriptions </caption>
   <tr>
-    <th> Variabile di ambiente </th>
-    <th> Descrizione </th>
+    <th> Environment variable </th>
+    <th> Description </th>
   </tr>
   <tr>
-    <td> <code>OS_USER_ID</code> </td>
-    <td> Il tuo ID utente {{site.data.keyword.objectstorageshort}}. </td>
+    <td> <code> OS_USER_ID </code> </td>
+    <td> Your {{site.data.keyword.objectstorageshort}} user ID. </td>
   </tr>
   <tr>
-    <td> <code>OS_PASSWORD</code> </td>
-    <td> La password per la tua istanza {{site.data.keyword.objectstorageshort}}. </td>
+    <td> <code> OS_PASSWORD </code> </td>
+    <td> The password for your {{site.data.keyword.objectstorageshort}} instance. </td>
   </tr>
   <tr>
-    <td> <code>OS_PROJECT_ID</code> </td>
-    <td> Il tuo ID progetto. </td>
+    <td> <code> OS_PROJECT_ID </code> </td>
+    <td> Your project ID. </td>
   </tr>
   <tr>
-    <td> <code>OS_REGION_NAME</code> </td>
-    <td> La regione in cui i tuoi oggetti vengono archiviati. {{site.data.keyword.objectstorageshort}} è disponibile nelle regioni di Dallas e Londra. </td>
+    <td> <code> OS_REGION_NAME </code> </td>
+    <td> The region in which your objects are stored. {{site.data.keyword.objectstorageshort}} is available in the Dallas and London regions. </td>
   </tr>
   <tr>
-    <td> <code>OS_AUTH_URL</code> </td>
-    <td> L'URL endpoint. Assicurati che <code>/v3</code> sia aggiunto alla fine dell'URL. </td>
+    <td> <code> OS_AUTH_URL </code> </td>
+    <td> The endpoint URL. Be sure that <code>/v3</code> is added to the end of the URL. </td>
   </tr>
 </table>
 
-Tabella 1: Descrizioni e variabili di autenticazione
 
 
-Per esportare le informazioni di autenticazione, immetti le tue credenziali ed esegui il seguente comando:
+To export your authentication information, input your credentials and run the following command:
 ```
 export OS_USER_ID=
 export OS_PASSWORD=
@@ -92,15 +91,15 @@ swift auth
 {: codeblock}
 
 
-Esempio:
+Example:
 ```
 export OS_USER_ID=24a20b8e4e724f5fa9e7bfdc79ca7e85
-  export OS_PASSWORD=*******
-  export OS_PROJECT_ID=383ec90b22ff4ba4a78636f4e989d5b1
-  export OS_AUTH_URL=https://identity.open.softlayer.com/v3
-  export OS_REGION_NAME=dallas
-  export OS_IDENTITY_API_VERSION=3
-  export OS_AUTH_VERSION=3
+export OS_PASSWORD=*******
+export OS_PROJECT_ID=383ec90b22ff4ba4a78636f4e989d5b1
+export OS_AUTH_URL=https://identity.open.softlayer.com/v3
+export OS_REGION_NAME=dallas
+export OS_IDENTITY_API_VERSION=3
+export OS_AUTH_VERSION=3
 
 swift auth
 ```

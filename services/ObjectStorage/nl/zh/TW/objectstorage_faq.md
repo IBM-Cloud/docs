@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -19,6 +19,7 @@ lastupdated: "2016-12-06"
 {{site.data.keyword.objectstorageshort}} 服務提供兩個方案選項：「免費」及「標準」。[定價](https://www.ibm.com/cloud-computing/bluemix/pricing/)視選擇的方案而定。
 
 <table>
+<caption> 表 1. 免費與標準方案的比較</caption>
   <tr>
     <th> 免費方案</th>
     <th> 標準方案</th>
@@ -40,8 +41,6 @@ lastupdated: "2016-12-06"
     <td> 無限制的儲存空間</td>
   </tr>
 </table>
-
-表 1：免費與標準方案的比較
 
 **注意**：使用 {{site.data.keyword.Bluemix_notm}} 試用帳戶的使用者可以使用「免費」方案。試用時間到期之後，將會停用關聯的 {{site.data.keyword.objectstorageshort}} 服務實例，這表示您將無法存取儲存空間帳戶。在 30 天之後，將會清除您的 {{site.data.keyword.Bluemix_notm}} 帳戶，並刪除所有資料。為了避免資料流失，請儘快升級為[付費 {{site.data.keyword.Bluemix_notm}} 帳戶](/docs/admin/account.html)。
 

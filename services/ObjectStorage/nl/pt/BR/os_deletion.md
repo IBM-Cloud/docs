@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -36,7 +36,7 @@ Depois que você não tiver mais necessidade deles, será possível excluir os o
   ```
   {: pre}
 
-2. Opcional: confirme se você tem um backup de seus objetos antes de excluir arquivos e contêineres.
+2. Opcional: confirme se você tem um backup de seus objetos antes de excluir os arquivos e contêineres.
 
 3. Execute o comando a seguir para excluir um arquivo:
   ```
@@ -55,14 +55,12 @@ Depois que você não tiver mais necessidade deles, será possível excluir os o
 ## Planejando a exclusão de objeto {: #schedule-object-deletion}
 
 
-É possível planejar a exclusão de seus objetos. Isso pode ser feito usando um dos dois cabeçalhos `X-Delete-At` ou `X-Delete-After`.
+É possível planejar a exclusão de seus objetos usando os cabeçalhos `X-Delete-At` ou `X-Delete-After`.
 {: shortdesc}
 
-O cabeçalho `X-Delete-At` usa um número inteiro que representa o período no qual excluir o objeto. O cabeçalho `X-Delete_After` usa um número inteiro que representa o número de segundos após o qual o objeto será excluído. Para
-usar o cliente swift para planejar a exclusão de objeto, execute o comando a seguir que
-melhor se ajuste à sua necessidade.
+O cabeçalho `X-Delete-At` usa um número inteiro que representa o período de tempo no qual excluir o objeto. O cabeçalho `X-Delete_After` usa um número inteiro que representa o número de segundos após os quais o objeto é excluído.
 
-**Nota:** a exclusão real de um objeto pode não acontecer no horário exato indicado. No entanto, o objeto irá de fato expirar no horário especificado. Isso significa que não será mais acessível. A exclusão real ocorrerá na próxima vez que o daemon swift-object-expirer configurado no cluster Swift for executado.
+**Nota:** a exclusão real de um objeto pode não acontecer no horário exato indicado. No entanto, o objeto irá de fato expirar no horário especificado. Nesse momento, o objeto ainda estará acessível. A exclusão real ocorrerá na próxima vez que o daemon swift-object-expirer, que está configurado em seu cluster Swift, for executado.
 
 #### Para usar comandos Swift:
 

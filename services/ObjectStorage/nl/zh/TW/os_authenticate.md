@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -18,11 +18,11 @@ lastupdated: "2016-12-06"
 {: shortdesc}
 
 
-佈建新的 {{site.data.keyword.objectstorageshort}} 實例會在 IBM Public Cloud 中建立隔離的 Keystone 專案。Keystone 認證結構包含一組完整的屬性，可讓您選擇最符合您應用程式的 OpenStack 記號要求方法或 OpenStack SDK。當您將新的應用程式連結至實例時，會建立具有專案存取權的新 Keystone 使用者。當您取消佈建實例時，會刪除專案及使用者。
+佈建新的 {{site.data.keyword.objectstorageshort}} 實例會在 IBM Public Cloud 中建立隔離的 Keystone 專案。Keystone 認證結構包含一組完整的屬性，以便您可以選擇最符合您應用程式的 OpenStack 記號要求方法或 OpenStack SDK。當您將新的應用程式連結至實例時，會建立具有專案存取權的新 Keystone 使用者。當您取消佈建實例時，會刪除專案及使用者。
 
 如需使用 OpenStack Swift 和 Keystone 的相關資訊，請檢視 [OpenStack 文件網站](http://docs.openstack.org)。
 
-1. 建議的第 3 版記號要求是 https://identity.open.softlayer.com/v1/auth/tokens 的 POST 要求，如下列 cURL 指令中所示：
+1. 對 `https://identity.open.softlayer.com/v3/auth/tokens` 提出 POST 要求，如下列 cURL 指令中所示。
   ```
   	curl -i \
 	  -H "Content-Type: application/json" \
@@ -51,7 +51,7 @@ lastupdated: "2016-12-06"
 ```
   {: codeblock}
 
-2. 當您使用 Keystone 進行鑑別，您會收到型錄回應。請選取 `object-store` 端點並記錄。您需要它才能建構完整 URL。下列回應範例已經過修整，只顯示與 {{site.data.keyword.objectstorageshort}} 相關的資訊。
+2. 從型錄回應中選取 `object-store` 端點並記錄。您需要它才能建構完整 URL。下列回應範例已經過修整，只顯示與 {{site.data.keyword.objectstorageshort}} 相關的資訊。
 
   ```
   	HTTP/1.1 201 Created
@@ -153,6 +153,7 @@ lastupdated: "2016-12-06"
   {: screen}
 
   <table>
+  <caption> 表 1. 說明的 POST 要求回應</caption>
     <tr>
       <th> 回應端點</th>
       <th> 說明</th>
@@ -171,12 +172,10 @@ lastupdated: "2016-12-06"
     </tr>
     <tr>
       <td> <code> url </code> </td>
-      <td> 您的 {{site.data.keyword.objectstorageshort}} URL。用來使用 cURL 指令與服務互動。</td>
+      <td> 您的 {{site.data.keyword.objectstorageshort}} URL。</td>
     </tr>
     <tr>
       <td> <code> interface </code> </td>
       <td> 無法從 {{site.data.keyword.Bluemix_notm}} 存取內部介面。請使用公用介面 (<code>publicURL</code>)。</td>
     </tr>
   </table>
-
-  表 1：說明的張貼要求回應

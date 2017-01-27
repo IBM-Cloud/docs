@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -18,11 +18,11 @@ lastupdated: "2016-12-06"
 {: shortdesc}
 
 
-新しい {{site.data.keyword.objectstorageshort}} インスタンスをプロビジョンすると、IBM Public Cloud に独立した Keystone プロジェクトが作成されます。アプリに最適な OpenStack トークン要求メソッドまたは OpenStack SDK を選択できるように、Keystone の資格情報構成には完全な属性セットが含まれています。インスタンスに新しいアプリをバインドすると、プロジェクトへのアクセス権限を持つ新しい Keystone ユーザーが作成されます。インスタンスをプロビジョン解除すると、プロジェクトとユーザーは削除されます。
+新しい {{site.data.keyword.objectstorageshort}} インスタンスをプロビジョンすると、IBM Public Cloud に独立した Keystone プロジェクトが作成されます。アプリに最適な OpenStack トークン要求メソッドまたは OpenStack SDK を選択できるように、Keystone の資格情報構造体には完全な属性セットが含まれています。インスタンスに新しいアプリをバインドすると、プロジェクトへのアクセス権限を持つ新しい Keystone ユーザーが作成されます。インスタンスをプロビジョン解除すると、プロジェクトとユーザーは削除されます。
 
 OpenStack Swift および Keystone について詳しくは、[OpenStack 資料サイト](http://docs.openstack.org)を参照してください。
 
-1. 推奨される v3 トークン要求は、以下の cURL コマンドに示されているように、https://identity.open.softlayer.com/v1/auth/tokens への POST 要求です。
+1. 以下の cURL コマンドに示されているように、`https://identity.open.softlayer.com/v3/auth/tokens` への POST 要求を実行します。
   ```
   	curl -i \
 	  -H "Content-Type: application/json" \
@@ -51,7 +51,7 @@ OpenStack Swift および Keystone について詳しくは、[OpenStack 資料�
 ```
   {: codeblock}
 
-2. Keystone を使用して認証を行うと、カタログ応答を受け取ります。`object-store` エンドポイントを選択し、メモしてください。完全な URL を作成するために必要になります。以下の応答例は、{{site.data.keyword.objectstorageshort}} に関連した情報のみを示すように切り取られています。
+2. カタログ応答から `object-store` エンドポイントを選択し、メモします。完全な URL を作成するために必要になります。以下の応答例は、{{site.data.keyword.objectstorageshort}} に関連した情報のみを示すように切り取られています。
 
   ```
   	HTTP/1.1 201 Created
@@ -155,6 +155,7 @@ OpenStack Swift および Keystone について詳しくは、[OpenStack 資料�
   {: screen}
 
   <table>
+  <caption> 表 1. POST 要求の応答の説明</caption>
     <tr>
       <th> 応答エンドポイント </th>
       <th> 説明 </th>
@@ -173,12 +174,10 @@ OpenStack Swift および Keystone について詳しくは、[OpenStack 資料�
     </tr>
     <tr>
       <td> <code> url </code> </td>
-      <td> ご使用の {{site.data.keyword.objectstorageshort}} URL。cURL コマンドを使用してサービスと対話するために使用されます。</td>
+      <td> ご使用の {{site.data.keyword.objectstorageshort}} URL。</td>
     </tr>
     <tr>
       <td> <code> interface </code> </td>
       <td> 内部インターフェースには、{{site.data.keyword.Bluemix_notm}} からアクセスできません。パブリック・インターフェース (<code>publicURL</code>) を使用してください。</td>
     </tr>
   </table>
-
-  表 1: POST 要求の応答の説明

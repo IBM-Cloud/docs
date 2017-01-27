@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-11-14"
+  years: 2014, 2017
+lastupdated: "2017-01-05"
 
 ---
 {:new_window: target="blank"}
@@ -24,7 +24,7 @@ lastupdated: "2016-11-14"
 * 중앙 저장소 역할 수행
 
 
-{{site.data.keyword.Bluemix_notm}} Public {{site.data.keyword.objectstorageshort}}에서는 데이터를 관리할 전체 프로비저닝된 Swift {{site.data.keyword.objectstorageshort}} 계정에 대한 액세스를 제공합니다. 제공자 측 암호화는 제공되지 않습니다. 
+{{site.data.keyword.Bluemix_notm}} 퍼블릭 {{site.data.keyword.objectstorageshort}}에서는 데이터를 관리할 전체 프로비저닝된 Swift {{site.data.keyword.objectstorageshort}} 계정에 대한 액세스를 제공합니다. 제공자 측 암호화는 제공되지 않습니다. 
 
 
 1.	{{site.data.keyword.Bluemix_notm}} 카탈로그에서 서비스 인스턴스를 프로비저닝하십시오. 인스턴스를 구성하고 **작성**을 클릭하십시오. 초기에 **앱** 필드에 대해 **바인딩되지 않은 상태로 두기** 옵션을 선택하는 경우 나중에 서비스 인스턴스를 {{site.data.keyword.Bluemix_notm}} 앱에 바인딩할 수 있습니다. 
@@ -45,7 +45,7 @@ lastupdated: "2016-11-14"
 
 ## SDK 
 {: #sdk}
-* [OpenStack Software Development Kits (SDK)](https://wiki.openstack.org/wiki/SDKs){: new_window}
+* [OpenStack 소프트웨어 개발 킷(SDK)](https://wiki.openstack.org/wiki/SDKs){: new_window}
 
 ## 튜토리얼 및 샘플 
 {: #samples}

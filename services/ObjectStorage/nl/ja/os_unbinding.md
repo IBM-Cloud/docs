@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -10,14 +10,15 @@ lastupdated: "2016-12-06"
 
 # {{site.data.keyword.objectstorageshort}} インスタンスのアンバインドおよびプロビジョン解除 {: #deprovisioning-object-storage}
 
-{{site.data.keyword.objectstorageshort}} を Cloud Foundry アプリケーションにバインドしていて、ストレージがもう必要なくなった場合は、インスタンスをアンバインドし、プロビジョン解除することができます。
+{{site.data.keyword.objectstorageshort}} サービスが Cloud Foundry アプリにバインドされているが、ストレージはもう必要ない場合は、インスタンスをアンバインドし、プロビジョン解除することができます。
 {: shortdesc}
 
 
 ## インスタンスのアンバインド
-Cloud Foundry アプリで {{site.data.keyword.objectstorageshort}} は必要なくなったが、保存されているデータを維持したい場合は、サービスのインスタンスをアプリからアンバインドすることができます。
 
-**注意**: {{site.data.keyword.objectstorageshort}} インスタンスを {{site.data.keyword.Bluemix_notm}} アプリケーションからアンバインドしたり、サービス・キーを削除したりすると、そのインスタンスのご使用の資格情報がすべて削除され、復元できません。{{site.data.keyword.objectstorageshort}} アカウントは、{{site.data.keyword.objectstorageshort}} インスタンスがプロビジョン解除されるまで削除されません。新しいサービス・キーを再バインドまたは作成することによって、新しいクラウド資格情報を生成できます。
+保存されたデータを維持し、Cloud Foundry アプリからサービスをアンバインドできます。{{site.data.keyword.objectstorageshort}} アカウントは、サービスがプロビジョン解除されるまで削除されません。
+
+**注意**: {{site.data.keyword.objectstorageshort}} インスタンスを {{site.data.keyword.Bluemix_notm}} アプリケーションからアンバインドした場合、または、サービス・キーを削除した場合は、そのインスタンスのすべての資格情報が削除され、復元できません。インスタンスを再バインドするか、または新しいサービス・キーを作成することによって、新しいクラウド資格情報を生成できます。
 
 1. アプリにバインドされているサービスを表示するには、Cloud Foundry アプリケーション内の「接続」タブをクリックします。
 2. アンバインドするサービスを見つけて、サービス・タイルのメニュー・ボタンをクリックします。
@@ -34,7 +35,7 @@ Cloud Foundry アプリで {{site.data.keyword.objectstorageshort}} は必要な
 **注意**: {{site.data.keyword.objectstorageshort}} インスタンスをプロビジョン解除すると、クラウド・プロジェクトおよび Swift アカウントが削除されます。プロビジョン解除されたインスタンス内のすべてのコンテナーおよびオブジェクトが削除され、復元できません。
 
 1. アプリにバインドされているサービスを表示するには、Cloud Foundry アプリケーション内の「接続」タブをクリックします。
-2. アンバインドするサービスを見つけて、サービス・タイルのメニュー・ボタンをクリックします。
+2. プロビジョン解除するサービスを見つけて、サービス・タイルのメニュー・ボタンをクリックします。
 3. **「サービスの削除」**を選択します。
 4. **「削除」**をクリックして、確認します。
 5. **「再ステージ」**をクリックして、変更を有効にします。

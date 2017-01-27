@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -19,6 +19,7 @@ lastupdated: "2016-12-06"
 {{site.data.keyword.objectstorageshort}} 服务提供了两个套餐选项：免费和标准。[定价](https://www.ibm.com/cloud-computing/bluemix/pricing/)根据所选套餐而变化。
 
 <table>
+<caption> 表 1. 免费套餐与标准套餐的比较</caption>
   <tr>
     <th> 免费套餐</th>
     <th> 标准套餐</th>
@@ -40,8 +41,6 @@ lastupdated: "2016-12-06"
     <td> 存储量不限</td>
   </tr>
 </table>
-
-表 1：免费套餐与标准套餐的比较
 
 **注意**：使用 {{site.data.keyword.Bluemix_notm}} 试用帐户的用户可以使用免费套餐。在试用时间到期后，将禁用关联的 {{site.data.keyword.objectstorageshort}} 服务实例，就是说您将无法访问存储帐户。30 天后，将清除 {{site.data.keyword.Bluemix_notm}} 帐户，并且删除所有数据。要避免数据丢失，请尽快升级到[付费 {{site.data.keyword.Bluemix_notm}} 帐户](/docs/admin/account.html)。
 

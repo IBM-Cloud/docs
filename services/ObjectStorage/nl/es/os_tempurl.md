@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2016-12-06"
 
 # Creación de un URL temporal {: #create-temporary-url}
 
-Un URL temporal es un URL largo y difícil de adivinar que se puede utilizar para un periodo específico para descargar objetos sin que requieran una mayor autenticación.
+Un URL temporal es un URL largo y difícil de adivinar que se puede utilizar para un periodo específico para descargar objetos sin que requieran una mayor autenticación ni acceso completo a la cuenta de almacenamiento.
 {: shortdesc}
 
 
@@ -27,7 +27,7 @@ Un URL temporal es un URL largo y difícil de adivinar que se puede utilizar par
   {: pre}
   **Nota**: Anote la serie completa tras la *Cuenta*, incluido `AUTH_`.
 
-2. Establezca una clave secreta. Esta clave puede ser cualquiera que seleccione, pero la práctica recomendada es que seleccione una serie larga, aleatoria y difícil de adivinar. Para establecer la clave, ejecute el mandato siguiente:
+2. Establezca una clave secreta. Elija una serie larga, aleatoria y difícil de adivinar. Para establecer la clave, ejecute el mandato siguiente:
 
   ```
   swift post -m "Temp-URL-Key:<key>"
@@ -50,6 +50,7 @@ Un URL temporal es un URL largo y difícil de adivinar que se puede utilizar par
 
   La tabla siguiente explica los argumentos de posición que toma el mandato `tempurl` de Swift.
   <table>
+  <caption> Tabla 1. Argumentos de posición del URL temporal</caption>
     <tr>
       <th> Argumento </th>
       <th> Descripción </th>
@@ -71,7 +72,5 @@ Un URL temporal es un URL largo y difícil de adivinar que se puede utilizar par
       <td> Clave secreta que se establece en el paso 2. </td>
     </tr>
   </table>
-
-  Tabla 1: Argumentos de posición del URL temporal
 
 5. Opcional: Adjunte el URL devuelto al nombre de clúster para obtener un URL completo. A continuación, puede utilizar el URL completo para descargar objetos con cualquier cliente de HTTP compatible como por ejemplo cURL, wget o Firefox.

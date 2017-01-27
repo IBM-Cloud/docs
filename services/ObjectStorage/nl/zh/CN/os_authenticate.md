@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -18,11 +18,11 @@ lastupdated: "2016-12-06"
 {: shortdesc}
 
 
-供应新的 {{site.data.keyword.objectstorageshort}} 实例将在 IBM 公共云中创建独立的 Keystone 项目。Keystone 凭证结构包含一整组属性，允许您选择最适合您的应用程序的 OpenStack 令牌请求方法或 OpenStack SDK。将新应用程序绑定到实例时，将创建具有项目访问权的新 Keystone 用户。撤销供应实例后，将删除项目和用户。
+供应新的 {{site.data.keyword.objectstorageshort}} 实例将在 IBM 公共云中创建独立的 Keystone 项目。Keystone 凭证结构包含一整组属性，以便您可以选择最适合您的应用程序的 OpenStack 令牌请求方法或 OpenStack SDK。将新应用程序绑定到实例时，将创建具有项目访问权的新 Keystone 用户。撤销供应实例后，将删除项目和用户。
 
 有关使用 OpenStack Swift 和 Keystone 的更多信息，请查看 [OpenStack 文档站点](http://docs.openstack.org)。
 
-1. 建议使用的 V3 令牌请求是对 https://identity.open.softlayer.com/v1/auth/tokens 的 POST 请求，如以下 cURL 命令中所示：
+1. 对 `https://identity.open.softlayer.com/v3/auth/tokens` 发出 POST 请求，如以下 cURL 命令中所示。
   ```
   	curl -i \
 	  -H "Content-Type: application/json" \
@@ -51,7 +51,7 @@ lastupdated: "2016-12-06"
 ```
   {: codeblock}
 
-2. 使用 Keystone 进行认证时，将收到目录响应。请选择 `object-store` 端点并进行记录。构建完整 URL 时需要此端点。以下响应示例已经过修剪，只显示了与 {{site.data.keyword.objectstorageshort}} 相关的信息。
+2. 请从目录响应中选择 `object-store` 端点并进行记录。构建完整 URL 时需要此端点。以下响应示例进行了修剪，只显示与 {{site.data.keyword.objectstorageshort}} 相关的信息。
 
   ```
   	HTTP/1.1 201 Created
@@ -155,6 +155,7 @@ lastupdated: "2016-12-06"
   {: screen}
 
   <table>
+  <caption> 表 1. POST 请求响应说明</caption>
     <tr>
       <th> 响应端点</th>
       <th> 说明</th>
@@ -173,12 +174,10 @@ lastupdated: "2016-12-06"
     </tr>
     <tr>
       <td> <code> url </code></td>
-      <td> 您的 {{site.data.keyword.objectstorageshort}} URL。用于通过 cURL 命令与服务进行交互。</td>
+      <td> 您的 {{site.data.keyword.objectstorageshort}} URL。</td>
     </tr>
     <tr>
       <td> <code> interface </code></td>
       <td> 无法从 {{site.data.keyword.Bluemix_notm}} 访问内部接口。请使用公共接口 (<code>publicURL</code>)。</td>
     </tr>
   </table>
-
-  表 1：POST 请求响应说明

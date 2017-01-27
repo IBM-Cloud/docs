@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2016-12-06"
 
 # 建立暫時 URL {: #create-temporary-url}
 
-暫時 URL 是一個很長、難以猜測的 URL，可用來在指定的時段下載物件，而無需進一步鑑別。
+暫時 URL 是一個很長、難以猜測的 URL，可用來在指定的時段下載物件，而無需進一步鑑別，或給與儲存空間帳戶的完整存取權。
 {: shortdesc}
 
 
@@ -27,7 +27,7 @@ lastupdated: "2016-12-06"
   {: pre}
   **附註**：請記下 *Account* 後的完整字串，包括 `AUTH_`。
 
-2. 設定秘密金鑰。此金鑰可以是您選取的任何項目，但最佳做法是選取一個很長、隨機且難以猜測的字串。若要設定金鑰，請執行下列指令：
+2. 設定秘密金鑰。請選擇一個很長、隨機且難以猜測的字串。若要設定金鑰，請執行下列指令：
 
   ```
   swift post -m "Temp-URL-Key:<key>"
@@ -50,6 +50,7 @@ lastupdated: "2016-12-06"
 
   下表說明 Swift `tempurl` 指令所採用的位置引數。
   <table>
+  <caption> 表 1. 暫時 URL 位置引數</caption>
     <tr>
       <th> 引數</th>
       <th> 說明</th>
@@ -71,7 +72,5 @@ lastupdated: "2016-12-06"
       <td> 您在步驟 2 中設定的秘密金鑰。</td>
     </tr>
   </table>
-
-  表 1：暫時 URL 位置引數
 
 5. 選用：將傳回的 URL 附加至叢集名稱，以取得完整 URL。然後，您可以搭配使用完整 URL 與任何相容的 HTTP 用戶端（例如 cURL、wget 或 Firefox）來下載物件。

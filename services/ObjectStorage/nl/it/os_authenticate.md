@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -12,69 +12,69 @@ lastupdated: "2016-12-06"
 {:pre: .pre}
 
 
-# Autenticazione della tua istanza {{site.data.keyword.objectstorageshort}} con Keystone
+# Authenticating your {{site.data.keyword.objectstorageshort}} instance with Keystone
 
-Per interagire con il servizio, devi autenticare la tua istanza {{site.data.keyword.objectstorageshort}} con Keystone per ottenere i tuoi URL e token di connessione.
+To interact with the service, you must authenticate your {{site.data.keyword.objectstorageshort}} instance with Keystone to obtain your URL and bearer token.
 {: shortdesc}
 
 
-Il provisioning di una nuova istanza {{site.data.keyword.objectstorageshort}} crea un progetto Keystone isolato in IBM Public Cloud. La struttura delle credenziali Keystone contiene una serie completa di attributi per consentirti di scegliere il metodo di richiesta di token OpenStack o l'SDK OpenStack che meglio si adatta alla tua applicazione. Quando esegui il bind di una nuova applicazione all'istanza, viene creato un nuovo utente Keystone con l'accesso al progetto. Quando effettui il deprovisioning dell'istanza, il progetto e l'utente vengono eliminati.
+Provisioning a new {{site.data.keyword.objectstorageshort}} instance creates an isolated Keystone project in the IBM Public Cloud. The Keystone credentials structure contains a complete set of attributes so that you can choose the OpenStack token request method or OpenStack SDK that best fits your app. When you bind a new app to the instance, a new Keystone user with access to the project is created. When you deprovision the instance, the project and user are deleted.
 
-Per ulteriori informazioni sull'utilizzo di OpenStack Swift e Keystone, consulta il [sito della documentazione di OpenStack](http://docs.openstack.org).
+For more information about using OpenStack Swift and Keystone, view the [OpenStack documentation site](http://docs.openstack.org).
 
-1. La richiesta di token v3 consigliata è una richiesta POST a https://identity.open.softlayer.com/v1/auth/tokens come mostrato nel seguente comando cURL:
+1. Make a POST request to `https://identity.open.softlayer.com/v3/auth/tokens` as shown in the following cURL command.
   ```
   	curl -i \
-	  -H "Content-Type: application/json" \
-	  -d '
-	{
+  	  -H "Content-Type: application/json" \
+  	  -d '
+  	{
   		"auth": {
   			"identity": {
   				"methods": [
   					"password"
   				],
-				"password": {
+  				"password": {
   					"user": {
   						"id": "ad78b2a3f843466988afd077731c61fc",
-						"password": "XXXXXXXXXX"
-					}
+  						"password": "XXXXXXXXXX"
+  					}
   				}
   			},
-			"scope": {
+  			"scope": {
   				"project": {
   					"id": "0f47b41b06d047f9aae3b33f1db061ed"
-				}
+  				}
   			}
   		}
   	}' \
-	  https://identity.open.softlayer.com/v3/auth/tokens ; echo
+  	  https://identity.open.softlayer.com/v3/auth/tokens ; echo
   ```
   {: codeblock}
 
-2. Quando esegui l'autenticazione con Keystone riceverai una risposta del catalogo. Seleziona un endpoint `object-store` e prendine nota. Ne hai bisogno per creare il tuo URL completo. Il seguente esempio di risposta è stato snellito per visualizzare solo le informazioni rilevanti di {{site.data.keyword.objectstorageshort}}.
+2. Select an `object-store` endpoint from the catalog response and take note. You need it to construct your full URL. The following response example is trimmed to show only information relevant to {{site.data.keyword.objectstorageshort}}.
 
   ```
   	HTTP/1.1 201 Created
-	Date: Mon, 29 Feb 2016 21:03:41 GMT
-	Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.1e-fips mod_wsgi/3.4 Python/2.7.5
-	X-Subject-Token: gAAAAABW1LIubUgqKl-eInzhZUHWEnXijp7t6_5inl4DTRLxDhNbJ25ly2X7bASNvH7ocxinaJu_kdhSfnHNRwPAeYY77Ii2Cwp02-bvxUA1S9lV_knT6EyCOW2mSBl_HuuDD2cEgdiKmyZTVt-RvDxhPKYD-rHkJz-dHO4Folg8TVXotilb1uw
-	Vary: X-Auth-Token
-	x-openstack-request-id: req-01e096c8-5393-4f98-8ff6-029c55e42524
-	Content-Length: 12051
-	Content-Type: application/json
+  	Date: Mon, 29 Feb 2016 21:03:41 GMT
+  	Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.1e-fips mod_wsgi/3.4 Python/2.7.5
+  	X-Subject-Token: gAAAAABW1LIubUgqKl-eInzhZUHWEnXijp7t6_5inl4DTRLxDhNbJ25ly2X7bASNvH7ocxinaJu_kdhSfnHNRwPAeYY77Ii2Cwp02-bvxUA1S9lV_knT6EyCOW2mSBl_HuuDD2cEgdiKmyZTVt-RvDxhPKYD-rHkJz-dHO4Folg8TVXotilb1uw
+  	Vary: X-Auth-Token
+  	x-openstack-request-id: req-01e096c8-5393-4f98-8ff6-029c55e42524
+  	Content-Length: 12051
+  	Content-Type: application/json
 
-	{
+  	{
   	  "token" : {
   	    "roles" : [
-	      {
+  	      {
   	        "id" : "f61f06a84f6443e880210fa986bd8691",
-	        "name" : "ObjectStorageOperator"
-	      }
+  	        "name" : "ObjectStorageOperator"
+  	      }
   	    ],
-	    "catalog" : [
-	      {
-  	        "endpoints": [
-			{
+  	    "catalog" : [
+  	      {
+  	        "endpoints" : [
+  	          {
   	            "id" : "20cbfa6ff22b4a67a1484d30235bfc80",
   	            "region" : "london",
   	            "region_id" : "london",
@@ -117,68 +117,67 @@ Per ulteriori informazioni sull'utilizzo di OpenStack Swift e Keystone, consulta
   	            "interface" : "internal"
   	          }
   	        ],
-	        "id" : "896e4064cbe742afbf9a543c15f27ac0",
-	        "type" : "object-store",
-	        "name" : "swift"
+  	        "id" : "896e4064cbe742afbf9a543c15f27ac0",
+  	        "type" : "object-store",
+  	        "name" : "swift"
   	      },
-	    ],
-	    "extras" : {
+  	    ],
+  	    "extras" : {
 
   	    },
-	    "user" : {
+  	    "user" : {
   	      "id" : "0b8aebd924ef4cc7aa9232f07e47e874",
-	      "name" : "user_87c094ce47a9feae3a137ffcbbfa098a888c12a8",
-	      "domain" : {
+  	      "name" : "user_87c094ce47a9feae3a137ffcbbfa098a888c12a8",
+  	      "domain" : {
   	        "id" : "8753ff40ac1a4f4a9f162ad8026b6ce0",
-	        "name" : "757955"
-	      }
+  	        "name" : "757955"
+  	      }
   	    },
-	    "expires_at" : "2016-02-29T22:03:42.061343Z",
-	    "audit_ids" : [
+  	    "expires_at" : "2016-02-29T22:03:42.061343Z",
+  	    "audit_ids" : [
   	      "cbA-iL2dSheyB72PHd7q8Q"
   	    ],
-	    "issued_at" : "2016-02-29T21:03:42.000000Z",
-	    "project" : {
+  	    "issued_at" : "2016-02-29T21:03:42.000000Z",
+  	    "project" : {
   	      "id" : "3ecf7d7bac2c4eda89c03dd3afa7a0a3",
-	      "name" : "object_storage_c1d8b3a1",
-	      "domain" : {
+  	      "name" : "object_storage_c1d8b3a1",
+  	      "domain" : {
   	        "id" : "8753ff40ac1a4f4a9f162ad8026b6ce0",
-	        "name" : "757955"
-	      }
+  	        "name" : "757955"
+  	      }
   	    },
-	    "methods" : [
+  	    "methods" : [
   	      "password"
-	    ]
+  	    ]
   	  }
   	}
   ```
   {: screen}
 
   <table>
+  <caption> Table 1. Post request response explained </caption>
     <tr>
-      <th> Endpoint di risposta</th>
-      <th> Spiegazione</th>
+      <th> Response endpoint </th>
+      <th> Explanation </th>
     </tr>
     <tr>
       <td> <code> X-Subject-Token </code> </td>
-      <td> Il tuo token di autenticazione </td>
+      <td> Your authentication token. </td>
     </tr>
     <tr>
       <td> <code> id </code> </td>
-      <td> Il tuo id dell'istanza {{site.data.keyword.objectstorageshort}}. </td>
+      <td> Your {{site.data.keyword.objectstorageshort}} instance ID. </td>
     </tr>
     <tr>
       <td> <code> region </code> </td>
-      <td> La tua regione di archiviazione. Assicurati di selezionare la regione che corrisponde al campo elencato nelle tue credenziali. </td>
+      <td> Your storage region. Be sure to select the region that matches the field that is listed in your credentials. </td>
     </tr>
     <tr>
       <td> <code> url </code> </td>
-      <td> Il tuo URL {{site.data.keyword.objectstorageshort}}. Utilizzato per interagire con il servizio utilizzando i comandi cURL. </td>
+      <td> Your {{site.data.keyword.objectstorageshort}} URL. </td>
     </tr>
     <tr>
       <td> <code> interface </code> </td>
-      <td> L'interfaccia interna non è accessibile da {{site.data.keyword.Bluemix_notm}}. Utilizza l'interfaccia pubblica (<code>publicURL</code>). </td>
+      <td> The internal interface  is not accessible from {{site.data.keyword.Bluemix_notm}}. Use the public interface (<code>publicURL</code>). </td>
     </tr>
   </table>
-
-  Tabella 1: Risposta richiesta POST spiegata

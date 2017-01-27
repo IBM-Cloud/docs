@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -84,7 +84,7 @@ lastupdated: "2016-12-06"
   ```
   {: pre}
 
-2. 表で説明されている変数を使用して以下のコマンドを実行し、サービス資格情報を生成します。
+2. 以下のコマンドを実行して、サービス資格情報を生成します。
 
   ```
   curl "https://api.ng.bluemix.net/v2/service_keys" -d '{   "service_instance_guid": "<service_instance_guid>",   "name: <service_instance_name>", "role: <user_role>"}' -X POST -H "Authorization: <bearer_token>" -H "Content-Type: <content_type" -H "Cookie: <cookie>"
@@ -92,12 +92,13 @@ lastupdated: "2016-12-06"
   {: pre}
 
   <table>
+  <caption> 表 1. cURL サービス資格情報変数の説明</caption>
     <tr>
       <th> 変数  </th>
       <th> 説明 </th>
     </tr>
     <tr>
-      <td> https://api.ng.bluemix.net/v2/service_keys </td>
+      <td> <code>https://api.ng.bluemix.net/v2/service_keys</code> </td>
       <td> サービス・キーのエンドポイント。</td>
     </tr>
     <tr>
@@ -118,7 +119,7 @@ lastupdated: "2016-12-06"
     </tr>
   </table>
 
-  表 1: cURL サービス資格情報変数の説明
+
 
 3. 以下のコマンドを実行して資格情報を検証します。
 

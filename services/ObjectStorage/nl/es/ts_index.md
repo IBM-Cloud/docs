@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -35,9 +35,9 @@ at org.openstack4j.openstack.internal.BaseOpenStackService$Invocation.execute(Ba
 at org.openstack4j.openstack.storage.object.internal.ObjectStorageContainerServiceImpl.list(ObjectStorageContainerServiceImpl.java:41)
 at com.mimotic.SecureMessageApp.HelloResource.getInformation(HelloResource.java:47)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-    at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-    at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-    at java.lang.reflect.Method.invoke(Unknown Source)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
 ```
 {: screen}
 {: tsSymptoms}

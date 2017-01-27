@@ -1,64 +1,67 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
-{:new_window: target="_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
 
 
-# Rimozione dell'accesso
+# Removing access
 
-Puoi rimuovere l'accesso che è stato concesso a un contenitore o oggetto utilizzando gli elenchi del controllo dell'accesso.
+You can remove access to a container or object by using access control lists.
 {: shortdesc}
 
-Per rimuovere i read ACL da un contenitore, esegui uno dei seguenti comandi. 
+To remove read ACLs from a container, run one of the following commands.
 
-Comando Swift:
+* Swift command:
 
-  <codeblock>swift post <container_name> --read-acl “”</codeblock>
+```
+swift post <container_name> --read-acl “”
+```
+{: pre}
 
-Comando cURL:
+* cURL command:
 
 ```
 curl -i <OS_STORAGE_URL> -X POST -H "Content-Length: 0" -H "X-Container-Read: " -H "X-Auth-Token: <OS_AUTH_TOKEN>"
 ```
 {: pre}
 
-Per rimuovere i write ACL da un contenitore, esegui uno dei seguenti comandi. 
+To remove write ACLs from a container, run one of the following commands.
 
-    Comando Swift:
+* Swift command:
 
-    ```
-    swift post <container_name> --write-acl “”
-    ```
-    {: pre}
+```
+swift post <container_name> --write-acl “”
+```
+{: pre}
 
-    Comando cURL:
+* cURL command:
 
-    ```
-    curl -i <OS_STORAGE_URL> -X POST -H "Content-Length: 0" -H "X-Container-Write: " -H "X-Auth-Token: <OS_AUTH_TOKEN>"
-    ```
-    {: pre}
+```
+curl -i <OS_STORAGE_URL> -X POST -H "Content-Length: 0" -H "X-Container-Write: " -H "X-Auth-Token: <OS_AUTH_TOKEN>"
+```
+{: pre}
 
-Per verificare di aver rimosso un ACL, esegui uno dei seguenti comandi. 
+To verify that you have removed an ACL run one of the following commands.
 
-    Comando Swift:
+* Swift command:
 
-    ```
-    swift stat <container_name>
-    ```
-    {: pre}
+```
+swift stat <container_name>
+```
+{: pre}
 
-    Il seguente output di esempio mostra sia l'ACL in lettura che in scrittura come vuoti, il che significa che l'accesso è stato rimosso.
+* The following example output shows both the Read ACL and Write ACL as blank, which means that access has been removed.
 
-    ```
-             Account: AUTH_c727d7e248b448f6b268f31a1bd8691e
+```
+         Account: AUTH_c727d7e248b448f6b268f31a1bd8691e
        Container: Test
          Objects: 1
            Bytes: 31512
@@ -71,11 +74,12 @@ X-Storage-Policy: standard
      X-Timestamp: 1462818314.11220
       X-Trans-Id: txf04968bc9ef8431982b77-005772e34b
     Content-Type: text/plain; charset=utf-8
-    ```
-    {: screen}
+```
+{: screen}
 
-    Comando cURL:
-    ```
-    curl -i <OS_STORAGE_URL> -I -H "X-Auth-Token: <OS_AUTH_TOKEN>"
-    ```
-    {: pre}
+* cURL command:
+
+```
+curl -i <OS_STORAGE_URL> -I -H "X-Auth-Token: <OS_AUTH_TOKEN>"
+```
+{: pre}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -14,12 +14,12 @@ lastupdated: "2016-12-06"
 
 # Objektversionierung einrichten {: #setting-up-versioning}
 
-Mit der Objektversionierung können Sie ältere Versionen Ihrer Objekte aufbewahren, indem Sie sie automatisch in einem Sicherungscontainer speichern. Dies ermöglicht Ihnen die Anzeige des Verlaufs für jedes Objekt und die Verfolgung von Änderungen.
+Sie können ältere Versionen Ihrer Objekte automatisch beibehalten, indem Sie die Objektversionierung einrichten. Die Versionierung ermöglicht die Anzeige eine Verlaufsprotokolls für jedes Objekt.
 {: shortdesc}
 
-Wenn Sie eine neue Version Ihrer Datei in den Hauptcontainer hochladen, wird die vorherige Version automatisch in den Sicherungscontainer verschoben. Wenn Sie die Datei aus Ihrem Hauptcontainer löschen, wird die aktuelle Version automatisch vom Sicherungscontainer in den Hauptcontainer verschoben, um die gelöschte Datei zu ersetzen. 
+Wenn Sie eine neue Version Ihrer Datei in den Hauptcontainer hochladen, wird die vorherige Version automatisch in den Sicherungscontainer verschoben. Wenn Sie die Datei aus Ihrem Hauptcontainer löschen, wird die aktuelle Version automatisch vom Sicherungscontainer in den Hauptcontainer verschoben, um die gelöschte Datei zu ersetzen.
 
-1. Erstellen Sie einen Container und geben Sie ihm einen Namen. Ersetzen Sie die Variable *Containername* mit dem Namen, den Sie dem Container geben möchten. 
+1. Erstellen Sie einen Container und geben Sie ihm einen Namen. Ersetzen Sie die Variable *Containername* mit dem Namen, den Sie dem Container geben möchten.
 
     ```
     swift post <Containername>
@@ -56,7 +56,7 @@ Wenn Sie eine neue Version Ihrer Datei in den Hauptcontainer hochladen, wird die
     ```
     {: pre}
 
-5. Nehmen Sie eine Änderung an Ihrem Objekt vor. 
+5. Nehmen Sie eine Änderung an Ihrem Objekt vor.
 
 6. Laden Sie die neue Version des Objekts in Ihren Hauptcontainer hoch.
 
@@ -67,6 +67,7 @@ Wenn Sie eine neue Version Ihrer Datei in den Hauptcontainer hochladen, wird die
 
 7.  Die Objekte in Ihrem Sicherungscontainer werden automatisch im folgenden Format benannt: `<Länge><Objektname>/<Zeitmarke>`.
   <table>
+  <caption> Tabelle 1. Beschriebene Benennungsattribute</caption>
     <tr>
       <th> Attribut </th>
       <th> Beschreibung </th>
@@ -85,7 +86,6 @@ Wenn Sie eine neue Version Ihrer Datei in den Hauptcontainer hochladen, wird die
     </tr>
   </table>
 
-  Tabelle 1: Beschriebene Benennungsattribute
 
 6. Listen Sie die Objekte in Ihrem Hauptcontainer auf, um die neue Version der Datei anzuzeigen.
 
@@ -94,7 +94,7 @@ Wenn Sie eine neue Version Ihrer Datei in den Hauptcontainer hochladen, wird die
     ```
     {: pre}
 
-7. Listen Sie Objekte in Ihrem Sicherungscontainer auf. Sie sehen, dass die vorherige Version Ihrer Datei in diesem Container gespeichert ist. Beachten Sie, das der Datei eine Zeitmarke hinzugefügt wurde. 
+7. Listen Sie Objekte in Ihrem Sicherungscontainer auf. Sie sehen, dass die vorherige Version Ihrer Datei in diesem Container gespeichert ist. Beachten Sie, das der Datei eine Zeitmarke hinzugefügt wird. 
 
     ```
     swift list --lh <Sicherungscontainer-Name>
@@ -108,7 +108,7 @@ Wenn Sie eine neue Version Ihrer Datei in den Hauptcontainer hochladen, wird die
     ```
     {: pre}
 
-9. Optional: Inaktivieren Sie die Objektversionierung. 
+9. Optional: Inaktivieren Sie die Objektversionierung.
 
     Swift-Befehl:
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -20,7 +20,7 @@ lastupdated: "2016-12-06"
 
 전체 {{site.data.keyword.objectstorageshort}} REST API 옵션과 예제 목록은 [OpenStack Swift API 전체 참조](http://developer.openstack.org/api-ref-objectstorage-v1.html)를 확인하십시오. 
 
-Keystone으로 서비스 인스턴스를 인증한 경우, 카탈로그 응답을 기록하십시오. 이 응답은 다음 예제와 유사합니다. 
+URL을 작성하려면 우선 Keystone으로 서비스를 [인증](/docs/services/ObjectStorage/os_authenticate.html)해야 합니다. 반드시 카탈로그 응답을 기록해 놓으십시오. 이는 다음 예제와 유사합니다. 
 
 ```
 {
@@ -36,5 +36,6 @@ Keystone으로 서비스 인스턴스를 인증한 경우, 카탈로그 응답�
 
 다음 이미지와 같이 컨테이너와 오브젝트의 네임스페이스를 {{site.data.keyword.objectstorageshort}} URL의 끝에 추가하십시오. 
 
-  ![{{site.data.keyword.objectstorageshort}}예제 이미지에 표시된 URL 조각](images/swift_URL.png)
-  그림 1: {{site.data.keyword.objectstorageshort}} URL 예제
+![예제 이미지에 표시된 {{site.data.keyword.objectstorageshort}} URL 조각](images/Swift_URL.png)
+
+그림 1. {{site.data.keyword.objectstorageshort}} URL 예제

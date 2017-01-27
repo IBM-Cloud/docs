@@ -1,11 +1,11 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
-{:new_window: target="_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -14,16 +14,19 @@ lastupdated: "2016-12-06"
 
 # Removendo o acesso
 
-É possível remover o acesso que foi concedido a um contêiner ou objeto usando Listas de Controle de Acesso.
+É possível remover o acesso a um contêiner ou objeto usando listas de controle de acesso.
 {: shortdesc}
 
 Para remover ACLs de leitura de um contêiner, execute um dos comandos a seguir.
 
-Comando Swift:
+* Comando Swift:
 
-  <codeblock>swift post <container_name> --read-acl “”</codeblock>
+```
+swift post <container_name> --read-acl “”
+```
+{: pre}
 
-Comando cURL:
+* Comando cURL:
 
 ```
 curl -i <OS_STORAGE_URL> -X POST -H "Content-Length: 0" -H "X-Container-Read: " -H "X-Auth-Token: <OS_AUTH_TOKEN>"
@@ -32,34 +35,33 @@ curl -i <OS_STORAGE_URL> -X POST -H "Content-Length: 0" -H "X-Container-Read: " 
 
 Para remover ACLs de gravação de um contêiner, execute um dos comandos a seguir.
 
-    Comando Swift:
+* Comando Swift:
 
-    ```
-    swift post <container_name> --write-acl “”
-    ```
-    {: pre}
+```
+swift post <container_name> --write-acl “”
+```
+{: pre}
 
-    Comando cURL:
+* Comando cURL:
 
-    ```
-    curl -i <OS_STORAGE_URL> -X POST -H "Content-Length: 0" -H "X-Container-Write: " -H "X-Auth-Token: <OS_AUTH_TOKEN>"
-    ```
-    {: pre}
+```
+curl -i <OS_STORAGE_URL> -X POST -H "Content-Length: 0" -H "X-Container-Write: " -H "X-Auth-Token: <OS_AUTH_TOKEN>"
+```
+{: pre}
 
 Para verificar se você removeu uma ACL, execute um dos comandos a seguir.
 
-    Comando Swift:
+* Comando Swift:
 
-    ```
-    swift stat <container_name>
-    ```
-    {: pre}
+```
+swift stat <container_name>
+```
+{: pre}
 
-    O exemplo de saída a seguir mostra a ACL de leitura e de gravação como em branco,
-o que significa que o acesso foi removido.
+* A saída de exemplo a seguir mostra a ACL de Leitura e a ACL de Gravação em branco, o que significa que o acesso foi removido.
 
-    ```
-             Account: AUTH_c727d7e248b448f6b268f31a1bd8691e
+```
+         Account: AUTH_c727d7e248b448f6b268f31a1bd8691e
        Container: Test
          Objects: 1
            Bytes: 31512
@@ -72,11 +74,12 @@ X-Storage-Policy: standard
      X-Timestamp: 1462818314.11220
       X-Trans-Id: txf04968bc9ef8431982b77-005772e34b
     Content-Type: text/plain; charset=utf-8
-    ```
-    {: screen}
+```
+{: screen}
 
-    Comando cURL:
-    ```
-    curl -i <OS_STORAGE_URL> -I -H "X-Auth-Token: <OS_AUTH_TOKEN>"
-    ```
-    {: pre}
+* Comando cURL:
+
+```
+curl -i <OS_STORAGE_URL> -I -H "X-Auth-Token: <OS_AUTH_TOKEN>"
+```
+{: pre}

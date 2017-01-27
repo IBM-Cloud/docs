@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -46,8 +46,8 @@ Para obtener más información sobre los requisitos previos, consulte [la docume
 
 Para configurar el cliente de Swift, debe `exportar` la información de autenticación. Puede [generar credenciales](/docs/services/ObjectStorage/os_credentials.html) mediante la CLI utilizando los mandatos de Cloud Foundry o cURL o mediante la IU de {{site.data.keyword.Bluemix_notm}}. El cliente toma la información de las variables de entorno de la tabla siguiente.
 
-
 <table>
+<caption> Tabla 1. Descripciones y variables de entorno</caption>
   <tr>
     <th> Variable de entorno </th>
     <th> Descripción </th>
@@ -74,7 +74,6 @@ Para configurar el cliente de Swift, debe `exportar` la información de autentic
   </tr>
 </table>
 
-Tabla 1: Variables y descripciones de autenticación
 
 
 Para exportar la información de autenticación, especifique sus credenciales y ejecute el siguiente mandato:
@@ -95,12 +94,12 @@ swift auth
 Ejemplo:
 ```
 export OS_USER_ID=24a20b8e4e724f5fa9e7bfdc79ca7e85
-  export OS_PASSWORD=*******
-  export OS_PROJECT_ID=383ec90b22ff4ba4a78636f4e989d5b1
-  export OS_AUTH_URL=https://identity.open.softlayer.com/v3
-  export OS_REGION_NAME=dallas
-  export OS_IDENTITY_API_VERSION=3
-  export OS_AUTH_VERSION=3
+export OS_PASSWORD=*******
+export OS_PROJECT_ID=383ec90b22ff4ba4a78636f4e989d5b1
+export OS_AUTH_URL=https://identity.open.softlayer.com/v3
+export OS_REGION_NAME=dallas
+export OS_IDENTITY_API_VERSION=3
+export OS_AUTH_VERSION=3
 
 swift auth
 ```

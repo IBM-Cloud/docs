@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -17,14 +17,14 @@ lastupdated: "2016-12-06"
 Wenn Sie Objekte nicht mehr benötigen, können Sie diese und auch Container aus der Speicherinstanz löschen. Sie können den Löschvorgang entweder manuell vornehmen oder [einen Zeitpunkt festlegen](/docs/services/ObjectStorage/os_deletion.html#schedule-object-deletion), zu dem die Objekte ablaufen sollen.
 {: shortdesc}
 
-**Achtung**: Mit dem Löschen Ihres Containers löschen Sie alle Objekte, die im Container enthalten sind. 
+**Achtung**: Mit dem Löschen Ihres Containers löschen Sie alle Objekte, die im Container enthalten sind.
 
 
 ## Objekte und Container über die Benutzerschnittstelle löschen {: #deleting-ui}
 
-1. Wählen Sie im Dashboard der Serviceinstanz den Container mit der Datei aus, die Sie nicht mehr benötigen. 
-2. Wählen Sie im Dropdown-Menü **Aktionen** die Option **Datei löschen** aus. 
-3. Wenn Sie einen Container nicht mehr benötigen, wählen Sie **Container löschen** aus dem Dropdown-Menü **Aktionen** aus. 
+1. Wählen Sie im Dashboard der Serviceinstanz den Container mit der Datei aus, die Sie nicht mehr benötigen.
+2. Wählen Sie im Dropdown-Menü **Aktionen** die Option **Datei löschen** aus.
+3. Wenn Sie einen Container nicht mehr benötigen, wählen Sie **Container löschen** aus dem Dropdown-Menü **Aktionen** aus.
 
 
 
@@ -36,7 +36,7 @@ Wenn Sie Objekte nicht mehr benötigen, können Sie diese und auch Container aus
   ```
   {: pre}
 
-2. Optional: Bestätigen Sie vor dem Löschen Ihrer Dateien und Container die Sicherung Ihrer Objekte. 
+2. Optional: Vergewissern Sie sich vor dem Löschen Ihrer Dateien und Container, dass eine Sicherung Ihrer Objekte vorhanden ist. 
 
 3. Führen Sie folgenden Befehl aus, um eine Datei zu löschen:
   ```
@@ -55,12 +55,12 @@ Wenn Sie Objekte nicht mehr benötigen, können Sie diese und auch Container aus
 ## Objektlöschung planen {: #schedule-object-deletion}
 
 
-Sie können die Löschung Ihrer Objekte planen. Hierfür können Sie den Header `X-Delete-At` oder `X-Delete-After` verwenden.
+Sie können das Löschen Ihrer Objekte planen, indem Sie den Header `X-Delete-At` oder `X-Delete-After` verwenden.
 {: shortdesc}
 
-Der Wert für den Header `X-Delete-At` ist eine ganze Zahl, die die Referenzzeit darstellt, zu der das Objekt gelöscht werden soll. Der Wert für den Header `X-Delete_After` ist eine ganze Zahl, die die Anzahl an Sekunden darstellt, nach deren Ablauf das Objekt gelöscht wird. Zur Verwendung des Swift-Clients für die Planung der Objektlöschung führen Sie nach Bedarf den folgenden Befehl aus.
+Der Wert für den Header `X-Delete-At` ist eine ganze Zahl, die die Referenzzeit darstellt, zu der das Objekt gelöscht werden soll. Der Wert für den Header `X-Delete_After` ist eine ganze Zahl, die die Anzahl an Sekunden darstellt, nach deren Ablauf das Objekt gelöscht wird. 
 
-**Anmerkung:** Die tatsächliche Löschung eines Objekts erfolgt möglicherweise nicht genau zur angegebenen Uhrzeit. Das Objekt läuft jedoch de facto zur angegebenen Zeit ab. Das bedeutet, dass es nicht mehr erreichbar ist. Die eigentliche Löschung findet bei der nächsten Ausführung des in Ihrem Swift-Cluster konfigurierten Dämons 'swift-object-expirer' statt.
+**Hinweis:** Die tatsächliche Löschung eines Objekts erfolgt möglicherweise nicht genau zur angegebenen Uhrzeit. Das Objekt läuft jedoch tatsächlich zur angegebenen Zeit ab. Von diesem Zeitpunkt an ist das Objekt nicht mehr erreichbar. Die eigentliche Löschung findet bei der nächsten Ausführung des in Ihrem Swift-Cluster konfigurierten Dämons 'swift-object-expirer' statt.
 
 #### Gehen Sie zur Verwendung von Swift-Befehlen folgendermaßen vor:
 

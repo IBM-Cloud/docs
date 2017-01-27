@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -14,7 +14,7 @@ lastupdated: "2016-12-06"
 
 # 设置对象版本控制 {: #setting-up-versioning}
 
-对象版本控制允许您通过将较旧版本的对象存储在备份容器中，从而保留这些对象。通过版本控制，您可以查看每个对象的历史记录，并跟踪对其所作的更改。
+通过设置对象版本控制，可自动保留较旧版本的对象。使用版本控制，可查看每个对象的历史记录。
 {: shortdesc}
 
 将新版本的文件上传到主容器时，上一个版本会自动移入备份容器。如果从主容器中删除文件，那么最新版本会自动从备份容器移入主容器，以代替删除的文件。
@@ -67,6 +67,7 @@ swift post <container_name>
 
 7.  备份容器中的对象将会自动以下列格式命名：`<Length><Object_name>/<Timestamp>`。
   <table>
+  <caption> 表 1. 描述的命名属性</caption>
     <tr>
       <th> 属性</th>
       <th> 描述</th>
@@ -85,7 +86,6 @@ swift post <container_name>
     </tr>
   </table>
 
-  表 1：描述的命名属性
 
 6. 列出主容器中的对象，以查看新版本的文件。
 

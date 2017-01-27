@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -30,8 +30,8 @@ lastupdated: "2016-12-06"
 1.  {{site.data.keyword.Bluemix_notm}}에 로그인되어 있지 않는 경우 {{site.data.keyword.objectstorageshort}}의 인스턴스가 있는 조직 및 영역에 로그인하십시오.
 
 ```
-  cf login -a api.ng.bluemix.net -u <userid> -p <password> -o <organization> -s <space>
-  ```
+cf login -a api.ng.bluemix.net -u <userid> -p <password> -o <organization> -s <space>
+```
 {: pre}
 
 2. 실수로 데이터를 겹쳐써서 데이터가 손상되는 일이 발생하지 않도록 [오브젝트 버전화 설정](/docs/services/ObjectStorage/os_versioning.html)을 수행하십시오. 오브젝트 버전화를 원하지 않는 경우에는 저장소의 기존 파일을 나열하여 필요에 따라 디렉토리 또는 파일의 이름을 바꾼 후 다운로드하십시오.

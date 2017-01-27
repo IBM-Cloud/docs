@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -20,18 +20,20 @@ Swift には本当のディレクトリー構造はありませんが、ディ�
 
 コンテナーにディレクトリーを追加するには、ローカル・デバイスにディレクトリー構造が設定されている必要があります。
 
-1. ローカルに、ディレクトリーを作成してファイルを保存します。
+1. ローカルに、ディレクトリーを作成し、ファイルを保存します。
 2. 以下のコマンドを実行して、ディレクトリーをコンテナーにアップロードします。
-```
-swift upload <container_name> <directory_name>
-```
-{: pre}
+
+    ```
+  swift upload <container_name> <directory_name>
+  ```
+    {: pre}
 
 ## CLI を使用したディレクトリーのダウンロード
 ディレクトリー構造をダウンロードするには、`-prefix` パラメーターを使用して、ダウンロードするディレクトリーまたはディレクトリー構造を示します。
 
 1. 以下のコマンドを実行して、ディレクトリーをダウンロードします。
-```
+
+    ```
 swift download <container_name> --prefix <directory>
 ```
-{: pre}
+    {: pre}

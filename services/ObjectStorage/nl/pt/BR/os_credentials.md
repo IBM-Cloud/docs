@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -87,7 +87,7 @@ formatadas como uma carga útil de JSON.
   ```
   {: pre}
 
-2. Execute o comando a seguir usando as variáveis explicadas na tabela para gerar credenciais de serviço.
+2. Execute o comando a seguir para gerar credenciais de serviço.
 
   ```
   curl "https://api.ng.bluemix.net/v2/service_keys" -d '{   "service_instance_guid": "<service_instance_guid>",   "name: <service_instance_name>", "role: <user_role>"}' -X POST -H "Authorization: <bearer_token>" -H "Content-Type: <content_type" -H "Cookie: <cookie>"
@@ -95,12 +95,13 @@ formatadas como uma carga útil de JSON.
   {: pre}
 
   <table>
+  <caption> Tabela 1. Variáveis de credenciais de serviço cURL explicadas</caption>
     <tr>
       <th> Variável  </th>
       <th> Explicação </th>
     </tr>
     <tr>
-      <td> https://api.ng.bluemix.net/v2/service_keys </td>
+      <td> <code>https://api.ng.bluemix.net/v2/service_keys</code> </td>
       <td> O terminal de chave de serviço.  </td>
     </tr>
     <tr>
@@ -121,7 +122,7 @@ formatadas como uma carga útil de JSON.
     </tr>
   </table>
 
-  Tabela 1: Variáveis de credenciais de serviço do cURL explicadas
+
 
 3. Valide suas credenciais executando o comando a seguir.
 

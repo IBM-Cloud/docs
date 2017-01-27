@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -12,12 +12,13 @@ lastupdated: "2016-12-06"
 
 # Gerenciando acesso
 
-As Listas de Controle de Acesso podem ser usadas para gerenciar o acesso ao serviço. Os [usuários administrativos](/docs/services/ObjectStorage/os_access_types.html) podem conceder acesso de leitura e gravação, bem como remover o acesso ao gerenciar sua instância de serviço.
+As Listas de Controle de Acesso podem ser usadas para gerenciar o acesso ao serviço. Os [Usuários administrativos](/docs/services/ObjectStorage/os_access_types.html) podem conceder e remover os acessos de leitura e gravação.
 {: shortdesc}
 
+Antes de gerenciar o acesso usando a UI ou a CLI do Swift, assegure-se de ter configurado o serviço e começado o armazenamento de objetos.
 
-As Listas de Controle de Acesso podem ser gerenciadas usando a CLI do Swift ou a UI do Bluemix. Antes de gerenciar o acesso, assegure-se de que você tenha configurado o serviço e começado a armazenar objetos. Há algumas coisas para manter em mente ao gerenciar o acesso.
+Quando estiver trabalhando com listas de controle de acesso, mantenha os seguintes pontos em mente:
   * Quando um usuário cria um contêiner, os privilégios de administrador são concedidos automaticamente a ele para esse contêiner.
   * As listas de controle de acesso não estão disponíveis para a instância de serviço, para a
-conta de armazenamento ou no nível de projeto. O acesso pode ser gerenciado somente no nível de contêiner.
+conta de armazenamento ou no nível de projeto. O acesso pode ser gerenciado somente no nível do contêiner ou do objeto.
   * Certifique-se de verificar se o acesso a um contêiner foi [removido](/docs/services/ObjectStorage/os_remove_access.html).

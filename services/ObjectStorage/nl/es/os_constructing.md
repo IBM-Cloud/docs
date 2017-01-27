@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -20,7 +20,7 @@ Puede utilizar la API REST de Swift con una interfaz de cliente de línea de man
 
 Para obtener una lista completa de las opciones y los ejemplos de la API REST de {{site.data.keyword.objectstorageshort}}, consulte la [Referencia completa de la API de OpenStack Swift](http://developer.openstack.org/api-ref-objectstorage-v1.html).
 
-Cuando haya autenticado la instancia de servicio con Keystone, tome nota de la respuesta de catálogo. Debería ser similar al ejemplo siguiente.
+Antes de componer el URL, debe [autenticar](/docs/services/ObjectStorage/os_authenticate.html) la instancia de servicio con Keystone. Asegúrese de anotar la respuesta del catálogo. Se parecerá a la del siguiente ejemplo. 
 
 ```
 {
@@ -36,5 +36,6 @@ Cuando haya autenticado la instancia de servicio con Keystone, tome nota de la r
 
 Añada el espacio de nombres del contenedor y del objeto al final del URL de {{site.data.keyword.objectstorageshort}}, tal como se muestra en la siguiente imagen.
 
-  Partes del URL de ![{{site.data.keyword.objectstorageshort}} mostradas en una imagen de ejemplo](images/swift_URL.png)
-  Figura 1: Ejemplo de URL de {{site.data.keyword.objectstorageshort}}
+Partes del URL de ![{{site.data.keyword.objectstorageshort}} mostradas en una imagen de ejemplo](images/Swift_URL.png)
+
+Figura 1. Ejemplo de URL de {{site.data.keyword.objectstorageshort}}

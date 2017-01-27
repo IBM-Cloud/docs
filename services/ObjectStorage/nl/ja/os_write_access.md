@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -18,6 +18,7 @@ lastupdated: "2016-12-06"
 {: shortdesc}
 
 <table>
+<caption> 表 1. オプション別の書き込みアクセス許可</caption>
   <tr>
     <th> 許可 </th>
     <th> 書き込み ACL オプション </th>
@@ -39,8 +40,6 @@ lastupdated: "2016-12-06"
     <td>  <code> &#42;:&#42; </code> </td>
   </tr>
 </table>
-
-表 1: オプション別の書き込みアクセス許可
 
 
 

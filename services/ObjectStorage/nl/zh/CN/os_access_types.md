@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -18,6 +18,7 @@ lastupdated: "2016-12-06"
 {: shortdesc}
 
 <table>
+<caption> 表 1. 定义的用户角色</caption>
   <tr>
     <th> 管理用户 (admin)</th>
     <th> 非管理用户 (member)</th>
@@ -36,6 +37,5 @@ lastupdated: "2016-12-06"
   </tr>
 </table>
 
-表 1：定义的用户角色
 
 您可以通过 {{site.data.keyword.Bluemix_notm}} 用户界面、Cloud Foundry API 或 Cloud Foundry CLI 来管理 {{site.data.keyword.objectstorageshort}} 用户。

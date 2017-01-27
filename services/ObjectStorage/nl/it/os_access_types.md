@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -12,30 +12,30 @@ lastupdated: "2016-12-06"
 {:pre: .pre}
 
 
-# Tipi di accesso.
+# Types of access
 
-Gli utenti {{site.data.keyword.objectstorageshort}} possono essere sia amministrativi che non amministrativi. Gli elenchi del controllo dell'accesso vengono abilitati dagli utenti amministrativi al livello del contenitore.
+{{site.data.keyword.objectstorageshort}} users can be either administrative or non-administrative. Access control lists are enabled by administrative users at the container level.
 {: shortdesc}
 
 <table>
+<caption> Table 1. User roles defined </caption>
   <tr>
-    <th> Utenti amministrativi (ammin) </th>
-    <th> Utenti non amministrativi (membro) </th>
+    <th> Administrative users (admin) </th>
+    <th> Non-administrative users (member) </th>
   </tr>
   <tr>
-    <td> Gestisci il controllo dell'accesso </td>
-    <td> Per impostazione predefinita, non si dispone dell'accesso al servizio o ai relativi contenitori </td>
+    <td> Manage access control </td>
+    <td> By default, have no access to the service or its containers </td>
   </tr>
   <tr>
-    <td> Puoi creare e eliminare i contenitori </td>
-    <td> Puoi eseguire azioni in base alle ACL di lettura/scrittura dei contenitori </td>
+    <td> Can create and delete containers </td>
+    <td> Can perform actions based on the containers read/write ACLs </td>
   </tr>
   <tr>
-    <td> Puoi leggere e scrivere nei contenitori </td>
-    <td> Puoi eseguire azioni come determinato dall'amministratore </td>
+    <td> Can read and write to containers </td>
+    <td> Can perform actions as determined by the admin </td>
   </tr>
 </table>
 
-Tabella 1: Ruoli utente definiti 
 
-Puoi gestire gli utenti {{site.data.keyword.objectstorageshort}} tramite l'interfaccia utente {{site.data.keyword.Bluemix_notm}}, l'API o la CLI Cloud Foundry.
+You can manage {{site.data.keyword.objectstorageshort}} users through the {{site.data.keyword.Bluemix_notm}} user interface, the Cloud Foundry API, or the Cloud Foundry CLI.

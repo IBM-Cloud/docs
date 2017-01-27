@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -19,6 +19,7 @@ administrativos. As listas de controle de acesso são ativadas por usuários adm
 {: shortdesc}
 
 <table>
+<caption> Tabela 1. Funções de usuário definidas</caption>
   <tr>
     <th> Usuários administrativos (administradores) </th>
     <th> Usuários não administrativos (membros) </th>
@@ -37,7 +38,6 @@ administrativos. As listas de controle de acesso são ativadas por usuários adm
   </tr>
 </table>
 
-Tabela 1: Funções definidas pelo usuário
 
 É possível gerenciar usuários do {{site.data.keyword.objectstorageshort}} por meio da interface com o usuário do {{site.data.keyword.Bluemix_notm}}, da API do Cloud Foundry ou da CLI do
 Cloud Foundry.

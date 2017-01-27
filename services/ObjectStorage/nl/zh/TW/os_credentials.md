@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -84,7 +84,7 @@ lastupdated: "2016-12-06"
   ```
   {: pre}
 
-2. 使用表格中說明的變數執行下列指令，以產生服務認證。
+2. 執行下列指令以產生服務認證。
 
   ```
   curl "https://api.ng.bluemix.net/v2/service_keys" -d '{   "service_instance_guid": "<service_instance_guid>",   "name: <service_instance_name>", "role: <user_role>"}' -X POST -H "Authorization: <bearer_token>" -H "Content-Type: <content_type" -H "Cookie: <cookie>"
@@ -92,12 +92,13 @@ lastupdated: "2016-12-06"
   {: pre}
 
   <table>
+  <caption> 表 1. 說明的 cURL 服務認證變數</caption>
     <tr>
       <th> 變數</th>
       <th> 說明</th>
     </tr>
     <tr>
-      <td> https://api.ng.bluemix.net/v2/service_keys </td>
+      <td> <code>https://api.ng.bluemix.net/v2/service_keys</code> </td>
       <td> 服務金鑰端點。</td>
     </tr>
     <tr>
@@ -118,7 +119,7 @@ lastupdated: "2016-12-06"
     </tr>
   </table>
 
-  表 1：說明的 cURL 服務認證變數
+
 
 3. 執行下列指令，以驗證您的認證。
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -19,13 +19,13 @@ Sie können Objekte über die Benutzerschnittstelle oder die CLI in den Speicher
 
 ## Objekte in Containern über die Benutzerschnittstelle speichern {: #storing-ui}
 
-**Anmerkung**: Wenn Sie eine Datei mit demselben Namen hochladen, ersetzt {{site.data.keyword.objectstorageshort}} die gespeicherte Datei durch die neue Datei. Wenn Sie eine Datei herunterladen und diese bearbeiten, stellen Sie sicher, dass sie der Datei einen anderen Namen geben oder vor dem Hochladen [die Objektversionierung einrichten](/docs/services/ObjectStorage/os_versioning.html), um beide Versionen der Datei beizubehalten. 
+**Hinweis**: Wenn Sie eine Datei mit demselben Namen hochladen, ersetzt {{site.data.keyword.objectstorageshort}} die gespeicherte Datei durch die neue Datei. Wenn Sie eine Datei herunterladen und diese bearbeiten, stellen Sie sicher, dass sie der Datei einen anderen Namen geben oder vor dem Hochladen [die Objektversionierung einrichten](/docs/services/ObjectStorage/os_versioning.html), um beide Versionen der Datei beizubehalten.
 
 
-1. Fügen Sie im Dashboard der Serviceinstanz über das Dropdown-Menü **Aktionen** einen Container hinzu. 
+1. Fügen Sie im Dashboard der Serviceinstanz über das Dropdown-Menü **Aktionen** einen Container hinzu.
 2. Geben Sie dem Container einen Namen und klicken Sie auf **ERSTELLEN**.
-3. Wählen Sie im Dropdown-Menü **Aktionen** die Option **Dateien hinzufügen** aus. Es wird ein Dialogfeld geöffnet. 
-4. Wählen Sie die Datei oder die Dateien aus, die Sie hochladen möchten, und klicken Sie auf **Öffnen**. 
+3. Wählen Sie im Dropdown-Menü **Aktionen** die Option **Dateien hinzufügen** aus. Es wird ein Dialogfeld geöffnet.
+4. Wählen Sie die Datei oder die Dateien aus, die Sie hochladen möchten, und klicken Sie auf **Öffnen**.
 
 
 
@@ -38,14 +38,14 @@ Sie können Objekte über die Benutzerschnittstelle oder die CLI in den Speicher
   ```
   {: pre}
 
-2. Erstellen Sie einen neuen {{site.data.keyword.objectstorageshort}}-Container, indem Sie folgenden Befehl ausführen. Die Variable *Containername* wird zu diesem Zeitpunkt von Ihnen festgelegt.
+2. Erstellen Sie einen {{site.data.keyword.objectstorageshort}}-Container, indem Sie folgenden Befehl ausführen. Die Variable *Containername* wird jetzt von Ihnen festgelegt.
 
   ```
   swift post <Containername>
   ```
   {: pre}
 
-**Anmerkung**: Wenn Sie eine Fehlernachricht erhalten, stellen Sie sicher, dass Sie die [Softwarevoraussetzungen](/docs/services/ObjectStorage/os_configuring.html#install-swift-client) installiert haben.
+**Hinweis**: Wenn Sie eine Fehlernachricht erhalten, stellen Sie sicher, dass die [Softwarevoraussetzungen](/docs/services/ObjectStorage/os_configuring.html#install-swift-client) installiert sind.
 
 3. Optional: Um zu überprüfen, ob Ihr Container erstellt wurde, führen Sie folgenden Befehl zur Auflistung Ihrer Container aus.
 
@@ -63,7 +63,7 @@ Sie können Objekte über die Benutzerschnittstelle oder die CLI in den Speicher
   ```
   {: pre}
 
-  **Anmerkung**: Zum Hochladen von Dateien von mehr als 5 GB [sind zusätzliche Schritte erforderlich](/docs/services/ObjectStorage/os_large_files.html).
+  **Hinweis**: Zum Hochladen von Dateien von mehr als 5 GB [sind zusätzliche Schritte erforderlich](/docs/services/ObjectStorage/os_large_files.html).
 
 6. Optional: Um zu überprüfen, ob der Upload erfolgreich war, führen Sie den folgenden Befehl aus, mit dem der Inhalt Ihres Containers angezeigt wird.
 

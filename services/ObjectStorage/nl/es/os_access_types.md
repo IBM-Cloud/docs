@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -18,6 +18,7 @@ Los usuarios de {{site.data.keyword.objectstorageshort}} pueden ser administrati
 {: shortdesc}
 
 <table>
+<caption> Tabla 1. Roles de usuario definidos</caption>
   <tr>
     <th> Usuarios administrativos (admin) </th>
     <th> Usuarios no administrativos (miembro) </th>
@@ -36,6 +37,5 @@ Los usuarios de {{site.data.keyword.objectstorageshort}} pueden ser administrati
   </tr>
 </table>
 
-Tabla 1: Roles de usuario definidos
 
 Puede gestionar usuarios de {{site.data.keyword.objectstorageshort}} a través de la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}, la API de Cloud Foundry o la CLI de Cloud Foundry.

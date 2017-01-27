@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -18,6 +18,7 @@ lastupdated: "2016-12-06"
 {: shortdesc}
 
 <table>
+<caption> Tabelle 1. Definierte Benutzerrollen</caption>
   <tr>
     <th> Benutzer mit Administratorberechtigungen (admin) </th>
     <th> Benutzer ohne Administratorberechtigungen (member) </th>
@@ -36,6 +37,5 @@ lastupdated: "2016-12-06"
   </tr>
 </table>
 
-Tabelle 1: Definierte Benutzerrollen
 
 Sie können {{site.data.keyword.objectstorageshort}}-Benutzer über die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle, die Cloud Foundry-API oder die Cloud Foundry CLI verwalten.

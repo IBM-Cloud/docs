@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -85,7 +85,7 @@ Las credenciales de servicio se utilizan para proporcionar autenticación y segu
   ```
   {: pre}
 
-2. Ejecute el mandato siguiente utilizando las variables explicadas en la tabla para generar credenciales de servicio.
+2. Ejecute el siguiente mandato para generar credenciales de servicio. 
 
   ```
   curl "https://api.ng.bluemix.net/v2/service_keys" -d '{   "service_instance_guid": "<guid_instancia_servicio>",   "name: <nombre_instancia_servicio>", "role: <rol_usuario>"}' -X POST -H "Authorization: <señal_portador>" -H "Content-Type: <content_type" -H "Cookie: <cookie>"
@@ -93,12 +93,13 @@ Las credenciales de servicio se utilizan para proporcionar autenticación y segu
   {: pre}
 
   <table>
+  <caption> Tabla 1. Variables de credenciales de servicio de cURL explicadas</caption>
     <tr>
       <th> Variable  </th>
       <th> Explicación</th>
     </tr>
     <tr>
-      <td> https://api.ng.bluemix.net/v2/service_keys</td>
+      <td> <code>https://api.ng.bluemix.net/v2/service_keys</code> </td>
       <td> El punto final de la clave de servicio. </td>
     </tr>
     <tr>
@@ -119,7 +120,7 @@ Las credenciales de servicio se utilizan para proporcionar autenticación y segu
     </tr>
   </table>
 
-  Tabla 1: Variables de credenciales de servicio de cURL explicadas
+
 
 3. Valide las credenciales ejecutando el mandato siguiente.
 

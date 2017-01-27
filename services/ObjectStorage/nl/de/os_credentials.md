@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -36,7 +36,7 @@ Serviceberechtigungsnachweise werden zur Bereitstellung der Authentifizierung un
   {: pre}
 
 2. Generieren Sie Serviceberechtigungsnachweise. Geben Sie dem Berechtigungsnachweis einen Namen, indem Sie die Variable
-`serviceschlüsselname` entsprechend ersetzen. Optional können Sie auch eine [Benutzerrolle](/docs/services/ObjectStorage/os_access_types.html) zuweisen. 
+`serviceschlüsselname` entsprechend ersetzen. Optional können Sie auch eine [Benutzerrolle](/docs/services/ObjectStorage/os_access_types.html) zuweisen.
 
   ```
   cf create-service-key "<Serviceinstanzname>" <Serviceschlüsselname> -c '{"role":"<Benutzerrolle>"}'
@@ -85,7 +85,7 @@ Serviceberechtigungsnachweise werden zur Bereitstellung der Authentifizierung un
   ```
   {: pre}
 
-2. Führen Sie zum Generieren von Serviceberechtigungsnachweisen mithilfe der in der Tabelle erläuterten Variablen den folgenden Befehl aus.
+2. Führen Sie den folgenden Befehl aus, um Serviceberechtigungsnachweise zu generieren.
 
   ```
   curl "https://api.ng.bluemix.net/v2/service_keys" -d '{   "service_instance_guid": "<Serviceinstanz-GUID>",   "name: <Serviceinstanzname>", "role: <Benutzerrolle>"}' -X POST -H "Authorization: <Trägertoken>" -H "Content-Type: <Inhaltstyp" -H "Cookie: <Cookie>"
@@ -93,12 +93,13 @@ Serviceberechtigungsnachweise werden zur Bereitstellung der Authentifizierung un
   {: pre}
 
   <table>
+  <caption> Tabelle 1. Beschriebene Variablen für die cURL-Serviceberechtigungsnachweise</caption>
     <tr>
       <th> Variable  </th>
       <th> Erläuterung </th>
     </tr>
     <tr>
-      <td> https://api.ng.bluemix.net/v2/service_keys </td>
+      <td> <code>https://api.ng.bluemix.net/v2/service_keys</code> </td>
       <td> Der Endpunkt des Serviceschlüssels.  </td>
     </tr>
     <tr>
@@ -119,7 +120,7 @@ Serviceberechtigungsnachweise werden zur Bereitstellung der Authentifizierung un
     </tr>
   </table>
 
-  Tabelle 1: Beschriebene Variablen für die cURL-Serviceberechtigungsnachweise
+
 
 3. Überprüfen Sie Ihre Berechtigungsnachweise, indem Sie den folgenden Befehl ausführen.
 

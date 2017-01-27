@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -20,7 +20,7 @@ Sie können gespeicherte Objekte zur Überprüfung oder Bearbeitung über die Be
 ## Objekte über die Benutzerschnittstelle herunterladen {: #downloading-ui}
 
 1. Um zu vermeiden, dass Daten durch unbeabsichtigte Überschreibungsaktionen zerstört werden, [richten Sie die Objektversionierung ein](/docs/services/ObjectStorage/os_versioning.html). Wenn Sie keine Objektversionierung wünschen, benennen Sie das Verzeichnis oder die Dateien vor dem Herunterladen bei Bedarf um.
-2. Wählen Sie im Dashboard der Serviceinstanz den Container mit der Datei aus, die heruntergeladen werden soll. 
+2. Wählen Sie im Dashboard der Serviceinstanz den Container mit der Datei aus, die heruntergeladen werden soll.
 3. Wählen Sie die Datei aus.
 4. Wählen Sie im Dropdown-Menü **Aktionen** die Option **Datei herunterladen** aus.
 

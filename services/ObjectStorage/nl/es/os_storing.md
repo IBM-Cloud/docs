@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -38,14 +38,14 @@ Puede cargar objetos para almacenarlos mediante la IU o la CLI. La carga de obje
   ```
   {: pre}
 
-2. Cree un nuevo contenedor de {{site.data.keyword.objectstorageshort}} ejecutando el siguiente mandato. Usted establecerá la variable *nombre_contenedor* en este momento.
+2. Cree un contenedor de {{site.data.keyword.objectstorageshort}} ejecutando el siguiente mandato. Ahora establecerá la variable *nombre_contenedor*. 
 
   ```
   swift post <nombre_contenedor>
   ```
   {: pre}
 
-**Nota**: Si aparece un mensaje de error, confirme que ha instalado [el software de requisito previo](/docs/services/ObjectStorage/os_configuring.html#install-swift-client).
+**Nota**: Si recibe un mensaje de error, confirme que ha instalado [el software de requisito previo](/docs/services/ObjectStorage/os_configuring.html#install-swift-client).
 
 3. Opcional: Para verificar que se haya creado el contenedor, ejecute el siguiente mandato para listar los contenedores.
 

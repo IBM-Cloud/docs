@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -18,11 +18,11 @@ Para interactuar con el servicio, debe autenticar la instancia de {{site.data.ke
 {: shortdesc}
 
 
-El suministro de una nueva instancia de {{site.data.keyword.objectstorageshort}} crea un proyecto Keystone aislado en la nube pública de IBM. La estructura de credenciales de Keystone contiene un conjunto completo de atributos para permitirle seleccionar el método de solicitud de señales OpenStack o el SDK de OpenStack que se ajuste mejor a la app. Cuando enlace una app nueva en la instancia, se creará un nuevo usuario de Keystone con acceso al proyecto. Cuando desaprovisione la instancia, se suprimen el proyecto y el usuario.
+El suministro de una nueva instancia de {{site.data.keyword.objectstorageshort}} crea un proyecto Keystone aislado en la nube pública de IBM. La estructura de credenciales de Keystone contiene un conjunto completo de atributos para que pueda seleccionar el método de solicitud de señales OpenStack o el SDK de OpenStack que se ajuste mejor a la app. Cuando enlace una app nueva en la instancia, se creará un nuevo usuario de Keystone con acceso al proyecto. Cuando desaprovisione la instancia, se suprimen el proyecto y el usuario.
 
 Para obtener más información sobre el uso de OpenStack Swift y Keystone, vea el [sitio de documentación de OpenStack](http://docs.openstack.org).
 
-1. La solicitud de señal v3 recomendada es una solicitud POST a https://identity.open.softlayer.com/v1/auth/tokens, tal como se muestra en el siguiente mandato cURL:
+1. Realice una solicitud POST a `https://identity.open.softlayer.com/v3/auth/tokens` tal como se muestra en el siguiente mandato cURL. 
   ```
   	curl -i \
 	  -H "Content-Type: application/json" \
@@ -51,7 +51,7 @@ Para obtener más información sobre el uso de OpenStack Swift y Keystone, vea e
   ```
   {: codeblock}
 
-2. Cuando se autentique con Keystone, recibirá una respuesta de catálogo. Seleccione un punto final `object-store` y tome nota. Necesita que cree el URL completo. El siguiente ejemplo de respuesta se ha recortado para que sólo muestre información relevante para {{site.data.keyword.objectstorageshort}}.
+2. Seleccione un punto final `object-store` de la respuesta del catálogo y tome nota. Necesita que cree el URL completo. El siguiente ejemplo de respuesta se ha recortado para que sólo muestre información relevante para {{site.data.keyword.objectstorageshort}}.
 
   ```
   	HTTP/1.1 201 Created
@@ -155,6 +155,7 @@ Para obtener más información sobre el uso de OpenStack Swift y Keystone, vea e
   {: screen}
 
   <table>
+  <caption> Tabla 1. Respuesta de solicitud POST explicada</caption>
     <tr>
       <th> Punto final de respuesta</th>
       <th> Explicación</th>
@@ -165,7 +166,7 @@ Para obtener más información sobre el uso de OpenStack Swift y Keystone, vea e
     </tr>
     <tr>
       <td> <code> id </code> </td>
-      <td> La ID de instancia de {{site.data.keyword.objectstorageshort}}. </td>
+      <td> El ID de instancia de {{site.data.keyword.objectstorageshort}}. </td>
     </tr>
     <tr>
       <td> <code> region </code> </td>
@@ -173,12 +174,10 @@ Para obtener más información sobre el uso de OpenStack Swift y Keystone, vea e
     </tr>
     <tr>
       <td> <code> url </code> </td>
-      <td> El URL de {{site.data.keyword.objectstorageshort}}. Se utiliza para interactuar con el servicio utilizando los mandatos cURL. </td>
+      <td> El URL de {{site.data.keyword.objectstorageshort}}. </td>
     </tr>
     <tr>
       <td> <code> interface </code> </td>
       <td> No se puede acceder a la interfaz interna desde {{site.data.keyword.Bluemix_notm}}. Utilice la interfaz pública (<code>publicURL</code>). </td>
     </tr>
   </table>
-
-  Tabla 1: Respuesta de solicitud POST explicada

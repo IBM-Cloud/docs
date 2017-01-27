@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -20,7 +20,7 @@ lastupdated: "2016-12-06"
 
 有关 {{site.data.keyword.objectstorageshort}} REST API 选项和示例的完整列表，请参阅 [OpenStack Swift API Complete Reference](http://developer.openstack.org/api-ref-objectstorage-v1.html)。
 
-使用 Keystone 认证服务实例时，请记录目录响应。响应应该类似于以下示例。
+必须先使用 Keystone [认证](/docs/services/ObjectStorage/os_authenticate.html)您的服务实例，然后才能编写 URL。请确保记下目录响应。该响应类似于以下示例。
 
 ```
 {
@@ -36,5 +36,6 @@ lastupdated: "2016-12-06"
 
 将容器和对象的名称空间添加到 {{site.data.keyword.objectstorageshort}} URL 的末尾，如下图中所示。
 
-  ![示例图像中显示的 {{site.data.keyword.objectstorageshort}} URL 部分](images/swift_URL.png)
-  图 1：{{site.data.keyword.objectstorageshort}} URL 示例
+![示例图像中显示的 {{site.data.keyword.objectstorageshort}} URL 部分](images/Swift_URL.png)
+
+图 1. {{site.data.keyword.objectstorageshort}} URL 示例

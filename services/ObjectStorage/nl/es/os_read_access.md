@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -18,6 +18,7 @@ Un usuario de {{site.data.keyword.objectstorageshort}} con [rol de administrador
 {: shortdesc}
 
 <table>
+<caption> Tabla 1. Permisos de acceso de lectura por opción</caption>
   <tr>
     <th> Permiso </th>
     <th> Opciones de ACL de lectura </th>
@@ -48,8 +49,6 @@ Un usuario de {{site.data.keyword.objectstorageshort}} con [rol de administrador
   </tr>
 </table>
 
-Tabla 1: Permisos de acceso de lectura por opción
-
 
 
 1. Autenticar las credenciales. Puede utilizar las credenciales que se encuentran en el separador de credenciales de servicio de la IU o bien puede generar credenciales nuevas. Para obtener más información sobre la generación de nuevas credenciales, consulte [Generación de credenciales de servicio](/docs/services/ObjectStorage/os_credentials.html). Recibirá el URL de {{site.data.keyword.objectstorageshort}} y la señal de autenticación como salida.
@@ -57,13 +56,13 @@ Tabla 1: Permisos de acceso de lectura por opción
     Mandato Swift:
 
     ```
-    export OS_USER_ID=<ID_usuario>
-  export OS_PASSWORD=<contraseña>
-  export OS_TENANT_ID=<ID_proyecto>
-  export OS_AUTH_URL=https://identity.open.softlayer.com/v3
-  export OS_REGION_NAME=<región>
-  export OS_IDENTITY_API_VERSION=3
-  export OS_AUTH_VERSION=3
+    export OS_USER_ID=<user_id>
+    export OS_PASSWORD=<password>
+    export OS_TENANT_ID=<project_id>
+    export OS_AUTH_URL=https://identity.open.softlayer.com/v3
+    export OS_REGION_NAME=<region>
+    export OS_IDENTITY_API_VERSION=3
+    export OS_AUTH_VERSION=3
 
     swift auth
     ```
@@ -109,7 +108,7 @@ Tabla 1: Permisos de acceso de lectura por opción
     ```
     {: pre}
 
-    Puede ver en el siguiente ejemplo que se ha concedido el acceso de lectura:
+    Ejemplo: El valor `X-Container-Read` muestra el contenedor y el acceso a los que se otorga acceso de lectura. 
 
     ```
     HTTP/1.1 204 No Content
