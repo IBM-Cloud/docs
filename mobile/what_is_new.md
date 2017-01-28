@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-01-27"
 
 ---
 {:new_window: target="_blank"}
@@ -10,22 +10,31 @@ lastupdated: "2017-01-17"
 # What's new in the Mobile dashboard
 {: #what_is_new}
 
+### New as of: January 2017
+{: #jan-2017}
+
+The January 2017 update of the {{site.data.keyword.Bluemix}} Mobile dashboard introduced the following changes:
+
+   * You can update your project starter type.
+   * You can add your existing [Compute](sdk_compute.html) instances and generate client SDKs to add to your project.
+
+
 ### New as of: December 2016
 {: #dec-2016}
 
-The December 2016 update of the {{site.data.keyword.Bluemix}} Mobile dashboard introduced the following changes:
+The December 2016 update of the {{site.data.keyword.Bluemix_notm}} Mobile dashboard introduced the following changes:
 
    * You can remove a connected service from a project so it can be deleted or reused with another project. 
    * You can add an existing service to a project.
-   * You can create or connect an existing CloudantNoSQL service as a data source when you use a code starter.
+   * You can create or connect an existing CloudantNoSQL service as a data source when you use a Code Starter.
    * Where it is supported, you can create or connect an existing Object Storage service as a data source for your project.
-   * You can customize the navigation design of the app that you are creating with a UI starter. 
+   * You can customize the navigation design of the app that you are creating with a UI Starter. 
    
 
 ### New as of: November 2016
 {: #nov-2016}
 
-The November 2016 update of the {{site.data.keyword.Bluemix}} Mobile dashboard introduced the following changes:
+The November 2016 update of the {{site.data.keyword.Bluemix_notm}} Mobile dashboard introduced the following changes:
 
    * You can now generate SDK artifacts for your projects from the **Code** page.
    * Cordova is now supported for the Basic Code Starter.
