@@ -53,10 +53,10 @@ The client SDK generator uses the Open API definition file to define a client-op
 {: #definition}
 
 <!--
-The BFF needs to expose an API definition file that conforms to the Open API specification that is running on a live server endpoint. To enable the {{site.data.keyword.Bluemix_notm}} Developer experience and the {{site.data.keyword.Bluemix_notm}} SDK CLI (Command Line Interface) to discover this endpoint, you must add an environment variable to your Cloud foundry application called `OPENAPI_SPEC`. This environment variable must reference the specification using a relative path.
+The BFF needs to expose an API definition file that conforms to the Open API specification that is running on a live server endpoint. To enable the {{site.data.keyword.Bluemix_notm}} Developer Experience and the {{site.data.keyword.Bluemix_notm}} SDK CLI (Command Line Interface) to discover this endpoint, you must add an environment variable to your Cloud foundry application called `OPENAPI_SPEC`. This environment variable must reference the specification using a relative path.
 -->
 
-The BFF needs to expose an API definition file that conforms to the Open API specification that is running on a live server endpoint. To enable the {{site.data.keyword.Bluemix_notm}} Developer experience to discover this endpoint, you must add an environment variable to your Cloud foundry application called `OPENAPI_SPEC`. This environment variable must reference the specification using a relative path.
+The BFF needs to expose an API definition file that conforms to the Open API specification that is running on a live server endpoint. To enable the {{site.data.keyword.Bluemix_notm}} Developer Experience to discover this endpoint, you must add an environment variable to your Cloud foundry application called `OPENAPI_SPEC`. This environment variable must reference the specification using a relative path.
 
 To add the `OPENAPI_SPEC` environment variable in {{site.data.keyword.Bluemix_notm}}, follow these steps:
 
@@ -114,7 +114,7 @@ Follow the [README ![External link icon](../icons/launch-glyph.svg "External lin
 ## Using Backend for Frontend with a Developer Experience project
 {: #bff-devex}
 
-The {{site.data.keyword.Bluemix_notm}} Mobile developer experience is designed to make it simple to define a mobile project with a number of cloud services associated. You can easily add [{{site.data.keyword.mobilepushshort}} ![External link icon](../icons/launch-glyph.svg)](/docs/services/mobilepush/index.html), [Analytics ![External link icon](../icons/launch-glyph.svg)](/docs/services/mobileanalytics/index.html), and Data or Storage services. 
+The {{site.data.keyword.Bluemix_notm}} Mobile Developer Experience is designed to make it simple to define a mobile project with a number of cloud services associated. You can easily add [{{site.data.keyword.mobilepushshort}} ![External link icon](../icons/launch-glyph.svg)](/docs/services/mobilepush/index.html), [Analytics ![External link icon](../icons/launch-glyph.svg)](/docs/services/mobileanalytics/index.html), and Data or Storage services. 
 
 The {{site.data.keyword.Bluemix_notm}} Mobile dashboard introduced the ability to integrate a BFF into a mobile project in the **Compute** page. You can add existing Compute service instances to your mobile project. After they are added, you can either generate a native SDK for your language choice or you can generate the full project and the SDK will be integrated into the source package of the project in the **Code** page. This is particularly useful when you are integrating with BFFs that are already well-defined.
 
