@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-07"
+  years: 2015, 2017
+lastupdated: "2017-01-24"
 
 ---
 
@@ -14,6 +14,12 @@ lastupdated: "2016-12-07"
 
 
 A list of the latest updates in the aspnet buildpack.
+
+## Jan 31, 2017: Updated ASP.NET Core buildpack v1.0.10-20170124-1145
+
+* Add support for .NET Core 1.0.3
+* Add support for .NET Core MSBuild tooling
+* Add support for F# projects
 
 ## Dec 9, 2016: Updated ASP.NET Core buildpack v1.0.6-20161205-0912
 
@@ -65,7 +71,7 @@ This version of the buildpack includes the following changes:
 * Usage of the Nowin web server was removed from this buildpack and the [Kestrel]{https://github.com/aspnet/KestrelHttpServer} web server is used instead.
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## general
-{: #general}
+{: #general notoc}
 * [Dotnet core runtime](index.html)
