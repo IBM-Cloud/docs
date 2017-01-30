@@ -6,15 +6,11 @@ lastupdated: "2017-01-30"
 
 ---
 {:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
 
-# End-to-end tutorial of the {{site.data.keyword.openwhisk_short}} Starter
-{: #tutorial}
+# End-to-end tutorial of the {{site.data.keyword.conversationshortshort}} Code Starter
+{: #tutorial_vr}
 
-The following end-to-end tutorial walks through the steps to create a project from the {{site.data.keyword.openwhisk_short}} Code Starter, including the tools that you must have installed, and subsequently, the steps to run the starter in Xcode and Android Studio.
+The following end-to-end tutorial walks through the steps to create a project from the {{site.data.keyword.conversationshort}} Code Starter, including the tools that you must have installed, and subsequently, the steps to run the starter in Xcode and Android Studio.
 
 
 ### Installing developer tools
@@ -23,7 +19,7 @@ The following end-to-end tutorial walks through the steps to create a project fr
 Ensure that you have installed the [prerequisite developer tools ![External link icon](../icons/launch-glyph.svg "External link icon")](get_code.html#prereq-dev-tools){: new_window}.
 
 
-### Creating a project from the {{site.data.keyword.openwhisk_short}} Code Starter
+### Creating a project from the {{site.data.keyword.conversationshort}} Code Starter
 {: #create_project}
 
 1. Create a Mobile dashboard project in {{site.data.keyword.Bluemix}}.
@@ -34,15 +30,13 @@ Ensure that you have installed the [prerequisite developer tools ![External link
 
    2. Click **Code Starters**.
 
-   3. Select **{{site.data.keyword.openwhisk_short}}** and click **Create Project**.
+   3. Select **Watson {{site.data.keyword.conversationshort}}** and click **Create Project**.
 
-   4. Enter your project name. For this tutorial, use `{{site.data.keyword.openwhisk_short}}Project`.
+   4. Enter your project name. For this tutorial, use `ConversationProject`.
    
    5. Click **Create**.
 
 2. Optional: Add the {{site.data.keyword.mobilepushshort}} capability.
-
-   **Note**: If you want to run `pushAction`, you must add and configure {{site.data.keyword.mobilepushshort}}.
 
    1. Click **Add** for **{{site.data.keyword.mobilepushshort}}** in the **Project Overview** page.
 
@@ -99,22 +93,30 @@ Ensure that you have installed the [prerequisite developer tools ![External link
    1. Click **Get Code** on the **Project Overview** page to select your platform and language.
    
       You can alternatively click on the **Code** page.
-
-   2. For Swift, click **iOS Swift**.
+      
+   2. For iOS, click **iOS Swift**.
    
    3. For Android, click **Android**.
    
    4. When the project code is finished generating, click **Download Code** to download your project archive.
 
 
-### Running your Swift project in Xcode
-{: #run_swift}
+### Running your project in Xcode
+{: #run_xcode}
 
-1. Extract the `{{site.data.keyword.openwhisk_short}}Project-Swift.zip` file.
+1. Extract the `ConversationProject-Swift.zip` file.
 
 2. Open the `README.md` file in a Markdown viewer to review the steps to configure your project.
 
-   1. Open your Terminal and navigate to your project folder.
+   1. Create your [{{site.data.keyword.conversationshort}} ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/catalog/services/conversation/){: new_window} service instance.
+
+      1. In the dashboard of your {{site.data.keyword.conversationshort}} service instance, click **Launch tool**.
+
+      2. Create your own {{site.data.keyword.conversationshort}} Workspace or import the `bluemix_mobile_qa_workspace.json` file that is provided in the `ConversationProject-Swift` folder.
+
+      3. Click **Menu > Back to workspaces** and click **Actions > View details** to copy the **Workspace ID**.
+   
+   2. Open your Terminal and navigate to your project folder.
    
       1. Run `pod setup` if you need to set up your CocoaPods repository.
       
@@ -122,23 +124,49 @@ Ensure that you have installed the [prerequisite developer tools ![External link
       
       3. Run `pod install` to install the pods that are required for your project.
       
-   3. Open your `{{site.data.keyword.openwhisk_short}}Project.xcworkspace` Xcode workspace.
-
-   4. If you want to run `pushAction`, you must configure {{site.data.keyword.mobilepush}}.
+      4. Run `carthage update --platform iOS` to build the dependencies and frameworks to use the {{site.data.keyword.ibmwatson}} Developer Cloud iOS SDK.
+      
+   3. Open your `ConversationProject.xcworkspace` Xcode workspace.
+   
+   4. Add your {{site.data.keyword.conversationshort}} service credentials.
+   
+      1. Paste your `Workspace ID` that you previously copied into the `ConversationWorkspaceID` key in the `WatsonCredentials.plist` file.
+      
+      2. Copy your `username` from your {{site.data.keyword.conversationshort}} service credentials and paste it into the `ConversationUsername` key in the `WatsonCredentials.plist` file.
+      
+      3. Copy and paste your `password` from your {{site.data.keyword.conversationshort}} service credentials and paste it into the `ConversationPassword` key in the `WatsonCredentials.plist` file.
       
 3. Run your app.
 
 
-### Running your Android project in Android Studio
-{: #run_android}
+### Running your project in Android Studio
+{: #run_studio}
 
-1. Extract the `{{site.data.keyword.openwhisk_short}}Project-Android.zip` file.
+1. Extract the `ConversationProject-Android.zip` file.
 
 2. Open the `README.md` file in a Markdown viewer to configure your project.
 
-   1. Open your `{{site.data.keyword.openwhisk_short}}Project-Android` project in Android Studio.
+   1. Create your [{{site.data.keyword.conversationshort}} ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/catalog/services/conversation/){: new_window} service instance.
+   
+      Skip this step if you already have a {{site.data.keyword.conversationshort}} service instance.
+      
+      1. In the dashboard of your {{site.data.keyword.conversationshort}} service instance, click **Launch tool**.
 
-   2. If you want to run `pushAction`, you must configure {{site.data.keyword.mobilepush}}.
+      2. Create your own {{site.data.keyword.conversationshort}} Workspace or import the `bluemix_mobile_qa_workspace.json` file that is provided in the `ConversationProject-Swift` folder.
+
+      Skip this step if you already created or imported a workspace.
+
+      3. Click **Menu > Back to workspaces** and click **Actions > View details** to copy the **Workspace ID**.
+   
+   2. Open your `ConversationProject-Android` project in Android Studio.
+   
+   4. Add your {{site.data.keyword.conversationshort}} service credentials.
+   
+      1. Paste your `Workspace ID` that you previously copied into the `watson_conversation_workspace_id` key in the `res/values/watson_credentials.xml` file.
+      
+      2. Copy your `username` from your {{site.data.keyword.conversationshort}} service credentials and paste it into the `watsone_conversation_username` key in the `res/values/watson_credentials.xml` file.
+      
+      3. Copy and paste your `password` from your {{site.data.keyword.conversationshort}} service credentials and paste it into the `watson_conversation_password` key in the `res/values/watson_credentials.xml` file.
       
 3. Run your app.
 
@@ -160,7 +188,8 @@ View other tutorials.
 
 * [Tutorial - Basic](tutorial.html)
 * [Tutorial - Cloudant Sync](tutorial_cloudant_sync.html)
-* [Tutorial - {{site.data.keyword.visualrecognitionshort}}](tutorial_visual_recognition.html)
-* [Tutorial - Watson {{site.data.keyword.conversationshort}}](tutorial_conversation.html)
+* [Tutorial - {{site.data.keyword.openwhisk_short}}](tutorial_openwhisk.html)
+* [Tutorial - {{site.data.keyword.visualrecognitionshort}}](tutorial_visualrecognition.html)
 * [Tutorial - Watson Language](tutorial_watson_language.html)
 * [Tutorial - Weather](tutorial_weather.html)
+
