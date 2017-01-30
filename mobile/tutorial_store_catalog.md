@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-12-15"
+lastupdated: "2017-01-30"
 
 ---
 {:new_window: target="_blank"}
@@ -140,9 +140,10 @@ To get up and running quickly with the Store Catalog UI Starter, follow these st
 {: #tutorials_Code}
 
 * [Tutorial - Basic](tutorial.html)
-* [Tutorial - Cloudant Sync](tutorial_cloudant_synd.html)
+* [Tutorial - Cloudant Sync](tutorial_cloudant_sync.html)
 * [Tutorial - {{site.data.keyword.openwhisk_short}}](tutorial_openwhisk.html)
 * [Tutorial - {{site.data.keyword.visualrecognitionshort}}](tutorial_visual_recognition.html)
+* [Tutorial - Watson {{site.data.keyword.coversationshort}}](tutorial_conversation.html)
 * [Tutorial - Watson Language](tutorial_watson_language.html)
 * [Tutorial - Weather](tutorial_weather.html)
 

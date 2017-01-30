@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-01-30"
 
 ---
 {:new_window: target="_blank"}
@@ -75,13 +75,27 @@ To get up and running quickly with the Weather Code Starter, follow these steps:
 
    5. See [Getting started with Mobile Client Access ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/mobileaccess/index.html){: new_window} for more information about configuring authentication.
 
-5. Download your project.
+5. Optional: Add the Data capability.
+
+   1. Click **View** for **Data** on the **Project Overview** page.
+
+      You can alternatively select **Create** on the **Data** page.
+      
+   2. Choose **{{site.data.keyword.cloudant_short_notm}}** or **{{site.data.keyword.objectstorageshort}}**.
+
+   3. Enter your service name and click **Create**.
+
+   4. See [Getting started with {{site.data.keyword.cloudant_short_notm}} ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/Cloudant/index.html){: new_window} for more information about configuring {{site.data.keyword.cloudant_short_notm}}.
+
+   5. [Getting started with {{site.data.keyword.objectstorageshort}} ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/ObjectStorage/index.html){: new_window} for more information about configuring {{site.data.keyword.objectstorageshort}}.
+
+6. Download your project.
 
    1. Click **Code** and select your preferred language.
 
    2. Click **Download Code**.
 
-5. Extract the archive and follow the instructions in the `README.md` file.
+7. Extract the archive and follow the instructions in the `README.md` file.
 
 
 ## What to do next
@@ -100,7 +114,8 @@ To get up and running quickly with the Weather Code Starter, follow these steps:
 {: #tutorials_Code}
 
 * [Tutorial - Basic](tutorial.html)
-* [Tutorial - Cloudant Sync](tutorial_cloudant_synd.html)
+* [Tutorial - Cloudant Sync](tutorial_cloudant_sync.html)
 * [Tutorial - {{site.data.keyword.openwhisk_short}}](tutorial_openwhisk.html)
 * [Tutorial - {{site.data.keyword.visualrecognitionshort}}](tutorial_visual_recognition.html)
+* [Tutorial - Watson {{site.data.keyword.conversationshort}}](tutorial_conversation.html)
 * [Tutorial - Watson Language](tutorial_watson_language.html)

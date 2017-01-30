@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-27"
+lastupdated: "2017-01-30"
 
 ---
 {:new_window: target="_blank"}
@@ -15,8 +15,10 @@ lastupdated: "2017-01-27"
 
 The January 2017 update of the {{site.data.keyword.Bluemix}} Mobile dashboard introduced the following changes:
 
-   * You can update your project starter type.
-   * You can add your existing [Compute](sdk_compute.html) instances and generate client SDKs to add to your project.
+   * You can now update your project starter type instead of deleting your project and creating a new one.
+   * You can now create your project with a [Watson Conversation](tutorial_conversation.html) Code Starter.
+   * Where it is supported, you can now generate an SDK for your project.
+   * You can now add your existing [Compute](sdk_compute.html) instances and generate client SDKs to add to your project.
 
 
 ### New as of: December 2016
@@ -24,11 +26,11 @@ The January 2017 update of the {{site.data.keyword.Bluemix}} Mobile dashboard in
 
 The December 2016 update of the {{site.data.keyword.Bluemix_notm}} Mobile dashboard introduced the following changes:
 
-   * You can remove a connected service from a project so it can be deleted or reused with another project. 
-   * You can add an existing service to a project.
-   * You can create or connect an existing CloudantNoSQL service as a data source when you use a Code Starter.
-   * Where it is supported, you can create or connect an existing Object Storage service as a data source for your project.
-   * You can customize the navigation design of the app that you are creating with a UI Starter. 
+   * You can now remove a connected service from a project so it can be deleted or reused with another project. 
+   * You can now add an existing service to a project.
+   * You can now create or connect an existing CloudantNoSQL service as a data source when you use a Code Starter.
+   * Where it is supported, you can now create or connect an existing Object Storage service as a data source for your project.
+   * You can now customize the navigation design of the app that you are creating with a UI Starter. 
    
 
 ### New as of: November 2016
