@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-01-25"
+lastupdated: "2017-01-30"
 
 ---
 {:new_window: target="_blank"}
@@ -52,7 +52,11 @@ The client SDK generator uses the Open API definition file to define a client-op
 ## Defining an API
 {: #definition}
 
+<!--
 The BFF needs to expose an API definition file that conforms to the Open API specification that is running on a live server endpoint. To enable the {{site.data.keyword.Bluemix_notm}} Developer experience and the {{site.data.keyword.Bluemix_notm}} SDK CLI (Command Line Interface) to discover this endpoint, you must add an environment variable to your Cloud foundry application called `OPENAPI_SPEC`. This environment variable must reference the specification using a relative path.
+-->
+
+The BFF needs to expose an API definition file that conforms to the Open API specification that is running on a live server endpoint. To enable the {{site.data.keyword.Bluemix_notm}} Developer experience to discover this endpoint, you must add an environment variable to your Cloud foundry application called `OPENAPI_SPEC`. This environment variable must reference the specification using a relative path.
 
 To add the `OPENAPI_SPEC` environment variable in {{site.data.keyword.Bluemix_notm}}, follow these steps:
 
@@ -117,6 +121,7 @@ The {{site.data.keyword.Bluemix_notm}} Mobile dashboard introduced the ability t
 After you have downloaded your project, you can open it with Xcode or Android Studio and compile your project with the client SDK.
 
 
+<!--
 ## Using the CLI
 {: #cli}
 
@@ -168,6 +173,7 @@ bluemix sdk generate <AppName> <SDKName> --<Platform>
 {: codeblock}
 
 Using the `--unzip` option will automatically extract the SDK into your current working directory. You can optionally specify the location to extract the SDK by using the `--output` option. You can manage your source code with GitHub and create a new branch specifically for updating the SDK. Using this approach makes it easier to view the changes and merge in the updated SDK to your development branch.
+-->
 
 
 ## Working with SDK generated models and APIs
