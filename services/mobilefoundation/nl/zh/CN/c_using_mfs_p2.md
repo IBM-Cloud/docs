@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated:  "2016-09-12"
+  years: 2016, 2017
+lastupdated:  "2017-01-17"
 
 ---
 
@@ -33,23 +33,39 @@ lastupdated:  "2016-09-12"
 ### 设置与 {{site.data.keyword.dashdbshort_notm}} 服务实例的连接
 {: #connect_dashdb_p2}
 
-创建 {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application 服务实例后，将看到“*概述*”页面，在其中需要指定 {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional 服务实例的连接信息。
+创建 {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application 服务实例后，将看到*概述*页面，在其中需要指定 {{site.data.keyword.mobilefoundation_short}} 服务实例应该连接到的 {{site.data.keyword.dashdbshort_notm}} for Transactions服务实例的连接信息。
+
+**注：**如果已具有 {{site.data.keyword.dashdbshort_notm}} for Analytics: Enterprise for Transactions 服务实例，那么可配置为使用相同信息连接到 {{site.data.keyword.mobilefoundation_short}} 服务实例。
+
+如果不具有现有 {{site.data.keyword.dashdbshort_notm}} for Transactions 服务实例，还可创建一个新的服务实例。
+
+遵循以下步骤，创建新的 dashDB for Transactions 服务实例：
+
+1. 在*概述*页面上选择**创建新服务**部分。
+
++ 如果需要高度可用的 {{site.data.keyword.dashdbshort_notm}} for Transactions 服务实例，请选择**高可用性配置**选项上的`是`。
+
++ 复查套餐详细信息并单击**创建**。
+
+创建了新的 {{site.data.keyword.dashdbshort_notm}} for Transactions: EnterpriseForTransactions2.8.500 服务实例，此实例提供 8GB RAM、2 个 vCPU 和 500 GB 存储的专用 {{site.data.keyword.dashdbshort_notm}} 实例。
+
+遵循以下步骤，连接到现有 {{site.data.keyword.dashdbshort_notm}} 服务实例或刚刚创建的 {{site.data.keyword.dashdbshort_notm}} for Transactions 服务实例：
 
 1. 选择 {{site.data.keyword.dashdbshort_notm}} 服务实例所在的 {{site.data.keyword.Bluemix_notm}} `组织`。
 
-+ 从所选`组织`中可用的空间列表中选择具有 {{site.data.keyword.dashdbshort_notm}} 服务实例的 {{site.data.keyword.Bluemix_notm}} `空间`。
-
-**注：**如果未看到 {{site.data.keyword.dashdbshort_notm}} 服务实例所在的`组织`和`空间`列表，请检查您是否是该`组织`和`空间`的成员。
++ 从所选`组织`中可用的空间列表中选择具有 {{site.data.keyword.dashdbshort_notm}} 服务实例的 {{site.data.keyword.Bluemix_notm}} `空间`。   
+**注：**如果未看到 {{site.data.keyword.dashdbshort_notm}} 服务实例所在的`组织`和`空间`列表，请检查您是否是该`组织`和`空间`的成员。您需要对组织和空间具有 *Developer* 角色访问权，因为 {{site.data.keyword.mobilefoundation_short}} 服务从 {{site.data.keyword.dashdbshort_notm}} 服务访问凭证。
 
 + 选择 {{site.data.keyword.dashdbshort_notm}} `服务名称`和`凭证`以连接到现有 {{site.data.keyword.dashdbshort_notm}} 服务实例。
 
-+  测试与指定 {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional 服务实例的连接。
++  测试与指定 {{site.data.keyword.dashdbshort_notm}} 服务实例的连接。
 
-+  单击**继续**。此操作可在配置的 {{site.data.keyword.dashdbshort_notm}} 数据库服务实例中创建需要的表。
++  单击**添加**。此操作可在配置的 {{site.data.keyword.dashdbshort_notm}} 数据库服务实例中创建需要的表。
+
+几秒钟后，可以访问“`概述`”页面，其中为您提供教程和视频，可帮助您开始使用 {{site.data.keyword.mobilefoundation_short}} 服务。
 
 **注**：您无法更改配置为由 {{site.data.keyword.mobilefoundation_short}} 服务实例使用的 {{site.data.keyword.dashdbshort_notm}} 服务实例。但是，您可以在多个 {{site.data.keyword.mobilefoundation_short}} 服务实例上使用同一 {{site.data.keyword.dashdbshort_notm}} 服务实例，因为每个 {{site.data.keyword.mobilefoundation_short}} 服务实例都将在所选 {{site.data.keyword.dashdbshort_notm}} 服务实例中创建自己的模式。
 
-* 几秒钟后，可以访问“`概述`”页面，其中为您提供教程和视频，可帮助您开始使用 {{site.data.keyword.mobilefoundation_short}} 服务。
 
 ## 启动 {{site.data.keyword.mobilefirst}} 服务器
 {: #start_mobilefoundation_p2}
@@ -85,7 +101,7 @@ lastupdated:  "2016-09-12"
 
  用户还可以将卷连接到容器来持久存储数据。卷一经选择，无法更改。用户可用的缺省文件共享空间为 20 GB。如果用户需要其他存储空间来持久存储分析数据，那么必须再另外购买文件共享，然后使用此文件共享来创建卷。之后部署分析服务器时，可以选择此新卷。
 
- 有关将卷添加到 {{site.data.keyword.containerlong}} 的更多信息，请参阅[使用 {{site.data.keyword.Bluemix_notm}}“仪表板”在卷中存储持久数据](https://console.ng.bluemix.net/docs/containers/container_volumes_ui.html){: new_window}。
+ 有关将卷添加到 {{site.data.keyword.containerlong}} 的更多信息，请参阅 [Storing persistent data in a volume by using the {{site.data.keyword.Bluemix_notm}} Dashboard ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.ng.bluemix.net/docs/containers/container_volumes_ui.html "外部链接图标"){: new_window}。
 
 * 单击**添加分析**，将移动分析服务器添加到 {{site.data.keyword.mobilefoundation_short}} 服务实例。
 
@@ -95,9 +111,19 @@ lastupdated:  "2016-09-12"
 
 * 在 {{site.data.keyword.mfserver_short_notm}} 与移动分析服务器之间启用单点登录。为移动分析服务器配置与 {{site.data.keyword.mfserver_short_notm}} 服务器相同的 LTPA 密钥和用户凭证。您可以像登录 {{site.data.keyword.mfp_oc_short_notm}} 一样，使用相同的 `username` 和 `password` 登录到“移动分析”控制台。
 
-有关 MobileFirst Analytics 的更多信息，请参阅 [MobileFirst Foundation Operational Analytics](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/)。
+有关 MobileFirst Analytics 的更多信息，请参阅 [MobileFirst Foundation Operational Analytics ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/ "外部链接图标"){: new_window}。
 
 **注：**删除 {{site.data.keyword.mobilefoundation_short}} 服务实例或尝试重新创建 {{site.data.keyword.mfserver_short_notm}} 时，会除去移动分析服务器。
+
+##  删除移动分析服务器
+{: #deleting_analytics_server_prof}
+
+您现在可以从 {{site.data.keyword.mobilefoundation_short}} 服务仪表板删除添加到 {{site.data.keyword.mobilefoundation_short}} 服务实例的移动分析服务器。
+
+* 单击**删除分析**，可删除添加到 {{site.data.keyword.mobilefoundation_short}} 服务实例的移动分析服务器。
+
+ 这会删除分析容器组。删除分析容器的过程需要花费大约 10 分钟。可以刷新屏幕以查看更新的状态。删除分析容器后，会重新启用**添加分析**按钮，可以选择使用此按钮再次添加移动分析服务器。
+
 
 ## 重新创建 {{site.data.keyword.mobilefirst}} 服务器
 {: #recreate_mobilefoundation_p2}
@@ -120,4 +146,4 @@ lastupdated:  "2016-09-12"
 
       - 配置此处列出的节点数可创建 {{site.data.keyword.mobilefirst}} 服务器机群。
 
-请参阅 [{{site.data.keyword.mobilefoundation_long}} 文档](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html){: new_window}，以获取更多详细信息。
+请参阅 [{{site.data.keyword.mobilefoundation_long}} documentation ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html "外部链接图标"){: new_window}，以获取更多详细信息。

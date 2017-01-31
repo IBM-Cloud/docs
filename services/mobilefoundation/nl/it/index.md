@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated:  "2016-11-16"
+  years: 2016, 2017
+lastupdated:  "2017-01-17"
 
 ---
 
@@ -33,7 +33,7 @@ Dopo aver creato un'istanza di {{site.data.keyword.mobilefoundation_short}}: Dev
 
 Dopo che hai creato un'istanza del servizio {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application, puoi iniziare a creare il tuo canale mobile completando la seguente procedura.
 
-1.  Connettiti a un servizio {{site.data.keyword.dashdbshort}}: Enterprise Transactional esistente su {{site.data.keyword.Bluemix_notm}}.
+1.  Collegamento a un servizio {{site.data.keyword.dashdbshort}} for Transactions esistente su {{site.data.keyword.Bluemix_notm}}.
 
     1.  Seleziona l'`Organizzazione` {{site.data.keyword.Bluemix_notm}} dove è presente l'istanza del servizio {{site.data.keyword.dashdbshort_notm}}.
 
@@ -41,9 +41,9 @@ Dopo che hai creato un'istanza del servizio {{site.data.keyword.mobilefoundation
 
     + Seleziona il `Nome servizio` {{site.data.keyword.dashdbshort_notm}} e le `Credenziali` per connetterti all'istanza del servizio  {{site.data.keyword.dashdbshort_notm}} esistente.
 
-    + Verifica la connessione all'istanza del servizio  {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional selezionata facendo clic su **Verifica connessione**.
+    + Verifica la connessione all'istanza del servizio {{site.data.keyword.dashdbshort_notm}} for Transactions selezionata facendo clic su **Verifica connessione**.
 
-    + Fai clic su **Aggiungi** e poi su **Continua** nella finestra a comparsa che richiede la conferma sul servizio {{site.data.keyword.dashdbshort_notm}} selezionato. Questa azione crea le tabelle richieste nell'istanza del servizio database {{site.data.keyword.dashdbshort_notm}} configurato.
+    + Fai clic su **Aggiungi** e su **Continua** nella finestra a comparsa per confermare il servizio {{site.data.keyword.dashdbshort_notm}} for Transactions selezionato. Questa azione crea le tabelle richieste nell'istanza del servizio database {{site.data.keyword.dashdbshort_notm}} configurato.
 
     **Nota:** dopo aver aggiunto una connessione {{site.data.keyword.dashdbshort_notm}} all'istanza {{site.data.keyword.mobilefoundation_short}} non ti sarà possibile modificarla.
 
@@ -55,7 +55,67 @@ Dopo che hai creato un'istanza del servizio {{site.data.keyword.mobilefoundation
 
     * Per creare un'istanza del server {{site.data.keyword.mobilefirst_notm}} con la configurazione avanzata per topologia, sicurezza e altra configurazione del server, fai clic su **Avvia server con la configurazione avanzata**. Vedi [Impostazione della configurazione avanzata](c_using_mfs_p2.html#using_mfs_advanced_p2) per ulteriori informazioni.
 
-Vai a [Using the Mobile Foundation service to set up MobileFirst Server<!-- on IBM Containers-->](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/bluemix/using-mobile-foundation/) per ulteriori informazioni introduttive a {{site.data.keyword.mobilefoundation_short}}.
+## Introduzione al piano {{site.data.keyword.mobilefoundation_short}}: Developer Pro
+
+Dopo che hai creato un'istanza del servizio {{site.data.keyword.mobilefoundation_short}}: Developer Pro,
+puoi iniziare a creare il tuo canale mobile completando la seguente procedura.
+
+  1.  Collegamento a un servizio {{site.data.keyword.dashdbshort}} for Transactions esistente su {{site.data.keyword.Bluemix_notm}}.
+
+      1.  Seleziona l'`Organizzazione` {{site.data.keyword.Bluemix_notm}} dove è presente l'istanza del servizio {{site.data.keyword.dashdbshort_notm}}.
+
+      + Seleziona lo `Spazio`  {{site.data.keyword.Bluemix_notm}} in cui è presente l'istanza del servizio {{site.data.keyword.dashdbshort_notm}}, dall'elenco di spazi disponibili nell'`Organizzazione` selezionata.
+
+      + Seleziona il `Nome servizio` {{site.data.keyword.dashdbshort_notm}} e le `Credenziali` per connetterti all'istanza del servizio  {{site.data.keyword.dashdbshort_notm}} esistente.
+
+      + Verifica la connessione all'istanza del servizio {{site.data.keyword.dashdbshort_notm}} for Transactions selezionata facendo clic su **Verifica connessione**.
+
+      + Fai clic su **Aggiungi** e su **Continua** nella finestra a comparsa per confermare il servizio {{site.data.keyword.dashdbshort_notm}} for Transactions selezionato. Questa azione crea le tabelle richieste nell'istanza del servizio database {{site.data.keyword.dashdbshort_notm}} configurato.
+
+      **Nota:** dopo aver aggiunto una connessione {{site.data.keyword.dashdbshort_notm}} all'istanza {{site.data.keyword.mobilefoundation_short}} non ti sarà possibile modificarla.
+
+  2.  Crea e avvia il server.
+
+      * Per creare un'istanza del {{site.data.keyword.mobilefirst_notm}} Server con la configurazione predefinita, fai clic su **Avvia server di base**.
+
+      * Questa selezione fornisce un {{site.data.keyword.mfserver_long_notm}} con le seguenti impostazioni:
+
+          - Singolo nodo con 1 GB di memoria. Questa dimensione è sufficiente per lo sviluppo, per delle attività moderate di test e i carichi di lavoro di produzione su piccola scala.
+
+          -	Il `nome utente` e la `password` ti vengono generati automaticamente. Disporrai dell'accesso ad essi quando il server è avviato e in esecuzione.
+
+      * Per creare un'istanza del server {{site.data.keyword.mobilefirst_notm}} con la configurazione avanzata per topologia, sicurezza e altra configurazione del server, fai clic su **Avvia server con la configurazione avanzata**. Vedi [Impostazione della configurazione avanzata](c_using_mfs_p3.html#using_mfs_advanced_p3) per ulteriori informazioni.
+
+## Introduzione al piano {{site.data.keyword.mobilefoundation_short}}: Professional Per Capacity
+
+Dopo che hai creato un'istanza del servizio {{site.data.keyword.mobilefoundation_short}}: Professional Per Capacity, puoi iniziare a creare il tuo canale mobile completando la seguente procedura.
+
+  1.  Collegamento a un servizio {{site.data.keyword.dashdbshort}} for Transactions esistente su {{site.data.keyword.Bluemix_notm}}.
+
+      1.  Seleziona l'`Organizzazione` {{site.data.keyword.Bluemix_notm}} dove è presente l'istanza del servizio {{site.data.keyword.dashdbshort_notm}}.
+
+      + Seleziona lo `Spazio`  {{site.data.keyword.Bluemix_notm}} in cui è presente l'istanza del servizio {{site.data.keyword.dashdbshort_notm}}, dall'elenco di spazi disponibili nell'`Organizzazione` selezionata.
+
+      + Seleziona il `Nome servizio` {{site.data.keyword.dashdbshort_notm}} e le `Credenziali` per connetterti all'istanza del servizio  {{site.data.keyword.dashdbshort_notm}} esistente.
+
+      + Verifica la connessione all'istanza del servizio {{site.data.keyword.dashdbshort_notm}} for Transactions selezionata facendo clic su **Verifica connessione**.
+
+      + Fai clic su **Aggiungi** e su **Continua** nella finestra a comparsa per confermare il servizio {{site.data.keyword.dashdbshort_notm}} for Transactions selezionato. Questa azione crea le tabelle richieste nell'istanza del servizio database {{site.data.keyword.dashdbshort_notm}} configurato.
+
+      **Nota:** dopo aver aggiunto una connessione {{site.data.keyword.dashdbshort_notm}} all'istanza {{site.data.keyword.mobilefoundation_short}} non ti sarà possibile modificarla.
+
+  2.  Crea e avvia il server.
+
+      * Per creare un'istanza del {{site.data.keyword.mobilefirst_notm}} Server con la configurazione predefinita, fai clic su **Avvia server di base**.
+
+      * Questa selezione fornisce un {{site.data.keyword.mfserver_long_notm}} con le seguenti impostazioni:
+          -  2 nodi con 1 GB di memoria ognuno. Questa dimensione è buona per lo sviluppo, per delle attività moderate di test e i carichi di lavoro di produzione su piccola scala.
+
+          -	Il `nome utente` e la `password` ti vengono generati automaticamente. Disporrai dell'accesso ad essi quando il server è avviato e in esecuzione.
+
+      * Per creare un'istanza del server {{site.data.keyword.mobilefirst_notm}} con la configurazione avanzata per topologia, sicurezza e altra configurazione del server, fai clic su **Avvia server con la configurazione avanzata**. Vedi [Impostazione della configurazione avanzata](c_using_mfs_p4.html#using_mfs_advanced_p4) per ulteriori informazioni.
+
+Vai a [Using the Mobile Foundation service to set up MobileFirst Server<!-- on IBM Containers--> ![icona link esterno](../../icons/launch-glyph.svg "icona link esterno")](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/bluemix/using-mobile-foundation/ "icona link esterno"){: new_window} per ulteriori informazioni introduttive a {{site.data.keyword.mobilefoundation_short}}.
 
 ##  Limitazioni note
 
@@ -68,5 +128,5 @@ Vai a [Using the Mobile Foundation service to set up MobileFirst Server<!-- on I
 ## Link correlati
 {: #general}
 
-*	[Documentazione del prodotto IBM MobileFirst Platform Foundation V8.0.0](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html){: new_window}
-*	[IBM MobileFirst Platform Developer Center](https://mobilefirstplatform.ibmcloud.com){: new_window}
+*	[IBM MobileFirst Platform Foundation V8.0.0 product documentation ![icona link esterno](../../icons/launch-glyph.svg "icona link esterno")](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html "icona link esterno"){: new_window}
+*	[IBM MobileFirst Platform Developer Center ![icona link esterno](../../icons/launch-glyph.svg "icona link esterno")](https://mobilefirstplatform.ibmcloud.com "icona link esterno"){: new_window}

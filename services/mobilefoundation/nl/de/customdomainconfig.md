@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated:  "2016-08-08"
+  years: 2016, 2017
+lastupdated:  "2017-01-17"
 
 ---
 
@@ -19,13 +19,12 @@ lastupdated:  "2016-08-08"
 
 Bei der Erstellung der <!--container group is created with a--> URL oder Route basieren die Standarddomänennamen auf der {{site.data.keyword.Bluemix_notm}}-`Region`.
 
-*Tabelle 1. Anwendungsdomänennamen auf der Basis der `Region` in  {{site.data.keyword.Bluemix_notm}}*
-
   |Domäne |  Region  |    
   |:----- | :----- |    
   |`mybluemix.net` | US - Süden |    
   |`eu-gb.mybluemix.net` | Vereinigtes Königreich  |
   |`au-syd.mybluemix.net` | Sydney  |      
+  {: caption="Table 1. Application domain names based on Region in {{site.data.keyword.Bluemix_notm}}" caption-side="top"}
 
 Zur Verwendung einer eigenen Domäne müssen Sie eine benutzerdefinierte Domäne konfigurieren, indem Sie die folgenden Schritte ausführen:
 
@@ -37,4 +36,4 @@ Zur Verwendung einer eigenen Domäne müssen Sie eine benutzerdefinierte Domäne
 
 + Rufen Sie den DNS-Provider für Ihre Domäne auf und fügen Sie einen CNAME-Eintrag hinzu, der den Datenverkehr von Ihrer Domäne zur {{site.data.keyword.Bluemix_notm}}-Standardroute weiterleitet, unter der der <!--container group--> Server ausgeführt wird.
 
-+ Wenn Sie für Ihre benutzerdefinierte Domäne `https` konfigurieren möchten, laden Sie das SSL-Zertifikat für Ihre Domäne in {{site.data.keyword.Bluemix_notm}} hoch. Rufen Sie hierzu **Organisationen verwalten > Domänen** auf, wählen Sie die benutzerdefinierte Domäne aus, für die das SSL-Zertifikat konfiguriert werden soll, und klicken Sie auf **Zertifikat hochladen**, um das SSL-Zertifikat für Ihre Domäne hochzuladen. Weitere Informationen finden Sie in [SSL-Zertifikate und benutzerdefinierte Bluemix-Domänen](https://developer.ibm.com/bluemix/2014/09/28/ssl-certificates-bluemix-custom-domains/).
++ Wenn Sie für Ihre benutzerdefinierte Domäne `https` konfigurieren möchten, laden Sie das SSL-Zertifikat für Ihre Domäne in {{site.data.keyword.Bluemix_notm}} hoch. Rufen Sie hierzu **Organisationen verwalten > Domänen** auf, wählen Sie die benutzerdefinierte Domäne aus, für die das SSL-Zertifikat konfiguriert werden soll, und klicken Sie auf **Zertifikat hochladen**, um das SSL-Zertifikat für Ihre Domäne hochzuladen. Weitere Informationen finden Sie in [SSL-Zertifikate und angepasste Bluemix-Domänen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/bluemix/2014/09/28/ssl-certificates-bluemix-custom-domains/ "Symbol für externen Link"){: new_window}.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated:  "2016-08-03"
+  years: 2016, 2017
+lastupdated:  "2017-01-17"
 
 ---
 
@@ -46,10 +46,10 @@ lastupdated:  "2016-08-03"
 
 使用论坛进行提问时，请使用适当的标记来标注您的问题，以方便 IBM {{site.data.keyword.Bluemix_notm}} 开发团队识别。
 
-有关使用 {{site.data.keyword.mobilefoundation_short}} 开发或部署应用程序的技术问题，请将您的问题发布到 [Stack Overflow](http://stackoverflow.com/search?q=ibm-mobilefirst+bluemix){:new_window} 上，并使用 `bluemix` 和 `ibm-mobilefirst` 标记您的问题。
+如果具有使用 {{site.data.keyword.mobilefoundation_short}} 开发或部署应用程序的技术相关问题，请将您的问题发布到 [Stack Overflow ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://stackoverflow.com/search?q=ibm-mobilefirst+bluemix "外部链接图标"){:new_window} 上，并使用 `bluemix` 和 `ibm-mobilefirst` 标记您的问题。
 
-有关服务的问题和入门指示信息，请使用 [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/mobilefirst/?smartspace=bluemix){:new_window} 论坛。另请加上 `bluemix` 和 `mobilefirst` 标记。
+有关服务的问题和入门指示信息，请使用 [IBM developerWorks dW Answers ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/answers/topics/mobilefirst/?smartspace=bluemix "外部链接图标"){:new_window} 论坛。另请加上 `bluemix` 和 `mobilefirst` 标记。
 
-有关使用论坛的更多详细信息，请参阅[获取帮助](https://www.{DomainName}/docs/support/index.html#getting-help)。
+请参阅 [Getting help ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.{DomainName}/docs/support/index.html#getting-help "外部链接图标"){: new_window}，以获取有关使用论坛的更多详细信息。
 
-有关提交 IBM 支持凭单或支持级别和凭单严重性的信息，请参阅[联系支持人员](https://www.{DomainName}/docs/support/index.html#contacting-support)。
+有关提交 IBM 支持凭单以及支持级别和凭单严重性的信息，请参阅 [Contacting support ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.{DomainName}/docs/support/index.html#contacting-support "外部链接图标"){: new_window}。

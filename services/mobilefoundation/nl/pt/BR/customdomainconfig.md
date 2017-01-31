@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated:  "2016-08-08"
+  years: 2016, 2017
+lastupdated:  "2017-01-17"
 
 ---
 
@@ -20,14 +20,12 @@ O {{site.data.keyword.mobilefoundation_short}} provisiona um {{site.data.keyword
 A URL ou rota do <!--container group is created with a--> é criada
 com os nomes de domínio padrão, com base na {{site.data.keyword.Bluemix_notm}} `Região`.
 
-*Tabela 1. Nomes de domínio de aplicativo baseados na
-'Region' no {{site.data.keyword.Bluemix_notm}}*
-
   |Domínio |  Região  |    
   |:----- | :----- |    
   |`mybluemix.net` | Sul dos EUA |    
   |`eu-gb.mybluemix.net` | Reino Unido  |
   |`au-syd.mybluemix.net` | Sydney  |      
+  {: caption="Table 1. Application domain names based on Region in {{site.data.keyword.Bluemix_notm}}" caption-side="top"}
 
 Para ser capaz de usar seu próprio domínio, você precisará configurar o domínio customizado executando as etapas a seguir:
 
@@ -41,4 +39,5 @@ Para ser capaz de usar seu próprio domínio, você precisará configurar o dom�
 tráfego do seu domínio para a rota padrão do {{site.data.keyword.Bluemix_notm}}, na
 qual o servidor <!--container group--> está em execução.
 
-+ Se quiser configurar `https` para seu domínio customizado, faça upload do certificado SSL para seu domínio no {{site.data.keyword.Bluemix_notm}}. Para fazer isso, acesse **Gerenciar organizações > DOMÍNIOS**, selecione o domínio customizado para o qual você deseja configurar o certificado SSL, clique em **Fazer upload de certificado** para fazer upload do certificado SSL para seu domínio. Consulte [Certificados SSL e Domínios customizados do Bluemix](https://developer.ibm.com/bluemix/2014/09/28/ssl-certificates-bluemix-custom-domains/), para obter mais informações.
++ Se quiser configurar `https` para seu domínio customizado, faça upload do certificado SSL para seu domínio no {{site.data.keyword.Bluemix_notm}}. Para fazer isso, acesse **Gerenciar organizações > DOMÍNIOS**, selecione o domínio customizado para o qual você deseja configurar o certificado SSL, clique em **Fazer upload de certificado** para fazer upload do certificado SSL para seu domínio. Consulte os [Certificados SSL e os Domínios customizados do Bluemix ![Ícone de link
+externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/bluemix/2014/09/28/ssl-certificates-bluemix-custom-domains/ "Ícone de link externo"){: new_window} para obter mais informações.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated:  "2016-09-12"
+  years: 2016, 2017
+lastupdated:  "2017-01-17"
 
 ---
 
@@ -56,9 +56,23 @@ message indique la progression de l'opération.
 
 * La connexion unique est activée entre {{site.data.keyword.mfserver_short_notm}} et le serveur Mobile Analytics. Le serveur Mobile Analytics est configuré avec les mêmes clés LTPA et données d'identification de l'utilisateur que celles de {{site.data.keyword.mfserver_short_notm}}. Vous pouvez vous servir des mêmes `nom_d'utilisateur` et `mot_de_passe` pour vous connecter à la console Mobile Analytics que ceux utilisés pour la connexion à {{site.data.keyword.mfp_oc_short_notm}}.
 
-Pour plus d'informations sur MobileFirst Analytics, voir [MobileFirst Foundation Operational Analytics](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/){: new_window}.
+Pour plus d'informations sur MobileFirst Analytics, accédez au site [MobileFirst Foundation Operational Analytics ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/ "Icône de lien externe"){: new_window}.
 
 **Remarque :** le serveur Mobile Analytics est retiré quand vous supprimez l'instance de service {{site.data.keyword.mobilefoundation_short}} ou si vous tentez de recréer le serveur {{site.data.keyword.mfserver_short_notm}}.
+
+##  Suppression du serveur Mobile Analytics
+{: #deleting_analytics_server_dev}
+
+Vous pouvez à présent supprimer depuis le tableau de bord du service {{site.data.keyword.mobilefoundation_short}} le serveur Mobile Analytics qui a été
+ajouté à l'instance de service {{site.data.keyword.mobilefoundation_short}}.
+
+* Cliquez sur **Supprimer le serveur Analytics** pour supprimer le serveur Mobile Analytics qui a été ajouté à l'instance de service
+{{site.data.keyword.mobilefoundation_short}}.
+
+ Ceci a pour effet de supprimer le groupe de conteneurs Analytics. Cette opération prend environ 10 minutes. Vous pouvez actualiser l'écran pour examiner le
+statut mis à jour. Une fois les conteneurs Analytics supprimés, le bouton **Ajouter un serveur Analytics** est réactivé pour vous permettre
+éventuellement d'ajouter à nouveau le serveur Mobile Analytics.
+
 
 ## Re-création du serveur {{site.data.keyword.mobilefirst}}
 {: #recreate_mobilefoundation_p1}
@@ -87,6 +101,4 @@ vos besoins.
 * **Nodes** affiche le nombre de noeuds créés. Cette
 zone n'est pas modifiable dans {{site.data.keyword.mobilefoundation_short}}: Developer. Le nombre de noeuds <!--in your {{site.data.keyword.IBM_notm}} container group--> est de **1** par défaut dans le plan Developer.
 
-Pour plus de détails, reportez-vous à la
-[documentation
-d'{{site.data.keyword.mobilefoundation_long}}](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html){: new_window}.
+Reportez-vous à la page [Documentation d'{{site.data.keyword.mobilefoundation_long}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html "Icône de lien externe"){: new_window} pour plus d'informations.

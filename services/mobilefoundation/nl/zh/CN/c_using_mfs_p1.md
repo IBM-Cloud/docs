@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated:  "2016-09-12"
+  years: 2016, 2017
+lastupdated:  "2017-01-17"
 
 ---
 
@@ -47,9 +47,19 @@ lastupdated:  "2016-09-12"
 
 * 在 {{site.data.keyword.mfserver_short_notm}} 与移动分析服务器之间启用单点登录。为移动分析服务器配置与 {{site.data.keyword.mfserver_short_notm}} 相同的 LTPA 密钥和用户凭证。您可以像登录 {{site.data.keyword.mfp_oc_short_notm}} 一样，使用相同的 `username` 和 `password` 登录到“移动分析”控制台。
 
-有关 MobileFirst Analytics 的更多信息，请参阅 [MobileFirst Foundation Operational Analytics](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/){: new_window}。
+有关 MobileFirst Analytics 的更多信息，请参阅 [MobileFirst Foundation Operational Analytics ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/ "外部链接图标"){: new_window}。
 
 **注：**删除 {{site.data.keyword.mobilefoundation_short}} 服务实例或尝试重新创建 {{site.data.keyword.mfserver_short_notm}} 时，会除去移动分析服务器。
+
+##  删除移动分析服务器
+{: #deleting_analytics_server_dev}
+
+您现在可以从 {{site.data.keyword.mobilefoundation_short}} 服务仪表板删除添加到 {{site.data.keyword.mobilefoundation_short}} 服务实例的移动分析服务器。
+
+* 单击**删除分析**，可删除添加到 {{site.data.keyword.mobilefoundation_short}} 服务实例的移动分析服务器。
+
+ 这会删除分析容器组。删除分析容器的过程需要花费大约 10 分钟。可以刷新屏幕以查看更新的状态。删除分析容器后，会重新启用**添加分析**按钮，可以选择使用此按钮再次添加移动分析服务器。
+
 
 ## 重新创建 {{site.data.keyword.mobilefirst}} 服务器
 {: #recreate_mobilefoundation_p1}
@@ -69,4 +79,4 @@ lastupdated:  "2016-09-12"
 
 * **节点**显示已创建的节点数。此字段在 {{site.data.keyword.mobilefoundation_short}}: Developer 中不可编辑。在 Developer 套餐中，节点数<!--in your {{site.data.keyword.IBM_notm}} container group-->缺省为 **1**。
 
-请参阅 [{{site.data.keyword.mobilefoundation_long}} 文档](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html){: new_window}以获取更多详细信息。
+请参阅 [{{site.data.keyword.mobilefoundation_long}} documentation![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html "外部链接图标"){: new_window}，以获取更多详细信息。

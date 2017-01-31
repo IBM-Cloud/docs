@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated:  "2016-08-03"
+  years: 2016, 2017
+lastupdated:  "2017-01-17"
 
 ---
 
@@ -46,10 +46,10 @@ lastupdated:  "2016-08-03"
 
 フォーラムで質問する際には、IBM {{site.data.keyword.Bluemix_notm}} 開発チームによって認識されるように、質問にタグを付けてください。
 
-{{site.data.keyword.mobilefoundation_short}} によるアプリケーションの開発またはデプロイに関して技術的な質問がある場合は、[Stack Overflow](http://stackoverflow.com/search?q=ibm-mobilefirst+bluemix){:new_window} に質問を投稿し、質問に `bluemix` と `ibm-mobilefirst` のタグを付けてください。
+{{site.data.keyword.mobilefoundation_short}} を使用したアプリの開発やデプロイについて技術的な質問がある場合は、[Stack Overflow ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://stackoverflow.com/search?q=ibm-mobilefirst+bluemix "外部リンク・アイコン"){:new_window}に質問を投稿し、質問に `bluemix` と `ibm-mobilefirst` のタグを付けてください。
 
-サービスおよび最初の手順に関する質問については、[IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/mobilefirst/?smartspace=bluemix){:new_window} フォーラムを使用してください。`bluemix` と `mobilefirst` のタグを含めてください。
+サービスや開始の手順に関する質問については、[IBM developerWorks dW Answers ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/answers/topics/mobilefirst/?smartspace=bluemix "外部リンク・アイコン"){:new_window} フォーラムを使用してください。`bluemix` と `mobilefirst` のタグを含めてください。
 
-フォーラムの使用法の詳細については、[ヘルプの入手 (Getting help)](https://www.{DomainName}/docs/support/index.html#getting-help) を参照してください。
+フォーラムの使用について詳しくは、[ヘルプの利用![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.{DomainName}/docs/support/index.html#getting-help "外部リンク・アイコン"){: new_window}を参照してください。
 
-IBM サポート・チケットのオープン、またはサポート・レベルとチケットの重大度については、[サポートへのお問い合わせ](https://www.{DomainName}/docs/support/index.html#contacting-support)を参照してください。
+IBM サポート・チケットのオープン、またはサポート・レベルとチケットの重大度に関する情報は、[サポートへのお問い合わせ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.{DomainName}/docs/support/index.html#contacting-support "外部リンク・アイコン"){: new_window}を参照してください。

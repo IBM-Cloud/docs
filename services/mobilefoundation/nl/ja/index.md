@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated:  "2016-11-16"
+  years: 2016, 2017
+lastupdated:  "2017-01-17"
 
 ---
 
@@ -37,7 +37,7 @@ lastupdated:  "2016-11-16"
 
 「{{site.data.keyword.mobilefoundation_short}}: プロフェッショナル 1 アプリケーション」サービスのインスタンスの作成後に、以下のステップを実行することでモバイル・チャネルの作成を開始できます。
 
-1.  {{site.data.keyword.Bluemix_notm}} 上の既存の {{site.data.keyword.dashdbshort}}: エンタープライズ・トランザクション」サービスに接続します。
+1.  {{site.data.keyword.Bluemix_notm}} 上の既存の「{{site.data.keyword.dashdbshort}} for Transactions」サービスに接続します。
 
     1.  {{site.data.keyword.dashdbshort_notm}} サービス・インスタンスが存在する {{site.data.keyword.Bluemix_notm}} `組織`を選択します。
 
@@ -45,9 +45,9 @@ lastupdated:  "2016-11-16"
 
     + 既存の {{site.data.keyword.dashdbshort_notm}} サービス・インスタンスに接続するための {{site.data.keyword.dashdbshort_notm}} `サービス名` および `資格情報` を選択します。
 
-    + **「接続のテスト」**をクリックして、選択された「{{site.data.keyword.dashdbshort_notm}}: エンタープライズ・トランザクション」サービス・インスタンスへの接続をテストします。
+    + **「接続のテスト」**をクリックして、選択された「{{site.data.keyword.dashdbshort_notm}} for Transactions」サービス・インスタンスへの接続をテストします。
 
-    + **「追加」**をクリックした後、選択した {{site.data.keyword.dashdbshort_notm}} サービスについて確認を求めるポップアップ・ウィンドウで**「続行」**をクリックします。このアクションにより、構成された {{site.data.keyword.dashdbshort_notm}} データベース・サービス・インスタンスで必要な表が作成されます。
+    + **「追加」**をクリックした後、選択した「{{site.data.keyword.dashdbshort_notm}} for Transactions」サービスについて確認を求めるポップアップ・ウィンドウで**「続行」**をクリックします。このアクションにより、構成された {{site.data.keyword.dashdbshort_notm}} データベース・サービス・インスタンスで必要な表が作成されます。
 
     **注:** {{site.data.keyword.dashdbshort_notm}} 接続を {{site.data.keyword.mobilefoundation_short}} インスタンスに追加した後は、それを変更することはできません。
 
@@ -59,7 +59,66 @@ lastupdated:  "2016-11-16"
 
     * トポロジー、セキュリティー、およびその他のサーバー構成について拡張構成を使用して {{site.data.keyword.mobilefirst_notm}} サーバー・インスタンスを作成するには、**「拡張構成を使用したサーバーの始動 (Start Server with Advanced Configuration)」**をクリックします。詳しくは、[拡張構成のセットアップ](c_using_mfs_p2.html#using_mfs_advanced_p2)を参照してください。
 
-{{site.data.keyword.mobilefoundation_short}} の使用を開始する方法について詳しくは、[Using the Mobile Foundation service to set up MobileFirst Server (Mobile Foundation サービスを使用した、MobileFirst Server のセットアップ)<!-- on IBM Containers-->](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/bluemix/using-mobile-foundation/)を参照してください。
+## 「{{site.data.keyword.mobilefoundation_short}}: 開発者専門」プランの概要
+
+「{{site.data.keyword.mobilefoundation_short}}: 開発者専門」サービスのインスタンスの作成後に、以下のステップを実行することでモバイル・チャネルの作成を開始できます。
+
+  1.  {{site.data.keyword.Bluemix_notm}} 上の既存の「{{site.data.keyword.dashdbshort}} for Transactions」サービスに接続します。
+
+      1.  {{site.data.keyword.dashdbshort_notm}} サービス・インスタンスが存在する {{site.data.keyword.Bluemix_notm}} `組織`を選択します。
+
+      + 選択された`組織`で使用可能なスペースのリストから、{{site.data.keyword.dashdbshort_notm}} サービス・インスタンスが存在する、{{site.data.keyword.Bluemix_notm}} の`スペース`を選択します。
+
+      + 既存の {{site.data.keyword.dashdbshort_notm}} サービス・インスタンスに接続するための {{site.data.keyword.dashdbshort_notm}} `サービス名` および `資格情報` を選択します。
+
+      + **「接続のテスト」**をクリックして、選択された「{{site.data.keyword.dashdbshort_notm}} for Transactions」サービス・インスタンスへの接続をテストします。
+
+      + **「追加」**をクリックした後、選択した「{{site.data.keyword.dashdbshort_notm}} for Transactions」サービスについて確認を求めるポップアップ・ウィンドウで**「続行」**をクリックします。このアクションにより、構成された {{site.data.keyword.dashdbshort_notm}} データベース・サービス・インスタンスで必要な表が作成されます。
+
+      **注:** {{site.data.keyword.dashdbshort_notm}} 接続を {{site.data.keyword.mobilefoundation_short}} インスタンスに追加した後は、それを変更することはできません。
+
+  2.  サーバーを作成して始動します。
+
+      * デフォルト構成を使用して {{site.data.keyword.mobilefirst_notm}} サーバー・インスタンスを作成するには、**「基本サーバーの始動」**をクリックします。 
+
+      * この選択により、以下の設定で {{site.data.keyword.mfserver_long_notm}} がプロビジョンされます。
+
+          - 1 GB のメモリーを備えた単一ノード。開発アクティビティー、中程度のテスト・アクティビティー、および小規模な実動ワークロードには、このサイズで十分です。
+
+          -	`ユーザー名`と`パスワード`は、自動的に生成されます。サーバーの稼働中にこれらにアクセスできます。
+
+      * トポロジー、セキュリティー、およびその他のサーバー構成について拡張構成を使用して {{site.data.keyword.mobilefirst_notm}} サーバー・インスタンスを作成するには、**「拡張構成を使用したサーバーの始動 (Start Server with Advanced Configuration)」**をクリックします。詳しくは、[拡張構成のセットアップ](c_using_mfs_p3.html#using_mfs_advanced_p3)を参照してください。
+
+## 「{{site.data.keyword.mobilefoundation_short}}: 容量当たりのプロフェッショナル」プランの概要
+
+「{{site.data.keyword.mobilefoundation_short}}: 容量当たりのプロフェッショナル」サービスのインスタンスの作成後に、以下のステップを実行することでモバイル・チャネルの作成を開始できます。
+
+  1.  {{site.data.keyword.Bluemix_notm}} 上の既存の「{{site.data.keyword.dashdbshort}} for Transactions」サービスに接続します。
+
+      1.  {{site.data.keyword.dashdbshort_notm}} サービス・インスタンスが存在する {{site.data.keyword.Bluemix_notm}} `組織`を選択します。
+
+      + 選択された`組織`で使用可能なスペースのリストから、{{site.data.keyword.dashdbshort_notm}} サービス・インスタンスが存在する、{{site.data.keyword.Bluemix_notm}} の`スペース`を選択します。
+
+      + 既存の {{site.data.keyword.dashdbshort_notm}} サービス・インスタンスに接続するための {{site.data.keyword.dashdbshort_notm}} `サービス名` および `資格情報` を選択します。
+
+      + **「接続のテスト」**をクリックして、選択された「{{site.data.keyword.dashdbshort_notm}} for Transactions」サービス・インスタンスへの接続をテストします。
+
+      + **「追加」**をクリックした後、選択した「{{site.data.keyword.dashdbshort_notm}} for Transactions」サービスについて確認を求めるポップアップ・ウィンドウで**「続行」**をクリックします。このアクションにより、構成された {{site.data.keyword.dashdbshort_notm}} データベース・サービス・インスタンスで必要な表が作成されます。
+
+      **注:** {{site.data.keyword.dashdbshort_notm}} 接続を {{site.data.keyword.mobilefoundation_short}} インスタンスに追加した後は、それを変更することはできません。
+
+  2.  サーバーを作成して始動します。
+
+      * デフォルト構成を使用して {{site.data.keyword.mobilefirst_notm}} サーバー・インスタンスを作成するには、**「基本サーバーの始動」**をクリックします。 
+
+      * この選択により、以下の設定で {{site.data.keyword.mfserver_long_notm}} がプロビジョンされます。
+          -  2 個のノード (それぞれ 1 GB のメモリーを装備)。開発アクティビティー、中程度のテスト・アクティビティー、および小規模な実動ワークロードには、このサイズが適しています。
+
+          -	`ユーザー名`と`パスワード`は、自動的に生成されます。サーバーの稼働中にこれらにアクセスできます。
+
+      * トポロジー、セキュリティー、およびその他のサーバー構成について拡張構成を使用して {{site.data.keyword.mobilefirst_notm}} サーバー・インスタンスを作成するには、**「拡張構成を使用したサーバーの始動 (Start Server with Advanced Configuration)」**をクリックします。詳しくは、[拡張構成のセットアップ](c_using_mfs_p4.html#using_mfs_advanced_p4)を参照してください。
+
+{{site.data.keyword.mobilefoundation_short}} の使用を開始する方法について詳しくは、[Using the Mobile Foundation service to set up MobileFirst Server <!-- on IBM Containers-->![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/bluemix/using-mobile-foundation/ "外部リンク・アイコン"){: new_window}を参照してください。
 
 ##  既知の制限
 
@@ -72,5 +131,5 @@ lastupdated:  "2016-11-16"
 ## 関連リンク
 {: #general}
 
-*	[IBM MobileFirst Platform Foundation V8.0.0 の製品資料](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html){: new_window}
-*	[IBM MobileFirst Platform Developer Center](https://mobilefirstplatform.ibmcloud.com){: new_window}
+*	[IBM MobileFirst Platform Foundation V8.0.0 product documentation ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html "外部リンク・アイコン"){: new_window}
+*	[IBM MobileFirst Platform Developer Center ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://mobilefirstplatform.ibmcloud.com "外部リンク・アイコン"){: new_window}
