@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-31"
+  years: 2015, 2017
+lastupdated: "2017-01-10"
 
 ---
 {:new_window: target="_blank"}
@@ -143,6 +143,8 @@ You can also export and import custom chart definitions programmatically by usin
 	* 警示名稱：應用程式損毀的警示
 	* 訊息：應用程式損毀警示
 	* 查詢頻率：應用程式損毀
+		* 查詢頻率：2 分鐘
+	* 事件類型：應用程式損毀
 		* 應用程式名稱：任何應用程式
 		* 應用程式版本：任何版本
     * 臨界值
@@ -190,7 +192,7 @@ You can also export and import custom chart definitions programmatically by usin
 ### 應用程式損毀監視
 {: #app-crash}
 
-**損毀概觀**表格會顯示下列資料直欄：
+在**毀損**頁面上，**損毀概觀**表格會顯示下列資料直欄：
 
 * 應用程式：應用程式名稱
 * 損毀：該應用程式的損毀總數
@@ -207,7 +209,7 @@ You can also export and import custom chart definitions programmatically by usin
 ### 應用程式損毀疑難排解
 {: #app-crash-troubleshooting}
 
-<!-- **Applications** section of the -->{{site.data.keyword.mobileanalytics_short}} 主控台中的**疑難排解**頁面提供應用程式損毀的細微視圖。
+{{site.data.keyword.mobileanalytics_short}} 主控台中的**疑難排解**頁面會使用**損毀摘要**表格提供應用程式損毀的細微視圖。
 
 **損毀摘要**表格可進行排序，而且包括下列資料直欄：
 
@@ -249,4 +251,7 @@ You can also export and import custom chart definitions programmatically by usin
 
 在 {{site.data.keyword.mobileanalytics_short}} 主控台設定 dashDB，方法是按一下**匯出**頁面上的 **DashDB**。完成設定之後，傳送到 {{site.data.keyword.mobileanalytics_short}} 的新資料也會在 1-2 小時內轉遞給 dashDB。 
 
+<!--
+If you have existing DashDB instances, those instances will no longer accept new data because the incoming data no longer matches the schema. Manually add columns for the new data to resume incoming data. Modifying {{site.data.keyword.mobileanalytics_short}} collection tables by adding new columns also breaks the stream of incoming data.
+-->
 

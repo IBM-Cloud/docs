@@ -1,8 +1,8 @@
----
+﻿---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-29"
+  years: 2015, 2017
+lastupdated: "2017-01-10"
 
 ---
 {:new_window: target="_blank"}
@@ -27,8 +27,7 @@ messages personnalisés destinés à faciliter le développement et le débogage
 votre
 application, mais également ajouter une ligne de code pour chaque message de journal.
 
-3. Evénements personnalisés - Cette catégorie inclut des données que vous définissez vous-même et qui sont spécifiques à votre
-application. Ces données représentent des événements qui se produisent dans votre application, comme des vues de page,
+3. Evénements personnalisés - Cette catégorie inclut des données que vous définissez vous-même et qui sont spécifiques à votre application. Ces données représentent des événements qui se produisent dans votre application, comme des vues de page,
 des clics sur des boutons, ou des achats depuis l'application. Outre l'initialisation du SDK
 {{site.data.keyword.mobileanalytics_short}} dans votre application, vous devez aussi ajouter une ligne de code pour chaque événement personnalisé
 devant faire l'objet d'un suivi. 
@@ -169,8 +168,8 @@ pour remplir les graphiques d'utilisateurs actifs.
  	```
  	{: codeblock}
  	
- #### watchOS
- {: #watchos-initialize-analytics}
+   ### watchOS
+   {: #watchos-initialize-analytics}
 	 	
  	```Swift
  	Analytics.initialize(appName: "your_app_name_here", apiKey: "your_api_key_here", deviceEvents: .network)
@@ -184,6 +183,9 @@ pour remplir les graphiques d'utilisateurs actifs.
 d'[`Analytics.userIdentity = "username"`](sdk.html#ios-tracking-users) est comptabilisée comme un utilisateur actif. Il
 n'y a pas d'identité d'utilisateur par défaut lorsque `hasUserContext` a pour valeur true ; par conséquent, celle-ci doit être définie
 pour remplir les graphiques d'utilisateurs actifs.
+
+ #### watchOS
+ {: #watchos-record-device}
 
  Vous pouvez enregistrer des événements de périphérique sur WatchOS à l'aide des méthodes `Analytics.recordApplicationDidBecomeActive()` et `Analytics.recordApplicationWillResignActive()`.
   
@@ -244,6 +246,7 @@ Exemple d'analyse d'utilisation pour consignation d'un événement :
 JSONObject eventJSONObject = new JSONObject();
 	
 eventJSONObject.put("customProperty" , "propertyValue");
+
 Analytics.log(eventJSONObject);
 ```
 {: codeblock}
@@ -293,7 +296,13 @@ Analytics.log(metadata: eventObject)
   BMSAnalytics.disable();
 
   // Send recorded usage analytics to the {{site.data.keyword.mobileanalytics_short}} Service
-  BMSAnalytics.send();
+  BMSAnalytics.send(
+	function(response) {
+		console.log('success: ' + response);
+		},
+	function (err) {
+		console.log('fail: ' + err);
+		});
   ```
   {: codeblock}
 
@@ -433,8 +442,8 @@ Logger.send(completionHandler: { (response: Response?, error: Error?) dans
   // Set the minimum log level to be printed and persisted
   BMSLogger.setLogLevel(BMSLogger.INFO);
 
-  var logger1 = BMSLogger.getInstance("logger1");
-  var logger2 = BMSLogger.getInstance("logger2");   
+  var logger1 = BMSLogger.getLogger("logger1");
+  var logger2 = BMSLogger.getLogger("logger2");   
 
   // Log messages with different levels
   logger1.debug ("debug message");
@@ -818,4 +827,4 @@ Vous pouvez à présent accéder à la console {{site.data.keyword.mobileanalyti
 
 ## Référence d'API
 {: #api}
-* [API REST](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}
+* [API REST ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-29"
+  years: 2015, 2017
+lastupdated: "2017-01-10"
 
 ---
 {:new_window: target="_blank"}
@@ -149,8 +149,8 @@ SDK 目前適用於 Android、iOS、WatchOS 及 Cordova。
  	```
  	{: codeblock}
  	
- #### watchOS
- {: #watchos-initialize-analytics}
+   ### watchOS
+   {: #watchos-initialize-analytics}
 	 	
  	```Swift
  	Analytics.initialize(appName: "your_app_name_here", apiKey: "your_api_key_here", deviceEvents: .network)
@@ -160,6 +160,9 @@ SDK 目前適用於 Android、iOS、WatchOS 及 Cordova。
  	選用 `deviceEvents` 參數會自動收集裝置層次事件的分析。
 	
  **附註：**請將 `hasUserContext` 的值設為 **true** 或 **false**。如果是 false（預設值），每一個裝置即視為作用中使用者。當 `hasUserContext` 為 false 時，[`Analytics.userIdentity = "username"`](sdk.html#ios-tracking-users) 方法（可讓您追蹤每個裝置中主動使用您應用程式的使用者數目）無法運作。如果 `hasUserContext` 是 true，則每次使用 [`Analytics.userIdentity = "username"`](sdk.html#ios-tracking-users) 時都會視為作用中使用者。當 `hasUserContext` 為 true 時，沒有預設的使用者身分，因此必須設為移入作用中使用者圖表。
+
+ #### watchOS
+ {: #watchos-record-device}
 
  您可以使用 `Analytics.recordApplicationDidBecomeActive()` 及 `Analytics.recordApplicationWillResignActive()` 方法，來記錄 WatchOS 上的裝置事件。
   
@@ -185,7 +188,7 @@ SDK 目前適用於 Android、iOS、WatchOS 及 Cordova。
 
   您可以配置 {{site.data.keyword.mobileanalytics_short}} Client SDK 來記錄用量分析，並且將記錄的資料傳送至 {{site.data.keyword.mobileanalytics_short}} 服務。
 
-  使用下列 API 開始記錄及傳送用量分析：
+  使用下列 API 來開始記錄及傳送用量分析：
 
 #### Android
 {: #android-usage-api}
@@ -270,7 +273,13 @@ Analytics.log(metadata: eventObject)
   BMSAnalytics.disable();
 
   // Send recorded usage analytics to the {{site.data.keyword.mobileanalytics_short}} Service
-  BMSAnalytics.send();
+  BMSAnalytics.send(
+	function(response) {
+		console.log('success: ' + response);
+		},
+	function (err) {
+		console.log('fail: ' + err);
+		});
   ```
   {: codeblock}
 
@@ -409,8 +418,8 @@ Logger.send(completionHandler: { (response: Response?, error: Error?) in
   // Set the minimum log level to be printed and persisted
   BMSLogger.setLogLevel(BMSLogger.INFO);
 
-  var logger1 = BMSLogger.getInstance("logger1");
-  var logger2 = BMSLogger.getInstance("logger2");   
+  var logger1 = BMSLogger.getLogger("logger1");
+  var logger2 = BMSLogger.getLogger("logger2");   
 
   // Log messages with different levels
   logger1.debug ("debug message");
@@ -791,4 +800,4 @@ The {{site.data.keyword.mobileanalytics_short}} service saves the following data
 
 ## API 參考資料
 {: #api}
-* [REST API](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}
+* [REST API ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://mobile-analytics-dashboard.{DomainName}/analytics-service/ "外部鏈結圖示"){:new_window}
