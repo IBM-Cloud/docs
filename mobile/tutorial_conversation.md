@@ -2,10 +2,14 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-30"
+lastupdated: "2017-01-31"
 
 ---
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # End-to-end tutorial of the {{site.data.keyword.conversationshort}} Code Starter
 {: #tutorial_vr}
@@ -175,12 +179,6 @@ Ensure that you have installed the [prerequisite developer tools ![External link
 {: #what_next}
 
 View other tutorials.
-
-
-### UI Starter tutorials
-{: #tutorials_UI}
-
-* [Tutorial - Store Catalog](tutorial_store_catalog.html)
 
 
 ### Code Starter tutorials
