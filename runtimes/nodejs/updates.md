@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-01"
+  years: 2015, 2017
+lastupdated: "2017-01-18"
 
 ---
 
@@ -13,6 +13,11 @@ lastupdated: "2016-12-01"
 {: #latest_updates}
 
 A list of the latest updates in the sdk-for-nodejs buildpack.
+## January 20, 2017: Updated Node.js buildpack v3.10
+This release of the buildpack supports IBM SDK for Node.js runtime versions: 0.10.47, 0.10.48, 0.12.17, 0.12.18, 4.7.0, 4.7.2, 6.9.2, and 6.9.4. The default is now 4.7.2.
+
+It contains a fix for a bug where "npm start" was not always called to start applications.
+
 ## November 17, 2016: Updated Node.js buildpack v3.9
 This release of the buildpack supports IBM SDK for Node.js runtime versions: 0.10.47, 0.10.48, 0.12.16, 0.12.17, 4.6.1, 4.6.2, 6.7.0, and 6.9.1. The default is now 4.6.2. 
 
