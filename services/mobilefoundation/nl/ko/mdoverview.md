@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-03"
+  years: 2016, 2017
+lastupdated:  "2017-01-17"
 
 ---
 
@@ -46,10 +46,10 @@ lastupdated: "2016-08-03"
 
 질문을 작성하는 데 포럼을 사용하는 경우 IBM {{site.data.keyword.Bluemix_notm}} 개발 팀에서 확인할 수 있도록 질문에 태그를 지정하십시오. 
 
-{{site.data.keyword.mobilefoundation_short}}을 사용하여 개발 또는 배치하는 데 대한 기술적 질문이 있는 경우 [스택 오버플로우](http://stackoverflow.com/search?q=ibm-mobilefirst+bluemix){:new_window}에서 질문을 게시하거나 `bluemix` 및 `ibm-mobilefirst`로 질문에 태그를 지정하십시오. 
+{{site.data.keyword.mobilefoundation_short}}에서 앱을 개발하거나 배치하는 데 대한 기술적 질문이 있는 경우 [Stack Overflow ![외부 링크 아이콘](../../icons/launch-glyph.svg "External link icon")](http://stackoverflow.com/search?q=ibm-mobilefirst+bluemix){:new_window}에 질문을 게시하고 `bluemix` 및 `ibm-mobilefirst`로 질문에 태그를 지정하십시오.
 
-서비스 및 시작 지시사항에 대한 질문은 [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/mobilefirst/?smartspace=bluemix){:new_window} 포럼을 사용하십시오. `bluemix` 및 `mobilefirst` 태그를 지정하십시오. 
+서비스 및 시작하기 지시사항에 대한 질문이 있는 경우 [IBM developerWorks dW Answers ![외부 링크 아이콘](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/topics/mobilefirst/?smartspace=bluemix){:new_window} 포럼을 사용하십시오. `bluemix` 및 `mobilefirst` 태그를 지정하십시오. 
 
-포럼 사용에 대한 세부사항은 [도움 받기](https://www.{DomainName}/docs/support/index.html#getting-help)를 참조하십시오. 
+포럼 사용에 대한 세부사항은 [도움말 가져오기 ![외부 링크 아이콘](../../icons/launch-glyph.svg "External link icon")](https://www.{DomainName}/docs/support/index.html#getting-help){: new_window}을 참조하십시오.
 
-IBM 지원 티켓 개설 방법이나 지원 레벨 및 티켓 심각도 정보는 [지원 문의](https://www.{DomainName}/docs/support/index.html#contacting-support)를 참조하십시오. 
+IBM 지원 센터 티켓 개설 방법 또는 지원 레벨 및 티켓 심각도 정보는 [지원 센터에 문의 ![외부 링크 아이콘](../../icons/launch-glyph.svg "External link icon")](https://www.{DomainName}/docs/support/index.html#contacting-support){: new_window}을 참조하십시오.

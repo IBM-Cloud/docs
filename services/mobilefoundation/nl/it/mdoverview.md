@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated:  "2016-08-03"
+  years: 2016, 2017
+lastupdated:  "2017-01-17"
 
 ---
 
@@ -46,10 +46,18 @@ Se hai dei problemi o delle domande quando utilizzi {{site.data.keyword.mobilefo
 
 Quando utilizzi i forum per fare una domanda, contrassegna con una tag la tua domanda in modo che sia visualizzabile dai team di sviluppo IBM {{site.data.keyword.Bluemix_notm}}.
 
-Se hai domande tecniche sullo sviluppo o la distribuzione di un'applicazione con {{site.data.keyword.mobilefoundation_short}}, inserisci la tua domanda in [Stack Overflow](http://stackoverflow.com/search?q=ibm-mobilefirst+bluemix){:new_window} e contrassegnala con le tag `bluemix` e `ibm-mobilefirst`.
+Se hai domande tecniche sullo sviluppo o la distribuzione di un'applicazione con {{site.data.keyword.mobilefoundation_short}}, inserisci la tua domanda in
+[Stack Overflow
+![icona link esterno](../../icons/launch-glyph.svg "icona link esterno")](http://stackoverflow.com/search?q=ibm-mobilefirst+bluemix "icona link esterno"){:new_window}
+e contrassegnala con le tag `bluemix` e `ibm-mobilefirst`.
 
-Per domande sul servizio e sulle istruzioni per l'utilizzo iniziale, utilizza il forum [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/mobilefirst/?smartspace=bluemix){:new_window}. Includile tag `bluemix` e  `mobilefirst`.
+Per domande sul servizio e sulle istruzioni per l'utilizzo iniziale, utilizza il forum
+[IBM developerWorks dW Answers
+![icona link esterno](../../icons/launch-glyph.svg "icona link esterno")](https://developer.ibm.com/answers/topics/mobilefirst/?smartspace=bluemix "icona link esterno"){:new_window}. Includi le tag bluemix e  mobilefirst.
 
-Consulta [Getting help](https://www.{DomainName}/docs/support/index.html#getting-help) per ulteriori dettagli sull'utilizzo dei forum.
+Consulta [Come ottenere supporto
+![icona link esterno](../../icons/launch-glyph.svg "icona link esterno")](https://www.{DomainName}/docs/support/index.html#getting-help "icona link esterno"){: new_window} per ulteriori dettagli sull'utilizzo dei forum.
 
-Per informazioni su come aprire un ticket di supporto IBM o sui livelli di supporto e sulla gravità dei ticket, consulta [Come contattare il supporto](https://www.{DomainName}/docs/support/index.html#contacting-support).
+Per informazioni su come aprire un ticket di supporto IBM o sui livelli di supporto e sulla gravità dei ticket, consulta
+[Come contattare il supporto
+![icona link esterno](../../icons/launch-glyph.svg "icona link esterno")](https://www.{DomainName}/docs/support/index.html#contacting-support "icona link esterno"){: new_window}.

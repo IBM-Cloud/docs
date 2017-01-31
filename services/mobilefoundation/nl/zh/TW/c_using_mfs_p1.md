@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated:  "2016-09-12"
+  years: 2016, 2017
+lastupdated:  "2017-01-17"
 
 ---
 
@@ -48,10 +48,20 @@ lastupdated:  "2016-09-12"
 {{site.data.keyword.mfp_oc_short_notm}} 相同的
 `username` 及 `password` 來登入 Mobile Analytics 主控台。
 
-如需 MobileFirst Analytics 的相關資訊，您可以參考 [MobileFirst Foundation Operational Analytics](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/){: new_window}。
+如需 MobileFirst Analytics 的相關資訊，您可以參閱 [MobileFirst FoundationOperational Analytics ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/ "外部鏈結圖示"){: new_window}。
 
 **附註：**當您刪除 {{site.data.keyword.mobilefoundation_short}} 服務實例時或當您嘗試重新建立
 {{site.data.keyword.mfserver_short_notm}} 時，會移除 Mobile Analytics 伺服器。
+
+##  刪除 Mobile Analytics 伺服器
+{: #deleting_analytics_server_dev}
+
+現在您可以從 {{site.data.keyword.mobilefoundation_short}} 服務儀表板中刪除已新增至 {{site.data.keyword.mobilefoundation_short}} 服務實例的 Mobile Analytics 伺服器。
+
+* 按一下**刪除分析**，刪除已新增至 {{site.data.keyword.mobilefoundation_short}} 服務實例的 Mobile Analytics 伺服器。
+
+ 這將刪除分析容器群組。刪除分析容器的程序需要大約 10 分鐘。您可以重新整理畫面來檢視更新的狀態。一旦刪除分析容器，便會重新啟用**新增分析**按鈕，您可以使用此按鈕，重新新增 Mobile Analytics 伺服器（如果您選擇這樣做的話）。
+
 
 ## 重建 {{site.data.keyword.mobilefirst}} 伺服器
 {: #recreate_mobilefoundation_p1}
@@ -71,4 +81,4 @@ lastupdated:  "2016-09-12"
 
 * **節點數**會顯示已建立的節點數目。在 {{site.data.keyword.mobilefoundation_short}}: Developer 中無法編輯此欄位。在 Developer 方案中，<!--in your {{site.data.keyword.IBM_notm}} container group-->節點數目預設為 **1**。
 
-如需詳細資料，請參閱 [{{site.data.keyword.mobilefoundation_long}} 文件](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html){: new_window}。
+如需詳細資料，請參閱 [{{site.data.keyword.mobilefoundation_long}} 文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html "外部鏈結圖示"){: new_window}。

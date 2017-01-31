@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated:  "2016-09-12"
+  years: 2016, 2017
+lastupdated:  "2017-01-17"
 
 ---
 
@@ -45,9 +45,19 @@ Der Prozess der Bereitstellung wird gestartet. Dieser Prozess dauert ungefähr 1
 
 * Für den {{site.data.keyword.mfserver_short_notm}} und den Mobile Analytics-Server ist Single Sign-on aktiviert. Der Mobile Analytics-Server ist mit denselben LTPA-Schlüsseln und denselben Benutzerberechtigungen konfiguriert wie der {{site.data.keyword.mfserver_short_notm}}. Sie können für die Anmeldung an der Mobile Analytics Console den `Benutzernamen` und das `Kennwort` verwenden, die Sie auch für die Anmeldung bei der {{site.data.keyword.mfp_oc_short_notm}} verwendet haben.
 
-Weitere Informationen zu MobileFirst Analytics finden Sie unter [MobileFirst Foundation Operational Analytics](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/){: new_window}.
+Weitere Informationen zu MobileFirst Analytics finden Sie unter [MobileFirst Foundation Operational Analytics ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/ "Symbol für externen Link"){: new_window}.
 
 **Anmerkung:** Der Mobile Analytics-Server wird entfernt, wenn Sie die Instanz des Service {{site.data.keyword.mobilefoundation_short}} löschen oder wenn Sie versuchen, den {{site.data.keyword.mfserver_short_notm}} erneut zu erstellen.
+
+##  Mobile Analytics-Server löschen
+{: #deleting_analytics_server_dev}
+
+Sie können jetzt den Mobile Analytics-Server, der zur {{site.data.keyword.mobilefoundation_short}}-Serviceinstanz hinzugefügt wurde, im {{site.data.keyword.mobilefoundation_short}}-Service-Dashboard löschen.
+
+* Klicken Sie auf die Option zum Löschen der Analyse****, um den Mobile Analytics-Server zu löschen, der zur {{site.data.keyword.mobilefoundation_short}}-Serviceinstanz hinzugefügt wurde.
+
+ Bei dieser Aktion wird die Analytics-Containergruppe gelöscht. Das Löschen der Analytics-Container dauert ca. 10 Minuten. Sie können die Anzeige aktualisieren, um den aktuellen Status anzuzeigen. Nach dem Löschen der Analysecontainer wird die Schaltfläche zum Hinzufügen der Analyse**** wieder aktiviert und kann verwendet werden, um den Mobile Analytics-Server bei Bedarf erneut hinzuzufügen.
+
 
 ## {{site.data.keyword.mobilefirst}} Server erneut erstellen
 {: #recreate_mobilefoundation_p1}
@@ -67,4 +77,4 @@ Mit der Option **Server mit erweiterter Konfiguration starten** auf der Seite `�
 
 * **Knoten** zeigt die Anzahl der erstellten Knoten an. Dieses Feld ist nicht in {{site.data.keyword.mobilefoundation_short}}: Developer bearbeitbar. Die Anzahl der Knoten <!--in your {{site.data.keyword.IBM_notm}} container group--> beträgt standardmäßig **1** im Developer-Plan.
 
-Weitere Details finden Sie in der Dokumentation zu [{{site.data.keyword.mobilefoundation_long}} ](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html){: new_window}.
+Weitere Details finden Sie in der [{{site.data.keyword.mobilefoundation_long}}-Dokumentation ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html "Symbol für externen Link"){: new_window}.

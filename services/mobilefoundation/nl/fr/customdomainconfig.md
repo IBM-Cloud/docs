@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated:  "2016-08-08"
+  years: 2016, 2017
+lastupdated:  "2017-01-17"
 
 ---
 
@@ -20,14 +20,12 @@ pouvez également configurer votre propre domaine personnalisé.
 
 L'<!--container group is created with a-->URL ou la route est créée avec les noms de domaine par défaut basés sur la `région` {{site.data.keyword.Bluemix_notm}}.
 
-*Tableau 1. Noms de domaine de l'application basés sur la `Région`
-dans {{site.data.keyword.Bluemix_notm}}*
-
   |Domaine |  Région  |    
   |:----- | :----- |    
   |`mybluemix.net` | Sud des Etats-Unis |    
   |`eu-gb.mybluemix.net` | Royaume-Uni  |
   |`au-syd.mybluemix.net` | Sydney  |      
+  {: caption="Table 1. Application domain names based on Region in {{site.data.keyword.Bluemix_notm}}" caption-side="top"}
 
 Pour pouvoir utiliser votre propre domaine, vous devez configurer un
 domaine personnalisé en procédant comme suit :
@@ -51,6 +49,4 @@ personnalisé, transférez le certificat SSL de votre domaine dans {{site.data.k
 ce faire, accédez à **Gérer les organisations > Domaines**,
 sélectionnez le domaine personnalisé pour lequel le certificat SSL doit être
 configuré et cliquez sur **Télécharger le certificat** pour
-transférer le certificat SSL de votre domaine. Pour plus d'informations,
-voir
-[SSL Certificates and Bluemix Custom Domains](https://developer.ibm.com/bluemix/2014/09/28/ssl-certificates-bluemix-custom-domains/).
+transférer le certificat SSL de votre domaine. Reportez-vous à la page [SSL Certificates and Bluemix Custom Domains ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/bluemix/2014/09/28/ssl-certificates-bluemix-custom-domains/ "Icône de lien externe"){: new_window} pour plus d'informations.
