@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-29"
+  years: 2015, 2017
+lastupdated: "2017-01-10"
 
 ---
 {:new_window: target="_blank"}
@@ -150,8 +150,8 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
  	```
  	{: codeblock}
  	
- #### watchOS
- {: #watchos-initialize-analytics}
+   ### watchOS
+   {: #watchos-initialize-analytics}
 	 	
  	```Swift
  	Analytics.initialize(appName: "your_app_name_here", apiKey: "your_api_key_here", deviceEvents: .network)
@@ -161,6 +161,9 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
  	Un parámetro `deviceEvents` opcional recopila de forma automática las analíticas de los eventos de nivel de dispositivo.
 	
  **Nota:** Establezca el valor para `hasUserContext` en **true** o **false**. Si es false (valor predeterminado), cada dispositivo se cuenta como un usuario activo. El método [`Analytics.userIdentity = "username"`](sdk.html#ios-tracking-users), que le permite realizar el seguimiento del número de usuarios por dispositivo que están utilizando de forma activa la aplicación, no funcionará cuando `hasUserContext` sea false. Si `hasUserContext` es true, cada uso de [`Analytics.userIdentity = "username"`](sdk.html#ios-tracking-users) cuenta como un usuario activo. No hay ninguna identidad de usuario predeterminado cuando `hasUserContext` es true y, por lo tanto, debe establecerse en rellenar los gráficos de usuario activo.
+
+ #### watchOS
+ {: #watchos-record-device}
 
  Puede registrar sucesos de dispositivo en WatchOS utilizando los métodos `Analytics.recordApplicationDidBecomeActive()` y `Analytics.recordApplicationWillResignActive()`.
   
@@ -271,7 +274,13 @@ Analytics.log(metadata: eventObject)
   BMSAnalytics.disable();
 
   // Enviar analíticas de uso registradas al servicio {{site.data.keyword.mobileanalytics_short}}
-  BMSAnalytics.send();
+  BMSAnalytics.send(
+	function(response) {
+		console.log('success: ' + response);
+		},
+	function (err) {
+		console.log('fail: ' + err);
+		});
   ```
   {: codeblock}
 
@@ -410,8 +419,8 @@ Logger.send(completionHandler: { (response: Response?, error: Error?) in
   // Establecer el nivel mínimo de registro para que se imprima y sea permanente
   BMSLogger.setLogLevel(BMSLogger.INFO);
 
-  var logger1 = BMSLogger.getInstance("logger1");
-  var logger2 = BMSLogger.getInstance("logger2");   
+  var logger1 = BMSLogger.getLogger("logger1");
+  var logger2 = BMSLogger.getLogger("logger2");   
 
   // Registrar mensajes con distintos niveles
   logger1.debug ("debug message");
@@ -792,4 +801,4 @@ Ahora puede ir a la consola de {{site.data.keyword.mobileanalytics_short}} para 
 
 ## Referencia de API
 {: #api}
-* [API REST](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}
+* [API REST ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://mobile-analytics-dashboard.{DomainName}/analytics-service/ "icono de enlace externo"){:new_window}

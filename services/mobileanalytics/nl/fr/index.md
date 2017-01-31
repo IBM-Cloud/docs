@@ -1,8 +1,8 @@
----
+﻿---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-30"
+  years: 2016, 2017
+lastupdated: "2017-01-13"
 
 ---
 {:new_window: target="_blank"}
@@ -10,24 +10,28 @@ lastupdated: "2016-11-30"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Initiation à {{site.data.keyword.mobileanalytics_short}} (Bêta)
+# Initiation à {{site.data.keyword.mobileanalytics_short}}
 
 {: #gettingstartedtemplate}
 
-{{site.data.keyword.mobileanalytics_full}} fournit aux développeurs, aux administrateurs informatiques et aux parties prenantes des informations relatives aux performances et à l'utilisation de leurs applications mobiles. Vous pouvez surveiller les performances et l'utilisation de toutes vos applications depuis votre bureau ou votre tablette. Vous pouvez identifier rapidement les tendances et les anomalies, accéder aux détails pour résoudre les problèmes et déclencher des alertes lorsque des mesures clés dépassent des seuils critiques. 
+{{site.data.keyword.mobileanalytics_full}} fournit aux développeurs, aux administrateurs informatiques et aux parties prenantes des informations relatives aux performances et à l'utilisation de leurs applications mobiles. {{site.data.keyword.mobileanalytics_short}} vous permet :
+
+* De surveiller les performances et l'utilisation de toutes vos applications depuis votre bureau ou votre tablette. 
+* D'identifier rapidement les tendances et les anomalies, d'accéder aux détails pour résoudre les problèmes et de déclencher des alertes lorsque des mesures clés dépassent des seuils critiques.
 {: shortdesc}
 
-Pour être rapidement opérationnel avec le service {{site.data.keyword.mobileanalytics_short}}, procédez comme suit :
+**Important :** La console {{site.data.keyword.mobileanalytics_short}} n'est pas encore prête pour le navigateur Internet Explorer et certaines fonctionnalités peuvent ne pas s'exécuter correctement. Pour une utilisation optimale, préférez Firefox, Chrome ou Safari.
+
+Pour que le service {{site.data.keyword.mobileanalytics_short}} soit rapidement opérationnel, procédez comme suit :
 
 1. Après avoir créé une instance
 <!--[create an instance](https://console.{DomainName}/docs/services/reqnsi.html#req_instance)-->du service
 {{site.data.keyword.mobileanalytics_short}}, vous pouvez accéder à la console de {{site.data.keyword.mobileanalytics_short}}
 en cliquant sur votre vignette dans la section **Services** du tableau de bord {{site.data.keyword.Bluemix}}.
 
- Le service {{site.data.keyword.mobileanalytics_short}} se lance avec le **mode démo** activé. Ce mode remplit des graphiques sur les pages **Données d'application** et **Alertes**, ce qui vous permet de voir de quelle façon vos données seront affichées. Vous pouvez désactiver le mode démo lorsque vous possédez vos propres données. La console {{site.data.keyword.mobileanalytics_short}} est accessible en lecture seule lorsque le mode démo est activé, et vous ne pouvez pas créer de nouvelles définitions d'alerte.
+ Pour vous aider à découvrir immédiatement les différents graphiques et vues et la valeur qu'ils apportent, nous mettons à votre disposition une option **Mode démonstration** dans la console {{site.data.keyword.mobileanalytics_short}} qui permet d'afficher les vues et les graphiques avec des *données de démonstration*. Les données de démonstration sont le mode par défaut de la console lorsqu'elle est lancée pour la première fois après l'instanciation du service. Lorsque vous disposez de vos propres applications et données d'analyse alimentées dans le service, vous pouvez *désactiver* le mode démonstration pour afficher les données de vos applications dans les différents graphiques. La console Mobile Analytics est accessible en lecture seule lorsque le mode démonstration est activé et vous ne pouvez donc pas créer de nouvelles définitions d'alerte.
 
-2. Installez les [logiciels SDK du client](/docs/services/mobileanalytics/install-client-sdk.html) {{site.data.keyword.mobileanalytics_short}}. Si vous le
-souhaitez, vous pouvez utiliser l'[API REST](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window} de {{site.data.keyword.mobileanalytics_short}}.
+2. Installez les [logiciels SDK du client](/docs/services/mobileanalytics/install-client-sdk.html) {{site.data.keyword.mobileanalytics_short}}. Vous avez la possibilité d'utiliser l'[API REST ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window} de {{site.data.keyword.mobileanalytics_short}}.
 
 3. Importez les SDK client et initialisez-les avec le fragment de code suivant pour enregistrer les analyses de l'utilisation :
 
@@ -80,6 +84,9 @@ l'utilisation et les sessions d'application, en utilisant la valeur de votre [Cl
     
  Le paramètre **bluemixRegion** spécifique le déploiement {{site.data.keyword.Bluemix_notm}} que vous utilisez, par exemple, `BMSClient.REGION_US_SOUTH` et `BMSClient.REGION_UK`. 
     <!-- , or `BMSClient.Region.Sydney`.-->
+    
+ Définissez la valeur **true** ou **false** pour `hasUserContext`. Si la valeur est false
+(valeur par défaut), chaque périphérique est comptabilisé comme un utilisateur actif.
 
  #### iOS
  {: #ios-initialize}
@@ -95,6 +102,9 @@ avec votre valeur de [clé d'API](/docs/services/mobileanalytics/sdk.html#analyt
 			
    Le paramètre **bluemixRegion** spécifie le déploiement Bluemix que vous utilisez, par exemple `BMSClient.Region.usSouth` ou `BMSClient.Region.unitedKingdom`.
 	<!-- , or `BMSClient.REGION_SYDNEY`. -->
+ 
+ Définissez la valeur **true** ou **false** pour `hasUserContext`. Si la valeur est false
+(valeur par défaut), chaque périphérique est comptabilisé comme un utilisateur actif.
 	
  #### Cordova
  {: #cordova-initialize}
@@ -146,7 +156,7 @@ est affiché dans la console {{site.data.keyword.mobileanalytics_short}} en tant
 	Utilisez la méthode `BMSAnalytics.send` pour envoyer des données d'analyse au serveur. Placez la méthode `BMSAnalytics.send` dans le meilleur emplacement pour votre projet.
 	
 	```
-	BMSAnalytics.send
+	BMSAnalytics.send()
 	```
 	{: codeblock}
 	
@@ -160,10 +170,10 @@ est affiché dans la console {{site.data.keyword.mobileanalytics_short}} en tant
 # rellinks
 
 ## Logiciel SDK
-* [Logiciel SDK Android](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics){: new_window}  
-* [Logiciel SDK iOS](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics){: new_window}
-* [Logiciel SDK de base du plug-in Cordova](https://www.npmjs.com/package/bms-core){: new_window}
+* [Logiciel SDK Android ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics){: new_window}  
+* [Logiciel SDK iOS ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics){: new_window}
+* [Logiciel SDK Core du plug-in Cordova ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://www.npmjs.com/package/bms-core){: new_window}
 
 ## Référence d'API
 {: #api}
-* [API REST](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}
+* [API REST ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}

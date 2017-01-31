@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-29"
+  years: 2015, 2017
+lastupdated: "2017-01-10"
 
 ---
 {:new_window: target="_blank"}
@@ -89,8 +89,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 	```
 	{: codeblock}
 
-  Sie müssen `BMSClient` mit dem Parameter **bluemixRegion** initialisieren. Im Initialisierungsoperator gibt der Wert für **bluemixRegion** an, welche {{site.data.keyword.Bluemix_notm}}-Bereitstellung Sie verwenden, z. B. `BMSClient.REGION_US_SOUTH` und `BMSClient.REGION_UK`.
-     
+  Sie müssen `BMSClient` mit dem Parameter **bluemixRegion** initialisieren. Im Initialisierungsoperator gibt der Wert für **bluemixRegion** an, welche {{site.data.keyword.Bluemix_notm}}-Bereitstellung verwendet wird, zum Beispiel `BMSClient.REGION_US_SOUTH` und `BMSClient.REGION_UK`. 
     <!-- , or `BMSClient.REGION_SYDNEY`.--> 
     
  ### iOS
@@ -150,8 +149,8 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
  	```
  	{: codeblock}
  	
- #### WatchOS
- {: #watchos-initialize-analytics}
+   ### WatchOS
+   {: #watchos-initialize-analytics}
 	 	
  	```Swift
  	Analytics.initialize(appName: "your_app_name_here", apiKey: "your_api_key_here", deviceEvents: .network)
@@ -161,6 +160,9 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
  	Mit dem optionalen Parameter `deviceEvents` können automatisch Analysedaten für gerätespezifische Ereignisse erfasst werden.
 	
  **Hinweis:** Setzen Sie den Wert für `hasUserContext` auf **true** oder **false**. Bei 'false' (Standardwert) wird jedes Gerät als aktiver Benutzer gezählt. Die Methode [`Analytics.userIdentity = "username"`](sdk.html#ios-tracking-users), mit der Sie die Anzahl der Benutzer pro Gerät verfolgen können, die Ihre Anwendung aktiv nutzen, funktioniert nicht, wenn `hasUserContext` auf 'false' gesetzt ist. Wenn `hasUserContext` auf 'true' gesetzt ist, zählt jede Verwendung von [`Analytics.userIdentity = "username"`](sdk.html#ios-tracking-users) als ein aktiver Benutzer. Wenn `hasUserContext` auf 'true' gesetzt ist, gibt es keine Standardbenutzer-ID. Daher muss diese festgelegt werden, damit die Diagramme für aktive Benutzer gefüllt werden.
+
+ #### WatchOS
+ {: #watchos-record-device}
 
  Unter WatchOS können Sie Geräteereignisse mit den Methoden `Analytics.recordApplicationDidBecomeActive()` und `Analytics.recordApplicationWillResignActive()` aufzeichnen.
   
@@ -270,8 +272,14 @@ Analytics.log(metadata: eventObject)
   // Aufzeichnung von Nutzungsanalysedaten deaktivieren
   BMSAnalytics.disable();
 
-  // Aufgezeichnete Nutzungsanalysedaten an {{site.data.keyword.mobileanalytics_short}}-Service senden
-  BMSAnalytics.send();
+  // Aufgezeichnete Nutzungsanalysedaten an den {{site.data.keyword.mobileanalytics_short}}-Service senden
+  BMSAnalytics.send(
+	function(response) {
+		console.log('success: ' + response);
+		},
+	function (err) {
+		console.log('fail: ' + err);
+		});
   ```
   {: codeblock}
 
@@ -410,8 +418,8 @@ Logger.send(completionHandler: { (response: Response?, error: Error?) in
   // Auszugebende und zu speichernde Mindestprotokollstufe festlegen
   BMSLogger.setLogLevel(BMSLogger.INFO);
 
-  var logger1 = BMSLogger.getInstance("logger1");
-  var logger2 = BMSLogger.getInstance("logger2");   
+  var logger1 = BMSLogger.getLogger("logger1");
+  var logger2 = BMSLogger.getLogger("logger2");   
 
   // Protokollnachrichten mit unterschiedlichen Ebenen
   logger1.debug ("debug message");
@@ -792,4 +800,4 @@ Wechseln Sie jetzt zur {{site.data.keyword.mobileanalytics_short}}-Konsole, um d
 
 ## API-Referenz
 {: #api}
-* [REST-API](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}
+* [REST-API ![Symbol für externen Link](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}(../../icons/launch-glyph.svg "Symbol für externen Link")]

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-29"
+  years: 2015, 2017
+lastupdated: "2017-01-10"
 
 ---
 {:new_window: target="_blank"}
@@ -149,8 +149,8 @@ lastupdated: "2016-11-29"
  	```
  	{: codeblock}
  	
- #### watchOS
- {: #watchos-initialize-analytics}
+   ### watchOS
+   {: #watchos-initialize-analytics}
 	 	
  	```Swift
  	Analytics.initialize(appName: "your_app_name_here", apiKey: "your_api_key_here", deviceEvents: .network)
@@ -160,6 +160,9 @@ lastupdated: "2016-11-29"
  	선택적 `deviceEvents` 매개변수는 자동으로 디바이스 레벨의 이벤트에 대한 분석을 수집합니다.
 	
  **참고:** `hasUserContext`에 대한 값을 **true** 또는 **false**로 설정하십시오. False(기본값)인 경우 각 디바이스는 활성 사용자로 계수됩니다. 디바이스마다 적극적으로 애플리케이션을 사용 중인 사용자 수를 추적할 수 있는 [`Analytics.userIdentity = "username"`](sdk.html#ios-tracking-users) 메소드는 `hasUserContext`가 false인 경우 작동하지 않습니다. `hasUserContext`가 true인 경우 [`Analytics.userIdentity="username"`](sdk.html#ios-tracking-users)의 개별 사용은 활성 사용자로 계수됩니다. `hasUserContext`가 true이고 기본 사용자 ID가 없으므로, 활성 사용자 차트를 채우도록 설정되어야 합니다.
+
+ #### watchOS
+ {: #watchos-record-device}
 
  `Analytics.recordApplicationDidBecomeActive()` 및 `Analytics.recordApplicationWillResignActive()` 메소드를 사용하여 WatchOS에 대한 디바이스 이벤트를 기록할 수 있습니다.
   
@@ -266,7 +269,13 @@ Analytics.log(metadata: eventObject)
   BMSAnalytics.disable();
 
   // Send recorded usage analytics to the {{site.data.keyword.mobileanalytics_short}} Service
-  BMSAnalytics.send();
+  BMSAnalytics.send(
+	function(response) {
+		console.log('success: ' + response);
+		},
+	function (err) {
+		console.log('fail: ' + err);
+		});
   ```
   {: codeblock}
 
@@ -400,8 +409,8 @@ Logger.send(completionHandler: { (response: Response?, error: Error?) in
   // Set the minimum log level to be printed and persisted
   BMSLogger.setLogLevel(BMSLogger.INFO);
 
-  var logger1 = BMSLogger.getInstance("logger1");
-  var logger2 = BMSLogger.getInstance("logger2");   
+  var logger1 = BMSLogger.getLogger("logger1");
+  var logger2 = BMSLogger.getLogger("logger2");   
 
   // Log messages with different levels
   logger1.debug ("debug message");
@@ -782,4 +791,4 @@ The {{site.data.keyword.mobileanalytics_short}} service saves the following data
 
 ## API 참조
 {: #api}
-* [REST API](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}
+* [REST API ![외부 링크 아이콘](../../icons/launch-glyph.svg "External link icon")](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}

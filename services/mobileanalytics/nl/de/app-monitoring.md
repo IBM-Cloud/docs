@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-31"
+  years: 2015, 2017
+lastupdated: "2017-01-10"
 
 ---
 {:new_window: target="_blank"}
@@ -143,6 +143,8 @@ Im folgenden Beispiel wird aus den Daten eines Anwendungsabsturzes eine Alertdef
 	* Alert Name: Alert for Application Crashes (Alert-Name: Alert für Anwendungsabstürze)
 	* Message: App Crash Alert (Nachricht: App-Absturz-Alert)
 	* Query Frequency: Application Crashes (Abfragehäufigkeit: Anwendungsabstürze)
+		* Query Frequency: 2 minutes (Abfragehäufigkeit: 2 Minuten)
+	* Event Type: Application Crashes (Ereignistyp: Anwendungsabstürze)
 		* Application Name: Any application (Anwendungsname: Jede Anwendung)
 		* Application Version: Any version (Anwendungsversion: Jede Version)
     * Threshold (Schwellenwert)
@@ -190,7 +192,7 @@ Sie können Informationen zu Anwendungsabstürzen in der {{site.data.keyword.mob
 ### Überwachung von Anwendungsabstürzen
 {: #app-crash}
 
-In der Tabelle mit der Absturzübersicht werden die folgenden Datenspalten angezeigt:
+Auf der Seite mit den Abstürzen sehen Sie in der Tabelle mit der Absturzübersicht die folgenden Datenspalten:
 
 * Application: Any application (Anwendung: Jede Anwendung)
 * Crashes: total number of crashes for that app (Abstürze: Gesamtzahl der Abstürze für diese App)
@@ -207,7 +209,7 @@ Sie können Absturzdaten auf zwei Arten anzeigen:
 ### Fehlerbehebung für App-Abstürze
 {: #app-crash-troubleshooting}
 
-Die Seite Zur Fehlerbehebung in der <!-- **Applications** section of the --> {{site.data.keyword.mobileanalytics_short}}-Konsole bietet eine differenzierte Ansicht der App-Abstürze.
+Die Seite Zur Fehlerbehebung in der <!-- **Applications** section of the --> {{site.data.keyword.mobileanalytics_short}}-Konsole bietet eine differenzierte Ansicht der App-Abstürze; hierfür wird die Tabelle mit der Zusammenfassung der Abstürze verwendet.
 
 Die Tabelle für die Absturzzusammenfassung kann sortiert werden und besteht aus den folgenden Datenspalten:
 
@@ -249,4 +251,7 @@ Die in der {{site.data.keyword.mobileanalytics_short}}-Konsole sichtbaren Metrik
 
 Richten Sie dashDB in der {{site.data.keyword.mobileanalytics_short}}-Konsole ein; klicken Sie hierfür auf der Seite für den **Export** auf **DashDB**. Nach dem Setup werden neue Daten, die an {{site.data.keyword.mobileanalytics_short}} gesendet werden, innerhalb von 1 bis 2 Stunden auch an dashDB weitergeleitet. 
 
+<!--
+If you have existing DashDB instances, those instances will no longer accept new data because the incoming data no longer matches the schema. Manually add columns for the new data to resume incoming data. Modifying {{site.data.keyword.mobileanalytics_short}} collection tables by adding new columns also breaks the stream of incoming data.
+-->
 

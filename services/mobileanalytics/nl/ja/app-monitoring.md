@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-31"
+  years: 2015, 2017
+lastupdated: "2017-01-10"
 
 ---
 {:new_window: target="_blank"}
@@ -143,6 +143,8 @@ You can also export and import custom chart definitions programmatically by usin
 	* アラート名: アプリケーション異常終了のアラート
 	* メッセージ: アプリ異常終了のアラート
 	* 照会の頻度: アプリケーションの異常終了
+		* 照会の頻度: 2 分
+	* イベント・タイプ: アプリケーションの異常終了
 		* アプリケーション名: 任意のアプリケーション
 		* アプリケーションのバージョン: 任意のバージョン
     * しきい値
@@ -190,7 +192,7 @@ You can also export and import custom chart definitions programmatically by usin
 ### アプリケーション異常終了のモニター
 {: #app-crash}
 
-**「異常終了の概要」**表に、次のデータ列が表示されます。
+**「異常終了」**ページの**「異常終了の概要」**表に、次のデータ列が表示されます。
 
 * アプリケーション: アプリケーション名
 * 異常終了: そのアプリの異常終了の総数
@@ -207,7 +209,7 @@ You can also export and import custom chart definitions programmatically by usin
 ### アプリ異常終了のトラブルシューティング
 {: #app-crash-troubleshooting}
 
-<!-- **Applications** section of the --> {{site.data.keyword.mobileanalytics_short}} コンソールの**「トラブルシューティング」**ページには、アプリ異常終了の詳細が表示されます。
+<!-- **Applications** section of the -->{{site.data.keyword.mobileanalytics_short}} コンソールの**「トラブルシューティング」**ページでは、**「異常終了の要約 (Crash Summary)」**表を使用して、アプリ異常終了の詳細が表示されます。
 
 **「異常終了の要約 (Crash Summary)」**表はソート可能であり、次のデータ列が含まれています。
 
@@ -249,4 +251,7 @@ You can also export and import custom chart definitions programmatically by usin
 
 **「エクスポート」**ページにある**「DashDB」**をクリックして、{{site.data.keyword.mobileanalytics_short}} コンソールに dashDB をセットアップします。セットアップ完了後 1、2 時間以内に、{{site.data.keyword.mobileanalytics_short}} に送信される新しいデータは dashDB にも転送されるようになります。 
 
+<!--
+If you have existing DashDB instances, those instances will no longer accept new data because the incoming data no longer matches the schema. Manually add columns for the new data to resume incoming data. Modifying {{site.data.keyword.mobileanalytics_short}} collection tables by adding new columns also breaks the stream of incoming data.
+-->
 
