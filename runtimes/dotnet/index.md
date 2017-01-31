@@ -317,5 +317,6 @@ applications:
 {: #rellinks}
 ## general
 {: #general}
+* [Latest Updates to the ASP.NET Core Buildpack](/docs/runtimes/dotnet/updates.html)
 * [NuGet](https://docs.nuget.org/Consume/Overview){: new_window}
 * [ASP.NET Core Overview](http://docs.asp.net/en/latest/conceptual-overview/aspnet.html){: new_window}
