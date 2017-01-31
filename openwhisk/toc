@@ -1,0 +1,12 @@
+[Getting Started with OpenWhisk](/docs/openwhisk/index.html)
+    index.md
+    openwhisk_about.md
+    openwhisk_actions.md
+    openwhisk_triggers_rules.md
+    openwhisk_packages.md
+    openwhisk_catalog.md
+    openwhisk_monitoring.md
+    openwhisk_mobile_sdk.md
+    openwhisk_apigateway.md
+    openwhisk_feeds.md
+    openwhisk_reference.md
