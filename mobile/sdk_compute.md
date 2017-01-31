@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-01-30"
+lastupdated: "2017-01-25"
 
 ---
 {:new_window: target="_blank"}
@@ -16,15 +16,13 @@ lastupdated: "2017-01-30"
 
 When you are building a cloud native digital channel application for mobile and Web, the best practice is to have a Backend for Frontend (BFF) that is either dedicated to your digital channel or offers the same data and logic integration support for both Web and mobile client apps. For more information about this architecture, see [Microservices for web and mobile ![External link icon](../icons/launch-glyph.svg)](https://www.ibm.com/devops/method/content/architecture/omnichannelArchitecture).
 
-<!-- The following diagram shows an overview of the BFF architecture.
+The following diagram shows an overview of the BFF architecture.
 
 ![BFF architecture](images/bff-arch.png)
 
-Figure 1: BFF architecture -->
+Figure 1: BFF architecture
 
-The concept of a BFF is to abstract away common business logic and integration logic from you microservices or high-value {{site.data.keyword.Bluemix}} cloud services.
-
-With this architecture, you can deploy and release updates to your mobile or Web application and deploy new versions of your BFF by using continous delivery pipelines with the dev ops service.
+The concept of a BFF is to abstract away common business logic and integration logic from you microservices or high-value {{site.data.keyword.Bluemix}} cloud services.With this architecture, you can deploy and release updates to your mobile or Web application and deploy new versions of your BFF by using continous delivery pipelines with the dev ops service.
 
 If you have one BFF for iOS and a separate BFF for Android, the engineering teams that are delivering the function for these apps are not constrained to release features by a centralized API release schedule. This is a common goal for microservice and digital channel architectures - to free the teams to release function and features often, without being tightly coupled to another team's release schedule.
 
@@ -52,11 +50,7 @@ The client SDK generator uses the Open API definition file to define a client-op
 ## Defining an API
 {: #definition}
 
-<!--
-The BFF needs to expose an API definition file that conforms to the Open API specification that is running on a live server endpoint. To enable the {{site.data.keyword.Bluemix_notm}} Developer Experience and the {{site.data.keyword.Bluemix_notm}} SDK CLI (Command Line Interface) to discover this endpoint, you must add an environment variable to your Cloud foundry application called `OPENAPI_SPEC`. This environment variable must reference the specification using a relative path.
--->
-
-The BFF needs to expose an API definition file that conforms to the Open API specification that is running on a live server endpoint. To enable the {{site.data.keyword.Bluemix_notm}} Developer Experience to discover this endpoint, you must add an environment variable to your Cloud foundry application called `OPENAPI_SPEC`. This environment variable must reference the specification using a relative path.
+The BFF needs to expose an API definition file that conforms to the Open API specification that is running on a live server endpoint. To enable the {{site.data.keyword.Bluemix_notm}} Developer experience and the {{site.data.keyword.Bluemix_notm}} SDK CLI (Command Line Interface) to discover this endpoint, you must add an environment variable to your Cloud foundry application called `OPENAPI_SPEC`. This environment variable must reference the specification using a relative path.
 
 To add the `OPENAPI_SPEC` environment variable in {{site.data.keyword.Bluemix_notm}}, follow these steps:
 
@@ -114,14 +108,13 @@ Follow the [README ![External link icon](../icons/launch-glyph.svg "External lin
 ## Using Backend for Frontend with a Developer Experience project
 {: #bff-devex}
 
-The {{site.data.keyword.Bluemix_notm}} Mobile Developer Experience is designed to make it simple to define a mobile project with a number of cloud services associated. You can easily add [{{site.data.keyword.mobilepushshort}} ![External link icon](../icons/launch-glyph.svg)](/docs/services/mobilepush/index.html), [Analytics ![External link icon](../icons/launch-glyph.svg)](/docs/services/mobileanalytics/index.html), and Data or Storage services. 
+The {{site.data.keyword.Bluemix_notm}} Mobile developer experience is designed to make it simple to define a mobile project with a number of cloud services associated. You can easily add [{{site.data.keyword.mobilepushshort}} ![External link icon](../icons/launch-glyph.svg)](/docs/services/mobilepush/index.html), [Analytics ![External link icon](../icons/launch-glyph.svg)](/docs/services/mobileanalytics/index.html), and Data or Storage services. 
 
 The {{site.data.keyword.Bluemix_notm}} Mobile dashboard introduced the ability to integrate a BFF into a mobile project in the **Compute** page. You can add existing Compute service instances to your mobile project. After they are added, you can either generate a native SDK for your language choice or you can generate the full project and the SDK will be integrated into the source package of the project in the **Code** page. This is particularly useful when you are integrating with BFFs that are already well-defined.
 
 After you have downloaded your project, you can open it with Xcode or Android Studio and compile your project with the client SDK.
 
 
-<!--
 ## Using the CLI
 {: #cli}
 
@@ -173,7 +166,6 @@ bluemix sdk generate <AppName> <SDKName> --<Platform>
 {: codeblock}
 
 Using the `--unzip` option will automatically extract the SDK into your current working directory. You can optionally specify the location to extract the SDK by using the `--output` option. You can manage your source code with GitHub and create a new branch specifically for updating the SDK. Using this approach makes it easier to view the changes and merge in the updated SDK to your development branch.
--->
 
 
 ## Working with SDK generated models and APIs

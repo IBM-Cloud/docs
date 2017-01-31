@@ -2,10 +2,14 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-30"
+lastupdated: "2017-01-31"
 
 ---
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # Tutorial - Weather Code Starter
 {: #tutorial_weather}
@@ -101,13 +105,7 @@ To get up and running quickly with the Weather Code Starter, follow these steps:
 ## What to do next
 {: #tutorial_next}
 
-[Try it out! ![External link icon](../icons/launch-glyph.svg "External link icon")](http://console.{DomainName}/mobile/create-project?starter=fad1d49e-f7b6-3aff-9b53-14673fca4399){: new_window}
-
-
-### UI Starter tutorials
-{: #tutorials_UI}
-
-* [Tutorial - Store Catalog](tutorial_store_catalog.html)
+View other tutorials.
 
 
 ### Code Starter tutorials

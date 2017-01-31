@@ -2,10 +2,18 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-30"
+lastupdated: "2017-01-31"
 
 ---
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:note:.deprecated}
+
+**UI Starters are deprecated:** Existing projects that were created from a UI Starter can be used until 30 April 2017. For more information about migration steps and removal dates, see the [deprecation announcement blog post ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/01/bluemix-mobile-dashboard-update/).
+{:deprecated}
 
 # Tutorial - Store Catalog UI Starter
 {: #tutorial_store_catalog}

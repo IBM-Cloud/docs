@@ -2,10 +2,15 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-30"
+lastupdated: "2017-01-31"
 
 ---
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:note:.deprecated}
 
 # What's new in the Mobile dashboard
 {: #what_is_new}
@@ -15,6 +20,7 @@ lastupdated: "2017-01-30"
 
 The January 2017 update of the {{site.data.keyword.Bluemix}} Mobile dashboard introduced the following changes:
 
+   * As of January 31, UI Starters are deprecated. Existing projects that were created from a UI Starter can be used until 30 April 2017. For more information about migration steps and removal dates, see the [deprecation announcement blog post ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/01/bluemix-mobile-dashboard-update/).{: deprecated}
    * You can now update your project starter type instead of deleting your project and creating a new one.
    * You can now create your project with a [Watson Conversation](tutorial_conversation.html) Code Starter.
    * Where it is supported, you can now generate an SDK for your project.

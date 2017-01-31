@@ -2,10 +2,14 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-30"
+lastupdated: "2017-01-31"
 
 ---
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # Tutorial - Watson Language Code Starter
 {: #tutorial_watson_language}
@@ -101,14 +105,7 @@ To get up and running quickly with the Watson Language Code Starter, follow thes
 ## What to do next
 {: #tutorial_next}
 
-[Try it out! ![External link icon](../icons/launch-glyph.svg "External link icon")](http://console.{DomainName}/mobile/create-project?starter=512568a1-72db-35c7-b9c4-4f3e3bc89375){: new_window}
-
-
-
-### UI Starter tutorials
-{: #tutorials_UI}
-
-* [Tutorial - Store Catalog](tutorial_store_catalog.html)
+View other tutorials.
 
 
 ### Code Starter tutorials
