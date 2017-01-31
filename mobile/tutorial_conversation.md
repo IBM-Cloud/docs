@@ -7,7 +7,7 @@ lastupdated: "2017-01-30"
 ---
 {:new_window: target="_blank"}
 
-# End-to-end tutorial of the {{site.data.keyword.conversationshortshort}} Code Starter
+# End-to-end tutorial of the {{site.data.keyword.conversationshort}} Code Starter
 {: #tutorial_vr}
 
 The following end-to-end tutorial walks through the steps to create a project from the {{site.data.keyword.conversationshort}} Code Starter, including the tools that you must have installed, and subsequently, the steps to run the starter in Xcode and Android Studio.
@@ -86,7 +86,7 @@ Ensure that you have installed the [prerequisite developer tools ![External link
 
    4. See [Getting started with {{site.data.keyword.cloudant_short_notm}} ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/Cloudant/index.html){: new_window} for more information about configuring {{site.data.keyword.cloudant_short_notm}}.
 
-   5. [Getting started with {{site.data.keyword.objectstorageshort}} ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/ObjectStorage/index.html){: new_window} for more information about configuring {{site.data.keyword.objectstorageshort}}.
+   5. See [Getting started with {{site.data.keyword.objectstorageshort}} ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/ObjectStorage/index.html){: new_window} for more information about configuring {{site.data.keyword.objectstorageshort}}.
 
 6. Generate your project code.
 
