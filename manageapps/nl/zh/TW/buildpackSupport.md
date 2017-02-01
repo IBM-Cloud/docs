@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2016, 2017
 lastupdated: "2016-10-10"
 
 ---
@@ -17,7 +17,7 @@ lastupdated: "2016-10-10"
 ## 內建 IBM 建置套件
 {: #built-in_ibm_buildpacks}
 
-若為 [Liberty for Java](/docs/runtimes/liberty/index.html)、[SDK for Node.js](/docs/runtimes/nodejs/index.html) 及 [ASP.NET Core](/docs/runtimes/dotnet/index.html)，IBM 將支援兩個版本（n 及 n - 1）（例如，IBM Liberty 建置套件 1.22 版及 IBM Liberty 建置套件 1.21 版）。每一個建置套件都會視情況提供及支援其對應運行環境的一個以上主要版本（例如 IBM SDK、Java Technology Edition 7.1 版及第 8 版）。建置套件一般一個月會以可用運行環境的最新次要版本重新整理一次。 
+若為 [Liberty for Java](/docs/runtimes/liberty/index.html)、[SDK for Node.js](/docs/runtimes/nodejs/index.html) 及 [ASP.NET Core](/docs/runtimes/dotnet/index.html)，IBM 將支援兩個版本（n 及 n - 1）（例如，IBM Liberty 建置套件 1.22 版及 IBM Liberty 建置套件 1.21 版）。每一個建置套件都會視情況提供及支援其對應運行環境的一個以上主要版本（例如 IBM SDK、Java Technology Edition 7.1 版及第 8 版）。建置套件一般一個月會以可用運行環境的最新次要版本重新整理一次。
 
 若為 [IBM Bluemix Runtime for Swift](/docs/runtimes/swift/index.html)，IBM 將支援符合 [Swift.org](http://swift.org) 上所提供的最新 Swift 版本的建置套件。建置套件的更新將會與 Swift 的最新可用發行版本同步。
 

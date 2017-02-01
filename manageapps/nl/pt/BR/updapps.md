@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-08-25"
 
 ---
 
@@ -13,9 +14,6 @@ copyright:
 
 #Atualizando apps
 {: #updatingapps}
-
-Última atualização: 25 de agosto de 2016
-{: .last-updated}
 
 
 É possível usar o comando cf push ou o {{site.data.keyword.Bluemix}} DevOps Services para atualizar os aplicativos no {{site.data.keyword.Bluemix_notm}}. Em muitos casos, mesmo para os buildpacks integrados, como o Node.js, deve-se também fornecer um parâmetro -c para especificar qual comando será usado para iniciar seu aplicativo.
@@ -44,7 +42,7 @@ solicitações de seu domínio customizado serão roteadas para seu aplicativo n
 **Visualizar detalhes** para a sua organização &gt; **Editar organização** &gt; **Domínios**.
 
 	2. Na guia **DOMÍNIOS**, clique em **INCLUIR DOMÍNIO**, insira o nome do domínio customizado e clique em **SALVAR**.
-	
+
 	**Nota**: Por exemplo, é possível usar `mycompany.com` para associar a rota `www.mycompany.com` ao seu
 app. Também é possível usar `example.mycompany.com` para associar a rota `www.example.mycompany.com` ao seu app.
 
@@ -56,7 +54,7 @@ app. Também é possível usar `example.mycompany.com` para associar a rota `www
 	2. A partir do menu **Visualizar aplicativo**, selecione **Editar rotas e acesso**.
 
 	3. Clique em **Incluir rota** e especifique a rota que você deseja usar para o aplicativo.
-	4. Clique **Salvar.** 
+	4. Clique **Salvar.**
 
 * Use a interface de linha de comandos cf:
 
@@ -79,7 +77,7 @@ app. Também é possível usar `example.mycompany.com` para associar a rota `www
     ```
     cf map-route myapp mydomain -n host_name
     ```
-    Para grupos de contêiner, digite o comando a seguir:	
+    Para grupos de contêiner, digite o comando a seguir:
      ```
      cf ic route map -n host_name -d mydomain mycontainergroup
      ```
@@ -94,16 +92,15 @@ app. Também é possível usar `example.mycompany.com` para associar a rota `www
     *host_name*
 
         O nome do host na rota que você deseja usar para seu aplicativo.
-        
+
     *mycontainergroup*
-    
-        Para grupos de contêiner, o nome do grupo de contêiner.  
+
+        Para grupos de contêiner, o nome do grupo de contêiner.
 
 
 Após configurar o domínio customizado no {{site.data.keyword.Bluemix_notm}}, deve-se mapear o domínio customizado para o domínio do sistema do {{site.data.keyword.Bluemix_notm}} em seu servidor DNS registrado:
 
-  1. Configure um registro 'CNAME' para o nome de domínio customizado em seu servidor DNS. Etapas para configurar o registro CNAME variam dependendo de seu provedor DNS. Por exemplo, se você estiver
-usando o GoDaddy, siga a orientação [Ajuda de domínios](https://www.godaddy.com/help/add-a-cname-record-19236){: new_window} a partir do GoDaddy.
+  1. Configure um registro 'CNAME' para o nome de domínio customizado em seu servidor DNS. Etapas para configurar o registro CNAME variam dependendo de seu provedor DNS. Por exemplo, se você estiver usando o GoDaddy, siga a orientação [Ajuda de domínios ![Ícone de link externo](../icons/launch-glyph.svg)](https://www.godaddy.com/help/add-a-cname-record-19236){: new_window} do GoDaddy.
   2. Mapeie o nome do domínio customizado para o terminal seguro para a região do {{site.data.keyword.Bluemix_notm}} em que seu aplicativo está em execução. Use os terminais da região a seguir para fornecer a rota da URL alocada para a sua organização no {{site.data.keyword.Bluemix_notm}}:
 
     * US-SOUTH: `secure.us-south.bluemix.net`
@@ -333,6 +330,5 @@ a URL `Blue.mybluemix.net`.
 ## Links Relacionados
 {: #general}
 
-* [Implementações azul/verde](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
-* [IBM{{site.data.keyword.Bluemix_notm}} DevOps
-Services](https://hub.jazz.net/){:new_window}
+* [Blue-green deployments ![Ícone de link externo](../icons/launch-glyph.svg)](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
+* [IBM {{site.data.keyword.Bluemix_notm}} DevOps Services ![Ícone de link externo](../icons/launch-glyph.svg)](https://hub.jazz.net/){:new_window}

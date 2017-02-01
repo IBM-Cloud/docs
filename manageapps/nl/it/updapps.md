@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-08-25"
 
 ---
 
@@ -13,9 +14,6 @@ copyright:
 
 #Aggiornamento di applicazioni
 {: #updatingapps}
-
-Ultimo aggiornamento: 25 agosto 2016
-{: .last-updated}
 
 
 Per aggiornare le applicazioni in {{site.data.keyword.Bluemix_notm}}, puoi utilizzare il comando cf push o {{site.data.keyword.Bluemix}} DevOps Services. In molti casi, anche per i pacchetti di build integrati quali Node.js, devi inoltre fornire un parametro -c per specificare il comando utilizzato per avviare la tua applicazione.
@@ -43,7 +41,7 @@ oppure l'interfaccia riga di comando cf.
 
 	2. Nella scheda **DOMINI**, fai clic su **AGGIUNGI DOMINIO**, immetti il nome
 del tuo dominio personalizzato e fai clic su **SALVA**.
-	
+
 	**Nota**: puoi utilizzare, ad esempio, `mycompany.com` per associare la rotta `www.mycompany.com` alla tua applicazione. Puoi anche utilizzare `example.mycompany.com` per associare la rotta `www.example.mycompany.com` all'applicazione.
 
   2. Aggiungi la rotta con il dominio personalizzato a un'applicazione.
@@ -53,7 +51,7 @@ del tuo dominio personalizzato e fai clic su **SALVA**.
 	2. Dal menu **Visualizza applicazione**, seleziona **Modifica rotte e accesso**.
 
 	3. Fai clic su **Aggiungi rotta** e specifica la rotta che vuoi utilizzare per l'applicazione.
-	4. Fai clic su **Salva**. 
+	4. Fai clic su **Salva**.
 
 * Utilizza l'interfaccia riga di comando cf:
 
@@ -77,7 +75,7 @@ seguente comando:
     ```
     cf map-route myapp mydomain -n host_name
     ```
-    Per i gruppi di contenitori, immetti il seguente comando:	
+    Per i gruppi di contenitori, immetti il seguente comando:
      ```
      cf ic route map -n host_name -d mydomain mycontainergroup
      ```
@@ -92,15 +90,15 @@ seguente comando:
     *home_host*
 
         Il nome host nella rotta che desideri utilizzare per la tua applicazione.
-        
+
     *mycontainergroup*
-    
-        Per i gruppi di contenitori, il nome del gruppo di contenitori.  
+
+        Per i gruppi di contenitori, il nome del gruppo di contenitori.
 
 
 Una volta configurato il dominio personalizzato in {{site.data.keyword.Bluemix_notm}}, devi associarlo al dominio personalizzato del dominio di sistema {{site.data.keyword.Bluemix_notm}} sul tuo server DNS registrato:
 
-  1. Imposta un record 'CNAME' per il nome dominio personalizzato sul tuo server DNS. La procedura per l'impostazione del record CNAME varia a seconda del tuo provider DNS. Ad esempio, se utilizzi GoDaddy, devi seguire le linee guida di [Domains Help](https://www.godaddy.com/help/add-a-cname-record-19236){: new_window} fornite da GoDaddy.
+  1. Imposta un record 'CNAME' per il nome dominio personalizzato sul tuo server DNS. La procedura per l'impostazione del record CNAME varia a seconda del tuo provider DNS. Ad esempio, se utilizzi GoDaddy, devi seguire le linee guida di [Domains Help ![icona link esterno](../icons/launch-glyph.svg)](https://www.godaddy.com/help/add-a-cname-record-19236){: new_window} fornite da GoDaddy.
   2. Associare il nome dominio personalizzato all'endpoint sicuro della regione {{site.data.keyword.Bluemix_notm}} in cui viene eseguita la tua applicazione. Utilizza i seguenti endpoint della regione per fornire la rotta dell'URL assegnata alla tua organizzazione in {{site.data.keyword.Bluemix_notm}}:
 
     * STATI UNITI SUD: `secure.us-south.bluemix.net`
@@ -327,6 +325,5 @@ essere eliminata quando è in funzione la nuova.
 ## Link correlati
 {: #general}
 
-* [Distribuzioni blue-green](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
-* [IBM{{site.data.keyword.Bluemix_notm}} DevOps
-Services](https://hub.jazz.net/){:new_window}
+* [Blue-green deployments ![icona link esterno](../icons/launch-glyph.svg)](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
+* [IBM {{site.data.keyword.Bluemix_notm}} DevOps Services ![icona link esterno](../icons/launch-glyph.svg)](https://hub.jazz.net/){:new_window}

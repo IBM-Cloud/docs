@@ -1,12 +1,13 @@
 ---
 
- 
+
 
 copyright:
 
-  years: 2016
+  years: 2016, 2017
+lastupdated: "2016-03-15"
 
- 
+
 
 ---
 
@@ -14,8 +15,7 @@ copyright:
 
 #  Bluemix 基礎架構層
 
-*前次更新：2016 年 3 月 15 日*
-{: .last-updated}
+
 
 {{site.data.keyword.Bluemix_notm}} 會抽象化並隱藏作業系統與基礎架構層，因此您不需要管理它們。不過，您有時可能會想要更瞭解適用於您應用程式的作業系統及中介軟體。
 {:shortdesc}

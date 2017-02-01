@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2016, 2017
 lastupdated: "2016-10-10"
 
 ---
@@ -19,7 +19,7 @@ lastupdated: "2016-10-10"
 
 [Liberty for Java](/docs/runtimes/liberty/index.html)、[SDK for Node.js](/docs/runtimes/nodejs/index.html)、および [ASP.NET Core](/docs/runtimes/dotnet/index.html) については、IBM は 2 つのバージョン (n & n - 1) (例えば、IBM Liberty Buildpack v1.22 & IBM Liberty Buildpack v1.21) をサポートします。
 各ビルドパックは、必要に応じて、対応するランタイムの 1 つ以上のメジャ
-ー・バージョンを提供し、サポートします (例えば IBM SDK, Java Technology Edition バージョン 7 リリース 1 とバージョン 8)。ビルドパックは通常、使用可能なランタイムの最新のマイナー・バージョンを使用して、1 カ月に 1 回更新されます。 
+ー・バージョンを提供し、サポートします (例えば IBM SDK, Java Technology Edition バージョン 7 リリース 1 とバージョン 8)。ビルドパックは通常、使用可能なランタイムの最新のマイナー・バージョンを使用して、1 カ月に 1 回更新されます。
 
 [IBM Bluemix Runtime for Swift](/docs/runtimes/swift/index.html) については、IBM は、[Swift.org](http://swift.org) で使用可能な Swift の最新バージョンに適合したビルドパックのサポートを提供します。ビルドパックに対する更新は、Swift の使用可能な最新リリース・バージョンに合わせて行われます。
 

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2016, 2017
 lastupdated: "2016-10-10"
 
 ---
@@ -19,7 +19,7 @@ lastupdated: "2016-10-10"
 
 Pour [Liberty for Java](/docs/runtimes/liberty/index.html), [SDK for Node.js](/docs/runtimes/nodejs/index.html) et [ASP.NET Core](/docs/runtimes/dotnet/index.html), IBM prend en charge deux versions (n et n - 1), par exemple IBM Liberty Buildpack version 1.22 et IBM Liberty Buildpack version 1.21. Chaque pack de construction fournit et prend en charge une ou plusieurs versions principales de son
 contexte d'exécution correspondant, en fonction des besoins, par exemple IBM SDK, Java Technology Edition version 7 édition 1 et version 8. En général, les
-packs de construction sont actualisés une fois par mois avec la version secondaire disponible la plus récente du contexte d'exécution. 
+packs de construction sont actualisés une fois par mois avec la version secondaire disponible la plus récente du contexte d'exécution.
 
 Pour [IBM Bluemix Runtime for Swift](/docs/runtimes/swift/index.html), IBM prend en charge le pack de construction qui correspond à la
 version la plus récente de Swift disponible sur [Swift.org](http://swift.org). Les mises à jour du pack de construction sont synchronisées

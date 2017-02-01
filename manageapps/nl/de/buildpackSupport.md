@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2016, 2017
 lastupdated: "2016-10-10"
 
 ---
@@ -17,7 +17,7 @@ lastupdated: "2016-10-10"
 ## Integrierte IBM-Buildpacks
 {: #built-in_ibm_buildpacks}
 
-Für [Liberty for Java](/docs/runtimes/liberty/index.html), [SDK for Node.js](/docs/runtimes/nodejs/index.html) und [ASP.NET Core](/docs/runtimes/dotnet/index.html) unterstützt IBM zwei Versionen (n & n - 1), z. B. IBM Liberty Buildpack Version 1.22 & IBM Liberty Buildpack Version 1.21. Jedes Buildpack bietet und unterstützt eine oder mehrere Hauptversionen der entsprechenden Laufzeit, z. B. IBM SDK, Java Technology Edition Version 7 Release 1 und Version 8. Buildpacks werden normalerweise einmal im Monat mit der neuesten verfügbaren Nebenversion aktualisiert. 
+Für [Liberty for Java](/docs/runtimes/liberty/index.html), [SDK for Node.js](/docs/runtimes/nodejs/index.html) und [ASP.NET Core](/docs/runtimes/dotnet/index.html) unterstützt IBM zwei Versionen (n & n - 1), z. B. IBM Liberty Buildpack Version 1.22 & IBM Liberty Buildpack Version 1.21. Jedes Buildpack bietet und unterstützt eine oder mehrere Hauptversionen der entsprechenden Laufzeit, z. B. IBM SDK, Java Technology Edition Version 7 Release 1 und Version 8. Buildpacks werden normalerweise einmal im Monat mit der neuesten verfügbaren Nebenversion aktualisiert.
 
 Für [IBM Bluemix Runtime for Swift](/docs/runtimes/swift/index.html) unterstützt IBM den Buildpack für die aktuelle Version von Swift, verfügbar unter [Swift.org](http://swift.org). Aktualisierungen des Buildpacks werden mit der neuesten verfügbaren freigegebenen Version von Swift synchronisiert sein.
 

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2016, 2017
 lastupdated: "2016-10-10"
 
 ---
@@ -17,7 +17,7 @@ lastupdated: "2016-10-10"
 ## 内置 IBM buildpack
 {: #built-in_ibm_buildpacks}
 
-对于 [Liberty for Java](/docs/runtimes/liberty/index.html)、[SDK for Node.js](/docs/runtimes/nodejs/index.html) 和 [ASP.NET Core](/docs/runtimes/dotnet/index.html)，IBM 将支持两个版本（n 和 n-1），例如 IBM Liberty Buildpack V1.22 和 IBM Liberty Buildpack V1.21。每个 buildpack 将根据需要提供并支持其相应运行时的一个或多个主版本（例如，IBM SDK Java Technology Edition V7.1 和 V8）。通常，每月会使用可用的运行时最新次版本对 buildpack 刷新一次。 
+对于 [Liberty for Java](/docs/runtimes/liberty/index.html)、[SDK for Node.js](/docs/runtimes/nodejs/index.html) 和 [ASP.NET Core](/docs/runtimes/dotnet/index.html)，IBM 将支持两个版本（n 和 n-1），例如 IBM Liberty Buildpack V1.22 和 IBM Liberty Buildpack V1.21。每个 buildpack 将根据需要提供并支持其相应运行时的一个或多个主版本（例如，IBM SDK Java Technology Edition V7.1 和 V8）。通常，每月会使用可用的运行时最新次版本对 buildpack 刷新一次。
 
 对于 [IBM Bluemix Runtime for Swift](/docs/runtimes/swift/index.html)，IBM 将支持与 [Swift.org](http://swift.org) 上提供的最新版本 Swift 匹配的 buildpack。对 buildpack 的更新将与发布的最新可用版本的 Swift 同步。
 

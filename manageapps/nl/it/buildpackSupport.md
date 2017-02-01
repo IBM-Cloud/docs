@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2016, 2017
 lastupdated: "2016-10-10"
 
 ---
@@ -17,7 +17,7 @@ lastupdated: "2016-10-10"
 ## Pacchetti di build IBM integrati
 {: #built-in_ibm_buildpacks}
 
-Per [Liberty for Java](/docs/runtimes/liberty/index.html), [SDK for Node.js](/docs/runtimes/nodejs/index.html) e [ASP.NET Core](/docs/runtimes/dotnet/index.html) IBM supporterà due versioni (n & n - 1), ad esempio IBM Liberty Buildpack v1.22 & IBM Liberty Buildpack v1.21. Ogni pacchetto di build fornirà e supporterà una o più versioni principali del runtime corrispondente nel modo appropriato, ad esempio IBM SDK, Java Technology Edition Versione 7 Release 1 e Versione 8. I pacchetti di build verranno aggiornati generalmente una volta al mese con l'ultima versione secondaria del runtime disponibile. 
+Per [Liberty for Java](/docs/runtimes/liberty/index.html), [SDK for Node.js](/docs/runtimes/nodejs/index.html) e [ASP.NET Core](/docs/runtimes/dotnet/index.html) IBM supporterà due versioni (n & n - 1), ad esempio IBM Liberty Buildpack v1.22 & IBM Liberty Buildpack v1.21. Ogni pacchetto di build fornirà e supporterà una o più versioni principali del runtime corrispondente nel modo appropriato, ad esempio IBM SDK, Java Technology Edition Versione 7 Release 1 e Versione 8. I pacchetti di build verranno aggiornati generalmente una volta al mese con l'ultima versione secondaria del runtime disponibile.
 
 Per [IBM Bluemix Runtime for Swift](/docs/runtimes/swift/index.html) IBM fornirà supporto per il pacchetto di build corrispondente all'ultima versione di Swift disponibile in [Swift.org](http://swift.org). Gli aggiornamenti al pacchetto di build saranno sincronizzati con l'ultima versione rilasciata di Swift disponibile.
 

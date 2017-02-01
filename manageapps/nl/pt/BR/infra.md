@@ -1,12 +1,13 @@
 ---
 
- 
+
 
 copyright:
 
-  years: 2016
+  years: 2016, 2017
+lastupdated: "2016-03-15"
 
- 
+
 
 ---
 
@@ -14,8 +15,7 @@ copyright:
 
 #  Camadas de infraestrutura do Bluemix
 
-*Última atualização: 15 de março de 2016*
-{: .last-updated}
+
 
 O {{site.data.keyword.Bluemix_notm}} abstrai e oculta
 camadas do sistema operacional e da infraestrutura, para que você não precise gerenciá-las. No entanto, às vezes

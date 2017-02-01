@@ -1,12 +1,13 @@
 ---
 
- 
+
 
 copyright:
 
-  years: 2016
+  years: 2016, 2017
+lastupdated: "2016-03-15"
 
- 
+
 
 ---
 
@@ -14,8 +15,7 @@ copyright:
 
 #  Bluemix 基础架构层
 
-*上次更新时间：2016 年 3 月 15 日*
-{: .last-updated}
+
 
 {{site.data.keyword.Bluemix_notm}} 抽象化并隐藏操作系统和基础架构层，这样您就无需对这些内容进行管理。但是，有时您可能希望了解有关应用程序的操作系统和中间件的更多信息。
 {:shortdesc}

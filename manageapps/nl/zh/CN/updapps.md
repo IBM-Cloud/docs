@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-08-25"
 
 ---
 
@@ -13,9 +14,6 @@ copyright:
 
 #更新应用程序
 {: #updatingapps}
-
-上次更新时间：2016 年 8 月 25 日
-{: .last-updated}
 
 
 您可以使用 cf push 命令或 {{site.data.keyword.Bluemix}} DevOps Services 来更新 {{site.data.keyword.Bluemix_notm}} 中的应用程序。在许多情况下，即便对于内置 buildpack（例如 Node.js），也必须提供 -c 参数来指定用于启动应用程序的命令。
@@ -37,7 +35,7 @@ copyright:
 	1. 转至 **{{site.data.keyword.avatar}}** 图标 ![Avatar 图标](../icons/i-avatar-icon.svg) &gt; **管理组织** &gt; **查看组织详细信息** &gt; **编辑组织** &gt; **域**.
 
 	2. 在**域**选项卡上，单击**添加域**，输入定制域名，然后单击**保存**。
-	
+
 	**注**：例如，可以使用 `mycompany.com` 将路径 `www.mycompany.com` 与应用程序相关联。还可以使用 `example.mycompany.com` 将路径 `www.example.mycompany.com` 与应用程序相关联。
 
   2. 将包含定制域的路径添加到应用程序。
@@ -47,7 +45,7 @@ copyright:
 	2. 从**查看应用程序**菜单中，选择**编辑路径和访问权**。
 
 	3. 单击**添加路径**，然后指定要用于应用程序的路径。
-	4. 单击**保存**。 
+	4. 单击**保存**。
 
 * 使用 cf 命令行界面：
 
@@ -85,15 +83,15 @@ cf map-route myapp mydomain -n host_name
     *host_name*
 
         要用于应用程序的路径中的主机名。
-        
+
     *mycontainergroup*
-    
-        对于容器组，为容器组的名称。  
+
+        对于容器组，为容器组的名称。
 
 
 在 {{site.data.keyword.Bluemix_notm}} 中配置定制域后，必须将该定制域映射到您注册的 DNS 服务器上的 {{site.data.keyword.Bluemix_notm}} 系统域：
 
-  1. 为 DNS 服务器上的定制域名设置“CNAME”记录。用于设置 CNAME 记录的步骤根据 DNS 提供程序而变化。例如，如果使用的是 GoDaddy，请遵循 GoDaddy 中的 [Domains Help](https://www.godaddy.com/help/add-a-cname-record-19236){: new_window} 指南。
+  1. 为 DNS 服务器上的定制域名设置“CNAME”记录。用于设置 CNAME 记录的步骤根据 DNS 提供程序而变化。例如，如果使用的是 GoDaddy，请遵循 GoDaddy 中的 [Domains Help ![外部链接图标](../icons/launch-glyph.svg)](https://www.godaddy.com/help/add-a-cname-record-19236){: new_window} 指南。
   2. 将定制域名映射到运行应用程序的 {{site.data.keyword.Bluemix_notm}} 区域的安全端点。使用以下区域端点来提供在 {{site.data.keyword.Bluemix_notm}} 中分配给您组织的 URL 路径：
 
     * US-SOUTH：`secure.us-south.bluemix.net`
@@ -297,5 +295,5 @@ cf delete Blue -f
 ## 相关链接
 {: #general}
 
-* [蓝绿部署](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
-* [IBM {{site.data.keyword.Bluemix_notm}} DevOps Services](https://hub.jazz.net/){:new_window}
+* [Blue-green deployments ![外部链接图标](../icons/launch-glyph.svg)](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
+* [IBM {{site.data.keyword.Bluemix_notm}} DevOps Services ![外部链接图标](../icons/launch-glyph.svg)](https://hub.jazz.net/){:new_window}
