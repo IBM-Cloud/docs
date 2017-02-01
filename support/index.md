@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
   
-lastupdated: "2017-01-11"
+lastupdated: "2017-01-02"
 
 ---
 
@@ -178,9 +178,11 @@ Levels | Free |  Basic | Standard | Premium
 --- | --- | --- | --- | --- |
 Description | Support for all trial customers of Bluemix.  |  Support for non-production environments or workloads where traditional severities and response times are not needed. | Support for environments with a limited number of business-critical applications. {{site.data.keyword.Bluemix_notm}} Dedicated and {{site.data.keyword.Bluemix_notm}} Local customers receive standard support. | Support for mission-critical environments that have a strategic dependence on {{site.data.keyword.Bluemix_notm}}. 
 Severity 1-4 support |  N/A | N/A | Included | Included 
-Support language | English | English | English | English
+Support language | English | English | English, Japanese | English, Japanese
 Assigned client success manager (CSM) | Not included | Not included | Not included | Included at<br> 8 hours per week
 {: caption="Table 1. Support levels" caption-side="top"}
+
+**Important:** Support for the Japanese lanugage is available for severity 2-4 tickets from 9 a.m. - 5 p.m. JST. Community and Third-party services are excluded.
 
 ### Opening a support ticket
 {: #open-ticket}
