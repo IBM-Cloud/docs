@@ -10,7 +10,7 @@ lastupdated: "2017-01-31"
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-## About IBM Hybrid Connect
+# About IBM {{site.data.keyword.HybridConnect_short}}
 {: #about_hybridconnect}
 
 {{site.data.keyword.HybridConnect_full}} is a Bluemix service, which is part of IBM Connect to Cloud. It connects your on-premises IBM software products to your {{site.data.keyword.HybridConnect_short}} service and provides insights into your running inventory and runtime usage metrics.
@@ -34,7 +34,7 @@ To use the IBM Hybrid Connect capabilities, complete the following steps:
 
 
 
-### How it works
+## How it works
 {: #hybridconnect_howitworks}
 The {{site.data.keyword.HybridConnect_full}} service integrates with your on-premises IBM software products to gather and display runtime product information and usage metrics. Initially, a subset of IBM software products is enabled to integrate with this service. When enabled and configured, on-premise software products periodically send startup and usage information. The information is stored in relation to this service instance through the configured credentials. You can use the service instance dashboard to view the information within Bluemix.
 
@@ -43,14 +43,14 @@ The {{site.data.keyword.HybridConnect_short}} solution includes multiple compone
 ![{{site.data.keyword.HybridConnect_full}} architecture](images/architecture_hybridconnect.png "{{site.data.keyword.HybridConnect_full}} architecture").  
 
 
-### Organizations and spaces
+## Organizations and spaces
 {: #hybridconnect_orgs}
 Your {{site.data.keyword.HybridConnect_full}} service is associated with a single organization and space and has unique credentials. You must set up at least one organization and space. If you want to separate the data, for example, to limit access to specific individuals, you can create multiple spaces within an organization with one service instance in each space. Each service instance has unique credentials that you need to provide for your IBM software products.
 
 Information for the products that are configured with a set of credentials is only visible within the service with those credentials. Multiple services can be created to separate the data if needed, each with unique credentials.
 
 
-### Service dashboard
+## Service dashboard
 {: #service_dashboard}
 After you create your service instance, you are directed to the service dashboard. You can always return to the service dashboard by clicking the service icon in your organization dashboard. From the service dashboard, you can access the following items:
 
@@ -63,7 +63,7 @@ After you create your service instance, you are directed to the service dashboar
 If there are no registered products, a message is shown.
 ![Service dashboard with no registered products](images/NoRegisteredProducts.jpg "Service dashboard with no registered products")  
 
-### Product inventory
+## Product inventory
 {: #hybridconnect_products}
 After you configure your products to send data to {{site.data.keyword.HybridConnect_short}}, you can view your inventory by selecting **Manage** in the service dashboard.
 
@@ -81,7 +81,7 @@ To show product instances of a single product, select that product from the **Pr
 In the example, the list of product instances is filtered to show only the instances of IBM Product ABC. You can see your selection at the top of the window.
 
 
-### Product instance information
+## Product instance information
 {: #hybridconnect_productinstances}
 When a product instance is selected, the *Details* pane is displayed on the right side. The Details pane shows details of the product instance and the usage information for that instance.
 
@@ -105,7 +105,7 @@ The product instance also provides the following optional information:
 
 ![Product instance details - Component tab](images/instancedetails-comps.png "Product instance details - Component tab") 
 
-### Usage information
+## Usage information
 {: #hybridconnect_usage}
 The usage information is shown on the **Usage** tab. Use the two drop-down lists to select the metric to display (if the product instance sends more than one metric) and the time period to be displayed.
 
@@ -116,7 +116,7 @@ The first section shows the average maximum, average, average minimum, and total
 A message is shown if there is no data for that time period. For example, a stopped instance would not provide data and no data will be shown for the time period when it was stopped. Other time periods can have usage to display. Change the time period in the drop-down to see other time periods.
 
 
-### Searching 
+## Searching 
 {: #hybridconnect_search}
 The **Product instance** pane provides a basic search capability to filter the product list. In the search field, type in the string that you want to use for the search. The search can be done only for product instance data (that is, the information in the **Details** tab). In the following example, from all product instances, the display is filtered to show only product instances that have product instance data that contains 1.4. Only one instance in the list contains 1.4, IBM Product XYZ within the version attribute. The attribute that the search string is found in and the value of the search string are highlighted.
 
