@@ -24,7 +24,7 @@ et le déployer dans {{site.data.keyword.Bluemix_notm}}. Il nécessite une confi
 quel utilisateur cliquant sur le lien Déployer dans
 {{site.data.keyword.Bluemix_notm}} peut cliquer sur le lien situé dans
 la bannière pour essayer de déployer son application à l'aide d'une chaîne
-d'outils. 
+d'outils.
 
 Lorsqu'un utilisateur clique sur votre bouton, les actions suivantes se produisent : 
 
@@ -169,14 +169,15 @@ Le fichier manifeste vous permet d'indiquer :
 	<li> Si l'application doit être construite pour pouvoir être déployée, vous devez inclure un fichier de génération dans votre référentiel. Si
 un fichier script de génération est détecté dans le répertoire racine du
 référentiel, une génération automatisée du code est déclenchée avant le
-déploiement.
+déploiement. 
 	
 	Générateurs pris en charge : 
 	    <ul>
 		<li> <a href="http://ant.apache.org/manual/using.html" target="_blank">Ant :</a> /<code>build.xml</code>, qui génère la sortie dans le dossier <code>./output/</code> </li>
-		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank">Gradle :</a> <code>/build.gradle</code>, qui
-génère la sortie dans le dossier <code>. </code> </li>
-		<li> <a href="http://gruntjs.com/getting-started#the-gruntfile" target="_blank">Grunt :</a> <code>/Gruntfile.js</code>, qui génère la sortie dans le dossier <code>.</code> </li>
+		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank">Gradle :</a> <code>/build.gradle</code>, qui génère la sortie dans le dossier <code>.
+</code> </li>
+		<li> <a href="http://gruntjs.com/getting-started#the-gruntfile" target="_blank">Grunt :</a> <code>/Gruntfile.js</code>,
+qui génère la sortie dans le dossier <code>.</code> </li>
 		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven" target="_blank">Maven :</a> <code>/pom.xml</code>, qui génère la sortie dans le dossier <code>./target/</code></li>
 	   </ul>
 	</li>	
@@ -193,7 +194,7 @@ génère la sortie dans le dossier <code>. </code> </li>
 </ol> </li>
 	<li>Pour déployer une application dans un conteneur à l'aide d'<strong>IBM
 Containers</strong>, vous devez inclure un document Dockerfile dans le répertoire
-racine du référentiel, et, dans un répertoire <code>.bluemix</code>, inclure un fichier <code>pipeline.yml</code>.
+racine du référentiel, et, dans un répertoire <code>.bluemix</code>, inclure un fichier <code>pipeline.yml</code>. 
 	<ul>
 	    <li>Le document Dockerfile agit comme une sorte de script de génération
 pour l'application. Si un document Dockerfile est détecté dans le référentiel,

@@ -63,6 +63,7 @@ Prenez connaissance des remarques suivantes relatives à Desktop Sync :
 * Desktop Sync s'exécute sur les systèmes d'exploitation suivants :
   * Windows 7 ou 8
   * Mac OS X version 10.9 ou ultérieure
+         
       **Remarque :** Windows requiert .NET Framework version 4.5. Si .NET n'est pas installé, vous êtes invité à l'installer lorsque
 vous installez l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} Live Sync.  
 * Il n'est pas nécessaire de cloner votre référentiel Git.
@@ -672,7 +673,7 @@ bl stop –l “launchConfigurations/maconfiglancement.launch”
 
 ># Liens connexes {:class="linklist"}
 >## Tutoriels et exemples {:id="samples"}
->* [Testez et déboguez une application Node.js avec Bluemix Live Sync](https://hub.jazz.net/tutorials/livesync)
+>* [Test and debug a Node.js app with Bluemix Live Sync](https://hub.jazz.net/tutorials/livesync)
 >
 ># Liens connexes {:class="linklist"}
 >## Liens connexes {:id="general"}

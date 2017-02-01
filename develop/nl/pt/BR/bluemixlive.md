@@ -56,8 +56,8 @@ Se você estiver desenvolvendo um aplicativo Java que esteja em execução no Li
 O Desktop Sync tem as considerações a seguir:
 * O Desktop Sync é executado nestes sistemas operacionais:
   * Windows 7 ou 8
-  * Mac OS X versão 10.9 ou mais recente
-**Nota:** o Windows requer .NET Framework versão 4.5. Se o .NET não estiver instalado, sua instalação será solicitada durante a instalação da interface de linha de comandos (CLI) do {{site.data.keyword.Bluemix_notm}} Live Sync.  
+  * Mac OS X versão 10.9 ou mais recente   
+      **Nota:** o Windows requer o .NET Framework versão 4.5. Se o .NET não estiver instalado, sua instalação será solicitada durante a instalação da interface de linha de comandos (CLI) do {{site.data.keyword.Bluemix_notm}} Live Sync.  
 * Não é necessário clonar seu repositório Git.
 * Não importa o tipo de aplicativo que você está desenvolvendo, é possível sincronizar seu projeto de desktop com a área de trabalho de nuvem.
 * Se seu aplicativo for gravado em Node.js, será possível propagar as mudanças para aplicativos em execução.
@@ -510,7 +510,7 @@ bl create -n myNewProject --public
 ```
 {: pre}
 
-## Barra de Status
+## Status
 {: bl_status}
 
 ```

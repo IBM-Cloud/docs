@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-29"
+lastupdated: "2016-12-21"
 
 ---
 
@@ -221,8 +221,7 @@ CF_ORGANIZATION_ID	| GUID da organização
 CF_SPACE |	Nome de espaço
 CF_SPACE_ID |	GUID do espaço
 CF_APP	| Nome do app
-
-*Tabela - Variáveis de ambiente*
+{: caption="Table 1. Environment variables" caption-side="top"}
 
 **GERANDO UM ARQUIVO YAML A PARTIR DE UM PIPELINE** 
 

@@ -175,7 +175,7 @@ il servizio di memorizzazione nella cache dei dati. Puoi trovare un elenco dei p
 </pre>
    </li>
    </ul>
-	<li> Se occorre creare l'applicazione prima che possa essere distribuita, devi includere un file di build nel tuo repository. Se viene rilevato un file script di build nella directory root del repository, viene attivato un build automatico del codice prima della distribuzione.
+	<li> Se occorre creare l'applicazione prima che possa essere distribuita, devi includere un file di build nel tuo repository. Se viene rilevato un file script di build nella directory root del repository, viene attivato un build automatico del codice prima della distribuzione. 
 	
 	Builder supportati: 
 	    <ul>
@@ -197,7 +197,7 @@ crea l'output nella cartella <code>./target/</code></li>
 <li>Nella directory root del tuo progetto, crea una directory <code>.bluemix</code>.</li>
 <li>Carica il file <code>pipeline.yml</code> nel repository <code>.bluemix</code>.</li>
 </ol> </li>
-	<li>Per distribuire un'applicazione in un contenitore tramite <strong>IBM Containers</strong>, devi includere Dockerfile nella directory root del repository e un file <code>pipeline.yml</code> in una directory <code>.bluemix</code>.
+	<li>Per distribuire un'applicazione in un contenitore tramite <strong>IBM Containers</strong>, devi includere Dockerfile nella directory root del repository e un file <code>pipeline.yml</code> in una directory <code>.bluemix</code>. 
 	<ul>
 	    <li>Il Dockerfile agisce come una sorta di script di build per l'applicazione. Se un Dockerfile viene rilevato nel repository, l'applicazione viene integrata automaticamente in un'immagine prima che venga distribuita in un contenitore. Se la stessa applicazione deve essere creata prima di essere integrata in un'immagine, includi uno script di build per l'applicazione insieme a un Dockerfile, come descritto in precedenza.</li>
 	    <li> Per saperne di più sulla creazione dei Dockerfile, <a href="https://docs.docker.com/reference/builder/" target="_blank">vedi la documentazione di Docker</a>. </li>

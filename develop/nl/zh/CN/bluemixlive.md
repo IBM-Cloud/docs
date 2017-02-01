@@ -50,6 +50,7 @@ lastupdated: "2016-10-19"
 * “桌面同步”在以下这些操作系统上运行：
   * Windows 7 或 8
   * Mac OS X V10.9 或更高版本
+         
       **注：**Windows 需要 .NET Framework V4.5。如果未安装 .NET，那么在安装 {{site.data.keyword.Bluemix_notm}} Live Sync 命令行界面 (CLI) 时会提示您安装 .NET。  
 * 无需克隆 Git 存储库。
 * 无论开发的应用程序是哪种类型，都可以将桌面项目与云工作空间进行同步。

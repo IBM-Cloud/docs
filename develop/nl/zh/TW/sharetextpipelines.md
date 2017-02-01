@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-29"
+lastupdated: "2016-12-21"
 
 ---
 
@@ -204,7 +204,7 @@ CF_SPACE |	空間名稱
 CF_SPACE_ID |	空間 GUID
 CF_APP	| 應用程式名稱
 
-*表格 - 環境變數*
+{: caption="Table 1. Environment variables" caption-side="top"}
 
 **從管線產生 YAML 檔案** 
 

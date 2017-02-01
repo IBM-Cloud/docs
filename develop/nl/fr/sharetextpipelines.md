@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-29"
+lastupdated: "2016-12-21"
 
 ---
 
@@ -204,8 +204,7 @@ CF_ORGANIZATION_ID	| Identificateur global unique de l'organisation
 CF_SPACE |	Nom de l'espace
 CF_SPACE_ID |	Identificateur global unique de l'espace
 CF_APP	| Nom de l'application
-
-*Tableau - Variables d'environnement*
+{: caption="Table 1. Environment variables" caption-side="top"}
 
 **GENERATION D'UN FICHIER YAML DEPUIS UN PIPELINE** 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-29"
+lastupdated: "2016-12-21"
 
 ---
 
@@ -197,7 +197,7 @@ CF_SPACE |	スペース名
 CF_SPACE_ID |	スペース GUID
 CF_APP	| アプリ名
 
-*表 - 環境変数*
+{: caption="Table 1. Environment variables" caption-side="top"}
 
 **パイプラインからの YAML ファイルの生成** 
 
