@@ -1,12 +1,12 @@
 ---
 
- 
+
 
 copyright:
 
-  2015，2016
+  years: 2015，2017
 
-lastupdated: "2016-03-15" 
+lastupdated: "2016-03-15"
 
 
 
@@ -107,5 +107,3 @@ Utilisez le fichier <code>manifest.yml</code>. Vous pouvez ajouter la variable d
 directement dans le fichier. Pour des informations détaillées, voir
 la rubrique relative aux <a href="https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html#env-block">variables
 d'environnement</a>.</li></ul>
-  
-

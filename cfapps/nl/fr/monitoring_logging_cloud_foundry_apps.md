@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  2016
+  years: 2016, 2017
 
 lastupdated: "2016-09-06"
 
@@ -14,8 +14,7 @@ lastupdated: "2016-09-06"
 {: #monitoring_logging_cloud_foundry_apps}
 
 {{site.data.keyword.Bluemix_notm}} intègre un mécanisme de journalisation qui génère des fichiers journaux pour vos applications, au cours de
-leur exécution. Ces journaux comportent les erreurs, les avertissements et les messages d'information qui sont générés pour votre application. 
-De plus, vous pouvez également configurer votre application pour qu'elle écrive
+leur exécution. Ces journaux comportent les erreurs, les avertissements et les messages d'information qui sont générés pour votre application. De plus, vous pouvez également configurer votre application pour qu'elle écrive
 des messages de journal dans le fichier journal. Pour plus d'informations sur les formats des
 journaux et sur leur affichage, voir [Journalisation pour les applications qui s'exécutent dans Cloud Foundry](/docs/monitor_log/monitoringandlogging.html#logging_for_bluemix_apps).
 

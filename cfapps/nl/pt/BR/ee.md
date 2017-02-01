@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015，2016
+  years: 2015，2017
 
-lastupdated: "2016-10-18"
+lastupdated: "2017-01-11"
 
 ---
 
@@ -28,7 +28,7 @@ para iniciar.
 ## Inscrevendo-se
 {: #ee_start}
 
-Antes de iniciar, inscreva-se para um ID IBM em [https://console.ng.bluemix.net/](https://console.ng.bluemix.net/). Depois disso, efetue login no {{site.data.keyword.Bluemix_notm}} e
+Antes de ser possível iniciar, inscreva-se para um IBMid em [https://console.ng.bluemix.net/ ![Ícone de link externo](../icons/launch-glyph.svg)](https://console.ng.bluemix.net/){: new_window}. Depois disso, efetue login no {{site.data.keyword.Bluemix_notm}} e
 inicie sua avaliação grátis de 30 dias. O {{site.data.keyword.Bluemix_notm}} fornece
 um abono de 2 GB de memória de tempo de execução e 10 instâncias de serviço para sua
 avaliação grátis.
@@ -53,7 +53,7 @@ nos EUA. Você decide construir e executar o app próximo da base do
 usuário, para se beneficiar da latência de rede inferior. Após efetuar login no {{site.data.keyword.Bluemix_notm}}, clique no link Preferências da conta do usuário e, em seguida, selecione a região **Sul dos EUA**. É possível, então, executar as
 etapas a seguir para criar um app:
 
-  1. Acesse **Catálogo** 
+  1. Acesse **Catálogo**
   2. Selecione **Tempos de execução do Cloud Foundry**.
   3. Selecione **SDK for Node.js**.
   4. Digite um nome exclusivo para o seu aplicativo, por exemplo, TestNode e clique em **Criar**. O nome do app deve ser exclusivo
@@ -239,7 +239,7 @@ entre o aplicativo e o serviço.
   <dt>password</dt>
   <dd>b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424</dd>
   <dt>url</dt>
-  <dd>https://d72837bb-b341-4038-9c8e-7f7232916197-bluemix:b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424@d72837bb-b341-4038-9c8e-7f7232916197-bluemix.cloudant.com</dd></dt></dl>
+  <dd>https://d72837bb-b341-4038-9c8e-7f7232916197-bluemix:b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424@d72837bb-b341-4038-9c8e-7f7232916197-bluemix.cloudant.com</dd></dl>
 
   Por exemplo, o app Node.js pode acessar estas
 informações, conforme a seguir:

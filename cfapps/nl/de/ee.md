@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015，20166
+  years: 2015，2017
 
-lastupdated: "2016-10-18"
+lastupdated: "2017-01-11"
 
 ---
 
@@ -25,7 +25,7 @@ Sie können die {{site.data.keyword.Bluemix}}-Benutzerschnittstelle, -Plattform 
 ## Registrieren
 {: #ee_start}
 
-Bevor Sie beginnen können, müssen Sie sich unter [https://console.ng.bluemix.net/](https://console.ng.bluemix.net/) für eine IBM ID registrieren. Anschließend melden Sie sich bei {{site.data.keyword.Bluemix_notm}} an und starten Ihre kostenlose 30-tägige Testversion. {{site.data.keyword.Bluemix_notm}} stellt im Rahmen Ihrer kostenlosen Testversion ein Volumen von 2 GB Laufzeitspeicher und 10 Serviceinstanzen bereit.
+Bevor Sie beginnen können, müssen Sie sich unter [https://console.ng.bluemix.net/ ![Symbol für externen Link](../icons/launch-glyph.svg)](https://console.ng.bluemix.net/){: new_window} für eine IBMid registrieren. Anschließend melden Sie sich bei {{site.data.keyword.Bluemix_notm}} an und starten Ihre kostenlose 30-tägige Testversion. {{site.data.keyword.Bluemix_notm}} stellt im Rahmen Ihrer kostenlosen Testversion ein Volumen von 2 GB Laufzeitspeicher und 10 Serviceinstanzen bereit.
 
 ## Web-App mithilfe der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle erstellen
 {: #ee_appui}
@@ -36,7 +36,7 @@ In {{site.data.keyword.Bluemix_notm}} werden Apps Organisationen und Bereichen z
 
 In diesem Szenario möchten Sie mithilfe von Node.js eine Web-App entwickeln. Sie befinden sich in den USA, ebenso wie die meisten Ihrer App-Benutzer. Sie entscheiden sich, Ihre App in der Nähe Ihrer Benutzerbasis zu erstellen und auszuführen, sodass Sie von der geringeren Netzlatenz profitieren können. Klicken Sie nach der Anmeldung bei {{site.data.keyword.Bluemix_notm}} auf den Link zu den Benutzerkontovorgaben und wählen Sie anschließend die Region **Vereinigte Staaten (Süden)** aus. Führen Sie anschließend die folgenden Schritte zum Erstellen einer App aus:
 
-  1. Rufen Sie **Katalog** auf. 
+  1. Rufen Sie **Katalog** auf.
   2. Wählen Sie **Cloud Foundry-Laufzeiten**.
   3. Wählen Sie **SDK for Node.js** aus.
   4. Geben Sie einen eindeutigen Namen für Ihre App ein. Zum Beispiel: TestNode. Klicken Sie anschließend auf **Erstellen**. Der Name der App muss in der gesamten {{site.data.keyword.Bluemix_notm}}-Umgebung eindeutig sein.
@@ -200,7 +200,7 @@ verwenden kann, um eine Verbindung zu dieser Instanz von {{site.data.keyword.clo
   <dt>password (Kennwort)</dt>
   <dd>b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424</dd>
   <dt>url (URL)</dt>
-  <dd>https://d72837bb-b341-4038-9c8e-7f7232916197-bluemix:b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424@d72837bb-b341-4038-9c8e-7f7232916197-bluemix.cloudant.com</dd></dt></dl>
+  <dd>https://d72837bb-b341-4038-9c8e-7f7232916197-bluemix:b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424@d72837bb-b341-4038-9c8e-7f7232916197-bluemix.cloudant.com</dd></dl>
 
   Beispiel: Ihre Node.js-App könnte wie folgt auf diese Informationen zugreifen:
   ```

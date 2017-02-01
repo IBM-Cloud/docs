@@ -1,16 +1,16 @@
 ---
 
- 
+
 
 copyright:
 
-  years: 2015，2016
+  years: 2015，2017
 
-lastupdated: "2016-04-18" 
+lastupdated: "2016-04-18"
 
 ---
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
 # Criando apps Cloud Foundry
@@ -92,6 +92,7 @@ aplicativo é movido ou excluído. Use um dos serviços de armazenamento de dado
 por uma conta para teste. Os limites
 são os seguintes:
 <table style="width:100%">
+<caption>Tabela 1. Limites de recurso do {{site.data.keyword.Bluemix_notm}} para uma conta para teste</caption>
   <th>Tipo de recurso</th>	<th>Limite de quantidade</th>
 <tr><td>Número de serviços que são usados em todos os apps</td> <td>10</td>
 <tr><td>Memória usada em todos os apps</td> <td>	2 G</td>

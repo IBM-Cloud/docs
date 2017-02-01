@@ -1,12 +1,12 @@
 ---
 
- 
+
 
 copyright:
 
-  years: 2015，20166
+  years: 2015，2017
 
-lastupdated: "2016-03-15" 
+lastupdated: "2016-03-15"
 
 
 
@@ -93,5 +93,3 @@ Verwenden Sie den Befehl <strong>cf set-env</strong>. Geben Sie beispielsweise d
 </li>
 <li>
 Verwenden Sie die Datei <code>manifest.yml</code>. Sie können die gewünschte Umgebungsvariable und den gewünschten Wert direkt zur Datei hinzufügen. Ausführliche Informationen finden Sie unter <a href="https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html#env-block">Umgebungsvariablen</a>.</li></ul>
-  
-

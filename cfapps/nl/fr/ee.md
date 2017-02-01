@@ -4,9 +4,9 @@
 
 copyright:
 
-  2015，2016
+  years: 2015，2017
 
-lastupdated: "2016-10-18"
+lastupdated: "2017-01-11"
 
 ---
 
@@ -27,7 +27,9 @@ commencer.
 ## Inscription
 {: #ee_start}
 
-Avant de commencer, vous vous inscrivez pour obtenir un IBMid sur [https://console.ng.bluemix.net/](https://console.ng.bluemix.net/). Ensuite, vous vous connectez à {{site.data.keyword.Bluemix_notm}} et commencez votre essai gratuit de 30 jours. {{site.data.keyword.Bluemix_notm}} fournit une franchise de 2 Go de mémoire d'exécution et 10 instances de
+Avant de commencer, vous vous inscrivez pour obtenir un IBMid sur
+[https://console.ng.bluemix.net/
+![icône de lien externe](../icons/launch-glyph.svg)](https://console.ng.bluemix.net/){: new_window}. Ensuite, vous vous connectez à {{site.data.keyword.Bluemix_notm}} et commencez votre essai gratuit de 30 jours. {{site.data.keyword.Bluemix_notm}} fournit une franchise de 2 Go de mémoire d'exécution et 10 instances de
 service dans le cadre de votre essai gratuit.
 
 ## Création de votre application Web via l'interface utilisateur {{site.data.keyword.Bluemix_notm}}
@@ -49,7 +51,7 @@ utilisateurs de votre application se situent également aux Etats-Unis. Vous dé
 utilisateur pour pouvoir bénéficier d'un temps d'attente des réseaux plus court. Après vous êtes connecté à {{site.data.keyword.Bluemix_notm}},
 cliquez sur le lien des préférences de compte utilisateur, puis sélectionnez la région **Sud des Etats-Unis**. Ensuite, procédez comme suit pour créer une application :
 
-  1. Accédez à **Catalogue** 
+  1. Accédez à **Catalogue**
   2. Sélectionnez **Contextes d'exécution Cloud Foundry**.
   3. Sélectionnez **SDK for Node.js**.
   4. Entrez un nom unique pour votre application, par exemple TestNode, et cliquez sur **Créer**. Le nom de
@@ -172,8 +174,7 @@ vous êtes prêt à déployer votre application dans {{site.data.keyword.Bluemix
   http://TestNode.mybluemix.net
   ```
 
-Vous pouvez aussi choisir d'autres outils pour construire votre application, comme des outils Eclipse. 
-Pour plus d'informations, voir la page Commencer le codage de votre application
+Vous pouvez aussi choisir d'autres outils pour construire votre application, comme des outils Eclipse. Pour plus d'informations, voir la page Commencer le codage de votre application
 dans l'interface utilisateur {{site.data.keyword.Bluemix_notm}}.
 
 ## Liaison d'un service via l'interface de ligne de commande cf
@@ -228,7 +229,7 @@ utiliser pour se connecter à cette instance de {{site.data.keyword.cloudant}} :
   <dt>password</dt>
   <dd>b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424</dd>
   <dt>url</dt>
-  <dd>https://d72837bb-b341-4038-9c8e-7f7232916197-bluemix:b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424@d72837bb-b341-4038-9c8e-7f7232916197-bluemix.cloudant.com</dd></dt></dl>
+  <dd>https://d72837bb-b341-4038-9c8e-7f7232916197-bluemix:b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424@d72837bb-b341-4038-9c8e-7f7232916197-bluemix.cloudant.com</dd></dl>
 
   Ainsi, votre application Node.js peut accéder à ces informations de la manière suivante :
   ```

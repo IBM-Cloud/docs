@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015，2017
 
-lastupdated: "2016-10-18"
+lastupdated: "2017-01-11"
 
 ---
 
@@ -15,17 +15,17 @@ lastupdated: "2016-10-18"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# 情境：端對端開發
+# 情境：完整開發
 {: #ee}
 
 
-您可以使用 {{site.data.keyword.Bluemix}} 使用者介面、平台及工具選擇來建置、執行及部署應用程式。請遵循這份端對端開發情境以便開始使用。
+您可以使用 {{site.data.keyword.Bluemix}} 使用者介面、平台及工具選擇來建置、執行及部署應用程式。請遵循這份完整開發情境以便開始使用。
 {:shortdesc}
 
 ## 註冊
 {: #ee_start}
 
-開始之前，您必須先從 [https://console.ng.bluemix.net/](https://console.ng.bluemix.net/) 註冊 IBM ID。然後就可以登入 {{site.data.keyword.Bluemix_notm}}，並開始免費試用 30 天。{{site.data.keyword.Bluemix_notm}} 提供 2 GB 運行環境記憶體和 10 個服務實例的額度供您免費試用。
+開始之前，您必須先從 [https://console.ng.bluemix.net/ ![外部鏈結圖示](../icons/launch-glyph.svg)](https://console.ng.bluemix.net/){: new_window} 註冊 IBM ID。然後就可以登入 {{site.data.keyword.Bluemix_notm}}，並開始免費試用 30 天。{{site.data.keyword.Bluemix_notm}} 提供 2 GB 運行環境記憶體和 10 個服務實例的額度供您免費試用。
 
 ## 使用 {{site.data.keyword.Bluemix_notm}} 使用者介面建立 Web 應用程式
 {: #ee_appui}
@@ -36,7 +36,7 @@ lastupdated: "2016-10-18"
 
 針對此情境，您想要使用 Node.js 開發 Web 應用程式。假設您位在美國，而您大部分的應用程式使用者也在美國。您決定在接近使用者族群的地方建置及執行應用程式，以便得到較低網路延遲的好處。登入 {{site.data.keyword.Bluemix_notm}} 之後，請按一下使用者帳戶喜好設定鏈結，然後選取**美國南部**地區。然後，您可以採取下列步驟來建立應用程式：
 
-  1. 移至**型錄**。 
+  1. 移至**型錄**。
   2. 選取 **Cloud Foundry 運行環境**。
   3. 選取 **SDK for Node.js**。
   4. 為您的應用程式鍵入唯一名稱（例如，TestNode），然後按一下**建立**。應用程式名稱在整個 {{site.data.keyword.Bluemix_notm}} 環境中必須是唯一的。
@@ -179,7 +179,7 @@ cf bind-service TestNode cloudant100
   <dt>password</dt>
   <dd>b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424</dd>
   <dt>url</dt>
-  <dd>https://d72837bb-b341-4038-9c8e-7f7232916197-bluemix:b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424@d72837bb-b341-4038-9c8e-7f7232916197-bluemix.cloudant.com</dd></dt></dl>
+  <dd>https://d72837bb-b341-4038-9c8e-7f7232916197-bluemix:b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424@d72837bb-b341-4038-9c8e-7f7232916197-bluemix.cloudant.com</dd></dl>
 
   例如，您的 Node.js 應用程式可能會存取此資訊，如下所示：
 
@@ -232,7 +232,7 @@ var create_message = function(req, res) {
 ## 計算應用程式成本
 {: #ee_billing}
 
-您的 30 天免費試用已過期，但還想要繼續使用 {{site.data.keyword.Bluemix_notm}}。您必須新增信用卡資訊，以成為「隨收隨付制」帳戶或「訂閱」帳戶，才能繼續使用 {{site.data.keyword.Bluemix_notm}}。不過，即使您轉換成付費帳戶，{{site.data.keyword.Bluemix_notm}} 還是會針對大部分的運行環境架構和服務提供免費額度。除非用量超過免費額度，否則 {{site.data.keyword.Bluemix_notm}} 不會向您收費。
+您的 30 天免費試用已過期，但還想要繼續使用 {{site.data.keyword.Bluemix_notm}}。您必須新增信用卡資訊，以成為「隨收隨付制」帳戶或「訂閱」帳戶，才能繼續使用 {{site.data.keyword.Bluemix_notm}}。不過，即使您轉換為付費帳戶，{{site.data.keyword.Bluemix_notm}} 還是會針對大部分的運行環境架構和服務提供免費額度。除非用量超過免費額度，否則 {{site.data.keyword.Bluemix_notm}} 不會向您收費。
 
 {{site.data.keyword.Bluemix_notm}} 提供預估器和計算機，可讓您查看應用程式成本。您可以使用下列方式查看 TestNode 的成本：
 
