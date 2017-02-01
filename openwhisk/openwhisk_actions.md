@@ -539,7 +539,7 @@ Therefore parameters that are passed to the action sequence are only available t
 The result of the first action in the sequence becomes the input JSON object to the second action in the sequence (and so on).
 This object does not include any of the parameters originally passed to the sequence unless the first action explicitly includes them in its result.
 Input parameters to an action are merged with the action's default parameters, with the former taking precedence and overriding any matching default parameters.
-For more information about invoking action sequences with multiple named parameters, see [Setting default parameters](./openwhisk_actions.html#openwhisk_binding_actions).
+For more information about invoking action sequences with multiple named parameters, see [Setting default parameters](./openwhisk_actions.md#setting-default-parameters).
 
 ## Creating Python actions
 {: #openwhisk_actions_python}
