@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2015，2016
+  years: 2015，2017
 
 lastupdated: "2016-06-20"
 
@@ -19,7 +19,7 @@ lastupdated: "2016-06-20"
 
 *バージョン:* 1.4.0
 
-コマンド・ライン・インターフェース (CLI) を使用して、{{site.data.keyword.vpn_full}} サービスの構成と管理を行うことができます。 {{site.data.keyword.vpn_short}} CLI プラグインには、2 つのバージョンがあります。1 つは Cloud Foundry CLI プラグインで使用するためのものであり、もう 1 つは {{site.data.keyword.Bluemix}} CLI プラグインで使用するためのものです。どちらのバージョンのプラグインも同じ機能を提供します。  
+コマンド・ライン・インターフェース (CLI) を使用して、{{site.data.keyword.vpn_full}} サービスの構成と管理を行うことができます。 {{site.data.keyword.vpn_short}} CLI プラグインには、2 つのバージョンがあります。1 つは Cloud Foundry CLI プラグインで使用するためのものであり、もう 1 つは {{site.data.keyword.Bluemix}} CLI プラグインで使用するためのものです。どちらのバージョンのプラグインも同じ機能を提供します。
 {:shortdesc}
 
 {{site.data.keyword.vpn_short}} プラグインには、Windows、MAC、および Linux オペレーティング・システム用があります。環境に適したものを使用してください。

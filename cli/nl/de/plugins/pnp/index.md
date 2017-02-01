@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2016
+  years: 2016, 2017
 
-lastupdated: "2016-10-14"
+lastupdated: "2017-01-12"
 
 ---
 
@@ -32,31 +32,31 @@ Zu Beginn installieren Sie IBM Bluemix CLI. Details hierzu finden Sie unter [Blu
 bluemix plugin uninstall private-network-peering
 ```
 ### Lokal installieren
-Laden Sie das Plug-in für privates Netzpeering für Ihre Plattform aus dem [Plug-in-Repository für IBM Bluemix CLI](http://plugins.ng.bluemix.net/ui/repository.html#bluemix-plugins) herunter.
+Laden Sie das Plug-in für privates Netzpeering für Ihre Plattform aus dem [Plug-in-Repository für die IBM Bluemix CLI](http://plugins.ng.bluemix.net/ui/repository.html#bluemix-plugins) herunter.
 
 Installieren Sie das Plug-in für privates Netzpeering mit dem folgenden Befehl:
 
 **Hinweis:** Wechseln Sie entweder zur Position des Plug-ins oder geben Sie sein Verzeichnis an.
 
-* Für das Betriebssystem Microsoft Windows:  
+* Für das Betriebssystem Microsoft Windows:
 
 ```
 bluemix plugin install private-network-peering-windows-amd64.exe
 ```
 
-* Für das Betriebssystem Apple MAC:  
+* Für das Betriebssystem Apple MAC:
 
 ```
 bluemix plugin install private-network-peering-darwin-amd64
 ```
 
-* Für das Betriebssystem Linux:  
+* Für das Betriebssystem Linux:
 
 ```
 bluemix plugin install private-network-peering-linux-amd64
 ```
 
-**Hinweis:** Wenn während der Installation des Plug-ins für das Betriebssystem Linux eine Fehlernachricht angezeigt wird, dass die Genehmigung verweigert wird, dann führen Sie folgenden Befehl aus und ändern Sie die Berechtigungen:  
+**Hinweis:** Wenn während der Installation des Plug-ins für das Betriebssystem Linux eine Fehlernachricht angezeigt wird, dass die Genehmigung verweigert wird, dann führen Sie folgenden Befehl aus und ändern Sie die Berechtigungen:
 
 ```
 chmod a+x ./private-network-peering-linux-amd64
@@ -66,16 +66,16 @@ chmod a+x ./private-network-peering-linux-amd64
 
 Befolgen Sie diese Schritte, um das Plug-in aus dem Bluemix-Repository zu installieren:
 
-1. Fügen Sie den Registry-Endpunkt für das Bluemix-Plug-in hinzu:  
+1. Fügen Sie den Registry-Endpunkt für das Bluemix-Plug-in hinzu:
 	```
 	bluemix plugin repo-add bluemix-bx http://plugins.ng.bluemix.net
-	```  
+	```
 
 2. Führen Sie den folgenden Befehl aus:
 
 	```
 	bluemix plugin install private-network-peering -r bluemix-bx
-	```  
+	```
 
 ## Liste der Befehle für das private Netzpeering
 Folgende Befehle werden unterstützt. Verwenden Sie den Befehl `bluemix network`, um die Liste der verfügbaren Befehle anzuzeigen:
@@ -105,7 +105,7 @@ bluemix network pnp-routers [--verbose (or -v)]
 ######Beispiele für Befehle
 {: #ex1}
 
-Zum Anzeigen von Netzinformationen zu allen Routern:  
+Zum Anzeigen von Netzinformationen zu allen Routern:
 
 	$ bluemix network pnp-routers
 	Listing available routers ...
@@ -117,7 +117,7 @@ Zum Anzeigen von Netzinformationen zu allen Routern:
 	129.41.238.212  default-router  Container  United-Kingdom  ywu@us.ibm.com  demo3
 
 
-Zum Anzeigen ausführlicher Netzinformationen zu allen Routern:  
+Zum Anzeigen ausführlicher Netzinformationen zu allen Routern:
 
 
 	$ bluemix network pnp-routers -v
@@ -215,7 +215,7 @@ bluemix network pnp-show [--verbose (or -v)]
 ######Beispiele für Befehle
 {: #ex4}
 
-Anzeigen von Basisinformationen:  
+Anzeigen von Basisinformationen:
 
 	$ bluemix network pnp-show
 	Listing private network peering connections ...

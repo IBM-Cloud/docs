@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015，2017
 
-lastupdated: "2016-05-12"
+lastupdated: "2017-01-12"
 
 
 
@@ -76,6 +76,7 @@ cf plugins
 使用下表中的索引來參照常用的 dev_mode CLI 指令：
 
 <table summary="dev_mode 指令索引">
+ <caption>表格 1. dev_mode 指令</caption>
  <thead>
  <th colspan="4">dev_mode 指令</th>
  </thead>
@@ -94,8 +95,6 @@ cf plugins
  </tr>
   </tbody>
  </table>
-{: caption="Table 1. dev_mode commands" caption-side="top"}
-
 
 
 ## help
@@ -208,5 +207,5 @@ cf restart-inplace <appName>
 
 ## 相關鏈結
 {: #general}
-* [開發模式 CLI](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){:new_window}
-* [DevOps Web IDE](https://hub.jazz.net/docs/deploy/){:new_window}
+* [Development mode CLI ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){:new_window}
+* [DevOps Web IDE ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://hub.jazz.net/docs/deploy/){:new_window}

@@ -4,9 +4,10 @@
 
 copyright:
 
-  years: 2016
+  years: 2016, 2017
 
-lastupdated: "2016-11-14"
+lastupdated: "2017-01-12"
+
 
 ---
 
@@ -22,7 +23,7 @@ lastupdated: "2016-11-14"
 Cloud Foundry (cf) コマンド・ライン・インターフェース (CLI) は、アプリを管理するための一連のコマンドを提供します。以下の情報では、アプリを管理するために最もよく使用される cf コマンドをリストし、コマンドの名前、オプション、使用法、前提条件、説明、および例を示します。すべての cf コマンドと関連ヘルプ情報をリストするには、`cf help` を使用します。特定のコマンドの詳細なヘルプ情報を表示するには、`cf command_name -h` を使用します。
 {: shortdesc}
 
-**注**: ネットワークに cf コマンドを実行するホストと Cloud Foundry API エンドポイント間の HTTP プロキシー・サーバーが含まれる場合は、`HTTP_PROXY` 環境変数を設定して、プロキシー・サーバーのホスト名または IP アドレスを指定する必要があります。詳しくは、[Using the cf CLI with an HTTP Proxy Server](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html) を参照してください。
+**注**: ネットワークに cf コマンドを実行するホストと Cloud Foundry API エンドポイント間の HTTP プロキシー・サーバーが含まれる場合は、`HTTP_PROXY` 環境変数を設定して、プロキシー・サーバーのホスト名または IP アドレスを指定する必要があります。詳しくは、[Using the cf CLI with an HTTP Proxy Server ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window} を参照してください。
 
 
 ## Cloud Foundry CLI コマンドの索引
@@ -31,53 +32,52 @@ Cloud Foundry (cf) コマンド・ライン・インターフェース (CLI) は
 以下の表の索引を使用して、使用頻度の高い Cloud Foundry コマンドを参照してください。
 
 <table summary="アルファベット順の汎用 Cloud Foundry コマンド (コマンドの詳細情報を表示するリンクが含まれています)">
+ <caption>表 1. 汎用 Cloud Foundry コマンド</caption>
  <thead>
  <th colspan="6">汎用 Cloud Foundry コマンド</th>
  </thead>
  <tbody>
  <tr>
- <td>[api](index.html#cf_api)</td>
- <td>[help](index.html#cf_help)</td>
- <td>[login](index.html#cf_login)</td>
- <td>[stacks](index.html#cf_stacks)</td>
- <td>[target](index.html#cf_target)</td>
- <td>[-v ](index.html#cf_v)</td>
+ <td>[api](/docs/cli/reference/cfcommands/index.html#cf_api)</td>
+ <td>[help](/docs/cli/reference/cfcommands/index.html#cf_help)</td>
+ <td>[login](/docs/cli/reference/cfcommands/index.html#cf_login)</td>
+ <td>[stacks](/docs/cli/reference/cfcommands/index.html#cf_stacks)</td>
+ <td>[target](/docs/cli/reference/cfcommands/index.html#cf_target)</td>
+ <td>[-v ](/docs/cli/reference/cfcommands/index.html#cf_v)</td>
  </tr>
    </tbody>
  </table>
-{: caption="Table 1. General Cloud Foundry commands" caption-side="top"}
 
 
 <table summary="アプリ、スペース、およびサービスを管理するためのアルファベット順のコマンド。各コマンドには、コマンドの詳細を表示するリンクが含まれています。">
+ <caption>表 2. アプリ、スペース、およびサービスを管理するためのコマンド</caption>
  <thead>
  <th colspan="5">アプリ、スペース、およびサービスを管理するためのコマンド</th>
  </thead>
  <tbody>
  <tr>
- <td>[apps](index.html#cf_apps)</td>
- <td>[bind-service](index.html#cf_bind-service)</td>
- <td>[create-service](index.html#cf_create-service)</td>
- <td>[create-space](index.html#cf_create-space)</td>
- <td>[delete](index.html#cf_delete)</td>
+ <td>[apps](/docs/cli/reference/cfcommands/index.html#cf_apps)</td>
+ <td>[bind-service](/docs/cli/reference/cfcommands/index.html#cf_bind-service)</td>
+ <td>[create-service](/docs/cli/reference/cfcommands/index.html#cf_create-service)</td>
+ <td>[create-space](/docs/cli/reference/cfcommands/index.html#cf_create-space)</td>
+ <td>[delete](/docs/cli/reference/cfcommands/index.html#cf_delete)</td>
   </tr>
  <tr>
- <td>[delete-space](index.html#cf_delete-space)</td>
- <td>[events](index.html#cf_events)</td>
- <td>[logs](index.html#cf_logs)</td>
- <td>[marketplace](index.html#cf_marketplace)</td>
- <td>[プッシュ (push)](index.html#cf_push)</td>
+ <td>[delete-space](/docs/cli/reference/cfcommands/index.html#cf_delete-space)</td>
+ <td>[events](/docs/cli/reference/cfcommands/index.html#cf_events)</td>
+ <td>[logs](/docs/cli/reference/cfcommands/index.html#cf_logs)</td>
+ <td>[marketplace](/docs/cli/reference/cfcommands/index.html#cf_marketplace)</td>
+ <td>[push](/docs/cli/reference/cfcommands/index.html#cf_push)</td>
   </tr>
  <tr>
- <td>[スケール (scale)](index.html#cf_scale)</td>
- <td>[services](index.html#cf_services)
- <td>[set-env](index.html#cf_set-env)</td>
+ <td>[scale](/docs/cli/reference/cfcommands/index.html#cf_scale)</td>
+ <td>[services](/docs/cli/reference/cfcommands/index.html#cf_services)
+ <td>[set-env](/docs/cli/reference/cfcommands/index.html#cf_set-env)</td>
  <td>[ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh)</td>
- <td>[stop](index.html#cf_stop)</td>
+ <td>[stop](/docs/cli/reference/cfcommands/index.html#cf_stop)</td>
  </tr>
  </tbody>
  </table>
-{: caption="Table 2. Commands for managing apps, spaces, and services" caption-side="top"}
-
 
 ## cf api
 {: #cf_api}
@@ -90,7 +90,7 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 
 <strong>前提条件</strong>: なし。
 
-<strong>コマンド・オプション</strong>:  
+<strong>コマンド・オプション</strong>:
 
    <dl>
    <dt>BluemixServerURL (オプション)</dt>
@@ -148,7 +148,7 @@ cf bind-service appname service_instance
 
 <strong>前提条件</strong>: `cf api`、`cf login`、`cf target`
 
-<strong>コマンド・オプション</strong>:  
+<strong>コマンド・オプション</strong>:
 
    <dl>
    <dt>appname (必須)</dt>
@@ -177,7 +177,7 @@ cf create-service service_name service_plan service_instance
 
 <strong>前提条件</strong>: `cf api`、`cf login`、`cf target`
 
-<strong>コマンド・オプション</strong>:  
+<strong>コマンド・オプション</strong>:
 
    <dl>
    <dt>service_name (必須)</dt>
@@ -209,7 +209,7 @@ cf create-space space_name [-o] [-q]
 
 <strong>前提条件</strong>: `cf api`、`cf login`
 
-<strong>コマンド・オプション</strong>:  
+<strong>コマンド・オプション</strong>:
 
    <dl>
    <dt>space_name (必須)</dt>
@@ -240,7 +240,7 @@ cf delete appname [-f] [-r]
 
 <strong>前提条件</strong>: `cf api`、`cf login`、`cf target`
 
-<strong>コマンド・オプション</strong>:  
+<strong>コマンド・オプション</strong>:
 
    <dl>
    <dt>appname (必須)</dt>
@@ -291,7 +291,7 @@ cf delete-space space_name [-f]
 
 <strong>前提条件</strong>: `cf api`、`cf login`
 
-<strong>コマンド・オプション</strong>:  
+<strong>コマンド・オプション</strong>:
 
    <dl>
    <dt>space_name (必須)</dt>
@@ -339,7 +339,7 @@ cf events [appname]
 
 <strong>前提条件</strong>: `cf api`、`cf login`、`cf target`
 
-<strong>コマンド・オプション</strong>:  
+<strong>コマンド・オプション</strong>:
 
    <dl>
    <dt>appname</dt>
@@ -366,7 +366,7 @@ cf help [command_name]
 
 <strong>前提条件</strong>: なし。
 
-<strong>コマンド・オプション</strong>:  
+<strong>コマンド・オプション</strong>:
 
    <dl>
    <dt>command_name (オプション)</dt>
@@ -394,7 +394,7 @@ cf help events
 
 {{site.data.keyword.Bluemix_notm}} にログインします。
 
-**注**: フェデレーテッド ID でログインする場合は、シングル・サインオン (SSO) パラメーターを使用してログインする必要があります。
+**注:** [フェデレーテッド ID](/docs/admin/account.html#signup) でログインする場合は、シングル・サインオン (SSO) パラメーターを使用してログインする必要があります。
 
 ```
 cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s space_name] [--skip-ssl-validation]
@@ -525,11 +525,7 @@ cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i in
 <dt>appname (必須)</dt>
 <dd>アプリケーションの名前。</dd>
 <dt>*-b* buildpack_name (オプション)</dt>
-<dd>ビルドパックの名前。buildpack_name
-には、カスタム・ビルドパックの名前または Git URL を指定できます。例え
-ば、`my-buildpack` または
-`https://github.com/heroku/heroku-buildpack-play.git`
-とします。</dd>
+<dd>ビルドパックの名前。buildpack_name には、カスタム・ビルドパックを、名前 (例: liberty-for-java) または Git URL (例: https://github.com/cloudfoundry/java-buildpack.git) で指定するか、または、ブランチまたはタグを伴う Git URL (例えば、v3.3.0 タグの場合は https://github.com/cloudfoundry/java-buildpack.git#v3.3.0) で指定できます。</dd>
 <dt>*-c* start_command (オプション)</dt>
 <dd>アプリケーションの開始コマンド。デフォルトの開始コマンドを使用するには、このオプションに値 null を指定します。</dd>
 <dt>*-f* manifest_path (オプション)</dt>
@@ -671,22 +667,24 @@ cf set-env my_app variable_a 123
 ## cf ssh
 {: #cf_ssh}
 
-アプリケーション・コンテナーに安全にログインします。デフォルトで、SSH は、アプリケーションの最初のインスタンス (インデックスが 0 のインスタンス) を実行しているコンテナーにアクセスします。
+アプリケーション・コンテナーに安全にアクセスします。`cf ssh` コマンドを使用して、特定のアプリケーション・コンテナー・インスタンスでの、対話式 SSH セッションのセットアップ、リモート・コマンドの実行、ファイルの転送、およびポート転送のセットアップを行うことができます。
 
 ```
 cf ssh
 ```
 <strong>前提条件</strong>: `cf api`、`cf login`、`cf target`
 
-アプリケーション・インスタンスへの SSH アクセスを許可するように Cloud Foundry デプロイメントを構成する必要もあります。詳しくは、[Cloud Foundry の SSH アクセスの構成 (Configuring SSH Access for Cloud Foundry)](https://docs.cloudfoundry.org/running/config-ssh.html){:new_window} を参照してください。
+デフォルトでは、Diego アプリケーションには SSH アクセスが有効になります。`cf ssh-enabled` コマンドを使用して SSH アクセスが有効かどうかを検証することができ、アクセスが無効であった場合は `cf enable-ssh` コマンドを使用して有効にすることができます。 
 
 <strong>コマンド・オプション</strong>:
 
 <dl>
 <dt>appname</dt>
-<dd>アプリケーションの名前。SSH が許可されている場合、このオプションを使用して、アプリケーションをホストしている VM と対話式 SSH セッションを開始できます。</dd>
+<dd>アプリケーションの名前。</dd>
+<dt>-c</dt>
+<dd>実行するリモート・コマンドを指定します。</dd>
 <dt>-i</dt>
-<dd>アプリケーションの特定インスタンスを対象にします。</dd>
+<dd>アプリケーションの特定インスタンスを対象にします。指定されないと、アプリケーションの最初のインスタンス (索引 0 のインスタンス) が使用されます。</dd>
 <dt>-L</dt>
 <dd>マシン上の出力ポートをアプリケーション VM 上の入力ポートにバインドするローカル・ポート転送を有効にします。</dd>
 <dt>-N</dt>
@@ -697,12 +695,27 @@ cf ssh
 
 <strong>例</strong>:
 
-アプリケーション `my_app` をホストしている VM と対話式 SSH セッションを開始します。
+`my_app` アプリケーションを実行しているコンテナー・インスタンスとの対話式 SSH セッションを開始します。
 ```
 $ cf ssh my_app
 ```
 {: codeblock}
 
+`my_app` アプリケーション・コンテナー・インスタンス上で単一のコマンドを実行します。
+```
+$ cf ssh my_app -c "ls -l"
+```
+
+`my_app` アプリケーション・コンテナー・インスタンスから単一のファイルを転送します。
+```
+$ cf ssh my_app -c "/bin/cat logs/messages.log" > messages.log
+```
+
+ローカル・マシンの 7777 ポートから `my_app` アプリケーション・コンテナー・インスタンスの 8888 ポートへのポート転送をセットアップします。
+```
+$ cf ssh -N -T -L 7777:localhost:8888 my_app
+
+```
 
 ## cf stacks
 {: #cf_stacks}
@@ -805,7 +818,5 @@ cf -v
 ## 関連リンク
 {: #general}
 
-* [Cloud Foundry CLI のダウンロード](https://github.com/cloudfoundry/cli/releases)
-{:new_window}
-* [クイック・リファレンス・カード - cf コマンド](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html)
-{:new_window}
+* [Cloud Foundry CLI のダウンロード ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}
+* [クイック・リファレンス・カード - cf コマンド ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html){: new_window}

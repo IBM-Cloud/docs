@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2016
+  years: 2016, 2017
 
-lastupdated: "2016-10-14"
+lastupdated: "2017-01-12"
 
 ---
 
@@ -38,25 +38,25 @@ bluemix plugin uninstall private-network-peering
 
 **附註**：請切換至外掛程式的位置，或指定外掛程式位置的路徑。
 
-* 若為 Microsoft Windows OS：  
+* 若為 Microsoft Windows OS：
 
 ```
 bluemix plugin install private-network-peering-windows-amd64.exe
 ```
 
-* 若為 Apple MAC OS：  
+* 若為 Apple MAC OS：
 
 ```
 bluemix plugin install private-network-peering-darwin-amd64
 ```
 
-* 若為 Linux OS：  
+* 若為 Linux OS：
 
 ```
 bluemix plugin install private-network-peering-linux-amd64
 ```
 
-**附註**：當您安裝 Linux OS 的外掛程式時，如果看到顯示拒絕許可權的錯誤訊息，請執行下列指令，並變更許可權：  
+**附註**：當您安裝 Linux OS 的外掛程式時，如果看到顯示拒絕許可權的錯誤訊息，請執行下列指令，並變更許可權：
 
 ```
 chmod a+x ./private-network-peering-linux-amd64
@@ -66,16 +66,16 @@ chmod a+x ./private-network-peering-linux-amd64
 
 遵循下列步驟，以從 Bluemix 儲存庫安裝外掛程式：
 
-1. 新增 Bluemix 外掛程式登錄端點：  
+1. 新增 Bluemix 外掛程式登錄端點：
 	```
 	bluemix plugin repo-add bluemix-bx http://plugins.ng.bluemix.net
-	```  
+	```
 
 2. 請執行下列指令：
 
 	```
 	bluemix plugin install private-network-peering -r bluemix-bx
-	```  
+	```
 
 ## 專用網路對等作業指令清單
 支援下列指令。使用 `bluemix network` 指令，以查看可用的指令清單：
@@ -105,7 +105,7 @@ bluemix network pnp-routers [--verbose (or -v)]
 ######指令範例
 {: #ex1}
 
-若要檢視所有路由器的網路資訊，請執行下列指令：  
+若要檢視所有路由器的網路資訊，請執行下列指令：
 
 	$ bluemix network pnp-routers
 	Listing available routers ...
@@ -117,7 +117,7 @@ bluemix network pnp-routers [--verbose (or -v)]
 	129.41.238.212  default-router  Container  United-Kingdom  ywu@us.ibm.com  demo3
 
 
-若要檢視所有路由器的詳細網路資訊，請執行下列指令：  
+若要檢視所有路由器的詳細網路資訊，請執行下列指令：
 
 
 	$ bluemix network pnp-routers -v
@@ -215,7 +215,7 @@ bluemix network pnp-show [--verbose (or -v)]
 ######指令範例
 {: #ex4}
 
-檢視基本資訊：  
+檢視基本資訊：
 
 	$ bluemix network pnp-show
 	Listing private network peering connections ...

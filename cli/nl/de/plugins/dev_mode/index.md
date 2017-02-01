@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015，20166
+  years: 2015，2017
 
-lastupdated: "2016-05-12"
+lastupdated: "2017-01-12"
 
 
 
@@ -76,6 +76,7 @@ cf plugins
 Verwenden Sie den Index in der folgenden Tabelle als Referenz für die häufig verwendeten Befehle der CLI 'dev_mode':
 
 <table summary="Index der Befehle für dev_mode">
+<caption>Tabelle 1. Befehle für dev_mode</caption>
  <thead>
  <th colspan="4">Befehle für dev_mode</th>
  </thead>
@@ -94,8 +95,6 @@ Verwenden Sie den Index in der folgenden Tabelle als Referenz für die häufig v
  </tr>
   </tbody>
  </table>
-{: caption="Table 1. dev_mode commands" caption-side="top"}
-
 
 
 ## help
@@ -210,5 +209,5 @@ cf restart-inplace <App-Name>
 
 ## Zugehörige Links
 {: #general}
-* [Befehlszeilenschnittstelle (CLI) für Entwicklungsmodus](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){:new_window}
-* [DevOps-Web-IDE](https://hub.jazz.net/docs/deploy/){:new_window}
+* [Befehlszeilenschnittstelle (CLI) für Entwicklungsmodus ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){:new_window}
+* [DevOps-Web-IDE ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://hub.jazz.net/docs/deploy/){:new_window}

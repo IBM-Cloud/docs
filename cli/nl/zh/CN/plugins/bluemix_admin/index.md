@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015, 2017
 
-lastupdated: "2016-10-26"
+lastupdated: "2017-01-12"
 
 ---
 
@@ -19,7 +19,7 @@ lastupdated: "2016-10-26"
 
 您可以将 Cloud Foundry 命令行界面与 {{site.data.keyword.Bluemix_notm}} 管理 CLI 插件一起使用来管理 {{site.data.keyword.Bluemix_notm}} Local 或 {{site.data.keyword.Bluemix_notm}} Dedicated 环境。例如，可以从 LDAP 注册表添加用户。如果要查看有关管理 {{site.data.keyword.Bluemix_notm}} Public 帐户的信息，请参阅[管理](/docs/admin/adminpublic.html#administer)。
 
-开始之前，请安装 cf 命令行界面。{{site.data.keyword.Bluemix_notm}} 管理 CLI 插件需要 cf V6.11.2 或更高版本。[下载 Cloud Foundry 命令行界面](https://github.com/cloudfoundry/cli/releases){: new_window}
+开始之前，请安装 cf 命令行界面。{{site.data.keyword.Bluemix_notm}} 管理 CLI 插件需要 cf V6.11.2 或更高版本。[下载 Cloud Foundry 命令行界面 ![外部链接图标](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}
 
 **限制：**Cygwin 不支持 Cloud Foundry 命令行界面。请在非 Cygwin 命令行窗口中使用 Cloud Foundry 命令行界面。
 
@@ -92,7 +92,10 @@ cf login
 </li>
 </ol>
 
-## 添加用户
+## 管理用户
+{: #admin_users}
+
+### 添加用户
 {: #admin_add_user}
 
 要将用户从环境的用户注册表添加到 {{site.data.keyword.Bluemix_notm}} 环境，请使用以下命令：
@@ -115,7 +118,7 @@ cf ba add-user <user_name> <organization>
 
 <!-- staging-only commands start. Live for interconnect -->
 
-## 搜索用户
+### 搜索用户
 {: #admin_search_user}
 
 要搜索用户，请使用以下命令搭配可选的搜索过滤参数（name、permission、organization 和 role）：
@@ -140,7 +143,7 @@ cf ba search-users -name=<user_name_value> -permission=<permission_value> -organ
 
 **提示：****ba search-users** 命令名较长，您还可以使用 **ba su** 作为其别名。
 
-## 为用户设置许可权
+### 为用户设置许可权
 {: #admin_setperm_user}
 
 要为指定用户设置许可权，请使用以下命令：
@@ -165,7 +168,7 @@ cf ba set-permissions <user_name> <permission> <access>
 
 <!-- staging-only commands end -->
 
-## 除去用户
+### 除去用户
 {: #admin_remov_user}
 
 要从 {{site.data.keyword.Bluemix_notm}} 环境除去用户，请使用以下命令：
@@ -184,7 +187,7 @@ cf ba remove-user <user_name>
 
 **提示：****ba remove-user** 命令名较长，您还可以使用 **ba ru** 作为其别名。
 
-## 允许管理员添加用户
+### 允许管理员添加用户
 {: #clius_emau}
 
 如果您在 {{site.data.keyword.Bluemix_notm}} 环境中有 **Superuser** 许可权，那么可以允许组织管理员向其管理的组织添加用户。要使管理员能够添加用户，请使用以下命令：
@@ -196,7 +199,7 @@ cf ba enable-managers-add-users
 
 **提示：****ba enable-managers-add-users** 命令名较长，您还可以使用 **ba emau** 作为其别名。
 
-## 禁止管理员添加用户
+### 禁止管理员添加用户
 {: #clius_dmau}
 
 如果在 {{site.data.keyword.Bluemix_notm}} 环境中已允许组织管理员通过 **enable-managers-add-users** 命令向其管理的组织添加用户，并且您有 **Superuser** 许可权，那么可以除去此设置。要禁止管理员添加用户，请使用以下命令：
@@ -208,7 +211,10 @@ cf ba disable-managers-add-users
 
 **提示：****ba disable-managers-add-users** 命令名较长，您还可以使用 **ba dmau** 作为其别名。
 
-## 添加组织
+## 管理组织
+{: #admin_orgs}
+
+### 添加组织
 {: #admin_add_org}
 
 要添加组织，请使用以下命令：
@@ -227,7 +233,7 @@ cf ba create-organization <organization> <manager>
 
 **提示：****ba create-organization** 命令名较长，您还可以使用 **ba co** 作为其别名。
 
-## 删除组织
+### 删除组织
 {: #admin_delete_org}
 
 要删除组织，请使用以下命令：
@@ -244,7 +250,7 @@ cf ba delete-organization <organization>
 
 **提示：****ba delete-organization** 命令名较长，您还可以使用 **ba do** 作为其别名。
 
-## 向组织分配用户
+### 向组织分配用户
 {: #admin_ass_user_org}
 
 要将 {{site.data.keyword.Bluemix_notm}} 环境中的用户分配给特定组织，请使用以下命令：
@@ -265,7 +271,7 @@ cf ba set-org <user_name> <organization> [<role>]
 
 **提示：****ba set-org** 命令名较长，您还可以使用 **ba so** 作为其别名。
 
-## 从组织中取消分配用户
+### 从组织中取消分配用户
 {: #admin_unass_user_org}
 
 要将 {{site.data.keyword.Bluemix_notm}} 环境中的用户取消分配给特定组织，请使用以下命令：
@@ -286,7 +292,7 @@ cf ba unset-org <user_name> <organization> [<role>]
 
 **提示：****ba unset-org** 命令名较长，您还可以使用 **ba uo** 作为其别名。
 
-### 分配角色
+#### 分配角色
 
 <dl class="parml">
 <dt class="pt dlterm">OrgManager</dt>
@@ -302,7 +308,7 @@ cf ba unset-org <user_name> <organization> [<role>]
 <dd class="pd">组织审计员。组织审计员可以查看空间中的应用程序和服务内容。</dd>
 </dl>
 
-## 设置组织的配额
+### 设置组织的配额
 {: #admin_set_org_quota}
 
 要为特定组织设置使用量配额，请使用以下命令：
@@ -322,7 +328,7 @@ cf ba set-quota <organization> <plan>
 **提示：****ba set-quota** 命令名较长，您还可以使用 **ba sq** 作为其别名。
 
 
-## 查找组织的容器配额
+### 查找组织的容器配额
 {: #admin_find_containquotas}
 
 要查找组织的容器配额，请使用以下命令：
@@ -339,7 +345,7 @@ cf bluemix-admin containers-quota <organization>
 
 **提示：****bluemix-admin containers-quota** 命令名较长，您还可以使用 **ba cq** 作为其别名。
 
-## 设置组织的容器配额
+### 设置组织的容器配额
 {: #admin_set_containquotas}
 
 要设置组织中容器的配额，请使用以下命令并至少包含其中一个选项：
@@ -401,7 +407,7 @@ JSON 文件的格式应该如以下示例中所示：
 
 **提示：****bluemix-admin set-containers-quota** 命令名较长，您还可以使用 **ba scq** 作为其别名。
 
-## 对所有组织启用服务
+### 对所有组织启用服务
 {: #admin_ena_service_org}
 
 要针对所有组织启用在 {{site.data.keyword.Bluemix_notm}}“目录”中显示的某个服务，请使用以下命令：
@@ -418,7 +424,7 @@ cf ba enable-service-plan <plan_identifier>
 
 **提示：****ba enable-service-plan** 命令名较长，您还可以使用 **ba esp** 作为其别名。
 
-## 对所有组织禁用服务
+### 对所有组织禁用服务
 {: #admin_dis_service_org}
 
 要针对所有组织禁用在 {{site.data.keyword.Bluemix_notm}}“目录”中显示的某个服务，请使用以下命令：
@@ -435,7 +441,7 @@ cf ba disable-service-plan <plan_identifier>
 
 **提示：****ba disable-service-plan** 命令名较长，您还可以使用 **ba dsp** 作为其别名。
 
-## 添加组织的服务可视性
+### 添加组织的服务可视性
 {: #admin_addvis_service_org}
 
 对于能够在 {{site.data.keyword.Bluemix_notm}}“目录”中查看特定服务的组织的列表，可以在其中添加组织。要允许某个组织在 {{site.data.keyword.Bluemix_notm}}“目录”中查看特定服务，请使用以下命令：
@@ -454,7 +460,7 @@ cf ba add-service-plan-visibility <plan_identifier> <organization>
 
 **提示：****ba add-service-plan-visibility** 命令名较长，您还可以使用 **ba aspv** 作为其别名。
 
-## 除去组织的服务可视性
+### 除去组织的服务可视性
 {: #admin_remvis_service_org}
 
 对于能够在 {{site.data.keyword.Bluemix_notm}}“目录”中查看特定服务的组织的列表，可以在其中除去组织。要在 {{site.data.keyword.Bluemix_notm}}“目录”中对组织除去某个服务的可视性，请使用以下命令：
@@ -473,7 +479,7 @@ cf ba remove-service-plan-visibility <plan_identifier> <organization>
 
 **提示：****ba remove-service-plan-visibility** 命令名较长，您还可以使用 **ba rspv** 作为其别名。
 
-## 编辑组织的服务可视性
+### 编辑组织的服务可视性
 {: #admin_editvis_service_org}
 
 您可以编辑和替换特定组织可以在 {{site.data.keyword.Bluemix_notm}}“目录”中查看的服务列表。要替换一个组织或多个组织的所有现有可视服务，请使用以下命令：
@@ -494,7 +500,10 @@ cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optiona
 
 **提示：****ba edit-service-plan-visibility** 命令名较长，您还可以使用 **ba espv** 作为其别名。
 
-## 添加报告
+## 管理报告
+{: #admin_add_report}
+
+### 添加报告
 {: #admin_add_report}
 
 要添加安全报告，请使用以下命令：
@@ -519,7 +528,7 @@ cf ba add-report <category> <date> <PDF|TXT|LOG> <RTF>
 
 **提示：****ba add-report** 命令名较长，您还可以使用 **ba ar** 作为其别名。
 
-## 删除报告
+### 删除报告
 {: #admin_del_report}
 
 要删除安全报告，请使用以下命令：
@@ -540,7 +549,7 @@ cf ba delete-report <category> <date> <name>
 
 **提示：****ba delete-report** 命令名较长，您还可以使用 **ba dr** 作为其别名。
 
-## 检索报告
+### 检索报告
 {: #admin_retr_report}
 
 要检索安全报告，请使用以下命令：
@@ -561,7 +570,6 @@ cf ba retrieve-report <category> <date> <name>
 
 **提示：****ba retrieve-report** 命令名较长，您还可以使用 **ba rr** 作为其别名。
 
-
 ## 查看资源度量值信息
 {: #cliresourceusage}
 
@@ -581,7 +589,11 @@ cf ba resource-metrics <monthly> <weekly>
 
 **提示：****ba resource-metrics** 命令名较长，您还可以使用 **ba rsm** 作为其别名。
 
-## 列出服务代理程序
+
+## 管理服务代理程序
+{: #admin_servbro}
+
+### 列出服务代理程序
 {: #clilistservbro}
 
 要列出所有服务代理程序，请使用以下命令：
@@ -600,7 +612,7 @@ cf ba service-brokers <broker_name>
 
 **提示：****ba service-brokers** 命令名较长，您还可以使用 **ba sb** 作为其别名。
 
-## 添加服务代理程序
+### 添加服务代理程序
 {: #cliaddservbro}
 
 要添加服务代理程序，以便可以将定制服务添加到 {{site.data.keyword.Bluemix_notm}}“目录”，请使用以下命令：
@@ -623,7 +635,7 @@ cf ba add-service-broker <broker_name> <user_name> <password> <broker_url>
 
 **提示：****ba add-service-broker** 命令名较长，您还可以使用 **ba asb** 作为其别名。
 
-## 删除服务代理程序
+### 删除服务代理程序
 {: #clidelservbro}
 
 要删除服务代理程序，以从 {{site.data.keyword.Bluemix_notm}}“目录”中除去定制服务，请使用以下命令：
@@ -640,7 +652,7 @@ cf ba delete-service-broker <service_broker>
 
 **提示：****ba delete-service-broker** 命令名较长，您还可以使用 **ba dsb** 作为其别名。
 
-## 更新服务代理程序
+### 更新服务代理程序
 {: #cliupdservbro}
 
 要更新服务代理程序，请使用以下命令：
@@ -664,17 +676,18 @@ cf ba update-service-broker <broker_name> <user_name> <password> <broker_url>
 **提示：****ba update-service-broker** 命令名较长，您还可以使用 **ba usb** 作为其别名。
 
 
-## 使用应用程序安全组
+## 管理应用程序安全组
+{: #admin_secgro}
 
 要使用应用程序安全组 (ASG)，您必须是具有本地或专用环境完全访问权的管理员。对于命令的目标组织，环境的所有用户都可以列出可用的 ASG。但是，要创建、更新或绑定 AGS，您必须是 {{site.data.keyword.Bluemix_notm}} 环境的管理员。
 
 ASG 的功能类似虚拟防火墙，可控制 {{site.data.keyword.Bluemix_notm}} 环境中应用程序的出站流量。每一个 ASG 都包含一个规则列表，允许与外部网络相互进行特定流量传输和通信。您可以将一个或多个 ASG 绑定到特定安全组集（例如，用于应用全局访问的组集），或者绑定到 {{site.data.keyword.Bluemix_notm}} 环境中某个组织内的空间。
 
-{{site.data.keyword.Bluemix_notm}} 最初设置时其对外部网络的所有访问都受到限制。当您将两个 IBM 创建的安全组 `public_networks` 和 `dns` 绑定到缺省 Cloud Foundry 安全组集时，这两个安全组会启用对外部网络的全局访问。Cloud Foundry 中用于应用全局访问的两个安全组为 **Default Staging** 和 **Default Running** 组集。这两个组集会应用允许向所有正在运行的应用程序或所有正在编译打包的应用程序进行流量传输的规则。如果您不想绑定到这两个安全组集，那么您可以从 Cloud Foundry 组集取消绑定，然后将安全组绑定到特定空间。有关更多信息，请参阅[绑定应用程序安全组](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}。
+{{site.data.keyword.Bluemix_notm}} 最初设置时其对外部网络的所有访问都受到限制。当您将两个 IBM 创建的安全组 `public_networks` 和 `dns` 绑定到缺省 Cloud Foundry 安全组集时，这两个安全组会启用对外部网络的全局访问。Cloud Foundry 中用于应用全局访问的两个安全组为 **Default Staging** 和 **Default Running** 组集。这两个组集会应用允许向所有正在运行的应用程序或所有正在编译打包的应用程序进行流量传输的规则。如果您不想绑定到这两个安全组集，那么您可以从 Cloud Foundry 组集取消绑定，然后将安全组绑定到特定空间。有关更多信息，请参阅[绑定应用程序安全组 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}。
 
-**注**：以下可使您使用安全组的命令基于 Cloud Foundry V1.6。有关更多信息（包括必填和可选字段），请参阅有关[创建应用程序安全组](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}的 Cloud Foundry 信息。
+**注**：以下可使您使用安全组的命令基于 Cloud Foundry V1.6。有关更多信息（包括必填和可选字段），请参阅有关[创建应用程序安全组 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window} 的 Cloud Foundry 信息。
 
-## 列出安全组
+### 列出安全组
 {: #clilissecgro}
 
 * 要列出所有安全组，请使用以下命令：
@@ -701,10 +714,10 @@ cf ba security-groups <security-group>
 **提示：**具有 `security-group` 参数的 **ba security-groups** 命令名较长，您还可以使用 **ba sg** 作为其别名。
 
 
-## 创建安全组
+### 创建安全组
 {: #clicreasecgro}
 
-有关创建安全组和用于定义出局流量的规则的更多信息，请参阅[创建应用程序安全组](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}。
+有关创建安全组和用于定义出局流量的规则的更多信息，请参阅[创建应用程序安全组 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}。
 
 要创建安全组，请使用以下命令：
 
@@ -724,7 +737,7 @@ cf ba create-security-group <security-group> <path-to-rules-file>
 
 **提示：****ba create-security-group** 命令名较长，您还可以使用 **ba csg** 作为其别名。
 
-## 更新安全组
+### 更新安全组
 {: #cliupdsecgro}
 
 要更新安全组，请使用以下命令：
@@ -743,7 +756,7 @@ cf ba update-security-group <security-group> <path-to-rules-file>
 
 **提示：****ba update-security-group** 命令名较长，您还可以使用 **ba usg** 作为其别名。
 
-## 删除安全组
+### 删除安全组
 {: #clidelsecgro}
 
 要删除安全组，请使用以下命令：
@@ -761,10 +774,10 @@ cf ba delete-security-group <security-group>
 **提示：****ba delete-security-group** 命令名较长，您还可以使用 **ba dsg** 作为其别名。
 
 
-## 绑定安全组
+### 绑定安全组
 {: #clibindsecgro}
 
-有关绑定安全组的更多信息，请参阅[绑定应用程序安全组](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}。
+有关绑定安全组的更多信息，请参阅[绑定应用程序安全组 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}。
 
 * 要绑定 Default Staging 安全组集，请使用以下命令：
 
@@ -812,10 +825,10 @@ cf ba bind-security-group <security-group> <org> <space>
 
 **提示：****ba bind-security-group** 命令名较长，您还可以使用 **ba bsg** 作为其别名。
 
-## 取消绑定安全组
+### 取消绑定安全组
 {: #cliunbindsecgro}
 
-有关取消绑定安全组的更多信息，请参阅[取消绑定应用程序安全组](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window}。
+有关取消绑定安全组的更多信息，请参阅[取消绑定应用程序安全组 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window}。
 
 * 要取消绑定 Default Staging 安全组集，请使用以下命令：
 
@@ -863,7 +876,10 @@ cf ba unbind-security-group <security-group> <org> <space>
 
 **提示：****ba unbind-staging-security-group** 命令名较长，您还可以使用 **ba usg** 作为其别名。
 
-## 列出 buildpack
+## 管理 buildpack
+{: #admin_buildpack}
+
+### 列出 buildpack
 {: #clilistbuildpack}
 
 如果您有应用程序目录写许可权，那么可以列出 buildpack。要列出所有 buildpack 或查看特定 buildpack，请使用以下命令：
@@ -880,7 +896,7 @@ cf ba buildpacks <buildpack_name>
 
 **提示：****ba buildpacks** 命令名较长，您还可以使用 **ba lb** 作为其别名。
 
-## 创建并上传 buildpack
+### 创建并上传 buildpack
 {: #clicreupbuildpack}
 
 如果您有应用程序目录写许可权，那么可以创建并上传 buildpack。可以上传文件类型为 .zip 的任何压缩文件。要上传 buildpack，请使用以下命令：
@@ -901,7 +917,7 @@ cf ba create-buildpack <buildpack_name> <file_path> <position>
 
 **提示：****ba create-buildpack** 命令名较长，您还可以使用 **ba cb** 作为其别名。
 
-## 更新 buildpack
+### 更新 buildpack
 {: #cliupdabuildpack}
 
 如果您有应用程序目录写许可权，那么可以更新现有 buildpack。要更新 buildpack，请使用以下命令：
@@ -924,7 +940,7 @@ cf ba update-buildpack <buildpack_name> <position> <enabled> <locked>
 
 **提示：****ba update-buildpack** 命令名较长，您还可以使用 **ba ub** 作为其别名。
 
-## 删除 buildpack
+### 删除 buildpack
 {: #clidelbuildpack}
 
 如果您有应用程序目录写许可权，那么可以删除现有 buildpack。要删除 buildpack，请使用以下命令：

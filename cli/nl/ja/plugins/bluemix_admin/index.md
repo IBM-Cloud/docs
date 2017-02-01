@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015, 2017
 
-lastupdated: "2016-10-26"
+lastupdated: "2017-01-12"
 
 ---
 
@@ -19,7 +19,7 @@ lastupdated: "2016-10-26"
 
 Cloud Foundry コマンド・ライン・インターフェースを {{site.data.keyword.Bluemix_notm}} 管理 CLI プラグインと共に使用することにより、{{site.data.keyword.Bluemix_notm}} Local 環境または {{site.data.keyword.Bluemix_notm}} Dedicated 環境を管理できます。例えば、LDAP レジストリーからユーザーを追加できます。{{site.data.keyword.Bluemix_notm}} パブリック・アカウントの管理に関する情報を探している場合は、『[管理](/docs/admin/adminpublic.html#administer)』を参照してください。
 
-最初に、CF コマンド・ライン・インターフェースをインストールします。{{site.data.keyword.Bluemix_notm}} 管理 CLI プラグインを使用する場合、CF バージョン 6.11.2 以降が必要です。[Cloud Foundry コマンド・ライン・インターフェースのダウンロード](https://github.com/cloudfoundry/cli/releases){: new_window}
+最初に、CF コマンド・ライン・インターフェースをインストールします。{{site.data.keyword.Bluemix_notm}} 管理 CLI プラグインを使用する場合、CF バージョン 6.11.2 以降が必要です。[Cloud Foundry コマンド・ライン・インターフェースのダウンロード ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window} を行ってください。
 
 **制限:** Cloud Foundry コマンド・ライン・インターフェースは、Cygwin ではサポートされていません。Cloud Foundry コマンド・ライン・インターフェースは Cygwin コマンド・ライン・ウィンドウ以外のコマンド・ライン・ウィンドウで使用してください。
 
@@ -92,7 +92,10 @@ cf login
 </li>
 </ol>
 
-## ユーザーの追加
+## ユーザーの管理
+{: #admin_users}
+
+### ユーザーの追加
 {: #admin_add_user}
 
 ご使用環境のユーザー・レジストリーから {{site.data.keyword.Bluemix_notm}} 環境にユーザーを追加するには、以下のコマンドを使用します。
@@ -115,7 +118,7 @@ cf ba add-user <user_name> <organization>
 
 <!-- staging-only commands start. Live for interconnect -->
 
-## ユーザーの検索
+### ユーザーの検索
 {: #admin_search_user}
 
 ユーザーを検索するには、オプションの検索フィルター・パラメーター (name、permission、organization、および role) を指定して、以下のコマンドを使用します。
@@ -140,7 +143,7 @@ cf ba search-users -name=<user_name_value> -permission=<permission_value> -organ
 
 **ヒント:** **ba search-user** という長いコマンド名の別名として **ba su** を使用することもできます。
 
-## ユーザーの許可の設定
+### ユーザーの許可の設定
 {: #admin_setperm_user}
 
 指定されたユーザーの許可を設定するには、以下のコマンドを使用します。
@@ -165,7 +168,7 @@ cf ba set-permissions <user_name> <permission> <access>
 
 <!-- staging-only commands end -->
 
-## ユーザーの削除
+### ユーザーの削除
 {: #admin_remov_user}
 
 {{site.data.keyword.Bluemix_notm}} 環境からユーザーを削除するには、以下のコマンドを使用します。
@@ -184,7 +187,7 @@ cf ba remove-user <user_name>
 
 **ヒント:** **ba remove-user** という長いコマンド名の別名として **ba ru** を使用することもできます。
 
-## 管理者へのユーザー追加権限の付与
+### 管理者へのユーザー追加権限の付与
 {: #clius_emau}
 
 {{site.data.keyword.Bluemix_notm}} 環境で **Superuser** 許可がある場合、組織管理者が、自分が管理している組織にユーザーを追加できるようにすることが可能です。管理者がユーザーを追加できるようにするには、以下のコマンドを使用します。
@@ -196,7 +199,7 @@ cf ba enable-managers-add-users
 
 **ヒント:** **ba enable-managers-add-users** という長いコマンド名の別名として **ba emau**を使用することもできます。
 
-## 管理者のユーザー追加権限の無効化
+### 管理者のユーザー追加権限の無効化
 {: #clius_dmau}
 
 **enable-managers-add-users** によって組織管理者が {{site.data.keyword.Bluemix_notm}} 環境で管理している組織にユーザーを追加できるようになっている場合、**Superuser** 許可を備えていれば、この設定を削除できます。管理者によるユーザーの追加を不可にするには、以下のコマンドを使用します。
@@ -208,7 +211,10 @@ cf ba disable-managers-add-users
 
 **ヒント:** **ba disable-managers-add-users** という長いコマンド名の別名として **ba dmau** を使用することもできます。
 
-## 組織の追加
+## 組織の管理
+{: #admin_orgs}
+
+### 組織の追加
 {: #admin_add_org}
 
 組織を追加するには、以下のコマンドを使用します。
@@ -227,7 +233,7 @@ cf ba create-organization <organization> <manager>
 
 **ヒント:** **ba create-organization** という長いコマンド名の別名として **ba co** を使用することもできます。
 
-## 組織の削除
+### 組織の削除
 {: #admin_delete_org}
 
 組織を削除するには、以下のコマンドを使用します。
@@ -244,7 +250,7 @@ cf ba delete-organization <organization>
 
 **ヒント:** **ba delete-organization** という長いコマンド名の別名として **ba do** を使用することもできます。
 
-## 組織へのユーザーの割り当て
+### 組織へのユーザーの割り当て
 {: #admin_ass_user_org}
 
 {{site.data.keyword.Bluemix_notm}} 環境内のユーザーを特定の組織に割り当てるには、以下のコマンドを使用します。
@@ -266,7 +272,7 @@ cf ba set-org <user_name> <organization> [<role>]
 
 **ヒント:** **ba set-org** という長いコマンド名の別名として **ba so** を使用することもできます。
 
-## 組織からのユーザーの割り当て解除
+### 組織からのユーザーの割り当て解除
 {: #admin_unass_user_org}
 
 {{site.data.keyword.Bluemix_notm}} 環境内のユーザーを特定の組織から割り当て解除するには、以下のコマンドを使用します。
@@ -289,7 +295,7 @@ cf ba unset-org <user_name> <organization> [<role>]
 
 **ヒント:** **ba unset-org** という長いコマンド名の別名として **ba uo** を使用することもできます。
 
-### 役割の割り当て
+#### 役割の割り当て
 
 <dl class="parml">
 <dt class="pt dlterm">OrgManager</dt>
@@ -307,7 +313,7 @@ cf ba unset-org <user_name> <organization> [<role>]
 </dd>
 </dl>
 
-## 組織の割り当て量の設定
+### 組織の割り当て量の設定
 {: #admin_set_org_quota}
 
 特定組織の使用量の割り当て量を設定するには、以下のコマンドを使用します。
@@ -327,7 +333,7 @@ cf ba set-quota <organization> <plan>
 **ヒント:** **ba set-quota** という長いコマンド名の別名として **ba sq** を使用することもできます。
 
 
-## 組織のコンテナー割り当て量の判別
+### 組織のコンテナー割り当て量の判別
 {: #admin_find_containquotas}
 
 組織のコンテナーの割り当て量を判別するには、以下のコマンドを使用します。
@@ -344,7 +350,7 @@ cf bluemix-admin containers-quota <organization>
 
 **ヒント:** **bluemix-admin containers-quota** という長いコマンド名の別名として **ba cq** を使用することもできます。
 
-## 組織のコンテナー割り当て量の設定
+### 組織のコンテナー割り当て量の設定
 {: #admin_set_containquotas}
 
 組織のコンテナーの割り当て量を設定するには、少なくとも 1 つのオプションを含めて以下のコマンドを使用します。
@@ -407,7 +413,7 @@ JSON ファイルには、以下の例に示したフォーマットが含まれ
 
 **ヒント:** **bluemix-admin set-containers-quota** という長いコマンド名の別名として **ba scq** を使用することもできます。
 
-## すべての組織のサービスの有効化
+### すべての組織のサービスの有効化
 {: #admin_ena_service_org}
 
 すべての組織に対して {{site.data.keyword.Bluemix_notm}} カタログでのサービスの表示を有効化するには、以下のコマンドを使用します。
@@ -424,7 +430,7 @@ cf ba enable-service-plan <plan_identifier>
 
 **ヒント:** **ba enable-service-plan** という長いコマンド名の別名として **ba esp** を使用することもできます。
 
-## すべての組織のサービスの無効化
+### すべての組織のサービスの無効化
 {: #admin_dis_service_org}
 
 すべての組織に対して {{site.data.keyword.Bluemix_notm}} カタログでのサービスの表示を無効化するには、以下のコマンドを使用します。
@@ -441,7 +447,7 @@ cf ba disable-service-plan <plan_identifier>
 
 **ヒント:** **ba disable-service-plan<retrieve-report** という長いコマンド名の別名として **ba dsp**を使用することもできます。
 
-## 組織に対するサービスの表示可能性の追加
+### 組織に対するサービスの表示可能性の追加
 {: #admin_addvis_service_org}
 
 {{site.data.keyword.Bluemix_notm}} カタログで特定のサービスを表示できる組織のリストで、組織を追加できます。組織が {{site.data.keyword.Bluemix_notm}} カタログで特定のサービスを表示できるようにするには、以下のコマンドを使用します。
@@ -460,7 +466,7 @@ cf ba add-service-plan-visibility <plan_identifier> <organization>
 
 **ヒント:** **ba add-service-plan-visibility** という長いコマンド名の別名として **ba aspv** を使用することもできます。
 
-## 組織に対するサービスの表示可能性の削除
+### 組織に対するサービスの表示可能性の削除
 {: #admin_remvis_service_org}
 
 {{site.data.keyword.Bluemix_notm}} カタログで特定のサービスを表示できる組織のリストで、組織を削除できます。組織に対して {{site.data.keyword.Bluemix_notm}} カタログでのサービスの表示可能性を削除するには、以下のコマンドを使用します。
@@ -479,7 +485,7 @@ cf ba remove-service-plan-visibility <plan_identifier> <organization>
 
 **ヒント:** **ba remove-service-plan-visibility<retrieve-report** という長いコマンド名の別名として **ba rspv**を使用することもできます。
 
-## 組織に対するサービスの表示可能性の編集
+### 組織に対するサービスの表示可能性の編集
 {: #admin_editvis_service_org}
 
 特定の組織が {{site.data.keyword.Bluemix_notm}} カタログで表示できるサービスのリストを編集および置換することができます。単一または複数の組織に対して既存のすべての表示されるサービスを置換するには、以下のコマンドを使用します。
@@ -500,7 +506,10 @@ cf ba edit-service-plan-visibilities <plan_identifier> <organization_1> <optiona
 
 **ヒント:** **ba edit-service-plan-visibility** という長いコマンド名の別名として **ba espv** を使用することもできます。
 
-## レポートの追加
+## レポートの管理
+{: #admin_add_report}
+
+### レポートの追加
 {: #admin_add_report}
 
 セキュリティー・レポートを追加するには、以下のコマンドを使用します。
@@ -525,7 +534,7 @@ cf ba add-report <category> <date> <PDF|TXT|LOG> <RTF>
 
 **ヒント:** **ba add-report** という長いコマンド名の別名として **ba ar** を使用することもできます。
 
-## レポートの削除
+### レポートの削除
 {: #admin_del_report}
 
 セキュリティー・レポートを削除するには、以下のコマンドを使用します。
@@ -546,7 +555,7 @@ cf ba delete-report <category> <date> <name>
 
 **ヒント:** **ba delete-report** という長いコマンド名の別名として **ba dr** を使用することもできます。
 
-## レポートの取得
+### レポートの取得
 {: #admin_retr_report}
 
 セキュリティー・レポートを取得するには、以下のコマンドを使用します。
@@ -567,7 +576,6 @@ cf ba retrieve-report <category> <date> <name>
 
 **ヒント:** **ba retrieve-report** という長いコマンド名の別名として **ba rr**を使用することもできます。
 
-
 ## リソース・メトリック情報の表示
 {: #cliresourceusage}
 
@@ -587,7 +595,11 @@ cf ba resource-metrics <monthly> <weekly>
 
 **ヒント:** **ba resource-metrics** という長いコマンド名の別名として **ba rsm** を使用することもできます。
 
-## サービス・ブローカーのリスト
+
+## サービス・ブローカーの管理
+{: #admin_servbro}
+
+### サービス・ブローカーのリスト
 {: #clilistservbro}
 
 すべてのサービス・ブローカーをリストするには、以下のコマンドを使用します。
@@ -606,7 +618,7 @@ cf ba service-brokers <broker_name>
 
 **ヒント:** **ba service-brokers** という長いコマンド名の別名として **ba sb**を使用することもできます。
 
-## サービス・ブローカーの追加
+### サービス・ブローカーの追加
 {: #cliaddservbro}
 
 サービス・ブローカーを追加して、{{site.data.keyword.Bluemix_notm}} カタログにカスタム・サービスを追加できるようにするには、以下のコマンドを使用します。
@@ -629,7 +641,7 @@ cf ba add-service-broker <broker_name> <user_name> <password> <broker_url>
 
 **ヒント:** **ba add-service-broker** という長いコマンド名の別名として **ba asb** を使用することもできます。
 
-## サービス・ブローカーの削除
+### サービス・ブローカーの削除
 {: #clidelservbro}
 
 サービス・ブローカーを削除して、{{site.data.keyword.Bluemix_notm}} カタログからカスタム・サービスを削除するには、以下のコマンドを使用します。
@@ -646,7 +658,7 @@ cf ba delete-service-broker <service_broker>
 
 **ヒント:** **ba delete-service-broker** という長いコマンド名の別名として **ba dsb** を使用することもできます。
 
-## サービス・ブローカーの更新
+### サービス・ブローカーの更新
 {: #cliupdservbro}
 
 サービス・ブローカーを更新するには、以下のコマンドを使用します。
@@ -670,17 +682,18 @@ cf ba update-service-broker <broker_name> <user_name> <password> <broker_url>
 **ヒント:** **ba update-service-broker** という長いコマンド名の別名として **ba usb**を使用することもできます。
 
 
-## アプリケーション・セキュリティー・グループに関する作業
+## アプリケーション・セキュリティー・グループの管理
+{: #admin_secgro}
 
 アプリケーション・セキュリティー・グループ (ASG) に関して作業するには、ローカル環境または専用環境の全アクセス権限を持つ管理者でなければなりません。コマンドでターゲットとする組織に有効な ASG のリスト表示は、環境のすべてのユーザーが行えます。それに対し、ASG の作成、更新、バインドを行うには、{{site.data.keyword.Bluemix_notm}} 環境の管理者である必要があります。
 
 ASG は、{{site.data.keyword.Bluemix_notm}} 環境内のアプリケーションからのアウトバウンド・トラフィックを制御する仮想ファイアウォールとして機能します。各 ASG は、外部ネットワークに対する特定のトラフィックおよび通信を許可するルールのリストから構成されます。1 つ以上の ASG を特定のセキュリティー・グループ・セット (例えば、グローバル・アクセスの適用に使用されるグループ・セットなど) にバインドすることや、{{site.data.keyword.Bluemix_notm}} 環境の組織内のスペースにバインドすることができます。
 
-{{site.data.keyword.Bluemix_notm}} は最初、制限された外部ネットワークへのすべてのアクセス権限でセットアップされます。IBM が作成した 2 つのセキュリティー・グループ `public_networks` と `dns` をデフォルトの Cloud Foundry セキュリティー・グループ・セットにバインドした場合、これらのグループにより、外部ネットワークへのグローバル・アクセスが可能になります。グローバル・アクセスの適用に使用される Cloud Foundry 内の 2 つのセキュリティー・グループ・セットは、**デフォルト・ステージング**と**デフォルト実行**のグループ・セットです。これらのグループ・セットは、すべての実行アプリ、またはすべてのステージング・アプリに対するトラフィックを許可するためのルールを適用します。これらの 2 つのセキュリティー・グループ・セットにバインドしたくない場合は、Cloud Foundry グループ・セットからアンバインドし、セキュリティー・グループを特定スペースにバインドしてください。詳しくは、[『Binding Application Security Groups』](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}を参照してください。
+{{site.data.keyword.Bluemix_notm}} は最初、制限された外部ネットワークへのすべてのアクセス権限でセットアップされます。IBM が作成した 2 つのセキュリティー・グループ `public_networks` と `dns` をデフォルトの Cloud Foundry セキュリティー・グループ・セットにバインドした場合、これらのグループにより、外部ネットワークへのグローバル・アクセスが可能になります。グローバル・アクセスの適用に使用される Cloud Foundry 内の 2 つのセキュリティー・グループ・セットは、**デフォルト・ステージング**と**デフォルト実行**のグループ・セットです。これらのグループ・セットは、すべての実行アプリ、またはすべてのステージング・アプリに対するトラフィックを許可するためのルールを適用します。これらの 2 つのセキュリティー・グループ・セットにバインドしたくない場合は、Cloud Foundry グループ・セットからアンバインドし、セキュリティー・グループを特定スペースにバインドしてください。詳しくは、[アプリケーション・セキュリティー・グループのバインド ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window} を参照してください。
 
-**注**: セキュリティー・グループに関する作業を可能にする以下のコマンドは、Cloud Foundry 1.6 バージョンをベースとしています。必須フィールドやオプション・フィールドを含め、詳細については、[アプリケーション・セキュリティー・グループの作成](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}に関する Cloud Foundry の情報を参照してください。
+**注**: セキュリティー・グループに関する作業を可能にする以下のコマンドは、Cloud Foundry 1.6 バージョンをベースとしています。必須フィールドやオプション・フィールドなどの詳細については、[アプリケーション・セキュリティー・グループの作成 ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window} に関する Cloud Foundry 資料を参照してください。
 
-## セキュリティー・グループのリスト
+### セキュリティー・グループのリスト
 {: #clilissecgro}
 
 * すべてのセキュリティー・グループをリストするには、以下のコマンドを使用します。
@@ -707,10 +720,10 @@ cf ba security-groups <security-group>
 **ヒント:** `security-group` パラメーターを指定した **ba security-groups** という長いコマンド名の別名として **ba sg** を使用することもできます。
 
 
-## セキュリティー・グループの作成
+### セキュリティー・グループの作成
 {: #clicreasecgro}
 
-セキュリティー・グループの作成と、発信トラフィックを定義するルールについて詳しくは、[『Creating Application Security Groups』](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}を参照してください。
+セキュリティー・グループの作成と、発信トラフィックを定義するルールについて詳しくは、[アプリケーション・セキュリティー・グループの作成 ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window} を参照してください。
 
 セキュリティー・グループを作成するには、以下のコマンドを使用します。
 
@@ -730,7 +743,7 @@ IBM が作成したセキュリティー・グループと区別するため、�
 
 **ヒント:** **ba create-security-group** という長いコマンド名の別名として **ba csg**を使用することもできます。
 
-## セキュリティー・グループの更新
+### セキュリティー・グループの更新
 {: #cliupdsecgro}
 
 セキュリティー・グループを更新するには、以下のコマンドを使用します。
@@ -749,7 +762,7 @@ cf ba update-security-group <security-group> <path-to-rules-file>
 
 **ヒント:** **ba update-security-group** という長いコマンド名の別名として **ba usg** を使用することもできます。
 
-## セキュリティー・グループの削除
+### セキュリティー・グループの削除
 {: #clidelsecgro}
 
 セキュリティー・グループを削除するには、以下のコマンドを使用します。
@@ -767,10 +780,10 @@ cf ba delete-security-group <security-group>
 **ヒント:** **ba delete-security-group** という長いコマンド名の別名として **ba dsg**を使用することもできます。
 
 
-## セキュリティー・グループのバインド
+### セキュリティー・グループのバインド
 {: #clibindsecgro}
 
-セキュリティー・グループのバインドについて詳しくは、[『Binding Application Security Groups』](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}を参照してください。
+セキュリティー・グループのバインドについて詳しくは、[アプリケーション・セキュリティー・グループのバインド ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window} を参照してください。
 
 * デフォルト・ステージングのセキュリティー・グループ・セットにバインドするには、以下のコマンドを使用します。
 
@@ -818,10 +831,10 @@ cf ba bind-security-group <security-group> <org> <space>
 
 **ヒント:** **ba bind-security-group** という長いコマンド名の別名として **ba bsg**を使用することもできます。
 
-## セキュリティー・グループのアンバインド
+### セキュリティー・グループのアンバインド
 {: #cliunbindsecgro}
 
-セキュリティー・グループのアンバインドについて詳しくは、[『Unbinding Application Security Groups』](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window}を参照してください。
+セキュリティー・グループのアンバインドについて詳しくは、[アプリケーション・セキュリティー・グループのアンバインド ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window} を参照してください。
 
 * デフォルト・ステージングのセキュリティー・グループ・セットからアンバインドするには、以下のコマンドを使用します。
 
@@ -869,7 +882,10 @@ cf ba unbind-security-group <security-group> <org> <space>
 
 **ヒント:** **ba unbind-staging-security-group** という長いコマンド名の別名として **ba usg** を使用することもできます。
 
-## ビルドパックのリスト
+## ビルドパックの管理
+{: #admin_buildpack}
+
+### ビルドパックのリスト
 {: #clilistbuildpack}
 
 アプリ・カタログ書き込み許可がある場合、ビルドパックをリストできます。すべてのビルドパックをリストするか、または特定のビルドパックを表示するには、以下のコマンドを使用します。
@@ -886,7 +902,7 @@ cf ba buildpacks <buildpack_name>
 
 **ヒント:** **ba buildpacks** という長いコマンド名の別名として **ba lb** を使用することもできます。
 
-## ビルドパックの作成およびアップロード
+### ビルドパックの作成およびアップロード
 {: #clicreupbuildpack}
 
 アプリ・カタログ書き込み許可がある場合、ビルドパックを作成およびアップロードできます。.zip ファイル・タイプの任意の圧縮ファイルをアップロードできます。ビルドパックをアップロードするには、以下のコマンドを使用します。
@@ -907,7 +923,7 @@ cf ba create-buildpack <buildpack_name> <file_path> <position>
 
 **ヒント:** **ba create-buildpack** という長いコマンド名の別名として **ba cb**を使用することもできます。
 
-## ビルドパックの更新
+### ビルドパックの更新
 {: #cliupdabuildpack}
 
 アプリ・カタログ書き込み許可がある場合、既存のビルドパックを更新できます。ビルドパックを更新するには、以下のコマンドを使用します。
@@ -930,7 +946,7 @@ cf ba update-buildpack <buildpack_name> <position> <enabled> <locked>
 
 **ヒント:** **ba update-buildpack** という長いコマンド名の別名として **ba ub** を使用することもできます。
 
-## ビルドパックの削除
+### ビルドパックの削除
 {: #clidelbuildpack}
 
 アプリ・カタログ書き込み許可がある場合、既存のビルドパックを削除できます。ビルドパックを削除するには、以下のコマンドを使用します。

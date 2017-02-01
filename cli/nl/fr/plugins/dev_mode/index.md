@@ -4,9 +4,9 @@
 
 copyright:
 
-  2015，2016
+  years: 2015，2017
 
-lastupdated: "2016-05-12"
+lastupdated: "2017-01-12"
 
 
 
@@ -82,6 +82,7 @@ cf plugins
 Utilisez l'index de la table suivante pour consulter les commandes CLI dev_mode fréquemment utilisées :
 
 <table summary="Index des commandes dev_mode">
+<caption>Tableau 1. Commandes dev_mode</caption>
  <thead>
  <th colspan="4">Commandes dev_mode</th>
  </thead>
@@ -100,8 +101,6 @@ Utilisez l'index de la table suivante pour consulter les commandes CLI dev_mode 
  </tr>
   </tbody>
  </table>
-{: caption="Table 1. dev_mode commands" caption-side="top"}
-
 
 
 ## help
@@ -216,5 +215,5 @@ cf restart-inplace <nom_app>
 
 ## Liens connexes
 {: #general}
-* [Interface de ligne de commande en mode développement](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){:new_window}
-* [DevOps Web IDE](https://hub.jazz.net/docs/deploy/){:new_window}
+* [Interface de ligne de commande du mode développement ![icône de lien externe](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){:new_window}
+* [Environnement de développement intégré Web DevOps ![icône de lien externe](../../../icons/launch-glyph.svg)](https://hub.jazz.net/docs/deploy/){:new_window}

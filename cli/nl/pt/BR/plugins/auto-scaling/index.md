@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015，2016
+  years: 2015，2017
 
-lastupdated: "2016-02-24"
+lastupdated: "2011-01-12"
 
 
 ---
@@ -18,15 +18,11 @@ lastupdated: "2016-02-24"
 # Auto-Scaling CLI
 {: #autoscalingcli}
 
-Última atualização: 25 de fevereiro de 2016
-{: .last-updated}
-
 
 É possível configurar o serviço {{site.data.keyword.autoscaling}} usando o {{site.data.keyword.autoscaling}} CLI for {{site.data.keyword.Bluemix_notm}}. O {{site.data.keyword.autoscaling}} CLI suporta Linux64, Win64 e OSX e fornece funcionalidade semelhante ao ajuste automático de escala que a API RESTful fornece.
 {: shortdesc}
 
-Antes de iniciar, instale o {{site.data.keyword.Bluemix_notm}} CLI. Consulte [CLI de Download do {{site.data.keyword.Bluemix_notm}}
-](http://plugins.ng.bluemix.net/ui/home.html){: new_window} para obter instruções.
+Antes de iniciar, instale o {{site.data.keyword.Bluemix_notm}} CLI. Veja [Fazer download do {{site.data.keyword.Bluemix_notm}} CLI ![Ícone de link externo](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/home.html){: new_window} para obter instruções.
 
 ## Incluindo o plug-in do {{site.data.keyword.Bluemix_notm}} CLI
 
@@ -144,5 +140,5 @@ bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<en
 ## gerais
 {: general}
 * [{{site.data.keyword.autoscaling}} serviço](/docs/services/Auto-Scaling/index.html)
-* [{{site.data.keyword.Bluemix_notm}} CLI](http://plugins.ng.bluemix.net/ui/home.html){: new_window}
-* [Padrão de formatos de data e hora do W3C](https://www.w3.org/TR/NOTE-datetime){: new_window}
+* [{{site.data.keyword.Bluemix_notm}} CLI ![Ícone de link externo](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/home.html){: new_window}
+* [Formatos de data e hora W3C padrão ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://www.w3.org/TR/NOTE-datetime){: new_window}

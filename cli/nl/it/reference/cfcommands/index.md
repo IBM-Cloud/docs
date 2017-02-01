@@ -4,9 +4,10 @@
 
 copyright:
 
-  years: 2016
+  years: 2016, 2017
 
-lastupdated: "2016-11-14"
+lastupdated: "2017-01-12"
+
 
 ---
 
@@ -22,7 +23,7 @@ lastupdated: "2016-11-14"
 L'interfaccia di riga comando (CLI) Cloud Foundry (cf) fornisce una serie di comandi per gestire le tue applicazioni. Le seguenti informazioni elencano i comandi cf più utilizzati per la gestione delle applicazioni e includono i relativi nomi, opzioni, utilizzo, prerequisiti, descrizioni ed esempi. Per elencare tutti i comandi cf e le informazioni di guida associate, utilizza `cf help`. Utilizza `cf nome_comando -h` per visualizzare delle informazioni di guida dettagliate per uno specifico comando.
 {: shortdesc}
 
-**Nota**: se la tua rete contiene un server proxy HTTP tra l'host che esegue i comandi cf e l'endpoint API Cloud Foundry, devi specificare il nome host o l'indirizzo IP del server proxy impostando la variabile di ambiente `HTTP_PROXY`. Per i dettagli, vedi il documento relativo all'[utilizzo della CLI cf con un server proxy HTTP](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html).
+**Nota**: se la tua rete contiene un server proxy HTTP tra l'host che esegue i comandi cf e l'endpoint API Cloud Foundry, devi specificare il nome host o l'indirizzo IP del server proxy impostando la variabile di ambiente `HTTP_PROXY`. Per i dettagli, vedi (http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}Utilizzo della CLI cf con un server proxy HTTP ![icona link esterno](..![External)/icons/launch-glyph.svg)].
 
 
 ## Indice dei comandi della CLI Cloud Foundry
@@ -31,53 +32,52 @@ L'interfaccia di riga comando (CLI) Cloud Foundry (cf) fornisce una serie di com
 Utilizza l'indice nella seguente tabella per fare riferimento ai comandi Cloud Foundry più utilizzati:
 
 <table summary="Comandi generali di Cloud Foundry riportati in ordine alfabetico con dei link a ulteriori informazioni sul comando">
+<caption>Tabella 1. Comandi generali di Cloud Foundry </caption>
  <thead>
  <th colspan="6">Comandi generali di Cloud Foundry</th>
  </thead>
  <tbody>
  <tr>
- <td>[api](index.html#cf_api)</td>
- <td>[help](index.html#cf_help)</td>
- <td>[login](index.html#cf_login)</td>
- <td>[stacks](index.html#cf_stacks)</td>
- <td>[target](index.html#cf_target)</td>
- <td>[-v ](index.html#cf_v)</td>
+ <td>[api](/docs/cli/reference/cfcommands/index.html#cf_api)</td>
+ <td>[help](/docs/cli/reference/cfcommands/index.html#cf_help)</td>
+ <td>[login](/docs/cli/reference/cfcommands/index.html#cf_login)</td>
+ <td>[stacks](/docs/cli/reference/cfcommands/index.html#cf_stacks)</td>
+ <td>[target](/docs/cli/reference/cfcommands/index.html#cf_target)</td>
+ <td>[-v ](/docs/cli/reference/cfcommands/index.html#cf_v)</td>
  </tr>
    </tbody>
  </table>
-{: caption="Table 1. General Cloud Foundry commands" caption-side="top"}
 
 
 <table summary="Comandi in ordine alfabetico per la gestione di applicazioni, spazi e servizi. Ogni comando ha un link che porta a ulteriori informazioni sul comando.">
+<caption>Tabella 2. Comandi per la gestione di applicazioni, spazi e servizi </caption>
  <thead>
  <th colspan="5">Comandi per la gestione di applicazioni, spazi e servizi</th>
  </thead>
  <tbody>
  <tr>
- <td>[apps](index.html#cf_apps)</td>
- <td>[bind-service](index.html#cf_bind-service)</td>
- <td>[create-service](index.html#cf_create-service)</td>
- <td>[create-space](index.html#cf_create-space)</td>
- <td>[delete](index.html#cf_delete)</td>
+ <td>[apps](/docs/cli/reference/cfcommands/index.html#cf_apps)</td>
+ <td>[bind-service](/docs/cli/reference/cfcommands/index.html#cf_bind-service)</td>
+ <td>[create-service](/docs/cli/reference/cfcommands/index.html#cf_create-service)</td>
+ <td>[create-space](/docs/cli/reference/cfcommands/index.html#cf_create-space)</td>
+ <td>[delete](/docs/cli/reference/cfcommands/index.html#cf_delete)</td>
   </tr>
  <tr>
- <td>[delete-space](index.html#cf_delete-space)</td>
- <td>[events](index.html#cf_events)</td>
- <td>[logs](index.html#cf_logs)</td>
- <td>[marketplace](index.html#cf_marketplace)</td>
- <td>[push (eseguire il)](index.html#cf_push)</td>
+ <td>[delete-space](/docs/cli/reference/cfcommands/index.html#cf_delete-space)</td>
+ <td>[events](/docs/cli/reference/cfcommands/index.html#cf_events)</td>
+ <td>[logs](/docs/cli/reference/cfcommands/index.html#cf_logs)</td>
+ <td>[marketplace](/docs/cli/reference/cfcommands/index.html#cf_marketplace)</td>
+ <td>[push (eseguire il)](/docs/cli/reference/cfcommands/index.html#cf_push)</td>
   </tr>
  <tr>
- <td>[ingrandire](index.html#cf_scale)</td>
- <td>[services](index.html#cf_services)
- <td>[set-env](index.html#cf_set-env)</td>
+ <td>[ingrandire](/docs/cli/reference/cfcommands/index.html#cf_scale)</td>
+ <td>[services](/docs/cli/reference/cfcommands/index.html#cf_services)
+ <td>[set-env](/docs/cli/reference/cfcommands/index.html#cf_set-env)</td>
  <td>[ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh)</td>
- <td>[stop](index.html#cf_stop)</td>
+ <td>[stop](/docs/cli/reference/cfcommands/index.html#cf_stop)</td>
  </tr>
  </tbody>
  </table>
-{: caption="Table 2. Commands for managing apps, spaces, and services" caption-side="top"}
-
 
 ## cf api
 {: #cf_api}
@@ -90,7 +90,7 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 
 <strong>Prerequisiti</strong>: Nessuno.
 
-<strong>Opzioni del comando</strong>:  
+<strong>Opzioni del comando</strong>:
 
    <dl>
    <dt>BluemixServerURL (facoltativo)</dt>
@@ -110,7 +110,7 @@ cf api
 ```
 {: codeblock}
 
-Rimuovi la connessione a tutti gli endpoint API per api.ng.bluemix.net
+Rimuovi la connessione a tutti gli endpoint API per api.ng.bluemix.net 
 ```
 cf api api.ng.bluemix.network --unset
 ```
@@ -150,7 +150,7 @@ cf bind-service nome_applicazione istanza_servizio
 
 <strong>Prerequisiti</strong>: `cf api`, `cf login`, `cf target`
 
-<strong>Opzioni del comando</strong>:  
+<strong>Opzioni del comando</strong>:
 
    <dl>
    <dt>nome_applicazione (obbligatorio)</dt>
@@ -179,7 +179,7 @@ cf create-service nome_servizio piano_servizio istanza_servizio
 
 <strong>Prerequisiti</strong>: `cf api`, `cf login`, `cf target`
 
-<strong>Opzioni del comando</strong>:  
+<strong>Opzioni del comando</strong>:
 
    <dl>
    <dt>nome_servizio (obbligatorio)</dt>
@@ -211,7 +211,7 @@ cf create-space nome_spazio [-o] [-q]
 
 <strong>Prerequisiti</strong>: `cf api`, `cf login`
 
-<strong>Opzioni del comando</strong>:  
+<strong>Opzioni del comando</strong>:
 
    <dl>
    <dt>nome_spazio (obbligatorio)</dt>
@@ -243,7 +243,7 @@ cf delete nome_applicazione [-f] [-r]
 
 <strong>Prerequisiti</strong>: `cf api`, `cf login`, `cf target`
 
-<strong>Opzioni del comando</strong>:  
+<strong>Opzioni del comando</strong>:
 
    <dl>
    <dt>nome_applicazione (obbligatorio)</dt>
@@ -292,7 +292,7 @@ cf delete-space nome_spazio [-f]
 
 <strong>Prerequisiti</strong>: `cf api`, `cf login`
 
-<strong>Opzioni del comando</strong>:  
+<strong>Opzioni del comando</strong>:
 
    <dl>
    <dt>nome_spazio (obbligatorio)</dt>
@@ -341,7 +341,7 @@ cf events [nomeapplicazione]
 
 <strong>Prerequisiti</strong>: `cf api`, `cf login`, `cf target`
 
-<strong>Opzioni del comando</strong>:  
+<strong>Opzioni del comando</strong>:
 
    <dl>
    <dt>nomeapplicazione</dt>
@@ -368,7 +368,7 @@ cf help [nome_comando]
 
 <strong>Prerequisiti</strong>: Nessuno.
 
-<strong>Opzioni del comando</strong>:  
+<strong>Opzioni del comando</strong>:
 
    <dl>
    <dt>nome_comando (facoltativo)</dt>
@@ -395,7 +395,7 @@ cf help events
 
 Ti fa accedere a {{site.data.keyword.Bluemix_notm}}.
 
-**Nota**: se stai eseguendo l'accesso con un ID federato, devi utilizzare il parametro SSO (single sign-on) per accedere.
+**Nota**: se stai eseguendo l'accesso con un [ID federato](/docs/admin/account.html#signup), devi utilizzare il parametro SSO (single sign-on) per accedere.
 
 ```
 cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s space_name] [--skip-ssl-validation]
@@ -527,7 +527,7 @@ cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i in
 <dt>nome_applicazione (obbligatorio)</dt>
 <dd>Il nome dell'applicazione.</dd>
 <dt>*-b* nome_pacchettodibuild (facoltativo)</dt>
-<dd>Il nome del pacchetto di build. Il nome_pacchettodibuild può essere un pacchetto di build personalizzato in base al nome oppure un URL GIT, ad esempio `my-buildpack` o `https://github.com/heroku/heroku-buildpack-play.git`.</dd>
+<dd>Il nome del pacchetto di build. Il nome_pacchettodibuild può essere un pacchetto di build personalizzato in base al nome (ad esempio liberty-for-java) oppure un URL Git (ad esempio https://github.com/cloudfoundry/java-buildpack.git) oppure un URL Git con un ramo o tag (ad esempio, https://github.com/cloudfoundry/java-buildpack.git#v3.3.0 per la tag v3.3.0).</dd>
 <dt>*-c* comando_di_avvio (facoltativo)</dt>
 <dd>Il comando di avvio della tua applicazione. Per utilizzare il comando di avvio predefinito, specifica un valore null per questa opzione. </dd>
 <dt>*-f* percorso_manifest (facoltativo)</dt>
@@ -672,22 +672,24 @@ cf set-env my_app variable_a 123
 ## cf ssh
 {: #cf_ssh}
 
-Ti fa accedere in modo sicuro in un contenitore dell'applicazione. Per impostazione predefinita, SSH accede al contenitore in cui è in esecuzione la prima istanza dell'applicazione, che è l'istanza con indice 0.
+Accedere in sicurezza al contenitore dell'applicazione. Il comando `cf ssh` può essere utilizzato per configurare una sessione SSH interattiva, eseguire comandi remoti, trasferire file e configurare l'inoltro alla porta con un'istanza del contenitore dell'applicazione specifica.
 
 ```
 cf ssh
 ```
 <strong>Prerequisiti</strong>: `cf api`, `cf login`, `cf target`
 
-Devi inoltre configurare la tua distribuzione Cloud Foundry per consentire l'accesso SSH alle istanze dell'applicazione. Per i dettagli, vedi [Configuring SSH Access for Cloud Foundry](https://docs.cloudfoundry.org/running/config-ssh.html){:new_window}
+Per impostazione predefinita, l'accesso SSH è abilitato per le applicazioni Diego. Puoi utilizzare il comando `cf ssh-enabled` per verificare se l'accesso SSH è abilitato o il comando `cf enable-ssh` per abilitarlo se è disabilitato. 
 
 <strong>Opzioni del comando</strong>:
 
 <dl>
 <dt>nomeapplicazione</dt>
-<dd>Il nome dell'applicazione. Se è consentito SSH, puoi utilizzare questa opzione per avviare una sessione SSH interattiva con una VM che ospita l'applicazione.</dd>
+<dd>Il nome dell'applicazione.</dd>
+<dt>-c</dt>
+<dd>Specifica un comando remoto per l'esecuzione. </dd>
 <dt>-i</dt>
-<dd>Indirizza un'istanza specifica di un'applicazione.</dd>
+<dd>Indirizza un'istanza specifica di un'applicazione. Se non specificato, viene utilizzata la prima istanza dell'applicazione (un'istanza con indice 0).</dd>
 <dt>-L</dt>
 <dd>Abilita l'inoltro alla porta locale, che esegue il bind di una porta di output sulla tua macchina a una porta di input nella VM dell'applicazione.</dd>
 <dt>-N</dt>
@@ -698,12 +700,27 @@ Devi inoltre configurare la tua distribuzione Cloud Foundry per consentire l'acc
 
 <strong>Esempi</strong>:
 
-Avvia una sessione SSH interattiva con una VM che ospita un'applicazione denominata `my_app`.
+Avvia una sessione SSH interattiva con un'immagine del contenitore eseguendo l'applicazione `my_app`.
 ```
 $ cf ssh my_app
 ```
 {: codeblock}
 
+Esegui un solo comando nell'istanza del contenitore dell'applicazione `my_app`.
+```
+$ cf ssh my_app -c "ls -l"
+```
+
+Trasferisci un solo file dall'istanza del contenitore dell'applicazione `my_app`.
+```
+$ cf ssh my_app -c "/bin/cat logs/messages.log" > messages.log
+```
+
+Configura l'inoltro alla porta della porta 7777 nella macchina locale alla porta 8888 nell'istanza del contenitore dell'applicazione `my_app`.
+```
+$ cf ssh -N -T -L 7777:localhost:8888 my_app
+
+```
 
 ## cf stacks
 {: #cf_stacks}
@@ -811,7 +828,7 @@ cf -v
 ## Link correlati
 {: #general}
 
-* [Scarica CLI Cloud Foundry](https://github.com/cloudfoundry/cli/releases)
-{:new_window}
-* [Quick Reference Card - cf commands](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html)
-{:new_window}
+* (https://github.com/cloudfoundry/cli/releases)Scarica interfaccia riga di comando Cloud Foundry ![icona link esterno](![External)../icons/launch-glyph.svg)]
+{: new_window}
+* (ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html)Quick Reference Card - cf commands ![icona link esterno](![External)../icons/launch-glyph.svg)]
+{: new_window}
