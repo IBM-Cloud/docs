@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015，2016
+  years: 2015，2017
 
-lastupdated: "2016-02-17"
+lastupdated: "2017-01-12"
 
 
 
@@ -65,4 +65,4 @@ interface da linha de comandos cf usa as opções anteriores e as respostas
 aos prompts, para atualizar todas as instâncias em execução de seu aplicativo
 com os novos bits de código.
 
-**Dica:** também é possível fazer upload ou implementar um aplicativo a partir do DevOps Services. Veja [Desenvolvendo um aplicativo do {{site.data.keyword.Bluemix_notm}} no Node.js com o Web IDE.](https://hub.jazz.net/tutorials/devopsweb/){: new_window}.
+**Dica:** também é possível fazer upload ou implementar um aplicativo a partir do DevOps Services. Veja [Desenvolvendo um aplicativo do {{site.data.keyword.Bluemix_notm}} no Node.js com o Web IDE ![Ícone de link externo](../icons/launch-glyph.svg)](https://hub.jazz.net/tutorials/devopsweb/){: new_window}.

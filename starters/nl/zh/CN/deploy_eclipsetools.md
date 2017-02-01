@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015，2016
+  years: 2015，2017
 
-lastupdated: "2015-11-11"
+lastupdated: "2017-01-12"
 
 
 
@@ -30,4 +30,4 @@ lastupdated: "2015-11-11"
 
     <a class="xref" href="http://bluemix.net" target="_blank" title="（在新选项卡或窗口中打开）"><img class="image" src="images/btn_starter-code.svg" alt="下载入门模板代码" /></a>
 
-有关部署应用程序的逐步指示信息，请参阅[使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 部署应用程序](/docs/manageapps/eclipsetools/eclipsetools.html#eclipsetools){: new_window}。
+有关部署应用程序的逐步指示信息，请参阅[使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 部署应用程序 ![外部链接图标](../icons/launch-glyph.svg)](/docs/manageapps/eclipsetools/eclipsetools.html#eclipsetools){: new_window}。

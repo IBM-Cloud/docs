@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015，2017
 
 lastupdated: "2016-06-25"
 
@@ -17,7 +17,7 @@ lastupdated: "2016-06-25"
 
 # 使用 Visual Studio 進行開發
 
-  1. 如果您還沒有 Visual Studio，請遵循[這裡](https://msdn.microsoft.com/en-us/library/e2h7fzkw.aspx){: new_window}提供的指示來安裝 Visual Studio 2015 或 Visual Studio Code。
+  1. 如果您還沒有 Visual Studio，請遵循[這裡 ![外部鏈結圖示](../icons/launch-glyph.svg)](https://msdn.microsoft.com/en-us/library/e2h7fzkw.aspx){: new_window} 提供的指示來安裝 Visual Studio 2015 或 Visual Studio Code。
 
   1. {: download} 下載入門範本程式碼，並將它解壓縮到硬碟上的資料夾。
 
@@ -28,4 +28,4 @@ lastupdated: "2016-06-25"
 
   1. 將程式碼修改之後，您可以使用 CF 或 Bluemix CLI 工具來重新部署
 
-如需部署應用程式的逐步指示，請參閱[使用 CF CLI 來部署應用程式](./install_cli.html){: new_window}。
+如需部署應用程式的逐步指示，請參閱[使用 CF CLI 部署應用程式 ![外部鏈結圖示](../icons/launch-glyph.svg)](./install_cli.html){: new_window}。

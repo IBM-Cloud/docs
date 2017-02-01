@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2015，2016
+  years: 2015，2017
 
 lastupdated: "2016-06-25"
 
@@ -17,8 +17,7 @@ lastupdated: "2016-06-25"
 
 # Desenvolvendo com o Visual Studio
 
-  1. Se você ainda não tiver o Visual Studio, instale o Visual Studio 2015 ou o Visual Studio Code seguindo as instruções
-[aqui](https://msdn.microsoft.com/en-us/library/e2h7fzkw.aspx){: new_window}.
+  1. Se você ainda não tiver o Visual Studio, instale o Visual Studio 2015 ou o Visual Studio Code seguindo as instruções [aqui ![Ícone de link externo](../icons/launch-glyph.svg)](https://msdn.microsoft.com/en-us/library/e2h7fzkw.aspx){: new_window}.
 
   1. {: download} Faça o download de seu código de início e extraia-o em uma pasta em seu disco rígido.
 
@@ -29,4 +28,4 @@ lastupdated: "2016-06-25"
 
   1. Depois de ter modificado o seu código que pode ser reimplementado usando as ferramentas CF ou CLI do Bluemix
 
-Para obter instruções passo a passo na implementação de aplicativos, consulte [Implementando aplicativos com CF CLI](./install_cli.html){: new_window}.
+Para obter direções passo a passo na implementação de apps, veja [Implementando apps com a CLI CF ![Ícone de link externo](../icons/launch-glyph.svg)](./install_cli.html){: new_window}.

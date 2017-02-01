@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015，2017
 
-lastupdated: "2015-11-11"
+lastupdated: "2017-01-12"
 
 
 
@@ -16,7 +16,7 @@ lastupdated: "2015-11-11"
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# 使用 Eclipse 工具開發
+# 使用 Eclipse Tools 進行開發
 
 {{site.data.keyword.eclipsetoolsfull}} 在 Eclipse 中提供輕量型工具，以便快速開發和整合應用程式與 {{site.data.keyword.Bluemix}} 或 Cloud Foundry 雲端。
 {:shortdesc}
@@ -31,4 +31,4 @@ lastupdated: "2015-11-11"
     <a class="xref" href="http://bluemix.net" target="_blank" title="（在新分頁或視窗中開啟）"><img class="image" src="images/btn_starter-code.svg" alt="下載入門範本程式碼" /> </a>
   
 
-如需部署應用程式的逐步指示，請參閱[使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 部署應用程式](/docs/manageapps/eclipsetools/eclipsetools.html#eclipsetools){: new_window}。
+如需部署應用程式的逐步指示，請參閱[使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 部署應用程式 ![外部鏈結圖示](../icons/launch-glyph.svg)](/docs/manageapps/eclipsetools/eclipsetools.html#eclipsetools){: new_window}。

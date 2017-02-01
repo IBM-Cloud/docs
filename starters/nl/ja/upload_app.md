@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015，2016
+  years: 2015，2017
 
-lastupdated: "2016-02-17"
+lastupdated: "2017-01-12"
 
 
 
@@ -55,4 +55,4 @@ lastupdated: "2016-02-17"
 
   2. アプリケーションを変更した場合、cf push コマンドを再度入力することで、それらの変更をアップロードすることができます。cf コマンド・ライン・インターフェースは、アプリケーションの実行中のインスタンスを新規コードで更新するようプロンプトを出されたときに、ユーザーの過去のオプションとユーザーの応答を使用します。
 
-**ヒント:** また、DevOps Services からもアプリケーションのアップロードとデプロイを行うことができます。『[Developing a {{site.data.keyword.Bluemix_notm}} application in Node.js with the Web IDE](https://hub.jazz.net/tutorials/devopsweb/){: new_window}』を参照してください。
+**ヒント:** また、DevOps Services からもアプリケーションのアップロードとデプロイを行うことができます。[Developing a {{site.data.keyword.Bluemix_notm}} application in Node.js with the Web IDE ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://hub.jazz.net/tutorials/devopsweb/){: new_window} を参照してください。

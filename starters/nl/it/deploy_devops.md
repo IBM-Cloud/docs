@@ -4,7 +4,7 @@
 
 copyright:
 
-  year: 2015, 2016
+  years: 2015，2017
 
 lastupdated: "2016-03-02"
 
@@ -24,26 +24,26 @@ delle modifiche nel repository Git.
 
 1. Per iniziare, nella pagina Panoramica dell'applicazione, fai clic su **Aggiungi pipeline e repository Git** o, nella modalità classica {{site.data.keyword.Bluemix_notm}}, fai clic su **AGGIUNGI GIT**.
 2. Nella finestra così visualizzata, assicurati che la casella di spunta **Inserisci il pacchetto dell'applicazione starter nel repository e abilita la pipeline Crea e distribuisci** sia selezionata. Il repository Git viene creato. Se il codice di starter è disponibile,
-è caricato nel repository. Inoltre, l'applicazione viene distribuita dal servizio Delivery Pipeline in esecuzione in {{site.data.keyword.jazzhub}}.  
-3. Per aggiornare la tua applicazione, puoi utilizzare la riga comandi o il Web IDE.  
+è caricato nel repository. Inoltre, l'applicazione viene distribuita dal servizio Delivery Pipeline in esecuzione in {{site.data.keyword.jazzhub}}.
+3. Per aggiornare la tua applicazione, puoi utilizzare la riga comandi o il Web IDE.
    **Se utilizzi la riga comandi:**
-   a. Clona il tuo repository Git dall'URL Git nella pagina Panoramica dell'applicazione.  
-   b. Aggiorna il codice nel tuo editor preferito.  
-   c. Esegui il push delle modifiche dall'interfaccia della riga di comando Git.  
+   a. Clona il tuo repository Git dall'URL Git nella pagina Panoramica dell'applicazione.
+   b. Aggiorna il codice nel tuo editor preferito.
+   c. Esegui il push delle modifiche dall'interfaccia della riga di comando Git.
 
-   **Se utilizzi il Web IDE:**  
-   a. Nella pagina Panoramica dell'applicazione, fai clic su **Modifica codice**. Il tuo progetto viene aperto nel Web IDE.  
-   b. Apporta le modifiche necessarie ed esegui il push utilizzando il supporto Git integrato.  
+   **Se utilizzi l'IDE web:**
+   a. Nella pagina Panoramica dell'applicazione, fai clic su **Modifica codice**. Il tuo progetto viene aperto nel Web IDE.
+   b. Apporta le modifiche necessarie ed esegui il push utilizzando il supporto Git integrato.
 
-L'applicazione aggiornata viene ridistribuita in {{site.data.keyword.Bluemix_notm}}.  
+L'applicazione aggiornata viene ridistribuita in {{site.data.keyword.Bluemix_notm}}.
 
-Per istruzioni dettagliate, vedi [Set up Git integration and auto-deploy in DevOps Services](https://hub.jazz.net/tutorials/jazzeditor/#git_integration_and_autodeployment).  
+Per istruzioni dettagliate, vedi [Set up Git integration and auto-deploy in DevOps Services ![icona link esterno](../icons/launch-glyph.svg)](https://hub.jazz.net/tutorials/jazzeditor/#git_integration_and_autodeployment){: new_window}.
 
-## Hai aggiunto Git? Prova {{site.data.keyword.Bluemix_notm}} Live Sync  
+## Hai aggiunto Git? Prova {{site.data.keyword.Bluemix_notm}} Live Sync
 
-Se stai creando un'applicazione Node.js, puoi utilizzare {{site.data.keyword.Bluemix_notm}} Live Sync per aggiornare rapidamente l'istanza dell'applicazione su {{site.data.keyword.Bluemix_notm}} ed eseguire attività di sviluppo come faresti sul desktop.  
+Se stai creando un'applicazione Node.js, puoi utilizzare {{site.data.keyword.Bluemix_notm}} Live Sync per aggiornare rapidamente l'istanza dell'applicazione su {{site.data.keyword.Bluemix_notm}} ed eseguire attività di sviluppo come faresti sul desktop.
 
-Per ulteriori informazioni su {{site.data.keyword.Bluemix_notm}} Live Sync, vedi [{{site.data.keyword.Bluemix_notm}} Live Sync](/docs/develop/bluemixlive.html). Per ulteriori dettagli sui comandi, vedi la [{{site.data.keyword.Bluemix_notm}} documentazione della CLI Live Sync](/docs/cli/reference/bl/index.html). Per utilizzare {{site.data.keyword.Bluemix_notm}} Live Sync con il Web IDE, vedi [Live Edit](/docs/develop/bluemixlive.html).  
+Per ulteriori informazioni su {{site.data.keyword.Bluemix_notm}} Live Sync, vedi [{{site.data.keyword.Bluemix_notm}} Live Sync](/docs/develop/bluemixlive.html). Per ulteriori dettagli sui comandi, vedi la [{{site.data.keyword.Bluemix_notm}} documentazione della CLI Live Sync](/docs/cli/reference/bl/index.html). Per utilizzare {{site.data.keyword.Bluemix_notm}} Live Sync con il Web IDE, vedi [Live Edit](/docs/develop/bluemixlive.html).
 
 Prima di iniziare, scarica e installa la riga di comando bl di {{site.data.keyword.Bluemix_notm}} Live Sync.
 
@@ -80,7 +80,7 @@ non si immette una "q". L'opzione --verbose visualizza informazioni sulla regist
 modalità Live Edit immettendo il seguente comando:
 ```
 bl start
-```  
+```
 
 Quando modifichi i file nella tua directory locale, le modifiche vengono propagate automaticamente sia
 all'applicazione che è in esecuzione su {{site.data.keyword.Bluemix_notm}} sia
