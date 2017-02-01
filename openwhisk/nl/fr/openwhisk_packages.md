@@ -3,8 +3,8 @@
 
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-02"
+  years: 2016, 2017
+lastupdated: "2017-01-04"
 
 
 ---
@@ -291,12 +291,11 @@ déclencheur toutes les secondes, et comment utiliser une règle permettant d'ap
 5. Créez une règle qui appelle l'action `hello` à chaque fois que le déclencheur `everyEightSeconds` s'exécute.
 
   ```
-  wsk rule create --enable maRègle everyEightSeconds hello
+  wsk rule create myRule everyEightSeconds hello
   ```
   {: pre}
   ```
-  ok: created rule maRègle
-  ok: rule maRègle is activating
+  ok: created rule myRule
   ```
   {: screen}
 
@@ -489,7 +488,7 @@ du package et de créer des actions de séquence et des règles {{site.data.keyw
 1. Partagez le package avec tous les utilisateurs :
 
   ```
-  wsk package update custom --shared
+  wsk package update custom --shared yes
   ```
   {: pre}
   ```

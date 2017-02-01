@@ -3,8 +3,8 @@
 
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-02"
+  years: 2016, 2017
+lastupdated: "2017-01-04"
 
 
 ---
@@ -269,12 +269,11 @@ wsk action update hello hello.js
 5. 创建规则以在每次 `everyEightSeconds` 触发器触发时调用 `hello` 操作。
 
   ```
-wsk rule create --enable myRule everyEightSeconds hello
+  wsk rule create myRule everyEightSeconds hello
   ```
   {: pre}
   ```
-ok: created rule myRule
-  ok: rule myRule is activating
+  ok: created rule myRule
   ```
   {: screen}
 
@@ -461,7 +460,7 @@ wsk action invoke --blocking --result custom/identity --param city Dallas --para
 1. 与所有用户共享包：
 
   ```
-wsk package update custom --shared
+  wsk package update custom --shared yes
   ```
   {: pre}
   ```

@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2016
-lastupdated: "2016-09-09"
+  years: 2016, 2017
+lastupdated: "2017-01-04"
  
 
 ---
@@ -241,11 +241,10 @@ A representação JSON do evento acionador é a seguinte:
   ```
   {: screen}
 
-### Usando uma sequência de ações para processar um documento em um evento de mudança de um banco de dados do Cloudant
+### Usando uma sequência de ações e um acionador de mudança para processar um documento de um banco de dados do Cloudant
 
 É possível usar uma sequência de ações em uma regra para buscar e processar o documento associado a um evento de mudança do Cloudant.
 
-Crie uma ação que irá processar um documento do Cloudant; ele irá esperar um documento como um parâmetro.
 Aqui está um código de amostra de uma ação que manipula um documento:
 ```
 function main(doc){
@@ -253,42 +252,36 @@ function main(doc){
 }
 ```
 {: codeblock}
+
+Crie a ação para processar o documento do Cloudant:
 ```
 wsk action create myAction myAction.js
 ```
 {: pre}
-Para ler o documento do banco de dados, é possível usar a ação `read` no pacote do cloudant; esta ação pode ser incluída com a sua ação
-`myAction` em uma sequência de ações.
-Crie uma sequência de ações usando a ação `read` e, em seguida, chame a sua ação `myAction` que espera um documento como entrada.
+
+Para ler um documento do banco de dados, é possível usar a ação `read` do pacote do Cloudant.
+A ação `read` pode ser editada com `myAction` para criar uma sequência de ações.
 ```
 wsk action create sequenceAction --sequence /myNamespace/myCloudant/read,myAction
 ```
 {: pre}
 
-Agora crie uma regra que associe o seu acionador com a nova ação `sequenceAction`
+A ação `sequenceAction` pode ser usada em uma regra que ativa a ação em novos eventos acionadores do Cloudant.
 ```
 wsk rule create myRule myCloudantTrigger sequenceAction
 ```
 {: pre}
 
-A sequência de ações precisará saber o nome do banco de dados do qual buscar o documento.
-Configure um parâmetro no acionador para `dbname`
-```
-wsk trigger update myCloudantTrigger --param dbname testdb
-```
-{: pre}
-
-**Nota** O acionador de mudança do Cloudant usado para suportar o parâmetro `includeDoc`; isso não é mais suportado.
-  Será necessário recriar acionadores criados anteriormente com `includeDoc`:
-  Recrie o trigger acionador sem o parâmetro `includeDoc`
+**Nota**: o acionador `changes` do Cloudant é usado para suportar o parâmetro `includeDoc`, que não é mais suportado.
+Será necessário recriar os acionadores criados anteriormente com `includeDoc`. Sigas estas etapas para recriar o acionador:
   ```
   wsk trigger delete myCloudantTrigger
   wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb
   ```
   {: pre}
-  É possível seguir as etapas acima para criar uma sequência de ações para obter o documento e chamar a sua ação existente.
-  Em seguida, atualize a sua regra para usar a nova sequência de ações.
 
+  O exemplo ilustrado acima pode ser usado para criar uma sequência de ações para ler o documento mudado e chamar suas ações existentes.
+  Lembre-se de desativar as regras que podem não ser mais válidas e criar novas usando o padrão de sequência de ações.
 
 ## Usando o pacote Alarme
 {: #openwhisk_catalog_alarm}
@@ -331,12 +324,13 @@ no evento acionador.
   ```
   wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron "*/2 * * * *" --param trigger_payload "{\"name\":\"Odin\",\"place\":\"Asgard\"}"
   ```
+  {: pre}
 
 Cada evento gerado incluirá como parâmetros as propriedades especificadas no valor de `trigger_payload`. Neste caso, cada evento acionador terá os parâmetros `name=Odin` e `place=Asgard`.
 
 **Nota**: o parâmetro `cron` também suporta uma sintaxe customizada de seis campos, na qual o primeiro campo representa
-segundos.
-Para obter mais detalhes sobre como usar a sintaxe cron customizada, veja: https://github.com/ncb000gt/node-cron.
+segundos. 
+Para obter mais detalhes sobre como usar a sintaxe cron customizada, veja: https://github.com/ncb000gt/node-cron. 
 Aqui está um exemplo usando a notação de seis campos:
   - `*/30 * * * * *`: a cada trinta segundos.
 
@@ -413,15 +407,16 @@ Segue um exemplo de criação de uma ligação de pacote e, em seguida, a obten�
 
 ## Usando os pacotes do Watson
 {: #openwhisk_catalog_watson}
+
 Os pacotes do Watson oferecem uma maneira conveniente de chamar várias APIs do Watson.
 
 Os pacotes do Watson a seguir são fornecidos:
 
 | Package | Descrição |
 | --- | --- |
-| `/whisk.system/watson-translator`   | Ações para as APIs do Watson para traduzir texto e identificação de idioma |
-| `/whisk.system/watson-textToSpeech` | Ações para as APIs do Watson para converter o texto em fala |
-| `/whisk.system/watson-speechToText` | Ações para as APIs do Watson para converter a fala em texto |
+| `/whisk.system/watson-translator`   | Pacote para tradução de texto e identificação de idioma |
+| `/whisk.system/watson-textToSpeech` | Pacote para converter texto em fala |
+| `/whisk.system/watson-speechToText` | Pacote para converter fala em texto |
 
 **Nota** O pacote `/whisk.system/watson` está atualmente descontinuado; migre para os novos pacotes mencionados acima;
 as novas ações fornecem a mesma interface.
@@ -434,12 +429,11 @@ O pacote inclui as ações a seguir.
 
 | Entidade | Tipo | Parâmetros | Descrição |
 | --- | --- | --- | --- |
-| `/whisk.system/watson-translator` | pacote | username, password | Ações para as APIs do Watson para traduzir texto e identificação de idioma  |
+| `/whisk.system/watson-translator` | pacote | username, password | Pacote para tradução de texto e identificação de idioma  |
 | `/whisk.system/watson-translator/translator` | ação | payload, translateFrom, translateTo, translateParam, username, password | Traduzir texto |
 | `/whisk.system/watson-translator/languageId` | ação | payload, username, password | Identificar idioma |
 
-**Nota**: O pacote `/whisk.system/watson` está descontinuado, incluindo as ações
-`/whisk.system/watson/translate` e `/whisk.system/watson/languageId`.
+**Nota**: o pacote `/whisk.system/watson` está descontinuado, incluindo as ações `/whisk.system/watson/translate` e `/whisk.system/watson/languageId`.
 
 #### Configurando o pacote do Tradutor do Watson no Bluemix
 
@@ -475,7 +469,6 @@ do Bluemix.
   wsk package list
   ```
   {: pre}
-  
   ```
   packages
   /myBluemixOrg_myBluemixSpace/Bluemix_Watson_Translator_Credentials-1 private
@@ -559,16 +552,15 @@ O pacote inclui as ações a seguir.
 
 | Entidade | Tipo | Parâmetros | Descrição |
 | --- | --- | --- | --- |
-| `/whisk.system/watson-textToSpeech` | pacote | username, password | Ações para as APIs do Watson para converter o texto em fala |
+| `/whisk.system/watson-textToSpeech` | pacote | username, password | Pacote para converter texto em fala |
 | `/whisk.system/watson-textToSpeech/textToSpeech` | ação | payload, voice, accept, encoding, username, password | Converter texto em áudio |
 
-**Nota**: O pacote `/whisk.system/watson` está descontinuado, incluindo a ação
-`/whisk.system/watson/textToSpeech`.
+**Nota**: o pacote `/whisk.system/watson` está descontinuado, incluindo a ação `/whisk.system/watson/textToSpeech`.
 
 #### Usando o pacote de Texto do Watson para Fala no Bluemix
 
-Se você estiver usando o OpenWhisk a partir do Bluemix, o OpenWhisk criará automaticamente as ligações de pacote para as suas instâncias de serviço do Watson do
-Bluemix.
+Se você estiver usando o OpenWhisk a partir do Bluemix, o OpenWhisk criará automaticamente as ligações de pacote para as suas instâncias de serviço do Watson
+do Bluemix.
 
 1. Crie uma instância de serviço de Texto do Watson para Fala em seu [painel](http://console.ng.Bluemix.net) do Bluemix.
 
@@ -621,6 +613,7 @@ de pacote para o seu serviço de Texto do Watson para Fala. Você precisa do nom
 
 #### Converter algum texto para fala
 {: #openwhisk_catalog_watson_speechtotext}
+
 A ação `/whisk.system/watson-speechToText/textToSpeech` converte algum texto em uma fala de áudio. Os parâmetros são como segue:
 
 - `username`: o nome do usuário da API do Watson.
@@ -644,6 +637,7 @@ A ação `/whisk.system/watson-speechToText/textToSpeech` converte algum texto e
   ```
   {: screen}
 
+
 ### Usando o pacote de Fala do Watson para Texto
 {: #openwhisk_catalog_watson_speechtotext}
 
@@ -653,18 +647,16 @@ O pacote inclui as ações a seguir.
 
 | Entidade | Tipo | Parâmetros | Descrição |
 | --- | --- | --- | --- |
-| `/whisk.system/watson-speechToText` | pacote | username, password | Ações para as APIs do Watson para converter a fala em texto |
+| `/whisk.system/watson-speechToText` | pacote | username, password | Pacote para converter fala em texto |
 | `/whisk.system/watson-speechToText/speechToText` | ação | payload, content_type, encoding, username, password, continuous, inactivity_timeout, interim_results, keywords, keywords_threshold, max_alternatives, model, timestamps, watson-token, word_alternatives_threshold, word_confidence, X-Watson-Learning-Opt-Out | Converter
 áudio em texto |
 
-**Nota**: O pacote `/whisk.system/watson` está descontinuado, incluindo a ação
-`/whisk.system/watson/speechToText`.
-
+**Nota**: o pacote `/whisk.system/watson` está descontinuado, incluindo a ação `/whisk.system/watson/speechToText`.
 
 #### Configurando o pacote de Fala do Watson para Texto no Bluemix
 
-Se você estiver usando o OpenWhisk a partir do Bluemix, o OpenWhisk criará automaticamente as ligações de pacote para as suas instâncias de serviço do Watson do
-Bluemix.
+Se você estiver usando o OpenWhisk a partir do Bluemix, o OpenWhisk criará automaticamente as ligações de pacote para as suas instâncias de serviço do Watson
+do Bluemix.
 
 1. Crie uma instância de serviço de Fala do Watson para Texto em seu [painel](http://console.ng.Bluemix.net) do Bluemix.
 
@@ -715,7 +707,6 @@ pacote para o seu serviço de Fala do Watson para Texto. Você precisa do nome d
   {: pre}
 
 
-
 #### Convertendo fala para texto
 
 A ação `/whisk.system/watson-speechToText/speechToText` converte fala de áudio em texto. Os parâmetros são como segue:
@@ -753,6 +744,128 @@ A ação `/whisk.system/watson-speechToText/speechToText` converte fala de áudi
   {: screen}
  
  
+## Usando o pacote Message Hub
+{: #openwhisk_catalog_message_hub}
+
+Esse pacote permite criar acionadores que reagem quando as mensagens são postadas em uma instância de serviço do [Message Hub](https://developer.ibm.com/messaging/message-hub/) no Bluemix.
+
+### Criando um acionador que atende a uma Instância do Message Hub
+{: #openwhisk_catalog_message_hub_trigger}
+Para criar um acionador que reaja quando as mensagens forem postadas em uma instância do Message Hub, será necessário usar o feed chamado `messaging/messageHubFeed`. Esse feed suporta os parâmetros a seguir:
+
+|Nome|Tipo|Descrição|
+|---|---|---|
+|kafka_brokers_sasl|Matriz JSON de sequência de caracteres|Esse parâmetro é uma matriz de sequências `<host>:<port>` que formam os brokers na instância do Message Hub|
+|usuário|Sequência de caracteres|Nome do usuário do Message Hub|
+|password|Sequência de caracteres|Senha do Message Hub|
+|tópico|Sequência de caracteres|O tópico que você gostaria que o acionador atendesse|
+|kafka_admin_url|Sequência URL|A URL da interface REST do administrador do Message Hub|
+|api_key|Sequência de caracteres|Sua chave API do Message Hub|
+|isJSONData|Booleano (Opcional - padrão=false)|Quando configurado como `true`, isso fará com que o feed tente analisar o conteúdo da mensagem como JSON antes de passá-lo adiante como a carga útil do acionador.|
+
+Embora essa lista de parâmetros possa parecer assustadora, ela pode ser configurada automaticamente por você usando o comando de atualização de pacote da CLI:
+
+1. Crie uma instância do serviço Message Hub em sua organização e espaço atuais que você está usando para o OpenWhisk.
+
+2. Verifique se o tópico que você deseja atender já existe no Message Hub ou crie um novo tópico para atender as mensagens, como `mytopic`.
+
+2. Atualize os pacotes em seu namespace. A atualização cria automaticamente uma ligação de pacote para a instância de serviço do Message Hub que você criou.
+
+  ```
+  wsk package refresh
+  ```
+  {: pre}
+  ```
+  created bindings:
+  Bluemix_Message_Hub_Credentials-1
+  ```
+  {: screen}
+
+  ```
+  wsk package list
+  ```
+  {: pre}
+  ```
+  packages
+  /myBluemixOrg_myBluemixSpace/Bluemix_Message_Hub_Credentials-1 private
+  ```
+  {: screen}
+
+  Sua ligação de pacote agora contém as credenciais associadas à sua instância do Message Hub.
+
+3. Agora tudo o que você precisa é criar um Acionador para ser disparado quando novas mensagens forem postadas no Message Hub.
+
+  ```
+  wsk trigger create MyMessageHubTrigger -f /myBluemixOrg_myBluemixSpace/Bluemix_Message_Hub_Credentials-1/messageHubFeed -p topic mytopic
+  ```
+  {: pre}
+
+### Configurando um pacote Message Hub fora do Bluemix
+
+Caso você não esteja usando o OpenWhisk no Bluemix ou caso queira configurar o Message Hub fora do Bluemix, deve-se criar manualmente uma ligação de pacote para o serviço Message Hub. Você precisa das credenciais de serviço e das informações de conexão do Message Hub.
+
+- Crie uma ligação de pacote que esteja configurada para o serviço Message Hub.
+
+  ```
+  wsk trigger create MyMessageHubTrigger -f /whisk.system/messaging/messageHubFeed -p kafka_brokers_sasl "[\"kafka01-prod01.messagehub.services.us-south.bluemix.net:9093\", \"kafka02-prod01.messagehub.services.us-south.bluemix.net:9093\", \"kafka03-prod01.messagehub.services.us-south.bluemix.net:9093\"]" -p topic mytopic -p user <your Message Hub user> -p password <your Message Hub password> -p kafka_admin_url https://kafka-admin-prod01.messagehub.services.us-south.bluemix.net:443 -p api_key <your API key>
+  ```
+  {: pre}
+
+### Atendendo mensagens para uma instância do Message Hub
+{: #openwhisk_catalog_message_hub_listen}
+Depois de criar um acionador, o sistema monitorará o tópico especificado em seu serviço de sistema de mensagens. Quando novas mensagens forem postadas, o acionador será disparado.
+
+A carga útil desse acionador conterá um campo `messages` que é uma matriz de mensagens que foram postadas desde a última vez que o acionador foi disparado. Cada objeto de mensagem na matriz conterá os campos a seguir:
+- - tópico
+- partição
+- Deslocamento
+- Chave
+- derivado
+
+Em termos Kafka, esses campos devem ser autoevidentes. No entanto, o `value` requer consideração especial. Se o parâmetro `isJSONData` tiver sido configurado como `false` (ou não tiver sido configurado) quando o acionador foi criado, o campo `value` será o valor bruto da mensagem postada. No entanto, se `isJSONData` tiver sido configurado como `true` quando o acionador foi criado, o sistema tentará analisar esse valor como um objeto JSON, no melhor esforço. Se a análise for bem-sucedida, o `value` na carga útil do acionador será o objeto JSON resultante.
+
+Por exemplo, se uma mensagem de `{"title": "Some string", "amount": 5, "isAwesome": true}` for postada com `isJSONData` configurado como `true`, a carga útil do acionador poderá ser semelhante a isto:
+
+```
+{
+  "messages": [
+      {
+        "partition": 0,
+        "key": null,
+        "offset": 421760,
+        "topic": "mytopic",
+        "value": {
+            "amount": 5,
+            "isAwesome": true,
+            "title": "Some string"
+        }
+      }
+  ]
+}
+```
+
+No entanto, se o mesmo conteúdo da mensagem fosse postado com `isJSONData` configurado como `false`, a carga útil do acionador seria assim:
+
+```
+{
+  "messages": [
+    {
+      "partition": 0,
+      "key": null,
+      "offset": 421761,
+      "topic": "mytopic",
+      "value": "{\"title\": \"Some string\", \"amount\": 5, \"isAwesome\": true}"
+    }
+  ]
+}
+```
+
+### As mensagens são processadas em lote
+Você observará que a carga útil do acionador contém uma matriz de mensagens. Isso significa que se você estiver produzindo mensagens para seu sistema de mensagens muito rapidamente, o feed tentará processar em lote as mensagens postadas em um único disparo do acionador. Isso permite que as mensagens sejam postadas no acionador de maneira mais rápida e eficiente.
+
+Lembre-se de que, ao codificar ações que são disparadas por seu acionador, o número de mensagens na carga útil é tecnicamente sem limites, mas sempre será maior que 0.
+
+
 ## Usando o pacote Slack
 {: #openwhisk_catalog_slack}
 

@@ -1,10 +1,12 @@
 ---
 
-
+ 
 
 copyright:
+
   years: 2016
 lastupdated: "2016-09-09"
+ 
 
 ---
 
@@ -16,7 +18,6 @@ lastupdated: "2016-09-09"
 
 # Implementazione di feed
 {: #openwhisk_feeds}
-
 
 OpenWhisk supporta un'API aperta, in cui ogni utente può esporre un servizio di produzione eventi in forma di **feed** in un **pacchetto**.   Questa sezione descrive le opzioni di architettura e implementazione per fornire i propri feed.
 

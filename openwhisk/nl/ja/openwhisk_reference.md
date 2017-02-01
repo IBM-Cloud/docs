@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-09-27"
+  years: 2016, 2017
+lastupdated: "2017-01-04"
 
 ---
 
@@ -62,8 +62,8 @@ Bluemix では、組織とスペースのペアが {{site.data.keyword.openwhisk
 
 アクション、トリガー、ルール、パッケージ、名前空間を含むすべてのエンティティーの名前は、以下のフォーマットに従った文字列になります。
 
-* 先頭文字は、英数字、数字、またはアンダースコアーでなければなりません。
-* 後続の文字には、英数字、数字、スペース、または `_`、`@`、`.`、`-` のどれでも含めることができます。
+* 先頭文字は、英数字または下線でなければなりません。
+* 後続の文字には、英数字、スペース、または `_`、`@`、`.`、`-` のどれでも含めることができます。
 * 最後の文字をスペースにすることはできません。
 
 より正確に言うと、名前は次の (Java メタキャラクター構文で表した) 正規表現に一致する必要があります。`\A([\w]|[\w][\w@ .-]*[\w@.-]+)\z`
@@ -172,7 +172,7 @@ function main(params) {
   } else if (params.payload == 1) {
      return {payload: 'Hello, World!'};
   } else if (params.payload == 2) {
-    return whisk.error();   // indicates abnormal completion
+    return {error: 'payload must be 0 or 1'};
   }
 }
 ```
@@ -229,57 +229,12 @@ function main(params) {
 
 アクティベーションが同期か非同期かに関係なく、アクションの呼び出しにはブロッキングまたは非ブロッキングが可能です。
 
-### 追加の SDK メソッド
+### JavaScript グローバル whisk オブジェクトは非推奨
 
-`whisk.invoke()` 関数は、別のアクションを呼び出し、結果のアクティベーション用に Promise を返します。引数として、以下のパラメーターを定義したディクショナリーを使用します。
-
-- *name* : 呼び出すアクションの完全修飾名。
-- *parameters* : 呼び出されたアクションへの入力を表す JSON オブジェクト。省略された場合、デフォルトは空のオブジェクトです。
-- *apiKey* : アクションの呼び出しに使用する許可キー。
-デフォルトは `whisk.getAuthKey()` です。
-- *blocking* : アクションをブロッキング・モードと非ブロッキング・モードのどちらで呼び出すか。`blocking` が true の場合、呼び出しは、呼び出されたアクションの結果を待った後で、返された Promise を解決 (resolve) します。デフォルトは `false` で、非ブロッキングの呼び出しを指示します。
-
-`whisk.invoke()` は Promise を返します。OpenWhisk システムが呼び出しの完了を待つようにするためには、この Promise をアクションの `main` 関数から返す必要があります。
-- 呼び出しが失敗した場合、Promise は、失敗した呼び出しを説明するオブジェクトを使用して拒否 (reject) します。それには以下の 2 つのフィールドがある可能性があります。
-  - *error*: エラーを説明するオブジェクト。通常はストリングです。
-  - *activation*: オプションのディクショナリー。存在するかどうかは、呼び出しの失敗の性質によります。存在する場合、以下のフィールドが含まれます。
-    - *activationId* : アクティベーション ID。
-    - *result* : アクションがブロッキング・モードで呼び出された場合: アクション結果の JSON オブジェクト、あるいは `undefined`。
-- 呼び出しが成功した場合、Promise は、上で説明されたフィールド *activationId* および *result* でアクティベーションを記述するディクショナリーを使用して解決 (resolve) します。
-
-以下に、返された Promise を利用するブロッキング呼び出しの例を示します。
-```javascript
-return whisk.invoke({
-  name: 'myAction',
-  blocking: true
-})
-.then(function (activation) {
-    // activation completed successfully, activation contains the result
-    console.log('Activation ' + activation.activationId + ' completed successfully and here is the result ' + activation.result);
-})
-.catch(function (reason) {
-    console.log('An error has occured ' + reason.error);
-
-    if(reason.activation) {
-      console.log('Please check activation ' + reason.activation.activationId + ' for details.');
-    } else {
-      console.log('Failed to create activation.');
-    }
-});
-```
-{: codeblock}
-
-`whisk.trigger()` 関数は、トリガーを発生させ、結果のアクティベーションの Promise を返します。引数として、以下のパラメーターを含む JSON オブジェクトを使用します。
-
-- *name* : 呼び出すトリガーの完全修飾名。
-- *parameters* : トリガーへの入力を表す JSON オブジェクト。省略された場合、デフォルトは空のオブジェクトです。
-- *apiKey* : トリガーの起動に使用する許可キー。デフォルトは `whisk.getAuthKey()` です。
-
-`whisk.trigger()` は Promise を返します。トリガーの完了を OpenWhisk システムが待つことが必要な場合、この Promise をアクションの `main` 関数から返す必要があります。
-- トリガーが失敗した場合、Promise は、そのエラーを説明するオブジェクトを使用して拒否 (reject) します。
-- トリガーが成功した場合、Promise は、アクティベーション ID を含んでいる `activationId` フィールドのあるディクショナリーを使用して解決 (resolve) します。
-
-`whisk.getAuthKey()` 関数は、アクションの実行に使用されている許可キーを返します。通常、`whisk.invoke()` 関数と `whisk.trigger()` 関数で暗黙的に使用されるため、この関数を直接呼び出す必要はありません。
+グローバル・オブジェクト `whisk` は現在は非推奨です。nodejs アクションをマイグレーションして代替メソッドを使用するようにしてください。
+関数 `whisk.invoke()` および `whisk.trigger()` では、クライアント・ライブラリー [openwhisk](https://www.npmjs.com/package/openwhisk) を使用できます。
+`whisk.getAuthKey()` では、環境変数 `__OW_API_KEY` から API キー値を取得できます。
+`whisk.error()` では、拒否された Promise (つまり Promise.reject) を返すことができます。
 
 ### JavaScript ランタイム環境
 {: #openwhisk_ref_javascript_environments}
@@ -311,6 +266,7 @@ Node.js 6.9.1 環境では、以下のパッケージを使用できます。
 - node-uuid v1.4.7
 - nodemailer v2.6.4
 - oauth2-server v2.4.1
+- openwhisk v3.0.0
 - pkgcloud v1.4.0
 - process v0.11.9
 - pug v2.0.0-beta6
@@ -362,6 +318,7 @@ Node.js 0.12.17 環境では、以下のパッケージを使用できます。
 - nano v5.10.0
 - node-uuid v1.4.2
 - oauth2-server v2.4.0
+- openwhisk v3.0.0
 - process v0.11.0
 - request v2.79.0
 - rimraf v2.5.1
@@ -505,7 +462,9 @@ OpenWhisk API は、Web クライアントからの要求/応答呼び出しを�
 {: #openwhisk_syslimits}
 
 ### アクション
-{{site.data.keyword.openwhisk_short}} には、アクションで使用するメモリーの量、1 時間当たりのアクション呼び出しの許容数など、システムしきい値がいくつかあります。以下の表に、アクションのデフォルトの限度を示します。
+{{site.data.keyword.openwhisk_short}} には、1 つのアクションが使用できるメモリー量、1 分当たりの許容されるアクション起動数など、いくつかのシステム制限があります。 
+
+以下の表に、アクションのデフォルトの限度を示します。
 
 | 限度 | 説明 | 構成対象 | 単位 | デフォルト |
 | ----- | ----------- | ------------ | -----| ------- |
@@ -576,7 +535,7 @@ OpenWhisk API は、Web クライアントからの要求/応答呼び出しを�
 
 ### トリガー
 
-次の表に示すように、トリガーには分当たりと時間当たりの発生頻度の制限が課されます。
+次の表に示すように、トリガーには分当たりの発生頻度の制限が課されます。
 
 | 限度 | 説明 | 構成対象 | 単位 | デフォルト |
 | ----- | ----------- | ------------ | -----| ------- |

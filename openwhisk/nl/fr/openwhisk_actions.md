@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2016
-lastupdated: "2016-09-27"
- 
+  years: 2016, 2017
+lastupdated: "2017-01-04"
+
 
 ---
 
@@ -746,13 +746,19 @@ Vous pouvez créer une action OpenWhisk nommée
 `helloJava` à partir de ce fichier JAR comme suit :
 
 ```
-wsk action create helloJava hello.jar
+wsk action create helloJava hello.jar --main Hello
 ```
 {: pre}
 
 Lorsque vous utilisez la ligne de commande et un fichier source
 `.jar`, il n'est pas nécessaire de spécifier que vous créez
 une action Java ; l'outil le détermine à partir de l'extension de fichier.
+
+Vous devez indiquer le nom de la classe principale avec
+`--main`. Une classe principale est éligible quand elle
+implémente une méthode `main` statique comme décrit
+ci-dessus. Si la classe ne figure pas dans le package par défaut, utilisez le
+nom de classe Java entièrement qualifié, par exemple, `--main com.example.MyMain`.
 
 L'appel d'action est identique pour les actions Java et les actions Swift
 et JavaScript :
@@ -768,11 +774,6 @@ wsk action invoke --blocking --result helloJava --param name World
   }
 ```
 {: screen}
-
-**Remarque :** Si le fichier JAR comporte plusieurs
-classes avec une méthode main correspondant à la signature requise,
-l'outil de l'interface de ligne de commande utilisé la première classe indiquée
-par `jar -tf`.
 
 
 ## Création d'actions Docker
@@ -972,3 +973,21 @@ Vous pouvez procéder à un nettoyage en supprimant les actions que vous ne voul
   actions
   ```
   {: screen}
+  
+## Accès aux métadonnées d'action dans le corps de l'action 
+
+L'environnement de l'action contient plusieurs propriétés
+spécifiques à l'action en cours d'exécution.
+Elles permettent à l'action de fonctionner à l'aide d'un programme avec des
+actifs OpenWhisk via l'API REST, ou de définir une alarme interne lorsque
+l'action est sur le point d'utiliser la totalité de son budget temps alloué.
+Ces propriétés sont accessibles via l'environnement système de tous les
+contextes d'exécution pris en charge : actions Node.js, Python, Swift, Java et
+Docker lorsque le squelette Docker OpenWhisk est employé. 
+
+* `__OW_API_HOST` hôte d'API du déploiement OpenWhisk exécutant l'action
+* `__OW_API_KEY` clé d'API du sujet appelant l'action, il peut s'agir d'une clé d'API restreinte
+* `__OW_NAMESPACE` espace de nom de l'*activation* (peut être différent de l'espace de nom de l'action)
+* `__OW_ACTION_NAME` nom qualifié complet de l'action en cours d'exécution
+* `__OW_ACTIVATION_ID` ID d'activation de l'instance d'action en cours d'exécution
+* `__OW_DEADLINE` durée approximative équivalant à la consommation par l'action de la totalité de son quota de durée (mesurée en millisecondes depuis l'époque)

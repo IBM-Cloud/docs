@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-09-27"
+  years: 2016, 2017
+lastupdated: "2017-01-04"
 
 ---
 
@@ -56,8 +56,8 @@ lastupdated: "2016-09-27"
 
 所有實體（包括動作、觸發程式、規則、套件及名稱空間）的名稱都是遵循下列格式的一串字元：
 
-* 第一個字元必須是英數字元、數字或底線。
-* 後續字元可以是英數字元、數字、空格或下列任何一項：`_`、`@`、`.`、`-`。
+* 第一個字元必須是英數字元或底線。
+* 後續字元可以是英數字元、空格或下列任何一項：`_`、`@`、`.`、`-`。
 * 最後一個字元不能是空格。
 
 更精確地來說，名稱必須符合下列正規表示式（以 Java meta 字元語法表示）：`\A([\w]|[\w][\w@ .-]*[\w@.-]+)\z`。
@@ -163,7 +163,7 @@ function main(params) {
   } else if (params.payload == 1) {
      return {payload: 'Hello, World!'};
   } else if (params.payload == 2) {
-    return whisk.error();   // indicates abnormal completion
+    return {error: 'payload must be 0 or 1'};
   }
 }
 ```
@@ -220,57 +220,12 @@ function main(params) {
 
 請注意，不論啟動是同步還是非同步，動作的呼叫都可以是封鎖或非封鎖。
 
-### 其他 SDK 方法
+### 已淘汰 JavaScript 廣域 whisk 物件
 
-`whisk.invoke()` 函數會呼叫另一個動作，並傳回所產生之啟動的 Promise。它接受定義下列參數的字典作為引數：
-
-- *name*：要呼叫之動作的完整名稱。
-- *parameters*：JSON 物件，代表所呼叫動作的輸入。如果省略，預設值為空的物件。
-- *apiKey*：用來呼叫動作的授權金鑰。
-預設值為 `whisk.getAuthKey()`。
-- *blocking*：應該以封鎖還是非封鎖模式呼叫動作。`blocking` 為 true 時，呼叫會先等待所呼叫動作的結果，再解析所傳回的 Promise。預設值為 `false`，這指出非封鎖呼叫。
-
-`whisk.invoke()` 會傳回 Promise。若要讓 OpenWhisk 系統等待呼叫完成，您必須從動作的 `main` 函數傳回此 Promise。
-- 如果呼叫失敗，Promise 將會使用說明失敗呼叫的物件來拒絕。它可能會有兩個欄位：
-  - *error*：說明錯誤的物件 - 通常是字串。
-  - *activation*：根據呼叫失敗的本質，不一定存在的選用字典。如果存在，則會有下列欄位：
-    - *activationId*：啟動 ID：
-    - *result*：如果已使用封鎖模式來呼叫動作，則動作結果為 JSON 物件，否則為 `undefined`。
-- 如果呼叫成功，Promise 將使用字典來解析，而字典說明透過上述 *activationId* 及 *result* 欄位的啟動。
-
-以下是使用所傳回 Promise 的封鎖呼叫範例：
-```javascript
-return whisk.invoke({
-  name: 'myAction',
-  blocking: true
-})
-.then(function (activation) {
-    // activation completed successfully, activation contains the result
-    console.log('Activation ' + activation.activationId + ' completed successfully and here is the result ' + activation.result);
-})
-.catch(function (reason) {
-    console.log('An error has occured ' + reason.error);
-
-    if(reason.activation) {
-      console.log('Please check activation ' + reason.activation.activationId + ' for details.');
-    } else {
-      console.log('Failed to create activation.');
-    }
-});
-```
-{: codeblock}
-
-`whisk.trigger()` 函數會發動觸發程式，並傳回所產生之啟動的 Promise。它接受包含下列參數的 JSON 物件作為引數：
-
-- *name*：要呼叫的觸發程式的完整名稱。
-- *parameters*：JSON 物件，代表觸發程式的輸入。如果省略，預設值為空的物件。
-- *apiKey*：用來發動觸發程式的授權金鑰。預設值為 `whisk.getAuthKey()`。
-
-`whisk.trigger()` 會傳回 Promise。如果您需要 OpenWhisk 系統等待觸發程式完成，您應該從動作的 `main` 函數傳回此 Promise。
-- 如果觸發程式失敗，Promise 將會使用說明錯誤的物件來拒絕。
-- 如果觸發程式成功，Promise 將會使用 `activationId` 欄位包含啟動 ID 的字典來解析。
-
-`whisk.getAuthKey()` 函數會傳回用來執行動作的授權金鑰。您通常不需要直接呼叫此函數，因為 `whisk.invoke()` 及 `whisk.trigger()` 函數會隱含地使用它。
+目前已淘汰廣域物件 `whisk`；請移轉 nodejs 動作，以使用替代方法。
+對於函數 `whisk.invoke()` 及 `whisk.trigger()`，您可以使用用戶端程式庫 [openwhisk](https://www.npmjs.com/package/openwhisk)。
+對於 `whisk.getAuthKey()`，您可以從環境變數 `__OW_API_KEY` 取得 API 金鑰值。
+對於 `whisk.error()`，您可以傳回已拒絕的 Promise（即 Promise.reject）。
 
 ### JavaScript 運行環境
 {: #openwhisk_ref_javascript_environments}
@@ -302,6 +257,7 @@ return whisk.invoke({
 - node-uuid 1.4.7 版
 - nodemailer 2.6.4 版
 - oauth2-server 2.4.1 版
+- openwhisk 3.0.0 版
 - pkgcloud 1.4.0 版
 - process 0.11.9 版
 - pug 2.0.0-beta6 版
@@ -353,6 +309,7 @@ return whisk.invoke({
 - nano 5.10.0 版
 - node-uuid 1.4.2 版
 - oauth2-server 2.4.0 版
+- openwhisk 3.0.0 版
 - process 0.11.0 版
 - request 2.79.0 版
 - rimraf 2.5.1 版
@@ -489,7 +446,9 @@ OpenWhisk API 支援 Web 用戶端發出的「要求/回應」呼叫。OpenWhisk
 {: #openwhisk_syslimits}
 
 ### 動作
-{{site.data.keyword.openwhisk_short}} 有一些系統限制，包括動作所使用的記憶體量，以及每小時允許的動作呼叫次數。下表列出動作的預設限制。
+{{site.data.keyword.openwhisk_short}} 有一些系統限制，包括動作可使用的記憶體數量，以及每分鐘允許的動作呼叫次數。 
+
+下表列出動作的預設限制。
 
 | 限制 | 說明 | 可配置 | 單位 | 預設值 |
 | ----- | ----------- | ------------ | -----| ------- |
@@ -560,7 +519,7 @@ OpenWhisk API 支援 Web 用戶端發出的「要求/回應」呼叫。OpenWhisk
 
 ### 觸發程式
 
-如下表所記錄，觸發程式受限於每分鐘及每小時的發動率。
+如下表所記載，觸發程式受限於每分鐘的發動率。
 
 | 限制 | 說明 | 可配置 | 單位 | 預設值 |
 | ----- | ----------- | ------------ | -----| ------- |

@@ -1,10 +1,12 @@
 ---
 
-
+ 
 
 copyright:
+
   years: 2016
 lastupdated: "2016-09-09"
+ 
 
 ---
 
@@ -16,7 +18,6 @@ lastupdated: "2016-09-09"
 
 # Implémentation de flux
 {: #openwhisk_feeds}
-
 
 OpenWhisk prend en charge une API ouverte, dans laquelle tous les utilisateurs peuvent exposer un service de producteur
 d'événement sous forme de **flux** dans un **package**.   Cette section décrit les options d'architecture et

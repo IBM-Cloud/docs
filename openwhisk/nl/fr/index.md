@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2016, 2017
 lastupdated: "2016-09-09"
 
 ---
@@ -12,7 +12,7 @@ lastupdated: "2016-09-09"
 {:screen: .screen}
 {:pre: .pre}
 
-# Initiation à {{site.data.keyword.openwhisk_short}} (bêta)
+# Initiation à {{site.data.keyword.openwhisk_short}}
 
 
 {{site.data.keyword.openwhisk}} est un service de traitement distribué et géré par des événements, également appelé traitement sans serveur ou
@@ -30,7 +30,7 @@ Vous pouvez utiliser le navigateur ou l'interface de ligne de commande
 pour développer vos applications {{site.data.keyword.openwhisk_short}}.
 Ces deux fonctions sont dotées de capacités similaires pour le développement
 d'applications. L'interface de ligne de commande offre cependant davantage de
-contrôle sur le déploiement et les opérations. 
+contrôle sur le déploiement et les opérations.
 
 
 ## Développer dans votre navigateur
@@ -39,9 +39,9 @@ contrôle sur le déploiement et les opérations.
 Essayez {{site.data.keyword.openwhisk_short}} dans votre
 [navigateur](https://console.{DomainName}/openwhisk/editor){: new_window}
 pour créer des actions, automatiser les actions à l'aide de déclencheurs et
-explorer des packages publics.
+explorer des packages publics. 
 Consultez la page [En savoir
-plus](https://console.{DomainName}/openwhisk/learn){: new_window} pour un tour d'horizon de l'interface utilisateur d'OpenWhisk. 
+plus](https://console.{DomainName}/openwhisk/learn){: new_window} pour un tour d'horizon de l'interface utilisateur d'OpenWhisk.
 
 ## Configuration de l'interface de ligne de commande d'{{site.data.keyword.openwhisk_short}}
 {: #openwhisk_start_configure_cli}
