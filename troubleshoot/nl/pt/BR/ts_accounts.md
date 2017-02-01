@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
   
-lastupdated: "2016-08-18"
+lastupdated: "2017-01-11"
 
 ---
 
@@ -46,7 +46,7 @@ O status de sua conta do {{site.data.keyword.Bluemix_notm}} torna-se inativo qua
 
  
 
-Para reativar sua conta, entre em contato com o [Suporte {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport.com){: new_window}. No email, deve-se incluir as informações a seguir:
+Para reativar sua conta, entre em contato com o [Suporte do {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}. No email, deve-se incluir as informações a seguir:
 {: tsResolve}
 
   * O ID IBM que você usa para efetuar login no {{site.data.keyword.Bluemix_notm}}.

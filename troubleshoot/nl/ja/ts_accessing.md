@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
   
-lastupdated: "2016-10-23"
+lastupdated: "2017-01-11"
 
 ---
 
@@ -49,10 +49,10 @@ lastupdated: "2016-10-23"
 {: tsResolve}
 
 アカウントのセットアップに応じて、以下の一部のログイン・オプションが適用されることがあります。 
- * SoftLayer ID を使用する SoftLayer ユーザーは、[カスタマー・ポータル](https://control.softlayer.com)を介してログインする必要があります。
- * IBM ID を使用する SoftLayer ユーザーは、リンクされている Bluemix アカウントの有無を問わず、[カスタマー・ポータル](https://control.softlayer.com)を介してログインして SoftLayer カスタマー・ポータルを開くか、[Bluemix コンソール](https://console.{DomainName})を介して「インフラストラクチャー」ダッシュボードを開くことができます。 
+ * SoftLayer ID を持つ SoftLayer ユーザーは、[カスタマー・ポータル ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://control.softlayer.com){: new_window} を介してログインする必要があります。
+ * IBM ID を持つ SoftLayer ユーザーは、リンクされている Bluemix アカウントの有無を問わず、[カスタマー・ポータル ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://control.softlayer.com){: new_window} を介してログインして SoftLayer カスタマー・ポータルを開くか、[Bluemix コンソール ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://console.{DomainName}){: new_window} を介して「インフラストラクチャー」ダッシュボードを開くことができます。 
  * リンクされた SoftLayer アカウントを持たない Bluemix ユーザーは、Bluemix コンソールを介してログインする必要があります。
- * リンクされた SoftLayer アカウントを持つ Bluemix ユーザーは、[Bluemix コンソール](https://console.{DomainName})または[カスタマー・ポータル](https://control.softlayer.com)を介してログインできます。
+ * リンクされた SoftLayer アカウントを持つ Bluemix ユーザーは、[Bluemix コンソール ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://console.{DomainName}){: new_window} または[カスタマー・ポータル ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://control.softlayer.com){: new_window} を介してログインできます。
  
 
 ## パスワードが無効
@@ -151,13 +151,13 @@ nslookup stage1.mybluemix.net
 {{site.data.keyword.Bluemix_notm}} トライアル・アカウントに登録した後、{{site.data.keyword.Bluemix_notm}} にログインできない場合があります。代わりに次のメッセージが表示されます。
 {: tsSymptoms}
 
-<code>アカウントが保留になっています。E メールの確認を最大 24 時間待って、スパム・フォルダーも確認してください。それでも E メールの確認が届かない場合は、<a href="http://ibm.biz/bluemixsupport.com" target="_blank">Bluemix サポート</a>までお問い合わせください。</code>
+<code>アカウントが保留になっています。E メールの確認を最大 24 時間待って、スパム・フォルダーも確認してください。それでも確認の E メールが届かない場合は、<a href="http://ibm.biz/bluemixsupport.com" target="_blank">Bluemix サポート <img src="../icons/launch-glyph.svg" alt="「外部リンク」アイコン"></a> までお問い合わせください。</code>
 
 
 {{site.data.keyword.Bluemix_notm}} トライアル・アカウントに登録した後、確認の E メールが届きます。その確認 E メールに記載されたリンクをクリックして、登録プロセスを完了する必要があります。
 {: tsCauses} 
 
-確認の E メールは、ユーザーが入力した E メール・アドレス宛に送信されます。受信ボックスとジャンク・メール・フォルダーを確認してください。確認の E メールが届かない場合は、[{{site.data.keyword.Bluemix_notm}} サポート](http://ibm.biz/bluemixsupport.com){: new_window}にお問い合わせください。  
+確認の E メールは、ユーザーが入力した E メール・アドレス宛に送信されます。受信ボックスとジャンク・メール・フォルダーを確認してください。確認の E メールが届かない場合は、[{{site.data.keyword.Bluemix_notm}} サポート ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window} にお問い合わせください。  
 {: tsResolve}
 
 
@@ -201,7 +201,7 @@ nslookup stage1.mybluemix.net
   
 自分がコラボレーターでありメンバーではないためにユーザーを招待できない場合、古い {{site.data.keyword.Bluemix_notm}} アカウントを削除してから、招待を受けて組織のメンバーとしてアカウントに参加する必要があります。古いアカウントを削除してメンバーとしてアカウントに参加するには、以下のステップを実行してください。 
 
-  1. [{{site.data.keyword.Bluemix_notm}} サポート](http://ibm.biz/bluemixsupport){: new_window}に連絡してサポート・チケットをオープンし、アカウントの削除を依頼します。古いアカウントに関連付けられているデータで、保存して新規アカウントに移行したいものがあれば、その情報を E メールに記載してください。 
+  1. [{{site.data.keyword.Bluemix_notm}} サポート ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window} に連絡して、サポート・チケットをオープンし、アカウントの削除を要請します。古いアカウントに関連付けられているデータで、保存して新規アカウントに移行したいものがあれば、その情報を E メールに記載してください。 
   2. 自分のアカウントが削除された後、組織の管理者の役割を持つユーザーに、自分を組織の管理者として組織に招待してもらいます。その後、招待から {{site.data.keyword.Bluemix_notm}} に登録します。 
 
 
@@ -251,7 +251,7 @@ nslookup stage1.mybluemix.net
   * {{site.data.keyword.Bluemix_notm}} をいったんログアウトしてから、再度ログインします。
   * ブラウザーのプライベート表示モードを使用します。 
   * ブラウザーの Cookie およびキャッシュをクリアします。
-  * 異なるブラウザーを使用します。{{site.data.keyword.Bluemix_notm}} によりサポートされているブラウザーのバージョンについて詳しくは、[{{site.data.keyword.Bluemix_notm}}の前提条件](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}を参照してください。
+  * 異なるブラウザーを使用します。{{site.data.keyword.Bluemix_notm}} でサポートされているブラウザーのバージョンについて詳しくは、[{{site.data.keyword.Bluemix_notm}} の前提条件 ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/support/#prereqs){: new_window} を参照してください。
   * cf コマンド・ライン・インターフェースがインストール済みであれば、`cf apps` コマンドを入力してアプリケーションが実行中であるかどうか確認します。
   
   

@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
   
-lastupdated: "2016-10-23"
+lastupdated: "2017-01-11"
 
 ---
 
@@ -49,10 +49,10 @@ lastupdated: "2016-10-23"
 {: tsResolve}
 
 根据帐户的设置方式，下面的一些登录选项可能适用： 
- * 使用 SoftLayer 标识的 SoftLayer 用户必须通过[客户门户网站](https://control.softlayer.com)登录。
- * 使用 IBM 标识且具有或不具有链接 Bluemix 帐户的 SoftLayer 用户可以通过[客户门户网站](https://control.softlayer.com)登录来打开 SoftLayer 客户门户网站，也可以通过 [Bluemix 控制台](https://console.{DomainName})登录来打开“基础架构”仪表板。 
+ * 使用 SoftLayer 标识的 SoftLayer 用户必须通过[客户门户网站 ![外部链接图标](../icons/launch-glyph.svg)](https://control.softlayer.com){: new_window} 登录。
+ * 使用 IBM 标识且具有或不具有链接 Bluemix 帐户的 SoftLayer 用户可以通过[客户门户网站 ![外部链接图标](../icons/launch-glyph.svg)](https://control.softlayer.com){: new_window} 登录来打开 SoftLayer 客户门户网站，也可以通过 [Bluemix 控制台 ![外部链接图标](../icons/launch-glyph.svg)](https://console.{DomainName}){: new_window} 登录来打开“基础架构”仪表板。 
  * 没有链接 SoftLayer 帐户的 Bluemix 用户必须通过 Bluemix 控制台登录。
- * 具有链接 SoftLayer 帐户的 Bluemix 用户可以通过 [Bluemix 控制台](https://console.{DomainName})或[客户门户网站](https://control.softlayer.com)登录。
+ * 具有链接 SoftLayer 帐户的 Bluemix 用户可以通过 [Bluemix 控制台 ![外部链接图标](../icons/launch-glyph.svg)](https://console.{DomainName}){: new_window} 或[客户门户网站 ![外部链接图标](../icons/launch-glyph.svg)](https://control.softlayer.com){: new_window} 登录。
  
 
 ## 密码无效
@@ -151,13 +151,14 @@ nslookup stage1.mybluemix.net
 在注册 {{site.data.keyword.Bluemix_notm}} 试用帐户后，可能无法登录到 {{site.data.keyword.Bluemix_notm}}。相反，会看到以下消息：
 {: tsSymptoms}
 
-<code>帐户暂挂。请等待最多 24 小时以获取电子邮件确认并请检查垃圾邮件文件夹。如果仍未收到确认电子邮件，请联系 <a href="http://ibm.biz/bluemixsupport.com" target="_blank">Bluemix 支持</a>。</code>
+<code>帐户暂挂。请等待最多 24 小时以获取电子邮件确认并请检查垃圾邮件文件夹。如果仍未收到确认电子邮件，请联系 <a href="http://ibm.biz/bluemixsupport.com" target="_blank">Bluemix 支持 <img src="../icons/launch-glyph.svg" alt="外部链接图标"></a>。</code>
+
 
 
 在注册 {{site.data.keyword.Bluemix_notm}} 试用帐户后，您将收到确认电子邮件。必须单击确认电子邮件中的链接以完成注册过程。
 {: tsCauses} 
 
-确认电子邮件将发送到提供的电子邮件地址。请检查收件箱和垃圾邮件文件夹。如果未收到确认电子邮件，请联系 [{{site.data.keyword.Bluemix_notm}} 支持](http://ibm.biz/bluemixsupport.com){: new_window}。  
+确认电子邮件将发送到提供的电子邮件地址。请检查收件箱和垃圾邮件文件夹。如果未收到确认电子邮件，请联系 [{{site.data.keyword.Bluemix_notm}} 支持 ![外部链接图标](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}。  
 {: tsResolve}
 
 
@@ -201,7 +202,7 @@ nslookup stage1.mybluemix.net
   
 如果由于您是合作者（并非成员）而无法邀请用户，那么您必须删除您先前的 {{site.data.keyword.Bluemix_notm}} 帐户，然后被邀请以组织成员身份加入帐户。要删除您先前的帐户并以成员身份加入帐户，请完成以下步骤： 
 
-  1. 联系 [{{site.data.keyword.Bluemix_notm}} 支持](http://ibm.biz/bluemixsupport){: new_window}，以开具一个支持凭单，请求删除您的帐户。如果存在与旧帐户相关联的数据并且想要将其保存并移动到新帐户，请在您的电子邮件中包含此信息。 
+  1. 联系 [{{site.data.keyword.Bluemix_notm}} 支持 ![外部链接图标](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window}，以开具一个支持凭单，请求删除您的帐户。如果存在与旧帐户相关联的数据并且想要将其保存并移动到新帐户，请在您的电子邮件中包含此信息。 
   2. 在您的帐户被删除后，让具有组织管理员角色的用户以组织管理员身份邀请您加入组织。然后，通过邀请注册 {{site.data.keyword.Bluemix_notm}}。 
 
 
@@ -251,7 +252,7 @@ nslookup stage1.mybluemix.net
   * 注销 {{site.data.keyword.Bluemix_notm}}，并重新登录。
   * 使用浏览器的隐私浏览模式。 
   * 清除浏览器的 cookie 和高速缓存。
-  * 使用其他浏览器。有关 {{site.data.keyword.Bluemix_notm}} 支持的浏览器版本的信息，请参阅 [{{site.data.keyword.Bluemix_notm}} 先决条件](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}。
+  * 使用其他浏览器。有关 {{site.data.keyword.Bluemix_notm}} 支持的浏览器版本的信息，请参阅 [{{site.data.keyword.Bluemix_notm}} 先决条件 ![外部链接图标](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}。
   * 如果安装了 cf 命令行界面，请输入 `cf apps` 命令以查看应用程序是否正在运行。
   
   

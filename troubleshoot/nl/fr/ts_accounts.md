@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
   
-lastupdated: "2016-08-18"
+lastupdated: "2017-01-11"
 
 ---
 
@@ -46,7 +46,9 @@ Le statut de votre compte {{site.data.keyword.Bluemix_notm}} devient inactif lor
 
  
 
-Pour réactiver votre compte, prenez contact avec le [support {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport.com){: new_window}. Dans le courrier électronique, incluez les informations
+Pour réactiver votre compte, prenez contact avec le
+[support {{site.data.keyword.Bluemix_notm}}
+![icône de lien externe](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}. Dans le courrier électronique, incluez les informations
 suivantes :
 {: tsResolve}
 

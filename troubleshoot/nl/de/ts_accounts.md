@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
   
-lastupdated: "2016-08-18"
+lastupdated: "2017-01-11"
 
 ---
 
@@ -44,10 +44,10 @@ Der Status Ihres {{site.data.keyword.Bluemix_notm}}-Kontos verändert sich in 'I
 
  
 
-Wenden Sie sich an den [{{site.data.keyword.Bluemix_notm}}-Support](http://ibm.biz/bluemixsupport.com){: new_window}, um Ihr Konto zu reaktivieren. In der E-Mail müssen die folgenden Angaben enthalten sein:
+Wenden Sie sich an den [{{site.data.keyword.Bluemix_notm}}-Support ![Symbol für externen Link](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}, um Ihr Konto zu reaktivieren. In der E-Mail müssen die folgenden Angaben enthalten sein:
 {: tsResolve}
 
-  * Die IBM ID, mit der Sie sich bei {{site.data.keyword.Bluemix_notm}} anmelden.
+  * Die IBMid, mit der Sie sich bei {{site.data.keyword.Bluemix_notm}} anmelden.
   * Der Name der Organisation, in der Ihre App erstellt wird. Mithilfe dieser Informationen kann das Support-Team feststellen, ob Ihnen die richtigen Rollen bzw. die richtige Zugehörigkeit innerhalb Ihrer Organisation zugewiesen wurden.
 
 

@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
   
-lastupdated: "2016-08-18"
+lastupdated: "2017-01-11"
 
 ---
 
@@ -48,14 +48,14 @@ buildpack 更新后推送或重新编译打包应用程序时，不会自动装�
 您可以使用具有内置机制的 buildpack 来避免装入过时的组件。以下 buildpack 是 2 个示例： 
 {: tsResolve}
 
-  * [Cloud Foundry Java buildpack](https://github.com/cloudfoundry/java-buildpack){: new_window}。此 buildpack 具有内置机制来确保使用 buildpack 的最新版本。有关此机制如何工作的更多信息，请参阅 [extending-caches.md](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}。 
-  * [Cloud Foundry Node.js buildpack](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}。此 buildpack 通过使用环境变量具有类似功能。要使 Node.js buildpack 每次都能够从因特网下载节点模型，请在 cf 命令行界面中键入以下命令： 	
+  * [Cloud Foundry Java buildpack ![外部链接图标](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack){: new_window}。此 buildpack 具有内置机制来确保使用 buildpack 的最新版本。有关此机制的工作原理的更多信息，请参阅 [extending-caches.md ![外部链接图标](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}。 
+  * [Cloud Foundry Node.js buildpack ![外部链接图标](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}。此 buildpack 通过使用环境变量具有类似功能。要使 Node.js buildpack 每次都能够从因特网下载节点模型，请在 cf 命令行界面中键入以下命令： 	
   ```
   set NODE_MODULES_CACHE=false
   ```
 如果您使用的 buildpack 不提供自动装入最新组件的机制，那么您可以手动删除高速缓存目录中的内容，并通过执行以下步骤重新推送应用程序：
-  1. 检出空 buildpack 的分支，例如 https://github.com/ryandotsmith/null-buildpack。有关如何检出分支的信息，请参阅 [Git Basics - Getting a Git Repository](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}。  
-  2. 将以下行添加到 `null-buildpack/bin/compile` 文件，并落实更改。有关如何落实更改的信息，请参阅 [Git Basics - Recording Changes to the Repository](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}。
+  1. 检出空 buildpack 的分支，例如 https://github.com/ryandotsmith/null-buildpack。有关如何检出分支的信息，请参阅 [Git Basics - Getting a Git Repository ![外部链接图标](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}。  
+  2. 将以下行添加到 `null-buildpack/bin/compile` 文件，并落实更改。有关如何落实更改的信息，请参阅 [Git Basics - Recording Changes to the Repository ![外部链接图标](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}。
   ```
   rm -rfv $2/*
   ```
@@ -90,7 +90,7 @@ buildpack 更新后推送或重新编译打包应用程序时，不会自动装�
 
 
 
-在 PHP buildpack 中，error_log 参数用于定义日志记录级别。缺省情况下，`error_log` 参数的值为 **stderr notice**。以下示例显示 Cloud Foundry 所提供的 PHP buildpack 的 `nginx-defaults.conf` 文件中的缺省日志记录级别配置。有关更多信息，请参阅 [cloudfoundry/php-buildpack](https://github.com/cloudfoundry/php-buildpack/blob/ff71ea41d00c1226d339e83cf2c7d6dda6c590ef/defaults/config/nginx/1.5.x/nginx-defaults.conf){: new_window}。
+在 PHP buildpack 中，error_log 参数用于定义日志记录级别。缺省情况下，`error_log` 参数的值为 **stderr notice**。以下示例显示 Cloud Foundry 所提供的 PHP buildpack 的 `nginx-defaults.conf` 文件中的缺省日志记录级别配置。有关更多信息，请参阅 [cloudfoundry/php-buildpack ![外部链接图标](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/php-buildpack/blob/ff71ea41d00c1226d339e83cf2c7d6dda6c590ef/defaults/config/nginx/1.5.x/nginx-defaults.conf){: new_window}。
 {: tsCauses} 
 
 ```
@@ -109,8 +109,8 @@ daemon off;
 error_log stderr error;
 pid @{HOME}/nginx/logs/nginx.pid;
 ```
-有关如何更改缺省日志记录配置的更多信息，请参阅 [error_log](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}。
-
+有关如何更改缺省日志记录配置的更多信息，请参阅 [error_log ![外部链接图标](../icons/launch-glyph.svg)](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}。
+	
 
 ## 无法将第三方 Python 库导入到 {{site.data.keyword.Bluemix_notm}}
 {: #ts_importpylib}

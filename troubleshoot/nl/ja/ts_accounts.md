@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
   
-lastupdated: "2016-08-18"
+lastupdated: "2017-01-11"
 
 ---
 
@@ -44,7 +44,7 @@ lastupdated: "2016-08-18"
 
  
 
-アカウントを再アクティブ化する場合は、[{{site.data.keyword.Bluemix_notm}} サポート](http://ibm.biz/bluemixsupport.com){: new_window}に連絡してください。E メールには、以下の情報を含めてください。
+アカウントを再アクティブ化するには、[{{site.data.keyword.Bluemix_notm}} サポート ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window} にお問い合わせください。E メールには、以下の情報を含めてください。
 {: tsResolve}
 
   * {{site.data.keyword.Bluemix_notm}} へのログインに使用している IBMid。
