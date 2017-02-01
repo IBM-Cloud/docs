@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-03"
+  years: 2016, 2017
+lastupdated: "2017-01-11"
 
 ---
 
@@ -48,11 +48,11 @@ danach die Community-Services aufgeführt.</dd>
 |Typ	|Beschreibung	|Details zu Unterstützung|
 |:------|:--------------|:--------------|
 |IBM	|Ein Service, der von IBM bereitgestellt wird und zur allgemeinen Verfügung bereitsteht.	|Für Probleme, die sich als Mängel eines von IBM bereitgestellten, allgemein verfügbaren Service
-erweisen, steht Support zur Verfügung. Die Art des Supports beruht auf der von Ihnen festgelegten Prioritätsstufe. Weitere Informationen zu Prioritätsstufen von Tickets finden Sie unter [Support kontaktieren](/docs/support/index.html#contacting-bluemix-support){: new_window}.|
+erweisen, steht Support zur Verfügung. Die Art des Supports beruht auf der von Ihnen festgelegten Prioritätsstufe. Weitere Informationen zu Prioritätsstufen von Tickets finden Sie unter [Support kontaktieren](/docs/support/index.html#contacting-bluemix-support).|
 |Drittanbieter	|Ein Service, der von einem anderen Unternehmen als IBM bereitgestellt wird.	|Support für Services von Drittanbietern wird durch den Service-Provider bereitgestellt. Wenn ein Problem von IBM untersucht wird und sich als Mangel im Service eines Drittanbieters herausstellt, ist IBM nicht verpflichtet, einen Fix zur Verfügung zu stellen. IBM teilt die Analyse mit dem anderen Service-Provider auf, sofern erforderlich.|
 |Community	|Ein Service, der von einer Open-Source-Community bereitgestellt wird.	|Support für Community-Services wird von der {{site.data.keyword.Bluemix_notm}} Developers Community bereitgestellt. Wenn ein Problem von IBM untersucht wird und sich als Mangel im Community-Service herausstellt, ist IBM nicht verpflichtet, einen Fix zur Verfügung zu stellen.|
 |Beta	|Ein Service, der für die Produktionsumgebung noch nicht einsatzfähig ist und sich in einer Versuchsphase der
-Entwicklungsstufe befindet. Ein Betaservice kann den Entwicklungs- und Marketingteams dabei helfen, den Wert der Services einzuschätzen, bevor sie den Service der Allgemeinheit zur Verfügung stellen.	|Probleme, die sich als Mängel in einem von IBM bereitgestellten Betaservice erweisen, werden unterstützt; jedoch ist IBM nicht verpflichtet, einen Fix zur Verfügung zu stellen. Zusätzlich wird dem Problemticket eine Prioritätsstufe von 3 oder 4 zugeordnet, soweit zutreffend. Informationen zu Prioritätsstufen von Tickets finden Sie unter [Support kontaktieren](/docs/support/index.html#contacting-bluemix-support){: new_window}.|
+Entwicklungsstufe befindet. Ein Betaservice kann den Entwicklungs- und Marketingteams dabei helfen, den Wert der Services einzuschätzen, bevor sie den Service der Allgemeinheit zur Verfügung stellen.	|Probleme, die sich als Mängel in einem von IBM bereitgestellten Betaservice erweisen, werden unterstützt; jedoch ist IBM nicht verpflichtet, einen Fix zur Verfügung zu stellen. Zusätzlich wird dem Problemticket eine Prioritätsstufe von 3 oder 4 zugeordnet, soweit zutreffend. Informationen zu Prioritätsstufen von Tickets finden Sie unter [Support kontaktieren](/docs/support/index.html#contacting-bluemix-support).|
 {: caption="Table 1. {{site.data.keyword.Bluemix_notm}} services support information" caption-side="top"}
 
 
@@ -129,14 +129,13 @@ Services sind für jede {{site.data.keyword.Bluemix_notm}}-Region verfügbar. In
 |{{site.data.keyword.nlclassifierlshort}} 	|Ja 		|Ja 		|Ja|
 |{{site.data.keyword.objectstorageshort}}	|Ja		|Nein		|Nein|
 |{{site.data.keyword.personalityinsightsshort}}	|Ja		|Ja		|Ja|
-|{{site.data.keyword.mobilepush}}Push		|Ja		|Ja		|Nein|
+|{{site.data.keyword.mobilepush}}		|Ja		|Ja		|Nein|
 |Push für iOS 8					|Ja		|Ja		|Nein|
 |{{site.data.keyword.questionandanswershort}}	|Ja		|Ja		|Ja|
 |{{site.data.keyword.rapidApps}}		|Ja		|Ja		|Nein|
 |{{site.data.keyword.relationshipextractionshort}}	|Ja	|Ja		|Ja|
 |{{site.data.keyword.retrieveandrankshort}}	|Ja 		|Ja 		|Ja|
 |{{site.data.keyword.SecureGateway}}		|Ja		|Ja		|Nein|
-|{{site.data.keyword.servicediscoveryshort}}	|Ja		|Nein		|Nein|
 |{{site.data.keyword.sescashort}}		|Ja		|Ja		|Ja|
 |{{site.data.keyword.ssofull}}			|Ja		|Nein		|Nein|
 |{{site.data.keyword.speechtotextshort}}	|Ja 		|Ja	 	|Ja|
@@ -168,7 +167,7 @@ Sie haben die folgenden Möglichkeiten, alle in {{site.data.keyword.Bluemix_notm
 
 * Über die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle. Zeigen Sie den {{site.data.keyword.Bluemix_notm}}-Katalog an.
 * Über die Befehlszeilenschnittstelle 'cf'. Verwenden Sie hier den Befehl **cf marketplace**.
-* Über Ihre eigene Anwendung. Verwenden Sie die [Services-API GET /v2/services](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}.
+* Über Ihre eigene Anwendung. Verwenden Sie die [Services-API GET /v2/services ![Symbol für externen Link](../icons/launch-glyph.svg)](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}.
 
 Zum Entwickeln einer Anwendung wählen Sie den benötigten Service aus. Auf Ihre Auswahl hin interagiert {{site.data.keyword.Bluemix_notm}} mit dem Service und unternimmt die notwendigen Schritte zur Bereitstellung von Ressourcen dieses Service. Dieser Bereitstellungsprozess kann für die verschiedenen Servicetypen unterschiedlich ablaufen. Ein Datenbankservice richtet beispielsweise eine Datenbank ein, während ein Push-Benachrichtigungsservice für mobile Anwendungen Konfigurationsinformationen erstellt.
 
@@ -223,7 +222,7 @@ der Serviceinstanz.
     cf bind-service appname service_instance
     ```
 
-Sie können eine Serviceinstanz nur an die App-Instanzen binden, die sich in demselben Bereich bzw. in derselben Organisation befinden. Sie können allerdings Serviceinstanzen aus anderen Bereichen oder Organisationen auf dieselbe Weise wie eine externe App verwenden. Anstatt eine Bindung zu erstellen, verwenden Sie die Berechtigungsnachweise, um Ihre App-Instanz direkt zu konfigurieren. Weitere Informationen dazu, wie externe Apps {{site.data.keyword.Bluemix_notm}}-Services verwenden, finden Sie unter [Externen Apps die Verwendung von {{site.data.keyword.Bluemix_notm}}-Services ermöglichen](#accser_external){: new_window}.
+Sie können eine Serviceinstanz nur an die App-Instanzen binden, die sich in demselben Bereich bzw. in derselben Organisation befinden. Sie können allerdings Serviceinstanzen aus anderen Bereichen oder Organisationen auf dieselbe Weise wie eine externe App verwenden. Anstatt eine Bindung zu erstellen, verwenden Sie die Berechtigungsnachweise, um Ihre App-Instanz direkt zu konfigurieren. Weitere Informationen dazu, wie externe Apps {{site.data.keyword.Bluemix_notm}}-Services verwenden, finden Sie unter [Externen Apps die Verwendung von {{site.data.keyword.Bluemix_notm}}-Services ermöglichen](#accser_external).
 
 
 ## Die eigene Anwendung für die Interaktion mit einem Service konfigurieren
@@ -318,7 +317,7 @@ Sie können Ihre Anwendung nun für die Verwendung der externen Ressourcen konfi
 
 Wenn Sie über eine Serviceinstanz verfügen, die erstellt und an Apps in einer einzigen Region gebunden wurde, können Sie diese Serviceinstanz mit einer der folgenden Methoden in einer anderen Region verwenden:
 
-  * Verwenden Sie die Serviceberechtigungsnachweise, um Ihre App-Instanz direkt zu konfigurieren. Details finden Sie unter [Externen Apps die Verwendung von {{site.data.keyword.Bluemix_notm}}-Services ermöglichen](#accser_external){: new_window}.
+  * Verwenden Sie die Serviceberechtigungsnachweise, um Ihre App-Instanz direkt zu konfigurieren. Details finden Sie unter [Externen Apps die Verwendung von {{site.data.keyword.Bluemix_notm}}-Services ermöglichen](#accser_external).
   * Erstellen Sie einen vom Benutzer bereitgestellten Service als Bridge.
 
 	Angenommen, Sie beginnen in der Region, in der Sie die Serviceinstanz verwenden möchten. Führen Sie die folgenden Schritte aus, um eine Serviceinstanz zu verwenden, die in einer anderen Region existiert:
@@ -332,7 +331,7 @@ Wenn Sie über eine Serviceinstanz verfügen, die erstellt und an Apps in einer 
 
       3. Wechseln Sie zu der Region, in der Sie die Serviceinstanz verwenden möchten. Erweitern Sie in der Menüleiste von {{site.data.keyword.Bluemix_notm}} die Option **Region** oder klicken Sie auf das Symbol für **Region** und wählen Sie anschließend die Region aus, in der Sie die Serviceinstanz verwenden möchten.
 
-      4. Erstellen Sie eine vom Benutzer zur Verfügung gestellte Serviceinstanz, indem Sie die Berechtigungsnachweise und Verbindungsparameter verwenden, die Sie aus der Umgebungsvariablen *VCAP_SERVICES* aufgezeichnet haben. Informationen zur Erstellung einer vom Benutzer bereitgestellten Serviceinstanz finden Sie im Abschnitt zur [Erstellung einer vom Benutzer bereitgestellten Serviceinstanz](#user_provide_services){: new_window}.
+      4. Erstellen Sie eine vom Benutzer zur Verfügung gestellte Serviceinstanz, indem Sie die Berechtigungsnachweise und Verbindungsparameter verwenden, die Sie aus der Umgebungsvariablen *VCAP_SERVICES* aufgezeichnet haben. Informationen zur Erstellung einer vom Benutzer bereitgestellten Serviceinstanz finden Sie im Abschnitt zur [Erstellung einer vom Benutzer bereitgestellten Serviceinstanz](#user_provide_services).
 
       5. Binden Sie die vom Benutzer bereitgestellte Serviceinstanz mit dem folgenden Befehl an Ihre App:
 

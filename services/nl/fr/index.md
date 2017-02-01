@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-03"
+  years: 2016, 2017
+lastupdated: "2017-01-11"
 
 ---
 
@@ -25,10 +25,10 @@ suivant décrit les informations de support générales pour les services {{site
 |:------|:--------------|:--------------|
 |IBM	|Service fourni par IBM et généralement disponible.	|Les problèmes considérés comme un défaut d'un service fourni par IBM généralement disponible sont traités. Le support dépend de la
 gravité que vous définissez. Pour plus d'informations sur la gravité des tickets, voir
-[Contacter le service de support](/docs/support/index.html#contacting-bluemix-support){: new_window}.|
+[Contacter le service de support](/docs/support/index.html#contacting-bluemix-support).|
 |Tiers	|Service fourni par une société autre qu'IBM.	|Le support des services de tiers est assuré par le fournisseur de service. Si IBM examine un problème et détermine qu'il s'agit d'un défaut d'un service de tiers, elle n'est pas obligée de fournir un correctif. IBM partagera son analyse avec le fournisseur de service de tiers si nécessaire.|
 |Communauté	|Service fourni par une communauté open source.	|Le support des services de communauté est assuré par la communauté des développeurs {{site.data.keyword.Bluemix_notm}}. Si IBM examine un problème et détermine qu'il s'agit d'un défaut d'un service de communauté, elle n'est pas obligée de fournir un correctif.|
-|Bêta	|Service qui n'est pas prêt pour la phase de production et qui se trouve au stade d'essai de développement. Un service bêta peut aider les équipes de développement et marketing à évaluer la valeur d'un service avant de le rendre généralement disponible.	|Les problèmes identifiés comme défauts dans un service bêta fourni par IBM sont pris en charge, mais IBM n'est pas obligée de fournir un correctif. De plus, le ticket de problème sera associé à une gravité de 3 ou 4 si applicable. Pour des informations sur la gravité des tickets, voir [Contacter le service de support](/docs/support/index.html#contacting-bluemix-support){: new_window}.|
+|Bêta	|Service qui n'est pas prêt pour la phase de production et qui se trouve au stade d'essai de développement. Un service bêta peut aider les équipes de développement et marketing à évaluer la valeur d'un service avant de le rendre généralement disponible.	|Les problèmes identifiés comme défauts dans un service bêta fourni par IBM sont pris en charge, mais IBM n'est pas obligée de fournir un correctif. De plus, le ticket de problème sera associé à une gravité de 3 ou 4 si applicable. Pour des informations sur la gravité des tickets, voir [Contacter le service de support](/docs/support/index.html#contacting-bluemix-support).|
 {: caption="Table 1. {{site.data.keyword.Bluemix_notm}} information du service de support" caption-side="top"}
 
 ##Services expérimentaux
@@ -108,7 +108,7 @@ IBM.
 |{{site.data.keyword.iot_short}}		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Indisponible dans la région|
 |{{site.data.keyword.iotrtinsights_short}}		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Hébergé à Sydney, en Australie|
 |IoT Workbench		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Hébergé à Sydney, en Australie|
-|{{site.data.keyword.keymanagementserviceshort}}	|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Indisponible dans la région|
+|{{site.data.keyword.keymanagementserviceshort}}	|Hébergé à Dallas, aux Etats-Unis		|Indisponible dans la région		|Indisponible dans la région|
 |{{site.data.keyword.languagetranslationshort}}	|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Dallas, aux Etats-Unis |
 |{{site.data.keyword.pm_short}}   |Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Indisponible dans la région|
 |{{site.data.keyword.eventhubshort}}		|Hébergé à Dallas, aux Etats-Unis		|Indisponible dans la région		|Indisponible dans la région|
@@ -130,8 +130,6 @@ IBM.
 |{{site.data.keyword.runbook_short}}				|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni			|Hébergé à Sydney, en Australie |
 |{{site.data.keyword.SecureGateway}}		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Hébergé à Sydney, en Australie |
 |{{site.data.keyword.sescashort}}		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Hébergé à Sydney, en Australie |
-|{{site.data.keyword.servicediscoveryshort}}		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Indisponible dans la région|
-|{{site.data.keyword.serviceproxyshort}}		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Indisponible dans la région|
 |{{site.data.keyword.ssofull}}			|Hébergé à Washington, aux Etats-Unis		|Indisponible dans la région		|Indisponible dans la région|
 |{{site.data.keyword.speechtotextshort}}	|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Dallas, aux Etats-Unis |
 |{{site.data.keyword.streaminganalyticsshort}}	|Hébergé à Dallas, aux Etats-Unis		|Hébergé à Londres, au Royaume-Uni		|Hébergé à Londres, au Royaume-Uni|

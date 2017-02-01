@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-03"
+  years: 2016, 2017
+lastupdated: "2017-01-11"
 
 ---
 
@@ -52,7 +52,7 @@ dai servizi della community.</dd>
 |Tipo	|Descrizione	|Dettagli sul supporto|
 |:------|:--------------|:--------------|
 |IBM	|Un servizio fornito da IBM e che è generalmente disponibile.	|Viene fornito supporto per i problemi considerati come un difetto
-in un servizio fornito da IBM generalmente disponibile. Il supporto viene fornito in base alla severità da te impostata. Per ulteriori informazioni sulla severità del ticket, vedi [Come contattare il supporto](/docs/support/index.html#contacting-bluemix-support){: new_window}.|
+in un servizio fornito da IBM generalmente disponibile. Il supporto viene fornito in base alla severità da te impostata. Per ulteriori informazioni sulla severità del ticket, vedi [Come contattare il supporto](/docs/support/index.html#contacting-bluemix-support).|
 |Terze parti	|Un servizio fornito da un'azienda diversa da IBM.	|Il supporto per i servizi di terze parti è fornito dal
 fornitore del servizio. Se un problema viene analizzato da IBM e tale problema viene considerato come un difetto in un servizio di terze parti, IBM non è tenuto a fornire una correzione. IBM condividerà l'analisi con il fornitore del servizio di terze parti laddove necessario.|
 |Community	|Un servizio fornito da una community
@@ -61,7 +61,7 @@ open source.	|Il supporto per i servizi di community viene fornito dalla Communi
 fase di sviluppo di prova. Un servizio beta può aiutare i team di sviluppo
 e di marketing a valutare la qualità dei servizi prima di
 renderli generalmente disponibili.	|Viene fornito supporto per i problemi considerati come un difetto in un servizio beta fornito da IBM, tuttavia  IBM non è tenuto a fornire una correzione. Inoltre,
-laddove applicabile, al ticket del problema verrà assegnata una severità 3 o 4. Per informazioni sulla severità del ticket, vedi [Come contattare il supporto](/docs/support/index.html#contacting-bluemix-support){: new_window}.|
+laddove applicabile, al ticket del problema verrà assegnata una severità 3 o 4. Per informazioni sulla severità del ticket, vedi [Come contattare il supporto](/docs/support/index.html#contacting-bluemix-support).|
 {: caption="Table 1. {{site.data.keyword.Bluemix_notm}} services support information" caption-side="top"}
 
 
@@ -139,14 +139,13 @@ disponibili in ogni regione {{site.data.keyword.Bluemix_notm}}. La seguente tabe
 |{{site.data.keyword.nlclassifierlshort}} 	|Sì 		|Sì 		|Sì|
 |{{site.data.keyword.objectstorageshort}}	|Sì		|No		|No|
 |{{site.data.keyword.personalityinsightsshort}}	|Sì		|Sì		|Sì|
-|{{site.data.keyword.mobilepush}}Push		|Sì		|Sì		|No|
+|{{site.data.keyword.mobilepush}}		|Sì		|Sì		|No|
 |Push for iOS 8					|Sì		|Sì		|No|
 |{{site.data.keyword.questionandanswershort}}	|Sì		|Sì		|Sì|
 |{{site.data.keyword.rapidApps}}		|Sì		|Sì		|No|
 |{{site.data.keyword.relationshipextractionshort}}	|Sì	|Sì		|Sì|
 |{{site.data.keyword.retrieveandrankshort}}	|Sì 		|Sì 		|Sì|
 |{{site.data.keyword.SecureGateway}}		|Sì		|Sì		|No|
-|{{site.data.keyword.servicediscoveryshort}}	|Sì		|No		|No|
 |{{site.data.keyword.sescashort}}		|Sì		|Sì		|Sì|
 |{{site.data.keyword.ssofull}}			|Sì		|No		|No|
 |{{site.data.keyword.speechtotextshort}}	|Sì 		|Sì	 	|Sì|
@@ -182,7 +181,7 @@ nei seguenti modi:
 
 * Dall'interfaccia utente {{site.data.keyword.Bluemix_notm}}. Visualizza il catalogo {{site.data.keyword.Bluemix_notm}}.
 * Dall'interfaccia riga di comando cf. Utilizza il comando **cf marketplace**.
-* Dalla tua applicazione. Utilizza la [API di servizi GET /v2/services](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}.
+* Dalla tua applicazione. Utilizza la [API di servizi GET /v2/services ![icona link esterno](../icons/launch-glyph.svg)](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}.
 
 Puoi selezionare il servizio di cui hai bisogno quando sviluppi le applicazioni. Dopo la tua selezione, {{site.data.keyword.Bluemix_notm}} interagisce con il servizio ed
 effettua le operazioni necessarie per eseguire il provisioning delle risorse del servizio. Il processo di provisioning può essere
@@ -234,7 +233,7 @@ Se utilizzi l'interfaccia riga di comando cf per richiedere un'istanza del servi
     cf bind-service nome_applicazione istanza_servizio
     ```
 
-Puoi eseguire il bind a un'istanza del servizio per le sole istanze dell'applicazione che si trovano nello stesso spazio od organizzazione. Tuttavia, puoi utilizzare istanze di servizio provenienti da altri spazi od organizzazioni seguendo le modalità adottate dalle applicazioni esterne. Invece di creare un bind, utilizza le credenziali per configurare direttamente l'istanza della tua applicazione. Per ulteriori informazioni sull'uso dei servizi {{site.data.keyword.Bluemix_notm}} da parte delle applicazioni esterne, vedi [Abilitazione di applicazioni esterne all'utilizzo dei servizi {{site.data.keyword.Bluemix_notm}} ](#accser_external){: new_window}.
+Puoi eseguire il bind a un'istanza del servizio per le sole istanze dell'applicazione che si trovano nello stesso spazio od organizzazione. Tuttavia, puoi utilizzare istanze di servizio provenienti da altri spazi od organizzazioni seguendo le modalità adottate dalle applicazioni esterne. Invece di creare un bind, utilizza le credenziali per configurare direttamente l'istanza della tua applicazione. Per ulteriori informazioni sull'uso dei servizi {{site.data.keyword.Bluemix_notm}} da parte delle applicazioni esterne, vedi [Abilitazione di applicazioni esterne all'utilizzo dei servizi {{site.data.keyword.Bluemix_notm}} ](#accser_external).
 
 
 ## Configurazione della tua applicazione per l'interazione con un servizio
@@ -365,7 +364,7 @@ Ora puoi configurare la tua applicazione per utilizzare le risorse esterne. Per 
 
 Se disponi di un'istanza di servizio creata e associata mediante bind ad applicazioni in un'unica regione, puoi utilizzare questa istanza in un'altra regione utilizzando uno dei seguenti metodi:
 
-  * Utilizza le credenziali del servizio per configurare direttamente l'istanza della tua applicazione. Per i dettagli, vedi [Abilitazione di applicazioni esterne all'utilizzo dei servizi {{site.data.keyword.Bluemix_notm}}](#accser_external){: new_window}.
+  * Utilizza le credenziali del servizio per configurare direttamente l'istanza della tua applicazione. Per i dettagli, vedi [Abilitazione di applicazioni esterne all'utilizzo dei servizi {{site.data.keyword.Bluemix_notm}}](#accser_external).
   * Crea come ponte un servizio fornito dall'utente.
 
 	Supponiamo di iniziare nella regione in cui
@@ -388,7 +387,7 @@ servizio. Nella barra dei menu di {{site.data.keyword.Bluemix_notm}}, espandi **
 e i parametri di connessione che hai registrato dalla variabile di ambiente
 *VCAP_SERVICES*. Per informazioni su come creare un'istanza
 del servizio fornito dall'utente, vedi [Creazione di un'istanza
-del servizio fornito dall'utente](#user_provide_services){: new_window}.
+del servizio fornito dall'utente](#user_provide_services).
 
       5. Esegui il bind dell'istanza del servizio fornito dall'utente alla tua applicazione
 utilizzando il seguente comando:

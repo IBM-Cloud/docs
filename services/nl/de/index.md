@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-03"
+  years: 2016, 2017
+lastupdated: "2017-01-11"
 
 ---
 
@@ -21,10 +21,10 @@ Für {{site.data.keyword.Bluemix_notm}}-Services stehen mehrere Unterstützungss
 
 |Typ	|Beschreibung	|Details zu Unterstützung|
 |:------|:--------------|:--------------|
-|IBM	|Ein Service, der von IBM bereitgestellt wird und zur allgemeinen Verfügung bereitsteht.	|Für Probleme, die sich als Mängel eines von IBM bereitgestellten, allgemein verfügbaren Service erweisen, steht Support zur Verfügung. Die Art des Supports beruht auf der von Ihnen festgelegten Prioritätsstufe. Weitere Informationen zu Prioritätsstufen von Tickets finden Sie unter [Support kontaktieren](/docs/support/index.html#contacting-bluemix-support){: new_window}.|
+|IBM	|Ein Service, der von IBM bereitgestellt wird und zur allgemeinen Verfügung bereitsteht.	|Für Probleme, die sich als Mängel eines von IBM bereitgestellten, allgemein verfügbaren Service erweisen, steht Support zur Verfügung. Die Art des Supports beruht auf der von Ihnen festgelegten Prioritätsstufe. Weitere Informationen zu Prioritätsstufen von Tickets finden Sie unter [Support kontaktieren](/docs/support/index.html#contacting-bluemix-support).|
 |Drittanbieter	|Ein Service, der von einem anderen Unternehmen als IBM bereitgestellt wird.	|Support für Services von Drittanbietern wird durch den Service-Provider bereitgestellt. Wenn ein Problem von IBM untersucht wird und sich als Mangel im Service eines Drittanbieters herausstellt, ist IBM nicht verpflichtet, einen Fix zur Verfügung zu stellen. IBM teilt die Analyse mit dem anderen Service-Provider auf, sofern erforderlich.|
 |Community	|Ein Service, der von einer Open-Source-Community bereitgestellt wird.	|Support für Community-Services wird von der {{site.data.keyword.Bluemix_notm}} Developers Community bereitgestellt. Wenn ein Problem von IBM untersucht wird und sich als Mangel im Community-Service herausstellt, ist IBM nicht verpflichtet, einen Fix zur Verfügung zu stellen.|
-|Beta	|Ein Service, der für die Produktionsumgebung noch nicht einsatzfähig ist und sich in einer Versuchsphase der Entwicklung befindet. Ein Betaservice kann den Entwicklungs- und Marketingteams dabei helfen, den Wert der Services einzuschätzen, bevor sie den Service der Allgemeinheit zur Verfügung stellen.	|Probleme, die sich als Mängel in einem von IBM bereitgestellten Betaservice erweisen, werden unterstützt; jedoch ist IBM nicht verpflichtet, einen Fix zur Verfügung zu stellen. Zusätzlich wird dem Problemticket eine Prioritätsstufe von 3 oder 4 zugeordnet, soweit zutreffend. Informationen zu Prioritätsstufen von Tickets finden Sie unter [Support kontaktieren](/docs/support/index.html#contacting-bluemix-support){: new_window}.|
+|Beta	|Ein Service, der für die Produktionsumgebung noch nicht einsatzfähig ist und sich in einer Versuchsphase der Entwicklung befindet. Ein Betaservice kann den Entwicklungs- und Marketingteams dabei helfen, den Wert der Services einzuschätzen, bevor sie den Service der Allgemeinheit zur Verfügung stellen.	|Probleme, die sich als Mängel in einem von IBM bereitgestellten Betaservice erweisen, werden unterstützt; jedoch ist IBM nicht verpflichtet, einen Fix zur Verfügung zu stellen. Zusätzlich wird dem Problemticket eine Prioritätsstufe von 3 oder 4 zugeordnet, soweit zutreffend. Informationen zu Prioritätsstufen von Tickets finden Sie unter [Support kontaktieren](/docs/support/index.html#contacting-bluemix-support).|
 {: caption="Table 1. {{site.data.keyword.Bluemix_notm}} services support information" caption-side="top"}
 
 ##Experimentelle Services
@@ -96,7 +96,7 @@ Nicht alle Services sind in jeder {{site.data.keyword.Bluemix_notm}}-Region erh�
 |{{site.data.keyword.iot_short}}		|Gehostet in Dallas, USA		|Gehostet in London, UK		|Nicht erhältlich in der Region|
 |{{site.data.keyword.iotrtinsights_short}}		|Gehostet in Dallas, USA		|Gehostet in London, UK		|Gehostet in Sydney, AU|
 |IoT Workbench		|Gehostet in Dallas, USA		|Gehostet in London, UK		|Gehostet in Sydney, AU|
-|{{site.data.keyword.keymanagementserviceshort}}	|Gehostet in Dallas, USA		|Gehostet in London, UK		|Nicht erhältlich in der Region|
+|{{site.data.keyword.keymanagementserviceshort}}	|Gehostet in Dallas, USA		|Nicht erhältlich in der Region		|Nicht erhältlich in der Region|
 |{{site.data.keyword.languagetranslationshort}}	|Gehostet in Dallas, USA		|Gehostet in Dallas, USA		|Gehostet in Dallas, USA |
 |{{site.data.keyword.pm_short}}   |Gehostet in Dallas, USA		|Gehostet in London, UK		|Nicht erhältlich in der Region|
 |{{site.data.keyword.eventhubshort}}		|Gehostet in Dallas, USA		|Nicht erhältlich in der Region		|Nicht erhältlich in der Region|
@@ -118,8 +118,6 @@ Nicht alle Services sind in jeder {{site.data.keyword.Bluemix_notm}}-Region erh�
 |{{site.data.keyword.runbook_short}}				|Gehostet in Dallas, USA		|Gehostet in London, UK			|Gehostet in Sydney, AU |
 |{{site.data.keyword.SecureGateway}}		|Gehostet in Dallas, USA		|Gehostet in London, UK		|Gehostet in Sydney, AU |
 |{{site.data.keyword.sescashort}}		|Gehostet in Dallas, USA		|Gehostet in London, UK		|Gehostet in Sydney, AU |
-|{{site.data.keyword.servicediscoveryshort}}		|Gehostet in Dallas, USA		|Gehostet in London, UK		|Nicht erhältlich in der Region|
-|{{site.data.keyword.serviceproxyshort}}		|Gehostet in Dallas, USA		|Gehostet in London, UK		|Nicht erhältlich in der Region|
 |{{site.data.keyword.ssofull}}			|Gehostet in Washington, USA		|Nicht erhältlich in der Region		|Nicht erhältlich in der Region|
 |{{site.data.keyword.speechtotextshort}}	|Gehostet in Dallas, USA		|Gehostet in Dallas, USA		|Gehostet in Dallas, USA |
 |{{site.data.keyword.streaminganalyticsshort}}	|Gehostet in Dallas, USA		|Gehostet in London, UK		|Gehostet in London, UK|

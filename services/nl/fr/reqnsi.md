@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-03"
+  years: 2016, 2017
+lastupdated: "2017-01-11"
 
 ---
 
@@ -45,7 +45,7 @@ suivant décrit les informations de support générales pour les services {{site
 |:------|:--------------|:--------------|
 |IBM	|Service fourni par IBM et généralement disponible.	|Les problèmes considérés comme un défaut d'un service fourni par IBM généralement disponible sont traités. Le support dépend de la
 gravité que vous définissez. Pour plus d'informations sur la gravité des tickets, voir
-[Contacter le service de support](/docs/support/index.html#contacting-bluemix-support){: new_window}.|
+[Contacter le service de support](/docs/support/index.html#contacting-bluemix-support).|
 |Tiers	|Service fourni par une société autre qu'IBM.	|Le support des services de tiers est assuré par le fournisseur de service. Si IBM examine un
 problème et détermine qu'il s'agit d'un défaut d'un service de tiers, elle n'est pas obligée de fournir un correctif. IBM partagera son analyse avec le
 fournisseur de service de tiers si nécessaire.|
@@ -55,8 +55,9 @@ obligée de fournir un correctif.|
 |Bêta	|Service qui n'est pas prêt pour la phase de production et qui se trouve au stade d'essai de développement. Un service bêta peut aider les équipes de développement et marketing à évaluer la valeur d'un service avant de le rendre généralement disponible.	|Les
 problèmes
 identifiés comme défauts dans un service bêta fourni par IBM sont pris en charge, mais IBM n'est pas obligée de fournir un correctif. De plus, le ticket de problème sera associé à une gravité de 3 ou 4 si
-applicable. Pour des informations sur la gravité des tickets, voir [Contacter le service de support](/docs/support/index.html#contacting-bluemix-support){: new_window}.|
+applicable. Pour des informations sur la gravité des tickets, voir [Contacter le service de support](/docs/support/index.html#contacting-bluemix-support).|
 {: caption="Table 1. {{site.data.keyword.Bluemix_notm}} information du service de support" caption-side="top"}
+
 
 
 
@@ -134,14 +135,13 @@ services qui sont fournis par IBM.
 |{{site.data.keyword.nlclassifierlshort}} 	|Oui 		|Oui 		|Oui|
 |{{site.data.keyword.objectstorageshort}}	|Oui		|Non		|Non|
 |{{site.data.keyword.personalityinsightsshort}}	|Oui		|Oui		|Oui|
-|{{site.data.keyword.mobilepush}}Push		|Oui		|Oui		|Non|
+|{{site.data.keyword.mobilepush}}		|Oui		|Oui		|Non|
 |Push for iOS 8					|Oui		|Oui		|Non|
 |{{site.data.keyword.questionandanswershort}}	|Oui		|Oui		|Oui|
 |{{site.data.keyword.rapidApps}}		|Oui		|Oui		|Non|
 |{{site.data.keyword.relationshipextractionshort}}	|Oui	|Oui		|Oui|
 |{{site.data.keyword.retrieveandrankshort}}	|Oui 		|Oui 		|Oui|
 |{{site.data.keyword.SecureGateway}}		|Oui		|Oui		|Non|
-|{{site.data.keyword.servicediscoveryshort}}	|Oui		|Non		|Non|
 |{{site.data.keyword.sescashort}}		|Oui		|Oui		|Oui|
 |{{site.data.keyword.ssofull}}			|Oui		|Non		|Non|
 |{{site.data.keyword.speechtotextshort}}	|Oui 		|Oui	 	|Oui|
@@ -175,8 +175,9 @@ Vous pouvez afficher tous les services qui sont disponibles dans {{site.data.key
 
 * Depuis l'interface utilisateur {{site.data.keyword.Bluemix_notm}}. Affichez le catalogue {{site.data.keyword.Bluemix_notm}}.
 * Depuis l'interface de ligne de commande cf. Utilisez la commande **cf marketplace**.
-* Depuis votre propre application. Utilisez l'[API Services GET
-/v2/services](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}.
+* Depuis votre propre application. Utilisez
+l'[API
+Services GET /v2/services ![icône de lien externe](../icons/launch-glyph.svg)](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}.
 
 Vous pouvez sélectionner le service dont vous avez besoin pendant le développement des applications. Une fois la sélection effectuée,
 {{site.data.keyword.Bluemix_notm}} interagit avec le service et effectue les opérations nécessaires pour mettre à
@@ -235,7 +236,7 @@ le nom de l'instance de service :
 Vous ne pouvez lier une instance de service qu'aux instances d'application se trouvant dans le même espace ou la même organisation. Toutefois, vous pouvez utiliser des instances de service provenant d'autres espaces ou d'autres organisations, à l'instar d'une application externe. Au lieu de
 créer une liaison, utilisez les données d'identification afin de configurer directement votre instance d'application. Pour plus d'informations sur la façon
 dont les applications externes utilisent les services {{site.data.keyword.Bluemix_notm}}, voir [Utilisation des
-services {{site.data.keyword.Bluemix_notm}} avec des applications externes](#accser_external){: new_window}.
+services {{site.data.keyword.Bluemix_notm}} avec des applications externes](#accser_external).
 
 
 ## Configuration de votre application pour l'interaction avec un service
@@ -363,7 +364,7 @@ Si une instance de service est créée et liée à des applications dans une ré
 suivantes :
 
   * Utilisez les données d'identification du service pour configurer votre instance d'application directement. Voir
-[Utilisation des services {{site.data.keyword.Bluemix_notm}} avec des applications externes](#accser_external){: new_window}
+[Utilisation des services {{site.data.keyword.Bluemix_notm}} avec des applications externes](#accser_external)
 pour des détails.
   * Créez un service fourni par l'utilisateur comme pont.
 
@@ -386,7 +387,7 @@ l'instance de service.
 utiliser l'instance de service.
 
       4. Créez une instance de service fournie par l'utilisateur en utilisant les données d'identification et les paramètres de connexion que vous avez
-enregistrés depuis la variable d'environnement *VCAP_SERVICES*. Pour plus d'informations sur la création d'une instance de service fournie par l'utilisateur, voir [Création d'une instance de service fournie par l'utilisateur](#user_provide_services){: new_window}.
+enregistrés depuis la variable d'environnement *VCAP_SERVICES*. Pour plus d'informations sur la création d'une instance de service fournie par l'utilisateur, voir [Création d'une instance de service fournie par l'utilisateur](#user_provide_services).
 
       5. Liez l'instance de service fournie par l'utilisateur à votre application avec la commande suivante :
 

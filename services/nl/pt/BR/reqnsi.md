@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-03"
+  years: 2016, 2017
+lastupdated: "2017-01-11"
 
 ---
 
@@ -49,7 +49,7 @@ e, em seguida, pelos serviços de comunidade.</dd>
 |Tipo	|Descrição	|Detalhes do suporte|
 |:------|:--------------|:--------------|
 |IBM	|Um serviço que é fornecido pela IBM e que está geralmente disponível.	|Problemas determinados como um defeito
-em um serviço fornecido pela IBM que geralmente está disponível são suportados. O suporte será fornecido com base na severidade configurada. Para obter mais informações sobre a severidade do chamado, veja [Entrando em contato com o suporte](/docs/support/index.html#contacting-bluemix-support){: new_window}.|
+em um serviço fornecido pela IBM que geralmente está disponível são suportados. O suporte será fornecido com base na severidade configurada. Para obter mais informações sobre a severidade do chamado, veja [Entrando em contato com o suporte](/docs/support/index.html#contacting-bluemix-support).|
 |Terceiros	|Um serviço que é fornecido por uma empresa que não seja a IBM.	|O suporte para serviços de terceiros é fornecido
 perlo provedor de serviços. Se um problema for investigado pela IBM e ficar determinado ser um defeito em um serviço de terceiro, a IBM não será obrigada a fornecer uma correção. A IBM compartilhará a análise com o provedor de serviços de terceiro, se necessário.|
 |Comunidade	|Um serviço que é fornecido por uma comunidade de software
@@ -59,7 +59,7 @@ e marketing a avaliar o valor dos serviços antes de tornarem o
 serviço geralmente disponível.	|Problemas que são determinados como sendo um defeito
 em um serviço beta fornecido pela IBM são suportados mas a IBM não é obrigada a
 fornecer uma correção. Além disso,
-o chamado de problema será designado como severidade 3 ou 4 onde aplicável. Para obter informações sobre severidade de chamados, consulte [Entrando em contato com o suporte](/docs/support/index.html#contacting-bluemix-support){: new_window}.|
+o chamado de problema será designado como severidade 3 ou 4 onde aplicável. Para obter informações sobre severidade de chamados, consulte [Entrando em contato com o suporte](/docs/support/index.html#contacting-bluemix-support).|
 {: caption="Table 1. {{site.data.keyword.Bluemix_notm}} services support information" caption-side="top"}
 
 
@@ -138,14 +138,13 @@ Nem todos os serviços estão disponíveis em toda região do {{site.data.keywor
 |{{site.data.keyword.nlclassifierlshort}} 	|Sim 		|Sim 		|Sim|
 |{{site.data.keyword.objectstorageshort}}	|Sim		|Não		|Não|
 |{{site.data.keyword.personalityinsightsshort}}	|Sim		|Sim		|Sim|
-|{{site.data.keyword.mobilepush}}Push		|Sim		|Sim		|Não|
+|{{site.data.keyword.mobilepush}}		|Sim		|Sim		|Não|
 |Push for iOS 8					|Sim		|Sim		|Não|
 |{{site.data.keyword.questionandanswershort}}	|Sim		|Sim		|Sim|
 |{{site.data.keyword.rapidApps}}		|Sim		|Sim		|Não|
 |{{site.data.keyword.relationshipextractionshort}}	|Sim	|Sim		|Sim|
 |{{site.data.keyword.retrieveandrankshort}}	|Sim 		|Sim 		|Sim|
 |{{site.data.keyword.SecureGateway}}		|Sim		|Sim		|Não|
-|{{site.data.keyword.servicediscoveryshort}}	|Sim		|Não		|Não|
 |{{site.data.keyword.sescashort}}		|Sim		|Sim		|Sim|
 |{{site.data.keyword.ssofull}}			|Sim		|Não		|Não|
 |{{site.data.keyword.speechtotextshort}}	|Sim 		|Sim	 	|Sim|
@@ -180,7 +179,7 @@ interagir com o serviço.
 
 * A partir da interface com o usuário do {{site.data.keyword.Bluemix_notm}}. Visualize o Catálogo do {{site.data.keyword.Bluemix_notm}}.
 * A partir da interface da linha de comandos cf. Use o comando **cf marketplace**.
-* A partir de seu próprio aplicativo. Use a [API de Serviços GET /v2/services](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}.
+* A partir de seu próprio aplicativo. Use a [API de serviços GET /v2/services ![Ícone de link externo](../icons/launch-glyph.svg)](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}.
 
 É possível selecionar o serviço necessário ao desenvolver
 aplicativos. Na seleção, o
@@ -239,7 +238,7 @@ que você requer.
     ```
 
 É possível ligar uma instância de serviço apenas àquelas instâncias do app que estão no mesmo espaço ou organização. No entanto, é possível usar instâncias
-de serviço de outros espaços ou organizações da mesma maneira que um app externo faz. Em vez de criar uma ligação, use as credenciais para configurar sua instância do app diretamente. Para obter mais informações sobre como apps externos usam serviços do {{site.data.keyword.Bluemix_notm}}, consulte [Permitindo que apps externos usem serviços do {{site.data.keyword.Bluemix_notm}}](#accser_external){: new_window}.
+de serviço de outros espaços ou organizações da mesma maneira que um app externo faz. Em vez de criar uma ligação, use as credenciais para configurar sua instância do app diretamente. Para obter mais informações sobre como os apps externos usam serviços do {{site.data.keyword.Bluemix_notm}}, veja [Permitindo que apps externos usem serviços do {{site.data.keyword.Bluemix_notm}}](#accser_external).
 
 
 ## Configurando seu aplicativo para interagir com um serviço
@@ -371,7 +370,7 @@ Agora é possível configurar o seu aplicativo para usar os recursos externos. P
 
 Se você tiver uma instância de serviço criada e ligada a apps em uma região, será possível usar essa instância de serviço em uma outra região com um dos métodos a seguir:
 
-  * Use as credenciais de serviço para configurar sua instância do app diretamente. Consulte [Ativando apps externos para usarem serviço do {{site.data.keyword.Bluemix_notm}}](#accser_external){: new_window} para obter detalhes.
+  * Use as credenciais de serviço para configurar sua instância do app diretamente. Veja [Permitindo que apps externos usem o serviço do {{site.data.keyword.Bluemix_notm}}](#accser_external) para obter detalhes.
   * Crie um serviço fornecido pelo usuário como uma ponte.
 
 	Suponha que você esteja iniciando na região em que
@@ -400,7 +399,7 @@ seguida, selecione a região na qual você deseja usar a instância de serviço.
 e os parâmetros de conexão que você registrou a partir da variável de ambiente
 *VCAP_SERVICES*. Para obter informações sobre como criar
 uma instância de serviço fornecida pelo usuário, consulte [Criando uma
-instância de serviço fornecida pelo usuário](#user_provide_services){: new_window}.
+instância de serviço fornecida pelo usuário](#user_provide_services).
 
       5. Ligue a instância de serviço fornecida pelo usuário ao seu app
 usando o comando a seguir:

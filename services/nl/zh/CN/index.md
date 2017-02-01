@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-03"
+  years: 2016, 2017
+lastupdated: "2017-01-11"
 
 ---
 
@@ -21,10 +21,10 @@ lastupdated: "2016-11-03"
 
 |类型	|描述	|支持详细信息|
 |:------|:--------------|:--------------|
-|IBM	|IBM 提供且普遍可用的服务。	|如果问题确定为 IBM 提供且普遍可用的服务中的缺陷，那么将受支持。将基于您设置的严重性提供支持。有关凭单严重性的更多信息，请参阅[联系支持人员](/docs/support/index.html#contacting-bluemix-support){: new_window}。|
+|IBM	|IBM 提供且普遍可用的服务。	|如果问题确定为 IBM 提供且普遍可用的服务中的缺陷，那么将受支持。将基于您设置的严重性提供支持。有关凭单严重性的更多信息，请参阅[联系支持人员](/docs/support/index.html#contacting-bluemix-support)。|
 |第三方	|非 IBM 公司提供的服务。	|对第三方服务的支持由服务提供者提供。如果 IBM 调查的某个问题确定为第三方服务中的缺陷，那么 IBM 没有义务提供修订。如果需要，IBM 将与第三方服务提供者共享分析。|
 |社区	|开放式源代码社区提供的服务。	|对社区服务的支持由 {{site.data.keyword.Bluemix_notm}} 开发者社区提供。如果 IBM 调查的某个问题确定为社区服务中的缺陷，那么 IBM 没有义务提供修订。|
-|Beta	|尚不可用于生产、目前处于开发试用阶段的服务。Beta 服务可帮助开发和市场营销团队先评估服务价值，再使服务普遍可用。	|如果问题确定为 IBM 提供的 beta 服务中的缺陷，那么将受支持，但 IBM 没有义务提供修订。此外，将在适当的情况下为问题凭单分配严重性 3 或 4。有关凭单严重性的信息，请参阅[联系支持人员](/docs/support/index.html#contacting-bluemix-support){: new_window}。|
+|Beta	|尚不可用于生产、目前处于开发试用阶段的服务。Beta 服务可帮助开发和市场营销团队先评估服务价值，再使服务普遍可用。	|如果问题确定为 IBM 提供的 beta 服务中的缺陷，那么将受支持，但 IBM 没有义务提供修订。此外，将在适当的情况下为问题凭单分配严重性 3 或 4。有关凭单严重性的信息，请参阅[联系支持人员](/docs/support/index.html#contacting-bluemix-support)。|
 {: caption="Table 1. {{site.data.keyword.Bluemix_notm}} services support information" caption-side="top"}
 
 ##试验性服务
@@ -95,7 +95,7 @@ lastupdated: "2016-11-03"
 |{{site.data.keyword.iot_short}}		|在美国达拉斯托管		|在英国伦敦托管		|在区域中不可用|
 |{{site.data.keyword.iotrtinsights_short}}		|在美国达拉斯托管		|在英国伦敦托管		|在澳大利亚悉尼托管|
 |IoT Workbench		|在美国达拉斯托管		|在英国伦敦托管		|在澳大利亚悉尼托管|
-|{{site.data.keyword.keymanagementserviceshort}}	|在美国达拉斯托管		|在英国伦敦托管		|在区域中不可用|
+|{{site.data.keyword.keymanagementserviceshort}}	|在美国达拉斯托管		|在区域中不可用		|在区域中不可用|
 |{{site.data.keyword.languagetranslationshort}}	|在美国达拉斯托管		|在美国达拉斯托管		|在美国达拉斯托管 |
 |{{site.data.keyword.pm_short}}   |在美国达拉斯托管		|在英国伦敦托管		|在区域中不可用|
 |{{site.data.keyword.eventhubshort}}		|在美国达拉斯托管		|在区域中不可用		|在区域中不可用|
@@ -117,8 +117,6 @@ lastupdated: "2016-11-03"
 |{{site.data.keyword.runbook_short}}				|在美国达拉斯托管		|在英国伦敦托管			|在澳大利亚悉尼托管 |
 |{{site.data.keyword.SecureGateway}}		|在美国达拉斯托管		|在英国伦敦托管		|在澳大利亚悉尼托管 |
 |{{site.data.keyword.sescashort}}		|在美国达拉斯托管		|在英国伦敦托管		|在澳大利亚悉尼托管 |
-|{{site.data.keyword.servicediscoveryshort}}		|在美国达拉斯托管		|在英国伦敦托管		|在区域中不可用|
-|{{site.data.keyword.serviceproxyshort}}		|在美国达拉斯托管		|在英国伦敦托管		|在区域中不可用|
 |{{site.data.keyword.ssofull}}			|在美国华盛顿托管		|在区域中不可用		|在区域中不可用|
 |{{site.data.keyword.speechtotextshort}}	|在美国达拉斯托管		|在美国达拉斯托管		|在美国达拉斯托管 |
 |{{site.data.keyword.streaminganalyticsshort}}	|在美国达拉斯托管		|在英国伦敦托管		|在英国伦敦托管|
