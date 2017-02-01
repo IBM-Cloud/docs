@@ -6,7 +6,7 @@
 	}, {
 		"id": "Categories",
 		"items": [{
-			"title": "計算",
+			"title": "コンピュート",
 			"img": "homepage/images/compute.svg",
 			"href": "compute/index.html",
 			"links": [{
@@ -157,7 +157,7 @@
 				"href": "services/VisualRecognition/VisualRecognition.html"
 			}]
 		}, {
-			"title": "統合",
+			"title": "インテグレーション",
 			"img": "homepage/images/integration.svg",
 			"href": "services/integrate.html",
 			"links": [{
@@ -266,7 +266,7 @@
 				"href": "services/mobilepush/index.html"
 			}]
 		}, {
-			"title": "モノのインターネット",
+			"title": "IoT",
 			"img": "homepage/images/iot.svg",
 			"href": "services/internetofthings.html",
 			"links": [{

@@ -46,6 +46,11 @@
 		"description": "計算器を使用してコストを見積もることができ、使用量詳細ビューで実際のコストを確認することができます。",
 		"img": "homepage/images/pricing.svg",
 		"href": "pricing/index.html"
+	}, {
+		"title": "Architecture Center",
+		"description": "アーキテクチャーを参照して、ご使用のクラウド・アプリに最適のものを決定するのに役立てることができます。",
+		"img": "homepage/images/architectures.svg",
+		"href": "https://developer.ibm.com/architecture/"
 	}]
 
 }

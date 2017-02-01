@@ -46,6 +46,11 @@
 		"description": "使用计算器估算成本，并通过使用情况详细视图来查看实际成本。",
 		"img": "homepage/images/pricing.svg",
 		"href": "pricing/index.html"
+	}, {
+		"title": "Architecture Center",
+		"description": "浏览体系结构可帮助确定您的云应用程序的最佳匹配。",
+		"img": "homepage/images/architectures.svg",
+		"href": "https://developer.ibm.com/architecture/"
 	}]
 
 }

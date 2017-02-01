@@ -46,6 +46,11 @@
 		"description": "Estime custos com a calculador e veja os custos reais com a visualização de detalhes de uso.",
 		"img": "homepage/images/pricing.svg",
 		"href": "pricing/index.html"
+	}, {
+		"title": "Architecture Center",
+		"description": "Procure em nossas arquiteturas para ajudar a determinar o mais adequado para seus apps em nuvem.",
+		"img": "homepage/images/architectures.svg",
+		"href": "https://developer.ibm.com/architecture/"
 	}]
 
 }

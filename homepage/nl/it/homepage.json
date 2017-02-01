@@ -1,10 +1,10 @@
 {
-	"identifier": "ID",
+	"identifier": "id",
 	"label": "titolo",
 	"items": [{
 		"id": "GetStarted"
 	}, {
-		"id": "Categorie",
+		"id": "Categories",
 		"items": [{
 			"title": "Calcolo",
 			"img": "homepage/images/compute.svg",
@@ -293,7 +293,7 @@
 		}]
 		
 	}, {
-		"id": "Risorse",
+		"id": "Resources",
 		"descriptionTitle": "Risorse",
 		"items": [{
 			"title": "Perché Bluemix?",

@@ -1,25 +1,25 @@
 {
-	"identifier": "ID",
-	"label": "título",
+	"identifier": "id",
+	"label": "title",
 	"items": [{
-		"id": "Introdução"
+		"id": "GetStarted"
 	}, {
-		"id": "Categorias",
+		"id": "Categories",
 		"items": [{
 			"title": "Cálculo",
 			"img": "homepage/images/compute.svg",
 			"href": "compute/index.html",
 			"links": [{
-				"name": "Apps do Cloud Foundry",
+				"name": "Cloud Foundry Apps",
 				"href": "cfapps/index.html"
 			}, {
 				"name": "IBM Bluemix OpenWhisk",
 				"href": "openwhisk/index.html"
 			}, {
-				"name": "Contêineres",
+				"name": "Containers",
 				"href": "containers/container_index.html"
 			}, {
-				"name": "Servidores Virtuais",
+				"name": "Virtual Servers",
 				"href": "virtualmachines/vm_index.html"
 			}]
 		}, {
@@ -27,27 +27,27 @@
 			"img": "homepage/images/network.svg",
 			"href": "services/network.html",
 			"links": [{
-				"name": "Cadeia de blocos",
+				"name": "Blockchain",
 				"href": "services/blockchain/index.html"
 			}, {
 				"name": "Content Delivery Network (CDN)",
 				"href": "services/cdn/index.html"
 			}, {
-				"name": "Grupos de segurança de rede",
+				"name": "Network Security Groups",
 				"href": "services/networksecuritygroups/index.html"
 			}, {
-				"name": "Rede Pivada Virtual (VPN)",
+				"name": "Virtual Private Network (VPN)",
 				"href": "services/vpn/index.html"
 			}]
 		}, {
-			"title": "Storage",
+			"title": "Armazenamento",
 			"img": "homepage/images/storage.svg",
 			"href": "services/storage.html",
 			"links": [{
-				"name": "Armazenamento de bloco",
+				"name": "Block Storage",
 				"href": "services/BlockStorage/index.html"
 			}, {
-				"name": "Armazenamento de objeto",
+				"name": "Object Storage",
 				"href": "services/ObjectStorage/index.html"
 			}]
 		}, {
@@ -94,7 +94,7 @@
 				"name": "PostgreSQL by Compose",
 				"href": "services/PostgreSQLByCompose/index.html"
 			}, {
-				"name": "Análise preditiva",
+				"name": "Predictive Analytics",
 				"href": "services/PredictiveModeling/index.html"
 			}, {
 				"name": "Redis by Compose",
@@ -120,7 +120,7 @@
 				"name": "Concept Insights",
 				"href": "services/ConceptInsights/index.html"
 			}, {
-				"name": "Diálogo",
+				"name": "Dialog",
 				"href": "services/Dialog/index.html"
 			}, {
 				"name": "Document Conversion",
@@ -138,10 +138,10 @@
 				"name": "Relationship Extraction",
 				"href": "services/RelationshipExtraction/index.html"
 			}, {
-				"name": "Recuperar e classificar",
+				"name": "Retrieve and Rank",
 				"href": "services/RetrieveandRank/index.html"
 			}, {
-				"name": "Fala para texto",
+				"name": "Speech to Text",
 				"href": "services/Speechtotext/index.html"
 			}, {
 				"name": "Text to Speech",
@@ -164,10 +164,10 @@
 				"name": "Cloud Integration",
 				"href": "services/CloudIntegration/index.html"
 			}, {
-				"name": "Gateway seguro",
+				"name": "Secure Gateway",
 				"href": "services/SecureGateway/secure_gateway.html"
 			}, {
-				"name": "Descoberta de Serviço",
+				"name": "Service Discovery",
 				"href": "services/ServiceDiscovery/svc_discovery_gettingstarted.html"
 			}]
 		}, {
@@ -197,14 +197,14 @@
 				"href": "services/TrackPlan/index.html"
 			}]
 		}, {
-			"title": "Security",
+			"title": "Segurança",
 			"img": "homepage/images/security.svg",
 			"href": "services/security.html",
 			"links": [{
-				"name": "Segurança do aplicativo em nuvem",
+				"name": "Application Security on Cloud",
 				"href": "services/ApplicationSecurityonCloud/index.html"
 			}, {
-				"name": "Proteção de chave",
+				"name": "Key Protect",
 				"href": "services/keymgmt/index.html"
 			}, {
 				"name": "Single Sign On",
@@ -227,13 +227,13 @@
 				"name": "MQ Light",
 				"href": "services/MQLight/index.html"
 			}, {
-				"name": "Cache de sessão",
+				"name": "Session Cache",
 				"href": "services/SessionCache/index.html"
 			}, {
 				"name": "WebSphere Application Server",
 				"href": "services/ApplicationServeronCloud/index.html"
 			}, {
-				"name": "Fluxo de Trabalho",
+				"name": "Workflow",
 				"href": "services/workflow/index.html"
 			}, {
 				"name": "Workload Scheduler",
@@ -244,7 +244,7 @@
 			"img": "homepage/images/mobile.svg",
 			"href": "services/mobile.html",
 			"links": [{
-				"name": "Tentar serviços móveis do Bluemix",
+				"name": "Try Bluemix Mobile Services",
 				"href": "mobile/index.html"
 			},{
 				"name": "Mobile Application Content Manager",
@@ -270,7 +270,7 @@
 			"img": "homepage/images/iot.svg",
 			"href": "services/internetofthings.html",
 			"links": [{
-				"name": "Plataforma do Internet of Things",
+				"name": "Internet of Things Platform",
 				"href": "services/IoT/index.html"
 			}, {
 				"name": "IoT Real-Time Insights",

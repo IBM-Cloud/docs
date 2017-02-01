@@ -26,11 +26,6 @@
     "href": "containers/container_index.html",
     "category_id": "compute"
   }, {
-    "id": "vm",
-    "title": "IBM Virtual Servers",
-    "href": "virtualmachines/vm_index.html",
-    "category_id": "compute"
-  }, {
     "type": "extra",
     "title": "Arbeit mit Daten ausprobieren",
     "href": "services/WorkWithData/index.html",
