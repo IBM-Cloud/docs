@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2015, 2016
-lastupdated: "2016-11-30"
+  years: 2015, 2017
+lastupdated: "2017-01-11"
  
 
 ---
@@ -138,7 +138,7 @@ profil**, puis sur **Compte &gt; Type de compte** pour éditer vos informations.
 
 Si vous rencontrez des problèmes liés à {{site.data.keyword.Bluemix_notm}} lorsque vous utilisez un compte de type Paiement à la carte ou
 Abonnement, lisez la page [Comment obtenir de
-l'aide](https://www.ng.bluemix.net/docs/troubleshoot/getting_customer_support.html#online_help) pour plus d'informations.
+l'aide](/docs/troubleshoot/getting_customer_support.html#online_help) pour plus d'informations.
 
 **Remarque :** si vous liez votre compte de facturation {{site.data.keyword.Bluemix_notm}} à un compte SoftLayer, à
 compter du premier jour du mois suivant, vos frais {{site.data.keyword.Bluemix_notm}} et SoftLayer figureront sur votre facture
@@ -475,8 +475,8 @@ mois. Soustrayez la franchise gratuite de 50 000 appels API légers et de 10 000
 <pre class="codeblock">
 <codeblock>
     148 x 1 = 148 $
-    (450 000 / 1000) x 0,03 = 13,5 $
-    (90 000 / 1000) x 0,15 = 13,5 $
+    (450 000/1000) x 0,03 = 13,5 $
+    (90 000/1000) x 0,15 = 13,5 $
 </codeblock>
 </pre>
 <p>
@@ -532,7 +532,8 @@ Le propriétaire de compte est facturé pour l'utilisation totale occasionnée d
 facturation. Chaque
 cycle de facturation dure un mois.
 
-Les propriétaires de compte peuvent filtrer le récapitulatif de l'utilisation par région et organisation. Les prix affichés représentent la somme qui
+Les propriétaires de compte peuvent filtrer le récapitulatif de l'utilisation par région et organisation. Si
+vous possédez un compte, définissez **Organisation** sur **Toutes les organisations** pour afficher l'utilisation de la totalité du compte sur une période de 12 mois. Cliquez sur un mois particulier afin d'afficher l'utilisation pour ce mois.  Les prix affichés représentent la somme qui
 vous sera facturée pour ce mois, en tant que propriétaire de compte.
 
 Si vous sélectionnez une organisation spécifique pour **Organisation**, vous pouvez afficher l'utilisation totale pour cette
@@ -592,8 +593,10 @@ Pour mettre à jour le plan du service, entrez la commande suivante :
 cf update-service <nom_service> [-p <nouveau_plan>]
 ```
 # rellinks
-## general 
+{: rellinks}
+## general
+{: general} 
 * [Fiche des prix {{site.data.keyword.Bluemix_notm}}](https://console.{DomainName}/pricing/)
-* [Forum de la communauté des développeurs {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/)
+* [Forum de la communauté des développeurs {{site.data.keyword.Bluemix_notm}} ![icône de lien externe](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/){: new_window}
 * [Obtention d'aide en ligne](https://www.{DomainName}/docs/troubleshoot/getting_customer_support.html#online_help)
 * [Contactez-nous](https://console.{DomainName}/#/contactUs/cloudOEPaneId=contactUs)

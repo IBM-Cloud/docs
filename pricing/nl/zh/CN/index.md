@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2015, 2016
-lastupdated: "2016-11-30"
+  years: 2015, 2017
+lastupdated: "2017-01-11"
  
 
 ---
@@ -114,7 +114,7 @@ lastupdated: "2016-11-30"
 
 创建计费帐户后，您可以编辑所提供的信息。单击**概要文件设置**图标，然后单击**帐户 &gt; 帐户类型**来编辑您的信息。
 
-如果在使用现买现付或预订帐户时遇到任何 {{site.data.keyword.Bluemix_notm}} 问题，请参阅[获取联机帮助](https://www.ng.bluemix.net/docs/troubleshoot/getting_customer_support.html#online_help)来了解更多信息。
+如果在使用现买现付或预订帐户时遇到任何 {{site.data.keyword.Bluemix_notm}} 问题，请参阅[获取联机帮助](/docs/troubleshoot/getting_customer_support.html#online_help)来了解更多信息。
 
 **注：**如果您将 {{site.data.keyword.Bluemix_notm}} 缴费帐户与 SoftLayer 帐户相链接，那么从下个月的第一天开始，您的 {{site.data.keyword.Bluemix_notm}} 和 SoftLayer 费用将会列在 {{site.data.keyword.Bluemix_notm}} 发票上。有关详细信息，请参阅[查看信用值](/docs/admin//softlayerlink.html#bill_usage)。
 
@@ -412,7 +412,7 @@ lastupdated: "2016-11-30"
 
 在每个记帐周期结束时，将向帐户所有者收取所有组织中发生的总使用量费用。每个记帐周期持续一个月。
 
-帐户所有者可以按区域和组织过滤使用情况摘要。所显示的费用表示该月对您（即帐户所有者）记帐的金额。
+帐户所有者可以按区域和组织过滤使用情况摘要。如果您是帐户所有者，请将**组织**设置为**所有组织**，以查看整个帐户在 12 个月时间段内的使用情况。单击特定的月份可查看该月份的使用情况。所显示的费用表示该月对您（即帐户所有者）记帐的金额。
 
 如果在**组织**中选择了特定组织，那么会看到该组织的总使用量，包括免费层中的任何使用量。所显示的该组织的费用不是对您记帐的费用。免费层使用量在帐户级别显示为免费，但在组织级别不会显示为免费。因此，查看组织使用量时，会看到该组织的实际使用量，包括免费使用量和收费使用量。除去免费层后，所有组织使用量都会累积到帐户使用量上。
 
@@ -451,11 +451,11 @@ lastupdated: "2016-11-30"
 ```
 cf update-service <service_name> [-p <new_plan>]
 ```
-# 相关链接
+# rellinks
 {: rellinks}
-## 常规 
-{: general}
+## general
+{: general} 
 * [{{site.data.keyword.Bluemix_notm}} 价格表](https://console.{DomainName}/pricing/)
-* [{{site.data.keyword.Bluemix_notm}} 开发者社区论坛](https://developer.ibm.com/bluemix/)
+* [{{site.data.keyword.Bluemix_notm}} 开发者社区论坛 ![外部链接图标](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/){: new_window}
 * [获取联机帮助](https://www.{DomainName}/docs/troubleshoot/getting_customer_support.html#online_help)
 * [联系我们](https://console.{DomainName}/#/contactUs/cloudOEPaneId=contactUs)

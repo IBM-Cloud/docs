@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2015, 2016
-lastupdated: "2016-11-30"
+  years: 2015, 2017
+lastupdated: "2017-01-11"
  
 
 ---
@@ -118,7 +118,7 @@ lastupdated: "2016-11-30"
 
 建立可入帳帳戶之後，您可以編輯您提供的資訊。按一下**設定檔設定**圖示，然後按一下**帳戶 &gt; 帳戶類型**以編輯資訊。
 
-如果在使用「隨收隨付制」或「訂閱」帳戶時遇到任何 {{site.data.keyword.Bluemix_notm}} 問題，請參閱[取得線上說明](https://www.ng.bluemix.net/docs/troubleshoot/getting_customer_support.html#online_help)以取得相關資訊。
+如果在使用「隨收隨付制」或「訂閱」帳戶時遇到任何 {{site.data.keyword.Bluemix_notm}} 問題，請參閱[取得線上說明](/docs/troubleshoot/getting_customer_support.html#online_help)以取得相關資訊。
 
 **附註：**如果您鏈結 {{site.data.keyword.Bluemix_notm}} 計費帳戶與 SoftLayer 帳戶，從下個月 1 日開始，{{site.data.keyword.Bluemix_notm}} 及 SoftLayer 費用將會列在 {{site.data.keyword.Bluemix_notm}} 發票上。如需詳細資訊，請參閱[檢視額度](/docs/admin//softlayerlink.html#bill_usage)。
 
@@ -185,7 +185,7 @@ lastupdated: "2016-11-30"
 ###運算資源費用
 {: #compute}
 
-針對應用程式所執行的時間以及使用的記憶體，會向您收費（計算單位為 *GB-小時*）。GB-小時計算如下：應用程式實例數目乘上每個實例的記憶體，再乘上實例所執行的時數。您可以根據需要來自訂實例數以及每個實例的記憶體量。您也可以針對更多使用者新增記憶體或實例，以進行擴充。最終費用是根據 GB-小時：應用程式實例（乘上每個實例的記憶體，再乘上執行中時數）。
+針對應用程式所執行的時間以及使用的記憶體，會向您收費（計算單位為 *GB-小時*）。GB-小時計算如下：應用程式實例數目乘上每個實例的記憶體，再乘上實例所執行的時數。您可以根據需要來自訂實例數以及每個實例的記憶體量。您也可以新增記憶體或實例，以針對更多使用者進行擴充。最終費用是根據 GB-小時：應用程式實例（乘上每個實例的記憶體，再乘上執行中時數）。
 
 例如，請考量兩個 512 MB 實例中每個 GB-小時的成本為 $0.07 的運行環境，執行時間為 30 天（720 小時）。使用下列計算，這些資源的成本為 $24.15 USD（包括免費額度 375 GB-小時）： 
 
@@ -420,7 +420,7 @@ lastupdated: "2016-11-30"
 
 在每一個計費週期的結尾，會針對跨所有組織發生的用量總計，向帳戶擁有者收費。每個計費週期為期一個月。
 
-帳戶擁有者可以依地區和組織來過濾用量摘要。顯示的費用代表您（帳戶擁有者）該月份的計費金額。
+帳戶擁有者可以依地區和組織來過濾用量摘要。如果您是帳戶擁有者，請將**組織**設為**所有組織**，以查看整個帳戶 12 個月期間的使用情形。按一下特定月份，以查看該月份的使用情形。顯示的費用代表您（帳戶擁有者）該月份的計費金額。
 
 如果您針對**組織**選取特定組織，則可以看到該組織的用量總計（包括免費層級的任何用量）。顯示的組織費用不是您的計費費用。免費層級用量在帳戶層次會顯示為免費，但在組織層次則不是。因此，當您檢視組織用量時，會看到該組織的實際用量（包括免費及收費用量）。在移除免費層級之後，所有組織用量都會累積更新至帳戶用量。
 
@@ -460,11 +460,11 @@ lastupdated: "2016-11-30"
 ```
 cf update-service <service_name> [-p <new_plan>]
 ```
-# 相關鏈結
+# rellinks
 {: rellinks}
-## 一般
-{: general}
+## general
+{: general} 
 * [{{site.data.keyword.Bluemix_notm}} 定價單](https://console.{DomainName}/pricing/)
-* [{{site.data.keyword.Bluemix_notm}} Developers 社群討論區](https://developer.ibm.com/bluemix/)
+* [{{site.data.keyword.Bluemix_notm}} Developers Community Forum ![外部鏈結圖示](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/){: new_window}
 * [取得線上說明](https://www.{DomainName}/docs/troubleshoot/getting_customer_support.html#online_help)
 * [與我們聯絡](https://console.{DomainName}/#/contactUs/cloudOEPaneId=contactUs)
