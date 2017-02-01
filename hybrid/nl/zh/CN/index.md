@@ -26,12 +26,12 @@ lastupdated: "2016-11-11"
 
 通过 {{site.data.keyword.Bluemix_notm}} Local，您可以充分发挥数据中心内私有云的真实价值。{{site.data.keyword.Bluemix_notm}} Local 作为服务交付，能与您的 IT 团队持续协作。此外，它还支持您在先进的云平台中利用现有大型机、面向服务的体系结构、过程和数据。了解有关 [{{site.data.keyword.Bluemix_notm}} Local](/docs/local/index.html) 的更多信息。
 
-# 相关链接
+# rellinks
 {: #rellinks}
-## 常规
+## general
 {: #general}
-* [什么是 {{site.data.keyword.Bluemix_notm}}](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){:new_window}
-* [入门](http://www.ibm.com/cloud-computing/bluemix/getting-started/)
-* [了解有关混合模型的信息](http://www.ibm.com/cloud-computing/bluemix/hybrid/)
+* [{{site.data.keyword.Bluemix_notm}} 是什么？![外部链接图标](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){:new_window}
+* [入门 ![外部链接图标](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/getting-started/){:new_window}
+* [了解有关混合模型的信息 ![外部链接图标](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/hybrid/){:new_window}
 * [{{site.data.keyword.Bluemix_notm}} 中的新增功能](/docs/whatsnew/index.html)
 * [{{site.data.keyword.Bluemix_notm}} 词汇表](/docs/overview/glossary/index.html)
