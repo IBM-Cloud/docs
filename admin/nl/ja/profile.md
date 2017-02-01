@@ -18,7 +18,8 @@ lastupdated: "2016-10-20"
 # プロファイル設定
 {: #usersettings}
 
-**「{{site.data.keyword.avatar}}」**アイコン ![「アバター」アイコン](../icons/i-avatar-icon.svg) &gt;**「ユーザー・プロファイル」**に移動して、プロファイル設定を更新します。{:shortdesc}
+**「{{site.data.keyword.avatar}}」**アイコン ![「アバター」アイコン](../icons/i-avatar-icon.svg) &gt;**「ユーザー・プロファイル」**と移動して、プロファイル設定を更新します。
+{:shortdesc}
 
  **「プロファイル」**ページで、以下の情報を設定または更新できます。
 

@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2015, 2016
-lastupdated: "2016-12-05"  
+  years: 2015, 2017
+lastupdated: "2017-01-09"
 
 
 ---
@@ -26,7 +26,7 @@ lastupdated: "2016-12-05"
 
 您可以使用現有 IBM ID 來註冊 {{site.data.keyword.Bluemix_notm}} 帳戶，方法是建立新的 IBM ID 或使用聯合 ID。聯合 ID 是公司網域內已向 IBM 註冊的 ID，因此您可以使用網域及使用者認證來存取 IBM Web 應用程式。  
 
-只有在公司已與 IBM 合作登錄時，才能使用聯合 ID 來註冊 {{site.data.keyword.Bluemix_notm}}。向 IBM 登錄公司網域，可讓使用者使用其現有公司使用者認證來登入 IBM 產品和服務。然後，透過公司的身分提供者來處理鑑別。當您使用聯合 ID 登入 {{site.data.keyword.Bluemix_notm}} 時，系統會提示您透過公司的登入頁面進行登入。如需要求向 IBM 登錄公司或組織網域的相關資訊，或程序的相關資訊，請參閱 [IBM ID Enterprise Federation Adoption Guide](https://ibm.box.com/v/IBMid-Federation-Guide){: #new_window}。當您要求登錄聯合 ID 時，需要有 IBM 贊助者（例如供應項目代言人或用戶端代言人）。
+只有在公司已與 IBM 合作登錄時，才能使用聯合 ID 來註冊 {{site.data.keyword.Bluemix_notm}}。向 IBM 登錄公司網域，可讓使用者使用其現有公司使用者認證來登入 IBM 產品和服務。然後，透過公司的身分提供者來處理鑑別。當您使用聯合 ID 登入 {{site.data.keyword.Bluemix_notm}} 時，系統會提示您透過公司的登入頁面進行登入。如需要求向 IBM 登錄公司或組織網域的相關資訊，或處理程序的相關資訊，請參閱 [IBMid Enterprise Federation Adoption Guide ![外部鏈結圖示](../icons/launch-glyph.svg)](https://ibm.box.com/v/IBMid-Federation-Guide){: new_window}。當您要求登錄聯合 ID 時，需要有 IBM 贊助者（例如供應項目代言人或用戶端代言人）。
 
 | 註冊方法 | 詳細資料 |    
 |-----------------|---------|
@@ -45,6 +45,20 @@ lastupdated: "2016-12-05"
 ### 設定平台通知
 
 按一下**帳戶** &gt; **通知** &gt; **平台**，以針對 {{site.data.keyword.Bluemix_notm}} 突發事件及計劃性維護作業來設定電子郵件通知。您可以選取或清除每一個選項，以啟用或停用電子郵件通知。
+
+<!-- staging only
+
+**Note**: You are always alerted by email about emergencies and pricing changes.
+
+On the **Platform** tab you can also customize notifications for your orgs, spaces, or applications. Complete the following steps to add a customized notification:
+
+<ol>
+<li>Select **Add a Notification**.</li>
+<li>Use the search field to find the org, application, service, or resource that you want to set a notification for, or expand the item in the pre-populated list.</li>
+<li>Select *Email* to set the notification type.</li>
+</ol>
+
+staging only end -->
 
 ### 設定消費通知
 {: #spendingnotifications}
@@ -72,11 +86,11 @@ lastupdated: "2016-12-05"
 ## 檢視用量
 {: #acctusage}
 
-身為組織的帳戶擁有者或帳單管理員，您可以使用「用量儀表板」視圖，來查看組織中每個月所使用的運行環境、容器、服務及支援的即時費用。您可以查看所有地區的運行環境 GB-小時和服務耗用量，或選擇查看特定地區。
+身為組織的帳戶擁有者或帳單管理員，您可以使用「用量儀表板」頁面，來查看組織中每個月所使用的運行環境、容器、服務及支援的即時費用。您可以查看所有地區的運行環境 GB-小時和服務耗用量，或選擇查看特定地區。
 
-若要開啟「用量儀表板」視圖，請按一下**帳戶** &gt; *your_account_name* &gt; **用量儀表板**。帳單管理員只能針對他們身為帳單管理員的組織看到其詳細資料。
+若要開啟「用量儀表板」頁面，請按一下**帳戶** &gt; *your_account_name* &gt; **用量儀表板**。帳單管理員只能針對他們身為帳單管理員的組織看到其詳細資料。
 
-在每一個計費週期的結尾，會針對跨所有組織發生的用量總計，向帳戶擁有者收費。身為帳戶擁有者，您可以依地區和組織來過濾用量摘要。您也可以按一下特定月份，以查看該月份的用量。
+在每一個計費週期的結尾，會針對跨所有組織發生的用量總計，向帳戶擁有者收費。身為帳戶擁有者，您可以依地區和組織來過濾用量摘要。您也可以按一下特定月份，以查看該月份的用量。從**組織**清單中選取**所有組織**，以查看帳戶中所有組織的用量。
 
 ## 更新計費資訊
 {: #account_billing}

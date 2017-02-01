@@ -55,7 +55,7 @@ lastupdated: "2016-12-05"
 
 当您创建组织时，组织名称在 {{site.data.keyword.Bluemix_notm}} 中必须是唯一的。如果组织名称已经由其他 {{site.data.keyword.Bluemix_notm}} Public、Dedicated 或 Local 用户使用，那么必须指定新名称。创建组织之后，系统会自动为您分配*组织管理员*许可权，该许可权允许您编辑组织名称、添加团队成员以及在组织中创建或删除空间。
 
-您必须联系 [{{site.data.keyword.Bluemix_notm}} 支持](http://ibm.biz/bluemixsupport){: new_window}来删除组织。请求支持团队删除组织时，会删除该组织内的所有空间、应用程序和服务。
+您必须联系 [{{site.data.keyword.Bluemix_notm}} 支持 ![外部链接图标](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window} 来删除组织。请求支持团队删除组织时，会删除该组织内的所有空间、应用程序和服务。
 
 以下[用户角色](/docs/admin/users_roles.html#userrolesinfo)可以分配给组织中的团队成员：
 
@@ -115,7 +115,7 @@ lastupdated: "2016-12-05"
 ## 删除现有组织或空间
 {: #deleteorgs}
 
-作为帐户所有者，您可以联系 [{{site.data.keyword.Bluemix_notm}} 支持](http://ibm.biz/bluemixsupport){: new_window}来删除组织。 
+作为帐户所有者，您可以联系 [{{site.data.keyword.Bluemix_notm}} 支持 ![外部链接图标](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window} 来删除组织。 
 
 **注**：删除操作不可撤销。您会失去与该组织相关联的所有应用程序和服务。
 

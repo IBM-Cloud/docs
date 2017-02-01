@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2015, 2016
-lastupdated: "2016-12-05"  
+  years: 2015, 2017
+lastupdated: "2017-01-09"
 
 
 ---
@@ -26,7 +26,7 @@ lastupdated: "2016-12-05"
 
 {{site.data.keyword.Bluemix_notm}} アカウントの登録には、既存の IBM ID を使用するか、新規 IBM ID を作成するか、フェデレーテッド ID を使用することができます。フェデレーテッド ID は、IBM に登録済みの会社ドメイン内の ID で、これにより、ドメインとユーザーの資格情報を使用して IBM Web アプリケーションにアクセスできます。  
 
-お客様の会社が IBM への登録作業を完了している場合にのみ、フェデレーテッド ID で {{site.data.keyword.Bluemix_notm}} にアカウント登録できます。会社のドメインを IBM に登録すると、会社の既存のユーザー資格情報で IBM の製品やサービスにログインできるようになります。認証は、お客様の会社の ID プロバイダーによって処理されます。フェデレーテッド ID で {{site.data.keyword.Bluemix_notm}} にログインすると、お客様の会社のログイン・ページを通じたログインを求められます。会社または組織のドメインを IBM に登録するための申請、またはこのプロセスの詳細については、[IBMid Enterprise Federation Adoption Guide](https://ibm.box.com/v/IBMid-Federation-Guide){: #new_window} を参照してください。フェデレーテッド ID の登録を申請する際には、IBM のサポート役 (オファリング担当者やお客様担当者など) が必要です。
+お客様の会社が IBM への登録作業を完了している場合にのみ、フェデレーテッド ID で {{site.data.keyword.Bluemix_notm}} にアカウント登録できます。会社のドメインを IBM に登録すると、会社の既存のユーザー資格情報で IBM の製品やサービスにログインできるようになります。認証は、お客様の会社の ID プロバイダーによって処理されます。フェデレーテッド ID で {{site.data.keyword.Bluemix_notm}} にログインすると、お客様の会社のログイン・ページを通じたログインを求められます。会社または組織のドメインを IBM に登録するための申請、またはこのプロセスの詳細については、[IBMid Enterprise Federation Adoption Guide ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://ibm.box.com/v/IBMid-Federation-Guide){: new_window} を参照してください。フェデレーテッド ID の登録を申請する際には、IBM のサポート役 (オファリング担当者やお客様担当者など) が必要です。
 
 | 登録方法 | 詳細 |    
 |-----------------|---------|
@@ -45,6 +45,20 @@ lastupdated: "2016-12-05"
 ### プラットフォームの通知の設定
 
 **「アカウント」**&gt;**「通知」**&gt;**「プラットフォーム」**をクリックして、{{site.data.keyword.Bluemix_notm}} のインシデントおよび計画保守に関する E メール通知を設定します。各オプションを選択またはクリアすることにより、E メール通知を有効または無効にできます。
+
+<!-- staging only
+
+**Note**: You are always alerted by email about emergencies and pricing changes.
+
+On the **Platform** tab you can also customize notifications for your orgs, spaces, or applications. Complete the following steps to add a customized notification:
+
+<ol>
+<li>Select **Add a Notification**.</li>
+<li>Use the search field to find the org, application, service, or resource that you want to set a notification for, or expand the item in the pre-populated list.</li>
+<li>Select *Email* to set the notification type.</li>
+</ol>
+
+staging only end -->
 
 ### 消費量通知の設定
 {: #spendingnotifications}
@@ -72,12 +86,12 @@ lastupdated: "2016-12-05"
 ## 使用量の表示
 {: #acctusage}
 
-アカウント所有者または組織の請求管理者は、「使用状況ダッシュボード」ビューを使用して、組織で月ごとに使用されているランタイム、コンテナー、サービス、およびサポートのリアルタイムの課金額を表示することができます。すべての地域のランタイム GB 時間とサービス使用量を表示できます。あるいは、特定の地域を表示するように選択することもできます。
+アカウント所有者または組織の請求管理者は、「使用状況ダッシュボード」ページを使用して、組織で月ごとに使用されているランタイム、コンテナー、サービス、およびサポートのリアルタイムの課金額を表示することができます。すべての地域のランタイム GB 時間とサービス使用量を表示できます。あるいは、特定の地域を表示するように選択することもできます。
 
-「使用状況ダッシュボード」ビューを開くには、**「アカウント」**&gt;「*your_account_name*」&gt;**「使用状況ダッシュボード」**をクリックします。請求管理者は、自分が担当する組織のみの詳細を表示することができます。
+「使用状況ダッシュボード」ページを開くには、**「アカウント」**&gt;「*your_account_name*」&gt;**「使用状況ダッシュボード」**をクリックします。請求管理者は、自分が担当する組織のみの詳細を表示することができます。
 
 アカウント所有者は、各請求サイクルの最後の時点ですべての組織に渡り発生した総使用量に対して課金されます。
-アカウント所有者は、地域および組織で使用量サマリーをフィルタリングできます。また、特定の月をクリックして、その月の使用量を表示することもできます。
+アカウント所有者は、地域および組織で使用量サマリーをフィルタリングできます。また、特定の月をクリックして、その月の使用量を表示することもできます。アカウントのすべての組織の使用量を表示するには、**「組織」**リストから**「すべての組織」**を選択します。
 
 ## 請求先情報の更新
 {: #account_billing}

@@ -40,8 +40,9 @@ Au niveau du compte, deux rôles permettent l'accès à différentes fonctions d
 {:caption="Table 1. Account roles and permissions" caption-side="top"}
 
  Les nouveaux membres d'équipe sont ajoutés en tant que membre du compte. Vous pouvez affecter des rôles d'organisation et d'espace aux invités afin
-d'activer des vues et des droits spécifiques dans {{site.data.keyword.Bluemix_notm}}. Les nouveaux membres d'équipe ajoutés à une organisation
-possèdent le rôle Auditeur de l'organisation par défaut. Pour un espace spécifique, vous pouvez choisir d'affecter le rôle Développeur ou Auditeur aux invités. Une fois que vos invités ont accepté l'invitation et rejoint {{site.data.keyword.Bluemix_notm}}, vous pouvez éditer leurs rôles dans la page
+d'activer des vues et des droits spécifiques dans {{site.data.keyword.Bluemix_notm}}. 
+Les nouveaux membres d'équipe ajoutés à une organisation, sauf dans un
+environnement local ou dédié, possèdent le rôle Auditeur de l'organisation par défaut. Pour un espace spécifique, vous pouvez choisir d'affecter le rôle Développeur ou Auditeur aux invités. Une fois que vos invités ont accepté l'invitation et rejoint {{site.data.keyword.Bluemix_notm}}, vous pouvez éditer leurs rôles dans la page
 **Répertoire d'équipe**.
 
 Les rôles suivants peuvent être affectés au niveau de l'organisation :
@@ -50,7 +51,9 @@ Les rôles suivants peuvent être affectés au niveau de l'organisation :
 |-------------------|-------------|
 |Responsable | Un responsable de l'organisation peut créer, éditer ou supprimer des espaces dans l'organisation, afficher l'utilisation et le quota de l'organisation, inviter des membres d'équipe dans l'organisation, définir quels sont les membres qui ont accès à l'organisation ainsi que les rôles de ces membres dans l'organisation, et gérer des domaines personnalisés pour l'organisation. |
 |Responsable de la facturation | Un responsable de la facturation peut afficher des informations sur l'utilisation des contextes d'exécution et des services pour l'organisation dans la page Tableau de bord de l'utilisation.  |
-|Auditeur | Un auditeur de l'organisation peut afficher le contenu des applications et des services dans l'organisation. Il peut également afficher les membres d'équipe dans l'organisation et les rôles qui leur sont affectés, ainsi que le quota pour l'organisation. Ce rôle est affecté à tous les invités par défaut.|
+|Auditeur | Un auditeur de l'organisation peut afficher le contenu des applications et des services dans l'organisation. Il peut également afficher les membres d'équipe dans l'organisation et les rôles qui leur sont affectés, ainsi que le quota pour l'organisation. 
+Ce rôle est affecté à tous les invités par défaut, sauf dans un environnement
+local ou dédié. |
 {:caption="Table 2. Organization roles and permissions" caption-side="top"}
 
 Les rôles suivants peuvent être affectés au niveau de l'espace :
@@ -82,7 +85,9 @@ Pour modifier la visibilité de la page du répertoire d'équipe, procédez comm
 {: #inviteteammembers}
 
 Les propriétaires de compte et les responsables de l'organisation peuvent inviter des membres d'équipe dans des organisations depuis la page Inviter
-des membres d'équipe. Lorsque vous ajoutez de nouveaux membres d'équipe, le rôle Auditeur leur est affecté automatiquement. Vous pouvez changer les rôles
+des membres d'équipe. Lorsque vous ajoutez de nouveaux membres d'équipe, le
+rôle Auditeur leur est affecté automatiquement, sauf dans un environnement
+local ou dédié. Vous pouvez changer les rôles
 ultérieurement dans la page Répertoire d'équipe. Pour inviter un membre d'équipe, procédez comme suit :
 
 <ol>

@@ -67,7 +67,7 @@ and roles)](users_roles.html#userrolesinfo)』を参照してください。</dd
 組織名は {{site.data.keyword.Bluemix_notm}} で固有にする必要があります。
 組織名が別の {{site.data.keyword.Bluemix_notm}} Public、Dedicated、または Local のユーザーによって既に使用されている場合は、新規名を指定する必要があります。組織を作成したユーザーには、自動的に*組織管理者*許可が割り当てられ、組織名の編集、チーム・メンバーの追加、および組織内のスペースの作成または削除が可能になります。
 
-組織を削除するには、[{{site.data.keyword.Bluemix_notm}} サポート](http://ibm.biz/bluemixsupport){: new_window}に連絡する必要があります。サポート・チームに組織の削除を要求すると、組織内のすべてのスペース、アプリケーション、およびサービスが削除されます。
+組織を削除するには、[{{site.data.keyword.Bluemix_notm}} サポート ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window} に連絡する必要があります。サポート・チームに組織の削除を要求すると、組織内のすべてのスペース、アプリケーション、およびサービスが削除されます。
 
 以下の[ユーザー役割](/docs/admin/users_roles.html#userrolesinfo)を組織内のチーム・メンバーに割り当てることができます。
 
@@ -127,7 +127,7 @@ and roles)](users_roles.html#userrolesinfo)』を参照してください。</dd
 ## 既存の組織またはスペースの削除
 {: #deleteorgs}
 
-アカウント所有者は、[{{site.data.keyword.Bluemix_notm}} サポート](http://ibm.biz/bluemixsupport){: new_window}に連絡して組織を削除できます。 
+アカウント所有者は、[{{site.data.keyword.Bluemix_notm}} サポート ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window} に連絡して組織を削除できます。 
 
 **注**: 削除操作は元に戻せません。組織を削除すると、その組織に関連付けられたすべてのアプリケーションとサービスが失われます。
 

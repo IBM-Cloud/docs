@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2015, 2016 
-lastupdated: "2016-12-05"  
+  years: 2015, 2017
+lastupdated: "2017-01-09"
 
 
 ---
@@ -33,10 +33,7 @@ os usuários efetuem log-in nos produtos e serviços IBM usando suas credenciais
 da empresa existentes. A autenticação então é manipulada pelo provedor de identidade da
 sua empresa. Quando você efetuar log-in no {{site.data.keyword.Bluemix_notm}} com
 um ID federado, será solicitado a efetuar log-in por meio da página de log-in de sua
-empresa. Para obter informações sobre como solicitar o registro do domínio da sua empresa ou
-organização na IBM, ou para obter mais informações sobre o processo, consulte o
-[IBMid Enterprise Federation
-Adoption Guide](https://ibm.box.com/v/IBMid-Federation-Guide){: #new_window}. Um patrocinador IBM, como um defensor da oferta
+empresa. Para obter informações sobre como solicitar o registro do domínio da sua empresa ou organização na IBM ou para obter mais informações sobre o processo, veja o [IBMid Enterprise Federation Adoption Guide ![Ícone de link externo](../icons/launch-glyph.svg)](https://ibm.box.com/v/IBMid-Federation-Guide){: new_window}. Um patrocinador IBM, como um defensor da oferta
 ou do cliente, é necessário quando você solicita o registro de IDs federados.
 
 | Métodos de inscrição | Detalhes |    
@@ -62,6 +59,20 @@ sua conta estiver próxima do limite de gastos que você especificou. Conclua as
 
 Clique em **Conta** &gt; **Notificações** &gt; **Plataforma** para configurar notificações por e-mail para incidentes e manutenção planejada do {{site.data.keyword.Bluemix_notm}}. É possível selecionar ou limpar cada opção para
 ativar ou desativar a notificação por e-mail.
+
+<!-- staging only
+
+**Note**: You are always alerted by email about emergencies and pricing changes.
+
+On the **Platform** tab you can also customize notifications for your orgs, spaces, or applications. Complete the following steps to add a customized notification:
+
+<ol>
+<li>Select **Add a Notification**.</li>
+<li>Use the search field to find the org, application, service, or resource that you want to set a notification for, or expand the item in the pre-populated list.</li>
+<li>Select *Email* to set the notification type.</li>
+</ol>
+
+staging only end -->
 
 ### Configurando notificações de gastos
 {: #spendingnotifications}
@@ -93,14 +104,13 @@ informações sobre contas de Pagamento por uso e de Assinatura, consulte [Como 
 ## Visualizando o uso
 {: #acctusage}
 
-Como um proprietário da conta ou um gerente de faturamento para uma organização, é possível usar a visualização Painel de Uso, para ver os encargos em tempo real para os tempos de execução, contêineres,
-serviços e suporte que são usados por mês em suas organizações. É possível ver o consumo de serviço e de GB/horas do tempo de execução em todas as regiões ou é possível selecionar para ver uma região
+Como um proprietário da conta ou um gerente de faturamento de uma organização, é possível usar a página Painel de uso para ver os encargos em tempo real para os tempos de execução, contêineres, serviços e suporte que são usados por mês em suas organizações. É possível ver o consumo de serviço e de GB/horas do tempo de execução em todas as regiões ou é possível selecionar para ver uma região
 específica.
 
-Para abrir a visualização Painel de uso, clique em **Conta** &gt; *your_account_name* &gt; **Painel de uso**. Os gerentes de faturamento podem ver os detalhes somente das organizações nas quais eles são gerentes de faturamento.
+Para abrir a página Painel de uso, clique em **Conta** &gt; *your_account_name* &gt; **Painel de uso**. Os gerentes de faturamento podem ver os detalhes somente das organizações nas quais eles são gerentes de faturamento.
 
 O proprietário da conta é cobrado pelo uso total que é incorrido entre todas as organizações no término de cada ciclo de faturamento. Como um proprietário da conta, é possível filtrar o resumo de uso
-por região e organização. Também é possível clicar em um determinado mês, para ver o uso para aquele mês.
+por região e organização. Também é possível clicar em um determinado mês, para ver o uso para aquele mês. Selecione **Todas as organizações** na lista **Organização** para ver o uso de todas as organizações na conta.
 
 ## Atualizando informações de faturamento
 {: #account_billing}

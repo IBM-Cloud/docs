@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2015, 2016
-lastupdated: "2016-10-23"
+  years: 2015, 2017
+lastupdated: "2017-01-09"
 
 
 ---
@@ -15,6 +15,7 @@ lastupdated: "2016-10-23"
 {:screen: .screen}
 {:new_window: target="_blank"}
 
+<!-- staging only content beginning -->
 
 # Configuration de votre compte
 {: #account}
@@ -42,8 +43,10 @@ l'aide, ou de faire part de vos commentaires à IBM.
   
   Abonnez-vous pour recevoir des notifications en cas de mise à jour de maintenance des régions publiques de la plateforme
 {{site.data.keyword.Bluemix_notm}} et des services associés, ainsi qu'en cas d'incident, et pour recevoir des notifications de sécurité ainsi
-que d'autres annonces. Vous pouvez faire pointer votre lecteur de flux RSS sur le lien RSS dans la [page de statut Bluemix](http://ibm.biz/Bluemixstatus) pour rester
-à jour concernant les modifications apportées à l'environnement {{site.data.keyword.Bluemix_notm}} public.  Pour plus de détails sur la définition
+que d'autres annonces. Vous pouvez faire pointer votre lecteur de flux RSS sur le lien RSS dans la [page de statut Bluemix
+![icône de lien externe](../icons/launch-glyph.svg)](http://ibm.biz/Bluemixstatus){: new_window} pour rester
+à jour concernant les modifications apportées à l'environnement
+{{site.data.keyword.Bluemix_notm}} public. Pour plus de détails sur la définition
 des notifications, voir [Affichage du statut de Bluemix](/docs/support/index.html#viewing-bluemix-status).
 
 - **Options de support** 
@@ -61,11 +64,11 @@ pouvez utiliser pour le développement ainsi que les conteneurs boilerplate et l
   
   Vous pouvez nous faire part de vos commentaires sur le produit ou la documentation. 
   
-  Pour soumettre des idées qui pourraient améliorer {{site.data.keyword.Bluemix_notm}} et les services, accédez à [IBM Cloud - Structured Ideas](https://ibmcloud.ideas.aha.io). Pour
-plus d'informations sur l'utilisation du nouveau portail d'idées, voir [Think, write, submit: New ideas portal for IBM Cloud](https://developer.ibm.com/bluemix/2016/10/05/think-write-submit/). 
+  Pour soumettre des idées qui pourraient améliorer {{site.data.keyword.Bluemix_notm}}  et les services, accédez à [IBM Cloud Ideas
+![icône de lien externe](../icons/launch-glyph.svg)](https://ibmcloud.ideas.aha.io){: new_window}. Pour
+plus d'informations sur l'utilisation du nouveau portail d'idées, voir [Think, write, submit: New ideas portal
+for IBM Cloud ![icône de lien externe](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2016/10/05/think-write-submit/){: new_window}. 
   
   Pour nous faire part de vos commentaires sur la documentation, cliquez sur le lien **Feedback** sur chaque page, ou collaborez
 avec nous en cliquant sur le lien d'**édition dans GitHub** après le titre. Pour plus d'informations sur la contribution à la documentation,
-voir [When it comes to docs, everyone can contribute in Bluemix](https://developer.ibm.com/bluemix/2016/01/13/bluemix-docs-now-open-source-on-github/).
-
-
+voir [When it comes to docs, everyone can contribute in Bluemix ![icône de lien externe](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2016/01/13/bluemix-docs-now-open-source-on-github/){: new_window}.

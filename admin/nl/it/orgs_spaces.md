@@ -66,7 +66,7 @@ Quando crei
 un'organizzazione, il suo nome deve essere univoco in {{site.data.keyword.Bluemix_notm}}. Se il nome dell'organizzazione è già utilizzato da un altro utente di {{site.data.keyword.Bluemix_notm}} pubblico, dedicato o locale, devi specificare un nuovo nome. Dopo che hai creato l'organizzazione, ti verrà automaticamente assegnata
 l'autorizzazione *Gestore organizzazione*, che ti consente di modificare il nome dell'organizzazione, di aggiungere membri del team e di creare o eliminare spazi nell'organizzazione.
 
-Per eliminare un'organizzazione devi rivolgerti al [Supporto di {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport){: new_window}. Quando richiedi al team di supporto di eliminare un'organizzazione, vengono eliminati tutti gli spazi, i servizi e le applicazioni al suo interno.
+Per eliminare un'organizzazione devi rivolgerti al [Supporto di {{site.data.keyword.Bluemix_notm}} ![icona link esterno](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window} per eliminare un'organizzazione. Quando richiedi al team di supporto di eliminare un'organizzazione, vengono eliminati tutti gli spazi, i servizi e le applicazioni al suo interno.
 
 I seguenti [ruoli utente](/docs/admin/users_roles.html#userrolesinfo) possono essere assegnati ai membri del team in un'organizzazione:
 
@@ -130,7 +130,7 @@ Per rinominare la tua organizzazione, completa la seguente procedura:
 ## Eliminazione di un'organizzazione o di uno spazio esistenti
 {: #deleteorgs}
 
-In qualità di proprietario dell'account, puoi rivolgerti al [supporto di {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport){: new_window} per eliminare un'organizzazione. 
+In qualità di proprietario dell'account, puoi rivolgerti al [supporto di {{site.data.keyword.Bluemix_notm}} ![icona link esterno](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window} per eliminare un'organizzazione. 
 
 **Nota**: le operazioni di eliminazione sono irreversibili. Perdi tutte le applicazioni e tutti i servizi associati all'organizzazione.
 

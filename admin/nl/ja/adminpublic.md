@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2015, 2016
-lastupdated: "2016-10-23"
+  years: 2015, 2017
+lastupdated: "2017-01-09"
 
 
 ---
@@ -15,6 +15,7 @@ lastupdated: "2016-10-23"
 {:screen: .screen}
 {:new_window: target="_blank"}
 
+<!-- staging only content beginning -->
 
 # アカウントのセットアップ
 {: #account}
@@ -32,7 +33,7 @@ lastupdated: "2016-10-23"
 
 - **通知** 
   
-  {{site.data.keyword.Bluemix_notm}} プラットフォームのパブリック領域に対する保守更新、関連サービス、インシデント、セキュリティー通知、およびその他の告知について通知を受け取るように登録します。[Bluemix 状況ページ](http://ibm.biz/Bluemixstatus)にある RSS リンクをご使用の RSS フィード・リーダーに指定して、{{site.data.keyword.Bluemix_notm}} Public に対する変更について最新情報を継続的に得ることができます。通知の設定について詳しくは、『[Bluemix 状況の表示](/docs/support/index.html#viewing-bluemix-status)』を参照してください。
+  {{site.data.keyword.Bluemix_notm}} プラットフォームのパブリック領域に対する保守更新、関連サービス、インシデント、セキュリティー通知、およびその他の告知について通知を受け取るように登録します。[Bluemix 状況ページ ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://ibm.biz/Bluemixstatus){: new_window} にある RSS リンクをご使用の RSS フィード・リーダーに指定して、{{site.data.keyword.Bluemix_notm}} Public に対する変更について最新情報を継続的に得ることができます。通知の設定について詳しくは、『[Bluemix 状況の表示](/docs/support/index.html#viewing-bluemix-status)』を参照してください。
 
 - **サポート・オプション** 
   
@@ -46,8 +47,6 @@ lastupdated: "2016-10-23"
   
   製品または資料についてフィードバックを提供できます。 
   
-  {{site.data.keyword.Bluemix_notm}} およびサービスの改善に関するアイデアを送信するには、[IBM Cloud Ideas](https://ibmcloud.ideas.aha.io) にアクセスします。新しいアイデア・ポータルの使用方法について詳しくは、『[Think, write, submit: New ideas portal for IBM Cloud](https://developer.ibm.com/bluemix/2016/10/05/think-write-submit/)』を参照してください。 
+  {{site.data.keyword.Bluemix_notm}} およびサービスの改善に関するアイデアを送信するには、[IBM Cloud Ideas ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://ibmcloud.ideas.aha.io){: new_window} にアクセスしてください。新しいアイデアに関するこのポータルの使用方法について詳しくは、[Think, write, submit: New ideas portal for IBM Cloud ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2016/10/05/think-write-submit/){: new_window} を参照してください。 
   
-  資料に関するフィードバックを提供するには、各ページ上の**「フィードバック (Feedback)」**リンクをクリックするか、タイトルの後にある**「GitHub での編集 (Edit in GitHub)」**リンクをクリックして IBM とコラボレーションしてください。資料へのコントリビューションについて詳しくは、『[When it comes to docs, everyone can contribute in Bluemix](https://developer.ibm.com/bluemix/2016/01/13/bluemix-docs-now-open-source-on-github/)』を参照してください。
-
-
+  資料に関するフィードバックを提供するには、各ページ上の**「フィードバック (Feedback)」**リンクをクリックするか、タイトルの後にある**「GitHub での編集 (Edit in GitHub)」**リンクをクリックして IBM とコラボレーションしてください。資料に関するフィードバックの提供について詳しくは、[When it comes to docs, everyone can contribute in Bluemix ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2016/01/13/bluemix-docs-now-open-source-on-github/){: new_window} を参照してください。

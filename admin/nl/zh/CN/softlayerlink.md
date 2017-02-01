@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2016
-lastupdated: "2016-12-01"
+  years: 2016, 2017
+lastupdated: "2017-01-11"
  
 
 ---
@@ -93,27 +93,61 @@ lastupdated: "2016-12-01"
 ## 切换到 IBM 标识
 {: #ibmid_switch}
 
-现在，在 SoftLayer 中进行认证将使用 IBM 标识来提供对 {{site.data.keyword.Bluemix_notm}} 的单点登录。如果您有现有的 SoftLayer 帐户，那么可以切换到 IBM 标识。迁移向导将指导您完成此切换。
+现在，在 SoftLayer 中进行认证将使用 IBM 标识来提供对所有 {{site.data.keyword.Bluemix_notm}} 的单点登录。将允许现有 SoftLayer 帐户切换到 IBM 标识认证，并且迁移向导将指导您逐步完成此切换。
 {:shortdesc}
 
-开始切换到 IBM 标识的过程后，只要尚未完成此过程，随时都可以将其取消。但是，下次登录时，系统仍将提示您切换到 IBM 标识。
+如果您是主用户并且在 {{site.data.keyword.slportal}} 中未看到切换到 IBM 标识的提示，请[联系 IBM 支持](https://console.ng.bluemix.net/docs/support/index.html#contacting-support)以获取关于启用此功能的帮助。
 
-要开始将现有 SoftLayer 用户名切换到 IBM 标识，请完成以下步骤：
+开始切换到 IBM 标识的过程后，只要尚未完成切换过程，随时都可以将其取消。但是，下次登录时，系统仍将提示您切换到 IBM 标识。计划链接到 {{site.data.keyword.Bluemix_notm}} 帐户的每个帐户都必须由具有唯一电子邮件地址的唯一 IBM 标识所拥有。
 
- 1. 在 {{site.data.keyword.slportal}} 中，转至“编辑用户个人档案”页面，然后单击**切换到 IBM 标识**。
- 2. 遵循迁移向导提示来创建 IBM 标识。一旦创建 IBM 标识后，就不能更改该标识（即电子邮件地址）。可以更新与个人档案关联的电子邮件，但缺省情况下，该值会设置为您针对 IBM 标识定义的内容。完成向导后，会向您发送一封电子邮件。
- 3. 收到电子邮件后，请访问相应链接或将相应 URL 复制到浏览器中，然后输入注册代码。此代码有效期为 7 天，属于一次性代码。此代码一旦使用后即失效。将 IBM 标识设置为 SoftLayer 用户链接后，即只能使用 IBM 标识登录到帐户。在登录对话框上，必须使用**使用 IBM 标识登录**按钮，而不是输入 SoftLayer 用户名和密码。
+要将现有 SoftLayer 用户名切换到 IBM 标识，请完成以下步骤：
+
+ 1. 如果登录后在初始提示中选择了**稍后**，但在当前会话中又决定希望开始切换到 IBM 标识认证，请转至“编辑用户个人档案”页面，然后单击**切换到 IBM 标识**。
+ 2. 遵循向导提示来创建 IBM 标识。您的 IBM 标识是唯一的电子邮件地址，创建后即无法更改。可以日后更新与个人档案关联的电子邮件，但缺省电子邮件会设置为您针对 IBM 标识定义的电子邮件。您将收到包含注册代码的电子邮件，这表明您已完成迁移向导。 
+ 3. 收到电子邮件后，请访问相应链接或将相应 URL 复制到浏览器中，然后输入注册代码。该代码有效期为 7 天，并且只能使用一次。
  
-如果您是新客户，在检查订单时，系统会要求您输入现有 IBM 标识帐户的电子邮件地址或创建新的 IBM 标识帐户。 
+ 
+切换到 IBM 标识认证后，就只能使用 IBM 标识登录到您的帐户。在登录提示时，请单击**使用 IBM 标识登录**，而不是输入 SoftLayer 用户名和密码。
+ 
+您以新客户身份检出订单时，系统会要求您输入现有 IBM 标识帐户的电子邮件地址或创建新的 IBM 标识帐户。如果创建新的 IBM 标识，请输入新 IBM 标识的电子邮件地址。该电子邮件地址是接收邀请电子邮件的地址，同时也是新 IBM 标识的用户名。
 
-### 将多个 SoftLayer 帐户映射到一个 IBM 标识
+### 允许用户切换到 IBM 标识
+{: #link_accounts_resellers}
+
+在某些情况下，经销商或分销商必须允许帐户使用 IBM 标识认证后，用户才能切换到 IBM 标识。 
+
+ * 要允许使用旧 SoftLayer 凭证的现有帐户使用 IBM 标识认证，请[联系 IBM 支持](https://console.ng.bluemix.net/docs/support/index.html#contacting-support)以启用 IBM 标识迁移。必须为要链接到 {{site.data.keyword.Bluemix_notm}} 帐户的每个现有最终用户帐户启用此功能。
+ 
+ * 要确保使用 IBM 标识创建新用户帐户，必须在直接主用户帐户上设置 `CREATE_NEW_ACCOUNT_WITH_IBMid_AUTHENTICATION` 属性。请[联系 IBM 支持](https://console.ng.bluemix.net/docs/support/index.html#contacting-support)或供应商为您的帐户设置此属性。
+ 
+### 链接用户帐户
+{: #link_user_accounts}
+用户切换到 IBM 标识认证后，经销商和分销商可以链接 SoftLayer 和 {{site.data.keyword.Bluemix_notm}} 帐户。
+
+**注：** 
+  * 要链接的帐户的主用户必须是 IBM 标识。
+  * 以主用户身份登录到每个最终用户帐户。转至用户个人档案页面，然后单击**切换到 IBM 标识**。
+  * 链接到 {{site.data.keyword.Bluemix_notm}} 帐户的每个帐户都必须由具有唯一电子邮件地址的唯一 IBM 标识所拥有。虽然一个 IBM 标识可以拥有多个 SoftLayer 帐户，但不能将这多个帐户链接到 {{site.data.keyword.Bluemix_notm}} 帐户。如果一个 IBM 标识是多个 SoftLayer 帐户的主用户，并且您希望将这些帐户链接到 {{site.data.keyword.Bluemix_notm}} 帐户，那么必须将每个帐户的主用户更改为唯一 IBM 标识。请联系 [IBM SoftLayer 支持 ![外部链接图标](../icons/launch-glyph.svg)](https://knowledgelayer.softlayer.com/topic/support){: new_window}，以更改 SoftLayer 帐户上的主用户。
+  
+要将每个帐户链接到 {{site.data.keyword.Bluemix_notm}}，请完成以下步骤： 
+
+ 1. 要创建新的 {{site.data.keyword.Bluemix_notm}} 帐户或链接到现有 {{site.data.keyword.Bluemix_notm}} 帐户，请以主用户身份登录到 SoftLayer 帐户，然后单击 **{{site.data.keyword.Bluemix_notm}}** 链接。这将让您有机会创建新的 {{site.data.keyword.Bluemix_notm}} 帐户或链接到现有 {{site.data.keyword.Bluemix_notm}} 帐户。作为 SoftLayer 帐户主用户的 IBM 标识必须是要链接到的 Bluemix 帐户的所有者。请遵循向导提示，包括将 SoftLayer 帐户中的用户添加到 {{site.data.keyword.Bluemix_notm}} 帐户。 
+ 2. 链接帐户后，请通知该帐户的最终用户迁移到 IBM 标识。然后，最终用户可以在 {{site.data.keyword.Bluemix_notm}} 控制台中访问“基础架构”、“应用程序”和“服务”仪表板。
+ 3. 将新用户添加到链接的帐户时，需要将这些用户同时添加到 SoftLayer 帐户和 {{site.data.keyword.Bluemix_notm}} 帐户，这样这些用户才有权访问统一控制台中的所有功能。
+ 
+**建议：**仅将最终用户帐户迁移到 IBM 标识。请勿迁移品牌帐户，品牌帐户是最终用户帐户的父帐户，不包含任何资源。迁移到 IBM 标识的品牌帐户用户将无法再登录到 Brand Agent Portal (BAP) 门户网站。
+
+<!--
+### Mapping multiple SoftLayer accounts to one IBMid
 {: #map_multiple_accounts}
 
-您可以在设置帐户时，使用现有的 IBM 标识电子邮件地址，将一个 IBM 标识与多个 SoftLayer 帐户相关联。每个帐户只能有一个 SoftLayer 用户映射到单个 IBM 标识。该 IBM 标识在每个 SoftLayer 帐户中必须唯一。但是，一个有权访问多个 SoftLayer 帐户的用户可以使用一个 IBM 标识来访问多个 SoftLayer 帐户。
+You can associate one IBMid with multiple SoftLayer accounts by using an existing IBMid email address when setting up the account. Only one SoftLayer user for each account can be mapped to the single IBMid. The IBMid must be unique within each SoftLayer account. However, one user with access to multiple SoftLayer accounts can use one IBMid to access multiple SoftLayer accounts.
 
-例如，IBM 标识可以映射到帐户 A 和 B 中的主用户，并且可以映射到帐户 C 和 D 中的另一个用户。在映射到该 IBM 标识的这些帐户中，其中一个帐户是缺省帐户。通常，缺省帐户是第一个映射到 IBM 标识的帐户。但是，您可以通过客户门户网站中的帐户切换功能将其他帐户切换为缺省帐户。
+For example, an IBMid can map to the master user in accounts A and B, and to an additional user in accounts C and D. One of the accounts mapped to that IBMid is the default account.  Usually, the default account is the account that was first mapped to the IBMid. However, you can switch which account is the default account  through an account switching feature in the Customer Portal.
 
-对于具有有权访问多个帐户的 IBM 标识并启用了双因子认证的用户，在帐户登录和帐户切换期间，每个帐户都需要提供相应的双因子认证验证码。
+For a user with IBMid access to multiple accounts with two-factor authentication enabled, an appropriate two-factored authentication verification code per account is required during account log in and account switching.
+-->
+
 
 ## 使用 {{site.data.keyword.Bluemix_notm}} 服务与 SoftLayer 资产
 {: #bluemix_services}
@@ -162,7 +196,6 @@ lastupdated: "2016-12-01"
 * {{site.data.keyword.presenceinsightsshort}}
 * {{site.data.keyword.relationshipextractionshort}}
 * {{site.data.keyword.retrieveandrankshort}}
-* {{site.data.keyword.servicediscoveryshort}}
 * {{site.data.keyword.speechtotextshort}}
 * {{site.data.keyword.sqldb}}
 * {{site.data.keyword.streaminganalyticsshort}}

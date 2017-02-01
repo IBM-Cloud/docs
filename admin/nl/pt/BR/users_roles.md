@@ -42,7 +42,7 @@ diretório da equipe, um membro pode apenas visualizar os membros da equipe dent
 {:caption="Table 1. Account roles and permissions" caption-side="top"}
 
  Todos os novos membros da equipe são incluídos como um membro da conta. É possível designar funções de organização e espaço para convidados, a fim de ativar visualizações e permissões específicas no
-{{site.data.keyword.Bluemix_notm}}. Novos membros da equipe incluídos em uma organização são designados com a função de organização de auditor por padrão. Para um espaço específico, é possível optar por
+{{site.data.keyword.Bluemix_notm}}. Novos membros da equipe incluídos em uma organização, exceto em um ambiente local ou dedicado, são designados à função de organização de auditor por padrão. Para um espaço específico, é possível optar por
 designar a função de desenvolvedor ou auditor para convidados. Logo que os seus convidados aceitarem o convite e se associarem ao {{site.data.keyword.Bluemix_notm}}, será possível editar as suas
 funções na página **Diretório da equipe**.
 
@@ -54,7 +54,7 @@ As funções a seguir podem ser designadas no nível de organização:
 gerenciar quem tem acesso à organização e às suas funções na organização e gerenciar domínios customizados para a organização. |
 |Gerenciador de faturamento | Gerenciadores de faturamento podem visualizar informações de uso de tempo de execução e serviço para a organização na página de Painel de uso.  |
 |Auditor | Auditores da organização podem visualizar o conteúdo do aplicativo e do serviço na organização. Auditores também podem visualizar os membros da equipe na organização e as suas funções designadas e a
-cota para a organização. Essa função é designada para todos os convidados por padrão.|
+cota para a organização. Essa função é designada a todos os convidados, exceto em ambientes locais ou dedicados, por padrão. |
 {:caption="Table 2. Organization roles and permissions" caption-side="top"}
 
 As funções a seguir podem ser designadas no nível de espaço:
@@ -91,8 +91,7 @@ Para mudar a visibilidade da página de diretório da equipe conclua as etapas a
 ## Convidando membros da equipe
 {: #inviteteammembers}
 
-Proprietários da conta e gerenciadores de organização podem convidar membros da equipe para as organizações a partir da página Convidar Membros da Equipe. Quando você inclui novos membros da equipe,
-eles são designados com a função de auditor automaticamente. É possível mudar as funções posteriormente, na página Diretório da Equipe. Para convidar um membro da equipe, conclua estas etapas:
+Proprietários da conta e gerenciadores de organização podem convidar membros da equipe para as organizações a partir da página Convidar Membros da Equipe. Quando você inclui novos membros da equipe, exceto em um ambiente local ou dedicado, eles são designados às funções de auditor automaticamente. É possível mudar as funções posteriormente, na página Diretório da Equipe. Para convidar um membro da equipe, conclua estas etapas:
 
 <ol>
 <li>Clique em **Conta** &gt; **Convidar membros da equipe**.</li>

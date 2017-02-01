@@ -34,7 +34,7 @@ Auf Kontoebene gibt es zwei Rollen, die den Zugriff auf andere Kontoverwaltungsf
 |Mitglied | Ein Mitglied hat Zugriff auf sein Profil, das Teamverzeichnis und auf Limits für Kontoguthaben und Abrechnung im {{site.data.keyword.Bluemix_notm}}-Header. Ein Mitglied kann auf der Seite 'Teamverzeichnis' jedoch nur die Teammitglieder innerhalb des Kontos anzeigen. |
 {:caption="Table 1. Account roles and permissions" caption-side="top"}
 
- Alle neuen Teammitglieder werden als Mitglied des Kontos hinzugefügt. Sie können Organisations- und Bereichsrollen für eingeladene Personen zuordnen, um bestimmte Ansichten und Berechtigungen in {{site.data.keyword.Bluemix_notm}} zu aktivieren. Neue Teammitglieder, die zu einer Organisation hinzugefügt wurden, erhalten standardmäßig die Rolle des Organisationsauditors. Für einen bestimmten Bereich können Sie eingeladenen Personen die Rollen 'Entwickler' oder 'Auditor' zuordnen. Sobald die eingeladenen Personen die Einladung annehmen und bei {{site.data.keyword.Bluemix_notm}} teilnehmen, können Sie deren Rollen auf der Seite **Teamverzeichnis** bearbeiten.
+ Alle neuen Teammitglieder werden als Mitglied des Kontos hinzugefügt. Sie können Organisations- und Bereichsrollen für eingeladene Personen zuordnen, um bestimmte Ansichten und Berechtigungen in {{site.data.keyword.Bluemix_notm}} zu aktivieren. Neue Teammitglieder, die einer Organisation hinzugefügt wurden (lokale oder dedizierte Umgebungen ausgenommen), erhalten standardmäßig die Rolle des Organisationsauditors. Für einen bestimmten Bereich können Sie eingeladenen Personen die Rollen 'Entwickler' oder 'Auditor' zuordnen. Sobald die eingeladenen Personen die Einladung annehmen und bei {{site.data.keyword.Bluemix_notm}} teilnehmen, können Sie deren Rollen auf der Seite **Teamverzeichnis** bearbeiten.
 
 Die folgenden Rollen können auf Organisationsebene hinzugefügt werden:
 
@@ -42,7 +42,7 @@ Die folgenden Rollen können auf Organisationsebene hinzugefügt werden:
 |-------------------|-------------|
 |Manager | Organisationsmanager können Bereiche innerhalb der Organisation erstellen, anzeigen, bearbeiten oder löschen, die Nutzung und das Kontingent der Organisation anzeigen, Teammitglieder zur Organisation einladen, steuern, wer Zugriff auf die Organisation und die Rollen in der Organisation hat und die angepassten Domänen für die Organisation verwalten. |
 |Abrechnungsmanager | Abrechnungsmanager können Informationen zur Laufzeit- und Servicenutzung für die Organisation auf der Seite 'Nutzungsdashboard' anzeigen.  |
-|Auditor | Organisationsauditoren können Anwendungs- und Serviceinhalte in der Organisation anzeigen. Auditoren können Teammitglieder in der Organisation und deren zugeordnete Rollen sowie das Kontingent für die Organisation auch anzeigen. Diese Rolle ist standardmäßig allen eingeladenen Personen zugeordnet.|
+|Auditor | Organisationsauditoren können Anwendungs- und Serviceinhalte in der Organisation anzeigen. Auditoren können Teammitglieder in der Organisation und deren zugeordnete Rollen sowie das Kontingent für die Organisation auch anzeigen. Außer in lokalen oder dedizierten Umgebungen ist diese Rolle standardmäßig allen eingeladenen Personen zugeordnet. |
 {:caption="Table 2. Organization roles and permissions" caption-side="top"}
 
 Die folgenden Rollen können auf Bereichsebene zugeordnet werden:
@@ -54,7 +54,7 @@ Die folgenden Rollen können auf Bereichsebene zugeordnet werden:
 |Auditor | Bereichsauditoren haben Lesezugriff auf alle Informationen zu Bereichen, beispielsweise auf Informationen zur Anzahl der Instanzen, zu Servicebindungen und zur Ressourcennutzung für jede Anwendung im Bereich. |
 {:caption="Table 3. Space roles and permissions" caption-side="top"}
 
-**Hinweis**: Teammitglieder, denen eine Bereichsmanager- oder Bereichsentwicklerrolle zugeordnet wurde, können auf die Umgebungsvariable VCAP_SERVICES zugreifen. Ein Teammitglied, dem die Auditorrolle zugeordnet wurde, kann nicht auf VCAP_SERVICES zugreifen.
+**Hinweis:** Teammitglieder, denen eine Bereichsmanager- oder Bereichsentwicklerrolle zugeordnet wurde, können auf die Umgebungsvariable VCAP_SERVICES zugreifen. Ein Teammitglied, dem die Auditorrolle zugeordnet wurde, kann nicht auf VCAP_SERVICES zugreifen.
 
 ## Sichtbarkeit des Teamverzeichnisses anpassen
 {: #teamdirectoryvisibility}
@@ -71,7 +71,7 @@ Führen Sie die folgenden Schritte aus, um die Sichtbarkeit der Teamverzeichniss
 ## Teammitglieder einladen
 {: #inviteteammembers}
 
-Kontoeigner und Organisationsmanager können Teammitglieder von der Seite 'Teammitglieder einladen' zu Organisationen einladen. Wenn Sie neue Teammitglieder hinzufügen, werden diesen automatisch Auditorrollen zugewiesen. Sie können die Rollen später auf der Seite 'Teamverzeichnis' ändern. Führen Sie die folgenden Schritte aus, um ein Teammitglied einzuladen:
+Kontoeigner und Organisationsmanager können Teammitglieder von der Seite 'Teammitglieder einladen' zu Organisationen einladen. Wenn Sie neue Teammitglieder hinzufügen (lokale oder dedizierte Umgebungen ausgenommen), werden diesen automatisch Auditorrollen zugewiesen. Sie können die Rollen später auf der Seite 'Teamverzeichnis' ändern. Führen Sie die folgenden Schritte aus, um ein Teammitglied einzuladen:
 
 <ol>
 <li>Klicken Sie auf **Konto** &gt; **Teammitglieder einladen**.</li>

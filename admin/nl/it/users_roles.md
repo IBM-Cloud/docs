@@ -36,7 +36,7 @@ A livello di account, esistono due ruoli che abilitano l'accesso a funzioni di g
 |Membro | Un membro ha accesso ai proprio limiti di fatturazione, crediti dell'account e profilo e alla propria directory team nell'intestazione {{site.data.keyword.Bluemix_notm}}. Tuttavia, nella pagina directory team, un membro può visualizzare solo i membri del team all'interno dell'account. |
 {:caption="Table 1. Account roles and permissions" caption-side="top"}
 
- Tutti i nuovi membri del team vengono aggiunti come un membro dell'account. Puoi assegnare i ruoli organizzazione e spazio agli invitati per abilitare specifiche viste e autorizzazioni in {{site.data.keyword.Bluemix_notm}}. Ai nuovi membri del team aggiunti a un'organizzazione viene assegnato per impostazione predefinita il ruolo organizzazione di revisore. Per uno specifico spazio, puoi scegliere di assegnare il ruolo di sviluppatore o di revisore agli invitati. Dopo che gli invitati hanno accettato l'invito e si sono uniti a {{site.data.keyword.Bluemix_notm}}, puoi modificarne i ruoli nella pagina **Directory team**.
+ Tutti i nuovi membri del team vengono aggiunti come un membro dell'account. Puoi assegnare i ruoli organizzazione e spazio agli invitati per abilitare specifiche viste e autorizzazioni in {{site.data.keyword.Bluemix_notm}}. Ai nuovi membri del team aggiunti a un'organizzazione, con l'eccezione di un ambiente locale o dedicato, viene assegnato per impostazione predefinita il ruolo organizzazione di revisore. Per uno specifico spazio, puoi scegliere di assegnare il ruolo di sviluppatore o di revisore agli invitati. Dopo che gli invitati hanno accettato l'invito e si sono uniti a {{site.data.keyword.Bluemix_notm}}, puoi modificarne i ruoli nella pagina **Directory team**.
 
 I seguenti ruoli possono essere assegnati a livello dell'organizzazione:
 
@@ -45,7 +45,7 @@ I seguenti ruoli possono essere assegnati a livello dell'organizzazione:
 |Gestore | I gestori dell'organizzazione possono creare, visualizzare, modificare o eliminare gli spazi nell'organizzazione, visualizzare l'utilizzo e la quota dell'organizzazione, invitare membri del team all'organizzazione, gestire chi ha accesso all'organizzazione e i loro ruoli al suo interno e gestire i domini personalizzati per l'organizzazione. |
 |Gestore fatturazione | I gestori fatturazione possono visualizzare le informazioni sull'utilizzo di runtime e servizi per l'organizzazione nella pagina Dashboard di utilizzo.  |
 |Revisore | I revisori organizzazione possono visualizzare il contenuto di applicazioni e servizi nell'organizzazione. I revisori possono anche visualizzare i membri
-del team nell'organizzazione e i ruoli ad essi assegnati, nonché la quota per l'organizzazione. Questo ruolo viene assegnato a tutti gli invitati per impostazione predefinita.|
+del team nell'organizzazione e i ruoli ad essi assegnati, nonché la quota per l'organizzazione. Questo ruolo viene assegnato a tutti gli invitati per impostazione predefinita con l'eccezione degli ambienti locale o dedicato.  |
 {:caption="Table 2. Organization roles and permissions" caption-side="top"}
 
 I seguenti ruoli possono essere assegnati a livello dello spazio:
@@ -74,7 +74,7 @@ Per modificare la visibilità della pagina della directory del team, completare 
 ## Come invitare membri del team
 {: #inviteteammembers}
 
-I proprietari dell'account e i gestori dell'organizzazione possono invitare i membri del team alle organizzazioni dalla pagina Invita membri del team. Quando aggiungi dei nuovi membri del team, a essi viene automaticamente assegnato i ruoli di revisore. Puoi modificare i ruoli successivamente nella pagina Directory team. Per invitare un membro del team, completa questa procedura:
+I proprietari dell'account e i gestori dell'organizzazione possono invitare i membri del team alle organizzazioni dalla pagina Invita membri del team. Quando aggiungi dei nuovi membri del team, con l'eccezione di un ambiente locale o dedicato, a essi viene automaticamente assegnato i ruoli di revisore. Puoi modificare i ruoli successivamente nella pagina Directory team. Per invitare un membro del team, completa questa procedura:
 
 <ol>
 <li>Fai clic su **Account** &gt; **Invita membri del team**.</li>
