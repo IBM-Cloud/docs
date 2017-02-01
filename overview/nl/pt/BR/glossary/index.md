@@ -364,12 +364,12 @@ Uma interface de computador em que a entrada e a saída se baseiam em texto.
 - No gerenciamento de controle de fonte, um agrupamento de artefatos relacionados em um fluxo ou
                   área de trabalho do repositório. Um componente pode conter qualquer número de pastas e arquivos.
 
-### calcular
+### compute
 {: #x3723424}
 
 Infraestrutura ou recursos que servem como base para construir apps na nuvem.
 
-### contêiner
+### container
 {: #x2010901}
 
 Uma construção do sistema que permite aos usuários executar instâncias do sistema operacional lógico separadas simultaneamente. Os contêineres usam camadas de sistemas de arquivos para minimizar os tamanhos de imagem e promover a reutilização. Veja também [imagem](#x2024928), [camada](#x2028320), [registro](#x2064940).

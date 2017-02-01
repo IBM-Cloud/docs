@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-23"
+  years: 2016, 2017
+lastupdated: "2017-01-11"
 ---
 
 {:shortdesc: .shortdesc}
@@ -146,7 +146,7 @@ lastupdated: "2016-10-23"
 {: #ov_intro_reg}
 
 {{site.data.keyword.Bluemix_notm}} 地區是您可以在其中部署應用程式的已定義地理區。您可以在不同地區建立應用程式及服務實例，使用相同
-{{site.data.keyword.Bluemix_notm}} 基礎架構以進行應用程式管理，以及使用相同的用量詳細資料視圖來處理計費。您可以選取最接近客戶的地區，並將應用程式部署至此地區，以縮短應用程式的延遲時間。您也可以選取要保留應用程式資料的地區來處理安全問題。在多個地區中建置應用程式時，如果某個地區變成無法使用，則位於其他地區中的應用程式會繼續執行。您使用的每個地區的資源額度都相同。
+{{site.data.keyword.Bluemix_notm}} 基礎架構以進行應用程式管理，以及使用相同的用量詳細資料視圖來處理計費。您可以選取最接近客戶的地區，並將應用程式部署至此地區，以縮短應用程式的延遲時間。您也可以選取您要保留應用程式資料以處理安全問題的地區。在多個地區中建置應用程式時，如果某個地區變成無法使用，則位於其他地區中的應用程式會繼續執行。您使用的每個地區的資源額度都相同。
 
 如果您使用 {{site.data.keyword.Bluemix_notm}} 使用者介面，則可以切換至不同地區，以使用該地區中的空間。按一下使用者帳戶喜好設定鏈結，展開**地區**選取器，然後從清單中選取您需要的地區。
 
@@ -199,7 +199,7 @@ cf api https://api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net
 
 <dl>
 <dt>Cloud Integration API</dt>
-    <dd>使用 Cloud Integration API，可以透過 Web API 對位於防火牆後方的記錄系統進行安全存取。建立 Cloud Integration API 時，您可以選擇要透過 Web API 存取的資源、指定允許的作業，並包含 SDK 和範例來存取 API。如需如何建立 Cloud Integration API 的相關資訊，請參閱[建立 Cloud Integration API](/docs/services/CloudIntegration/index.html#cloudint_add_service)。</dd>
+    <dd>使用 Cloud Integration API，可以透過 Web API 對位於防火牆後方的記錄系統進行安全存取。建立 Cloud Integration API 時，您可以選擇要透過 Web API 存取的資源、指定允許的作業，並包含 SDK 和範例來存取 API。如需如何建立 Cloud Integration API 的相關資訊，請參閱[開始使用 Cloud Integration](/docs/services/CloudIntegration/CldInt_GetStart.html)。</dd>
 <dt>專用服務</dt>
     <dd>專用服務包含 Cloud Integration API、SDK 及授權原則。專用服務也可能包含來自服務提供者的文件或其他項目。只有組織管理員才能將 Cloud Integration API 發佈為專用服務。若要查看您可以使用的專用服務，請選取 {{site.data.keyword.Bluemix_notm}}「型錄」中的「專用」勾選框。您可以選取專用服務，並將其連結至應用程式，而不需要連接至 Cloud Integration 服務。將專用服務連結至應用程式的方式與其他 {{site.data.keyword.Bluemix_notm}} 服務相同。如需如何將 API 發佈為專用服務的相關資訊，請參閱「將 API 發佈為專用服務」。</dd>
 </dl>
@@ -231,7 +231,7 @@ cf api https://api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net
 下列清單指定 {{site.data.keyword.Bluemix_notm}} 所需的最低瀏覽器軟體：
 
  * Chrome：適用於您作業系統的最新版本
- * Firefox：適用於您作業系統及 ESR 38 的最新版本
+ * Firefox：適用於您作業系統及 ESR 45 的最新版本
  * Internet Explorer：第 11 版
  * Safari：適用於 Mac 的最新版本
 
@@ -240,13 +240,13 @@ cf api https://api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net
 
 Cloud Foundry 指令行介面 6.5.1 版或更新版本 
 
-# 相關鏈結
+# rellinks
 {: #rellinks}
-## 一般
+## general
 {: #general}
-* [何謂 {{site.data.keyword.Bluemix_notm}}](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){:new_window}
-* [開始使用](http://www.ibm.com/cloud-computing/bluemix/getting-started/)
+* [何謂 {{site.data.keyword.Bluemix_notm}} ![外部鏈結圖示](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){:new_window}
+* [開始使用 ![外部鏈結圖示](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/getting-started/){:new_window}
 * [{{site.data.keyword.Bluemix_notm}} 新增功能](/docs/whatsnew/index.html)
-* [瞭解混合式模型](http://www.ibm.com/cloud-computing/bluemix/hybrid/)
+* [瞭解混合式模型 ![外部鏈結圖示](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/hybrid/){:new_window}
 * [管理帳戶](/docs/admin/adminpublic.html#mngacct)
 * [{{site.data.keyword.Bluemix_notm}} 名詞解釋](/docs/overview/glossary/index.html)

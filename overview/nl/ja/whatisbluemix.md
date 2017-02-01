@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-23"
+  years: 2016, 2017
+lastupdated: "2017-01-11"
 ---
 
 {:shortdesc: .shortdesc}
@@ -49,13 +49,13 @@ lastupdated: "2016-10-23"
 ### サービス
 {: #bluemixoverviewservices}
 
-「サービス」ダッシュボードでは、{{site.data.keyword.IBM}} およびサード・パーティー・プロバイダーから使用可能な {{site.data.keyword.Bluemix_notm}} サービスにアクセスできます。これには、Watson、モノのインターネット、Analytics、Mobile、DevOps の各サービスがあります。
+「サービス」ダッシュボードでは、{{site.data.keyword.IBM}} およびサード・パーティー・プロバイダーから使用可能な {{site.data.keyword.Bluemix_notm}} サービスにアクセスできます。これには、Watson、IoT、Analytics、Mobile、DevOps の各サービスがあります。
 
 * {{site.data.keyword.IBM_notm}} DevOps サービスおよび {{site.data.keyword.Bluemix_notm}} Garage Method を使用して適切な機能のみを備えることで、革新的な新規アプリケーションをより迅速かつ低コストで提供します。DevOps のプラクティスを取り入れてイノベーションとアジリティーの文化を作り出すと、反復プラクティスを使用し、市場に対応して方向転換することができます。
 * ブロックチェーンは、ビジネス・プロセスを簡素化しながら、信頼、アカウンタビリティー、および透明性を確立する新しい世代のトランザクション・アプリケーション用のピアツーピアの分散レジャー・テクノロジーです。  
 * Watson は、音声、視覚、データの各 API の完全なスイートを備えたコグニティブ・コンピューティングの力をアプリに提供します。Watson サービスを使用したコグニティブ・プラットフォームをデプロイすることで、最も複雑なビジネスの問題を解決できます。
 * {{site.data.keyword.IBM_notm}} により、豊富な機能を持ち、統合されたクラウド・データベースおよびデータと分析サービスを使用して、より多くのことを実行できます。 
-* {{site.data.keyword.IBM_notm}} のモノのインターネット・サービスにより、アプリは、接続されたデバイス、センサー、およびゲートウェイと通信し、それらが収集したデータを取り込むことができます。レシピを利用すると、簡単にデバイスをモノのインターネット・クラウドに接続できます。その後、アプリでリアルタイム API および REST API を使用してデバイスと通信し、収集対象として設定したデータを取り込むことができます。 
+* {{site.data.keyword.IBM_notm}} の IoT サービスにより、アプリは、接続されたデバイス、センサー、およびゲートウェイと通信し、それらが収集したデータを取り込むことができます。レシピを利用すると、簡単にデバイスを IoT クラウドに接続できます。その後、アプリでリアルタイム API および REST API を使用してデバイスと通信し、収集対象として設定したデータを取り込むことができます。 
 * {{site.data.keyword.IBM_notm}} は、マルチプラットフォーム・アプリ、ネイティブ・アプリ、またはハイブリッド・アプリをモニターおよびテストできるようにしながら、そのようなアプリを作成できるモバイル・バックエンド・インフラストラクチャーを提供します。アナリティクス、セキュリティー、ユーザー・インサイト、継続的デリバリーで、アプリを強化することもできます。 
  
 {{site.data.keyword.Bluemix_notm}} は、試すことができる試験的サービスも提供しています。サービス・タイプおよび使用可能かどうかについて詳しくは、[{{site.data.keyword.Bluemix_notm}} サービス](/docs/services/index.html)を参照してください。
@@ -212,7 +212,7 @@ SoRを {{site.data.keyword.Bluemix_notm}} で作成するアプリと統合す�
 
 <dl>
 <dt>Cloud Integration API</dt>
-    <dd>Cloud Integration API により、Web API を通してファイアウォールの後ろにある SoR への保護されたアクセスが提供されます。Cloud Integration API を作成する際には、Web API を通してアクセスしたいリソースを選択し、許可されたオペレーションを指定し、API にアクセスするための SDK とサンプルを組み込みます。Cloud Integration API の作成方法について詳しくは、『[Cloud Integration API の作成 (Creating Cloud Integration APIs)](/docs/services/CloudIntegration/index.html#cloudint_add_service)』を参照してください。</dd>
+    <dd>Cloud Integration API により、Web API を通してファイアウォールの後ろにある SoR への保護されたアクセスが提供されます。Cloud Integration API を作成する際には、Web API を通してアクセスしたいリソースを選択し、許可されたオペレーションを指定し、API にアクセスするための SDK とサンプルを組み込みます。Cloud Integration API の作成方法について詳しくは、『[Cloud Integration 入門](/docs/services/CloudIntegration/CldInt_GetStart.html)』を参照してください。</dd>
 <dt>プライベート・サービス</dt>
     <dd>プライベート・サービスは、 Cloud Integration API、SDK、およびライセンス・ポリシーから構成されます。また、サービス・プロバイダーからのドキュメンテーションや他の項目がプライベート・サービスに含まれる場合もあります。Cloud Integration API をプライベート・サービスとして公開できるのは、組織管理者のみです。自分が利用できるプライベート・サービスを表示するには、{{site.data.keyword.Bluemix_notm}} カタログで「プライベート (Private)」チェック・ボックスを選択します。
 Cloud Integration サービスに接続せずに、プライベート・サービスを選択してアプリにバインドすることができます。プライベート・サービスのアプリへのバインドは、他の {{site.data.keyword.Bluemix_notm}} サービスの場合と同じ方法で行います。プライベート・サービスとして API を公開する方法については、プライベート・サービスとしての API の公開を参照してください。</dd>
@@ -245,7 +245,7 @@ Cloud Integration サービスに接続せずに、プライベート・サー�
 以下のリストに、{{site.data.keyword.Bluemix_notm}} に最小限必要なブラウザー・ソフトウェアを指定します。
 
  * Chrome: ご使用のオペレーティング・システムの最新バージョン
- * Firefox: ご使用のオペレーティング・システムの最新バージョンおよび ESR 38
+ * Firefox: ご使用のオペレーティング・システムの最新バージョンおよび ESR 45
  * Internet Explorer: バージョン 11
  * Safari: Mac の最新バージョン
 
@@ -258,9 +258,9 @@ Cloud Integration サービスに接続せずに、プライベート・サー�
 {: #rellinks}
 ## 一般
 {: #general}
-* [{{site.data.keyword.Bluemix_notm}} とは](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){:new_window}
-* [概説](http://www.ibm.com/cloud-computing/bluemix/getting-started/)
+* [{{site.data.keyword.Bluemix_notm}} とは? ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){:new_window}
+* [使用を開始するには ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/getting-started/){:new_window}
 * [{{site.data.keyword.Bluemix_notm}} の新機能](/docs/whatsnew/index.html)
-* [ハイブリッド・モデルについて](http://www.ibm.com/cloud-computing/bluemix/hybrid/)
+* [ハイブリッド・モデルについて ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/hybrid/){:new_window}
 * [アカウントの管理](/docs/admin/adminpublic.html#mngacct)
 * [{{site.data.keyword.Bluemix_notm}} 用語集](/docs/overview/glossary/index.html)
