@@ -32,7 +32,7 @@ You might be wondering what is different in the Standard Account as compared to 
 |-----------------|
 | The account never expires. |
 | Cloud Foundry applications can access up to 256 MB of free, instantaneous runtime memory. |
-| You can access free Lite Plans for Cloudant NoSQL DB, Internet of Things Platform, and Internet of Things Real Time Insights with more services coming soon. |
+| You can access free Lite Plans for Cloudant NoSQL DB and Internet of Things Platform with more services coming soon. |
 | Your applications will sleep if there is no development activity for 10 days. |
 | Your service instances are deleted after 30 days of inactivity. |
 {:caption="Table 1. What's new in a Standard Account" caption-side="top"}
@@ -40,7 +40,7 @@ You might be wondering what is different in the Standard Account as compared to 
 |What's not changing when a Trial Account is converted? | 
 |-----------------|
 |The account is free -- you don't need a credit card. |
-|Any Lite instances of Cloudant NoSQL DB, Internet of Things Platform, and Internet of Things Real Time Insights. One Lite instance for each of these services can be transferred to your new account. |
+|Any Lite instances of Cloudant NoSQL DB and Internet of Things Platform. One Lite instance for each of these services can be transferred to your new account. |
 |Your organization, spaces, and associated team member access settings stay the same. One organization can be transferred to your new account. |
 |The level of {{site.data.keyword.Bluemix_notm}} Support stays the same. |
 {:caption="Table 2. What's not changing" caption-side="top"}
@@ -74,7 +74,6 @@ During the Standard Account Beta, the following services offer a Lite Plan:
 <ul>
 <li>Cloudant NoSQL DB</li>
 <li>Internet of Things Platform</li>
-<li>Internet of Things Real Time Insights</li>
 </ul>
 
 We’ll be adding to this list of services, so stay tuned!
