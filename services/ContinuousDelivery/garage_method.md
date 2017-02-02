@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-1-11"
+lastupdated: "2017-1-27"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -19,12 +19,8 @@ lastupdated: "2017-1-11"
 # Learn continuous delivery practices by adopting the IBM Bluemix Garage Method
 {: #gm_cd_best}
 
-<table>
-<tr>
-<td><img src="images/garage_method_phases.png" alt="Garage Method phases"></td>
-<td>The <a href="https://www.ibm.com/devops/method" target="_blank">IBM&reg; Bluemix&reg; Garage Method</a> is IBM's approach to rapidly deliver engaging applications. It combines continuous delivery with IBM Design Thinking, lean, DevOps, and agile practices. Those practices are focused on the cloud, but can benefit any software development effort.</td>
+![Garage Method phases](images/garage_method_phases.png)  The [IBM&reg; Bluemix&reg; Garage Method ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method){:new_window} is the IBM approach to rapidly deliver engaging applications. It combines continuous delivery with IBM Design Thinking, lean, DevOps, and agile practices. Those practices are focused on the cloud, but can benefit any software development effort.
 
-</tr></table>
 
 # Adopting continuous delivery practices
 {: #gm_cd_adopt}
