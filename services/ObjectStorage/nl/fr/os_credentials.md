@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -84,7 +84,7 @@ Les données d'identification sont utilisées pour fournir l'authentification et
   ```
   {: pre}
 
-2. Exécutez la commande suivante en utilisant les variables expliquées dans la table pour générer  les données d'identification de service.
+2. Exécutez la commande suivante pour générer les données d'identification. 
 
   ```
   curl "https://api.ng.bluemix.net/v2/service_keys" -d '{   "service_instance_guid": "<guid_instance_service>",   "name: <nom_instance_service>", "role: <rôle_utilisateur>"}' -X POST -H "Authorization: <jeton_bearer>" -H "Content-Type: <type_contenu" -H "Cookie: <cookie>"
@@ -92,13 +92,14 @@ Les données d'identification sont utilisées pour fournir l'authentification et
   {: pre}
 
   <table>
+  <caption> Tableau 1. Explication des variables des données d'identification du service dans la commande cURL</caption>
     <tr>
       <th> Variable  </th>
       <th> Explication </th>
     </tr>
     <tr>
-      <td> https://api.ng.bluemix.net/v2/service_keys </td>
-      <td> Noeud final de clé de service</td>
+      <td> <code>https://api.ng.bluemix.net/v2/service_keys</code> </td>
+      <td> Noeud final de clé de service  </td>
     </tr>
     <tr>
       <td><i> guid_instance_service </i></td>
@@ -110,15 +111,15 @@ Les données d'identification sont utilisées pour fournir l'authentification et
     </tr>
     <tr>
       <td><i> rôle </i></td>
-      <td> Spécifie le <a href= /docs/services/ObjectStorage/os_constructing.html>rôle utilisateur</a> en tant qu'administrateur ou membre.</td>
+      <td> Spécifie le <a href= /docs/services/ObjectStorage/os_constructing.html>rôle utilisateur</a> en tant qu'administrateur ou membre. </td>
     </tr>
     <tr>
       <td><i> jeton_bearer </i></td>
-      <td> Jeton que vous avez reçu quand vous avez authentifié votre instance avec Keystone. </td>
+      <td> Jeton reçu lors de l'authentification de votre instance auprès de Keystone. </td>
     </tr>
   </table>
 
-  Tableau 1 : explications des variables de données d'identification de service cURL
+
 
 3. Validez vos données d'identification en exécutant la commande suivante.
 

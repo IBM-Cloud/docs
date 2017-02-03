@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -19,6 +19,7 @@ Cette foire aux questions fournit des réponses aux questions courantes sur le s
 Le service {{site.data.keyword.objectstorageshort}} offre deux options de plan, Gratuit et Standard. La [tarification](https://www.ibm.com/cloud-computing/bluemix/pricing/) est fonction du plan choisi.
 
 <table>
+<caption> Tableau 1. Comparaison du plan gratuit et du plan standard </caption>
   <tr>
     <th> Plan gratuit </th>
     <th> Plan standard </th>
@@ -40,8 +41,6 @@ Le service {{site.data.keyword.objectstorageshort}} offre deux options de plan, 
     <td> Stockage illimité </td>
   </tr>
 </table>
-
-Tableau 1 : comparaison entre le plan gratuit et le plan standard
 
 **Attention** : les utilisateurs d'un compte d'essai {{site.data.keyword.Bluemix_notm}} peuvent se servir du plan gratuit. Une fois expiré la période d'essai, l'instance de service {{site.data.keyword.objectstorageshort}} associée est désactivée, ce qui signifie qu'il n'est plus possible d'accéder au compte de stockage. Après 30 jours, votre compte {{site.data.keyword.Bluemix_notm}} est purgé et toutes les données sont supprimées. Pour éviter de perdre des données, procédez à une mise à niveau vers un [compte {{site.data.keyword.Bluemix_notm}} payant ](/docs/admin/account.html) dès que possible.
 
@@ -68,6 +67,6 @@ Les frais pour le transfert de données sortantes s'appliquent dès lors que des
 
 A la fin du cycle de facturation, {{site.data.keyword.Bluemix_notm}} vous facture automatiquement l'utilisation du service pour cette période de facturation. Vous pouvez afficher vos frais pour la période de facturation en cours via la génération de rapports {{site.data.keyword.Bluemix_notm}}.
 
-## Est-ce que ma région {{site.data.keyword.Bluemix_notm}} et ma région de stockage sont identiques ?{: #region}
+## Est-ce que ma région {{site.data.keyword.Bluemix_notm}} et ma région de stockage sont identiques ? {: #region}
 
 Le service {{site.data.keyword.objectstorageshort}} prend en charge les régions de stockage Dallas et Londres. Ces régions de stockage sont indépendantes de la région {{site.data.keyword.Bluemix_notm}} (Sud des Etats-Unis ou Royaume-Uni, par exemple) dans laquelle l'instance de service {{site.data.keyword.objectstorageshort}} est créée. Si vous créez une instance dans la région {{site.data.keyword.Bluemix_notm}} Sud des Etats-Unis, vous pouvez lire et écrire des données dans l'une des deux régions de stockage, Dallas ou Londres. La valeur par défaut de la région de stockage repose sur votre région {{site.data.keyword.Bluemix_notm}}. Vous pouvez changer de région en choisissant une autre région dans la liste déroulante de l'interface utilisateur.

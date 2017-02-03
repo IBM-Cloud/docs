@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -36,7 +36,7 @@ Quand ils ne vous sont plus nécessaires, vous pouvez supprimer les objets et le
   ```
   {: pre}
 
-2. (Facultatif) - confirmez que vous disposez d'une sauvegarde de vos objets avant de supprimer vos fichiers et conteneurs.
+2. Facultatif : Vérifiez que vous disposez d'une sauvegarde de vos objets avant de supprimer vos fichiers et conteneurs.
 
 3. Exécutez la commande suivante pour supprimer un fichier :
   ```
@@ -55,15 +55,16 @@ Quand ils ne vous sont plus nécessaires, vous pouvez supprimer les objets et le
 ## Planification de la suppression d'un objet {: #schedule-object-deletion}
 
 
-Vous pouvez planifier la suppression de vos objets. Pour ce faire, utilisez l'un des en-têtes `X-Delete-At` ou `X-Delete-After`.
+Vous pouvez planifier la suppression de vos objets à l'aide de l'en-tête
+`X-Delete-At` ou `X-Delete-After`.
 {: shortdesc}
 
-L'en-tête `X-Delete-At` admet
-un entier représentant la date et l'heure auxquelles supprimer l'objet. L'en-tête `X-Delete_After` admet un entier représentant le nombre de secondes après lesquelles l'objet est supprimé. Pour utiliser le client swift pour planifier une suppression d'objet, exécutez l'une des commandes ci-après, en choisissant celle qui correspond le mieux à vos besoins.
+L'en-tête `X-Delete-At` reçoit un entier qui représente la date et heure à laquelle supprimer l'objet. L'en-tête
+`X-Delete_After` reçoit un entier qui représente le nombre de secondes après lequel l'objet est supprimé.
 
 **Remarque :** il se peut que la suppression réelle d'un objet ne survienne pas exactement à l'heure indiquée. Cependant,
-l'objet arrive effectivement à expiration à l'heure spécifiée, ce qui signifie qu'il devient inaccessible. La suppression réelle a lieu lorsque le démon
-swift-object-expirer configuré dans votre cluster swift s'exécute.
+l'objet arrive effectivement à expiration à l'heure spécifiée, Des lors, l'objet n'est plus accessible. La suppression effective a lieu
+lors de la prochaine exécution du démon swift-object-expirer configurée dans votre cluster Swift.
 
 #### Pour utiliser les commandes Swift :
 

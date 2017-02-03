@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -20,18 +20,20 @@ Swift n'a pas de véritable structure de répertoires mais utilise la convention
 
 Pour ajouter un répertoire dans un conteneur, vous devez avoir la structure de répertoire à la place de votre unité locale.
 
-1. Localement, créez un répertoire et enregistrez-y votre fichier.
-2. Exécutez la commande suivante pour télécharger un répertoire dans votre conteneur :
-```
-swift upload <nom_conteneur> <nom_répertoire>
-```
-{: pre}
+1. Créez un répertoire local et enregistrez votre fichier.
+2. Lancez la commande suivante pour télécharger un répertoire dans votre conteneur.
+
+    ```
+    swift upload <nom_conteneur> <nom_répertoire>
+    ```
+    {: pre}
 
 ## Téléchargement d'un répertoire avec l'interface de ligne de commande
 Pour télécharger une structure de répertoire, utilisez le paramètre `-prefix` pour indiquer le répertoire ou la structure de répertoire que vous voulez charger.
 
-1. Exécutez la commande suivante pour télécharger un répertoire :
-```
-swift download <nom_conteneur> --prefix <répertoire>
-```
-{: pre}
+1. Lancez la commande suivante pour télécharger un répertoire.
+
+    ```
+    swift download <nom_conteneur> --prefix <répertoire>
+    ```
+    {: pre}

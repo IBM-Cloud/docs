@@ -1,8 +1,8 @@
----
+﻿---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-11-14"
+  years: 2014, 2017
+lastupdated: "2017-01-05"
 
 ---
 {:new_window: target="blank"}
@@ -42,7 +42,7 @@ pourrez toujours lier l'instance de service à votre application {{site.data.key
 ## Référence API
 {: #api}
 * [OpenStack {{site.data.keyword.objectstorageshort}} (Swift) API v1](http://developer.openstack.org/api-ref-objectstorage-v1.html){: new_window}
-* [Identity API v3 (CURRENT)](http://developer.openstack.org/api-ref-identity-v3.html){: new_window}
+* [OpenStack Identity (Keystone) API v3.0](http://developer.openstack.org/api-ref-identity-v3.html){: new_window}
 
 ## SDK
 {: #sdk}

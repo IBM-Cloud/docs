@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -17,7 +17,7 @@ Vous pouvez télécharger vos objets stockés pour les examiner ou les éditer v
 {: shortdesc}
 
 
-## Téléchargement d'objets depuis l'interface utilisateur{: #downloading-ui}
+## Téléchargement d'objets depuis l'interface utilisateur {: #downloading-ui}
 
 1. Pour empêcher une destruction des données par un remplacement non intentionnel, [configurez la fonction de gestion des versions d'objets](/docs/services/ObjectStorage/os_versioning.html). Si vous ne voulez pas mettre en place cette fonction, renommez le répertoire ou les fichiers avant le téléchargement, si nécessaire.
 2. Dans votre tableau de bord d'instance de service, sélectionnez le conteneur avec le fichier que vous voulez télécharger.

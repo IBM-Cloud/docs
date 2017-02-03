@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -14,18 +14,22 @@ lastupdated: "2016-12-06"
 
 # Stockage d'objets volumineux {: #large-files}
 
-Les téléchargements sont limités à une taille maximale de 5 Go par téléchargement. Vous pouvez toutefois segmenter les objets plus volumineux en pièces plus petites et utiliser un fichier manifeste pour concaténer les segments. Tant que chaque segment fait 5 Go ou moins lors du processus de téléchargement, il n'y a pas de taille maximale pour l'objet une fois qu'il est concaténé.
+Les téléchargements sont limités à une taille maximale de 5 Go par téléchargement. Vous pouvez toutefois segmenter les objets plus volumineux en pièces plus petites et utiliser un fichier manifeste pour concaténer les segments. Une
+fois un objet concaténé, sa taille n'est pas limitée.
 {: shortdesc}
 
-Le téléchargement d'objets volumineux porte sur deux types d'objets : objets DLO (Dynamic Large Object) et objets SLO (Static Large Object).
+Les objets volumineux peuvent être dynamiques ou statiques. Dans le cas d'objets statiques volumineux (SLO), les segments n'ont pas besoin de résider dans le
+même conteneur ; chaque segment peut être placé dans le conteneur de votre choix et porter un nom quelconque. Dans le cas d'objets dynamiques volumineux,
+le client Swift crée un conteneur et les segments numérotés sont téléchargés en parallèle dans le conteneur.
 
-## Objets DLO (Dynamic Large Object) : {: #dynamic}
 
-Il y a deux manières de gérer les objets DLO :
+## Objets dynamiques volumineux : {: #dynamic}
+
+Vous pouvez télécharger des objets dynamiques volumineux de deux manières :
   * Laisser le client Swift gérer tout automatiquement
   * Utiliser l'API Swift pour le faire vous-même
 
-#### Utilisation du client Swift pour gérer les objets DLO
+#### Utilisation du client Swift pour traiter les objets dynamiques volumineux
 
 Le client Swift utilise le paramètre `-segment-size` pour décomposer votre objet en élément plus petits. Le client crée un nouveau conteneur, avec le nom du conteneur dans lequel vous voulez télécharger des fichiers et ajoute un suffixe incluant le numéro de segment (`<nom_conteneur>_segments`). Les segments sont téléchargés en parallèle. Une fois que tous les segments ont été envoyés par téléchargement, leur réception par téléchargement s'effectue sous la forme d'un objet concaténé dans un fichier manifeste avec le nom de fichier d'origine.
 
@@ -37,10 +41,17 @@ Le client Swift utilise le paramètre `-segment-size` pour décomposer votre obj
 
 #### Utilisation de l'API Swift pour gérer les objets DLO
 
-Vous pouvez segmenter vous-même les objets pour qu'ils fassent 5 Go ou moins puis les télécharger via l'API Swift. Lors de l'envoi par téléchargement, il est important d'envoyer d'abord tous les segments avant d'envoyer le manifeste. Si lors de l'exécution des téléchargements (envoi et réception par téléchargement), la réception de l'objet s'effectue avant que l'envoi de tous les segments ne soit terminé, cet objet risque d'être incohérent. Vous pouvez télécharger des fichiers volumineux en procédant comme suit.
+Vous pouvez segmenter vous-même les objets pour qu'ils fassent 5 Go ou moins puis les télécharger via l'API Swift.
+
+**Remarque **: Lors du téléchargement, tous les segments doivent être téléchargés avant le fichier manifeste. Si l'objet est téléchargé
+avant que tous ses segments aient été téléchargés, la concaténation de l'objet téléchargé est incohérente.
+
+Vous pouvez télécharger des fichiers volumineux en procédant comme suit.
 
 1. Triez les segments par nom dans l'ordre dans lequel ils doivent être concaténés pour former l'objet d'origine.
-2. Téléchargez vos segments dans un conteneur qui est séparé du conteneur qui renferme le fichier manifeste. La régulation des téléchargements, qui démarre une fois traité le dixième segment, augmente considérablement le temps de téléchargement.  Pour cette raison, la taille de segment recommandée ne doit pas être inférieure à la taille du fichier divisée par 10.
+2. Téléchargez vos segments dans un conteneur qui est séparé du conteneur qui renferme le fichier manifeste. La régulation des téléchargements commence
+après
+que le dixième segment ait été téléchargé, ce qui accroît considérablement le temps de téléchargement.  
 
     ```
     curl -i -X PUT --data-binary @segment1 -H "X-Auth-Token: <jeton>" https://<url-stockage-objet>/<nom_conteneur>/<nom_objet>/000001
@@ -55,8 +66,10 @@ Vous pouvez segmenter vous-même les objets pour qu'ils fassent 5 Go ou moins pu
     ```
     {: pre}
 
-    **Remarque** : le fichier manifeste doit être vide. Si ce n'est pas le cas, le contenu du fichier sera considéré comme l'un des segments et échouera dans l'ordre de concaténation qui est dicté par les noms triés.
-4. Téléchargez l'objet. Vous recevrez la totalité de l'objet en tant que résultat. Vous pouvez ajouter ou retirer des segments sans avoir à mettre à jour le fichier manifeste. Les segments dont le préfixe est correct seront conservés dans l'objet. La suppression du manifeste ne supprimera pas les segments.
+    **Remarque** : le fichier manifeste doit être vide. Si ce n'est pas le cas, le contenu du fichier est considéré comme l'un des segments
+et échoue dans l'ordre de concaténation dicté par les noms triés.
+4. Téléchargez l'objet. Vous recevez alors l'objet complet. Vous pouvez ajouter ou retirer des segments sans avoir à mettre à jour le fichier manifeste. Les
+segments dont le préfixe est correct sont conservés dans l'objet. La suppression du manifeste ne supprime pas les segments.
 
     ```
     curl -i -O -H "X-Auth-Token: <jeton>" https://<url-stockage-objet>/<nom_conteneur_manifeste>/<nom_objet>
@@ -64,14 +77,19 @@ Vous pouvez segmenter vous-même les objets pour qu'ils fassent 5 Go ou moins pu
     {: pre}
 
 
-## Objets SLO (Static Large Object) {: #static}
+## Objets statiques volumineux {: #static}
 
-Les objets SLO utilisent eux aussi des segments et un fichier manifeste mais permettent un plus grand contrôle. Avec SLO, les segments n'ont pas besoin de se trouver dans le même conteneur ; ils peuvent être placés dans le conteneur de votre choix et porter le nom que vous définissez. Les segments doivent toutefois faire au moins 1 Mo. Il ne vous est pas demandé de définir un en-tête pour le fichier manifeste, même si l'en-tête “X-Static-Large-Object” est automatiquement ajouté et paramétré sur true une fois qu'un manifeste correct a été téléchargé.
+Les objets statiques volumineux utilisent des segments et un fichier manifeste, mais vous permettent plus de contrôle. Les segments d'un objet statique
+volumineux n'ont pas besoin d'être dans le même conteneur ; chaque conteneur peut être stocké dans le conteneur de votre choix et porter un nom quelconque. Les segments doivent toutefois faire au moins 1 Mo. Vous
+n'avez pas besoin de définir un en-tête pour le fichier manifeste, bien que l'en-tête “X-Static-Large-Object” soit automatiquement ajouté et défini à
+True après qu'un manifeste correct ait été téléchargé.
 {: shortdesc}
 
-Le fichier manifeste est un document JSON qui fournit les détails des segments et doit être téléchargé après téléchargement de tous les segments. Les données fournies pour chaque segment du manifeste sont comparées aux métadonnées des segments réels. Si un élément ne correspond pas, le manifeste n'est pas téléchargé.
+Le fichier manifeste est un document JSON qui fournit les détails des segments et doit être téléchargé après téléchargement de tous les segments. Les données
+fournies pour chaque segment dans le manifeste sont comparées aux métadonnées des segments réels. En cas d'incohérence, le manifeste n'est pas téléchargé.
 
 <table>
+<caption> Tableau.1 Attributs JSON dans le fichier manifeste </caption>
   <tr>
     <th> Attribut </th>
     <th> Description </th>
@@ -90,11 +108,13 @@ Le fichier manifeste est un document JSON qui fournit les détails des segments 
   </tr>
 </table>
 
-*Tableau 1 : attributs JSON dans le fichier manifeste dans l'ordre de concaténation*
+
 
 #### Pour télécharger des fichiers volumineux
 
-1. Exécutez la commande suivante pour télécharger les segments. La régulation des téléchargements, qui démarre une fois traité le dixième segment, augmente considérablement le temps de téléchargement.  Pour cette raison, la taille de segment recommandée ne doit pas être inférieure à la taille du fichier divisée par 10.
+1. Exécutez la commande suivante pour télécharger les segments. La régulation des téléchargements commence après que le dixième segment ait été téléchargé,
+ce
+qui accroît considérablement le temps de téléchargement.  
 
     ```
     curl -i -X PUT --data-binary @segment1 -H "X-Auth-Token: <jeton>" https://<url-stockage-objet>/<conteneur_un>/<segment>
@@ -126,7 +146,8 @@ Le fichier manifeste est un document JSON qui fournit les détails des segments 
     ```
     {: pre}
 
-3. Téléchargez le manifeste. Pour ce faire, vous devez ajouter la requête `multipart-manifest=put` au nom du manifeste en exécutant la commande suivante :
+3. Téléchargez le fichier manifeste en modifiant la requête `multipart-manifest=put` d'après le nom du
+manifeste.
 
     ```
     curl -i -X PUT --data-binary @object_name -H "X-Auth-Token: <jeton>" https://<url-stockage-objet>/conteneur_deux/<nom_objet>?multipart-manifest=put
@@ -141,10 +162,15 @@ Le fichier manifeste est un document JSON qui fournit les détails des segments 
     {: pre}
 
 
+#### Utilisation d'objets statiques volumineux
 
-Quelques commandes qui pourront vous être utiles lors de l'utilisation des objets SLO sont présentées ci-dessous.
+Vous pouvez gérer vos fichiers à l'aide des commandes suivantes.
 
-* Pour télécharger le contenu du fichier manifeste, vous devez ajouter la requête `multipart-manifest=get` à votre commande. Le contenu que vous recevez ne sera pas identique au contenu que vous avez envoyé par téléchargement.
+**Remarque **: Pour ajouter des segments à l'objet ou en retirer, téléchargez un nouveau fichier
+manifeste avec la nouvelle liste de segments. Le nom du manifeste peut rester le même.
+
+* Pour télécharger le contenu du fichier manifeste, vous devez ajouter la requête `multipart-manifest=get` à votre commande. Le contenu que
+vous recevez n'est pas identique au contenu que vous avez téléchargé.
 
     ```
     curl -O -X GET -H "X-Auth-Token:<jeton>" https://<url-stockage-objet>/<conteneur_deux>/<nom_objet>?multipart-manifest=get
@@ -164,5 +190,3 @@ Quelques commandes qui pourront vous être utiles lors de l'utilisation des obje
     curl -i -X DELETE -H "X-Auth-Token: <jeton>" https://<url-stockage-objet>/<conteneur_deux>/<nom_objet>?multipart-manifest=delete
     ```
     {: pre}
-
-**Remarque** : pour ajouter des segments à l'objet ou pour en retirer, vous devez télécharger un nouveau fichier manifeste avec une nouvelle liste de segments. Le nom du manifeste peut rester le même.

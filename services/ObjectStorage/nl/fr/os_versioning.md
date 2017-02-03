@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -14,7 +14,8 @@ lastupdated: "2016-12-06"
 
 # Configuration de la gestion des versions d'objets {: #setting-up-versioning}
 
-La gestion des versions d'objets vous permet de conserver les anciennes versions de vos objets en les stockant automatiquement dans un conteneur de sauvegarde, ce qui vous permet de disposer d'un historique de chaque objet et d'effectuer un suivi des changements apportés.
+Vous pouvez conserver des versions plus anciennes de vos objets en définissant une gestion des versions d'objets. La gestion de versions vous permet de
+consulter l'historique de chaque objet.
 {: shortdesc}
 
 Quand vous téléchargez une nouvelle version de votre fichier dans votre conteneur principal, la version précédente est automatiquement déplacée dans votre conteneur de sauvegarde. Si vous supprimez le fichier depuis votre conteneur principal, la version la plus récente est automatiquement déplacée depuis le conteneur de sauvegarde vers le conteneur principal pour remplacer le fichier supprimé.
@@ -67,6 +68,7 @@ Quand vous téléchargez une nouvelle version de votre fichier dans votre conten
 
 7.  Les objets de votre conteneur de sauvegarde sont nommés automatiquement selon le format suivant : `<Longueur><Nom_objet>/<Horodatage>`.
   <table>
+  <caption> Tableau 1. Description des attributs de désignation </caption>
     <tr>
       <th> Attribut </th>
       <th> Description </th>
@@ -85,7 +87,6 @@ Quand vous téléchargez une nouvelle version de votre fichier dans votre conten
     </tr>
   </table>
 
-  Tableau 1 : description des attributs de noms
 
 6. Répertoriez les objets de votre conteneur principal pour voir la nouvelle version de votre fichier.
 
@@ -94,7 +95,8 @@ Quand vous téléchargez une nouvelle version de votre fichier dans votre conten
     ```
     {: pre}
 
-7. Répertoriez les objets de votre conteneur de sauvegarde. Vous voyez la version précédente de votre fichier qui est stockée dans ce conteneur. Notez qu'un horodatage a été ajouté à votre fichier.
+7. Répertoriez les objets de votre conteneur de sauvegarde. Vous voyez la version précédente de votre fichier qui est stockée dans ce conteneur. Notez qu'un
+horodatage est ajouté à votre fichier.
 
     ```
     swift list --lh <nom_conteneur_sauvegarde>
