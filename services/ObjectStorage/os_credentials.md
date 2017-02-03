@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-01-31"
 
 ---
 {:new_window: target="_blank"}
@@ -99,7 +99,7 @@ Service credentials are used to provide authentication and security for the serv
       <th> Explanation </th>
     </tr>
     <tr>
-      <td> <code>https://api.ng.bluemix.net/v2/service_keys</code> </td>
+      <td> ```https://api.ng.bluemix.net/v2/service_keys``` </td>
       <td> The service key endpoint.  </td>
     </tr>
     <tr>
