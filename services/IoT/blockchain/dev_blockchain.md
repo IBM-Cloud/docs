@@ -1,6 +1,6 @@
 ---
 
-copyright:
+copyright
   years: 2016
 lastupdated: "2016-12-12"
 
@@ -131,7 +131,7 @@ Before you can begin deploying and testing smart contracts, you must set up your
      11. From the {{site.data.keyword.iot_short_notm}} dashboard, select **Extensions** in the menu side bar.
      12. In the **Extensions** page, in the Blockchain tile, click **Setup**, or click ![Gear icon](../images/gear.png "Configure") if you already have fabrics linked.
      13. In the Configure blockchain section, click **Add Fabric** and then enter the fabric information.
-    **Note:** Blockchain integration must be enabled to add fabrics. For information, see [Blockchain](../../reference/extensions/index.html#blockchain) in the External service integrations topic.
+    **Note:** Blockchain integration must be enabled to add fabrics. For information, see [Blockchain](https://console.ng.bluemix.net/docs/services/IoT/reference/extensions/index.html#blockchain) in the External service integrations topic.
     1. In the **Fabric** tab, enter a name to identify the fabric in {{site.data.keyword.iot_short_notm}}, then click **Next**.   
     2. In the **Peer** tab, enter the peer information:  
    <table>
