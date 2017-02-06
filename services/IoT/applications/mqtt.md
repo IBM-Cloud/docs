@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-17"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-25"
 
 ---
 
@@ -55,12 +55,12 @@ An application can publish events as if they came from any registered device, fo
 
 -  Publish to topic iot-2/type/*device_type*/id/*device_id*/evt/*event_id*/fmt/*format_string*
 
-To port existing data from a device into  {{site.data.keyword.iot_short_notm}}, you can create an application to process the data and publish it into {{site.data.keyword.iot_short_notm}}.
+To send existing data from a device into {{site.data.keyword.iot_short_notm}}, you can create an application to process the data and publish it into {{site.data.keyword.iot_short_notm}}.
 
 **Important:** The message payload is limited to a maximum of 131072 bytes.  Messages that exceed the limit are rejected.
 
 ### Retained messages
-{{site.data.keyword.iot_short_notm}} organizations are not authorized to publish retained MQTT messages. If an application, gateway, or device sends a retained message, the {{site.data.keyword.iot_short_notm}} service overrides the retained message flag when it is set to true and processes the message as if the retained message flag is set to false.
+{{site.data.keyword.iot_short_notm}} organizations are not authorized to publish retained MQTT messages. If an application, gateway, or device sends a retained message, the {{site.data.keyword.iot_short_notm}} service overrides the retained message flag when it is set to true and processes the message as if the flag is set to false.
 
 ## Publishing device commands
 {: #publishing_device_commands}
@@ -136,6 +136,11 @@ By adjusting the way that your applications connect, you can make your {{site.da
 
 The number of clients that are required for optimum load balancing and scalability varies by deployment. To identify the optimum number of clients, you need to stress test your system.
 
+Scalable applications are defined as either non-durable subscriptions or mixed-durability shared subscriptions (Beta).
+
+### Non-durable subscriptions
+{: #shared_sub_non_durable}
+
 To enable load balancing, ensure that the application subscription is non-durable and that the client ID in the subscription matches the following format:
 
 <pre class="pre">A:<var class="keyword varname">orgId</var>:<var class="keyword varname">appId</var></pre>
@@ -146,22 +151,41 @@ Where:
 -  *orgId* is the unique six-character organization ID that was generated when you registered the service.
 -  *appId* is a user-defined unique string identifier for the client. The string can contain only alphanumeric characters (a-z, A-Z, 0-9) and the dash (-), underscore (_), and dot (.) special characters.
 
+
 **Important:**
-- Only non-durable subscriptions are supported for scalable applications.
 - The client ID must start with an uppercase **A** character to be correctly designated as a scalable application by {{site.data.keyword.iot_short_notm}}.
 - Other clients that are part of the scalable application must use the same client ID.
+- The clean session value must be set to false (0) for non-durable subscriptions.
 
+### Mixed-durability shared subscriptions (Beta)
+{: #shared_sub_mixed}
 
-### Shared subscriptions
+The {{site.data.keyword.iot_short_notm}} service extends the MQTT V3.1.1 messaging protocol specification to support a beta trial of mixed-durability shared subscriptions. Shared subscriptions provide load balancing capabilities for applications. A shared subscription might be needed if a back-end enterprise application cannot process the volume of messages that are being published to a specific topic space. For example, when many devices publish messages that are being processed by a single application, it might be necessary to use the load balancing capability of a shared subscription.
 
-The {{site.data.keyword.iot_short_notm}} service extends the MQTT V3.1.1 messaging protocol specification to support shared subscriptions. Shared subscriptions provide load balancing capabilities for applications. A shared subscription might be needed if a back-end enterprise application cannot process the volume of messages that are being published to a specific topic space. For example, when many devices publish messages that are being processed by a single application, it might be necessary to use the load balancing capability of a shared subscription. {{site.data.keyword.iot_short_notm}} shared subscription support is limited to non-durable subscriptions only.
+For mixed-durability shared subscriptions, ensure that the client ID in the subscription matches the following format:
 
-**Example**
+<pre class="pre">A:<var class="keyword varname">org</var>:<var class="keyword varname">appId</var>:<var class="keyword varname">instanceId</var></pre>
+{: codeblock}
 
-The following scenario is one example of how a scalable application works in {{site.data.keyword.iot_short_notm}}:
+Where:
+- The character **A**, *orgId*, and *appId* in the client ID are defined in the same way as for [non-durable subscriptions](#shared_sub_non_durable).
+- *instanceID* is a string that must be no more than 36 characters and can contain only the following characters:
+   - Alpha-numeric characters (a-z, A-Z, 0-9)
+   - Dashes ( - )
+   - Underscores ( _ )
+   - Dots ( . )
+
+**Important:**
+- Support for mixed-durability shared subscriptions is available as a beta feature only. Do not implement beta features in production applications.
+- The clean session value can be set to either true (1) or false (0) in mixed-durability shared subscriptions.
+- Clients that connect with the instanceId use different subscriptions than clients that connect without the instanceId. Therefore, if you would like multiple clients to connect on a mixed-durability shared subscription, you need to specify the instanceID in all subscriptions.
+
+**Example scenario**
+
+The following scenario is one example of how a non-durable scalable application works in {{site.data.keyword.iot_short_notm}}:
 
 - Client one connects as **A:abc123:myApplication** and subscribes to all device events, which means that client one receives 100% of the device events that are published.
-- Client two connects as **A:abc123:myApplication** and also subscribes to all device events, which means that client one and client two share all of the events that are published. The processing load is shared between client one and client two.
-- Client three connects as **A:abc123:myApplication** and also subscribes to all device events, which means that client one, client two, and client three share the processing load for events.
+- Client two connects as **A:abc123:myApplication** and also subscribes to all device events, which means that client one and client two both share all of the events that are published. The processing load is shared between client one and client two.
+- Client three connects as **A:abc123:myApplication** and also subscribes to all device events, which means that client one, client two, and client three all share the processing load for events.
 - Client two and client three then unsubscribe from all device events, which means that only client one receives all device events that are published. While client two and client three are still connected to the service, client one receives 100% of the device events that are published.
 - When two or more applications share a subscription, messages might not arrive in the order in which they were sent. For example, message B might arrive at client one before message A arrives at client two, even though message A was sent first.

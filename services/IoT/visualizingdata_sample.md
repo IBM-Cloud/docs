@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2016, 2017
 lastupdated: "2016-06-29"
 
 ---
@@ -106,5 +106,13 @@ The file that references the Paho MQTT library to subscribe to device topics and
 
 Device events are passed to the `realtimeGraph.js` file to plot the graph.
 
+## Customizing the historic data display
+{: #customize_historical_display}
 
-A more detailed developer's guide is available from the [Github wiki](https://github.com/ibm-watson-iot/rickshaw4iot/wiki).
+The directory containing graphical visualization code for historic device data is `public/js/historian`. The graphing logic can be customized by editing `public/js/historian/historianGraph.js`.
+
+The file that controls ReST API calls to collect historic device data is `public/js/historian/historian.js`.
+
+Historic data is passed to the `historianGraph.js` file to plot the graph.
+
+A more detailed developer's guide is available from the Github iot-visualization wiki.

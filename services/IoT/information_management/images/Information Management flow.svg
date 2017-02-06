@@ -24,7 +24,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -96,16 +96,16 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1872"
-     inkscape:window-height="994"
+     inkscape:window-width="1920"
+     inkscape:window-height="1053"
      id="namedview5445"
      showgrid="false"
-     inkscape:zoom="1.5099772"
-     inkscape:cx="174.75587"
-     inkscape:cy="124.18209"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
-     inkscape:window-maximized="0"
+     inkscape:zoom="1.8351354"
+     inkscape:cx="499.78988"
+     inkscape:cy="213.73285"
+     inkscape:window-x="338"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
      inkscape:current-layer="svg5443"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -294,24 +294,14 @@
      id="flowRoot7760"
      style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      transform="translate(-80.519965,-21.988094)"><flowRegion
-       id="flowRegion7762"><rect
-         id="rect7764"
-         width="221.19539"
-         height="145.69756"
-         x="447.02661"
-         y="-93.02076" /></flowRegion><flowPara
-       id="flowPara7766"></flowPara></flowRoot>  <flowRoot
+       id="flowRegion7762" /><flowPara
+       id="flowPara7766" /></flowRoot>  <flowRoot
      xml:space="preserve"
      id="flowRoot7821"
      style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      transform="translate(-80.519965,-21.988094)"><flowRegion
-       id="flowRegion7823"><rect
-         id="rect7825"
-         width="52.98093"
-         height="278.81216"
-         x="250.3349"
-         y="173.20842" /></flowRegion><flowPara
-       id="flowPara7827"></flowPara></flowRoot>  <rect
+       id="flowRegion7823" /><flowPara
+       id="flowPara7827" /></flowRoot>  <rect
      style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none"
      id="rect6559-2"
      width="127.59026"
@@ -336,24 +326,14 @@
      id="flowRoot7909"
      style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      transform="translate(-80.519965,-21.988094)"><flowRegion
-       id="flowRegion7911"><rect
-         id="rect7913"
-         width="302.65356"
-         height="73.51104"
-         x="145.03531"
-         y="444.73569" /></flowRegion><flowPara
-       id="flowPara7915"></flowPara></flowRoot>  <flowRoot
+       id="flowRegion7911" /><flowPara
+       id="flowPara7915" /></flowRoot>  <flowRoot
      xml:space="preserve"
      id="flowRoot7917"
      style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      transform="translate(-80.519965,-21.988094)"><flowRegion
-       id="flowRegion7919"><rect
-         id="rect7921"
-         width="317.22333"
-         height="76.160088"
-         x="421.86066"
-         y="50.690018" /></flowRegion><flowPara
-       id="flowPara7923"></flowPara></flowRoot>  <path
+       id="flowRegion7919" /><flowPara
+       id="flowPara7923" /></flowRoot>  <path
      inkscape:connector-curvature="0"
      id="path8199-4-90"
      d="m 117.34957,147.90902 14.63952,0"
@@ -478,7 +458,7 @@
        sodipodi:role="line"
        id="tspan8284"
        x="88.995667"
-       y="-84.422066"></tspan></text>
+       y="-84.422066" /></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"

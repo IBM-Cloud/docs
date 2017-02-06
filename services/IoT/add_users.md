@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-09-16"
+  years: 2016, 2017
+lastupdated: "2017-01-24"
 
 ---
 
@@ -22,7 +22,7 @@ From the access dashboard, you can control and manage access to your {{site.data
 - [Blocking user access](#blocking-users)
 - [Removing users](#removing-users)
 
-## User access
+## Adding new users
 {: #adding-new-users}
 
 From the **Access** tab of the dashboard, you can add individual members by using the Add, Invite, or Register functions. You can also add, invite, or register multiple members simultaneously by using the Import function.

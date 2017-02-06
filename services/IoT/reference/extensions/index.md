@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-04"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-26"
 
 ---
 
@@ -256,13 +256,25 @@ When the organization is successfully configured, the *Extensions* section displ
 
 The historical data storage extension lets you locate and configure compatible message storage services such as [{{site.data.keyword.cloudantfull}}](../../cloudant_connector.html) or [{{site.data.keyword.messagehub_full}}](../../message_hub.html) for your IoT data.
 
-## Custom Device Management Packages
+## Custom device management packages
 {: #device_mgmt}
 
-Device management is a core feature of the {{site.data.keyword.iot_short_notm}}, however, it can be extended to develop additional functionality.
+Device management is a core feature of the {{site.data.keyword.iot_short_notm}}, however, it can be extended to develop additional functionality. Custom device management packages must consist of valid JSON and define at least one custom device management action.
 
-The device management extension allows you to install custom functions for device management. For more information on custom device management functions, see [device management custom extensions](../../devices/device_mgmt/custom_actions.html){: new_window}.
+For more information on custom device management functions, including an example of the required JSON format, see [device management custom extensions](../../devices/device_mgmt/custom_actions.html){: new_window}.
 
+### Adding a custom device management package
+
+Custom device management packages can be added either by using the {{site.data.keyword.iot_short_notm}} dashboard, or by using the API.
+
+To add a custom device management package by using the {{site.data.keyword.iot_short_notm}} dashboard:
+
+1. From your {{site.data.keyword.iot_short_notm}} dashboard, click **Settings** from the navigation bar.
+2. Click **Custom Device Management Packages**.
+3. Click the **Add Package** button.
+4. Select your package file and click **Open**.
+
+To add a custom device management package by using the API, see the [{{site.data.keyword.iot_short_notm}} API documentation](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html).
 
 ## Blockchain
 {: #blockchain}

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2016, 2017
 lastupdated: "2016-10-19"
 
 ---
@@ -59,7 +59,7 @@ For a quick getting started example, see the [Using Rules and Actions with IBM W
 Extend the data analytics features of {{site.data.keyword.iot_short_notm}} by creating and connecting your own applications to consume real-time and historical device data.
 
 For more information, see the following topics:   
-- Explore the [application developer documentation](applications/api.html) and the [{{site.data.keyword.iot_short_notm}} API Documentation](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#/){:new_window}.
+- Explore the [application developer documentation](applications/api.html) and the [{{site.data.keyword.iot_short_notm}} API Documentation](reference/rest_api.html).
 - Explore the [{{site.data.keyword.iot_short_notm}} client libraries](iot_platform_client_lib.html) that provide tools and files to build and develop code for integrating and connecting your devices and applications.
 - [Connect a {{site.data.keyword.cloudantfull}} service](cloudant_connector.html) to your {{site.data.keyword.iot_short_notm}} to store historical device data.
 
@@ -78,5 +78,5 @@ For more information, see the following topics:
 
 ## API Reference
 {: #api}
-* [{{site.data.keyword.iot_short_notm}} API Documentation](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#/){:new_window}
+* [{{site.data.keyword.iot_short_notm}} API Documentation](../reference/rest_api.html)
 * [Developer documentation](developer_doc_overview.html)

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2016, 2017
 lastupdated: "2016-12-12"
 
 ---
@@ -69,10 +69,10 @@ Input:
 <ul>
 <li>Property
 <li>Smoothing factor, as a number that is larger than 0 and smaller than 1.  
-<li>Optional: Slope, as a number that is larger than 0 and smaller than 1.  </br>
+<li>Optional: Slope, as a number that is larger than 0 and smaller than 1.   </br>
  **Tip:** If you are unsure if your collected data has trends, start by using a slope of .5. Depending on your results, you might want to adjust the factor.
- </li></td>
-<td>Applying exponential smoothing to a datapoint results in an average value where older values are weighted less when calculating the average rather than defining a period length. Instead, you limit the weight of distant values by setting a higher smoothing factor.
+ </ul></td>  
+ <td>Applying exponential smoothing to a datapoint results in an average value where older values are weighted less when calculating the average rather than defining a period length. Instead, you limit the weight of distant values by setting a higher smoothing factor.
 </br></br>Use the exponential smoothing formula with a rule to avoid triggering false alerts based on noisy data that contains isolated spikes by using all available data instead of a subset.
 </br></br>Use a line graph card to visualize data trends with data spikes removed.</td>
 </tr>

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015,2016
+  years: 2016, 2017
 
 ---
 
@@ -13,7 +13,7 @@ copyright:
 
 # Configuring certificates
 {: #set_up_certificates.md}
-Last updated: 29 December 2016
+Last updated: 2 February 2017
 {: .last-updated}
 
 Certificates are used for device authentication or to replace the default {{site.data.keyword.iot_full}} server certificate for MQTT messaging. Any devices that do not have valid signed certificates are denied access and cannot communicate with the server.
@@ -23,15 +23,17 @@ To configure certificates and server access for devices, the system operator reg
 ## Certificate requirements
 {: #cert_reqs.md}
 
-### Client certificates
-The client, or device, certificate that you register must have the device ID entered as either the Common Name (CN) or SubjectAltName in the certificate. For the the *CN* field, the format is 'CN=d:devtype:devid'. For the SubjectAltName field, the format is 'SubjectAltName=email:d:devtype:devid' where 'devtype' is the Device Type of the device and 'devid' is the Client ID of the device.
-
 ### CA certificates
-CA certificates enable the organization to recognize the client certificates as trusted so that devices can connect to the server. A CA certificate can use a certificate revocation list (CRL). The CRL must be reachable at the moment that the CA is added to the platform, or the CA certificate will be rejected.
+CA certificates enable the organization to recognize the client certificates on devices as trusted so that devices can connect to the server. A CA certificate can use a certificate revocation list (CRL). The CRL must be reachable at the moment that the CA is added to the platform, or the CA certificate will be rejected.
 
-If you add a CA certificate or replace the messaging server certificate, all devices must connect using an MQTT client that supports Server Name Indication (SNI) to use the appropriate CAs to authenticate the device.
+If you add a CA certificate or replace the messaging server certificate, all devices must connect using an MQTT client that supports Server Name Indication (SNI) so that the server can use the appropriate CAs to authenticate the device.
 
 If you add a CA certificate, but do not have the Risk and Security Management add-on enabled, all devices connect with the TLS with Token and Client Certificate Authentication connection policy. If you do have Risk and Security Management add-on enabled, you can configure different connection policies. For information about how to configure connection security policies, see [Configuring security policies](set_up_policies.html).
+
+### Client or device certificates
+Individual client, or device, certificates remain on the devices and are not uploaded to the platform. The CA signing certificate that is used to sign all of the device certificates is the only certificate that you upload to the platform. If you are using self-signed server certificates, you must upload the Root and intermediate CA (ca.pem) that is used to sign the client certificate (cert.pem).
+
+The individual device certificate that you sign with the CA certificate must have the device ID entered as either the Common Name (CN) or SubjectAltName in the certificate. For the the *CN* field, the format is 'CN=d:devtype:devid'. For the SubjectAltName field, the format is 'SubjectAltName=email:d:devtype:devid' where 'devtype' is the Device Type of the device and 'devid' is the Client ID of the device.
 
 ##Registering Certificate Authority (CA) certificates for device authentication
 {: #reg_ca_cert.md}
@@ -43,8 +45,6 @@ If you add a CA certificate, but do not have the Risk and Security Management ad
 5. Confirm that the correct file is selected and click **Save**. The selected certificate is listed in the
 table and it is active by default.
 
-**Known Issue:** Adding CA certificates forces the messaging server to request certificates from mqtt clients connecting to it. The platform dashboard pages do internal secure websocket (wss) connections to the messaging server in order to retrieve device information. Some browsers may not handle this request appropriately, so users might see unexpected behavior in the UI, such as connected devices not showing the correct connection status in the **Devices** page. The current workaround is to open a direct https connection to the messaging server, using the url https://'orgId'.messaging.internetofthings.ibmcloud.com/ (replacing 'orgId' with the organization ID defined in the Settings page under the Identity section) before accessing the platform dashboard. The issue does not affect Firefox.
-
 ## Registering messaging server certificates
 {: #reg_msg_cert.md}
 
@@ -52,7 +52,7 @@ A default server certificate is provided with the platform. You can use the defa
 
 To use the default certificate or another certificate that has already been uploaded, select the certificate you want to use from the **Default messaging server certificate** drop-down list in the table under **Messaging Server Certificates**.
 
-**Note:** Platform dashboard pages might do internal connections to the messaging server to retrieve device information. When setting up self-signed server certificates for an organization, dashboard users must add the server certificate as a trusted certificate in their browsers to avoid connections issues because browsers, by default, will not recognize the messaging server as a trusted server.
+**Note:** Platform dashboard pages might do internal connections to the messaging server to retrieve device information. When setting up self-signed server certificates for an organization, dashboard users must add the server certificate as a trusted certificate in their browsers to avoid connection issues because browsers, by default, will not recognize the messaging server as a trusted server.
 
 ### Uploading a certificate from your organization
 

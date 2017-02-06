@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-29"
+  years: 2015, 2016, 2017
+lastupdated: "2016-12-06"
 
 ---
 
@@ -54,7 +54,7 @@ To create the `DeviceData` class, create the following objects:
 - `DeviceFirmware` (Optional)
 - `DeviceMetadata` (optional)
 
-For more information, see the [device model](../../reference/device_model.html)
+For more information, see [device model](../../reference/device_model.html).
 
 ### DeviceInfo
 
