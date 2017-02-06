@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2016
+  years: 2016, 2017
 
-lastupdated: "2016-10-14"
+lastupdated: "2017-01-12"
 
 ---
 
@@ -22,7 +22,8 @@ lastupdated: "2016-10-14"
 
 **참고:** Bluemix 영역으로 사설 네트워크 피어를 사용한 후 영역을 삭제해야 하는 경우, 먼저 해당 영역에서 사설 네트워크 피어 연결을 삭제하십시오. 
 
-시작하려면 IBM Bluemix CLI를 설치하십시오. 세부사항은 [Bluemix CLI](http://clis.ng.bluemix.net/ui/home.html)를 참조하십시오.
+시작하려면 IBM Bluemix CLI를 설치하십시오. 세부사항은
+[Bluemix CLI](http://clis.ng.bluemix.net/ui/home.html)를 참조하십시오.
 
 ## 사설 네트워크 피어 CLI 플러그인 설치
 
@@ -38,25 +39,25 @@ bluemix plugin uninstall private-network-peering
 
 **참고**: 플러그인의 위치로 전환하거나 플러그인 위치에 대한 경로를 지정하십시오.
 
-* Microsoft Windows OS의 경우:  
+* Microsoft Windows OS의 경우:
 
 ```
 bluemix plugin install private-network-peering-windows-amd64.exe
 ```
 
-* Apple MAC OS의 경우:  
+* Apple MAC OS의 경우:
 
 ```
 bluemix plugin install private-network-peering-darwin-amd64
 ```
 
-* Linux OS의 경우:  
+* Linux OS의 경우:
 
 ```
 bluemix plugin install private-network-peering-linux-amd64
 ```
 
-**참고**: Linux OS용 플러그인을 설치하는 동안 권한이 거부됨을 나타내는 오류 메시지가 표시되는 경우 다음 명령을 실행하여 권한을 변경하십시오.  
+**참고**: Linux OS용 플러그인을 설치하는 동안 권한이 거부됨을 나타내는 오류 메시지가 표시되는 경우 다음 명령을 실행하여 권한을 변경하십시오.
 
 ```
 chmod a+x ./private-network-peering-linux-amd64
@@ -66,16 +67,16 @@ chmod a+x ./private-network-peering-linux-amd64
 
 Bluemix 저장소에서 플러그인을 설치하려면 다음 단계를 따르십시오.
 
-1. Bluemix 플러그인 저장소 엔드포인트를 추가하십시오.  
+1. Bluemix 플러그인 저장소 엔드포인트를 추가하십시오.
 	```
 	bluemix plugin repo-add bluemix-bx http://plugins.ng.bluemix.net
-	```  
+	```
 
 2. 다음 명령을 실행하십시오.
 
 	```
 	bluemix plugin install private-network-peering -r bluemix-bx
-	```  
+	```
 
 ## 사설 네트워크 피어 명령의 목록
 다음 명령이 지원됩니다. 사용 가능한 명령의 목록을 나열하려면 `bluemix network` 명령을 사용하십시오.
@@ -105,7 +106,7 @@ bluemix network pnp-routers [--verbose (or -v)]
 ######명령 예제
 {: #ex1}
 
-모든 라우터에 대한 네트워크 정보 표시:  
+모든 라우터에 대한 네트워크 정보 표시:
 
 	$ bluemix network pnp-routers
 	Listing available routers ...
@@ -117,7 +118,7 @@ bluemix network pnp-routers [--verbose (or -v)]
 	129.41.238.212  default-router  Container  United-Kingdom  ywu@us.ibm.com  demo3
 
 
-모든 라우터에 대한 자세한 네트워크 정보 표시:  
+모든 라우터에 대한 자세한 네트워크 정보 표시:
 
 
 	$ bluemix network pnp-routers -v
@@ -215,7 +216,7 @@ bluemix network pnp-show [--verbose (or -v)]
 ######명령 예제
 {: #ex4}
 
-기본 정보 표시:  
+기본 정보 표시:
 
 	$ bluemix network pnp-show
 	Listing private network peering connections ...

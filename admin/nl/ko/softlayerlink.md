@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2016
-lastupdated: "2016-12-01"
+  years: 2016, 2017
+lastupdated: "2017-01-11"
  
 
 ---
@@ -20,8 +20,7 @@ lastupdated: "2016-12-01"
 
 {{site.data.keyword.Bluemix_notm}} 평가판 계정을 보유하고 있으며 인프라 대시보드에 액세스하려는 경우 {{site.data.keyword.Bluemix_notm}} 종량과금제 계정으로 업그레이드해야 합니다. 또한 평가판 계정에서 사용할 수 없는 다른 유료 리소스를 사용하려는 경우에도 업그레이드해야 합니다. 그렇지 않으면 평가판 계정이 완료됩니다. 
 
-계정을 연결하여 기존 {{site.data.keyword.Bluemix_notm}} 및 SoftLayer 청구 계정을 통합할 수 있습니다. 계정을 연결하면, {{site.data.keyword.Bluemix_notm}} 및 SoftLayer 리소스 모두가 {{site.data.keyword.Bluemix_notm}}를 통해 청구됩니다.
-
+계정을 연결하여 기존 {{site.data.keyword.Bluemix_notm}} 및 SoftLayer 청구 계정을 통합할 수 있습니다. 계정을 연결하면, {{site.data.keyword.Bluemix_notm}} 및 SoftLayer 리소스 모두가 {{site.data.keyword.Bluemix_notm}}를 통해 청구됩니다. 
 
 **주의:** {{site.data.keyword.Bluemix_notm}} 구독 계정을 SoftLayer 계정과 연결할 수 없습니다. 인프라 대시보드에 액세스하려면 SoftLayer 계정과 자동으로 연결되는 두 번째 계정인 종량과금제 계정을 작성해야 합니다. {{site.data.keyword.Bluemix_notm}} 계정에 대해 한 개, 즉 두 개의 송장을 수신합니다. 인프라 리소스에 개별 종량과금제 계정에서 송장을 보내는 경우에도, 구독 계정의 앱과 서비스에 자원을 사용할 수 있습니다. 예를 들어, 구독 계정에서 Watson 서비스를 활성화하는 경우, 서비스 신임 정보를 복사하여 종량과금제 계정에서 제공되는 베어메탈 애플리케이션에 추가할 수 있습니다.
 {:shortdesc}
@@ -44,8 +43,7 @@ lastupdated: "2016-12-01"
 ## {{site.data.keyword.Bluemix_notm}} 및 SoftLayer 계정 통합
 {: #unifyingaccounts}
 
-{{site.data.keyword.Bluemix_notm}} 및 SoftLayer 계정을 통합하여 결합된 리소스를 이용할 수 있습니다. {{site.data.keyword.Bluemix_notm}}와 Softlayer 계정을 연결한 경우 단일 {{site.data.keyword.Bluemix_notm}} 송장을 받게 됩니다. 기존 {{site.data.keyword.Bluemix_notm}} 계정을 보유하는 경우, {{site.data.keyword.Bluemix_notm}}를 통한 SoftLayer 리소스의 청구는 계정이 연결된 이후 시작되는 새 청구 주기에 적용됩니다.
-
+{{site.data.keyword.Bluemix_notm}} 및 SoftLayer 계정을 통합하여 결합된 리소스를 이용할 수 있습니다. {{site.data.keyword.Bluemix_notm}}와 Softlayer 계정을 연결한 경우 단일 {{site.data.keyword.Bluemix_notm}} 송장을 받게 됩니다. 기존 {{site.data.keyword.Bluemix_notm}} 계정을 보유하는 경우, {{site.data.keyword.Bluemix_notm}}를 통한 SoftLayer 리소스의 청구는 계정이 연결된 이후 시작되는 새 청구 주기에 적용됩니다. 
 
 **중요사항:** {{site.data.keyword.Bluemix_notm}}의 모든 연결된 계정은 종량과금제 계정이어야 합니다. 종량과금제 계정을 새로 작성하거나 기존 종량과금제 계정을 연결할 수 있습니다. 또는 기존 시험판 계정을 연결할 수 있지만, 이는 종량과금제 계정으로 업그레이드됩니다. 구독 {{site.data.keyword.Bluemix_notm}} 계정을 연결할 수 없습니다.   
 
@@ -68,8 +66,7 @@ SoftLayer 계정을 보유 중이며 {{site.data.keyword.Bluemix_notm}} 계정�
 
 계정이 연결되면, SoftLayer 글로벌 헤더에서 **{{site.data.keyword.Bluemix_notm}}로 이동** 링크를 사용할 수 있습니다. 이 링크를 클릭하면 {{site.data.keyword.Bluemix_notm}} 로그인 페이지로 이동됩니다. 또한 {{site.data.keyword.Bluemix_notm}} 헤더에서 이제 **SoftLayer** 링크를 사용할 수 있습니다. 링크를 클릭하면 새 창에서 {{site.data.keyword.slportal}}의 홈 페이지로 이동됩니다. 
 
-{{site.data.keyword.Bluemix_notm}} 인프라 오퍼링은 3계층 네트워크, 퍼블릭, 사설 및 관리 트래픽 세분화에 연결됩니다. 고객의 {{site.data.keyword.Bluemix_notm}} 계정에 대한 인프라 오퍼링은 무료로 사설 네트워크에서 데이터를 서로 전송할 수 있습니다.
-베어메탈 서버, 가상 서버 및 클라우드 스토리지와 같은 인프라 오퍼링은 퍼블릭 네트워크를 통해 {{site.data.keyword.Bluemix_notm}} 카탈로그(예: Watson 서비스, 컨테이너 또는 런타임)의 다른 애플리케이션 및 서비스에 연결합니다. 두 유형의 오퍼링 간의 데이터 전송은 표준 퍼블릭 네트워크 대역폭 비율로 측정되고 청구됩니다. 
+{{site.data.keyword.Bluemix_notm}} 인프라 오퍼링은 3계층 네트워크, 퍼블릭, 사설 및 관리 트래픽 세분화에 연결됩니다. 고객의 {{site.data.keyword.Bluemix_notm}} 계정에 대한 인프라 오퍼링은 무료로 사설 네트워크에서 데이터를 서로 전송할 수 있습니다. 베어메탈 서버, 가상 서버 및 클라우드 스토리지와 같은 인프라 오퍼링은 퍼블릭 네트워크를 통해 {{site.data.keyword.Bluemix_notm}} 카탈로그(예: Watson 서비스, 컨테이너 또는 런타임)의 다른 애플리케이션 및 서비스에 연결합니다. 두 유형의 오퍼링 간의 데이터 전송은 표준 퍼블릭 네트워크 대역폭 비율로 측정되고 청구됩니다. 
 
 ## {{site.data.keyword.Bluemix_notm}}에 SoftLayer 팀 구성원 초대
 {: #invite_users}
@@ -94,27 +91,61 @@ SoftLayer 계정을 보유 중이며 {{site.data.keyword.Bluemix_notm}} 계정�
 ## IBM ID로 전환
 {: #ibmid_switch}
 
-이제 SoftLayer의 인증은 {{site.data.keyword.Bluemix_notm}}에 대한 단일 로그인을 제공하는 IBM ID를 사용합니다. 기존 SoftLayer 계정이 있는 경우 IBM ID로 전환할 수 있습니다. 마이그레이션 마법사가 이 전환을 통해 사용자를 안내합니다.
+이제 SoftLayer의 인증은 IBM ID를 사용하여 모든 {{site.data.keyword.Bluemix_notm}}에 대해 단일 로그인을 제공합니다. 기존 SoftLayer 계정이 IBM ID 인증으로 전환하도록 지원되며 마이그레이션 마법사가 이 전환 과정을 안내합니다.
 {:shortdesc}
 
-IBM ID로의 전환을 시작한 후 프로세스를 완료하지 않은 경우에는 이를 취소할 수 있습니다. 그러나 다음 번에 로그인할 때 전환하라는 메시지가 계속해서 표시될 것입니다. 
+마스터 사용자이며 {{site.data.keyword.slportal}}에서 IBM ID로 전환하도록 프롬프트가 표시되지 않는 경우, [IBM 지원 센터에 문의](https://console.ng.bluemix.net/docs/support/index.html#contacting-support)하여 기능을 사용하는 데 필요한 지원을 요청하십시오. 
 
-기존 SoftLayer 사용자 이름을 IBM ID로 전환하는 작업을 시작하려면 다음 단계를 완료하십시오. 
+IBM ID로 전환을 시작하는 경우 프로세스가 완료되기 전에 언제든지 이 전환을 취소할 수 있습니다. 그러나 다음 번에 로그인할 때 IBM ID로 전환하라는 프롬프트가 계속 표시됩니다. {{site.data.keyword.Bluemix_notm}} 계정에 연결하려는 각 계정은 고유 이메일 주소를 사용하는 고유 IBM ID에서 소유해야 합니다. 
 
- 1. {{site.data.keyword.slportal}}에서 사용자 프로파일 편집으로 이동한 후 **IBM ID로 전환**을 클릭하십시오.
- 2. 마이그레이션 마법사 프롬프트를 따라 IBM ID를 작성하십시오. IBM ID를 작성하면 이메일 주소인 ID를 변경할 수 없습니다. 사용자의 프로파일과 연관된 이메일을 업데이트할 수 있으나 기본적으로 이 값은 IBM ID에 대해 정의한 값으로 설정됩니다. 마법사를 완료하면 이메일이 전송됩니다. 
- 3. 이메일을 수신하면 링크를 따르거나 URL을 브라우저로 복사하고 등록 코드를 입력하십시오. 코드는 7일간 유효하며 한 번만 사용 가능합니다. 사용한 후에는 다시 사용할 수 없습니다. IBM ID를 SoftLayer 사용자 링크로 설정한 후 IBM ID로만 계정에 로그인할 수 있습니다. SoftLayer 사용자 이름 및 비밀번호를 입력하는 대신에 로그인 대화 상자에서 **IBM ID로 로그인** 단추를 사용해야 합니다. 
+기존 SoftLayer 사용자 이름을 IBM ID로 전환하려면 다음 단계를 완료하십시오. 
+
+ 1. 로그인 후 초기 프롬프트에서 **나중에**를 선택했지만 현재 세션에서 IBM ID 인증으로 전환하도록 결정한 경우 사용자 프로파일 편집으로 이동하여 **IBM ID로 전환**을 클릭하십시오. 
+ 2. 마법사 프롬프트를 따라 IBM ID를 작성하십시오. IBM ID은 고유 이메일 주소이며 작성된 후에 변경할 수 없습니다. 나중에 프로파일과 연관된 이메일을 업데이트할 수 있으며 IBM ID에 대해 정의한 이메일로 기본 이메일이 설정됩니다. 마이그레이션 마법사를 완료했음을 표시하는 등록 코드가 포함된 이메일을 수신합니다.  
+ 3. 이메일을 수신하면 링크를 따르거나 URL을 브라우저로 복사하고 등록 코드를 입력하십시오. 코드는 7일 동안 유효하며 한 번만 사용할 수 있습니다. 
  
-신규 고객인 경우 주문을 완료할 때 기존 IBM ID 계정에 대한 이메일 주소 또는 새 IBM ID 계정 생성을 요청 받습니다.  
+ 
+IBM ID 인증으로 전환한 후에는 IBM ID로만 계정에 로그인할 수 있습니다. 로그인 프롬프트에서 SoftLayer 사용자 이름 및 비밀번호를 입력하는 대신 **IBM ID로 로그인**을 클릭하십시오. 
+ 
+신규 고객으로 주문을 체크아웃하는 경우 기존 IBM ID 계정에 대한 이메일 주소를 요청하거나 새 IBM ID 계정을 작성하도록 요청됩니다. 새 IBM ID를 작성하는 경우 새 IBM ID에 대한 이메일 주소를 입력하십시오. 이메일 주소는 초대 이메일이 발송되는 주소이며 새 IBM ID에 대한 사용자 이름이기도 합니다. 
 
-### 여러 SoftLayer 계정을 하나의 IBM ID로 맵핑
+### 사용자가 IBM ID로 전환 가능
+{: #link_accounts_resellers}
+
+일부 경우에서 사용자가 IBM ID로 전환할 수 있으려면 리셀러 또는 디스트리뷰터가 IBM ID 인증을 사용하도록 계정을 사용으로 설정해야 합니다.  
+
+ * IBM ID 인증을 사용하기 위해 레거시 SoftLayer 신임 정보로 기존 계정을 사용하려면, [IBM 지원 센터에 문의](https://console.ng.bluemix.net/docs/support/index.html#contacting-support)하여 IBM ID 마이그레이션을 사용으로 설정하십시오. 이는 {{site.data.keyword.Bluemix_notm}} 계정에 연결하려는 기존의 각 일반 사용자 계정에서 사용할 수 있어야 합니다. 
+ 
+ * 새 사용자 계정이 IBM ID로 작성되었는지 확인하려면 `CREATE_NEW_ACCOUNT_WITH_IBMid_AUTHENTICATION` 속성을 즉각적 마스터 사용자 계정에 설정해야 합니다. [IBM 지원 센터에 문의](https://console.ng.bluemix.net/docs/support/index.html#contacting-support)하거나 벤더에서 사용자 계정에 대해 이 설정을 보유하게 하십시오. 
+ 
+### 사용자 계정 링크
+{: #link_user_accounts}
+사용자가 IBM ID로 전환한 후 리셀러 및 디스트리뷰터는 SoftLayer 및 {{site.data.keyword.Bluemix_notm}} 계정에 연결할 수 있습니다. 
+
+**참고:** 
+  * 연결되는 계정의 마스터 사용자는 IBM ID여야 합니다. 
+  * 마스터 사용자로 각 일반 사용자 계정에 로그인하십시오. 사용자 프로파일 페이지로 이동하여 **IBM ID로 전환**을 클릭하십시오. 
+  * {{site.data.keyword.Bluemix_notm}} 계정에 연결하는 각 계정은 고유 이메일 주소를 사용하는 고유 IBM ID에서 소유해야 합니다. 하나의 IBM ID가 여러 SoftLayer 계정을 소유할 수 있더라도 계정을 {{site.data.keyword.Bluemix_notm}} 계정에 링크할 수는 없습니다. 하나의 IBM ID는 여러 SoftLayer 계정에 대한 마스터 사용자이고 이러한 계정을 {{site.data.keyword.Bluemix_notm}} 계정에 링크하려는 경우에는 마스터 사용자를 각 계정에 대한 고유 IBM ID가 되도록 변경해야 합니다. SoftLayer 계정의 마스터 사용자를 변경하려면 [IBM SoftLayer 지원 ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://knowledgelayer.softlayer.com/topic/support){: new_window}에 문의하십시오. 
+  
+각 계정을 {{site.data.keyword.Bluemix_notm}} 계정에 연결하려면 다음 단계를 완료하십시오.  
+
+ 1. 새 {{site.data.keyword.Bluemix_notm}} 계정을 작성하거나 기존의 {{site.data.keyword.Bluemix_notm}} 계정에 연결하려면, 마스터 사용자로 SoftLayer 계정에 로그인하고 **{{site.data.keyword.Bluemix_notm}}** 링크를 클릭하십시오. 새 {{site.data.keyword.Bluemix_notm}} 계정을 작성하거나 기존의 {{site.data.keyword.Bluemix_notm}} 계정에 링크할 수 있는 기회가 제공됩니다. SoftLayer 계정의 마스터 사용자인 IBM ID는 링크하는 Bluemix 계정의 소유자여야 합니다. SoftLayer 계정의 사용자를 {{site.data.keyword.Bluemix_notm}} 계정에 추가를 포함하여 마법사 프롬프트를 따르십시오.  
+ 2. 계정을 연결한 후 계정의 일반 사용자에게 IBM ID로 마이그레이션하도록 알려주십시오. 그 다음에 일반 사용자는 {{site.data.keyword.Bluemix_notm}} 콘솔에서 인프라, 애플리케이션 및 서비스 대시보드에 액세스할 수 있습니다. 
+ 3. 연결된 계정에 새 사용자가 추가되는 경우 사용자가 통합된 콘솔 내의 모든 기능에 액세스할 수 있도록 사용자를 SoftLayer 계정과 {{site.data.keyword.Bluemix_notm}} 계정 둘 다에 추가해야 합니다. 
+ 
+**권장사항:** 일반 사용자 계정만 IBM ID로 마이그레이션하십시오. 일반 사용자 계정의 상위 계정이며 리소스를 포함하지 않는 브랜드 계정은 마이그레이션하지 마십시오. IBM ID로 마이그레이션하는 브랜드 계정 사용자는 BAP(Brand Agent Portal) 포털에 로그인할 수 없습니다. 
+
+<!--
+### Mapping multiple SoftLayer accounts to one IBMid
 {: #map_multiple_accounts}
 
-주문을 설정할 때 기존 IBM ID 이메일 주소를 사용하여 하나의 IBM ID를 여러 SoftLayer 계정과 연관시킬 수 있습니다. 각 계정에 대한 한 명의 SoftLayer 사용자만 단일 IBM ID로 맵핑될 수 있습니다. IBM ID는 각 SoftLayer 계정 내에서 고유해야 합니다. 그러나 여러 SoftLayer 계정에 대한 액세스 권한이 있는 한 명의 사용자가 여러 SoftLayer 계정에 액세스할 수 있는 하나의 IBM ID를 사용할 수 있습니다. 
+You can associate one IBMid with multiple SoftLayer accounts by using an existing IBMid email address when setting up the account. Only one SoftLayer user for each account can be mapped to the single IBMid. The IBMid must be unique within each SoftLayer account. However, one user with access to multiple SoftLayer accounts can use one IBMid to access multiple SoftLayer accounts.
 
-예를 들어, IBM ID는 계정 A 및 B의 마스터 사용자 및 계정 C 및 계정 D의 추가 사용자로 맵핑할 수 있습니다. 해당 IBM ID로 맵핑되는 계정 중 하나가 기본 계정이 됩니다. 일반적으로 기본 계정은 IBM ID로 처음 맵핑되는 계정입니다. 그러나 고객 포털의 계정 전환 기능을 통해 계정(기본 계정)을 전환할 수 있습니다. 
+For example, an IBMid can map to the master user in accounts A and B, and to an additional user in accounts C and D. One of the accounts mapped to that IBMid is the default account.  Usually, the default account is the account that was first mapped to the IBMid. However, you can switch which account is the default account  through an account switching feature in the Customer Portal.
 
-2단계 인증이 사용된 여러 계정에 대한 IBM ID 액세스 권한이 있는 사용자의 경우 계정 로그인 및 계정 전환 중에 적절한 2단계 인증 확인 코드(계좌당)가 필요합니다. 
+For a user with IBMid access to multiple accounts with two-factor authentication enabled, an appropriate two-factored authentication verification code per account is required during account log in and account switching.
+-->
+
 
 ## SoftLayer 자산으로 {{site.data.keyword.Bluemix_notm}} 서비스 사용
 {: #bluemix_services}
@@ -131,12 +162,10 @@ SoftLayer 자산으로 API 기반 퍼블릭 {{site.data.keyword.Bluemix_notm}} �
 
 SoftLayer에서 사용자 앱의 Watson API를 호출하여 이를 보다 개인화함으로써 *Insights 및 코그너티브* 지식을 얻을 수 있습니다. 또는 *데이터 및 분석* 서비스를 사용하여 앱에 대한 고성능 분석을 활용할 수 있습니다. 또는 {{site.data.keyword.Bluemix_notm}}에 관리를 맡길 수 있는 DaaS(Database-as-a-Service)를 선택하십시오. 
 
-{{site.data.keyword.activedeployshort}} 및 {{site.data.keyword.deliverypipeline}} 등의 서비스와 함께 컨테이너를 사용하여 애플리케이션 개발을 현대화하십시오. SoftLayer와 통신하는 데 {{site.data.keyword.vpn_short}} 서비스를 사용하여 사설 네트워크의 컨테이너와 SoftLayer 사설 네트워크를 연결할 수 있습니다.
-to the SoftLayer private network. 컴퓨팅 리소스 및 서비스에 대한 모든 사용 비용은 {{site.data.keyword.Bluemix_notm}} 청구서에 반영됩니다.  
+{{site.data.keyword.activedeployshort}} 및 {{site.data.keyword.deliverypipeline}} 등의 서비스와 함께 컨테이너를 사용하여 애플리케이션 개발을 현대화하십시오. SoftLayer와 통신하는 데 {{site.data.keyword.vpn_short}} 서비스를 사용하여 사설 네트워크의 컨테이너와 SoftLayer 사설 네트워크를 연결할 수 있습니다. 컴퓨팅 리소스 및 서비스에 대한 모든 사용 비용은 {{site.data.keyword.Bluemix_notm}} 청구서에 반영됩니다.  
 
 ### API 기반 {{site.data.keyword.Bluemix_notm}} 서비스
-일부 {{site.data.keyword.Bluemix_notm}} 서비스는 SoftLayer에서 사용될 수 없습니다. 
-다음 서비스를 사용자의 애플리케이션 코드에서 실행되도록 설정할 수 있습니다. 
+일부 {{site.data.keyword.Bluemix_notm}} 서비스는 SoftLayer에서 사용될 수 없습니다. 다음 서비스를 사용자의 애플리케이션 코드에서 실행되도록 설정할 수 있습니다. 
 * {{site.data.keyword.alchemyapishort}}
 * {{site.data.keyword.alertnotificationshort}}
 * {{site.data.keyword.sparks}}
@@ -165,7 +194,6 @@ to the SoftLayer private network. 컴퓨팅 리소스 및 서비스에 대한 �
 * {{site.data.keyword.presenceinsightsshort}}
 * {{site.data.keyword.relationshipextractionshort}}
 * {{site.data.keyword.retrieveandrankshort}}
-* {{site.data.keyword.servicediscoveryshort}}
 * {{site.data.keyword.speechtotextshort}}
 * {{site.data.keyword.sqldb}}
 * {{site.data.keyword.streaminganalyticsshort}}

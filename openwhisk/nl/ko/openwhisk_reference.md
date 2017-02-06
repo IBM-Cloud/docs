@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-09-27"
+  years: 2016, 2017
+lastupdated: "2017-01-04"
 
 ---
 
@@ -57,8 +57,8 @@ Bluemix에서 조직+영역 쌍은 {{site.data.keyword.openwhisk_short}} 네임�
 
 조치, 트리거, 규칙, 패키지, 네임스페이스를 포함하여 모든 엔티티의 이름은 다음과 같은 형식을 따르는 일련의 문자입니다. 
 
-* 첫 번째 문자는 영숫자 문자, 숫자 또는 밑줄이어야 합니다.
-* 후속 문자는 영숫자, 숫자, 공백 또는 다음 중 하나일 수 있습니다. `_`, `@`, `.`, `-`.
+* 첫 번째 문자는 영숫자 문자 또는 밑줄이어야 합니다. 
+* 후속 문자는 영숫자, 공백 또는 다음 중 하나일 수 있습니다. `_`, `@`, `.`, `-`.
 * 마지막 문자는 공백이 될 수 없습니다.
 
 더 정확하게 말해서 이름은 다음 정규식(Java 메타문자 구문으로 표현)과 일치해야 합니다. `\A([\w]|[\w][\w@ .-]*[\w@.-]+)\z`. 
@@ -93,7 +93,8 @@ Bluemix에서 조직+영역 쌍은 {{site.data.keyword.openwhisk_short}} 네임�
 
 호출 요청이 수신되면 시스템이 요청을 기록하고 활성화를 디스패치합니다. 
 
-시스템은 호출이 수신되었음을 확인하기 위해 활성화 ID(비블로킹 호출의 경우)를 리턴합니다. HTTP 응답을 수신하기 전에 개입하는 네트워크 장애 또는 다른 실패가 있는 경우
+시스템은 호출이 수신되었음을 확인하기 위해 활성화 ID(비블로킹 호출의 경우)를 리턴합니다.
+HTTP 응답을 수신하기 전에 개입하는 네트워크 장애 또는 다른 실패가 있는 경우
 {{site.data.keyword.openwhisk_short}}에서 요청을 수신하고 처리했을 가능성이 있습니다. 
 
 시스템이 조치를 한 번 호출하려고 시도하면 다음 네 가지 결과 중 하나가 발생합니다.
@@ -138,7 +139,8 @@ Bluemix에서 조직+영역 쌍은 {{site.data.keyword.openwhisk_short}} 네임�
 JavaScript로 작성된 조치는 단일 파일로 구성되어야 합니다. 파일에는 다중 함수가 포함될 수 있으나 편의상 `main`이라 불리는 함수가 반드시 존재해야 하며 조치가 호출될 때 호출되는 함수여야 합니다. 예를 들어, 다음은 다중 함수가 있는 조치의 예입니다.
 
 ```
-function main() {return { payload: helper() }
+function main() {
+    return { payload: helper() }
 }
 
 function helper() {
@@ -165,11 +167,12 @@ function helper() {
 ```
 // an action in which each path results in a synchronous activation
 function main(params) {
-  if (params.payload == 0) {return;
+  if (params.payload == 0) {
+     return;
   } else if (params.payload == 1) {
      return {payload: 'Hello, World!'};
   } else if (params.payload == 2) {
-    return whisk.error();   // indicates abnormal completion
+    return {error: 'payload must be 0 or 1'};
   }
 }
 ```
@@ -185,7 +188,7 @@ JavaScript 조치의 활성화는 기본 함수가 Promise를 리턴하여 존�
 function main(args) {
      return new Promise(function(resolve, reject) {
        setTimeout(function() {
-            resolve({ done: true });
+         resolve({ done: true });
        }, 100);
     })
  }
@@ -198,7 +201,7 @@ function main(args) {
 function main(args) {
      return new Promise(function(resolve, reject) {
        setTimeout(function() {
-            reject({ done: true });
+         reject({ done: true });
        }, 100);
     })
  }
@@ -208,16 +211,16 @@ function main(args) {
 조치가 일부 입력에서는 동기로, 다른 입력에서는 비동기로 실행될 수 있습니다. 예를 들면, 다음과 같습니다. 
 
 ```
-function main(params) {
-     if (params.payload) {
+  function main(params) {
+      if (params.payload) {
          // asynchronous activation
          return new Promise(function(resolve, reject) {
                 setTimeout(function() {
-            resolve({ done: true });
+                  resolve({ done: true });
                 }, 100);
              })
-      } else {
-// synchronous activation
+      }  else {
+         // synchronous activation
          return {done: true};
       }
   }
@@ -226,57 +229,12 @@ function main(params) {
 
 활성화가 동기인지 또는 비동기인지 여부에 상관없이 조치의 호출은 블로킹이거나 비블로킹입니다. 
 
-### 추가 SDK 메소드
+### JavaScript 글로벌 Whisk 오브젝트는 더 이상 사용되지 않음
 
-`whisk.invoke()` 함수는 다른 조치를 호출하고 결과적 활성화에 대한 Promise를 리턴합니다. 이 경우 다음 매개변수를 정의하는 사전을 인수로 사용합니다. 
-
-- *name*: 호출할 조치의 완전한 이름입니다.
-- *parameters*: 호출된 조치에 대한 입력을 나타내는 JSON 오브젝트입니다. 생략하는 경우, 기본값은 비어 있는 오브젝트입니다.
-- *apiKey*: 조치를 호출할 때 사용할 권한 키입니다.
-기본값은 `whisk.getAuthKey()`입니다.
-- *blocking*: 조치가 블로킹 또는 비블로킹 모드로 호출되어야 하는지 나타냅니다. `blocking`이 true인 경우, 호출은 리턴된 Promise를 분석하기 전에 호출된 조치의 결과를 기다립니다. 기본값은 비블로킹 호출을 나타내는 `false`입니다.
-
-`whisk.invoke()`는 Promise를 리턴합니다. OpenWhisk 시스템이 호출이 완료될 때까지 대기하도록 하려면 조치의 `main` 함수에서 이 Promise를 리턴해야 합니다. 
-- 호출이 실패하면 promise가 거부되고 실패한 호출을 설명하는 오브젝트가 리턴됩니다. 잠재적으로 다음 두 개의 필드가 있습니다. 
-  - *오류*: 오류를 설명하는 오브젝트이며 주로 문자열입니다. 
-  - *활성화*: 호출 실패의 네이처에 따라 존재하거나 존재하지 않을 수 있는 선택적 사전입니다. 존재하는 경우 다음 필드를 포함합니다. 
-    - *activationId*: 활성화 ID입니다.
-    - *결과*: 조치가 블로킹 모드에서 호출되면 조치의 결과가 JSON 오브젝트이며 그렇지 않으면 `undefined`입니다.
-- 호출이 성공하면 promise가 분석되고 위에서 설명한 *activationId* 및 *결과* 필드가 포함된 활성화를 설명하는 사전이 리턴됩니다. 
-
-다음은 리턴된 promise를 이용하는 블로킹 호출의 예입니다. 
-```javascript
-return whisk.invoke({
-  name: 'myAction',
-  blocking: true
-})
-.then(function (activation) {
-    // activation completed successfully, activation contains the result
-    console.log('Activation ' + activation.activationId + ' completed successfully and here is the result ' + activation.result);
-})
-.catch(function (reason) {
-    console.log('An error has occured ' + reason.error);
-
-    if(reason.activation) {
-      console.log('Please check activation ' + reason.activation.activationId + ' for details.');
-    } else {
-      console.log('Failed to create activation.');
-    }
-});
-```
-{: codeblock}
-
-`whisk.trigger()` 함수는 트리거를 실행하고 결과적 활성화에 대한 Promise를 리턴합니다. 이 경우, 다음 매개변수가 있는 JSON 오브젝트를 인수로 사용합니다.
-
-- *name*: 호출할 트리거의 완전한 이름입니다.
-- *parameters*: 트리거에 대한 입력을 나타내는 JSON 오브젝트입니다. 생략하는 경우, 기본값은 비어 있는 오브젝트입니다.
-- *apiKey*: 트리거를 실행할 때 사용할 권한 키입니다. 기본값은 `whisk.getAuthKey()`입니다.
-
-`whisk.trigger()`는 Promise를 리턴합니다. 트리거가 완료될 때까지 OpenWhisk 시스템이 대기하도록 해야 하는 경우 조치의 `main` 함수에서 이 Promise를 리턴해야 합니다. 
-- 트리거가 실패하면 promise가 거부되고 오류를 설명하는 오브젝트가 리턴됩니다. 
-- 트리거가 성공하면 promise가 분석되고 활성화 ID가 포함된 `activationId` 필드가 있는 사전이 리턴됩니다. 
-
-`whisk.getAuthKey()` 함수가 조치가 실행되는 권한 키를 리턴합니다. 일반적으로 이 함수는 `whisk.invoke()` 함수와 `whisk.trigger()` 함수에서 내재적으로 사용되므로 직접 호출할 필요가 없습니다. 
+글로벌 오브젝트 `whisk`는 현재 더 이상 사용되지 않습니다. 대체 메소드를 사용하려면 nodejs 조치를 마이그레이션하십시오.
+`whisk.invoke()` 및 `whisk.trigger()` 함수의 경우 클라이언트 라이브러리 [openwhisk](https://www.npmjs.com/package/openwhisk)를 사용할 수 있습니다.
+`whisk.getAuthKey()`의 경우 환경 변수 `__OW_API_KEY`의 API 키 값을 가져올 수 있습니다.
+`whisk.error()`의 경우 거부된 Promise(즉, Promise.reject)를 리턴할 수 있습니다. 
 
 ### JavaScript 런타임 환경
 {: #openwhisk_ref_javascript_environments}
@@ -308,6 +266,7 @@ JavaScript 조치는 기본적으로 Node.js 버전 6.9.1 환경에서 실행됩
 - node-uuid v1.4.7
 - nodemailer v2.6.4
 - oauth2-server v2.4.1
+- openwhisk v3.0.0
 - pkgcloud v1.4.0
 - process v0.11.9
 - pug v2.0.0-beta6
@@ -359,6 +318,7 @@ JavaScript 조치는 기본적으로 Node.js 버전 6.9.1 환경에서 실행됩
 - nano v5.10.0
 - node-uuid v1.4.2
 - oauth2-server v2.4.0
+- openwhisk v3.0.0
 - process v0.11.0
 - request v2.79.0
 - rimraf v2.5.1
@@ -496,7 +456,9 @@ OpenWhisk API는 웹 클라이언트에서 요청-응답 호출을 지원합니�
 {: #openwhisk_syslimits}
 
 ### 조치
-{{site.data.keyword.openwhisk_short}}에는 조치가 사용할 수 있는 메모리 양, 시간당 허용되는 조치 호출 수 등을 포함하여 시스템 한계가 있습니다. 다음 표에서는 조치에 대한 기본 한계를 나열합니다. 
+{{site.data.keyword.openwhisk_short}}에는 조치가 사용할 수 있는 메모리 양, 분당 허용되는 조치 호출 수 등을 포함하여 시스템 한계가 있습니다.  
+
+다음 표에서는 조치에 대한 기본 한계를 나열합니다. 
 
 | 한계 | 설명 | 구성 가능 | 단위 | 기본값 |
 | ----- | ----------- | ------------ | -----| ------- |
@@ -567,7 +529,7 @@ OpenWhisk API는 웹 클라이언트에서 요청-응답 호출을 지원합니�
 
 ### 트리거
 
-트리거는 아래 표에 설명된 대로 분당 및 시간당 실행률에 따라 달라집니다. 
+트리거는 아래 표에 설명된 대로 분당 실행률에 따라 달라집니다. 
 
 | 한계 | 설명 | 구성 가능 | 단위 | 기본값 |
 | ----- | ----------- | ------------ | -----| ------- |

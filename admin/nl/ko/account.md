@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2015, 2016
-lastupdated: "2016-12-05"  
+  years: 2015, 2017
+lastupdated: "2017-01-09"
 
 
 ---
@@ -26,7 +26,7 @@ lastupdated: "2016-12-05"
 
 기존 IBM ID를 사용하거나, 새 IBM ID를 작성하거나, 연합 ID를 사용하여 {{site.data.keyword.Bluemix_notm}} 계정에 등록할 수 있습니다. 연합 ID는 도메인과 사용자 신임 정보를 사용하여 IBM 웹 애플리케이션에 액세스할 수 있도록 IBM에 등록된 회사의 도메인 내에서 사용되는 ID입니다.   
 
-사용자 회사에서 등록할 수 있도록 IBM과 이미 작업을 한 경우에만 연합 ID를 사용하여 {{site.data.keyword.Bluemix_notm}}에 등록할 수 있습니다. 회사의 도메인을 IBM에 등록하면 사용자가 기존 회사 사용자 신임 정보를 사용하여 IBM 제품과 서비스에 로그인할 수 있습니다. 그런 다음 회사의 ID 제공자가 인증을 처리합니다. 연합 ID를 사용하여 {{site.data.keyword.Bluemix_notm}}에 로그인하는 경우 회사의 로그인 페이지를 통해 로그인하도록 프롬프트가 표시됩니다. 회사 또는 조직의 도메인을 IBM에 등록하도록 요청하는 방법에 대한 정보 또는 프로세스에 대한 자세한 정보는 [IBM ID Enterprise Federation Adoption Guide](https://ibm.box.com/v/IBMid-Federation-Guide){: #new_window}의 내용을 참조하십시오. 연합 ID 등록을 요청하는 경우 오퍼링 중재자 또는 클라이언트 중재자와 같은 IBM 스폰서가 필요합니다. 
+사용자 회사에서 등록할 수 있도록 IBM과 이미 작업을 한 경우에만 연합 ID를 사용하여 {{site.data.keyword.Bluemix_notm}}에 등록할 수 있습니다. 회사의 도메인을 IBM에 등록하면 사용자가 기존 회사 사용자 신임 정보를 사용하여 IBM 제품과 서비스에 로그인할 수 있습니다. 그런 다음 회사의 ID 제공자가 인증을 처리합니다. 연합 ID를 사용하여 {{site.data.keyword.Bluemix_notm}}에 로그인하는 경우 회사의 로그인 페이지를 통해 로그인하도록 프롬프트가 표시됩니다. 회사 또는 조직의 도메인을 IBM에 등록하도록 요청하는 방법에 대한 정보 또는 프로세스에 대한 자세한 정보는 [IBMid Enterprise Federation Adoption Guide ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://ibm.box.com/v/IBMid-Federation-Guide){: new_window}를 참조하십시오. 연합 ID 등록을 요청하는 경우 오퍼링 중재자 또는 클라이언트 중재자와 같은 IBM 스폰서가 필요합니다. 
 
 | 등록 방법       | 세부사항 |    
 |-----------------|---------|
@@ -45,6 +45,20 @@ lastupdated: "2016-12-05"
 ### 플랫폼 알림 설정
 
 {{site.data.keyword.Bluemix_notm}} 인시던트와 계획된 유지보수에 대한 이메일 알림을 설정하려면 **계정** &gt; **알림** &gt; **플랫폼**을 클릭하십시오. 각 옵션을 선택하거나 선택 취소하여 이메일 알림을 사용 또는 사용 안함으로 설정할 수 있습니다.
+
+<!-- staging only
+
+**Note**: You are always alerted by email about emergencies and pricing changes.
+
+On the **Platform** tab you can also customize notifications for your orgs, spaces, or applications. Complete the following steps to add a customized notification:
+
+<ol>
+<li>Select **Add a Notification**.</li>
+<li>Use the search field to find the org, application, service, or resource that you want to set a notification for, or expand the item in the pre-populated list.</li>
+<li>Select *Email* to set the notification type.</li>
+</ol>
+
+staging only end -->
 
 ### 지출 알림 설정
 {: #spendingnotifications}
@@ -72,11 +86,11 @@ lastupdated: "2016-12-05"
 ## 사용량 보기
 {: #acctusage}
 
-계정 소유자 또는 조직의 청구 관리자는 사용량 대시보드 보기를 사용하여 조직에서 매달 사용하는 런타임, 컨테이너, 서비스 및 지원에 대한 실시간 요금을 확인할 수 있습니다. 모든 지역의 런타임 GB-시간 및 서비스 사용량을 확인하거나 특정 지역을 확인하도록 선택할 수 있습니다.
+조직의 계정 소유자 또는 청구 관리자는 사용량 대시보드 페이지를 사용하여 조직에서 매달 사용하는 런타임, 컨테이너, 서비스 및 지원에 대한 실시간 요금을 확인할 수 있습니다. 모든 지역의 런타임 GB-시간 및 서비스 사용량을 확인하거나 특정 지역을 확인하도록 선택할 수 있습니다.
 
-사용량 대시보드 보기를 열려면 **계정** &gt; *your_account_name* &gt; **사용량 대시보드**를 클릭하십시오. 청구 관리자는 청구 관리자를 맡고 있는 조직에 대한 세부사항만 확인할 수 있습니다. 
+사용량 대시보드 페이지를 열려면 **계정** &gt; *your_account_name* &gt; **사용량 대시보드**를 클릭하십시오. 청구 관리자는 청구 관리자를 맡고 있는 조직에 대한 세부사항만 확인할 수 있습니다. 
 
-각 청구 주기가 끝날 때 모든 조직에서 발생한 총 사용량이 계정 소유자에게 청구됩니다. 계정 소유자는 지역 및 조직별로 사용량 요약을 필터링할 수 있습니다. 특정 월을 클릭하여 해당 월의 사용량을 확인할 수도 있습니다. 
+각 청구 주기가 끝날 때 모든 조직에서 발생한 총 사용량이 계정 소유자에게 청구됩니다. 계정 소유자는 지역 및 조직별로 사용량 요약을 필터링할 수 있습니다. 특정 월을 클릭하여 해당 월의 사용량을 확인할 수도 있습니다. 계정의 모든 조직에 대한 사용량을 확인하려면 **조직** 목록에서 **모든 조직**을 선택하십시오. 
 
 ## 청구 정보 업데이트
 {: #account_billing}

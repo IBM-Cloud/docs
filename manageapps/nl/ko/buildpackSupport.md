@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2016, 2017
 lastupdated: "2016-10-10"
 
 ---
@@ -17,8 +17,7 @@ lastupdated: "2016-10-10"
 ## 기본 제공 IBM 빌드팩
 {: #built-in_ibm_buildpacks}
 
-[Liberty for Java](/docs/runtimes/liberty/index.html), [SDK for Node.js](/docs/runtimes/nodejs/index.html) 및 [ASP.NET Core](/docs/runtimes/dotnet/index.html)의 경우, IBM은 두 버전(n 및 n - 1)을 지원합니다(예: IBM Liberty Buildpack v1.22 및 IBM Liberty Buildpack v1.21).
-각 빌드팩은 그에 해당하는 런타임의 주 버전을 필요에 따라 하나 이상 제공하고 지원합니다(예: IBM SDK, Java Technology Edition 버전 7 릴리스 1 및 버전 8). 빌드팩은 일반적으로 한 달에 한 번 사용 가능한 런타임의 최신 부 버전으로 새로 고쳐집니다.  
+[Liberty for Java](/docs/runtimes/liberty/index.html), [SDK for Node.js](/docs/runtimes/nodejs/index.html) 및 [ASP.NET Core](/docs/runtimes/dotnet/index.html)의 경우, IBM은 두 버전(n 및 n - 1)을 지원합니다(예: IBM Liberty Buildpack v1.22 및 IBM Liberty Buildpack v1.21). 각 빌드팩은 그에 해당하는 런타임의 주 버전을 필요에 따라 하나 이상 제공하고 지원합니다(예: IBM SDK, Java Technology Edition 버전 7 릴리스 1 및 버전 8). 빌드팩은 일반적으로 한 달에 한 번 사용 가능한 런타임의 최신 부 버전으로 새로 고쳐집니다. 
 
 [IBM Bluemix Runtime for Swift](/docs/runtimes/swift/index.html)의 경우 IBM은 [Swift.org](http://swift.org)에서 사용 가능한 Swift의 최신 버전과 일치하는 빌드팩에 대한 지원을 제공합니다. 빌드팩에 대한 업데이트는 사용 가능한 최신 Swift 릴리스 버전과 일치합니다. 
 

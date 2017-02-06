@@ -11,10 +11,7 @@ lastupdated: "2016-11-03"
 # Data & Analytics
 {: #data_analytics}
 
-풍부한 통합 클라우드 데이터베이스 및 분석 서비스로 더 많은 작업을 수행할 수 있습니다.
-서비스 탐색 외에 데이터 조작 콘솔을 사용하여 사용자 서비스로 데이터를 가져오고
-데이터 구동 앱을 빌드하며 사용자 데이터를 분석할 수 있는데, 이 모두를 하나의 중심 위치에서 수행합니다.
-{{site.data.keyword.Bluemix_notm}} 대시보드의 `Data & Analytics` 타일에서 [데이터 조작](https://console.ng.bluemix.net/data/services/)을 클릭하십시오.
+풍부한 통합 클라우드 데이터베이스 및 분석 서비스로 더 많은 작업을 수행할 수 있습니다. 서비스 탐색 외에 데이터 조작 콘솔을 사용하여 사용자 서비스로 데이터를 가져오고 데이터 구동 앱을 빌드하며 사용자 데이터를 분석할 수 있는데, 이 모두를 하나의 중심 위치에서 수행합니다. {{site.data.keyword.Bluemix_notm}} 대시보드의 `Data & Analytics` 타일에서 [데이터 조작](https://console.ng.bluemix.net/data/services/)을 클릭하십시오.
 {:shortdesc}
 
 

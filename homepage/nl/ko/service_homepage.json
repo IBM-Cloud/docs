@@ -26,23 +26,18 @@
     "href": "containers/container_index.html",
     "category_id": "compute"
   }, {
-    "id": "vm",
-    "title": "IBM Virtual Servers",
-    "href": "virtualmachines/vm_index.html",
-    "category_id": "compute"
-  }, {
     "type": "extra",
-    "title": "데이터 작업 시도",
+    "title": "데이터 관련 작업 수행해 보기",
     "href": "services/WorkWithData/index.html",
     "category_id": "data"
   }, {
     "type": "extra",
-    "title": "Dedicated GitHub Enterprise 시도",
+    "title": "Dedicated GitHub Enterprise 사용해 보기",
     "href": "services/ghededicated/index.html",
     "category_id": "devops"
   }, {
     "type": "extra",
-    "title": "모바일 프로젝트 빌드 시도",
+    "title": "모바일 프로젝트 빌드해 보기",
     "href": "mobile/index.html",
     "category_id": "mobile"
   }]

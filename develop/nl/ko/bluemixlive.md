@@ -28,9 +28,7 @@ Node.js 애플리케이션을 빌드하고 있는 경우, {{site.data.keyword.Bl
 Dropbox의 작동 방식과 유사하게, 데스크탑 디렉토리 트리를 클라우드 기반 프로젝트 작업공간과 동기화할 수 있습니다. Web IDE의 경우 동일한 클라우드 기반 작업공간을 직접 편집하므로 둘 다 동기화 상태로 유지됩니다. Desktop Sync는 모든 종류의 애플리케이션에서 작동합니다. Desktop Sync를 사용하려면 BL 명령행 인터페이스를 다운로드하여 설치해야 합니다.  
 
 **Live Edit**
-{{site.data.keyword.Bluemix_notm}}에서 실행 중인 Node.js 애플리케이션을 변경하고
-브라우저에서 즉시 테스트할 수 있습니다. 동기화된 데스크탑 디렉토리 또는 Web IDE 에서 변경한 사항은
-애플리케이션의 파일 시스템으로 즉시 전파됩니다.  
+{{site.data.keyword.Bluemix_notm}}에서 실행 중인 Node.js 애플리케이션을 변경하고 브라우저에서 즉시 테스트할 수 있습니다. 동기화된 데스크탑 디렉토리 또는 Web IDE 에서 변경한 사항은 애플리케이션의 파일 시스템으로 즉시 전파됩니다.  
 
 **Debug**  
 Node.js 애플리케이션이 Live Edit 모드일 경우 이를 쉘로 전환하여 디버그할 수 있습니다. 노드 검사기 디버거를 사용하여 동적으로 코드 편집, 중단점 삽입, 코드 스텝 스루, 런타임 다시 시작 등을 수행할 수 있습니다.  
@@ -51,7 +49,7 @@ Bluemix Live Sync의 Desktop Sync 기능을 사용하여 데스크탑에서처�
 Desktop Sync를 사용할 경우 다음 사항을 고려하십시오.
 * Desktop Sync는 다음 운영 체제에서 실행됩니다.
   * Windows 7 또는 8
-  * Mac OS X 버전 10.9 이상
+  * Mac OS X 버전 10.9 이상  
       **참고:** Windows의 경우 .NET Framework 버전 4.5가 필요합니다. .NET이 설치되어 있지 않은 경우, {{site.data.keyword.Bluemix_notm}} Live Sync 명령행 인터페이스(CLI)를 설치할 때 이를 설치하라는 메시지가 표시됩니다.  
 * Git 저장소를 복제할 필요는 없습니다.
 * 개발하고 있는 애플리케이션의 유형에 관계없이 데스크탑 프로젝트를 클라우드 작업공간과 동기화할 수 있습니다.
@@ -160,8 +158,7 @@ Debug에는 다음과 같은 기능이 포함되어 있습니다.
 
 2. 환경 변수를 설정하십시오.  
 
-    a. `manifest.yml` 파일에서 다음 변수를 추가하십시오. 
-	
+    a. `manifest.yml` 파일에서 다음 변수를 추가하십시오.	
 	```
 	env:
       ENABLE_BLUEMIX_DEV_MODE: "true"
@@ -246,7 +243,7 @@ ss *status*: {{site.data.keyword.Bluemix_notm}}에서 실행 중인 애플리케
 
 **참고:** 인수 또는 옵션에 공백이 포함되어 있으면 값을 큰따옴표로 묶으십시오.
 
-## 도움말
+## Help
 {: bl_help}
 
 ```
@@ -254,7 +251,7 @@ bl [ command ] --help | --h
 ```
 {: pre}
 
-**사용량**
+**사용법**
 
 이 명령을 사용하면 명령 또는 명령 목록에 대한 도움말이 표시됩니다. 
 
@@ -274,7 +271,7 @@ bl sync --help
 ```
 {: pre}
 
-## 로그인
+## Login
 {: bl_login}
 
 ```
@@ -323,7 +320,7 @@ bl login –u name@company.com –p “pa55 w0rd”
 ```
 {: pre}
 
-## 로그아웃
+## Logout
 {: bl_logout}
 
 ```
@@ -335,7 +332,7 @@ bl logout | lo
 
 이 명령을 사용하면 로그아웃됩니다. 
 
-## 프로젝트
+## Projects
 {: bl_projects}
 
 ```
@@ -347,7 +344,7 @@ bl projects | p
 
 이 명령을 사용하면 로그인한 사용자가 동기화할 수 있는 모든 프로젝트가 나열됩니다. 
 
-## 동기화
+## Sync
 {: bl_sync}
 
 ```
@@ -403,7 +400,7 @@ bl sync myproject –d  myfolder
 ```
 {: pre}
 
-## 작성
+## Create
 {: bl_create}
 
 ```
@@ -453,7 +450,7 @@ bl create -n myNewProject --public
 ```
 {: pre}
 
-## 상태
+## Status
 {: bl_status}
 
 ```
@@ -492,7 +489,7 @@ bl status “my pro ject”
 ```
 {: pre}
 
-## 시작
+## Start
 {: bl_start}
 
 ```
@@ -552,7 +549,7 @@ bl start
 ```
 {: pre}
 
-## 중지
+## Stop
 {: bl_stop}
 
 ```
