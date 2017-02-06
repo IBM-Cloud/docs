@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-20"
+  years: 2016, 2017
+lastupdated: "2017-02-06"
 
 ---
 <!-- Copyright info and last updated date at top of file: REQUIRED
@@ -80,7 +80,7 @@ Complete the following steps:
  If you are deploying a pre-built template, you do not need to change the template code displayed in the **Template Code Editor**.
 4. Click **Next**.
 5. Enter the required deployment parameters and click **Deploy**. The instance window is displayed.
-6. In the instance window, you can see the instance status, the instance information, and the related resource details. You can view or donwload the instance logs and you can also access the template from which the instance was deployed.
+6. In the instance window, you can see the instance status, the instance information, and the related resource details. You can view or download the instance logs and you can also access the template from which the instance was deployed.
 
  When the deployment is completed, for each related resource, you can access the console (if existing) and eventually perform the actions listed by clicking in the **ACTIONS** column.
  
