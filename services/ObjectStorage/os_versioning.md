@@ -32,8 +32,6 @@ Object versioning is a way for a user to store an object that might change. With
 </dl>
 
 
-Figure 1. Object versioning overview
-
 
 #### Tutorial
 
