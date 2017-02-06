@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-20"
+  years: 2016, 2017
+lastupdated: "2017-02-06"
 
 ---
 <!-- Copyright info and last updated date at top of file: REQUIRED
