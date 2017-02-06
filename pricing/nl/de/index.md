@@ -457,9 +457,9 @@ Geben Sie zum Aktualisieren des Serviceplans den folgenden Befehl ein:
 ```
 cf update-service <Servicename> [-p <neuer Plan>]
 ```
-# Zugehörige Links
+# rellinks
 {: rellinks}
-## Allgemein
+## general
 {: general} 
 * [{{site.data.keyword.Bluemix_notm}} - Preisliste](https://console.{DomainName}/pricing/)
 * [{{site.data.keyword.Bluemix_notm}} Developers Community Forum ![Symbol für externen Link](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/){: new_window}
