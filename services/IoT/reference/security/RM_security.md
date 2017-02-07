@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016, 2017
+lastupdated: "2017-02-07"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # Risk and Security Management
 {: #RM_security}
-Last updated: 2017-02-02
-{: .last-updated}
 
 The Risk and Security Management add-on enables organizations to enhance {{site.data.keyword.iot_full}} security by creating, enforcing, and reporting on device connection security. With this add-on, certificates and transport layer security (TLS) authentication are used, on top of the user IDs and tokens that are used by {{site.data.keyword.iot_short_notm}} to determine how and where devices connect with the platform. During communication between devices and the server, any devices that do not have valid certificates with server access, as configured in the Risk and Security Management add-on, are denied access, even if they use valid user IDs and passwords.
 
