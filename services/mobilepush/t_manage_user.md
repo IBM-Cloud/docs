@@ -12,7 +12,7 @@ copyright:
 
 # Registering a device with userId
 {: #register_device_with_userId}
-Last updated: 11 January 2017
+Last updated: 06 February 2017
 {: .last-updated}
 
 To register for userId-based notification, complete the following steps:
@@ -22,7 +22,7 @@ To register for userId-based notification, complete the following steps:
 
 Initialize the MFPPush class with the `AppGUID` and `clientSecret` key of {{site.data.keyword.mobilepushshort}} service.
 ```
-// Initialize the MFPPush
+// Initialize the Push Notifications service
 push = MFPPush.getInstance();
 push.initialize(getApplicationContext(),"AppGUID", "clientSecret");
 ```
@@ -33,22 +33,21 @@ push.initialize(getApplicationContext(),"AppGUID", "clientSecret");
 - **clientSecret**: This is the clientSecret key of the {{site.data.keyword.mobilepushshort}} service.
 
   Use the **registerDeviceWithUserId** API to register the device for {{site.data.keyword.mobilepushshort}}.
+
 ```
-// Register the device to {{site.data.keyword.mobilepushshort}}.
+// Register the device to Push Notifications
 push.registerDeviceWithUserId("userId",new MFPPushResponseListener<String>() {
-  @Override
-  public void onSuccess(String deviceId) {
-    Log.d("Device is registered with Push Service.");
-  }
-  @Override
-  public void onFailure(MFPPushException ex) {
-      Log.d("Error registering with Push Service...\n"
-      + "Push notifications will not be received.");
-  }
-});
+		@Override
+		public void onSuccess(String response) {
+		Log.d("Device is registered with Push Service.");}
+		@Override
+		public void onFailure(MFPPushException ex) {
+		  Log.d("Error registering with Push Service...\n"
+   		  + "Push notifications will not be received.");
+		}
+		});
 ```
 	{: codeblock}
-
 
 - **userId**: Pass the unique userId value for registering for {{site.data.keyword.mobilepushshort}}.
 
@@ -60,7 +59,7 @@ push.registerDeviceWithUserId("userId",new MFPPushResponseListener<String>() {
 Use the following APIs to register for UserId based {{site.data.keyword.mobilepushshort}}.
 
 ```
-// Register device for push notification with UserId
+// Register device for Push Notification with UserId
 var options = {"userId": "Your User Id value"};
 BMSPush.registerDevice(options,success, failure); 
 ```
@@ -87,7 +86,7 @@ push.initializeWithAppGUID("appGUID", clientSecret:"clientSecret")
 Use the **registerWithUserId** API to register the device for {{site.data.keyword.mobilepushshort}}.
 
 ```
-// Register the device to Push Notifications service.
+// Register the device to Push Notifications service
 push.registerWithDeviceToken("deviceToken", WithUserId: "userId")  { (response, statusCode, error) -> Void in
 if error.isEmpty {
   print( "Response during device registration : \(response)")
