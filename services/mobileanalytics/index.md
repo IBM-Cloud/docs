@@ -31,7 +31,7 @@ To quickly get the {{site.data.keyword.mobileanalytics_short}} service up and ru
 3. Import the Client SDKs and initialize them with the following code snippet to record usage analytics:
 
 	#### Android
-	{: #android-import}
+	{: #android-import notoc}
 
 	Add the following `import` statements to the beginning of your project file:
 	
@@ -43,7 +43,7 @@ To quickly get the {{site.data.keyword.mobileanalytics_short}} service up and ru
     {: codeblock}
   
  #### iOS
- {: #ios-import}
+ {: #ios-import notoc}
 	
  **Note:** The Swift SDK is available for iOS and watchOS.
 	
@@ -56,7 +56,7 @@ To quickly get the {{site.data.keyword.mobileanalytics_short}} service up and ru
    {: codeblock}  
    
  #### Cordova
- {: #cordova-import}
+ {: #cordova-import notoc}
 		
  Add the Cordova plugin by running the following command from your Cordova application root directory:
 
@@ -68,7 +68,7 @@ To quickly get the {{site.data.keyword.mobileanalytics_short}} service up and ru
 4. Initialize the {{site.data.keyword.mobileanalytics_short}} Client SDK in your application code to record usage analytics and application sessions, using your [API Key](/docs/services/mobileanalytics/sdk.html#analytics-clientkey) value.	
 	
  #### Android
- {: #android-initialize}	
+ {: #android-initialize notoc}	
 
   ```
   BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_US_SOUTH); // You can change the region
@@ -82,7 +82,7 @@ To quickly get the {{site.data.keyword.mobileanalytics_short}} service up and ru
  Set the value for `hasUserContext` to **true** or **false**. If false (default value), each device is counted as an active user.
 
  #### iOS
- {: #ios-initialize}
+ {: #ios-initialize notoc}
   
   Initialize the Client SDK inside your application code to record usage analytics and application sessions, using your [API Key](/docs/services/mobileanalytics/sdk.html#analytics-clientkey) value.
 	
@@ -98,7 +98,7 @@ To quickly get the {{site.data.keyword.mobileanalytics_short}} service up and ru
  Set the value for `hasUserContext` to **true** or **false**. If false (default value), each device is counted as an active user.
 	
  #### Cordova
- {: #cordova-initialize}
+ {: #cordova-initialize notoc}
 	
  Initialize the Client SDK inside your application code to record usage analytics and application sessions, using your [API Key](/docs/services/mobileanalytics/sdk.html#analytics-clientkey) value.
 	
@@ -118,7 +118,7 @@ To quickly get the {{site.data.keyword.mobileanalytics_short}} service up and ru
 5. Send recorded usage analytics to the {{site.data.keyword.mobileanalytics_short}} Service. A simple way to test your analytics is to run the following code when your application starts:
 
 	#### Android
-	{: #android-send}
+	{: #android-send notoc}
 
 	Use the `Analytics.send()` method to send analytics data to the server. You can place the `Analytics.send()` method anywhere in the `onCreate` method of the main activity in your Android application, or in a location that works best for your project. 
 	
@@ -130,7 +130,7 @@ To quickly get the {{site.data.keyword.mobileanalytics_short}} service up and ru
 	{: codeblock}
 
 	#### iOS
-	{: #ios-send}
+	{: #ios-send notoc}
 
 	Use the `Analytics.send` method to send analytics data to the server. You can place the `Analytics.send` method anywhere in the `application(_:didFinishLaunchingWithOptions:)` method of your application delegate, or in a location that works best for your project. 
 
@@ -140,7 +140,7 @@ To quickly get the {{site.data.keyword.mobileanalytics_short}} service up and ru
 	{: codeblock}
 	
 	#### Cordova
-	{: #cordova-send}
+	{: #cordova-send notoc}
 	
 	Use the `BMSAnalytics.send` method to send analytics data to the server. Place the `BMSAnalytics.send` method in a location that works best for your project.
 	
@@ -156,13 +156,15 @@ To quickly get the {{site.data.keyword.mobileanalytics_short}} service up and ru
 7. Go to the {{site.data.keyword.mobileanalytics_short}} Console to see usage analytics for your application. You can also monitor your application by <!--[creating custom charts](app-monitoring.html#custom-charts),-->[setting alerts](/docs/services/mobileanalytics/app-monitoring.html#alerts) and [monitoring app crashes](/docs/services/mobileanalytics/app-monitoring.html#monitor-app-crash).
 
 
-# rellinks
+# Related Links
+{: #rellinks notoc}
 
 ## SDK
+{: #sdk notoc}
 * [Android SDK ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics){: new_window}  
 * [iOS SDK ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics){: new_window}
 * [Cordova Plugin Core SDK ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.npmjs.com/package/bms-core){: new_window}
 
 ## API Reference
-{: #api}
+{: #api notoc}
 * [REST API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}
