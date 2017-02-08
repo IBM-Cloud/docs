@@ -12,7 +12,7 @@ years: 2015, 2017
 
 # Enabling web applications to receive {{site.data.keyword.mobilepushshort}}
 {: #web_notifications}
-Last updated: 18 January 2017
+Last updated: 08 February 2017
 {: .last-updated}
 
 You can enable Google Chrome, Mozilla Firefox and Safari web applications to receive {{site.data.keyword.mobilepushshort}}. Ensure that you have gone through [Configuring credentials for a notification provider](t__main_push_config_provider.html) before proceeding with the steps.
@@ -72,17 +72,18 @@ The `App Region` specifies the location where the {{site.data.keyword.mobilepush
  - For UK:			 `.eu-gb.bluemix.net`
  - For Sydney:		 `.au-syd.bluemix.net`
 
-``` var bmsPush = new BMSPush();
- function callback(response) {
- alert(response.response)
- }
-  var initParams = {
-  "appGUID":"push app GUID",
-  "appRegion":"Region where service hosted",
-   "clientSecret":"clientSecret of your push service"
-   "websitePushIDSafari": "Optional parameter for Safari Push Notifications only. The value should match the website Push ID provided during the server side configuration."
+```
+	var bmsPush = new BMSPush();
+ 	function callback(response) {
+ 	alert(response.response)
+ 	}
+  	var initParams = {
+  	"appGUID":"push app GUID",
+  	"appRegion":"Region where service hosted",
+   	"clientSecret":"clientSecret of your push service"
+   	"websitePushIDSafari": "Optional parameter for Safari Push Notifications only. The value should match the website Push ID provided during the server side configuration."
     }
-  bmsPush.initialize(initParams, callback)
+  	bmsPush.initialize(initParams, callback)
 ```
 	{: codeblock}
 
@@ -100,8 +101,10 @@ Use the **register()** API to register the device with {{site.data.keyword.mobil
 - For registering from Mozilla Firefox, add website URL in the Bluemix {{site.data.keyword.mobilepushshort}} service web configuration dashboard under Firefox setup.
 
 Use the following code snippet to register in Bluemix {{site.data.keyword.mobilepushshort}} service.
-```var bmsPush = new BMSPush();
-function callback(response) {
+
+```
+	var bmsPush = new BMSPush();
+	function callback(response) {
      alert(response.response)
   }
   var initParams = {
