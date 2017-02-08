@@ -91,6 +91,19 @@ Account owners and organization managers can invite team members to orgs from th
 
 Click **View Pending** to check if invites are pending or accepted. You can choose to resend the invitation email or cancel the invitation for a pending invite at any time.
 
+
+### Adding SoftLayer team members
+
+If you have a SoftLayer account linked with your Bluemix account, you can add your SoftLayer team members.
+
+1. Go to **Account** > **Invite Team Members**.  
+2. Click **Add** in the **Add SoftLayer Team Members** section to authenticate into your SoftLayer account and view a list of team members from your SoftLayer account.
+
+Adding team members to your Bluemix account does not grant them access to Bluemix Infrastructure. To give users access to the Infrastructure dashboard, go to **Infrastructure** > **Account** > **Users** and click the **Add User** link. You must have permission to add users.
+
+For more information about adding team members from your SoftLayer account, see [Inviting SoftLayer team members to Bluemix](https://console.ng.bluemix.net/docs/admin/softlayerlink.html#invite_users).
+
+
 ## Editing roles
 {: #editinguserroles}
 
