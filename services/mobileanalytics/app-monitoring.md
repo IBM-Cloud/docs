@@ -19,13 +19,13 @@ The {{site.data.keyword.mobileanalytics_full}} provides monitoring and analytics
 <!--
 
 ## Visualizing data with custom charts
-{: #custom-charts}
+{: #custom-charts notoc}
 
 You can visualize the collected analytics data in your analytics repository. This visualization is a powerful way to inspect data for specific use cases. You can create charts with data that is already collected by Operational Analytics, in addition to custom data that you report.
 
 
 ### Creating custom charts for app logs
-{: #custom-charts-client-logs}
+{: #custom-charts-client-logs notoc}
 
 You can create a custom chart for app logs that contain log information that is sent with the Logger API for the platform. The log information also includes contextual information about the device, including environment, app name, and app version.
 
@@ -58,7 +58,7 @@ In this example, you use app log data to create a flow chart. The final graph sh
 7. Click **Save**
 
 ### Exporting custom data
-{: #export-custom-data}
+{: #export-custom-data notoc}
 
 You can export the data from each custom chart into JSON, XML, or CSV format.
 
@@ -67,7 +67,7 @@ The structure of the exported data depends on the chart that is being exported. 
 
 
 ### Exporting and importing custom chart definitions
-{: #export-import-custom}
+{: #export-import-custom notoc}
 
 You can import and export custom chart definitions programmatically or manually in the {{site.data.keyword.mobileanalytics_short}} Dashboard.
 
@@ -97,7 +97,7 @@ You can set thresholds in alert definitions in the {{site.data.keyword.mobileana
 You can configure thresholds, which if exceeded, trigger alerts to notify the {{site.data.keyword.mobileanalytics_short}} console monitor. The triggered alerts can be visualized on the console, or the alerts can be handled by a custom webhook. <!-- This feature provides a proactive means of detecting app log errors, server log errors, extended periods of network latency, and authentication failures.--> This feature provides a proactive means of detecting application log errors and application crashes server log errors. Reactive thresholds and alerts keep you from having to sift through your data and set thresholds at a wide spectrum of granularity.
 
 ### Creating an alert definition for application logs
-{: #alert-def-client-logs}
+{: #alert-def-client-logs notoc}
 
 You can create an alert definition that is based on application logs.
 
@@ -131,7 +131,7 @@ In this example, you use application log data to create an alert definition. The
 You created an alert definition to trigger an alert at the end of each 5 minute interval if the number of app logs reached your threshold of 3 or more error logs.
 
 ### Creating an alert definition for application crashes
-{: #alert-def-app-crash}
+{: #alert-def-app-crash notoc}
 
 You can create an alert definition based on application crashes.
 
@@ -160,7 +160,7 @@ In this example, you use application crash data to create an alert definition. T
 5. Click **Save**.
 
 ### Managing alert definitions
-{: #managing-alert-definitions}
+{: #managing-alert-definitions notoc}
 
 In this example, you manage your alert definitions from the Alert Management page.
 
@@ -171,7 +171,7 @@ In this example, you manage your alert definitions from the Alert Management pag
 5. Optional: Click the **Trash** icon if you want to delete an alert definition.
 
 ### Viewing alert details
-{: #viewing-alert-details}
+{: #viewing-alert-details notoc}
 
 In this example, you view the details of your triggered alerts from the Alert Log page.
 
@@ -190,7 +190,7 @@ In this example, you view the details of your triggered alerts from the Alert Lo
 You can view information about your application crashes in the {{site.data.keyword.mobileanalytics_short}} console to better monitor and troubleshoot your applications.
 
 ### Application crash monitoring
-{: #app-crash}
+{: #app-crash notoc}
 
 On the **Crashes** page, The **Crash Overview** table shows the following data columns:
 
@@ -207,7 +207,7 @@ You can display crash data in two ways:
 2. Display total crashes: total crashes over time
 
 ### App crash troubleshooting
-{: #app-crash-troubleshooting}
+{: #app-crash-troubleshooting notoc}
 
 The **Troubleshooting** page in the <!-- **Applications** section of the --> {{site.data.keyword.mobileanalytics_short}} console offers a granular view of your app crashes, using the **Crash Summary** table.
 
