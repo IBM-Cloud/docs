@@ -19,12 +19,12 @@ lastupdated: "2016-12-05"
 # Managing team members and roles
 {: #userroles}
 
-From the **Team Directory** page for your account, you can manage existing team members and their roles in your organization and spaces, as well as invite new team members. To access the team directory for your account, click the **Team Directory** link from the Account Users page.
+From the **Team Directory** page for your account, you can manage existing team members and their roles in your organization and spaces, as well as invite new team members. To access the team directory for your account, click **Account** > **Team Directory**. 
 {:shortdesc}
 
 Account owners perform all operations on organizations and spaces including managing team members and their assigned roles. Organization managers  have access to invite team members and manage roles. Space managers can use the **Manage Organizations** page to add existing account members to the space and adjust their roles. Check out the following information to learn more about roles.
 
-#### Roles
+## Roles
 {: #userrolesinfo}
 
 At the account level, there are two roles that enable access to different account management features:
@@ -57,7 +57,7 @@ The following roles can be assigned at the space level:
 
 **Note**: Team members that are assigned the manager or developer space role can access the VCAP_SERVICES environment variable. However, a team member that is assigned the auditor role can't access VCAP_SERVICES.
 
-#### Adjusting visibility of the team directory
+## Adjusting visibility of the team directory
 {: #teamdirectoryvisibility}
 
 Depending on how you have your {{site.data.keyword.Bluemix_notm}} accounts and organizations set up, you might want to change the visibility of the team directory page. By default, all team members within your account can see the full list of account team members, including all members of all organizations within the account. You might have privacy concerns or security reasons that prompt you to adjust the visibility of the team directory page. You have two options for setting the visibility of the team directory page: all team members or just you as the account owner.
@@ -69,7 +69,7 @@ To change the visibility of the team directory page complete the following steps
 3. Then, select **All** or **Just me** based on the current needs for your account.
 4. Then, click **Save**.
 
-#### Inviting team members
+## Inviting team members
 {: #inviteteammembers}
 
 Account owners and organization managers can invite team members to orgs from the Invite Team Members page. When you add new team members, except in a local or dedicated environment, they are assigned the auditor roles automatically. You can change the roles later on the Team Directory page. To invite a team member, complete these steps:
@@ -91,7 +91,7 @@ Account owners and organization managers can invite team members to orgs from th
 
 Click **View Pending** to check if invites are pending or accepted. You can choose to resend the invitation email or cancel the invitation for a pending invite at any time.
 
-#### Editing roles
+## Editing roles
 {: #editinguserroles}
 
 Account owners and organization managers can edit organization and space roles for existing team members on the **Team Directory** page.
@@ -115,7 +115,7 @@ Space managers can edit roles for the team members in their space on the **Manag
 6. Select or clear the space role option for the role that you want to add or remove for the team member.
 7. Then, click **Save**.
 
-#### Removing team members
+## Removing team members
 {: #removingteammembers}
 
 Account owners and organization managers can remove team members from an account by using the **Team Directory** page. To remove a team member, complete the following steps:
