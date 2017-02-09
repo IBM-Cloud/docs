@@ -4,10 +4,9 @@
 
 copyright:
 
-  years: 2015 2016
+  years: 2015，2017
 
-lastupdated: "2016-10-05"
-
+lastupdated: "2017-01-12"
 
 
 ---
@@ -29,54 +28,52 @@ lastupdated: "2016-10-05"
 {:service_instance_name: data-hd-keyref="service_instance_name"}
 {:user_ID: data-hd-keyref="user_ID"}
 
-# Despliegue de la app con la interfaz de línea de mandatos
-Última actualización: 5 de octubre de 2016
-{: .last-updated}
+# Descargue, modifique y vuelva a desplegar la app Cloud Foundry con la interfaz de línea de mandatos
 
-Puede utilizar la interfaz de línea de mandatos para desplegar y modificar app e instancias de servicio.
-{:shortdesc}
+Utilice la interfaz de línea de mandatos de Cloud Foundry para descargar, modificar y volver a desplegar aplicaciones e instancias de servicio de Cloud Foundry.{:shortdesc}
 
-Antes de empezar, instale las interfaces de línea de mandatos de {{site.data.keyword.Bluemix}} y Cloud Foundry.
+Antes de empezar, descargue e instale la interfaz de línea de mandatos de Cloud Foundry.  
 
 <p>
-<a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(Se abre en un separador o ventana nueva)"><img class="image" src="images/btn_bx_commandline.svg" alt="Descargar la interfaz de línea de mandatos de {{site.data.keyword.Bluemix}}" /> </a>  <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(Se abre en un separador o ventana nueva)"><img class="image" src="images/btn_cf_commandline.svg" alt="Descargar la interfaz de línea de mandatos de Cloud Foundry" /> </a>
+<a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(se abre en un separador o ventana nueva)"><img class="image" src="images/btn_cf_commandline.svg" alt="Descargar interfaz de línea de mandatos de Cloud Foundry" /> </a>
 </p>
 
-**Restricción:** Las herramientas de línea de mandatos no se admiten en Cygwin. Utilice las herramientas en una ventana de línea de mandatos que no sea la ventana de Cygwin.
+**Restricción:** La herramienta de línea de mandatos no se admite en Cygwin. Utilice la herramienta en una ventana de línea de mandatos que no sea la ventana de Cygwin.
 {:prereq}
 
-Tras instalar las interfaces de línea de mandatos, puede empezar:
+Tras instalar la interfaz de línea de mandatos, ya puede empezar:
 
-  1. {: download} Descargue el código de inicio y extraiga el paquete en un directorio nuevo para configurar su entorno de desarrollo.
-
-    <a class="xref" href="http://bluemix.net" target="_blank" title="(Se abre en un separador o ventana nueva)"><img class="image" src="images/btn_starter-code.svg" alt="Descargar código de inicio" /> </a>
+  1. {: download} Descargue el código de la app en un directorio nuevo para configurar su entorno de desarrollo.
+  
+    <a class="xref" href="http://bluemix.net" target="_blank" title="(se abre en un separador o ventana nueva)"><img class="image" src="images/btn_starter-code.svg" alt="Descargar código de aplicación" /> </a>
 
   2. Cambie al directorio donde se encuentra el código.
 
   <pre class="pre">cd <var class="keyword varname">su_nuevo_directorio</var></pre>
 
-  3.  Realice los cambios que considere adecuados al código de su app. Le recomendamos asegurarse de que la app se ejecuta en local,
-antes de volver a desplegarla en {{site.data.keyword.Bluemix}}.<br><br>Un archivo que debería anotar es
-el archivo `manifest.yml`. Cuando despliegue su app nuevamente en
-{{site.data.keyword.Bluemix}}, este archivo se utiliza para determinar el URL de la aplicación, la
-asignación de memoria, el número de instancias y otros parámetros cruciales. Puede [leer más sobre el archivo manifest](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){: new_window} en la documentación de Cloud Foundry.
+  3.  Realice los cambios que considere adecuados al código de su app. Por ejemplo, si utiliza una aplicación de ejemplo de {{site.data.keyword.Bluemix}} y la app contiene el archivo `src/main/webapp/index.html`, puede modificarlo y editar "Thanks for creating ..." para que indique otra cosa. Asegúrese de que la app se ejecuta localmente
+antes de volver a desplegarla en {{site.data.keyword.Bluemix_notm}}.
 
-  4. Conecte con {{site.data.keyword.Bluemix}}.
+    Preste atención al archivo `manifest.yml`. Cuando despliegue su app nuevamente en
+{{site.data.keyword.Bluemix_notm}}, este archivo se utiliza para determinar el URL de la aplicación, la
+asignación de memoria, el número de instancias y otros parámetros cruciales. Puede [obtener más información sobre el archivo de manifiesto ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html "icono de enlace externo"){: new_window} en la documentación de Cloud Foundry. 
 
-  <pre class="pre">bluemix api https://api.<span class="keyword" data-hd-keyref="DomainName">NombreDominio</span></pre>
+    Preste también atención al archivo `README.md`, que contiene detalles como instrucciones de compilación, si procede. 
 
-  5. Inicie una sesión en {{site.data.keyword.Bluemix_notm}}.
+    Nota: si la aplicación es una app Liberty, debe compilarla antes de volverla a desplegar. 
 
-  <pre class="pre">bluemix login -u <var class="keyword varname" data-hd-keyref="user_ID">nombre_usuario</var> -o <var class="keyword varname" data-hd-keyref="org_name">nombre_org</var> -s <var class="keyword varname" data-hd-keyref="space_name">nombre_espacio</var></pre>
+  4. Conecte e inicie una sesión en {{site.data.keyword.Bluemix_notm}}.
 
-  Si está utilizando un ID federado, utilice la opción -sso.
+  <pre class="pre">cf api https://api.<span class="keyword" data-hd-keyref="DomainName">NombreDominio</span></pre>
 
-  <pre class="pre">bluemix login -u <var class="keyword varname" data-hd-keyref="user_ID">username</var> -o "<var class="keyword varname" data-hd-keyref="org_name">nombre_org</var>" -s "<var class="keyword varname" data-hd-keyref="space_name">nombre_espacio</var>" -sso</pre>
+  <pre class="pre">cf login -u <var class="keyword varname" data-hd-keyref="user_ID">nombre_usuario</var> -o <var class="keyword varname" data-hd-keyref="org_name">nombre_org</var> -s <var class="keyword varname" data-hd-keyref="space_name">nombre_espacio</var></pre>
 
-  6. Despliegue la app en {{site.data.keyword.Bluemix_notm}}. Para obtener más información sobre el mandato cf push, consulte [Carga de una aplicación](/docs/starters/upload_app.html).
+  Si está utilizando un ID federado, utilice la opción `-sso`. 
 
-  <pre class="pre">cf push "<var class="keyword varname" data-hd-keyref="app_name">app_name</var>"</pre>
+  <pre class="pre">cf login -u <var class="keyword varname" data-hd-keyref="user_ID">nombre_usuario</var> -o <var class="keyword varname" data-hd-keyref="org_name">nombre_org</var> -s <var class="keyword varname" data-hd-keyref="space_name">nombre_espacio</var> -sso</pre>
 
-  7. Acceda a la app especificando el siguiente URL en el navegador:
+  5. Desde <var class="keyword varname">nuevo_directorio</var>, vuelva a desplegar la app en {{site.data.keyword.Bluemix_notm}} mediante el mandato `cf push`. Para obtener más información sobre el mandato `cf push`, consulte [Carga de una aplicación](/docs/starters/upload_app.html).
 
-  <pre class="codeblock"><code><var class="keyword varname" data-hd-keyref="host">host</var>.<span class="keyword" data-hd-keyref="APPDomain">NombreDominioApp</span></code></pre>
+  <pre class="pre">cf push <var class="keyword varname" data-hd-keyref="app_name">nombre_app</var></pre>
+
+  6. Para acceder a la app, vaya a <var class="keyword varname" data-hd-keyref="app_name">nombre_app</var>.<span class="keyword" data-hd-keyref="APPDomain">AppDomainName</span>.

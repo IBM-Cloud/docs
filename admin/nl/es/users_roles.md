@@ -34,7 +34,7 @@ En el nivel de cuenta, hay dos roles que permiten acceder a distintas caracterí
 |Miembro | Un miembro tiene acceso a su perfil, directorio de equipo y créditos de cuenta y límites de facturación en la cabecera de {{site.data.keyword.Bluemix_notm}}. Sin embargo, en la página de directorio de equipo, un miembro solamente puede ver los miembros del equipo dentro de la cuenta. |
 {:caption="Table 1. Account roles and permissions" caption-side="top"}
 
- Todos los miembros del equipo se añaden como un miembro de la cuenta. Puede asignar roles de organización y espacio a invitados para habilitar vistas y permisos específicos en {{site.data.keyword.Bluemix_notm}}. De forma predeterminada, a los nuevos miembros añadidos a una organización se les asigna el rol de organización de auditor. Para un espacio específico, puede elegir asignar el rol de desarrollador o auditor a los invitados. Una vez que los invitados aceptan la invitación y se unen a {{site.data.keyword.Bluemix_notm}}, puede editar sus roles en la página **Directorio del equipo**.
+ Todos los miembros del equipo se añaden como un miembro de la cuenta. Puede asignar roles de organización y espacio a invitados para habilitar vistas y permisos específicos en {{site.data.keyword.Bluemix_notm}}. De forma predeterminada, a los nuevos miembros añadidos a una organización, excepto en un entorno local o dedicado, se les asigna el rol de organización de auditor. Para un espacio específico, puede elegir asignar el rol de desarrollador o auditor a los invitados. Una vez que los invitados aceptan la invitación y se unen a {{site.data.keyword.Bluemix_notm}}, puede editar sus roles en la página **Directorio del equipo**.
 
 Los siguientes roles se pueden asignar a nivel de organización:
 
@@ -42,7 +42,7 @@ Los siguientes roles se pueden asignar a nivel de organización:
 |-------------------|-------------|
 |Gestor | Los gestores de organización pueden crear, ver, editar o suprimir espacios dentro de la organización, ver la cuota y el uso de la organización, invitar a miembros del equipo a la organización, gestionar quién tiene acceso a la organización y sus roles en la organización, y gestionar dominios personalizados para la organización. |
 |Gestor de facturación | Los gestores de facturación pueden ver la información de uso de tiempo de ejecución y servicio para la organización de la página Panel de control de uso.  |
-|Auditor | Los auditores de organización pueden ver el contenido de aplicación y servicio en la organización. Los auditores también pueden ver los miembros del equipo de la organización y sus roles asignados, y la cuota para la organización. Este rol se asigna a todos los invitados de forma predeterminada.|
+|Auditor | Los auditores de organización pueden ver el contenido de aplicación y servicio en la organización. Los auditores también pueden ver los miembros del equipo de la organización y sus roles asignados, y la cuota para la organización. Este rol se asigna a todos los invitados de forma predeterminada, excepto en entornos locales o dedicados. |
 {:caption="Table 2. Organization roles and permissions" caption-side="top"}
 
 Los siguientes roles se pueden asignar a nivel de espacio:
@@ -71,7 +71,7 @@ Para cambiar la visibilidad de la página del directorio de equipo, realice los 
 ## Invitación a miembros del equipo
 {: #inviteteammembers}
 
-Los propietarios de cuentas y gestores de organizaciones pueden invitar a los miembros del equipo a las organizaciones desde la página Invitar miembros del equipo. Cuando añade nuevos miembros del equipo, se les asignan automáticamente los roles de auditor. Puede cambiar los roles más adelante en la página Directorio del equipo. Para invitar a un miembro del equipo, realice estos pasos:
+Los propietarios de cuentas y gestores de organizaciones pueden invitar a los miembros del equipo a las organizaciones desde la página Invitar miembros del equipo. Cuando añade nuevos miembros del equipo, excepto en un entorno local o dedicado, se les asignan automáticamente los roles de auditor. Puede cambiar los roles más adelante en la página Directorio del equipo. Para invitar a un miembro del equipo, realice estos pasos:
 
 <ol>
 <li>Pulse **Cuenta** &gt; **Invitar a miembros del equipo**.</li>

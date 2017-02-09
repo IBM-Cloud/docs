@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015, 2017
 
-lastupdated: "2016-10-26"
+lastupdated: "2017-01-12"
 
 ---
 
@@ -23,7 +23,7 @@ de LDAP. Si busca información sobre la gestión de su cuenta {{site.data.keywor
 
 Antes de empezar, instale la interfaz de línea de mandatos cf. El plug-in CLI de administración de {{site.data.keyword.Bluemix_notm}} necesita
 cf versión 6.11.2 o posterior. [Descargue la interfaz de línea de mandatos
-de Cloud Foundry](https://github.com/cloudfoundry/cli/releases){: new_window}
+de Cloud Foundry ![icono de enlace externo](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window} 
 
 **Restricción:** Cygwin no admite la interfaz de línea de mandatos de Cloud Foundry. Utilice esta interfaz en una ventana de línea de mandatos que no sea la ventana de Cygwin.
 
@@ -96,7 +96,10 @@ cf login
 </li>
 </ol>
 
-## Adición de un usuario
+## Administración de usuarios
+{: #admin_users}
+
+### Adición de un usuario
 {: #admin_add_user}
 
 Para añadir un usuario al entorno de {{site.data.keyword.Bluemix_notm}} desde el registro de usuarios
@@ -121,7 +124,7 @@ de **ba add-user** más largo.
 
 <!-- staging-only commands start. Live for interconnect -->
 
-## Búsqueda de un usuario
+### Búsqueda de un usuario
 {: #admin_search_user}
 
 Para buscar un usuario, utilice el siguiente mandato junto con los parámetros de filtro de búsqueda opcionales
@@ -148,7 +151,7 @@ cf ba search-users -name=<user_name_value> -permission=<permission_value> -organ
 **Sugerencia:** También puede usar **ba su** como alias para un nombre de mandato
 de **ba search-users** más largo.
 
-## Establecimiento de permisos para un usuario
+### Establecimiento de permisos para un usuario
 {: #admin_setperm_user}
 
 Para establecer permisos para un usuario especificado, utilice el siguiente mandato:
@@ -175,7 +178,7 @@ Informes (acceso de lectura o escritura) o Usuarios (acceso de lectura o escritu
 
 <!-- staging-only commands end -->
 
-## Eliminación de un usuario
+### Eliminación de un usuario
 {: #admin_remov_user}
 
 Para eliminar un usuario del entorno de {{site.data.keyword.Bluemix_notm}}, utilice el siguiente mandato:
@@ -195,7 +198,7 @@ cf ba remove-user <nombre_usuario>
 **Sugerencia:** También puede usar **ba ru** como alias para un nombre de mandato
 de **ba remove-user** más largo.
 
-## Permitir a los gestores agregar usuarios
+### Permitir a los gestores agregar usuarios
 {: #clius_emau}
 
 Si tiene el permiso **Superusuario** en el entorno de {{site.data.keyword.Bluemix_notm}}, puede permitir a los gestores de la organización que agreguen usuarios a las organizaciones que gestionan. Para permitir a los gestores añadir usuarios, utilice el mandato siguiente:
@@ -208,7 +211,7 @@ cf ba enable-managers-add-users
 **Sugerencia:** también puede usar **ba emau** como alias para el nombre de mandato
 **ba enable-managers-add-users** más largo.
 
-## No permitir a los gestores agregar usuarios
+### No permitir a los gestores agregar usuarios
 {: #clius_dmau}
 
 Si a los gestores de la organización se les permite agregar usuarios a las organizaciones que gestionan en el entorno de {{site.data.keyword.Bluemix_notm}} con el mandato **enable-managers-add-users**, y si tiene el permiso **Superusuario**, puede eliminar este valor. Para no permitir a los gestores añadir usuarios, utilice el mandato siguiente:
@@ -221,7 +224,10 @@ cf ba disable-managers-add-users
 **Sugerencia:** también puede usar **ba dmau** como alias para un nombre de mandato
 **ba disable-managers-add-users** más largo.
 
-## Adición de una organización
+## Administración de organizaciones
+{: #admin_orgs}
+
+### Adición de una organización
 {: #admin_add_org}
 
 Para añadir una organización, utilice el siguiente mandato:
@@ -241,7 +247,7 @@ cf ba create-organization <organización> <gestor>
 **Sugerencia:** También puede usar **ba co** como alias para el nombre de mandato
 **ba create-organization** más largo.
 
-## Supresión de una organización
+### Supresión de una organización
 {: #admin_delete_org}
 
 Para suprimir una organización, utilice el siguiente mandato:
@@ -259,7 +265,7 @@ cf ba delete-organization <organización>
 **Sugerencia:** También puede usar **ba do** como alias para un nombre de mandato
 de **ba delete-organization** más largo.
 
-## Asignación de un usuario a una organización
+### Asignación de un usuario a una organización
 {: #admin_ass_user_org}
 
 Para asignar un usuario del entorno de {{site.data.keyword.Bluemix_notm}} a una
@@ -282,7 +288,7 @@ cf ba set-org <nombre_usuario> <organización> [<rol>]
 **Sugerencia:** También puede usar **ba so** como alias para el nombre de mandato
 **ba set-org** más largo.
 
-## Eliminación de la asignación de un usuario de una organización
+### Eliminación de la asignación de un usuario de una organización
 {: #admin_unass_user_org}
 
 Para desasignar un usuario del entorno de {{site.data.keyword.Bluemix_notm}} desde una
@@ -306,7 +312,7 @@ roles y descripciones de usuarios de {{site.data.keyword.Bluemix_notm}}.</dd>
 **Sugerencia:** También puede usar **ba uo** como alias para un nombre de mandato
 de **ba unset-org** más largo.
 
-### Asignación de roles
+#### Asignación de roles
 
 <dl class="parml">
 <dt class="pt dlterm">OrgManager</dt>
@@ -323,7 +329,7 @@ de **ba unset-org** más largo.
 <dd class="pd">Auditor de la organización. Un auditor de la organización puede ver el contenido de la app y el servicio en el espacio.</dd>
 </dl>
 
-## Configuración de una cuota para una organización
+### Configuración de una cuota para una organización
 {: #admin_set_org_quota}
 
 Para establecer la cuota de uso para una organización concreta, utilice el mandato siguiente:
@@ -344,7 +350,7 @@ cf ba set-quota <organización> <plan>
 **ba set-quota** más largo.
 
 
-## Búsqueda de cuotas de contenedor para una organización
+### Búsqueda de cuotas de contenedor para una organización
 {: #admin_find_containquotas}
 
 Para buscar la cuota de contenedores para una organización, utilice el siguiente mandato:
@@ -363,7 +369,7 @@ parámetro es obligatorio.</dd>
 **Sugerencia:** también puede usar **ba cq** como alias para el nombre de mandato
 **bluemix-admin containers-quota** más largo.
 
-## Configuración de cuotas de contenedor para una organización
+### Configuración de cuotas de contenedor para una organización
 {: #admin_set_containquotas}
 
 Para definir la cuota de contenedores para una organización, utilice el siguiente mandato con al menos una de las opciones que se incluyen:
@@ -428,7 +434,7 @@ El archivo JSON debe tener el formato que se muestra en el ejemplo siguiente:
 **Sugerencia:** también puede usar **ba scq** como alias para el nombre de mandato
 **bluemix-admin set-containers-quota** más largo.
 
-## Habilitación de servicios para todas las organizaciones
+### Habilitación de servicios para todas las organizaciones
 {: #admin_ena_service_org}
 
 Para permitir que un servicio se muestre en el Catálogo de
@@ -448,7 +454,7 @@ cf ba enable-service-plan <identificador_plan>
 **Sugerencia:** También puede usar **ba esp** como alias para el nombre de mandato
 **ba enable-service-plan** más largo.
 
-## Inhabilitación de servicios para todas las organizaciones
+### Inhabilitación de servicios para todas las organizaciones
 {: #admin_dis_service_org}
 
 Para no permitir que un servicio sea visible en el Catálogo de {{site.data.keyword.Bluemix_notm}} para todas las
@@ -467,7 +473,7 @@ cf ba disable-service-plan <identificador_plan>
 **Sugerencia:** También puede usar **ba dsp** como alias para un nombre de mandato
 de **ba disable-service-plan** más largo.
 
-## Adición de la visibilidad de los servicios de las organizaciones
+### Adición de la visibilidad de los servicios de las organizaciones
 {: #admin_addvis_service_org}
 
 Puede añadir una organización de la lista de organizaciones que pueden ver un servicio específico en el Catálogo de {{site.data.keyword.Bluemix_notm}}. Para permitir que una organización pueda ver un servicio específico en el Catálogo de
@@ -488,7 +494,7 @@ cf ba add-service-plan-visibility <identificador_plan> <organización>
 **Sugerencia:** También puede usar **ba aspv** como alias para el nombre de mandato
 **ba add-service-plan-visibility** más largo.
 
-## Eliminación de la visibilidad de los servicios de las organizaciones
+### Eliminación de la visibilidad de los servicios de las organizaciones
 {: #admin_remvis_service_org}
 
 Puede eliminar una organización de la lista de organizaciones que pueden ver un servicio
@@ -511,7 +517,7 @@ cf ba remove-service-plan-visibility <identificador_plan> <organización>
 **Sugerencia:** También puede usar **ba rspv** como alias para un nombre de mandato
 de **ba remove-service-plan-visibility** más largo.
 
-## Edición de la visibilidad de los servicios de las organizaciones
+### Edición de la visibilidad de los servicios de las organizaciones
 {: #admin_editvis_service_org}
 
 Puede editar y sustituir la lista de servicios que pueden ver determinadas organizaciones en el Catálogo de {{site.data.keyword.Bluemix_notm}}. Para sustituir todos los servicios visibles existentes de una o varias organizaciones, utilice el mandato siguiente:
@@ -533,7 +539,10 @@ cf ba edit-service-plan-visibilities <identificador_plan> <organización_1> <org
 **Sugerencia:** También puede usar **ba espv** como alias para el nombre de mandato
 **ba edit-service-plan-visibility** más largo.
 
-## Adición de informes
+## Administración de informes
+{: #admin_add_report}
+
+### Adición de informes
 {: #admin_add_report}
 
 Para añadir un informe de seguridad, utilice el siguiente mandato:
@@ -559,7 +568,7 @@ cf ba add-report <categoría> <fecha> <PDF|TXT|LOG> <RTF>
 **Sugerencia:** También puede usar **ba ar** como alias para un nombre de mandato
 de **ba add-report** más largo.
 
-## Supresión de informes
+### Supresión de informes
 {: #admin_del_report}
 
 Para suprimir un informe de seguridad, utilice el siguiente mandato:
@@ -581,7 +590,7 @@ cf ba delete-report <categoría> <fecha> <nombre>
 **Sugerencia:** También puede usar **ba dr** como alias para el nombre de mandato
 **ba delete-report** más largo.
 
-## Recuperación de informes
+### Recuperación de informes
 {: #admin_retr_report}
 
 Para recuperar un informe de seguridad, utilice el siguiente mandato:
@@ -603,7 +612,6 @@ cf ba retrieve-report <categoría> <fecha> <nombre>
 **Sugerencia:** También puede usar **ba rr** como alias para un nombre de mandato
 de **ba retrieve-report** más largo.
 
-
 ## Visualización de información de métricas de recursos
 {: #cliresourceusage}
 
@@ -624,7 +632,11 @@ cf ba resource-metrics <monthly> <weekly>
 **Sugerencia:** también puede usar **ba rsm** como alias para el nombre de mandato
 **ba resource-metrics** más largo.
 
-## Listado de intermediarios de servicio
+
+## Administración de intermediarios de servicio
+{: #admin_servbro}
+
+### Listado de intermediarios de servicio
 {: #clilistservbro}
 
 Para listar todos los intermediarios de servicio, utilice el mandato siguiente:
@@ -646,7 +658,7 @@ para un intermediario de servicio específico.</dd>
 **Sugerencia:** También puede usar **ba sb** como alias para un nombre de mandato
 de **ba service-brokers** más largo.
 
-## Adición de un intermediario de servicio
+### Adición de un intermediario de servicio
 {: #cliaddservbro}
 
 Para añadir un intermediario de servicio, con lo que puede añadir un servicio personalizado a su Catálogo de
@@ -671,7 +683,7 @@ cf ba add-service-broker <nombre_intermediario> <nombre_usuario> <contraseña> <
 **Sugerencia:** También puede usar **ba asb** como alias para el nombre de mandato
 **ba add-service-broker** más largo.
 
-## Supresión de un intermediario de servicio
+### Supresión de un intermediario de servicio
 {: #clidelservbro}
 
 Para suprimir un intermediario de servicio, para eliminar el servicio personalizado del Catálogo de
@@ -690,7 +702,7 @@ cf ba delete-service-broker <intermediario_servicio>
 **Sugerencia:** También puede usar **ba dsb** como alias para un nombre de mandato
 de **ba delete-service-broker** más largo.
 
-## Actualización de un intermediario de servicio
+### Actualización de un intermediario de servicio
 {: #cliupdservbro}
 
 Para actualizar un intermediario de servicio, utilice el siguiente mandato:
@@ -715,7 +727,8 @@ cf ba update-service-broker <broker_name> <user_name> <password> <broker_url>
 **ba update-service-broker** más largo.
 
 
-## Trabajar con grupos de seguridad de aplicaciones
+## Administración de grupos de seguridad de aplicaciones
+{: #admin_secgro}
 
 Para trabajar con grupos de seguridad de aplicaciones (ASG), debe ser un administrador con acceso completo al entorno local o dedicado. Todos los usuarios del entorno pueden mostrar una lista de los ASG disponibles para la organización que el mandato tiene como objetivo. No obstante, para crear, actualizar o enlazar ASG, debe ser administrador del entorno de {{site.data.keyword.Bluemix_notm}}.
 
@@ -723,11 +736,11 @@ Los ASG funcionan como cortafuegos virtuales que controlan el tráfico de salida
 {{site.data.keyword.Bluemix_notm}}. Cada ASG está compuesto por una lista de reglas que permiten comunicaciones y tráfico específicos hacia y desde el exterior de la red. Puede enlazar uno o más ASG con un conjunto de grupos de seguridad específico, por ejemplo, un conjunto de grupos que se utiliza para aplicar el acceso global, o puede enlazar con espacios dentro de la organización en el entorno de
 {{site.data.keyword.Bluemix_notm}}.
 
-{{site.data.keyword.Bluemix_notm}} se configura inicialmente con todo el acceso a la red externa restringido. Dos grupos de seguridad creados por IBM, `public_networks` y `dns`, permiten el acceso global a la red externa al enlazar dichos grupos con los conjuntos de grupos de seguridad de Cloud Foundry predeterminados. Los dos conjuntos de grupos de seguridad de Cloud Foundry que se utilizan para aplicar el acceso global son los conjuntos de grupos **Default Staging** y **Default Running**. Estos conjuntos de grupos aplican las reglas para permitir tráfico hacia todas las apps en ejecución o todas las apps en transferencia. Si no desea enlazar estos dos conjuntos de grupos de seguridad, puede desenlazarlos de los conjuntos de grupos de Cloud Foundry y, a continuación, enlazar el grupo de seguridad con un espacio específico. Para obtener más información, consulte [Enlace de grupos de seguridad de aplicaciones](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}.
+{{site.data.keyword.Bluemix_notm}} se configura inicialmente con todo el acceso a la red externa restringido. Dos grupos de seguridad creados por IBM, `public_networks` y `dns`, permiten el acceso global a la red externa al enlazar dichos grupos con los conjuntos de grupos de seguridad de Cloud Foundry predeterminados. Los dos conjuntos de grupos de seguridad de Cloud Foundry que se utilizan para aplicar el acceso global son los conjuntos de grupos **Default Staging** y **Default Running**. Estos conjuntos de grupos aplican las reglas para permitir tráfico hacia todas las apps en ejecución o todas las apps en transferencia. Si no desea enlazar estos dos conjuntos de grupos de seguridad, puede desenlazarlos de los conjuntos de grupos de Cloud Foundry y, a continuación, enlazar el grupo de seguridad con un espacio específico. Para obtener más información, consulte [Enlace de grupos de seguridad de aplicaciones ![icono de enlace externo](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}.
 
-**Nota**: los mandatos siguientes que le permiten trabajar con grupos de seguridad se basan en la versión 1.6 de Cloud Foundry. Para obtener más información, incluidos los campos obligatorios y opcionales, consulte la información de Cloud Foundry sobre [Creación de grupos de seguridad de aplicaciones](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}.
+**Nota**: los mandatos siguientes que le permiten trabajar con grupos de seguridad se basan en la versión 1.6 de Cloud Foundry. Para obtener más información, incluidos los campos obligatorios y opcionales, consulte la información de Cloud Foundry sobre [Creación de grupos de seguridad de aplicaciones ![icono de enlace externo](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}.
 
-## Listado de grupos de seguridad
+### Listado de grupos de seguridad
 {: #clilissecgro}
 
 * Para listar todos los grupos de seguridad, utilice el siguiente mandato:
@@ -756,11 +769,11 @@ cf ba security-groups <grupo-seguridad>
 **ba security-groups** más largo con el parámetro `security-group`.
 
 
-## Creación de un grupo de seguridad
+### Creación de un grupo de seguridad
 {: #clicreasecgro}
 
 Para obtener más información sobre la creación de grupos de seguridad y las reglas que definen el tráfico de salida, consulte
-[Creación de grupos de seguridad de aplicaciones](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}.
+[Creación de grupos de seguridad de aplicaciones ![icono de enlace externo](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}.
 
 Para crear un grupo de seguridad, utilice el siguiente mandato:
 
@@ -782,7 +795,7 @@ Cada grupo de seguridad que cree tiene el prefijo
 **Sugerencia:** También puede usar **ba csg** como alias para un nombre de mandato
 de **ba create-security-group** más largo.
 
-## Actualización de un grupo de seguridad
+### Actualización de un grupo de seguridad
 {: #cliupdsecgro}
 
 Para actualizar un grupo de seguridad, utilice el siguiente mandato:
@@ -802,7 +815,7 @@ cf ba update-security-group <grupo-seguridad> <vía-acceso-archivo-reglas>
 **Sugerencia:** también puede usar **ba usg** como alias para el nombre de mandato
 **ba update-security-group** más largo.
 
-## Supresión de un grupo de seguridad
+### Supresión de un grupo de seguridad
 {: #clidelsecgro}
 
 Para suprimir un grupo de seguridad, utilice el siguiente mandato:
@@ -821,10 +834,10 @@ cf ba delete-security-group <grupo-seguridad>
 de **ba delete-security-group** más largo.
 
 
-## Enlace de grupos de seguridad
+### Enlace de grupos de seguridad
 {: #clibindsecgro}
 
-Para obtener más información sobre el enlace de grupos de seguridad, consulte [Enlace de grupos de seguridad de aplicaciones](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}.
+Para obtener más información sobre el enlace de grupos de seguridad, consulte [Enlace de grupos de seguridad de aplicaciones ![icono de enlace externo](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}.
 
 * Para enlazar con el conjunto de grupos de seguridad Default Staging, utilice el siguiente mandato:
 
@@ -875,10 +888,10 @@ cf ba bind-security-group <grupo-seguridad> <org> <espacio>
 **Sugerencia:** también puede usar **ba bsg** como alias para un nombre de mandato
 de **ba bind-security-group** más largo.
 
-## Anulación de enlace de grupos de seguridad
+### Anulación de enlace de grupos de seguridad
 {: #cliunbindsecgro}
 
-Para obtener más información sobre la anulación del enlace de grupos de seguridad, consulte [Anulación del enlace de grupos de seguridad de aplicaciones](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window}.
+Para obtener más información sobre la anulación del enlace de grupos de seguridad, consulte [Anulación del enlace de grupos de seguridad de aplicaciones ![icono de enlace externo](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window}.
 
 * Para anular el enlace desde un conjunto de grupos de seguridad Default Staging, utilice el siguiente mandato:
 
@@ -929,7 +942,10 @@ cf ba unbind-security-group <grupo-seguridad> <org> <espacio>
 **Sugerencia:** también puede usar **ba usg** como alias para el nombre de mandato
 **ba unbind-staging-security-group** más largo.
 
-## Listado de paquetes de compilación
+## Administración de paquetes de compilación
+{: #admin_buildpack}
+
+### Listado de paquetes de compilación
 {: #clilistbuildpack}
 
 Si tiene permisos de grabación en el catálogo de las apps, puede listar los paquetes de compilación. Para listar todos los paquetes de compilación o para ver un paquete de compilación específico, utilice el siguiente mandato:
@@ -947,7 +963,7 @@ cf ba buildpacks <nombre_paquete_compilación>
 **Sugerencia:** también puede usar **ba lb** como alias para un nombre de mandato
 **ba buildpacks** más largo.
 
-## Creación y carga de un paquete de compilación
+### Creación y carga de un paquete de compilación
 {: #clicreupbuildpack}
 
 Si tiene permisos de grabación en el catálogo de las apps, puede crear y cargar un paquete de compilación. Puede cargar cualquier archivo comprimido que tenga un tipo de archivo .zip. Para cargar un paquete de compilación, utilice el siguiente mandato:
@@ -969,7 +985,7 @@ cf ba create-buildpack <nombre_paquete_compilación> <vía_acceso_archivo> <posi
 **Sugerencia:** también puede usar **ba cb** como alias para el nombre de mandato
 **ba create-buildpack** más largo.
 
-## Actualización de un paquete de compilación
+### Actualización de un paquete de compilación
 {: #cliupdabuildpack}
 
 Si tiene permisos de grabación en el catálogo de las apps, puede actualizar un paquete de compilación existente. Para actualizar un paquete de compilación, utilice el siguiente mandato:
@@ -993,7 +1009,7 @@ cf ba update-buildpack <nombre_paquete_compilación> <posición> <habilitado> <b
 **Sugerencia:** también puede usar **ba ub** como alias para un nombre de mandato
 **ba update-buildpack** más largo.
 
-## Supresión de un paquete de compilación
+### Supresión de un paquete de compilación
 {: #clidelbuildpack}
 
 Si tiene permisos de grabación en el catálogo de las apps, puede suprimir un paquete de compilación existente. Para suprimir un paquete de compilación, utilice el siguiente mandato:

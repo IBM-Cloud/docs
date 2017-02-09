@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015 2016
+  years: 2015，2017
 
-lastupdated: "2016-02-17"
+lastupdated: "2017-01-12"
 
 
 
@@ -56,4 +56,4 @@ push** con el nombre de la aplicación. El nombre de la app debe ser exclusivo e
 
   2. Si modifica la aplicación, puede cargar los cambios volviendo a especificar el mandato cf push. La interfaz de línea de mandatos cf utiliza sus opciones anteriores y las respuestas a las solicitudes para actualizar las instancias en ejecución de la app con los nuevos bits de código.
 
-**Consejo:** También puede cargar o desplegar una aplicación desde DevOps Services. Consulte [Desarrollo de una aplicación {{site.data.keyword.Bluemix_notm}} en Node.js con el IDE web](https://hub.jazz.net/tutorials/devopsweb/){: new_window}.
+**Consejo:** También puede cargar o desplegar una aplicación desde DevOps Services. Consulte [Desarrollo de una aplicación {{site.data.keyword.Bluemix_notm}} en Node.js con el IDE web ![icono de enlace externo](../icons/launch-glyph.svg)](https://hub.jazz.net/tutorials/devopsweb/){: new_window}.

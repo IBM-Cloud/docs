@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2015, 2016
-lastupdated: "2016-11-30"
+  years: 2015, 2017
+lastupdated: "2017-01-11"
  
 
 ---
@@ -117,7 +117,7 @@ Puede convertir la cuenta gratuita en una cuenta facturable en cualquier momento
 
 Tras crear una cuenta facturable, puede editar la información que ha proporcionado. Pulse el **icono Configuración de perfil** y, a continuación, pulse **Cuenta &gt; Tipo de cuenta** para editar la información.
 
-Si surgen problemas con {{site.data.keyword.Bluemix_notm}} cuando vaya a utilizar una cuenta de Pago según uso o una Suscripción, consulte [Obtención de ayuda en línea](https://www.ng.bluemix.net/docs/troubleshoot/getting_customer_support.html#online_help) para obtener más información.
+Si surgen problemas con {{site.data.keyword.Bluemix_notm}} cuando vaya a utilizar una cuenta de Pago según uso o una Suscripción, consulte [Obtención de ayuda en línea](/docs/troubleshoot/getting_customer_support.html#online_help) para obtener más información.
 
 **Nota:** Si enlaza su cuenta de facturación de {{site.data.keyword.Bluemix_notm}} con una cuenta de SoftLayer, a partir del día 1 del próximo mes, los cargos de {{site.data.keyword.Bluemix_notm}} y SoftLayer aparecerán en su factura de {{site.data.keyword.Bluemix_notm}}. Para obtener más detalles, consulte [Visualización de créditos](/docs/admin//softlayerlink.html#bill_usage).
 
@@ -386,10 +386,9 @@ los mandatos <strong>GET</strong> se consideran llamadas de API ligeras.
 Añada el número de GB y deduzca 2 GB de concesión gratuita. Se cargan 148 GB al mes. Sustraiga la concesión gratuita de 50.000 para llamadas de api ligeras y 10.000 para llamadas de api pesadas. El precio de almacenamiento total incluye las partes siguientes:</p>
 <pre class="codeblock">
 <codeblock>
-    148 x 1 = 148 dólares
-    (450.000 / 1000) x 0,03 = 13,5 dólares
-    (90.000 / 1000) x 0,15 = 13,5 dólares
-</codeblock>
+148 x 1 = 148
+(450,000 / 1000) x 0.03 = 13,5 dólares
+(90,000 / 1000) x 0.15 = 13,5 dólares</codeblock>
 </pre>
 <p>
 El precio total es 148 + 13.5 + 13.5 = 175 dólares.</p></dd>
@@ -435,7 +434,7 @@ Para abrir la página **Panel de control de uso**, pulse **Cuenta** &gt; *nombre
 
 La cuenta se factura al propietario por el uso total en el que han incurrido todas las organizaciones al final de cada ciclo de facturación. Cada ciclo de factura dura un mes.
 
-Los propietarios de las cuentas pueden filtrar el resumen de uso por región y organización. Los cargos mostrados representan la cantidad que se le factura a usted, como propietario de cuenta, para dicho mes.
+Los propietarios de las cuentas pueden filtrar el resumen de uso por región y organización. Si es propietario de una cuenta, establezca **Organización** en **Todas las organizaciones** para ver el uso en toda la cuenta para un período de 12 meses. Pulse un mes concreto para ver el uso para ese mes. Los cargos mostrados representan la cantidad que se le factura a usted, como propietario de cuenta, para dicho mes.
 
 Si selecciona una organización específica para la **Organización**, puede ver la utilización total para esa organización, incluido cualquier uso como parte de un nivel libre. Los cargos que se muestran para la organización no son los cargos que se le facturan. El uso de la capa libre se muestra como gratuita en el nivel de cuenta, pero no a nivel organizativo. Por lo tanto, cuando se ve el uso de la organización, verá el uso real para esa organización incluido el uso gratuito y de pago. Todo el uso organizativo se despliega en el uso de la cuenta una vez que se haya eliminado la capa libre.
 
@@ -479,8 +478,10 @@ el plan de servicio, especifique el mandato siguiente:
 cf update-service <nombre_servicio> [-p <plan_nuevo>]
 ```
 # rellinks
-## general 
+{: rellinks}
+## general
+{: general} 
 * Hoja de precios de [{{site.data.keyword.Bluemix_notm}}](https://console.{DomainName}/pricing/)
-* Foro de comunidades de desarrolladores [{{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/)
+* [Foro de comunidad de desarrolladores de {{site.data.keyword.Bluemix_notm}}![icono de enlace externo](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/){: new_window}
 * [Obtención de ayuda en línea](https://www.{DomainName}/docs/troubleshoot/getting_customer_support.html#online_help)
 * [Póngase en contacto con nosotros](https://console.{DomainName}/#/contactUs/cloudOEPaneId=contactUs)

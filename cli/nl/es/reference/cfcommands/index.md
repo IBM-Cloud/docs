@@ -4,9 +4,10 @@
 
 copyright:
 
-  years: 2016
+  years: 2016, 2017
 
-lastupdated: "2016-11-14"
+lastupdated: "2017-01-12"
+
 
 ---
 
@@ -23,7 +24,7 @@ La interfaz de línea de mandatos (CLI) de Cloud Foundry (cf) proporciona un con
 {: shortdesc}
 
 **Nota**: Si la red contiene un servidor proxy HTTP entre el host que ejecuta los mandatos cf y el punto final de la API de
-Cloud Foundry, debe especificar el nombre de host o la dirección IP del servidor proxy mediante la variable de entorno `HTTP_PROXY`. Para ver detalles, consulte el apartado [Utilización de la CLI cf con un servidor proxy HTTP](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html).
+Cloud Foundry, debe especificar el nombre de host o la dirección IP del servidor proxy mediante la variable de entorno `HTTP_PROXY`. Para ver detalles, consulte el apartado (http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}Utilización de la CLI cf con un servidor proxy HTTP ![icono de enlace externo](..![External)/icons/launch-glyph.svg)].
 
 
 ## Índice de mandatos de CLI de Cloud Foundry
@@ -32,53 +33,52 @@ Cloud Foundry, debe especificar el nombre de host o la dirección IP del servido
 Utilice el índice de la siguiente tabla para hacer referencia a los mandatos de Cloud Foundry utilizados con frecuencia:
 
 <table summary="Mandatos de Cloud Foundry generales ordenados alfabéticamente que tienen enlaces que le proporcionan más información para el mandato">
+ <caption>Tabla 1. Mandatos generales de Cloud Foundry</caption>
  <thead>
  <th colspan="6">Mandatos de Cloud Foundry generales</th>
  </thead>
  <tbody>
  <tr>
- <td>[api](index.html#cf_api)</td>
- <td>[help](index.html#cf_help)</td>
- <td>[login](index.html#cf_login)</td>
- <td>[stacks](index.html#cf_stacks)</td>
- <td>[target](index.html#cf_target)</td>
- <td>[-v ](index.html#cf_v)</td>
+ <td>[api](/docs/cli/reference/cfcommands/index.html#cf_api)</td>
+ <td>[help](/docs/cli/reference/cfcommands/index.html#cf_help)</td>
+ <td>[login](/docs/cli/reference/cfcommands/index.html#cf_login)</td>
+ <td>[stacks](/docs/cli/reference/cfcommands/index.html#cf_stacks)</td>
+ <td>[target](/docs/cli/reference/cfcommands/index.html#cf_target)</td>
+ <td>[-v ](/docs/cli/reference/cfcommands/index.html#cf_v)</td>
  </tr>
    </tbody>
  </table>
-{: caption="Table 1. General Cloud Foundry commands" caption-side="top"}
 
 
 <table summary="Mandatos ordenados alfabéticamente para gestionar apps, espacios y servicios. Cada mandato tiene un enlace que le proporciona más información para el mandato.">
+ <caption>Tabla 2. Mandatos para gestionar apps, espacios y servicios</caption>
  <thead>
  <th colspan="5">Mandatos para gestionar apps, espacios y servicios</th>
  </thead>
  <tbody>
  <tr>
- <td>[apps](index.html#cf_apps)</td>
- <td>[bind-service](index.html#cf_bind-service)</td>
- <td>[create-service](index.html#cf_create-service)</td>
- <td>[create-space](index.html#cf_create-space)</td>
- <td>[delete](index.html#cf_delete)</td>
+ <td>[apps](/docs/cli/reference/cfcommands/index.html#cf_apps)</td>
+ <td>[bind-service](/docs/cli/reference/cfcommands/index.html#cf_bind-service)</td>
+ <td>[create-service](/docs/cli/reference/cfcommands/index.html#cf_create-service)</td>
+ <td>[create-space](/docs/cli/reference/cfcommands/index.html#cf_create-space)</td>
+ <td>[delete](/docs/cli/reference/cfcommands/index.html#cf_delete)</td>
   </tr>
  <tr>
- <td>[delete-space](index.html#cf_delete-space)</td>
- <td>[events](index.html#cf_events)</td>
- <td>[logs](index.html#cf_logs)</td>
- <td>[marketplace](index.html#cf_marketplace)</td>
- <td>[enviar](index.html#cf_push)</td>
+ <td>[delete-space](/docs/cli/reference/cfcommands/index.html#cf_delete-space)</td>
+ <td>[events](/docs/cli/reference/cfcommands/index.html#cf_events)</td>
+ <td>[logs](/docs/cli/reference/cfcommands/index.html#cf_logs)</td>
+ <td>[marketplace](/docs/cli/reference/cfcommands/index.html#cf_marketplace)</td>
+ <td>[enviar](/docs/cli/reference/cfcommands/index.html#cf_push)</td>
   </tr>
  <tr>
- <td>[escalar](index.html#cf_scale)</td>
- <td>[services](index.html#cf_services)
- <td>[set-env](index.html#cf_set-env)</td>
+ <td>[escalar](/docs/cli/reference/cfcommands/index.html#cf_scale)</td>
+ <td>[services](/docs/cli/reference/cfcommands/index.html#cf_services)
+ <td>[set-env](/docs/cli/reference/cfcommands/index.html#cf_set-env)</td>
  <td>[ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh)</td>
- <td>[stop](index.html#cf_stop)</td>
+ <td>[stop](/docs/cli/reference/cfcommands/index.html#cf_stop)</td>
  </tr>
  </tbody>
  </table>
-{: caption="Table 2. Commands for managing apps, spaces, and services" caption-side="top"}
-
 
 ## cf api
 {: #cf_api}
@@ -91,7 +91,7 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 
 <strong>Requisitos previos</strong>: Ninguno.
 
-<strong>Opciones de mandato</strong>:  
+<strong>Opciones de mandato</strong>:
 
    <dl>
    <dt>BluemixServerURL (opcional)</dt>
@@ -153,7 +153,7 @@ cf bind-service nombre_app instancia_servicio
 
 <strong>Requisitos previos</strong>: `cf api`, `cf login`, `cf target`
 
-<strong>Opciones de mandato</strong>:  
+<strong>Opciones de mandato</strong>:
 
    <dl>
    <dt>appname (necesario)</dt>
@@ -182,7 +182,7 @@ cf create-service nombre_servicio plan_servicio instancia_servicio
 
 <strong>Requisitos previos</strong>: `cf api`, `cf login`, `cf target`
 
-<strong>Opciones de mandato</strong>:  
+<strong>Opciones de mandato</strong>:
 
    <dl>
    <dt>service_name (necesario)</dt>
@@ -213,7 +213,7 @@ cf create-space space_name [-o] [-q]
 
 <strong>Requisitos previos</strong>: `cf api`, `cf login`
 
-<strong>Opciones de mandato</strong>:  
+<strong>Opciones de mandato</strong>:
 
    <dl>
    <dt>space_name (necesario)</dt>
@@ -244,7 +244,7 @@ cf delete appname [-f] [-r]
 
 <strong>Requisitos previos</strong>: `cf api`, `cf login`, `cf target`
 
-<strong>Opciones de mandato</strong>:  
+<strong>Opciones de mandato</strong>:
 
    <dl>
    <dt>appname (necesario)</dt>
@@ -293,7 +293,7 @@ cf delete-space space_name [-f]
 
 <strong>Requisitos previos</strong>: `cf api`, `cf login`
 
-<strong>Opciones de mandato</strong>:  
+<strong>Opciones de mandato</strong>:
 
    <dl>
    <dt>space_name (necesario)</dt>
@@ -341,7 +341,7 @@ cf events [appname]
 
 <strong>Requisitos previos</strong>: `cf api`, `cf login`, `cf target`
 
-<strong>Opciones de mandato</strong>:  
+<strong>Opciones de mandato</strong>:
 
    <dl>
    <dt>nombre_app</dt>
@@ -368,7 +368,7 @@ cf help [command_name]
 
 <strong>Requisitos previos</strong>: Ninguno.
 
-<strong>Opciones de mandato</strong>:  
+<strong>Opciones de mandato</strong>:
 
    <dl>
    <dt>command_name (opcional)</dt>
@@ -396,7 +396,7 @@ cf help events
 Se inicia la sesión
 en {{site.data.keyword.Bluemix_notm}}.
 
-**Nota**: si va a iniciar sesión con un ID federado, debe utilizar el parámetro de inicio de sesión único (SSO) para iniciar la sesión.
+**Nota**: si va a iniciar sesión con un [ID federado](/docs/admin/account.html#signup), debe utilizar el parámetro de inicio de sesión único (SSO) para iniciar la sesión.
 
 ```
 cf login [-a url] [-u nombre_usuario] [-p contraseña] [-sso] [-o nombre_organización] [-s nombre_espacio] [--skip-ssl-validation]
@@ -407,7 +407,7 @@ cf login [-a url] [-u nombre_usuario] [-p contraseña] [-sso] [-o nombre_organiz
 <strong>Opciones de mandato</strong>:
 
 <dl>
-<dt>*-a* https://api.{DomainName} (opcional)</dt>
+<dt>*-a* https://api.{NombreDominio} (opcional)</dt>
 <dd>El URL del punto final API de {{site.data.keyword.Bluemix_notm}}.</dd>
 <dt>*-u* nombre_usuario (opcional)</dt>
 <dd>Su nombre de usuario.</dd>
@@ -416,7 +416,7 @@ cf login [-a url] [-u nombre_usuario] [-p contraseña] [-sso] [-o nombre_organiz
 <dd>*Importante:* Si especifica la contraseña con el parámetro *-p* en la interfaz de línea de mandatos, es posible que la contraseña quede registrada en el historial de línea de mandatos. Por motivos de seguridad, evite especificar la contraseña con el parámetro -p. Escriba en su lugar la contraseña cuando se lo solicite la interfaz de línea de mandatos.</dd>
 <dt>*-sso*</dt>
 <dd>Debe utilizar la opción de inicio de sesión único (SSO) al iniciar sesión con un ID federado. Esto no es necesario al iniciar sesión con un ID de IBM. Si intenta iniciar sesión con un ID federado y no especifica el parámetro SSO, se le solicitará que lo incluya. Al utilizar el parámetro SSO se le solicitará que especifique el código de acceso de una sola vez tras iniciar la sesión.</dd>
-<dt>*-o*nombre_organización</dt>
+<dt>*-o* nombre_organización</dt>
 <dd>El nombre de la organización en la que desea iniciar sesión.</dd>
 <dt>*-s*nombre_espacios</dt>
 <dd>El nombre del espacio en el que desea iniciar sesión.</dd>
@@ -530,8 +530,7 @@ cf push appname [-b nombre_paquete_compilación] [-c mandato_inicio] [-f vía_ac
 <dt>appname (necesario)</dt>
 <dd>El nombre de la app.</dd>
 <dt>*-b* nombre_paquete_compilación (opcional)</dt>
-<dd>El nombre del paquete de compilación. El nombre_paquete_compilación puede
-ser un paquete de compilación personalizado por nombre o URL Git, por ejemplo, `my-buildpack` o `https://github.com/heroku/heroku-buildpack-play.git`.</dd>
+<dd>El nombre del paquete de compilación. El nombre_paquete_compilación puede ser un paquete de compilación personalizado por nombre (por ejemplo liberty-for-java), un URL de Git (por ejemplo https://github.com/cloudfoundry/java-buildpack.git) o un URL de Git con una ramificación o etiqueta (por ejemplo https://github.com/cloudfoundry/java-buildpack.git#v3.3.0 para la etiqueta v3.3.0).</dd>
 <dt>*-c* mandato_inicio (opcional)</dt>
 <dd>El mandato de inicio de la app. Para utilizar el mandato de inicio predeterminado
 debe especificar un valor null para esta opción. </dd>
@@ -677,22 +676,24 @@ cf set-env my_app variable_a 123
 ## cf ssh
 {: #cf_ssh}
 
-Inicia una sesión de forma segura en un contenedor de aplicaciones. De forma predeterminada, SSH accede al contenedor que ejecuta la primera instancia de la aplicación, que es la instancia con el índice 0.
+Accede de forma segura al contenedor de aplicaciones. Se puede utilizar el mandato `cf ssh` para configurar una sesión SSH interactiva, ejecutar mandatos remotos, transferir archivos y configurar el reenvío de puertos con una determinada instancia del contenedor de aplicaciones. 
 
 ```
 cf ssh
 ```
 <strong>Requisitos previos</strong>: `cf api`, `cf login`, `cf target`
 
-También debe configurar el despliegue de Cloud Foundry para permitir el acceso SSH a las instancias de la aplicación. Para obtener información detallada, consulte [Configuración del acceso SSH para Cloud Foundry](https://docs.cloudfoundry.org/running/config-ssh.html){:new_window}.
+De forma predeterminada, el acceso SSH está habilitado para aplicaciones Diego. Puede utilizar el mandato `cf ssh-enabled` para verificar si el acceso SSH está habilitado o el mandato `cf enable-ssh` para habilitar el acceso si está inhabilitado.  
 
 <strong>Opciones de mandato</strong>:
 
 <dl>
 <dt>nombre_app</dt>
-<dd>El nombre de la app. Si se permite SSH, puede utilizar esta opción para iniciar una sesión de SSH interactiva con una VM que aloja la aplicación.</dd>
+<dd>El nombre de la app.</dd>
+<dt>-c</dt>
+<dd>Especifica el mandato remoto que se va a ejecutar. </dd>
 <dt>-i</dt>
-<dd>Destinado a una instancia específica de una aplicación.</dd>
+<dd>Destinado a una instancia específica de una aplicación. Si no se especifica, se utiliza la primera instancia de la aplicación (una instancia con índice 0).</dd>
 <dt>-L</dt>
 <dd>Permite el reenvío de puerto local, que vincula un puerto de salida de la máquina con un puerto de entrada de la VM de la aplicación.</dd>
 <dt>-N</dt>
@@ -703,12 +704,27 @@ También debe configurar el despliegue de Cloud Foundry para permitir el acceso 
 
 <strong>Ejemplos</strong>:
 
-Inicio de una sesión SSH interactiva con una VM que alojan una aplicación llamada `my_app`.
+Inicio de una sesión SSH interactiva con una instancia del contenedor que ejecuta la aplicación `my_app`.
 ```
 $ cf ssh my_app
 ```
 {: codeblock}
 
+Ejecución de un solo mandato en la instancia del contenedor de aplicaciones `my_app`. 
+```
+$ cf ssh my_app -c "ls -l"
+```
+
+Transferencia de un solo archivo desde la instancia del contenedor de aplicaciones `my_app`. 
+```
+$ cf ssh my_app -c "/bin/cat logs/messages.log" > messages.log
+```
+
+Configuración del reenvío de puertos del puerto 7777 de la máquina local al puerto 8888 de la instancia del contenedor de aplicaciones `my_app`. 
+```
+$ cf ssh -N -T -L 7777:localhost:8888 my_app
+
+```
 
 ## cf stacks
 {: #cf_stacks}
@@ -814,7 +830,7 @@ cf -v
 ## Enlaces relacionados
 {: #general}
 
-* [Descargue la CLI de Cloud Foundry](https://github.com/cloudfoundry/cli/releases)
-{:new_window}
-* [Tarjeta de referencia rápida: mandatos cf](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html)
-{:new_window}
+* (https://github.com/cloudfoundry/cli/releases)Descargar la CLI de Cloud Foundry ![icono de enlace externo](![External)../icons/launch-glyph.svg)]
+{: new_window}
+* (ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html)Tarjeta de referencia rápida - mandatos cf ![icono de enlace externo](![External)../icons/launch-glyph.svg)]
+{: new_window}

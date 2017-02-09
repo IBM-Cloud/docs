@@ -58,7 +58,7 @@ En {{site.data.keyword.Bluemix_notm}}, puede utilizar organizaciones para habili
 
 Cuando se crea una organización, el nombre de la organización debe ser exclusivo en {{site.data.keyword.Bluemix_notm}}. Si el nombre de la organización ya lo utiliza otro usuario local, dedicado o público de {{site.data.keyword.Bluemix_notm}}, debe especificar un nuevo nombre. Después de crear la organización, se le asignará automáticamente el permiso *Gestor de organización*, lo que le permite editar el nombre de la organización, añadir miembros de equipo y crear o suprimir espacios en la organización.
 
-Debe ponerse en contacto con el soporte de [{{site.data.keyword.Bluemix_notm}} ](http://ibm.biz/bluemixsupport){: new_window} para suprimir una organización. Cuando solicita al equipo de soporte que suprima una organización, se suprimen todos los espacios, aplicaciones y servicios dentro de la organización.
+Debe ponerse en contacto con el [equipo de soporte de {{site.data.keyword.Bluemix_notm}} ![icono de enlace externo](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window} para suprimir una organización. Cuando solicita al equipo de soporte que suprima una organización, se suprimen todos los espacios, aplicaciones y servicios dentro de la organización.
 
 Los siguientes [roles de usuario](/docs/admin/users_roles.html#userrolesinfo) pueden asignarse a miembros del equipo en una organización:
 
@@ -118,7 +118,7 @@ Siga los pasos siguientes para cambiar el nombre de la organización:
 ## Supresión de una organización o un espacio existente
 {: #deleteorgs}
 
-Como propietario de cuenta, puede ponerse en contacto con el soporte de [{{site.data.keyword.Bluemix_notm}} ](http://ibm.biz/bluemixsupport){: new_window} para suprimir una organización. 
+Como propietario de la cuenta, puede ponerse en contacto con el [equipo de soporte de {{site.data.keyword.Bluemix_notm}} ![icono de enlace externo](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window} para suprimir una organización.  
 
 **Nota**: La supresión de operaciones no se puede invertir. Perderá todas las apps y servicios asociados a la app.
 

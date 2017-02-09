@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-09-27"
+  years: 2016, 2017
+lastupdated: "2017-01-04"
 
 ---
 
@@ -62,8 +62,8 @@ Usará este esquema de denominación cuando usa la CLI de {{site.data.keyword.op
 
 Los nombres de todas las entidades incluidas las acciones, desencadenantes, reglas, paquetes y los espacios de nombres están en una secuencia de caracteres que cumplen el formato siguiente:
 
-* El primer carácter debe ser un carácter alfanumérico, un dígito o un subrayado.
-* Los caracteres posteriores pueden ser alfanuméricos, dígitos y espacios, de cualquiera de lo siguiente: `_`, `@`, `.`, `-`.
+* El primer carácter debe ser un carácter alfanumérico o un signo de subrayado.
+* Los caracteres posteriores pueden ser alfanuméricos, espacios o cualquiera de los siguientes: `_`, `@`, `.`, `-`.
 * El último carácter no puede ser un espacio.
 
 Concretamente, un nombre debe coincidir con la siguiente expresión regular (expresada con la sintaxis de metacaracteres de Java):
@@ -193,7 +193,7 @@ function main(params) {
   } else if (params.payload == 1) {
      return {payload: 'Hello, World!'};
   } else if (params.payload == 2) {
-    return whisk.error();   // indicates abnormal completion
+    return {error: 'payload must be 0 or 1'};
   }
 }
 ```
@@ -250,60 +250,12 @@ Es posible que una acción sea síncrona en varias entradas y asíncrona en otra
 
 Observe que, independientemente de si la activación es síncrona o asíncrona, la invocación de la acción puede ser o no de bloqueo (blocking o non-blocking).
 
-### Métodos SDK adicionales
+### Objeto whisk global de JavaScript en desuso
 
-La función `whisk.invoke()` invoca otra acción y devuelve un Promise de la activación resultante. Acepta como argumento un diccionario que define los parámetros siguientes:
-
-- *name*: nombre completo de la acción a invocar,
-- *parameters*: un objeto JSON que representa la entrada a la acción invocada. Si se omite, tiene como valor predeterminado un objeto vacío.
-- *apiKey*: la tecla de autorización con la que invocar la acción. Tiene como valor predeterminado `whisk.getAuthKey()`.
-- *blocking*: si la acción se debe invocar en modalidad de bloque o no bloqueo. Cuando el `bloqueo` es true, la invocación esperará el resultado de la acción invocada antes de resolver el Promise devuelto. Tiene como valor predeterminado
-`false`, indicando una invocación que no es de bloqueo.
-
-`whisk.invoke()` devuelve un Promise. Para hacer que el sistema OpenWhisk espere a que termine la invocación, debe devolver este Promise desde la función `principal` de la acción.
-- Si la invocación falla, el promise enviará un rechazo con un objeto indicando que la invocación ha fallado. Puede tener dos campos:
-  - *error*: un objeto, normalmente una cadena, que describe el error.
-  - *activation*: un diccionario opcional que puede estar o no presente en función de la naturaleza del error de la invocación. En caso de estar presente, tendrá los siguientes campos:
-    - *activationId*: el ID de activación:
-    - *result*: si la acción se ha invocado en modalidad de bloqueo: el resultado de la acción como un objeto JSON, o
-bien `undefined`.
-- Si la invocación se realiza correctamente, el promise se resolverá con un diccionario que describirá la activación con los campos *activationId* y *result* descritos previamente.
-
-A continuación, se muestra un ejemplo de una invocación de bloqueo que utiliza el promise devuelto:
-```javascript
-return whisk.invoke({
-  name: 'myAction',
-  blocking: true
-})
-.then(function (activation) {
-    // activation completed successfully, activation contains the result
-    console.log('Activation ' + activation.activationId + ' completed successfully and here is the result ' + activation.result);
-})
-.catch(function (reason) {
-    console.log('An error has occured ' + reason.error);
-
-    if(reason.activation) {
-      console.log('Please check activation ' + reason.activation.activationId + ' for details.');
-    } else {
-      console.log('Failed to create activation.');
-    }
-});
-```
-{: codeblock}
-
-La función `whisk.trigger()` activa un desencadenante y devuelve un Promise para la activación resultante. Acepta como argumento un objeto JSON con los parámetros siguientes:
-
-- *name*: nombre completo del desencadenante a invocar.
-- *parameters*: un objeto JSON que representa la entrada al desencadenante. Si se omite, tiene como valor predeterminado un objeto vacío.
-- *apiKey*: la tecla de autorización con la que activar el desencadenante. Tiene como valor predeterminado `whisk.getAuthKey()`.
-
-`whisk.trigger()` devuelve un Promise. Si necesita que el sistema OpenWhisk espere a que termine el desencadenante, debe devolver este Promise desde la función `principal` de la acción.
-- Si el desencadenante falla, el promise enviará un rechazo con un objeto describiendo el error.
-- Si el desencadenante se completa correctamente, el promise se resolverá con un diccionario con el campo `activationId` que incluirá el ID de activación.
-
-La función `whisk.getAuthKey()` devuelve la clave de autorización bajo la que se ejecuta la acción. Normalmente,
-no necesita invocar esta función directamente, ya que se utiliza implícitamente por parte de las funciones
-`whisk.invoke()` y `whisk.trigger()`.
+El objeto `whisk` global ha quedado en desuso; migre sus acciones nodejs para que utilicen métodos alternativos.
+Para las funciones `whisk.invoke()` y `whisk.trigger()`, puede utilizar [openwhisk](https://www.npmjs.com/package/openwhisk) de la biblioteca del cliente.
+Para `whisk.getAuthKey()`, puede obtener el valor de la clave de API de la variable de entorno `__OW_API_KEY`.
+Para `whisk.error()`, puede devolver un objeto Promise rechazado (es decir, Promise.reject).
 
 ### Entornos de ejecución JavaScript
 {: #openwhisk_ref_javascript_environments}
@@ -335,6 +287,7 @@ Los paquetes siguientes están disponibles para su uso en el entorno de Node.js 
 - node-uuid v1.4.7
 - nodemailer v2.6.4
 - oauth2-server v2.4.1
+- openwhisk v3.0.0
 - pkgcloud v1.4.0
 - process v0.11.9
 - pug v2.0.0-beta6
@@ -386,6 +339,7 @@ Los paquetes siguientes están disponibles para su uso en el entorno de Node.js 
 - nano v5.10.0
 - node-uuid v1.4.2
 - oauth2-server v2.4.0
+- openwhisk v3.0.0
 - process v0.11.0
 - request v2.79.0
 - rimraf v2.5.1
@@ -522,8 +476,10 @@ La API de OpenWhisk admite llamadas solicitud-respuesta de clientes web. OpenWhi
 {: #openwhisk_syslimits}
 
 ### Acciones
-{{site.data.keyword.openwhisk_short}} tiene algunos límites del sistema, incluyendo la cantidad de memoria que utiliza una acción y
-cuántas invocaciones de acción se permiten por hora. En la tabla siguiente se proporciona una lista con los límites predeterminados de las acciones.
+{{site.data.keyword.openwhisk_short}} tiene algunos límites del sistema, incluyendo la cantidad de memoria que puede utilizar una acción y
+cuántas invocaciones de acción se permiten por minuto.  
+
+En la tabla siguiente se proporciona una lista con los límites predeterminados de las acciones.
 
 | límite | descripción | configurable | unidad | predeterminado |
 | ----- | ----------- | ------------ | -----| ------- |
@@ -596,7 +552,7 @@ cuántas invocaciones de acción se permiten por hora. En la tabla siguiente se 
 
 ### Desencadenantes
 
-Los desencadenantes están sujetos a una tasa de activación por minuto y por hora tal como se indica en la tabla siguiente.
+Los desencadenantes están sujetos a una tasa de activación por minuto tal como se indica en la tabla siguiente.
 
 | límite | descripción | configurable | unidad | predeterminado |
 | ----- | ----------- | ------------ | -----| ------- |
