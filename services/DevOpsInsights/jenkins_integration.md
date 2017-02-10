@@ -36,7 +36,7 @@ For the latest installation and configuration instructions, see [the plugin docu
 
 1. Click **Support** at the top of the screen while logged in to Bluemix.
 2. Click **Add Ticket**
-3. Choose **Something Else** category. 
+3. Choose the **Something Else** category. 
 4. Complete the ticket. In the Subject field, include the words "DevOps Insights Jenkins." 
 
 
