@@ -199,7 +199,7 @@ Use the following information to create a scenario in which two temperature sens
 
 You must have a {{site.data.keyword.iot_short_notm}} organization instance and an API key or token for that organization. For more information about API keys and tokens, see [HTTP REST API for applications](../applications/api.html#authentication).
 
-### About this task
+### About this scenario
 
 In this scenario, two devices are configured.
 
