@@ -32,6 +32,11 @@ Prior to installation and configuration, download the [the {{site.data.keyword.D
 
 For the latest installation and configuration instructions, see [the plugin documentation](https://github.ibm.com/oneibmcloud/DevOps-Insights-Jenkins-plugin-release/blob/master/README.md).
 
-_Note_: If you are not an IBM employee, you must request access before you can download the DevOps Insights plugin. You can submit a request for access by clicking **Support** at the top of the screen while logged in to Bluemix. Click **Add Ticket**, then select the **Something Else** category. In your ticket, include the words "DevOps Insights Jenkins." 
+*Note*: If you are not an IBM employee, you must request access before you can download the DevOps Insights plugin. To submit a request for access:
+
+1. Click **Support** at the top of the screen while logged in to Bluemix.
+2. Click **Add Ticket**
+3. Choose **Something Else** category. 
+4. Complete the ticket. In the Subject field, include the words "DevOps Insights Jenkins." 
 
 
