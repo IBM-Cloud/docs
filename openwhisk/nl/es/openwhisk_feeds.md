@@ -1,10 +1,12 @@
 ---
 
-
+ 
 
 copyright:
+
   years: 2016
 lastupdated: "2016-09-09"
+ 
 
 ---
 
@@ -16,7 +18,6 @@ lastupdated: "2016-09-09"
 
 # Implementación de canales de información
 {: #openwhisk_feeds}
-
 
 OpenWhisk da soporte a una API abierta, donde cualquier usuario puede exponer un servicio productor de sucesos como un **canal de información** en un **paquete**.   En esta sección se describen las opciones de arquitectura e implementación para proporcionar canales de información propios.
 

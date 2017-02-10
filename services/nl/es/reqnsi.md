@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-03"
+  years: 2016, 2017
+lastupdated: "2017-01-11"
 
 ---
 
@@ -39,10 +39,10 @@ Los servicios predefinidos están disponibles en {{site.data.keyword.Bluemix_not
 
 |Tipo	|Descripción	|Detalles de soporte|
 |:------|:--------------|:--------------|
-|IBM	|Un servicio proporcionado por IBM y disponible generalmente.	|Se da soporte a los problemas que se determinen que son un defecto de un servicio proporcionado por IBM disponible generalmente. Se proporciona soporte en función de la gravedad que establezca. Para obtener más información sobre la gravedad de las incidencias, consulte [Cómo obtener soporte](/docs/support/index.html#contacting-bluemix-support){: new_window}.|
+|IBM	|Un servicio proporcionado por IBM y disponible generalmente.	|Se da soporte a los problemas que se determinen que son un defecto de un servicio proporcionado por IBM disponible generalmente. Se proporciona soporte en función de la gravedad que establezca. Para obtener más información sobre la gravedad de las incidencias, consulte [Cómo obtener soporte](/docs/support/index.html#contacting-bluemix-support).|
 |Otro proveedor	|Un servicio que está proporcionado por una empresa que no es IBM.	|El soporte para servicios de terceros está proporcionado por un proveedor de servicios. Si IBM investiga un problema y se determina que el problema es un defecto de un servicio de terceros, IBM no está obligado a proporcionar un arreglo. IBM compartirá análisis con el proveedor de servicios de terceros si es necesario.|
 |Comunidad	|Un servicio que está proporcionado por una comunidad de código abierto.	|El soporte para servicios de la comunidad se proporciona a través de la Comunidad de desarrolladores de {{site.data.keyword.Bluemix_notm}}. Si IBM investiga un problema y se determina que el problema es un defecto de un servicio de comunidad, IBM no está obligado a proporcionar un arreglo.|
-|Beta	|Servicio que no está listo para producción que está en una etapa de prueba de desarrollo. Un servicio beta puede ayudar a los equipos de desarrollo y marketing a evaluar el valor de los servicios antes de que el servició esté generalmente disponible.	|Se da soporte a los problemas que se determinen que son un defecto de un servicio beta proporcionado por IBM, aunque IBM no está obligado a proporcionar un arreglo. Además, se asignará una incidencia de problema con una gravedad de 3 o 4 cuando proceda. Para obtener información sobre la gravedad de las incidencias, consulte [Cómo obtener soporte](/docs/support/index.html#contacting-bluemix-support){: new_window}.|
+|Beta	|Servicio que no está listo para producción que está en una etapa de prueba de desarrollo. Un servicio beta puede ayudar a los equipos de desarrollo y marketing a evaluar el valor de los servicios antes de que el servició esté generalmente disponible.	|Se da soporte a los problemas que se determinen que son un defecto de un servicio beta proporcionado por IBM, aunque IBM no está obligado a proporcionar un arreglo. Además, se asignará una incidencia de problema con una gravedad de 3 o 4 cuando proceda. Para obtener información sobre la gravedad de las incidencias, consulte [Cómo obtener soporte](/docs/support/index.html#contacting-bluemix-support).|
 {: caption="Table 1. {{site.data.keyword.Bluemix_notm}} información de soporte de los servicios" caption-side="top"}
 
 
@@ -114,14 +114,13 @@ No todos los servicios están disponibles en cada región de {{site.data.keyword
 |{{site.data.keyword.nlclassifierlshort}} 	|Sí 		|Sí 		|Sí|
 |{{site.data.keyword.objectstorageshort}}	|Sí		|No		|No|
 |{{site.data.keyword.personalityinsightsshort}}	|Sí		|Sí		|Sí|
-|{{site.data.keyword.mobilepush}}Push		|Sí		|Sí		|No|
+|{{site.data.keyword.mobilepush}}		|Sí		|Sí		|No|
 |Push para iOS 8					|Sí		|Sí		|No|
 |{{site.data.keyword.questionandanswershort}}	|Sí		|Sí		|Sí|
 |{{site.data.keyword.rapidApps}}		|Sí		|Sí		|No|
 |{{site.data.keyword.relationshipextractionshort}}	|Sí	|Sí		|Sí|
 |{{site.data.keyword.retrieveandrankshort}}	|Sí 		|Sí 		|Sí|
 |{{site.data.keyword.SecureGateway}}		|Sí		|Sí		|No|
-|{{site.data.keyword.servicediscoveryshort}}	|Sí		|No		|No|
 |{{site.data.keyword.sescashort}}		|Sí		|Sí		|Sí|
 |{{site.data.keyword.ssofull}}			|Sí		|No		|No|
 |{{site.data.keyword.speechtotextshort}}	|Sí 		|Sí	 	|Sí|
@@ -153,7 +152,7 @@ Puede ver todos los servicios disponibles en {{site.data.keyword.Bluemix_notm}} 
 
 * Desde la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}. Consulte el Catálogo de {{site.data.keyword.Bluemix_notm}}.
 * Desde la interfaz de línea de mandatos cf. Utilice el mandato **cf marketplace**.
-* Desde la propia aplicación. Utilice la [GET /v2/services Services API](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}.
+* Desde la propia aplicación. Utilice [GET /v2/services Services API ![icono de enlace externo](../icons/launch-glyph.svg)](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}.
 
 Puede seleccionar el servicio que necesita cuando desarrolla app. En la selección,
 {{site.data.keyword.Bluemix_notm}} plan del servicio interactúa con el servicio y realiza los pasos necesarios para suministrar los recursos al servicio. El proceso de suministro puede ser diferente para distintos tipos de servicios. Por ejemplo, un servicio de base de datos crea una base de datos y un servicio de notificación push para app móviles genera información de configuración.
@@ -202,7 +201,7 @@ instancia_servicio es el nombre que desea utilizar para esta instancia de servic
 Se pueden enlazar una instancia de servicio únicamente a aquellas instancias de aplicaciones que se encuentran en el mismo espacio u organización. No obstante, puede utilizar instancias de servicio de otros espacios y organizaciones de la misma forma que lo hace una app externa. En lugar de crear
 un enlace, utilice las credenciales para configurar directamente su instancia de app. Para obtener más información sobre cómo utilizan las apps externas
 los servicios de {{site.data.keyword.Bluemix_notm}}, consulte [Habilitación de apps externas para
-usar servicios de {{site.data.keyword.Bluemix_notm}} ](#accser_external){: new_window}.
+usar servicios de {{site.data.keyword.Bluemix_notm}} ](#accser_external).
 
 
 ## Configuración de la aplicación para interactuar con un servicio
@@ -300,9 +299,7 @@ Ahora puede configurar la aplicación para que utilice recursos externos. Para o
 
 Si tiene una instancia de servicio creada y enlazada a apps en una región, puede utilizar eta instancia de servicio en otra región mediante uno de los métodos siguientes:
 
-  * Utilice las credenciales del servicio para configurar directamente su instancia de app. Para obtener detalles, consulte
-[Habilitación de apps externas para usar el servicio de {{site.data.keyword.Bluemix_notm}}
-](#accser_external){: new_window}.
+  * Utilice las credenciales del servicio para configurar directamente su instancia de app. Consulte [Habilitación de apps externas para que utilice el servicio {{site.data.keyword.Bluemix_notm}}](#accser_external) para obtener más información. 
   * Crear un servicio proporcionado por el usuario como un puente.
 
 	Supongamos que va a iniciar la región en la que desea utilizar la instancia de servicio. Para utilizar una instancia de servicio existente en otra región, siga estos pasos:
@@ -316,7 +313,7 @@ Si tiene una instancia de servicio creada y enlazada a apps en una región, pued
 
       3. Vaya a la región en la que desea utilizar la instancia de servicio. En la barra de menús de {{site.data.keyword.Bluemix_notm}}, expanda **Región** o pulse el icono **Región** y seleccione la región en la que desea utilizar la instancia de servicio.
 
-      4. Cree una instancia de servicio suministrada por el usuario utilizando las credenciales y los parámetros de conexión que ha registrado de la variable de entorno *VCAP_SERVICES*. Para obtener información sobre cómo crear una instancia de servicio proporcionada por el usuario, consulte el tema sobre [creación de una instancia de servicio proporcionada por el usuario](#user_provide_services){: new_window}.
+      4. Cree una instancia de servicio suministrada por el usuario utilizando las credenciales y los parámetros de conexión que ha registrado de la variable de entorno *VCAP_SERVICES*. Para obtener información sobre cómo crear una instancia de servicio proporcionada por el usuario, consulte el tema sobre [creación de una instancia de servicio proporcionada por el usuario](#user_provide_services).
 
       5. Enlace la instancia de servicio proporcionada por el usuario a la app con el siguiente mandato:
 

@@ -3,8 +3,8 @@
 
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-02"
+  years: 2016, 2017
+lastupdated: "2017-01-04"
 
 
 ---
@@ -287,12 +287,11 @@ para un desencadenante de {{site.data.keyword.openwhisk_short}}. En este ejemplo
 `everyEightSeconds`.
 
   ```
-  wsk rule create --enable myRule everyEightSeconds hello
+  wsk rule create myRule everyEightSeconds hello
   ```
   {: pre}
   ```
   ok: created rule myRule
-  ok: rule myRule is activating
   ```
   {: screen}
 
@@ -485,7 +484,7 @@ en el mismo y creen reglas de {{site.data.keyword.openwhisk_short}} y acciones d
 1. Compartir el paquete con todos los usuarios:
 
   ```
-  wsk package update custom --shared
+  wsk package update custom --shared yes
   ```
   {: pre}
   ```

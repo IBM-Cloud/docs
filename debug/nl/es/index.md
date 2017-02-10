@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
   
-lastupdated: "2016-10-23"
+lastupdated: "2017-01-11"
 
 ---
 
@@ -23,17 +23,17 @@ Si tiene problemas con {{site.data.keyword.Bluemix}}, consulte los archivos de r
 
 Los registros dan información si un trabajo se ejecuta correctamente o si falla. También proporcionan información importante que se puede utilizar para la depuración y determinar la causa de un problema.
 
-Los registros tienen un formato fijo. En registros detallados, puede filtrar registros o utilizar hosts de registros externos para almacenar y procesar los registros. Para obtener más información acerca de los formatos de registro, visualizar y filtrar registros y configurar registros externos, consulte [Registro de apps que se ejecutan en Cloud Foundry](/docs/monitor_log/monitoringandlogging.html#logging_for_bluemix_apps){: new_window}.
+Los registros tienen un formato fijo. En registros detallados, puede filtrar registros o utilizar hosts de registros externos para almacenar y procesar los registros. Para obtener más información acerca de los formatos de registro, visualizar y filtrar registros y configurar registros externos, consulte [Registro de apps que se ejecutan en Cloud Foundry](/docs/monitor_log/monitoringandlogging.html#logging_for_bluemix_apps).
 
 
 ## Depuración de errores de transferencia
 {: #debugging-staging-errors}
-Es posible que tenga algún problema al transferir sus apps en {{site.data.keyword.Bluemix_notm}}. Si la app no se puede transferir, puede buscar y revisar los registros de transferencia (STG) para determinar qué ha ocurrido durante el despliegue de la aplicación y solucionar el problema. Para obtener más información sobre los métodos para visualizar registros para las apps Bluemix, consulte [Visualización de registros](/docs/monitor_log/monitoringandlogging.html#viewing_logs){: new_window}.  
+Es posible que tenga algún problema al transferir sus apps en {{site.data.keyword.Bluemix_notm}}. Si la app no se puede transferir, puede buscar y revisar los registros de transferencia (STG) para determinar qué ha ocurrido durante el despliegue de la aplicación y solucionar el problema. Para obtener más información sobre los métodos para visualizar registros para las apps Bluemix, consulte [Visualización de registros](/docs/monitor_log/monitoringandlogging.html#viewing_logs).  
 
-Para obtener información explicativa sobre el motivo por el cual su app podría fallar en {{site.data.keyword.Bluemix_notm}}, debe saber cómo se despliega una app en {{site.data.keyword.Bluemix_notm}} y cómo se ejecuta. Para obtener información detallada, consulte [despliegue de apps](/docs/manageapps/depapps.html#appdeploy){: new_window}.
+Para obtener información explicativa sobre el motivo por el cual su app podría fallar en {{site.data.keyword.Bluemix_notm}}, debe saber cómo se despliega una app en {{site.data.keyword.Bluemix_notm}} y cómo se ejecuta. Para obtener información detallada, consulte [despliegue de apps](/docs/manageapps/depapps.html#appdeploy).
 
 
-El procedimiento siguiente muestra cómo puede utilizar el mandato `cf logs` para depurar errores de transferencia. Antes de seguir estos pasos, asegúrese de haber instalado la interfaz de línea de mandatos cf. Para obtener más información sobre cómo instalar la interfaz de línea de mandatos cf, consulte [Instalación de la interfaz de línea de mandatos cf](/docs/starters/install_cli.html){: new_window}.
+El procedimiento siguiente muestra cómo puede utilizar el mandato `cf logs` para depurar errores de transferencia. Antes de seguir estos pasos, asegúrese de haber instalado la interfaz de línea de mandatos cf. Para obtener más información sobre cómo instalar la interfaz de línea de mandatos cf, consulte [Instalación de la interfaz de línea de mandatos cf](/docs/starters/install_cli.html).
 
   1. Conecte con {{site.data.keyword.Bluemix_notm}} escribiendo el siguiente código en la interfaz de línea de mandatos cf:
      ```
@@ -107,12 +107,12 @@ Si tiene problemas con la app en tiempo de ejecución, los registros de la app p
 
 En concreto, se puede habilitar el registro en stdout y stderr. Para obtener más información sobre cómo configurar los archivos de registro para las apps que se despliegan mediante los paquetes de compilación integrados de {{site.data.keyword.Bluemix_notm}}, consulte la lista siguiente:
 
-  * Para las apps Liberty for Java™, consulte [Perfil de Liberty: registro y rastreo](http://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/rwlp_logging.html){: new_window}.
-  * Para las apps Node.js, consulte [Cómo registrar en node.js](http://docs.nodejitsu.com/articles/intermediate/how-to-log){: new_window}.
-  * Para las apps PHP, consulte [log_errores](http://php.net/manual/en/function.error-log.php){: new_window}.
-  * Para las apps Python, consulte [Registro HOWTO](https://docs.python.org/2/howto/logging.html){: new_window}.
-  * Para las apps Ruby on Rails, consulte [El registrador](http://guides.rubyonrails.org/debugging_rails_applications.html#the-logger){: new_window}.
-  * Para las apps Ruby Sinatra, consulte [Registro](http://www.sinatrarb.com/intro.html#Logging){: new_window}.
+  * Para las apps Liberty for Java™, consulte [Perfil de Liberty: registro y rastreo ![icono de enlace externo](../icons/launch-glyph.svg)](http://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/rwlp_logging.html){: new_window}.
+  * Para las apps Node.js, consulte [Cómo registrar en node.js ![icono de enlace externo](../icons/launch-glyph.svg)](http://docs.nodejitsu.com/articles/intermediate/how-to-log){: new_window}.
+  * Para las apps PHP, consulte [log_errores ![icono de enlace externo](../icons/launch-glyph.svg)](http://php.net/manual/en/function.error-log.php){: new_window}.
+  * Para las apps Python, consulte [Registro HOWTO ![icono de enlace externo](../icons/launch-glyph.svg)](https://docs.python.org/2/howto/logging.html){: new_window}.
+  * Para las apps Ruby on Rails, consulte [El registrador ![icono de enlace externo](../icons/launch-glyph.svg)](http://guides.rubyonrails.org/debugging_rails_applications.html#the-logger){: new_window}.
+  * Para las apps Ruby Sinatra, consulte [Registro ![icono de enlace externo](../icons/launch-glyph.svg)](http://www.sinatrarb.com/intro.html#Logging){: new_window}.
 
 Cuando especifica `cf logs nombre_app --recent` en la interfaz de línea de mandatos cf, solo se muestran los registros más recientes. Para ver los registros en busca de errores producidos anteriormente, debe recuperar todos los registros y buscar los errores. Para recuperar todos los registros correspondientes a la app, siga uno de los siguientes métodos:
 <dl>
@@ -142,9 +142,9 @@ Si realiza cambios de código en una app que ya está desplegada y en funcionami
 
 En función de la forma de desplegar el nuevo código, elija uno de los métodos siguientes para depurar los cambios de código:
 
-  * Para el nuevo código desplegado desde la línea de mandatos, compruebe la salida del mandato *cf push*. Además, puede utilizar el mandato *cf logs* para encontrar más pistas para resolver el problema. Para obtener más información sobre cómo utilizar el mandato *cf logs*, consulte [Visualización de registros desde la interfaz de línea de mandatos](../monitor_log/monitoringandlogging.html#viewing_logs_cli){: new_window}.
+  * Para el nuevo código desplegado desde la línea de mandatos, compruebe la salida del mandato *cf push*. Además, puede utilizar el mandato *cf logs* para encontrar más pistas para resolver el problema. Para obtener más información sobre cómo utilizar el mandato *cf logs*, consulte [Visualización de registros desde la interfaz de línea de mandatos](/docs/monitor_log/monitoringandlogging.html#viewing_logs_cli).
 
-  * Para el nuevo código que se despliega desde una interfaz gráfica de usuario, como la consola de {{site.data.keyword.Bluemix_notm}}, DevOps Delivery Pipeline o Travis-CI, puede comprobar los registros de la interfaz. Por ejemplo, si despliega el nuevo código desde la consola de {{site.data.keyword.Bluemix_notm}}, puede ir a Panel de control, localizar la app y ver los registros para buscar claves sobre el problema.   Para obtener más información sobre cómo visualizar registros desde la consola de {{site.data.keyword.Bluemix_notm}}, consulte [Visualización de registros desde el panel de control de Bluemix](../monitor_log/monitoringandlogging.html#viewing_logs_UI){: new_window}.  
+  * Para el nuevo código que se despliega desde una interfaz gráfica de usuario, como la consola de {{site.data.keyword.Bluemix_notm}}, DevOps Delivery Pipeline o Travis-CI, puede comprobar los registros de la interfaz. Por ejemplo, si despliega el nuevo código desde la consola de {{site.data.keyword.Bluemix_notm}}, puede ir a Panel de control, localizar la app y ver los registros para buscar claves sobre el problema.   Para obtener más información sobre cómo visualizar registros desde la consola de {{site.data.keyword.Bluemix_notm}}, consulte [Visualización de registros desde el panel de control de Bluemix](/docs/monitor_log/monitoringandlogging.html#viewing_logs_UI).  
 
 
 # rellinks
@@ -153,11 +153,11 @@ En función de la forma de desplegar el nuevo código, elija uno de los métodos
 ## general
 {: #general}
 
-  * [Droplet Execution Agent (DEA)](http://docs.cloudfoundry.org/concepts/architecture/execution-agent.html){: new_window}
-  * [Iniciación al servicio IBM Monitoring and Analytics for Bluemix](../services/monana/index.html#gettingstartedtemplate){: new_window}
-  * [Cómo funciona Bluemix](../overview/whatisbluemix.html#howwork){: new_window}
-  * [Instalación de la herramienta de mandatos cf](../starters/install_cli.html){: new_window}
-  * [Visualización de registros](../monitor_log/monitoringandlogging.html#viewing_logs){: new_window}
+  * [Droplet Execution Agent (DEA) ![icono de enlace externo](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/concepts/architecture/execution-agent.html){: new_window}
+  * [Iniciación al servicio IBM Monitoring and Analytics for Bluemix](/docs/services/monana/index.html#gettingstartedtemplate)
+  * [Cómo funciona Bluemix](/docs/overview/whatisbluemix.html#howwork)
+  * [Instalación de la herramienta de mandatos cf](/docs/starters/install_cli.html)
+  * [Visualización de registros](/docs/monitor_log/monitoringandlogging.html#viewing_logs)
 
   
   
