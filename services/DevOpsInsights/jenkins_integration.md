@@ -36,5 +36,5 @@ For the latest installation and configuration instructions, see [the plugin docu
 
 1. While you are logged in to {{site.data.keyword.Bluemix_notm}}, in the header, click **Support**.
 2. Click **Add Ticket**
-3. Click the **Something Else** category. 
+3. Click **Something Else**. 
 4. Complete the ticket. In the **Subject** field, include the words *DevOps Insights Jenkins*. 
