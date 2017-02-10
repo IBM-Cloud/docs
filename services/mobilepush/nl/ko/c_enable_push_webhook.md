@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # 웹 훅 이벤트 기반 알림 사용
 {: #tag_based_notifications}
-마지막 업데이트 날짜: 2016년 12월 6일
+마지막 업데이트 날짜: 2017년 1월 16일
 {: .last-updated}
 
 
@@ -32,4 +32,4 @@ copyright:
 **참고**: 일괄처리로 알림 디스패치가 실행됩니다. 메시지 디스패치에 여러 웹 훅 이벤트가 있으며 실패 및 성공 이벤트가 모두 포함될 수 있습니다.
 웹 훅 이벤트의 메시지 ID가 디스패치된 메시지 ID와 동일할 수 있습니다.  
 
-웹 훅에 관한 자세한 정보는 [IBM 푸시 알림 REST API](https://mobile.{DomainName}/imfpush/#/webhooks)를 참조하십시오. 
+웹 후크에 대한 자세한 정보는 [IBM Push Notifications REST API ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://mobile.{DomainName}/imfpush/#/webhooks "외부 링크 아이콘"){: new_window}을 참조하십시오.

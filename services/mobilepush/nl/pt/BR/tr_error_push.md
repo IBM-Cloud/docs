@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -13,7 +13,7 @@ copyright:
 # Mensagens de erro
 de serviço {{site.data.keyword.mobilepushshort}}
 {: #errors}
-Última atualização: 07 de dezembro de 2016
+Última atualização: 16 de janeiro de 2017
 {: .last-updated}
 
 
@@ -36,7 +36,7 @@ docs o código de erro relacionado.
 {: #error_fpwse0001e}
 
 **Explicação**: o recurso que você está tentando consultar, como uma
-tag ou assinatura, não está disponível no servidor. 
+tag ou assinatura, não está disponível no servidor.
 
 **Resposta do usuário**: crie o recurso que foi relatado na mensagem. Como alternativa, é possível fornecer o identificador
 correto para consultar o recurso.
@@ -60,16 +60,13 @@ configuradas.
 
 **Resposta do usuário**: assegure-se de que o serviço
 {{site.data.keyword.mobilepushshort}}
-tenha sido configurado com certificados de segurança válidos para APNs. Para obter mais
-informações, veja [Configurando
-credenciais para APNs](t_push_provider_ios.html){: new_window}.
+tenha sido configurado com certificados de segurança válidos para APNs. Para obter mais informações, veja [Configurando credenciais para APNs ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](t_push_provider_ios.html "Ícone de link externo"){: new_window}.
 
 
 ## FPWSE0004E
 {: #error_fpwse0004e}
 
 **Explicação**: o corpo de JSON incluído na solicitação não é válido.
-        
 
 
 **Resposta do usuário**: assegure-se de usar uma sintaxe válida de JSON na
@@ -95,12 +92,11 @@ ausente ou não é válido e, em seguida, forneça as informações necessárias
 {: #error_fpwse0006e}
 
 **Explicação**: o corpo de JSON da solicitação possui parâmetros que o servidor
-{{site.data.keyword.mobilepushshort}} não entende. 
+{{site.data.keyword.mobilepushshort}} não entende.
 
 
 **Resposta do usuário**: verifique se o corpo de JSON na solicitação segue o
-formato da solicitação que é esperado pelo servidor {{site.data.keyword.mobilepushshort}}. Para obter
-mais informações, veja [APIs de REST](https://mobile.{DomainName}/imfpush/).
+formato da solicitação que é esperado pelo servidor {{site.data.keyword.mobilepushshort}}. Para obter mais informações, veja [APIs de REST ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://mobile.{DomainName}/imfpush/ "Ícone de link externo"){: new_window}.
 
 
 
@@ -112,8 +108,7 @@ não reconhecidos. Por exemplo, se a solicitação para excluir a assinatura tiv
 
 
 **Resposta do usuário**: verifique se o corpo de JSON na solicitação segue o formato
-da solicitação que é esperado pelo servidor {{site.data.keyword.mobilepushshort}}. Para obter
-mais informações, veja [APIs de REST](https://mobile.{DomainName}/imfpush/).
+da solicitação que é esperado pelo servidor {{site.data.keyword.mobilepushshort}}. Para obter mais informações, veja [APIs de REST ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://mobile.{DomainName}/imfpush/ "Ícone de link externo"){: new_window}.
 
 
 
@@ -125,8 +120,7 @@ ausentes. Por exemplo, os parâmetros deviceId e tagName podem estar ausentes na
 
 
 **Resposta do usuário**: verifique se o corpo de JSON na solicitação segue o formato
-da solicitação que é esperado pelo servidor {{site.data.keyword.mobilepushshort}}. Para obter
-mais informações, veja [APIs de REST](https://mobile.{DomainName}/imfpush/).
+da solicitação que é esperado pelo servidor {{site.data.keyword.mobilepushshort}}. Para obter mais informações, veja [APIs de REST ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://mobile.{DomainName}/imfpush/ "Ícone de link externo"){: new_window}.
 
 
 
@@ -134,7 +128,7 @@ mais informações, veja [APIs de REST](https://mobile.{DomainName}/imfpush/).
 {: #error_fpwse0009e}
 
 **Explicação**: foi feita uma tentativa para enviar notificações, mas não há
-dispositivos registrados com o aplicativo. 
+dispositivos registrados com o aplicativo.
 
 **Resposta do usuário**: assegure-se de que os dispositivos tenham sido registrados
 com o aplicativo antes de tentar enviar notificações.
@@ -184,7 +178,6 @@ solicitação.
 {: #error_fpwse0013e}
 
 **Explicação**: a carga útil de JSON na solicitação não é válida.
-        
 
 
 **Resposta do usuário**: assegure-se de que a carga útil de JSON seja válida.

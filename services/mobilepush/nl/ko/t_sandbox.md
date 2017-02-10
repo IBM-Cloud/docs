@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,10 +12,10 @@ copyright:
 
 # 샌드박스 및 프로덕션 모드
 {: #push-sandboxandproduction-modes}
-마지막 업데이트 날짜: 2016년 12월 6일
+마지막 업데이트 날짜: 2017년 1월 11일
 {: .last-updated}
 
-샌드박스 또는 프로덕션 모드 중 하나에서 {{site.data.keyword.mobilepushshort}}을 사용할 수 있습니다. 샌드박스는 서버 애플리케이션 푸시 서비스와 푸시 API 통합을 개발 및 테스트하는 자체 포함된 테스트 환경입니다.  
+샌드박스 또는 프로덕션 모드 중 하나에서 {{site.data.keyword.mobilepushshort}}를 사용할 수 있습니다. 샌드박스는 서버 애플리케이션 푸시 서비스와 푸시 API 통합을 개발 및 테스트하는 자체 포함된 테스트 환경입니다.  
 
 먼저 푸시 대시보드를 사용하여 샌드박스와 프로덕션 모드를 구성합니다. 푸시 서비스의 조작 모드를 전환할 수 있습니다([Push REST API](https://mobile.{DomainName}/imfpush/){: new_window}를 사용하여 샌드박스와 프로덕션 간 모드 전환). 기본적으로 샌드박스 모드가 설정됩니다. 그러나 모드 간에 전환할 경우 해당 모드 사이에서 태그, 디바이스 및 구독이 공유되지 않습니다. 
 
@@ -25,8 +25,7 @@ copyright:
 
 1. PUT ApplicationID Settings REST API 호출을 사용하십시오. 
 2. JSON 본문에서 [GET ApplicationID Settings REST](https://mobile.{DomainName}/imfpush/){: new_window} API 호출을 사용하여 모드가 전환되었는지 확인하십시오. 예상되는 응답은 "mode": "PRODUCTION입니다.
-```
-    { 
+```{ 
     "mode": "PRODUCTION"
  }
  ```

@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Gestion des balises
 {: #manage_tags}
-Dernière mise à jour : 7 décembre 2016
+Dernière mise à jour : 11 janvier 2017
 {: .last-updated}
 
 Utilisez le tableau de bord {{site.data.keyword.mobilepushshort}} afin de créer et de supprimer des balises pour votre application puis d'initier des notifications basées sur des balises. Ces notifications basées sur des balises sont reçues sur les appareils abonnés à ces balises.
@@ -108,7 +108,7 @@ Copiez les fragments de code ci-après dans votre application mobile afin d'obte
 Extrayez un tableau de balises disponibles pour abonnement.
 
 ```
-//Extraction d'une liste de balises disponibles auxquelles le périphérique peut s'abonner
+//Extraction d'une liste de balises disponibles auxquelles le appareil peut s'abonner
 BMSPush.retrieveAvailableTags(function(tags) {
   alert(tags);
 }, failure); 
@@ -116,54 +116,13 @@ BMSPush.retrieveAvailableTags(function(tags) {
 	{: codeblock}
 
 ```
-//Extraction d'une liste de balises disponibles auxquelles le périphérique est abonné.
+//Extraction d'une liste de balises disponibles auxquelles l'appareil est abonné.
 BMSPush.retrieveSubscriptions(function(tags) {
    alert(tags); 
 }, failure); 
 ```
 	{: codeblock}
 
-## Obtention de balises sur Objective-C
-{: objc-get-tags}
-
-Copiez les fragments de code ci-après dans votre application iOS développée avec Objective-C afin d'obtenir la liste des balises auxquelles l'appareil est abonné ainsi que la liste des balises disponibles auxquelles l'appareil peut s'abonner.
-
-Utilisez l'API **retrieveAvailableTags** ci-après pour obtenir la liste des balises disponibles auxquelles l'appareil peut s'abonner.
-
-```
-//Get a list of available tags to which the device can subscribe
-[push retrieveAvailableTagsWithCompletionHandler:
-^(IMFResponse *response, NSError *error){
- if(error){    
-   [self updateMessage:error.description];  
- } else {
-   [self updateMessage:@"Successfully retrieved available tags."];
- NSDictionary *availableTags = [[NSDictionary alloc]init];
- availableTags = [response tags];
-[self.appDelegateVC updateMessage:availableTags.description];
-}
-   }];
- ```
-	{: codeblock}
-
-Utilisez l'API **retrieveSubscriptions** pour obtenir la liste des balises auxquelles l'appareil est abonné.
-
-
-```
-// Get a list of tags that to which the device is subscribed.
-[push retrieveSubscriptionsWithCompletionHandler:
-^(IMFResponse *response, NSError *error) {
-  if(error){
-     [self updateMessage:error.description];
-   } else {
-   [self updateMessage:@"Successfully retrieved subscriptions."];
- NSDictionary *subscribedTags = [[NSDictionary alloc]init];
-subscribedTags = [response subscriptions];
-[self.appDelegateVC updateMessage:subscribedTags.description];
-}
-  }];
-  ```
-	{: codeblock}
 
 ## Obtention de balises sur Swift
 {: swift-get-tags}
@@ -317,50 +276,11 @@ BMSPush.unsubscribe(tag, success, failure);
 ```
 	{: codeblock}
 
-## Abonnement et désabonnement à des balises sur Objective-C
-{: objc-subscribe-tags}
-
-Copiez et collez le fragment de code suivant dans votre application mobile Objective-C.
-
-Utilisez l'API **subscribeToTags** pour vous abonner à une balise.
-
-```
-[push subscribeToTags:tags completionHandler:
-^(IMFResponse *response, NSError *error) {
-  if(error){
-     [self updateMessage:error.description];
-  }else{
-      NSDictionary* subStatus = [[NSDictionary alloc]init];
-      subStatus = [response subscribeStatus];
-      [self updateMessage:@"Parsed subscribe status is:"];
-      [self updateMessage:subStatus.description];
-  }
-  }];
-```
-	{: codeblock}
-
-Utilisez l'API **unsubscribeFromTags** pour vous désabonner d'une balise.
-
-```
-[push unsubscribeFromTags:tags completionHandler:
-^(IMFResponse *response, NSError *error) {
-  if (error){
-       [self updateMessage:error.description];
- } else {
-     NSDictionary* subStatus = [[NSDictionary alloc]init];
-       subStatus = [response unsubscribeStatus];
-       [self updateMessage:subStatus.description];
-  }
-  }];
-```
-	{: codeblock}
 
 ## Abonnement et désabonnement à des balises sur Swift
 {: swift-subscribe-tags}
 
 Copiez et collez le fragment de code suivant dans votre application mobile Swift.
-
-**Abonnement à des balises disponibles**
 
 Utilisez l'API **subscribeToTags** pour vous abonner à une balise.
 
@@ -376,8 +296,6 @@ push.subscribeToTags(tagsArray: ["MyTag"], completionHandler: { (response, statu
 })
 ```
 	{: codeblock}
-
-**Désabonnement de balises**
 
 Utilisez l'API **unsubscribeFromTags** pour vous désabonner d'une balise.
 
@@ -408,7 +326,7 @@ bmsPush.subscribe(tagsArray,function(response) {
 ```
 	{: codeblock}
 
-Le désabonnement à des balises utilise la méthode `unSubscribe`.
+Le désabonnement à des balises utilise la méthode **unSubscribe**.
 
 ```
 var tagsArray = ["tag1", "Tag2"]
@@ -421,7 +339,7 @@ var tagsArray = ["tag1", "Tag2"]
 # Utilisation de notifications basées sur les balises
 {: #using_tags}
 
-Les messages de notifications basées sur les balises sont envoyés à tous les appareils abonnés à une balise particulière. Chaque appareil peut s'abonner à un nombre illimité de balises. Cette rubrique explique comment envoyer des des notifications basées sur des balises. Les abonnements sont gérés par l'instance de service Bluemix {{site.data.keyword.mobilepushshort}}. Quand une balise est supprimée, toutes les informations qui lui sont associées, y compris ses abonnés et appareils, sont supprimées. Aucun désabonnement automatique n'est requis pour cette balise car elle n'existe plus et aucune action supplémentaire n'est requise depuis le côté client.
+Les messages de notifications basées sur les balises sont envoyés à tous les appareils abonnés à une balise particulière. Chaque appareil peut s'abonner à un nombre illimité de balises. Cette rubrique explique comment envoyer des notifications basées sur des balises. Les abonnements sont gérés par l'instance de service Bluemix {{site.data.keyword.mobilepushshort}}. Quand une balise est supprimée, toutes les informations qui lui sont associées, y compris ses abonnés et appareils, sont supprimées. Aucun désabonnement automatique n'est requis pour cette balise car elle n'existe plus et aucune action supplémentaire n'est requise depuis le côté client.
 
 Créez des balises sur l'écran **Tag**. Pour plus d'informations sur la création de balises,
 voir [Création de balises](t_manage_tags.html).

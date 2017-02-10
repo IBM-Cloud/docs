@@ -5,17 +5,17 @@ copyright:
 
 ---
 
-# Enabling actionable notifications for iOS
+# Abilitazione di notifiche operative per iOS
 {: #enable-actionable-notifications-ios}
 
-Unlike traditional push notifications, actionable notifications prompt users to make a selection upon receipt of the notification alert without opening the app. Use the following instructions to enable actionable push notifications in your application.
+A differenza delle notifiche di push tradizionali, le notifiche operative richiedono agli utenti di effettuare una selezione al momento della ricezione dell'avviso di notifica senza aprire l'applicazione. Utilizza le seguenti istruzioni per abilitare le notifiche di push operative nella tua applicazione.
 
-1. Create a user response action.
+1. Crea un'azione di risposta utente.
 
 	Objective-C
 
 	```
-	// For Objective-C
+	// Per Objective-C
 	UIMutableUserNotificationAction *acceptAction = [[UIMutableUserNotificationAction alloc] init];
 	    acceptAction.identifier = @"ACCEPT_ACTION";
 	    acceptAction.title = @"Accept";
@@ -43,12 +43,14 @@ Unlike traditional push notifications, actionable notifications prompt users to 
 	declineAction.activationMode = UIUserNotificationActivationMode.Background
 	```
 
-2. Create the notification category and set an action. **UIUserNotificationActionContextDefault** or **UIUserNotificationActionContextMinimal** are valid contexts.
+2. Crea la categoria di notifica e imposta un'azione. **UIUserNotificationActionContextDefault** o
+                **UIUserNotificationActionContextMinimal** sono
+contesti validi.
 
 	Objective-C
 
 	```
-	// For Objective-C
+	// Per Objective-C
 	UIMutableUserNotificationCategory *callCat = [[UIMutableUserNotificationCategory alloc] init];
 	    callCat.identifier = @"POLL_CATEGORY";
 	    [callCat setActions:@[acceptAction, declineAction] forContext:UIUserNotificationActionContextDefault];
@@ -57,34 +59,36 @@ Unlike traditional push notifications, actionable notifications prompt users to 
 	Swift
 
 	```
-	// For Swift
+	// Per Swift
 	let pushCategory = UIMutableUserNotificationCategory()
 	pushCategory.identifier = "TODO_CATEGORY"
 	pushCategory.setActions([acceptAction, declineAction], forContext: UIUserNotificationActionContext.Default)
 	```
 
-1. Create the notification setting and assign the categories from the previous step.
+1. Crea l'impostazione di notifica e assegna le categorie
+dal passo precedente.
 
 	Objective-C
 
 	```
-	// For Objective-C
+	// Per Objective-C
 	NSSet *categories = [NSSet setWithObjects:callCat, nil];
 	```
 
 	Swift
 
 	```
-	// For Swift
+	// Per Swift
 	let categories = NSSet(array:[pushCategory]);
 	```
 
-1. Create the local or remote notification and assign it the identity of the category.
+1. Crea la notifica locale o remota e assegnale
+l'identità della categoria.
 
 	Objective-C
 
 	```
-	//For Objective-C
+	//Per Objective-C
 
 	[[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:categories]];
 
@@ -94,7 +98,7 @@ Unlike traditional push notifications, actionable notifications prompt users to 
 	Swift
 
 	```
-	//For Swift
+	//Per Swift
 	let notificationTypes: UIUserNotificationType = UIUserNotificationType.Badge | UIUserNotificationType.Alert | UIUserNotificationType.Sound
 	let notificationSettings: UIUserNotificationSettings = UIUserNotificationSettings(forTypes: notificationTypes, categories: categories)
 

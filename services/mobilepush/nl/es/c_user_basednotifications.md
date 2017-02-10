@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Habilitación de notificaciones basadas en usuarios
 {: #user_based_notifications}
-Última actualización: 06 de diciembre de 2016
+Última actualización: 16 de enero de 2017
 {: .last-updated}
 
 Las {{site.data.keyword.mobilepushshort}} basadas en ID de usuario están pensadas para los usuarios de aplicaciones móviles con mensajes personalizados. Con las notificaciones basadas en usuarios, puede elegir notificar a individuos específicos según sus preferencias.
@@ -20,7 +20,7 @@ Las {{site.data.keyword.mobilepushshort}} basadas en ID de usuario están pensad
 ## Dispositivo de registro con ID de usuario
 Para habilitar las notificaciones push destinadas por ID de usuario, asegúrese de registrar el dispositivo con un campo de ID de usuario definido.     
 
-El ID de usuario puede ser cualquier serie que proporcione la aplicación a la API de registro del dispositivo. Normalmente, las aplicaciones móviles primero ejecutan un ciclo de autenticación en el que el usuario de la aplicación se autentica en un servicio de autenticación, como por ejemplo [{{site.data.keyword.amafull}}](https://console.ng.bluemix.net/docs/services/mobileaccess/index.html). Si la autenticación es correcta, el ID de usuario autenticado se pasa a la API de registro del dispositivo push. 
+El ID de usuario puede ser cualquier serie que proporcione la aplicación a la API de registro del dispositivo. Normalmente, las aplicaciones móviles primero ejecutan un ciclo de autenticación en el que el usuario de la aplicación se autentica en un servicio de autenticación, como por ejemplo [{{site.data.keyword.amafull}} ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://console.ng.bluemix.net/docs/services/mobileaccess/index.html "icono de enlace externo"){: new_window}. Si la autenticación es correcta, el ID de usuario autenticado se pasa a la API de registro del dispositivo push. 
 
 ## Sincronización del inicio y cierre de sesión de un usuario 
 

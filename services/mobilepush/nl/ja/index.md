@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+years: 2015, 2017
 
 ---
 
@@ -12,36 +12,43 @@ copyright:
 
 # {{site.data.keyword.mobilepushshort}} 概説
 {: #gettingstartedtemplate}
-最終更新日: 2016 年 12 月 06 日
+最終更新日: 2017 年 1 月 19 日
 {: .last-updated}
 
 {:shortdesc}
 
-{{site.data.keyword.mobilepushshort}} サービスは、iOS と Android のモバイル・プラットフォーム、Google Chrome、Mozilla Firefox、Safari の Web ブラウザー、および Google Chrome アプリケーションおよびエクステンションをターゲットとする、モバイルと Web のプッシュ通知を送信および管理するための統一プラットフォームを提供します。{{site.data.keyword.mobilepushshort}}サービスは、デバイス、デバイス・プラットフォーム、および Web ブラウザーへのアプリケーション・ユーザーのマッピングを管理し、それらへのプッシュ通知のディスパッチを処理します。このサービスを使用して、モバイル・アプリケーション・ユーザーと Web ブラウザー・アプリケーション・ユーザーにブロードキャスト、ユニキャスト (deviceID および userID に基づく) に加え、タグ (またはトピック) をプッシュ通知として送信できます。また、クライアント・アプリケーションをさらに開発するために SDK および [REST API](https://mobile.{DomainName}/imfpush/) を使用することもできます。
+{{site.data.keyword.mobilepushshort}} は、モバイル・カテゴリー内の Bluemix カタログ・サービスとして使用可能であり、モバイルおよび Web のプッシュ通知の送信と管理を可能にします。このサービスは、通知のディスパッチを処理しながら、アプリケーション・ユーザーとデバイス、デバイス・プラットフォーム、および Web ブラウザーとのマッピングを管理します。
+
+ {{site.data.keyword.mobilepushshort}} は、MobileFirst Services Starter ボイラープレートの一部として、および Bluemix [専用サービス](/docs/dedicated/index.html)として使用可能です。このサービスを使用して、ブロードキャスト、ユニキャスト (deviceID と userID に基づく)、タグ・ベースの通知、Web フックベースの通知だけでなく、リッチ・メディア通知と対話式通知もモバイル・ユーザーと Web ブラウザー・アプリケーション・ユーザーに送信することができます。また、SDK (Software Development Kit) と [REST API ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://mobile.{DomainName}/imfpush/ "外部リンク・アイコン"){: new_window}を使用して、クライアント・アプリケーションをさらに開発することもできます。
+
+このサービスでは、ユーザー・データからグラフおよびレポートを生成してプッシュ通知のパフォーマンスのモニターに役立つモニタリング機能も提供されています。[プッシュ通知のモニター](/docs/services/mobilepush/t_push_monitoring.html)を参照してください。
+
+{{site.data.keyword.mobilepushshort}} サービスは、以下のプラットフォームでサポートされています。
+
+- [iOS および Android のモバイル・デバイス](/docs/services/mobilepush/c_enable_push.html)
+- [Google Chrome、Mozilla Firefox、および Safari の Web ブラウザー](/docs/services/mobilepush/c_chrome_firefox_enable.html)
+- [Google Chrome アプリケーションおよびエクステンション](/docs/services/mobilepush/c_web_extensions.html)
 
 
 # 関連リンク
 {: #rellinks}
 
-* [概要](c_overview_push.html){: new_window}
+* [概要![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](c_overview_push.html "外部リンク・アイコン"){: new_window}
 
 ## チュートリアルおよびサンプル {:id="samples"}
 {: #samples}
-* [Android helloPush サンプル・アプリケーション](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/){: new_window}
-- [Cordova サンプル・アプリケーション](https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-hellopush){: new_window}
-* [iOS helloPush サンプル・アプリケーション (Obj-C)](https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-hellopush/){: new_window}
-* [iOS helloPush サンプル・アプリケーション (Swift)](https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-hellopush){: new_window}
+* [Android helloPush のサンプル・アプリケーション![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/ "外部リンク・アイコン"){: new_window}
+- [Cordova のサンプル・アプリケーション![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-hellopush "外部リンク・アイコン"){: new_window}
+* [iOS helloPush のサンプル・アプリケーション (Swift) ![ 外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-hellopush "外部リンク・アイコン"){: new_window}
 
 ## SDK
 {: #sdk}
-* [Android SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-push){: new_window}
-* [Cordova SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push){: new_window}
-* [iOS SDK (Obj-C)](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master){: new_window}
-* [iOS SDK (Swift)](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/zip/master){: new_window}
+* [Android SDK ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-push "外部リンク・アイコン"){: new_window}
+* [Cordova SDK ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push "外部リンク・アイコン"){: new_window}
+* [iOS SDK (Swift) ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/zip/master "外部リンク・アイコン"){: new_window}
 
 ## API リファレンス
 {: #api}
-* [Push API リファレンス (Android)](https://classicdocs.ng.bluemix.net/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html){: new_window}
-* [IMFPush API リファレンス iOS](https://classicdocs.ng.bluemix.net/docs/api/content/api/mobilefirst/ios/IMFPush_api-doc/html/index.html){: new_window}
-* [BMSPush API リファレンス iOS (Swift)](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/blob/development/Apple Docs/index.html){: new_window}
-* [REST API リファレンス](https://mobile.{DomainName}/imfpush/){: new_window}
+* [Push API Reference (Android) ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://classicdocs.ng.bluemix.net/docs/api/content/api/mobilefirst/android/push-api-doc/overview-summary.html "外部リンク・アイコン"){: new_window}
+* [BMSPush API reference iOS (Swift) ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/blob/development/Apple Docs/index.html "外部リンク・アイコン"){: new_window}
+* [REST API Reference![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://mobile.{DomainName}/imfpush/ "外部リンク・アイコン"){: new_window}

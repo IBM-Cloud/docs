@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Chrome アプリケーションおよびエクステンションへの基本通知の送信 
 {: #web_extensions_notifications}
-最終更新日: 2016 年 12 月 06 日
+最終更新日: 2017 年 1 月 11 日
 {: .last-updated}
 
 アプリケーションの開発が完了したら、プッシュ通知を送信できます。 

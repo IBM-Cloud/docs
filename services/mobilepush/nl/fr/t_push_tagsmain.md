@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -10,11 +10,14 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Notifications basées sur les balises 
+# Notifications basées balises 
 {: #push-ios-main-tags}
-Dernière mise à jour : 6 décembre 2016
+Dernière mise à jour : 16 janvier 2017
 {: .last-updated}
 
-Les messages de notification basée balise sont envoyés à tous les périphériques abonnés à la balise concernée. Vous pouvez définir des balises, puis envoyer et recevoir des messages à l'aide de balises.  
+Les messages de notification basée balise sont envoyés à tous les appareils abonnés à la balise concernée. Vous pouvez définir des balises, puis envoyer et recevoir des messages à l'aide de balises. 
 
-Vous devez d'abord créer les balises pour l'application, configurer les abonnements aux balises, puis initier les notifications basées sur les balises. Pour envoyer une notification basée sur les balises à l'aide de l'[API REST](https://mobile.{DomainName}/imfpush/), vérifiez que les éléments "tagNames" sont fournis lors de l'envoi à la ressource de message. 
+Vous devez d'abord créer les balises pour l'application, configurer les abonnements aux balises, puis initier les notifications basées sur les balises. Pour
+envoyer une notification basée balise à l'aide d'une [API REST
+![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://mobile.{DomainName}/imfpush/ "Icône de lien externe"){: new_window}, vérifiez que l'élément "tagNames"
+a été renseigné lors de l'envoi de la ressource message. 

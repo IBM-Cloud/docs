@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,14 +12,14 @@ copyright:
 
 # APNs의 신임 정보 구성
 {: #create-push-credentials-apns}
-마지막 업데이트 날짜: 2016년 12월 7일
+마지막 업데이트 날짜: 2017년 1월 16일
 {: .last-updated}
 
 애플리케이션 개발자는 APNs(Apple Push Notification Service)를 이용하여 Bluemix의 {{site.data.keyword.mobilepushshort}} 서비스 인스턴스(제공자)에서 iOS 디바이스와 애플리케이션으로 원격 알림을 전송할 수 있습니다. 디바이스의 대상 애플리케이션으로 메시지가 전송됩니다.  
 
 APNs 신임 정보를 획득하여 구성합니다. {{site.data.keyword.mobilepushshort}} 서비스에서 APNs 인증서를 안전하게 관리하며 제공자로 APNs 서버에 연결하는 데 이 인증서를 사용합니다. 
 
-<!-- 1. Obtain an [Apple Developers](https://developer.apple.com/) account.-->
+<!-- 1. Obtain an [Apple Developers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.apple.com/ "External link icon"){: new_window} account.-->
 
 <!--2. [Register an App ID](#create-push-credentials-apns-register)
 3. [Create a development and distribution APNs SSL certificate](#create-push-credentials-apns-ssl)
@@ -36,9 +36,9 @@ APNs 신임 정보를 획득하여 구성합니다. {{site.data.keyword.mobilepu
 
 앱 ID(번들 ID)는 특정 애플리케이션을 식별하는 고유 ID입니다. 각 애플리케이션에 앱 ID가 필요합니다. {{site.data.keyword.mobilepushshort}} 서비스와 같은 서비스는 앱 ID에 따라 구성됩니다. 
 
-1. [Apple 개발자](https://developer.apple.com/) 계정이 있는지 확인하십시오. 
-2. [Apple 개발자](https://developer.apple.com) 포털로 이동하여 **멤버 센터**를 클릭하고 **인증서, ID 및 프로파일**을 선택하십시오.
-3. [Apple 개발자 라이브러리](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW991)의 **앱 ID 등록** 섹션으로 이동하여 지시사항을 따라 앱 ID를 등록하십시오. 
+1. [Apple 개발자 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.apple.com/ "외부 링크 아이콘"){: new_window} 계정이 있는지 확인하십시오.
+2. [Apple 개발자 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.apple.com "외부 링크 아이콘"){: new_window} 포털로 이동하여 **멤버 센터**를 클릭한 다음 **인증서, ID 및 프로파일**을 선택하십시오.
+3. [Apple 개발자 라이브러리 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW991 "외부 링크 아이콘"){: new_window}의 **앱 ID 등록** 섹션으로 이동하여 지시사항에 따라 앱 ID를 등록하십시오.
 
 앱 ID를 등록할 때 다음 옵션을 선택하십시오. 
 
@@ -67,7 +67,7 @@ APNs 인증서를 획득하려면 먼저 인증서 서명 요청(CSR)을 작성�
 
 <!-- Create a development and distribution SSL certificate. -->
 
-1. [Apple 개발자](https://developer.apple.com) 웹 사이트로 이동하여 **멤버 센터**를 클릭하고 **인증서, ID 및 프로파일**을 선택하십시오.
+1. [Apple 개발자 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.apple.com "외부 링크 아이콘"){: new_window} 웹 사이트로 이동하여 **멤버 센터**를 클릭한 다음 **인증서, ID 및 프로파일**을 선택하십시오.
 2. **ID** 영역에서 **앱 ID**를 클릭하십시오. 
 3. 앱 ID 목록에서 <!--newly created--> 앱 ID를 선택한 다음 **설정**을 선택하십시오. 
 4. **푸시 알림** 영역에서 개발 SSL 인증서를 작성한 다음 프로덕션 SSL 인증서를 작성하십시오.
@@ -105,8 +105,8 @@ APNs 인증서를 획득하려면 먼저 인증서 서명 요청(CSR)을 작성�
 
 개발 프로비저닝 프로파일을 다음과 같이 작성하십시오.
 
-1. [Apple 개발자](https://developer.apple.com) 포털로 이동하여 **멤버 센터**를 클릭하고 **인증서, ID 및 프로파일**을 선택하십시오.
-2. [Mac 개발자 라이브러리](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW62site)로 이동하여 **개발 프로비저닝 프로파일 작성** 섹션으로 스크롤한 후 지시에 따라 개발 프로파일을 작성하십시오.
+1. [Apple 개발자 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.apple.com "외부 링크 아이콘"){: new_window} 포털로 이동하여 **멤버 센터**를 클릭한 다음 **인증서, ID 및 프로파일**을 선택하십시오.
+2. [Mac 개발자 라이브러리 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW62site "외부 링크 아이콘"){: new_window}으로 이동하여 **개발 프로비저닝 프로파일 작성** 섹션으로 화면이동한 다음 지시사항에 따라 개발 프로파일을 작성하십시오.
 **참고**:개발 프로비저닝 프로파일을 구성할 때 다음 옵션을 선택하십시오. 
 	* **iOS 앱 개발**
 	* **iOS 및 watchOS 앱용**
@@ -118,7 +118,7 @@ APNs 인증서를 획득하려면 먼저 인증서 서명 요청(CSR)을 작성�
 
 저장소 프로비저닝 프로파일을 사용하여 배포용 앱을 앱 저장소에 제출하십시오. 
 
-1. [Apple 개발자](https://developer.apple.com) 포털로 이동하여 **멤버 센터**를 클릭하고 **인증서, ID 및 프로파일**을 선택하십시오.
+1. [Apple 개발자 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.apple.com "외부 링크 아이콘"){: new_window} 포털로 이동하여 **멤버 센터**를 클릭한 다음 **인증서, ID 및 프로파일**을 선택하십시오.
 2. 다운로드한 프로비저닝 프로파일을 두 번 클릭하여 이를 Xcode에 설치하십시오. 
 
 ##{{site.data.keyword.mobilepushshort}} 대시보드에서 APNs 설정
@@ -132,7 +132,7 @@ APNs에 필요한 인증서는 `.p12` 인증서입니다. 이러한 인증서에
 
 **참고**: `.cer` 파일이 키 체인 액세스에 있으면 이를 컴퓨터로 내보내서 `.p12` 인증서를 작성하십시오.
 
-APNs 사용에 대한 자세한 정보는 [iOS Developer Library: Local and Push Notification Programming Guide](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ProvisioningDevelopment.html#//apple_ref/doc/uid/TP40008194-CH104-SW4)를 참조하십시오. 
+APNs 사용에 대한 자세한 정보는 [iOS 개발자 라이브러리: 로컬 및 푸시 알림 프로그래밍 안내서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ProvisioningDevelopment.html#//apple_ref/doc/uid/TP40008194-CH104-SW4 "외부 링크 아이콘"){: new_window}을 참조하십시오.
 
 푸시 알림 서비스 대시보드에서 APNs를 설정하려면 다음을 수행하십시오. 
 

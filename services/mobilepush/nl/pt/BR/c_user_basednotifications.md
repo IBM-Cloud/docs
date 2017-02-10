@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Ativando notificações baseadas no usuário
 {: #user_based_notifications}
-Última atualização: 06 de dezembro de 2016
+Última atualização: 16 de janeiro de 2017
 {: .last-updated}
 
 {{site.data.keyword.mobilepushshort}} baseado no ID do usuário destina-se a usuários do app móvel com mensagens customizadas. Com
@@ -23,7 +23,7 @@ específicos com base em suas preferências.
 Para ativar notificações push destinadas por ID do usuário, assegure-se de registrar
 o dispositivo com um campo ID do usuário configurado.     
 
-O ID do usuário pode ser qualquer sequência que o aplicativo forneça para o API de registro de dispositivo. Geralmente, um aplicativo móvel executará primeiro um ciclo de autenticação no qual o usuário do app móvel seja autenticado em um serviço de autenticação como o [{{site.data.keyword.amafull}}](https://console.ng.bluemix.net/docs/services/mobileaccess/index.html). Na autenticação bem-sucedida, o ID de usuário autenticado então é passado para a API de
+O ID do usuário pode ser qualquer sequência que o aplicativo forneça para o API de registro de dispositivo. Geralmente, um aplicativo móvel executará primeiro um ciclo de autenticação no qual o usuário do app móvel é autenticado em um serviço de autenticação como o [{{site.data.keyword.amafull}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.ng.bluemix.net/docs/services/mobileaccess/index.html "Ícone de link externo"){: new_window}. Na autenticação bem-sucedida, o ID de usuário autenticado então é passado para a API de
 registro de dispositivo push. 
 
 ## Sincronizando o login e o logout do usuário 

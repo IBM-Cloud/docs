@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # 使 Android 应用程序能够接收 {{site.data.keyword.mobilepushshort}}
 {: #tag_based_notifications}
-上次更新时间：2016 年 12 月 7 日
+上次更新时间：2017 年 1 月 16 日
 {: .last-updated}
 
 您可以让 Android 应用程序具有向您的设备接收推送通知的能力。Android Studio 是必备软件，也是构建 Android 项目的建议方法。必须具有 Android Studio 的基本知识。
@@ -23,16 +23,17 @@ copyright:
 本部分描述如何安装和使用客户机推送 SDK 来进一步开发 Android 应用程序。
 
 可以使用 Gradle 来添加 Bluemix® Mobile Services 推送 SDK。Gradle 会从存储库自动下载工件，并使这些工件可用于您的 Android 应用程序。
-确保正确设置了 Android Studio 和 Android Studio SDK。有关如何设置系统的更多信息，请参阅 [Android Studio 概述](https://developer.android.com/tools/studio/index.html)。有关 Gradle 的信息，请参阅[配置 Gradle 构建](http://developer.android.com/tools/building/configuring-gradle.html)。
+确保正确设置了 Android Studio 和 Android Studio SDK。有关如何设置系统的更多信息，请参阅 [Android Studio 概述 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.android.com/tools/studio/index.html "外部链接图标"){: new_window}。有关 Gradle 的更多信息，请参阅[配置 Gradle 构建 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://developer.android.com/tools/building/configuring-gradle.html "外部链接图标"){: new_window}。
 
 创建并打开移动应用程序后，使用 Android Studio 完成以下步骤。
 
-1. 向模块级别 **build.gradle** 文件添加依赖关系。 
+1. 向模块级别 **build.gradle** 文件添加依赖关系。 	
+
 	- 添加以下依赖关系会将 Bluemix™ Mobile 服务推送客户机 SDK 和 Google 播放服务 SDK 添加到编译作用域依赖关系中。
 	```
-	com.ibm.mobilefirstplatform.clientsdk.android:push:2.+
-```
-    {: codeblock}
+	com.ibm.mobilefirstplatform.clientsdk.android:push:3.+
+	```
+    	{: codeblock}
 	
 	- 添加以下依赖关系可以导入代码片段所需的语句。
 	```
@@ -43,16 +44,22 @@ copyright:
 	import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationListener;
 	import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPSimplePushNotification;
 	```
-    {: codeblock}
+    	{: codeblock}
+
+	- 在结尾，向模块级别 **build.gradle** 文件添加以下依赖关系。
+	```
+		apply plugin: 'com.google.gms.google-services'
+	```
+		{: codeblock}
 3. 向项目级别 **build.gradle** 文件添加以下依赖关系。
 ```
 dependencies {
-classpath 'com.android.tools.build:gradle:2.2.0'
+classpath 'com.android.tools.build:gradle:3.0.0'
     classpath 'com.google.gms:google-services:3.0.0'
 }
 ``` 
     {: codeblock}
-5. 在 **AndroidManifest.xml** 文件中，添加以下许可权，要查看样本清单，请参阅 [Android helloPush 样本应用程序](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml)。要查看样本 Gradle 文件，请参阅[样本构建 Gradle 文件](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle)。
+5. 在 **AndroidManifest.xml** 文件中，添加以下许可权，要查看样本清单，请参阅 [Android helloPush 样本应用程序![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml "外部链接图标"){: new_window}。要查看样本 Gradle 清单，请参阅 [样本构建 Gradle 文件 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle "外部链接图标"){: new_window}。
 ```
 <uses-permission android:name="android.permission.INTERNET"/>
 <uses-permission android:name="android.permission.GET_ACCOUNTS" />
@@ -61,7 +68,7 @@ classpath 'com.android.tools.build:gradle:2.2.0'
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 ```
 	{: codeblock}
-在此阅读有关 [Android 许可权](http://developer.android.com/guide/topics/security/permissions.html)的更多信息。
+在此处阅读有关 [Android 许可权 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://developer.android.com/guide/topics/security/permissions.html "外部链接图标"){: new_window} 的更多信息。
 4. 添加活动的通知意向设置。此设置会在用户单击通知区域中收到的通知时启动应用程序。
 ```
 <intent-filter>
@@ -109,7 +116,7 @@ android:theme="@android:style/Theme.NoDisplay"/>
 ![“添加 Firebase 至您的 Android”窗口](images/FCM_1.jpg)
 
 5. 通过在“添加 Firebase 至您的 Android 应用程序”窗口中，输入应用程序的程序包名。“应用程序昵称”字段为可选字段。单击**添加应用程序**。
-对于每个添加的程序包，Firebase 需要通过添加程序包名更改 `build.gradle`。
+ 
 
 	![添加应用程序的程序包名](images/FCM_2.jpg)
 

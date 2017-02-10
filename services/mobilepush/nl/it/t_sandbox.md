@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Modalità sandbox e di produzione
 {: #push-sandboxandproduction-modes}
-Ultimo aggiornamento: 06 dicembre 2016
+Ultimo aggiornamento: 11 gennaio 2017
 {: .last-updated}
 
 Puoi utilizzare {{site.data.keyword.mobilepushshort}} in una delle seguenti modalità: sandbox o produzione. Sandbox è un ambiente di test autonomo per sviluppare e testare l'integrazione
@@ -26,8 +26,7 @@ Per passare alla modalità di operazione del servizio di push dal sandbox alla p
 
 1. Utilizza la chiamata API REST delle impostazioni ApplicationID PUT
 2. Nel corpo JSON, conferma che la modalità è stata passata utilizzando la chiamata API [REST delle impostazioni ApplicationID PUT](https://mobile.{DomainName}/imfpush/){: new_window} . La risposta prevista è "mode": "PRODUCTION
-```
-    { 
+```{ 
     "mode": "PRODUCTION"
  }
 ```

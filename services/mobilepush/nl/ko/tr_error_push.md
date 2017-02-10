@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # {{site.data.keyword.mobilepushshort}} 서비스 오류 메시지
 {: #errors}
-마지막 업데이트 날짜: 2016년 12월 7일
+마지막 업데이트 날짜: 2017년 1월 16일
 {: .last-updated}
 
 
@@ -52,7 +52,7 @@ REST API 요청에 대한 응답으로 리턴됩니다.
 
 **설명**: {{site.data.keyword.mobilepushshort}} 서비스에 대한 전제조건 구성이 완료되지 않았습니다. Apple 푸시 알림 서비스(APNs) 신임 정보가 구성되기 전에 해당 신임 정보를 가져오려고 했을 수 있습니다. 
 
-**사용자 응답**: {{site.data.keyword.mobilepushshort}} 서비스가 APNs에 대한 올바른 보안 인증서를 사용하여 구성되었는지 확인하십시오. 자세한 정보는 [APNs의 신임 정보 구성](t_push_provider_ios.html){: new_window}을 참조하십시오. 
+**사용자 응답**: {{site.data.keyword.mobilepushshort}} 서비스가 APNs에 대한 올바른 보안 인증서를 사용하여 구성되었는지 확인하십시오. 자세한 정보는 [APNs의 신임 정보 구성 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](t_push_provider_ios.html "외부 링크 아이콘"){: new_window}을 참조하십시오.
 
 
 ## FPWSE0004E
@@ -81,7 +81,7 @@ REST API 요청에 대한 응답으로 리턴됩니다.
 **설명**: 요청의 JSON 본문에 {{site.data.keyword.mobilepushshort}} 서버에서 이해할 수 없는 매개변수가 있습니다. 
 
 
-**사용자 응답**: 요청의 JSON 본문이 {{site.data.keyword.mobilepushshort}} 서버에서 예상하는 요청의 형식을 따르는지 확인하십시오. 자세한 정보는 [REST API](https://mobile.{DomainName}/imfpush/)를 참조하십시오. 
+**사용자 응답**: 요청의 JSON 본문이 {{site.data.keyword.mobilepushshort}} 서버에서 예상하는 요청의 형식을 따르는지 확인하십시오. 자세한 정보는 [REST API ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://mobile.{DomainName}/imfpush/ "외부 링크 아이콘"){: new_window}을 참조하십시오.
 
 
 
@@ -91,7 +91,7 @@ REST API 요청에 대한 응답으로 리턴됩니다.
 **설명**: 요청 URL에 인식되지 않는 매개변수가 포함된 조회 문자열이 있습니다. 예를 들어, 구독을 삭제하기 위한 요청에 deviceId 및 tagName 이외의 매개변수가 있는 경우 이 오류가 발생할 수 있습니다. 
 
 
-**사용자 응답**: 요청의 JSON 본문이 {{site.data.keyword.mobilepushshort}} 서버에서 예상하는 요청의 형식을 따르는지 확인하십시오. 자세한 정보는 [REST API](https://mobile.{DomainName}/imfpush/)를 참조하십시오. 
+**사용자 응답**: 요청의 JSON 본문이 {{site.data.keyword.mobilepushshort}} 서버에서 예상하는 요청의 형식을 따르는지 확인하십시오. 자세한 정보는 [REST API ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://mobile.{DomainName}/imfpush/ "외부 링크 아이콘"){: new_window}을 참조하십시오.
 
 
 
@@ -101,7 +101,7 @@ REST API 요청에 대한 응답으로 리턴됩니다.
 **설명**: 요청 URL에 필수 매개변수가 누락된 조회 문자열이 있습니다. 예를 들어, 구독을 삭제하기 위한 요청에서 deviceId 및 tagName 매개변수가 누락되었을 수 있습니다. 
 
 
-**사용자 응답**: 요청의 JSON 본문이 {{site.data.keyword.mobilepushshort}} 서버에서 예상하는 요청의 형식을 따르는지 확인하십시오. 자세한 정보는 [REST API](https://mobile.{DomainName}/imfpush/)를 참조하십시오. 
+**사용자 응답**: 요청의 JSON 본문이 {{site.data.keyword.mobilepushshort}} 서버에서 예상하는 요청의 형식을 따르는지 확인하십시오. 자세한 정보는 [REST API ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://mobile.{DomainName}/imfpush/ "외부 링크 아이콘"){: new_window}을 참조하십시오.
 
 
 
@@ -119,7 +119,7 @@ REST API 요청에 대한 응답으로 리턴됩니다.
 
 **설명**: 서버에 제출된 요청이 예외 조건을 생성했습니다. 다음 조건 중 하나가 이 오류를 일으켰을 수 있습니다. 
 
-- {{site.data.keyword.mobilepushshort}}이 사용하는 내부 시스템이 응답하지 않습니다. 
+- {{site.data.keyword.mobilepushshort}}가 사용하는 내부 시스템이 응답하지 않습니다. 
 - 요청이 {{site.data.keyword.mobilepushshort}}에서 처리할 수 없는 오류 조건을 생성했습니다. 
 - {{site.data.keyword.mobilepushshort}} 서비스가 관리자의 조치가 필요한 상태입니다. 
 

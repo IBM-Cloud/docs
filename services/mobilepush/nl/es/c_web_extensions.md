@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,10 +12,10 @@ copyright:
 
 # Habilitación de aplicaciones y extensiones de Chrome para recibir {{site.data.keyword.mobilepushshort}}
 {: #web_notifications}
-Última actualización: 06 de diciembre de 2016
+Última actualización: 18 de enero de 2017
 {: .last-updated}
 
-Ya puede habilitar las aplicaciones y extensiones de Google Chrome para recibir {{site.data.keyword.mobilepushshort}}.
+Puede habilitar las aplicaciones y extensiones de Google Chrome para que reciban {{site.data.keyword.mobilepushshort}}. Asegúrese de haber [configurado credenciales para un proveedor de notificaciones](t__main_push_config_provider.html) antes de continuar con estos pasos.
 
 ## Instalación del SDK del cliente para {{site.data.keyword.mobilepushshort}}
 {: #web_install}
@@ -26,7 +26,7 @@ En este tema se describe cómo instalar y utilizar el SDK Push de JavaScript del
 
 Para la instalación del SDK de Javascript en las aplicaciones y extensiones de Chrome, realice estos pasos:
 
-Descargue el `BMSPushSDK.js` y `manifest_Chrome_Ext.json` (para extensiones de Chrome) o `manifest_Chrome_App.json` (para aplicaciones de Chrome) desde el [SDK Push Web de Bluemix](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master).
+Descargue `BMSPushSDK.js` y `manifest_Chrome_Ext.json` (para extensiones de Chrome) o `manifest_Chrome_App.json` (para aplicaciones de Chrome) desde el [SDK de puxh web de Bluemix ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master "icono de enlace externo"){: new_window}. 
 
 
 

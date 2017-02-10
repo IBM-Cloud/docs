@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # 管理标记
 {: #manage_tags}
-上次更新时间：2016 年 12 月 7 日
+上次更新时间：2017 年 1 月 11 日
 {: .last-updated}
 
 使用 {{site.data.keyword.mobilepushshort}} 仪表板，可以创建和删除应用程序的标记，然后初始化基于标记的通知。预订了标记的设备会收到基于标记的通知。
@@ -121,47 +121,6 @@ BMSPush.retrieveSubscriptions(function(tags) {
 ```
 	{: codeblock}
 
-## 在 Objective-C 上获取标记
-{: objc-get-tags}
-
-将以下代码片段复制到使用 Objective-C 开发的 iOS 应用程序中，以获取设备所预订的标记的列表以及获取设备可预订的可用标记的列表。
-
-使用以下 **retrieveAvailableTags** API 可获取设备可预订的可用标记的列表。
-
-```
-//Get a list of available tags to which the device can subscribe
-[push retrieveAvailableTagsWithCompletionHandler:
-^(IMFResponse *response, NSError *error){
- if(error){    
-   [self updateMessage:error.description];  
- } else {
-[self updateMessage:@"Successfully retrieved available tags."];
- NSDictionary *availableTags = [[NSDictionary alloc]init];
- availableTags = [response tags];
-[self.appDelegateVC updateMessage:availableTags.description];
-}
-}];
- ```
-	{: codeblock}
-
-使用以下 **retrieveSubscriptions** API 可获取设备所预订的标记的列表。
-
-
-```
-// Get a list of tags that to which the device is subscribed.
-[push retrieveSubscriptionsWithCompletionHandler:
-^(IMFResponse *response, NSError *error) {
-  if(error){
-     [self updateMessage:error.description];
-   } else {
-     [self updateMessage:@"Successfully retrieved subscriptions."];
- NSDictionary *subscribedTags = [[NSDictionary alloc]init];
-subscribedTags = [response subscriptions];
-[self.appDelegateVC updateMessage:subscribedTags.description];
-}
-}];
-  ```
-	{: codeblock}
 
 ## 在 Swift 上获取标记
 {: swift-get-tags}
@@ -314,50 +273,11 @@ BMSPush.unsubscribe(tag, success, failure);
 ```
 	{: codeblock}
 
-## 在 Objective-C 上预订和取消预订标记
-{: objc-subscribe-tags}
-
-将以下代码片段复制并粘贴到 Objective-C 移动应用程序中。
-
-使用 **subscribeToTags** API，可以预订标记。
-
-```
-[push subscribeToTags:tags completionHandler:
-^(IMFResponse *response, NSError *error) {
-  if(error){
-     [self updateMessage:error.description];
-  }else{
-      NSDictionary* subStatus = [[NSDictionary alloc]init];
-      subStatus = [response subscribeStatus];
-      [self updateMessage:@"Parsed subscribe status is:"];
-      [self updateMessage:subStatus.description];
-  }
-}];
-```
-	{: codeblock}
-
-使用 **unsubscribeFromTags** API，可以取消预订标记。
-
-```
-[push unsubscribeFromTags:tags completionHandler:
-^(IMFResponse *response, NSError *error) {
-   if (error){
-       [self updateMessage:error.description];
- } else {
-       NSDictionary* subStatus = [[NSDictionary alloc]init];
-       subStatus = [response unsubscribeStatus];
-       [self updateMessage:subStatus.description];
-  }
-}];
-```
-	{: codeblock}
 
 ## 在 Swift 上预订和取消预订标记
 {: swift-subscribe-tags}
 
 将以下代码片段复制并粘贴到 Swift 移动应用程序中。
-
-**预订可用标记**
 
 使用 **subscribeToTags** API，可以预订标记。
 
@@ -373,8 +293,6 @@ push.subscribeToTags(tagsArray: ["MyTag"], completionHandler: { (response, statu
 })
 ```
 	{: codeblock}
-
-**取消预订标记**
 
 使用 **unsubscribeFromTags** API，可以取消预订标记。
 
@@ -406,7 +324,7 @@ bmsPush.subscribe(tagsArray,function(response) {
 ```
 	{: codeblock}
 
-要取消预订标记，请使用 `unSubscribe` 方法。
+要取消预订标记，请使用 **unSubscribe** 方法。
 
 ```
 var tagsArray = ["tag1", "Tag2"]

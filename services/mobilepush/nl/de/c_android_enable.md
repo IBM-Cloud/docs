@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Android-Anwendungen für den Empfang von Push-Benachrichtigungen aktivieren
 {: #tag_based_notifications}
-Letzte Aktualisierung: 07. Dezember 2016
+Letzte Aktualisierung: 16. Januar 2017
 {: .last-updated}
 
 Sie können Android-Anwendungen für den Empfang von Push-Benachrichtigungen auf Ihren Geräten aktivieren. Android Studio ist dafür Voraussetzung und auch die empfohlene Methode für die Erstellung von Android-Projekten. Grundlegende Kenntnisse von Android Studio sind erforderlich.
@@ -22,16 +22,17 @@ Sie können Android-Anwendungen für den Empfang von Push-Benachrichtigungen auf
 
 In diesem Abschnitt wird die Vorgehensweise zum Installieren und Verwenden des Client-Push-SDK für die weitere Entwicklung Ihrer Android-Anwendungen beschrieben.
 
-Das Push-SDK für Bluemix® Mobile Services kann mithilfe von Gradle hinzugefügt werden. Gradle lädt automatisch Artefakte aus Repositorys herunter und stellt Sie in Ihrer Android-Anwendung zur Verfügung. Stellen Sie sicher, dass Sie Android Studio und das Android Studio-SDK ordnungsgemäß einrichten. Weitere Informationen zum Einrichten Ihres Systems finden Sie unter [Android Studio Overview](https://developer.android.com/tools/studio/index.html). Informationen zu Gradle finden Sie in [Configuring Gradle Builds](http://developer.android.com/tools/building/configuring-gradle.html).
+Das Push-SDK für Bluemix® Mobile Services kann mithilfe von Gradle hinzugefügt werden. Gradle lädt automatisch Artefakte aus Repositorys herunter und stellt Sie in Ihrer Android-Anwendung zur Verfügung. Stellen Sie sicher, dass Sie Android Studio und das Android Studio-SDK ordnungsgemäß einrichten. Weitere Informationen zum Einrichten Ihres Systems finden Sie unter [Android Studio - Übersicht ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.android.com/tools/studio/index.html "Symbol für externen Link"){: new_window}. Informationen zu Gradle finden Sie unter [Gradle-Builds konfigurieren ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://developer.android.com/tools/building/configuring-gradle.html "Symbol für externen Link"){: new_window}.
 
 Führen Sie nach der Erstellung und Öffnung Ihrer mobilen Anwendung mithilfe von Android Studio die folgenden Schritte aus.
 
-1. Fügen Sie Abhängigkeiten zu Ihrer Modulebenendatei **build.gradle** hinzu. 
+1. Fügen Sie Abhängigkeiten zu Ihrer Modulebenendatei **build.gradle** hinzu. 	
+
 	- Fügen Sie die folgende Abhängigkeit hinzu, um das Push-Client-SDK von Bluemix™ Mobile Services und das Google Play Services-SDK zu Ihren Abhängigkeiten für den Kompilierungsbereich hinzuzufügen.
 	```
-	com.ibm.mobilefirstplatform.clientsdk.android:push:2.+
+	com.ibm.mobilefirstplatform.clientsdk.android:push:3.+
 	```
-    {: codeblock}
+    	{: codeblock}
 	
 	- Fügen Sie die folgenden Abhängigkeiten zu Importanweisungen hinzu, die für Codeausschnitte erforderlich sind.
 	```
@@ -42,17 +43,22 @@ Führen Sie nach der Erstellung und Öffnung Ihrer mobilen Anwendung mithilfe vo
 	import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationListener;
 	import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPSimplePushNotification;
 	```
-    {: codeblock}
+    	{: codeblock}
+
+	- Fügen Sie die folgende Abhängigkeit am Ende Ihrer Modulebenendatei **build.gradle** hinzu.
+	```
+		apply plugin: 'com.google.gms.google-services'
+	```
+		{: codeblock}
 3. Fügen Sie die folgenden Abhängigkeiten zu Ihrer Projektebenendatei **build.gradle** hinzu.
 ```
 dependencies {
-    classpath 'com.android.tools.build:gradle:2.2.0'
+    classpath 'com.android.tools.build:gradle:3.0.0'
     classpath 'com.google.gms:google-services:3.0.0'
 }
 ``` 
     {: codeblock}
-5. Fügen Sie die folgenden Berechtigungen in der Datei **AndroidManifest.xml** hinzu. Ein Beispielmanifest
-finden Sie in [Android helloPush Sample Application](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml). Eine Gradle-Beispieldatei finden Sie unter [Sample Build Gradle file](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle).
+5. Fügen Sie die folgenden Berechtigungen in der Datei **AndroidManifest.xml** hinzu. Informationen zum Anzeigen eines Beispielmanifests finden Sie unter [Android-Beispielanwendung 'helloPush' ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml "Symbol für externen Link"){: new_window}. Eine Gradle-Beispieldatei finden Sie unter [Beispieldatei für Gradle-Build ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle "Symbol für externen Link"){: new_window}.
 ```
 <uses-permission android:name="android.permission.INTERNET"/>
 <uses-permission android:name="android.permission.GET_ACCOUNTS" />
@@ -61,7 +67,7 @@ finden Sie in [Android helloPush Sample Application](https://github.com/ibm-blue
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 ```
 	{: codeblock}
- Weitere Informationen zu [Android-Berechtigungen](http://developer.android.com/guide/topics/security/permissions.html) finden Sie hier.
+Weitere Informationen zu [Android-Berechtigungen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://developer.android.com/guide/topics/security/permissions.html "Symbol für externen Link"){: new_window} finden Sie hier.
 
 4. Fügen Sie die Einstellungen für die Benachrichtigungsabsicht für die Aktivität hinzu. Mit dieser Einstellung wird die Anwendung gestartet, wenn der Benutzer im Benachrichtigungsbereich auf die empfangene Benachrichtigung klickt.
 ```
@@ -108,14 +114,14 @@ Informationen zum Einrichten des FCM-Projekts und zum Abrufen Ihrer Berechtigung
 3. Wählen Sie auf der Registerkarte 'Allgemein' im Fenster mit Ihren Apps die Option **ADD APP** oder **Add Firebase to your Android app** aus.
     ![Firebase zu Android hinzufügen](images/FCM_5.jpg)
 
-4. Fügen Sie im Fenster 'Add Firebase to your Android app' **com.ibm.mobilefirstplatform.clientsdk.android.push** als Paketnamen hinzu. Das Feld 'App nickname' ist optional. Klicken Sie auf **ADD APP**.
+4. Fügen Sie im Fenster 'Add Firebase to your Android app' **com.ibm.mobilefirstplatform.clientsdk.android.push** als Paketnamen hinzu. Das Feld 'App nickname' ist optional. Klicken Sie auf **ADD APP**. 
     ![Fenster 'Adding Firebase to your Android app'](images/FCM_1.jpg)
 
-5. Geben Sie den Paketnamen Ihrer Anwendung an, indem Sie ihn im Fenster 'Add Firebase to your Android app' eingeben. Das Feld 'App nickname' ist optional. Klicken Sie auf **ADD APP**. Für jedes hinzugefügte Paket muss für Firebase die Datei `build.gradle` geändert werden, indem der Paketname hinzugefügt wird. 
+5. Geben Sie den Paketnamen Ihrer Anwendung an, indem Sie ihn im Fenster 'Add Firebase to your Android app' eingeben. Das Feld 'App nickname' ist optional. Klicken Sie auf **ADD APP**. 
 
 	![Paketnamen Ihrer Anwendung hinzufügen](images/FCM_2.jpg)
 
-6. Die Datei `google-services.json` wird generiert. Kopieren Sie die Datei `google-services.json` in das Stammverzeichnis Ihres Android-Anwendungsmoduls. Beachten Sie, dass die Datei `google-service.json` die hinzugefügten Paketnamen enthält. 
+6. Die Datei `google-services.json` wird generiert. Kopieren Sie die Datei `google-services.json` in das Stammverzeichnis Ihres Android-Anwendungsmoduls. Beachten Sie, dass die Datei `google-service.json` die hinzugefügten Paketnamen enthält.
 
     ![JSON-Datei zum Stammverzeichnis Ihrer Anwendung hinzufügen](images/FCM_7.jpg)
 
@@ -235,7 +241,7 @@ protected void onPause() {
 
 Wenn Sie den aktuellen Status der Benachrichtigung innerhalb der Anwendung überwachen möchten, können Sie die Schnittstelle `com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationStatusListener` implementieren und die Methode onStatusChange(String messageId, MFPPushNotificationStatus status) definieren. 
 
-Die **messageId** ist die Kennung der vom Server gesendeten Nachricht. **MFPPushNotificationStatus** definiert den Status der Benachrichtigungen als Werte:
+Die **messageId** ist die Kennung der vom Server gesendeten Nachricht.  **MFPPushNotificationStatus** definiert den Status der Benachrichtigungen als Werte:
 
 - **RECEIVED** - Die App hat die Benachrichtigung empfangen. 
 - **QUEUED** - Die App hat die Benachrichtigung in die Warteschlange gestellt, um den Listener für Benachrichtigungen aufzurufen. 

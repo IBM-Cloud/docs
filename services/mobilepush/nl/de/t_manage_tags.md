@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Tags verwalten
 {: #manage_tags}
-Letzte Aktualisierung: 07. Dezember 2016
+Letzte Aktualisierung: 11. Januar 2017
 {: .last-updated}
 
 Verwenden Sie das {{site.data.keyword.mobilepushshort}}-Dashboard, um Tags für Ihre Anwendung zu erstellen und zu löschen und anschließend tagbasierte Benachrichtigungen zu initiieren. Die tagbasierte Benachrichtigung wird auf Geräten empfangen, von denen Tags subskribiert wurden.
@@ -121,47 +121,6 @@ BMSPush.retrieveSubscriptions(function(tags) {
 ```
 	{: codeblock}
 
-## Tags mit Objective-C abrufen
-{: objc-get-tags}
-
-Kopieren Sie die folgenden Code-Snippets in Ihre mit Objective-C entwickelte iOS-Anwendung, um eine Liste der Tags abzurufen, die das Gerät subskribiert hat, und eine Liste der verfügbaren Tags, die das Gerät subskribieren kann.
-
-Verwenden Sie die API **retrieveAvailableTags**, um eine Liste der verfügbaren Tags abzurufen, die das Gerät subskribieren kann.
-
-```
-//Get a list of available tags to which the device can subscribe
-[push retrieveAvailableTagsWithCompletionHandler:
-^(IMFResponse *response, NSError *error){
- if(error){    
-   [self updateMessage:error.description];  
- } else {
-   [self updateMessage:@"Successfully retrieved available tags."];
- NSDictionary *availableTags = [[NSDictionary alloc]init];
- availableTags = [response tags];
-[self.appDelegateVC updateMessage:availableTags.description];
-}
-   }];
- ```
-	{: codeblock}
-
-Verwenden Sie die API **retrieveSubscriptions**, um eine Liste der Tags abzurufen, die das Gerät subskribiert hat.
-
-
-```
-// Get a list of tags that to which the device is subscribed.
-[push retrieveSubscriptionsWithCompletionHandler:
-^(IMFResponse *response, NSError *error) {
-  if(error){
-     [self updateMessage:error.description];
-   } else {
-   [self updateMessage:@"Successfully retrieved subscriptions."];
- NSDictionary *subscribedTags = [[NSDictionary alloc]init];
-subscribedTags = [response subscriptions];
-[self.appDelegateVC updateMessage:subscribedTags.description];
-}
-  }];
-  ```
-	{: codeblock}
 
 ## Tags mit Swift abrufen
 {: swift-get-tags}
@@ -314,50 +273,11 @@ BMSPush.unsubscribe(tag, success, failure);
 ```
 	{: codeblock}
 
-## Tags mit Objective-C subskribieren und die Subskription aufheben
-{: objc-subscribe-tags}
-
-Kopieren Sie dieses Code-Snippet und fügen Sie es in Ihre mobile Objective-C-Anwendung ein.
-
-Verwenden Sie die API **subscribeToTags** zum Subskribieren eines Tags.
-
-```
-[push subscribeToTags:tags completionHandler:
-^(IMFResponse *response, NSError *error) {
-  if(error){
-     [self updateMessage:error.description];
-  }else{
-      NSDictionary* subStatus = [[NSDictionary alloc]init];
-      subStatus = [response subscribeStatus];
-      [self updateMessage:@"Parsed subscribe status is:"];
-      [self updateMessage:subStatus.description];
-  }
-  }];
-```
-	{: codeblock}
-
-Verwenden Sie die API **unsubscribeFromTags** zum Aufheben der Subskription eines Tags.
-
-```
-[push unsubscribeFromTags:tags completionHandler:
-^(IMFResponse *response, NSError *error) {
-  if (error){
-       [self updateMessage:error.description];
- } else {
-     NSDictionary* subStatus = [[NSDictionary alloc]init];
-       subStatus = [response unsubscribeStatus];
-       [self updateMessage:subStatus.description];
-  }
-  }];
-```
-	{: codeblock}
 
 ## Tags mit Swift subskribieren und die Subskription aufheben
 {: swift-subscribe-tags}
 
 Kopieren Sie dieses Code-Snippet und fügen Sie es in Ihre mobile Swift-Anwendung ein.
-
-**Verfügbare Tags subskribieren**
 
 Verwenden Sie die API **subscribeToTags** zum Subskribieren eines Tags.
 
@@ -373,8 +293,6 @@ push.subscribeToTags(tagsArray: ["MyTag"], completionHandler: { (response, statu
 })
 ```
 	{: codeblock}
-
-**Subskription von Tags aufheben**
 
 Verwenden Sie die API **unsubscribeFromTags** zum Aufheben der Subskription eines Tags.
 
@@ -405,7 +323,7 @@ bmsPush.subscribe(tagsArray,function(response) {
 ```
 	{: codeblock}
 
-Um die Subskription von Tags aufzuheben, verwenden Sie die Methode `unSubscribe`.
+Um die Subskription von Tags aufzuheben, verwenden Sie die Methode **unSubscribe**.
 
 ```
 var tagsArray = ["tag1", "Tag2"]

@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Habilitación de aplicaciones Cordova para recibir notificaciones push
 {: #cordova_enable}
-Última actualización: 06 de noviembre de 2016
+Última actualización: 18 de enero de 2017
 {: .last-updated}
 
 Cordova es una plataforma para crear aplicaciones híbridas con JavaScript, CSS y HTML. El servicio de {{site.data.keyword.mobilepushshort}} da soporte al desarrollo de aplicaciones para iOS y Android basadas en Cordova.
@@ -28,13 +28,12 @@ Instale y utilice el plug-in push del cliente para seguir desarrollando sus apli
 
 1. Descargue las versiones más recientes de Android Studio SDK y Xcode.
 1. Configure el emulador. Para Android Studio, utilice un emulador que dé soporte a la API de Google Play.
-1. Instale la herramienta de línea de mandatos de Git. Para Windows, asegúrese de que selecciona la opción **Ejecutar Git desde la ventana del indicador de mandatos**. Para obtener información sobre cómo descargar e instalar esta herramienta, consulte [Git](https://git-scm.com/downloads).
-1. Instale la herramienta Node.js y NPM (Node Package Manager). La herramienta de línea de mandatos NPM está empaquetada con Node.js. Para obtener información sobre cómo descargar e instalar Node.js, consulte [Node.js](https://nodejs.org/en/download/).
-1. Desde la línea de mandatos, instale las herramientas de línea de mandatos de Cordova mediante el mandato **npm install -g cordova**. Esto es necesario para utilizar el plug-in push de Cordova. Para obtener información sobre cómo instalar Cordova y configurar la aplicación de Cordova, consulte [Cordova Apache](https://cordova.apache.org/#getstarted). Para más información, consulte el [Archivo readme](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push) del plug-in push de Cordova.
+1. Instale la herramienta de línea de mandatos de Git. Para Windows, asegúrese de que selecciona la opción **Ejecutar Git desde la ventana del indicador de mandatos**. Para obtener información sobre cómo descargar e instalar esta herramienta, consulte [Git ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://git-scm.com/downloads "icono de enlace externo"){: new_window}.
+1. Instale la herramienta Node.js y NPM (Node Package Manager). La herramienta de línea de mandatos NPM está empaquetada con Node.js. Para obtener información sobre cómo descargar e instalar Node.js, consulte [Node.js ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://nodejs.org/en/download/ "icono de enlace externo"){: new_window}.
+1. Desde la línea de mandatos, instale las herramientas de línea de mandatos de Cordova mediante el mandato **npm install -g cordova**. Esto es necesario para utilizar el plug-in push de Cordova. Para obtener información sobre cómo instalar Cordova y configurar la app Cordova, consulte [Cordova Apache ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://cordova.apache.org/#getstarted "icono de enlace externo"){: new_window}. Para obtener más información, consulte [archivo Readme ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push "icono de enlace externo"){: new_window} del plugin de push de Cordova.
 1. Vaya a la carpeta en la que desea crear la aplicación de Cordova y ejecute el mandato siguiente para crear una aplicación de Cordova. Si ya tiene una aplicación de Cordova, vaya al paso 3.
-```
-cordova create your_app_name
-	cd your_app_name
+```cordova create your_app_name
+cd your_app_name
 ```
 	{: codeblock}
 - Opcional: Puede editar el archivo **config.xml** y cambiar el nombre de la aplicación en el elemento <name> a uno de su elección, en lugar del nombre HelloCordova predeterminado.
@@ -46,25 +45,27 @@ Asegúrese de que especifica el ID de paquete correcto. Los siguientes mensajes 
 
 1. Añada la API soportada mínima o la declaración de destino del despliegue al archivo config.xml para la aplicación de Cordova. El valor de minSdkVersion debe ser superior a 15. El valor targetSdkVersion siempre debe reflejar el SDK de Android más reciente disponible desde Google.
 	
-	* Android: Con el editor, abra el archivo config.xml y actualice el elemento
+	* Android: Con el editor, abra el archivo **config.xml** y actualice el elemento
 `<platform name="android">` con versiones SDK de destino y mínimas:
 
-```
-< !-- add deployment target declaration --> 
-add deployment target declaration <preference name="android-minSdkVersion" value="15" />
-  <preference name="android-targetSdkVersion" value="23" />
-</platform>
-```
-    {: codeblock}
+	```
+	<platform name="android">
+    	<preference name="android-minSdkVersion" value="15" />
+    	<preference name="android-targetSdkVersion" value="23" />
+    	<!-- add minimum and target Android API level declaration -->
+	</platform>
+	```
+    	{: codeblock}
 
    * iOS: Actualice el elemento <platform name="ios"> con una declaración de destino de despliegue:
 
-```
-<platform name ="ios">
-<preference name=deployment-target" value="8.0" /> <!-- other properties -->
-</ platform>
-```
-	{: codeblock}
+	```
+	<platform name="ios">
+	    <preference name="deployment-target" value="8.0" />
+	    <!-- add deployment target declaration -->
+	</platform>
+	```
+		{: codeblock}
 
 1. Desde la interfaz de línea de mandatos (CLI) de Cordova, añada las plataformas iOS, Android o ambas utilizando el siguiente mandato:
 ```
@@ -87,13 +88,21 @@ bms-push <version> "BMSPush"
 ```
 	{: codeblock}
 
-1. (Solo iOS): Configure su entorno de desarrollo de iOS.
+1. Configure su entorno de desarrollo de iOS.
 2. Cree y ejecute la aplicación con Xcode.
-1. (Solo Android): Cree su proyecto de Android utilizando el mandato siguiente:
-**cordova build android**.
-
+1. Descargue `google-services.json` de Firebase para android y colóquelos en la carpeta raíz del proyecto Cordova, en `[your-app-name]/platforms/android.
+	1. Vaya a `[your-app-name]/platforms/android`.
+	2. Abra el archivo `build.gradle` (Vía de acceso : plataforma > android > build.gradle).
+	3. Busque el texto `buildscript` en el archivo `build.gradle`. 
+	4. Después de la línea classpath, añada la línea classpath 'com.google.gms:google-services:3.0.0'
+	5. Busque "dependencies". Seleccione las dependencias que contengan el texto `compile` y el fin de dichas dependencias; después de las mismas, añada esta línea:apply plugin: 'com.google.gms.google-services'.
+	6. Prepare y compile el proyecto Cordova Android. 
+		```
+		cordova prepare android
+		cordova build android
+		```
+			{: codeblock}
 	**Nota**: Antes de abrir el proyecto en Android Studio, cree la aplicación de Cordova mediante la CLI de Cordova. De esta forma no se producirán errores de compilación.
-
 ## Inicialización del plug-in de Cordova
 {: #cordova_initialize}
 
@@ -105,9 +114,19 @@ SDK de cliente de iOS y Android para habilitar a una aplicación de Cordova a co
 
 ```
 onDeviceReady: function() {
-app.receivedEvent('deviceready');
-BMSClient.initialize("YOUR APP REGION");
-    } 
+	    app.receivedEvent('deviceready');
+	BMSClient.initialize("YOUR APP REGION");
+	var category =  {};
+	BMSPush.initialize(appGUID,clientSecret,category);
+	var success = function(message) { console.log("Success: " + message); };
+	var failure = function(message) { console.log("Error: " + message); };
+	BMSPush.registerDevice({}, success, failure);
+	var showNotification = function(notif)
+	{
+	alert(JSON.stringify(notif));
+	};
+	BMSPush.registerNotificationsCallback(showNotification);
+    }
 ```
 	{: codeblock}
 
@@ -159,27 +178,6 @@ BMSPush.registerDevice({}, success, failure);
 BMSPush.registerNotificationsCallback(showNotification); 
 ```
 	{: codeblock}
-
-### Objective-C
-{: #cordova_register_objective}
-Añada el siguiente fragmento de código de Objective-C en la clase de delegado de la
-                        aplicación.
-
-```
-// Registre la señal del dispositivo con Bluemix Push Notification Service
-	- (void)application:(UIApplication *)application
-     didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
-       [[CDVBMSPush sharedInstance] didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
-}
-// Manejar el error cuando no ha podido registrar la señal del dispositivo con APN
-	- (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error {
-      [[CDVBMSPush sharedInstance] didFailToRegisterForRemoteNotificationsWithError:error];
-} 
-```
-	{: codeblock}
-
-###Swift
-{: #cordova_register_swift}
 
 Añada el siguiente fragmento de código de Swift a la clase de delegado de la aplicación.
 
@@ -263,31 +261,6 @@ action-loc-key - la serie se utiliza como clave para obtener una serie localizad
 * **badge** - El número que se mostrará como el identificador del icono de app. Si falta esta propiedad, el identificador no se modificará. Para eliminar el identificador, establezca el valor de esta propiedad en 0.
 * **sound** - El nombre de un archivo de sonido del paquete de la app de la carpeta Biblioteca/Sonidos del contenedor de datos de la aplicación.
 
-###Objective-C
-
-Añada los siguientes fragmentos de código de Objective-C en la clase de delegado de la aplicación.
-
-```
-// Maneje la recepción de una notificación remota
--(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
-   [[CDVBMSPush sharedInstance] didReceiveRemoteNotificationWithNotification:userInfo];
-} 
-```
-	{: codeblock}
-
-
-
-```
-//Maneje la recepción de una notificación remota al iniciar
-- (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions {
-  if (launchOptions != nil) {
-   [[CDVBMSPush sharedInstance] didReceiveRemoteNotificationOnLaunchWithLaunchOptions:launchOptions];
-     }
- }
-```
-	{: codeblock}
-
-###Swift
 
 Añada los siguientes fragmentos de código de Swift a la clase de delegado de la aplicación.
 ```

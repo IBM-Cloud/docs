@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,11 +12,11 @@ copyright:
 
 # Push-Benachrichtigungen überwachen 
 {: #monitor-notifications}
-Letzte Aktualisierung: 06. Dezember 2016
+Letzte Aktualisierung: 16. Januar 2017
 {: .last-updated}
 
 
-Der IBM Service {{site.data.keyword.mobilepushshort}} verfügt nun über erweiterte Funktionen zum Überwachen des Durchsatzes von Push-Operationen, indem aus Ihren Benutzerdaten Diagramme generiert werden. Sie können das Dienstprogramm zum Auflisten aller gesendeten Push-Benachrichtigungen oder aller registrierten Geräte sowie für die tägliche, wöchentliche oder monatliche Analyse der Informationen verwenden.
+Der IBM {{site.data.keyword.mobilepushshort}}-Service verfügt nun über erweiterte Funktionen zum Überwachen des Durchsatzes von Push-Operationen, indem aus Ihren Benutzerdaten Diagramme generiert werden. Sie können das Dienstprogramm zum Auflisten aller gesendeten Push-Benachrichtigungen oder aller registrierten Geräte sowie für die tägliche, wöchentliche oder monatliche Analyse der Informationen verwenden.
 
 Verwenden Sie zum Generieren von Berichten für alle Ihre gesendeten Benachrichtigungen die in [REST-APIs](https://mobile.{DomainName}/imfpush/){: new_window} beschriebene Berichtsmethode 'GET report' für Push-Nachrichten. 
 

@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,10 +12,10 @@ copyright:
 
 # Chrome-Apps und Erweiterungen für den Empfang von {{site.data.keyword.mobilepushshort}} aktivieren
 {: #web_notifications}
-Letzte Aktualisierung: 06. Dezember 2016
+Letzte Aktualisierung: 18. Januar 2017
 {: .last-updated}
 
-Sie können jetzt Google Chrome-Apps und Erweiterungen für den Empfang von {{site.data.keyword.mobilepushshort}} aktivieren.
+Sie können Google Chrome-Apps und Erweiterungen für den Empfang von {{site.data.keyword.mobilepushshort}} aktivieren. Stellen Sie sicher, dass die im Abschnitt [Berechtigungsnachweise für einen Benachrichtigungsprovider konfigurieren](t__main_push_config_provider.html) angegebenen Schritte durchgeführt wurden.
 
 ## Client-SDK für {{site.data.keyword.mobilepushshort}} installieren
 {: #web_install}
@@ -26,7 +26,7 @@ In diesem Thema wird die Vorgehensweise zum Installieren und Verwenden des Clien
 
 Führen Sie folgende Schritte für die Installation des Javascript-SDK in Chrome-Apps und Erweiterungen aus:
 
-Laden Sie `BMSPushSDK.js` und `manifest_Chrome_Ext.json` (für Chrome-Erweiterungen) oder `manifest_Chrome_App.json` (für Chrome-Apps) vom [Bluemix-Web-Push-SDK](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master) herunter.
+Laden Sie `BMSPushSDK.js` und `manifest_Chrome_Ext.json` (für Chrome-Erweiterungen) oder `manifest_Chrome_App.json` (für Chrome-Apps) vom [Bluemix-Web-Push-SDK ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master "Symbol für externen Link"){: new_window} herunter.
 
 
 

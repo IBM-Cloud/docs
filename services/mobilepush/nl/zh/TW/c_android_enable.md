@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # 啟用 Android 應用程式來接收 {{site.data.keyword.mobilepushshort}}
 {: #tag_based_notifications}
-前次更新：2016 年 12 月 7 日
+前次更新：2017 年 1 月 16 日
 {: .last-updated}
 
 您可以啟用 Android 應用程式來接收傳送至您裝置的推送通知。Android Studio 是必備項目，而且是建置 Android 專案的建議方法。對 Android Studio 的基本瞭解十分重要。
@@ -22,16 +22,17 @@ copyright:
 
 本節說明如何安裝及使用 Client Push SDK 來進一步開發 Android 應用程式。
 
-Bluemix® Mobile Services Push SDK 可以使用 Gradle 進行新增。Gradle 會從儲存庫中自動下載構件，並讓它們可供 Android 應用程式使用。請確定您已正確設定 Android Studio 及 Android Studio SDK。如需如何設定系統的相關資訊，請參閱 [Android Studio 概觀](https://developer.android.com/tools/studio/index.html)。如需 Gradle 的相關資訊，請參閱[配置 Gradle 建置](http://developer.android.com/tools/building/configuring-gradle.html)。
+Bluemix® Mobile Services Push SDK 可以使用 Gradle 進行新增。Gradle 會從儲存庫中自動下載構件，並讓它們可供 Android 應用程式使用。請確定您已正確設定 Android Studio 及 Android Studio SDK。如需如何設定系統的相關資訊，請參閱 [Android Studio Overview ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.android.com/tools/studio/index.html "外部鏈結圖示"){: new_window}。如需 Gradle 的相關資訊，請參閱 [Configuring Gradle Builds![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://developer.android.com/tools/building/configuring-gradle.html "外部鏈結圖示"){: new_window}。
 
 在建立並開啟行動應用程式之後，請使用 Android Studio 來完成下列步驟。
 
-1. 將相依關係新增至「模組」層次 **build.gradle** 檔案。 
+1. 將相依關係新增至「模組」層次 **build.gradle** 檔案。 	
+
 	- 新增下列相依關係，以將 Bluemix™ Mobile Services Push Client SDK 及 Google Play Services SDK 包含在您的編譯範圍相依關係。
 	```
-	com.ibm.mobilefirstplatform.clientsdk.android:push:2.+
+	com.ibm.mobilefirstplatform.clientsdk.android:push:3.+
 	```
-    {: codeblock}
+    	{: codeblock}
 	
 	- 將下列相依關係新增至 import 陳述式，程式碼 Snippet 需要這些 import 陳述式。
 	```
@@ -42,16 +43,22 @@ Bluemix® Mobile Services Push SDK 可以使用 Gradle 進行新增。Gradle 會
 	import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationListener;
 	import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPSimplePushNotification;
 	```
-    {: codeblock}
+    	{: codeblock}
+
+	- 最後，將下列相依關係新增至「模組」層次 **build.gradle** 檔案。
+	```
+		apply plugin: 'com.google.gms.google-services'
+	```
+		{: codeblock}
 3. 將下列相依關係新增至「專案」層次 **build.gradle** 檔案。
 ```
 dependencies {
-    classpath 'com.android.tools.build:gradle:2.2.0'
+    classpath 'com.android.tools.build:gradle:3.0.0'
     classpath 'com.google.gms:google-services:3.0.0'
 }
 ``` 
     {: codeblock}
-5. 在 **AndroidManifest.xml** 檔案中，新增下列許可權。若要檢視範例資訊清單，請參閱 [Android helloPush 範例應用程式](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml)。若要檢視範例 Gradle 檔案，請參閱[範例建置 Gradle 檔案](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle)。
+5. 在 **AndroidManifest.xml** 檔案中，新增下列許可權。若要檢視範例資訊清單，請參閱 [Android helloPush 範例應用程式 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml "外部鏈結圖示"){: new_window}。若要檢視範例 Gradle 檔案，請參閱 [範例建置 Gradle 檔案 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle "外部鏈結圖示"){: new_window}。
 ```
 <uses-permission android:name="android.permission.INTERNET"/>
 <uses-permission android:name="android.permission.GET_ACCOUNTS" />
@@ -60,8 +67,7 @@ dependencies {
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 ```
 	{: codeblock}
-   您可以在這裡進一步讀取 [Android 許可權](http://developer.android.com/guide/topics/security/permissions.html)的相關資訊。
-
+此處鏈結可閱讀 [Android permissions![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://developer.android.com/guide/topics/security/permissions.html "外部鏈結圖示"){: new_window} 相關資訊。
 4. 新增活動的通知目的設定。此設定會在使用者按一下通知區域中的接收通知時啟動應用程式。
 ```
 <intent-filter>
@@ -109,7 +115,7 @@ android:theme="@android:style/Theme.NoDisplay"/>
 4. 在「將 Firebase 新增至 Android 應用程式」視窗中，新增 **com.ibm.mobilefirstplatform.clientsdk.android.push** 作為「套件名稱」。應用程式暱稱欄位是選用性的。按一下**新增應用程式**。  
     ![「將 Firebase 新增至 Android」視窗](images/FCM_1.jpg)
 
-5. 在「將 Firebase 新增至 Android 應用程式」視窗中輸入套件名稱，以包含應用程式的套件名稱。應用程式暱稱欄位是選用性的。按一下**新增應用程式**。針對每個新增的套件，Firebase 需要新增套件名稱來變更 `build.gradle`。
+5. 在「將 Firebase 新增至 Android 應用程式」視窗中輸入套件名稱，以包含應用程式的套件名稱。應用程式暱稱欄位是選用性的。按一下**新增應用程式**。 
 
 	![新增應用程式的套件名稱](images/FCM_2.jpg)
 
@@ -267,7 +273,7 @@ public void onStatusChange(String messageId, MFPPushNotificationStatus status) {
 <action android:name="Your_Android_Package_Name.Cancel_IBMPushNotification"/>
 </intent-filter>
 </receiver>
-	```
+```
 	{: codeblock}
 
 - 當應用程式在作用中（在前景或背景執行）以及不在執行中（已關閉）時

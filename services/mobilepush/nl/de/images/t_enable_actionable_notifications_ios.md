@@ -8,10 +8,7 @@ copyright:
 # Umsetzbare Benachrichtigungen für iOS aktivieren
 {: #enable-actionable-notifications-ios}
 
-Im Gegensatz zu konventionellen Push-Benachrichtigungen werden Benutzer bei
-umsetzbaren Benachrichtigungen dazu aufgefordert, bei Erhalt des Benachrichtigungsalerts
-eine Auswahl zu treffen, ohne die App zu öffnen. Gehen Sie nach den folgenden Anweisungen
-vor, um umsetzbare Benachrichtigungen in Ihrer Anwendung zu aktivieren.
+Im Unterschied zu konventionellen Push-Benachrichtigungen werden Benutzer bei umsetzbaren Benachrichtigungen dazu aufgefordert, bei Erhalt der Benachrichtigungsalerts eine Auswahl zu treffen, ohne die App zu öffnen. Gehen Sie nach den folgenden Anweisungen vor, um umsetzbare Push-Benachrichtigungen in Ihrer Anwendung zu aktivieren.
 
 1. Erstellen Sie eine Benutzeraktion.
 
