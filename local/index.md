@@ -85,7 +85,6 @@ If you have a private instance of a {{site.data.keyword.Bluemix_notm}} service f
 |{{site.data.keyword.apiconnect_short}} 	|Yes   	 	|Yes  	 	|Yes   |
 |Automated Accessibility Checker |Yes       |Yes    |Yes   |
 |{{site.data.keyword.rules_short}}		|Yes		|Yes		|Yes |
-|{{site.data.keyword.cloudant}}			|Yes		|Yes		|Yes |
 |{{site.data.keyword.iotmapinsights_short}}    |Yes  |Yes  |Yes  |
 |{{site.data.keyword.conversationshort}}  |Yes  |Yes  |Yes  |
 |{{site.data.keyword.dashdbshort}}		|Yes		|Yes		|Yes |
