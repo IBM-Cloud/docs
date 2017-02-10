@@ -28,12 +28,10 @@ You can integrate {{site.data.keyword.DRA_short}} into one Jenkins project or ac
 ##Installing and configuring the {{site.data.keyword.DRA_short}} plugin
 {: #DI_jenkins_install}
 
-_Note_: If you are not an IBM employee, you must request access before you can download the DevOps Insights plugin. You can submit a request for access by clicking **Support** at the top of the screen while logged in to Bluemix. Click **Add Ticket**, then select the **Something Else** category. In your ticket, include the words "DevOps Insights Jenkins." 
-
 Prior to installation and configuration, download the [the {{site.data.keyword.DRA_short}} plugin installation file (.hpi)](https://github.ibm.com/oneibmcloud/DevOps-Insights-Jenkins-plugin-release/blob/master/dra.hpi). 
 
 For the latest installation and configuration instructions, see [the plugin documentation](https://github.ibm.com/oneibmcloud/DevOps-Insights-Jenkins-plugin-release/blob/master/README.md).
 
-
+_Note_: If you are not an IBM employee, you must request access before you can download the DevOps Insights plugin. You can submit a request for access by clicking **Support** at the top of the screen while logged in to Bluemix. Click **Add Ticket**, then select the **Something Else** category. In your ticket, include the words "DevOps Insights Jenkins." 
 
 
