@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -10,15 +10,37 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Safari Web ブラウザーの資格情報の構成
-{: #configure-credential-for-safari}
-最終更新日: 2016 年 12 月 06 日
+# Web ブラウザーの資格情報の構成
+{: #configure-credential-for-browsers}
+最終更新日: 2017 年 1 月 11 日
 {: .last-updated}
 
-IBM {{site.data.keyword.mobilepushshort}} サービスの機能が拡張され、Safari ブラウザーに通知を送信できるようになりました。サポートされるバージョンは、Safari 10.0 です。
+IBM {{site.data.keyword.mobilepushshort}} サービスの機能が拡張され、ブラウザーに通知を送信できるようになりました。 
 
-## 証明書の生成
-  {: #certificate-generation}
+許可が必要な要求を識別するために、{{site.data.keyword.mobilepushshort}} サービスによって Web サイト URL または Web サイトのドメイン・ネームが要求されます。{{site.data.keyword.mobilepushshort}} サービス・インスタンスがサポートするのは、1 度に 1 つのドメイン・ネームのみです。したがって、Chrome、Firefox、および Safari に同じ値を設定するようにしてください。 
+
+Chrome ブラウザーと Safari ブラウザーには、Web プッシュ用の追加構成が必要です。Chrome ではメッセージを送信するために FCM エンドポイントが使用されるため、FCM API キーが必要になります。FCM API キーを取得するには、[FCM の資格情報の構成](t_push_provider_android.html)を参照してください。
+
+
+
+##Chrome および Firefox の Web プッシュの構成 
+{: #config-chrome-firefox}
+
+1. Push ダッシュボードで**「構成」**を選択します。
+2. 「Web」タブを選択します。
+	![WebPush 構成](images/webpush_configure.jpg)
+3. プッシュ通知を受信するために登録する FCM/GCM API キーと Web サイトの URL を構成します。
+4. **「保存」**をクリックします。
+5. 次のステップ。[Google Chrome および Mozilla Firefox ブラウザー用の通知の使用可能化](c_enable_push.html)を行います。
+
+
+## Safari Web プッシュの構成 
+{: #configure-safari}
+
+Safari でサポートされる {{site.data.keyword.mobilepushshort}} サービスのバージョンは 10.0 です。ブラウザーで通知を受信するように構成する前に、Apple Developer アカウントを介して証明書を生成する必要があります。
+
+### 証明書の生成
+{: #certificate-generation}
 
 Apple 開発者アカウントを必ず取得しておいてください。Safari ブラウザーで通知を受け取るように構成するには、Web サイト Push ID を登録し、証明書を生成する必要があります。以下の手順を使用して、開始してください。
 
@@ -36,7 +58,7 @@ Apple 開発者アカウントを必ず取得しておいてください。Safar
 11. 「キーチェーンアクセス」ツールで証明書を開きます。右クリックして、p12 証明書としてエクスポートします。p12 証明書の生成時に指定したパスワードをメモしてください。
 
 
-## 通知の構成
+### 通知の構成
   {: #configuration-notification}
  
 証明書を生成したら、通知を Safari に送信するように、サービスを構成できます。 

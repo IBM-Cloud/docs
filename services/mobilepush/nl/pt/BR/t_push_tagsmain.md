@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Notificações baseadas em tag 
 {: #push-ios-main-tags}
-Última atualização: 06 de dezembro de 2016
+Última atualização: 16 de janeiro de 2017
 {: .last-updated}
 
 As mensagens de notificação baseadas em tag se destinam a todos os dispositivos que estiverem inscritos em
@@ -22,8 +22,4 @@ definir tags e depois enviar e receber mensagens usando
 
 Deve-se
 primeiramente criar as identificações para o aplicativo, configurar as assinaturas da identificação
-e, em seguida, iniciar as notificações baseadas em identificação. Para enviar uma
-notificação baseada em tag usando a
-[API
-REST](https://mobile.{DomainName}/imfpush/), assegure-se de que os "tagNames" sejam fornecidos ao
-postar no recurso de mensagem. 
+e, em seguida, iniciar as notificações baseadas em identificação. Para enviar uma notificação baseada em tag usando a [API de REST ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://mobile.{DomainName}/imfpush/ "Ícone de link externo"){: new_window}, assegure-se de que os "tagNames" sejam fornecidos ao postar no recurso de mensagem. 

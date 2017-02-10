@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+years: 2015, 2017
 
 ---
 
@@ -12,12 +12,18 @@ copyright:
 
 # 關於 {{site.data.keyword.mobilepushshort}}
 {: #overview-push}
-前次更新：2016 年 12 月 6 日
+前次更新：2017 年 1 月 18 日
 {: .last-updated}
 
-IBM {{site.data.keyword.mobilepushshort}} 是一項服務，可用來將通知傳送給 iOS 和 Android 行動裝置、Google Chrome、Mozilla Firefox 及 Safari Web 瀏覽器以及 Google Chrome Apps and Extensions。通知可以使用標籤，以所有應用程式使用者或一組特定使用者及裝置為目標。您可以管理裝置、標籤及訂閱。您也可以使用 SDK（軟體開發套件）及「具象狀態傳輸 (REST)」應用程式介面 (API) 來進一步開發用戶端應用程式。 
+IBM {{site.data.keyword.mobilepushshort}} 是您可以用來傳送通知至裝置及平台的一種服務。通知可以使用標籤，以所有應用程式使用者或一組特定使用者及裝置為目標。您可以管理裝置、標籤及訂閱。  
 
-{{site.data.keyword.mobilepushshort}} 也可以當作「Bluemix 專用」服務使用。如需將 {{site.data.keyword.mobilepushshort}} 當作專用服務的相關資訊，請參閱[專用服務](/docs/dedicated/index.html)。請注意，{{site.data.keyword.mobilepushshort}} 監視標籤不會顯示分析資料。
+您可以使用下列任一選項來建立連結服務或取消連結服務，請執行下列動作：
+
+- 使用型錄中的 MobileFirst Services Starter 樣板建立 Bluemix 應用程式。這將建立連結至 Bluemix 後端應用程式的 Push Notifications 服務。
+- 直接從 Mobile 型錄建立取消連結 Push Notifications 服務。您可以稍後連結至應用程式或甚至選擇使用它來取消連結。 
+- 使用 [Mobile 儀表板 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.ng.bluemix.net/docs/mobile/services.html "外部鏈結圖示"){: new_window}。
+
+請注意，{{site.data.keyword.mobilepushshort}} 監視標籤不會顯示分析資料。
 
 {{site.data.keyword.mobilepushshort}} Service 現在已啟用 OpenWhisk。如需相關資訊，請參閱 [OpenWhisk](/docs/openwhisk/index.html)。
 
@@ -58,9 +64,14 @@ IBM {{site.data.keyword.mobilepushshort}} Service 使用平台專用 Push Notifi
 ###推送安全
 {: push-security}
 
-{{site.data.keyword.mobilepushshort}} API 透過兩種類型的密碼來保護 - i) appSecret ii) clientSecret。'appSecret' 會保護一般由後端應用程式所呼叫的 API（例如，傳送 {{site.data.keyword.mobilepushshort}} 的 API，以及配置設定的 API）。'clientSecret' 會保護一般由行動用戶端應用程式所呼叫的 API。只有一個 API 與使用需要此 'clientSecret' 的相關聯 UserId 登錄裝置有關。從行動用戶端呼叫的其他 API 都不需要 clientSecret。連結應用程式與 {{site.data.keyword.mobilepushshort}} Service 時，會將 'appSecret' 及 'clientSecret' 配置給每個服務實例。如需如何傳遞密碼以及針對哪些 API 傳遞的相關資訊，請參閱 ReST API 文件。
+{{site.data.keyword.mobilepushshort}} API 透過兩種類型的密碼來進行保護：
 
-附註：只有在使用 userId 欄位登錄或更新裝置時，才需要舊版應用程式來傳遞 clientSecret。行動及瀏覽器用戶端所呼叫的所有其他 API 都不需要 clientSecret。這些舊應用程式可以選擇性地繼續使用 clientSecret 進行裝置登錄或更新呼叫。不過，強烈建議所有用戶端 API 呼叫都強制執行 clientSecret 檢查。若要在現有應用程式中強制執行此作業，則有一個已發佈的新 'verifyClientSecret' API 可供使用。對於新的應用程式，將會對所有用戶端 API 呼叫強制執行 clientSecret 檢查，而且使用 'verfiyClientSecret' API 無法變更此行為。
+- **appSecret**：'appSecret' 會保護一般由後端應用程式所呼叫的 API（例如，傳送 {{site.data.keyword.mobilepushshort}} 的 API，以及配置設定的 API）。
+- **clientSecret**：'clientSecret' 會保護一般由行動用戶端應用程式所呼叫的 API。只有一個 API 與使用需要此 'clientSecret' 的相關聯 UserId 登錄裝置有關。從行動用戶端呼叫的其他 API 都不需要 clientSecret。 
+
+連結應用程式與 {{site.data.keyword.mobilepushshort}} Service 時，會將 'appSecret' 及 'clientSecret' 配置給每個服務實例。請參閱 [REST API ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://mobile.{DomainName}/imfpush/ "外部鏈結圖示") 文件，以取得如何傳遞密碼以及針對哪些 API 傳遞的相關資訊。
+
+**附註**：只有在使用 userId 欄位登錄或更新裝置時，才需要舊版應用程式來傳遞 clientSecret。行動及瀏覽器用戶端所呼叫的所有其他 API 都不需要 clientSecret。這些舊應用程式可以選擇性地繼續使用 clientSecret 進行裝置登錄或更新呼叫。不過，強烈建議所有用戶端 API 呼叫都強制執行 clientSecret 檢查。若要在現有應用程式中強制執行此作業，則有一個已發佈的新 'verifyClientSecret' API 可供使用。對於新的應用程式，將會對所有用戶端 API 呼叫強制執行 clientSecret 檢查，而且使用 'verfiyClientSecret' API 無法變更此行為。
 
 預設只會在新的應用程式中強制執行用戶端密碼驗證。同時容許現有及新的應用程式，以使用 verifyClientSecret REST API 來啟用或停用用戶端密碼驗證。建議您強制執行用戶端密碼驗證，以避免向可能知道 applicationId 及 deviceId 的使用者公開裝置。
 
@@ -96,8 +107,9 @@ IBM {{site.data.keyword.mobilepushshort}} Service 使用平台專用 Push Notifi
 可以設定通知的目標以送達特定的裝置平台。例如，只能將通知只傳送給所有 Android 使用者或 Google Chrome 使用者。若要傳送使用 REST API 的平台型通知，請確定在公佈至訊息資源時已提供目標平台。請將平台指定為陣列。支援的平台如下：
 * A (Apple)
 * G (Google)
-* WEB_CHROME（Google Chrome 瀏覽器 WebPush）
-* WEB_FIREFOX（Mozilla Firefox 瀏覽器 WebPush）
+* WEB_CHROME（Google Chrome 瀏覽器 Web 推送）
+* WEB_FIREFOX（Mozilla Firefox 瀏覽器 Web 推送）
+* WEB_SAFARI（Safari 瀏覽器 Web 推送）
 * APPEXT_CHROME (Google Chrome Apps & Extensions)
 
 ## {{site.data.keyword.mobilepushshort}} 訊息大小
@@ -105,7 +117,7 @@ IBM {{site.data.keyword.mobilepushshort}} Service 使用平台專用 Push Notifi
 
 {{site.data.keyword.mobilepushshort}} 訊息有效負載大小取決於「閘道」（FCM/GCM、APNs）及用戶端平台所配置的限制。 
 
-###iOS
+### iOS 及 Safari
 {: ios-message-size}
 
 若為 iOS 8 以及更新版本，接受的大小上限為 2 KB。Apple Push Notification Service 不會傳送超過此限制的通知。

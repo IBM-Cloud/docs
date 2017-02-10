@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Enviando notificações push básicas
 {: #push-send-notifications}
-Última atualização: 06 de dezembro de 2016
+Última atualização: 11 de janeiro de 2017
 {: .last-updated}
 
 Depois de desenvolver seus aplicativos, é possível enviar notificações push básicas (sem usar tags, badges, cargas úteis adicionais ou arquivos de som).

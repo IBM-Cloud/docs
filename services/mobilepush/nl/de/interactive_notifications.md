@@ -1,7 +1,7 @@
----
+ka---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,17 +12,17 @@ copyright:
 
 # Interaktive Benachrichtigungen
 {: #interactive-notifications}
-Letzte Aktualisierung: 06. Dezember 2016
+Letzte Aktualisierung: 18. Januar 2017
 {: .last-updated}
 
-Interaktive Benachrichtigungen ermöglichen es Benutzern, beim Eingang einer Benachrichtigung zu reagieren, ohne dass die Anwendung geöffnet werden muss. Wenn eine interaktive Benachrichtigung eingeht, zeigt das Gerät die Aktionsschaltflächen zusammen mit der Benachrichtigung an. Interaktive Benachrichtigungen werden für iOS-Geräte mit Version 8 oder einer neueren Version unterstützt. Wenn eine interaktive Benachrichtigung an iOS-Geräte gesendet wird, die mit einer älteren Version als Version 8 ausgeführt werden, werden die Benachrichtigungsaktionen nicht angezeigt.
+Interaktive Benachrichtigungen ermöglichen den Benutzern das Beantworten einer Benachrichtigung, ohne die Anwendung zu öffnen. Wenn eine interaktive Benachrichtigung eingeht, zeigt das Gerät die Aktionsschaltflächen zusammen mit der Benachrichtigung an. Interaktive Benachrichtigungen werden für iOS-Geräte mit Version 8 oder einer neueren Version unterstützt. Wenn interaktive Benachrichtigungen an iOS-Geräte gesendet werden, die mit einer älteren Version als Version 8 ausgeführt werden, werden die Benachrichtigungsaktionen nicht angezeigt.
 
 ##Interaktive Push-Benachrichtigungen senden
 
 
 Interaktive Benachrichtigungen können über das Push-Dashboard oder mithilfe der REST-API (siehe [REST-API-Dokumentation](t_restapi.html)) gesendet werden.
 
-Über die Push-Konsole: 
+Gehen Sie in der {{site.data.keyword.mobilepushshort}}-Konsole wie folgt vor:  
 
 1. Klicken Sie auf der Registerkarte 'Benachrichtigungen' im Push-Dashboard auf **Benachrichtigung senden**. 
 2. Wählen Sie die Benachrichtigungsempfänger aus und klicken Sie auf **Weiter**. 
@@ -30,32 +30,54 @@ Interaktive Benachrichtigungen können über das Push-Dashboard oder mithilfe de
 
 ## Interaktive Push-Benachrichtigungen in einer iOS-Anwendung verarbeiten
 
+
+### Swift
+
 Führen Sie die folgenden Schritte aus, um interaktive Benachrichtigungen zu erhalten:
 
-1. Aktivieren Sie die Anwendungsfunktion zum Durchführen von Hintergrundtasks beim Empfang der fernen Benachrichtigungen. Dieser Schritt ist erforderlich, wenn einige der Aktionen für die Hintergrundverarbeitung aktiviert sind.
-1. Legen Sie in 'AppDelegate' (application: didRegisterForRemoteNotificationsWithDeviceTokenapplication:) die Kategorien fest, bevor Sie `deviceToken` für `WLPush Object` festlegen.
-```
-if([application respondsToSelector:@selector(registerUserNotificationSettings:)]){
- UIUserNotificationType userNotificationTypes = UIUserNotificationTypeNone | UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge;
- UIMutableUserNotificationAction *acceptAction = [[UIMutableUserNotificationAction alloc] init];
- acceptAction.identifier = @"OK";
- acceptAction.title = @"OK";
- UIMutableUserNotificationAction *rejetAction = [[UIMutableUserNotificationAction alloc] init];
- rejetAction.identifier = @"NOK";
- rejetAction.title = @"NOK";
- UIMutableUserNotificationCategory *cateogory = [[UIMutableUserNotificationCategory alloc] init];
- cateogory.identifier = @"poll";
- [cateogory setActions:@[acceptAction,rejetAction] forContext:UIUserNotificationActionContextDefault];
- [cateogory setActions:@[acceptAction,rejetAction] forContext:UIUserNotificationActionContextMinimal];
- NSSet *catgories = [NSSet setWithObject:cateogory];
- [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:userNotificationTypes categories:catgories]];
-}
-```
-	{: codeblock}
+1. Aktivieren Sie die Anwendungsfunktion zum Durchführen von Hintergrundtasks beim Empfang der fernen Benachrichtigungen. 
+1. Initialisieren Sie das `BMSPush`-SDK mit Ihrer Aktionskategorie.
+	```
+	let myBMSClient = BMSClient.sharedInstance
+	myBMSClient.initialize(bluemixRegion: BMSClient.Region.usSouth)
+	let push =  BMSPushClient.sharedInstance
+    let actionOne = BMSPushNotificationAction(identifierName: "FIRST", buttonTitle: "Accept", isAuthenticationRequired: false, defineActivationMode: UIUserNotificationActivationMode.background)
+   	let actionTwo = BMSPushNotificationAction(identifierName: "SECOND", buttonTitle: "Reject", isAuthenticationRequired: false, defineActivationMode: UIUserNotificationActivationMode.background)
+   	let category = BMSPushNotificationActionCategory(identifierName: "category", buttonActions: [actionOne, actionTwo])
+   	let notifOptions = BMSPushClientOptions(categoryName: [category])
+	push.initializeWithAppGUID(appGUID: "YOUR_APP_GUID", clientSecret:"YOUR_APP_CLIENT_SECRET", options: notifOptions)
+	```
+		{: codeblock}
 
 1. Implementieren Sie die neue Callback-Methode in AppDelegate:
 	```
-	 -(void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forRemoteNotification:(NSDictionary *)userInfo completionHandler:(void (ˆ)())completionHandler
+	 func userNotificationCenter(_ center: UNUserNotificationCenter,
+       didReceive response: UNNotificationResponse,
+       withCompletionHandler completionHandler: @escaping () -> Void) {
+            switch response.actionIdentifier {
+		    case "FIRST":
+		      print("FIRST")
+		    case "SECOND":
+		      print("SECOND")
+		    default:
+		      print("Unknown action")
+		    }
+		completionHandler
+	}
 	```
 	{: codeblock} 
 5. Diese neue Callback-Methode wird aufgerufen, wenn der Benutzer auf die Aktionsschaltfläche klickt. Die Implementierung dieser Methode muss die Aufgaben durchführen, die der angegebenen ID zugeordnet sind, und den Block im Parameter `completionHandler` ausführen.
+
+
+### Cordova
+
+Führen Sie die folgenden Schritte aus, um umsetzbare Benachrichtigungen in einer Cordova-iOS-Anwendung zu empfangen:
+
+1. Fügen Sie das Kategoriefeld in der Methode `BMSPush.initialize` hinzu.
+   ```
+	var category =  {"Category_Name":[{"IdentifierName_1":"actionName_1"},{"IdentifierName_2":"actionName_2"}]}
+       BMSPush.initialize(appGUID,clientSecret,category);
+    ```
+	{: codeblock} 
+2. Implementieren Sie die neue Callback-Methode in AppDelegate.
+3. Diese neue Callback-Methode wird aufgerufen, wenn der Benutzer auf die Aktionsschaltfläche klickt. Die Implementierung dieser Methode muss die Aufgaben durchführen, die der angegebenen ID zugeordnet sind, und den Block im Parameter 'completionHandler' ausführen.

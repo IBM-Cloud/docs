@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,10 +12,10 @@ copyright:
 
 # 让 Chrome Apps and Extensions 能够接收 {{site.data.keyword.mobilepushshort}} 
 {: #web_notifications}
-上次更新时间：2016 年 12 月 6 日
+上次更新时间：2017 年 1 月 18 日
 {: .last-updated}
 
-您现在可以支持 Chrome Apps and Extensions 接收 {{site.data.keyword.mobilepushshort}}。
+您可以支持 Chrome Apps and Extensions 接收 {{site.data.keyword.mobilepushshort}}。请确保您已经完成[配置通知提供程序的凭证](t__main_push_config_provider.html)，然后再继续相关步骤。
 
 ## 安装客户机 SDK 以支持 {{site.data.keyword.mobilepushshort}}
 {: #web_install}
@@ -26,7 +26,7 @@ copyright:
 
 要在 Chrome Apps and Extensions 中安装 JavaScript SDK，请完成以下步骤：
 
-从 [Bluemix Web 推送 SDK](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master)，下载 `BMSPushSDK.js` 和 `manifest_Chrome_Ext.json`（对于 Chrome Extensions）或 `manifest_Chrome_App.json`（对于 Chrome Apps）。
+从 [Bluemix Web 推送 SDK ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master "外部链接图标"){: new_window} 下载 `BMSPushSDK.js` 和 `manifest_Chrome_Ext.json`（对于 Chrome Extensions）或 `manifest_Chrome_App.json`（对于 Chrome Apps）。
 
 
 

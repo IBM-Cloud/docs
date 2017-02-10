@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # 바인딩하지 않은 Android용 {{site.data.keyword.mobilepushshort}} 서비스 작성
 {: #create_android_unbound}
-마지막 업데이트 날짜: 2016년 12월 6일
+마지막 업데이트 날짜: 2017년 1월 11일
 {: .last-updated}
 
 {{site.data.keyword.mobilepushshort}} 서비스 인스턴스를 작성하십시오. 백엔드 애플리케이션에 바인드하지 않아도 {{site.data.keyword.mobilepushshort}} 서비스 인스턴스를 사용할 수 있습니다. 

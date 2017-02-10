@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Habilitación de la notificación basada en sucesos de webhooks
 {: #tag_based_notifications}
-Última actualización: 06 de diciembre de 2016
+Última actualización: 16 de enero de 2017
 {: .last-updated}
 
 
@@ -32,4 +32,4 @@ Los webhooks son devoluciones de llamada definidas por el usuario que desencaden
 **Nota**: Las asignaciones de notificación se realizan por lotes. Una asignación de mensaje puede tener varios sucesos de webhook, que pueden incluir tanto fallos como éxitos.
 Los sucesos de webhook podrían tener el mismo messageID que el del mensaje asignado. 
 
-Para obtener más información sobre webhooks, consulte la [API REST de IBM Push Notifications](https://mobile.{DomainName}/imfpush/#/webhooks).
+Para obtener más información sobre webhooks, consulte [API REST de notificaciones Push de IBM ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://mobile.{DomainName}/imfpush/#/webhooks "icono de enlace externo"){: new_window}.

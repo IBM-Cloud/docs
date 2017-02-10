@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Web フックのイベント・ベースの通知の使用可能化
 {: #tag_based_notifications}
-最終更新日: 2016 年 12 月 06 日
+最終更新日: 2017 年 1 月 16 日
 {: .last-updated}
 
 
@@ -32,4 +32,4 @@ Web フックは、デバイスの登録やタグへのサブスクライブな�
 **注**: 通知のディスパッチはバッチ単位で行われます。1 回のメッセージのディスパッチに複数の Web フック・イベントが含まれることがあります。また、これには失敗と成功の両方が含まれている可能性があります。
 Web フック・イベントは、ディスパッチされたメッセージと同じ messageID を持ちます。 
 
-Web フックについて詳しくは、[IBM Push Notifications REST API](https://mobile.{DomainName}/imfpush/#/webhooks) を参照してください。
+Web フックについて詳しくは、[IBM Push Notifications REST API ![外部リンク・アイコン](../../icons/launch-glyph.svg "External link icon")](https://mobile.{DomainName}/imfpush/#/webhooks "External link icon"){: new_window}を参照してください。

@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # 使用 userId 登錄裝置
 {: #register_device_with_userId}
-前次更新：2016 年 12 月 7 日
+前次更新：2017 年 1 月 11 日
 {: .last-updated}
 
 若要登錄 userId 型通知，請完成下列步驟：
@@ -69,40 +69,6 @@ BMSPush.registerDevice(options,success, failure);
 
 - **userId**：傳遞唯一 userId 值，以登錄 {{site.data.keyword.mobilepushshort}}。
 
-
-## Objective-C
-{: objc-register}
-
-使用下列 API 來登錄以使用者 ID 為基礎的 {{site.data.keyword.mobilepushshort}}。
-```
-// Initialize the MFPPush
-IMFPushClient* push = [IMFPushClient sharedInstance];
-[push initializeWithAppGUID:@"appGUID" clientSecret:@"clientSecret"];
-```
-	{: codeblock}
-
-
-- **AppGUID**：這是 {{site.data.keyword.mobilepushshort}} Service 的 AppGUID 金鑰。
-- **clientSecret**：這是 {{site.data.keyword.mobilepushshort}} Service 的 clientSecret 金鑰。
-
-使用 **registerWithUserId** API 登錄裝置，以取得 {{site.data.keyword.mobilepushshort}}。
-```
-// Register the device to push notifications service.
-[push registerWithDeviceToken:deviceToken WithUserId:@"userId" completionHandler:^(IMFResponse *response, NSError *error) {
-    NSString *message=@"";
-	if (error){
-        message = [NSString stringWithFormat:@"Error registering for push notifications: %@", error.description];
-        NSLog(@"%@",message);
-    } else {
-        message=@"Successfully registered for push notifications";
-        NSLog(@"%@",message);
-    }
-}];
-```
-	{: codeblock}
-
-
-- **userId**：傳遞唯一 userId 值，以登錄 {{site.data.keyword.mobilepushshort}}。
 
 ## Swift
 {: swift-register}

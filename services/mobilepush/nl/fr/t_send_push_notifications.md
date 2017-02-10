@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Envoi de notifications push de base
 {: #push-send-notifications}
-Dernière mise à jour : 6 décembre 2016
+Dernière mise à jour : 11 janvier 2017
 {: .last-updated}
 
 Une fois que vous avez développé vos applications, vous pouvez envoyer des notifications push de base (sans utiliser de balise, de badge, de
@@ -22,7 +22,7 @@ Pour envoyer des notifications push de base, procédez comme suit :
 
 1. Sélectionnez **Envoyer des notifications** puis choisissez l'option **Envoyer à** appropriée. 
 
-**Remarque **: quand vous sélectionnez l'option relative à tous les appareils, tous les appareils qui sont abonnés à des notifications de type {{site.data.keyword.mobilepushshort}} recevront les notifications.
+**Remarque **: si vous sélectionnez l'option **Tous les appareils**, tous les appareils qui sont abonnés à des notifications de type {{site.data.keyword.mobilepushshort}} recevront les notifications.
 
 ![Ecran Notifications](images/tag_notification.jpg)
 2. Dans la zone **Message**, entrez votre message puis cliquez sur **Envoyer**.

@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,12 +12,21 @@ copyright:
 
 # A propos de {{site.data.keyword.mobilepushshort}}
 {: #overview-push}
-Dernière mise à jour : 6 décembre 2016
+Dernière mise à jour : 18 janvier 2017
 {: .last-updated}
 
-IBM {{site.data.keyword.mobilepushshort}} est un service que vous pouvez utiliser pour envoyer des notifications vers des appareils mobiles iOS et Android, vers les navigateurs Web Google Chrome et Mozilla Firefox, ainsi que vers les applications et extensions Google Chrome. Les notifications peuvent être ciblées vers tous les utilisateurs d'application ou vers un ensemble spécifique d'utilisateurs et d'appareils à l'aide de balises. Vous pouvez administrer les appareils, les balises et les abonnements. Vous pouvez aussi utiliser un logiciel SDK (kit de développement de logiciels) et des API REST (K) pour développer davantage vos applications client. 
+IBM {{site.data.keyword.mobilepushshort}} est un service que vous pouvez utiliser pour envoyer des notifications à des appareils et des plateformes. Les notifications peuvent être ciblées vers tous les utilisateurs d'application ou vers un ensemble spécifique d'utilisateurs et d'appareils à l'aide de balises. Vous pouvez administrer les appareils, les balises et les abonnements.  
 
-{{site.data.keyword.mobilepushshort}} est aussi disponible en tant que service Bluemix dédié. Pour plus d'informations sur le service dédié {{site.data.keyword.mobilepushshort}}, voir [Services dédiés](/docs/dedicated/index.html). Notez que l'onglet de surveillance {{site.data.keyword.mobilepushshort}} n'affiche pas de données d'analyse.
+Vous pouvez utiliser l'une des options suivantes pour créer un service lié ou non lié :
+
+- En créant une application Bluemix à l'aide du conteneur boilerplate de MobileFirst Services Starter du catalogue. Ceci crée un service Push
+Notifications lié à une application dorsale Bluemix.
+- En créant directement depuis le catalogue Mobile un service Push Notifications non lié. Vous pouvez le lier par la suite à une
+application ou même opter de l'utiliser comme service non lié. 
+- En utilisant le [tableau de bord Mobile
+![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.ng.bluemix.net/docs/mobile/services.html "Icône de lien externe"){: new_window}.
+
+Notez que l'onglet de surveillance {{site.data.keyword.mobilepushshort}} n'affiche pas de données d'analyse.
 
 Le service {{site.data.keyword.mobilepushshort}}  est maintenant activé pour OpenWhisk. Pour plus d'informations, voir [OpenWhisk](/docs/openwhisk/index.html).
 
@@ -25,7 +34,7 @@ Le service {{site.data.keyword.mobilepushshort}}  est maintenant activé pour Op
 ## Processus du service {{site.data.keyword.mobilepushshort}}
 {: #overview_push_process}
 
-Les clients mobiles et de navigateurs Web et les applications et extensions Google Chrome peuvent souscrire au service {{site.data.keyword.mobilepushshort}} et s'y enregistrer. Au démarrage, les applications client s'inscrivent et s'abonnent elles-mêmes au service {{site.data.keyword.mobilepushshort}}. Les notifications sont réparties sur le serveur APNs (Apple Push Notification service) ou FCM (Firebase Cloud Messaging)/Google Cloud Messaging (GCM) puis envoyées aux clients de navigateur ou appareils mobiles enregistrés.
+Les clients mobiles et de navigateurs Web et les applications et extensions Google Chrome peuvent souscrire au service {{site.data.keyword.mobilepushshort}} et s'y enregistrer. Au démarrage, les applications client s'inscrivent et s'abonnent elles-mêmes au service {{site.data.keyword.mobilepushshort}}. Les notifications sont réparties sur le serveur APNS (Apple Push Notification service) ou FCM (Firebase Cloud Messaging)/Google Cloud Messaging (GCM) puis envoyées aux clients de navigateur ou appareils mobiles enregistrés.
 
 ![Présentation de Push](images/overview.jpg)
 
@@ -43,7 +52,7 @@ Les applications de back end peuvent se trouver sur site ou dans un cloud public
 ###Propriétaire de l'application de back end
 {: app-backend-owner}
 
-Le propriétaire de l'application de back end crée l'application de back end qui comporte une instance du service {{site.data.keyword.mobilepushshort}}. Il configure et paramètre aussi le service {{site.data.keyword.mobilepushshort}} pour l'adapter aux applications de back end en l'utilisant en même temps que les applications mobiles et les applications de navigateur qui sont la cible pour {{site.data.keyword.mobilepushshort}}.
+Le propriétaire de l'application de back end crée l'application de back end qui comporte une instance du service {{site.data.keyword.mobilepushshort}}. Il configure et paramètre aussi le service {{site.data.keyword.mobilepushshort}} pour l'adapter aux applications de back end en l'utilisant en même temps que les applications mobiles et les applications de navigateur définies comme cible pour {{site.data.keyword.mobilepushshort}}.
 
 ###Service {{site.data.keyword.mobilepushshort}}
 {: push-notification-service}
@@ -53,14 +62,23 @@ Le service {{site.data.keyword.mobilepushshort}} gère les informations relative
 ###Passerelles
 {: gateways}
 
-Il s'agit de services de cloud Notifications push spécifiques aux plateformes, comme FCM/GCM ou APNs (Apple Push Notification service), qui sont utilisés par le service IBM {{site.data.keyword.mobilepushshort}} pour envoyer des notifications aux applications mobiles et aux applications de navigateur.
+Il s'agit de services de cloud de notifications push spécifiques aux plateformes, comme FCM/GCM ou APNS (Apple Push Notification service), qui sont utilisés par le service IBM {{site.data.keyword.mobilepushshort}} pour envoyer des notifications aux applications mobiles et aux applications de navigateur.
 
 ###Sécurité Push
 {: push-security}
 
-Les interfaces API {{site.data.keyword.mobilepushshort}} sont sécurisées par deux types de valeurs confidentielles : i) appSecret ii) clientSecret. La valeur appSecret protège les interfaces API qui sont typiquement invoquées par des applications de back end (API d'envoi de {{site.data.keyword.mobilepushshort}} ou API de configuration de paramètres, par exemple).   La valeur clientSecret protège les API qui sont généralement invoquées par des applications client mobiles. Il n'y a qu'une seule API relative à l'enregistrement d'un appareil avec un ID utilisateur associé qui nécessite cette valeur confidentielle clientSecret. Aucune des autres API invoquées depuis les clients mobiles n'ont besoin de clientSecret. Les valeurs appSecret et clientSecret sont allouées à chaque instance de service au moment de la liaison d'une application au service {{site.data.keyword.mobilepushshort}}. Référez-vous à la documentation de l'API ReST pour plus d'informations sur la façon dont les valeurs confidentielles sont passées, et pour quelles API.
+Les API {{site.data.keyword.mobilepushshort}} sont sécurisées par deux types de valeur confidentielle :
 
-Remarque : les applications précédentes ne devaient passer la valeur clientSecret que lors de l'enregistrement ou la mise à jour des appareils via la zone userId. Toutes les autres interfaces API invoquées par des clients mobiles et de navigateur n'avaient pas besoin de clientSecret. Toutes ces anciennes applications peuvent continuer à se servir facultativement de clientSecret pour les enregistrements d'appareil ou la mise à jour des appels. Il est toutefois vivement conseillé d'appliquer une vérification clientSecret pour tous les appels d'API client. Pour mettre en oeuvre ce processus dans les applications existantes, une nouvelle API, verifyClientSecret, a été publiée.  Pour les nouvelles applications, la vérification clientSecret sera mise en oeuvre sur tous les appels d'API client et ce comportement ne peut être modifié avec l'API verfiyClientSecret.
+- **appSecret** : 'appSecret' protège les API généralement appelées par des applications dorsales (telles que l'API d'envoi
+de {{site.data.keyword.mobilepushshort}} et l'API de configuration des paramètres).
+- **clientSecret** : 'clientSecret' protège les API généralement appelées par des applications de client mobile. Il n'y a qu'une seule API relative à l'enregistrement d'un appareil avec un ID utilisateur associé qui nécessite cette valeur confidentielle clientSecret. Aucune des autres API invoquées depuis les clients mobiles n'ont besoin de clientSecret. 
+
+Les valeurs appSecret et clientSecret sont allouées à chaque instance de service au moment de la liaison d'une application au service {{site.data.keyword.mobilepushshort}}. Reportez-vous
+à la documentation [API REST ![Icône de lien externe](../../icons/launch-glyph.svg "Icône delien externe")](https://mobile.{DomainName}/imfpush/ "Icône de lien externe") pour plus d'informations sur la transmission des valeurs confidentielles et les API .
+
+
+**Remarque** : Les applications plus anciennes ne devaient transmettre le clientSecret que lors de l'enregistrement ou de la mise à jour
+d'appareils avec la zone userId. Toutes les autres interfaces API invoquées par des clients mobiles et de navigateur n'avaient pas besoin de clientSecret. Toutes ces anciennes applications peuvent continuer à se servir facultativement de clientSecret pour les enregistrements d'appareil ou la mise à jour des appels. Il est toutefois vivement conseillé d'appliquer une vérification clientSecret pour tous les appels d'API client. Pour mettre en oeuvre ce processus dans les applications existantes, une nouvelle API, verifyClientSecret, a été publiée.  Pour les nouvelles applications, la vérification clientSecret sera mise en oeuvre sur tous les appels d'API client et ce comportement ne peut être modifié avec l'API verfiyClientSecret.
 
 Par défaut, la vérification de la valeur confidentielle n'est appliquée que dans les nouvelles applications, mais aussi bien les applications existantes que les applications nouvelles sont autorisées à activer ou désactiver cette vérification en utilisant l'API REST verifyClientSecret. Il est conseillé d'imposer la vérification de la valeur confidentielle pour éviter d'exposer des appareils à des utilisateurs qui pourraient avoir connaissance des valeurs applicationId et deviceId.
 
@@ -96,16 +114,17 @@ Pour envoyer une notifications Unicast via une API REST, veillez à ce que les I
 Les notifications peuvent être ciblées afin de viser une plateforme d'appareil particulière. Ainsi, une notification peut être envoyée uniquement aux utilisateurs Android ou aux utilisateurs Google Chrome. Pour envoyer une notification en fonction de la plateforme qui utilise l'API REST, veillez à ce que les plateformes ciblées soient fournies lors de l'envoi à une ressource de message. Spécifiez les plateformes dans un tableau. Les plateformes prises en charge sont les suivantes :
 * A (Apple)
 * G (Google)
-* WEB_CHROME (Google Chrome Browser WebPush)
-* WEB_FIREFOX (Mozilla Firefox Browser WebPush)
-* APPEXT_CHROME (Google Chrome Apps & Extensions)
+* WEB_CHROME (Web Push navigateur Google Chrome)
+* WEB_FIREFOX (Web Push navigateur Mozilla Firefox)
+* WEB_SAFARI (Web Push navigateur Safari)
+* APPEXT_CHROME (Applications et extensions Google Chrome)
 
 ## Taille des messages de type {{site.data.keyword.mobilepushshort}}
 {: #push-message-size}
 
-La taille d'un message de type {{site.data.keyword.mobilepushshort}} dépend des contraintes imposées par les passerelles (FCM/GCM, APNs) et les plateformes client. 
+La taille d'un message de type {{site.data.keyword.mobilepushshort}} dépend des contraintes imposées par les passerelles (FCM/GCM, APNS) et les plateformes client. 
 
-###iOS
+### iOS et Safari
 {: ios-message-size}
 
 Pour iOS 8 et ultérieur, la taille maximale autorisée est de 2 kilo-octets. Le service des notifications push d'Apple n'envoie pas les notifications qui dépassent cette limite.

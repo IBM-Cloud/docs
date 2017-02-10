@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Mensajes de error del servicio {{site.data.keyword.mobilepushshort}}
 {: #errors}
-Última actualización: 07 de diciembre de 2016
+Última actualización: 16 de enero de 2017
 {: .last-updated}
 
 
@@ -51,7 +51,7 @@ Para obtener información adicional sobre un error, busque el código de error r
 
 **Explicación**: La configuración de requisito previo para el servicio {{site.data.keyword.mobilepushshort}} no se ha completado. Es posible que esté intentando obtener las credenciales del servicio de notificaciones push de Apple (APN) antes de que se hayan configurado.
 
-**Respuesta del usuario**: Asegúrese de que el servicio {{site.data.keyword.mobilepushshort}} se ha configurado con certificados de seguridad válidos para los APN. Para obtener más información, consulte [Configuración de credenciales para APN](t_push_provider_ios.html){: new_window}.
+**Respuesta del usuario**: Asegúrese de que el servicio {{site.data.keyword.mobilepushshort}} se ha configurado con certificados de seguridad válidos para los APN. Para obtener más información, consulte el tema sobre [Configuración de credenciales para APN ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](t_push_provider_ios.html "icono de enlace externo"){: new_window}.
 
 
 ## FPWSE0004E
@@ -80,7 +80,7 @@ Para obtener información adicional sobre un error, busque el código de error r
 **Explicación**: El cuerpo de JSON de la solicitud tiene parámetros que el servidor de {{site.data.keyword.mobilepushshort}} no conoce.
 
 
-**Respuesta del usuario**: Verifique que el cuerpo de JSON en la solicitud sigue el formato de la solicitud que espera el servidor {{site.data.keyword.mobilepushshort}}. Para obtener más información, consulte [API REST](https://mobile.{DomainName}/imfpush/).
+**Respuesta del usuario**: Verifique que el cuerpo de JSON en la solicitud sigue el formato de la solicitud que espera el servidor {{site.data.keyword.mobilepushshort}}. Para obtener más información, consulte las [API REST ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://mobile.{DomainName}/imfpush/ "icono de enlace externo"){: new_window}.
 
 
 
@@ -90,7 +90,7 @@ Para obtener información adicional sobre un error, busque el código de error r
 **Explicación**: El URL de solicitud tiene una serie de consulta que tiene parámetros no reconocidos. Por ejemplo, si la solicitud para suprimir la suscripción tiene parámetros distintos de deviceId y de tagName, se puede producir este error.
 
 
-**Respuesta del usuario**: Verifique que el cuerpo de JSON en la solicitud sigue el formato de la solicitud que espera el servidor {{site.data.keyword.mobilepushshort}}. Para obtener más información, consulte [API REST](https://mobile.{DomainName}/imfpush/).
+**Respuesta del usuario**: Verifique que el cuerpo de JSON en la solicitud sigue el formato de la solicitud que espera el servidor {{site.data.keyword.mobilepushshort}}. Para obtener más información, consulte las [API REST ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://mobile.{DomainName}/imfpush/ "icono de enlace externo"){: new_window}.
 
 
 
@@ -100,7 +100,7 @@ Para obtener información adicional sobre un error, busque el código de error r
 **Explicación**: El URL de solicitud tiene una serie de consulta que tiene parámetros que faltan necesarios. Por ejemplo, los parámetros deviceId y tagName no se han incluido con la solicitud para suprimir la suscripción.
 
 
-**Respuesta del usuario**: Verifique que el cuerpo de JSON en la solicitud sigue el formato de la solicitud que espera el servidor {{site.data.keyword.mobilepushshort}}. Para obtener más información, consulte [API REST](https://mobile.{DomainName}/imfpush/).
+**Respuesta del usuario**: Verifique que el cuerpo de JSON en la solicitud sigue el formato de la solicitud que espera el servidor {{site.data.keyword.mobilepushshort}}. Para obtener más información, consulte las [API REST ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://mobile.{DomainName}/imfpush/ "icono de enlace externo"){: new_window}.
 
 
 

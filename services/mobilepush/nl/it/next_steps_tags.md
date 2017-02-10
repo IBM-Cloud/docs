@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Fasi successive
 {: #next_steps_tags}
-Ultimo aggiornamento: 06 dicembre 2016
+Ultimo aggiornamento: 11 gennaio 2017
 {: .last-updated}
 
 Dopo che hai correttamente configurato le notifiche di base, puoi configurare le notifiche basate sulle tag e le opzioni avanzate.

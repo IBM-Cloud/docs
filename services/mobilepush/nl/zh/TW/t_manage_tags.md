@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # 管理標籤
 {: #manage_tags}
-前次更新：2016 年 12 月 7 日
+前次更新：2017 年 1 月 11 日
 {: .last-updated}
 
 使用 {{site.data.keyword.mobilepushshort}} 儀表板來建立及刪除您應用程式的標籤，然後起始標籤型通知。標籤型通知是在訂閱標籤的裝置上接收。
@@ -120,47 +120,6 @@ BMSPush.retrieveSubscriptions(function(tags) {
 ```
 	{: codeblock}
 
-## 在 Objective-C 上取得標籤
-{: objc-get-tags}
-
-將下列程式碼 Snippet 複製到使用 Objective-C 所開發的 iOS 應用程式來取得裝置訂閱的標籤清單，以及取得裝置可訂閱的可用標籤清單。
-
-使用下列 **retrieveAvailableTags** API 來取得裝置可訂閱的可用標籤清單。
-
-```
-//Get a list of available tags to which the device can subscribe
-[push retrieveAvailableTagsWithCompletionHandler:
-^(IMFResponse *response, NSError *error){
- if(error){    
-   [self updateMessage:error.description];  
- } else {
-        [self updateMessage:@"Successfully retrieved available tags."];
- NSDictionary *availableTags = [[NSDictionary alloc]init];
- availableTags = [response tags];
-[self.appDelegateVC updateMessage:availableTags.description];
-}
-}];
- ```
-	{: codeblock}
-
-使用 **retrieveSubscriptions** API 來取得裝置訂閱的標籤清單。
-
-
-```
-// Get a list of tags that to which the device is subscribed.
-[push retrieveSubscriptionsWithCompletionHandler:
-^(IMFResponse *response, NSError *error) {
-  if(error){
-     [self updateMessage:error.description];
-   } else {
-     [self updateMessage:@"Successfully retrieved subscriptions."];
- NSDictionary *subscribedTags = [[NSDictionary alloc]init];
-subscribedTags = [response subscriptions];
-[self.appDelegateVC updateMessage:subscribedTags.description];
-}
-}];
-  ```
-	{: codeblock}
 
 ## 在 Swift 上取得標籤
 {: swift-get-tags}
@@ -313,50 +272,11 @@ BMSPush.unsubscribe(tag, success, failure);
 ```
 	{: codeblock}
 
-## 在 Objective-C 上訂閱及取消訂閱標籤
-{: objc-subscribe-tags}
-
-複製下列程式碼 Snippet，並將其貼入 Objective-C 行動應用程式。
-
-使用 **subscribeToTags** API 來訂閱標籤。
-
-```
-[push subscribeToTags:tags completionHandler:
-^(IMFResponse *response, NSError *error) {
-  if(error){
-     [self updateMessage:error.description];
-  }else{
-      NSDictionary* subStatus = [[NSDictionary alloc]init];
-      subStatus = [response subscribeStatus];
-      [self updateMessage:@"Parsed subscribe status is:"];
-      [self updateMessage:subStatus.description];
-  }
-}];
-```
-	{: codeblock}
-
-使用 **unsubscribeFromTags** API 來取消訂閱標籤。
-
-```
-[push unsubscribeFromTags:tags completionHandler:
-^(IMFResponse *response, NSError *error) {
-   if (error){
-       [self updateMessage:error.description];
- } else {
-       NSDictionary* subStatus = [[NSDictionary alloc]init];
-       subStatus = [response unsubscribeStatus];
-       [self updateMessage:subStatus.description];
-  }
-}];
-```
-	{: codeblock}
 
 ## 在 Swift 上訂閱及取消訂閱標籤
 {: swift-subscribe-tags}
 
 複製下列程式碼 Snippet，並將其貼入 Swift 行動應用程式。
-
-**訂閱可用的標籤**
 
 使用 **subscribeToTags** API 來訂閱標籤。
 
@@ -372,8 +292,6 @@ push.subscribeToTags(tagsArray: ["MyTag"], completionHandler: { (response, statu
 })
 ```
 	{: codeblock}
-
-**取消訂閱標籤**
 
 使用 **unsubscribeFromTags** API 來取消訂閱標籤。
 
@@ -404,7 +322,7 @@ bmsPush.subscribe(tagsArray,function(response) {
 ```
 	{: codeblock}
 
-取消訂閱標籤會使用 `unSubscribe` 方法。
+取消訂閱標籤會使用 **unSubscribe** 方法。
 
 ```
 var tagsArray = ["tag1", "Tag2"]

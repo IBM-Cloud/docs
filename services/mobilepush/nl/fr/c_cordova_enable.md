@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,14 +12,14 @@ copyright:
 
 # Configuration des applications Cordova pour la réception de notifications push
 {: #cordova_enable}
-Dernière mise à jour : 6 novembre 2016
+Dernière mise à jour : 18 janvier 2017
 {: .last-updated}
 
-Cordova est une plateforme permettant de construire des applications hybrides avec JavaScript, CSS et HTML. Le service {{site.data.keyword.mobilepushshort}} prend en charge le développement d'applications iOS et Android reposant sur Cordova. 
+Cordova est une plateforme permettant de construire des applications hybrides avec JavaScript, CSS et HTML. Le service {{site.data.keyword.mobilepushshort}} prend en charge le développement d'applications iOS et Android reposant sur Cordova.
 
 Vous pouvez activer les applications Cordova pour recevoir des notifications push sur vos appareils.
 
-## Installation du plug-in push Cordova
+## Installation du plug-in Cordova Push
 {: #cordova_install}
 
 Installez et utilisez le plug-in push client pour développer davantage vos applications Cordova, ce qui a pour effet d'installer aussi le plug-in Cordova core, qui initialise votre connexion à Bluemix.
@@ -28,12 +28,21 @@ Installez et utilisez le plug-in push client pour développer davantage vos appl
 
 1. Téléchargez les dernières versions d'Android Studio SDK et Xcode.
 1. Configurez votre émulateur. Pour Android Studio, utilisez un émulateur qui prend en charge l'API Google Play.
-1. Installez l'outil de ligne de commande Git. Pour Windows, prenez soin de sélectionner l'option **Run Git from the Window Command Prompt**. Pour plus d'informations sur le téléchargement et l'installation de cet outil, voir [Git](https://git-scm.com/downloads).
-1. Installez Node.js et l'outil Node Package Manager (NPM). L'outil de ligne de commande NPM est intégré à Node.js. Pour plus d'informations sur le téléchargement et l'installation de cet outil, voir [Node.js](https://nodejs.org/en/download/).
-1. A partir de la ligne de commande, installez les outils de ligne de commande Cordova à l'aide de la commande **npm install -g cordova**. Cette action est requise pour pouvoir utiliser le plug-in push Cordova. Pour obtenir des informations sur l'installation de Cordova et la configuration de votre appli Cordova, voir [Cordova Apache](https://cordova.apache.org/#getstarted). Pour plus d'informations, voir le [fichier readme](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push) du plug-in push Cordova.
+1. Installez l'outil de ligne de commande Git. Pour Windows, prenez soin de sélectionner l'option **Run Git from the Window Command Prompt**. 
+Pour plus d'informations sur le téléchargement et l'installation de cet outil, voir
+[Git
+![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://git-scm.com/downloads "Icône de lien externe"){: new_window}.
+1. Installez Node.js et l'outil Node Package Manager (NPM). L'outil de ligne de commande NPM est intégré à Node.js. Pour plus d'informations sur le
+téléchargement et l'installation de Node.js, voir [Node.js
+![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://nodejs.org/en/download/ "Icône de lien externe"){: new_window}.
+1. A partir de la ligne de commande, installez les outils de ligne de commande Cordova à l'aide de la commande **npm install -g cordova**. Cette action est requise pour pouvoir utiliser le plug-in push Cordova. Pour
+plus d'informations sur l'installation de Cordova et la configuration de votre application Cordova, voir
+[Cordova Apache ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lienexterne")](https://cordova.apache.org/#getstarted "Icône de lien externe"){: new_window}. Pour plus d'informations, reportez-vous au
+
+[Fichier
+Readme![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push "Icône de lien externe"){: new_window} du plug-in push de Cordova.
 1. Placez-vous dans le dossier dans lequel créer votre application Cordova et exécutez la commande ci-dessous pour créer une application Cordova. Si vous possédez déjà une application Cordova, passez à l'étape 3.
-```
-cordova create your_app_name
+```cordova create your_app_name
 	cd your_app_name
 ```
 	{: codeblock}
@@ -46,24 +55,27 @@ Prenez soin de spécifier l'ID de bundle approprié. Les messages d'erreur suiva
 
 1. Ajoutez l'API minimale prise en charge ou la déclaration de cible de déploiement dans le fichier config.xml de votre application Cordova. La valeur de minSdkVersion doit être supérieure à 15. La valeur de targetSdkVersion doit toujours refléter le logiciel SDK Android le plus récent disponible auprès de Google.
 	
-	* Android - avec votre éditeur, ouvrez le fichier config.xml et mettez à jour l'élément `<platform name="android">` avec les versions SDK minimum et cible :
+	* Android - Ouvrez dans votre éditeur le fichier **config.xml** et mettez à jour l'élément
+`<platform name="android">` en spécifiant les versions minimum et cible du SDK :
 
-```
-< !-- add deployment target declaration --> 
-add deployment target declaration <preference name="android-minSdkVersion" value="15" />
-  <preference name="android-targetSdkVersion" value="23" />
-</platform>
-```
-    {: codeblock}
+	```
+	<platform name="android">
+    	<preference name="android-minSdkVersion" value="15" />
+    	<preference name="android-targetSdkVersion" value="23" />
+    	<!-- add minimum and target Android API level declaration -->
+	</platform> 
+	```
+    	{: codeblock}
 
    * iOS - Mettez à jour l'élément <platform name="ios"> avec une déclaration cible de déploiement :
 
-```
-<platform name ="ios">
-<preference name=deployment-target" value="8.0" /> <!-- other properties -->
-</ platform>
-```
-	{: codeblock}
+	```
+	<platform name="ios">
+	    <preference name="deployment-target" value="8.0" />
+	    <!-- add deployment target declaration -->
+	</platform>
+	```
+		{: codeblock}
 
 1. A partir de l'interface de ligne de commande Cordova, ajoutez vos plateformes iOS et/ou Android en utilisant la commande suivante :
 ```
@@ -86,11 +98,23 @@ bms-push <version> "BMSPush"
 ```
 	{: codeblock}
 
-1. (iOS uniquement) - Configurez votre environnement de développement iOS.
+1. Configurez votre environnement de développement iOS.
 2. Construisez et exécutez votre application avec Xcode.
-1. (Android uniquement) - Générez votre projet Android à l'aide de la commande suivante :
-**cordova build android**.
-
+1. Téléchargez vos fichiers Firebase `google-services.json` pour Android et placez-les sous le dossier racine de votre projet
+Cordova ( `[nom_de_votre_application]/platforms/android.
+	1. Accédez au dossier `[nom_de_votre_application]/platforms/android`.
+	2. Ouvrez le fichier `build.gradle` (chemin : plateforme > android > build.gradle).
+	3. Recherchez le texte `buildscript` dans le fichier `build.gradle`.
+	4. Ajoutez la ligne 'com.google.gms:google-services:3.0.0' après celle du chemin de  classes (classpath)
+	5. Accédez à la section "dependencies". Sélectionnez les dépendances comportant le texte `compile` et l'endroit marquant la
+fin de la
+dépendance et ajoutez juste après cette ligne :apply plugin: 'com.google.gms.google-services'.
+	6. Préparez et construisez votre projet Cordova Android.
+		```
+		cordova prepare android
+		cordova build android
+		```
+			{: codeblock}
 	**Remarque** : avant d'ouvrir votre projet dans Android Studio, générez votre application Cordova via l'interface CLI Cordova, afin d'éviter des erreurs de génération.
 
 ## Initialisation du plug-in Cordova
@@ -103,13 +127,23 @@ l'identificateur global unique de l'application. Une fois le plug-in initialisé
 
 ```
 onDeviceReady: function() {
-app.receivedEvent('deviceready');
-BMSClient.initialize("YOUR APP REGION");
+	app.receivedEvent('deviceready');
+	BMSClient.initialize("YOUR APP REGION");
+	var category =  {};
+	BMSPush.initialize(appGUID,clientSecret,category);
+	var success = function(message) { console.log("Success: " + message); };
+	var failure = function(message) { console.log("Error: " + message); };
+	BMSPush.registerDevice({}, success, failure);
+	var showNotification = function(notif)
+	{
+	alert(JSON.stringify(notif));
+	};
+	BMSPush.registerNotificationsCallback(showNotification);
     } 
 ```
 	{: codeblock}
 
-Transmettez la région pour votre application. Les constantes suivantes sont fournies :
+Indiquez la région pour votre application. Les constantes suivantes sont fournies :
 
 ```
 REGION_US_SOUTH // ".ng.bluemix.net";
@@ -141,7 +175,7 @@ BMSPush.registerDevice({}, success, failure);
 ```
 	{: codeblock}
 
-Le fragment de code JavaScript ci-après montre comment initialiser votre logiciel SDK du client Bluemix Mobile Services, enregistrer un appareil avec le service {{site.data.keyword.mobilepushshort}} et passer en mode écoute sur les notifications push. Incluez ce code dans votre fichier Javascript.
+Le fragment de code JavaScript ci-après montre comment initialiser le logiciel SDK de votre client Bluemix Mobile Services, enregistrer un appareil avec le service {{site.data.keyword.mobilepushshort}} et passer en mode écoute sur les notifications push. Incluez ce code dans votre fichier Javascript.
 
 Dans **onDeviceReady: function()**.
 
@@ -159,26 +193,6 @@ BMSPush.registerDevice({}, success, failure);
 BMSPush.registerNotificationsCallback(showNotification); 
 ```
 	{: codeblock}
-
-### Objective-C
-{: #cordova_register_objective}
-Ajoutez le fragment de code Objective-C suivant à la classe de votre délégué d'application .
-
-```
-// Register the device token with Bluemix Push Notification Service
-	- (void)application:(UIApplication *)application
-     didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
-       [[CDVBMSPush sharedInstance] didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
-} 
-// Handle error when failed to register device token with APNs
-	- (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error {
-      [[CDVBMSPush sharedInstance] didFailToRegisterForRemoteNotificationsWithError:error];
-} 
-```
-	{: codeblock}
-
-###Swift
-{: #cordova_register_swift}
 
 Ajoutez le fragment de code Swift suivant à la classe de votre délégué d'application :
 
@@ -262,31 +276,6 @@ action-loc-key -  La chaîne est utilisée comme clé pour obtenir une chaîne l
 * **badge** - numéro à utiliser comme badge de l'icône d'application. Si cette propriété manque, le badge n'est pas changé. Pour supprimer le badge, associez cette propriété à la valeur 0.
 * **sound** - Nom d'un fichier son dans le bundle de l'application ou dans le dossier Library/Sounds du conteneur des données d'application.
 
-###Objective-C
-
-Ajoutez les fragments de code Objective-C suivants à la classe de votre délégué d'application :
-
-```
-// Handle receiving a remote notification
--(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
-   [[CDVBMSPush sharedInstance] didReceiveRemoteNotificationWithNotification:userInfo];
-} 
-```
-	{: codeblock}
-
-
-
-```
-//Handle receiving a remote notification on launch
-- (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions {
-  if (launchOptions != nil) {
-   [[CDVBMSPush sharedInstance] didReceiveRemoteNotificationOnLaunchWithLaunchOptions:launchOptions];
-     }
- }
-```
-	{: codeblock}
-
-###Swift
 
 Ajoutez les fragments de code Swift suivants à la classe de votre délégué d'application :
 ```
@@ -317,14 +306,14 @@ Une fois que vous avez développé vos applications, vous pouvez envoyer des not
 Pour envoyer des notifications push de base, procédez comme suit :
 
 1. Sélectionnez **Envoyer des notifications** et rédigez un message en choisissant une option **Envoyer à**. Les options prises en charge sont **Appareil par étiquette**, **ID de l'appareil**, **ID utilisateur**, **Appareils Android**, **Appareils IOS**, **Notifications Web** et **Tous les appareils**.
-**Remarque **: quand vous sélectionnez l'option **Tous les appareils**, tous les appareils qui sont abonnés à des notifications de type {{site.data.keyword.mobilepushshort}} recevront les notifications.
+**Remarque **: si vous sélectionnez l'option **Tous les appareils**, tous les appareils qui sont abonnés à des notifications de type {{site.data.keyword.mobilepushshort}} recevront les notifications.
 ![Ecran Notifications](images/tag_notification.jpg)
 
 2. Dans la zone **Message**, composez votre message. Configurez les paramètres facultatifs, selon les besoins.
 3. Cliquez sur **Envoyer**.
 3. Vérifiez que vos appareils ont reçu votre notification.
 
-La capture d'écran suivante présente une boîte de dialogue d'alerte qui traite une notification de type {{site.data.keyword.mobilepushshort}} s'exécutant au premier plan sur un appareil Android et iOS.
+Les captures d'écran suivantes présentent une boîte de dialogue d'alerte qui traite une notification de type {{site.data.keyword.mobilepushshort}} s'exécutant au premier plan sur un appareil Android et sur un appareil iOS.
 
 ![Notification push qui s'exécute au premier plan sur un appareil Android](images/Android_Screenshot.jpg)
 

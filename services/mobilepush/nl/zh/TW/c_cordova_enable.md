@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # 讓 Cordova 應用程式可接收推送通知
 {: #cordova_enable}
-前次更新：2016 年 11 月 6 日
+前次更新：2017 年 1 月 18 日
 {: .last-updated}
 
 Cordova 是一個平台，可使用 JavaScript、CSS 及 HTML 來建置混合式應用程式。{{site.data.keyword.mobilepushshort}} 服務支援開發 Cordova 型 iOS 及 Android 應用程式。
@@ -28,12 +28,11 @@ Cordova 是一個平台，可使用 JavaScript、CSS 及 HTML 來建置混合式
 
 1. 下載最新的 Android Studio SDK 及 Xcode 版本。
 1. 設定您的模擬器。若為 Android Studio，請使用支援 Google Play API 的模擬器。
-1. 安裝 Git 指令行工具。若為 Windows，請確保選取**從 Windows 命令提示字元執行 Git** 選項。如需如何下載並安裝此工具的相關資訊，請參閱 [Git](https://git-scm.com/downloads)。
-1. 安裝 Node.js 及「Node 套件管理程式 (NPM)」工具。NPM 指令行工具與 Node.js 組合在一起。如需如何下載並安裝 Node.js 的相關資訊，請參閱 [Node.js](https://nodejs.org/en/download/)。
-1. 從指令行中，使用 **npm install -g cordova** 指令來安裝 Cordova 指令行工具。若要使用 Cordova Push 外掛程式，這是必要動作。如需如何安裝 Cordova 以及設定 Cordova 應用程式的相關資訊，請參閱 [Cordova Apache](https://cordova.apache.org/#getstarted)。如需相關資訊，請參閱 Cordova Push 外掛程式 [Readme 檔](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push)。
+1. 安裝 Git 指令行工具。若為 Windows，請確保選取**從 Windows 命令提示字元執行 Git** 選項。如需如何下載及安裝此工具的相關資訊，請參閱 [Git ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://git-scm.com/downloads "外部鏈結圖示"){: new_window}。
+1. 安裝 Node.js 及「Node 套件管理程式 (NPM)」工具。NPM 指令行工具與 Node.js 組合在一起。如需如何下載及安裝 Node.js 的相關資訊，請參閱 [Node.js ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://nodejs.org/en/download/ "外部鏈結圖示"){: new_window}。
+1. 從指令行中，使用 **npm install -g cordova** 指令來安裝 Cordova 指令行工具。若要使用 Cordova Push 外掛程式，這是必要動作。如需如何安裝 Cordova 以及設定 Cordova 應用程式的相關資訊，請參閱 [Cordova Apache ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cordova.apache.org/#getstarted "外部鏈結圖示"){: new_window}。如需相關資訊，請參閱 Cordova Push 外掛程式 [Readme 檔 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push "外部鏈結圖示"){: new_window}。
 1. 切換至您要在其中建立 Cordova 應用程式的資料夾，並執行下列指令來建立 Cordova 應用程式。如果您有現存的 Cordova 應用程式，請移至步驟 3。
-```
-cordova create your_app_name
+```cordova create your_app_name
 cd your_app_name
 ```
 	{: codeblock}
@@ -46,24 +45,27 @@ cd your_app_name
 
 1. 將最低支援的 API 或部署目標宣告新增至 Cordova 應用程式的 config.xml 檔案。minSdkVersion 值必須高於 15。targetSdkVersion 值必須一律反映可從 Google 取得的最新 Android SDK。
 	
-	* Android - 使用編輯器來開啟 config.xml 檔案，並將 `<platform name="android">` 元素更新為最小及目標 SDK 版本：
+	* Android - 使用編輯器來開啟 **config.xml** 檔案，並將
+`<platform name="android">` 元素更新為最小及目標 SDK 版本：
 
-```
-< !-- add deployment target declaration -->
-add deployment target declaration <preference name="android-minSdkVersion" value="15" />
-  <preference name="android-targetSdkVersion" value="23" />
-</platform>
-```
-    {: codeblock}
+	```
+	<platform name="android">
+    	<preference name="android-minSdkVersion" value="15" />
+    	<preference name="android-targetSdkVersion" value="23" />
+    	<!-- add minimum and target Android API level declaration -->
+	</platform> 
+	```
+    	{: codeblock}
 
    * iOS - 使用部署目標宣告更新 <platform name="ios"> 元素：
 
-```
-<platform name ="ios">
-<preference name=deployment-target" value="8.0" /> <!-- other properties -->
-</ platform>
-```
-	{: codeblock}
+	```
+	<platform name="ios">
+	    <preference name="deployment-target" value="8.0" />
+	    <!-- add deployment target declaration -->
+	</platform>
+	```
+		{: codeblock}
 
 1. 從 Cordova 指令行介面 (CLI) 中，使用下列指令新增平台：iOS 及（或）Android：
 ```
@@ -86,10 +88,20 @@ bms-push <version> "BMSPush"
 ```
 	{: codeblock}
 
-1. （僅限 iOS）- 配置 iOS 開發環境。
+1. 配置您的 iOS 開發環境。
 2. 使用 Xcode 建置並執行應用程式。
-1. （僅限 Android）- 使用下列指令建置 Android 專案：**cordova build android**。
-
+1. 下載針對 Android 使用的 Firebase `google-services.json`，並且將他們放置在 Cordova 專案的根資料夾：[your-app-name]/platforms/android。
+	1. 請移至 `[your-app-name]/platforms/android`。
+	2. 開啟 `build.gradle` 檔案（路徑：platform > android > build.gradle）。
+	3. 在 `build.gradle` 檔案中尋找 `buildscript` 文字。
+	4. 在類別路徑行之後，新增此行：classpath 'com.google.gms:google-services:3.0.0'
+	5. 然後，尋找 "dependencies"。選取 `compile` 文字的相依關係以及選取要於何處結束該相依關係，在此之後，新增此行 :apply plugin: 'com.google.gms.google-services'。
+	6. 準備及建置您的 Cordova Android 專案。
+		```
+		cordova prepare android
+		cordova build android
+		```
+			{: codeblock}
 	**附註**：在 Android Studio 中開啟專案之前，請先透過 Cordova CLI 建置 Cordova 應用程式。這將有助於避免建置錯誤。
 
 ## 起始設定 Cordova 外掛程式
@@ -101,8 +113,18 @@ bms-push <version> "BMSPush"
 
 ```
 onDeviceReady: function() {
-app.receivedEvent('deviceready');
-BMSClient.initialize("YOUR APP REGION");
+	app.receivedEvent('deviceready');
+	BMSClient.initialize("YOUR APP REGION");
+	var category =  {};
+	BMSPush.initialize(appGUID,clientSecret,category);
+	var success = function(message) { console.log("Success: " + message); };
+	var failure = function(message) { console.log("Error: " + message); };
+	BMSPush.registerDevice({}, success, failure);
+	var showNotification = function(notif)
+	{
+	alert(JSON.stringify(notif));
+	};
+	BMSPush.registerNotificationsCallback(showNotification);
     } 
 ```
 	{: codeblock}
@@ -155,27 +177,6 @@ BMSPush.registerDevice({}, success, failure);
 BMSPush.registerNotificationsCallback(showNotification);
 ```
 	{: codeblock}
-
-### Objective-C
-{: #cordova_register_objective}
-將下列 Objective-C 程式碼 Snippet 新增至應用程式委派類別。
-
-```
-// Register the device token with Bluemix Push Notification Service
-	- (void)application:(UIApplication *)application
-     didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
-       [[CDVBMSPush sharedInstance] didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
-}
-// Handle error when failed to register device token with APNs
-	- (void)application:(UIApplication*)application
-     didFailToRegisterForRemoteNotificationsWithError:(NSError*)error {
-      [[CDVBMSPush sharedInstance] didFailToRegisterForRemoteNotificationsWithError:error];
-} 
-```
-	{: codeblock}
-
-###Swift
-{: #cordova_register_swift}
 
 將下列 Swift 程式碼 Snippet 新增至應用程式委派類別。
 
@@ -259,33 +260,6 @@ var showNotification = function(notif) {
 * **badge** - 顯示為應用程式圖示徽章的號碼。如果沒有此內容，則不會變更徽章。若要移除徽章，請將此內容的值設為 0。
 * **sound** - 應用程式組合或者應用程式資料容器之 Library/Sounds 資料夾中的音效檔名稱。
 
-###Objective-C
-
-將下列 Objective-C 程式碼 Snippet 新增至應用程式委派類別。
-
-```
-//Handle receiving a remote notification
--(void)application:(UIApplication *)application
-  didReceiveRemoteNotification:(NSDictionary *)userInfo
-  fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
-   [[CDVBMSPush sharedInstance] didReceiveRemoteNotificationWithNotification:userInfo];
-} 
-```
-	{: codeblock}
-
-
-
-```
-//Handle receiving a remote notification on launch
-- (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions {
-  if (launchOptions != nil) {
-   [[CDVBMSPush sharedInstance] didReceiveRemoteNotificationOnLaunchWithLaunchOptions:launchOptions];
-     }
- }
-```
-	{: codeblock}
-
-###Swift
 
 將下列 Swift 程式碼 Snippet 新增至應用程式委派類別。
 ```
@@ -316,9 +290,8 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
 
 若要傳送基本推送通知，請完成下列步驟：
 
-1. 選取**傳送通知**，然後選擇**傳送至**選項來編寫訊息。支援的選項是**依標籤的裝置**、**裝置 ID**、**使用者 ID**、**Android 裝置**、**iOS 裝置**、**Web 通知**及**所有裝置**。  
-**附註**：當您選取**所有裝置**選項時，所有已訂閱 {{site.data.keyword.mobilepushshort}} 的裝置都會接收到通知。
-![通知畫面](images/tag_notification.jpg)
+1. 選取**傳送通知**，然後選擇**傳送至**選項來編寫訊息。支援的選項是**依標籤的裝置**、**裝置 ID**、**使用者 ID**、**Android 裝置**、**iOS 裝置**、**Web 通知**及**所有裝置**。
+**附註**：當您選取**所有裝置**選項時，所有已訂閱 {{site.data.keyword.mobilepushshort}} 的裝置都會接收到通知。![通知畫面](images/tag_notification.jpg)
 
 2. 在**訊息**欄位中，編寫訊息。視需要選擇配置選用設定。
 3. 按一下**傳送**。
@@ -338,4 +311,5 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
 
 順利設定基本通知之後，您就可以配置標籤型通知及進階選項。
 
-將 {{site.data.keyword.mobilepushshort}} Service 特性新增至您的應用程式。若要使用標籤型通知，請參閱[標籤型通知](c_tag_basednotifications.html)。若要使用進階通知選項，請參閱[啟用進階推送通知](t_advance_badge_sound_payload.html)。
+將 {{site.data.keyword.mobilepushshort}} Service 特性新增至您的應用程式。若要使用標籤型通知，請參閱[標籤型通知](c_tag_basednotifications.html)。
+若要使用進階通知選項，請參閱[啟用進階推送通知](t_advance_badge_sound_payload.html)。

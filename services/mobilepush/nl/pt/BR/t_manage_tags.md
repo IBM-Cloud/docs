@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Gerenciando Identificações
 {: #manage_tags}
-Última atualização: 07 de dezembro de 2016
+Última atualização: 11 de janeiro de 2017
 {: .last-updated}
 
 Use o painel {{site.data.keyword.mobilepushshort}} para criar e excluir
@@ -143,51 +143,6 @@ BMSPush.retrieveSubscriptions(function(tags) {
 ```
 	{: codeblock}
 
-## Obtendo tags no Objective-C
-{: objc-get-tags}
-
-Copie os fragmentos de código a seguir para seu aplicativo iOS, desenvolvido
-usando Objective-C para obter uma lista de tags nas quais o dispositivo está inscrito e
-obter uma lista de tags disponíveis que o dispositivo pode assinar.
-
-Use a API **retrieveAvailableTags** a seguir para obter uma
-lista de tags disponíveis as quais o dispositivo pode assinar.
-
-```
-//Get a list of available tags to which the device can subscribe
-[push retrieveAvailableTagsWithCompletionHandler: ^(IMFResponse
-*response, NSError *error){
- if(error){
-   [self updateMessage:error.description];
- } else {
-   [self updateMessage:@"Successfully retrieved available tags."];
- NSDictionary *availableTags = [[NSDictionary alloc]init];
- availableTags = [response tags];
-[self.appDelegateVC updateMessage:availableTags.description];
-}
-   }];
- ```
-	{: codeblock}
-
-Use a API **retrieveSubscriptions** para obter uma
-lista de tags nas quais o dispositivo está inscrito.
-
-
-```
-// Get a list of tags that to which the device is subscribed.
-[push retrieveSubscriptionsWithCompletionHandler:
-^(IMFResponse *response, NSError *error) {
-  if(error){
-     [self updateMessage:error.description];
-   } else {
-   [self updateMessage:@"Successfully retrieved subscriptions."];
- NSDictionary *subscribedTags = [[NSDictionary alloc]init];
-subscribedTags = [response subscriptions];
-[self.appDelegateVC updateMessage:subscribedTags.description];
-}
-  }];
-  ```
-	{: codeblock}
 
 ## Obtendo tags no Swift
 {: swift-get-tags}
@@ -342,52 +297,11 @@ BMSPush.unsubscribe(tag, success, failure);
 ```
 	{: codeblock}
 
-## Assinando e removendo assinatura de tags no Objective-C
-{: objc-subscribe-tags}
-
-Copie e cole este fragmento de código em seu aplicativo móvel Objective-C.
-
-Use a API **subscribeToTags** para assinar uma
-identificação.
-
-```
-[push subscribeToTags:tags completionHandler:
-^(IMFResponse *response, NSError *error) {
-  if(error){
-     [self updateMessage:error.description];
-  }else{
-      NSDictionary* subStatus = [[NSDictionary alloc]init];
-      subStatus = [response subscribeStatus];
-      [self updateMessage:@"Parsed subscribe status is:"];
-      [self updateMessage:subStatus.description];
-  }
-  }];
-```
-	{: codeblock}
-
-Use a API **unsubscribeFromTags** para cancelar a assinatura de uma
-identificação.
-
-```
-[push unsubscribeFromTags:tags completionHandler:
-^(IMFResponse *response, NSError *error) {
-  if (error){
-       [self updateMessage:error.description];
- } else {
-     NSDictionary* subStatus = [[NSDictionary alloc]init];
-       subStatus = [response unsubscribeStatus];
-       [self updateMessage:subStatus.description];
-  }
-  }];
-```
-	{: codeblock}
 
 ## Assinando e removendo assinatura de tags no Swift
 {: swift-subscribe-tags}
 
 Copie e cole este fragmento de código em seu aplicativo móvel Swift.
-
-**Assinar tags disponíveis**
 
 Use a API **subscribeToTags** para assinar uma
 identificação.
@@ -404,8 +318,6 @@ push.subscribeToTags(tagsArray: ["MyTag"], completionHandler: { (response, statu
 })
 ```
 	{: codeblock}
-
-**Cancelar assinatura de tags**
 
 Use a API **unsubscribeFromTags** para cancelar a assinatura de uma
 identificação.
@@ -437,7 +349,7 @@ bmsPush.subscribe(tagsArray,function(response) {
 ```
 	{: codeblock}
 
-Cancele a assinatura das tags usando o método `unSubscribe`.
+Cancele a assinatura das tags usando o método **unSubscribe**.
 
 ```
 var tagsArray = ["tag1", "Tag2"]

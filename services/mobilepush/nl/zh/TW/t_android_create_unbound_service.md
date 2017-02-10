@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # 建立適用於 Android 的未連結 {{site.data.keyword.mobilepushshort}} Service
 {: #create_android_unbound}
-前次更新：2016 年 12 月 6 日
+前次更新：2017 年 1 月 11 日
 {: .last-updated}
 
 建立 {{site.data.keyword.mobilepushshort}} Service 實例。您可以使用 {{site.data.keyword.mobilepushshort}} Service 實例，而不連結至任何後端應用程式。

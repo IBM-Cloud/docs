@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,10 +12,10 @@ copyright:
 
 # Berechtigungsnachweise für FCM generieren
 {: #create-push-enable-gcm}
-Letzte Aktualisierung: 06. Dezember 2016
+Letzte Aktualisierung: 16. Januar 2017
 {: .last-updated}
 
-Firebase Cloud Messaging (FCM) ist das Gateway, das für die Übermittlung von Push-Benachrichtigungen an Android-Geräte sowie an Google Chrome- und Mozilla-Web-Browser verwendet wird. FCM hat Google Cloud Messaging (GCM) ersetzt. Sie müssen Ihre FCM-Berechtigungsnachweise abrufen und anschließend den {{site.data.keyword.mobilepushshort}}-Service im Dashboard einrichten. Achten Sie darauf, für neue Apps FCM-Konfigurationen zu verwenden. Vorhandene Apps können mit GCM-Konfigurationen weiterhin betrieben werden.
+Firebase Cloud Messaging (FCM) ist das Gateway, das für die Übermittlung von Push-Benachrichtigungen an Android-Geräte sowie an Google Chrome verwendet wird. FCM ist die neue Version von Google Cloud Messaging (GCM). Sie müssen Ihre FCM-Berechtigungsnachweise abrufen, um den {{site.data.keyword.mobilepushshort}}-Service im Dashboard einzurichen. Achten Sie darauf, für neue Apps FCM-Konfigurationen zu verwenden. Vorhandene Apps können mit GCM-Konfigurationen weiterhin betrieben werden.
 
 ##Absender-ID und API-Schlüssel abrufen
 {: #android-senderid-apikey}
@@ -24,7 +24,7 @@ Der API-Schlüssel wird geschützt gespeichert und vom {{site.data.keyword.mobil
 
 Zum Einrichten von FCM generieren Sie den API-Schlüssel und die Absender-ID und führen Sie folgende Schritte aus:
 
-1. Besuchen Sie die [Firebase-Konsole](https://console.firebase.google.com/?pli=1).
+1. Rufen Sie die [Firebase-Konsole ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.firebase.google.com/?pli=1 "Symbol für externen Link"){: new_window} auf.
 2. Wählen Sie **Neues Projekt erstellen** aus. 
 3. Geben Sie im Fenster 'Projekt erstellen' einen Projektnamen ein, wählen Sie ein Land/eine Region aus und klicken Sie auf **Projekt erstellen**.
 3. Klicken Sie im Navigationsfenster auf das Symbol 'Einstellungen' und wählen Sie **Projekteinstellungen** aus.
@@ -44,12 +44,4 @@ Zum Einrichten von FCM generieren Sie den API-Schlüssel und die Absender-ID und
 4. Klicken Sie auf **Speichern**.
 5. Nächste Schritte: [Benachrichtigungen für Android aktivieren](c_enable_push.html) oder [Benachrichtigungen für Google Chrome-Apps & Erweiterungen aktivieren](c_enable_push.html).
 
-###Konfiguration für Google Chrome- und Mozilla Firefox-Web-Push-Operationen (mithilfe von FCM/GCM)
-{: #config-gcm-mozilla}
 
-1. Wählen Sie im Navigationsbereich des Push-Dashboards **Konfigurieren** aus.
-2. Wählen Sie die Webregisterkarte aus.
-	![WebPush-Konfigurationen](images/webpush_configure.jpg)
-3. Konfigurieren Sie den FCM/GCM-API-Schlüssel und die URL Ihrer Webseite, die für den Empfang von Push-Benachrichtigungen registriert wird.
-4. Klicken Sie auf **Speichern**.
-5. Nächste Schritte: [Benachrichtigungen für Google Chrome- und Mozilla Firefox-Browser aktivieren](c_enable_push.html).

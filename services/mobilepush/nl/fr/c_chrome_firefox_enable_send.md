@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Envoi de notifications de base aux navigateurs Web
 {: #web_notifications}
-Dernière mise à jour : 6 décembre 2016
+Dernière mise à jour : 11 janvier 2017
 {: .last-updated}
 
 Une fois que vous avez développé vos applications, vous pouvez envoyer une notification push. 

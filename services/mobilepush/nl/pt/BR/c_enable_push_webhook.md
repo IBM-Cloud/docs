@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Ativando notificação baseada em evento do webhooks
 {: #tag_based_notifications}
-Última atualização: 06 de dezembro de 2016
+Última atualização: 16 de janeiro de 2017
 {: .last-updated}
 
 
@@ -40,7 +40,7 @@ despachada.
 
 
 **Nota**: a notificação é despachada em lotes. Um despacho de mensagem pode ter
-múltiplos eventos webhooks, que podem incluir falhas e sucesso.
+múltiplos eventos webhooks, que podem incluir falhas e sucesso. 
 Os eventos webhook têm o mesmo messageID que a mensagem despachada. 
 
-Para obter mais informações sobre webhooks, consulte [API de REST do IBM Push Notifications](https://mobile.{DomainName}/imfpush/#/webhooks).
+Para obter mais informações sobre webhooks, veja a [API de REST do IBM Push Notifications ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://mobile.{DomainName}/imfpush/#/webhooks "Ícone de link externo"){: new_window}.

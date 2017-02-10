@@ -2,7 +2,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -14,11 +14,9 @@ copyright:
 # Configurando credenciais para um
 provedor de notificação
 {: #create-push-credentials}
-Última atualização: 06 de dezembro de 2016
+Última atualização: 18 de janeiro de 2017
 {: .last-updated}
 
-Para configurar o serviço {{site.data.keyword.mobilepushshort}}, obtenha suas credenciais com o
-provedor de notificação push:  Por exemplo, Firebase Cloud Messaging (FCM) ou o Apple Push
-Notification Service (APNs). 
+Para configurar o serviço {{site.data.keyword.mobilepushshort}}, obtenha as credenciais necessárias com seu provedor de notificação push - serviço Firebase Cloud Messaging ([FCM](t_push_provider_android.html)) ou Apple Push Notification ([APNs](t_push_provider_ios.html)) para dispositivos móveis. Para navegadores da web, veja [Configurando credenciais para navegadores da web](t_push_provider_safari.html).
 
-É possível configurar o {{site.data.keyword.mobilepushshort}} no Painel **IBM Bluemix Services** ou usando as [APIs de REST](https://mobile.{DomainName}/imfpush/).
+É possível configurar o {{site.data.keyword.mobilepushshort}} usando o Painel **Serviços IBM Bluemix** ou usando as [APIs de REST ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://mobile.{DomainName}/imfpush/ "Ícone de link externo"){: new_window}.

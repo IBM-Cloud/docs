@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Registrando um dispositivo com userId
 {: #register_device_with_userId}
-Última atualização: 07 de dezembro de 2016
+Última atualização: 11 de janeiro de 2017
 {: .last-updated}
 
 Para registrar-se para notificação baseada em userId, conclua as etapas a seguir:
@@ -30,9 +30,9 @@ push.initialize(getApplicationContext(),"AppGUID", "clientSecret");
 
 
 - **AppGUID**: esta é a chave AppGUID do serviço
-{{site.data.keyword.mobilepushshort}}. 
+{{site.data.keyword.mobilepushshort}}.
 - **clientSecret**: esta é a chave clientSecret do serviço
-{{site.data.keyword.mobilepushshort}}. 
+{{site.data.keyword.mobilepushshort}}.
 
   Use a API **registerDeviceWithUserId** para registrar o dispositivo para {{site.data.keyword.mobilepushshort}}.
 ```
@@ -76,44 +76,6 @@ BMSPush.registerDevice(options,success, failure);
 - **userId**: transmita o valor exclusivo de userId para registrar-se no {{site.data.keyword.mobilepushshort}}.
 
 
-## Objective-C
-{: objc-register}
-
-Use as APIs a seguir para registrar-se para {{site.data.keyword.mobilepushshort}} baseado em
-UserId.
-```
-// Initialize the MFPPush
-IMFPushClient* push = [IMFPushClient sharedInstance];
-[push initializeWithAppGUID:@"appGUID" clientSecret:@"clientSecret"];
-```
-	{: codeblock}
-
-
-- **AppGUID**: esta é a chave AppGUID do serviço
-{{site.data.keyword.mobilepushshort}}. 
-- **clientSecret**: esta é a chave clientSecret do serviço
-{{site.data.keyword.mobilepushshort}}. 
-
-Use a API **registerWithUserId** para registrar o dispositivo para {{site.data.keyword.mobilepushshort}}.
-```
-// Register the device to push notifications service.
-[push registerWithDeviceToken:deviceToken WithUserId:@"userId" completionHandler:^(IMFResponse *response, NSError *error) {
-  NSString *message=@"";
-	if (error){
-        message = [NSString stringWithFormat:@"Error registering for push notifications: %@", error.description];
-        NSLog(@"%@",message);
-    } else {
-     message=@"Successfully registered for push notifications";
-        NSLog(@"%@",message);
-    }
-}];
-```
-	{: codeblock}
-
-
-- **userId**: transmita o valor exclusivo de userId para registrar-se no
-{{site.data.keyword.mobilepushshort}}.
-
 ## Swift
 {: swift-register}
 
@@ -126,9 +88,9 @@ push.initializeWithAppGUID("appGUID", clientSecret:"clientSecret")
 
 
 - **AppGUID**: esta é a chave AppGUID do serviço
-{{site.data.keyword.mobilepushshort}}. 
+{{site.data.keyword.mobilepushshort}}.
 - **clientSecret**: esta é a chave clientSecret do serviço
-{{site.data.keyword.mobilepushshort}}. 
+{{site.data.keyword.mobilepushshort}}.
 
 Use a API **registerWithUserId** para registrar o dispositivo para {{site.data.keyword.mobilepushshort}}.
 
@@ -145,8 +107,7 @@ if error.isEmpty {
 ```
 	{: codeblock}
 
-- **userId**: transmita o valor exclusivo de userId para registrar-se no
-{{site.data.keyword.mobilepushshort}}.
+- **userId**: transmita o valor exclusivo de userId para registrar-se no {{site.data.keyword.mobilepushshort}}.
 
 ## Google Chrome, Safari e Mozilla Firefox
 {: web-register}
