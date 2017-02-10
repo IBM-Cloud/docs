@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-02-03"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -31,6 +31,8 @@ Object versioning is a way for a user to store an object that might change. With
     <dd>If an object is deleted from the working container and an archived version of that object exists, the archived version is restored.  You can restore an archived object, at any time.</dd>
 </dl>
 
+
+Figure 1. Object versioning overview
 
 
 #### Tutorial

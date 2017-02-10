@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-31"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -119,8 +119,6 @@ Service credentials are used to provide authentication and security for the serv
       <td> The token that you received when you authenticated your instance with Keystone. </td>
     </tr>
   </table>
-
-
 
 3. Validate your credentials by running the following command.
 

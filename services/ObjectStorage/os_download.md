@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-31"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -29,16 +29,16 @@ You can download your stored objects for review or editing through the UI or the
 
 1.  If you are not logged in to {{site.data.keyword.Bluemix_notm}}, log in to the org and space that contains your instance of {{site.data.keyword.objectstorageshort}}.
 
-```
-cf login -a api.ng.bluemix.net -u <userid> -p <password> -o <organization> -s <space>
-```
-{: pre}
+    ```
+    cf login -a api.ng.bluemix.net -u <userid> -p <password> -o <organization> -s <space>
+    ```
+    {: pre}
 
 2. To prevent data destruction by unintentional over-writes, [set up object versioning](/docs/services/ObjectStorage/os_versioning.html). If you do not want object versioning, list your existing files in the store, and if necessary, rename the directory or the files before you download.
 
 3. Download a file by running the following command:
 
-```
-swift download <container_name> <file_name>
-```
-{: pre}
+    ```
+    swift download <container_name> <file_name>
+    ```
+    {: pre}
