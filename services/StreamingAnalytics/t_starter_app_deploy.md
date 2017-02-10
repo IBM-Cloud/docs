@@ -30,9 +30,9 @@ Remember the name that you give your application; you will need it later on.
 
 {{site.data.keyword.streaminganalyticsshort}} provides two sample applications to get you started with the service. 
 
-The Event Detection starter application analyzes weather-related data in a real-time stream and displays the status and results of the analysis. The application is written in {{site.data.keyword.sdk4node}}. For more details on how to use the Event Detection starter app, see [Detect complex events in a real-time data stream](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs).
+The Event Detection starter application analyzes weather-related data in a real-time stream and displays the status and results of the analysis. The application is written in {{site.data.keyword.sdk4node}}. For more details on how to use the Event Detection starter app, see [Detect complex events in a real-time data stream](https://www.ibm.com/developerworks/library/ba-bluemix-detect-complex-events-from-data-stream-trs/index.html).
 
-The NYC Traffic starter application reads and analyzes traffic data from a public website. The application is written in Liberty for Java™. For more details on how to use the NYC Traffic starter app, see [{{site.data.keyword.streaminganalyticsfull}} Starter Application](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs). 
+The NYC Traffic starter application reads and analyzes traffic data from a public website. The application is written in Liberty for Java™. For more details on how to use the NYC Traffic starter app, see [{{site.data.keyword.streaminganalyticsfull}} Starter Application](https://developer.ibm.com/streamsdev/docs/bluemix-streaming-analytics-starter-application/). 
 
 To download and deploy the starter application to {{site.data.keyword.Bluemix_short}}:
 
