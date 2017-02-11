@@ -31,6 +31,7 @@ Object versioning is a way for a user to store an object that might change. With
     <dd>If an object is deleted from the working container and an archived version of that object exists, the archived version is restored.  You can restore an archived object, at any time.</dd>
 </dl>
 
+![Object versioning overview](images/os_versioning.png)
 
 Figure 1. Object versioning overview
 
