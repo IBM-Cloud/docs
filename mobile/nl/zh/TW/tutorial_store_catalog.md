@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-01"
+  years: 2016, 2017
+lastupdated: "2016-12-15"
 
 ---
 {:new_window: target="_blank"}
@@ -16,7 +16,7 @@ lastupdated: "2016-12-01"
 ## 需求
 {: #tutorial_requirements}
 
-* [Bluemix](http://bluemix.net) 帳戶
+* 一個 [Bluemix ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://bluemix.net "外部鏈結圖示") 帳戶
 
 
 ## 開始使用
@@ -36,17 +36,17 @@ lastupdated: "2016-12-01"
 
    4. 輸入專案名稱，然後按一下**建立**。
 
-2. 選用項目：新增 Push Notifications 功能。
+2. 選用項目：新增 {{site.data.keyword.mobilepushshort}} 功能。
 
-   1. 在**專案概觀**頁面上，針對 **Push Notifications** 按一下**新增**。
+   1. 在**專案概觀**頁面上，對 **{{site.data.keyword.mobilepushshort}}** 按一下**新增**。
 
-      您也可以按一下 **Push Notifications** 頁面上的**建立**。
+      或者，您可以在 **{{site.data.keyword.mobilepushshort}}** 頁面上按一下**建立**。
 
    2. 輸入服務名稱，然後按一下**建立**。
 
-   3. 若為 iOS，[配置 Apple Push Notification Service](/docs/services/mobilepush/t_push_provider_ios.html){: new_window}。
+   3. 若為 iOS，請[配置 Apple Push Notification Service ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/mobilepush/t_push_provider_ios.html "外部鏈結圖示"){: new_window}。
 
-   4. 若為 Android，[配置 Google Cloud Messaging](/docs/services/mobilepush/t_push_provider_android.html){: new_window}。
+   4. 若為 Android，請[配置 Google Cloud Messaging ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/mobilepush/t_push_provider_android.html "外部鏈結圖示"){: new_window}。
 
 3. 選用項目：新增其他功能。
 
@@ -90,16 +90,18 @@ lastupdated: "2016-12-01"
       您也可以透過使用按鈕，以及選取表格中的內容，來匯入、匯出或修改本端表格中的內容。
 
 	  注意：如果您匯入不符合預設資料結構的資料，請開啟*取代綱目* 調節器。例如 .csv 檔案，其直欄數少於入門範本所提供的資料。
+	  
+   6. 選取**導覽**，以在您的應用程式中自訂導覽動作。這是選用項目，因為許多畫面的導覽動作是根據畫面的關係自動建立的。首先您可以在「功能表項目」清單中選取您想要*從中* 導覽的畫面或欄位，來變更目標畫面。然後，在「目標畫面」欄位中選取您想要它導覽*至* 的畫面。 
 
-   6. 在導覽中選取**使用者存取**，以修改專案的存取需求。您可以使用參數來開啟及關閉使用者存取。開啟使用者存取時，您可以設定非作用中使用者逾時以及可存取應用程式之使用者的認證。
+   7. 在導覽中選取**使用者存取**，以修改專案的存取需求。您可以使用參數來開啟及關閉使用者存取。開啟使用者存取時，您可以設定非作用中使用者逾時以及可存取應用程式之使用者的認證。
 
-   7. 在導覽功能表中選取**設定**，以修改專案的整體資訊及顏色。如果您新增至專案的服務需要 Google API 金鑰，則此畫面是您輸入該金鑰的位置。此畫面也是您新增向 Apple Store 或「Google Play 商店」註冊的唯一軟體組 ID 的位置。
+   8. 在導覽功能表中選取**設定**，以修改專案的整體資訊及顏色。如果您新增至專案的服務需要 Google API 金鑰，則此畫面是您輸入該金鑰的位置。此畫面也是您新增向 Apple Store 或「Google Play 商店」註冊的唯一軟體組 ID 的位置。
 
       如果您要將 IBM MobileFirst Foundation SDK 新增至專案，請開啟此參數。
 
-   8. 如果您已在*設定* 畫面中切換此參數，以將 IBM MobileFirst Platform Foundation 新增至專案，**Foundation** 選項會顯示在導覽中。選取 **Foundation**，並完成 IBM MobileFirst Platform Foundation 特定的必要資訊。
+   9. 如果您已在*設定* 畫面中切換此參數，以將 IBM MobileFirst Platform Foundation 新增至專案，**Foundation** 選項會顯示在導覽中。選取 **Foundation**，並完成 IBM MobileFirst Platform Foundation 特定的必要資訊。
 
-   9. 選取導覽功能表中的**發佈**，以輸入建立行動應用程式所需的最終資訊。您可以針對 iOS 輸入「軟體組 ID」，並針對 Android 輸入「應用程式 ID」。
+   10. 選取導覽功能表中的**發佈**，以輸入建立行動應用程式所需的最終資訊。您可以針對 iOS 輸入「軟體組 ID」，並針對 Android 輸入「應用程式 ID」。
 
        如果您要建立 iOS 應用程式，則必須取得「軟體組 ID」、取得 *.p12* 檔案形式的「配送憑證」，以及從 Apple 佈建入口網站取得 *.mobileprovision* 檔案形式的「佈建設定檔」。這三個項目應該同時建立，並且使用在將應用程式公佈至 Apple Store 時計劃使用的相同電腦。「配送憑證」及「佈建設定檔」必須根據「軟體組 ID」。 	
 
@@ -125,4 +127,22 @@ lastupdated: "2016-12-01"
 ## 下一步
 {: #tutorial_next}
 
-[試用看看吧！](http://console.{DomainName}/mobile/create-project?starter=fb5e31a9-1186-4d46-939e-2f620f35b83b){: new_window}
+[試用看看吧！![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://console.{DomainName}/mobile/create-project?starter=fb5e31a9-1186-4d46-939e-2f620f35b83b "外部鏈結圖示"){: new_window}
+
+
+### 使用者介面入門範本指導教學
+{: #tutorials_UI}
+
+* [指導教學 - Store Catalog](tutorial_store_catalog.html)
+
+
+### 程式碼入門範本指導教學
+{: #tutorials_Code}
+
+* [指導教學 - Basic](tutorial.html)
+* [指導教學 - Cloudant Sync](tutorial_cloudant_synd.html)
+* [指導教學 - {{site.data.keyword.openwhisk_short}}](tutorial_openwhisk.html)
+* [指導教學 - {{site.data.keyword.visualrecognitionshort}}](tutorial_visual_recognition.html)
+* [指導教學 - Watson Language](tutorial_watson_language.html)
+* [指導教學 - Weather](tutorial_weather.html)
+

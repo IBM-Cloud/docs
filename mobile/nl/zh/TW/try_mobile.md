@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2015, 2017
 lastupdated: "2016-10-19"
 
 ---
@@ -49,11 +49,11 @@ lastupdated: "2016-10-19"
 <td valign="top"><b>使用者身分提供者</b> <br/>您可以使用下列身分提供者：<ul><li>Facebook</li><li>Google</li><li> 自訂</li></ul></td>
 </tr>
 <tr>
-<td><img src="images/push_icon.png" alt="Push Notifications 服務圖示"> <b>{{site.data.keyword.mobilepushshort}}</b><br/> {{site.data.keyword.mobilepushfull}} 服務提供一個統一平台，用來傳送及管理目標設為 Mobile（iOS 及 Android）平台及 Web 瀏覽器應用程式的推送通知。此服務可管理應用程式使用者與其裝置、裝置平台及瀏覽器的對映，並處理如何將推送通知分派給訂閱者。使用此服務，您可以將播送、單點播送（根據 userID、deviceID）以及根據推送通知的標籤（或主題）傳送給客戶。</td>
+<td><img src="images/push_icon.png" alt="{{site.data.keyword.mobilepushshort}} 服務圖示"> <b>{{site.data.keyword.mobilepushshort}}</b><br/>{{site.data.keyword.mobilepushfull}} 服務提供一個統一平台，用來傳送及管理目標設為 Mobile（iOS 及 Android）平台及 Web 瀏覽器應用程式的推送通知。此服務可管理應用程式使用者與其裝置、裝置平台及瀏覽器的對映，並處理如何將推送通知分派給訂閱者。使用此服務，您可以將播送、單點播送（根據 userID、deviceID）以及根據推送通知的標籤（或主題）傳送給客戶。</td>
 <td valign="top"><b>Push 服務提供者</b><ul><li>Apple Push Notifications Service</li><li>Firebase Cloud Messaging</li></ul></td>
 </tr>
 <tr>
-<td><img src="images/cloudant64.png" alt="Cloudant 服務圖示"><b>Cloudant NoSQLDB</b><br/> Cloudant 是 NoSQL 資料庫即服務 (DBaaS)。它是從基礎建置，可以廣域擴充、不間斷地執行，並且處理廣泛的資料類型（例如 JSON、全文以及地理空間）。</td>
+<td><img src="images/cloudant64.png" alt="Cloudant 服務圖示"><b>Cloudant NoSQLDB</b><br/> Cloudant 是 NoSQL 資料庫即服務 (DBaaS)。它從基礎建置，擴充至全球，不間斷地執行，並且處理各式各樣的資料類型，如 JSON、全文和地理空間。</td>
 <td>Cloudant.com</td>
 </tr>
 </table>

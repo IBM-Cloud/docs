@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2015, 2017
 lastupdated: "2016-10-19"
 
 ---
@@ -49,7 +49,7 @@ Sie können entweder mithilfe der {{site.data.keyword.Bluemix_notm}} {{site.data
 <td valign="top"><b>Benutzeridentitätsanbieter</b> <br/>Sie können die folgenden Identitätsanbieter verwenden: <ul><li>Facebook</li><li>Google</li><li> Angepasst </li></ul></td>
 </tr>
 <tr>
-<td><img src="images/push_icon.png" alt="Symbol für Service 'Push Notifications'"> <b>{{site.data.keyword.mobilepushshort}}</b><br/>Der {{site.data.keyword.mobilepushfull}}-Service bietet eine einheitliche Plattform zum Senden und Verwalten von Push-Benachrichtigungen mit (iOS- & Android-) Plattformen und Web-Browser-Anwendungen als Ziel. Dieser Service verwaltet die Zuordnung Ihrer Anwendungsbenutzer zu ihren Geräten, zur Geräteplattform und zu den Browsern und führt das Senden von Push-Benachrichtigungen an Subskribenten aus. Mit diesem Service können Sie Rundsendungen, Unicasts (auf der Basis von Benutzer-ID und Geräte-ID) sowie tagbasierte (themenbasierte) Push-Benachrichtigungen an Ihre Kunden senden.</td>
+<td>Symbol für <img src="images/push_icon.png" alt="{{site.data.keyword.mobilepushshort}}-Service"> <b>{{site.data.keyword.mobilepushshort}}</b><br/>Der Service '{{site.data.keyword.mobilepushfull}}' bietet eine einheitliche Plattform zum Senden und Verwalten von Push-Benachrichtigungen mit mobilen Plattformen und Web-Browser-Anwendungen (iOS & Android) als Ziel. Dieser Service verwaltet die Zuordnung Ihrer Anwendungsbenutzer zu ihren Geräten, zur Geräteplattform und zu den Browsern und führt das Senden von Push-Benachrichtigungen an Subskribenten aus. Mit diesem Service können Sie Rundsendungen, Unicasts (auf der Basis von Benutzer-ID und Geräte-ID) sowie tagbasierte (themenbasierte) Push-Benachrichtigungen an Ihre Kunden senden.</td>
 <td valign="top"><b>Push-Serviceanbieter</b><ul><li>Apple Push Notifications Service</li><li>Firebase Cloud Messaging</li></ul></td>
 </tr>
 <tr>

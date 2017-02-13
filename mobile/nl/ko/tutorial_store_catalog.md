@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-01"
+  years: 2016, 2017
+lastupdated: "2016-12-15"
 
 ---
 {:new_window: target="_blank"}
@@ -16,7 +16,7 @@ lastupdated: "2016-12-01"
 ## 요구사항
 {: #tutorial_requirements}
 
-* [Bluemix](http://bluemix.net) 계정
+* [Bluemix ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://bluemix.net "외부 링크 아이콘") 계정
 
 
 ## 시작하기
@@ -36,17 +36,17 @@ Store Catalog UI 스타터를 빨리 시작하고 실행하려면 다음 단계�
 
    4. 프로젝트 이름을 입력하고 **작성**을 클릭하십시오. 
 
-2. 선택사항: Push Notifications 기능을 추가하십시오. 
+2. 선택사항: {{site.data.keyword.mobilepushshort}} 기능을 추가하십시오. 
 
-   1. **프로젝트 개요** 페이지에서 **Push Notifications**에 대해 **추가**를 클릭하십시오. 
+   1. **프로젝트 개요** 페이지에서 **{{site.data.keyword.mobilepushshort}}**에 대해 **추가**를 클릭하십시오. 
 
-      또는 **Push Notifications** 페이지에서 **작성**을 클릭할 수 있습니다. 
+      또는 **{{site.data.keyword.mobilepushshort}}** 페이지에서 **작성**을 클릭할 수도 있습니다. 
 
    2. 서비스 이름을 입력하고 **작성**을 클릭하십시오. 
 
-   3. iOS의 경우 [Apple Push Notification Service 구성](/docs/services/mobilepush/t_push_provider_ios.html){: new_window}을 수행하십시오. 
+   3. iOS의 경우, [Apple Push Notification Service 구성 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/mobilepush/t_push_provider_ios.html "외부 링크 아이콘"){: new_window}을 수행하십시오. 
 
-   4. Android의 경우 [GCM(Google Cloud Messaging) 구성](/docs/services/mobilepush/t_push_provider_android.html){: new_window}을 수행하십시오. 
+   4. Android의 경우, [GCM(Google Cloud Messaging) 구성 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/mobilepush/t_push_provider_android.html "외부 링크 아이콘"){: new_window}을 수행하십시오. 
 
 3. 선택사항: 기타 기능을 추가하십시오. 
 
@@ -90,16 +90,18 @@ Store Catalog UI 스타터를 빨리 시작하고 실행하려면 다음 단계�
       또한 단추를 사용하고 테이블에서 컨텐츠를 선택하여 테이블에 있는 컨텐츠를 가져오거나, 내보내거나, 수정할 수 있습니다(컨텐츠가 로컬인 경우). 
 
 	  주의사항: 기본 데이터의 구조와 일치하지 않는 데이터를 가져오는 경우 *스키마 대체* 슬라이더를 켜십시오. 해당 예는 스타터에서 제공되는 데이터보다 열 수가 적은 .csv 파일입니다. 
+	  
+   6. **탐색**을 선택하여 앱의 탐색 조치를 사용자 정의하십시오. 대부분의 화면의 경우 탐색 조치는 화면의 관계에 따라 자동으로 작성되므로 이는 선택사항입니다. 다음의 과정을 통해 대상 화면을 변경할 수 있습니다. 먼저 메뉴 항목 목록에서 탐색을 *시작할* 화면 또는 필드를 선택하십시오. 그다음, 대상 화면 필드에서 해당 항목이 탐색하여 *도달할* 화면을 선택하십시오.  
 
-   6. 탐색에서 **사용자 액세스**를 선택하여 프로젝트의 액세스 요구사항을 수정하십시오. 스위치를 사용하여 사용자 액세스 켜기와 끄기를 토글할 수 있습니다. 사용자 액세스가 켜진 경우 비활성 사용자 제한시간과 앱에 액세스할 수 있는 사용자의 신임 정보를 설정할 수 있습니다. 
+   7. 탐색에서 **사용자 액세스**를 선택하여 프로젝트의 액세스 요구사항을 수정하십시오. 스위치를 사용하여 사용자 액세스 켜기와 끄기를 토글할 수 있습니다. 사용자 액세스가 켜진 경우 비활성 사용자 제한시간과 앱에 액세스할 수 있는 사용자의 신임 정보를 설정할 수 있습니다. 
 
-   7. 탐색 메뉴에서 **설정**을 선택하여 프로젝트의 전체 정보와 색상을 수정하십시오. 이 화면에서, 프로젝트에 추가한 서비스에 필요한 경우 Google API 키를 입력할 수 있습니다. 또한 이 화면에서 Apple Store 또는 Google Play 스토어에 등록된 고유 번들 ID를 추가할 수 있습니다. 
+   8. 탐색 메뉴에서 **설정**을 선택하여 프로젝트의 전체 정보와 색상을 수정하십시오. 이 화면에서, 프로젝트에 추가한 서비스에 필요한 경우 Google API 키를 입력할 수 있습니다. 또한 이 화면에서 Apple Store 또는 Google Play 스토어에 등록된 고유 번들 ID를 추가할 수 있습니다. 
 
       프로젝트에 IBM MobileFirst Foundation SDK를 추가하려면 스위치를 토글하여 켜십시오. 
 
-   8. *설정* 화면에서 프로젝트에 IBM MobileFirst Platform Foundation을 추가하도록 스위치를 토글한 경우 탐색에 **Foundation** 선택사항이 표시됩니다. **Foundation**을 선택하고 IBM MobileFirst Platform Foundation에 특정한 필수 정보를 완료하십시오. 
+   9. *설정* 화면에서 프로젝트에 IBM MobileFirst Platform Foundation을 추가하도록 스위치를 토글한 경우 탐색에 **Foundation** 선택사항이 표시됩니다. **Foundation**을 선택하고 IBM MobileFirst Platform Foundation에 특정한 필수 정보를 완료하십시오. 
 
-   9. 탐색 메뉴에서 **공개**를 선택하여 모바일 앱을 작성하는 데 필요한 최종 정보를 입력하십시오. iOS용 번들 ID와 Android용 애플리케이션 ID를 입력할 수 있습니다.
+   10. 탐색 메뉴에서 **공개**를 선택하여 모바일 앱을 작성하는 데 필요한 최종 정보를 입력하십시오. iOS용 번들 ID와 Android용 애플리케이션 ID를 입력할 수 있습니다.
 
        iOS 앱을 작성할 경우 번들 ID, 배포 인증서를 *.p12* 파일로 얻고 Apple 프로비저닝 포털에서 프로비저닝 프로파일을 *.mobileprovision* 파일로 얻어야 합니다. 이 세 항목을 Apple Store에 앱을 게시할 때 사용할 컴퓨터에서 동시에 작성해야 합니다. 배포 인증서와 프로비저닝 프로파일은 번들 ID를 기반으로 해야 합니다.  	
 
@@ -125,4 +127,22 @@ Store Catalog UI 스타터를 빨리 시작하고 실행하려면 다음 단계�
 ## 다음에 수행할 작업
 {: #tutorial_next}
 
-[사용해 보기](http://console.{DomainName}/mobile/create-project?starter=fb5e31a9-1186-4d46-939e-2f620f35b83b){: new_window}
+[사용해 보기 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://console.{DomainName}/mobile/create-project?starter=fb5e31a9-1186-4d46-939e-2f620f35b83b "외부 링크 아이콘"){: new_window}
+
+
+### UI 스타터 튜토리얼
+{: #tutorials_UI}
+
+* [튜토리얼 - Store Catalog](tutorial_store_catalog.html)
+
+
+### 코드 스타터 튜토리얼
+{: #tutorials_Code}
+
+* [튜토리얼 - 기본](tutorial.html)
+* [튜토리얼 - Cloudant Sync](tutorial_cloudant_synd.html)
+* [튜토리얼 - {{site.data.keyword.openwhisk_short}}](tutorial_openwhisk.html)
+* [튜토리얼 - {{site.data.keyword.visualrecognitionshort}}](tutorial_visual_recognition.html)
+* [튜토리얼 - Watson Language](tutorial_watson_language.html)
+* [튜토리얼 - Weather](tutorial_weather.html)
+

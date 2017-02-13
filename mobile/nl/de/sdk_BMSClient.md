@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-07"
+  years: 2016, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -54,9 +54,9 @@ Sie können mithilfe von [CocoaPods](https://cocoapods.org){: new_window} oder [
 
   Führen Sie anschließend den Befehl `pod install` aus und öffnen Sie die generierte Datei des Typs `.xcworkspace`. Zur Aktualisierung auf ein neueres Release von `BMSCore` müssen Sie den Befehl `pod update BMSCore` verwenden.
 
-  Weitere Informationen zur Verwendung von CocoaPods finden Sie in den [Leitfäden zu CocoaPods](https://guides.cocoapods.org/using/index.html){: new_window}.
+  Weitere Informationen zur Verwendung von CocoaPods finden Sie in den [Handbüchern zu CocoaPods ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://guides.cocoapods.org/using/index.html "Symbol für externen Link"){: new_window}.
 
-2. Befolgen Sie zur Installation von `BMSCore` mit Carthage diese [Anweisungen](https://github.com/Carthage/Carthage#getting-started){: new_window}.
+2. Befolgen Sie zur Installation von `BMSCore` mit Carthage diese [Anweisungen ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/Carthage/Carthage#getting-started "Symbol für externen Link"){: new_window}.
 
   1. Fügen Sie die folgende Zeile zu Ihrer Cartfile hinzu:
 
@@ -67,7 +67,7 @@ Sie können mithilfe von [CocoaPods](https://cocoapods.org){: new_window} oder [
 
   2. Führen Sie den Befehl `carthage update` aus.
 
-  3. Nach der Fertigstellung des Builds fügen Sie `BMSCore.framework` zu Ihrem Projekt hinzu; führen Sie hierfür [Schritt 3](https://github.com/Carthage/Carthage#getting-started) in den Carthage-Anweisungen durch.
+  3. Fügen Sie nach der Fertigstellung des Builds `BMSCore.framework` zu Ihrem Projekt hinzu; führen Sie hierfür [Schritt 3 ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/Carthage/Carthage#getting-started "Symbol für externen Link") in den Carthage-Anweisungen durch.
 
       Verwenden Sie für Anwendungen, die mit Swift 2.3 aufgebaut sind, den Befehl `carthage update --toolchain com.apple.dt.toolchain.Swift_2_3`. Verwenden Sie andernfalls den Befehl `carthage update`.
 

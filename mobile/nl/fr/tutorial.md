@@ -1,11 +1,15 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-22"
+  years: 2016, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # Tutoriel de bout en bout du Module de démarrage pour le code Basic
 {: #tutorial}
@@ -17,7 +21,7 @@ vous devez avoir installés et, après quoi, la marche à suivre pour exécuter 
 ### Installation des outils de développement
 {: #dev_tools}
 
-Assurez-vous que vous avez installé les [outils de développement requis](get_code.html#prereq-dev-tools){: new_window}.
+Vérifiez que vous avez installé les [outils prérequis pour le développeur![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](get_code.html#prereq-dev-tools "Icône de lien externe"){: new_window}.
 
 
 ### Création d'un projet à partir du Module de démarrage pour le code Basic
@@ -37,17 +41,18 @@ Assurez-vous que vous avez installé les [outils de développement requis](get_c
    
    5. Cliquez sur **Créer**.
 
-2. Facultatif : ajoutez la fonction Notifications push.
+2. Facultatif : Ajoutez la fonctionnalité {{site.data.keyword.mobilepushshort}}.
 
-   1. Cliquez sur **Ajouter** pour **Notifications push** dans la page **Présentation du projet**.
+   1. Cliquez sur **Ajouter** pour **{{site.data.keyword.mobilepushshort}}** sur la page **Présentation
+du projet**.
 
-      Vous pouvez également cliquer sur **Créer** dans la page **Notifications push**.
+      Vous pouvez également cliquer sur **Créer** sur la page **{{site.data.keyword.mobilepushshort}}**.
 
    2. Entrez le nom de votre service et cliquez sur **Créer**.
 
-   3. Pour iOS, [configurez Apple Push Notification Service](/docs/services/mobilepush/t_push_provider_ios.html){: new_window}.
+   3. Pour iOS, [configurez le service de notification push d'Apple![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/mobilepush/t_push_provider_ios.html "Icône de lien externe"){: new_window}.
 
-   4. Pour Android, [configurez Firebase Cloud Messaging](/docs/services/mobilepush/t_push_provider_android.html){: new_window}.
+   4. Pour Android, [configurez Firebase Cloud Messaging![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/mobilepush/t_push_provider_android.html "Icône de lien externe"){: new_window}.
    
 3. Facultatif : ajoutez la fonction Analyse.
 
@@ -59,7 +64,7 @@ Assurez-vous que vous avez installé les [outils de développement requis](get_c
    
    3. Désactivez le **Mode démonstration** pour afficher vos données analytiques après avoir exécuté votre application.
    
-   4. Voir [Initiation à {{site.data.keyword.mobileanalytics_short}}](/docs/services/mobileanalytics/index.html){: new_window} pour plus d'informations sur la configuration de l'analyse.
+   4. Voir [Initiation à {{site.data.keyword.mobileanalytics_short}} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/mobileanalytics/index.html "Icône de lien externe"){: new_window} pour plus d'informations sur la configuration d'Analytics.
   
 4. Facultatif : ajoutez la fonction Authentification.
 
@@ -67,14 +72,13 @@ Assurez-vous que vous avez installé les [outils de développement requis](get_c
 
       Vous pouvez également sélectionner **Créer** dans la page **Authentification**.
 
-   2. Entrez le nom de votre service et cliquez sur
-**Créer**.
+   2. Entrez le nom de votre service et cliquez sur **Créer**.
    
    3. Activez **Authentification**.
    
    4. Sélectionnez votre fournisseur d'identité et saisissez les informations requises pour le configurer. Vous pouvez activer un seul fournisseur d'identité.
 
-   5. Voir [Initiation à {{site.data.keyword.amashort}}](/docs/services/mobileaccess/index.html){: new_window} pour plus d'informations sur la configuration de l'authentification.
+   5. Voir [Initiation à {{site.data.keyword.amashort}} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/mobileaccess/index.html "Icône de lien externe"){: new_window} pour plus d'informations sur la configuration du service Authentication.
 
 5. Générer votre code de projet.
 
@@ -184,6 +188,8 @@ Consultez d'autres tutoriels.
 ### Tutoriels du module de démarrage pour le code
 {: #tutorials_Code}
 
+* [Tutoriel - Cloudant Sync](tutorial_cloudant_synd.html)
+* [Tutoriel - {{site.data.keyword.openwhisk_short}}](tutorial_openwhisk.html)
 * [Tutoriel - {{site.data.keyword.visualrecognitionshort}}](tutorial_visual_recognition.html)
 * [Tutoriel - Watson Language](tutorial_watson_language.html)
 * [Tutoriel - Weather](tutorial_weather.html)

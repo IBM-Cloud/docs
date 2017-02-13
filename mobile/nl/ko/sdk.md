@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-14"
+  years: 2015, 2017
+lastupdated: "2017-01-17"
 
 ---
 # SDK
@@ -20,29 +20,29 @@ lastupdated: "2016-10-14"
 ### Android SDK
 {: #android_sdk}
 
-- [코어 SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core) 
-- [{{site.data.keyword.mobileanalytics_short}} SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics) 
-- [{{site.data.keyword.mobilepushshort}} SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-push) 
-- [Facebook 인증 SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-facebookauthentication) 
-- [Google 인증 SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-googleauthentication) 
+- [코어 SDK ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core "외부 링크 아이콘") 
+- [{{site.data.keyword.mobileanalytics_short}} SDK ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics "외부 링크 아이콘") 
+- [{{site.data.keyword.mobilepushshort}} SDK ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-push "외부 링크 아이콘") 
+- [Facebook 인증 SDK ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-facebookauthentication "외부 링크 아이콘") 
+- [Google 인증 SDK ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-googleauthentication "외부 링크 아이콘") 
 
 
 ### iOS SDK
 {: #ios_sdk}
 
-- [코어 SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core)
-- [{{site.data.keyword.mobileanalytics_short}} SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics) 
-- [{{site.data.keyword.mobilepushshort}} SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push) 
-- [Facebook 인증 SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-facebookauthentication)
-- [Google 인증 SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-googleauthentication) 
-- [{{site.data.keyword.amashort}} SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security) 
+- [코어 SDK ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core "외부 링크 아이콘")
+- [{{site.data.keyword.mobileanalytics_short}} SDK ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics "외부 링크 아이콘") 
+- [{{site.data.keyword.mobilepushshort}} SDK ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push "외부 링크 아이콘") 
+- [Facebook 인증 SDK ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-facebookauthentication "외부 링크 아이콘")
+- [Google 인증 SDK ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-googleauthentication "외부 링크 아이콘") 
+- [{{site.data.keyword.amashort}} SDK ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security "외부 링크 아이콘") 
 
 
 ### Cordova 플러그인
 {: #cordova_plugin}
 
-- [코어 플러그인](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
-- [{{site.data.keyword.mobilepushshort}} 플러그인](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push)
+- [코어 플러그인 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core "외부 링크 아이콘")
+- [{{site.data.keyword.mobilepushshort}} 플러그인 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push "외부 링크 아이콘")
 
 
 ## 서버 SDK
@@ -54,14 +54,14 @@ Java, NodeJS 또는 Swift 서버 애플리케이션이 있는 경우 다음 SDK�
 ### {{site.data.keyword.mobilepushshort}} 서버 SDK
 {: #push_sdk}
 
-- [{{site.data.keyword.mobilepushshort}} Java 서버 SDK](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-java) 
-- [{{site.data.keyword.mobilepushshort}} Swift 서버 SDK](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-swift) 
-- [{{site.data.keyword.mobilepushshort}} NodeJS 서버 SDK](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-nodejs)
+- [{{site.data.keyword.mobilepushshort}} Java 서버 SDK ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-java "외부 링크 아이콘") 
+- [{{site.data.keyword.mobilepushshort}} Swift 서버 SDK ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-swift "외부 링크 아이콘") 
+- [{{site.data.keyword.mobilepushshort}} NodeJS 서버 SDK ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-nodejs "외부 링크 아이콘")
 
 
 ### {{site.data.keyword.amashort}} 서버 SDK
 {: #mca_sdk}
 
-- [{{site.data.keyword.amashort}} Swift 서버 SDK](https://github.com/ibm-bluemix-mobile-services/bms-mca-serversdk-swift)
+- [{{site.data.keyword.amashort}} Swift 서버 SDK ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-mca-serversdk-swift "외부 링크 아이콘")
 
 

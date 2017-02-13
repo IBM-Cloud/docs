@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-01"
+  years: 2016, 2017
+lastupdated: "2016-12-15"
 
 ---
 {:new_window: target="_blank"}
@@ -16,7 +16,7 @@ lastupdated: "2016-12-01"
 ## 需求
 {: #tutorial_requirements}
 
-* [Bluemix](http://bluemix.net) 帐户
+* [Bluemix ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://bluemix.net "外部链接图标") 帐户
 
 
 ## 入门
@@ -36,17 +36,17 @@ lastupdated: "2016-12-01"
 
    4. 输入项目名称并单击**创建**。
 
-2. 可选：添加 Push Notifications 功能。
+2. 可选：添加 {{site.data.keyword.mobilepushshort}} 功能。
 
-   1. 在**项目概述**页面上，针对 **Push Notifications** 单击**添加**。
+   1. 在**项目概述**页面上，针对 **{{site.data.keyword.mobilepushshort}}** 单击**添加**。
 
-      或者，您可以在 **Push Notifications** 页面上单击**创建**。
+      或者，您可以在 **{{site.data.keyword.mobilepushshort}}** 页面上单击**创建**。
 
    2. 输入服务名称并单击**创建**。
 
-   3. 对于 iOS，[配置 Apple Push Notification 服务](/docs/services/mobilepush/t_push_provider_ios.html){: new_window}。
+   3. 对于 iOS，[配置 Apple PushNotification Service ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](/docs/services/mobilepush/t_push_provider_ios.html "外部链接图标"){: new_window}。
 
-   4. 对于 Android，[配置 Google Cloud Messaging](/docs/services/mobilepush/t_push_provider_android.html){: new_window}。
+   4. 对于 Android，[配置 Google 云消息传递 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](/docs/services/mobilepush/t_push_provider_android.html "外部链接图标"){: new_window}。
 
 3. 可选：添加其他功能。
 
@@ -90,16 +90,18 @@ lastupdated: "2016-12-01"
       如果表中的内容位于本地，那么您还可以使用按钮并选择表中的内容，来对其进行导入、导出或修改。
 
 	  注意：如果您导入的数据与默认数据的结构不匹配，请开启*替换模式*滑块。如果某个 .csv 文件的列比入门模板所随附的数据少，就属于这种情况。
+	  
+   6. 选择**导航**以在应用程序中定制导航操作。这是可选的，因为许多屏幕的导航操作都会基于屏幕的关系自动创建。您可以先在菜单项目列表中选择您要*从中*导航的屏幕或字段，来更改目标屏幕。然后，在“目标”屏幕字段中，选择您要其导航*到*的屏幕。 
 
-   6. 在导航中选择**用户访问权**，以修改项目的访问需求。您可以使用开关来开启和关闭用户访问权。当开启用户访问权时，您可以设置不活动用户超时和访问应用程序的用户凭证。
+   7. 在导航中选择**用户访问权**，以修改项目的访问需求。您可以使用开关来开启和关闭用户访问权。当开启用户访问权时，您可以设置不活动用户超时和访问应用程序的用户凭证。
 
-   7. 在导航菜单中选择**设置**，以修改项目的整体信息和颜色。如果您添加到项目的服务需要的话，您可在此屏幕中输入 Google API 密钥。您也通过此屏幕添加在 Apple Store 或 Google Play Store 中注册的唯一捆绑软件标识。
+   8. 在导航菜单中选择**设置**，以修改项目的整体信息和颜色。如果您添加到项目的服务需要的话，您可在此屏幕中输入 Google API 密钥。您也通过此屏幕添加在 Apple Store 或 Google Play Store 中注册的唯一捆绑软件标识。
 
       如果您想要向项目添加 IBM MobileFirst Foundation SDK，请开启此开关。
 
-   8. 如果您在*设置*屏幕中开启此开关以向项目添加 IBM MobileFirst Platform Foundation，那么导航中会显示 **Foundation** 选项。选择 **Foundation** 并完成 IBM MobileFirst Platform Foundation 特定的必要信息。
+   9. 如果您在*设置*屏幕中开启此开关以向项目添加 IBM MobileFirst Platform Foundation，那么导航中会显示 **Foundation** 选项。选择 **Foundation** 并完成 IBM MobileFirst Platform Foundation 特定的必要信息。
 
-   9. 在导航菜单中选择**发布**，以输入创建移动应用程序所需的最终信息。您可以输入适用于 iOS 的捆绑软件标识和适用于 Android 的应用程序标识。
+   10. 在导航菜单中选择**发布**，以输入创建移动应用程序所需的最终信息。您可以输入适用于 iOS 的捆绑软件标识和适用于 Android 的应用程序标识。
 
        如果您在创建 iOS 应用程序，那么您必须从 Apple 供应门户网站，获取捆绑软件标识、*.p12* 文件形式的分发证书和 *.mobileprovision* 文件形式的供应概要文件。这三项应该在您将应用程序发布到 Apple Store 的同时，在您计划使用的相同计算机上创建。分发证书和供应概要文件必须以捆绑软件标识为基础。 	
 
@@ -125,4 +127,22 @@ lastupdated: "2016-12-01"
 ## 接下来执行的操作
 {: #tutorial_next}
 
-[立即试用！](http://console.{DomainName}/mobile/create-project?starter=fb5e31a9-1186-4d46-939e-2f620f35b83b){: new_window}
+[立即使用！![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://console.{DomainName}/mobile/create-project?starter=fb5e31a9-1186-4d46-939e-2f620f35b83b "外部链接图标"){: new_window}
+
+
+### UI 入门模板教程
+{: #tutorials_UI}
+
+* [教程 - Store Catalog](tutorial_store_catalog.html)
+
+
+### 代码入门模板教程
+{: #tutorials_Code}
+
+* [教程 - 基本](tutorial.html)
+* [教程 - Cloudant Sync](tutorial_cloudant_synd.html)
+* [教程 - {{site.data.keyword.openwhisk_short}}](tutorial_openwhisk.html)
+* [教程 - {{site.data.keyword.visualrecognitionshort}}](tutorial_visual_recognition.html)
+* [教程 - Watson Language](tutorial_watson_language.html)
+* [教程 - Weather](tutorial_weather.html)
+

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-02"
+  years: 2016, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -20,7 +20,7 @@ La seguente esercitazione end-to-end spiega i passi per creare un progetto da un
 ### Installazione degli strumenti per sviluppatori
 {: #dev_tools}
 
-Assicurati di aver installato gli [strumenti per sviluppatori prerequisiti](get_code.html#prereq-dev-tools){: new_window}.
+Assicurati di aver installato gli [strumenti per sviluppatori prerequisiti ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](get_code.html#prereq-dev-tools "Icona link esterno"){: new_window}.
 
 
 ### Creazione di un progetto dallo starter codice Cloudant Sync
@@ -42,13 +42,13 @@ Assicurati di aver installato gli [strumenti per sviluppatori prerequisiti](get_
 
 2. Aggiungi la funzionalità Data. Puoi creare una nuova istanza del servizio {{site.data.keyword.cloudant}} o aggiungerne una esistente.
 
-   1. Fai clic su **Aggiungi** per **Data** nella pagina **Panoramica progetto**.
+   1. Fai clic su **Visualizza** sul tile **Data** nella pagina **Panoramica progetto**.
 
-      In alternativa, puoi fare clic su **Crea** o **Aggiungi esistente** dalla pagina **Data**.
+      In alternativa, puoi fare clic su **Crea** o **Aggiungi esistente** e quindi su **Cloudant NoSQL DB** nella pagina **Data**.
       
    2. Facoltativo: se hai scelto di creare una nuova istanza, immetti il nome del servizio e fai clic su **Crea**.
 
-   3. Facoltativo: se hai scelto di aggiungere un'istanza del servizio esistente, seleziona la tua istanza dall'elenco e fai clic su **Aggiungi**.
+   3. Facoltativo: se hai scelto di aggiungere un'istanza del servizio esistente, seleziona la tua istanza dall'elenco e fai clic su **Aggiungi esistente**.
 
    4. Fai clic sull'icona **Menu** nel tile del servizio e seleziona **Avvia...** per avviare la tua istanza del servizio.
 
@@ -58,15 +58,15 @@ Assicurati di aver installato gli [strumenti per sviluppatori prerequisiti](get_
 
       3. Fai clic sull'icona **+** accanto a **Tutti i documenti** per aggiungere i documenti.
 
-3. Facoltativo: aggiungi la funzionalità Push Notifications.
+3. Facoltativo: aggiungi la funzionalità {{site.data.keyword.mobilepushshort}}.
 
-   1. Fai clic su **Aggiungi** per **Push Notifications** dalla pagina **Panoramica progetto**.
+   1. Fai clic su **Aggiungi** per **{{site.data.keyword.mobilepushshort}}** nella pagina **Panoramica progetto**.
 
-      In alternativa puoi fare clic su **Crea** dalla pagina **Push Notifications**.
+      In alternativa puoi fare clic su **Crea** dalla pagina **{{site.data.keyword.mobilepushshort}}**.
 
    2. Immetti il nome del tuo servizio e fai clic su **Crea**.
 
-   3. Per Android, [configura FCM (Firebase Cloud Messaging)](/docs/services/mobilepush/t_push_provider_android.html){: new_window}.
+   3. Per Android, [configura Firebase Cloud Messaging ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/services/mobilepush/t_push_provider_android.html "Icona link esterno"){: new_window}.
    
 4. Facoltativo: aggiungi la funzionalità Analytics.
 
@@ -78,7 +78,7 @@ Assicurati di aver installato gli [strumenti per sviluppatori prerequisiti](get_
    
    3. Disattiva la **Modalità demo** per visualizzare i tuoi dati di analisi dopo l'esecuzione della tua applicazione.
    
-   4. Consulta [Introduzione a {{site.data.keyword.mobileanalytics_short}}](/docs/services/mobileanalytics/index.html){: new_window} per ulteriori informazioni sulla configurazione di Analytics.
+   4. Vedi [Introduzione a {{site.data.keyword.mobileanalytics_short}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/services/mobileanalytics/index.html "Icona link esterno"){: new_window} per ulteriori informazioni sulla configurazione di Analytics.
   
 5. Facoltativo: aggiungi la funzionalità Authentication.
 
@@ -92,7 +92,7 @@ Assicurati di aver installato gli [strumenti per sviluppatori prerequisiti](get_
    
    4. Seleziona il tuo provider di identità ed immetti le informazioni richieste per configurarlo. Puoi abilitare solo un provider di identità.
 
-   5. Consulta [Introduzione a {{site.data.keyword.amashort}}](/docs/services/mobileaccess/index.html){: new_window} per ulteriori informazioni sulla configurazione di Authentication.
+   5. Vedi [Introduzione a {{site.data.keyword.amashort}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/services/mobileaccess/index.html "Icona link esterno"){: new_window} per ulteriori informazioni sulla configurazione di Authentication.
 
 6. Genera il tuo codice del progetto.
 
@@ -151,6 +151,7 @@ Visualizza altre esercitazioni.
 {: #tutorials_Code}
 
 * [Esercitazione - Di base](tutorial.html)
+* [Esercitazione - {{site.data.keyword.openwhisk_short}}](tutorial_openwhisk.html)
 * [Esercitazione - {{site.data.keyword.visualrecognitionshort}}](tutorial_visual_recognition.html)
 * [Esercitazione - Linguaggio Watson](tutorial_watson_language.html)
 * [Esercitazione - Weather ](tutorial_weather.html)

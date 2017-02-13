@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-01"
+  years: 2016, 2017
+lastupdated: "2016-12-15"
 
 ---
 {:new_window: target="_blank"}
@@ -16,7 +16,7 @@ El Iniciador de IU del Catálogo de almacenamiento de {{site.data.keyword.Bluemi
 ## Requisitos
 {: #tutorial_requirements}
 
-* Una cuenta de [Bluemix](http://bluemix.net)
+* Una cuenta de [Bluemix ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](http://bluemix.net "icono de enlace externo")
 
 
 ## Guía de inicio
@@ -36,17 +36,17 @@ Para comenzar a utilizar rápidamente el Iniciador de IU del Catálogo de almace
 
    4. Especifique el nombre de proyecto y pulse **Crear**.
 
-2. Opcional: Añada capacidad de notificaciones Push.
+2. Opcional: Añada la función de {{site.data.keyword.mobilepushshort}}. 
 
-   1. Pulse **Añadir** para **Notificaciones Push** en la página **Visión general del proyecto**.
+   1. Pulse **Añadir** para **{{site.data.keyword.mobilepushshort}}** en la página **Visión general del proyecto**.
 
-      De forma alternativa, puede pulsar **Crear** en la página **Notificaciones Push**.
+      De forma alternativa, puede pulsar **Crear** en la página **{{site.data.keyword.mobilepushshort}}**. 
 
    2. Especifique el nombre del servicio y pulse **Crear**.
 
-   3. Para iOS, [configure el Servicio de notificaciones Push de Apple](/docs/services/mobilepush/t_push_provider_ios.html){: new_window}.
+   3. Para iOS, [configure el servicio de notificación Push de Apple ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](/docs/services/mobilepush/t_push_provider_ios.html "icono de enlace externo"){: new_window}.
 
-   4. Para Android, [configure Google Cloud Messaging](/docs/services/mobilepush/t_push_provider_android.html){: new_window}.
+   4. Para Android, [configure Google Cloud Messaging ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](/docs/services/mobilepush/t_push_provider_android.html "icono de enlace externo"){: new_window}.
 
 3. Opcional: Añada otras funciones.
 
@@ -90,16 +90,18 @@ Para comenzar a utilizar rápidamente el Iniciador de IU del Catálogo de almace
       También puede importar, exportar o modificar el contenido que se encuentra en la tabla, si es local, utilizando los botones y seleccionando el contenido en la tabla.
 
 	  Aviso: Si importa datos que no coinciden con la estructura de los datos predeterminados, active el control deslizante *Sustituir esquema*. Un ejemplo sería un archivo .csv que tiene menos columnas que los datos que se proporcionan con el iniciador.
+	  
+   6. Seleccione **Navegación** para personalizar las acciones de navegación en la app. Esto es opcional ya que las acciones de navegación para muchas de las pantallas se crean automáticamente en función de las relaciones de las pantallas. Puede cambiar la pantalla de destino seleccionando la pantalla o el campo *desde* el que desea ir en la lista de elementos Menú. Luego seleccione la pantalla *a* la que desea ir en el campo Pantalla de destino.  
 
-   6. Seleccione **Acceso de usuarios** en la navegación para modificar los requisitos de acceso del proyecto. Puede activar y desactivar el acceso de usuarios con el conmutador. Cuando el acceso de usuarios esté activado, puede establecer el tiempo de espera de usuarios inactivo y las credenciales de usuarios que pueden acceder a la aplicación.
+   7. Seleccione **Acceso de usuarios** en la navegación para modificar los requisitos de acceso del proyecto. Puede activar y desactivar el acceso de usuarios con el conmutador. Cuando el acceso de usuarios esté activado, puede establecer el tiempo de espera de usuarios inactivo y las credenciales de usuarios que pueden acceder a la aplicación.
 
-   7. Seleccione **Valores** en el menú de navegación para modificar la información global y los colores para el proyecto. Esta pantalla es donde se especifica la clave de la API de Google, si es necesario para los servicios que ha añadido a su proyecto. Esta pantalla también es donde añade su identificador de paquete exclusivo registrado con la Apple Store o la Google Play Store.
+   8. Seleccione **Valores** en el menú de navegación para modificar la información global y los colores para el proyecto. Esta pantalla es donde se especifica la clave de la API de Google, si es necesario para los servicios que ha añadido a su proyecto. Esta pantalla también es donde añade su identificador de paquete exclusivo registrado con la Apple Store o la Google Play Store.
 
       Si desea añadir el IBM MobileFirst Foundation SDK al proyecto, active el conmutador.
 
-   8. Si ha alternado el conmutador para añadir IBM MobileFirst Platform Foundation a su proyecto en la pantalla *Valores*, se mostrará una selección **Foundation** en la navegación. Seleccione **Foundation** y complete la información necesaria específica para IBM MobileFirst Platform Foundation.
+   9. Si ha alternado el conmutador para añadir IBM MobileFirst Platform Foundation a su proyecto en la pantalla *Valores*, se mostrará una selección **Foundation** en la navegación. Seleccione **Foundation** y complete la información necesaria específica para IBM MobileFirst Platform Foundation.
 
-   9. Seleccione **Publicar** en el menú de navegación para especificar la información final necesaria para crear la aplicación móvil. Puede especificar el identificador de paquetes para iOS y el identificador de aplicaciones para Android.
+   10. Seleccione **Publicar** en el menú de navegación para especificar la información final necesaria para crear la aplicación móvil. Puede especificar el identificador de paquetes para iOS y el identificador de aplicaciones para Android.
 
        Si está creando una aplicación de iOS, debe obtener el Identificador de paquetes, el Certificado de distribución como un archivo *.p12* y el Perfil de suministro como un archivo *.mobileprovision* desde el portal de suministro de Apple. El árbol debería crearse al mismo tiempo y con el mismo sistema con el que piensa utilizarlo al publicar la aplicación en la Apple Store. El Certificado de distribución y el Perfil de suministro deben basarse en el Identificador de paquetes. 	
 
@@ -125,4 +127,22 @@ Para comenzar a utilizar rápidamente el Iniciador de IU del Catálogo de almace
 ## Qué hacer a continuación
 {: #tutorial_next}
 
-[Pruébelo.](http://console.{DomainName}/mobile/create-project?starter=fb5e31a9-1186-4d46-939e-2f620f35b83b){: new_window}
+[¡Pruébelo!![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](http://console.{DomainName}/mobile/create-project?starter=fb5e31a9-1186-4d46-939e-2f620f35b83b "icono de enlace externo"){: new_window}
+
+
+### Guías de aprendizaje del Iniciador de IU
+{: #tutorials_UI}
+
+* [Guía de aprendizaje: Catálogo de almacenamiento](tutorial_store_catalog.html)
+
+
+### Guías de aprendizaje del Iniciador de código
+{: #tutorials_Code}
+
+* [Guía de aprendizaje: Basic](tutorial.html)
+* [Guía de aprendizaje: Cloudant Sync](tutorial_cloudant_synd.html)
+* [Guía de aprendizaje: {{site.data.keyword.openwhisk_short}}](tutorial_openwhisk.html)
+* [Guía de aprendizaje: {{site.data.keyword.visualrecognitionshort}}](tutorial_visual_recognition.html)
+* [Guía de aprendizaje: Lenguaje Watson](tutorial_watson_language.html)
+* [Guía de aprendizaje: Weather](tutorial_weather.html)
+

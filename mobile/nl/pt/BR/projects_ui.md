@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-20"
+  years: 2016, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -46,9 +46,7 @@ também poderá abrir o projeto no Construtor de UI (interface com o usuário) d
 	
 	4. Insira um nome para seu projeto e selecione **Criar**.
 	
-2. Faça suas seleções na tela **Visão geral do projeto**.  A
-tela **Visão geral do projeto** exibe informações sobre seu projeto e
-os recursos opcionais que podem ser incluídos em seu projeto, como Notificações push.  
+2. Faça suas seleções na tela **Visão geral do projeto**.  A tela **Visão geral do projeto** exibe informações sobre o projeto e os recursos opcionais que podem ser incluídos no projeto, como {{site.data.keyword.mobilepushshort}}.  
 
 	1. Opcional: selecione **Incluir** para incluir um dos
 recursos listados em seu projeto. Edite o **Nome do serviço** para seu serviço e clique em **Criar**. Ao incluir serviços em seu projeto, você é vinculado à página do {{site.data.keyword.Bluemix_notm}} para tal serviço. Configure
@@ -59,7 +57,7 @@ serviço.
 
 3. Projete sua interface com o usuário usando o Construtor de UI (interface com o usuário).
 
-   Nota: Como os Iniciadores de código não têm uma interface com o usuário customizável, a guia *Design* não está disponível.
+   **Nota:** como os Iniciadores de código não têm uma interface com o usuário customizável, a guia *Design* não está disponível.
 
     1. Selecione **Construtor de UI (interface com o usuário)** no menu de navegação para
 customizar o design de seu app. 
@@ -72,8 +70,8 @@ de UI.
 	2. Customize o layout do seu app na guia **Telas**.
 	
 	3. Inclua novas telas selecionando **Criar tela**. Nomeie uma nova tela para
-facilitar a consulta em seu app. É possível selecionar entre os tipos de tela a seguir:  
-	    * Menu
+facilitar a consulta em seu app. É possível selecionar entre os tipos de tela a seguir: 
+		* Menu
 		* Listar
 		* Map
 		* Customizado 
@@ -108,20 +106,21 @@ que você usar. É possível selecionar dentre as opções de origem de dados a 
 		* Excel Online
 		* Google Drive
 	
-	É possível também importar, exportar ou modificar o conteúdo que está na tabela,
+		É possível também importar, exportar ou modificar o conteúdo que está na tabela,
 se ele for local, usando os botões e selecionando o conteúdo na tabela.
 	     
-		 Aviso: se você importar dados que não correspondem à estrutura dos dados
-padrão, ative a régua de controle *Substituir esquema*. Um exemplo disso é
+		**Nota:** se você importar dados que não correspondem à estrutura dos dados padrão, ative a régua de controle *Substituir esquema*. Um exemplo disso é
 um arquivo .csv que tem menos colunas do que os dados que são fornecidos com seu
 iniciador.
 		 
-	6. Selecione **Acesso do usuário** na navegação para modificar os
+	6. Selecione **Navegação** para customizar as ações de navegação em seu app. Isso é opcional porque as ações de navegação para muitas telas são criadas automaticamente com base nos relacionamentos das telas. É possível mudar a tela de destino selecionando primeiro a tela ou o campo *a partir do qual* você deseja navegar na lista de itens de Menu. Em seguida, selecione a tela *para a qual* deseja navegar no campo da tela de Destino. 
+		 
+	7. Selecione **Acesso do usuário** na navegação para modificar os
 requisitos de acesso de seu projeto. É possível ativar e desativar o acesso do usuário
 com o comutador. Quando o acesso do usuário está ativado, é possível configurar o
 tempo limite de usuário inativo e as credenciais dos usuários que podem acessar o app.
 	
-	7. Selecione **Configurações** no menu de navegação para
+	8. Selecione **Configurações** no menu de navegação para
 modificar as informações gerais e as cores do projeto. Essa tela é onde você insere sua
 chave API do Google, se for necessário para os recursos que você incluiu em seu projeto. Essa
 tela é também onde você inclui seu identificador de pacote configurável exclusivo que é
@@ -130,24 +129,23 @@ registrado na Apple Store ou Google Play Store.
 		Se você desejar incluir o IBM MobileFirst Foundation SDK em seu projeto, ative
 o comutador.
 		
-	8. Se você alternou o comutador para incluir o IBM MobileFirst Platform
+	9. Se você alternou o comutador para incluir o IBM MobileFirst Platform
 Foundation em seu projeto na tela *Configurações*, uma seleção
 **Foundation** será exibida na navegação. Selecione
 **Foundation** e conclua as informações necessárias que são
 específicas do IBM MobileFirst Platform Foundation.
 	
-	9. Selecione **Publicar** no menu de navegação para inserir as informações finais
+	10. Selecione **Publicar** no menu de navegação para inserir as informações finais
 para criar seu app móvel. É possível inserir seu identificador de Pacote configurável para iOS e o
 identificador de Aplicativo para Android.
 	
-	Se você estiver criando um app iOS, deverá obter o Identificador de pacote
-configurável, o Certificado de distribuição como um arquivo *.p12* e o
-Perfil de fornecimento como um arquivo *.mobileprovision* no portal de
+		Se você estiver criando um app iOS, deverá obter o Identificador de pacote
+configurável, o Certificado de distribuição como um arquivo `.p12` e o
+Perfil de fornecimento como um arquivo `.mobileprovision` no portal de
 fornecimento da Apple. Os três devem ser criados ao mesmo tempo e com o mesmo computador
 que você planeja usar quando postar seu aplicativo na Apple store. O Certificado de
 distribuição e o Perfil de fornecimento devem ser baseados no Identificador de pacote configurável. 	
-
-4.  Volte para a tela *Visão geral do projeto* para recuperar o
+4. Volte para a tela *Visão geral do projeto* para recuperar o
 código de seu app e teste-o! É possível fazer download do código diretamente para os
 sistemas operacionais iOS ou Android, ou varrendo um código QR para o sistema operacional
 Android. 

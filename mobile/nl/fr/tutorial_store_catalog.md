@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2016 lastupdated: "2016-12-01"
+  years: 2016, 2017
+lastupdated: "2016-12-15"
 
 ---
 {:new_window: target="_blank"}
@@ -19,7 +20,7 @@ points d'intégration pour chacun des services {{site.data.keyword.Bluemix_notm}
 ## Configuration requise
 {: #tutorial_requirements}
 
-* Un compte [Bluemix](http://bluemix.net)
+* Un compte [Bluemix ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](http://bluemix.net "Icône de lien externe")
 
 
 ## Initiation
@@ -46,25 +47,21 @@ sur **Créer un projet**.
    4. Entrez le nom de votre projet et cliquez sur
 **Créer**.
 
-2. Facultatif : ajoutez la fonction Notifications push.
+2. Facultatif : Ajoutez la fonctionnalité {{site.data.keyword.mobilepushshort}}.
 
-   1. Cliquez sur **Ajouter** pour
-**Notifications push** dans la page **Présentation
-du projet**.
+   1. Cliquez sur **Ajouter** pour **{{site.data.keyword.mobilepushshort}}** sur la page
+**Présentation du projet**.
 
-      Vous pouvez également cliquer sur **Créer**
-dans la page **Notifications push**.
+      Vous pouvez également cliquer sur **Créer** sur la page **{{site.data.keyword.mobilepushshort}}**.
 
    2. Entrez le nom de votre service et cliquez sur
 **Créer**.
 
-   3. Pour iOS,
-[configurez Apple
-Push Notification Service](/docs/services/mobilepush/t_push_provider_ios.html){: new_window}.
+   3. Pour iOS, [configurez le service de notification push
+d'Apple![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/mobilepush/t_push_provider_ios.html "Icône de lien externe"){: new_window}.
 
-   4. Pour Android,
-[configurez
-Google Cloud Messaging](/docs/services/mobilepush/t_push_provider_android.html){: new_window}.
+   4. Pour Android, [configurez Google Cloud Messaging
+![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/mobilepush/t_push_provider_android.html "Icône de lien externe"){: new_window}.
 
 3. Facultatif : ajoutez d'autres fonctionnalités.
 
@@ -89,7 +86,9 @@ la conception de votre application.
 application et de simuler son apparence.
 
    3. Si vous le souhaitez, ajoutez de nouveaux écrans en sélectionnant
-**Ajouter des écrans**. Indiquez le nom des nouveaux écrans pour y faire référence plus facilement dans votre application. Les nouveaux écrans sont créés au même niveau que l'écran principal, quel que soit l'élément sélectionné dans l'arborescence. Vous pouvez sélectionnez les types d'écran suivants :
+**Ajouter des écrans**. Attribuez un nom à vos nouveaux écrans pour vous y référer plus
+facilement dans votre application. De nouveaux écrans sont créés au même niveau que l'écran principal, quelle que soit votre sélection dans
+l'arborescence. Vous pouvez sélectionnez les types d'écran suivants :
       * Menu
       * Liste
       * Carte
@@ -134,15 +133,20 @@ du tableau en le sélectionnant et en utilisant les différents boutons.
 la structure des données par défaut, activez le curseur de remplacement de
 schéma. Par exemple, dans le cas d'un fichier .csv qui comporte moins de
 colonnes que les données fournies avec le module de démarrage.
+	  
+   6. Sélectionnez **Navigation** pour personnaliser les actions de navigation dans votre application. Cette action est facultative car les
+actions de navigation pour beaucoup d'écrans sont créées automatiquement en fonction des relations entre les écrans. Vous pouvez changer l'écran cible en
+sélectionnant d'abord l'écran ou la zone *depuis* lesquels vous désirez naviguer dans la liste des options de menu. Sélectionnez ensuite l'écran
+*vers lequel vous désirez naviguer* dans la zone Ecran cible. 
 
-   6. Sélectionnez **Accès utilisateur** dans la
+   7. Sélectionnez **Accès utilisateur** dans la
 navigation afin de modifier les droits d'accès pour votre projet. Vous pouvez
 activer et désactiver l'accès utilisateur à l'aide de l'interrupteur. Lorsque
 l'accès utilisateur est activé, vous pouvez définir un délai d'expiration pour
 les utilisateurs inactifs et les données d'identification des utilisateurs qui
 peuvent accéder à l'application.
 
-   7. Sélectionnez **Paramètres** dans le menu de
+   8. Sélectionnez **Paramètres** dans le menu de
 navigation pour modifier les informations générales relatives aux couleurs de
 votre projet. Cet écran vous permet de saisir votre clé d'API Google, si elle
 est requise pour les services que vous avez ajoutés au projet. Il vous permet
@@ -152,13 +156,13 @@ Store ou le Google Play Store.
       Si vous voulez ajouter le kit de développement de logiciels (SDK)
 IBM MobileFirst Foundation au projet, placez l'interrupteur en position active.
 
-   8. Si vous avez positionné l'interrupteur de manière à ajouter IBM
+   9. Si vous avez positionné l'interrupteur de manière à ajouter IBM
 MobileFirst Platform Foundation à votre projet dans l'écran
 *Paramètres*, l'élément **Foundation** apparaît
 dans la navigation. Sélectionnez **Foundation** et indiquez
 les informations requises spécifiques à IBM MobileFirst Platform Foundation.
 
-   9. Sélectionnez **Publier** dans le menu de navigation afin d'entrer les informations finales requises pour créer votre application mobile. Vous pouvez entrer votre Identificateur du bundle pour iOS et l'identifiant d'application pour Android.
+   10. Sélectionnez **Publier** dans le menu de navigation afin d'entrer les informations finales requises pour créer votre application mobile. Vous pouvez entrer votre Identificateur du bundle pour iOS et l'identifiant d'application pour Android.
 
        Si vous créez une application iOS, vous devez vous procurer
 votre Identificateur de bundle, votre certificat de distribution sous forme de
@@ -194,4 +198,23 @@ simulateur.
 ## Etape suivante
 {: #tutorial_next}
 
-[Essayez !](http://console.{DomainName}/mobile/create-project?starter=fb5e31a9-1186-4d46-939e-2f620f35b83b){: new_window}
+[Essayez-le ! ![Icône de lien externe](../icons/launch-glyph.svg "Icônede lien externe")](http://console.{DomainName}/mobile/create-project?starter=fb5e31a9-1186-4d46-939e-2f620f35b83b "Icône de lien externe"){: new_window}
+
+
+
+### Tutoriels du module de démarrage pour l'interface utilisateur
+{: #tutorials_UI}
+
+* [Tutoriel - Catalogue magasin](tutorial_store_catalog.html)
+
+
+### Tutoriels du module de démarrage pour le code
+{: #tutorials_Code}
+
+* [Tutoriel - Basic](tutorial.html)
+* [Tutoriel - Cloudant Sync](tutorial_cloudant_synd.html)
+* [Tutoriel - {{site.data.keyword.openwhisk_short}}](tutorial_openwhisk.html)
+* [Tutoriel - {{site.data.keyword.visualrecognitionshort}}](tutorial_visual_recognition.html)
+* [Tutoriel - Watson Language](tutorial_watson_language.html)
+* [Tutoriel - Weather](tutorial_weather.html)
+

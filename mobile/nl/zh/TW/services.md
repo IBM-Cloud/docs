@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-18"
+  years: 2016, 2017
+lastupdated: "2017-01-11"
 
 ---
 {:new_window: target="_blank"}
@@ -27,7 +27,7 @@ lastupdated: "2016-10-18"
 <th>{{site.data.keyword.Bluemix_notm}} 行動服務</th>
 <th>說明</th>
 <tr>
-<td> <img src="images/mobile_analytics_icon.png" alt="{{site.data.keyword.mobileanalytics_short}}圖示"><br/>{{site.data.keyword.mobileanalytics_short}}（測試版）</td>
+<td> <img src="images/mobile_analytics_icon.png" alt="{{site.data.keyword.mobileanalytics_short}} 圖示"><br/>{{site.data.keyword.mobileanalytics_short}}</td>
 <td valign="top">使用 {{site.data.keyword.mobileanalytics_full}} 服務來瞭解行動應用程式的執行方式及其使用方式。<br/><br/>
 深入閱讀 <a href="/docs/services/mobileanalytics/index.html" alt="{{site.data.keyword.mobileanalytics_short}} 文件鏈結">{{site.data.keyword.mobileanalytics_short}} 文件</a>中的操作此服務。
 </td>
@@ -49,9 +49,12 @@ lastupdated: "2016-10-18"
 深入閱讀 <a href="/docs/services/MobileQualityAssurance/index.html" alt="{{site.data.keyword.mqa}} 文件鏈結">{{site.data.keyword.mqa}}文件</a>中的操作此服務。</td>
 </tr>
 <tr>
-<td><img src="images/push_icon.png" alt="「推送通知」服務圖示"><br/>{{site.data.keyword.mobilepushshort}}</td>
-<td valign="top">請使用 {{site.data.keyword.mobilepushfull}} 服務，來傳送及管理目標設為 iOS 及 Android 平台的行動推送通知。此服務可管理應用程式使用者與其裝置、裝置平台的對映，並處理如何將推送通知分派給裝置。使用此服務，您可以將播送、單點播送（根據 userID、deviceID）以及根據推送通知的標籤（或主題）傳送至行動應用程式使用者。<br/><br/>
-深入閱讀 <a href="/docs/services/mobilepush/index.html" alt="{{site.data.keyword.mobilepushshort}} 文件鏈結">{{site.data.keyword.mobilepushshort}}文件</a>中的操作此服務。</td>
+<td><img src="images/push_icon.png" alt="{{site.data.keyword.mobilepushshort}} 服務圖示"><br/>{{site.data.keyword.mobilepushshort}}</td>
+<td valign="top">{{site.data.keyword.mobilepushfull}} 服務服務提供一個統一平台，來傳送及管理目標設為各種平台的行動及 Web 推送通知。
+<br/><br/>
+{{site.data.keyword.mobilepushshort}} 可管理應用程式使用者與其裝置、裝置平台、Web 瀏覽器的對映，並處理如何將推送通知分派給他們。您可以將播送、單點播送（根據 userID、deviceID），以及標籤（或主題）當作推送通知傳送給行動及 Web 瀏覽器應用程式使用者。您也可以使用 SDK 及 REST API，進一步開發用戶端應用程式。
+<br/><br/>
+在 <a href="/docs/services/mobilepush/index.html" alt="{{site.data.keyword.mobilepushshort}} 文件鏈結">{{site.data.keyword.mobilepushshort}} 文件</a>中閱讀操作此服務的相關資訊。</td>
 </table>
 
 ## 整合行動服務

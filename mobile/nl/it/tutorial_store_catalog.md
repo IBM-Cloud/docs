@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-01"
+  years: 2016, 2017
+lastupdated: "2016-12-15"
 
 ---
 {:new_window: target="_blank"}
@@ -16,7 +16,7 @@ Il starter IU catalogo negozio {{site.data.keyword.Bluemix}} fornisce una strutt
 ## Requisiti
 {: #tutorial_requirements}
 
-* Un account [Bluemix](http://bluemix.net)
+* Un account [Bluemix ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://bluemix.net "Icona link esterno")
 
 
 ## Introduzione
@@ -36,17 +36,17 @@ Per essere velocemente operativo con lo starter IU catalogo negozio, segui la se
 
    4. Immetti il nome del tuo progetto e fai clic su **Crea**.
 
-2. Facoltativo: aggiungi la funzionalità Push Notifications.
+2. Facoltativo: aggiungi la funzionalità {{site.data.keyword.mobilepushshort}}.
 
-   1. Fai clic su **Aggiungi** per **Push Notifications** nella pagina **Panoramica progetto**.
+   1. Fai clic su **Aggiungi** per **{{site.data.keyword.mobilepushshort}}** nella pagina **Panoramica progetto**.
 
-      In alternativa puoi fare clic su **Crea** nella pagina **Push Notifications**.
+      In alternativa puoi fare clic su **Crea** nella pagina **{{site.data.keyword.mobilepushshort}}**.
 
    2. Immetti il nome del tuo servizio e fai clic su **Crea**.
 
-   3. Per iOS, [configura il servizio Apple Push Notification](/docs/services/mobilepush/t_push_provider_ios.html){: new_window}.
+   3. Per iOS, [configura il servizio Apple Push Notification![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/services/mobilepush/t_push_provider_ios.html "Icona link esterno"){: new_window}.
 
-   4. Per Android, [configura GCM (Google Cloud Messaging)](/docs/services/mobilepush/t_push_provider_android.html){: new_window}.
+   4. Per Android, [configura Google Cloud Messaging ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/services/mobilepush/t_push_provider_android.html "Icona link esterno"){: new_window}.
 
 3. Facoltativo: aggiungi altre funzionalità.
 
@@ -90,16 +90,18 @@ Per essere velocemente operativo con lo starter IU catalogo negozio, segui la se
       Puoi anche importare, esportare o modificare il contenuto presente nella tabella, se in locale, utilizzando i pulsanti e selezionando il contenuto nella tabella.
 
 	  Nota: se importi dati che non corrispondono alla struttura dei dati predefiniti, attiva lo slider *Sostituisci schema*. Un esempio di questo è un file .csv con meno colonne rispetto ai dati forniti con il tuo starter.
+	  
+   6. Seleziona **Navigazione** per personalizzare le azioni di navigazione nella tua applicazione. Questa opzione è facoltativa perché per molte schermate le azioni di navigazione vengono create automaticamente in base alle relazioni delle schermate. Puoi modificare la schermata di destinazione selezionando la schermata o il campo *da* cui vuoi navigare nell'elenco delle voci di menu. Seleziona quindi la schermata *verso* cui vuoi navigare nel campo della schermata di destinazione.  
 
-   6. Seleziona **Accesso utente** nella navigazione per modificare i requisiti di accesso al tuo progetto. Puoi attivare/disattivare l'accesso utente con lo switch. Quando l'accesso utente è attivo, puoi impostare il timeout utente di inattività e le credenziali degli utenti che possono accedere all'applicazione.
+   7. Seleziona **Accesso utente** nella navigazione per modificare i requisiti di accesso al tuo progetto. Puoi attivare/disattivare l'accesso utente con lo switch. Quando l'accesso utente è attivo, puoi impostare il timeout utente di inattività e le credenziali degli utenti che possono accedere all'applicazione.
 
-   7. Seleziona **Impostazioni** nel menu di navigazione per modificare le informazioni generali e i colori per il tuo progetto. Questa schermata è dove immetti la chiave API Google, se necessaria per i servizi che hai aggiunto al tuo progetto. Questa schermata è inoltre dove aggiungi il tuo identificativo bundle univoco registrato con l'Apple Store o il Google Play Store.
+   8. Seleziona **Impostazioni** nel menu di navigazione per modificare le informazioni generali e i colori per il tuo progetto. Questa schermata è dove immetti la chiave API Google, se necessaria per i servizi che hai aggiunto al tuo progetto. Questa schermata è inoltre dove aggiungi il tuo identificativo bundle univoco registrato con l'Apple Store o il Google Play Store.
 
       Se desideri aggiungere l'SDK IBM MobileFirst Foundation al tuo progetto, attiva lo switch.
 
-   8. Se hai attivato lo switch per aggiungere IBM MobileFirst Platform Foundation al tuo progetto nella schermata *Impostazioni*, viene visualizzata una selezione **Foundation** nella navigazione. Seleziona **Foundation** e completa le informazioni necessarie specifiche per IBM MobileFirst Platform Foundation.
+   9. Se hai attivato lo switch per aggiungere IBM MobileFirst Platform Foundation al tuo progetto nella schermata *Impostazioni*, viene visualizzata una selezione **Foundation** nella navigazione. Seleziona **Foundation** e completa le informazioni necessarie specifiche per IBM MobileFirst Platform Foundation.
 
-   9. Seleziona **Pubblica** nel menu di navigazione per immettere le informazioni finali necessarie per creare la tua applicazione mobile. Puoi immettere il tuo identificativo Bundle per iOS e l'identificativo Applicazione per Android.
+   10. Seleziona **Pubblica** nel menu di navigazione per immettere le informazioni finali necessarie per creare la tua applicazione mobile. Puoi immettere il tuo identificativo Bundle per iOS e l'identificativo Applicazione per Android.
 
        Se stai creando un'applicazione iOS, devi ottenere il tuo identificativo bundle, il tuo certificato di distribuzione come ad esempio un file *.p12* e il tuo profilo di provisioning come un file *.mobileprovision* dal portale di provisioning di Apple. Possono essere creati contemporaneamente e con lo stesso computer che utilizzerai quando invierai la tua applicazione all'Apple store. Il certificato di distribuzione e il profilo di provisioning devono basarsi sull'identificativo bundle. 	
 
@@ -125,4 +127,22 @@ Per essere velocemente operativo con lo starter IU catalogo negozio, segui la se
 ## Operazioni successive
 {: #tutorial_next}
 
-[Provatela! ](http://console.{DomainName}/mobile/create-project?starter=fb5e31a9-1186-4d46-939e-2f620f35b83b){: new_window}
+[Provatela! ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://console.{DomainName}/mobile/create-project?starter=fb5e31a9-1186-4d46-939e-2f620f35b83b "Icona link esterno"){: new_window}
+
+
+### Esercitazioni starter IU
+{: #tutorials_UI}
+
+* [Esercitazione - Catalogo negozio](tutorial_store_catalog.html)
+
+
+### Esercitazioni starter codice
+{: #tutorials_Code}
+
+* [Esercitazione - Di base](tutorial.html)
+* [Esercitazione - Cloudant Sync](tutorial_cloudant_synd.html)
+* [Esercitazione - {{site.data.keyword.openwhisk_short}}](tutorial_openwhisk.html)
+* [Esercitazione - {{site.data.keyword.visualrecognitionshort}}](tutorial_visual_recognition.html)
+* [Esercitazione - Linguaggio Watson](tutorial_watson_language.html)
+* [Esercitazione - Weather ](tutorial_weather.html)
+

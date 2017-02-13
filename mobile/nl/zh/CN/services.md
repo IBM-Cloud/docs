@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-18"
+  years: 2016, 2017
+lastupdated: "2017-01-11"
 
 ---
 {:new_window: target="_blank"}
@@ -27,7 +27,7 @@ lastupdated: "2016-10-18"
 <th>{{site.data.keyword.Bluemix_notm}} Mobile Services</th>
 <th>描述</th>
 <tr>
-<td> <img src="images/mobile_analytics_icon.png" alt="{{site.data.keyword.mobileanalytics_short}}图标"><br/>{{site.data.keyword.mobileanalytics_short}} (Beta)</td>
+<td> <img src="images/mobile_analytics_icon.png" alt="{{site.data.keyword.mobileanalytics_short}} 图标"><br/>{{site.data.keyword.mobileanalytics_short}}</td>
 <td valign="top">使用 {{site.data.keyword.mobileanalytics_full}} 服务，可深入了解您的移动应用程序的性能如何，以及如何使用它们。<br/><br/>
 请阅读 <a href="/docs/services/mobileanalytics/index.html" alt="{{site.data.keyword.mobileanalytics_short}} 文档链接">{{site.data.keyword.mobileanalytics_short}} 文档</a>中有关操作此服务的更多信息。
 </td>
@@ -49,9 +49,11 @@ lastupdated: "2016-10-18"
 请在 <a href="/docs/services/MobileQualityAssurance/index.html" alt="{{site.data.keyword.mqa}} 文档链接">{{site.data.keyword.mqa}} 文档</a>中阅读有关使用此服务的更多信息。</td>
 </tr>
 <tr>
-<td><img src="images/push_icon.png" alt="Push Notifications 服务图标"><br/>{{site.data.keyword.mobilepushshort}}</td>
-<td valign="top">使用 {{site.data.keyword.mobilepushfull}} 服务可发送并管理发给 iOS 和 Android 平台的移动推送通知。此服务会管理您的应用程序用户与其设备和设备平台之间的映射，还会处理将推送通知派送给设备。使用此服务，可以向移动应用程序用户发送广播、单点广播（根据用户标识和设备标识）和基于标记（或基于主题）的推送通知。<br/><br/>
-请在 <a href="/docs/services/mobilepush/index.html" alt="{{site.data.keyword.mobilepushshort}} 文档链接">{{site.data.keyword.mobilepushshort}} 文档</a>中阅读有关使用此服务的更多信息。</td>
+<td><img src="images/push_icon.png" alt="{{site.data.keyword.mobilepushshort}} 服务图标"><br/>{{site.data.keyword.mobilepushshort}}</td>
+<td valign="top">{{site.data.keyword.mobilepushfull}} 服务提供一个统一平台来发送和管理针对平台的移动和 Web 推送通知。
+<br/><br/>
+{{site.data.keyword.mobilepushshort}} 会管理您的应用程序用户与其设备、设备平台和浏览器之间的映射，还会处理将推送通知派送给用户。您可以作为推送通知，向移动和Web 浏览器应用程序用户发送广播、单点广播（基于设备标识和用户标识）和标记（或主题）。还可以使用 SDK 和 REST API 来进一步开发您的客户机应用程序。<br/><br/>
+在 <a href="/docs/services/mobilepush/index.html" alt="{{site.data.keyword.mobilepushshort}} 文档链接">{{site.data.keyword.mobilepushshort}} 文档链接</a>中阅读有关操作此服务的更多信息。</td>
 </table>
 
 ## 集成 Mobile Services

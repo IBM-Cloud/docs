@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-13"
+  years: 2016, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -23,20 +23,20 @@ lastupdated: "2016-10-13"
 當您從 {{site.data.keyword.Bluemix_notm}} 行動儀表板使用產生的程式碼時，需要下列開發人員工具：
 
 #### Android
-* [Android Studio 2.2](https://developer.android.com/studio)
-	* 安裝最新的 [Android 7.0](https://www.android.com/versions/nougat-7-0/) 運行環境。
+* [Android Studio 2.2 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.android.com/studio "外部鏈結圖示")
+	* 安裝最新的 [Android 7.0 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://www.android.com/versions/nougat-7-0/ "外部鏈結圖示") 運行環境。
 
 #### iOS
-* [Xcode 8.0](https://developer.apple.com/xcode/)（建議）
-	* 安裝最新的 [iOS 10](http://www.apple.com/ios/ios-10/) 運行環境。
-* [Homebrew](http://brew.sh/)
+* [Xcode 8.0 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.apple.com/xcode/ "外部鏈結圖示")（建議）
+	* 安裝最新的 [iOS 10 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://www.apple.com/ios/ios-10/ "外部鏈結圖示") 運行環境。
+* [Homebrew ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://brew.sh/ "外部鏈結圖示")
 	* 協助 Apple 開發人員安裝其他工具及運行環境（例如 CocoaPods 及 Carthage）的指令行工具。
-* 用於安裝 iOS SDK 相依關係的 [CocoaPods](https://cocoapods.org/) 相依關係管理程式。請使用最新版本：
+* [CocoaPods ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://cocoapods.org/ "外部鏈結圖示") 相依關係管理程式，用於安裝 iOS SDK 相依關係。請使用最新版本：
 
 	```
 	$ sudo gem install cocoapods --pre
 	```
-* 用於安裝 Watson Developer Cloud SDK 的 [Carthage](https://github.com/Carthage/Carthage) 相依關係管理程式。
+* [Carthage ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/Carthage/Carthage "外部鏈結圖示") 相依關係管理程式，用於安裝 Watson Developer Cloud SDK。
 
 	```
 	$ brew install carthage
@@ -50,5 +50,5 @@ lastupdated: "2016-10-13"
 	$ brew install Node5
 	```
 
-* [Bluemix CLI Tools](http://clis.ng.bluemix.net/ui/home.html)。
+* [Bluemix CLI 工具 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://clis.ng.bluemix.net/ui/home.html "外部鏈結圖示")。
 使用 Bluemix 從指令行介面輕鬆地部署 Cloud Foundry 運行環境的指令行工具。  

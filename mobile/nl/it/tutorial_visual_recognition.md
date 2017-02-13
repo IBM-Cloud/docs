@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-21"
+  years: 2016, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -16,7 +16,7 @@ La seguente esercitazione end-to-end spiega i passi per creare un progetto da un
 ### Installazione degli strumenti per sviluppatori
 {: #dev_tools}
 
-Assicurati di aver installato gli [strumenti per sviluppatori prerequisiti](get_code.html#prereq-dev-tools){: new_window}.
+Assicurati di aver installato gli [strumenti per sviluppatori prerequisiti ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](get_code.html#prereq-dev-tools "Icona link esterno"){: new_window}.
 
 
 ### Creazione di un progetto da uno starter codice {{site.data.keyword.visualrecognitionshort}}
@@ -36,17 +36,17 @@ Assicurati di aver installato gli [strumenti per sviluppatori prerequisiti](get_
    
    5. Fai clic su **Crea**.
 
-2. Facoltativo: aggiungi la funzionalità Push Notifications.
+2. Facoltativo: aggiungi la funzionalità {{site.data.keyword.mobilepushshort}}.
 
-   1. Fai clic su **Aggiungi** per **Push Notifications** dalla pagina **Panoramica progetto**.
+   1. Fai clic su **Aggiungi** per **{{site.data.keyword.mobilepushshort}}** nella pagina **Panoramica progetto**.
 
-      In alternativa puoi fare clic su **Crea** dalla pagina **Push Notifications**.
+      In alternativa puoi fare clic su **Crea** dalla pagina **{{site.data.keyword.mobilepushshort}}**.
 
    2. Immetti il nome del tuo servizio e fai clic su **Crea**.
 
-   3. Per iOS, [configura il servizio Apple Push Notification](/docs/services/mobilepush/t_push_provider_ios.html){: new_window}.
+   3. Per iOS, [configura il servizio Apple Push Notification![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/services/mobilepush/t_push_provider_ios.html "Icona link esterno"){: new_window}.
 
-   4. Per Android, [configura FCM (Firebase Cloud Messaging)](/docs/services/mobilepush/t_push_provider_android.html){: new_window}.
+   4. Per Android, [configura Firebase Cloud Messaging ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/services/mobilepush/t_push_provider_android.html "Icona link esterno"){: new_window}.
    
 3. Facoltativo: aggiungi la funzionalità Analytics.
 
@@ -58,7 +58,7 @@ Assicurati di aver installato gli [strumenti per sviluppatori prerequisiti](get_
    
    3. Disattiva la **Modalità demo** per visualizzare i tuoi dati di analisi dopo l'esecuzione della tua applicazione.
    
-   4. Consulta [Introduzione a {{site.data.keyword.mobileanalytics_short}}](/docs/services/mobileanalytics/index.html){: new_window} per ulteriori informazioni sulla configurazione di Analytics.
+   4. Vedi [Introduzione a {{site.data.keyword.mobileanalytics_short}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/services/mobileanalytics/index.html "Icona link esterno"){: new_window} per ulteriori informazioni sulla configurazione di Analytics.
   
 4. Facoltativo: aggiungi la funzionalità Authentication.
 
@@ -72,7 +72,7 @@ Assicurati di aver installato gli [strumenti per sviluppatori prerequisiti](get_
    
    4. Seleziona il tuo provider di identità ed immetti le informazioni richieste per configurarlo. Puoi abilitare solo un provider di identità.
 
-   5. Consulta [Introduzione a {{site.data.keyword.amashort}}](/docs/services/mobileaccess/index.html){: new_window} per ulteriori informazioni sulla configurazione di Authentication.
+   5. Vedi [Introduzione a {{site.data.keyword.amashort}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/services/mobileaccess/index.html "Icona link esterno"){: new_window} per ulteriori informazioni sulla configurazione di Authentication.
 
 5. Genera il tuo codice del progetto.
 
@@ -94,7 +94,7 @@ Assicurati di aver installato gli [strumenti per sviluppatori prerequisiti](get_
 
 2. Apri il file `README.md` in un visualizzatore Markdown per rivedere i passi di configurazione del progetto.
 
-   1. Crea la tua istanza del servizio [{{site.data.keyword.visualrecognitionshort}}](https://console.{DomainName}/catalog/services/visual-recognition/){: new_window}.
+   1. Crea la tua istanza del servizio [{{site.data.keyword.visualrecognitionshort}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://console.{DomainName}/catalog/services/visual-recognition/ "Icona link esterno"){: new_window}.
    
    2. Apri il tuo terminale e passa alla tua cartella del progetto.
    
@@ -124,7 +124,7 @@ Assicurati di aver installato gli [strumenti per sviluppatori prerequisiti](get_
 
 2. Apri il file `README.md` in un visualizzatore Markdown per configurare il tuo progetto.
 
-   1. Crea la tua istanza del servizio [{{site.data.keyword.visualrecognitionshort}}](https://console.{DomainName}/catalog/services/visual-recognition/){: new_window}.
+   1. Crea la tua istanza del servizio [{{site.data.keyword.visualrecognitionshort}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://console.{DomainName}/catalog/services/visual-recognition/ "Icona link esterno"){: new_window}.
    
       Salta questo passo se hai già un'istanza del servizio {{site.data.keyword.visualrecognitionshort}}.
    
@@ -154,5 +154,9 @@ Visualizza altre esercitazioni.
 ### Esercitazioni starter codice
 {: #tutorials_Code}
 
+* [Esercitazione - Di base](tutorial.html)
+* [Esercitazione - Cloudant Sync](tutorial_cloudant_synd.html)
+* [Esercitazione - {{site.data.keyword.openwhisk_short}}](tutorial_openwhisk.html)
 * [Esercitazione - Linguaggio Watson](tutorial_watson_language.html)
 * [Esercitazione - Weather ](tutorial_weather.html)
+

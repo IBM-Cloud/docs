@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-21"
+  years: 2016, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -16,8 +16,8 @@ lastupdated: "2016-10-21"
 ## 必要条件
 {: #tutorial_requirements}
 
-* [Bluemix](http://bluemix.net) アカウント
-* [Bluemix カタログ](https://console.{DomainName}/catalog/)から取得した [Language Translator](https://console.{DomainName}/catalog/services/language-translator/) サービス・インスタンスおよび [Text to Speech](https://console.{DomainName}/catalog/services/text-to-speech/) サービス・インスタンス
+* [Bluemix ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://bluemix.net "外部リンク・アイコン") アカウント
+* [Bluemix カタログ ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.{DomainName}/catalog/ "外部リンク・アイコン") から取得される [Language Translator ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.{DomainName}/catalog/services/language-translator/ "外部リンク・アイコン")サービス・インスタンスと [Text to Speech ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.{DomainName}/catalog/services/text-to-speech/ "外部リンク・アイコン")サービス・インスタンス。
 
 
 ## 開始
@@ -37,17 +37,17 @@ Watson Language コード・スターターを使用して素早く稼働中に�
 
    4. プロジェクト名を入力し、**「作成」**をクリックします。
 
-2. オプション: Push Notifications (プッシュ通知) 機能を追加します。
+2. オプション: {{site.data.keyword.mobilepushshort}} 機能を追加します。
 
-   1. **「プロジェクト概要 (Project Overview)」**ページで、**「Push Notifications」**に対して**「追加」**をクリックします。
+   1. **「プロジェクト概要 (Project Overview)」**ページで**「{{site.data.keyword.mobilepushshort}}」**に対して**「追加」**をクリックします。
 
-      代替方法として、**「Push Notifications」**ページから**「作成」**をクリックすることもできます。
+      代替方法として、**「{{site.data.keyword.mobilepushshort}}」**ページから**「作成」**をクリックすることもできます。
 
    2. サービス名を入力し、**「作成」**をクリックします。
 
-   3. iOS の場合、[Apple プッシュ通知サービスの構成](/docs/services/mobilepush/t_push_provider_ios.html){: new_window}を行います。
+   3. iOS の場合、[Apple Push Notification Service を構成します![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/mobilepush/t_push_provider_ios.html "外部リンク・アイコン"){: new_window}。
 
-   4. Android の場合、[Google クラウド・メッセージングの構成](/docs/services/mobilepush/t_push_provider_android.html){: new_window}を行います。
+   4. Android の場合、[Google Cloud Messaging を構成します![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/mobilepush/t_push_provider_android.html "外部リンク・アイコン"){: new_window}。
    
 3. オプション: Analytics (分析) 機能を追加します。
 
@@ -58,6 +58,8 @@ Watson Language コード・スターターを使用して素早く稼働中に�
    2. サービス名を入力し、**「作成」**をクリックします。
    
    3. アプリを実行した後、**「デモ・モード」**をオフに切り替えて、分析データを確認できます。
+
+   4. Analytics の構成について詳しくは、[「{{site.data.keyword.mobileanalytics_short}} 概説」![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/mobileanalytics/index.html "外部リンク・アイコン"){: new_window}を参照してください。
 
 4. オプション: Authentication (認証) 機能を追加します。
 
@@ -71,7 +73,7 @@ Watson Language コード・スターターを使用して素早く稼働中に�
    
    4. ID プロバイダーを選択し、必要な情報を入力して構成します。ID プロバイダーは 1 つだけ有効にすることができます。
 
-   5. 認証の構成については、[Mobile Client Access 概説](/docs/services/mobileaccess/index.html){: new_window}を参照してください。
+   5. 認証の構成について詳しくは、[「Mobile Client Access 概説」![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/mobileaccess/index.html "外部リンク・アイコン"){: new_window}を参照してください。
 
 5. プロジェクトをダウンロードします。
 
@@ -85,4 +87,22 @@ Watson Language コード・スターターを使用して素早く稼働中に�
 ## 次のタスク
 {: #tutorial_next}
 
-[試してみてください](http://console.{DomainName}/mobile/create-project?starter=512568a1-72db-35c7-b9c4-4f3e3bc89375){: new_window}
+[試してみてください![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://console.{DomainName}/mobile/create-project?starter=512568a1-72db-35c7-b9c4-4f3e3bc89375 "外部リンク・アイコン"){: new_window}
+
+
+
+### UI スターターのチュートリアル
+{: #tutorials_UI}
+
+* [チュートリアル - Store Catalog](tutorial_store_catalog.html)
+
+
+### コード・スターターのチュートリアル
+{: #tutorials_Code}
+
+* [チュートリアル - ベーシック](tutorial.html)
+* [チュートリアル - Cloudant Sync](tutorial_cloudant_synd.html)
+* [チュートリアル - {{site.data.keyword.openwhisk_short}}](tutorial_openwhisk.html)
+* [チュートリアル - {{site.data.keyword.visualrecognitionshort}}](tutorial_visual_recognition.html)
+* [チュートリアル - Weather](tutorial_weather.html)
+

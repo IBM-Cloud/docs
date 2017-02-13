@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-20"
+  years: 2016, 2017
+lastupdated: "2016-12-16"
 
 ---
 {:new_window: target="_blank"}
@@ -28,11 +28,8 @@ projeto, selecionando-o na página Projetos. Isso exibe a página Visão
 geral do projeto, que inclui os serviços que são configurados e
 estão disponíveis para o projeto. Serviços são recursos
 separados que estendem seu app incluindo uma função. Como eles são
-incluídos individualmente, é possível incluir somente os serviços que você precisa, como serviços de push ou outros serviços. Ao
-incluir um serviço no seu projeto na página Visão geral do projeto e
-seguir as instruções para configurá-lo, ele será automaticamente
-associado ao seu aplicativo.
+incluídos individualmente, é possível incluir somente os serviços que você precisa, como serviços de push ou outros serviços. Ao incluir um serviço em seu projeto na página Visão geral do projeto e seguir as instruções para configurá-lo, ele será automaticamente associado ao seu app. Para obter mais informações sobre a página Visão geral do projeto, veja [Página Visão geral do projeto](project_overview_page.html).
 
 Imediatamente após criar seu projeto, deve-se selecionar um
-iniciador para ele.  Para saber mais sobre Iniciadores,
+iniciador para ele. Para saber mais sobre Iniciadores,
 consulte [Iniciadores](starters.html).

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-21"
+  years: 2016, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -16,7 +16,7 @@ Das folgende umfassende Lernprogramm führt Sie durch die Schritte zur Erstellun
 ### Entwicklertools installieren
 {: #dev_tools}
 
-Stellen Sie sicher, dass Sie die [vorausgesetzten Entwicklertools](get_code.html#prereq-dev-tools){: new_window} installiert haben.
+Stellen Sie sicher, dass die [vorausgesetzten Entwicklertools ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](get_code.html#prereq-dev-tools "Symbol für externen Link"){: new_window} installiert sind.
 
 
 ### Ein Projekt aus dem {{site.data.keyword.visualrecognitionshort}}-Code-Starter erstellen
@@ -36,17 +36,17 @@ Stellen Sie sicher, dass Sie die [vorausgesetzten Entwicklertools](get_code.html
    
    5. Klicken Sie auf **Erstellen**.
 
-2. Optional: Fügen Sie die Push Notifications-Funktion hinzu.
+2. Optional: Fügen Sie die {{site.data.keyword.mobilepushshort}}-Funktion hinzu.
 
-   1. Klicken Sie auf der Seite **Projektübersicht** für **Push Notifications** auf **Hinzufügen**.
+   1. Klicken Sie auf der Seite **Projektübersicht** für **{{site.data.keyword.mobilepushshort}}** auf **Hinzufügen**.
 
-      Alternativ können Sie auf der Seite **Push Notifications** auf **Erstellen** klicken.
+      Alternativ können Sie auf der Seite **{{site.data.keyword.mobilepushshort}}** auf **Erstellen** klicken.
 
    2. Geben Sie Ihren Servicenamen ein und klicken Sie auf **Erstellen**.
 
-   3. Unter iOS [konfigurieren Sie den Apple-Service 'Push Notification'](/docs/services/mobilepush/t_push_provider_ios.html){: new_window}.
+   3. Für iOS: [Apple Push Notification Service konfigurieren ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/mobilepush/t_push_provider_ios.html "Symbol für externen Link"){: new_window}.
 
-   4. Unter Android [konfigurieren Sie Firebase Cloud Messaging](/docs/services/mobilepush/t_push_provider_android.html){: new_window}.
+   4. Für Android: [Firebase Cloud Messaging konfigurieren ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/mobilepush/t_push_provider_android.html "Symbol für externen Link"){: new_window}.
    
 3. Optional: Fügen Sie die Analytics-Funktion hinzu.
 
@@ -58,7 +58,7 @@ Stellen Sie sicher, dass Sie die [vorausgesetzten Entwicklertools](get_code.html
    
    3. Inaktivieren Sie den Demo-Modus, um Ihre Analysedaten nach Ausführung der App anzuzeigen.
    
-   4. Weitere Informationen zur Konfiguration von Analytics finden Sie in der [Einführung zu {{site.data.keyword.mobileanalytics_short}}](/docs/services/mobileanalytics/index.html){: new_window}.
+   4. Weitere Informationen zum Konfigurieren von Analytics finden Sie unter [Einführung in {{site.data.keyword.mobileanalytics_short}} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/mobileanalytics/index.html "Symbol für externen Link"){: new_window}.
   
 4. Optional: Fügen Sie die Authentication-Funktion hinzu.
 
@@ -72,7 +72,7 @@ Stellen Sie sicher, dass Sie die [vorausgesetzten Entwicklertools](get_code.html
    
    4. Wählen Sie Ihren Identitätsprovider aus und geben Sie für dessen Konfiguration die erforderlichen Informationen ein. Sie können nur einen einzigen Identitätsprovider aktivieren.
 
-   5. Weitere Informationen zur Konfiguration von Authentication finden Sie in der [Einführung zu {{site.data.keyword.amashort}}](/docs/services/mobileaccess/index.html){: new_window}.
+   5. Weitere Informationen zum Konfigurieren der Authentifizierung finden Sie unter [Einführung in {{site.data.keyword.amashort}} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/mobileaccess/index.html "Symbol für externen Link"){: new_window}.
 
 5. Generieren Sie Ihren Projektcode.
 
@@ -94,7 +94,7 @@ Stellen Sie sicher, dass Sie die [vorausgesetzten Entwicklertools](get_code.html
 
 2. Öffnen Sie die Datei `README.md` in einem Markdown-Viewer, um die Schritte zur Konfiguration Ihres Projekts zu überprüfen.
 
-   1. Erstellen Sie Ihre Instanz des Service [{{site.data.keyword.visualrecognitionshort}}](https://console.{DomainName}/catalog/services/visual-recognition/){: new_window}.
+   1. Erstellen Sie Ihre [{{site.data.keyword.visualrecognitionshort}} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://console.{DomainName}/catalog/services/visual-recognition/ "Symbol für externen Link"){: new_window}-Serviceinstanz.
    
    2. Öffnen Sie Ihr Terminal und navigieren Sie zu Ihrem Projektordner.
    
@@ -124,7 +124,7 @@ Stellen Sie sicher, dass Sie die [vorausgesetzten Entwicklertools](get_code.html
 
 2. Öffnen Sie die Datei `README.md` in einem Markdown-Viewer, um Ihr Projekt zu konfigurieren.
 
-   1. Erstellen Sie Ihre Instanz des Service [{{site.data.keyword.visualrecognitionshort}}](https://console.{DomainName}/catalog/services/visual-recognition/){: new_window}.
+   1. Erstellen Sie Ihre [{{site.data.keyword.visualrecognitionshort}} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://console.{DomainName}/catalog/services/visual-recognition/ "Symbol für externen Link"){: new_window}-Serviceinstanz.
    
       Überspringen Sie diesen Schritt, falls Sie bereits über eine Instanz des Service {{site.data.keyword.visualrecognitionshort}} verfügen.
    
@@ -154,5 +154,9 @@ Stellen Sie sicher, dass Sie die [vorausgesetzten Entwicklertools](get_code.html
 ### Lernprogramme zu Code-Startern
 {: #tutorials_Code}
 
+* [Lernprogramm - Basic](tutorial.html)
+* [Lernprogramm - Cloudant Sync](tutorial_cloudant_synd.html)
+* [Lernprogramm - {{site.data.keyword.openwhisk_short}}](tutorial_openwhisk.html)
 * [Lernprogramm - Watson Language](tutorial_watson_language.html)
 * [Lernprogramm - Weather](tutorial_weather.html)
+

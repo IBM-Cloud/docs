@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-21"
+  years: 2016, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -16,8 +16,8 @@ Il starter codice {{site.data.keyword.Bluemix}} Mobile per il linguaggio Watson 
 ## Requisiti
 {: #tutorial_requirements}
 
-* Un account [Bluemix](http://bluemix.net)
-* Le istanze del servizio [Language Translator](https://console.{DomainName}/catalog/services/language-translator/) e [Text to Speech](https://console.{DomainName}/catalog/services/text-to-speech/) ottenute dal [Catalogo Bluemix](https://console.{DomainName}/catalog/)
+* Un account [Bluemix ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://bluemix.net "Icona link esterno")
+* Le istanze del servizio [Language Translator ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://console.{DomainName}/catalog/services/language-translator/ "Icona link esterno") e [Text to Speech ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://console.{DomainName}/catalog/services/text-to-speech/ "Icona link esterno") ottenute dal [Catalogo Bluemix ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://console.{DomainName}/catalog/ "Icona link esterno")
 
 
 ## Introduzione
@@ -37,17 +37,17 @@ Per essere velocemente operativo con lo starter codice linguaggio Watson, segui 
 
    4. Immetti il nome del tuo progetto e fai clic su **Crea**.
 
-2. Facoltativo: aggiungi la funzionalità Push Notifications.
+2. Facoltativo: aggiungi la funzionalità {{site.data.keyword.mobilepushshort}}.
 
-   1. Fai clic su **Aggiungi** per **Push Notifications** dalla pagina **Panoramica progetto**.
+   1. Fai clic su **Aggiungi** per **{{site.data.keyword.mobilepushshort}}** nella pagina **Panoramica progetto**.
 
-      In alternativa puoi fare clic su **Crea** dalla pagina **Push Notifications**.
+      In alternativa puoi fare clic su **Crea** dalla pagina **{{site.data.keyword.mobilepushshort}}**.
 
    2. Immetti il nome del tuo servizio e fai clic su **Crea**.
 
-   3. Per iOS, [configura il servizio Apple Push Notification](/docs/services/mobilepush/t_push_provider_ios.html){: new_window}.
+   3. Per iOS, [configura il servizio Apple Push Notification![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/services/mobilepush/t_push_provider_ios.html "Icona link esterno"){: new_window}.
 
-   4. Per Android, [configura GCM (Google Cloud Messaging)](/docs/services/mobilepush/t_push_provider_android.html){: new_window}.
+   4. Per Android, [configura Google Cloud Messaging ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/services/mobilepush/t_push_provider_android.html "Icona link esterno"){: new_window}.
    
 3. Facoltativo: aggiungi la funzionalità Analytics.
 
@@ -58,6 +58,8 @@ Per essere velocemente operativo con lo starter codice linguaggio Watson, segui 
    2. Immetti il nome del tuo servizio e fai clic su **Crea**.
    
    3. Disattiva la **Modalità demo** per visualizzare i tuoi dati di analisi dopo l'esecuzione della tua applicazione.
+
+   4. Vedi [Introduzione a {{site.data.keyword.mobileanalytics_short}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/services/mobileanalytics/index.html "Icona link esterno"){: new_window} per ulteriori informazioni sulla configurazione di Analytics.
 
 4. Facoltativo: aggiungi la funzionalità Authentication.
 
@@ -71,7 +73,7 @@ Per essere velocemente operativo con lo starter codice linguaggio Watson, segui 
    
    4. Seleziona il tuo provider di identità ed immetti le informazioni richieste per configurarlo. Puoi abilitare solo un provider di identità.
 
-   5. Consulta [Introduzione a Mobile Client Access](/docs/services/mobileaccess/index.html){: new_window} per ulteriori informazioni sulla configurazione di Authentication.
+   5. Vedi [Introduzione a Mobile Client Access ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/services/mobileaccess/index.html "Icona link esterno"){: new_window} per ulteriori informazioni sulla configurazione dell'autenticazione .
 
 5. Scarica il tuo progetto.
 
@@ -85,4 +87,22 @@ Per essere velocemente operativo con lo starter codice linguaggio Watson, segui 
 ## Operazioni successive
 {: #tutorial_next}
 
-[Provatela! ](http://console.{DomainName}/mobile/create-project?starter=512568a1-72db-35c7-b9c4-4f3e3bc89375){: new_window}
+[Provatela! ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://console.{DomainName}/mobile/create-project?starter=512568a1-72db-35c7-b9c4-4f3e3bc89375 "Icona link esterno"){: new_window}
+
+
+
+### Esercitazioni starter IU
+{: #tutorials_UI}
+
+* [Esercitazione - Catalogo negozio](tutorial_store_catalog.html)
+
+
+### Esercitazioni starter codice
+{: #tutorials_Code}
+
+* [Esercitazione - Di base](tutorial.html)
+* [Esercitazione - Cloudant Sync](tutorial_cloudant_synd.html)
+* [Esercitazione - {{site.data.keyword.openwhisk_short}}](tutorial_openwhisk.html)
+* [Esercitazione - {{site.data.keyword.visualrecognitionshort}}](tutorial_visual_recognition.html)
+* [Esercitazione - Weather ](tutorial_weather.html)
+

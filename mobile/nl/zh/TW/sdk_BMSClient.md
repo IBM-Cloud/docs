@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-07"
+  years: 2016, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -54,9 +54,9 @@ lastupdated: "2016-11-07"
 
   然後，執行 `pod install` 指令，並且開啟產生的 `.xcworkspace` 檔案。若要更新至 `BMSCore` 的較新版次，請使用 `pod update BMSCore`。
 
-  如需使用 CocoaPods 的相關資訊，請參閱 [CocoaPods Guides](https://guides.cocoapods.org/using/index.html){: new_window}。
+  如需使用 CocoaPods 的相關資訊，請參閱 [CocoaPods 手冊 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://guides.cocoapods.org/using/index.html "外部鏈結圖示"){: new_window}。
 
-2. 若要使用 Carthage 來安裝 `BMSCore`，請遵循這些[指示](https://github.com/Carthage/Carthage#getting-started){: new_window}。
+2. 若要使用 Carthage 來安裝 `BMSCore`，請遵循下列[指示 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/Carthage/Carthage#getting-started "外部鏈結圖示"){: new_window}。
 
   1. 將下列這一行新增至您的 Cartfile：
 
@@ -67,7 +67,7 @@ lastupdated: "2016-11-07"
 
   2. 執行 `carthage update` 指令。
 
-  3. 建置完成之後，請遵循 Carthage 指示中的[步驟 3](https://github.com/Carthage/Carthage#getting-started)，將 `BMSCore.framework` 新增至專案中。
+  3. 建置完成之後，請遵循 Carthage 指示中的[步驟 3 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/Carthage/Carthage#getting-started "外部鏈結圖示")，將 `BMSCore.framework` 新增至專案。
 
       若為使用 Swift 2.3 建置的應用程式，請使用 `carthage update --toolchain com.apple.dt.toolchain.Swift_2_3` 指令。否則，請使用 `carthage update` 指令。
 

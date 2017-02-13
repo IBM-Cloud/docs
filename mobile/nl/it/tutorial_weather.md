@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-21"
+  years: 2016, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -16,8 +16,8 @@ Lo starter codice {{site.data.keyword.Bluemix}} Mobile per Weather illustra un p
 ## Requisiti
 {: #tutorial_requirements}
 
-* Un account [Bluemix](http://bluemix.net)
-* Un'istanza del servizio [Weather Company Data](https://console.{DomainName}/catalog/services/weather-company-data/) ottenuta dal [Catalogo Bluemix](https://console.{DomainName}/catalog/)
+* Un account [Bluemix ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://bluemix.net "Icona link esterno")
+* Un'istanza del servizio [Weather Company Data ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://console.{DomainName}/catalog/services/weather-company-data/ "Icona link esterno") ottenuta dal [Catalogo Bluemix![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://console.{DomainName}/catalog/ "Icona link esterno")
 
 
 ## Introduzione
@@ -37,17 +37,17 @@ Per essere velocemente operativo con lo starter codice Weather, segui la seguent
 
    4. Immetti il nome del tuo progetto e fai clic su **Crea**.
 
-2. Facoltativo: aggiungi la funzionalità Push Notifications.
+2. Facoltativo: aggiungi la funzionalità {{site.data.keyword.mobilepushshort}}.
 
-   1. Fai clic su **Aggiungi** per **Push Notifications** dalla pagina **Panoramica progetto**.
+   1. Fai clic su **Aggiungi** per **{{site.data.keyword.mobilepushshort}}** nella pagina **Panoramica progetto**.
 
-      In alternativa puoi fare clic su **Crea** dalla pagina **Push Notifications**.
+      In alternativa puoi fare clic su **Crea** dalla pagina **{{site.data.keyword.mobilepushshort}}**.
 
    2. Immetti il nome del tuo servizio e fai clic su **Crea**.
 
-   3. Per iOS, [configura il servizio Apple Push Notification](/docs/services/mobilepush/t_push_provider_ios.html){: new_window}.
+   3. Per iOS, [configura il servizio Apple Push Notification![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/services/mobilepush/t_push_provider_ios.html "Icona link esterno"){: new_window}.
 
-   4. Per Android, [configura GCM (Google Cloud Messaging)](/docs/services/mobilepush/t_push_provider_android.html){: new_window}.
+   4. Per Android, [configura Google Cloud Messaging ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/services/mobilepush/t_push_provider_android.html "Icona link esterno"){: new_window}.
    
 3. Facoltativo: aggiungi la funzionalità Analytics.
 
@@ -58,6 +58,8 @@ Per essere velocemente operativo con lo starter codice Weather, segui la seguent
    2. Immetti il nome del tuo servizio e fai clic su **Crea**.
    
    3. Disattiva la **Modalità demo** per visualizzare i tuoi dati di analisi dopo l'esecuzione della tua applicazione.
+
+   4. Vedi [Introduzione a {{site.data.keyword.mobileanalytics_short}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/services/mobileanalytics/index.html "Icona link esterno"){: new_window} per ulteriori informazioni sulla configurazione di Analytics.
 
 4. Facoltativo: aggiungi la funzionalità Authentication.
 
@@ -71,7 +73,7 @@ Per essere velocemente operativo con lo starter codice Weather, segui la seguent
    
    4. Seleziona il tuo provider di identità ed immetti le informazioni richieste per configurarlo. Puoi abilitare solo un provider di identità.
 
-   5. Consulta [Introduzione a Mobile Client Access](/docs/services/mobileaccess/index.html){: new_window} per ulteriori informazioni sulla configurazione di Authentication.
+   5. Vedi [Introduzione a Mobile Client Access ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/services/mobileaccess/index.html "Icona link esterno"){: new_window} per ulteriori informazioni sulla configurazione dell'autenticazione .
 
 5. Scarica il tuo progetto.
 
@@ -85,4 +87,20 @@ Per essere velocemente operativo con lo starter codice Weather, segui la seguent
 ## Operazioni successive
 {: #tutorial_next}
 
-[Provatela! ](http://console.{DomainName}/mobile/create-project?starter=fad1d49e-f7b6-3aff-9b53-14673fca4399){: new_window}
+[Provatela! ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://console.{DomainName}/mobile/create-project?starter=fad1d49e-f7b6-3aff-9b53-14673fca4399 "Icona link esterno"){: new_window}
+
+
+### Esercitazioni starter IU
+{: #tutorials_UI}
+
+* [Esercitazione - Catalogo negozio](tutorial_store_catalog.html)
+
+
+### Esercitazioni starter codice
+{: #tutorials_Code}
+
+* [Esercitazione - Di base](tutorial.html)
+* [Esercitazione - Cloudant Sync](tutorial_cloudant_synd.html)
+* [Esercitazione - {{site.data.keyword.openwhisk_short}}](tutorial_openwhisk.html)
+* [Esercitazione - {{site.data.keyword.visualrecognitionshort}}](tutorial_visual_recognition.html)
+* [Esercitazione - Linguaggio Watson](tutorial_watson_language.html)

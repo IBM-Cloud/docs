@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-18"
+  years: 2016, 2017
+lastupdated: "2017-01-11"
 
 ---
 {:new_window: target="_blank"}
@@ -27,29 +27,32 @@ En la tabla siguiente se describen los servicios de {{site.data.keyword.Bluemix_
 <th>Servicio de {{site.data.keyword.Bluemix_notm}} Mobile</th>
 <th>Descripción</th>
 <tr>
-<td> <img src="images/mobile_analytics_icon.png" alt="Icono de {{site.data.keyword.mobileanalytics_short}}"><br/>{{site.data.keyword.mobileanalytics_short}} (Beta)</td>
+<td> <img src="images/mobile_analytics_icon.png" alt="Icono de {{site.data.keyword.mobileanalytics_short}}"><br/>{{site.data.keyword.mobileanalytics_short}}</td>
 <td valign="top">Utilice el servicio {{site.data.keyword.mobileanalytics_full}} para ver información sobre el funcionamiento de las apps para móvil y cómo sel utilizan.<br/><br/>
 Encontrará más información sobre el funcionamiento de este servicio en la <a href="/docs/services/mobileanalytics/index.html" alt="enlace a la documentación de {{site.data.keyword.mobileanalytics_short}}">documentación de {{site.data.keyword.mobileanalytics_short}}</a>.
 </td>
 </tr>
 <tr>
 <td><img src="images/authentication_icon
-.png" alt="Icono de servicio de {{site.data.keyword.amashort}}"><br/>{{site.data.keyword.amashort}}</td>
+.png" alt="Icono del servicio {{site.data.keyword.amashort}}"><br/>{{site.data.keyword.amashort}}</td>
 <td valign="top">Utilice el servicio {{site.data.keyword.amafull}} para incorporar funciones de seguridad a la app para móvil. Puede configurar la autenticación de clientes y proveedores de identidad para que los usuarios puedan iniciar una sesión en la app con sus cuentas existentes de Google o Facebook.<br/><br/>
 Encontrará más información sobre el funcionamiento de este servicio en la <a href="/docs/services/mobileaccess/index.html" alt="enlace a la documentación de {{site.data.keyword.amashort}}">documentación de {{site.data.keyword.amashort}}</a>.</td>
 </tr>
 <tr>
-<td><img src="images/MFPFoundation_icon.png" alt="icono del servicio {{site.data.keyword.mobilefoundation_short}}"><br/> {{site.data.keyword.mobilefoundation_short}}</td>
+<td><img src="images/MFPFoundation_icon.png" alt="Icono del servicio {{site.data.keyword.mobilefoundation_short}}"><br/> {{site.data.keyword.mobilefoundation_short}}</td>
 <td valign="top">Utilice el servicio {{site.data.keyword.mobilefoundation_long}} para configurar de forma rápida un entorno de {{site.data.keyword.mfp_full}} en el que puede desarrollar, probar y trabajar con apps para móvil de la empresa.<br/><br/> Encontrará más información sobre el funcionamiento de este servicio en la <a href="/docs/services/mobilefoundation/index.html" alt="enlace a la documentación de {{site.data.keyword.mobilefoundation_short}}">documentación de {{site.data.keyword.mobilefoundation_short}}</a>.</td>
 </tr>
 <tr>
-<td><img src="images/mqa_icon.png" alt="icono de servicio {{site.data.keyword.mqa}}"><br/>{{site.data.keyword.mqa}}</td>
-<td valign="top">Utilice el servicio de {{site.data.keyword.mqafull}} para descubrir y configurar servicios móviles de calidad para las apps. Puede ver medidas de calidad de alto nivel para sus apps para móvil a fin de obtener una visión general de los problemas de las apps con las que trabaja. Estas medidas incluyen información sobre bloqueos, errores, comentarios de usuarios y opinión general de los usuarios. Consultando esta información sobre sus apps, puede determinar si debe investigar más a fondo determinados problemas.<br/><br/>
+<td><img src="images/mqa_icon.png" alt="Icono del servicio {{site.data.keyword.mqa}}"><br/>{{site.data.keyword.mqa}}</td>
+<td valign="top">Utilice el servicio {{site.data.keyword.mqafull}} para descubrir y configurar servicios móviles de calidad para las apps. Puede ver medidas de calidad de alto nivel para sus apps para móvil a fin de obtener una visión general de los problemas de las apps con las que trabaja. Estas medidas incluyen información sobre bloqueos, errores, comentarios de usuarios y opinión general de los usuarios. Consultando esta información sobre sus apps, puede determinar si debe investigar más a fondo determinados problemas.<br/><br/>
 Encontrará más información sobre el funcionamiento de este servicio en la <a href="/docs/services/MobileQualityAssurance/index.html" alt="enlace a la documentación de {{site.data.keyword.mqa}}">documentación de {{site.data.keyword.mqa}}</a>.</td>
 </tr>
 <tr>
-<td><img src="images/push_icon.png" alt="Icono de servicio de Notificaciones push"><br/>{{site.data.keyword.mobilepushshort}}</td>
-<td valign="top">Utilice el servicio de {{site.data.keyword.mobilepushfull}} para enviar y gestione notificaciones push móviles que estén pensadas para las plataformas iOS y Android. Este servicio gestiona la correlación de los usuarios de aplicaciones en sus dispositivos, plataforma de dispositivos, y maneja la asignación de notificaciones push en los dispositivos. Con este servicio, puede enviar difusiones, unicasts (en función del userID, deviceID) y etiquetas (o temas) basados en notificaciones push a sus usuarios de la aplicación móvil.<br/><br/>
+<td><img src="images/push_icon.png" alt="Icono del servicio {{site.data.keyword.mobilepushshort}}"><br/>{{site.data.keyword.mobilepushshort}}</td>
+<td valign="top">El servicio {{site.data.keyword.mobilepushfull}} proporciona una plataforma unificada para enviar y gestionar notificaciones push móviles y de web que están pensadas para varias plataformas.
+<br/><br/>
+El servicio {{site.data.keyword.mobilepushshort}} gestiona la correlación de los usuarios de aplicaciones con sus dispositivos, plataforma de dispositivos y navegadores y maneja la asignación a los mismos de notificaciones push. Puede enviar difusiones, difusiones únicas (en función del ID de dispositivo y del ID de usuario) y etiquetas (o temas) como notificaciones push a sus usuarios de aplicaciones móviles y de navegador web. También puede utilizar las API SDK y REST para desarrollar aplicaciones de cliente.
+<br/><br/>
 Encontrará más información sobre el funcionamiento de este servicio en la <a href="/docs/services/mobilepush/index.html" alt="enlace a la documentación de {{site.data.keyword.mobilepushshort}}">documentación de {{site.data.keyword.mobilepushshort}}</a>.</td>
 </table>
 

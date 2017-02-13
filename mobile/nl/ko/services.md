@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-18"
+  years: 2016, 2017
+lastupdated: "2017-01-11"
 
 ---
 {:new_window: target="_blank"}
@@ -27,8 +27,8 @@ lastupdated: "2016-10-18"
 <th>{{site.data.keyword.Bluemix_notm}} 모바일 서비스</th>
 <th>설명</th>
 <tr>
-<td> <img src="images/mobile_analytics_icon.png" alt="{{site.data.keyword.mobileanalytics_short}} 아이콘"><br/>{{site.data.keyword.mobileanalytics_short}}(베타)</td>
-<td valign="top">{{site.data.keyword.mobileanalytics_full}} 서비스를 사용하여 모바일 앱의 성능과 사용 방법에 대한 통찰을 얻을 수 있습니다.<br/><br/>
+<td> <img src="images/mobile_analytics_icon.png" alt="{{site.data.keyword.mobileanalytics_short}} 아이콘"><br/>{{site.data.keyword.mobileanalytics_short}}</td>
+<td valign="top">{{site.data.keyword.mobileanalytics_full}} 서비스를 사용하여 모바일 앱의 성능과 사용 방법에 대한 인사이트를 얻을 수 있습니다.<br/><br/>
 이 서비스 운영에 대한 자세한 정보는 <a href="/docs/services/mobileanalytics/index.html" alt="{{site.data.keyword.mobileanalytics_short}} 문서 링크">{{site.data.keyword.mobileanalytics_short}} 문서</a>를 살펴보십시오.
 </td>
 </tr>
@@ -49,9 +49,12 @@ lastupdated: "2016-10-18"
 이 서비스 운영에 대한 자세한 정보는 <a href="/docs/services/MobileQualityAssurance/index.html" alt="{{site.data.keyword.mqa}} 문서 링크">{{site.data.keyword.mqa}} 문서</a>를 살펴보십시오. </td>
 </tr>
 <tr>
-<td><img src="images/push_icon.png" alt="Push Notifications 서비스 아이콘"><br/>{{site.data.keyword.mobilepushshort}}</td>
-<td valign="top">{{site.data.keyword.mobilepushfull}} 서비스를 사용하여 iOS 및 Android 플랫폼을 대상으로 하는 모바일 푸시 알림을 전송 및 관리할 수 있습니다. 이 서비스에서는 디바이스 및 디바이스 플랫폼에 대한 애플리케이션 사용자의 맵핑을 관리하고 디바이스에 푸시 알림을 디스패치하는 작업을 처리합니다. 이 서비스를 사용하면 푸시 알림을 기반으로 모바일 애플리케이션 사용자에게 브로드캐스트, 유니캐스트(사용자 ID, 디바이스 ID 기반) 및 태그(또는 주제)를 보낼 수 있습니다.<br/><br/>
-이 서비스 운영에 대한 자세한 정보는 <a href="/docs/services/mobilepush/index.html" alt="{{site.data.keyword.mobilepushshort}} 문서 링크">{{site.data.keyword.mobilepushshort}} 문서</a>를 살펴보십시오.</td>
+<td><img src="images/push_icon.png" alt="{{site.data.keyword.mobilepushshort}} 서비스 아이콘"><br/>{{site.data.keyword.mobilepushshort}}</td>
+<td valign="top">{{site.data.keyword.mobilepushfull}} 서비스는 플랫폼 간에 대상 지정된 모바일 및 웹 푸시 알림을 전송하고 관리하기 위한 통합 플랫폼을 제공합니다.
+<br/><br/>
+{{site.data.keyword.mobilepushshort}}에서는 디바이스, 디바이스 플랫폼, 웹 브라우저에 대한 애플리케이션 사용자의 맵핑을 관리하고, 이에 대한 푸시 알림을 디스패치하는 작업을 처리합니다. 모바일 및 웹 브라우저 애플리케이션 사용자에게 브로드캐스트, 유니캐스트(디바이스 ID 및 사용자 ID 기반), 태그(또는 주제)를 푸시 알림으로 보낼 수 있습니다. 또한 SDK 및 REST API를 사용하여 클라이언트 애플리케이션을 추가로 개발할 수도 있습니다.
+<br/><br/>
+<a href="/docs/services/mobilepush/index.html" alt="{{site.data.keyword.mobilepushshort}} 문서 링크">{{site.data.keyword.mobilepushshort}} 문서</a>에서 이 서비스의 운용에 대해 자세히 알아보십시오. </td>
 </table>
 
 ## 모바일 서비스 통합

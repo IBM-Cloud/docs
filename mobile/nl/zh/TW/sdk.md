@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-14"
+  years: 2015, 2017
+lastupdated: "2017-01-17"
 
 ---
 # SDK
@@ -20,29 +20,29 @@ lastupdated: "2016-10-14"
 ### Android SDK
 {: #android_sdk}
 
-- [核心 SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core) 
-- [{{site.data.keyword.mobileanalytics_short}} SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics) 
-- [{{site.data.keyword.mobilepushshort}} SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-push) 
-- [Facebook Authentication SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-facebookauthentication) 
-- [Google Authentication SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-googleauthentication) 
+- [核心 SDK ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core "外部鏈結圖示") 
+- [{{site.data.keyword.mobileanalytics_short}} SDK ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics "外部鏈結圖示") 
+- [{{site.data.keyword.mobilepushshort}} SDK ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-push "外部鏈結圖示") 
+- [Facebook 鑑別 SDK ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-facebookauthentication "外部鏈結圖示") 
+- [Google 鑑別 SDK ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-googleauthentication "外部鏈結圖示") 
 
 
 ### iOS SDK
 {: #ios_sdk}
 
-- [核心 SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core)
-- [{{site.data.keyword.mobileanalytics_short}} SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics) 
-- [{{site.data.keyword.mobilepushshort}} SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push) 
-- [Facebook Authentication SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-facebookauthentication)
-- [Google Authentication SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-googleauthentication) 
-- [{{site.data.keyword.amashort}} SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security) 
+- [核心 SDK ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core "外部鏈結圖示")
+- [{{site.data.keyword.mobileanalytics_short}} SDK ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics "外部鏈結圖示") 
+- [{{site.data.keyword.mobilepushshort}} SDK ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push "外部鏈結圖示") 
+- [Facebook 鑑別 SDK ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-facebookauthentication "外部鏈結圖示")
+- [Google 鑑別 SDK ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-googleauthentication "外部鏈結圖示") 
+- [{{site.data.keyword.amashort}} SDK ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security "外部鏈結圖示") 
 
 
 ### Cordova 外掛程式
 {: #cordova_plugin}
 
-- [Core 外掛程式](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
-- [{{site.data.keyword.mobilepushshort}} 外掛程式](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push)
+- [核心外掛程式 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core "外部鏈結圖示")
+- [{{site.data.keyword.mobilepushshort}} 外掛程式 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push "外部鏈結圖示")
 
 
 ## 伺服器 SDK
@@ -54,14 +54,14 @@ lastupdated: "2016-10-14"
 ### {{site.data.keyword.mobilepushshort}} 伺服器 SDK
 {: #push_sdk}
 
-- [{{site.data.keyword.mobilepushshort}} Java 伺服器 SDK](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-java) 
-- [{{site.data.keyword.mobilepushshort}} Swift 伺服器 SDK](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-swift) 
-- [{{site.data.keyword.mobilepushshort}} NodeJS 伺服器 SDK](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-nodejs)
+- [{{site.data.keyword.mobilepushshort}} Java 伺服器 SDK ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-java "外部鏈結圖示") 
+- [{{site.data.keyword.mobilepushshort}} Swift 伺服器 SDK ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-swift "外部鏈結圖示") 
+- [{{site.data.keyword.mobilepushshort}} NodeJS 伺服器 SDK ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-nodejs "外部鏈結圖示")
 
 
 ### {{site.data.keyword.amashort}} 伺服器 SDK
 {: #mca_sdk}
 
-- [{{site.data.keyword.amashort}} Swift 伺服器 SDK](https://github.com/ibm-bluemix-mobile-services/bms-mca-serversdk-swift)
+- [{{site.data.keyword.amashort}} Swift 伺服器 SDK ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-mca-serversdk-swift "外部鏈結圖示")
 
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-01"
+  years: 2016, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,17 @@ lastupdated: "2016-12-01"
 # モバイル・ダッシュボードの新機能
 {: #what_is_new}
 
+### 最新情報: 2016 年 12 月
+{: #dec-2016}
+
+2016 年 12 月の {{site.data.keyword.Bluemix}} モバイル・ダッシュボードの更新で、以下の変更が導入されました。
+
+   * 接続済みサービスをプロジェクトから削除することができます。これにより、そのサービスを削除したり別のプロジェクトで再使用したりすることができます。 
+   * 既存のサービスをプロジェクトに追加することができます。
+   * コード・スターターを使用する時に、既存の Cloudant NoSQL サービスをデータ・ソースとして作成したり接続したりできます。
+   * サポートされている場合、既存の Object Storage サービスをプロジェクトのデータ・ソースとして作成したり接続したりできます。
+   * UI スターターを使用して作成しているアプリのナビゲーション設計をカスタマイズできます。 
+   
 
 ### 最新情報: 2016 年 11 月
 {: #nov-2016}
@@ -18,8 +29,8 @@ lastupdated: "2016-12-01"
 
    * **「コード」**ページからプロジェクトの SDK 成果物を生成できるようになりました。
    * ベーシック・コード・スターターで Cordova がサポートされるようになりました。
-   * {{site.data.keyword.mobileanalytics_short}} Console の**「ネットワーク要求」**ページで、[ネットワーク・イベントの報告](/docs/services/mobileanalytics/sdk.html#network-requests){: new_window}および[ネットワーク要求のモニター](/docs/services/mobileanalytics/app-monitoring.html#monitor-network-requests){: new_window}を行えるようになりました。
-   * {{site.data.keyword.mobileanalytics_short}} Console で[データを dashDB にエクスポート](/docs/services/mobileanalytics/app-monitoring.html#dashdb){: new_window}できるようになりました。
+   * {{site.data.keyword.mobileanalytics_short}} コンソールの**「ネットワーク要求 (Network Requests)」**ページで[ネットワーク・イベントの報告![外部リンク・アイコン ](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/mobileanalytics/sdk.html#network-requests "外部リンク・アイコン"){: new_window}および[ネットワーク・イベントのモニター![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/mobileanalytics/app-monitoring.html#monitor-network-requests "外部リンク・アイコン"){: new_window}を行えるようになりました。
+   * {{site.data.keyword.mobileanalytics_short}} コンソールで [dashDB にデータをエクスポート![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/mobileanalytics/app-monitoring.html#dashdb "外部リンク・アイコン"){: new_window}できるようになりました。
 
 
 ### 最新情報: 2016 年 10 月
@@ -27,7 +38,7 @@ lastupdated: "2016-12-01"
 
 2016 年 10 月の {{site.data.keyword.Bluemix_notm}} モバイル・ダッシュボードの更新で、以下の変更が導入されました。
 
-   * Push Notifications (プッシュ通知) 機能および Analytics (分析) 機能をプロジェクトにダッシュボードから直接追加できるようになりました。
+   * {{site.data.keyword.mobilepushshort}} 機能と Analytics 機能をダッシュボードから直接プロジェクトに追加できるようになりました。
    * [コード・スターター](starters.html#Code_Starter)が使用可能になりました。
    * コード・スターターから作成したプロジェクトに Authentication (認証) を追加できます。
    * Swift がサポートされるようになりました。
@@ -42,7 +53,7 @@ lastupdated: "2016-12-01"
 #### UI ビルダー
 {: #ui_builder}
 
-   * **Push Notifications** 機能がプロジェクトからアクセスされるようになりました。
+   * **{{site.data.keyword.mobilepushshort}}** 機能には、プロジェクトからアクセスするようになりました。
    * **「プロジェクト設定」**タブは**「設定」**タブに名前変更されました。
    * **「認証」**タブは**「ユーザー・アクセス (User Access)」**タブに名前変更されました。
 
