@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  year: 2016
-lastupdated: "2016-09-07"
+  year: 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
 
@@ -78,5 +78,3 @@ response_type='authorization_code'
 
 现在，您可以开始向受保护资源发出请求。
 对受保护资源的所有请求都应该在授权请求头字段中包含访问令牌。
-
-

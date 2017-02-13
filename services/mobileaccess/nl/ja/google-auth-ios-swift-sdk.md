@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-05"
+  years: 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 {:new_window: target="_blank"}
@@ -14,9 +14,7 @@ lastupdated: "2016-12-05"
 # iOS アプリ用の Google 認証の使用可能化 (Swift SDK)
 {: #google-auth-ios}
 
-Google Sign-In を使用して、{{site.data.keyword.amafull}} iOS Swift アプリのユーザーを認証します。新しくリリースされた {{site.data.keyword.amashort}} Swift SDK は、既存の Mobile Client Access Objective-C SDK によって提供される機能を増強します。
-
-**注:** Objective-C SDK は現在も完全にサポートされており、{{site.data.keyword.Bluemix_notm}} モバイル・サービス用の主要 SDK とされていますが、今年後半には廃止され、この新しい Swift SDK が後継になる予定です。
+Google Sign-In を使用して、{{site.data.keyword.amafull}} iOS Swift アプリのユーザーを認証します。
 
 
 ## 開始する前に
@@ -38,7 +36,7 @@ Google Sign-In を使用して、{{site.data.keyword.amafull}} iOS Swift アプ�
 ## Google Sign-In 用のアプリの準備
 {: #google-sign-in-ios}
 
-Google の [Google Sign-In for iOS](https://developers.google.com/identity/sign-in/ios/start-integrating) に記載されている指示に従って、Google Sign-In 用にアプリを準備します。
+Google の [Google Sign-In for iOS ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developers.google.com/identity/sign-in/ios/start-integrating "外部リンク・アイコン"){: new_window}に記載されている指示に従って、Google サインイン用にアプリを準備します。
 
 このプロセスは以下を行います。
 
@@ -52,7 +50,7 @@ Google の [Google Sign-In for iOS](https://developers.google.com/identity/sign-
 
 1. メイン・ターゲットの**「General」**タブの**「Identity」**セクションから、Xcode プロジェクト内の**「Bundle Identifier」**をメモします。これは Google Sign-In プロジェクトの作成に必要です。
 
-1. Google Developer for Google Sign-In for iOS (https://developers.google.com/mobile/add?platform=ios) で、プロジェクトを作成します。
+1. [Google Developer サイト![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developers.google.com/mobile/add?platform=ios "外部リンク・アイコン"){: new_window}上に Google Sign-In for iOS 用のプロジェクトを作成します。
 
 1. プロジェクトに Google Sign-In API を追加します。
 
@@ -60,9 +58,9 @@ Google の [Google Sign-In for iOS](https://developers.google.com/identity/sign-
 
    **重要:** `GoogleService-Info.plist` ファイルの取得時に、そのファイルを開いて、`CLIENT_ID` の値のメモを取ってください。後で、{{site.data.keyword.amashort}} バックエンド・アプリケーションを構成するためにこの値が必要になります。
 
-1. Xcode プロジェクトに `GoogleService-Info.plist` ファイルを追加します。詳しくは、[Add the configuration file to your project](https://developers.google.com/identity/sign-in/ios/start-integrating#add-config) を参照してください。
+1. Xcode プロジェクトに `GoogleService-Info.plist` ファイルを追加します。詳しくは、[Add the configuration file to your project ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developers.google.com/identity/sign-in/ios/start-integrating#add-config "外部リンク・アイコン"){: new_window}を参照してください。
 
-1. Xcode プロジェクト内の URL スキームを、自分の `REVERSE_CLIENT_ID` およびバンドル ID によって更新します。詳しくは、[Add URL schemes to your project](https://developers.google.com/identity/sign-in/ios/start-integrating#add_a_url_scheme_to_your_project) を参照してください。
+1. Xcode プロジェクト内の URL スキームを、自分の `REVERSE_CLIENT_ID` およびバンドル ID によって更新します。詳しくは、[Add URL schemes to your project ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developers.google.com/identity/sign-in/ios/start-integrating#add_a_url_scheme_to_your_project "外部リンク・アイコン"){: new_window}を参照してください。
 
 1. アプリの `project-Bridging-Header.h` ファイルを以下のコードで更新します。
 
@@ -71,7 +69,7 @@ Google の [Google Sign-In for iOS](https://developers.google.com/identity/sign-
 	```
 	{: codeblock}
 
-	ブリッジング・ヘッダー・ファイルの更新について詳しくは、[Enable sign-in](https://developers.google.com/identity/sign-in/ios/sign-in#enable_sign-in) を参照してください。
+	ブリッジング・ヘッダー・ファイルの更新について詳しくは、[Enable sign-in ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developers.google.com/identity/sign-in/ios/sign-in#enable_sign-in "外部リンク・アイコン"){: new_window}を参照してください。
 
 ## Google 認証用の {{site.data.keyword.amashort}} の構成
 {: #google-auth-ios-config}
@@ -99,7 +97,7 @@ Google の [Google Sign-In for iOS](https://developers.google.com/identity/sign-
 ```
 	{: codeblock}
 
-詳細については、[CocoaPods の Web サイト](https://cocoapods.org/)を参照してください。
+詳しくは、[CocoaPods Web サイト![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cocoapods.org/ "外部リンク・アイコン"){: new_window}を参照してください。
 
 ### CocoaPods を使用した {{site.data.keyword.amashort}} Client Swift SDK のインストール
 {: #facebook-auth-install-swift-cocoapods}
@@ -171,8 +169,8 @@ Google の [Google Sign-In for iOS](https://developers.google.com/identity/sign-
 	コードの中で次のようにします。
 
       * `<serviceTenantID>` を、**「モバイル・オプション」**で取得した値に置き換えます。
-      * `<applicationBluemixRegion>` をご使用の {{site.data.keyword.Bluemix_notm}} **「地域」**に置き換えます。 
-	
+      * `<applicationBluemixRegion>` をご使用の {{site.data.keyword.Bluemix_notm}} **「地域」**に置き換えます。
+
 	これらの値の取得について詳しくは、[開始する前に](#before-you-begin)を参照してください。
 
 
@@ -184,7 +182,7 @@ Client SDK が初期化され、Google 認証マネージャーの登録が完�
 ### 開始する前に
 {: #google-auth-ios-testing-before}
 
-{{site.data.keyword.mobilefirstbp}} ボイラープレートを使用していて、{{site.data.keyword.amashort}}により`/protected` エンドポイントで保護されているリソースを既に持っている必要があります。`/protected` エンドポイントをセットアップする必要がある場合、[リソースの保護 ](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)を参照してください。
+{{site.data.keyword.mobilefirstbp}} ボイラープレートを使用していて、{{site.data.keyword.amashort}}により`/protected` エンドポイントで保護されているリソースを既に持っている必要があります。`/protected` エンドポイントをセットアップする必要がある場合、[リソースの保護 ](protecting-resources.html)を参照してください。
 
 1. デスクトップ・ブラウザーで、`{applicationRoute}/protected` を開いて、モバイル・バックエンド・アプリケーションの保護エンドポイントへの要求の送信を試行します。例: `http://my-mobile-backend.mybluemix.net/protected`。
 

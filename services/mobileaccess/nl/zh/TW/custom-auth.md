@@ -1,12 +1,16 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-2"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # 使用自訂身分提供者鑑別使用者
 {: #custom-id}
@@ -44,7 +48,7 @@ lastupdated: "2016-11-2"
 {{site.data.keyword.amashort}} Web 應用程式要求流程類似行動用戶端流程。不過，{{site.data.keyword.amashort}} 會保護 Web 應用程式，而不是 {{site.data.keyword.Bluemix_notm}} 後端資源。
 
   * 起始要求是由 Web 應用程式傳送（例如，從登入表單）。
-  * 最終重新導向是重新導向至 Web 應用程式本身的受保護區域，而不是後端的受保護資源。 
+  * 最終重新導向是重新導向至 Web 應用程式本身的受保護區域，而不是後端的受保護資源。
 
 ## 瞭解自訂身分提供者
 {: #custom-id-about}
@@ -81,7 +85,7 @@ lastupdated: "2016-11-2"
 	}
 	```
 	{: codeblock}
-	
+
 1. 實作驗證所提供鑑別盤查回答用的自訂邏輯。
 
 1. 定義包含所有必要自訂內容的自訂使用者身分物件。以下是成功鑑別之後，用戶端所取得之自訂使用者身分物件的範例：
@@ -104,8 +108,8 @@ lastupdated: "2016-11-2"
 
 在您開發自訂身分提供者時，使用自訂身分提供者的下列任何 Node.js 範例實作作為參照。請從 GitHub 儲存庫下載完整應用程式碼。
 
- * [簡單範例](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
- * [進階範例](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
+ * [簡式範例 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample "外部鏈結圖示"){: new_window}
+ * [進階範例 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management "外部鏈結圖示"){: new_window}
 
 ## {{site.data.keyword.amashort}} 伺服器與自訂身分提供者之間的一般通訊
 {: #custom-id-comm}
@@ -129,10 +133,9 @@ lastupdated: "2016-11-2"
 
 ## 後續步驟
 {: #next-steps}
+
 * [建立自訂身分提供者](custom-auth-identity-provider.html)
 * [配置 {{site.data.keyword.amashort}} 進行自訂鑑別](custom-auth-config-mca.html)
 * [配置適用於 Android 的自訂鑑別](custom-auth-android.html)
 * [配置適用於 iOS 的自訂鑑別 (Swift SDK)](custom-auth-ios-swift-sdk.html)
-* [配置適用於 iOS 的自訂鑑別 (Objective-C SDK)](custom-auth-ios.html)
 * [配置適用於 Cordova 的自訂鑑別](custom-auth-cordova.html)
-

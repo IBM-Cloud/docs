@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-05"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 {:new_window: target="_blank"}
@@ -25,7 +25,7 @@ lastupdated: "2016-12-05"
 * 受 {{site.data.keyword.amashort}} 服务保护的 {{site.data.keyword.Bluemix_notm}} 应用程序实例。有关如何创建 {{site.data.keyword.Bluemix_notm}} 后端服务的更多信息，请参阅[入门](index.html)。
 * 应用程序路径。这是后端应用程序的 URL。
 * **TenantID**。在 {{site.data.keyword.Bluemix_notm}}“仪表板”中打开服务。单击**移动选项**。`tenantId`（也称为 `appGUID`）值会显示在**应用程序 GUID/TenantId** 字段中。您将需要此值来初始化授权管理器。
-*  找到托管 {{site.data.keyword.Bluemix_notm}} 应用程序的区域。您可以在**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标") 旁边的头中找到当前 Bluemix 区域。区域值应为以下某个值：**美国南部**、**悉尼**或**英国**。对应于这些名称的准确 SDK 常量值如代码示例中所示。 
+*  找到托管 {{site.data.keyword.Bluemix_notm}} 应用程序的区域。您可以在**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标") 旁边的头中找到当前 Bluemix 区域。区域值应为以下某个值：**美国南部**、**悉尼**或**英国**。对应于这些名称的准确 SDK 常量值如代码示例中所示。
 * （可选）请熟悉以下部分：
    * [启用 Android 应用程序的 Google 认证](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html)
    * [在 iOS 应用程序中启用 Google 认证](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html)
@@ -54,10 +54,10 @@ lastupdated: "2016-12-05"
 	}
 	```
 	{: codeblock}
-	
+
 1. 通过单击**工具 > Android > 使用 Gradle 文件同步项目**来使用 Gradle 同步项目。
 
-1. `GoogleAuthenticationManager` API 仍必须使用本机代码进行注册。将此代码添加到主活动 `onCreate` 方法： 
+1. `GoogleAuthenticationManager` API 仍必须使用本机代码进行注册。将此代码添加到主活动 `onCreate` 方法：
 
 	```Java
 	String tenantId = "<tenantId>";
@@ -68,7 +68,7 @@ lastupdated: "2016-12-05"
 	{: codeblock}
 
 1. 将以下代码添加到您的 Activity：
- 
+
 	```Java
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -84,7 +84,7 @@ lastupdated: "2016-12-05"
 
 配置 Cordova 应用程序的 iOS 平台进行 Google 认证集成所需的步骤，与本机应用程序所需的步骤类似。主要差别在于目前 Cordova CLI 不支持 CocoaPods 依赖关系管理器。必须手动添加与 Google 认证集成所需的文件。有关更多信息，请参阅[启用 iOS 应用程序的 Google 认证 (Swift SDK)](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html)。请完成以下步骤：
 
-   * [为应用程序准备进行 Google 登录](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html#google-sign-in-ios)：准备 Google 登录以认证 {{site.data.keyword.amashort}} iOS 应用程序。 
+   * [为应用程序准备进行 Google 登录](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html#google-sign-in-ios)：准备 Google 登录以认证 {{site.data.keyword.amashort}} iOS 应用程序。
 
    * [配置 MCA 进行 Google 认证](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html#google-auth-ios-config)：配置 {{site.data.keyword.amashort}} 服务以使用 Google 登录。
 
@@ -96,7 +96,7 @@ lastupdated: "2016-12-05"
 
 启用`密钥链共享`。转至`功能`选项卡，然后在 Xcode 项目中将`密钥链共享`切换为`开启`。
 
- 
+
 ### 使用 iOS 代码初始化授权管理器
 
 使用 `AppDelgate.m` 文件中的 Objective-C 初始化 {{site.data.keyword.amashort}} 授权管理器。
@@ -129,10 +129,10 @@ lastupdated: "2016-12-05"
 ```
 {: codeblock}
 
-**注：** 
+**注：**
 
 * 将 `<your_module_name>` 替换为项目的模块名称。例如，如果模块名称为 `Cordova`，那么 import 行应该为 `#import "Cordova-Swift.h"`。要查找模块名称，请转至`构建设置`选项卡，再转至`打包` > `产品模块名称`。
-* 将 `<tenantId>` 替换为租户标识（请参阅[开始之前](#before-you-begin)）。 
+* 将 `<tenantId>` 替换为租户标识（请参阅[开始之前](#before-you-begin)）。
 
 
 ## 在 Cordova WebView 中初始化 {{site.data.keyword.amashort}} 客户端 SDK
@@ -145,7 +145,7 @@ BMSClient.initialize("<applicationBluemixRegion>");
 ```
 {: codeblock}
 
-将 `<applicationBluemixRegion>` 替换为区域（请参阅[开始之前](#before-you-begin)）。 
+将 `<applicationBluemixRegion>` 替换为区域（请参阅[开始之前](#before-you-begin)）。
 
 ## 测试认证
 {: #google-auth-cordova-test}
@@ -178,9 +178,9 @@ BMSClient.initialize("<applicationBluemixRegion>");
 1. 运行应用程序。此时将显示 Google 登录屏幕。
 
 	![Google 登录屏幕](images/android-google-login.png)
-	
+
 	![Google 登录屏幕](images/ios-google-login.png)
-	
+
 	如果设备上未安装 Facebook 应用程序，或者如果您当前未登录到 Facebook，那么此屏幕的外观可能略有不同。
 
 1. 通过单击**确定**，您将授权 {{site.data.keyword.amashort}} 使用您的 Google 用户身份进行认证。

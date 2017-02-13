@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  year: 2016
-lastupdated: "2016-06-15"
+  year: 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
 
@@ -62,7 +62,7 @@ Pour démarrer le processus d'autorisation :
   Le paramètre `state`, qui n'est pas utilisé pour l'instant, n'a pas besoin d'être renseigné.
   Le paramètre `redirect_uri` est l'identificateur URI qui permet une redirection après une authentification aboutie ou échouée avec Facebook.
 
-1. Après redirection vers le noeud final d'autorisation, un formulaire de connexion vous est envoyé par Facebook. Entrez le nom d'utilisateur et le mot de passe pour effectuer la redirection vers l'URI `redirect_uri`.
+1. Après la redirection au noeud final d'autorisation, Facebook vous soumettra un formulaire de connexion  . Entrez le nom d'utilisateur et le mot de passe pour effectuer la redirection vers l'URI `redirect_uri`.
    La réponse retournée après une redirection contient le code d'autorisation dans les paramètres de requête de la demande.
 
 1. Effectuez une demande `POST` vers le noeud final de jeton du serveur d'autorisation :

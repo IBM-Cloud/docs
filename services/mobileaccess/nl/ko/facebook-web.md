@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  year: 2016
-lastupdated: "2016-06-15"
+  year: 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
 
@@ -51,7 +51,7 @@ Facebook 애플리케이션 ID 및 앱 본인확인정보가 있으며 Facebook 
 
 1. 다음 조회 매개변수를 추가하십시오.
    ```
-response_type='authorization_code'
+    response_type='authorization_code'
     client_id= <bluemix_app_guid>
     redirect_uri= <권한 코드를 받은 후 경로를 재지정할 uri>
     scope= 'openid'
@@ -62,8 +62,8 @@ response_type='authorization_code'
   `state` 매개변수를 현재 사용 중이지 않으므로 빈 상태로 둘 수 있습니다.
  `redirect_uri` 매개변수는 Facebook으로 인증하는 데 성공하거나 실패한 후 경로를 재지정하는 데 사용하는 uri입니다.
 
-1. 권한 엔드포인트로 경로를 재지정하고 나면 Facebook에서 로그인 양식을
-   가져옵니다. `redirect_uri`로 경로를 재지정할 사용자 이름 및 비밀번호를 입력하십시오.
+1. 권한 엔드포인트로 경로 재지정한 후에는 Facebook에서 로그인 양식을       
+   받게 됩니다. `redirect_uri`로 경로를 재지정할 사용자 이름 및 비밀번호를 입력하십시오.
    경로를 재지정한 후 리턴되는 응답에는 요청 조회 매개변수의 권한 코드가 포함되어 있습니다.
 
 1. 권한 서버 토큰 엔드포인트에 대한 `POST` 요청을 수행하십시오.
@@ -72,7 +72,7 @@ response_type='authorization_code'
 
   다음 조회 매개변수를 사용합니다. 
   ```
-grant_type='authorization_code'
+  grant_type='authorization_code'
   client_id= <bluemix_app_guid>
   code= <authorization code>
   ```

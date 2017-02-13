@@ -1,14 +1,17 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-24"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
+{:pre: .pre}
+
 
 # Cordova 앱에서 Facebook 인증 사용
 {: #facebook-auth-cordova}
@@ -24,22 +27,22 @@ Facebook 인증을 사용하려면 원시 플랫폼 및 Cordova WebView Javascri
 {: #facebook-auth-before}
 
 다음이 있어야 합니다.
-* {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트된 Cordova 프로젝트(Android 또는 iOS)([Cordova 플러그인 설정](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html#getting-started-cordova-plugin) 참조).
+* {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트된 Cordova 프로젝트(Android 또는 iOS)([Cordova 플러그인 설정](getting-started-cordova.html#getting-started-cordova-plugin) 참조).
 * {{site.data.keyword.amashort}} 서비스를 통해 보호하는 {{site.data.keyword.Bluemix_notm}} 애플리케이션의 인스턴스. {{site.data.keyword.Bluemix_notm}} 백엔드 서비스 작성 방법에 대한 자세한 정보는 [시작하기](index.html)를 참조하십시오.
 * 애플리케이션 라우트. 이는 백엔드 애플리케이션의 URL입니다. 
 * `tenantId` 값. {{site.data.keyword.amashort}} 서비스 대시보드를 여십시오. **모바일 옵션**을 클릭하십시오. **앱 GUID / TenantId** 필드에 `tenantId`(`appGUID`라고도 함) 값이 표시됩니다. 이 값은 SDK를 초기화하고 백엔드 서비스에 요청을 보내는 데 필요합니다. 
 *  {{site.data.keyword.Bluemix_notm}} 서비스가 호스트되는 지역. 헤더에서 메뉴 표시줄의 **아바타** 아이콘 ![아바타 아이콘](images/face.jpg "아바타 아이콘") 옆에 현재 {{site.data.keyword.Bluemix_notm}} 지역이 표시됩니다. 지역 값은 **미국 남부**, **시드니** 또는 **영국** 중 하나여야 합니다. 이들 이름에 해당하는 정확한 SDK 상수 값은 코드 예제에 표시되어 있습니다. 
-* Facebook 애플리케이션 및 앱 ID. 자세한 정보는 [Facebook 개발자 포털에서 Facebook 앱 ID 얻기](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)를 참조하십시오. 
+* Facebook 애플리케이션 및 앱 ID. 자세한 정보는 [Facebook 개발자 포털에서 Facebook 앱 ID 얻기](facebook-auth-overview.html#facebook-appID)를 참조하십시오. 
 
 
 
 ## Android 플랫폼 구성
 {: #facebook-auth-cordova-android}
 
-Facebook 인증 통합을 위해 Cordova 애플리케이션의 Android 플랫폼을 구성하는 데 필요한 단계는 기본 Android 애플리케이션에 필요한 단계와 매우 유사합니다. 자세한 정보는 [Android 앱에서 Facebook 인증 사용](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-android.html)을 참조하십시오. 다음 단계를 수행하십시오. 
+Facebook 인증 통합을 위해 Cordova 애플리케이션의 Android 플랫폼을 구성하는 데 필요한 단계는 기본 Android 애플리케이션에 필요한 단계와 매우 유사합니다. 자세한 정보는 [Android 앱에서 Facebook 인증 사용](facebook-auth-android.html)을 참조하십시오. 다음 단계를 수행하십시오. 
 
-* [Android 플랫폼에 대해 Facebook 애플리케이션 구성](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-android.html#facebook-auth-android-config). 이 단계는 Facebook 개발자 사이트에서 Android 앱에 대한 Facebook 인증을 설정합니다. 
-* [Facebook 인증용 MCA 구성](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-android.html#facebook-auth-android-mca). 이 단계는 {{site.data.keyword.Bluemix}} 서버에서 {{site.data.keyword.amashort}} 서비스를 Android Facebook 인증용으로 구성합니다. 
+* [Android 플랫폼에 대해 Facebook 애플리케이션 구성](facebook-auth-android.html#facebook-auth-android-config). 이 단계는 Facebook 개발자 사이트에서 Android 앱에 대한 Facebook 인증을 설정합니다. 
+* [Facebook 인증용 MCA 구성](facebook-auth-android.html#facebook-auth-android-mca). 이 단계는 {{site.data.keyword.Bluemix}} 서버에서 {{site.data.keyword.amashort}} 서비스를 Android Facebook 인증용으로 구성합니다. 
 
 
 ### Android 플랫폼용 {{site.data.keyword.amashort}} Facebook 클라이언트 SDK 구성
@@ -52,13 +55,13 @@ Facebook 인증 통합을 위해 Cordova 애플리케이션의 Android 플랫폼
 	```Gradle
 	dependencies {
 		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
-        name:'facebookauthentication',
-        version: '2.+',
-        ext: 'aar',
-        transitive: true
-    	// other dependencies  
+			name:'facebookauthentication',
+			version: '2.+',
+			ext: 'aar',
+			transitive: true
+			// other dependencies  
 	}
-```
+	```
 	{: codeblock}
 
 2. **도구 > Android > Gradle 파일과 프로젝트 동기화**를 클릭하여 프로젝트를 Gradle과 동기화하십시오.
@@ -82,10 +85,10 @@ Facebook 인증 통합을 위해 Cordova 애플리케이션의 Android 플랫폼
     ```XML
     <application .......>
     <meta-data
-			android:name="com.facebook.sdk.ApplicationId"
-			android:value="@string/facebook_app_id"/>
+       android:name="com.facebook.sdk.ApplicationId"
+       android:value="@string/facebook_app_id"/>
 
-		<activity ...../>
+    <activity ...../>
     <activity ...../>
     </application>
     ```
@@ -96,13 +99,13 @@ Facebook 인증 통합을 위해 Cordova 애플리케이션의 Android 플랫폼
     ```XML
     <application .....>
         <activity ...../>
-		      <activity ...../>
+        <activity ...../>
 
-       	<activity   android:name="com.facebook.FacebookActivity"
+        <activity   android:name="com.facebook.FacebookActivity"
 	              android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
 	              android:theme="@android:style/Theme.Translucent.NoTitleBar"
-	              android:label="@string/app_name" 
-			    />
+	              android:label="@string/app_name"
+        />
     </application>
     ```
     {: codeblock}
@@ -112,9 +115,9 @@ Facebook 인증 통합을 위해 Cordova 애플리케이션의 Android 플랫폼
 	```Java
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		super.onActivityResult(requestCode, resultCode, data);
-		FacebookAuthenticationManager.getInstance()
-			.onActivityResultCalled(requestCode, resultCode, data);
+	   super.onActivityResult(requestCode, resultCode, data);
+	    FacebookAuthenticationManager.getInstance()
+	      .onActivityResultCalled(requestCode, resultCode, data);
 	}
 	```
 	{: codeblock}
@@ -136,19 +139,17 @@ FacebookAuthenticationManager.getInstance().registerDefaultAuthenticationListene
 ## iOS 플랫폼 구성
 {: #facebook-auth-cordova-ios}
 
-Facebook 인증 통합을 위해 Cordova 애플리케이션의 iOS 플랫폼을 구성하는 데 필요한 단계는 기본 iOS Swift 애플리케이션에 필요한 단계와 유사합니다. 주요한 차이점은 현재 Cordova CLI에서는 CocoaPods 종속성 관리자를 지원하지 않는다는 점입니다. {{site.data.keyword.amashort}} 클라이언트를 Facebook 인증과 통합하는 데 필요한 파일을 수동으로 추가해야 합니다. 자세한 정보는 [iOS 앱에서 Facebook 인증 사용(Swift SDK)](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios-swift-sdk.html)을 참조하십시오. 다음 단계를 수행하십시오. 
+Facebook 인증 통합을 위해 Cordova 애플리케이션의 iOS 플랫폼을 구성하는 데 필요한 단계는 기본 iOS Swift 애플리케이션에 필요한 단계와 유사합니다(Swift SDK에서 Objective-C 코드를 사용하기 위해 헤더 파일이 필요함). 주요한 차이점은 현재 Cordova CLI에서는 CocoaPods 종속성 관리자를 지원하지 않는다는 점입니다. {{site.data.keyword.amashort}} 클라이언트를 Facebook 인증과 통합하는 데 필요한 파일을 수동으로 추가해야 합니다. 자세한 정보는 [iOS 앱에서 Facebook 인증 사용(Swift SDK)](facebook-auth-ios-swift-sdk.html)을 참조하십시오. 다음 단계를 수행하십시오. 
 
-* [iOS 플랫폼에 대해 Facebook 애플리케이션 구성](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios-swift-sdk.html#facebook-auth-ios-config). 이 단계는 Facebook 개발자 사이트에서 Facebook 인증을 설정합니다. 
-* [Facebook 인증용 MCA 구성](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios-swift-sdk.html#facebook-auth-ios-configmca). 이 단계는 {{site.data.keyword.Bluemix}} 서버에서 {{site.data.keyword.amashort}} 서비스를 구성합니다. 
-* [iOS용 MCA Facebook 클라이언트 SDK 구성](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios-swift-sdk.html#facebook-auth-ios-sdk). 이 단계는 CocoaPods를 사용하여 Facebook 권한용 {{site.data.keyword.amashort}} iOS Swift SDK를 설치합니다. 
+* [iOS 플랫폼에 대해 Facebook 애플리케이션 구성](facebook-auth-ios-swift-sdk.html#facebook-auth-ios-config). 이 단계는 Facebook 개발자 사이트에서 Facebook 인증을 설정합니다. 
+* [Facebook 인증용 MCA 구성](facebook-auth-ios-swift-sdk.html#facebook-auth-ios-configmca). 이 단계는 {{site.data.keyword.Bluemix}} 서버에서 {{site.data.keyword.amashort}} 서비스를 구성합니다. 
+* [iOS용 MCA Facebook 클라이언트 SDK 구성](facebook-auth-ios-swift-sdk.html#facebook-auth-ios-sdk). 이 단계는 CocoaPods를 사용하여 Facebook 권한용 {{site.data.keyword.amashort}} iOS Swift SDK를 설치합니다. 
 
 
 ### iOS에서 키 체인 공유 사용
 {: #enable_keychain}
 
 `키 체인 공유`를 사용 가능하게 설정하십시오. `기능` 탭으로 이동하여 Xcode 프로젝트에서 `키 체인 공유`를 `On`으로 전환하십시오. 
-
-
 
 ### Objective-C에서 {{site.data.keyword.amashort}} 권한 관리자 초기화
 {: #initialize_objc}
@@ -173,13 +174,13 @@ Facebook 인증 통합을 위해 Cordova 애플리케이션의 iOS 플랫폼을 
 
 	    return [super application:application didFinishLaunchingWithOptions:launchOptions];
 	}
-	
 
-	- (BOOL)application: (UIApplication *)application openURL: (NSURL *)url sourceApplication: (NSString *)sourceApplication
-   annotation: (id)annotation
- {
 
-		  return [[FacebookAuthenticationManager sharedInstance] onOpenURLWithApplication:application
+	- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication
+			annotation:(id)annotation
+	{
+
+	   return [[FacebookAuthenticationManager sharedInstance] onOpenURLWithApplication:application
 	   		url:url sourceApplication:sourceApplication annotation:annotation];
 	}
 
@@ -204,7 +205,6 @@ BMSClient.initialize(<applicationBluemixRegion>);
 
 `<applicationBluemixRegion>`을 해당 지역으로 대체하십시오([시작하기 전에](#facebook-auth-before) 참조).
 
-
 ## 인증 테스트
 {: #facebook-auth-cordova-test}
 
@@ -213,7 +213,7 @@ BMSClient.initialize(<applicationBluemixRegion>);
 ### 시작하기 전에
 {: #testing_auth_before}
 
-{{site.data.keyword.mobilefirstbp}} 표준 유형을 사용 중 이어야 하며, `/protected` 엔드포인트에서 {{site.data.keyword.amashort}}의 보호를 받은 리소스가 있어야 합니다. 자세한 정보는 [리소스 보호](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)를 참조하십시오. 
+{{site.data.keyword.mobilefirstbp}} 표준 유형을 사용 중 이어야 하며, `/protected` 엔드포인트에서 {{site.data.keyword.amashort}}의 보호를 받은 리소스가 있어야 합니다. 자세한 정보는 [리소스 보호](protecting-resources.html)를 참조하십시오. 
 
 1. 브라우저에서 모바일 백엔드 애플리케이션의 보호 엔드포인트로 요청을 전송하십시오. URL `{applicationRoute}/protected`를 여십시오. 예를 들면, `http://my-mobile-backend.mybluemix.net/protected`입니다. 
 

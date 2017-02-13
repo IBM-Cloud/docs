@@ -1,32 +1,31 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-04"
+  years: 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:codeblock:.codeblock}
+{:codeblock: .codeblock}
+{:pre: .pre}
+
 
 # Configurando o iOS Swift SDK
 {: #getting-started-ios}
 
-O {{site.data.keyword.amafull}} liberou um novo Swift SDK, que inclui e melhora a funcionalidade fornecida pelo
-{{site.data.keyword.amashort}} Objective-C SDK existente, facilitando a autenticação do seu aplicativo e fornecendo melhor proteção para
-seus recursos de backend. Instrumente seu aplicativo iOS Swift com o SDK {{site.data.keyword.amashort}}, inicialize o SDK e faça
+Instrumente seu aplicativo iOS Swift com o SDK {{site.data.keyword.amashort}}, inicialize o SDK e faça
 solicitações aos recursos protegidos e não protegidos.
 
 {:shortdesc}
-
-Embora o Objective-C SDK permaneça totalmente suportado e ainda considerado o SDK primário para {{site.data.keyword.Bluemix_notm}}
-Mobile Services, há planos de descontinuar o Objective-C SDK posteriormente este ano em favor deste novo Swift SDK.
 
 
 ## Antes de iniciar
 {: #before-you-begin}
 Você deve ter:
+
 * Uma instância de um aplicativo
 {{site.data.keyword.Bluemix_notm}}.
 * Uma instância de um serviço
@@ -54,7 +53,7 @@ valores de SDK requeridos no código code SDK:
 `BMSClient.Region.sydney`.  Você precisará desse
 valor para inicializar o SDK
 {{site.data.keyword.amashort}}.
-* Um projeto do Xcode. Para obter mais informações sobre como configurar o seu ambiente do iOS, consulte o [website do Apple Developer](https://developer.apple.com/support/xcode/).
+* Um projeto do Xcode. Para obter mais informações sobre como configurar seu ambiente de desenvolvimento iOS, veja o [website Apple Developer ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.apple.com/support/xcode/ "Ícone de link externo"){: new_window}.
 
 
 ## Instalando o {{site.data.keyword.amashort}} client SDK
@@ -75,8 +74,7 @@ sudo gem install cocoapods
 ```
 {: codeblock}
 
-Para obter mais informações, consulte o [website do
-CocoaPods](https://cocoapods.org/).
+Para obter mais informações, veja o [website CocoaPods ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cocoapods.org/ "Ícone de link externo"){: new_window}.
 
 ### Instalar o {{site.data.keyword.amashort}} client SDK com o CocoaPods
 {: #install-sdk-cocoapods}
@@ -129,7 +127,7 @@ a guia `Recursos` e mude
 
 1. Inicialize o {{site.data.keyword.amashort}} client SDK.
 
-```Swift 	let tenantId = "<serviceTenantID>" 	let regionName = <applicationBluemixRegion>
+ ```Swift 	let tenantId = "<serviceTenantID>" 	let regionName = <applicationBluemixRegion>
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: 		[UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
@@ -139,14 +137,14 @@ a guia `Recursos` e mude
 	BMSClient.sharedInstance.authorizationManager = mcaAuthManager	
 	return true
 	}
- ```
- {: codeblock}
+  ```
+  {: codeblock}
 
-* Substitua o `tenantId` pelo valor que obteve a partir de **Opções de dispositivo móvel**. 
-* Substitua `<applicationBluemixRegion>` pela região em que seu aplicativo {{site.data.keyword.Bluemix_notm}} está hospedado. 
+* Substitua o `tenantId` pelo valor que obteve a partir de **Opções de dispositivo móvel**.
+* Substitua `<applicationBluemixRegion>` pela região em que seu aplicativo {{site.data.keyword.Bluemix_notm}} está hospedado.
 
 Para obter informações sobre esses valores, consulte
-[Antes de iniciar](#before-you-begin). 
+[Antes de iniciar](#before-you-begin).
 
 
 ## Fazendo uma solicitação para seu aplicativo backend móvel
@@ -192,6 +190,7 @@ Client Access](#init-mca-sdk-ios)). Por exemplo:
 ## Próximas etapas
 {: #next-steps}
 Quando você se conectou ao terminal protegido, nenhuma credencial foi necessária. Para requerer que os usuários efetuem login em seu aplicativo, deve-se configurar a autenticação do Facebook, do Google ou customizada.
+
   * [Facebook
 ](facebook-auth-ios-swift-sdk.html)
   * [Google](google-auth-ios-swift-sdk.html)

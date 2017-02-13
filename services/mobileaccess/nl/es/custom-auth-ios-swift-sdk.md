@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-27"
+  years: 2016, 2017
+lastupdated: "2017-01-16"
 
 ---
 
@@ -12,27 +12,26 @@ lastupdated: "2016-10-27"
 # Configuración de la autenticación personalizada para la app {{site.data.keyword.amashort}} iOS (Swift SDK)
 {: #custom-ios}
 
-Configure su aplicación de iOS con autenticación personalizada para que utilice el SDK del cliente de {{site.data.keyword.amafull}} y conecte la aplicación a {{site.data.keyword.Bluemix}}.  El nuevo SDK de {{site.data.keyword.amashort}} Swift amplía y mejora la funcionalidad proporcionada por el SDK Objetive-C de Mobile Client Access existente.
+Configure su aplicación de iOS con autenticación personalizada para que utilice el SDK del cliente de {{site.data.keyword.amafull}} y conecte la aplicación a {{site.data.keyword.Bluemix}}.  
 
-**Nota:** Si bien el SDK de Objective-C recibe total soporte y sigue considerándose como SDK principal para {{site.data.keyword.Bluemix_notm}} Mobile Services, está previsto dejar de mantener este SDK a finales del año en favor del nuevo SDK de Swift.
 
 ## Antes de empezar
 {: #before-you-begin}
 
 Antes de empezar, debe tener:
 
-* Un recurso protegido mediante una instancia del servicio {{site.data.keyword.amashort}} configurado para que utilice un proveedor de identidad personalizado (consulte [Configuración de la autenticación personalizada](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).  
+* Un recurso protegido mediante una instancia del servicio {{site.data.keyword.amashort}} configurado para que utilice un proveedor de identidad personalizado (consulte [Configuración de la autenticación personalizada](custom-auth-config-mca.html)).  
 * El valor de **TenantID**. Abra el servicio en el panel de control de {{site.data.keyword.amashort}}. Pulse el botón **Opciones móviles**. El valor `tenantId` (también conocido como `appGUID`) se muestra en el campo **GUID de app / TenantId**. Necesitará este valor para inicializar el gestor de autorización.
 * Su nombre de **Dominio**. Es el valor que ha especificado en el campo **Nombre de dominio** de la sección **Personalizado** del separador **Gestión** del panel de control de {{site.data.keyword.amashort}}.
 * El URL de la aplicación de programa de fondo (**Ruta de app**). Necesitará estos valores para enviar solicitudes a los puntos finales protegidos de la aplicación de programa de fondo.
 * Su {{site.data.keyword.Bluemix_notm}} **Región**. Encontrará su región de {{site.data.keyword.Bluemix_notm}} actual en la cabecera, junto al icono **Avatar** ![icono Avatar](images/face.jpg "icono Avatar"). El valor de la región que aparece debería ser uno de los siguientes: **EE.UU. sur**, **Reino Unido** o **Sídney**, y se corresponde con las constantes necesarias en el código: `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom`, o `BMSClient.Region.sydney`.
 
 Para obtener más información, consulte la siguiente información:
- * [Iniciación a {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/index.html)
- * [Configuración del SDK de Swift de iOS](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html)
- * [Utilización de un proveedor de identidad personalizado](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
- * [Creación de un proveedor de identidad personalizado](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
- * [Configuración de {{site.data.keyword.amashort}} para la autenticación personalizada](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
+ * [Iniciación a {{site.data.keyword.amashort}}](index.html)
+ * [Configuración del SDK de Swift de iOS](getting-started-ios-swift-sdk.html)
+ * [Utilización de un proveedor de identidad personalizado](custom-auth.html)
+ * [Creación de un proveedor de identidad personalizado](custom-auth-identity-provider.html)
+ * [Configuración de {{site.data.keyword.amashort}} para la autenticación personalizada](custom-auth-config-mca.html)
 
 ### Habilitación de Keychain Sharing para iOS
 {: #enable_keychain}
@@ -100,11 +99,11 @@ Inicialice el SDK pasando el parámetro `applicationGUID` (**TenantId**). Un lug
 {: codeblock}
 
 En el código:
-* Sustituya `MCAServiceTenantId` por el valor de **TenantId** y `<applicationBluemixRegion>` por su **Región** de {{site.data.keyword.amashort}} (consulte [Antes de empezar](##before-you-begin)). 
-* Utilice el valor de `realmName` que indicó en el panel de control de {{site.data.keyword.amashort}} (consulte [Configuración de la autenticación personalizada](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).
+* Sustituya `MCAServiceTenantId` por el valor de **TenantId** y `<applicationBluemixRegion>` por su **Región** de {{site.data.keyword.amashort}} (consulte [Antes de empezar](##before-you-begin)).
+* Utilice el valor de `realmName` que indicó en el panel de control de {{site.data.keyword.amashort}} (consulte [Configuración de la autenticación personalizada](custom-auth-config-mca.html)).
 * Sustituya `<applicationBluemixRegion>` por la región en la que se aloja su aplicación {{site.data.keyword.Bluemix_notm}}. Para ver la región de {{site.data.keyword.Bluemix_notm}}, pulse el icono de Avatar ![Icono de Avatar](images/face.jpg "Icono de Avatar") en la barra de menús para abrir el widget **Cuenta y soporte**.  El valor de la región que aparece debería ser uno de los siguientes: **EE.UU. sur**, **Reino Unido** o **Sídney**, y se corresponde con las constantes necesarias en el código: `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom`, o `BMSClient.Region.sydney`.
-   
-  
+
+
 ## Prueba de autenticación
 {: #custom-ios-testing}
 
@@ -156,7 +155,7 @@ Después de inicializar el SDK del cliente y registrar un delegado de autorizaci
 
 	 ```
 	 MCAAuthorizationManager.sharedInstance.logout(callBack)
-	 ``` 
+	 ```
 	 {: codeblock}
 
  Si invoca este código después de que el usuario haya iniciado sesión, la sesión del usuario se cerrará. Cuando el usuario intente iniciar sesión de nuevo, deberá volver a responder a la pregunta que reciba del servidor.

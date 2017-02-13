@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-02"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 {:new_window: target="_blank"}
@@ -58,7 +58,7 @@ lastupdated: "2016-10-02"
 
 您需要這個值來配置行動或 Web 應用程式的 Facebook 鑑別。
 
-1. 存取 [Facebook for Developers](https://developers.facebook.com) 網站。
+1. 存取 [Facebook for Developers ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developers.facebook.com "外部鏈結圖示"){: new_window} 網站。
 
 1. 開啟**我的應用程式**下拉清單，然後選取**新增應用程式**。
 
@@ -75,5 +75,4 @@ lastupdated: "2016-10-02"
 
 * [啟用 Android 應用程式的 Facebook 鑑別](facebook-auth-android.html)
 * [啟用 iOS 應用程式的 Facebook 鑑別 (Swift SDK)](facebook-auth-ios-swift-sdk.html)
-* [啟用 iOS 應用程式的 Facebook 鑑別（Objective-C SDK - 已淘汰）](facebook-auth-ios.html)
 * [啟用 Cordova 應用程式的 Facebook 鑑別](facebook-auth-cordova.html)

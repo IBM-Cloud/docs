@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-02"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 {:new_window: target="_blank"}
@@ -57,7 +57,7 @@ Facebook을 ID 제공자로 사용하려면 개발자용 Facebook 웹 사이트�
 
 모바일 또는 웹 앱에 적합하게 Facebook 인증을 구성하는 데 이 값이 필요합니다. 
 
-1. [Facebook for Developers](https://developers.facebook.com) 사이트에 액세스하십시오. 
+1. [개발자용 Facebook ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developers.facebook.com){: new_window} 사이트에 액세스하십시오. 
 
 1. **내 앱** 풀다운 목록을 열고 **새 앱 추가**를 선택하십시오. 
 
@@ -74,5 +74,4 @@ Facebook을 ID 제공자로 사용하려면 개발자용 Facebook 웹 사이트�
 
 * [Android 앱에서 Facebook 인증 사용](facebook-auth-android.html)
 * [iOS 앱에서 Facebook 인증 사용(Swift SDK)](facebook-auth-ios-swift-sdk.html)
-* [iOS 앱에서 Facebook 인증 사용(Objective-C SDK - 더 이상 사용하지 않음)](facebook-auth-ios.html)
 * [Cordova 앱에서 Facebook 인증 사용](facebook-auth-cordova.html)

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-06-16"
+  years: 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
 
@@ -48,7 +48,7 @@ lastupdated: "2016-06-16"
 
     다음 조회 매개변수를 사용합니다. 
    ```
-response_type=’authorization_code’
+   response_type=’authorization_code’
    client_id= <bluemix\_app\_guid>
    redirect_uri= <권한 코드를 받은 후 경로를 재지정할 uri>
    scope= ‘openid’
@@ -68,16 +68,16 @@ response_type=’authorization_code’
 
  https://imf-newauthserver.bluemix.net/*oauth/v2/token
 
-   다음 조회 매개변수를 사용합니다. 
+ 다음 조회 매개변수를 사용합니다. 
  ```
-grant_type = 'authorization_code'
+ grant_type = 'authorization_code'
  client_id = <bluemix_app_guid>
  redirect_uri = <redirect_uri>
  code = <authorization code>
  ```
-`redirect_uri` 매개변수는 1단계의 `redirect_uri`와 일치해야 합니다. 권한 코드는 2단계의 요청을 통해 리턴됩니다.
+  `redirect_uri` 매개변수는 1단계의 `redirect_uri`와 일치해야 합니다. 권한 코드는 2단계의 요청을 통해 리턴됩니다.
 
-    권한 부여 코드는 최대 10분 동안 유효하므로 이 `POST` 요청을 10분 내에 보내도록 하십시오.
+  권한 부여 코드는 최대 10분 동안 유효하므로 이 `POST` 요청을 10분 내에 보내도록 하십시오.
 
 `POST` 응답 본문에 base64로 인코딩된 *access_token* 및
 *id_token*이 포함되어 있습니다. 

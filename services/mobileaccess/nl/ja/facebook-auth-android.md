@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-05"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 {:new_window: target="_blank"}
@@ -27,7 +27,7 @@ lastupdated: "2016-12-05"
 * **TenantID** 値。{{site.data.keyword.amashort}} ダッシュボードでサービスを開きます。**「モバイル・オプション」**ボタンをクリックします。`tenantId` (`appGUID` とも呼ばれる) の値が、**「アプリ GUID」/「TenantId」**フィールドに表示されます。許可マネージャーを初期化するためにこの値が必要になります。
 * {{site.data.keyword.Bluemix_notm}} **「地域」**。**「アバター」**アイコン![「アバター」アイコン](images/face.jpg "「アバター」アイコン") の横のヘッダー内に現在の {{site.data.keyword.Bluemix_notm}} 地域が表示されます。表示される地域の値は、`「米国南部」`、`「英国」`、または`「シドニー」`のいずれかでなければならず、また WebView Javascript コードで必要な SDK 値 (`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_SYDNEY`、または `BMSClient.REGION_UK`) に対応している必要があります。{{site.data.keyword.amashort}} クライアントを初期化するためにこの値が必要になります。
 * Gradle と連動して機能するように構成された Android プロジェクト。このプロジェクトに {{site.data.keyword.amashort}} Client SDK が装備される必要はありません。  
-* Facebook for Developers サイト (https://developers.facebook.com) 上の Android プラットフォームを伴う Facebook アプリ。
+* [Facebook for Developers サイト![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developers.facebook.com/ "外部リンク・アイコンn"){: new_window}上の Android プラットフォームを伴う Facebook アプリ。
 
 **重要:** Facebook SDK (`com.facebook.FacebookSdk`) を別個にインストールする必要はありません。Facebook SDK は、{{site.data.keyword.amashort}} Facebook Client SDK を追加する際に Gradle によって自動的にインストールされます。Facebook for Developers サイトで Android プラットフォームを追加する場合はこのステップをスキップできます。
 
@@ -36,11 +36,11 @@ lastupdated: "2016-12-05"
 
 Facebook for Developers Web サイトから、以下を実行します。
 
-1. Facebook for Developers Web サイト (https://developers.facebook.com) で自分のアカウントにログインします。 
+1. [Facebook for Developers Web サイト![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developers.facebook.com "外部リンク・アイコン"){: new_window}で自分のアカウントにログインします。
 
 1. **「製品リスト (Products List)」**から、**「Facebook ログイン (Facebook Login)」**を選択します。
 
-1. Android プラットフォームを追加または構成します。 
+1. Android プラットフォームを追加または構成します。
 
 1. Google Play パッケージ名のプロンプトで、Android アプリケーションのパッケージ名を指定します。Android アプリケーションのパッケージ名を見つけるには、Android Studio プロジェクト内の `AndroidManifest.xml` ファイルで `<manifest ..... package="{your-package-name}">` を探してください。
 
@@ -57,14 +57,14 @@ Facebook for Developers Web サイトから、以下を実行します。
 	</activity>
 	```
 	{: codeblock}
-	
+
 1. Facebook でアプリケーションの認証性を確保するためには、ご使用のデベロッパー証明書 SHA1 のハッシュを指定する必要があります。
 
 	**Android セキュリティーの詳細:** Android OS では、Android デバイスにインストールされたすべてのアプリケーションがデベロッパー証明書によって署名されている必要があります。Android アプリケーションのビルドは、デバッグ・モードとリリース・モードの 2 つのモードで行えます。
-	
+
 	デバッグ・モードとリリース・モードには異なる証明書を使用してください。デバッグ・モードで Android アプリケーションの署名に使用する証明書は Android SDK にバンドルされています。Android SDK は通常、Android Studio によって自動的にインストールされます。作成したアプリを Google Play ストアでリリースする場合、通常自身で生成する別の証明書を使ってアプリに署名する必要があります。
-	
-	Facebook の 2 セットのキー・ハッシュを入力できます。1 つはデバッグ証明書を使用してデバッグ・モードでビルドされたアプリケーション用のキー・ハッシュで、もう 1 つはリリース証明書を使用してリリース・モードでビルドされたアプリケーション用のキー・ハッシュです。詳しくは、[signing your Android applications](http://developer.android.com/tools/publishing/app-signing.html) を参照してください。
+
+	Facebook の 2 セットのキー・ハッシュを入力できます。1 つはデバッグ証明書を使用してデバッグ・モードでビルドされたアプリケーション用のキー・ハッシュで、もう 1 つはリリース証明書を使用してリリース・モードでビルドされたアプリケーション用のキー・ハッシュです。詳しくは、[アプリに署名する![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://developer.android.com/tools/publishing/app-signing.html "外部リンク・アイコン"){: new_window}を参照してください。
 
 1. 開発環境用に使用する証明書が含まれた鍵ストアは、`~/.android/debug.keystore` ファイルに保管されています。デフォルトの鍵ストア・パスワードは `android` です。デバッグ・モードでアプリケーションをビルドする際はこの証明書を使用してください。
 
@@ -185,12 +185,12 @@ Client SDK を Android 用に構成するには、Android Studio 内の Gradle �
 	```
 	{: codeblock}
 
-   * `BMSClient.REGION_UK` は適切な地域に置き換えてください。 
-   * `<MCAServiceTenantId>` を `tenantId` 値に置き換えます。 
-   
+   * `BMSClient.REGION_UK` は適切な地域に置き換えてください。
+   * `<MCAServiceTenantId>` を `tenantId` 値に置き換えます。
+
 	これらの値の取得について詳しくは、[開始する前に](#before-you-begin)を参照してください。
 
-	**注:** Android アプリケーションの対象が Android バージョン 6.0 (API レベル 23) 以降の場合、そのアプリケーションに、`register` の呼び出しの前に `android.permission.GET_ACCOUNTS` 呼び出しがあるようにする必要があります。詳しくは、[https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window} を参照してください。
+	**注:** Android アプリケーションの対象が Android バージョン 6.0 (API レベル 23) 以降の場合、そのアプリケーションに、`register` の呼び出しの前に `android.permission.GET_ACCOUNTS` 呼び出しがあるようにする必要があります。詳しくは、Android Developers サイト上の[このトピック![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.android.com/training/permissions/requesting.html "外部リンク・アイコン"){: new_window}を参照してください。
 
 1. 以下のコードをアクティビティーに追加します。
 
@@ -213,9 +213,9 @@ Client SDK が初期化され、Facebook 認証マネージャーの登録が完
 ### テストを開始する前に
 {: #facebook-auth-android-testing-before}
 
-{{site.data.keyword.mobilefirstbp}} ボイラープレートを使用していて、{{site.data.keyword.amashort}}により`/protected` エンドポイントで保護されているリソースを既に持っている必要があります。`/protected` エンドポイントをセットアップする必要がある場合、[リソースの保護 ](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)を参照してください。
+{{site.data.keyword.mobilefirstbp}} ボイラープレートを使用していて、{{site.data.keyword.amashort}}により`/protected` エンドポイントで保護されているリソースを既に持っている必要があります。`/protected` エンドポイントをセットアップする必要がある場合、[リソースの保護 ](protecting-resources.html)を参照してください。
 
-1. ブラウザーで、新しく作成されたモバイル・バックエンド・アプリケーションの保護エンドポイントへの要求の送信を試行します。以下の URL を開きます。 
+1. ブラウザーで、新しく作成されたモバイル・バックエンド・アプリケーションの保護エンドポイントへの要求の送信を試行します。以下の URL を開きます。
 
 	`{applicationRoute}/protected`。例: `http://my-mobile-backend.mybluemix.net/protected`。  
 
@@ -244,7 +244,7 @@ Client SDK が初期化され、Facebook 認証マネージャーの登録が完
 	});
 	```
 	{: codeblock}
-	
+
 1. アプリケーションを実行します。Facebook のログイン画面が表示されます。
 
 	![image](images/android-facebook-login.png)

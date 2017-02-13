@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  year: 2016
-lastupdated: "2016-09-07"
+  year: 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
 
@@ -81,5 +81,3 @@ O corpo de resposta `POST` deve conter o `access_token` e o `id_token` codificad
 
 Agora é possível começar a fazer solicitações para seus recursos protegidos.
 Toda solicitação para recursos protegidos deve conter o token de acesso no campo de cabeçalho da solicitação de autorização.
-
-

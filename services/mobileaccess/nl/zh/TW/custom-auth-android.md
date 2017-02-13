@@ -1,14 +1,17 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-02"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 
+
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 
 # 配置適用於 {{site.data.keyword.amashort}} Android 應用程式的自訂鑑別
@@ -21,18 +24,18 @@ lastupdated: "2016-11-02"
 {: #before-you-begin}
 開始之前，您必須具有：
 
-* 配置為使用自訂身分提供者之 {{site.data.keyword.amashort}} 服務實例所保護的資源（請參閱[配置自訂鑑別](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)）。  
+* 配置為使用自訂身分提供者之 {{site.data.keyword.amashort}} 服務實例所保護的資源（請參閱[配置自訂鑑別](custom-auth-config-mca.html)）。  
 * **承租戶 ID** 值。在 {{site.data.keyword.amashort}} 儀表板中，開啟服務。按一下**行動選項**按鈕。`tenantId`（也稱為 `appGUID`）值會顯示在**應用程式 GUID/承租戶 ID** 欄位中。您需要此值來起始設定「授權管理程式」。
 * **領域**名稱。這是您在 {{site.data.keyword.amashort}} 儀表板的**管理**標籤上，**自訂**區段內的**領域名稱**欄位中指定的值。
 * 後端應用程式的 URL（**應用程式路徑**）。在傳送要求至後端應用程式的受保護端點時，將需要此值。
 * {{site.data.keyword.Bluemix_notm}} **地區**。您可以在標頭中找到您目前的 {{site.data.keyword.Bluemix_notm}} 地區，就在**虛擬人像**圖示 ![「虛擬人像」圖示](images/face.jpg "「虛擬人像」圖示") 的旁邊。出現的地區值應該是下列其中一項：`美國南部`、`雪梨`或`英國`，並對應至 WebView Javascript 程式碼中所需的 SDK 值：`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_SYDNEY` 或 `BMSClient.REGION_UK`。您需要此值來起始設定 {{site.data.keyword.amashort}} 用戶端。
 
 如需相關資訊，請參閱下列資訊：
- * [開始使用 {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
- * [設定 Android SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html)
- * [使用自訂身分提供者](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
- * [建立自訂身分提供者](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
- * [配置 {{site.data.keyword.amashort}} 進行自訂鑑別](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
+ * [開始使用 {{site.data.keyword.amashort}}](getting-started.html)
+ * [設定 Android SDK](getting-started-android.html)
+ * [使用自訂身分提供者](custom-auth.html)
+ * [建立自訂身分提供者](custom-auth-identity-provider.html)
+ * [配置 {{site.data.keyword.amashort}} 進行自訂鑑別](custom-auth-config-mca.html)
 
 
 
@@ -65,7 +68,8 @@ lastupdated: "2016-11-02"
 	```
 	{: codeblock}
 
-1. 起始設定 SDK。放置起始設定碼的一般（但非強制）位置是在 Android 應用程式中主要活動的 `onCreate` 方法。
+1. 起始設定 SDK。  
+	放置起始設定碼的一般（但非強制）位置是在 Android 應用程式中主要活動的 `onCreate` 方法。
 
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
@@ -73,7 +77,7 @@ lastupdated: "2016-11-02"
 	{: codeblock}
 
 將 `BMSClient.REGION_UK` 取代為 {{site.data.keyword.amashort}} 地區。如需取得這些值的相關資訊，請參閱[開始之前](#before-you-begin)。
-	
+
 
 ## AuthenticationListener 介面
 {: #custom-android-authlistener}
@@ -110,8 +114,7 @@ void onAuthenticationSuccess(Context context, JSONObject info);
 
 ### onAuthenticationFailure 方法
 {: #custom-android-authlistener-onfail}
-在鑑別失敗之後，會呼叫此方法。引數包含「Android 環境定義」以及選用性的 JSONObject，其中包含鑑別失敗的延伸資訊。
-
+在鑑別失敗之後，會呼叫此方法。引數包括「Android 環境定義」以及選用的 `JSONObject`，其中包含鑑別失敗的延伸資訊。
 ```Java
 void onAuthenticationFailure(Context context, JSONObject info);
 ```
@@ -135,7 +138,7 @@ void submitAuthenticationFailure (JSONObject info);
 ## 自訂 AuthenticationListener 範例實作
 {: #custom-android-samplecustom}
 
-此 AuthenticationListener 範例設計成使用自訂身分提供者。您可以從 [Github 儲存庫](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)下載此範例。
+此 AuthenticationListener 範例設計成使用自訂身分提供者。您可以從 [Github 儲存庫 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample "外部鏈結圖示"){: new_window} 下載此範例。
 
 ```Java
 package com.ibm.helloworld;
@@ -208,8 +211,8 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 
 
 在程式碼中：
-* 將 `MCAServiceTenantId` 取代為 **TenantId** 值（請參閱[開始之前](##before-you-begin)）。 
-* 使用您在 {{site.data.keyword.amashort}} 儀表板中指定的 `realmName`（請參閱[配置自訂鑑別](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)）。
+* 將 `MCAServiceTenantId` 取代為 **TenantId** 值（請參閱[開始之前](##before-you-begin)）。
+* 使用您在 {{site.data.keyword.amashort}} 儀表板中指定的 `realmName`（請參閱[配置自訂鑑別](custom-auth-config-mca.html)）。
 
 
 ## 測試鑑別
@@ -221,7 +224,7 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 您必須具有資源位於 `/protected` 端點且受 {{site.data.keyword.amashort}} 所保護的應用程式。
 
 
-1. 從瀏覽器中將要求傳送至行動後端應用程式的受保護端點 (`{applicationRoute}/protected`)，例如 `http://my-mobile-backend.mybluemix.net/protected`。如需取得 `{applicationRoute}` 值的相關資訊，請參閱[開始之前](#before-you-begin)。 
+1. 從瀏覽器中將要求傳送至行動後端應用程式的受保護端點 (`{applicationRoute}/protected`)，例如 `http://my-mobile-backend.mybluemix.net/protected`。如需取得 `{applicationRoute}` 值的相關資訊，請參閱[開始之前](#before-you-begin)。
 
 1. 使用 {{site.data.keyword.mobilefirstbp}} 樣板所建立之行動後端應用程式的 `/protected` 端點是透過 {{site.data.keyword.amashort}} 進行保護。只有使用 {{site.data.keyword.amashort}} 用戶端 SDK 所檢測的行動應用程式才能存取這個端點。因此，會在瀏覽器中顯示 `Unauthorized` 訊息。
 
@@ -248,7 +251,7 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 	});
 	```
 	{: codeblock}
-	
+
 1. 	當要求成功時，LogCat 工具中會有下列輸出：
 
 	![影像](images/android-custom-login-success.png)

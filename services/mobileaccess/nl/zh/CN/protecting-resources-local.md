@@ -1,12 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-04"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 
 # 将 {{site.data.keyword.amashort}} 用于本地开发环境
@@ -19,11 +22,12 @@ lastupdated: "2016-12-04"
 {: #before-you-begin}
 
 您必须具有：
+
 * 受 {{site.data.keyword.amashort}} 服务保护的 {{site.data.keyword.Bluemix_notm}} 应用程序实例。有关如何创建 {{site.data.keyword.Bluemix_notm}} 后端应用程序的更多信息，请参阅[入门](index.html)。
 * **TenantID**。在 {{site.data.keyword.amafull}}“仪表板”中打开服务。单击**移动选项**按钮。`tenantId`（也称为 `appGUID`）值会显示在**应用程序 GUID/TenantId** 字段中。您将需要此值来初始化授权管理器。
 * **应用程序路径**。这是后端应用程序的 URL。您将需要此值来向其受保护端点发送请求。
 * {{site.data.keyword.Bluemix_notm}} **区域**。您可以在**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标") 旁边的头中找到当前 {{site.data.keyword.Bluemix_notm}} 区域。显示的区域值应该为以下某个值：`US South`、`Sydney` 或 `United Kingdom`。有关 SDK 所需的确切语法，请参阅代码样本中的注释。您将需要此值来初始化 {{site.data.keyword.amashort}} 客户端。
-* Android Studio 项目，设置为使用 Gradle。有关如何设置 Android 开发环境的更多信息，请参阅 [Google Developer Tools](http://developer.android.com/sdk/index.html)。
+* Android Studio 项目，设置为使用 Gradle。有关如何设置 Android 开发环境的更多信息，请参阅 [Google 开发者工具![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://developer.android.com/sdk/index.html "外部链接图标"){: new_window}。
 
 ## 设置服务器 SDK
 {: #serversetup}
@@ -93,14 +97,15 @@ var MCABackendStrategy =
 
 使用 {{site.data.keyword.Bluemix_notm}} 应用程序的真实 URL 初始化 {{site.data.keyword.amashort}} 客户端 SDK，并在每个请求中使用 localhost（或 IP 地址）。请参阅以下样本。
 
-将区域替换为相应的区域。
+将区域替换为相应的区域。请参阅代码示例，以获取正确的语法。
 
-将 *appGUID* 和 *bluemixAppRoute* 值替换为在[开始之前](#before-you-begin)中获取的值。
+替换 *appGUID* 和 *bluemixAppRoute* 值。有关获取这些值的信息，请参阅[开始之前](#before-you-begin)。
 
 您可能需要在以下示例中将 `localhost` 更改为开发服务器的实际 IP 地址。
 
 ### Android
 {: #android}
+
 ```Java
 String baseRequestUrl = "http://localhost:3000";
 String bluemixAppRoute = "http://myapp.mybluemix.net";
@@ -132,41 +137,6 @@ request.send(this, new ResponseListener() {@Override
 		}
 	}
 });
-```
-{: codeblock}
-
-
-
-### iOS - Objective C
-{: #objc}
-
-```Objective-C
-NSString *baseRequestUrl = @"http://localhost:3000";
-NSString *bluemixAppRoute = @"http://myapp.mybluemix.net";
-NSString *bluemixAppGUID = @"your-bluemix-app-guid";
-NSString *tenantId = "your-MCA-service-tenantID";
-
-[[IMFClient sharedInstance]
-			initializeWithBackendRoute:bluemixAppRoute
-			backendGUID:bluemixAppGUID];
-
-[[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: tenantId];
-
-
-NSString *requestPath = [NSString stringWithFormat:@"%@/resource/path",
-								baseRequestUrl];
-
-IMFResourceRequest *request =  [IMFResourceRequest
-				requestWithPath:requestPath
-				method:@"GET"];
-
-[request sendWithCompletionHandler:^(IMFResponse *response, NSError *error) {
-	if (error){
-		NSLog(@"Error :: %@", [error description]);
-	} else {
-		NSLog(@"Response :: %@", [response responseText]);
-	}
-}];
 ```
 {: codeblock}
 

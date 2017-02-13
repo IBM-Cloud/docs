@@ -1,9 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-05"
-
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -27,7 +26,7 @@ Debe tener lo siguiente:
 * Su **TenantID**. Abra el servicio en el panel de control de {{site.data.keyword.amafull}}. Pulse el botón **Opciones móviles**. Los valores `tenantId` (también conocidos como `appGUID`) se muestran en el campo **GUID de app / TenantId**. Necesitará este valor para inicializar el gestor de autorización.
 * Su **Ruta de aplicación**. Es el URL de la aplicación de programa de fondo. Necesita este valor para enviar solicitudes a sus puntos finales protegidos.
 * Su {{site.data.keyword.Bluemix_notm}} **Región**.  Encontrará su región de {{site.data.keyword.Bluemix_notm}} actual en la cabecera, junto al icono **Avatar** ![icono Avatar](images/face.jpg "icono Avatar"). El valor de región que aparece debe ser uno de los siguientes: `EE.UU. Sur`,  `Sidney` o `Reino Unido` y corresponde  lo valores de SDK requeridos en el código: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` o `BMSClient.REGION_UK`. Necesitará este valor para inicializar el cliente {{site.data.keyword.amashort}}.
-* Un proyecto de Android Studio, configurado para funcionar con Gradle. Para obtener más información sobre la configuración del entorno de desarrollo de Android, consulte las [Herramientas del desarrollador de Google](http://developer.android.com/sdk/index.html).
+* Un proyecto de Android Studio, configurado para funcionar con Gradle. Para obtener más información sobre la configuración del entorno de desarrollo de Android, consulte las [Herramientas del desarrollador de Google ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://developer.android.com/sdk/index.html "Icono de enlace externo"){: new_window}.
 
 ## Instalación del SDK del cliente de {{site.data.keyword.amashort}}
 {: #install-mca-sdk}
@@ -75,9 +74,9 @@ BMSClient.getInstance().setAuthorizationManager(
 {: codeblock}
 
 * Sustituya `<applicationBluemixRegion>` por la región en la que se aloja el servicio {{site.data.keyword.Bluemix_notm}}.
-* Sustituya `<MCAServiceTenantId>` por **tenantId** 
+* Sustituya `<MCAServiceTenantId>` por el **tenantId**
 
- (consulte [Antes de comenzar](#before-you-begin)).
+Para obtener más información sobre estos valores, consulte [Antes de comenzar](#before-you-begin).
 
 ## Cómo realizar una solicitud a la aplicación de programa de fondo móvil
 {: #request}
@@ -88,7 +87,7 @@ Después de inicializar el SDK del cliente de {{site.data.keyword.amashort}}, pu
 
 	El punto final `/protected` de una aplicación de programa de fondo móvil que se ha creado con el contenedor modelo de MobileFirst Services Starter está protegido con {{site.data.keyword.amashort}}. Se devuelve un mensaje `Unauthorized` al navegador porque solo se puede acceder a este punto final mediante aplicaciones móviles instrumentadas con el SDK del cliente de {{site.data.keyword.amashort}}.
 
-1. Utilice la aplicación de Android para realizar una solicitud al mismo punto final. Añada el código siguiente después de inicializar `BMSClient`
+1. Utilice la aplicación de Android para realizar una solicitud al mismo punto final. Añada el código siguiente después de inicializar `BMSClient`:
 
 	```Java
 	Request request = new Request("http://my-mobile-backend.mybluemix.net/protected", Request.GET);

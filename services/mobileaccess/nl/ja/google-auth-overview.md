@@ -1,13 +1,16 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-03"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
-{:screen:  .screen}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
 {:codeblock: .codeblock}
+{:pre: .pre}
+
 
 # Google 資格情報を使用したユーザーの認証
 {: #google-auth}
@@ -54,5 +57,4 @@ Google を ID プロバイダーとして使用してリソースを保護する
 
 * [Android アプリ用の Google 認証の使用可能化](google-auth-android.html)
 * [iOS アプリ用の Google 認証の使用可能化 (Swift SDK)](google-auth-ios-swift-sdk.html)
-* [iOS アプリ用の Google 認証の使用可能化 (Objective-C SDK)](google-auth-ios.html)
 * [Cordova アプリ用の Google 認証の使用可能化](google-auth-cordova.html)

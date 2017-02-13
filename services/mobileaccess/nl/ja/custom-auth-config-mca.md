@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-07"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
 
@@ -30,5 +30,5 @@ lastupdated: "2016-11-07"
 ## 次のステップ
 {: #next-steps}
 * [Android 用のカスタム認証の構成 ](custom-auth-android.html)
-* [iOS 用のカスタム認証の構成 ](custom-auth-ios.html)
+* [iOS 用のカスタム認証の構成 ](custom-auth-ios-swift-sdk.html)
 * [Cordova 用のカスタム認証の構成 ](custom-auth-cordova.html)

@@ -1,12 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-04"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 
 # ローカル開発環境での {{site.data.keyword.amashort}} の使用
@@ -18,11 +21,12 @@ lastupdated: "2016-12-04"
 {: #before-you-begin}
 
 以下が必要です。
+
 * {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンド・アプリケーションの作成方法について詳しくは、[概説](index.html)を参照してください。
 * **「TenantID」**。{{site.data.keyword.amafull}} ダッシュボードでサービスを開きます。**「モバイル・オプション」**ボタンをクリックします。`tenantId` (`appGUID` とも呼ばれる) の値が、**「アプリ GUID」/「TenantId」**フィールドに表示されます。許可マネージャーを初期化するためにこの値が必要になります。
 * **「アプリケーションの経路 (Application Route)」**。これは、バックエンド・アプリケーションの URL です。保護されているエンドポイントに要求を送信するためにこの値が必要になります。
 * {{site.data.keyword.Bluemix_notm}} **「地域」**。**「アバター」**アイコン![「アバター」アイコン](images/face.jpg "「アバター」アイコン") の横のヘッダー内に現在の {{site.data.keyword.Bluemix_notm}} 地域が表示されます。表示される地域値は、`US South`、`Sydney`、または  `United Kingdom` のいずれかでなければなりません。SDK に必要な正確な構文については、コード・サンプル中のコメントを参照してください。{{site.data.keyword.amashort}} クライアントを初期化するためにこの値が必要になります。
-* Gradle と連動して機能するようにセットアップされた Android Studio プロジェクト。Android 開発環境のセットアップ方法について詳しくは、[Google Developer Tools](http://developer.android.com/sdk/index.html) を参照してください。
+* Gradle と連動して機能するようにセットアップされた Android Studio プロジェクト。Android 開発環境のセットアップ方法について詳しくは、[Google 開発者ツール![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://developer.android.com/sdk/index.html "外部リンク・アイコン"){: new_window}を参照してください。
 
 ## Server SDK のセットアップ
 {: #serversetup}
@@ -91,14 +95,15 @@ var MCABackendStrategy =
 
 {{site.data.keyword.Bluemix_notm}} アプリケーションの実際の URL を使用して {{site.data.keyword.amashort}} Client SDK を初期化し、各要求で localhost (または IP アドレス) を使用します。以下のサンプルを参照してください。
 
-地域は該当する地域に置き換えます。
+地域は該当する地域に置き換えます。正しい構文については、コードの例を参照してください。
 
-*appGUID* および *bluemixAppRoute* の値は、[『開始する前に』](#before-you-begin)で取得した値に置き換えます。
+*appGUID* および *bluemixAppRoute* の値を置き換えます。これらの値の取得については、[開始する前に](#before-you-begin)を参照してください。
 
 以下の例で、`localhost` を、開発サーバーの実際の IP アドレスに変更する必要がある場合があります。
 
 ### Android
 {: #android}
+
 ```Java
 String baseRequestUrl = "http://localhost:3000";
 String bluemixAppRoute = "http://myapp.mybluemix.net";
@@ -130,40 +135,6 @@ request.send(this, new ResponseListener() {
 		}
 	}
 });
-```
-{: codeblock}
-
-
-
-### iOS - Objective C
-{: #objc}
-
-```Objective-C
-NSString *baseRequestUrl = @"http://localhost:3000";
-NSString *bluemixAppRoute = @"http://myapp.mybluemix.net";
-NSString *bluemixAppGUID = @"your-bluemix-app-guid";
-NSString *tenantId = "your-MCA-service-tenantID";
-
-[[IMFClient sharedInstance] initializeWithBackendRoute:bluemixAppRoute
-			backendGUID:bluemixAppGUID];
-			
-[[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: tenantId];
-
-
-NSString *requestPath = [NSString stringWithFormat:@"%@/resource/path",
-								baseRequestUrl];
-
-IMFResourceRequest *request =  [IMFResourceRequest
-				requestWithPath:requestPath
-				method:@"GET"];
-
-[request sendWithCompletionHandler:^(IMFResponse *response, NSError *error) {
-	if (error){
-		NSLog(@"Error :: %@", [error description]);
-	} else {
-		NSLog(@"Response :: %@", [response responseText]);
-	}
-}];
 ```
 {: codeblock}
 

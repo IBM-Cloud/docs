@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  year: 2016
-lastupdated: "2016-09-07"
+  year: 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
 
@@ -81,5 +81,3 @@ Der Antwortteil von `POST` sollte das `access_token` und das `id_token` in Base6
 
 Nun können Sie mit dem Senden von Anforderungen an Ihre geschützten Ressourcen beginnen.
 Alle Anforderungen an geschützte Ressourcen sollten das Zugriffstoken im Headerfeld für die Autorisierungsanforderung enthalten.
-
-

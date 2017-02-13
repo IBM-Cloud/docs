@@ -1,15 +1,18 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-03"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
-{:screen:  .screen}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
 {:codeblock: .codeblock}
+{:pre: .pre}
 
-# Autenticación de usuarios con las credenciales de Google
+
+# Autenticación de usuarios con las credenciales de Google 
 {: #google-auth}
 
 Puede configurar el servicio de {{site.data.keyword.amafull}} para proteger los recursos utilizando Google como proveedor de identidad. Los usuarios de la aplicación móvil o de aplicación web podrán autenticarse con las credenciales de Google.
@@ -54,5 +57,4 @@ El flujo de solicitud de aplicación web de {{site.data.keyword.amashort}} es si
 
 * [Habilitación de la autenticación de Google para apps de Android](google-auth-android.html)
 * [Habilitación de la autenticación de Google para aplicaciones iOS (SDK de Swift)](google-auth-ios-swift-sdk.html)
-* [Habilitación de la autenticación de Google para aplicaciones iOS (SDK de Objective-C)](google-auth-ios.html)
 * [Habilitación de la autenticación de Google para apps de Cordova](google-auth-cordova.html)

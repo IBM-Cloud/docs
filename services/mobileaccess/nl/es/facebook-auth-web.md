@@ -1,26 +1,28 @@
 ---
 
 copyright:
-  year: 2016
-lastupdated: "2016-12-04"
+  year: 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
 {:codeblock: .codeblock}
+{:pre: .pre}
 
 
 # Habilitación de la autenticación de Facebook para aplicaciones web
 {: #facebook-auth-web}
 
-Utilice Facebook para autenticar usuarios para la aplicación Web de {{site.data.keyword.amafull}}. Añada la funcionalidad de seguridad de {{site.data.keyword.amashort}}. 
+Utilice Facebook para autenticar usuarios para la aplicación Web de {{site.data.keyword.amafull}}. Añada la funcionalidad de seguridad de {{site.data.keyword.amashort}}.
 
 ## Antes de empezar
 {: #facebook-auth-android-before}
 Debe tener lo siguiente:
 
-* Una app web. 
+* Una app web.
 * Un servicio de {{site.data.keyword.amashort}}. Para obtener más información, consulte
 [Guía de inicio](index.html).
 * El URI para la redirección final (una vez que finalice el proceso de autorización).
@@ -32,7 +34,7 @@ Debe tener lo siguiente:
 Para utilizar Facebook como proveedor de identidad en su sitio web, debe añadir y configurar la plataforma de sitio web en su aplicación de Facebook.
 
 1. Inicie la sesión en su cuenta en el sitio [Facebook for Developers](https://developers.facebook.com). 
-	Para obtener información sobre cómo crear una nueva app, consulte [Creación de una aplicación en el sitio web de Facebook for Developers](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID). 
+	Para obtener información sobre cómo crear una nueva app, consulte [Creación de una aplicación en el sitio web de Facebook for Developers](facebook-auth-overview.html#facebook-appID).
 1. Anote el **ID de aplicación** y el **Secreto de la aplicación**. Necesitará estos valores al configurar el proyecto web para la autenticación de Facebook en el panel de control de Mobile Client Access.
 1. En la **Lista de productos**, seleccione **Inicio de sesión de Facebook**.
 4. Añada la plataforma **Web**, en el caso de que no exista.
@@ -62,28 +64,28 @@ La variable de entorno `VCAP_SERVICES` se crea automáticamente para cada instan
 
 Para iniciar el proceso de autorización:
 
-1. Recupere el punto final de autorización (`authorizationEndpoint`) y el ID de cliente (`clientId`) de las credenciales de servicio almacenadas en la variable de entorno `VCAP_SERVICES`. 
+1. Recupere el punto final de autorización (`authorizationEndpoint`) y el ID de cliente (`clientId`) de las credenciales de servicio almacenadas en la variable de entorno `VCAP_SERVICES`.
 
-	`var cfEnv = require("cfenv");` 
+	`var cfEnv = require("cfenv");`
 
-	**Nota:** En el caso de que haya añadido el servicio de {{site.data.keyword.amashort}} a la aplicación antes de que se añadiera el soporte Web, es posible que no tenga el punto final de la señal en las **Credenciales de servicio**. En este caso, utilice las URL siguientes, en función de la región de {{site.data.keyword.Bluemix_notm}}: 
- 
-	EE.UU. sur: 
+	**Nota:** En el caso de que haya añadido el servicio de {{site.data.keyword.amashort}} a la aplicación antes de que se añadiera el soporte Web, es posible que no tenga el punto final de la señal en las **Credenciales de servicio**. En este caso, utilice las URL siguientes, en función de la región de {{site.data.keyword.Bluemix_notm}}:
+
+	EE.UU. sur:
 
 	`  https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization 
-  ` 
+  `
 
-	Londres: 
+	Londres:
 
 	` https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization
-   ` 
+   `
 
-	Sídney: 
+	Sídney:
 
 	`  https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization 
-  ` 
+  `
 
-2. Cree el URI del servidor de autorizaciones utilizando `response_type("code")`, `client_id` y `redirect_uri` como parámetros de consulta. 
+2. Cree el URI del servidor de autorizaciones utilizando `response_type("code")`, `client_id` y `redirect_uri` como parámetros de consulta.
 
 3. Redireccione desde su app web al URI generado.
 
@@ -95,8 +97,8 @@ Para iniciar el proceso de autorización:
 	app.get("/protected", checkAuthentication, function(req, res, next){  
 		res.send("Hello from protected endpoint"); 
     }
-	); 
-  
+	);
+
 	function checkAuthentication(req, res, next){
 		// Compruebe si el usuario está autenticado 
   
@@ -132,27 +134,27 @@ Facebook. Una vez que Facebook autorice la identidad del usuario, el servicio de
 
 El siguiente paso consiste en obtener las señales de acceso y de identidad utilizando el código de concesión recibido anteriormente:
 
-1.  Recupere la señal `tokenEndpoint`, `clientId` y `secret` desde las credenciales de servicio almacenadas en la variable de entorno `VCAP_SERVICES`. 
- 
-	**Nota: ** En el caso de que haya utilizado {{site.data.keyword.amashort}} antes de que se añadiera el soporte web, es posible que no tenga puntos finales de la señal en las credenciales del servicio. En este caso, utilice los URL siguientes, en función de la región de Bluemix: 
+1.  Recupere la señal `tokenEndpoint`, `clientId` y `secret` desde las credenciales de servicio almacenadas en la variable de entorno `VCAP_SERVICES`.
 
-	EE.UU. sur: 
-  
+	**Nota: ** En el caso de que haya utilizado {{site.data.keyword.amashort}} antes de que se añadiera el soporte web, es posible que no tenga puntos finales de la señal en las credenciales del servicio. En este caso, utilice los URL siguientes, en función de la región de Bluemix:
+
+	EE.UU. sur:
+
 	`    https://mobileclientaccess.ng.bluemix.net/oauth/v2/token 
      `
- 
-	Londres: 
- 
+
+	Londres:
+
 	`    https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token  
-     ` 
- 
-	Sídney: 
- 
+     `
+
+	Sídney:
+
 	`     https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/token 
  `
- 
+
 2. Envíe una solicitud POST a la URI de servidor de señal con el tipo de concesión ("authorization_code"), `clientId`, y el URI de redireccionamiento como parámetros de formulario. Envíe el `clientId` y `secret` como credenciales de autenticación HTTP básicas.
- 
+
 	El código siguiente recupera los valores necesarios, y los envía con una solicitud POST.
 
 	```Java    
@@ -192,7 +194,7 @@ El siguiente paso consiste en obtener las señales de acceso y de identidad util
 
 	Tenga en cuenta que el parámetro `redirect_uri` debe coincidir con el `redirect_uri` utilizado para la solicitud de autorización anterior. El valor de parámetro `code` debe ser el código de concesión recibido en la respuesta desde la solicitud de autorización. El código de concesión es válido para 10 minutos, tras los cuales se debe recuperar un código nuevo.
 
-	El cuerpo de respuesta contendrá el código de acceso y el ID de señal en formato JWT (https://jwt.io/).
+	El cuerpo de respuesta contendrá el código de acceso y el ID de token en formato JWT (consulte el [sitio web de JWT ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://jwt.io/ "Icono de enlace externo"){: new_window}.
 
 	Una vez que tenga acceso y que haya recibido las señales de identidad, puede señalar la sesión web como se indica y, opcionalmente, persistir estas señales.  
 
@@ -203,17 +205,13 @@ La señal de identidad contiene información sobre la identidad del usuario. En 
 
 La señal de acceso permite comunicaciones con recursos protegidos por filtros de autorización de {{site.data.keyword.amashort}}, consulte [Protección de recursos](protecting-resources.html).
 
-Para realizar solicitudes a los recursos protegidos, añada una cabecera de autorización a las solicitudes con la estructura siguiente: 
+Para realizar solicitudes a los recursos protegidos, añada una cabecera de autorización a las solicitudes con la estructura siguiente:
 
 `Authorization=Bearer <accessToken> <idToken>`
 
 #### Consejos
-{: #tips} 
+{: #tips}
 
 * Deberá separar `accessToken` e `idToken` por un espacio en blanco.
 
-* El `idToken` es opcional. En el caso de que no proporcione la señal de identidad, podrá acceder al recurso protegido, pero no recibirá ninguna información sobre el usuario autorizado. 
- 
-
-
-
+* El `idToken` es opcional. En el caso de que no proporcione la señal de identidad, podrá acceder al recurso protegido, pero no recibirá ninguna información sobre el usuario autorizado.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-05"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 {:new_window: target="_blank"}
@@ -37,7 +37,7 @@ inicializar o Gerenciador de Autorização.
 *  Localize a região na qual o seu aplicativo {{site.data.keyword.Bluemix_notm}} está hospedado. É possível encontrar a sua região do Bluemix atual no cabeçalho,
 próximo ao ícone **Avatar**
 ![ícone de avatar](images/face.jpg "ícone de avatar"). O valor da região deve ser um destes: **US South**, **Sydney** ou **UK**. Os valores constantes de
-SDK exatos que correspondem a esses nomes são indicados nos exemplos de código. 
+SDK exatos que correspondem a esses nomes são indicados nos exemplos de código.
 * (opcional) Familiarize-se com as seções a seguir:
    * [Ativando a autenticação do Google para apps Android](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html)
    * [Ativando a autenticação do Google para apps iOS](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html)
@@ -79,11 +79,11 @@ para o módulo do aplicativo (**não** o arquivo
 	}
 	```
 	{: codeblock}
-	
+
 1. Sincronize seu projeto com o Gradle clicando em **Ferramentas > Android > Sincronizar projeto com arquivos Gradle**.
 
 1. A API do `GoogleAuthenticationManager` ainda deve ser registrada no código nativo. Inclua
-este código no método `onCreate` de atividade principal: 
+este código no método `onCreate` de atividade principal:
 
 	```Java
 	String tenantId = "<tenantId>";
@@ -94,7 +94,7 @@ este código no método `onCreate` de atividade principal:
 	{: codeblock}
 
 1. Inclua o código a seguir em sua Atividade:
- 
+
 	```Java
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -114,7 +114,7 @@ Ativando a autenticação do Google para apps iOS (Swift SDK)](https://console.{
 
    * [
 Preparando seu app para o Google Sign-In](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html#google-sign-in-ios): Prepara o
-Google Sign-In para autenticação de aplicativos iOS {{site.data.keyword.amashort}}. 
+Google Sign-In para autenticação de aplicativos iOS {{site.data.keyword.amashort}}.
 
    * [Configurando
 MCA para autenticação do Google](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html#google-auth-ios-config): Configura
@@ -136,7 +136,7 @@ a guia `Recursos` e mude
 `Compartilhamento Keychain` para
 `On` em seu projeto Xcode.
 
- 
+
 ### Inicializando o Gerenciador de Autorização em seu
 código iOS
 
@@ -145,8 +145,8 @@ Authorization Manager no Objective-C no arquivo
 `AppDelgate.m`.
 
 ```
-#import "<your_module_name>-Swift.h" 
- 
+#import "<your_module_name>-Swift.h"
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 
 {
@@ -168,7 +168,7 @@ Authorization Manager no Objective-C no arquivo
 ```
 {: codeblock}
 
-**Nota:** 
+**Nota:**
 
 * Substitua `<your_module_name>`
 pelo nome do módulo do seu projeto. Por exemplo, se o nome do
@@ -180,7 +180,7 @@ configurações`, `Pacote` >
 `Nome do módulo de produto`.
 * Substitua o `<tenantId>` pelo
 seu ID do locatário (consulte
-[Antes de iniciar](#before-you-begin)). 
+[Antes de iniciar](#before-you-begin)).
 
 
 ## Inicializando o {{site.data.keyword.amashort}}
@@ -196,7 +196,7 @@ BMSClient.initialize("<applicationBluemixRegion>");
 ```
 {: codeblock}
 
-Substitua `<applicationBluemixRegion>` pela sua região (consulte [Antes de iniciar](#before-you-begin)). 
+Substitua `<applicationBluemixRegion>` pela sua região (consulte [Antes de iniciar](#before-you-begin)).
 
 ## Testando a Autenticação
 {: #google-auth-cordova-test}
@@ -231,9 +231,9 @@ para o mesmo terminal, usando a URL completa (por exemplo,
 1. Execute o aplicativo. A tela de login do Google é exibida.
 
 	![Tela de login do Google](images/android-google-login.png)
-	
+
 	![Tela de login do Google](images/ios-google-login.png)
-	
+
 	Essa tela pode parecer ligeiramente diferente se você não tiver o app Facebook instalado em seu dispositivo ou se não estiver com login efetuado atualmente no Facebook.
 
 1. Ao clicar em **OK**, você estará autorizando o {{site.data.keyword.amashort}} a usar sua identidade do usuário do Google para fins de autenticação.

@@ -1,9 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-05"
-
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -27,7 +26,7 @@ lastupdated: "2016-12-05"
 * **테넌트 ID**. {{site.data.keyword.amafull}} 대시보드에서 서비스를 여십시오. **모바일 옵션** 단추를 클릭하십시오. **앱 GUID / TenantId** 필드에 `tenantId`(`appGUID`라고도 함) 값이 표시됩니다. 이 값은 권한 관리자를 초기화하는 데 필요합니다. 
 * **애플리케이션 라우트**. 이는 백엔드 애플리케이션의 URL입니다. 이 값은 해당 보호 엔드포인트에 요청을 전송하는 데 필요합니다. 
 * {{site.data.keyword.Bluemix_notm}} **지역**. 헤더에서 **아바타** 아이콘 ![아바타 아이콘](images/face.jpg "아바타 아이콘") 옆에 현재 {{site.data.keyword.Bluemix_notm}} 지역이 표시됩니다. 표시되는 지역 값은 `US South`, `Sydney` 및 `United Kingdom` 중 하나여야 하며 코드 `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` 또는 `BMSClient.REGION_UK`에 필요한 SDK 값에 해당해야 합니다. 이 값은 {{site.data.keyword.amashort}} 클라이언트를 초기화하는 데 필요합니다. 
-* Gradle과 작동하도록 설정된 Android Studio 프로젝트. Android 개발 환경을 설정하는 방법에 대한 자세한 정보는 [Google 개발자 도구](http://developer.android.com/sdk/index.html)를 참조하십시오. 
+* Gradle과 작동하도록 설정된 Android Studio 프로젝트. Android 개발 환경을 설정하는 방법에 대한 자세한 정보는 [Google 개발자 도구 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://developer.android.com/sdk/index.html){: new_window}를 참조하십시오. 
 
 ## {{site.data.keyword.amashort}} 클라이언트 SDK 설치
 {: #install-mca-sdk}
@@ -43,13 +42,13 @@ lastupdated: "2016-12-05"
 	```Gradle
 	dependencies {
 		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
-        name:'core',
-        version: '2.+',
-        ext: 'aar',
-        transitive: true
-    	// other dependencies  
-}
-```
+		name:'core',
+		version: '2.+',
+		ext: 'aar',
+		transitive: true
+		// other dependencies  
+	}
+	```
 	{: codeblock}
 
 1. 프로젝트를 Gradle과 동기화하십시오. **도구 &gt; Android &gt; Gradle 파일과 프로젝트 동기화**를 클릭하십시오. 
@@ -58,7 +57,7 @@ lastupdated: "2016-12-05"
 
 	```XML
 	<uses-permission android:name="android.permission.INTERNET" />
-```
+	```
 	{: codeblock}
 
 ## {{site.data.keyword.amashort}} 클라이언트 SDK 초기화
@@ -68,9 +67,9 @@ lastupdated: "2016-12-05"
 
 ```Java
 BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
-					
+
 BMSClient.getInstance().setAuthorizationManager(
-	MCAAuthorizationManager.createInstance(this, "<MCAServiceTenantId>")); 			
+	MCAAuthorizationManager.createInstance(this, "<MCAServiceTenantId>"));
 ```
 {: codeblock}
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-05"
+  years: 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
 {:new_window: target="_blank"}
@@ -30,7 +30,7 @@ Antes de iniciar, deve-se ter:
 serviço {{site.data.keyword.amashort}} que está
 configurado para usar um provedor de identidade customizado
 (consulte
-[Configurando autenticação customizada](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).  
+[Configurando autenticação customizada](custom-auth-config-mca.html)).  
 * Seu valor **TenantID**. Abra o seu serviço no painel do {{site.data.keyword.amashort}}. Clique no botão **Opções móveis**. O valor
 `tenantId` (também conhecido como
 `appGUID`) é exibido no campo **App
@@ -63,21 +63,21 @@ web** que você inseriu na seção
 Para mais Informações:
 
 * [Introdução
-ao {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
-* [Usando um provedor de identidade customizado](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
-* [Criando um provedor de identidade customizado](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
-* [Configurando o {{site.data.keyword.amashort}} para autenticação customizada](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
+ao {{site.data.keyword.amashort}}](getting-started.html)
+* [Usando um provedor de identidade customizado](custom-auth.html)
+* [Criando um provedor de identidade customizado](custom-auth-identity-provider.html)
+* [Configurando o {{site.data.keyword.amashort}} para autenticação customizada](custom-auth-config-mca.html)
 
 
 ##Configurando um provedor de identidade customizado
 {: #custom-auth-config}
 
-Ao criar um provedor de identidade customizado, deve-se definir um método POST com uma rota na estrutura a seguir: 
+Ao criar um provedor de identidade customizado, deve-se definir um método POST com uma rota na estrutura a seguir:
 
 `/apps/:tenantID/<your-realm-name>/handleChallengeAnswer`
 
 `tenantID` é um parâmetro URL e
-`<your-realm-name>` é qualquer nome de região escolhido. 
+`<your-realm-name>` é qualquer nome de região escolhido.
 
 O corpo da solicitação conterá um objeto `challengeAnswer` que
 contém `username` e `password`.
@@ -85,18 +85,18 @@ contém `username` e `password`.
 Após validar o usuário, essa rota deverá retornar um objeto JSON da estrutura a seguir.
 
 ```json
-{ 
+{
 	status: "success", 
-            userIdentity: { 
+            userIdentity: {
 		userName: <user name>, 
                 displayName: <display name> 
                 attributes: <additional attributes json> 
-            } 
-} 
+            }
+}
 ```
 {: codeblock}
 
-**Nota:** o campo `attributes` é opcional. 
+**Nota:** o campo `attributes` é opcional.
 
 O código a seguir demonstra uma solução de POST.
 
@@ -115,7 +115,7 @@ var users = {
 app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer',
          function(req, res) {
 	console.log ("tenantID " + req.params.tenantID);
-         
+
 	var challengeAnswer = req.body.challengeAnswer;
          console.log ("challengeAnswer " + JSON.stringify(challengeAnswer));
 
@@ -132,23 +132,23 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer',
                   status: "failure"
 		});
 	}
-        
+
 });
 ```
 {: codeblock}
 
 
-##Configurando o {{site.data.keyword.amashort}} para autenticação customizada 
-{: #custom-auth-config}
+##Configurando o {{site.data.keyword.amashort}} para autenticação customizada
+{: #custom-auth-config-mca}
 
-Após ter seu provedor de identidade customizado configurado, será possível ativar a autenticação customizada no painel {{site.data.keyword.amashort}}. 
+Após ter seu provedor de identidade customizado configurado, será possível ativar a autenticação customizada no painel {{site.data.keyword.amashort}}.
 
 1. Abra o seu serviço no painel do {{site.data.keyword.amashort}}.
 1. Na guia **Gerenciar**, acione
 **Autorização**.
 1. Expanda a seção **Customizado**.
 1. Insira o **Nome do domínio**,
-**URL do provedor de identidade customizado**. 
+**URL do provedor de identidade customizado**.
 1. Insira o valor **URIs de redirecionamento de
 aplicativo da web**. Este é o URI do redirecionamento
 final após autorização bem-sucedida.
@@ -162,52 +162,52 @@ A variável de ambiente `VCAP_SERVICES` é criada automaticamente para cada inst
 **Credenciais de serviço** no painel
 {{site.data.keyword.amashort}}.
 
-Para solicitar autorização do usuário, redirecione o navegador para o terminal do servidor de autorizações. Para fazer isso: 
+Para solicitar autorização do usuário, redirecione o navegador para o terminal do servidor de autorizações. Para fazer isso:
 
 1. Recupere o terminal de autorização (`authorizationEndpoint`) e o ID do cliente (`clientId`) por meio das credenciais de serviço armazenadas
-na variável de ambiente `VCAP_SERVICES`. 
+na variável de ambiente `VCAP_SERVICES`.
 
-	`var cfEnv = require("cfenv");` 
+	`var cfEnv = require("cfenv");`
 
-	`var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;` 
+	`var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;`
 
 	**Nota:** se você tiver incluído o serviço {{site.data.keyword.amashort}} em seu aplicativo antes de incluir o suporte da web, talvez você
 não tenha o
-terminal do token nas credenciais de serviço. Como alternativa, use as URLs a seguir, dependendo de sua região do {{site.data.keyword.Bluemix_notm}}: 
+terminal do token nas credenciais de serviço. Como alternativa, use as URLs a seguir, dependendo de sua região do {{site.data.keyword.Bluemix_notm}}:
 
-	Sul dos EUA: 
+	Sul dos EUA:
 
-	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization` 
+	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization`
 
-	Londres: 
+	Londres:
 
-	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization` 
+	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization`
 
-	Sydney: 
+	Sydney:
 
-	`https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization` 
-	
+	`https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization`
+
 2. Construa o URI do servidor de autorizações usando `response_type("code")`, `client_id` e
 `redirect_uri` como parâmetros de consulta.  
 
 3. Redirecione a partir do seu aplicativo da web para o
-URI gerado. 
+URI gerado.
 
    O exemplo a seguir recupera os parâmetros da variável `VCAP_SERVICES`, constrói a URL e envia a solicitação de
 redirecionamento.
 
 	```Java
 var cfEnv = require("cfenv"); 
-app.get("/protected", checkAuthentication, function(req, res, next){ 
+app.get("/protected", checkAuthentication, function(req, res, next){
 		res.send("Hello from protected endpoint"); 
   }
-	); 
+	);
 
-	function checkAuthentication(req, res, next){ 
+	function checkAuthentication(req, res, next){
 		// Check if user is authenticated 
- 	if (req.session.userIdentity){ 
-			next() 
-		} else { 
+  if (req.session.userIdentity){
+			next()
+		} else {
 			// If not - redirect to authorization server 
     var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials; 
     var authorizationEndpoint = mcaCredentials.authorizationEndpoint; 
@@ -217,11 +217,11 @@ app.get("/protected", checkAuthentication, function(req, res, next){
     redirectUrl += "&client_id=" + clientId; 
     redirectUrl += "&redirect_uri=" + redirectUri; 
     res.redirect(redirectUrl); 
-  } 
-	} 
+  }
+	}
 	```
 	{: codeblock}
- 
+
 	Observe que o parâmetro `redirect_uri`
 representa seu URI de redirecionamento de aplicativo da web e
 deve ser igual àquele
@@ -240,33 +240,33 @@ concessão como um parâmetro de consulta.
 de identidade customizado, o serviço
 {{site.data.keyword.amashort}} chamará o URI de
 redirecionamento de aplicativo da web, fornecendo o código de
-concessão como um parâmetro de consulta. 
+concessão como um parâmetro de consulta.
 
 ##Obtendo os tokens
 {: custom-auth-tokens}
 
-A próxima etapa é obter o token de acesso e o token de identidade usando o código de concessão recebido anteriormente. Para fazer isso: 
+A próxima etapa é obter o token de acesso e o token de identidade usando o código de concessão recebido anteriormente. Para fazer isso:
 
 1. Recupere `authorizationEndpoint`, `clientId` e `secret` das credenciais de serviço
-armazenadas na variável de ambiente `VCAP_SERVICES`. 
+armazenadas na variável de ambiente `VCAP_SERVICES`.
 
 	**Nota:** se você tiver incluído o
 serviço {{site.data.keyword.amashort}} em seu aplicativo
 antes de incluir o suporte da web, talvez você não tenha o
-terminal do token nas credenciais de serviço. Como alternativa, use as URLs a seguir, dependendo de sua região do {{site.data.keyword.Bluemix_notm}}: 
+terminal do token nas credenciais de serviço. Como alternativa, use as URLs a seguir, dependendo de sua região do {{site.data.keyword.Bluemix_notm}}:
 
-	Sul dos EUA: 
+	Sul dos EUA:
 
 	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/token`
 
-	Londres: 
-	
-	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token` 
- 
-	Sydney: 
+	Londres:
+
+	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token`
+
+	Sydney:
 
 	`https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/token`
- 
+
 2. Envie uma solicitação de POST para o URI do servidor de token com
 `grant_type`, `client_id`,
 `redirect_uri` e `code` como parâmetros de forma e
@@ -279,22 +279,22 @@ com uma solicitação de POST.
 	```Java
 var cfEnv = require("cfenv");
 var base64url = require("base64url ");
-app.get("/oauth/callback", function(req, res, next){ 
+app.get("/oauth/callback", function(req, res, next){
 		var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials; 
-    var tokenEndpoint = mcaCredentials.tokenEndpoint; 
+    var tokenEndpoint = mcaCredentials.tokenEndpoint;
 
-		var formData = { 
-			grant_type: "authorization_code", 
-			client_id: mcaCredentials.clientId, 
-			redirect_uri: "http://some-server/oauth/callback",   // Your Web application redirect uri 
-			code: req.query.code 
-		} 
+		var formData = {
+			grant_type: "authorization_code",
+			client_id: mcaCredentials.clientId,
+			redirect_uri: "http://some-server/oauth/callback",   // Your Web application redirect uri
+			code: req.query.code
+		}
 
-		request.post({ 
-			url: tokenEndpoint, 
-    formData: formData 
-    }, function (err, response, body){ 
-			var parsedBody = JSON.parse(body); 
+		request.post({
+			url: tokenEndpoint,
+			formData: formData
+		}, function (err, response, body) {
+			var parsedBody = JSON.parse(body);
 
 			req.session.accessToken = parsedBody.access_token; 
       req.session.idToken = parsedBody.id_token; 
@@ -305,15 +305,16 @@ app.get("/oauth/callback", function(req, res, next){
 		}
 		).auth(mcaCredentials.clientId, mcaCredentials.secret); 
   }
-	); 
+	);
 	```
 	{: codeblock}
-	
+
 	Observe que o parâmetro `redirect_uri` deve corresponder ao `redirect_uri` usado na solicitação de
 autorização anteriormente. O valor do parâmetro de código deve ser o código de concessão recebido na resposta no fim da solicitação de autorização. O
 código de concessão é válido por 10 minutos somente, após os quais será necessário obter um novo código.
 
-	O corpo de resposta conterá `access_token` e `id_token` no formato JWT (https://jwt.io/).
+	O corpo de resposta conterá `access_token` e `id_token`
+no formato JWT; veja o [website do JWT ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://jwt.io "Ícone de link externo"){: new_window}.
 
 	Assim que tiver recebido o acesso e os tokens de
 identidade, será possível sinalizar a sessão da web como
@@ -328,11 +329,11 @@ campo `imf.user`, o campo `displayName` conterá o `displayName` retornado pelo 
 identidade customizado e o campo `id` conterá `userName`.  Todos os outros valores retornados pelo provedor de
 identidade customizado serão retornados no campo `attributes` em `imf.user`.  
 
-O token de acesso permite comunicação com recursos protegidos pelos filtros de autorização do {{site.data.keyword.amashort}} (veja [Protegendo recursos](protecting-resources.html)). Para fazer solicitações para recursos protegidos, inclua um cabeçalho de autorização nas solicitações com a estrutura a seguir: 
+O token de acesso permite comunicação com recursos protegidos pelos filtros de autorização do {{site.data.keyword.amashort}} (veja [Protegendo recursos](protecting-resources.html)). Para fazer solicitações para recursos protegidos, inclua um cabeçalho de autorização nas solicitações com a estrutura a seguir:
 
-`Authorization=Bearer <accessToken> <idToken>` 
+`Authorization=Bearer <accessToken> <idToken>`
 
-####Dicas: 
+####Dicas:
 {: #tips_token}
 
 * O `<accessToken>` e o `<idToken>` devem ser separados por um espaço em branco.

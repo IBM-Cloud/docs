@@ -1,34 +1,36 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-04"
+  years: 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:codeblock:.codeblock}
+{:codeblock: .codeblock}
+{:pre: .pre}
+
 
 # iOS Swift SDK 설정
 {: #getting-started-ios}
 
-{{site.data.keyword.amafull}}에서 기존 {{site.data.keyword.amashort}} Objective-C SDK에서 제공하는 기능에 추가되어 해당 기능을 향상시키는 새로운 Swift SDK를 릴리스했으며 앱을 더 쉽게 인증할 수 있고 백엔드 리소스에 대한 안전한 보호를 제공합니다. {{site.data.keyword.amashort}} SDK를 사용하여 iOS Swift 애플리케이션을 인스트루먼트하고, SDK를 초기화하며 보호 및 비보호 리소스에 대한 요청을 작성하십시오. 
+{{site.data.keyword.amashort}} SDK를 사용하여 iOS Swift 애플리케이션을 인스트루먼트하고, SDK를 초기화하며 보호 및 비보호 리소스에 대한 요청을 작성하십시오. 
 
 {:shortdesc}
-
-Objective-C SDK는 그대로 완벽하게 지원되며 여전히 {{site.data.keyword.Bluemix_notm}} 모바일 서비스의 기본 SDK로 간주되지만, 이 새로운 Swift SDK를 위해 올해 말에 Objective-C SDK를 중단할 계획입니다. 
 
 
 ## 시작하기 전에
 {: #before-you-begin}
 다음이 있어야 합니다.
+
 * {{site.data.keyword.Bluemix_notm}} 애플리케이션의 인스턴스
 * {{site.data.keyword.amafull}} 서비스의 인스턴스
 * **테넌트 ID**. {{site.data.keyword.amashort}} 대시보드에서 서비스를 여십시오. **모바일 옵션**을 클릭하십시오. **앱 GUID / TenantId** 필드에 `tenantId`(`appGUID`라고도 함) 값이 표시됩니다. 이 값은 {{site.data.keyword.amashort}} 권한 관리자를 초기화하는 데 필요합니다. 
 * **애플리케이션 라우트**. 이는 백엔드 애플리케이션의 URL입니다. 이 값은 해당 보호 엔드포인트에 요청을 전송하는 데 필요합니다. 
 * {{site.data.keyword.Bluemix_notm}} **지역**. 헤더에서 **아바타** 아이콘 ![아바타 아이콘](images/face.jpg "아바타 아이콘") 옆에 현재 {{site.data.keyword.Bluemix_notm}} 지역이 표시됩니다. 표시되는 지역 값은 `US South`, `Sydney` 및 `United Kingdom` 중 하나여야 하며 코드 `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` 또는 `BMSClient.Region.sydney`에 필요한 SDK 값에 해당해야 합니다. 이 값은 {{site.data.keyword.amashort}} SDK를 초기화하는 데 필요합니다. 
-* Xcode 프로젝트. iOS 개발 환경을 설정하는 방법에 대한 자세한 정보는 [Apple 개발자 웹 사이트](https://developer.apple.com/support/xcode/)를 참조하십시오. 
+* Xcode 프로젝트. iOS 개발 환경을 설정하는 방법에 대한 자세한 정보는 [Apple 개발자 웹 사이트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.apple.com/support/xcode/ "외부 링크 아이콘"){: new_window}를 참조하십시오. 
 
 
 ## {{site.data.keyword.amashort}} 클라이언트 SDK 설치
@@ -48,7 +50,7 @@ sudo gem install cocoapods
 ```
 {: codeblock}
 
-자세한 정보는 [CocoaPods 웹 사이트](https://cocoapods.org/)를 참조하십시오.
+자세한 정보는 [CocoaPods 웹 사이트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cocoapods.org/ "외부 링크 아이콘"){: new_window}를 참조하십시오. 
 
 ### CocoaPods를 사용하여 {{site.data.keyword.amashort}} 클라이언트 SDK 설치
 {: #install-sdk-cocoapods}
@@ -95,26 +97,26 @@ sudo gem install cocoapods
 
 1. {{site.data.keyword.amashort}} 클라이언트 SDK를 초기화하십시오. 
 
-```Swift
+ ```Swift
 	let tenantId = "<serviceTenantID>"
 	let regionName = <applicationBluemixRegion>
 
-	func application(_ application: UIApplication, 
+	func application(_ application: UIApplication,
 	    didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
- let mcaAuthManager = MCAAuthorizationManager.sharedInstance
+	let mcaAuthManager = MCAAuthorizationManager.sharedInstance
     mcaAuthManager.initialize(tenantId: tenantId, bluemixRegion: regionName)
       // possible values for regionName: BMSClient.Region.usSouth, BMSClient.Region.unitedKingdom, BMSClient.Region.sydney
-	BMSClient.sharedInstance.authorizationManager = mcaAuthManager	
+	BMSClient.sharedInstance.authorizationManager = mcaAuthManager
 	return true
 	}
- ```
- {: codeblock}
+  ```
+  {: codeblock}
 
-* `tenantId`를 **모바일 옵션**에서 얻은 값으로 바꾸십시오.  
-* {{site.data.keyword.Bluemix_notm}} 애플리케이션을 호스트하는 지역으로 `<applicationBluemixRegion>`을 바꾸십시오.  
+* `tenantId`를 **모바일 옵션**에서 얻은 값으로 바꾸십시오. 
+* {{site.data.keyword.Bluemix_notm}} 애플리케이션을 호스트하는 지역으로 `<applicationBluemixRegion>`을 바꾸십시오. 
 
-이러한 값에 대한 정보는 [시작하기 전에](#before-you-begin)를 참조하십시오. 
+이러한 값에 대한 정보는 [시작하기 전에](#before-you-begin)를 참조하십시오.
 
 
 ## 모바일 백엔드 애플리케이션에 대한 요청 작성
@@ -135,12 +137,12 @@ sudo gem install cocoapods
 	let request = Request(url: customResourceURL, method: HttpMethod.GET)
 
 	let callBack:BMSCompletionHandler = {(response: Response?, error: Error?) in
-    if error == nil {
-            print ("response:\(response?.responseText), no error")
-       } else {
-            print ("error: \(error)")
-     }
- }
+   	if error == nil {
+       	    print ("response:\(response?.responseText), no error")
+    	  } else {
+       	    print ("error: \(error)")
+    	}
+	}
 	request.send(completionHandler: callBack)
  ```
  {: codeblock}
@@ -155,6 +157,7 @@ sudo gem install cocoapods
 ## 다음 단계
 {: #next-steps}
 보호 엔드포인트에 연결된 경우 신임 정보는 필요하지 않습니다. 사용자가 애플리케이션에 로그인하게 하려면 Facebook, Google 또는 사용자 정의 인증을 구성해야 합니다. 
+
   * [Facebook](facebook-auth-ios-swift-sdk.html)
   * [Google](google-auth-ios-swift-sdk.html)
   * [사용자 정의](custom-auth-ios-swift-sdk.html)

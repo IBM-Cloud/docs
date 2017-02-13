@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-05"
+  years: 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 {:new_window: target="_blank"}
@@ -21,23 +21,23 @@ lastupdated: "2016-12-05"
 {: #before-you-begin}
 
 您必須具有：
+
 * {{site.data.keyword.amafull}} 服務實例和 {{site.data.keyword.Bluemix_notm}} 應用程式。如需如何建立 {{site.data.keyword.Bluemix_notm}} 後端應用程式的相關資訊，請參閱[開始使用](index.html)。
 * 後端應用程式的 URL（**應用程式路徑**）。在傳送要求至後端應用程式的受保護端點時，將需要此值。
 * **承租戶 ID** 值。在 {{site.data.keyword.amashort}} 儀表板中，開啟服務。按一下**行動選項**按鈕。`tenantId`（也稱為 `appGUID`）值會顯示在**應用程式 GUID/承租戶 ID** 欄位中。您需要此值來起始設定「授權管理程式」。
 * {{site.data.keyword.Bluemix_notm}} **地區**。您可以在標頭中找到您目前的 {{site.data.keyword.Bluemix_notm}} 地區，就在**虛擬人像**圖示 ![「虛擬人像」圖示](images/face.jpg "「虛擬人像」圖示") 的旁邊。出現的地區值應該是下列其中一項：`美國南部`、`英國`或`雪梨`，並對應至 Swift SDK 所需的 SDK 值：`BMSClient.Region.usSouth`、`BMSClient.Region.unitedKingdom` 或 `BMSClient.Region.sydney`。您需要此值來起始設定 {{site.data.keyword.amashort}} 用戶端。
-* 設定成使用 CocoaPods 的 iOS 專案。如需相關資訊，請參閱[設定 iOS Swift SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html) 中的**安裝 CocoaPods**。**附註：**您不需要安裝核心 {{site.data.keyword.amashort}} 用戶端 SDK，即可繼續進行。
-* [Facebook for Developers](https://developers.facebook.com) 網站上的 Facebook 應用程式。
+* 設定成使用 CocoaPods 的 iOS 專案。如需相關資訊，請參閱[設定 iOS Swift SDK](getting-started-ios-swift-sdk.html) 中的**安裝 CocoaPods**。  
+   **附註：**您不需要安裝核心 {{site.data.keyword.amashort}} 用戶端 SDK，即可繼續進行。
+* [Facebook for Developers ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developers.facebook.com "外部鏈結圖示"){: new_window} 網站上的 Facebook 應用程式。
 
 **重要事項：**您不需要個別安裝 Facebook SDK (`com.facebook.FacebookSdk`)。{{site.data.keyword.amashort}} `BMSFacebookAuthentication` Pod 會自動安裝 Facebook SDK。在 Facebook for Developers 網站上新增或配置應用程式時，可跳過**將 Facebook SDK 新增至 Xcode 專案**步驟。
-
-**附註：**雖然仍然完全支援 Objective-C SDK 且將它視為 {{site.data.keyword.Bluemix_notm}} Mobile Services 的主要 SDK，不過預計在今年稍晚停止使用 Objective-C SDK，改用這個新的 Swift SDK。
 
 ## 針對 iOS 平台配置 Facebook 應用程式
 {: #facebook-auth-ios-config}
 
 在 Facebook for Developers 網站上，執行下列動作：
 
-1. 在 [Facebook for Developers](https://developers.facebook.com) 上，登入您的帳戶。 
+1. 在 [Facebook for Developers ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developers.facebook.com "外部鏈結圖示"){: new_window} 上登入您的帳戶。
 
 1. 確保 iOS 平台已新增至您的應用程式。在新增或配置 iOS 平台時，您需要提供 iOS 應用程式的 **bundleId**。若要尋找 iOS 應用程式的 **bundleId**，請在 `info.plist` 檔案或 Xcode 專案**一般**標籤中尋找**軟體組 ID**。
 
@@ -70,7 +70,7 @@ sudo gem install cocoapods
 ```
    {: codeblock}
 
-如需相關資訊，請參閱 [CocoaPods 網站](https://cocoapods.org/)。
+如需相關資訊，請參閱 [CocoaPods 網站 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cocoapods.org/ "外部鏈結圖示"){: new_window}。
 
 ### 使用 CocoaPods 安裝 {{site.data.keyword.amashort}} 用戶端 Swift SDK
 {: #facebook-auth-install-swift-cocoapods}
@@ -164,7 +164,7 @@ pod 'BMSFacebookAuthentication'
 
    使用「Facebook 應用程式 ID」更新 `CFBundleURLSchemes` 及 `FacebookappID` 內容。使用 Facebook 應用程式的名稱更新 `FacebookDisplayName`。
 
-   **重要事項**：請確定您未置換 `info.plist` 檔案中的任何現有內容。如果您具有重疊的內容，則必須手動進行合併。如需相關資訊，請參閱[設定 Xcode 專案](https://developers.facebook.com/docs/ios/getting-started/)及[讓應用程式在 iOS9 環境下運作無礙](https://developers.facebook.com/docs/ios/ios9)。
+   **重要事項**：請確定您未置換 `info.plist` 檔案中的任何現有內容。如果您具有重疊的內容，則必須手動進行合併。如需相關資訊，請參閱[配置 Xcode 專案 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developers.facebook.com/docs/ios/getting-started/ "外部鏈結圖示"){: new_window} 及[準備適用於 iOS9 的應用程式 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developers.facebook.com/docs/ios/ios9 "外部鏈結圖示"){: new_window}。
 
 ## 起始設定 {{site.data.keyword.amashort}} 用戶端 Swift SDK
 {: #facebook-auth-ios-initalize-swift}
@@ -204,7 +204,7 @@ pod 'BMSFacebookAuthentication'
 
    * 將 `<applicationBluemixRegion>` 取代為管理您 {{site.data.keyword.Bluemix_notm}} 應用程式的地區。
    * 將 `tenantId` 取代為**承租戶 ID/應用程式 GUID** 值。
- 
+
    如需這些值的相關資訊，請參閱[開始之前](#before-you-begin)。
 
 1. 將下列程式碼新增至應用程式委派中的 `application:didFinishLaunchingWithOptions` 方法，以通知 Facebook SDK 有關應用程式啟動的資訊，並登錄「Facebook 鑑別處理程式」。在起始設定 BMSClient 實例之後新增此程式碼，並將 Facebook 登錄為鑑別管理程式。
@@ -235,7 +235,7 @@ pod 'BMSFacebookAuthentication'
 ### 開始之前
 {: #facebook-auth-ios-testing-before}
 
-您必須使用 {{site.data.keyword.mobilefirstbp}} 樣板，並且在 `/protected` 端點已具有 {{site.data.keyword.amashort}} 所保護的資源。如果您需要設定 `/protected` 端點，請參閱[保護資源](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)。
+您必須使用 {{site.data.keyword.mobilefirstbp}} 樣板，並且在 `/protected` 端點已具有 {{site.data.keyword.amashort}} 所保護的資源。如果您需要設定 `/protected` 端點，請參閱[保護資源](protecting-resources.html)。
 
 1. 嘗試在瀏覽器中將要求傳送給新建的行動後端應用程式的受保護端點。開啟下列 URL：`{applicationRoute}/protected`，並將 `{applicationRoute}` 取代為從**行動選項**中擷取的值（請參閱[配置 Mobile Client Access 進行 Facebook 鑑別](#facebook-auth-ios-configmca)）。
 例如：`http://my-mobile-backend.mybluemix.net/protected`。

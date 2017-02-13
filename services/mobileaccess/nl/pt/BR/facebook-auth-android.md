@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-05"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 {:new_window: target="_blank"}
@@ -49,7 +49,8 @@ valor de SDK requerido no código WebView Javascript:
 valor para inicializar o cliente
 {{site.data.keyword.amashort}}.
 * Um projeto do Android que esteja configurado para trabalhar com Gradle. O projeto não precisa ser instrumentado com o {{site.data.keyword.amashort}} client SDK.  
-* Um aplicativo Facebook com uma plataforma Android no site Facebook for Developers (https://developers.facebook.com).
+* Um app Facebook com uma plataforma Android no [site Facebook for Developers ![Ícone de link
+externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developers.facebook.com/ "Ícone de link externo"){: new_window}.
 
 **Importante:** não é necessário instalar separadamente o Facebook SDK (`com.facebook.FacebookSdk`). O Facebook SDK é instalado automaticamente pelo Gradle quando você inclui o {{site.data.keyword.amashort}} Facebook client SDK. É possível ignorar esta etapa ao incluir a plataforma Android no site Facebook for Developers.
 
@@ -58,13 +59,12 @@ valor para inicializar o cliente
 
 No website Facebook for Developers:
 
-1. Efetue login em sua conta no site Facebook for
-Developers (https://developers.facebook.com). 
+1. Efetue login em sua conta no [website Facebook for Developers![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developers.facebook.com "Ícone de link externo"){: new_window}.
 
 1. Na **Lista de Produtos**, escolha
 **Facebook Login**.
 
-1. Inclua ou configure a plataforma Android. 
+1. Inclua ou configure a plataforma Android.
 
 1. Especifique o nome do pacote do aplicativo Android no prompt Nome do pacote do Google Play. Para localizar o nome do pacote do seu
 aplicativo Android, procure `<manifest ..... package="{your-package-name}">` no arquivo
@@ -84,17 +84,17 @@ houver mais de uma atividade no arquivo `AndroidManifest.xml`, procure a ativida
 	</activity>
 	```
 	{: codeblock}
-	
+
 1. Para que o Facebook assegure a autenticidade de seu aplicativo, deve-se especificar um hash de seu certificado de desenvolvedor SHA1.
 
 	**Mais sobre a segurança do Android:** o sistema operacional Android requer que todos os aplicativos instalados em um dispositivo Android sejam assinados com um certificado de desenvolvedor. O aplicativo Android pode ser construído em dois modos: depuração e liberação.
-	
-	Use certificados diferentes para os modos de depuração e liberação. Certificados usados para assinatura de aplicativos Android no modo de depuração são empacotados com o Android SDK que, em geral, é instalado automaticamente pelo Android Studio. Quando desejar liberar seu app no armazenamento do Google Play, você deverá assinar seu app com outro certificado que, em geral, você mesmo gera.
-	
+
+	Use certificados diferentes para os modos de depuração e liberação.  Certificados usados para assinatura de aplicativos Android no modo de depuração são empacotados com o Android SDK que, em geral, é instalado automaticamente pelo Android Studio. Quando desejar liberar seu app no armazenamento do Google Play, você deverá assinar seu app com outro certificado que, em geral, você mesmo gera.
+
 	É possível inserir dois conjuntos de hashes de chave com o Facebook: um hash de chave
 para aplicativos que são construídos no modo de depuração com um certificado de depuração e
 outro hash de chave para aplicativos que são construídos no modo de liberação com um certificado
-de liberação. Para obter mais informações, consulte [Assinando aplicativos Android](http://developer.android.com/tools/publishing/app-signing.html).
+de liberação. Para obter mais informações, veja [Assinando seus aplicativos Android![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://developer.android.com/tools/publishing/app-signing.html "Ícone de link externo"){: new_window}.
 
 1. O keystore que contém o certificado que você está usando para o ambiente de desenvolvimento é armazenado no arquivo `~/.android/debug.keystore`. A senha do keystore padrão é: `android`. Use esse certificado para construir aplicativos no modo de depuração.
 
@@ -221,15 +221,17 @@ autenticação. Inicialize o SDK do cliente do {{site.data.keyword.amashort}} pa
 	```
 	{: codeblock}
 
-   * Substitua `BMSClient.REGION_UK` pela região apropriada. 
+   * Substitua `BMSClient.REGION_UK` pela região apropriada.
    * Substitua `<
-MCAServiceTenantId>` pelo valor `tenantId` 
-   
+MCAServiceTenantId>` pelo valor `tenantId`
+
 	Para mais
 informações sobre como obter esses valores, consulte
 [Antes de iniciar](#before-you-begin)).
 
-	**Nota:** se seu aplicativo Android está definindo como destino o Android versão 6.0 (API nível 23) ou superior, deve-se assegurar que o aplicativo tenha uma chamada `android.permission.GET_ACCOUNTS` antes de chamar `register`. Para obter mais informações, veja [https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}.
+	**Nota:** se seu aplicativo Android está definindo como destino o Android versão 6.0 (API nível 23) ou superior, deve-se assegurar que o aplicativo tenha uma chamada `android.permission.GET_ACCOUNTS` antes de chamar `register`. Para
+obter mais informações, veja [esse tópico ![Ícone de
+link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.android.com/training/permissions/requesting.html "Ícone de link externo"){: new_window} no site Android Developers.
 
 1. Inclua o código a seguir em sua Atividade:
 
@@ -253,9 +255,9 @@ Após a inicialização do client SDK e o registro do Gerenciador de autenticaç
 {: #facebook-auth-android-testing-before}
 
 Deve-se estar usando o modelo {{site.data.keyword.mobilefirstbp}} e já ter um recurso protegido pelo {{site.data.keyword.amashort}}
-no terminal `/protected`. Se for necessário configurar um terminal `/protected`, consulte [Protegendo recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
+no terminal `/protected`. Se for necessário configurar um terminal `/protected`, consulte [Protegendo recursos](protecting-resources.html).
 
-1. Tente enviar uma solicitação a um terminal protegido do seu aplicativo backend móvel recém-criado em seu navegador. Abra a URL a seguir:  
+1. Tente enviar uma solicitação a um terminal protegido do seu aplicativo backend móvel recém-criado em seu navegador. Abra a URL a seguir:
 
 	`{applicationRoute}/protected`. Por exemplo: `http://my-mobile-backend.mybluemix.net/protected`.  
 
@@ -284,7 +286,7 @@ o código a seguir depois de inicializar `BMSClient` e registrar
 	});
 	```
 	{: codeblock}
-	
+
 1. Execute o aplicativo. Uma tela de login do Facebook é exibida.
 
 	![image](images/android-facebook-login.png)

@@ -1,18 +1,22 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-04"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
+
 
 # 设置 Cordova 插件
 {: #getting-started-cordova}
 
-使用 {{site.data.keyword.amafull}} 客户端 SDK 安装 Cordova 客户端应用程序。使用 Android (Java) 或 iOS (Objective C) 代码初始化授权管理器。初始化该客户端，然后从 WebView 对受保护和不受保护的资源发起请求。
+使用 {{site.data.keyword.amafull}} 客户端 SDK 安装 Cordova 客户端应用程序。在 Android (Java) 或 iOS 代码（使用 Swift SDK 和相关头文件的 ObjectiveC）中初始化授权管理器。初始化该客户端，然后从 WebView 对受保护和不受保护的资源发起请求。
 
 
 {:shortdesc}
@@ -20,12 +24,13 @@ lastupdated: "2016-12-04"
 ## 开始之前
 {: #before-you-begin}
 您必须具有：
+
 * {{site.data.keyword.Bluemix_notm}} 应用程序的实例。有关如何创建 {{site.data.keyword.Bluemix_notm}} 后端应用程序的更多信息，请参阅[入门](index.html)。
 * {{site.data.keyword.amafull}} 服务的实例。
 * 后端应用程序的 URL（**应用程序路径**）。您将需要此值来向后端应用程序的受保护端点发送请求。
 * **TenantID** 值。在 {{site.data.keyword.amashort}}“仪表板”中打开服务。单击**移动选项**按钮。`tenantId`（也称为 `appGUID`）值会显示在**应用程序 GUID/TenantId** 字段中。您将需要此值来初始化授权管理器。
 * {{site.data.keyword.Bluemix_notm}} **区域**。您可以在**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标") 旁边的头中找到当前 {{site.data.keyword.Bluemix_notm}} 区域。显示的区域值应为以下某个值：`US South`、`United Kingdom` 或 `Sydney`，并对应于 WebView Javascript 代码中需要的 SDK 值：`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_UK` 或 `BMSClient.REGION_SYDNEY`。您将需要此值来初始化 {{site.data.keyword.amashort}} 客户端。
-* Cordova 应用程序或现有项目。有关如何设置 Cordova 应用程序的更多信息，请参阅 [Cordova Web 站点](https://cordova.apache.org/)。
+* Cordova 应用程序或现有项目。有关如何设置 Cordova 应用程序的更多信息，请参阅 [Cordova Web 站点![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cordova.apache.org/ " 外部链接图标"){: new_window}。
 
 ## 安装 {{site.data.keyword.amashort}} Cordova 插件
 {: #getting-started-cordova-plugin}
@@ -61,8 +66,8 @@ lastupdated: "2016-12-04"
 	```
 	{: codeblock}
 
-	*minSdkVersion* 值必须不低于 `15`。*targetSdkVersion* 值必须为 `23`。目前，Cordova 不支持高于 **Android-23** 的版本。
-	
+	*minSdkVersion* 值必须不低于 `15`。请参阅 [Android 平台指南 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cordova.apache.org/docs/en/latest/guide/platforms/android/ "外部链接图标"){: new_window} 以及时了解 Android SDK 受支援的 *targetSdkVersion*。
+
 3. 如果添加的是 iOS 操作系统，请针对目标声明更新 `<platform name="ios">` 元素：
 
 	```XML
@@ -103,7 +108,7 @@ lastupdated: "2016-12-04"
 
 	2. 使用 Xcode 构建并运行应用程序。
 
-	**注**：运行 `cordova build ios` 时您可能会收到以下错误。导致此问题的原因是依赖关系插件中存在错误，此问题在[问题 12](https://github.com/blakgeek/cordova-plugin-cocoapods-support/issues/12) 中进行跟踪。您仍可以通过模拟器或设备在 Xcode 中运行 iOS 项目。
+	**注**：运行 `cordova build ios` 时您可能会收到以下错误。导致此问题的原因是依赖关系插件中存在错误，此问题在[问题 12 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/blakgeek/cordova-plugin-cocoapods-support/issues/12 "外部链接图标"){: new_window} 中进行跟踪。您仍可以通过模拟器或设备在 Xcode 中运行 iOS 项目。
 
 	```
 	xcodebuild: error: Unable to find a destination matching the provided destination specifier:
@@ -113,7 +118,7 @@ lastupdated: "2016-12-04"
 		The device type “iOS Simulator” requires that either “name” or “id” be specified.
 		Please supply either “name” or “id”.
 	```
-	
+
 6. 通过运行以下命令，验证该插件是否已成功安装：
 
 
@@ -121,9 +126,9 @@ lastupdated: "2016-12-04"
 	cordova plugin list
 	```
 	{: codeblock}
-	
+
 7. 通过在**功能**选项卡中将**密钥链共享**切换为`开启`来启用 iOS 的密钥链共享。
-  
+
 8. 通过在**构建设置** > **打包**选项卡中将**定义模块**切换为`是`来启用 iOS 的**定义模块**。
 
 
@@ -158,9 +163,12 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 根据 Xcode 的版本，在 `AppDelegate.m` 中添加授权管理器初始化。
 
 ```Objective-C
-  [CDVBMSClient initMCAAuthorizationManagerManagerWithTenantId:@"<tenantId>"]; 
+  #import "<your_module_name>-Swift.h"
+  [CDVBMSClient initMCAAuthorizationManagerManagerWithTenantId:@"<tenantId>"];
 ```
 {: codeblock}
+
+**注：**导入的头文件名由合并到字符串 `-Swift.h` 的模块名称构成，例如，如果模块名称为 `Cordova`，那么 import 行应该为 `#import "Cordova-Swift.h"` 。要查找模块名称，请转至 `构建设置` > `打包` > `产品模块名称`。将 `<tenantId>` 替换为租户标识（请参阅[开始之前](#before-you-begin)）。
 
 
 ## 对移动后端服务发起请求

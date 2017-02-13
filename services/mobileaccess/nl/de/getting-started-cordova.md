@@ -1,30 +1,35 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-04"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
+
 
 # Cordova-Plug-in einrichten
 {: #getting-started-cordova}
 
-Instrumentieren Sie die Cordova-Clientanwendung mit dem {{site.data.keyword.amafull}}-Client-SDK. Initialisieren Sie Authorization Manager in Ihrem Android-Code (Java) oder iOS-Code (Objective C). Initialisieren Sie den Client und setzen Sie über WebView Anforderungen an geschützte und ungeschützte Ressourcen ab.
+Instrumentieren Sie die Cordova-Clientanwendung mit dem {{site.data.keyword.amafull}}-Client-SDK. Initialisieren Sie Authorization Manager in Ihrem Android-Code (Java) oder iOS-Code (Objective C unter Verwendung von Swift-SDK und der entsprechenden Headerdatei). Initialisieren Sie den Client und setzen Sie über WebView Anforderungen an geschützte und ungeschützte Ressourcen ab.
 
 {:shortdesc}
 
 ## Vorbereitungen
 {: #before-you-begin}
 Voraussetzungen:
+
 * Eine Instanz einer {{site.data.keyword.Bluemix_notm}}-Anwendung. Weitere Informationen zur Erstellung einer {{site.data.keyword.Bluemix_notm}}-Back-End-Anwendung finden Sie in der [Einführung](index.html).
 * Eine Instanz eines {{site.data.keyword.amafull}}-Service.
 * Die URL der Back-End-Anwendung (**App-Route**). Sie benötigen diese Werte zum Senden von Anforderungen an die geschützten Endpunkte der Back-End-Anwendung.
 * Der Wert für die Tenant-ID. Öffnen Sie den Service im {{site.data.keyword.amashort}}-Dashboard. Klicken Sie auf die Schaltfläche **Mobile Systemerweiterungen**. Im Feld **App-GUID/TenantId** wird der Wert `tenantId` (auch als `appGUID` bezeichnet) angezeigt. Sie benötigen diesen Wert für die Initialisierung von Authorization Manager.
 * Die {{site.data.keyword.Bluemix_notm}}-**Region**. Ihre aktuelle {{site.data.keyword.Bluemix_notm}}-Region finden Sie im Header neben dem Symbol **Avatar** ![Avatarsymbol](images/face.jpg "Avatarsymbol"). Der Regionswert, der angezeigt wird, sollte einer der folgenden sein: `USA (Süden)`, `Vereinigtes Königreich` oder `Sydney`. Außerdem sollte er den im WebView-JavaScript-Code erforderlichen SDK-Werten entsprechen: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` oder `BMSClient.REGION_UK`. Sie benötigen diesen Wert für die Initialisierung des {{site.data.keyword.amashort}}-Clients.
-* Cordova-Anwendung oder ein vorhandenes Projekt. Weitere Informationen zur Einrichtung Ihrer Cordova-Anwendung finden Sie auf der [Cordova-Website](https://cordova.apache.org/).
+* Cordova-Anwendung oder ein vorhandenes Projekt. Weitere Informationen zur Einrichtung Ihrer Cordova-Anwendung finden Sie auf der [Cordova-Website ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cordova.apache.org/ "Symbol für externen Link"){: new_window}.
 
 ## Cordova-Plug-in für {{site.data.keyword.amashort}} installieren
 {: #getting-started-cordova-plugin}
@@ -60,8 +65,8 @@ Das {{site.data.keyword.amashort}}-Client-SDK für Cordova ist ein Cordova-Plug-
 	```
 	{: codeblock}
 
-	Der Wert für *minSdkVersion* muss `15` oder höher sein. Der Wert für *targetSdkVersion* muss `23` lauten. Derzeitig unterstützt Cordova keine höheren Versionen als **Android-23**.
-	
+	Der Wert für *minSdkVersion* muss `15` oder höher sein. Im [Leitfaden für die Android-Plattform ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cordova.apache.org/docs/en/latest/guide/platforms/android/ "Symbol für externen Link"){: new_window} finden Sie Informationen zu Aktualisierungen der unterstützten *targetSdkVersion* des Android-SDK.
+
 3. Wenn Sie das iOS-Betriebssystem hinzugefügt haben, aktualisieren Sie das Element `<platform name="ios">` mit einer Zieldeklaration ('target'):
 
 	```XML
@@ -102,7 +107,7 @@ Das {{site.data.keyword.amashort}}-Client-SDK für Cordova ist ein Cordova-Plug-
 
 	2. Erstellen Sie den Build mit Xcode und führen Sie Ihre Anwendung mit Xcode aus.
 
-	**Hinweis**: Beim Ausführen von `cordova build ios` kann der folgende Fehler auftreten. Dieses Problem ist auf einen Fehler in einem Abhängigkeits-Plug-in zurückzuführen, der unter [Issue 12](https://github.com/blakgeek/cordova-plugin-cocoapods-support/issues/12) verfolgt wird. Sie können das iOS-Projekt aber weiterhin in Xcode über einen Simulator oder ein Gerät ausführen.
+	**Hinweis**: Beim Ausführen von `cordova build ios` kann der folgende Fehler auftreten. Dieses Problem ist auf einen Fehler in einem Abhängigkeits-Plug-in zurückzuführen, der unter [Issue 12 ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/blakgeek/cordova-plugin-cocoapods-support/issues/12 "Symbol für externen Link"){: new_window} verfolgt wird. Sie können das iOS-Projekt aber weiterhin in Xcode über einen Simulator oder ein Gerät ausführen.
 
 	```
 	xcodebuild: error: Unable to find a destination matching the provided destination specifier:
@@ -112,16 +117,16 @@ Das {{site.data.keyword.amashort}}-Client-SDK für Cordova ist ein Cordova-Plug-
 		The device type “iOS Simulator” requires that either “name” or “id” be specified.
 		Please supply either “name” or “id”.
 	```
-	
+
 6. Überprüfen Sie, ob das Plug-in erfolgreich installiert wurde, indem Sie den folgenden Befehl ausführen:
 
 	```Bash
 	cordova plugin list
 	```
 	{: codeblock}
-	
+
 7. Aktivieren Sie die gemeinsame Nutzung der Schlüsselkette (Keychain) für iOS, indem Sie auf der Registerkarte **Capabilities** die Option **Keychain Sharing** auf `On` setzen.
-  
+
 8. Aktivieren Sie **Defines Module** für iOS, indem Sie auf der Registerkarte **Build Settings** > **Packaging** die Option **Defines Module** auf `YES` setzen.
 
 
@@ -156,9 +161,14 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 Fügen Sie die Authorization Manager-Initialisierung in `AppDelegate.m` gemäß Ihrer Version von Xcode hinzu.
 
 ```Objective-C
-  [CDVBMSClient initMCAAuthorizationManagerManagerWithTenantId:@"<tenantId>"]; 
+  #import "<your_module_name>-Swift.h"
+  [CDVBMSClient initMCAAuthorizationManagerManagerWithTenantId:@"<tenantId>"];
 ```
 {: codeblock}
+
+**Hinweis:** Der Name der importierten Headerdatei besteht aus dem Modulnamen, der an die Zeichenfolge `-Swift.h` angehängt ist. Wenn beispielsweise der Modulname `Cordova` ist, lautet die Importzeile `#import "Cordova-Swift.h"`. Um nach dem Modulnamen zu suchen, rufen Sie
+`Build Settings` > `Packaging` > `Product Module Name` auf.
+Ersetzen Sie `<tenantId>` durch Ihre Tenant-ID (siehe [Vorbereitungen](#before-you-begin)).
 
 
 ## Anforderung an mobilen Back-End-Service senden

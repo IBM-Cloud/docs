@@ -1,13 +1,16 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-03"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
-{:screen:  .screen}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
 {:codeblock: .codeblock}
+{:pre: .pre}
+
 
 # Autenticazione degli utenti con le credenziali Google
 {: #google-auth}
@@ -54,5 +57,4 @@ Il flusso della richiesta dell'applicazione web {{site.data.keyword.amashort}} Ã
 
 * [Abilitazione dell'autenticazione Google per le applicazioni Android](google-auth-android.html)
 * [Abilitazione dell'autenticazione Google per le applicazioni iOS (SDK Swift)](google-auth-ios-swift-sdk.html)
-* [Abilitazione dell'autenticazione Google per le applicazioni iOS (SDK Objective-C)](google-auth-ios.html)
 * [Abilitazione dell'autenticazione Google per le applicazioni Cordova](google-auth-cordova.html)

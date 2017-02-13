@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-05"
+  years: 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 {:new_window: target="_blank"}
@@ -14,9 +14,7 @@ lastupdated: "2016-12-05"
 # Habilitación de la autenticación de Google en apps para iOS (SDK de Swift)
 {: #google-auth-ios}
 
-Utilice el inicio de sesión de Google para autenticar usuarios en la app {{site.data.keyword.amafull}} iOS Swift. El nuevo SDK de {{site.data.keyword.amashort}} Swift amplia y mejora la funcionalidad proporcionada por el SDK Objetive-C de Mobile Client Access existente.
-
-**Nota:** Si bien el SDK de Objective-C recibe total soporte y sigue considerándose como SDK principal para {{site.data.keyword.Bluemix_notm}} Mobile Services, está previsto dejar de mantener este SDK a finales del año en favor del nuevo SDK de Swift.
+Utilice el inicio de sesión de Google para autenticar usuarios en la app Swift de iOS de {{site.data.keyword.amafull}}.
 
 
 ## Antes de empezar
@@ -34,7 +32,7 @@ Debe tener lo siguiente:
 ## Preparación de la app para el inicio de sesión de Google
 {: #google-sign-in-ios}
 
-Prepare su app para el inicio de sesión de Google siguiendo las instrucciones que proporciona Google en [Inicio de sesión de Google para iOS](https://developers.google.com/identity/sign-in/ios/start-integrating).
+Prepare su app para el inicio de sesión de Google siguiendo las instrucciones que proporciona Google en [Inicio de sesión de Google para iOS ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://developers.google.com/identity/sign-in/ios/start-integrating "Icono de enlace externo"){: new_window}.
 
 Este proceso:
 
@@ -48,7 +46,7 @@ En los pasos siguientes se ofrece una breve descripción de las tareas necesaria
 
 1. Anote el **identificador del paquete** en su proyecto Xcode de la sección **Identity** del separador **General** del destino principal. Lo necesita para crear el proyecto de inicio de sesión de Google.
 
-1. Cree un proyecto en Google Developer para el inicio de sesión de Google para iOS en https://developers.google.com/mobile/add?platform=ios.
+1. Cree un proyecto para el Inicio de sesión de Google para iOS en el [Sitio de Google Developer ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://developers.google.com/mobile/add?platform=ios "Icono de enlace externo"){: new_window}.
 
 1. Añada la API de inicio de sesión de Google al proyecto.
 
@@ -56,9 +54,9 @@ En los pasos siguientes se ofrece una breve descripción de las tareas necesaria
 
    **Importante:** cuando obtenga el archivo `GoogleService-Info.plist`, ábralo y anote el valor de `CLIENT_ID`. Necesitará este valor más adelante para configurar la aplicación de fondo {{site.data.keyword.amashort}}.
 
-1. Añada el archivo `GoogleService-Info.plist` al proyecto de Xcode. Para obtener más información, consulte [Añadir el archivo de configuración al proyecto](https://developers.google.com/identity/sign-in/ios/start-integrating#add-config).
+1. Añada el archivo `GoogleService-Info.plist` al proyecto de Xcode. Para obtener más información, consulte [Añadir el archivo de configuración al proyecto ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://developers.google.com/identity/sign-in/ios/start-integrating#add-config "Icono de enlace externo"){: new_window}.
 
-1. Actualice los esquemas de URL del proyecto de Xcode con el valor de `REVERSE_CLIENT_ID` y el identificador del paquete. Para obtener más información, consulte el apartado sobre [Añadir esquemas de URL al proyecto](https://developers.google.com/identity/sign-in/ios/start-integrating#add_a_url_scheme_to_your_project)
+1. Actualice los esquemas de URL del proyecto de Xcode con el valor de `REVERSE_CLIENT_ID` y el identificador del paquete. Para obtener más información, consulte [Añadir esquemas de URL al proyecto ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://developers.google.com/identity/sign-in/ios/start-integrating#add_a_url_scheme_to_your_project "Icono de enlace externo"){: new_window}.
 
 1. Actualice el archivo `project-Bridging-Header.h` de la app con el siguiente código:
 
@@ -67,7 +65,7 @@ En los pasos siguientes se ofrece una breve descripción de las tareas necesaria
 	```
 	{: codeblock}
 
-	Para obtener más información sobre cómo actualizar el archivo de cabecera de puente, consulte el apartado sobre [Habilitar el inicio de sesión](https://developers.google.com/identity/sign-in/ios/sign-in#enable_sign-in).
+	Para obtener más información sobre la actualización del archivo de cabecera de puente, consulte [Habilitar el inicio de sesión ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://developers.google.com/identity/sign-in/ios/sign-in#enable_sign-in "Icono de enlace externo"){: new_window}.
 
 ## Configuración de {{site.data.keyword.amashort}} para la autenticación de Google
 {: #google-auth-ios-config}
@@ -95,7 +93,7 @@ Ahora que ya dispone de un ID de cliente de iOS, puede activar la autenticación
 	```
 	{: codeblock}
 
-Para obtener más información, consulte el [sitio web de CocoaPods](https://cocoapods.org/).
+Para obtener más información, consulte el [sitio web de CocoaPods ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cocoapods.org/ "Icono de enlace externo"){: new_window}.
 
 ### Instalación del SDK de Swift de cliente de {{site.data.keyword.amashort}} con CocoaPods
 {: #facebook-auth-install-swift-cocoapods}
@@ -168,8 +166,8 @@ Un lugar habitual, pero no obligatorio, donde poner el código de inicializació
 	En el código:
 
       * Sustituya `<serviceTenantID>` por el valor recuperado desde las **Opciones móviles**.
-      * Sustituya `<applicationBluemixRegion>` por su **Región** de {{site.data.keyword.Bluemix_notm}}. 
-	
+      * Sustituya `<applicationBluemixRegion>` por su **Región** de {{site.data.keyword.Bluemix_notm}}.
+
 	Para obtener más información sobre cómo obtener estos valores, consulte [Antes de empezar](#before-you-begin).
 
 
@@ -181,7 +179,7 @@ Después de inicializar el SDK del cliente y registrar el gestor de autenticaci�
 ### Antes de empezar
 {: #google-auth-ios-testing-before}
 
-Debe utilizar el contenedor modelo de {{site.data.keyword.mobilefirstbp}} y debe disponer de un recurso que esté protegido por {{site.data.keyword.amashort}} en el punto final `/protected`. Si tiene que configurar un punto final `/protected`, consulte [Protección de recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
+Debe utilizar el contenedor modelo de {{site.data.keyword.mobilefirstbp}} y debe disponer de un recurso que esté protegido por {{site.data.keyword.amashort}} en el punto final `/protected`. Si tiene que configurar un punto final `/protected`, consulte [Protección de recursos](protecting-resources.html).
 
 1. Intente enviar una solicitud al punto final protegido de la aplicación de programa de fondo móvil en su navegador de escritorio abriendo `{applicationRoute}/protected`.  Por ejemplo `http://my-mobile-backend.mybluemix.net/protected`.
 

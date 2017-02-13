@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-02"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 {:new_window: target="_blank"}
@@ -57,7 +57,7 @@ Para empezar a utilizar Facebook como proveedor de identidad, cree una aplicaci�
 
 Necesita este valor para configurar la autenticación de Facebook para la aplicación móvil o web.
 
-1. Acceda al sitio [Facebook for Developers](https://developers.facebook.com).
+1. Acceda al sitio [Facebook for Developers ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://developers.facebook.com "Icono de enlace externo"){: new_window}.
 
 1. Abra la lista desplegable **Mis apps** y seleccione **Añadir una nueva app**.
 
@@ -74,5 +74,4 @@ Necesita este valor para configurar la autenticación de Facebook para la aplica
 
 * [Habilitación de la autenticación de Facebook para apps de Android](facebook-auth-android.html)
 * [Habilitación de la autenticación de Facebook para apps de iOS (SDK de Swift)](facebook-auth-ios-swift-sdk.html)
-* [Habilitación de la autenticación de Facebook para apps de iOS (SDK de Objective-C en desuso)](facebook-auth-ios.html)
 * [Habilitación de la autenticación de Facebook para apps de Cordova](facebook-auth-cordova.html)

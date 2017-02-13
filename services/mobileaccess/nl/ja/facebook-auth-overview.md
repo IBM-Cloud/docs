@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-02"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 {:new_window: target="_blank"}
@@ -58,7 +58,7 @@ Facebook を ID プロバイダーとして使用し始めるには、Facebook f
 
 モバイル・アプリまたは Web アプリ用に Facebook 認証を構成する際にこの値が必要になります。
 
-1. [Facebook for Developers](https://developers.facebook.com) サイトにアクセスします。
+1. [Facebook for Developers ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developers.facebook.com "外部リンク・アイコン"){: new_window} サイトにアクセスします。
 
 1. **「My Apps」**プルダウン・リストを開き、**「Add a New App」**を選択します。
 
@@ -75,5 +75,4 @@ Facebook を ID プロバイダーとして使用し始めるには、Facebook f
 
 * [Android アプリ用の Facebook 認証の使用可能化](facebook-auth-android.html)
 * [iOS アプリ用の Facebook 認証の使用可能化 (Swift SDK)](facebook-auth-ios-swift-sdk.html)
-* [iOS アプリ用の Facebook 認証の使用可能化 (Objective-C SDK - 非推奨)](facebook-auth-ios.html)
 * [Cordova アプリ用の Facebook 認証の使用可能化](facebook-auth-cordova.html)

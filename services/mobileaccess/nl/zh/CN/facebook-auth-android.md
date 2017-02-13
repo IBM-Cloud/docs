@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-05"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 {:new_window: target="_blank"}
@@ -27,7 +27,7 @@ lastupdated: "2016-12-05"
 * **TenantID** 值。在 {{site.data.keyword.amashort}}“仪表板”中打开服务。单击**移动选项**按钮。`tenantId`（也称为 `appGUID`）值会显示在**应用程序 GUID/TenantId** 字段中。您将需要此值来初始化授权管理器。
 * {{site.data.keyword.Bluemix_notm}} **区域**。您可以在**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标") 旁边的头中找到当前 {{site.data.keyword.Bluemix_notm}} 区域。显示的区域值应为以下某个值：`US South`、`United Kingdom` 或 `Sydney`，并对应于 WebView Javascript 代码中需要的 SDK 值：`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_UK` 或 `BMSClient.REGION_SYDNEY`。您将需要此值来初始化 {{site.data.keyword.amashort}} 客户端。
 * 配置为使用 Gradle 的 Android 项目。该项目不需要安装 {{site.data.keyword.amashort}} 客户端 SDK。  
-* Facebook for Developers 站点 (https://developers.facebook.com) 上具有 Android 平台的 Facebook 应用程序。
+* [Facebook for Developers 站点 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developers.facebook.com/ "外部链接图标"){: new_window} 上具有 Android 平台的 Facebook 应用程序。
 
 **重要信息**：您无需单独安装 Facebook SDK (`com.facebook.FacebookSdk`)。添加 {{site.data.keyword.amashort}} Facebook 客户端 SDK 时，Gradle 会自动安装 Facebook SDK。在 Facebook for Developers 站点中添加 Android 平台时，可以跳过此步骤。
 
@@ -36,12 +36,11 @@ lastupdated: "2016-12-05"
 
 在 Facebook for Developers Web 站点中：
 
-1. 在 Facebook for Developers Web 站点 (https://developers.facebook.com) 上登录到您的帐户。
-	 
+1. 在 [Facebook for Developers Web 站点 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developers.facebook.com "外部链接图标"){: new_window} 上登录到您的帐户。
 
 1. 从**产品列表**中，选择 **Facebook 登录**。
 
-1. 添加或配置 Android 平台。 
+1. 添加或配置 Android 平台。
 
 1. 在“Google Play 软件包名称”提示中，指定 Android 应用程序的软件包名称。要找到 Android 应用程序的软件包名称，请在 Android Studio 项目的 `AndroidManifest.xml` 文件中，查找 `<manifest ..... package="{your-package-name}">`。
 
@@ -58,14 +57,14 @@ lastupdated: "2016-12-05"
 	</activity>
 	```
 	{: codeblock}
-	
+
 1. 要使 Facebook 确保您的应用程序真实性，必须指定开发者证书 SHA1 的散列。
 
 	**关于 Android 安全性的更多信息：**Android 操作系统需要安装在 Android 设备上的所有应用程序都使用开发者证书进行签署。Android 应用程序可以通过两种方式进行构建：调试和发布。
-	
+
 	对于调试和发布方式使用不同的证书。用于在调试方式下签署 Android 应用程序的证书会与 Android SDK 捆绑在一起，Android SDK 通常由 Android Studio 自动安装。当您希望将应用程序发布到 Google Play 商店时，必须使用通常由您自行生成的其他证书来签署应用程序。
-	
-	您可以使用 Facebook 输入两组密钥散列：一组密钥散列用于在调试方式下通过调试证书构建的应用程序，另一组密钥散列用于在发布方式下通过发布证书构建的应用程序。有关更多信息，请参阅 [signing your Android applications](http://developer.android.com/tools/publishing/app-signing.html)。
+
+	您可以使用 Facebook 输入两组密钥散列：一组密钥散列用于在调试方式下通过调试证书构建的应用程序，另一组密钥散列用于在发布方式下通过发布证书构建的应用程序。有关更多信息，请参阅[签署 Android 应用程序 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://developer.android.com/tools/publishing/app-signing.html "外部链接图标"){: new_window}。
 
 1. 包含要用于开发环境的证书的密钥库会存储在 `~/.android/debug.keystore` 文件中。缺省密钥库密码为：`android`。使用此证书可在调试方式下构建应用程序。
 
@@ -184,15 +183,14 @@ Android 项目可能具有两个 `build.gradle` 文件：一个用于项目，�
 ```
 	{: codeblock}
 
-   * 将 `BMSClient.REGION_UK` 替换为相应的区域。 
-   * 将 `<MCAServiceTenantId>` 替换为 `tenantId` 值。 
-   
+   * 将 `BMSClient.REGION_UK` 替换为相应的区域。
+   * 将 `<MCAServiceTenantId>` 替换为 `tenantId` 值。
+
 	有关获取这些值的更多信息，请参阅[开始之前](#before-you-begin)。
 
 	**注：**如果您的 Android 应用程序是针对 Android V6.0（API 级别 23
 ）或更高版本的，那么必须确保该应用程序具有 `android.permission.GET_ACCOUNTS`
-调用，然后才能调用 `register`。有关更多信息，请参阅
-[https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}。
+调用，然后才能调用 `register`。有关更多信息，请参阅 Android Developers 站点上的[这个主题![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.android.com/training/permissions/requesting.html "外部链接图标"){: new_window}。
 
 1. 将以下代码添加到您的 Activity：
 
@@ -215,9 +213,9 @@ Android 项目可能具有两个 `build.gradle` 文件：一个用于项目，�
 ### 开始测试之前
 {: #facebook-auth-android-testing-before}
 
-您必须使用的是 {{site.data.keyword.mobilefirstbp}} 样板，并且已经在 `/protected` 端点具有受 {{site.data.keyword.amashort}} 保护的资源。如果需要设置 `/protected` 端点，请参阅[保护资源](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)。
+您必须使用的是 {{site.data.keyword.mobilefirstbp}} 样板，并且已经在 `/protected` 端点具有受 {{site.data.keyword.amashort}} 保护的资源。如果需要设置 `/protected` 端点，请参阅[保护资源](protecting-resources.html)。
 
-1. 尝试在浏览器中对新创建的移动后端应用程序的受保护端点发送请求。打开以下 URL： 
+1. 尝试在浏览器中对新创建的移动后端应用程序的受保护端点发送请求。打开以下 URL：
 
 	`{applicationRoute}/protected`。例如：`http://my-mobile-backend.mybluemix.net/protected`。  
 
@@ -248,7 +246,7 @@ Android 项目可能具有两个 `build.gradle` 文件：一个用于项目，�
 	});
 	```
 	{: codeblock}
-	
+
 1. 运行应用程序。这将显示 Facebook 登录屏幕。
 
 	![图像](images/android-facebook-login.png)

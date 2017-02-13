@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-07"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
 
@@ -34,5 +34,5 @@ web** é necessário somente para aplicativos da web.
 ## Próximas etapas
 {: #next-steps}
 * [Configurando a autenticação customizada para Android](custom-auth-android.html)
-* [Configurando a autenticação customizada para iOS](custom-auth-ios.html)
+* [Configurando a autenticação customizada para iOS](custom-auth-ios-swift-sdk.html)
 * [Configurando a autenticação customizada para Cordova](custom-auth-cordova.html)

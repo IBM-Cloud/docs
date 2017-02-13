@@ -1,13 +1,16 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-22"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
 
-{:codeblock:.codeblock}
-
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # Configuration d'une authentification personnalisée pour votre application {{site.data.keyword.amashort}} Cordova
 {: #custom-cordova}
@@ -16,16 +19,17 @@ Instrumentez votre application Cordova pour utiliser l'authentification personna
 
 ## Avant de commencer
 {: #before-you-begin}
-* Ressource protégée par une instance du service {{site.data.keyword.amashort}} qui est configurée pour utiliser un fournisseur d'identité personnalisé (voir [Configuration de l'authentification personnalisée](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).  
+* Ressource protégée par une instance du service {{site.data.keyword.amashort}} qui est configurée pour utiliser un fournisseur d'identité personnalisé (voir [Configuration de l'authentification personnalisée](custom-auth-config-mca.html)).  
 * Valeur de votre **TenantID**. Ouvrez votre service dans le tableau de bord de {{site.data.keyword.amashort}}. Cliquez sur le bouton **Options pour application mobile**. La valeur `tenantId` (qui porte également le nom d'`appGUID`) est affichée dans la zone **App GUID / TenantId**. Vous aurez besoin de cette valeur pour initialiser le Gestionnaire des autorisations.
 * Nom de votre **Realm**. Il s'agit de la valeur que vous avez spécifiée dans la zone **Nom du domaine** de la section **Personnalisé** dans l'onglet **Gestion** du tableau de bord de {{site.data.keyword.amashort}}.
 * Votre **région** {{site.data.keyword.Bluemix_notm}}. Vous pouvez trouver votre région {{site.data.keyword.Bluemix_notm}} actuelle dans l'en-tête, en regard de l'icône **Avatar**![icône Avatar](images/face.jpg "icône Avatar"). La valeur de région doit être l'une des suivantes : `US South`, `United Kingdom` ou `Sydney`. La syntaxe exacte des constantes SDK correspondantes est donnée dans les exemples de code.
 
 Pour plus d'informations, voir les sujets suivants :
- * [Configuration de {{site.data.keyword.amashort}} pour l'authentification personnalisée](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html). Cet exemple montre comment configurer le service {{site.data.keyword.amashort}} pour l'authentification personnalisée. Ici, vous définissez la valeur de **Domaine**.
- * [Configuration du SDK Cordova](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html). Informations sur la configuration de l'appli client Cordova.
- * [Utilisation d'un fournisseur d'identité personnalisé](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html). Comment authentifier des utilisateurs avec un fournisseur d'identité personnalisé.
- * [Création d'un fournisseur d'identité personnalisé](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html). Exemples de fonctionnement d'un fournisseur d'identité personnalisé. 
+
+ * [Configuration de {{site.data.keyword.amashort}} pour l'authentification personnalisée](custom-auth-config-mca.html). Cet exemple montre comment configurer le service {{site.data.keyword.amashort}} pour l'authentification personnalisée. Ici, vous définissez la valeur de **Domaine**.
+ * [Configuration du SDK Cordova](getting-started-cordova.html). Informations sur la configuration de l'appli client Cordova.
+ * [Utilisation d'un fournisseur d'identité personnalisé](custom-auth.html). Comment authentifier des utilisateurs avec un fournisseur d'identité personnalisé.
+ * [Création d'un fournisseur d'identité personnalisé](custom-auth-identity-provider.html). Exemples de fonctionnement d'un fournisseur d'identité personnalisé.
 
 ## Configurez votre code WebView Cordova
 ### Initialisation du SDK client {{site.data.keyword.amashort}} dans le WebView Cordova
@@ -37,8 +41,8 @@ BMSClient.initialize("<applicationBluemixRegion>");
 ```
 {: codeblock}
 
-Remplacez `<applicationBluemixRegion>` par votre région (voir [Avant de commencer](#before-you-begin)). 
- 
+Remplacez `<applicationBluemixRegion>` par votre région (voir [Avant de commencer](#before-you-begin)).
+
 
 ### Interface du programme d'écoute d'authentification
 {: #custom-cordva-auth}
@@ -103,7 +107,8 @@ Le code suivant montre comment un programme d'écoute d'authentification client 
 ## Exemple d'implémentation du workflow d'un programme d'écoute d'authentification personnalisé
 {: #custom-cordova-authlisten-sample}
 
-Cet exemple de programme d'écoute d'authentification est conçu pour fonctionner avec un fournisseur d'identité personnalisé. Vous pouvez télécharger le fournisseur d'identité depuis le [référentiel Github](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample).
+Cet exemple de programme d'écoute d'authentification est conçu pour fonctionner avec un fournisseur d'identité personnalisé. Vous pouvez télécharger le
+fournisseur d'identité personnalisé depuis ce [référentiel Github ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample "Icône de lien externe"){: new_window}.
 
 ```JavaScript
 var customAuthenticationListener = {
@@ -169,25 +174,26 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 Enregistrez votre Gestionnaire d'autorisations selon votre version de Xcode.
 
 ```
-#import "<your_module_name>-Swift.h"
+#import "<nom_votre_module>-Swift.h"
 
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 
 {  
-	
+
     //[CDVBMSClient initMCAAuthorizationManagerManagerWithTenantId:@"<tenantId>"];
  }
 ```
 {: codeblock}
 
-Remarque : remplacez ``your_module_name`` par le nom du module de votre projet, par exemple, si votre nom de module est ``Cordova`, ce nom doit être ``#import "Cordova-Swift.h"`. Pour trouver le nom du module, allez à **Build Settings > Packagin` > Product Module Name**.
+Remarque : Pour utiliser le fichier d'en-tête Swift correct, remplacez `nom_votre_module` par le nom de module de votre projet (par
+exemple, si votre module se nomme `Cordova`, remplacez-le par `#import "Cordova-Swift.h"`). Pour trouver le nom du module, allez à **Build Settings > Packagin` > Product Module Name**.
 
 **Remarque :** remplacez votre `tenantId` par votre identifiant de locataire situé sur le bouton **Mobile Options** du tableau de bord du service de {{site.data.keyword.amashort}}.
 
 
 ## Activez le partage de chaîne de certificats pour iOS
 
-Activez `Keychain Sharing` en allant à l'onglet `Capabilities` et basculez `Keychain Sharing` sur `On` dans votre projet Xcode. 
+Activez `Keychain Sharing` en allant à l'onglet `Capabilities` et basculez `Keychain Sharing` sur `On` dans votre projet Xcode.
 
 
 ## Test de l'authentification
@@ -215,8 +221,8 @@ Vous devez disposer d'une application créée avec un conteneur boilerplate {{si
 	request.send(success, failure);
 	```
 	{: codeblock}
-	
-	Remplacez `<your-application-route>` par votre URL d'application back end (voir [Avant de commencer](#before-you-begin)). 
+
+	Remplacez `<your-application-route>` par votre URL d'application back end (voir [Avant de commencer](#before-you-begin)).
 
 1. 	Lorsque votre demande aboutit, la sortie suivante figure dans la console `LogCat` ou Xcode :
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  year: 2016
-lastupdated: "2016-09-07"
+  year: 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
 
@@ -48,9 +48,9 @@ Google 애플리케이션 ID와 본인확인정보가 있으면 {{site.data.keyw
 
     다음 조회 매개변수를 사용합니다. 
 	```
-response_type='authorization_code'
+   response_type='authorization_code'
    client_id= <bluemix_app_guid>
-   redirect_uri= <권한 부여 코드를 받은 후 리턴할 uri>
+   redirect_uri= <uri which you want to return to after getting a grant code>
    scope= ‘openid’
    state= <state>
 	```
@@ -81,5 +81,3 @@ response_type='authorization_code'
 
 이제 보호 리소스 요청을 시작할 수 있습니다.
 보호 리소스의 모든 요청은 권한 요청 헤더 필드에 있는 액세스 토큰을 포함해야 합니다.
-
-

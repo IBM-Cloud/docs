@@ -1,14 +1,17 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-24"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
+{:pre: .pre}
+
 
 # Ativando a autenticação do Facebook para apps Cordova
 {: #facebook-auth-cordova}
@@ -33,7 +36,7 @@ Você deve ter:
 * Um projeto Cordova (Android ou iOS) que seja
 instrumentado com o cliente SDK {{site.data.keyword.amashort}}, consulte
 [
-Configurando o plug-in do Cordova](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html#getting-started-cordova-plugin).
+Configurando o plug-in do Cordova](getting-started-cordova.html#getting-started-cordova-plugin).
 * Uma instância de um aplicativo {{site.data.keyword.Bluemix_notm}} que seja protegida pelo serviço {{site.data.keyword.amashort}}. Para obter mais informações sobre como criar um serviço de
 backend do {{site.data.keyword.Bluemix_notm}}, consulte
 [Introdução](index.html).
@@ -54,8 +57,8 @@ próximo ao ícone **Avatar**
 ![ícone de avatar
 ](images/face.jpg "ícone de avatar") na barra de menus. O valor da região deve ser um destes: US South, Sydney ou UK. Os valores constantes de
 SDK exatos que correspondem a esses nomes são indicados nos exemplos de código.
-* Um aplicativo do Facebook e um ID do app. Para obter mais informações, veja
-[Obtendo um ID do app Facebook a partir do Portal do desenvolvedor do Facebook](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
+* Um aplicativo do Facebook e um ID do app. Para obter mais informações, veja [Obtendo um ID do app Facebook no
+Portal do Desenvolvedor do Facebook](facebook-auth-overview.html#facebook-appID).
 
 
 
@@ -65,12 +68,12 @@ SDK exatos que correspondem a esses nomes são indicados nos exemplos de código
 As etapas necessárias para configurar a plataforma Android
 de um aplicativo Cordova para integração da autenticação do
 Facebook são muito semelhantes às etapas necessárias para
-aplicativos Android nativos. Para obter mais informações, veja [Ativando a autenticação do Facebook em apps Android](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-android.html). Execute as etapas a seguir:
+aplicativos Android nativos. Para obter mais informações, consulte [Ativando a autenticação do Facebook em apps Android](facebook-auth-android.html). Execute as etapas a seguir:
 
 * [Configurando
-seu aplicativo Facebook para a plataforma Android](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-android.html#facebook-auth-android-config). Isso configura a autenticação do Facebook no site Facebook Developers para aplicativos Android.
+seu aplicativo Facebook para a plataforma Android](facebook-auth-android.html#facebook-auth-android-config). Isso configura a autenticação do Facebook no site Facebook Developers para aplicativos Android.
 * [Configurando
-MCA para autenticação no Facebook](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-android.html#facebook-auth-android-mca). Isso
+MCA para autenticação no Facebook](facebook-auth-android.html#facebook-auth-android-mca). Isso
 configura seu serviço {{site.data.keyword.amashort}} no
 servidor {{site.data.keyword.Bluemix}} para autenticação
 do Facebook Android.
@@ -185,23 +188,23 @@ FacebookAuthenticationManager.getInstance().registerDefaultAuthenticationListene
 ## Configurando a plataforma iOS
 {: #facebook-auth-cordova-ios}
 
-As etapas necessárias para configurar a plataforma iOS do
-aplicativo Cordova para integração da autenticação do Facebook
-são semelhantes às etapas necessárias para aplicativos iOS Swift
-nativos. A principal diferença é que o Cordova CLI atualmente não suporta o gerenciador de dependência CocoaPods. Deve-se incluir manualmente arquivos que sejam necessários
+As etapas necessárias para configurar a plataforma iOS do aplicativo Cordova para integração
+da autenticação do Facebook são semelhantes às etapas necessárias para aplicativos iOS Swift nativos
+(arquivos de cabeçalho são necessários para usar o código Objective-C com o SDK Swift). A principal diferença é que o Cordova CLI atualmente não suporta o gerenciador de dependência CocoaPods. Deve-se incluir manualmente arquivos que sejam necessários
 para integrar o cliente {{site.data.keyword.amashort}}
 com a autenticação do Facebook. Para mais informações,
 consulte
-[Ativando a autenticação do Facebook para apps iOS (Swift SDK)](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios-swift-sdk.html). Execute as etapas a seguir:
+[Ativando a autenticação do Facebook para apps iOS (Swift SDK)](facebook-auth-ios-swift-sdk.html). Execute as etapas a seguir:
 
 * [Configurando
-seu aplicativo Facebook para a plataforma iOS](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios-swift-sdk.html#facebook-auth-ios-config). Isto
+seu aplicativo Facebook para a plataforma iOS](facebook-auth-ios-swift-sdk.html#facebook-auth-ios-config). Isto
 configura o serviço de autenticação do Facebook no site Facebook
 Developers.
-* [Configurando MCA para autenticação do Facebook](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios-swift-sdk.html#facebook-auth-ios-configmca). Isso
+* [Configurando
+MCA para autenticação no Facebook](facebook-auth-ios-swift-sdk.html#facebook-auth-ios-configmca). Isso
 configura seu serviço {{site.data.keyword.amashort}} no servidor
 {{site.data.keyword.Bluemix}}.
-* [Configurando o cliente SDK do Facebook MCA para iOS](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios-swift-sdk.html#facebook-auth-ios-sdk). Isso
+* [Configurando o cliente SDK do Facebook MCA para iOS](facebook-auth-ios-swift-sdk.html#facebook-auth-ios-sdk). Isso
 instala o {{site.data.keyword.amashort}} iOS Swift SDK para autorização do Facebook usando CocoaPods.
 
 
@@ -212,8 +215,6 @@ Ative `Compartilhamento Keychain`. Acesse
 a guia `Recursos` e mude
 `Compartilhamento Keychain` para
 `On` em seu projeto Xcode.
-
-
 
 ### Inicialize o {{site.data.keyword.amashort}}
 Gerenciador de autorização em Objective-C
@@ -238,10 +239,10 @@ código nativo Objective-C no arquivo `app-delegate.m `, de acordo com sua vers�
 
 	    return [super application:application didFinishLaunchingWithOptions:launchOptions];
 	}
-	
+
 
 	- (BOOL)application: (UIApplication *)application openURL: (NSURL *)url sourceApplication: (NSString *)sourceApplication annotation: (id)annotation {
-	  
+
 	   return [[FacebookAuthenticationManager sharedInstance] onOpenURLWithApplication:application 
 	   		url:url sourceApplication:sourceApplication annotation:annotation];
 	}
@@ -283,7 +284,6 @@ Substitua
 região (consulte [Antes de
 iniciar](#facebook-auth-before)).
 
-
 ## Testando a Autenticação
 {: #facebook-auth-cordova-test}
 
@@ -294,7 +294,7 @@ fazer solicitações ao serviço de backend móvel.
 ### Antes de Começar
 {: #testing_auth_before}
 
-Deve-se usar o modelo do {{site.data.keyword.mobilefirstbp}} e já ter um recurso protegido por {{site.data.keyword.amashort}} no terminal `/protected`. Para obter mais informações, veja [Protegendo recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
+Deve-se estar usando o modelo do {{site.data.keyword.mobilefirstbp}} e já ter um recurso protegido pelo {{site.data.keyword.amashort}} no terminal `/protected`. Para obter mais informações, consulte [Protegendo recursos](protecting-resources.html).
 
 1. Tente enviar uma solicitação para o terminal protegido
 do seu aplicativo backend móvel a partir do seu

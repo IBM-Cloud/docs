@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-27"
+  years: 2016, 2017
+lastupdated: "2017-01-16"
 
 ---
 
@@ -13,12 +13,8 @@ lastupdated: "2016-10-27"
 {: #custom-ios}
 
 Configure seu aplicativo iOS que está usando autenticação customizada para utilizar
-o SDK do cliente {{site.data.keyword.amafull}} e conectar seu aplicativo ao
-{{site.data.keyword.Bluemix}}.  O
-{{site.data.keyword.amashort}} Swift SDK recém-liberado inclui e melhora a funcionalidade fornecida pelo Mobile Client Access
-Objective-C SDK existente.
+o SDK do cliente {{site.data.keyword.amafull}} e conectar seu aplicativo ao {{site.data.keyword.Bluemix}}.  
 
-**Nota:** embora o Objective-C SDK permaneça totalmente suportado e ainda seja considerado o SDK primário para o {{site.data.keyword.Bluemix_notm}} Mobile Services, há planos para descontinuar o Objective-C SDK posteriormente este ano em favor deste novo Swift SDK.
 
 ## Antes de iniciar
 {: #before-you-begin}
@@ -29,7 +25,7 @@ Antes de começar, deve-se ter:
 serviço {{site.data.keyword.amashort}} que está
 configurado para usar um provedor de identidade customizado
 (consulte
-[Configurando autenticação customizada](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).  
+[Configurando autenticação customizada](custom-auth-config-mca.html)).  
 * Seu valor **TenantID**. Abra o seu serviço no painel do {{site.data.keyword.amashort}}. Clique no botão **Opções móveis**. O valor
 `tenantId` (também conhecido como
 `appGUID`) é exibido no campo **App
@@ -52,11 +48,11 @@ próximo ao ícone **Avatar**
 
 Para obter informações adicionais, consulte as seguintes informações:
  * [Introdução
-ao {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/index.html)
- * [Configurando o iOS Swift SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html)
- * [Usando um provedor de identidade customizado](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
- * [Criando um provedor de identidade customizado](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
- * [Configurando o {{site.data.keyword.amashort}} para autenticação customizada](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
+ao {{site.data.keyword.amashort}}](index.html)
+ * [Configurando o iOS Swift SDK](getting-started-ios-swift-sdk.html)
+ * [Usando um provedor de identidade customizado](custom-auth.html)
+ * [Criando um provedor de identidade customizado](custom-auth-identity-provider.html)
+ * [Configurando o {{site.data.keyword.amashort}} para autenticação customizada](custom-auth-config-mca.html)
 
 ### Ativar Compartilhamento Keychain para iOS
 {: #enable_keychain}
@@ -136,15 +132,15 @@ No código:
 applicationBluemixRegion>` pela sua
 {{site.data.keyword.amashort}}
 **Região** (consulte
-[Antes de iniciar](##before-you-begin)). 
+[Antes de iniciar](##before-you-begin)).
 * Use o `realmName` que você especificou
 no painel {{site.data.keyword.amashort}} (consulte
-[Configurando a autenticação customizada](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).
+[Configurando a autenticação customizada](custom-auth-config-mca.html)).
 * Substitua `<applicationBluemixRegion>` pela região em que seu aplicativo {{site.data.keyword.Bluemix_notm}} está hospedado. Para visualizar a região do {{site.data.keyword.Bluemix_notm}}, clique no ícone de Avatar ![ícone de Avatar](images/face.jpg "ícone de avatar") na barra de menus para abrir o widget **Conta e suporte**.  O valor da região que aparece deve ser um dos seguintes: **US South**, **United Kingdom** ou
 **Sydney** e corresponde às constantes requeridas no código: `BMSClient.Region.usSouth`,
 `BMSClient.Region.unitedKingdom` ou `BMSClient.Region.sydney`.
-   
-  
+
+
 ## Testando a Autenticação
 {: #custom-ios-testing}
 
@@ -202,7 +198,7 @@ delegação de autenticação customizada:
 
 	 ```
 	 MCAAuthorizationManager.sharedInstance.logout(callBack)
-	 ``` 
+	 ```
 	 {: codeblock}
 
  Se você chamar esse código depois que um usuário estiver conectado, ele será desconectado. Quando o usuário tentar efetuar login novamente, ele deverá responder ao desafio recebido do servidor novamente.

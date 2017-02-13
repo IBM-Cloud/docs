@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  year: 2016
-lastupdated: "2016-09-07"
+  year: 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
 
@@ -81,5 +81,3 @@ Le corps de la réponse `POST` doit contenir les paramètres `access_token` et `
 
 Vous pouvez maintenant commencer à effectuer des demandes dans vos ressources protégées.
 Toute demande de ce type doit contenir le jeton d'accès dans la zone d'en-tête de demande d'autorisation.
-
-

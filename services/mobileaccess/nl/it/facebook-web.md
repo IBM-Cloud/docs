@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  year: 2016
-lastupdated: "2016-06-15"
+  year: 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
 
@@ -62,8 +62,8 @@ Per avviare il processo di autorizzazione:
   Il parametro `state` non è utilizzato per ora e può essere rimanere vuoto.
   Il parametro `redirect_uri` è l'uri per il reindirizzamento dopo l'esito positivo o negativo dell'autenticazione con Facebook.
 
-1. Dopo il reindirizzamento dell'endpoint di autorizzazione visualizzerai un modulo
-di accesso da Facebook. Immetti il nome utente e la password per il reindirizzamento a `redirect_uri`.
+1. Dopo il reindirizzamento dell'endpoint di autorizzazione visualizzerai un modulo di accesso da      
+   Facebook. Immetti il nome utente e la password per il reindirizzamento a `redirect_uri`.
    La risposta restituita dopo il reindirizzamento contiene il codice di autorizzazione nei parametri di query della richiesta.
 
 1. Effettua una richiesta `POST` all'endpoint del token del server di autorizzazione:

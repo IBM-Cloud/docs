@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-02"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 {:new_window: target="_blank"}
@@ -62,7 +62,7 @@ Facebook 集成进
 
 为移动应用程序或 Web 应用程序配置 Facebook 认证时需要此值。
 
-1. 访问 [Facebook for Developers](https://developers.facebook.com) 站点。
+1. 访问 [Facebook for Developers ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developers.facebook.com "外部链接图标"){: new_window} 站点。
 
 1. 打开**我的应用程序**下拉列表，并选择**添加新应用程序**。
 
@@ -79,5 +79,4 @@ Facebook 集成进
 
 * [启用 Android 应用程序的 Facebook 认证](facebook-auth-android.html)
 * [启用 iOS 应用程序 (Swift SDK) 的 Facebook 认证](facebook-auth-ios-swift-sdk.html)
-* [启用 iOS 应用程序（Objective-C SDK - 不推荐）的 Facebook 认证](facebook-auth-ios.html)
 * [启用 Cordova 应用程序的 Facebook 认证](facebook-auth-cordova.html)
