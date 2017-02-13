@@ -17,14 +17,14 @@ lastupdated: "2017-01-31"
 The following end-to-end tutorial walks through the steps to create a project from the Basic Code Starter, including the tools that you must have installed, and subsequently, the steps to run the starter in Xcode and Android Studio.
 
 
-### Installing developer tools
-{: #dev_tools}
+## Installing developer tools
+{: #dev_tools notoc}
 
 Ensure that you have installed the [prerequisite developer tools ![External link icon](../icons/launch-glyph.svg "External link icon")](get_code.html#prereq-dev-tools){: new_window}.
 
 
-### Creating a project from the Basic Code Starter
-{: #create_project}
+## Creating a project from the Basic Code Starter
+{: #create_project notoc}
 
 1. Create a Mobile dashboard project in {{site.data.keyword.Bluemix}}.
 
@@ -109,8 +109,8 @@ Ensure that you have installed the [prerequisite developer tools ![External link
    6. When the project code is finished generating, click **Download Code** to download your project archive.
 
 
-### Running your Objective-C project in Xcode
-{: #run_obj-c}
+## Running your Objective-C project in Xcode
+{: #run_obj-c notoc}
 
 1. Extract the `BasicProject-ObjC.zip` file.
 
@@ -129,8 +129,8 @@ Ensure that you have installed the [prerequisite developer tools ![External link
 3. Run your app.
 
 
-### Running your Swift project in Xcode
-{: #run_swift}
+## Running your Swift project in Xcode
+{: #run_swift notoc}
 
 1. Extract the `BasicProject-Swift.zip` file.
 
@@ -149,8 +149,8 @@ Ensure that you have installed the [prerequisite developer tools ![External link
 3. Run your app.
 
 
-### Running your Cordova project in Xcode
-{: #run_cordova_xcode}
+## Running your Cordova project in Xcode
+{: #run_cordova_xcode notoc}
 
 1. Extract the `BasicProject-Cordova.zip` file.
 
@@ -161,8 +161,8 @@ Ensure that you have installed the [prerequisite developer tools ![External link
 3. Run your app.
 
 
-### Running your Cordova project in Android Studio
-{: #run_cordova_studio}
+## Running your Cordova project in Android Studio
+{: #run_cordova_studio notoc}
 
 1. Extract the `BasicProject-Cordova.zip` file.
 
@@ -173,8 +173,8 @@ Ensure that you have installed the [prerequisite developer tools ![External link
 3. Run your app.
 
 
-### Running your Android project in Android Studio
-{: #run_android}
+## Running your Android project in Android Studio
+{: #run_android notoc}
 
 1. Extract the `BasicProject-Android.zip` file.
 
@@ -186,13 +186,13 @@ Ensure that you have installed the [prerequisite developer tools ![External link
 
 
 ## What to do next
-{: #what_next}
+{: #what_next notoc}
 
 View other tutorials.
 
 
 ### Code Starter tutorials
-{: #tutorials_Code}
+{: #tutorials_Code notoc}
 
 * [Tutorial - Cloudant Sync](tutorial_cloudant_sync.html)
 * [Tutorial - {{site.data.keyword.openwhisk_short}}](tutorial_openwhisk.html)

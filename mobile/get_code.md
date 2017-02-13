@@ -17,16 +17,20 @@ When you have completed the configuration and setup of your mobile project with 
 
 You will need to complete credentials for services that are not configurable in your downloaded project. The `README.md` file for the starter project contains instructions. View the `README.md` file in a Markdown viewer to complete the setup.
 
-### Prerequisite Developer Tools
+## Prerequisite Developer Tools
 {: #prereq-dev-tools}
 
 The following developer tools are needed when you are working with generated code from the {{site.data.keyword.Bluemix_notm}} Mobile dashboard:
 
-#### Android
+### Android
+{: #android notoc}
+
 * [Android Studio 2.2 ![External link icon](../icons/launch-glyph.svg "External link icon")](https://developer.android.com/studio)
 	* Install the latest [Android 7.0 ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.android.com/versions/nougat-7-0/) runtime.
 
-#### iOS
+### iOS
+{: #ios notoc}
+
 * [Xcode 8.0 ![External link icon](../icons/launch-glyph.svg "External link icon")](https://developer.apple.com/xcode/) (recommended)
 	* Install the latest [iOS 10 ![External link icon](../icons/launch-glyph.svg "External link icon")](http://www.apple.com/ios/ios-10/) runtime.
 * [Homebrew ![External link icon](../icons/launch-glyph.svg "External link icon")](http://brew.sh/)
@@ -42,7 +46,9 @@ The following developer tools are needed when you are working with generated cod
 	$ brew install carthage
 	```
 
-#### {{site.data.keyword.Bluemix_notm}}
+### {{site.data.keyword.Bluemix_notm}}
+{: #bluemix notoc}
+
 * NodeJS (Node and NPM runtimes) to assist with running API Connect Loopback and other Bluemix Productivity tools.
 
 	To run API Connect tools locally, use Node 5.x:

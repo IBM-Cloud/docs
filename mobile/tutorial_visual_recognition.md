@@ -17,14 +17,14 @@ lastupdated: "2017-01-31"
 The following end-to-end tutorial walks through the steps to create a project from the {{site.data.keyword.visualrecognitionshort}} Code Starter, including the tools that you must have installed, and subsequently, the steps to run the starter in Xcode and Android Studio.
 
 
-### Installing developer tools
-{: #dev_tools}
+## Installing developer tools
+{: #dev_tools notoc}
 
 Ensure that you have installed the [prerequisite developer tools ![External link icon](../icons/launch-glyph.svg "External link icon")](get_code.html#prereq-dev-tools){: new_window}.
 
 
-### Creating a project from the {{site.data.keyword.visualrecognitionshort}} Code Starter
-{: #create_project}
+## Creating a project from the {{site.data.keyword.visualrecognitionshort}} Code Starter
+{: #create_project notoc}
 
 1. Create a Mobile dashboard project in {{site.data.keyword.Bluemix}}.
 
@@ -105,8 +105,8 @@ Ensure that you have installed the [prerequisite developer tools ![External link
    4. When the project code is finished generating, click **Download Code** to download your project archive.
 
 
-### Running your project in Xcode
-{: #run_xcode}
+## Running your project in Xcode
+{: #run_xcode notoc}
 
 1. Extract the `VisualRecognitionProject-Swift.zip` file.
 
@@ -135,8 +135,8 @@ Ensure that you have installed the [prerequisite developer tools ![External link
 3. Run your app.
 
 
-### Running your project in Android Studio
-{: #run_studio}
+## Running your project in Android Studio
+{: #run_studio notoc}
 
 1. Extract the `VisualRecognitionProject-Android.zip` file.
 
@@ -158,13 +158,13 @@ Ensure that you have installed the [prerequisite developer tools ![External link
 
 
 ## What to do next
-{: #what_next}
+{: #what_next notoc}
 
 View other tutorials.
 
 
 ### Code Starter tutorials
-{: #tutorials_Code}
+{: #tutorials_Code notoc}
 
 * [Tutorial - Basic](tutorial.html)
 * [Tutorial - Cloudant Sync](tutorial_cloudant_sync.html)

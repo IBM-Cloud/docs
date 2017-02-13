@@ -47,8 +47,8 @@ You can also use the `BMSCore` SDK to make network requests to any resource.
 
 2. Create a network request.
 
-	#### Swift 3.0
-	{: #ios-swift3}
+	### Swift 3.0
+	{: #ios-swift3 notoc}
 	
 	```Swift
 	 	// Make a network request
@@ -66,8 +66,8 @@ You can also use the `BMSCore` SDK to make network requests to any resource.
 	```
 	{: codeblock}
  
-	#### Swift 2.2
-	{: #ios-swift22}
+	### Swift 2.2
+	{: #ios-swift22 notoc}
 	
 	```Swift
 	 	// Make a network request
@@ -111,10 +111,10 @@ The `BMSURLSession` class is available for iOS only. For more information about 
 
 
 # Related Links
-{: #rellinks}
+{: #rellinks notoc}
 
 ## Related Links
-{: #general}
+{: #general notoc}
 
 * [BMSCore Android SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window}
 * [BMSCore iOS SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}

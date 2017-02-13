@@ -6,7 +6,7 @@ lastupdated: "2017-01-19"
 
 ---
 
-# Creating mobile apps from the {{site.data.keyword.mobilefirstbp}} Starter boilerplate
+# Creating mobile apps from the {{site.data.keyword.mobilefirst_notm}} Services Starter boilerplate
 {: #try_mobile}
 
 You can use each of the {{site.data.keyword.Bluemix}} Mobile services independently. You can also use them together, with the {{site.data.keyword.mobilefirstbp}} Starter boilerplate, to get the most benefit.

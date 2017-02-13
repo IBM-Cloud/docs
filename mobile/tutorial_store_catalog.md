@@ -22,13 +22,13 @@ The {{site.data.keyword.Bluemix}} Store Catalog UI Starter provides a basic sale
 
 
 ## Requirements
-{: #tutorial_requirements}
+{: #tutorial_requirements notoc}
 
 * A [Bluemix ![External link icon](../icons/launch-glyph.svg "External link icon")](http://bluemix.net) Account
 
 
 ## Getting Started
-{: #tutorial_gs}
+{: #tutorial_gs notoc}
 
 To get up and running quickly with the Store Catalog UI Starter, follow these steps:
 
@@ -133,19 +133,19 @@ To get up and running quickly with the Store Catalog UI Starter, follow these st
 
 
 ## What to do next
-{: #tutorial_next}
+{: #tutorial_next notoc}
 
 [Try it out! ![External link icon](../icons/launch-glyph.svg "External link icon")](http://console.{DomainName}/mobile/create-project?starter=fb5e31a9-1186-4d46-939e-2f620f35b83b){: new_window}
 
 
 ### UI Starter tutorials
-{: #tutorials_UI}
+{: #tutorials_UI notoc}
 
 * [Tutorial - Store Catalog](tutorial_store_catalog.html)
 
 
 ### Code Starter tutorials
-{: #tutorials_Code}
+{: #tutorials_Code notoc}
 
 * [Tutorial - Basic](tutorial.html)
 * [Tutorial - Cloudant Sync](tutorial_cloudant_sync.html)

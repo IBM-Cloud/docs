@@ -45,18 +45,6 @@ If you choose to create your project with a Code Starter, you do not have the op
 If you are starting with a Code Starter, continue with [Using a Code Starter to create a project](projects_code.html).
 
 ## Tutorials
-{: #tutorials}
+{: #tutorials notoc}
 
-For more in-depth instructions about how to create apps with Starters, you can use the end-to-end tutorials. 
-
-### UI Starter tutorials
-{: #tutorials_UI}
-
-* [Tutorial - Store Catalog](tutorial_store_catalog.html)
-
-### Code Starter tutorials
-{: #tutorials_Code}
-
-* [End-to-end tutorial of the {{site.data.keyword.visualrecognitionshort}} Code Starter](tutorial.html)
-* [Tutorial - Watson Language](tutorial_watson_language.html)
-* [Tutorial - Weather](tutorial_weather.html)
+For more in-depth instructions about how to create apps with Starters, you can use the end-to-end [tutorials](tutorial.html). 
