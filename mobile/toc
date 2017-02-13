@@ -18,7 +18,6 @@
         services.md
     sdk_compute.md
     sdk_cli.md
-        sdk_cli_contribute.md
     sdk.md
         sdk_BMSClient.md
         sdk_network_request.md
