@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-02"
+  years: 2016, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -20,7 +20,7 @@ O tutorial de ponta a ponta a seguir percorre as etapas para criar um projeto po
 ### Instalando ferramentas do desenvolvedor
 {: #dev_tools}
 
-Assegure-se de que você tenha instalado as [ferramentas de desenvolvedor de pré-requisito](get_code.html#prereq-dev-tools){: new_window}.
+Assegure-se de que você tenha instalado as [ferramentas do desenvolvedor de pré-requisito ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](get_code.html#prereq-dev-tools "Ícone de link externo"){: new_window}.
 
 
 ### Criando um projeto por meio do Iniciador de código Cloudant Sync
@@ -43,17 +43,14 @@ Assegure-se de que você tenha instalado as [ferramentas de desenvolvedor de pr�
 2. Inclua o recurso de Dados. É possível criar uma nova instância de serviço
 {{site.data.keyword.cloudant}} ou incluir uma instância de serviço existente.
 
-   1. Clique em **Incluir** para **Dados** na página
-**Visão geral do projeto**.
+   1. Clique em **Visualizar** no tile **Dados** na página **Visão geral do projeto**.
 
-      Como alternativa, é possível clicar em **Criar** ou em **Incluir
-existente** na página **Dados**.
+      Como alternativa, é possível clicar em **Criar** ou **Incluir existente** e, em seguida, **Cloudant NoSQL DB** na página **Dados**.
       
    2. Opcional: se você optou por criar uma nova instância de serviço, insira seu nome de serviço e
 clique em **Criar**.
 
-   3. Opcional: se você optou por incluir uma instância de serviço existente, selecione sua instância
-de serviço na lista e clique em **Incluir**.
+   3. Opcional: se você escolheu incluir uma instância de serviço existente, selecione sua instância de serviço na lista e clique em **Incluir existente**.
 
    4. Clique no ícone **Menu** em seu ladrilho de serviço e selecione
 **Ativar...** para ativar sua instância de serviço.
@@ -66,17 +63,15 @@ clique em **Criar**.
       3. Clique no ícone **+** ao lado de **Todos os documentos**
 para incluir documentos.
 
-3. Opcional: inclua o recurso Notificações push.
+3. Opcional: inclua o recurso {{site.data.keyword.mobilepushshort}}.
 
-   1. Clique em **Incluir** para **Notificações push** na página **Visão geral do projeto**.
+   1. Clique em **Incluir** para o **{{site.data.keyword.mobilepushshort}}** na página **Visão geral do projeto**.
 
-      Como alternativa, clique em **Criar** na página **Notificações push**.
+      Como alternativa, é possível clicar em **Criar** na página **{{site.data.keyword.mobilepushshort}}**.
 
    2. Insira o nome do serviço e clique em **Criar**.
 
-   3. Para Android,
-[configure
-o Firebase Cloud Messaging](/docs/services/mobilepush/t_push_provider_android.html){: new_window}.
+   3. Para Android, [configure o Firebase Cloud Messaging ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/mobilepush/t_push_provider_android.html "Ícone de link externo"){: new_window}.
    
 4. Opcional: inclua o recurso de Analítica.
 
@@ -86,9 +81,9 @@ o Firebase Cloud Messaging](/docs/services/mobilepush/t_push_provider_android.ht
 
    2. Insira o nome do serviço e clique em **Criar**.
    
-   3. Desligue o **Modo demo** para ver os seus lados de analítica após executar seu aplicativo.
+   3. Desligue o **Modo demo** para ver os seus lados de analítica após executar o seu aplicativo.
    
-   4. Consulte [Introdução ao {{site.data.keyword.mobileanalytics_short}}](/docs/services/mobileanalytics/index.html){: new_window} para obter mais informações sobre a configuração Analítica.
+   4. Veja [Introdução ao {{site.data.keyword.mobileanalytics_short}} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/mobileanalytics/index.html "Ícone de link externo"){: new_window} para obter mais informações sobre como configurar o Analytics.
   
 5. Opcional: inclua o recurso Autenticação.
 
@@ -102,10 +97,7 @@ o Firebase Cloud Messaging](/docs/services/mobilepush/t_push_provider_android.ht
    
    4. Selecione seu provedor de identidade e insira as informações requeridas para configurá-lo. É possível ativar apenas um provedor de identidade.
 
-   5. Consulte
-[Introdução
-ao {{site.data.keyword.amashort}}](/docs/services/mobileaccess/index.html){: new_window}
-para obter mais informações sobre a configuração Autenticação.
+   5. Veja [Introdução ao {{site.data.keyword.amashort}} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/mobileaccess/index.html "Ícone de link externo"){: new_window} para obter mais informações sobre como configurar a Autenticação.
 
 6. Gere seu código do projeto.
 
@@ -137,8 +129,7 @@ visualizador Redução para configurar seu projeto.
 seu ladrilho de serviço e selecione **Ativar...** para ativar sua instância de
 serviço.
 
-         1. Clique em **ATIVAR** para ativar seu console
-{{site.data.keyword.cloudant}}.
+         1. Clique em **ATIVAR** para ativar seu console {{site.data.keyword.cloudant}}.
 
          2. Clique em seu nome de banco de dados e, depois, em **Permissões**.
 
@@ -172,6 +163,7 @@ Visualize outros tutoriais.
 {: #tutorials_Code}
 
 * [Tutorial - Basic](tutorial.html)
+* [Tutorial - {{site.data.keyword.openwhisk_short}}](tutorial_openwhisk.html)
 * [Tutorial - {{site.data.keyword.visualrecognitionshort}}](tutorial_visual_recognition.html)
 * [Tutorial - Idioma do Watson](tutorial_watson_language.html)
 * [Tutorial - Clima](tutorial_weather.html)

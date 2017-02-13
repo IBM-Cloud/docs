@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-06"
+  years: 2016, 2017
+lastupdated: "2016-12-13"
 
 ---
 {:new_window: target="_blank"}
@@ -51,14 +51,15 @@ La vista de [Servicios](services.html) muestra una vista operativa de las instan
 * [Publicación del blog: Introducción de Bluemix Mobile Code Starters](https://www.ibm.com/blogs/bluemix/2016/10/rapid-dev-with-mobile-code-starters/){: new_window}
 * [Publicación del blog: Bluemix Mobile, Parte 1: Creación de una aplicación Store Catalog](https://developer.ibm.com/bluemix/2016/07/13/bluemix-mobile-creating-store-catalog-app-part1/){: new_window}
 * [Publicación del blog: Bluemix Mobile, Parte 2: Integración de programa de fondo de Bluemix personalizado en la app Store Catalog](https://developer.ibm.com/bluemix/2016/07/14/bluemix-mobile-integrating-custom-backend-part2/){: new_window}
-* [Receta de developerWorks: Avisos meteorológicos con notificaciones push y traductor de idiomas](https://developer.ibm.com/recipes/tutorials/receive-weather-updates-in-your-own-language-using-ibm-bluemix-push-notification-service-and-language-translator/){: new_window}
 * [Guías de aprendizaje en vídeo](https://www.youtube.com/channel/UCRW4t4Hzm9gzuiq5naERkCw){: new_window}
+* [Receta de developerWorks: Avisos meteorológicos con notificaciones push y traductor de idiomas](https://developer.ibm.com/recipes/tutorials/receive-weather-updates-in-your-own-language-using-ibm-bluemix-push-notification-service-and-language-translator/){: new_window}
+
 
 ## Enlaces relacionados
 {: #general}
 
-* [Mobile Analytics (Beta)](/docs/services/mobileanalytics/index.html){: new_window}
-* [Mobile Client Access](/docs/services/mobileaccess/index.html){: new_window}
-* [Mobile Foundation](/docs/services/mobilefoundation/index.html){: new_window}
-* [Mobile Quality Assurance](/docs/services/MobileQualityAssurance/index.html){: new_window}
-* [Push Notifications](/docs/services/mobilepush/index.html){: new_window}
+* [{{site.data.keyword.mobileanalytics_short}} (Beta)](/docs/services/mobileanalytics/index.html){: new_window}
+* [{{site.data.keyword.amashort}}](/docs/services/mobileaccess/index.html){: new_window}
+* [{{site.data.keyword.mobilefoundation_short}}](/docs/services/mobilefoundation/index.html){: new_window}
+* [{{site.data.keyword.mqa}}](/docs/services/MobileQualityAssurance/index.html){: new_window}
+* [{{site.data.keyword.mobilepushshort}}](/docs/services/mobilepush/index.html){: new_window}

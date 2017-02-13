@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2015, 2017
 lastupdated: "2016-10-19"
 
 ---
@@ -59,7 +59,9 @@ journalisation.
 <td valign="top"><b>Fournisseurs d'identité d'utilisateur</b> <br/>Vous pouvez utiliser les fournisseurs d'identité suivants : <ul><li>Facebook</li><li>Google</li><li> Personnalisé </li></ul></td>
 </tr>
 <tr>
-<td><img src="images/push_icon.png" alt="Icône du service Push Notifications"> <b>{{site.data.keyword.mobilepushshort}}</b><br/>Le service {{site.data.keyword.mobilepushfull}} fournit une plateforme unifiée permettant d'envoyer et de gérer des notifications push ciblant les plateformes mobiles (iOS et Android), ainsi que les applications de navigateur Web. Ce
+<td>Icône du service <img src="images/push_icon.png" alt="{{site.data.keyword.mobilepushshort}}">
+<b>{{site.data.keyword.mobilepushshort}}</b><br/>Le service {{site.data.keyword.mobilepushfull}} fournit une plateforme unifiée permettant
+d'envoyer et de gérer des notifications push ciblant les plateformes mobiles (iOS et Android), ainsi que les applications de navigateur Web. Ce
 service gère le mappage des utilisateurs de votre application à leurs
 périphériques, ainsi qu'à la plateforme des périphériques et aux navigateurs,
 et traite la distribution des notifications push aux abonnés. Avec ce service,

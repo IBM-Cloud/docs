@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-07"
+  years: 2016, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -54,9 +54,9 @@ Puede utilizar [CocoaPods](https://cocoapods.org){: new_window} o [Carthage](htt
 
   Luego ejecute el mandato `pod install` y abra el archivo `.xcworkspace` generado. Para actualizar a un release posterior de `BMSCore`, utilice `pod update BMSCore`.
 
-  Para obtener más información sobre cómo utilizar CocoaPods, consulte las [Guías de CocoaPods](https://guides.cocoapods.org/using/index.html){: new_window}.
+  Para obtener más información sobre cómo utilizar CocoaPods, consulte las [guías de CocoaPods ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://guides.cocoapods.org/using/index.html "icono de enlace externo"){: new_window}.
 
-2. Para instalar `BMSCore` mediante Carthage, siga estas [instrucciones](https://github.com/Carthage/Carthage#getting-started){: new_window}.
+2. Para instalar `BMSCore` mediante Carthage, siga estas [instrucciones ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://github.com/Carthage/Carthage#getting-started "icono de enlace externo"){: new_window}.
 
   1. Añada la siguiente línea a Cartfile:
 
@@ -67,7 +67,7 @@ Puede utilizar [CocoaPods](https://cocoapods.org){: new_window} o [Carthage](htt
 
   2. Ejecute el mandato `carthage update`.
 
-  3. Una vez finalizada la compilación, añada `BMSCore.framework` al proyecto siguiendo el [Paso 3](https://github.com/Carthage/Carthage#getting-started) de las instrucciones de Carthage.
+  3. Una vez finalizada la compilación, añada `BMSCore.framework` al proyecto siguiendo el [Paso 3 ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://github.com/Carthage/Carthage#getting-started "icono de enlace externo") de las instrucciones de Carthage. 
 
       Para aplicaciones compiladas con Swift 2.3, utilice el mandato `carthage update --toolchain com.apple.dt.toolchain.Swift_2_3`. De lo contrario, utilice el mandato `carthage update`.
 

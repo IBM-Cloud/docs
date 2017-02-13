@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-13"
+  years: 2016, 2017
+lastupdated: "2016-12-16"
 
 ---
 {:new_window: target="_blank"}
@@ -36,18 +36,27 @@ Completa i seguenti passi per creare un progetto con uno starter codice:
 	
 	5. Immetti un nome per il tuo progetto e seleziona **Crea**.
 	
-2. Effettua le tue selezioni nella schermata **Panoramica progetto**.  La schermata **Panoramica progetto** visualizza le informazioni sul tuo progetto e sui servizi facoltativi che puoi aggiungere al tuo progetto come Push Notifications e Authentication.  
+2. Effettua le tue selezioni nella schermata **Panoramica progetto**.  La schermata **Panoramica progetto** visualizza le informazioni sul tuo progetto e sui servizi facoltativi che puoi aggiungere al progetto come {{site.data.keyword.mobilepushshort}} e Authentication.  
 
 	1. Facoltativo: seleziona **Aggiungi** per aggiungere uno dei servizi elencati al tuo progetto. Modifica il **Nome servizio** per il tuo servizio e fai clic su **Crea**. Quando aggiungi i servizi al tuo progetto, ti colleghi alla pagina {{site.data.keyword.Bluemix_notm}} per tale servizio. Configura il servizio fornendo le informazioni obbligatorie per esso.
 	
-	2. Facoltativo: ripeti il passo *a* per ogni ulteriore funzionalità che desideri aggiungere al tuo progetto. 
+	2. Facoltativo: ripeti il passo *a* per ogni ulteriore funzionalità che desideri aggiungere al tuo progetto.
 
-3.  Scarica il tuo progetto e completa la configurazione.
+3. Facoltativo: seleziona **Dati** per connettere un database Cloudant NoSQL o un servizio Object Storage.
+	1. Fai clic su **Crea** per configurare un nuovo database Cloudant NoSQL o servizio Object Storage.
+	
+	Nota: se crei un'istanza del servizio Object Storage, verrai guidato all'esterno del progetto per crearlo e aggiungere le credenziali richieste.  Ritorna al progetto dopo averlo creato e seleziona **Aggiungi esistente** per connettere il servizio al progetto.
+	
+	Se disponi già di un'istanza esistente che non è connessa a un altro progetto a cui vuoi connetterla, seleziona **Aggiungi esistente**. 
+	
+	2. Verifica che il tile del database Cloudant NoSQL o del servizio Object Storage a cui ti connetti sia visualizzato nella scheda Dati del tuo progetto.
+
+4.  Scarica il tuo progetto e completa la configurazione.
 
     1. Fai clic su **Scarica codice** e seleziona il tuo linguaggio preferito.
    
     2. Estrai l'archivio e visualizza il file `README.md` in un visualizzatore Markdown per completare la configurazione.
 
-4.  Prova la tua applicazione! 
+5.  Prova la tua applicazione! 
 
 

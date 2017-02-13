@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-01"
+  years: 2016, 2017
+lastupdated: "2016-12-15"
 
 ---
 {:new_window: target="_blank"}
@@ -16,7 +16,7 @@ O Iniciador de UI (interface com o usuário) de catálogo de loja do {{site.data
 ## Requisitos
 {: #tutorial_requirements}
 
-* Uma conta do [Bluemix](http://bluemix.net)
+* Uma conta do [Bluemix ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://bluemix.net "Ícone de link externo")
 
 
 ## Guia de Introdução
@@ -36,19 +36,17 @@ Para colocar em funcionamento rapidamente o Iniciador de UI (interface com o usu
 
    4. Insira o nome do projeto e clique em **Criar**.
 
-2. Opcional: inclua o recurso Notificações push.
+2. Opcional: inclua o recurso {{site.data.keyword.mobilepushshort}}.
 
-   1. Clique em **Incluir** para **Notificações push** na página **Visão geral do projeto**.
+   1. Clique em **Incluir** para o **{{site.data.keyword.mobilepushshort}}** na página **Visão geral do projeto**.
 
-      Como alternativa, clique em **Criar** na página **Notificações push**.
+      Como alternativa, é possível clicar em **Criar** na página **{{site.data.keyword.mobilepushshort}}**.
 
    2. Insira o nome do serviço e clique em **Criar**.
 
-   3. Para iOS, [configure o Serviço de notificação push da Apple](/docs/services/mobilepush/t_push_provider_ios.html){: new_window}.
+   3. Para iOS, [configure o Apple Push Notification Service ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/mobilepush/t_push_provider_ios.html "Ícone de link externo"){: new_window}.
 
-   4. Para Android,
-[configure o Sistema de
-mensagens em nuvem do Google](/docs/services/mobilepush/t_push_provider_android.html){: new_window}.
+   4. Para Android, [configure o Google Cloud Messaging ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/mobilepush/t_push_provider_android.html "Ícone de link externo"){: new_window}.
 
 3. Opcional: inclua outros recursos.
 
@@ -120,13 +118,15 @@ se ele for local, usando os botões e selecionando o conteúdo na tabela.
 padrão, ative a régua de controle *Substituir esquema*. Um exemplo disso é
 um arquivo .csv que tem menos colunas do que os dados que são fornecidos com seu
 iniciador.
+	  
+   6. Selecione **Navegação** para customizar as ações de navegação em seu app. Isso é opcional porque as ações de navegação para muitas telas são criadas automaticamente com base nos relacionamentos das telas. É possível mudar a tela de destino selecionando primeiro a tela ou o campo *a partir do qual* você deseja navegar na lista de itens de Menu. Em seguida, selecione a tela *para a qual* deseja navegar no campo da tela de Destino. 
 
-   6. Selecione **Acesso do usuário** na navegação para modificar os
+   7. Selecione **Acesso do usuário** na navegação para modificar os
 requisitos de acesso de seu projeto. É possível ativar e desativar o acesso do usuário
 com o comutador. Quando o acesso do usuário está ativado, é possível configurar o
 tempo limite de usuário inativo e as credenciais dos usuários que podem acessar o app.
 
-   7. Selecione **Configurações** no menu de navegação para
+   8. Selecione **Configurações** no menu de navegação para
 modificar as informações gerais e as cores do projeto. Essa tela é onde você insere sua
 chave API do Google, se for necessário para os serviços que você incluiu em seu projeto. Essa
 tela é também onde você inclui seu identificador de pacote configurável exclusivo que é
@@ -135,13 +135,13 @@ registrado na Apple Store ou Google Play Store.
       Se você desejar incluir o IBM MobileFirst Foundation SDK em seu projeto, ative
 o comutador.
 
-   8. Se você alternou o comutador para incluir o IBM MobileFirst Platform
+   9. Se você alternou o comutador para incluir o IBM MobileFirst Platform
 Foundation em seu projeto na tela *Configurações*, uma seleção
 **Foundation** será exibida na navegação. Selecione
 **Foundation** e conclua as informações necessárias que são
 específicas do IBM MobileFirst Platform Foundation.
 
-   9. Selecione **Publicar** no menu de navegação para inserir as informações finais
+   10. Selecione **Publicar** no menu de navegação para inserir as informações finais
 que são necessárias para criar seu app móvel. É possível inserir seu identificador de Pacote configurável para
 iOS e o identificador de Aplicativo para Android.
 
@@ -174,4 +174,22 @@ distribuição e o Perfil de fornecimento devem ser baseados no Identificador de
 ## O que Fazer a Seguir
 {: #tutorial_next}
 
-[Teste-o!](http://console.{DomainName}/mobile/create-project?starter=fb5e31a9-1186-4d46-939e-2f620f35b83b){: new_window}
+[Teste-o! ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://console.{DomainName}/mobile/create-project?starter=fb5e31a9-1186-4d46-939e-2f620f35b83b "Ícone de link externo"){: new_window}
+
+
+### Tutoriais do iniciador de UI (interface com o usuário)
+{: #tutorials_UI}
+
+* [Tutorial - Catálogo de loja](tutorial_store_catalog.html)
+
+
+### Tutoriais do iniciador de código
+{: #tutorials_Code}
+
+* [Tutorial - Basic](tutorial.html)
+* [Tutorial - Cloudant Sync](tutorial_cloudant_synd.html)
+* [Tutorial - {{site.data.keyword.openwhisk_short}}](tutorial_openwhisk.html)
+* [Tutorial - {{site.data.keyword.visualrecognitionshort}}](tutorial_visual_recognition.html)
+* [Tutorial - Idioma do Watson](tutorial_watson_language.html)
+* [Tutorial - Clima](tutorial_weather.html)
+

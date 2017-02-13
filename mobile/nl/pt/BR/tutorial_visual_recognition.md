@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-21"
+  years: 2016, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -19,7 +19,7 @@ etapas para executar o iniciador em Xcode e Android Studio.
 ### Instalando ferramentas do desenvolvedor
 {: #dev_tools}
 
-Assegure-se de que você tenha instalado as [ferramentas de desenvolvedor de pré-requisito](get_code.html#prereq-dev-tools){: new_window}.
+Assegure-se de que você tenha instalado as [ferramentas do desenvolvedor de pré-requisito ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](get_code.html#prereq-dev-tools "Ícone de link externo"){: new_window}.
 
 
 ### Criando um projeto do Iniciador de código do {{site.data.keyword.visualrecognitionshort}}
@@ -39,19 +39,17 @@ Assegure-se de que você tenha instalado as [ferramentas de desenvolvedor de pr�
    
    5. Clique em **Criar**.
 
-2. Opcional: inclua o recurso Notificações push.
+2. Opcional: inclua o recurso {{site.data.keyword.mobilepushshort}}.
 
-   1. Clique em **Incluir** para **Notificações push** na página **Visão geral do projeto**.
+   1. Clique em **Incluir** para o **{{site.data.keyword.mobilepushshort}}** na página **Visão geral do projeto**.
 
-      Como alternativa, clique em **Criar** na página **Notificações push**.
+      Como alternativa, é possível clicar em **Criar** na página **{{site.data.keyword.mobilepushshort}}**.
 
    2. Insira o nome do serviço e clique em **Criar**.
 
-   3. Para iOS, [configure o Serviço de notificação push da Apple](/docs/services/mobilepush/t_push_provider_ios.html){: new_window}.
+   3. Para iOS, [configure o Apple Push Notification Service ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/mobilepush/t_push_provider_ios.html "Ícone de link externo"){: new_window}.
 
-   4. Para Android,
-[configure
-o Firebase Cloud Messaging](/docs/services/mobilepush/t_push_provider_android.html){: new_window}.
+   4. Para Android, [configure o Firebase Cloud Messaging ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/mobilepush/t_push_provider_android.html "Ícone de link externo"){: new_window}.
    
 3. Opcional: inclua o recurso de Analítica.
 
@@ -63,7 +61,7 @@ o Firebase Cloud Messaging](/docs/services/mobilepush/t_push_provider_android.ht
    
    3. Desligue o **Modo demo** para ver os seus lados de analítica após executar o seu aplicativo.
    
-   4. Consulte [Introdução ao {{site.data.keyword.mobileanalytics_short}}](/docs/services/mobileanalytics/index.html){: new_window} para obter mais informações sobre a configuração Analítica.
+   4. Veja [Introdução ao {{site.data.keyword.mobileanalytics_short}} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/mobileanalytics/index.html "Ícone de link externo"){: new_window} para obter mais informações sobre como configurar o Analytics.
   
 4. Opcional: inclua o recurso Autenticação.
 
@@ -77,10 +75,7 @@ o Firebase Cloud Messaging](/docs/services/mobilepush/t_push_provider_android.ht
    
    4. Selecione seu provedor de identidade e insira as informações requeridas para configurá-lo. É possível ativar apenas um provedor de identidade.
 
-   5. Consulte
-[Introdução
-ao {{site.data.keyword.amashort}}](/docs/services/mobileaccess/index.html){: new_window}
-para obter mais informações sobre a configuração Autenticação.
+   5. Veja [Introdução ao {{site.data.keyword.amashort}} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/mobileaccess/index.html "Ícone de link externo"){: new_window} para obter mais informações sobre como configurar a Autenticação.
 
 5. Gere seu código do projeto.
 
@@ -107,7 +102,7 @@ download do seu archive de projeto.
 visualizador Redução para revisar as etapas para configurar seu
 projeto.
 
-   1. Crie a sua instância de serviço do [{{site.data.keyword.visualrecognitionshort}}](https://console.{DomainName}/catalog/services/visual-recognition/){: new_window}.
+   1. Crie sua instância do serviço [{{site.data.keyword.visualrecognitionshort}} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://console.{DomainName}/catalog/services/visual-recognition/ "Ícone de link externo"){: new_window}.
    
    2. Abra seu Terminal e navegue para sua pasta de
 projeto.
@@ -148,7 +143,7 @@ do {{site.data.keyword.visualrecognition}}.
 2. Abra o arquivo `README.md` no
 visualizador Redução para configurar seu projeto.
 
-   1. Crie a sua instância de serviço do [{{site.data.keyword.visualrecognitionshort}}](https://console.{DomainName}/catalog/services/visual-recognition/){: new_window}.
+   1. Crie sua instância do serviço [{{site.data.keyword.visualrecognitionshort}} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://console.{DomainName}/catalog/services/visual-recognition/ "Ícone de link externo"){: new_window}.
    
       Pule esta etapa se você já tiver uma instância de
 serviço do {{site.data.keyword.visualrecognitionshort}}.
@@ -184,5 +179,9 @@ Visualize outros tutoriais.
 ### Tutoriais do iniciador de código
 {: #tutorials_Code}
 
+* [Tutorial - Basic](tutorial.html)
+* [Tutorial - Cloudant Sync](tutorial_cloudant_synd.html)
+* [Tutorial - {{site.data.keyword.openwhisk_short}}](tutorial_openwhisk.html)
 * [Tutorial - Idioma do Watson](tutorial_watson_language.html)
 * [Tutorial - Clima](tutorial_weather.html)
+

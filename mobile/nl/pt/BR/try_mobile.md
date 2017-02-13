@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2015, 2017
 lastupdated: "2016-10-19"
 
 ---
@@ -13,7 +13,7 @@ lastupdated: "2016-10-19"
 juntos, com o modelo do {{site.data.keyword.mobilefirstbp}} Starter, para se beneficiar ao máximo.
 
 Para começar, use o {{site.data.keyword.mobilefirstbp}} Starter para criar seu app. O
-modelo permite concluir as ações a seguir: 
+modelo permite concluir as ações a seguir:
 
 * Crie um tempo de execução Node.js com um aplicativo modelo. É possível usar esse
 aplicativo para fornecer funções do lado do servidor, como APIs RESTful e arquivos estáticos.
@@ -57,11 +57,7 @@ instrumentar seu aplicativo móvel com o SDK do {{site.data.keyword.amashort}}, 
 <td valign="top"><b>Provedores de identidade do usuário</b> <br/>É possível usar os provedores de identidade a seguir: <ul><li>Facebook</li><li>Google</li><li> Customizado </li></ul></td>
 </tr>
 <tr>
-<td><img src="images/push_icon.png" alt="Ícone do serviço de notificações push">
-<b>{{site.data.keyword.mobilepushshort}}</b><br/>O serviço
-{{site.data.keyword.mobilepushfull}} fornece uma plataforma unificada para enviar
-e gerenciar notificações push destinadas a plataformas móveis (iOS & Android) e
-aplicativos de navegador da web. Esse serviço gerencia o mapeamento dos usuários do
+<td><img src="images/push_icon.png" alt="{{site.data.keyword.mobilepushshort}} ícone de serviço"> <b>{{site.data.keyword.mobilepushshort}}</b><br/>O serviço {{site.data.keyword.mobilepushfull}} fornece uma plataforma unificada para enviar e gerenciar notificações push destinadas a plataformas móveis (iOS e Android) e aplicativos de navegador da web. Esse serviço gerencia o mapeamento dos usuários do
 aplicativo para seus dispositivos, plataforma de dispositivo e navegadores, bem como
 manipula o despacho de notificações push para os assinantes. Com esse serviço, é possível
 enviar transmissões, unicasts (com base no userID, deviceID) e tags (ou tópicos) com base

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-02"
+  years: 2016, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -20,7 +20,7 @@ Das folgende umfassende Lernprogramm führt Sie durch die Schritte zur Erstellun
 ### Entwicklertools installieren
 {: #dev_tools}
 
-Stellen Sie sicher, dass Sie die [vorausgesetzten Entwicklertools](get_code.html#prereq-dev-tools){: new_window} installiert haben.
+Stellen Sie sicher, dass die [vorausgesetzten Entwicklertools ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](get_code.html#prereq-dev-tools "Symbol für externen Link"){: new_window} installiert sind.
 
 
 ### Projekt aus dem Cloudant Sync-Code-Starter erstellen
@@ -42,13 +42,13 @@ Stellen Sie sicher, dass Sie die [vorausgesetzten Entwicklertools](get_code.html
 
 2. Fügen Sie die Data-Funktion hinzu. Sie können eine neue {{site.data.keyword.cloudant}}-Serviceinstanz erstellen oder eine vorhandene Serviceinstanz hinzufügen.
 
-   1. Klicken Sie auf der Seite **Projektübersicht** für **Data** auf **Hinzufügen**.
+   1. Klicken Sie auf der Seite **Projektübersicht** in der Kachel **Daten** auf **Anzeigen**.
 
-      Sie können alternativ auf der Seite **Data** auf **Erstellen** oder **Vorhandene hinzufügen** klicken.
+      Alternativ können Sie auf der Seite **Daten** auf **Erstellen** oder **Vorhandene hinzufügen** und anschließend auf **Cloudant NoSQL DB** klicken.
       
    2. Optional: Wenn Sie eine neue Serviceinstanz erstellen möchten, geben Sie Ihren Servicenamen ein und klicken Sie auf **Erstellen**.
 
-   3. Optional: Wenn Sie eine vorhandene Serviceinstanz hinzufügen möchten, wählen Sie Ihre Serviceinstanz in der Liste aus und klicken Sie auf **Hinzufügen**.
+   3. Optional: Wenn Sie eine vorhandene Serviceinstanz hinzufügen möchten, wählen Sie Ihre Serviceinstanz in der Liste aus und klicken Sie auf **Vorhandene hinzufügen**.
 
    4. Klicken Sie in Ihrer Servicekachel auf das Symbol **Menü** und wählen Sie **Starten...** aus, um Ihre Serviceinstanz zu starten.
 
@@ -58,15 +58,15 @@ Stellen Sie sicher, dass Sie die [vorausgesetzten Entwicklertools](get_code.html
 
       3. Klicken sie auf das Symbol **+** neben **Alle Dokumente**, um Dokumente hinzuzufügen.
 
-3. Optional: Fügen Sie die Push Notifications-Funktion hinzu.
+3. Optional: Fügen Sie die {{site.data.keyword.mobilepushshort}}-Funktion hinzu.
 
-   1. Klicken Sie auf der Seite **Projektübersicht** für **Push Notifications** auf **Hinzufügen**.
+   1. Klicken Sie auf der Seite **Projektübersicht** für **{{site.data.keyword.mobilepushshort}}** auf **Hinzufügen**.
 
-      Alternativ können Sie auf der Seite **Push Notifications** auf **Erstellen** klicken.
+      Alternativ können Sie auf der Seite **{{site.data.keyword.mobilepushshort}}** auf **Erstellen** klicken.
 
    2. Geben Sie Ihren Servicenamen ein und klicken Sie auf **Erstellen**.
 
-   3. Unter Android [konfigurieren Sie Firebase Cloud Messaging](/docs/services/mobilepush/t_push_provider_android.html){: new_window}.
+   3. Für Android: [Firebase Cloud Messaging konfigurieren ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/mobilepush/t_push_provider_android.html "Symbol für externen Link"){: new_window}.
    
 4. Optional: Fügen Sie die Analytics-Funktion hinzu.
 
@@ -78,7 +78,7 @@ Stellen Sie sicher, dass Sie die [vorausgesetzten Entwicklertools](get_code.html
    
    3. Inaktivieren Sie den Demo-Modus, um Ihre Analysedaten nach Ausführung der App anzuzeigen.
    
-   4. Weitere Informationen zur Konfiguration von Analytics finden Sie in der [Einführung zu {{site.data.keyword.mobileanalytics_short}}](/docs/services/mobileanalytics/index.html){: new_window}.
+   4. Weitere Informationen zum Konfigurieren von Analytics finden Sie unter [Einführung in {{site.data.keyword.mobileanalytics_short}} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/mobileanalytics/index.html "Symbol für externen Link"){: new_window}.
   
 5. Optional: Fügen Sie die Authentication-Funktion hinzu.
 
@@ -92,7 +92,7 @@ Stellen Sie sicher, dass Sie die [vorausgesetzten Entwicklertools](get_code.html
    
    4. Wählen Sie Ihren Identitätsprovider aus und geben Sie für dessen Konfiguration die erforderlichen Informationen ein. Sie können nur einen einzigen Identitätsprovider aktivieren.
 
-   5. Weitere Informationen zur Konfiguration von Authentication finden Sie in der [Einführung zu {{site.data.keyword.amashort}}](/docs/services/mobileaccess/index.html){: new_window}.
+   5. Weitere Informationen zum Konfigurieren der Authentifizierung finden Sie unter [Einführung in {{site.data.keyword.amashort}} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/mobileaccess/index.html "Symbol für externen Link"){: new_window}.
 
 6. Generieren Sie Ihren Projektcode.
 
@@ -151,6 +151,7 @@ Stellen Sie sicher, dass Sie die [vorausgesetzten Entwicklertools](get_code.html
 {: #tutorials_Code}
 
 * [Lernprogramm - Basic](tutorial.html)
+* [Lernprogramm - {{site.data.keyword.openwhisk_short}}](tutorial_openwhisk.html)
 * [Lernprogramm - {{site.data.keyword.visualrecognitionshort}}](tutorial_visual_recognition.html)
 * [Lernprogramm - Watson Language](tutorial_watson_language.html)
 * [Lernprogramm - Weather](tutorial_weather.html)

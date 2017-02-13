@@ -21,7 +21,7 @@ copyright:
     3. **완료**를 클릭하십시오.
 2. GitHub에서 프로젝트를 가져오십시오. 선택에 따라 git clone 명령을 사용하여 프로젝트를 가져올 수도 있습니다. 컴퓨터에서 터미널을 열고, 다음 명령을 입력하십시오.
     ```
-git clone https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld.git
+    git clone https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld.git
     ```
 
 3. &lt;APPLICATION_ROUTE&gt; 및 &lt;APPLICATION_ID&gt;를 `BMSClient.getInstance().initialize()` 함수의 `try` 블록에 있는 애플리케이션 라우트 및 GUID로 대체하여 프로젝트를 초기화하십시오.
@@ -62,7 +62,7 @@ SDK를 가져와 모바일 앱에 통합하는 방법에 대한 정보는 Bluemi
    * [Mobile Client Access](../../services/mobileaccess/index.html)
    * [Push](../../services/mobilepush/index.html)
 
-# 관련 링크
+# rellinks
 
 ## 샘플
    * [Hello Bluemix 샘플(Android)](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld)

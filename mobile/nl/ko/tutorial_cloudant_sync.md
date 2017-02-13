@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-02"
+  years: 2016, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -20,7 +20,7 @@ lastupdated: "2016-12-02"
 ### 개발자 도구 설치
 {: #dev_tools}
 
-[전제조건 개발자 도구](get_code.html#prereq-dev-tools){: new_window}를 설치했는지 확인하십시오. 
+[전제조건 개발자 도구 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](get_code.html#prereq-dev-tools "외부 링크 아이콘"){: new_window}를 설치했는지 확인하십시오. 
 
 
 ### Cloudant Sync 코드 스타터에서 프로젝트 작성
@@ -42,13 +42,13 @@ lastupdated: "2016-12-02"
 
 2. 데이터 기능을 추가하십시오. 새 {{site.data.keyword.cloudant}} 서비스 인스턴스를 작성하거나 기존 서비스 인스턴스를 추가할 수 있습니다. 
 
-   1. **프로젝트 개요** 페이지에서 **데이터**에 대해 **추가**를 클릭하십시오. 
+   1. **프로젝트 개요** 페이지의 **데이터** 타일에서 **보기**를 클릭하십시오. 
 
-      또는 **데이터** 페이지에서 **작성** 또는 **기존 추가**를 클릭할 수 있습니다. 
+      혹은 **작성** 또는 **기존 추가**를 클릭한 후에 **데이터** 페이지에서 **Cloudant NoSQL DB**를 클릭할 수도 있습니다. 
       
    2. 선택사항: 새 서비스 인스턴스를 작성하도록 선택한 경우, 서비스 이름을 입력하고 **작성**을 클릭하십시오.
 
-   3. 선택사항: 기존 서비스 인스턴스를 추가하도록 선택한 경우, 목록에서 서비스 인스턴스를 선택하고 **추가**를 클릭하십시오.
+   3. 선택사항: 기존 서비스 인스턴스를 추가하도록 선택한 경우, 목록에서 서비스 인스턴스를 선택하고 **기존 추가**를 클릭하십시오. 
 
    4. 서비스 타일에서 **메뉴** 아이콘을 클릭하고 **실행...**을 선택하여 서비스 인스턴스를 실행하십시오. 
 
@@ -58,15 +58,15 @@ lastupdated: "2016-12-02"
 
       3. **모든 문서** 옆에 있는 **+** 아이콘을 클릭하여 문서를 추가하십시오. 
 
-3. 선택사항: Push Notifications 기능을 추가하십시오. 
+3. 선택사항: {{site.data.keyword.mobilepushshort}} 기능을 추가하십시오. 
 
-   1. **프로젝트 개요** 페이지에서 **Push Notifications**에 대해 **추가**를 클릭하십시오. 
+   1. **프로젝트 개요** 페이지에서 **{{site.data.keyword.mobilepushshort}}**에 대해 **추가**를 클릭하십시오. 
 
-      또는 **Push Notifications** 페이지에서 **작성**을 클릭할 수 있습니다. 
+      또는 **{{site.data.keyword.mobilepushshort}}** 페이지에서 **작성**을 클릭할 수도 있습니다. 
 
    2. 서비스 이름을 입력하고 **작성**을 클릭하십시오. 
 
-   3. Android의 경우 [FCM(Firebase Cloud Messaging) 구성](/docs/services/mobilepush/t_push_provider_android.html){: new_window}을 수행하십시오. 
+   3. Android의 경우, [FCM(Firebase Cloud Messaging) 구성 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/mobilepush/t_push_provider_android.html "외부 링크 아이콘"){: new_window}을 수행하십시오. 
    
 4. 선택사항: 분석 기능을 추가하십시오. 
 
@@ -78,7 +78,7 @@ lastupdated: "2016-12-02"
    
    3. 앱을 실행한 후 분석 데이터를 보려면 **데모 모드**를 토글하여 끄십시오. 
    
-   4. 분석 구성에 대한 자세한 정보는 [{{site.data.keyword.mobileanalytics_short}} 시작하기](/docs/services/mobileanalytics/index.html){: new_window}를 참조하십시오. 
+   4. 분석 구성에 대한 자세한 정보는 [{{site.data.keyword.mobileanalytics_short}} 시작하기 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/mobileanalytics/index.html "외부 링크 아이콘"){: new_window}를 참조하십시오. 
   
 5. 선택사항: 인증 기능을 추가하십시오. 
 
@@ -92,7 +92,7 @@ lastupdated: "2016-12-02"
    
    4. ID 제공자를 선택하고 필요한 정보를 입력하여 이를 구성하십시오. 하나의 ID 제공자만 사용 가능하게 설정할 수 있습니다. 
 
-   5. 인증 구성에 대한 자세한 정보는 [{{site.data.keyword.amashort}} 시작하기](/docs/services/mobileaccess/index.html){: new_window}를 참조하십시오.
+   5. 인증 구성에 대한 자세한 정보는 [{{site.data.keyword.amashort}} 시작하기 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/mobileaccess/index.html "외부 링크 아이콘"){: new_window}를 참조하십시오. 
 
 6. 프로젝트 코드를 생성하십시오. 
 
@@ -151,6 +151,7 @@ lastupdated: "2016-12-02"
 {: #tutorials_Code}
 
 * [튜토리얼 - 기본](tutorial.html)
+* [튜토리얼 - {{site.data.keyword.openwhisk_short}}](tutorial_openwhisk.html)
 * [튜토리얼 - {{site.data.keyword.visualrecognitionshort}}](tutorial_visual_recognition.html)
 * [튜토리얼 - Watson Language](tutorial_watson_language.html)
 * [튜토리얼 - Weather](tutorial_weather.html)

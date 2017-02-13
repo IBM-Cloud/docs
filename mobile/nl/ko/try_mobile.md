@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2015, 2017
 lastupdated: "2016-10-19"
 
 ---
@@ -49,7 +49,7 @@ lastupdated: "2016-10-19"
 <td valign="top"><b>사용자 ID 제공자</b> <br/>다음 ID 제공자를 사용할 수 있습니다. <ul><li>Facebook</li><li>Google</li><li> 사용자 정의</li></ul></td>
 </tr>
 <tr>
-<td><img src="images/push_icon.png" alt="Push Notifications 서비스 아이콘"> <b>{{site.data.keyword.mobilepushshort}}</b><br/>{{site.data.keyword.mobilepushfull}} 서비스는 모바일(iOS 및 Android) 플랫폼과 웹 브라우저 애플리케이션을 대상으로 하는 푸시 알림을 전송하고 관리하는 통합 플랫폼을 제공합니다. 이 서비스는 디바이스, 디바이스 플랫폼, 브라우저에 대한 애플리케이션 사용자의 맵핑을 관리하고 구독자에게 푸시 알림을 디스패치하는 작업을 처리합니다. 이 서비스를 사용하면 고객에게 푸시 알림을 기반으로 하는 태그(또는 주제), 유니캐스트(사용자 ID, 디바이스 ID 기반), 브로드캐스트를 보낼 수 있습니다. </td>
+<td><img src="images/push_icon.png" alt="{{site.data.keyword.mobilepushshort}} 서비스 아이콘"> <b>{{site.data.keyword.mobilepushshort}}</b><br/>{{site.data.keyword.mobilepushfull}} 서비스는 모바일(iOS 및 Android) 플랫폼 및 웹 브라우저 애플리케이션을 대상으로 하는 푸시 알림을 전송하고 관리하는 통합 플랫폼을 제공합니다. 이 서비스는 디바이스, 디바이스 플랫폼, 브라우저에 대한 애플리케이션 사용자의 맵핑을 관리하고 구독자에게 푸시 알림을 디스패치하는 작업을 처리합니다. 이 서비스를 사용하면 고객에게 푸시 알림을 기반으로 하는 태그(또는 주제), 유니캐스트(사용자 ID, 디바이스 ID 기반), 브로드캐스트를 보낼 수 있습니다. </td>
 <td valign="top"><b>푸시 서비스 제공자</b><ul><li>Apple Push Notifications Service</li><li>FCM(Firebase Cloud Messaging)</li></ul></td>
 </tr>
 <tr>

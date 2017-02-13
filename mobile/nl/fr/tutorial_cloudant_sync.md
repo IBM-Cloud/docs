@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-02"
+  years: 2016, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -21,7 +21,7 @@ Cloudant Sync, y-compris les outils que vous devez avoir installés et, après q
 ### Installation des outils de développement
 {: #dev_tools}
 
-Assurez-vous que vous avez installé les [outils de développement requis](get_code.html#prereq-dev-tools){: new_window}.
+Vérifiez que vous avez installé les [outils prérequis pour le développeur![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](get_code.html#prereq-dev-tools "Icône de lien externe"){: new_window}.
 
 
 ### Création d'un projet à partir du module de démarrage de Cloudant Sync
@@ -44,16 +44,16 @@ Assurez-vous que vous avez installé les [outils de développement requis](get_c
 2. Ajoutez la fonctionnalité Données. Vous pouvez créer une nouvelle instance {{site.data.keyword.cloudant}} ou ajouter une instance de service
 existant.
 
-   1. Cliquez sur **Ajouter** pour **Données** sur la page **Présentation du projet**.
+   1. Cliquez sur **Afficher** sur l'onglet **Données** sur la page **Présentation du projet**.
 
-      Vous pouvez également cliquer sur **Créer** ou sur **Ajouter un projet existant** depuis la page
-**Données**.
+      Vous pouvez également cliquer sur **Créer** ou sur **Ajouter un projet existant**, puis sur
+**Cloudant NoSQL DB** sur la page **Données**.
       
    2. Facultatif : si vous choisissez de créer une nouvelle instance de service, entrez le nom de votre service et cliquez sur
 **Créer**.
 
-   3. Facultatif : si vous choisissez d'ajouter une instance de service existante, sélectionnez-la dans la liste et cliquez sur
-**Ajouter**.
+   3. Facultatif : si vous choisissez d'ajouter une instance de service existante, sélectionnez-la dans la liste et cliquez sur **Ajouter un projet
+existant**.
 
    4. Cliquez sur l'icône **Menu** dans la vignette de votre service et sélectionnez **Lancer...** pour lancer votre
 instance de service.
@@ -65,15 +65,16 @@ instance de service.
 
       3. Cliquez sur l'icône **+** en regard de **Tous les documents** pour ajouter des documents.
 
-3. Facultatif : ajoutez la fonction Notifications push.
+3. Facultatif : Ajoutez la fonctionnalité {{site.data.keyword.mobilepushshort}}.
 
-   1. Cliquez sur **Ajouter** pour **Notifications push** dans la page **Présentation du projet**.
+   1. Cliquez sur **Ajouter** pour **{{site.data.keyword.mobilepushshort}}** sur la page **Présentation
+du projet**.
 
-      Vous pouvez également cliquer sur **Créer** dans la page **Notifications push**.
+      Vous pouvez également cliquer sur **Créer** sur la page **{{site.data.keyword.mobilepushshort}}**.
 
    2. Entrez le nom de votre service et cliquez sur **Créer**.
 
-   3. Pour Android, [configurez Firebase Cloud Messaging](/docs/services/mobilepush/t_push_provider_android.html){: new_window}.
+   3. Pour Android, [configurez Firebase Cloud Messaging![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/mobilepush/t_push_provider_android.html "Icône de lien externe"){: new_window}.
    
 4. Facultatif : ajoutez la fonction Analyse.
 
@@ -85,7 +86,7 @@ instance de service.
    
    3. Désactivez le **Mode démonstration** pour afficher vos données analytiques après avoir exécuté votre application.
    
-   4. Voir [Initiation à {{site.data.keyword.mobileanalytics_short}}](/docs/services/mobileanalytics/index.html){: new_window} pour plus d'informations sur la configuration de l'analyse.
+   4. Voir [Initiation à {{site.data.keyword.mobileanalytics_short}} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/mobileanalytics/index.html "Icône de lien externe"){: new_window} pour plus d'informations sur la configuration d'Analytics.
   
 5. Facultatif : ajoutez la fonction Authentification.
 
@@ -99,7 +100,7 @@ instance de service.
    
    4. Sélectionnez votre fournisseur d'identité et saisissez les informations requises pour le configurer. Vous pouvez activer un seul fournisseur d'identité.
 
-   5. Voir [Initiation à {{site.data.keyword.amashort}}](/docs/services/mobileaccess/index.html){: new_window} pour plus d'informations sur la configuration de l'authentification.
+   5. Voir [Initiation à {{site.data.keyword.amashort}} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/mobileaccess/index.html "Icône de lien externe"){: new_window} pour plus d'informations sur la configuration du service Authentication.
 
 6. Générer votre code de projet.
 
@@ -163,6 +164,7 @@ Consultez d'autres tutoriels.
 {: #tutorials_Code}
 
 * [Tutoriel - Basic](tutorial.html)
+* [Tutoriel - {{site.data.keyword.openwhisk_short}}](tutorial_openwhisk.html)
 * [Tutoriel - {{site.data.keyword.visualrecognitionshort}}](tutorial_visual_recognition.html)
 * [Tutoriel - Watson Language](tutorial_watson_language.html)
 * [Tutoriel - Weather](tutorial_weather.html)

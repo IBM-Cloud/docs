@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-14"
+  years: 2015, 2017
+lastupdated: "2017-01-17"
 
 ---
 # SDK
@@ -20,29 +20,29 @@ Puede utilizar los siguientes SDK en la aplicación móvil para optimizar las pr
 ### SDK de Android
 {: #android_sdk}
 
-- [Core SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core) 
-- [{{site.data.keyword.mobileanalytics_short}} SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics) 
-- [{{site.data.keyword.mobilepushshort}} SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-push) 
-- [SDK de autenticación de Facebook](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-facebookauthentication) 
-- [SDK de autenticación de Google](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-googleauthentication) 
+- [Core SDK ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core "icono de enlace externo") 
+- [SDK de {{site.data.keyword.mobileanalytics_short}} ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics "icono de enlace externo") 
+- [SDK de {{site.data.keyword.mobilepushshort}} ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-push "icono de enlace externo") 
+- [SDK de autenticación de Facebook ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-facebookauthentication "icono de enlace externo") 
+- [SDK de autenticación de Google ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-googleauthentication "icono de enlace externo") 
 
 
 ### SDK de iOS
 {: #ios_sdk}
 
-- [Core SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core)
-- [{{site.data.keyword.mobileanalytics_short}} SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics) 
-- [{{site.data.keyword.mobilepushshort}} SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push) 
-- [SDK de autenticación de Facebook](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-facebookauthentication)
-- [SDK de autenticación de Google](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-googleauthentication) 
-- [{{site.data.keyword.amashort}} SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security) 
+- [Core SDK ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core "icono de enlace externo")
+- [SDK de {{site.data.keyword.mobileanalytics_short}} ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics "icono de enlace externo") 
+- [SDK de {{site.data.keyword.mobilepushshort}} ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push "icono de enlace externo") 
+- [SDK de autenticación de Facebook ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-facebookauthentication "icono de enlace externo")
+- [SDK de autenticación de Google ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-googleauthentication "icono de enlace externo") 
+- [SDK de {{site.data.keyword.amashort}} ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security "icono de enlace externo") 
 
 
 ### Plugins de Cordova
 {: #cordova_plugin}
 
-- [Plugin de Core](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
-- [Plugin de {{site.data.keyword.mobilepushshort}}](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push)
+- [Plugin de Core ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core "icono de enlace externo")
+- [Plugin de {{site.data.keyword.mobilepushshort}} ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push "icono de enlace externo")
 
 
 ## SDK de servidor
@@ -51,17 +51,17 @@ Puede utilizar los siguientes SDK en la aplicación móvil para optimizar las pr
 Si tiene una aplicación de servidor de Java, NodeJS o Swift, puede utilizar los siguientes SDK para comunicarse con los servicios respectivos.
 
 
-### {{site.data.keyword.mobilepushshort}} SDK de servidor
+### SDK de servidor de {{site.data.keyword.mobilepushshort}}
 {: #push_sdk}
 
-- [SDK del servidor Java de {{site.data.keyword.mobilepushshort}}](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-java) 
-- [SDK del servidor Swift de {{site.data.keyword.mobilepushshort}}](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-swift) 
-- [SDK del servidor NodeJS de {{site.data.keyword.mobilepushshort}}](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-nodejs)
+- [SDK de servidor Java de {{site.data.keyword.mobilepushshort}} ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-java "icono de enlace externo") 
+- [SDK de servidor Swift de {{site.data.keyword.mobilepushshort}} ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-swift "icono de enlace externo") 
+- [SDK de servidor NodeJS de {{site.data.keyword.mobilepushshort}} ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-pushnotifications-serversdk-nodejs "icono de enlace externo")
 
 
-### SDK del servidor {{site.data.keyword.amashort}}
+### SDK de servidor de {{site.data.keyword.amashort}}
 {: #mca_sdk}
 
-- [SDK del servidor Swift de {{site.data.keyword.amashort}}](https://github.com/ibm-bluemix-mobile-services/bms-mca-serversdk-swift)
+- [SDK de servidor Swift de {{site.data.keyword.amashort}} ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://github.com/ibm-bluemix-mobile-services/bms-mca-serversdk-swift "icono de enlace externo")
 
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-01"
+  years: 2016, 2017
+lastupdated: "2016-12-15"
 
 ---
 {:new_window: target="_blank"}
@@ -16,7 +16,7 @@ lastupdated: "2016-12-01"
 ## 必要条件
 {: #tutorial_requirements}
 
-* [Bluemix](http://bluemix.net) アカウント
+* [Bluemix ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://bluemix.net "外部リンク・アイコン") アカウント
 
 
 ## 開始
@@ -36,17 +36,17 @@ Store Catalog コード・スターターを使用して素早く稼働中にす
 
    4. プロジェクト名を入力し、**「作成」**をクリックします。
 
-2. オプション: Push Notifications (プッシュ通知) 機能を追加します。
+2. オプション: {{site.data.keyword.mobilepushshort}} 機能を追加します。
 
-   1. **「プロジェクト概要 (Project Overview)」**ページで、**「Push Notifications」**に対して**「追加」**をクリックします。
+   1. **「プロジェクト概要 (Project Overview)」**ページで、**「{{site.data.keyword.mobilepushshort}}」**に対して**「追加」**をクリックします。
 
-      代替方法として、**「Push Notifications」**ページで**「作成」**をクリックすることもできます。
+      代替方法として、**「{{site.data.keyword.mobilepushshort}}」**ページで**「作成」**をクリックすることもできます。
 
    2. サービス名を入力し、**「作成」**をクリックします。
 
-   3. iOS の場合、[Apple プッシュ通知サービスの構成](/docs/services/mobilepush/t_push_provider_ios.html){: new_window}を行います。
+   3. iOS の場合、[Apple Push Notification Service を構成します![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/mobilepush/t_push_provider_ios.html "外部リンク・アイコン"){: new_window}。
 
-   4. Android の場合、[Google クラウド・メッセージングの構成](/docs/services/mobilepush/t_push_provider_android.html){: new_window}を行います。
+   4. Android の場合、[Google Cloud Messaging を構成します![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/mobilepush/t_push_provider_android.html "外部リンク・アイコン"){: new_window}。
 
 3. オプション: その他の機能を追加します。
 
@@ -90,16 +90,18 @@ Store Catalog コード・スターターを使用して素早く稼働中にす
       ボタンを使用し、表の内容を選択することによって、表の内容をインポート、エクスポート、または変更することもできます (表がローカルである場合)。
 
 	  注意: デフォルト・データの構造と一致しないデータをインポートする場合、*「スキーマの置換」*スライダーをオンにしてください。これの例は、スターターで提供されるデータよりも列の数が少ない .csv ファイルです。
+	  
+   6. **「ナビゲーション (Navigation)」**を選択して、アプリ内のナビゲーション・アクションをカスタマイズします。多くの画面のナビゲーション・アクションは画面の関係に基づいて自動的に作成されるため、これは任意指定です。ターゲット画面を変更するには、まずメニュー項目リストから、ナビゲート*元*の画面またはフィールドを選択します。次に、ターゲット画面フィールドでナビゲート*先* の画面を選択します。 
 
-   6. ナビゲーションで**「ユーザー・アクセス (User Access)」**を選択して、プロジェクトのアクセス要件を変更します。ユーザー・アクセスをスイッチでオンとオフに切り替えることができます。ユーザー・アクセスがオンになっている場合、非アクティブ・ユーザーのタイムアウトと、アプリにアクセスできるユーザーの資格情報を設定できます。
+   7. ナビゲーションで**「ユーザー・アクセス (User Access)」**を選択して、プロジェクトのアクセス要件を変更します。ユーザー・アクセスをスイッチでオンとオフに切り替えることができます。ユーザー・アクセスがオンになっている場合、非アクティブ・ユーザーのタイムアウトと、アプリにアクセスできるユーザーの資格情報を設定できます。
 
-   7. ナビゲーション・メニューで**「設定」**を選択して、プロジェクトの全体的情報およびカラーを変更します。この画面は、プロジェクトに追加したサービスで必要な場合に Google API キーを入力する場所です。この画面は、Apple Store または Google Play Store に登録される固有のバンドル ID を追加する場所でもあります。
+   8. ナビゲーション・メニューで**「設定」**を選択して、プロジェクトの全体的情報およびカラーを変更します。この画面は、プロジェクトに追加したサービスで必要な場合に Google API キーを入力する場所です。この画面は、Apple Store または Google Play Store に登録される固有のバンドル ID を追加する場所でもあります。
 
       IBM MobileFirst Foundation SDK をプロジェクトに追加したい場合、スイッチをオンに切り替えてください。
 
-   8. IBM MobileFirst Platform Foundation をプロジェクトに追加するために*「設定」*画面でスイッチを切り替えた場合、ナビゲーションに**「ファウンデーション (Foundation)」**の選択が表示されます。**「ファウンデーション (Foundation)」**を選択し、IBM MobileFirst Platform Foundation 固有の必要な情報を入力してください。
+   9. IBM MobileFirst Platform Foundation をプロジェクトに追加するために*「設定」*画面でスイッチを切り替えた場合、ナビゲーションに**「ファウンデーション (Foundation)」**の選択が表示されます。**「ファウンデーション (Foundation)」**を選択し、IBM MobileFirst Platform Foundation 固有の必要な情報を入力してください。
 
-   9. ナビゲーション・メニューで**「公開」**を選択して、モバイル・アプリを作成するために必要な最後の情報を入力します。バンドル ID (iOS の場合) およびアプリケーション ID (Android の場合) を入力できます。
+   10. ナビゲーション・メニューで**「公開」**を選択して、モバイル・アプリを作成するために必要な最後の情報を入力します。バンドル ID (iOS の場合) およびアプリケーション ID (Android の場合) を入力できます。
 
        iOS アプリを作成している場合、バンドル ID、配布証明書 (*.p12* ファイル)、およびプロビジョニング・プロファイル (*.mobileprovision* ファイル) を Apple プロビジョニング・ポータルから取得する必要があります。これら 3 つは、同時に同じコンピューター (Apple ストアにアプリを送るときに使用する予定のもの) で作成される必要があります。配布証明書およびプロビジョニング・プロファイルは、バンドル ID に基づいている必要があります。 	
 
@@ -125,4 +127,22 @@ Store Catalog コード・スターターを使用して素早く稼働中にす
 ## 次のタスク
 {: #tutorial_next}
 
-[試してみてください](http://console.{DomainName}/mobile/create-project?starter=fb5e31a9-1186-4d46-939e-2f620f35b83b){: new_window}
+[試してみてください![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://console.{DomainName}/mobile/create-project?starter=fb5e31a9-1186-4d46-939e-2f620f35b83b "外部リンク・アイコン"){: new_window}
+
+
+### UI スターターのチュートリアル
+{: #tutorials_UI}
+
+* [チュートリアル - Store Catalog](tutorial_store_catalog.html)
+
+
+### コード・スターターのチュートリアル
+{: #tutorials_Code}
+
+* [チュートリアル - ベーシック](tutorial.html)
+* [チュートリアル - Cloudant Sync](tutorial_cloudant_synd.html)
+* [チュートリアル - {{site.data.keyword.openwhisk_short}}](tutorial_openwhisk.html)
+* [チュートリアル - {{site.data.keyword.visualrecognitionshort}}](tutorial_visual_recognition.html)
+* [チュートリアル - Watson Language](tutorial_watson_language.html)
+* [チュートリアル - Weather](tutorial_weather.html)
+

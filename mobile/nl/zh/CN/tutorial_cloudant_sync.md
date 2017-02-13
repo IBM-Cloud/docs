@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-02"
+  years: 2016, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -20,7 +20,7 @@ lastupdated: "2016-12-02"
 ### 安装开发者工具
 {: #dev_tools}
 
-确保您已安装[必备开发者工具](get_code.html#prereq-dev-tools){: new_window}。
+请确保您已安装[必备开发者工具![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](get_code.html#prereq-dev-tools "外部链接图标"){: new_window}。
 
 
 ### 通过“Cloudant 同步代码入门模板”创建项目
@@ -42,13 +42,13 @@ lastupdated: "2016-12-02"
 
 2. 添加数据功能。您可以创建新的 {{site.data.keyword.cloudant}} 服务实例或添加现有服务实例。
 
-   1. 在**项目概述**页面上，针对**数据**单击**添加**。
+   1. 在**项目概述**页面的**数据**磁贴上，单击**查看**。
 
-      或者，您可以从**数据**页面单击**创建**或**添加现有项**。
+      或者，您可以在**数据**页面上，单击**创建**或**添加现有项**，然后单击 **Cloudant NoSQL DB**。
       
    2. 可选：如果选择创建新的服务实例，请输入服务名称，并单击**创建**。
 
-   3. 可选：如果选择添加现有服务实例，请从列表中选择服务实例，并单击**添加**。
+   3. 可选：如果选择添加现有服务实例，请从列表中选择服务实例，并单击**添加现有项**。
 
    4. 单击服务磁贴中的**菜单**图标，并选择**启动...** 以启动服务实例。
 
@@ -58,15 +58,15 @@ lastupdated: "2016-12-02"
 
       3. 单击**所有文档**旁边的 **+** 图标以添加文档。
 
-3. 可选：添加 Push Notifications 功能。
+3. 可选：添加 {{site.data.keyword.mobilepushshort}} 功能。
 
-   1. 在**项目概述**页面上，针对 **Push Notifications** 单击**添加**。
+   1. 在**项目概述**页面中，针对 **{{site.data.keyword.mobilepushshort}}** 单击**添加**。
 
-      或者，您可以在 **Push Notifications** 页面上单击**创建**。
+      或者，您可以在 **{{site.data.keyword.mobilepushshort}}** 页面上单击**创建**。
 
    2. 输入服务名称并单击**创建**。
 
-   3. 对于 Android，[配置 Firebase Cloud Messaging](/docs/services/mobilepush/t_push_provider_android.html){: new_window}。
+   3. 对于 Android，[配置 Firebase 云消息传递 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](/docs/services/mobilepush/t_push_provider_android.html "外部链接图标"){: new_window}。
    
 4. 可选：添加 Analytics 功能。
 
@@ -78,7 +78,7 @@ lastupdated: "2016-12-02"
    
    3. 您可以在运行应用程序后关闭**演示模式**，以查看您的分析数据。
    
-   4. 请参阅 [{{site.data.keyword.mobileanalytics_short}} 入门](/docs/services/mobileanalytics/index.html){: new_window}，以获取有关配置 Analytics 的更多信息。
+   4. 查看 [{{site.data.keyword.mobileanalytics_short}} 入门 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](/docs/services/mobileanalytics/index.html "外部链接图标"){: new_window}，以获取配置 Analytics 的更多信息。
   
 5. 可选：添加 Authentication 功能。
 
@@ -92,7 +92,7 @@ lastupdated: "2016-12-02"
    
    4. 选择身份提供者，并输入必需的信息以对其进行配置。只能启用一个身份提供者。
 
-   5. 请参阅 [{{site.data.keyword.amashort}} 入门](/docs/services/mobileaccess/index.html){: new_window}，以获取有关配置 Authentication 的更多信息。
+   5. 请参阅 [{{site.data.keyword.amashort}} 入门 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](/docs/services/mobileaccess/index.html "外部链接图标"){: new_window}，以获取配置 Authentication 的更多信息。
 
 6. 生成项目代码。
 
@@ -151,6 +151,7 @@ lastupdated: "2016-12-02"
 {: #tutorials_Code}
 
 * [教程 - 基本](tutorial.html)
+* [教程 - {{site.data.keyword.openwhisk_short}}](tutorial_openwhisk.html)
 * [教程 - {{site.data.keyword.visualrecognitionshort}}](tutorial_visual_recognition.html)
 * [教程 - Watson Language](tutorial_watson_language.html)
 * [教程 - Weather](tutorial_weather.html)

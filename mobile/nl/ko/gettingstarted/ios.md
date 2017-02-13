@@ -61,7 +61,7 @@ SDK를 가져와 모바일 앱에 통합하는 방법에 대한 정보는 Bluemi
    * [Mobile Client Access](../../services/mobileaccess/index.html)
    * [Push](../../services/mobilepush/index.html)
 
-# 관련 링크
+# rellinks
 
 ## 샘플
    * [Hello Bluemix 샘플(iOS)](https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-hellobluemix)

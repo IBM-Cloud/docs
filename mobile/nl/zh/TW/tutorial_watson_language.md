@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-21"
+  years: 2016, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -16,8 +16,8 @@ lastupdated: "2016-10-21"
 ## 需求
 {: #tutorial_requirements}
 
-* [Bluemix](http://bluemix.net) 帳戶
-* 取自 [Bluemix Catalog](https://console.{DomainName}/catalog/) 的 [Language Translator](https://console.{DomainName}/catalog/services/language-translator/) 及 [Text to Speech](https://console.{DomainName}/catalog/services/text-to-speech/) 服務實例
+* 一個 [Bluemix ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://bluemix.net "外部鏈結圖示") 帳戶
+* [語言轉換器 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://console.{DomainName}/catalog/services/language-translator/ "外部鏈結圖示") 及 [文字轉語音 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://console.{DomainName}/catalog/services/text-to-speech/ "外部鏈結圖示") 服務實例（取自於 [Bluemix 型錄 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://console.{DomainName}/catalog/ "外部鏈結圖示")）
 
 
 ## 開始使用
@@ -37,17 +37,17 @@ lastupdated: "2016-10-21"
 
    4. 輸入專案名稱，然後按一下**建立**。
 
-2. 選用項目：新增 Push Notifications 功能。
+2. 選用項目：新增 {{site.data.keyword.mobilepushshort}} 功能。
 
-   1. 在**專案概觀**頁面中，針對 **Push Notifications** 按一下**新增**。
+   1. 在**專案概觀**頁面中，對 **{{site.data.keyword.mobilepushshort}}** 按一下**新增**。
 
-      您也可以按一下 **Push Notifications** 頁面中的**建立**。
+      或者，您可以從 **{{site.data.keyword.mobilepushshort}}** 頁面中按一下**建立**。
 
    2. 輸入服務名稱，然後按一下**建立**。
 
-   3. 若為 iOS，[配置 Apple Push Notification Service](/docs/services/mobilepush/t_push_provider_ios.html){: new_window}。
+   3. 若為 iOS，請[配置 Apple Push Notification Service ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/mobilepush/t_push_provider_ios.html "外部鏈結圖示"){: new_window}。
 
-   4. 若為 Android，[配置 Google Cloud Messaging](/docs/services/mobilepush/t_push_provider_android.html){: new_window}。
+   4. 若為 Android，請[配置 Google Cloud Messaging ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/mobilepush/t_push_provider_android.html "外部鏈結圖示"){: new_window}。
    
 3. 選用項目：新增 Analytics 功能。
 
@@ -58,6 +58,8 @@ lastupdated: "2016-10-21"
    2. 輸入服務名稱，然後按一下**建立**。
    
    3. 在您執行應用程式之後，即可關閉**展示模式**來查看分析資料。
+
+   4. 如需配置 Analytics 的相關資訊，請參閱[開始使用 {{site.data.keyword.mobileanalytics_short}} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/mobileanalytics/index.html "外部鏈結圖示"){: new_window}。
 
 4. 選用項目：新增「鑑別」功能。
 
@@ -71,7 +73,7 @@ lastupdated: "2016-10-21"
    
    4. 選取您的身分提供者，並且輸入必要資訊以進行配置。您只能啟用一個身分提供者。
 
-   5. 如需配置鑑別的相關資訊，請參閱[開始使用 Mobile Client Access](/docs/services/mobileaccess/index.html){: new_window}。
+   5. 如需配置鑑別的相關資訊，請參閱[開始使用 Mobile Client Access ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/mobileaccess/index.html "外部鏈結圖示"){: new_window}。
 
 5. 下載專案。
 
@@ -85,4 +87,22 @@ lastupdated: "2016-10-21"
 ## 下一步
 {: #tutorial_next}
 
-[試用看看吧！](http://console.{DomainName}/mobile/create-project?starter=512568a1-72db-35c7-b9c4-4f3e3bc89375){: new_window}
+[試用看看吧！![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://console.{DomainName}/mobile/create-project?starter=512568a1-72db-35c7-b9c4-4f3e3bc89375 "外部鏈結圖示"){: new_window}
+
+
+
+### 使用者介面入門範本指導教學
+{: #tutorials_UI}
+
+* [指導教學 - Store Catalog](tutorial_store_catalog.html)
+
+
+### 程式碼入門範本指導教學
+{: #tutorials_Code}
+
+* [指導教學 - Basic](tutorial.html)
+* [指導教學 - Cloudant Sync](tutorial_cloudant_synd.html)
+* [指導教學 - {{site.data.keyword.openwhisk_short}}](tutorial_openwhisk.html)
+* [指導教學 - {{site.data.keyword.visualrecognitionshort}}](tutorial_visual_recognition.html)
+* [指導教學 - Weather](tutorial_weather.html)
+

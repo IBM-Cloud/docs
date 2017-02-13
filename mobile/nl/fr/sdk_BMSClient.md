@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-07"
+  years: 2016, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -57,9 +57,13 @@ Vous pouvez utiliser [CocoaPods](https://cocoapods.org){: new_window} ou [Cartha
 
   Ensuite, exécutez la commande `pod install` et ouvrez le fichier `.xcworkspace` généré. Pour mettre à jour vers une version plus récente de `BMSCore`, utilisez `pod update BMSCore`.
 
-  Pour plus d'informations sur l'utilisation de CocoaPods, voir les [CocoaPods Guides](https://guides.cocoapods.org/using/index.html){: new_window}.
+  Pour plus d'informations sur l'utilisation de CocoaPods, reportez-vous aux
+[Guides CocoaPods ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lienexterne")](https://guides.cocoapods.org/using/index.html "Icône de lien externe"){: new_window}.
 
-2. Pour installer `BMSCore` en utilisant Carthage, suivez ces [instructions](https://github.com/Carthage/Carthage#getting-started){: new_window}.
+
+2. Pour installer `BMSCore` à l'aide de Carthage, suivez ces
+[instructions ![Icône de lien externe](../icons/launch-glyph.svg "Icône delien externe")](https://github.com/Carthage/Carthage#getting-started "Icône de lien externe"){: new_window}.
+
 
   1. Ajoutez la ligne suivante à votre Cartfile :
 
@@ -70,7 +74,9 @@ Vous pouvez utiliser [CocoaPods](https://cocoapods.org){: new_window} ou [Cartha
 
   2. Exécutez la commande `carthage update`.
 
-  3. Une fois la génération terminée, ajoutez `BMSCore.framework` à votre projet en effectuant l'[étape 3](https://github.com/Carthage/Carthage#getting-started) dans les instructions Carthage.
+  3. Une fois la génération terminée, ajoutez `BMSCore.framework` à votre projet
+en suivant l'[étape 3
+![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/Carthage/Carthage#getting-started "Icône de lien externe") dans les instructions Carthage.
 
       Pour les applications construites avec Swift 2.3, utilisez la commande `carthage update --toolchain com.apple.dt.toolchain.Swift_2_3`. Sinon, utilisez la commande `carthage update`.
 
@@ -106,7 +112,7 @@ exemple `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` ou `BMSClie
   {: codeblock}
 
 2. Initialisez la classe `BMSClient` dans votre application Cordova en ajoutant le code d'initialisation
-dans le fichier JavaScript principal ou à l'emplacement le plus approprié pour votre projet. 
+dans le fichier JavaScript principal ou à l'emplacement le plus approprié pour votre projet.
 
   ```
   BMSClient.initialize(BMSClient.REGION_US_SOUTH);

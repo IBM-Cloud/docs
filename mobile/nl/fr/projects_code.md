@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-13"
+  years: 2016, 2017
+lastupdated: "2016-12-16"
 
 ---
 {:new_window: target="_blank"}
@@ -46,16 +46,32 @@ leur utilisation, voir [Modules de démarrage](starters.html).
 	5. Entrez le nom de votre projet et sélectionnez
 **Créer**.
 	
-2. Effectuez vos sélections dans l'écran **Présentation du projet**.  Cet écran affiche des informations sur votre projet, ainsi que les services facultatifs que vous pouvez y ajouter, comme Notifications push et Authentification.  
+2. Effectuez vos sélections dans l'écran **Présentation du projet**.  L'écran **Présentation du projet**
+affiche des informations sur votre projet et sur les services facultatifs que vous pouvez lui ajouter, tels que {{site.data.keyword.mobilepushshort}} et
+Authentication.  
 
 	1. Facultatif : sélectionnez **Ajouter** pour
 ajouter un des services répertoriés à votre projet. Editez le **Nom
 du service** et cliquez sur **Créer**. Lorsque vous ajoutez des services au projet, vous établissez une connexion avec la page {{site.data.keyword.Bluemix_notm}} pour ce service. Configurez le service en fournissant les informations requises pour le service.
 	
 	2. Facultatif : répétez l'étape *a* pour toute autre
-fonction supplémentaire que vous souhaitez ajouter au projet. 
+fonction supplémentaire que vous souhaitez ajouter au projet.
 
-3.  Téléchargez votre projet et terminez la configuration.
+3. Facultatif : Sélectionnez **Données** pour connecter une base de données Cloudant NoSQL ou un service Object Storage.
+	1. Cliquez sur **Créer** pour configurer une nouvelle base de données Cloudant NoSQL ou un service Object Storage.
+	
+	Remarque : Si vous créez une instance du service Object Storage, vous êtes dirigé hors du projet pour créer ce service et lui ajouter les données
+d'identification
+requises. Revenez au projet après avoir créé cette instance de service et sélectionnez **Ajouter un projet existant** pour connecter le
+service au projet.
+	
+	Si vous disposez d'une instance existante qui n'est pas encore connectée à un autre projet et que vous désirez la connecter à celui-ci,
+sélectionnez **Ajouter un  projet existant**. 
+	
+	2. Vérifiez que la vignette de la base de données Cloudant NoSQL ou du service Object Storage auquel vous vous êtes connecté est affichée sur l'onglet Données
+de votre projet.
+
+4.  Téléchargez votre projet et terminez la configuration.
 
     1. Cliquez sur **Télécharger le code** et
 sélectionnez votre langage préféré.
@@ -64,6 +80,6 @@ sélectionnez votre langage préféré.
 `README.md` dans un afficheur Markdown afin de terminer la
 configuration.
 
-4.  Essayez votre application ! 
+5.  Essayez votre application ! 
 
 

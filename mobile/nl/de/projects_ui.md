@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-20"
+  years: 2016, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -34,7 +34,7 @@ Führen Sie die folgenden Schritte aus, um ein Projekt mit einem Benutzerschnitt
 	
 	4. Geben Sie einen Namen für Ihr Projekt ein und wählen Sie **Erstellen** aus.
 	
-2. Treffen Sie Ihre Auswahlen in der Anzeige **Projektübersicht**.  In der Anzeige **Projektübersicht** werden Informationen zu Ihrem Projekt und den optionalen Leistungsmerkmalen angezeigt, die Sie Ihrem Projekt hinzufügen können, z. B. Push Notifications.  
+2. Treffen Sie Ihre Auswahlen in der Anzeige **Projektübersicht**.  In der Anzeige **Projektübersicht** werden Informationen zu Ihrem Projekt und den optionalen Leistungsmerkmalen angezeigt, die Sie Ihrem Projekt hinzufügen können (z. B. {{site.data.keyword.mobilepushshort}}).  
 
 	1. Optional: Wählen Sie **Hinzufügen** aus, um Ihrem Projekt eins der aufgelisteten Leistungsmerkmale hinzuzufügen. Bearbeiten Sie **Servicename** für Ihren Service und klicken Sie auf **Erstellen**. Wenn Sie Ihrem Projekt Services hinzufügen, erstellen Sie eine Verknüpfung mit der {{site.data.keyword.Bluemix_notm}}-Seite für diesen Service. Konfigurieren Sie den Service durch Bereitstellen der Informationen, die für den Service erforderlich sind.
 	
@@ -42,7 +42,7 @@ Führen Sie die folgenden Schritte aus, um ein Projekt mit einem Benutzerschnitt
 
 3. Entwerfen Sie Ihre Benutzerschnittstelle mithilfe des Benutzerschnittstellenbuilders.
 
-   Hinweis: Da die Code-Starter nicht über eine anpassbare Benutzerschnittstelle verfügen, steht die Registerkarte *Design* nicht zur Verfügung.
+   **Hinweis:** Da die Code-Starter nicht über eine anpassbare Benutzerschnittstelle verfügen, steht die Registerkarte *Design* nicht zur Verfügung.
 
     1. Wählen Sie im Navigationsmenü die Option **Benutzerschnittstellenbuilder** aus, um das Design Ihrer App anzupassen. 
 	
@@ -51,7 +51,7 @@ Führen Sie die folgenden Schritte aus, um ein Projekt mit einem Benutzerschnitt
 	2. Passen Sie das Layout Ihrer App über die Registerkarte **Anzeigen** an.
 	
 	3. Fügen Sie neue Anzeigen hinzu, indem Sie **Anzeige erstellen** auswählen. Benennen Sie neue Anzeigen, um sie in Ihrer App besser referenzieren zu können. Sie können aus folgenden Anzeigetypen auswählen: 
-	    * Menü
+		* Menü
 		* Liste
 		* Karte
 		* Angepasst 
@@ -71,22 +71,23 @@ Führen Sie die folgenden Schritte aus, um ein Projekt mit einem Benutzerschnitt
 		* Excel Online
 		* Google Drive
 	
-	Sie können auch in der Tabelle vorhandenen Inhalt importieren, exportieren oder ändern, wenn sie lokal ist, indem Sie die Schaltflächen verwenden und den Inhalt in der Tabelle auswählen.
+		Sie können auch in der Tabelle vorhandenen Inhalt importieren, exportieren oder ändern, wenn sie lokal ist, indem Sie die Schaltflächen verwenden und den Inhalt in der Tabelle auswählen.
 	     
-		 Hinweis: Wenn Sie Daten importieren, die nicht mit der Struktur der Standarddaten übereinstimmen, aktivieren Sie die Schiebeleiste zum Ersetzen des Schemas. Ein Beispiel hierfür ist eine CSV-Datei, die weniger Spalten besitzt als die Daten, die mit Ihrem Starter bereitgestellt werden.
+		**Hinweis:** Wenn Sie Daten importieren, die nicht mit der Struktur der Standarddaten übereinstimmen, aktivieren Sie die Schiebeleiste zum Ersetzen des Schemas**. Ein Beispiel hierfür ist eine CSV-Datei, die weniger Spalten besitzt als die Daten, die mit Ihrem Starter bereitgestellt werden.
 		 
-	6. Wählen Sie in der Navigation die Option **Benutzerzugriff** aus, um die Zugangsvoraussetzungen Ihres Projekts zu ändern. Mit dem Switch können Sie den Benutzerzugriff ein- und ausschalten. Wenn der Benutzerzugriff eingeschaltet ist, können Sie das Zeitlimit für inaktive Benutzer sowie die Berechtigungsnachweise für Benutzer festlegen, die auf die App zugreifen.
+	6. Wählen Sie **Navigation** aus, um die Navigationsaktionen in Ihrer App anzupassen. Dieser Vorgang ist optional, da die Navigationsaktionen für viele der Anzeigen entsprechend den Beziehungen zwischen den Anzeigen automatisch erstellt werden. Sie können die Zielanzeige ändern, indem Sie in der Liste der Menüelemente zuerst die Anzeige bzw. das Feld auswählen, *von* der bzw. dem die Navigation ausgehen soll. Wählen Sie anschließend im Zielanzeigefeld die Anzeige aus, *zu* der navigiert werden soll. 
+		 
+	7. Wählen Sie in der Navigation die Option **Benutzerzugriff** aus, um die Zugangsvoraussetzungen Ihres Projekts zu ändern. Mit dem Switch können Sie den Benutzerzugriff ein- und ausschalten. Wenn der Benutzerzugriff eingeschaltet ist, können Sie das Zeitlimit für inaktive Benutzer sowie die Berechtigungsnachweise für Benutzer festlegen, die auf die App zugreifen.
 	
-	7. Wählen Sie im Navigationsmenü die Option **Einstellungen** aus, um die Gesamtinformationen zu Ihrem Projekt und die farbliche Darstellung zu ändern. In dieser Anzeige geben Sie Ihren Google-API-Schlüssel ein, wenn dieser für die Leistungsmerkmale, die Sie Ihrem Projekt hinzugefügt haben, erforderlich ist. In dieser Anzeige geben Sie auch Ihre eindeutige Bundle-ID ein, die im Apple Store oder Google Play Store registriert ist.
+	8. Wählen Sie im Navigationsmenü die Option **Einstellungen** aus, um die Gesamtinformationen zu Ihrem Projekt und die farbliche Darstellung zu ändern. In dieser Anzeige geben Sie Ihren Google-API-Schlüssel ein, wenn dieser für die Leistungsmerkmale, die Sie Ihrem Projekt hinzugefügt haben, erforderlich ist. In dieser Anzeige geben Sie auch Ihre eindeutige Bundle-ID ein, die im Apple Store oder Google Play Store registriert ist.
 	
 		Wenn Sie Ihrem Projekt das IBM MobileFirst Foundation-SDK hinzufügen wollen, schalten Sie den Switch ein.
 		
-	8. Wenn Sie den Switch umgeschaltet haben, um Ihrem Projekt in der Anzeige *Einstellungen* IBM MobileFirst Platform Foundation hinzuzufügen, wird in der Navigation die Auswahl **Foundation** angezeigt. Wählen Sie **Foundation** aus und füllen Sie die für IBM MobileFirst Platform Foundation spezifischen erforderlichen Informationen aus.
+	9. Wenn Sie den Switch umgeschaltet haben, um Ihrem Projekt in der Anzeige *Einstellungen* IBM MobileFirst Platform Foundation hinzuzufügen, wird in der Navigation die Auswahl **Foundation** angezeigt. Wählen Sie **Foundation** aus und füllen Sie die für IBM MobileFirst Platform Foundation spezifischen erforderlichen Informationen aus.
 	
-	9. Wählen Sie im Navigationsmenü die Option **Veröffentlichen** aus, um die endgültigen für die Erstellung Ihrer mobilen App erforderlichen Informationen einzugeben. Sie können Ihre Bundle-ID für iOS und die Anwendungs-ID für Android eingeben.
+	10. Wählen Sie im Navigationsmenü die Option **Veröffentlichen** aus, um die endgültigen für die Erstellung Ihrer mobilen App erforderlichen Informationen einzugeben. Sie können Ihre Bundle-ID für iOS und die Anwendungs-ID für Android eingeben.
 	
-	Wenn Sie eine iOS-App erstellen, müssen Sie Ihre Bundle-ID, Ihr Verteilungszertifikat in Form einer *.p12*-Datei und Ihr Bereitstellungsprofil in Form einer *.mobileprovision*-Datei aus dem Apple-Bereitstellungsportal abrufen. Diese drei sollten zum selben Zeitpunkt und mit demselben Computer erstellt werden, der auch zum Posten Ihrer App im Apple-Store verwendet werden soll. Das Verteilungszertifikat und das Bereitstellungsprofil müssen auf der Bundle-ID basieren. 	
-
-4.  Kehren Sie zurück zur Anzeige *Projektübersicht*, um den Code für Ihre App abzurufen, und testen Sie die App. Sie können den Code direkt für das iOS- oder Android-Betriebssystem herunterladen oder einen QR-Code für das Android-Betriebssystem scannen. 
+		Wenn Sie eine iOS-App erstellen, müssen Sie Ihre Bundle-ID, Ihr Verteilungszertifikat in Form einer `.p12`-Datei und Ihr Bereitstellungsprofil in Form einer `.mobileprovision`-Datei aus dem Apple-Bereitstellungsportal abrufen. Diese drei sollten zum selben Zeitpunkt und mit demselben Computer erstellt werden, der auch zum Posten Ihrer App im Apple-Store verwendet werden soll. Das Verteilungszertifikat und das Bereitstellungsprofil müssen auf der Bundle-ID basieren. 	
+4. Kehren Sie zurück zur Anzeige *Projektübersicht*, um den Code für Ihre App abzurufen, und testen Sie die App. Sie können den Code direkt für das iOS- oder Android-Betriebssystem herunterladen oder einen QR-Code für das Android-Betriebssystem scannen. 
 
 

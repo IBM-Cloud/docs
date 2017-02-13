@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-20"
+  years: 2016, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -34,7 +34,7 @@ Complete los pasos siguientes para crear un proyecto con un Iniciador de IU:
 	
 	4. Especifique un nombre para el proyecto y seleccione **Crear**.
 	
-2. Realice las selecciones en la pantalla **Visión general del proyecto**.  La pantalla **Visión general del proyecto** muestra información sobre el proyecto y las prestaciones opcionales que puede añadir al mismo, como por ejemplo Notificaciones push.  
+2. Realice las selecciones en la pantalla **Visión general del proyecto**.  La pantalla **Visión general del proyecto** muestra información sobre el proyecto y las prestaciones opcionales que puede añadir al mismo, como por ejemplo {{site.data.keyword.mobilepushshort}}.   
 
 	1. Opcional: Seleccione **Añadir** para añadir una de las prestaciones listadas al proyecto. Edite el **Nombre de servicio** para el servicio y pulse **Crear**. Cuando añade un servicio al proyecto, enlaza con la página de {{site.data.keyword.Bluemix_notm}} correspondiente a dicho servicio. Configure el servicio especificando la información necesaria para el mismo.
 	
@@ -42,7 +42,7 @@ Complete los pasos siguientes para crear un proyecto con un Iniciador de IU:
 
 3. Diseñe la interfaz de usuario utilizando el Creador de IU.
 
-   Nota: Dado que los Iniciadores de código no tienen una interfaz de usuario personalizable, el separador *Diseño* no está disponible.
+   **Nota:** Dado que los Iniciadores de código no tienen una interfaz de usuario personalizable, el separador *Diseño* no está disponible.
 
     1. Seleccione **Creador de IU** en el menú de navegación para personalizar el diseño de la aplicación. 
 	
@@ -51,7 +51,7 @@ Complete los pasos siguientes para crear un proyecto con un Iniciador de IU:
 	2. Personalice el diseño de la aplicación desde el separador **Pantallas**.
 	
 	3. Añada pantallas nuevas seleccionando **Crear pantalla**. Asigne un nombre a la pantalla nueva para que sea más fácil su consulta en la aplicación. Puede seleccionar entre los siguientes tipos de pantallas: 
-	    * Menú
+		* Menú
 		* Lista
 		* Correlación
 		* Personalizada 
@@ -71,22 +71,23 @@ Complete los pasos siguientes para crear un proyecto con un Iniciador de IU:
 		* Excel Online
 		* Google Drive
 	
-	También puede importar, exportar o modificar el contenido que se encuentra en la tabla, si es local, utilizando los botones y seleccionando el contenido en la tabla.
+		También puede importar, exportar o modificar el contenido que se encuentra en la tabla, si es local, utilizando los botones y seleccionando el contenido en la tabla.
 	     
-		 Aviso: Si importa datos que no coinciden con la estructura de los datos predeterminados, active el control deslizante *Sustituir esquema*. Un ejemplo sería un archivo .csv que tiene menos columnas que los datos que se proporcionan con el iniciador.
+		**Aviso:** Si importa datos que no coinciden con la estructura de los datos predeterminados, active el control deslizante *Sustituir esquema*. Un ejemplo sería un archivo .csv que tiene menos columnas que los datos que se proporcionan con el iniciador.
 		 
-	6. Seleccione **Acceso de usuarios** en la navegación para modificar los requisitos de acceso del proyecto. Puede activar y desactivar el acceso de usuarios con el conmutador. Cuando el acceso de usuarios esté activado, puede establecer el tiempo de espera de usuarios inactivo y las credenciales de usuarios que pueden acceder a la aplicación.
+	6. Seleccione **Navegación** para personalizar las acciones de navegación en la app. Esto es opcional ya que las acciones de navegación para muchas de las pantallas se crean automáticamente en función de las relaciones de las pantallas. Puede cambiar la pantalla de destino seleccionando la pantalla o el campo *desde* el que desea ir en la lista de elementos Menú. Luego seleccione la pantalla *a* la que desea ir en el campo Pantalla de destino.  
+		 
+	7. Seleccione **Acceso de usuarios** en la navegación para modificar los requisitos de acceso del proyecto. Puede activar y desactivar el acceso de usuarios con el conmutador. Cuando el acceso de usuarios esté activado, puede establecer el tiempo de espera de usuarios inactivo y las credenciales de usuarios que pueden acceder a la aplicación.
 	
-	7. Seleccione **Valores** en el menú de navegación para modificar la información global y los colores para el proyecto. Esta pantalla es donde se especifica la clave de la API de Google, si es necesario para las prestaciones que ha añadido a su proyecto. Esta pantalla también es donde añade su identificador de paquete exclusivo registrado con la Apple Store o la Google Play Store.
+	8. Seleccione **Valores** en el menú de navegación para modificar la información global y los colores para el proyecto. Esta pantalla es donde se especifica la clave de la API de Google, si es necesario para las prestaciones que ha añadido a su proyecto. Esta pantalla también es donde añade su identificador de paquete exclusivo registrado con la Apple Store o la Google Play Store.
 	
 		Si desea añadir el IBM MobileFirst Foundation SDK al proyecto, active el conmutador.
 		
-	8. Si ha alternado el conmutador para añadir IBM MobileFirst Platform Foundation a su proyecto en la pantalla *Valores*, se mostrará una selección **Foundation** en la navegación. Seleccione **Foundation** y complete la información necesaria específica para IBM MobileFirst Platform Foundation.
+	9. Si ha alternado el conmutador para añadir IBM MobileFirst Platform Foundation a su proyecto en la pantalla *Valores*, se mostrará una selección **Foundation** en la navegación. Seleccione **Foundation** y complete la información necesaria específica para IBM MobileFirst Platform Foundation.
 	
-	9. Seleccione **Publicar** en el menú de navegación para especificar la información final para crear la aplicación móvil. Puede especificar el identificador de paquetes para iOS y el identificador de aplicaciones para Android.
+	10. Seleccione **Publicar** en el menú de navegación para especificar la información final para crear la aplicación móvil. Puede especificar el identificador de paquetes para iOS y el identificador de aplicaciones para Android.
 	
-	Si está creando una aplicación de iOS, debe obtener el Identificador de paquetes, el Certificado de distribución como un archivo *.p12* y el Perfil de suministro como un archivo *.mobileprovision* desde el portal de suministro de Apple. El árbol debería crearse al mismo tiempo y con el mismo sistema con el que piensa utilizarlo al publicar la aplicación en la Apple Store. El Certificado de distribución y el Perfil de suministro deben basarse en el Identificador de paquetes. 	
-
-4.  Vuelva a la pantalla *Visión general del proyecto* para recuperar el código para la aplicación y pruébela. Puede descargar el código directamente para los sistemas operativos iOS o Android, o escaneando un código QR para el sistema operativo Android. 
+		Si está creando una aplicación de iOS, debe obtener el Identificador de paquetes, el Certificado de distribución como un archivo `.p12` y el Perfil de suministro como un archivo `.mobileprovision` desde el portal de suministro de Apple. El árbol debería crearse al mismo tiempo y con el mismo sistema con el que piensa utilizarlo al publicar la aplicación en la Apple Store. El Certificado de distribución y el Perfil de suministro deben basarse en el Identificador de paquetes.
+4. Vuelva a la pantalla *Visión general del proyecto* para recuperar el código para la aplicación y pruébela. Puede descargar el código directamente para los sistemas operativos iOS o Android, o escaneando un código QR para el sistema operativo Android. 
 
 

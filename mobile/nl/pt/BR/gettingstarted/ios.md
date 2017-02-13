@@ -20,8 +20,7 @@ Se você desejar começar a usar um novo app iOS, poderá usar o app Hello Bluem
     2. Insira um nome e um host para seu app e clique em **Criar**.
     3. Clique em **Concluir**.
 2. Execute o aplicativo de amostra Hello Bluemix:
-	1. Obtenha o projeto a partir do GitHub. Opcionalmente, é possível usar o comando git clone para obter o projeto. Em seu
-computador, abra o terminal e, em seguida, insira o comando a seguir:
+	1. Obtenha o projeto a partir do GitHub. Opcionalmente, é possível usar o comando git clone para obter o projeto. Em seu computador, abra o terminal e, em seguida, insira o comando a seguir:
     ```
     git clone https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-hellobluemix.git
     ```

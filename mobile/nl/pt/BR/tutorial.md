@@ -1,11 +1,15 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-22"
+  years: 2016, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # Tutorial de ponta a ponta do Iniciador de código Basic
 {: #tutorial}
@@ -16,7 +20,7 @@ O tutorial de ponta a ponta a seguir percorre as etapas para criar um projeto po
 ### Instalando ferramentas do desenvolvedor
 {: #dev_tools}
 
-Assegure-se de que você tenha instalado as [ferramentas de desenvolvedor de pré-requisito](get_code.html#prereq-dev-tools){: new_window}.
+Assegure-se de que você tenha instalado as [ferramentas do desenvolvedor de pré-requisito ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](get_code.html#prereq-dev-tools "Ícone de link externo"){: new_window}.
 
 
 ### Criando um projeto por meio do Iniciador de código Basic
@@ -36,19 +40,17 @@ Assegure-se de que você tenha instalado as [ferramentas de desenvolvedor de pr�
    
    5. Clique em **Criar**.
 
-2. Opcional: inclua o recurso Notificações push.
+2. Opcional: inclua o recurso {{site.data.keyword.mobilepushshort}}.
 
-   1. Clique em **Incluir** para **Notificações push** na página **Visão geral do projeto**.
+   1. Clique em **Incluir** para o **{{site.data.keyword.mobilepushshort}}** na página **Visão geral do projeto**.
 
-      Como alternativa, clique em **Criar** na página **Notificações push**.
+      Como alternativa, é possível clicar em **Criar** na página **{{site.data.keyword.mobilepushshort}}**.
 
    2. Insira o nome do serviço e clique em **Criar**.
 
-   3. Para iOS, [configure o Serviço de notificação push da Apple](/docs/services/mobilepush/t_push_provider_ios.html){: new_window}.
+   3. Para iOS, [configure o Apple Push Notification Service ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/mobilepush/t_push_provider_ios.html "Ícone de link externo"){: new_window}.
 
-   4. Para Android,
-[configure
-o Firebase Cloud Messaging](/docs/services/mobilepush/t_push_provider_android.html){: new_window}.
+   4. Para Android, [configure o Firebase Cloud Messaging ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/mobilepush/t_push_provider_android.html "Ícone de link externo"){: new_window}.
    
 3. Opcional: inclua o recurso de Analítica.
 
@@ -58,9 +60,9 @@ o Firebase Cloud Messaging](/docs/services/mobilepush/t_push_provider_android.ht
 
    2. Insira o nome do serviço e clique em **Criar**.
    
-   3. Desligue o **Modo demo** para ver os seus lados de analítica após executar seu aplicativo.
+   3. Desligue o **Modo demo** para ver os seus lados de analítica após executar o seu aplicativo.
    
-   4. Consulte [Introdução ao {{site.data.keyword.mobileanalytics_short}}](/docs/services/mobileanalytics/index.html){: new_window} para obter mais informações sobre a configuração Analítica.
+   4. Veja [Introdução ao {{site.data.keyword.mobileanalytics_short}} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/mobileanalytics/index.html "Ícone de link externo"){: new_window} para obter mais informações sobre como configurar o Analytics.
   
 4. Opcional: inclua o recurso Autenticação.
 
@@ -74,10 +76,7 @@ o Firebase Cloud Messaging](/docs/services/mobilepush/t_push_provider_android.ht
    
    4. Selecione seu provedor de identidade e insira as informações requeridas para configurá-lo. É possível ativar apenas um provedor de identidade.
 
-   5. Consulte
-[Introdução
-ao {{site.data.keyword.amashort}}](/docs/services/mobileaccess/index.html){: new_window}
-para obter mais informações sobre a configuração Autenticação.
+   5. Veja [Introdução ao {{site.data.keyword.amashort}} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/mobileaccess/index.html "Ícone de link externo"){: new_window} para obter mais informações sobre como configurar a Autenticação.
 
 5. Gere seu código do projeto.
 
@@ -205,6 +204,8 @@ Visualize outros tutoriais.
 ### Tutoriais do iniciador de código
 {: #tutorials_Code}
 
+* [Tutorial - Cloudant Sync](tutorial_cloudant_synd.html)
+* [Tutorial - {{site.data.keyword.openwhisk_short}}](tutorial_openwhisk.html)
 * [Tutorial - {{site.data.keyword.visualrecognitionshort}}](tutorial_visual_recognition.html)
 * [Tutorial - Idioma do Watson](tutorial_watson_language.html)
 * [Tutorial - Clima](tutorial_weather.html)

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-18"
+  years: 2016, 2017
+lastupdated: "2017-01-11"
 
 ---
 {:new_window: target="_blank"}
@@ -27,7 +27,7 @@ lastupdated: "2016-10-18"
 <th>{{site.data.keyword.Bluemix_notm}} モバイル・サービス</th>
 <th>説明</th>
 <tr>
-<td> <img src="images/mobile_analytics_icon.png" alt="{{site.data.keyword.mobileanalytics_short}}アイコン"><br/>{{site.data.keyword.mobileanalytics_short}} (ベータ)</td>
+<td> <img src="images/mobile_analytics_icon.png" alt="{{site.data.keyword.mobileanalytics_short}} アイコン"><br/>{{site.data.keyword.mobileanalytics_short}}</td>
 <td valign="top">{{site.data.keyword.mobileanalytics_full}} サービスを使用して、モバイル・アプリがどのように実行され、使用されているのかについての洞察を得ることができます。<br/><br/>
 このサービスの操作について詳しくは、<a href="/docs/services/mobileanalytics/index.html" alt="{{site.data.keyword.mobileanalytics_short}} 文書リンク">{{site.data.keyword.mobileanalytics_short}} 文書</a>を参照してください。
 </td>
@@ -49,9 +49,12 @@ lastupdated: "2016-10-18"
 このサービスの操作について詳しくは、<a href="/docs/services/MobileQualityAssurance/index.html" alt="{{site.data.keyword.mqa}} 文書リンク">{{site.data.keyword.mqa}} 文書</a>を参照してください。</td>
 </tr>
 <tr>
-<td><img src="images/push_icon.png" alt="プッシュ通知サービスのアイコン"><br/>{{site.data.keyword.mobilepushshort}}</td>
-<td valign="top">{{site.data.keyword.mobilepushfull}} サービスを使用して、iOS プラットフォームおよび Android プラットフォームをターゲットとするモバイル・プッシュ通知を送信および管理します。このサービスは、アプリケーション・ユーザーと各ユーザーのデバイスとのマッピング、およびデバイス・プラットフォームを管理し、デバイスへのプッシュ通知のディスパッチを処理します。このサービスを使用して、ブロードキャスト、ユニキャスト (ユーザー ID、デバイス ID に基づく)、およびタグ (またはトピック) をプッシュ通知に基づいてモバイル・アプリケーション・ユーザーに送信することができます。<br/><br/>
-このサービスの操作について詳しくは、<a href="/docs/services/mobilepush/index.html" alt="{{site.data.keyword.mobilepushshort}} 文書リンク">{{site.data.keyword.mobilepushshort}} 文書</a>を参照してください。</td>
+<td><img src="images/push_icon.png" alt="{{site.data.keyword.mobilepushshort}} サービスのアイコン"><br/>{{site.data.keyword.mobilepushshort}}</td>
+<td valign="top">{{site.data.keyword.mobilepushfull}} サービスは、複数のプラットフォームをターゲットとするモバイル・プッシュ通知と Web のプッシュ通知を送信および管理するための統合プラットフォームを提供します。
+<br/><br/>
+{{site.data.keyword.mobilepushshort}} は、アプリケーション・ユーザーとそれらのユーザーが使用するデバイス、デバイス・プラットフォーム、Web ブラウザーとのマッピングを管理し、プッシュ通知のディスパッチを処理します。ブロードキャスト、ユニキャスト (ユーザー ID とデバイス ID に基づく)、およびタグ (またはトピック) をプッシュ通知としてモバイル・アプリケーション・ユーザーと Web ブラウザー・アプリケーション・ユーザーに送信することができます。また、SDK および REST API を使用してクライアント・アプリケーションをさらに開発することもできます。
+<br/><br/>
+このサービスの操作について詳しくは、<a href="/docs/services/mobilepush/index.html" alt="{{site.data.keyword.mobilepushshort}} の資料リンク">{{site.data.keyword.mobilepushshort}} の資料</a>をお読みください。</td>
 </table>
 
 ## モバイル・サービスの統合

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-02"
+  years: 2016, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -20,7 +20,7 @@ lastupdated: "2016-12-02"
 ### 開発者ツールのインストール
 {: #dev_tools}
 
-[前提条件の開発者ツール](get_code.html#prereq-dev-tools){: new_window}がインストール済みであることを確認してください。
+[前提条件の開発者ツール![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](get_code.html#prereq-dev-tools "外部リンク・アイコン"){: new_window}をインストール済みであることを確認します。
 
 
 ### Cloudant Sync コード・スターターからのプロジェクトの作成
@@ -42,13 +42,13 @@ lastupdated: "2016-12-02"
 
 2. Data (データ) 機能を追加します。新しい {{site.data.keyword.cloudant}} サービス・インスタンスを作成するか、既存のサービス・インスタンスを追加できます。
 
-   1. **「プロジェクト概要 (Project Overview)」** ページで、**「Data (データ)」**に対して**「追加」**をクリックします。
+   1. **「プロジェクト概要 (Project Overview)」**ページの**「データ (Data)」**タイルで**「表示」**をクリックします。
 
-      代替方法として、**「Data (データ)」**ページから**「作成」**または**「既存の追加 (Add Existing)」**をクリックすることもできます。
+      代替方法として、**「作成」**または**「既存の追加 (Add Existing)」**をクリックし、**「データ (Data)」**ページで**「Cloudant NoSQL DB」**をクリックすることもできます。
       
    2. オプション: 新しいサービス・インスタンスを作成することを選択した場合は、サービス名を入力し、**「作成」**をクリックします。
 
-   3. オプション: 既存のサービス・インスタンスを追加することを選択した場合は、リストからサービス・インスタンスを選択し、**「追加」**をクリックします。
+   3. オプション: 既存のサービス・インスタンスを追加することを選択した場合は、リストからサービス・インスタンスを選択し、**「既存の追加 (Add Existing)」**をクリックします。
 
    4. サービス・タイル内の**「メニュー」**アイコンをクリックし、**「起動...」**を選択してサービス・インスタンスを起動します。
 
@@ -58,15 +58,15 @@ lastupdated: "2016-12-02"
 
       3. **「すべての文書 (All Documents)」**の横の **+** アイコンをクリックして、文書を追加します。
 
-3. オプション: Push Notifications (プッシュ通知) 機能を追加します。
+3. オプション: {{site.data.keyword.mobilepushshort}} 機能を追加します。
 
-   1. **「プロジェクト概要 (Project Overview)」**ページで、**「Push Notifications」**に対して**「追加」**をクリックします。
+   1. **「プロジェクト概要 (Project Overview)」**ページで**「{{site.data.keyword.mobilepushshort}}」**に対して**「追加」**をクリックします。
 
-      代替方法として、**「Push Notifications」**ページから**「作成」**をクリックすることもできます。
+      代替方法として、**「{{site.data.keyword.mobilepushshort}}」**ページから**「作成」**をクリックすることもできます。
 
    2. サービス名を入力し、**「作成」**をクリックします。
 
-   3. Android の場合、[configure Firebase Cloud Messaging](/docs/services/mobilepush/t_push_provider_android.html){: new_window} を行います。
+   3. Android の場合、[Firebase Cloud Messaging を構成します![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/mobilepush/t_push_provider_android.html "外部リンク・アイコン"){: new_window}。
    
 4. オプション: Analytics (分析) 機能を追加します。
 
@@ -78,7 +78,7 @@ lastupdated: "2016-12-02"
    
    3. アプリを実行した後、**「デモ・モード」**をオフに切り替えて、分析データを確認できます。
    
-   4. Analytics (分析) の構成について詳しくは、[{{site.data.keyword.mobileanalytics_short}} 概説](/docs/services/mobileanalytics/index.html){: new_window}を参照してください。
+   4. Analytics の構成について詳しくは、[「{{site.data.keyword.mobileanalytics_short}} 概説」![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/mobileanalytics/index.html "外部リンク・アイコン"){: new_window}を参照してください。
   
 5. オプション: Authentication (認証) 機能を追加します。
 
@@ -92,7 +92,7 @@ lastupdated: "2016-12-02"
    
    4. ID プロバイダーを選択し、必要な情報を入力して構成します。ID プロバイダーは 1 つだけ有効にすることができます。
 
-   5. Authentication (認証) の構成について詳しくは、[{{site.data.keyword.amashort}} 概説](/docs/services/mobileaccess/index.html){: new_window}を参照してください。
+   5. Authentication (認証) の構成について詳しくは、[「{{site.data.keyword.amashort}} 概説」![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/mobileaccess/index.html "外部リンク・アイコン"){: new_window}を参照してください。
 
 6. プロジェクト・コードを生成します。
 
@@ -151,6 +151,7 @@ lastupdated: "2016-12-02"
 {: #tutorials_Code}
 
 * [チュートリアル - ベーシック](tutorial.html)
+* [チュートリアル - {{site.data.keyword.openwhisk_short}}](tutorial_openwhisk.html)
 * [チュートリアル - {{site.data.keyword.visualrecognitionshort}}](tutorial_visual_recognition.html)
 * [チュートリアル - Watson Language](tutorial_watson_language.html)
 * [チュートリアル - Weather](tutorial_weather.html)
