@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-05"
+  years: 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
 {:new_window: target="_blank"}
@@ -22,7 +22,7 @@ lastupdated: "2016-12-05"
 開始する前に以下が必要です。
 
 * Web アプリ。
-* カスタム ID プロバイダーを使用するように構成済みの {{site.data.keyword.amashort}} サービスのインスタンスによって保護されているリソース ([カスタム認証の構成](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)を参照してください)。  
+* カスタム ID プロバイダーを使用するように構成済みの {{site.data.keyword.amashort}} サービスのインスタンスによって保護されているリソース ([カスタム認証の構成](custom-auth-config-mca.html)を参照してください)。  
 * **TenantID** 値。{{site.data.keyword.amashort}} ダッシュボードでサービスを開きます。**「モバイル・オプション」**ボタンをクリックします。`tenantId` (`appGUID` とも呼ばれる) の値が、**「アプリ GUID」/「TenantId」**フィールドに表示されます。許可マネージャーを初期化するためにこの値が必要になります。
 * **「レルム」**名。これは、{{site.data.keyword.amashort}} ダッシュボードの**「管理」**タブで、**「カスタム」**セクションの**「レルム名」**フィールドに指定した値です。
 * バックエンド・アプリケーションの URL (**「アプリの経路 (App Route)」**)。バックエンド・アプリケーションの保護されたエンドポイントに要求を送信するためにこの値が必要になります。
@@ -31,20 +31,20 @@ lastupdated: "2016-12-05"
 
 詳細情報:
 
-* [{{site.data.keyword.amashort}} 概説](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
-* [カスタム ID プロバイダーの使用](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
-* [カスタム ID プロバイダーの作成](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
-* [カスタム認証用の {{site.data.keyword.amashort}} の構成 ](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
+* [{{site.data.keyword.amashort}} 概説](getting-started.html)
+* [カスタム ID プロバイダーの使用](custom-auth.html)
+* [カスタム ID プロバイダーの作成](custom-auth-identity-provider.html)
+* [カスタム認証用の {{site.data.keyword.amashort}} の構成 ](custom-auth-config-mca.html)
 
 
 ##カスタム ID プロバイダーの構成
 {: #custom-auth-config}
 
-カスタム ID プロバイダーを作成するときには、次の構造の経路と共に POST メソッドを定義する必要があります。 
+カスタム ID プロバイダーを作成するときには、次の構造の経路と共に POST メソッドを定義する必要があります。
 
 `/apps/:tenantID/<your-realm-name>/handleChallengeAnswer`
 
-`tenantID` は、URL パラメーターであり、`<your-realm-name>` は任意のレルム名です。 
+`tenantID` は、URL パラメーターであり、`<your-realm-name>` は任意のレルム名です。
 
 要求本体には `challengeAnswer` オブジェクトが含まれ、これには `username` と `password` が含まれます。
 
@@ -58,11 +58,11 @@ lastupdated: "2016-12-05"
 		displayName: <display name>
 		attributes: <additional attributes json>
 	}
-} 
+}
 ```
 {: codeblock}
 
-**注:** `attributes` フィールドはオプションです。 
+**注:** `attributes` フィールドはオプションです。
 
 以下のコードは、そのような POST 要求を示します。
 
@@ -97,21 +97,21 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer', function(req
 			status: "failure"
 		});
 	}
-        
+
 });
 ```
 {: codeblock}
 
 
-##カスタム認証用の {{site.data.keyword.amashort}} の構成 
-{: #custom-auth-config}
+##カスタム認証用の {{site.data.keyword.amashort}} の構成
+{: #custom-auth-config-mca}
 
-カスタム ID プロバイダーを構成した後、{{site.data.keyword.amashort}} ダッシュボードでカスタム認証を使用可能にすることができます。 
+カスタム ID プロバイダーを構成した後、{{site.data.keyword.amashort}} ダッシュボードでカスタム認証を使用可能にすることができます。
 
 1. {{site.data.keyword.amashort}} ダッシュボードでサービスを開きます。
 1. **「管理」**タブで、**「許可」**をオンに切り替えます。
 1. **「カスタム」**セクションを展開します。
-1. **「レルム名」**、**「カスタム ID プロバイダー URL」**を入力します。 
+1. **「レルム名」**、**「カスタム ID プロバイダー URL」**を入力します。
 1. **「Web アプリケーションのリダイレクト URI (Your Web Application Redirect URIs)」**値を入力します。これは、正常に許可された後の最終リダイレクトの URI です。
 1. **「保存」**をクリックします。
 
@@ -121,31 +121,31 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer', function(req
 
 `VCAP_SERVICES` 環境変数が {{site.data.keyword.amashort}} サービス・インスタンスごとに自動的に作成され、許可プロセスに必要なプロパティーが含まれます。この環境変数は 1 つの JSON オブジェクトから成り、{{site.data.keyword.amashort}} ダッシュボード内の **「サービス資格情報」**タブに表示できます。
 
-ユーザー許可を要求するには、ブラウザーを許可サーバー・エンドポイントにリダイレクトします。これには、次のようにします。 
+ユーザー許可を要求するには、ブラウザーを許可サーバー・エンドポイントにリダイレクトします。これには、次のようにします。
 
-1. `VCAP_SERVICES` 環境変数に保管されているサービス資格情報から、許可エンドポイント (`authorizationEndpoint`) とクライアント ID (`clientId`) を取得します。 
+1. `VCAP_SERVICES` 環境変数に保管されているサービス資格情報から、許可エンドポイント (`authorizationEndpoint`) とクライアント ID (`clientId`) を取得します。
 
-	`var cfEnv = require("cfenv");` 
+	`var cfEnv = require("cfenv");`
 
-	`var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;` 
+	`var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;`
 
-	**注:** Web サポートが追加される前に {{site.data.keyword.amashort}} サービスをアプリケーションに追加した場合は、サービス資格情報にトークン・エンドポイントが含まれていないことがあります。代わりに、{{site.data.keyword.Bluemix_notm}} 地域に応じて、以下の URL を使用します。 
+	**注:** Web サポートが追加される前に {{site.data.keyword.amashort}} サービスをアプリケーションに追加した場合は、サービス資格情報にトークン・エンドポイントが含まれていないことがあります。代わりに、{{site.data.keyword.Bluemix_notm}} 地域に応じて、以下の URL を使用します。
 
-	米国南部: 
+	米国南部:
 
-	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization` 
+	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization`
 
-	ロンドン: 
+	ロンドン:
 
-	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization` 
+	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization`
 
-	シドニー: 
+	シドニー:
 
-	`https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization` 
-	
+	`https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization`
+
 2. 照会パラメーターとして `response_type("code")`、`client_id`、および `redirect_uri` を使用して、許可サーバー URI を構築します。  
 
-3. Web アプリから、生成された URI へリダイレクトします。 
+3. Web アプリから、生成された URI へリダイレクトします。
 
    以下の例は、`VCAP_SERVICES` 変数からパラメーターを取り出し、URL を構築し、リダイレクト要求を送信します。
 
@@ -154,7 +154,7 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer', function(req
 	app.get("/protected", checkAuthentication, function(req, res, next) {
 		res.send("Hello from protected endpoint");
 	}
-	); 
+	);
 
 	function checkAuthentication(req, res, next) {
 		// Check if user is authenticated
@@ -171,39 +171,39 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer', function(req
 			redirectUrl += "&redirect_uri=" + redirectUri;
 			res.redirect(redirectUrl);
 		}
-	} 
+	}
 	```
 	{: codeblock}
- 
+
 	`redirect_uri` パラメーターは Web アプリケーション・リダイレクト URI を表していて、{{site.data.keyword.amashort}} ダッシュボードで定義されたものと等しくなければならないことに注意してください。  
 
 	要求と一緒に `state` パラメーターを渡すことができます。このパラメーターは、カスタム ID プロバイダー POST メソッドに伝搬され、要求本体からアクセスできます (`req.body.stateId`)。  
 
 	許可エンドポイントへのリダイレクトの後、ユーザーにログイン・フォームが示されます。ユーザーの資格情報がカスタム ID プロバイダーで認証された後、{{site.data.keyword.amashort}} サービスは、照会パラメーターとして認可コードを提供して Web アプリケーション・リダイレクト URI を呼び出します。  
 
-	リダイレクトの後、ユーザーにログイン・フォームが示されます。ユーザーの資格情報がカスタム ID プロバイダーによって認証された後、{{site.data.keyword.amashort}} サービスは、照会パラメーターとして認可コードを提供して Web アプリケーション・リダイレクト URI を呼び出します。 
+	リダイレクトの後、ユーザーにログイン・フォームが示されます。ユーザーの資格情報がカスタム ID プロバイダーによって認証された後、{{site.data.keyword.amashort}} サービスは、照会パラメーターとして認可コードを提供して Web アプリケーション・リダイレクト URI を呼び出します。
 
 ##トークンの取得
 {: custom-auth-tokens}
 
-次のステップは、前に受け取った認可コードを使用してアクセス・トークンおよび識別トークンを取得することです。これには、次のようにします。 
+次のステップは、前に受け取った認可コードを使用してアクセス・トークンおよび識別トークンを取得することです。これには、次のようにします。
 
-1. `VCAP_SERVICES` 環境変数に保管されたサービス資格情報から、`authorizationEndpoint`、`clientId`、および `secret` を取り出します。 
+1. `VCAP_SERVICES` 環境変数に保管されたサービス資格情報から、`authorizationEndpoint`、`clientId`、および `secret` を取り出します。
 
-	**注:** Web サポートが追加される前に {{site.data.keyword.amashort}} サービスをアプリケーションに追加した場合は、サービス資格情報にトークン・エンドポイントが含まれていないことがあります。代わりに、{{site.data.keyword.Bluemix_notm}} 地域に応じて、以下の URL を使用します。 
+	**注:** Web サポートが追加される前に {{site.data.keyword.amashort}} サービスをアプリケーションに追加した場合は、サービス資格情報にトークン・エンドポイントが含まれていないことがあります。代わりに、{{site.data.keyword.Bluemix_notm}} 地域に応じて、以下の URL を使用します。
 
-	米国南部: 
+	米国南部:
 
 	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/token`
 
-	ロンドン: 
-	
-	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token` 
- 
-	シドニー: 
+	ロンドン:
+
+	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token`
+
+	シドニー:
 
 	`https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/token`
- 
+
 2. `grant_type`、`client_id`、`redirect_uri`、および `code` をフォーム・パラメーターとして使用し、`clientId` および `secret` を基本 HTTP 認証資格情報として使用して、トークン・サーバー URI に POST 要求を送信します。
 
 	以下の例に示すコードは、必要な値を取り出し、それらを POST 要求で送信します。
@@ -237,15 +237,15 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer', function(req
 		}
 		).auth(mcaCredentials.clientId, mcaCredentials.secret);
   	}
-	); 
+	);
 	```
 	{: codeblock}
-	
+
 	`redirect_uri` パラメーターは、前に許可要求で使用された `redirect_uri` と一致している必要があることに注意してください。code パラメーター値は、許可要求の最後に応答で受け取った認可コードでなければなりません。認可コードは 10 分間のみ有効であり、それを過ぎると新しいコードの取得が必要になります。
 
 
 
-	応答本体には、`access_token` および `id_token` が JWT フォーマット (https://jwt.io/) で含まれます。
+	応答本体には、`access_token` および `id_token` が JWT フォーマットで含まれます ([JWT Web サイト![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://jwt.io "外部リンク・アイコン"){: new_window}を参照してください)。
 
 	アクセス・トークンおよび識別トークンを受け取ったら、Web セッションに認証済みのフラグを立てることができ、オプションでこれらのトークンを永続的に保持できます。
 
@@ -255,11 +255,11 @@ app.post('/apps/:tenantID/customAuthRealm_1/handleChallengeAnswer', function(req
 
 識別トークンには、ユーザー ID に関する情報が含まれます。カスタム認証の場合、このトークンには、カスタム ID プロバイダーによって認証時に返されるすべての情報が含まれます。`imf.user` フィールドの下で、`displayName` フィールドには、カスタム ID プロバイダーによって返される `displayName` が含まれ、`id` フィールドには `userName` が含まれます。カスタム ID プロバイダーによって返される他のすべての値は、`imf.user` の下の `attributes` フィールド内に返されます。  
 
-アクセス・トークンは、{{site.data.keyword.amashort}} 許可フィルターによって保護されたリソースとの通信を許可します ([リソースの保護](protecting-resources.html) を参照してください)。保護リソースへの要求を行うには、以下の構造の許可ヘッダーを要求に追加します。 
+アクセス・トークンは、{{site.data.keyword.amashort}} 許可フィルターによって保護されたリソースとの通信を許可します ([リソースの保護](protecting-resources.html) を参照してください)。保護リソースへの要求を行うには、以下の構造の許可ヘッダーを要求に追加します。
 
-`Authorization=Bearer <accessToken> <idToken>` 
+`Authorization=Bearer <accessToken> <idToken>`
 
-####ヒント: 
+####ヒント:
 {: #tips_token}
 
 * `<accessToken>` と `<idToken>` は空白で分離する必要があります。

@@ -1,14 +1,17 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-24"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
+{:pre: .pre}
+
 
 # Activation de l'authentification Facebook pour les applications Cordova
 {: #facebook-auth-cordova}
@@ -24,22 +27,22 @@ Utilisez l'environnement de développement natif pour modifier le code natif, pa
 {: #facebook-auth-before}
 
 Vous devez disposer des éléments suivants :
-* Un projet Cordova (Android ou iOS) instrumenté avec le SDK client de {{site.data.keyword.amashort}}, voir [Configuration du plug-in Cordova](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html#getting-started-cordova-plugin).
+* Un projet Cordova (Android ou iOS) instrumenté avec le SDK client de {{site.data.keyword.amashort}}, voir [Configuration du plug-in Cordova](getting-started-cordova.html#getting-started-cordova-plugin).
 * Une instance d'une application {{site.data.keyword.Bluemix_notm}} protégée par le service {{site.data.keyword.amashort}}. Pour plus d'informations sur la création d'un service de back end {{site.data.keyword.Bluemix_notm}}, voir [Initiation](index.html).
 * Route de votre application. Il s'agit de l'URL de votre application back end.
 * Valeur de votre `tenantId`. Ouvrez votre tableau de bord de service {{site.data.keyword.amashort}}. Cliquez sur **Options pour application mobile**. La valeur `tenantId` (qui porte également le nom d'`appGUID`) est affichée dans la zone **App GUID / TenantId**. Vous aurez besoin de ces valeurs pour l'initialisation du logiciel SDK et l'envoi de demandes au service de back-end.
 *  Trouvez la région où votre service {{site.data.keyword.Bluemix_notm}} est hébergé. Vous pouvez trouver votre région {{site.data.keyword.Bluemix_notm}} actuelle dans l'en-tête, en regard de l'icône **Avatar**![icône Avatar](images/face.jpg "icône Avatar") dans la barre de menus. La valeur de région doit être l'une des suivantes : **US South**, **Sydney** ou **UK**. Les valeurs des constantes SDK exactes qui correspondent à ces noms sont indiquées dans les exemples de code.
-* Un ID d'application et une application Facebook. Pour plus d'informations, voir [Acquisition d'un ID d'application Facebook sur le site Web Facebook for Developer](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID).
+* Un ID d'application et une application Facebook. Pour plus d'informations, voir [Acquisition d'un ID d'application Facebook sur le site Web Facebook for Developer](facebook-auth-overview.html#facebook-appID).
 
 
 
 ## Configuration de la plateforme Android
 {: #facebook-auth-cordova-android}
 
-Les étapes requises pour configurer l'intégration de l'authentification Facebook dans la plateforme Android d'une application Cordova sont très semblables à celles qui sont requises pour les applications natives Android. Pour plus d'informations, voir [Activation de l'authentification Facebook dans les applis Android](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-android.html). Exécutez les étapes suivantes :
+Les étapes requises pour configurer l'intégration de l'authentification Facebook dans la plateforme Android d'une application Cordova sont très semblables à celles qui sont requises pour les applications natives Android. Pour plus d'informations, voir [Activation de l'authentification Facebook dans les applis Android](facebook-auth-android.html). Exécutez les étapes suivantes :
 
-* [Configuration de l'application Facebook pour la plateforme Android](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-android.html#facebook-auth-android-config). Cette fonctionnalité configure l'authentification Facebook sur le site de développeurs Facebook pour les applications Android.
-* [Configuration de MCA pour l'authentification Facebook](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-android.html#facebook-auth-android-mca). Cette fonctionnalité configure votre service {{site.data.keyword.amashort}} sur le serveur {{site.data.keyword.Bluemix}} pour l'authentification Facebook Android.
+* [Configuration de l'application Facebook pour la plateforme Android](facebook-auth-android.html#facebook-auth-android-config). Cette fonctionnalité configure l'authentification Facebook sur le site de développeurs Facebook pour les applications Android.
+* [Configuration de MCA pour l'authentification Facebook](facebook-auth-android.html#facebook-auth-android-mca). Cette fonctionnalité configure votre service {{site.data.keyword.amashort}} sur le serveur {{site.data.keyword.Bluemix}} pour l'authentification Facebook Android.
 
 
 ### Configuration du SDK client Facebook de {{site.data.keyword.amashort}} pour la plateforme Android
@@ -136,19 +139,18 @@ FacebookAuthenticationManager.getInstance().registerDefaultAuthenticationListene
 ## Configuration de la plateforme iOS
 {: #facebook-auth-cordova-ios}
 
-Les étapes requises pour configurer l'intégration de l'authentification Facebook dans la plateforme iOS d'une application Cordova sont très semblables à celles qui sont requises pour les applications Swift natives iOS. La différence principale est que l'interface de ligne de commande Cordova ne prend actuellement pas en charge le gestionnaire de dépendances CocoaPods. Vous devez ajouter manuellement les fichiers requis pour l'intégration du client {{site.data.keyword.amashort}} à l'authentification Facebook. Pour plus d'informations, voir [Activation de l'authentification Facebook pour les applis iOS (SDK Swift)](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios-swift-sdk.html). Exécutez les étapes suivantes :
+Les étapes requises pour configurer l'intégration de l'authentification Facebook sur la plateforme iOS d'une application Cordova sont similaires à
+celles requises pour les applications Swift natives iOS (des fichiers d'en-tête sont nécessaires pour utiliser le code Objective-C avec le SDK Swift). La différence principale est que l'interface de ligne de commande Cordova ne prend actuellement pas en charge le gestionnaire de dépendances CocoaPods. Vous devez ajouter manuellement les fichiers requis pour l'intégration du client {{site.data.keyword.amashort}} à l'authentification Facebook. Pour plus d'informations, voir [Activation de l'authentification Facebook pour les applis iOS (SDK Swift)](facebook-auth-ios-swift-sdk.html). Exécutez les étapes suivantes :
 
-* [Configuration de l'application Facebook pour la plateforme iOS](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios-swift-sdk.html#facebook-auth-ios-config). Cette fonctionnalité configure le service d'authentification Facebook sur le site de développeurs Facebook.
-* [Configuration de MCA pour l'authentification Facebook](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios-swift-sdk.html#facebook-auth-ios-configmca). Cette fonctionnalité configure votre service {{site.data.keyword.amashort}} sur le serveur {{site.data.keyword.Bluemix}}.
-* [Configuration du SDK client Facebook MCA pour iOS](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios-swift-sdk.html#facebook-auth-ios-sdk). Cette option installe le SDK Swift d'iOS {{site.data.keyword.amashort}} pour l'autorisation Facebook à l'aide de CocoaPods.
+* [Configuration de l'application Facebook pour la plateforme iOS](facebook-auth-ios-swift-sdk.html#facebook-auth-ios-config). Cette fonctionnalité configure le service d'authentification Facebook sur le site de développeurs Facebook.
+* [Configuration de MCA pour l'authentification Facebook](facebook-auth-ios-swift-sdk.html#facebook-auth-ios-configmca). Cette fonctionnalité configure votre service {{site.data.keyword.amashort}} sur le serveur {{site.data.keyword.Bluemix}}.
+* [Configuration du SDK client Facebook MCA pour iOS](facebook-auth-ios-swift-sdk.html#facebook-auth-ios-sdk). Cette option installe le SDK Swift d'iOS {{site.data.keyword.amashort}} pour l'autorisation Facebook à l'aide de CocoaPods.
 
 
 ### Activez le partage de chaîne de certificats pour iOS
 {: #enable_keychain}
 
 Activez le partage de chaîne de certificats, `Keychain Sharing`. Accédez à l'onglet `Capabilities` et basculez `Keychain Sharing` sur `On` dans votre projet Xcode.
-
-
 
 ### Initialisez le Gestionnaire d'autorisations {{site.data.keyword.amashort}} dans Objective-C
 {: #initialize_objc}
@@ -173,10 +175,10 @@ Le Gestionnaire d'autorisations doit être initialisé dans le code Objective-C 
 
 	    return [super application:application didFinishLaunchingWithOptions:launchOptions];
 	}
-	
+
 
 	- (BOOL)application: (UIApplication *)application openURL: (NSURL *)url sourceApplication: (NSString *)sourceApplication annotation: (id)annotation {
-	  
+
 	   return [[FacebookAuthenticationManager sharedInstance] onOpenURLWithApplication:application 
 	   		url:url sourceApplication:sourceApplication annotation:annotation];
 	}
@@ -202,7 +204,6 @@ BMSClient.initialize(<applicationBluemixRegion>);
 
 Remplacez `<applicationBluemixRegion>` par votre région (voir [Avant de commencer](#facebook-auth-before)).
 
-
 ## Test de l'authentification
 {: #facebook-auth-cordova-test}
 
@@ -212,7 +213,7 @@ votre service back end mobile.
 ### Avant de commencer
 {: #testing_auth_before}
 
-Vous devez utiliser le conteneur boilerplate {{site.data.keyword.mobilefirstbp}} et disposer au préalable d'une ressource protégée par {{site.data.keyword.amashort}} sur le noeud final `/protected`. Pour plus d'informations, voir [Protection des ressources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
+Vous devez utiliser le conteneur boilerplate {{site.data.keyword.mobilefirstbp}} et disposer au préalable d'une ressource protégée par {{site.data.keyword.amashort}} sur le noeud final `/protected`. Pour plus d'informations, voir [Protection des ressources](protecting-resources.html).
 
 1. Essayez d'envoyer depuis votre navigateur une requête à un noeud final protégé de votre application back end mobile. Ouvrez l'URL suivante :
 `{applicationRoute}/protected`. Exemple : `http://my-mobile-backend.mybluemix.net/protected`.

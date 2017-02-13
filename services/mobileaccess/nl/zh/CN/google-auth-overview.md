@@ -1,13 +1,16 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-03"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
-{:screen:  .screen}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
 {:codeblock: .codeblock}
+{:pre: .pre}
+
 
 # 使用 Google 凭证认证用户
 {: #google-auth}
@@ -56,5 +59,4 @@ lastupdated: "2016-11-03"
 
 * [启用 Android 应用程序的 Google 认证](google-auth-android.html)
 * [启用 iOS 应用程序 (Swift SDK) 的 Google 认证](google-auth-ios-swift-sdk.html)
-* [启用 iOS 应用程序 (Objective-C SDK) 的 Google 认证](google-auth-ios.html)
 * [启用 Cordova 应用程序的 Google 认证](google-auth-cordova.html)

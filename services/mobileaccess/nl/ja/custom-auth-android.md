@@ -1,14 +1,17 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-02"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 
+
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 
 # {{site.data.keyword.amashort}} Android アプリ用のカスタム認証の構成
@@ -21,7 +24,7 @@ lastupdated: "2016-11-02"
 {: #before-you-begin}
 開始する前に以下が必要です。
 
-* カスタム ID プロバイダーを使用するように構成済みの {{site.data.keyword.amashort}} サービスのインスタンスによって保護されているリソース ([カスタム認証の構成](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)を参照してください)。  
+* カスタム ID プロバイダーを使用するように構成済みの {{site.data.keyword.amashort}} サービスのインスタンスによって保護されているリソース ([カスタム認証の構成](custom-auth-config-mca.html)を参照してください)。  
 * **TenantID** 値。{{site.data.keyword.amashort}} ダッシュボードでサービスを開きます。**「モバイル・オプション」**ボタンをクリックします。`tenantId` (`appGUID` とも呼ばれる) の値が、**「アプリ GUID」/「TenantId」**フィールドに表示されます。許可マネージャーを初期化するためにこの値が必要になります。
 * **「レルム」**名。これは、{{site.data.keyword.amashort}} ダッシュボードの**「管理」**タブで、**「カスタム」**セクションの**「レルム名」**フィールドに指定した値です。
 * バックエンド・アプリケーションの URL (**「アプリの経路 (App Route)」**)。バックエンド・アプリケーションの保護されたエンドポイントに要求を送信するためにこの値が必要になります。
@@ -29,11 +32,11 @@ lastupdated: "2016-11-02"
 
 詳しくは、以下の情報を参照してください。
 
- * [{{site.data.keyword.amashort}} 概説](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
- * [Android SDK のセットアップ](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html)
- * [カスタム ID プロバイダーの使用](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
- * [カスタム ID プロバイダーの作成](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
- * [カスタム認証用の {{site.data.keyword.amashort}} の構成 ](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
+ * [{{site.data.keyword.amashort}} 概説](getting-started.html)
+ * [Android SDK のセットアップ](getting-started-android.html)
+ * [カスタム ID プロバイダーの使用](custom-auth.html)
+ * [カスタム ID プロバイダーの作成](custom-auth-identity-provider.html)
+ * [カスタム認証用の {{site.data.keyword.amashort}} の構成 ](custom-auth-config-mca.html)
 
 
 
@@ -66,7 +69,8 @@ lastupdated: "2016-11-02"
 	```
 	{: codeblock}
 
-1. SDK を初期化します。初期化コードを入れる一般的な場所 (ただし、必須ではない) は、Android アプリケーション内のメイン・アクティビティーの `onCreate` メソッド内です。
+1. SDK を初期化します。  
+	初期化コードを入れる一般的な場所 (ただし、必須ではない) は、Android アプリケーション内のメイン・アクティビティーの `onCreate` メソッド内です。
 
 	```Java
 	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
@@ -75,7 +79,7 @@ lastupdated: "2016-11-02"
 	{: codeblock}
 
 `BMSClient.REGION_UK` を {{site.data.keyword.amashort}} 地域に置き換えます。これらの値の取得について詳しくは、[開始する前に](#before-you-begin)を参照してください。
-	
+
 
 ## AuthenticationListener インターフェース
 {: #custom-android-authlistener}
@@ -112,8 +116,7 @@ void onAuthenticationSuccess(Context context, JSONObject info);
 
 ### onAuthenticationFailure メソッド
 {: #custom-android-authlistener-onfail}
-認証が失敗した後、このメソッドを呼び出します。引数には、Android Context と、認証の失敗に関する詳しい情報を含む JSONObject (これはオプションです) があります。
-
+認証が失敗した後、このメソッドを呼び出します。引数には、Android Context と、認証の失敗に関する詳しい情報を含む `JSONObject` (オプション) があります。
 ```Java
 void onAuthenticationFailure(Context context, JSONObject info);
 ```
@@ -137,7 +140,7 @@ void submitAuthenticationFailure (JSONObject info);
 ## カスタム AuthenticationListener の実装例
 {: #custom-android-samplecustom}
 
-この AuthenticationListener サンプルは、カスタム ID プロバイダーと連携するよう設計されています。このサンプルは [Github リポジトリー](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)からダウンロードできます。
+この AuthenticationListener サンプルは、カスタム ID プロバイダーと連携するよう設計されています。このサンプルは、[GitHub リポジトリー![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample "外部リンク・アイコン"){: new_window}からダウンロードできます。
 
 ```Java
 package com.ibm.helloworld;
@@ -210,8 +213,8 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 
 
 コードの中で次のようにします。
-* `MCAServiceTenantId` を **TenantId** 値 (『[開始する前に](##before-you-begin)』を参照) に置き換えます。 
-* `realmName` には {{site.data.keyword.amashort}} ダッシュボードで指定したものを使用します ([カスタム認証の構成](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)を参照してください)。
+* `MCAServiceTenantId` を **TenantId** 値 (『[開始する前に](##before-you-begin)』を参照) に置き換えます。
+* `realmName` には {{site.data.keyword.amashort}} ダッシュボードで指定したものを使用します ([カスタム認証の構成](custom-auth-config-mca.html)を参照してください)。
 
 
 ## 認証のテスト
@@ -223,7 +226,7 @@ Client SDK が初期化され、カスタム AuthenticationListener の登録が
 `/protected` エンドポイントで {{site.data.keyword.amashort}} によって保護されているリソースを持つアプリケーションを用意する必要があります。
 
 
-1. モバイル・バックエンド・アプリケーションの保護エンドポイント (`{applicationRoute}/protected`) にブラウザーから要求を送信します。例えば、`http://my-mobile-backend.mybluemix.net/protected` です。`{applicationRoute}` 値の取得については、『[開始する前に](#before-you-begin)』を参照してください。 
+1. モバイル・バックエンド・アプリケーションの保護エンドポイント (`{applicationRoute}/protected`) にブラウザーから要求を送信します。例えば、`http://my-mobile-backend.mybluemix.net/protected` です。`{applicationRoute}` 値の取得については、『[開始する前に](#before-you-begin)』を参照してください。
 
 1. {{site.data.keyword.mobilefirstbp}} ボイラープレートを使用して作成されたモバイル・バックエンド・アプリケーションの `/protected` エンドポイントは、{{site.data.keyword.amashort}} で保護されています。このエンドポイントは {{site.data.keyword.amashort}} Client SDK により装備されたモバイル・アプリケーションからのみアクセス可能です。その結果、`承認されていない`というメッセージがブラウザーに表示されます。
 
@@ -250,7 +253,7 @@ Client SDK が初期化され、カスタム AuthenticationListener の登録が
 	});
 	```
 	{: codeblock}
-	
+
 1. 	要求が成功したら、LogCat ツールで以下のように出力されます。
 
 	![image](images/android-custom-login-success.png)

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-05"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 {:new_window: target="_blank"}
@@ -35,7 +35,7 @@ lastupdated: "2016-12-05"
 ## 在 Google 开发者控制台上创建项目
 {: #create-google-project}
 
-要开始将 Google 用作身份提供者，请在 [Google 开发者控制台](https://console.developers.google.com)中创建项目。创建项目的步骤之一是获取 Google 客户端标识。Google 客户端标识是 Google 认证针对您的应用程序使用的唯一标识，设置 {{site.data.keyword.amashort}} 服务时需要该标识。
+要开始将 Google 用作身份提供者，请在 [Google 开发者控制台 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.developers.google.com "外部链接图标"){: new_window} 中创建项目。创建项目的步骤之一是获取 Google 客户端标识。Google 客户端标识是 Google 认证针对您的应用程序使用的唯一标识，设置 {{site.data.keyword.amashort}} 服务时需要该标识。
 
 从控制台中：
 
@@ -52,7 +52,7 @@ lastupdated: "2016-12-05"
 
 为了让 Google 验证您的应用程序真实性，必须指定签署证书指纹。
 
-Android 操作系统需要安装在 Android 设备上的所有应用程序都使用开发者证书进行签署。Android 应用程序可以通过两种方式进行构建：调试和发布。通常建议对于调试和发布方式使用不同的证书。用于在调试方式下签署 Android 应用程序的证书会与 Android SDK 捆绑在一起。Android SDK 通常由 Android Studio 自动安装。当您希望将应用程序发布到 Google Play 时，必须使用通常由您自行生成的其他证书来签署应用程序。有关更多信息，请参阅 [signing your Android applications](http://developer.android.com/tools/publishing/app-signing.html)。
+Android 操作系统需要安装在 Android 设备上的所有应用程序都使用开发者证书进行签署。Android 应用程序可以通过两种方式进行构建：调试和发布。通常建议对于调试和发布方式使用不同的证书。用于在调试方式下签署 Android 应用程序的证书会与 Android SDK 捆绑在一起。Android SDK 通常由 Android Studio 自动安装。当您希望将应用程序发布到 Google Play 时，必须使用通常由您自行生成的其他证书来签署应用程序。有关更多信息，请参阅[签署 Android 应用程序 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://developer.android.com/tools/publishing/app-signing.html "外部链接图标"){: new_window}。
 
 包含用于开发环境的证书的密钥库存储在 `~/.android/debug.keystore` 文件中。缺省密钥库密码为 `android`。此证书用于在调试方式下构建应用程序。
 
@@ -159,7 +159,7 @@ Android 操作系统需要安装在 Android 设备上的所有应用程序都使
 
 	**注：**如果您的 Android 应用程序是针对 Android V6.0（API 级别 23
 ）或更高版本的，那么必须确保该应用程序具有 `android.permission.GET_ACCOUNTS`
-调用，然后才能调用 `register`。有关更多信息，请参阅 [https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}。
+调用，然后才能调用 `register`。有关更多信息，请参阅[在 Android 上请求许可权![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.android.com/training/permissions/requesting.html "外部链接图标"){: new_window}。
 
 1. 将以下代码添加到您的 Activity：
 
@@ -180,7 +180,7 @@ Android 操作系统需要安装在 Android 设备上的所有应用程序都使
 
 开始测试之前，您必须具有使用 **MobileFirst Services Starter** 样板创
 建的移动后端应用程序，并且必须已经具有受
-{{site.data.keyword.amashort}} `/protected` 端点保护的资源。有关更多信息，请参阅[保护资源](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)。
+{{site.data.keyword.amashort}} `/protected` 端点保护的资源。有关更多信息，请参阅[保护资源](protecting-resources.html)。
 
 1. 尝试通过在桌面浏览器中打开 `{applicationRoute}/protected`（例如，`http://my-mobile-backend.mybluemix.net/protected`），向移动后端应用程序的受保护端点发送请求。有关获取 `{applicationRoute}` 值的信息，请参阅[开始之前](#before-you-begin)。
 

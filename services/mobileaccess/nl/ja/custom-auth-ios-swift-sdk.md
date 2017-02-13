@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-27"
+  years: 2016, 2017
+lastupdated: "2017-01-16"
 
 ---
 
@@ -12,16 +12,15 @@ lastupdated: "2016-10-27"
 # {{site.data.keyword.amashort}} iOS (Swift SDK) アプリ用のカスタム認証の構成
 {: #custom-ios}
 
-{{site.data.keyword.amafull}} Client SDK の使用および {{site.data.keyword.Bluemix}} へのアプリケーションの接続のためにカスタム認証を使用する iOS アプリケーションを構成します。新しくリリースされた {{site.data.keyword.amashort}} Swift SDK は、既存の Mobile Client Access Objective-C SDK によって提供される機能を増強します。
+{{site.data.keyword.amafull}} Client SDK の使用および {{site.data.keyword.Bluemix}} へのアプリケーションの接続のためにカスタム認証を使用する iOS アプリケーションを構成します。  
 
-**注:** Objective-C SDK は現在も完全にサポートされており、{{site.data.keyword.Bluemix_notm}} モバイル・サービス用の主要 SDK とされていますが、今年後半には廃止され、この新しい Swift SDK が後継になる予定です。
 
 ## 開始する前に
 {: #before-you-begin}
 
 開始する前に以下が必要です。
 
-* カスタム ID プロバイダーを使用するように構成済みの {{site.data.keyword.amashort}} サービスのインスタンスによって保護されているリソース ([カスタム認証の構成](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)を参照してください)。  
+* カスタム ID プロバイダーを使用するように構成済みの {{site.data.keyword.amashort}} サービスのインスタンスによって保護されているリソース ([カスタム認証の構成](custom-auth-config-mca.html)を参照してください)。  
 * **TenantID** 値。{{site.data.keyword.amashort}} ダッシュボードでサービスを開きます。**「モバイル・オプション」**ボタンをクリックします。`tenantId` (`appGUID` とも呼ばれる) の値が、**「アプリ GUID」/「TenantId」**フィールドに表示されます。許可マネージャーを初期化するためにこの値が必要になります。
 * **「レルム」**名。これは、{{site.data.keyword.amashort}} ダッシュボードの**「管理」**タブで、**「カスタム」**セクションの**「レルム名」**フィールドに指定した値です。
 * バックエンド・アプリケーションの URL (**「アプリの経路 (App Route)」**)。バックエンド・アプリケーションの保護されたエンドポイントに要求を送信するためにこの値が必要になります。
@@ -29,11 +28,11 @@ lastupdated: "2016-10-27"
 
 詳しくは、以下の情報を参照してください。
 
- * [{{site.data.keyword.amashort}} 概説](https://console.{DomainName}/docs/services/mobileaccess/index.html)
- * [iOS Swift SDK のセットアップ](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html)
- * [カスタム ID プロバイダーの使用](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
- * [カスタム ID プロバイダーの作成](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
- * [カスタム認証用の {{site.data.keyword.amashort}} の構成 ](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
+ * [{{site.data.keyword.amashort}} 概説](index.html)
+ * [iOS Swift SDK のセットアップ](getting-started-ios-swift-sdk.html)
+ * [カスタム ID プロバイダーの使用](custom-auth.html)
+ * [カスタム ID プロバイダーの作成](custom-auth-identity-provider.html)
+ * [カスタム認証用の {{site.data.keyword.amashort}} の構成 ](custom-auth-config-mca.html)
 
 ### iOS のキーチェーン共有 (Keychain Sharing) の使用可能化
 {: #enable_keychain}
@@ -99,11 +98,11 @@ lastupdated: "2016-10-27"
 {: codeblock}
 
 コードの中で次のようにします。
-* `MCAServiceTenantId` を**「TenantId」**値に置きかえ、`<applicationBluemixRegion>` をご使用の {{site.data.keyword.amashort}} **「地域」** に置き換えます ([開始する前に](##before-you-begin)を参照してください)。 
-* `realmName` には {{site.data.keyword.amashort}} ダッシュボードで指定したものを使用します ([カスタム認証の構成](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)を参照してください)。
+* `MCAServiceTenantId` を**「TenantId」**値に置きかえ、`<applicationBluemixRegion>` をご使用の {{site.data.keyword.amashort}} **「地域」** に置き換えます ([開始する前に](##before-you-begin)を参照してください)。
+* `realmName` には {{site.data.keyword.amashort}} ダッシュボードで指定したものを使用します ([カスタム認証の構成](custom-auth-config-mca.html)を参照してください)。
 * `<applicationBluemixRegion>` を、{{site.data.keyword.Bluemix_notm}} アプリケーションがホストされている地域に置き換えます。{{site.data.keyword.Bluemix_notm}} 地域を表示するには、メニュー・バーにある「アバター」アイコン ![「アバター」アイコン](images/face.jpg "「アバター」アイコン") をクリックして、**「アカウントとサポート」**ウィジェットを開きます。表示される地域の値は、**「米国南部」**、**「英国」**、または**「シドニー」**のいずれかでなければならず、またコードで必要な定数 (`BMSClient.Region.usSouth`、`BMSClient.Region.unitedKingdom`、または `BMSClient.Region.sydney`) に対応している必要があります。
-   
-  
+
+
 ## 認証のテスト
 {: #custom-ios-testing}
 
@@ -155,7 +154,7 @@ Client SDK を初期化し、カスタム認証代行を登録した後、モバ
 
 	 ```
 	 MCAAuthorizationManager.sharedInstance.logout(callBack)
-	 ``` 
+	 ```
 	 {: codeblock}
 
  ユーザーのログイン後に、このコードを呼び出すと、そのユーザーはログアウトされます。そのユーザーが再度ログインしようとする場合は、サーバーから受信した要求に再度応じる必要があります。

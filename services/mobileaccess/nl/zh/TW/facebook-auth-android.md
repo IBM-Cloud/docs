@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-05"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 {:new_window: target="_blank"}
@@ -27,7 +27,7 @@ lastupdated: "2016-12-05"
 * **承租戶 ID** 值。在 {{site.data.keyword.amashort}} 儀表板中，開啟服務。按一下**行動選項**按鈕。`tenantId`（也稱為 `appGUID`）值會顯示在**應用程式 GUID/承租戶 ID** 欄位中。您需要此值來起始設定「授權管理程式」。
 * {{site.data.keyword.Bluemix_notm}} **地區**。您可以在標頭中找到您目前的 {{site.data.keyword.Bluemix_notm}} 地區，就在**虛擬人像**圖示 ![「虛擬人像」圖示](images/face.jpg "「虛擬人像」圖示") 的旁邊。出現的地區值應該是下列其中一項：`美國南部`、`雪梨`或`英國`，並對應至 WebView Javascript 程式碼中所需的 SDK 值：`BMSClient.REGION_US_SOUTH`、`BMSClient.REGION_SYDNEY` 或 `BMSClient.REGION_UK`。您需要此值來起始設定 {{site.data.keyword.amashort}} 用戶端。
 * 配置成使用 Gradle 的 Android 專案。專案不需要使用 {{site.data.keyword.amashort}} 用戶端 SDK 進行檢測。  
-* Facebook for Developers 網站 (https://developers.facebook.com) 上搭配 Android 平台的 Facebook 應用程式。
+* [Facebook for Developers 網站 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developers.facebook.com/ "外部鏈結圖示"){: new_window} 上搭配 Android 平台的 Facebook 應用程式。
 
 **重要事項：**您不需要個別安裝 Facebook SDK (`com.facebook.FacebookSdk`)。當您新增 {{site.data.keyword.amashort}} Facebook 用戶端 SDK 時，Gradle 會自動安裝 Facebook SDK。在 Facebook for Developers 網站中新增 Android 平台時，可以跳過此步驟。
 
@@ -36,11 +36,11 @@ lastupdated: "2016-12-05"
 
 從 Facebook for Developers 網站：
 
-1. 在 Facebook for Developers 網站上 (https://developers.facebook.com) 登入您的帳戶。 
+1. 在 [Facebook for Developers 網站 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developers.facebook.com "外部鏈結圖示"){: new_window} 上登入您的帳戶。
 
 1. 從**產品清單**中，選擇 **Facebook 登入**。
 
-1. 新增或配置 Android 平台。 
+1. 新增或配置 Android 平台。
 
 1. 在「Google Play 套件名稱」提示中，指定 Android 應用程式的套件名稱。若要尋找 Android 應用程式的套件名稱，請在 Android Studio 專案的 `AndroidManifest.xml` 檔案中尋找 `<manifest ..... package="{your-package-name}">`。
 
@@ -57,16 +57,14 @@ lastupdated: "2016-12-05"
 	</activity>
 	```
 	{: codeblock}
-	
+
 1. 為了讓 Facebook 確保應用程式確實性，您必須指定開發人員憑證 SHA1 的雜湊。
 
 	**進一步瞭解 Android 安全：**Android OS 需要使用開發人員憑證來簽署 Android 裝置上安裝的所有應用程式。Android 應用程式可以使用兩種模式建置：除錯及發行。
-	
+
 	請針對除錯及發行模式使用不同的憑證。用於以除錯模式簽署 Android 應用程式的憑證會與 Android SDK（通常是由 Android Studio 自動安裝）組合。當您要將應用程式發行到 Google Play 商店時，必須使用另一個憑證來簽署應用程式（您通常會自行產生另一個憑證）。
-	
-	您可以使用 Facebook 輸入兩組金鑰雜湊：一個金鑰雜湊是針對使用除錯憑證以除錯模式所建置的應用程式，另一個金鑰雜湊則是針對使用發行憑證以發行模式所建置的應用程式。如需相關資訊，請參閱 [Sign Your App](http://developer.android.com/tools/publishing/app-signing.html)。
 
-
+	您可以使用 Facebook 輸入兩組金鑰雜湊：一個金鑰雜湊是針對使用除錯憑證以除錯模式所建置的應用程式，另一個金鑰雜湊則是針對使用發行憑證以發行模式所建置的應用程式。如需相關資訊，請參閱[簽署您的 Android 應用程式 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://developer.android.com/tools/publishing/app-signing.html "外部鏈結圖示"){: new_window}。
 
 1. 包含您用於開發環境之憑證的金鑰儲存庫，會儲存在 `~/.android/debug.keystore` 檔案中。預設金鑰儲存庫密碼為：`android`。請使用此憑證，以除錯模式建置應用程式。
 
@@ -189,12 +187,12 @@ lastupdated: "2016-12-05"
 ```
 	{: codeblock}
 
-   * 將 `BMSClient.REGION_UK` 取代為適當的地區。 
-   * 將 `<MCAServiceTenantId>` 取代為 `tenantId` 值。 
-   
+   * 將 `BMSClient.REGION_UK` 取代為適當的地區。
+   * 將 `<MCAServiceTenantId>` 取代為 `tenantId` 值。
+
 	如需取得這些值的相關資訊，請參閱[開始之前](#before-you-begin)。
 
-	**附註：**如果您的 Android 應用程式是以 Android 6.0 版（API 層次 23）或以上版本為目標，則必須確定應用程式先進行 `android.permission.GET_ACCOUNTS` 呼叫，再呼叫 `register`。如需相關資訊，請參閱 [https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}。
+	**附註：**如果您的 Android 應用程式是以 Android 6.0 版（API 層次 23）或以上版本為目標，則必須確定應用程式先進行 `android.permission.GET_ACCOUNTS` 呼叫，再呼叫 `register`。如需相關資訊，請參閱 Android Developers 網站上的[這個主題 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.android.com/training/permissions/requesting.html "外部鏈結圖示"){: new_window}。
 
 1. 將下列程式碼新增至您的活動中：
 
@@ -217,7 +215,7 @@ lastupdated: "2016-12-05"
 ### 開始測試之前
 {: #facebook-auth-android-testing-before}
 
-您必須使用 {{site.data.keyword.mobilefirstbp}} 樣板，並且在 `/protected` 端點已具有受 {{site.data.keyword.amashort}} 保護的資源。如果您需要設定 `/protected` 端點，請參閱[保護資源](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)。
+您必須使用 {{site.data.keyword.mobilefirstbp}} 樣板，並且在 `/protected` 端點已具有受 {{site.data.keyword.amashort}} 保護的資源。如果您需要設定 `/protected` 端點，請參閱[保護資源](protecting-resources.html)。
 
 1. 嘗試在瀏覽器中將要求傳送給新建的行動後端應用程式的受保護端點。開啟下列 URL： 
 
@@ -251,7 +249,7 @@ lastupdated: "2016-12-05"
 	});
 	```
 	{: codeblock}
-	
+
 1. 執行您的應用程式。即會顯示 Facebook 登入畫面。
 
 	![影像](images/android-facebook-login.png)

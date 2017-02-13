@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2016, 2017
 lastupdated: "2016-12-04"
 
 ---
@@ -49,9 +49,9 @@ lastupdated: "2016-12-04"
 		<securityConstraint httpMethods="GET" securedURLs="/protected/*"/>
 	</usr_OAuthTAI>
 
-	<basicRegistry id="basic" realm="BasicRealm"/>
+	<basicRegistry id="basic" realm="BasicRealm" />
 
- <application type="war" id="myapp" name="myapp"
+	<application type="war" id="myapp" name="myapp"
 					location="${server.config.dir}/apps/myapp.war">
 		<application-bnd>
 			<security-role name="TAIUserRole">
@@ -89,7 +89,7 @@ Liberty for Java 애플리케이션에서 호스팅하는 리소스를 보호하
 	</security-constraint>
 
 	<security-role id="SecurityRole_TAIUserRole" >
-  <description>This is the role that MFP OAuthTAI uses to protect the resource, and it is required to be mapped to 'ALL_AUTHENTICATED_USERS' in Liberty</description>
+		<description>This is the role that MFP OAuthTAI uses to protect the resource, and it is required to be mapped to 'ALL_AUTHENTICATED_USERS' in Liberty</description>
 		<role-name>TAIUserRole</role-name>
 	</security-role>
 	```

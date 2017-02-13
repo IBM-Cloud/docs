@@ -1,13 +1,16 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-22"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
 
-{:codeblock:.codeblock}
-
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # 针对 {{site.data.keyword.amashort}} Cordova 应用程序配置定制认证
 {: #custom-cordova}
@@ -16,16 +19,17 @@ lastupdated: "2016-11-22"
 
 ## 开始之前
 {: #before-you-begin}
-* 资源，该资源受 {{site.data.keyword.amashort}} 服务的实例保护，而该服务已配置为使用定制的身份提供者（请参阅[配置定制认证](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)）。  
+* 资源，该资源受 {{site.data.keyword.amashort}} 服务的实例保护，而该服务已配置为使用定制的身份提供者（请参阅[配置定制认证](custom-auth-config-mca.html)）。  
 * **TenantID** 值。在 {{site.data.keyword.amashort}}“仪表板”中打开服务。单击**移动选项**按钮。`tenantId`（也称为 `appGUID`）值会显示在**应用程序 GUID/TenantId** 字段中。您将需要此值来初始化授权管理器。
 * **域名**。这是在 {{site.data.keyword.amashort}}“仪表板”的**管理**选项卡中**定制**部分的**域名**字段中指定的值。
 * {{site.data.keyword.Bluemix_notm}} **区域**。您可以在**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标") 旁边的头中找到当前 {{site.data.keyword.Bluemix_notm}} 区域。显示的区域值应该为以下某个值：`US South`、`United Kingdom` 或 `Sydney`。对应的 SDK 常量的准确语法在代码示例中提供。
 
 有关更多信息，请参阅以下信息：
- * [配置 {{site.data.keyword.amashort}} 进行定制认证](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)。这将显示如何设置 {{site.data.keyword.amashort}} 服务以进行定制认证。在此可定义**域**值。
- * [设置 Cordova SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html)。有关设置 Cordova 客户端应用程序的信息。
- * [使用定制身份提供者](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)。如何使用定制身份提供者认证用户。
- * [创建定制身份提供者](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)。一些说明定制身份提供者如何工作的示例。 
+
+ * [配置 {{site.data.keyword.amashort}} 进行定制认证](custom-auth-config-mca.html)。这将显示如何设置 {{site.data.keyword.amashort}} 服务以进行定制认证。在此可定义**域**值。
+ * [设置 Cordova SDK](getting-started-cordova.html)。有关设置 Cordova 客户端应用程序的信息。
+ * [使用定制身份提供者](custom-auth.html)。如何使用定制身份提供者认证用户。
+ * [创建定制身份提供者](custom-auth-identity-provider.html)。一些说明定制身份提供者如何工作的示例。
 
 ## 配置 Cordova WebView 代码
 ### 在 Cordova WebView 中初始化 {{site.data.keyword.amashort}} 客户端 SDK
@@ -37,8 +41,8 @@ BMSClient.initialize("<applicationBluemixRegion>");
 ```
 {: codeblock}
 
-将 `<applicationBluemixRegion>` 替换为区域（请参阅[开始之前](#before-you-begin)）。 
- 
+将 `<applicationBluemixRegion>` 替换为区域（请参阅[开始之前](#before-you-begin)）。
+
 
 ### 认证侦听器接口
 {: #custom-cordva-auth}
@@ -107,7 +111,7 @@ authenticationContext.submitAuthenticationFailure(info);
 ## 定制认证侦听器工作流程的样本实现
 {: #custom-cordova-authlisten-sample}
 
-此认证侦听器样本设计用于处理定制身份提供者。可以从[此 Github 存储库](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)下载定制身份提供者。
+此认证侦听器样本设计用于处理定制身份提供者。您可以从[此 Github 存储库 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample "外部链接图标"){: new_window} 下载定制身份提供者。
 
 ```JavaScript
 var customAuthenticationListener = {
@@ -179,20 +183,20 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 
 {  
-	
+
     //[CDVBMSClient initMCAAuthorizationManagerManagerWithTenantId:@"<tenantId>"];
  }
 ```
 {: codeblock}
 
-注：将 `your_module_name` 替换为项目的模块名称，例如，如果模块名称为 `Cordova`，那么代码应为 `#import "Cordova-Swift.h"`。要查找模块名称，请转至**构建设置 > 打包 > 产品模块名称**。
+注：对于正确的 Swift 头文件名，将 `your_module_name` 替换为项目的模块名称，例如，如果模块名称为 `Cordova`，那么代码应为 `#import "Cordova-Swift.h"`。要查找模块名称，请转至**构建设置 > 打包 > 产品模块名称**。
 
 **注：**将 `tenantId` 替换为在 {{site.data.keyword.amashort}} 服务仪表板上的**移动选项**按钮中找到的租户标识。
 
 
 ## 启用 iOS 的密钥链共享
 
-通过转至`功能`选项卡，然后在 Xcode 项目中将“`密钥链共享`”切换为“`开启`”以启用“`密钥链共享`”。 
+通过转至`功能`选项卡，然后在 Xcode 项目中将“`密钥链共享`”切换为“`开启`”以启用“`密钥链共享`”。
 
 
 ## 测试认证
@@ -219,8 +223,8 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 	request.send(success, failure);
 	```
 	{: codeblock}
-	
-	将 `<your-application-route>` 替换为后端应用程序 URL（请参阅[开始之前](#before-you-begin)）。 
+
+	将 `<your-application-route>` 替换为后端应用程序 URL（请参阅[开始之前](#before-you-begin)）。
 
 1. 	请求成功后，将在 `LogCat` 或 Xcode 控制台中显示以下输出：
 

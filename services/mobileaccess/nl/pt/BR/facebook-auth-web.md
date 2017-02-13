@@ -1,14 +1,16 @@
 ---
 
 copyright:
-  year: 2016
-lastupdated: "2016-12-04"
+  year: 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
 {:codeblock: .codeblock}
+{:pre: .pre}
 
 
 # Ativando a autenticação do Facebook para aplicativos da
@@ -16,13 +18,13 @@ web
 {: #facebook-auth-web}
 
 Use o Facebook para autenticar usuários em seu aplicativo
-da web {{site.data.keyword.amafull}}. Inclua a funcionalidade de segurança do {{site.data.keyword.amashort}}. 
+da web {{site.data.keyword.amafull}}. Inclua a funcionalidade de segurança do {{site.data.keyword.amashort}}.
 
 ## Antes de iniciar
 {: #facebook-auth-android-before}
 Você deve ter:
 
-* Um aplicativo da web. 
+* Um aplicativo da web.
 * Um serviço {{site.data.keyword.amashort}}. Para obter mais informações, consulte
 [Introdução](index.html).
 * O URI para o redirecionamento final (após o processo de autorização ser concluído).
@@ -35,11 +37,11 @@ Para usar o Facebook como um provedor de identidade em seu website, deve-se incl
 
 1. Efetue login em sua conta no site
 [Facebook for
-Developers](https://developers.facebook.com). 
+Developers](https://developers.facebook.com).
 	Para obter
 informações sobre como criar um novo app, consulte
 [Criando
-um aplicativo no website Facebook for Developers](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID). 
+um aplicativo no website Facebook for Developers](facebook-auth-overview.html#facebook-appID).
 1. Anote o **ID do app** e o **Segredo do app**. Você precisa desses valores ao configurar seu projeto
 da web para autenticação do Facebook no painel Mobile Client
 Access.
@@ -92,30 +94,30 @@ painel de serviço {{site.data.keyword.amashort}}.
 
 Para iniciar o processo de autorização:
 
-1. Recupere o terminal de autorização (`authorizationEndpoint`) e o identificador de cliente (`clientId`) das credenciais de serviço armazenadas na variável de ambiente `VCAP_SERVICES`. 
+1. Recupere o terminal de autorização (`authorizationEndpoint`) e o identificador de cliente (`clientId`) das credenciais de serviço armazenadas na variável de ambiente `VCAP_SERVICES`.
 
-	`var cfEnv = require("cfenv");` 
+	`var cfEnv = require("cfenv");`
 
 	**Nota:** se você incluiu o
 serviço {{site.data.keyword.amashort}} ao seu
 aplicativo antes de incluir o suporte da web, será possível que
 você não tenha terminal de token nas **
-Credenciais de serviço**. Como alternativa, use as URLs a seguir, dependendo de sua região do {{site.data.keyword.Bluemix_notm}}: 
- 
-	Sul dos EUA: 
+Credenciais de serviço**. Como alternativa, use as URLs a seguir, dependendo de sua região do {{site.data.keyword.Bluemix_notm}}:
 
-	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization` 
+	Sul dos EUA:
 
-	Londres: 
+	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization`
 
-	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization` 
+	Londres:
 
-	Sydney: 
+	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization`
 
-	`https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization` 
+	Sydney:
+
+	`https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization`
 
 2. Construa o URI do servidor de autorizações usando `response_type("code")`, `client_id` e
-`redirect_uri` como parâmetros de consulta. 
+`redirect_uri` como parâmetros de consulta.
 
 3. Redirecione a partir do seu aplicativo da web para o
 URI gerado.
@@ -123,16 +125,16 @@ URI gerado.
 	O exemplo a seguir recupera os parâmetros da variável `VCAP_SERVICES`, construindo a URL e enviando a solicitação de redirecionamento.
 
 	```Java
-  var cfEnv = require("cfenv"); 
+  var cfEnv = require("cfenv");
 
 	app.get("/protected", checkAuthentication, function(req, res, next){  
 		res.send("Hello from protected endpoint"); 
     }
-	); 
-  
+	);
+
 	function checkAuthentication(req, res, next){
-		// Check if user is authenticated 
-  
+		// Check if user is authenticated
+
 		if (req.session.userIdentity){   
 			next()  
      } else {   
@@ -146,10 +148,10 @@ URI gerado.
 			var redirectUrl = authorizationEndpoint + "?response_type=code";
         redirectUrl += "&client_id=" + clientId;   
         redirectUrl += "&redirect_uri=" + redirectUri;   
-  
+
 			res.redirect(redirectUrl);  
   
-      } 
+      }
 	}
 	```
 	{: codeblock}
@@ -167,48 +169,48 @@ código de concessão como um parâmetro de consulta.
 A próxima pintura é obter o acesso e os tokens de identidade usando o código de concessão recebido anteriormente:
 
 1.  Recupere o token `tokenEndpoint`, `clientId` e `secret` das credenciais de serviço
-na variável de ambiente `VCAP_SERVICES`. 
- 
-	**Nota:** se você usou o {{site.data.keyword.amashort}} antes de o suporte da web ter sido incluído, talvez você não tenha um terminal de token nas credenciais de serviço. Como alternativa, use as URLs a seguir, dependendo de sua região do Bluemix: 
+na variável de ambiente `VCAP_SERVICES`.
 
-	Sul dos EUA: 
-  
+	**Nota:** se você usou o {{site.data.keyword.amashort}} antes de o suporte da web ter sido incluído, talvez você não tenha um terminal de token nas credenciais de serviço. Como alternativa, use as URLs a seguir, dependendo de sua região do Bluemix:
+
+	Sul dos EUA:
+
 	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/token`
- 
-	Londres: 
- 
-	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token` 
- 
-	Sydney: 
- 
+
+	Londres:
+
+	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token`
+
+	Sydney:
+
 	`https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/token`
- 
+
 2. Envie uma solicitação de POST ao URI do servidor de token com tipo de concessão
 ("authorization_code"), `clientId` e o URI de redirecionamento como
 parâmetros de formulário. Envie
 `clientId` e `secret` como credenciais de autenticação HTTP básicas.
- 
+
 	O código a seguir recupera os valores necessários e os envia com uma solicitação de POST.
 
 	```Java
   var cfEnv = require("cfenv");
   var base64url = require("base64url ");
   var request = require('request');
-  
-	app.get("/oauth/callback", function(req, res, next){ 
-		var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials; 
-	var tokenEndpoint = mcaCredentials.tokenEndpoint; 
-	var formData = { 
-			grant_type: "authorization_code", 
-		client_id: mcaCredentials.clientId, 
-		redirect_uri: "http://some-server/oauth/callback",// Your web application redirect uri 
-		code: req.query.code 
-	} 
 
-	request.post({ 
+	app.get("/oauth/callback", function(req, res, next){
+		var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials; 
+    var tokenEndpoint = mcaCredentials.tokenEndpoint; 
+    var formData = {
+			grant_type: "authorization_code", 
+      client_id: mcaCredentials.clientId, 
+      redirect_uri: "http://some-server/oauth/callback",   // Your web application redirect uri 
+      code: req.query.code 
+    } 
+
+  request.post({
 			url: tokenEndpoint, 
     formData: formData 
-    }, function (err, response, body){ 
+    }, function (err, response, body){
 			var parsedBody = JSON.parse(body); 
 			req.session.accessToken = parsedBody.access_token; 
 			req.session.idToken = parsedBody.id_token; 
@@ -228,7 +230,7 @@ parâmetros de formulário. Envie
 de autorização anterior. O valor de parâmetro `code` deve ser o código de concessão recebido na resposta da solicitação de
 autorização. O código de concessão é válido por 10 minutos, após os quais um novo código deve ser recuperado.
 
-	O corpo de resposta conterá o código de acesso e o ID do token no formato JWT (https://jwt.io/).
+	O corpo de resposta conterá o código de acesso e o ID de token no formato JWT (veja o[website do JWT![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://jwt.io/ "Ícone de link externo"){: new_window}.
 
 	Assim que tiver obtido acesso e recebido os tokens de identidade, será possível sinalizar a sessão da web como autenticada e, opcionalmente, persistir esses tokens.  
 
@@ -244,17 +246,13 @@ protegidos pelos filtros de autorização
 [Protegendo
 recursos](protecting-resources.html).
 
-Para fazer solicitações para recursos protegidos, inclua um cabeçalho de autorização nas solicitações com a estrutura a seguir: 
+Para fazer solicitações para recursos protegidos, inclua um cabeçalho de autorização nas solicitações com a estrutura a seguir:
 
 `Authorization=Bearer <accessToken> <idToken>`
 
 #### Dicas
-{: #tips} 
+{: #tips}
 
 * Deve-se separar o `accessToken` e o `idToken` com um espaço em branco.
 
-* O `idToken` é opcional. Se você não fornecer o token de identidade, o recurso protegido poderá ser acessado, mas não receberá nenhuma informação sobre o usuário autorizado. 
- 
-
-
-
+* O `idToken` é opcional. Se você não fornecer o token de identidade, o recurso protegido poderá ser acessado, mas não receberá nenhuma informação sobre o usuário autorizado.

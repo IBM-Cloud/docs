@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-07"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
 
@@ -30,5 +30,5 @@ Utilisez le tableau de bord {{site.data.keyword.amafull}} pour configurer l'auth
 ## Etapes suivantes
 {: #next-steps}
 * [Configuration de l'authentification personnalisée pour Android](custom-auth-android.html)
-* [Configuration de l'authentification personnalisée pour iOS](custom-auth-ios.html)
+* [Configuration de l'authentification personnalisée pour iOS](custom-auth-ios-swift-sdk.html)
 * [Configuration de l'authentification personnalisée pour Cordova](custom-auth-cordova.html)

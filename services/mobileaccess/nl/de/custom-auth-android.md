@@ -1,14 +1,17 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-02"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 
+
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 
 # Angepasste Authentifizierung für {{site.data.keyword.amashort}}-Android-App konfigurieren
@@ -21,18 +24,18 @@ Konfigurieren Sie Ihre Android-Anwendung mit angepasster Authentifizierung zur V
 {: #before-you-begin}
 Voraussetzungen:
 
-* Eine Ressource, die durch eine Instanz des {{site.data.keyword.amashort}}-Service geschützt wird, die zur Verwendung eines angepassten Identitätsproviders konfiguriert ist (siehe die Veröffentlichung zur [Konfiguration der angepassten Authentifizierung](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).  
+* Eine Ressource, die durch eine Instanz des {{site.data.keyword.amashort}}-Service geschützt wird, die zur Verwendung eines angepassten Identitätsproviders konfiguriert ist (siehe die Veröffentlichung zur [Konfiguration der angepassten Authentifizierung](custom-auth-config-mca.html)).  
 * Der Wert für die Tenant-ID. Öffnen Sie den Service im {{site.data.keyword.amashort}}-Dashboard. Klicken Sie auf die Schaltfläche **Mobile Systemerweiterungen**. Im Feld **App-GUID/TenantId** wird der Wert `tenantId` (auch als `appGUID` bezeichnet) angezeigt. Sie benötigen diesen Wert für die Initialisierung von Authorization Manager.
 * Der Realname. Dies ist der Wert, den Sie im Feld **Realmname** des Abschnitts **Angepasst** auf der Registerkarte **Management** des {{site.data.keyword.amashort}}-Dashboards angegeben haben.
 * Die URL der Back-End-Anwendung (**App-Route**). Sie benötigen diese Werte zum Senden von Anforderungen an die geschützten Endpunkte der Back-End-Anwendung.
 * Die {{site.data.keyword.Bluemix_notm}}-**Region**. Ihre aktuelle {{site.data.keyword.Bluemix_notm}}-Region finden Sie im Header neben dem Symbol **Avatar** ![Avatarsymbol](images/face.jpg "Avatarsymbol"). Der Regionswert, der angezeigt wird, sollte einer der folgenden sein: `USA (Süden)`, `Vereinigtes Königreich` oder `Sydney`. Außerdem sollte er den im WebView-JavaScript-Code erforderlichen SDK-Werten entsprechen: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` oder `BMSClient.REGION_UK`. Sie benötigen diesen Wert für die Initialisierung des {{site.data.keyword.amashort}}-Clients.
 
 Weitere Informationen finden Sie über die folgenden Links:
- * [Einführung in {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/getting-started.html)
- * [Android-SDK einrichten](https://console.{DomainName}/docs/services/mobileaccess/getting-started-android.html)
- * [Angepassten Identitätsprovider verwenden](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
- * [Angepassten Identitätsprovider erstellen](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
- * [{{site.data.keyword.amashort}} für die angepasste Authentifizierung konfigurieren](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
+ * [Einführung in {{site.data.keyword.amashort}}](getting-started.html)
+ * [Android-SDK einrichten](getting-started-android.html)
+ * [Angepassten Identitätsprovider verwenden](custom-auth.html)
+ * [Angepassten Identitätsprovider erstellen](custom-auth-identity-provider.html)
+ * [{{site.data.keyword.amashort}} für die angepasste Authentifizierung konfigurieren](custom-auth-config-mca.html)
 
 
 
@@ -74,7 +77,7 @@ Fügen Sie die Internetzugriffsberechtigung unter dem Element `<manifest>` hinzu
 	{: codeblock}
 
 Ersetzen Sie `BMSClient.REGION_UK` durch die {{site.data.keyword.amashort}}-Region. Weitere Informationen zum Abrufen dieser Werte finden Sie unter [Vorbereitungen](#before-you-begin).
-	
+
 
 ## Schnittstelle 'AuthenticationListener'
 {: #custom-android-authlistener}
@@ -110,7 +113,7 @@ void onAuthenticationSuccess(Context context, JSONObject info);
 
 ### Methode 'onAuthenticationFailure'
 {: #custom-android-authlistener-onfail}
-Rufen Sie diese Methode auf, wenn eine Authentifizierung fehlgeschlagen ist. Die Argumente sind der Android-Kontext und ein optionales JSONObject- Objekt, das erweiterte Informationen zu dem Authentifizierungsfehler enthält.
+Rufen Sie diese Methode auf, wenn eine Authentifizierung fehlgeschlagen ist. Die Argumente sind der Android-Kontext und ein optionales Objekt `JSONObject`, das erweiterte Informationen zu dem Authentifizierungsfehler enthält.
 ```Java
 void onAuthenticationFailure(Context context, JSONObject info);
 ```
@@ -134,7 +137,7 @@ void submitAuthenticationFailure (JSONObject info);
 ## Beispielimplementierung einer angepassten Schnittstelle 'AuthenticationListener'
 {: #custom-android-samplecustom}
 
-Dieses Beispiel für 'AuthenticationListener' ist für die Ausführung mit einem angepassten Identitätsprovider gedacht. Sie können dieses Beispiel aus dem [Github-Repository](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample) herunterladen.
+Dieses Beispiel für 'AuthenticationListener' ist für die Ausführung mit einem angepassten Identitätsprovider gedacht. Sie können dieses Beispiel aus dem [Github-Repository ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample "Symbol für externen Link"){: new_window} herunterladen.
 
 ```Java
 package com.ibm.helloworld;
@@ -207,8 +210,8 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 
 
 Gehen Sie im Code wie folgt vor:
-* Ersetzen Sie `MCAServiceTenantId` durch den Wert für die **Tenant-ID** (siehe [Vorbereitungen](##before-you-begin)). 
-* Verwenden Sie den Wert für `realmName`, den Sie im {{site.data.keyword.amashort}}-Dashboard angegeben haben (siehe [Angepasste Authentifizierung konfigurieren](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).
+* Ersetzen Sie `MCAServiceTenantId` durch den Wert für die **Tenant-ID** (siehe [Vorbereitungen](##before-you-begin)).
+* Verwenden Sie den Wert für `realmName`, den Sie im {{site.data.keyword.amashort}}-Dashboard angegeben haben (siehe [Angepasste Authentifizierung konfigurieren](custom-auth-config-mca.html)).
 
 
 ## Authentifizierung testen
@@ -220,7 +223,7 @@ Nach der Initialisierung des Client-SDK und der Registrierung der angepassten Sc
 Sie müssen eine Anwendung am Endpunkt `/protected` haben, die über eine Ressource verfügt, die durch {{site.data.keyword.amashort}} geschützt ist.
 
 
-1. Senden Sie eine Anforderung an den geschützten Endpunkt (`{applicationRoute}/protected`) Ihrer mobilen Back-End-Anwendung über Ihren Browser, zum Beispiel `http://my-mobile-backend.mybluemix.net/protected`. Informationen zum Abrufen des Wertes für `{applicationRoute}` finden Sie unter [Vorbereitungen](#before-you-begin). 
+1. Senden Sie eine Anforderung an den geschützten Endpunkt (`{applicationRoute}/protected`) Ihrer mobilen Back-End-Anwendung über Ihren Browser, zum Beispiel `http://my-mobile-backend.mybluemix.net/protected`. Informationen zum Abrufen des Wertes für `{applicationRoute}` finden Sie unter [Vorbereitungen](#before-you-begin).
 
 1. Der Endpunkt `/protected` einer mobilen Back-End-Anwendung, die mit der {{site.data.keyword.mobilefirstbp}}-Boilerplate erstellt wurde, wird mit {{site.data.keyword.amashort}} geschützt. Auf den Endpunkt können nur mobile Anwendungen zugreifen, die mit dem {{site.data.keyword.amashort}}-Client-SDK instrumentiert sind. Daher wird eine Nachricht `Unauthorized` (Nicht autorisiert) in Ihrem Browser angezeigt.
 
@@ -247,7 +250,7 @@ Sie müssen eine Anwendung am Endpunkt `/protected` haben, die über eine Ressou
 	});
 	```
 	{: codeblock}
-	
+
 1. 	Wenn Ihre Anforderung erfolgreich ist, wird die folgende Ausgabe im LogCat-Tool angezeigt:
 
 	![Bild](images/android-custom-login-success.png)

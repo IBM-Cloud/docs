@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-07"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
 
@@ -30,5 +30,5 @@ lastupdated: "2016-11-07"
 ## 后续步骤
 {: #next-steps}
 * [针对 Android 配置定制认证](custom-auth-android.html)
-* [针对 iOS 配置定制认证](custom-auth-ios.html)
+* [针对 iOS 配置定制认证](custom-auth-ios-swift-sdk.html)
 * [针对 Cordova 配置定制认证](custom-auth-cordova.html)

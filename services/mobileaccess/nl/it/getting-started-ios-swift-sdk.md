@@ -1,34 +1,36 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-04"
+  years: 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:codeblock:.codeblock}
+{:codeblock: .codeblock}
+{:pre: .pre}
+
 
 # Configurazione dell'SDK Swift iOS
 {: #getting-started-ios}
 
-{{site.data.keyword.amafull}} ha rilasciato una nuova SDK Swift che aggiunge e migliora le funzionalità fornite dall'SDK Objective-C {{site.data.keyword.amashort}} esistente, rendendo più semplice l'autenticazione alla tua applicazione e fornendo una migliore protezione per le tue risorse di back-end. Strumenta la tua applicazione Swift iOS con l'SDK {{site.data.keyword.amashort}}, inizializza l'SDK ed effettua richieste a risorse protette e non protette.
+Strumenta la tua applicazione Swift iOS con l'SDK {{site.data.keyword.amashort}}, inizializza l'SDK ed effettua richieste a risorse protette e non protette.
 
 {:shortdesc}
-
-Mentre la SDK Objective-C SDK rimane completamente supportata ed è ancora considerata la SDK primaria per i servizi mobili {{site.data.keyword.Bluemix_notm}}, è pianificato di abbandonarla più avanti questo anno in favore di questa nuova SDK Swift.
 
 
 ## Prima di cominciare
 {: #before-you-begin}
 È necessario disporre di:
+
 * Un'istanza di un'applicazione  {{site.data.keyword.Bluemix_notm}}.
 * Un'istanza di un servizio {{site.data.keyword.amafull}}.
 * Il tuo **TenantID**. Apri il tuo servizio nel dashboard {{site.data.keyword.amashort}}. Fai clic su **Opzioni mobili**. I valori `tenantId` (noti anche come `appGUID`)  vengono visualizzati nel campo **GUID applicazione / TenantId**. Avrai bisogno di questo valore per inizializzare il gestore autorizzazione {{site.data.keyword.amashort}}.
 * La tua **Rotta applicazione**. Questa è l'URL della tua applicazione di back-end. Hai bisogno di questo valore per inviare le richieste agli endpoint protetti correlati.
 * La tua **Regione** {{site.data.keyword.Bluemix_notm}}.  Puoi trovare la tua regione {{site.data.keyword.Bluemix_notm}} corrente nell'intestazione, accanto all'icona **Avatar** ![Icona Avatar](images/face.jpg "Icona Avatar"). Il valore della regione visualizzato deve essere uno dei seguenti: `Stati Uniti Sud`,  `Sydney` o  `Regno Unito` e corrisponde ai valori delle SDK richiesti nel codice: `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` o `BMSClient.Region.sydney`.  Avrai bisogno di questo valore per inizializzare l'SDK {{site.data.keyword.amashort}}.
-* Un progetto Xcode. Per ulteriori informazioni su come configurare il tuo ambiente di sviluppo iOS, consulta il [sito web per gli sviluppatori Apple](https://developer.apple.com/support/xcode/).
+* Un progetto Xcode. Per ulteriori informazioni su come configurare il tuo ambiente di sviluppo iOS, consulta il [sito Web Apple Developer![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.apple.com/support/xcode/ "Icona link esterno"){: new_window}.
 
 
 ## Installazione dell'SDK client {{site.data.keyword.amashort}}
@@ -48,7 +50,7 @@ sudo gem install cocoapods
 ```
 {: codeblock}
 
-Per ulteriori informazioni, visita il [sito web di CocoaPods](https://cocoapods.org/).
+Per ulteriori informazioni, visita il [sito Web CocoaPods![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://cocoapods.org/ "Icona link esterno"){: new_window}.
 
 ### Installa l'SDK client {{site.data.keyword.amashort}} con CocoaPods
 {: #install-sdk-cocoapods}
@@ -95,7 +97,7 @@ Abilita `Keychain Sharing`. Vai alla scheda `Funzionalità` e passa `Keychain Sh
 
 1. Inizializza l'SDK client {{site.data.keyword.amashort}}.
 
-```Swift
+ ```Swift
 	let tenantId = "<serviceTenantID>"
 	let regionName = <applicationBluemixRegion>
 
@@ -108,13 +110,13 @@ Abilita `Keychain Sharing`. Vai alla scheda `Funzionalità` e passa `Keychain Sh
 	BMSClient.sharedInstance.authorizationManager = mcaAuthManager	
 	return true
 	}
- ```
- {: codeblock}
+  ```
+  {: codeblock}
 
-* Sostituisci `tenantId` con il valore ottenuto dalle **Opzioni mobili**. 
-* Sostituisci `<applicationBluemixRegion>` con la regione in cui è ospitata la tua applicazione {{site.data.keyword.Bluemix_notm}}. 
+* Sostituisci `tenantId` con il valore ottenuto dalle **Opzioni mobili**.
+* Sostituisci `<applicationBluemixRegion>` con la regione in cui è ospitata la tua applicazione {{site.data.keyword.Bluemix_notm}}.
 
-Per informazioni su questi valori, consulta [Prima di cominciare](#before-you-begin). 
+Per informazioni su questi valori, consulta [Prima di cominciare](#before-you-begin).
 
 
 ## Effettuare una richiesta alla tua applicazione di back-end mobile
@@ -157,6 +159,7 @@ Dopo che l'SDK client {{site.data.keyword.amashort}} è stato inizializzato, puo
 ## Fasi successive
 {: #next-steps}
 Quando ti sei connesso all'endpoint protetto, non è stata richiesta alcuna credenziale. Per richiedere ai tuoi utenti di accedere alla tua applicazione, devi configurare l'autenticazione Facebook, Google o personalizzata.
+
   * [Facebook](facebook-auth-ios-swift-sdk.html)
   * [Google](google-auth-ios-swift-sdk.html)
   * [Personalizzata](custom-auth-ios-swift-sdk.html)

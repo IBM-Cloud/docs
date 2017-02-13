@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-07"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
 
@@ -30,5 +30,5 @@ Utilice el panel de control de {{site.data.keyword.amafull}} para configurar la 
 ## Pasos siguientes
 {: #next-steps}
 * [Configuración de la autenticación personalizada para Android](custom-auth-android.html)
-* [Configuración de la autenticación personalizada para iOS](custom-auth-ios.html)
+* [Configuración de la autenticación personalizada para iOS](custom-auth-ios-swift-sdk.html)
 * [Configuración de la autenticación personalizada para Cordova](custom-auth-cordova.html)

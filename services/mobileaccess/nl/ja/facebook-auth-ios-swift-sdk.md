@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-05"
+  years: 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 {:new_window: target="_blank"}
@@ -21,6 +21,7 @@ lastupdated: "2016-12-05"
 {: #before-you-begin}
 
 以下が必要です。
+
 * {{site.data.keyword.amafull}} サービスのインスタンスおよび {{site.data.keyword.Bluemix_notm}} アプリケーション。{{site.data.keyword.Bluemix_notm}} バックエンド・アプリケーションの作成方法について詳しくは、[概説](index.html)を参照してください。
 
 
@@ -29,20 +30,19 @@ lastupdated: "2016-12-05"
 * バックエンド・アプリケーションの URL (**「アプリの経路 (App Route)」**)。バックエンド・アプリケーションの保護されたエンドポイントに要求を送信するためにこの値が必要になります。
 * **TenantID** 値。{{site.data.keyword.amashort}} ダッシュボードでサービスを開きます。**「モバイル・オプション」**ボタンをクリックします。`tenantId` (`appGUID` とも呼ばれる) の値が、**「アプリ GUID」/「TenantId」**フィールドに表示されます。許可マネージャーを初期化するためにこの値が必要になります。
 * {{site.data.keyword.Bluemix_notm}} **「地域」**。**「アバター」**アイコン![「アバター」アイコン](images/face.jpg "「アバター」アイコン") の横のヘッダー内に現在の {{site.data.keyword.Bluemix_notm}} 地域が表示されます。表示される地域の値は、`「米国南部」`、`「英国」`、または`「シドニー」`のいずれかでなければならず、また Swift SDK に必要な SDK 値 (`BMSClient.Region.usSouth`、`BMSClient.Region.unitedKingdom`、または `BMSClient.Region.sydney`) に対応している必要があります。{{site.data.keyword.amashort}} クライアントを初期化するためにこの値が必要になります。
-* CocoaPods と連動して機能するようにセットアップされた iOS プロジェクト。詳しくは、[iOS Swift SDK のセットアップ](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html)の **CocoaPods のインストール**を参照してください。
+* CocoaPods と連動して機能するようにセットアップされた iOS プロジェクト。詳しくは、[iOS Swift SDK のセットアップ](getting-started-ios-swift-sdk.html)の **CocoaPods のインストール**を参照してください。
+     
    **注:** 先に進む前にコア {{site.data.keyword.amashort}} Client SDK をインストールする必要はありません。
-* [Facebook for Developers](https://developers.facebook.com) Web サイト上の Facebook アプリケーション。
+* [Facebook for Developers ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developers.facebook.com "外部リンク・アイコン"){: new_window} Web サイト上の Facebook アプリケーション。
 
 **重要:** Facebook SDK (`com.facebook.FacebookSdk`) を別個にインストールする必要はありません。Facebook SDK は {{site.data.keyword.amashort}} `BMSFacebookAuthentication` ポッドで自動的にインストールされます。Facebook for Developers の Web サイトでアプリを追加または構成する場合は、**Xcode プロジェクトへの Facebook SDK の追加**のステップをスキップできます。
-
-**注:** Objective-C SDK は現在も完全にサポートされており、{{site.data.keyword.Bluemix_notm}} モバイル・サービス用の主要 SDK とされていますが、今年後半には廃止され、この新しい Swift SDK が後継になる予定です。
 
 ## iOS プラットフォーム用の Facebook アプリケーションの構成
 {: #facebook-auth-ios-config}
 
 Facebook for Developers サイトで以下を行います。
 
-1. [Facebook for Developers](https://developers.facebook.com) で自分のアカウントにログインします。 
+1. [Facebook for Developers ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developers.facebook.com "外部リンク・アイコン"){: new_window}で自分のアカウントにログインします。
 
 1. iOS プラットフォームがアプリに追加済みであることを確認します。iOS プラットフォームを追加または構成する場合、iOS アプリケーションの **bundleId** を提供する必要があります。ご使用の iOS アプリケーションの **bundleId** を調べるには、`info.plist` ファイル内または Xcode プロジェクトの**「一般 (General)」**タブ内で**「バンドル ID (Bundle Identifier)」**を探します。
 
@@ -75,7 +75,7 @@ sudo gem install cocoapods
 ```
    {: codeblock}
 
-詳細については、[CocoaPods の Web サイト](https://cocoapods.org/)を参照してください。
+詳しくは、[CocoaPods Web サイト![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cocoapods.org/ "外部リンク・アイコン"){: new_window}を参照してください。
 
 ### CocoaPods を使用した {{site.data.keyword.amashort}} Client Swift SDK のインストール
 {: #facebook-auth-install-swift-cocoapods}
@@ -169,7 +169,7 @@ pod 'BMSFacebookAuthentication'
 
    Facebook Application ID を使用して `CFBundleURLSchemes` および `FacebookappID` プロパティーを更新します。Facebook アプリケーションの名前で `FacebookDisplayName` を更新します。
 
-   **重要**: `info.plist` ファイル内の既存のプロパティーをオーバーライドすることのないようにしてください。重複するプロパティーがある場合は、手動でマージする必要があります。詳しくは、[Xcode プロジェクトの構成 (Configure Xcode Project) ](https://developers.facebook.com/docs/ios/getting-started/)および [iOS9 用のアプリの準備 (Preparing Your Apps for iOS9) ](https://developers.facebook.com/docs/ios/ios9)を参照してください。
+   **重要**: `info.plist` ファイル内の既存のプロパティーをオーバーライドすることのないようにしてください。重複するプロパティーがある場合は、手動でマージする必要があります。詳しくは、[Xcode プロジェクトを構成する![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developers.facebook.com/docs/ios/getting-started/ "外部リンク・アイコン"){: new_window}および[アプリを iOS9 用に準備する![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developers.facebook.com/docs/ios/ios9 "外部リンク・アイコン"){: new_window}を参照してください。
 
 ## {{site.data.keyword.amashort}} Client Swift SDK の初期化
 {: #facebook-auth-ios-initalize-swift}
@@ -207,7 +207,7 @@ let mcaAuthManager = MCAAuthorizationManager.sharedInstance
 
    * `<applicationBluemixRegion>` を、{{site.data.keyword.Bluemix_notm}} アプリケーションがホストされている地域に置き換えます。
    * `tenantId` を**「TenantId」/「アプリ GUID」**値に置き換えます。
- 
+
    これらの値について詳しくは、[開始する前に](#before-you-begin)を参照してください。
 
 1. アプリ代行の `application:didFinishLaunchingWithOptions` メソッドに以下のコードを追加することによって、Facebook SDK にアプリのアクティベーションについて通知し、Facebook Authentication Handler を登録します。BMSClient インスタンスの初期化の後にこのコードを追加し、Facebook を認証マネージャーとして登録します。
@@ -238,7 +238,7 @@ Client SDK が初期化され、Facebook 認証マネージャーの登録が完
 ### 開始する前に
 {: #facebook-auth-ios-testing-before}
 
-{{site.data.keyword.mobilefirstbp}} ボイラープレートを使用していて、{{site.data.keyword.amashort}}により`/protected` エンドポイントで保護されているリソースを既に持っている必要があります。`/protected` エンドポイントをセットアップする必要がある場合、[リソースの保護 ](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)を参照してください。
+{{site.data.keyword.mobilefirstbp}} ボイラープレートを使用していて、{{site.data.keyword.amashort}}により`/protected` エンドポイントで保護されているリソースを既に持っている必要があります。`/protected` エンドポイントをセットアップする必要がある場合、[リソースの保護 ](protecting-resources.html)を参照してください。
 
 1. ブラウザーで、新しく作成されたモバイル・バックエンド・アプリケーションの保護エンドポイントへの要求の送信を試行します。URL `{applicationRoute}/protected` を開きます。`{applicationRoute}` は、**「モバイル・オプション」**から取得した値 (『[Facebook 認証用の Mobile Client Access の構成](#facebook-auth-ios-configmca)』を参照) に置き換えます。
 (たとえば、 `http://my-mobile-backend.mybluemix.net/protected`)

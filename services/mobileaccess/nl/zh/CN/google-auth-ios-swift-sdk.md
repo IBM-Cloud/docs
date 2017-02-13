@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-05"
+  years: 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 {:new_window: target="_blank"}
@@ -14,9 +14,7 @@ lastupdated: "2016-12-05"
 # 启用 iOS 应用程序 (Swift SDK) 的 Google 认证
 {: #google-auth-ios}
 
-使用 Google 登录，在 {{site.data.keyword.amafull}} iOS Swift 应用程序上认证用户。新发行的 {{site.data.keyword.amashort}} Swift SDK 为现有 Mobile Client Access Objective-C SDK 提供的功能增添了新功能，同时也改进了现有功能。
-
-**注：**虽然 Objective-C SDK 仍受到完全支持，且仍视为 {{site.data.keyword.Bluemix_notm}} Mobile Services 的主 SDK，但是有计划要在今年晚些时候停止使用 Objective-C SDK，以支持此新的 Swift SDK。
+使用 Google 登录，在 {{site.data.keyword.amafull}} iOS Swift 应用程序上认证用户。
 
 
 ## 开始之前
@@ -34,7 +32,7 @@ lastupdated: "2016-12-05"
 ## 准备应用程序以进行 Google 登录
 {: #google-sign-in-ios}
 
-遵循 Google 在[针对 iOS 的 Google 登录](https://developers.google.com/identity/sign-in/ios/start-integrating)中提供的指示信息，准备应用程序以进行 Google 登录。
+遵循 Google 在[针对 iOS 的 Google 登录 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developers.google.com/identity/sign-in/ios/start-integrating "外部链接图标"){: new_window} 中提供的指示信息，准备应用程序以进行 Google 登录。
 
 此过程会：
 
@@ -48,7 +46,7 @@ lastupdated: "2016-12-05"
 
 1. 记录 Xcode 项目中来自主要目标**常规**选项卡**身份**部分的**捆绑软件标识**。您需要它创建 Google 登录项目。
 
-1. 在 Google 开发者上，针对 iOS 的 Google 登录创建项目，网址为 https://developers.google.com/mobile/add?platform=ios。
+1. 在 [Google 开发者站点 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developers.google.com/mobile/add?platform=ios "外部链接图标"){: new_window} 上创建项目，以为 iOS 进行 Google 登录。
 
 1. 向您的项目添加 Google 登录 API。
 
@@ -56,9 +54,9 @@ lastupdated: "2016-12-05"
 
    **重要信息：**获取 `GoogleService-Info.plist` 文件时，请打开该文件，并记录 `CLIENT_ID` 值。您稍后配置 {{site.data.keyword.amashort}} 后端应用程序时需要此值。
 
-1. 将 `GoogleService-Info.plist` 文件添加到 Xcode 项目。有关更多信息，请参阅[将配置文件添加到项目](https://developers.google.com/identity/sign-in/ios/start-integrating#add-config)。
+1. 将 `GoogleService-Info.plist` 文件添加到 Xcode 项目。有关更多信息，请参阅[添加配置文件到项目 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developers.google.com/identity/sign-in/ios/start-integrating#add-config "外部链接图标"){: new_window}。
 
-1. 在 Xcode 项目中，使用 `REVERSE_CLIENT_ID` 和捆绑软件标识更新 URL 方案。有关更多信息，请参阅[将 URL 方案添加到项目](https://developers.google.com/identity/sign-in/ios/start-integrating#add_a_url_scheme_to_your_project)。
+1. 在 Xcode 项目中，使用 `REVERSE_CLIENT_ID` 和捆绑软件标识更新 URL 方案。有关更多信息，请参阅[添加 URL 方案到项目 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developers.google.com/identity/sign-in/ios/start-integrating#add_a_url_scheme_to_your_project "外部链接图标"){: new_window}。
 
 1. 使用以下代码更新应用程序的 `project-Bridging-Header.h` 文件：
 
@@ -67,7 +65,7 @@ lastupdated: "2016-12-05"
 	```
 	{: codeblock}
 
-	有关更新桥接头文件的更多信息，请参阅[启用登录](https://developers.google.com/identity/sign-in/ios/sign-in#enable_sign-in)。
+	有关更新桥接头文件的更多信息，请参阅[启用登录 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developers.google.com/identity/sign-in/ios/sign-in#enable_sign-in "外部链接图标"){: new_window}。
 
 ## 配置 {{site.data.keyword.amashort}} 进行 Google 认证
 {: #google-auth-ios-config}
@@ -95,9 +93,7 @@ lastupdated: "2016-12-05"
 ```
 	{: codeblock}
 
-有关更多信息，请参阅 [CocoaPods Web 站点](https://cocoapods.org/)。
-
-
+有关更多信息，请参阅 [CocoaPods Web 站点![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cocoapods.org/ "外部链接图标"){: new_window}。
 
 ### 使用 CocoaPods 安装 {{site.data.keyword.amashort}} 客户端 Swift SDK
 {: #facebook-auth-install-swift-cocoapods}
@@ -168,8 +164,8 @@ let mcaAuthManager = MCAAuthorizationManager.sharedInstance
 	在代码中：
 
       * 将 `<serviceTenantID>` 替换为从**移动选项**中检索到的值。
-      * 将 `<applicationBluemixRegion>` 替换为 {{site.data.keyword.Bluemix_notm}} **区域**。 
-	
+      * 将 `<applicationBluemixRegion>` 替换为 {{site.data.keyword.Bluemix_notm}} **区域**。
+
 	有关获取这些值的更多信息，请参阅[开始之前](#before-you-begin)。
 
 
@@ -181,7 +177,7 @@ let mcaAuthManager = MCAAuthorizationManager.sharedInstance
 ### 开始之前
 {: #google-auth-ios-testing-before}
 
-您必须使用的是 {{site.data.keyword.mobilefirstbp}} 样板，并且已经在 `/protected` 端点具有受 {{site.data.keyword.amashort}} 保护的资源。如果需要设置 `/protected` 端点，请参阅[保护资源](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)。
+您必须使用的是 {{site.data.keyword.mobilefirstbp}} 样板，并且已经在 `/protected` 端点具有受 {{site.data.keyword.amashort}} 保护的资源。如果需要设置 `/protected` 端点，请参阅[保护资源](protecting-resources.html)。
 
 1. 尝试通过在桌面浏览器中打开 `{applicationRoute}/protected`，向移动后端应用程序的受保护端点发送请求。例如，`http://my-mobile-backend.mybluemix.net/protected`。
 

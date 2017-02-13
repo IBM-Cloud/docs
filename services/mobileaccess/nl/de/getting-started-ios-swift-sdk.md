@@ -1,34 +1,36 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-04"
+  years: 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:codeblock:.codeblock}
+{:codeblock: .codeblock}
+{:pre: .pre}
+
 
 # iOS-Swift-SDK einrichten
 {: #getting-started-ios}
 
-Von {{site.data.keyword.amafull}} wurde ein neues Swift-SDK freigegeben, das die vom vorhandenen {{site.data.keyword.amashort}}-Objective-C-SDK bereitgestellte Funktionalität ergänzt und verbessert. Das Authentifizieren Ihrer App wird erleichtert, und es wird ein besserer Schutz der Back-End-Ressourcen bereitgestellt. Instrumentieren Sie Ihre iOS-Swift-Anwendung mit dem {{site.data.keyword.amashort}}-SDK, initialisieren Sie das SDK und senden Sie Anforderungen an geschützte und ungeschützte Ressourcen.
+Instrumentieren Sie Ihre iOS-Swift-Anwendung mit dem {{site.data.keyword.amashort}}-SDK, initialisieren Sie das SDK und senden Sie Anforderungen an geschützte und ungeschützte Ressourcen.
 
 {:shortdesc}
-
-Das Objective-C-SDK wird zwar weiterhin vollständig unterstützt und gilt noch als primäres SDK für {{site.data.keyword.Bluemix_notm}} Mobile Services, seine Verwendung und Unterstützung sollen jedoch zugunsten des neuen Swift-SDK noch dieses Jahr eingestellt werden.
 
 
 ## Vorbereitungen
 {: #before-you-begin}
 Voraussetzungen:
+
 * Eine Instanz einer {{site.data.keyword.Bluemix_notm}}-Anwendung.
 * Eine Instanz eines {{site.data.keyword.amafull}}-Service.
 * Die **Tenant-ID**. Öffnen Sie den Service im {{site.data.keyword.amashort}}-Dashboard. Klicken Sie auf **Mobile Systemerweiterungen**. Im Feld **App-GUID/TenantId** wird der Wert `tenantId` (auch als `appGUID` bezeichnet) angezeigt. Sie benötigen diesen Wert für die Initialisierung von {{site.data.keyword.amashort}} Authorization Manager.
 * Die **Anwendungsroute**. Dies ist die URL Ihrer Back-End-Anwendung. Sie benötigen diesen Wert zum Senden von Anforderungen an die geschützten Endpunkte der Anwendung.
 * Die {{site.data.keyword.Bluemix_notm}}-**Region**.  Ihre aktuelle {{site.data.keyword.Bluemix_notm}}-Region finden Sie im Header neben dem Symbol **Avatar** ![Avatarsymbol](images/face.jpg "Avatarsymbol"). Der Regionswert, der angezeigt wird, sollte einer der folgenden sein: `USA (Süden)`, `Vereinigtes Königreich` oder `Sydney`. Außerdem sollte er den im Code erforderlichen SDK-Werten entsprechen: `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` oder `BMSClient.Region.sydney`.  Sie benötigen diesen Wert für die Initialisierung des {{site.data.keyword.amashort}}-SDK.
-* Xcode-Projekt. Weitere Informationen zur Einrichtung Ihrer iOS-Entwicklungsumgebung finden Sie auf der [Apple Developer-Website](https://developer.apple.com/support/xcode/).
+* Xcode-Projekt. Weitere Informationen zum Einrichten Ihrer iOS-Entwicklungsumgebung finden Sie auf der [Apple Developer-Website ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.apple.com/support/xcode/ "Symbol für externen Link"){: new_window}.
 
 
 ## {{site.data.keyword.amashort}}-Client-SDK installieren
@@ -48,7 +50,7 @@ sudo gem install cocoapods
 ```
 {: codeblock}
 
-Weitere Informationen finden Sie auf der [CocoaPods-Website](https://cocoapods.org/).
+Weitere Informationen finden Sie auf der [CocoaPods-Website ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cocoapods.org/ "Symbol für externen Link"){: new_window}.
 
 ### {{site.data.keyword.amashort}}-Client-SDK mit CocoaPods installieren
 {: #install-sdk-cocoapods}
@@ -95,7 +97,7 @@ Aktivieren Sie `Keychain Sharing`. Rufen Sie dazu die Registerkarte `Capabilitie
 
 1. Initialisieren Sie das {{site.data.keyword.amashort}}-Client-SDK.
 
-```Swift
+ ```Swift
 	let tenantId = "<serviceTenantID>"
 	let regionName = <applicationBluemixRegion>
 
@@ -108,13 +110,13 @@ Aktivieren Sie `Keychain Sharing`. Rufen Sie dazu die Registerkarte `Capabilitie
 	BMSClient.sharedInstance.authorizationManager = mcaAuthManager	
 	return true
 	}
- ```
- {: codeblock}
+  ```
+  {: codeblock}
 
-* Ersetzen Sie `tenantId` durch den Wert, den Sie aus **Mobile Systemerweiterungen** abgerufen haben. 
-* Ersetzen Sie `<applicationBluemixRegion>` durch die Region, in der Ihre {{site.data.keyword.Bluemix_notm}}-Anwendung per Hosting bereitgestellt wird. 
+* Ersetzen Sie `tenantId` durch den Wert, den Sie aus **Mobile Systemerweiterungen** abgerufen haben.
+* Ersetzen Sie `<applicationBluemixRegion>` durch die Region, in der Ihre {{site.data.keyword.Bluemix_notm}}-Anwendung per Hosting bereitgestellt wird.
 
-Weitere Informationen zu diesen Werten finden Sie unter [Vorbereitungen](#before-you-begin). 
+Weitere Informationen zu diesen Werten finden Sie unter [Vorbereitungen](#before-you-begin).
 
 
 ## Anforderung an mobile Back-End-Anwendung senden
@@ -156,6 +158,7 @@ Nach der Initialisierung des {{site.data.keyword.amashort}}-Client-SDK können S
 ## Nächste Schritte
 {: #next-steps}
 Wenn Sie eine Verbindung zu dem geschützten Endpunkt hergestellt haben, waren keine Berechtigungsnachweise erforderlich. Wenn Sie die Benutzer zur Anmeldung bei Ihrer Anwendung veranlassen wollen, müssen Sie eine Authentifizierung über Facebook oder Google oder eine angepasste Authentifizierung konfigurieren.
+
   * [Facebook](facebook-auth-ios-swift-sdk.html)
   * [Google](google-auth-ios-swift-sdk.html)
   * [Angepasst](custom-auth-ios-swift-sdk.html)

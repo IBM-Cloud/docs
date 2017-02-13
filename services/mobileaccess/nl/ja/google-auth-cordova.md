@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-05"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 {:new_window: target="_blank"}
@@ -25,7 +25,7 @@ lastupdated: "2016-12-05"
 * {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンド・サービスの作成方法について詳しくは、[概説](index.html)を参照してください。
 * アプリケーションの経路。これは、バックエンド・アプリケーションの URL です。
 * **「TenantID」**。{{site.data.keyword.Bluemix_notm}} ダッシュボードでサービスを開きます。**「モバイル・オプション」**をクリックします。`tenantId` (`appGUID` とも呼ばれる) の値が、**「アプリ GUID」/「TenantId」**フィールドに表示されます。許可マネージャーを初期化するためにこの値が必要になります。
-*  {{site.data.keyword.Bluemix_notm}} アプリケーションがホストされている地域を見つけます。**「アバター」**アイコン![「アバター」アイコン](images/face.jpg "「アバター」アイコン") の横のヘッダー内に現在の Bluemix 地域が表示されます。地域値は、**「米国南部」**、**「シドニー」**、または**「英国」**のいずれかでなければなりません。これらの名前に対応する正確な SDK の定数値は、コードの例に示しています。 
+*  {{site.data.keyword.Bluemix_notm}} アプリケーションがホストされている地域を見つけます。**「アバター」**アイコン![「アバター」アイコン](images/face.jpg "「アバター」アイコン") の横のヘッダー内に現在の Bluemix 地域が表示されます。地域値は、**「米国南部」**、**「シドニー」**、または**「英国」**のいずれかでなければなりません。これらの名前に対応する正確な SDK の定数値は、コードの例に示しています。
 * (オプション) 次のセクションの内容をよく理解してください。
    * [Android アプリ用の Google 認証の使用可能化](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html)
    * [iOS アプリ用の Google 認証の使用可能化](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html)
@@ -54,10 +54,10 @@ Cordova アプリケーションの Android プラットフォームを Google �
 	}
 	```
 	{: codeblock}
-	
+
 1. **「ツール」>「Android」>「プロジェクトを Gradle ファイルと同期 (Sync Project with Gradle Files)」**をクリックして Gradle とプロジェクトを同期します。
 
-1. ネイティブ・コードでの `GoogleAuthenticationManager` API の登録はまだ必要になります。次のコードをメイン・アクティビティー `onCreate` メソッドに追加します。 
+1. ネイティブ・コードでの `GoogleAuthenticationManager` API の登録はまだ必要になります。次のコードをメイン・アクティビティー `onCreate` メソッドに追加します。
 
 	```Java
 	String tenantId = "<tenantId>";
@@ -68,7 +68,7 @@ Cordova アプリケーションの Android プラットフォームを Google �
 	{: codeblock}
 
 1. 以下のコードをアクティビティーに追加します。
- 
+
 	```Java
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -84,7 +84,7 @@ Cordova アプリケーションの Android プラットフォームを Google �
 
 Cordova アプリケーションの iOS プラットフォームを Google 認証統合用に構成するために必要なステップは、ネイティブ・アプリケーション用のステップに似ています。主な違いは、現在 Cordova CLI が CocoaPods の依存関係マネージャーをサポートしていない点です。Google 認証との統合に必要なファイルは、手動で追加する必要があります。詳しくは、[iOS アプリ用の Google 認証の使用可能化 (Swift SDK)](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html)を参照してください。以下のステップを完了してください。
 
-   * [Google Sign-In 用のアプリケーションの準備](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html#google-sign-in-ios): {{site.data.keyword.amashort}} iOS アプリを認証するために Google Sign-In を準備します。 
+   * [Google Sign-In 用のアプリケーションの準備](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html#google-sign-in-ios): {{site.data.keyword.amashort}} iOS アプリを認証するために Google Sign-In を準備します。
 
    * [Google 認証用の MCA の構成](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html#google-auth-ios-config): Google Sign-In を処理するように {{site.data.keyword.amashort}} サービスを構成します。
 
@@ -96,7 +96,7 @@ Cordova アプリケーションの iOS プラットフォームを Google 認�
 
 `「キーチェーン共有 (Keychain Sharing)」`を使用可能にします。Xcode プロジェクトで、`「Capabilities」`タブに移動し、`「Keychain Sharing」`を`「On」`に切り替えます。
 
- 
+
 ### iOS コードでの許可マネージャーの初期化
 
 `AppDelgate.m` ファイル内の Objective-C で、{{site.data.keyword.amashort}} 許可マネージャーを初期化します。
@@ -129,10 +129,10 @@ Cordova アプリケーションの iOS プラットフォームを Google 認�
 ```
 {: codeblock}
 
-**注:** 
+**注:**
 
 * `<your_module_name>` をプロジェクトのモジュール名に置き換えます。例えば、モジュール名が `Cordova` の場合、インポート行は `#import "Cordova-Swift.h"` になります。モジュール名を見つけるには、`「ビルド設定 (Build Settings)」`タブ、`「パッケージ化 (Packaging)」` > `「製品モジュール名 (Product Module Name)」`に移動します。
-* `<tenantId>` をご使用のテナント ID ([開始する前に](#before-you-begin)を参照) に置き換えます。 
+* `<tenantId>` をご使用のテナント ID ([開始する前に](#before-you-begin)を参照) に置き換えます。
 
 
 ## Cordova WebView での {{site.data.keyword.amashort}} Client SDK の初期化
@@ -145,7 +145,7 @@ BMSClient.initialize("<applicationBluemixRegion>");
 ```
 {: codeblock}
 
-`<applicationBluemixRegion>` をご使用の地域 ([開始する前に](#before-you-begin)を参照) に置き換えます。 
+`<applicationBluemixRegion>` をご使用の地域 ([開始する前に](#before-you-begin)を参照) に置き換えます。
 
 ## 認証のテスト
 {: #google-auth-cordova-test}
@@ -178,9 +178,9 @@ Client SDK が初期化されたら、モバイル・バックエンド・アプ
 1. アプリケーションを実行します。Google のログイン画面が表示されます。
 
 	![Google ログイン画面](images/android-google-login.png)
-	
+
 	![Google ログイン画面](images/ios-google-login.png)
-	
+
 	この画面は、デバイスに Facebook アプリをインストールしていない場合、または現在 Facebook に ログインしていない場合は少し違って見えるかもしれません。 
 
 1. **「OK」**をクリックして、{{site.data.keyword.amashort}} が Google ユーザー ID を認証目的に使用することを許可します。

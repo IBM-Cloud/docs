@@ -1,12 +1,16 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-2"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # Benutzer mit angepasstem Identitätsprovider authentifizieren
 {: #custom-id}
@@ -44,7 +48,7 @@ Erstellen Sie einen angepassten Identitätsprovider, der den {{site.data.keyword
 Der {{site.data.keyword.amashort}}-Anforderungsablauf für eine Webanwendung ist vergleichbar mit dem Ablauf für einen mobilen Client. {{site.data.keyword.amashort}} schützt jedoch die Webanwendung anstatt einer {{site.data.keyword.Bluemix_notm}}-Back-End-Ressource.
 
   * Die ursprüngliche Anforderung wird von der Webanwendung (zum Beispiel von einem Anmeldeformular) gesendet.
-  * Die letzte Weiterleitung erfolgt an den geschützten Bereich der Webanwendung selbst anstatt an die geschützte Back-End-Ressource. 
+  * Die letzte Weiterleitung erfolgt an den geschützten Bereich der Webanwendung selbst anstatt an die geschützte Back-End-Ressource.
 
 ## Informationen zu angepassten Identitätsprovidern
 {: #custom-id-about}
@@ -81,7 +85,7 @@ Beim Erstellen eines angepassten Identitätsproviders haben Sie folgende Möglic
 	}
 	```
 	{: codeblock}
-	
+
 1. Sie können angepasste Logik für die Validierung der bereitgestellten Antwort auf eine Authentifizierungsanforderung implementieren.
 
 1. Sie können ein angepasstes Benutzeridentitätsobjekt definieren, das beliebige erforderliche angepasste Eigenschaften enthält. Es folgt ein Beispiel für ein angepasstes Benutzeridentitätsobjekt, das nach einer erfolgreichen Authentifizierung vom Client abgerufen wird:
@@ -104,8 +108,8 @@ Beim Erstellen eines angepassten Identitätsproviders haben Sie folgende Möglic
 
 Verwenden Sie beliebige der folgenden Beispiele für Node.js-Implementierungen eines angepassten Identitätsproviders als Referenz, wenn Sie Ihren angepassten Identitätsprovider entwickeln. Laden Sie den vollständigen Anwendungscode aus den GitHub-Repositorys herunter.
 
- * [Einfaches Beispiel](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
- * [Erweitertes Beispiel](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
+ * [Einfaches Beispiel ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample "Symbol für externen Link"){: new_window}
+ * [Erweitertes Beispiel ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management "Symbol für externen Link"){: new_window}
 
 ## Typische Kommunikation zwischen dem {{site.data.keyword.amashort}}-Server und einem angepassten Identitätsprovider
 {: #custom-id-comm}
@@ -129,10 +133,9 @@ Ein angepasster Identitätsprovider unterstützt genau einen angepassten Authent
 
 ## Nächste Schritte
 {: #next-steps}
+
 * [Angepassten Identitätsprovider erstellen](custom-auth-identity-provider.html)
 * [{{site.data.keyword.amashort}} für die angepasste Authentifizierung konfigurieren](custom-auth-config-mca.html)
 * [Angepasste Authentifizierung für Android konfigurieren](custom-auth-android.html)
 * [Angepasste Authentifizierung für iOS konfigurieren (Swift-SDK)](custom-auth-ios-swift-sdk.html)
-* [Angepasste Authentifizierung für iOS konfigurieren (Objective-C-SDK)](custom-auth-ios.html)
 * [Angepasste Authentifizierung für Cordova konfigurieren](custom-auth-cordova.html)
-

@@ -1,12 +1,16 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-2"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # カスタム ID プロバイダーを使用したユーザーの認証
 {: #custom-id}
@@ -44,7 +48,7 @@ lastupdated: "2016-11-2"
 {{site.data.keyword.amashort}} Web アプリケーション要求フローは、モバイル・クライアントのフローに似ています。ただし、{{site.data.keyword.amashort}} は、{{site.data.keyword.Bluemix_notm}} バックエンド・リソースではなくて Web アプリケーションを保護します。
 
   * 最初の要求は Web アプリケーションによって (例えばログイン・フォームから) 送信されます。
-  * 最終のリダイレクトは、バックエンド保護リソースではなく Web アプリケーション自体の保護領域へのリダイレクトです。 
+  * 最終のリダイレクトは、バックエンド保護リソースではなく Web アプリケーション自体の保護領域へのリダイレクトです。
 
 ## カスタム ID プロバイダーについての理解
 {: #custom-id-about}
@@ -81,7 +85,7 @@ lastupdated: "2016-11-2"
 	}
 	```
 	{: codeblock}
-	
+
 1. 提供された認証チャレンジ応答を検証するカスタム・ロジックを実装します。
 
 1. 必要なカスタム・プロパティーを含むカスタム・ユーザー ID オブジェクトを定義します。認証が成功した後にクライアントが取得するカスタム・ユーザー ID オブジェクトの例を以下に示します。
@@ -104,8 +108,8 @@ lastupdated: "2016-11-2"
 
 カスタム ID プロバイダーを開発する際に参考として使用できる、カスタム ID プロバイダーの Node.js 実装のサンプルを以下に示します。GitHub リポジトリーから、完全なアプリケーション・コードをダウンロードしてください。
 
- * [簡単なサンプル](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
- * [高度なサンプル](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
+ * [簡単なサンプル![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample "外部リンク・アイコン"){: new_window}
+ * [高度なサンプル![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management "外部リンク・アイコン"){: new_window}
 
 ## {{site.data.keyword.amashort}} Server とカスタム ID プロバイダーとの間の標準的な通信
 {: #custom-id-comm}
@@ -129,10 +133,9 @@ lastupdated: "2016-11-2"
 
 ## 次のステップ
 {: #next-steps}
+
 * [カスタム ID プロバイダーの作成](custom-auth-identity-provider.html)
 * [カスタム認証用の {{site.data.keyword.amashort}} の構成 ](custom-auth-config-mca.html)
 * [Android 用のカスタム認証の構成 ](custom-auth-android.html)
 * [iOS 用のカスタム認証の構成 (Swift SDK)](custom-auth-ios-swift-sdk.html)
-* [iOS 用のカスタム認証の構成 (Objective-C SDK)](custom-auth-ios.html)
 * [Cordova 用のカスタム認証の構成 ](custom-auth-cordova.html)
-

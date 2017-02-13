@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-05"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 {:new_window: target="_blank"}
@@ -35,7 +35,7 @@ La configurazione dell'autenticazione Google per la tua applicazione Android {{s
 ## Creazione di un progetto con Google Developer Console
 {: #create-google-project}
 
-Per iniziare a usare Google come un provider di identità, creare un progetto nella [Google Developer Console](https://console.developers.google.com).
+Per iniziare a usare Google come un provider di identità, crea un progetto nella [Google Developer Console ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.developers.google.com "Icona link esterno"){: new_window}.
 Parte della creazione di un progetto consiste nell'ottenere un ID client Google.  L'ID client Google è un identificativo univoco per la tua applicazione utilizzato dall'autenticazione Google ed è necessario per la configurazione del servizio {{site.data.keyword.amashort}}.
 
 Dalla console:
@@ -53,8 +53,7 @@ Per completare la creazione delle credenziali, devi aggiungere l'**impronta digi
 
 Per fare in modo che Google verifichi l'autenticità della tua applicazione, devi specificare un'impronta digitale di certificato di firma.
 
-Il sistema operativo Android richiede che tutte le applicazioni installate su un dispositivo Android siano firmate con un certificato sviluppatore. Un'applicazione Android può essere messa a punto in due modalità: debug e rilascio. È di norma consigliato disporre di certificati differenti per le modalità di debug e rilascio.  I certificati utilizzati per firmare le applicazioni Android in modalità di debug sono forniti con l'SDK Android.  L'SDK Android è in genere installato automaticamente da Android Studio. Quando vuoi rilasciare la tua applicazione a Google Play, devi firmare la tua applicazione con un altro certificato che di norma generi tu stesso. Per ulteriori informazioni,
-vedi il documento relativo alla [firma delle tue applicazioni Android](http://developer.android.com/tools/publishing/app-signing.html).
+Il sistema operativo Android richiede che tutte le applicazioni installate su un dispositivo Android siano firmate con un certificato sviluppatore. Un'applicazione Android può essere messa a punto in due modalità: debug e rilascio. È di norma consigliato disporre di certificati differenti per le modalità di debug e rilascio.  I certificati utilizzati per firmare le applicazioni Android in modalità di debug sono forniti con l'SDK Android.  L'SDK Android è in genere installato automaticamente da Android Studio. Quando vuoi rilasciare la tua applicazione a Google Play, devi firmare la tua applicazione con un altro certificato che di norma generi tu stesso. Per ulteriori informazioni, vedi il documento relativo alla [firma delle tue applicazioni Android![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://developer.android.com/tools/publishing/app-signing.html "Icona link esterno"){: new_window}.
 
 Un keystore che contiene un certificato per gli ambienti di sviluppo è memorizzato in un file `~/.android/debug.keystore`. La password keystore predefinita è: `android`. Questo certificato viene utilizzato per mettere a punto applicazioni in modalità di debug.
 
@@ -67,7 +66,7 @@ Un keystore che contiene un certificato per gli ambienti di sviluppo è memorizz
 
 	Puoi utilizzare la stessa sintassi anche per recuperare l'hash chiave del tuo certificato di modalità di rilascio. Sostituisci percorso keystore e alias nel comando.
 
-1. Nella finestra di dialogo delle credenziali della console Google trova la riga che inizia con `SHA1` sotto **Certificate Fingerprints**. Copia il valore dell'impronta digitale ottenuta eseguendo il comando **keytool** nella text Developers Console.
+1. Nella finestra di dialogo delle credenziali della console Google trova la riga che inizia con `SHA1` sotto **Certificate Fingerprints**. Copia il valore dell'impronta digitale ottenuta eseguendo il comando **keytool** nella casella di testo Developers Console.
 
 ###Nome pacchetto
 
@@ -158,7 +157,7 @@ Dal tuo progetto Android Studio.
 
 	Per ulteriori informazioni su come ottenere questi valori, consulta [Prima di cominciare](##before-you-begin).
 
-	**Nota:** se la tua applicazione Android è alla versione 6.0 (Livello API 23) o successiva, ti devi assicurare che l'applicazione disponga di una chiamata `android.permission.GET_ACCOUNTS` prima di richiamare il `register`. Per ulteriori informazioni, vedi [https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}.
+	**Nota:** se la tua applicazione Android è alla versione 6.0 (Livello API 23) o successiva, ti devi assicurare che l'applicazione disponga di una chiamata `android.permission.GET_ACCOUNTS` prima di richiamare il `register`. Per ulteriori informazioni, vedi il documento relativo alla [Richiesta di autorizzazioni su Android ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.android.com/training/permissions/requesting.html "Icona link esterno"){: new_window}.
 
 1. Aggiungi il seguente codice alla tua attività:
 
@@ -177,7 +176,7 @@ Dal tuo progetto Android Studio.
 
 Dopo che l'SDK client è stato inizializzato e il gestore autenticazione Google è stato registrato, puoi iniziare a effettuare richieste alla tua applicazione di back-end.
 
-Prima di iniziare, devi disporre di una applicazione di backend mobile creata con il contenitore tipo **MobileFirst Services Starter** e disporre già di una risorsa protetta dall'endpoint  {{site.data.keyword.amashort}} `/protected`. Per ulteriori informazioni, vedi [Protezione delle risorse](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
+Prima di iniziare, devi disporre di una applicazione di backend mobile creata con il contenitore tipo **MobileFirst Services Starter** e disporre già di una risorsa protetta dall'endpoint  {{site.data.keyword.amashort}} `/protected`. Per ulteriori informazioni, vedi [Protezione delle risorse](protecting-resources.html).
 
 1. Prova a inviare una richiesta all'endpoint protetto della tua applicazione di backend mobile nel tuo browser desktop aprendo `{applicationRoute}/protected`, ad esempio: `http://my-mobile-backend.mybluemix.net/protected`.  Per informazioni su come ottenere il valore `{applicationRoute}`, consulta   [Prima di cominciare](#before-you-begin).
 

@@ -1,10 +1,16 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-06"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
+
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # Informationen zu {{site.data.keyword.amashort}}
 {: #mca-overview}
@@ -20,14 +26,19 @@ Sie können den {{site.data.keyword.amashort}}-Service verwenden, um Node.js- un
 {: #components}
 
 * **{{site.data.keyword.amashort}}-Dashboard**: Konfiguriert verschiedene Authentifizierungstypen
+
 * **{{site.data.keyword.amashort}}-Client-SDK**: Instrumentiert mobile Anwendungen zur Verwendung der {{site.data.keyword.amashort}}-Funktionalität. Unterstützte Plattformen: iOS 8+, Android 4+, Cordova und Webanwendungen.
+
 * **{{site.data.keyword.amashort}}-Server-SDK**: Schützt Ressourcen, die in {{site.data.keyword.Bluemix_notm}} gehostet werden. Gegenwärtig unterstützte Laufzeiten sind Node.js und Liberty for Java&trade;.
 
 ## Authentifizierungstypen
 {: #authtypes}
 Sie können die folgenden Typen von Authentifizierung in Ihrer mobilen App verwenden:
+
 * **Facebook**: Facebook als Identitätsprovider verwenden. Ihre Benutzer melden sich bei der mobilen oder Web-App mit ihren Facebook-Berechtigungsnachweisen an.
+
 * **Google**: Google als Identitätsprovider verwenden. Ihre Benutzer melden sich bei der mobilen oder Web-App mit ihren Google+-Berechtigungsnachweisen an.
+
 * **Angepasst**: Eigenen Identitätsprovider erstellen. Sie können vollständig steuern, welche Arten von Informationen erfasst und validiert werden.
 
 ## Architekturübersicht
@@ -36,13 +47,21 @@ Sie können die folgenden Typen von Authentifizierung in Ihrer mobilen App verwe
 ![Architekturübersicht - Diagramm](images/mca-overview.jpg)
 
 * Schützen Sie Ihre Cloudressourcen (Node.js-Anwendungen) mit dem {{site.data.keyword.amashort}}-Server-SDK.
+
 * Verwenden Sie die vom {{site.data.keyword.amashort}}-Client-SDK bereitgestellte Klasse `Request` für die Kommunikation mit Ihren geschützten Cloudressourcen.
+
 * Das {{site.data.keyword.amashort}}-Server-SDK erkennt eine nicht autorisierte Anforderung und gibt den Code HTTP 401 für die Berechtigungsanforderung (Challenge) zurück.
+
 * Das {{site.data.keyword.amashort}}-Client-SDK erkennt die Berechtigungsanforderung (Challenge) mit dem Code HTTP 401 und startet automatisch den Authentifizierungsprozess mit dem {{site.data.keyword.amashort}}-Service.
+
 * Facebook-, Google- oder angepasste Authentifizierung wird versucht.
+
 * Nach einer erfolgreichen Authentifizierung gibt {{site.data.keyword.amashort}} ein Berechtigungstoken zurück.
+
 * Das {{site.data.keyword.amashort}}-Client-SDK fügt das Berechtigungstoken automatisch der ursprünglichen Anforderung hinzu und sendet die Anforderung erneut an die Cloudressource.
+
 * Das {{site.data.keyword.amashort}}-Server-SDK extrahiert das Zugriffstoken aus der Anforderung und validiert es mit dem {{site.data.keyword.amashort}}-Service.
+
 * Der Zugriff wird erteilt.  Die Antwort wird an die mobile Anwendung zurückgegeben.
 
 ## Anforderungsablauf
@@ -76,8 +95,10 @@ Wenn bei der Verwendung von {{site.data.keyword.amashort}} Probleme oder Fragen 
 
 Wenn Sie eine Frage über die Foren stellen, kennzeichnen Sie Ihre Frage, so dass sie von den {{site.data.keyword.Bluemix_notm}}-Entwicklerteams gesehen wird.
 
-* Bei technischen Fragen zur Entwicklung und Bereitstellung einer App mit {{site.data.keyword.amashort}} posten Sie Ihre Frage unter [Stack Overflow](http://stackoverflow.com/search?q={{site.data.keyword.amashort}}+ibm-bluemix){:new_window} und kennzeichnen Sie Ihre Frage mit "ibm-bluemix" und "{{site.data.keyword.amashort}}".
-* Bei Fragen zum Service und Anweisungen zu ersten Schritten verwenden Sie das Forum [IBM developerWorks dW Answers](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=mobile+client+access%20%2B[bluemix]){:new_window}. 
+* Bei technischen Fragen zur Entwicklung und Bereitstellung einer App mit {{site.data.keyword.amashort}} posten Sie Ihre Frage unter [Stack Overflow ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://stackoverflow.com/search?q={{site.data.keyword.amashort}}+ibm-bluemix "Symbol für externen Link"){: new_window} mit dem Tag "ibm-bluemix" und "{{site.data.keyword.amashort}}".
+* Bei Fragen zum Service und zu ersten Schritten verwenden Sie das Forum [IBM developerWorks ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=mobile+client+access%20%2B[bluemix] "Symbol für externen Link"){: new_window}.
+
+  
 
 Detailliertere Informationen zur Nutzung der Foren finden Sie unter [Hilfe anfordern](https://www.{DomainName}/docs/support/index.html#getting-help).
 

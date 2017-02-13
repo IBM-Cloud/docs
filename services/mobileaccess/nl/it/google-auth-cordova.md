@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-05"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 {:new_window: target="_blank"}
@@ -25,7 +25,7 @@ Per integrare le tue applicazioni Cordova {{site.data.keyword.amafull}} con l'au
 * Un'istanza di un'applicazione  {{site.data.keyword.Bluemix_notm}} che è protetta da un servizio {{site.data.keyword.amashort}}. Per ulteriori informazioni su come creare un servizio di back-end {{site.data.keyword.Bluemix_notm}}, consulta [Introduzione](index.html).
 * La tua rotta dell'applicazione. Questa è l'URL della tua applicazione di back-end.
 * Il tuo **TenantID**. Apri il tuo servizio nel dashboard {{site.data.keyword.Bluemix_notm}}. Fai clic su **Opzioni mobili**. Il valore `tenantId` (noto anche come `appGUID`)  viene visualizzato nel campo **GUID applicazione / TenantId**. Avrai bisogno di questo valore per inizializzare il gestore autorizzazione.
-*  Trova la regione in cui è ospitata la tua applicazione {{site.data.keyword.Bluemix_notm}}. Puoi trovare la tua regione Bluemix corrente nell'intestazione, accanto all'icona **Avatar** ![Icona Avatar](images/face.jpg "Icona Avatar"). Il valore della regione deve essere uno dei seguenti: **Stati Uniti Sud**, **Sydney** o **UK**. I valori costanti della SDK esatti che corrispondono a tali nomi sono indicati negli esempi di codice. 
+*  Trova la regione in cui è ospitata la tua applicazione {{site.data.keyword.Bluemix_notm}}. Puoi trovare la tua regione Bluemix corrente nell'intestazione, accanto all'icona **Avatar** ![Icona Avatar](images/face.jpg "Icona Avatar"). Il valore della regione deve essere uno dei seguenti: **Stati Uniti Sud**, **Sydney** o **UK**. I valori costanti della SDK esatti che corrispondono a tali nomi sono indicati negli esempi di codice.
 * (facoltativo) Acquisisci dimestichezza con le seguenti sezioni:
    * [Abilitazione dell'autenticazione Google per le applicazioni Android](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html)
    * [Abilitazione dell'autenticazione Google per le applicazioni iOS](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html)
@@ -55,10 +55,10 @@ I passi richiesti per configurare la piattaforma Android di un'applicazione Cord
 	}
 	```
 	{: codeblock}
-	
+
 1. Sincronizza il tuo progetto con Gradle facendo clic su **Tools > Android > Sync Project with Gradle Files**.
 
-1. L'API `GoogleAuthenticationManager` continua a dover essere registrata nel tuo codice nativo. Aggiungi questo codice al metodo `onCreate` del'attività principale: 
+1. L'API `GoogleAuthenticationManager` continua a dover essere registrata nel tuo codice nativo. Aggiungi questo codice al metodo `onCreate` del'attività principale:
 
 	```Java
 	String tenantId = "<tenantId>";
@@ -69,7 +69,7 @@ I passi richiesti per configurare la piattaforma Android di un'applicazione Cord
 	{: codeblock}
 
 1. Aggiungi il seguente codice alla tua attività:
- 
+
 	```Java
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -85,7 +85,7 @@ I passi richiesti per configurare la piattaforma Android di un'applicazione Cord
 
 I passi richiesti per configurare la piattaforma iOS di un'applicazione Cordova per l'integrazione dell'autenticazione Google sono simili a quelli per le applicazioni native. La differenza principale consiste nel fatto che attualmente la CLI Cordova non supporta il gestore dipendenze CocoaPods. Devi aggiungere manualmente i file richiesti per l'integrazione con l'autenticazione Google. Per ulteriori informazioni, vedi [Abilitazione dell'autenticazione Google per le applicazioni iOS (SDK Swift)](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html). Completa la seguente procedura:
 
-   * [Preparazione della tua applicazione per l'accesso Google](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html#google-sign-in-ios): prepara l'accesso Google per l'autenticazione delle applicazioni iOS {{site.data.keyword.amashort}}. 
+   * [Preparazione della tua applicazione per l'accesso Google](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html#google-sign-in-ios): prepara l'accesso Google per l'autenticazione delle applicazioni iOS {{site.data.keyword.amashort}}.
 
    * [Configurazione di MCA per l'autenticazione Google](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html#google-auth-ios-config): configura il tuo servizio {{site.data.keyword.amashort}} ad utilizzare l'accesso Google.
 
@@ -97,14 +97,14 @@ I passi richiesti per configurare la piattaforma iOS di un'applicazione Cordova 
 
 Abilita `Keychain Sharing`. Vai alla scheda `Funzionalità` e passa `Keychain Sharing` su `Attivo` nel tuo progetto Xcode.
 
- 
+
 ### Inizializzazione del gestore autorizzazione nel tuo codice iOS.
 
 Inizializza il gestore autorizzazione {{site.data.keyword.amashort}} in Objective-C nel file `AppDelgate.m`.
 
 ```
-#import "<your_module_name>-Swift.h" 
- 
+#import "<your_module_name>-Swift.h"
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 
 {
@@ -126,12 +126,12 @@ Inizializza il gestore autorizzazione {{site.data.keyword.amashort}} in Objectiv
 ```
 {: codeblock}
 
-**Nota:** 
+**Nota:**
 
 * Sostituisci `<your_module_name>` con il nome modulo del tuo progetto. Ad esempio, se il tuo nome modulo è `Cordova`,
 la riga importata deve essere `#import "Cordova-Swift.h"` Trova il nome modulo e vai alla scheda
 `Build Settings`,  `Packaging` > `Product Module Name`.
-* Sostituisci il tuo `<tenantId>` con il tuo ID tenant (consulta [Prima di cominciare](#before-you-begin)). 
+* Sostituisci il tuo `<tenantId>` con il tuo ID tenant (consulta [Prima di cominciare](#before-you-begin)).
 
 
 ## Inizializzazione dell'SDK client {{site.data.keyword.amashort}} nel tuo Cordova WebView
@@ -144,7 +144,7 @@ BMSClient.initialize("<applicationBluemixRegion>");
 ```
 {: codeblock}
 
-Sostituisci `<applicationBluemixRegion>` con la tua regione (consulta [Prima di cominciare](#before-you-begin)). 
+Sostituisci `<applicationBluemixRegion>` con la tua regione (consulta [Prima di cominciare](#before-you-begin)).
 
 ## Verifica dell'autenticazione
 {: #google-auth-cordova-test}
@@ -177,9 +177,9 @@ Devi disporre di una applicazione di backend protetta da {{site.data.keyword.ama
 1. Esegui la tua applicazione. Viene visualizzata la schermata di accesso a Google.
 
 	![Schermata di accesso Google](images/android-google-login.png)
-	
+
 	![Schermata di accesso Google](images/ios-google-login.png)
-	
+
 	Questa schermata può avere un aspetto lievemente differente se sul tuo dispositivo non è installata l'applicazione Facebook o se non sei attualmente collegato a Facebook.
 
 1. Facendo clic su **OK**, stai autorizzando {{site.data.keyword.amashort}} a utilizzare la tua identità utente Google per scopi di autenticazione.

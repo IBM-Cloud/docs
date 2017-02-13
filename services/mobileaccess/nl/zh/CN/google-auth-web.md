@@ -1,18 +1,21 @@
 ---
 
 copyright:
-  year: 2016
-lastupdated: "2016-11-22"
+  year: 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
 {:codeblock: .codeblock}
+{:pre: .pre}
 
 # 启用 Web 应用程序的 Google 认证
 {: #google-auth-web}
 
-使用 Google 登录在 Web 应用程序上认证用户。添加 {{site.data.keyword.amafull}} 安全功能。 
+使用 Google 登录在 Web 应用程序上认证用户。添加 {{site.data.keyword.amafull}} 安全功能。
 
 
 ## 开始之前
@@ -28,12 +31,12 @@ lastupdated: "2016-11-22"
 ## 针对 Web 站点配置 Google 应用程序
 {: #google-auth-config}
 
-要开始将 Google 用作身份提供者，请在 [Google 开发者控制台](https://console.developers.google.com)中创建项目。创建项目的步骤之一是获取 **Google 客户端标识**和**私钥**。Google 客户端标识和私钥是 Google 认证针对您的应用程序使用的唯一标识，设置 {{site.data.keyword.amashort}} 仪表板时需要这些标识。
+要开始将 Google 用作身份提供者，请在 [Google 开发者控制台 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.developers.google.com "外部链接图标"){: new_window} 中创建项目。创建项目的步骤之一是获取 **Google 客户端标识**和**私钥**。Google 客户端标识和私钥是 Google 认证针对您的应用程序使用的唯一标识，设置 {{site.data.keyword.amashort}} 仪表板时需要这些标识。
 
-1. 在 Google 开发者控制台中打开 Google 应用程序。 
-3. 添加 **Google+** API。 
+1. 在 Google 开发者控制台中打开 Google 应用程序。
+3. 添加 **Google+** API。
 3. 使用 OAuth 创建凭证。在应用程序类型中选择 Web 应用程序。在“授权重定向 URI”框中，输入 {{site.data.keyword.amashort}} 重定向 URI。
-从 {{site.data.keyword.amashort}} 仪表板的 Google 配置屏幕中获取 {{site.data.keyword.amashort}} 重定向授权 URI（请参阅以下步骤）。 
+从 {{site.data.keyword.amashort}} 仪表板的 Google 配置屏幕中获取 {{site.data.keyword.amashort}} 重定向授权 URI（请参阅以下步骤）。
 4. 保存更改。记录 **Google 客户端标识**和**应用程序私钥**。
 
 
@@ -61,33 +64,33 @@ lastupdated: "2016-11-22"
 
 要启动授权过程：
 
-1. 从存储在 `VCAP_SERVICES` 环境变量的服务凭证中，检索授权端点 (`authorizationEndpoint`) 和客户端标识 (`clientId`)。 
+1. 从存储在 `VCAP_SERVICES` 环境变量的服务凭证中，检索授权端点 (`authorizationEndpoint`) 和客户端标识 (`clientId`)。
 
-	`var cfEnv = require("cfenv");` 
-	
-	`var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;` 
+	`var cfEnv = require("cfenv");`
 
-	**注：**如果在添加 Web 支持之前，您已向应用程序添加了 {{site.data.keyword.amashort}} 服务，那么可能在服务凭证中没有令牌端点。请改为使用下列 URL，具体取决于 {{site.data.keyword.Bluemix_notm}} 区域： 
- 
-	美国南部： 
+	`var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;`
+
+	**注：**如果在添加 Web 支持之前，您已向应用程序添加了 {{site.data.keyword.amashort}} 服务，那么可能在服务凭证中没有令牌端点。请改为使用下列 URL，具体取决于 {{site.data.keyword.Bluemix_notm}} 区域：
+
+	美国南部：
 
 	`  https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization
-   ` 
+   `
 
-	伦敦： 
+	伦敦：
 
-	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization` 
+	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization`
 
-	悉尼： 
+	悉尼：
 
 	`https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization`
-	 
+
 2. 使用 `response_type("code")`、`client_id` 和 `redirect_uri` 作为查询参数，构建授权服务器 URI。
 
 3. 从 Web 应用程序重定向到生成的 URI。
-  
+
 	以下示例从 `VCAP_SERVICES` 变量检索参数，构建 URL，并发送重定向请求。
-  
+
 	```Java
  var cfEnv = require("cfenv"); 
  app.get("/protected", checkAuthentication, function(req, res, next){ 
@@ -100,9 +103,9 @@ lastupdated: "2016-11-22"
 
 	// Check if user is authenticated 
  	if (req.session.userIdentity){ 
-		next() 
-	} else { 
-		// If not - redirect to authorization server 
+		next()
+			} else {
+				// If not - redirect to authorization server 
 				var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials; 
 				var authorizationEndpoint = mcaCredentials.authorizationEndpoint; 
 				var clientId = mcaCredentials.clientId; 
@@ -112,7 +115,7 @@ lastupdated: "2016-11-22"
 				redirectUrl += "&redirect_uri=" + redirectUri; 
 				res.redirect(redirectUrl); 
 			} 
-		} 
+		}
 	   	}
        }
 	```
@@ -125,30 +128,30 @@ lastupdated: "2016-11-22"
 ## 获取令牌
 {: #google-auth-tokens}
 
-下一步是使用之前收到的授权代码获取访问令牌和身份令牌。 
+下一步是使用之前收到的授权代码获取访问令牌和身份令牌。
 
 1. 从存储在 `VCAP_SERVICES` 环境变量的服务凭证中检索令牌
-`tokenEndpoint`、`clientId` 和 `secret`。 
- 
-	**注：**如果在添加 Web 支持之前，您已使用 {{site.data.keyword.amashort}}，那么可能在服务凭证中没有令牌端点。
-请改为使用下列 URL，具体取决于 Bluemix 区域： 
+`tokenEndpoint`、`clientId` 和 `secret`。
 
-	美国南部： 
-  
+	**注：**如果在添加 Web 支持之前，您已使用 {{site.data.keyword.amashort}}，那么可能在服务凭证中没有令牌端点。
+请改为使用下列 URL，具体取决于 Bluemix 区域：
+
+	美国南部：
+
 	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/token`
- 
-	伦敦： 
- 
-	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token` 
- 
-	悉尼： 
- 
+
+	伦敦：
+
+	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token`
+
+	悉尼：
+
 	`https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/token`
 
 2. 使用 grant_type ("authorization_code")、client_id、redirect_uri 和 code 作为表单参数，向令牌服务器 URI 发送 post 请求。发送 `clientId` 和 `clientSecret` 作为基本 HTTP 认证凭证。
- 
+
 	以下代码会检索必要的值，并使用 post 请求发送这些值。
-    
+
 	```Java    
   var cfEnv = require("cfenv");
   var base64url = require("base64url ");
@@ -178,12 +181,12 @@ lastupdated: "2016-11-22"
 			}
 			).auth(mcaCredentials.clientId, mcaCredentials.secret);
 		}
-	); 
+	);
 	```
 	{: codeblock}
 
 	`redirect_uri` 参数是 URI，用于在使用 Google+ 成功认证或认证失败之后进行重定向，且必须与 {{site.data.keyword.amashort}} 仪表板中定义的 `redirect_uri` 匹配。  
-   
+
 	请确保在 10 分钟内发送此 POST 请求，因为随后授权代码将到期。
 10 分钟之后，需要新代码。
 
@@ -202,17 +205,14 @@ lastupdated: "2016-11-22"
 有了访问令牌，就可以与受 {{site.data.keyword.amashort}} 授权过滤器保护
 的资源进行通信。请阅读有关[保护资源](protecting-resources.html)的内容。
 
-要对受保护资源发出请求，请使用以下结构向请求添加 Authorization 头： 
+要对受保护资源发出请求，请使用以下结构向请求添加 Authorization 头：
 
 `Authorization=Bearer <accessToken> <idToken>`
 
 ####提示：
-{: #tips} 
+{: #tips}
 
 * `accessToken` 和 `idToken` 必须以空格分隔。
 
 * `idToken` 是可选的。如果您未提供身份令牌，那么虽然可以访问受保护资源，但
-是不会收到有关已授权用户的任何信息。 
-
-
-
+是不会收到有关已授权用户的任何信息。

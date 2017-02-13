@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  year: 2016
-lastupdated: "2016-09-07"
+  year: 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
 
@@ -81,5 +81,3 @@ Google Application ID および Secret を作成した後、{{site.data.keyword.
 
 これで、保護リソースに要求を出すことができるようになりました。
 保護リソースへのすべての要求には、許可要求ヘッダー・フィールド内にアクセス・トークンが含まれている必要があります。
-
-

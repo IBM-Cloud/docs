@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-02"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 {:new_window: target="_blank"}
@@ -65,7 +65,7 @@ app Facebook é criado. Este é um identificador exclusivo usado pelo Facebook p
 
 Você precisa desse valor para configurar a autenticação do Facebook para o seu aplicativo móvel ou da web.
 
-1. Acesse o site do [Facebook for Developers](https://developers.facebook.com).
+1. Acesse o site [Facebook for Developers ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developers.facebook.com "Ícone de link externo"){: new_window}.
 
 1. Abra a lista suspensa **Meus Aplicativos** e selecione **Incluir um novo aplicativo**.
 
@@ -83,5 +83,4 @@ Você precisa desse valor para configurar a autenticação do Facebook para o se
 
 * [Ativando a autenticação do Facebook para apps Android](facebook-auth-android.html)
 * [Ativando a autenticação do Facebook para apps iOS (Swift SDK)](facebook-auth-ios-swift-sdk.html)
-* [Ativando a autenticação do Facebook para apps iOS (Objective-C SDK - Deprecated)](facebook-auth-ios.html)
 * [Ativando a autenticação do Facebook para apps Cordova](facebook-auth-cordova.html)

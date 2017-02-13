@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-07"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
 
@@ -30,5 +30,5 @@ Verwenden Sie das {{site.data.keyword.amafull}}-Dashboard, um die angepasste Aut
 ## Nächste Schritte
 {: #next-steps}
 * [Angepasste Authentifizierung für Android konfigurieren](custom-auth-android.html)
-* [Angepasste Authentifizierung für iOS konfigurieren](custom-auth-ios.html)
+* [Angepasste Authentifizierung für iOS konfigurieren](custom-auth-ios-swift-sdk.html)
 * [Angepasste Authentifizierung für Cordova konfigurieren](custom-auth-cordova.html)

@@ -1,12 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-04"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 
 # {{site.data.keyword.amashort}} mit einer lokalen Entwicklungsumgebung verwenden
@@ -18,11 +21,12 @@ Sie können Ihre lokale Entwicklungsumgebung so konfigurieren, dass sie den {{si
 {: #before-you-begin}
 
 Voraussetzungen:
+
 * Instanz einer {{site.data.keyword.Bluemix_notm}}-Anwendung, die durch den {{site.data.keyword.amashort}}-Service geschützt ist. Weitere Informationen zur Erstellung einer {{site.data.keyword.Bluemix_notm}}-Back-End-Anwendung finden Sie in der [Einführung](index.html).
 * Die **Tenant-ID**. Öffnen Sie den Service im {{site.data.keyword.amafull}}-Dashboard. Klicken Sie auf die Schaltfläche **Mobile Systemerweiterungen**. Im Feld **App-GUID/TenantId** wird der Wert `tenantId` (auch als `appGUID` bezeichnet) angezeigt. Sie benötigen diesen Wert für die Initialisierung von Authorization Manager.
 * Die **Anwendungsroute**. Dies ist die URL Ihrer Back-End-Anwendung. Sie benötigen diesen Wert zum Senden von Anforderungen an die geschützten Endpunkte der Anwendung.
 * Die {{site.data.keyword.Bluemix_notm}}-**Region**.  Ihre aktuelle {{site.data.keyword.Bluemix_notm}}-Region finden Sie im Header neben dem Symbol **Avatar** ![Avatarsymbol](images/face.jpg "Avatarsymbol"). Der angezeigte Regionswert muss einer der folgenden sein: `USA (Süden)`, `Sydney` oder `Vereinigtes Königreich`. Die genaue, für SDK erforderliche Syntax finden Sie bei den Kommentaren in den Codebeispielen. Sie benötigen diesen Wert für die Initialisierung des {{site.data.keyword.amashort}}-Clients.
-* Android Studio-Projekt, das für das Arbeiten mit Gradle eingerichtet ist. Weitere Informationen zur Einrichtung Ihrer Android-Entwicklungsumgebung finden Sie in [Google Developer Tools](http://developer.android.com/sdk/index.html).
+* Android Studio-Projekt, das für das Arbeiten mit Gradle eingerichtet ist. Weitere Informationen zur Einrichtung Ihrer Android-Entwicklungsumgebung finden Sie in [Google Developer Tools ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://developer.android.com/sdk/index.html "Symbol für externen Link"){: new_window}.
 
 ## Server-SDK einrichten
 {: #serversetup}
@@ -91,14 +95,15 @@ Informationen zum Suchen nachdem Wert für *tenantID* finden Sie in [Vorbereitun
 
 Initialisieren Sie die {{site.data.keyword.amashort}}-Client-SDKs mit der realen URL Ihrer {{site.data.keyword.Bluemix_notm}}-Anwendung und verwenden Sie den lokalen Host (localhost) oder die IP-Adresse in jeder Ihrer Anforderungen. Weitere Informationen finden Sie in den folgenden Beispielen.
 
-Ersetzen Sie die Region durch die richtige Region.
+Ersetzen Sie die Region durch die richtige Region. Die korrekte Syntax finden Sie in den Codebeispielen.
 
-Ersetzen Sie die Werte *appGUID* und *bluemixAppRoute* durch die Werte, die Sie im Schritt [Vorbereitungen](#before-you-begin) abgerufen haben.
+Ersetzen Sie die Werte *appGUID* und *bluemixAppRoute*. Informationen zum Abrufen dieser Werte finden Sie unter [Vorbereitungen](#before-you-begin).
 
 Es ist möglich, dass Sie `localhost` in den folgenden Beispielen in die tatsächliche IP-Adresse Ihres Entwicklungsservers ändern müssen.
 
 ### Android
 {: #android}
+
 ```Java
 String baseRequestUrl = "http://localhost:3000";
 String bluemixAppRoute = "http://myapp.mybluemix.net";
@@ -135,40 +140,6 @@ request.send(this, new ResponseListener() {
 {: codeblock}
 
 
-
-### iOS - Objective C
-{: #objc}
-
-```Objective-C
-NSString *baseRequestUrl = @"http://localhost:3000";
-NSString *bluemixAppRoute = @"http://myapp.mybluemix.net";
-NSString *bluemixAppGUID = @"your-bluemix-app-guid";
-NSString *tenantId = "your-MCA-service-tenantID";
-
-[[IMFClient sharedInstance]
-			initializeWithBackendRoute:bluemixAppRoute
-			backendGUID:bluemixAppGUID];
-
-[[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: tenantId];
-
-
-NSString *requestPath = [NSString stringWithFormat:@"%@/resource/path",
-								baseRequestUrl];
-
-IMFResourceRequest *request =  [IMFResourceRequest requestWithPath:requestPath
-																method:@"GET"];
-
-[request sendWithCompletionHandler:^(IMFResponse *response, NSError *error) {
-	if (error){
-		NSLog(@"Error :: %@", [error description]);
-	} else {
-		NSLog(@"Response :: %@", [response responseText]);
-	}
-}];
-```
-{: codeblock}
-
-
 ### iOS - Swift
 {: #swift}
 
@@ -185,7 +156,7 @@ IMFResourceRequest *request =  [IMFResourceRequest requestWithPath:requestPath
 
  let requestPath = baseRequestUrl + "/protectedResource"
  let request = Request(url: requestPath, method: HttpMethod.GET)
-        
+
     request.send { (response, error) in
 	if let error = error {
             print("Connection failure")

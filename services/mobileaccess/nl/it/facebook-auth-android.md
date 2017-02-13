@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-05"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 {:new_window: target="_blank"}
@@ -27,7 +27,7 @@ Per utilizzare Facebook come provider di identità nelle tue applicazioni client
 * Il tuo valore **TenantID**. Apri il tuo servizio nel dashboard {{site.data.keyword.amashort}}. Fai clic sul pulsante **Opzioni per dispositivi mobili**. Il valore `tenantId` (noto anche come `appGUID`)  viene visualizzato nel campo **GUID applicazione / TenantId**. Avrai bisogno di questo valore per inizializzare il gestore autorizzazione.
 * La tua **Regione** {{site.data.keyword.Bluemix_notm}}. Puoi trovare la tua regione {{site.data.keyword.Bluemix_notm}} corrente nell'intestazione, accanto all'icona **Avatar** ![Icona Avatar](images/face.jpg "Icona Avatar"). Il valore della regione visualizzato deve essere uno dei seguenti: `Stati Uniti Sud`, `Regno Unito` o `Sydney` e corrisponde al valore delle SDK richiesto nel codice WebView Javascript: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` o `BMSClient.REGION_UK`. Avrai bisogno di questo valore per inizializzare il client {{site.data.keyword.amashort}}.
 * Un progetto Android configurato per lavorare con Gradle. Il progetto non deve essere instrumentato con l'SDK client {{site.data.keyword.amashort}}.  
-* Un'applicazione Facebook con una piattaforma Android sul sito Facebook for Developers (https://developers.facebook.com).
+* Un'applicazione Facebook con una piattaforma Android sul sito [Facebook for Developers![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developers.facebook.com/ "Icona link esterno"){: new_window} .
 
 **Importante:** non devi necessariamente installare separatamente l'SDK Facebook (`com.facebook.FacebookSdk`). L'SDK Facebook viene installato automaticamente da Gradle quando aggiungi l'SDK client Facebook {{site.data.keyword.amashort}}. Puoi saltare questo passo quando aggiungi la piattaforma Android nel sito Facebook for Developers.
 
@@ -36,11 +36,11 @@ Per utilizzare Facebook come provider di identità nelle tue applicazioni client
 
 Dal sito web Facebook for Developers:
 
-1. Accedi al tuo account nel sito web Facebook for Developers (https://developers.facebook.com). 
+1. Accedi al tuo account nel [sito Web Facebook for Developers![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developers.facebook.com "Icona link esterno"){: new_window}.
 
 1. Da **Products List**, scegli **Facebook Login**.
 
-1. Aggiungi o configura la piattaforma Android. 
+1. Aggiungi o configura la piattaforma Android.
 
 1. Specifica il nome pacchetto della tua applicazione Android nel prompt Google Play Package Name. Per trovare il nome pacchetto della tua applicazione Android ricerca `<manifest ..... package="{your-package-name}">` nel file `AndroidManifest.xml` nel progetto Android Studio.
 
@@ -57,15 +57,14 @@ Dal sito web Facebook for Developers:
 	</activity>
 	```
 	{: codeblock}
-	
+
 1. Per fare in modo che Facebook garantisca l'autenticità della tua applicazione, devi specificare un hash del tuo certificato sviluppatore SHA1.
 
 	**Ulteriori informazioni sulla sicurezza Android:** il sistema operativo Android richiede che tutte le applicazioni installate su un dispositivo Android siano firmate con un certificato sviluppatore. L'applicazione Android può essere messa a punto in due modalità: debug e rilascio.
-	
+
 	Utilizza certificati differenti per le modalità di debug e rilascio.  I certificati utilizzati per firmare le applicazioni Android in modalità di debug sono forniti con l'SDK Android, che viene di norma installato automaticamente da Android Studio. Quando vuoi rilasciare la tua applicazione al negozio Google Play, devi firmare la tua applicazione con un altro certificato che di norma generi tu stesso.
-	
-	Puoi immettere due serie di hash chiave con Facebook: un hash chiave per le applicazioni messe a punto in modalità di debug con un certificato di debug e un altro hash chiave per le applicazioni messe a punto in modalità di rilascio con un certificato di rilascio. Per ulteriori informazioni,
-vedi il documento relativo alla [firma delle tue applicazioni Android](http://developer.android.com/tools/publishing/app-signing.html).
+
+	Puoi immettere due serie di hash chiave con Facebook: un hash chiave per le applicazioni messe a punto in modalità di debug con un certificato di debug e un altro hash chiave per le applicazioni messe a punto in modalità di rilascio con un certificato di rilascio. Per ulteriori informazioni, vedi il documento relativo alla [firma delle tue applicazioni Android![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://developer.android.com/tools/publishing/app-signing.html "Icona link esterno"){: new_window}.
 
 1. Il keystore che contiene il certificato che stai usando per l'ambiente di sviluppo è memorizzato nel file `~/.android/debug.keystore`. La password keystore predefinita è: `android`. Utilizza questo certificato per mettere a punto applicazioni in modalità di debug.
 
@@ -186,12 +185,12 @@ Il tuo progetto Android può avere due file `build.gradle`:  per il progetto e p
 	```
 	{: codeblock}
 
-   * Sostituisci `BMSClient.REGION_UK` con la regione appropriata. 
-   * Sostituisci `<MCAServiceTenantId>` con il valore `tenantId` 
-   
+   * Sostituisci `BMSClient.REGION_UK` con la regione appropriata.
+   * Sostituisci `<MCAServiceTenantId>` con il valore `tenantId`
+
 	Per ulteriori informazioni su come ottenere questi valori consulta [Prima di cominciare](#before-you-begin)).
 
-	**Nota:** se la tua applicazione Android è alla versione 6.0 (Livello API 23) o successiva, ti devi assicurare che l'applicazione disponga di una chiamata `android.permission.GET_ACCOUNTS` prima di richiamare il `register`. Per ulteriori informazioni, vedi [https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}.
+	**Nota:** se la tua applicazione Android è alla versione 6.0 (Livello API 23) o successiva, ti devi assicurare che l'applicazione disponga di una chiamata `android.permission.GET_ACCOUNTS` prima di richiamare il `register`. Per ulteriori informazioni, vedi  [questo argomento![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.android.com/training/permissions/requesting.html "Icona link esterno"){: new_window} sul sito Android Developers.
 
 1. Aggiungi il seguente codice alla tua attività:
 
@@ -214,7 +213,7 @@ Dopo che l'SDK client è stato inizializzato e il gestore autenticazione Faceboo
 ### Prima di cominciare il test
 {: #facebook-auth-android-testing-before}
 
-Devi utilizzare il contenitore tipo {{site.data.keyword.mobilefirstbp}} e disporre già di una risorsa protetta da {{site.data.keyword.amashort}} all'endpoint `/protected`. Se devi configurare un endpoint `/protected`, consulta [Protezione delle risorse](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
+Devi utilizzare il contenitore tipo {{site.data.keyword.mobilefirstbp}} e disporre già di una risorsa protetta da {{site.data.keyword.amashort}} all'endpoint `/protected`. Se devi configurare un endpoint `/protected`, consulta [Protezione delle risorse](protecting-resources.html).
 
 1. Prova a inviare una richiesta all'endpoint protetto del backend mobile appena creato nel tuo browser. Apri il seguente URL:  
 
@@ -245,7 +244,7 @@ Devi utilizzare il contenitore tipo {{site.data.keyword.mobilefirstbp}} e dispor
 	});
 	```
 	{: codeblock}
-	
+
 1. Esegui la tua applicazione. Viene visualizzata una schermata di accesso Facebook.
 
 	![immagine](images/android-facebook-login.png)

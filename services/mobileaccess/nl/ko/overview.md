@@ -1,10 +1,16 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-06"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
+
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # {{site.data.keyword.amashort}} 정보
 {: #mca-overview}
@@ -20,14 +26,19 @@ lastupdated: "2016-11-06"
 {: #components}
 
 * **{{site.data.keyword.amashort}} 대시보드**: 다양한 인증 유형을 구성합니다. 
+
 * **{{site.data.keyword.amashort}} 클라이언트 SDK**: {{site.data.keyword.amashort}} 기능을 사용하기 위해 모바일 애플리케이션을 계측합니다. 지원되는 플랫폼은 iOS 8+, Android 4+, Cordova 및 웹 애플리케이션입니다. 
+
 * **{{site.data.keyword.amashort}} 서버 SDK**: {{site.data.keyword.Bluemix_notm}}에서 호스트되는 리소스를 보호합니다. 현재 지원되는 런타임은 Node.js 및 Liberty for Java&trade;입니다. 
 
 ## 인증 유형
 {: #authtypes}
 사용자 모바일 앱에서 다음과 같은 인증 유형을 사용할 수 있습니다. 
+
 * **Facebook**: ID 제공자로 Facebook을 사용합니다. 사용자는 Facebook 신임 정보를 사용하여 모바일 또는 웹 앱에 로그인합니다. 
+
 * **Google**: ID 제공자로 Google을 사용합니다. 사용자는 Google+ 신임 정보를 사용하여 모바일 또는 웹 앱에 로그인합니다. 
+
 * **사용자 정의**: 자체 ID 제공자를 작성합니다. 어떤 유형의 정보를 수집하고 유효성을 검사하는지에 대해 완벽히 제어합니다. 
 
 ## 아키텍처 개요
@@ -36,13 +47,21 @@ lastupdated: "2016-11-06"
 ![아키텍처 개요 다이어그램](images/mca-overview.jpg)
 
 * {{site.data.keyword.amashort}} 서버 SDK를 사용하여 클라우드 리소스(Node.js 애플리케이션)을 보호합니다. 
+
 * {{site.data.keyword.amashort}} 클라이언트 SDK에서 제공하는`Request` 클래스를 사용하여 보호된 클라우드 리소스와 통신합니다.
+
 * {{site.data.keyword.amashort}} 서버 SDK가 권한이 없는 요청을 발견하고 HTTP 401 권한 인증 확인을 리턴합니다.
+
 * {{site.data.keyword.amashort}} 클라이언트 SDK가 HTTP 401 권한 인증 확인을 발견하고 {{site.data.keyword.amashort}} 서비스 내에서 인증 프로세스를 자동으로 시작합니다. 
+
 * Facebook, Google 또는 사용자 정의 인증이 시도됩니다. 
+
 * 인증되면 {{site.data.keyword.amashort}}가 인증 토큰을 리턴합니다. 
+
 * {{site.data.keyword.amashort}} 클라이언트 SDK는 인증 토큰을 원래 요청에 자동 추가하고, 해당 요청을 클라우드 리소스로 재전송합니다.
+
 * {{site.data.keyword.amashort}} 서버 SDK는 요청에서 액세스 토큰을 추출하고 {{site.data.keyword.amashort}} 서비스로 토큰의 유효성을 검증합니다. 
+
 * 액세스가 부여됩니다. 모바일 애플리케이션에 응답이 리턴됩니다. 
 
 ## 요청 플로우
@@ -76,8 +95,10 @@ lastupdated: "2016-11-06"
 
 포럼을 통해 질문하는 경우 {{site.data.keyword.Bluemix_notm}} 개발 팀에 표시되도록 해당 질문에 태그를 지정하십시오.
 
-* {{site.data.keyword.amashort}}에서 앱 개발 또는 배치에 대한 기술적 질문이 있는 경우, [스택 오버플로우](http://stackoverflow.com/search?q={{site.data.keyword.amashort}}+ibm-bluemix){:new_window}에 해당 질문을 게시하여 "{{site.data.keyword.amashort}}" 및 "ibm-bluemix"로 태그를 지정하십시오.
-* 서비스 및 시작하기 지시사항에 대한 질문에 대해서는 [IBM developerWorks dW 응답](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=mobile+client+access%20%2B[bluemix]){:new_window} 포럼을 사용하십시오. 
+* {{site.data.keyword.amashort}}에서 앱 개발 또는 배치에 대한 기술적 질문이 있으면 [스택 오버플로우 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://stackoverflow.com/search?q={{site.data.keyword.amashort}}+ibm-bluemix "외부 링크 아이콘"){: new_window}에 질문을 게시하고 질문에 "ibm-bluemix" 및 "{{site.data.keyword.amashort}}" 태그를 지정하십시오. 
+* 서비스 및 시작하기 지시사항에 대한 질문인 경우에는 [IBM developerWorks ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=mobile+client+access%20%2B[bluemix] "외부 링크 아이콘"){: new_window}를 참조하십시오. 
+
+포럼.  
 
 포럼 사용에 대한 세부사항은 [도움말 가져오기](https://www.{DomainName}/docs/support/index.html#getting-help)를 참조하십시오.
 

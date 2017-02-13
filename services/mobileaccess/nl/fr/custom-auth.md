@@ -1,12 +1,16 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-2"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # Authentification d'utilisateurs à l'aide d'un fournisseur d'identité personnalisé
 {: #custom-id}
@@ -47,7 +51,7 @@ Le flux de demande d'une application Web {{site.data.keyword.amashort}} est simi
 {{site.data.keyword.amashort}} protège l'application et non pas une ressource de back end {{site.data.keyword.Bluemix_notm}}.
 
   * La requête initiale est envoyée par l'application Web (depuis un formulaire de connexion, par exemple).
-  * La redirection finale vise la zone protégée de l'application Web elle-même et non pas une ressource de back end protégée. 
+  * La redirection finale vise la zone protégée de l'application Web elle-même et non pas une ressource de back end protégée.
 
 ## Présentation des fournisseurs d'identité personnalisés
 {: #custom-id-about}
@@ -87,7 +91,7 @@ multi-étapes et multi-forme. De la même manière que pour la demande d'authent
 	}
 	```
 	{: codeblock}
-	
+
 1. Implémenter la logique personnalisée de la validation fournie par la réponse à la demande d'authentification.
 
 1. Définir un objet identité de l'utilisateur personnalisé contenant les propriétés personnalisées requises. Ci-après figure un exemple d'objet d'identité
@@ -113,8 +117,8 @@ Vous pouvez utiliser comme référence l'un des exemples d'implémentation Node.
 fournisseur d'identité personnalisé. Téléchargez le code d'application complet depuis les référentiels
 GitHub.
 
- * [Exemple simple](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
- * [Exemple avancé](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
+ * [Exemple simple ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample "Icône de lien externe "){: new_window}
+ * [Exemple avancé ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management "Icône de lien externe"){: new_window}
 
 ## Communications standard entre le serveur {{site.data.keyword.amashort}} et un fournisseur d'identité personnalisé
 {: #custom-id-comm}
@@ -147,10 +151,9 @@ domaine identifie l'instance de service {{site.data.keyword.amashort}} spécifiq
 
 ## Etapes suivantes
 {: #next-steps}
+
 * [Création d'un fournisseur d'identité personnalisé](custom-auth-identity-provider.html)
 * [Configuration de {{site.data.keyword.amashort}} pour l'authentification personnalisée](custom-auth-config-mca.html)
 * [Configuration de l'authentification personnalisée pour Android](custom-auth-android.html)
 * [Configuration de l'authentification personnalisée pour iOS (SDK Swift)](custom-auth-ios-swift-sdk.html)
-* [Configuration de l'authentification personnalisée pour iOS (SDK Objective-C)](custom-auth-ios.html)
 * [Configuration de l'authentification personnalisée pour Cordova](custom-auth-cordova.html)
-

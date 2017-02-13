@@ -1,10 +1,16 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-06"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
+
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # 关于 {{site.data.keyword.amashort}}
 {: #mca-overview}
@@ -20,14 +26,19 @@ lastupdated: "2016-11-06"
 {: #components}
 
 * **{{site.data.keyword.amashort}} 仪表板**：配置各种认证类型
+
 * **{{site.data.keyword.amashort}} 客户端 SDK**：在移动应用程序中安装该组件，以使用 {{site.data.keyword.amashort}} 功能。支持的平台为：iOS 8+、Android 4+、Cordova 和 Web 应用程序。
+
 * **{{site.data.keyword.amashort}} 服务器 SDK**：保护在 {{site.data.keyword.Bluemix_notm}} 上托管的资源。目前支持的运行时为 Node.js 和 Liberty for Java&trade;。
 
 ## 认证类型
 {: #authtypes}
 可以在移动应用程序中使用以下类型的认证：
+
 * **Facebook**：将 Facebook 用作身份提供者。用户使用自己的 Facebook 凭证登录到移动或 Web 应用程序。
+
 * **Google**：将 Google 用作身份提供者。用户使用自己的 Google+ 凭证登录到移动或 Web 应用程序。
+
 * **定制**：创建您自己的身份提供者。您可全面控制收集和验证的信息类型。
 
 ## 体系结构概述
@@ -37,13 +48,21 @@ lastupdated: "2016-11-06"
 
 
 * 使用 {{site.data.keyword.amashort}} 服务器 SDK 保护云资源（Node.js 应用程序）。
+
 * 使用 {{site.data.keyword.amashort}} 客户端 SDK 提供的 `Request` 类与受保护的云资源进行通信。
+
 * {{site.data.keyword.amashort}} 服务器 SDK 检测到未授权的请求，然后返回 HTTP 401 授权质询。
+
 * {{site.data.keyword.amashort}} 客户端 SDK 检测到 HTTP 401 授权质询，然后使用 {{site.data.keyword.amashort}} 服务自动启动认证过程。
+
 * 尝试使用 Facebook、Google 或定制认证。
+
 * 成功认证后，{{site.data.keyword.amashort}} 会返回授权令牌。
+
 * {{site.data.keyword.amashort}} 客户端 SDK 将该授权令牌自动添加到原始请求，并将该请求重新发送到云资源。
+
 * {{site.data.keyword.amashort}} 服务器 SDK 从请求中抽取访问令牌，并使用 {{site.data.keyword.amashort}} 服务进行验证。
+
 * 这样就授予了访问权。响应会返回给移动应用程序。
 
 ## 请求流程
@@ -79,12 +98,10 @@ lastupdated: "2016-11-06"
 在使用论坛提问时，请给问题做标记，以便 {{site.data.keyword.Bluemix_notm}} 开发
 团队能看到您的问题。
 
-* 如果是关于使用 {{site.data.keyword.amashort}} 开发或者部署应用程序方面的问题，请在
-[Stack
-Overflow](http://stackoverflow.com/search?q={{site.data.keyword.amashort}}+ibm-bluemix){:new_window} 上发帖，并将问题标记为“ibm-bluemix”和“{{site.data.keyword.amashort}}”。
-* 有关服务和入门指示信息的问题，请使用
-[IBM
-developerWorks dW Answers](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=mobile+client+access%20%2B[bluemix]){:new_window} 论坛。 
+* 如果是关于使用 {{site.data.keyword.amashort}} 开发或者部署应用程序方面的问题，请在 [Stack Overflow ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://stackoverflow.com/search?q={{site.data.keyword.amashort}}+ibm-bluemix "外部链接图标"){: new_window} 上发帖，并将问题标记为“ibm-bluemix”和“{{site.data.keyword.amashort}}”。
+* 有关服务和入门指示信息的问题，请使用 [IBM developerWorks ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=mobile+client+access%20%2B[bluemix] "外部链接图标"){: new_window} 
+
+论坛。 
 
 请参阅[获取
 帮助](https://www.{DomainName}/docs/support/index.html#getting-help)了解有关如何使用论坛的更多详细信息。

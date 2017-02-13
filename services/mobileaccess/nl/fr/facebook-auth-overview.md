@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-02"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 {:new_window: target="_blank"}
@@ -64,7 +64,7 @@ Vous aurez besoin de cette valeur pour
 configurer l'authentification Facebook
 pour votre application mobile ou Web.
 
-1. Accédez au site [Facebook for Developers](https://developers.facebook.com).
+1. Accédez au site [Facebook for Developers ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developers.facebook.com "Icône de lien externe"){: new_window}.
 
 1. Ouvrez la liste déroulante **Mes applications** et sélectionnez **Ajouter une application**.
 
@@ -81,5 +81,4 @@ pour votre application mobile ou Web.
 
 * [Activation de l'authentification Facebook pour les applications Android](facebook-auth-android.html)
 * [Activation de l'authentification Facebook pour les applications iOS (SDK Swift)](facebook-auth-ios-swift-sdk.html)
-* [Activation de l'authentification Facebook pour les applications iOS (SDK Objective-C - Déprécié)](facebook-auth-ios.html)
 * [Activation de l'authentification Facebook pour les applications Cordova](facebook-auth-cordova.html)

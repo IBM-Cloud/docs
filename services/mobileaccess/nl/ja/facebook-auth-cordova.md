@@ -1,14 +1,17 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-24"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
+{:pre: .pre}
+
 
 # Cordova アプリ用の Facebook 認証の使用可能化
 {: #facebook-auth-cordova}
@@ -25,22 +28,22 @@ Facebook 認証を使用可能にするために、ネイティブ・プラッ�
 {: #facebook-auth-before}
 
 以下が必要です。
-* {{site.data.keyword.amashort}} Client SDK が装備された Cordova プロジェクト (Android または iOS)。[Cordova プラグインのセットアップ](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html#getting-started-cordova-plugin)を参照してください。
+* {{site.data.keyword.amashort}} Client SDK が装備された Cordova プロジェクト (Android または iOS)。[Cordova プラグインのセットアップ](getting-started-cordova.html#getting-started-cordova-plugin)を参照してください。
 * {{site.data.keyword.amashort}} サービスによって保護された {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。{{site.data.keyword.Bluemix_notm}} バックエンド・サービスの作成方法について詳しくは、[概説](index.html)を参照してください。
 * アプリケーションの経路。これは、バックエンド・アプリケーションの URL です。
 * `tenantId` 値。{{site.data.keyword.amashort}} サービス・ダッシュボードを開きます。**「モバイル・オプション」**をクリックします。`tenantId` (`appGUID` とも呼ばれる) の値が、**「アプリ GUID」/「TenantId」**フィールドに表示されます。これらの値は、SDK を初期化するため、および要求をバックエンド・サービスに送信するために必要になります。
 *  {{site.data.keyword.Bluemix_notm}} サービスがホストされている地域を見つけます。メニュー・バーの **「アバター」**アイコン![「アバター」アイコン](images/face.jpg "「アバター」アイコン") の横のヘッダー内に現在の {{site.data.keyword.Bluemix_notm}} 地域が表示されます。地域値は、**「米国南部」**、**「シドニー」**、または**「英国」**のいずれかでなければなりません。これらの名前に対応する正確な SDK の定数値は、コードの例に示しています。
-* Facebook アプリケーションと App ID。詳しくは、『[Facebook for Developers Web サイトからの Facebook App ID の取得](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)』を参照してください。
+* Facebook アプリケーションと App ID。詳しくは、『[Facebook for Developers Web サイトからの Facebook App ID の取得](facebook-auth-overview.html#facebook-appID)』を参照してください。
 
 
 
 ## Android プラットフォームの構成
 {: #facebook-auth-cordova-android}
 
-Cordova アプリケーションの Android プラットフォームを Facebook 認証統合用に構成するために必要なステップは、ネイティブ Android アプリケーションの場合とよく似ています。詳しくは、[Android アプリで Facebook 認証を使用可能にする](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-android.html)を参照してください。以下のステップを完了してください:
+Cordova アプリケーションの Android プラットフォームを Facebook 認証統合用に構成するために必要なステップは、ネイティブ Android アプリケーションの場合とよく似ています。詳しくは、[Android アプリで Facebook 認証を使用可能にする](facebook-auth-android.html)を参照してください。以下のステップを完了してください:
 
-* [Android プラットフォーム用の Facebook アプリケーションの構成](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-android.html#facebook-auth-android-config)。これは、Facebook Developers サイト上で Android アプリケーション用に Facebook 認証をセットアップします。
-* [Facebook 認証用の MCA の構成](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-android.html#facebook-auth-android-mca)。これは、{{site.data.keyword.Bluemix}} サーバー上で Android Facebook 認証用に {{site.data.keyword.amashort}} サービスを構成します。
+* [Android プラットフォーム用の Facebook アプリケーションの構成](facebook-auth-android.html#facebook-auth-android-config)。これは、Facebook Developers サイト上で Android アプリケーション用に Facebook 認証をセットアップします。
+* [Facebook 認証用の MCA の構成](facebook-auth-android.html#facebook-auth-android-mca)。これは、{{site.data.keyword.Bluemix}} サーバー上で Android Facebook 認証用に {{site.data.keyword.amashort}} サービスを構成します。
 
 
 ### Android プラットフォーム用の {{site.data.keyword.amashort}} Facebook Client SDK の構成
@@ -136,19 +139,17 @@ FacebookAuthenticationManager.getInstance().registerDefaultAuthenticationListene
 ## iOS プラットフォームの構成
 {: #facebook-auth-cordova-ios}
 
-Cordova アプリケーションの iOS プラットフォームを Facebook 認証統合用に構成するために必要なステップは、ネイティブ iOS Swift アプリケーションの場合と似ています。主な違いは、現在 Cordova CLI が CocoaPods の依存関係マネージャーをサポートしていない点です。{{site.data.keyword.amashort}} クライアントと Facebook 認証を統合するために必要なファイルを手動で追加する必要があります。詳しくは、[iOS アプリ用の Facebook 認証の使用可能化 (Swift SDK)](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios-swift-sdk.html)を参照してください。以下のステップを完了してください:
+Cordova アプリケーションの iOS プラットフォームを Facebook 認証統合用に構成するために必要なステップは、ネイティブ iOS Swift アプリケーションの場合と似ています (Swift SDK で Objective-C コードを使用するためにヘッダー・ファイルが必要です)。主な違いは、現在 Cordova CLI が CocoaPods の依存関係マネージャーをサポートしていない点です。{{site.data.keyword.amashort}} クライアントと Facebook 認証を統合するために必要なファイルを手動で追加する必要があります。詳しくは、[iOS アプリ用の Facebook 認証の使用可能化 (Swift SDK)](facebook-auth-ios-swift-sdk.html)を参照してください。以下のステップを完了してください:
 
-* [iOS プラットフォーム用の Facebook アプリケーションの構成](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios-swift-sdk.html#facebook-auth-ios-config)。これは、Facebook Developers サイトで Facebook 認証サービスをセットアップします。
-* [ Facebook 認証用の MCA の構成](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios-swift-sdk.html#facebook-auth-ios-configmca)。これは、{{site.data.keyword.Bluemix}} サーバー上で {{site.data.keyword.amashort}} サービスを構成します。
-* [iOS 用の MCA Facebook Client SDK の構成](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios-swift-sdk.html#facebook-auth-ios-sdk)。これは、CocoaPods を使用して Facebook 許可用の {{site.data.keyword.amashort}} iOS Swift SDK をインストールします。
+* [iOS プラットフォーム用の Facebook アプリケーションの構成](facebook-auth-ios-swift-sdk.html#facebook-auth-ios-config)。これは、Facebook Developers サイトで Facebook 認証サービスをセットアップします。
+* [Facebook 認証用の MCA の構成](facebook-auth-ios-swift-sdk.html#facebook-auth-ios-configmca)。これは、{{site.data.keyword.Bluemix}} サーバー上で {{site.data.keyword.amashort}} サービスを構成します。
+* [iOS 用の MCA Facebook Client SDK の構成](facebook-auth-ios-swift-sdk.html#facebook-auth-ios-sdk)。これは、CocoaPods を使用して Facebook 許可用の {{site.data.keyword.amashort}} iOS Swift SDK をインストールします。
 
 
 ### iOS のキーチェーン共有 (Keychain Sharing) の使用可能化
 {: #enable_keychain}
 
 `「キーチェーン共有 (Keychain Sharing)」`を使用可能にします。Xcode プロジェクトで、`「Capabilities」`タブに移動し、`「Keychain Sharing」`を`「On」`に切り替えます。
-
-
 
 ### Objective-C での {{site.data.keyword.amashort}} 許可マネージャーの初期化
 {: #initialize_objc}
@@ -175,11 +176,11 @@ Xcode のバージョンに応じて、`app-delegate.m` ファイル内のネイ
 	}
 	
 
-	- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication 
-			annotation:(id)annotation
-	{
-	  
-	   return [[FacebookAuthenticationManager sharedInstance] onOpenURLWithApplication:application 
+	- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+
+{
+
+   return [[FacebookAuthenticationManager sharedInstance] onOpenURLWithApplication:application 
 	   		url:url sourceApplication:sourceApplication annotation:annotation];
 	}
 
@@ -203,7 +204,6 @@ BMSClient.initialize(<applicationBluemixRegion>);
 
 `<applicationBluemixRegion>` をご使用の地域 ([開始する前に](#facebook-auth-before)を参照) に置き換えます。
 
-
 ## 認証のテスト
 {: #facebook-auth-cordova-test}
 
@@ -212,7 +212,7 @@ Client SDK が初期化され、Facebook 認証マネージャーの登録が完
 ### 開始する前に
 {: #testing_auth_before}
 
-{{site.data.keyword.mobilefirstbp}} ボイラープレートを使用していて、{{site.data.keyword.amashort}}により`/protected` エンドポイントで保護されているリソースを既に持っている必要があります。詳しくは、[リソースの保護](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)を参照してください。
+{{site.data.keyword.mobilefirstbp}} ボイラープレートを使用していて、{{site.data.keyword.amashort}}により`/protected` エンドポイントで保護されているリソースを既に持っている必要があります。詳しくは、[リソースの保護](protecting-resources.html)を参照してください。
 
 1. ブラウザーから、モバイル・バックエンド・アプリケーションの保護エンドポイントへの要求の送信を試行します。次の URL を開きます。`{applicationRoute}/protected` 例: `http://my-mobile-backend.mybluemix.net/protected`。
 

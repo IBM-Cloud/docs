@@ -1,20 +1,24 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-04"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
+
 
 # Configurando o plug-in do Cordova
 {: #getting-started-cordova}
 
 Instrua seu aplicativo cliente Cordova com o client SDK
-{{site.data.keyword.amafull}}. Inicialize o Gerenciador
-de Autorização no código Android (Java) ou iOS (Objective C). Inicialize o cliente e faça solicitações para os recursos
+{{site.data.keyword.amafull}}. Inicialize o Gerenciador de Autorização em seu código
+Android (Java) ou iOS (Objective C usando o Swift SDK e o arquivo de cabeçalho relevante). Inicialize o cliente e faça solicitações para os recursos
 protegidos
 e desprotegidos da WebView.
 
@@ -23,6 +27,7 @@ e desprotegidos da WebView.
 ## Antes de Começar
 {: #before-you-begin}
 Você deve ter:
+
 * Uma instância de um aplicativo
 {{site.data.keyword.Bluemix_notm}}. Para obter mais informações sobre como criar um aplicativo backend do {{site.data.keyword.Bluemix_notm}}, consulte [Introdução](index.html).
 * Uma instância de um serviço
@@ -47,7 +52,7 @@ valores de SDK requeridos no código WebView Javascript:
 `BMSClient.REGION_UK`. Você precisará desse
 valor para inicializar o cliente
 {{site.data.keyword.amashort}}.
-* Um aplicativo Cordova ou um projeto existente. Para obter mais informações sobre como configurar seu aplicativo Cordova, consulte o [website do Cordova](https://cordova.apache.org/).
+* Um aplicativo Cordova ou um projeto existente. Para obter mais informações sobre como configurar seu aplicativo Cordova, veja o [website do Cordova ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cordova.apache.org/ "Ícone de link externo"){: new_window}.
 
 ## Instalando o plug-in {{site.data.keyword.amashort}} Cordova
 {: #getting-started-cordova-plugin}
@@ -87,10 +92,12 @@ name="android">`:
 	```
 	{: codeblock}
 
-	O valor *minSdkVersion* deve ser `15` ou mais alto. O valor *targetSdkVersion* deve ser
-`23`. Atualmente, o Cordova não suporta versões
-superiores ao **Android-23**.
-	
+	O valor *minSdkVersion* deve ser `15` ou mais alto. Consulte
+o [Guia da Plataforma Android ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de
+link externo")](https://cordova.apache.org/docs/en/latest/guide/platforms/android/ "Ícone delink externo"){: new_window} para manter-se atualizado
+
+com relação à *targetSdkVersion* suportada para o Android SDK.
+
 3. Se você incluiu o sistema operacional iOS, atualize o elemento `<platform name="ios">` com uma declaração de destino:
 
 	```XML
@@ -134,7 +141,8 @@ Swift, clique em **Cancelar**.
 
 	2. Compile e execute seu aplicativo com Xcode.
 
-	**Nota**: você pode receber o seguinte erro ao executar `cordova build ios`. Esse problema é devido a um erro em um plug-in de dependência que está sendo rastreado no [Problema 12](https://github.com/blakgeek/cordova-plugin-cocoapods-support/issues/12). Você ainda pode executar o projeto do iOS em XCode por meio de um simulador ou dispositivo.
+	**Nota**: você pode receber o seguinte erro ao executar `cordova build ios`. Esse problema é devido a um erro em um plug-in de dependência que está sendo
+rastreado no [Problema 12 ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/blakgeek/cordova-plugin-cocoapods-support/issues/12 "Ícone de link externo"){: new_window}. Você ainda pode executar o projeto do iOS em XCode por meio de um simulador ou dispositivo.
 
 	```
 	xcodebuild: erro: impossível localizar um destino correspondente ao identificador de destino fornecido:
@@ -144,20 +152,20 @@ Swift, clique em **Cancelar**.
 		O tipo de dispositivo “Simulador iOS” requer que qualquer “nome” ou “id” seja especificado.
 		Forneça o “nome” ou “id”.
 	```
-	
+
 6. Verifique se o plug-in foi instalado com sucesso, executando o comando a seguir:
 
 	```Bash
 	cordova plugin list
 	```
 	{: codeblock}
-	
+
 7. Ativar Compartilhamento Keychain para iOS
 alternando
 **Compartilhamento Keychain** para
 `Ligado` na guia
 **Recursos**.
-  
+
 8. Ative **Define módulo** para iOS
 alternando **Define módulo** para
 `YES` na guia **Configurações de
@@ -213,9 +221,23 @@ Inclua a inicialização Gerenciador de Autorização no
 Xcode.
 
 ```Objective-C
-  [CDVBMSClient initMCAAuthorizationManagerManagerWithTenantId:@"<tenantId>"]; 
+  #import "<your_module_name>-Swift.h"
+  [CDVBMSClient initMCAAuthorizationManagerManagerWithTenantId:@"<tenantId>"];
 ```
 {: codeblock}
+
+**Nota:** o nome do arquivo de
+cabeçalho importado é composto por seu nome de módulo concatenado
+para a sequência `-Swift.h`, por exemplo, se o
+nome do seu módulo for `Cordova`, a linha
+de importação seria `#import "Cordova-Swift.h"`.
+Para localizar o nome do módulo, acesse `Configurações
+de construção` > `Pacote` >
+`Nome do módulo de produto`.
+Substitua seu ID do
+locatário `<tenantId>` (consulte
+[Antes de
+iniciar](#before-you-begin)).
 
 
 ## Fazendo uma solicitação para o serviço de backend móvel

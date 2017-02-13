@@ -1,13 +1,16 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-03"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
-{:screen:  .screen}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
 {:codeblock: .codeblock}
+{:pre: .pre}
+
 
 # Google 신임 정보로 사용자 인증
 {: #google-auth}
@@ -54,5 +57,4 @@ ID 제공자로 Google을 사용하여 리소스를 보호하도록 {{site.data.
 
 * [Android 앱에서 Google 인증 사용](google-auth-android.html)
 * [iOS 앱에서 Google 인증 사용(Swift SDK)](google-auth-ios-swift-sdk.html)
-* [iOS 앱에서 Google 인증 사용(Objective-C SDK)](google-auth-ios.html)
 * [Cordova 앱에서 Google 인증 사용](google-auth-cordova.html)

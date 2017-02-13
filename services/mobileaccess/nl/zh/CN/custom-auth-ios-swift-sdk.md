@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-27"
+  years: 2016, 2017
+lastupdated: "2017-01-16"
 
 ---
 
@@ -12,27 +12,26 @@ lastupdated: "2016-10-27"
 # 针对 {{site.data.keyword.amashort}} iOS (Swift SDK) 应用程序配置定制认证
 {: #custom-ios}
 
-将要使用定制认证的 iOS 应用程序配置为使用 {{site.data.keyword.amafull}} 客户端 SDK，并将该应用程序连接到 {{site.data.keyword.Bluemix}}。新发行的 {{site.data.keyword.amashort}} Swift SDK 为现有 Mobile Client Access Objective-C SDK 提供的功能增添了新功能，同时也改进了现有功能。
+将要使用定制认证的 iOS 应用程序配置为使用 {{site.data.keyword.amafull}} 客户端 SDK，并将该应用程序连接到 {{site.data.keyword.Bluemix}}。  
 
-**注：**虽然 Objective-C SDK 仍受到完全支持，且仍视为 {{site.data.keyword.Bluemix_notm}} Mobile Services 的主 SDK，但是有计划要在今年晚些时候停止使用 Objective-C SDK，以支持此新的 Swift SDK。
 
 ## 开始之前
 {: #before-you-begin}
 
 开始之前，您必须具有：
 
-* 资源，该资源受 {{site.data.keyword.amashort}} 服务的实例保护，而该服务已配置为使用定制的身份提供者（请参阅[配置定制认证](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)）。  
+* 资源，该资源受 {{site.data.keyword.amashort}} 服务的实例保护，而该服务已配置为使用定制的身份提供者（请参阅[配置定制认证](custom-auth-config-mca.html)）。  
 * **TenantID** 值。在 {{site.data.keyword.amashort}}“仪表板”中打开服务。单击**移动选项**按钮。`tenantId`（也称为 `appGUID`）值会显示在**应用程序 GUID/TenantId** 字段中。您将需要此值来初始化授权管理器。
 * **域名**。这是在 {{site.data.keyword.amashort}}“仪表板”的**管理**选项卡中**定制**部分的**域名**字段中指定的值。
 * 后端应用程序的 URL（**应用程序路径**）。您将需要此值来向后端应用程序的受保护端点发送请求。
 * {{site.data.keyword.Bluemix_notm}} **区域**。您可以在**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标") 旁边的头中找到当前 {{site.data.keyword.Bluemix_notm}} 区域。显示的区域值应为以下某个值：**美国南部**、**英国**或**悉尼**，并对应于代码中需要的常量：`BMSClient.Region.usSouth`、`BMSClient.Region.unitedKingdom` 或 `BMSClient.Region.sydney`。
 
 有关更多信息，请参阅以下信息：
- * [{{site.data.keyword.amashort}} 入门](https://console.{DomainName}/docs/services/mobileaccess/index.html)
- * [设置 iOS Swift SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html)
- * [使用定制身份提供者](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
- * [创建定制身份提供者](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
- * [配置 {{site.data.keyword.amashort}} 进行定制认证](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
+ * [{{site.data.keyword.amashort}} 入门](index.html)
+ * [设置 iOS Swift SDK](getting-started-ios-swift-sdk.html)
+ * [使用定制身份提供者](custom-auth.html)
+ * [创建定制身份提供者](custom-auth-identity-provider.html)
+ * [配置 {{site.data.keyword.amashort}} 进行定制认证](custom-auth-config-mca.html)
 
 ### 启用 iOS 的密钥链共享
 {: #enable_keychain}
@@ -96,12 +95,12 @@ let mcaAuthManager = MCAAuthorizationManager.sharedInstance
 {: codeblock}
 
 在代码中：
-* 将 `MCAServiceTenantId` 替换为 **TenantId** 值，并将 `<applicationBluemixRegion>` 替换为 {{site.data.keyword.amashort}} **区域**（请参阅[开始之前](##before-you-begin)）。 
-* 使用在 {{site.data.keyword.amashort}}“仪表板”中指定的 `realmName`（请参阅[配置定制认证](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)）。
+* 将 `MCAServiceTenantId` 替换为 **TenantId** 值，并将 `<applicationBluemixRegion>` 替换为 {{site.data.keyword.amashort}} **区域**（请参阅[开始之前](##before-you-begin)）。
+* 使用在 {{site.data.keyword.amashort}}“仪表板”中指定的 `realmName`（请参阅[配置定制认证](custom-auth-config-mca.html)）。
 * 将 `<applicationBluemixRegion>` 替换为托管 {{site.data.keyword.Bluemix_notm}} 应用程序的区域。要查看 {{site.data.keyword.Bluemix_notm}} 区域，请单击菜单栏中的“头像”图标 ![“头像”图标](images/face.jpg "“头像”图标")，以打开**帐户和支持**窗口小部件。
 显示的区域值应为以下某个值：**美国南部**、**英国**或**悉尼**，并对应于代码中需要的常量：`BMSClient.Region.usSouth`、`BMSClient.Region.unitedKingdom` 或 `BMSClient.Region.sydney`。
-   
-  
+
+
 ## 测试认证
 {: #custom-ios-testing}
 
@@ -156,7 +155,7 @@ let mcaAuthManager = MCAAuthorizationManager.sharedInstance
 
 	 ```
 	 MCAAuthorizationManager.sharedInstance.logout(callBack)
- ``` 
+ ```
 	 {: codeblock}
 
  如果您在用户登录之后调用此代码，那么用户将注销。用户在尝试重新登录时，必须重新回答服务器发出的质询。

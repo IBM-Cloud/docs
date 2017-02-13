@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-05"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 {:new_window: target="_blank"}
@@ -25,7 +25,7 @@ Google 인증을 위해 {{site.data.keyword.amafull}} Cordova 애플리케이션
 * {{site.data.keyword.amashort}} 서비스를 통해 보호하는 {{site.data.keyword.Bluemix_notm}} 애플리케이션의 인스턴스입니다. {{site.data.keyword.Bluemix_notm}} 백엔드 서비스 작성 방법에 대한 자세한 정보는 [시작하기](index.html)를 참조하십시오.
 * 애플리케이션 라우트. 이는 백엔드 애플리케이션의 URL입니다. 
 * **테넌트 ID**. {{site.data.keyword.Bluemix_notm}} 대시보드에서 서비스를 여십시오. **모바일 옵션**을 클릭하십시오. **앱 GUID / TenantId** 필드에 `tenantId`(`appGUID`라고도 함) 값이 표시됩니다. 이 값은 권한 관리자를 초기화하는 데 필요합니다. 
-*  {{site.data.keyword.Bluemix_notm}} 애플리케이션이 호스팅되는 지역을 찾으십시오. 헤더에서 **아바타** 아이콘 ![아바타 아이콘](images/face.jpg "아바타 아이콘") 옆에 현재 Bluemix 지역이 표시됩니다. 지역 값은 **미국 남부**, **시드니** 또는 **영국** 중 하나여야 합니다. 이들 이름에 해당하는 정확한 SDK 상수 값은 코드 예제에 표시되어 있습니다.  
+*  {{site.data.keyword.Bluemix_notm}} 애플리케이션이 호스팅되는 지역을 찾으십시오. 헤더에서 **아바타** 아이콘 ![아바타 아이콘](images/face.jpg "아바타 아이콘") 옆에 현재 Bluemix 지역이 표시됩니다. 지역 값은 **미국 남부**, **시드니** 또는 **영국** 중 하나여야 합니다. 이들 이름에 해당하는 정확한 SDK 상수 값은 코드 예제에 표시되어 있습니다. 
 * (선택사항) 다음 절의 내용을 숙지하십시오. 
    * [Android 앱에서 Google 인증 사용](https://console.{DomainName}/docs/services/mobileaccess/google-auth-android.html)
    * [iOS 앱에서 Google 인증 사용](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html)
@@ -55,10 +55,10 @@ Google 인증을 위해 Cordova 애플리케이션의 Android 플랫폼을 구�
 	}
 	```
 	{: codeblock}
-	
+
 1. **도구 > Android > Gradle 파일로 프로젝트 동기화**를 클릭하여 프로젝트를 Gradle과 동기화하십시오. 
 
-1. `GoogleAuthenticationManager` API는 계속 원시 코드에 등록되어 있어야 합니다. 다음 코드를 기본 활동 `onCreate` 메소드에 추가하십시오. 
+1. `GoogleAuthenticationManager` API는 계속 원시 코드에 등록되어 있어야 합니다. 다음 코드를 기본 활동 `onCreate` 메소드에 추가하십시오.
 
 	```Java
 	String tenantId = "<tenantId>";
@@ -69,7 +69,7 @@ Google 인증을 위해 Cordova 애플리케이션의 Android 플랫폼을 구�
 	{: codeblock}
 
 1. 다음 코드를 활동에 추가하십시오. 
- 
+
 	```Java
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -85,7 +85,7 @@ Google 인증을 위해 Cordova 애플리케이션의 Android 플랫폼을 구�
 
 Google 인증을 통합하도록 Cordova 애플리케이션의 iOS 플랫폼을 구성하는 데 필요한 단계는 원시 애플리케이션에 대한 단계와 유사합니다. 주요한 차이점은 현재 Cordova CLI에서는 CocoaPods 종속성 관리자를 지원하지 않는다는 점입니다. Google 인증 통합에 필요한 파일을 수동으로 추가해야 합니다. 자세한 정보는 [iOS 앱에서 Google 인증 사용(Swift SDK)](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html)을 참조하십시오. 다음 단계를 완료하십시오. 
 
-   * [Google 로그인을 위해 앱 준비](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html#google-sign-in-ios): {{site.data.keyword.amashort}} iOS 애플리케이션을 인증하기 위해 Google 로그인을 준비합니다.  
+   * [Google 로그인을 위해 앱 준비](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html#google-sign-in-ios): {{site.data.keyword.amashort}} iOS 애플리케이션을 인증하기 위해 Google 로그인을 준비합니다. 
 
    * [Google 인증용 MCA 구성](https://console.{DomainName}/docs/services/mobileaccess/google-auth-ios-swift-sdk.html#google-auth-ios-config): {{site.data.keyword.amashort}} 서비스를 Google 로그인과 상호작용하도록 구성합니다. 
 
@@ -97,42 +97,42 @@ Google 인증을 통합하도록 Cordova 애플리케이션의 iOS 플랫폼을 
 
 `키 체인 공유`를 사용 가능하게 설정하십시오. `기능` 탭으로 이동하여 Xcode 프로젝트에서 `키 체인 공유`를 `On`으로 전환하십시오. 
 
- 
+
 ### iOS 코드에서 권한 관리자 초기화
 
 `AppDelgate.m` 파일의 Objective-C에서 {{site.data.keyword.amashort}} 권한 관리자를 초기화하십시오. 
 
 ```
- #import "<your_module_name>-Swift.h" 
- 
+#import "<your_module_name>-Swift.h"
+
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 
 {
 	[CDVBMSClient initMCAAuthorizationManagerManagerWithTenantId:@"<tenantId>"];
 
-	    [[GoogleAuthenticationManager sharedInstance] register];
+	[[GoogleAuthenticationManager sharedInstance] register];
 
-    self.viewController = [[MainViewController alloc] init];
+	self.viewController = [[MainViewController alloc] init];
 
-	    [[GoogleAuthenticationManager sharedInstance] onFinishLaunchingWithApplication:application withOptions:launchOptions];
+	[[GoogleAuthenticationManager sharedInstance] onFinishLaunchingWithApplication:application withOptions:launchOptions];
 
 	return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }
 
-- (BOOL)application: (UIApplication *)application openURL: (NSURL *)url sourceApplication: (NSString *)sourceApplication annotation: (id)annotation
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 
 {
- return [[GoogleAuthenticationManager sharedInstance] onOpenURLWithApplication:application url:url 
+	return [[GoogleAuthenticationManager sharedInstance] onOpenURLWithApplication:application url:url
 	sourceApplication:sourceApplication annotation:annotation];
 }
 ```
 {: codeblock}
 
-**참고:** 
+**참고:**
 
 * `<your_module_name>`을 프로젝트의 모듈 이름으로 대체하십시오. 예를 들어, 모듈 이름이 `Cordova`인 경우 import 행은 `#import "Cordova-Swift.h"`여야 합니다.
 모듈 이름을 찾으려면 `빌드 설정` 탭, `패키징` > `제품 모듈 이름`으로 이동하십시오. 
-* `<tenantId>`를 사용하는 테넌트 ID로 대체하십시오([시작하기 전에](#before-you-begin) 참조). 
+* `<tenantId>`를 사용하는 테넌트 ID로 대체하십시오([시작하기 전에](#before-you-begin) 참조).
 
 
 ## Cordova WebView에서 {{site.data.keyword.amashort}} 클라이언트 SDK 초기화
@@ -145,7 +145,7 @@ BMSClient.initialize("<applicationBluemixRegion>");
 ```
 {: codeblock}
 
-`<applicationBluemixRegion>`을 해당 지역으로 대체하십시오([시작하기 전에](#before-you-begin) 참조). 
+`<applicationBluemixRegion>`을 해당 지역으로 대체하십시오([시작하기 전에](#before-you-begin) 참조).
 
 ## 인증 테스트
 {: #google-auth-cordova-test}
@@ -165,11 +165,11 @@ BMSClient.initialize("<applicationBluemixRegion>");
 
 	```JavaScript
 	var success = function(data){
-    	console.log("success", data);
-    }
-	var failure = function(error)
-    	{console.log("failure", error);
-    }
+		console.log("success", data);
+	}
+	var failure = function(error){
+		console.log("failure", error);
+	}
 	var request = new BMSRequest("<your-application-route>", BMSRequest.GET);
 	request.send(success, failure);
 	```
@@ -178,9 +178,9 @@ BMSClient.initialize("<applicationBluemixRegion>");
 1. 애플리케이션을 실행하십시오. Google 로그인 화면이 표시됩니다.
 
 	![Google 로그인 화면](images/android-google-login.png)
-	
+
 	![Google 로그인 화면](images/ios-google-login.png)
-	
+
 	디바이스에 Facebook 앱이 설치되어 있지 않거나 현재 Facebook에 로그인하지 않은 경우 이 화면이 약간 다를 수 있습니다. 
 
 1. **확인**을 클릭하여 인증하는 데 Google 사용자 ID를 사용할 수 있도록 {{site.data.keyword.amashort}}에 권한을 부여합니다. 

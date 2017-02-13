@@ -1,12 +1,16 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-2"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 
-{:codeblock:.codeblock}
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # Autenticazione utenti con un provider di identità personalizzato
 {: #custom-id}
@@ -44,7 +48,7 @@ Crea un provider di identità personalizzato che utilizza il servizio  {{site.da
 Il flusso della richiesta dell'applicazione Web {{site.data.keyword.amashort}} è simile al flusso del client mobile. Tuttavia, {{site.data.keyword.amashort}} protegge l'applicazione web, invece della risorsa di back-end {{site.data.keyword.Bluemix_notm}}.
 
   * La richiesta iniziale viene inviata dall'applicazione Web (da un modulo di accesso, ad esempio).
-  * Il reindirizzamento finale è all'area protetta dell'applicazione stessa, invece che alla risorsa protetta di backend. 
+  * Il reindirizzamento finale è all'area protetta dell'applicazione stessa, invece che alla risorsa protetta di backend.
 
 ## Descrizione dei provider di identità personalizzati
 {: #custom-id-about}
@@ -81,7 +85,7 @@ Quando crei un provider di identità personalizzato, puoi:
 	}
 	```
 	{: codeblock}
-	
+
 1. Implementa la logica personalizzata di convalida della risposta alla richiesta di verifica dell'autenticazione fornita.
 
 1. Definisci un oggetto di identità utente personalizzato che contiene le eventuali proprietà personalizzate richieste. Questo è un esempio di un oggetto di identità utente personalizzato ottenuto dal client dopo l'autenticazione eseguita con esito positivo:
@@ -104,8 +108,8 @@ Quando crei un provider di identità personalizzato, puoi:
 
 Utilizza una qualsiasi delle seguenti implementazioni di esempio Node.js di un provider di identità personalizzato come un riferimento quando sviluppi il tuo provider di identità personalizzato. Scarica il codice dell'applicazione integrale dai repository GitHub.
 
- * [Esempio semplice](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
- * [Esempio avanzato](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
+ * [Esempio semplice ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample "Icona link esterno"){: new_window}
+ * [Esempio avanzato ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management "Icona link esterno"){: new_window}
 
 ## Tipiche comunicazioni tra il server {{site.data.keyword.amashort}} e un provider di identità personalizzato
 {: #custom-id-comm}
@@ -130,10 +134,9 @@ Un provider di identità personalizzato fornisce un'area di autenticazione perso
 
 ## Fasi successive
 {: #next-steps}
+
 * [Creazione di un provider di identità personalizzato](custom-auth-identity-provider.html)
 * [Configurazione di {{site.data.keyword.amashort}} per l'autenticazione personalizzata](custom-auth-config-mca.html)
 * [Configurazione dell'autenticazione personalizzata per Android](custom-auth-android.html)
 * [Configurazione dell'autenticazione personalizzata per iOS (SDK Swift)](custom-auth-ios-swift-sdk.html)
-* [Configurazione dell'autenticazione personalizzata per iOS (SDK Objective-C)](custom-auth-ios.html)
 * [Configurazione dell'autenticazione personalizzata per Cordova](custom-auth-cordova.html)
-

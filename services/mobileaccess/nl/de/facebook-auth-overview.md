@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-02"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 {:new_window: target="_blank"}
@@ -57,7 +57,7 @@ Zur Verwendung von Facebook als Identitätsprovider müssen Sie eine Anwendung a
 
 Diesen Wert benötigen Sie, um die Facebook-Authentifizierung für Ihre mobile App oder Web-App zu konfigurieren.
 
-1. Greifen Sie auf die Site [Facebook for Developers](https://developers.facebook.com) zu.
+1. Rufen Sie die [Facebook for Developers-Website ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developers.facebook.com "Symbol für externen Link"){: new_window} auf.
 
 1. Öffnen Sie die Pulldown-Liste **Meine Apps** und wählen Sie **Neue App hinzufügen** aus.
 
@@ -74,5 +74,4 @@ Diesen Wert benötigen Sie, um die Facebook-Authentifizierung für Ihre mobile A
 
 * [Facebook-Authentifizierung für Android-Apps aktivieren](facebook-auth-android.html)
 * [Facebook-Authentifizierung für iOS-Apps aktivieren (Swift-SDK)](facebook-auth-ios-swift-sdk.html)
-* [Facebook-Authentifizierung für iOS-Apps aktivieren (Objective-C-SDK - nicht mehr verwendet)](facebook-auth-ios.html)
 * [Facebook-Authentifizierung für Cordova-Apps aktivieren](facebook-auth-cordova.html)

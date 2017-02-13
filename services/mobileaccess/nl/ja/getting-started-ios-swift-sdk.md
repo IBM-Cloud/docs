@@ -1,35 +1,37 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-04"
+  years: 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:codeblock:.codeblock}
+{:codeblock: .codeblock}
+{:pre: .pre}
+
 
 # iOS Swift SDK のセットアップ
 {: #getting-started-ios}
 
-{{site.data.keyword.amafull}} は、既存の {{site.data.keyword.amashort}} Objective-C SDK によって提供される機能を増強する新しい Swift SDK をリリースしました。これによって、アプリの認証がより簡単になり、バックエンド・リソースの保護が強化されます。iOS Swift アプリケーションに {{site.data.keyword.amashort}} SDK を装備し、SDK を初期化し、保護されたリソースまたは無保護のリソースへの要求を実行します。
+iOS Swift アプリケーションに {{site.data.keyword.amashort}} SDK を装備し、SDK を初期化し、保護されたリソースまたは無保護のリソースへの要求を実行します。
 
 
 {:shortdesc}
-
-Objective-C SDK は現在も完全にサポートされており、{{site.data.keyword.Bluemix_notm}} モバイル・サービス用の主要 SDK とされていますが、今年後半には廃止され、この新しい Swift SDK が後継になる予定です。
 
 
 ## 開始する前に
 {: #before-you-begin}
 以下が必要です。
+
 * {{site.data.keyword.Bluemix_notm}} アプリケーションのインスタンス。
 * {{site.data.keyword.amafull}} サービスのインスタンス。
 * **「TenantID」**。{{site.data.keyword.amashort}} ダッシュボードでサービスを開きます。**「モバイル・オプション」**をクリックします。`tenantId` (`appGUID` とも呼ばれる) の値が、**「アプリ GUID」/「TenantId」**フィールドに表示されます。{{site.data.keyword.amashort}} 許可マネージャーを初期化するためにこの値が必要になります。
 * **「アプリケーションの経路 (Application Route)」**。これは、バックエンド・アプリケーションの URL です。保護されているエンドポイントに要求を送信するためにこの値が必要になります。
 * {{site.data.keyword.Bluemix_notm}} **「地域」**。**「アバター」**アイコン![「アバター」アイコン](images/face.jpg "「アバター」アイコン") の横のヘッダー内に現在の {{site.data.keyword.Bluemix_notm}} 地域が表示されます。表示される地域の値は、`「米国南部」`、`「シドニー」`、または`「英国」`のいずれかでなければならず、またコードで必要な SDK 値 (`BMSClient.Region.usSouth`、`BMSClient.Region.unitedKingdom`、または `BMSClient.Region.sydney`) に対応している必要があります。{{site.data.keyword.amashort}} SDK を初期化するためにこの値が必要になります。
-* Xcode プロジェクト。iOS 開発環境のセットアップ方法について詳しくは、[Apple 開発者の Web サイト](https://developer.apple.com/support/xcode/)を参照してください。
+* Xcode プロジェクト。iOS 開発環境のセットアップ方法について詳しくは、[Apple Developer Web サイト![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.apple.com/support/xcode/ "外部リンク・アイコン"){: new_window}を参照してください。
 
 
 ## {{site.data.keyword.amashort}} Client SDK のインストール
@@ -49,7 +51,7 @@ sudo gem install cocoapods
 ```
 {: codeblock}
 
-詳細については、[CocoaPods の Web サイト](https://cocoapods.org/)を参照してください。
+詳しくは、[CocoaPods Web サイト![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cocoapods.org/ "外部リンク・アイコン"){: new_window}を参照してください。
 
 ### CocoaPods を使用した {{site.data.keyword.amashort}} Client SDK のインストール
 {: #install-sdk-cocoapods}
@@ -95,7 +97,7 @@ use_frameworks!
 
 1. {{site.data.keyword.amashort}} Client SDK を初期化します。
 
-```Swift
+ ```Swift
 	let tenantId = "<serviceTenantID>"
 	let regionName = <applicationBluemixRegion>
 
@@ -109,12 +111,12 @@ use_frameworks!
 	return true
 	}
  ```
- {: codeblock}
+  {: codeblock}
 
-* `tenantId` を、**「モバイル・オプション」**から取得した値に置き換えます。 
-* `<applicationBluemixRegion>` を、{{site.data.keyword.Bluemix_notm}} アプリケーションがホストされている地域に置き換えます。 
+* `tenantId` を、**「モバイル・オプション」**から取得した値に置き換えます。
+* `<applicationBluemixRegion>` を、{{site.data.keyword.Bluemix_notm}} アプリケーションがホストされている地域に置き換えます。
 
-これらの値については、[開始する前に](#before-you-begin)を参照してください。 
+これらの値については、[開始する前に](#before-you-begin)を参照してください。
 
 
 ## モバイル・バックエンド・アプリケーションへの要求の実行
@@ -155,6 +157,7 @@ use_frameworks!
 ## 次のステップ
 {: #next-steps}
 保護されているエンドポイントに繋がった場合、資格情報は必要とされません。アプリケーションにユーザーのログインを要求する場合、Facebook、Google またはカスタム認証を構成する必要があります。
+
   * [Facebook](facebook-auth-ios-swift-sdk.html)
   * [Google](google-auth-ios-swift-sdk.html)
   * [カスタム](custom-auth-ios-swift-sdk.html)

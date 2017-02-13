@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-05"
+  years: 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 {:new_window: target="_blank"}
@@ -14,9 +14,7 @@ lastupdated: "2016-12-05"
 # iOS 앱에서 Google 인증 사용(Swift SDK)
 {: #google-auth-ios}
 
-{{site.data.keyword.amafull}} iOS Swift 앱에서 사용자를 인증하려면 Google 로그인을 사용하십시오. 새로 릴리스된 {{site.data.keyword.amashort}} Swift SDK가 기존 모바일 클라이언트 액세스 Objective-C SDK에서 제공하는 기능에 추가되어 해당 기능을 향상시킵니다.
-
-**참고:** Objective-C SDK는 그대로 완벽하게 지원되며 여전히 {{site.data.keyword.Bluemix_notm}} 모바일 서비스의 기본 SDK로 간주되지만 새로운 Swift SDK를 위해 올해 말해 중단될 계획입니다. 
+Google 로그인을 사용하여 {{site.data.keyword.amafull}} iOS Swift 앱에서 사용자를 인증하십시오. 
 
 
 ## 시작하기 전에
@@ -34,7 +32,7 @@ lastupdated: "2016-12-05"
 ## Google 로그인을 위해 앱 준비
 {: #google-sign-in-ios}
 
-[iOS용 Google 로그인](https://developers.google.com/identity/sign-in/ios/start-integrating)에서 Google이 제공하는 지시사항을 따라 Google 로그인을 위해 앱을 준비하십시오.
+[iOS용 Google 로그인 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developers.google.com/identity/sign-in/ios/start-integrating "외부 링크 아이콘"){: new_window}에서 Google이 제공하는 지시사항에 따라 Google 로그인을 위한 앱을 준비하십시오. 
 
 이 프로세스에서는 다음을 수행합니다.
 
@@ -48,7 +46,7 @@ lastupdated: "2016-12-05"
 
 1. 기본 대상의 **일반** 탭에 있는 **ID** 섹션에서 Xcode 프로젝트의 **번들 ID**를 기록하십시오. Google 로그인 프로젝트를 작성하는 데 필요합니다. 
 
-1. iOS용 Google 로그인을 위한 Google 개발자에서 프로젝트를 작성하십시오(https://developers.google.com/mobile/add?platform=ios).
+1. [Google 개발자 사이트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developers.google.com/mobile/add?platform=ios "외부 링크 아이콘"){: new_window}에서 iOS용 Google 로그인에 대한 프로젝트를 작성하십시오. 
 
 1. 프로젝트에 Google 로그인 API를 추가하십시오.
 
@@ -56,9 +54,9 @@ lastupdated: "2016-12-05"
 
    **중요:** `GoogleService-Info.plist` 파일을 가져올 때 파일을 열고 `CLIENT_ID` 값을 기록해 두십시오. 나중에 {{site.data.keyword.amashort}} 백엔드 애플리케이션을 구성하는 데 해당 값이 필요합니다.
 
-1. `GoogleService-Info.plist` 파일을 Xcode 프로젝트에 추가하십시오. 자세한 정보는 [프로젝트에 구성 파일 추가](https://developers.google.com/identity/sign-in/ios/start-integrating#add-config)를 참조하십시오.
+1. `GoogleService-Info.plist` 파일을 Xcode 프로젝트에 추가하십시오. 자세한 정보는 [프로젝트에 구성 파일 추가 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developers.google.com/identity/sign-in/ios/start-integrating#add-config "외부 링크 아이콘"){: new_window}를 참조하십시오. 
 
-1. `REVERSE_CLIENT_ID` 및 번들 ID를 사용하여 Xcode 프로젝트의 URL 스킴을 업데이트하십시오. 자세한 정보는 [Add URL schemes to your project](https://developers.google.com/identity/sign-in/ios/start-integrating#add_a_url_scheme_to_your_project)를 참조하십시오.
+1. `REVERSE_CLIENT_ID` 및 번들 ID를 사용하여 Xcode 프로젝트의 URL 스킴을 업데이트하십시오. 자세한 정보는 [프로젝트에 URL 스킴 추가 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developers.google.com/identity/sign-in/ios/start-integrating#add_a_url_scheme_to_your_project "외부 링크 아이콘"){: new_window}를 참조하십시오. 
 
 1. 사용하는 앱의 `project-Bridging-Header.h` 파일을 다음 코드로 업데이트하십시오. 
 
@@ -67,7 +65,7 @@ lastupdated: "2016-12-05"
 	```
 	{: codeblock}
 
-	브리징 헤더 파일 업데이트에 대한 자세한 정보는 [Enable sign-in](https://developers.google.com/identity/sign-in/ios/sign-in#enable_sign-in)을 참조하십시오.
+	브릿지 헤더 파일의 업데이트에 대한 자세한 정보는 [로그인 사용 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developers.google.com/identity/sign-in/ios/sign-in#enable_sign-in "외부 링크 아이콘"){: new_window}을 참조하십시오. 
 
 ## Google 인증용 {{site.data.keyword.amashort}} 구성
 {: #google-auth-ios-config}
@@ -92,10 +90,10 @@ lastupdated: "2016-12-05"
 
 	```
 	sudo gem install cocoapods
-```
+	```
 	{: codeblock}
 
-자세한 정보는 [CocoaPods 웹 사이트](https://cocoapods.org/)를 참조하십시오.
+자세한 정보는 [CocoaPods 웹 사이트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cocoapods.org/ "외부 링크 아이콘"){: new_window}를 참조하십시오. 
 
 ### CocoaPods를 사용하여 {{site.data.keyword.amashort}} 클라이언트 Swift SDK 설치
 {: #facebook-auth-install-swift-cocoapods}
@@ -143,7 +141,7 @@ lastupdated: "2016-12-05"
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
- let mcaAuthManager = MCAAuthorizationManager.sharedInstance
+		let mcaAuthManager = MCAAuthorizationManager.sharedInstance
 		mcaAuthManager.initialize(tenantId: tenantId, bluemixRegion: regionName)
 		//the regionName should be one of the following: BMSClient.Region.usSouth, BMSClient.Region.unitedKingdom, or BMSClient.Region.sydney   
 		BMSClient.sharedInstance.authorizationManager = mcaAuthManager
@@ -152,25 +150,25 @@ lastupdated: "2016-12-05"
 	}
 
 	// [START openurl]
-	    func application(_ application: UIApplication,
-			     open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-		return GoogleAuthenticationManager.sharedInstance.handleApplicationOpenUrl(openURL: url,
-   sourceApplication: sourceApplication, annotation: annotation)
-     }
+	func application(_ application: UIApplication,
+		open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+			return GoogleAuthenticationManager.sharedInstance.handleApplicationOpenUrl(openURL: url,
+			sourceApplication: sourceApplication, annotation: annotation)
+	    }
 
-     @available(iOS 9.0, *)
-     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
+	@available(iOS 9.0, *)
+	func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
 		return GoogleAuthenticationManager.sharedInstance.handleApplicationOpenUrl(openURL: url, options: options)
-     }
+	}
 
-  ```
+	```
 	{: codeblock}
 
 	코드에서: 
 
       * `<serviceTenantID>`를 **모바일 옵션**에서 수신한 값으로 대체하십시오. 
-      * `<applicationBluemixRegion>`을 해당 {{site.data.keyword.Bluemix_notm}} **지역**으로 대체하십시오. 
-	
+      * `<applicationBluemixRegion>`을 해당 {{site.data.keyword.Bluemix_notm}} **지역**으로 대체하십시오.
+
 	이러한 값을 얻는 방법에 대한 자세한 정보는 [시작하기 전에](#before-you-begin)를 참조하십시오. 
 
 
@@ -182,7 +180,7 @@ lastupdated: "2016-12-05"
 ### 시작하기 전에
 {: #google-auth-ios-testing-before}
 
-{{site.data.keyword.mobilefirstbp}} 표준 유형을 사용 중 이어야 하며 이미 `/protected` 엔드포인트에 {{site.data.keyword.amashort}}가 보호하는 리소스가 있어야 합니다. `/protected` 엔드포인트를 설정해야 하는 경우 [리소스 보호](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)를 참조하십시오. 
+{{site.data.keyword.mobilefirstbp}} 표준 유형을 사용 중 이어야 하며 이미 `/protected` 엔드포인트에 {{site.data.keyword.amashort}}가 보호하는 리소스가 있어야 합니다. `/protected` 엔드포인트를 설정해야 하는 경우 [리소스 보호](protecting-resources.html)를 참조하십시오. 
 
 1. `{applicationRoute}/protected`를 열어 데스크탑 브라우저에서 모바일 백엔드 애플리케이션의 보호 엔드포인트에 요청을 보내십시오. 예를 들면, `http://my-mobile-backend.mybluemix.net/protected`입니다. 
 
@@ -195,12 +193,12 @@ lastupdated: "2016-12-05"
 	let request = Request(url: protectedResourceURL, method: HttpMethod.GET)
 
 	let callBack:BMSCompletionHandler = {(response: Response?, error: Error?) in
-     if error == nil {
-   print ("response:\(response?.responseText), no error")
-      } else {
-       print ("error: \(error)")
-     }
- }
+		if error == nil {
+			print ("response:\(response?.responseText), no error")
+		} else {
+			print ("error: \(error)")
+		}
+	}
 
 	request.send(completionHandler: callBack)
 
@@ -217,14 +215,14 @@ lastupdated: "2016-12-05"
 
 	```
 	response:Optional("Hello, this is a protected resource of the mobile backend application!"), no error
- ```
+	```
 	{: screen}
 
 1. 다음 코드를 추가하여 로그아웃 기능을 추가할 수도 있습니다. 
 
 	```
-	 GoogleAuthenticationManager.sharedInstance.logout(callBack)
- ```
+	GoogleAuthenticationManager.sharedInstance.logout(callBack)
+	```
 	{: codeblock}
 
 	Google에서 사용자가 로그인한 이후 이 코드를 호출하며 사용자가 다시 로그인을 시도하는 경우, 사용자에게는 인증 용도로 Google을 사용하도록 {{site.data.keyword.amashort}} 권한 부여 프롬프트가 제시됩니다. 이 시점에서 사용자는 사용자 이름을 클릭하여 <!--in the upper-right corner of the screen--> 다른 사용자를 선택하고 다른 사용자로 로그인할 수 있습니다.

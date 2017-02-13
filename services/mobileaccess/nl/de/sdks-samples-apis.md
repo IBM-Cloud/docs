@@ -1,13 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-25"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 
 # {{site.data.keyword.amashort}} SDKs, Beispiele und API-Referenz
@@ -24,8 +26,7 @@ Das Kern-SDK (Core SDK) enthält die APIs zur Aktivierung einer angepassten Auth
 ### Android
 {: #coresdk-android}
 
-[GitHub-Repository](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core),
-[API-Referenz](https://console.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html)
+[GitHub-Repository ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core "Symbol für externen Link"){: new_window}
 
 #### Kern-SDK mit Gradle installieren
 {: #coresdk-android-gradle}
@@ -44,7 +45,7 @@ Fügen Sie eine Abhängigkeit 'compile' zur Datei `build.gradle` Ihrer App hinzu
 ### iOS (Swift-SDK)
 {: #coresdk-ios-swift}
 
-[GitHub-Repository](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security)
+[GitHub-Repository ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security "Symbol für externen Link"){: new_window}
 
 #### Kern-SDK mit CocoaPods installieren
 {: #coresdk-ios-siwft-cocoapods}
@@ -56,27 +57,11 @@ pod 'BMSSecurity'
 ```
 {: codeblock}
 
-### iOS (Objective-C-SDK)
-{: #coresdk-ios}
-
-Das Objective-C-SDK wird zwar weiterhin vollständig unterstützt und gilt noch als primäres SDK für {{site.data.keyword.Bluemix_notm}} Mobile Services, seine Verwendung und Unterstützung sollen jedoch zugunsten des neuen Swift-SDK noch dieses Jahr eingestellt werden (siehe Abschnitt [iOS-Swift-SDK einrichten](getting-started-ios-swift-sdk.html)).
-
-[Git-Repository](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master),
-[API-Referenz](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html)
-
-#### Kern-SDK mit CocoaPods installieren
-{: #coresdk-ios-cocoapods}
-
-Bearbeiten Sie die Podfile und fügen Sie die folgende Zeile zu den erforderlichen Zielen hinzu; führen Sie dann die Datei aus:
-```Bash
-pod 'IMFCore'
-```
-{: codeblock}
 
 ### Cordova
 {: #coresdk-cordova}
 
-[GitHub-Repository und API-Referenz](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
+[GitHub-Repository und API-Referenz ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core "Symbol für externen Link"){: new_window}
 
 #### Kern-SDK mit der Cordova-Befehlszeilenschnittstelle (CLI) installieren
 {: #coresdk-cordova-cli}
@@ -93,8 +78,7 @@ cordova plugin add bms-core
 ### Android
 {: #facebooksdk-android}
 
-[GitHub-Repository](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-facebookauthentication),
-[API-Referenz](https://console.{DomainName}/docs/api/content/api/mobilefirst/android/facebook-api-doc/index.html)
+[GitHub-Repository ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-facebookauthentication "Symbol für externen Link"){: new_window}
 
 #### Facebook-SDK mit Gradle installieren
 {: #facebooksdk-android-gradle}
@@ -112,7 +96,7 @@ Fügen Sie eine Abhängigkeit 'compile' zur Datei `build.gradle` Ihrer App hinzu
 ### iOS (Swift-SDK)
 {: #facebooksdk-ios-swift}
 
-[GitHub-Repository](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-facebookauthentication)
+[GitHub-Repository ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-facebookauthentication "Symbol für externen Link"){: new_window}
 
 #### Facebook-SDK mit CocoaPods installieren
 {: #facebooksdk-ios-swift-cocoapods}
@@ -124,27 +108,11 @@ pod 'BMSFacebookAuthentication'
  ```
 {: codeblock}
 
-### iOS (Objective-C-SDK)
-{: #facebooksdk-ios}
-
-[Git-Repository](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk.git),
-[API-Referenz](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFFacebookAuthentication_api-doc/html/index.html)
-
-**Hinweis:** Das Objective-C-SDK wird zwar weiterhin vollständig unterstützt und gilt noch als primäres SDK für {{site.data.keyword.Bluemix_notm}} Mobile Services, Verwendung und Unterstützung dieses SDK sollen jedoch zugunsten des neuen Swift-SDK noch dieses Jahr eingestellt werden. Für neue Anwendungen wird dringend das Swift-SDK empfohlen (siehe Abschnitt 'iOS-Swift-SDK einrichten').
-#### Facebook-SDK mit CocoaPods installieren
-{: #facebooksdk-ios-cocoapods}
-
-Bearbeiten Sie die Podfile und fügen Sie die folgende Zeile hinzu; führen Sie die Datei dann aus:
-
-```Bash
-pod 'IMFFacebookAuthentication'
-```
-{: codeblock}
 
 ### Cordova
 {: #facebooksdk-cordova}
 
-[GitHub-Repository und API-Referenz](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
+[GitHub-Repository und API-Referenz ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core "Symbol für externen Link"){: new_window}
 
 #### Facebook-SDK mit Cordova-CLI installieren
 {: #facebooksdk-cordova-cli}
@@ -162,8 +130,8 @@ cordova plugin add ibm-mfp-core
 ### Android
 {: #googlesdk-android}
 
-[GitHub-Repository](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-googleauthentication),
-[API-Referenz](https://console.{DomainName}/docs/api/content/api/mobilefirst/android/google-api-doc/index.html)
+[GitHub-Repository ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-googleauthentication "Symbol für externen Link"){: new_window}
+
 
 #### Google+-SDK mit Gradle installieren
 {: #googlesdk-android-gradle}
@@ -182,7 +150,7 @@ Fügen Sie eine Abhängigkeit 'compile' zur Datei `build.gradle` Ihrer App hinzu
 ### iOS (Swift-SDK)
 {: #googlesdk-ios-swift}
 
-[GitHub-Repository](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-googleauthentication)
+[GitHub-Repository ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-googleauthentication "Symbol für externen Link"){: new_window}
 
 #### Google+-SDK mit CocoaPods installieren
 {: #googlesdk-ios-swift-cocoapods}
@@ -195,26 +163,11 @@ pod 'BMSGoogleAuthentication'
 ```
 {: codeblock}
 
-### iOS (Objective-C-SDK - nicht mehr verwendet)
-{: #googlesdk-ios}
-
-[Git-Repository](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk.git),
-[API-Referenz](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFGoogleAuthentication_api-doc/html/index.html)
-
-#### Google+-SDK mit CocoaPods installieren
-{: #googlesdk-ios-cocoapods}
-
-Bearbeiten Sie die Podfile und fügen Sie die folgende Zeile hinzu; führen Sie die Datei dann aus:
-
-```Bash
-pod 'IMFGoogleAuthentication'
-```
-{: codeblock}
 
 ### Cordova
 {: #googlesdk-cordova}
 
-[GitHub-Repository und API-Referenz](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
+[GitHub-Repository und API-Referenz ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core "Symbol für externen Link"){: new_window}
 
 #### Google+-SDK mit Cordova-CLI installieren
 {: #googlesdk-cordova-cli}
@@ -229,7 +182,7 @@ cordova plugin add ibm-mfp-core
 ## Server-SDK für Node.js-Server
 {: #serversdk}
 
-[GitHub-Repository](https://github.com/ibm-bluemix-mobile-services/bms-mca-token-validation-strategy)
+[GitHub-Repository ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-mca-token-validation-strategy "Symbol für externen Link"){: new_window}
 
 #### Server-SDK mit npm installieren
 {: #serversdk-npm}
@@ -259,7 +212,7 @@ npm install -save bms-mca-token-validation-strategy
 ## Node.js-OAuth-SDK
 {: #serverlibertysdk-github}
 
-[GitHub-Repository](https://github.com/ibm-bluemix-mobile-services/bms-mca-oauth-sdk)
+[GitHub-Repository ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-mca-oauth-sdk "Symbol für externen Link"){: new_window}
 
 #### OAuth-SDK mit npm installieren
 {: #oauthsdk}
@@ -273,21 +226,8 @@ npm install -save bms-mca-oauth-sdk
 ## Angepasster Identitätsprovider - Beispiele
 {: #customidprovider}
 
-[Einfaches Beispiel - GitHub-Repository](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
+[GitHub-Repository - einfaches Beispiel ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample "Symbol für externen Link"){: new_window}
 
-[Erweitertes Beispiel - GitHub-Repository](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
+[GitHub-Repository - erweitertes Beispiel ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management "Symbol für externen Link"){: new_window}
 
-## IMFURLProtocol
-{: #IMFURLProtocol}
 
-[API-Referenz](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFURLProtocol_api-doc/html/index.html)
-
-#### IMFURLProtocol mit CocoaPods installieren
-{: #IMFURLProtocol-cocoapods}
-
-Bearbeiten Sie die Podfile und fügen Sie die folgende Zeile hinzu; führen Sie die Datei dann aus:
-
-```Bash
-pod 'IMFURLProtocol'
-```
-{: codeblock}

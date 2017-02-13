@@ -1,9 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-05"
-
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -47,7 +46,7 @@ corresponder aos valores de SDK requeridos no código code SDK:
 `BMSClient.REGION_UK`. Você precisará desse
 valor para inicializar o cliente
 {{site.data.keyword.amashort}}.
-* Um projeto Android Studio, configure para trabalhar com Gradle. Para obter mais informações sobre como configurar seu ambiente de desenvolvimento do Android, veja [Google Developer Tools](http://developer.android.com/sdk/index.html).
+* Um projeto Android Studio, configure para trabalhar com Gradle. Para obter mais informações sobre como configurar seu ambiente de desenvolvimento Android, veja [Google Developer Tools ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://developer.android.com/sdk/index.html "Ícone de link externo"){: new_window}.
 
 ## Instalando o {{site.data.keyword.amashort}} client SDK
 {: #install-mca-sdk}
@@ -76,7 +75,7 @@ do projeto).
 
 1. Sincronizar seu projeto com o Gradle. Clique em **Ferramentas &gt; Android &gt; Sincronizar projeto com arquivos Gradle**.
 
-1. Abra o arquivo `AndroidManifest.xml` para seu projeto Android. Inclua a permissão de acesso à Internet sob o elemento `<manifest>`:
+1. Abra o arquivo `AndroidManifest.xml` para seu projeto Android. Inclua a permissão de acesso à Internet no elemento `<manifest>`:
 
 	```XML
 	<uses-permission android:name="android.permission.INTERNET" />
@@ -100,13 +99,10 @@ BMSClient.getInstance().setAuthorizationManager(
 applicationBluemixRegion>` pela região em que seu serviço
 {{site.data.keyword.Bluemix_notm}} está
 hospedado.
-* Substitua `<
-MCAServiceTenantId>` pelo
-**tenantId** 
+* Substitua `<MCAServiceTenantId>` pelo **tenantId**
 
-. Para obter mais informações
-sobre esses valores, consulte
-[Antes de iniciar](#before-you-begin).
+Para obter mais informações sobre esses valores, veja [Antes
+de iniciar](#before-you-begin).
 
 ## Fazendo uma solicitação para seu aplicativo backend móvel
 {: #request}
@@ -121,7 +117,7 @@ seu navegador, abra a URL a seguir: `{applicationRoute}/protected`
 
 	O terminal `/protected` de um aplicativo backend móvel que foi criado com o modelo MobileFirst Services Starter é protegido com {{site.data.keyword.amashort}}. Uma mensagem `Unauthorized` é retornada em seu navegador, porque esse terminal só pode ser acessado por aplicativos móveis instrumentados com o SDK do cliente {{site.data.keyword.amashort}}.
 
-1. Use seu aplicativo Android para fazer uma solicitação ao mesmo terminal. Inclua o código a seguir depois de inicializar `BMSClient`:
+1. Use seu aplicativo Android para fazer uma solicitação ao mesmo terminal. Inclua o código a seguir depois de inicializar o `BMSClient`:
 
 	```Java
 	Request request = new Request("http://my-mobile-backend.mybluemix.net/protected", Request.GET);

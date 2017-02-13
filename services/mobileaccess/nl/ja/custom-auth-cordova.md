@@ -1,13 +1,16 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-22"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
 
-{:codeblock:.codeblock}
-
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # {{site.data.keyword.amashort}} Cordova アプリ用のカスタム認証の構成
 {: #custom-cordova}
@@ -16,17 +19,18 @@ lastupdated: "2016-11-22"
 
 ## 開始する前に
 {: #before-you-begin}
-* カスタム ID プロバイダーを使用するように構成済みの {{site.data.keyword.amashort}} サービスのインスタンスによって保護されているリソース ([カスタム認証の構成](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)を参照してください)。  
+* カスタム ID プロバイダーを使用するように構成済みの {{site.data.keyword.amashort}} サービスのインスタンスによって保護されているリソース ([カスタム認証の構成](custom-auth-config-mca.html)を参照してください)。  
 * **TenantID** 値。{{site.data.keyword.amashort}} ダッシュボードでサービスを開きます。**「モバイル・オプション」**ボタンをクリックします。`tenantId` (`appGUID` とも呼ばれる) の値が、**「アプリ GUID」/「TenantId」**フィールドに表示されます。許可マネージャーを初期化するためにこの値が必要になります。
 * **「レルム」**名。これは、{{site.data.keyword.amashort}} ダッシュボードの**「管理」**タブで、**「カスタム」**セクションの**「レルム名」**フィールドに指定した値です。
 * {{site.data.keyword.Bluemix_notm}} **「地域」**。**「アバター」**アイコン![「アバター」アイコン](images/face.jpg "「アバター」アイコン") の横のヘッダー内に現在の {{site.data.keyword.Bluemix_notm}} 地域が表示されます。表示される地域値は、`「米国南部」`、`「英国」`、または`「シドニー」`のいずれかでなければなりません。対応する SDK 定数の正確な構文は、コードの例に示しています。
 
 詳しくは、以下の情報を参照してください。
 
- * [カスタム認証用の {{site.data.keyword.amashort}} の構成 ](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)。これは、カスタム認証用に {{site.data.keyword.amashort}} サービスをセットアップする方法を示します。ここで、**「レルム」**値を定義します。
- * [Cordova SDK のセットアップ](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html)。Cordova クライアント・アプリケーションのセットアップに関する情報。
- * [カスタム ID プロバイダーの使用](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)。カスタム ID プロバイダーを使用してユーザーを認証する方法。
- * [カスタム ID プロバイダーの作成](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)。カスタム ID プロバイダーがどのように機能するかを示すいくつかの例。 
+
+ * [カスタム認証用の {{site.data.keyword.amashort}} の構成 ](custom-auth-config-mca.html)。これは、カスタム認証用に {{site.data.keyword.amashort}} サービスをセットアップする方法を示します。ここで、**「レルム」**値を定義します。
+ * [Cordova SDK のセットアップ](getting-started-cordova.html)。Cordova クライアント・アプリケーションのセットアップに関する情報。
+ * [カスタム ID プロバイダーの使用](custom-auth.html)。カスタム ID プロバイダーを使用してユーザーを認証する方法。
+ * [カスタム ID プロバイダーの作成](custom-auth-identity-provider.html)。カスタム ID プロバイダーがどのように機能するかを示すいくつかの例。
 
 ## Cordova WebView コードの構成
 ### Cordova WebView での {{site.data.keyword.amashort}} Client SDK の初期化
@@ -38,8 +42,8 @@ BMSClient.initialize("<applicationBluemixRegion>");
 ```
 {: codeblock}
 
-`<applicationBluemixRegion>` をご使用の地域 ([開始する前に](#before-you-begin)を参照) に置き換えます。 
- 
+`<applicationBluemixRegion>` をご使用の地域 ([開始する前に](#before-you-begin)を参照) に置き換えます。
+
 
 ### 認証リスナー・インターフェース
 {: #custom-cordva-auth}
@@ -106,7 +110,7 @@ authenticationContext.submitAuthenticationFailure(info);
 ## カスタム認証リスナーのワークフローの実装例
 {: #custom-cordova-authlisten-sample}
 
-認証リスナーのこのサンプルは、カスタム ID プロバイダーと連携するよう設計されています。7このカスタム ID プロバイダーは [Github リポジトリー](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)からダウンロードできます。
+認証リスナーのこのサンプルは、カスタム ID プロバイダーと連携するよう設計されています。カスタム ID プロバイダーは、[この GitHub リポジトリー![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample "外部リンク・アイコン"){: new_window}からダウンロードできます。
 
 ```JavaScript
 var customAuthenticationListener = {
@@ -184,14 +188,14 @@ Xcode のバージョンに応じて、許可マネージャーを登録しま�
 ```
 {: codeblock}
 
-注: `your_module_name` をプロジェクトのモジュール名に置き換えます。例えば、モジュール名が `Cordova` の場合は、`#import "Cordova-Swift.h"` のようになります。モジュール名を見つけるには、**「ビルド設定 (Build Settings)」>「パッケージ化 (Packaging)」>「製品モジュール名 (Product Module Name)」**に移動します。
+注: 正しい Swift ヘッダー・ファイル名については、`your_module_name` をプロジェクトのモジュール名に置き換えます。例えば、モジュール名が `Cordova` の場合は、`#import "Cordova-Swift.h"` のようになります。モジュール名を見つけるには、**「ビルド設定 (Build Settings)」>「パッケージ化 (Packaging)」>「製品モジュール名 (Product Module Name)」**に移動します。
 
 **注:** `tenantId` を、{{site.data.keyword.amashort}} サービス・ダッシュボードの**「モバイル・オプション」** ボタンで見つかったテナント ID に置き換えます。
 
 
 ## iOS のキーチェーン共有 (Keychain Sharing) の使用可能化
 
-Xcode プロジェクトで、`「Capabilities」`タブに移動して`「Keychain Sharing」`を使用可能にし、`「Keychain Sharing」`を`「On」`に切り替えます。 
+Xcode プロジェクトで、`「Capabilities」`タブに移動して`「Keychain Sharing」`を使用可能にし、`「Keychain Sharing」`を`「On」`に切り替えます。
 
 
 ## 認証のテスト
@@ -218,8 +222,8 @@ Client SDK が初期化され、カスタム `AuthenticationListener` の登録�
 	request.send(success, failure);
 	```
 	{: codeblock}
-	
-	`<your-application-route>` をご使用のバックエンド・アプリケーション URL ([開始する前に](#before-you-begin)を参照) に置き換えます。 
+
+	`<your-application-route>` をご使用のバックエンド・アプリケーション URL ([開始する前に](#before-you-begin)を参照) に置き換えます。
 
 1. 	要求が成功したら、`LogCat` または Xcode コンソールに以下のように出力されます。
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  year: 2016
-lastupdated: "2016-09-07"
+  year: 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
 
@@ -81,5 +81,3 @@ El cuerpo de la respuesta `POST` debería contener el `access_token` y el `id_to
 
 Ahora puede empezar a realizar solicitudes a los recursos protegidos.
 Todas las solicitudes a recursos protegidos deben contener el elemento de acceso en el campo de cabecera de solicitud de autorización.
-
-

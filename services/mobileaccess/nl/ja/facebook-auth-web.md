@@ -1,26 +1,28 @@
 ---
 
 copyright:
-  year: 2016
-lastupdated: "2016-12-04"
+  year: 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
 {:codeblock: .codeblock}
+{:pre: .pre}
 
 
 # Web アプリケーション用の Facebook 認証の使用可能化
 {: #facebook-auth-web}
 
-Facebook を使用して、{{site.data.keyword.amafull}} Web アプリケーションのユーザーを認証します。{{site.data.keyword.amashort}} セキュリティー機能を追加します。 
+Facebook を使用して、{{site.data.keyword.amafull}} Web アプリケーションのユーザーを認証します。{{site.data.keyword.amashort}} セキュリティー機能を追加します。
 
 ## 開始する前に
 {: #facebook-auth-android-before}
 以下が必要です。
 
-* Web アプリ。 
+* Web アプリ。
 * {{site.data.keyword.amashort}} サービス。詳しくは、[始めに (Getting started) ](index.html)を参照してください。
 * (許可プロセス完了後の) 最終リダイレクトのための URI。
 
@@ -30,7 +32,7 @@ Facebook を使用して、{{site.data.keyword.amafull}} Web アプリケーシ�
 
 Web サイトで Facebook を ID プロバイダーとして使用するには、Facebook アプリケーションで Web サイトのプラットフォームを追加して構成する必要があります。
 
-1. [Facebook for Developers](https://developers.facebook.com) サイトで自分のアカウントにログインします。新規アプリケーションの作成については、[Facebook for Developers Web サイトでのアプリケーションの作成](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)を参照してください。 
+1. [Facebook for Developers](https://developers.facebook.com) サイトで自分のアカウントにログインします。新規アプリケーションの作成については、[Facebook for Developers Web サイトでのアプリケーションの作成](facebook-auth-overview.html#facebook-appID)を参照してください。
 1. **「App ID」**および**「App Secret」**をメモします。Mobile Client Access ダッシュボードで Facebook 認証用に Web プロジェクトを構成するときに、これらの値が必要になります。
 1. **「製品リスト (Products List)」**から、**「Facebook ログイン (Facebook Login)」**を選択します。
 4. **Web** プラットフォームが存在しない場合は、追加します。
@@ -60,25 +62,25 @@ Facebook App ID および App Secret を取得し、Web クライアントに対
 
 許可プロセスを開始するには、以下のようにします。
 
-1. `VCAP_SERVICES` 環境変数に保管されたサービス資格情報から、許可エンドポイント (`authorizationEndpoint`) とクライアント ID (`clientId`) を取り出します。 
+1. `VCAP_SERVICES` 環境変数に保管されたサービス資格情報から、許可エンドポイント (`authorizationEndpoint`) とクライアント ID (`clientId`) を取り出します。
 
-	`var cfEnv = require("cfenv");` 
+	`var cfEnv = require("cfenv");`
 
-	**注:** Web サポートが追加される前に {{site.data.keyword.amashort}} サービスをアプリケーションに追加した場合は、**「サービス資格情報」**にトークン・エンドポイントが含まれていないことがあります。代わりに、{{site.data.keyword.Bluemix_notm}} 地域に応じて、以下の URL を使用します。 
- 
-	米国南部: 
+	**注:** Web サポートが追加される前に {{site.data.keyword.amashort}} サービスをアプリケーションに追加した場合は、**「サービス資格情報」**にトークン・エンドポイントが含まれていないことがあります。代わりに、{{site.data.keyword.Bluemix_notm}} 地域に応じて、以下の URL を使用します。
 
-	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization` 
+	米国南部:
 
-	ロンドン: 
+	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization`
 
-	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization` 
+	ロンドン:
 
-	シドニー: 
+	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization`
 
-	`https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization` 
+	シドニー:
 
-2. 照会パラメーターとして `response_type("code")`、`client_id`、および `redirect_uri` を使用して、許可サーバー URI を構築します。 
+	`https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization`
+
+2. 照会パラメーターとして `response_type("code")`、`client_id`、および `redirect_uri` を使用して、許可サーバー URI を構築します。
 
 3. Web アプリから、生成された URI へリダイレクトします。
 
@@ -90,8 +92,8 @@ Facebook App ID および App Secret を取得し、Web クライアントに対
   app.get("/protected", checkAuthentication, function(req, res, next){  
       res.send("Hello from protected endpoint"); 
     }
-  ); 
-  
+  );
+
 	function checkAuthentication(req, res, next){
   // ユーザーが認証されているかどうかを検査
 
@@ -126,24 +128,24 @@ Facebook App ID および App Secret を取得し、Web クライアントに対
 
 次のステップでは、前に受け取った認可コードを使用してアクセス・トークンと識別トークンを取得します。
 
-1.  `VCAP_SERVICES` 環境変数に保管されたサービス資格情報から、トークンの `tokenEndpoint`、`clientId`、および `secret` を取り出します。 
- 
-	**注:** Web サポートが追加される前に {{site.data.keyword.amashort}} を使用した場合は、サービス資格情報にトークン・エンドポイントが含まれていないことがあります。代わりに、Bluemix 地域に応じて、以下の URL を使用します。 
+1.  `VCAP_SERVICES` 環境変数に保管されたサービス資格情報から、トークンの `tokenEndpoint`、`clientId`、および `secret` を取り出します。
 
-	米国南部: 
-  
+	**注:** Web サポートが追加される前に {{site.data.keyword.amashort}} を使用した場合は、サービス資格情報にトークン・エンドポイントが含まれていないことがあります。代わりに、Bluemix 地域に応じて、以下の URL を使用します。
+
+	米国南部:
+
 	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/token`
- 
-	ロンドン: 
- 
-	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token` 
- 
-	シドニー: 
- 
+
+	ロンドン:
+
+	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token`
+
+	シドニー:
+
 	`https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/token`
- 
+
 2. 認可タイプ ("authorization_code")、`clientId`、およびリダイレクト URI をフォーム・パラメーターとして使用して、トークン・サーバー URI に POST 要求を送信します。`clientId` および `secret` を基本 HTTP 認証資格情報として送信します。
- 
+
 	以下のコードは、必要な値を取り出し、それらを POST 要求で送信します。
 
 	```Java
@@ -182,7 +184,7 @@ Facebook App ID および App Secret を取得し、Web クライアントに対
 
 	`redirect_uri` パラメーターは、前に許可要求に使用された `redirect_uri` と一致している必要があることに注意してください。`code` パラメーター値は、許可要求から応答で受け取った認可コードである必要があります。認可コードが有効なのは 10 分間のみであり、それを過ぎると新しいコードの取得が必要です。
 
-	応答本体には、アクセス・コードとトークン ID が JWT フォーマット (https://jwt.io/) で含まれます。
+	応答本体には、アクセス・コードとトークン ID が JWT フォーマットで含まれます ([JWT Web サイト![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://jwt.io/ "外部リンク・アイコン"){: new_window}を参照してください)。
 
 	アクセス・トークンを取得し、識別トークンを受け取ったら、Web セッションに認証済みのフラグを立てることができ、オプションでこれらのトークンを永続的に保持できます。  
 
@@ -193,17 +195,13 @@ Facebook App ID および App Secret を取得し、Web クライアントに対
 
 アクセス・トークンは、{{site.data.keyword.amashort}} 許可フィルターによって保護されたリソースとの通信を可能にします。[リソースの保護](protecting-resources.html)を参照してください。
 
-保護リソースへの要求を行うには、以下の構造の許可ヘッダーを要求に追加します。 
+保護リソースへの要求を行うには、以下の構造の許可ヘッダーを要求に追加します。
 
 `Authorization=Bearer <accessToken> <idToken>`
 
 #### ヒント
-{: #tips} 
+{: #tips}
 
 * `accessToken` と `idToken` は空白で分離する必要があります。
 
-* `idToken` はオプションです。識別トークンを提供しない場合、保護リソースはアクセス可能ですが、許可ユーザーに関する情報を受け取ることはありません。 
- 
-
-
-
+* `idToken` はオプションです。識別トークンを提供しない場合、保護リソースはアクセス可能ですが、許可ユーザーに関する情報を受け取ることはありません。

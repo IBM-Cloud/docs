@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  year: 2016
-lastupdated: "2016-09-07"
+  year: 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
 
@@ -81,5 +81,3 @@ Il corpo della risposta `POST` contiene `access_token` e il `id_token` codificat
 
 Ora puoi iniziare ad effettuare richieste alle tue risorse protette.
 Tutte le richieste a risorse protette devono contenere il token di accesso nel campo di intestazione della richiesta di autorizzazione.
-
-

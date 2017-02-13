@@ -1,14 +1,17 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-24"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
+{:pre: .pre}
+
 
 # 启用 Cordova 应用程序的 Facebook 认证
 {: #facebook-auth-cordova}
@@ -24,22 +27,22 @@ lastupdated: "2016-11-24"
 {: #facebook-auth-before}
 
 您必须具有：
-* 已安装 {{site.data.keyword.amashort}} 客户端 SDK 的 Cordova 项目（Android 或 iOS），请参阅[设置 Cordova 插件](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html#getting-started-cordova-plugin)。
+* 已安装 {{site.data.keyword.amashort}} 客户端 SDK 的 Cordova 项目（Android 或 iOS），请参阅[设置 Cordova 插件](getting-started-cordova.html#getting-started-cordova-plugin)。
 * 受 {{site.data.keyword.amashort}} 服务保护的 {{site.data.keyword.Bluemix_notm}} 应用程序实例。有关如何创建 {{site.data.keyword.Bluemix_notm}} 后端服务的更多信息，请参阅[入门](index.html)。
 * 应用程序路径。这是后端应用程序的 URL。
 * `tenantId` 值。打开 {{site.data.keyword.amashort}} 服务仪表板。单击**移动选项**。`tenantId`（也称为 `appGUID`）值会显示在**应用程序 GUID/TenantId** 字段中。您将需要这些值来初始化 SDK，并将请求发送到后端服务。
 *  找到托管 {{site.data.keyword.Bluemix_notm}} 服务的区域。您可以在菜单栏中的**头像**图标 ![“头像”图标](images/face.jpg "“头像”图标") 旁边的头中找到当前 {{site.data.keyword.Bluemix_notm}} 区域。区域值应为以下某个值：**美国南部**、**悉尼**或**英国**。对应于这些名称的准确 SDK 常量值如代码示例中所示。
-* Facebook 应用程序和应用程序标识。有关更多信息，请参阅[从 Facebook 开发者门户网站获取 Facebook 应用程序标识](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)。
+* Facebook 应用程序和应用程序标识。有关更多信息，请参阅[从 Facebook 开发者门户网站获取 Facebook 应用程序标识](facebook-auth-overview.html#facebook-appID)。
 
 
 
 ## 配置 Android 平台
 {: #facebook-auth-cordova-android}
 
-配置 Cordova 应用程序的 Android 平台进行 Facebook 认证集成所需的步骤，与本机 Android 应用程序所需的步骤非常类似。有关更多信息，请参阅[在 Android 应用程序中启用 Facebook 认证](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-android.html)。请完成以下步骤：
+配置 Cordova 应用程序的 Android 平台进行 Facebook 认证集成所需的步骤，与本机 Android 应用程序所需的步骤非常类似。有关更多信息，请参阅[在 Android 应用程序中启用 Facebook 认证](facebook-auth-android.html)。请完成以下步骤：
 
-* [针对 Android 平台配置 Facebook 应用程序](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-android.html#facebook-auth-android-config)。这将在 Facebook 开发者站点上为 Android 应用程序设置 Facebook 认证。
-* [配置 MCA 进行 Facebook 认证](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-android.html#facebook-auth-android-mca)。这将在 {{site.data.keyword.Bluemix}} 服务器上配置 {{site.data.keyword.amashort}} 服务进行 Android Facebook 认证。
+* [针对 Android 平台配置 Facebook 应用程序](facebook-auth-android.html#facebook-auth-android-config)。这将在 Facebook 开发者站点上为 Android 应用程序设置 Facebook 认证。
+* [配置 MCA 进行 Facebook 认证](facebook-auth-android.html#facebook-auth-android-mca)。这将在 {{site.data.keyword.Bluemix}} 服务器上配置 {{site.data.keyword.amashort}} 服务进行 Android Facebook 认证。
 
 
 ### 针对 Android 平台配置 {{site.data.keyword.amashort}} Facebook 客户端 SDK
@@ -135,19 +138,17 @@ FacebookAuthenticationManager.getInstance().registerDefaultAuthenticationListene
 ## 配置 iOS 平台
 {: #facebook-auth-cordova-ios}
 
-配置 Cordova 应用程序的 iOS 平台进行 Facebook 认证集成所需的步骤，与本机 iOS Swift 应用程序所需的步骤类似。主要差别在于目前 Cordova CLI 不支持 CocoaPods 依赖关系管理器。必须手动添加集成使用 Facebook 认证的 {{site.data.keyword.amashort}} 客户端所需的文件。有关更多信息，请参阅[启用 iOS 应用程序的 Facebook 认证 (Swift SDK)](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios-swift-sdk.html)。请完成以下步骤：
+配置 Cordova 应用程序的 iOS 平台进行 Facebook 认证集成所需的步骤，与本机 iOS Swift 应用程序所需的步骤类似（使用 Objective-C 代码与 Swift SDK 需要头文件）。主要差别在于目前 Cordova CLI 不支持 CocoaPods 依赖关系管理器。必须手动添加集成使用 Facebook 认证的 {{site.data.keyword.amashort}} 客户端所需的文件。有关更多信息，请参阅[启用 iOS 应用程序的 Facebook 认证 (Swift SDK)](facebook-auth-ios-swift-sdk.html)。请完成以下步骤：
 
-* [针对 iOS 平台配置 Facebook 应用程序](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios-swift-sdk.html#facebook-auth-ios-config)。这将在 Facebook 开发者站点上设置 Facebook 认证服务。
-* [配置 MCA 进行 Facebook 认证](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios-swift-sdk.html#facebook-auth-ios-configmca)。这将在 {{site.data.keyword.Bluemix}} 服务器上配置 {{site.data.keyword.amashort}} 服务。
-* [针对 iOS 配置 MCA Facebook 客户端 SDK](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-ios-swift-sdk.html#facebook-auth-ios-sdk)。这将使用 Cocoapods 安装 {{site.data.keyword.amashort}} iOS Swift SDK 进行 Facebook 授权。
+* [针对 iOS 平台配置 Facebook 应用程序](facebook-auth-ios-swift-sdk.html#facebook-auth-ios-config)。这将在 Facebook 开发者站点上设置 Facebook 认证服务。
+* [配置 MCA 进行 Facebook 认证](facebook-auth-ios-swift-sdk.html#facebook-auth-ios-configmca)。这将在 {{site.data.keyword.Bluemix}} 服务器上配置 {{site.data.keyword.amashort}} 服务。
+* [针对 iOS 配置 MCA Facebook 客户端 SDK](facebook-auth-ios-swift-sdk.html#facebook-auth-ios-sdk)。这将使用 Cocoapods 安装 {{site.data.keyword.amashort}} iOS Swift SDK 进行 Facebook 授权。
 
 
 ### 启用 iOS 的密钥链共享
 {: #enable_keychain}
 
 启用`密钥链共享`。转至`功能`选项卡，然后在 Xcode 项目中将`密钥链共享`切换为`开启`。
-
-
 
 ### 使用 Objective-C 初始化 {{site.data.keyword.amashort}} 授权管理器
 {: #initialize_objc}
@@ -171,10 +172,9 @@ FacebookAuthenticationManager.getInstance().registerDefaultAuthenticationListene
 
 
 	    return [super application:application didFinishLaunchingWithOptions:launchOptions];
-	}
-	
+}
 
-	
+
 
 - (BOOL)application: (UIApplication *)application openURL: (NSURL *)url
 					sourceApplication: (NSString *)sourceApplication annotation: (id)annotation {
@@ -203,7 +203,6 @@ BMSClient.initialize(<applicationBluemixRegion>);
 
 将 `<applicationBluemixRegion>` 替换为区域（请参阅[开始之前](#facebook-auth-before)）。
 
-
 ## 测试认证
 {: #facebook-auth-cordova-test}
 
@@ -212,7 +211,7 @@ BMSClient.initialize(<applicationBluemixRegion>);
 ### 开始之前
 {: #testing_auth_before}
 
-您必须使用的是 {{site.data.keyword.mobilefirstbp}} 样板，并且已经在 `/protected` 端点具有受 {{site.data.keyword.amashort}} 保护的资源。有关更多信息，请参阅[保护资源](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)。
+您必须使用的是 {{site.data.keyword.mobilefirstbp}} 样板，并且已经在 `/protected` 端点具有受 {{site.data.keyword.amashort}} 保护的资源。有关更多信息，请参阅[保护资源](protecting-resources.html)。
 
 1. 尝试从浏览器对移动后端应用程序的受保护端点发送请求。打开以下 URL：`{applicationRoute}/protected`。例如：`http://my-mobile-backend.mybluemix.net/protected`。
 
