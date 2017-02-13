@@ -90,7 +90,7 @@ You can also define business logic operations as well.
 
 
 ### Supported elements of Open API specification
-{: #supported-elements}
+{: #supported-elements notoc}
 
 The only portion of the Open API specification that is not fully supported is the file structure. The specification allows for portions of the definition to be split into different files and referenced using the json `$ref` field. Your entire definition must be contained within one file.
 

@@ -18,14 +18,14 @@ The {{site.data.keyword.Bluemix}} Mobile Code Starter for Weather showcases a sc
 
 
 ## Requirements
-{: #tutorial_requirements}
+{: #tutorial_requirements notoc}
 
 * A [Bluemix ![External link icon](../icons/launch-glyph.svg "External link icon")](http://bluemix.net) Account
 * A [Weather Company Data ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/catalog/services/weather-company-data/) service instance obtained from the [Bluemix Catalog ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/catalog/)
 
 
 ## Getting Started
-{: #tutorial_gs}
+{: #tutorial_gs notoc}
 
 To get up and running quickly with the Weather Code Starter, follow these steps:
 
@@ -103,13 +103,13 @@ To get up and running quickly with the Weather Code Starter, follow these steps:
 
 
 ## What to do next
-{: #tutorial_next}
+{: #tutorial_next notoc}
 
 View other tutorials.
 
 
 ### Code Starter tutorials
-{: #tutorials_Code}
+{: #tutorials_Code notoc}
 
 * [Tutorial - Basic](tutorial.html)
 * [Tutorial - Cloudant Sync](tutorial_cloudant_sync.html)

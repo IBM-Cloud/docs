@@ -18,14 +18,14 @@ The {{site.data.keyword.Bluemix}} Mobile Code Starter for Watson Language showca
 
 
 ## Requirements
-{: #tutorial_requirements}
+{: #tutorial_requirements notoc}
 
 * A [Bluemix ![External link icon](../icons/launch-glyph.svg "External link icon")](http://bluemix.net) Account
 * [Language Translator ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/catalog/services/language-translator/) and [Text to Speech ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/catalog/services/text-to-speech/) service instances obtained from the [Bluemix Catalog ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/catalog/)
 
 
 ## Getting Started
-{: #tutorial_gs}
+{: #tutorial_gs notoc}
 
 To get up and running quickly with the Watson Language Code Starter, follow these steps:
 
@@ -103,13 +103,13 @@ To get up and running quickly with the Watson Language Code Starter, follow thes
 
 
 ## What to do next
-{: #tutorial_next}
+{: #tutorial_next notoc}
 
 View other tutorials.
 
 
 ### Code Starter tutorials
-{: #tutorials_Code}
+{: #tutorials_Code notoc}
 
 * [Tutorial - Basic](tutorial.html)
 * [Tutorial - Cloudant Sync](tutorial_cloudant_sync.html)

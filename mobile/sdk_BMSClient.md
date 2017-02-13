@@ -111,10 +111,10 @@ You can use [CocoaPods](https://cocoapods.org){: new_window} or [Carthage](https
 
 
 # Related Links
-{: #rellinks}
+{: #rellinks notoc}
 
 ## Related Links
-{: #general}
+{: #general notoc}
 
 * [BMSCore Android SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window}
 * [BMSCore iOS SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}

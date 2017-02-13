@@ -135,6 +135,7 @@ bluemix sdk validate [OPENAPI_DOC_LOCATION]
 
 Use `bluemix sdk list [argument] [option]` to list apps and validate API specs. You must have the `OPENAPI_SPEC` environment variable set to relative url path hosting your spec.
 
+
 #### Arguments
 {: #list-args}
 

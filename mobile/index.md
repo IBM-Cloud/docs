@@ -7,7 +7,7 @@ lastupdated: "2016-12-13"
 ---
 {:new_window: target="_blank"}
 
-# {{site.data.keyword.Bluemix}} Mobile dashboard
+# {{site.data.keyword.Bluemix_notm}} Mobile dashboard
 {: #mobile}
 
 The {{site.data.keyword.Bluemix}} Mobile dashboard offers a single place to manage the {{site.data.keyword.Bluemix_notm}} capabilities that you need to create and manage your {{site.data.keyword.Bluemix_notm}} Mobile application. You can manage mobile apps through the concept of [Projects](projects.html). The Mobile dashboard brings the most common services that are required for a mobile developer into a single, connected experience that has been optimized for the mobile developer.
@@ -40,10 +40,10 @@ The [Services](services.html) view shows an operational view of your existing mo
 
 
 # Related Links
-{: #rellinks}
+{: #rellinks notoc}
 
 ## Tutorials and Samples
-{: #samples}
+{: #samples notoc}
 
 * [Sample: Mobile Backend for Bluemix](https://github.com/ibm-bluemix-mobile-services/mobiledashboard-storecatalog-backend){: new_window}
 * [Blog Post: Introducing the Bluemix Mobile dashboard](https://developer.ibm.com/bluemix/2016/07/08/new-bluemix-mobile-dashboard/){: new_window}
@@ -56,7 +56,7 @@ The [Services](services.html) view shows an operational view of your existing mo
 
 
 ## Related Links
-{: #general}
+{: #general notoc}
 
 * [{{site.data.keyword.mobileanalytics_short}} (Beta)](/docs/services/mobileanalytics/index.html){: new_window}
 * [{{site.data.keyword.amashort}}](/docs/services/mobileaccess/index.html){: new_window}
