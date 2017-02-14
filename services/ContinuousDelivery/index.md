@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-1-11"
+lastupdated: "2017-2-13"
 
 ---
  
@@ -21,6 +21,8 @@ After you create an instance of {{site.data.keyword.contdelivery_short}} by sele
  * To get started quickly and deploy your application by using an automated pipeline, in the "Starting with a pipeline" section, click **[Start here](#starting_with_a_pipeline)**. You can add more tools later. 
  * To create and configure a continuous delivery toolchain from a template, in the "Starting from a toolchain template" section, click **[Start here](#starting_from_a_toolchain_template)**. The toolchain integrates tools for planning, developing, deploying pipelines, and managing your applications. You can always add or remove tools from your toolchains.
  * If you already have toolchains, in the "Starting from a toolchain template" section, click **View your toolchains**. For more information about working with toolchains, see [Using toolchains](/docs/services/ContinuousDelivery/toolchains_using.html){: new_window}.
+ 
+**Tip**: Pipelines are managed by toolchains. If you create a pipeline and don't have any existing toolchains, a toolchain with a default name will be created for you. With the toolchain, you can expand the capabilities of your pipeline by integrating with other tools and services. 
 
 ##Starting with a pipeline
 {: #starting_with_a_pipeline}
