@@ -525,9 +525,9 @@ Akamai や Dyn などのグローバル・ロード・バランサーを選択�
 <li>リストアが必要な場合には、IBM オペレーターにバックアップ・ファイルを提供する。</li>
 </ul>
 
-# rellinks
+# 関連リンク
 {: rellinks}
-## general
+## 一般
 {: general}
 * [ディスカバー: {{site.data.keyword.Bluemix_dedicated_notm}}](http://www.ibm.com/cloud-computing/bluemix/hybrid/dedicated/)
 * [{{site.data.keyword.Bluemix_notm}} の新機能](/docs/whatsnew/index.html)
