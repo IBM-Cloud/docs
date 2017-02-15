@@ -7,29 +7,29 @@
     "id": "cfApp",
     "title": "Cloud Foundry アプリケーション",
     "href": "cfapps/index.html",
-    "category_id": "コンピュート (compute)"
+    "category_id": "compute"
   }, {
     "title": "ランタイム",
     "href": "cfapps/runtimes.html",
-    "category_id": "コンピュート (compute)"
+    "category_id": "compute"
   }, {
     "title": "ボイラープレート",
     "href": "cfapps/boilerplates.html",
-    "category_id": "コンピュート (compute)"
+    "category_id": "compute"
   }, {
     "title": "IBM OpenWhisk",
     "href": "openwhisk/index.html",
-    "category_id": "コンピュート (compute)"
+    "category_id": "compute"
   }, {
-    "id": "コンテナー (container)",
+    "id": "container",
     "title": "IBM Bluemix Container Service",
     "href": "containers/container_index.html",
-    "category_id": "コンピュート (compute)"
+    "category_id": "compute"
   }, {
     "type": "extra",
     "title": "データの処理の試行",
     "href": "services/WorkWithData/index.html",
-    "category_id": "データ"
+    "category_id": "data"
   }, {
     "type": "extra",
     "title": "Dedicated GitHub Enterprise の試行",
@@ -39,7 +39,7 @@
     "type": "extra",
     "title": "モバイル・プロジェクトのビルドの試行",
     "href": "mobile/index.html",
-    "category_id": "モバイル"
+    "category_id": "mobile"
   }]
 }
 

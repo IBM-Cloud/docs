@@ -133,7 +133,7 @@ function main(params) {
 * [REST API](https://new-console.{DomainName}/apidocs/98)
 
 # 関連リンク
-{: #rellinks}
+{: #rellinks notoc}
 
 ## API リファレンス
 {: #api}

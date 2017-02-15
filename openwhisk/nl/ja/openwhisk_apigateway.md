@@ -129,7 +129,7 @@ curl -X GET https://2ef15285-gws.api-gw.mybluemix.net/club/books
 ### 構成のエクスポート
 `Book Club` という名前の API をファイルにエクスポートしましょう。そのファイルは、入力としてファイルを使用して API を再作成するためのベースとして使用できます。 
 ```
-wsk api get "Book Club" > club-swagger.json
+wsk api-experimental get "Book Club" > club-swagger.json
 ```
 {: pre}
 
@@ -146,7 +146,7 @@ ok: deleted API /club
 
 次に、`club-swagger.json` ファイルを使用して、`Book Club` という名前の API をリストアしましょう。
 ```
-wsk api create --config-file club-swagger.json
+wsk api-experimental create --config-file club-swagger.json
 ```
 {: pre}
 ```
@@ -163,7 +163,7 @@ https://2ef15285-gws.api-gw.mybluemix.net/club/books
 
 API が再作成されたことを確認できます。
 ```
-wsk api list /club
+wsk api-experimental list /club
 ```
 {: pre}
 ```

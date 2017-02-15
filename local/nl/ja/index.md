@@ -301,7 +301,7 @@ Cloud Foundry アプリケーションおよび {{site.data.keyword.Bluemix_notm
 </li>
 <li>ユーザーは、デプロイメント用のドメイン・ネームと、使用する ID を指定します。ローカル・インスタンスをセットアップする時に、部分的に定義された 2 つのドメインが提供されます。ユーザーは、それら 2 つのドメインの接頭部を選択します。例えば、<code>*mycompany*.bluemix.net</code> と <code>*mycompany*.mybluemix.net</code> の接頭部を選択します。<br />
 <br />
-カスタム・ドメインをフルに定義することもできます (例えば、mycustombmx.mycompany.com および application.mycompany.com)。環境がデプロイされる前に、SSL 証明書、証明書鍵、およびルート証明書を提供する必要があります。提供されたルート証明書は、要求に応じて環境用に <a href="index.html#sslinspection">SSL インスペクション</a>をセットアップするためにも使用されます。<br />
+完全にカスタムなドメインを定義することもできます (例えば、mycustombmx.mycompany.com および application.mycompany.com)。環境がデプロイされる前に、SSL 証明書、証明書鍵、およびルート証明書を提供する必要があります。提供されたルート証明書は、要求に応じて環境用に <a href="index.html#sslinspection">SSL インスペクション</a>をセットアップするためにも使用されます。<br />
 <br />
 アプリケーション用のカスタム・ドメインは任意の数だけ選択できますが、それらのカスタム・ドメイン用の証明書を提供することが必要です。カスタム・ドメインの作成について詳しくは、『<a href="../manageapps/updapps.html#domain">カスタム・ドメインの作成と使用</a>』を参照してください。</li>
 <li>ユーザーは、もとの {{site.data.keyword.IBM_notm}} 運用センターに接続するようリレーを構成するために、IPSec トンネルまたは OpenVPN トンネルのいずれのテクノロジーを使用するか選択します。</li>
@@ -443,7 +443,7 @@ Success Manager (CSM) と連携できます。異なるサポート層につい�
 ## {{site.data.keyword.Bluemix_local_notm}} のインフラストラクチャー要件
 {: #localinfra}
 
-{{site.data.keyword.Bluemix_local_notm}} では、物理的セキュリティー、およびローカル・インスタンスをホストするためのインフラストラクチャーをお客様が所有します。インフラストラクチャー要件は、お客様独自の VMware を使用して管理することを選択したのか、IBM から注文した PureApp アプライアンスを含む {{site.data.keyword.Bluemix_local_notm}} System を購入することを選択したのかに関わらず同じです。ただし、PureApp アプライアンスについては注文時に選択できる 2 つのオプションがあり、環境を拡大縮小するプロセスは VMware と {{site.data.keyword.Bluemix_local_notm}} System とで異なります。PureApp アプライアンスのオプションについて詳しくは、[IBM {{site.data.keyword.Bluemix_notm}} Local System W3500 and W3550 models run cloud native services, enabled middleware, and open pattern workloads concurrently ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://www-01.ibm.com/common/ssi/rep_ca/5/897/ENUS216-325/){: new_window} を参照してください。
+{{site.data.keyword.Bluemix_local_notm}} では、物理的セキュリティー、およびローカル・インスタンスをホストするためのインフラストラクチャーをお客様が所有します。インフラストラクチャー要件は、お客様独自の VMware を使用して管理することを選択したのか、IBM から注文した PureApp アプライアンスを含む {{site.data.keyword.Bluemix_local_notm}} System を購入することを選択したのかにかかわらず同じです。ただし、PureApp アプライアンスについては注文時に選択できる 2 つのオプションがあり、環境を拡大縮小するプロセスは VMware と {{site.data.keyword.Bluemix_local_notm}} System とで異なります。PureApp アプライアンスのオプションについて詳しくは、[IBM {{site.data.keyword.Bluemix_notm}} Local System W3500 and W3550 models run cloud native services, enabled middleware, and open pattern workloads concurrently ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://www-01.ibm.com/common/ssi/rep_ca/5/897/ENUS216-325/){: new_window} を参照してください。
 
 {{site.data.keyword.IBM_notm}} では、{{site.data.keyword.Bluemix_local_notm}} をセットアップするための最小要件を以下のように設定しています。
 

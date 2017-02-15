@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-01-24"
 
 ---
 
@@ -1253,9 +1253,8 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
 
 以下のセクションで説明されているメトリック API には、地域固有のエンドポイントからアクセスできます。以下に例を示します。 
 
- ```
-https://console.<region>.bluemix.net.
- ```
+ `https://console.<region>.bluemix.net/admin/metrics`
+{: codeblock}
 
 **注**:
 
@@ -1266,20 +1265,31 @@ https://console.<region>.bluemix.net.
 
 試験的環境 API を使用して、指定した期間における高度な環境情報を収集できます。指定した時間内の有効なデータ・ポイントが返されます。データは、ほぼ 1 時間ごとに記録されます。例えば、環境での 6 時間の CPU データを要求すると、要求された 6 時間の 1 時間ごとの CPU データが応答に含まれます。
 
+ ### 環境エンドポイント 
+ 
+次のエンドポイントを使用して、この API コマンドを起動できます。  `/api/v1/env`
+
 ### 環境メトリックの照会パラメーター
 
 次の照会パラメーターを使用して、CPU、ディスク、メモリー、ネットワーク、およびアプリに関するメトリックを収集できます。
 
 <dl class="parml">
 <dt class="pt dlterm">metric</dt>
-<dd class="pd">「memory」、「disk」、「cpu」、「network」、「apps」の 1 つ以上の値をコンマで区切ったもの。</dd>
+<dd class="pd">`memory`、`disk`、`cpu`、`network`、`apps` の 1 つ以上の値をコンマで区切ったもの。</dd>
 <dt class="pt dlterm">startTime</dt>
 <dd class="pd">データを返す最初の時点。startTime が指定されないと、入手可能な最初のデータ・ポイントが含められます。例えば、2 PM から 5 PM までのデータを収集するには、startTime に 2 PM を指定します。</dd>
 <dt class="pt dlterm">endTime</dt>
 <dd class="pd">データを返す最後の時点。endTime が指定されないと、最新のデータ・ポイントが使用されます。例えば、2 PM から 5 PM までのデータを収集するには、endTime に 5 PM を指定します。</dd>
 <dt class="pt dlterm">sort</dt>
-<dd class="pd">データを返す順序。有効な値は 'asc' (昇順) と 'desc' (降順) です。デフォルトは降順で、最新のデータを最初に返します。</dd>
+<dd class="pd">データを返す順序。有効な値は、`asc` (昇順) と `desc` (降順) です。デフォルトは降順で、最新のデータを最初に返します。</dd>
 </dl>
+
+ 以下の例は、照会パラメーターを使用して環境についてのメトリックを収集しています。
+ 
+ ```
+ curl -b ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/admin/metrics/api/v1/env?metric=cpu,network,disk,apps,memory
+ ```
+{: codeblock}
 
 ### 環境メトリックのデータ・フォーマット
 
@@ -1291,7 +1301,8 @@ https://console.<region>.bluemix.net.
 {
   "sample_time": 1477494000000,
   "memory": {
-    "physical": {
+    "cell": {
+      "physical": {
       "total_gb": 864,
       "used": {
         "value_gb": 336.84,
@@ -1304,6 +1315,23 @@ https://console.<region>.bluemix.net.
         "value_gb": 1287.59,
         "percent": 74.51
       }
+    },
+    },
+    "dea": {
+      "physical": {
+      "total_gb": 864,
+      "used": {
+        "value_gb": 336.84,
+        "percent": 38.99
+      }
+    },
+    "allocated": {
+      "reserved_gb": 1728,
+      "total_allocated": {
+        "value_gb": 1287.59,
+        "percent": 74.51
+      }
+    },
     },
     "memory_by_container": [
       {
@@ -1342,7 +1370,8 @@ https://console.<region>.bluemix.net.
 {
   "sample_time": 1477494000000,
   "disk": {
-    "physical": {
+    "cell": {
+      "physical": {
       "total_gb": 8100,
       "used": {
         "value_gb": 807,
@@ -1355,6 +1384,23 @@ https://console.<region>.bluemix.net.
         "value_gb": 1989.5,
         "percent": 12.28
       }
+    },
+    },
+    "dea": {
+      "physical": {
+      "total_gb": 8100,
+      "used": {
+        "value_gb": 807,
+        "percent": 9.96
+      }
+    },
+    "allocated": {
+      "reserved_gb": 16200,
+      "total_allocated": {
+        "value_gb": 1989.5,
+        "percent": 12.28
+      }
+    },
     },
     "disk_by_container": [
       {
@@ -1393,7 +1439,12 @@ https://console.<region>.bluemix.net.
 {
   "sample_time": 1477494000000,
   "cpu": {
-    "average_percent_cpu_used": 27.288461538461544,
+    "cell": {
+      "average_percent_cpu_used": 27.288461538461544
+    },
+    "dea": {
+      "average_percent_cpu_used": 27.288461538461544
+    },
     "cpu_by_container": [
       {
         "name": "dea_next/0",
@@ -1486,7 +1537,7 @@ https://console.<region>.bluemix.net.
 {: screen}
 
 * アプリケーションに関するデータ・レコードを収集するには、以下のデータ・フォーマットを使用します。
- 
+
 ```
 {
   "sample_time": 1477494000000,
@@ -1521,11 +1572,11 @@ https://console.<region>.bluemix.net.
 ### アプリケーションのエンドポイント 
 
 以下のエンドポイントを使用して、この API コマンドを起動できます。
-* /api/v1/app/cpu/physical 
-* /api/v1/app/memory/physical
-* /api/v1/app/memory/reserved
-* /api/v1/app/disk/physical
-* /api/v1/app/disk/reserved
+* `/api/v1/app/cpu/physical` 
+* `/api/v1/app/memory/physical`
+* `/api/v1/app/memory/reserved`
+* `/api/v1/app/disk/physical`
+* `/api/v1/app/disk/reserved`
 
 
 ### アプリケーションの照会パラメーター
@@ -1540,7 +1591,17 @@ https://console.<region>.bluemix.net.
 <dt class="pt dlterm">count</dt>
 <dd class="pd">各データ・サンプルで返すレコード数。
 </dd>
+<dt class="pt dlterm">minValue</dt>
+<dd class="pd">指定されたメトリックについて返す処理が行われる最小値。minValue が指定されていない場合、すべての値が返されます。例えば、最小限 20000 バイトの物理メモリーを使用しているアプリケーションを収集するには、minValue に 20000 を指定します。
+</dd>
 </dl>
+
+以下の例は、アプリケーションについてのメトリックを収集します。
+
+```
+curl -b ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/admin/metrics/api/v1/app/cpu/physical?count=5&startTime=2016-12-02T16:54:09.467Z
+```
+{: codeblock}
 
 ### アプリケーションの応答フォーマット
 

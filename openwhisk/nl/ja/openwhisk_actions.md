@@ -411,7 +411,6 @@ lastupdated: "2017-01-04"
 ```
 {
   "name": "my-action",
-  "version": "1.0.0",
   "main": "index.js",
   "dependencies" : {
     "left-pad" : "1.1.3"
@@ -433,7 +432,7 @@ exports.main = myAction;
 ```
 {: codeblock}
 
-なお、アクションは `exports.main` を介して公開されます。アクション・ハンドラー自体の名前は、オブジェクトを受け入れ、オブジェクトを返す通常のシグニチャー (オブジェクトの `Promise`) に準拠している限り、任意のものにすることができます。
+なお、アクションは `exports.main` を介して公開されます。アクション・ハンドラー自体の名前は、オブジェクトを受け入れ、オブジェクトを返す通常のシグニチャー (オブジェクトの `Promise`) に準拠している限り、任意のものにすることができます。Node.js 規則により、このファイルの名前は `index.js` にするか、または、package.json 内の `main` プロパティーとして任意のファイル名を指定する必要があります。
 
 このパッケージから OpenWhisk アクションを作成するには、以下のようにします。
 
@@ -770,10 +769,6 @@ Docker スケルトンが現在のディレクトリーにインストールさ�
   {: pre}
   ```
   cd dockerSkeleton
-  ```
-  {: pre}
-  ```
-  chmod +x buildAndPush.sh
   ```
   {: pre}
   ```
