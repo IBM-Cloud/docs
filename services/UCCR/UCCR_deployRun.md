@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-  last-updated: "2017-02-13"
+  last-updated: "2017-02-15"
 
 ---
 
@@ -14,7 +14,7 @@ copyright:
 # Running deployments
 {: #deployment_run}
 
-Run deployments by resolving the tasks in a deployment plan.
+Use {{site.data.keyword.uccr_short}} to run software deployments. Complete deployments by resolving the tasks in a deployment plan.
 {:shortdesc}
 
 A deployment starts when one of the plan's eligible tasks starts. A scheduled deployment starts automatically at the scheduled time if one of its eligible tasks is an auto task, such as UrbanCode Deploy or Delayed-type tasks. Otherwise, begin a deployment by starting one of the plan's eligible tasks. If the plan contains several eligible tasks, you can start any of them. You can manually start a deployment at any time. You can manually start a scheduled deployment before its scheduled time.   
@@ -38,7 +38,7 @@ You can deliberately exclude tasks from a deployment. You can make tagged tasks 
 
 Inapplicable tasks have the status of `Not Applicable`. Tasks with the `Not Applicable` status cannot be started. If an inapplicable task is a prerequisite for an active task, the dependency is ignored.  
 
-To start a deployment, complete these steps.
+To start a deployment, complete the following steps:
 
 1. On the Deployment Plans page, click the deployment plan that you want to use for the deployment. The deployment detail page is displayed.
 
@@ -59,7 +59,7 @@ Complete a deployment by resolving the tasks in the deployment plan. A started t
 
 You resolve manual tasks by using the appropriate status action. Auto tasks, such as UrbanCode Deploy tasks, change status automatically as conditions change. However, you can manually resolve auto tasks. For example, you might manually fail an UrbanCode Deploy task that is taking too long to complete.
 
-To resolve a started task, apply one of the following statuses.
+To resolve a started task, apply one of the following statuses:
 
 <ul>
 <li>Click **Complete** <img class="inline" src="images/task-complete.png"  alt="complete task action"> to finish a task. `Complete` means that the task finished with the expected results.
