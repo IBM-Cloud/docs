@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-  last-updated: "2017-02-13"
+  last-updated: "2017-02-15"
 
 ---
 
@@ -111,7 +111,7 @@ IBM Bluemix DevOps Connect coordinates communication between your on-premises IB
 ## Tutorials and Samples
 {: #samples}
 
-* [Sample deployment plan. You can import this CSV-type file into a deployment plan.](https://console.ng.bluemix.net/catalog/services/continuous-delivery/sample/SamplePlan.csv){:new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
+* [Sample deployment plan. You can import this CSV-type file into a deployment plan.](http://public.dhe.ibm.com/cloud/bluemix/uccr/){:new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
 
 <!--
 

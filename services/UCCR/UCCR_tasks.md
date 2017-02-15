@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-  last-updated: "2017-02-13"
+  last-updated: "2017-02-15"
 
 ---
 
@@ -23,6 +23,7 @@ Most tasks have a starting and ending point, and a measurable duration.  A task 
 <ul>
 <li>**Manual** tasks can represent any activity that is associated with a software deployment, such as taking a server offline or updating a database.</li>
 <li>**UrbanCode Deploy** tasks represent IBM&reg; UrbanCode&reg; Deploy applications. You can run IBM UrbanCode Deploy applications with UrbanCode Deploy-type tasks.</li>
+<li>**Bluemix Continuous Delivery** tasks represent {{site.data.keyword.contdelivery_full}} pipelines. You can manage your {{site.data.keyword.contdelivery_short}} pipelines with this task type.</li>
 <li>**Delayed** tasks represent critical events that happen at a specific time.</li>
 <li>**Header** tasks are organizational elements. For example, you might use a header task to identify a task group.</li>
 </ul>
@@ -181,7 +182,7 @@ To create a Bluemix Continuous Delivery task, complete the following steps:
 
 3. In the **Description** field, enter or paste a description. You might enter a note, a reminder, or other instructions in the field.
 
-3. In the **Pipeline ID** field, enter or paste the pipeline ID. 
+3. In the **Pipeline ID** field, enter or paste the pipeline ID.
 
 3. In the **Stage Name** field, enter or paste the stage name.
 
