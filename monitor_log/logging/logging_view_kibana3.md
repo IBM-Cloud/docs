@@ -76,7 +76,7 @@ To see the logs of a Cloud Foundry application in Kibana, complete the following
 
 If you don't see any logs, adjust the time picker in the header.
 
-For more information about customizing a Kibana dashboard, see [this blog post](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/) or the [Kibana ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window} documentation.
+For more information about customizing a Kibana dashboard, see [this blog post](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/) or the [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html) documentation.
 
 ##  Getting to the Kibana dashboard from a web browser
 {: #launch_Kibana_from_browser}

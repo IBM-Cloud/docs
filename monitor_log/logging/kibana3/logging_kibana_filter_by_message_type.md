@@ -55,7 +55,7 @@ Complete the following tasks to view and filter your Cloud Foundry app logs by m
     
     A new filter condition is added to the Kibana dashboard.
 
-7. Optionally, repeat the previous step to add a filter for other message types. To see the full list of message types, see [Log format](../logging_log_ov.md#log_format).
+7. Optionally, repeat the previous step to add a filter for other message types. To see the full list of message types, see [Log format](../logging_view_kibana3.html#kibana_log_format_cf).
 
 9. Save the dashboard.    
         

@@ -16,7 +16,6 @@
             logging/kibana3/logging_kibana_tables_graphs.md
             logging/kibana3/logging_kibana_export_share_dashboard.md
         logging/logging_view_cli.md
-        logging/logging_view_external.md
-            logging/external/logging_external_hosts.md
+        logging/external/logging_external_hosts.md
         logging/dedicated/logging_local_dedicated.md
     [Monitoring and logging IBM Bluemix Container Service](../containers/monitoringandlogging/container_ml_ov.html)

@@ -56,7 +56,7 @@ Complete the following tasks to view and filter your Cloud Foundry app logs by l
      
      A new filter condition is added to the Kibana dashboard.
 
-7. Optionally, you can repeat the previous step and add filters for each component. To see the full list of components, see [Log format](../logging_log_ov.md#log_format).
+7. Optionally, you can repeat the previous step and add filters for each component. To see the full list of components, see [Log format](../logging_view_kibana3.html#kibana_log_format_cf).
 
     The following image shows the dashboard with multiple filters for different components:
     
