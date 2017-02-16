@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-11"
+  years: 2015, 2017
+lastupdated: "2017-02-16"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2016-10-11"
 ## 访问 HTTP REST API
 {: #api_link}
 
-要访问 {{site.data.keyword.iot_short_notm}} HTTP REST API，并获取有关如何将设备集成到组织中的更多信息，请转至 https://docs.internetofthings.ibmcloud.com/swagger/v0002.html。
+要访问 {{site.data.keyword.iot_short_notm}} HTTP REST API，并获取有关如何将设备集成到组织中的更多信息，请转至 https://docs.internetofthings.ibmcloud.com/swagger/v0002.html.
 
 {{site.data.keyword.iot_short_notm}} HTTP REST API 的唯一受支持版本是 V2。请确保您的 {{site.data.keyword.iot_short_notm}} 解决方案使用的是 V2。
 
