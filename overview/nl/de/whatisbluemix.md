@@ -249,7 +249,7 @@ Cloud Integration-API wählen Sie die Ressource aus,
 auf die Sie über die Web-API zugreifen möchten, geben die zulässigen Operationen
 an und beziehen die SDKs und Beispiele für den Zugriff auf die API ein. Weitere Informationen zur Erstellung
 einer Cloud Integration-API finden sie unter
-[Erste Schritte mit Cloud Integration](/docs/services/CloudIntegration/CldInt_GetStart.html). </dd>
+[Erste Schritte mit Cloud Integration](/docs/services/CloudIntegration/CldInt_GetStart.html).</dd>
 <dt>Privater Service</dt>
     <dd>Ein privater Service besteht aus einer Cloud Integration-API,
 SDKs und Berechtigungsrichtlinien. Der private Service kann außerdem Dokumentation oder andere Elemente des Service-Providers enthalten. Eine Cloud Integration-API kann nur vom Organisationsmanager als privater Service veröffentlicht werden. Wenn Sie die

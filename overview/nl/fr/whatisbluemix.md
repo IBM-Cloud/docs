@@ -26,9 +26,7 @@ disposition par {{site.data.keyword.IBM_notm}}. Vous et votre équipe pouvez acc
 outils d'infrastructure sous forme de services existants. Les développeurs peuvent exploiter l'écosystème en pleine expansion de services et
 d'infrastructures d'exécution disponibles afin de construire des applications avec des approches de programmation polyglottes.
  
-Avec {{site.data.keyword.Bluemix_notm}}, il n'est plus nécessaire d'effectuer des investissements importants en termes de matériel pour tester ou exécuter une nouvelle application. A la place, nous gérons tout pour vous et ne vous facturons que ce que vous utilisez. {{site.data.keyword.Bluemix_notm}}
-met à disposition des modèles de déploiement intégrés publics, [dédiés](/docs/dedicated/index.html) et
-[locaux](/docs/local/index.html). 
+Avec {{site.data.keyword.Bluemix_notm}}, il n'est plus nécessaire d'effectuer des investissements importants en termes de matériel pour tester ou exécuter une nouvelle application. A la place, nous gérons tout pour vous et ne vous facturons que ce que vous utilisez. {{site.data.keyword.Bluemix_notm}} met à disposition des modèles de déploiement intégrés publics, [dédiés](/docs/dedicated/index.html) et [locaux](/docs/local/index.html). 
 
 Vous pouvez mener une idée de la création au bac à sable de développement, dans un environnement de production distribué globalement avec une
 infrastructure de traitement et de stockage, des services de plateforme open source et des conteneurs, ainsi que des services logiciels et des outils mis à

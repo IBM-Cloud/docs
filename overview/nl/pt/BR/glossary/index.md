@@ -294,9 +294,7 @@ Consulte [entrega contínua](#x7233913).
 {: #x2016383}
 
 Uma organização ou empresa de terceiro confiável que emite os certificados digitais. A autoridade de
-certificação geralmente verifica a identidade dos indivíduos que recebem o certificado exclusivo. Consulte também
-[certificado intermediário](#x3753781), [Secure Sockets Layer](#x2038004),
-[raiz confiável](#x2042234).
+certificação geralmente verifica a identidade dos indivíduos que recebem o certificado exclusivo. Consulte também [certificado intermediário](#x3753781), [Secure Sockets Layer](#x2038004), [raiz confiável](#x2042234).
 
 ### certificate signing request (CSR)
 {: #x3530521}
@@ -711,8 +709,7 @@ executável por inteiro.
 Um certificado subordinado que é emitido pela autoridade de certificação raiz confiável
 (CA) especificamente para emitir certificados do servidor de entidade final. O resultado é uma cadeia de certificados que inicia na autoridade de certificação raiz
 confiável, passa pelo certificado intermediário e termina com o
-certificado SSL emitido para a organização. Consulte também [autoridade de certificação](#x2016383),
-[raiz confiável](#x2042234).
+certificado SSL emitido para a organização. Consulte também [autoridade de certificação](#x2016383), [raiz confiável](#x2042234).
 
 ### Internet of Things (IoT)
 {: #x6714341}
@@ -1371,9 +1368,7 @@ O mecanismo pelo qual a confiança é validada no ambiente do produto para cada
 ### raiz confiável
 {: #x2042234}
 
-Um certificado assinado por uma autoridade de certificação (CA) confiável. Consulte também
-[autoridade de certificação](#x2016383),
-[certificado intermediário](#x3753781).
+Um certificado assinado por uma autoridade de certificação (CA) confiável. Consulte também [autoridade de certificação](#x2016383), [certificado intermediário](#x3753781).
 
 
 ## U
