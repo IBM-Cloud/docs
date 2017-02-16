@@ -88,7 +88,7 @@ On the Status page, you can find the following information:
 
 You can find the Status page by choosing either of the following options:
 
-  * Log in to the {{site.data.keyword.Bluemix_notm}} console. From the menu bar, click **Support** and then click **Status**.  Check the listed resources for the ![some issues](images/some_issues.svg) icon. This icon might indicate an outage.
+  * Log in to the {{site.data.keyword.Bluemix_notm}} console. From the menu bar, click **Support** and then click **Status**. Check the listed resources for the ![some issues](images/some_issues.svg) icon. This icon might indicate an outage.
   * Access it directly at [IBM {{site.data.keyword.Bluemix_notm}} - System Status ![External link icon](../icons/launch-glyph.svg)](http://ibm.biz/bluemixstatus){: new_window}.
 
 
@@ -303,7 +303,7 @@ Before you collect diagnostic information, complete the following steps:
 
   1. Ensure that you have installed the latest cf command line interface. For more information, see [Installing the cf command line interface](/docs/starters/install_cli.html).
 
-     **Note:** If you do not have the latest cf command line interface installed, after the cf command line is connected to {{site.data.keyword.Bluemix_notm}}, the `cf logs` command might not return output.
+     **Note:** If you don't have the latest cf command line interface installed, after the cf command line is connected to {{site.data.keyword.Bluemix_notm}}, the `cf logs` command might not return output.
 
   2. Ensure that you connected the cf command line interface to where {{site.data.keyword.Bluemix_notm}} is running by using the `cf api` command.
 
