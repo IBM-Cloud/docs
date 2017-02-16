@@ -417,7 +417,7 @@ Um die Ansicht **Nutzungsdashboard** zu öffnen, klicken Sie auf **Konto** &gt; 
 
 Dem Kontoeigner werden die Gebühren für die Gesamtnutzung, die für alle Organisationen anfallen, am Ende jedes Abrechnungszyklus in Rechnung gestellt. Jeder Abrechnungszyklus dauert einen Monat.
 
-Kontoeigner können die Nutzungszusammenfassung nach Region und Organisation filtern. Wenn Sie Kontoeigner sind, legen Sie **Organisation** auf **Alle Organisationen** fest, um die Nutzung für das gesamte Konto für einen 12-monatigen Zeitraum anzuzeigen. Klicken Sie auf einen bestimmten Monat, um die Nutzung für diesen Monat anzuzeigen. Die angezeigten Gebühren stellen den Betrag dar, der Ihnen als Kontoeigner für diesen Monat in Rechnung gestellt wird.
+Kontoeigner können die Nutzungszusammenfassung nach Region und Organisation filtern. Wenn Sie Kontoeigner sind, legen Sie **Organisation** auf **Alle Organisationen** fest, um die Nutzung für das gesamte Konto für einen 12-monatigen Zeitraum anzuzeigen. Klicken Sie auf einen bestimmten Monat, um die Nutzung für diesen Monat anzuzeigen.  Die angezeigten Gebühren stellen den Betrag dar, der Ihnen als Kontoeigner für diesen Monat in Rechnung gestellt wird.
 
 Wenn Sie unter **Organisation** eine bestimmte Organisation auswählen, können Sie die gesamte Nutzung für diese Organisation, einschließlich der Nutzung als Teil eines gebührenfreien Nutzungskontingents anzeigen. Die für die Organisation angezeigten Gebühren sind nicht die Gebühren, die Ihnen in Rechnung gestellt werden. Die Nutzung des gebührenfreien Nutzungskontingents wird auf Kontoebene als kostenlos angezeigt, aber nicht auf Organisationsebene. Aus diesem Grund wird beim Anzeigen der Nutzung der Organisation die tatsächliche Nutzung für diese Organisation einschließlich der kostenlosen und der gebührenpflichtigen Nutzung angezeigt. Beim Anzeigen der Nutzung aller Organisationen wird die Nutzung für das Konto aufsummiert, nachdem das gebührenfreie Nutzungskontingent entfernt wurde.
 
@@ -457,9 +457,9 @@ Geben Sie zum Aktualisieren des Serviceplans den folgenden Befehl ein:
 ```
 cf update-service <Servicename> [-p <neuer Plan>]
 ```
-# rellinks
+# Zugehörige Links
 {: rellinks}
-## general
+## Allgemein
 {: general} 
 * [{{site.data.keyword.Bluemix_notm}} - Preisliste](https://console.{DomainName}/pricing/)
 * [{{site.data.keyword.Bluemix_notm}} Developers Community Forum ![Symbol für externen Link](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/){: new_window}
