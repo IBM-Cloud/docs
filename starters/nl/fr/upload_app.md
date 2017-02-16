@@ -55,14 +55,10 @@ intégrés, vous devez indiquer l'option -c afin de spécifier la commande qui e
   **Astuce :** lorsque vous utilisez la commande **cf push**, l'interface de ligne de commande
 **cf** copie tous les fichiers et les répertoires depuis votre répertoire de travail vers Bluemix. Assurez-vous que votre répertoire de travail contient uniquement les fichiers requis.
 
-  La commande cf push télécharge et déploie votre application dans {{site.data.keyword.Bluemix_notm}}. Voir
-[Commandes cf](/docs/cli/reference/cfcommands/index.html) pour plus d'informations sur cf push. Voir
-[Utilisation de packs de construction de communauté](/docs/cfapps/byob.html) pour des informations sur les packs de construction.
+  La commande cf push télécharge et déploie votre application dans {{site.data.keyword.Bluemix_notm}}. Voir [Commandes cf](/docs/cli/reference/cfcommands/index.html) pour plus d'informations sur cf push. Voir [Utilisation de packs de construction de communauté](/docs/cfapps/byob.html) pour des informations sur les packs de construction.
 
   2. Si vous modifiez votre application, vous pouvez télécharger ces modifications en entrant à nouveau la commande cf push. L'interface de ligne de
 commande cf utilise vos options précédentes et vos réponses aux invites pour mettre à jour n'importe quelle instance en cours d'exécution de votre application avec
 les nouvelles parties de code.
 
-**Astuce :** vous pouvez également télécharger ou déployer une application à partir de DevOps Services. Voir
-[Developing a {{site.data.keyword.Bluemix_notm}} application in Node.js with the Web
-IDE ![icône de lien externe](../icons/launch-glyph.svg)](https://hub.jazz.net/tutorials/devopsweb/){: new_window}.
+**Astuce :** vous pouvez également télécharger ou déployer une application à partir de DevOps Services. Voir [Developing a {{site.data.keyword.Bluemix_notm}} application in Node.js with the Web IDE ![icône de lien externe](../icons/launch-glyph.svg)](https://hub.jazz.net/tutorials/devopsweb/){: new_window}.

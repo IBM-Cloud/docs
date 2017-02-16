@@ -18,11 +18,11 @@
    viewBox="149 -12 355.4 48"
    style="enable-background:new 149 -12 355.4 48;"
    xml:space="preserve"
-   inkscape:version="0.48.0 r9654"
+   inkscape:version="0.91 r13725"
    sodipodi:docname="btn_bx_commandline.svg"><metadata
    id="metadata19"><rdf:RDF><cc:Work
        rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
    id="defs17" /><sodipodi:namedview
    pagecolor="#ffffff"
    bordercolor="#666666"
@@ -32,16 +32,16 @@
    guidetolerance="10"
    inkscape:pageopacity="0"
    inkscape:pageshadow="2"
-   inkscape:window-width="1086"
-   inkscape:window-height="480"
+   inkscape:window-width="1440"
+   inkscape:window-height="848"
    id="namedview15"
    showgrid="false"
-   inkscape:zoom="1.4350028"
+   inkscape:zoom="1.0804727"
    inkscape:cx="177.7"
-   inkscape:cy="24"
-   inkscape:window-x="0"
-   inkscape:window-y="0"
-   inkscape:window-maximized="0"
+   inkscape:cy="23.074479"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
    inkscape:current-layer="Layer_1" />
 <style
    type="text/css"
@@ -59,12 +59,20 @@
    height="48"
    id="rect5" />
 <text
-   transform="scale(0.78219458,1.2784543)"
    class="st1 st2 st3"
    id="text7"
-   x="211.70033"
-   y="13.345398"
-   style="font-size:13.16127586px;fill:#ffffff;font-family:HelvNeueBoldforIBM">Fazer download da interface de linha de comandos do Bluemix</text>
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14px;line-height:125%;font-family:HelvNeueBoldforIBM;-inkscape-font-specification:'HelvNeueBoldforIBM, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff"
+   sodipodi:linespacing="125%"
+   x="202.30774"
+   y="11.541475"><tspan
+     sodipodi:role="line"
+     id="tspan3347"
+     x="202.30774"
+     y="11.541475">Fazer download da interface de </tspan><tspan
+     sodipodi:role="line"
+     id="tspan3349"
+     x="202.30774"
+     y="29.041475">linha de comandos do Bluemix</tspan></text>
 
 <g
    id="g9">

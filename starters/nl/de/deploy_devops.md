@@ -35,7 +35,7 @@ Sie können ein gehostetes Git-Repository erstellen, das für {{site.data.keywor
 
 Die aktualisierte App wird erneut in {{site.data.keyword.Bluemix_notm}} bereitgestellt.
 
-Schrittweise Anweisungen finden Sie in den Informationen zur [Einrichtung der Git-Integration und zur automatischen Bereitstellung in DevOps Services![Symbol für externen Link](../icons/launch-glyph.svg)](https://hub.jazz.net/tutorials/jazzeditor/#git_integration_and_autodeployment){: new_window}. 
+Schrittweise Anweisungen finden Sie in den Informationen zur [Einrichtung der Git-Integration und zur automatischen Bereitstellung in DevOps Services![Symbol für externen Link](../icons/launch-glyph.svg)](https://hub.jazz.net/tutorials/jazzeditor/#git_integration_and_autodeployment){: new_window}.
 
 ## Haben Sie Git hinzugefügt? Testen Sie {{site.data.keyword.Bluemix_notm}} Live Sync!
 

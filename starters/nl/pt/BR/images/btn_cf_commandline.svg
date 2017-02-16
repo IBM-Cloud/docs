@@ -18,11 +18,11 @@
    viewBox="-159.9 -17 335.8 50"
    enable-background="new -159.9 -17 335.8 50"
    xml:space="preserve"
-   inkscape:version="0.48.0 r9654"
+   inkscape:version="0.91 r13725"
    sodipodi:docname="btn_cf_commandline.svg"><metadata
    id="metadata17"><rdf:RDF><cc:Work
        rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
    id="defs15" /><sodipodi:namedview
    pagecolor="#ffffff"
    bordercolor="#666666"
@@ -32,16 +32,16 @@
    guidetolerance="10"
    inkscape:pageopacity="0"
    inkscape:pageshadow="2"
-   inkscape:window-width="1032"
-   inkscape:window-height="480"
+   inkscape:window-width="1440"
+   inkscape:window-height="848"
    id="namedview13"
    showgrid="false"
-   inkscape:zoom="1.5187612"
+   inkscape:zoom="1.1435379"
    inkscape:cx="167.89999"
-   inkscape:cy="25"
-   inkscape:window-x="0"
-   inkscape:window-y="0"
-   inkscape:window-maximized="0"
+   inkscape:cy="24.125521"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
    inkscape:current-layer="Layer_1" />
 <rect
    x="-159.9"
@@ -51,12 +51,20 @@
    height="50"
    id="rect3" />
 <text
-   transform="scale(0.85712012,1.1666976)"
    font-size="14.5836"
    id="text5"
-   x="-166.39134"
-   y="11.426097"
-   style="font-size:12.499897px;fill:#ffffff;font-family:HelvNeueBoldforIBM">Fazer o download da interface de linha de comandos CF</text>
+   sodipodi:linespacing="125%"
+   x="-132.44106"
+   y="5.4604878"
+   style="font-size:14.58360004px;line-height:125%;font-family:HelvNeueBoldforIBM;fill:#ffffff"><tspan
+     sodipodi:role="line"
+     id="tspan3349"
+     x="-132.44106"
+     y="5.4604878">Fazer o download da interface </tspan><tspan
+     sodipodi:role="line"
+     id="tspan3351"
+     x="-132.44106"
+     y="23.689987">de linha de comandos CF</tspan></text>
 
 <g
    id="g7">

@@ -33,7 +33,7 @@ lastupdated: "2017-01-12"
 Utilizza l'interfaccia riga di comando Cloud Foundry per scaricare, modificare e ridistribuire le tue istanze del servizio e applicazioni Cloud Foundry.
 {:shortdesc}
 
-Prima di iniziare, scarica e installa l'interfaccia di riga di comando Cloud Foundry.  
+Prima di iniziare, scarica e installa l'interfaccia di riga di comando Cloud Foundry. 
 
 <p>
 <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(Si apre in una nuova scheda o finestra)"><img class="image" src="images/btn_cf_commandline.svg" alt="Scarica l'interfaccia riga di comando Cloud Foundry" /> </a>
@@ -42,7 +42,7 @@ Prima di iniziare, scarica e installa l'interfaccia di riga di comando Cloud Fou
 **Limitazione:** lo strumento della riga di comando non è supportato da Cygwin. Utilizzalo in una finestra della riga di comando diversa da quella di Cygwin.
 {:prereq}
 
-Dopo aver installato l'interfaccia riga di comando, puoi iniziare: 
+Dopo aver installato l'interfaccia riga di comando, puoi iniziare:
 
   1. {: download} Scarica il codice per la tua applicazione in una nuova directory per configurare il tuo ambiente di sviluppo.
   

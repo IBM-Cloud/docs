@@ -18,11 +18,11 @@
    viewBox="-127.9 -17 271.9 50"
    enable-background="new -127.9 -17 271.9 50"
    xml:space="preserve"
-   inkscape:version="0.48.0 r9654"
+   inkscape:version="0.91 r13725"
    sodipodi:docname="btn_starter-code.svg"><metadata
    id="metadata17"><rdf:RDF><cc:Work
        rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
    id="defs15" /><sodipodi:namedview
    pagecolor="#ffffff"
    bordercolor="#666666"
@@ -32,16 +32,16 @@
    guidetolerance="10"
    inkscape:pageopacity="0"
    inkscape:pageshadow="2"
-   inkscape:window-width="862"
-   inkscape:window-height="480"
+   inkscape:window-width="1440"
+   inkscape:window-height="848"
    id="namedview13"
    showgrid="false"
-   inkscape:zoom="1.8756896"
-   inkscape:cx="135.95"
-   inkscape:cy="25"
-   inkscape:window-x="0"
-   inkscape:window-y="0"
-   inkscape:window-maximized="0"
+   inkscape:zoom="1.412284"
+   inkscape:cx="62.62865"
+   inkscape:cy="24.291927"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
    inkscape:current-layer="Layer_1" />
 <rect
    x="-127.9"
@@ -51,12 +51,13 @@
    height="50"
    id="rect3" />
 <text
-   transform="scale(0.91043134,1.0983805)"
+   transform="matrix(1 0 0 1 -110.9658 13.2998)"
+   fill="#FFFFFF"
+   font-family="'HelvNeueBoldforIBM'"
    font-size="14.583"
    id="text5"
-   x="-121.67121"
-   y="12.108555"
-   style="font-size:13.27682018px;fill:#ffffff;font-family:HelvNeueBoldforIBM">DOWNLOAD DO CÓDIGO DE INÍCIO</text>
+   style="-inkscape-font-specification:'HelvNeueBoldforIBM, Normal';font-family:HelvNeueBoldforIBM;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.25px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;"
+   sodipodi:linespacing="125%">DOWNLOAD DO CÓDIGO DE INÍCIO</text>
 
 <g
    id="g7">

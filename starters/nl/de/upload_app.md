@@ -61,4 +61,4 @@ beispielsweise die Option -c verwenden, um eine Push-Operation für Ihre Node.js
 
   2. Wenn Sie Ihre Anwendung ändern, können Sie diese Änderungen hochladen, indem Sie den Befehl 'cf push' erneut eingeben. Die Befehlszeilenschnittstelle 'cf' verwendet Ihre vorherigen Optionen und Ihre Antworten auf die Eingabeaufforderungen, um alle aktiven Instanzen Ihrer Anwendung mit den neuen Code-Bits zu aktualisieren.
 
-**Tipp:** Sie können eine Anwendung auch über DevOps Services hochladen oder bereitstellen. Weitere Informationen finden Sie auf der Seite zum [Entwickeln von {{site.data.keyword.Bluemix_notm}}-Anwendungen in Node.js mit der Web-IDE ![Symbol für externen Link](../icons/launch-glyph.svg)](https://hub.jazz.net/tutorials/devopsweb/){: new_window}. 
+**Tipp:** Sie können eine Anwendung auch über DevOps Services hochladen oder bereitstellen. Weitere Informationen finden Sie auf der Seite zum [Entwickeln von {{site.data.keyword.Bluemix_notm}}-Anwendungen in Node.js mit der Web-IDE ![Symbol für externen Link](../icons/launch-glyph.svg)](https://hub.jazz.net/tutorials/devopsweb/){: new_window}.

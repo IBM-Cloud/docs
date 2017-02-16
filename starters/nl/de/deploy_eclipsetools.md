@@ -30,4 +30,4 @@ lastupdated: "2017-01-12"
 
     <a class="xref" href="http://bluemix.net" target="_blank" title="(Wird in einer neuen Registerkarte oder in einem neuen Fenster geöffnet)"><img class="image" src="images/btn_starter-code.svg" alt="Startercode herunterladen" /> </a>
 
-Schrittweise Anweisungen zum Bereitstellen von Apps finden Sie unter [Apps mit IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} bereitstellen ![Symbol für externen Link](../icons/launch-glyph.svg)](/docs/manageapps/eclipsetools/eclipsetools.html#eclipsetools){: new_window}. 
+Schrittweise Anweisungen zum Bereitstellen von Apps finden Sie unter [Apps mit IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} bereitstellen ![Symbol für externen Link](../icons/launch-glyph.svg)](/docs/manageapps/eclipsetools/eclipsetools.html#eclipsetools){: new_window}.
