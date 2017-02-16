@@ -110,12 +110,12 @@ Wenn während der Laufzeit der Anwendung Probleme auftreten, können Anwendungsp
 
 Insbesondere die Protokollierung der Standardausgabe (stdout) und Standardfehler (stderr) kann aktiviert sein. Weitere Informationen zum Konfigurieren der Protokolldateien für Anwendungen, die mit den integrierten {{site.data.keyword.Bluemix_notm}}-Buildpacks bereitgestellt wurden, finden Sie in der folgenden Liste:
 
-  * Informationen zu Liberty for Java™-Anwendungen finden Sie unter [Liberty Profile: Logging and Trace ![Symbol für externen Link](../icons/launch-glyph.svg)](http://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/rwlp_logging.html){: new_window}. 
-  * Informationen zu Node.js-Anwendungen finden Sie unter [How to log in node.js ![Symbol für externen Link](../icons/launch-glyph.svg)](http://docs.nodejitsu.com/articles/intermediate/how-to-log){: new_window}. 
-  * Informationen zu PHP-Anwendungen finden Sie unter [error_log ![Symbol für externen Link](../icons/launch-glyph.svg)](http://php.net/manual/en/function.error-log.php){: new_window}. 
-  * Informationen zu Python-Anwendungen finden Sie unter [Logging HOWTO ![Symbol für externen Link](../icons/launch-glyph.svg)](https://docs.python.org/2/howto/logging.html){: new_window}. 
-  * Informationen zu Ruby on Rails-Anwendungen finden Sie unter [The Logger ![Symbol für externen Link](../icons/launch-glyph.svg)](http://guides.rubyonrails.org/debugging_rails_applications.html#the-logger){: new_window}. 
-  * Informationen zu Ruby Sinatra-Anwendungen finden Sie unter [Logging ![Symbol für externen Link](../icons/launch-glyph.svg)](http://www.sinatrarb.com/intro.html#Logging){: new_window}. 
+  * Informationen zu Liberty for Java™-Anwendungen finden Sie unter [Liberty Profile: Logging and Trace ![Symbol für externen Link](../icons/launch-glyph.svg)](http://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/rwlp_logging.html){: new_window}.
+  * Informationen zu Node.js-Anwendungen finden Sie unter [How to log in node.js ![Symbol für externen Link](../icons/launch-glyph.svg)](http://docs.nodejitsu.com/articles/intermediate/how-to-log){: new_window}.
+  * Informationen zu PHP-Anwendungen finden Sie unter [error_log ![Symbol für externen Link](../icons/launch-glyph.svg)](http://php.net/manual/en/function.error-log.php){: new_window}.
+  * Informationen zu Python-Anwendungen finden Sie unter [Logging HOWTO ![Symbol für externen Link](../icons/launch-glyph.svg)](https://docs.python.org/2/howto/logging.html){: new_window}.
+  * Informationen zu Ruby on Rails-Anwendungen finden Sie unter [The Logger ![Symbol für externen Link](../icons/launch-glyph.svg)](http://guides.rubyonrails.org/debugging_rails_applications.html#the-logger){: new_window}.
+  * Informationen zu Ruby Sinatra-Anwendungen finden Sie unter [Logging ![Symbol für externen Link](../icons/launch-glyph.svg)](http://www.sinatrarb.com/intro.html#Logging){: new_window}.
 
 Wenn Sie `cf logs anwendungsname --recent` in die cf-Befehlszeilenschnittstelle eingeben, werden nur die neuesten Protokoll angezeigt. Wenn Sie Protokolle für Fehler anzeigen möchten, die früher aufgetreten sind, müssen Sie alle Protokolle abrufen und in ihnen nach den Fehlern suchen. Verwenden Sie zum Abrufen aller Protokolle für Ihre Anwendung eine der folgenden Methoden:
 <dl>
