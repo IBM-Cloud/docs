@@ -5,8 +5,7 @@
 copyright:
 
   years: 2015, 2017
-
-lastupdated: "2017-01-12"
+lastupdated: "2017-01-24"
 
 ---
 
@@ -28,7 +27,7 @@ lastupdated: "2017-01-12"
 
 {{site.data.keyword.Bluemix_notm}} CLI를 설치하기 전에 시스템에 Cloud Foundry CLI가 설치되어 있는지 확인하십시오. 
 
-Mac OS 및 Windows의 경우, [{{site.data.keyword.Bluemix_notm}} CLI 패키지](index.html#downloads)를 다운로드하고 설치 프로그램을 실행하십시오. 
+Mac OS 및 Windows의 경우, [{{site.data.keyword.Bluemix_notm}} CLI 패키지](/docs/cli/index.html#downloads)를 다운로드하고 설치 프로그램을 실행하십시오. 
 
 Linux의 경우, 다음 단계를 수행하십시오. 
 
@@ -117,8 +116,8 @@ Cloud Foundry CLI와 같이 {{site.data.keyword.Bluemix_notm}} CLI는 기본 제
 
 저장소에서 플러그인을 설치할 수도 있습니다. {{site.data.keyword.Bluemix_notm}}에는 {{site.data.keyword.Bluemix_notm}} CLI 플러그인 및 Cloud Foundry CLI 플러그인을 호스팅하는 저장소가 있습니다. 
 
-  * [Cloud Foundry CLI 플러그인 저장소 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){: new_window}는 Cloud Foundry CLI를 위한 플러그인을 호스팅합니다. 
-  * [{{site.data.keyword.Bluemix_notm}} CLI 플러그인 저장소 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window}는 특별히 {{site.data.keyword.Bluemix_notm}} CLI를 위한 플러그인을 호스팅합니다. 
+  * [Cloud Foundry CLI 플러그인 저장소 ](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg)는 Cloud Foundry CLI를 위한 플러그인을 호스팅합니다. 
+  * [{{site.data.keyword.Bluemix_notm}} CLI 플러그인 저장소 ](http://clis.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg)는 특별히 {{site.data.keyword.Bluemix_notm}} CLI를 위한 플러그인을 호스팅합니다. 
 
 저장소에서 설치하려면 다음 단계를 수행하십시오. 
 
@@ -183,7 +182,7 @@ javacloudantbp          Java Cloudant Web Starter
 # {{site.data.keyword.Bluemix_notm}}(bx) 명령
 {: #bluemix_cli}
 
-버전: 0.4.4
+버전: 0.4.6
 
 {{site.data.keyword.Bluemix_notm}} 명령행 인터페이스(CLI)는 사용자가 {{site.data.keyword.Bluemix_notm}}와 상호작용할 수 있도록 네임스페이스별로 그룹화된 명령 세트를 제공합니다. 일부 {{site.data.keyword.Bluemix_notm}} 명령은 기존 cf 명령의 랩퍼이며, 나머지는 {{site.data.keyword.Bluemix_notm}} 사용자에 대해 확장 기능을 제공합니다. 다음 정보에서는 {{site.data.keyword.Bluemix_notm}} CLI에서 지원하는 명령을 나열하며, 해당 이름, 옵션, 사용법, 전제조건, 설명 및 예제가 포함됩니다.
 {:shortdesc}
@@ -201,13 +200,13 @@ javacloudantbp          Java Cloudant Web Starter
 <dd>이 명령을 실행하려면 Docker CLI(docker)가 설치되어 있어야 합니다.</dd>
 </dl>
 
-
 ## Bluemix 명령 색인
 {: #bx_commands_index}
 
 자주 사용되는 Bluemix 명령을 참조하려면 다음 표의 색인을 사용하십시오.
 
 **참고:** Bluemix 명령의 short 형식을 사용할 수 있습니다. 예를 들어, `bx api`는 `bluemix api`의 단축형입니다. 
+
 
 <table summary="일반 Bluemix 명령.">
  <caption>표 1. 일반 Bluemix 명령</caption>
@@ -225,13 +224,10 @@ javacloudantbp          Java Cloudant Web Starter
  <tr>
  <td>[bluemix info](index.html#bluemix_info) </td>
  <td>[bluemix config](index.html#bluemix_config)</td>
- <td>[bluemix list](index.html#bluemix_list)</td>
- <td>[bluemix scale](index.html#bluemix_scale)</td>
  <td>[bluemix curl](index.html#bluemix_curl)</td>
  </tr>
   </tbody>
  </table>
-
 
 
 <table summary="조직, 영역 및 사용자 관리에 사용 가능한 Bluemix 명령.">
@@ -256,17 +252,22 @@ javacloudantbp          Java Cloudant Web Starter
  </tr>
  <tr>
  <td>[bluemix iam space-delete](index.html#bluemix_iam_space_delete)</td>
- <td>[bluemix iam account-users](index.html#bluemix_iam_account-users)</td>
- <td>[bluemix iam account-user-invite](index.html#bluemix_iam_account-user-invite)</td>
+ <td>[bluemix iam account-users](index.html#bluemix_iam_account_users)</td>
+ <td>[bluemix iam account-users-delete](index.html#bluemix_iam_account_users_delete)</td>
+ <td>[bluemix iam account-user-invite](index.html#bluemix_iam_account_user_invite)</td>
+ <td>[bluemix iam account-user-reinvite](index.html#bluemix_iam_account_user_reinvite)</td>
  <td>[bluemix iam org-users](index.html#bluemix_iam_org_users)</td>
- <td>[bluemix iam org-role-set](index.html#bluemix_iam_org_role_set)</td>
  </tr>
  <tr>
+ <td>[bluemix iam org-user-add](index.html#bluemix_iam_org_user_add)</td>
+ <td>[bluemix iam org-user-remove](index.html#bluemix_iam_org_user_remove)</td>
+ <td>[bluemix iam org-role-set](index.html#bluemix_iam_org_role_set)</td>
  <td>[bluemix iam org-role-unset](index.html#bluemix_iam_org_role_unset)</td>
  <td>[bluemix iam space-users](index.html#bluemix_iam_space_users)</td>
  <td>[bluemix iam space-role-set](index.html#bluemix_iam_space_role_set)</td>
+ </tr>
+ <tr>
  <td>[bluemix iam space-role-unset](index.html#bluemix_iam_space_role_unset)</td>
- <td></td>
  </tr>
  </tbody>
  </table>
@@ -407,8 +408,6 @@ javacloudantbp          Java Cloudant Web Starter
   </tbody>
  </table>
 
-
-
 <table summary="Bluemix의 컨테이너 관리에 사용 가능한 Bluemix 명령.">
  <caption>표 7. Bluemix의 컨테이너 관리를 위한 명령</caption>
  <thead>
@@ -496,7 +495,6 @@ javacloudantbp          Java Cloudant Web Starter
  </table>
 
 
-
 ### bluemix help
 {: #bluemix_help}
 첫 번째 레벨 기본 제공 명령 및 지원되는 {{site.data.keyword.Bluemix_notm}} CLI 네임스페이스에 대한 일반 도움말 또는 특정 기본 제공 명령 또는 네임스페이스의 도움말을 표시합니다. 
@@ -562,16 +560,16 @@ bluemix api [API_ENDPOINT] [--unset]
 <strong>명령 옵션</strong>:
    <dl>
    <dt>API_ENDPOINT(선택사항)</dt>
-   <dd>대상으로 지정된 API 엔드포인트입니다(예: `https://api.ng.bluemix.net`). *API_ENDPOINT* 및 `--unset` 옵션 중 하나를 지정하지 않으면 현재 API 엔드포인트가 표시됩니다. </dd>
+   <dd>대상으로 지정된 API 엔드포인트입니다(예: `https://api.chinabluemix.net`). *API_ENDPOINT* 및 `--unset` 옵션 중 하나를 지정하지 않으면 현재 API 엔드포인트가 표시됩니다. </dd>
    <dt>--unset(선택사항)</dt>
    <dd>API 엔드포인트 설정을 제거합니다.</dd>
     </dl>
 <strong>예제</strong>:
 
-API 엔드포인트를 api.ng.bluemix.net으로 설정합니다.
+API 엔드포인트를 api.chinabluemix.net으로 설정합니다.
 
 ```
-bluemix api api.ng.bluemix.net
+bluemix api api.chinabluemix.net
 ```
 
 현재 API 엔드포인트를 확인합니다.
@@ -603,7 +601,7 @@ bluemix login [OPTIONS...]
 <strong>명령 옵션</strong>:
 `login` 명령에 지원되는 옵션에 대한 자세한 정보는 `cf login` 명령 사용법 정보에서 애플리케이션 관리를 위한 cf 명령을 참조하십시오.
 
-<strong>참고</Strong>:
+<strong>참고</strong>:
 연합된 ID로 로그인하는 경우 '--sso' 옵션을 사용하여 일회성 패스코드로 인증하십시오.
 
 ### bluemix logout
@@ -732,100 +730,10 @@ bluemix config --locale CLEAR
 ```
 
 
-### bluemix list
-{: #bluemix_list}
-
-현재 영역의 모든 cf 애플리케이션, 컨테이너, 컨테이너 그룹 및 VM 그룹을 나열합니다.
-
-```
-bluemix list [apps|containers|container-groups|vm-groups]
-```
-
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상 설정
-
-<strong>명령 옵션</strong>:
-   <dl>
-   <dt>apps(선택사항)</dt>
-   <dd>애플리케이션 정보만 표시합니다.</dd>
-   <dt>containers(선택사항)</dt>
-   <dd>컨테이너 정보만 표시합니다. </dd>
-   <dt>container-groups(선택사항)</dt>
-   <dd>컨테이너 그룹 정보만 표시합니다. </dd>
-   <dt>vm-groups(선택사항)</dt>
-   <dd>VM 그룹 정보만 표시합니다.</dd>
-    </dl>
-한 번에 `apps`, `containers`, `container-groups` 또는 `vm-groups` 중 하나만 지정이 가능합니다. 지정한 항목이 없으면 cf 앱, 컨테이너, 컨테이너 그룹 및 VM 그룹이 모두 나열됩니다.
-
-<strong>예제</strong>:
-
-모든 cf 애플리케이션을 나열합니다.
-
-```
-bluemix list apps
-```
-
-모든 컨테이너 인스턴스를 나열합니다.
-
-```
-bluemix list containers
-```
-
-앱, 컨테이너, 컨테이너 그룹 및 VM 그룹을 모두 나열합니다.
-
-```
-bluemix list
-```
-
-
-### bluemix scale
-{: #bluemix_scale}
-
-cf 애플리케이션 또는 컨테이너 그룹을 지정된 인스턴스 개수, 디스크 할당량 및 메모리 크기로 스케일 축소하거나 스케일 확장합니다.
-
-**참고:** 컨테이너 그룹을 스케일링하는 경우 인스턴스 번호만 지정할 수 있습니다. 옵션을 지정하지 않은 경우, 이 명령은 컨테이너 그룹의 현재 인스턴스 수와 cf 애플리케이션의 디스크 할당량 및 메모리 크기도 나열합니다. 
-
-```
-bluemix scale CF_APP_NAME|CONTAINER_GROUP_NAME [-i INSTANCE_COUNT] [-k DISK_QUOTA] [-m MEMORY_SIZE]
-```
-
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상 설정
-
-<strong>명령 옵션</strong>:
-   <dl>
-   <dt><i>CF_APP_NAME</i>|<i>CONTAINER_GROUP_NAME</i>(필수)</dt>
-   <dd>스케일링할 cf 애플리케이션 또는 컨테이너 그룹의 이름입니다. </dd>
-   <dt>-i <i>INSTANCE_COUNT</i>(선택사항)</dt>
-   <dd>스케일링할 cf 애플리케이션 또는 컨테이너 그룹의 새 인스턴스 번호입니다. 이 옵션은 스케일링할 컨테이너 그룹에만 유효한 옵션입니다.</dd>
-   <dt>-k <i>DISK_QUOTA</i>(선택사항)</dt>
-   <dd>cf 애플리케이션의 새 디스크 할당량입니다. 컨테이너 그룹을 스케일링하는 데는 유효하지 않습니다.</dd>
-   <dt>-m <i>MEMORY_SIZE</i>(선택사항)</dt>
-   <dd>cf 애플리케이션의 새 메모리 크기입니다. 컨테이너 그룹을 스케일링하는 데는 유효하지 않습니다.</dd>
-    </dl>
-<strong>예제</strong>:
-
-`my-container-group`의 현재 인스턴스 번호를 표시합니다.
-
-```
-bluemix scale my-container-group
-```
-
-`my-container-group`을 2개 인스턴스로 스케일링합니다.
-
-```
-bluemix scale my-container-group -i 2
-```
-
-`my-java-app`을 3개 인스턴스, 8G 디스크 할당량 및 1024M 메모리 크기로 스케일링합니다.
-
-```
-bluemix scale my-java-app -i 3 -k 8G -m 1024M
-```
-
-
 ### bluemix curl
 {: #bluemix_curl}
 
-원시 HTTP 요청을 {{site.data.keyword.Bluemix_notm}}에 실행합니다. *Content-Type*은 기본적으로 *application/json*으로 설정됩니다. 이 명령은 {{site.data.keyword.Bluemix_notm}} 다중 클라우드 제어 프록시에 요청을 전송합니다. 지원되는 경로는 [CloudFoundry API 문서 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://apidocs.cloudfoundry.org/){: new_window}의 API 경로 정의를 참조하십시오. 
+원시 HTTP 요청을 {{site.data.keyword.Bluemix_notm}}에 실행합니다. *Content-Type*은 기본적으로 *application/json*으로 설정됩니다. 이 명령은 {{site.data.keyword.Bluemix_notm}} 다중 클라우드 제어 프록시에 요청을 전송합니다. 지원되는 경로는 [CloudFoundry API 문서 ](http://apidocs.cloudfoundry.org/){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg)의 API 경로 정의를 참조하십시오. 
 
 ```
 bluemix curl PATH [OPTIONS...]
@@ -1032,7 +940,7 @@ bluemix iam org-delete ORG_NAME [-f --all]
 
 
 ### bluemix iam account-users
-{: #bluemix_iam_account-users}
+{: #bluemix_iam_account_users}
 
 계정과 연관된 사용자를 표시합니다. 이 조작은 계정 소유자만 수행할 수 있습니다.
 
@@ -1041,7 +949,7 @@ bluemix iam account-users
 ```
 
 ### bluemix iam account-user-invite
-{: #bluemix_iam_account-user-invite}
+{: #bluemix_iam_account_user_invite}
 
 
 조직 및 영역 역할이 이미 설정된 계정으로 사용자를 초대합니다. 이 조작은 계정 소유자만 수행할 수 있습니다.
@@ -1087,6 +995,16 @@ bluemix iam account-user-invite USER_NAME ORG_NAME ORG_ROLE SPACE_NAME SPACE_ROL
 bluemix iam account-user-invite Mary IBM OrgManager Cloud SpaceAuditor
 ```
 
+
+### bluemix iam account-user-reinvite
+{: #bluemix_iam_account_user_reinvite}
+
+사용자에게 초대를 다시 보냅니다(조직 관리자 또는 계정 소유자 필요).
+```
+ bluemix iam account-user-reinvite USER_EMAIL ORG_NAME
+```
+ 
+ 
 ### bluemix iam org-users
 {: #bluemix_iam_org_users}
 
@@ -1106,6 +1024,27 @@ bluemix iam org-users ORG_NAME [-a]
    <dd>지정된 조직의 모든 사용자를 나열하지만, 역할별로 그룹화하지는 않습니다. </dd>
     </dl>
 
+### bluemix iam org-user-add
+{: #bluemix_iam_org_user_add}
+
+조직에 사용자를 추가합니다(조직 관리자 필요).
+```
+ bluemix iam org-user-add USER_NAME ORG
+```
+
+### bluemix iam org-user-remove
+{: #bluemix_iam_org_user_remove}
+
+조직에서 사용자를 제거합니다(조직 관리자 또는 사용자 자신만).
+```
+   bluemix iam org-user-remove USER_NAME ORG [-f, --force]
+```
+
+<strong>명령 옵션</strong>:
+  <dl>
+   <dt>--force, -f</dt>
+   <dd>확인 없이 강제 삭제합니다. </dd>
+ </dl>
 
 ### bluemix iam org-role-set
 {: #bluemix_iam_org_role_set}
@@ -1119,9 +1058,7 @@ bluemix iam org-role-set USER_NAME ORG_NAME ORG_ROLE
 <strong>전제조건</strong>: 엔드포인트, 로그인
 
 <strong>명령 옵션</strong>:
-
-
-   <dl>
+  <dl>
    <dt>USER_NAME(필수)</dt>
    <dd>지정되는 사용자의 이름입니다. </dd>
    <dt>ORG_NAME(필수)</dt>
@@ -1570,10 +1507,10 @@ bluemix catalog template-run TEMPLATE_ID CF_APP_NAME [-u URL] [-d DESCRIPTION] [
 bluemix catalog template-run javaHelloWorld my-app
 ```
 
-`rubyHelloWorld` 템플리트를 기반으로 라우트가 `myrubyapp.ng.bluemix.net`이고 설명이 `My first ruby app on {{site.data.keyword.Bluemix_notm}}.`인 `my-ruby-app` 애플리케이션을 작성합니다.
+라우트가 `myrubyapp.chinabluemix.net`이고 설명이 `My first ruby app on {{site.data.keyword.Bluemix_notm}}.`인 `rubyHelloWorld` 템플리트를 기반으로 `my-ruby-app` 애플리케이션을 작성합니다.
 
 ```
-bluemix catalog template-run rubyHelloWorld my-ruby-app -u myrubyapp.ng.bluemix.net -d "My first ruby app on {{site.data.keyword.Bluemix_notm}}."
+bluemix catalog template-run rubyHelloWorld my-ruby-app -u myrubyapp.chinabluemix.net -d "My first ruby app on {{site.data.keyword.Bluemix_notm}}."
 ```
 
 자동 시작 없이 `pythonHelloWorld` 템플리트를 기반으로 `my-python-app` 애플리케이션을 작성합니다.
@@ -1651,7 +1588,7 @@ bluemix network route-map CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST
    <dt>CF_APP_NAME|CONTAINER_GROUP_NAME(필수)</dt>
    <dd>라우트로 맵핑되는 cf 애플리케이션 또는 컨테이너 그룹의 이름입니다. </dd>
    <dt>DOMAIN(필수)</dt>
-   <dd>라우트의 도메인입니다. 예: mybluemix.net 또는 ng.bluemix.net</dd>
+   <dd>라우트의 도메인입니다. 예: mychinabluemix.net 또는 chinabluemix.net. </dd>
    <dt>-n <i>HOST_NAME</i>(선택사항)</dt>
    <dd>라우트의 호스트 이름입니다. 값을 제공하지 않으면 호스트 이름이 기본적으로 앱 이름 또는 컨테이너 그룹 이름으로 설정됩니다.</dd>
    </dl>
@@ -1661,13 +1598,13 @@ bluemix network route-map CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST
 라우트를 지정된 도메인이 있는 `my-app`으로 맵핑합니다.
 
 ```
-bluemix network route-map my-app mybluemix.net
+bluemix network route-map my-app mychinabluemix.net
 ```
 
 라우트를 지정된 도메인과 호스트 이름이 있는 'my-container-group'으로 맵핑합니다.
 
 ```
-bluemix network route-map my-container-group ng.bluemix.net -n abc
+bluemix network route-map my-container-group chinabluemix.net -n abc
 ```
 
 
@@ -1688,23 +1625,23 @@ bluemix network route-unmap CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HO
    <dt>CF_APP_NAME|CONTAINER_GROUP_NAME(필수)</dt>
    <dd>cf 애플리케이션 또는 컨테이너 그룹의 이름입니다. </dd>
    <dt>DOMAIN(필수)</dt>
-   <dd>라우트의 도메인입니다(예: mybluemix.net 또는 ng.bluemix.net).</dd>
+   <dd>라우트의 도메인입니다(예: mychinabluemix.net 또는 chinabluemix.net).</dd>
    <dt>-n <i>HOST_NAME</i>(선택사항)</dt>
    <dd>라우트의 호스트 이름입니다. 값을 제공하지 않으면 호스트 이름이 기본적으로 앱 이름 또는 컨테이너 그룹 이름으로 설정됩니다.</dd>
    </dl>
 
 <strong>예제</strong>:
 
-`my-app`에서 `my-app.mybluemix.net`을 맵핑 해제합니다.
+`my-app`에서 `my-app.mychinabluemix.net`을 맵핑 해제합니다.
 
 ```
-bluemix network route-unmap my-app mybluemix.net
+bluemix network route-unmap my-app mychianbluemix.net
 ```
 
-`my-container-group`에서 `abc.ng.bluexmix.net`을 맵핑 해제합니다.
+`my-container-group`에서 `abc.chinabluexmix.net`을 맵핑 해제합니다.
 
 ```
-bluemix network route-unmap my-container-group ng.bluemix.net -n abc
+bluemix network route-unmap my-container-group chinabluemix.net -n abc
 ```
 
 
@@ -2084,6 +2021,10 @@ bluemix plugin install IBM-Containers -r bluemix-repo -v 0.5.800
 ```
 
 
+
+
+
+
 ### bluemix plugin uninstall
 {: #bluemix_plugin_uninstall}
 
@@ -2114,7 +2055,7 @@ bluemix plugin uninstall IBM-Containers
 ### bluemix ic attach
 {: #bluemix_ic_attach}
 
-실행 중인 컨테이너를 제어하거나 해당 출력을 봅니다. 컨테이너를 종료하고 중지하려면 `CTRL+C`를 사용하십시오. 이 명령은 Docker CLI를 호출합니다. 자세한 정보는 Docker 도움말에서 [attach ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/attach/){: new_window} 명령을 참조하십시오. 
+실행 중인 컨테이너를 제어하거나 해당 출력을 봅니다. 컨테이너를 종료하고 중지하려면 `CTRL+C`를 사용하십시오. 이 명령은 Docker CLI를 호출합니다. 자세한 정보는 Docker 도움말에서 [attach ](https://docs.docker.com/engine/reference/commandline/attach/){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg) 명령을 참조하십시오. 
 
 ```
 bluemix ic attach [--no-stdin] [--sig-proxy] CONTAINER
@@ -2144,7 +2085,7 @@ bluemix ic attach my_container
 ### bluemix ic build
 {: #bluemix_ic_build}
 
-IBM Containers 빌드 서비스를 호출하여 로컬에 또는 사설 {{site.data.keyword.Bluemix_notm}} 저장소에 Docker 이미지를 빌드합니다. 이 명령은 Docker CLI를 호출합니다. 자세한 정보는 Docker 도움말에서 [build ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/build/){: new_window} 명령을 참조하십시오. 
+IBM Containers 빌드 서비스를 호출하여 로컬에 또는 사설 {{site.data.keyword.Bluemix_notm}} 저장소에 Docker 이미지를 빌드합니다. 이 명령은 Docker CLI를 호출합니다. 자세한 정보는 Docker 도움말에서 [build ](https://docs.docker.com/engine/reference/commandline/build/){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg) 명령을 참조하십시오. 
 
 ```
 bluemix ic build -t TAG|--tag TAG [--no-cache] [-p|--pull] [-q|--quiet] DOCKERFILE_LOCATION
@@ -2176,7 +2117,7 @@ bluemix ic build -t registry.ng.bluemix.net/mynamespace/myimage .
 
 ### bluemix ic cp
 {: #bluemix_ic_cp}
-컨테이너와 로컬 파일 시스템 간에 파일 또는 폴더를 복사합니다. 이 명령은 Docker CLI를 호출합니다. 자세한 정보는 Docker 도움말에서 [cp ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/cp/){: new_window} 명령을 참조하십시오. 
+컨테이너와 로컬 파일 시스템 간에 파일 또는 폴더를 복사합니다. 이 명령은 Docker CLI를 호출합니다. 자세한 정보는 Docker 도움말에서 [cp ](https://docs.docker.com/engine/reference/commandline/cp/){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg) 명령을 참조하십시오. 
 
 
 ### bluemix ic cpi
@@ -2216,7 +2157,7 @@ bluemix ic cpi training/sinatra registry.ng.bluemix.net/mynamespace/mysinatra:v1
 ### bluemix ic exec
 {: #bluemix_ic_exec}
 
-컨테이너에서 명령을 실행합니다. 자세한 정보는 Docker 도움말에서 [exec ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/exec/){: new_window} 명령을 참조하십시오. 
+컨테이너에서 명령을 실행합니다. 자세한 정보는 Docker 도움말에서 [exec ](https://docs.docker.com/engine/reference/commandline/exec/){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg) 명령을 참조하십시오. 
 
 ```
 bluemix ic exec [-d|--detach] [-it] [-u USER|--user USER] CONTAINER [CMD]
@@ -2285,10 +2226,11 @@ bluemix ic group-create [--publish,-p PORT] --name GROUP_NAME [--memory,-m MEMOR
 
 |  환경 변수                              |     설명                            |
 | :----------------------------- | :------------------------------ |
-| CCS_BIND_APP=*&lt;appname&gt;*       | 컨테이너에 서비스를 바인드합니다. `CCS_BIND_APP` 환경 변수를 사용하여 앱을 컨테이너에 바인드하십시오. 앱은 대상 서비스에 바인드되어 브릿지 역할을 하며, 이 브릿지를 통해 {{site.data.keyword.Bluemix_notm}}는 사용자 브릿지 앱의 `VCAP_SERVICES` 정보를 실행 중인 컨테이너 인스턴스로 가져올 수 있습니다. 브릿지 앱 작성에 대한 자세한 정보는 [컨테이너에 서비스 바인딩](../../../containers/container_integrations_binding.html){: new_window}을 참조하십시오. |
+| CCS_BIND_APP=*&lt;appname&gt;*       | 컨테이너에 서비스를 바인드합니다. `CCS_BIND_APP` 환경 변수를 사용하여 앱을 컨테이너에 바인드하십시오. 앱은 대상 서비스에 바인드되어 브릿지 역할을 하며, 이 브릿지를 통해 {{site.data.keyword.Bluemix_notm}}는 사용자 브릿지 앱의 `VCAP_SERVICES` 정보를 실행 중인 컨테이너 인스턴스로 가져올 수 있습니다. |
 | CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | 브릿지 앱을 사용하지 않고 컨테이너에 직접 Bluemix 서비스를 바인드하려면 CCS_BIND_SRV를 사용하십시오. 이 바인딩을 통해 Bluemix가 실행 중인 컨테이너 인스턴스에 VCAP_SERVICES 정보를 삽입할 수 있습니다. 여러 Bluemix 서비스를 표시하려면 동일한 환경 변수의 일부로 Bluemix 서비스를 포함시키십시오. |
 | LOG_LOCATIONS=*&lt;path_to_file&gt;* | 컨테이너에서 모니터링할 로그 파일을 추가합니다. `LOG_LOCATIONS` 환경 변수를 로그 파일의 경로와 함께 포함시키십시오. |
-{: caption="Table 8. Commonly used environment variables" caption-side="top"}
+{: caption="표 8. 공통으로 사용되는 환경 변수" caption-side="top"}
+
 
  <dl>
    <dt>--env-file <i>ENVIRONMENT_VARIABLE_FILE</i>(선택사항)</dt>
@@ -2484,7 +2426,7 @@ bluemix ic groups [-q]
 ### bluemix ic images
 {: #bluemix_ic_images}
 
-조직의 개인용 {{site.data.keyword.Bluemix_notm}} 저장소에 있는 사용 가능한 모든 이미지 목록을 봅니다. 자세한 정보는 Docker 도움말에서 [images ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/images){: new_window} 명령을 참조하십시오. 목록에는 이미지 ID, 작성된 날짜 및 이미지 이름이 포함됩니다.
+조직의 개인용 {{site.data.keyword.Bluemix_notm}} 저장소에 있는 사용 가능한 모든 이미지 목록을 봅니다. 자세한 정보는 Docker 도움말에서 [images ](https://docs.docker.com/engine/reference/commandline/images){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg) 명령을 참조하십시오. 목록에는 이미지 ID, 작성된 날짜 및 이미지 이름이 포함됩니다.
 
 ```
 bluemix ic images [-a|--all] [-f CONDITION] [--no-trunc] [-q|--quiet]
@@ -2550,7 +2492,7 @@ bluemix region-set us-south
 ### bluemix ic inspect
 {: #bluemix_ic_inspect}
 
-컨테이너에 대한 정보를 봅니다. 자세한 정보는 Docker 도움말에서 [inspect ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/inspect){: new_window} 명령을 참조하십시오. 
+컨테이너에 대한 정보를 봅니다. 자세한 정보는 Docker 도움말에서 [inspect](https://docs.docker.com/engine/reference/commandline/inspect){: new_window} 명령을 참조하십시오.
 
 ```
 bluemix ic inspect [IMAGE|images|CONTAINER]
@@ -2704,7 +2646,7 @@ bluemix ic ips -q
 ### bluemix ic kill
 {: #bluemix_ic_kill}
 
-컨테이너를 중지하지 않고 컨테이너에서 실행 중인 프로세스를 중지합니다. 자세한 정보는 Docker 도움말에서 [kill ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/kill/){: new_window} 명령을 참조하십시오. 
+컨테이너를 중지하지 않고 컨테이너에서 실행 중인 프로세스를 중지합니다. 자세한 정보는 Docker 도움말에서 [kill ](https://docs.docker.com/engine/reference/commandline/kill/){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg) 명령을 참조하십시오. 
 
 ```
 bluemix ic kill [-s CMD|--signal CMD] CONTAINER
@@ -2733,7 +2675,7 @@ bluemix ic kill proxy
 ### bluemix ic logs
 {: #bluemix_ic_logs}
 
-실행 중인 컨테이너의 출력 또는 오류 로그를 표시합니다. 자세한 정보는 Docker 도움말에서 [logs ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/logs/){: new_window} 명령을 참조하십시오. 
+실행 중인 컨테이너의 출력 또는 오류 로그를 표시합니다. 자세한 정보는 Docker 도움말에서 [logs ](https://docs.docker.com/engine/reference/commandline/logs/){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg) 명령을 참조하십시오. 
 ```
 bluemix ic logs [OPTIONS] CONTAINER
 ```
@@ -2775,7 +2717,7 @@ bluemix ic namespace-set NAME
 ### bluemix ic pause
 {: #pause}
 
-실행 중인 컨테이너 내의 모든 프로세스를 일시정지합니다. 자세한 정보는 Docker 도움말에서 [pause ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/pause/){: new_window} 명령을 참조하십시오. 컨테이너를 중지하려면 [bluemix ic unpause](#unpause) 명령을 참조하십시오.
+실행 중인 컨테이너 내의 모든 프로세스를 일시정지합니다. 자세한 정보는 Docker 도움말에서 [pause ](https://docs.docker.com/engine/reference/commandline/pause/){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg) 명령을 참조하십시오. 컨테이너를 중지하려면 [bluemix ic unpause](#unpause) 명령을 참조하십시오.
 
 ```
 bluemix ic pause CONTAINER
@@ -2812,12 +2754,12 @@ bluemix ic pause proxy
 ### bluemix ic port
 {: #bluemix_ic_port}
 
-컨테이너의 포트 맵핑 또는 특정 맵핑을 나열합니다. 이 명령은 `docker port` 명령을 랩핑합니다. 자세한 정보는 Docker 도움말에서 [port ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/port/){: new_window} 명령을 참조하십시오. 
+컨테이너의 포트 맵핑 또는 특정 맵핑을 나열합니다. 이 명령은 `docker port` 명령을 랩핑합니다. 자세한 정보는 Docker 도움말에서 [port ](https://docs.docker.com/engine/reference/commandline/port/){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg) 명령을 참조하십시오. 
 
 
 ### bluemix ic ps
 {: #bluemix_ic_ps}
-로그인한 사용자의 네임스페이스에서 실행 중인 컨테이너 목록을 봅니다. 기본적으로 이 명령은 실행 중인 컨테이너만 표시합니다. 자세한 정보는 Docker 도움말에서 [ps](https://docs.docker.com/engine/reference/commandline/ps/){: new_window} 명령을 참조하십시오.
+로그인한 사용자의 네임스페이스에서 실행 중인 컨테이너 목록을 봅니다. 기본적으로 이 명령은 실행 중인 컨테이너만 표시합니다. 자세한 정보는 Docker 도움말에서 [ps ](https://docs.docker.com/engine/reference/commandline/ps/){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg) 명령을 참조하십시오. 
 
 ```
 bluemix ic ps [-a|--all] [--filter env=SEARCH_CRITERIA] [-s|--size] [-l NUM|--limit NUM] [-q|--quiet]
@@ -2851,7 +2793,7 @@ bluemix ic ps -a
 
 ### bluemix ic rename
 {: #bluemix_ic_rename}
-컨테이너의 이름을 바꿉니다. 자세한 정보는 Docker 도움말에서 [rename ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/rename/){: new_window} 명령을 참조하십시오. 
+컨테이너의 이름을 바꿉니다. 자세한 정보는 Docker 도움말에서 [rename ](https://docs.docker.com/engine/reference/commandline/rename/){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg) 명령을 참조하십시오. 
 
 ```
 bluemix ic rename OLD_NAME NEW_NAME
@@ -2876,11 +2818,11 @@ bluemix ic rename OLD_NAME NEW_NAME
 <strong>중요</strong>: 이 명령을 실행할 때 이 영역에 있는 단일 컨테이너와 그룹은 다시 프로비저닝된 영역으로 마이그레이션되지 않고 마이그레이션 프로세스 중에 제거됩니다. 
 
 ```
-bluemix ic reprovision [--force|-f] [AVAILABILITY_ZONE]
+bluemix ic reprovision [--force|-f] [ENVIRONMENT_NAME]
 ```
 <strong>명령 옵션</strong>:
 
-<dl>
+   <dl>
    <dt>--force|-f(선택사항)</dt>
    <dd>Bluemix 영역에서 IBM Containers 서비스를 다시 작성하도록 강제 실행합니다. </dd>
    <dt><i>AVAILABILITY_ZONE</i>(선택사항)</dt>
@@ -2891,7 +2833,7 @@ bluemix ic reprovision [--force|-f] [AVAILABILITY_ZONE]
 ### bluemix ic restart
 {: #bluemix_ic_restart}
 
-컨테이너를 다시 시작합니다. 자세한 정보는 Docker 도움말에서 [restart ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/restart/){: new_window} 명령을 참조하십시오. 
+컨테이너를 다시 시작합니다. 자세한 정보는 Docker 도움말에서 [restart ](https://docs.docker.com/engine/reference/commandline/restart/){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg) 명령을 참조하십시오. 
 
 ```
 bluemix ic restart CONTAINER [-t SECS|--time SECS]
@@ -2932,7 +2874,7 @@ bluemix ic restart proxy
 ### bluemix ic rm
 {: #bluemix_ic_rm}
 
-컨테이너를 제거합니다. 자세한 정보는 Docker 도움말에서 [rm ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/rm/){: new_window} 명령을 참조하십시오. 
+컨테이너를 제거합니다. 자세한 정보는 Docker 도움말에서 [rm ](https://docs.docker.com/engine/reference/commandline/rm/){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg) 명령을 참조하십시오. 
 
 ```
 bluemix ic rm [-f|--force] CONTAINER
@@ -2972,7 +2914,7 @@ bluemix ic rm proxy
 ### bluemix ic rmi
 {: #bluemix_ic_rmi}
 
-로그인한 사용자의 네임스페이스에서 이미지를 제거합니다. 자세한 정보는 Docker 도움말에서 [rmi ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/rmi/){: new_window} 명령을 참조하십시오. 
+로그인한 사용자의 네임스페이스에서 이미지를 제거합니다. 자세한 정보는 Docker 도움말에서 [rmi ](https://docs.docker.com/engine/reference/commandline/rmi/){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg) 명령을 참조하십시오. 
 
 ```
 bluemix ic rmi [-R REGISTRY|--registry REGISTRY] IMAGE
@@ -3076,7 +3018,7 @@ bluemix ic route-unmap -n my_host -d organization.com GROUP1
 ### bluemix ic run
 {: #bluemix_ic_run}
 
-이미지 이름에서 생성된 컨테이너 클라우드 서비스에서 새 컨테이너를 시작합니다. 자세한 정보는 Docker 도움말에서 [run ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/run/){: new_window} 명령을 참조하십시오. 
+이미지 이름에서 생성된 컨테이너 클라우드 서비스에서 새 컨테이너를 시작합니다. 자세한 정보는 Docker 도움말에서 [run ](https://docs.docker.com/engine/reference/commandline/run/){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg) 명령을 참조하십시오. 
 
 
 ```
@@ -3103,10 +3045,10 @@ bluemix ic run [-p PORT|--publish PORT] [-P] [-m MEMORY|--memory MEMORY] [-e ENV
 
 |      환경 변수                          |   설명                              |
 | :----------------------------- | :------------------------------ |
-| CCS_BIND_APP=*&lt;appname&gt;*       | 컨테이너에 서비스를 바인드합니다. `CCS_BIND_APP` 환경 변수를 사용하여 앱을 컨테이너에 바인드하십시오. 앱은 대상 서비스에 바인드되어 브릿지 역할을 하며, 이 브릿지를 통해 {{site.data.keyword.Bluemix_notm}}는 사용자 브릿지 앱의 `VCAP_SERVICES` 정보를 실행 중인 컨테이너 인스턴스로 가져올 수 있습니다. 브릿지 앱 작성에 대한 자세한 정보는 [컨테이너에 서비스 바인딩](../../../containers/container_integrations_binding.html){: new_window}을 참조하십시오. |
+| CCS_BIND_APP=*&lt;appname&gt;*       | 컨테이너에 서비스를 바인드합니다. `CCS_BIND_APP` 환경 변수를 사용하여 앱을 컨테이너에 바인드하십시오. 앱은 대상 서비스에 바인드되어 브릿지 역할을 하며, 이 브릿지를 통해 {{site.data.keyword.Bluemix_notm}}는 사용자 브릿지 앱의 `VCAP_SERVICES` 정보를 실행 중인 컨테이너 인스턴스로 가져올 수 있습니다. 브릿지 앱 작성에 대한 자세한 정보는 [컨테이너에 서비스 바인딩](/docs/containers/container_integrations_binding.html){: new_window}을 참조하십시오. |
 | CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | 브릿지 앱을 사용하지 않고 컨테이너에 직접 Bluemix 서비스를 바인드하려면 CCS_BIND_SRV를 사용하십시오. 이 바인딩을 통해 Bluemix가 실행 중인 컨테이너 인스턴스에 VCAP_SERVICES 정보를 삽입할 수 있습니다. 여러 Bluemix 서비스를 표시하려면 동일한 환경 변수의 일부로 Bluemix 서비스를 포함시키십시오. |
 | LOG_LOCATIONS=*&lt;path_to_file&gt;* | 컨테이너에서 모니터링할 로그 파일을 추가합니다. `LOG_LOCATIONS` 환경 변수를 로그 파일의 경로와 함께 포함시키십시오. |
-{: caption="Table 9. Commonly used environment variables" caption-side="top"}
+{: caption="표 9. 공통으로 사용되는 환경 변수" caption-side="top"}
 
 
    <dl>
@@ -3192,7 +3134,7 @@ bluemix ic service-unbind GROUP_NAME SERVICE_INSTANCE
 
 ### bluemix ic start
 {: #ic_start}
-중지된 컨테이너를 시작합니다. 자세한 정보는 Docker 도움말에서 [start ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/start/){: new_window} 명령을 참조하십시오. 컨테이너를 중지하려면 [bluemix ic stop](#ic_stop) 명령을 참조하십시오.
+중지된 컨테이너를 시작합니다. 자세한 정보는 Docker 도움말에서 [start ](https://docs.docker.com/engine/reference/commandline/start/){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg) 명령을 참조하십시오. 컨테이너를 중지하려면 [bluemix ic stop](#ic_stop) 명령을 참조하십시오.
 
 ```
 bluemix ic start CONTAINER
@@ -3231,7 +3173,7 @@ bluemix ic start proxy
 ### bluemix ic stats
 {: #bluemix_ic_stats}
 
-하나 이상의 컨테이너에 대해 실시간 사용량 통계를 봅니다. 종료하려면 `CTRL+C`를 사용하십시오. 자세한 정보는 Docker 도움말에서 [stats ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/stats/){: new_window} 명령을 참조하십시오. 
+하나 이상의 컨테이너에 대해 실시간 사용량 통계를 봅니다. 종료하려면 `CTRL+C`를 사용하십시오. 자세한 정보는 Docker 도움말에서 [stats](https://docs.docker.com/engine/reference/commandline/stats/){: new_window} 명령을 참조하십시오.
 
 ```
 bluemix ic stats [--no-stream] CONTAINER [CONTAINER]
@@ -3258,7 +3200,7 @@ bluemix ic stats --no-stream my_container
 
 ### bluemix ic stop
 {: #ic_stop}
-실행 중인 컨테이너를 중지합니다. 자세한 정보는 Docker 도움말에서 [stop ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/stop/){: new_window} 명령을 참조하십시오. 컨테이너를 시작하려면 [bluemix ic start](#ic_start) 명령을 참조하십시오.
+실행 중인 컨테이너를 중지합니다. 자세한 정보는 Docker 도움말에서 [stop ](https://docs.docker.com/engine/reference/commandline/stop/){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg) 명령을 참조하십시오. 컨테이너를 시작하려면 [bluemix ic start](#ic_start) 명령을 참조하십시오.
 
 ```
 bluemix ic stop CONTAINER [-t SECS|--time SECS]
@@ -3298,7 +3240,7 @@ bluemix ic stop proxy
 ### bluemix ic top
 {: #bluemix_ic_top}
 
-컨테이너에서 실행 중인 프로세스를 표시합니다. 자세한 정보는 Docker 도움말에서 [top ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/top/){: new_window} 명령을 참조하십시오. 
+컨테이너에서 실행 중인 프로세스를 표시합니다. 자세한 정보는 Docker 도움말에서 [top ](https://docs.docker.com/engine/reference/commandline/top/){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg) 명령을 참조하십시오. 
 
 ```
 bluemix ic top CONTAINER [CONTAINER]
@@ -3324,7 +3266,7 @@ bluemix ic top my_container
 ### bluemix ic unpause
 {: #unpause}
 
-실행 중인 컨테이너 내에 있는 모든 프로세스의 일시정지를 해제합니다. 자세한 정보는 Docker 도움말에서 [unpause ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/unpause/){: new_window} 명령을 참조하십시오. 컨테이너를 일시정지하려면 [bluemix ic pause](#pause) 명령을 참조하십시오.
+실행 중인 컨테이너 내에 있는 모든 프로세스의 일시정지를 해제합니다. 자세한 정보는 Docker 도움말에서 [unpause ](https://docs.docker.com/engine/reference/commandline/unpause/){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg) 명령을 참조하십시오. 컨테이너를 일시정지하려면 [bluemix ic pause](#pause) 명령을 참조하십시오.
 
 ```
 bluemix ic unpause CONTAINER
@@ -3371,7 +3313,7 @@ bluemix ic reprovision [--force|-f]
 ```
 <strong>명령 옵션</strong>:
 
-<dl>
+   <dl>
    <dt>--force|-f(선택사항)</dt>
    <dd>Bluemix 영역에서 Bluemix의 삭제를 강제 실행합니다. </dd>
  </dl>
@@ -3388,7 +3330,7 @@ bluemix ic version
 
 <strong>전제조건</strong>:  Docker
 
-IBM Containers의 버전을 확인하려면 `bluemix ic info`를 실행하십시오. 자세한 정보는 [version ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/version/){: new_window} 명령을 참조하십시오. 
+IBM Containers의 버전을 확인하려면 `bluemix ic info`를 실행하십시오. 자세한 정보는 [version ](https://docs.docker.com/engine/reference/commandline/version/){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg) 명령을 참조하십시오. 
 
 
 ### bluemix ic volume-create
@@ -3587,7 +3529,7 @@ bluemix ic volumes
 ### bluemix ic wait
 {: #bluemix_ic_wait}
 
-컨테이너를 종료하고 확인으로 종료 코드를 표시합니다. 자세한 정보는 Docker 도움말에서 [wait ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/wait/){: new_window} 명령을 참조하십시오. 
+컨테이너를 종료하고 확인으로 종료 코드를 표시합니다. 자세한 정보는 Docker 도움말에서 [wait ](https://docs.docker.com/engine/reference/commandline/wait/){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg) 명령을 참조하십시오. 
 
 ```
 bluemix ic wait CONTAINER [CONTAINER]
@@ -3643,4 +3585,4 @@ bluemix ic wait my_container
 ## 관련 링크
 {: #general}
 
-* [bx 도구 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/home.html){:new_window}
+* [bx 도구 ](http://clis.ng.bluemix.net/ui/home.html){: new_window} ![외부 링크 아이콘](../../../icons/launch-glyph.svg)

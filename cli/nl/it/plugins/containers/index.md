@@ -36,7 +36,7 @@ La CLI IBM Containers è un plug-in della CLI {{site.data.keyword.Bluemix_notm}}
 </dl>
 
 <table summary="Comandi bluemix che puoi utilizzare per la gestione dei contenitori in Bluemix.">
-<caption>Tabella 1. Comandi per la gestione dei contenitori in Bluemix </caption>
+<caption>Tabella 1. Comandi per la gestione dei contenitori in Bluemix</caption>
  <thead>
  <th colspan="5">Comandi per la gestione dei contenitori in Bluemix</th>
  </thead>
@@ -502,7 +502,7 @@ bluemix ic groups [-q]
 ## bluemix ic images
 {: #bluemix_ic_images}
 
-Visualizzare un elenco di tutte le immagini disponibili nel repository {{site.data.keyword.Bluemix_notm}} privato dell'organizzazione. Per ulteriori informazioni, vedi il comando [images ![icona link esterno](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/images){: new_window} nella guida di Docker.L'elenco include l'ID immagine, la data di creazione e il nome dell'immagine.
+Visualizzare un elenco di tutte le immagini disponibili nel repository {{site.data.keyword.Bluemix_notm}} privato dell'organizzazione. Per ulteriori informazioni, vedi il comando [images ![icona link esterno](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/images){: new_window} nella guida di Docker. L'elenco include l'ID immagine, la data di creazione e il nome dell'immagine.
 
 ```
 bluemix ic images [-a|--all] [-f CONDITION] [--no-trunc] [-q|--quiet]
@@ -793,7 +793,7 @@ bluemix ic namespace-set NOME
 ## bluemix ic pause
 {: #pause}
 
-Mettere in pausa tutti i processi all'interno di un contenitore in esecuzione. Per ulteriori informazioni, vedi il comando [pause ![icona link esterno](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/pause/){: new_window} nella guida di Docker.Per arrestare un contenitore, vedi il comando [bluemix ic unpause](#unpause).
+Mettere in pausa tutti i processi all'interno di un contenitore in esecuzione. Per ulteriori informazioni, vedi il comando [pause ![icona link esterno](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/pause/){: new_window} nella guida di Docker. Per arrestare un contenitore, vedi il comando [bluemix ic unpause](#unpause).
 
 ```
 bluemix ic pause CONTENITORE
@@ -1218,7 +1218,7 @@ bluemix ic service-unbind GROUP_NAME SERVICE_INSTANCE
 
 ## bluemix ic start
 {: #ic_start}
-Avviare un contenitore arrestato. Per ulteriori informazioni, vedi il comando [start ![icona link esterno](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/start/){: new_window} nella guida di Docker.Per arrestare un contenitore, vedi il comando [bluemix ic stop](#ic_stop).
+Avviare un contenitore arrestato. Per ulteriori informazioni, vedi il comando [start ![icona link esterno](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/start/){: new_window} nella guida di Docker. Per arrestare un contenitore, vedi il comando [bluemix ic stop](#ic_stop).
 
 ```
 bluemix ic start CONTENITORE
@@ -1285,7 +1285,7 @@ bluemix ic stats --no-stream mio_contenitore
 
 ## bluemix ic stop
 {: #ic_stop}
-Arrestare un contenitore in esecuzione. Per ulteriori informazioni, vedi il comando [stop ![icona link esterno](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/stop/){: new_window} nella guida di Docker.Per avviare un contenitore, vedi il comando [bluemix ic start](#ic_start).
+Arrestare un contenitore in esecuzione. Per ulteriori informazioni, vedi il comando [stop ![icona link esterno](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/stop/){: new_window} nella guida di Docker. Per avviare un contenitore, vedi il comando [bluemix ic start](#ic_start).
 
 ```
 bluemix ic stop CONTAINER [-t SECS|--time SECS]
@@ -1352,7 +1352,7 @@ bluemix ic top mio_contenitore
 ## bluemix ic unpause
 {: #unpause}
 
-Riprendere tutti i processi all'interno di un contenitore in esecuzione. Per ulteriori informazioni, vedi il comando [unpause ![icona link esterno](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/unpause/){: new_window} nella guida di Docker.Per mettere in pausa un contenitore, vedi il comando [bluemix ic pause](#pause).
+Riprendere tutti i processi all'interno di un contenitore in esecuzione. Per ulteriori informazioni, vedi il comando [unpause ![icona link esterno](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/unpause/){: new_window} nella guida di Docker. Per mettere in pausa un contenitore, vedi il comando [bluemix ic pause](#pause).
 
 ```
 bluemix ic unpause CONTENITORE

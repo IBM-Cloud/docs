@@ -62,9 +62,7 @@ bluemix plugin install plugin_name -r bluemix-bx
 
 | *{{site.data.keyword.activedeployshort}} CLI* | *{{site.data.keyword.autoscaling}} CLI* | *IBM Containers*  |
 |-----|-----|-----|
-| Plug-in name: active-deploy <br> [Visualizar docs](/docs/services/ActiveDeploy/cli.html#cli) | Plug-in name: auto-scaling <br> [Visualizar docs](/docs/cli/plugins/auto-scaling/index.html) |  Nome
-do plug-in:
-IBM-Containers  <br> [Visualizar docs](/docs/cli/plugins/containers/index.html) |
+| Plug-in name: active-deploy <br> [Visualizar docs](/docs/services/ActiveDeploy/cli.html#cli) | Plug-in name: auto-scaling <br> [Visualizar docs](/docs/cli/plugins/auto-scaling/index.html) |  Nome do plug-in: IBM-Containers  <br> [Visualizar docs](/docs/cli/plugins/containers/index.html) |
 {: caption="Table 2. Plug-ins" caption-side="top"}
 
 |  *Peer de rede privada* | *VPN*  |

@@ -1,4 +1,4 @@
-﻿---
+---
 
 copyright:
 
@@ -17,11 +17,7 @@ lastupdated: "2017-01-12"
 {: #bluemixadmincli}
 
 
-Vous pouvez gérer votre environnement {{site.data.keyword.Bluemix_notm}} local ou
-{{site.data.keyword.Bluemix_notm}} dédié en utilisant l'interface de
-ligne de commande Cloud Foundry avec le plug-in d'interface de ligne de
-commande d'administration {{site.data.keyword.Bluemix_notm}}. Par exemple, vous pouvez ajouter des utilisateurs depuis
-un registre LDAP. Pour des informations sur la gestion de votre compte {{site.data.keyword.Bluemix_notm}} public, voir [Administration](/docs/admin/adminpublic.html#administer).
+Vous pouvez gérer votre environnement {{site.data.keyword.Bluemix_notm}} local ou {{site.data.keyword.Bluemix_notm}} dédié en utilisant l'interface de ligne de commande Cloud Foundry avec le plug-in d'interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}}. Par exemple, vous pouvez ajouter des utilisateurs depuis un registre LDAP. Pour des informations sur la gestion de votre compte {{site.data.keyword.Bluemix_notm}} public, voir [Administration](/docs/admin/adminpublic.html#administer).
 
 Avant de commencer, installez l'interface de ligne de commande cf. Le plug-in d'interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}} requiert cf version 6.11.2 ou ultérieure. [Télécharger l'interface de ligne de commande Cloud Foundry ![icône de lien externe](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}
 
@@ -596,7 +592,7 @@ globaux uniques supplémentaires dans la commande.</dd>
 **Astuce :** vous pouvez aussi utiliser **ba espv** comme alias pour le nom de commande plus long **ba
 edit-service-plan-visibility**.
 
-## Administration des rapports 
+## Administration des rapports
 {: #admin_add_report}
 
 ### Ajout de rapports
@@ -802,9 +798,7 @@ Les groupes de sécurité d'application fonctionnent comme des pare-feux virtuel
 
 A l'origine, {{site.data.keyword.Bluemix_notm}} est configuré avec un accès global restreint au réseau externe. Deux groupes de sécurité créés par IBM, `public_networks` et `dns`, permettent un accès global au réseau externe lorsque vous liez ces deux groupes aux ensembles de groupes de sécurité Cloud Foundry. Les deux ensembles de groupes de sécurité Cloud Foundry qui sont utilisés pour appliquer un accès global sont **Default Staging** et **Default Running**. Ces ensembles de groupes appliquent les règles autorisant le trafic vers toutes les applications en cours d'exécution ou toutes les applications en cours de constitution. Si vous ne souhaitez pas établir de liaison à ces deux ensembles de groupes de sécurité, vous pouvez annuler la liaison à ces ensembles de groupes Cloud Foundry, puis lier le groupe de sécurité à un espace donné. Pour plus d'informations, voir [Binding Application Security Groups ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}.
 
-**Remarque** : les commandes suivantes qui vous permettent de gérer des groupes de sécurité sont basées sur la version 1.6 de Cloud Foundry. Pour
-plus d'informations, y compris sur les zones obligatoires et facultatives,
-reportez-vous aux informations relatives à Cloud Foundry concernant la [création de groupes de sécurité d'application ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}.
+**Remarque** : les commandes suivantes qui vous permettent de gérer des groupes de sécurité sont basées sur la version 1.6 de Cloud Foundry. Pour plus d'informations, y compris sur les zones obligatoires et facultatives, reportez-vous aux informations relatives à Cloud Foundry concernant la [création de groupes de sécurité d'application ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}.
 
 ### Liste des groupes de sécurité
 {: #clilissecgro}
@@ -901,8 +895,7 @@ cf ba delete-security-group <groupe-sécurité>
 
 Pour plus d'informations sur la liaison des groupes de sécurité, voir [Binding Application Security Groups ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}.
 
-* Pour établir une liaison vers l'ensemble de groupes de sécurité
-Default Staging, utilisez la commande suivante :
+* Pour établir une liaison vers l'ensemble de groupes de sécurité Default Staging, utilisez la commande suivante :
 
 ```
 cf ba bind-staging-security-group <groupe-sécurité>
@@ -953,11 +946,9 @@ cf ba bind-security-group <groupe-sécurité> <org> <espace>
 ### Annulation de la liaison de groupes de sécurité
 {: #cliunbindsecgro}
 
-Pour plus d'informations sur l'annulation de la liaison de groupes de sécurité,
-voir [Unbinding Application Security Groups ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window}.
+Pour plus d'informations sur l'annulation de la liaison de groupes de sécurité, voir [Unbinding Application Security Groups ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window}.
 
-* Pour annuler la liaison vers l'ensemble de groupes de sécurité Default
-Staging, utilisez la commande suivante :
+* Pour annuler la liaison vers l'ensemble de groupes de sécurité Default Staging, utilisez la commande suivante :
 
 ```
 cf ba unbind-staging-security-group <groupe-sécurité>
@@ -971,8 +962,7 @@ cf ba unbind-staging-security-group <groupe-sécurité>
 
 **Astuce :** vous pouvez aussi utiliser **ba ussg** comme alias pour le nom de commande plus long **ba unbind-staging-security-group**.
 
-* Pour annuler la liaison vers l'ensemble de groupes de sécurité Default
-Running, utilisez la commande suivante :
+* Pour annuler la liaison vers l'ensemble de groupes de sécurité Default Running, utilisez la commande suivante :
 
 ```
 cf ba unbind-running-security-group <groupe-sécurité>
@@ -986,8 +976,7 @@ cf ba unbind-running-security-group <groupe-sécurité>
 
 **Astuce :** vous pouvez aussi utiliser **ba brsg** comme alias pour le nom de commande plus long **ba bind-running-security-group**.
 
-* Pour annuler la liaison d'un groupe de sécurité à un espace, utilisez la commande
-suivante :
+* Pour annuler la liaison d'un groupe de sécurité à un espace, utilisez la commande suivante :
 
 ```
 cf ba unbind-security-group <groupe-sécurité> <org> <espace>

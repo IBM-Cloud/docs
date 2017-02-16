@@ -1,4 +1,4 @@
-﻿---
+---
 
 
 
@@ -28,14 +28,10 @@ Avec {{site.data.keyword.Bluemix_short}}, vous avez accès à des outils puissan
 Téléchargez et installez des interfaces de ligne de commande pour votre expérience
 {{site.data.keyword.Bluemix_notm}}.
 
-L'outil de ligne de commande cf Cloud Foundry est un élément prérequis pour tous les outils d'interface de ligne de commande
-{{site.data.keyword.Bluemix_notm}}. L'outil de ligne de commande
-{{site.data.keyword.Bluemix_notm}} permet de gérer l'environnement {{site.data.keyword.Bluemix_notm}} en plus des applications Cloud
+L'outil de ligne de commande cf Cloud Foundry est un élément prérequis pour tous les outils d'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}. L'outil de ligne de commande {{site.data.keyword.Bluemix_notm}} permet de gérer l'environnement {{site.data.keyword.Bluemix_notm}} en plus des applications Cloud
 Foundry.
 
-Les deux outils de ligne de commande utilisent par défaut le port 443. Si un proxy HTTP est interposé entre les outils CLI et l'environnement
-{{site.data.keyword.Bluemix_notm}}, vous devez configurer la variable d'environnement `http-proxy` en spécifiant l'URL
-réelle et le port du proxy HTTP s'il est présent. Pour plus de détails, voir [Using the CLI with an HTTP Proxy Server ![icône de lien externe](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/cf-cli/http-proxy.html){: new_window} for more details.
+Les deux outils de ligne de commande utilisent par défaut le port 443. Si un proxy HTTP est interposé entre les outils CLI et l'environnement {{site.data.keyword.Bluemix_notm}}, vous devez configurer la variable d'environnement `http-proxy` en spécifiant l'URL réelle et le port du proxy HTTP s'il est présent. Pour plus de détails, voir [Using the CLI with an HTTP Proxy Server ![icône de lien externe](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/cf-cli/http-proxy.html){: new_window}.
 
 
 | *{{site.data.keyword.Bluemix_notm}} : bx* | *Cloud Foundry : cf* |
@@ -46,9 +42,7 @@ réelle et le port du proxy HTTP s'il est présent. Pour plus de détails, voir 
 
 ## ![](./images/CLI_Plugin.svg) Plug-in d'interface de ligne de commande
 
-Etendez facilement votre interface de ligne de commande {{site.data.keyword.Bluemix_notm}} avec des commandes supplémentaires. Pour accéder
-aux plug-in de l'interface de ligne de commande
-{{site.data.keyword.Bluemix_notm}}, voir le [référentiel de plug-in de l'interface de ligne de commande![icône de lien externe](../icons/launch-glyph.svg)](https://plugins.ng.bluemix.net/).
+Etendez facilement votre interface de ligne de commande {{site.data.keyword.Bluemix_notm}} avec des commandes supplémentaires. Pour accéder aux plug-in de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}, voir le [référentiel de plug-in de l'interface de ligne de commande![icône de lien externe](../icons/launch-glyph.svg)](https://plugins.ng.bluemix.net/).
 
 ### Etendez votre interface de ligne de commande {{site.data.keyword.Bluemix_notm}} : bx
 {: cli_bluemix_ext}

@@ -23,7 +23,7 @@ lastupdated: "2017-01-12"
 Die Befehlszeilenschnittstelle (CLI) von Cloud Foundry (cf) stellt Befehle bereit, mit denen Sie Ihre Apps verwalten können. In der nachfolgenden Liste sind die für die App-Verwaltung am häufigsten verwendeten cf-Befehle mit Namen, Optionen, Nutzungen, Voraussetzungen, Beschreibungen und Beispielen aufgeführt. Um alle cf-Befehle und die zugehörigen Hilfeinformationen aufzulisten, verwenden Sie `cf help`. Mit dem Befehl `cf command_name -h` können Sie detaillierte Hilfeinformationen zu einem bestimmten Befehl anzeigen.
 {: shortdesc}
 
-**Hinweis:** Wenn sich in Ihrem Netz zwischen dem Host, auf dem die cf-Befehle ausgeführt werden, und dem Cloud Foundry-API-Endpunkt ein HTTP-Proxy-Server befindet, müssen Sie den Hostnamen oder die IP-Adresse des Proxy-Servers durch Festlegung der Umgebungsvariablen `HTTP_PROXY` angeben. Details hierzu finden Sie unter (http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}Using the cf CLI with an HTTP Proxy Server ![Symbol für externen Link](..![External)/icons/launch-glyph.svg)]. 
+**Hinweis:** Wenn sich in Ihrem Netz zwischen dem Host, auf dem die cf-Befehle ausgeführt werden, und dem Cloud Foundry-API-Endpunkt ein HTTP-Proxy-Server befindet, müssen Sie den Hostnamen oder die IP-Adresse des Proxy-Servers durch Festlegung der Umgebungsvariablen `HTTP_PROXY` angeben. Details hierzu finden Sie unter (http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}Using the cf CLI with an HTTP Proxy Server ![Symbol für externen Link](..![External)/icons/launch-glyph.svg)].
 
 
 ## Index für Befehle der Cloud Foundry-CLI
@@ -390,7 +390,7 @@ cf help events
 
 Hiermit melden Sie sich bei {{site.data.keyword.Bluemix_notm}} an.
 
-**Hinweis:** Wenn Sie sich mit einer [eingebundenen ID](/docs/admin/account.html#signup) anmelden, müssen Sie den SSO-Parameter (SSO - Single Sign-on) zum Anmelden verwenden. 
+**Hinweis:** Wenn Sie sich mit einer [eingebundenen ID](/docs/admin/account.html#signup) anmelden, müssen Sie den SSO-Parameter (SSO - Single Sign-on) zum Anmelden verwenden.
 
 ```
 cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s space_name] [--skip-ssl-validation]
@@ -398,7 +398,7 @@ cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s
 
 <strong>Voraussetzungen:</strong> keine.
 
-<strong>Befehlsoptionen:</strong> 
+<strong>Befehlsoptionen:</strong>
 
 <dl>
 <dt>*-a* https://api.{DomainName} (optional)</dt>
@@ -519,7 +519,7 @@ cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i in
 <dt>appname (erforderlich)</dt>
 <dd>Der Name der Anwendung.</dd>
 <dt>*-b* buildpack_name (optional)</dt>
-<dd>Der Name des Buildpacks. Der Name des Buildpacks (buildpack_name) kann der Name eines benutzerdefinierten Buildpacks (z. B. liberty-for-java), eine Git-URL (z. B. https://github.com/cloudfoundry/java-buildpack.git) oder eine Git-URL mit einem Zweig oder Tag (z. B. https://github.com/cloudfoundry/java-buildpack.git#v3.3.0 für das Tag v3.3.0) sein. </dd>
+<dd>Der Name des Buildpacks. Der Name des Buildpacks (buildpack_name) kann der Name eines benutzerdefinierten Buildpacks (z. B. liberty-for-java), eine Git-URL (z. B. https://github.com/cloudfoundry/java-buildpack.git) oder eine Git-URL mit einem Zweig oder Tag (z. B. https://github.com/cloudfoundry/java-buildpack.git#v3.3.0 für das Tag v3.3.0) sein.</dd>
 <dt>*-c* start_command (optional)</dt>
 <dd>Der Startbefehl Ihrer Anwendung. Geben Sie für die Verwendung des standardmäßigen Startbefehls für diese Option den Wert null an. </dd>
 <dt>*-f* manifest_path (optional)</dt>
@@ -661,14 +661,14 @@ cf set-env my_app variable_a 123
 ## cf ssh
 {: #cf_ssh}
 
-Greifen Sie sicher auf den Anwendungscontainer zu. Der Befehl `cf ssh` kann verwendet werden, um eine interaktive SSH-Sitzung einzurichten, Fernbefehle auszuführen, Dateien zu übertragen und die Portweiterleitung mit einer bestimmten Anwendungscontainerinstanz einzurichten. 
+Greifen Sie sicher auf den Anwendungscontainer zu. Der Befehl `cf ssh` kann verwendet werden, um eine interaktive SSH-Sitzung einzurichten, Fernbefehle auszuführen, Dateien zu übertragen und die Portweiterleitung mit einer bestimmten Anwendungscontainerinstanz einzurichten.
 
 ```
 cf ssh
 ```
 <strong>Voraussetzungen</strong>: `cf api`, `cf login`, `cf target`
 
-Standardmäßig ist SSH-Zugriff für Diego-Anwendungen aktiviert. Sie können den Befehl `cf ssh-enabled` verwenden, um sicherzustellen, dass der SSH-Zugriff aktiviert ist, oder Sie können den Befehl `cf enable-ssh` verwenden, um den Zugriff zu aktivieren, falls er inaktiviert war.  
+Standardmäßig ist SSH-Zugriff für Diego-Anwendungen aktiviert. Sie können den Befehl `cf ssh-enabled` verwenden, um sicherzustellen, dass der SSH-Zugriff aktiviert ist, oder Sie können den Befehl `cf enable-ssh` verwenden, um den Zugriff zu aktivieren, falls er inaktiviert war. 
 
 <strong>Befehlsoptionen</strong>:
 
@@ -676,9 +676,9 @@ Standardmäßig ist SSH-Zugriff für Diego-Anwendungen aktiviert. Sie können de
 <dt>appname</dt>
 <dd>Der Name der Anwendung.</dd>
 <dt>-c</dt>
-<dd>Gibt einen auszuführenden Fernbefehl an. </dd>
+<dd>Gibt einen auszuführenden Fernbefehl an.</dd>
 <dt>-i</dt>
-<dd>Gibt eine bestimmte Instanz einer Anwendung als Ziel an. Bei keiner Angabe wird die erste Instanz der Anwendung verwendet (eine Instanz mit dem Index 0). </dd>
+<dd>Gibt eine bestimmte Instanz einer Anwendung als Ziel an. Bei keiner Angabe wird die erste Instanz der Anwendung verwendet (eine Instanz mit dem Index 0).</dd>
 <dt>-L</dt>
 <dd>Aktiviert die Weiterleitung für den lokalen Port, die einen Ausgabeport auf Ihrer Maschine an einen Eingabeport auf der Anwendungs-VM bindet.</dd>
 <dt>-N</dt>
@@ -689,23 +689,23 @@ Standardmäßig ist SSH-Zugriff für Diego-Anwendungen aktiviert. Sie können de
 
 <strong>Beispiele</strong>:
 
-Mit diesem Befehl wird eine interaktive SSH-Sitzung gestartet, bei der die Containerinstanz die Anwendung `my_app` ausführt. 
+Mit diesem Befehl wird eine interaktive SSH-Sitzung gestartet, bei der die Containerinstanz die Anwendung `my_app` ausführt.
 ```
 $ cf ssh my_app
 ```
 {: codeblock}
 
-Nachstehend wird ein einzelner Befehl für die Containerinstanz der Anwendung `my_app` ausgeführt. 
+Nachstehend wird ein einzelner Befehl für die Containerinstanz der Anwendung `my_app` ausgeführt.
 ```
 $ cf ssh my_app -c "ls -l"
 ```
 
-Mit diesem Befehl wird eine einzelne Datei aus der Containerinstanz der Anwendung `my_app` übertragen. 
+Mit diesem Befehl wird eine einzelne Datei aus der Containerinstanz der Anwendung `my_app` übertragen.
 ```
 $ cf ssh my_app -c "/bin/cat logs/messages.log" > messages.log
 ```
 
-Mit diesem Befehl wird die Portweiterleitung von Port 7777 auf der lokalen Maschine an Port 8888 auf der Containerinstanz der Anwendung `my_app` eingerichtet. 
+Mit diesem Befehl wird die Portweiterleitung von Port 7777 auf der lokalen Maschine an Port 8888 auf der Containerinstanz der Anwendung `my_app` eingerichtet.
 ```
 $ cf ssh -N -T -L 7777:localhost:8888 my_app
 

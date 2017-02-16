@@ -104,7 +104,7 @@ cf login
 </li>
 </ol>
 
-## Gestione degli utenti 
+## Gestione degli utenti
 {: #admin_users}
 
 ### Aggiunta di un utente
@@ -739,7 +739,7 @@ cf ba update-service-broker <broker_name> <user_name> <password> <broker_url>
 nome comando **ba update-service-broker**.
 
 
-## Gestione dei gruppi di sicurezza dell'applicazione 
+## Gestione dei gruppi di sicurezza dell'applicazione
 {: #admin_secgro}
 
 Per gestire i gruppi di sicurezza dell'applicazione (ASG), devi essere un amministratore con accesso completo all'ambiente locale o dedicato. Tutti gli utenti dell'ambiente possono elencare gli ASG disponibili per l'organizzazione a cui si fa riferimento con il comando. Tuttavia, per creare, aggiornare o associare gli ASG, devi essere l'amministratore dell'ambiente {{site.data.keyword.Bluemix_notm}}.

@@ -76,7 +76,7 @@ cf plugins
 Utilizza l'indice nella seguente tabella in modo che faccia riferimento ai comandi CLI dev_mode utilizzati più frequentemente:
 
 <table summary="dev_mode commands index">
-<caption>Tabella 1. Comandi dev_mode </caption>
+<caption>Tabella 1. Comandi dev_mode</caption>
  <thead>
  <th colspan="4">Comandi dev_mode</th>
  </thead>

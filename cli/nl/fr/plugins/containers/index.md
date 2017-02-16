@@ -1,4 +1,4 @@
-﻿---
+---
 
 
 
@@ -129,8 +129,7 @@ d'IBM Containers.</dd>
 ## bluemix ic attach
 {: #bluemix_ic_attach}
 
-Contrôlez un conteneur en cours d'exécution ou affichez sa sortie. Utilisez `CTRL+C` pour quitter et arrêter le conteneur. Cette commande appelle l'interface de ligne de commande Docker. 
-Pour plus d'informations, voir la commande [attach ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/attach/){: new_window} dans l'aide de Docker.
+Contrôlez un conteneur en cours d'exécution ou affichez sa sortie. Utilisez `CTRL+C` pour quitter et arrêter le conteneur. Cette commande appelle l'interface de ligne de commande Docker. Pour plus d'informations, voir la commande [attach ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/attach/){: new_window} dans l'aide de Docker.
 
 ```
 bluemix ic attach [--no-stdin] [--sig-proxy] CONTENEUR
@@ -162,8 +161,7 @@ bluemix ic attach mon_conteneur
 ## bluemix ic build
 {: #bluemix_ic_build}
 
-Appelez le service de génération IBM Containers afin de générer une image Docker localement ou dans votre référentiel {{site.data.keyword.Bluemix_notm}} privé. Cette commande appelle l'interface de ligne de commande Docker. 
-Pour plus d'informations, voir la commande [build ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/build/){: new_window} dans l'aide de Docker.
+Appelez le service de génération IBM Containers afin de générer une image Docker localement ou dans votre référentiel {{site.data.keyword.Bluemix_notm}} privé. Cette commande appelle l'interface de ligne de commande Docker. Pour plus d'informations, voir la commande [build ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/build/){: new_window} dans l'aide de Docker.
 
 ```
 bluemix ic build -t ETIQUETTE|--tag ETIQUETTE [--no-cache] [-p|--pull] [-q|--quiet] EMPLACEMENT_DOCKERFILE
@@ -195,8 +193,7 @@ bluemix ic build -t registry.ng.bluemix.net/monespacenom/monimage
 
 ## bluemix ic cp
 {: #bluemix_ic_cp}
-Copie des fichiers ou des dossiers entre un conteneur et le système de fichiers local. Cette commande appelle l'interface de ligne de commande Docker. 
-Pour plus d'informations, voir la commande [cp ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/cp/){: new_window} dans l'aide de Docker.
+Copie des fichiers ou des dossiers entre un conteneur et le système de fichiers local. Cette commande appelle l'interface de ligne de commande Docker. Pour plus d'informations, voir la commande [cp ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/cp/){: new_window} dans l'aide de Docker.
 
 
 ## bluemix ic cpi
@@ -236,8 +233,7 @@ bluemix ic cpi training/sinatra registry.ng.bluemix.net/monespacenom/monimagesin
 ## bluemix ic exec
 {: #bluemix_ic_exec}
 
-Exécutez une commande dans un conteneur. Pour plus d'informations, voir
-la commande [exec ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/exec/){: new_window} dans l'aide de Docker.
+Exécutez une commande dans un conteneur. Pour plus d'informations, voir la commande [exec ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/exec/){: new_window} dans l'aide de Docker.
 
 ```
 bluemix ic exec [-d|--detach] [-it] [-u UTILISATEUR|--user UTILISATEUR] CONTENEUR [CMD]
@@ -511,8 +507,7 @@ bluemix ic groups [-q]
 ## bluemix ic images
 {: #bluemix_ic_images}
 
-Affichez la liste de toutes les images disponibles dans le référentiel {{site.data.keyword.Bluemix_notm}} privé de l'organisation. 
-Pour plus d'informations, voir la commande [images ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/images){: new_window} dans l'aide de Docker. La liste inclut l'ID de l'image, la date de création et le nom de l'image.
+Affichez la liste de toutes les images disponibles dans le référentiel {{site.data.keyword.Bluemix_notm}} privé de l'organisation. Pour plus d'informations, voir la commande [images ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/images){: new_window} dans l'aide de Docker. La liste inclut l'ID de l'image, la date de création et le nom de l'image.
 
 ```
 bluemix ic images [-a|--all] [-f CONDITION] [--no-trunc] [-q|--quiet]
@@ -578,8 +573,7 @@ bluemix region-set us-south
 ## bluemix ic inspect
 {: #bluemix_ic_inspect}
 
-Affichez les informations sur un conteneur. Pour plus d'informations,
-voir la commande [inspect ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/inspect){: new_window} dans l'aide de Docker.
+Affichez les informations sur un conteneur. Pour plus d'informations, voir la commande [inspect ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/inspect){: new_window} dans l'aide de Docker.
 
 ```
 bluemix ic inspect [IMAGE|images|CONTENEUR]
@@ -733,8 +727,7 @@ bluemix ic ips -q
 ## bluemix ic kill
 {: #bluemix_ic_kill}
 
-Arrêtez un processus en cours dans un conteneur sans arrêter le conteneur. 
-Pour plus d'informations, voir la commande [kill ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/kill/){: new_window} dans l'aide de Docker. 
+Arrêtez un processus en cours dans un conteneur sans arrêter le conteneur. Pour plus d'informations, voir la commande [kill ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/kill/){: new_window} dans l'aide de Docker.
 
 ```
 bluemix ic kill [-s CMD|--signal CMD] CONTENEUR
@@ -763,8 +756,7 @@ bluemix ic kill proxy
 ## bluemix ic logs
 {: #bluemix_ic_logs}
 
-Affiche les journaux de sortie ou d'erreur d'un conteneur en cours d'exécution. 
-Pour plus d'informations, voir la commande [logs ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/logs/){: new_window} dans l'aide de Docker.
+Affiche les journaux de sortie ou d'erreur d'un conteneur en cours d'exécution. Pour plus d'informations, voir la commande [logs ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/logs/){: new_window} dans l'aide de Docker.
 ```
 bluemix ic logs [OPTIONS] CONTENEUR
 ```
@@ -806,8 +798,7 @@ bluemix ic namespace-set NOM
 ## bluemix ic pause
 {: #pause}
 
-Interrompez tous les processus d'un conteneur en cours d'exécution. Pour
-plus d'informations, voir la commande [pause ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/pause/){: new_window} dans l'aide de Docker. Pour arrêter un conteneur, voir la commande [bluemix ic unpause](#unpause).
+Interrompez tous les processus d'un conteneur en cours d'exécution. Pour plus d'informations, voir la commande [pause ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/pause/){: new_window} dans l'aide de Docker. Pour arrêter un conteneur, voir la commande [bluemix ic unpause](#unpause).
 
 ```
 bluemix ic pause CONTENEUR
@@ -844,14 +835,12 @@ bluemix ic pause proxy
 ## bluemix ic port
 {: #bluemix_ic_port}
 
-Répertoriez les mappages de port ou un mappage spécifique pour le conteneur. Cette commande encapsule la commande `docker port`. 
-Pour plus d'informations, voir la commande [port ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/port/){: new_window} dans l'aide de Docker.
+Répertoriez les mappages de port ou un mappage spécifique pour le conteneur. Cette commande encapsule la commande `docker port`. Pour plus d'informations, voir la commande [port ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/port/){: new_window} dans l'aide de Docker.
 
 
 ## bluemix ic ps
 {: #bluemix_ic_ps}
-Affichez la liste des conteneurs en cours d'exécution dans l'espace de nom de l'utilisateur connecté. Par défaut, cette commande affiche seulement les conteneurs en cours d'exécution. 
-Pour plus d'informations, voir la commande [ps ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/ps/){: new_window} dans l'aide de Docker. 
+Affichez la liste des conteneurs en cours d'exécution dans l'espace de nom de l'utilisateur connecté. Par défaut, cette commande affiche seulement les conteneurs en cours d'exécution. Pour plus d'informations, voir la commande [ps ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/ps/){: new_window} dans l'aide de Docker.
 
 ```
 bluemix ic ps [-a|--all] [--filter env=CRITERES_RECHERCHE] [-s|--size] [-l NOMBRE|--limit NOMBRE] [-q|--quiet]
@@ -887,7 +876,7 @@ bluemix ic ps -a
 
 ## bluemix ic rename
 {: #bluemix_ic_rename}
-Renomme un conteneur. Pour plus d'informations, voir la commande [rename ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/rename/){: new_window} dans l'aide de Docker. 
+Renomme un conteneur. Pour plus d'informations, voir la commande [rename ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/rename/){: new_window} dans l'aide de Docker.
 
 ```
 bluemix ic rename ANCIEN_NOM NOUVEAU_NOM
@@ -969,7 +958,7 @@ bluemix ic restart proxy
 ## bluemix ic rm
 {: #bluemix_ic_rm}
 
-Supprimez un conteneur. Pour plus d'informations, voir la commande [rm ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/rm/){: new_window} dans l'aide de Docker. 
+Supprimez un conteneur. Pour plus d'informations, voir la commande [rm ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/rm/){: new_window} dans l'aide de Docker.
 
 ```
 bluemix ic rm [-f|--force] CONTENEUR
@@ -1009,8 +998,7 @@ bluemix ic rm proxy
 ## bluemix ic rmi
 {: #bluemix_ic_rmi}
 
-Supprimez une image de l'espace de nom de l'utilisateur connecté. Pour
-plus d'informations, voir la commande [rmi ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/rmi/){: new_window} dans l'aide de Docker.
+Supprimez une image de l'espace de nom de l'utilisateur connecté. Pour plus d'informations, voir la commande [rmi ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/rmi/){: new_window} dans l'aide de Docker.
 
 ```
 bluemix ic rmi [-R REGISTRE|--registry REGISTRE] IMAGE
@@ -1117,13 +1105,11 @@ bluemix ic route-unmap -n mon_hôte -d organisation.com GROUPE1
 ## bluemix ic run
 {: #bluemix_ic_run}
 
-Démarrez un nouveau conteneur dans le service cloud de conteneur depuis un nom d'image. 
-Pour plus d'informations, voir la commande [run ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/run/){: new_window} dans l'aide de Docker. 
+Démarrez un nouveau conteneur dans le service cloud de conteneur depuis un nom d'image. Pour plus d'informations, voir la commande [run ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/run/){: new_window} dans l'aide de Docker.
 
 
 ```
-bluemix ic run [-p PORT|--publish PORT] [-P] [-m MEMOIRE|--memory MEMOIRE] [-e ENV|--env ENV] [-volume VOLUME:CHEMIN_CONTENEUR] -n NOM|--name NOM [--link
-NOM:ALIAS] [-it] IMAGE [CMD [CMD ...]]
+bluemix ic run [-p PORT|--publish PORT] [-P] [-m MEMOIRE|--memory MEMOIRE] [-e ENV|--env ENV] [-volume VOLUME:CHEMIN_CONTENEUR] -n NOM|--name NOM [--link NOM:ALIAS] [-it] IMAGE [CMD [CMD ...]]
 ```
 **Remarque :** vérifiez que l'outil de commandes Cloud Foundry est installé et que vous disposez d'un jeton Cloud Foundry. L'aboutissement
 d'une connexion à l'aide de `bluemix login` et de `bluemix ic init` génère le jeton et les certificats requis.
@@ -1282,8 +1268,7 @@ bluemix ic start proxy
 ## bluemix ic stats
 {: #bluemix_ic_stats}
 
-Affichez les statistiques d'utilisation actuelles d'un ou de plusieurs conteneurs. Utilisez `CTRL+C` pour quitter. 
-Pour plus d'informations, voir la commande [stats ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/stats/){: new_window} dans l'aide de Docker.
+Affichez les statistiques d'utilisation actuelles d'un ou de plusieurs conteneurs. Utilisez `CTRL+C` pour quitter. Pour plus d'informations, voir la commande [stats ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/stats/){: new_window} dans l'aide de Docker.
 
 ```
 bluemix ic stats [--no-stream] CONTENEUR [CONTENEUR]
@@ -1310,8 +1295,7 @@ bluemix ic stats --no-stream mon_conteneur
 
 ## bluemix ic stop
 {: #ic_stop}
-Arrêtez un conteneur en cours d'exécution. Pour plus d'informations, voir la
-commande [stop ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/stop/){: new_window} dans l'aide de Docker. Pour démarrer un conteneur, voir la commande [bluemix ic start](#ic_start).
+Arrêtez un conteneur en cours d'exécution. Pour plus d'informations, voir la commande [stop ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/stop/){: new_window} dans l'aide de Docker. Pour démarrer un conteneur, voir la commande [bluemix ic start](#ic_start).
 
 ```
 bluemix ic stop CONTENEUR [-t SECS|--time SECS]
@@ -1351,8 +1335,7 @@ bluemix ic stop proxy
 ## bluemix ic top
 {: #bluemix_ic_top}
 
-Affichez les processus en cours d'exécution dans le conteneur. Pour plus
-d'informations, voir la commande [top ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/top/){: new_window} dans l'aide de Docker.
+Affichez les processus en cours d'exécution dans le conteneur. Pour plus d'informations, voir la commande [top ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/top/){: new_window} dans l'aide de Docker.
 
 ```
 bluemix ic top CONTENEUR [CONTENEUR]
@@ -1378,8 +1361,7 @@ bluemix ic top mon_conteneur
 ## bluemix ic unpause
 {: #unpause}
 
-Reprenez l'exécution de tous les processus dans un conteneur en cours d'exécution. 
-Pour plus d'informations, voir la commande [unpause ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/unpause/){: new_window} dans l'aide de Docker. Pour interrompre un conteneur, voir la commande [bluemix ic pause](#pause).
+Reprenez l'exécution de tous les processus dans un conteneur en cours d'exécution. Pour plus d'informations, voir la commande [unpause ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/unpause/){: new_window} dans l'aide de Docker. Pour interrompre un conteneur, voir la commande [bluemix ic pause](#pause).
 
 ```
 bluemix ic unpause CONTENEUR
@@ -1648,8 +1630,7 @@ bluemix ic volumes
 ## bluemix ic wait
 {: #bluemix_ic_wait}
 
-Quittez un conteneur et affichez le code de sortie comme confirmation. 
-Pour plus d'informations, voir la commande [wait ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/wait/){: new_window} dans l'aide de Docker. 
+Quittez un conteneur et affichez le code de sortie comme confirmation. Pour plus d'informations, voir la commande [wait ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/wait/){: new_window} dans l'aide de Docker.
 
 ```
 bluemix ic wait CONTENEUR [CONTENEUR]

@@ -718,9 +718,9 @@ Zum Arbeiten mit Anwendungssicherheitsgruppen (Application Security Groups, ASGs
 
 ASGs fungieren als virtuelle Firewalls, die den abgehenden Datenverkehr aus der Anwendung in die {{site.data.keyword.Bluemix_notm}}-Umgebung steuern. Jede ASG besteht aus einer Liste mit Regeln, die den Datenverkehr und die Kommunikation in das externe Netz oder aus diesem Netz definieren. Sie können eine oder mehrere ASGs an einen bestimmten Sicherheitsgruppensatz (z. B. an einen Gruppensatz, der für die Anwendung des globalen Zugriffs verwendet wird) oder an Bereiche innerhalb einer Organisation in der {{site.data.keyword.Bluemix_notm}}-Umgebung binden.
 
-Bei der Erstinstallation von {{site.data.keyword.Bluemix_notm}} wird der gesamte Zugriff auf das externe Netz eingeschränkt. Zwei von IBM erstellte Sicherheitsgruppen (`public_networks` und `dns`) ermöglichen den globalen Zugriff auf das externe Netz, wenn Sie diese Gruppen an die Cloud Foundry-Standardsicherheitsgruppensätze binden. Die beiden Sicherheitsgruppensätze in Cloud Foundry zur Anwendung des globalen Zugriffs sind die Gruppensätze **Default Staging** und **Default Running**. Von diesen Gruppensätzen werden die Regeln für den Datenverkehr auf alle aktiven Apps bzw. alle Staging-Apps angewendet. Wenn Sie keine Bindung an diese beiden Sicherheitsgruppensätze herstellen möchten, können Sie die Bindung an die Cloud Foundry-Gruppensätze aufheben und die Sicherheitsgruppe anschließend an einen bestimmten Bereich binden. Weitere Informationen finden Sie in [Binding Application Security Groups ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}. 
+Bei der Erstinstallation von {{site.data.keyword.Bluemix_notm}} wird der gesamte Zugriff auf das externe Netz eingeschränkt. Zwei von IBM erstellte Sicherheitsgruppen (`public_networks` und `dns`) ermöglichen den globalen Zugriff auf das externe Netz, wenn Sie diese Gruppen an die Cloud Foundry-Standardsicherheitsgruppensätze binden. Die beiden Sicherheitsgruppensätze in Cloud Foundry zur Anwendung des globalen Zugriffs sind die Gruppensätze **Default Staging** und **Default Running**. Von diesen Gruppensätzen werden die Regeln für den Datenverkehr auf alle aktiven Apps bzw. alle Staging-Apps angewendet. Wenn Sie keine Bindung an diese beiden Sicherheitsgruppensätze herstellen möchten, können Sie die Bindung an die Cloud Foundry-Gruppensätze aufheben und die Sicherheitsgruppe anschließend an einen bestimmten Bereich binden. Weitere Informationen finden Sie in [Binding Application Security Groups ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}.
 
-**Hinweis:** Die folgenden Befehle, die Ihnen die Arbeit mit Sicherheitsgruppen ermöglichen, basieren auf Cloud Foundry Version 1.6. Weitere Informationen einschließlich der Angaben zu erforderlichen und optionalen Feldern finden Sie in den Cloud Foundry-Informationen zum Thema [Anwendungssicherheitsgruppen erstellen ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}. 
+**Hinweis:** Die folgenden Befehle, die Ihnen die Arbeit mit Sicherheitsgruppen ermöglichen, basieren auf Cloud Foundry Version 1.6. Weitere Informationen einschließlich der Angaben zu erforderlichen und optionalen Feldern finden Sie in den Cloud Foundry-Informationen zum Thema [Anwendungssicherheitsgruppen erstellen ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}.
 
 ### Sicherheitsgruppen auflisten
 {: #clilissecgro}
@@ -752,7 +752,7 @@ cf ba security-groups <security-group>
 ### Sicherheitsgruppe erstellen
 {: #clicreasecgro}
 
-Weitere Informationen zur Erstellung von Sicherheitsgruppen und Regeln, die den abgehenden Datenverkehr definieren, finden Sie in [Creating Application Security Groups ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}. 
+Weitere Informationen zur Erstellung von Sicherheitsgruppen und Regeln, die den abgehenden Datenverkehr definieren, finden Sie in [Creating Application Security Groups ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}.
 
 Verwenden Sie den folgenden Befehl, um eine Sicherheitsgruppe zu erstellen:
 
@@ -812,7 +812,7 @@ cf ba delete-security-group <security-group>
 ### Sicherheitsgruppen binden
 {: #clibindsecgro}
 
-Weitere Informationen zum Binden von Sicherheitsgruppen finden Sie auf der Seite zum [Binden von Anwendungssicherheitsgruppen ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}. 
+Weitere Informationen zum Binden von Sicherheitsgruppen finden Sie auf der Seite zum [Binden von Anwendungssicherheitsgruppen ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}.
 
 * Verwenden Sie den folgenden Befehl, um eine Bindung zum Sicherheitsgruppensatz 'Default Staging' herzustellen:
 
@@ -863,7 +863,7 @@ cf ba bind-security-group <security-group> <org> <space>
 ### Bindung von Sicherheitsgruppen aufheben
 {: #cliunbindsecgro}
 
-Weitere Informationen zur Aufhebung der Bindung von Sicherheitsgruppen finden Sie auf der Seite zum [Aufheben von Bindungen von Anwendungssicherheitsgruppen ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window}. 
+Weitere Informationen zur Aufhebung der Bindung von Sicherheitsgruppen finden Sie auf der Seite zum [Aufheben von Bindungen von Anwendungssicherheitsgruppen ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window}.
 
 * Verwenden Sie den folgenden Befehl, um die Bindung zu einem Sicherheitsgruppensatz 'Default Staging' aufzuheben:
 

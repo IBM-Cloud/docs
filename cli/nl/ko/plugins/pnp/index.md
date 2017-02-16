@@ -87,7 +87,7 @@ Bluemix 저장소에서 플러그인을 설치하려면 다음 단계를 따르�
 | pnp-create  | 사설 네트워크 피어 연결을 작성합니다.   |
 | pnp-delete  | 사설 네트워크 피어 연결을 삭제합니다.   |
 | pnp-show    | 모든 사설 네트워크 피어 연결을 나열합니다.  |
-{: caption="Table 1. Private network peering commands" caption-side="top"}
+{: caption="표 1. 사설 네트워크 피어 명령" caption-side="top"}
 
 
 ### 명령 사용

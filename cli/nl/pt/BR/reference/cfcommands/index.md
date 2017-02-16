@@ -23,8 +23,7 @@ lastupdated: "2017-01-12"
 A interface da linha de comandos (CLI) do Cloud Foundry (cf) fornece um conjunto de comandos para gerenciar seus apps. As informações a seguir listam os comandos cf usados mais comumente para gerenciar apps e inclui seus nomes, opções, uso, pré-requisitos, descrições e exemplos. Para listar todos os comandos cf e informações de ajuda associadas, use `cf help`. Use `cf command_name -h` para visualizar informações detalhadas da ajuda para um comando específico.
 {: shortdesc}
 
-**Observação**: se a sua rede contém um servidor proxy HTTP entre o host que executa os comandos cf e o terminal de API Cloud Foundry, deve-se especificar o nome do host ou endereço IP do servidor proxy, configurando a variável de ambiente
-`HTTP_PROXY`. Para obter detalhes, veja (http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}Usando a CLI cf com um Servidor proxy HTTP ![Ícone de link externo](..![External)/icons/launch-glyph.svg)].
+**Observação**: se a sua rede contém um servidor proxy HTTP entre o host que executa os comandos cf e o terminal de API Cloud Foundry, deve-se especificar o nome do host ou endereço IP do servidor proxy, configurando a variável de ambiente `HTTP_PROXY`. Para obter detalhes, veja (http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}Usando a CLI cf com um Servidor proxy HTTP ![Ícone de link externo](..![External)/icons/launch-glyph.svg)].
 
 
 ## Índice de comandos da CLI do Cloud Foundry
@@ -61,8 +60,7 @@ Use o índice na tabela a seguir para se referir aos comandos do Cloud Foundry u
  <td>[bind-service](/docs/cli/reference/cfcommands/index.html#cf_bind-service)</td>
  <td>[create-service](/docs/cli/reference/cfcommands/index.html#cf_create-service)</td>
  <td>[create-space](/docs/cli/reference/cfcommands/index.html#cf_create-space)</td>
- <td>[   delete
-   ](/docs/cli/reference/cfcommands/index.html#cf_delete)</td>
+ <td>[delete](/docs/cli/reference/cfcommands/index.html#cf_delete)</td>
   </tr>
  <tr>
  <td>[delete-space](/docs/cli/reference/cfcommands/index.html#cf_delete-space)</td>
@@ -128,8 +126,7 @@ cf api api.ng.bluemix.network --skip-ssl-validation
 ## cf apps
 {: #cf_apps}
 
-Lista todos os aplicativos que você implementou no espaço atual. O
-status de cada aplicativo também é exibido.
+Lista todos os aplicativos que você implementou no espaço atual. O status de cada aplicativo também é exibido.
 
 Suponha que tenha uma instância para um app, na coluna de instâncias da resposta do comando cf apps, você verá 1/1 se seu app estiver ativo e 0/1 se seu app estiver inativo. Se você vir ?/1, que indica que o estado da instância do app é desconhecido, será possível copiar a URL do app e colar em seu navegador para verificar se o app responde ou acompanhar o log pelo comando `cf logs appname` para ver se o app está gerando conteúdo de log.
 
@@ -391,8 +388,7 @@ cf help events
 ## cf login
 {: #cf_login}
 
-Efetua seu
-login no {{site.data.keyword.Bluemix_notm}}.
+Efetua seu login no {{site.data.keyword.Bluemix_notm}}.
 
 **Nota**: caso você esteja efetuando login com um [ID federado](/docs/admin/account.html#signup), deve-se usar o parâmetro de conexão única (SSO) para efetuar login.
 
@@ -406,23 +402,17 @@ cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s
 
 <dl>
 <dt>*-a* https://api.{DomainName} (opcional)</dt>
-<dd>A URL do terminal da API do
-{{site.data.keyword.Bluemix_notm}}.</dd>
+<dd>A URL do terminal da API do {{site.data.keyword.Bluemix_notm}}.</dd>
 <dt>*-u* user_name (opcional)</dt>
 <dd>Seu nome de usuário.</dd>
 <dt>*-p* password (opcional)</dt>
 <dd>Sua senha.</dd>
-<dd>*Importante:* Se você fornecer sua senha usando o parâmetro *-p* na interface de linha de comandos, a senha poderá ser registrada no histórico da linha de comandos. Por motivos de segurança, evite fornecer a senha usando o parâmetro -p. Em vez disso,
-insira a senha quando a interface da linha de comandos solicitar.</dd>
+<dd>*Importante:* Se você fornecer sua senha usando o parâmetro *-p* na interface de linha de comandos, a senha poderá ser registrada no histórico da linha de comandos. Por motivos de segurança, evite fornecer a senha usando o parâmetro -p. Em vez disso, insira a senha quando a interface da linha de comandos solicitar.</dd>
 <dt>*-sso*</dt>
-<dd>Deve-se usar a opção de conexão única (SSO) ao efetuar login com um ID federado. Isso
-não será necessário ao efetuar login com um ID IBM. Se você tentar efetuar sign in com um ID federado e não
-especificar o parâmetro SSO, será solicitado que o inclua. Usar o
-parâmetro SSO solicita que você insira a senha descartável após o
-login.</dd>
+<dd>Deve-se usar a opção de conexão única (SSO) ao efetuar login com um ID federado. Isso não será necessário ao efetuar login com um ID IBM. Se você tentar efetuar sign in com um ID federado e não especificar o parâmetro SSO, será solicitado que o inclua. Usar o parâmetro SSO solicita que você insira a senha descartável após o login.</dd>
 <dt>*-o* organization_name</dt>
 <dd>O nome da organização na qual você deseja efetuar login.</dd>
-<dt>*-s*space_name</dt>
+<dt>*-s* space_name</dt>
 <dd>O nome do espaço no qual você deseja efetuar login.</dd>
 <dt>*--skip-ssl-validation* (opcional)</dt>
 <dd>Desativa o processo de validação SSL. O uso desse parâmetro pode causar problemas de segurança.</dd>
@@ -450,8 +440,7 @@ cf login -a https://api.ng.bluemix.net -u user_name
 ```
 {: codeblock}
 
-Efetue login no {{site.data.keyword.Bluemix_notm}} com um terminal definido de `https://api.ng.bluemix.net`, um nome de usuário de `user_name`, nenhuma senha especificada por motivos
-de segurança, um nome da organização de `org_name` e o nome do espaço de `space_name`.
+Efetue login no {{site.data.keyword.Bluemix_notm}} com um terminal definido de `https://api.ng.bluemix.net`, um nome de usuário de `user_name`, nenhuma senha especificada por motivos de segurança, um nome da organização de `org_name` e o nome do espaço de `space_name`.
 ```
 cf login -a https://api.ng.bluemix.net -u user_name -o org_name -s space_name
 ```
@@ -516,8 +505,7 @@ cf marketplace
 ## cf push
 {: #cf_push}
 
-Implementa um novo aplicativo para
-{{site.data.keyword.Bluemix_notm}} ou atualiza um aplicativo existente no {{site.data.keyword.Bluemix_notm}}.
+Implementa um novo aplicativo para {{site.data.keyword.Bluemix_notm}} ou atualiza um aplicativo existente no {{site.data.keyword.Bluemix_notm}}.
 
 ```
 cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i instance_number] [-k disk_limit] [-m memory_limit] [-n host_name] [-p app_path] [-s stack_name] [-t timeout_length] [--no-hostname] [--no-manifest] [--no-route] [--no-start] [--random-route]
@@ -549,11 +537,9 @@ cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i in
 <dt>*-s* stack_name (opcional)</dt>
 <dd>A pilha para executar os apps. Uma pilha é um sistema de arquivos pré-construído que inclui o sistema operacional. Use `cf stacks` para visualizar as pilhas disponíveis no {{site.data.keyword.Bluemix_notm}}.</dd>
 <dt>*-t* tempo limite (opcional)</dt>
-<dd>Tempo máximo, em segundos, para o aplicativo iniciar. Outros tempos-limite do lado do servidor podem substituir esse
-valor.</dd>
+<dd>Tempo máximo, em segundos, para o aplicativo iniciar. Outros tempos-limite do lado do servidor podem substituir esse valor.</dd>
 <dt>*--no-hostname* (opcional)</dt>
-<dd>Mapeia o domínio do sistema {{site.data.keyword.Bluemix_notm}} para esse
-aplicativo.</dd>
+<dd>Mapeia o domínio do sistema {{site.data.keyword.Bluemix_notm}} para esse aplicativo.</dd>
 <dt>*--no-manifest* (opcional)</dt>
 <dd>Ignora o arquivo de manifesto padrão.</dd>
 <dt>*--no-route* (opcional)</dt>
@@ -624,8 +610,7 @@ cf scale appname -i 1234 -k 1G -m 1G
 ## cf services
 {: #cf_services}
 
-Lista todos os serviços que estão disponíveis no espaço
-atual.
+Lista todos os serviços que estão disponíveis no espaço atual.
 
 ```
 cf services
@@ -729,9 +714,7 @@ $ cf ssh -N -T -L 7777:localhost:8888 my_app
 ## cf stacks
 {: #cf_stacks}
 
-Lista todas as
-pilhas. Uma pilha é um sistema de arquivos pré-construído, incluindo um
-sistema operacional que pode executar apps.
+Lista todas as pilhas. Uma pilha é um sistema de arquivos pré-construído, incluindo um sistema operacional que pode executar apps.
 
 ```
 cf stacks

@@ -5,8 +5,7 @@
 copyright:
 
   years: 2015, 2017
-
-lastupdated: "2017-01-12"
+lastupdated: "2017-01-24"
 
 ---
 
@@ -28,7 +27,7 @@ lastupdated: "2017-01-12"
 
 安装 {{site.data.keyword.Bluemix_notm}} CLI 之前，请确保已在系统上安装 Cloud Foundry CLI。
 
-对于 Mac OS 和 Windows，请下载 [{{site.data.keyword.Bluemix_notm}} CLI 包](index.html#downloads)，并运行安装程序。
+对于 Mac OS 和 Windows，请下载 [{{site.data.keyword.Bluemix_notm}} CLI 包](/docs/cli/index.html#downloads)，并运行安装程序。
 
 对于 Linux，请执行以下步骤：
 
@@ -117,8 +116,8 @@ lastupdated: "2017-01-12"
 
 您还可以从存储库安装插件。{{site.data.keyword.Bluemix_notm}} 具有用于托管 {{site.data.keyword.Bluemix_notm}} CLI 插件和 Cloud Foundry CLI 插件的存储库：
 
-  * [Cloud Foundry CLI 插件存储库 ![外部链接图标](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){: new_window}，用于托管 Cloud Foundry CLI 的插件。
-  * [{{site.data.keyword.Bluemix_notm}} CLI 插件存储库 ![外部链接图标](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window}，专门用于托管 {{site.data.keyword.Bluemix_notm}} CLI 的插件。
+  * [Cloud Foundry CLI 插件存储库 ](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg)，用于托管 Cloud Foundry CLI 的插件。
+  * [{{site.data.keyword.Bluemix_notm}} CLI 插件存储库 ](http://clis.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg)，专门用于托管 {{site.data.keyword.Bluemix_notm}} CLI 的插件。
 
 要从存储库进行安装，请执行以下步骤：
 
@@ -183,7 +182,7 @@ javacloudantbp          Java Cloudant Web Starter
 # {{site.data.keyword.Bluemix_notm}} (bx) 命令
 {: #bluemix_cli}
 
-版本：0.4.4
+版本：0.4.6
 
 {{site.data.keyword.Bluemix_notm}} 命令行界面 (CLI) 提供了一组按名称空间分组的命令，供用户用于与 {{site.data.keyword.Bluemix_notm}} 进行交互。一些 {{site.data.keyword.Bluemix_notm}} 命令是现有 cf 命令的包装程序，而另一些为 {{site.data.keyword.Bluemix_notm}} 用户提供了扩展功能。以下信息列出了 {{site.data.keyword.Bluemix_notm}} CLI 支持的命令，并包含命令名称、选项、用法、先决条件、描述和示例。
 {:shortdesc}
@@ -201,13 +200,13 @@ javacloudantbp          Java Cloudant Web Starter
 <dd>必须安装 Docker CLI (docker) 才能运行此命令。</dd>
 </dl>
 
-
 ## bluemix 命令索引
 {: #bx_commands_index}
 
 使用下表中的索引可查看常用 bluemix 命令：
 
 **注：**可以使用 Bluemix 命令的短格式；例如，`bx api` 是 `bluemix api` 的短格式。
+
 
 <table summary="常规 bluemix 命令。">
  <caption>表 1. 常规 bluemix 命令</caption>
@@ -225,13 +224,10 @@ javacloudantbp          Java Cloudant Web Starter
  <tr>
  <td>[bluemix info](index.html#bluemix_info) </td>
  <td>[bluemix config](index.html#bluemix_config)</td>
- <td>[bluemix list](index.html#bluemix_list)</td>
- <td>[bluemix scale](index.html#bluemix_scale)</td>
  <td>[bluemix curl](index.html#bluemix_curl)</td>
  </tr>
   </tbody>
  </table>
-
 
 
 <table summary="可用于管理组织、空间和用户的 bluemix 命令">
@@ -256,17 +252,22 @@ javacloudantbp          Java Cloudant Web Starter
  </tr>
  <tr>
  <td>[bluemix iam space-delete](index.html#bluemix_iam_space_delete)</td>
- <td>[bluemix iam account-users](index.html#bluemix_iam_account-users)</td>
- <td>[bluemix iam account-user-invite](index.html#bluemix_iam_account-user-invite)</td>
+ <td>[bluemix iam account-users](index.html#bluemix_iam_account_users)</td>
+ <td>[bluemix iam account-users-delete](index.html#bluemix_iam_account_users_delete)</td>
+ <td>[bluemix iam account-user-invite](index.html#bluemix_iam_account_user_invite)</td>
+ <td>[bluemix iam account-user-reinvite](index.html#bluemix_iam_account_user_reinvite)</td>
  <td>[bluemix iam org-users](index.html#bluemix_iam_org_users)</td>
- <td>[bluemix iam org-role-set](index.html#bluemix_iam_org_role_set)</td>
  </tr>
  <tr>
+ <td>[bluemix iam org-user-add](index.html#bluemix_iam_org_user_add)</td>
+ <td>[bluemix iam org-user-remove](index.html#bluemix_iam_org_user_remove)</td>
+ <td>[bluemix iam org-role-set](index.html#bluemix_iam_org_role_set)</td>
  <td>[bluemix iam org-role-unset](index.html#bluemix_iam_org_role_unset)</td>
  <td>[bluemix iam space-users](index.html#bluemix_iam_space_users)</td>
  <td>[bluemix iam space-role-set](index.html#bluemix_iam_space_role_set)</td>
+ </tr>
+ <tr>
  <td>[bluemix iam space-role-unset](index.html#bluemix_iam_space_role_unset)</td>
- <td></td>
  </tr>
  </tbody>
  </table>
@@ -407,8 +408,6 @@ javacloudantbp          Java Cloudant Web Starter
   </tbody>
  </table>
 
-
-
 <table summary="可用于在 Bluemix 上管理容器的 bluemix 命令">
  <caption>表 7. 用于在 Bluemix 上管理容器的命令</caption>
  <thead>
@@ -496,7 +495,6 @@ javacloudantbp          Java Cloudant Web Starter
  </table>
 
 
-
 ### bluemix help
 {: #bluemix_help}
 显示 {{site.data.keyword.Bluemix_notm}} CLI 第一级内置命令和受支持名称空间的一般帮助，或者显示特定内置命令或名称空间的帮助。
@@ -562,16 +560,16 @@ bluemix api [API_ENDPOINT] [--unset]
 <strong>命令选项</strong>：
    <dl>
    <dt>API_ENDPOINT（可选）</dt>
-   <dd>作为目标的 API 端点，例如 `https://api.ng.bluemix.net`。如果未指定 *API_ENDPOINT* 和 `--unset` 选项，将显示当前 API 端点。</dd>
+   <dd>作为目标的 API 端点，例如 `https://api.chinabluemix.net`。如果未指定 *API_ENDPOINT* 和 `--unset` 选项，将显示当前 API 端点。</dd>
    <dt>--unset（可选）</dt>
    <dd>除去 API 端点设置。</dd>
     </dl>
 <strong>示例</strong>：
 
-将 API 端点设置为 api.ng.bluemix.net：
+将 API 端点设置为 api.chinabluemix.net：
 
 ```
-bluemix api api.ng.bluemix.net
+bluemix api api.chinabluemix.net
 ```
 
 查看当前 API 端点：
@@ -603,7 +601,7 @@ bluemix login [OPTIONS...]
 <strong>命令选项</strong>：
 有关 `login` 命令支持的选项的信息，请参阅 `cf login` 命令用法信息，以了解用于管理应用程序的 cf 命令。
 
-<strong>注</Strong>：
+<strong>注</strong>：
 如果使用联合标识登录，请使用“--sso”选项对一次性密码进行验证。
 
 ### bluemix logout
@@ -732,100 +730,10 @@ bluemix config --locale CLEAR
 ```
 
 
-### bluemix list
-{: #bluemix_list}
-
-列出当前空间中的所有应用程序、容器、容器组和 VM 组。
-
-```
-bluemix list [apps|containers|container-groups|vm-groups]
-```
-
-<strong>先决条件</strong>：端点、登录和目标
-
-<strong>命令选项</strong>：
-   <dl>
-   <dt>apps（可选）</dt>
-   <dd>仅显示应用程序信息。</dd>
-   <dt>containers（可选）</dt>
-   <dd>仅显示容器信息。</dd>
-   <dt>container-groups（可选）</dt>
-   <dd>仅显示容器组信息。</dd>
-   <dt>vm-groups（可选）</dt>
-   <dd>仅显示 VM 组信息。</dd>
-    </dl>
-对于 `apps`、`containers`、`container-groups` 或 `vm-groups`，一次只能指定其中一个选项。如果未指定其中任何选项，那么将列出所有 cf 应用程序、容器、容器组和 VM 组。
-
-<strong>示例</strong>：
-
-列出所有 cf 应用程序：
-
-```
-bluemix list apps
-```
-
-列出所有容器实例：
-
-```
-bluemix list containers
-```
-
-列出所有应用程序、容器、容器组和 VM 组：
-
-```
-bluemix list
-```
-
-
-### bluemix scale
-{: #bluemix_scale}
-
-将 cf 应用程序或容器组向内扩展或向外扩展到指定的实例计数、磁盘配额和内存大小。
-
-**注：**扩展容器组时，只能指定实例数。如果未指定任何选项，此命令将列出容器组的当前实例计数，以及 cf 应用程序的磁盘配额和内存大小。
-
-```
-bluemix scale CF_APP_NAME|CONTAINER_GROUP_NAME [-i INSTANCE_COUNT] [-k DISK_QUOTA] [-m MEMORY_SIZE]
-```
-
-<strong>先决条件</strong>：端点、登录和目标
-
-<strong>命令选项</strong>：
-   <dl>
-   <dt><i>CF_APP_NAME</i>|<i>CONTAINER_GROUP_NAME</i>（必需）</dt>
-   <dd>要扩展的 cf 应用程序或容器组的名称。</dd>
-   <dt>-i <i>INSTANCE_COUNT</i>（可选）</dt>
-   <dd>要扩展的 cf 应用程序或容器组的新实例数。对于要扩展的容器组，此选项是唯一有效的选项。</dd>
-   <dt>-k <i>DISK_QUOTA</i>（可选）</dt>
-   <dd>cf 应用程序的新磁盘限额。对于扩展容器组无效。</dd>
-   <dt>-m <i>MEMORY_SIZE</i>（可选）</dt>
-   <dd>cf 应用程序的新内存大小。对于扩展容器组无效。</dd>
-    </dl>
-<strong>示例</strong>：
-
-显示 `my-container-group` 的当前实例数：
-
-```
-bluemix scale my-container-group
-```
-
-将 `my-container-group` 扩展到 2 个实例：
-
-```
-bluemix scale my-container-group -i 2
-```
-
-将 `my-java-app` 扩展到 3 个实例、8G 磁盘配额和 1024M 内存大小：
-
-```
-bluemix scale my-java-app -i 3 -k 8G -m 1024M
-```
-
-
 ### bluemix curl
 {: #bluemix_curl}
 
-执行针对 {{site.data.keyword.Bluemix_notm}} 的原始 HTTP 请求。缺省情况下，*Content-Type* 设置为 *application/json*。此命令会向 {{site.data.keyword.Bluemix_notm}} 多云控制代理发送请求。有关受支持的路径，请参阅 [Cloud Foundry API 文档 ![外部链接图标](../../../icons/launch-glyph.svg)](http://apidocs.cloudfoundry.org/){: new_window} 中的 API 路径定义。
+执行针对 {{site.data.keyword.Bluemix_notm}} 的原始 HTTP 请求。缺省情况下，*Content-Type* 设置为 *application/json*。此命令会向 {{site.data.keyword.Bluemix_notm}} 多云控制代理发送请求。有关受支持的路径，请参阅 [Cloud Foundry API 文档 ](http://apidocs.cloudfoundry.org/){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg) 中的 API 路径定义。
 
 ```
 bluemix curl PATH [OPTIONS...]
@@ -1032,7 +940,7 @@ bluemix iam org-delete ORG_NAME [-f --all]
 
 
 ### bluemix iam account-users
-{: #bluemix_iam_account-users}
+{: #bluemix_iam_account_users}
 
 显示与帐户关联的用户。此操作只能由帐户所有者执行。
 
@@ -1041,7 +949,7 @@ bluemix iam account-users
 ```
 
 ### bluemix iam account-user-invite
-{: #bluemix_iam_account-user-invite}
+{: #bluemix_iam_account_user_invite}
 
 
 邀请用户加入已设置组织和空间角色的帐户。此操作只能由帐户所有者执行。
@@ -1087,6 +995,16 @@ bluemix iam account-user-invite USER_NAME ORG_NAME ORG_ROLE SPACE_NAME SPACE_ROL
 bluemix iam account-user-invite Mary IBM OrgManager Cloud SpaceAuditor
 ```
 
+
+### bluemix iam account-user-reinvite
+{: #bluemix_iam_account_user_reinvite}
+
+向用户重新发送邀请（必须是组织管理员或帐户所有者）
+```
+ bluemix iam account-user-reinvite USER_EMAIL ORG_NAME
+```
+ 
+ 
 ### bluemix iam org-users
 {: #bluemix_iam_org_users}
 
@@ -1106,6 +1024,27 @@ bluemix iam org-users ORG_NAME [-a]
    <dd>列出指定组织中的所有用户，但不按角色分组。</dd>
     </dl>
 
+### bluemix iam org-user-add
+{: #bluemix_iam_org_user_add}
+
+将用户添加到组织（需要组织管理员）。
+```
+ bluemix iam org-user-add USER_NAME ORG
+```
+
+### bluemix iam org-user-remove
+{: #bluemix_iam_org_user_remove}
+
+从组织移除用户（仅限组织管理员或用户自己）
+```
+   bluemix iam org-user-remove USER_NAME ORG [-f, --force]
+```
+
+<strong>命令选项</strong>：
+  <dl>
+   <dt>--force, -f</dt>
+   <dd>强制删除而不确认。</dd>
+ </dl>
 
 ### bluemix iam org-role-set
 {: #bluemix_iam_org_role_set}
@@ -1119,9 +1058,7 @@ bluemix iam org-role-set USER_NAME ORG_NAME ORG_ROLE
 <strong>先决条件</strong>：端点和登录
 
 <strong>命令选项</strong>：
-
-
-   <dl>
+  <dl>
    <dt>USER_NAME（必需）</dt>
    <dd>要分配的用户的名称。</dd>
    <dt>ORG_NAME（必需）</dt>
@@ -1570,10 +1507,10 @@ bluemix catalog template-run TEMPLATE_ID CF_APP_NAME [-u URL] [-d DESCRIPTION] [
 bluemix catalog template-run javaHelloWorld my-app
 ```
 
-基于 `rubyHelloWorld` 模板创建应用程序 `my-ruby-app`，路径为 `myrubyapp.ng.bluemix.net`，描述为 `My first ruby app on {{site.data.keyword.Bluemix_notm}}.`：
+基于 `rubyHelloWorld` 模板创建应用程序 `my-ruby-app`，路径为 `myrubyapp.chinabluemix.net`，描述为 `My first ruby app on {{site.data.keyword.Bluemix_notm}}.`：
 
 ```
-bluemix catalog template-run rubyHelloWorld my-ruby-app -u myrubyapp.ng.bluemix.net -d "My first ruby app on {{site.data.keyword.Bluemix_notm}}."
+bluemix catalog template-run rubyHelloWorld my-ruby-app -u myrubyapp.chinabluemix.net -d "My first ruby app on {{site.data.keyword.Bluemix_notm}}."
 ```
 
 基于 `pythonHelloWorld` 模板创建应用程序 `my-python-app`，不带自动启动：
@@ -1651,7 +1588,7 @@ bluemix network route-map CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST
    <dt>CF_APP_NAME|CONTAINER_GROUP_NAME（必需）</dt>
    <dd>要使用路径映射到的 cf 应用程序或容器组的名称。</dd>
    <dt>DOMAIN（必需）</dt>
-   <dd>路径的域。例如，mybluemix.net 或 ng.bluemix.net。</dd>
+   <dd>路径的域。例如，mychinabluemix.net 或 chinabluemix.net。</dd>
    <dt>-n <i>HOST_NAME</i>（可选）</dt>
    <dd>路径的主机名。如果未提供，缺省情况下主机名将设置为应用程序名称或容器组名称。</dd>
    </dl>
@@ -1661,13 +1598,13 @@ bluemix network route-map CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST
 使用指定的域将路径映射到 `my-app`：
 
 ```
-bluemix network route-map my-app mybluemix.net
+bluemix network route-map my-app mychinabluemix.net
 ```
 
 使用指定域和主机名将路径映射到“my-container-group”：
 
 ```
-bluemix network route-map my-container-group ng.bluemix.net -n abc
+bluemix network route-map my-container-group chinabluemix.net -n abc
 ```
 
 
@@ -1688,23 +1625,23 @@ bluemix network route-unmap CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HO
    <dt>CF_APP_NAME|CONTAINER_GROUP_NAME（必需）</dt>
    <dd>cf 应用程序或容器组的名称。</dd>
    <dt>DOMAIN（必需）</dt>
-   <dd>路径的域（例如，mybluemix.net 或 ng.bluemix.net）。</dd>
+   <dd>路径的域（例如，mychinabluemix.net 或 chinabluemix.net）。</dd>
    <dt>-n <i>HOST_NAME</i>（可选）</dt>
    <dd>路径的主机名。如果未提供，缺省情况下主机名将设置为应用程序名称或容器组名称。</dd>
    </dl>
 
 <strong>示例</strong>：
 
-从 `my-app` 取消 `my-app.mybluemix.net` 的映射：
+从 `my-app` 取消 `my-app.mychinabluemix.net` 的映射：
 
 ```
-bluemix network route-unmap my-app mybluemix.net
+bluemix network route-unmap my-app mychianbluemix.net
 ```
 
-从 `my-container-group` 取消 `abc.ng.bluexmix.net` 的映射：
+从 `my-container-group` 取消 `abc.chinabluexmix.net` 的映射：
 
 ```
-bluemix network route-unmap my-container-group ng.bluemix.net -n abc
+bluemix network route-unmap my-container-group chinabluemix.net -n abc
 ```
 
 
@@ -2084,6 +2021,10 @@ bluemix plugin install IBM-Containers -r bluemix-repo -v 0.5.800
 ```
 
 
+
+
+
+
 ### bluemix plugin uninstall
 {: #bluemix_plugin_uninstall}
 
@@ -2114,7 +2055,7 @@ bluemix plugin uninstall IBM-Containers
 ### bluemix ic attach
 {: #bluemix_ic_attach}
 
-控制正在运行的容器或查看其输出。使用 `CTRL+C` 以退出并停止容器。此命令将调用 Docker CLI。有关更多信息，请参阅 Docker 帮助中的 [attach ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/attach/){: new_window} 命令。
+控制正在运行的容器或查看其输出。使用 `CTRL+C` 以退出并停止容器。此命令将调用 Docker CLI。有关更多信息，请参阅 Docker 帮助中的 [attach ](https://docs.docker.com/engine/reference/commandline/attach/){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg) 命令。
 
 ```
 bluemix ic attach [--no-stdin] [--sig-proxy] CONTAINER
@@ -2145,7 +2086,7 @@ bluemix ic attach my_container
 ### bluemix ic build
 {: #bluemix_ic_build}
 
-调用 IBM Containers 构建服务，用于在本地或在专用 {{site.data.keyword.Bluemix_notm}} 存储库中构建 Docker 映像。此命令将调用 Docker CLI。有关更多信息，请参阅 Docker 帮助中的 [build ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/build/){: new_window} 命令。
+调用 IBM Containers 构建服务，用于在本地或在专用 {{site.data.keyword.Bluemix_notm}} 存储库中构建 Docker 映像。此命令将调用 Docker CLI。有关更多信息，请参阅 Docker 帮助中的 [build ](https://docs.docker.com/engine/reference/commandline/build/){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg) 命令。
 
 ```
 bluemix ic build -t TAG|--tag TAG [--no-cache] [-p|--pull] [-q|--quiet] DOCKERFILE_LOCATION
@@ -2178,7 +2119,7 @@ bluemix ic build -t registry.ng.bluemix.net/mynamespace/myimage .
 
 ### bluemix ic cp
 {: #bluemix_ic_cp}
-在容器与本地文件系统之间复制文件或文件夹。此命令将调用 Docker CLI。有关更多信息，请参阅 Docker 帮助中的 [cp ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/cp/){: new_window} 命令。
+在容器与本地文件系统之间复制文件或文件夹。此命令将调用 Docker CLI。有关更多信息，请参阅 Docker 帮助中的 [cp ](https://docs.docker.com/engine/reference/commandline/cp/){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg) 命令。
 
 
 ### bluemix ic cpi
@@ -2218,7 +2159,7 @@ bluemix ic cpi training/sinatra registry.ng.bluemix.net/mynamespace/mysinatra:v1
 ### bluemix ic exec
 {: #bluemix_ic_exec}
 
-在容器内执行命令。有关更多信息，请参阅 Docker 帮助中的 [exec ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/exec/){: new_window} 命令。
+在容器内执行命令。有关更多信息，请参阅 Docker 帮助中的 [exec ](https://docs.docker.com/engine/reference/commandline/exec/){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg) 命令。
 
 ```
 bluemix ic exec [-d|--detach] [-it] [-u USER|--user USER] CONTAINER [CMD]
@@ -2287,10 +2228,11 @@ bluemix ic group-create [--publish,-p PORT] --name GROUP_NAME [--memory,-m MEMOR
 
 |  环境变量                              |     描述                            |
 | :----------------------------- | :------------------------------ |
-| CCS_BIND_APP=*&lt;appname&gt;*       | 将服务绑定到容器。使用 `CCS_BIND_APP` 环境变量将应用程序绑定到容器。应用程序绑定到目标服务并用作网桥，以允许 {{site.data.keyword.Bluemix_notm}} 将网桥应用程序的 `VCAP_SERVICES` 信息放入正在运行的容器实例。有关创建网桥应用程序的更多信息，请参阅[将服务绑定到容器](../../../containers/container_integrations_binding.html){: new_window}。 |
+| CCS_BIND_APP=*&lt;appname&gt;*       | 将服务绑定到容器。使用 `CCS_BIND_APP` 环境变量将应用程序绑定到容器。应用程序绑定到目标服务并用作网桥，以允许 {{site.data.keyword.Bluemix_notm}} 将网桥应用程序的 `VCAP_SERVICES` 信息放入正在运行的容器实例。|
 | CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | 要在不使用网桥应用程序的情况下将 Bluemix 服务直接绑定到容器，请使用 CCS_BIND_SRV。此绑定允许 Bluemix 将 VCAP_SERVICES 信息插入正在运行的容器实例中。要列出多个 Bluemix 服务，请将这些服务包含在同一环境变量中。 |
 | LOG_LOCATIONS=*&lt;path_to_file&gt;* | 添加要在容器中监视的日志文件。请包含 `LOG_LOCATIONS` 环境变量以及日志文件的路径。 |
 {: caption="Table 8. Commonly used environment variables" caption-side="top"}
+
 
  <dl>
    <dt>--env-file <i>ENVIRONMENT_VARIABLE_FILE</i>（可选）</dt>
@@ -2490,7 +2432,7 @@ bluemix ic groups [-q]
 ### bluemix ic images
 {: #bluemix_ic_images}
 
-查看组织的专用 {{site.data.keyword.Bluemix_notm}} 存储库中所有可用映像的列表。有关更多信息，请参阅 Docker 帮助中的 [images ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/images){: new_window} 命令。此列表包含映像标识、创建日期和映像名称。
+查看组织的专用 {{site.data.keyword.Bluemix_notm}} 存储库中所有可用映像的列表。有关更多信息，请参阅 Docker 帮助中的 [images ](https://docs.docker.com/engine/reference/commandline/images){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg) 命令。此列表包含映像标识、创建日期和映像名称。
 
 ```
 bluemix ic images [-a|--all] [-f CONDITION] [--no-trunc] [-q|--quiet]
@@ -2557,7 +2499,7 @@ bluemix region-set us-south
 ### bluemix ic inspect
 {: #bluemix_ic_inspect}
 
-查看有关容器的信息。有关更多信息，请参阅 Docker 帮助中的 [inspect ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/inspect){: new_window} 命令。
+查看有关容器的信息。有关更多信息，请参阅 Docker 帮助中的 [inspect](https://docs.docker.com/engine/reference/commandline/inspect){: new_window} 命令。
 
 ```
 bluemix ic inspect [IMAGE|images|CONTAINER]
@@ -2714,7 +2656,7 @@ bluemix ic ips -q
 ### bluemix ic kill
 {: #bluemix_ic_kill}
 
-停止容器中正在运行的进程而不停止容器。有关更多信息，请参阅 Docker 帮助中的 [kill ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/kill/){: new_window} 命令。
+停止容器中正在运行的进程而不停止容器。有关更多信息，请参阅 Docker 帮助中的 [kill ](https://docs.docker.com/engine/reference/commandline/kill/){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg) 命令。
 
 ```
 bluemix ic kill [-s CMD|--signal CMD] CONTAINER
@@ -2744,7 +2686,7 @@ bluemix ic kill proxy
 ### bluemix ic logs
 {: #bluemix_ic_logs}
 
-显示正在运行的容器的输出或错误日志。有关更多信息，请参阅 Docker 帮助中的 [logs ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/logs/){: new_window} 命令。
+显示正在运行的容器的输出或错误日志。有关更多信息，请参阅 Docker 帮助中的 [logs ](https://docs.docker.com/engine/reference/commandline/logs/){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg) 命令。
 ```
 bluemix ic logs [OPTIONS] CONTAINER
 ```
@@ -2786,7 +2728,7 @@ bluemix ic namespace-set NAME
 ### bluemix ic pause
 {: #pause}
 
-暂停正在运行的容器内的所有进程。有关更多信息，请参阅 Docker 帮助中的 [pause ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/pause/){: new_window} 命令。要停止容器，请参阅 [bluemix ic unpause](#unpause) 命令。
+暂停正在运行的容器内的所有进程。有关更多信息，请参阅 Docker 帮助中的 [pause ](https://docs.docker.com/engine/reference/commandline/pause/){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg) 命令。要停止容器，请参阅 [bluemix ic unpause](#unpause) 命令。
 
 ```
 bluemix ic pause CONTAINER
@@ -2824,12 +2766,12 @@ bluemix ic pause proxy
 ### bluemix ic port
 {: #bluemix_ic_port}
 
-列出容器的端口映射或特定映射。此命令会对 `docker port` 命令打包。有关更多信息，请参阅 Docker 帮助中的 [port ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/port/){: new_window} 命令。
+列出容器的端口映射或特定映射。此命令会对 `docker port` 命令打包。有关更多信息，请参阅 Docker 帮助中的 [port ](https://docs.docker.com/engine/reference/commandline/port/){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg) 命令。
 
 
 ### bluemix ic ps
 {: #bluemix_ic_ps}
-查看正在已登录用户的名称空间中运行的容器的列表。缺省情况下，此命令仅显示正在运行的容器。有关更多信息，请参阅 Docker 帮助中的 [ps](https://docs.docker.com/engine/reference/commandline/ps/){: new_window} 命令。
+查看正在已登录用户的名称空间中运行的容器的列表。缺省情况下，此命令仅显示正在运行的容器。有关更多信息，请参阅 Docker 帮助中的 [ps ](https://docs.docker.com/engine/reference/commandline/ps/){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg) 命令。
 
 ```
 bluemix ic ps [-a|--all] [--filter env=SEARCH_CRITERIA] [-s|--size] [-l NUM|--limit NUM] [-q|--quiet]
@@ -2864,7 +2806,7 @@ bluemix ic ps -a
 
 ### bluemix ic rename
 {: #bluemix_ic_rename}
-重命名容器。有关更多信息，请参阅 Docker 帮助中的 [rename ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/rename/){: new_window} 命令。
+重命名容器。有关更多信息，请参阅 Docker 帮助中的 [rename ](https://docs.docker.com/engine/reference/commandline/rename/){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg) 命令。
 
 ```
 bluemix ic rename OLD_NAME NEW_NAME
@@ -2889,7 +2831,7 @@ bluemix ic rename OLD_NAME NEW_NAME
 <strong>重要事项</strong>：运行此命令时，此空间内的所有单个容器和组都不会迁移到重新供应的空间，且在迁移过程中将会除去。
 
 ```
-bluemix ic reprovision [--force|-f] [AVAILABILITY_ZONE]
+bluemix ic reprovision [--force|-f] [ENVIRONMENT_NAME]
 ```
 <strong>命令选项</strong>：
 
@@ -2904,7 +2846,7 @@ bluemix ic reprovision [--force|-f] [AVAILABILITY_ZONE]
 ### bluemix ic restart
 {: #bluemix_ic_restart}
 
-重新启动容器。有关更多信息，请参阅 Docker 帮助中的 [restart ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/restart/){: new_window} 命令。
+重新启动容器。有关更多信息，请参阅 Docker 帮助中的 [restart ](https://docs.docker.com/engine/reference/commandline/restart/){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg) 命令。
 
 ```
 bluemix ic restart CONTAINER [-t SECS|--time SECS]
@@ -2946,7 +2888,7 @@ bluemix ic restart proxy
 ### bluemix ic rm
 {: #bluemix_ic_rm}
 
-除去容器。有关更多信息，请参阅 Docker 帮助中的 [rm ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/rm/){: new_window} 命令。
+除去容器。有关更多信息，请参阅 Docker 帮助中的 [rm ](https://docs.docker.com/engine/reference/commandline/rm/){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg) 命令。
 
 ```
 bluemix ic rm [-f|--force] CONTAINER
@@ -2987,7 +2929,7 @@ bluemix ic rm proxy
 ### bluemix ic rmi
 {: #bluemix_ic_rmi}
 
-从已登录用户的名称空间除去映像。有关更多信息，请参阅 Docker 帮助中的 [rmi ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/rmi/){: new_window} 命令。
+从已登录用户的名称空间除去映像。有关更多信息，请参阅 Docker 帮助中的 [rmi ](https://docs.docker.com/engine/reference/commandline/rmi/){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg) 命令。
 
 ```
 bluemix ic rmi [-R REGISTRY|--registry REGISTRY] IMAGE
@@ -3092,7 +3034,7 @@ bluemix ic route-unmap -n my_host -d organization.com GROUP1
 ### bluemix ic run
 {: #bluemix_ic_run}
 
-通过映像名称在容器云服务中启动新容器。有关更多信息，请参阅 Docker 帮助中的 [run ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/run/){: new_window} 命令。
+通过映像名称在容器云服务中启动新容器。有关更多信息，请参阅 Docker 帮助中的 [run ](https://docs.docker.com/engine/reference/commandline/run/){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg) 命令。
 
 
 ```
@@ -3119,7 +3061,7 @@ bluemix ic run [-p PORT|--publish PORT] [-P] [-m MEMORY|--memory MEMORY] [-e ENV
 
 |      环境变量                          |   描述                              |
 | :----------------------------- | :------------------------------ |
-| CCS_BIND_APP=*&lt;appname&gt;*       | 将服务绑定到容器。使用 `CCS_BIND_APP` 环境变量将应用程序绑定到容器。应用程序绑定到目标服务并用作网桥，以允许 {{site.data.keyword.Bluemix_notm}} 将网桥应用程序的 `VCAP_SERVICES` 信息放入正在运行的容器实例。有关创建网桥应用程序的更多信息，请参阅[将服务绑定到容器](../../../containers/container_integrations_binding.html){: new_window}。 |
+| CCS_BIND_APP=*&lt;appname&gt;*       | 将服务绑定到容器。使用 `CCS_BIND_APP` 环境变量将应用程序绑定到容器。应用程序绑定到目标服务并用作网桥，以允许 {{site.data.keyword.Bluemix_notm}} 将网桥应用程序的 `VCAP_SERVICES` 信息放入正在运行的容器实例。有关创建网桥应用程序的更多信息，请参阅[将服务绑定到容器](/docs/containers/container_integrations_binding.html){: new_window}。 |
 | CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | 要在不使用网桥应用程序的情况下将 Bluemix 服务直接绑定到容器，请使用 CCS_BIND_SRV。此绑定允许 Bluemix 将 VCAP_SERVICES 信息插入正在运行的容器实例中。要列出多个 Bluemix 服务，请将这些服务包含在同一环境变量中。 |
 | LOG_LOCATIONS=*&lt;path_to_file&gt;* | 添加要在容器中监视的日志文件。请包含 `LOG_LOCATIONS` 环境变量以及日志文件的路径。 |
 {: caption="Table 9. Commonly used environment variables" caption-side="top"}
@@ -3211,7 +3153,7 @@ bluemix ic service-unbind GROUP_NAME SERVICE_INSTANCE
 
 ### bluemix ic start
 {: #ic_start}
-启动已停止的容器。有关更多信息，请参阅 Docker 帮助中的 [start ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/start/){: new_window} 命令。要停止容器，请参阅 [bluemix ic stop](#ic_stop) 命令。
+启动已停止的容器。有关更多信息，请参阅 Docker 帮助中的 [start ](https://docs.docker.com/engine/reference/commandline/start/){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg) 命令。要停止容器，请参阅 [bluemix ic stop](#ic_stop) 命令。
 
 ```
 bluemix ic start CONTAINER
@@ -3251,7 +3193,7 @@ bluemix ic start proxy
 ### bluemix ic stats
 {: #bluemix_ic_stats}
 
-对于一个或多个容器，请查看实时使用情况统计信息。使用 `CTRL+C` 以退出。有关更多信息，请参阅 Docker 帮助中的 [stats ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/stats/){: new_window} 命令。
+对于一个或多个容器，请查看实时使用情况统计信息。使用 `CTRL+C` 以退出。有关更多信息，请参阅 Docker 帮助中的 [stats](https://docs.docker.com/engine/reference/commandline/stats/){: new_window} 命令。
 
 ```
 bluemix ic stats [--no-stream] CONTAINER [CONTAINER]
@@ -3279,7 +3221,7 @@ bluemix ic stats --no-stream my_container
 
 ### bluemix ic stop
 {: #ic_stop}
-停止正在运行的容器。有关更多信息，请参阅 Docker 帮助中的 [stop ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/stop/){: new_window} 命令。要启动容器，请参阅 [bluemix ic start](#ic_start) 命令。
+停止正在运行的容器。有关更多信息，请参阅 Docker 帮助中的 [stop ](https://docs.docker.com/engine/reference/commandline/stop/){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg) 命令。要启动容器，请参阅 [bluemix ic start](#ic_start) 命令。
 
 ```
 bluemix ic stop CONTAINER [-t SECS|--time SECS]
@@ -3320,7 +3262,7 @@ bluemix ic stop proxy
 ### bluemix ic top
 {: #bluemix_ic_top}
 
-显示正在容器中运行的进程。有关更多信息，请参阅 Docker 帮助中的 [top ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/top/){: new_window} 命令。
+显示正在容器中运行的进程。有关更多信息，请参阅 Docker 帮助中的 [top ](https://docs.docker.com/engine/reference/commandline/top/){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg) 命令。
 
 ```
 bluemix ic top CONTAINER [CONTAINER]
@@ -3347,7 +3289,7 @@ bluemix ic top my_container
 ### bluemix ic unpause
 {: #unpause}
 
-取消暂停正在运行的容器内的所有进程。有关更多信息，请参阅 Docker 帮助中的 [unpause ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/unpause/){: new_window} 命令。要暂停容器，请参阅 [bluemix ic pause](#pause) 命令。
+取消暂停正在运行的容器内的所有进程。有关更多信息，请参阅 Docker 帮助中的 [unpause ](https://docs.docker.com/engine/reference/commandline/unpause/){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg) 命令。要暂停容器，请参阅 [bluemix ic pause](#pause) 命令。
 
 ```
 bluemix ic unpause CONTAINER
@@ -3412,7 +3354,7 @@ bluemix ic version
 
 <strong>先决条件</strong>：Docker
 
-要查看 IBM Containers 的版本，请运行 `bluemix ic info`。有关更多信息，请参阅 Docker 帮助中的 [version ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/version/){: new_window} 命令。
+要查看 IBM Containers 的版本，请运行 `bluemix ic info`。有关更多信息，请参阅 Docker 帮助中的 [version ](https://docs.docker.com/engine/reference/commandline/version/){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg) 命令。
 
 
 ### bluemix ic volume-create
@@ -3615,7 +3557,7 @@ bluemix ic volumes
 ### bluemix ic wait
 {: #bluemix_ic_wait}
 
-退出容器并显示退出代码以作为确认。有关更多信息，请参阅 Docker 帮助中的 [wait ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/wait/){: new_window} 命令。
+退出容器并显示退出代码以作为确认。有关更多信息，请参阅 Docker 帮助中的 [wait ](https://docs.docker.com/engine/reference/commandline/wait/){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg) 命令。
 
 ```
 bluemix ic wait CONTAINER [CONTAINER]
@@ -3673,4 +3615,4 @@ bluemix ic wait my_container
 ## 相关链接
 {: #general}
 
-* [bx tool ![外部链接图标](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/home.html){:new_window}
+* [bx tool ](http://clis.ng.bluemix.net/ui/home.html){: new_window} ![外部链接图标](../../../icons/launch-glyph.svg)

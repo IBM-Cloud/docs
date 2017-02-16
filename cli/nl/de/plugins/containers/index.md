@@ -125,7 +125,7 @@ IBM Containers CLI ist ein {{site.data.keyword.Bluemix_notm}}-CLI-Plug-in zur Ve
 ## bluemix ic attach
 {: #bluemix_ic_attach}
 
-Dient zum Steuern eines aktiven Containers oder zum Anzeigen der Ausgabe des Containers. Verwenden Sie die Tastenkombination `STRG+C`, um die Verarbeitung zu beenden und den Container zu stoppen. Dieser Befehl ruft die Docker-CLI auf. Weitere Informationen finden Sie unter dem Befehl [attach ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/attach/){: new_window} in der Docker-Hilfe. 
+Dient zum Steuern eines aktiven Containers oder zum Anzeigen der Ausgabe des Containers. Verwenden Sie die Tastenkombination `STRG+C`, um die Verarbeitung zu beenden und den Container zu stoppen. Dieser Befehl ruft die Docker-CLI auf. Weitere Informationen finden Sie unter dem Befehl [attach ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/attach/){: new_window} in der Docker-Hilfe.
 
 ```
 bluemix ic attach [--no-stdin] [--sig-proxy] CONTAINER
@@ -188,7 +188,7 @@ bluemix ic build -t registry.ng.bluemix.net/mynamespace/myimage .
 
 ## bluemix ic cp
 {: #bluemix_ic_cp}
-Kopiert Dateien oder Ordner zwischen einem Container und dem lokalen Dateisystem. Dieser Befehl ruft die Docker-CLI auf. Weitere Informationen finden Sie unter dem Befehl [cp ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/cp/){: new_window} in der Docker-Hilfe. 
+Kopiert Dateien oder Ordner zwischen einem Container und dem lokalen Dateisystem. Dieser Befehl ruft die Docker-CLI auf. Weitere Informationen finden Sie unter dem Befehl [cp ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/cp/){: new_window} in der Docker-Hilfe.
 
 
 ## bluemix ic cpi
@@ -228,7 +228,7 @@ bluemix ic cpi training/sinatra registry.ng.bluemix.net/mynamespace/mysinatra:v1
 ## bluemix ic exec
 {: #bluemix_ic_exec}
 
-Führt einen Befehl in einem Container aus. Weitere Informationen finden Sie unter dem Befehl [exec ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/exec/){: new_window} in der Docker-Hilfe. 
+Führt einen Befehl in einem Container aus. Weitere Informationen finden Sie unter dem Befehl [exec ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/exec/){: new_window} in der Docker-Hilfe.
 
 ```
 bluemix ic exec [-d|--detach] [-it] [-u USER|--user USER] CONTAINER [CMD]
@@ -564,7 +564,7 @@ bluemix region-set us-south
 ## bluemix ic inspect
 {: #bluemix_ic_inspect}
 
-Zeigt die Informationen zu einem Container an. Weitere Informationen finden Sie unter dem Befehl [inspect ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/inspect){: new_window} in der Docker-Hilfe. 
+Zeigt die Informationen zu einem Container an. Weitere Informationen finden Sie unter dem Befehl [inspect ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/inspect){: new_window} in der Docker-Hilfe.
 
 ```
 bluemix ic inspect [IMAGE|images|CONTAINER]
@@ -718,7 +718,7 @@ bluemix ic ips -q
 ## bluemix ic kill
 {: #bluemix_ic_kill}
 
-Stoppt einen aktiven Prozess in einem Container, ohne den Container zu stoppen. Weitere Informationen finden Sie unter dem Befehl [kill ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/kill/){: new_window} in der Docker-Hilfe. 
+Stoppt einen aktiven Prozess in einem Container, ohne den Container zu stoppen. Weitere Informationen finden Sie unter dem Befehl [kill ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/kill/){: new_window} in der Docker-Hilfe.
 
 ```
 bluemix ic kill [-s CMD|--signal CMD] CONTAINER
@@ -747,7 +747,7 @@ bluemix ic kill proxy
 ## bluemix ic logs
 {: #bluemix_ic_logs}
 
-Zeigt die Ausgabe- oder Fehlerprotokolle für einen aktiven Container an. Weitere Informationen finden Sie unter dem Befehl [logs ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/logs/){: new_window} in der Docker-Hilfe. 
+Zeigt die Ausgabe- oder Fehlerprotokolle für einen aktiven Container an. Weitere Informationen finden Sie unter dem Befehl [logs ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/logs/){: new_window} in der Docker-Hilfe.
 ```
 bluemix ic logs [OPTIONS] CONTAINER
 ```
@@ -826,12 +826,12 @@ bluemix ic pause proxy
 ## bluemix ic port
 {: #bluemix_ic_port}
 
-Listet Portzuordnungen oder eine bestimmte Zuordnung für den Container auf. Dieser Befehl schließt den Befehl `docker port` ein. Weitere Informationen finden Sie unter dem Befehl [port ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/port/){: new_window} in der Docker-Hilfe. 
+Listet Portzuordnungen oder eine bestimmte Zuordnung für den Container auf. Dieser Befehl schließt den Befehl `docker port` ein. Weitere Informationen finden Sie unter dem Befehl [port ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/port/){: new_window} in der Docker-Hilfe.
 
 
 ## bluemix ic ps
 {: #bluemix_ic_ps}
-Zeigt eine Liste der Container an, die im Namensbereich des angemeldeten Benutzers aktiv sind. Standardmäßig zeigt dieser Befehl nur Container an, die aktiv sind. Weitere Informationen finden Sie unter dem Befehl [ps ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/ps/){: new_window} in der Docker-Hilfe. 
+Zeigt eine Liste der Container an, die im Namensbereich des angemeldeten Benutzers aktiv sind. Standardmäßig zeigt dieser Befehl nur Container an, die aktiv sind. Weitere Informationen finden Sie unter dem Befehl [ps ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/ps/){: new_window} in der Docker-Hilfe.
 
 ```
 bluemix ic ps [-a|--all] [--filter env=SEARCH_CRITERIA] [-s|--size] [-l NUM|--limit NUM] [-q|--quiet]
@@ -865,7 +865,7 @@ bluemix ic ps -a
 
 ## bluemix ic rename
 {: #bluemix_ic_rename}
-Ordnet einem Container einen neuen Namen zu. Weitere Informationen finden Sie unter dem Befehl [rename ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/rename/){: new_window} in der Docker-Hilfe. 
+Ordnet einem Container einen neuen Namen zu. Weitere Informationen finden Sie unter dem Befehl [rename ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/rename/){: new_window} in der Docker-Hilfe.
 
 ```
 bluemix ic rename OLD_NAME NEW_NAME
@@ -905,7 +905,7 @@ bluemix ic reprovision [--force|-f] [AVAILABILITY_ZONE]
 ## bluemix ic restart
 {: #bluemix_ic_restart}
 
-Startet einen Container erneut. Weitere Informationen finden Sie unter dem Befehl [restart ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/restart/){: new_window} in der Docker-Hilfe. 
+Startet einen Container erneut. Weitere Informationen finden Sie unter dem Befehl [restart ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/restart/){: new_window} in der Docker-Hilfe.
 
 ```
 bluemix ic restart CONTAINER [-t SECS|--time SECS]
@@ -946,7 +946,7 @@ bluemix ic restart proxy
 ## bluemix ic rm
 {: #bluemix_ic_rm}
 
-Entfernt einen Container. Weitere Informationen finden Sie unter dem Befehl [rm ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/rm/){: new_window} in der Docker-Hilfe. 
+Entfernt einen Container. Weitere Informationen finden Sie unter dem Befehl [rm ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/rm/){: new_window} in der Docker-Hilfe.
 
 ```
 bluemix ic rm [-f|--force] CONTAINER
@@ -986,7 +986,7 @@ bluemix ic rm proxy
 ## bluemix ic rmi
 {: #bluemix_ic_rmi}
 
-Entfernt ein Image aus dem Namensbereich des angemeldeten Benutzers. Weitere Informationen finden Sie unter dem Befehl [rmi ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/rmi/){: new_window} in der Docker-Hilfe. 
+Entfernt ein Image aus dem Namensbereich des angemeldeten Benutzers. Weitere Informationen finden Sie unter dem Befehl [rmi ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/rmi/){: new_window} in der Docker-Hilfe.
 
 ```
 bluemix ic rmi [-R REGISTRY|--registry REGISTRY] IMAGE
@@ -1090,7 +1090,7 @@ bluemix ic route-unmap -n my_host -d organization.com GROUP1
 ## bluemix ic run
 {: #bluemix_ic_run}
 
-Startet einen neuen Container im Container-Cloud-Service über einen Imagenamen. Weitere Informationen finden Sie unter dem Befehl [run ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/run/){: new_window} in der Docker-Hilfe. 
+Startet einen neuen Container im Container-Cloud-Service über einen Imagenamen. Weitere Informationen finden Sie unter dem Befehl [run ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/run/){: new_window} in der Docker-Hilfe.
 
 
 ```
@@ -1245,7 +1245,7 @@ bluemix ic start proxy
 ## bluemix ic stats
 {: #bluemix_ic_stats}
 
-Zeigt Live-Nutzungsstatistiken für einen oder mehrere Container an. Verwenden Sie die Tastenkombination `STRG+C` zum Beenden. Weitere Informationen finden Sie unter dem Befehl [stats ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/stats/){: new_window} in der Docker-Hilfe. 
+Zeigt Live-Nutzungsstatistiken für einen oder mehrere Container an. Verwenden Sie die Tastenkombination `STRG+C` zum Beenden. Weitere Informationen finden Sie unter dem Befehl [stats ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/stats/){: new_window} in der Docker-Hilfe.
 
 ```
 bluemix ic stats [--no-stream] CONTAINER [CONTAINER]
@@ -1312,7 +1312,7 @@ bluemix ic stop proxy
 ## bluemix ic top
 {: #bluemix_ic_top}
 
-Zeigt die Prozesse an, die im Container ausgeführt werden. Weitere Informationen finden Sie unter dem Befehl [top ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/top/){: new_window} in der Docker-Hilfe. 
+Zeigt die Prozesse an, die im Container ausgeführt werden. Weitere Informationen finden Sie unter dem Befehl [top ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/top/){: new_window} in der Docker-Hilfe.
 
 ```
 bluemix ic top CONTAINER [CONTAINER]
@@ -1402,7 +1402,7 @@ bluemix ic version
 
 <strong>Voraussetzungen</strong>: Docker
 
-Zum Anzeigen der Version von IBM Containers führen Sie den Befehl `bluemix ic info` aus. Weitere Informationen finden Sie unter dem Befehl [version ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/version/){: new_window} in der Docker-Hilfe. 
+Zum Anzeigen der Version von IBM Containers führen Sie den Befehl `bluemix ic info` aus. Weitere Informationen finden Sie unter dem Befehl [version ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/version/){: new_window} in der Docker-Hilfe.
 
 
 ## bluemix ic volume-create
@@ -1601,7 +1601,7 @@ bluemix ic volumes
 ## bluemix ic wait
 {: #bluemix_ic_wait}
 
-Beendet einen Container und zeigt den Beendigungscode als Bestätigung an. Weitere Informationen finden Sie unter dem Befehl [wait ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/wait/){: new_window} in der Docker-Hilfe. 
+Beendet einen Container und zeigt den Beendigungscode als Bestätigung an. Weitere Informationen finden Sie unter dem Befehl [wait ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/wait/){: new_window} in der Docker-Hilfe.
 
 ```
 bluemix ic wait CONTAINER [CONTAINER]
