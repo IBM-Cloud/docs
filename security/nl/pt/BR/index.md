@@ -354,4 +354,4 @@ A tabela a seguir exibe quais serviços do {{site.data.keyword.Bluemix_notm}} s�
 {: #general}
 
 * [Segurança do IBM SaaS ![Ícone de link externo](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/built-on-cloud/saas-security){: new_window}
-* [Introdução ao Single Sign                                                                                         On](/docs/services/SingleSignOn/index.html)
+* [Introdução ao Single Sign On](/docs/services/SingleSignOn/index.html)

@@ -345,7 +345,7 @@ Bluemix 환경에 대한 HIPAA 규제 준수를 이행하고, 증명하며, 관�
 |{{site.data.keyword.mql}}				|Y	|Y	|Y	|	 		|
 |{{site.data.keyword.SecureGateway}}			|Y	|Y |	|	 		|
 |{{site.data.keyword.sescashort}}     |Y |Y |Y	|  |
-{: caption="Table 1. Platform and service compliance" caption-side="top"}
+{: caption="표 1. 플랫폼 및 서비스 준수" caption-side="top"}
 
 # 관련 링크
 {: #rellinks}

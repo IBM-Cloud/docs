@@ -1,4 +1,4 @@
-﻿---
+---
 
  
 
@@ -296,8 +296,7 @@ Pour plus d'informations, voir [Initiation à Secure Gateway](/docs/services/Sec
 
 ### Gestion des événements et des informations de sécurité
 
-Vous pouvez utiliser les outils SIEM (gestion des événements et informations de sécurité) pour analyser les alertes de sécurité dans les journaux d'application. L'un de ces outils est IBM Security QRadar&reg; SIEM, qui fournit la sécurité intérieure dans les environnements de cloud. Pour
-plus d'informations, voir [IBM QRadar Security Intelligence Platform ![icône de lien externe](../icons/launch-glyph.svg)](http://www-01.ibm.com/support/knowledgecenter/SS42VS/welcome?lang=en){: new_window}.
+Vous pouvez utiliser les outils SIEM (gestion des événements et informations de sécurité) pour analyser les alertes de sécurité dans les journaux d'application. L'un de ces outils est IBM Security QRadar&reg; SIEM, qui fournit la sécurité intérieure dans les environnements de cloud. Pour plus d'informations, voir [IBM QRadar Security Intelligence Platform ![icône de lien externe](../icons/launch-glyph.svg)](http://www-01.ibm.com/support/knowledgecenter/SS42VS/welcome?lang=en){: new_window}.
 
 ## Déploiement de la sécurité {{site.data.keyword.Bluemix_notm}}
 {: #security-deployment}
@@ -358,8 +357,7 @@ physique et des analyses au sein de votre pare-feu.
 {{site.data.keyword.Bluemix}} fournit une plateforme cloud sécurisée, digne de confiance. La conformité {{site.data.keyword.Bluemix_notm}} résulte d'une plateforme et de services générés avec les meilleures normes de sécurité de l'industrie, notamment ISO 27001 et ISO 27002.
 {:shortdesc}
 
-![Clause contractuelle de protection des données dans l'Union européenne](images/icon_eumc.png)  Une **clause contractuelle de l'Union européenne (UE)** est un accord conçu pour protéger les données personnelles transférées de l'Union européenne ou de l'Espace économique européen (EEE) vers un pays tiers. La clause contractuelle de l'Union européenne (UE) est signée entre le client qui se trouve dans l'UE ou l'EEE (l'exportateur de données) et le
-processeur de données IBM qui se trouve dans le pays tiers (l'importateur de données). La clause [IBM SaaS EU Model Clause ![icône de lien externe](../icons/launch-glyph.svg)](http://www-01.ibm.com/common/ssi/cgi-bin/ssialias?subtype=ST&infotype=SA&htmlfid=KUJ12408USEN&attachment=KUJ12408USEN.PDF){: new_window} comprend les droits et les obligations de l'exportateur de données et de l'importateur de données, ainsi que les droits des personnes concernées. La clause IBM SaaS EU Model Clause garantit que les données personnelles, lorsqu'elles sont traitées dans un pays tiers, sont protégées de la même manière que dans l'UE ou l'EEE.
+![Clause contractuelle de protection des données dans l'Union européenne](images/icon_eumc.png)  Une **clause contractuelle de l'Union européenne (UE)** est un accord conçu pour protéger les données personnelles transférées de l'Union européenne ou de l'Espace économique européen (EEE) vers un pays tiers. La clause contractuelle de l'Union européenne (UE) est signée entre le client qui se trouve dans l'UE ou l'EEE (l'exportateur de données) et le processeur de données IBM qui se trouve dans le pays tiers (l'importateur de données). La clause [IBM SaaS EU Model Clause ![icône de lien externe](../icons/launch-glyph.svg)](http://www-01.ibm.com/common/ssi/cgi-bin/ssialias?subtype=ST&infotype=SA&htmlfid=KUJ12408USEN&attachment=KUJ12408USEN.PDF){: new_window} comprend les droits et les obligations de l'exportateur de données et de l'importateur de données, ainsi que les droits des personnes concernées. La clause IBM SaaS EU Model Clause garantit que les données personnelles, lorsqu'elles sont traitées dans un pays tiers, sont protégées de la même manière que dans l'UE ou l'EEE.
 
 Pour les clients qui souhaitent transférer des données provenant de l'Espace économique européen (EEE) vers un pays hors de l'EEE,
 {{site.data.keyword.Bluemix}} propose des clauses contractuelles européennes dans le formulaire approuvé par les autorités de protection
@@ -398,8 +396,7 @@ protection des données sur les titulaires de carte et requièrent souvent la va
 sécurité qualifié (QSA) indépendant. L'attestation de conformité peut être utilisée avec le rapport SOC 2 et la certification ISO 27001 afin de prouver que
 l'infrastructure satisfait les contrôles PCI.
 
-{{site.data.keyword.Bluemix}} procède à une évaluation PCI DSS annuelle à l'aide d'un évaluateur de sécurité qualifié (QSA) approuvé. {{site.data.keyword.Bluemix_notm}}
-est compatible conformément à la norme PCI DSS version 3.1 au niveau de fournisseur de services 1, comme énoncé dans [Bluemix PCI DSS AOC ![icône de lien externe](../icons/launch-glyph.svg)](ftp://public.dhe.ibm.com/cloud/bluemix/compliance/IBM_Bluemix_PCI.pdf){: new_window}. Pour des informations et de l'aide relatives à la conformité à la norme PCI DSS pour votre environnement {{site.data.keyword.Bluemix_notm}}, prenez contact avec le service commercial depuis la page [Contactez-nous ![icône de lien externe](../icons/launch-glyph.svg)](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs){: new_window}.
+{{site.data.keyword.Bluemix}} procède à une évaluation PCI DSS annuelle à l'aide d'un évaluateur de sécurité qualifié (QSA) approuvé. {{site.data.keyword.Bluemix_notm}} est compatible conformément à la norme PCI DSS version 3.1 au niveau de fournisseur de services 1, comme énoncé dans [Bluemix PCI DSS AOC ![icône de lien externe](../icons/launch-glyph.svg)](ftp://public.dhe.ibm.com/cloud/bluemix/compliance/IBM_Bluemix_PCI.pdf){: new_window}. Pour des informations et de l'aide relatives à la conformité à la norme PCI DSS pour votre environnement {{site.data.keyword.Bluemix_notm}}, prenez contact avec le service commercial depuis la page [Contactez-nous ![icône de lien externe](../icons/launch-glyph.svg)](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs){: new_window}.
 
 ![SSAE16 SOC1/2/3](images/icon_aicpa.png) Les rapports **Service Organization Controls (SOC)** définissent l'évaluation des pratiques de contrôle interne exemplaires liées à la sécurité, l'accessibilité, l'intégrité du traitement, la confidentialité et la protection des données personnelles au sein d'une organisation de services. Ces rapports générés à partir du guide de l'AICPA (American Institute of Certified Public Accountants) comprennent les éléments suivants : 
   * Supervision de l'organisation
@@ -417,8 +414,7 @@ Etats-Unis. Elle englobe la réglementation de la
 loi de 1996, ainsi que des exigences de confidentialité de la loi Health Information Technology for Economic and Clinical Health (HITECH) Act de 2009. {{site.data.keyword.Bluemix_notm}}
 satisfait toutes les exigences de la loi HIPAA en ce qui concerne les centres de données ou les fournisseurs de services.
 
-Pour plus d'informations ou de l'aide afin d'assurer la conformité à la loi HIPAA pour votre environnement
-Bluemix, de la certifier et de la conserver, prenez contact avec le [service commercial ![icône de lien externe ](../icons/launch-glyph.svg)](mailto:cloudplatform_compliance@us.ibm.com){:new_window} {{site.data.keyword.Bluemix_notm}}.
+Pour plus d'informations ou de l'aide afin d'assurer la conformité à la loi HIPAA pour votre environnement Bluemix, de la certifier et de la conserver, prenez contact avec le [service commercial ![icône de lien externe ](../icons/launch-glyph.svg)](mailto:cloudplatform_compliance@us.ibm.com){:new_window} {{site.data.keyword.Bluemix_notm}}.
 
 
 ![ISO 27017](images/icon_ISO27017.png) La norme ISO/IEC 27017:2015 fournit des directives pour les contrôles de sécurité des
