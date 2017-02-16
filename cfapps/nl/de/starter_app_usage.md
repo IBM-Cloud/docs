@@ -23,7 +23,7 @@ Führen Sie die folgenden Schritte aus, um die Starteranwendungen zu verwenden.
 {:shortdesc}
 
 1. Navigieren Sie im [{{site.data.keyword.Bluemix_notm}}-Katalog](https://console.{DomainName}/catalog/)
-zum Abschnitt 'Cloud Foundry-Apps'. 
+zum Abschnitt 'Cloud Foundry-Apps'.
 2. Klicken Sie auf die Laufzeit, die verwendet werden soll.
 3. Melden Sie sich bei {{site.data.keyword.Bluemix_notm}} an, wenn dies noch nicht geschehen ist.
 4. Geben Sie den App-Namen an, ändern Sie den Hostnamen, falls erforderlich, und klicken Sie auf **Erstellen**.

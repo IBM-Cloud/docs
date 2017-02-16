@@ -1,4 +1,4 @@
-﻿---
+---
 
 
 
@@ -23,12 +23,11 @@ Procédez comme suit pour
 les utiliser.
 {:shortdesc}
 
-1. Depuis le [catalogue {{site.data.keyword.Bluemix_notm}}](https://console.{DomainName}/catalog/), accédez à la section Applis Cloud Foundry. 
+1. Depuis le [catalogue {{site.data.keyword.Bluemix_notm}}](https://console.{DomainName}/catalog/), accédez à la section Applis Cloud Foundry.
 2. Cliquez sur le contexte d'exécution à utiliser.
 3. Connectez-vous à {{site.data.keyword.Bluemix_notm}}, si ce n'est pas déjà fait.
 4. Indiquez le nom de l'application, modifiez le nom d'hôte si nécessaire, et cliquez sur **Créer**.
-5. La constitution de votre application commence et la page d'arrivée de votre application s'affiche dans le tableau de bord {{site.data.keyword.Bluemix_notm}} lorsque votre
-application démarre.
+5. La constitution de votre application commence et la page d'arrivée de votre application s'affiche dans le tableau de bord {{site.data.keyword.Bluemix_notm}} lorsque votre application démarre.
 6. Vous pouvez suivre les instructions figurant sur cette page pour effectuer les tâches suivantes :
   * Télécharger l'interface de ligne de commande Cloud Foundry.
   * Télécharger l'application de démarrage.
