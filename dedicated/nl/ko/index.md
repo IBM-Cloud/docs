@@ -45,12 +45,12 @@ lastupdated: "2017-01-11"
 |선택사항 | [{{site.data.keyword.sescashort}}](/docs/services/SessionCache/index.html#session_cache) | 증가된 중복성을 위해 {{site.data.keyword.sescashort}}에서는 캐시에 저장된 세션의 복제본을 제공합니다. 따라서 등화 관제 또는 가동 중단의 상황에서도 클라이언트 애플리케이션은 캐시의 세션에 계속 액세스할 수 있습니다. 이 서비스는 웹 및 모바일 애플리케이션에 대한 세션 캐싱 시나리오를 지원합니다. |
 | 선택사항 | [{{site.data.keyword.iot_short}}](/docs/services/IoT/index.html) | 이 서비스를 사용하여 앱은 연결된 디바이스, 센서 및 게이트웨이와 통신하고 여기서 수집한 데이터를 이용할 수 있습니다. 기본 오퍼링은 1.6TB의 데이터 교환과 100,000개의 동시 연결된 디바이스 또는 애플리케이션의 용량을 지닌 데디케이티드 환경 내에서 {{site.data.keyword.iot_short}}의 개인용 버전 실행을 허용합니다. |
 | 선택사항 | [{{site.data.keyword.appserver_short}}](/docs/services/ApplicationServeronCloud/index.html) | IBM {{site.data.keyword.appserver_short}} for IBM {{site.data.keyword.Bluemix_notm}}는 {{site.data.keyword.Bluemix_notm}}의 호스팅 클라우드 환경에서 사전 구성된 {{site.data.keyword.appserver_short}} Liberty, 기존 네트워크 배치 또는 기존 WebSphere Java EE 인스턴스를 빠르게 설정할 수 있는 편리한 서비스입니다.  |
-{: caption="Table 1. Dedicated Services" caption-side="top"}
+{: caption="표 1. 데디케이티드 서비스" caption-side="top"}
 {: #table01}
 
 
 
-리소스 및 서비스의 용량을 스케일링하고 확장하기 위해 구입할 수 있는 선택적 컴포넌트가 있습니다. 영업 팀에 문의하면 이 컴포넌트를 구입할 수 있습니다. 영업 담당자의 연락처 정보를 보려면 [담당자](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs)로 이동하십시오. 서비스에 대한 플랜을 늘리기 위해 카탈로그의 서비스 타일에서 플랜을 선택할 수 있습니다.
+리소스 및 서비스의 용량을 스케일링하고 확장하기 위해 구매할 수 있는 선택적 컴포넌트가 있습니다. 영업 팀에 문의하면 이 컴포넌트를 구입할 수 있습니다. 영업 담당자의 연락처 정보를 보려면 [담당자](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs)로 이동하십시오. 서비스에 대한 플랜을 늘리기 위해 카탈로그의 서비스 타일에서 플랜을 선택할 수 있습니다.
 
 | **이름**            | **설명** |
 |-------------------|-------------------|
@@ -78,7 +78,7 @@ lastupdated: "2017-01-11"
 |IBM {{site.data.keyword.appserver_short}} for {{site.data.keyword.Bluemix_notm}} - 데디케이티드 중형| 매월 128개 vCore, 256GB RAM 및 2TB HDD가 제공되는 {{site.data.keyword.Bluemix_notm}}의 호스팅 클라우드 환경에 사전 구성된 {{site.data.keyword.appserver_short}} Liberty, 기존 네트워크 배치 또는 기존 WebSphere Java EE 인스턴스.  |
 |IBM {{site.data.keyword.appserver_short}} for {{site.data.keyword.Bluemix_notm}} - 데디케이티드 대형| 매월 256개 vCore, 512GB RAM 및 4TB HDD가 제공되는 {{site.data.keyword.Bluemix_notm}}의 호스팅 클라우드 환경에 사전 구성된 {{site.data.keyword.appserver_short}} Liberty, 기존 네트워크 배치 또는 기존 WebSphere Java EE 인스턴스.  |
 |IBM {{site.data.keyword.appserver_short}} for {{site.data.keyword.Bluemix_notm}} - 데디케이티드| 매월 HDD Expansion 및 1TB가 제공되는 {{site.data.keyword.Bluemix_notm}}의 호스팅 클라우드 환경에 사전 구성된 {{site.data.keyword.appserver_short}} Liberty, 기존 네트워크 배치 또는 기존 WebSphere Java EE 인스턴스.  |
-{: caption="Table 2. Optional service components for purchase" caption-side="top"}
+{: caption="표 2. 구매할 수 있는 선택적 서비스 컴포넌트" caption-side="top"}
 {: #table02}
 
 
@@ -89,7 +89,7 @@ lastupdated: "2017-01-11"
 |데디케이티드 Direct Link 1Gbps 용량 | 최대 1Gbps의 데이터 전송을 위해 디자인된 해당 {{site.data.keyword.BluSoftlayer}} 네트워크 PoP(Point of Presence)에 직접 연결된 데디케이티드 네트워크 링크입니다. |
 |데디케이티드 Direct Link 10Gbps 용량 | 최대 10Gbps의 데이터 전송을 위해 디자인된 해당 {{site.data.keyword.BluSoftlayer}} 네트워크 PoP(Point of Presence)에 직접 연결된 데디케이티드 네트워크 링크입니다. |
 |IBM Bluemix 데디케이티드 하드웨어 방화벽 - 고가용성 | 데디케이티드 환경 내의 동일한 VLAN에서 단일, 다중 또는 모든 서버를 보호하기 위해 구성된 중복 1Gbps 하드웨어 방화벽입니다. |
-{: caption="Table 3. Optional platform add-on components for purchase" caption-side="top"}
+{: caption="표 3. 구매할 수 있는 선택적 플랫폼 추가 기능 컴포넌트" caption-side="top"}
 {: #table03}
 
 **참고**: {{site.data.keyword.Bluemix_dedicated_notm}} 컴포넌트는 특정 구성 용량(예: 기가바이트 또는 초당 트랜잭션)을 표시할 수 있습니다. 클라우드 서비스의 구성에 대한 사실상의 실제 용량이 수많은 요인에 따라 다양하므로, 사실상의 실제 용량은 구성된 용량보다 크거나 작을 수 있습니다.
@@ -152,7 +152,7 @@ lastupdated: "2017-01-11"
 |{{site.data.keyword.iot_short}}		|예		|예		|아니오|
 |{{site.data.keyword.weather_short}}		|예		|예		|예|
 |{{site.data.keyword.workloadscheduler}}	|예		|예		|예 |
-{: caption="Table 4. Services available for syndication from {{site.data.keyword.Bluemix_notm}} Public by region" caption-side="top"}
+{: caption="표 4. 지역별 {{site.data.keyword.Bluemix_notm}} 퍼블릭 신디케이션 가능 서비스" caption-side="top"}
 {: #table04}
 
 **참고**: 표에 써드파티 서비스가 포함되어 있지 않습니다. 써드파티 서비스 옵션에 대한 데디케이티드 카탈로그를 확인하십시오. 
@@ -282,7 +282,7 @@ IBM은 비밀번호로 보호되는 로그인을 사용하여 {{site.data.keywor
 <dd>환경이 시작되고 실행되면 필요에 따라 IBM 지원 팀과 함께 작업합니다. 관리 콘솔에 대해 수퍼유저 액세스 권한이 있는 사용자로, Bluemix 환경에 대한 유지보수 업데이트를 승인하고 스케줄링할 수 있으며 중요한 인시던트가 발생하는 경우에 항상 지원 가능한 인원입니다. 이 역할에 지정된 사용자는 Bluemix 환경에 대한 기술적 지식이 있어야 하며 예를 들어, 네트워킹 또는 보안을 포함하여 영향을 받는 영역에서 전문적인 스킬을 갖춘 회사 내 다른 직원들에게 연락할 수 있는 위치에 있어야 합니다. </dd>
 </dl>
 
-사용자의 고객 대표는 IBM 전문가와 공동 작업을 통해 사용자가 항상 필요한 지원을 받을 수 있도록 보장합니다. 프리미엄 지원 계층으로 업그레이드하여 계정에 대한 데디케이티드 CSM(Client Success Manager)을 사용하여 작업할 수 있습니다. 여러 지원 계층에 대한 자세한 정보는 [지원 문의](../support/index.html#contacting-support)를 참조하십시오. CSM은 다음 유형의 태스크를 완료합니다.
+고객 담당자는 IBM 전문가와 공동 작업을 통해 사용자가 항상 필요한 지원을 받을 수 있도록 보장합니다. 프리미엄 지원 계층으로 업그레이드하여 계정 전용 CSM(Client Success Manager)과 함께 작업할 수 있습니다. 여러 지원 계층에 대한 자세한 정보는 [지원 문의](../support/index.html#contacting-support)를 참조하십시오. CSM은 다음 유형의 태스크를 완료합니다.
 
 <ul>
 <li>{{site.data.keyword.Bluemix_dedicated_notm}} 환경을 신속하게 채택할 수 있게 합니다. </li>
@@ -334,7 +334,7 @@ IBM은 비밀번호로 보호되는 로그인을 사용하여 {{site.data.keywor
 |실제 인프라 검토 | 위협에 대비한 솔루션 컴포넌트를 호스팅하는 실제 구내와 데이터 센터를 보호하기 위한 보안 제어를 검토합니다. | 고객 |
 |모니터링 소프트웨어 검사 | 단계적 확대 및 문제점 판별 플랜에 정의된 대로 모니터링 및 관리 컴포넌트를 검사합니다. | 고객 |
 |OS 검사 | 운영 체제 이미지가 규제 준수 표준에 부합하는지 검사합니다. IBM이 OS 이미지에 대한 액세스 권한을 제공합니다. | IBM 및 고객 책임 공유 |
-{: caption="Table 5. Inception phase tasks" caption-side="top"}
+{: caption="표 5. 도입/인식(Inception) 단계 태스크" caption-side="top"}
 
 
 다음은 진행 단계입니다. 진행 단계에서 사용자와 IBM 클라우드 사이의 지속적 협력 관계를 기술합니다. 이 단계의 1차 목표에는 다음이 포함됩니다.
@@ -359,7 +359,7 @@ IBM은 비밀번호로 보호되는 로그인을 사용하여 {{site.data.keywor
 |상태 보고, 감사 조정 및 규제 준수 미팅  | 규제 준수 검토 상태 미팅에서 상태 보고, 외부 감사 조정 및 표시를 완료합니다. | IBM |
 |채용 및 비즈니스 수요 검증 | 고객 환경에 액세스하는 IBM 담당자를 위해 분기별 채용 검증 및 지속적 비즈니스 수요에 대한 검증을 완료합니다. | IBM |
 |보안 취약점 해결 | 플랫폼에서 보고된 보안 취약점을 해결합니다. | IBM |
-{: caption="Table 6. Progression phase tasks" caption-side="top"}
+{: caption="표 6. 진행 단계 태스크" caption-side="top"}
 
 최종 완료 단계는 사용자와 IBM {{site.data.keyword.Bluemix_notm}} 사이의 관계 종료를 나타냅니다. 이 단계의 1차 태스크에는 다음이 포함됩니다.
 
@@ -374,7 +374,7 @@ IBM은 비밀번호로 보호되는 로그인을 사용하여 {{site.data.keywor
 |환경에 대한 커미션 해지 | 환경에 대한 액세스 권한과 신임 정보를 종료합니다. | IBM 및 고객 책임 공유 |
 |고객 네트워크 연결 제거 | IBM과 고객 환경 사이의 네트워크 연결을 제거합니다. | IBM 및 고객 책임 공유 |
 |인프라 재사용 | {{site.data.keyword.BluSoftlayer}}에서 정의한 프로세스에 기반하여 사용자 환경은 재사용됩니다. | IBM |
-{: caption="Table 7. Completion phase tasks" caption-side="top"}
+{: caption="표 7. 완료 단계 태스크" caption-side="top"}
 
 ##데디케이티드 인스턴스 유지보수
 {: #maintaindedicated}
