@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-01-24"
 
 ---
 
@@ -32,7 +32,7 @@ lastupdated: "2017-01-11"
 |보고서 및 로그 검토 | 인스턴스에 대한 보안 보고서 및 감사 로그를 보려면 **관리 &gt; 보고서 및 로그**를 클릭하십시오. [보고서 보기](/docs/admin/index.html#oc_report)를 참조하십시오. |
 |시스템 정보 보기 | 보류 중인 업데이트, 인스턴스의 이름 및 버전, 지역, API URL, CLI URL, LDAP 구성 세부사항, 그룹 맵핑과 사용자 맵핑, 통계, 공유 도메인 등의 시스템 정보를 보려면 **관리 &gt; 시스템 정보**를 클릭하십시오. [시스템 정보 보기](/docs/admin/index.html#oc_system)를 참조하십시오. |
 |알림 확장 및 알림 구독 설정 | **관리 &gt; 시스템 정보 &gt; 보류 중인 *수***를 클릭하십시오. 웹훅을 사용해서 선택한 웹 서비스와 통합하여 업데이트 또는 인시던트에 대한 이벤트 알림 구독을 설정할 수 있습니다. [알림 구독](/docs/admin/index.html#oc_eventsubscription)을 참조하십시오. |
-{: caption="Table 1. Administrative tasks for managing your {{site.data.keyword.Bluemix_notm}} local or dedicated instance" caption-side="top"}
+{: caption="표 1. {{site.data.keyword.Bluemix_notm}} 로컬 또는 데디케이티드 인스턴스 관리를 위한 관리 태스크" caption-side="top"}
 
 <!-- staging only for WoW start -->
 
@@ -59,7 +59,7 @@ lastupdated: "2017-01-11"
 | 중요 인시던트 | 상태 페이지에 중요 인시던트에 대한 경보가 표시됩니다. **지원** &gt; **상태**를 클릭하십시오. 선택한 수신인에게 이메일을 발송하는 알림 구독을 설정함으로써 알림 기능을 확장할 수 있습니다. 또는 웹훅을 사용하여 관리 페이지의 알림을 선택된 웹 서비스와 통합하는 구독을 설정할 수 있습니다.   |  
 | 임계값 이벤트 | 사용자의 환경에서 실제 디스크, 실제 메모리, 예약 디스크 또는 예약 메모리에 대한 리소스 임계값에 도달할 때 선택한 수신인에게 이메일을 발송하는 알림 구독을 설정할 수 있습니다. 또는 웹훅을 사용하여 알림과 선택된 웹 서비스를 통합하는 구독을 설정할 수 있습니다.   |  
 | {{site.data.keyword.Bluemix_notm}} 상태 | 언제든지 상태 페이지에서 플랫폼, 서비스 및 {{site.data.keyword.Bluemix_notm}} 인스턴스의 최신 상태를 볼 수 있습니다. **지원** &gt; **상태**를 클릭하십시오.   |
-{: caption="Table 2. Event types and notifications methods" caption-side="top"}
+{: caption="표 2. 이벤트 유형 및 알림 방법" caption-side="top"}
 
 ### 알림 구독 설정
 {: #seteventsub}
@@ -99,7 +99,7 @@ lastupdated: "2017-01-11"
 | 본문 | 이메일에서 발송되는 메시지 본문 텍스트를 입력하십시오. IBM 페이로드 값을 사용하여 관련 정보로 이메일 알림을 채울 수 있습니다. 사용할 수 있는 값을 식별하려면 [유지보수 및 인시던트 페이로드 섹션 값](index.html#payload) 표를 참조하십시오. 기본 HTML 태그를 사용하여 이메일을 구성하십시오.  이는 필수 필드입니다.  |
 | 수신 | 이메일 알림의 수신인에 대해 쉼표로 분리된 목록을 사용하여 이메일 주소를 입력하십시오. 이메일에서 다른 사용자를 복사하려면 "참조" 또는 "숨은 참조" 옵션을 펼치십시오.  이는 필수 필드입니다.  |
 | 설명 | 작성 중인 구독에 대한 고유한 설명을 추가하십시오.  |
-{: caption="Table 3. Fields for email notification subscriptions about thresholds" caption-side="top"}
+{: caption="표 3. 임계값에 대한 이메일 알림 구독의 필드" caption-side="top"}
 
 
 {: #emailnottrhesh}
@@ -117,7 +117,7 @@ lastupdated: "2017-01-11"
 | 제목 | 이메일의 제목 행을 입력하십시오.  이는 필수 필드입니다.   |
 | 메시지 본문 | 이메일에서 발송되는 메시지 본문 텍스트를 입력하십시오. IBM 페이로드 값을 사용하여 관련 정보로 이메일 알림을 채울 수 있습니다. 사용할 수 있는 값을 식별하려면 [임계값 페이로드 섹션 값](index.html#threshpayload) 표를 참조하십시오. 기본 HTML 태그를 사용하여 이메일을 구성하십시오.  이는 필수 필드입니다.  |
 | 수신 | 이메일 알림의 수신인에 대해 쉼표로 분리된 목록을 사용하여 이메일 주소를 입력하십시오. 이메일에서 다른 사용자를 복사하려면 "참조" 또는 "숨은 참조" 옵션을 펼치십시오.  이는 필수 필드입니다.  |
-{: caption="Table 4. Fields for email notification subscriptions about maintenance updates or incidents" caption-side="top"}
+{: caption="표 4. 유지보수 업데이트 또는 인시던트에 대한 이메일 알림 구독의 필드" caption-side="top"}
 
 임계값 데이터가 6시간마다 한 번씩 수집됩니다. 값이 설정한 임계값을 벗어나면 알림이 한 번만 전송됩니다. 오름차순을 선택하면 값이 임계값 이하로 감소한 후 임계값을 다시 초과하는 경우 새 알림이 전송됩니다. 마찬가지로, 내림차순을 선택하면 사용자가 설정한 값을 초과한 후 다시 임계값 이하로 감소하는 경우에만 알림이 다시 전송됩니다.  
 
@@ -146,7 +146,7 @@ lastupdated: "2017-01-11"
 | URL | 웹 서비스에 연결하기 위한 URL을 입력하십시오.  |
 | 페이로드 | POST 또는 PUT 메소드를 선택한 경우, 사용 중인 웹 서비스에 특정한 특성을 IBM 알림에 사용되는 페이로드 값과 짝을 지어 입력하십시오. 사용할 수 있는 값을 식별하려면 [유지보수 및 인시던트 페이로드 섹션 값](index.html#payload) 표를 참조하십시오. 이 섹션에 정보를 입력하지 않으면 추가 정보가 없는 알림이 수신됩니다. |
 | 알림 결합 | 모든 지역에 대한 인시던트 알림을 하나의 알림으로 결합하려면 이 옵션을 선택하십시오. 인시던트에만 이 옵션을 사용할 수 있습니다. |
-{: caption="Table 5. Form fields for a webhook notification subscription about maintenance or incidents" caption-side="top"}
+{: caption="표 5. 유지보수 또는 인시던트에 대한 웹훅 알림 구독의 양식 필드" caption-side="top"}
 
 
 {: #webhooknotthresh}
@@ -166,7 +166,7 @@ lastupdated: "2017-01-11"
 | 비밀번호 | 기본 권한을 선택한 경우 웹 서비스의 비밀번호를 입력하십시오.  |
 | 방법 | **GET**, **POST** 또는 **PUT**을 선택하십시오. |
 | URL | 웹 서비스에 연결하기 위한 URL을 입력하십시오.  |
-{: caption="Table 6. Form fields for a webhook notification subscription about thresholds" caption-side="top"}
+{: caption="표 6. 임계값에 대한 웹훅 알림 구독의 양식 필드" caption-side="top"}
 
 
 {: #payload}
@@ -184,7 +184,7 @@ lastupdated: "2017-01-11"
 | {{region}} | 영향을 받는 지역 | 유지보수 업데이트 및 인시던트 |
 | {{status}} | 업데이트 상태 | 유지보수 업데이트 |
 | {{type}} | 업데이트 또는 인시던트 | 유지보수 업데이트 및 인시던트 |
-{: caption="Table 7. Maintenance and incident payload section values" caption-side="top"}
+{: caption="표 7. 유지보수 및 인시던트 페이로드 섹션 값" caption-side="top"}
 
 
 {: #threshpayload}
@@ -195,7 +195,7 @@ lastupdated: "2017-01-11"
 | {{content.physical_memory}} | 실제 메모리 임계값 | 임계값 |  
 | {{content.reserved_disk}} | 예약 디스크 임계값 | 임계값 |
 | {{content.reserved_memory}} | 예약 메모리 임계값 | 임계값 |
-{: caption="Table 8. Threshold payload section values" caption-side="top"}
+{: caption="표 8. 임계값 페이로드 섹션 값" caption-side="top"}
 
 알림 구독이 저장되면, 사용자는 자신이 설정한 방법을 통해 알림을 받습니다. 알림은 계속 다음 위치에 게시됩니다.  
  * 인시던트의 경우 상태 페이지에
@@ -461,7 +461,7 @@ DEA의 메모리, 디스크 또는 CPU 사용량을 보려면 **사용 명세**�
 | 안티 바이러스 | 안티 바이러스 스캔 보고서 | 적용 중인 안티 바이러스 소프트웨어. |
 | 소프트웨어 수정사항 관리 | 패치 애플리케이션 보고서 | 적용된 소프트웨어 수정사항. |
 | 보안 인시던트 관리 | 보안 인시던트 조치방안 보고서 | 보안 인시던트 관리를 위한 보안 인시던트 증거. |
-{: caption="Table 9. Security report list" caption-side="top"}
+{: caption="표 9. 보안 보고서 목록" caption-side="top"}
 
 ## 상태 보기
 {: #oc_status}
@@ -629,7 +629,7 @@ DEA의 메모리, 디스크 또는 CPU 사용량을 보려면 **사용 명세**�
 |id  | 서비스의 ID입니다. 이 ID는 {{site.data.keyword.Bluemix_notm}}에서 고유해야 하며 GUID(Globally Unique Identifier)이어야 합니다. {{site.data.keyword.Bluemix_notm}}에 서비스를 등록한 후에는 서비스의 ID를 변경할 수 없습니다. |
 |metadata | {{site.data.keyword.Bluemix_notm}} 카탈로그 및 가격 책정 시트에 표시되는 서비스 플랜 메타데이터입니다. metadata 필드는 선택적 필드입니다. metadata에 대한 추가 필드를 지정할 수 있습니다. 자세한 정보는 [메타데이터 필드](index.html#metadatafields)에 대한 다음 표를 참조하십시오. |
 |plans | 일련의 서비스 플랜 정의입니다. 자세한 정보는 [플랜 필드](index.html#planfields)에 대한 다음 표를 참조하십시오.  |
-{: caption="Table 10. JSON fields" caption-side="top"}
+{: caption="표 10. JSON 필드" caption-side="top"}
 
 
 {: #metadatafields}
@@ -658,7 +658,7 @@ DEA의 메모리, 디스크 또는 CPU 사용량을 보려면 **사용 명세**�
 |sdkDownloadUrl(선택사항) | SDK 다운로드 단추를 클릭하면 열리는 웹 페이지의 URL입니다. SDK 다운로드 단추는 대시보드에서 애플리케이션 개요 페이지의 서비스 타일에 있습니다. 웹 페이지가 새로운 브라우저 탭에 열립니다. |
 |serviceMonitorApi    | 서비스 상태를 보고하는 JSON 데이터(다음 예제 참조)를 리턴하는 API에 대한 URL입니다. 서비스 메타데이터에 serviceMonitorApi 또는 serviceMonitorApp이 있어야 합니다. 다음 코드 샘플을 참조하십시오. |
 |serviceMonitorApp    | {{site.data.keyword.Bluemix_notm}}에 배치하고 서비스 상태 특정 출력을 제공하는 서비스에 바인드할 수 있는 애플리케이션에 대한 URL입니다. 해당 애플리케이션은 serviceMonitorApi와 동일한 JSON 데이터 형식을 리턴해야 합니다. 서비스 메타데이터에 serviceMonitorApi 또는 serviceMonitorApp이 있어야 합니다. 다음 코드 샘플을 참조하십시오. |
-{: caption="Table 11. Metadata fields" caption-side="top"}
+{: caption="표 11. 메타데이터 필드" caption-side="top"}
 
 
 ```
@@ -699,7 +699,7 @@ DEA의 메모리, 디스크 또는 CPU 사용량을 보려면 **사용 명세**�
 |free      | 서비스 플랜이 무료인지 여부를 나타내는 부울 값입니다. 기본값은 true입니다.  |
 |id       | 서비스 플랜의 ID입니다. ID는 고유해야 하며 GUID여야 합니다.   |
 |metadata(선택사항)    | {{site.data.keyword.Bluemix_notm}} 카탈로그 및 가격 책정 시트에 표시되는 서비스 플랜 메타데이터입니다. metadata 필드는 선택적 필드입니다. 메타데이터 필드 내에 displayName, type(subscription, reservable, planDetails), bullets, costs(unitId, unit, partNumber) 및 paidOnly 필드를 지정할 수 있습니다. 자세한 정보는 [플랜 메타데이터 필드](index.html#planmetadata)에 대한 다음 표를 참조하십시오.  |
-{: caption="Table 12. Plan fields" caption-side="top"}
+{: caption="표 12. 플랜 필드" caption-side="top"}
 
 
 {: #planmetadata}
@@ -711,7 +711,7 @@ DEA의 메모리, 디스크 또는 CPU 사용량을 보려면 **사용 명세**�
 |bullets                 | 플랜에서 사용할 수 있는 리소스에 대한 설명입니다. 설명은 가격 책정 시트와 카탈로그의 서비스 세부사항 페이지에 있는 **기능** 열에 표시됩니다. |
 |costs                   | 가격 책정 시트와 카탈로그의 서비스 세부사항 페이지에 있는 가격 열에 표시되는 서비스에 대한 비용 정보입니다. 각 배열 항목에는 unitId(단위의 ID입니다. 복수 양식을 사용하고 모든 문자를 대문자로 지정하십시오. 무료 사용제의 경우 이 필드는 선택사항입니다.) , unit(서비스 요금을 계산하는 데 사용되는 메트릭입니다. 이 필드의 값은 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스에서 요금 메트릭을 나타내는 데 사용됩니다.) 및 partNumber(청구 시스템에서 사용하는 `part_number` ID입니다. 무료 사용제의 경우 이 필드는 선택사항입니다.) .   |
 |paidOnly(선택사항)      | 이 서비스 플랜을 {{site.data.keyword.Bluemix_notm}} 지불 계정에만 사용할 수 있는지 여부를 나타내는 부울 값입니다. **true** 값은 서비스 플랜을 지불 계정에만 사용할 수 있고 평가판 계정에는 추가할 수 없음을 의미합니다. **false** 값은 지불 계정 및 평가판 계정 모두에 서비스 플랜을 추가할 수 있음을 의미합니다. 기본값은 **false**입니다.	  |
-{: caption="Table 13. Plan metadata fields" caption-side="top"}
+{: caption="표 13. 플랜 메타데이터 필드" caption-side="top"}
 
 다음 예는 GET /v2/catalog의 JSON 응답이 {{site.data.keyword.Bluemix_notm}} 카탈로그의 서비스 세부사항 페이지에 어떻게 맵핑되는지 보여줍니다. 특히 앞의 표에 설명된 플랜 메타데이터 필드가 사용자 인터페이스에 어떻게 맵핑되는지 보여줍니다. 
 
@@ -963,7 +963,7 @@ DEA의 메모리, 디스크 또는 CPU 사용량을 보려면 **사용 명세**�
 | 카탈로그 | **카탈로그** 권한이 있는 사용자는 로컬 또는 데디케이티드 인스턴스에서 사용 가능한 서비스에 대해 **읽기** 또는 **쓰기**(수정)에 대한 액세스 권한이 지정될 수 있습니다. 읽기 액세스 권한을 통해 사용자는 카탈로그 관리 타일에 액세스하여 사용 가능한 서비스를 볼 수 있습니다. 쓰기 액세스 권한을 통해 사용자는 [카탈로그 관리](#oc_catalog) 타일에 액세스하여 서비스를 보고 서비스의 가시성을 편집하며 사용자 정의 서비스를 등록하고 빌드팩 우선순위 목록을 제어할 수 있습니다. |  
 | 보고서 | **보고서** 권한이 있는 사용자는 보안 보고서에 대해 **읽기** 또는 **쓰기**(수정)에 대한 액세스 권한이 지정될 수 있습니다. 읽기 액세스 권한이 있는 사용자는 보고서 및 로그 타일에 액세스하여 보고서를 다운로드할 수 있습니다. 쓰기 액세스 권한을 통해 사용자는 [보고서 및 로그](#oc_report) 타일을 보고 CLI를 사용하여 새 보고서를 업로드하고 사용자가 액세스할 새 카테고리를 작성할 수 있습니다. |
 | 사용자 | **사용자** 권한이 있는 사용자는 사용자의 목록에 대해 **읽기**(보기) 또는 사용자에 대해 **쓰기**(추가 또는 제거)에 대한 액세스 권한이 지정될 수 있습니다. 이 권한은 다른 사용자에 대한 권한의 설정을 허용하지 않습니다. 쓰기 액세스 권한을 통해 사용자는 환경에 새 사용자를 추가하고 환경에서 사용자를 삭제하며 환경 내에 이미 있는 조직에 기존 사용자를 추가할 수 있습니다. 또한, **쓰기** 액세스 권한을 통해 사용자는 새 조직을 추가하고 조직을 삭제하며 조직 내의 사용자를 편집할 수 있습니다. |
-{: caption="Table 14. Permissions" caption-side="top"}
+{: caption="표 14. 권한" caption-side="top"}
 
 ## Admin REST API를 통해 사용자 관리
 {: #usingadminapi}
@@ -1299,9 +1299,8 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
 
 다음 섹션에서 설명되는 Metrics API는 지역 특정 엔드포인트에서 액세스할 수 있습니다. 예를 들어,  
 
- ```
-https://console.<region>.bluemix.net.
- ```
+ `https://console.<region>.bluemix.net/admin/metrics`
+{: codeblock}
 
 **참고**:
 
@@ -1312,20 +1311,31 @@ https://console.<region>.bluemix.net.
 
 시범 환경 API를 사용하여 지정한 기간 동안 상위 레벨 환경 정보를 수집할 수 있습니다. 지정하는 시간 내에 사용 가능한 데이터 점이 리턴됩니다. 데이터는 약 1시간마다 기록됩니다. 예를 들어, 환경에 대해 6시간의 CPU 데이터를 요청한 경우 요청한 6시간마다 CPU 데이터가 응답에 포함됩니다. 
 
+ ### 환경 엔드포인트 
+ 
+다음 엔드포인트를 사용하여 이 API 명령을 호출할 수 있음:  `/api/v1/env`
+
 ### 환경 메트릭 조회 매개변수
 
 다음 조회 매개변수를 사용하여 CPU, 디스크, 메모리, 네트워크 및 앱에 대한 메트릭을 수집할 수 있습니다. 
 
 <dl class="parml">
 <dt class="pt dlterm">metric</dt>
-<dd class="pd">쉼표로 구분된 다음 값 중 하나 이상: '메모리', '디스크', 'CPU', '네트워크' 및 '앱'</dd>
+<dd class="pd">다음 값 중 하나 이상, 쉼표로 구분: `memory`, `disk`, `cpu`, `network` 및 `apps`.</dd>
 <dt class="pt dlterm">startTime</dt>
 <dd class="pd">데이터가 리턴되는 가장 빠른 시점입니다. startTime을 지정하지 않으면 사용 가능한 가장 빠른 데이터 점이 포함됩니다. 예를 들어, 오후 2시에서 5시 사이에 데이터를 수집하려면 startTime을 오후 2시로 지정하십시오. </dd>
 <dt class="pt dlterm">endTime</dt>
 <dd class="pd">데이터가 리턴되는 가장 늦은 시점입니다. endTime을 지정하지 않으면 가장 최근의 데이터 점이 사용됩니다. 예를 들어, 오후 2시에서 5시 사이에 데이터를 수집하려면 endTime을 오후 5시로 지정하십시오. </dd>
 <dt class="pt dlterm">sort</dt>
-<dd class="pd">데이터가 리턴되는 순서입니다. 올바른 값은 'asc'(오름차순) 및 'desc'(내림차순)입니다. 기본값은 가장 최근의 데이터를 먼저 리턴하는 내림차순입니다. </dd>
+<dd class="pd">데이터가 리턴되는 순서입니다. 올바른 값은 `asc`(오름차순) 및 `desc`(내림차순)입니다. 기본값은 가장 최근의 데이터를 먼저 리턴하는 내림차순입니다. </dd>
 </dl>
+
+ 다음 예제는 조회 매개변수를 사용하여 환경에 대한 메트릭을 수집합니다. 
+ 
+ ```
+ curl -b ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/admin/metrics/api/v1/env?metric=cpu,network,disk,apps,memory
+ ```
+{: codeblock}
 
 ### 환경 메트릭 데이터 형식
 
@@ -1337,19 +1347,37 @@ https://console.<region>.bluemix.net.
 {
   "sample_time": 1477494000000,
   "memory": {
-    "physical": {
-      "total_gb": 864,
-      "used": {
-        "value_gb": 336.84,
-        "percent": 38.99
-      }
+    "cell": {
+      "physical": {
+        "total_gb": 864,
+        "used": {
+          "value_gb": 336.84,
+          "percent": 38.99
+        }
+      },
+      "allocated": {
+        "reserved_gb": 1728,
+        "total_allocated": {
+          "value_gb": 1287.59,
+          "percent": 74.51
+        }
+      },
     },
-    "allocated": {
-      "reserved_gb": 1728,
-      "total_allocated": {
-        "value_gb": 1287.59,
-        "percent": 74.51
-      }
+    "dea": {
+      "physical": {
+      	"total_gb": 864,
+        "used": {
+          "value_gb": 336.84,
+          "percent": 38.99
+        }
+      },
+      "allocated": {
+        "reserved_gb": 1728,
+        "total_allocated": {
+          "value_gb": 1287.59,
+          "percent": 74.51
+        }
+      },
     },
     "memory_by_container": [
       {
@@ -1388,19 +1416,37 @@ https://console.<region>.bluemix.net.
 {
   "sample_time": 1477494000000,
   "disk": {
-    "physical": {
-      "total_gb": 8100,
-      "used": {
-        "value_gb": 807,
-        "percent": 9.96
-      }
+    "cell": {
+      "physical": {
+        "total_gb": 8100,
+        "used": {
+          "value_gb": 807,
+          "percent": 9.96
+        }
+      },
+      "allocated": {
+        "reserved_gb": 16200,
+        "total_allocated": {
+          "value_gb": 1989.5,
+          "percent": 12.28
+        }
+      },
     },
-    "allocated": {
-      "reserved_gb": 16200,
-      "total_allocated": {
-        "value_gb": 1989.5,
-        "percent": 12.28
-      }
+    "dea": {
+      "physical": {
+        "total_gb": 8100,
+        "used": {
+          "value_gb": 807,
+          "percent": 9.96
+        }
+      },
+      "allocated": {
+        "reserved_gb": 16200,
+        "total_allocated": {
+          "value_gb": 1989.5,
+          "percent": 12.28
+        }
+      },
     },
     "disk_by_container": [
       {
@@ -1439,7 +1485,12 @@ https://console.<region>.bluemix.net.
 {
   "sample_time": 1477494000000,
   "cpu": {
-    "average_percent_cpu_used": 27.288461538461544,
+    "cell": {
+      "average_percent_cpu_used": 27.288461538461544
+    },
+    "dea": {
+      "average_percent_cpu_used": 27.288461538461544
+    },
     "cpu_by_container": [
       {
         "name": "dea_next/0",
@@ -1532,7 +1583,7 @@ https://console.<region>.bluemix.net.
 {: screen}
 
 * 애플리케이션에 대한 데이터 레코드를 수집하려면 다음 데이터 형식을 사용하십시오.
- 
+
 ```
 {
   "sample_time": 1477494000000,
@@ -1566,11 +1617,11 @@ https://console.<region>.bluemix.net.
 ### 애플리케이션 엔드포인트 
 
 다음 엔드포인트를 사용하여 이 API 명령을 호출할 수 있습니다. 
-* /api/v1/app/cpu/physical 
-* /api/v1/app/memory/physical
-* /api/v1/app/memory/reserved
-* /api/v1/app/disk/physical
-* /api/v1/app/disk/reserved
+* `/api/v1/app/cpu/physical` 
+* `/api/v1/app/memory/physical`
+* `/api/v1/app/memory/reserved`
+* `/api/v1/app/disk/physical`
+* `/api/v1/app/disk/reserved`
 
 
 ### 애플리케이션 조회 매개변수
@@ -1585,7 +1636,17 @@ https://console.<region>.bluemix.net.
 <dt class="pt dlterm">count</dt>
 <dd class="pd">각 데이터 샘플 내에서 리턴할 레코드 수입니다.
 </dd>
+<dt class="pt dlterm">minValue</dt>
+<dd class="pd">지정된 메트릭에 대해 리턴하는 가장 작은 값입니다. minValue를 지정하지 않으면 모든 값이 리턴됩니다. 예를 들어, 20000바이트 이상의 실제 메모리를 사용하는 애플리케이션을 수집하려면 minValue를 20000으로 지정하십시오.
+</dd>
 </dl>
+
+다음 예제는 사용자의 애플리케이션에 대한 메트릭을 수집합니다. 
+
+```
+curl -b ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/admin/metrics/api/v1/app/cpu/physical?count=5&startTime=2016-12-02T16:54:09.467Z
+```
+{: codeblock}
 
 ### 애플리케이션 응답 형식
 
@@ -1637,7 +1698,7 @@ POST /codi/v1/serviceBrokers
 | auth_password | 서비스 브로커와 연결하는 데 사용하는 비밀번호입니다.  |
 | broker_url | 서비스 브로커와 연결하는 데 사용하는 URL입니다.  |
 | owningOrganization | 서비스 화이트리스트를 작성하는 초기 조직입니다. |
-{: caption="Table 15. Fields" caption-side="top"}
+{: caption="표 15. 필드" caption-side="top"}
 
 #### 본문
 {: #registerbody}
@@ -1712,7 +1773,7 @@ Content-Type: application/json
 | auth_password | 서비스 브로커와 연결하는 데 사용하는 비밀번호입니다.  |
 | broker_url | 서비스 브로커와 연결하는 데 사용하는 URL입니다.  |
 | owningOrganization | 서비스 화이트리스트를 작성하는 초기 조직입니다. |
-{: caption="Table 16. Requests" caption-side="top"}
+{: caption="표 16. 요청" caption-side="top"}
 
 #### 본문
 {: #updatebody}
@@ -1774,7 +1835,7 @@ Content-Type: application/json
 | **이름** | **설명** |
 |-----------------|-------------------|
 | name | 서비스 브로커의 이름입니다. 서비스 작성 시 사용한 이름에서 이 이름을 변경할 수 없습니다. |
-{: caption="Table 17. Parameter" caption-side="top"}
+{: caption="표 17. 매개변수" caption-side="top"}
 
 ### 라우트
 

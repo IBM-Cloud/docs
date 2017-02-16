@@ -106,7 +106,7 @@ Para obter mais informações sobre convidar membros da equipe por meio da inter
 ## Alternando para o IBMid
 {: #ibmid_switch}
 
-A autenticação no SoftLayer agora usa o IBMid para fornecer um único login para todos os {{site.data.keyword.Bluemix_notm}}. As contas existentes do SoftLayer estão sendo ativadas para alternar para a autenticação do IBMid e um assistente de migração fornecerá orientação durante essa alternância.
+A autenticação no SoftLayer agora usa o IBMid para fornecer um único login para todos os {{site.data.keyword.Bluemix_notm}}. As contas existentes do SoftLayer estão sendo ativadas para alternar para a autenticação do IBMid e um assistente de migração fornecerá orientação durante essa alternância. 
 {:shortdesc}
 
 Se você for um usuário principal e não vir um prompt para alternar para o IBMid no {{site.data.keyword.slportal}}, [Entre em contato com o suporte IBM](https://console.ng.bluemix.net/docs/support/index.html#contacting-support) para obter ajuda com a ativação do recurso.

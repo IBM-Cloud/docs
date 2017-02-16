@@ -33,7 +33,7 @@ lastupdated: "2017-01-09"
 |기존 IBM ID | IBM ID가 이미 있는 경우 기타 IBM 제품과 서비스에 사용하는 기존 신임 정보로 {{site.data.keyword.Bluemix_notm}}에 등록하십시오. 등록할 때 전화번호를 입력해야 합니다.  |
 |새 IBM ID | IBM ID가 없는 경우에는 이를 작성할 수 있습니다. IBM ID를 사용하면 {{site.data.keyword.Bluemix_notm}}를 비롯하여 사용하는 모든 IBM 제품과 서비스에 하나의 로그인 사용자 이름을 사용할 수 있습니다. 이름과 성, 전화번호, 새 신임 정보의 비밀번호를 포함한 개인 정보를 입력해야 합니다. 기타 IBM 제품과 서비스 사용 시 이 IBM ID를 사용하여 로그인할 수 있습니다.   |
 |연합 ID | 사용자 회사가 회사 도메인에서 생성된 사용자 신임 정보를 IBM에 등록하도록 요청한 경우 회사의 로그인에 이미 사용하고 있는 신임 정보를 이용해 {{site.data.keyword.Bluemix_notm}}에 등록할 수 있습니다. 등록할 때 전화번호를 입력해야 합니다.  |
-{:caption="Table 1. Sign up methods" caption-side="top"}
+{:caption="표 1. 등록 방법" caption-side="top"}
 
 ## 알림 설정
 {: #notifications}

@@ -92,7 +92,7 @@ selezionare la visualizzazione di una specifica regione.
 
 Per aprire la pagina Dashboard di utilizzo, fai clic su **Account** &gt; *nome_del_tuo_account* &gt; **Dashboard di utilizzo**. I gestori della fatturazione possono visualizzare i dettagli solo per le organizzazioni in cui ricoprono tale ruolo.
 
-Al proprietario dell'account viene addebitato l'utilizzo totale sostenuto su tutte le organizzazioni alla fine di ciascun ciclo di fatturazione. In qualità di proprietario dell'account, puoi filtrare il riepilogo dell'utilizzo in base alla regione e all'organizzazione. Puoi anche fare clic su uno specifico mese per visualizzare il relativo utilizzo. Seleziona **Tutte le organizzazioni** dall'elenco **Organizzazione** per visualizzare l'utilizzo per tutte le organizzazioni nell'account. 
+Al proprietario dell'account viene addebitato l'utilizzo totale sostenuto su tutte le organizzazioni alla fine di ciascun ciclo di fatturazione. In qualità di proprietario dell'account, puoi filtrare il riepilogo dell'utilizzo in base alla regione e all'organizzazione. Puoi anche fare clic su uno specifico mese per visualizzare il relativo utilizzo. Seleziona **Tutte le organizzazioni** dall'elenco **Organizzazione** per visualizzare l'utilizzo per tutte le organizzazioni nell'account.
 
 ## Aggiornamento delle informazioni di fatturazione
 {: #account_billing}

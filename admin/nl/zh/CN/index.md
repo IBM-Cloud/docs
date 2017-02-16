@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-01-24"
 
 ---
 
@@ -1238,9 +1238,8 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
 
 以下各部分中描述的度量值 API 可以从特定于区域的端点进行访问，例如： 
 
- ```
-https://console.<region>.bluemix.net.
- ```
+ `https://console.<region>.bluemix.net/admin/metrics`
+{: codeblock}
 
 **注**：
 
@@ -1251,20 +1250,31 @@ https://console.<region>.bluemix.net.
 
 您可以使用试验性环境 API 来收集指定时间段内的高级别环境信息。这将返回指定时间内的可用数据点。数据大约每小时记录一次。例如，如果请求 6 个小时的环境 CPU 数据，那么响应将包含请求 6 个小时内每个小时的 CPU 数据。
 
+ ### 环境端点 
+ 
+您可以使用以下端点来调用此 API 命令：`/api/v1/env`
+
 ### 环境度量值查询参数
 
 使用以下查询参数可以收集 CPU、磁盘、内存、网络和应用程序的度量值：
 
 <dl class="parml">
 <dt class="pt dlterm">metric</dt>
-<dd class="pd">以下一个或多个值，各值之间用逗号分隔：“memory”、“disk”、“cpu”、“network”和“apps”。</dd>
+<dd class="pd">以下一个或多个值，各值之间用逗号分隔：`memory`、`disk`、`cpu`、`network` 和 `apps`。</dd>
 <dt class="pt dlterm">startTime</dt>
 <dd class="pd">开始返回数据的最早时间点。如果未指定 startTime，那么将包含最早的可用数据点。例如，要收集下午 2 点到 5 点的数据，请将 startTime 指定为 2 PM。</dd>
 <dt class="pt dlterm">endTime</dt>
 <dd class="pd">结束返回数据的最晚时间点。如果未指定 endTime，那么将使用最新的数据点。例如，要收集下午 2 点到 5 点的数据，请将 endTime 指定为 5 PM。</dd>
 <dt class="pt dlterm">sort</dt>
-<dd class="pd">数据的返回顺序。有效值为“asc”（升序）和“desc”（降序）。缺省值为降序，即首先返回最新的数据。</dd>
+<dd class="pd">数据的返回顺序。有效值为 `asc`（升序）和 `desc`（降序）。缺省值为降序，即首先返回最新的数据。</dd>
 </dl>
+
+ 以下示例使用查询参数来收集环境的度量值：
+ 
+ ```
+ curl -b ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/admin/metrics/api/v1/env?metric=cpu,network,disk,apps,memory
+ ```
+{: codeblock}
 
 ### 环境度量值数据格式
 
@@ -1276,7 +1286,8 @@ https://console.<region>.bluemix.net.
 {
   "sample_time": 1477494000000,
   "memory": {
-    "physical": {
+    "cell": {
+      "physical": {
       "total_gb": 864,
       "used": {
         "value_gb": 336.84,
@@ -1289,6 +1300,23 @@ https://console.<region>.bluemix.net.
         "value_gb": 1287.59,
         "percent": 74.51
       }
+    },
+    },
+    "dea": {
+      "physical": {
+      "total_gb": 864,
+      "used": {
+        "value_gb": 336.84,
+        "percent": 38.99
+      }
+    },
+    "allocated": {
+      "reserved_gb": 1728,
+      "total_allocated": {
+        "value_gb": 1287.59,
+        "percent": 74.51
+      }
+    },
     },
     "memory_by_container": [
       {
@@ -1327,7 +1355,8 @@ https://console.<region>.bluemix.net.
 {
   "sample_time": 1477494000000,
   "disk": {
-    "physical": {
+    "cell": {
+      "physical": {
       "total_gb": 8100,
       "used": {
         "value_gb": 807,
@@ -1340,6 +1369,23 @@ https://console.<region>.bluemix.net.
         "value_gb": 1989.5,
         "percent": 12.28
       }
+    },
+    },
+    "dea": {
+      "physical": {
+      "total_gb": 8100,
+      "used": {
+        "value_gb": 807,
+        "percent": 9.96
+      }
+    },
+    "allocated": {
+      "reserved_gb": 16200,
+      "total_allocated": {
+        "value_gb": 1989.5,
+        "percent": 12.28
+      }
+    },
     },
     "disk_by_container": [
       {
@@ -1378,7 +1424,12 @@ https://console.<region>.bluemix.net.
 {
   "sample_time": 1477494000000,
   "cpu": {
-    "average_percent_cpu_used": 27.288461538461544,
+    "cell": {
+      "average_percent_cpu_used": 27.288461538461544
+    },
+    "dea": {
+      "average_percent_cpu_used": 27.288461538461544
+    },
     "cpu_by_container": [
       {
         "name": "dea_next/0",
@@ -1471,7 +1522,7 @@ https://console.<region>.bluemix.net.
 {: screen}
 
 * 要收集有关应用程序的数据记录，请使用以下数据格式：
- 
+
 ```
 {
   "sample_time": 1477494000000,
@@ -1505,11 +1556,11 @@ https://console.<region>.bluemix.net.
 ### 应用程序端点 
 
 您可以使用以下端点来调用此 API 命令：
-* /api/v1/app/cpu/physical 
-* /api/v1/app/memory/physical
-* /api/v1/app/memory/reserved
-* /api/v1/app/disk/physical
-* /api/v1/app/disk/reserved
+* `/api/v1/app/cpu/physical` 
+* `/api/v1/app/memory/physical`
+* `/api/v1/app/memory/reserved`
+* `/api/v1/app/disk/physical`
+* `/api/v1/app/disk/reserved`
 
 
 ### 应用程序查询参数
@@ -1524,7 +1575,17 @@ https://console.<region>.bluemix.net.
 <dt class="pt dlterm">count</dt>
 <dd class="pd">每次数据采样中返回的记录数。
 </dd>
+<dt class="pt dlterm">minValue</dt>
+<dd class="pd">针对指定度量值返回的最小值。如果未指定 minValue，那么会返回所有值。例如，要使用最少 20000 字节的物理内存来收集应用程序，请将 minValue 指定为 20000。
+</dd>
 </dl>
+
+以下示例收集应用程序的度量值：
+
+```
+curl -b ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/admin/metrics/api/v1/app/cpu/physical?count=5&startTime=2016-12-02T16:54:09.467Z
+```
+{: codeblock}
 
 ### 应用程序响应格式
 

@@ -1,4 +1,4 @@
-﻿---
+---
 
 
 
@@ -26,7 +26,7 @@ Cliquez sur le lien **Compte** pour définir des notifications, afficher l'utili
 
 Vous pouvez vous inscrire à un compte {{site.data.keyword.Bluemix_notm}} en utilisant un IBMid existant, en créant un nouvel IBMid ou en utilisant un ID fédéré. Un ID fédéré est un ID présent dans le domaine d'une société qui a été enregistré auprès d'IBM de sorte que le domaine et les données d'identification de l'utilisateur puissent être utilisés pour accéder aux applications Web IBM.  
 
-Un ID fédéré peut être utilisé pour s'inscrire à {{site.data.keyword.Bluemix_notm}} uniquement si votre société a déjà travaillé avec IBM.  L'enregistrement du domaine d'une société auprès d'IBM permet aux utilisateurs de se connecter pour recevoir des produits et des services IBM en utilisant leurs données d'identification d'utilisateur de société existantes. L'authentification est alors gérée par le fournisseur d'identité de votre société. Lorsque vous vous connectez à {{site.data.keyword.Bluemix_notm}} avec un ID fédéré, vous êtes invité à le faire via la page de connexion de votre société. Pour savoir comment demander à enregistrer le domaine de votre société ou de votre organisation auprès d'IBM ou pour obtenir plus d'informations sur cette opération, voir [IBMid Enterprise Federation Adoption Guide ![icône de lien externe](../icons/launch-glyph.svg)](https://ibm.box.com/v/IBMid-Federation-Guide){: new_window}. Un sponsor IBM, tel qu'un représentant du client ou un service de conseil, est requis lorsque vous demandez à enregistrer des ID fédérés.
+Un ID fédéré peut être utilisé pour s'inscrire à {{site.data.keyword.Bluemix_notm}} uniquement si votre société a déjà travaillé avec IBM. L'enregistrement du domaine d'une société auprès d'IBM permet aux utilisateurs de se connecter pour recevoir des produits et des services IBM en utilisant leurs données d'identification d'utilisateur de société existantes. L'authentification est alors gérée par le fournisseur d'identité de votre société. Lorsque vous vous connectez à {{site.data.keyword.Bluemix_notm}} avec un ID fédéré, vous êtes invité à le faire via la page de connexion de votre société. Pour savoir comment demander à enregistrer le domaine de votre société ou de votre organisation auprès d'IBM ou pour obtenir plus d'informations sur cette opération, voir [IBMid Enterprise Federation Adoption Guide ![icône de lien externe](../icons/launch-glyph.svg)](https://ibm.box.com/v/IBMid-Federation-Guide){: new_window}. Un sponsor IBM, tel qu'un représentant du client ou un service de conseil, est requis lorsque vous demandez à enregistrer des ID fédérés.
 
 | Méthodes d'inscription | Détails |    
 |-----------------|---------|
@@ -113,7 +113,7 @@ cliquer sur un mois
 particulier afin d'afficher l'utilisation pour ce mois. Sélectionnez
 **Toutes les organisations** dans la liste
 **Organisation** pour afficher l'utilisation de toutes
-les organisations du compte. 
+les organisations du compte.
 
 ## Mise à jour des informations de facturation
 {: #account_billing}

@@ -116,7 +116,7 @@ Führen Sie die folgenden Schritte aus, um Ihre Organisation umzubenennen:
 ## Eine vorhandene Organisation oder einen vorhandenen Bereich löschen
 {: #deleteorgs}
 
-Als Kontoeigner können Sie sich an den [{{site.data.keyword.Bluemix_notm}}-Support ![Symbol für externen Link](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window} wenden, um eine Organisation zu löschen.  
+Als Kontoeigner können Sie sich an den [{{site.data.keyword.Bluemix_notm}}-Support ![Symbol für externen Link](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window} wenden, um eine Organisation zu löschen. 
 
 **Hinweis:** Das Löschen von Operationen kann nicht rückgängig gemacht werden. Alle der Organisation zugeordneten Anwendungen und Services gehen verloren.
 

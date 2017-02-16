@@ -91,49 +91,49 @@ Weitere Informationen zum Einladen von Teammitgliedern über die {{site.data.key
 ## Zur IBMid wechseln
 {: #ibmid_switch}
 
-Für die Authentifizierung in SoftLayer wird jetzt eine IBMid verwendet, die eine einzige Anmeldung bei allen {{site.data.keyword.Bluemix_notm}}-Komponenten ermöglicht. Es wird ein Wechsel für vorhandene SoftLayer-Konten zur IBMid-Authentifizierung ermöglicht und Sie werden von einem Migrationsassistenten durch diesen Wechsel geführt.
+Für die Authentifizierung in SoftLayer wird jetzt eine IBMid verwendet, die eine einzige Anmeldung bei allen {{site.data.keyword.Bluemix_notm}}-Komponenten ermöglicht. Es wird ein Wechsel für vorhandene SoftLayer-Konten zur IBMid-Authentifizierung ermöglicht und Sie werden von einem Migrationsassistenten durch diesen Wechsel geführt. 
 {:shortdesc}
 
-Wenn Sie Masterbenutzer sind und keine Aufforderung zum Wechsel zur IBMid im {{site.data.keyword.slportal}} angezeigt wird, [wenden Sie sich an den IBM Support](https://console.ng.bluemix.net/docs/support/index.html#contacting-support), um Hilfe zum Aktivieren dieser Funktion zu erhalten. 
+Wenn Sie Masterbenutzer sind und keine Aufforderung zum Wechsel zur IBMid im {{site.data.keyword.slportal}} angezeigt wird, [wenden Sie sich an den IBM Support](https://console.ng.bluemix.net/docs/support/index.html#contacting-support), um Hilfe zum Aktivieren dieser Funktion zu erhalten.
 
-Sie können diesen Wechsel zur IBMid jederzeit abbrechen, solange der Prozess noch nicht abgeschlossen ist. Sie werden dann jedoch weiterhin aufgefordert, bei Ihrer nächsten Anmeldung zur IBMid zu wechseln. Jedes Konto, das mit einem {{site.data.keyword.Bluemix_notm}}-Konto verknüpft werden soll, muss zu einer eindeutigen IBMid mit einer eindeutigen E-Mail-Adresse gehören. 
+Sie können diesen Wechsel zur IBMid jederzeit abbrechen, solange der Prozess noch nicht abgeschlossen ist. Sie werden dann jedoch weiterhin aufgefordert, bei Ihrer nächsten Anmeldung zur IBMid zu wechseln. Jedes Konto, das mit einem {{site.data.keyword.Bluemix_notm}}-Konto verknüpft werden soll, muss zu einer eindeutigen IBMid mit einer eindeutigen E-Mail-Adresse gehören.
 
-Führen Sie folgende Schritte aus, um von Ihrem bisherigen SoftLayer-Benutzernamen zu einer IBMid zu wechseln: 
+Führen Sie folgende Schritte aus, um von Ihrem bisherigen SoftLayer-Benutzernamen zu einer IBMid zu wechseln:
 
- 1. Wenn Sie bei der ersten Eingabeaufforderung nach der Anmeldung **Später** ausgewählt, sich aber dann dazu entschlossen haben, den Wechsel zur IBMid-Authentifizierung in der aktuellen Sitzung zu beginnen, navigieren Sie zur Seite zum Bearbeiten des Benutzerprofils und klicken Sie auf **Zu IBMid wechseln**. 
- 2. Befolgen Sie die Anweisungen im Assistenten, um Ihre IBMid zu erstellen. Ihre IBMid ist eine eindeutige E-Mail-Adresse und kann nach der Erstellung nicht mehr geändert werden. Sie können die E-Mail-Adresse, die Ihrem Profil zugeordnet ist, später aktualisieren, aber die Standard-E-Mail-Adresse ist auf Ihre IBMid festgelegt. Sie erhalten eine E-Mail mit Ihrem Registrierungscode, sobald Sie den Migrationsassistenten abgeschlossen haben.  
- 3. Wenn Sie die E-Mail erhalten, folgen Sie dem Link oder kopieren Sie die URL in einen Browser und geben Sie Ihren Registrierungscode ein. Der Code ist 7 Tage lang gültig und kann nur einmal verwendet werden. 
+ 1. Wenn Sie bei der ersten Eingabeaufforderung nach der Anmeldung **Später** ausgewählt, sich aber dann dazu entschlossen haben, den Wechsel zur IBMid-Authentifizierung in der aktuellen Sitzung zu beginnen, navigieren Sie zur Seite zum Bearbeiten des Benutzerprofils und klicken Sie auf **Zu IBMid wechseln**.
+ 2. Befolgen Sie die Anweisungen im Assistenten, um Ihre IBMid zu erstellen. Ihre IBMid ist eine eindeutige E-Mail-Adresse und kann nach der Erstellung nicht mehr geändert werden. Sie können die E-Mail-Adresse, die Ihrem Profil zugeordnet ist, später aktualisieren, aber die Standard-E-Mail-Adresse ist auf Ihre IBMid festgelegt. Sie erhalten eine E-Mail mit Ihrem Registrierungscode, sobald Sie den Migrationsassistenten abgeschlossen haben. 
+ 3. Wenn Sie die E-Mail erhalten, folgen Sie dem Link oder kopieren Sie die URL in einen Browser und geben Sie Ihren Registrierungscode ein. Der Code ist 7 Tage lang gültig und kann nur einmal verwendet werden.
  
  
-Nachdem Sie zur IBMid-Authentifizierung gewechselt haben, können Sie sich nur noch mit Ihrer IBMid bei Ihrem Konto anmelden. Klicken Sie im Anmeldedialog auf **Mit IBMid anmelden**, anstatt Ihren SoftLayer-Benutzernamen und das Kennwort einzugeben. 
+Nachdem Sie zur IBMid-Authentifizierung gewechselt haben, können Sie sich nur noch mit Ihrer IBMid bei Ihrem Konto anmelden. Klicken Sie im Anmeldedialog auf **Mit IBMid anmelden**, anstatt Ihren SoftLayer-Benutzernamen und das Kennwort einzugeben.
  
-Wenn Sie Ihre Bestellung als neuer Kunde auschecken, werden Sie zur Angabe einer E-Mail-Adresse für Ihr bestehendes IBMid-Konto oder zur Erstellung eines neuen IBMid-Kontos aufgefordert. Wenn Sie eine neue IBMid erstellen, geben Sie die E-Mail-Adresse für Ihre neue IBMid ein. An diese E-Mail-Adresse wird die Einladungs-E-Mail gesendet und sie ist außerdem der Benutzername für Ihre neue IBMid. 
+Wenn Sie Ihre Bestellung als neuer Kunde auschecken, werden Sie zur Angabe einer E-Mail-Adresse für Ihr bestehendes IBMid-Konto oder zur Erstellung eines neuen IBMid-Kontos aufgefordert. Wenn Sie eine neue IBMid erstellen, geben Sie die E-Mail-Adresse für Ihre neue IBMid ein. An diese E-Mail-Adresse wird die Einladungs-E-Mail gesendet und sie ist außerdem der Benutzername für Ihre neue IBMid.
 
 ### Benutzern den Wechsel zur IBMid ermöglichen
 {: #link_accounts_resellers}
 
-In einigen Fällen muss ein Reseller oder Distributor aktivieren, dass die IBMid-Authentifizierung für ein Konto verwendet werden kann, bevor ein Benutzer zu einer IBMid wechseln kann.  
+In einigen Fällen muss ein Reseller oder Distributor aktivieren, dass die IBMid-Authentifizierung für ein Konto verwendet werden kann, bevor ein Benutzer zu einer IBMid wechseln kann. 
 
- * Um ein vorhandenes Konto mit den bisherigen SoftLayer-Berechtigungsnachweisen für die Verwendung der IBMid-Authentifizierung zu aktivieren, [wenden Sie sich an den IBM Support](https://console.ng.bluemix.net/docs/support/index.html#contacting-support), um die IBMid-Migration zu aktivieren. Diese Aktivierung ist für jedes vorhandene Endbenutzerkonto erforderlich, das mit einem {{site.data.keyword.Bluemix_notm}}-Konto verknüpft werden soll. 
+ * Um ein vorhandenes Konto mit den bisherigen SoftLayer-Berechtigungsnachweisen für die Verwendung der IBMid-Authentifizierung zu aktivieren, [wenden Sie sich an den IBM Support](https://console.ng.bluemix.net/docs/support/index.html#contacting-support), um die IBMid-Migration zu aktivieren. Diese Aktivierung ist für jedes vorhandene Endbenutzerkonto erforderlich, das mit einem {{site.data.keyword.Bluemix_notm}}-Konto verknüpft werden soll.
  
- * Um sicherzustellen, dass neue Benutzerkonten mit einer IBMid erstellt werden, muss das Attribut `CREATE_NEW_ACCOUNT_WITH_IBMid_AUTHENTICATION` auf das direkte Masterbenutzerkonto festgelegt werden. [Wenden Sie sich an den IBM Support](https://console.ng.bluemix.net/docs/support/index.html#contacting-support) oder Ihren Anbieter, um diese Einstellung für Ihre Konten vornehmen zu lassen. 
+ * Um sicherzustellen, dass neue Benutzerkonten mit einer IBMid erstellt werden, muss das Attribut `CREATE_NEW_ACCOUNT_WITH_IBMid_AUTHENTICATION` auf das direkte Masterbenutzerkonto festgelegt werden. [Wenden Sie sich an den IBM Support](https://console.ng.bluemix.net/docs/support/index.html#contacting-support) oder Ihren Anbieter, um diese Einstellung für Ihre Konten vornehmen zu lassen.
  
 ### Benutzerkonten verknüpfen
 {: #link_user_accounts}
-Nachdem Ihre Benutzer zur IBMid-Authentifizierung gewechselt haben, können Reseller und Distributoren SoftLayer- und {{site.data.keyword.Bluemix_notm}}-Konten verknüpfen. 
+Nachdem Ihre Benutzer zur IBMid-Authentifizierung gewechselt haben, können Reseller und Distributoren SoftLayer- und {{site.data.keyword.Bluemix_notm}}-Konten verknüpfen.
 
 **Hinweis:** 
-  * Der Masterbenutzer des Kontos, das verknüpft wird, muss eine IBMid sein. 
-  * Melden Sie sich bei jedem Endbenutzerkonto als Masterbenutzer an. Navigieren Sie zur Benutzerprofilseite und klicken Sie auf **Zu IBMid wechseln**. 
-  * Jedes Konto, das mit einem {{site.data.keyword.Bluemix_notm}}-Konto verknüpft wird, muss zu einer eindeutigen IBMid mit einer eindeutigen E-Mail-Adresse gehören. Zu einer IBMid können zwar mehrere SoftLayer-Konten gehören, jedoch können die Konten nicht mit {{site.data.keyword.Bluemix_notm}}-Konten verknüpft werden. Wenn eine IBMid der Masterbenutzer für mehrere SoftLayer-Konten ist und Sie diese Konten mit {{site.data.keyword.Bluemix_notm}}-Konten verknüpfen möchten, müssen Sie die Masterbenutzer für jedes Konto in eine jeweils eindeutige IBMid ändern. Wenden Sie sich an den [IBM SoftLayer-Support ![Symbol für externen Link](../icons/launch-glyph.svg)](https://knowledgelayer.softlayer.com/topic/support){: new_window}, um den Masterbenutzer für ein SoftLayer-Konto zu ändern. 
+  * Der Masterbenutzer des Kontos, das verknüpft wird, muss eine IBMid sein.
+  * Melden Sie sich bei jedem Endbenutzerkonto als Masterbenutzer an. Navigieren Sie zur Benutzerprofilseite und klicken Sie auf **Zu IBMid wechseln**.
+  * Jedes Konto, das mit einem {{site.data.keyword.Bluemix_notm}}-Konto verknüpft wird, muss zu einer eindeutigen IBMid mit einer eindeutigen E-Mail-Adresse gehören. Zu einer IBMid können zwar mehrere SoftLayer-Konten gehören, jedoch können die Konten nicht mit {{site.data.keyword.Bluemix_notm}}-Konten verknüpft werden. Wenn eine IBMid der Masterbenutzer für mehrere SoftLayer-Konten ist und Sie diese Konten mit {{site.data.keyword.Bluemix_notm}}-Konten verknüpfen möchten, müssen Sie die Masterbenutzer für jedes Konto in eine jeweils eindeutige IBMid ändern. Wenden Sie sich an den [IBM SoftLayer-Support ![Symbol für externen Link](../icons/launch-glyph.svg)](https://knowledgelayer.softlayer.com/topic/support){: new_window}, um den Masterbenutzer für ein SoftLayer-Konto zu ändern.
   
-Führen Sie die folgenden Schritte aus, um jedes Konto mit einem {{site.data.keyword.Bluemix_notm}}-Konto zu verknüpfen:  
+Führen Sie die folgenden Schritte aus, um jedes Konto mit einem {{site.data.keyword.Bluemix_notm}}-Konto zu verknüpfen: 
 
- 1. Um ein neues {{site.data.keyword.Bluemix_notm}}-Konto zu erstellen oder um eine Verknüpfung mit einem vorhandenen {{site.data.keyword.Bluemix_notm}}-Konto zu erstellen, melden Sie sich als Masterbenutzer bei Ihrem SoftLayer-Konto an und klicken Sie auf den **{{site.data.keyword.Bluemix_notm}}**-Link. Dadurch können Sie entweder ein neues {{site.data.keyword.Bluemix_notm}}-Konto erstellen oder eine Verknüpfung zu einem vorhandenen {{site.data.keyword.Bluemix_notm}}-Konto herstellen. Die IBMid, die der Masterbenutzer für das SoftLayer-Konto ist, muss der Eigner des Bluemix-Kontos sein, zu dem die Verknüpfung hergestellt wird. Befolgen Sie die Eingabeaufforderungen im Assistenten und fügen Sie die Benutzer im SoftLayer-Konto dem {{site.data.keyword.Bluemix_notm}}-Konto hinzu.  
- 2. Nachdem Sie das Konto verknüpft haben, informieren Sie die Endbenutzer des Kontos darüber, dass sie zur IBMid migrieren müssen. Endbenutzer können dann in der {{site.data.keyword.Bluemix_notm}}-Konsole auf die Dashboards 'Infrastruktur', 'Anwendungen' und 'Services' zugreifen. 
- 3. Wenn dem verknüpften Konto neue Benutzer hinzugefügt werden, müssen Sie sie sowohl dem SoftLayer-Konto als auch dem {{site.data.keyword.Bluemix_notm}}-Konto hinzufügen, damit sie Zugriff auf alle Funktionen in der einheitlichen Konsole erhalten. 
+ 1. Um ein neues {{site.data.keyword.Bluemix_notm}}-Konto zu erstellen oder um eine Verknüpfung mit einem vorhandenen {{site.data.keyword.Bluemix_notm}}-Konto zu erstellen, melden Sie sich als Masterbenutzer bei Ihrem SoftLayer-Konto an und klicken Sie auf den **{{site.data.keyword.Bluemix_notm}}**-Link. Dadurch können Sie entweder ein neues {{site.data.keyword.Bluemix_notm}}-Konto erstellen oder eine Verknüpfung zu einem vorhandenen {{site.data.keyword.Bluemix_notm}}-Konto herstellen. Die IBMid, die der Masterbenutzer für das SoftLayer-Konto ist, muss der Eigner des Bluemix-Kontos sein, zu dem die Verknüpfung hergestellt wird. Befolgen Sie die Eingabeaufforderungen im Assistenten und fügen Sie die Benutzer im SoftLayer-Konto dem {{site.data.keyword.Bluemix_notm}}-Konto hinzu. 
+ 2. Nachdem Sie das Konto verknüpft haben, informieren Sie die Endbenutzer des Kontos darüber, dass sie zur IBMid migrieren müssen. Endbenutzer können dann in der {{site.data.keyword.Bluemix_notm}}-Konsole auf die Dashboards 'Infrastruktur', 'Anwendungen' und 'Services' zugreifen.
+ 3. Wenn dem verknüpften Konto neue Benutzer hinzugefügt werden, müssen Sie sie sowohl dem SoftLayer-Konto als auch dem {{site.data.keyword.Bluemix_notm}}-Konto hinzufügen, damit sie Zugriff auf alle Funktionen in der einheitlichen Konsole erhalten.
  
-**Empfehlung:** Migrieren Sie nur die Endbenutzerkonten zur IBMid. Migrieren Sie keine Brandkonten. Dies sind übergeordnete Konten für Endbenutzerkonten und enthalten keine Ressourcen. Brandkontenbenutzer, die zur IBMid migrieren, können sich anschließend nicht mehr bei beim BAP (Brand Agent Portal) anmelden. 
+**Empfehlung:** Migrieren Sie nur die Endbenutzerkonten zur IBMid. Migrieren Sie keine Brandkonten. Dies sind übergeordnete Konten für Endbenutzerkonten und enthalten keine Ressourcen. Brandkontenbenutzer, die zur IBMid migrieren, können sich anschließend nicht mehr bei beim BAP (Brand Agent Portal) anmelden.
 
 <!--
 ### Mapping multiple SoftLayer accounts to one IBMid

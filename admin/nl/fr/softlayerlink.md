@@ -1,4 +1,4 @@
-﻿---
+---
 
  
 
@@ -138,14 +138,14 @@ Désormais, l'authentification dans SoftLayer utilise l'IBMid afin de
 fournir une connexion unique pour {{site.data.keyword.Bluemix_notm}}
 dans son intégralité. Les comptes SoftLayer existants sont activés pour
 passer à l'authentification par IBMid ; l'assistant de migration vous
-aide à effectuer cette opération.
+aide à effectuer cette opération. 
 {:shortdesc}
 
 Si vous êtes un utilisateur principal et que vous voyez pas d'invite
 indiquant de passer à l'IBMid dans {{site.data.keyword.slportal}},
 [contactez
 le support IBM](https://console.ng.bluemix.net/docs/support/index.html#contacting-support) pour obtenir de l'aide sur l'activation de cette
-fonction. 
+fonction.
 
 Lorsque vous commencez à passer à l'IBMid, vous pouvez toujours annuler
 cette opération avant de terminer le processus. Vous serez cependant
@@ -170,7 +170,7 @@ que vous avez définie pour votre IBMid. Vous recevrez un courrier
 l'assistant de migration. 
  3. Lorsque vous recevez le courrier électronique, suivez le lien ou copiez l'adresse URL dans un navigateur et entrez votre code
 d'enregistrement. Ce code est valide pendant 7 jours et ne peut être utilisé
-qu'une seule fois. 
+qu'une seule fois.
  
  
 Après avoir opté pour l'authentification par IBMid, vous ne pouvez vous
@@ -204,7 +204,7 @@ IBMid, définissez l'attribut
 `CREATE_NEW_ACCOUNT_WITH_IBMid_AUTHENTICATION` sur le compte
 de l'utilisateur principal immédiat. [Contactez
 le support IBM](https://console.ng.bluemix.net/docs/support/index.html#contacting-support) ou votre fournisseur pour que cet attribut soit défini
-sur vos comptes. 
+sur vos comptes.
  
 ### Liaison de vos comptes utilisateur
 {: #link_user_accounts}

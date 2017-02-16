@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-01-24"
 
 ---
 
@@ -1243,9 +1243,8 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
 
 您可以從地區特定端點存取下列各節所說明的「度量值 API」，例如： 
 
- ```
-https://console.<region>.bluemix.net.
- ```
+ `https://console.<region>.bluemix.net/admin/metrics`
+{: codeblock}
 
 **附註**：
 
@@ -1256,20 +1255,31 @@ https://console.<region>.bluemix.net.
 
 您可以使用實驗性環境 API，在您指定的時段收集高階環境資訊。系統會傳回在您指定的時間內可用的資料點。大約每一小時記錄一次資料。比方說，如果您已對環境要求六小時的 CPU 資料，則回應將包括所要求的六個小時的每一小時的 CPU 資料。
 
+ ### 環境端點 
+ 
+您可以使用下列端點來呼叫此 API 指令：`/api/v1/env`
+
 ### 環境度量值查詢參數
 
 使用下列查詢參數，您可以收集 CPU、磁碟、記憶體、網路及應用程式的度量值：
 
 <dl class="parml">
 <dt class="pt dlterm">metric</dt>
-<dd class="pd">下列一個以上的值，以逗點區隔：'memory'、'disk'、'cpu'、'network' 及 'apps'。</dd>
+<dd class="pd">下列一個以上的值，以逗點區隔：`memory`、`disk`、`cpu`、`network` 及 `apps`。</dd>
 <dt class="pt dlterm">startTime</dt>
 <dd class="pd">從中傳回資料的最早時間點。如果未指定 startTime，則會包括最早的可用資料點。例如，若要收集 2 PM 與 5 PM 之間的資料，請將 startTime 指定為 2 PM。</dd>
 <dt class="pt dlterm">endTime</dt>
 <dd class="pd">從中傳回資料的最後時間點。如果未指定 endTime，則會使用最新的資料點。例如，若要收集 2 PM 與 5 PM 之間的資料，請將 endTime 指定為 5 PM。</dd>
 <dt class="pt dlterm">sort</dt>
-<dd class="pd">傳回資料時所依據的順序。有效值為 'asc'（遞增）及 'desc'（遞減）。預設值為遞減，並先傳回最新資料。</dd>
+<dd class="pd">傳回資料時所依據的順序。有效值為 `asc`（遞增）及 `desc`（遞減）。預設值為遞減，並先傳回最新資料。</dd>
 </dl>
+
+ 下列範例使用查詢參數來收集環境的度量值：
+ 
+ ```
+ curl -b ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/admin/metrics/api/v1/env?metric=cpu,network,disk,apps,memory
+ ```
+{: codeblock}
 
 ### 環境度量值資料格式
 
@@ -1281,7 +1291,8 @@ https://console.<region>.bluemix.net.
 {
   "sample_time": 1477494000000,
   "memory": {
-    "physical": {
+    "cell": {
+      "physical": {
       "total_gb": 864,
       "used": {
         "value_gb": 336.84,
@@ -1294,6 +1305,23 @@ https://console.<region>.bluemix.net.
         "value_gb": 1287.59,
         "percent": 74.51
       }
+    },
+    },
+    "dea": {
+      "physical": {
+      "total_gb": 864,
+      "used": {
+        "value_gb": 336.84,
+        "percent": 38.99
+      }
+    },
+    "allocated": {
+      "reserved_gb": 1728,
+      "total_allocated": {
+        "value_gb": 1287.59,
+        "percent": 74.51
+      }
+    },
     },
     "memory_by_container": [
       {
@@ -1332,7 +1360,8 @@ https://console.<region>.bluemix.net.
 {
   "sample_time": 1477494000000,
   "disk": {
-    "physical": {
+    "cell": {
+      "physical": {
       "total_gb": 8100,
       "used": {
         "value_gb": 807,
@@ -1345,6 +1374,23 @@ https://console.<region>.bluemix.net.
         "value_gb": 1989.5,
         "percent": 12.28
       }
+    },
+    },
+    "dea": {
+      "physical": {
+      "total_gb": 8100,
+      "used": {
+        "value_gb": 807,
+        "percent": 9.96
+      }
+    },
+    "allocated": {
+      "reserved_gb": 16200,
+      "total_allocated": {
+        "value_gb": 1989.5,
+        "percent": 12.28
+      }
+    },
     },
     "disk_by_container": [
       {
@@ -1383,7 +1429,12 @@ https://console.<region>.bluemix.net.
 {
   "sample_time": 1477494000000,
   "cpu": {
-    "average_percent_cpu_used": 27.288461538461544,
+    "cell": {
+      "average_percent_cpu_used": 27.288461538461544
+    },
+    "dea": {
+      "average_percent_cpu_used": 27.288461538461544
+    },
     "cpu_by_container": [
       {
         "name": "dea_next/0",
@@ -1476,7 +1527,7 @@ https://console.<region>.bluemix.net.
 {: screen}
 
 * 若要收集有關應用程式的資料記錄，請使用下列資料格式：
- 
+
 ```
 {
   "sample_time": 1477494000000,
@@ -1510,11 +1561,11 @@ https://console.<region>.bluemix.net.
 ### 應用程式端點 
 
 您可以使用下列端點來呼叫此 API 指令：
-* /api/v1/app/cpu/physical 
-* /api/v1/app/memory/physical
-* /api/v1/app/memory/reserved
-* /api/v1/app/disk/physical
-* /api/v1/app/disk/reserved
+* `/api/v1/app/cpu/physical` 
+* `/api/v1/app/memory/physical`
+* `/api/v1/app/memory/reserved`
+* `/api/v1/app/disk/physical`
+* `/api/v1/app/disk/reserved`
 
 
 ### 應用程式查詢參數
@@ -1529,7 +1580,17 @@ https://console.<region>.bluemix.net.
 <dt class="pt dlterm">count</dt>
 <dd class="pd">要在每一個資料範例內傳回的記錄數目。
 </dd>
+<dt class="pt dlterm">minValue</dt>
+<dd class="pd">針對指定度量值要傳回的最小值。如果未指定 minValue，會傳回所有值。例如，若要收集使用至少 20000 位元組實體記憶體的應用程式，請指定 minValue 20000。
+</dd>
 </dl>
+
+下列範例會收集應用程式的度量值：
+
+```
+curl -b ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/admin/metrics/api/v1/app/cpu/physical?count=5&startTime=2016-12-02T16:54:09.467Z
+```
+{: codeblock}
 
 ### 應用程式回應格式
 

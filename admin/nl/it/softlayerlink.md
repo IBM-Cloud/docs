@@ -91,14 +91,14 @@ Per ulteriori informazioni su come invitare i membri del team attraverso l'inter
 ## Passaggio all'ID IBM
 {: #ibmid_switch}
 
-L'autenticazione in SoftLayer adesso utilizza l'ID IBM per fornire un singolo accesso per tutti i {{site.data.keyword.Bluemix_notm}}. Gli account SoftLayer esistenti stanno venendo abilitati per il passaggio all'autenticazione con ID IBM e una procedura guidata di migrazione ti guiderà in questo passaggio.
+L'autenticazione in SoftLayer adesso utilizza l'ID IBM per fornire un singolo accesso per tutti i {{site.data.keyword.Bluemix_notm}}. Gli account SoftLayer esistenti stanno venendo abilitati per il passaggio all'autenticazione con ID IBM e una procedura guidata di migrazione ti guiderà in questo passaggio. 
 {:shortdesc}
 
 Se sei un utente master o non visualizzi un prompt per passare a ID IBM nel {{site.data.keyword.slportal}}, [Contatta il supporto IBM](https://console.ng.bluemix.net/docs/support/index.html#contacting-support) per supporto su come abilitare questa funzione.
 
 Dopo aver iniziato il passaggio all'ID IBM, puoi sempre annullare questo passaggio prima del completamento del processo. Tuttavia, ti continuerà a venire richiesto di passare all'ID IBM la prossima volta che effettuerai l'accesso. Ogni account che pianifichi di collegare all'account {{site.data.keyword.Bluemix_notm}} deve essere gestito da un solo ID IBM univoco con un indirizzo email univoco.
 
-Per passare il tuo nome utente SoftLayer esistente a un ID IBM, completa la seguente procedura: 
+Per passare il tuo nome utente SoftLayer esistente a un ID IBM, completa la seguente procedura:
 
  1. Se hai selezionato **Dopo** nella schermata iniziale dopo l'accesso, ma hai deciso di voler iniziare il passaggio all'autenticazione tramite ID IBM nella sessione corrente, vai alla pagina Modifica profilo utente e fai clic su **Passa a ID IBM**.
  2. Segui le istruzioni della procedura guidata per creare il tuo ID IBM. Il tuo ID IBM è un indirizzo email univoco e non può essere modificato dopo la sua creazione. Puoi aggiornare l'e-mail associata al tuo profilo in seguito, l'email predefinita viene impostata su quello che hai definito per l'ID IBM. Riceverai un'email con il tuo codice di registrazione che indica che hai completato la procedura guidata di migrazione. 

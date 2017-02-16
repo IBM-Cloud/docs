@@ -41,7 +41,8 @@ lastupdated: "2016-12-05"
 <dt>团队成员</dt>
 <dd>组织和空间中具有基本许可权的角色。您必须先分配到组织，然后才能被授予组织内空间的其他许可权。有关详细信息，请参阅[用户和角色](users_roles.html#userrolesinfo)。</dd>
 <dt>域</dt>
-<dd>在分配给组织的因特网上提供路径。路径具有子域和域。子域通常是应用程序名称。域可能是系统域，或者为应用程序注册的定制域。请参阅[管理定制域](orgs_spaces.html#managedomains)。<br/><p>**注**：添加定制域时，必须将 DNS 服务器配置为解析您的定制域，以指向 {{site.data.keyword.Bluemix_notm}} 系统域。这样，当 {{site.data.keyword.Bluemix_notm}} 接收到定制域的请求时，它可以将其正确路由到您的应用程序。</p></dd>
+<dd>在分配给组织的因特网上提供路径。路径具有子域和域。子域通常是应用程序名称。域可能是系统域，或者为应用程序注册的定制域。请参阅[管理定制域](orgs_spaces.html#managedomains)。<br/>
+<p>**注**：添加定制域时，必须将 DNS 服务器配置为解析您的定制域，以指向 {{site.data.keyword.Bluemix_notm}} 系统域。这样，当 {{site.data.keyword.Bluemix_notm}} 接收到定制域的请求时，它可以将其正确路由到您的应用程序。</p></dd>
 <dt>配额</dt>
 <dd>表示组织的资源限制，包括可分配供组织使用的服务数和内存量。创建组织时会分配配额。组织的空间中任何应用程序或服务都会使用一定的配额。通过“现买现付”或“预订”套餐，可以根据您组织的需求变化来调整 Cloud Foundry 应用程序和容器的配额。请参阅[管理配额](orgs_spaces.html#managequota)。</dd>
 </dl>
@@ -156,19 +157,18 @@ lastupdated: "2016-12-05"
 4. 如果您已在多个区域定义空间，请选择要查看的特定区域。
 5. 单击**配额**。 
 6. 缺省情况下会打开 **Cloud Foundry** 配额页面。您可以查看以下资源的配额详细信息：
-
  * 内存
  * 服务
  * 套餐
  * 价格
 7. 单击**容器**以查看已用和可用的容器配额分配。容器分配根据价格套餐而有所不用。您可以查看以下资源的配额详细信息：
-
  * 内存
  * 公共 IP
 
 **注：**在 {{site.data.keyword.Bluemix_notm}} 悉尼区域中无法使用容器。 
 
-有关容器的更多信息，请参阅“容器”文档中的[配额](/docs/containers/container_planning_org_ov.html#container_planning_quota)。要更改为组织所分配的配额，必须开具支持凭单。有关开具支持凭单的更多信息，请参阅[获取客户支持](/docs/support/index.html#contacting-support)。 
+有关容器的更多信息，请参阅“容器”文档中的[配额](/docs/containers/container_planning_org_ov.html#container_planning_quota)。
+要更改为组织所分配的配额，必须开具支持凭单。有关开具支持凭单的更多信息，请参阅[获取客户支持](/docs/support/index.html#contacting-support)。 
 
 ## 管理域
 {: #managedomains}

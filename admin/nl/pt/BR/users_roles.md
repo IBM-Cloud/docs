@@ -15,11 +15,12 @@ lastupdated: "2016-12-05"
 {:screen: .screen}
 {:new_window: target="_blank"}
 
+
 # Gerenciando membros da equipe e funções
 {: #userroles}
 
 A partir da página de **Diretório da equipe** para a sua conta, é possível gerenciar membros da equipe existentes e suas funções em sua organização e espaços, bem como convidar novos
-membros da equipe. Para acessar o diretório da equipe de sua conta, clique em **Conta** &gt; **Diretório de equipe**. 
+membros da equipe. Para acessar o diretório da equipe de sua conta, clique em **Conta** > **Diretório de equipe**.
 {:shortdesc}
 
 Proprietários da conta executam todas as operações nas organizações e espaços, incluindo o gerenciamento de membros da equipe e de suas funções designadas. Gerenciadores de organização têm acesso para
@@ -32,7 +33,7 @@ funções. Verifique as informações a seguir, para saber mais sobre funções.
 
 No nível de conta, há duas funções que permitem o acesso a diferentes recursos de gerenciamento de conta:
 
-| Função da conta | Permissões |    
+| Função da conta | Permissões |
 |----------------|---------|
 |Proprietário | Um proprietário para a conta tem acesso ao seu perfil, diretório da equipe, às suas informações de faturamento, notificações de gastos e ao seu painel de uso. A partir da página de diretório da
 equipe, o proprietário pode convidar novos membros da equipe e ajustar funções. O proprietário também pode incluir créditos promocionais, configurar ou mudar o limite de faturamento, configurar o acesso de
@@ -48,7 +49,7 @@ funções na página **Diretório da equipe**.
 
 As funções a seguir podem ser designadas no nível de organização:
 
-| Função organizacional | Permissões |    
+| Função organizacional | Permissões |
 |-------------------|-------------|
 |Gerente | Gerenciadores de organização podem criar, visualizar, editar ou excluir espaços dentro da organização, visualizar o uso e a cota da organização, convidar membros da equipe para a organização,
 gerenciar quem tem acesso à organização e às suas funções na organização e gerenciar domínios customizados para a organização. |
@@ -59,7 +60,7 @@ cota para a organização. Essa função é designada a todos os convidados, exc
 
 As funções a seguir podem ser designadas no nível de espaço:
 
-| Função de espaço | Permissões |    
+| Função de espaço | Permissões |
 |------------|-------------|
 |Gerente | Gerenciadores de espaço podem incluir membros da equipe existentes e gerenciar funções dentro do espaço. O gerenciador de espaço também pode visualizar o número de instâncias, ligações de serviço e
 o uso recurso para cada aplicativo no espaço. |
@@ -111,20 +112,25 @@ Proprietários da conta e gerenciadores de organização podem convidar membros 
 Clique em **Visualizar pendente**, para verificar se os convites estão pendentes ou aceitos. É possível optar por reenviar o e-mail de convite ou cancelar o convite para um convite
 pendente a qualquer momento.
 
+
 ### Incluindo membros da equipe do SoftLayer
-Se você tiver uma conta do SoftLayer vinculada à sua conta do {{site.data.keyword.Bluemix_notm}}, poderá incluir os membros de sua equipe do SoftLayer.
- 1. Acesse **Conta** > **Convidar membros da equipe**. 
- 2. Clique em **Incluir** na seção **Incluir membros da equipe do SoftLayer** para autenticar em sua conta do SoftLayer e visualizar uma lista de membros da equipe a partir de sua conta do SoftLayer. 
- 
-Incluir membros da equipe em sua conta do {{site.data.keyword.Bluemix_notm}} não lhes concede acesso à infraestrutura do {{site.data.keyword.Bluemix_notm}}. Para fornecer aos usuários acesso ao painel Infraestrutura, acesse **Infraestrutura** > **Conta** > **Usuários** e clique no link **Incluir usuário**. Deve-se ter permissão para incluir usuários.
- 
- Para obter mais informações sobre a inclusão de membros da equipe a partir da sua conta do SoftLayer, consulte
-[Convidando membros da equipe do SoftLayer para o {{site.data.keyword.Bluemix_notm}}](/docs/admin/softlayerlink.html#invite_users).
+
+Se você tiver uma conta do SoftLayer vinculada à sua conta do Bluemix, será possível incluir
+os membros da sua equipe do SoftLayer.
+
+1. Acesse **Conta** > **Convidar membros da equipe**.  
+2. Clique em **Incluir** na seção **Incluir membros da equipe do SoftLayer** para autenticar em sua conta do SoftLayer e visualizar uma lista de membros da equipe a partir de sua conta do SoftLayer.
+
+Incluir membros da equipe em sua conta do Bluemix não concede a eles acesso à infraestrutura do Bluemix. Para fornecer aos usuários acesso ao painel Infraestrutura, acesse **Infraestrutura** > **Conta** > **Usuários** e clique no link **Incluir usuário**. Deve-se ter permissão para incluir usuários.
+
+Para obter mais informações sobre a inclusão de membros da equipe da sua conta do SoftLayer,
+veja [Convidando membros da equipe do SoftLayer para o Bluemix](https://console.ng.bluemix.net/docs/admin/softlayerlink.html#invite_users).
+
 
 ## Editando Funções
 {: #editinguserroles}
 
-Proprietários da conta e gerenciadores de organização podem editar funções de organização e espaço para membros da equipe existentes na página **Diretório da equipe**. 
+Proprietários da conta e gerenciadores de organização podem editar funções de organização e espaço para membros da equipe existentes na página **Diretório da equipe**.
 
 1. Clique em **Conta** &gt; **Diretório de equipe**.
 2. Localize o membro da equipe cujas funções você deseja editar.

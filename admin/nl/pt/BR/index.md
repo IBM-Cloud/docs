@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-01-24"
 
 ---
 
@@ -815,7 +815,7 @@ Uma cota representa os limites de recurso para as organizações em seu ambiente
 <ol>
 <li>Clique na barra no gráfico para a organização que deseja editar na seção de uso de memória da Organização ou selecione o nome da organização a partir da seção Lista de organizações. Na página Informações da organização, é possível renomear a organização e incluir ou remover gerentes.
 <p><strong>Nota</strong>: se você selecionar um plano de cota que não seja suficiente para o uso atual para a organização, receberá uma mensagem.</p></li>
-<li>Clique em <strong>Cloud Foundry</strong> ou <strong>Contêineres</strong>. Por padrão, a página de cota do Cloud Foundry é aberta.
+<li>Clique em <strong>Cloud Foundry</strong> ou <strong>Contêineres</strong>.  Por padrão, a página de cota do Cloud Foundry é aberta. 
 <ul>
 <li>Na página Cloud Foundry, é possível selecionar um plano e visualizar os detalhes de cota para os recursos a seguir:
 <ul>
@@ -1296,9 +1296,8 @@ comando:
 
 As APIs métricas que são descritas nas seções a seguir podem ser acessadas do terminal específico da região, por exemplo: 
 
- ```
-https://console.<region>.bluemix.net.
- ```
+ `https://console.<region>.bluemix.net/admin/metrics`
+{: codeblock}
 
 **Notas**:
 
@@ -1309,20 +1308,31 @@ https://console.<region>.bluemix.net.
 
 É possível usar a API de ambiente experimental para reunir informações de alto nível do ambiente durante um período especificado. Os pontos de dados disponíveis dentro do tempo especificado são retornados. Os dados são registrados aproximadamente a cada hora. Se, por exemplo, você solicitasse seis horas de dados de CPU para o ambiente, a resposta incluiria dados de CPU para cada uma das seis horas solicitadas.
 
+ ### Terminais de ambiente 
+ 
+É possível usar o terminal a seguir para chamar este comando de API:  `/api/v1/env`
+
 ### Parâmetros de consulta de métricas de ambiente
 
 Usando os parâmetros de consulta a seguir, é possível reunir métricas para seu disco, CPU, memória, rede e apps:
 
 <dl class="parml">
 <dt class="pt dlterm">métrico</dt>
-<dd class="pd">Um ou mais dos valores a seguir, separados por vírgulas: 'memory', 'disk', 'cpu', 'network' e 'apps.'</dd>
+<dd class="pd">Um ou mais dos valores a seguir, separados por vírgulas: `memory`, `disk`, `cpu`, `network` e `apps`.</dd>
 <dt class="pt dlterm">startTime</dt>
 <dd class="pd">O momento mais antigo a partir do qual os dados são retornados. Se nenhum startTime for especificado, o ponto de dados disponível mais antigo será incluído. Por exemplo, para reunir dados entre 14h e 17h, especifique um startTime de 2 PM.</dd>
 <dt class="pt dlterm">endTime</dt>
 <dd class="pd">O momento mais recente a partir do qual os dados são retornados. Se nenhum endTime for especificado, o ponto de dados mais recente será usado. Por exemplo, para reunir dados entre 14h e 17h, especifique um endTime de 5 PM.</dd>
 <dt class="pt dlterm">ordenação</dt>
-<dd class="pd">A ordem na qual os dados são retornados. Os valores válidos são 'asc' (ascendente) e 'desc' (decrescente). O padrão é decrescente, retornando os dados mais recentes primeiro. </dd>
+<dd class="pd">A ordem na qual os dados são retornados. Os valores válidos são `asc` (ascendente) e `desc` (decrescente). O padrão é decrescente, retornando os dados mais recentes primeiro. </dd>
 </dl>
+
+ O exemplo a seguir usa os parâmetros de consulta para reunir métricas sobre o seu ambiente:
+ 
+ ```
+ curl -b ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/admin/metrics/api/v1/env?metric=cpu,network,disk,apps,memory
+ ```
+{: codeblock}
 
 ### Formato de dados de métricas de ambiente
 
@@ -1334,19 +1344,37 @@ As seções a seguir fornecem o formato de dados.
 {
   "sample_time": 1477494000000,
   "memory": {
-    "physical": {
-      "total_gb": 864,
+    "cell": {
+      "physical": {
+        "total_gb": 864,
       "used": {
-        "value_gb": 336.84,
+          "value_gb": 336.84,
         "percent": 38.99
       }
-    },
+      },
     "allocated": {
-      "reserved_gb": 1728,
+        "reserved_gb": 1728,
       "total_allocated": {
-        "value_gb": 1287.59,
+          "value_gb": 1287.59,
         "percent": 74.51
       }
+      },
+    },
+    "dea": {
+      "physical": {
+      	"total_gb": 864,
+      "used": {
+          "value_gb": 336.84,
+        "percent": 38.99
+      }
+      },
+    "allocated": {
+        "reserved_gb": 1728,
+      "total_allocated": {
+          "value_gb": 1287.59,
+        "percent": 74.51
+      }
+      },
     },
     "memory_by_container": [
       {
@@ -1385,19 +1413,37 @@ As seções a seguir fornecem o formato de dados.
 {
   "sample_time": 1477494000000,
   "disk": {
-    "physical": {
-      "total_gb": 8100,
+    "cell": {
+      "physical": {
+        "total_gb": 8100,
       "used": {
-        "value_gb": 807,
+          "value_gb": 807,
         "percent": 9.96
       }
-    },
+      },
     "allocated": {
-      "reserved_gb": 16200,
+        "reserved_gb": 16200,
       "total_allocated": {
-        "value_gb": 1989.5,
+          "value_gb": 1989.5,
         "percent": 12.28
       }
+      },
+    },
+    "dea": {
+      "physical": {
+        "total_gb": 8100,
+      "used": {
+          "value_gb": 807,
+        "percent": 9.96
+      }
+      },
+    "allocated": {
+        "reserved_gb": 16200,
+      "total_allocated": {
+          "value_gb": 1989.5,
+        "percent": 12.28
+      }
+      },
     },
     "disk_by_container": [
       {
@@ -1436,7 +1482,12 @@ As seções a seguir fornecem o formato de dados.
 {
   "sample_time": 1477494000000,
   "cpu": {
-    "average_percent_cpu_used": 27.288461538461544,
+    "cell": {
+      "average_percent_cpu_used": 27.288461538461544
+    },
+    "dea": {
+      "average_percent_cpu_used": 27.288461538461544
+    },
     "cpu_by_container": [
       {
         "name": "dea_next/0",
@@ -1529,7 +1580,7 @@ As seções a seguir fornecem o formato de dados.
 {: screen}
 
 * Para reunir registros de dados sobre seus aplicativos, use o formato de dados a seguir:
- 
+
 ```
 {
   "sample_time": 1477494000000,
@@ -1563,11 +1614,11 @@ Para reduzir a quantia de informações que são retornadas para cada amostra de
 ### Terminais de aplicativos 
 
 É possível usar os terminais a seguir para chamar este comando de API:
-* /api/v1/app/cpu/physical 
-* /api/v1/app/memory/physical
-* /api/v1/app/memory/reserved
-* /api/v1/app/disk/physical
-* /api/v1/app/disk/reserved
+* `/api/v1/app/cpu/physical` 
+* `/api/v1/app/memory/physical`
+* `/api/v1/app/memory/reserved`
+* `/api/v1/app/disk/physical`
+* `/api/v1/app/disk/reserved`
 
 
 ### Parâmetros de consulta de aplicativos
@@ -1582,7 +1633,18 @@ Use os parâmetros de consulta a seguir para reunir métricas para seus aplicati
 <dt class="pt dlterm">Nativa</dt>
 <dd class="pd">O número de registros a serem retornados dentro de cada amostra de dados.
 </dd>
+<dt class="pt dlterm">valorMín</dt>
+<dd class="pd">O menor valor a ser retornado para a métrica especificada. Se nenhum minValue for especificado, todos os valores serão retornados. Por exemplo, para reunir aplicativos que usam pelo menos 20.000 bytes de
+memória física, especifique um minValue de 20000.
+</dd>
 </dl>
+
+O exemplo a seguir reúne métricas sobre seus aplicativos:
+
+```
+curl -b ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/admin/metrics/api/v1/app/cpu/physical?count=5&startTime=2016-12-02T16:54:09.467Z
+```
+{: codeblock}
 
 ### Formato de resposta de aplicativos
 

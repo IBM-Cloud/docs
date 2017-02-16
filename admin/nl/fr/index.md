@@ -1,8 +1,8 @@
-﻿---
+---
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-01-24"
 
 ---
 
@@ -31,9 +31,9 @@ Si vous disposez d'un accès administrateur pour l'environnement {{site.data.key
 |Gérer les droits d'administrateur | Cliquez sur **ADMINISTRATION &gt; ADMINISTRATION DES UTILISATEURS** pour ajouter des utilisateurs, retirer des utilisateurs et ajuster les droits des utilisateurs. Voir [Gestion des utilisateurs et des droits](/docs/admin/index.html#oc_useradmin). |
 |Consulter les rapports et les journaux | Cliquez sur **ADMINISTRATION &gt; RAPPORTS ET JOURNAUX** afin d'afficher des rapports de sécurité et des journaux d'audit pour votre instance. Voir [Affichage des rapports](/docs/admin/index.html#oc_report). |
 |Afficher les informations système | Cliquez sur **ADMINISTRATION &gt; INFORMATIONS SYSTEME** afin d'afficher des informations système, telles que les mises à jour de maintenance en attente, le nom et la version de votre instance, la région, l'adresse URL de l'API, l'adresse URL de l'interface de ligne de commande, les détails de la configuration LDAP, les mappages des groupes et des utilisateurs, des statistiques et les domaines partagés. Voir [Affichage des informations système](/docs/admin/index.html#oc_system). |
-|Etendre des notifications et configurer des abonnements à des notifications | Cliquez sur **ADMINISTRATION &gt; INFORMATIONS SYSTEME &gt; *Nombre* mises à jour en attente**. Vous
-pouvez utiliser des webhooks pour l'intégration à un service Web de votre choix afin de configurer un abonnement aux notifications d'événement pour une mise à jour ou un incident. Voir [Notifications et abonnements à des notifications](/docs/admin/index.html#oc_eventsubscription). |
+|Etendre des notifications et configurer des abonnements à des notifications | Cliquez sur **ADMINISTRATION &gt; INFORMATIONS SYSTEME &gt; *Nombre* mises à jour en attente**. Vous pouvez utiliser des webhooks pour l'intégration à un service Web de votre choix afin de configurer un abonnement aux notifications d'événement pour une mise à jour ou un incident. Voir [Notifications et abonnements à des notifications](/docs/admin/index.html#oc_eventsubscription). |
 {: caption="Table 1. Administrative tasks for managing your {{site.data.keyword.Bluemix_notm}} - instance locale ou dédiée" caption-side="top"}
+
 <!-- staging only for WoW start -->
 
 **Astuce** : le tableau de bord Infrastructure dans la console {{site.data.keyword.Bluemix_notm}} n'est disponible que dans les comptes liés dans des environnements {{site.data.keyword.Bluemix_notm}} publics.
@@ -58,7 +58,7 @@ Vous pouvez afficher les notifications pour votre environnement local ou dédié
 | Mises à jour de maintenance | Pour afficher la liste complète ainsi que l'historique de vos notifications en attente et consultées, cliquez sur **ADMINISTRATION &gt; INFORMATIONS SYSTEME** &gt; *Nombre* **en attente**. Vous êtes également prévenu en cas d'événements de mise à jour de maintenance planifiés avec interruption dans la page Statut. Cliquez sur **Support** &gt; **Statut**. Vous pouvez étendre la capacité de notification en configurant un abonnement envoyant un courrier électronique aux destinataires de votre choix. Vous pouvez également configurer un abonnement utilisant des webhooks pour intégrer les notifications de la page Administration au service Web de votre choix.|
 | Incidents critiques | Vous êtes prévenu en cas d'incident critique dans la page Statut. Cliquez sur **Support** &gt; **Statut**. Vous pouvez étendre la capacité de notification en configurant un abonnement aux notifications qui envoie un courrier électronique au destinataire de votre choix. Vous pouvez également configurer un abonnement utilisant des webhooks pour intégrer les notifications de la page Administration au service Web de votre choix.  |  
 | Evénements de seuil | Vous pouvez configurer un abonnement à des événements qui envoie un courrier électronique au destinataire de votre choix lorsque les seuils de ressource pour le disque physique, la mémoire physique, le disque réservé ou la mémoire réservée sont atteints dans votre environnement. Vous pouvez également configurer un abonnement utilisant des webhooks pour intégrer les notifications au service Web de votre choix.  |  
-| Statut {{site.data.keyword.Bluemix_notm}} | Vous pouvez toujours examiner le statut le plus récent de la plateforme, des services et de votre instance {{site.data.keyword.Bluemix_notm}} sur la page Statut. Cliquez sur **Support** &gt; **Statut**.   |
+| Statut {{site.data.keyword.Bluemix_notm}} | Vous pouvez toujours examiner le statut le plus récent de la plateforme, des services et de votre instance {{site.data.keyword.Bluemix_notm}} sur la page Statut. Cliquez sur **Support** &gt; **Statut**.  |
 {: caption="Table 2. Event types and notifications methods" caption-side="top"}
 
 ### Configuration d'abonnements à des notifications
@@ -110,7 +110,7 @@ Pour créer un abonnement par courrier électronique ou webhook depuis la page *
 | Type | Sélectionnez **Courrier électronique**. |
 | Evénement | Sélectionnez **Seuil**. |
 | Seuil | Sélectionnez le type de seuil pour lequel vous voulez recevoir des notifications : disque physique, mémoire physique, disque réservé ou mémoire réservée. |
-| Direction du seuil | Sélectionnez la direction dans laquelle les données doivent être classées, c'est-à-dire Croissant ou Décroissant, lorsqu'elles dépassent ou passent sous la valeur Notifier lors du dépassement du seuil/lors du passage sous le seuil que vous avez définie. Par exemple, si la valeur Notifier lors du dépassement du seuil/lors du passage sous le seuil est de 50 % et que la direction est décroissante, vous ne recevez de notification que si le pourcentage d'utilisation passe de 50 % ou plus à moins de 50 %. Si vous définissez la direction croissante, vous recevez une notification lorsque le pourcentage d'utilisation passe de de moins de 50 % à plus de 50 %.
+| Direction du seuil | Sélectionnez la direction dans laquelle les données doivent être classées, c'est-à-dire Croissant ou Décroissant, lorsqu'elles dépassent ou passent sous la valeur Notifier lors du dépassement du seuil/lors du passage sous le seuil que vous avez définie. Par exemple, si la valeur Notifier lors du dépassement du seuil/lors du passage sous le seuil est de 50 % et que la direction est décroissante, vous ne recevez de notification que si le pourcentage d'utilisation passe de 50 % ou plus à moins de 50 %. Si vous définissez la direction croissante, vous recevez une notification lorsque le pourcentage d'utilisation passe de moins de 50 % à plus de 50 %.
 | Notifier lors du dépassement du seuil (%) | Entrez le seuil en pourcentage à partir duquel vous voulez recevoir une notification. Si vous avez choisi la propriété Croissant dans la zone Direction du seuil, la notification par courrier électronique est envoyée lorsque le seuil dépasse ce pourcentage. |
 | Notifier lors du passage sous le seuil (%) | Entrez le seuil en pourcentage à partir duquel vous voulez recevoir une notification. Si vous avez choisi la propriété Décroissant dans la zone Direction du seuil, la notification par courrier électronique est envoyée lorsque le seuil passe sous ce pourcentage. |
 | Description | Ajoutez une description unique pour l'abonnement que vous créez. |
@@ -207,8 +207,7 @@ Vous pouvez sélectionner n'importe quel abonnement aux notifications sauvegard�
 ## Mises à jour de maintenance
 {: #oc_schedulemaintenance}
 
-Vous pouvez afficher les mises à jour de maintenance planifiées et en attente, si vous disposez du droit de superutilisateur (`ops.admin`), en cliquant sur **ADMINISTRATION &gt; INFORMATIONS SYSTEME &gt; *Nombre* en attente** pour accéder à la page **Mises à jour du système**.  Tous les utilisateurs de votre environnement peuvent afficher les événements de mise à jour de maintenance planifiés avec interruption en cliquant sur
-**Support** &gt; **Statut**.
+Vous pouvez afficher les mises à jour de maintenance planifiées et en attente, si vous disposez du droit de superutilisateur (`ops.admin`), en cliquant sur **ADMINISTRATION &gt; INFORMATIONS SYSTEME &gt; *Nombre* en attente** pour accéder à la page **Mises à jour du système**.  Tous les utilisateurs de votre environnement peuvent afficher les événements de mise à jour de maintenance planifiés avec interruption en cliquant sur **Support** &gt; **Statut**.
 
 **Remarque **: reportez-vous tout d'abord à la section [Définition de fenêtres de maintenance pré-approuvées](index.html#preapprovedmaintenance) ci-dessous. Ces fenêtres doivent être définies pour qu'IBM puisse planifier la maintenance de votre environnement.
 
@@ -513,7 +512,7 @@ Vous pouvez afficher le statut de l'environnement {{site.data.keyword.Bluemix_no
 
 Vous pouvez surveiller le statut de votre instance {{site.data.keyword.Bluemix_notm}} à l'aide de la page Statut de
 {{site.data.keyword.Bluemix_notm}}. Cliquez sur
-**Support** &gt; **Statut**. 
+**Support** &gt; **Statut**.
 
 La page Statut est l'emplacement central pour rechercher des notifications et des annonces sur les événements clés affectant la plateforme {{site.data.keyword.Bluemix_notm}} et les principaux services dans {{site.data.keyword.Bluemix_notm}}. Vous pouvez vous abonner à un flux RSS pour recevoir les notifications automatiquement et ne pas avoir à les rechercher. Pour plus d'informations sur la page Statut et la configuration du flux RSS, voir [Affichage de {{site.data.keyword.Bluemix_notm}}](../support/index.html#viewing-bluemix-status).
 
@@ -564,12 +563,11 @@ applications compte tenu de leur compatibilité.
 
 Si vous voulez afficher un service dans votre catalogue {{site.data.keyword.Bluemix_notm}}, vous devez implémenter et enregistrer un [courtier de services ![icône de lien externe](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/services/api.html){: new_window}. Une fois votre courtier enregistré, vous pouvez choisir les organisations qui peuvent accéder au service dans votre instance locale ou dédiée.
 
-Les méthodes d'utilisation de votre courtier de services dépendent du nombre de services qu'il gère ou varient selon qu'il a déjà été enregistré dans
-{{site.data.keyword.Bluemix_notm}} ou non.
+Les méthodes d'utilisation de votre courtier de services dépendent du nombre de services qu'il gère ou varient selon qu'il a déjà été enregistré dans {{site.data.keyword.Bluemix_notm}} ou non.
 
 - Si votre courtier de services gère un service, vous pouvez vous servir de l'interface utilisateur pour l'enregistrer après avoir implémenté l'[API de courtier de services ![icône de lien externe](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/services/api.html){: new_window}. Voir [Enregistrement d'un courtier de services qui gère un service](index.html#registerbrokerui).
 - Si votre courtier de services gère plusieurs services, utilisez l'interface de ligne de commande cf avec le plug-in d'[interface de ligne de commande d'administration de {{site.data.keyword.Bluemix_notm}}](../cli/plugins/bluemix_admin/index.html) (sous-commande `ba`), ou utiliser l'[API de service personnalisé](index.html#servicebrokerapi).
-- Si votre courtier de services est déjà enregistré et que vous voulez le mettre à jour ou le supprimer, utilisez l'interface de ligne de commande cf avec le plug-in d'[interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}}](../cli/plugins/bluemix_admin/index.html) (sous-commande ba) ou utilisez l'[API de service personnalisé](index.html#servicebrokerapi).
+- Si votre courtier de services est déjà enregistré et que vous voulez le mettre à jour ou le supprimer, utilisez l'interface de ligne de commande cf avec le plug-in d'[interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}}](../cli/plugins/bluemix_admin/index.html) (sous-commande `ba`) ou utilisez l'[API de service personnalisé](index.html#servicebrokerapi).
 
 #### Enregistrement d'un courtier de services qui gère un service
 {: #registerbrokerui}
@@ -578,11 +576,9 @@ Les méthodes d'utilisation de votre courtier de services dépendent du nombre d
 
 Prenez connaissance des informations suivantes et effectuez les étapes d'enregistrement de votre courtier de services :
 
-**Avant de commencer** :
-<a href="http://docs.cloudfoundry.org/services/api.html" target="_blank">Implémentez l'API de courtier de services Cloud Foundry <img src="../icons/launch-glyph.svg" alt="icône de lien externe"></a> pour permettre la communication entre votre service et {{site.data.keyword.Bluemix_notm}}. L'API de courtier de services est un ensemble de noeuds finaux REST consommés par {{site.data.keyword.Bluemix_notm}}.
+**Avant de commencer** : <a href="http://docs.cloudfoundry.org/services/api.html" target="_blank">implémentez l'API de courtier de services Cloud Foundry <img src="../icons/launch-glyph.svg" alt="icône de lien externe"></a> pour permettre la communication entre votre service et {{site.data.keyword.Bluemix_notm}}. L'API de courtier de services est un ensemble de noeuds finaux REST consommés par {{site.data.keyword.Bluemix_notm}}.
 
-Lorsque vous implémentez le courtier de services, dans la réponse JSON de <code>GET /v2/catalog</code>, vous devez fournir les définitions pour
-vos service et vos plans de service, notamment les informations relatives au service que vous voulez afficher. Par exemple, examinez l'exemple de code JSON
+Lorsque vous implémentez le courtier de services, dans la réponse JSON de <code>GET /v2/catalog</code>, vous devez fournir les définitions pour vos service et vos plans de service, notamment les informations relatives au service que vous voulez afficher. Par exemple, examinez l'exemple de code JSON
 de la réponse du catalogue (GET) :
 
 ```
@@ -597,8 +593,7 @@ de la réponse du catalogue (GET) :
          "displayName":"Cool Service",
          "serviceMonitorApi":"https://myservicesstatus.mybluemix.net/healthcheck/",
          "providerDisplayName":"Société Cool"
-         "longDescription":"Cool Service est une solution d'analyse et d'entreposage de données. Vous pouvez placer rapidement vos données dans une base de
-données de la prochaine génération structurant les données en colonne en mémoire et commencer à exécuter des requêtes analytiques complexes.",
+         "longDescription":"Cool Service est une solution d'analyse et d'entreposage de données. Vous pouvez placer rapidement vos données dans une base de données de la prochaine génération structurant les données en colonne en mémoire et commencer à exécuter des requêtes analytiques complexes.",
          "bullets":[
             {
                "title":"Rapide et simple",
@@ -606,8 +601,7 @@ données de la prochaine génération structurant les données en colonne en mé
             },
             {
                "title":"Connectivity",
-          "description": "Cool Service a été conçu pour vous permettre de vous connecter facilement à tous vos services et à toutes vos applications. Vous
-pouvez commencer à analyser vos données immédiatement à l'aide d'outils familiers."
+          "description": "Cool Service a été conçu pour vous permettre de vous connecter facilement à tous vos services et à toutes vos applications. Vous pouvez commencer à analyser vos données immédiatement à l'aide d'outils familiers."
          ],
          "featuredImageUrl":"http://chemin/icon_64x64.png",
          "imageUrl":"http://chemin/icon_50x50.png",
@@ -649,8 +643,7 @@ pouvez commencer à analyser vos données immédiatement à l'aide d'outils fami
       "plans":[
          {
             "name":"smallplan",
-            "description":"Schéma et espace table dédiés par instance de service sur un serveur partagé. 1 Go et 10 Go de stockage de base de données
-compressées peuvent contenir respectivement jusqu'à 5 Go et 50 Go de données non compressées selon des taux de compression standard.",
+            "description":"Schéma et espace table dédiés par instance de service sur un serveur partagé. 1 Go et 10 Go de stockage de base de données compressées peuvent contenir respectivement jusqu'à 5 Go et 50 Go de données non compressées selon des taux de compression standard.",
             "free":false,
             "id":"cool-service-plan-id",
             "metadata":{
@@ -682,12 +675,9 @@ Les tableaux ci-dessous peuvent vous aider à remplir le fichier JSON.
 | **Zones JSON** | **Description** |
 |-----------------|-----------------|
 |bindable   | Valeur booléenne qui indique si des instances de service peuvent être liées à des applications.  |
-|description | Description du service qui s'affiche lorsque vous utilisez la commande cf marketplace ou passez votre souris sur l'icône de service dans le
-catalogue de l'interface utilisateur {{site.data.keyword.Bluemix_notm}}. Vous pouvez ajouter une phrase unique comme description. |
-|name | Nom du service qui s'affiche dans l'interface de ligne de commande cf. Il doit être unique dans {{site.data.keyword.Bluemix_notm}} et doit
-utiliser des minuscules et ne pas contenir d'espace. Vous ne pouvez pas le changer une fois le service enregistré auprès de {{site.data.keyword.Bluemix_notm}}. |
-|id  | ID du service. Il doit être unique dans {{site.data.keyword.Bluemix_notm}} et il doit s'agir d'un identificateur global unique. Vous ne
-pouvez pas le changer une fois le service enregistré auprès de {{site.data.keyword.Bluemix_notm}}. |
+|description | Description du service qui s'affiche lorsque vous utilisez la commande cf marketplace ou passez votre souris sur l'icône de service dans le catalogue de l'interface utilisateur {{site.data.keyword.Bluemix_notm}}. Vous pouvez ajouter une phrase unique comme description. |
+|name | Nom du service qui s'affiche dans l'interface de ligne de commande cf. Il doit être unique dans {{site.data.keyword.Bluemix_notm}} et doit utiliser des minuscules et ne pas contenir d'espace. Vous ne pouvez pas le changer une fois le service enregistré auprès de {{site.data.keyword.Bluemix_notm}}. |
+|id  | ID du service. Il doit être unique dans {{site.data.keyword.Bluemix_notm}} et il doit s'agir d'un identificateur global unique. Vous ne pouvez pas le changer une fois le service enregistré auprès de {{site.data.keyword.Bluemix_notm}}. |
 |metadata | Métadonnées du plan de service qui s'affichent dans le catalogue {{site.data.keyword.Bluemix_notm}} et dans la fiche de prix. La zone metadata est facultative. Vous pouvez spécifier d'autres zones pour les métadonnées. Voir le tableau suivant intitulé [Zones de métadonnées](index.html#metadatafields) pour plus d'informations. |
 |plans | Tableau de définitions de plan de service. Voir le tableau suivant intitulé [Zones de plan](index.html#planfields) pour plus d'informations. |
 {: caption="Table 10. JSON fields" caption-side="top"}
@@ -759,7 +749,7 @@ catalogue {{site.data.keyword.Bluemix_notm}} :
 |name       | Nom du service qui est utilisé dans l'interface de ligne de commande cf. Par exemple, le nom du plan est affiché dans la sortie de la commande cf marketplace. Il doit être en minuscules, ne pas contenir d'espace, et être unique dans le service.  |
 |description       | Description du plan de service. Elle est affichée une fois que vous sélectionnez un plan dans la page des détails du service dans le catalogue {{site.data.keyword.Bluemix_notm}}. |
 |free      | Valeur booléenne qui indique si le plan de service est gratuit. La valeur par défaut est true. |
-|id       | ID du plan de service. Il doit être unique et il doit s'agir d'un identificateur global unique.   |
+|id       | ID du plan de service. Il doit être unique et il doit s'agir d'un identificateur global unique.  |
 |metadata (facultative)    | Métadonnées du plan de service qui s'affichent dans le catalogue {{site.data.keyword.Bluemix_notm}} et dans la fiche de prix. La zone metadata est facultative. Vous pouvez spécifier les zones suivantes dans la zone metadata : displayName, type (subscription, reservable, planDetails), bullets, costs (unitId, unit, partNumber) et paidOnly. Voir le tableau ci-après intitulé [Zones de métadonnées de plan](index.html#planmetadata) pour plus d'informations. |
 {: caption="Table 12. Plan fields" caption-side="top"}
 
@@ -775,12 +765,9 @@ catalogue {{site.data.keyword.Bluemix_notm}} :
 |paidOnly (facultative)     | Valeur booléenne qui indique si ce plan de service est disponible pour les comptes {{site.data.keyword.Bluemix_notm}} payants seulement. Si la valeur est **true**, le plan de service n'est valable que pour les comptes payants et ne peut pas être ajouté à des comptes d'essai. Si la valeur est **false**, le plan de service peut être ajouté à des comptes payants et à des comptes d'essai. La valeur par défaut est **false**.	  |
 {: caption="Table 13. Plan metadata fields" caption-side="top"}
 
-L'exemple ci-après montre comment la réponse JSON de GET /v2/catalog est mappée à la page des détails du service dans le catalogue
-{{site.data.keyword.Bluemix_notm}}. Il illustre notamment comment les zones de métadonnées de plan décrites dans le tableau précédent
-sont mappées à l'interface utilisateur :
+L'exemple ci-après montre comment la réponse JSON de GET /v2/catalog est mappée à la page des détails du service dans le catalogue {{site.data.keyword.Bluemix_notm}}. Il illustre notamment comment les zones de métadonnées de plan décrites dans le tableau précédent sont mappées à l'interface utilisateur :
 
-![Détails des métadonnées de plan dans
-le catalogue Bluemix.](images/plan_metadata.png "Vue des valeurs des métadonnées de plan dans le catalogue Bluemix")
+![Détails des métadonnées de plan dans le catalogue Bluemix.](images/plan_metadata.png "Vue des valeurs des métadonnées de plan dans le catalogue Bluemix")
 
 
 <!-- staging only end -->
@@ -892,8 +879,7 @@ pouvez renommer l'organisation et ajouter ou supprimer des responsables.
 <p><strong>Remarque</strong> : vous recevez un message si vous sélectionnez un plan d'établissement des quotas qui n'est pas suffisant pour l'utilisation en
 cours pour l'organisation.</p></li>
 <li>Cliquez sur <strong>Cloud Foundry</strong> ou sur
-<strong>Conteneurs</strong>.
-Par défaut, la page du quota Cloud Foundry s'ouvre.
+<strong>Conteneurs</strong>.  Par défaut, la page du quota Cloud Foundry s'ouvre. 
 <ul>
 <li>A partir de la page Cloud Foundry, vous pouvez sélectionner un plan et
 afficher les détails du quota des ressources suivantes :
@@ -909,11 +895,10 @@ entières aux zones suivantes :
 <dl class="parml">
 <dt class="pt dlterm">Limite d'image</dt>
 <dd class="pd">Nombre maximal d'images de conteneur pouvant être contenues dans
-votre registre privé. Une image de conteneur est la base de chaque conteneur que vous créez. 
-Une image est créée depuis un Dockerfile, lequel est un fichier en lecture
+votre registre privé. Une image de conteneur est la base de chaque conteneur que vous créez. Une image est créée depuis un Dockerfile, lequel est un fichier en lecture
 seule contenant le système d'exploitation, l'application et toutes ses
 dépendances, et décrivant comment un conteneur est configuré. Les images sont
-partagées entre tous les membres d'une organisation. </dd>
+partagées entre tous les membres d'une organisation.</dd>
 <dt class="pt dlterm">Allocation de mémoire par défaut</dt>
 <dd>Quantité de mémoire de conteneur automatiquement allouée à la création d'un
 nouvel espace. Lors de la création d'un conteneur, vous devez choisir une
@@ -929,19 +914,13 @@ nouvel espace. Vous pouvez lier des adresses IP publiques à des conteneurs
 isolées et des groupes de conteneurs afin de les rendre accessibles depuis Internet.</dd>
 <dt class="pt dlterm">Adresses IP flottantes maximales</dt>
 <dd>Nombre maximal d'adresses IP publiques pouvant être allouées entre tous les
-espaces d'une organisation. </dd>
+espaces d'une organisation.</dd>
 </dl>
 <strong>Remarque</strong> : si vous ne disposez pas encore de conteneurs dans
 votre environnement, ou si les conteneurs de votre environnement ne sont pas
 encore configurés, vous obtenez un message d'erreur.
-<p>Pour plus d'informations sur les conteneurs, voir
-[A
-propos d'IBM containers](https://console.ng.bluemix.net/docs/containers/container_ov.html). Pour plus d'informations sur les quotas de
-conteneur, voir
-[Quota
-et comptes Bluemix]( https://console.ng.bluemix.net/docs/containers/container_planning_org_ov.html#container_planning_quota).</p>
-<strong>Remarque :</strong> Les conteneurs ne sont pas
-disponibles dans la région {{site.data.keyword.Bluemix_notm}} Sydney.</li>
+<p>Pour plus d'informations sur les conteneurs, voir [A propos d'IBM containers](https://console.ng.bluemix.net/docs/containers/container_ov.html). Pour plus d'informations sur les quotas de conteneur, voir [Quota et comptes Bluemix]( https://console.ng.bluemix.net/docs/containers/container_planning_org_ov.html#container_planning_quota).</p>
+<strong>Remarque :</strong> Les conteneurs ne sont pas disponibles dans la région {{site.data.keyword.Bluemix_notm}} Sydney.</li>
 </ul>
 <li>Pour sauvegarder les modifications que vous avez apportées dans la page Gérer l'organisation, cliquez sur <strong>SAUVEGARDER</strong>.</li>
 </ol>
@@ -973,9 +952,7 @@ l'organisation pour revenir aux Informations sur l'organisation.
 ## Gestion des utilisateurs et des droits
 {: #oc_useradmin}
 
-Vous pouvez utiliser des utilisateurs individuels ou des groupes d'utilisateurs. En général, les utilisateurs sont ajoutés à votre instance {{site.data.keyword.Bluemix_notm}} depuis le registre d'utilisateurs de votre société via LDAP (Lightweight Directory Access Protocol). Vous
-pouvez aussi afficher les droits utilisateur. Si vous disposez du droit **Superutilisateur**, vous pouvez également définir et gérer les droits des autres
-utilisateurs. Cliquez sur **ADMINISTRATION &gt; ADMINISTRATION DES UTILISATEURS**.
+Vous pouvez utiliser des utilisateurs individuels ou des groupes d'utilisateurs. En général, les utilisateurs sont ajoutés à votre instance {{site.data.keyword.Bluemix_notm}} depuis le registre d'utilisateurs de votre société via LDAP (Lightweight Directory Access Protocol). Vous pouvez aussi afficher les droits utilisateur. Si vous disposez du droit **Superutilisateur**, vous pouvez également définir et gérer les droits des autres utilisateurs. Cliquez sur **ADMINISTRATION &gt; ADMINISTRATION DES UTILISATEURS**.
 
 La page Administration des utilisateurs affiche tous les utilisateurs pour l'instance locale ou dédiée. Les droits de chaque utilisateur sont affichés sous forme d'icônes dans le tableau. Les droits possibles sont les suivants : Aucun, **Superutilisateur**, **Accès de base**,**Connexion**, **Catalogue**, **Rapports** et **Utilisateurs**.
 Les droits **Superutilisateur** et **Accès de base** peuvent être associés à la valeur **Activé**
@@ -1025,23 +1002,18 @@ l'afficher et le rechercher. Lorsque des utilisateurs sont ajoutés, aucun droit
 
   1. Cliquez sur **Ajouter un groupe d'utilisateurs**.
   2. Dans la zone **Rechercher**, entrez un nom de groupe à rechercher, puis sélectionnez le nom de groupe dans la liste.
-  3. Ensuite, dans la zone **Organisation**, choisissez l'organisation à laquelle ajouter le groupe d'utilisateurs en entrant le nom
-de
-l'organisation et en le sélectionnant dans la liste.
+  3. Ensuite, dans la zone **Organisation**, choisissez l'organisation à laquelle ajouter le groupe d'utilisateurs en entrant le nom de l'organisation et en le sélectionnant dans la liste.
   4. Pour ajouter le groupe d'utilisateurs à l'organisation sélectionnée, cliquez sur **Ajouter des utilisateurs**.
 
-  **Remarque** : les groupes de plus de 50 utilisateurs sont ajoutés via un travail par lots en arrière-plan. Lorsque l'opération
-d'ajout aboutit, l'utilisateur ou le groupe est ajouté au tableau pour que vous puissiez l'afficher et le rechercher. Lorsque des utilisateurs sont ajoutés, aucun droit ne leur est affecté.
+  **Remarque** : les groupes de plus de 50 utilisateurs sont ajoutés via un travail par lots en arrière-plan. Lorsque l'opération d'ajout aboutit, l'utilisateur ou le groupe est ajouté au tableau pour que vous puissiez l'afficher et le rechercher. Lorsque des utilisateurs sont ajoutés, aucun droit ne leur est affecté.
 
-* Ajoutez un groupe d'utilisateurs en important une feuille de calcul qui répertorie des ID utilisateur, des adresses électroniques d'utilisateur et
-l'organisation à laquelle vous voulez ajouter l'utilisateur. Si vous disposez des droits **Superutilisateur** ou **Utilisateurs** avec un accès **Ecriture**, vous pouvez ajouter des utilisateurs.
+* Ajoutez un groupe d'utilisateurs en important une feuille de calcul qui répertorie des ID utilisateur, des adresses électroniques d'utilisateur et l'organisation à laquelle vous voulez ajouter l'utilisateur. Si vous disposez des droits **Superutilisateur** ou **Utilisateurs** avec un accès **Ecriture**, vous pouvez ajouter des utilisateurs.
 
 **Remarque** : entrez les ID utilisateur qui correspondent aux valeurs utilisées dans votre registre d'utilisateurs.
 
   1. Cliquez sur **Importer des utilisateurs**.
   2. Cliquez sur **Télécharger un modèle (.CSV)** pour télécharger une feuille de calcul avec les colonnes requises que vous pourrez remplir ou créez votre propre modèle en utilisant une feuille de calcul qui comporte les en-têtes de colonne requis : **ID utilisateur**, **Courrier électronique** et **Organisation**.  Deux colonnes facultatives sont également incluses dans le modèle : **Prénom** et **Nom**.
-  3. Indiquez les valeurs d'utilisateur dans les colonnes requises. Si vous n'utilisez pas d'annuaire LDAP, utilisez les en-têtes de colonne requis
-et les en-têtes de colonne facultatifs pour les utilisateurs que vous importez.
+  3. Indiquez les valeurs d'utilisateur dans les colonnes requises. Si vous n'utilisez pas d'annuaire LDAP, utilisez les en-têtes de colonne requis et les en-têtes de colonne facultatifs pour les utilisateurs que vous importez.
   4. Sauvegardez votre fichier et cliquez sur **Envoyer le fichier par téléchargement**.
 
   **Remarque** : Les colonnes de votre feuille de calcul peuvent apparaître dans n'importe quel ordre tant que toutes les colonnes requises sont présentes. Si l'importation aboutit, vous recevez un message de confirmation indiquant que tous les utilisateurs ont été ajoutés. Si l'importation n'a abouti que pour certains
@@ -1084,9 +1056,7 @@ spécifiques dans la console d'administration.
 
 | **Droit d'utilisateur** | **Description** |       
 |-----------------|-------------------|
-| Superutilisateur | Les utilisateurs pour lesquels le droit **Superutilisateur** a pour valeur **Activé** sont autorisés à éditer des droits pour d'autres utilisateurs. Si le droit est activé, l'accès complet à tous les autres droits est automatiquement activé . En plus des tâches décrites dans ce tableau pour chaque droit, ces utilisateurs peuvent également configurer des abonnements à des notifications afin de recevoir
-directement des alertes relatives à des opérations de maintenance ou à des incidents, planifier des tâches de maintenance, exécuter des vérifications sur
-les composants de console et créer des organisations et des espaces pour l'environnement. Ce droit équivaut au rôle d'administrateur (admin) pour la console d'administration.  |
+| Superutilisateur | Les utilisateurs pour lesquels le droit **Superutilisateur** a pour valeur **Activé** sont autorisés à éditer des droits pour d'autres utilisateurs. Si le droit est activé, l'accès complet à tous les autres droits est automatiquement activé . En plus des tâches décrites dans ce tableau pour chaque droit, ces utilisateurs peuvent également configurer des abonnements à des notifications afin de recevoir directement des alertes relatives à des opérations de maintenance ou à des incidents, planifier des tâches de maintenance, exécuter des vérifications sur les composants de console et créer des organisations et des espaces pour l'environnement. Ce droit équivaut au rôle d'administrateur (admin) pour la console d'administration.  |
 | Accès de base | Les utilisateurs pour lesquels le droit **Accès de base** a pour valeur **Activé** sont autorisés à afficher l'option de page d'administration dans l'interface utilisateur de {{site.data.keyword.Bluemix_notm}}. Les utilisateurs pour lesquels le droit est activé peuvent accéder aux vignettes [Informations système](#oc_system) et [Utilisation des ressources](#oc_resource). Sans ce droit, les utilisateurs ne peuvent pas voir l'option de menu d'administration ni y accéder. Ce droit équivaut au rôle d'administrateur (admin) pour la console d'administration. Il équivaut aussi au droit de connexion utilisé précédemment pour la console d'administration. |
 | Catalogue | Les utilisateurs disposant du droit **Catalogue** peuvent lire (accès **Lecture** ou modifier (accès **Ecriture**) les services disponibles dans l'instance locale ou dédiée. L'accès en lecture permet à l'utilisateur d'accéder à la vignette Gestion du catalogue pour afficher les services disponibles. L'accès en écriture permet à l'utilisateur d'accéder à la vignette [Gestion du catalogue](#oc_catalog) pour afficher les services, éditer la visibilité des services, enregistrer des services personnalisés et contrôler la liste de priorité du pack de construction. |  
 | Rapports | Les utilisateurs disposant du droit **Rapports** peuvent lire (accès **Lecture**) ou modifier (accès **Ecriture**) les rapports de sécurité. L'accès en lecture permet à l'utilisateur d'accéder à la vignette Rapports et journaux pour télécharger des rapports. L'accès en écriture permet à l'utilisateur d'afficher la vignette [Rapports et journaux](#oc_report) et d'utiliser l'interface de ligne de commande pour télécharger de nouveaux rapports et créer de nouvelles catégories auxquelles les utilisateurs pourront accéder. |
@@ -1096,18 +1066,11 @@ les composants de console et créer des organisations et des espaces pour l'envi
 ## Gestion des utilisateurs avec l'API REST Admin
 {: #usingadminapi}
 
-Vous pouvez utiliser l'API REST `Admin` afin d'ajouter et de retirer des utilisateurs pour votre instance
-{{site.data.keyword.Bluemix_notm}}.
-Les noeuds finaux de l'API REST
-`Admin` et les réponses JSON sont fournis sur une base expérimentale afin de permettre des opérations de base depuis une ligne de
-commande. Les noeuds finaux et les adresses URL qui figurent dans les exemples de cette documentation peuvent changer ou être abandonnés dans un délai
-court.
+Vous pouvez utiliser l'API REST `Admin` afin d'ajouter et de retirer des utilisateurs pour votre instance {{site.data.keyword.Bluemix_notm}}.
+Les noeuds finaux de l'API REST `Admin` et les réponses JSON sont fournis sur une base expérimentale afin de permettre des opérations de base depuis une ligne de commande. Les noeuds finaux et les adresses URL qui figurent dans les exemples de cette documentation peuvent changer ou être abandonnés dans un délai court.
 
-Bien que vous puissiez choisir d'utiliser d'autres outils, les outils
-suivants sont prérequis pour les exemples ci-après. 
-* cURL, pour entrer les demandes d'API REST sous forme de commandes. cURL est un utilitaire gratuit que vous pouvez utiliser pour envoyer des
-demandes HTTP à un serveur
-et recevoir les réponses du serveur via une interface de ligne de commande. Vous pouvez le télécharger depuis le [site de téléchargement cURL ![icône de lien externe](../icons/launch-glyph.svg)](http://curl.haxx.se/download.html){: new_window}.
+Bien que vous puissiez choisir d'utiliser d'autres outils, les outils suivants sont prérequis pour les exemples ci-après.
+* cURL, pour entrer les demandes d'API REST sous forme de commandes. cURL est un utilitaire gratuit que vous pouvez utiliser pour envoyer des demandes HTTP à un serveur et recevoir les réponses du serveur via une interface de ligne de commande. Vous pouvez le télécharger depuis le [site de téléchargement cURL ![icône de lien externe](../icons/launch-glyph.svg)](http://curl.haxx.se/download.html){: new_window}.
 * Python, pour utiliser l'outil JSON de formatage de Python. Cet outil facultatif transforme le texte JSON en entrée en sortie facile à lire. Vous pouvez télécharger Python depuis le [site des téléchargements Python ![icône de lien externe](../icons/launch-glyph.svg)](https://www.python.org/downloads){: new_window}.
 
 ### Connexion à la console d'administration
@@ -1423,11 +1386,10 @@ relatives à votre environnement ou à vos applications. Ces API renvoient
 un tableau de points de données des mesures demandées sur la durée indiquée.
 
 Les API de mesures décrites dans les sections suivantes sont accessibles
-à partir du noeud final spécifique de la région, par exemple :  
+à partir du noeud final spécifique de la région, par exemple : 
 
- ```
-https://console.<region>.bluemix.net.
- ```
+ `https://console.<région>.bluemix.net/admin/metrics`
+{: codeblock}
 
 **Remarques** :
 
@@ -1444,6 +1406,10 @@ heures. SI, par exemple, vous avez demandé six heures de données relatives à
 l'unité centrale de votre environnement, la réponse inclut les données
 relatives à l'unité centrale pour chacune des six heures demandées.
 
+ ### Noeuds finaux d'environnment 
+ 
+Vous pouvez utiliser le noeud final suivant pour appeler cette commande d'API : `/api/v1/env`
+
 ### Paramètres de requête des mesures relatives à l'environnement
 
 Les paramètres de requête suivants permettent de regrouper les mesures
@@ -1451,16 +1417,28 @@ relatives à l'unité centrale, le disque, la mémoire, le réseau et les applic
 
 <dl class="parml">
 <dt class="pt dlterm">metric</dt>
-<dd class="pd">Une ou plusieurs des valeurs suivantes, séparées par une virgule : 'memory', 'disk', 'cpu', 'network' et 'apps.'</dd>
+<dd class="pd">Une ou plusieurs des valeurs suivantes, séparées par une virgule
+: `memory`, `disk`, `cpu`,
+`network` et `apps`.</dd>
 <dt class="pt dlterm">startTime</dt>
 <dd class="pd">Point le plus ancien dans le temps à partir duquel les données sont renvoyées. Si aucun paramètre startTime n'est indiqué, le point de données disponible le plus récent est inclus. Par exemple, pour regrouper les données situées entre 14h et 17h, indiquez la valeur correspondant à 14h pour startTime.</dd>
 <dt class="pt dlterm">endTime</dt>
 <dd class="pd">Point le plus récent dans le temps à partir duquel les données sont renvoyées. Si aucun paramètre endTime n'est indiqué, le point de données le plus récent est utilisé. Par exemple, pour regrouper les données situées entre 14h et 17h, indiquez la valeur correspondant à 17h pour endTime.</dd>
 <dt class="pt dlterm">sort</dt>
-<dd class="pd">Ordre dans lequel les données sont renvoyées. Les valeurs valides sont 'asc' (croissant) et 'desc' (décroissant). La
+<dd class="pd">Ordre dans lequel les données sont renvoyées. Les valeurs
+valides sont `asc` (croissant) et `desc`
+(décroissant). La
 valeur par défaut est l'ordre décroissant qui renvoie d'abord les données les
 plus récentes. </dd>
 </dl>
+
+ L'exemple suivant utilise les paramètres de requête pour regrouper des
+mesures sur votre environnement : 
+ 
+ ```
+ curl -b ./cookies.txt --header "Accept: application/json" https://console.<région>.bluemix.net/admin/metrics/api/v1/env?metric=cpu,network,disk,apps,memory
+ ```
+{: codeblock}
 
 ### Format des données de mesure relatives à l'environnement
 
@@ -1473,19 +1451,37 @@ l'utilisation de la mémoire, employez le format de données suivant :
 {
   "sample_time": 1477494000000,
   "memory": {
-    "physical": {
-      "total_gb": 864,
+    "cell": {
+      "physical": {
+        "total_gb": 864,
       "used": {
-        "value_gb": 336.84,
+          "value_gb": 336.84,
         "percent": 38.99
       }
-    },
+      },
     "allocated": {
-      "reserved_gb": 1728,
+        "reserved_gb": 1728,
       "total_allocated": {
-        "value_gb": 1287.59,
+          "value_gb": 1287.59,
         "percent": 74.51
       }
+      },
+    },
+    "dea": {
+      "physical": {
+      	"total_gb": 864,
+      "used": {
+          "value_gb": 336.84,
+        "percent": 38.99
+      }
+      },
+    "allocated": {
+        "reserved_gb": 1728,
+      "total_allocated": {
+          "value_gb": 1287.59,
+        "percent": 74.51
+      }
+      },
     },
     "memory_by_container": [
       {
@@ -1525,19 +1521,37 @@ l'utilisation du disque, employez le format de données suivant :
 {
   "sample_time": 1477494000000,
   "disk": {
-    "physical": {
-      "total_gb": 8100,
+    "cell": {
+      "physical": {
+        "total_gb": 8100,
       "used": {
-        "value_gb": 807,
+          "value_gb": 807,
         "percent": 9.96
       }
-    },
+      },
     "allocated": {
-      "reserved_gb": 16200,
+        "reserved_gb": 16200,
       "total_allocated": {
-        "value_gb": 1989.5,
+          "value_gb": 1989.5,
         "percent": 12.28
       }
+      },
+    },
+    "dea": {
+      "physical": {
+        "total_gb": 8100,
+      "used": {
+          "value_gb": 807,
+        "percent": 9.96
+      }
+      },
+    "allocated": {
+        "reserved_gb": 16200,
+      "total_allocated": {
+          "value_gb": 1989.5,
+        "percent": 12.28
+      }
+      },
     },
     "disk_by_container": [
       {
@@ -1577,7 +1591,12 @@ l'utilisation de l'unité centrale, employez le format de données suivant :
 {
   "sample_time": 1477494000000,
   "cpu": {
-    "average_percent_cpu_used": 27.288461538461544,
+    "cell": {
+      "average_percent_cpu_used": 27.288461538461544
+    },
+    "dea": {
+      "average_percent_cpu_used": 27.288461538461544
+    },
     "cpu_by_container": [
       {
         "name": "dea_next/0",
@@ -1670,7 +1689,7 @@ l'utilisation de l'unité centrale, employez le format de données suivant :
 {: screen}
 
 * Pour regrouper les enregistrements de données concernant vos applications, employez le format de données suivant :
- 
+
 ```
 {
   "sample_time": 1477494000000,
@@ -1715,11 +1734,11 @@ importantes par unité centrale de chaque échantillon de données.
 
 Vous pouvez utiliser les noeuds finaux suivants pour appeler cette
 commande d'API :
-* /api/v1/app/cpu/physical 
-* /api/v1/app/memory/physical
-* /api/v1/app/memory/reserved
-* /api/v1/app/disk/physical
-* /api/v1/app/disk/reserved
+* `/api/v1/app/cpu/physical` 
+* `/api/v1/app/memory/physical`
+* `/api/v1/app/memory/reserved`
+* `/api/v1/app/disk/physical`
+* `/api/v1/app/disk/reserved`
 
 
 ### Paramètres de requête relatifs aux applications
@@ -1734,7 +1753,20 @@ Utilisez les paramètres de requête suivants pour regrouper des mesures concern
 <dt class="pt dlterm">count</dt>
 <dd class="pd">Nombre d'enregistrements à renvoyer pour chaque échantillon de données.
 </dd>
+<dt class="pt dlterm">minValue</dt>
+<dd class="pd">Valeur la plus petite à renvoyer pour la mesure indiquée. Si
+aucune valeur n'est indiquée, toutes les valeurs sont renvoyées. Par exemple,
+pour regrouper les applications qui utilisent au moins 20000 octets de
+mémoire physique, spécifiez une valeur de minValue égale à 20000.
+</dd>
 </dl>
+
+L'exemple suivant regroupe les mesures concernant vos applications :
+
+```
+curl -b ./cookies.txt --header "Accept: application/json" https://console.<région>.bluemix.net/admin/metrics/api/v1/app/cpu/physical?count=5&startTime=2016-12-02T16:54:09.467Z
+```
+{: codeblock}
 
 ### Format de réponse pour les applications
 

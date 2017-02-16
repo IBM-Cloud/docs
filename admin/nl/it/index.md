@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-01-24"
 
 ---
 
@@ -58,7 +58,7 @@ Puoi visualizzare le notifiche riguardanti il tuo ambiente locale o dedicato, al
 | Aggiornamenti di manutenzione | Per visualizzare uno storico e un elenco completo delle tue notifiche complete e in sospeso, fai clic su **AMMINISTRAZIONE &gt; INFORMAZIONI DI SISTEMA** &gt; *Numero* **in sospeso**. Ricevi anche un avviso degli eventi di aggiornamento della manutenzione pianificata con interruzioni del servizio nella pagina Stato. Fai clic su **Supporto** &gt; **Stato**. Puoi estendere la funzionalità di notifica impostando una sottoscrizione che invia un'email a destinatari di tua scelta. In alternativa, puoi impostare una sottoscrizione che utilizza dei webhook per integrare le notifiche provenienti dalla pagina Amministrazione con un servizio Web a scelta.|
 | Incidenti critici | Vieni avvisato degli incidenti critici sulla pagina Stato. Fai clic su **Supporto** &gt; **Stato**. Puoi estendere la funzionalità di notifica impostando una sottoscrizione di notifica che invia un'email a un destinatario di tua scelta. In alternativa, puoi impostare una sottoscrizione che utilizza dei webhook per integrare le notifiche provenienti dalla pagina Amministrazione con un servizio Web a scelta.  |  
 | Eventi di soglia | Puoi impostare una sottoscrizione di notifica che invia un'email a un destinatario di tua scelta quando nel tuo ambiente vengono raggiunte le soglie di risorse per disco fisico, memoria fisica, disco riservato o memoria riservata. In alternativa, puoi impostare una sottoscrizione che utilizza dei webhook per integrare le notifiche con un servizio Web di tua scelta.  |  
-| Stato di {{site.data.keyword.Bluemix_notm}} | In qualsiasi momento puoi visualizzare l'ultimo stato della piattaforma, dei servizi e della tua istanza {{site.data.keyword.Bluemix_notm}} nella pagina Stato. Fai clic su **Supporto** &gt; **Stato**.   |
+| Stato di {{site.data.keyword.Bluemix_notm}} | In qualsiasi momento puoi visualizzare l'ultimo stato della piattaforma, dei servizi e della tua istanza {{site.data.keyword.Bluemix_notm}} nella pagina Stato. Fai clic su **Supporto** &gt; **Stato**.  |
 {: caption="Table 2. Event types and notifications methods" caption-side="top"}
 
 ### Impostazione di sottoscrizioni di notifica
@@ -468,7 +468,7 @@ Puoi visualizzare lo stato per l'ambiente {{site.data.keyword.Bluemix_notm}} e p
 
 ### Stato dell'ambiente {{site.data.keyword.Bluemix_notm}}
 
-Puoi monitorare lo stato per la tua istanza {{site.data.keyword.Bluemix_notm}} utilizzando la pagina Stato di {{site.data.keyword.Bluemix_notm}}. Fai clic su **Supporto** &gt; **Stato**. 
+Puoi monitorare lo stato per la tua istanza {{site.data.keyword.Bluemix_notm}} utilizzando la pagina Stato di {{site.data.keyword.Bluemix_notm}}. Fai clic su **Supporto** &gt; **Stato**.
 
 La pagina Stato è la posizione centrale per trovare notifiche e annunci sugli eventi chiave che interessano la piattaforma {{site.data.keyword.Bluemix_notm}} e i servizi principali in {{site.data.keyword.Bluemix_notm}}. Puoi sottoscrivere a un feed RSS per le notifiche in modo da non doverle controllare personalmente. Per ulteriori informazioni sulla pagina Stato e sulla configurazione del feed RSS, vedi [Visualizzazione di {{site.data.keyword.Bluemix_notm}}](../support/index.html#viewing-bluemix-status).
 
@@ -823,7 +823,7 @@ relativo all'organizzazione che vuoi modificare nella sezione Utilizzo della mem
 dell'organizzazione nella sezione Elenco organizzazioni. Dalla pagina Informazioni sull'organizzazione, puoi ridenominare l'organizzazione e aggiungere o rimuovere i gestori.
 <p><strong>Nota</strong>: se selezioni un piano di quota che non è sufficiente per l'utilizzo corrente
 dell'organizzazione, riceverai un messaggio.</p></li>
-<li>Fai clic su <strong>Cloud Foundry</strong> o <strong>Containers</strong>.  Per impostazione predefinita, si apre la pagina della quota Cloud Foundry.
+<li>Fai clic su <strong>Cloud Foundry</strong> o <strong>Containers</strong>.  Per impostazione predefinita, si apre la pagina della quota Cloud Foundry. 
 <ul>
 <li>Dalla pagina Cloud Foundry, puoi selezionare un piano e visualizzare i dettagli della quota per le seguenti risorse:
 <ul>
@@ -837,13 +837,13 @@ dell'organizzazione, riceverai un messaggio.</p></li>
 <dl class="parml">
 <dt class="pt dlterm">Limite immagine</dt>
 <dd class="pd">Il numero massimo di immagini contenitore che puoi avere nel tuo registro privato. Un'immagine contenitore è la base per ogni contenitore che crei. Un'immagine viene creata da un Dockerfile che è un file in sola lettura che ospita il sistema operativo, l'applicazione e tutte le relative dipendenze e descrive come viene configurato un contenitore. Le immagini sono condivise tra tutti i membri di un'organizzazione.</dd>
-<dt class="pt dlterm">Assegnazione memoria predefinita </dt>
+<dt class="pt dlterm">Assegnazione memoria predefinita</dt>
 <dd>La quantità di memoria del contenitore che viene automaticamente assegnata quando viene creato un nuovo spazio. Quando crei un contenitore, devi scegliere una dimensione del contenitore. La dimensione determina la quantità di memoria che il contenitore può utilizzare sull'host di calcolo ed è comporesa nel tuo limite di memoria del contenitore. </dd>
-<dt class="pt dlterm">Assegnazione memoria massima </dt>
+<dt class="pt dlterm">Assegnazione memoria massima</dt>
 <dd>La quantità massima di memoria della memoria del contenitore che può essere assegnata tra tutti gli spazi di un'organizzazione.</dd>
 <dt class="pt dlterm">IP mobili predefiniti</dt>
 <dd>Il numero di indirizzi IP pubblici che viene automaticamente assegnato quando viene creato un nuovo spazio. Puoi eseguire il bind degli indirizzi IP pubblici a contenitori singoli o a gruppi di contenitori per renderli accessibili da internet.</dd>
-<dt class="pt dlterm">Numero massimo di IP mobili </dt>
+<dt class="pt dlterm">Numero massimo di IP mobili</dt>
 <dd>Il numero massimo di indirizzi IP pubblici che puoi assegnare tra tutti gli spazi di un'organizzazione.</dd>
 </dl>
 <strong>Nota</strong>: se non disponi ancora di contenitori nel tuo ambiente o se non li hai ancora configurati, ricevi un messaggio di errore.
@@ -955,7 +955,7 @@ non dispongono di autorizzazioni.
     1. Per aggiungere un utente a un'organizzazione, seleziona il nome utente dalla tabella per accedere alla pagina **Modifica utente**. Utilizza quindi il campo di ricerca per individuare un'organizzazione, seleziona l'organizzazione dall'elenco e fai clic su **Salva**.
     2. Per rimuovere un utente da un'organizzazione, seleziona il nome utente dalla tabella per accedere alla pagina **Modifica utente**. Fai quindi clic su ![Rimuovi](images/icon_remove.svg) per l'organizzazione da cui vuoi rimuovere l'utente e fai clic su **Salva**.
     
-* Per visualizzare le informazioni sull'organizzazione a cui è assegnato l'utente, fai clic sul nome dell'organizzazione per visualizzarne le informazioni. Puoi quindi fare clic sul nome dell'utente per ritornare a visualizzare le informazioni sull'utente.  
+* Per visualizzare le informazioni sull'organizzazione a cui è assegnato l'utente, fai clic sul nome dell'organizzazione per visualizzarne le informazioni. Puoi quindi fare clic sul nome dell'utente per ritornare a visualizzare le informazioni sull'utente. 
 
 ### Autorizzazioni
 {: #permissions}
@@ -1305,13 +1305,12 @@ Il seguente esempio mostra l'output di questo
 ## API per le metriche (sperimentale)
 {: #envappmetricsapi}
 
-Puoi utilizzare due API sperimentali per raccogliere le metriche sul tuo ambiente o sulle tue applicazioni. Queste API restituiscono un array di punti dati per le metriche che hai richiesto nell'intervallo di tempo che hai specificato. 
+Puoi utilizzare due API sperimentali per raccogliere le metriche sul tuo ambiente o sulle tue applicazioni. Queste API restituiscono un array di punti dati per le metriche che hai richiesto nell'intervallo di tempo che hai specificato.
 
 Puoi accedere alle API delle metriche descritte nelle seguenti sezioni dall'endpoint specifico della regione, ad esempio: 
 
- ```
-https://console.<region>.bluemix.net.
- ```
+ `https://console.<region>.bluemix.net/admin/metrics`
+{: codeblock}
 
 **Note**:
 
@@ -1322,20 +1321,31 @@ https://console.<region>.bluemix.net.
 
 Puoi utilizzare l'API di ambiente sperimentale per raccogliere le informazioni sull'ambiente di alto livello in un periodo di tempo che specifichi. Vengono restituiti i punti dati nel periodo di tempo che specifichi. I dati sono registrati approssimativamente ogni ora. Se, ad esempio, hai richiesto sei ore di dati CPU per l'ambiente, la risposta includerà i dati CPU per ognuna delle sei ore richieste.
 
+ ### Endpoint di ambiente 
+ 
+Puoi utilizzare il seguente endpoint per richiamare questo comando API:  `/api/v1/env`
+
 ### Parametri della query delle metriche di ambiente
 
 Utilizzando i seguenti parametri della query, puoi raccogliere le metriche per i tuoi CPU, disco, memoria, rete e applicazioni:
 
 <dl class="parml">
 <dt class="pt dlterm">metrica</dt>
-<dd class="pd">Uno o più dei seguenti valori, separati da virgole: 'memory', 'disk', 'cpu', 'network' e 'apps.'</dd>
+<dd class="pd">Uno o più dei seguenti valori, separati da virgole: `memory`, `disk`, `cpu`, `network` e `apps`.</dd>
 <dt class="pt dlterm">OraInizio</dt>
 <dd class="pd">Il primo punto nel tempo da cui vengono restituiti i dati. Se non viene specificata una OraInizio, viene incluso il primo punto dati disponibile. Ad esempio, per raccogliere i dati tra la 14 e le 17, specificare una OraInizio di 14.</dd>
 <dt class="pt dlterm">OraFine</dt>
 <dd class="pd">L'ultimo  punto nel tempo da cui vengono restituiti i dati. Se non viene specificata alcuna OraFine, viene utilizzato il punto dati più recente. Ad esempio, per raccogliere i dati tra la 14 e le 17, specificare una OraFine di 17.</dd>
 <dt class="pt dlterm">ordinamento</dt>
-<dd class="pd">L'ordinamento in cui vengono restituiti i dati. I valori validi sono 'asc' (crescente) e 'desc' (decrescente). Il valore predefinito è decrescente, che restituisce prima i dati più recenti. </dd>
+<dd class="pd">L'ordinamento in cui vengono restituiti i dati. I valori validi sono `asc` (crescente) e `desc` (decrescente). Il valore predefinito è decrescente, che restituisce prima i dati più recenti. </dd>
 </dl>
+
+ Il seguente esempio utilizza i parametri di query per raccogliere le metriche relative al tuo ambiente:
+ 
+ ```
+ curl -b ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/admin/metrics/api/v1/env?metric=cpu,network,disk,apps,memory
+ ```
+{: codeblock}
 
 ### Formato dei dati delle metriche di ambiente
 
@@ -1347,19 +1357,37 @@ Le seguenti sezioni forniscono il formato dei dati.
 {
   "sample_time": 1477494000000,
   "memory": {
-    "physical": {
-      "total_gb": 864,
+    "cell": {
+      "physical": {
+        "total_gb": 864,
       "used": {
-        "value_gb": 336.84,
+          "value_gb": 336.84,
         "percent": 38.99
       }
-    },
+      },
     "allocated": {
-      "reserved_gb": 1728,
+        "reserved_gb": 1728,
       "total_allocated": {
-        "value_gb": 1287.59,
+          "value_gb": 1287.59,
         "percent": 74.51
       }
+      },
+    },
+    "dea": {
+      "physical": {
+      	"total_gb": 864,
+      "used": {
+          "value_gb": 336.84,
+        "percent": 38.99
+      }
+      },
+    "allocated": {
+        "reserved_gb": 1728,
+      "total_allocated": {
+          "value_gb": 1287.59,
+        "percent": 74.51
+      }
+      },
     },
     "memory_by_container": [
       {
@@ -1398,19 +1426,37 @@ Le seguenti sezioni forniscono il formato dei dati.
 {
   "sample_time": 1477494000000,
   "disk": {
-    "physical": {
-      "total_gb": 8100,
+    "cell": {
+      "physical": {
+        "total_gb": 8100,
       "used": {
-        "value_gb": 807,
+          "value_gb": 807,
         "percent": 9.96
       }
-    },
+      },
     "allocated": {
-      "reserved_gb": 16200,
+        "reserved_gb": 16200,
       "total_allocated": {
-        "value_gb": 1989.5,
+          "value_gb": 1989.5,
         "percent": 12.28
       }
+      },
+    },
+    "dea": {
+      "physical": {
+        "total_gb": 8100,
+      "used": {
+          "value_gb": 807,
+        "percent": 9.96
+      }
+      },
+    "allocated": {
+        "reserved_gb": 16200,
+      "total_allocated": {
+          "value_gb": 1989.5,
+        "percent": 12.28
+      }
+      },
     },
     "disk_by_container": [
       {
@@ -1449,7 +1495,12 @@ Le seguenti sezioni forniscono il formato dei dati.
 {
   "sample_time": 1477494000000,
   "cpu": {
-    "average_percent_cpu_used": 27.288461538461544,
+    "cell": {
+      "average_percent_cpu_used": 27.288461538461544
+    },
+    "dea": {
+      "average_percent_cpu_used": 27.288461538461544
+    },
     "cpu_by_container": [
       {
         "name": "dea_next/0",
@@ -1542,7 +1593,7 @@ Le seguenti sezioni forniscono il formato dei dati.
 {: screen}
 
 * Per raccogliere i dati registrati sulle tue applicazioni, utilizza il seguente formato dei dati:
- 
+
 ```
 {
   "sample_time": 1477494000000,
@@ -1576,11 +1627,11 @@ Per ridurre la quantità di informazioni restituite per ogni esempio di dati nel
 ### Endpoint delle applicazioni 
 
 Puoi utilizzare i seguenti endpoint per richiamare questo comando API:
-* /api/v1/app/cpu/physical 
-* /api/v1/app/memory/physical
-* /api/v1/app/memory/reserved
-* /api/v1/app/disk/physical
-* /api/v1/app/disk/reserved
+* `/api/v1/app/cpu/physical` 
+* `/api/v1/app/memory/physical`
+* `/api/v1/app/memory/reserved`
+* `/api/v1/app/disk/physical`
+* `/api/v1/app/disk/reserved`
 
 
 ### Parametri della query delle applicazioni
@@ -1595,7 +1646,17 @@ Utilizza i seguenti parametri della query per raccogliere le metriche per le tue
 <dt class="pt dlterm">conteggio</dt>
 <dd class="pd">Il numero di record da restituire in ogni esempio di dati.
 </dd>
+<dt class="pt dlterm">minValue</dt>
+<dd class="pd">Il valore minimo da restituire per la metrica specificata.  Se non si specifica alcun minValue, vengono restituiti tutti i valori.  Ad esempio, per raccogliere applicazioni che utilizzano almeno 20000 byte di memoria fisica, specifica un minValue di 20000.
+</dd>
 </dl>
+
+Il seguente esempio raccoglie le metriche relative alle tue applicazioni:
+
+```
+curl -b ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/admin/metrics/api/v1/app/cpu/physical?count=5&startTime=2016-12-02T16:54:09.467Z
+```
+{: codeblock}
 
 ### Formato della risposta delle applicazioni
 

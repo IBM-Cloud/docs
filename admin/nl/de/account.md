@@ -90,7 +90,7 @@ Als Kontoeigner oder Abrechnungsmanager einer Organisation können Sie die Seite
 
 Um die Seite 'Nutzungsdashboard' zu öffnen, klicken Sie auf **Konto** &gt; *Name_des_eigenen_Kontos* &gt; **Nutzungsdashboard**. Abrechnungsmanager können nur die Details für die Organisationen anzeigen, in denen ihnen die Rolle des Abrechnungsmanagers zugewiesen ist.
 
-Dem Kontoeigner werden die Gebühren für die Gesamtnutzung, die für alle Organisationen anfallen, am Ende jedes Abrechnungszyklus in Rechnung gestellt. Als Kontoeigner können Sie die Nutzungszusammenfassung nach Region und Organisation filtern. Sie können ferner auf einen bestimmten Monat klicken, um die Nutzung für diesen Monat anzuzeigen. Wählen Sie in der Liste **Organisation** die Option **Alle Organisationen** aus, um die Nutzung für alle Organisationen im Konto anzuzeigen. 
+Dem Kontoeigner werden die Gebühren für die Gesamtnutzung, die für alle Organisationen anfallen, am Ende jedes Abrechnungszyklus in Rechnung gestellt. Als Kontoeigner können Sie die Nutzungszusammenfassung nach Region und Organisation filtern. Sie können ferner auf einen bestimmten Monat klicken, um die Nutzung für diesen Monat anzuzeigen. Wählen Sie in der Liste **Organisation** die Option **Alle Organisationen** aus, um die Nutzung für alle Organisationen im Konto anzuzeigen.
 
 ## Abrechnungsdaten aktualisieren
 {: #account_billing}

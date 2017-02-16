@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-01-24"
 
 ---
 
@@ -58,7 +58,7 @@ Sie können Benachrichtigungen für Ihre lokale oder dedizierte Umgebung anzeige
 | Wartungsaktualisierungen | Zum Anzeigen einer vollständigen Liste und des Verlaufs der anstehenden und abgeschlossenen Benachrichtigungen klicken Sie auf **Verwaltung &gt; Systeminformationen** &gt; *Anzahl* **Anstehend**. Sie werden auch über geplante Wartungsaktualisierungsereignisse mit Unterbrechungen auf der Seite 'Status' benachrichtigt. Klicken Sie auf **Support** &gt; **Status**. Sie können die Benachrichtigungsfunktion erweitern, indem Sie ein Abonnement einrichten, das eine E-Mail an die Empfänger Ihrer Wahl sendet. Sie können auch ein Abonnement einrichten, das die Benachrichtigungen auf der Seite 'Verwaltung' mithilfe von Web-Hooks in einen Web-Service Ihrer Wahl integriert.|
 | Kritische Vorfälle | Sie werden über kritische Vorfälle auf der Seite 'Status' benachrichtigt. Klicken Sie auf **Support** &gt; **Status**. Sie können die Benachrichtigungsfunktion erweitern, indem Sie ein Benachrichtigungsabonnement einrichten, das eine E-Mail an einen Empfänger Ihrer Wahl sendet. Sie können auch ein Abonnement einrichten, das die Benachrichtigungen auf der Seite 'Verwaltung' mithilfe von Web-Hooks in einen Web-Service Ihrer Wahl integriert.  |  
 | Schwellenwertereignisse | Sie können ein Benachrichtigungsabonnement einrichten, das eine E-Mail an einen Empfänger Ihrer Wahl sendet, wenn in Ihrer Umgebung Ressourcenschwellenwerte für physische Platte, physischen Speicher, reservierte Platte oder reservierten Speicher erreicht wurden. Alternativ können Sie ein Abonnement einrichten, das die Benachrichtigungen mithilfe von Web-Hooks in einen Web-Service Ihrer Wahl integriert.  |  
-| {{site.data.keyword.Bluemix_notm}}-Status | Sie können den neuesten Status für die Plattform, die Services und Ihre {{site.data.keyword.Bluemix_notm}}-Instanz immer auf der Seite 'Status' anzeigen. Klicken Sie auf **Support** &gt; **Status**.   |
+| {{site.data.keyword.Bluemix_notm}}-Status | Sie können den neuesten Status für die Plattform, die Services und Ihre {{site.data.keyword.Bluemix_notm}}-Instanz immer auf der Seite 'Status' anzeigen. Klicken Sie auf **Support** &gt; **Status**.  |
 {: caption="Table 2. Event types and notifications methods" caption-side="top"}
 
 ### Benachrichtigungsabonnements einrichten
@@ -207,7 +207,7 @@ Sie können ein beliebiges gespeichertes Benachrichtigungsabonnement auswählen,
 ## Wartungsaktualisierungen
 {: #oc_schedulemaintenance}
 
-Wenn Sie die Superuserberechtigung (`ops.admin`) besitzen, können Sie geplante und ausstehende Wartungsaktualisierungen anzeigen, indem Sie über **VERWALTUNG &gt; SYSTEMINFORMATIONEN &gt; *Anzahl* anstehend** auf die Seite **Systemaktualisierungen** zugreifen.  Alle Benutzer Ihrer Umgebung können die geplanten Wartungsaktualisierungsereignisse mit Unterbrechungen anzeigen, indem sie auf **Support** &gt; **Status** klicken. 
+Wenn Sie die Superuserberechtigung (`ops.admin`) besitzen, können Sie geplante und ausstehende Wartungsaktualisierungen anzeigen, indem Sie über **VERWALTUNG &gt; SYSTEMINFORMATIONEN &gt; *Anzahl* anstehend** auf die Seite **Systemaktualisierungen** zugreifen.  Alle Benutzer Ihrer Umgebung können die geplanten Wartungsaktualisierungsereignisse mit Unterbrechungen anzeigen, indem sie auf **Support** &gt; **Status** klicken.
 
 **Hinweis:** Lesen Sie als Einführung den Abschnitt [Vorab genehmigte Wartungszeiten einstellen](index.html#preapprovedmaintenance). Diese Fenster müssen definiert sein, damit IBM die Wartungszeiten für Ihre Umgebung planen kann.
 
@@ -368,12 +368,12 @@ Um weitere Informationen zur physischen und reservierten Speicher- oder Plattenn
 ### Kontonutzung
 {: #accountusage}
 
-Sie können die monatliche Nutzung für Ihr Konto für Ihre dedizierte oder lokale Umgebung anzeigen. Mithilfe dieser Daten können Sie ermitteln, wie viel bestimmten Organisationen auf Grundlage ihrer Nutzung zu berechnen ist. Alle Administrationskonsolenbenutzer mit der Berechtigung **Benutzer** und mit dem Zugriffsrecht **Lesen** können die Kontonutzungsdaten anzeigen. Abrechnungsmanager der Organisation können außerdem die Kontonutzungsdaten für ihre Organisationen anzeigen, selbst wenn Abrechnungsmanagern die Administrationskonsolenberechtigung **Benutzer** nicht zugewiesen wurde. Administratoren der Administrationskonsole (Superuserberechtigung) können Organisationen die Rolle eines Abrechnungsmanagers zuweisen, indem sie auf **Konto** &gt; **Organisationen verwalten** klicken. 
+Sie können die monatliche Nutzung für Ihr Konto für Ihre dedizierte oder lokale Umgebung anzeigen. Mithilfe dieser Daten können Sie ermitteln, wie viel bestimmten Organisationen auf Grundlage ihrer Nutzung zu berechnen ist. Alle Administrationskonsolenbenutzer mit der Berechtigung **Benutzer** und mit dem Zugriffsrecht **Lesen** können die Kontonutzungsdaten anzeigen. Abrechnungsmanager der Organisation können außerdem die Kontonutzungsdaten für ihre Organisationen anzeigen, selbst wenn Abrechnungsmanagern die Administrationskonsolenberechtigung **Benutzer** nicht zugewiesen wurde. Administratoren der Administrationskonsole (Superuserberechtigung) können Organisationen die Rolle eines Abrechnungsmanagers zuweisen, indem sie auf **Konto** &gt; **Organisationen verwalten** klicken.
 
 Führen Sie die folgenden Schritte durch, um die Kontonutzungsdaten anzuzeigen:
 
 <ol>
-<li>Klicken Sie auf <strong>Konto</strong> &gt; <strong>Nutzungsdashboard</strong>. </li>
+<li>Klicken Sie auf <strong>Konto</strong> &gt; <strong>Nutzungsdashboard</strong>.</li>
 <li>Wählen Sie die Organisation aus, für die Daten angezeigt werden sollen.</li>
 <li>Sie können Nutzungsdetails für die folgenden Kategorien anzeigen:
 <ul>
@@ -389,7 +389,7 @@ Führen Sie die folgenden Schritte durch, um die Kontonutzungsdaten anzuzeigen:
 Sie können auch die monatliche Nutzung und die damit verbundenen Gebühren auf Kontoebene für Ihre Laufzeiten, Apps und Services anzeigen, die aus {{site.data.keyword.Bluemix_notm}} Public syndiziert wurden. Mithilfe dieser Daten können Sie ermitteln, wie viel bestimmten Organisationen auf Grundlage ihrer Nutzung zu berechnen ist.
 
 <ol>
-<li>Klicken Sie auf <strong>Konto</strong> &gt; <strong>Nutzungsdashboard</strong>. </li>
+<li>Klicken Sie auf <strong>Konto</strong> &gt; <strong>Nutzungsdashboard</strong>.</li>
 <li>Klicken Sie auf <strong>Öffentlich</strong>.</li>
 <li>Wählen Sie die Organisation aus, für die Daten angezeigt werden sollen.</li>
 <li>Sie können Nutzungsdetails für die folgenden Kategorien anzeigen:
@@ -466,7 +466,7 @@ Sie können den Status für die {{site.data.keyword.Bluemix_notm}}-Umgebung und 
 
 ### {{site.data.keyword.Bluemix_notm}}-Umgebungsstatus
 
-Sie können den Status für Ihre {{site.data.keyword.Bluemix_notm}}-Instanz über die {{site.data.keyword.Bluemix_notm}}-Statusseite anzeigen. Klicken Sie auf **Support** &gt; **Status**. 
+Sie können den Status für Ihre {{site.data.keyword.Bluemix_notm}}-Instanz über die {{site.data.keyword.Bluemix_notm}}-Statusseite anzeigen. Klicken Sie auf **Support** &gt; **Status**.
 
 Die Seite 'Status' ist die zentrale Position für die Suche nach Benachrichtigungen und Ankündigungen in Bezug auf bedeutende Ereignisse, die die {{site.data.keyword.Bluemix_notm}}-Plattform und die übergeordneten Services in {{site.data.keyword.Bluemix_notm}} betreffen. Sie können einen RSS-Feed abonnieren, damit Sie nicht immer überprüfen müssen, ob Sie eine Benachrichtigung erhalten haben. Weitere Informationen zur Seite 'Status' und zur Einrichtung des RSS-Feeds finden Sie in [{{site.data.keyword.Bluemix_notm}} anzeigen](../support/index.html#viewing-bluemix-status).
 
@@ -763,7 +763,7 @@ mehrere Namen ein bzw. wählen Sie mehrere Namen aus, wenn Sie mehrere Manager h
 
 Sie können in Ihrer Organisation Bereiche erstellen, z. B. einen Bereich *dev* als Entwicklungsumgebung, einen Bereich *test* als Testumgebung und einen Bereich *production* als Produktionsumgebung. Anschließend können Sie Ihre Apps den Bereichen zuordnen. Führen Sie die folgenden Schritte aus, um einen Bereich zu erstellen:
 
-1. Klicken Sie in der Menüleiste auf **Konto** &gt; **Organisationen verwalten**. 
+1. Klicken Sie in der Menüleiste auf **Konto** &gt; **Organisationen verwalten**.
 2. Wählen Sie die Organisation aus, der Sie einen Bereich hinzufügen möchten.
 3. Klicken Sie auf **Bereich erstellen**.
 4. Geben Sie einen Bereichsnamen ein.
@@ -809,12 +809,12 @@ der höchsten Speicherbelegung und der überschüssigen Speicherzuordnung sortie
 ### Kontingente verwalten
 {: #manageorgquota}
 
-Ein Kontingent stellt die Ressourcengrenzen für die Organisationen in Ihrer Umgebung dar, die beim Erstellen der Organisation zugeordnet wird. Jede Anwendung oder jeder Service in einem Bereich der Organisation trägt zur Nutzung des zugeordneten Kontingents bei. Führen Sie die folgenden Schritte aus, um das Kontingent für eine Organisation zu verwalten: 
+Ein Kontingent stellt die Ressourcengrenzen für die Organisationen in Ihrer Umgebung dar, die beim Erstellen der Organisation zugeordnet wird. Jede Anwendung oder jeder Service in einem Bereich der Organisation trägt zur Nutzung des zugeordneten Kontingents bei. Führen Sie die folgenden Schritte aus, um das Kontingent für eine Organisation zu verwalten:
 
 <ol>
 <li>Klicken Sie im Abschnitt 'Hauptspeichernutzung für Organisation' auf den Balken im Diagramm für die Organisation, die bearbeitet werden soll, oder wählen Sie den Namen der Organisation im Bereich 'Organisationsliste' aus. Auf der Seite 'Informationen zu Organisation' können Sie die Organisation umbenennen oder Manager hinzufügen oder entfernen.
 <p><strong>Hinweis:</strong> Wenn Sie einen Kontingentplan auswählen, der für die aktuelle Speichernutzung einer Organisation nicht ausreicht, erhalten Sie eine Nachricht.</p></li>
-<li>Klicken Sie auf <strong>Cloud Foundry</strong> oder <strong>Container</strong>. Standardmäßig wird die Kontingentseite 'Cloud Foundry' geöffnet.
+<li>Klicken Sie auf <strong>Cloud Foundry</strong> oder <strong>Container</strong>.  Standardmäßig wird die Kontingentseite 'Cloud Foundry' geöffnet. 
 <ul>
 <li>Auf der Seite 'Cloud Foundry' können Sie einen Plan auswählen und die Kontingentdetails für die folgenden Ressourcen anzeigen:
 <ul>
@@ -827,18 +827,18 @@ Ein Kontingent stellt die Ressourcengrenzen für die Organisationen in Ihrer Umg
 <li>Auf der Seite <strong>Container</strong> können Sie für die folgenden Felder Werte zuweisen (diese müssen Ganzzahlen sein):
 <dl class="parml">
 <dt class="pt dlterm">Imagegrenzwert</dt>
-<dd class="pd">Die maximale Anzahl von Container-Images, die in Ihrer privaten Registry vorhanden sein darf. Ein Container-Image ist die Basis für jeden von Ihnen erstellten Container. Ein Image wird aus einer Docker-Datei erstellt. Dabei handelt es sich um eine schreibgeschützte Datei, in der das Betriebssystem, die App und alle ihre Abhängigkeiten gespeichert sind, und in der beschrieben wird, wie ein Container konfiguriert wird. Images werden mit allen Mitgliedern einer Organisation gemeinsam genutzt. </dd>
+<dd class="pd">Die maximale Anzahl von Container-Images, die in Ihrer privaten Registry vorhanden sein darf. Ein Container-Image ist die Basis für jeden von Ihnen erstellten Container. Ein Image wird aus einer Docker-Datei erstellt. Dabei handelt es sich um eine schreibgeschützte Datei, in der das Betriebssystem, die App und alle ihre Abhängigkeiten gespeichert sind, und in der beschrieben wird, wie ein Container konfiguriert wird. Images werden mit allen Mitgliedern einer Organisation gemeinsam genutzt.</dd>
 <dt class="pt dlterm">Hauptspeicherzuordnung - Standard</dt>
 <dd>Die Containerspeichermenge, die automatisch zugewiesen wird, wenn ein neuer Bereich erstellt wird. Beim Erstellen eines Containers müssen Sie eine Containergröße auswählen. Durch die Größe wird die Speichermenge bestimmt, die der Container auf dem Berechnungshost verwenden kann, und sie wird bei der Speicherbegrenzung für den Container berücksichtigt. </dd>
 <dt class="pt dlterm">Hauptspeicherzuordnung - Maximum</dt>
-<dd>Die maximale Containerspeichermenge, die bereichsübergreifend in einer Organisation zugeordnet verteilt werden kann. </dd>
+<dd>Die maximale Containerspeichermenge, die bereichsübergreifend in einer Organisation zugeordnet verteilt werden kann.</dd>
 <dt class="pt dlterm">Variable IPs - Standard</dt>
-<dd>Die Anzahl öffentlicher IP-Adressen, die automatisch zugeordnet wird, wenn ein neuer Bereich erstellt wird. Sie können öffentliche IP-Adressen an einzelne Container und Containergruppen binden, damit über das Internet auf sie zugegriffen werden kann. </dd>
+<dd>Die Anzahl öffentlicher IP-Adressen, die automatisch zugeordnet wird, wenn ein neuer Bereich erstellt wird. Sie können öffentliche IP-Adressen an einzelne Container und Containergruppen binden, damit über das Internet auf sie zugegriffen werden kann.</dd>
 <dt class="pt dlterm">Variable IPs - Maximum</dt>
-<dd>Die maximale Anzahl öffentlicher IP-Adressen, die Sie bereichsübergreifend in einer Organisation zuordnen können. </dd>
+<dd>Die maximale Anzahl öffentlicher IP-Adressen, die Sie bereichsübergreifend in einer Organisation zuordnen können.</dd>
 </dl>
 <strong>Hinweis:</strong> Wenn in Ihrer Umgebung noch keine Container vorhanden oder konfiguriert sind, wird eine Fehlernachricht angezeigt.
-<p>Weitere Informationen zu Containern finden Sie in den [Informationen zu IBM Containern](https://console.ng.bluemix.net/docs/containers/container_ov.html). Weitere Informationen zu Containerkontingenten finden Sie unter [Kontingent und Bluemix-Konten]( https://console.ng.bluemix.net/docs/containers/container_planning_org_ov.html#container_planning_quota). </p>
+<p>Weitere Informationen zu Containern finden Sie in den [Informationen zu IBM Containern](https://console.ng.bluemix.net/docs/containers/container_ov.html). Weitere Informationen zu Containerkontingenten finden Sie unter [Kontingent und Bluemix-Konten]( https://console.ng.bluemix.net/docs/containers/container_planning_org_ov.html#container_planning_quota).</p>
 <strong>Hinweis:</strong> In der {{site.data.keyword.Bluemix_notm}}-Region 'Sydney' stehen keine Container zur Verfügung.</li>
 </ul>
 <li>Speichern Sie Ihre Änderungen auf der Seite 'Organisation verwalten', indem Sie auf <strong>Speichern</strong> klicken.</li>
@@ -860,7 +860,7 @@ Im Bereich der Organisationsliste werden alle Organisationen in der {{site.data.
   - Diagramm zur gemessenen Anwendungsnutzung, das einen dreimonatigen Bericht zu den genutzten GB-Stunden pro bereitgestellter App zeigt. Sie können die **Listenansicht** auswählen, um Daten für alle Apps mit Speicherzuordnung pro App und gemessener GB-Stundennutzung für die vergangenen drei Monate anzuzeigen.
 
 - Zum Bearbeiten des Namens der Organisation sowie zum Hinzufügen oder Entfernen von Managern klicken Sie auf den Namen der Organisation in der Liste und folgen den Anweisungen in der Anzeige.
-- Um Informationen zu einem bestimmten Benutzer der angezeigten Organisation anzuzeigen, klicken Sie auf den Benutzernamen, um die Benutzerinformationen anzuzeigen. Anschließend können Sie auf den Namen der Organisation klicken, um zur Anzeige der Organisationsinformationen zurückzukehren.  
+- Um Informationen zu einem bestimmten Benutzer der angezeigten Organisation anzuzeigen, klicken Sie auf den Benutzernamen, um die Benutzerinformationen anzuzeigen. Anschließend können Sie auf den Namen der Organisation klicken, um zur Anzeige der Organisationsinformationen zurückzukehren. 
 
 ## Benutzer und Berechtigungen verwalten
 {: #oc_useradmin}
@@ -937,7 +937,7 @@ Abhängig vom Zugriff **Lesen** oder **Schreiben** für die Berechtigungen des B
     1. Wählen Sie den Benutzernamen in der Tabelle aus, um auf die Seite **Benutzer bearbeiten** zuzugreifen und einen Benutzer zu einer Organisation hinzuzufügen. Verwenden Sie anschließend das Suchfeld, um eine Organisation zu lokalisieren, wählen Sie die Organisation aus der Liste aus und klicken Sie anschließend auf **Speichern**.
     2. Wählen Sie den Benutzernamen in der Tabelle aus, um auf die Seite **Benutzer bearbeiten** zuzugreifen und einen Benutzer aus einer Organisation zu entfernen. Klicken Sie anschließend für die Organisation, aus der der Benutzer entfernt werden soll, auf ![Entfernen](images/icon_remove.svg) und dann auf **Speichern**.
     
-* Um Informationen zu der Organisation anzuzeigen, der der Benutzer zugewiesen ist, klicken Sie auf den Namen der Organisation, um die Organisationsinformationen anzuzeigen. Anschließend können Sie auf den Benutzernamen klicken, um zur Anzeige der Benutzerinformationen zurückzukehren.  
+* Um Informationen zu der Organisation anzuzeigen, der der Benutzer zugewiesen ist, klicken Sie auf den Namen der Organisation, um die Organisationsinformationen anzuzeigen. Anschließend können Sie auf den Benutzernamen klicken, um zur Anzeige der Benutzerinformationen zurückzukehren. 
 
 ### Berechtigungen
 {: #permissions}
@@ -962,10 +962,10 @@ Den Benutzern können die folgenden Berechtigungen mit bestimmten Zugriffsebenen
 Sie können die REST-API `Admin` verwenden, um Benutzer für Ihre {{site.data.keyword.Bluemix_notm}}-Instanz hinzuzufügen und zu entfernen.
 Die Endpunkte und JSON-Antworten der `Admin`-REST-API werden probeweise zu Verfügung gestellt, um Basisoperationen über eine Befehlszeile zu ermöglichen. Die in den vorliegenden Informationen zu den Beispielen enthaltenen Endpunkte und URLs können jederzeit geändert oder entfernt werden.
 
-Sie können zwar auswählen, ob Sie andere Tools verwenden möchten, jedoch sind die folgenden Tools Voraussetzungen für die Verwendung der nachfolgenden Beispiele: 
+Sie können zwar auswählen, ob Sie andere Tools verwenden möchten, jedoch sind die folgenden Tools Voraussetzungen für die Verwendung der nachfolgenden Beispiele:
 * cURL für die Eingabe von REST-API-Anforderungen als Befehle. cURL ist ein Dienstprogramm zur freien Verwendung, mit dessen Hilfe Sie über eine Befehlszeilenschnittstelle HTTP-Anforderungen an einen Server senden und Antworten vom Server empfangen können. Sie können
-cURL von der [cURL-Download-Site ![Symbol für externen Link](../icons/launch-glyph.svg)](http://curl.haxx.se/download.html){: new_window} herunterladen. 
-* Python für die Verwendung des Python-Tools für JSON-Schöndruck. Dieses optionale Tool akzeptiert JSON-Text als Eingabe und stellt eine übersichtliche Ausgabe zur Verfügung. Sie können Python von der [Python-Download-Site ![Symbol für externen Link](../icons/launch-glyph.svg)](https://www.python.org/downloads){: new_window} herunterladen. 
+cURL von der [cURL-Download-Site ![Symbol für externen Link](../icons/launch-glyph.svg)](http://curl.haxx.se/download.html){: new_window} herunterladen.
+* Python für die Verwendung des Python-Tools für JSON-Schöndruck. Dieses optionale Tool akzeptiert JSON-Text als Eingabe und stellt eine übersichtliche Ausgabe zur Verfügung. Sie können Python von der [Python-Download-Site ![Symbol für externen Link](../icons/launch-glyph.svg)](https://www.python.org/downloads){: new_window} herunterladen.
 
 ### Bei der Administrationskonsole anmelden
 
@@ -1248,13 +1248,12 @@ Das folgende Beispiel zeigt die Ausgabe dieses Befehls:
 ## API für Metriken (experimentell)
 {: #envappmetricsapi}
 
-Zur Erfassung von Metriken über Ihre Umgebung oder Anwendungen können Sie zwei experimentelle APIs verwenden. Diese APIs geben ein Array von Datenpunkten für die angeforderten Metriken und den von Ihnen angegebenen Zeitraum zurück. 
+Zur Erfassung von Metriken über Ihre Umgebung oder Anwendungen können Sie zwei experimentelle APIs verwenden. Diese APIs geben ein Array von Datenpunkten für die angeforderten Metriken und den von Ihnen angegebenen Zeitraum zurück.
 
-Auf die in den folgenden Abschnitten beschriebenen Metrik-APIs kann über den regionsspezifischen Endpunkt zugegriffen werden. Beispiel:  
+Auf die in den folgenden Abschnitten beschriebenen Metrik-APIs kann über den regionsspezifischen Endpunkt zugegriffen werden. Beispiel: 
 
- ```
-https://console.<Region>.bluemix.net.
- ```
+ `https://console.<region>.bluemix.net/admin/metrics`
+{: codeblock}
 
 **Hinweise**:
 
@@ -1265,20 +1264,31 @@ https://console.<Region>.bluemix.net.
 
 Mit der experimentellen Umgebungs-API können Sie allgemeine Information zur Umgebung für einen von Ihnen angegebenen Zeitraum erfassen. Zurückgegeben werden die verfügbaren Datenpunkte im angegebenen Zeitraum. Daten werden ungefähr ein Mal pro Stunde aufgezeichnet. Falls Sie beispielsweise sechs Stunden von CPU-Daten für die Umgebung angefordert haben, würde die Antwort CPU-Daten für jede der angeforderten sechs Stunden enthalten.
 
+ ### Umgebungsendpunkte 
+ 
+Zum Aufrufen dieses API-Befehls können Sie den folgenden Endpunkt verwenden: `/api/v1/env`
+
 ### Abfrageparameter für Umgebungsmetriken
 
 Mit den folgenden Abfrageparametern können Sie Metriken für die CPU, die Platte, den Hauptspeicher, das Netz und Apps erfassen:
 
 <dl class="parml">
 <dt class="pt dlterm">metric</dt>
-<dd class="pd">Einer oder mehrere der folgenden Werte, durch Kommas getrennt: 'memory', 'disk', 'cpu', 'network' und 'apps.'</dd>
+<dd class="pd">Einer oder mehrere der folgenden Werte, durch Kommas getrennt: `memory`, `disk`, `cpu`, `network` und `apps`.</dd>
 <dt class="pt dlterm">startTime</dt>
 <dd class="pd">Der früheste Zeitpunkt, für den Daten zurückgegeben werden. Falls der Parameter 'startTime' nicht angegeben ist, wird der früheste verfügbare Datenpunkt einbezogen. Um beispielsweise Daten für den Zeitraum zwischen 14.00 und 17.00 Uhr zu erfassen, geben Sie als Startzeit 14.00 Uhr an.</dd>
 <dt class="pt dlterm">endTime</dt>
 <dd class="pd">Der späteste Zeitpunkt, für den Daten zurückgegeben werden. Falls der Parameter 'endTime' nicht angegeben ist, wird der neueste Datenpunkt verwendet. Um beispielsweise Daten für den Zeitraum zwischen 14.00 und 17.00 Uhr zu erfassen, geben Sie als Endzeit 17.00 Uhr an.</dd>
 <dt class="pt dlterm">sort</dt>
-<dd class="pd">Die Reihenfolge, in der die Daten zurückgegeben werden. Gültige Werte sind 'asc' (aufsteigend) und 'desc' (absteigend). Standardeinstellung ist die absteigende Reihenfolge; hierbei werden zuerst die neuesten Daten zurückgegeben. </dd>
+<dd class="pd">Die Reihenfolge, in der die Daten zurückgegeben werden. Gültige Werte sind: `asc` (aufsteigend) und `desc` (absteigend). Standardeinstellung ist die absteigende Reihenfolge; hierbei werden zuerst die neuesten Daten zurückgegeben. </dd>
 </dl>
+
+ Im folgenden Beispiel werden die Abfrageparameter zum Erfassen von Metriken für die Umgebung verwendet: 
+ 
+ ```
+ curl -b ./cookies.txt --header "Accept: application/json" https://console.<Region>.bluemix.net/admin/metrics/api/v1/env?metric=cpu,network,disk,apps,memory
+ ```
+{: codeblock}
 
 ### Datenformat für Umgebungsmetriken
 
@@ -1290,19 +1300,37 @@ Das Datenformat ist in den folgenden Abschnitten erläutert.
 {
   "sample_time": 1477494000000,
   "memory": {
-    "physical": {
-      "total_gb": 864,
+    "cell": {
+      "physical": {
+        "total_gb": 864,
       "used": {
-        "value_gb": 336.84,
+          "value_gb": 336.84,
         "percent": 38.99
       }
-    },
+      },
     "allocated": {
-      "reserved_gb": 1728,
+        "reserved_gb": 1728,
       "total_allocated": {
-        "value_gb": 1287.59,
+          "value_gb": 1287.59,
         "percent": 74.51
       }
+      },
+    },
+    "dea": {
+      "physical": {
+      	"total_gb": 864,
+      "used": {
+          "value_gb": 336.84,
+        "percent": 38.99
+      }
+      },
+    "allocated": {
+        "reserved_gb": 1728,
+      "total_allocated": {
+          "value_gb": 1287.59,
+        "percent": 74.51
+      }
+      },
     },
     "memory_by_container": [
       {
@@ -1341,19 +1369,37 @@ Das Datenformat ist in den folgenden Abschnitten erläutert.
 {
   "sample_time": 1477494000000,
   "disk": {
-    "physical": {
-      "total_gb": 8100,
+    "cell": {
+      "physical": {
+        "total_gb": 8100,
       "used": {
-        "value_gb": 807,
+          "value_gb": 807,
         "percent": 9.96
       }
-    },
+      },
     "allocated": {
-      "reserved_gb": 16200,
+        "reserved_gb": 16200,
       "total_allocated": {
-        "value_gb": 1989.5,
+          "value_gb": 1989.5,
         "percent": 12.28
       }
+      },
+    },
+    "dea": {
+      "physical": {
+        "total_gb": 8100,
+      "used": {
+          "value_gb": 807,
+        "percent": 9.96
+      }
+      },
+    "allocated": {
+        "reserved_gb": 16200,
+      "total_allocated": {
+          "value_gb": 1989.5,
+        "percent": 12.28
+      }
+      },
     },
     "disk_by_container": [
       {
@@ -1392,7 +1438,12 @@ Das Datenformat ist in den folgenden Abschnitten erläutert.
 {
   "sample_time": 1477494000000,
   "cpu": {
-    "average_percent_cpu_used": 27.288461538461544,
+    "cell": {
+      "average_percent_cpu_used": 27.288461538461544
+    },
+    "dea": {
+      "average_percent_cpu_used": 27.288461538461544
+    },
     "cpu_by_container": [
       {
         "name": "dea_next/0",
@@ -1485,7 +1536,7 @@ Das Datenformat ist in den folgenden Abschnitten erläutert.
 {: screen}
 
 * Um Datensätze über Ihre Anwendungen zu erfassen, verwenden Sie das folgende Datenformat:
- 
+
 ```
 {
   "sample_time": 1477494000000,
@@ -1519,11 +1570,11 @@ Um die Menge der Informationen zu verringern, die für jede Datenstichprobe im a
 ### Anwendungsendpunkte 
 
 Zum Aufrufen dieses API-Befehls können Sie die folgenden Endpunkte verwenden:
-* /api/v1/app/cpu/physical 
-* /api/v1/app/memory/physical
-* /api/v1/app/memory/reserved
-* /api/v1/app/disk/physical
-* /api/v1/app/disk/reserved
+* `/api/v1/app/cpu/physical` 
+* `/api/v1/app/memory/physical`
+* `/api/v1/app/memory/reserved`
+* `/api/v1/app/disk/physical`
+* `/api/v1/app/disk/reserved`
 
 
 ### Abfrageparameter für Anwendungen
@@ -1538,7 +1589,17 @@ Mit den folgenden Abfrageparametern können Sie Metriken für Ihre Anwendungen e
 <dt class="pt dlterm">count</dt>
 <dd class="pd">Die Anzahl der Datensätze in jeder Datenstichprobe, die zurückgegeben werden sollen.
 </dd>
+<dt class="pt dlterm">minValue</dt>
+<dd class="pd">Der kleinste Wert, der für die angegebene Metrik zurückgegeben werden soll. Wenn minValue nicht angegeben wird, werden alle Werte zurückgegeben. Beispiel: Zum Erfassen von Anwendungen, die mindestens 20000 Byte physischen Speicher belegen, geben Sie für minValue den Wert 20000 an.
+</dd>
 </dl>
+
+Mit dem folgenden Beispiel werden Metriken zur Anwendung erfasst:
+
+```
+curl -b ./cookies.txt --header "Accept: application/json" https://console.<Region>.bluemix.net/admin/metrics/api/v1/app/cpu/physical?count=5&startTime=2016-12-02T16:54:09.467Z
+```
+{: codeblock}
 
 ### Antwortformat für Anwendungen
 
@@ -1764,7 +1825,7 @@ Content-Type: application/json
 
 Sie können Benutzer für Ihre {{site.data.keyword.Bluemix_notm}}-Umgebung über die Cloud Foundry-Befehlszeilenschnittstelle mit dem {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in verwalten. Sie können Benutzer beispielsweise aus einer LDAP-Registry hinzufügen.
 
-Vor dem Beginn müssen Sie die Befehlszeilenschnittstelle 'cf' installieren. Für das {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in ist cf Version 6.11.2 oder höher erforderlich. [Laden Sie die Cloud Foundry-Befehlszeilenschnittstelle herunter. ![Symbol für externen Link](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window} 
+Vor dem Beginn müssen Sie die Befehlszeilenschnittstelle 'cf' installieren. Für das {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in ist cf Version 6.11.2 oder höher erforderlich. [Laden Sie die Cloud Foundry-Befehlszeilenschnittstelle herunter. ![Symbol für externen Link](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}
 
 **Einschränkung:** Die
 Cloud Foundry-Befehlszeilenschnittstelle wird nicht von Cygwin unterstützt. Verwenden Sie die Cloud Foundry-Befehlszeilenschnittstelle in einem Befehlszeilenfenster, das sich von dem Befehlszeilenfenster von Cygwin unterscheidet.

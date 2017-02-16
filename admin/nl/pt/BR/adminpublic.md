@@ -34,7 +34,7 @@ Você também pode querer se inscrever para receber notificações, conferir sua
 
 - **Notificações** 
   
-  Inscreva-se para ser notificado de atualizações de manutenção para as regiões públicas da plataforma {{site.data.keyword.Bluemix_notm}} e serviços associados, bem como incidentes, notificações de segurança e outros anúncios. É possível apontar seu leitor de feed RSS no link do RSS na [página de status do Bluemix ![Ícone de link externo](../icons/launch-glyph.svg)](http://ibm.biz/Bluemixstatus){: new_window} para se manter atualizado sobre mudanças no {{site.data.keyword.Bluemix_notm}} Public. Para obter mais detalhes sobre notificações de configuração, consulte [Visualizando o status do Bluemix](/docs/support/index.html#viewing-bluemix-status).
+  Inscreva-se para ser notificado de atualizações de manutenção para as regiões públicas da plataforma {{site.data.keyword.Bluemix_notm}} e serviços associados, bem como incidentes, notificações de segurança e outros anúncios. É possível apontar seu leitor de feed RSS no link do RSS na [página de status do Bluemix ![Ícone de link externo](../icons/launch-glyph.svg)](http://ibm.biz/Bluemixstatus){: new_window} para se manter atualizado sobre mudanças no {{site.data.keyword.Bluemix_notm}} Public.  Para obter mais detalhes sobre notificações de configuração, consulte [Visualizando o status do Bluemix](/docs/support/index.html#viewing-bluemix-status).
 
 - **Opções de suporte** 
   
