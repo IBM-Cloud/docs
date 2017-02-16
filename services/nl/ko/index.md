@@ -25,7 +25,7 @@ lastupdated: "2017-01-11"
 |써드파티	|IBM이 아닌 다른 회사에서 제공하는 서비스입니다. 	|써드파티 서비스에 대한 지원은 해당 서비스 제공업체에서 제공합니다. IBM에서 문제점을 조사한 결과 써드파티 서비스의 결함으로 판별될 경우 IBM이 수정사항을 제공할 의무는 없습니다. IBM은 필요한 경우 해당 써드파티 서비스 제공업체와 분석 내용을 공유합니다.|
 |커뮤니티	|오픈 소스 커뮤니티에서 제공하는 서비스입니다. 	|보안 서비스에 대한 지원은 {{site.data.keyword.Bluemix_notm}} 개발자 커뮤니티에서 제공합니다. IBM에서 문제점을 조사한 결과 커뮤니티 서비스의 결함으로 판별될 경우 IBM이 수정사항을 제공할 의무는 없습니다.|
 |베타	|프로덕션에 사용할 준비가 되지 않았으며 개발의 시험 단계에 있는 서비스입니다. 베타 서비스는 개발 및 마케팅 팀이 서비스를 GA(Generally Available)하기 전에 서비스의 가치를 평가하는 데 도움이 됩니다. 	|IBM에서 제공한 베타 서비스의 결함으로 판별된 문제점은 지원되지만, IBM이 수정사항을 제공할 의무는 없습니다. 또한 문제점 티켓에 심각도 3 또는 4가 지정됩니다(해당하는 경우). 티켓 심각도에 대한 정보는 [지원 문의](/docs/support/index.html#contacting-bluemix-support)를 참조하십시오.|
-{: caption="Table 1. {{site.data.keyword.Bluemix_notm}} services support information" caption-side="top"}
+{: caption="표 1. {{site.data.keyword.Bluemix_notm}} 서비스 지원 정보" caption-side="top"}
 
 ##시범 서비스
 {: #experimental_services}
@@ -130,7 +130,7 @@ lastupdated: "2017-01-11"
 |{{site.data.keyword.appserver_short}}	|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|시드니, 호주에서 호스팅됨 |
 |{{site.data.keyword.workloadscheduler}}	|댈러스, 미국 및 워싱턴, 미국에서 호스팅됨		|암스테르담, 네덜란드 및 밀라노, 이탈리아에서 호스팅됨		|멜버른 호주에서 호스팅됨 |
 |{{site.data.keyword.xpagesservice_short}}	|댈러스, 미국에서 호스팅됨		|런던, 영국에서 호스팅됨		|시드니, 호주에서 호스팅됨 |
-{: caption="Table 2. Service availability" caption-side="top"}
+{: caption="표 2. 서비스 가용성" caption-side="top"}
 
 
 ## 지속적 서비스 가용성
