@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-07"
+  years: 2015, 2017
+lastupdated: "2017-02-16"
 
 ---
 
@@ -38,7 +38,7 @@ lastupdated: "2016-09-07"
 ## 存取 HTTP REST API
 {: #api_link}
 
-若要存取 {{site.data.keyword.iot_short_notm}} HTTP REST API，以及取得如何建置及自訂應用程式的相關資訊，請移至 https://docs.internetofthings.ibmcloud.com/swagger/v0002.html。
+若要存取 {{site.data.keyword.iot_short_notm}} HTTP REST API，以及取得如何建置及自訂應用程式的相關資訊，請移至 https://docs.internetofthings.ibmcloud.com/swagger/v0002.html.
 
 唯一支援的 {{site.data.keyword.iot_short_notm}} HTTP REST API 版本是第 2 版。請確定您的 {{site.data.keyword.iot_short_notm}} 解決方案使用的是第 2 版。
 
