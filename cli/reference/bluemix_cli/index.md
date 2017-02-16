@@ -150,7 +150,7 @@ To install from the repository, take the following steps:
 ## Logging in to {{site.data.keyword.Bluemix_notm}} CLI
 {: #log_bmcli}
 
-After you install {{site.data.keyword.Bluemix_notm}} CLI, you can log in to {{site.data.keyword.Bluemix_notm}} by using your IBM id and password. For example:
+After you install {{site.data.keyword.Bluemix_notm}} CLI, you can log in to {{site.data.keyword.Bluemix_notm}} by using your IBMid and password. For example:
 
 ```
 ~$ bluemix login -a https://api.ng.bluemix.net
