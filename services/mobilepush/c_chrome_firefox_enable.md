@@ -12,7 +12,7 @@ years: 2015, 2017
 
 # Enabling web applications to receive {{site.data.keyword.mobilepushshort}}
 {: #web_notifications}
-Last updated: 08 February 2017
+Last updated: 16 February 2017
 {: .last-updated}
 
 You can enable Google Chrome, Mozilla Firefox and Safari web applications to receive {{site.data.keyword.mobilepushshort}}. Ensure that you have gone through [Configuring credentials for a notification provider](t__main_push_config_provider.html) before proceeding with the steps.
@@ -32,32 +32,36 @@ Download the `BMSPushSDK.js`, `BMSPushServiceWorker.js` and `manifest_Website.js
 	- For Google Chrome browser, change `name` to your site's name. For example, `www.dailynewsupdates.com`. Change the `gcm_sender_id` to your Firebase Cloud Messaging (FCM) or Google Cloud Messaging (GCM) sender_ID. For more information, see [Getting Your Sender ID and API key](t_push_provider_android.html). The gcm_sender_id value contains only numbers.
 
 		```
- 			{
- 			 "name": "YOUR_WEBSITE_NAME",
-  			"gcm_sender_id": "GCM_Sender_Id"
-			 }
+			{
+	"name": "YOUR_WEBSITE_NAME", 
+	"gcm_sender_id": "GCM_Sender_Id"
+			}
 		```
     		{: codeblock}
  
 	- For the Mozilla Firefox browser, add the following values in `manifest_Website.json` file. Provide an appropriate `name`. This would be the name of your website.
 
 		```
-			{
- 			 "name": "YOUR_WEBSITE_NAME"
-			 }
+			{ 
+	"name": "YOUR_WEBSITE_NAME"
+			}
 		```
     		{: codeblock}
 
 2. Change the `manifest_Website.json` file name to `manifest.json`.
 3. Add the `BMSPushSDK.js`, `BMSPushServiceWorker.js` and `manifest.json` to the  root directory of your website.
-3. Include the `manifest.json` in ``<head>`` tag of your html file.
-```<link rel="manifest" href="manifest.json">
-```
-    {: codeblock}
+3. Include the `manifest.json` in `<head>` tag of your html file.
+	```
+		<link rel="manifest" href="manifest.json">
+	```
+    	{: codeblock}
 4. Include Bluemix Web push SDK in your web application.
-```<script src="BMSPushSDK.js" async></script>
-```
-    {: codeblock}
+	```
+		<script src="BMSPushSDK.js" async></script>
+	```
+    	{: codeblock}
+
+**Note**: Ensure that the code is deployed and that the sample link is accessed using `https`, and not `http`. 
 
 ## Initializing the Web Push SDK 
 {: #web_initialize}
@@ -89,7 +93,7 @@ The `App Region` specifies the location where the {{site.data.keyword.mobilepush
 
 **Note**: If your FCM credentials are changed for Web push SDK, the message delivery might fail for the Chrome browser. Ensure that you invoke `bmsPush.unRegisterDevice` to avoid failure.
 
-You might see configuration related errors if you provide a wrong parameter. For more information, see [Resolving web push configuration errors](troubleshooting_config_errors.html)
+You might see configuration related errors if you provide a wrong parameter. For more information, see [Resolving web push configuration errors](troubleshooting_config_errors.html).
 
 ## Registering the web application
 {: #web_register}

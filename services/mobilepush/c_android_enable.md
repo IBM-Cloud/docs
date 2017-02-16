@@ -12,7 +12,7 @@ years: 2015, 2017
 
 # Enabling Android applications to receive {{site.data.keyword.mobilepushshort}}
 {: #tag_based_notifications}
-Last updated: 07 February 2017
+Last updated: 14 February 2017
 {: .last-updated}
 
 You can enable Android applications to receive push notifications to your devices. Android Studio is a prerequisite and is the recommended method to build Android projects. A basic knowledge of Android Studio is essential.
@@ -53,7 +53,7 @@ After creating and opening your mobile application, complete the following steps
 3. Add the following dependencies to your Project level **build.gradle** file.
 ```
 dependencies {
-    classpath 'com.android.tools.build:gradle:2.3.0'
+    classpath 'com.android.tools.build:gradle:2.2.3'
     classpath 'com.google.gms:google-services:3.0.0'
 }
 ``` 

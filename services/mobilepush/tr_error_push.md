@@ -12,7 +12,7 @@ copyright:
 
 # {{site.data.keyword.mobilepushshort}} service error messages
 {: #errors}
-Last updated: 16 January 2017
+Last updated: 13 February 2017
 {: .last-updated}
 
 
@@ -153,6 +153,13 @@ To obtain additional information about an error, search the docs for the related
 
 **User response**: Ensure that the JSON payload is valid.
 
+
+## FPWSE0025E
+{: #error_fpwse0025e}
+
+**Explanation**: The server is currently unable to handle the request.
+
+**User response**: Resubmit the request at a later time.
 
 
 ## FPWSE1007E 
