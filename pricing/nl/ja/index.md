@@ -463,9 +463,9 @@ GB 数を合計して、2 GB の無料枠を減算します。1 月あたり 148
 ```
 cf update-service <service_name> [-p <new_plan>]
 ```
-# 関連リンク
+# rellinks
 {: rellinks}
-## 一般
+## general
 {: general} 
 * [{{site.data.keyword.Bluemix_notm}} 価格設定シート](https://console.{DomainName}/pricing/)
 * [{{site.data.keyword.Bluemix_notm}} Developers Community Forum ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/){: new_window}
