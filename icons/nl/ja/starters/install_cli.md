@@ -4,10 +4,9 @@
 
 copyright:
 
-  years: 2015，2016
+  years: 2015，2017
 
-lastupdated: "2016-10-05"
-
+lastupdated: "2017-01-12"
 
 
 ---
@@ -29,48 +28,50 @@ lastupdated: "2016-10-05"
 {:service_instance_name: data-hd-keyref="service_instance_name"}
 {:user_ID: data-hd-keyref="user_ID"}
 
-# コマンド・ライン・インターフェースを使用したアプリのデプロイ
-最終更新日: 2016 年 10 月 5 日
-{: .last-updated}
+# コマンド・ライン・インターフェースを使用した Cloud Foundry アプリのダウンロード、変更、および再デプロイ
 
-コマンド・ライン・インターフェースを使用して、アプリケーションおよびサービス・インスタンスのデプロイと変更が可能です。
+Cloud Foundry コマンド・ライン・インターフェースを使用して、Cloud Foundry アプリケーションおよびサービス・インスタンスのダウンロード、変更、および再デプロイを行います。
 {:shortdesc}
 
-開始する前に、{{site.data.keyword.Bluemix}} および Cloud Foundry コマンド・ライン・インターフェースをインストールします。
+開始する前に、Cloud Foundry コマンド・ライン・インターフェースをダウンロードし、インストールしてください。 
 
 <p>
-<a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(新しいタブまたはウィンドウで開きます)"><img class="image" src="images/btn_bx_commandline.svg" alt="{{site.data.keyword.Bluemix}} コマンド・ライン・インターフェースのダウンロード" /> </a>  <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(新しいタブまたはウィンドウで開きます)"><img class="image" src="images/btn_cf_commandline.svg" alt="Cloud Foundry コマンド・ライン・インターフェースのダウンロード" /> </a> </p>
+<a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(新規タブまたはウィンドウで開きます)"><img class="image" src="images/btn_cf_commandline.svg" alt="Cloud Foundry コマンド・ライン・インターフェースのダウンロード" /> </a>
+</p>
 
-**制約事項:** コマンド・ライン・ツールは Cygwin でサポートされません。このツールは Cygwin コマンド・ライン・ウィンドウ以外のコマンド・ライン・ウィンドウで使用してください。{:prereq}
+**制約事項:** コマンド・ライン・ツールは Cygwin ではサポートされていません。このツールは Cygwin コマンド・ライン・ウィンドウ以外のコマンド・ライン・ウィンドウで使用してください。
+{:prereq}
 
-コマンド・ライン・インターフェースをインストールしたら、以下の手順を開始できます。
+コマンド・ライン・インターフェースをインストールした後、以下の手順を開始できます。
 
-  1. {: download} スターター・コードをダウンロードし、パッケージを新規ディレクトリーに解凍して開発環境をセットアップします。
-
-    <a class="xref" href="http://bluemix.net" target="_blank" title="(新しいタブまたはウィンドウで開きます)"><img class="image" src="images/btn_starter-code.svg" alt="スターター・コードのダウンロード" /> </a>
+  1. {: download} 開発環境をセットアップするため、アプリのコードを新規ディレクトリーにダウンロードします。
+  
+    <a class="xref" href="http://bluemix.net" target="_blank" title="(新規タブまたはウィンドウで開きます)"><img class="image" src="images/btn_starter-code.svg" alt="アプリケーション・コードのダウンロード" /> </a>
 
   2. コードが置かれているディレクトリーに移動します。
 
   <pre class="pre">cd <var class="keyword varname">your_new_directory</var></pre>
 
-  3.  適切なアプリ・コードを変更します。アプリを {{site.data.keyword.Bluemix}} にデプロイする前に、それがローカルで稼働するか確認することをお勧めします。<br><br>注意が必要なファイルは、`manifest.yml` ファイルです。{{site.data.keyword.Bluemix}} にアプリをデプロイする際、このファイルを使用してアプリケーションの URL、メモリー割り振り、インスタンス数、その他の重要なパラメーターを判別します。Cloud Foundry の資料で[マニフェスト・ファイルの詳細](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){: new_window}を参照してください。
+  3.  適切なアプリ・コードを変更します。例えば、{{site.data.keyword.Bluemix}} サンプル・アプリケーションを使用していて、アプリに `src/main/webapp/index.html` ファイルが含まれている場合、それを編集して「Thanks for creating ...」を何か別の内容に変更します。アプリを {{site.data.keyword.Bluemix_notm}} に戻してデプロイする前に、ローカルで稼働することを確認してください。
 
-  4. {{site.data.keyword.Bluemix}} に接続します。
+    `manifest.yml` ファイルをメモします。{{site.data.keyword.Bluemix_notm}} にアプリをデプロイする際、このファイルを使用してアプリケーションの URL、メモリー割り振り、インスタンス数、その他の重要なパラメーターを判別します。[マニフェスト・ファイルの詳細 ![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html "「外部リンク」アイコン"){: new_window} は Cloud Foundry 資料に記載されています。
 
-  <pre class="pre">bluemix api https://api.<span class="keyword" data-hd-keyref="DomainName">DomainName</span></pre>
+    該当する場合にはビルド手順などの詳細が含まれている `README.md` ファイルにも注意を払ってください。
 
-  5. {{site.data.keyword.Bluemix_notm}} にログインします。
+    注: アプリケーションが Liberty アプリである場合、再デプロイする前にビルドする必要があります。
 
-  <pre class="pre">bluemix login -u <var class="keyword varname" data-hd-keyref="user_ID">username</var> -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var></pre>
+  4. {{site.data.keyword.Bluemix_notm}} に接続し、ログインします。
 
-  フェデレーテッド ID を使用する場合は、-sso オプションを使用します。
+  <pre class="pre">cf api https://api.<span class="keyword" data-hd-keyref="DomainName">DomainName</span></pre>
 
-  <pre class="pre">bluemix login -u <var class="keyword varname" data-hd-keyref="user_ID">username</var> -o "<var class="keyword varname" data-hd-keyref="org_name">org_name</var>" -s "<var class="keyword varname" data-hd-keyref="space_name">space_name</var>" -sso</pre>
+  <pre class="pre">cf login -u <var class="keyword varname" data-hd-keyref="user_ID">username</var> -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var></pre>
 
-  6. アプリを {{site.data.keyword.Bluemix_notm}} にデプロイします。cf push コマンドについて詳しくは、『[アプリケーションのアップロード](/docs/starters/upload_app.html)』を参照してください。
+  フェデレーテッド ID を使用する場合は、`-sso` オプションを使用してください。
 
-  <pre class="pre">cf push "<var class="keyword varname" data-hd-keyref="app_name">app_name</var>"</pre>
+  <pre class="pre">cf login -u <var class="keyword varname" data-hd-keyref="user_ID">username</var> -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var> -sso</pre>
 
-  7. ご使用のブラウザーで以下の URL を入力して、アプリにアクセスします。
+  5. <var class="keyword varname">your_new_directory</var> から、`cf push` コマンドを使用してアプリを {{site.data.keyword.Bluemix_notm}} に再デプロイします。`cf push` コマンドについて詳しくは、『[アプリケーションのアップロード](/docs/starters/upload_app.html)』を参照してください。
 
-  <pre class="codeblock"><code><var class="keyword varname" data-hd-keyref="host">host</var>.<span class="keyword" data-hd-keyref="APPDomain">AppDomainName</span></code></pre>
+  <pre class="pre">cf push <var class="keyword varname" data-hd-keyref="app_name">app_name</var></pre>
+
+  6. https://<var class="keyword varname" data-hd-keyref="app_name">app_name</var>.<span class="keyword" data-hd-keyref="APPDomain">AppDomainName</span> を表示してアプリにアクセスします。

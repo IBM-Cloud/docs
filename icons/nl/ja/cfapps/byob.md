@@ -1,12 +1,12 @@
 ---
 
- 
+
 
 copyright:
 
-  years: 2015，2016
+  years: 2015，2017
 
-lastupdated: "2016-03-15" 
+lastupdated: "2016-03-15"
 
 
 
@@ -93,5 +93,3 @@ cf push app_name -p app_path -b https://github.com/dmikusa-pivotal/cf-php-build-
 </li>
 <li>
 <code>manifest.yml</code> ファイルを使用します。指定したい環境変数と値を直接このファイルに追加することができます。詳細については、<a href="https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html#env-block">環境変数</a>を参照してください。</li></ul>
-  
-

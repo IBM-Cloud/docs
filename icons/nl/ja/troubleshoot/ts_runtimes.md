@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
   
-lastupdated: "2016-08-18"
+lastupdated: "2017-01-11"
 
 ---
 
@@ -48,15 +48,14 @@ IBM® Bluemix™ ランタイムを使用すると問題が発生することが
 組み込みメカニズムを備えたビルドパックを使用して、使用できないコンポーネントをロードしないようにすることができます。以下に 2 つのビルドパックの例を示します。
 {: tsResolve}
 
-  * [Cloud Foundry Java ビルドパック](https://github.com/cloudfoundry/java-buildpack){: new_window}。このビルドパックには、最新バージョンのビルドパックが使用されるように組み込みメカニズムが装備されています。このメカニズムによる処理方法について詳しくは、[extending-caches.md](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window} を参照してください。 
-  * [Cloud Foundry Node.js ビルドパック](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}。このビルドパックは、環境変数を使用して同様の機能を提供します。この Node.js ビルドパックを有効にして、毎回インターネットからノード・モジュールをダウンロードするには、cf コマンド・ライン・インターフェースに次のコマンドを入力します。 	
+  * [Cloud Foundry Java ビルドパック ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack){: new_window}。 このビルドパックには、最新バージョンのビルドパックが使用されるように組み込みメカニズムが装備されています。このメカニズムがどのように機能するのかについて詳しくは、[extending-caches.md ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window} を参照してください。 
+  * [Cloud Foundry Node.js ビルドパック ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}。 このビルドパックは、環境変数を使用して同様の機能を提供します。この Node.js ビルドパックを有効にして、毎回インターネットからノード・モジュールをダウンロードするには、cf コマンド・ライン・インターフェースに次のコマンドを入力します。 	
   ```
   set NODE_MODULES_CACHE=false
   ```
 使用中のビルドパックが最新のコンポーネントを自動的にロードするメカニズムを提供していない場合は、以下のステップに従って手動でキャッシュ・ディレクトリー内のコンテンツを削除し、アプリを再度プッシュします。
-  1. ヌル・ビルドパックのブランチ (例えば https://github.com/ryandotsmith/null-buildpack) をチェックアウトします。ブランチをチェックアウトする方法については、[Git Basics - Getting a Git Repository](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window} を参照してください。  
-  2. `null-buildpack/bin/compile` ファイルに以下の行を追加して変更をコミットします。変更をコミットする方法については、[Git Basics - Recording Changes to the Repository](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window} を参照してください。
-
+  1. ヌル・ビルドパックのブランチ (例えば https://github.com/ryandotsmith/null-buildpack) をチェックアウトします。ブランチをチェックアウトする方法については、[Git Basics - Getting a Git Repository ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window} を参照してください。  
+  2. `null-buildpack/bin/compile` ファイルに以下の行を追加して変更をコミットします。変更をコミットする方法については、[Git Basics - Recording Changes to the Repository ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window} を参照してください。
   ```
 rm -rfv $2/*
   ```
@@ -91,7 +90,7 @@ PHP ビルドパックを使用してアプリケーションを Bluemix にプ�
 
 
 
-PHP ビルドパックでは、ロギング・レベルを定義するために error_log パラメーターを使用しています。デフォルトでは、`error_log` パラメーターの値は **stderr notice** です。以下の例には、Cloud Foundry で提供されている PHP ビルドパックの `nginx-defaults.conf` ファイルに含まれる、デフォルトのロギング・レベル構成が示されています。詳しくは、 「[cloudfoundry/php-buildpack](https://github.com/cloudfoundry/php-buildpack/blob/ff71ea41d00c1226d339e83cf2c7d6dda6c590ef/defaults/config/nginx/1.5.x/nginx-defaults.conf){: new_window}」を参照してください。
+PHP ビルドパックでは、ロギング・レベルを定義するために error_log パラメーターを使用しています。デフォルトでは、`error_log` パラメーターの値は **stderr notice** です。以下の例には、Cloud Foundry で提供されている PHP ビルドパックの `nginx-defaults.conf` ファイルに含まれる、デフォルトのロギング・レベル構成が示されています。詳しくは、[cloudfoundry/php-buildpack ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/php-buildpack/blob/ff71ea41d00c1226d339e83cf2c7d6dda6c590ef/defaults/config/nginx/1.5.x/nginx-defaults.conf){: new_window} を参照してください。
 {: tsCauses} 
 
 ```
@@ -110,8 +109,8 @@ daemon off;
 error_log stderr error;
 pid @{HOME}/nginx/logs/nginx.pid;
 ```
-デフォルトのロギング構成を変更する方法について詳しくは、 『[error_log](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}』を参照してください。
-
+デフォルトのロギング構成を変更する方法について詳しくは、[error_log ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window} を参照してください。
+	
 
 ## サード・パーティーの Python ライブラリーを {{site.data.keyword.Bluemix_notm}} にインポートできない
 {: #ts_importpylib}

@@ -7,30 +7,24 @@
     "id": "cfApp",
     "title": "Cloud Foundry アプリケーション",
     "href": "cfapps/index.html",
-    "category_id": "計算 (compute)"
+    "category_id": "コンピュート (compute)"
   }, {
     "title": "ランタイム",
     "href": "cfapps/runtimes.html",
-    "category_id": "計算 (compute)"
+    "category_id": "コンピュート (compute)"
   }, {
     "title": "ボイラープレート",
     "href": "cfapps/boilerplates.html",
-    "category_id": "計算 (compute)"
+    "category_id": "コンピュート (compute)"
   }, {
-    "id": "whisk",
     "title": "IBM OpenWhisk",
     "href": "openwhisk/index.html",
-    "category_id": "計算 (compute)"
+    "category_id": "コンピュート (compute)"
   }, {
     "id": "コンテナー (container)",
     "title": "IBM Bluemix Container Service",
     "href": "containers/container_index.html",
-    "category_id": "計算 (compute)"
-  }, {
-    "id": "vm",
-    "title": "IBM Virtual Servers",
-    "href": "virtualmachines/vm_index.html",
-    "category_id": "計算 (compute)"
+    "category_id": "コンピュート (compute)"
   }, {
     "type": "extra",
     "title": "データの処理の試行",

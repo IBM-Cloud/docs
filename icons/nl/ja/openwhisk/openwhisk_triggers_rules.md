@@ -199,3 +199,4 @@ wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
   wsk rule create anotherRule locationUpdate recordLocationAndHello
   ```
   {: pre}
+ 

@@ -1,18 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-17"
+  years: 2015, 2017
+
+lastupdated: "2017-01-11"
 
 ---
 
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#Cloud Foundry でのモニターとロギング
+# Cloud Foundry でのモニターとロギング
 {: #monitoringandlogging}
 
 
@@ -22,7 +23,7 @@ lastupdated: "2016-11-17"
 
 {{site.data.keyword.Bluemix}} アプリケーションは、広く分散したマルチインスタンス・アプリケーションにすることができ、アプリケーションの実行およびそのデータを多くのサービスで共有できます。この複合環境では、アプリを管理するために、アプリのモニターとログの確認が重要になります。
 
-##Cloud Foundry アプリのモニターとロギング
+## Cloud Foundry アプリのモニターとロギング
 {: #monitoring_logging_bluemix_apps}
 
 {{site.data.keyword.Bluemix_notm}} は、アプリの実行中にそのログ・ファイルを生成する組み込みのロギング・メカニズムを備えています。ログでは、アプリに対して生成されたエラー、警告、および情報の各メッセージを表示できます。また、ログ・メッセージをログ・ファイルに書き込むようにアプリを構成することもできます。
@@ -38,18 +39,18 @@ lastupdated: "2016-11-17"
 
 {{site.data.keyword.Bluemix_notm}} プラットフォームでのデプロイメントの運用を安定化するために、問題を速やかに検出し、原因を効率的に判別する必要があります。この目的を満たすには、アプリの設計時にトラブルシューティングに留意し、アプリを {{site.data.keyword.Bluemix_notm}} にデプロイしたら、モニターおよびロギング用のサービスまたはツールを使用します。
 
-###Cloud Foundry で実行されているアプリのモニター
+### Cloud Foundry で実行されているアプリのモニター
 {: #monitoring_bluemix_apps}
 
-Cloud Foundry インフラストラクチャーを使用して {{site.data.keyword.Bluemix_notm}} でアプリを実行している場合、ブラウザーから表示される Web ベース・アプリケーションであっても、モバイル・アプリケーションが接続する API セットであっても、そのアプリケーションの可用性およびパフォーマンスの最新情報を入手することが必要になります。[Bluemix Availability Monitoring](https://console.ng.bluemix.net/catalog/services/availability-monitoring){:new_window} を使用して、世界中の 15 カ所のさまざまな地理的ロケーションからアプリケーションをモニターできます。
+Cloud Foundry インフラストラクチャーを使用して {{site.data.keyword.Bluemix_notm}} でアプリを実行している場合、正常性状況、リソース使用量、トラフィック・メトリックなどの最新のパフォーマンス情報を入手する必要があります。このパフォーマンス情報を使用して、適宜、意思決定やアクション実行を行うことができます。
 
-{{site.data.keyword.Bluemix_notm}} アプリのリソース使用量メトリックをモニターするには、以下のいずれかの方法を使用します。
+{{site.data.keyword.Bluemix_notm}} アプリをモニターするには、以下のいずれかの方法を使用します。
 
-* Bluemix Monitoring and Analytics では、リソースをモニターし、Node、Liberty、または Ruby ベースのアプリケーションから診断を得られるサービスが提供されています。詳しくは、[Monitoring and
-Analytics](/docs/services/monana/index.html) を参照してください。
-* サード・パーティー・オプション。例えば、[New Relic](http://newrelic.com/){:new_window}。
+* {{site.data.keyword.Bluemix_notm}} サービス。Monitoring and Analytics は、アプリケーション・パフォーマンスのモニターに使用できるサービスを提供します。また、このサービスは、ログ分析などの分析機能も提供します。詳しくは、[Monitoring and
+Analytics](/docs/services/monana/index.html#gettingstartedtemplate) を参照してください。
+* サード・パーティー・オプション。例えば、[New Relic ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://newrelic.com/){:new_window} です。
 
-###Cloud Foundry で実行されているアプリのロギング
+### Cloud Foundry で実行されているアプリのロギング
 {: #logging_for_bluemix_apps}
 
 Cloud Foundry インフラストラクチャーを使用して {{site.data.keyword.Bluemix_notm}} でアプリを実行している場合、ログ・ファイルが自動的に作成されます。デプロイメントからランタイムまでのどのステージでも、エラーが発生した場合は、ログを調べて問題解決の糸口を探すことができます。
@@ -59,7 +60,7 @@ Cloud Foundry インフラストラクチャーを使用して {{site.data.keywo
 
 
 
-###ログのフォーマットと保持
+### ログのフォーマットと保持
 {: #log_format}
 
 {{site.data.keyword.Bluemix_notm}} Public Cloud Foundry アプリでは、ログ・データはデフォルトで 7 日間保管されます。
@@ -126,12 +127,13 @@ yyyy-MM-ddTHH:mm:ss:SS-0500 [App/0]      OUT <message>
 
 </dl>
 
-###ログの表示
+### ログの表示
 {: #viewing_logs}
 
-Cloud Foundry アプリのログは次の 3 つの場所で表示できます。
+Cloud Foundry アプリのログは次の 4 つの場所で表示できます。
 
   * {{site.data.keyword.Bluemix_notm}} ダッシュボード
+  * ダッシュボード
   * コマンド・ライン・インターフェース
   * 外部ログ・ホスト
 
@@ -147,6 +149,21 @@ Cloud Foundry アプリのログは次の 3 つの場所で表示できます。
 **注:** アプリのクラッシュおよびデプロイメントをまたいでログが継続的に保持されることはありません。
 
 
+#### Kibana ダッシュボードからのログの表示
+{: #viewing_logs_Kibana}
+
+スペースで実行するアプリのログを、単純な方法または独創的な方法で表示できるよう、カスタム・ダッシュボードを作成します。
+
+1. Kibana ユーザー・インターフェースにログインするため、[https://logmet.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>](https://logmet.{DomainName}) を開きます。
+2. **「Kibana 3」**タブを選択します。
+3. ログが何も表示されない場合は、ヘッダーにあるタイム・ピッカーを調整してください。
+4. このダッシュボードを新しいダッシュボードとして保存します。
+  1. ツールバーで、**「保存」**アイコンをクリックします。
+  2. ダッシュボードの名前を入力します。
+  3. 名前フィールドの横の**「保存」**アイコンをクリックします。
+
+Kibana ダッシュボードのカスタマイズについて詳しくは、[このブログ投稿 ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/){: new_window} または [Kibana ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window} 資料を参照してください。
+
 
 #### コマンド・ライン・インターフェースからのログの表示
 {: #viewing_logs_cli}
@@ -155,7 +172,7 @@ Cloud Foundry アプリのログは次の 3 つの場所で表示できます。
 
 <ul>
 <li>アプリのデプロイ時にログの末尾を表示する。
-<p>**cf logs** コマンドを使用して、 {{site.data.keyword.Bluemix_notm}} へのアプリのデプロイ時にアプリのログ、およびアプリと対話するシステム・コンポーネントのログを表示します。cf コマンド・ライン・インターフェースで以下のコマンドを入力できます。cf logs について詳しくは、<a href="http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html" target="_blank">Log Types and Their Messages in Cloud Foundry</a> を参照してください。</p>
+<p>**cf logs** コマンドを使用して、 {{site.data.keyword.Bluemix_notm}} へのアプリのデプロイ時にアプリのログ、およびアプリと対話するシステム・コンポーネントのログを表示します。cf コマンド・ライン・インターフェースで以下のコマンドを入力できます。cf logs について詳しくは、<a href="http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html" target=" _blank">Log Types and Their Messages in Cloud Foundry <img src="../icons/launch-glyph.svg" alt="「外部リンク」アイコン"></a> を参照してください。</p>
 <dl>
 <dt><strong>cf logs <var class="keyword varname">appname</var> --recent</strong></dt>
 <dd>最近のログを表示します。</dd>
@@ -171,15 +188,15 @@ Cloud Foundry アプリのログは次の 3 つの場所で表示できます。
 
 <p>アプリケーションのロギングが有効になっている場合、実行時にアプリで問題が発生した場合に、以下のアプリケーション・ログを表示できます。アプリケーション・ログは、エラーの原因判別に役立つことがあります。</p>
 
-<dl><strong>buildpack.log</strong></dt>
+<dl>
+<dt><strong>buildpack.log</strong></dt>
 <dd>
 <p>このログ・ファイルは、デバッグ用の詳細な通知イベントを記録します。このログを使用して、ビルドパック実行の問題をトラブルシューティングすることができます。</p>
 <p>データを <span class="ph filepath">buildpack.log</span> ファイルに生成するには、以下のコマンドを使用してビルドパックのトレースを有効にする必要があります。<pre class="pre">cf set-env <var class="keyword varname">appname</var> JBP_LOG_LEVEL DEBUG</pre>
-<p>
+</p>
 <p>このログを表示するには、以下のコマンドを入力します。<pre class="pre">cf files <var class="keyword varname">appname</var> app/.buildpack-diagnostics/buildpack.log</pre>
 </p>
 </dd>
-
 <dt><strong>staging_task.log</strong></dt>
 <dd><p>このログ・ファイルは、ステージング・タスクの重要なステップ後のメッセージを記録します。このログを使用して、ステージングの問題をトラブルシューティングすることができます。</p>
 <p>このログを表示するには、以下のコマンドを入力します。<pre class="pre">cf files <var class="keyword varname">appname</var> logs/staging_task.log</pre>
@@ -194,24 +211,25 @@ Cloud Foundry アプリのログは次の 3 つの場所で表示できます。
 #### 外部ホストからのログの表示
 {: #viewing_logs_external}
 
-	 
+
 ログが生成されると、少し遅れて、外部ログ・ホストにあるメッセージを表示できます。それらは、{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースまたは cf コマンド・ライン・インターフェースで表示するメッセージに似たメッセージです。アプリに複数のインスタンスがある場合、ログは集約されるため、アプリのすべてのログを確認できます。それに加えて、ログは、アプリのクラッシュおよびデプロイメントをまたいで継続的に保持されます。
 
-**注:** コマンド・ライン・インターフェースで表示するメッセージは、syslog フォーマットではなく、外部ログ・ホストで表示されるメッセージと完全には一致しないことがあります。 
+**注:** コマンド・ライン・インターフェースで表示するメッセージは、syslog フォーマットではなく、外部ログ・ホストで表示されるメッセージと完全には一致しないことがあります。
 
 
-###ログのフィルタリング
+
+
+### ログのフィルタリング
 {: #filtering_logs}
 
 関心のあるログを表示する場合、または表示しない内容を除外する場合、cf コマンド・ライン・インターフェースで **cut** や **grep** などのフィルター・オプションを指定して **cf logs** コマンドを使用できます。
 
 * 完全な詳細ログではなく、一部を表示する場合、**cut** オプションを使用します。例えば、コンポーネントおよびメッセージの情報を表示するには、以下のコマンドを使用します。
-
 ```
 cf logs appname --recent | cut -c 29-40,46-
 ```
 
-**grep** オプションについて詳しくは、cut --help と入力してください。
+**cut** オプションについて詳しくは、cut --help と入力してください。
 * 特定のキーワードが含まれているログ項目を表示するには、**grep** オプションを使用します。例えば、キーワード「`[APP`」が含まれているログ項目を表示するには、以下のコマンドを使用できます。
 
 ```
@@ -228,24 +246,24 @@ cf logs appname --recent | grep '\[App'
 
 アプリおよびシステムから外部ログ・ホストにログをストリーミングするには、以下の手順を実行します。
 
-  1. ロギング・エンドポイントを決定します。 
-     
+  1. ロギング・エンドポイントを決定します。
+
 	 Papertrail、Splunk、または Sumologic など、サード・パーティーのログ集約機能にログを送信できます。また、syslog ホスト、TLS (Transport Layer Security) で暗号化された syslog ホスト、または HTTPS POST エンドポイントにログを送信することもできます。ロギング・エンドポイントを取得する方法は、ログ・ホストによって異なります。
 
   2. ユーザー提供のサービス・インスタンスを作成します。
-     
-	 `cf create-user-provided-service` コマンド (または、短縮版コマンドの `cups`) を使用して、ユーザー提供のサービス・インスタンスを作成します。 
+
+	 `cf create-user-provided-service` コマンド (または、短縮版コマンドの `cups`) を使用して、ユーザー提供のサービス・インスタンスを作成します。
 	 ```
 	 cf create-user-provided-service <service_name> -l <logging_endpoint>
 	 ```
 	 &lt;service_name&gt;
 	 
 	 ユーザー提供のサービス・インスタンスの名前。
-	 
+
 	 &lt;logging_endpoint&gt;
-	 
+
 	 {{site.data.keyword.Bluemix_notm}} がログを送信する先のロギング・エンドポイント。次の表を参照して、*logging_endpoint* を適切な値で置き換えてください。
-	 
+
 	 <table>
      <thead>
      <tr>
@@ -271,144 +289,141 @@ cf logs appname --recent | grep '\[App'
 	 <td>このエンドポイントは、パブリック・インターネットにあり、{{site.data.keyword.Bluemix_notm}} によってアクセス可能でなければなりません。</td>
      </tr>
      </tbody>
-     </table>	
+     </table>
   3. サービス・インスタンスをアプリにバインドします。
 
-	 サービス・インスタンスをアプリにバインドするには、以下のコマンドを使用します。 
-	
+	 サービス・インスタンスをアプリにバインドするには、以下のコマンドを使用します。
+
 	 ```
 	 cf bind-service <appname> <service_name>
 	 ```
 	 &lt;appname&gt;
 	 
 	 アプリの名前。
-	 
+
 	 &lt;service_name&gt;
-	 
+
 	 ユーザー提供のサービス・インスタンスの名前。
-	 
+
   4. アプリを再ステージングします。
-     変更を有効にするために、`cf restage appname` を入力します。 
+     変更を有効にするために、`cf restage appname` を入力します。
 
 
-### 例: Cloud Foundry アプリケーション・ログの Splunk へのストリーミング 
+### 例: Cloud Foundry アプリケーション・ログの Splunk へのストリーミング
 {: #splunk}
 
 この例では、Jane という開発者が、IBM Virtual Servers Beta および Ubuntu イメージを使用して仮想サーバーを作成します。
 Jane は Cloud Foundry アプリケーション・ログを
 {{site.data.keyword.Bluemix_notm}} から Splunk へストリームし
-ようと試みます。 
+ようと試みます。
 
   1. まず、Splunk をセットアップします。
 
-     a. Jane は、[
-Splunk Light のダウンロード・サイト](https://www.splunk.com/en_us/download/splunk-light.html){:new_window}から
-Splunk Light をダウンロードして、次のコマンドを使用してこれをインストールします。
-ソフトウェアは */opt/splunk* にインストールされます。 
-       
+     a. Jane は、Splunk Light を Splunk Light のダウンロード・サイト ![「外部リンク」アイコン](../icons/launch-glyph.svg) (https://www.splunk.com/en_us/download/splunk-light.html){:new_window} からダウンロードし、次のコマンドを使用してインストールします。このソフトウェアは */opt/splunk* にインストールされます。
+
 	    ```
-dpkg -i  ~/splunklight-6.3.0-aa7d4b1ccb80-linux-2.6-amd64.deb
+        dpkg -i  ~/splunklight-6.3.0-aa7d4b1ccb80-linux-2.6-amd64.deb
         ```
-	   
+
      b. RFC5424 syslog テクノロジー・アドオンをイン
-ストールして適用し、{{site.data.keyword.Bluemix_notm}} と統合します。アドオンのインストール手順について詳しくは、
-[
-『Cloud Foundry ガイドライン』](https://docs.cloudfoundry.org/devguide/services/integrate-splunk.html){:new_window}を参照してください。
+ストールして適用し、{{site.data.keyword.Bluemix_notm}} と統合します。アドオンのインストール手順について詳しくは、「Cloud Foundry ガイドライン」![「外部リンク」アイコン](../icons/launch-glyph.svg) (https://docs.cloudfoundry.org/devguide/services/integrate-splunk.html){:new_window} を参照してください。
 
 	    次のコマンドを使用してアドオンをインストールします。
-        
+
 	    ```
-cd /opt/splunk/etc/apps
+        cd /opt/splunk/etc/apps
         tar xvfz ~/rfc5424-syslog_11.tgz
         ```
-	   
+
         次に Jane は、
 */opt/splunk/etc/apps/rfc5424/default/transforms.conf*
 を次のテキストで構成される新規の *transforms.conf* ファイルと
 置き換えて、アドオンを適用します。
-	   
+
 	    ```
-[rfc5424_host]
+        [rfc5424_host]
         DEST_KEY = MetaData:Host
         REGEX = <\d+>\d{1}\s{1}\S+\s{1}(\S+)
-        FORMAT = host::$1[rfc5424_header]
+        FORMAT = host::$1
+
+        [rfc5424_header]
         REGEX = <(\d+)>\d{1}\s{1}\S+\s{1}\S+\s{1}(\S+)\s{1}(\S+)\s{1}(\S+)
         FORMAT = prival::$1 appname::$2 procid::$3 msgid::$4
         MV_ADD = true
         ```
-        {:screen}	   
+        {:screen}
 
      c. Splunk のセットアップ後、Ubuntu マシン上の一
 部のポートをオープンして、着信 syslog ドレーン (ポート 5140)
 および Splunk Web UI (ポート 8000) を受け入れる必要があります。
 {{site.data.keyword.Bluemix_notm}} 仮想サーバーのファイアウォ
 ールがデフォルトでセットアップされているためです。
-	   
-	    **注:** ここでは Jane の評価目的のために iptable 構成としているため、これは一時的なものです。実動における Bluemix 仮想サーバーでのファイアウォール設定を構成する方法について詳しくは、[『ネットワーク・セキュリティー・グループ (Network Security Groups)』](https://new-console.ng.bluemix.net/docs/services/networksecuritygroups/index.html){:new_window}資料を参照してください。
-	 
+
+	    **注:** ここでは Jane の評価目的のために iptable 構成としているため、これは一時的なものです。実動における Bluemix 仮想サーバーでのファイアウォール設定の構成方法について詳しくは、「ネットワーク・セキュリティー・グループ」![「外部リンク」アイコン](../icons/launch-glyph.svg) (https://new-console.ng.bluemix.net/docs/services/networksecuritygroups/index.html){:new_window} 資料を参照してください。
+
 	   ```
 	   iptables -A INPUT -p tcp --dport 5140 -j ACCEPT
        iptables -A INPUT -p tcp --sport 5140 -j ACCEPT
        iptables -A INPUT -p tcp --dport 8000 -j ACCEPT
        iptables -A INPUT -p tcp --sport 8000 -j ACCEPT
 	   ```
-	   {:screen}	
-	  
+	   {:screen}
+
 	   次に、Jane は次のコマンドを使用して Splunk を実行します。
 
        ```
 	   /opt/splunk/bin/splunk start --accept-license
        ```
-		
+
   2. Splunk 設定を構成して、
 {{site.data.keyword.Bluemix_notm}} から syslog ドレーンを受け
 入れます。syslog ドレーン用にデータ入力を作成する必要があります。
 
      a. Splunk Web インターフェースから、**「データ (Data)」>「データ入力 (Data inputs)」
 **とクリックします。Splunk がサポー
-トする入力タイプのリストが表示されます。 
-	 
+トする入力タイプのリストが表示されます。
+
      b. syslog ドレーンが TCP プロトコルを使用するため、
 **TCP** を選択します。
-	 
+
      c. **TCP** ペインの **「ポ
 ート」**フィールドで、**「5140」**と入力
 し、残りのフィールドは空白のまま残し、**「次へ」**
 をクリックします。
-	 
+
      d. **「ソース・タイプ」**リストから、
 **「未カテゴリー化 (Uncategorized)」>「rfc5424_syslog」
 **を選択します。
-	 
+
      e. **「方式 (Method)」**タイプに
 **「IP」**を選択します。
-	 
+
      f. **「索引 (Index)」**フィールド
 で、**「新規索引の作成 (Create a new index)」
 **をクリックします。新規索引に「bluemix」という名前を付け、**「保存」**をクリックします。
-	 
+
      g. 最後に**「レビュー (Review)」**ウィンドウで、設定が正しいことを確認し、**「送信 (Submit)」**をクリックしてこのデータ入力を有効にします。
 
   3. {{site.data.keyword.Bluemix_notm}}で、syslog ドレ
 ーン・サービスを作成し、これをアプリにバインドします。
 
      a. cf cli から次のコマンドを使用して syslog ドレーン・サービスを作成します。
-	 
+
      ```
 cf cups splunk -l syslog://dummyhost:5140
      ```
-        
+
      **注:** *dummyhost* は実
-名ではありません。実際のホスト名を非表示にするために使用されます。 
+名ではありません。実際のホスト名を非表示にするために使用されます。
 
      b. Jane は 自分のスペースで syslog ドレーン・サービスをアプリにバ
 インドしてから、アプリを再ステージングします。
-	 
+
 	 ```
 cf bind-service myapp splunk
      cf restage myapp
      ```
-		
+
 
 アプリを試行して、Splunk Web インターフェースで次の照
 会ストリングを入力します。
@@ -418,7 +433,7 @@ source="tcp:5140" index="bluemix" sourcetype="rfc5424_syslog"
 ```
 
 Splunk Web インターフェースでログのストリームを確認します。Jane がインストール
-する Splunk は Splunk Light ですが、1 日に 500 MB のログを保存することが可能です。  
+する Splunk は Splunk Light ですが、1 日に 500 MB のログを保存することが可能です。
 
 ## {{site.data.keyword.Bluemix_dedicated_notm}} および {{site.data.keyword.Bluemix_local_notm}} での Cloud Foundry アプリのロギング
 {: #hybrid_apps_logs_ov}
@@ -445,7 +460,7 @@ Cloud Foundry アプリは、Cloud Foundry Loggregator を使用して、アプ�
 
 * {{site.data.keyword.Bluemix_dedicated_notm}} 環境および {{site.data.keyword.Bluemix_local_notm}} 環境で拡張ロギングが有効になっていることを確認するには、[ログの表示](#hybrid_apps_logs_dash)の手順に従ってください。**「拡張ビュー」**ボタンがない場合、このフィーチャーは有効になっていません。
 
-* 環境に拡張ロギングを追加するには、[{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) または [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local) の資料の手順に従ってください。 
+* 環境に拡張ロギングを追加するには、[{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) または [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local) の資料の手順に従ってください。
 
 ### ログ保持期間
 
@@ -460,8 +475,6 @@ Cloud Foundry アプリは、Cloud Foundry Loggregator を使用して、アプ�
 アプリのログを表示するには、以下の手順に従ってください。
 1. 実行中のアプリを選択します。
 2. **「ログ (Logs)」**をクリックします。**「ログ (Logs)」**ビューで、実行中のアプリからログを表示することができます。
-4. **「拡張ビュー (Advanced View)」**ボタンをクリックします。**「拡張ビュー (Advanced View)」**には、Kibana を使用してログの詳細ビューが表示されます。Kibana は、ログとタイム・スタンプ付きデータを使用してカスタムの視覚化を作成する視覚化ツールです。拡張ビューの使用について詳しくは、[Kibana](https://www.elastic.co/guide/en/kibana/current/index.html) の資料を参照してください。
+4. **「拡張ビュー (Advanced View)」**ボタンをクリックします。**「拡張ビュー (Advanced View)」**には、Kibana を使用してログの詳細ビューが表示されます。Kibana は、ログとタイム・スタンプ付きデータを使用してカスタムの視覚化を作成する視覚化ツールです。拡張ビューの使用について詳しくは、[Kibana ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window} 資料を参照してください。
 
 次に、Kibana ダッシュボードをカスタマイズできます。詳細情報については、[Kibana ダッシュボードでのログ表示のカスタマイズ](/docs/containers/monitoringandlogging/container_ml_logs.html#container_ml_dash_logs_custom)を参照してください。
-
-

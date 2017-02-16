@@ -4,9 +4,8 @@
 
 copyright:
 
-  years: 2015, 2016
-
-lastupdated: "2016-10-24"
+  years: 2015, 2017
+lastupdated: "2017-01-24"
 
 ---
 
@@ -14,10 +13,176 @@ lastupdated: "2016-10-24"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
+# {{site.data.keyword.Bluemix_notm}} CLI 入門
+{: #getting-started}
+
+{{site.data.keyword.Bluemix_notm}} CLI は、{{site.data.keyword.Bluemix_notm}} 内のアプリケーション、仮想サーバー、コンテナー、およびその他のサービスとの対話をコマンド・ライン・インターフェースを使用して行うための一元化された手法を提供します。また、{{site.data.keyword.Bluemix_notm}} CLI は、各種コミュニティー・ツール (Cloud Foundry CLI、Docker CLI、OpenStack CLI など) を統合し、さまざまな計算タイプとの対話のための環境設定を初期化します。
+
+**制約事項:** {{site.data.keyword.Bluemix_notm}} CLI は Cygwin ではサポートされないため、Cygwin コマンド・ライン・ウィンドウでは {{site.data.keyword.Bluemix_notm}} CLI を使用しないでください。
+
+**注:** CLI および {{site.data.keyword.Bluemix_notm}} が稼働しているホストとの間に HTTP プロキシー・サーバーがあるネットワークを使用している場合、HTTP_PROXY 環境変数にプロキシー・サーバーのホスト名または IP アドレスを指定する必要があります。
+
+## {{site.data.keyword.Bluemix_notm}} CLI のインストール
+{: #install_bluemix_cli}
+
+{{site.data.keyword.Bluemix_notm}} CLI をインストールする前に、ご使用のシステムに Cloud Foundry CLI がインストールされていることを確認してください。
+
+Mac OS および Windows の場合は、[{{site.data.keyword.Bluemix_notm}} CLI パッケージ](/docs/cli/index.html#downloads)をダウンロードし、インストーラーを実行してください。
+
+Linux の場合は、以下のステップを実行してください。
+
+  1. パッケージをダウンロードし、解凍します。例えば次のようにします。
+
+  ```
+  ~$ tar -xvf Bluemix_CLI.tar.gz
+  Bluemix_CLI/
+  Bluemix_CLI/update_global_config
+  Bluemix_CLI/install_bluemix_cli
+  Bluemix_CLI/bx/
+  Bluemix_CLI/bx/bash_autocomplete
+  Bluemix_CLI/bx/zsh_autocomplete
+  Bluemix_CLI/bin/
+  Bluemix_CLI/bin/bluemix
+  ~$
+  ```
+
+  2. `Bluemix_CLI` ディレクトリーに移動し、root 権限で `./install_bluemix_cli` コマンドを実行します。このコマンドを root ユーザーで実行するか、または、`sudo` コマンドを使用して root 権限を取得してください。例えば次のようにします。
+
+  ```
+  ~# cd Bluemix_CLI
+  ~/Bluemix_CLI# sudo ./install_bluemix_cli
+  Superuser privileges are required to run this script.
+  The Cloud Foundry CLI version 6.15 is already installed.
+  Copying files...
+  The Bluemix CLI installed successfully. To get started, open a new Linux terminal and enter "bluemix help", or enter "bx help" as short name.
+  ~/Bluemix_CLI#
+  ```
+
+これで、{{site.data.keyword.Bluemix_notm}} CLI の使用を開始するか、追加プラグインをインストールすることができます。
+
+## プラグインのインストール
+{: #install_plug-in}
+
+Cloud Foundry CLI と同様に、{{site.data.keyword.Bluemix_notm}} CLI でも、組み込みコマンド以外の他のコマンドを統合するためのプラグイン拡張フレームワークがサポートされています。
+
+ローカル環境からプラグインをインストールするには、以下のステップを実行します。
+
+  1. プラグインをダウンロードします。例えば次のようにします。
+
+  ```
+  ~$ wget http://public.dhe.ibm.com/cloud/bluemix/cli/bluemix-plugins/auto-scaling-darwin-amd64.0.2.2--2016-02-18 14:02:12-- http://public.dhe.ibm.com/cloud/bluemix/cli/bluemix-plugins/auto-scaling-darwin-amd64.0.2.2
+  Resolving public.dhe.ibm.com... 9.17.248.112
+  Connection to public.dhe.ibm.com|9.17.248.112|:80... connected.
+  HTTP request sent, awaiting response... 200 OK
+  Length: 9857792 (9.4M) [text/plain]
+  Saving to: 'auto-scaling-darwin-amd64-0.2.2'
+
+  auto-scaling-darwin-0.2.2 100%[===================>] 9.40M 518KB/s in 22s
+
+  2016-02-18 14:02:34 (443 KB/s) - `auto-scaling-darwin-amd64-0.2.2' saved [9857792/9857792]
+  ```
+
+  2. UNIX 系システムの場合、`chmod` コマンドを使用することによって、ダウンロードされたファイルを実行可能にする必要があります。例えば次のようにします。
+
+  ```
+  ~$ sudo chmod 755 auto-scaling-darwin-amd64-0.2.2
+  Password:
+  ~$
+  ```
+
+  3. `bluemix plugin install` コマンドを使用してプラグインをインストールします。例えば次のようにします。
+
+  ```
+  ~$ bluemix plugin install ./auto-scaling-darwin-amd64-0.2.2
+  Installing pluign './auto-scaling-darwin-amd64-0.2.2'...
+  OK
+  Plugin 'auto-scaling 0.2.2' was successfully installed.
+  ~$
+  ```
+
+リモート・サーバーからインストールするには、以下のステップを実行します。
+
+  1. `bluemix plugin install` コマンドを使用することによって、リモート URL から直接プラグインをインストールします。例えば次のようにします。
+
+  ```
+  ~$ bluemix plugin install http://public.dhe.ibm.com/cloud/bluemix/cli/bluemix-plugins/auto-scaling-darwin-amd64-0.2.2
+  Attempting to download the binary file...
+  9857792 bytes downloaded
+  Installing plugin '/var/folder/v7/l3hnkz0x0b9b5mf1fyxh7yw00000gn/T/BluemixFileDownload274645142/auto-scaling-darwin-adm64-0.2.2'...
+  OK
+  Plugin 'auto-scaling 0.2.2' was successfully installed.
+  ~$
+  ```
+
+リポジトリーからプラグインをインストールすることもできます。{{site.data.keyword.Bluemix_notm}} には、{{site.data.keyword.Bluemix_notm}} CLI プラグインおよび Cloud Foundry CLI プラグインをホストする以下のリポジトリーがあります。
+
+  * Cloud Foundry CLI 用のプラグインをホストする [Cloud Foundry CLI プラグイン・リポジトリー ](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){: new_window} ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)
+  * {{site.data.keyword.Bluemix_notm}} CLI 固有のプラグインをホストする [{{site.data.keyword.Bluemix_notm}} CLI プラグイン・リポジトリー ](http://clis.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window} ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)
+
+リポジトリーからインストールするには、以下のステップを実行します。
+
+  1. リポジトリー内でプラグインを見つけます。{{site.data.keyword.Bluemix_notm}} CLI をインストールした後、デフォルトでオフィシャル・リポジトリー `Bluemix` が追加されます。`bluemix plugin repo-plugins` コマンドを使用して、`Bluemix` リポジトリー内のプラグインをリストできます。例えば次のようにします。
+
+  ```
+  ~$ bluemix plugin repo-plugins -r Bluemix
+  Getting plug-ins from repository 'Bluemix'...
+
+  Repository: Bluemix
+  Name           Description                                    Versions
+  auto-scaling   Bluemix CLI plugin for Auto-Scaling service    0.2.1, 0.2.2
+  nsg            Bluemix Network Security Group plugin          0.1.1
+
+  ~$
+  ```
+
+  2. 次に、`bluemix plugin install` コマンドを使用して、`Bluemix` リポジトリーからプラグインをインストールします。例えば次のようにします。
+
+  ```
+  ~$ bluemix plugin install auto-scaling -r Bluemix
+  Looking up 'auto-scaling' from repository 'Bluemix'...
+  9857792 bytes downloaded
+  Installing plugin '/var/folder/v7/l3hnkz0x0b9b5mf1fyxh7yw00000gn/T/BluemixFileDownload062468676/auto-scaling-darwin-adm64-0.2.2'...
+  OK
+  Plugin 'auto-scaling 0.2.2' was successfully installed.
+  ~$
+  ```
+
+## {{site.data.keyword.Bluemix_notm}} CLI へのログイン
+{: #log_bmcli}
+
+{{site.data.keyword.Bluemix_notm}} CLI をインストールした後、{{site.data.keyword.Bluemix_notm}} アカウントおよびパスワードを使用して {{site.data.keyword.Bluemix_notm}} にログインできます。例えば次のようにします。
+
+```
+~$ bluemix login -a https://api.ng.bluemix.net
+API endpoint: https://api.ng.bluemix.net
+
+Email> demo_user@foo.com
+
+Password>
+Authenticating...
+OK
+```
+
+これで、{{site.data.keyword.Bluemix_notm}} 組み込みコマンドを使用する準備ができました。例えば、次のように、`bluemix catalog templates` コマンドを実行して、使用可能なすべての {{site.data.keyword.Bluemix_notm}} ボイラープレート・テンプレートをリストできます。
+
+```
+~$ bluemix catalog templates
+Listing Bluemix boilerplate templates...
+
+ID                      Name
+pi-wdc-java-starter     Personality Insights Java Web Starter
+xpages-starter          XPages Web Starter
+mobileBackendStarter    Mobile Cloud
+pi-wdc-nodejs-starter   Personality Insights Node.js Web Starter
+mobileFirstPlatform     MobileFirst Services Starter
+xspHelloWorld           IBM XPages
+javacloudantbp          Java Cloudant Web Starter
+```
+
 # {{site.data.keyword.Bluemix_notm}} (bx) コマンド
 {: #bluemix_cli}
 
-バージョン: 0.4.1
+バージョン: 0.4.6
 
 {{site.data.keyword.Bluemix_notm}} コマンド・ライン・インターフェース (CLI) では、ユーザーが {{site.data.keyword.Bluemix_notm}} と対話できるように、名前空間別にグループ化したコマンドのセットが提供されています。
 {{site.data.keyword.Bluemix_notm}} コマンドには、既存の cf コ
@@ -29,10 +194,11 @@ CLI によってサポートされるコマンドをリストし、名前、オ�
 {:shortdesc}
 
 **注:** *前提条件*には、コマンドを使用する前に必要なアクションがリストされています。前提条件となるアクションのないコマンドでは、**なし**とリストされています。それ以外の場合、前提条件には以下のアクションのうちの 1 つ以上が含まれます。
+
 <dl>
 <dt>エンドポイント</dt>
 <dd>このコマンドを使用する前に、<code>bluemix api</code> を介して API エンドポイントを設定する必要があります。</dd>
-<dt>login</dt>
+<dt>ログイン</dt>
 <dd>このコマンドを使用する前に、<code>bluemix login</code> コマンドを使用してログインする必要があります。フェデレーテッド ID でログインする場合は、「--sso」オプションを使用し、ワンタイム・パスコードを使って認証します。</dd>
 <dt>ターゲット</dt>
 <dd>このコマンドを使用する前に、<code>bluemix target</code> コマンドを使用して組織およびスペースを設定する必要があります。</dd>
@@ -40,15 +206,17 @@ CLI によってサポートされるコマンドをリストし、名前、オ�
 <dd>このコマンドを実行するためには、Docker CLI (docker) がインストールされている必要があります。</dd>
 </dl>
 
-
 ## bluemix コマンドの索引
 {: #bx_commands_index}
 
 以下の表の索引を使用して、使用頻度の高い bluemix コマンドを
 参照してください。
 
+**注:** 短形式の Bluemix コマンドを使用できます。例えば、`bx api` は `bluemix api` の短形式です。
+
 
 <table summary="汎用 Bluemix コマンド。">
+ <caption>表 1. 汎用 bluemix コマンド</caption>
  <thead>
  <th colspan="5">汎用 Bluemix コマンド</th>
  </thead>
@@ -63,17 +231,14 @@ CLI によってサポートされるコマンドをリストし、名前、オ�
  <tr>
  <td>[bluemix info](index.html#bluemix_info) </td>
  <td>[bluemix config](index.html#bluemix_config)</td>
- <td>[bluemix list](index.html#bluemix_list)</td>
- <td>[bluemix scale](index.html#bluemix_scale)</td>
  <td>[bluemix curl](index.html#bluemix_curl)</td>
  </tr>
   </tbody>
  </table>
-{: caption="Table 1. General bluemix commands" caption-side="top"}
-
 
 
 <table summary="組織、スペース、ユーザーの管理に使用できる Bluemix コマンド。">
+ <caption>表 2. 組織、スペース、ユーザーを管理するためのコマンド</caption>
  <thead>
  <th colspan="5">組織、スペース、ユーザーを管理するためのコマンド</th>
  </thead>
@@ -94,25 +259,29 @@ CLI によってサポートされるコマンドをリストし、名前、オ�
  </tr>
  <tr>
  <td>[bluemix iam space-delete](index.html#bluemix_iam_space_delete)</td>
- <td>[bluemix iam account-users](index.html#bluemix_iam_account-users)</td>
- <td>[bluemix iam account-user-invite](index.html#bluemix_iam_account-user-invite)</td>
+ <td>[bluemix iam account-users](index.html#bluemix_iam_account_users)</td>
+ <td>[bluemix iam account-users-delete](index.html#bluemix_iam_account_users_delete)</td>
+ <td>[bluemix iam account-user-invite](index.html#bluemix_iam_account_user_invite)</td>
+ <td>[bluemix iam account-user-reinvite](index.html#bluemix_iam_account_user_reinvite)</td>
  <td>[bluemix iam org-users](index.html#bluemix_iam_org_users)</td>
- <td>[bluemix iam org-role-set](index.html#bluemix_iam_org_role_set)</td>
  </tr>
  <tr>
+ <td>[bluemix iam org-user-add](index.html#bluemix_iam_org_user_add)</td>
+ <td>[bluemix iam org-user-remove](index.html#bluemix_iam_org_user_remove)</td>
+ <td>[bluemix iam org-role-set](index.html#bluemix_iam_org_role_set)</td>
  <td>[bluemix iam org-role-unset](index.html#bluemix_iam_org_role_unset)</td>
  <td>[bluemix iam space-users](index.html#bluemix_iam_space_users)</td>
  <td>[bluemix iam space-role-set](index.html#bluemix_iam_space_role_set)</td>
+ </tr>
+ <tr>
  <td>[bluemix iam space-role-unset](index.html#bluemix_iam_space_role_unset)</td>
- <td></td>
  </tr>
  </tbody>
  </table>
- {: caption="Table 2. Commands for managing orgs, spaces, and users" caption-side="top"} 
-
 
 
 <table summary="Cloud Foundry アプリケーションの管理に使用することができる Bluemix コマンド。">
+ <caption>表 3. cf アプリケーションを管理するためのコマンド</caption>
  <thead>
  <th colspan="5">cf アプリケーションを管理するためのコマンド</th>
  </thead>
@@ -147,10 +316,10 @@ CLI によってサポートされるコマンドをリストし、名前、オ�
  </tr>
   </tbody>
  </table>
-{: caption="Table 3. Commands for managing cf apps" caption-side="top"}
 
 
 <table summary="Bluemix サービスの管理に使用することができる Bluemix コマンド。">
+ <caption>表 4. Bluemix サービスを管理するためのコマンド</caption>
  <thead>
  <th colspan="5">Bluemix サービスを管理するためのコマンド</th>
  </thead>
@@ -178,10 +347,10 @@ CLI によってサポートされるコマンドをリストし、名前、オ�
  </tr>
   </tbody>
  </table>
-{: caption="Table 4. Commands for managing Bluemix services" caption-side="top"}
 
 
 <table summary="Bluemix カタログ、プラグイン、請求、およびセキュリティー設定の管理に使用できる Bluemix コマンド。">
+ <caption>表 5. Bluemix カタログ、プラグイン、請求、およびセキュリティー設定を管理するためのコマンド</caption>
  <thead>
  <th colspan="5">Bluemix カタログ、プラグイン、請求、およびセキュリティー設定を管理するためのコマンド</th>
  </thead>
@@ -214,11 +383,10 @@ CLI によってサポートされるコマンドをリストし、名前、オ�
  </tr>
   </tbody>
  </table>
-{: caption="Table 5. Commands for managing Bluemix catalog, plug-ins, billing, and security settings" caption-side="top"}
-
 
 
 <table summary="ネットワーク設定の管理に使用することができる Bluemix コマンド。">
+ <caption>表 6. ネットワーク設定を管理するためのコマンド</caption>
  <thead>
  <th colspan="5">ネットワーク設定を管理するためのコマンド</th>
  </thead>
@@ -246,11 +414,9 @@ CLI によってサポートされるコマンドをリストし、名前、オ�
  </tr>
   </tbody>
  </table>
-{: caption="Table 6. Commands for managing network settings" caption-side="top"}
-
-
 
 <table summary="Bluemix 上のコンテナーの管理に使用することができる bluemix コマンド。">
+ <caption>表 7. Bluemix 上のコンテナーを管理するためのコマンド</caption>
  <thead>
  <th colspan="5">Bluemix 上のコンテナーを管理するためのコマンド</th>
  </thead>
@@ -308,13 +474,13 @@ CLI によってサポートされるコマンドをリストし、名前、オ�
  <td>[bluemix ic service-bind](index.html#bluemix_ic_service-bind)</td>
  <td>[bluemix ic service-unbind](index.html#bluemix_ic_service-unbind)</td>
  <td>[bluemix ic start](index.html#ic_start)</td>
- <td>[bluemix ic stats](index.html#bluemix_ic_stats)</td>  
+ <td>[bluemix ic stats](index.html#bluemix_ic_stats)</td>
  <td>[bluemix ic stop](index.html#ic_stop)</td>
  </tr>
  <tr>
  <td>[bluemix ic top](index.html#bluemix_ic_top)</td>
  <td>[bluemix ic unpause](index.html#unpause)</td>
- <td>[bluemix ic unprovision](index.html#bluemix_ic_unprovision)</td>  
+ <td>[bluemix ic unprovision](index.html#bluemix_ic_unprovision)</td>
  <td>[bluemix ic volume-inspect](index.html#bluemix_ic_volume_inspect)</td>
  <td>[bluemix ic volume-create](index.html#bluemix_ic_volume_create)</td>
  </tr>
@@ -334,11 +500,9 @@ CLI によってサポートされるコマンドをリストし、名前、オ�
  </tr>
   </tbody>
  </table>
-{: caption="Table 7. Commands for managing containers on Bluemix" caption-side="top"}
 
 
-
-## bluemix help
+### bluemix help
 {: #bluemix_help}
 {{site.data.keyword.Bluemix_notm}} CLI の第 1 レベルの組み込みコマンドおよびサポートされる名前空間に関する一般ヘルプを表示するか、または、特定の組み込みコマンドまたは名前空間に関するヘルプを表示します。
 
@@ -390,7 +554,7 @@ bluemix ic help group-create
 ```
 
 
-## bluemix api
+### bluemix api
 {: #bluemix_api}
 {{site.data.keyword.Bluemix_notm}} API エンドポイントを設定または表示します。このコマンドは `cf api` コマンドをラップします。
 
@@ -403,17 +567,16 @@ bluemix api [API_ENDPOINT] [--unset]
 <strong>コマンド・オプション</strong>:
    <dl>
    <dt>API_ENDPOINT (オプション)</dt>
-   <dd>ターゲットの API エンドポイント (例えば
-`https://api.ng.bluemix.net`)。 *API_ENDPOINT* オプションと `--unset` オプションのどちらも指定されない場合、現行 API エンドポイントが表示されます。</dd>
+   <dd>ターゲットの API エンドポイント (例えば `https://api.chinabluemix.net`)。 *API_ENDPOINT* オプションと `--unset` オプションのどちらも指定されない場合、現行 API エンドポイントが表示されます。</dd>
    <dt>--unset (オプション)</dt>
    <dd>API エンドポイント設定を削除します。</dd>
     </dl>
 <strong>例</strong>:
 
-API エンドポイントを api.ng.bluemix.net に設定します。
+API エンドポイントを api.chinabluemix.net に設定します。
 
 ```
-bluemix api api.ng.bluemix.net
+bluemix api api.chinabluemix.net
 ```
 
 現行 API エンドポイントを表示します。
@@ -429,7 +592,7 @@ bluemix api --unset
 ```
 
 
-## bluemix login
+### bluemix login
 {: #bluemix_login}
 
 ユーザーをログインします。このコマンドは `cf login` コマンドをラップします。コマンド・オプションは `cf login` コマンドのオプションと同じです。
@@ -445,10 +608,10 @@ bluemix login [OPTIONS...]
 <strong>コマンド・オプション</strong>:
 `login` コマンドでサポートされるオプションについては、アプリケーション管理用 cf コマンドの `cf login` コマンド使用法の説明を参照してください。
 
-<strong>注</Strong>:
+<strong>注</strong>:
 フェデレーテッド ID でログインする場合は、「--sso」オプションを使用し、ワンタイム・パスコードを使って認証します。
 
-## bluemix logout
+### bluemix logout
 {: #bluemix_logout}
 
 ユーザーをログアウトします。このコマンドは `cf logout` コマンドをラップします。
@@ -460,7 +623,7 @@ bluemix logout
 <strong>前提条件</strong>: なし
 
 
-## bluemix target
+### bluemix target
 {: #bluemix_target}
 
 
@@ -495,7 +658,7 @@ bluemix target
 ```
 
 
-## bluemix info
+### bluemix info
 {: #bluemix_info}
 
 基本的な {{site.data.keyword.Bluemix_notm}} 情報を表示します。これには、現行領域、クラウド・コントローラーのバージョン、および、いくつかの有用なエンドポイント (例えば、ログイン用のエンドポイントや、アクセス・トークン交換用のエンドポイントなど) が含まれます。
@@ -507,7 +670,7 @@ bluemix info
 <strong>前提条件</strong>: エンドポイント
 
 
-## bluemix config
+### bluemix config
 {: #bluemix_config}
 
 
@@ -574,100 +737,10 @@ bluemix config --locale CLEAR
 ```
 
 
-## bluemix list
-{: #bluemix_list}
-
-現行スペース内のすべての cf アプリケーション、コンテナー、コンテナー・グループ、および VM グループをリストします。
-
-```
-bluemix list [apps|containers|container-groups|vm-groups]
-```
-
-<strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
-
-<strong>コマンド・オプション</strong>:
-   <dl>
-   <dt>apps (オプション)</dt>
-   <dd>アプリケーション情報のみを表示します。</dd>
-   <dt>containers (オプション)</dt>
-   <dd>コンテナー情報のみを表示します。</dd>
-   <dt>container-groups (オプション)</dt>
-   <dd>コンテナー・グループ情報のみを表示します。</dd>
-   <dt>vm-groups (オプション)</dt>
-   <dd>VM グループ情報のみを表示します。</dd>
-    </dl>
-一度に指定できるのは、`apps`、
-`containers`、`container-groups`、または
-`vm-groups` のいずれか 1 つのみです。これらのどれも指定されない場合、すべての cf アプリケーション、コンテナー、コンテナー・グループ、および VM グループがリストされます。<strong>例</strong>:
-
-すべての cf アプリケーションをリストします。
-
-```
-bluemix list apps
-```
-
-すべてのコンテナー・インスタンスをリストします。
-
-```
-bluemix list containers
-```
-
-すべてのアプリケーション、コンテナー、コンテナー・グループ、および VM グループをリストします。
-
-```
-bluemix list
-```
-
-
-## bluemix scale
-{: #bluemix_scale}
-
-cf アプリケーションまたはコンテナー・グループを、指定されたインスタンス数、ディスク割り当て量、およびメモリー・サイズになるよう拡大または縮小します。
-
-**注:** コンテナー・グループのスケーリングに指定できるのはインスタンス数のみです。オプションが何も指定されない場合、このコマンドは、コンテナー・グループの現行インスタンス数をリストし、cf アプリケーションではディスク割り当て量とメモリー・サイズもリストします。
-
-```
-bluemix scale CF_APP_NAME|CONTAINER_GROUP_NAME [-i INSTANCE_COUNT] [-k DISK_QUOTA] [-m MEMORY_SIZE]
-```
-
-<strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
-
-<strong>コマンド・オプション</strong>:
-   <dl>
-   <dt><i>CF_APP_NAME</i>|<i>CONTAINER_GROUP_NAME</i> (必須)</dt>
-   <dd>スケーリングの対象にする cf アプリケーションまたはコンテナー・グループの名前。</dd>
-   <dt>-i <i>INSTANCE_COUNT</i> (オプション)</dt>
-   <dd>スケーリングする cf アプリケーションまたはコンテナー・グループの新しいインスタンス数。コンテナー・グループのスケーリングの場合は、このオプションは唯一の有効なオプションです。</dd>
-   <dt>-k <i>DISK_QUOTA</i> (オプション)</dt>
-   <dd>cf アプリケーションの新しいディスク割り当て量。コンテナー・グループのスケーリングの場合は無効です。</dd>
-   <dt>-m <i>MEMORY_SIZE</i> (オプション)</dt>
-   <dd>cf アプリケーションの新しいメモリー・サイズ。コンテナー・グループのスケーリングの場合は無効です。</dd>
-    </dl>
-<strong>例</strong>:
-
-`my-container-group` の現行インスタンス数を表示します。
-
-```
-bluemix scale my-container-group
-```
-
-`my-container-group` を 2 インスタンスにスケーリングします。
-
-```
-bluemix scale my-container-group -i 2
-```
-
-`my-java-app` を、3 インスタンス、8G ディスク割り当て量、および 1024M メモリー・サイズにスケーリングします。
-
-```
-bluemix scale my-java-app -i 3 -k 8G -m 1024M
-```
-
-
-## bluemix curl
+### bluemix curl
 {: #bluemix_curl}
 
-{{site.data.keyword.Bluemix_notm}} への未加工 HTTP 要求を実行します。*Content-Type* はデフォルトで *application/json* に設定されます。このコマンドは、要求を {{site.data.keyword.Bluemix_notm}} マルチクラウド制御プロキシーに送信します。サポートされるパスについては、[CloudFoundry API 資料](http://apidocs.cloudfoundry.org/){: new_window}内の API パス定義を参照してください。
+{{site.data.keyword.Bluemix_notm}} への未加工 HTTP 要求を実行します。*Content-Type* はデフォルトで *application/json* に設定されます。このコマンドは、要求を {{site.data.keyword.Bluemix_notm}} マルチクラウド制御プロキシーに送信します。サポートされるパスについては、[CloudFoundry API 資料 ](http://apidocs.cloudfoundry.org/){: new_window} ![「外部リンク」アイコン](../../../icons/launch-glyph.svg) 内の API パス定義を参照してください。
 
 ```
 bluemix curl PATH [OPTIONS...]
@@ -692,7 +765,7 @@ bluemix curl /v2/organizations
 ```
 
 
-## bluemix iam orgs
+### bluemix iam orgs
 {: #bluemix_iam_orgs}
 
 すべての組織をリストします。
@@ -720,7 +793,7 @@ bluemix iam orgs [-r REGION --guid]
 bluemix iam orgs -r us-south --guid
 ```
 
-## bluemix iam org
+### bluemix iam org
 {: #bluemix_iam_org}
 
 指定された組織の情報を表示します。
@@ -748,7 +821,7 @@ bluemix iam org ORG_NAME [--guid]
 bluemix iam org IBM --guid
 ```
 
-## bluemix iam org-create
+### bluemix iam org-create
 {: #bluemix_iam_org_create}
 
 新しい組織を作成します。この操作は、アカウントの所有者のみが実行できます。  
@@ -774,7 +847,7 @@ bluemix iam org-create IBM
 ```
 
 
-## bluemix iam org-replicate
+### bluemix iam org-replicate
 {: #bluemix_iam_org_replicate}
 
 現在の地域から別の地域に組織を複製します。
@@ -802,7 +875,7 @@ bluemix iam org-replicate myorg eu-gb
 ```
 
 
-## bluemix iam org-rename
+### bluemix iam org-rename
 {: #bluemix_iam_org_rename}
 
 組織の名前を変更します。この操作は、組織の管理者のみが実行できます。
@@ -821,7 +894,7 @@ bluemix iam org-rename OLD_ORG_NAME NEW_ORG_NAME
    <dd>名前を変更する組織の新しい名前。</dd>
    </dl>
 
-## bluemix iam org-delete
+### bluemix iam org-delete
 {: #bluemix_iam_org_delete}
 
 現行地域内の指定された組織を削除します。
@@ -843,41 +916,41 @@ bluemix iam org-delete ORG_NAME [-f --all]
    </dl>
 
 
-## bluemix iam spaces
+### bluemix iam spaces
 {: #bluemix_iam_spaces}
 
 このコマンドの機能とオプションは `cf spaces` コマンドと同じです。
 
 
-## bluemix iam space
+### bluemix iam space
 {: #bluemix_iam_space}
 
 このコマンドの機能とオプションは `cf space` コマンドと同じです。
 
 
-## bluemix iam space-create
+### bluemix iam space-create
 {: #bluemix_iam_space_create}
 
 このコマンドの機能とオプションは `cf create-space` コマンドと同じです。
 
 
-## bluemix iam space-rename
+### bluemix iam space-rename
 {: #bluemix_iam_space_rename}
 
 
 このコマンドの機能とオプションは `cf rename-space` コマンドと同じです。
 
 
-## bluemix iam space-delete
+### bluemix iam space-delete
 {: #bluemix_iam_space_delete}
 
 
 このコマンドの機能とオプションは `cf delete-space` コマンドと同じです。
 
 
-## bluemix iam account-users
+### bluemix iam account-users
 
-{: #bluemix_iam_account-users}
+{: #bluemix_iam_account_users}
 
 アカウントに関連付けられているユーザーを表示します。この操作は、アカウントの所有者のみが実行できます。
 
@@ -885,8 +958,8 @@ bluemix iam org-delete ORG_NAME [-f --all]
 bluemix iam account-users
 ```
 
-## bluemix iam account-user-invite
-{: #bluemix_iam_account-user-invite}
+### bluemix iam account-user-invite
+{: #bluemix_iam_account_user_invite}
 
 
 組織とスペースの役割が既に設定されているアカウントにユーザーを招待します。この操作は、アカウントの所有者のみが実行できます。
@@ -932,7 +1005,17 @@ bluemix iam account-user-invite USER_NAME ORG_NAME ORG_ROLE SPACE_NAME SPACE_ROL
 bluemix iam account-user-invite Mary IBM OrgManager Cloud SpaceAuditor
 ```
 
-## bluemix iam org-users
+
+### bluemix iam account-user-reinvite
+{: #bluemix_iam_account_user_reinvite}
+
+ユーザーに招待を再送信します (組織管理者かアカウント所有者が必要)
+```
+ bluemix iam account-user-reinvite USER_EMAIL ORG_NAME
+```
+ 
+ 
+### bluemix iam org-users
 {: #bluemix_iam_org_users}
 
 指定された組織内のユーザーを役割別に表示します
@@ -951,8 +1034,29 @@ bluemix iam org-users ORG_NAME [-a]
    <dd>指定された組織内のすべてのユーザーを、役割別にグループ化せずにリストします。</dd>
     </dl>
 
+### bluemix iam org-user-add
+{: #bluemix_iam_org_user_add}
 
-## bluemix iam org-role-set
+組織にユーザーを追加します (組織管理者が必要)。
+```
+ bluemix iam org-user-add USER_NAME ORG
+```
+
+### bluemix iam org-user-remove
+{: #bluemix_iam_org_user_remove}
+
+組織からユーザーを削除します (組織管理者またはユーザー本人のみ)
+```
+   bluemix iam org-user-remove USER_NAME ORG [-f, --force]
+```
+
+<strong>コマンド・オプション</strong>:
+  <dl>
+   <dt>--force, -f</dt>
+   <dd>確認なしで削除を強制します。</dd>
+ </dl>
+
+### bluemix iam org-role-set
 {: #bluemix_iam_org_role_set}
 
 組織の役割をユーザーに割り当てます。この操作は、組織の管理者のみが実行できます。  
@@ -964,9 +1068,7 @@ bluemix iam org-role-set USER_NAME ORG_NAME ORG_ROLE
 <strong>前提条件</strong>: エンドポイント、ログイン
 
 <strong>コマンド・オプション</strong>:
-
-
-   <dl>
+  <dl>
    <dt>USER_NAME (必須)</dt>
    <dd>割り当てられるユーザーの名前。</dd>
    <dt>ORG_NAME (必須)</dt>
@@ -990,7 +1092,7 @@ bluemix iam org-role-set Mary IBM OrgManager
 ```
 
 
-## bluemix iam org-role-unset
+### bluemix iam org-role-unset
 {: #bluemix_iam_org_role_unset}
 
 組織の役割をユーザーから削除します。この操作は、組織の管理者のみが実行できます。  
@@ -1026,7 +1128,7 @@ bluemix iam org-role-unset Mary IBM OrgManager
 ```
 
 
-## bluemix iam space-users
+### bluemix iam space-users
 {: #bluemix_iam_space_users}
 
 指定されたスペース内のユーザーを役割別に表示します
@@ -1046,7 +1148,7 @@ bluemix iam space-users ORG_NAME SPACE_NAME
    </dl>
 
 
-## bluemix iam space-role-set
+### bluemix iam space-role-set
 {: #bluemix_iam_space_role_set}
 
 スペースの役割をユーザーに割り当てます。この操作は、スペースの管理者のみが実行できます。  
@@ -1083,7 +1185,7 @@ bluemix iam space-role-set USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
 bluemix iam space-role-set Mary IBM Cloud SpaceManager
 ```
 
-## bluemix iam space-role-unset
+### bluemix iam space-role-unset
 {: #bluemix_iam_space_role_unset}
 
 スペースの役割をユーザーから削除します。この操作は、スペースの管理者のみが実行できます。  
@@ -1122,220 +1224,220 @@ bluemix iam space-role-unset Mary IBM Cloud SpaceManager
 ```
 
 
-## bluemix app push
+### bluemix app push
 {: #bluemix_app_push}
 
 このコマンドの機能とオプションは `cf push` コマンドと同じです。
 
 
-## bluemix app list
+### bluemix app list
 {: #bluemix_app_list}
 
 このコマンドの機能とオプションは `cf apps` コマンドと同じです。
 
 
-## bluemix app show
+### bluemix app show
 {: #bluemix_app_show}
 
 このコマンドの機能とオプションは `cf app` コマンドと同じです。
 
 
-## bluemix app scale
+### bluemix app scale
 {: #bluemix_app_scale}
 
 このコマンドの機能とオプションは `cf scale` コマンドと同じです。
 
 
-## bluemix app delete
+### bluemix app delete
 {: #bluemix_app_delete}
 
 このコマンドの機能とオプションは `cf delete` コマンドと同じです。
 
 
-## bluemix app rename
+### bluemix app rename
 {: #bluemix_app_rename}
 
 このコマンドの機能とオプションは `cf rename` コマンドと同じです。
 
 
-## bluemix app start
+### bluemix app start
 {: #bluemix_app_start}
 
 このコマンドの機能とオプションは `cf start` コマンドと同じです。
 
 
-## bluemix app stop
+### bluemix app stop
 {: #bluemix_app_stop}
 
 このコマンドの機能とオプションは `cf stop` コマンドと同じです。
 
 
-## bluemix app restart
+### bluemix app restart
 {: #bluemix_app_restart}
 
 このコマンドの機能とオプションは `cf restart` コマンドと同じです。
 
 
-## bluemix app restage
+### bluemix app restage
 {: #bluemix_app_restage}
 
 
 このコマンドの機能とオプションは `cf restage` コマンドと同じです。
 
 
-## bluemix app instance-restart
+### bluemix app instance-restart
 {: #bluemix_app_instance_restart}
 
 
 このコマンドの機能とオプションは `cf restart-app-instance` コマンドと同じです。
 
 
-## bluemix app events
+### bluemix app events
 {: #bluemix_app_events}
 
 このコマンドの機能とオプションは `cf events` コマンドと同じです。
 
 
-## bluemix app files
+### bluemix app files
 {: #bluemix_app_files}
 
 このコマンドの機能とオプションは `cf files` コマンドと同じです。
 
 
-## bluemix app logs
+### bluemix app logs
 {: #bluemix_app_logs}
 
 このコマンドの機能とオプションは `cf logs` コマンドと同じです。
 
 
-## bluemix app env
+### bluemix app env
 {: #bluemix_app_env}
 
 このコマンドの機能とオプションは `cf env` コマンドと同じです。
 
 
-## bluemix app env-set
+### bluemix app env-set
 {: #bluemix_app_env_set}
 
 このコマンドの機能とオプションは `cf set-env` コマンドと同じです。
 
 
-## bluemix app env-unset
+### bluemix app env-unset
 {: #bluemix_app_env_unset}
 
 このコマンドの機能とオプションは `cf unset-env` コマンドと同じです。
 
 
-## bluemix app stacks
+### bluemix app stacks
 {: #bluemix_app_stacks}
 
 このコマンドの機能とオプションは `cf stacks` コマンドと同じです。
 
 
-## bluemix app stack
+### bluemix app stack
 {: #bluemix_app_stack}
 
 このコマンドの機能とオプションは `cf stack` コマンドと同じです。
 
 
-## bluemix app manifest-create
+### bluemix app manifest-create
 {: #bluemix_app_manifest_create}
 
 このコマンドの機能とオプションは `cf create-app-manifest` コマンドと同じです。
 
 
-## bluemix service offerings
+### bluemix service offerings
 {: #bluemix_service_offerings}
 
 
 このコマンドの機能とオプションは `cf marketplace` コマンドと同じです。
 
 
-## bluemix service list
+### bluemix service list
 {: #bluemix_service_list}
 
 このコマンドの機能とオプションは `cf services` コマンドと同じです。
 
 
-## bluemix service show
+### bluemix service show
 {: #bluemix_service_show}
 
 このコマンドの機能とオプションは `cf service` コマンドと同じです。
 
 
-## bluemix service create
+### bluemix service create
 {: #bluemix_service_create}
 
 このコマンドの機能とオプションは `cf create-service` コマンドと同じです。
 
 
-## bluemix service update
+### bluemix service update
 {: #bluemix_service_update}
 
 このコマンドの機能とオプションは `cf update-service` コマンドと同じです。
 
 
-## bluemix service delete
+### bluemix service delete
 {: #bluemix_service_delete}
 
 このコマンドの機能とオプションは `cf delete-service` コマンドと同じです。
 
 
-## bluemix service rename
+### bluemix service rename
 {: #bluemix_service_rename}
 
 このコマンドの機能とオプションは `cf rename-service` コマンドと同じです。
 
 
-## bluemix service bind
+### bluemix service bind
 {: #bluemix_service_bind}
 
 このコマンドの機能とオプションは `cf bind-service` コマンドと同じです。
 
 
-## bluemix service unbind
+### bluemix service unbind
 {: #bluemix_service_unbind}
 
 このコマンドの機能とオプションは `cf unbind-service` コマンドと同じです。
 
 
-## bluemix service key-create
+### bluemix service key-create
 {: #bluemix_service_key_create}
 
 このコマンドの機能とオプションは `cf create-service-key` コマンドと同じです。
 
 
-## bluemix service key-delete
+### bluemix service key-delete
 {: #bluemix_service_key_delete}
 
 このコマンドの機能とオプションは `cf delete-service-key` コマンドと同じです。
 
 
-## bluemix service keys
+### bluemix service keys
 {: #bluemix_service_keys}
 
 このコマンドの機能とオプションは `cf service-keys` コマンドと同じです。
 
 
-## bluemix service key-show
+### bluemix service key-show
 {: #bluemix_service_key_show}
 
 このコマンドの機能とオプションは `cf service-key` コマンドと同じです。
 
 
-## bluemix service user-provided-create
+### bluemix service user-provided-create
 {: #bluemix_service_user_provided_create}
 
 このコマンドの機能とオプションは `cf create-user-provided-service` コマンドと同じです。
 
 
-## bluemix service user-provided-update
+### bluemix service user-provided-update
 {: #bluemix_service_user_provided_update}
 
 このコマンドの機能とオプションは `cf update-user-provided-service` コマンドと同じです。
 
 
-## bluemix catalog templates
+### bluemix catalog templates
 {: #bluemix_catalog_templates}
 
 Bluemix のボイラープレート・テンプレートを表示します。
@@ -1355,7 +1457,7 @@ bluemix catalog templates [-d]
    </dl>
 
 
-## bluemix catalog template
+### bluemix catalog template
 {: #bluemix_catalog_template}
 
 指定されたボイラープレート・テンプレートの詳細情報を表示します。
@@ -1383,7 +1485,7 @@ bluemix catalog template mobileBackendStarter
 ```
 
 
-## bluemix catalog template-run
+### bluemix catalog template-run
 {: #bluemix_catalog_template_run}
 
 指定されたテンプレートをベースにした、指定された URL と説明を持つ cf アプリケーションを作成します。デフォルトでは、この新規アプリケーションは自動的に開始されます。
@@ -1418,10 +1520,10 @@ bluemix catalog template-run TEMPLATE_ID CF_APP_NAME [-u URL] [-d DESCRIPTIO
 bluemix catalog template-run javaHelloWorld my-app
 ```
 
-`rubyHelloWorld` テンプレートに基づき、経路 `myrubyapp.ng.bluemix.net` と説明 `My first ruby app on {{site.data.keyword.Bluemix_notm}}.` を使用してアプリケーション `my-ruby-app` を作成するには、以下のように指定します。
+`rubyHelloWorld` テンプレートに基づき、経路 `myrubyapp.chinabluemix.net` と説明 `My first ruby app on {{site.data.keyword.Bluemix_notm}}.` を使用してアプリケーション `my-ruby-app` を作成するには、以下のように指定します。
 
 ```
-bluemix catalog template-run rubyHelloWorld my-ruby-app -u myrubyapp.ng.bluemix.net -d "My first ruby app on {{site.data.keyword.Bluemix_notm}}."
+bluemix catalog template-run rubyHelloWorld my-ruby-app -u myrubyapp.chinabluemix.net -d "My first ruby app on {{site.data.keyword.Bluemix_notm}}."
 ```
 
 `pythonHelloWorld` テンプレートをベースにして、自動開始なしでアプリケーション `my-python-app` を作成します。
@@ -1431,7 +1533,7 @@ bluemix catalog template-run pythonHelloWorld my-python-app --no-start
 ```
 
 
-## bluemix network regions
+### bluemix network regions
 {: #bluemix_network_regions}
 
 {{site.data.keyword.Bluemix_notm}} のすべての地域の情報を表示します。
@@ -1443,7 +1545,7 @@ bluemix network regions
 <strong>前提条件</strong>: エンドポイント
 
 
-## bluemix network region-set
+### bluemix network region-set
 {: #bluemix_network_region_set}
 
 指定された地域に切り替えます。このコマンドは、可能な場合、新しい地域の同じ組織およびスペースに自動的にターゲットを変更します。さもなければ、コマンドは、ユーザーが既にログインしている場合、新しい組織とスペースを選択するようユーザーにプロンプトを出します。API エンドポイントはそれに合わせて変更されます。
@@ -1470,19 +1572,19 @@ bluemix network region-set eu-gb
 ```
 
 
-## bluemix network routes
+### bluemix network routes
 {: #bluemix_network_routes}
 
 このコマンドの機能とオプションは `cf routes` コマンドと同じです。
 
 
-## bluemix network route-check
+### bluemix network route-check
 {: #bluemix_network_route_check}
 
 このコマンドの機能とオプションは `cf check-route` コマンドと同じです。
 
 
-## bluemix network route-map
+### bluemix network route-map
 {: #bluemix_network_route_map}
 
 指定されたドメインおよびホスト名を持つ経路を既存 cf アプリケーションまたはコンテナー・グループにマップします。
@@ -1500,7 +1602,7 @@ bluemix network route-map CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST
    <dd>経路によってマップされる cf アプリケーションまたはコンテナー・
 グループの名前。</dd>
    <dt>DOMAIN (必須)</dt>
-   <dd>経路のドメイン。例えば、mybluemix.net または ng.bluemix.net などです。</dd>
+   <dd>経路のドメイン。例えば、mychinabluemix.net または chinabluemix.net などです。</dd>
    <dt>-n <i>HOST_NAME</i> (オプション)</dt>
    <dd>経路のホスト名。指定されない場合、ホスト名は、デフォルトで、アプリケーション名またはコンテナー・グループ名に設定されます。</dd>
    </dl>
@@ -1510,17 +1612,17 @@ bluemix network route-map CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST
 指定されたドメインで `my-app` に経路をマップします。
 
 ```
-bluemix network route-map my-app mybluemix.net
+bluemix network route-map my-app mychinabluemix.net
 ```
 
 指定されたドメインとホスト名で「my-container-group」に経路をマップします。
 
 ```
-bluemix network route-map my-container-group ng.bluemix.net -n abc
+bluemix network route-map my-container-group chinabluemix.net -n abc
 ```
 
 
-## bluemix network route-unmap
+### bluemix network route-unmap
 {: #bluemix_network_route_unmap}
 
 指定された経路を既存 cf アプリケーションまたはコンテナー・グループからマップ解除します。
@@ -1537,76 +1639,76 @@ bluemix network route-unmap CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HO
    <dt>CF_APP_NAME|CONTAINER_GROUP_NAME (必須)</dt>
    <dd>cf アプリケーションまたはコンテナー・グループの名前。</dd>
    <dt>DOMAIN (必須)</dt>
-   <dd>経路のドメイン (例えば、mybluemix.net や ng.bluemix.net)。</dd>
+   <dd>経路のドメイン (例えば、mychinabluemix.net または chinabluemix.net)。</dd>
    <dt>-n <i>HOST_NAME</i> (オプション)</dt>
    <dd>経路のホスト名。指定されない場合、ホスト名は、デフォルトで、アプリケーション名またはコンテナー・グループ名に設定されます。</dd>
    </dl>
 
 <strong>例</strong>:
 
-`my-app.mybluemix.net` を `my-app` からマップ解除するには、以下のように指定します。
+`my-app.mychinabluemix.net` を `my-app` からマップ解除するには、以下のように指定します。
 
 ```
-bluemix network route-unmap my-app mybluemix.net
+bluemix network route-unmap my-app mychianbluemix.net
 ```
 
-`abc.ng.bluexmix.net` を `my-container-group` からマップ解除するには、以下のように指定します。
+`abc.chinabluexmix.net` を `my-container-group` からマップ解除するには、以下のように指定します。
 
 ```
-bluemix network route-unmap my-container-group ng.bluemix.net -n abc
+bluemix network route-unmap my-container-group chinabluemix.net -n abc
 ```
 
 
-## bluemix network route-create
+### bluemix network route-create
 {: #bluemix_network_route_create}
 
 このコマンドの機能とオプションは `cf create-route` コマンドと同じです。
 
 
-## bluemix network route-delete
+### bluemix network route-delete
 {: #bluemix_network_route_delete}
 
 このコマンドの機能とオプションは `cf delete-route` コマンドと同じです。
 
 
-## bluemix network orphaned-routes-delete
+### bluemix network orphaned-routes-delete
 {: #bluemix_network_orphaned_routes_delete}
 
 このコマンドの機能とオプションは `cf delete-orphaned-routes` コマンドと同じです。
 
 
-## bluemix network domains
+### bluemix network domains
 {: #bluemix_network_domains}
 
 このコマンドの機能とオプションは `cf domains` コマンドと同じです。
 
 
-## bluemix network domain-create
+### bluemix network domain-create
 {: #bluemix_network_domain_create}
 
 このコマンドの機能とオプションは `cf create-domain` コマンドと同じです。
 
 
-## bluemix network domain-delete
+### bluemix network domain-delete
 {: #bluemix_network_domain_delete}
 
 このコマンドの機能とオプションは `cf delete-domain` コマンドと同じです。
 
 
-## bluemix network shared-domain-create
+### bluemix network shared-domain-create
 {: #bluemix_network_shared_domain_create}
 
 このコマンドの機能とオプションは `cf create-shared-domain` コマンドと同じです。
 
 
-## bluemix network shared-domain-delete
+### bluemix network shared-domain-delete
 {: #bluemix_network_shared_domain_delete}
 
 このコマンドの機能とオプションは `cf delete-shared-domain` コマンドと同じです。
 
 
 
-## bluemix bss account-usage
+### bluemix bss account-usage
 {: #bluemix_bss_account_usage}
 
 アカウントの月次使用量とコストを表示します。
@@ -1634,7 +1736,7 @@ bluemix bss account-usage [-d YYYY-MM] [--json]
 bluemix bss account-usage -d 2016-06
 ```
 
-## bluemix bss org-usage
+### bluemix bss org-usage
 {: #bluemix_bss_org_usage}
 
 組織の月次使用量の詳細を表示します。この操作は、組織の請求管理者のみ実行できます。
@@ -1660,7 +1762,7 @@ bluemix bss org-usage ORG_NAME [-d YYYY-MM] [-r REGION_NAME] [--json]
 
 
 
-## bluemix bss orgs-usage-summary
+### bluemix bss orgs-usage-summary
 {: #bluemix_bss_orgs_usage_summary}
 
 マイ・アカウント内の組織の月次使用量サマリーを表示します。
@@ -1684,7 +1786,7 @@ bluemix bss orgs-usage-summary [-d YYYY-MM] [-r REGION_NAME] [--json]
 
 
 
-## bluemix security cert
+### bluemix security cert
 {: #bluemix_security_cert}
 
 ドメインの証明書情報をリストします。
@@ -1713,7 +1815,7 @@ bluemix security cert ibmcxo-eventconnect.com
 ```
 
 
-## bluemix security cert-add
+### bluemix security cert-add
 {: #bluemix_security_cert_add}
 
 現在の組織内の、指定したドメインに証明書を追加します。
@@ -1750,7 +1852,7 @@ bluemix security cert-add ibmcxo-eventconnect.com -k key_file.key -c cert_file.c
 ```
 
 
-## bluemix security cert-remove
+### bluemix security cert-remove
 {: #bluemix_security_cert_remove}
 
 現在の組織内の、指定したドメインから証明書を削除します。
@@ -1772,7 +1874,7 @@ bluemix security cert-remove DOMAIN [-f]
 
 
 
-## bluemix plugin repos
+### bluemix plugin repos
 {: #bluemix_plugin_repos}
 
 {{site.data.keyword.Bluemix_notm}} CLI に登録されているすべてのプラグイン・リポジトリーをリストします。
@@ -1784,7 +1886,7 @@ bluemix plugin repos
 <strong>前提条件</strong>: なし
 
 
-## bluemix plugin repo-add
+### bluemix plugin repo-add
 {: #bluemix_plugin_repo_add}
 
 新規プラグイン・リポジトリーを {{site.data.keyword.Bluemix_notm}} CLI に追加します。
@@ -1814,7 +1916,7 @@ bluemix plugin repo-add bluemix-repo http://plugins.ng.bluemix.net
 ```
 
 
-## bluemix plugin repo-remove
+### bluemix plugin repo-remove
 {: #bluemix_plugin_repo_remove}
 
 {{site.data.keyword.Bluemix_notm}} CLI からプラグイン・リポジトリーを削除します。
@@ -1840,7 +1942,7 @@ bluemix plugin repo-remove bluemix-repo
 ```
 
 
-## bluemix plugin repo-plugins
+### bluemix plugin repo-plugins
 {: #bluemix_plugin_repo_plugins}
 
 追加されたすべてのリポジトリーまたは特定のリポジトリー内にある使用可能なプラグインをすべてリストします。
@@ -1873,7 +1975,7 @@ bluemix plugin repo-plugins -r bluemix-repo
 ```
 
 
-## bluemix plugin list
+### bluemix plugin list
 {: #bluemix_plugin_list}
 
 {{site.data.keyword.Bluemix_notm}} CLI 内のインストールされたプラグインをすべてリストします。
@@ -1885,7 +1987,7 @@ bluemix plugin list
 <strong>前提条件</strong>: なし
 
 
-## bluemix plugin install
+### bluemix plugin install
 {: #bluemix_plugin_install}
 
 指定したパスまたはリポジトリーから、特定のバージョンのプラグインを {{site.data.keyword.Bluemix_notm}} CLI にインストールします。
@@ -1934,7 +2036,11 @@ bluemix plugin install IBM-Containers -r bluemix-repo -v 0.5.800
 ```
 
 
-## bluemix plugin uninstall
+
+
+
+
+### bluemix plugin uninstall
 {: #bluemix_plugin_uninstall}
 
 指定されたプラグインを {{site.data.keyword.Bluemix_notm}} CLI からアンインストールします。
@@ -1961,10 +2067,10 @@ bluemix plugin uninstall IBM-Containers
 ```
 
 
-## bluemix ic attach
+### bluemix ic attach
 {: #bluemix_ic_attach}
 
-実行中のコンテナーを制御するか、その出力を表示します。終了してコンテナーを停止するには `CTRL+C` を使用します。このコマンドは Docker CLI を呼び出します。詳細については、Docker ヘルプで [attach](https://docs.docker.com/engine/reference/commandline/attach/){: new_window} コマンドを参照してください。
+実行中のコンテナーを制御するか、その出力を表示します。終了してコンテナーを停止するには `CTRL+C` を使用します。このコマンドは Docker CLI を呼び出します。詳細については、Docker ヘルプで [attach ](https://docs.docker.com/engine/reference/commandline/attach/){: new_window} ![「外部リンク」アイコン](../../../icons/launch-glyph.svg) コマンドを参照してください。
 
 ```
 bluemix ic attach [--no-stdin] [--sig-proxy] CONTAINER
@@ -1992,10 +2098,10 @@ bluemix ic attach my_container
 ```
 
 
-## bluemix ic build
+### bluemix ic build
 {: #bluemix_ic_build}
 
-IBM Containers ビルド・サービスを呼び出して、Docker イメージをローカルにビルドするか、またはプライベート {{site.data.keyword.Bluemix_notm}} リポジトリー内にビルドします。このコマンドは Docker CLI を呼び出します。詳細については、Docker ヘルプで [build](https://docs.docker.com/engine/reference/commandline/build/){: new_window} コマンドを参照してください。
+IBM Containers ビルド・サービスを呼び出して、Docker イメージをローカルにビルドするか、またはプライベート {{site.data.keyword.Bluemix_notm}} リポジトリー内にビルドします。このコマンドは Docker CLI を呼び出します。詳細については、Docker ヘルプで [build ](https://docs.docker.com/engine/reference/commandline/build/){: new_window} ![「外部リンク」アイコン](../../../icons/launch-glyph.svg) コマンドを参照してください。
 
 ```
 bluemix ic build -t TAG|--tag TAG [--no-cache] [-p|--pull] [-q|--quiet] DOCKERFILE_LOCATION
@@ -2029,12 +2135,12 @@ bluemix ic build -t registry.ng.bluemix.net/mynamespace/myimage
 ```
 
 
-## bluemix ic cp
+### bluemix ic cp
 {: #bluemix_ic_cp}
-コンテナーとローカル・ファイル・システムの間でファイルまたはフォルダーをコピーします。このコマンドは Docker CLI を呼び出します。詳細については、Docker ヘルプで [cp](https://docs.docker.com/engine/reference/commandline/cp/){: new_window} コマンドを参照してください。
+コンテナーとローカル・ファイル・システムの間でファイルまたはフォルダーをコピーします。このコマンドは Docker CLI を呼び出します。詳細については、Docker ヘルプで [cp ](https://docs.docker.com/engine/reference/commandline/cp/){: new_window} ![「外部リンク」アイコン](../../../icons/launch-glyph.svg) コマンドを参照してください。
 
 
-## bluemix ic cpi
+### bluemix ic cpi
 {: #bluemix_ic_cpi}
 
 Docker Hub イメージ、またはローカル・レジストリーからのイメージにアクセスし、そのイメージをプライベート {{site.data.keyword.Bluemix_notm}} リポジトリーにコピーします。
@@ -2068,10 +2174,10 @@ bluemix ic cpi training/sinatra registry.ng.bluemix.net/mynamespace/mysinatra:v1
 ```
 
 
-## bluemix ic exec
+### bluemix ic exec
 {: #bluemix_ic_exec}
 
-コンテナー内でコマンドを実行します。詳細については、Docker ヘルプで [exec](https://docs.docker.com/engine/reference/commandline/exec/){: new_window} コマンドを参照してください。
+コンテナー内でコマンドを実行します。詳細については、Docker ヘルプで [exec ](https://docs.docker.com/engine/reference/commandline/exec/){: new_window} ![「外部リンク」アイコン](../../../icons/launch-glyph.svg) コマンドを参照してください。
 
 ```
 bluemix ic exec [-d|--detach] [-it] [-u USER|--user USER] CONTAINER [CMD]
@@ -2110,7 +2216,7 @@ bluemix ic exec my_container date
 ```
 
 
-## bluemix ic group-create
+### bluemix ic group-create
 {: #bluemix_ic_group_create}
 
 スケーラブル・コンテナー・グループを作成します。
@@ -2145,10 +2251,11 @@ bluemix ic group-create [--publish,-p PORT] --name GROUP_NAME [--memory,-m MEMOR
 
 |  環境変数                              |     説明                            |
 | :----------------------------- | :------------------------------ |
-| CCS_BIND_APP=*&lt;appname&gt;*       | コンテナーにサービスをバインドします。`CCS_BIND_APP` 環境変数を使用して、アプリをコンテナーにバインドします。このアプリはターゲット・サービスにバインドされ、ブリッジとして機能します。これにより、{{site.data.keyword.Bluemix_notm}} は、ブリッジ・アプリの `VCAP_SERVICES` 情報を、実行中のコンテナー・インスタンスに注入することができます。ブリッジ・アプリの作成について詳しくは、[コンテナーへのサービスのバインド](../../../containers/container_integrations_binding.html){: new_window}を参照してください。 |
+| CCS_BIND_APP=*&lt;appname&gt;*       | コンテナーにサービスをバインドします。`CCS_BIND_APP` 環境変数を使用して、アプリをコンテナーにバインドします。このアプリはターゲット・サービスにバインドされ、ブリッジとして機能します。これにより、{{site.data.keyword.Bluemix_notm}} は、ブリッジ・アプリの `VCAP_SERVICES` 情報を、実行中のコンテナー・インスタンスに注入することができます。|
 | CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | ブリッジ・アプリを使用せずに Bluemix サービスをコンテナーに直接バインドするには、CCS_BIND_SRV を使用します。このバインディングにより、Bluemix は、実行中のコンテナー・インスタンスに VCAP_SERVICES 情報を注入できます。複数の Bluemix サービスをリストするには、同じ環境変数の一部としてそれらのサービスを組み込みます。 |
 | LOG_LOCATIONS=*&lt;path_to_file&gt;* | コンテナー内でモニターされるログ・ファイルを追加します。`LOG_LOCATIONS` 環境変数をログ・ファイルへのパスと共に組み込んでください。 |
 {: caption="Table 8. Commonly used environment variables" caption-side="top"}
+
 
  <dl>
    <dt>--env-file <i>ENVIRONMENT_VARIABLE_FILE</i> (オプション)</dt>
@@ -2213,7 +2320,7 @@ bluemix ic group-create -p 9080 --auto -n mycontainerhost -d mybluemix.net --nam
 ```
 
 
-## bluemix ic group-inspect
+### bluemix ic group-inspect
 {: #bluemix_ic_group_inspect}
 
 コンテナー・グループの作成時に指定された詳細情報 (環境変数、ポート、メモリーなど) を表示します。
@@ -2240,7 +2347,7 @@ bluemix ic group-inspect my_group
 ```
 
 
-## bluemix ic group-instances
+### bluemix ic group-instances
 {: #bluemix_ic_group_instances}
 
 指定されたコンテナー・グループのインスタンスをリストします。
@@ -2267,7 +2374,7 @@ bluemix ic group-instances my_group
 ```
 
 
-## bluemix ic group-remove
+### bluemix ic group-remove
 {: #bluemix_ic_group_remove}
 
 スペースからコンテナー・グループを削除します。
@@ -2298,7 +2405,7 @@ bluemix ic group-remove my_group
 ```
 
 
-## bluemix ic group-update
+### bluemix ic group-update
 {: #bluemix_ic_group_update}
 
 コンテナー・グループを更新します。
@@ -2335,7 +2442,7 @@ bluemix ic group-update --desired 5 my_group
 ```
 
 
-## bluemix ic groups
+### bluemix ic groups
 {: #bluemix_ic_groups}
 
 組織のプライベート {{site.data.keyword.Bluemix_notm}} リポジトリー内のコンテナー・グループをリストします。
@@ -2353,10 +2460,10 @@ bluemix ic groups [-q]
 	</dl>
 
 
-## bluemix ic images
+### bluemix ic images
 {: #bluemix_ic_images}
 
-組織のプライベート {{site.data.keyword.Bluemix_notm}} リポジトリー内の使用可能なすべてのイメージのリストを表示します。詳細については、Docker ヘルプで [images](https://docs.docker.com/engine/reference/commandline/images){: new_window} コマンドを参照してください。リストには、イメージ ID、作成日、およびイメージ名が含まれます。
+組織のプライベート {{site.data.keyword.Bluemix_notm}} リポジトリー内の使用可能なすべてのイメージのリストを表示します。詳細については、Docker ヘルプで [images ](https://docs.docker.com/engine/reference/commandline/images){: new_window} ![「外部リンク」アイコン](../../../icons/launch-glyph.svg) コマンドを参照してください。リストには、イメージ ID、作成日、およびイメージ名が含まれます。
 
 ```
 bluemix ic images [-a|--all] [-f CONDITION] [--no-trunc] [-q|--quiet]
@@ -2387,7 +2494,7 @@ bluemix ic images
 ```
 
 
-## bluemix ic info
+### bluemix ic info
 {: #bluemix_ic_info}
 
 コンテナー・クラウド・サービス・インスタンスの状態を説明する情報を表示します。この情報に含まれるのは、コンテナーの限度、コンテナーの使用状況、実行中のコンテナー、メモリーの限度、メモリーの使用状況、浮動 IP アドレスの限度、浮動 IP アドレスの使用状況、CCS ホスト URL、レジストリー・ホスト URL、およびデバッグ・モード状況です。
@@ -2399,7 +2506,7 @@ bluemix ic info
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
 
-## bluemix ic init
+### bluemix ic init
 {: #bluemix_ic_init}
 
 IBM Containers サービスの全機能を使用できるようにローカル・マシン上のコンテナー環境を初期化します。
@@ -2421,7 +2528,7 @@ bluemix region-set us-south
 ```
 
 
-## bluemix ic inspect
+### bluemix ic inspect
 {: #bluemix_ic_inspect}
 
 コンテナーに関する情報を表示します。詳細については、Docker ヘルプで [inspect](https://docs.docker.com/engine/reference/commandline/inspect){: new_window} コマンドを参照してください。
@@ -2458,7 +2565,7 @@ bluemix ic inspect proxy
 ```
 
 
-## bluemix ic ip-bind
+### bluemix ic ip-bind
 {: #bluemix_ic_ip_bind}
 
 使用可能な浮動 IP アドレスをコンテナーにバインドします。
@@ -2487,7 +2594,7 @@ bluemix ic ip-bind 192.123.12.12 proxy
 ```
 
 
-## bluemix ic ip-release
+### bluemix ic ip-release
 {: #bluemix_ic_ip_release}
 
 コンテナー・クラウド・サービス・インスタンスから浮動 IP アドレスを解放します。
@@ -2506,7 +2613,7 @@ bluemix ic ip-release IP_ADDRESS [IP_ADDRESS2 [...]]
    </dl>
 
 
-## bluemix ic ip-request
+### bluemix ic ip-request
 {: #ip_request}
 新しい浮動 IP アドレスを要求します。
 
@@ -2524,7 +2631,7 @@ bluemix ic ip-request [-q]
    </dl>
 
 
-## bluemix ic ip-unbind
+### bluemix ic ip-unbind
 {: #bluemix_ic_ip_unbind}
 
 浮動 IP アドレスをそのコンテナーからアンバインドします。
@@ -2555,7 +2662,7 @@ bluemix ic ip-unbind 192.123.12.12 proxy
 ```
 
 
-## bluemix ic ips
+### bluemix ic ips
 {: #bluemix_ic_ips}
 
 ログインしているユーザーが使用可能な浮動 IP アドレスをリストします。このリストには、IP アドレスと、IP アドレスがリンクされている先のコンテナー ID が含まれます。IP アドレスが未使用の場合、コンテナー ID は示されません。
@@ -2582,10 +2689,10 @@ bluemix ic ips -q
 ```
 
 
-## bluemix ic kill
+### bluemix ic kill
 {: #bluemix_ic_kill}
 
-コンテナーを停止せずにコンテナー内の実行中のプロセスを停止します。詳細については、Docker ヘルプで [kill](https://docs.docker.com/engine/reference/commandline/kill/){: new_window} コマンドを参照してください。
+コンテナーを停止せずにコンテナー内の実行中のプロセスを停止します。詳細については、Docker ヘルプで [kill ](https://docs.docker.com/engine/reference/commandline/kill/){: new_window} ![「外部リンク」アイコン](../../../icons/launch-glyph.svg) コマンドを参照してください。
 
 ```
 bluemix ic kill [-s CMD|--signal CMD] CONTAINER
@@ -2612,16 +2719,16 @@ bluemix ic kill proxy
 ```
 
 
-## bluemix ic logs
+### bluemix ic logs
 {: #bluemix_ic_logs}
 
-実行中のコンテナーの出力ログまたはエラー・ログを表示します。詳細については、Docker ヘルプで [logs](https://docs.docker.com/engine/reference/commandline/logs/){: new_window} コマンドを参照してください。
+実行中のコンテナーの出力ログまたはエラー・ログを表示します。詳細については、Docker ヘルプで [logs ](https://docs.docker.com/engine/reference/commandline/logs/){: new_window} ![「外部リンク」アイコン](../../../icons/launch-glyph.svg) コマンドを参照してください。
 ```
 bluemix ic logs [OPTIONS] CONTAINER
 ```
 
 
-## bluemix ic namespace-get
+### bluemix ic namespace-get
 {: #bluemix_ic_namespace_get}
 
 ログイン先の組織のプライベート {{site.data.keyword.Bluemix_notm}} イメージ・リポジトリーの名前を表示します。
@@ -2633,7 +2740,7 @@ bluemix ic namespace-get
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
 
-## bluemix ic namespace-set
+### bluemix ic namespace-set
 {: #bluemix_ic_namespace_set}
 
 ログイン先の組織のプライベート {{site.data.keyword.Bluemix_notm}} イメージ・リポジトリーの名前を設定します。
@@ -2655,10 +2762,10 @@ bluemix ic namespace-set NAME
    </dl>
 
 
-## bluemix ic pause
+### bluemix ic pause
 {: #pause}
 
-実行中のコンテナー内のすべてのプロセスを休止します。詳細については、Docker ヘルプで [pause](https://docs.docker.com/engine/reference/commandline/pause/){: new_window} コマンドを参照してください。コンテナーを停止する場合は、[bluemix ic unpause](#unpause) コマンドを参照してください。
+実行中のコンテナー内のすべてのプロセスを休止します。詳細については、Docker ヘルプで [pause ](https://docs.docker.com/engine/reference/commandline/pause/){: new_window} ![「外部リンク」アイコン](../../../icons/launch-glyph.svg) コマンドを参照してください。コンテナーを停止する場合は、[bluemix ic unpause](#unpause) コマンドを参照してください。
 
 ```
 bluemix ic pause CONTAINER
@@ -2694,15 +2801,15 @@ bluemix ic pause proxy
 ```
 
 
-## bluemix ic port
+### bluemix ic port
 {: #bluemix_ic_port}
 
-コンテナーのポート・マッピングまたは特定のマッピングをリストします。このコマンドは `docker port` コマンドをラップします。詳細については、Docker ヘルプで [port](https://docs.docker.com/engine/reference/commandline/port/){: new_window} コマンドを参照してください。
+コンテナーのポート・マッピングまたは特定のマッピングをリストします。このコマンドは `docker port` コマンドをラップします。詳細については、Docker ヘルプで [port ](https://docs.docker.com/engine/reference/commandline/port/){: new_window} ![「外部リンク」アイコン](../../../icons/launch-glyph.svg) コマンドを参照してください。
 
 
-## bluemix ic ps
+### bluemix ic ps
 {: #bluemix_ic_ps}
-ログインしているユーザーの名前空間で実行中のコンテナーのリストを表示します。デフォルトでは、このコマンドは実行中のコンテナーのみを表示します。詳細については、Docker ヘルプで [ps](https://docs.docker.com/engine/reference/commandline/ps/){: new_window} コマンドを参照してください。
+ログインしているユーザーの名前空間で実行中のコンテナーのリストを表示します。デフォルトでは、このコマンドは実行中のコンテナーのみを表示します。詳細については、Docker ヘルプで [ps ](https://docs.docker.com/engine/reference/commandline/ps/){: new_window} ![「外部リンク」アイコン](../../../icons/launch-glyph.svg) コマンドを参照してください。
 
 ```
 bluemix ic ps [-a|--all] [--filter env=SEARCH_CRITERIA] [-s|--size] [-l NUM|--limit NUM] [-q|--quiet]
@@ -2739,9 +2846,9 @@ bluemix ic ps -a
 ```
 
 
-## bluemix ic rename
+### bluemix ic rename
 {: #bluemix_ic_rename}
-コンテナーの名前を変更します。詳細については、Docker ヘルプで [rename](https://docs.docker.com/engine/reference/commandline/rename/){: new_window} コマンドを参照してください。
+コンテナーの名前を変更します。詳細については、Docker ヘルプで [rename ](https://docs.docker.com/engine/reference/commandline/rename/){: new_window} ![「外部リンク」アイコン](../../../icons/launch-glyph.svg) コマンドを参照してください。
 
 ```
 bluemix ic rename OLD_NAME NEW_NAME
@@ -2756,7 +2863,7 @@ bluemix ic rename OLD_NAME NEW_NAME
    </dl>
 
 
-## bluemix ic reprovision
+### bluemix ic reprovision
 {: #bluemix_ic_reprovision}
 
 ログインしている Bluemix スペースで IBM Containers サービスを再作成します。スペースの元の割り当て量は維持されます。
@@ -2764,7 +2871,7 @@ bluemix ic rename OLD_NAME NEW_NAME
 <strong>重要</strong>: このコマンドを実行した場合、このスペース内の単一コンテナーおよびグループはどれも、再プロビジョンされたスペースにマイグレーションされず、マイグレーション・プロセス中に削除されます。
 
 ```
-bluemix ic reprovision [--force|-f] [AVAILABILITY_ZONE]
+bluemix ic reprovision [--force|-f] [ENVIRONMENT_NAME]
 ```
 <strong>コマンド・オプション</strong>:<dl>
    <dt>--force|-f (オプション)</dt>
@@ -2774,10 +2881,10 @@ bluemix ic reprovision [--force|-f] [AVAILABILITY_ZONE]
    </dl>
 
 
-## bluemix ic restart
+### bluemix ic restart
 {: #bluemix_ic_restart}
 
-コンテナーを再始動します。詳細については、Docker ヘルプで [restart](https://docs.docker.com/engine/reference/commandline/restart/){: new_window} コマンドを参照してください。
+コンテナーを再始動します。詳細については、Docker ヘルプで [restart ](https://docs.docker.com/engine/reference/commandline/restart/){: new_window} ![「外部リンク」アイコン](../../../icons/launch-glyph.svg) コマンドを参照してください。
 
 ```
 bluemix ic restart CONTAINER [-t SECS|--time SECS]
@@ -2817,10 +2924,10 @@ bluemix ic restart proxy
 ```
 
 
-## bluemix ic rm
+### bluemix ic rm
 {: #bluemix_ic_rm}
 
-コンテナーを削除します。詳細については、Docker ヘルプで [rm](https://docs.docker.com/engine/reference/commandline/rm/){: new_window} コマンドを参照してください。
+コンテナーを削除します。詳細については、Docker ヘルプで [rm ](https://docs.docker.com/engine/reference/commandline/rm/){: new_window} ![「外部リンク」アイコン](../../../icons/launch-glyph.svg) コマンドを参照してください。
 
 ```
 bluemix ic rm [-f|--force] CONTAINER
@@ -2860,10 +2967,10 @@ bluemix ic rm proxy
 ```
 
 
-## bluemix ic rmi
+### bluemix ic rmi
 {: #bluemix_ic_rmi}
 
-ログインしているユーザーの名前空間からイメージを削除します。詳細については、Docker ヘルプで [rmi](https://docs.docker.com/engine/reference/commandline/rmi/){: new_window} コマンドを参照してください。
+ログインしているユーザーの名前空間からイメージを削除します。詳細については、Docker ヘルプで [rmi ](https://docs.docker.com/engine/reference/commandline/rmi/){: new_window} ![「外部リンク」アイコン](../../../icons/launch-glyph.svg) コマンドを参照してください。
 
 ```
 bluemix ic rmi [-R REGISTRY|--registry REGISTRY] IMAGE
@@ -2909,7 +3016,7 @@ bluemix ic rmi registry.ng.bluemix.net/mynamespace/myimage:latest
 ```
 
 
-## bluemix ic route-map
+### bluemix ic route-map
 {: #bluemix_ic_route_map}
 
 コンテナー・グループへのアクセスに使用するインターネット・トラフィックの経路を設定します。このコマンドを使用して、新規経路を設定するか、既存の経路を更新できます。
@@ -2940,7 +3047,7 @@ bluemix ic route-map -n my_host -d mybluemix.net GROUP1
 ```
 
 
-## bluemix ic route-unmap
+### bluemix ic route-unmap
 {: #bluemix_ic_route_unmap}
 
 コンテナー・グループへのアクセスに使用するインターネット・トラフィックの経路を設定します。このコマンドを使用して、新規経路を設定するか、既存の経路を更新できます。
@@ -2972,11 +3079,11 @@ bluemix ic route-unmap -n my_host -d organization.com GROUP1
 ```
 
 
-## bluemix ic run
+### bluemix ic run
 {: #bluemix_ic_run}
 
 イメージ名を使用して、コンテナー・クラウド・サービスで新しいコンテナーを開始します。
-詳細については、Docker ヘルプで [run](https://docs.docker.com/engine/reference/commandline/run/){: new_window} コマンドを参照してください。
+詳細については、Docker ヘルプで [run ](https://docs.docker.com/engine/reference/commandline/run/){: new_window} ![「外部リンク」アイコン](../../../icons/launch-glyph.svg) コマンドを参照してください。
 
 
 ```
@@ -3014,10 +3121,10 @@ init` を使用した正常なログインによって、必要なトークン�
 
 |      環境変数                          |   説明                              |
 | :----------------------------- | :------------------------------ |
-| CCS_BIND_APP=*&lt;appname&gt;*       | コンテナーにサービスをバインドします。`CCS_BIND_APP` 環境変数を使用して、アプリをコンテナーにバインドします。このアプリはターゲット・サービスにバインドされ、ブリッジとして機能します。これにより、{{site.data.keyword.Bluemix_notm}} は、ブリッジ・アプリの `VCAP_SERVICES` 情報を、実行中のコンテナー・インスタンスに注入することができます。ブリッジ・アプリの作成について詳しくは、[コンテナーへのサービスのバインド](../../../containers/container_integrations_binding.html){: new_window}を参照してください。 |
+| CCS_BIND_APP=*&lt;appname&gt;*       | コンテナーにサービスをバインドします。`CCS_BIND_APP` 環境変数を使用して、アプリをコンテナーにバインドします。このアプリはターゲット・サービスにバインドされ、ブリッジとして機能します。これにより、{{site.data.keyword.Bluemix_notm}} は、ブリッジ・アプリの `VCAP_SERVICES` 情報を、実行中のコンテナー・インスタンスに注入することができます。ブリッジ・アプリの作成について詳しくは、[コンテナーへのサービスのバインド](/docs/containers/container_integrations_binding.html){: new_window}を参照してください。 |
 | CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | ブリッジ・アプリを使用せずに Bluemix サービスをコンテナーに直接バインドするには、CCS_BIND_SRV を使用します。このバインディングにより、Bluemix は、実行中のコンテナー・インスタンスに VCAP_SERVICES 情報を注入できます。複数の Bluemix サービスをリストするには、同じ環境変数の一部としてそれらのサービスを組み込みます。 |
 | LOG_LOCATIONS=*&lt;path_to_file&gt;* | コンテナー内でモニターされるログ・ファイルを追加します。`LOG_LOCATIONS` 環境変数をログ・ファイルへのパスと共に組み込んでください。 |
-{: caption="Table 9. Commonly used environment variables" caption-side="top"} 
+{: caption="Table 9. Commonly used environment variables" caption-side="top"}
 
 
    <dl>
@@ -3070,7 +3177,7 @@ bluemix ic run -n my_container -v VolId1:/first/path -v VolId2:/second/path regi
 ```
 
 
-## bluemix ic service-bind
+### bluemix ic service-bind
 {: #bluemix_ic_service-bind}
 
 実行中のコンテナー・グループにサービスを追加します。このコマンドは、コンテナー・グループにのみ使用可能です。単一コンテナーは、bluemix ic run コマンドの中でサービスをバインドする必要があります。
@@ -3086,7 +3193,7 @@ bluemix ic service-bind GROUP_NAME SERVICE_INSTANCE
    </dl>
 
 
-## bluemix ic service-unbind
+### bluemix ic service-unbind
 {: #bluemix_ic_service-unbind}
 
 実行中のコンテナー・グループからサービスを削除します。このコマンドは、コンテナー・グループにのみ使用可能です。単一コンテナーは、コンテナーを削除し、サービスが含まれない新しいコンテナーを作成する必要があります。
@@ -3102,9 +3209,9 @@ bluemix ic service-unbind GROUP_NAME SERVICE_INSTANCE
    </dl>
 
 
-## bluemix ic start
+### bluemix ic start
 {: #ic_start}
-停止しているコンテナーを開始します。詳細については、Docker ヘルプで [start](https://docs.docker.com/engine/reference/commandline/start/){: new_window} コマンドを参照してください。コンテナーを停止する場合は、[bluemix ic stop](#ic_stop) コマンドを参照してください。
+停止しているコンテナーを開始します。詳細については、Docker ヘルプで [start ](https://docs.docker.com/engine/reference/commandline/start/){: new_window} ![「外部リンク」アイコン](../../../icons/launch-glyph.svg) コマンドを参照してください。コンテナーを停止する場合は、[bluemix ic stop](#ic_stop) コマンドを参照してください。
 
 ```
 bluemix ic start CONTAINER
@@ -3142,7 +3249,7 @@ bluemix ic start proxy
 ```
 
 
-## bluemix ic stats
+### bluemix ic stats
 {: #bluemix_ic_stats}
 
 1 つ以上のコンテナーについて、使用状況統計をライブで表示します。終了するには `CTRL+C` を使用します。詳細については、Docker ヘルプで [stats](https://docs.docker.com/engine/reference/commandline/stats/){: new_window} コマンドを参照してください。
@@ -3171,9 +3278,9 @@ bluemix ic stats --no-stream my_container
 ```
 
 
-## bluemix ic stop  
+### bluemix ic stop
 {: #ic_stop}
-実行中のコンテナーを停止します。詳細については、Docker ヘルプで [stop](https://docs.docker.com/engine/reference/commandline/stop/){: new_window} コマンドを参照してください。コンテナーを開始する場合は、[bluemix ic start](#ic_start) コマンドを参照してください。
+実行中のコンテナーを停止します。詳細については、Docker ヘルプで [stop ](https://docs.docker.com/engine/reference/commandline/stop/){: new_window} ![「外部リンク」アイコン](../../../icons/launch-glyph.svg) コマンドを参照してください。コンテナーを開始する場合は、[bluemix ic start](#ic_start) コマンドを参照してください。
 
 ```
 bluemix ic stop CONTAINER [-t SECS|--time SECS]
@@ -3212,10 +3319,10 @@ bluemix ic stop proxy
 ```
 
 
-## bluemix ic top
+### bluemix ic top
 {: #bluemix_ic_top}
 
-コンテナーで実行されているプロセスを表示します。詳細については、Docker ヘルプで [top](https://docs.docker.com/engine/reference/commandline/top/){: new_window} コマンドを参照してください。
+コンテナーで実行されているプロセスを表示します。詳細については、Docker ヘルプで [top ](https://docs.docker.com/engine/reference/commandline/top/){: new_window} ![「外部リンク」アイコン](../../../icons/launch-glyph.svg) コマンドを参照してください。
 
 ```
 bluemix ic top CONTAINER [CONTAINER]
@@ -3239,10 +3346,10 @@ bluemix ic top my_container
 ```
 
 
-## bluemix ic unpause
+### bluemix ic unpause
 {: #unpause}
 
-実行中のコンテナー内のすべてのプロセスを休止解除します。詳細については、Docker ヘルプで [unpause](https://docs.docker.com/engine/reference/commandline/unpause/){: new_window} コマンドを参照してください。コンテナーを休止する場合は、[bluemix ic pause](#pause) コマンドを参照してください。
+実行中のコンテナー内のすべてのプロセスを休止解除します。詳細については、Docker ヘルプで [unpause ](https://docs.docker.com/engine/reference/commandline/unpause/){: new_window} ![「外部リンク」アイコン](../../../icons/launch-glyph.svg) コマンドを参照してください。コンテナーを休止する場合は、[bluemix ic pause](#pause) コマンドを参照してください。
 
 ```
 bluemix ic unpause CONTAINER
@@ -3279,7 +3386,7 @@ bluemix ic unpause proxy
 ```
 
 
-## bluemix ic unprovision
+### bluemix ic unprovision
 {: #bluemix_ic_unprovision}
 
 ログインしている Bluemix スペースから IBM Containers サービスを削除します。
@@ -3295,7 +3402,7 @@ bluemix ic reprovision [--force|-f]
  </dl>
 
 
-## bluemix ic version
+### bluemix ic version
 {: #bluemix_ic_version}
 
 Docker および IBM Containers API のバージョンを表示します。
@@ -3306,10 +3413,10 @@ bluemix ic version
 
 <strong>前提条件</strong>:  Docker
 
-IBM Containers のバージョンを表示するには、`bluemix ic info` を実行します。詳細については、Docker ヘルプで [version](https://docs.docker.com/engine/reference/commandline/version/){: new_window} コマンドを参照してください。
+IBM Containers のバージョンを表示するには、`bluemix ic info` を実行します。詳細については、Docker ヘルプで [version ](https://docs.docker.com/engine/reference/commandline/version/){: new_window} ![「外部リンク」アイコン](../../../icons/launch-glyph.svg) コマンドを参照してください。
 
 
-## bluemix ic volume-create
+### bluemix ic volume-create
 {: #bluemix_ic_volume_create}
 
 ボリュームを作成します。
@@ -3340,7 +3447,7 @@ bluemix ic volume-create volume_name fileshare_name
 ```
 
 
-## bluemix ic volume-fs
+### bluemix ic volume-fs
 
 {: #bluemix_ic_volume_fs}
 
@@ -3351,7 +3458,7 @@ bluemix ic volume-fs
 ```
 
 
-## bluemix ic volume-fs-create
+### bluemix ic volume-fs-create
 {: #bluemix_ic_volume_fs_create}
 
 ファイル共有を作成します。
@@ -3378,7 +3485,7 @@ bluemix ic volume-fs-create my_file_share
 ```
 
 
-## bluemix ic volume-fs-flavors
+### bluemix ic volume-fs-flavors
 
 {: #bluemix_ic_volume_fs_flavors}
 
@@ -3391,7 +3498,7 @@ bluemix ic volume-fs-flavors
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
 
-## bluemix ic volume-fs-inspect
+### bluemix ic volume-fs-inspect
 {: #bluemix_ic_volume_fs_inspect}
 
 ファイル共有を検査します。
@@ -3417,7 +3524,7 @@ bluemix ic volume-fs-inspect my_file_share
 ```
 
 
-## bluemix ic volume-fs-remove
+### bluemix ic volume-fs-remove
 {: #bluemix_ic_volume_fs_remove}
 
 ファイル共有を削除します。
@@ -3443,7 +3550,7 @@ bluemix ic volume-fs-remove my_file_share
 ```
 
 
-## bluemix ic volume-inspect
+### bluemix ic volume-inspect
 {: #bluemix_ic_volume_inspect}
 
 ボリュームを検査します。
@@ -3471,7 +3578,7 @@ bluemix ic volume-inspect volume_name
 ```
 
 
-## bluemix ic volume-remove
+### bluemix ic volume-remove
 {: #bluemix_ic_volume_remove}
 
 ボリュームを削除します。
@@ -3498,7 +3605,7 @@ bluemix ic volume-remove volume_name
 ```
 
 
-## bluemix ic volumes
+### bluemix ic volumes
 {: #bluemix_ic_volumes}
 
 ボリュームをリストします。
@@ -3510,10 +3617,10 @@ bluemix ic volumes
 <strong>前提条件</strong>: エンドポイント、ログイン、ターゲット
 
 
-## bluemix ic wait
+### bluemix ic wait
 {: #bluemix_ic_wait}
 
-コンテナーを終了し、確認のために終了コードを表示します。詳細については、Docker ヘルプで [wait](https://docs.docker.com/engine/reference/commandline/wait/){: new_window} コマンドを参照してください。
+コンテナーを終了し、確認のために終了コードを表示します。詳細については、Docker ヘルプで [wait ](https://docs.docker.com/engine/reference/commandline/wait/){: new_window} ![「外部リンク」アイコン](../../../icons/launch-glyph.svg) コマンドを参照してください。
 
 ```
 bluemix ic wait CONTAINER [CONTAINER]
@@ -3537,7 +3644,7 @@ bluemix ic wait my_container
 ```
 
 
-## bluemix ic wait-status
+### bluemix ic wait-status
 {: #bluemix_ic_wait_status}
 
 単一コンテナーまたはコンテナー・グループが非過渡的な状態になるまで待機します。この待機時間中は、コマンド・ラインが戻らないため、コマンドを入力できません。コンテナーが非過渡的な状態になると、すぐに OK メッセージが表示されます。単一コンテナーの場合、非過渡的な状態には Running、Shutdown、Crashed、Paused、Suspended があります。コンテナー・グループの場合、非過渡的な状態には CREATE_COMPLETE、UPDATE_COMPLETE、FAILED があります。
@@ -3571,4 +3678,4 @@ bluemix ic wait my_container
 ## 関連リンク
 {: #general}
 
-* [bx ツール](http://clis.ng.bluemix.net/ui/home.html){:new_window}
+* [bx ツール ](http://clis.ng.bluemix.net/ui/home.html){: new_window} ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)
