@@ -41,11 +41,11 @@ IBM®은 환경의 맨 위에서 실행되는 앱과 서비스를 빌드하는 �
 |선택사항 | [{{site.data.keyword.mobilepush}}](/docs/services/mobilepush/index.html) | {{site.data.keyword.mobilepush}}는 iOS 및 Android 디바이스에 알림을 보내는 데 사용할 수 있는 서비스입니다. 알림은 모든 애플리케이션 사용자와 태그를 사용하는 특정 디바이스 및 사용자 세트를 대상으로 할 수 있습니다. 디바이스, 태그 및 구독을 관리할 수 있습니다. SDK(Software Development Kit) 및 REST(Representational State Transfer) API(Application Program Interface)를 사용하여 클라이언트 애플리케이션을 추가적으로 개발할 수도 있습니다. |
 |선택사항 | [{{site.data.keyword.sescashort}}](/docs/services/SessionCache/index.html#session_cache) | 증가된 중복성을 위해 {{site.data.keyword.sescashort}}에서는 캐시에 저장된 세션의 복제본을 제공합니다. 따라서 등화 관제 또는 가동 중단의 상황에서도 클라이언트 애플리케이션은 캐시의 세션에 계속 액세스할 수 있습니다. 이 서비스는 웹 및 모바일 애플리케이션에 대한 세션 캐싱 시나리오를 지원합니다. |
 |선택사항 | [{{site.data.keyword.iot_short}}](/docs/services/IoT/index.html) | 이 서비스를 사용하여 앱은 연결된 디바이스, 센서 및 게이트웨이와 통신하고 여기서 수집한 데이터를 이용할 수 있습니다. 로컬 기본 오퍼링에는 1.6TB의 데이터 교환과 100,000개의 동시 연결된 디바이스 또는 애플리케이션의 용량을 지닌 전용 환경 내에서 IBM {{site.data.keyword.iot_short}}의 개인용 버전 실행을 허용하는 초기 환경이 포함됩니다. |
-{: caption="Table 1. Local services and runtimes" caption-side="top"}
+{: caption="표 1. 로컬 서비스 및 런타임" caption-side="top"}
 {: #table01}
 
 
-리소스 및 서비스의 용량을 스케일링하고 확장하기 위해 구입할 수 있는 선택적 컴포넌트가 있습니다. 영업 팀에 문의하면 이 컴포넌트를 구입할 수 있습니다. 영업 담당자의 연락처 정보를 보려면 [담당자](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs)로 이동하십시오. 서비스에 대한 플랜을 늘리기 위해 카탈로그의 서비스 타일에서 플랜을 선택할 수 있습니다.
+리소스 및 서비스의 용량을 스케일링하고 확장하기 위해 구매할 수 있는 선택적 컴포넌트가 있습니다. 영업 팀에 문의하면 이 컴포넌트를 구입할 수 있습니다. 영업 담당자의 연락처 정보를 보려면 [담당자](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs)로 이동하십시오. 서비스에 대한 플랜을 늘리기 위해 카탈로그의 서비스 타일에서 플랜을 선택할 수 있습니다.
 
 | **이름** | **설명** |
 |----------|-----------------|
@@ -57,7 +57,7 @@ IBM®은 환경의 맨 위에서 실행되는 앱과 서비스를 빌드하는 �
 |{{site.data.keyword.Bluemix_notm}} 데이터 & 세션 캐시 50GB 용량 증가 | 최대 50GB 누적 용량까지 데이터 캐시 및 세션 캐시 인스턴스의 배치 및 실행을 허용하는 환경입니다. |
 |{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.iot_short}} 로컬 증분 증가 | 0.5TB 데이터 교환과 100,000개의 동시 연결된 디바이스 또는 애플리케이션의 용량을 지닌 로컬 환경 내에서 {{site.data.keyword.iot_short}}의 개인용 버전 실행을 허용하는 {{site.data.keyword.iot_short}} 로컬 기본 서비스 오퍼링에 대한 추가 환경입니다. |
 |{{site.data.keyword.IBM_notm}} {{site.data.keyword.mobilepush}} 로컬 추가 기능 인스턴스 | 초당 300개의 추가 요청을 승인할 수 있는 능력이 있는 {{site.data.keyword.mobilepush}} 인스턴스를 배치하고 실행할 수 있는 환경입니다.  |
-{: caption="Table 2. Optional services components for purchase" caption-side="top"}
+{: caption="표 2. 구매할 수 있는 선택적 서비스 컴포넌트" caption-side="top"}
 {: #table02}
 
 | **이름** | **설명** |
@@ -66,7 +66,7 @@ IBM®은 환경의 맨 위에서 실행되는 앱과 서비스를 빌드하는 �
 |로컬 Cloud Foundry 런타임 16GB 용량 증가  | 추가 16GB 런타임 용량을 제공하는 Cloud Foundry 런타임 환경의 확장입니다. |
 |로컬 {{site.data.keyword.containerlong}} 16GB 용량 증가  | 추가 16GB 용량을 제공하는 {{site.data.keyword.containerlong}} 환경의 확장입니다. |
 |로컬 {{site.data.keyword.containerlong}} 64GB 용량  | 64GB 용량을 제공하는 {{site.data.keyword.containerlong}} 환경입니다. |
-{: caption="Table 3. Optional platform add-on components for purchase" caption-side="top"}
+{: caption="표 3. 구매할 수 있는 선택적 플랫폼 추가 기능 컴포넌트" caption-side="top"}
 {: #table03}
 
 **참고**: {{site.data.keyword.Bluemix_notm}} 로컬 컴포넌트는 특정 구성 용량(예: 기가바이트 또는 초당 트랜잭션)을 표시할 수 있습니다. 클라우드 서비스의 구성에 대한 사실상의 실제 용량이 수많은 요인에 따라 다양하므로, 사실상의 실제 용량은 구성된 용량보다 크거나 작을 수 있습니다.
@@ -129,7 +129,7 @@ IBM®은 환경의 맨 위에서 실행되는 앱과 서비스를 빌드하는 �
 |{{site.data.keyword.iot_short}}		|예		|예		|아니오|
 |{{site.data.keyword.weather_short}}		|예		|예		|예|
 |{{site.data.keyword.workloadscheduler}}	|예		|예		|예 |
-{: caption="Table 4. Services available for syndication from {{site.data.keyword.Bluemix_notm}} Public by region" caption-side="top"}
+{: caption="표 4. 지역별 {{site.data.keyword.Bluemix_notm}} 퍼블릭 신디케이션 가능 서비스" caption-side="top"}
 {: #table04}
 
 **참고**: 표에 써드파티 서비스가 포함되어 있지 않습니다. 써드파티 서비스 옵션에 대한 카탈로그를 확인하십시오. 
@@ -153,7 +153,7 @@ IBM®은 환경의 맨 위에서 실행되는 앱과 서비스를 빌드하는 �
 <dt>플랫폼</dt>
 <dd>플랫폼은 최소한 Cloud Foundry 컴포넌트 및 일부 로컬 애플리케이션 서비스입니다. {{site.data.keyword.Bluemix_notm}}는 Cloud Foundry와 {{site.data.keyword.containerlong}} 기반 컴퓨팅 환경을 모두 제공합니다. 엔터프라이즈에는 이러한 컴퓨팅 환경 중 하나 또는 둘 모두가 구성되어 있을 수 있습니다. <br>
 또한 엔터프라이즈는 추가 로컬 애플리케이션 서비스를 추가할 수 있습니다. <br>
-<p>추가할 수 있는 추가 서비스 및 컴퓨팅 기능은 [구매할 선택적 컴포넌트: 서비스 추가 기능](#table02) 및 [구매할 선택적 컴포넌트: 플랫폼 추가 기능](#table03)을 참조하십시오. </p>
+<p>추가할 수 있는 추가 서비스 및 컴퓨팅 기능은 [구매할 수 있는 선택적 컴포넌트: 서비스 추가 기능](#table02) 및 [구매할 수 있는 선택적 컴포넌트: 플랫폼 추가 기능](#table03)을 참조하십시오. </p>
 </dd>
 <dt>{{site.data.keyword.Bluemix_notm}} 퍼블릭</dt>
 <dd>
@@ -307,7 +307,7 @@ Cloud Foundry 및 {{site.data.keyword.Bluemix_notm}} 애플리케이션은 로�
 <br />
 사용자 정의 도메인에 대한 인증서를 제공하는 동안은 애플리케이션에 대해 원하는 만큼의 사용자 정의 도메인을 선택할 수 있습니다. 사용자 정의 도메인 작성에 대한 자세한 정보는 <a href="../manageapps/updapps.html#domain">사용자 정의 도메인 작성 및 사용</a>을 참조하십시오.</li>
 <li>{{site.data.keyword.IBM_notm}} 운영 센터에 다시 연결하도록 릴레이를 구성하는 데 사용할 기술을 IPSec 또는 OpenVPN 터널 중에서 선택합니다.</li>
-<li>{{site.data.keyword.IBM_notm}}이 {{site.data.keyword.Bluemix_notm}} 클러스터 내에 도입/인식(Inception) 가상 머신을 설치하고 시작합니다. 고유 VMware를 제공하는 경우, 고객 대표가 이 태스크를 완료할 수 있도록 {{site.data.keyword.IBM_notm}} 담당자가 도와드립니다. {{site.data.keyword.Bluemix_notm}} 로컬 시스템 하드웨어 옵션을 주문한 경우 IBM 담당자가 이 태스크를 완료합니다. </li>
+<li>{{site.data.keyword.IBM_notm}}이 {{site.data.keyword.Bluemix_notm}} 클러스터 내에 도입/인식(Inception) 가상 머신을 설치하고 시작합니다. 고유 VMware를 제공하는 경우, 고객 담당자가 이 태스크를 완료할 수 있도록 {{site.data.keyword.IBM_notm}} 담당자가 돕습니다. {{site.data.keyword.Bluemix_notm}} 로컬 시스템 하드웨어 옵션을 주문한 경우 IBM 담당자가 이 태스크를 완료합니다. </li>
 <li>{{site.data.keyword.IBM_notm}}이 {{site.data.keyword.IBM_notm}} 운영 센터와 다시 통신하도록 릴레이를 구성합니다.</li>
 <li>도입/인식(Inception) 가상 머신 저장소는 업데이트된 빌드 아티팩트를 가져옵니다.</li>
 <li>회사 LDAP 디렉토리 인스턴스에 연결하기 위해 {{site.data.keyword.IBM_notm}} 신임 정보를 제공합니다.</li>
@@ -345,7 +345,7 @@ Cloud Foundry 및 {{site.data.keyword.Bluemix_notm}} 애플리케이션은 로�
 </dd>
 </dl>
 
-고객 대표는 {{site.data.keyword.IBM_notm}} 전문가와 공동 작업을 통해 사용자가 항상 필요한 지원을 받을 수 있도록 보장합니다. 프리미엄 지원 계층으로 업그레이드하여 계정에 대한 데디케이티드 CSM(Client Success Manager)을 사용하여 작업할 수 있습니다. 여러 지원 계층에 대한 자세한 정보는 [지원 문의](../support/index.html#contacting-support)를 참조하십시오. CSM은 다음 유형의 태스크를 완료합니다.
+고객 담당자는 {{site.data.keyword.IBM_notm}} 전문가와 공동 작업을 통해 사용자가 항상 필요한 지원을 받을 수 있도록 보장합니다. 프리미엄 지원 계층으로 업그레이드하여 계정 전용 CSM(Client Success Manager)과 함께 작업할 수 있습니다. 여러 지원 계층에 대한 자세한 정보는 [지원 문의](../support/index.html#contacting-support)를 참조하십시오. CSM은 다음 유형의 태스크를 완료합니다.
 
 <ul>
 <li>사용자와 IBM 사이에서 기술적 중재를 제공합니다.</li>
@@ -397,7 +397,7 @@ Cloud Foundry 및 {{site.data.keyword.Bluemix_notm}} 애플리케이션은 로�
 |실제 인프라 검토 | 위협에 대비한 솔루션 컴포넌트를 호스팅하는 실제 구내와 데이터 센터를 보호하기 위한 보안 제어를 검토합니다. | 고객 |
 |모니터링 소프트웨어 검사 | 단계적 확대 및 문제점 판별 플랜에 정의된 대로 모니터링 및 관리 컴포넌트를 검사합니다. | 고객 |
 |OS 검사 | 운영 체제 이미지가 규제 준수 표준에 부합하는지 검사합니다. {{site.data.keyword.IBM_notm}}이 OS 이미지에 대한 액세스를 제공합니다. | {{site.data.keyword.IBM_notm}} 및 고객 책임 공유 |
-{: caption="Table 5. Inception phase tasks" caption-side="top"}
+{: caption="표 5. 도입/인식(Inception) 단계 태스크" caption-side="top"}
 
 다음은 진행 단계입니다. 진행 단계에서 사용자와 IBM 사이의 지속적 협력 관계를 기술합니다. 이 단계의 1차 목표에는 다음이 포함됩니다.
 
@@ -420,7 +420,7 @@ Cloud Foundry 및 {{site.data.keyword.Bluemix_notm}} 애플리케이션은 로�
 |상태 보고, 감사 조정 및 규제 준수 미팅  | 규제 준수 검토 상태 미팅에서 상태 보고, 외부 감사 조정 및 표시를 완료합니다. | {{site.data.keyword.IBM_notm}} |
 |채용 및 비즈니스 수요 검증 | 고객 환경에 액세스하는 {{site.data.keyword.IBM_notm}} 담당자를 위해 분기별 채용 확인 및 지속적 비즈니스 수요에 대한 확인을 완료합니다. | {{site.data.keyword.IBM_notm}} |
 |보안 취약점 해결 | 플랫폼에서 보고된 보안 취약점을 해결합니다. | {{site.data.keyword.IBM_notm}} |
-{: caption="Table 6. Progression phase tasks" caption-side="top"}
+{: caption="표 6. 진행 단계 태스크" caption-side="top"}
 
 최종 완료 단계는 사용자와 {{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}} 사이의 관계 종료를 나타냅니다. 이 단계의 1차 태스크에는 다음이 포함됩니다.
 
@@ -434,7 +434,7 @@ Cloud Foundry 및 {{site.data.keyword.Bluemix_notm}} 애플리케이션은 로�
 |환경에 대한 커미션 해지 | 환경에 대한 액세스 권한과 신임 정보를 종료합니다. | {{site.data.keyword.IBM_notm}} 및 고객 책임 공유 |
 |Relay 종료 | Relay 연결을 종료합니다. | {{site.data.keyword.IBM_notm}} |
 |인프라 재사용 | 회사 가이드라인에 따라 인프라를 재사용합니다. | 고객 |
-{: caption="Table 7. Completion phase tasks" caption-side="top"}
+{: caption="표 7. 완료 단계 태스크" caption-side="top"}
 
 
 ## {{site.data.keyword.Bluemix_local_notm}} 인프라 요구사항

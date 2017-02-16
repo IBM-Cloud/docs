@@ -1,4 +1,4 @@
-﻿---
+---
 
 
 
@@ -34,10 +34,10 @@ Par ailleurs, un éventail de services est disponible en tant que services de {{
 |Inclus | [Contextes d'exécution {{site.data.keyword.Bluemix_notm}}](/docs/cfapps/runtimes.html) | Utilisez des contextes d'exécution pour que votre application soit opérationnelle rapidement, sans qu'il soit nécessaire de configurer et de gérer des machines et des systèmes d'exploitation. Vous pouvez utiliser tous les contextes d'exécution {{site.data.keyword.Bluemix_notm}} dans votre instance {{site.data.keyword.Bluemix_notm}} locale.|
 |Inclus | [{{site.data.keyword.autoscaling}}](/docs/services/Auto-Scaling/index.html)| Augmentez ou diminuez dynamiquement la capacité de traitement de votre application en fonction de règles. Avec ce service, vous bénéficiez d'une utilisation illimitée dans votre environnement {{site.data.keyword.Bluemix}} local.|
 |Facultatif | [{{site.data.keyword.apiconnect_short}}](/docs/services/apiconnect/index.html) | {{site.data.keyword.apiconnect_long}} intègre {{site.data.keyword.APIM}} et IBM StrongLoop dans une offre unique qui fournit une solution complète pour la création, l'exécution, la gestion et l'application d'API et de microservices. |
-|Facultatif | [{{site.data.keyword.cloudant}}](/docs/services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}} fournit l'accès à une couche de données JSON NoSQL entièrement gérée toujours active. Ce service est compatible avec CouchDB et accessible via une interface HTTP facile à utiliser pour les modèles d'application mobile et Web. Pour plus d'informations, voir la [documentation ![icône de lien externe](../icons/launch-glyph.svg)](http://docs.cloudant.com/BluemixLocal.html){: new_window} complète et la [configuration matérielle requise![icône de lien externe](../icons/launch-glyph.svg)](http://docs.cloudant.com/BluemixLocalHardware.html){: new_window} pour les environnements locaux.  |
+|Facultatif | [{{site.data.keyword.cloudant}}](/docs/services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}} fournit l'accès à une couche de données JSON NoSQL entièrement gérée toujours active. Ce service est compatible avec CouchDB et accessible via une interface HTTP facile à utiliser pour les modèles d'application mobile et Web. Pour plus d'informations, voir la [documentation ![icône de lien externe](../icons/launch-glyph.svg)](http://docs.cloudant.com/BluemixLocal.html){: new_window} complète et la [configuration matérielle requise![icône de lien externe](../icons/launch-glyph.svg)](http://docs.cloudant.com/BluemixLocalHardware.html){: new_window} pour les environnements locaux. |
 |Facultatif | [{{site.data.keyword.containershort}}](/docs/containers/container_index.html) | Conteneurs Run Docker dans l'environnement {{site.data.keyword.Bluemix_notm}} local. Les conteneurs sont des objets logiciels virtuels qui incluent tous les éléments qu'une application a besoin d'exécuter. Un conteneur tire parti de l'isolation et de l'allocation des ressources, mais est plus portable et efficace que, par exemple, une machine virtuelle. Pour des informations sur la configuration matérielle requise, voir [IBM {{site.data.keyword.containershort}} dans les environnements {{site.data.keyword.Bluemix_notm}} dédié et local](/docs/containers/container_dl.html). |
 |Facultatif | [{{site.data.keyword.datacshort}}](/docs/services/DataCache/index.html#data_cache) | Ce service fournit une grille de données en mémoire qui prend en charge des scénarios de mise en cache distribuée pour vos applications. Il inclut 50 Go de mémoire cache interne. |
-| Facultatif (bêta) | [Logging](/docs/monitoringandlogging/cfapps_ml_logs_dedicated_ov.html#container_ml_logs_dedicated_ov) | Fournit des journaux pour vos applications Cloud Foundry dans votre interface utilisateur {{site.data.keyword.Bluemix_notm}} et des journaux permettant une recherche et des tableaux de bord dans Kibana. |
+|Facultatif (bêta) | [Logging](/docs/monitoringandlogging/cfapps_ml_logs_dedicated_ov.html#container_ml_logs_dedicated_ov) | Fournit des journaux pour vos applications Cloud Foundry dans votre interface utilisateur {{site.data.keyword.Bluemix_notm}} et des journaux permettant une recherche et des tableaux de bord dans Kibana. |
 |Facultatif | [{{site.data.keyword.mobilepush}}](/docs/services/mobilepush/index.html) | {{site.data.keyword.mobilepush}} est un service que vous pouvez utiliser pour envoyer des notifications à un périphérique iOS ou Android. Les notifications peuvent être ciblées pour tous les utilisateurs d'application ou pour un ensemble spécifique d'utilisateurs et de périphériques à l'aide d'étiquettes. Vous pouvez administrer des périphériques, des étiquettes et des abonnements. Vous pouvez aussi utiliser un logiciel SDK (kit de développement de logiciels) et des API (interfaces de programme d'application) REST (Representational State Transfer) pour développer plus en détail vos applications client. |
 |Facultatif | [{{site.data.keyword.sescashort}}](/docs/services/SessionCache/index.html#session_cache) | Pour augmenter la redondance, {{site.data.keyword.sescashort}} fournit une réplique d'une session qu'il stocke en cache. Par conséquent, en cas de microcoupure ou d'indisponibilité, votre application client peut continuer à accéder à la session en cache. Le service prend en charge des scénarios de mise en cache de session pour les applications Web et mobiles. |
 |Facultatif | [{{site.data.keyword.iot_short}}](/docs/services/IoT/index.html) | Ce service permet à vos applications de communiquer et de consommer les données collectées par vos périphériques connectés, capteurs et passerelles. L'offre de base locale inclut un environnement initial permettant l'exécution d'une version privée d'IBM {{site.data.keyword.iot_short}} dans l'environnement local, avec une capacité de 100000 périphériques ou applications connectés simultanément et 1,6 To d'échange de données. |
@@ -251,7 +251,7 @@ Cloud Foundry et les applications
 certificats d'inspection SSL lorsqu'ils accèdent à des sources hors de
 l'environnement local. L'inspection de contenu SSL  est disponible pour votre
 environnement si vous fournissez un certificat racine utilisé pour signer les
-flux SSL inspectés.  
+flux SSL inspectés. 
 
 L'équipe de déploiement {{site.data.keyword.Bluemix_notm}} charge
 le certificat racine afin d'activer l'inspection SSL dans
@@ -260,7 +260,7 @@ de l'inspection SSL lors du processus de configuration de
 l'environnement n'allonge pas la durée du déploiement. Si cette fonction n'est
 pas activée lors du déploiement initial, vous pouvez demander son activation ;
 cela peut néanmoins entraîner un coût supplémentaire et l'activation peut
-prendre de deux à quatre jours selon votre fenêtre de maintenance disponible. 
+prendre de deux à quatre jours selon votre fenêtre de maintenance disponible.
 
 
 ## Configuration de votre instance {{site.data.keyword.Bluemix_local_notm}}
@@ -272,11 +272,9 @@ une version privée de l'offre d'environnement
 deux options généralement prises en charge sont les suivantes : vous fournissez
 le matériel sous la forme de VMware ou vous choisissez de commander le
 système {{site.data.keyword.Bluemix_notm}} Local System intégré dans un
-appareil PureApplication préconfiguré que vous pouvez vous procurer via {{site.data.keyword.IBM_notm}}. Pour
-plus d'informations sur les options de l'appareil PureApplication, voir [IBM {{site.data.keyword.Bluemix_notm}} Local System W3500 and W3550 models run cloud native services, enabled middleware, and open pattern workloads concurrently ![icône de lien externe](../icons/launch-glyph.svg)](https://www-01.ibm.com/common/ssi/rep_ca/5/897/ENUS216-325/){: new_window}.
+appareil PureApplication préconfiguré que vous pouvez vous procurer via {{site.data.keyword.IBM_notm}}. Pour plus d'informations sur les options de l'appareil PureApplication, voir [IBM {{site.data.keyword.Bluemix_notm}} Local System W3500 and W3550 models run cloud native services, enabled middleware, and open pattern workloads concurrently ![icône de lien externe](../icons/launch-glyph.svg)](https://www-01.ibm.com/common/ssi/rep_ca/5/897/ENUS216-325/){: new_window}.
 
-Pour {{site.data.keyword.Bluemix_local_notm}}, vous pouvez utiliser les services et les contextes d'exécution
-{{site.data.keyword.Bluemix_notm}} pour répondre à vos besoins informatiques dans un environnement de cloud sécurisé, géré et hébergé par le client. {{site.data.keyword.IBM_notm}} fournit l'accès à l'environnement {{site.data.keyword.Bluemix_local_notm}} par le biais d'une connexion sécurisée par mot de passe. Vous pouvez accéder aux services, aux contextes d'exécution et aux ressources associées, et déployer et retirer des applications {{site.data.keyword.Bluemix_notm}}. Suivez les étapes ci-après pour collaborer avec votre interlocuteur {{site.data.keyword.IBM_notm}} afin de configuration votre instance locale de {{site.data.keyword.Bluemix_notm}}.
+Pour {{site.data.keyword.Bluemix_local_notm}}, vous pouvez utiliser les services et les contextes d'exécution {{site.data.keyword.Bluemix_notm}} pour répondre à vos besoins informatiques dans un environnement de cloud sécurisé, géré et hébergé par le client. {{site.data.keyword.IBM_notm}} fournit l'accès à l'environnement {{site.data.keyword.Bluemix_local_notm}} par le biais d'une connexion sécurisée par mot de passe. Vous pouvez accéder aux services, aux contextes d'exécution et aux ressources associées, et déployer et retirer des applications {{site.data.keyword.Bluemix_notm}}. Suivez les étapes ci-après pour collaborer avec votre interlocuteur {{site.data.keyword.IBM_notm}} afin de configuration votre instance locale de {{site.data.keyword.Bluemix_notm}}.
 
 **Remarque** : Si vous choisissez d'héberger
 {{site.data.keyword.Bluemix_local_notm}} sur l'option matérielle
@@ -299,10 +297,7 @@ Pour configurer votre version privée de {{site.data.keyword.Bluemix_notm}} :
 	<li>Identifiez les échéances pour chaque phase de configuration de votre instance {{site.data.keyword.Bluemix_local_notm}}.</li>
 	</ol>
 	</li>
-<li>Une fois votre plateforme et votre compte créés, vous identifiez les personnes de votre organisation à affecter aux rôles nécessaires à la configuration et à l'exécution de votre instance locale. Pour plus d'informations sur les rôles que vous attribuez, voir
-<a href="/docs/local/index.html#rolesresponsibilities">Rôles et responsabilité
-de l'environnement {{site.data.keyword.Bluemix_notm}} local</a>.
-</li>
+<li>Une fois votre plateforme et votre compte créés, vous identifiez les personnes de votre organisation à affecter aux rôles nécessaires à la configuration et à l'exécution de votre instance locale. Pour plus d'informations sur les rôles que vous attribuez, voir <a href="/docs/local/index.html#rolesresponsibilities">Rôles et responsabilité de l'environnement {{site.data.keyword.Bluemix_notm}} local</a>. </li>
 <li>Vous fournissez le matériel et {{site.data.keyword.IBM_notm}} vous aide à définir et à établir la connectivité du réseau entre votre réseau d'entreprise et votre instance {{site.data.keyword.Bluemix_local_notm}}. Pour plus d'informations sur les exigences de l'infrastructure, voir <a href="index.html#localinfra">Exigences de l'infrastructure d'un environnement {{site.data.keyword.Bluemix_local_notm}}</a>.
 	<ol type="a">
 	<li>{{site.data.keyword.IBM_notm}} configure l'accès réseau et LDAP en fonction des éléments que vous avez fournis. L'accès administrateur est accordé aux contacts que vous désignez. Vous devez également désigner un contact pour le support et la facturation.</li>
@@ -316,7 +311,7 @@ Vous pouvez vous attendre à obtenir un processus similaire à la liste suivante
 
 **Remarque** : Si vous choisissez d'héberger votre
 instance locale sur l'option matérielle {{site.data.keyword.Bluemix_notm}} Local
-System, vous pouvez ignorer les étapes 1 à 3 dans la liste suivante. 
+System, vous pouvez ignorer les étapes 1 à 3 dans la liste suivante.
 
 <ol>
 <li>Vous fournissez la configuration VMware qui respecte les spécifications de vos ressources de traitement,  vos réseaux et votre mode de stockage. Pour plus d'informations sur les exigences en matière d'infrastructure, voir <a href="/docs/local/index.html#localinfra">Exigences de l'infrastructure d'un environnement {{site.data.keyword.Bluemix_notm}} local</a>.</li>
@@ -340,10 +335,7 @@ System, vous pouvez ignorer les étapes 1 à 3 dans la liste suivante.
 Vous pouvez également définir un domaine entièrement personnalisé, comme
 monbmxpersonnalisé.mon_entreprise.com et application..mon_entreprise.com. Vous
 devez fournir le certificat SSL, la clé de certificat et le certificat racine
-avant le déploiement de l'environnement. Le certificat racine fourni peut
-également être utilisé pour configurer
-l'<a href="index.html#sslinspection">inspection SSL</a> de votre
-environnement sur demande.  <br />
+avant le déploiement de l'environnement. Le certificat racine fourni peut également être utilisé pour configurer l'<a href="index.html#sslinspection">inspection SSL</a> de votre environnement sur demande. <br />
 <br />
 Vous pouvez choisir autant de domaines personnalisés pour vos applications que
 vous le souhaitez, dans la mesure où vous fournissez les certificats des
@@ -485,14 +477,7 @@ L'étape finale d'achèvement représente la fin de la relation entre vous et {{
 ## Exigences de l'infrastructure {{site.data.keyword.Bluemix_local_notm}}
 {: #localinfra}
 
-Pour l'environnement {{site.data.keyword.Bluemix_local_notm}}, vous êtes en charge de la sécurité physique et de l'infrastructure de l'hébergement de l'instance locale. Les
-exigences de l'infrastructure sont les mêmes que vous choisissiez
-d'utiliser et de gérer votre propre VMware ou d'acquérir auprès d'IBM le système
-{{site.data.keyword.Bluemix_local_notm}} System qui inclut un
-appareil PureApp. Toutefois, il existe deux options d'appareil PureApp que
-vous pouvez choisir lors de votre commande, et le processus de mise à
-l'échelle de votre environnement diffère pour VMware et {{site.data.keyword.Bluemix_local_notm}} System. 
-Pour plus d'informations sur les options de l'appareil PureApp, voir [IBM {{site.data.keyword.Bluemix_notm}} Local System W3500 and W3550 models run cloud native services, enabled middleware, and open pattern workloads concurrently ![icône de lien externe](../icons/launch-glyph.svg)](https://www-01.ibm.com/common/ssi/rep_ca/5/897/ENUS216-325/){: new_window}.
+Pour l'environnement {{site.data.keyword.Bluemix_local_notm}}, vous êtes en charge de la sécurité physique et de l'infrastructure de l'hébergement de l'instance locale. Les exigences de l'infrastructure sont les mêmes que vous choisissiez d'utiliser et de gérer votre propre VMware ou d'acquérir auprès d'IBM le système {{site.data.keyword.Bluemix_local_notm}} System qui inclut un appareil PureApp. Toutefois, il existe deux options d'appareil PureApp que vous pouvez choisir lors de votre commande, et le processus de mise à l'échelle de votre environnement diffère pour VMware et {{site.data.keyword.Bluemix_local_notm}} System. Pour plus d'informations sur les options de l'appareil PureApp, voir [IBM {{site.data.keyword.Bluemix_notm}} Local System W3500 and W3550 models run cloud native services, enabled middleware, and open pattern workloads concurrently ![icône de lien externe](../icons/launch-glyph.svg)](https://www-01.ibm.com/common/ssi/rep_ca/5/897/ENUS216-325/){: new_window}.
 
 {{site.data.keyword.IBM_notm}} définit les exigences minimales ci-après pour la configuration de l'environnement {{site.data.keyword.Bluemix_local_notm}}.
 
@@ -609,7 +594,7 @@ matériel pour fournir la mémoire disponible ou ajouter un serveur ESXi si
 nécessaire, comme décrit dans l'exemple qui suit. Lorsque la capacité
 matérielle est disponible, discutez avec votre responsable Client Success qui
 peut travailler avec l'équipe IBM pour gérer l'augmentation de la mémoire de
-traitement. 
+traitement.
 
 Dans le but d'accroître le pool DEA, chaque agent DEA est configuré avec :
 
@@ -634,7 +619,7 @@ supplémentaires. En fonction de la taille du noeud de traitement que
 vous avez commandé, il se peut qu'une capacité supplémentaire soit disponible
 pour de futures mises à niveau. Dans ce cas, vous devrez simplement contacter
 IBM, et l'équipe pourra ajouter des incréments supplémentaires de 64 Go de
-mémoire de traitement disponible, selon vos besoins. 
+mémoire de traitement disponible, selon vos besoins.
 
 ## Gestion de votre instance locale
 {: #maintainlocal}
@@ -665,19 +650,9 @@ Si un problème est signalé suite à une mise à jour de maintenance, détermin
 ### Maintenance de l'infrastructure client
 {: #inframaintenance}
 
-{{site.data.keyword.Bluemix_local_notm}} est déployé sur
-l'hyperviseur ESXi et l'application vCenter est utilisée pour une gestion
-centralisée des machines virtuelles et des hôtes ESXi. {{site.data.keyword.Bluemix_notm}} prend en charge les trois versions les plus récentes
-d'ESXi et de vCenter, y-compris leurs mises à jour et correctifs intermédiaires. Les versions les plus récentes prises en charge sont toujours indiquées
-dans la section Exigences de l'infrastructure [Local](../local/index.html#localinfra).
+{{site.data.keyword.Bluemix_local_notm}} est déployé sur l'hyperviseur ESXi et l'application vCenter est utilisée pour une gestion centralisée des machines virtuelles et des hôtes ESXi. {{site.data.keyword.Bluemix_notm}} prend en charge les trois versions les plus récentes d'ESXi et de vCenter, y-compris leurs mises à jour et correctifs intermédiaires. Les versions les plus récentes prises en charge sont toujours indiquées dans la section Exigences de l'infrastructure [Local](../local/index.html#localinfra).
 
-**Important **: une fois
-{{site.data.keyword.Bluemix_local_notm}} déployé sur
-l'hyperviseur ESXi, les mises à jour et les correctifs ESXi peuvent perturber
-la disponibilité de l'environnement local, notamment de toutes les applications
-et de tous les services opérant dans cet environnement. Vous devez aviser {{site.data.keyword.Bluemix_notm}} via un ticket de demande de service
-avant d'appliquer une mise à niveau ou un correctif afin que l'interruption n'alerte pas par erreur l'équipe chargée des opérations. Si un responsable CSM vous a été
-affecté (CSM), vous pouvez communiquer le planning de mise à niveau via cet intermédiaire.
+**Important **: une fois {{site.data.keyword.Bluemix_local_notm}} déployé sur l'hyperviseur ESXi, les mises à jour et les correctifs ESXi peuvent perturber la disponibilité de l'environnement local, notamment de toutes les applications et de tous les services opérant dans cet environnement. Vous devez aviser {{site.data.keyword.Bluemix_notm}} via un ticket de demande de service avant d'appliquer une mise à niveau ou un correctif afin que l'interruption n'alerte pas par erreur l'équipe chargée des opérations. Si un responsable CSM vous a été affecté (CSM), vous pouvez communiquer le planning de mise à niveau via cet intermédiaire.
 
 Pour garantir que votre instance locale soit compatible avec les dernières versions prises en charge,
 l'équipe chargée des opérations {{site.data.keyword.Bluemix_notm}} surveille l'environnement pour détecter des versions non prises en charge
@@ -687,9 +662,7 @@ support {{site.data.keyword.Bluemix_notm}} vous avisera des mises jour requises 
 mise à jour.
 
 {{site.data.keyword.Bluemix_notm}} met tout en oeuvre pour préserver la compatibilité des environnements locaux
-avec les versions ESXi et vCenter les plus récentes. Cependant, les versions ESXi et vCenter
-les plus récentes peuvent ne pas être prises en charge pendant de courtes périodes. Avant toute mise à jour, reportez-vous à la section Exigences de l'infrastructure
-[Local](/docs/local/index.html#localinfra) pour connaître les versions les plus récentes compatibles.
+avec les versions ESXi et vCenter les plus récentes. Cependant, les versions ESXi et vCenter les plus récentes peuvent ne pas être prises en charge pendant de courtes périodes. Avant toute mise à jour, reportez-vous à la section Exigences de l'infrastructure [Local](/docs/local/index.html#localinfra) pour connaître les versions les plus récentes compatibles.
 
 
 ## Réponse aux incidents et support pour l'environnement
@@ -698,11 +671,7 @@ les plus récentes peuvent ne pas être prises en charge pendant de courtes pér
 
 ### Problèmes détectés par le client
 
-Si vous identifiez un problème nécessitant l'attention du centre des
-opérations et du support {{site.data.keyword.IBM_notm}}, vous pouvez prendre contact avec le support de
-plusieurs façons. Pour des informations sur la façon de contacter le support, voir
-[Contacter le service de support](../support/index.html#contacting-bluemix-support-local). Selon le problème, vous et IBM travaillerez ensemble
-ou individuellement pour le résoudre.
+Si vous identifiez un problème nécessitant l'attention du centre des opérations et du support {{site.data.keyword.IBM_notm}}, vous pouvez prendre contact avec le support de plusieurs façons. Pour des informations sur la façon de contacter le support, voir [Contacter le service de support](../support/index.html#contacting-bluemix-support-local). Selon le problème, vous et IBM travaillerez ensemble ou individuellement pour le résoudre.
 
 ### Incidents critiques détectés par IBM
 
@@ -711,23 +680,16 @@ problèmes de stabilité ayant un impact sur votre environnement ou vos utilisat
 une notification sur la page **Statut**. Vous pouvez également rechercher dans la page Statut les problèmes connus pour la
 plateforme ou vos services. Pour plus d'informations sur la page Statut, voir [Affichage du statut](../admin/index.html#oc_status).
 
-Si vous voulez intégrer vos notifications à un service Web qui prend en charge les webhooks, voir
-[Notifications et abonnements à des événements](/docs/admin/index.html#oc_eventsubscription) pour des informations sur l'extension de vos
-fonctions de notification.
+Si vous voulez intégrer vos notifications à un service Web qui prend en charge les webhooks, voir [Notifications et abonnements à des événements](/docs/admin/index.html#oc_eventsubscription) pour des informations sur l'extension de vos fonctions de notification.
 
 ![Processus de réponse à un incident](images/incidentresponseprocess.png "Processus de réponse à un incident")
 
 Figure 2. Processus de réponse à un incident
 
-Selon le problème, vous et IBM travaillerez ensemble ou individuellement pour le résoudre. En cas de question relative à l'incident ou si vous avez besoin de l'aide d'un
-interlocuteur {{site.data.keyword.IBM_notm}} pour résoudre le problème, vous pouvez ouvrir un ticket de
-demande de service. Pour des informations sur la façon de contacter le support, voir
-[Contacter le service de support](../support/index.html#contacting-bluemix-support-local).
+Selon le problème, vous et IBM travaillerez ensemble ou individuellement pour le résoudre. En cas de question relative à l'incident ou si vous avez besoin de l'aide d'un interlocuteur {{site.data.keyword.IBM_notm}} pour résoudre le problème, vous pouvez ouvrir un ticket de
+demande de service. Pour des informations sur la façon de contacter le support, voir [Contacter le service de support](../support/index.html#contacting-bluemix-support-local).
 
-**Remarque** : les tickets de demande de service de gravité 1 sont surveillés 24 heures sur 24, 7 jours sur 7. Les autres tickets
-sont traités du dimanche 22h00
-GMT au samedi 12h00 GMT. Pour plus d'informations sur la gravité des tickets de demande de service et la collaboration avec le support, voir
-<a href="/docs/support/index.html#contacting-bluemix-support-local">Contacter le service de support</a>.
+**Remarque** : les tickets de demande de service de gravité 1 sont surveillés 24 heures sur 24, 7 jours sur 7. Les autres tickets sont traités du dimanche 22h00 GMT au samedi 12h00 GMT. Pour plus d'informations sur la gravité des tickets de demande de service et la collaboration avec le support, voir <a href="/docs/support/index.html#contacting-bluemix-support-local">Contacter le service de support</a>.
 
 ## Reprise après incident pour l'environnement
 {{site.data.keyword.Bluemix_local_notm}}
@@ -795,11 +757,7 @@ de nombreux avantages :
 * Il fournit la reprise en ligne sur site en fonction du diagnostic d'intégrité de l'application
 * Il utilise le routage pondéré entre les noeuds finaux
 
-Vous pouvez choisir un équilibreur de charge global tel qu'Akamai ou Dyn. 
-Pour plus d'informations sur l'utilisation d'Akamai comme équilibreur de charge
-global, voir [Global traffic management ![icône de lien externe](../icons/launch-glyph.svg)](https://www.akamai.com/us/en/solutions/products/web-performance/global-traffic-management.jsp){: new_window}. 
-Pour plus d'informations sur l'utilisation de Dyn comme équilibreur de charge
-global, voir [4 Reasons Businesses Are Taking Global Load Balancing to the Cloud ![icône de lien externe](../icons/launch-glyph.svg)](http://dyn.com/blog/4-reasons-businesses-are-taking-global-load-balancing-to-the-cloud/){: new_window}.
+Vous pouvez choisir un équilibreur de charge global tel qu'Akamai ou Dyn. Pour plus d'informations sur l'utilisation d'Akamai comme équilibreur de charge global, voir [Global traffic management ![icône de lien externe](../icons/launch-glyph.svg)](https://www.akamai.com/us/en/solutions/products/web-performance/global-traffic-management.jsp){: new_window}. Pour plus d'informations sur l'utilisation de Dyn comme équilibreur de charge global, voir [4 Reasons Businesses Are Taking Global Load Balancing to the Cloud ![icône de lien externe](../icons/launch-glyph.svg)](http://dyn.com/blog/4-reasons-businesses-are-taking-global-load-balancing-to-the-cloud/){: new_window}.
 
 ### Haute disponibilité
 {: #ha}
@@ -811,7 +769,7 @@ Ces technologies présentent les caractéristiques suivantes :
 
 <dl>
 <dt>Evolutivité DEA dans Cloud Foundry</dt>
-<dd>Un agent <a href="https://docs.cloudfoundry.org/concepts/architecture/execution-agent.html" target="_blank">Droplet Execution Agent (DEA) <img src="../icons/launch-glyph.svg" alt="icône de lien externe"> </a> Cloud Foundry effectue des diagnostics d'intégrité pour les applications qu'il exécute. S'il existe un problème lié à l'application ou à l'agent DEA lui-même, il déploie des instances supplémentaires de l'application dans un autre agent DEA afin de traiter le problème. Pour plus d'informations, voir <a href="https://docs.cloudfoundry.org/concepts/high-availability.html" target="_blank">Configuring CF for High Availability with Redundancy <img src="../icons/launch-glyph.svg" alt="icône de lien externe"></a>.
+<dd>Un agent <a href="https://docs.cloudfoundry.org/concepts/architecture/execution-agent.html" target="_blank">Droplet Execution Agent (DEA) <img src="../icons/launch-glyph.svg" alt="icône de lien externe"> </a> Cloud Foundry effectue des diagnostics d'intégrité pour les applications qu'il exécute. S'il existe un problème lié à l'application ou à l'agent DEA lui-même, il déploie des instances supplémentaires de l'application dans un autre agent DEA afin de traiter le problème. Pour plus d'informations, voir <a href="https://docs.cloudfoundry.org/concepts/high-availability.html" target="_blank">Configuring CF for High Availability with Redundancy <img src="../icons/launch-glyph.svg" alt="icône de lien externe"> </a>.
 <p>Pour garantir une haute disponibilité de vos applications, vous avez besoin de suffisamment de ressources de traitement pour équilibrer la charge, et
 éventuellement d'un supplément pour faire face à une panne. Si vous avez besoin d'étoffer votre environnement en élargissant votre pool
 DEA pour pouvoir faire face à une panne ou à une pointe de la charge de vos instances d'application, vous pouvez contacter votre ingénieur commercial
