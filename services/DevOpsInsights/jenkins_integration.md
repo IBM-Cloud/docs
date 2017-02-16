@@ -18,7 +18,7 @@ lastupdated: "2017-02-16"
 After you define the policies for {{site.data.keyword.DRA_full}} to monitor, you can add {{site.data.keyword.DRA_short}} to a toolchain and configure a continuous delivery pipeline.
 {:shortdesc}
 
-You can integrate {{site.data.keyword.DRA_short}} into one Jenkins project or across several related Jenkins projects by installing a plugin. After you install the plugin, you can set quality gates and receive analytic data on the {{site.data.keyword.DRA_short}} dashboard.
+You can integrate {{site.data.keyword.DRA_short}} into one Jenkins project or across several related Jenkins projects by installing a plugin. After you install the plugin, you can set quality gates and view analytic data in {{site.data.keyword.DRA_short}}.
 
 ##Prerequisites    
 {: #DI_jenkins_prereqs}
