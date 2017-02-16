@@ -38,13 +38,13 @@ Für einen stabilen Betrieb Ihrer Bereitstellungen auf der {{site.data.keyword.B
 ### Überwachung von Apps, die in Cloud Foundry ausgeführt werden
 {: #monitoring_bluemix_apps}
 
-Wenn Sie die Cloud Foundry-Infrastruktur verwenden, um Ihre Apps in {{site.data.keyword.Bluemix_notm}} auszuführen, sollten Sie über die Leistungsinformationen, wie z. B. Allgemeinzustand, Ressourcennutzung und Datenverkehr, auf dem Laufenden bleiben. Anhand dieser Leistungsinformationen können Sie Entscheidungen treffen oder Maßnahmen ergreifen. 
+Wenn Sie die Cloud Foundry-Infrastruktur verwenden, um Ihre Apps in {{site.data.keyword.Bluemix_notm}} auszuführen, sollten Sie über die Leistungsinformationen, wie z. B. Allgemeinzustand, Ressourcennutzung und Datenverkehr, auf dem Laufenden bleiben. Anhand dieser Leistungsinformationen können Sie Entscheidungen treffen oder Maßnahmen ergreifen.
 
-Wenden Sie eine der folgenden Methoden an, um {{site.data.keyword.Bluemix_notm}}-Apps zu überwachen: 
+Wenden Sie eine der folgenden Methoden an, um {{site.data.keyword.Bluemix_notm}}-Apps zu überwachen:
 
 * {{site.data.keyword.Bluemix_notm}}-Services. Monitoring and Analytics bietet einen Service, den Sie zur Überwachung Ihrer Anwendungsleistung verwenden können. Dieser Service bietet nun auch Analysefunktionen wie die Protokollanalyse. Weitere Informationen finden Sie unter [Monitoring and Analytics](/docs/services/monana/index.html#gettingstartedtemplate).
 * Optionen von Drittanbietern. Beispiel: [New Relic
-![Symbol für externen Link](../icons/launch-glyph.svg)](http://newrelic.com/){:new_window}. 
+![Symbol für externen Link](../icons/launch-glyph.svg)](http://newrelic.com/){:new_window}.
 
 ### Protokollierung für Apps, die in Cloud Foundry ausgeführt werden
 {: #logging_for_bluemix_apps}
@@ -127,7 +127,7 @@ Jeder Protokolleintrag enthält vier Felder. In der folgenden Liste finden Sie e
 ### Protokolle anzeigen
 {: #viewing_logs}
 
-Sie können die Protokolle für Ihre Cloud Foundry-Apps an vier Positionen anzeigen: 
+Sie können die Protokolle für Ihre Cloud Foundry-Apps an vier Positionen anzeigen:
 
   * {{site.data.keyword.Bluemix_notm}}-Dashboard
   * Dashboard
@@ -143,23 +143,23 @@ Führen Sie die folgenden Schritte aus, um die Bereitstellungs- oder Laufzeitpro
 
 In der Konsole für **Protokolle** können Sie die kürzlich generierten Protokolle für Ihre App oder Protokollendabschnitte in Echtzeit anzeigen. Darüber hinaus können Sie Protokolle nach Protokolltyp und Kanal filtern.
 
-**Hinweis:** Protokolle werden nicht über App-Abstürze und App-Bereitstellungen hinweg gespeichert. 
+**Hinweis:** Protokolle werden nicht über App-Abstürze und App-Bereitstellungen hinweg gespeichert.
 
 
 #### Protokolle im Kibana-Dashboard anzeigen
 {: #viewing_logs_Kibana}
 
-Erstellen Sie ein angepasstes Dashboard, in dem die Protokolle für in einem Bereich ausgeführte Apps auf einfache oder kreative Weise angezeigt werden sollen. 
+Erstellen Sie ein angepasstes Dashboard, in dem die Protokolle für in einem Bereich ausgeführte Apps auf einfache oder kreative Weise angezeigt werden sollen.
 
-1. Öffnen Sie [https://logmet.<span class="keyword" data-hd-keyref="DomainName">Domänenname</span>](https://logmet.{DomainName}), um sich bei der Kibana-Benutzerschnittstelle anzumelden. 
-2. Wählen Sie die Registerkarte **Kibana 3** aus. 
-3. Wenn keine Protokolle angezeigt werden, passen Sie das Zeitauswahlfeld im Header an. 
-4. Speichern Sie das Dashboard als neues Dashboard. 
-  1. Klicken Sie in der Symbolleiste auf das Symbol **Speichern**. 
-  2. Geben Sie einen Namen für das Dashboard ein. 
-  3. Klicken Sie neben dem Namensfeld auf das Symbol **Speichern**. 
+1. Öffnen Sie [https://logmet.<span class="keyword" data-hd-keyref="DomainName">Domänenname</span>](https://logmet.{DomainName}), um sich bei der Kibana-Benutzerschnittstelle anzumelden.
+2. Wählen Sie die Registerkarte **Kibana 3** aus.
+3. Wenn keine Protokolle angezeigt werden, passen Sie das Zeitauswahlfeld im Header an.
+4. Speichern Sie das Dashboard als neues Dashboard.
+  1. Klicken Sie in der Symbolleiste auf das Symbol **Speichern**.
+  2. Geben Sie einen Namen für das Dashboard ein.
+  3. Klicken Sie neben dem Namensfeld auf das Symbol **Speichern**.
 
-Weitere Informationen zum Anpassen eines Kibana-Dashboards finden Sie in [diesem Blogbeitrag ![Symbol für externen Link](../icons/launch-glyph.svg)](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/){: new_window} oder in der Dokumentation zu [Kibana ![Symbol für externen Link](../icons/launch-glyph.svg)](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}. 
+Weitere Informationen zum Anpassen eines Kibana-Dashboards finden Sie in [diesem Blogbeitrag ![Symbol für externen Link](../icons/launch-glyph.svg)](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/){: new_window} oder in der Dokumentation zu [Kibana ![Symbol für externen Link](../icons/launch-glyph.svg)](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}.
 
 
 #### Protokolle über die Befehlszeilenschnittstelle anzeigen
@@ -228,7 +228,7 @@ Zum Anzeigen von für Sie relevanten Protokollen oder zum Ausschließen des Inha
 cf logs App-Name --recent | cut -c 29-40,46-
 ```
 
-Für weitere Informationen zur Option **cut** geben Sie 'cut --help' ein. 
+Für weitere Informationen zur Option **cut** geben Sie 'cut --help' ein.
 * Zum Anzeigen von Protokolleinträgen, die bestimmte Schlüsselwörter enthalten, verwenden Sie die Option **grep**. Protokolleinträge, die das Schlüsselwort `[APP` enthalten, können Sie beispielsweise mithilfe des folgenden Befehls anzeigen:
 
 ```
@@ -447,6 +447,6 @@ Für die Apps, die Sie unter {{site.data.keyword.Bluemix_dedicated_notm}} und {{
 Führen Sie die folgenden Schritte aus, um die Protokolle für Ihre Apps anzuzeigen.
 1. Wählen Sie eine aktive App aus.
 2. Klicken Sie auf **Protokolle**. In der Ansicht **Protokolle** können Sie die Protokolle für Ihre aktive App einsehen.
-4. Klicken Sie auf die Schaltfläche **Erweiterte Ansicht**. Die **erweiterte Ansicht** zeigt mehr Details der Protokolle und verwendet hierzu Kibana, ein Visualisierungstool, das mithilfe von Protokollen und Daten mit Zeitmarken angepasste Visualisierungen erstellt. Weitere Informationen zur Verwendung der erweiterten Ansicht enthält die Dokumentation zu [Kibana ![Symbol für externen Link](../icons/launch-glyph.svg)](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}. 
+4. Klicken Sie auf die Schaltfläche **Erweiterte Ansicht**. Die **erweiterte Ansicht** zeigt mehr Details der Protokolle und verwendet hierzu Kibana, ein Visualisierungstool, das mithilfe von Protokollen und Daten mit Zeitmarken angepasste Visualisierungen erstellt. Weitere Informationen zur Verwendung der erweiterten Ansicht enthält die Dokumentation zu [Kibana ![Symbol für externen Link](../icons/launch-glyph.svg)](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}.
 
 Als nächstes können Sie ein Kibana-Dashboard anpassen. Weitere Informationen finden Sie unter [Anzeige von Protokollen in einem Kibana-Dashboard anpassen](/docs/containers/monitoringandlogging/container_ml_logs.html#container_ml_dash_logs_custom).

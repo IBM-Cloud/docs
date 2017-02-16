@@ -127,7 +127,7 @@ Ogni voce di log contiene quattro campi. Fai riferimento al seguente elenco per 
 ### Visualizzazione dei log
 {: #viewing_logs}
 
-Puoi visualizzare i log delle tue applicazioni Cloud Foundry in quattro punti: 
+Puoi visualizzare i log delle tue applicazioni Cloud Foundry in quattro punti:
 
   * Dashboard {{site.data.keyword.Bluemix_notm}}
   * Il

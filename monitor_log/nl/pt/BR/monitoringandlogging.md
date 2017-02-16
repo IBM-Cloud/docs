@@ -337,7 +337,7 @@ Neste exemplo, uma desenvolvedora chamada Jane cria um servidor virtual usando o
   1. Para começar, a Jane configura o Splunk.
 
      a. Jane faz download do Splunk Light por meio do [Site de download do Splunk Light
-![Ícone de link externo](../icons/launch-glyph.svg)](https://www.splunk.com/en_us/download/splunk-light.html){:new_window} e, em seguida, instala-o usando o comando a seguir. O software é instalado em */opt/splunk*.
+![Ícone de link externo](../icons/launch-glyph.svg)](https://www.splunk.com/en_us/download/splunk-light.html){:new_window}e, em seguida, instala-o usando o comando a seguir. O software é instalado em */opt/splunk*.
 
 	    ```
         dpkg -i  ~/splunklight-6.3.0-aa7d4b1ccb80-linux-2.6-amd64.deb

@@ -1,4 +1,4 @@
-﻿---
+---
 
 copyright:
   years: 2015, 2017
@@ -53,8 +53,7 @@ vous permettent de prendre des décisions ou des mesures en conséquence.
 Pour surveiller des applications {{site.data.keyword.Bluemix_notm}}, appliquez l'une des méthodes suivantes :
 
 * Services {{site.data.keyword.Bluemix_notm}}. Monitoring and Analytics propose un service que vous pouvez utiliser pour surveiller les
-performances de votre application. De plus, ce service fournit également des fonctions d'analyse telles que l'analyse de journal. 
-Pour plus d'informations, voir [Monitoring and Analytics](/docs/services/monana/index.html#gettingstartedtemplate).
+performances de votre application. De plus, ce service fournit également des fonctions d'analyse telles que l'analyse de journal. Pour plus d'informations, voir [Monitoring and Analytics](/docs/services/monana/index.html#gettingstartedtemplate).
 * Options de tiers. Par exemple, [New Relic ![icône de lien externe](../icons/launch-glyph.svg)](http://newrelic.com/){:new_window}.
 
 ### Journalisation pour les applications qui s'exécutent dans Cloud Foundry
@@ -169,7 +168,7 @@ cas de panne ou après un déploiement d'application.
 {: #viewing_logs_Kibana}
 
 Créez un tableau de bord personnalisé permettant d'afficher, de manière
-simple ou créative, les journaux des applications qui s'exécutent dans un espace. 
+simple ou créative, les journaux des applications qui s'exécutent dans un espace.
 
 1. Ouvrez
 [https://logmet.<span class="keyword" data-hd-keyref="DomainName">NomDomaine</span>](https://logmet.{DomainName})
@@ -177,15 +176,14 @@ pour vous connecter à l'interface utilisateur Kibana.
 2. Sélectionnez l'onglet **Kibana 3**.
 3. Si vous ne voyez aucun journal, ajustez le sélecteur de période situé
 dans l'en-tête.
-4. Sauvegardez le tableau de bord en tant que nouveau tableau de bord. 
+4. Sauvegardez le tableau de bord en tant que nouveau tableau de bord.
   1. Dans la barre d'outils, cliquez sur l'icône
-**Save**. 
+**Save**.
   2. Entrez un nom pour le tableau de bord.
   3. En regard de la zone du nom, cliquez sur l'icône
-**Save**. 
+**Save**.
 
-Pour plus d'informations sur la personnalisation d'un tableau de bord
-Kibana, voir [cet article de blogue ![icône de lien externe](../icons/launch-glyph.svg)](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/){: new_window} ou la documentation [Kibana ![icône de lien externe](../icons/launch-glyph.svg)](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}.
+Pour plus d'informations sur la personnalisation d'un tableau de bord Kibana, voir [cet article de blogue ![icône de lien externe](../icons/launch-glyph.svg)](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/){: new_window} ou la documentation [Kibana ![icône de lien externe](../icons/launch-glyph.svg)](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}.
 
 
 #### Affichage des journaux dans l'interface de ligne de commande
@@ -197,8 +195,7 @@ Choisissez l'une des options suivantes pour afficher les journaux depuis l'inter
 <li>Affichage des dernières lignes des journaux lorsque vous déployez des applications.
 <p>Utilisez la commande **cf logs** pour afficher les journaux de votre application et des composants système qui interagissent
 avec votre application lorsque vous déployez des applications dans {{site.data.keyword.Bluemix_notm}}. Vous pouvez entrer les commandes
-ci-dessous dans l'interface de ligne de commande cf. Pour plus d'informations
-sur cf logs, voir <a href="http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html" target=" _blank">Log Types and Their Messages in Cloud Foundry <img src="../icons/launch-glyph.svg" alt="icône de lien externe"></a>. </p>
+ci-dessous dans l'interface de ligne de commande cf. Pour plus d'informations sur cf logs, voir <a href="http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html" target=" _blank">Log Types and Their Messages in Cloud Foundry <img src="../icons/launch-glyph.svg" alt="icône de lien externe"></a>. </p>
 <dl>
 <dt><strong>cf logs <var class="keyword varname">nom_app</var> --recent</strong></dt>
 <dd>Affichez les journaux récents.</dd>
@@ -366,13 +363,15 @@ les journaux d'application Cloud Foundry de {{site.data.keyword.Bluemix_notm}} �
 
   1. Pour commencer, Jeanne configure Splunk.
 
-     a. Jeanne télécharge Splunk Light depuis le site [Download Splunk Light ![icône de lien externe](../icons/launch-glyph.svg)](https://www.splunk.com/en_us/download/splunk-light.html){:new_window}, puis l'installe à l'aide de la commande suivante. Le logiciel est installé sous */opt/splunk*.
+     a. Jeanne télécharge Splunk Light depuis le site [Download Splunk Light ![icône de lien externe](../icons/launch-glyph.svg)](https://www.splunk.com/en_us/download/splunk-light.html){:new_window},
+puis l'installe à l'aide de la commande suivante. Le logiciel est installé sous */opt/splunk*.
 
 	    ```
         dpkg -i  ~/splunklight-6.3.0-aa7d4b1ccb80-linux-2.6-amd64.deb
         ```
 
-     b. Jeanne installe et adjoint le module complémentaire RFC5424 de la technologie syslog pour son intégration avec {{site.data.keyword.Bluemix_notm}}. Pour plus d'informations sur les instructions d'installation du module complémentaire, voir [Cloud Foundry guideline ![icône de lien externe](../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/devguide/services/integrate-splunk.html){:new_window}.
+     b. Jeanne installe et adjoint le module complémentaire RFC5424 de la technologie syslog pour son intégration avec
+{{site.data.keyword.Bluemix_notm}}. Pour plus d'informations sur les instructions d'installation du module complémentaire, voir [Cloud Foundry guideline ![icône de lien externe](../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/devguide/services/integrate-splunk.html){:new_window}.
 
 	    Jeanne installe le module complémentaire via les commandes suivantes :
 
@@ -401,8 +400,8 @@ fichier *transforms.conf* contenant le texte suivant :
 (port 5140) et l'interface utilisateur Web de Splunk (port
 8000) vu que, par défaut, le pare-feu est en place sur le serveur virtuel {{site.data.keyword.Bluemix_notm}}.
 
-	    **Remarque :** la configuration iptable est réalisée ici à des fins d'évaluation par Jeanne et n'est que temporaire. Pour configurer le
-paramètre de pare-feu dans le serveur virtuel Bluemix en environnement de production, voir le document [Network Security Groups ![icône de lien externe](../icons/launch-glyph.svg)](https://new-console.ng.bluemix.net/docs/services/networksecuritygroups/index.html){:new_window} afin d'avoir plus de détails.
+	    **Remarque :** la configuration iptable est réalisée ici à des fins d'évaluation par Jeanne et n'est que temporaire. Pour configurer le paramètre de pare-feu dans le serveur virtuel Bluemix en environnement de production, voir le document [Network Security Groups ![icône de lien externe](../icons/launch-glyph.svg)](https://new-console.ng.bluemix.net/docs/services/networksecuritygroups/index.html){:new_window} afin d'avoir plus de détails.
+
 	   ```
 	   iptables -A INPUT -p tcp --dport 5140 -j ACCEPT
        iptables -A INPUT -p tcp --sport 5140 -j ACCEPT
@@ -508,10 +507,7 @@ dans [Affichage des journaux](#hybrid_apps_logs_dash). Si vous
 ne disposez pas du bouton **Vue avancée**, la fonction n'est
 pas activée.
 
-* Pour activer la journalisation avancée dans votre environnement,
-suivez les étapes indiquées dans la documentation de
-[{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated)
-ou de [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local).
+* Pour activer la journalisation avancée dans votre environnement, suivez les étapes indiquées dans la documentation de [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) ou de [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local).
 
 ### Conservation des journaux
 
@@ -537,10 +533,6 @@ cours d'exécution.
 4. Cliquez sur le bouton **Vue avancée**. La
 **Vue avancée** est une vue plus détaillée des journaux ;
 elle utilise Kibana, un outil de visualisation qui se sert des journaux
-et des données d'horodatage pour créer des visualisations personnalisées. Pour
-plus d'informations sur l'utilisation de la vue avancée, voir la documentation [Kibana ![icône de lien externe](../icons/launch-glyph.svg)](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}.
+et des données d'horodatage pour créer des visualisations personnalisées. Pour plus d'informations sur l'utilisation de la vue avancée, voir la documentation [Kibana ![icône de lien externe](../icons/launch-glyph.svg)](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}.
 
-Vous pouvez ensuite personnaliser un tableau de bord Kibana. Pour plus
-d'informations, voir
-[Personnalisation
-de l'affichage des journaux dans le tableau de bord Kibana](/docs/containers/monitoringandlogging/container_ml_logs.html#container_ml_dash_logs_custom).
+Vous pouvez ensuite personnaliser un tableau de bord Kibana. Pour plus d'informations, voir [Personnalisation de l'affichage des journaux dans le tableau de bord Kibana](/docs/containers/monitoringandlogging/container_ml_logs.html#container_ml_dash_logs_custom).

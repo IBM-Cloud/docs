@@ -432,7 +432,7 @@ Cloud Foundry 앱은 Cloud Foundry 로그 작성기(loggregator)를 사용하여
 | vCPU | 19 | 57 |
 | 메모리 | 80GB | 240GB |
 | 로컬 스토리지 | 2.98TB | 8.94TB |
-{: caption="Table 1. Logging hardware requirements for {{site.data.keyword.Bluemix_local_notm}}" caption-side="top"}
+{: caption="표 1. {{site.data.keyword.Bluemix_local_notm}}의 로깅 하드웨어 요구사항" caption-side="top"}
 
 ### 설정
 
