@@ -1,4 +1,4 @@
-﻿---
+---
 
 copyright:
   years: 2015, 2017
@@ -20,10 +20,7 @@ lastupdated: "2017-01-11"
 
 
 
-Des problèmes d'ordre général liés à {{site.data.keyword.Bluemix}} peuvent survenir
-: par exemple, un utilisateur ne parvient pas à établir une connexion dans
-{{site.data.keyword.Bluemix_notm}},
-un compte est bloqué à l'état en attente, etc. Toutefois, dans de nombreux cas, ces problèmes peuvent être résolus en quelques opérations simples. 
+Des problèmes d'ordre général liés à {{site.data.keyword.Bluemix}} peuvent survenir : par exemple, un utilisateur ne parvient pas à établir une connexion dans {{site.data.keyword.Bluemix_notm}}, un compte est bloqué à l'état en attente, etc. Toutefois, dans de nombreux cas, ces problèmes peuvent être résolus en quelques opérations simples. 
 {:shortdesc}
 
 ## Connexion à {{site.data.keyword.Bluemix_notm}} impossible
@@ -44,8 +41,7 @@ L'IBMid et le mot de passe que vous utilisez pour vous connecter à {{site.data.
 
 Pour obtenir un IBMid et un mot de passe valides, accédez à la page My IBM profile et procédez comme suit :
 {: tsResolve}
-  * Si vous disposez déjà d'un IBMid et que vous voulez vérifier si l'ID et le mot de passe sont valides, cliquez sur **Sign in** et entrez votre IBMid et votre mot de passe sur la page Sign in. Si vous avez oublié votre mot de passe, cliquez sur **Forgot your password** sur la page Sign in pour le réinitialiser. Si vous avez oublié votre IBMid ou que les problèmes avec votre mot de passe persistent, prenez contact avec le service Worldwide IBM
-Registration Helpdesk pour obtenir de l'aide. 
+  * Si vous disposez déjà d'un IBMid et que vous voulez vérifier si l'ID et le mot de passe sont valides, cliquez sur **Sign in** et entrez votre IBMid et votre mot de passe sur la page Sign in. Si vous avez oublié votre mot de passe, cliquez sur **Forgot your password** sur la page Sign in pour le réinitialiser. Si vous avez oublié votre IBMid ou que les problèmes avec votre mot de passe persistent, prenez contact avec le service Worldwide IBM Registration Helpdesk pour obtenir de l'aide. 
   * Si vous ne disposez pas d'un IBMid, cliquez sur **Register** pour enregistrer un IBMid et un mot de passe. 
   
 **Remarque :** pour les employés IBM, l'IBMid peut être différent de l'ID de connexion à l'intranet. 
@@ -119,18 +115,14 @@ Si votre compte est en attente, vous ne pouvez pas vous connecter à {{site.data
 Après avoir procédé à votre inscription pour un compte d'essai {{site.data.keyword.Bluemix_notm}}, il est possible que vous ne puissiez pas vous connecter à {{site.data.keyword.Bluemix_notm}} et que le message suivant s'affiche :
 {: tsSymptoms}
 
-<code>Votre
-compte est en attente. La confirmation par courrier électronique peut prendre jusqu'à 24 heures ; vérifiez également votre dossier de courrier indésirable. 
-Si vous ne recevez pas votre confirmation par courrier électronique, envoyez un message au <a href="http://ibm.biz/bluemixsupport.com" target="_blank">support Bluemix <img src="../icons/launch-glyph.svg" alt="icône de lien externe"></a>.</code>
+<code>Votre compte est en attente. La confirmation par courrier électronique peut prendre jusqu'à 24 heures ; vérifiez également votre dossier de courrier indésirable. Si vous ne recevez pas votre confirmation par courrier électronique, envoyez un message au <a href="http://ibm.biz/bluemixsupport.com" target="_blank">support Bluemix <img src="../icons/launch-glyph.svg" alt="icône de lien externe"></a>.</code>
 
 
 Après avoir procédé à votre inscription pour un compte d'essai {{site.data.keyword.Bluemix_notm}}, vous recevez une confirmation par courrier électronique. Cliquez
 sur le lien que contient ce courrier électronique pour compléter le processus d'enregistrement.
 {: tsCauses} 
 
-La confirmation par courrier électronique est envoyée à l'adresse de courrier électronique que vous avez indiquée. Vérifiez votre boîte de réception et votre dossier de courrier indésirable. 
-Si vous ne recevez pas de confirmation par courrier électronique, prenez
-contact avec le [support {{site.data.keyword.Bluemix_notm}} ![icône de lien externe](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}.
+La confirmation par courrier électronique est envoyée à l'adresse de courrier électronique que vous avez indiquée. Vérifiez votre boîte de réception et votre dossier de courrier indésirable. Si vous ne recevez pas de confirmation par courrier électronique, prenez contact avec le [support {{site.data.keyword.Bluemix_notm}} ![icône de lien externe](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}.  
 {: tsResolve}
 
 
@@ -253,7 +245,9 @@ Pour remédier au problème, effectuez une ou plusieurs des actions suivantes :
   * Utilisez le mode de navigation privée de votre navigateur. 
   * Effacez les cookies et le cache du navigateur.
   * Utilisez un navigateur différent. Pour des informations sur les
-versions des navigateurs qui sont prises en charge par {{site.data.keyword.Bluemix_notm}}, voir [{{site.data.keyword.Bluemix_notm}} Prerequisites ![icône de lien externe](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}.
+versions des navigateurs qui sont prises en charge par
+{{site.data.keyword.Bluemix_notm}}, voir
+[{{site.data.keyword.Bluemix_notm}} Prerequisites ![icône de lien externe](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}.
   * Si vous avez installé l'interface de ligne de commande cf, entrez la commande `cf apps` pour déterminer si votre
 application est en cours d'exécution.
   
@@ -423,8 +417,7 @@ Vérifiez que vous avez créé un espace dans votre organisation.  Pour créer u
   * Cliquez sur l'icône {{site.data.keyword.avatar}} ![icône Avatar](images/account_support.svg) pour ouvrir le widget Compte et support, sélectionnez l'organisation dans laquelle vous souhaitez créer l'espace, puis cliquez sur **Créer un espace**.
   * Dans l'interface de ligne de commande cf, tapez `cf create-space <nom_espace> -o <nom_organisation>`.
 
-Essayez à nouveau. Si ce message réapparaît, ouvrez la page de [statut Bluemix ![icône de lien externe](../icons/launch-glyph.svg)](http://ibm.biz/bluemixstatus){: new_window} pour déterminer si un service ou un
-composant présente un problème.
+Essayez à nouveau. Si ce message réapparaît, ouvrez la page de [statut Bluemix ![icône de lien externe](../icons/launch-glyph.svg)](http://ibm.biz/bluemixstatus){: new_window} pour déterminer si un service ou un composant présente un problème.
 
 
 
@@ -486,8 +479,8 @@ langages de programmation. Par exemple, pour les applications Node.js, vous pouv
 ```
 process.env.VCAP_SERVICES
 ```
-Pour plus d'informations sur les commandes que vous pouvez utiliser dans
-d'autres langages de programamtion, voir [Java ![icône de lien externe](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} et [Ruby ![icône de lien externe](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}.
+Pour plus d'informations sur les commandes que vous pouvez utiliser dans d'autres langages de programamtion, voir [Java ![icône de lien externe](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} et [Ruby ![icône de lien externe](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}.
+
 
 
 
@@ -565,7 +558,8 @@ cache du navigateur.
  
 
 Si vous suspectez l'arrêt d'un service
-{{site.data.keyword.Bluemix_notm}}, consultez d'abord la page de [statut de {{site.data.keyword.Bluemix_notm}} ![icône de lien externe](../icons/launch-glyph.svg)](http://ibm.biz/bluemixstatus){: new_window}. Vous pouvez souhaiter utiliser le service en tant que solution palliative dans une autre région {{site.data.keyword.Bluemix_notm}}. Des informations détaillées sont disponibles à la section [Utilisation des services dans une autre région](/docs/services/reqnsi.html#cross_region_service). Si le statut du service est normal, essayez la procédure suivante pour résoudre le problème : 
+{{site.data.keyword.Bluemix_notm}}, consultez d'abord la page de
+[statut de {{site.data.keyword.Bluemix_notm}} ![icône de lien externe](../icons/launch-glyph.svg)](http://ibm.biz/bluemixstatus){: new_window}. Vous pouvez souhaiter utiliser le service en tant que solution palliative dans une autre région {{site.data.keyword.Bluemix_notm}}. Des informations détaillées sont disponibles à la section [Utilisation des services dans une autre région](/docs/services/reqnsi.html#cross_region_service). Si le statut du service est normal, essayez la procédure suivante pour résoudre le problème : 
 {: tsResolve}
 
   * Exécutez à nouveau l'action :
@@ -575,8 +569,7 @@ Si vous suspectez l'arrêt d'un service
 unités peut éliminer diverses erreurs à l'origine de l'erreur 502. 
   * Attendez et recommencez ultérieurement. Dans certaines instances, des problèmes temporaires peuvent se produire
 avec votre fournisseur d'accès Internet ou les services {{site.data.keyword.Bluemix_notm}}. Vous pouvez attendre jusqu'à ce que les problèmes temporaires soient résolus.
-  * Si le problème existe toujours, contactez le support {{site.data.keyword.Bluemix_notm}}. Pour plus d'informations, voir
-[Contacter le support {{site.data.keyword.Bluemix_notm}} ![icône de lien externe](../icons/launch-glyph.svg)](/docs/support/index.html#contacting-bluemix-support){: new_window}. 
+  * Si le problème existe toujours, contactez le support {{site.data.keyword.Bluemix_notm}}. Pour plus d'informations, voir [Contacter le support {{site.data.keyword.Bluemix_notm}} ![icône de lien externe](../icons/launch-glyph.svg)](/docs/support/index.html#contacting-bluemix-support){: new_window}. 
 
 
 
@@ -653,8 +646,7 @@ provisoirement. Dans cette fenêtre, DevOps Services définit le cookie d'authen
     * [Mozilla Firefox ![icône de lien externe](../icons/launch-glyph.svg)](https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences#w_how-do-i-change-cookie-settings){: new_window}
 	* [Google Chrome ![icône de lien externe](../icons/launch-glyph.svg)](https://support.google.com/chrome/answer/95647){: new_window}
 	* [Apple Safari ![icône de lien externe](../icons/launch-glyph.svg)](https://support.apple.com/kb/PH17191){: new_window}
-	* [Microsoft Internet Explorer ![icône de lien externe](../icons/launch-glyph.svg)](http://windows.microsoft.com/en-us/internet-explorer/delete-manage-cookies#ie=ie-11){: new_window}
-Si ces solutions de contournement ne résolvent pas le problème, envoyez un courrier électronique à idslogin@jazz.net.
+	* [Microsoft Internet Explorer ![icône de lien externe](../icons/launch-glyph.svg)](http://windows.microsoft.com/en-us/internet-explorer/delete-manage-cookies#ie=ie-11){: new_window} Si ces solutions de contournement ne résolvent pas le problème, envoyez un courrier électronique à idslogin@jazz.net.
 
 
 
@@ -1209,9 +1201,7 @@ Ce problème peut se produire si des scripts (tels que le script de détection, 
 
  
 
-Vous pouvez utiliser la commande
-[git update ![icône de lien externe](../icons/launch-glyph.svg)](http://git-scm.com/docs/git-update-index){: new_window} pour activer le droit
-d'exécution pour chaque script. Par exemple, vous pouvez entrer `git update --chmod=+x script.sh`.
+Vous pouvez utiliser la commande [git update ![icône de lien externe](../icons/launch-glyph.svg)](http://git-scm.com/docs/git-update-index){: new_window} pour activer le droit d'exécution pour chaque script. Par exemple, vous pouvez entrer `git update --chmod=+x script.sh`.
 {: tsResolve}
 	
 	
@@ -1448,8 +1438,7 @@ Si vous avez configuré votre projet GitHub pour qu'il crée des liens d'éléme
 6. Vérifiez l'absence d'erreurs en consultant à nouveau l'icône d'état.
    ![Icône d'état sans erreur](images/githubResolved_small.png)
 
-Pour plus d'informations, voir
-[Setting up GitHub for Bluemix DevOps Services projects ![icône de lien externe](../icons/launch-glyph.svg)](https://hub.jazz.net/docs/githubhooks/){: new_window}.
+Pour plus d'informations, voir [Setting up GitHub for Bluemix DevOps Services projects ![icône de lien externe](../icons/launch-glyph.svg)](https://hub.jazz.net/docs/githubhooks/){: new_window}.
 
 
 # Traitement des incidents liés à la gestion des comptes
@@ -1479,9 +1468,7 @@ Le statut de votre compte {{site.data.keyword.Bluemix_notm}} devient inactif lor
 
  
 
-Pour réactiver votre compte, prenez contact avec le
-[support {{site.data.keyword.Bluemix_notm}} ![icône de lien externe](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}. Dans le courrier électronique, incluez les informations
-suivantes :
+Pour réactiver votre compte, prenez contact avec le [support {{site.data.keyword.Bluemix_notm}} ![icône de lien externe](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}. Dans le courrier électronique, incluez les informations suivantes :
 {: tsResolve}
 
   * L'IBMid que vous utilisez pour vous connecter à {{site.data.keyword.Bluemix_notm}}.
@@ -1608,20 +1595,14 @@ Certains packs de construction ne sont pas configurés pour télécharger automa
 Vous pouvez utiliser des packs de construction disposant de mécanismes intégrés pour éviter de charger des composants obsolètes. Exemples de packs de construction : 
 {: tsResolve}
 
-  * [Pack de construction Java Cloud Foundry ![icône de lien externe](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack){: new_window}. Ce pack de construction comporte un mécanisme intégré qui permet de s'assurer d'utiliser la version la plus récente. 
-Pour plus d'informations sur le fonctionnement de ce mécanisme, voir
-[extending-caches.md ![icône de lien externe](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}. 
+  * [Pack de construction Java Cloud Foundry ![icône de lien externe](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack){: new_window}. Ce pack de construction comporte un mécanisme intégré qui permet de s'assurer d'utiliser la version la plus récente. Pour plus d'informations sur le fonctionnement de ce mécanisme, voir [extending-caches.md ![icône de lien externe](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}. 
   * [Pack de construction Node.js Cloud Foundry ![icône de lien externe](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}. Ce pack de construction a une fonctionnalité similaire qui utilise des variables d'environnement. Pour permettre au pack de construction Node.js de télécharger des modules de noeud sur internet à chaque fois, entrez la commande suivante dans l'interface de ligne de commande cf : 	
   ```
   set NODE_MODULES_CACHE=false
   ```
 Si le pack de construction que vous utilisez ne dispose pas d'un mécanisme permettant de charger automatiquement les composants les plus récents,  vous pouvez supprimer manuellement le contenu du répertoire cache et envoyer à nouveau votre application par commande push en procédant comme suit :
-  1. Réservez une branche d'un pack de construction null, par exemple https://github.com/ryandotsmith/null-buildpack. 
-Pour plus d'informations sur la réservation d'une branche, voir
-[Git Basics - Getting a Git Repository ![icône de lien externe](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}.  
-  2. Ajoutez la ligne suivante au fichier `null-buildpack/bin/compile` et validez les modifications. 
-Pour plus d'informations sur la validation des modifications, voir
-[Git Basics - Recording Changes to the Repository ![icône de lien externe](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}.
+  1. Réservez une branche d'un pack de construction null, par exemple https://github.com/ryandotsmith/null-buildpack. Pour plus d'informations sur la réservation d'une branche, voir [Git Basics - Getting a Git Repository ![icône de lien externe](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}.  
+  2. Ajoutez la ligne suivante au fichier `null-buildpack/bin/compile` et validez les modifications. Pour plus d'informations sur la validation des modifications, voir [Git Basics - Recording Changes to the Repository ![icône de lien externe](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}.
   ```
   rm -rfv $2/*
   ```
@@ -1659,10 +1640,8 @@ Lorsque vous envoyez par commande push une application dans Bluemix à l'aide d'
 
 
 
-Dans le pack de construction PHP, le paramètre error_log est utilisé pour définir le niveau de journalisation. Par défaut, la valeur du paramètre `error_log` est **stderr notice**. L'exemple
-ci-dessous illustre la configuration du niveau de journalisation par défaut dans le fichier `nginx-defaults.conf` du pack de
-construction PHP fourni par Cloud Foundry. Pour plus d'informations, voir
-[cloudfoundry/php-buildpack ![icône de lien externe](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/php-buildpack/blob/ff71ea41d00c1226d339e83cf2c7d6dda6c590ef/defaults/config/nginx/1.5.x/nginx-defaults.conf){: new_window}.
+Dans le pack de construction PHP, le paramètre error_log est utilisé pour définir le niveau de journalisation. Par défaut, la valeur du paramètre `error_log` est **stderr notice**. L'exemple ci-dessous illustre la configuration du niveau de journalisation par défaut dans le fichier `nginx-defaults.conf` du pack de
+construction PHP fourni par Cloud Foundry. Pour plus d'informations, voir [cloudfoundry/php-buildpack ![icône de lien externe](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/php-buildpack/blob/ff71ea41d00c1226d339e83cf2c7d6dda6c590ef/defaults/config/nginx/1.5.x/nginx-defaults.conf){: new_window}.
 {: tsCauses} 
 
 ```
@@ -1684,7 +1663,9 @@ pid @{HOME}/nginx/logs/nginx.pid;
 ```
 Pour plus d'informations sur la modification de la configuration de
 journalisation par défaut, voir
-[error_log ![icône de lien externe](../icons/launch-glyph.svg)](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}. 	
+[error_log ![icône de lien externe](../icons/launch-glyph.svg)](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}.
+	
+
 ## Impossible d'importer une bibliothèque Python tierce dans {{site.data.keyword.Bluemix_notm}}
 {: #ts_importpylib}
 

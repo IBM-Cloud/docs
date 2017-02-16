@@ -1,4 +1,4 @@
-﻿---
+---
 
 copyright:
   years: 2015, 2017
@@ -213,8 +213,8 @@ Au lieu de coder en dur les données d'identification dans votre application, ut
 ```
 process.env.VCAP_SERVICES
 ```
-Pour plus d'informations sur les commandes que vous pouvez utiliser dans
-d'autres langages de programmation, voir [Java ![icône de lien externe](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} et [Ruby ![icône de lien externe](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}.
+Pour plus d'informations sur les commandes que vous pouvez utiliser dans d'autres langages de programmation, voir [Java ![icône de lien externe](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} et [Ruby ![icône de lien externe](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}.
+
 
 
 
@@ -296,8 +296,7 @@ Si vous suspectez l'arrêt d'un service {{site.data.keyword.Bluemix_notm}}, cons
 unités peut éliminer diverses erreurs à l'origine de l'erreur 502. 
   * Attendez et recommencez ultérieurement. Dans certaines instances, des problèmes temporaires peuvent se produire
 avec votre fournisseur d'accès Internet ou les services {{site.data.keyword.Bluemix_notm}}. Vous pouvez attendre jusqu'à ce que les problèmes temporaires soient résolus.
-  * Si le problème existe toujours, contactez le support {{site.data.keyword.Bluemix_notm}}. 
-Pour plus d'informations, voir [Contacter le support {{site.data.keyword.Bluemix_notm}} ![icône de lien externe](../icons/launch-glyph.svg)](/docs/support/index.html#contacting-bluemix-support){: new_window}. 
+  * Si le problème existe toujours, contactez le support {{site.data.keyword.Bluemix_notm}}. Pour plus d'informations, voir [Contacter le support {{site.data.keyword.Bluemix_notm}} ![icône de lien externe](../icons/launch-glyph.svg)](/docs/support/index.html#contacting-bluemix-support){: new_window}. 
 
 
 
@@ -349,8 +348,7 @@ Le service IBM {{site.data.keyword.mobilepushshort}} utilise le service de messa
 {: tsCauses}
 
  
-Utilisez des services de tiers qui ne sont pas basés sur le service GCM
-comme solution palliative, par exemple, [Pushy ![icône de lien externe](../icons/launch-glyph.svg)](https://pushy.me){: new_window}, [igetui ![icône de lien externe](../icons/launch-glyph.svg)](http://www.getui.com/){: new_window} et [jpush ![icône de lien externe](../icons/launch-glyph.svg)](https://www.jpush.cn/){: new_window}.
+Utilisez des services de tiers qui ne sont pas basés sur le service GCM comme solution palliative, par exemple, [Pushy ![icône de lien externe](../icons/launch-glyph.svg)](https://pushy.me){: new_window}, [igetui ![icône de lien externe](../icons/launch-glyph.svg)](http://www.getui.com/){: new_window} et [jpush ![icône de lien externe](../icons/launch-glyph.svg)](https://www.jpush.cn/){: new_window}.
 {: tsResolve}
 
 
@@ -815,8 +813,7 @@ Effectuez les opérations suivantes en fonction de l'origine du problème :
         ```
 		cf push MonNoeudJsUnique01 -p chemin_app -c "node app.js"
 		```
-	  * Utilisez le fichier
-[package.json ![icône de lien externe](../icons/launch-glyph.svg)](https://docs.npmjs.com/json){: new_window}. Exemple :
+	  * Utilisez le fichier [package.json ![icône de lien externe](../icons/launch-glyph.svg)](https://docs.npmjs.com/json){: new_window}. Exemple :
 	    ```
 		{
       ...
@@ -855,31 +852,24 @@ l'application. Vous devez de plus placer ce fichier dans le répertoire racine d
  }
     ```
 	
-Pour d'autres conseils relatifs aux applications Node.js, voir
-[Tips for Node.js Applications ![icône de lien externe](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}.	
+Pour d'autres conseils relatifs aux applications Node.js, voir [Tips for Node.js Applications ![icône de lien externe](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}.	
 
 
 
 
-## Des erreurs de configuration apparaissent dans le fichier `server.xml` après l'importation d'une application
-{{site.data.keyword.Bluemix_notm}} Liberty depuis Bluemix DevOps Services dans Eclipse
+## Des erreurs de configuration apparaissent dans le fichier `server.xml` après l'importation d'une application {{site.data.keyword.Bluemix_notm}} Liberty depuis Bluemix DevOps Services dans Eclipse
 {: #ts_eclipse}
 
-Si des erreurs de configuration apparaissent dans le fichier `server.xml` après l'importation d'une application
-{{site.data.keyword.Bluemix_notm}} Liberty depuis IBM Bluemix DevOps Services dans Eclipse, il peut être nécessaire de retirer le fichier
-`server.xml` du projet. 
+Si des erreurs de configuration apparaissent dans le fichier `server.xml` après l'importation d'une application {{site.data.keyword.Bluemix_notm}} Liberty depuis IBM Bluemix DevOps Services dans Eclipse, il peut être nécessaire de retirer le fichier `server.xml` du projet. 
 
  
 
-Après avoir importé une application {{site.data.keyword.Bluemix_notm}} Liberty depuis {{site.data.keyword.Bluemix_notm}}
-DevOps Services dans Eclipse, vous constatez que le fichier `server.xml` contient des erreurs de configuration dans la vue Erreurs
-d'Eclipse. 
+Après avoir importé une application {{site.data.keyword.Bluemix_notm}} Liberty depuis {{site.data.keyword.Bluemix_notm}} DevOps Services dans Eclipse, vous constatez que le fichier `server.xml` contient des erreurs de configuration dans la vue Erreurs d'Eclipse.
 {: tsSymptoms}
 
  
 
-Le pack de construction Liberty utilise le fichier `server.xml` pour configurer l'application et génère un fichier
-`runtime-vars.xml` lorsque l'application Liberty est envoyée par commande push dans {{site.data.keyword.Bluemix_notm}}. Lorsque
+Le pack de construction Liberty utilise le fichier `server.xml` pour configurer l'application et génère un fichier `runtime-vars.xml` lorsque l'application Liberty est envoyée par commande push dans {{site.data.keyword.Bluemix_notm}}. Lorsque
 vous importez l'application dans Eclipse, le fichier `runtime-vars.xml` n'existe pas dans votre environnement local.
 {: tsCauses}
 
@@ -910,9 +900,7 @@ Ce problème peut se produire si des scripts (tels que le script de détection, 
 
  
 
-Vous pouvez utiliser la commande
-[git update ![icône de lien externe](../icons/launch-glyph.svg)](http://git-scm.com/docs/git-update-index){: new_window} pour activer le droit d'exécution
-pour chaque script. Par exemple, vous pouvez entrer `git update --chmod=+x script.sh`.
+Vous pouvez utiliser la commande [git update ![icône de lien externe](../icons/launch-glyph.svg)](http://git-scm.com/docs/git-update-index){: new_window} pour activer le droit d'exécution pour chaque script. Par exemple, vous pouvez entrer `git update --chmod=+x script.sh`.
 {: tsResolve}
 	
 	
@@ -1151,8 +1139,7 @@ Si vous avez configuré votre projet GitHub pour qu'il crée des liens d'éléme
 6. Vérifiez l'absence d'erreurs en consultant à nouveau l'icône d'état.
    ![Icône d'état sans erreur](images/githubResolved_small.png)
 
-Pour plus d'informations, voir
-[Setting up GitHub for Bluemix DevOps Services projects ![icône de lien externe](../icons/launch-glyph.svg)](https://hub.jazz.net/docs/githubhooks/){: new_window}.
+Pour plus d'informations, voir [Setting up GitHub for Bluemix DevOps Services projects ![icône de lien externe](../icons/launch-glyph.svg)](https://hub.jazz.net/docs/githubhooks/){: new_window}.
 
 
 # Traitement des incidents liés à la gestion des comptes
@@ -1182,9 +1169,7 @@ Le statut de votre compte {{site.data.keyword.Bluemix_notm}} devient inactif lor
 
  
 
-Pour réactiver votre compte, prenez contact avec le
-[support {{site.data.keyword.Bluemix_notm}} ![icône de lien externe](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}. Dans le courrier électronique, incluez les informations
-suivantes :
+Pour réactiver votre compte, prenez contact avec le [support {{site.data.keyword.Bluemix_notm}} ![icône de lien externe](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}. Dans le courrier électronique, incluez les informations suivantes :
 {: tsResolve}
 
   * L'IBMid que vous utilisez pour vous connecter à {{site.data.keyword.Bluemix_notm}}.
@@ -1334,20 +1319,14 @@ Certains packs de construction ne sont pas configurés pour télécharger automa
 Vous pouvez utiliser des packs de construction disposant de mécanismes intégrés pour éviter de charger des composants obsolètes. Exemples de packs de construction : 
 {: tsResolve}
 
-  * [Pack de construction Java Cloud Foundry ![icône de lien externe](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack){: new_window}. Ce pack de construction comporte un mécanisme intégré qui permet de s'assurer d'utiliser la version la plus récente. 
-Pour plus d'informations sur le fonctionnement de ce mécanisme, voir
-[extending-caches.md ![icône de lien externe](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}. 
+  * [Pack de construction Java Cloud Foundry ![icône de lien externe](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack){: new_window}. Ce pack de construction comporte un mécanisme intégré qui permet de s'assurer d'utiliser la version la plus récente. Pour plus d'informations sur le fonctionnement de ce mécanisme, voir [extending-caches.md ![icône de lien externe](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}. 
   * [Pack de construction Node.js Cloud Foundry ![icône de lien externe](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}. Ce pack de construction a une fonctionnalité similaire qui utilise des variables d'environnement. Pour permettre au pack de construction Node.js de télécharger des modules de noeud sur internet à chaque fois, entrez la commande suivante dans l'interface de ligne de commande cf : 	
   ```
   set NODE_MODULES_CACHE=false
   ```
 Si le pack de construction que vous utilisez ne dispose pas d'un mécanisme permettant de charger automatiquement les composants les plus récents,  vous pouvez supprimer manuellement le contenu du répertoire cache et envoyer à nouveau votre application par commande push en procédant comme suit :
-  1. Réservez une branche d'un pack de construction null, par exemple https://github.com/ryandotsmith/null-buildpack. 
-Pour plus d'informations sur la réservation d'une branche, voir
-[Git Basics - Getting a Git Repository ![icône de lien externe](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}.  
-  2. Ajoutez la ligne suivante au fichier `null-buildpack/bin/compile` et validez les modifications. 
-Pour plus d'informations sur la validation des modifications, voir
-[Git Basics - Recording Changes to the Repository ![icône de lien externe](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}.
+  1. Réservez une branche d'un pack de construction null, par exemple https://github.com/ryandotsmith/null-buildpack. Pour plus d'informations sur la réservation d'une branche, voir [Git Basics - Getting a Git Repository ![icône de lien externe](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}.  
+  2. Ajoutez la ligne suivante au fichier `null-buildpack/bin/compile` et validez les modifications. Pour plus d'informations sur la validation des modifications, voir [Git Basics - Recording Changes to the Repository ![icône de lien externe](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}.
   ```
   rm -rfv $2/*
   ```
@@ -1387,8 +1366,7 @@ Lorsque vous envoyez par commande push une application dans Bluemix à l'aide d'
 
 Dans le pack de construction PHP, le paramètre error_log est utilisé pour définir le niveau de journalisation. Par défaut, la valeur du paramètre `error_log` est **stderr notice**. L'exemple
 ci-dessous illustre la configuration du niveau de journalisation par défaut dans le fichier `nginx-defaults.conf` du pack de
-construction PHP fourni par Cloud Foundry. Pour plus d'informations, voir
-[cloudfoundry/php-buildpack ![icône de lien externe](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/php-buildpack/blob/ff71ea41d00c1226d339e83cf2c7d6dda6c590ef/defaults/config/nginx/1.5.x/nginx-defaults.conf){: new_window}.
+construction PHP fourni par Cloud Foundry. Pour plus d'informations, voir [cloudfoundry/php-buildpack ![icône de lien externe](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/php-buildpack/blob/ff71ea41d00c1226d339e83cf2c7d6dda6c590ef/defaults/config/nginx/1.5.x/nginx-defaults.conf){: new_window}.
 {: tsCauses} 
 
 ```
@@ -1407,39 +1385,31 @@ daemon off;
 error_log stderr error;
 pid @{HOME}/nginx/logs/nginx.pid;
 ```
-Pour plus d'informations sur la modification de la configuration de
-journalisation par défaut, voir
-[error_log ![icône de lien externe](../icons/launch-glyph.svg)](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}. 	
+Pour plus d'informations sur la modification de la configuration de journalisation par défaut, voir [error_log ![icône de lien externe](../icons/launch-glyph.svg)](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}.
+	
+
 ## Impossible d'importer une bibliothèque Python tierce dans {{site.data.keyword.Bluemix_notm}}
 {: #ts_importpylib}
 
 Il se peut que vous ne puissiez pas importer une bibliothèque Python tierce dans {{site.data.keyword.Bluemix_notm}}. Vous pouvez résoudre le problème en ajoutant des fichiers de configuration dans le répertoire racine de votre application Python.
 
 
-Lorsque vous essayez d'importer une bibliothèque Python tierce, par
-exemple la bibliothèque `web.py`, la commande `cf push` échoue.
+Lorsque vous essayez d'importer une bibliothèque Python tierce, par exemple la bibliothèque `web.py`, la commande `cf push` échoue.
 {: tsSymptoms}
 
 
  
 
-Ce problème survient lorsque les informations de configuration pour
-l'application Python manquent.
+Ce problème survient lorsque les informations de configuration pour l'application Python manquent.
 {: tsCauses}
 
 
  
 
-Pour résoudre le problème, ajoutez un fichier `requirements.txt` et un fichier `Procfile` dans le répertoire racine
-de votre application Python. Les informations suivantes supposent que vous
-importiez la bibliothèque web.py :
+Pour résoudre le problème, ajoutez un fichier `requirements.txt` et un fichier `Procfile` dans le répertoire racine de votre application Python. Les informations suivantes supposent que vous importiez la bibliothèque web.py :
 {: tsResolve}
 
-  1. Ajoutez un fichier `requirements.txt` dans le répertoire racine de votre application Python.
-     Le fichier
-`requirements.txt` spécifie les packages de bibliothèque requis pour votre application Python ainsi que la version des packages. L'exemple
-ci-après illustre le contenu du fichier `requirements.txt`, où `web.py==0.37` indique que la version de la bibliothèque
-`web.py` qui sera téléchargée est la version 0.37 et `wsgiref==0.1.2` indique que la version de l'interface Web de
+  1. Ajoutez un fichier `requirements.txt` dans le répertoire racine de votre application Python. Le fichier `requirements.txt` spécifie les packages de bibliothèque requis pour votre application Python ainsi que la version des packages. L'exemple ci-après illustre le contenu du fichier `requirements.txt`, où `web.py==0.37` indique que la version de la bibliothèque `web.py` qui sera téléchargée est la version 0.37 et `wsgiref==0.1.2` indique que la version de l'interface Web de
 Secure Gateway requise par la bibliothèque web.py est la version 0.1.2.
 	 ```
 	 web.py==0.37

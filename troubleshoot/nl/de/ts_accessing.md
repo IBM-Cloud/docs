@@ -49,10 +49,10 @@ Folgen Sie dem Anmeldeprozess, um ein {{site.data.keyword.Bluemix_notm}}-Konto z
 {: tsResolve}
 
 Je nachdem, wie Ihr Konto eingerichtet wurde, können einige dieser Anmeldeoptionen auf Sie zutreffen: 
- * SoftLayer-Benutzer mit SoftLayer-IDs müssen sich über das [Kundenportal ![Symbol für externen Link](../icons/launch-glyph.svg)](https://control.softlayer.com){: new_window} anmelden. 
- * SoftLayer-Benutzer mit einer IBMid und mit oder ohne verknüpftes Bluemix-Konto können sich über das [Kundenportal ![Symbol für externen Link](../icons/launch-glyph.svg)](https://control.softlayer.com){: new_window} anmelden und dort das SoftLayer-Kundenportal öffnen oder sie können sich über die [Bluemix-Konsole ![Symbol für externen Link](../icons/launch-glyph.svg)](https://console.{DomainName}){: new_window} anmelden und dort das Infrastruktur-Dashboard öffnen.  
+ * SoftLayer-Benutzer mit SoftLayer-IDs müssen sich über das [Kundenportal ![Symbol für externen Link](../icons/launch-glyph.svg)](https://control.softlayer.com){: new_window} anmelden.
+ * SoftLayer-Benutzer mit einer IBMid und mit oder ohne verknüpftes Bluemix-Konto können sich über das [Kundenportal ![Symbol für externen Link](../icons/launch-glyph.svg)](https://control.softlayer.com){: new_window} anmelden und dort das SoftLayer-Kundenportal öffnen oder sie können sich über die [Bluemix-Konsole ![Symbol für externen Link](../icons/launch-glyph.svg)](https://console.{DomainName}){: new_window} anmelden und dort das Infrastruktur-Dashboard öffnen. 
  * Bluemix-Benutzer ohne verknüpftes SoftLayer-Konto müssen sich über die Bluemix-Konsole anmelden.
- * Bluemix-Benutzer mit verknüpftem SoftLayer-Konto können sich über die [Bluemix-Konsole ![Symbol für externen Link](../icons/launch-glyph.svg)](https://console.{DomainName}){: new_window} oder das [Kundenportal ![Symbol für externen Link](../icons/launch-glyph.svg)](https://control.softlayer.com){: new_window} anmelden. 
+ * Bluemix-Benutzer mit verknüpftem SoftLayer-Konto können sich über die [Bluemix-Konsole ![Symbol für externen Link](../icons/launch-glyph.svg)](https://console.{DomainName}){: new_window} oder das [Kundenportal ![Symbol für externen Link](../icons/launch-glyph.svg)](https://control.softlayer.com){: new_window} anmelden.
  
 
 ## Das Kennwort ist ungültig.
@@ -166,7 +166,7 @@ Wenn Sie sich für ein {{site.data.keyword.Bluemix_notm}}-Testkonto registriert 
 Wenn Sie sich für ein {{site.data.keyword.Bluemix_notm}}-Testkonto registriert haben, erhalten Sie eine Bestätigungs-E-Mail. Sie müssen auf den Link in dieser Bestätigungs-E-Mail klicken, um den Registrierungsprozess abzuschließen.
 {: tsCauses} 
 
-Die Bestätigungs-E-Mail wird an die E-Mail-Adresse gesendet, die Sie angegeben haben. Überprüfen Sie Ihren Posteingang und Ihren Ordner für Junk-Mail. Wenn Sie die Bestätigungs-E-Mail nicht empfangen haben, wenden Sie sich an den [{{site.data.keyword.Bluemix_notm}}-Support ![Symbol für externen Link](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}.   
+Die Bestätigungs-E-Mail wird an die E-Mail-Adresse gesendet, die Sie angegeben haben. Überprüfen Sie Ihren Posteingang und Ihren Ordner für Junk-Mail. Wenn Sie die Bestätigungs-E-Mail nicht empfangen haben, wenden Sie sich an den [{{site.data.keyword.Bluemix_notm}}-Support ![Symbol für externen Link](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}.  
 {: tsResolve}
 
 
@@ -260,7 +260,7 @@ Sie können nach Bedarf mindestens eine der folgenden Aktionen ausführen:
   * Von {{site.data.keyword.Bluemix_notm}} abmelden und anschließend wieder anmelden.
   * Den persönlichen Browsingmodus des Browsers verwenden. 
   * Die Cookies und den Cache des Browsers löschen.
-  * Einen anderen Browser verwenden. Informationen zu den Versionen der Browser, die von {{site.data.keyword.Bluemix_notm}} unterstützt werden, finden Sie in den [Voraussetzungen für {{site.data.keyword.Bluemix_notm}} ![Symbol für externen Link](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}. 
+  * Einen anderen Browser verwenden. Informationen zu den Versionen der Browser, die von {{site.data.keyword.Bluemix_notm}} unterstützt werden, finden Sie in den [Voraussetzungen für {{site.data.keyword.Bluemix_notm}} ![Symbol für externen Link](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}.
   * Wenn Sie die cf-Befehlszeilenschnittstelle installiert haben, geben Sie den Befehl `cf apps` ein, um anzuzeigen, ob die Anwendung aktiv ist.
   
   

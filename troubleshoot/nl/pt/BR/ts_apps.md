@@ -215,11 +215,11 @@ Em vez de codificar permanentemente as credenciais no app, use parâmetros de co
 ```
 process.env.VCAP_SERVICES
 ```
-Para obter mais informações sobre os comandos que podem ser usados em outras linguagens de programa, veja [Java ![Ícone de link externo](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} e [Ruby ![Ícone de link externo](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}.
+Para obter mais informações sobre os comandos que podem ser usados em outras linguagens de programa, veja [Java ![Ícone de link externo](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} e [Ruby ![Ícone de link externo](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}. 
+ 
 
-
-
-
+ 
+ 
 
 
 
@@ -266,8 +266,7 @@ Outras causas menos comuns de um erro de Gateway inválido são os dropouts do p
 
  
 
-Se você suspeitar que um serviço do {{site.data.keyword.Bluemix_notm}} está inativo, verifique primeiramente a página [Status do {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../icons/launch-glyph.svg)](http://ibm.biz/bluemixstatus){: new_window}. Talvez queira usar o serviço em outra região do {{site.data.keyword.Bluemix_notm}} como uma solução alternativa. As informações detalhadas estão disponíveis em
-[Usando serviços em outra região](/docs/services/reqnsi.html#cross_region_service). Se o status de serviço for normal, tente as etapas a seguir para resolver o problema: 
+Se você suspeitar que um serviço do {{site.data.keyword.Bluemix_notm}} está inativo, verifique primeiramente a página [Status do {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../icons/launch-glyph.svg)](http://ibm.biz/bluemixstatus){: new_window}. Talvez queira usar o serviço em outra região do {{site.data.keyword.Bluemix_notm}} como uma solução alternativa. As informações detalhadas estão disponíveis em [Usando serviços em outra região](/docs/services/reqnsi.html#cross_region_service). Se o status de serviço for normal, tente as etapas a seguir para resolver o problema: 
 {: tsResolve}
 
   * Tente novamente a ação:
@@ -1294,33 +1293,22 @@ evitar o carregamento de componentes obsoletos. Os buildpacks a seguir são dois
 exemplos: 
 {: tsResolve}
 
-  * [Buildpack Java do Cloud Foundry ![Ícone de link externo](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack){: new_window}. Esse buildpack tem um mecanismo integrado
-para assegurar que a versão mais recente do buildpack seja usada. Para obter mais informações sobre como esse mecanismo funciona, veja [extending-caches.md ![Ícone de link externo](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}. 
-  * [Buildpack Node.js do Cloud Foundry ![Ícone de link externo](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}. Esse buildpack tem funcionalidade semelhante
-usando variáveis de ambiente. Para que o buildpack Node.js sempre possa
-fazer download de módulos do nó a partir da Internet, digite o comando
-a seguir na interface de linha de comandos cf: 	
+  * [Buildpack Java do Cloud Foundry ![Ícone de link externo](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack){: new_window}. Esse buildpack tem um mecanismo integrado para assegurar que a versão mais recente do buildpack seja usada. Para obter mais informações sobre como esse mecanismo funciona, veja [extending-caches.md ![Ícone de link externo](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}. 
+  * [Buildpack Node.js do Cloud Foundry ![Ícone de link externo](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}. Esse buildpack tem funcionalidade semelhante usando variáveis de ambiente. Para que o buildpack Node.js sempre possa fazer download de módulos do nó a partir da Internet, digite o comando a seguir na interface de linha de comandos cf: 	
   ```
   set NODE_MODULES_CACHE=false
   ```
-Se o buildpack que você estiver usando não fornecer um mecanismo
-para carregar os componentes mais recentes automaticamente, será possível excluir manualmente
-os conteúdos no diretório de cache e enviar por push seu app novamente executando
-as etapas a seguir:
+Se o buildpack que você estiver usando não fornecer um mecanismo para carregar os componentes mais recentes automaticamente, será possível excluir manualmente os conteúdos no diretório de cache e enviar por push seu app novamente executando as etapas a seguir:
   1. Efetue o check-out de uma ramificação de um buildpack nulo, por exemplo, https://github.com/ryandotsmith/null-buildpack. Para obter informações sobre como efetuar check-out de uma ramificação, veja [Conceitos básicos do Git - Obtendo um repositório Git ![Ícone de link externo](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}.  
-  2. Inclua a linha a seguir no arquivo `null-buildpack/bin/compile`
-e confirme as mudanças. Para obter informações sobre como confirmar mudanças, veja [Conceitos básicos do Git - Registrando mudanças no repositório ![Ícone de link externo](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}.
+  2. Inclua a linha a seguir no arquivo `null-buildpack/bin/compile` e confirme as mudanças. Para obter informações sobre como confirmar mudanças, veja [Conceitos básicos do Git - Registrando mudanças no repositório ![Ícone de link externo](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}.
   ```
   rm -rfv $2/*
   ```
-  3. Envie seu app por push com o buildpack nulo que foi modificado para excluir
-o cache usando o comando a seguir. Depois de concluir essa
-etapa, todos os conteúdos no diretório de cache de seu app serão excluídos.
+  3. Envie seu app por push com o buildpack nulo que foi modificado para excluir o cache usando o comando a seguir. Depois de concluir essa etapa, todos os conteúdos no diretório de cache de seu app serão excluídos.
   ```
   cf push appname -p app_path -b <modified_null_buildpack>
   ```
-  4. Envie seu app por push com o buildpack mais recente que você deseja usar
-usando o comando a seguir: 
+  4. Envie seu app por push com o buildpack mais recente que você deseja usar usando o comando a seguir: 
   ```
   cf push appname -p app_path -b <latest_buildpack>
   ```
@@ -1331,8 +1319,7 @@ usando o comando a seguir:
 ## Mensagens de AVISO do buildpack PHP
 {: #ts_phplog}
 
-Talvez você veja mensagens que contenham AVISO nos logs. É possível parar a criação de log dessas mensagens alterando o
-nível de criação de log.	
+Talvez você veja mensagens que contenham AVISO nos logs. É possível parar a criação de log dessas mensagens alterando o nível de criação de log.	
 	
  
 
@@ -1348,10 +1335,7 @@ Ao enviar por push um aplicativo para o Bluemix usando um buildpack PHP, você p
 
 
 
-No buildpack PHP, o parâmetro error_log é usado para definir o nível de criação de log. Por padrão, o valor do parâmetro `error_log`
-é **stderr notice**. O exemplo a seguir mostra a
-configuração do nível de criação de log padrão no arquivo `nginx-defaults.conf`
-do buildpack PHP que é fornecido pelo Cloud Foundry. Para obter mais informações, veja [cloudfoundry/php-buildpack ![Ícone de link externo](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/php-buildpack/blob/ff71ea41d00c1226d339e83cf2c7d6dda6c590ef/defaults/config/nginx/1.5.x/nginx-defaults.conf){: new_window}.
+No buildpack PHP, o parâmetro error_log é usado para definir o nível de criação de log. Por padrão, o valor do parâmetro `error_log` é **stderr notice**. O exemplo a seguir mostra a configuração do nível de criação de log padrão no arquivo `nginx-defaults.conf` do buildpack PHP que é fornecido pelo Cloud Foundry. Para obter mais informações, veja [cloudfoundry/php-buildpack ![Ícone de link externo](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/php-buildpack/blob/ff71ea41d00c1226d339e83cf2c7d6dda6c590ef/defaults/config/nginx/1.5.x/nginx-defaults.conf){: new_window}.
 {: tsCauses} 
 
 ```
@@ -1362,9 +1346,7 @@ pid @{HOME}/nginx/logs/nginx.pid;
 
  	
 	
-As mensagens `NOTICE` são informativas e
-não necessariamente indicam que ocorreu um problema. É possível parar a criação de log dessas mensagens mudando o nível de criação de log de aviso de erro padrão para erro padrão no arquivo nginx-defaults.conf de seu buildpack. Por
-exemplo: 	
+As mensagens `NOTICE` são informativas e não necessariamente indicam que ocorreu um problema. É possível parar a criação de log dessas mensagens mudando o nível de criação de log de aviso de erro padrão para erro padrão no arquivo nginx-defaults.conf de seu buildpack. Por exemplo: 	
 {: tsResolve}
 
 ```
@@ -1378,28 +1360,22 @@ Para obter mais informações sobre como mudar a configuração de criação de 
 ## Impossível importar uma biblioteca Python de terceiro para o {{site.data.keyword.Bluemix_notm}}
 {: #ts_importpylib}
 
-Pode ser que você não consiga importar uma biblioteca Python de terceiros
-para o {{site.data.keyword.Bluemix_notm}}. É possível resolver o problema incluindo arquivos de configuração no diretório-raiz
-do aplicativo python.
+Pode ser que você não consiga importar uma biblioteca Python de terceiros para o {{site.data.keyword.Bluemix_notm}}. É possível resolver o problema incluindo arquivos de configuração no diretório-raiz do aplicativo python.
 
 
-Ao tentar importar uma biblioteca Python de terceiros, como
-a biblioteca `web.py`, o comando `cf push`
-falha.
+Ao tentar importar uma biblioteca Python de terceiros, como a biblioteca `web.py`, o comando `cf push` falha.
 {: tsSymptoms}
 
 
  
 
-Esse problema ocorre quando as informações de configuração para o
-aplicativo Python estão ausentes.
+Esse problema ocorre quando as informações de configuração para o aplicativo Python estão ausentes.
 {: tsCauses}
 
 
  
 
-Para resolver o problema, inclua um arquivo `requirements.txt` e um arquivo `Procfile` no diretório-raiz de seu app Python. As
-informações a seguir assumem que você esteja importando a biblioteca web.py:
+Para resolver o problema, inclua um arquivo `requirements.txt` e um arquivo `Procfile` no diretório-raiz de seu app Python. As informações a seguir assumem que você esteja importando a biblioteca web.py:
 {: tsResolve}
 
   1. Inclua um arquivo `requirements.txt` no diretório-raiz de seu app Python.
@@ -1408,18 +1384,14 @@ informações a seguir assumem que você esteja importando a biblioteca web.py:
 	 web.py==0.37
      wsgiref==0.1.2
 	 ```
-	Para obter mais informações sobre como configurar
-o arquivo `requirements.txt`, consulte [Arquivos de requisitos](https://pip.readthedocs.org/en/1.1/requirements.html). 
-	 
+	Para obter mais informações sobre como configurar o arquivo `requirements.txt`, consulte [Arquivos de requisitos](https://pip.readthedocs.org/en/1.1/requirements.html).
+	
   2. Inclua um arquivo `Procfile` no diretório-raiz de seu aplicativo Python.
-	O arquivo `Procfile`
-deve conter o comando inicial do aplicativo Python. No comando a seguir, *yourappname* é o nome de seu aplicativo Python e *PORT* é o número
-da porta que o seu aplicativo Python deve usar para receber solicitações de usuários do app. *$PORT* é opcional. Se você não especificar PORT no comando inicial, o número da porta sob a variável de ambiente `VCAP_APP_PORT` que está dentro do aplicativo será usado em seu lugar. 
+	O arquivo `Procfile` deve conter o comando inicial do aplicativo Python. No comando a seguir, *yourappname* é o nome de seu aplicativo Python e *PORT* é o número da porta que o seu aplicativo Python deve usar para receber solicitações de usuários do app. *$PORT* é opcional. Se você não especificar PORT no comando inicial, o número da porta sob a variável de ambiente `VCAP_APP_PORT` que está dentro do aplicativo será usado em seu lugar. 
 	```
 	web: python <yourappname>.py $PORT
 	```
-Agora você pode importar a biblioteca Python
-de terceiros para o {{site.data.keyword.Bluemix_notm}}.	
+Agora você pode importar a biblioteca Python de terceiros para o {{site.data.keyword.Bluemix_notm}}.	
 
 
 
@@ -1436,15 +1408,13 @@ O botão Ações na página Detalhes da instância está desativado.
 Esse problema ocorre por causa dos seguintes motivos:
 {: tsCauses}
 
-  * O aplicativo não é um aplicativo da Web Java™. O Runtime Management Utilities (RMU) suporta somente aplicativos da web
-que são implementados com buildpacks Liberty.
+  * O aplicativo não é um aplicativo da Web Java™. O Runtime Management Utilities (RMU) suporta somente aplicativos da web que são implementados com buildpacks Liberty.
   * O aplicativo não é implementado com o buildpack Liberty integrado.
   * O aplicativo foi implementado com uma versão anterior do buildpack Liberty.
 
 
 
-Se o problema for causado por uma versão anterior do buildpack Liberty, reimplemente o aplicativo no {{site.data.keyword.Bluemix_notm}}. Caso contrário, é possível fornecer os
-arquivos de log do aplicativo do cliente para a equipe de suporte:
+Se o problema for causado por uma versão anterior do buildpack Liberty, reimplemente o aplicativo no {{site.data.keyword.Bluemix_notm}}. Caso contrário, é possível fornecer os arquivos de log do aplicativo do cliente para a equipe de suporte:
 {: tsResolve} 
 
   * logs/messages.log
@@ -1460,8 +1430,7 @@ arquivos de log do aplicativo do cliente para a equipe de suporte:
 
  
 
-Um nome de usuário e senha são necessários ao abrir a janela
-de rastreio e dump.
+Um nome de usuário e senha são necessários ao abrir a janela de rastreio e dump.
 {: tsSymptoms}
 
  
@@ -1482,8 +1451,7 @@ A solução é reinserir o nome de usuário e senha.
 
  
 
-Uma mensagem de erro é exibida quando as operações de rastreio ou dump
-estão em execução. A mensagem indica que uma instância de destino para um app não está no estado em execução	
+Uma mensagem de erro é exibida quando as operações de rastreio ou dump estão em execução. A mensagem indica que uma instância de destino para um app não está no estado em execução	
 {: tsSymptoms}
 
 ```
@@ -1499,16 +1467,12 @@ Instância 4: A especificação de rastreio foi configurada com êxito
 Esse problema ocorre por causa dos seguintes motivos:
 {: tsCauses} 
 
-  * As capacidades de gerenciamento de rastreio ou dump são apenas para instâncias do aplicativo
-que estão em execução. As operações de rastreio ou dump não podem ser usadas
-em instâncias do aplicativo que são interrompidas, estão iniciando ou são travadas.
-  * O status da instância do aplicativo é alterado quando o diálogo de rastreio
-ou dump é aberto. 
+  * As capacidades de gerenciamento de rastreio ou dump são apenas para instâncias do aplicativo que estão em execução. As operações de rastreio ou dump não podem ser usadas em instâncias do aplicativo que são interrompidas, estão iniciando ou são travadas.
+  * O status da instância do aplicativo é alterado quando o diálogo de rastreio ou dump é aberto. 
   
 
 
-A solução é fechar a janela e depois reabri-la
-novamente.
+A solução é fechar a janela e depois reabri-la novamente.
 {: tsResolve} 
 
 
@@ -1553,10 +1517,7 @@ Você vê a mensagem de erro `Cota do disco excedida` no log de seu app.
 Este problema é causado por um dos motivos a seguir: 
 {: tsCauses} 
 
-  * Os arquivos de dump são gerados com as instâncias do aplicativo em execução
-e os arquivos usam até a cota de disco alocada. Por padrão, a cota de disco para uma instância do aplicativo é 1 GB. É possível verificar o uso de
-seu disco clicando em **Painel>Aplicativo>Tempo de Execução do Aplicativo**. O exemplo a seguir mostra as informações de tempo de execução,
-incluindo uso do disco, para duas instâncias de um aplicativo:
+  * Os arquivos de dump são gerados com as instâncias do aplicativo em execução e os arquivos usam até a cota de disco alocada. Por padrão, a cota de disco para uma instância do aplicativo é 1 GB. É possível verificar o uso de seu disco clicando em **Painel>Aplicativo>Tempo de Execução do Aplicativo**. O exemplo a seguir mostra as informações de tempo de execução, incluindo uso do disco, para duas instâncias de um aplicativo:
     ```
     Instance	State	CPU	Memory Usage	Disk Usage
 
@@ -1572,8 +1533,7 @@ incluindo uso do disco, para duas instâncias de um aplicativo:
 {: tsResolve} 
 
   * Excluir arquivos de dump depois de eles serem transferidos por download.
-  * Reimplementar o aplicativo com uma cota do disco maior, incluindo
-a entrada a seguir no manifest de implementação:
+  * Reimplementar o aplicativo com uma cota do disco maior, incluindo a entrada a seguir no manifest de implementação:
     ```
 	disk_quota: 2048
 	```
@@ -1610,9 +1570,7 @@ Este comportamento é esperado.
 ## A caixa de seleção Aplicar configuração de rastreio a todas as instâncias do aplicativo está desativada
 {: #ts_bunyan}
 
-A caixa de seleção **Aplicar configuração de rastreio a todas as
-instâncias do aplicativo** é desmarcada e desativada na janela pop-up
-Rastreio do Node.js quando os níveis do criador de logs Bunyan são modificados.
+A caixa de seleção **Aplicar configuração de rastreio a todas as instâncias do aplicativo** é desmarcada e desativada na janela pop-up Rastreio do Node.js quando os níveis do criador de logs Bunyan são modificados.
 
 
 
