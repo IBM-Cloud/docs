@@ -23,22 +23,22 @@ OpenWhisk unterstützt eine offene API, mit der jeder Benutzer einen Ereignispro
 
 Die folgenden Informationen sind für erfahrene OpenWhisk-Benutzer gedacht, die ihre eigenen Feeds veröffentlichen möchten.  Weniger erfahrene OpenWhisk-Benutzer können diesen Abschnitt überspringen.
 
-# Feedarchitektur
+## Feedarchitektur
 
 Es gibt mindestens 3 Architekturmuster zum Erstellen eines Feeds: **Hooks**, **Polling** und **Verbindungen**.
 
-## Hooks
+### Hooks
 Im *Hooks*-Muster wird der Feed mit einer [Web-Hook](https://en.wikipedia.org/wiki/Webhook)-Funktion eingerichtet, die von einem anderen Service verfügbar gemacht wird.   Dazu wird ein Web-Hook in einem externen Service konfiguriert, um direkt per POST-Anforderung zu einer URL zu senden, um einen Auslöser zu aktivieren.  Dies ist die einfachste und bequemste Option, um Feeds mit geringer Frequenz zu implementieren.
 
-## Polling
+### Polling
 Im Polling-Muster wird eine OpenWhisk-*Aktion* angeordnet, um einen Endpunkt regelmäßig abzufragen, um neue Daten abzurufen.
 Dieses Muster ist einfach zu erstellen, aber die Häufigkeit der Ereignisse wird vom Abfrageintervall bestimmt.
 
-## Verbindungen
+### Verbindungen
 Im Verbindungsmuster wird ein Service automatisch installiert, der eine persistente Verbindung zu einer Feedquelle verwaltet.    Die verbindungsbasierte Implementierung kann mit einem Serviceendpunkt über ein langes Polling interagieren. Es kann auch eine Push-Benachrichtigung eingerichtet werden.
 
 
-# Unterschied zwischen Feed und Auslöser
+## Unterschied zwischen Feed und Auslöser
 
 Feeds und Auslöser sind sich sehr ähnlich, aber technisch gesehen unterschiedliche Konzepte.   
 
@@ -48,7 +48,7 @@ Feeds und Auslöser sind sich sehr ähnlich, aber technisch gesehen unterschiedl
 
 - Ein **Feed** ist ein Strom von Ereignissen, die alle zum selben Auslöser *T* gehören. Ein Auslöser wird durch die **Feedaktion** gesteuert, die das Erstellen, Löschen, Anhalten und Fortsetzen des Ereignisstroms abwickelt, der einen Feed bildet.    Die Feedaktion interagiert in der Regel mit externen Services, die die Ereignisse über eine REST-API (die Benachrichtigungen verwaltet) erstellen.
 
-#  Feedaktionen implementieren
+##  Feedaktionen implementieren
 
 Die *Feedaktion* ist eine normale OpenWhisk-*Aktion*, die die folgenden Parameter akzeptieren sollte:
 * **lifecycleEvent**: entweder 'Erstellen', 'Löschen', 'Anhalten' oder 'Anhalten aufheben'
@@ -73,7 +73,7 @@ Für den Cloudant-Feed *changes* kommuniziert die Aktion direkt mit dem Service 
 
 Ein ähnliches Feedaktionsprotokoll tritt für `wsk trigger delete` auf.    
 
-# Feeds mit Hooks implementieren
+## Feeds mit Hooks implementieren
 
 Das Einrichten eines Feeds über einen Hook ist einfach, wenn der Ereignisproduzent die Webhook/Callback-Funktion unterstützt.
 
@@ -88,7 +88,7 @@ Der Webhook sollte angewiesen werden, Benachrichtigungen zu einer URL wie die fo
 Das Formular mit der POST-Anforderung wird als JSON-Dokument interpretiert, das Parameter zum Auslöserereignis definiert.
 OpenWhisk-Regeln übergeben diese Auslöserparameter an Aktionen, die als Ergebnis des Ereignisses ausgelöst werden.
 
-# Feeds mit Polling implementieren
+## Feeds mit Polling implementieren
 
 Eine OpenWhisk-*Aktion* kann so eingerichtet werden, dass eine Feedquelle innerhalb von OpenWhisk vollständig abgefragt wird, ohne dass persistente Verbindungen oder ein externer Service automatisch installiert werden müssen.
 
@@ -102,7 +102,7 @@ Um einen Polling-basierten Feed einzurichten, führt die Feedaktion die folgende
 
 Mit dieser Vorgehensweise wird ein Polling-basierter Auslöser implementiert, der nur OpenWhisk-Aktionen verwendet, ohne dass dazu ein separater Service benötigt wird.
 
-# Feeds mit Verbindungen implementieren
+## Feeds mit Verbindungen implementieren
 
 Die vorherigen zwei Architekturoptionen sind einfach zu implementieren. Wenn Sie jedoch einen sehr leistungsfähigen Feed benötigen, sind persistente Verbindungen und Long-Polling- bzw. ähnliche Verfahren notwendig.
 

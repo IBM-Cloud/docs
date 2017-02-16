@@ -407,7 +407,6 @@ wsk action create weather weather.js
 ```
 {
   "name": "my-action",
-  "version": "1.0.0",
   "main": "index.js",
   "dependencies" : {
     "left-pad" : "1.1.3"
@@ -429,7 +428,7 @@ exports.main = myAction;
 ```
 {: codeblock}
 
-請注意，動作是透過 `exports.main` 公開；動作處理程式本身可以有任何名稱，只要符合接受物件以及傳回物件的正常簽章（或物件的 `Promise`）。
+請注意，動作是透過 `exports.main` 公開；動作處理程式本身可以有任何名稱，只要符合接受物件以及傳回物件的正常簽章（或物件的 `Promise`）。根據 Node.js 使用慣例，您必須將這個檔案命名為 `index.js`，或是將您喜好的檔名指定為 package.json 中的 `main` 內容。
 
 若要從此套件建立 OpenWhisk 動作，請執行下列動作：
 
@@ -764,10 +763,6 @@ docker login -u janesmith -p janes_password
   {: pre}
   ```
 cd dockerSkeleton
-  ```
-  {: pre}
-  ```
-  chmod +x buildAndPush.sh
   ```
   {: pre}
   ```

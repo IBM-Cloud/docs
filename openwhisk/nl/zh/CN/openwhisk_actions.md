@@ -406,7 +406,6 @@ wsk action create weather weather.js
 ```
 {
   "name": "my-action",
-  "version": "1.0.0",
   "main": "index.js",
   "dependencies" : {
     "left-pad" : "1.1.3"
@@ -428,7 +427,7 @@ exports.main = myAction;
 ```
 {: codeblock}
 
-请注意，操作将通过 `exports.main` 公开；操作处理程序本身可以具有任何名称，只要名称符合接受对象和返回对象（或对象的 `Promise`）的通常特征符即可。
+请注意，操作将通过 `exports.main` 公开；操作处理程序本身可以具有任何名称，只要名称符合接受对象和返回对象（或对象的 `Promise`）的通常特征符即可。根据 Node.js 约定，您必须将此文件命名为 `index.js`，或者将您偏好的文件名指定为 package.json 中的 `main` 属性。
 
 要通过此包创建 OpenWhisk 操作，请执行以下操作：
 
@@ -754,10 +753,6 @@ docker login -u janesmith -p janes_password
   {: pre}
   ```
 cd dockerSkeleton
-  ```
-  {: pre}
-  ```
-  chmod +x buildAndPush.sh
   ```
   {: pre}
   ```

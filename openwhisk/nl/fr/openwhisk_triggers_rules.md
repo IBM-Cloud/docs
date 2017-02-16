@@ -208,3 +208,4 @@ pouvez ainsi créer une séquence d'actions
   wsk rule create anotherRule locationUpdate recordLocationAndHello
   ```
   {: pre}
+ 

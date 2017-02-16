@@ -139,7 +139,7 @@ Se non stai utilizzando {{site.data.keyword.openwhisk_short}} in {{site.data.key
 Puoi utilizzare il feed `changes` per configurare un servizio per attivare un trigger ogni volta che viene apportata una modifica al tuo database Cloudant. I parametri sono i seguenti:
 
 - `dbname`: nome del database Cloudant.
-- `maxTriggers`: arrestare l'attivazione dei trigger quando viene raggiunto questo limite. Il valore predefinito è 1000. Puoi impostarlo su un massimo di 10.000. Se tenti di impostare più di 10.000, la richiesta viene rifiutata.
+- `maxTriggers`: arrestare l'attivazione dei trigger quando viene raggiunto questo limite. Il valore predefinito è infinito.
 
 1. Crea un trigger con il feed `changes` nel bind di pacchetto che hai creato precedentemente. Accertati di sostituire `/myNamespace/myCloudant` con il tuo nome pacchetto.
 
@@ -304,7 +304,7 @@ Per ulteriori dettagli sull'utilizzo di sintassi cron, consulta: http://crontab.
 
 - `trigger_payload`: il valore di questo parametro diventa il contenuto del trigger ogni volta che il trigger viene attivato.
 
-- `maxTriggers`: arrestare l'attivazione dei trigger quando viene raggiunto questo limite. Il valore predefinito è 1000. Puoi impostarlo su un massimo di 10.000. Se tenti di impostare più di 10.000, la richiesta viene rifiutata.
+- `maxTriggers`: arrestare l'attivazione dei trigger quando viene raggiunto questo limite. Il valore predefinito è 1.000.000. Puoi impostarlo su infinito (-1).
 
 Di seguito viene riportato un esempio di creazione di un trigger che verrà attivato una volta ogni 2 minuti con i valori `name` e `place` nell'evento di trigger.
 
@@ -741,7 +741,7 @@ Mentre questo elenco di parametri può sembrare scoraggiante, ti possono venire 
 
 2. Verifica che l'argomento che desideri ascoltare già esista in Message Hub o creane uno nuovo per ascoltare i messaggi, come `mytopic`.
 
-2. Aggiorna i pacchetti nel tuo spazio dei nomi. L'aggiornamento crea automaticamente un bind di pacchetto per l'istanza del servizio Message Hub da te creata. 
+2. Aggiorna i pacchetti nel tuo spazio dei nomi. L'aggiornamento crea automaticamente un bind di pacchetto per l'istanza del servizio Message Hub da te creata.
 
   ```
   wsk package refresh

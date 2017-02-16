@@ -29,10 +29,10 @@ l'appel d'une action, autorise également la suppression et la création d'autre
 {: shortdesc}
 
 Cette fonction expérimentale vous permet d'appeler une action avec des
-méthodes HTTP autres que POST et sans la clé d'API d'autorisation de l'action. 
+méthodes HTTP autres que POST et sans la clé d'API d'autorisation de l'action.
 
 Utilisez l'interface de ligne de commande pour exposer vos actions
-OpenWhisk via la passerelle d'API OpenWhisk.  
+OpenWhisk via la passerelle d'API OpenWhisk. 
 
 ## Configuration de l'interface de ligne de commande d'OpenWhisk
 {: #openwhisk_apigateway_cli}
@@ -42,7 +42,7 @@ une clé d'authentification unique.
 Suivez les instructions figurant dans la rubrique
 [Configuration de
 l'interface de ligne de commande](https://console.ng.bluemix.net/openwhisk/cli) pour configurer la clé
-d'authentification de votre espace de nom spécifique. 
+d'authentification de votre espace de nom spécifique.
 
 ## Exposition d'une action OpenWhisk
 {: #openwhisk_apigateway_hello}
@@ -60,6 +60,7 @@ https://21ef035.api-gw.mybluemix.net/hello/echo
 {: screen}
 Une nouvelle URL est générée pour exposer l'action `echo` via
 une méthode HTTP **GET**.
+
 Essayez-la en envoyant une demande HTTP vers l'URL.
 ```
 curl https://21ef035.api-gw.mybluemix.net/hello/echo?marco=polo
@@ -75,7 +76,7 @@ JSON avec les paramètres envoyés.
 {: screen}
 
 Vous pouvez transmettre des paramètres à l'action grâce à de simples
-paramètres de requête, ou via le corps de demande. 
+paramètres de requête, ou via le corps de demande.
 
 ### Exposition de plusieurs actions
 {: #openwhisk_apigateway_actions}
@@ -83,7 +84,7 @@ paramètres de requête, ou via le corps de demande.
 Supposons que vous souhaitez exposer un ensemble d'actions dans le cadre
 d'un groupe de lecture qui regroupe vos amis.
 Vous disposez d'une série d'actions pour implémenter le back-end du
-groupe de lecture : 
+groupe de lecture :
 
 | action | méthode http | description |
 | ----------- | ----------- | ------------ |
@@ -152,14 +153,15 @@ curl -X GET https://2ef15285-gws.api-gw.mybluemix.net/club/books
 ### Exportation de la configuration
 Exportez l'API nommée `Groupe de lecture` dans un
 fichier que vous pouvez utiliser comme base pour recréer les API en utilisant
-un fichier en entrée.  
+un fichier en entrée. 
 ```
-wsk api get "Groupe de lecture" > club-swagger.json
+wsk api-experimental get "Book Club" > club-swagger.json
 ```
 {: pre}
 
 Testez le fichier swagger en supprimant d'abord toutes les URL exposées
-sous un chemin de base commun. Vous pouvez supprimer toutes les URL exposées
+sous un chemin de base commun.
+Vous pouvez supprimer toutes les URL exposées
 qui utilisent le chemin de base `/club` ou l'API nommée
 `"Groupe de lecture"` :
 ```
@@ -174,7 +176,7 @@ ok: deleted API /club
 Restaurez maintenant l'API nommée `Groupe de lecture` à
 l'aide du fichier `club-swagger.json` :
 ```
-wsk api create --config-file club-swagger.json
+wsk api-experimental create --config-file club-swagger.json
 ```
 {: pre}
 ```
@@ -191,7 +193,7 @@ https://2ef15285-gws.api-gw.mybluemix.net/club/books
 
 Vous pouvez vérifier que l'API a été recréée :
 ```
-wsk api list /club
+wsk api-experimental list /club
 ```
 {: pre}
 ```
@@ -211,20 +213,20 @@ et de nous faire part de leurs commentaires. Les commentaires suivants ont déj�
 partage de ressources d'origine croisée (CORS) ; les en-têtes de réponse d'API
 générés sont actuellement configurés pour autoriser n'importe quelle origine ou
 instruction HTTP (c'est-à-dire *). Les en-têtes suivants sont toujours
-renvoyés : 
+renvoyés :
     - Access-Control-Allow-Origin : *
     - Access-Control-Allow-Headers : Authorization, Content-Type
     - Access-Control-Allow-Methods : GET, POST, PUT, DELETE, PATCH, HEAD, OPTIONS
   - Seul le type de contenu `application/json` est pris
 en charge pour la demande et la réponse.
-  - Aucun moyen de programmation permettant de contrôler la réponse issue de l'action OpenWhisk. 
+  - Aucun moyen de programmation permettant de contrôler la réponse issue de l'action OpenWhisk.
   - Toutes les actions OpenWhisk sont exposées via l'accès public,
 aucune possibilité de configurer une clé d'API personnalisée.
   - Les paramètres de chemin ne sont pas pris en charge, seuls le
-paramètre de requête et le corps de la demande le sont. 
+paramètre de requête et le corps de la demande le sont.
   - Si l'API est créée sans nom d'API, le nom est le chemin de base et cela ne peut pas être modifié.
   - Lors de la recréation des API via un fichier en entrée, les API
-doivent d'abord être supprimées. 
+doivent d'abord être supprimées.
   - Lors de l'exportation des API, le contenu inclut la clé d'API
 OpenWhisk ; ces informations sont sensibles et aucune création de modèle
-n'est disponible. 
+n'est disponible.

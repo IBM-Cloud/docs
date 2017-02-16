@@ -361,7 +361,7 @@ Este exemplo chama um serviço Yahoo Weather para obter as condições atuais em
   function main(params) {
       var location = params.location || 'Vermont';
       var url = 'https://query.yahooapis.com/v1/public/yql?q=select item.condition from weather.forecast where woeid in (select woeid from geo.places(1) where text="' + location + '")&format=json';
-
+  
       return new Promise(function(resolve, reject) {
           request.get(url, function(error, response, body) {
               if (error) {
@@ -411,7 +411,6 @@ Primeiro, `package.json`:
 ```
 {
   "name": "my-action",
-  "version": "1.0.0",
   "main": "index.js",
   "dependencies" : {
     "left-pad" : "1.1.3"
@@ -434,6 +433,8 @@ exports.main = myAction;
 {: codeblock}
 
 Observe que a ação é exposta por meio de `exports.main`; o próprio manipulador de ações pode ter qualquer nome, contanto que se adeque à assinatura usual de aceitação e retorno de um objeto (ou uma `Promessa` de objeto).
+De acordo com a convenção Node.js, deve-se nomear esse arquivo `index.js` ou especificar
+o nome do arquivo que você preferir como a propriedade `main` no package.json.
 
 Para criar uma ação do OpenWhisk a partir deste pacote:
 
@@ -785,10 +786,6 @@ Para as instruções a seguir, suponha que o ID do usuário do Docker seja `jane
   {: pre}
   ```
   cd dockerSkeleton
-  ```
-  {: pre}
-  ```
-  chmod +x buildAndPush.sh
   ```
   {: pre}
   ```

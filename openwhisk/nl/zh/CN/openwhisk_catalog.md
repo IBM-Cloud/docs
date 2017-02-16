@@ -139,7 +139,7 @@ packages
 可以使用 `changes` 订阅源来配置服务，以在每次对 Cloudant 数据库进行更改时都触发触发器。参数如下所示：
 
 - `dbname`：Cloudant 数据库的名称。
-- `maxTriggers`：达到此限制时，停止触发触发器。缺省值为 1000。您可以将其设置为最大值 10,000。如果您尝试设置超过 10,000，那么会拒绝该请求。
+- `maxTriggers`：达到此限制时，停止触发触发器。缺省值为无限。
 
 1. 使用先前创建的包绑定中的 `changes` 订阅源来创建触发器。确保将 `/myNamespace/myCloudant` 替换为您的包名。
 
@@ -301,7 +301,7 @@ wsk rule create myRule myCloudantTrigger sequenceAction
 
 - `trigger_payload`：此参数的值成为每次触发器触发时触发器的内容。
 
-- `maxTriggers`：达到此限制时，停止触发触发器。缺省值为 1000。您可以将其设置为最大值 10,000。如果您尝试设置超过 10,000，那么会拒绝该请求。
+- `maxTriggers`：达到此限制时，停止触发触发器。缺省值为 1,000,000。您可以将其设置为无限 (-1)。
 
 以下是通过触发器事件中的 `name` 和 `place` 值创建每 2 分钟将触发一次的触发器的示例。
 

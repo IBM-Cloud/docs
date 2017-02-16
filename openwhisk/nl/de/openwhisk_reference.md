@@ -56,8 +56,8 @@ Sie verwenden dieses Benennungsschema unter anderem zum Beispiel, wenn Sie die {
 
 Die Namen aller Entitäten, zu denen Aktionen, Auslöser, Regeln, Pakete und Namensbereiche gehören, sind eine Folge von Zeichen mit dem folgenden Format:
 
-* Das erste Zeichen muss ein alphanumerisches Zeichen oder ein Unterstreichungszeichen sein. 
-* Die nachfolgenden Zeichen können alphanumerische Zeichen, Leerzeichen oder die folgenden Zeichen sein: `_`, `@`, `.`, `-`. 
+* Das erste Zeichen muss ein alphanumerisches Zeichen oder ein Unterstreichungszeichen sein.
+* Die nachfolgenden Zeichen können alphanumerische Zeichen, Leerzeichen oder die folgenden Zeichen sein: `_`, `@`, `.`, `-`.
 * Das letzte Zeichen kann kein Leerzeichen sein.
 
 Präziser formuliert, muss der Name dem folgenden regulären Ausdruck (in Java-Metazeichensyntax) entsprechen: `\A([\w]|[\w][\w@ .-]*[\w@.-]+)\z`.
@@ -229,7 +229,7 @@ Beachten Sie, dass der Aufruf einer Aktion blockierend oder nicht blockierend se
 Das globale Objekt `whisk` wird derzeit nicht verwendet. Migrieren Sie Ihre Node.js-Aktionen, um alternative Methoden zu verwenden.
 Für die Funktionen `whisk.invoke()` und `whisk.trigger()` können Sie die Clientbibliothek [openwhisk](https://www.npmjs.com/package/openwhisk) verwenden.
 Für `whisk.getAuthKey()` können Sie den API-Schlüsselwert aus der Umgebungsvariable `__OW_API_KEY` abrufen.
-Für `whisk.error()` können Sie ein abgelehntes Objekt des Typs 'Promise' zurückgeben (d. h. Promise.reject). 
+Für `whisk.error()` können Sie ein abgelehntes Objekt des Typs 'Promise' zurückgeben (d. h. Promise.reject).
 
 ### JavaScript-Laufzeitumgebungen
 {: #openwhisk_ref_javascript_environments}
@@ -450,7 +450,7 @@ Von der OpenWhisk-API werden Anforderung/Antwort-Aufrufe von Web-Clients unterst
 {: #openwhisk_syslimits}
 
 ### Aktionen
-{{site.data.keyword.openwhisk_short}} unterliegt einigen wenigen Systembegrenzungen, wie zum Beispiel in Bezug auf die Speicherkapazität, die eine Aktion verwenden kann, oder auf die zulässige Anzahl von Aktionsaufrufen pro Minute.  
+{{site.data.keyword.openwhisk_short}} unterliegt einigen wenigen Systembegrenzungen, wie zum Beispiel in Bezug auf die Speicherkapazität, die eine Aktion verwenden kann, oder auf die zulässige Anzahl von Aktionsaufrufen pro Minute. 
 
 n der folgenden Tabelle sind die Standardbegrenzungen für Aktionen aufgeführt.
 
@@ -523,7 +523,7 @@ n der folgenden Tabelle sind die Standardbegrenzungen für Aktionen aufgeführt.
 
 ### Auslöser
 
-Auslöser unterliegen einer Auslöserate pro Minute (wie in der folgenden Tabelle angegeben). 
+Auslöser unterliegen einer Auslöserate pro Minute (wie in der folgenden Tabelle angegeben).
 
 | Begrenzung | Beschreibung | Konfigurierbar | Einheit | Standardwert |
 | ----- | ----------- | ------------ | -----| ------- |

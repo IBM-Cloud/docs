@@ -129,7 +129,7 @@ curl -X GET https://2ef15285-gws.api-gw.mybluemix.net/club/books
 ### 导出配置
 将名为 `Book Club` 的 API 导出到文件，我们可以基于此文件将其用作输入来重新创建 API。 
 ```
-wsk api get "Book Club" > club-swagger.json
+wsk api-experimental get "Book Club" > club-swagger.json
 ```
 {: pre}
 
@@ -146,7 +146,7 @@ ok: deleted API /club
 
 现在，使用 `club-swagger.json` 文件复原名为 `Book Club` 的 API：
 ```
-wsk api create --config-file club-swagger.json
+wsk api-experimental create --config-file club-swagger.json
 ```
 {: pre}
 ```
@@ -163,7 +163,7 @@ https://2ef15285-gws.api-gw.mybluemix.net/club/books
 
 可以验证该 API 是否已重新创建
 ```
-wsk api list /club
+wsk api-experimental list /club
 ```
 {: pre}
 ```

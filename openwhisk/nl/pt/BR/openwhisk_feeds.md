@@ -24,25 +24,25 @@ opções de arquitetura e implementação para fornecer o seu próprio feed.
 
 Esse material é destinado a usuários avançados do OpenWhisk que pretendem publicar os seus próprios feeds.  A maioria dos usuários do OpenWhisk pode seguramente ignorar essa seção.
 
-# Arquitetura de feed
+## Arquitetura de feed
 
 Há pelo menos 3 padrões arquiteturais para criar um feed: **Ganchos**, **Pesquisa** e **Conexões**.
 
-## Ganchos
+### Ganchos
 No padrão *Ganchos*, nós configuramos um feed usando um recurso [webhook](https://en.wikipedia.org/wiki/Webhook) exposto por outro serviço.   Nessa estratégia,
 nós configuramos um webhook em um serviço externo para POST diretamente em uma URL para disparar um acionador.  Essa é de longe a opção mais fácil e mais atraente para implementar feeds de baixa frequência.
 
-## Pesquisa
+### Pesquisa
 No padrão "Pesquisa", nós arranjamos para uma *ação* do OpenWhisk pesquisar um terminal periodicamente para buscar novos dados.
 Esse padrão é relativamente fácil de construir, mas a frequência de eventos será,
 é claro, limitada pelo intervalo de pesquisa.
 
-## Conexões
+### Conexões
 No padrão "Conexões", nós levantamos um serviço separado em algum lugar que mantém uma conexão persistente com uma origem do feed.    A implementação baseada em conexão pode interagir com um terminal de
 serviço por meio de pesquisa longa ou para configurar uma notificação push.
 
 
-# Diferença entre feed e acionador
+## Diferença entre feed e acionador
 
 Feeds e acionadores estão intimamente relacionados,
 mas tecnicamente têm conceitos distintos.   
@@ -56,7 +56,7 @@ em sistemas de pub-sub baseados em tópico.    Uma **regra** *T -> A* significa 
 - Um **feed** é um fluxo de eventos, todos pertencentes a algum acionador *T*. Um feed é controlado por uma **ação de feed** que manipula a
 criação, a exclusão, a pausa e a continuação do fluxo de eventos que compõem um feed.    A ação de feed normalmente interage com serviços externos que produzem os eventos, através de uma API REST que gerencia notificações.
 
-#  Implementando ações de feed
+##  Implementando ações de feed
 
 A *ação de feed* é uma *ação* normal do OpenWhisk, mas ela deve aceitar os parâmetros a seguir:
 * **lifecycleEvent**: um de 'CREATE', 'DELETE', 'PAUSE' ou 'UNPAUSE'
@@ -83,7 +83,7 @@ Para o feed *mudanças* do Cloudant, a ação passa a falar diretamente com um s
 
 Um protocolo de ação de feed semelhante ocorre para `wsk trigger delete`.    
 
-# Implementando feeds com ganchos
+## Implementando feeds com ganchos
 
 É fácil configurar um feed por meio de um gancho se o produtor de evento suporta um recurso webhook/retorno de chamada.
 
@@ -100,7 +100,7 @@ O webhook deve ser direcionado para enviar notificações para uma URL como:
 O formulário com a solicitação POST será interpretado como um documento de JSON que define parâmetros no evento acionador.
 As regras do OpenWhisk passam esses parâmetros do acionador para quaisquer ações para disparar como resultado do evento.
 
-# Implementando feeds com pesquisa
+## Implementando feeds com pesquisa
 
 É possível configurar uma *ação* do OpenWhisk para pesquisar uma origem do feed inteiramente dentro do OpenWhisk, sem a necessidade de levantar qualquer conexão persistente ou serviço
 externo.
@@ -115,7 +115,7 @@ Para configurar um feed baseado em pesquisa, a ação de feed usa as etapas a se
 
 Esse procedimento implementa um acionador baseado em pesquisa usando inteiramente ações do OpenWhisk, sem qualquer necessidade de um serviço separado.
 
-# Implementando feeds por meio de conexões
+## Implementando feeds por meio de conexões
 
 As 2 opções anteriores de arquitetura são simples e fáceis de implementar. No entanto, se você deseja um feed de alto desempenho, não há substituto para conexões persistentes e técnicas de pesquisa
 longa ou similares.

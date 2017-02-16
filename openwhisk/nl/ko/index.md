@@ -89,14 +89,14 @@ function main(params) {
 2. {{site.data.keyword.openwhisk_short}} CLI 명령행에 다음 명령을 입력하여 조치를 작성하십시오.
 
     ```
-wsk action create hello hello.js
+    wsk action create hello hello.js
     ```
     {: pre}
 
 3. 그런 다음 아래 명령을 입력하여 조치를 호출하십시오.
 
     ```
-wsk action invoke hello --blocking --result
+    wsk action invoke hello --blocking --result
     ```
     {: pre}  
 
@@ -110,7 +110,7 @@ wsk action invoke hello --blocking --result
     {: screen}
 
     ```
-wsk action invoke hello --blocking --result --param name Fred
+    wsk action invoke hello --blocking --result --param name Fred
     ```
     {: pre}  
 
@@ -137,7 +137,7 @@ wsk action invoke hello --blocking --result --param name Fred
 * [REST API](https://new-console.{DomainName}/apidocs/98)
 
 # 관련 링크
-{: #rellinks}
+{: #rellinks notoc}
 
 ## API 참조
 {: #api}

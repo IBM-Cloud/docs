@@ -130,7 +130,7 @@ curl -X GET https://2ef15285-gws.api-gw.mybluemix.net/club/books
 ### Esportazione della configurazione
 Esportiamo l'API denominata `Book Club` in un file che possiamo utilizzare come base per ricreare le API utilizzando un file come input. 
 ```
-wsk api get "Book Club" > club-swagger.json
+wsk api-experimental get "Book Club" > club-swagger.json
 ```
 {: pre}
 
@@ -147,7 +147,7 @@ ok: deleted API /club
 
 Ora ripristiniamo l'API denominata `Book Club` utilizzando il file `club-swagger.json`
 ```
-wsk api create --config-file club-swagger.json
+wsk api-experimental create --config-file club-swagger.json
 ```
 {: pre}
 ```
@@ -164,7 +164,7 @@ https://2ef15285-gws.api-gw.mybluemix.net/club/books
 
 Possiamo verificare che l'API è stata ricreata
 ```
-wsk api list /club
+wsk api-experimental list /club
 ```
 {: pre}
 ```

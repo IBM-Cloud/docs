@@ -139,7 +139,7 @@ Wenn Sie {{site.data.keyword.openwhisk_short}} in {{site.data.keyword.Bluemix_no
 Mit dem Feed `changes` können Sie einen Service konfigurieren, der bei jeder Änderung an Ihrer Cloudant-Datenbank einen Auslöser aktiviert. Die folgenden Parameter sind verfügbar:
 
 - `dbname`: Name der Cloudant-Datenbank.
-- `maxTriggers`: Stoppt die Aktivierung von Auslösern, wenn dieser Grenzwert erreicht wird. Standardwert: 1000. Als Maximalwert kann 10.000 eingestellt werden. Wenn Sie versuchen, einen höheren Wert einzustellen, wird die Anforderung abgelehnt.
+- `maxTriggers`: Stoppt die Aktivierung von Auslösern, wenn dieser Grenzwert erreicht wird. Standardwert: unbegrenzt.
 
 1. Erstellen Sie einen Auslöser mit dem Feed `changes` in der Paketbindung, die Sie zuvor erstellt haben. Stellen Sie sicher, dass Sie `/myNamespace/myCloudant` durch Ihren Paketnamen ersetzen.
 
@@ -246,33 +246,35 @@ function main(doc){
 ```
 {: codeblock}
 
-Erstellen Sie die Aktion, um das Dokument aus Cloudant zu verarbeiten: 
+Erstellen Sie die Aktion, um das Dokument aus Cloudant zu verarbeiten:
 ```
 wsk action create myAction myAction.js
 ```
 {: pre}
 
 Um ein Dokument aus der Datenbank zu lesen, können Sie die Aktion `read` aus dem Cloudant-Paket verwenden.
-Die Aktion `read` kann mit `myAction` zusammengesetzt werden, um eine Aktionsfolge zu erstellen. 
+Die Aktion `read` kann mit `myAction` zusammengesetzt werden, um eine Aktionsfolge zu erstellen.
 ```
 wsk action create sequenceAction --sequence /myNamespace/myCloudant/read,myAction
 ```
 {: pre}
 
-Die Aktion `sequenceAction` kann in einer Regel verwendet werden, mit der die Aktion bei neuen Cloudant-Auslöserereignissen aktiviert wird. 
+Die Aktion `sequenceAction` kann in einer Regel verwendet werden, mit der die Aktion bei neuen Cloudant-Auslöserereignissen aktiviert wird.
 ```
 wsk rule create myRule myCloudantTrigger sequenceAction
 ```
 {: pre}
 
-**Hinweis:** Mit dem Cloudant-Auslöser `changes` wurde der Parameter `includeDoc` unterstützt, der nun nicht mehr unterstützt wird. Sie müssen Auslöser, die zuvor mit `includeDoc` erstellt wurden, erneut erstellen. Führen Sie die folgenden Schritte aus, um den Auslöser erneut zu erstellen: 
+**Hinweis:** Mit dem Cloudant-Auslöser `changes` wurde der Parameter `includeDoc` unterstützt, der nun nicht mehr unterstützt wird.
+  Sie müssen Auslöser, die zuvor mit `includeDoc` erstellt wurden, erneut erstellen. Führen Sie die folgenden Schritte aus, um den Auslöser erneut zu erstellen:
   ```
   wsk trigger delete myCloudantTrigger
   wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb
   ```
   {: pre}
 
-  Das oben dargestellte Beispiel kann verwendet werden, um eine Aktionsfolge zu erstellen, um das geänderte Dokument zu lesen und die vorhandenen Aktionen aufzurufen. Denken Sie daran, Regeln zu inaktivieren, die möglicherweise nicht mehr gültig sind, und erstellen Sie mit dem Aktionsfolgemuster neue Regeln. 
+  Das oben dargestellte Beispiel kann verwendet werden, um eine Aktionsfolge zu erstellen, um das geänderte Dokument zu lesen und die vorhandenen Aktionen aufzurufen.
+  Denken Sie daran, Regeln zu inaktivieren, die möglicherweise nicht mehr gültig sind, und erstellen Sie mit dem Aktionsfolgemuster neue Regeln.
 
 ## Paket für Alarme verwenden
 {: #openwhisk_catalog_alarm}
@@ -302,7 +304,7 @@ Weitere Informationen zur Verwendung der cron-Syntax finden Sie unter 'http://cr
 
 - `trigger_payload`: Der Wert dieses Parameters wird jedes Mal zum Inhalt des Auslösers, wenn der Auslöser aktiviert wird.
 
-- `maxTriggers`: Stoppt die Aktivierung von Auslösern, wenn dieser Grenzwert erreicht wird. Standardwert: 1000. Als Maximalwert kann 10.000 eingestellt werden. Wenn Sie versuchen, einen höheren Wert einzustellen, wird die Anforderung abgelehnt.
+- `maxTriggers`: Stoppt die Aktivierung von Auslösern, wenn dieser Grenzwert erreicht wird. Standardwert: 1.000.000. Der Wert -1 (unbegrenzt) kann verwendet werden.
 
 Das folgende Beispiel zeigt, wie ein Auslöser erstellt wird, der einmal alle 2 Minuten aktiviert wird, wobei das Auslöserereignis die Werte für `name` und `place` enthält.
 
@@ -313,7 +315,7 @@ Das folgende Beispiel zeigt, wie ein Auslöser erstellt wird, der einmal alle 2 
 
 Jedes generierte Ereignis enthält die im Wert von `trigger_payload` angegebenen Eigenschaften als Parameter. In diesem Fall erhält jedes Auslöserereignis die Parameter `name=Odin` und `place=Asgard`.
 
-**Hinweis:** Der Parameter `cron` bietet auch Unterstützung für eine angepasste Syntax mit sechs Feldern, wobei das erste Feld für Sekunden steht.
+**Hinweis:** Der Parameter `cron` bietet auch Unterstützung für eine angepasste Syntax mit sechs Feldern, wobei das erste Feld für Sekunden steht. 
 Weitere Informationen zur Verwendung dieser angepassten cron-Syntax finden Sie unter 'https://github.com/ncb000gt/node-cron'. 
 Im Folgenden ist ein Beispiel für die Notation mit sechs Feldern aufgeführt:
   - `*/30 * * * * *`: alle 30 Sekunden.
@@ -412,7 +414,7 @@ Das Paket enthält die folgenden Aktionen.
 | `/whisk.system/watson-translator/translator` | Aktion | payload, translateFrom, translateTo, translateParam, username, password | Übersetzung von Text |
 | `/whisk.system/watson-translator/languageId` | Aktion | payload, username, password | Ermittlung einer Sprache |
 
-**Hinweis:** Das Paket `/whisk.system/watson` wird einschließlich der Aktionen `/whisk.system/watson/translate` und `/whisk.system/watson/languageId` nicht mehr verwendet. 
+**Hinweis:** Das Paket `/whisk.system/watson` wird einschließlich der Aktionen `/whisk.system/watson/translate` und `/whisk.system/watson/languageId` nicht mehr verwendet.
 
 #### Watson Translator-Paket in Bluemix einrichten
 
@@ -530,7 +532,7 @@ Das Paket enthält die folgenden Aktionen.
 | `/whisk.system/watson-textToSpeech` | Paket | username, password | Paket zum Umwandeln von Text in Sprache |
 | `/whisk.system/watson-textToSpeech/textToSpeech` | Aktion | payload, voice, accept, encoding, username, password | Umsetzung von Text in Sprache |
 
-**Hinweis:** Das Paket `/whisk.system/watson` wird einschließlich der Aktion `/whisk.system/watson/textToSpeech` nicht mehr verwendet. 
+**Hinweis:** Das Paket `/whisk.system/watson` wird einschließlich der Aktion `/whisk.system/watson/textToSpeech` nicht mehr verwendet.
 
 #### Watson-Paket 'Text to Speech' in Bluemix einrichten
 
@@ -623,7 +625,7 @@ Das Paket enthält die folgenden Aktionen.
 | `/whisk.system/watson-speechToText` | Paket | username, password | Paket zum Umwandeln von Sprache in Text |
 | `/whisk.system/watson-speechToText/speechToText` | Aktion | payload, content_type, encoding, username, password, continuous, inactivity_timeout, interim_results, keywords, keywords_threshold, max_alternatives, model, timestamps, watson-token, word_alternatives_threshold, word_confidence, X-Watson-Learning-Opt-Out | Umsetzung von Sprache in Text |
 
-**Hinweis:** Das Paket `/whisk.system/watson` wird einschließlich der Aktion `/whisk.system/watson/speechToText` nicht mehr verwendet. 
+**Hinweis:** Das Paket `/whisk.system/watson` wird einschließlich der Aktion `/whisk.system/watson/speechToText` nicht mehr verwendet.
 
 #### Watson-Paket 'Speech to Text' in Bluemix einrichten
 
@@ -717,29 +719,29 @@ Mit der Aktion `/whisk.system/watson-speechToText/speechToText` kann eine Audioa
 ## Message Hub-Paket verwenden
 {: #openwhisk_catalog_message_hub}
 
-Mit diesem Paket können Sie Auslöser erstellen, die reagieren, wenn Nachrichten an eine [Message Hub](https://developer.ibm.com/messaging/message-hub/)-Serviceinstanz in Bluemix gesendet werden. 
+Mit diesem Paket können Sie Auslöser erstellen, die reagieren, wenn Nachrichten an eine [Message Hub](https://developer.ibm.com/messaging/message-hub/)-Serviceinstanz in Bluemix gesendet werden.
 
 ### Für eine Message Hub-Instanz empfangsbereiten Auslöser erstellen
 {: #openwhisk_catalog_message_hub_trigger}
-Um einen Auslöser zu erstellen, der reagiert, wenn Nachrichten an eine Message Hub-Instanz gesendet werden, müssen Sie den Feed `messaging/messageHubFeed` verwenden. Dieser Feed unterstützt die folgenden Parameter: 
+Um einen Auslöser zu erstellen, der reagiert, wenn Nachrichten an eine Message Hub-Instanz gesendet werden, müssen Sie den Feed `messaging/messageHubFeed` verwenden. Dieser Feed unterstützt die folgenden Parameter:
 
 |Name|Typ|Beschreibung|
 |---|---|---|
-|kafka_brokers_sasl|JSON-Array aus Zeichenfolgen|Dieser Parameter ist ein Array aus Zeichenfolgen im Format `<Host>:<Port>`, die die Broker in Ihrer Message Hub-Instanz umfassen. |
+|kafka_brokers_sasl|JSON-Array aus Zeichenfolgen|Dieser Parameter ist ein Array aus Zeichenfolgen im Format `<Host>:<Port>`, die die Broker in Ihrer Message Hub-Instanz umfassen.|
 |user|Zeichenfolge|Ihr Message Hub-Benutzername|
 |password|Zeichenfolge|Ihr Message Hub-Kennwort|
 |topic|Zeichenfolge|Das Thema, in dem der Auslöser empfangsbereit sein soll|
 |kafka_admin_url|URL-Zeichenfolge|Die URL der Message Hub-REST-Schnittstelle für Administratoren|
 |api_key|Zeichenfolge|Ihr Message Hub-API-Schlüssel|
-|isJSONData|Boolesch (optional: Standard=false)|Wenn diese Option auf `true` festgelegt ist, versucht der Feed, Nachrichteninhalte als JSON zu analysieren, bevor sie als Nutzdaten für den Auslöser übergeben werden. |
+|isJSONData|Boolesch (optional: Standard=false)|Wenn diese Option auf `true` festgelegt ist, versucht der Feed, Nachrichteninhalte als JSON zu analysieren, bevor sie als Nutzdaten für den Auslöser übergeben werden.|
 
-Diese Parameterliste kann zwar abschreckend wirken, jedoch können die Parameter automatisch mit dem CLI-Befehl zum Aktualisieren des Pakets für Sie festgelegt werden: 
+Diese Parameterliste kann zwar abschreckend wirken, jedoch können die Parameter automatisch mit dem CLI-Befehl zum Aktualisieren des Pakets für Sie festgelegt werden:
 
-1. Erstellen Sie eine Instanz des Message Hub-Service unter Ihrer aktuellen Organisation und dem aktuellen Bereich, die bzw. den Sie für OpenWhisk verwenden. 
+1. Erstellen Sie eine Instanz des Message Hub-Service unter Ihrer aktuellen Organisation und dem aktuellen Bereich, die bzw. den Sie für OpenWhisk verwenden.
 
-2. Stellen Sie sicher, dass das zu überwachende Thema bereits in Message Hub vorhanden ist, oder erstellen Sie ein neues Thema, das auf Nachrichten überwacht werden soll. Beispiel: `mytopic`. 
+2. Stellen Sie sicher, dass das zu überwachende Thema bereits in Message Hub vorhanden ist, oder erstellen Sie ein neues Thema, das auf Nachrichten überwacht werden soll. Beispiel: `mytopic`.
 
-2. Aktualisieren Sie die Pakete in Ihrem Namensbereich. Die Aktualisierung erstellt automatisch eine Paketbindung für die Message Hub-Serviceinstanz, die Sie erstellt haben. 
+2. Aktualisieren Sie die Pakete in Ihrem Namensbereich. Die Aktualisierung erstellt automatisch eine Paketbindung für die Message Hub-Serviceinstanz, die Sie erstellt haben.
 
   ```
   wsk package refresh
@@ -761,9 +763,9 @@ Diese Parameterliste kann zwar abschreckend wirken, jedoch können die Parameter
   ```
   {: screen}
 
-  Ihre Paketbindung enthält nun die Ihrer Message Hub-Instanz zugeordneten Berechtigungsnachweise. 
+  Ihre Paketbindung enthält nun die Ihrer Message Hub-Instanz zugeordneten Berechtigungsnachweise.
 
-3. Nun müssen Sie nur noch einen Auslöser erstellen, der angewendet werden soll, wenn neue Nachrichten an Ihre Message Hub-Instanz gesendet werden. 
+3. Nun müssen Sie nur noch einen Auslöser erstellen, der angewendet werden soll, wenn neue Nachrichten an Ihre Message Hub-Instanz gesendet werden.
 
   ```
   wsk trigger create MyMessageHubTrigger -f /myBluemixOrg_myBluemixSpace/Bluemix_Message_Hub_Credentials-1/messageHubFeed -p topic mytopic
@@ -772,9 +774,9 @@ Diese Parameterliste kann zwar abschreckend wirken, jedoch können die Parameter
 
 ### Message Hub-Paket außerhalb von Bluemix einrichten
 
-Wenn Sie OpenWhisk nicht in Bluemix verwenden oder wenn Sie Message Hub außerhalb von Bluemix einrichten möchten, müssen Sie manuell eine Paketbindung für Ihren Message Hub-Service erstellen. Dazu benötigen Sie die Berechtigungsnachweise für den Message Hub-Service und die Verbindungsinformationen. 
+Wenn Sie OpenWhisk nicht in Bluemix verwenden oder wenn Sie Message Hub außerhalb von Bluemix einrichten möchten, müssen Sie manuell eine Paketbindung für Ihren Message Hub-Service erstellen. Dazu benötigen Sie die Berechtigungsnachweise für den Message Hub-Service und die Verbindungsinformationen.
 
-- Erstellen Sie eine Paketbindung, die für Ihren Message Hub-Service konfiguriert ist. 
+- Erstellen Sie eine Paketbindung, die für Ihren Message Hub-Service konfiguriert ist.
 
   ```
   wsk trigger create MyMessageHubTrigger -f /whisk.system/messaging/messageHubFeed -p kafka_brokers_sasl "[\"kafka01-prod01.messagehub.services.us-south.bluemix.net:9093\", \"kafka02-prod01.messagehub.services.us-south.bluemix.net:9093\", \"kafka03-prod01.messagehub.services.us-south.bluemix.net:9093\"]" -p topic mytopic -p user <Message Hub-Benutzer> -p password <Message Hub-Kennwort> -p kafka_admin_url https://kafka-admin-prod01.messagehub.services.us-south.bluemix.net:443 -p api_key <eigener API-Schlüssel>
@@ -783,18 +785,18 @@ Wenn Sie OpenWhisk nicht in Bluemix verwenden oder wenn Sie Message Hub außerha
 
 ### Nachrichten in einer Message Hub-Instanz überwachen
 {: #openwhisk_catalog_message_hub_listen}
-Nach dem Erstellen eines Auslösers überwacht das System das angegebene Thema in Ihrem Messaging-Service. Wenn neue Nachrichten gesendet werden, wird der Auslöser angewendet. 
+Nach dem Erstellen eines Auslösers überwacht das System das angegebene Thema in Ihrem Messaging-Service. Wenn neue Nachrichten gesendet werden, wird der Auslöser angewendet.
 
-Die Nutzdaten dieses Auslösers enthalten das Feld `messages`. Dabei handelt es sich um ein Array aus Nachrichten, die seit der letzten Anwendung des Auslösers gesendet wurden. Jedes Nachrichtenobjekt im Array enthält die folgenden Felder: 
+Die Nutzdaten dieses Auslösers enthalten das Feld `messages`. Dabei handelt es sich um ein Array aus Nachrichten, die seit der letzten Anwendung des Auslösers gesendet wurden. Jedes Nachrichtenobjekt im Array enthält die folgenden Felder:
 - topic
 - partition
 - offset
 - key
 - value
 
-In Bezug auf Kafka sollten diese Felder selbstverständlich sein. `value` erfordert jedoch besondere Aufmerksamkeit. Wenn der Parameter `isJSONData` bei der Erstellung des Auslösers auf `false` festgelegt (oder überhaupt nicht festgelegt) wurde, enthält das Feld `value` den Rohwert der gesendeten Nachricht. Wenn `isJSONData` bei der Erstellung des Auslösers jedoch auf `true` festgelegt wurde, versucht das System, diesen Wert möglichst als JSON-Objekt zu analysieren. Wenn die Analyse erfolgreich war, ergibt sich aus `value` in den Nutzdaten des Auslösers das entsprechende JSON-Objekt. 
+In Bezug auf Kafka sollten diese Felder selbstverständlich sein. `value` erfordert jedoch besondere Aufmerksamkeit. Wenn der Parameter `isJSONData` bei der Erstellung des Auslösers auf `false` festgelegt (oder überhaupt nicht festgelegt) wurde, enthält das Feld `value` den Rohwert der gesendeten Nachricht. Wenn `isJSONData` bei der Erstellung des Auslösers jedoch auf `true` festgelegt wurde, versucht das System, diesen Wert möglichst als JSON-Objekt zu analysieren. Wenn die Analyse erfolgreich war, ergibt sich aus `value` in den Nutzdaten des Auslösers das entsprechende JSON-Objekt.
 
-Beispiel: Wenn eine Nachricht mit dem Inhalt `{"title": "Some string", "amount": 5, "isAwesome": true}` gesendet wird und dabei `isJSONData` auf `true` festgelegt ist, sehen die Nutzdaten für den Auslöser möglicherweise wie folgt aus: 
+Beispiel: Wenn eine Nachricht mit dem Inhalt `{"title": "Some string", "amount": 5, "isAwesome": true}` gesendet wird und dabei `isJSONData` auf `true` festgelegt ist, sehen die Nutzdaten für den Auslöser möglicherweise wie folgt aus:
 
 ```
 {
@@ -814,7 +816,7 @@ Beispiel: Wenn eine Nachricht mit dem Inhalt `{"title": "Some string", "amount":
 }
 ```
 
-Wird jedoch derselbe Nachrichteninhalt gesendet, wenn `isJSONData` auf `false` festgelegt ist, sehen die Nutzdaten für den Auslöser wie folgt aus: 
+Wird jedoch derselbe Nachrichteninhalt gesendet, wenn `isJSONData` auf `false` festgelegt ist, sehen die Nutzdaten für den Auslöser wie folgt aus:
 
 ```
 {
@@ -831,9 +833,9 @@ Wird jedoch derselbe Nachrichteninhalt gesendet, wenn `isJSONData` auf `false` f
 ```
 
 ### Nachrichten werden stapelweise verarbeitet
-Die Nutzdaten für den Auslöser enthalten ein Array aus Nachrichten. Das bedeutet, dass der Feed versucht, für die gesendeten Nachrichten mit einer Stapeloperation eine einzige Anwendung des Auslösers herbeizuführen, wenn sehr schnell Nachrichten in Ihrem Messaging-System erstellt werden. Dadurch können die Nachrichten schneller und effizienter an Ihren Auslöser gesendet werden. 
+Die Nutzdaten für den Auslöser enthalten ein Array aus Nachrichten. Das bedeutet, dass der Feed versucht, für die gesendeten Nachrichten mit einer Stapeloperation eine einzige Anwendung des Auslösers herbeizuführen, wenn sehr schnell Nachrichten in Ihrem Messaging-System erstellt werden. Dadurch können die Nachrichten schneller und effizienter an Ihren Auslöser gesendet werden.
 
-Beachten Sie beim Codieren von Aktionen, die von Ihrem Auslöser gestartet werden, dass die Anzahl der Nachrichten in den Nutzdaten eigentlich nicht begrenzt ist, aber immer größer als 0 ist. 
+Beachten Sie beim Codieren von Aktionen, die von Ihrem Auslöser gestartet werden, dass die Anzahl der Nachrichten in den Nutzdaten eigentlich nicht begrenzt ist, aber immer größer als 0 ist.
 
 
 ## Slack-Paket verwenden

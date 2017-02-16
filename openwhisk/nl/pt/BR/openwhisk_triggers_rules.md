@@ -195,3 +195,4 @@ de ações `recordLocationAndHello` que é ativada pela regra `anotherRule`.
   wsk rule create anotherRule locationUpdate recordLocationAndHello
   ```
   {: pre}
+ 

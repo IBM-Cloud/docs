@@ -133,7 +133,7 @@ wsk action invoke hello --blocking --result --param name Fred
 * [REST API](https://new-console.{DomainName}/apidocs/98)
 
 # 相关链接
-{: #rellinks}
+{: #rellinks notoc}
 
 ## API 参考
 {: #api}

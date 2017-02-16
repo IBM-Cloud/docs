@@ -136,7 +136,7 @@ Weitere Informationen zu {{site.data.keyword.openwhisk_short}} finden Sie in den
 * [REST-API](https://new-console.{DomainName}/apidocs/98)
 
 # Zugehörige Links
-{: #rellinks}
+{: #rellinks notoc}
 
 ## API-Referenz
 {: #api}

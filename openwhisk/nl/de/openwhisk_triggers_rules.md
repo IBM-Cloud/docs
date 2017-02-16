@@ -192,3 +192,4 @@ Sie können Regeln auch mit Sequenzen verwenden. Beispielsweise können Sie eine
   wsk rule create anotherRule locationUpdate recordLocationAndHello
   ```
   {: pre}
+ 

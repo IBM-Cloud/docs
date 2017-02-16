@@ -129,7 +129,7 @@ curl -X GET https://2ef15285-gws.api-gw.mybluemix.net/club/books
 ### 匯出配置
 讓我們將名為 `Book Club` 的 API 匯出至檔案，以用作使用檔案作為輸入來重建 API 的基礎。 
 ```
-wsk api get "Book Club" > club-swagger.json
+wsk api-experimental get "Book Club" > club-swagger.json
 ```
 {: pre}
 
@@ -146,7 +146,7 @@ ok: deleted API /club
 
 現在，讓我們使用檔案 `club-swagger.json` 來還原名為 `Book Club` 的 API。
 ```
-wsk api create --config-file club-swagger.json
+wsk api-experimental create --config-file club-swagger.json
 ```
 {: pre}
 ```
@@ -163,7 +163,7 @@ https://2ef15285-gws.api-gw.mybluemix.net/club/books
 
 我們可以驗證已重建 API
 ```
-wsk api list /club
+wsk api-experimental list /club
 ```
 {: pre}
 ```

@@ -196,3 +196,4 @@ lastupdated: "2016-02-22"
   wsk rule create anotherRule locationUpdate recordLocationAndHello
   ```
   {: pre}
+ 

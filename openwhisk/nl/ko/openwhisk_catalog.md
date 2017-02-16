@@ -139,7 +139,7 @@ lastupdated: "2017-01-04"
 `changes` 피드를 사용하여 Cloudant 데이터베이스에 대한 모든 변경 시 트리거를 실행하도록 서비스를 구성할 수 있습니다.매개변수는 다음과 같습니다.
 
 - `dbname`: Cloudant 데이터베이스의 이름입니다.
-- `maxTriggers`: 이 한계에 도달하면 트리거 실행이 중지됩니다. 기본값은 1000입니다. 이를 최대 10,000으로 설정할 수 있습니다. 10,000을 초과하여 설정하려고 시도하는 경우 요청이 거부됩니다.
+- `maxTriggers`: 이 한계에 도달하면 트리거 실행이 중지됩니다. 기본값은 무한(infinite)입니다.
 
 1. 앞에서 작성한 패키지 바인딩의 `changes`를 사용하여 트리거를 작성하십시오. `/myNamespace/myCloudant`를 사용자의 패키지 이름으로 대체하십시오.
 
@@ -304,7 +304,7 @@ cron 구문 사용에 대한 세부사항은 http://crontab.org를 참조하십�
 
 - `trigger_payload`: 이 매개변수의 값은 트리거가 실행될 때마다 트리거의 컨텐츠가 됩니다.
 
-- `maxTriggers`: 이 한계에 도달하면 트리거 실행이 중지됩니다. 기본값은 1000입니다. 이를 최대 10,000으로 설정할 수 있습니다. 10,000을 초과하여 설정하려고 시도하는 경우 요청이 거부됩니다.
+- `maxTriggers`: 이 한계에 도달하면 트리거 실행이 중지됩니다. 기본값은 1,000,000입니다. 이를 무한(-1)으로 설정할 수 있습니다. 
 
 다음은 트리거 이벤트에서 `name` 값과 `place` 값을 사용하여 2분마다 한 번 실행할 트리거를 작성하는 예입니다. 
 
@@ -921,14 +921,14 @@ Kafka 용어에서 이러한 필드는 따로 설명할 필요가 없습니다. 
 2. 액세스 토큰을 사용하여 GitHub 저장소에 대해 구성된 패키지 바인딩을 작성하십시오. 
 
   ```
-wsk package bind /whisk.system/github myGit --param username myGitUser --param repository myGitRepo --param accessToken aaaaa1111a1a1a1a1a111111aaaaaa1111aa1a1a
+  wsk package bind /whisk.system/github myGit --param username myGitUser --param repository myGitRepo --param accessToken aaaaa1111a1a1a1a1a111111aaaaaa1111aa1a1a
   ```
   {: pre}
 
 3. `myGit/webhook` 피드를 사용하여 GitHub `push` 이벤트 유형에 사용할 트리거를 작성하십시오. 
 
   ```
-wsk trigger create myGitTrigger --feed myGit/webhook --param events push
+  wsk trigger create myGitTrigger --feed myGit/webhook --param events push
   ```
   {: pre}
 

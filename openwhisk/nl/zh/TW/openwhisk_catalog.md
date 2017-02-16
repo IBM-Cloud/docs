@@ -139,7 +139,7 @@ packages
 您可以使用 `changes` 資訊來源，配置服務在每次變更 Cloudant 資料庫時發動觸發程式。參數如下所示：
 
 - `dbname`：Cloudant 資料庫的名稱。
-- `maxTriggers`：在達到此限制時停止發動觸發程式。預設值為 1000。您可以將其設定至上限 10,000。如果您嘗試設定超過 10,000 的值，將會拒絕要求。
+- `maxTriggers`：在達到此限制時停止發動觸發程式。預設值為無限。
 
 1. 使用您先前建立的套件連結中的 `changes` 資訊來源，來建立觸發程式。請務必將 `/myNamespace/myCloudant` 取代為套件名稱。
 
@@ -148,14 +148,14 @@ packages
   ```
   {: pre}
   ```
-ok: created trigger feed myCloudantTrigger
+  ok: created trigger feed myCloudantTrigger
   ```
   {: screen}
 
 2. 輪詢啟動。
 
   ```
-wsk activation poll
+  wsk activation poll
   ```
   {: pre}
 
@@ -304,7 +304,7 @@ wsk rule create myRule myCloudantTrigger sequenceAction
 
 - `trigger_payload`：每次發動觸發程式時，此參數的值都會變成觸發程式的內容。
 
-- `maxTriggers`：在達到此限制時停止發動觸發程式。預設值為 1000。您可以將其設定至上限 10,000。如果您嘗試設定超過 10,000 的值，將會拒絕要求。
+- `maxTriggers`：在達到此限制時停止發動觸發程式。預設值為 1,000,000。您可以將其設定為無限 (-1)。
 
 下列範例說明如何使用觸發程式事件中的 `name` 及 `place` 值來建立每 2 分鐘發動一次的觸發程式。
 

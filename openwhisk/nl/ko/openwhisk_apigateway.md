@@ -130,7 +130,7 @@ curl -X GET https://2ef15285-gws.api-gw.mybluemix.net/club/books
 ### 구성 내보내기
 입력으로 파일을 사용하여 API를 다시 작성하려면 기본으로 사용할 수 있는 파일에 `Book Club`이라는 API를 내보내십시오.  
 ```
-wsk api get "Book Club" > club-swagger.json
+wsk api-experimental get "Book Club" > club-swagger.json
 ```
 {: pre}
 
@@ -147,7 +147,7 @@ ok: deleted API /club
 
 이제 `club-swagger.json` 파일을 사용하여 `Book Club`이라는 이름의 API를 복원해 보십시오. 
 ```
-wsk api create --config-file club-swagger.json
+wsk api-experimental create --config-file club-swagger.json
 ```
 {: pre}
 ```
@@ -164,7 +164,7 @@ https://2ef15285-gws.api-gw.mybluemix.net/club/books
 
 API가 다시 작성되었는지 확인할 수 있습니다. 
 ```
-wsk api list /club
+wsk api-experimental list /club
 ```
 {: pre}
 ```

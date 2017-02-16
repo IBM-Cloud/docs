@@ -25,19 +25,19 @@ um einen Masterschlüssel, mit dem nicht nur Aktionen aufgerufen, sondern auch A
 hinzugefügt werden können.
 {: shortdesc}
 
-Mit dieser experimentellen Funktion können Sie Aktionen auch mit anderen HTTP-Methoden als POST und ohne den Autorisierungs-API-Schlüssel der Aktion aufrufen. 
+Mit dieser experimentellen Funktion können Sie Aktionen auch mit anderen HTTP-Methoden als POST und ohne den Autorisierungs-API-Schlüssel der Aktion aufrufen.
 
-Mit der CLI können Sie Ihre OpenWhisk-Aktionen über das OpenWhisk-API-Gateway verfügbar machen.  
+Mit der CLI können Sie Ihre OpenWhisk-Aktionen über das OpenWhisk-API-Gateway verfügbar machen. 
 
 ## Konfiguration der OpenWhisk-CLI
 {: #openwhisk_apigateway_cli}
 Diese experimentelle Funktion funktioniert nur mit dem neuen OpenWhisk-Authentifizierungsmodell. Dabei besitzt jeder Namensbereich nun einen eindeutigen zugeordneten Authentifizierungsschlüssel.
-Befolgen Sie die Anweisungen unter [CLI konfigurieren](https://console.ng.bluemix.net/openwhisk/cli), um zu erfahren, wie der Authentifizierungsschlüssel für Ihren jeweiligen Namensbereich festgelegt wird. 
+Befolgen Sie die Anweisungen unter [CLI konfigurieren](https://console.ng.bluemix.net/openwhisk/cli), um zu erfahren, wie der Authentifizierungsschlüssel für Ihren jeweiligen Namensbereich festgelegt wird.
 
 ## OpenWhisk-Aktionen verfügbar machen
 {: #openwhisk_apigateway_hello}
 
-Mit dem folgenden Befehl wird eine einfache Aktion verfügbar gemacht, die bereits mit OpenWhisk vorinstalliert wurde. 
+Mit dem folgenden Befehl wird eine einfache Aktion verfügbar gemacht, die bereits mit OpenWhisk vorinstalliert wurde.
 
 ```
 wsk api-experimental create /hello /echo get /whisk.system/utils/echo
@@ -50,7 +50,7 @@ https://21ef035.api-gw.mybluemix.net/hello/echo
 {: screen}
 Beim Verfügbarmachen der Aktion `echo` über die HTTP-Methode **GET** wird eine neue URL generiert.
 
-Mit dem folgenden Befehl wird eine HTTP-Anforderung an die URL gesendet. 
+Mit dem folgenden Befehl wird eine HTTP-Anforderung an die URL gesendet.
 ```
 curl https://21ef035.api-gw.mybluemix.net/hello/echo?marco=polo
 ```
@@ -63,13 +63,13 @@ Dadurch wird die Aktion `echo` aufgerufen, sodass eine JSON-Zeichenfolge mit den
 ```
 {: screen}
 
-Sie können Parameter über einfache Abfrageparameter oder einen Anforderungshauptteil an die Aktion übergeben. 
+Sie können Parameter über einfache Abfrageparameter oder einen Anforderungshauptteil an die Aktion übergeben.
 
 ### Mehrere Aktionen verfügbar machen
 {: #openwhisk_apigateway_actions}
 
 Mit dem folgenden Befehl soll eine Gruppe von Aktionen für einen Buchklub für Ihre Freunde verfügbar gemacht werden.
-Mit den folgenden Aktionen können das Back-End für den Buchklub implementieren: 
+Mit den folgenden Aktionen können das Back-End für den Buchklub implementieren:
 
 | Aktion | HTTP-Methode | Beschreibung |
 | ----------- | ----------- | ------------ |
@@ -78,7 +78,7 @@ Mit den folgenden Aktionen können das Back-End für den Buchklub implementieren
 | putBooks    | PUT | Zum Aktualisieren von Buchdetails |
 | deleteBooks | DELETE | Zum Löschen eines Buches |
 
-Mit dem folgenden Befehl wird eine API für den Buchklub mit dem Namen `Book Club` erstellt. `/club` ist dabei der HTTP-URL-Basispfad und `books` die zugehörige Ressource. 
+Mit dem folgenden Befehl wird eine API für den Buchklub mit dem Namen `Book Club` erstellt. `/club` ist dabei der HTTP-URL-Basispfad und `books` die zugehörige Ressource.
 ```
 wsk api-experimental create -n "Book Club" /club /books get getBooks
 wsk api-experimental create /club /books post postBooks
@@ -87,9 +87,9 @@ wsk api-experimental create /club /books delete deleteBooks
 ```
 {: pre}
 
-Beachten Sie, dass die erste mit dem Basispfad `/club` verfügbar gemachte Aktion die API-Bezeichnung mit dem Namen `Book Club` abruft. Andere unter `/club` verfügbar gemachte Aktionen werden `Book Club` zugeordnet. 
+Beachten Sie, dass die erste mit dem Basispfad `/club` verfügbar gemachte Aktion die API-Bezeichnung mit dem Namen `Book Club` abruft. Andere unter `/club` verfügbar gemachte Aktionen werden `Book Club` zugeordnet.
 
-Mit dem folgenden Befehl werden alle im vorherigen Beispiel verfügbar gemachten Aktionen aufgelistet. 
+Mit dem folgenden Befehl werden alle im vorherigen Beispiel verfügbar gemachten Aktionen aufgelistet.
 
 ```
 wsk api-experimental list
@@ -105,7 +105,7 @@ deleteBooks             delete         Book Club       https://2ef15285-gws.api-
 ```
 {: screen}
 
-Mit dem folgenden Befehl wird das neue Buch `JavaScript: The Good Parts` mit der HTTP-Methode **POST** hinzugefügt. 
+Mit dem folgenden Befehl wird das neue Buch `JavaScript: The Good Parts` mit der HTTP-Methode **POST** hinzugefügt.
 ```
 curl -X POST -d '{"name":"JavaScript: The Good Parts", "isbn":"978-0596517748"}' https://2ef15285-gws.api-gw.mybluemix.net/club/books
 ```
@@ -117,7 +117,7 @@ curl -X POST -d '{"name":"JavaScript: The Good Parts", "isbn":"978-0596517748"}'
 ```
 {: screen}
 
-Mit dem folgenden Befehl wird eine Liste der Bücher mit der Aktion `getBooks` über die HTTP-Methode **GET** abgerufen. 
+Mit dem folgenden Befehl wird eine Liste der Bücher mit der Aktion `getBooks` über die HTTP-Methode **GET** abgerufen.
 ```
 curl -X GET https://2ef15285-gws.api-gw.mybluemix.net/club/books
 ```
@@ -129,14 +129,14 @@ curl -X GET https://2ef15285-gws.api-gw.mybluemix.net/club/books
 ```
 
 ### Konfiguration exportieren
-Mit dem folgenden Befehl wird die API `Book Club` in eine Datei exportiert, die als Basis zum erneuten Erstellen der APIs mit einer Datei als Eingabe verwendet werden kann.  
+Mit dem folgenden Befehl wird die API `Book Club` in eine Datei exportiert, die als Basis zum erneuten Erstellen der APIs mit einer Datei als Eingabe verwendet werden kann. 
 ```
-wsk api get "Book Club" > club-swagger.json
+wsk api-experimental get "Book Club" > club-swagger.json
 ```
 {: pre}
 
 Mit dem folgenden Befehl wird die Swagger-Datei getestet, indem zuerst alle verfügbar gemachten URLs unter einem gemeinsamen Basispfad gelöscht werden.
-Sie können alle verfügbar gemachten URLs entweder mit dem Basispfad `/club` oder mit der API-Namensbezeichnung `Book Club` löschen: 
+Sie können alle verfügbar gemachten URLs entweder mit dem Basispfad `/club` oder mit der API-Namensbezeichnung `Book Club` löschen:
 ```
 wsk api-experimental delete /club
 ```
@@ -146,9 +146,9 @@ ok: deleted API /club
 ```
 {: screen}
 
-Mit dem folgenden Befehl wird die API `Book Club` mit der Datei `club-swagger.json` wiederhergestellt. 
+Mit dem folgenden Befehl wird die API `Book Club` mit der Datei `club-swagger.json` wiederhergestellt.
 ```
-wsk api create --config-file club-swagger.json
+wsk api-experimental create --config-file club-swagger.json
 ```
 {: pre}
 ```
@@ -163,9 +163,9 @@ https://2ef15285-gws.api-gw.mybluemix.net/club/books
 ```
 {: screen}
 
-Mit dem folgenden Befehl wird überprüft, ob die API erneut erstellt wurde. 
+Mit dem folgenden Befehl wird überprüft, ob die API erneut erstellt wurde.
 ```
-wsk api list /club
+wsk api-experimental list /club
 ```
 {: pre}
 ```
@@ -178,15 +178,15 @@ deleteBooks             delete         Book Club       https://2ef15285-gws.api-
 ```
 {: screen}
 
-- **Hinweis:** Bei dieser Funktion handelt es sich derzeit um ein experimentelles Angebot, mit dem Benutzer die Möglichkeit erhalten, die Funktion früh auszuprobieren und Feedback dazu zu geben. Das folgende Feedback ist bereits eingegangen: 
-  - Keine Möglichkeit, die HTTP-Zugriffssteuerung für CORS (Cross-Origin Resource Sharing) anzupassen. Derzeit sind die generierten API-Antwortheader so konfiguriert, dass jeder HTTP-Wert für 'verb' oder 'origin' möglich ist (d. h. *). Die folgenden Header werden immer zurückgegeben: 
+- **Hinweis:** Bei dieser Funktion handelt es sich derzeit um ein experimentelles Angebot, mit dem Benutzer die Möglichkeit erhalten, die Funktion früh auszuprobieren und Feedback dazu zu geben. Das folgende Feedback ist bereits eingegangen:
+  - Keine Möglichkeit, die HTTP-Zugriffssteuerung für CORS (Cross-Origin Resource Sharing) anzupassen. Derzeit sind die generierten API-Antwortheader so konfiguriert, dass jeder HTTP-Wert für 'verb' oder 'origin' möglich ist (d. h. *). Die folgenden Header werden immer zurückgegeben:
     - Access-Control-Allow-Origin: *
     - Access-Control-Allow-Headers: Authorization, Content-Type
     - Access-Control-Allow-Methods: GET, POST, PUT, DELETE, PATCH, HEAD, OPTIONS
-  - Für Anforderungen und Antworten wird nur der Inhaltstyp `application/json` unterstützt. 
-  - Es gibt keine programmierte Möglichkeit, die Antwort über die OpenWhisk-Aktion zu steuern. 
-  - Alle OpenWhisk-Aktionen werden über öffentlichen Zugriff verfügbar gemacht. Es gibt keine Möglichkeit, einen angepassten API-Schlüssel zu konfigurieren. 
-  - Pfadparameter werden nicht unterstützt, sondern nur Abfrageparameter und Anforderungshauptteile. 
-  - Wenn die API ohne API-Name erstellt wird, ergibt sich der Name aus dem Basispfad und kann nicht geändert werden. 
-  - Wenn APIs über eine Eingabedatei erneut erstellt werden sollen, müssen die APIs zunächst gelöscht werden. 
-  - Beim Exportieren von APIs, die Ihren OpenWhisk-API-Schlüssel enthalten, sind diese Informationen vertraulich und die Erstellung anhand einer Vorlage ist nicht verfügbar. 
+  - Für Anforderungen und Antworten wird nur der Inhaltstyp `application/json` unterstützt.
+  - Es gibt keine programmierte Möglichkeit, die Antwort über die OpenWhisk-Aktion zu steuern.
+  - Alle OpenWhisk-Aktionen werden über öffentlichen Zugriff verfügbar gemacht. Es gibt keine Möglichkeit, einen angepassten API-Schlüssel zu konfigurieren.
+  - Pfadparameter werden nicht unterstützt, sondern nur Abfrageparameter und Anforderungshauptteile.
+  - Wenn die API ohne API-Name erstellt wird, ergibt sich der Name aus dem Basispfad und kann nicht geändert werden.
+  - Wenn APIs über eine Eingabedatei erneut erstellt werden sollen, müssen die APIs zunächst gelöscht werden.
+  - Beim Exportieren von APIs, die Ihren OpenWhisk-API-Schlüssel enthalten, sind diese Informationen vertraulich und die Erstellung anhand einer Vorlage ist nicht verfügbar.

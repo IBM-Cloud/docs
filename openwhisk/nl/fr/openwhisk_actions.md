@@ -79,13 +79,7 @@ exister pour fournir le point d'entrée de l'action.
 
   Vous pouvez voir l'action `hello` que vous venez de créer.
 
-4. Une fois l'action créée, vous pouvez l'exécuter dans le cloud dans OpenWhisk avec la commande 'invoke'. Vous pouvez appeler des actions avec un
-appel *bloquant* (style demande/réponse) ou *non bloquant* en spécifiant un indicateur dans la commande. Une demande d'appel
-bloquante *attend* que le résultat de l'activation soit disponible. Le délai d'attente est inférieur à 60 secondes ou à la
-[limite de temps](./openwhisk_reference.html#openwhisk_syslimits_timeout) configurée de l'action. Le résultat de l'activation est renvoyé s'il
-est disponible avant la fin du délai d'attente. Sinon, le traitement de l'activation continue dans le système et un ID d'activation est renvoyé de sorte
-que les résultats puissent être consultés ultérieurement, comme dans le cas des demandes non bloquantes (voir
-[ici](#watching-action-output) pour des astuces sur les activations de la surveillance).
+4. Une fois l'action créée, vous pouvez l'exécuter dans le cloud dans OpenWhisk avec la commande 'invoke'. Vous pouvez appeler des actions avec un appel *bloquant* (style demande/réponse) ou *non bloquant* en spécifiant un indicateur dans la commande. Une demande d'appel bloquante *attend* que le résultat de l'activation soit disponible. Le délai d'attente est inférieur à 60 secondes ou à la [limite de temps](./openwhisk_reference.html#openwhisk_syslimits_timeout) configurée de l'action. Le résultat de l'activation est renvoyé s'il est disponible avant la fin du délai d'attente. Sinon, le traitement de l'activation continue dans le système et un ID d'activation est renvoyé de sorte que les résultats puissent être consultés ultérieurement, comme dans le cas des demandes non bloquantes (voir [ici](#watching-action-output) pour des astuces sur les activations de la surveillance).
 
   Cet exemple utilise le paramètre de blocage, `--blocking`:
 
@@ -447,8 +441,7 @@ D'abord, `package.json` :
 
 ```
 {
-  "name": "mon-action",
-  "version": "1.0.0",
+  "name": "my-action",
   "main": "index.js",
   "dependencies" : {
     "left-pad" : "1.1.3"
@@ -472,6 +465,9 @@ exports.main = myAction;
 
 Notez que l'action est exposée via `exports.main` ; le gestionnaire d'action lui-même peut avoir n'importe quel nom, tant que
 celui-ci est conforme à la signature habituelle pour l'acceptation et le renvoi d'un objet (ou d'une promesse d'objet (`Promise`)).
+D'après la convention Node.js, vous devez soit nommer ce fichier
+`index.js`, soit indiquer le nom de fichier que vous préférez en
+tant que propriété `main` dans package.json.
 
 Pour créer une action OpenWhisk depuis ce package :
 
@@ -851,10 +847,6 @@ login` pour l'authentification, puis exécuter le script avec le nom d'image de 
   ```
   {: pre}
   ```
-  chmod +x buildAndPush.sh
-  ```
-  {: pre}
-  ```
   ./buildAndPush.sh jeannedupont/blackboxdemo
   ```
   {: pre}
@@ -974,7 +966,7 @@ Vous pouvez procéder à un nettoyage en supprimant les actions que vous ne voul
   ```
   {: screen}
   
-## Accès aux métadonnées d'action dans le corps de l'action 
+## Accès aux métadonnées d'action dans le corps de l'action
 
 L'environnement de l'action contient plusieurs propriétés
 spécifiques à l'action en cours d'exécution.
@@ -983,7 +975,7 @@ actifs OpenWhisk via l'API REST, ou de définir une alarme interne lorsque
 l'action est sur le point d'utiliser la totalité de son budget temps alloué.
 Ces propriétés sont accessibles via l'environnement système de tous les
 contextes d'exécution pris en charge : actions Node.js, Python, Swift, Java et
-Docker lorsque le squelette Docker OpenWhisk est employé. 
+Docker lorsque le squelette Docker OpenWhisk est employé.
 
 * `__OW_API_HOST` hôte d'API du déploiement OpenWhisk exécutant l'action
 * `__OW_API_KEY` clé d'API du sujet appelant l'action, il peut s'agir d'une clé d'API restreinte

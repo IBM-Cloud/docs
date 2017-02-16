@@ -411,7 +411,6 @@ Prima, `package.json`:
 ```
 {
   "name": "my-action",
-  "version": "1.0.0",
   "main": "index.js",
   "dependencies" : {
     "left-pad" : "1.1.3"
@@ -434,6 +433,7 @@ exports.main = myAction;
 {: codeblock}
 
 Nota che l'azione viene esposta tramite `exports.main`; il gestore azione può avere qualsiasi nome purché sia conforme alla solita indicazione di accettare un oggetto e restituire un oggetto ( o una `Promessa` di un oggetto).
+Per convenzione Node.js, devi denominare questo file `index.js` o specificare il nome file che preferisci come proprietà `main` in package.json.
 
 Per creare un'azione OpenWhisk da questo pacchetto:
 
@@ -784,10 +784,6 @@ Per le seguenti istruzioni, supponiamo che l'ID utente Docker sia `janesmith` e 
   {: pre}
   ```
   cd dockerSkeleton
-  ```
-  {: pre}
-  ```
-  chmod +x buildAndPush.sh
   ```
   {: pre}
   ```

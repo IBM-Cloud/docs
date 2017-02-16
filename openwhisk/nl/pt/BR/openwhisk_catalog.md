@@ -144,8 +144,7 @@ precisa do nome do host, do nome do usuário e da senha da conta do Cloudant.
 É possível usar o feed `changes` para configurar um serviço para disparar um acionador em cada mudança em seu banco de dados do Cloudant. Os parâmetros são como segue:
 
 - `dbname`: nome do banco de dados do Cloudant.
-- `maxTriggers`: parar de disparar acionadores quando esse limite for atingido. O padrão é 1000. É possível configurá-lo para o máximo de 10.000. Se você tentar configurar mais de
-10.000, a solicitação será rejeitada.
+- `maxTriggers`: parar de disparar acionadores quando esse limite for atingido. O padrão é definido como infinite.
 
 1. Crie um acionador com o feed `changes` na ligação do pacote criada anteriormente. Certifique-se de substituir `/myNamespace/myCloudant` pelo nome de seu pacote.
 
@@ -273,7 +272,7 @@ wsk rule create myRule myCloudantTrigger sequenceAction
 {: pre}
 
 **Nota**: o acionador `changes` do Cloudant é usado para suportar o parâmetro `includeDoc`, que não é mais suportado.
-Será necessário recriar os acionadores criados anteriormente com `includeDoc`. Sigas estas etapas para recriar o acionador:
+  Será necessário recriar os acionadores criados anteriormente com `includeDoc`. Sigas estas etapas para recriar o acionador:
   ```
   wsk trigger delete myCloudantTrigger
   wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb
@@ -315,8 +314,7 @@ pela sequência:
 
 - `trigger_payload`: o valor desse parâmetro torna-se o conteúdo do acionador toda vez que o acionador for disparado.
 
-- `maxTriggers`: parar de disparar acionadores quando esse limite for atingido. O padrão é 1000. É possível configurá-lo para o máximo de 10.000. Se você tentar configurar mais de
-10.000, a solicitação será rejeitada.
+- `maxTriggers`: parar de disparar acionadores quando esse limite for atingido. O padrão é definido como 1.000.000. É possível configurá-lo como infinite (-1). 
 
 A seguir está um exemplo de criação de um acionador que será disparado uma vez a cada 2 minutos com valores `name` e `place`
 no evento acionador.
@@ -890,9 +888,7 @@ A ação `/whisk.system/slack/post` posta uma mensagem para um canal do Slack es
 - `channel`: o canal do Slack no qual postar a mensagem.
 - `username`: o nome com o qual postar a mensagem.
 - `text`: uma mensagem para postar.
-- `token`: (opcional) um [token de acesso](https://api.slack.com/tokens) de Slack. Consulte
-[abaixo](./openwhisk_catalog.html#openwhisk_catalog_slack_token)
-para obter mais detalhes sobre o uso dos tokens de acesso de Folga.
+- `token`: (opcional) um [token de acesso](https://api.slack.com/tokens) de Slack. Consulte [abaixo](./openwhisk_catalog.html#openwhisk_catalog_slack_token) para obter mais detalhes sobre o uso dos tokens de acesso de Folga.
 
 A seguir há um exemplo de configuração do Slack, criação de uma ligação de pacote e postagem de uma mensagem para um canal.
 
@@ -918,10 +914,7 @@ A seguir há um exemplo de configuração do Slack, criação de uma ligação d
 ### Usando a API baseada no token de Slack
 {: #openwhisk_catalog_slack_token}
 
-Se você preferir, será possível escolher, opcionalmente, usar uma API baseada no token de Slack, em vez de a API do webhook. Se você assim escolher, então, passe em um parâmetro `token`
-que contém o seu [token de acesso](https://api.slack.com/tokens) do Slack. É possível, então, usar qualquer dos [métodos de API Slack](https://api.slack.com/methods) como
-o seu parâmetro `url`. Por exemplo, para postar uma mensagem, você utilizaria um valor de parâmetro `url`
-[slack.postMessage](https://api.slack.com/methods/chat.postMessage).
+Se você preferir, será possível escolher, opcionalmente, usar uma API baseada no token de Slack, em vez de a API do webhook. Se você assim escolher, então, passe em um parâmetro `token` que contém o seu [token de acesso](https://api.slack.com/tokens) do Slack. É possível, então, usar qualquer dos [métodos de API Slack](https://api.slack.com/methods) como o seu parâmetro `url`. Por exemplo, para postar uma mensagem, você utilizaria um valor de parâmetro `url` [slack.postMessage](https://api.slack.com/methods/chat.postMessage).
 
 ## Usando o pacote GitHub
 {: #openwhisk_catalog_github}

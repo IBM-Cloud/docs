@@ -151,7 +151,7 @@ Também é possível usar os recursos acionados por eventos no {{site.data.keywo
 ](https://new-console.{DomainName}/apidocs/98)
 
 # Links Relacionados
-{: #rellinks}
+{: #rellinks notoc}
 
 ## Referência de API
 {: #api}

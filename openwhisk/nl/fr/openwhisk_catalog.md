@@ -157,7 +157,7 @@ Vous pouvez utiliser le flux `changes` pour configurer un service afin d'exécut
 est apportée dans votre base de données Cloudant. Les paramètres sont les suivants :
 
 - `dbname` : nom de la base de données Cloudant.
-- `maxTriggers` : l'exécution de déclencheurs s'arrête lorsque cette limite est atteinte. La valeur par défaut est 1000. La valeur maximale que vous pouvez définir est 10 000. Si vous tentez de définir une valeur supérieure à 10 000, la demande est rejetée.
+- `maxTriggers` : l'exécution de déclencheurs s'arrête lorsque cette limite est atteinte. Par défaut, cette valeur est infinie. 
 
 1. Créez un déclencheur avec le flux `changes` dans la liaison de package que vous avez créée précédemment. Prenez
 soin de remplacer `/monEspaceNom/monCloudant` par votre nom de package.
@@ -284,14 +284,14 @@ wsk action create myAction myAction.js
 Pour lire un document à partir de la base de données, vous pouvez utiliser
 l'action `read` dans le package Cloudant.
 L'action `read` peut être associée à
-`myAction` pour créer une séquence d'actions. 
+`myAction` pour créer une séquence d'actions.
 ```
 wsk action create sequenceAction --sequence /myNamespace/myCloudant/read,myAction
 ```
 {: pre}
 
 L'action `sequenceAction` peut être utilisée dans une
-règle qui active l'action sur de nouveaux événements déclencheurs Cloudant. 
+règle qui active l'action sur de nouveaux événements déclencheurs Cloudant.
 ```
 wsk rule create myRule myCloudantTrigger sequenceAction
 ```
@@ -301,7 +301,7 @@ wsk rule create myRule myCloudantTrigger sequenceAction
 `changes` prenait en charge le paramètre
 `includeDoc`, mais cela n'est plus le cas.
   Vous devez recréer les déclencheurs précédemment créés avec `includeDoc`. Pour
-recréer le déclencheur, procédez comme suit : 
+recréer le déclencheur, procédez comme suit :
   ```
   wsk trigger delete myCloudantTrigger
   wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb
@@ -310,8 +310,9 @@ recréer le déclencheur, procédez comme suit :
 
   Vous pouvez utiliser l'exemple illustré ci-dessus pour créer une
 séquence d'actions permettant de lire le document modifié et appeler les
-actions existantes. N'oubliez pas de désactiver les règles qui ne sont
-plus valides et d'en créer de nouvelles avec le modèle de séquence d'actions. 
+actions existantes.
+  N'oubliez pas de désactiver les règles qui ne sont
+plus valides et d'en créer de nouvelles avec le modèle de séquence d'actions.
 
 ## Utilisation du package Alarm
 {: #openwhisk_catalog_alarm}
@@ -334,7 +335,7 @@ Le flux `/whisk.system/alarms/alarm` configure le service Alarm pour exécuter u
 spécifiée. Les paramètres sont les suivants :
 
 - `cron` : chaîne basée sur la syntaxe crontab UNIX, qui indique quand déclencher la tâche périodique (en temps universel coordonné). Il s'agit d'une
-séquence de cinq zones séparées par un espace :`X X X X X`.
+séquence de cinq zones séparées par un espace : `X X X X X`.
 Pour plus d'informations sur l'utilisation de la syntaxe cron, voir : http://crontab.org. Voici quelques exemples de la fréquence indiquée par la chaîne :
 
   - `* * * * *` : au début de chaque minute.
@@ -345,7 +346,9 @@ Pour plus d'informations sur l'utilisation de la syntaxe cron, voir : http://cro
 
 - `trigger_payload` : la valeur de ce paramètre devient le contenu du déclencheur à chaque fois que le déclencheur est exécuté.
 
-- `maxTriggers` : l'exécution de déclencheurs s'arrête lorsque cette limite est atteinte. La valeur par défaut est 1000. La valeur maximale que vous pouvez définir est 10 000. Si vous tentez de définir une valeur supérieure à 10 000, la demande est rejetée.
+- `maxTriggers` : l'exécution de déclencheurs s'arrête lorsque cette limite est atteinte. La
+valeur par défaut est 1 000 000. Vous pouvez définir cette limite sur l'infini
+(-1).
 
 Voici un exemple de création de déclencheur qui sera exécuté toutes les 2
 minutes avec les valeurs `name` et `place`
@@ -393,7 +396,7 @@ The Weather Company. Les paramètres sont les suivants :
 - `longitude` : coordonnée de longitude du lieu.
 - `timeperiod` : période sur laquelle porte la prévision. Les options valides sont '10day' - (valeur par défaut) Renvoie une
 prévision quotidienne sur 10 jours, '48hour' - Renvoie une prévision horaire sur 2 jours, 'current' - Renvoie les conditions météorologiques actuelles,
-'timeseries' - Renvoie les observations actuelles et jusqu'à 24 heures d'observations antérieures à partir de la date et et de l'heure en cours.
+'timeseries' - Renvoie les observations actuelles et jusqu'à 24 heures d'observations antérieures à partir de la date et de l'heure en cours.
 
 
 Voici un exemple de création d'une liaison de package, puis d'obtention d'une prévision à 10 jours :
@@ -825,7 +828,7 @@ Hub](https://developer.ibm.com/messaging/message-hub/) sur Bluemix.
 {: #openwhisk_catalog_message_hub_trigger}
 Pour créer un déclencheur qui réagit lorsque des messages sont publiés dans une
 instance Message Hub, vous devez utiliser le flux nommé `messaging/messageHubFeed`. Ce
-flux prend en charge les paramètres suivants : 
+flux prend en charge les paramètres suivants :
 
 |Nom|Type|Description|
 |---|---|---|
@@ -849,7 +852,7 @@ Message Hub ou créez une rubrique dont vous écouterez les messages, par exempl
 
 2. Actualisez les packages dans votre espace de nom. L'actualisation
 crée automatiquement une liaison de package pour l'instance de service Message
-Hub que vous avez créée. 
+Hub que vous avez créée.
 
   ```
   wsk package refresh
@@ -888,9 +891,9 @@ Si vous n'utilisez pas OpenWhisk dans Bluemix ou si vous voulez
 configurer votre service Message Hub hors de Bluemix, vous devez créer
 manuellement une liaison de package pour le service Message Hub. Pour ce faire,
 vous avez besoin des données d'identification et des informations de connexion du
-service Message Hub. 
+service Message Hub.
 
-- Créez une liaison de package configurée pour votre service Message Hub. 
+- Créez une liaison de package configurée pour votre service Message Hub.
 
   ```
   wsk trigger create MyMessageHubTrigger -f /whisk.system/messaging/messageHubFeed -p kafka_brokers_sasl "[\"kafka01-prod01.messagehub.services.us-south.bluemix.net:9093\", \"kafka02-prod01.messagehub.services.us-south.bluemix.net:9093\", \"kafka03-prod01.messagehub.services.us-south.bluemix.net:9093\"]" -p topic mytopic -p user <your Message Hub user> -p password <your Message Hub password> -p kafka_admin_url https://kafka-admin-prod01.messagehub.services.us-south.bluemix.net:443 -p api_key <your API key>
@@ -901,12 +904,12 @@ service Message Hub.
 {: #openwhisk_catalog_message_hub_listen}
 Une fois le déclencheur créé, le  système surveille la rubrique indiquée dans
 votre service de messagerie. Lorsque de nouveaux messages sont publiés, le
-déclencheur est exécuté. 
+déclencheur est exécuté.
 
 Le contenu de ce déclencheur comporte une zone
 `messages`, qui est un tableau des messages publiés depuis
 la dernière exécution du déclencheur. Chaque objet de message figurant dans
-le tableau contient les zones suivantes : 
+le tableau contient les zones suivantes :
 - topic
 - partition
 - offset
@@ -926,7 +929,7 @@ l'objet JSON qui en résulte.
 Par exemple, si un message `{"title": "Une chaîne", "amount": 5,
 "isAwesome": true}` est publié avec `isJSONData`
 défini sur `true`, le contenu du déclencheur sera similaire à
-ce qui suit : 
+ce qui suit :
 
 ```
 {
@@ -948,7 +951,7 @@ ce qui suit :
 
 Cependant, si le même contenu de message est publié avec
 `isJSONData` défini sur `false`, le contenu
-du déclencheur sera similaire à l'exemple suivant : 
+du déclencheur sera similaire à l'exemple suivant :
 
 ```
 {
@@ -968,7 +971,7 @@ Vous remarquerez que le contenu du déclencheur comporte un tableau de messages.
 signifie que si vous produisez des messages très rapidement vers votre système de
 messagerie, le flux tente de générer un lot à partir des messages publiés afin
 de les traiter en une seule exécution du déclencheur. Cela permet de publier
-les messages dans le déclencher de manière plus rapide et plus efficace. 
+les messages dans le déclencher de manière plus rapide et plus efficace.
 
 Lorsque vous codez des actions exécutées par votre déclencheur, gardez à
 l'esprit que le nombre de messages du contenu est techniquement illimité, mais
@@ -999,15 +1002,13 @@ L'action `/whisk.system/slack/post` publie un message dans un canal Slack spéci
 - `channel` : canal Slack dans lequel publier le message.
 - `username` : nom sous lequel publier le message.
 - `text` : message à publier.
-- `token` : (facultatif) [Jeton d'accès](https://api.slack.com/tokens) Slack. Voir
-[ci-après](./openwhisk_catalog.html#openwhisk_catalog_slack_token) pour plus de détails sur l'utilisation de jetons d'accès Slack.
+- `token` : (facultatif) [Jeton d'accès](https://api.slack.com/tokens) Slack. Voir [ci-après](./openwhisk_catalog.html#openwhisk_catalog_slack_token) pour plus de détails sur l'utilisation de jetons d'accès Slack.
 
 L'exemple ci-dessous explique comment configurer Slack, créer une liaison de package et publier un message dans un canal.
 
 1. Configurez un [webhook entrant](https://api.slack.com/incoming-webhooks) Slack pour votre équipe.
 
-  Une fois Slack configuré, vous obtenez une adresse URL de webhook similaire à `https://hooks.slack.com/services/aaaaaaaaa/bbbbbbbbb/cccccccccccccccccccccccc`. Vous
-en aurez besoin à l'étape suivante.
+  Une fois Slack configuré, vous obtenez une adresse URL de webhook similaire à `https://hooks.slack.com/services/aaaaaaaaa/bbbbbbbbb/cccccccccccccccccccccccc`. Vous en aurez besoin à l'étape suivante.
 
 2. Créez une liaison de package avec vos données d'identification Slack, le canal dans lequel publier le message, et le nom d'utilisateur sous
 lequel publier le message.
@@ -1027,10 +1028,7 @@ lequel publier le message.
 ### Utilisation de l'API reposant sur le jeton Slack
 {: #openwhisk_catalog_slack_token}
 
-Si vous préférez, vous pouvez choisir d'utiliser l'API reposant sur le jeton Slack plutôt que l'API de webhook. Dans ce cas, transmettez un paramètre `token` contenant votre [jeton d'accès](https://api.slack.com/tokens) Slack. Vous
-pourrez ensuite utiliser l'une des [méthodes d'API Slack](https://api.slack.com/methods) comme paramètre `url`. Par
-exemple, pour envoyer un message, utilisez [slack.postMessage](https://api.slack.com/methods/chat.postMessage) comme valeur de
-paramètre `url`.
+Si vous préférez, vous pouvez choisir d'utiliser l'API reposant sur le jeton Slack plutôt que l'API de webhook. Dans ce cas, transmettez un paramètre `token` contenant votre [jeton d'accès](https://api.slack.com/tokens) Slack. Vous pourrez ensuite utiliser l'une des [méthodes d'API Slack](https://api.slack.com/methods) comme paramètre `url`. Par exemple, pour envoyer un message, utilisez [slack.postMessage](https://api.slack.com/methods/chat.postMessage) comme valeur de paramètre `url`.
 
 ## Utilisation du package GitHub
 {: #openwhisk_catalog_github}

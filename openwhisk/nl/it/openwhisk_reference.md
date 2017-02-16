@@ -58,7 +58,7 @@ Userai questo schema di denominazione quando utilizzi, ad esempio, la CLI {{site
 
 I nomi di tutte le entità, inclusi azioni, trigger, regole, pacchetti e spazi dei nomi, sono una sequenza di caratteri aventi il seguente formato:
 
-* Il primo carattere deve essere un carattere alfanumerico o un carattere di sottolineatura. 
+* Il primo carattere deve essere un carattere alfanumerico o un carattere di sottolineatura.
 * I caratteri successivi possono essere alfanumerici, spazi o i seguenti: `_`, `@`, `.`, `-`.
 * L'ultimo carattere non può essere uno spazio.
 
@@ -531,7 +531,7 @@ La seguente tabella elenca i limiti predefiniti per le azioni.
 
 ### Trigger
 
-I trigger sono soggetti a una frequenza di attivazione al minuto come indicato nella seguente tabella. 
+I trigger sono soggetti a una frequenza di attivazione al minuto come indicato nella seguente tabella.
 
 | limite | descrizione | configurabile | unità | valore predefinito |
 | ----- | ----------- | ------------ | -----| ------- |

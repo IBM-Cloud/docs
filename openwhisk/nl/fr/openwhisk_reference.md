@@ -512,7 +512,7 @@ avec précaution.
 ### Actions
 {{site.data.keyword.openwhisk_short}} présente quelques limites
 relatives au système, notamment la quantité de mémoire qu'une action
-peut utiliser et le nombre d'appels d'action autorisés par minute.  
+peut utiliser et le nombre d'appels d'action autorisés par minute. 
 
 Le tableau ci-dessous répertorie les limites par défaut pour les actions.
 

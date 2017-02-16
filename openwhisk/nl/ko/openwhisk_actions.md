@@ -411,7 +411,6 @@ lastupdated: "2017-01-04"
 ```
 {
   "name": "my-action",
-  "version": "1.0.0",
   "main": "index.js",
   "dependencies" : {
     "left-pad" : "1.1.3"
@@ -433,7 +432,8 @@ exports.main = myAction;
 ```
 {: codeblock}
 
-조치는 `exports.main`을 통해 표시됨에 유의하십시오. 조치 핸들러가 오브젝트(또는 오브젝트의 `Promise`) 채택 및 리턴의 일반적인 시그니처를 따르는 한 조치 핸들러는 자체적으로 이름을 지정할 수 있습니다. 
+조치는 `exports.main`을 통해 표시됨에 유의하십시오. 조치 핸들러가 오브젝트(또는 오브젝트의 `Promise`) 채택 및 리턴의 일반적인 시그니처를 따르는 한 조치 핸들러는 자체적으로 이름을 지정할 수 있습니다.
+Node.js 규칙에 따라, 이 파일을 `index.js`로 이름 지정하거나 package.json에서 `main` 특성으로 선호하는 파일 이름을 지정해야 합니다.
 
 이 패키지에서 OpenWhisk 조치를 작성하려면 다음을 수행하십시오.
 
@@ -788,11 +788,7 @@ wsk action invoke --blocking --result helloJava --param name World
   ```
   {: pre}
   ```
-  chmod +x buildAndPush.sh
-  ```
-  {: pre}
-  ```
-  ./buildAndPush.sh janesmith/blackboxdemo
+./buildAndPush.sh janesmith/blackboxdemo
   ```
   {: pre}
   
@@ -846,7 +842,7 @@ wsk action invoke --blocking --result helloJava --param name World
 
 {{site.data.keyword.openwhisk_short}} CLI를 사용하여 조치가 호출될 때 조치의 출력을 감시할 수 있습니다.
 
-1. 쉘에서 다음 명령 실행: 
+1. 쉘에서 다음 명령 실행:
   ```
   wsk activation poll
   ```
