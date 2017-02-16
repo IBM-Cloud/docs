@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
   
-lastupdated: "2017-01-11"
+lastupdated: "2017-01-02"
 
 ---
 
@@ -199,9 +199,11 @@ Livelli | Gratuito |  Di base | Standard | Premium
 --- | --- | --- | --- | --- |
 Descrizione | Supporto per tutti i clienti in prova di Bluemix.  |  Supporto per gli ambienti di non produzione o per i carichi di lavoro per cui le severità e i tempi di risposta tradizionali non sono necessari. | Supporto per gli ambienti con un numero limitato di applicazioni critiche di business. I clienti {{site.data.keyword.Bluemix_notm}} dedicato e {{site.data.keyword.Bluemix_notm}} locale ricevono il supporto standard. | Supporto per gli ambienti di importanza critica che hanno una dipendenza strategica da {{site.data.keyword.Bluemix_notm}}. 
 Supporto severità 1-4 |  N/D | N/D | Incluso | Include
-il supporto lingua | Inglese | Inglese | Inglese | CSM (client success manager)
-assegnato inglese | Non incluso | Non incluso | Non incluso | Incluso per<br> 8 ore a settimana
+il supporto lingua | Inglese | Inglese | Inglese, Giapponese | CSM (client success manager)
+assegnato Inglese, Giapponese | Non incluso | Non incluso | Non incluso | Incluso per<br> 8 ore a settimana
 {: caption="Table 1. Support levels" caption-side="top"}
+
+**Importante:** il supporto per la lingua giapponese è disponibile per i ticket con severità 2-4 dalle 9 a.m. alle 5 p.m. JST. I servizi della community e di terze parti sono esclusi.
 
 ### Apertura di un ticket di supporto
 {: #open-ticket}

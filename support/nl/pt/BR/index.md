@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
   
-lastupdated: "2017-01-11"
+lastupdated: "2017-01-02"
 
 ---
 
@@ -210,9 +210,11 @@ Níveis | Grátis |  Básica | Padrão | Premium
 --- | --- | --- | --- | --- |
 Descrição | Suporte para todos os clientes de avaliação do Bluemix.  |  Suporte para ambientes que não sejam de produção ou cargas de trabalho em que severidades e tempos de resposta tradicionais não são necessários. | Suporte para ambientes com um número limitado de aplicativos críticos aos negócios. Clientes do {{site.data.keyword.Bluemix_notm}} Dedicated e do {{site.data.keyword.Bluemix_notm}} Local recebem suporte padrão. | Suporte para ambientes essenciais que têm uma dependência estratégica no {{site.data.keyword.Bluemix_notm}}. 
 Suporte de severidade 1-4 |  N/A | N/A | Incluído | Incluído
-Idioma de suporte | Inglês | Inglês | Inglês | Inglês
-Client Success Manager (CSM) designado | Não incluído | Não incluído | Não incluído | Incluído em<br> 8 horas por semana
+Idioma de suporte | Inglês | Inglês | Inglês, japonês | Inglês, japonês
+Client success manager (CSM) designado | Não incluído | Não incluído | Não incluído | Incluído em<br> 8 horas por semana
 {: caption="Table 1. Support levels" caption-side="top"}
+
+**Importante:** o suporte para o idioma japonês está disponível para chamados com severidade 2-4, das 9h às 17h, horário padrão do Japão. Serviços da Comunidade e de Terceiros são excluídos.
 
 ### Abrindo um chamado de suporte
 {: #open-ticket}
@@ -225,12 +227,7 @@ Se o problema não for devido a uma indisponibilidade, abra um chamado de suport
 
   * No widget de Suporte, clique em **Obter ajuda**. Na página exibida, clique em **ENTRAR EM CONTATO**. Preencha o formulário para indicar o motivo pelo qual você precisa
 do suporte técnico.
-  * Use a página de ajuda do [IBM {{site.data.keyword.Bluemix_notm}} Support ![Ícone de link externo](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window}. É
-possível enviar chamados para problemas de vendas, faturamento, ID IBM, login e suporte
-técnico. Para problemas de suporte técnico, é possível selecionar um grupo técnico após clicar em **Suporte técnico**. Por exemplo, se você precisar de ajuda com apps Cloud Foundry, OpenWhisk, contêineres, servidores virtuais ou servidores bare metal, será possível escolher **Application Services**. Se precisar de ajuda com um serviço específico, selecione a categoria de serviço correspondente. Para
-determinar a categoria à qual seu serviço pertence, consulte as categorias sob
-[Serviços](/docs/services/index.html) na área de janela
-de navegação.  
+  * Use a página de ajuda do [IBM {{site.data.keyword.Bluemix_notm}} Support ![Ícone de link externo](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window}. É possível enviar chamados para problemas de vendas, faturamento, ID IBM, login e suporte técnico. Para problemas de suporte técnico, é possível selecionar um grupo técnico após clicar em **Suporte técnico**. Por exemplo, se você precisar de ajuda com apps Cloud Foundry, OpenWhisk, contêineres, servidores virtuais ou servidores bare metal, será possível escolher **Application Services**. Se precisar de ajuda com um serviço específico, selecione a categoria de serviço correspondente. Para determinar a categoria à qual seu serviço pertence, consulte as categorias sob [Serviços](/docs/services/index.html) na área de janela de navegação.  
   * No [IBM Client Success Portal ![Ícone de link externo](../icons/launch-glyph.svg)](https://support.ibmcloud.com){: new_window}. Depois de conectar-se ao portal, clique em **Abrir chamado** e, em seguida, preencha o formulário de suporte. 
   
 Ao abrir um chamado de suporte, assegure que você indique uma gravidade apropriada para seu chamado. A gravidade determina como o chamado será manipulado. Veja [Severidade e tempo de resposta do chamado de suporte](index.html#support-ticket-severity) para obter informações sobre as diferentes severidades. Se a sua consulta de suporte requerer uma resposta mais imediata, recomendamos fazer upgrade para nossa camada de suporte Padrão ou Premium para que seja possível criar chamados de suporte de severidade 1-4. Para fazer upgrade de sua conta para um nível de suporte mais alto, entre em contato com o [representante de vendas IBM ![Ícone de link externo](../icons/launch-glyph.svg)](https://www.ibm.com/cloud-computing/bluemix/contact-us){: new_window} ou envie-nos um e-mail em sales@bluemix.net.
@@ -251,8 +248,7 @@ Cada chamado de suporte é designado a um número de chamado exclusivo para refe
 
 
 
-### Entrando em contato com o suporte para o {{site.data.keyword.Bluemix_notm}}
-Dedicated
+### Entrando em contato com o suporte para o {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #contacting-bluemix-support-dedicated}
 
 <!-- Michelle links to this anchor  -->
@@ -262,14 +258,12 @@ diferentes para obter suporte, dependendo se você tem um ID IBM.
 
 <ul>
 <li>Entre em contato com o suporte abrindo um novo chamado usando a
-página de ajuda do <a href="http://ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} Support <img src="../icons/launch-glyph.svg" alt="Ícone de link externo"></a>. É
-possível usar um endereço de e-mail ou seu ID IBM para esse formulário. Selecione a opção **{{site.data.keyword.Bluemix_notm}} Dedicated** para o campo Região.
+página de ajuda do <a href="http://ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} Support <img src="../icons/launch-glyph.svg" alt="Ícone de link externo"></a>. É possível usar um endereço de e-mail ou seu ID IBM para esse formulário. Selecione a opção **{{site.data.keyword.Bluemix_notm}} Dedicated** para o campo Região.
 <p>Os envios de formulário são monitorados a partir de domingo às 22h UTC até sexta-feira às 23h59 UTC.</p>
 </li>
 <li>Se você tiver um ID IBM e tiver acesso ao ambiente do {{site.data.keyword.Bluemix_notm}} Public, clique no ícone {{site.data.keyword.avatar}} <img src="images/account_support.svg" alt="ícone Avatar" /> na barra de menus e depois clique em **Obter ajuda**. Na página exibida, clique em **ENTRAR EM CONTATO**.</li>
 <li>Se você não tiver um ID IBM, será possível entrar em contato com alguém de sua organização que tenha um ou trabalhar com seu representante IBM.
-<p>**Observação**: em sua solicitação, pode ser exibida uma lista de usuários em sua organização que podem servir como contatos para chamados de suporte na página de **Suporte** no console do {{site.data.keyword.Bluemix_notm}} em seu
-ambiente dedicado.</p></li>
+<p>**Observação**: em sua solicitação, pode ser exibida uma lista de usuários em sua organização que podem servir como contatos para chamados de suporte na página de **Suporte** no console do {{site.data.keyword.Bluemix_notm}} em seu ambiente dedicado.</p></li>
 </ul>
 
 ### Entrando em contato com o suporte para o {{site.data.keyword.Bluemix_notm}} Local

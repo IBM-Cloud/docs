@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
   
-lastupdated: "2017-01-11"
+lastupdated: "2017-01-02"
 
 ---
 
@@ -180,9 +180,11 @@ Stack Overflow 及 dW Answers 討論區都提供 Bluemix 問題的多種可搜�
 --- | --- | --- | --- | --- |
 說明 | 支援所有 Bluemix 試用客戶。  |  支援不需要傳統嚴重性及回應時間的非正式作業環境或工作負載。 | 支援有限企業關鍵應用程式數目的環境。「{{site.data.keyword.Bluemix_notm}} 專用」和「{{site.data.keyword.Bluemix_notm}} 本端」客戶接收標準支援。 | 支援與 {{site.data.keyword.Bluemix_notm}} 具有策略相依關係的關鍵任務環境。
 嚴重性 1-4 支援 |  N/A | N/A | 內含 | 內含
-支援語言 | 英文 | 英文 | 英文 | 英文
+支援語言 | 英文 | 英文 | 英文、日文 | 英文、日文
 指派的客戶成功經理 (CSM) | 不包含 | 不包含 | 不包含 | 內含，<br> 每週 8 小時
 {: caption="Table 1. Support levels" caption-side="top"}
+
+**重要事項：**對於嚴重性 2-4 的問題單，在 9 a.m. - 5 p.m. JST 提供日文語言的支援。社群及協力廠商服務不包含在內。
 
 ### 開啟支援問題單
 {: #open-ticket}

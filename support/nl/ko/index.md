@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
   
-lastupdated: "2017-01-11"
+lastupdated: "2017-01-02"
 
 ---
 
@@ -178,9 +178,11 @@ Stack Overflow 및 dW Answers 포럼 모두 사용자의 Bluemix 질문에 대�
 --- | --- | --- | --- | --- |
 설명 | Bluemix의 모든 시험판 고객을 지원합니다.  |  기존의 심각도 및 응답 시간이 필요하지 않은 프로덕션 이외의 환경이나 워크로드를 지원합니다. | 제한된 수의 비즈니스 핵심 애플리케이션이 있는 환경을 지원합니다. {{site.data.keyword.Bluemix_notm}} 데디케이티드 및 {{site.data.keyword.Bluemix_notm}} 로컬 고객이 표준 지원을 받습니다. | {{site.data.keyword.Bluemix_notm}}에서 전략적 의존성이 있는 매우 중요한 환경을 지원합니다.
 심각도 1-4 지원 |  해당사항 없음 | 해당사항 없음 | 포함 | 포함된
-지원 언어 | 영어 | 영어 | 영어 | 영어
-지정된 CSM(Client Success Manager) | 포함되지 않음 | 포함되지 않음 | 포함되지 않음 | 포함:<br> 주당 8시간
-{: caption="Table 1. Support levels" caption-side="top"}
+지원 언어 | 영어 | 영어 | 영어, 일본어 | 영어, 일본어
+지정 CSM(Client Success Manager) | 포함되지 않음 | 포함되지 않음 | 포함되지 않음 | 포함:<br> 주당 8시간
+{: caption="표 1. 지원 레벨" caption-side="top"}
+
+**중요:** 일본어에 대한 지원은 심각도 2-4 티켓에 대해 일본 표준 시간 오전 9시 - 오후 5시 사이에 가능합니다. 커뮤니티 및 써드파티 서비스는 제외됩니다. 
 
 ### 지원 티켓 열기
 {: #open-ticket}
@@ -195,7 +197,7 @@ Stack Overflow 및 dW Answers 포럼 모두 사용자의 Bluemix 질문에 대�
   * [IBM {{site.data.keyword.Bluemix_notm}} 지원 ![외부 링크 아이콘](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window} 도움말 페이지를 사용하십시오. 판매, 청구, IBM ID 및 로그인, 기술 지원 문제점 등에 대한 티켓을 제출할 수 있습니다. 기술 지원 문제점의 경우, **기술 지원**을 클릭한 후에 추가 기술 그룹을 선택할 수 있습니다. 예를 들어, Cloud Foundry 앱, OpenWhisk, 컨테이너, 가상 서버 또는 베어메탈 서버에 대한 도움이 필요한 경우, **애플리케이션 서비스**를 선택할 수 있습니다. 특정 서비스에 대한 도움이 필요하면 해당되는 서비스 카테고리를 선택하십시오. 서비스가 속한 카테고리를 판별하려면 탐색 분할창의 [서비스](/docs/services/index.html)에 있는 카테고리를 참조하십시오.   
   * [IBM Client Success Portal ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://support.ibmcloud.com){: new_window}에서, 포털에 로그인한 후에 **티켓 열기**를 클릭하고 지원 양식을 채우십시오. 
   
-지원 티켓을 열 때, 티켓에 적합한 심각도를 지정하도록 하십시오. 심각도에 따라 티켓 처리 방식이 결정되기 때문입니다. 서로 다른 심각도에 대한 정보는 [지원 티켓 심각도 및 응답 시간](index.html#support-ticket-severity)을 참조하십시오. 지원 조회에 대한 보다 즉각적인 응답이 필요한 경우에는 심각도 1-4 지원 티켓을 올릴 수 있도록 표준 또는 프리미엄 지원 티어로 업그레이드하는 것을 권장합니다. 더 높은 지원 레벨로 계정을 업그레이드하려면 [IBM 영업 담당자 ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://www.ibm.com/cloud-computing/bluemix/contact-us){: new_window}에게 문의하거나 sales@bluemix.net에 이메일로 문의하십시오. 
+지원 티켓을 열 때, 티켓에 적합한 심각도를 지정하도록 하십시오. 심각도에 따라 티켓 처리 방식이 결정되기 때문입니다. 서로 다른 심각도에 대한 정보는 [지원 티켓 심각도 및 응답 시간](index.html#support-ticket-severity)을 참조하십시오. 지원 조회에 대한 보다 즉각적인 응답이 필요한 경우에는 심각도 1-4 지원 티켓을 올릴 수 있도록 표준 또는 프리미엄 지원 계층으로 업그레이드하는 것을 권장합니다. 더 높은 지원 레벨로 계정을 업그레이드하려면 [IBM 영업 담당자 ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://www.ibm.com/cloud-computing/bluemix/contact-us){: new_window}에게 문의하거나 sales@bluemix.net에 이메일로 문의하십시오. 
 
 ### 연결된 계정에 대한 지원 티켓 열기
 {: #open-ticket-linked}
@@ -263,7 +265,7 @@ Stack Overflow 및 dW Answers 포럼 모두 사용자의 Bluemix 질문에 대�
 심각도 2 | <strong>중대한 비즈니스 영향.</strong> <br> 서비스 특성 또는 기능의 사용에 상당한 제약이 있거나, 비즈니스 최종 기한을 맞추지 못할 위험에 노출됩니다.  | <ul><li><strong>무료:</strong> 해당사항 없음</li><li><strong>기본:</strong> 해당사항 없음</li><li><strong>표준:</strong> 2시간 이내</li><li><strong>프리미엄:</strong> 90분 이내</li></ul> | <ul><li><strong>무료:</strong> 해당사항 없음</li><li><strong>기본:</strong> 해당사항 없음</li><li><strong>표준:</strong> 운영 시간</li><li><strong>프리미엄:</strong> 운영 시간</li></ul>
 심각도 3 | <strong>사소한 비즈니스 영향.</strong> <br> 서비스 특성 또는 기능을 사용할 수는 있지만, 일부 문제점 때문에 사용에 영향이 있습니다. 운영 관련 중요 영향은 발생하지 않습니다. | <ul><li><strong>무료:</strong> 해당사항 없음</li><li><strong>기본:</strong> 해당사항 없음</li><li><strong>표준:</strong> 4시간 이내</li><li><strong>프리미엄:</strong> 2시간 이내</li></ul> | <ul><li><strong>무료:</strong> 해당사항 없음</li><li><strong>기본:</strong> 해당사항 없음</li><li><strong>표준:</strong> 운영 시간</li><li><strong>프리미엄:</strong> 운영 시간</li></ul>
 심각도 4 | <strong>미미한 비즈니스 영향.</strong> <br> 문의 또는 기술적 이외의 요청. | <ul><li><strong>무료:</strong> 최상의 노력</li><li><strong>기본:</strong> 최상의 노력</li><li><strong>표준:</strong> 8시간 이내</li><li><strong>프리미엄:</strong> 4시간 이내</li></ul> | <ul><li><strong>무료:</strong> 운영 시간</li><li><strong>기본:</strong> 운영 시간</li><li><strong>표준:</strong> 운영 시간</li><li><strong>프리미엄:</strong> 운영 시간</li></ul>
-{: caption="Table 2. Severity definition and response time" caption-side="top"}
+{: caption="표 2. 심각도 정의 및 응답 시간" caption-side="top"}
 
 
 ### 잠재적 보안 취약성 보고
@@ -339,7 +341,7 @@ Stack Overflow 및 dW Answers 포럼 모두 사용자의 Bluemix 질문에 대�
 | 스페인어 | es |
 | 중국어 | zh_CN |
 | 대만어 | zh_TW |
-{: caption="Table 3. Supported national languages and language codes" caption-side="top"}
+{: caption="표 3. 지원되는 자국어 및 언어 코드" caption-side="top"}
 
 
 ## {{site.data.keyword.Bluemix_notm}} 지원에 대한 만족도 설문조사  

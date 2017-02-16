@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
   
-lastupdated: "2017-01-11"
+lastupdated: "2017-01-02"
 
 ---
 
@@ -180,9 +180,11 @@ Stack Overflow 和 dW Answers 这两个论坛都针对 Bluemix 问题提供了�
 --- | --- | --- | --- | --- |
 描述 | 支持所有 Bluemix 试用客户。  |  支持非生产环境或无需传统严重性和响应时间的工作负载。 | 支持具有有限数量的业务关键型应用程序的环境。{{site.data.keyword.Bluemix_notm}} Dedicated 和 {{site.data.keyword.Bluemix_notm}} Local 客户会获得标准支持。 | 支持对 {{site.data.keyword.Bluemix_notm}} 具有战略依赖关系的任务关键型环境。
 严重性 1-4 支持 |  不适用 | 不适用 | 已包含 | 包含的
-支持语言 | 英语 | 英语 | 英语 | 英语
+支持语言 | 英语 | 英语 | 英语、日语 | 英语、日语
 分配的客户成功经理 (CSM) | 不包含 | 不包含 | 不包含 | 包含：<br> 8 小时/周
 {: caption="Table 1. Support levels" caption-side="top"}
+
+**重要事项：**日语支持从上午 9 点到下午 5 点，适用于严重性为 2-4 的凭单。社区和第三方服务不包含在内。
 
 ### 开具支持凭单
 {: #open-ticket}
