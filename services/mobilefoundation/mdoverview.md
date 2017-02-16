@@ -2,11 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated:  "2017-01-17"
+lastupdated:  "2017-02-17"
 
 ---
 
-#	About {{site.data.keyword.mobilefoundation_short}}
+#	About Mobile Foundation
 {: #overview_mobilefoundation}
 
 The {{site.data.keyword.mobilefoundation_short}} service provides a way to quickly set up a {{site.data.keyword.mobilefirst}} server environment on {{site.data.keyword.Bluemix}}. You can then develop, test, and manage mobile apps from this cloud environment.
@@ -39,7 +39,7 @@ You can use the {{site.data.keyword.mfp_cli_long_notm}} (CLI) with the {{site.da
 
 <!--{{site.data.keyword.mobilefoundation_short}} service provisions a container in your space in {{site.data.keyword.Bluemix_notm}}. You can see the details of the container that is created, view the container performance, and access the server logs from your {{site.data.keyword.Bluemix_notm}} dashboard.-->
 
-## Getting help and support for {{site.data.keyword.mobilefoundation_short}}
+## Getting help and support for Mobile Foundation
 {: #getting_help_mobilefoundation}
 
 If you have problems or questions when using {{site.data.keyword.mobilefoundation_short}}, you can get help by searching for information or by asking questions through a forum. You can also open a support ticket.

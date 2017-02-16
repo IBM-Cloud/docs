@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated:  "2017-01-17"
+lastupdated:  "2017-02-17"
 
 ---
 
@@ -11,7 +11,7 @@ lastupdated:  "2017-01-17"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Getting started with {{site.data.keyword.mobilefoundation_short}}
+# Getting started with Mobile Foundation
 {: #gettingstartedtemplate}
 
 {{site.data.keyword.mobilefoundation_long}} expedites setting up an {{site.data.keyword.mfp_full}} environment from which you can develop, test, and operate enterprise mobile apps. {{site.data.keyword.mobilefoundation_short}} is available under two different service plans: Developer and Professional 1 Application.
@@ -19,7 +19,8 @@ lastupdated:  "2017-01-17"
 
 <!-- The Professional 1 Application plan allows the {{site.data.keyword.mobilefoundation_short}} server to be deployed on a scalable container group.--> Using the Professional 1 Application plan a single application built on any or all of the supported operating platforms such as Android, iOS, Windows or mobile web, can be managed. The Developer plan <!-- does not support {{site.data.keyword.mobilefoundation_short}} deployment on a container group with more than 1 node. This plan --> is best suited for development and test.
 
-## Getting started with {{site.data.keyword.mobilefoundation_short}}: Developer plan
+## Getting started with Mobile Foundation: Developer plan
+{: #gettingstartedtemplate_dev}
 
 After you create an instance of the {{site.data.keyword.mobilefoundation_short}}: Developer, you can start building your mobile channel with just a few clicks.
 
@@ -29,7 +30,8 @@ After you create an instance of the {{site.data.keyword.mobilefoundation_short}}
 
 * To create a {{site.data.keyword.mobilefirst_notm}} server instance with advanced configuration for topology, security, and other server configuration, click **Start Server with Advanced Configuration**. See [Setting up advanced configuration](c_using_mfs_p1.html#using_mfs_advanced_p1), for more information.
 
-## Getting started with {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application plan
+## Getting started with Mobile Foundation: Professional 1 Application plan
+{: #gettingstartedtemplate_prof}
 
 After you create an instance of the {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application service, you can start building your mobile channel by completing the following steps.
 
@@ -55,7 +57,8 @@ After you create an instance of the {{site.data.keyword.mobilefoundation_short}}
 
     * To create a {{site.data.keyword.mobilefirst_notm}} server instance with advanced configuration for topology, security, and other server configuration, click **Start Server with Advanced Configuration**. See [Setting up advanced configuration](c_using_mfs_p2.html#using_mfs_advanced_p2), for more information.
 
-## Getting started with {{site.data.keyword.mobilefoundation_short}}: Developer Pro plan
+## Getting started with Mobile Foundation: Developer Pro plan
+{: #gettingstartedtemplate_devpro}
 
 After you create an instance of the {{site.data.keyword.mobilefoundation_short}}: Developer Pro service, you can start building your mobile channel by completing the following steps.
 
@@ -85,7 +88,8 @@ After you create an instance of the {{site.data.keyword.mobilefoundation_short}}
 
       * To create a {{site.data.keyword.mobilefirst_notm}} server instance with advanced configuration for topology, security, and other server configuration, click **Start Server with Advanced Configuration**. See [Setting up advanced configuration](c_using_mfs_p3.html#using_mfs_advanced_p3), for more information.
 
-## Getting started with {{site.data.keyword.mobilefoundation_short}}: Professional Per Capacity plan
+## Getting started with Mobile Foundation: Professional Per Capacity plan
+{: #gettingstartedtemplate_profper}
 
 After you create an instance of the {{site.data.keyword.mobilefoundation_short}}: Professional Per Capacity service, you can start building your mobile channel by completing the following steps.
 
@@ -117,6 +121,7 @@ After you create an instance of the {{site.data.keyword.mobilefoundation_short}}
 Go to [Using the Mobile Foundation service to set up MobileFirst Server<!-- on IBM Containers--> ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/bluemix/using-mobile-foundation/){: new_window} to learn more about how to get started with {{site.data.keyword.mobilefoundation_short}}.
 
 ##  Known limitations
+{: #knownlimitations_mfp}
 
 * The {{site.data.keyword.mobilefoundation_short}} service UI does not use the user selected locale-specific pattern to display numbers.
 
