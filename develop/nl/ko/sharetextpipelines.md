@@ -197,7 +197,7 @@ CF_ORGANIZATION_ID	| 조직 GUID
 CF_SPACE |	영역 이름
 CF_SPACE_ID |	영역 GUID
 CF_APP	| 앱 이름
-{: caption="Table 1. Environment variables" caption-side="top"}
+{: caption="표 1. 환경 변수" caption-side="top"}
 
 **파이프라인에서 YAML 파일 생성** 
 
