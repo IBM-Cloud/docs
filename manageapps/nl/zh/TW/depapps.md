@@ -80,8 +80,6 @@ IBM 會在移除 DEA 架構支援時，警示您即將發生必要移轉，如�
 將應用程式移轉至 Diego 時，下列是需要解決的已知問題：
 
   * 使用 `--no-route` 選項部署的工作者應用程式不會報告為健全。若要防止此問題，請使用 `cf set-health-check APP_NAME none` 指令，停用埠型性能檢查。
-  * Diego 不會使用 VCAP_APP_HOST 環境變數。如果您的程式碼參照此變數，請將它移除。
-  * Diego 不會使用 VCAP_APP_PORT 環境變數。如果您的程式碼參照此變數，請將它取代為 PORT。
   * 不再支援 **cf files** 指令。**cf ssh** 指令將取而代之。如需 **cf ssh** 指令的詳細資料，請參閱 [cf ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh)。
   * 部分應用程式可能使用大量的檔案描述子 (inode)。如果發生此問題，您必須使用 `cf scale APP_NAME [-k DISK]` 指令，增加應用程式的磁碟限額。
 
@@ -484,7 +482,7 @@ if (process.env.VCAP_SERVICES) {
 	4. 填寫必要欄位，然後按一下**儲存**。
   * 使用 cf 指令行介面。使用 `cf set-env` 指令新增使用者定義的變數。例如：
     ```
-    cf set-env appname env_var_name env_var_value
+cf set-env appname env_var_name env_var_value
     ```
 
   * 使用 `manifest.yml` 檔案。在該檔案中新增值配對。例如：

@@ -85,8 +85,6 @@ Para validar em qual backend o aplicativo está em execução, use o comando a s
 A seguir estão os problemas conhecidos que podem precisar ser tratados ao migrar seus apps para o Diego:
 
   * Os aplicativos trabalhadores implementados com a opção `--no-route` não são relatados como saudáveis. Para evitar isso, desative a verificação de funcionamento baseada em porta com o comando `cf set-health-check APP_NAME none`.
-  * O Diego não usa a variável de ambiente VCAP_APP_HOST. Se o seu código referenciar essa variável, remova-a.
-  * O Diego não usa a variável de ambiente VCAP_APP_PORT. Se o seu código referenciar essa variável, substitua-a por PORT.
   * O comando **cf files** não é mais suportado. A substituição é o comando **cf ssh**. Para obter mais detalhes sobre o comando **cf ssh**, veja [cf ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh).
   * Alguns apps podem usar um número alto de descritores de arquivos (inodes). Caso encontre esse problema, deve-se aumentar a cota do disco para seu app com o comando `cf scale APP_NAME [-k DISK]`.
 

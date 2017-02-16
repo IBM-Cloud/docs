@@ -24,26 +24,26 @@ Das Bereitstellen einer Anwendung in
 {{site.data.keyword.Bluemix_notm}} umfasst zwei Phasen: Das Staging der Anwendung und das Starten der
 Anwendung.
 
-Cloud Foundry unterstützt Diego, die neue Standardlaufzeitarchitektur, mit der eine Reihe von Funktionen bereitgestellt werden, die die Anwendungsentwicklungserfahrung beim Hosten und Erstellen von Cloudplattformen verbessert. Mit dieser Aktualisierung der Architektur erfolgt eine Verbesserung des Gesamtbetriebs und der Leistung der Cloud Foundry-Plattform. Die neue Architektur bietet Unterstützung für mehrere Anwendungscontainertechnologien, darunter Garden und Windows, ein SSH-Paket für direktes Anmelden beim Anwendungscontainer und weitere innovative Änderungen. Weitere Informationen zum neuen Architekturupgrade finden Sie unter [{{site.data.keyword.Bluemix_notm}} Cloud Foundry: Diego is live ![Symbol für externen Link](../icons/launch-glyph.svg)](https://www.ibm.com/blogs/bluemix/2017/01/bluemix-cloud-foundry-diego-live/){: new_window}. 
+Cloud Foundry unterstützt Diego, die neue Standardlaufzeitarchitektur, mit der eine Reihe von Funktionen bereitgestellt werden, die die Anwendungsentwicklungserfahrung beim Hosten und Erstellen von Cloudplattformen verbessert. Mit dieser Aktualisierung der Architektur erfolgt eine Verbesserung des Gesamtbetriebs und der Leistung der Cloud Foundry-Plattform. Die neue Architektur bietet Unterstützung für mehrere Anwendungscontainertechnologien, darunter Garden und Windows, ein SSH-Paket für direktes Anmelden beim Anwendungscontainer und weitere innovative Änderungen. Weitere Informationen zum neuen Architekturupgrade finden Sie unter [{{site.data.keyword.Bluemix_notm}} Cloud Foundry: Diego is live ![Symbol für externen Link](../icons/launch-glyph.svg)](https://www.ibm.com/blogs/bluemix/2017/01/bluemix-cloud-foundry-diego-live/){: new_window}.
 
 
-Alle von Ihnen neu erstellten Anwendungen werden mit Diego ausgeführt. Beginnen Sie mit dem Migrieren vorhandener Anwendungen, die auf DEAs ausgeführt werden, in die neue Diego-Architektur. 
+Alle von Ihnen neu erstellten Anwendungen werden mit Diego ausgeführt. Beginnen Sie mit dem Migrieren vorhandener Anwendungen, die auf DEAs ausgeführt werden, in die neue Diego-Architektur.
 
-**Hinweis:** Die Cloud Foundry-Architektur Diego betrifft alle {{site.data.keyword.Bluemix_notm}} Public-Umgebungen für Regionen. Die Umgebungen {{site.data.keyword.Bluemix_notm}} Dedicated und {{site.data.keyword.Bluemix_notm}} Local werden zu einem späteren Zeitpunkt aktualisiert. 
+**Hinweis:** Die Cloud Foundry-Architektur Diego betrifft alle {{site.data.keyword.Bluemix_notm}} Public-Umgebungen für Regionen. Die Umgebungen {{site.data.keyword.Bluemix_notm}} Dedicated und {{site.data.keyword.Bluemix_notm}} Local werden zu einem späteren Zeitpunkt aktualisiert.
 
 ### Staging einer Anwendung
 {: #diego}
 
-Während der Staging-Phase kümmert sich Diego um alle Aspekte, die mit der Anwendungsontainerkoordination in Verbindung stehen. Wenn Sie eine Push-Operation für eine App durchführen, sendet der Cloud-Controller eine entsprechende Staging-Anforderung an Diego, damit die Task der Zuordnung der App-Instanzen übernommen wird. Mit dem Diego-Back-End werden Anwendungscontainer so koordiniert, dass Fehlertoleranz und langfristige Konsistenz sichergestellt sind. Dadurch wird die Last über eine Reihe von virtuellen Maschinen (auch 'Zellen' genannt) ausgeglichen. Des Weiteren wird durch Diego sichergestellt, dass Benutzer auf die Protokolle ihrer Apps zugreifen können. Alle Diego-Komponenten sind konzeptionsgemäß in Gruppen zusammengefasst. Dies bedeutet, dass Sie unterschiedliche Verfügbarkeitszonen einrichten können. 
+Während der Staging-Phase kümmert sich Diego um alle Aspekte, die mit der Anwendungsontainerkoordination in Verbindung stehen. Wenn Sie eine Push-Operation für eine App durchführen, sendet der Cloud-Controller eine entsprechende Staging-Anforderung an Diego, damit die Task der Zuordnung der App-Instanzen übernommen wird. Mit dem Diego-Back-End werden Anwendungscontainer so koordiniert, dass Fehlertoleranz und langfristige Konsistenz sichergestellt sind. Dadurch wird die Last über eine Reihe von virtuellen Maschinen (auch 'Zellen' genannt) ausgeglichen. Des Weiteren wird durch Diego sichergestellt, dass Benutzer auf die Protokolle ihrer Apps zugreifen können. Alle Diego-Komponenten sind konzeptionsgemäß in Gruppen zusammengefasst. Dies bedeutet, dass Sie unterschiedliche Verfügbarkeitszonen einrichten können.
 
-Bei der Validierung des App-Status unterstützt Diego dieselben PORT-basierten Prüfungen, die für den DEA verwendet wurden. Diego ist konzeptionsbedingt jedoch auch in der Lage, eher generische Optionen wie URL-basierte Statusprüfungen zu bieten, die künftig möglich sein können. 
+Bei der Validierung des App-Status unterstützt Diego dieselben PORT-basierten Prüfungen, die für den DEA verwendet wurden. Diego ist konzeptionsbedingt jedoch auch in der Lage, eher generische Optionen wie URL-basierte Statusprüfungen zu bieten, die künftig möglich sein können.
 
 #### Staging einer neuen App
 {: #stageapp}
 
-Alle neuen Apps werden in der Diego-Architektur bereitgestellt. Um ein Staging für eine neue Anwendung durchzuführen, stellen Sie die App mit dem Befehl **cf push** bereit: 
+Alle neuen Apps werden in der Diego-Architektur bereitgestellt. Um ein Staging für eine neue Anwendung durchzuführen, stellen Sie die App mit dem Befehl **cf push** bereit:
 
-  1. Stellen Sie die Anwendung bereit: 
+  1. Stellen Sie die Anwendung bereit:
   ```
   $ cf push ANWENDUNGSNAME
   ```
@@ -55,24 +55,24 @@ unter
 ### Vorhandene App in Diego migrieren
 {: #migrateapp}
 
-Diego ist die Cloud Foundry-Standardarchitektur für {{site.data.keyword.Bluemix_notm}} und Sie müssen alle vorhandenen Anwendungen durch Aktualisieren der einzelnen Apps migrieren, da die Unterstützung für DEAs entfernt wird. Beginnen Sie mit dem Migrieren von Apps in Diego, indem Sie die Anwendung mit dem Diego-Flag aktualisieren. Es wird umgehend versucht, die Anwendung unter Diego auszuführen und die Ausführung auf den DEAs wird gestoppt.  
+Diego ist die Cloud Foundry-Standardarchitektur für {{site.data.keyword.Bluemix_notm}} und Sie müssen alle vorhandenen Anwendungen durch Aktualisieren der einzelnen Apps migrieren, da die Unterstützung für DEAs entfernt wird. Beginnen Sie mit dem Migrieren von Apps in Diego, indem Sie die Anwendung mit dem Diego-Flag aktualisieren. Es wird umgehend versucht, die Anwendung unter Diego auszuführen und die Ausführung auf den DEAs wird gestoppt. 
 
-Da Ihre Anwendung von der DEA-Architektur auf Diego aktualisiert wird, erfolgt möglicherweise eine kurze oder eine anhaltende Ausfallzeit, wenn die Anwendung nicht mit Diego kompatibel ist. Um die Ausfallzeit zu begrenzen, nehmen Sie eine [Blue-Green-Bereitstellung](/docs/manageapps/updapps.html#blue_green) vor, indem Sie eine Kopie Ihrer Anwendung für Diego bereitstellen. Lagern Sie anschließend Routen aus und skalieren Sie die DEA-Anwendung herab. 
+Da Ihre Anwendung von der DEA-Architektur auf Diego aktualisiert wird, erfolgt möglicherweise eine kurze oder eine anhaltende Ausfallzeit, wenn die Anwendung nicht mit Diego kompatibel ist. Um die Ausfallzeit zu begrenzen, nehmen Sie eine [Blue-Green-Bereitstellung](/docs/manageapps/updapps.html#blue_green) vor, indem Sie eine Kopie Ihrer Anwendung für Diego bereitstellen. Lagern Sie anschließend Routen aus und skalieren Sie die DEA-Anwendung herab.
 
-Führen Sie die folgenden Schritte aus, um Ihre App in Diego zu migrieren: 
+Führen Sie die folgenden Schritte aus, um Ihre App in Diego zu migrieren:
 
- 1.  Installieren Sie sowohl die [cf-CLI ![Symbol für externen Link](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window} als auch das [CLI-Plug-in zur Aktivierung von Diego![Symbol für externen Link](../icons/launch-glyph.svg)](https://github.com/cloudfoundry-incubator/Diego-Enabler){:new_window}. 
- 2. Lesen Sie die [Liste bekannter Probleme](depapps.html#knownissues). 
- 3. Legen Sie das Diego-Flag fest, damit Ihre App unter Diego ausgeführt wird. 
+ 1.  Installieren Sie sowohl die [cf-CLI ![Symbol für externen Link](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window} als auch das [CLI-Plug-in zur Aktivierung von Diego![Symbol für externen Link](../icons/launch-glyph.svg)](https://github.com/cloudfoundry-incubator/Diego-Enabler){:new_window}.
+ 2. Lesen Sie die [Liste bekannter Probleme](depapps.html#knownissues).
+ 3. Legen Sie das Diego-Flag fest, damit Ihre App unter Diego ausgeführt wird.
   ```
   $ cf enable-diego ANWENDUNGSNAME
   ```
 
-Stellen Sie nach dem Aktualisieren Ihrer App sicher, dass die App gestartet wurde. Wenn die migrierte App nicht gestartet werden kann, bleibt sie offline, bis Sie das Problem identifiziert und behoben haben. Starten Sie die App anschließend erneut. 
+Stellen Sie nach dem Aktualisieren Ihrer App sicher, dass die App gestartet wurde. Wenn die migrierte App nicht gestartet werden kann, bleibt sie offline, bis Sie das Problem identifiziert und behoben haben. Starten Sie die App anschließend erneut.
 
-Sie werden von IBM über den bevorstehenden Zeitraum für die obligatorische Migration benachrichtigt, wenn die Unterstützung für die DEA-Architektur entfernt wird. Wenn Sie Ihre Apps im vorgegebenen Zeitraum nicht migriert haben, werden alle Apps vom Operationsteam für Sie migriert. 
+Sie werden von IBM über den bevorstehenden Zeitraum für die obligatorische Migration benachrichtigt, wenn die Unterstützung für die DEA-Architektur entfernt wird. Wenn Sie Ihre Apps im vorgegebenen Zeitraum nicht migriert haben, werden alle Apps vom Operationsteam für Sie migriert.
   
-Verwenden Sie den folgenden Befehl, um zu bestätigen, auf welchem Back-End die Anwendung ausgeführt wird: 
+Verwenden Sie den folgenden Befehl, um zu bestätigen, auf welchem Back-End die Anwendung ausgeführt wird:
 
   ```
   $ cf has-diego-enabled ANWENDUNGSNAME
@@ -81,33 +81,31 @@ Verwenden Sie den folgenden Befehl, um zu bestätigen, auf welchem Back-End die 
 #### Bekannte Probleme bei der Migration in Diego
 {: #knownissues}
 
-Bei der Migration Ihrer Apps in Diego treten die folgenden bekannten Probleme auf, die Sie möglicherweise beheben müssen: 
+Bei der Migration Ihrer Apps in Diego treten die folgenden bekannten Probleme auf, die Sie möglicherweise beheben müssen:
 
   * Für Worker-Anwendungen, die mit der Option
 `--no-route`
 bereitgestellt werden, wird nicht ein einwandfreier Zustand gemeldet. Um dies zu verhindern, inaktivieren Sie die portbasierte Statusprüfung mit
 dem Befehl `cf
 set-health-check APP_NAME none`.
-  * Die Umgebungsvariable VCAP_APP_HOST wird von Diego nicht verwendet. Falls Ihr Code diese Variable referenziert, entfernen Sie sie. 
-  * Die Umgebungsvariable VCAP_APP_HOST wird von Diego nicht verwendet. Falls Ihr Code diese Variable referenziert, ersetzen Sie sie durch PORT. 
   * Der Befehl **cf files** wird nicht mehr
-unterstützt. Er wird durch den Befehl **cf ssh** ersetzt. Weitere Details über den Befehl **cf ssh** finden Sie unter [cf ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh). 
+unterstützt. Er wird durch den Befehl **cf ssh** ersetzt. Weitere Details über den Befehl **cf ssh** finden Sie unter [cf ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh).
   * Einige Apps verwenden möglicherweise eine große Anzahl von
 Dateideskriptoren (inodes). Falls Sie dieses Problem feststellen, müssen Sie
 das Plattenkontingent für Ihre App mit dem Befehl `cf scale APP_NAME
 [-k DISK]` vergrößern.
 
-Eine umfassende Liste bekannter Probleme finden Sie auf der Cloud Foundry-Dokumentationsseite zur [Migration in Diego ![Symbol für externen Link](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/diego-design-notes/blob/master/migrating-to-diego.md){: new_window}. 
+Eine umfassende Liste bekannter Probleme finden Sie auf der Cloud Foundry-Dokumentationsseite zur [Migration in Diego ![Symbol für externen Link](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/diego-design-notes/blob/master/migrating-to-diego.md){: new_window}.
 
-Bis die Unterstützung für die ältere DEA-Architektur entfernt wird, können Sie den folgenden Befehl ausführen, um zu DEAs zurückzuwechseln: `cf disable-diego ANWENDUNGSNAME`. Sie können auch weiterhin neue Apps in der DEA-Architektur bereitstellen, bis die Unterstützung entfernt wird: 
+Bis die Unterstützung für die ältere DEA-Architektur entfernt wird, können Sie den folgenden Befehl ausführen, um zu DEAs zurückzuwechseln: `cf disable-diego ANWENDUNGSNAME`. Sie können auch weiterhin neue Apps in der DEA-Architektur bereitstellen, bis die Unterstützung entfernt wird:
 
-**Hinweis:** Es muss sowohl die [cf-CLI ![Symbol für externen Link](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window} als auch das [CLI-Plug-in zur Aktivierung von Diego ![Symbol für externen Link](../icons/launch-glyph.svg)](https://github.com/cloudfoundry-incubator/Diego-Enabler){:new_window} installiert sein, damit der Befehl `disable-diego` verwendet werden kann. 
+**Hinweis:** Es muss sowohl die [cf-CLI ![Symbol für externen Link](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window} als auch das [CLI-Plug-in zur Aktivierung von Diego ![Symbol für externen Link](../icons/launch-glyph.svg)](https://github.com/cloudfoundry-incubator/Diego-Enabler){:new_window} installiert sein, damit der Befehl `disable-diego` verwendet werden kann.
 
 1. Anwendung ohne Starten bereitstellen:
 ```
 $ cf push ANWENDUNGSNAME --no-start
 ```
-2. Führen Sie den Befehl 'disable-diego' aus: 
+2. Führen Sie den Befehl 'disable-diego' aus:
 ```
 $ cf disable-diego ANWENDUNGSNAME
 ```
@@ -119,18 +117,18 @@ $ cf start ANWENDUNGSNAME
 ### Starten einer Anwendung
 {: #startapp}
 
-Beim Starten einer Anwendung wird die Instanz des Anwendungscontainers erstellt. Gegebenenfalls werden auch mehrere Instanzen erstellt. Für unter Diego ausgeführte Anwendungen können Sie den Befehl **cf ssh** oder **cf scp** verwenden, um auf das Dateisystem des Anwendungscontainers zuzugreifen, in dem sich die Protokolle befinden. Der Befehl **cf files** funktioniert nicht bei Apps, die in der Diego-Architektur ausgeführt werden. 
+Beim Starten einer Anwendung wird die Instanz des Anwendungscontainers erstellt. Gegebenenfalls werden auch mehrere Instanzen erstellt. Für unter Diego ausgeführte Anwendungen können Sie den Befehl **cf ssh** oder **cf scp** verwenden, um auf das Dateisystem des Anwendungscontainers zuzugreifen, in dem sich die Protokolle befinden. Der Befehl **cf files** funktioniert nicht bei Apps, die in der Diego-Architektur ausgeführt werden.
 
-**Hinweis:** Wenn Sie weiterhin Anwendungen auf DEAs ausführen, können Sie den Befehl **cf files** verwenden, um die Dateien im Anwendungscontainer anzuzeigen, bis die Unterstützung für DEAs entfernt wird. 
+**Hinweis:** Wenn Sie weiterhin Anwendungen auf DEAs ausführen, können Sie den Befehl **cf files** verwenden, um die Dateien im Anwendungscontainer anzuzeigen, bis die Unterstützung für DEAs entfernt wird.
 
 Wenn der Start der Anwendung fehlschlägt, wird die Anwendung gestoppt und der gesamte Inhalt Ihres Anwendungscontainers wird entfernt. Daher stehen Ihnen keine Protokolldateien zur Verfügung, wenn eine Anwendung gestoppt wird oder wenn der Staging-Prozess einer
 Anwendung fehlschlägt.
 
 Wenn die Protokolle für Ihre Anwendung nicht mehr verfügbar sind, sodass auch die Befehle **cf ssh**, **cf scp** und **cf files** nicht mehr verwendet werden können, um die Ursache der Staging-Fehler im Anwendungscontainer anzuzeigen, können Sie stattdessen auch den Befehl **cf logs** verwenden. Der Befehl **cf logs** verwendet den Cloud Foundry-Protokollaggregator, um die
 Details Ihrer Anwendungsprotokolle
-und Systemprotokolle zu erfassen, und Sie können den im Protokollaggregator gepufferten Inhalt anzeigen. Weitere Informationen zum Protokollaggregator finden Sie unter [Logging in Cloud Foundry ![Symbol für externen Link](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html){:new_window}. 
+und Systemprotokolle zu erfassen, und Sie können den im Protokollaggregator gepufferten Inhalt anzeigen. Weitere Informationen zum Protokollaggregator finden Sie unter [Logging in Cloud Foundry ![Symbol für externen Link](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html){:new_window}.
 
-**Hinweis:** Die Puffergröße ist begrenzt. Wenn eine Anwendung über einen langen Zeitraum ausgeführt und dabei nicht erneut gestartet wird, kann es sein, dass nach Eingabe des Befehls `cf logs App-Name --recent` keine Protokolle angezeigt werden, weil der Inhalt des Protokollpuffers möglicherweise gelöscht worden ist. Daher können Sie zur Behebung von Staging-Fehlern für eine große Anwendung den Befehl `cf logs App-Name` in eine von der Befehlszeilenschnittstelle 'cf' separate Befehlszeile eingeben, um die Protokolle zu verfolgen, wenn Sie die Anwendung bereitstellen. 
+**Hinweis:** Die Puffergröße ist begrenzt. Wenn eine Anwendung über einen langen Zeitraum ausgeführt und dabei nicht erneut gestartet wird, kann es sein, dass nach Eingabe des Befehls `cf logs App-Name --recent` keine Protokolle angezeigt werden, weil der Inhalt des Protokollpuffers möglicherweise gelöscht worden ist. Daher können Sie zur Behebung von Staging-Fehlern für eine große Anwendung den Befehl `cf logs App-Name` in eine von der Befehlszeilenschnittstelle 'cf' separate Befehlszeile eingeben, um die Protokolle zu verfolgen, wenn Sie die Anwendung bereitstellen.
 
 Wenn beim Staging Ihrer Anwendungen unter
 {{site.data.keyword.Bluemix_notm}} Probleme auftreten, können Sie die Schritte im Thema
@@ -207,7 +205,7 @@ Die Datei `package.json` muss sich in Ihrer Node.js-Anwendung befinden, damit di
   }
   ```
 
-  Weitere Informationen zur Datei `package.json` finden Sie unter [package.json ![Symbol für externen Link](../icons/launch-glyph.svg)](https://www.npmjs.org/doc/files/package.json.html){:new_window}. 
+  Weitere Informationen zur Datei `package.json` finden Sie unter [package.json ![Symbol für externen Link](../icons/launch-glyph.svg)](https://www.npmjs.org/doc/files/package.json.html){:new_window}.
 
   * Um PHP-, Ruby- oder Python-Anwendungen in {{site.data.keyword.Bluemix_notm}} bereitzustellen, verwenden Sie den folgenden Befehl in dem Verzeichnis, das die Anwendungsquelle enthält:
 
@@ -303,7 +301,7 @@ Umgebungsvariablen enthalten Informationen zur Umgebung einer in {{site.data.key
 
 Die folgenden Umgebungsvariablen einer aktiven {{site.data.keyword.Bluemix_notm}}-Anwendung können Sie mit dem Befehl **cf env** oder über die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle anzeigen:
 
-  * Benutzerdefinierte Variablen, die für eine Anwendung spezifisch sind. Informationen dazu, wie eine benutzerdefinierte Variable einer App hinzugefügt wird, finden Sie unter [Benutzerdefinierte Umgebungsvariablen hinzufügen ![Symbol für externen Link](../icons/launch-glyph.svg)](#ud_env){:new_window}. 
+  * Benutzerdefinierte Variablen, die für eine Anwendung spezifisch sind. Informationen dazu, wie eine benutzerdefinierte Variable einer App hinzugefügt wird, finden Sie unter [Benutzerdefinierte Umgebungsvariablen hinzufügen ![Symbol für externen Link](../icons/launch-glyph.svg)](#ud_env){:new_window}.
 
   * Die Variable VCAP_SERVICES, die Verbindungsinformationen für den Zugriff auf eine Serviceinstanz enthält. Ist Ihre Anwendung an mehrere Services gebunden, so enthält die Variable VCAP_SERVICES die Verbindungsinformationen für jede einzelne Serviceinstanz. Beispiel:
 
@@ -437,7 +435,7 @@ Folgende Variablen werden vom DEA definiert:
 
 </dl>
 
-Von Buildpacks definierte Variablen sind für jedes Buildpack unterschiedlich. Informationen zu weiteren kompatiblen Buildpacks finden Sie unter [Buildpacks ![Symbol für externen Link](../icons/launch-glyph.svg)](https://github.com/cloudfoundry-community/cf-docs-contrib/wiki/Buildpacks){:new_window}. 
+Von Buildpacks definierte Variablen sind für jedes Buildpack unterschiedlich. Informationen zu weiteren kompatiblen Buildpacks finden Sie unter [Buildpacks ![Symbol für externen Link](../icons/launch-glyph.svg)](https://github.com/cloudfoundry-community/cf-docs-contrib/wiki/Buildpacks){:new_window}.
 
 <ul>
     <li>Folgende Variablen werden vom Liberty-Buildpack definiert:
@@ -477,7 +475,7 @@ if (process.env.VCAP_SERVICES) {
 }
 ```
 
-Weitere Informationen zu den einzelnen Umgebungsvariablen finden Sie unter [Cloud Foundry Environment Variables ![Symbol für externen Link](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html){:new_window}. 
+Weitere Informationen zu den einzelnen Umgebungsvariablen finden Sie unter [Cloud Foundry Environment Variables ![Symbol für externen Link](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html){:new_window}.
 
 ## Anwendungsbereitstellungen anpassen
 {: #customize_dep}

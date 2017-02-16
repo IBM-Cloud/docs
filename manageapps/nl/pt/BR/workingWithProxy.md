@@ -16,8 +16,8 @@ lastupdated: "2016-07-20"
 
 
 
-Em alguns ambientes como [Bluemix
-Dedicated](/docs/dedicated/index.html#dedicated) e [Bluemix Local](/docs/local/index.html#local), um proxy
+Em alguns ambientes como [Bluemix Dedicated](/docs/dedicated/index.html#dedicated) e
+[Bluemix Local](/docs/local/index.html#local), um proxy
 pode ser configurado que afeta o comportamento de seu aplicativo durante preparação e
 tempo de execução.
 
@@ -48,10 +48,7 @@ ambiente.
 ## aplicativos Java
 {: #java_apps}
 
-Para [Liberty for Java](/docs/runtimes/liberty/index.html) e os
-aplicativos [java_buildpack](/docs/runtimes/tomcat/index.html), as
-configurações de proxy podem ser passadas ao tempo de execução por meio da variável de
-ambiente **JAVA_OPTS**.  Por exemplo, é possível emitir o comando:
+Para [Liberty for Java](/docs/runtimes/liberty/index.html) e os aplicativos [java_buildpack](/docs/runtimes/tomcat/index.html), as configurações de proxy podem ser passadas ao tempo de execução por meio da variável de ambiente **JAVA_OPTS**.  Por exemplo, é possível emitir o comando:
 ```
    $ cf se myApp JAVA_OPTS "-Dhttp.proxyHost=yourProxyURL -Dhttp.proxyPort=yourProxyPort"
 ```

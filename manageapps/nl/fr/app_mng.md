@@ -1,4 +1,4 @@
-﻿---
+---
 
 copyright:
   years: 2015, 2017
@@ -56,8 +56,7 @@ applications qui s'exécutent dans une cellule Diego.
 {: #devconsole}
 
 L'utilitaire de la console de développement (*devconsole*)
-permet aux utilisateurs de redémarrer, arrêter ou suspendre leurs applications. Ils peuvent également activer les utilitaires shell et inspector ou y accéder.  
-Il est accessible à l'adresse URL suivante :
+permet aux utilisateurs de redémarrer, arrêter ou suspendre leurs applications. Ils peuvent également activer les utilitaires shell et inspector ou y accéder.  Il est accessible à l'adresse URL suivante :
 ```
   https://<nom_votre_app>.mybluemix.net/bluemix-debug/manage
 ```
@@ -75,8 +74,7 @@ L'utilitaire *devconsole* démarre également *proxy*.
 L'agent Health Center (*hc*) permet à votre application
 d'être surveillée par le client Health Center.
 
-Health Center prend en charge l'analyse des performances de vos applications Liberty et Node.js à l'aide d'IBM Monitoring and Diagnostic Tools. Pour
-plus d'informations, voir [How to analyze the performance of Liberty Java or Node.js apps in {{site.data.keyword.Bluemix_notm}} ![icône de lien externe](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2015/07/03/how-to-analyze-performance-in-bluemix/){: new_window}.</p></li>
+Health Center prend en charge l'analyse des performances de vos applications Liberty et Node.js à l'aide d'IBM Monitoring and Diagnostic Tools. Pour plus d'informations, voir [How to analyze the performance of Liberty Java or Node.js apps in {{site.data.keyword.Bluemix_notm}} ![icône de lien externe](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2015/07/03/how-to-analyze-performance-in-bluemix/){: new_window}.</p></li>
 
 L'utilitaire *hc* démarre également *proxy*.
 
@@ -118,18 +116,11 @@ que pour les applications qui s'exécutent sur un agent DEA.
 #### debug
 {: #debug}
 
-L'utilitaire *debug* active le mode débogage pour
-l'application Liberty et permet aux clients tels qu'IBM Eclipse Tools for
-{{site.data.keyword.Bluemix_notm}} d'établir une session de
-[débogage
-à distance](/docs/manageapps/eclipsetools/eclipsetools.html#remotedebug) avec l'application. 
+L'utilitaire *debug* active le mode débogage pour l'application Liberty et permet aux clients tels qu'IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} d'établir une session de [débogage à distance](/docs/manageapps/eclipsetools/eclipsetools.html#remotedebug) avec l'application.
 
 L'utilitaire *debug* démarre aussi *proxy*.
 
-L'utilitaire *debug* peut être utilisé conjointement avec
-*noproxy*. Pour utiliser le débogueur avec
-*noproxy*, établissez d'abord l'acheminement de port à l'aide de
-la commande `cf ssh`. Exemple :
+L'utilitaire *debug* peut être utilisé conjointement avec *noproxy*. Pour utiliser le débogueur avec *noproxy*, établissez d'abord l'acheminement de port à l'aide de la commande `cf ssh`. Exemple :
 
 ```
 $ cf ssh -N -T -L 7777:127.0.0.1:7777 <nomApp>
@@ -151,9 +142,7 @@ L'utilitaire *jmx* ne démarre pas proxy.
 
 L'utilitaire *localjmx* active la fonction Liberty [localConnector-1.0 ![icône de lien externe](../icons/launch-glyph.svg)](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feature_localConnector-1.0.html){:new_window}. Combinée avec l'acheminement de port local, elle offre un autre moyen d'autoriser un client JMX distant à gérer l'application.
 
-L'utilitaire *localjmx* est applicable uniquement pour les
-applications qui s'exécutent dans une cellule Diego. Pour utiliser *localjmx*, établissez d'abord l'acheminement de port à l'aide de
-la commande `cf ssh`. Exemple :
+L'utilitaire *localjmx* est applicable uniquement pour les applications qui s'exécutent dans une cellule Diego. Pour utiliser *localjmx*, établissez d'abord l'acheminement de port à l'aide de la commande `cf ssh`. Exemple :
 
 ```
 $ cf ssh -N -T -L 5000:127.0.0.1:5000 <nomApp>
@@ -161,7 +150,7 @@ $ cf ssh -N -T -L 5000:127.0.0.1:5000 <nomApp>
 
 Ensuite, pour vous connecter avec JConsole, choisissez "Remote Process",
 indiquez `127.0.0.1:5000` et utilisez une connexion non
-sécurisée. 
+sécurisée.
 
 
 ### Les utilitaires ci-après prennent en charge Node.js seulement
@@ -172,17 +161,11 @@ sécurisée.
 
 Pour les versions de Node.js antérieures à la version 6.3.0,
 *inspector* active l'interface du débogueur node inspector. Le processus *inspector* s'exécute dans votre conteneur d'applications. Servez-vous de cet utilitaire pour créer des profils d'utilisation de l'unité
-centrale, ajouter des points d'arrêt et déboguer le code alors que votre application s'exécute dans {{site.data.keyword.Bluemix_notm}}. Pour plus
-d'informations sur le module node inspector, voir [node-inspector on GitHub ![icône de lien externe](../icons/launch-glyph.svg)](https://github.com/node-inspector/node-inspector){:new_window}.
+centrale, ajouter des points d'arrêt et déboguer le code alors que votre application s'exécute dans {{site.data.keyword.Bluemix_notm}}. Pour plus d'informations sur le module node inspector, voir [node-inspector on GitHub ![icône de lien externe](../icons/launch-glyph.svg)](https://github.com/node-inspector/node-inspector){:new_window}.
 
-Pour Node.js versions 6.3.0 et ultérieures, *inspector*
-utilise [V8 Inspector Integration for Node.js ![icône de lien externe](../icons/launch-glyph.svg)](https://nodejs.org/dist/latest-v6.x/docs/api/debugger.html#debugger_v8_inspector_integration_for_node_js){:new_window}.
+Pour Node.js versions 6.3.0 et ultérieures, *inspector* utilise [V8 Inspector Integration for Node.js ![icône de lien externe](../icons/launch-glyph.svg)](https://nodejs.org/dist/latest-v6.x/docs/api/debugger.html#debugger_v8_inspector_integration_for_node_js){:new_window}.
 
-L'utilitaire inspector démarre *proxy* par défaut, mais le
-mode de débogage à distance dépend de la version de Node.js et de
-l'utilisation de *proxy* ou de *noproxy*. Le tableau
-suivant indique comment accéder au débogage à distance dans les différents
-scénarios.
+L'utilitaire inspector démarre *proxy* par défaut, mais le mode de débogage à distance dépend de la version de Node.js et de l'utilisation de *proxy* ou de *noproxy*.  Le tableau suivant indique comment accéder au débogage à distance dans les différents scénarios.
 
 | | proxy | noproxy |
 |---|---|---|
@@ -196,9 +179,8 @@ version 6.3.0, activez l'accès à l'URL via l'acheminement de port local. Exemp
 $ cf ssh -N -T -L <portLocal>:127.0.0.1:8790 <nomApp>
 ```
 
-Accédez ensuite à http://127.0.0.1:8790 dans votre navigateur Web Chrome.
-Modifiez le port en définissant la variable d'environnement
-BLUEMIX_APP_MGMT_INSPECTOR : 
+Accédez ensuite à http://127.0.0.1:8790 dans votre navigateur Web Chrome.  Modifiez le port en définissant la variable d'environnement
+BLUEMIX_APP_MGMT_INSPECTOR :
 
 ```
 $ cf set-env <nomApp> BLUEMIX_APP_MGMT_INSPECTOR='{port: 9790}'
@@ -224,7 +206,7 @@ $ cf ssh -N -T -L 9229:127.0.0.1:9229 <nomApp>
 
 Vous aurez besoin d'une version à jour du navigateur Web Chrome pour
 accéder à cette URL. Dans ce scénario, le proxy n'achemine pas le trafic à
-l'inspecteur. 
+l'inspecteur.
 
 #### trace
 {: #trace}

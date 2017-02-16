@@ -35,7 +35,7 @@ Damit die CSR gültig ist, müssen bei ihrer Generierung die folgenden Angaben g
 
 **Landesname**
 
-  Ein zweistelliger Code, der für das Land oder die Region steht. Die Abkürzung 'US' steht z. B. für die Vereinigten Staaten. Ziehen Sie für weitere Länder oder Regionen vor der Erstellung der CSR die [Liste der ISO-Landescodes ![Symbol für externen Link](../icons/launch-glyph.svg)](https://www.iso.org/obp/ui/#search){:new_window} zurate. 
+  Ein zweistelliger Code, der für das Land oder die Region steht. Die Abkürzung 'US' steht z. B. für die Vereinigten Staaten. Ziehen Sie für weitere Länder oder Regionen vor der Erstellung der CSR die [Liste der ISO-Landescodes ![Symbol für externen Link](../icons/launch-glyph.svg)](https://www.iso.org/obp/ui/#search){:new_window} zurate.
 
 **Bundesland oder Kanton**
 
@@ -59,7 +59,7 @@ Buchhaltung oder Marketing.
 
   Der vollständig qualifizierte Domänenname (FQDN), für den Sie das SSL-Zertifikat anfordern.
 
-Die Methoden für die Erstellung einer CSR variieren in Abhängigkeit von Ihrem Betriebssystem. Das folgende Beispiel zeigt, wie eine CSR mithilfe des [OpenSSL-Befehlszeilentools ![Symbol für externen Link](../icons/launch-glyph.svg)](http://www.openssl.org/){:new_window} erstellt wird: 
+Die Methoden für die Erstellung einer CSR variieren in Abhängigkeit von Ihrem Betriebssystem. Das folgende Beispiel zeigt, wie eine CSR mithilfe des [OpenSSL-Befehlszeilentools ![Symbol für externen Link](../icons/launch-glyph.svg)](http://www.openssl.org/){:new_window} erstellt wird:
 
 ```
 openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
@@ -144,7 +144,7 @@ testen.
 Wenn in einem Web-Browser ein Benutzer versucht, auf eine SSL-geschützte Domäne zuzugreifen, wird der
 Benutzer im Web-Browser dazu aufgefordert, für die Domäne ein Clientzertifikat bereitzustellen. Verwenden Sie die Option **Truststore für Clientzertifikate** zum Hochladen der Datei, um die clientseitigen Zertifikate zu definieren, die Sie für den Zugriff auf Ihre angepasste Domäne zulassen.
 
-  **Hinweis:** Die Funktion für angepasste Zertifikate in der {{site.data.keyword.Bluemix_notm}}-Domänenverwaltung hängt von der SNI (Server Name Indication)-Erweiterung des TLS-Protokolls (Transport Layer Security) ab. Deshalb muss der Client-Code, der auf {{site.data.keyword.Bluemix_notm}}-Anwendungen zugreift, die durch angepasste Zertifikate geschützt sind, die SNI-Erweiterung in der TLS-Implementierung unterstützen. Weitere Informationen finden Sie in [Abschnitt 7.4.2 von RFC 4346 ![Symbol für externen Link](../icons/launch-glyph.svg)](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window}. 
+  **Hinweis:** Die Funktion für angepasste Zertifikate in der {{site.data.keyword.Bluemix_notm}}-Domänenverwaltung hängt von der SNI (Server Name Indication)-Erweiterung des TLS-Protokolls (Transport Layer Security) ab. Deshalb muss der Client-Code, der auf {{site.data.keyword.Bluemix_notm}}-Anwendungen zugreift, die durch angepasste Zertifikate geschützt sind, die SNI-Erweiterung in der TLS-Implementierung unterstützen. Weitere Informationen finden Sie in [Abschnitt 7.4.2 von RFC 4346 ![Symbol für externen Link](../icons/launch-glyph.svg)](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window}.
 
   **Truststore für Clientzertifikate**
 

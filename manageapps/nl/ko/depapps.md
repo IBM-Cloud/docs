@@ -80,8 +80,6 @@ IBM은 DEA 아키텍처 지원이 제거되는 예정된 필수 마이그레이�
 앱을 Diego로 마이그레이션할 때 해결해야 하는 알려진 문제는 다음과 같습니다. 
 
   * `--no-route` 옵션을 사용하여 배치된 작업자 애플리케이션은 정상적으로 보고되지 않습니다. 이 옵션을 사용하지 않으려면 `cf set-health-check APP_NAME none` 명령으로 포트 기반 상태 검사를 사용 안함으로 설정하십시오.
-  * Diego는 VCAP_APP_HOST 환경 변수를 사용하지 않습니다. 코드가 이 변수를 참조하는 경우 제거하십시오. 
-  * Diego는 VCAP_APP_PORT 환경 변수를 사용하지 않습니다. 코드가 이 변수를 참조하는 경우 PORT로 바꾸십시오. 
   * **cf files** 명령은 더 이상 지원되지 않습니다. 대체 명령은 **cf ssh**입니다. **cf ssh** 명령에 대한 세부사항은 [cf ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh)를 참조하십시오. 
   * 일부 앱은 많은 수의 파일 디스크립터(inode)를 사용할 수 있습니다. 이 문제가 발생하면 `cf scale APP_NAME [-k DISK]` 명령으로 앱의 디스크 할당량을 늘려야 합니다.
 
@@ -239,7 +237,7 @@ cf push -f appManifest.yml
 |**random-route**	|애플리케이션에 랜덤 라우트를 지정하는 부울 값입니다. 기본값은 **false**입니다.	|`random-route: true`|
 |**services**	|애플리케이션에 바인딩할 서비스입니다.	|`services: - mysql_maptest`|
 |**env**	|애플리케이션에 대한 사용자 정의 환경 변수입니다.|`env: DEV_ENV: production`|
-{: caption="Table 1. Supported options in the manifest YAML file" caption-side="top"}
+{: caption="표 1. Manifest YAML 파일에서 지원되는 옵션" caption-side="top"}
 
 ### 샘플 `manifest.yml` 파일
 

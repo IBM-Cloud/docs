@@ -1,4 +1,4 @@
-﻿---
+---
 
 copyright:
   years: 2015, 2017
@@ -34,8 +34,7 @@ Pour que la demande de signature de certificat soit valide, les informations sui
 
 **Nom du pays **
 
-  Code à deux chiffres qui représente le pays ou la région. Par exemple, "US" représente les Etats-Unis. Pour les autres pays ou régions, reportez-vous
-à la [liste des codes de pays ISO ![icône de lien externe](../icons/launch-glyph.svg)](https://www.iso.org/obp/ui/#search){:new_window} avant de créer la demande de signature de certificat. 
+  Code à deux chiffres qui représente le pays ou la région. Par exemple, "US" représente les Etats-Unis. Pour les autres pays ou régions, reportez-vous à la [liste des codes de pays ISO ![icône de lien externe](../icons/launch-glyph.svg)](https://www.iso.org/obp/ui/#search){:new_window} avant de créer la demande de signature de certificat.
 
 **Etat ou province **
 
@@ -57,8 +56,7 @@ Pour que la demande de signature de certificat soit valide, les informations sui
 
   Nom de domaine complet pour lequel vous demandez le certificat SSL.
 
-Les méthodes de création d'une demande de signature de certificat (CSR) varient selon le système d'exploitation. L'exemple suivant montre comment
-créer une demande de signature de certificat avec l'[outil de ligne de commande OpenSSL ![icône de lien externe](../icons/launch-glyph.svg)](http://www.openssl.org/){:new_window} :
+Les méthodes de création d'une demande de signature de certificat (CSR) varient selon le système d'exploitation. L'exemple suivant montre comment créer une demande de signature de certificat avec l'[outil de ligne de commande OpenSSL ![icône de lien externe](../icons/launch-glyph.svg)](http://www.openssl.org/){:new_window} :
 
 ```
 openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
@@ -149,7 +147,9 @@ pour définir les certificats client auxquels vous permettez d'accéder à votre
 dépend de l'extension SNI (Server
 Name Indication) du protocole TLS (Transport Layer Security). Par conséquent, le code client qui accède aux applications
 {{site.data.keyword.Bluemix_notm}} protégées par des certificats personnalisés doit prendre en charge
-l'extension SNI dans l'implémentation TLS. Pour plus d'informations, voir la [section 7.4.2 du RFC 4346 ![icône de lien externe](../icons/launch-glyph.svg)](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window}.
+l'extension SNI dans l'implémentation TLS. Pour plus d'informations, voir la
+[section 7.4.2 du
+RFC 4346 ![icône de lien externe](../icons/launch-glyph.svg)](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window}.
 
   **Magasin de clés de confiance pour les certificats client**
 

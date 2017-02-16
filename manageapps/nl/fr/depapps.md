@@ -1,4 +1,4 @@
-﻿---
+---
 
 copyright:
   years: 2015, 2017
@@ -22,27 +22,12 @@ Vous pouvez déployer des applications dans {{site.data.keyword.Bluemix}} via di
 
 Le déploiement d'une application dans {{site.data.keyword.Bluemix_notm}} comporte deux étapes : la constitution de l'application et le démarrage de l'application.
 
-Cloud Foundry prend en charge Diego, la nouvelle architecture
-d'exécution par défaut qui fournit plusieurs fonctions améliorant le
-développement d'applications pour l'hébergement et la construction de
-plateformes de cloud. Cette mise à jour de l'architecture améliore le
-fonctionnement globale et les performances de la plateforme Cloud Foundry. La
-nouvelle architecture prend en charge plusieurs technologies de conteneur
-d'applications, notamment Garden et Windows, un SSH qui permet de se
-connecter directement au conteneur d'applications, ainsi que d'autres
-modifications innovantes. Pour plus d'informations sur la mise à niveau récente
-de cette architecture, voir [{{site.data.keyword.Bluemix_notm}} Cloud Foundry: Diego is live ![icône de lien externe](../icons/launch-glyph.svg)](https://www.ibm.com/blogs/bluemix/2017/01/bluemix-cloud-foundry-diego-live/){: new_window}.
+Cloud Foundry prend en charge Diego, la nouvelle architecture d'exécution par défaut qui fournit plusieurs fonctions améliorant le développement d'applications pour l'hébergement et la construction de plateformes de cloud. Cette mise à jour de l'architecture améliore le fonctionnement globale et les performances de la plateforme Cloud Foundry. La nouvelle architecture prend en charge plusieurs technologies de conteneur d'applications, notamment Garden et Windows, un SSH qui permet de se connecter directement au conteneur d'applications, ainsi que d'autres modifications innovantes. Pour plus d'informations sur la mise à niveau récente de cette architecture, voir [{{site.data.keyword.Bluemix_notm}} Cloud Foundry: Diego is live ![icône de lien externe](../icons/launch-glyph.svg)](https://www.ibm.com/blogs/bluemix/2017/01/bluemix-cloud-foundry-diego-live/){: new_window}.
 
 
-Toutes les nouvelles applications que vous créez s'exécutent sur Diego,
-et vous devez commencer à migrer vos applications existantes qui s'exécutent
-sur des agents DEA vers la nouvelle architecture Diego.
+Toutes les nouvelles applications que vous créez s'exécutent sur Diego, et vous devez commencer à migrer vos applications existantes qui s'exécutent sur des agents DEA vers la nouvelle architecture Diego.
 
-**Remarque** : l'architecture Diego Cloud Foundry
-affecte tous les environnements de région {{site.data.keyword.Bluemix_notm}} publics. Les
-environnements {{site.data.keyword.Bluemix_notm}} dédié et
-{{site.data.keyword.Bluemix_notm}} local seront mis à jour
-ultérieurement.
+**Remarque** : l'architecture Diego Cloud Foundry affecte tous les environnements de région {{site.data.keyword.Bluemix_notm}} publics. Les environnements {{site.data.keyword.Bluemix_notm}} dédié et {{site.data.keyword.Bluemix_notm}} local seront mis à jour ultérieurement.
 
 ### Constitution d'une application
 {: #diego}
@@ -56,7 +41,7 @@ de garantir la cohérence entre le long terme et la tolérance aux pannes, qui
 équilibre la charge sur une série de machines virtuelles appelées cellules. Diego
 garantit en outre aux utilisateurs un accès aux journaux de leurs
 applications. Tous les composants Diego sont conçus pour être mis en cluster,
-ce qui signifie que vous pouvez créer différentes zones de disponibilité. 
+ce qui signifie que vous pouvez créer différentes zones de disponibilité.
 
 Pour valider la santé des applications, Diego prend en charge les
 vérifications PORT qui étaient utilisées pour l'agent DEA. Il est cependant conçu
@@ -76,8 +61,7 @@ la commande **cf push** :
   $ cf push NOM_APPLICATION
   ```
 
-Pour plus de détails sur la commande **cf push**, voir
-[cf push](/docs/cli/reference/cfcommands/index.html#cf_push).
+Pour plus de détails sur la commande **cf push**, voir [cf push](/docs/cli/reference/cfcommands/index.html#cf_push).
 
 ### Migration d'une application existante vers Diego
 {: #migrateapp}
@@ -94,11 +78,7 @@ agents DEA.
 Lors de la mise à jour d'une application de l'architecture DEA
 vers Diego, il se peut que vous deviez faire face à un bref temps
 d'indisponibilité, ou un temps d'indisponibilité prolongé si l'application
-n'est pas compatible avec Diego. Pour réduire le temps d'indisponibilité,
-effectuez un
-[déploiement
-Blue-Green](/docs/manageapps/updapps.html#blue_green) en déployant une copie de votre application dans Diego, puis
-en permutant les routes et en retirant l'application de l'agent DEA. 
+n'est pas compatible avec Diego. Pour réduire le temps d'indisponibilité, effectuez un [déploiement Blue-Green](/docs/manageapps/updapps.html#blue_green) en déployant une copie de votre application dans Diego, puis en permutant les routes et en retirant l'application de l'agent DEA.
 
 Pour migrer votre application vers Diego, procédez comme suit :
 
@@ -113,7 +93,7 @@ s'exécute sur Diego :
 Une fois l'application mise à jour, vérifiez qu'elle est démarrée. Si
 l'application migrée ne parvient pas à démarrer, elle reste hors ligne jusqu’à
 ce que vous ayez identifié et résolu le problème. Vous devez ensuite la
-redémarrer. 
+redémarrer.
 
 IBM vous informera de la période de migration obligatoire à venir à
 l'occasion de la suppression de la prise en charge de l'architecture DEA. Si, à
@@ -121,7 +101,7 @@ ce moment-là, vous n'avez pas encore migré vos applications, l'équipe
 chargée des opérations les migrera pour vous.
   
 Pour savoir sur quel back-end l'application est exécutée, utilisez la
-commande suivante : 
+commande suivante :
 
   ```
   $ cf has-diego-enabled NOM_APPLICATION
@@ -133,17 +113,9 @@ commande suivante :
 Vous risquez de rencontrer les problèmes connus suivants lors de la
 migration de vos applications vers Diego :
 
-  * Les applications de type travailleur déployées avec l’option
-`--no-route` ne sont pas indiquées comme en bon état de
-fonctionnement. Pour éviter cela, désactivez le diagnostic d'intégrité basé sur
-les ports à l'aide de la commande `cf set-health-check NOM_APP none`.
-  * Diego n'utilise pas la variable d'environnement VCAP_APP_HOST. Si
-votre code fait référence à cette variable, supprimez-la.
-  * Diego n'utilise pas la variable d'environnement VCAP_APP_PORT. Si
-votre code fait référence à cette variable, remplacez-la par PORT.
+  * Les applications de type travailleur déployées avec l’option `--no-route` ne sont pas indiquées comme en bon état de fonctionnement. Pour éviter cela, désactivez le diagnostic d'intégrité basé sur les ports à l'aide de la commande `cf set-health-check NOM_APP none`.
   * La commande **cf files** n'est plus prise en
-charge. La commande **cf ssh** est utilisée à la
-place. Pour plus de détails sur la commande **cf ssh**, voir [cf ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh).
+charge. La commande **cf ssh** est utilisée à la place. Pour plus de détails sur la commande **cf ssh**, voir [cf ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh).
   * Certaines applications peuvent utiliser un nombre élevé de
 descripteurs de fichier (i-nodes). Si vous rencontrez ce problème, vous devez
 augmenter le quota de disque de votre application à l'aide de la commande
@@ -155,10 +127,9 @@ Tant que la prise en charge de l'ancienne architecture DEA
 n'est pas supprimée, vous pouvez exécuter la commande suivante pour revenir aux
 agents DEA : `cf disable-diego NOM_APPLICATION`. Vous
 pouvez également encore déployer de nouvelles applications dans
-l'architecture DEA jusqu'à ce que sa prise en charge soit supprimée : 
+l'architecture DEA jusqu'à ce que sa prise en charge soit supprimée :
 
-**Remarque** :
-l'[interface de ligne de commande cf ![icône de lien externe](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window} et le plug-in [Diego-Enabler CLI Plugin ![icône de lien externe](../icons/launch-glyph.svg)](https://github.com/cloudfoundry-incubator/Diego-Enabler){:new_window} doivent être tous les deux installés pour que vous puissiez utiliser la commande `disable-diego`.
+**Remarque** : l'[interface de ligne de commande cf ![icône de lien externe](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window} et le plug-in [Diego-Enabler CLI Plugin ![icône de lien externe](../icons/launch-glyph.svg)](https://github.com/cloudfoundry-incubator/Diego-Enabler){:new_window} doivent être tous les deux installés pour que vous puissiez utiliser la commande `disable-diego`.
 
 1. Déployez l'application sans la démarrer :
 ```
@@ -187,7 +158,7 @@ l'architecture Diego.
 **Remarque** : si certaines applications sont toujours
 exécutées sur les agents DEA, vous pouvez utiliser la commande **cf
 files** pour afficher les fichiers du conteneur d'applications
-jusqu'à ce que la prise en charge des agents DEA soit supprimée. 
+jusqu'à ce que la prise en charge des agents DEA soit supprimée.
 
 Si l'application ne parvient pas à démarrer, elle est arrêtée et la
 totalité du contenu du conteneur d'applications est supprimée. Par conséquent, si une application s'arrête ou que le processus de constitution d'une application échoue, vous ne pourrez pas utiliser ses fichiers journaux.
@@ -196,11 +167,9 @@ Si les journaux de votre application ne sont plus disponibles et que vous
 ne pouvez donc plus utiliser la commande **cf ssh**,
 **cf scp** ou **cf files** pour examiner
 la cause des erreurs de constitution dans le conteneur d'applications, vous
-pouvez utiliser à la place la commande **cf logs**. La commande **cf logs** utilise le regroupeur de journaux de Cloud Foundry pour collecter les informations de vos journaux d'application et de vos journaux système ; vous pouvez examiner ce qui a été collecté dans la mémoire tampon du regroupeur de journaux. Pour
-plus d'informations sur le regroupeur de journaux, voir [Logging in Cloud Foundry ![icône de lien externe](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html){:new_window}.
+pouvez utiliser à la place la commande **cf logs**. La commande **cf logs** utilise le regroupeur de journaux de Cloud Foundry pour collecter les informations de vos journaux d'application et de vos journaux système ; vous pouvez examiner ce qui a été collecté dans la mémoire tampon du regroupeur de journaux. Pour plus d'informations sur le regroupeur de journaux, voir [Logging in Cloud Foundry ![icône de lien externe](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html){:new_window}.
 
-**Remarque :** La taille de la mémoire tampon est limitée. 
-Si une application s'exécute pendant longtemps et n'est pas redémarrée, il se
+**Remarque :** La taille de la mémoire tampon est limitée. Si une application s'exécute pendant longtemps et n'est pas redémarrée, il se
 peut que des journaux ne s'affichent pas lorsque vous entrez la commande
 `cf logs nom_app --recent`, car il est possible que la mémoire
 tampon des journaux ait été nettoyée. Par conséquent, pour déboguer les erreurs
@@ -274,7 +243,10 @@ Un fichier `package.json` doit se trouver dans votre application Node.js pour qu
   }
   ```
 
-  Pour plus d'informations sur le fichier `package.json`, voir [package.json ![icône de lien externe](../icons/launch-glyph.svg)](https://www.npmjs.org/doc/files/package.json.html){:new_window}.
+  Pour plus d'informations sur le fichier
+`package.json`, voir
+[package.json
+![icône de lien externe](../icons/launch-glyph.svg)](https://www.npmjs.org/doc/files/package.json.html){:new_window}.
 
   * Pour déployer des applications PHP, Ruby ou Python dans {{site.data.keyword.Bluemix_notm}}, utilisez la commande suivante depuis le répertoire contenant la source de votre application :
 
@@ -501,8 +473,7 @@ Les variables suivantes sont définies par l'agent DEA :
 
 </dl>
 
-Les variables définies par les packs de construction sont différentes pour chaque pack de construction. Pour
-connaître les autres packs de construction compatibles, voir [Buildpacks ![icône de lien externe](../icons/launch-glyph.svg)](https://github.com/cloudfoundry-community/cf-docs-contrib/wiki/Buildpacks){:new_window}.
+Les variables définies par les packs de construction sont différentes pour chaque pack de construction. Pour connaître les autres packs de construction compatibles, voir [Buildpacks ![icône de lien externe](../icons/launch-glyph.svg)](https://github.com/cloudfoundry-community/cf-docs-contrib/wiki/Buildpacks){:new_window}.
 
 <ul>
     <li>Les variables suivantes sont définies par le pack de construction Liberty :
@@ -640,4 +611,5 @@ tmp/
 * [Deploying with Application Manifests ![icône de lien externe](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){:new_window}
 * [CF Manifest Generator ![icône de lien externe](../icons/launch-glyph.svg)](http://cfmanigen.mybluemix.net/){:new_window}
 * [Getting Started with cf v6 ![icône de lien externe](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html){:new_window}
-* [Initiation à IBM Continuous Delivery Pipeline for Bluemix](/docs/services/DeliveryPipeline/index.html#getstartwithCD)
+* [Initiation à IBM Continuous Delivery Pipeline for
+Bluemix](/docs/services/DeliveryPipeline/index.html#getstartwithCD)

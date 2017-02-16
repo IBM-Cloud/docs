@@ -80,8 +80,6 @@ Diego 是 {{site.data.keyword.Bluemix_notm}} 的缺省 Cloud Foundry 体系结�
 将应用程序迁移到 Diego 时，您可能需要解决以下已知问题：
 
   * 使用 `--no-route` 选项部署的工作程序应用程序未报告为“正常运行”。为了避免此问题，请使用 `cf set-health-check APP_NAME none` 命令禁用基于端口的运行状况检查。
-  * Diego 不使用 VCAP_APP_HOST 环境变量。如果代码引用了此变量，请将其除去。
-  * Diego 不使用 VCAP_APP_PORT 环境变量。如果代码引用了此变量，请将其替换为 PORT。
   * 不再支持 **cf files** 命令。替代命令为 **cf ssh**。有关 **cf ssh** 命令的更多详细信息，请参阅 [cf ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh)。
   * 有些应用程序可能会使用大量文件描述符 (inode)。如果遇到此问题，必须使用 `cf scale APP_NAME [-k DISK]` 命令增大用于应用程序的磁盘限额。
 

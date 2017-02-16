@@ -17,17 +17,11 @@ lastupdated: "2016-10-10"
 ## Packs de construction IBM intégrés
 {: #built-in_ibm_buildpacks}
 
-Pour [Liberty for Java](/docs/runtimes/liberty/index.html), [SDK for Node.js](/docs/runtimes/nodejs/index.html) et [ASP.NET Core](/docs/runtimes/dotnet/index.html), IBM prend en charge deux versions (n et n - 1), par exemple IBM Liberty Buildpack version 1.22 et IBM Liberty Buildpack version 1.21. Chaque pack de construction fournit et prend en charge une ou plusieurs versions principales de son
-contexte d'exécution correspondant, en fonction des besoins, par exemple IBM SDK, Java Technology Edition version 7 édition 1 et version 8. En général, les
-packs de construction sont actualisés une fois par mois avec la version secondaire disponible la plus récente du contexte d'exécution.
+Pour [Liberty for Java](/docs/runtimes/liberty/index.html), [SDK for Node.js](/docs/runtimes/nodejs/index.html) et [ASP.NET Core](/docs/runtimes/dotnet/index.html), IBM prend en charge deux versions (n et n - 1), par exemple IBM Liberty Buildpack version 1.22 et IBM Liberty Buildpack version 1.21. Chaque pack de construction fournit et prend en charge une ou plusieurs versions principales de son contexte d'exécution correspondant, en fonction des besoins, par exemple IBM SDK, Java Technology Edition version 7 édition 1 et version 8. En général, les packs de construction sont actualisés une fois par mois avec la version secondaire disponible la plus récente du contexte d'exécution.
 
-Pour [IBM Bluemix Runtime for Swift](/docs/runtimes/swift/index.html), IBM prend en charge le pack de construction qui correspond à la
-version la plus récente de Swift disponible sur [Swift.org](http://swift.org). Les mises à jour du pack de construction sont synchronisées
-avec la version publiée de Swift la plus récente disponible.
+Pour [IBM Bluemix Runtime for Swift](/docs/runtimes/swift/index.html), IBM prend en charge le pack de construction qui correspond à la version la plus récente de Swift disponible sur [Swift.org](http://swift.org). Les mises à jour du pack de construction sont synchronisées avec la version publiée de Swift la plus récente disponible.
 
-Les problèmes ou questions que vous pourriez avoir peuvent être signalés pour toute version du pack de construction IBM intégré actuellement pris en
-charge dans {{site.data.keyword.Bluemix_notm}}. Toutefois, leur pertinence dans la version la plus récente devra être vérifiée. Si un incident est trouvé, IBM fournira un correctif dans un niveau ultérieur du contexte d'exécution et du pack de construction correspondant. Elle ne fournira pas de correctif pour les versions principales et secondaires antérieures (N-1, n-1). Elle n'assurera pas non plus le support des
-contextes d'exécution de communauté, même s'ils utilisent des packs de construction IBM, comme par exemple Open JDK avec le pack de construction Liberty. La même stratégie de support que pour les packs de construction de communauté intégrés ci-dessous s'applique à ces contextes d'exécution de communauté.
+Les problèmes ou questions que vous pourriez avoir peuvent être signalés pour toute version du pack de construction IBM intégré actuellement pris en charge dans {{site.data.keyword.Bluemix_notm}}. Toutefois, leur pertinence dans la version la plus récente devra être vérifiée. Si un incident est trouvé, IBM fournira un correctif dans un niveau ultérieur du contexte d'exécution et du pack de construction correspondant. Elle ne fournira pas de correctif pour les versions principales et secondaires antérieures (N-1, n-1). Elle n'assurera pas non plus le support des contextes d'exécution de communauté, même s'ils utilisent des packs de construction IBM, comme par exemple Open JDK avec le pack de construction Liberty. La même stratégie de support que pour les packs de construction de communauté intégrés ci-dessous s'applique à ces contextes d'exécution de communauté.
 
 ## Packs de construction de communauté intégrés
 {: #built-in_community_buildpacks}

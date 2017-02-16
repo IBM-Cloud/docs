@@ -38,7 +38,7 @@ Tutte le nuove applicazioni che crei saranno eseguite su Diego e devi avviare la
 ### Preparazione di un'applicazione
 {: #diego}
 
-Durante la fase di preparazione, Diego si occupa di tutti gli aspetti relativi alla organizzazione del contenitore dell'applicazione. Quando esegui il push di un'applicazione, il controller cloud invia una richiesta di preparazione a Diego, che esegue l'azione di assegnazione delle istanze dell'applicazione. Il backend di Diego organizza i contenitori dell'applicaizone in modo sicuro per garantire la congruenza a lungo termine e alla tolleranza dell'errore, che bilancia il carico tra una serie di macchine virtuali denominate celle. In aggiunta, Diego assicura che gli utenti possono accedere ai log delle loro applicazioni. Tutti i componenti Diego sono progettati per essere in cluster, che significa che puoi creare diverse zone di disponibilità. 
+Durante la fase di preparazione, Diego si occupa di tutti gli aspetti relativi alla organizzazione del contenitore dell'applicazione. Quando esegui il push di un'applicazione, il controller cloud invia una richiesta di preparazione a Diego, che esegue l'azione di assegnazione delle istanze dell'applicazione. Il backend di Diego organizza i contenitori dell'applicaizone in modo sicuro per garantire la congruenza a lungo termine e alla tolleranza dell'errore, che bilancia il carico tra una serie di macchine virtuali denominate celle. In aggiunta, Diego assicura che gli utenti possono accedere ai log delle loro applicazioni. Tutti i componenti Diego sono progettati per essere in cluster, che significa che puoi creare diverse zone di disponibilità.
 
 Per convalidare l'integrità dell'applicazione, Diego supporta gli stessi controlli basati sulla PORTA che sono stati utilizzati da DEA. Tuttavia, Diego è anche progettato per avere più opzioni generiche come i controlli di integrità basati sull'URL, che dovrebbe venire abilitati in futuro.
 
@@ -47,7 +47,7 @@ Per convalidare l'integrità dell'applicazione, Diego supporta gli stessi contro
 
 Tutte le nuove applicazioni vengono distribuite all'architettura Diego. Per preparare una nuova applicazione, distribuiscila con il comando **cf push**.
 
-  1. Distribuisci l'applicazione: 
+  1. Distribuisci l'applicazione:
   ```
   $ cf push APPLICATION_NAME
   ```
@@ -74,7 +74,7 @@ Dopo aver aggiornato la tua applicazione, verifica che sia avviata. Se è imposs
 
 IBM ti avviserà del prossimo periodo di migrazione obbligatoria quando il supporto all'architettura DEA sarà rimosso e se non hai migrato le tue applicazioni, il team operativo lo farà per te.
   
-Per convalidare su quale backend l'applicazione è in esecuzione, utilizzare il seguente comando: 
+Per convalidare su quale backend l'applicazione è in esecuzione, utilizzare il seguente comando:
 
   ```
   $ cf has-diego-enabled APPLICATION_NAME
@@ -86,8 +86,6 @@ Per convalidare su quale backend l'applicazione è in esecuzione, utilizzare il 
 I seguenti sono i problemi noti che potresti dover risolvere durante la migrazione delle tue applicazioni a Diego:
 
   * Le applicazioni di lavoro distribuite con l'opzione `--no-route` non sono riportate come integre. Per evitare questo, disabilita il controllo di integrità basato sulla porta con il comando `cf set-health-check APP_NAME none`.
-  * Diego non utilizza la variabile di ambiente VCAP_APP_HOST. Se il tuo codice fa riferimento a questa variabile, rimuovila. 
-  * Diego non utilizza la variabile di ambiente VCAP_APP_PORT. Se il tuo codice fa riferimento a questa variabile, sostituiscila con PORT.
   * Il comando **cf files** non è più supportato. Viene sostituito dal comando **cf ssh**. Per ulteriori dettagli sul comando **cf ssh**, consulta [cf ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh).
   * Alcune applicazioni potrebbero utilizzare un gran numero di descrittori file (inode). Se riscontri questo problema, devi aumentare la quota disco della tua applicazione con il comando `cf scale APP_NAME [-k DISK]`.
 

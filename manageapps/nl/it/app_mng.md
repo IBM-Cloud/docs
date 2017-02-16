@@ -44,7 +44,7 @@ Il programma di utilità *noproxy* si applica solo alle applicazioni in esecuzio
 #### devconsole
 {: #devconsole}
 
-Il programma di utilità della console di sviluppo (*devconsole*) permette agli utenti di riavviare, arrestare o sospendere le proprie applicazioni. Gli utenti possono anche abilitare o accedere ai programmi di utilità shell e inspector.  È accessibile al seguente URL: 
+Il programma di utilità della console di sviluppo (*devconsole*) permette agli utenti di riavviare, arrestare o sospendere le proprie applicazioni. Gli utenti possono anche abilitare o accedere ai programmi di utilità shell e inspector.  È accessibile al seguente URL:
 ```
   https://<yourappname>.mybluemix.net/bluemix-debug/manage
 ```
@@ -175,7 +175,7 @@ esempio:
 $ cf ssh -N -T -L 9229:127.0.0.1:9229 <appName>
 ```
 
-Avrai bisogno di una versione aggiornata del browser web Chrome per passare a questo URL. In questo scenario, il proxy non istraderà il traffico all'inspector. 
+Avrai bisogno di una versione aggiornata del browser web Chrome per passare a questo URL. In questo scenario, il proxy non istraderà il traffico all'inspector.
 
 #### trace
 {: #trace}
@@ -225,7 +225,7 @@ $ cf restage myApp
 ## Limitazioni
 {: #restrictions}
 
-* Gestione applicazioni supporta solo le applicazioni a istanza singola quando l'applicazione è in esecuzione su un nodo DEA. 
+* Gestione applicazioni supporta solo le applicazioni a istanza singola quando l'applicazione è in esecuzione su un nodo DEA.
 * Le modifiche apportate alla tua applicazione mediante Gestione applicazioni sono transitorie e vengono perse una volta che si esce da questa modalità. Questa modalità serve solo per un uso di sviluppo temporaneo e non è prevista per l'utilizzo in un ambiente di produzione per via delle prestazioni.
 * La maggior parte dei programmi di utilità di Gestione applicazioni non funziona se imposti il tuo comando di avvio nel file `manifest.yml` file (comando) o nella CLI CF (-c). Questi metodi sono delle sostituzioni del pacchetto di build e rappresentano l'antimodello per l'avvio delle applicazioni Node.js. Per dei risultati ottimali, imposta il comando di avvio nel file `package.json` o `Procfile`.
 

@@ -142,7 +142,7 @@ Para versões do Node.js anteriores à 6.3.0, o *inspector* ativa a interface co
 
 Para versões do Node.js 6.3.0 e superiores, o *inspector* utiliza o [V8 Inspector Integration for Node.js ![Ícone de link externo](../icons/launch-glyph.svg)](https://nodejs.org/dist/latest-v6.x/docs/api/debugger.html#debugger_v8_inspector_integration_for_node_js){:new_window}.
 
-O utilitário inspector inicia o *proxy* por padrão, mas como você depurará remotamente dependerá da versão do Node.js e do uso de *proxy* ou *noproxy*. A tabela a seguir mostra como acessar a depuração remota em vários cenários.
+O utilitário inspector inicia o *proxy* por padrão, mas como você depurará remotamente dependerá da versão do Node.js e do uso de *proxy* ou *noproxy*.  A tabela a seguir mostra como acessar a depuração remota em vários cenários.
 
 | | proxy | noproxy |
 |---|---|---|
@@ -156,7 +156,7 @@ exemplo:
 $ cf ssh -N -T -L <localPort>:127.0.0.1:8790 <appName>
 ```
 
-Em seguida, procurar http://127.0.0.1:8790 no navegador da web Chrome. Mude a porta configurando a variável de ambiente BLUEMIX_APP_MGMT_INSPECTOR:
+Em seguida, procurar http://127.0.0.1:8790 no navegador da web Chrome.  Mude a porta configurando a variável de ambiente BLUEMIX_APP_MGMT_INSPECTOR:
 
 ```
 $ cf set-env <appName> BLUEMIX_APP_MGMT_INSPECTOR='{port: 9790}'

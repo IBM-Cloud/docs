@@ -16,7 +16,8 @@ lastupdated: "2016-07-20"
 
 
 
-在部分環境（例如 [Bluemix 專用](/docs/dedicated/index.html#dedicated)及 [Bluemix 本端](/docs/local/index.html#local)）中，配置的 Proxy 可能會影響應用程式在編譯打包期間及執行時的行為。
+在部分環境（例如 [Bluemix 專用](/docs/dedicated/index.html#dedicated)及
+[Bluemix 本端](/docs/local/index.html#local)）中，配置的 Proxy 可能會影響應用程式在編譯打包期間及執行時的行為。
 
 您可以配置應用程式使用下列環境變數來使用 Proxy：
   * [http_proxy](https://docs.cloudfoundry.org/buildpacks/proxy-usage.html)
