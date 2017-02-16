@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-01-24"
+lastupdated: "2017-02-16"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2017-01-24"
 # Getting started with {{site.data.keyword.Bluemix_notm}} CLI
 {: #getting-started}
 
-{{site.data.keyword.Bluemix_notm}} CLI provides a unified way for you to interact with your applications, virtual servers, containers, and other services in {{site.data.keyword.Bluemix_notm}} by using a command line interface. {{site.data.keyword.Bluemix_notm}} CLI also integrates community tools, such as Cloud Foundry CLI, Docker CLI, and OpenStack CLI, and initializes environment settings for you to interact with different compute types.
+{{site.data.keyword.Bluemix_notm}} CLI provides a unified way for you to interact with your applications, virtual servers, containers, and other services by using a command line interface. {{site.data.keyword.Bluemix_notm}} CLI also integrates community tools, such as Cloud Foundry CLI, Docker CLI, and OpenStack CLI, and initializes environment settings for you to interact with different compute types.
 
 **Restriction**: The {{site.data.keyword.Bluemix_notm}} CLI is not supported by Cygwin, so do not use the {{site.data.keyword.Bluemix_notm}} CLI in the Cygwin command line window.
 
@@ -25,7 +25,7 @@ lastupdated: "2017-01-24"
 ## Installing {{site.data.keyword.Bluemix_notm}} CLI
 {: #install_bluemix_cli}
 
-Before you install {{site.data.keyword.Bluemix_notm}} CLI, ensure that the Cloud Foundry CLI is installed on your system.
+Before you install {{site.data.keyword.Bluemix_notm}} CLI, install the [cf CLI ![External link icon](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}.
 
 For Mac OS and Windows, download the [{{site.data.keyword.Bluemix_notm}} CLI package](/docs/cli/index.html#downloads), and run the installer.
 
@@ -58,12 +58,12 @@ For Linux, follow these steps:
   ~/Bluemix_CLI#
   ```
 
-You can now get started with {{site.data.keyword.Bluemix_notm}} CLI or install additional plug-ins.
+You can now start using {{site.data.keyword.Bluemix_notm}} CLI or install additional plug-ins.
 
 ## Installing a plug-in
 {: #install_plug-in}
 
-Like Cloud Foundry CLI, {{site.data.keyword.Bluemix_notm}} CLI also supports a plug-in extension framework to integrate other commands besides the built-in ones.
+Like Cloud Foundry CLI, {{site.data.keyword.Bluemix_notm}} CLI supports a plug-in extension framework to integrate other commands besides the built-in ones.
 
 To install a plug-in from your local environment, take the following steps:
 
@@ -135,7 +135,7 @@ To install from the repository, take the following steps:
   ~$
   ```
 
-  2. Then, install the plug-in from the `Bluemix` repository by using the `bluemix plugin install` command. For example:
+  2. Install the plug-in from the `Bluemix` repository by using the `bluemix plugin install` command. For example:
 
   ```
   ~$ bluemix plugin install auto-scaling -r Bluemix
@@ -150,7 +150,7 @@ To install from the repository, take the following steps:
 ## Logging in to {{site.data.keyword.Bluemix_notm}} CLI
 {: #log_bmcli}
 
-After you installed {{site.data.keyword.Bluemix_notm}} CLI, you can log in to {{site.data.keyword.Bluemix_notm}} by using your {{site.data.keyword.Bluemix_notm}} account and password. For example:
+After you install {{site.data.keyword.Bluemix_notm}} CLI, you can log in to {{site.data.keyword.Bluemix_notm}} by using your IBM id and password. For example:
 
 ```
 ~$ bluemix login -a https://api.ng.bluemix.net
@@ -163,7 +163,7 @@ Authenticating...
 OK
 ```
 
-You are now ready to use {{site.data.keyword.Bluemix_notm}} built-in commands. For example, run the `bluemix catalog templates` command to list all the available {{site.data.keyword.Bluemix_notm}} boilerplate templates:
+You're now ready to use {{site.data.keyword.Bluemix_notm}} built-in commands. For example, run the `bluemix catalog templates` command to list all the available {{site.data.keyword.Bluemix_notm}} boilerplate templates:
 
 ```
 ~$ bluemix catalog templates
@@ -1003,8 +1003,8 @@ Resend invitation to a user(org manager or account owner is required)
 ```
  bluemix iam account-user-reinvite USER_EMAIL ORG_NAME
 ```
- 
- 
+
+
 ### bluemix iam org-users
 {: #bluemix_iam_org_users}
 
