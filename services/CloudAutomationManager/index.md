@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-06"
+lastupdated: "2017-02-17"
 
 ---
 <!-- Copyright info and last updated date at top of file: REQUIRED
@@ -40,7 +40,7 @@ The short description section should include one to two sentences describing why
 Examples: -->
 
 
-Use IBM Cloud Automation Manager to create and edit templates that implement common business patterns and to deploy them in your cloud environment. After they are deployed, you can manage and access the instances from the Cloud Automation Manager service.
+Use IBM Cloud Automation Manager in Bluemix to create and edit templates that implement common business patterns and to deploy them in your cloud environment. After they are deployed, you can manage and access the instances from the Cloud Automation Manager service.
 {:shortdesc}
 
 <!-- If overview content is required, do not include it here. Put it in a separate "## About" section below the task section. -->
@@ -55,13 +55,14 @@ The task section includes steps to integrate the service into the app.
 
 <!-- You can include an optional prerequisites paragraph for any prerequisites to be met before integrating the service. For example: -->
 
-Before you can use the Cloud Automation Manager service, you must upgrade and unify your Bluemix and SoftLayer accounts. For more information, see [Upgrading and unifying Bluemix and SoftLayer billing accounts](https://console.{DomainName}/docs/admin/softlayerlink.html){:new_window}.
+<!-- Include a sentence to briefly introduce the steps. Examples: -->
+
+After you add the Cloud Automation Manager service from the Bluemix Experimental Services catalog, to get started with the service, create and deploy a template to your cloud provider (Amazon EC2 or Bluemix).
+
+Note that before you can use the Cloud Automation Manager service to deploy templates to the Bluemix infrastructure (SoftLayer), you may need to upgrade and unify your Bluemix and SoftLayer accounts. For more information, see [Upgrading and unifying Bluemix and SoftLayer billing accounts](https://console.{DomainName}/docs/admin/softlayerlink.html){:new_window}.
 
 Note that you can deploy templates to SoftLayer infrastructures only within the region, organization, and space to which you are logged in.
 
-<!-- Include a sentence to briefly introduce the steps. Examples: -->
-
-After you add the Cloud Automation Manager service from the Bluemix Experimental Services catalog, to get started with the service, create and deploy a template in your Bluemix environment. 
 Complete the following steps:
 
 <!-- Use ordered list markup for the step section. For code examples:
@@ -71,20 +72,9 @@ Complete the following steps:
 - For non-copyable output snippet, include {: screen} following the last set of backticks.
  -->
 
-1. Click **Templates**.
-2. Click **Bring your own template** if you want to create and deploy a template from scratch or click one of the pre-built templates.
-3. Read the information about the template that you selected and click **Deploy an Instance**.
-3. In the Deploy Instance pane, provide the required information as the instance name and click **Next**. 
-4. If you are deploying a template from scratch, enter the template code in the **Template Code Editor** or upload the template code from a file or from a URL by clicking **Upload**. The template must be in HCL or JSON format depending on what you specified in the previous Deploy Instance pane.
-
- If you are deploying a pre-built template, you do not need to change the template code displayed in the **Template Code Editor**.
-4. Click **Next**.
-5. Enter the required deployment parameters and click **Deploy**. The instance window is displayed.
-6. In the instance window, you can see the instance status, the instance information, and the related resource details. You can view or download the instance logs and you can also access the template from which the instance was deployed.
-
- When the deployment is completed, for each related resource, you can access the console (if existing) and eventually perform the actions listed by clicking in the **ACTIONS** column.
- 
- **Note:** To access the KVM console in the SoftLayer Customer Portal, you must follow the procedure described in [Access the KVM Console](https://knowledgelayer.softlayer.com/procedure/access-kvm-console){:new_window}.
+1. Click **Clouds** to set a connection to the cloud provider where you want to deploy your template. For information about creating a connection, see [Managing connections](https://console.{DomainName}/docs/services/CloudAutomationManager/cam_managing_connections.html).
+2. Click **Templates** to create and deploy a template from scratch or deploy one of the pre-built templates. For information about deploying a template, see [Deploying a template](https://console.{DomainName}/docs/services/CloudAutomationManager/cam_deploying.html).
+3. Click **Deployed Instances** to view the deployed instance details and perform actions on the related resources. For more information, see [Viewing instance details](https://console.{DomainName}/docs/services/CloudAutomationManager/cam_instance_details.html).
 
 <!-- Related links section: REQUIRED.
 Related links display in the upper right of the getting started page.
