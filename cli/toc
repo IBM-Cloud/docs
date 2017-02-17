@@ -9,7 +9,6 @@
         [Active Deploy](../services/ActiveDeploy/cli.html?pos=2#ad-cli-bx)
         [Auto-Scaling](./plugins/auto-scaling/index.html)
         [IBM Container](bxplug-in.html)
-        [OpenWhisk](./plugins/openwsk/index.html)
         [Private network peering](./plugins/pnp/index.html)
         [IBM SDK Generator)(../mobile/sdk_cli.html)
         [IBM VPN](./plugins/bx_vpn/index.html)
