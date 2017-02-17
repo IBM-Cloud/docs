@@ -10,7 +10,7 @@
         [Auto-Scaling](./plugins/auto-scaling/index.html)
         [IBM Container](bxplug-in.html)
         [Private network peering](./plugins/pnp/index.html)
-        [IBM SDK Generator)(../mobile/sdk_cli.html)
+        [IBM SDK Generator](../mobile/sdk_cli.html)
         [IBM VPN](./plugins/bx_vpn/index.html)
     [Cloud Foundry CLI plug-ins](cliplug-in.html)
         [Bluemix admin](./plugins/bluemix_admin/index.html)
