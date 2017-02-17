@@ -25,7 +25,7 @@ lastupdated: "2017-02-16"
 ## Installing {{site.data.keyword.Bluemix_notm}} CLI
 {: #install_bluemix_cli}
 
-Before you install {{site.data.keyword.Bluemix_notm}} CLI, install the [cf CLI ![External link icon](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}.
+Before you install {{site.data.keyword.Bluemix_notm}} CLI, install the [cf CLI ![External link icon](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}.
 
 For Mac OS and Windows, download the [{{site.data.keyword.Bluemix_notm}} CLI package](/docs/cli/index.html#downloads), and run the installer.
 
