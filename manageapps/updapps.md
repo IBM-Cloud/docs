@@ -12,14 +12,14 @@ lastupdated: "2016-08-25"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#Updating apps
+# Updating apps
 {: #updatingapps}
 
 
 You can use the cf push command or {{site.data.keyword.Bluemix}} DevOps Services to update the applications in {{site.data.keyword.Bluemix_notm}}. In many cases, even for the built-in buildpacks such as Node.js, you must also supply a -c parameter to specify which command is used to start your application.
 {:shortdesc}
 
-##Creating and using a custom domain
+## Creating and using a custom domain
 {: #domain}
 
 For CF apps and container groups, you can use a custom domain in the URL of your application instead of the default {{site.data.keyword.Bluemix_notm}} system domain that is mybluemix.net.
@@ -125,7 +125,7 @@ cf delete-route domain -n hostname -f
 
 If you have already deployed an application to {{site.data.keyword.Bluemix_notm}} and you want to update the application to a new version, you can use either of the following two approaches to assure blue-green deployment.
 
-###Example: Using the cf rename command
+### Example: Using the cf rename command
 
 In this example, the name of the application is Blue. The example demonstrates how to update the version of *Blue* using the **cf rename** command without disrupting traffic to the application. Optionally the now old version of *Blue* can be deleted when the updated version is in place.
 
@@ -191,7 +191,7 @@ In this example, the name of the application is Blue. The example demonstrates h
 
   **Result:** The *Blue* app is responding to URL `Blue.mybluemix.net`.
 
-###Example: Using the cf map-route command
+### Example: Using the cf map-route command
 
 In this example, *Blue* is the previously deployed application and *Green* is the updated version. This example demonstrates how to update the version of *Blue* using the **cf map-route** command without disrupting traffic to the application. Optionally the now old version of *Blue* can be deleted when the updated version is in place.
 
@@ -290,7 +290,7 @@ In this example, *Blue* is the previously deployed application and *Green* is th
 
 
 # Related Links
-{: #rellinks}
+{: #rellinks notoc}
 
 ## Related Links
 {: #general}
