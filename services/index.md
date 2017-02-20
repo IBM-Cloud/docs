@@ -127,7 +127,6 @@ The following services are classified as Tier 1:
   * {{site.data.keyword.cloudant}}
   * {{site.data.keyword.dashdbshort}}
   * {{site.data.keyword.iot_short}}
-  * {{site.data.keyword.iotrtinsights_short}}
   * {{site.data.keyword.messagehub}}
   * MongoDB by Compose
   * {{site.data.keyword.objectstorageshort}}
