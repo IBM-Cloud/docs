@@ -232,7 +232,7 @@ Configure a custom tool so that it works with other tools in your toolchain and 
 1. (Advanced) Add more properties as needed. For example, list any information or attributes that are required for your tool to integrate with other tools in the toolchain.  
 1. Click **Create Integration**.
 
-To learn more, see [Introducing custom tool integration for {{site.data.keyword.Bluemix_notm}} toolchains](https://www.ibm.com/blogs/bluemix/2016/10/custom-tool-integration-with-bluemix-toolchains/){: new_window} ![External link icon](images/launch--glyph.svg).
+To learn more, see [Introducing custom tool integration for {{site.data.keyword.Bluemix_notm}} toolchains![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2016/10/custom-tool-integration-with-bluemix-toolchains/){: new_window}.
 
 
 ## Configuring PagerDuty
@@ -246,15 +246,15 @@ Configure PagerDuty to send notifications when pipeline stage failures occur so 
 1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the **Toolchains** page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View Toolchain**. Then, click **Overview**. 
 1. Click **Add a Tool**.
 1. In the Tool Integrations section, click **PagerDuty**
-1. Type the PagerDuty site name that is associated with your PagerDuty account. If you don't have a PagerDuty account, [register for one](https://signup.pagerduty.com/accounts/new){: new_window} ![External link icon](images/launch--glyph.svg).
-1. Type the API access key for your PagerDuty account. For instructions to find the key, see [Generating an API Key](https://support.pagerduty.com/hc/en-us/articles/202829310-Generating-an-API-Key){: new_window} ![External link icon](images/launch--glyph.svg).
+1. Type the PagerDuty site name that is associated with your PagerDuty account. If you don't have a PagerDuty account, [register for one![External link icon](../../icons/launch-glyph.svg "External link icon")](https://signup.pagerduty.com/accounts/new){: new_window}.
+1. Type the API access key for your PagerDuty account. For instructions to find the key, see [Generating an API Key![External link icon](../../icons/launch-glyph.svg "External link icon")](https://support.pagerduty.com/hc/en-us/articles/202829310-Generating-an-API-Key){: new_window}.
 1. Type the name of your PagerDuty service.
 1. Type the email address for the primary PagerDuty contact.
 1. Type the phone number for the primary PagerDuty contact.
 1. Click **Create Integration**.
 1. Click **PagerDuty** to go to pagerduty.com. You can view the events that are associated with the PagerDuty service that you specified when you configured this tool integration for your toolchain. 
 
-To learn more, see [PagerDuty](https://www.ibm.com/devops/method/content/manage/tool_pagerduty/){: new_window} ![External link icon](images/launch--glyph.svg).
+To learn more, see [PagerDuty![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/manage/tool_pagerduty/){: new_window}.
 
 
 ## Configuring Sauce Labs
