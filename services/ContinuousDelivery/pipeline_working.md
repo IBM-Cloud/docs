@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-18"
+  years: 2015, 2017
+lastupdated: "2017-2-17"
 
 ---
 
@@ -33,7 +33,7 @@ Complete these steps to set up a {{site.data.keyword.deliverypipeline}} for an e
 1. From the hamburger menu on the {{site.data.keyword.Bluemix_notm}} menu bar, click **Services**, and then click **DevOps**.
 1. Click **Pipelines**, and then click **Create a Pipeline**.
 
-To [create a pipeline](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window} ![New window icon](images/launch--glyph.svg) that is configured to deploy a Cloud Foundry application, follow these steps:    
+To [create a pipeline![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window} that is configured to deploy a Cloud Foundry application, follow these steps:    
 
 1. Click **Cloud Foundry**.  
 1. If you want to use a different name for the pipeline, change its default name. 
@@ -58,7 +58,7 @@ To [create a pipeline](https://console.ng.bluemix.net/devops/pipelines/dashboard
 1. Click **Create**. The pipeline is created, configured, and displayed on the toolchain's Overview page. 
  ![Pipeline card](images/cd_pipeline.png)
 
-To create an [empty pipeline](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window} ![New window icon](images/launch--glyph.svg) without any preconfigured stages:
+To create an [empty pipeline![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window} without any preconfigured stages:
 
 1. Click **Custom**.
 1. If you want to use a different name for the pipeline, change its default name. 
@@ -68,27 +68,15 @@ To create an [empty pipeline](https://console.ng.bluemix.net/devops/pipelines/da
 
 From your {{site.data.keyword.deliverypipeline}}, change your configuration; check the status of builds, the deployed app, and recent deployments; see the most recent logs and deployment details; or delete your pipeline.  
 
-<article class="topic reference nested1" aria-labelledby="d68e338" lang="en-us" id="rellinks" role="article">
-<h2 class="topictitle2" id="d68e338">Related links</h2>
-<aside role="complementary" aria-labelledby="related_links">
-<div class="linklist" id="general"><h3 class="linklistlabel" id="related_links">Related Links</h3>
-<ul>
-<li><img src="./sout.gif" alt=""><a href="https://www.ibm.com/devops/method/content/deliver/practice_delivery_pipeline/" rel="external" title="(Opens in a new tab or window)">IBM Bluemix Garage Method: Delivery pipeline</a></li>
-</ul>
-</div>
+# Related Links
+{: #rellinks}
 
-<div class="linklist" id="samples">
-<h3 class="linklistlabel">Tutorials and Samples</h3>
-<ul>
+## Tutorials and Samples
+{: #samples}
 
-<!--
-<li><img src="./sout.gif" alt=""><a href="https://hub.jazz.net/tutorials/devopsweb/" rel="external" title="(Opens in a new tab or window)">Clone, edit, and deploy an app</a></li>
-<li><img src="./sout.gif" alt=""><a href="https://hub.jazz.net/tutorials/jazzeditor" rel="external" title="(Opens in a new tab or window)">Develop and deploy a Node.js app</a></li>
-<li><img src="./sout.gif" alt=""><a href="https://hub.jazz.net/tutorials/jazzeditorjava" rel="external" title="(Opens in a new tab or window)">Develop and deploy a Java app</a></li>
--->
+* [developerWorks: {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.deliverypipeline}} service![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/developerworks/topics/delivery%20pipeline%20service){:new_window}
 
-<li><img src="./sout.gif" alt=""><a href="http://www.ibm.com/developerworks/topics/delivery%20pipeline%20service" rel="external" title="(Opens in a new tab or window)">developerWorks: {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.deliverypipeline}} service</a></li>
-</ul>
-</div>
-</aside>
-</article>
+## Related Links
+{: #general}
+
+* [IBM Bluemix Garage Method: Delivery pipeline![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/practice_delivery_pipeline/){:new_window}
