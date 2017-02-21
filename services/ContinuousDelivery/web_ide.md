@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-2-8"
+lastupdated: "2017-2-16"
 ---
 
 {:new_window: target="_blank"}
@@ -88,7 +88,7 @@ To use an editor besides the {{site.data.keyword.webide}}, set up {{site.data.ke
 
 ### Before you begin 
 
-Download and install the [{{site.data.keyword.Bluemix_live_notm}} command-line interface](http://livesyncdownload.ng.bluemix.net){: new_window} ![External link icon, link opens in new window](images/launch--glyph.svg).
+Download and install the [{{site.data.keyword.Bluemix_live_notm}} command-line interface![External link icon](../../icons/launch-glyph.svg "External link icon")](http://livesyncdownload.ng.bluemix.net){: new_window}.
 
 ### Synchronizing your local environment with {{site.data.keyword.Bluemix_notm}}
 {: #edit_local_download}
