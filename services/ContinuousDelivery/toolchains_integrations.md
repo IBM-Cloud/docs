@@ -270,14 +270,14 @@ Configure Sauce Labs to run automated functional tests on multiple operating sys
 1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the **Toolchains** page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View Toolchain**. Then, click **Overview**. 
 1. Click **Add a Tool**.
 1. In the Tool Integrations section, click **Sauce Labs**.
-1. Type the user name that is associated with your Sauce Labs account. You can [find your user name in the welcome message at the top of your Sauce Labs account page](https://saucelabs.com/account){: new_window} ![External link icon](images/launch--glyph.svg).
-1. Type the access key for your Sauce Labs account. You can [find the key on your Sauce Labs account page](https://saucelabs.com/account){: new_window} ![External link icon](images/launch--glyph.svg).
+1. Type the user name that is associated with your Sauce Labs account. You can [find your user name in the welcome message at the top of your Sauce Labs account page![External link icon](../../icons/launch-glyph.svg "External link icon")](https://saucelabs.com/account){: new_window}.
+1. Type the access key for your Sauce Labs account. You can [find the key on your Sauce Labs account page![External link icon](../../icons/launch-glyph.svg "External link icon")](https://saucelabs.com/account){: new_window}.
 1. Click **Create Integration**.
 1. Click **Sauce Labs** to go to saucelabs.com and view the test activity for the toolchain.
 
  **Tip**: If you added a Sauce Labs test job to the {{site.data.keyword.deliverypipeline}}, you can select the service instance.
 
-To learn more, see [Sauce Labs](https://www.ibm.com/devops/method/content/code/tool_sauce_labs/){: new_window} ![External link icon](images/launch--glyph.svg).
+To learn more, see [Sauce Labs![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/code/tool_sauce_labs/){: new_window}.
 
 
 ## Configuring Slack
@@ -293,12 +293,12 @@ Configure Slack to receive notifications about your toolchain from the tool inte
 1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the **Toolchains** page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View Toolchain**. Then, click **Overview**.
 1. Click **Add a Tool**.
 1. In the Tool Integrations section, click **Slack**.
-1. Type the API authentication token for your Slack account. You must use a generated full-access token to authenticate with Slack. For instructions to find the token, see [Slack authentication](https://api.slack.com/web#authentication){: new_window} ![External link icon](images/launch--glyph.svg).
+1. Type the API authentication token for your Slack account. You must use a generated full-access token to authenticate with Slack. For instructions to find the token, see [Slack authentication![External link icon](../../icons/launch-glyph.svg "External link icon")](https://api.slack.com/web#authentication){: new_window}.
 1. Type the name of the Slack channel that you want notifications to be sent to. If the channel that you specify doesn't exist, it is created. If the channel was archived, it is reactivated.
 1. Click **Create Integration**.
 1. Click **Slack**. You can view all of the activity for your toolchain in the configured Slack channel.
 
-To learn more, see [Slack](https://www.ibm.com/devops/method/content/culture/tool_slack/){: new_window} ![External link icon](images/launch--glyph.svg).
+To learn more, see [Slack![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/culture/tool_slack/){: new_window}.
 
 
 # Related Links
@@ -307,22 +307,22 @@ To learn more, see [Slack](https://www.ibm.com/devops/method/content/culture/too
 ## Tutorials and Samples
 {: #samples}
 
-* [Create a pipeline](https://www.ibm.com/devops/method/tutorials/tutorial_first_pipeline){:new_window} ![External link icon](images/launch--glyph.svg)
-* [Create and use your first toolchain](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow){:new_window} ![External link icon](images/launch--glyph.svg)
-* [Create a custom toolchain](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_custom){:new_window} ![External link icon](images/launch--glyph.svg)
-* [Create a toolchain that includes {{site.data.keyword.DRA_short}}](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_devops_insights){:new_window} ![External link icon](images/launch--glyph.svg)
-* [Create and use a microservices toolchain](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices){:new_window} ![External link icon](images/launch--glyph.svg)
-* [Create a toolchain from a template on {{site.data.keyword.Bluemix_notm}} Dedicated](https://www.ibm.com/devops/method/tutorials/tutorial_dedicated_toolchain_template_flow){:new_window} ![External link icon](images/launch--glyph.svg)
-* [Create a toolchain from an app on {{site.data.keyword.Bluemix_notm}} Dedicated](https://www.ibm.com/devops/method/tutorials/tutorial_dedicated_toolchain_app_flow){:new_window} ![External link icon](images/launch--glyph.svg)
+* [Create a pipeline![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_first_pipeline){:new_window}
+* [Create and use your first toolchain![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow){:new_window}
+* [Create a custom toolchain![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_custom){:new_window}
+* [Create a toolchain that includes {{site.data.keyword.DRA_short}}![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_devops_insights){:new_window}
+* [Create and use a microservices toolchain![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices){:new_window}
+* [Create a toolchain from a template on {{site.data.keyword.Bluemix_notm}} Dedicated![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_dedicated_toolchain_template_flow){:new_window}
+* [Create a toolchain from an app on {{site.data.keyword.Bluemix_notm}} Dedicated![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_dedicated_toolchain_app_flow){:new_window}
 
 ## Related Links
 {: #general}
 
-* [{{site.data.keyword.contdelivery_full}}](https://www.ibm.com/devops/method/content/deliver/tool_continuous_delivery/){:new_window} ![External link icon](images/launch--glyph.svg)
-* [Empty toolchain](https://www.ibm.com/devops/method/toolchains/toolchain_empty){:new_window} ![External link icon](images/launch--glyph.svg)
-* [Microservices toolchain](https://www.ibm.com/devops/method/toolchains/microservices_toolchain){:new_window} ![External link icon](images/launch--glyph.svg)
-* [Simple Cloud Foundry toolchain](https://www.ibm.com/devops/method/toolchains/simple_toolchain){:new_window} ![External link icon](images/launch--glyph.svg)
-* [Simple Cloud Foundry toolchain with {{site.data.keyword.DRA_short}}](https://www.ibm.com/devops/method/toolchains/toolchain_devops_insights){:new_window} ![External link icon](images/launch--glyph.svg)
-* [Simple container toolchain](https://www.ibm.com/devops/method/toolchains/toolchain_simple_container){:new_window} ![External link icon](images/launch--glyph.svg)
-* [Simple secure container toolchain](https://www.ibm.com/devops/method/toolchains/toolchain_simple_secure_container){:new_window} ![External link icon](images/launch--glyph.svg)
-* [IBM Bluemix Garage Method](https://www.ibm.com/devops/method){:new_window} ![External link icon](images/launch--glyph.svg)
+* [{{site.data.keyword.contdelivery_full}}![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/tool_continuous_delivery/){:new_window}
+* [Empty toolchain![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/toolchains/toolchain_empty){:new_window}
+* [Microservices toolchain![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/toolchains/microservices_toolchain){:new_window}
+* [Simple Cloud Foundry toolchain![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/toolchains/simple_toolchain){:new_window}
+* [Simple Cloud Foundry toolchain with {{site.data.keyword.DRA_short}}![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/toolchains/toolchain_devops_insights){:new_window}
+* [Simple container toolchain![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/toolchains/toolchain_simple_container){:new_window}
+* [Simple secure container toolchain![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/toolchains/toolchain_simple_secure_container){:new_window}
+* [IBM Bluemix Garage Method![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method){:new_window}
