@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-  last-updated: "2017-02-15"
+last-updated: "2017-02-15"
 
 ---
 
