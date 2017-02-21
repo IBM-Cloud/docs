@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-20"
+  years: 2015, 2017
+lastupdated: "2017-2-21"
 
 ---
 
@@ -94,7 +94,7 @@ Configure the {{site.data.keyword.deliverypipeline}} to add a Sauce Labs test jo
   
 1. Click **SAVE**. Whenever your pipeline runs, your Sauce Labs tests run.
 
-To learn more, see [Delivery Pipeline](https://www.ibm.com/devops/method/content/deliver/tool_build_and_deploy/){: new_window} ![External link icon](images/launch--glyph.svg).
+To learn more, see [Delivery Pipeline![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/tool_build_and_deploy/){: new_window}.
 
 
 ## Adding {{site.data.keyword.DRA_short}} (Experimental)
@@ -110,7 +110,7 @@ Add {{site.data.keyword.DRA_short}} to maintain and improve the quality of your 
 1. Click **Add a Tool**.
 1. In the Tool Integrations section, click **{{site.data.keyword.DRA_short}}**. 
 1. Click **Create Integration**.
-1. Click **{{site.data.keyword.DRA_short}}**, and then complete the getting started steps: create criteria, connect the criteria to the pipeline, and run the pipeline. For more information, see [{{site.data.keyword.DRA_short}}](https://www.ibm.com/devops/method/content/learn/tool_devops_insights/){: new_window} ![External link icon](images/launch--glyph.svg).
+1. Click **{{site.data.keyword.DRA_short}}**, and then complete the getting started steps: create criteria, connect the criteria to the pipeline, and run the pipeline. For more information, see [{{site.data.keyword.DRA_short}}![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/learn/tool_devops_insights/){: new_window}.
 
 
 ## Adding the Eclipse Orion {{site.data.keyword.webide}}
@@ -167,7 +167,7 @@ Configure GitHub to manage your source code on the cloud:
 
 1. If you enabled GitHub Issues, click **GitHub Issues** to open it. You can use this instance of GitHub Issues for your entire toolchain, even if the toolchain contains multiple GitHub repos. 
 
-For more information, see [GitHub](https://www.ibm.com/devops/method/content/code/tool_github/){: new_window} ![External link icon](images/launch--glyph.svg) and [GitHub Issues](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window} ![External link icon](images/launch--glyph.svg).
+For more information, see [GitHub![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/code/tool_github/){: new_window} and [GitHub Issues![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window}.
 
 
 ## Configuring {{site.data.keyword.ghe_short}} on {{site.data.keyword.Bluemix_notm}} Dedicated
@@ -175,7 +175,7 @@ For more information, see [GitHub](https://www.ibm.com/devops/method/content/cod
 
  **Note:** These instructions apply to {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}. If you are using your own managed version of {{site.data.keyword.ghe_short}}, some steps might differ depending on your internal procedures.
 
-{{site.data.keyword.ghe_long}} is an on-premises, web-based hosting service for Git repos. Dedicated {{site.data.keyword.ghe_short}} is for {{site.data.keyword.Bluemix_notm}} Dedicated customers only. GitHub Issues is a tracking tool that keeps your work and your plans in one place. It is integrated with your development repo so that you can focus on important tasks. For more information about Dedicated {{site.data.keyword.ghe_short}} and GitHub Issues, see [Getting started with {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window} and [GitHub Issues](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window} ![External link icon](images/launch--glyph.svg).
+{{site.data.keyword.ghe_long}} is an on-premises, web-based hosting service for Git repos. Dedicated {{site.data.keyword.ghe_short}} is for {{site.data.keyword.Bluemix_notm}} Dedicated customers only. GitHub Issues is a tracking tool that keeps your work and your plans in one place. It is integrated with your development repo so that you can focus on important tasks. For more information about Dedicated {{site.data.keyword.ghe_short}} and GitHub Issues, see [Getting started with {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window} and [GitHub Issues![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window}.
 
 You can configure {{site.data.keyword.ghe_short}} as a tool integration in your toolchain so that you can manage source code in your company's [{{site.data.keyword.Bluemix_notm}} Dedicated](/docs/dedicated/index.html#dedicated){: new_window} instance.
 
