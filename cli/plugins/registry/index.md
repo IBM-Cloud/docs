@@ -47,7 +47,7 @@ The {{site.data.keyword.registrylong}} CLI is a plug-in that lets you manage you
 
  
 ## bx cr login
-Performs a `Docker login` against the registry. It is required to be able to push to, or pull from, the registry. This command is not required to run other `bx cr` commands. 
+Performs a `Docker login` against the registry. It is required to be able to `Docker push` or `Docker pull` to the registry. This command is not required to run other `bx cr` commands. 
 
 ```
 bx cr login [--target REGISTRY]
