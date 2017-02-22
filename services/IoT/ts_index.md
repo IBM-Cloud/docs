@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-03"
+lastupdated: "2017-02-20"
 
 ---
 
@@ -80,6 +80,6 @@ When using the forums to ask a question, tag your question so that it is seen by
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
 * For questions about the service and getting started instructions, use the [IBM developerWorks dW Answers ![External link icon](../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/topics/watson-iot/?smartspace=bluemix){:new_window} forum. Include the  "watson-iot" and "bluemix" tags.
 
-See [Getting help ![External link icon](../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/support/index.html#getting-help){: new_window} for more details about using the forums.
+See [Getting help](https://www.{DomainName}/docs/support/index.html#getting-help) for more details about using the forums.
 
-For information about opening an IBM support ticket, or about support levels and ticket severities, see [Contacting support ![External link icon](../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/support/index.html#contacting-support){: new_window}.
+For information about opening an IBM support ticket, or about support levels and ticket severities, see [Contacting support ![External link icon](../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/support/index.html#contacting-support).

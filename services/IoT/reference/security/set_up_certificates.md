@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-02"
+lastupdated: "2017-02-22"
 ---
 
 {:new_window: target="\_blank"}
@@ -26,12 +26,12 @@ CA certificates enable the organization to recognize the client certificates on 
 
 If you add a CA certificate or replace the messaging server certificate, all devices must connect using an MQTT client that supports Server Name Indication (SNI) so that the server can use the appropriate CAs to authenticate the device.
 
-If you add a CA certificate, but do not have the Risk and Security Management add-on enabled, all devices connect with the TLS with Token and Client Certificate Authentication connection policy. If you do have Risk and Security Management add-on enabled, you can configure different connection policies. For information about how to configure connection security policies, see [Configuring security policies](set_up_policies.html).
+If you add a CA certificate and are using a standard security plan, all devices connect with the TLS with Token and Client Certificate Authentication connection policy. If you have a free or advanced security plan, you can configure different connection policies. For information about how to configure connection security policies, see [Configuring security policies](set_up_policies.html).
 
 ### Client or device certificates
-Individual client, or device, certificates remain on the devices and are not uploaded to the platform. The CA signing certificate that is used to sign all of the device certificates is the only certificate that you upload to the platform. If you are using self-signed server certificates, you must upload the Root and intermediate CA (ca.pem) that is used to sign the client certificate (cert.pem).
+Individual client, or device, certificates remain on the devices and are not uploaded to the platform. The CA signing certificate that is used to sign all of the device certificates is the only certificate that you upload to the platform. If you are using self-signed server certificates, you must upload the Root and intermediates certificates that are used to sign the client certificate (cert.pem).
 
-The individual device certificate that you sign with the CA certificate must have the device ID entered as either the Common Name (CN) or SubjectAltName in the certificate. For the the *CN* field, the format is 'CN=d:devtype:devid'. For the SubjectAltName field, the format is 'SubjectAltName=email:d:devtype:devid' where 'devtype' is the Device Type of the device and 'devid' is the Client ID of the device.
+The individual device certificate that you sign with the CA certificate must have the device ID entered as either the Common Name (CN) or SubjectAltName in the certificate. For the the *CN* field, the format is 'CN=d:devtype:devid'. For the SubjectAltName field, the format is 'SubjectAltName=email:d:*devtype:devid*' where 'email:d' is constant and '*devtype*' is the Device Type of the device and '*devid*' is the Client ID of the device.
 
 ## Registering Certificate Authority (CA) certificates for device authentication
 {: #reg_ca_cert}
@@ -68,4 +68,4 @@ If you want to use a new messaging server certificate, you can generate a Certif
  1. In the **Security** section of **General Settings**, under **Messaging Server Certificates**, click **Generate CSR**.
  2. Enter the details to request a CSR for your server, and click **Generate**. The CSR is displayed in the table.
  3. Download the request and submit it to a certification authority for signing.
- 4. After you obtain a certificate, you can upload it by following the steps in [Uploading a certificate from your organization](#upload_cert). After the certificate is uploaded, the CSR in the table is replaced with the uploaded certificate.
+ 4. After you obtain a certificate, return to the CSR entry in the table and upload the new certificate. After the certificate is uploaded, the CSR in the table is replaced with the uploaded certificate.

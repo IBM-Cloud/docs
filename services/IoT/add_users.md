@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-24"
+lastupdated: "2017-02-17"
 
 ---
 
@@ -79,7 +79,7 @@ To register a member with your {{site.data.keyword.iot_short_notm}} organization
 3. Enter the email address of the member.
 4. Select a role for this member.
 5. Enter the subject, realm name, and issuer.
-   **Important:** Ensure that the `Subject`, `Realm Name`, and `Issuer` fields comply with the OpenID Connect recommendations and standards. For more information, see the [OpenID Connect](http://openid.net/connect/) website.
+   **Important:** Ensure that the `Subject`, `Realm Name`, and `Issuer` fields comply with the OpenID Connect recommendations and standards. For more information, see the [OpenID Connect ![External link icon](../../icons/launch-glyph.svg)](http://openid.net/connect/){: new_window} website.
 6. Optional: Set an expiry date for the member.
 7. Click **Register Member**.
 
