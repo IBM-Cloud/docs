@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Ereignisgesteuerte Webhook-Benachrichtigung aktivieren
 {: #tag_based_notifications}
-Letzte Aktualisierung: 06. Dezember 2016
+Letzte Aktualisierung: 16. Januar 2017
 {: .last-updated}
 
 
@@ -29,7 +29,7 @@ Webhooks sind benutzerdefinierte Callbacks, die durch ein Ereignis ausgelöst we
 - **onNotificationFailure**: Ein Webhook-Ereignis wird für fehlgeschlagene Benachrichtigungen ausgelöst.
 
 
-**Anmerkung**: Das Versenden von Benachrichtigungen erfolgt in Stapeln. Dieselbe Nachrichtenversendung kann mehrere Webhook-Ereignisse umfassen, wobei es sich sowohl um fehlgeschlagene als auch um erfolgreiche handeln kann.
+**Anmerkung**: Das Versenden von Benachrichtigungen erfolgt in Stapeln. Dieselbe Nachrichtenversendung kann mehrere Webhook-Ereignisse umfassen, wobei es sich sowohl um fehlgeschlagene als auch um erfolgreiche handeln kann. 
 Die Webhook-Ereignisse haben dieselbe Nachrichten-ID (messageID) wie die versandte Nachricht. 
 
-Weitere Informationen zu Webhooks finden Sie in [IBM Push Notifications-REST-API](https://mobile.{DomainName}/imfpush/#/webhooks).
+Weitere Informationen zu Webhooks finden Sie in der [IBM Push Notifications-REST-API ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://mobile.{DomainName}/imfpush/#/webhooks "Symbol für externen Link"){: new_window}.

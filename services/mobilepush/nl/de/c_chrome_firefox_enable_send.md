@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Einfache Benachrichtigungen an Web-Browser senden
 {: #web_notifications}
-Letzte Aktualisierung: 06. Dezember 2016
+Letzte Aktualisierung: 11. Januar 2017
 {: .last-updated}
 
 Nach dem Entwickeln Ihrer Anwendungen können Sie Push-Benachrichtigungen senden. 
@@ -27,7 +27,7 @@ Nach dem Entwickeln Ihrer Anwendungen können Sie Push-Benachrichtigungen senden
   - **Aktion**: Dies ist die Bezeichnung der Aktionsschaltfläche.
   - **URL-Argumente**: Die URL-Argumente, die mit dieser Benachrichtigung verwendet werden müssen. Stellen Sie sicher, dass dies in Form eines JSON-Arrays geschieht. 
  
-Die folgende Abbildung zeigt die Webbenachrichtigungesoptionen im Dashboard an.
+Die folgende Abbildung zeigt die Webbenachrichtigungsoptionen im Dashboard an.
 
   ![Anzeige 'Benachrichtigungen'](images/DashboardWebpush.jpg)
 

@@ -1,16 +1,16 @@
 ---
 
- 
+
 
 copyright:
 
-  years: 2015 2016
+  years: 2015，2017
 
-lastupdated: "2016-05-09" 
+lastupdated: "2016-05-09"
 
 ---
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -19,7 +19,8 @@ lastupdated: "2016-05-09"
 
 <!--The whole topic is staging only -->
 
-Con {{site.data.keyword.Bluemix}}, puede crear apps, así como alojar sus apps existentes. Puede migrar sus apps a {{site.data.keyword.Bluemix_notm}} siempre que estén preparadas para la nube. {{site.data.keyword.Bluemix_notm}} proporciona distintos modos para ejecutar las apps, como por ejemplo Cloud Foundry, IBM Containers y Virtual Machines.
+Con {{site.data.keyword.Bluemix}},
+puede crear apps, así como alojar sus apps existentes. Puede migrar sus apps a {{site.data.keyword.Bluemix_notm}} siempre que estén preparadas para la nube. {{site.data.keyword.Bluemix_notm}} proporciona distintos modos para ejecutar las apps, como por ejemplo Cloud Foundry, IBM Containers y Virtual Machines.
 
 ##Haciendo que sus apps estén listas para la nube
 {: #cloud-readyapps}
@@ -76,7 +77,7 @@ Si su app cumple todos los principios siguientes, será una app lista para la nu
 
   Como mínimo, capture la instalación de su app como un conjunto uniforme de scripts que sean independientes del sistema operativo. Mantenga la instalación de su app en un tamaño reducido y portable, para adaptarse a las distintas técnicas de automatización. Además, minimice las dependencias necesarias para la instalación de apps.
 
-Para obtener más información sobre apps listas para la nube, consulte [The 12-factor application](http://12factor.net/){:new_window}.
+Para obtener más información sobre aplicaciones listas para la nube, consulte [The 12-factor application ![icono de enlace externo](../icons/launch-glyph.svg)](http://12factor.net/){: new_window}. 
 
 ##Migración de sus apps
 {: #ht_hostapp}
@@ -84,7 +85,7 @@ Para obtener más información sobre apps listas para la nube, consulte [The 12-
 Puede migrar sus apps a {{site.data.keyword.Bluemix_notm}} de forma incremental, en lugar de desplazarla completamente al entorno de nube. Primero puede migrar una parte de
 sus apps y conectar a los datos existentes o sistema de registros mediante el servicio Cloud integration.
 
-En sus apps de nube, podría necesitar acceso a los datos o servicios de fondo, por ejemplo, un sistema de registros. En {{site.data.keyword.Bluemix_notm}}, puede utilizar el servicio Secure Gateway para establecer un túnel seguro entre una organización de {{site.data.keyword.Bluemix_notm}} y la red principal de fondo empresarial. El servicio permite a las apps en {{site.data.keyword.Bluemix_notm}} acceder a los datos y servicios de la red principal de fondo. Para obtener detalles, consulte [Alcanzar el elemento de fondo empresarial con Bluemix Secure Gateway a través de la consola](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){:new_window}.
+En sus apps de nube, podría necesitar acceso a los datos o servicios de fondo, por ejemplo, un sistema de registros. En {{site.data.keyword.Bluemix_notm}}, puede utilizar el servicio Secure Gateway para establecer un túnel seguro entre una organización de {{site.data.keyword.Bluemix_notm}} y la red principal de fondo empresarial. El servicio permite a las apps en {{site.data.keyword.Bluemix_notm}} acceder a los datos y servicios de la red principal de fondo. Para obtener detalles, consulte [Alcanzar el elemento de fondo empresarial con Bluemix Secure Gateway a través de la consola ![icono de enlace externo](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window}.
 
 Para desplegar su app en {{site.data.keyword.Bluemix_notm}} como una app de Cloud Foundry, seleccione un ejecutable del Catálogo de {{site.data.keyword.Bluemix_notm}}. El ejecutable contiene una app Hello World iniciadora que puede sustituir por su propia app. Si no encuentra un iniciador que proporcione el ejecutable que quiere, puede aportar un paquete de compilación personalizado compatible con Cloud Foundry a {{site.data.keyword.Bluemix_notm}}, utilizando la opción -b con el mandato cf push. Para obtener detalles, consulte [Utilización de paquetes de compilación de la comunidad](/docs/cfapps/byob.html).
 
@@ -109,7 +110,8 @@ Puede gestionar su código en el cliente local y utilizar la interfaz de línea 
 Realice los pasos siguientes para migrar su app:
 
 <ol>
-<li>Instalar la interfaz de línea de mandatos de Cloud Foundry. Asegúrese de utilizar la versión más reciente de la interfaz de línea de mandatos de cf.
+<li>Instalar la interfaz de línea de mandatos de Cloud Foundry. Asegúrese de utilizar la versión
+más reciente de la interfaz de línea de mandatos de cf.
 <ol>
 <li>Descargue el programa de instalación para su sistema operativo.</li>
 <li>Siga el asistente de la herramienta para instalar la línea de mandatos.</li>
@@ -137,11 +139,14 @@ Realice los pasos siguientes para migrar su app:
 
 <li>Envíe su app por Push. Puede subir su app utilizando el mandato push de cf.
 <ol>
-<li>Conecte e inicie sesión en {{site.data.keyword.Bluemix_notm}} ejecutando el mandato siguiente. Seleccione su organización y espacio cuando se le solicite.
+<li>Conecte e inicie sesión en {{site.data.keyword.Bluemix_notm}} ejecutando el mandato siguiente. Seleccione su
+organización y espacio cuando se le solicite.
 <pre>cf login -a https://api.ng.bluemix.net</pre></li>
-<li>En el directorio de la app, escriba el mandato cf push con el nombre de la app. El nombre de la app debe ser exclusivo en el entorno {{site.data.keyword.Bluemix_notm}}.
+<li>En el directorio de la app, escriba el mandato cf push
+con el nombre de la app. El nombre de la app debe ser exclusivo en el entorno {{site.data.keyword.Bluemix_notm}}.
 <pre>cf push nombre_app</pre></li>
-<li>Opcional: Si utiliza un paquete de compilación externo, debe usar la opción -b con el mandato push de cf. Por ejemplo:
+<li>Opcional: Si utiliza un paquete de compilación externo, debe usar la opción -b
+con el mandato push de cf. Por ejemplo:
 <pre>cf push appname -b buildpack_URL</pre>
 <p>Para obtener detalles, consulte Uso de paquetes de compilación.</p>
 </li></ol>
@@ -176,7 +181,7 @@ services = JSON.parse(ENV['VCAP_SERVICES'], :symbolize_names => true)
             end
           end
         end.flatten!.first
-```		
+```
 {:codeblock}
 
 Para asegurarse de que su app se pueda ejecutar en un entorno local tras modificarla para {{site.data.keyword.Bluemix_notm}}, compruebe la presencia de la variable de entorno VCAP_SERVICES, que se establece para todas las apps de {{site.data.keyword.Bluemix_notm}} Cloud Foundry.
@@ -192,5 +197,5 @@ Para asegurarse de que su app se pueda ejecutar en un entorno local tras modific
 * [Virtual Machines](/docs/virtualmachines/vm_index.html)
 * [Cómo empezar con Delivery Pipeline](/docs/services/DeliveryPipeline/index.html)
 * [Despliegue de apps con IBM Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html)
-* [La app de factor doce (twelve-factor)](http://12factor.net/){:new_window}
-* [Alcanzar el elemento de fondo empresarial con Bluemix Secure Gateway a través de la consola](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){:new_window}
+* [La app de factor doce (twelve-factor)![icono de enlace externo](../icons/launch-glyph.svg)](http://12factor.net/){: new_window}
+* [Alcanzar el elemento de fondo empresarial con Bluemix Secure Gateway a través de la consola ![icono de enlace externo](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window}

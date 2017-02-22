@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -38,14 +38,14 @@ lastupdated: "2016-12-06"
   ```
   {: pre}
 
-2. 通过运行以下命令，创建新 {{site.data.keyword.objectstorageshort}} 容器。此时，您将设置 *container_name* 变量。
+2. 通过运行以下命令，创建 {{site.data.keyword.objectstorageshort}} 容器。现在，您将设置 *container_name* 变量。
 
   ```
 swift post <container_name>
 ```
   {: pre}
 
-**注**：如果收到错误消息，请确认您是否已安装[必备软件](/docs/services/ObjectStorage/os_configuring.html#install-swift-client)。
+**注**：如果收到错误消息，请确认是否已安装[必备软件](/docs/services/ObjectStorage/os_configuring.html#install-swift-client)。
 
 3. 可选：要验证容器是否已创建，请运行以下命令来列出容器。
 

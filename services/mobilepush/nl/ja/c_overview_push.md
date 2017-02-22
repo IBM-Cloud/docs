@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,13 +12,19 @@ copyright:
 
 # {{site.data.keyword.mobilepushshort}}の概要
 {: #overview-push}
-最終更新日: 2016 年 12 月 06 日
+最終更新日: 2017 年 1 月 18 日
 {: .last-updated}
 
-IBM {{site.data.keyword.mobilepushshort}} は、iOS や Android のモバイル・デバイス、Google Chrome、Mozilla Firefox、および Safari の Web ブラウザー、さらに Google Chrome アプリケーションおよびエクステンションに通知を送信するために使用できるサービスです。通知は、すべてのアプリケーション・ユーザーをターゲットとすることも、タグを使用して特定のユーザーおよびデバイスの集合をターゲットとすることもできます。デバイス、タグ、およびサブスクリプションを管理できます。
-クライアント・アプリケーションをさらに開発するために、SDK (software development kit) および Representational State Transfer (REST) アプリケーション・プログラム・インターフェース (API) を使用することもできます。 
+IBM {{site.data.keyword.mobilepushshort}} は、デバイスおよびプラットフォームに通知を送信するために使用できるサービスです。通知は、すべてのアプリケーション・ユーザーをターゲットとすることも、タグを使用して特定のユーザーおよびデバイスの集合をターゲットとすることもできます。デバイス、タグ、およびサブスクリプションを管理できます。
+  
 
-{{site.data.keyword.mobilepushshort}}は、Bluemix 専用サービスとしても使用可能です。専用サービスの{{site.data.keyword.mobilepushshort}}については、[専用サービス](/docs/dedicated/index.html)を参照してください。なお、{{site.data.keyword.mobilepushshort}}のモニター・タブには、分析データは表示されません。
+以下のいずれかのオプションを使用して、バインドまたはアンバインドされたサービスを作成することができます。
+
+- カタログから MobileFirst Services Starter ボイラープレートを使用して Bluemix アプリケーションを作成する。これにより、Bluemix バックエンド・アプリケーションにバインドされた Push Notifications (プッシュ通知) サービスが作成されます。
+- モバイル・カタログから直接、アンバウンド Push Notifications (プッシュ通知) サービスを作成する。後でアプリケーションにバインドするか、アンバウンドの状態で使用するよう選択することもできます。 
+- [モバイル・ダッシュボード![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.ng.bluemix.net/docs/mobile/services.html "外部リンク・アイコン"){: new_window}を使用する。
+
+なお、{{site.data.keyword.mobilepushshort}}のモニター・タブには、分析データは表示されません。
 
 {{site.data.keyword.mobilepushshort}}サービスは、OpenWhisk 対応になりました。詳細については、[OpenWhisk](/docs/openwhisk/index.html) を参照してください。
 
@@ -59,9 +65,14 @@ IBM {{site.data.keyword.mobilepushshort}} は、iOS や Android のモバイル�
 ###プッシュのセキュリティー
 {: push-security}
 
-{{site.data.keyword.mobilepushshort}} API は、2 つタイプの秘密鍵 i) appSecret ii) clientSecret によって保護されます。「appSecret」は、バックエンド・アプリケーションによって通常呼び出される API を保護します。例えば、{{site.data.keyword.mobilepushshort}}を送信する API や設定を構成する API などです。「clientSecret」は、モバイル・クライアント・アプリケーションによって通常呼び出される API を保護します。この「clientSecret」を必要とする関連付けられた UserId を持つデバイスの登録に関与する API は 1 つだけです。その他の API は、clientSecret を必要とするモバイル・クライアントからは呼び出されません。「appSecret」と「clientSecret」は、アプリケーションと{{site.data.keyword.mobilepushshort}}サービスのバインド時にすべてのサービス・インスタンスに割り振られます。秘密鍵の受け渡しの方法や、どの API に渡されるかについて詳しくは、ReST API の資料を参照してください。
+{{site.data.keyword.mobilepushshort}} API は、次の 2 つのタイプの secret によって保護されています。
 
-注: 以前のアプリケーションでは、userId フィールドが設定されたデバイスを登録または更新する場合にのみ、clientSecret の受け渡しが必要とされました。モバイル・クライアントおよびブラウザー・クライアントによって呼び出されるその他のすべての API では、clientSecret は不要でした。これらの古いアプリケーションでは引き続き、デバイスの登録や呼び出しの更新時にオプションで clientSecret を使用できます。ただし、すべてのクライアント API 呼び出しで clientSecret チェックを実施することを強くお勧めします。これを既存のアプリケーションでも実施するために、新規の「verifyClientSecret」API が公開されています。新規アプリケーションの場合、clientSecret チェックがすべてのクライアント API 呼び出しに対して実施され、この動作は「verfiyClientSecret」API を使用して変更することはできません。
+- **appSecret**: 「appSecret」は、バックエンド・アプリケーションによって通常呼び出される API を保護します。例えば、{{site.data.keyword.mobilepushshort}}を送信する API や設定を構成する API などです。
+- **clientSecret**:  「clientSecret」は、モバイル・クライアント・アプリケーションによって通常呼び出される API を保護します。この「clientSecret」を必要とする関連付けられた UserId を持つデバイスの登録に関与する API は 1 つだけです。その他の API は、clientSecret を必要とするモバイル・クライアントからは呼び出されません。 
+
+「appSecret」と「clientSecret」は、アプリケーションと{{site.data.keyword.mobilepushshort}}サービスのバインド時にすべてのサービス・インスタンスに割り振られます。secret の受け渡しの方法や、対象の API について詳しくは、[REST API ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://mobile.{DomainName}/imfpush/ "外部リンク・アイコン") の資料を参照してください。
+
+**注**: 以前のアプリケーションでは、userId フィールドが設定されたデバイスを登録または更新する場合にのみ、clientSecret の受け渡しが必要とされました。モバイル・クライアントおよびブラウザー・クライアントによって呼び出されるその他のすべての API では、clientSecret は不要でした。これらの古いアプリケーションでは引き続き、デバイスの登録や呼び出しの更新時にオプションで clientSecret を使用できます。ただし、すべてのクライアント API 呼び出しで clientSecret チェックを実施することを強くお勧めします。これを既存のアプリケーションでも実施するために、新規の「verifyClientSecret」API が公開されています。新規アプリケーションの場合、clientSecret チェックがすべてのクライアント API 呼び出しに対して実施され、この動作は「verfiyClientSecret」API を使用して変更することはできません。
 
 デフォルトでは、クライアント秘密鍵検証は新規アプリケーションに対してのみ実施されます。既存のアプリケーションと新規アプリケーションはどちらも、verifyClientSecret REST API を使用して、クライアント秘密鍵検証を使用可能または使用不可にすることができます。applicationId および deviceId を知っている可能性のあるユーザーにデバイスが公開されないようにするために、クライアント秘密鍵検証を実施することをお勧めします。
 
@@ -97,8 +108,9 @@ IBM {{site.data.keyword.mobilepushshort}} は、iOS や Android のモバイル�
 プラットフォームを配列として指定します。サポートされるプラットフォームは、以下のとおりです。
 * A (Apple) 
 * G (Google)
-* WEB_CHROME (Google Chrome ブラウザー WebPush)
-* WEB_FIREFOX (Mozilla Firefox ブラウザー WebPush)
+* WEB_CHROME (Google Chrome ブラウザーの Web プッシュ)
+* WEB_FIREFOX (Mozilla Firefox ブラウザーの Web プッシュ)
+* WEB_SAFARI (Safari ブラウザーの Web プッシュ)
 * APPEXT_CHROME (Google Chrome アプリケーション & エクステンション)
 
 ## {{site.data.keyword.mobilepushshort}}のメッセージ・サイズ
@@ -106,7 +118,7 @@ IBM {{site.data.keyword.mobilepushshort}} は、iOS や Android のモバイル�
 
 {{site.data.keyword.mobilepushshort}} のメッセージ・ペイロード・サイズは、ゲートウェイ (FCM/GCM、APNs) およびクライアント・プラットフォームによって課せられる制約に依存します。 
 
-###iOS
+### iOS および Safari
 {: ios-message-size}
 
 iOS 8 以降では、許容される最大サイズは 2 キロバイトです。Apple プッシュ通知サービスは、この制限を超える通知を送信しません。

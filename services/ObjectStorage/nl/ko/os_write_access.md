@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -18,6 +18,7 @@ lastupdated: "2016-12-06"
 {: shortdesc}
 
 <table>
+<caption> 표 1. 옵션별 쓰기 액세스 권한</caption>
   <tr>
     <th> 권한 </th>
     <th> 쓰기 ACL 옵션 </th>
@@ -39,8 +40,6 @@ lastupdated: "2016-12-06"
     <td>  <code> &#42;:&#42; </code> </td>
   </tr>
 </table>
-
-표 1: 옵션별 쓰기 액세스 권한
 
 
 

@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,10 +12,10 @@ copyright:
 
 # REST API 사용
 {: #push-api-rest}
-마지막 업데이트 날짜: 2016년 12월 6일
+마지막 업데이트 날짜: 2017년 1월 16일
 {: .last-updated}
 
-{{site.data.keyword.mobilepushshort}}에 REST(Representational State Transfer) API(Application Program Interface)를 사용할 수 있습니다. 또한 SDK 및 [Push API](https://mobile.{DomainName}/imfpush/)를 사용하여 클라이언트 애플리케이션을 추가적으로 개발할 수도 있습니다. 
+{{site.data.keyword.mobilepushshort}}에 REST(Representational State Transfer) API(Application Program Interface)를 사용할 수 있습니다. SDK와 [푸시 API ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://mobile.{DomainName}/imfpush/ "외부 링크 아이콘"){: new_window}도 사용하여 클라이언트 애플리케이션을 추가 개발할 수 있습니다.
 
 백엔드 서버 애플리케이션과 클라이언트에서 푸시 REST API를 사용하여 {{site.data.keyword.mobilepushshort}} 기능에 액세스할 수 있습니다. 
 
@@ -43,14 +43,14 @@ REST API의 기본 URL을 얻으려면 다음 단계를 완료하십시오.
 ## 언어 승인 헤더
 {: #push-api-rest-accept}
 
-"언어 승인" 헤더는 [Push REST API](https://mobile.{DomainName}/imfpush/){: new_window}에서 출력하는 오류 메시지에 사용할 언어를 지정합니다. 오류 메시지에 지원되는 언어는 중국어, 대만어, 영어(미국), 독일어, 프랑스어, 이탈리아어, 일본어, 한국어, 포르투갈어 및 스페인어입니다. 
+"Accept-Language" 헤더는 [푸시 REST API ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://mobile.{DomainName}/imfpush/ "외부 링크 아이콘"){: new_window}가 출력하는 오류 메시지에 사용하는 언어를 지정합니다. 오류 메시지에 지원되는 언어는 중국어, 대만어, 영어(미국), 독일어, 프랑스어, 이탈리아어, 일본어, 한국어, 포르투갈어 및 스페인어입니다. 
 
 ## appSecret 
 {: #push-api-rest-secret}
 
-애플리케이션이 {{site.data.keyword.mobilepushshort}}에 바인드되는 경우 서비스에서 appSecret(고유 키)을 생성하여 응답 헤더를 통해 전달합니다. IBM {{site.data.keyword.mobilepushshort}} for Bluemix Rest API를 사용 중인 경우 보호해야 하는 API에 대한 정보를 얻으려면 REST API 참조를 사용하십시오. 자세한 정보는 [Push REST API](https://mobile.{DomainName}/imfpush/)를 참조하십시오. 
+애플리케이션이 {{site.data.keyword.mobilepushshort}}에 바인드되는 경우 서비스에서 appSecret(고유 키)을 생성하여 응답 헤더를 통해 전달합니다. IBM {{site.data.keyword.mobilepushshort}} for Bluemix Rest API를 사용 중인 경우 보호해야 하는 API에 대한 정보를 얻으려면 REST API 참조를 사용하십시오. 자세한 정보는 [푸시 REST API ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://mobile.{DomainName}/imfpush/ "외부 링크 아이콘"){: new_window}을 참조하십시오.
 
-요청 헤더에 appSecret이 포함되어야 합니다. 그렇지 않으면 서버가 401 권한 없음 오류 코드를 리턴합니다. {{site.data.keyword.mobilepushshort}}이 애플리케이션에 추가되면 특정 AppID가 작성됩니다. 응답 과정에서 태그를 작성하거나 메시지를 전송하는 데 사용되는 appSecret 헤더를 받습니다. 카탈로그 또는 표준 유형의 서비스를 통해 오퍼레이션이 발생합니다.
+요청 헤더에 appSecret이 포함되어야 합니다. 그렇지 않으면 서버가 401 권한 없음 오류 코드를 리턴합니다. {{site.data.keyword.mobilepushshort}}가 애플리케이션에 추가되면 특정 AppID가 작성됩니다. 응답 과정에서 태그를 작성하거나 메시지를 전송하는 데 사용되는 appSecret 헤더를 받습니다. 카탈로그 또는 표준 유형의 서비스를 통해 오퍼레이션이 발생합니다.
 
 appSecret 값을 가져오려면 다음을 수행하십시오. 
 
@@ -90,7 +90,7 @@ appSecret 값을 가져오려면 다음을 수행하십시오.
 
 **expression**: 결과에 포함시킬 값입니다. 
 
-식에 쉼표 및 백슬래시가 표시될 경우 백슬래시로 이스케이프해야 합니다. 
+표현식에 쉼표 및 백슬래시가 표시될 경우 백슬래시로 이스케이프해야 합니다. 
 
 여러 개의 필터를 사용할 경우 AND 및 OR 논리를 사용하여 필터를 결합할 수 있습니다. 
 

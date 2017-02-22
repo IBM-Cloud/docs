@@ -13,8 +13,7 @@ copyright:
 Dernière mise à jour : 1er juin 2016
 {: .last-updated}  
 
-Si vous voulez débuter avec une nouvelle application iOS, vous pouvez utiliser l'application Hello Bluemix.
-Elle explique comment se connecter à votre système de back end {{site.data.keyword.Bluemix}} depuis une application
+Si vous voulez débuter avec une nouvelle application iOS, vous pouvez utiliser l'application Hello Bluemix. Elle explique comment se connecter à votre système de back end {{site.data.keyword.Bluemix}} depuis une application
 mobile sans authentification. Une fois prêt, vous pouvez vous procurer les bibliothèques spécifiques que vous voulez utiliser dans votre application.
 
 1. Créez votre application de back end mobile dans {{site.data.keyword.Bluemix_notm}}.

@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2014, 2016
+  years: 2014, 2017
   
-lastupdated: "2016-10-19"
+lastupdated: "2017-01-11"
 
  
 
@@ -21,7 +21,7 @@ lastupdated: "2016-10-19"
 {{site.data.keyword.Bluemix}} プラットフォームはセキュア・エンジニアリング・プラクティスを使用して設計されており、ネットワークおよびインフラストラクチャー全体における階層化セキュリティー管理機能を備えています。{{site.data.keyword.Bluemix_notm}} は、アプリケーション開発者がモバイル・アプリおよび Web アプリを保護するために使用できる一連のセキュリティー・サービスを備えています。これらのエレメントを組み合わせることで、{{site.data.keyword.Bluemix_notm}} は、セキュアなアプリケーション開発に対して明確な選択を提供するプラットフォームになっています。
 {:shortdesc}
 
-{{site.data.keyword.Bluemix_notm}} は、システム、ネットワーキング、およびセキュア・エンジニアリングに関する IBM のベスト・プラクティスに基づいたセキュリティー・ポリシーに準拠することで、セキュリティーが確保されている状態にします。これらのポリシーには、ソース・コード・スキャン、動的スキャン、脅威のモデル化、侵入テストなどのプラクティスが含まれます。{{site.data.keyword.Bluemix_notm}} は、セキュリティー・インシデントの管理について、IBM Product Security Incident Response Team (PSIRT) プロセスに従います。詳しくは、[IBM Security Vulnerability Management (PSIRT)](http://www-03.ibm.com/security/secure-engineering/process.html){: new_window} のサイトを参照してください。
+{{site.data.keyword.Bluemix_notm}} は、システム、ネットワーキング、およびセキュア・エンジニアリングに関する IBM のベスト・プラクティスに基づいたセキュリティー・ポリシーに準拠することで、セキュリティーが確保されている状態にします。これらのポリシーには、ソース・コード・スキャン、動的スキャン、脅威のモデル化、侵入テストなどのプラクティスが含まれます。{{site.data.keyword.Bluemix_notm}} は、セキュリティー・インシデントの管理について、IBM Product Security Incident Response Team (PSIRT) プロセスに従います。詳しくは、[IBM Security Vulnerability Management (PSIRT) ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://www-03.ibm.com/security/secure-engineering/process.html){: new_window} のサイトを参照してください。
 
 {{site.data.keyword.Bluemix_notm}} Public および Dedicated では、{{site.data.keyword.BluSoftlayer}} Infrastructure-as-a-Service (IaaS) クラウド・サービスを使用し、そのセキュリティー・アーキテクチャーを最大限に活用します。{{site.data.keyword.BluSoftlayer}} IaaS は、ご使用のアプリケーションとデータに対して何重にも重ねた層の保護を提供します。{{site.data.keyword.Bluemix_notm}} Local の場合、企業ファイアウォールの背後にあるお客様自身のデータ・センターに {{site.data.keyword.Bluemix_notm}} Local をホストすることで、お客様が物理的セキュリティーを所有し、インフラストラクチャーを提供します。さらに、{{site.data.keyword.Bluemix_notm}} は、Platform as a Service 層で各種カテゴリー (プラットフォーム、データ、およびアプリケーション) のセキュリティー機能を追加します。
 
@@ -67,7 +67,7 @@ IBM は、リレー ({{site.data.keyword.Bluemix_notm}} Local に付属のデリ
 <dd>{{site.data.keyword.Bluemix_notm}} は Cloud Foundry メカニズムを使用して、確実に各アプリケーション開発者が自分の作成したアプリケーションおよびサービス・インスタンスに対してのみアクセス権限を持つようにします。{{site.data.keyword.Bluemix_notm}} サービスに対する許可は OAuth に基づいています。{{site.data.keyword.Bluemix_notm}} プラットフォームのすべての内部エンドポイントへのアクセスは、外部ユーザーに制限されています。</dd>
 
 <dt>監査</dt>
-<dd>アプリケーション開発者の認証については、成功か失敗かに関わらずすべての試行に対して監査ログが作成されます。また、 {{site.data.keyword.Bluemix_notm}} アプリケーションが実行されるコンテナーをホストする Linux システムへの特権アクセスについても、監査ログが作成されます。</dd>
+<dd>アプリケーション開発者の認証については、成功か失敗かにかかわらずすべての試行に対して監査ログが作成されます。また、 {{site.data.keyword.Bluemix_notm}} アプリケーションが実行されるコンテナーをホストする Linux システムへの特権アクセスについても、監査ログが作成されます。</dd>
 
 <dt>データの保護</dt>
 <dd> すべての  {{site.data.keyword.Bluemix_notm}} トラフィックは、リバース・プロキシー、SSL 終了、およびロード・バランシング機能を提供する IBM WebSphere® DataPower® SOA アプライアンスを経由します。
@@ -212,7 +212,7 @@ Single Sign On サービスでは、以下に示すように、ユーザーの�
 
 IBM Application Security Testing for {{site.data.keyword.Bluemix_notm}} プラグインを使用すれば、{{site.data.keyword.Bluemix_notm}} でホストされている Web アプリや Android アプリに対してセキュリティー・スキャンを実行できるようになります。このプラグインは、IBM UrbanCode™ Deploy Community が IBM Bluemix DevOps Services プラットフォーム上で開発とサポートを行っています。
 
-詳しくは、[IBM Application Security Testing for Bluemix](https://developer.ibm.com/urbancode/plugindoc/ibmucd/ibm-application-security-testing-bluemix/1-0/){: new_window} にアクセスしてください。
+詳しくは、[IBM Application Security Testing for Bluemix ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://developer.ibm.com/urbancode/plugindoc/ibmucd/ibm-application-security-testing-bluemix/1-0/){: new_window} にアクセスしてください。
 
 ### dashDB
 
@@ -228,9 +228,7 @@ Secure Gateway サービスを使用すれば、{{site.data.keyword.Bluemix_notm
 
 ### SIEM (Security Information and Event Management)
 
-SIEM (Security Information and Event Management) ツールを使用して、アプリケーション・ログ内のセキュリティー・アラートを分析できます。そのようなツールの 1 つに、IBM Security QRadar&reg; SIEM があります。このツールは、クラウド環境でセキュリティー・インテリジェンスを提供します。
-詳しくは、
-[IBM QRadar Security Intelligence Platform](http://www-01.ibm.com/support/knowledgecenter/SS42VS/welcome?lang=en){: new_window} を参照してください。
+SIEM (Security Information and Event Management) ツールを使用して、アプリケーション・ログ内のセキュリティー・アラートを分析できます。そのようなツールの 1 つに、IBM Security QRadar&reg; SIEM があります。このツールは、クラウド環境でセキュリティー・インテリジェンスを提供します。詳しくは、[IBM QRadar Security Intelligence Platform ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://www-01.ibm.com/support/knowledgecenter/SS42VS/welcome?lang=en){: new_window} を参照してください。
 
 ## {{site.data.keyword.Bluemix_notm}} セキュリティー・デプロイメント
 {: #security-deployment}
@@ -279,19 +277,18 @@ SIEM (Security Information and Event Management) ツールを使用して、ア�
 {{site.data.keyword.Bluemix}} は、信頼できる安全なクラウド・プラットフォームを提供します。{{site.data.keyword.Bluemix_notm}} のコンプライアンスは、ISO 27001 および ISO 27002 などの業界最高のセキュリティー規格を基盤としたプラットフォームおよびサービスの結果として作成されたものです。
 {:shortdesc}
 
-![EU のデータ保護モデル契約条項](images/icon_eumc.png)  **EU モデル契約条項**は、EU または欧州経済地域 (EEA) から第三国に転送される個人データを保護する取り決めです。EU モデル契約条項は、EU または EEA にデータ・エクスポーターとして位置するクライアントと、第三国にデータ・インポーターとして位置する IBM データ・プロセッサーとの間で署名されました。[IBM SaaS EU モデル契約条項](http://www-01.ibm.com/common/ssi/cgi-bin/ssialias?subtype=ST&infotype=SA&htmlfid=KUJ12408USEN&attachment=KUJ12408USEN.PDF){: new_window}には、データ・エクスポーターとデータ・インポーターの権利と義務、およびデータ・サブジェクトの権利が記載されています。IBM SaaS EU モデル契約条項は、第三国で個人データの処理が行われる際に、その個人データに対して EU または EEA 内で使用可能な保護に似た保護を実行することを保証します。
+![EU のデータ保護モデル契約条項](images/icon_eumc.png)  **EU モデル契約条項**は、EU または欧州経済地域 (EEA) から第三国に転送される個人データを保護する取り決めです。EU モデル契約条項は、EU または EEA にデータ・エクスポーターとして位置するクライアントと、第三国にデータ・インポーターとして位置する IBM データ・プロセッサーとの間で署名されました。[IBM SaaS EU モデル契約条項 ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://www-01.ibm.com/common/ssi/cgi-bin/ssialias?subtype=ST&infotype=SA&htmlfid=KUJ12408USEN&attachment=KUJ12408USEN.PDF){: new_window} には、データ・エクスポーターとデータ・インポーターの権利と義務、およびデータ・サブジェクトの権利が記載されています。IBM SaaS EU モデル契約条項は、第三国で個人データの処理が行われる際に、その個人データに対して EU または EEA 内で使用可能な保護に似た保護を実行することを保証します。
 
 欧州経済地域 (EEA) から発信するデータを EEA 以外の国に転送するお客様の場合、{{site.data.keyword.Bluemix}} は、EU モデル契約条項を、欧州委員会と欧州連合 (EU) のデータ保護機関に承認された形式で提供します。EU モデル契約条項は、{{site.data.keyword.Bluemix_notm}} が世界中のすべての場所で必要なデータ・プライバシー保護をサポートすることを、ヨーロッパのお客様に保障します。
 
 ![金融情報システム](images/FISC.gif)  日本国内の銀行業界および関連する金融業界の場合、コンピューター・システムは、金融情報システムセンター (FISC) の安全対策基準に基づいた安全対策手順を実施する必要があります。FISC 安全対策基準は、金融庁 (FSA)、日本銀行 (BOJ)、および FISC によって実施されています。
-
-FISC 安全対策基準に関する {{site.data.keyword.Bluemix_notm}} の自己評価文書 (日本語版) は、[IBM Bluemix リスク調査結果](https://www.ibm.com/cloud-computing/jp/ja/bluemix_fisc.html){: new_window}から入手できます。  
+ 
 
 ![ISO 27001/2](images/icon_iso27k1.png)  {{site.data.keyword.Bluemix_notm}} は、機密保護管理プロセスでのベスト・プラクティスを定義する、**国際標準化機構 (ISO) 27001 および 27002 の規格**によって認定されています。ISO 27001 は、情報セキュリティー管理システムの要件の概要を示した、広く採用されているグローバル・セキュリティー標準です。定期的なリスク・アセスメントに基づいて企業および顧客の情報を管理する体系的アプローチを提供します。最新の規格である ISO/IEC 27001:2013 は 2013 年 9 月 25 日に**国際標準化機構 (ISO) と国際電気標準会議 (IEC)** により、ISO と IEC が設置する合同の分化委員会で発行されました。ISO 27001 規格は、情報セキュリティー・マネジメント・システム (ISMS) を確立、実装、および文書化するための条件、および個々の組織のニーズに応じてセキュリティー管理を実装するための条件を指定しています。ISO 27002 規格は、ISO 27001 の各セキュリティー管理について詳細に説明しています。ISO 27000 規格群は、書面による情報、口頭による情報、および電子情報の機密性、保全性、および可用性の保護を目的として、アセットのリスクおよび評価の基準化プロセスを具体化したものです。
 
 企業が ISO 27001:2013 認証を取得するためには、企業とカスタマー情報の機密性、完全性、可用性に影響する情報セキュリティー・リスクを管理するための体系的で継続的な方法を使用していることを示す必要があります。この規格は、組織の情報セキュリティー・マネジメント・システム (ISMS) がどの程度適切に機能しているかについての測定と評価を重視し、システムと他の要件を基準にした情報セキュリティー関連の管理も含まれます。
 
-{{site.data.keyword.Bluemix_notm}} は、サード・パーティーのセキュリティー会社によって監査されており、ISO 27001 のすべての条件 ([Bluemix ISO 27001:2013 Certificate of Registration](ftp://public.dhe.ibm.com/cloud/bluemix/compliance/Bluemix_ISO27K1_WWCert_2016.pdf){: new_window}) を満たしています。
+{{site.data.keyword.Bluemix_notm}} は、サード・パーティーのセキュリティー会社によって監査されており、ISO 27001 のすべての条件 ([Bluemix ISO 27001:2013 Certificate of Registration ![「外部リンク」アイコン](../icons/launch-glyph.svg)](ftp://public.dhe.ibm.com/cloud/bluemix/compliance/Bluemix_ISO27K1_WWCert_2016.pdf){: new_window}) を満たしています。
 
 ![PCI DSS](images/icon_pci.png) **Payment Card Industry (PCI) Data Security Standards (DSS)** は、クレジット・カード・データを保護するために設計された情報セキュリティー標準です。PCI DSS は、マーチャント、プロセッサー、発行者、サービス・プロバイダーなど、ペイメント・カード処理に関与するすべてのエンティティーに適用されます。また、カード所有者のデータまたは機密認証データを保管、処理、または送信する他のすべてのエンティティーにも適用されます。
 
@@ -299,7 +296,7 @@ FISC 安全対策基準に関する {{site.data.keyword.Bluemix_notm}} の自己
 これらの基準には、カード所有者のデータを保護するためのベスト・プラク
 ティスが取り込まれており、第三者の認定サービス評価機関 (QSA: Qualified Service Assessor) による検証を必要とする場合が多々あります。IBM は、独立した QSA からの「Attestation on Compliance」を提供することで、お客様が各自の PCI コンプライアンスのニーズに対応できるようお手伝いをしています。「Attestation on Compliance」を弊社の SOC 2 レポートおよび ISO 27001 認証と併せて使用すると、インフラストラクチャーが PCI 規制に対応していることを示すことができます。
 
-{{site.data.keyword.Bluemix}} は、承認された認定セキュリティー評価機関 (QSA) によって、1 年に 1 回 PCI DSS アセスメントを完了しています。{{site.data.keyword.Bluemix_notm}} は、[Bluemix PCI DSS AOC](ftp://public.dhe.ibm.com/cloud/bluemix/compliance/IBM_Bluemix_PCI){: new_window} で概要を示しているように、Service Provider Level 1 において PCI DSS バージョン 3.1 の下に準拠して審査されています。ご使用の {{site.data.keyword.Bluemix_notm}} 環境における PCI DSS への準拠に関する情報および支援については、『[お問い合わせ](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs){: new_window}』から営業担当にお問い合わせください。
+{{site.data.keyword.Bluemix}} は、承認された認定セキュリティー評価機関 (QSA) によって、1 年に 1 回 PCI DSS アセスメントを完了しています。{{site.data.keyword.Bluemix_notm}} は、[Bluemix PCI DSS AOC ![「外部リンク」アイコン](../icons/launch-glyph.svg)](ftp://public.dhe.ibm.com/cloud/bluemix/compliance/IBM_Bluemix_PCI.pdf){: new_window} に概要が示されているように、Service Provider Level 1 での PCI DSS バージョン 3.1 への準拠が審査されています。ご使用の {{site.data.keyword.Bluemix_notm}} 環境における PCI DSS への準拠に関する情報および支援については、[お問い合わせ ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs){: new_window} から営業担当にお問い合わせください。
 
 ![SSAE16 SOC1/2/3](images/icon_aicpa.png) **Service Organization Controls (SOC)** レポートは、サービス組織でのセキュリティー、可用性、処理の完全性、機密性、およびプライバシーに関連した、主要な内部制御実施の評価を定義しています。米国公認会計士協会 (AICPA) ガイドを使用して生成されたこれらのレポートには、以下の項目が含まれています。 
   * 組織の監督
@@ -307,12 +304,12 @@ FISC 安全対策基準に関する {{site.data.keyword.Bluemix_notm}} の自己
   * 社内のコーポレート・ガバナンスおよびリスク管理プロセス
   * 規制の監督
  
-{{site.data.keyword.Bluemix_notm}} は、SOC 1、SOC 2、SOC 3 のレポートを提供します。追加情報については、[{{site.data.keyword.Bluemix_notm}} の営業担当](mailto:bmxcert1@us.ibm.com){:new_window} チームまでお問い合わせください。 
+{{site.data.keyword.Bluemix_notm}} は、SOC 1、SOC 2、SOC 3 のレポートを提供します。追加情報については、[{{site.data.keyword.Bluemix_notm}} の営業担当 ![「外部リンク」アイコン](../icons/launch-glyph.svg)](mailto:bmxcert1@us.ibm.com){:new_window} チームまでお問い合わせください。 
 
 
 ![HIPAA](images/icon_hipaa.png) 医療保険の積算と責任に関する法律 (HIPAA) は、1996 年に米国連邦議会で施行され、失業後の従業員の医療保険補償を保護します。HIPAA は、米国の公民権局および保健社会福祉省によって規定および施行されています。HIPAA は、1996 年の法律の規制、および 2009 年の経済的および臨床的健全性のための医療情報技術に関する法律 (HITECH) のプライバシー要件を含んでいます。{{site.data.keyword.Bluemix_notm}} は、データ・センターまたはサービス・プロバイダー側において、HIPAA のすべての要件を満たしています。
 
-ご使用の Bluemix 環境における HIPAA コンプライアンスの達成、認証、および保守に関する詳細または支援については、{{site.data.keyword.Bluemix_notm}} [営業担当](mailto:cloudplatform_compliance@us.ibm.com){:new_window}チームにお問い合わせください。
+ご使用の Bluemix 環境における HIPAA コンプライアンスの達成、認証、および保守に関する詳細または支援については、{{site.data.keyword.Bluemix_notm}} [営業担当 ![「外部リンク」アイコン](../icons/launch-glyph.svg)](mailto:cloudplatform_compliance@us.ibm.com){:new_window} チームにお問い合わせください。
 
 
 ![ISO 27017](images/icon_ISO27017.png) ISO/IEC 27017:2015 は、クラウド・サービスのプロビジョニングおよび使用に適用される情報セキュリティー管理のガイドラインを提供します。また、クラウド・サービス・プロバイダーとクラウド・サービスの顧客の両方に対する実装ガイドラインを提供します。ISO 27017 は、ISO/IEC 27002 で指定される関連制御の実装ガイダンスを提供します。また、特にクラウド・サービスに関連する追加の制御とガイダンスも提供します。
@@ -357,5 +354,5 @@ FISC 安全対策基準に関する {{site.data.keyword.Bluemix_notm}} の自己
 ## 関連リンク
 {: #general}
 
-* [IBM SaaS のセキュリティー](http://www.ibm.com/cloud-computing/built-on-cloud/saas-security)
+* [IBM SaaS のセキュリティー ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/built-on-cloud/saas-security){: new_window}
 * [Single Sign On 概説 (Getting started with Single Sign On)](/docs/services/SingleSignOn/index.html)

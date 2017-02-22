@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
   
-lastupdated: "2016-10-23"
+lastupdated: "2017-01-11"
 
 ---
 
@@ -23,17 +23,17 @@ lastupdated: "2016-10-23"
 
 日誌提供如工作是順利執行還是失敗這類的資訊。它們也會提供可用來除錯並判定問題原因的相關資訊。
 
-日誌是固定格式。對於詳細日誌，您可以過濾日誌，或使用外部記載主機來儲存及處理日誌。如需日誌格式、檢視及過濾日誌，以及配置外部記載的相關資訊，請參閱 [Cloud Foundry 上執行之應用程式的記載](/docs/monitor_log/monitoringandlogging.html#logging_for_bluemix_apps){: new_window}。
+日誌是固定格式。對於詳細日誌，您可以過濾日誌，或使用外部記載主機來儲存及處理日誌。如需日誌格式、檢視及過濾日誌，以及配置外部記載的相關資訊，請參閱 [Cloud Foundry 上執行之應用程式的記載](/docs/monitor_log/monitoringandlogging.html#logging_for_bluemix_apps)。
 
 
 ## 針對編譯打包錯誤進行除錯
 {: #debugging-staging-errors}
-您在 {{site.data.keyword.Bluemix_notm}} 上編譯打包應用程式時可能會遇到問題。如果無法編譯打包應用程式，您可以搜尋及檢閱編譯打包 (STG) 日誌來判斷在應用程式部署期間發生什麼問題，並從問題中回復。如需如何檢視 Bluemix 應用程式日誌的相關資訊，請參閱[檢視日誌](/docs/monitor_log/monitoringandlogging.html#viewing_logs){: new_window}。  
+您在 {{site.data.keyword.Bluemix_notm}} 上編譯打包應用程式時可能會遇到問題。如果無法編譯打包應用程式，您可以搜尋及檢閱編譯打包 (STG) 日誌來判斷在應用程式部署期間發生什麼問題，並從問題中回復。如需如何檢視 Bluemix 應用程式日誌的相關資訊，請參閱[檢視日誌](/docs/monitor_log/monitoringandlogging.html#viewing_logs)。  
 
-若要瞭解應用程式在 {{site.data.keyword.Bluemix_notm}} 上失敗的原因，您需要知道如何將應用程式部署至 {{site.data.keyword.Bluemix_notm}}，並在其上執行。如需詳細資訊，請參閱[應用程式部署](/docs/manageapps/depapps.html#appdeploy){: new_window}。
+若要瞭解應用程式在 {{site.data.keyword.Bluemix_notm}} 上失敗的原因，您需要知道如何將應用程式部署至 {{site.data.keyword.Bluemix_notm}}，並在其上執行。如需詳細資訊，請參閱[應用程式部署](/docs/manageapps/depapps.html#appdeploy)。
 
 
-下列程序顯示如何使用 `cf logs` 指令來針對編譯打包錯誤進行除錯。採取下列步驟之前，請確定已安裝 cf 指令行介面。如需安裝 cf 指令行介面的相關資訊，請參閱[安裝 cf 指令行介面](/docs/starters/install_cli.html){: new_window}。
+下列程序顯示如何使用 `cf logs` 指令來針對編譯打包錯誤進行除錯。採取下列步驟之前，請確定已安裝 cf 指令行介面。如需安裝 cf 指令行介面的相關資訊，請參閱[安裝 cf 指令行介面](/docs/starters/install_cli.html)。
 
   1. 在 cf 指令行介面中輸入下列程式碼，以連接至 {{site.data.keyword.Bluemix_notm}}：
      
@@ -112,12 +112,12 @@ Analytics 服務來收集日誌詳細資料。此外，Monitoring and Analytics 
 
 具體而言，您可以啟用記載至 stdout 及 stderr。如需如何針對使用 {{site.data.keyword.Bluemix_notm}} 內建建置套件部署的應用程式，配置其日誌檔的相關資訊，請參閱下列清單：
 
-  * 若為 Liberty for Java™ 應用程式，請參閱 [Liberty Profile: Logging and Trace](http://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/rwlp_logging.html){: new_window}。
-  * 若為 Node.js 應用程式，請參閱 [How to log in node.js](http://docs.nodejitsu.com/articles/intermediate/how-to-log){: new_window}。
-  * 若為 PHP 應用程式，請參閱 [error_log](http://php.net/manual/en/function.error-log.php){: new_window}。
-  * 若為 Python 應用程式，請參閱 [logging HOWTO](https://docs.python.org/2/howto/logging.html){: new_window}。
-  * 若為 Ruby on Rails 應用程式，請參閱 [The Logger](http://guides.rubyonrails.org/debugging_rails_applications.html#the-logger){: new_window}。
-  * 若為 Ruby Sinatra 應用程式，請參閱 [Logging](http://www.sinatrarb.com/intro.html#Logging){: new_window}。
+  * 若為 Liberty for Java™ 應用程式，請參閱 [Liberty Profile: Logging and Trace ![外部鏈結圖示](../icons/launch-glyph.svg)](http://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/rwlp_logging.html){: new_window}。
+  * 若為 Node.js 應用程式，請參閱 [How to log in node.js ![外部鏈結圖示](../icons/launch-glyph.svg)](http://docs.nodejitsu.com/articles/intermediate/how-to-log){: new_window}。
+  * 若為 PHP 應用程式，請參閱 [error_log ![外部鏈結圖示](../icons/launch-glyph.svg)](http://php.net/manual/en/function.error-log.php){: new_window}。
+  * 若為 Python 應用程式，請參閱 [Logging HOWTO ![外部鏈結圖示](../icons/launch-glyph.svg)](https://docs.python.org/2/howto/logging.html){: new_window}。
+  * 若為 Ruby on Rails 應用程式，請參閱 [The Logger ![外部鏈結圖示](../icons/launch-glyph.svg)](http://guides.rubyonrails.org/debugging_rails_applications.html#the-logger){: new_window}。
+  * 若為 Ruby Sinatra 應用程式，請參閱 [Logging ![外部鏈結圖示](../icons/launch-glyph.svg)](http://www.sinatrarb.com/intro.html#Logging){: new_window}。
 
 當您在 cf 指令行介面中輸入 `cf logs appname --recent` 時，只會顯示最新的日誌。若要檢視之前發生的錯誤日誌，您必須擷取所有的日誌，然後搜尋錯誤。若要擷取應用程式的所有日誌，請使用下列其中一種方法：
 <dl>
@@ -145,22 +145,22 @@ Analytics 服務來收集日誌詳細資料。此外，Monitoring and Analytics 
 
 根據新程式碼部署的方式，選擇下列其中一個方法來對程式碼變更進行除錯：
 
-  * 若為從 cf 指令行部署的新程式碼，請檢查 *cf push* 指令的輸出。此外，您可以使用 *cf logs* 指令來尋找可解決問題的更多線索。如需如何使用 *cf logs* 指令的相關資訊，請參閱[從指令行介面檢視日誌](../monitor_log/monitoringandlogging.html#viewing_logs_cli){: new_window}。
+  * 若為從 cf 指令行部署的新程式碼，請檢查 *cf push* 指令的輸出。此外，您可以使用 *cf logs* 指令來尋找可解決問題的更多線索。如需如何使用 *cf logs* 指令的相關資訊，請參閱[從指令行介面檢視日誌](/docs/monitor_log/monitoringandlogging.html#viewing_logs_cli)。
 
-  * 若為從 {{site.data.keyword.Bluemix_notm}} 主控台、DevOps Delivery Pipeline 或 Travis-CI 等 GUI 部署的新程式碼，您可以從該介面檢查日誌。例如，如果您是從 {{site.data.keyword.Bluemix_notm}} 主控台部署新程式碼，則可以移至「儀表板」，找到您的應用程式，然後檢視日誌以尋找線索。如需如何從 {{site.data.keyword.Bluemix_notm}} 主控台檢視日誌的相關資訊，請參閱[從 Bluemix 儀表板檢視日誌](../monitor_log/monitoringandlogging.html#viewing_logs_UI){: new_window}。  
+  * 若為從 {{site.data.keyword.Bluemix_notm}} 主控台、DevOps Delivery Pipeline 或 Travis-CI 等 GUI 部署的新程式碼，您可以從該介面檢查日誌。例如，如果您是從 {{site.data.keyword.Bluemix_notm}} 主控台部署新程式碼，則可以移至「儀表板」，找到您的應用程式，然後檢視日誌以尋找線索。如需如何從 {{site.data.keyword.Bluemix_notm}} 主控台檢視日誌的相關資訊，請參閱[從 Bluemix 儀表板檢視日誌](/docs/monitor_log/monitoringandlogging.html#viewing_logs_UI)。  
 
 
-# 相關鏈結
+# rellinks
 {: #rellinks}
 
-## 一般
+## general
 {: #general}
 
-  * [Droplet Execution Agent (DEA)](http://docs.cloudfoundry.org/concepts/architecture/execution-agent.html){: new_window}
-  * [開始使用 IBM Monitoring and Analytics for Bluemix 服務](../services/monana/index.html#gettingstartedtemplate){: new_window}
-  * [Bluemix 運作方式](../overview/whatisbluemix.html#howwork){: new_window}
-  * [安裝 cf 指令工具](../starters/install_cli.html){: new_window}
-  * [檢視日誌](../monitor_log/monitoringandlogging.html#viewing_logs){: new_window}
+  * [Droplet Execution Agent (DEA) ![外部鏈結圖示](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/concepts/architecture/execution-agent.html){: new_window}
+  * [開始使用 IBM Monitoring and Analytics for Bluemix 服務](/docs/services/monana/index.html#gettingstartedtemplate)
+  * [Bluemix 運作方式](/docs/overview/whatisbluemix.html#howwork)
+  * [安裝 cf 指令工具](/docs/starters/install_cli.html)
+  * [Viewing logs](/docs/monitor_log/monitoringandlogging.html#viewing_logs)
 
   
   

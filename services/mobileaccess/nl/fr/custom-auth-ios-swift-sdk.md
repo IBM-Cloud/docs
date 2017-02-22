@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-27"
+  years: 2016, 2017
+lastupdated: "2017-01-16"
 
 ---
 
@@ -12,27 +12,26 @@ lastupdated: "2016-10-27"
 # Configuration d'une authentification personnalisée pour votre application {{site.data.keyword.amashort}} iOS (SDK Swift)
 {: #custom-ios}
 
-Configurez votre application iOS qui utilise l'authentification personnalisée afin qu'elle se serve du SDK client de {{site.data.keyword.amafull}} et connectez-la à {{site.data.keyword.Bluemix}}.  Le nouveau SDK Swift {{site.data.keyword.amashort}} disponible enrichit et améliore les fonctionnalités fournies par le SDK Mobile Client Access Objective-C existant.
+Configurez votre application iOS qui utilise l'authentification personnalisée afin qu'elle se serve du SDK client de {{site.data.keyword.amafull}} et connectez-la à {{site.data.keyword.Bluemix}}.  
 
-**Remarque :** Bien que le SDK Objective-C reste complètement pris en charge et soit toujours considéré comme le SDK principal pour {{site.data.keyword.Bluemix_notm}} Mobile Services, il est envisagé de le retirer plus tard dans l'année et de le remplacer par le nouveau SDK Swift.
 
 ## Avant de commencer
 {: #before-you-begin}
 
 Avant de commencer, vous devez disposer des éléments suivants :
 
-* Ressource protégée par une instance du service {{site.data.keyword.amashort}} qui est configurée pour utiliser un fournisseur d'identité personnalisé (voir [Configuration de l'authentification personnalisée](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).  
+* Ressource protégée par une instance du service {{site.data.keyword.amashort}} qui est configurée pour utiliser un fournisseur d'identité personnalisé (voir [Configuration de l'authentification personnalisée](custom-auth-config-mca.html)).  
 * Valeur de votre **TenantID**. Ouvrez votre service dans le tableau de bord de {{site.data.keyword.amashort}}. Cliquez sur le bouton **Options pour application mobile**. La valeur `tenantId` (qui porte également le nom d'`appGUID`) est affichée dans la zone **App GUID / TenantId**. Vous aurez besoin de cette valeur pour initialiser le Gestionnaire des autorisations.
 * Nom de votre **Realm**. Il s'agit de la valeur que vous avez spécifiée dans la zone **Nom du domaine** de la section **Personnalisé** dans l'onglet **Gestion** du tableau de bord de {{site.data.keyword.amashort}}.
 * L'URL de votre application back-end (**Route de l'application**). Vous aurez besoin de ces valeurs pour envoyer des requêtes aux noeuds finaux protégés de votre application back end.
 * Votre **région** {{site.data.keyword.Bluemix_notm}}. Vous pouvez trouver votre région {{site.data.keyword.Bluemix_notm}} actuelle dans l'en-tête, en regard de l'icône **Avatar**![icône Avatar](images/face.jpg "icône Avatar"). La valeur de région qui apparaît doit être l'une des suivantes : **US South**, **United Kingdom** ou **Sydney** et correspondre aux constantes requises dans le code : `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` ou `BMSClient.Region.sydney`.
 
 Pour plus d'informations, voir les sujets suivants :
- * [Initiation à {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/index.html)
- * [Configuration du SDK Swift iOS](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html)
- * [Utilisation d'un fournisseur d'identité personnalisé](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
- * [Création d'un fournisseur d'identité personnalisé](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
- * [Configuration de {{site.data.keyword.amashort}} pour l'authentification personnalisée](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
+ * [Initiation à {{site.data.keyword.amashort}}](index.html)
+ * [Configuration du SDK Swift iOS](getting-started-ios-swift-sdk.html)
+ * [Utilisation d'un fournisseur d'identité personnalisé](custom-auth.html)
+ * [Création d'un fournisseur d'identité personnalisé](custom-auth-identity-provider.html)
+ * [Configuration de {{site.data.keyword.amashort}} pour l'authentification personnalisée](custom-auth-config-mca.html)
 
 ### Activez le partage de chaîne de certificats pour iOS
 {: #enable_keychain}
@@ -100,11 +99,11 @@ Initialisez le logiciel SDK en transmettant le paramètre `applicationGUID` (**T
 {: codeblock}
 
 Dans le code :
-* Remplacez `MCAServiceTenantId` par la valeur **TenantId** et `<applicationBluemixRegion>` par votre **Région** {{site.data.keyword.amashort}} (voir [Avant de commencer](##before-you-begin)). 
-* Utilisez le nom de domaine, `realmName`, que vous avez spécifié dans le tableau de bord {{site.data.keyword.amashort}} (voir [Configuration de l'authentification personnalisée](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).
+* Remplacez `MCAServiceTenantId` par la valeur **TenantId** et `<applicationBluemixRegion>` par votre **Région** {{site.data.keyword.amashort}} (voir [Avant de commencer](##before-you-begin)).
+* Utilisez le nom de domaine, `realmName`, que vous avez spécifié dans le tableau de bord {{site.data.keyword.amashort}} (voir [Configuration de l'authentification personnalisée](custom-auth-config-mca.html)).
 * Remplacez `<applicationBluemixRegion>` par la région dans laquelle votre application {{site.data.keyword.Bluemix_notm}} est hébergée. Pour afficher votre région {{site.data.keyword.Bluemix_notm}}, cliquez sur l'icône Avatar ![icône Avatar](images/face.jpg "icône Avatar") dans la barre de menu pour ouvrir le widget **Compte et support**.  La valeur de région qui apparaît doit être l'une des suivantes : **US South**, **United Kingdom** ou **Sydney** et correspondre aux constantes requises dans le code : `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` ou `BMSClient.Region.sydney`.
-   
-  
+
+
 ## Test de l'authentification
 {: #custom-ios-testing}
 
@@ -157,7 +156,7 @@ Après avoir initialisé le SDK client et enregistré un délégué d'authentifi
 
 	 ```
 	 MCAAuthorizationManager.sharedInstance.logout(callBack)
-	 ``` 
+	 ```
 	 {: codeblock}
 
  Si vous appelez ce code alors qu'un utilisateur est connecté, l'utilisateur est déconnecté. Lorsque l'utilisateur tente de se reconnecter, il doit à nouveau soumettre ses données d'identification.

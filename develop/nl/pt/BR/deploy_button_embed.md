@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016 lastupdated: "2016-11-29"
+  years: 2015, 2016
+lastupdated: "2016-11-29"
 
 ---
 
@@ -14,16 +15,13 @@ copyright:
 {: #embed-d2bm-iframe}
 
 
-É possível integrar a Implementação no fluxo do {{site.data.keyword.Bluemix_notm}} como um
-iFrame em vários tipos de conteúdo que suportam marcação. Por exemplo, é possível integrar o
+É possível integrar a Implementação no fluxo do {{site.data.keyword.Bluemix_notm}} como um iFrame em vários tipos de conteúdo que suportam marcação. Por exemplo, é possível integrar o
 iFrame em arquivos leia-me, blogs, artigos e em páginas da web.
 
 {: shortdesc}
 
 O fluxo do iFrame é útil quando você desejar manter a marca da sua empresa. Quando as pessoas clicam em seu
-iFrame integrado, elas permanecem em seu conteúdo em vez de serem redirecionadas ao website do bluemix.net. Se você não estiver preocupado com a marca da empresa,
-será possível inserir um botão padrão [Implementar no
-{{site.data.keyword.Bluemix_notm}}](/docs/develop/deploy_button.html) em seu conteúdo, em vez do iFrame.
+iFrame integrado, elas permanecem em seu conteúdo em vez de serem redirecionadas ao website do bluemix.net. Se você não estiver preocupado com a marca da empresa, será possível inserir um botão padrão [Implementar no {{site.data.keyword.Bluemix_notm}}](/docs/develop/deploy_button.html) em seu conteúdo, em vez do iFrame.
 
 ##Etapas no fluxo do iFrame {: #iframe-steps}
 

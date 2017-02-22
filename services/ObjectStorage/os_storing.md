@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -45,7 +45,7 @@ You can upload objects to storage by using the UI or CLI. Uploading objects is l
   ```
   {: pre}
 
-**Note**: If you receive an error message, confirm that the [the prerequisite software](/docs/services/ObjectStorage/os_configuring.html#install-swift-client) installed.
+  **Note**: If you receive an error message, confirm that the [the prerequisite software](/docs/services/ObjectStorage/os_configuring.html#install-swift-client) is installed.
 
 3. Optional: To verify that your container was created, run the following command to list your containers.
 

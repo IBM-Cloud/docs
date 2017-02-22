@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-01"
+  years: 2016, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,17 @@ lastupdated: "2016-12-01"
 # 모바일 대시보드의 새로운 기능
 {: #what_is_new}
 
+### 새로운 기능: 2016년 12월
+{: #dec-2016}
+
+{{site.data.keyword.Bluemix}} 모바일 대시보드의 2016년 12월 업데이트에서 다음 변경사항이 도입되었습니다. 
+
+   * 연결된 서비스를 프로젝트에서 제거함으로써 이를 삭제하거나 다른 프로젝트에서 다시 사용할 수 있습니다.  
+   * 기존 서비스를 프로젝트에 추가할 수 있습니다. 
+   * 코드 스타터를 사용할 때 기존 CloudantNoSQL 서비스를 데이터 소스로 작성하거나 연결할 수 있습니다. 
+   * 지원되는 경우, 기존 Object Storage 서비스를 프로젝트의 데이터 소스로 작성하거나 연결할 수 있습니다. 
+   * UI 스타터에서 작성 중인 앱의 탐색 디자인을 사용자 정의할 수 있습니다.  
+   
 
 ### 새로운 기능: 2016년 11월
 {: #nov-2016}
@@ -18,8 +29,8 @@ lastupdated: "2016-12-01"
 
    * 이제 **코드** 페이지에서 프로젝트에 대해 SDK 아티팩트를 생성할 수 있습니다.
    * 이제 기본 코드 스타터에서 Cordova가 지원됩니다.
-   * 이제 {{site.data.keyword.mobileanalytics_short}} 콘솔의 **네트워크 요청** 페이지에서 [네트워크 이벤트를 보고](/docs/services/mobileanalytics/sdk.html#network-requests){: new_window}하고 [네트워크 요청을 모니터](/docs/services/mobileanalytics/app-monitoring.html#monitor-network-requests){: new_window}할 수 있습니다.
-   * 이제 {{site.data.keyword.mobileanalytics_short}} 콘솔에서 [데이터를 dashDB에 내보낼 수 있습니다](/docs/services/mobileanalytics/app-monitoring.html#dashdb){: new_window}. 
+   * 이제 {{site.data.keyword.mobileanalytics_short}} 콘솔의 **네트워크 요청** 페이지에서 [네트워크 이벤트 보고 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/mobileanalytics/sdk.html#network-requests){: new_window} 및 [네트워크 요청 모니터링 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/mobileanalytics/app-monitoring.html#monitor-network-requests){: new_window}이 가능합니다. 
+   * 이제 {{site.data.keyword.mobileanalytics_short}} 콘솔에서 [dashDB로 데이터 내보내기 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/mobileanalytics/app-monitoring.html#dashdb "외부 링크 아이콘"){: new_window}가 가능합니다. 
 
 
 ### 새로운 기능: 2016년 10월
@@ -27,7 +38,7 @@ lastupdated: "2016-12-01"
 
 {{site.data.keyword.Bluemix_notm}} 모바일 대시보드의 2016년 10월 업데이트에서 다음 변경사항이 도입되었습니다. 
 
-   * 대시보드에서 직접 프로젝트에 Push Notifications 기능과 분석 기능을 추가할 수 있습니다. 
+   * 이제 대시보드에서 직접 {{site.data.keyword.mobilepushshort}} 및 분석 기능을 프로젝트에 추가할 수 있습니다. 
    * [코드 스타터](starters.html#Code_Starter)를 사용할 수 있습니다. 
    * 코드 스타터에서 작성한 프로젝트에 인증을 추가할 수 있습니다. 
    * Swift가 지원됩니다. 
@@ -42,7 +53,7 @@ lastupdated: "2016-12-01"
 #### UI 빌더
 {: #ui_builder}
 
-   * 프로젝트에서 **Push Notifications** 기능에 액세스할 수 있습니다. 
+   * 이제 프로젝트에서 **{{site.data.keyword.mobilepushshort}}** 기능에 액세스할 수 있습니다. 
    * **프로젝트 설정** 탭의 이름이 **설정** 탭으로 바뀌었습니다. 
    * **인증** 탭의 이름이 **사용자 액세스** 탭으로 바뀌었습니다. 
 

@@ -3,8 +3,8 @@
 
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-02"
+  years: 2016, 2017
+lastupdated: "2017-01-04"
 
 
 ---
@@ -286,12 +286,11 @@ lastupdated: "2016-08-02"
 5. `everyEightSeconds` トリガーが発生するたびに `hello` アクションを起動するルールを作成します。
 
   ```
-  wsk rule create --enable myRule everyEightSeconds hello
+  wsk rule create myRule everyEightSeconds hello
   ```
   {: pre}
   ```
   ok: created rule myRule
-  ok: rule myRule is activating
   ```
   {: screen}
 
@@ -484,7 +483,7 @@ lastupdated: "2016-08-02"
 1. すべてのユーザーでパッケージを共有します。
 
   ```
-  wsk package update custom --shared
+  wsk package update custom --shared yes
   ```
   {: pre}
   ```

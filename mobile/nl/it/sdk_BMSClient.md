@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-07"
+  years: 2016, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -54,9 +54,9 @@ Puoi utilizzare [CocoaPods](https://cocoapods.org){: new_window} o [Carthage](ht
 
   Quindi esegui il comando `pod install` e apri il file `.xcworkspace` generato. Per l'aggiornamento a una release più recente di `BMSCore`, utilizza `pod update BMSCore`.
 
-  Per ulteriori informazioni sull'utilizzo di CocoaPods, consulta [CocoaPods Guides](https://guides.cocoapods.org/using/index.html){: new_window}.
+  Per ulteriori informazioni sull'utilizzo di CocoaPods, consulta [CocoaPods Guides ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://guides.cocoapods.org/using/index.html "Icona link esterno"){: new_window}.
 
-2. Per installare `BMSCore` utilizzando Carthage, segui queste [istruzioni](https://github.com/Carthage/Carthage#getting-started){: new_window}.
+2. Per installare `BMSCore` utilizzando Carthage, segui queste [istruzioni ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://github.com/Carthage/Carthage#getting-started "Icona link esterno"){: new_window}.
 
   1. Aggiungi la seguente linea al tuo Cartfile:
 
@@ -67,7 +67,7 @@ Puoi utilizzare [CocoaPods](https://cocoapods.org){: new_window} o [Carthage](ht
 
   2. Esegui il comando `carthage update`.
 
-  3. Dopo aver terminato la build, aggiungi `BMSCore.framework` al tuo progetto seguendo il [Passo 3](https://github.com/Carthage/Carthage#getting-started) nelle istruzioni Carthage.
+  3. Dopo aver terminato la build, aggiungi `BMSCore.framework` al tuo progetto seguendo il [Passo 3 ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://github.com/Carthage/Carthage#getting-started "Icona link esterno") nelle istruzioni Carthage.
 
       Per le applicazioni che sono generate con Swift 2.3, utilizza il comando `carthage update --toolchain com.apple.dt.toolchain.Swift_2_3`. Altrimenti, utilizza il comando `carthage update`.
 

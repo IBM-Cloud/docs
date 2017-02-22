@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-29"
+  years: 2015, 2016, 2017
+lastupdated: "2016-12-06"
 
 ---
 
@@ -54,7 +54,7 @@ To create the `DeviceData` class, create the following objects:
 - `DeviceFirmware` (Optional)
 - `DeviceMetadata` (optional)
 
-For more information, see the [device model](../../reference/device_model.html)
+For more information, see [device model](../../reference/device_model.html).
 
 ### DeviceInfo
 
@@ -186,7 +186,7 @@ To allow devices that are connected behind a gateway to participate in device ma
 
 The `sendDeviceManageRequest()` method accepts the details of the attached devices and the `lifetime`, `supportFirmwareActions`, and `supportDeviceActions` parameters. A gateway can also use the overloaded `sendDeviceManageRequest()` method to define the `DeviceData` object for the attached device.
 
-#### Example
+#### Example of sending a manage request from attached devices
 
 ```java
 managedGateway.sendDeviceManageRequest(typeId, deviceId, lifetime, true, true);
@@ -196,7 +196,7 @@ managedGateway.sendDeviceManageRequest(typeId, deviceId, lifetime, true, true);
 
 When a gateway no longer needs to be managed, to stop device management activities on the gateway, invoke the `sendGatewayUnmanageRequet()` method.  When `sendGatewayUnmanageRequet()` is invoked, {{site.data.keyword.iot_short}} no longer sends any new device management requests for the gateway, and all of the device management requests from the gateway are rejected, except for **Manage** requests. Requests from devices that are behind the gateway are not rejected.
 
-#### Example
+#### Example of sending an unmanage request from a gateway
 
 ```java
 managedGateway.sendGatewayUnmanageRequet();
@@ -206,7 +206,7 @@ managedGateway.sendGatewayUnmanageRequet();
 
 When a device that is behind a gateway no longer needs to be managed, to move an attached device from a managed state to an unmanaged state, the gateway can invoke the `sendDeviceUnmanageRequet()` method. When `sendDeviceUnmanageRequet()` is invoked, {{site.data.keyword.iot_short}} no longer sends new device management requests for the device, and all of device management requests from the gateway that are for the attached device are rejected, except for **Manage** requests.
 
-#### Example
+#### Example of sending an unmanage request from attached devices
 
 ```java
 managedGateway.sendDeviceUnmanageRequet();

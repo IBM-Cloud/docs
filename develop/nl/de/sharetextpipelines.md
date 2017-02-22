@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-29"
+lastupdated: "2016-12-21"
 
 ---
 
@@ -205,8 +205,7 @@ CF_ORGANIZATION_ID	| Organisations-GUID
 CF_SPACE |	Bereichsname
 CF_SPACE_ID |	Bereichs-GUID
 CF_APP	| App-Name
-
-*Tabelle - Umgebungsvariablen*
+{: caption="Table 1. Environment variables" caption-side="top"}
 
 **YAML-Datei aus einer Pipeline generieren** 
 

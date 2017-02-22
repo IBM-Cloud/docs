@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated:  "2016-09-12"
+  years: 2016, 2017
+lastupdated:  "2017-01-17"
 
 ---
 
@@ -34,24 +34,45 @@ Dopo che hai creato l'istanza del servizio {{site.data.keyword.mobilefoundation_
 ### Impostazione della connessione all'istanza del servizio {{site.data.keyword.dashdbshort_notm}}
 {: #connect_dashdb_p2}
 
-Dopo che l'istanza del servizio {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application è stata creata, vedrai la pagina *Panoramica*,
-dove dovrai specificare le informazioni di connessione per l'istanza del servizio {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional.
+Dopo che l'istanza del servizio {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application è stata creata, vedrai la pagina *Panoramica*
+dove dovrai specificare le informazioni di connessione per l'istanza del servizio e {{site.data.keyword.dashdbshort_notm}} for Transactions,
+a cui dovrebbe collegarsi l'istanza del servizio {{site.data.keyword.mobilefoundation_short}} .
+
+**Nota:** se già disponi dell'istanza del servizio {{site.data.keyword.dashdbshort_notm}} for Analytics: Enterprise for Transactions,
+puoi configurarla per utilizzarla per il collegamento all'istanza del servizio {{site.data.keyword.mobilefoundation_short}}.
+
+Puoi anche creare una nuova istanza del servizio {{site.data.keyword.dashdbshort_notm}}, se non ne hai una già esistente.
+
+Utilizza le seguenti istruzioni per creare una nuova istanza del servizio dashDB for Transactions:
+
+1. Nella pagina *Panoramica* seleziona la sezione **Crea nuovo servizio**.
+
++ Seleziona `Sì` per l'opzione **Configurazione alta disponibilità **,
+se desideri l'alta disponibilità per l'istanza del servizio {{site.data.keyword.dashdbshort_notm}} for Transactions.
+
++ Controlla i dettagli del piano e fai clic su **Crea**.
+
+Viene creata una nuova istanza del servizio {{site.data.keyword.dashdbshort_notm}} for Transactions: EnterpriseForTransactions2.8.500,
+che fornisce un'istanza {{site.data.keyword.dashdbshort_notm}} dedicata con 8GB RAM e 2 vCPU e 500 GB di archiviazione.
+
+Utilizza le seguenti istruzioni per collegare un'istanza del servizio {{site.data.keyword.dashdbshort_notm}} esistente o
+l'istanza del servizio {{site.data.keyword.dashdbshort_notm}} for Transactions che hai appena creato:
 
 1. Seleziona l'`Organizzazione` {{site.data.keyword.Bluemix_notm}} dove è presente l'istanza del servizio {{site.data.keyword.dashdbshort_notm}}.
 
-+ Seleziona lo `Spazio`  {{site.data.keyword.Bluemix_notm}} in cui è presente l'istanza del servizio {{site.data.keyword.dashdbshort_notm}}, dall'elenco di spazi disponibili nell'`Organizzazione` selezionata.
-
-**Nota:** se non vedi elencati l'`Organizzazione` e lo `Spazio` in cui è presente l'istanza del servizio {{site.data.keyword.dashdbshort_notm}} controlla di essere un membro di tali `Organizzazione` e `Spazio`.
++ Seleziona lo `Spazio`  {{site.data.keyword.Bluemix_notm}} in cui è presente l'istanza del servizio {{site.data.keyword.dashdbshort_notm}}, dall'elenco di spazi disponibili nell'`Organizzazione` selezionata.   
+**Nota:** se non vedi elencati l'`Organizzazione` e lo `Spazio` in cui è presente l'istanza del servizio {{site.data.keyword.dashdbshort_notm}} controlla di essere un membro di tali `Organizzazione` e `Spazio`. Devi avere l'accesso al ruolo di *Sviluppatore* per l'organizzazione e lo spazio, in modo che il servizio {{site.data.keyword.mobilefoundation_short}} acceda alle credenziali dal servizio {{site.data.keyword.dashdbshort_notm}}.
 
 + Seleziona il `Nome servizio` {{site.data.keyword.dashdbshort_notm}} e le `Credenziali` per connetterti all'istanza del servizio  {{site.data.keyword.dashdbshort_notm}} esistente.
 
-+  Verifica la connessione all'istanza del servizio {{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional specificata.
++  Verifica la connessione all'istanza del servizio {{site.data.keyword.dashdbshort_notm}} specificata.
 
-+  Fai clic su **Continua**. Questa azione crea le tabelle richieste nell'istanza del servizio database {{site.data.keyword.dashdbshort_notm}} configurato.
++  Fai clic su **Aggiungi**. Questa azione crea le tabelle richieste nell'istanza del servizio database {{site.data.keyword.dashdbshort_notm}} configurato.
+
+Dopo pochi secondi, puoi accedere alla pagina `Panoramica` che ti fornisce le esercitazioni e i video per aiutarti a iniziare a lavorare con il servizio  {{site.data.keyword.mobilefoundation_short}}.
 
 **Nota**: non puoi modificare l'istanza del servizio {{site.data.keyword.dashdbshort_notm}} configurata per essere utilizzata dalla tua istanza del servizio {{site.data.keyword.mobilefoundation_short}}. Tuttavia, puoi utilizzare la stessa istanza del servizio {{site.data.keyword.dashdbshort_notm}} tra più istanze del servizio {{site.data.keyword.mobilefoundation_short}}, poiché ogni istanza di {{site.data.keyword.mobilefoundation_short}} crea il proprio schema nell'istanza del servizio  {{site.data.keyword.dashdbshort_notm}} selezionata.
 
-* Dopo pochi secondi, puoi accedere alla pagina `Panoramica` che ti fornisce le esercitazioni e i video per aiutarti a iniziare a lavorare con il servizio  {{site.data.keyword.mobilefoundation_short}}.
 
 ## Avvio del server {{site.data.keyword.mobilefirst}}
 {: #start_mobilefoundation_p2}
@@ -88,7 +109,7 @@ dove puoi vedere:
 
  Gli utenti possono anche allegare i volumi ai contenitore per conservare i dati. Il volume selezionato non può essere modificato. 20 GB è lo spazio di condivisione file predefinito disponibile all'utente. Se l'utente necessita di ulteriore spazio di archiviazione per conservare i dati di analisi, deve acquistare ulteriore condivisione file e creare un volume utilizzando questa condivisione file. Può quindi selezionare questo nuovo volume mentre distribuisce il server di analisi.
 
- Per ulteriori informazioni sull'aggiunta di volumi a {{site.data.keyword.containerlong}}, fai riferimento a [Memorizzazione dei dati persistenti in un volume utilizzando il dashboard {{site.data.keyword.Bluemix_notm}}  ](https://console.ng.bluemix.net/docs/containers/container_volumes_ui.html){: new_window}.
+ Per ulteriori informazioni sull'aggiunta di volumi a {{site.data.keyword.containerlong}}, fai riferimento a [Memorizzazione dei dati persistenti in un volume utilizzando il dashboard {{site.data.keyword.Bluemix_notm}} ![icona link esterno](../../icons/launch-glyph.svg "icona link esterno")](https://console.ng.bluemix.net/docs/containers/container_volumes_ui.html "icona link esterno"){: new_window}.
 
 * Fai clic su **Aggiungi Analytics** per aggiungere il server Mobile Analytics all'istanza del servizio {{site.data.keyword.mobilefoundation_short}}.
 
@@ -99,9 +120,20 @@ indica l'avanzamento di questa operazione.
 
 * SSO (single sign-on) è abilitato tra {{site.data.keyword.mfserver_short_notm}} e il server Mobile Analytics. Il server Mobile Analytics è configurato con le stesse credenziali utente e chiavi LTPA del server {{site.data.keyword.mfserver_short_notm}}. Puoi utilizzare gli stessi `nomeutente` e `password` per accedere alla console di Mobile Analytics utilizzati per accedere a {{site.data.keyword.mfp_oc_short_notm}}.
 
-Per informazioni su MobileFirst Analytics puoi fare riferimento a [MobileFirst Foundation Operational Analytics](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/).
+Per informazioni su MobileFirst Analytics puoi fare riferimento a [MobileFirst Foundation Operational Analytics ![icona link esterno](../../icons/launch-glyph.svg "icona link esterno")](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/ "icona link esterno"){: new_window}.
 
 **Nota:** il server Mobile Analytics viene rimosso quando elimini l'istanza del servizio {{site.data.keyword.mobilefoundation_short}} o quando tenti di ricreare {{site.data.keyword.mfserver_short_notm}}.
+
+##  Eliminazione del server Mobile Analytics 
+{: #deleting_analytics_server_prof}
+
+Puoi ora eliminare il server Mobile Analytics che è stato aggiunto all'istanza del servizio {{site.data.keyword.mobilefoundation_short}},
+dal dashboard del servizio {{site.data.keyword.mobilefoundation_short}}.
+
+* Fai cli su **Elimina Analytics** per eliminare il server Mobile Analytics che è stato aggiunto all'istanza del servizio {{site.data.keyword.mobilefoundation_short}}.
+
+ Questa operazione eliminerà il gruppo del contenitore di analisi. Il processo di eliminazione dei contenitori di analisi dura circa 10 minuti. Puoi aggiornare la schermata per visualizzare lo stato di aggiornamento. Una volta che i contenitori di analisi sono stati eliminati, viene riabilitato il pulsante **Aggiungi Analytics**, puoi utilizzarlo per aggiungere nuovamente il server Mobile Analytics se decidi di farlo.
+
 
 ## Ricreazione del server {{site.data.keyword.mobilefirst}}
 {: #recreate_mobilefoundation_p2}
@@ -127,4 +159,4 @@ aggiornare le impostazioni del server per personalizzare la tua configurazione s
 
       - La {{site.data.keyword.mobilefirst}} Server Farm può essere creata configurando il numero di nodi qui.
 
-Per ulteriori dettagli, consulta la [documentazione di {{site.data.keyword.mobilefoundation_long}} ](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html){: new_window}.
+Consulta la [Documentazione {{site.data.keyword.mobilefoundation_long}} ![icona link esterno](../../icons/launch-glyph.svg "icona link esterno")](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html "icona link esterno"){: new_window}, per ulteriori dettagli.

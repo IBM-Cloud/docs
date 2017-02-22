@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-08-25"
 
 ---
 
@@ -13,9 +14,6 @@ copyright:
 
 #앱 업데이트
 {: #updatingapps}
-
-마지막 업데이트 날짜: 2016년 8월 25일
-{: .last-updated}
 
 
 cf push 명령 또는 {{site.data.keyword.Bluemix}} DevOps Services를 사용하여 {{site.data.keyword.Bluemix_notm}}에서 애플리케이션을 업데이트할 수 있습니다. 대부분의 경우 심지어 Node.js와 같은 기본 제공 빌드팩의 경우에도 -c 매개변수를 제공하여 애플리케이션 시작에 사용할 명령을 지정해야 합니다.
@@ -37,7 +35,7 @@ CF 앱 및 컨테이너 그룹의 경우, 애플리케이션의 URL에 기본 {{
 	1. **{{site.data.keyword.avatar}}** 아이콘 ![아바타 아이콘](../icons/i-avatar-icon.svg) &gt; **조직 관리** &gt; 조직의 **세부사항 보기** &gt; **조직 편집** &gt; **도메인**으로 이동하십시오.
 
 	2. **도메인** 탭에서 **도메인 추가**를 클릭하고 사용자 정의 도메인 이름을 입력한 다음 **저장**을 클릭하십시오.
-	
+
 	**참고**: 예를 들어, `mycompany.com`을 사용하여 라우트 `www.mycompany.com`을 사용하는 앱에 연관시킬 수 있습니다. `example.mycompany.com`을 사용하여 라우트 `www.example.mycompany.com`을 사용하는 앱에 연관시킬 수도 있습니다.
 
   2. 사용자 정의 도메인을 포함한 라우트를 애플리케이션에 추가하십시오.
@@ -47,14 +45,14 @@ CF 앱 및 컨테이너 그룹의 경우, 애플리케이션의 URL에 기본 {{
 	2. **앱 보기** 메뉴에서 **라우트 및 액세스 편집**을 선택하십시오. 
 
 	3. **라우트 추가**를 클릭하고 애플리케이션에 사용할 라우트를 지정하십시오.
-	4. **저장**을 클릭하십시오. 
+	4. **저장**을 클릭하십시오.
 
 * cf 명령행 인터페이스 사용:
 
   1. 다음 명령을 입력하여 조직의 사용자 정의 도메인을 작성하십시오.
 
     ```
-cf create-domain <your org name> mydomain
+    cf create-domain <your org name> mydomain
     ```
 
     *organization_name*
@@ -85,15 +83,15 @@ cf create-domain <your org name> mydomain
     *host_name*
 
         애플리케이션에 사용할 라우트의 호스트 이름입니다.
-        
+
     *mycontainergroup*
-    
-        컨테이너 그룹의 경우, 컨테이너 그룹의 이름입니다.   
+
+        컨테이너 그룹의 경우, 컨테이너 그룹의 이름입니다. 
 
 
 {{site.data.keyword.Bluemix_notm}}에서 사용자 정의 도메인을 구성한 후에는 사용자 정의 도메인을 등록된 DNS 서버의 {{site.data.keyword.Bluemix_notm}} 시스템 도메인으로 맵핑해야 합니다.
 
-  1. DNS 서버에 사용자 정의 도메인 이름에 대한 'CNAME' 레코드를 설정하십시오.CNAME 레코드를 설정하기 위한 단계는 DNS 제공자에 따라 다릅니다. 예를 들어, GoDaddy를 사용 중인 경우 GoDaddy의 [도메인 도움말](https://www.godaddy.com/help/add-a-cname-record-19236){: new_window} 안내를 따릅니다. 
+  1. DNS 서버에 사용자 정의 도메인 이름에 대한 'CNAME' 레코드를 설정하십시오.CNAME 레코드를 설정하기 위한 단계는 DNS 제공자에 따라 다릅니다. 예를 들어, GoDaddy를 사용 중인 경우 GoDaddy의 [도메인 도움말 ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://www.godaddy.com/help/add-a-cname-record-19236){: new_window} 안내를 따릅니다. 
   2. 애플리케이션이 실행 중인 {{site.data.keyword.Bluemix_notm}} 지역의 보안 엔드포인트에 사용자 정의 도메인 이름을 맵핑하십시오. 다음과 같은 지역 엔드포인트를 사용하여 {{site.data.keyword.Bluemix_notm}}에서 사용자 조직에 할당되는 URL 라우트를 제공하십시오.
 
     * US-SOUTH: `secure.us-south.bluemix.net`
@@ -179,7 +177,7 @@ cf push Blue
 4. 선택사항: 앱의 이전 버전(*Green*)을 삭제하려는 경우, **cf delete** 명령을 사용하십시오.
 
   ```
-cf delete Green -f
+  cf delete Green -f
   ```
 
   **cf route** 명령을 사용하여 영역에 있는 라우트를 나열하십시오.
@@ -276,7 +274,7 @@ cf unmap-route Green mybluemix.net -n Green
 6. 선택사항: 애플리케이션의 이전 버전(*Blue*)을 삭제하려는 경우, `cf delete` 명령을 사용하십시오.
 
   ```
-cf delete Blue -f
+  cf delete Blue -f
   ```
 
   cf route 명령을 사용하여 영역에 있는 라우트를 나열하십시오.
@@ -297,5 +295,5 @@ cf delete Blue -f
 ## 관련 링크
 {: #general}
 
-* [Blue-Green 배치](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
-* [IBM {{site.data.keyword.Bluemix_notm}} DevOps Services](https://hub.jazz.net/){:new_window}
+* [Blue-Green 배치 ![외부 링크 아이콘](../icons/launch-glyph.svg)](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
+* [IBM {{site.data.keyword.Bluemix_notm}} DevOps Services ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://hub.jazz.net/){:new_window}

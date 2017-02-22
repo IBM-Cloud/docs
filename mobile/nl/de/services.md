@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-18"
+  years: 2016, 2017
+lastupdated: "2017-01-11"
 
 ---
 {:new_window: target="_blank"}
@@ -13,7 +13,7 @@ lastupdated: "2016-10-18"
 # Services
 {: #services}
 
-Über die Ansicht **Services** des {{site.data.keyword.Bluemix}} Mobile-Dashboards können Sie Ihre vorhandenen Services anzeigen oder neue Services erstellen. Das Mobile-Dashboard bietet einen einzigen Punkt für die Ansicht aller Bluemix-Services, die aktuell von Projekten verwaltet werden.  
+Über die Ansicht **Services** des {{site.data.keyword.Bluemix}} Mobile-Dashboards können Sie Ihre vorhandenen Services anzeigen oder neue Services erstellen. Das Mobile-Dashboard bietet einen einzigen Punkt zum Anzeigen aller Bluemix-Services, die aktuell von Projekten verwaltet werden.  
 
 Wenn Sie Services aus der Ansicht **Services** löschen, trennen Sie den Service von dem Projekt, dem er zugeordnet ist. Wenn Sie den Service wieder mit dem Projekt verbinden möchten, erstellen Sie eine neue Serviceinstanz.
 
@@ -27,7 +27,7 @@ In der folgenden Tabelle sind die {{site.data.keyword.Bluemix_notm}} Mobile-Serv
 <th>{{site.data.keyword.Bluemix_notm}} Mobile-Service</th>
 <th>Beschreibung</th>
 <tr>
-<td> <img src="images/mobile_analytics_icon.png" alt="{{site.data.keyword.mobileanalytics_short}}-Symbol"><br/>{{site.data.keyword.mobileanalytics_short}} (Beta)</td>
+<td> <img src="images/mobile_analytics_icon.png" alt="{{site.data.keyword.mobileanalytics_short}}-Symbol"><br/>{{site.data.keyword.mobileanalytics_short}}</td>
 <td valign="top">Mithilfe des Service {{site.data.keyword.mobileanalytics_full}} erhalten Sie Einblick in die Leistung und die Art der Nutzung
 Ihrer mobilen Apps.<br/><br/> Weitere Informationen zum Betrieb dieses Service finden Sie in der <a href="/docs/services/mobileanalytics/index.html" alt="Link zur {{site.data.keyword.mobileanalytics_short}}-Dokumentation">{{site.data.keyword.mobileanalytics_short}}-Dokumentation</a>.
 </td>
@@ -49,9 +49,12 @@ Weitere Informationen zum Betrieb dieses Service finden Sie in der <a href="/doc
 Weitere Informationen zum Betrieb dieses Service finden Sie in der <a href="/docs/services/MobileQualityAssurance/index.html" alt="Link zur {{site.data.keyword.mqa}}-Dokumentation link">{{site.data.keyword.mqa}}-Dokumentation</a>.</td>
 </tr>
 <tr>
-<td><img src="images/push_icon.png" alt="Symbol für Push Notifications-Service"><br/>{{site.data.keyword.mobilepushshort}}</td>
-<td valign="top">Mithilfe des Service {{site.data.keyword.mobilepushfull}} können Sie mobile Push-Benachrichtigungen für iOS- und Android-Plattformen senden und verwalten. Dieser Service verwaltet die Zuordnung Ihrer Anwendungsbenutzer zu den zugehörigen Geräten und zur Geräteplattform und führt das Senden von Push-Benachrichtigungen an die Geräte aus. Mit diesem Service können Sie Rundsendungen, Unicasts (auf der Basis von Benutzer-ID und Geräte-ID) sowie tagbasierte (themenbasierte) Push-Benachrichtigungen an die Benutzer Ihrer mobilen Anwendungen senden.<br/><br/>
-Weitere Informationen zum Betrieb dieses Service finden Sie in der <a href="/docs/services/mobilepush/index.html" alt="Link zur {{site.data.keyword.mobilepushshort}}-Dokumentation link">{{site.data.keyword.mobilepushshort}}-Dokumentation</a>.</td>
+<td><img src="images/push_icon.png" alt="{{site.data.keyword.mobilepushshort}}-Servicesymbol"><br/>{{site.data.keyword.mobilepushshort}}</td>
+<td valign="top">Der Service '{{site.data.keyword.mobilepushfull}}' bietet eine einheitliche Plattform zum Senden und Verwalten von mobilen Benachrichtigungen und Web-Push-Benachrichtigungen, die verschiedene Plattformen als Ziel haben.
+<br/><br/>
+{{site.data.keyword.mobilepushshort}} verwaltet die Zuordnung Ihrer Anwendungsbenutzer zu den zugehörigen Geräten, zur Geräteplattform sowie zu den Web-Browsern und führt die Senden von Push-Benachrichtigungen an die Geräte aus. Sie können Rundsendungen, Unicasts (auf der Basis von Geräte-ID und Benutzer-ID) sowie Tags (oder Themen) als Push-Benachrichtigungen an die Benutzer Ihrer mobilen Anwendungen und Web-Browser-Anwendungen senden. Außerdem können Sie ein SDK und REST-APIs verwenden, um Ihre Clientanwendungen weiter zu entwickeln.
+<br/><br/>
+Weitere Informationen zum Betrieb dieses Service finden Sie in der <a href="/docs/services/mobilepush/index.html" alt="Link zur {{site.data.keyword.mobilepushshort}}-Dokumentation">{{site.data.keyword.mobilepushshort}}-Dokumentation</a>.</td>
 </table>
 
 ## Mobile Services integrieren

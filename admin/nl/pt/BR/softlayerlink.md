@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2016
-lastupdated: "2016-12-01"
+  years: 2016, 2017
+lastupdated: "2017-01-11"
  
 
 ---
@@ -27,7 +27,7 @@ acessar o painel Infraestrutura deve-se criar uma conta Pay-As-You-Go, uma segun
 receberá duas faturas, uma para cada conta do {{site.data.keyword.Bluemix_notm}}. Embora os seus recursos de infraestrutura irão ser faturados em uma conta
 Pay-As-You-Go separada, os recursos poderão ser usados com apps e serviços em sua conta da assinatura. Por exemplo, se você ativar um serviço do Watson em sua conta
 da assinatura, poderá copiar as credenciais de serviço e, em seguida, incluir as credenciais em seu aplicativo bare metal que for originado de sua conta
-Pay-As-You-Go.
+Pay-As-You-Go. 
 {:shortdesc}
 
 ## Fazendo upgrade para uma conta pay-as-you-go do {{site.data.keyword.Bluemix_notm}}
@@ -106,28 +106,61 @@ Para obter mais informações sobre convidar membros da equipe por meio da inter
 ## Alternando para o IBMid
 {: #ibmid_switch}
 
-A autenticação no SoftLayer agora usa o IBMid para fornecer um login único para o {{site.data.keyword.Bluemix_notm}}. Se você tiver uma conta existente do SoftLayer, será possível alternar para um IBMid. Um assistente de migração o guiará através desse comutador. 
+A autenticação no SoftLayer agora usa o IBMid para fornecer um único login para todos os {{site.data.keyword.Bluemix_notm}}. As contas existentes do SoftLayer estão sendo ativadas para alternar para a autenticação do IBMid e um assistente de migração fornecerá orientação durante essa alternância. 
 {:shortdesc}
 
-Após iniciar a alternância para o IBMid, contanto que você não conclua o processo, será possível cancelá-lo. Mas, você ainda será solicitado a alternar para o IBMid da próxima vez que efetuar login.
+Se você for um usuário principal e não vir um prompt para alternar para o IBMid no {{site.data.keyword.slportal}}, [Entre em contato com o suporte IBM](https://console.ng.bluemix.net/docs/support/index.html#contacting-support) para obter ajuda com a ativação do recurso.
 
-Para iniciar a alternância do seu nome de usuário existente do SoftLayer para um IBMid, conclua as etapas a seguir:
+À medida que você inicia a alternância para o IBMid, é sempre possível cancelá-la antes de concluir o processo. No entanto, você continuará sendo solicitado a alternar para o IBMid na próxima vez que efetuar login. Cada conta que você planejar vincular a uma conta do {{site.data.keyword.Bluemix_notm}} deverá pertencer a um IBMid exclusivo com um endereço de e-mail exclusivo.
 
- 1. No {{site.data.keyword.slportal}}, acesse a página Editar perfil do usuário e clique em **Alternar para IBMid**.
- 2. Siga os prompts do assistente de migração para criar seu IBMid. Após criar seu IBMid, não será possível mudar o ID, que é um endereço de e-mail. É possível atualizar o e-mail associado a seu perfil, mas, por padrão, esse valor é configurado como o valor que você definiu para o seu IBMid. Após concluir o assistente, um e-mail é enviado para você.
- 3. Ao receber o e-mail, siga o link ou copie e cole a URL em um navegador e insira o seu código de registro. O código é válido por 7 dias e pode ser usado apenas uma vez.  Após usá-lo, ele não poderá ser usado novamente.
- Após configurar o IBMid para o link de usuário do SoftLayer, é possível efetuar login em sua conta apenas com o IBMid.  No diálogo de login, deve-se usar o botão **Efetuar login com IBMid** em vez de inserir seu nome de usuário e senha do SoftLayer.
+Para alternar seu nome de usuário existente do SoftLayer para um IBMid, conclua as etapas a seguir:
+
+ 1. Se você tiver selecionado **Posteriormente** no prompt inicial após o login, mas tiver decidido que deseja iniciar a alternância para a autenticação do IBMid na sessão atual, acesse a página Editar perfil do usuário e clique em **Alternar para o IBMid**.
+ 2. Siga os prompts do assistente para criar seu IBMid. Seu IBMid é um endereço de e-mail exclusivo e não pode ser mudado depois de ser criado. Será possível atualizar o e-mail associado a seu perfil posteriormente; o e-mail padrão será configurado com o que tiver sido definido para o IBMid. Você receberá um e-mail com seu código de registro indicando que você concluiu o assistente de migração. 
+ 3. Ao receber o e-mail, siga o link ou copie e cole a URL em um navegador e insira o seu código de registro. O código é válido por 7 dias e poderá ser usado somente uma vez.
  
-Se você for um novo cliente, ao efetuar check-out de sua ordem, você será solicitado a fornecer um endereço de e-mail para a sua conta do IBMid existente ou a criar uma nova conta de IBMid. 
+ 
+Depois que você alternar para a autenticação do IBMid, será possível efetuar login em sua conta somente com o seu IBMid. No prompt de login, clique em **Efetuar login com o IBMid**, em vez de inserir seu nome de usuário e senha do SoftLayer.
+ 
+Ao efetuar check-out de sua ordem como um novo cliente, você será solicitado a fornecer um endereço de e-mail para sua conta existente do IBMid ou a criar uma nova conta do IBMid. Se você criar um novo IBMid, insira o endereço de e-mail para seu novo IBMid. O endereço de e-mail é para onde o e-mail de convite será enviado e é também o nome de usuário para seu novo IBMid.
 
-### Mapeando várias contas do SoftLayer para um IBMid
+### Permitindo que os usuários alternem para o IBMid
+{: #link_accounts_resellers}
+
+Em alguns casos, antes que um usuário possa alternar para um IBMid, um revendedor ou distribuidor deve ativar a conta para usar a autenticação do IBMid. 
+
+ * Para permitir que uma conta existente com credenciais anteriores do SoftLayer use a autenticação do IBMid, [Entre em contato com o suporte IBM](https://console.ng.bluemix.net/docs/support/index.html#contacting-support) para ativar a migração do IBMid. Isso deverá ser ativado para cada conta de usuário final existente que você desejar vincular a uma conta do {{site.data.keyword.Bluemix_notm}}.
+ 
+ * Para assegurar-se de que novas contas do usuário sejam criadas com um IBMid, o atributo `CREATE_NEW_ACCOUNT_WITH_IBMid_AUTHENTICATION` deve ser configurado na conta do usuário principal imediato. [Entre em contato com o suporte IBM](https://console.ng.bluemix.net/docs/support/index.html#contacting-support) ou com seu fornecedor para que isso seja configurado para suas contas.
+ 
+### Vinculando suas contas do usuário
+{: #link_user_accounts}
+Depois que seus usuários alternarem para a autenticação do IBMid, os revendedores e distribuidores poderão vincular o SoftLayer e as contas do {{site.data.keyword.Bluemix_notm}}.
+
+**Nota:** 
+  * O usuário principal da conta que está sendo vinculada deve ser um IBMid.
+  * Efetue login em cada conta do usuário final como o usuário principal. Acesse a página de perfil do usuário e clique em **Alternar para o IBMid**.
+  * Cada conta que você vincular a uma conta do {{site.data.keyword.Bluemix_notm}} deverá pertencer a um IBMid exclusivo com um endereço de e-mail exclusivo. Embora um IBMid possa ter múltiplas contas do SoftLayer, não será possível vinculá-las às contas do {{site.data.keyword.Bluemix_notm}}. Se um IBMid for o usuário principal para múltiplas contas do SoftLayer e você desejar vincular essas contas às contas do {{site.data.keyword.Bluemix_notm}}, deverá mudar os usuários principais para que sejam um IBMid exclusivo para cada conta. Entre em contato com o [suporte do IBM SoftLayer ![Ícone de link externo](../icons/launch-glyph.svg)](https://knowledgelayer.softlayer.com/topic/support){: new_window} para mudar o usuário principal em uma conta do SoftLayer.
+  
+Conclua as etapas a seguir para vincular cada conta a uma conta do {{site.data.keyword.Bluemix_notm}}: 
+
+ 1. Para criar uma nova conta do {{site.data.keyword.Bluemix_notm}} ou para se vincular a uma conta existente do {{site.data.keyword.Bluemix_notm}}, efetue login em sua conta do SoftLayer como o usuário principal e clique no link do **{{site.data.keyword.Bluemix_notm}}**. Isso dará a oportunidade de criar uma nova conta do {{site.data.keyword.Bluemix_notm}} ou de vincular-se a uma conta existente do {{site.data.keyword.Bluemix_notm}}. O IBMid que for o usuário principal para a conta do SoftLayer deverá ser o proprietário da conta do Bluemix à qual você está se vinculando. Siga os prompts do assistente, incluindo a inclusão de usuários da conta do SoftLayer na conta do {{site.data.keyword.Bluemix_notm}}. 
+ 2. Depois de vincular a conta, informe aos usuários finais sobre a conta a ser migrada para o IBMid. Os usuários finais poderão então acessar os painéis Infraestrutura, Aplicativos e Serviços no console do {{site.data.keyword.Bluemix_notm}}.
+ 3. Quando novos usuários forem incluídos na conta vinculada, será necessário incluí-los na conta do SoftLayer e na conta do {{site.data.keyword.Bluemix_notm}} para que eles tenham acesso a todos os recursos do console unificado.
+ 
+**Recomendação:** migre somente as contas do usuário final para o IBMid. Não migre contas da marca, que são contas pai para contas do usuário final e não contêm recursos. Usuários de conta da marca que migram para o IBMid perdem a capacidade de efetuar login no portal Brand Agent Portal (BAP).
+
+<!--
+### Mapping multiple SoftLayer accounts to one IBMid
 {: #map_multiple_accounts}
 
-Ao configurar a conta, será possível associar um único IBMid a várias contas do SoftLayer usando um endereço de e-mail existente. Somente um usuário do SoftLayer para cada conta pode ser mapeado para o IBMid único. O IBMid deve ser exclusivo dentro de cada conta do SoftLayer. No entanto, um usuário com acesso a várias contas do SoftLayer pode usar um único IBMid para acessar diversas contas do SoftLayer.
+You can associate one IBMid with multiple SoftLayer accounts by using an existing IBMid email address when setting up the account. Only one SoftLayer user for each account can be mapped to the single IBMid. The IBMid must be unique within each SoftLayer account. However, one user with access to multiple SoftLayer accounts can use one IBMid to access multiple SoftLayer accounts.
 
-Por exemplo, um IBMid pode ser mapeado como o usuário principal nas contas A e B e como um usuário adicional nas contas C e D. Uma das contas mapeadas para esse IBMid é a conta padrão.  Normalmente, a conta padrão é a conta que foi mapeada primeiro para o IBMid. No entanto, é possível alternar qual conta é a conta padrão por meio do recurso de alternância de contas no Portal do Cliente.
+For example, an IBMid can map to the master user in accounts A and B, and to an additional user in accounts C and D. One of the accounts mapped to that IBMid is the default account.  Usually, the default account is the account that was first mapped to the IBMid. However, you can switch which account is the default account  through an account switching feature in the Customer Portal.
 
-Para um usuário com acesso IBMid a várias contas com a autenticação de dois fatores ativada, será necessário um código de verificação de autenticação de dois fatores apropriado por conta durante o login e a alternância da conta.
+For a user with IBMid access to multiple accounts with two-factor authentication enabled, an appropriate two-factored authentication verification code per account is required during account log in and account switching.
+-->
+
 
 ## Usando os serviços do {{site.data.keyword.Bluemix_notm}} com ativos do SoftLayer
 {: #bluemix_services}
@@ -184,7 +217,6 @@ Nem todos os serviços do {{site.data.keyword.Bluemix_notm}} podem ser usados co
 * {{site.data.keyword.presenceinsightsshort}}
 * {{site.data.keyword.relationshipextractionshort}}
 * {{site.data.keyword.retrieveandrankshort}}
-* {{site.data.keyword.servicediscoveryshort}}
 * {{site.data.keyword.speechtotextshort}}
 * {{site.data.keyword.sqldb}}
 * {{site.data.keyword.streaminganalyticsshort}}

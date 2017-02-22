@@ -1,16 +1,16 @@
 ---
 
- 
+
 
 copyright:
 
-  years: 2015 2016
+  years: 2015，2017
 
-lastupdated: "2016-04-18" 
+lastupdated: "2016-04-18"
 
 ---
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
 # Creación de apps de Cloud Foundry
@@ -59,6 +59,7 @@ Utilice los siguientes consejos para desarrollar apps web:
 <dt>Límites de recursos</dt>
 <dd>Tenga en cuenta los límites sobre las cantidades de recursos que puede utilizar una cuenta de prueba. Los límites son los siguientes:
 <table style="width:100%">
+<caption>Tabla 1. Límites de recursos de {{site.data.keyword.Bluemix_notm}} para una cuenta de prueba</caption>
   <th>Tipo de recurso</th>	<th>Límite de cantidad</th>
 <tr><td>Número de servicios que se utilizan en todas las apps</td> <td>10</td>
 <tr><td>Memoria utilizada en todas las apps</td> <td>	2 G</td>

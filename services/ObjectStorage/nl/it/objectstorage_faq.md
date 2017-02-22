@@ -1,70 +1,68 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# Domande frequenti {: #faq}
+# FAQ {: #faq}
 
-Questa FAQ fornisce risposte a domande comuni sul servizio {{site.data.keyword.objectstorageshort}}.
+This FAQ provides answers to common questions about the {{site.data.keyword.objectstorageshort}} service.
 {: shortdesc}
 
 
-## Quali account e piani di pagamento posso usare per {{site.data.keyword.objectstorageshort}}? {: #account-payment}
+## What accounts and payment plans can I use for {{site.data.keyword.objectstorageshort}}? {: #account-payment}
 
-Il servizio {{site.data.keyword.objectstorageshort}} offre due opzioni di piano, Gratuito e Standard. Il [Prezzo](https://www.ibm.com/cloud-computing/bluemix/pricing/) varia a seconda del piano scelto.
+The {{site.data.keyword.objectstorageshort}} service offers two plan options, Free and Standard. [Pricing](https://www.ibm.com/cloud-computing/bluemix/pricing/) varies depending on the chosen plan.
 
 <table>
+<caption> Table 1. Comparison of Free and Standard plans </caption>
   <tr>
-    <th> Piano gratuito </th>
-    <th> Piano standard </th>
+    <th> Free plan </th>
+    <th> Standard plan </th>
   </tr>
   <tr>
-    <td> Consente solo una istanza del servizio in un'organizzazione {{site.data.keyword.Bluemix_notm}} alla volta </td>
-    <td> Istanze del servizio illimitate </td>
+    <td> Allows only one service instance to exist in a {{site.data.keyword.Bluemix_notm}} organization at a time </td>
+    <td> Unlimited service instances </td>
   </tr>
   <tr>
-    <td> Disponibile per chiunque </td>
-    <td> Disponibile solo per gli account a pagamento {{site.data.keyword.Bluemix_notm}} e gli utenti interni IBM </td>
+    <td> Available to everyone </td>
+    <td> Available only to {{site.data.keyword.Bluemix_notm}} paid accounts and IBM internal users </td>
   </tr>
   <tr>
-    <td> Gratuito </td>
-    <td> Pagamento a consumo o sottoscrizione ai piani a pagamento </td>
+    <td> Free </td>
+    <td> Pay-as-you-go or subscription payment plans </td>
   </tr>
   <tr>
-    <td> Include un limite di utilizzo dell'archiviazione di 5 GB iniziale </td>
-    <td> Archiviazione illimitata </td>
+    <td> Includes an introductory 5 GB storage usage limit </td>
+    <td> Unlimited storage </td>
   </tr>
 </table>
 
-Tabella 1: Confronto tra i piani Gratuito e Standard
+**Attention**: Users working with a {{site.data.keyword.Bluemix_notm}} trial account are able to use the Free plan. After the time in your trial expires, the associated {{site.data.keyword.objectstorageshort}} service instance will be disabled, meaning that you will be unable to access the storage account. After 30 days, your {{site.data.keyword.Bluemix_notm}} account will be purged and all data deleted. To avoid data loss, upgrade to a [Paid {{site.data.keyword.Bluemix_notm}} account](/docs/admin/account.html) as soon as possible.
 
-**Attenzione**: gli utenti che utilizzano un account di prova {{site.data.keyword.Bluemix_notm}} possono utilizzare il piano Gratuito. Dopo la scadenza della versione di prova, l'istanza del servizio {{site.data.keyword.objectstorageshort}} associata sarà disabilitata, il che significa che non sarai più in grado di accedere all'account di archiviazione. Dopo 30 giorni, il tuo account {{site.data.keyword.Bluemix_notm}} sarà eliminato e tutti i dati vengono eliminati. Per evitare perdite di dati, esegui l'aggiornamento a un [account {{site.data.keyword.Bluemix_notm}} a pagamento](/docs/admin/account.html) quanto prima.
+## How do I change my plan? {: #changeplan}  
+Instances that are created through the Beta or on the Free plan can be upgraded to the Standard plan. The associated organization must be a {{site.data.keyword.Bluemix_notm}} paid account. Trial accounts with Object Storage instances cannot be upgraded to the Standard plan, and instances on the Standard plan cannot be downgraded to other plans. When you upgrade, your service instance and customer data are moved to the new plan.
 
-## Come modifico il mio piano? {: #changeplan}  
-Le istanze create con il piano Beta o Gratuito possono essere aggiornate al piano Standard. L'organizzazione associata deve essere un account a pagamento {{site.data.keyword.Bluemix_notm}}. Non è possibile eseguire l'upgrade degli account di prova con istanze Object Storage al piano Standard e non è possibile eseguire il downgrade delle istanze nel piano Standard ad altri piani. Quando esegui l'aggiornamento, le tue istanze dei servizi e i tuoi dati cliente vengono spostati al nuovo piano.
+To upgrade:
+1.	In the {{site.data.keyword.objectstorageshort}} user interface, click **Plan**.
+2.	Select **Standard** as the new plan and then click **Save**.
 
-Per aggiornare:
-1.	Nell'interfaccia utente {{site.data.keyword.objectstorageshort}}, fai clic su **Piano**.
-2.	Seleziona **Standard** come nuovo piano e fai quindi clic su **Salva**.
+You can also [change your payment plan](/docs/pricing/index.html#changing) by using the command line interface.
 
-Puoi anche [modificare il piano di pagamento](/docs/pricing/index.html#changing) utilizzando l'interfaccia riga di comando.
+## How will I be charged and billed for my use of {{site.data.keyword.objectstorageshort}}? {: #charge-bill}
 
-## In che modo mi verrà addebitato e fatturato l'utilizzo di {{site.data.keyword.objectstorageshort}}? {: #charge-bill}
+The {{site.data.keyword.objectstorageshort}} service charges only for what you use.  There are no fees or commitments to begin using the service. You are not charged for API requests or inbound data network traffic.
 
-L'addebito del servizio {{site.data.keyword.objectstorageshort}} comprende solo ciò che si utilizza.  Non sono previsti costi od obblighi di spesa per iniziare a utilizzare il servizio. Non sono previsti addebiti per le richieste API o il traffico di rete dei dati in entrata.
+{{site.data.keyword.objectstorageshort}} is billed based on your storage usage within the billing cycle. This includes all object data in containers that you created within your {{site.data.keyword.Bluemix_notm}} organization.
 
-{{site.data.keyword.objectstorageshort}} viene fatturato sulla base del tuo utilizzo dell'archiviazione nel ciclo di fatturazione. Sono inclusi tutti i dati oggetti dei contenitori che hai creato nella tua organizzazione {{site.data.keyword.Bluemix_notm}}.
+An Outbound Data Transfer charge applies whenever data is read from any of your object containers over the public network. All bandwidth that is consumed in the billing cycle is billed as Public Outbound Bandwidth.
 
-Una tariffa di Trasferimento dati in uscita viene applicata ogni volta che vengono letti dati da uno qualsiasi dei tuoi contenitori di dati nella rete pubblica. Tutta la banda utilizzata nel ciclo di fatturazione viene fatturata come banda in uscita pubblica.
+At the end of the billing cycle, {{site.data.keyword.Bluemix_notm}} automatically bills you for usage during that billing period. You can view your charges for the current billing period via {{site.data.keyword.Bluemix_notm}} reporting.
 
-Al termine del ciclo di fatturazione, {{site.data.keyword.Bluemix_notm}} viene automaticamente creata la fattura per l'utilizzo durante tale periodo di fatturazione. Puoi visualizzare i tuoi addebiti per il periodo di fatturazione corrente attraverso il reporting {{site.data.keyword.Bluemix_notm}}.
+## Are my {{site.data.keyword.Bluemix_notm}} region and my storage region the same thing? {: #region}
 
-## La mia regione {{site.data.keyword.Bluemix_notm}} e la regione di archiviazione sono la stessa cosa? {: #region}
-
-Il servizio {{site.data.keyword.objectstorageshort}} supporta le regioni di archiviazione di Dallas e Londra. Queste regioni di archiviazione sono indipendenti dalla regione {{site.data.keyword.Bluemix_notm}}, come Stati Uniti Sud e Regno Unito, in cui viene creata l'istanza
-del servizio {{site.data.keyword.objectstorageshort}}. Se crei un'istanza nella regione {{site.data.keyword.Bluemix_notm}} Stati Uniti Sud, puoi leggere e scrivere dati nella regione di archiviazione di Dallas o in quella di Londra. La regione di archiviazione predefinita si basa sulla tua regione {{site.data.keyword.Bluemix_notm}}. Puoi spostarti tra le regioni selezionando un'altra regione dall'elenco a discesa nella IU.
+The {{site.data.keyword.objectstorageshort}} service supports the Dallas and London storage regions. These storage regions are independent of the {{site.data.keyword.Bluemix_notm}} region, such as US-South and United Kingdom, in which the {{site.data.keyword.objectstorageshort}} service instance is created. If you create an instance in the US-South {{site.data.keyword.Bluemix_notm}} region, you can read and write data to either the Dallas or London storage region. The storage region defaultsbased on your {{site.data.keyword.Bluemix_notm}} region. You can switch regions by selecting another region in from the drop-down list in the UI.

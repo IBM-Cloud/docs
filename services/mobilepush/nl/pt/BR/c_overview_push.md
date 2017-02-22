@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,18 +12,19 @@ copyright:
 
 # Sobre {{site.data.keyword.mobilepushshort}}
 {: #overview-push}
-Última atualização: 06 de dezembro de 2016
+Última atualização: 18 de janeiro de 2017
 {: .last-updated}
 
-O IBM {{site.data.keyword.mobilepushshort}} é um serviço que pode ser usado para enviar
-notificações para dispositivos móveis iOS e Android, para os navegadores da web Google Chrome, Mozilla
-Firefox e Safari e também para os Apps e as Extensões do Google Chrome. É possível direcionar notificações para todos os usuários
-do aplicativo ou para um conjunto específico de usuários e dispositivos usando tags. É possível administrar dispositivos, tags e assinaturas. É
-possível também usar um SDK (kit de desenvolvimento de software) e interfaces de
-programação de aplicativo (APIs) Representational State Transfer (REST) para
-desenvolver ainda mais seus aplicativos cliente. 
+O IBM {{site.data.keyword.mobilepushshort}} é um serviço que pode ser usado para enviar notificações para dispositivos e plataformas. É possível direcionar notificações para todos os usuários
+do aplicativo ou para um conjunto específico de usuários e dispositivos usando tags. É possível administrar dispositivos, tags e assinaturas.  
 
-O {{site.data.keyword.mobilepushshort}} também está disponível como um serviço Bluemix Dedicated. Para obter informações sobre o {{site.data.keyword.mobilepushshort}} como um serviço dedicado, consulte [Serviços dedicados](/docs/dedicated/index.html). Observe que a guia de monitoramento {{site.data.keyword.mobilepushshort}} não mostra dados de analítica.
+É possível usar qualquer uma das opções a seguir para criar um serviço de limite ou desvinculado:
+
+- Criando um aplicativo Bluemix usando o modelo do MobileFirst Services Starter do catálogo. Isso cria um serviço Push Notifications ligado a um aplicativo backend do Bluemix.
+- Criando um serviço Push Notifications desvinculado diretamente do catálogo Mobile. É possível ligar posteriormente a um aplicativo ou até mesmo escolher usá-lo desvinculado. 
+- Usando o [Painel móvel ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.ng.bluemix.net/docs/mobile/services.html "Ícone de link externo"){: new_window}.
+
+Observe que a guia de monitoramento {{site.data.keyword.mobilepushshort}} não mostra dados de analítica.
 
 O serviço {{site.data.keyword.mobilepushshort}} agora está ativado para OpenWhisk. Para obter mais informações, consulte [OpenWhisk](/docs/openwhisk/index.html).
 
@@ -83,13 +84,16 @@ Serviços de nuvem de Notificações push específicos da plataforma, como FCM/G
 ###Segurança de Push
 {: push-security}
 
-As APIs de {{site.data.keyword.mobilepushshort}} são asseguradas por dois tipos de segredos - i) appSecret ii) clientSecret. O
-'appSecret' protege APIs que normalmente são chamadas por aplicativos backend - como a
-API para enviar {{site.data.keyword.mobilepushshort}} e a API para configurar definições.   O 'clientSecret' protege APIs que são chamadas geralmente por aplicativos cliente móveis. Existe
-somente uma API relacionada para registro de um dispositivo com um ID do usuário associado que requer este 'clientSecret'. Nenhuma das outras APIs chamadas a partir
-de clientes móveis requer o clientSecret. O 'appSecret' e o 'clientSecret' são alocados para todas as instâncias de serviço no momento da ligação de um aplicativo ao serviço {{site.data.keyword.mobilepushshort}}. Consulte a documentação da API REST para obter mais informações sobre como os segredos devem ser passados e para quais APIs.
+As APIs de {{site.data.keyword.mobilepushshort}} são protegidas por dois tipos de segredos:
 
-Nota: aplicativos anteriores precisavam passar o clientSecret somente ao registrar ou atualizar dispositivos com o campo de ID do usuário. Todas
+- **appSecret**: O 'appSecret' protege as APIs que são normalmente chamadas por aplicativos backend - como a API para enviar o {{site.data.keyword.mobilepushshort}} e a API para configurar definições.
+- **clientSecret**: O 'clientSecret' protege as APIs que são normalmente chamadas por aplicativos cliente móveis. Existe
+somente uma API relacionada para registro de um dispositivo com um ID do usuário associado que requer este 'clientSecret'. Nenhuma das outras APIs chamadas a partir
+de clientes móveis requer o clientSecret. 
+
+O 'appSecret' e o 'clientSecret' são alocados para todas as instâncias de serviço no momento da ligação de um aplicativo ao serviço {{site.data.keyword.mobilepushshort}}. Consulte a documentação de [APIs de REST ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://mobile.{DomainName}/imfpush/ "Ícone de link externo") para obter informações sobre como os segredos devem ser passados e para quais APIs.
+
+**Nota**: os aplicativos anteriores eram necessários para passar o clientSecret somente ao registrar ou atualizar dispositivos com o campo userId. Todas
 as outras APIs chamadas por clientes móveis e do navegador não requerem o clientSecret. Esses aplicativos antigos podem continuar a usar o clientSecret opcionalmente
 para registros de dispositivo ou chamadas de atualização. Entretanto, é
 expressamente recomendado que a verificação do clientSecret seja imposta para todas as
@@ -154,8 +158,9 @@ destinadas sejam fornecidas ao postar no recurso de mensagem. Especifique as pla
 suportadas são como a seguir:
 * A (Apple)
 * G (Google)
-* WEB_CHROME (Google Chrome Browser WebPush)
-* WEB_FIREFOX (Mozilla Firefox Browser WebPush)
+* WEB_CHROME (Google Chrome Browser Web Push)
+* WEB_FIREFOX (Mozilla Firefox Browser Web Push)
+* WEB_SAFARI (Safari Browser Web Push)
 * APPEXT_CHROME (Apps Google Chrome e Extensões)
 
 ## Tamanho da mensagem de {{site.data.keyword.mobilepushshort}}
@@ -164,7 +169,7 @@ suportadas são como a seguir:
 O tamanho da carga útil da mensagem de {{site.data.keyword.mobilepushshort}} depende das restrições estabelecidas pelos Gateways (FCM/GCM, APNs) e
 pelas plataformas do cliente. 
 
-###iOS
+### iOS e Safari
 {: ios-message-size}
 
 Para o iOS 8 e posterior, o tamanho máximo permitido é 2 kilobytes. O serviço de Notificação push Apple não envia notificações que excedem

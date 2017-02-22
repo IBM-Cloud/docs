@@ -1,16 +1,16 @@
 ---
 
- 
+
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015，2017
 
-lastupdated: "2016-05-09" 
+lastupdated: "2016-05-09"
 
 ---
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -24,7 +24,8 @@ Con {{site.data.keyword.Bluemix}}, puoi creare applicazioni e fornire un host pe
 ##Come far sì che le tue applicazioni siano pronte per il cloud
 {: #cloud-readyapps}
 
-Quando un'applicazione pronta per il cloud viene progettata e creata, segue i principi della piattaforma cloud. Un'applicazione pronta per il cloud può utilizzare le capacità fornite dalla piattaforma cloud.
+Quando un'applicazione pronta per il cloud viene progettata e creata, segue i principi della piattaforma cloud. Un'applicazione pronta per il cloud
+può utilizzare le capacità fornite dalla piattaforma cloud.
 
 Se la tua applicazione osserva tutti i seguenti principi, essa è pronta per il cloud e può essere migrata in {{site.data.keyword.Bluemix_notm}}. Se l'applicazione viola uno dei principi, puoi generalmente modificarla per far sì che rispetti tutti i principi.
 
@@ -76,15 +77,14 @@ Se la tua applicazione osserva tutti i seguenti principi, essa è pronta per il 
 
   Acquisisci almeno l'installazione della tua applicazione come una serie uniforme di script indipendenti dal sistema operativo. Fa in modo che le dimensioni dell'installazione della tua applicazione restino contenute e preservane la portabilità, in modo che si adegui a differenti tecniche di automazione. Inoltre, riduci al minimo le dipendenze richieste dall'installazione dell'applicazione.
 
-Per ulteriori informazioni sulle applicazioni pronte per il cloud, vedi [12-factor app](http://12factor.net/){:new_window}.
+Per ulteriori informazioni sulle applicazioni pronte per il cloud, vedi [The 12-factor application ![icona link esterno](../icons/launch-glyph.svg)](http://12factor.net/){: new_window}.
 
 ##Migrazione delle tue applicazioni
 {: #ht_hostapp}
 
 Invece di spostare completamente le applicazioni nell'ambiente cloud, puoi migrarle in {{site.data.keyword.Bluemix_notm}} in modo incrementale. Puoi migrare prima una parte della tua applicazione e connetterla al system of record o ai dati esistenti, attraverso il servizio Cloud Integration.
 
-Nelle tue applicazioni cloud potresti dover accedere ai servizi o ai dati backend quali, ad esempio, un system of record. In {{site.data.keyword.Bluemix_notm}},
-puoi utilizzare il servizio Secure Gateway per stabilire un tunnel protetto tra un'organizzazione {{site.data.keyword.Bluemix_notm}} e la rete backend aziendale. Il servizio consente alle applicazioni su {{site.data.keyword.Bluemix_notm}} di accedere ai servizi e ai dati della rete backend. Per i dettagli, vedi [Reaching enterprise backend with Bluemix Secure Gateway via console](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){:new_window}.
+Nelle tue applicazioni cloud potresti dover accedere ai servizi o ai dati backend quali, ad esempio, un system of record. In {{site.data.keyword.Bluemix_notm}}, puoi utilizzare il servizio Secure Gateway per stabilire un tunnel protetto tra un'organizzazione {{site.data.keyword.Bluemix_notm}} e la rete backend aziendale. Il servizio consente alle applicazioni su {{site.data.keyword.Bluemix_notm}} di accedere ai servizi e ai dati della rete backend. Per i dettagli, vedi [Reaching enterprise backend with Bluemix Secure Gateway via console ![icona link esterno](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window}.
 
 Per distribuire la tua applicazione su {{site.data.keyword.Bluemix_notm}} come applicazione Cloud Foundry, seleziona un runtime dal Catalogo {{site.data.keyword.Bluemix_notm}}. Il runtime contiene un'applicazione starter Hello World che puoi sostituire con la tua propria applicazione. Se non riesci a trovare uno starter con il runtime desiderato, puoi portare un pacchetto di build personalizzato compatibile con Cloud Foundry in {{site.data.keyword.Bluemix_notm}} utilizzando l'opzione –b con il comando cf push. Per i dettagli, vedi [Utilizzo dei pacchetti di build della community](/docs/cfapps/byob.html).
 
@@ -176,7 +176,7 @@ services = JSON.parse(ENV['VCAP_SERVICES'], :symbolize_names => true)
             end
           end
         end.flatten!.first
-```		
+```
 {:codeblock}
 
 Per accertarti che la tua applicazione possa essere eseguita in un ambiente locale una volta modificata l'applicazione per {{site.data.keyword.Bluemix_notm}}, verifica che sia presente la variabile d'ambiente VCAP_SERVICES, che viene impostata per tutte le applicazioni {{site.data.keyword.Bluemix_notm}} Cloud Foundry.
@@ -192,5 +192,5 @@ Per accertarti che la tua applicazione possa essere eseguita in un ambiente loca
 * [Virtual Machine](/docs/virtualmachines/vm_index.html)
 * [Introduzione a Delivery Pipeline](/docs/services/DeliveryPipeline/index.html)
 * [Distribuzione di applicazioni con IBM Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html)
-* [Twelve-factor app](http://12factor.net/){:new_window}
-* [Reaching enterprise backend with Bluemix Secure Gateway via console](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){:new_window}
+* [The twelve-factor app ![icona link esterno](../icons/launch-glyph.svg)](http://12factor.net/){: new_window}
+* [Reaching enterprise backend with Bluemix Secure Gateway via console ![icona link esterno](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window}

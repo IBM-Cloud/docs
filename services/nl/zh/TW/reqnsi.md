@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-03"
+  years: 2016, 2017
+lastupdated: "2017-01-11"
 
 ---
 
@@ -38,10 +38,10 @@ lastupdated: "2016-11-03"
 
 |類型	|說明	|支援詳細資料|
 |:------|:--------------|:--------------|
-|IBM	|IBM 所提供且正式發行的服務。	|在 IBM 所提供且正式發行的服務中，判定為錯誤的問題會受到支援。支援會根據您設定的嚴重性來提供。如需問題單嚴重性的相關資訊，請參閱[與支援中心聯絡](/docs/support/index.html#contacting-bluemix-support){: new_window}。|
+|IBM	|IBM 所提供且正式發行的服務。	|在 IBM 所提供且正式發行的服務中，判定為錯誤的問題會受到支援。支援會根據您設定的嚴重性來提供。如需問題單嚴重性的相關資訊，請參閱[與支援中心聯絡](/docs/support/index.html#contacting-bluemix-support)。|
 |協力廠商	|由 IBM 以外的公司所提供的服務。	|協力廠商服務支援是由服務提供者所提供。如果是由 IBM 調查問題，且該問題經判定為協力廠商服務中的錯誤，IBM 並不負責提供修正程式。IBM 會視需要與協力廠商服務提供者分享分析資訊。|
 |社群	|開放程式碼社群所提供的服務。	|社群服務支援是由「{{site.data.keyword.Bluemix_notm}} Developers 社群」所提供。如果是由 IBM 調查問題，且該問題經判定為社群服務中的錯誤，IBM 並不負責提供修正程式。|
-|測試版	|尚未準備好進入正式作業且目前處於開發試用階段的服務。「測試版」服務可協助開發及行銷小組先評量服務價值，再正式發行該服務。	|在 IBM 所提供的測試版服務中判定為錯誤的問題會受到支援，但是 IBM 不負責提供修正程式。此外，還會將問題單的嚴重性指派為 3 或 4（適用時）。如需問題單嚴重性的相關資訊，請參閱[與支援中心聯絡](/docs/support/index.html#contacting-bluemix-support){: new_window}。|
+|測試版	|尚未準備好進入正式作業且目前處於開發試用階段的服務。「測試版」服務可協助開發及行銷小組先評量服務價值，再正式發行該服務。	|在 IBM 所提供的測試版服務中判定為錯誤的問題會受到支援，但是 IBM 不負責提供修正程式。此外，還會將問題單的嚴重性指派為 3 或 4（適用時）。如需問題單嚴重性的相關資訊，請參閱[與支援中心聯絡](/docs/support/index.html#contacting-bluemix-support)。|
 {: caption="Table 1. {{site.data.keyword.Bluemix_notm}} services support information" caption-side="top"}
 
 
@@ -49,7 +49,7 @@ lastupdated: "2016-11-03"
 
 {{site.data.keyword.Bluemix_notm}} 也有您可以試用的實驗性服務。若要檢視所有可用的實驗性服務、樣板及運行環境，請登入 {{site.data.keyword.Bluemix_notm}}，並捲動至「型錄」尾端，然後按一下 **{{site.data.keyword.Bluemix_notm}} 實驗型錄**。
 
-實驗性服務可能不穩定，而且可能會變更，而與較舊版不相容。這些服務不建議用於正式作業環境。實驗性服務支援是透過「{{site.data.keyword.Bluemix_notm}} Developers 社群」所提供。如果是由 IBM 調查問題，且該問題經判定為實驗性服務中的錯誤，則 IBM 不負責提供修正程式。
+實驗性服務可能不穩定，且可能變更而與舊版不相容。不建議在正式作業環境中使用這些服務。實驗性服務支援是透過「{{site.data.keyword.Bluemix_notm}} Developers 社群」所提供。如果是由 IBM 調查問題，且該問題經判定為實驗性服務中的錯誤，則 IBM 不負責提供修正程式。
 
 若要在 {{site.data.keyword.Bluemix_notm}} 使用者介面、cf 指令行介面、IBM {{site.data.keyword.Bluemix_notm}} DevOps Services 或任何支援的工具中使用服務，請採取下列步驟：
 
@@ -115,14 +115,13 @@ lastupdated: "2016-11-03"
 |{{site.data.keyword.nlclassifierlshort}} 	|是 		|是 		|是|
 |{{site.data.keyword.objectstorageshort}}	|是		|否		|否|
 |{{site.data.keyword.personalityinsightsshort}}	|是		|是		|是|
-|{{site.data.keyword.mobilepush}}Push		|是		|是		|否|
+|{{site.data.keyword.mobilepush}}		|是		|是		|否|
 |Push for iOS 8					|是		|是		|否|
 |{{site.data.keyword.questionandanswershort}}	|是		|是		|是|
 |{{site.data.keyword.rapidApps}}		|是		|是		|否|
 |{{site.data.keyword.relationshipextractionshort}}	|是	|是		|是|
 |{{site.data.keyword.retrieveandrankshort}}	|是 		|是 		|是|
 |{{site.data.keyword.SecureGateway}}		|是		|是		|否|
-|{{site.data.keyword.servicediscoveryshort}}	|是		|否		|否|
 |{{site.data.keyword.sescashort}}		|是		|是		|是|
 |{{site.data.keyword.ssofull}}			|是		|否		|否|
 |{{site.data.keyword.speechtotextshort}}	|是 		|是	 	|是|
@@ -157,7 +156,7 @@ lastupdated: "2016-11-03"
 
 * 從 {{site.data.keyword.Bluemix_notm}} 使用者介面。檢視 {{site.data.keyword.Bluemix_notm}}「型錄」。
 * 從 cf 指令行介面。使用 **cf marketplace** 指令。
-* 從您自己的應用程式。使用 [GET /v2/services Services API](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}。
+* 從您自己的應用程式。使用 [GET /v2/services Services API ![外部鏈結圖示](../icons/launch-glyph.svg)](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}。
 
 在開發應用程式時，您可以選取需要的服務。
 當您選取時，{{site.data.keyword.Bluemix_notm}} 會與服務互動，並採取必要的步驟以佈建服務資源。不同服務類型的佈建處理程序可能不同。
@@ -205,7 +204,7 @@ cf create-service service_name service_plan service_instance
 cf bind-service appname service_instance
     ```
 
-您可以將服務實例僅連結至位於相同空間或組織中的應用程式實例。然而，使用其他空間或組織中的服務實例的方式，與使用外部應用程式的方式一樣。請使用認證直接配置應用程式實例，而非建立連結。如需外部應用程式如何使用 {{site.data.keyword.Bluemix_notm}} 服務的相關資訊，請參閱[讓外部應用程式能使用 {{site.data.keyword.Bluemix_notm}} 服務](#accser_external){: new_window}。
+您可以將服務實例僅連結至位於相同空間或組織中的應用程式實例。然而，使用其他空間或組織中的服務實例的方式，與使用外部應用程式的方式一樣。請使用認證直接配置應用程式實例，而非建立連結。如需外部應用程式如何使用 {{site.data.keyword.Bluemix_notm}} 服務的相關資訊，請參閱[讓外部應用程式能使用 {{site.data.keyword.Bluemix_notm}} 服務](#accser_external)。
 
 
 ## 配置應用程式以與服務互動
@@ -310,7 +309,7 @@ cf uups testups2 -l syslog://example2.com
 
 如果您的服務實例建立並連結到某個地區中的應用程式，則可以使用下列其中一種方法，在另一個地區中使用這個服務實例：
 
-  * 使用服務認證直接配置應用程式實例。如需詳細資料，請參閱[讓外部應用程式能使用 {{site.data.keyword.Bluemix_notm}} 服務](#accser_external){: new_window}。
+  * 使用服務認證直接配置應用程式實例。如需詳細資料，請參閱[讓外部應用程式能使用 {{site.data.keyword.Bluemix_notm}} 服務](#accser_external)。
   * 建立使用者提供的服務作為橋接器。
 
 	假設您從想要使用服務實例的地區中開始。若要使用存在於另一個地區的服務實例，請完成下列步驟：
@@ -324,7 +323,7 @@ cf uups testups2 -l syslog://example2.com
 
       3. 切換至您從想要使用服務實例的地區。在 {{site.data.keyword.Bluemix_notm}} 功能表列中，展開**地區**，或按一下**地區**圖示，然後選取您要使用服務實例的地區。
 
-      4. 使用您從 *VCAP_SERVICES* 環境變數記錄的認證及連線參數，建立使用者提供的服務實例。如需如何建立使用者提供的服務實例的相關資訊，請參閱[建立使用者提供的服務實例](#user_provide_services){: new_window}。
+      4. 使用您從 *VCAP_SERVICES* 環境變數記錄的認證及連線參數，建立使用者提供的服務實例。如需如何建立使用者提供的服務實例的相關資訊，請參閱[建立使用者提供的服務實例](#user_provide_services)。
 
       5. 使用下列指令，以將使用者提供的服務實例連結至應用程式：
 
@@ -340,7 +339,7 @@ cf uups testups2 -l syslog://example2.com
 ## 在另一個服務中使用服務
 {: #s2s_binding}
 
-服務存取授權提供一種方法，讓某個服務直接存取另一個服務。您可以在 {{site.data.keyword.Bluemix_notm}}「儀表板」上授權及配置服務實例對其他服務實例的存取權。
+服務存取授權讓一個服務能直接存取另一個服務。您可以在 {{site.data.keyword.Bluemix_notm}}「儀表板」上授權及配置服務實例對其他服務實例的存取權。
 
 若要使用另一個服務中的服務實例，請完成下列步驟：
 
@@ -348,10 +347,10 @@ cf uups testups2 -l syslog://example2.com
 2. 在導覽窗格中，使用服務實例的主控台，按一下**管理**以授權來自其他服務實例的連結。
 3. 如果您要拒絕其他服務對服務實例的存取權，請按一下導覽窗格中的**服務存取授權**，然後使用**撤銷**以移除服務連結。
 
-# 相關鏈結
+# rellinks
 {: #rellinks}
 
-## 一般
+## general
 {: #general}
 
 * [使用 {{site.data.keyword.Bluemix_notm}} 使用者介面連結服務](/docs/cfapps/ee.html#ee_bindui)

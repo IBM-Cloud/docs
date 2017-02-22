@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-09-27"
+  years: 2016, 2017
+lastupdated: "2017-01-04"
 
 ---
 
@@ -56,8 +56,8 @@ Sie verwenden dieses Benennungsschema unter anderem zum Beispiel, wenn Sie die {
 
 Die Namen aller Entitäten, zu denen Aktionen, Auslöser, Regeln, Pakete und Namensbereiche gehören, sind eine Folge von Zeichen mit dem folgenden Format:
 
-* Das erste Zeichen muss ein alphanumerisches Zeichen, eine Ziffer oder ein Unterstreichungszeichen sein.
-* Die nachfolgenden Zeichen können alphanumerische Zeichen, Ziffern, Leerzeichen oder beliebige der folgenden Zeichen sein: `_`, `@`, `.`, `-`.
+* Das erste Zeichen muss ein alphanumerisches Zeichen oder ein Unterstreichungszeichen sein.
+* Die nachfolgenden Zeichen können alphanumerische Zeichen, Leerzeichen oder die folgenden Zeichen sein: `_`, `@`, `.`, `-`.
 * Das letzte Zeichen kann kein Leerzeichen sein.
 
 Präziser formuliert, muss der Name dem folgenden regulären Ausdruck (in Java-Metazeichensyntax) entsprechen: `\A([\w]|[\w][\w@ .-]*[\w@.-]+)\z`.
@@ -167,7 +167,7 @@ function main(params) {
   } else if (params.payload == 1) {
      return {payload: 'Hello, World!'};
   } else if (params.payload == 2) {
-    return whisk.error();   // Gibt abnormale Beendigung an.
+    return {error: 'payload must be 0 or 1'};
   }
 }
 ```
@@ -224,61 +224,17 @@ Es ist möglich, dass eine Aktion für einige Eingaben synchron und für andere 
 
 Beachten Sie, dass der Aufruf einer Aktion blockierend oder nicht blockierend sein kann, unabhängig davon, ob die Aktivierung synchron oder asynchron ist.
 
-### Zusätzliche SDK-Methoden
+### Globales JavaScript-Objekt 'whisk' nicht mehr verwendet
 
-Die Funktion `whisk.invoke()` ruft eine andere Aktion auf und gibt einen Promise für die resultierende Aktivierung zurück. Sie empfängt als Argument ein Wörterverzeichnis, in dem die folgenden Parameter definiert werden:
-
-- *name*: Der vollständig qualifizierte Name der aufzurufenden Aktion.
-- *parameters*: Ein JSON-Objekt, das die Eingabe für die aufgerufene Aktion darstellt. Falls nicht angegeben, wird standardmäßig ein leeres Objekt verwendet.
-- *apiKey*: Der Berechtigungsschlüssel, mit dem die Aktion aufzurufen ist. Standardwert: `whisk.getAuthKey()`.
-- *blocking*: Gibt an, ob die Aktion im blockierenden oder nicht blockierenden Modus aufgerufen werden soll. Wenn `blocking` den Wert 'true' hat, wartet der Aufruf auf das Ergebnis der aufgerufenen Aktion, bevor der zurückgegebene Promise aufgelöst wird. Standardwert ist `false`, der einen nicht blockierenden Aufruf angibt.
-
-`whisk.invoke()` gibt einen Promise zurück. Damit das OpenWhisk-System auf die Beendigung des Aufrufs wartet, müssen Sie diesen Promise von der Funktion `main` Ihrer Aktion zurückgeben.
-- Wenn der Aufruf fehlschlägt, wird der Promise mit einem Objekt abgelehnt, das den fehlgeschlagenen Aufruf beschreibt. Es gibt zwei mögliche Felder:
-  - *error*: Ein Objekt, das den Fehler - in der Regel als Zeichenfolge - beschreibt.
-  - *activation*: Ein optionales Wörterbuch, das je nach Art der Aufruffehlers vorhanden sein kann. Wenn es vorhanden ist, enthält es zwei Felder:
-    - *activationId*: Die Aktivierungs-ID.
-    - *result*: Wenn die Aktion im blockierenden Modus aufgerufen wurde: das Aktionsergebnis als JSON-Objekt, andernfalls `undefined`.
-- Wenn der Aufruf erfolgreich ist, wird der Promise mit einem Wörterbuch aufgelöst, das die Aktivierung mit den Feldern *activationId* und *result* (wie oben beschrieben) beschreibt.
-
-Im folgenden Beispiel verwendet ein blockierender Aufruf den zurückgegebenen Promise:
-```javascript
-return whisk.invoke({
-  name: 'myAction',
-  blocking: true
-})
-.then(function (activation) {
-    // activation completed successfully, activation contains the result
-    console.log('Activation ' + activation.activationId + ' completed successfully and here is the result ' + activation.result);
-})
-.catch(function (reason) {
-    console.log('An error has occured ' + reason.error);
-
-    if(reason.activation) {
-      console.log('Please check activation ' + reason.activation.activationId + ' for details.');
-    } else {
-      console.log('Failed to create activation.');
-    }
-});
-```
-{: codeblock}
-
-Die Funktion `whisk.trigger()` aktiviert einen Auslöser und gibt für die resultierende Aktivierung einen Promise zurück. Sie empfängt als Argument ein JSON-Objekt mit den folgenden Parametern:
-
-- *name*: Der vollständig qualifizierte Name des aufzurufenden Auslösers.
-- *parameters*: Ein JSON-Objekt, das die Eingabe für den Auslöser darstellt. Falls nicht angegeben, wird standardmäßig ein leeres Objekt verwendet.
-- *apiKey*: Der Berechtigungsschlüssel, mit dem der Auslöser aktiviert wird. Standardwert: `whisk.getAuthKey()`.
-
-`whisk.trigger()` gibt einen Promise zurück. Wenn das OpenWhisk-System auf den Abschluss des Auslösers warten soll, sollten Sie diesen Promise von der Funktion `main` Ihrer Aktion zurückgeben.
-- Wenn der Auslöser fehlschlägt, wird der Promise mit einem Objekt abgelehnt, das den Fehler beschreibt.
-- Wenn der Auslöser erfolgreich ist, wird der Promise mit einem Wörterbuch mit dem Feld `activationId`, das die Aktivierungs-ID enthält, aufgelöst.
-
-Die Funktion `whisk.getAuthKey()` gibt den Berechtigungsschlüssel zurück, unter dem die Aktion ausgeführt wird. In der Regel müssen Sie diese Funktion nicht direkt aufrufen, weil sie implizit von den Funktionen `whisk.invoke()` und `whisk.trigger()` aufgerufen wird.
+Das globale Objekt `whisk` wird derzeit nicht verwendet. Migrieren Sie Ihre Node.js-Aktionen, um alternative Methoden zu verwenden.
+Für die Funktionen `whisk.invoke()` und `whisk.trigger()` können Sie die Clientbibliothek [openwhisk](https://www.npmjs.com/package/openwhisk) verwenden.
+Für `whisk.getAuthKey()` können Sie den API-Schlüsselwert aus der Umgebungsvariable `__OW_API_KEY` abrufen.
+Für `whisk.error()` können Sie ein abgelehntes Objekt des Typs 'Promise' zurückgeben (d. h. Promise.reject).
 
 ### JavaScript-Laufzeitumgebungen
 {: #openwhisk_ref_javascript_environments}
 
-JavaScript-Aktionen werden standardmäßig in einer Node.js Version 6.9.1-Umgebung ausgeführt. Die 6.9.1-Umgebung wird außerdem für eine Aktion verwendet, wenn das Flag `--kind` bei der Erstellung oder Aktualisierung der Aktion explizit mit dem Wert 'nodejs:6' angegeben wird.
+JavaScript-Aktionen werden standardmäßig in einer Node.js Version 6.9.1-Umgebung ausgeführt.  Die 6.9.1-Umgebung wird außerdem für eine Aktion verwendet, wenn das Flag `--kind` bei der Erstellung oder Aktualisierung der Aktion explizit mit dem Wert 'nodejs:6' angegeben wird.
 In der Node.js Version 6.9.1-Umgebung können die folgenden Pakete verwendet werden:
 
 - apn v2.1.2
@@ -305,6 +261,7 @@ In der Node.js Version 6.9.1-Umgebung können die folgenden Pakete verwendet wer
 - node-uuid v1.4.7
 - nodemailer v2.6.4
 - oauth2-server v2.4.1
+- openwhisk v3.0.0
 - pkgcloud v1.4.0
 - process v0.11.9
 - pug v2.0.0-beta6
@@ -335,7 +292,7 @@ In der Node.js Version 6.9.1-Umgebung können die folgenden Pakete verwendet wer
 Die Node.js Version 0.12.17-Umgebung wird für eine Aktion verwendet, wenn das Flag `--kind` bei der Erstellung oder Aktualisierung der Aktion explizit mit dem Wert 'nodejs' angegeben wird.
 In der Node.js Version 0.12.17-Umgebung können die folgenden Pakete verwendet werden:
 
-**Hinweis**: Node.js Version 0.12.x ist veraltet. Führen Sie eine Migration aller Node.js-Aktionen durch, sodass Node.js Version 6.x verwendet wird.
+**Hinweis:** Node.js Version 0.12.x ist veraltet. Führen Sie eine Migration aller Node.js-Aktionen durch, sodass Node.js Version 6.x verwendet wird.
 
 - apn v1.7.4
 - async v1.5.2
@@ -356,6 +313,7 @@ In der Node.js Version 0.12.17-Umgebung können die folgenden Pakete verwendet w
 - nano v5.10.0
 - node-uuid v1.4.2
 - oauth2-server v2.4.0
+- openwhisk v3.0.0
 - process v0.11.0
 - request v2.79.0
 - rimraf v2.5.1
@@ -438,7 +396,7 @@ Die Sammlungsendpunkte lauten wie folgt:
 - `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/packages`
 - `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/activations`
 
-``openwhisk.``<span class="keyword" data-hd-keyref="DomainName">DomainName</span>` ist der OpenWhisk-API-Hostname (z. B. openwhisk.ng.bluemix.net, 172.17.0.1 usw.).
+`openwhisk.`<span class="keyword" data-hd-keyref="DomainName">DomainName</span>` ist der OpenWhisk-API-Hostname (z. B. openwhisk.ng.bluemix.net, 172.17.0.1 usw.).
 
 Für `{namespace}` kann das Zeichen `_` zum Angeben des *Standardnamensbereichs* (d.h. einer E-Mail-Adresse) verwendet werden.
 
@@ -492,7 +450,9 @@ Von der OpenWhisk-API werden Anforderung/Antwort-Aufrufe von Web-Clients unterst
 {: #openwhisk_syslimits}
 
 ### Aktionen
-{{site.data.keyword.openwhisk_short}} unterliegt einigen wenigen Systembegrenzungen, wie zum Beispiel in Bezug auf die Speicherkapazität, die eine Aktion verwendet, oder auf die zulässige Anzahl von Aktionsaufrufen pro Stunde. n der folgenden Tabelle sind die Standardbegrenzungen für Aktionen aufgeführt.
+{{site.data.keyword.openwhisk_short}} unterliegt einigen wenigen Systembegrenzungen, wie zum Beispiel in Bezug auf die Speicherkapazität, die eine Aktion verwenden kann, oder auf die zulässige Anzahl von Aktionsaufrufen pro Minute. 
+
+n der folgenden Tabelle sind die Standardbegrenzungen für Aktionen aufgeführt.
 
 | Begrenzung | Beschreibung | Konfigurierbar | Einheit | Standardwert |
 | ----- | ----------- | ------------ | -----| ------- |
@@ -563,7 +523,7 @@ Von der OpenWhisk-API werden Anforderung/Antwort-Aufrufe von Web-Clients unterst
 
 ### Auslöser
 
-Auslöser unterliegen einer Auslöserate pro Minute und pro Stunde (wie in der folgenden Tabelle angegeben).
+Auslöser unterliegen einer Auslöserate pro Minute (wie in der folgenden Tabelle angegeben).
 
 | Begrenzung | Beschreibung | Konfigurierbar | Einheit | Standardwert |
 | ----- | ----------- | ------------ | -----| ------- |

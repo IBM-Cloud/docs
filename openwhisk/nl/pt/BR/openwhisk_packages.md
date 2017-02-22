@@ -3,8 +3,8 @@
 
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-02"
+  years: 2016, 2017
+lastupdated: "2017-01-04"
 
 
 ---
@@ -271,12 +271,11 @@ Feeds oferecem uma maneira conveniente para configurar uma origem de eventos ext
 5. Crie uma regra que chama a ação `hello` toda vez que o acionador `everyEightSeconds` é disparado.
 
   ```
-  wsk rule create --enable myRule everyEightSeconds hello
+  wsk rule create myRule everyEightSeconds hello
   ```
   {: pre}
   ```
   ok: regra myRule criada
-  ok: regra myRule está sendo ativada
   ```
   {: screen}
 
@@ -463,7 +462,7 @@ Após as ações e os feeds que formam um pacote serem depuradas e testadas, o p
 1. Compartilhe o pacote com todos os usuários:
 
   ```
-  wsk package update custom --shared
+  wsk package update custom --shared yes
   ```
   {: pre}
   ```

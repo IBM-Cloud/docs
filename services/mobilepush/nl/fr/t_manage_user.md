@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Enregistrement d'un appareil avec un ID utilisateur
 {: #register_device_with_userId}
-Dernière mise à jour : 7 décembre 2016
+Dernière mise à jour : 11 janvier 2017
 {: .last-updated}
 
 Pour procéder à un enregistrement pour une notification à base d'ID utilisateur, procédez comme suit :
@@ -60,49 +60,15 @@ push.registerDeviceWithUserId("userId",new MFPPushResponseListener<String>() {
 Utilisez les API suivantes pour l'enregistrement des notifications de type {{site.data.keyword.mobilepushshort}} à base d'ID utilisateur.
 
 ```
-// Enregistrement du périphérique pour notification push avec UserId
+// Enregistrement de l'appareil pour notification push avec UserId
 var options = {"userId": "Your User Id value"};
-BMSPush.registerDevice(options,success, failure);
+BMSPush.registerDevice(options,success, failure); 
 ```
 	{: codeblock}
 
 
 - **userId** : passe la valeur userId unique pour l'enregistrement de {{site.data.keyword.mobilepushshort}}.
 
-
-## Objective-C
-{: objc-register}
-
-Utilisez les API suivantes pour enregistrement pour {{site.data.keyword.mobilepushshort}} basées UserId.
-```
-// Initialize the MFPPush
-IMFPushClient* push = [IMFPushClient sharedInstance];
-[push initializeWithAppGUID:@"appGUID" clientSecret:@"clientSecret"];
-```
-	{: codeblock}
-
-
-- **AppGUID** : clé AppGUID du service {{site.data.keyword.mobilepushshort}}.
-- **clientSecret** : clé clientSecret du service {{site.data.keyword.mobilepushshort}}.
-
-Utilisez l'API **registerWithUserId** pour enregistrer l'appareil pour {{site.data.keyword.mobilepushshort}}.
-```
-// Register the device to push notifications service.
-[push registerWithDeviceToken:deviceToken WithUserId:@"userId" completionHandler:^(IMFResponse *response, NSError *error) {
-  NSString *message=@"";
-	if (error){
-        message = [NSString stringWithFormat:@"Error registering for push notifications: %@", error.description];
-        NSLog(@"%@",message);
-    } else {
-     message=@"Successfully registered for push notifications";
-        NSLog(@"%@",message);
-    }
-}];
-```
-	{: codeblock}
-
-
-- **userId** : passe la valeur userId unique pour l'enregistrement de {{site.data.keyword.mobilepushshort}}.
 
 ## Swift
 {: swift-register}

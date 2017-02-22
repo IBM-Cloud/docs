@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
   
-lastupdated: "2016-10-23"
+lastupdated: "2017-01-11"
 
 ---
 
@@ -49,10 +49,10 @@ Segui il processo di registrazione per creare un account {{site.data.keyword.Blu
 {: tsResolve}
 
 A seconda di come è configurato il tuo account, potrebbero essere applicabili alcune di queste opzioni di accesso: 
- * Gli utenti SoftLayer con ID SoftLayer devono eseguire l'accesso tramite il [Portale del cliente](https://control.softlayer.com).
- * Gli utenti SoftLayer con un ID IBM e con o senza un account Bluemix collegato, possono eseguire l'accesso tramite il [Portale del cliente](https://control.softlayer.com) per aprire il portale clienti SoftLayer o tramite la [console Bluemix](https://console.{DomainName}) per aprire il dashboard Infrastruttura. 
+ * Gli utenti SoftLayer con ID SoftLayer devono eseguire l'accesso tramite il [Portale del cliente ![icona link esterno](../icons/launch-glyph.svg)](https://control.softlayer.com){: new_window}.
+ * Gli utenti SoftLayer con un ID IBM e con o senza un account Bluemix collegato, possono eseguire l'accesso tramite il [Portale del cliente ![icona link esterno](../icons/launch-glyph.svg)](https://control.softlayer.com){: new_window} per aprire il portale clienti SoftLayer o tramite la [Bluemix console ![External link icon](../icons/launch-glyph.svg)](https://console.{DomainName}){: new_window} per aprire il dashboard Infrastruttura. 
  * Gli utenti Bluemix senza un account Bluemix collegato devono eseguire l'accesso tramite la console Bluemix.
- * Gli utenti Bluemix con un account Bluemix collegato possono eseguire l'accesso tramite la [console Bluemix](https://console.{DomainName}) o il [Portale del cliente](https://control.softlayer.com).
+ * Gli utenti Bluemix con un account Bluemix collegato possono eseguire l'accesso tramite la [console Bluemix ![icona link esterno](../icons/launch-glyph.svg)](https://console.{DomainName}){: new_window}  il [Portale del cliente ![icona link esterno](../icons/launch-glyph.svg)](https://control.softlayer.com){: new_window}.
  
 
 ## La password non è valida
@@ -157,7 +157,7 @@ potresti non riuscire ad accedere a {{site.data.keyword.Bluemix_notm}}. Invece, 
 {: tsSymptoms}
 
 <code>Your account is pending. Please wait up to 24 hours for email confirmation and also check your
-spam folder. If you still have not received your email confirmation, contact <a href="http://ibm.biz/bluemixsupport.com" target="_blank">Bluemix Support</a>.</code>
+spam folder. If you still have not received your email confirmation, contact <a href="http://ibm.biz/bluemixsupport.com" target="_blank">Bluemix Support <img src="../icons/launch-glyph.svg" alt="External link icon"></a>.</code>
 
 
 Dopo aver eseguito la registrazione per un account di prova {{site.data.keyword.Bluemix_notm}},
@@ -166,7 +166,7 @@ che si trova nella email di conferma per completare il processo di registrazione
 {: tsCauses} 
 
 L'email di conferma viene inviata all'indirizzo di posta
-da te fornito. Controlla la cartella della posta in arrivo e quella della posta indesiderata. Se non hai ricevuto un'e-mail di conferma, contatta il [Supporto {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport.com){: new_window}.  
+da te fornito. Controlla la cartella della posta in arrivo e quella della posta indesiderata. Se non hai ricevuto un'e-mail di conferma, contatta il [{{site.data.keyword.Bluemix_notm}} Supporto ![icona link esterno](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}.  
 {: tsResolve}
 
 
@@ -228,7 +228,7 @@ un membro, devi eliminare il tuo account {{site.data.keyword.Bluemix_notm}} prec
 ed essere inviato a entrare a far parte dell'account come membro dell'organizzazione. Per eliminare il tuo account precedente ed entrare a far parte dell'account come membro,
 completa la seguente procedura: 
 
-  1. Contatta il [supporto {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport){: new_window} per aprire un ticket di supporto e richiedere l'eliminazione del tuo account. Se hai dei dati associati al tuo
+  1. Contatta il [{{site.data.keyword.Bluemix_notm}} Supporto ![icona link esterno](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window} per aprire un ticket di supporto e richiedere l'eliminazione del tuo account. Se hai dei dati associati al tuo
 account precedente che vuoi salvare e passare al nuovo account,
 includi queste informazioni nell'email. 
   2. Una volta eliminato il tuo account, fa sì che un utente con il ruolo di gestore
@@ -292,7 +292,7 @@ secondo necessità:
 riesegui l'accesso.
   * Utilizza la modalità di navigazione privata del tuo browser. 
   * Cancella i cookie e la cache del browser.
-  * Utilizza un browser differente. Per informazioni sulle versioni dei browser supportati da {{site.data.keyword.Bluemix_notm}}, consulta [Prerequisiti di {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}.
+  * Utilizza un browser differente. Per informazioni sulle versioni dei browser supportati da {{site.data.keyword.Bluemix_notm}}, consulta [Prerequisiti di {{site.data.keyword.Bluemix_notm}} ![icona link esterno](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}.
   * Se hai installato l'interfaccia riga di comando cf, immetti il comando `cf
 apps` per vedere se l'applicazione è in esecuzione.
   

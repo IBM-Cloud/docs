@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-09-29"
+  years: 2016, 2017
+lastupdated: "2017-02-03"
 
 ---
 
@@ -22,7 +22,7 @@ Connecting {{site.data.keyword.messagehub_full}} to {{site.data.keyword.iot_shor
 
 Before connecting a {{site.data.keyword.messagehub}} to your {{site.data.keyword.iot_short}} service, complete the following tasks:
 
-- Set up {{site.data.keyword.messagehub}} in the same {{site.data.keyword.Bluemix_notm}} space as your {{site.data.keyword.iot_short_notm}} by using the {{site.data.keyword.Bluemix_notm}} Catalog. For more information about {{site.data.keyword.messagehub}}, see the [Getting started with {{site.data.keyword.messagehub}}](https://console.{DomainName}/docs/services/MessageHub/index.html){: new_window}.
+- Set up {{site.data.keyword.messagehub}} in the same {{site.data.keyword.Bluemix_notm}} space as your {{site.data.keyword.iot_short_notm}} by using the {{site.data.keyword.Bluemix_notm}} Catalog. For more information about {{site.data.keyword.messagehub}}, see the [Getting started with {{site.data.keyword.messagehub}} ![External link icon](../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/services/MessageHub/index.html){: new_window}.
 
 - Ensure that you have developer privileges in the {{site.data.keyword.Bluemix_notm}} organization and that you are signed in via {{site.data.keyword.Bluemix_notm}}. If you are not signed in through {{site.data.keyword.Bluemix_notm}}, or do not have developer privileges in this {{site.data.keyword.Bluemix_notm}} organization, you are not able to authorize the binding of {{site.data.keyword.messagehub}} and the {{site.data.keyword.iot_short_notm}}.
 

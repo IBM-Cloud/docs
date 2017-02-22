@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2016
-lastupdated: "2016-09-27"
- 
+  years: 2016, 2017
+lastupdated: "2017-01-04"
+
 
 ---
 
@@ -406,7 +406,6 @@ wsk action create weather weather.js
 ```
 {
   "name": "my-action",
-  "version": "1.0.0",
   "main": "index.js",
   "dependencies" : {
     "left-pad" : "1.1.3"
@@ -428,7 +427,7 @@ exports.main = myAction;
 ```
 {: codeblock}
 
-请注意，操作将通过 `exports.main` 公开；操作处理程序本身可以具有任何名称，只要名称符合接受对象和返回对象（或对象的 `Promise`）的通常特征符即可。
+请注意，操作将通过 `exports.main` 公开；操作处理程序本身可以具有任何名称，只要名称符合接受对象和返回对象（或对象的 `Promise`）的通常特征符即可。根据 Node.js 约定，您必须将此文件命名为 `index.js`，或者将您偏好的文件名指定为 package.json 中的 `main` 属性。
 
 要通过此包创建 OpenWhisk 操作，请执行以下操作：
 
@@ -670,11 +669,13 @@ jar cvf hello.jar Hello.class
 可以按如下所示从此 JAR 文件创建名为 `helloJava` 的 OpenWhisk 操作：
 
 ```
-wsk action create helloJava hello.jar
+wsk action create helloJava hello.jar --main Hello
 ```
 {: pre}
 
 使用命令行和 `.jar` 源文件时，无需指定您要创建 Java 操作；该工具会根据文件扩展名来进行确定。
+
+您需要使用 `--main` 来指定主类的名称。符合要求的主类是实现了如上所述静态 `main` 方法的主类。如果该类不在缺省包中，请使用 Java 标准类名，例如 `--main com.example.MyMain`。
 
 Java 操作的操作调用与 Swift 和 JavaScript 操作的操作调用相同：
 
@@ -689,8 +690,6 @@ wsk action invoke --blocking --result helloJava --param name World
   }
 ```
 {: screen}
-
-**注：**如果 JAR 文件具有多个类并且 main 方法与必需的特征符相匹配，那么 CLI 工具会使用 `jar -tf` 报告的第一个类。
 
 
 ## 创建 Docker 操作
@@ -754,10 +753,6 @@ docker login -u janesmith -p janes_password
   {: pre}
   ```
 cd dockerSkeleton
-  ```
-  {: pre}
-  ```
-  chmod +x buildAndPush.sh
   ```
   {: pre}
   ```
@@ -864,3 +859,14 @@ wsk action list
 actions
   ```
   {: screen}
+  
+## 访问操作体中的操作元数据
+
+操作环境包含多个特定于运行中操作的属性。这些属性允许操作以编程方式通过 REST API 来使用 OpenWhisk 资产，或者允许设置在操作即将耗尽其分配的时间预算时发出内部警报。使用 OpenWhisk Docker 框架时，这些属性可通过所有受支持运行时的系统环境进行访问：Node.js、Python、Swift、Java 和 Docker 操作。
+
+* `__OW_API_HOST`：运行此操作的 OpenWhisk 部署的 API 主机
+* `__OW_API_KEY`：调用此操作的主题的 API 密钥，此密钥可能是受限制的 API 密钥
+* `__OW_NAMESPACE`：*激活*的名称空间（这可能与操作的名称空间不同）
+* `__OW_ACTION_NAME`：运行中操作的标准名称
+* `__OW_ACTIVATION_ID`：此运行中操作实例的激活标识
+* `__OW_DEADLINE`：此操作将耗尽整个持续时间配额时的近似时间（以戳记毫秒为度量单位）

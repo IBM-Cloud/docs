@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-20"
+  years: 2016, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -34,7 +34,7 @@ Completa i seguenti passi per creare un progetto con uno starter IU:
 	
 	4. Immetti un nome per il tuo progetto e seleziona **Crea**.
 	
-2. Effettua le tue selezioni nella schermata **Panoramica progetto**.  La schermata **Panoramica progetto** visualizza le informazioni sul tuo progetto e sulle funzionalità facoltative che puoi aggiungere al tuo progetto come Push Notifications.  
+2. Effettua le tue selezioni nella schermata **Panoramica progetto**.  La schermata **Panoramica progetto** visualizza le informazioni sul tuo progetto e sulle funzionalità facoltative che puoi aggiungere al tuo progetto come {{site.data.keyword.mobilepushshort}}.  
 
 	1. Facoltativo: seleziona **Aggiungi** per aggiungere una delle funzionalità elencate al tuo progetto. Modifica il **Nome servizio** per il tuo servizio e fai clic su **Crea**. Quando aggiungi i servizi al tuo progetto, ti colleghi alla pagina {{site.data.keyword.Bluemix_notm}} per tale servizio. Configura il servizio fornendo le informazioni obbligatorie per esso.
 	
@@ -42,7 +42,7 @@ Completa i seguenti passi per creare un progetto con uno starter IU:
 
 3. Progetta la tua interfaccia utente utilizzando il builder IU.
 
-   Nota: poiché gli starter codice non dispongono di un'interfaccia utente personalizzabile, la scheda *Progettazione* non è disponibile.
+   **Nota:** poiché gli starter codice non dispongono di un'interfaccia utente personalizzabile, la scheda *Progettazione* non è disponibile.
 
     1. Seleziona **Builder IU** nel menu di navigazione per personalizzare la progettazione della tua applicazione. 
 	
@@ -51,7 +51,7 @@ Completa i seguenti passi per creare un progetto con uno starter IU:
 	2. Personalizza il tuo layout dell'applicazione dalla scheda **Schermate**.
 	
 	3. Aggiungi nuove schermate selezionando **Crea schermata**. Denomina una nuova schermata per rendere più facile il riferimento alla tua applicazione. Puoi scegliere tra i seguenti tipi di schermata: 
-	    * Menu
+		* Menu
 		* Elenco
 		* Associazione
 		* Personalizzata 
@@ -71,22 +71,23 @@ Completa i seguenti passi per creare un progetto con uno starter IU:
 		* Excel Online
 		* Google Drive
 	
-	Puoi anche importare, esportare o modificare il contenuto presente nella tabella, se in locale, utilizzando i pulsanti e selezionando il contenuto nella tabella.
+		Puoi anche importare, esportare o modificare il contenuto presente nella tabella, se in locale, utilizzando i pulsanti e selezionando il contenuto nella tabella.
 	     
-		 Nota: se importi dati che non corrispondono alla struttura dei dati predefiniti, attiva lo slider *Sostituisci schema*. Un esempio di questo è un file .csv con meno colonne rispetto ai dati forniti con il tuo starter.
+		**Nota:** se importi dati che non corrispondono alla struttura dei dati predefiniti, attiva lo slider *Sostituisci schema*. Un esempio di questo è un file .csv con meno colonne rispetto ai dati forniti con il tuo starter.
 		 
-	6. Seleziona **Accesso utente** nella navigazione per modificare i requisiti di accesso al tuo progetto. Puoi attivare/disattivare l'accesso utente con lo switch. Quando l'accesso utente è attivo, puoi impostare il timeout utente di inattività e le credenziali degli utenti che possono accedere all'applicazione.
+	6. Seleziona **Navigazione** per personalizzare le azioni di navigazione nella tua applicazione. Questa opzione è facoltativa perché per molte schermate le azioni di navigazione vengono create automaticamente in base alle relazioni delle schermate. Puoi modificare la schermata di destinazione selezionando la schermata o il campo *da* cui vuoi navigare nell'elenco delle voci di menu. Seleziona quindi la schermata *verso* cui vuoi navigare nel campo della schermata di destinazione.  
+		 
+	7. Seleziona **Accesso utente** nella navigazione per modificare i requisiti di accesso al tuo progetto. Puoi attivare/disattivare l'accesso utente con lo switch. Quando l'accesso utente è attivo, puoi impostare il timeout utente di inattività e le credenziali degli utenti che possono accedere all'applicazione.
 	
-	7. Seleziona **Impostazioni** nel menu di navigazione per modificare le informazioni generali e i colori per il tuo progetto. Questa schermata è dove immetti la chiave API Google, se necessaria per le funzionalità che hai aggiunto al tuo progetto. Questa schermata è inoltre dove aggiungi il tuo identificativo bundle univoco registrato con l'Apple Store o il Google Play Store.
+	8. Seleziona **Impostazioni** nel menu di navigazione per modificare le informazioni generali e i colori per il tuo progetto. Questa schermata è dove immetti la chiave API Google, se necessaria per le funzionalità che hai aggiunto al tuo progetto. Questa schermata è inoltre dove aggiungi il tuo identificativo bundle univoco registrato con l'Apple Store o il Google Play Store.
 	
 		Se desideri aggiungere l'SDK IBM MobileFirst Foundation al tuo progetto, attiva lo switch.
 		
-	8. Se hai attivato lo switch per aggiungere IBM MobileFirst Platform Foundation al tuo progetto nella schermata *Impostazioni*, viene visualizzata una selezione **Foundation** nella navigazione. Seleziona **Foundation** e completa le informazioni necessarie specifiche per IBM MobileFirst Platform Foundation.
+	9. Se hai attivato lo switch per aggiungere IBM MobileFirst Platform Foundation al tuo progetto nella schermata *Impostazioni*, viene visualizzata una selezione **Foundation** nella navigazione. Seleziona **Foundation** e completa le informazioni necessarie specifiche per IBM MobileFirst Platform Foundation.
 	
-	9. Seleziona **Pubblica** nel menu di navigazione per immettere le informazioni finali per creare la tua applicazione mobile. Puoi immettere il tuo identificativo Bundle per iOS e l'identificativo Applicazione per Android.
+	10. Seleziona **Pubblica** nel menu di navigazione per immettere le informazioni finali per creare la tua applicazione mobile. Puoi immettere il tuo identificativo Bundle per iOS e l'identificativo Applicazione per Android.
 	
-	Se stai creando un'applicazione iOS, devi ottenere il tuo identificativo bundle, il tuo certificato di distribuzione come ad esempio un file *.p12* e il tuo profilo di provisioning come un file *.mobileprovision* dal portale di provisioning di Apple. Possono essere creati contemporaneamente e con lo stesso computer che utilizzerai quando invierai la tua applicazione all'Apple store. Il certificato di distribuzione e il profilo di provisioning devono basarsi sull'identificativo bundle. 	
-
-4.  Torna alla schermata *Panoramica progetto* per richiamare il codice per la tua applicazione e provalo! Puoi scaricare il codice direttamente per i sistemi operativi iOS o Android o scansionando un codice QR per il sistema operativo Android. 
+		Se stai creando un'applicazione iOS, devi ottenere il tuo identificativo bundle, il tuo certificato di distribuzione come ad esempio un file `.p12` e il tuo profilo di provisioning come un file `.mobileprovision` dal portale di provisioning di Apple. Possono essere creati contemporaneamente e con lo stesso computer che utilizzerai quando invierai la tua applicazione all'Apple store. Il certificato di distribuzione e il profilo di provisioning devono basarsi sull'identificativo bundle. 	
+4. Torna alla schermata *Panoramica progetto* per richiamare il codice per la tua applicazione e provalo! Puoi scaricare il codice direttamente per i sistemi operativi iOS o Android o scansionando un codice QR per il sistema operativo Android. 
 
 

@@ -4,9 +4,9 @@
 
 copyright:
 
-  2014, 2016
+  years: 2014, 2017
   
-lastupdated: "2016-10-19"
+lastupdated: "2017-01-11"
 
  
 
@@ -25,8 +25,7 @@ proposant des choix clairs pour le développement d'applications sécurisé.
 {:shortdesc}
 
 {{site.data.keyword.Bluemix_notm}} assure la sécurité en appliquant des règles de sécurité respectant les meilleurs pratiques d'IBM en matière de systèmes, de réseau et d'ingénierie
-sécurisée. Ces règles incluent des pratiques telles que l'analyse du code source, l'analyse dynamique, la modélisation des menaces et des tests de pénétration. {{site.data.keyword.Bluemix_notm}} suit le processus IBM Product Security Incident Response Team (PSIRT) pour la gestion des incidents de sécurité. Pour plus de détails, voir le site [IBM Security Vulnerability Management
-(PSIRT)](http://www-03.ibm.com/security/secure-engineering/process.html){: new_window}.
+sécurisée. Ces règles incluent des pratiques telles que l'analyse du code source, l'analyse dynamique, la modélisation des menaces et des tests de pénétration. {{site.data.keyword.Bluemix_notm}} suit le processus IBM Product Security Incident Response Team (PSIRT) pour la gestion des incidents de sécurité. Pour plus de détails, voir le site [IBM Security Vulnerability Management (PSIRT) ![icône de lien externe](../icons/launch-glyph.svg)](http://www-03.ibm.com/security/secure-engineering/process.html){: new_window}.
 
 Les environnements {{site.data.keyword.Bluemix_notm}} public et dédié utilisent les services cloud d'infrastructure sous forme de services
 (IaaS) {{site.data.keyword.BluSoftlayer}} et profitent pleinement de son architecture sécurisée. L'infrastructure
@@ -277,8 +276,7 @@ vulnérabilités en matière de sécurité. Pour plus d'informations, voir [Init
 Le plug-in IBM Application Security Testing for {{site.data.keyword.Bluemix_notm}} vous permet d'exécuter des analyses de sécurité pour vos
 applications Web ou Android qui sont hébergées dans {{site.data.keyword.Bluemix_notm}}. Il est développé par la communauté IBM UrbanCode. Deploy Community, qui assure son support, sur la plateforme IBM Bluemix DevOps Services.
 
-Pour plus d'informations, voir [IBM
-Application Security Testing for Bluemix](https://developer.ibm.com/urbancode/plugindoc/ibmucd/ibm-application-security-testing-bluemix/1-0/){: new_window}.
+Pour plus d'informations, voir [IBM Application Security Testing for Bluemix ![icône de lien externe](../icons/launch-glyph.svg)](https://developer.ibm.com/urbancode/plugindoc/ibmucd/ibm-application-security-testing-bluemix/1-0/){: new_window}.
 
 ### dashDB
 
@@ -298,7 +296,7 @@ Pour plus d'informations, voir [Initiation à Secure Gateway](/docs/services/Sec
 
 ### Gestion des événements et des informations de sécurité
 
-Vous pouvez utiliser les outils SIEM (gestion des événements et informations de sécurité) pour analyser les alertes de sécurité dans les journaux d'application. L'un de ces outils est IBM Security QRadar&reg; SIEM, qui fournit la sécurité intérieure dans les environnements de cloud. Pour des informations, voir [IBM QRadar Security Intelligence Platform](http://www-01.ibm.com/support/knowledgecenter/SS42VS/welcome?lang=en){: new_window}.
+Vous pouvez utiliser les outils SIEM (gestion des événements et informations de sécurité) pour analyser les alertes de sécurité dans les journaux d'application. L'un de ces outils est IBM Security QRadar&reg; SIEM, qui fournit la sécurité intérieure dans les environnements de cloud. Pour plus d'informations, voir [IBM QRadar Security Intelligence Platform ![icône de lien externe](../icons/launch-glyph.svg)](http://www-01.ibm.com/support/knowledgecenter/SS42VS/welcome?lang=en){: new_window}.
 
 ## Déploiement de la sécurité {{site.data.keyword.Bluemix_notm}}
 {: #security-deployment}
@@ -359,10 +357,7 @@ physique et des analyses au sein de votre pare-feu.
 {{site.data.keyword.Bluemix}} fournit une plateforme cloud sécurisée, digne de confiance. La conformité {{site.data.keyword.Bluemix_notm}} résulte d'une plateforme et de services générés avec les meilleures normes de sécurité de l'industrie, notamment ISO 27001 et ISO 27002.
 {:shortdesc}
 
-![Clause contractuelle de protection des données dans l'Union européenne](images/icon_eumc.png)  Une **clause contractuelle de l'Union européenne (UE)** est un accord conçu pour protéger les données personnelles transférées de l'Union européenne ou de l'Espace économique européen (EEE) vers un pays tiers. La clause contractuelle de l'Union européenne (UE) est signée entre le client qui se trouve dans l'UE ou l'EEE (l'exportateur de données) et le
-processeur de
-données IBM qui se trouve dans le pays tiers (l'importateur de données). La clause [IBM
-SaaS EU Model Clause](http://www-01.ibm.com/common/ssi/cgi-bin/ssialias?subtype=ST&infotype=SA&htmlfid=KUJ12408USEN&attachment=KUJ12408USEN.PDF){: new_window} comprend les droits et les obligations de l'exportateur de données et de l'importateur de données, ainsi que les droits des personnes concernées. La clause IBM SaaS EU Model Clause garantit que les données personnelles, lorsqu'elles sont traitées dans un pays tiers, sont protégées de la même manière que dans l'UE ou l'EEE.
+![Clause contractuelle de protection des données dans l'Union européenne](images/icon_eumc.png)  Une **clause contractuelle de l'Union européenne (UE)** est un accord conçu pour protéger les données personnelles transférées de l'Union européenne ou de l'Espace économique européen (EEE) vers un pays tiers. La clause contractuelle de l'Union européenne (UE) est signée entre le client qui se trouve dans l'UE ou l'EEE (l'exportateur de données) et le processeur de données IBM qui se trouve dans le pays tiers (l'importateur de données). La clause [IBM SaaS EU Model Clause ![icône de lien externe](../icons/launch-glyph.svg)](http://www-01.ibm.com/common/ssi/cgi-bin/ssialias?subtype=ST&infotype=SA&htmlfid=KUJ12408USEN&attachment=KUJ12408USEN.PDF){: new_window} comprend les droits et les obligations de l'exportateur de données et de l'importateur de données, ainsi que les droits des personnes concernées. La clause IBM SaaS EU Model Clause garantit que les données personnelles, lorsqu'elles sont traitées dans un pays tiers, sont protégées de la même manière que dans l'UE ou l'EEE.
 
 Pour les clients qui souhaitent transférer des données provenant de l'Espace économique européen (EEE) vers un pays hors de l'EEE,
 {{site.data.keyword.Bluemix}} propose des clauses contractuelles européennes dans le formulaire approuvé par les autorités de protection
@@ -371,10 +366,7 @@ données requise partout dans le monde.
 
 ![Financial Industry Information Systems - FISC](images/FISC.gif) Pour les institutions bancaires et financières au Japon, les systèmes informatiques doivent avoir mis en place des procédures de sécurité, en accord avec les directives de sécurité établies par le FISC (Center for Financial Industry Information Systems). Les directives de sécurité du FISC sont imposées par l'agence japonaise FSA (Financial Services Agency), la banque BOJ (Bank of
 Japan) et le FISC.
-
-Vous trouverez un document d'auto-évaluation {{site.data.keyword.Bluemix_notm}} correspondant aux directives en matière de sécurité du
-FISC, écrit en langue japonaise, sur le site [IBM Bluemix risk survey
-results](https://www.ibm.com/cloud-computing/jp/ja/bluemix_fisc.html){: new_window}.
+ 
 
 ![ISO 27001/2](images/icon_iso27k1.png)  {{site.data.keyword.Bluemix_notm}} est certifié conformément aux **normes
 ISO
@@ -390,7 +382,7 @@ en matière de sécurité des informations ayant un impact sur la confidentialit
 clients. Cette norme met l'accent sur la mesure et l'évaluation des performances du système de gestion de la sécurité informatique d'une organisation et
 inclut également des contrôles liés à la sécurité des informations, qui reposent sur des exigences système et d'autres exigences.
 
-{{site.data.keyword.Bluemix_notm}} fait l'objet d'un audit par une firme indépendante et répond à toutes les exigences de la norme ISO 27001 : [Bluemix ISO 27001:2013 Certificate of Registration](ftp://public.dhe.ibm.com/cloud/bluemix/compliance/Bluemix_ISO27K1_WWCert_2016.pdf){: new_window}.
+{{site.data.keyword.Bluemix_notm}} fait l'objet d'un audit par une firme indépendante et répond à toutes les exigences de la norme ISO 27001 : [Bluemix ISO 27001:2013 Certificate of Registration ![icône de lien externe](../icons/launch-glyph.svg)](ftp://public.dhe.ibm.com/cloud/bluemix/compliance/Bluemix_ISO27K1_WWCert_2016.pdf){: new_window}.
 
 ![PCI DSS](images/icon_pci.png) **Payment Card Industry (PCI) Data Security Standards (DSS)** est une norme de
 sécurité des informations qui a été conçue pour protéger les données de carte de crédit. Elle s'applique à toutes les entités impliquées dans le traitement
@@ -404,11 +396,7 @@ protection des données sur les titulaires de carte et requièrent souvent la va
 sécurité qualifié (QSA) indépendant. L'attestation de conformité peut être utilisée avec le rapport SOC 2 et la certification ISO 27001 afin de prouver que
 l'infrastructure satisfait les contrôles PCI.
 
-{{site.data.keyword.Bluemix}} procède à une évaluation PCI DSS annuelle à l'aide d'un évaluateur de sécurité qualifié (QSA) approuvé. {{site.data.keyword.Bluemix_notm}}
-est compatible conformément à la norme PCI DSS version 3.1 au niveau de fournisseur de services 1, comme énoncé dans [Bluemix PCI DSS AOC](ftp://public.dhe.ibm.com/cloud/bluemix/compliance/IBM_Bluemix_PCI){: new_window}. Pour
-des informations et de l'aide relatives à la conformité à la norme PCI DSS pour votre environnement {{site.data.keyword.Bluemix_notm}}, prenez
-contact avec le service commercial
-depuis la page [Contactez-nous](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs){: new_window}.
+{{site.data.keyword.Bluemix}} procède à une évaluation PCI DSS annuelle à l'aide d'un évaluateur de sécurité qualifié (QSA) approuvé. {{site.data.keyword.Bluemix_notm}} est compatible conformément à la norme PCI DSS version 3.1 au niveau de fournisseur de services 1, comme énoncé dans [Bluemix PCI DSS AOC ![icône de lien externe](../icons/launch-glyph.svg)](ftp://public.dhe.ibm.com/cloud/bluemix/compliance/IBM_Bluemix_PCI.pdf){: new_window}. Pour des informations et de l'aide relatives à la conformité à la norme PCI DSS pour votre environnement {{site.data.keyword.Bluemix_notm}}, prenez contact avec le service commercial depuis la page [Contactez-nous ![icône de lien externe](../icons/launch-glyph.svg)](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs){: new_window}.
 
 ![SSAE16 SOC1/2/3](images/icon_aicpa.png) Les rapports **Service Organization Controls (SOC)** définissent l'évaluation des pratiques de contrôle interne exemplaires liées à la sécurité, l'accessibilité, l'intégrité du traitement, la confidentialité et la protection des données personnelles au sein d'une organisation de services. Ces rapports générés à partir du guide de l'AICPA (American Institute of Certified Public Accountants) comprennent les éléments suivants : 
   * Supervision de l'organisation
@@ -416,7 +404,7 @@ depuis la page [Contactez-nous](https://console.ng.bluemix.net/?direct=classic/#
   * Processus internes de gouvernance d'entreprise et de gestion des risques
   * Régime réglementaire de surveillance
  
-{{site.data.keyword.Bluemix_notm}} met à disposition des rapports SOC 1, SOC 2 et SOC 3. Pour plus d'informations, prenez contact avec l'[équipe commerciale {{site.data.keyword.Bluemix_notm}}](mailto:bmxcert1@us.ibm.com){:new_window}. 
+{{site.data.keyword.Bluemix_notm}} met à disposition des rapports SOC 1, SOC 2 et SOC 3. Pour plus d'informations, prenez contact avec l'[équipe commerciale {{site.data.keyword.Bluemix_notm}} ![icône de lien externe](../icons/launch-glyph.svg)](mailto:bmxcert1@us.ibm.com){:new_window}. 
 
 
 ![HIPAA](images/icon_hipaa.png) La loi Health Insurance Portability and Accountability Act (HIPAA), adoptée par le congrès
@@ -426,9 +414,7 @@ Etats-Unis. Elle englobe la réglementation de la
 loi de 1996, ainsi que des exigences de confidentialité de la loi Health Information Technology for Economic and Clinical Health (HITECH) Act de 2009. {{site.data.keyword.Bluemix_notm}}
 satisfait toutes les exigences de la loi HIPAA en ce qui concerne les centres de données ou les fournisseurs de services.
 
-Pour plus d'informations ou de l'aide afin d'assurer la conformité à la loi HIPAA pour votre environnement
-Bluemix, de la certifier et de la conserver, prenez contact avec le [service
-commercial](mailto:cloudplatform_compliance@us.ibm.com){:new_window} de {{site.data.keyword.Bluemix_notm}}.
+Pour plus d'informations ou de l'aide afin d'assurer la conformité à la loi HIPAA pour votre environnement Bluemix, de la certifier et de la conserver, prenez contact avec le [service commercial ![icône de lien externe ](../icons/launch-glyph.svg)](mailto:cloudplatform_compliance@us.ibm.com){:new_window} {{site.data.keyword.Bluemix_notm}}.
 
 
 ![ISO 27017](images/icon_ISO27017.png) La norme ISO/IEC 27017:2015 fournit des directives pour les contrôles de sécurité des
@@ -489,5 +475,5 @@ Le tableau ci-dessous indique quels sont les services dans {{site.data.keyword.B
 ## Liens connexes
 {: #general}
 
-* [Sécurité d'IBM SaaS](http://www.ibm.com/cloud-computing/built-on-cloud/saas-security)
+* [IBM SaaS security ![icône de lien externe](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/built-on-cloud/saas-security){: new_window}
 * [Initiation à Single Sign On](/docs/services/SingleSignOn/index.html)

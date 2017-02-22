@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2016
+  years: 2016, 2017
 
-lastupdated: "2016-10-14"
+lastupdated: "2017-01-12"
 
 ---
 
@@ -38,25 +38,25 @@ bluemix plugin uninstall private-network-peering
 
 **注**：切换到插件所在位置，或指定插件位置的路径。
 
-* 对于 Microsoft Windows 操作系统：  
+* 对于 Microsoft Windows 操作系统：
 
 ```
 bluemix plugin install private-network-peering-windows-amd64.exe
 ```
 
-* 对于 Apple MAC OS：  
+* 对于 Apple MAC OS：
 
 ```
 bluemix plugin install private-network-peering-darwin-amd64
 ```
 
-* 对于 Linux 操作系统：  
+* 对于 Linux 操作系统：
 
 ```
 bluemix plugin install private-network-peering-linux-amd64
 ```
 
-**注**：在为 Linux 操作系统安装插件时，如果看到错误消息指示许可权被拒绝，请运行以下命令并更改许可权：  
+**注**：在为 Linux 操作系统安装插件时，如果看到错误消息指示许可权被拒绝，请运行以下命令并更改许可权：
 
 ```
 chmod a+x ./private-network-peering-linux-amd64
@@ -66,16 +66,16 @@ chmod a+x ./private-network-peering-linux-amd64
 
 执行以下步骤以从 Bluemix 存储库安装插件：
 
-1. 添加 Bluemix 插件注册表端点：  
+1. 添加 Bluemix 插件注册表端点：
 	```
 	bluemix plugin repo-add bluemix-bx http://plugins.ng.bluemix.net
-	```  
+	```
 
 2. 运行以下命令：
 
 	```
 	bluemix plugin install private-network-peering -r bluemix-bx
-	```  
+	```
 
 ## 列出专用网络对等连接命令
 支持以下命令。使用 `bluemix network` 命令可查看可用命令的列表：
@@ -105,7 +105,7 @@ bluemix network pnp-routers [--verbose（或 -v）]
 ######命令示例
 {: #ex1}
 
-查看有关所有路由器的网络信息：  
+查看有关所有路由器的网络信息：
 
 	$ bluemix network pnp-routers
 	正在列出可用路由器...
@@ -117,7 +117,7 @@ bluemix network pnp-routers [--verbose（或 -v）]
 	129.41.238.212  default-router  容器    英国          ywu@us.ibm.com  demo3
 
 
-查看有关所有路由器的详细网络信息：  
+查看有关所有路由器的详细网络信息：
 
 
 	$ bluemix network pnp-routers -v
@@ -215,7 +215,7 @@ bluemix network pnp-show [--verbose（或 -v）]
 ######命令示例
 {: #ex4}
 
-查看基本信息：  
+查看基本信息：
 
 	$ bluemix network pnp-show
 	正在列出专用网络对等连接...

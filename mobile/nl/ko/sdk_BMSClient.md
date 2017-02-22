@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-07"
+  years: 2016, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -29,8 +29,8 @@ lastupdated: "2016-11-07"
 2. Android 애플리케이션의 기본 활동의 `onCreate` 메소드 내 또는 프로젝트에 가장 적합한 위치에 초기화 코드를 추가하여 Android 애플리케이션에서 `BMSClient` SDK를 초기화하십시오.
 
   ```Java
-	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_US_SOUTH); // Make sure that you point to your region
-	```
+  BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_US_SOUTH); // Make sure that you point to your region
+  ```
   {: codeblock}
 
   **bluemixRegion** 매개변수를 사용하여 `BMSClient`를 초기화해야 합니다. 초기자(initializer)에서 **bluemixRegion** 값은 사용 중인 {{site.data.keyword.Bluemix_notm}} 배치를 지정합니다(예: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK` 또는 `BMSClient.REGION_SYDNEY`). 
@@ -54,9 +54,9 @@ lastupdated: "2016-11-07"
 
   그런 다음 `pod install` 명령을 실행하고 생성된 `.xcworkspace` 파일을 여십시오. `BMSCore`의 새 릴리스로 업데이트하려면 `pod update BMSCore`를 사용하십시오. 
 
-  CocoaPods 사용에 대한 자세한 정보는 [CocoaPods Guides](https://guides.cocoapods.org/using/index.html){: new_window}를 참조하십시오. 
+  CocoaPods 사용에 대한 자세한 정보는 [CocoaPods 안내서 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://guides.cocoapods.org/using/index.html "외부 링크 아이콘"){: new_window}를 참조하십시오. 
 
-2. Carthage를 사용하여 `BMSCore`를 설치하려면 다음 [지시사항](https://github.com/Carthage/Carthage#getting-started){: new_window}을 따르십시오. 
+2. Carthage를 사용하여 `BMSCore`를 설치하려면 다음 [지시사항 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/Carthage/Carthage#getting-started "외부 링크 아이콘"){: new_window}을 따르십시오. 
 
   1. Cartfile에 다음 행을 추가하십시오. 
 
@@ -67,7 +67,7 @@ lastupdated: "2016-11-07"
 
   2. `carthage update` 명령을 실행하십시오. 
 
-  3. 빌드가 완료되면 Carthage 지시사항의 [3단계](https://github.com/Carthage/Carthage#getting-started)에 따라 프로젝트에 `BMSCore.framework`를 추가하십시오. 
+  3. 빌드가 완료되면 Carthage 지시사항의 [3단계 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/Carthage/Carthage#getting-started "외부 링크 아이콘")에 따라 `BMSCore.framework`를 프로젝트에 추가하십시오. 
 
       Swift 2.3으로 빌드된 애플리케이션의 경우 `carthage update --toolchain com.apple.dt.toolchain.Swift_2_3` 명령을 사용하십시오. 그 외의 경우에는 `carthage update` 명령을 사용하십시오. 
 
@@ -83,8 +83,8 @@ lastupdated: "2016-11-07"
   애플리케이션 위임의 `application(_:didFinishLaunchingWithOptions:)` 메소드 또는 프로젝트에 가장 적합한 위치에 초기화 코드를 배치하십시오.
 
   ```Swift
-    BMSClient.sharedInstance.initialize(bluemixRegion: BMSClient.Region.usSouth) // Make sure that you point to your region
-    ```
+  BMSClient.sharedInstance.initialize(bluemixRegion: BMSClient.Region.usSouth) // Make sure that you point to your region
+  ```
   {: codeblock}
 
   **bluemixRegion** 매개변수를 사용하여 `BMSClient`를 초기화해야 합니다. 초기자(initializer)에서 **bluemixRegion** 값은 사용 중인 {{site.data.keyword.Bluemix_notm}} 배치를 지정합니다(예: `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` 또는 `BMSClient.Region.sydney`). 

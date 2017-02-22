@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Nicht gebundenen {{site.data.keyword.mobilepushshort}}-Service für Android erstellen
 {: #create_android_unbound}
-Letzte Aktualisierung: 06. Dezember 2016
+Letzte Aktualisierung: 11. Januar 2017
 {: .last-updated}
 
 Erstellen Sie eine Instanz des {{site.data.keyword.mobilepushshort}}-Service. Sie können die Instanz des {{site.data.keyword.mobilepushshort}}-Service ohne Bindung an jegliche Back-End-Anwendung verwenden.

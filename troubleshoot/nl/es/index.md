@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
   
-lastupdated: "2016-08-11"
+lastupdated: "2017-01-11"
   
 
 ---
@@ -109,13 +109,13 @@ Si la cuenta está pendiente, no puede iniciar una sesión en {{site.data.keywor
 Después de registrarse para una cuenta de prueba de {{site.data.keyword.Bluemix_notm}}, es posible que no pueda iniciar una sesión en {{site.data.keyword.Bluemix_notm}}. Verá en su lugar el siguiente mensaje:
 {: tsSymptoms}
 
-<code>Su cuenta está pendiente. Debe esperar hasta 24 horas a recibir una confirmación por correo electrónico y debe comprobar la carpeta spam. Si transcurrido este tiempo no ha recibido la confirmación por correo electrónico, póngase en contacto con el <a href="http://ibm.biz/bluemixsupport.com" target="_blank">soporte de Bluemix</a>.</code>
+<code>Su cuenta está pendiente. Debe esperar hasta 24 horas a recibir una confirmación por correo electrónico y debe comprobar la carpeta spam. Si transcurrido este tiempo no ha recibido la confirmación por correo electrónico, póngase en contacto con el <a href="http://ibm.biz/bluemixsupport.com" target="_blank">equipo de soporte de Bluemix<img src="../icons/launch-glyph.svg" alt="icono de enlace externo"></a>.</code>
 
 
 Después de registrarse para una cuenta de prueba de {{site.data.keyword.Bluemix_notm}}, recibirá un correo electrónico de confirmación. Debe pulsar el enlace del correo electrónico de confirmación para completar el proceso de registro.
 {: tsCauses} 
 
-El correo electrónico de confirmación se envía a la dirección de correo electrónico que ha especificado. Consulte la bandeja de entrada de la carpeta de correo basura. Si no ha recibido el correo electrónico de confirmación, póngase en contacto con el soporte de [{{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport.com){: new_window}.  
+El correo electrónico de confirmación se envía a la dirección de correo electrónico que ha especificado. Consulte la bandeja de entrada de la carpeta de correo basura. Si no ha recibido el correo electrónico de confirmación, póngase en contacto con el [equipo de soporte de {{site.data.keyword.Bluemix_notm}}![icono de enlace externo](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}.  
 {: tsResolve}
 
 
@@ -170,7 +170,7 @@ para cambiar el rol. Para identificar el gestor de la organización, siga estos 
   
 Si no puede invitar usuarios porque es colaborador y no un miembro, debe suprimir la cuenta anterior de {{site.data.keyword.Bluemix_notm}} y luego se le debe invitar como un miembro de la organización. Para suprimir la cuenta anterior y unirse como miembro, complete los siguientes pasos: 
 
-  1. Póngase en contacto con el [Soporte de {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport){: new_window} para abrir una incidencia de soporte y solicitar que se suprima la cuenta. Si tiene datos asociados con su antigua cuenta que desea guardar y moverlos a la nueva cuenta, incluya es información en el correo. 
+  1. Póngase en contacto con el [equipo de soporte de {{site.data.keyword.Bluemix_notm}}![icono de enlace externo](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window} para abrir una incidencia de soporte y solicitar que se suprima la cuenta. Si tiene datos asociados con su antigua cuenta que desea guardar y moverlos a la nueva cuenta, incluya es información en el correo. 
   2. Cuando se suprima la cuenta, tendrá un usuario con el rol de gestor de la organización y le invitará a unirse como gestor. Luego, inicie sesión en {{site.data.keyword.Bluemix_notm}} desde la invitación. 
 
 
@@ -223,7 +223,7 @@ Puede llevar a cabo una o varias de estas acciones si es necesario:
   * Finalice la sesión de {{site.data.keyword.Bluemix_notm}} y vuélvala a iniciar.
   * Utilice la modalidad de navegación privada del navegador. 
   * Borre las cookies y la memoria caché del navegador.
-  * Utilice otro navegador. Para obtener información sobre las versiones de los navegadores a las que da soporte {{site.data.keyword.Bluemix_notm}}, consulte Requisitos previos de [{{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}.
+  * Utilice otro navegador. Para obtener información sobre las versiones de los navegadores a las que da soporte {{site.data.keyword.Bluemix_notm}}, consulte [Requisitos previos de {{site.data.keyword.Bluemix_notm}}![icono de enlace externo](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}.
   * Si ha instalado la interfaz de línea de mandatos cf, escriba el mandato `cf
 apps` para ver si la app se está ejecutando.
   
@@ -316,7 +316,7 @@ Para comprobar la versión de Java que IBM Eclipse Tools for Bluemix ejecuta, re
 
 Si la JVM del entorno de trabajos de IBM es IBM JVM 7 u 8, o una versión anterior de Oracle JVM 8, complete los siguientes pasos para conmutar a Oracle JVM 8:
 
-  1. Descargue y, a continuación, vuelva a instalar Oracle JVM 8, consulte [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window} para obtener detalles.
+  1. Descargue y, a continuación, vuelva a instalar Oracle JVM 8, consulte [Java SE Downloads ![icono de enlace externo](../icons/launch-glyph.svg)](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window} para obtener detalles.
   2. Reinicie Eclipse.
   3. Compruebe si la propiedad `eclipse.vm` apunta a la nueva instalación de Oracle JVM 8.
 
@@ -382,7 +382,7 @@ Asegúrese de haber creado un espacio en la organización actual.  Para crear un
   * En la interfaz de línea de mandatos cf, escriba `cf create-space <nombre_espacio> -o <nombre_organización>`.
 
 Inténtelo de nuevo. Si vuelve a ver este mensaje, vaya a la página [Estado de
-Bluemix](http://ibm.biz/bluemixstatus){: new_window} para comprobar si el servicio o el componente tienen algún problema.
+Bluemix ![icono de enlace externo](../icons/launch-glyph.svg)](http://ibm.biz/bluemixstatus){: new_window} para comprobar si el servicio o el componente tienen algún problema.
 
 
 
@@ -413,7 +413,7 @@ Para obtener el nivel de autorización adecuado, utilice uno de estos métodos:
 {: tsResolve}
  * Seleccione otra organización y otro espacio de los que tenga el rol de desarrollador. 
  * Pida al gestor de la organización que le cambie el rol a desarrollador o que cree un espacio y le asigne un rol de desarrollador. Consulte
-[Gestión de organizaciones y espacios](/docs/admin/orgs_spaces.html){: new_window} para obtener detalles.
+[Gestión de organizaciones y espacios](/docs/admin/orgs_spaces.html) para obtener detalles.
  
 
  
@@ -437,11 +437,11 @@ En lugar de codificar las credenciales en la app, utilice parámetros de conexi�
 ```
 process.env.VCAP_SERVICES
 ```
-Para obtener más información sobre los mandatos que puede utilizar en otros lenguajes de programación, consulte [Java](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} y [Ruby](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}. 
- 
+Para obtener más información sobre los mandatos que puede utilizar en otros lenguajes de programación, consulte [Java ![icono de enlace externo](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} y [Ruby ![icono de enlace externo](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}.
 
- 
- 
+
+
+
 
 
 
@@ -493,8 +493,7 @@ Otras causas menos habituales de un error de pasarela errónea son caídas del I
 
  
 
-Si cree que algún servicio de {{site.data.keyword.Bluemix_notm}} no está disponible, compruebe primero la página
-[Estado de {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixstatus){: new_window}. Como método alternativo, es posible que desee utilizar el servicio en otra región de {{site.data.keyword.Bluemix_notm}}. Hay disponible información detallada en [Utilización de servicios en otra región](/docs/services/reqnsi.html#cross_region_service){: new_window}. Si el estado del servicio es normal, pruebe los pasos siguientes para resolver el problema: 
+Si cree que algún servicio de {{site.data.keyword.Bluemix_notm}} no está disponible, consulte primero la página [Estado de {{site.data.keyword.Bluemix_notm}} ![icono de enlace externo](../icons/launch-glyph.svg)](http://ibm.biz/bluemixstatus){: new_window}. Como método alternativo, es posible que desee utilizar el servicio en otra región de {{site.data.keyword.Bluemix_notm}}. Hay disponible información detallada en [Utilización de servicios en otra región](/docs/services/reqnsi.html#cross_region_service). Si el estado del servicio es normal, pruebe los pasos siguientes para resolver el problema: 
 {: tsResolve}
 
   * Reintente la acción:
@@ -502,7 +501,7 @@ Si cree que algún servicio de {{site.data.keyword.Bluemix_notm}} no está dispo
 	* Utilice otro navegador.
 	* Rearranque el direccionador, el módem y el sistema. Rearrancar estos dispositivos puede borrar varios errores que provocan el error 502. 
   * Espere y vuelva a intentarlo más adelante. En algunas instancias, pueden ocurrir problemas temporales en el proveedor de servicios de Internet o en los servicios de {{site.data.keyword.Bluemix_notm}}. Puede esperar a que se resuelvan los problemas temporales.
-  * Si el problema todavía existe, póngase en contacto con el equipo de soporte de {{site.data.keyword.Bluemix_notm}}. Consulte [Cómo ponerse en contacto con el equipo de soporte de {{site.data.keyword.Bluemix_notm}}](/docs/support/index.html#contacting-bluemix-support){: new_window} para obtener más información. 
+  * Si el problema todavía existe, póngase en contacto con el equipo de soporte de {{site.data.keyword.Bluemix_notm}}. Consulte [Cómo ponerse en contacto con el equipo de soporte de {{site.data.keyword.Bluemix_notm}} ![icono de enlace externo](../icons/launch-glyph.svg)](/docs/support/index.html#contacting-bluemix-support){: new_window} para obtener más información.  
 
 
 
@@ -522,7 +521,7 @@ La cuota de disco predeterminada que se asigna para una app es de 1 GB. Si neces
 {: tsCauses}
 
  
-Utilice uno de estos métodos para especificar la cuota de disco. La cuota de disco máxima que puede especificar es de 2 GB. Si 2 GB todavía no es suficiente, pruebe un servicio externo, como [Object Store](/docs/services/ObjectStorage/index.html){: new_window}.
+Utilice uno de estos métodos para especificar la cuota de disco. La cuota de disco máxima que puede especificar es de 2 GB. Si 2 GB todavía no es suficiente, pruebe un servicio externo, como [Object Store](/docs/services/ObjectStorage/index.html).
 {: tsResolve}
 
   * En el archivo manifest.yml, añada el elemento siguiente:
@@ -562,10 +561,10 @@ Puede solucionar el problema de una de las siguientes formas:
   * Siga las instrucciones de la ventana que se abre en la consola de {{site.data.keyword.Bluemix_notm}}. Pulse el botón. Se abre otra ventana del navegador temporalmente. En dicha ventana, DevOps Services establece la cookie de autenticación.
   * En otro separador del navegador, vaya a https://hub.jazz.net e inicie una sesión. Vuelva a la consola de {{site.data.keyword.Bluemix_notm}} y renueve la página. Vuelva a pulsar **AÑADIR GIT**.
   * Cambie la configuración del navegador para habilitar cookies de terceros y pulse AÑADIR GIT. Para obtener detalles sobre cómo configurar los valores, consulte la documentación del navegador:
-    * [Mozilla Firefox](https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences#w_how-do-i-change-cookie-settings){: new_window}
-	* [Google Chrome](https://support.google.com/chrome/answer/95647){: new_window}
-	* [Apple Safari](https://support.apple.com/kb/PH17191){: new_window}
-	* [Microsoft Internet Explorer](http://windows.microsoft.com/en-us/internet-explorer/delete-manage-cookies#ie=ie-11){: new_window}
+    * [Mozilla Firefox ![icono de enlace externo](../icons/launch-glyph.svg)](https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences#w_how-do-i-change-cookie-settings){: new_window}
+	* [Google Chrome ![icono de enlace externo](../icons/launch-glyph.svg)](https://support.google.com/chrome/answer/95647){: new_window}
+	* [Apple Safari ![icono de enlace externo](../icons/launch-glyph.svg)](https://support.apple.com/kb/PH17191){: new_window}
+	* [Microsoft Internet Explorer ![icono de enlace externo](../icons/launch-glyph.svg)](http://windows.microsoft.com/en-us/internet-explorer/delete-manage-cookies#ie=ie-11){: new_window}
 Si estos métodos alternativos no solucionan el problema, envíe un correo electrónico a idslogin@jazz.net.
 
 
@@ -585,7 +584,7 @@ El servicio IBM Push utiliza Google Cloud Messaging (GCM) para enviar notificaci
 {: tsCauses}
 
  
-Como método alternativo, utilice servicios de terceros que no dependan del servicio GCM como, por ejemplo, [Pushy](https://pushy.me){: new_window}, [igetui](http://www.getui.com/){: new_window} y [jpush](https://www.jpush.cn/){: new_window}.
+Como método alternativo, utilice servicios de terceros que no dependan del servicio GCM como, por ejemplo, [Pushy ![icono de enlace externo](../icons/launch-glyph.svg)](https://pushy.me){: new_window}, [igetui ![icono de enlace externo](../icons/launch-glyph.svg)](http://www.getui.com/){: new_window} y [jpush ![icono de enlace externo](../icons/launch-glyph.svg)](https://www.jpush.cn/){: new_window}.
 {: tsResolve}
 
 
@@ -623,7 +622,7 @@ unbind-service <nombre_app> <nombre_instancia_servicio>`.
 	  2. Suprima la instancia de servicio escribiendo `cf delete-service <nombre_instancia_servicio>`.
 	  3. Después de suprimir la instancia de servicio, vuelva a transferir la app a la cual estaba enlazada la instancia de servicio escribiendo `cf
 restage <nombre_app>`.
-  * Para eliminar el límite del número de instancias de servicios que tiene, convierta su cuenta de prueba en una cuenta de pago. Para obtener más información sobre cómo convertir su cuenta de prueba en una cuenta de pago, consulte [Cómo cambiar su plan](/docs/pricing/index.html#changing){: new_window}.
+  * Para eliminar el límite del número de instancias de servicios que tiene, convierta su cuenta de prueba en una cuenta de pago. Para obtener más información sobre cómo convertir su cuenta de prueba en una cuenta de pago, consulte [Cómo cambiar su plan](/docs/pricing/index.html#changing).
 
   
   
@@ -679,7 +678,7 @@ Este error se produce cuando la cantidad de memoria que queda para la organizaci
 Puede aumentar la cuota de memoria de su cuenta o reducir la memoria que utilizan las apps.
 {: tsResolve} 
 
-  * Para aumentar la cuota de memoria de su cuenta, convierta su cuenta de prueba en una cuenta de pago. Para obtener más información sobre cómo convertir su cuenta de prueba en una cuenta de pago, consulte [Cuentas de pago](/docs/pricing/index.html#pay-accounts){: new_window}. 
+  * Para aumentar la cuota de memoria de su cuenta, convierta su cuenta de prueba en una cuenta de pago. Para obtener más información sobre cómo convertir su cuenta de prueba en una cuenta de pago, consulte [Cuentas de pago](/docs/pricing/index.html#pay-accounts). 
   * Para reducir la memoria que utilizan las apps, utilice la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} o la interfaz de línea de mandatos cf.
     Si utiliza la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}, siga estos pasos:
 	  1. En el Panel de control de {{site.data.keyword.Bluemix_notm}}, seleccione la app. Se abre la página de detalles de la app.
@@ -837,7 +836,7 @@ envía por push su app a {{site.data.keyword.Bluemix_notm}} utilizando
 las herramientas de Eclipse, primero debe crear un servidor de {{site.data.keyword.Bluemix_notm}}
 y especificar el punto final API de la región de {{site.data.keyword.Bluemix_notm}}
 en la que se ha creado su organización. Para obtener más información
-sobre el uso de las herramientas de Eclipse, consulte [Despliegue de apps con IBM Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html){: new_window}.  
+sobre el uso de las herramientas de Eclipse, consulte [Despliegue de apps con IBM Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html).  
   
   
 
@@ -983,7 +982,7 @@ Emprenda una de las siguientes acciones en función de la causa del problema:
         ```
 		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 		```
-	  * Utilice el archivo [package.json](https://docs.npmjs.com/json){: new_window}. Por ejemplo:
+	  * Utilice el archivo [package.json ![icono de enlace externo](../icons/launch-glyph.svg)](https://docs.npmjs.com/json){: new_window}. Por ejemplo:
 	    ```
 		{
       ...
@@ -1022,7 +1021,7 @@ Node.js para permitir que el paquete de compilación Node.js reconozca la app. A
  }
     ```
 	
-Para ver más sugerencias sobre las apps Node.js, consulte [Consejos para las apps Node.js](http://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}.	
+Para ver más sugerencias sobre las apps Node.js, consulte [Consejos para las apps Node.js ![icono de enlace externo](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}.	
 
 
 
@@ -1044,7 +1043,7 @@ El paquete de compilación de Liberty utiliza el archivo `server.xml` para confi
 
  
 
-Puede resolver este problema eliminando el archivo server.xml del proyecto. El paquete de compilación crea el archivo `server.xml` de forma dinámica cuando se envía la app como una aplicación WAR. Para obtener más información, consulte [Liberty for Java](/docs/runtimes/liberty/index.html){: new_window}.
+Puede resolver este problema eliminando el archivo server.xml del proyecto. El paquete de compilación crea el archivo `server.xml` de forma dinámica cuando se envía la app como una aplicación WAR. Para obtener más información, consulte [Liberty for Java](/docs/runtimes/liberty/index.html).
 {: tsResolve}
 	
 	
@@ -1065,7 +1064,7 @@ Este problema puede suceder si los scripts, como el script de detección, el scr
  
 
 Puede utilizar el mandato [git
-update](http://git-scm.com/docs/git-update-index){: new_window} para cambiar el permiso de cada script por ejecutable. Por ejemplo, puede escribir git update --chmod=+x script.sh.
+update ![icono de enlace externo](../icons/launch-glyph.svg)](http://git-scm.com/docs/git-update-index){: new_window} para cambiar el permiso de cada script por ejecutable. Por ejemplo, puede escribir git update --chmod=+x script.sh.
 {: tsResolve}
 	
 	
@@ -1087,7 +1086,7 @@ Este problema puede deberse a que DevOps Services necesita un archivo `manifest.
 
  
 
-Para solucionar este problema, debe crear un archivo `manifest.yml`. Para obtener más información sobre cómo crear un archivo `manifest.yml`, consulte [Manifiesto de la app](/docs/manageapps/depapps.html#appmanifest){: new_window}.
+Para solucionar este problema, debe crear un archivo `manifest.yml`. Para obtener más información sobre cómo crear un archivo `manifest.yml`, consulte [Manifiesto de la app](/docs/manageapps/depapps.html#appmanifest).
 {: tsResolve}	
 	
 
@@ -1288,7 +1287,7 @@ Si ha configurado su proyecto de GitHub para crear enlaces de elementos de traba
 6. Verifique que no hay errores comprobando de nuevo el icono de estado.
    ![Icono de estado sin errores](images/githubResolved_small.png)
 
-Para obtener más información, consulte [Configuración de GitHub para proyectos de Bluemix DevOps Services](https://hub.jazz.net/docs/githubhooks/){: new_window}.
+Para obtener más información, consulte [Configuración de GitHub para proyectos de Bluemix DevOps Services ![icono de enlace externo](../icons/launch-glyph.svg)](https://hub.jazz.net/docs/githubhooks/){: new_window}.
 
 
 # Resolución de problemas de gestión de cuentas
@@ -1318,7 +1317,7 @@ El estado de la cuenta de {{site.data.keyword.Bluemix_notm}} pasa a ser inactivo
 
  
 
-Para volver a activar la cuenta, póngase en contacto con el soporte de [{{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport.com){: new_window}. En el correo incluya la siguiente información:
+Para volver a activar la cuenta, póngase en contacto con el [equipo de soporte de {{site.data.keyword.Bluemix_notm}}![icono de enlace externo](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}. En el correo incluya la siguiente información:
 {: tsResolve}
 
   * El ID de IBM que utiliza para iniciar la sesión en {{site.data.keyword.Bluemix_notm}}.
@@ -1435,14 +1434,14 @@ Algunos paquetes de compilación no están configurados para descargar automáti
 Puede utilizar paquetes de compilación que tengan mecanismos incorporados para evitar que se carguen componentes obsoletos. Los siguientes paquetes de compilación son dos ejemplos: 
 {: tsResolve}
 
-  * [Paquete de compilación Java de Cloud Foundry](https://github.com/cloudfoundry/java-buildpack){: new_window}. Este paquete de compilación tiene un mecanismo incorporado para garantizar que se utiliza la versión más reciente del paquete de compilación. Para obtener más información sobre el funcionamiento de este mecanismo, consulte [extending-caches.md](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}. 
-  * [Paquete de compilación Node.js de Cloud Foundry](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}. Este paquete de compilación tiene una funcionalidad similar utilizando variables de entorno. Para habilitar el paquete de compilación Node.js para descargar módulos de nodo de Internet cada vez, escriba el siguiente mandato en la interfaz de línea de mandatos cf: 	
+  * [Paquete de compilación Java de Cloud Foundry ![icono de enlace externo](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack){: new_window}. Este paquete de compilación tiene un mecanismo incorporado para garantizar que se utiliza la versión más reciente del paquete de compilación. Para obtener más información sobre el funcionamiento de este mecanismo, consulte [extending-caches.md ![icono de enlace externo](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}. 
+  * [Paquete de compilación Node.js de Cloud Foundry ![icono de enlace externo](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}. Este paquete de compilación tiene una funcionalidad similar utilizando variables de entorno. Para habilitar el paquete de compilación Node.js para descargar módulos de nodo de Internet cada vez, escriba el siguiente mandato en la interfaz de línea de mandatos cf: 	
   ```
   set NODE_MODULES_CACHE=false
   ```
 Si el paquete de compilación que utiliza no ofrece un mecanismo para cargar los últimos componentes automáticamente, puede suprimir manualmente el contenido del directorio de memoria caché y volver a enviar por push la app efectuando los siguientes pasos:
-  1. Extraiga una rama de un paquete de compilación nulo como, por ejemplo, https://github.com/ryandotsmith/null-buildpack. Para obtener información sobre cómo extraer una rama, consulte [Conceptos básicos de Git - Obtención de un repositorio Git](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}.  
-  2. Añada la siguiente línea al archivo `null-buildpack/bin/compile` y confirme los cambios. Para obtener información sobre cómo confirmar cambios, consulte [Conceptos básicos sobre - Grabación de cambios en el repositorio](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}.
+  1. Extraiga una rama de un paquete de compilación nulo como, por ejemplo, https://github.com/ryandotsmith/null-buildpack. Para obtener información sobre cómo extraer una rama, consulte [Conceptos básicos de Git - Obtención de un repositorio Git ![icono de enlace externo](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}.  
+  2. Añada la siguiente línea al archivo `null-buildpack/bin/compile` y confirme los cambios. Para obtener información sobre cómo confirmar cambios, consulte [Conceptos básicos sobre Git - Grabación de cambios en el repositorio ![icono de enlace externo](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}.
   ```
   rm -rfv $2/*
   ```
@@ -1477,7 +1476,7 @@ Al enviar por push una app a Bluemix utilizando un paquete de compilación PHP, 
 
 
 
-En el paquete de compilación PHP, el parámetro error_log se utiliza para definir el nivel de registro. De forma predeterminada, el valor del parámetro `error_log` es **stderr notice**. El ejemplo siguiente muestra la configuración del nivel de registro predeterminado del archivo `nginx-defaults.conf` del paquete de compilación PHP que proporcionado por Cloud Foundry. Para obtener más información, consulte [cloudfoundry/php-buildpack](https://github.com/cloudfoundry/php-buildpack/blob/ff71ea41d00c1226d339e83cf2c7d6dda6c590ef/defaults/config/nginx/1.5.x/nginx-defaults.conf){: new_window}.
+En el paquete de compilación PHP, el parámetro error_log se utiliza para definir el nivel de registro. De forma predeterminada, el valor del parámetro `error_log` es **stderr notice**. El ejemplo siguiente muestra la configuración del nivel de registro predeterminado del archivo `nginx-defaults.conf` del paquete de compilación PHP que proporcionado por Cloud Foundry. Para obtener más información, consulte [cloudfoundry/php-buildpack ![icono de enlace externo](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/php-buildpack/blob/ff71ea41d00c1226d339e83cf2c7d6dda6c590ef/defaults/config/nginx/1.5.x/nginx-defaults.conf){: new_window}.
 {: tsCauses} 
 
 ```
@@ -1497,7 +1496,7 @@ daemon off;
 error_log stderr error;
 pid @{HOME}/nginx/logs/nginx.pid;
 ```
-Para obtener más información sobre cómo cambiar la configuración de registro, consulte [error_log](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}.
+Para obtener más información sobre cómo cambiar la configuración de registro, consulte [error_log ![icono de enlace externo](../icons/launch-glyph.svg)](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}.
 	
 
 ## No se puede importar una biblioteca Python de terceros en {{site.data.keyword.Bluemix_notm}}

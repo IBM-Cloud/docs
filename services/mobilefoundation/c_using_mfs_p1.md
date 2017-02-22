@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated:  "2017-01-17"
+lastupdated:  "2017-02-17"
 
 ---
 
@@ -11,7 +11,7 @@ lastupdated:  "2017-01-17"
 
 After you create the {{site.data.keyword.mobilefoundation_short}}: Developer service instance, in a few seconds, you can access the `Overview` page on {{site.data.keyword.Bluemix_notm}}, which provides you tutorials and videos to help you get started with the  {{site.data.keyword.mobilefoundation_short}} service.
 
-## Starting the {{site.data.keyword.mobilefirst}} server
+## Starting the MobileFirst server
 {: #start_mobilefoundation_p1}
 * To start the {{site.data.keyword.mfserver_short_notm}} with default settings, click **Start Basic Server**.
 
@@ -59,7 +59,7 @@ You can now delete the Mobile Analytics server that was added to the {{site.data
  This will delete the analytics container group. The process of deleting analytics containers takes about 10 minutes. You can refresh the screen to view the updated status. Once the analytics containers are deleted, the **Add Analytics** button is re-enabled, you can use this to add the Mobile Analytics server again if you choose to.
 
 
-## Re-creating the {{site.data.keyword.mobilefirst}} server
+## Re-creating the MobileFirst server
 {: #recreate_mobilefoundation_p1}
 
 *	Click **Recreate** to re-create the server.

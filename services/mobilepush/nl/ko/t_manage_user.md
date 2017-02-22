@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # 사용자 ID를 사용하여 디바이스 등록
 {: #register_device_with_userId}
-마지막 업데이트 날짜: 2016년 12월 7일
+마지막 업데이트 날짜: 2017년 1월 11일
 {: .last-updated}
 
 사용자 ID 기반 알림에 등록하려면 다음 단계를 완료하십시오. 
@@ -32,7 +32,7 @@ push.initialize(getApplicationContext(),"AppGUID", "clientSecret");
 - **AppGUID**: {{site.data.keyword.mobilepushshort}} 서비스의 AppGUID입니다. 
 - **clientSecret**: {{site.data.keyword.mobilepushshort}} 서비스의 clientSecret 키입니다. 
 
-  **registerDeviceWithUserId** API를 사용하여 {{site.data.keyword.mobilepushshort}}을 받을 디바이스를 등록하십시오. 
+  **registerDeviceWithUserId** API를 사용하여 {{site.data.keyword.mobilepushshort}}를 받을 디바이스를 등록하십시오. 
 ```
 // Register the device to {{site.data.keyword.mobilepushshort}}.
 push.registerDeviceWithUserId("userId",new MFPPushResponseListener<String>() {
@@ -52,12 +52,12 @@ push.registerDeviceWithUserId("userId",new MFPPushResponseListener<String>() {
 
 - **사용자 ID**: {{site.data.keyword.mobilepushshort}}에 등록하기 위한 고유 사용자 ID 값을 전달하십시오.
 
-**참고:** UserId로 대상이 지정되는 {{site.data.keyword.mobilepushshort}}을 사용하려면 UserId를 사용하여 디바이스를 등록하고 {{site.data.keyword.mobilepushshort}} 서비스가 프로비저닝될 때 할당되는 'clientSecret'을 전달해야 합니다. 올바른 clientSecret이 없으면 디바이스 등록에 실패합니다. 
+**참고:** UserId로 대상이 지정되는 {{site.data.keyword.mobilepushshort}}를 사용하려면 UserId를 사용하여 디바이스를 등록하고 {{site.data.keyword.mobilepushshort}} 서비스가 프로비저닝될 때 할당되는 'clientSecret'을 전달해야 합니다. 올바른 clientSecret이 없으면 디바이스 등록에 실패합니다. 
 
 ## Cordova
 {: cordova}
 
-다음 API를 사용하여 UserId 기반 {{site.data.keyword.mobilepushshort}}을 받도록 등록하십시오. 
+다음 API를 사용하여 UserId 기반 {{site.data.keyword.mobilepushshort}}를 받도록 등록하십시오. 
 
 ```
 // Register device for push notification with UserId
@@ -69,40 +69,6 @@ BMSPush.registerDevice(options,success, failure);
 
 - **사용자 ID**: {{site.data.keyword.mobilepushshort}}에 등록하기 위한 고유 사용자 ID 값을 전달하십시오.
 
-
-## Objective-C
-{: objc-register}
-
-다음 API를 사용하여 사용자 ID 기반 {{site.data.keyword.mobilepushshort}}을 받도록 등록하십시오. 
-```
-// Initialize the MFPPush
-IMFPushClient* push = [IMFPushClient sharedInstance];
-[push initializeWithAppGUID:@"appGUID" clientSecret:@"clientSecret"]; 
-```
-	{: codeblock}
-
-
-- **AppGUID**: {{site.data.keyword.mobilepushshort}} 서비스의 AppGUID입니다. 
-- **clientSecret**: {{site.data.keyword.mobilepushshort}} 서비스의 clientSecret 키입니다. 
-
-**registerWithUserId** API를 사용하여 {{site.data.keyword.mobilepushshort}}을 받을 디바이스를 등록하십시오. 
-```
-// Register the device to push notifications service.
-[push registerWithDeviceToken:deviceToken WithUserId:@"userId" completionHandler:^(IMFResponse *response, NSError *error) {
-    NSString *message=@"";
-	if (error){
-        message = [NSString stringWithFormat:@"Error registering for push notifications: %@", error.description];
-        NSLog(@"%@",message);
-    } else {
-        message=@"Successfully registered for push notifications";
-        NSLog(@"%@",message);
-    }
-}];
-```
-	{: codeblock}
-
-
-- **사용자 ID**: {{site.data.keyword.mobilepushshort}}에 등록하기 위한 고유 사용자 ID 값을 전달하십시오.
 
 ## Swift
 {: swift-register}
@@ -118,7 +84,7 @@ push.initializeWithAppGUID("appGUID", clientSecret:"clientSecret")
 - **AppGUID**: {{site.data.keyword.mobilepushshort}} 서비스의 AppGUID입니다. 
 - **clientSecret**: {{site.data.keyword.mobilepushshort}} 서비스의 clientSecret 키입니다. 
 
-**registerWithUserId** API를 사용하여 {{site.data.keyword.mobilepushshort}}을 받을 디바이스를 등록하십시오. 
+**registerWithUserId** API를 사용하여 {{site.data.keyword.mobilepushshort}}를 받을 디바이스를 등록하십시오. 
 
 ```
 // Register the device to Push Notifications service.

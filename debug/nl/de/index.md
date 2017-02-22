@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
   
-lastupdated: "2016-10-23"
+lastupdated: "2017-01-11"
 
 ---
 
@@ -26,17 +26,17 @@ ein Job erfolgreich ausgeführt wird oder ob er fehlschlägt. Sie enthalten auch
 relevante Informationen, die für Debugzwecke und zum Feststellen der Ursache eines Problems
 verwendet werden können.
 
-Protokolle haben ein festes Format. Bei ausführlichen Protokollen ist eine Filterung möglich; Sie können auch externe Protokollierungshosts zum Speichern und Verarbeiten der Protokolle verwenden. Weitere Informationen zu Protokollformaten, zum Anzeigen und Filtern von Protokollen sowie zur Konfiguration einer externen Protokollierung finden Sie im Abschnitt zur [Protokollierung für Apps, die in Cloud Foundry ausgeführt werden](/docs/monitor_log/monitoringandlogging.html#logging_for_bluemix_apps){: new_window}.
+Protokolle haben ein festes Format. Bei ausführlichen Protokollen ist eine Filterung möglich; Sie können auch externe Protokollierungshosts zum Speichern und Verarbeiten der Protokolle verwenden. Weitere Informationen zu Protokollformaten, zum Anzeigen und Filtern von Protokollen sowie zur Konfiguration einer externen Protokollierung finden Sie im Abschnitt zur [Protokollierung für Apps, die in Cloud Foundry ausgeführt werden](/docs/monitor_log/monitoringandlogging.html#logging_for_bluemix_apps).
 
 
 ## Staging-Fehler beheben
 {: #debugging-staging-errors}
-Beim Durchführen des Stagings für die Anwendungen unter Verwendung von {{site.data.keyword.Bluemix_notm}} können Fehler auftreten. Wenn die Durchführung des Stagings für eine App fehlschlägt, können Sie die STG-Protokolle durchsuchen und prüfen, um den während der Bereitstellung der App aufgetretenen Fehler zu ermitteln und das Problem zu beheben. Weitere Informationen zum Anzeigen von Protokollen für Bluemix-Apps finden Sie unter [Protokolle anzeigen](/docs/monitor_log/monitoringandlogging.html#viewing_logs){: new_window}.  
+Beim Durchführen des Stagings für die Anwendungen unter Verwendung von {{site.data.keyword.Bluemix_notm}} können Fehler auftreten. Wenn die Durchführung des Stagings für eine App fehlschlägt, können Sie die STG-Protokolle durchsuchen und prüfen, um den während der Bereitstellung der App aufgetretenen Fehler zu ermitteln und das Problem zu beheben. Weitere Informationen zum Anzeigen von Protokollen für Bluemix-Apps finden Sie unter [Protokolle anzeigen](/docs/monitor_log/monitoringandlogging.html#viewing_logs).  
 
-Um zu verstehen, warum in einer App unter {{site.data.keyword.Bluemix_notm}} ein Fehler auftritt, müssen Sie wissen, wie eine App unter {{site.data.keyword.Bluemix_notm}} bereitgestellt und ausgeführt wird. Detaillierte Informationen hierzu finden Sie in [Bereitstellung von Anwendung](/docs/manageapps/depapps.html#appdeploy){: new_window}.
+Um zu verstehen, warum in einer App unter {{site.data.keyword.Bluemix_notm}} ein Fehler auftritt, müssen Sie wissen, wie eine App unter {{site.data.keyword.Bluemix_notm}} bereitgestellt und ausgeführt wird. Detaillierte Informationen hierzu finden Sie in [Bereitstellung von Anwendung](/docs/manageapps/depapps.html#appdeploy).
 
 
-Anhand der folgenden Prozedur wird veranschaulicht, wie Sie mit dem Befehl `cf logs` Staging-Fehler beheben können. Stellen Sie vor der Ausführung der folgenden Schritte sicher, dass Sie die cf-Befehlszeilenschnittstelle installiert haben. Weitere Informationen zum Installieren der cf-Befehlszeilenschnittstelle finden Sie unter [cf-Befehlszeilenschnittstelle installieren](/docs/starters/install_cli.html){: new_window}.
+Anhand der folgenden Prozedur wird veranschaulicht, wie Sie mit dem Befehl `cf logs` Staging-Fehler beheben können. Stellen Sie vor der Ausführung der folgenden Schritte sicher, dass Sie die cf-Befehlszeilenschnittstelle installiert haben. Weitere Informationen zum Installieren der cf-Befehlszeilenschnittstelle finden Sie unter [cf-Befehlszeilenschnittstelle installieren](/docs/starters/install_cli.html).
 
   1. Stellen Sie durch Eingeben des folgenden Codes in der cf-Befehlszeilenschnittstelle eine Verbindung zu {{site.data.keyword.Bluemix_notm}} her:
      ```
@@ -110,12 +110,12 @@ Wenn während der Laufzeit der Anwendung Probleme auftreten, können Anwendungsp
 
 Insbesondere die Protokollierung der Standardausgabe (stdout) und Standardfehler (stderr) kann aktiviert sein. Weitere Informationen zum Konfigurieren der Protokolldateien für Anwendungen, die mit den integrierten {{site.data.keyword.Bluemix_notm}}-Buildpacks bereitgestellt wurden, finden Sie in der folgenden Liste:
 
-  * Informationen zu Liberty for Java™-Anwendungen finden Sie unter [Liberty Profile: Logging and Trace](http://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/rwlp_logging.html){: new_window}.
-  * Informationen zu Node.js-Anwendungen finden Sie unter [How to log in node.js](http://docs.nodejitsu.com/articles/intermediate/how-to-log){: new_window}.
-  * Informationen zu PHP-Anwendungen finden Sie unter [error_log](http://php.net/manual/en/function.error-log.php){: new_window}.
-  * Informationen zu Python-Anwendungen finden Sie unter [Logging HOWTO](https://docs.python.org/2/howto/logging.html){: new_window}.
-  * Informationen zu Ruby on Rails-Anwendungen finden Sie unter [The Logger](http://guides.rubyonrails.org/debugging_rails_applications.html#the-logger){: new_window}.
-  * Informationen zu Ruby Sinatra-Anwendungen finden Sie unter [Logging](http://www.sinatrarb.com/intro.html#Logging){: new_window}.
+  * Informationen zu Liberty for Java™-Anwendungen finden Sie unter [Liberty Profile: Logging and Trace ![Symbol für externen Link](../icons/launch-glyph.svg)](http://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/rwlp_logging.html){: new_window}.
+  * Informationen zu Node.js-Anwendungen finden Sie unter [How to log in node.js ![Symbol für externen Link](../icons/launch-glyph.svg)](http://docs.nodejitsu.com/articles/intermediate/how-to-log){: new_window}.
+  * Informationen zu PHP-Anwendungen finden Sie unter [error_log ![Symbol für externen Link](../icons/launch-glyph.svg)](http://php.net/manual/en/function.error-log.php){: new_window}.
+  * Informationen zu Python-Anwendungen finden Sie unter [Logging HOWTO ![Symbol für externen Link](../icons/launch-glyph.svg)](https://docs.python.org/2/howto/logging.html){: new_window}.
+  * Informationen zu Ruby on Rails-Anwendungen finden Sie unter [The Logger ![Symbol für externen Link](../icons/launch-glyph.svg)](http://guides.rubyonrails.org/debugging_rails_applications.html#the-logger){: new_window}.
+  * Informationen zu Ruby Sinatra-Anwendungen finden Sie unter [Logging ![Symbol für externen Link](../icons/launch-glyph.svg)](http://www.sinatrarb.com/intro.html#Logging){: new_window}.
 
 Wenn Sie `cf logs anwendungsname --recent` in die cf-Befehlszeilenschnittstelle eingeben, werden nur die neuesten Protokoll angezeigt. Wenn Sie Protokolle für Fehler anzeigen möchten, die früher aufgetreten sind, müssen Sie alle Protokolle abrufen und in ihnen nach den Fehlern suchen. Verwenden Sie zum Abrufen aller Protokolle für Ihre Anwendung eine der folgenden Methoden:
 <dl>
@@ -143,9 +143,9 @@ Wenn Sie Codeänderungen an einer App vornehmen, die schon bereitgestellt wurde 
 
 Je nachdem, wie der neue Code bereitgestellt wurde, können Sie für das Debugging der Codeänderungen eine der folgenden Methoden verwenden:
 
-  * Wenn der neue Code über die Befehlszeilenschnittstelle 'cf' bereitgestellt wurde, überprüfen Sie die Ausgabe des Befehls *cf push*. Darüber hinaus können Sie mit dem Befehl *cf logs* weitere Hinweise zur Lösung des Problems erhalten. Weitere Informationen zur Verwendung des Befehls *cf logs* finden Sie unter [Protokolle über die Befehlszeilenschnittstelle anzeigen](../monitor_log/monitoringandlogging.html#viewing_logs_cli){: new_window}.
+  * Wenn der neue Code über die Befehlszeilenschnittstelle 'cf' bereitgestellt wurde, überprüfen Sie die Ausgabe des Befehls *cf push*. Darüber hinaus können Sie mit dem Befehl *cf logs* weitere Hinweise zur Lösung des Problems erhalten. Weitere Informationen zur Verwendung des Befehls *cf logs* finden Sie unter [Protokolle über die Befehlszeilenschnittstelle anzeigen](/docs/monitor_log/monitoringandlogging.html#viewing_logs_cli).
 
-  * Wenn der neue Code über eine GUI wie z. B. die {{site.data.keyword.Bluemix_notm}}-Konsole, DevOps Delivery Pipeline oder Travis-CI bereitgestellt wird, können Sie die Protokolle über die Schnittstelle überprüfen. Wenn der neue Code beispielsweise über die {{site.data.keyword.Bluemix_notm}}-Konsole bereitgestellt wird, können Sie zum Dashboard wechseln, Ihre App suchen und die Protokolle auf Suchhinweisbegriffe überprüfen.   Weitere Informationen zum Anzeigen von Protokollen über die {{site.data.keyword.Bluemix_notm}}-Konsole finden Sie unter [Protokolle über das Bluemix-Dashboard anzeigen](../monitor_log/monitoringandlogging.html#viewing_logs_UI){: new_window}.  
+  * Wenn der neue Code über eine GUI wie z. B. die {{site.data.keyword.Bluemix_notm}}-Konsole, DevOps Delivery Pipeline oder Travis-CI bereitgestellt wird, können Sie die Protokolle über die Schnittstelle überprüfen. Wenn der neue Code beispielsweise über die {{site.data.keyword.Bluemix_notm}}-Konsole bereitgestellt wird, können Sie zum Dashboard wechseln, Ihre App suchen und die Protokolle auf Suchhinweisbegriffe überprüfen.   Weitere Informationen zum Anzeigen von Protokollen über die {{site.data.keyword.Bluemix_notm}}-Konsole finden Sie unter [Protokolle über das Bluemix-Dashboard anzeigen](/docs/monitor_log/monitoringandlogging.html#viewing_logs_UI).  
 
 
 # Zugehörige Links
@@ -154,11 +154,11 @@ Je nachdem, wie der neue Code bereitgestellt wurde, können Sie für das Debuggi
 ## Allgemein
 {: #general}
 
-  * [Droplet Execution Agent (DEA)](http://docs.cloudfoundry.org/concepts/architecture/execution-agent.html){: new_window}
-  * [Erste Schritte mit dem IBM Bluemix-Service 'Monitoring and Analytics'](../services/monana/index.html#gettingstartedtemplate){: new_window}
-  * [Arbeitsweise von Bluemix](../overview/whatisbluemix.html#howwork){: new_window}
-  * [cf-Befehlstool installieren](../starters/install_cli.html){: new_window}
-  * [Protokolle anzeigen](../monitor_log/monitoringandlogging.html#viewing_logs){: new_window}
+  * [Droplet Execution Agent (DEA) ![Symbol für externen Link](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/concepts/architecture/execution-agent.html){: new_window}
+  * [Erste Schritte mit dem IBM Bluemix-Service 'Monitoring and Analytics'](/docs/services/monana/index.html#gettingstartedtemplate)
+  * [Arbeitsweise von Bluemix](/docs/overview/whatisbluemix.html#howwork)
+  * [cf-Befehlstool installieren](/docs/starters/install_cli.html)
+  * [Protokolle anzeigen](/docs/monitor_log/monitoringandlogging.html#viewing_logs)
 
   
   

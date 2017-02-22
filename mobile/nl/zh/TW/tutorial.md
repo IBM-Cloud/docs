@@ -1,11 +1,15 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-22"
+  years: 2016, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # Basic Code Starter 的完整指導教學
 {: #tutorial}
@@ -16,7 +20,7 @@ lastupdated: "2016-11-22"
 ### 安裝開發人員工具
 {: #dev_tools}
 
-請確定您已安裝[必備開發人員工具](get_code.html#prereq-dev-tools){: new_window}。
+確定您已安裝[必備的開發人員工具 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](get_code.html#prereq-dev-tools "外部鏈結圖示"){: new_window}。
 
 
 ### 從 Basic Code Starter 建立專案
@@ -36,17 +40,17 @@ lastupdated: "2016-11-22"
    
    5. 按一下**建立**。
 
-2. 選用項目：新增 Push Notifications 功能。
+2. 選用項目：新增 {{site.data.keyword.mobilepushshort}} 功能。
 
-   1. 在**專案概觀**頁面中，針對 **Push Notifications** 按一下**新增**。
+   1. 在**專案概觀**頁面中，對 **{{site.data.keyword.mobilepushshort}}** 按一下**新增**。
 
-      您也可以按一下 **Push Notifications** 頁面中的**建立**。
+      或者，您可以從 **{{site.data.keyword.mobilepushshort}}** 頁面中按一下**建立**。
 
    2. 輸入服務名稱，然後按一下**建立**。
 
-   3. 若為 iOS，[配置 Apple Push Notification Service](/docs/services/mobilepush/t_push_provider_ios.html){: new_window}。
+   3. 若為 iOS，請[配置 Apple Push Notification Service ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/mobilepush/t_push_provider_ios.html "外部鏈結圖示"){: new_window}。
 
-   4. 若為 Android，[配置 Firebase Cloud Messaging](/docs/services/mobilepush/t_push_provider_android.html){: new_window}。
+   4. 若為 Android，請[配置 Firebase Cloud Messaging ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/mobilepush/t_push_provider_android.html "外部鏈結圖示"){: new_window}。
    
 3. 選用項目：新增 Analytics 功能。
 
@@ -58,7 +62,7 @@ lastupdated: "2016-11-22"
    
    3. 在您執行應用程式之後，即可關閉**展示模式**來查看分析資料。
    
-   4. 如需配置 Analytics 的相關資訊，請參閱[開始使用 {{site.data.keyword.mobileanalytics_short}}](/docs/services/mobileanalytics/index.html){: new_window}。
+   4. 如需配置 Analytics 的相關資訊，請參閱[開始使用 {{site.data.keyword.mobileanalytics_short}} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/mobileanalytics/index.html "外部鏈結圖示"){: new_window}。
   
 4. 選用項目：新增「鑑別」功能。
 
@@ -72,7 +76,7 @@ lastupdated: "2016-11-22"
    
    4. 選取您的身分提供者，並且輸入必要資訊以進行配置。您只能啟用一個身分提供者。
 
-   5. 如需配置「鑑別」的相關資訊，請參閱[開始使用 {{site.data.keyword.amashort}}](/docs/services/mobileaccess/index.html){: new_window}。
+   5. 如需配置「鑑別」的相關資訊，請參閱[開始使用 {{site.data.keyword.amashort}} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/mobileaccess/index.html "外部鏈結圖示"){: new_window}。
 
 5. 產生專案程式碼。
 
@@ -182,6 +186,8 @@ lastupdated: "2016-11-22"
 ### 程式碼入門範本指導教學
 {: #tutorials_Code}
 
+* [指導教學 - Cloudant Sync](tutorial_cloudant_synd.html)
+* [指導教學 - {{site.data.keyword.openwhisk_short}}](tutorial_openwhisk.html)
 * [指導教學 - {{site.data.keyword.visualrecognitionshort}}](tutorial_visual_recognition.html)
 * [指導教學 - Watson Language](tutorial_watson_language.html)
 * [指導教學 - Weather](tutorial_weather.html)

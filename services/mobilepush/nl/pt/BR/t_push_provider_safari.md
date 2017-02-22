@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -10,15 +10,37 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Configurando credenciais para o navegador Safari
-{: #configure-credential-for-safari}
-Última atualização: 06 de dezembro de 2016
+# Configurando credenciais para navegadores da web
+{: #configure-credential-for-browsers}
+Última atualização: 11 de janeiro de 2017
 {: .last-updated}
 
-Agora o serviço IBM {{site.data.keyword.mobilepushshort}} estende os recursos para enviar notificações para o navegador Safari. Observe que a versão suportada é Safari 10.0.
+Agora, o serviço IBM {{site.data.keyword.mobilepushshort}} estende os recursos para enviar notificações para seu navegador. 
 
-## Gerando um certificado
-  {: #certificate-generation}
+A URL do website ou o nome de domínio de seu website é requerido pelo serviço {{site.data.keyword.mobilepushshort}} para identificar as solicitações que precisam ser permitidas. Uma instância do serviço {{site.data.keyword.mobilepushshort}} suporta somente um nome de domínio por vez. Portanto, assegure-se de que o mesmo valor seja configurado para o Chrome, Firefox e Safari. 
+
+Os navegadores Chrome e Safari requerem configuração adicional para push da web. Você precisaria de uma chave de API do FCM, pois um terminal do FCM é usado para entregar mensagens no Chrome. Para obter sua chave de API do FCM, veja [Configurando credenciais para o FCM](t_push_provider_android.html).
+
+
+
+##Configurando para push da web do Chrome e do Firefox 
+{: #config-chrome-firefox}
+
+1. Na área do Painel push, selecione **Configurar**.
+2. Selecione a guia Web.
+	![Configuração de WebPush](images/webpush_configure.jpg)
+3. Configure a chave API do FCM/GCM e a URL de seu website que estará registrada para receber notificações push.
+4. Clique em **Salvar**.
+5. Próximas etapas. [Ativando notificações para navegadores Google Chrome e Mozilla Firefox](c_enable_push.html).
+
+
+## Configurando para push da web do Safari 
+{: #configure-safari}
+
+A versão suportada para o serviço {{site.data.keyword.mobilepushshort}} no Safari é 10.0. É necessário gerar um certificado por meio de sua conta do Apple Developer, antes de poder configurar o navegador para receber notificações.
+
+### Gerando um certificado
+{: #certificate-generation}
 
 Assegure-se de ter uma conta do Apple Developer. É necessário
 registrar um ID de push do website e gerar um certificado para
@@ -55,7 +77,7 @@ formato `.cer`.
 como um certificado p12. Observe a senha fornecida durante a geração do certificado p12.
 
 
-## Configurando para notificações
+### Configurando para notificações
   {: #configuration-notification}
  
 Após gerar o certificado, é possível configurar o serviço para enviar notificações para o Safari. 

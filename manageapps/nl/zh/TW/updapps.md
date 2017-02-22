@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-08-25"
 
 ---
 
@@ -13,9 +14,6 @@ copyright:
 
 #更新應用程式
 {: #updatingapps}
-
-前次更新：2016 年 8 月 25 日
-{: .last-updated}
 
 
 您可以使用 cf push 指令或 {{site.data.keyword.Bluemix}} DevOps Services，來更新 {{site.data.keyword.Bluemix_notm}} 中的應用程式。在許多情況下，即使是內建建置套件（例如 Node.js），您還是必須提供 -c 參數來指定用來啟動應用程式的指令。
@@ -37,7 +35,7 @@ copyright:
 	1. 移至**{{site.data.keyword.avatar}}**圖示 ![「虛擬人像」圖示](../icons/i-avatar-icon.svg) &gt; **管理組織** &gt; **檢視詳細資料**（針對您的組織）&gt; **編輯組織** &gt; **網域**。
 
 	2. 在**網域**標籤中，按一下**新增網域**，輸入自訂網域名稱，然後按一下**儲存**。
-	
+
 	**附註**：例如，您可以使用 `mycompany.com` 來建立路徑 `www.mycompany.com` 與您應用程式的關聯。您也可以使用 `example.mycompany.com` 來建立路徑 `www.example.mycompany.com` 與您應用程式的關聯。
 
   2. 新增含有自訂網域的路徑至應用程式。
@@ -47,7 +45,7 @@ copyright:
 	2. 從**檢視應用程式**功能表中，選取**編輯路徑及存取權**。
 
 	3. 按一下**新增路徑**，然後指定您要用於應用程式的路徑。
-	4. 按一下**儲存**。 
+	4. 按一下**儲存**。
 
 * 使用 cf 指令行介面：
 
@@ -85,15 +83,15 @@ cf map-route myapp mydomain -n host_name
     *host_name*
 
         您要用於應用程式的路徑中的主機名稱。
-        
+
     *mycontainergroup*
-    
-        若為容器群組，則是容器群組的名稱。  
+
+        若為容器群組，則是容器群組的名稱。
 
 
 在 {{site.data.keyword.Bluemix_notm}} 中配置自訂網域之後，您必須將自訂網域對映至已登錄 DNS 伺服器上的 {{site.data.keyword.Bluemix_notm}} 系統網域：
 
-  1. 在 DNS 伺服器上，設定自訂網域名稱的 'CNAME' 記錄。根據您的 DNS 提供者，設定 CNAME 記錄的步驟有所不同。例如，如果您要使用 GoDaddy，請遵循 GoDaddy 的[網域說明](https://www.godaddy.com/help/add-a-cname-record-19236){: new_window}指引。
+  1. 在 DNS 伺服器上，設定自訂網域名稱的 'CNAME' 記錄。根據您的 DNS 提供者，設定 CNAME 記錄的步驟有所不同。例如，如果您是使用 GoDaddy，請遵循 GoDaddy 的[網域說明 ![外部鏈結圖示](../icons/launch-glyph.svg)](https://www.godaddy.com/help/add-a-cname-record-19236){: new_window} 指引。
   2. 將自訂網域名稱對映至應用程式執行所在的 {{site.data.keyword.Bluemix_notm}} 地區的安全端點。使用下列地區端點，提供在 {{site.data.keyword.Bluemix_notm}} 中配置給組織的 URL 路徑：
 
     * US-SOUTH：`secure.us-south.bluemix.net`
@@ -297,5 +295,5 @@ cf delete Blue -f
 ## 相關鏈結
 {: #general}
 
-* [藍綠部署](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
-* [IBM {{site.data.keyword.Bluemix_notm}} DevOps Services](https://hub.jazz.net/){:new_window}
+* [藍綠部署 ![外部鏈結圖示](../icons/launch-glyph.svg)](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
+* [IBM {{site.data.keyword.Bluemix_notm}} DevOps Services ![外部鏈結圖示](../icons/launch-glyph.svg)](https://hub.jazz.net/){:new_window}

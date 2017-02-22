@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015, 2017
 
-lastupdated: "2016-10-26"
+lastupdated: "2017-01-12"
 
 ---
 
@@ -17,13 +17,9 @@ lastupdated: "2016-10-26"
 {: #bluemixadmincli}
 
 
-Vous pouvez gérer votre environnement {{site.data.keyword.Bluemix_notm}} local ou
-{{site.data.keyword.Bluemix_notm}} dédié en utilisant l'interface de
-ligne de commande Cloud Foundry avec le plug-in d'interface de ligne de
-commande d'administration {{site.data.keyword.Bluemix_notm}}. Par exemple, vous pouvez ajouter des utilisateurs depuis
-un registre LDAP. Pour des informations sur la gestion de votre compte {{site.data.keyword.Bluemix_notm}} public, voir [Administration](/docs/admin/adminpublic.html#administer).
+Vous pouvez gérer votre environnement {{site.data.keyword.Bluemix_notm}} local ou {{site.data.keyword.Bluemix_notm}} dédié en utilisant l'interface de ligne de commande Cloud Foundry avec le plug-in d'interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}}. Par exemple, vous pouvez ajouter des utilisateurs depuis un registre LDAP. Pour des informations sur la gestion de votre compte {{site.data.keyword.Bluemix_notm}} public, voir [Administration](/docs/admin/adminpublic.html#administer).
 
-Avant de commencer, installez l'interface de ligne de commande cf. Le plug-in d'interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}} requiert cf version 6.11.2 ou ultérieure. [Télécharger l'interface de ligne de commande Cloud Foundry](https://github.com/cloudfoundry/cli/releases){: new_window}
+Avant de commencer, installez l'interface de ligne de commande cf. Le plug-in d'interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}} requiert cf version 6.11.2 ou ultérieure. [Télécharger l'interface de ligne de commande Cloud Foundry ![icône de lien externe](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}
 
 **Restriction :** l'interface de ligne de commande Cloud Foundry n'est pas prise en charge par Cygwin. Utilisez-la dans une fenêtre de ligne de commande autre que Cygwin.
 
@@ -100,7 +96,10 @@ cf login
 </li>
 </ol>
 
-## Ajout d'un utilisateur
+## Administration des utilisateurs
+{: #admin_users}
+
+### Ajout d'un utilisateur
 {: #admin_add_user}
 
 Pour ajouter un utilisateur à votre environnement {{site.data.keyword.Bluemix_notm}} à partir du registre d'utilisateurs
@@ -130,7 +129,7 @@ plus d'informations.
 
 <!-- staging-only commands start. Live for interconnect -->
 
-## Recherche d'un utilisateur
+### Recherche d'un utilisateur
 {: #admin_search_user}
 
 Pour rechercher un utilisateur, entrez la commande suivante en conjonction
@@ -162,10 +161,10 @@ devez spécifier l'organisation avec ce paramètre. Pour plus d'informations sur
 **Astuce :** vous pouvez aussi utiliser **ba su** comme alias pour le nom de commande plus long **ba
 search-users**.
 
-## Définition des droits d'un utilisateur
+### Définition des droits d'un utilisateur
 {: #admin_setperm_user}
 
-Pour définir les droits d'un utilisateur indiqué, entrez la commande suivante : 
+Pour définir les droits d'un utilisateur indiqué, entrez la commande suivante :
 
 ```
 cf ba set-permissions <nom_utilisateur> <droit> <accès>
@@ -190,10 +189,10 @@ set-permissions**.
 
 <!-- staging-only commands end -->
 
-## Retrait d'un utilisateur
+### Retrait d'un utilisateur
 {: #admin_remov_user}
 
-Pour retirer un utilisateur de votre environnement {{site.data.keyword.Bluemix_notm}}, utilisez la commande suivante : 
+Pour retirer un utilisateur de votre environnement {{site.data.keyword.Bluemix_notm}}, utilisez la commande suivante :
 
 ```
 cf ba remove-user <nom_utilisateur>
@@ -210,7 +209,7 @@ cf ba remove-user <nom_utilisateur>
 **Astuce :** vous pouvez aussi utiliser **ba ru** comme alias pour le nom de commande plus long **ba
 remove-user**.
 
-## Permettre aux responsables d'ajouter des utilisateurs
+### Permettre aux responsables d'ajouter des utilisateurs
 {: #clius_emau}
 
 Si vous disposez du droit **Superutilisateur** dans votre environnement {{site.data.keyword.Bluemix_notm}}, vous pouvez
@@ -225,7 +224,7 @@ cf ba enable-managers-add-users
 **Astuce :** vous pouvez aussi utiliser **ba emau** comme alias pour le nom de commande plus long **ba
 enable-managers-add-users**.
 
-## Empêcher les responsables d'ajouter des utilisateurs
+### Empêcher les responsables d'ajouter des utilisateurs
 {: #clius_dmau}
 
 Si des responsables de l'organisation ont été autorisés à ajouter des utilisateurs aux organisations qu'ils gèrent dans votre environnement
@@ -241,10 +240,13 @@ cf ba disable-managers-add-users
 **Astuce :** vous pouvez aussi utiliser **ba dmau** comme alias pour le nom de commande plus long **ba
 disable-managers-add-users**.
 
-## Ajout d'une organisation
+## Administration des organisations
+{: #admin_orgs}
+
+### Ajout d'une organisation
 {: #admin_add_org}
 
-Pour ajouter une organisation, utilisez la commande suivante : 
+Pour ajouter une organisation, utilisez la commande suivante :
 
 ```
 cf ba create-organization <organisation> <responsable>
@@ -262,10 +264,10 @@ cf ba create-organization <organisation> <responsable>
 **Astuce :** vous pouvez aussi utiliser **ba co** comme alias pour le nom de commande plus long **ba
 create-organization**.
 
-## Suppression d'une organisation
+### Suppression d'une organisation
 {: #admin_delete_org}
 
-Pour supprimer une organisation, utilisez la commande suivante : 
+Pour supprimer une organisation, utilisez la commande suivante :
 
 ```
 cf ba delete-organization <organisation>
@@ -281,7 +283,7 @@ cf ba delete-organization <organisation>
 **Astuce :** vous pouvez aussi utiliser **ba do** comme alias pour le nom de commande plus long **ba
 delete-organization**.
 
-## Affectation d'un utilisateur à une organisation
+### Affectation d'un utilisateur à une organisation
 {: #admin_ass_user_org}
 
 Pour affecter un utilisateur de votre environnement
@@ -307,7 +309,7 @@ cf ba set-org <nom_utilisateur> <organisation> [<rôle>]
 **Astuce :** vous pouvez aussi utiliser **ba so** comme alias pour le nom de commande plus long **ba
 set-org**.
 
-## Annulation de l'affectation d'un utilisateur à une organisation
+### Annulation de l'affectation d'un utilisateur à une organisation
 {: #admin_unass_user_org}
 
 Pour annuler l'affectation d'un utilisateur de votre environnement
@@ -328,13 +330,13 @@ cf ba unset-org <nom_utilisateur> <organisation> [<rôle>]
 <dt class="pt dlterm">&lt;rôle&gt;</dt>
 <dd class="pd">Pour connaître les rôles utilisateur
 {{site.data.keyword.Bluemix_notm}} ainsi que leur description, voir
-[Affectation de rôles](/docs/admin/users_roles.html). </dd>
+[Affectation de rôles](/docs/admin/users_roles.html).</dd>
 </dl>
 
 **Astuce :** vous pouvez aussi utiliser **ba uo** comme alias pour le nom de commande plus long **ba
 unset-org**.
 
-### Affectation de rôles
+#### Affectation de rôles
 
 <dl class="parml">
 <dt class="pt dlterm">OrgManager</dt>
@@ -352,11 +354,11 @@ services pour l'organisation.</dd>
 <dd class="pd">Auditeur de l'organisation. Un auditeur de l'organisation peut afficher le contenu des applications et des services dans l'espace.</dd>
 </dl>
 
-## Définition d'un quota pour une organisation
+### Définition d'un quota pour une organisation
 {: #admin_set_org_quota}
 
 Pour définir le quota d'utilisation d'une organisation donnée, entrez
-la commande suivante : 
+la commande suivante :
 
 ```
 cf ba set-quota <organisation> <plan>
@@ -375,11 +377,11 @@ pour laquelle définir le quota.</dd>
 set-quota**.
 
 
-## Recherche des quotas de conteneur d'une organisation
+### Recherche des quotas de conteneur d'une organisation
 {: #admin_find_containquotas}
 
 Pour rechercher le quota de conteneur d'une organisation, utilisez la
-commande suivante : 
+commande suivante :
 
 ```
 cf bluemix-admin containers-quota <organisation>
@@ -394,7 +396,7 @@ cf bluemix-admin containers-quota <organisation>
 **Astuce :** vous pouvez aussi utiliser **ba cq** comme alias pour le nom de commande plus long
 **bluemix-admin containers-quota**.
 
-## Définition des quotas de conteneur pour une organisation
+### Définition des quotas de conteneur pour une organisation
 {: #admin_set_containquotas}
 
 Pour définir le quota de conteneur d'une organisation, utilisez la
@@ -464,7 +466,7 @@ Le fichier JSON doit être au format indiqué dans l'exemple suivant :
 
 **Astuce :** vous pouvez aussi utiliser **ba scq** comme alias pour le nom de commande plus long **bluemix-admin set-containers-quota**.
 
-## Activation des services pour toutes les organisations
+### Activation des services pour toutes les organisations
 {: #admin_ena_service_org}
 
 Pour activer l'affichage d'un service dans le catalogue
@@ -486,12 +488,12 @@ parmi plusieurs plans de service. Pour identifier un nom de plan de service, sé
 **Astuce :** vous pouvez aussi utiliser **ba esp** comme alias pour le nom de commande plus long **ba
 enable-service-plan**.
 
-## Désactivation des services pour toutes les organisations
+### Désactivation des services pour toutes les organisations
 {: #admin_dis_service_org}
 
 Pour désactiver l'affichage d'un service dans le catalogue
 {{site.data.keyword.Bluemix_notm}} pour toutes les organisations,
-utilisez la commande suivante : 
+utilisez la commande suivante :
 
 ```
 cf ba disable-service-plan <identificateur_plan>
@@ -508,7 +510,7 @@ parmi plusieurs plans de service. Pour identifier un nom de plan de service, sé
 **Astuce :** vous pouvez aussi utiliser **ba dsp** comme alias pour le nom de commande plus long **ba
 disable-service-plan**.
 
-## Ajout de la visibilité d'un service pour les organisations
+### Ajout de la visibilité d'un service pour les organisations
 {: #admin_addvis_service_org}
 
 Vous pouvez ajouter une organisation dans la liste des organisations pouvant afficher un service spécifique dans le catalogue
@@ -534,7 +536,7 @@ parmi plusieurs plans de service. Pour identifier un nom de plan de service, sé
 **Astuce :** vous pouvez aussi utiliser **ba aspv** comme alias pour le nom de commande plus long **ba
 add-service-plan-visibility**.
 
-## Suppression de la visibilité d'un service pour les organisations
+### Suppression de la visibilité d'un service pour les organisations
 {: #admin_remvis_service_org}
 
 Vous pouvez supprimer une organisation de la liste des
@@ -561,7 +563,7 @@ parmi plusieurs plans de service. Pour identifier un nom de plan de service, sé
 **Astuce :** vous pouvez aussi utiliser **ba rspv** comme alias pour le nom de commande plus long **ba
 remove-service-plan-visibility**.
 
-## Edition de la visibilité d'un service pour les organisations
+### Edition de la visibilité d'un service pour les organisations
 {: #admin_editvis_service_org}
 
 Vous pouvez éditer et remplacer la liste des services que des
@@ -590,7 +592,10 @@ globaux uniques supplémentaires dans la commande.</dd>
 **Astuce :** vous pouvez aussi utiliser **ba espv** comme alias pour le nom de commande plus long **ba
 edit-service-plan-visibility**.
 
-## Ajout de rapports
+## Administration des rapports
+{: #admin_add_report}
+
+### Ajout de rapports
 {: #admin_add_report}
 
 Pour ajouter un rapport de sécurité, entrez la commande suivante :
@@ -619,7 +624,7 @@ au format PDF. La version RTF est utilisée pour l'indexation et la recherche.</
 **Astuce :** vous pouvez aussi utiliser **ba ar** comme alias pour le nom de commande plus long **ba
 add-report**.
 
-## Suppression de rapports
+### Suppression de rapports
 {: #admin_del_report}
 
 Pour supprimer un rapport de sécurité, entrez la commande suivante :
@@ -641,10 +646,10 @@ cf ba delete-report <catégorie> <date> <nom>
 **Astuce :** vous pouvez aussi utiliser **ba dr** comme alias pour le nom de commande plus long **ba
 delete-report**.
 
-## Extraction de rapports
+### Extraction de rapports
 {: #admin_retr_report}
 
-Pour extraire un rapport de sécurité, utilisez la commande suivante : 
+Pour extraire un rapport de sécurité, utilisez la commande suivante :
 
 ```
 cf ba retrieve-report <catégorie> <date> <nom>
@@ -662,7 +667,6 @@ cf ba retrieve-report <catégorie> <date> <nom>
 
 **Astuce :** vous pouvez aussi utiliser **ba rr** comme alias pour le nom de commande plus long **ba
 retrieve-report**.
-
 
 ## Affichage des informations relatives aux mesures des ressources
 {: #cliresourceusage}
@@ -687,11 +691,15 @@ cf ba resource-metrics <monthly> <weekly>
 
 **Astuce :** vous pouvez aussi utiliser **ba rsm** comme alias pour le nom de commande plus long **ba resource-metrics**.
 
-## Liste des courtiers de services
+
+## Administration des courtiers de services
+{: #admin_servbro}
+
+### Liste des courtiers de services
 {: #clilistservbro}
 
 Pour dresser la liste de tous les courtiers de services, utilisez la
-commande suivante : 
+commande suivante :
 
 ```
 cf ba service-brokers <nom_courtier>
@@ -710,12 +718,12 @@ spécifique.</dd>
 **Astuce :** vous pouvez aussi utiliser **ba sb** comme alias pour le nom de commande plus long **ba
 service-brokers**.
 
-## Ajout d'un courtier de services
+### Ajout d'un courtier de services
 {: #cliaddservbro}
 
 Pour ajouter un courtier de services afin de pouvoir ajouter un service
 personnalisé à votre catalogue {{site.data.keyword.Bluemix_notm}},
-utilisez la commande suivante : 
+utilisez la commande suivante :
 
 ```
 cf ba add-service-broker <nom_courtier> <nom_utilisateur> <mot_de_passe> <url_courtier>
@@ -736,12 +744,12 @@ cf ba add-service-broker <nom_courtier> <nom_utilisateur> <mot_de_passe> <url_co
 **Astuce :** vous pouvez aussi utiliser **ba asb** comme alias pour le nom de commande plus long **ba
 add-service-broker**.
 
-## Suppression d'un courtier de services
+### Suppression d'un courtier de services
 {: #clidelservbro}
 
 Pour supprimer un courtier de services afin de retirer un service
 personnalisé de votre catalogue {{site.data.keyword.Bluemix_notm}},
-utilisez la commande suivante : 
+utilisez la commande suivante :
 
 ```
 cf ba delete-service-broker <courtier_services>
@@ -756,10 +764,10 @@ cf ba delete-service-broker <courtier_services>
 **Astuce :** vous pouvez aussi utiliser **ba dsb** comme alias pour le nom de commande plus long **ba
 delete-service-broker**.
 
-## Mise à jour d'un courtier de services
+### Mise à jour d'un courtier de services
 {: #cliupdservbro}
 
-Pour mettre à jour un courtier de services, utilisez la commande suivante : 
+Pour mettre à jour un courtier de services, utilisez la commande suivante :
 
 ```
 cf ba update-service-broker <nom_courtier> <nom_utilisateur> <mot_de_passe> <url_courtier>
@@ -781,25 +789,22 @@ cf ba update-service-broker <nom_courtier> <nom_utilisateur> <mot_de_passe> <url
 update-service-broker**.
 
 
-## Utilisation de groupes de sécurité d'application
+## Administration des groupes de sécurité d'application
+{: #admin_secgro}
 
 Pour utiliser des groupes de sécurité d'application, vous devez être un administrateur avec accès complet pour l'environnement local ou dédié. Tous les utilisateurs de l'environnement peuvent répertorier les groupes de sécurité d'application disponibles pour l'organisation ciblée par la commande. En revanche, pour créer, mettre à jour ou lier des groupes de sécurité d'application, vous devez être un administrateur de l'environnement {{site.data.keyword.Bluemix_notm}}.
 
-Les groupes de sécurité d'application fonctionnent comme des pare-feu virtuels qui contrôlent le trafic sortant des applications de votre environnement {{site.data.keyword.Bluemix_notm}}. Chaque groupe de sécurité d'application comprend une liste de règles autorisant un trafic et des communications spécifiques vers et depuis le réseau externe. Vous pouvez lier un ou plusieurs groupes de sécurité d'application à un ensemble de groupes donné, par exemple, un ensemble de groupes utilisé pour l'application d'un accès global, ou vous pouvez effectuer une liaison à des espaces d'une organisation dans votre environnement {{site.data.keyword.Bluemix_notm}}.
+Les groupes de sécurité d'application fonctionnent comme des pare-feux virtuels qui contrôlent le trafic sortant des applications de votre environnement {{site.data.keyword.Bluemix_notm}}. Chaque groupe de sécurité d'application comprend une liste de règles autorisant un trafic et des communications spécifiques vers et depuis le réseau externe. Vous pouvez lier un ou plusieurs groupes de sécurité d'application à un ensemble de groupes donné, par exemple, un ensemble de groupes utilisé pour l'application d'un accès global, ou vous pouvez effectuer une liaison à des espaces d'une organisation dans votre environnement {{site.data.keyword.Bluemix_notm}}.
 
-A l'origine, {{site.data.keyword.Bluemix_notm}} est configuré avec un accès global restreint au réseau externe. Deux groupes de sécurité créés par IBM, `public_networks` et `dns`, permettent un accès global au réseau externe lorsque vous liez ces deux groupes aux ensembles de groupes de sécurité Cloud Foundry. Les deux ensembles de groupes de sécurité Cloud Foundry qui sont utilisés pour appliquer un accès global sont **Default Staging** et **Default Running**. Ces ensembles de groupes appliquent les règles autorisant le trafic vers toutes les applications en cours d'exécution ou toutes les applications en cours de constitution. Si vous ne souhaitez pas établir de liaison à ces deux ensembles de groupes de sécurité, vous pouvez annuler la liaison à ces ensembles de groupes Cloud Foundry, puis lier le groupe de sécurité à un espace donné. Pour plus d'informations, voir [Binding Application Security Groups](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}.
+A l'origine, {{site.data.keyword.Bluemix_notm}} est configuré avec un accès global restreint au réseau externe. Deux groupes de sécurité créés par IBM, `public_networks` et `dns`, permettent un accès global au réseau externe lorsque vous liez ces deux groupes aux ensembles de groupes de sécurité Cloud Foundry. Les deux ensembles de groupes de sécurité Cloud Foundry qui sont utilisés pour appliquer un accès global sont **Default Staging** et **Default Running**. Ces ensembles de groupes appliquent les règles autorisant le trafic vers toutes les applications en cours d'exécution ou toutes les applications en cours de constitution. Si vous ne souhaitez pas établir de liaison à ces deux ensembles de groupes de sécurité, vous pouvez annuler la liaison à ces ensembles de groupes Cloud Foundry, puis lier le groupe de sécurité à un espace donné. Pour plus d'informations, voir [Binding Application Security Groups ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}.
 
-**Remarque** : les commandes suivantes qui vous permettent de gérer des groupes de sécurité sont basées sur la version 1.6 de Cloud Foundry. Pour
-plus d'informations, y compris sur les zones obligatoires et facultatives,
-reportez-vous aux informations relatives à Cloud Foundry concernant la
-[création
-de groupes de sécurité des applications](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}.
+**Remarque** : les commandes suivantes qui vous permettent de gérer des groupes de sécurité sont basées sur la version 1.6 de Cloud Foundry. Pour plus d'informations, y compris sur les zones obligatoires et facultatives, reportez-vous aux informations relatives à Cloud Foundry concernant la [création de groupes de sécurité d'application ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}.
 
-## Liste des groupes de sécurité
+### Liste des groupes de sécurité
 {: #clilissecgro}
 
 * Pour dresser la liste de tous les groupes de sécurité, utilisez la
-commande suivante : 
+commande suivante :
 
 ```
 cf ba security-groups
@@ -809,7 +814,7 @@ cf ba security-groups
 **Astuce :** vous pouvez aussi utiliser **ba sgs** comme alias pour le nom de commande plus long **ba security-groups**.
 
 * Pour afficher les détails d'un groupe de sécurité donné, utilisez la
-commande suivante : 
+commande suivante :
 
 ```
 cf ba security-groups <groupe-sécurité>
@@ -825,12 +830,12 @@ cf ba security-groups <groupe-sécurité>
 **ba security-groups** avec le paramètre `security-group`.
 
 
-## Création d'un groupe de sécurité
+### Création d'un groupe de sécurité
 {: #clicreasecgro}
 
-Pour plus d'informations sur la création de groupes de sécurité et des règles qui définissent le trafic sortant, voir [Creating Application Security Groups](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}.
+Pour plus d'informations sur la création de groupes de sécurité et des règles qui définissent le trafic sortant, voir [Creating Application Security Groups ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}.
 
-Pour créer un groupe de sécurité, utilisez la commande suivante : 
+Pour créer un groupe de sécurité, utilisez la commande suivante :
 
 ```
 cf ba create-security-group <groupe-sécurité> <chemin-vers-fichier-règles>
@@ -848,10 +853,10 @@ Le préfixe `adminconsole_` est ajouté au nom de chaque groupe de sécurité qu
 
 **Astuce :** vous pouvez aussi utiliser **ba csg** comme alias pour le nom de commande plus long **ba create-security-group**.
 
-## Mise à jour d'un groupe de sécurité
+### Mise à jour d'un groupe de sécurité
 {: #cliupdsecgro}
 
-Pour mettre à jour un groupe de sécurité, utilisez la commande suivante : 
+Pour mettre à jour un groupe de sécurité, utilisez la commande suivante :
 
 ```
 cf ba update-security-group <groupe-sécurité> <chemin-vers-fichier-règles>
@@ -867,10 +872,10 @@ cf ba update-security-group <groupe-sécurité> <chemin-vers-fichier-règles>
 
 **Astuce :** vous pouvez aussi utiliser **ba usg** comme alias pour le nom de commande plus long **ba update-security-group**.
 
-## Suppression d'un groupe de sécurité
+### Suppression d'un groupe de sécurité
 {: #clidelsecgro}
 
-Pour supprimer un groupe de sécurité, utilisez la commande suivante : 
+Pour supprimer un groupe de sécurité, utilisez la commande suivante :
 
 ```
 cf ba delete-security-group <groupe-sécurité>
@@ -885,14 +890,12 @@ cf ba delete-security-group <groupe-sécurité>
 **Astuce :** vous pouvez aussi utiliser **ba dsg** comme alias pour le nom de commande plus long **ba delete-security-group**.
 
 
-## Liaison de groupes de sécurité
+### Liaison de groupes de sécurité
 {: #clibindsecgro}
 
-Pour plus d'informations sur la liaison des groupes de sécurité, voir
-[Binding Application Security Groups](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}.
+Pour plus d'informations sur la liaison des groupes de sécurité, voir [Binding Application Security Groups ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}.
 
-* Pour établir une liaison vers l'ensemble de groupes de sécurité
-Default Staging, utilisez la commande suivante : 
+* Pour établir une liaison vers l'ensemble de groupes de sécurité Default Staging, utilisez la commande suivante :
 
 ```
 cf ba bind-staging-security-group <groupe-sécurité>
@@ -907,7 +910,7 @@ cf ba bind-staging-security-group <groupe-sécurité>
 **Astuce :** vous pouvez aussi utiliser **ba bssg** comme alias pour le nom de commande plus long **ba bind-staging-security-group**.
 
 * Pour établir une liaison vers l'ensemble de groupes de sécurité
-Default Running, utilisez la commande suivante : 
+Default Running, utilisez la commande suivante :
 
 ```
 cf ba bind-running-security-group <groupe-sécurité>
@@ -922,7 +925,7 @@ cf ba bind-running-security-group <groupe-sécurité>
 **Astuce :** vous pouvez aussi utiliser **ba brsg** comme alias pour le nom de commande plus long **ba bind-running-security-group**.
 
 * Pour lier un groupe de sécurité à un espace, utilisez la commande
-suivante : 
+suivante :
 
 ```
 cf ba bind-security-group <groupe-sécurité> <org> <espace>
@@ -940,14 +943,12 @@ cf ba bind-security-group <groupe-sécurité> <org> <espace>
 
 **Astuce :** vous pouvez aussi utiliser **ba bsg** comme alias pour le nom de commande plus long **ba bind-security-group**.
 
-## Annulation de la liaison de groupes de sécurité
+### Annulation de la liaison de groupes de sécurité
 {: #cliunbindsecgro}
 
-Pour plus d'informations sur l'annulation de groupes de sécurité, voir
-[Unbinding Application Security Groups](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window}.
+Pour plus d'informations sur l'annulation de la liaison de groupes de sécurité, voir [Unbinding Application Security Groups ![icône de lien externe](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window}.
 
-* Pour annuler la liaison vers l'ensemble de groupes de sécurité Default
-Staging, utilisez la commande suivante : 
+* Pour annuler la liaison vers l'ensemble de groupes de sécurité Default Staging, utilisez la commande suivante :
 
 ```
 cf ba unbind-staging-security-group <groupe-sécurité>
@@ -961,8 +962,7 @@ cf ba unbind-staging-security-group <groupe-sécurité>
 
 **Astuce :** vous pouvez aussi utiliser **ba ussg** comme alias pour le nom de commande plus long **ba unbind-staging-security-group**.
 
-* Pour annuler la liaison vers l'ensemble de groupes de sécurité Default
-Running, utilisez la commande suivante : 
+* Pour annuler la liaison vers l'ensemble de groupes de sécurité Default Running, utilisez la commande suivante :
 
 ```
 cf ba unbind-running-security-group <groupe-sécurité>
@@ -976,8 +976,7 @@ cf ba unbind-running-security-group <groupe-sécurité>
 
 **Astuce :** vous pouvez aussi utiliser **ba brsg** comme alias pour le nom de commande plus long **ba bind-running-security-group**.
 
-* Pour annuler la liaison d'un groupe de sécurité à un espace, utilisez la commande
-suivante : 
+* Pour annuler la liaison d'un groupe de sécurité à un espace, utilisez la commande suivante :
 
 ```
 cf ba unbind-security-group <groupe-sécurité> <org> <espace>
@@ -995,13 +994,16 @@ cf ba unbind-security-group <groupe-sécurité> <org> <espace>
 
 **Astuce :** vous pouvez aussi utiliser **ba usg** comme alias pour le nom de commande plus long **ba unbind-staging-security-group**.
 
-## Liste des packs de construction
+## Administration des packs de construction
+{: #admin_buildpack}
+
+### Liste des packs de construction
 {: #clilistbuildpack}
 
 Si vous disposez des droits en écriture dans le catalogue des
 applications, vous pouvez répertorier les packs de construction. Pour
 répertorier tous les packs de construction  ou visualiser un pack de
-construction spécifique, utilisez la commande suivante : 
+construction spécifique, utilisez la commande suivante :
 
 ```
 cf ba buildpacks <nom_pack_construction>
@@ -1016,11 +1018,11 @@ cf ba buildpacks <nom_pack_construction>
 **Astuce :** vous pouvez aussi utiliser **ba lb** comme alias pour le nom de commande plus long **ba
 buildpacks**.
 
-## Création et téléchargement d'un pack de construction
+### Création et téléchargement d'un pack de construction
 {: #clicreupbuildpack}
 
 Si vous disposez des droits en écriture dans le catalogue des applications, vous pouvez créer et télécharger un pack de construction. Vous pouvez télécharger tout fichier compressé dont le type est .zip. Pour
-télécharger un pack de construction, utilisez la commande suivante : 
+télécharger un pack de construction, utilisez la commande suivante :
 
 ```
 cf ba create-buildpack <nom_pack_construction> <chemin_fichier> <position>
@@ -1039,12 +1041,12 @@ cf ba create-buildpack <nom_pack_construction> <chemin_fichier> <position>
 **Astuce :** vous pouvez aussi utiliser **ba cb** comme alias pour le nom de commande plus long **ba
 create-buildpack**.
 
-## Mise à jour d'un pack de construction
+### Mise à jour d'un pack de construction
 {: #cliupdabuildpack}
 
 Si vous disposez des droits en écriture dans le catalogue des
-applications, vous pouvez mettre à jour un pack de construction existant. Pour
-mettre à jour un pack de construction, utilisez la commande suivante : 
+applications, vous pouvez mettre à jour un pack de construction existant.  Pour
+mettre à jour un pack de construction, utilisez la commande suivante :
 
 ```
 cf ba update-buildpack <nom_pack_construction> <position> <activé> <verrouillé>
@@ -1065,12 +1067,12 @@ cf ba update-buildpack <nom_pack_construction> <position> <activé> <verrouillé
 **Astuce :** vous pouvez aussi utiliser **ba ub** comme alias pour le nom de commande plus long **ba
 update-buildpack**.
 
-## Suppression d'un pack de construction
+### Suppression d'un pack de construction
 {: #clidelbuildpack}
 
 Si vous disposez des droits en écriture dans le catalogue des
-applications, vous pouvez supprimer un pack de construction existant. Pour
-supprimer un pack de construction, utilisez la commande suivante : 
+applications, vous pouvez supprimer un pack de construction existant.  Pour
+supprimer un pack de construction, utilisez la commande suivante :
 
 ```
 cf ba delete-buildpack <nom_pack_construction>

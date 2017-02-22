@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="76px" height="76px" viewBox="0 0 76 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Final" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-2" stroke-width="1.5" stroke="#3D70B2">
+            <g id="ArchitectureCenter-icon-Copy" transform="translate(1.000000, 1.000000)">
+                <g id="Group">
+                    <g id="Docs">
+                        <g id="2-Docs-landing-redesign-Copy">
+                            <g id="Group">
+                                <g id="Layer_1">
+                                    <path d="M10.5633803,20.4449648 L10.5633803,46.7915691" id="XMLID_1098_"></path>
+                                    <ellipse id="XMLID_1097_" cx="67.6056337" cy="37.412178" rx="6.33802818" ry="6.32318501"></ellipse>
+                                    <polyline id="Shape" points="74.471831 16.4402811 67.6056337 23.1850118 60.8450704 16.4402811"></polyline>
+                                    <polyline id="Shape" points="17.9577465 40.0468384 10.5633803 47.4238876 3.16901409 40.0468384"></polyline>
+                                    <path d="M67.6056337,22.6580796 L67.6056337,12.5409836 C67.6056337,9.69555036 65.8098591,7.37704918 63.4859155,7.37704918 L20.1760564,7.37704918" id="Shape"></path>
+                                    <g id="XMLID_1095_">
+                                        <ellipse id="XMLID_1096_" cx="10.5633803" cy="10.3278689" rx="9.61267606" ry="9.59016393"></ellipse>
+                                    </g>
+                                    <g id="XMLID_1093_" transform="translate(0.000000, 53.747073)">
+                                        <ellipse id="XMLID_1094_" cx="10.5633803" cy="10.2224824" rx="9.61267606" ry="9.59016393"></ellipse>
+                                    </g>
+                                    <polyline id="Shape" points="74.3661971 57.5409836 67.2887324 50.4800937 60.528169 57.3302107"></polyline>
+                                    <path d="M67.2887324,51.5339578 L67.2887324,61.3348946 C67.2887324,64.1803279 65.4929577,66.4988291 63.1690141,66.4988291 L20.1760564,66.4988291" id="Shape"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

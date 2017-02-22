@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-01"
+  years: 2016, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -10,6 +10,17 @@ lastupdated: "2016-12-01"
 # Neuerungen im Mobile Dashboard
 {: #what_is_new}
 
+### Neu ab Dezember 2016
+{: #dec-2016}
+
+Mit der Aktualisierung des {{site.data.keyword.Bluemix}} Mobile-Dashboards im Dezember 2016 wurden die folgenden Änderungen eingeführt:
+
+   * Sie können einen verbundenen Service aus einem Projekt entfernen, um ihn zu löschen oder mit einem anderen Projekt wiederzuverwenden. 
+   * Sie können einen vorhandenen Service zu einem Projekt hinzufügen.
+   * Sie können einen CloudantNoSQL-Service als Datenquelle erstellen (oder einen vorhandenen Service verbinden), wenn Sie einen Code-Starter verwenden.
+   * Falls dies unterstützt wird, können Sie einen Object Storage-Service als Datenquelle für Ihr Projekt erstellen (oder einen vorhandenen Service verbinden).
+   * Sie können das Navigationsdesign der App, die Sie erstellen, mit einem Benutzerschnittstellenstarter anpassen. 
+   
 
 ### Neu ab November 2016
 {: #nov-2016}
@@ -18,8 +29,8 @@ Mit der November-Aktualisierung des {{site.data.keyword.Bluemix}} Mobile-Dashboa
 
    * Sie können jetzt SDK-Artefakte für Ihre Projekte auf der Seite **Code** generieren.
    * Cordova wird jetzt für den Basis-Code-Starter (Basic Code Starter) unterstützt.
-   * Sie können jetzt [Netzereignisse erfassen](/docs/services/mobileanalytics/sdk.html#network-requests){: new_window} und [Netzanforderungen überwachen](/docs/services/mobileanalytics/app-monitoring.html#monitor-network-requests){: new_window} auf der Seite **Netzanforderungen** der {{site.data.keyword.mobileanalytics_short}}-Konsole.
-   * Sie können jetzt in der {{site.data.keyword.mobileanalytics_short}}-Konsole [Daten nach dashDB exportieren](/docs/services/mobileanalytics/app-monitoring.html#dashdb){: new_window}.
+   * Sie können jetzt [Netzereignisse auflisten ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/mobileanalytics/sdk.html#network-requests "Symbol für externen Link"){: new_window} und [Netzanforderungen überwachen ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/mobileanalytics/app-monitoring.html#monitor-network-requests "Symbol für externen Link"){: new_window} (auf der Seite **Netzanforderungen** der {{site.data.keyword.mobileanalytics_short}}-Konsole).
+   * Sie können jetzt [Daten in dashDB exportieren![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/mobileanalytics/app-monitoring.html#dashdb "Symbol für externen Link"){: new_window} (in der {{site.data.keyword.mobileanalytics_short}}-Konsole).
 
 
 ### Neu ab Oktober 2016
@@ -27,7 +38,7 @@ Mit der November-Aktualisierung des {{site.data.keyword.Bluemix}} Mobile-Dashboa
 
 Mit der Aktualisierung des {{site.data.keyword.Bluemix_notm}} Mobile-Dashboards im Oktober 2016 wurden folgende Änderungen eingeführt:
 
-   * Sie können Ihrem Projekt jetzt die Push Notifications- und Analytics-Funktionen direkt über das Dashboard hinzufügen.
+   * Sie können Ihrem Projekt jetzt {{site.data.keyword.mobilepushshort}}- und Analytics-Funktionen direkt über das Dashboard hinzufügen.
    * Es stehen jetzt [Code-Starter](starters.html#Code_Starter) zur Verfügung.
    * Sie können Ihren Projekten, die Sie mit einem Code-Starter erstellt haben, die Funktion 'Authentication' hinzufügen.
    * Swift wird jetzt unterstützt.
@@ -42,7 +53,7 @@ Mit der Aktualisierung des {{site.data.keyword.Bluemix_notm}} Mobile-Dashboards 
 #### Benutzerschnittstellenbuilder
 {: #ui_builder}
 
-   * Auf die **Push Notifications**-Funktion wird jetzt über das Projekt zugegriffen.
+   * Auf die Funktion für **{{site.data.keyword.mobilepushshort}}** wird jetzt über das Projekt zugegriffen.
    * Die Registerkarte **Projekteinstellungen** wurde in **Einstellungen** umbenannt.
    * Die Registerkarte **Authentifizierung** wurde in **Benutzerzugriff** umbenannt.
 

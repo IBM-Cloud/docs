@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Android アプリケーションによる{{site.data.keyword.mobilepushshort}}受け取りの可能化
 {: #tag_based_notifications}
-最終更新日: 2016 年 12 月 07 日
+最終更新日: 2017 年 1 月 16 日
 {: .last-updated}
 
 Android アプリケーションでデバイスへのプッシュ通知を受け取れるようにすることができます。Android Studio が前提条件であり、Android プロジェクトをビルドするための推奨方式です。Android Studio の基本知識が必要です。
@@ -22,16 +22,17 @@ Android アプリケーションでデバイスへのプッシュ通知を受け
 
 このセクションでは、Android アプリケーションをさらに開発するためにクライアント Push SDK をインストールして使用する方法について説明します。
 
-Bluemix® Mobile Services Push SDK は、Gradle を使用して追加できます。Gradle は自動的に成果物をリポジトリーからダウンロードして、Android アプリケーションで使用できるようにします。Android Studio および Android Studio SDK が正しくセットアップされていることを確認してください。システムのセットアップ方法について詳しくは、[Android Studio 概要](https://developer.android.com/tools/studio/index.html)を参照してください。Gradle については、[Configuring Gradle Builds](http://developer.android.com/tools/building/configuring-gradle.html) を参照してください。
+Bluemix® Mobile Services Push SDK は、Gradle を使用して追加できます。Gradle は自動的に成果物をリポジトリーからダウンロードして、Android アプリケーションで使用できるようにします。Android Studio および Android Studio SDK が正しくセットアップされていることを確認してください。システムのセットアップ方法について詳しくは、[Android Studio の概要![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.android.com/tools/studio/index.html "外部リンク・アイコン"){: new_window}を参照してください。Gradle について詳しくは、[Gradle でのビルドの構成![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://developer.android.com/tools/building/configuring-gradle.html "外部リンク・アイコン"){: new_window}に関する資料を参照してください。
 
 モバイル・アプリケーションを作成して開いてから、Android Studio を使用して以下の手順を実行します。
 
-1. モジュール・レベルの **build.gradle** ファイルに、依存関係を追加します。 
+1. モジュール・レベルの **build.gradle** ファイルに、依存関係を追加します。 	
+
 	- 以下の依存関係を追加して、Bluemix™ Mobile サービスの Push クライアント SDK と Google Play サービス SDK を、コンパイル有効範囲の依存関係に含めます。
 	```
-	com.ibm.mobilefirstplatform.clientsdk.android:push:2.+
-```
-    {: codeblock}
+	com.ibm.mobilefirstplatform.clientsdk.android:push:3.+
+	```
+    	{: codeblock}
 	
 	- コード・スニペットに必要なインポート・ステートメントに、以下の依存関係を追加します。
 	```
@@ -42,16 +43,22 @@ Bluemix® Mobile Services Push SDK は、Gradle を使用して追加できま�
 	import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationListener;
 	import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPSimplePushNotification;
 	```
-    {: codeblock}
+    	{: codeblock}
+
+	- 次の依存関係をモジュール・レベルの **build.gradle** ファイルの最後に追加します。
+	```
+		apply plugin: 'com.google.gms.google-services'
+	```
+		{: codeblock}
 3. プロジェクト・レベルの **build.gradle** ファイルに、以下の依存関係を追加します。
 ```
 dependencies {
-classpath 'com.android.tools.build:gradle:2.2.0'
+classpath 'com.android.tools.build:gradle:3.0.0'
     classpath 'com.google.gms:google-services:3.0.0'
 }
 ``` 
     {: codeblock}
-5. **AndroidManifest.xml** ファイルに、以下のアクセス権を追加します。サンプル・マニフェストを表示するには、[Android helloPush Sample Application (Android helloPush サンプル・アプリケーション)](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml)を参照してください。 サンプル Gradle ファイルを表示するには、[Sample Build Gradle file (サンプル Build Gradle ファイル)](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle) を参照してください。
+5. **AndroidManifest.xml** ファイルに、以下のアクセス権を追加します。サンプル・マニフェストを表示するには、[Android helloPush Sample Application ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml "外部リンク・アイコン"){: new_window}を参照してください。サンプル Gradle ファイルを表示するには、[build.gradle のサンプル・ファイル![ 外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle "外部リンク・アイコン"){: new_window}を参照してください。
 ```
 <uses-permission android:name="android.permission.INTERNET"/>
 <uses-permission android:name="android.permission.GET_ACCOUNTS" />
@@ -60,7 +67,7 @@ classpath 'com.android.tools.build:gradle:2.2.0'
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 ```
 	{: codeblock}
-   詳しくは、[Android のアクセス権](http://developer.android.com/guide/topics/security/permissions.html)について参照してください。
+ここをクリックすると、[Android のパーミッション![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://developer.android.com/guide/topics/security/permissions.html "外部リンク・アイコン"){: new_window}の詳細情報が表示されます。
 4. アクティビティーの通知インテント設定を追加します。この設定により、ユーザーが通知エリアで受信した通知をクリックすると、アプリケーションが開始します。
 ```
 <intent-filter>
@@ -106,7 +113,7 @@ FCM プロジェクトのセットアップおよび資格情報の取得につ�
 
 4. 「Android アプリへの Firebase の追加 (Add Firebase to your Android app)」ウィンドウで、パッケージ名として **com.ibm.mobilefirstplatform.clientsdk.android.push** を追加します。「アプリのニックネーム (App nickname)」フィールドはオプションです。**「ADD APP」**をクリックします。![「Android への Firebase の追加」ウィンドウ](images/FCM_1.jpg)
 
-5. 「Android アプリへの Firebase の追加 (Add Firebase to your Android app)」ウィンドウにパッケージ名を入力して、アプリケーションのパッケージ名を組み込みます。「アプリのニックネーム (App nickname)」フィールドはオプションです。**「ADD APP」**をクリックします。Firebase では、追加するパッケージごとに、パッケージ名を追加して `build.gradle` を変更する必要があります。
+5. 「Android アプリへの Firebase の追加 (Add Firebase to your Android app)」ウィンドウにパッケージ名を入力して、アプリケーションのパッケージ名を組み込みます。「アプリのニックネーム (App nickname)」フィールドはオプションです。**「ADD APP」**をクリックします。 
 
 	![アプリケーションのパッケージ名の追加](images/FCM_2.jpg)
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-11-14"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -17,7 +17,7 @@ lastupdated: "2016-11-14"
 
 ## Funktionsweise von {{site.data.keyword.Bluemix_notm}} Public {{site.data.keyword.objectstorageshort}} {: #public}
 
-Public {{site.data.keyword.objectstorageshort}} verfügt über zwei getrennte Routen, denen ein Benutzer bei der Bereitstellung eines Kontos folgen kann. Sie können innerhalb Ihres privaten Netzes starten oder über eine {{site.data.keyword.Bluemix_notm}}-App auf {{site.data.keyword.objectstorageshort}} zugreifen. Sowohl Administratoren als auch Entwickler können Objekte speichern und darauf zugreifen, wie im folgenden Diagramm dargestellt. 
+Public {{site.data.keyword.objectstorageshort}} verfügt über zwei getrennte Routen, denen ein Benutzer bei der Bereitstellung eines Kontos folgen kann. Sie können innerhalb Ihres privaten Netzes starten oder über eine {{site.data.keyword.Bluemix_notm}}-App auf {{site.data.keyword.objectstorageshort}} zugreifen. Sowohl Administratoren als auch Entwickler können Objekte speichern und darauf zugreifen, wie im folgenden Diagramm dargestellt.
 
 <dl>
   <dt><dfn> {{site.data.keyword.Bluemix_notm}}-App</dfn></dt>

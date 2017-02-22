@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2015，2016
+  years: 2015，2017
 
 lastupdated: "2016-06-20"
 
@@ -19,7 +19,7 @@ lastupdated: "2016-06-20"
 
 *버전:* 1.4.0
 
-명령행 인터페이스(CLI)를 사용하여 {{site.data.keyword.vpn_full}} 서비스를 구성하고 관리할 수 있습니다. {{site.data.keyword.vpn_short}} CLI 플러그인은 두 개의 버전으로 사용 가능합니다(Cloud Foundry CLI 플러그인으로 사용할 항목 및 {{site.data.keyword.Bluemix}} CLI 플러그인으로 사용할 다른 항목). 두 플러그인 버전 모두 동일한 기능을 제공합니다.  
+명령행 인터페이스(CLI)를 사용하여 {{site.data.keyword.vpn_full}} 서비스를 구성하고 관리할 수 있습니다. {{site.data.keyword.vpn_short}} CLI 플러그인은 두 개의 버전으로 사용 가능합니다(Cloud Foundry CLI 플러그인으로 사용할 항목 및 {{site.data.keyword.Bluemix}} CLI 플러그인으로 사용할 다른 항목). 두 플러그인 버전 모두 동일한 기능을 제공합니다.
 {:shortdesc}
 
 {{site.data.keyword.vpn_short}} 플러그인은 Windows, MAC 및 Linux 운영 체제에 사용 가능합니다. 사용자에게 적용 가능한 항목을 사용해야 합니다.
@@ -83,8 +83,7 @@ bluemix vpn connection-create CONNECTION_NAME -g GATEWAY_NAME -k PRESHARED_KEY -
 
 **예제**:
 
-이름이 `my_connection`인 새 vpn 연결을 작성합니다.
-
+이름이 `my_connection`인 새 vpn 연결을 작성합니다. 
 ```
 bluemix vpn connection-create my_connection -g my_gateway -k 123456 -subnets "192.168.10.0/24" -cip 162.135.1.1
 ```
@@ -115,8 +114,7 @@ bluemix vpn ike-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION] [-pfs GROUP]
 
 **예제**:
 
-이름이 `my_ike`인 새 IKE 정책을 작성합니다.
-
+이름이 `my_ike`인 새 IKE 정책을 작성합니다. 
 ```
 bluemix vpn ike-create my_ike -g my_gateway
 ```
@@ -147,8 +145,7 @@ bluemix vpn ipsec-create POLICY_NAME -g GATEWAY_NAME [-d DESCRIPTION] [-pfs GROU
 
 **예제**:
 
-이름이 `my_policy`인 IPSec 정책을 작성합니다.
-
+이름이 `my_policy`인 IPSec 정책을 작성합니다. 
 ```
 bluemix vpn ipsec-create my_policy -g my_gateway
 ```
@@ -175,8 +172,7 @@ bluemix vpn gateway-create GATEWAY_NAME -t TYPE [-gateway_ip IP_ADDRESS] [-subne
 
 **예제**:
 
-이름이 `my_gateway`이고 유형이 `allContainerGroups`인 게이트웨이를 작성합니다.
-
+이름이 `my_gateway`이고 유형이 `allContainerGroups`인 게이트웨이를 작성합니다. 
 ```
 bluemix vpn gateway-create my_gateway -t allContainerGroups
 ```

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-05"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 {:new_window: target="_blank"}
@@ -35,7 +35,7 @@ Google을 사용하여 {{site.data.keyword.amafull}} Android 애플리케이션�
 ## Google 개발자 콘솔에서 프로젝트 작성
 {: #create-google-project}
 
-ID 제공자로 Google을 사용하기 시작하려면 [Google 개발자 콘솔](https://console.developers.google.com)에서 프로젝트를 작성하십시오.
+ID 제공자로서 Google 사용을 시작하려면 [Google 개발자 콘솔 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.developers.google.com "외부 링크 아이콘"){: new_window}에서 프로젝트를 작성하십시오.
 프로젝트 작성의 일부로 Google 클라이언트 ID를 확보해야 합니다. Google 클라이언트 ID는 Google 인증에서 사용하는 애플리케이션의 고유 ID이며 {{site.data.keyword.amashort}} 서비스를 설정하는 데 필요합니다. 
 
 콘솔에서 다음을 수행하십시오.
@@ -53,7 +53,7 @@ ID 제공자로 Google을 사용하기 시작하려면 [Google 개발자 콘솔]
 
 Google의 경우 애플리케이션 신뢰성을 확인하려면 서명 인증 지문을 지정해야 합니다. 
 
-Android OS에서는 Android 디바이스에 설치된 모든 애플리케이션을 개발자 인증서로 서명해야 합니다. Android 애플리케이션은 디버그 모드 및 릴리스 모드로 빌드할 수 있습니다. 일반적으로 디버그 및 릴리스 모드에 대해 각기 다른 인증서를 포함하는 것이 좋습니다. 디버그 모드로 Android 애플리케이션을 서명하는 데 사용되는 인증서는 Android SDK와 함께 번들로 포함됩니다. Android SDK는 보통 Android Studio에서 자동으로 설치합니다. 애플리케이션을 Google Play에 릴리스하려는 경우 일반적으로 직접 생성하는 다른 인증서로 앱에 서명해야 합니다. 자세한 정보는 [Android 애플리케이션 서명](http://developer.android.com/tools/publishing/app-signing.html)을 참조하십시오. 
+Android OS에서는 Android 디바이스에 설치된 모든 애플리케이션을 개발자 인증서로 서명해야 합니다. Android 애플리케이션은 디버그 모드 및 릴리스 모드로 빌드할 수 있습니다. 일반적으로 디버그 및 릴리스 모드에 대해 각기 다른 인증서를 포함하는 것이 좋습니다. 디버그 모드로 Android 애플리케이션을 서명하는 데 사용되는 인증서는 Android SDK와 함께 번들로 포함됩니다. Android SDK는 보통 Android Studio에서 자동으로 설치합니다. 애플리케이션을 Google Play에 릴리스하려는 경우 일반적으로 직접 생성하는 다른 인증서로 앱에 서명해야 합니다. 자세한 정보는 [Android 애플리케이션 서명 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://developer.android.com/tools/publishing/app-signing.html "외부 링크 아이콘"){: new_window}을 참조하십시오. 
 
 개발 환경에 대한 인증서를 포함하는 키 저장소는 `~/.android/debug.keystore` 파일에 저장됩니다. 기본 키 저장소 비밀번호는 `android`입니다. 이 인증서는 디버그 모드로 애플리케이션을 빌드하는 데 사용됩니다. 
 
@@ -111,11 +111,11 @@ Android Studio 프로젝트에서 다음을 수행하십시오.
 	```Gradle
 	dependencies {
 		compile group: 'com.ibm.mobilefirstplatform.clientsdk.android',    
-        name:'googleauthentication',
-        version: '2.+',
-        ext: 'aar',
-        transitive: true
-    	// other dependencies  
+			name:'googleauthentication',
+			version: '2.+',
+			ext: 'aar',
+			transitive: true
+			// other dependencies  
 	}
 	```
 	{: codeblock}
@@ -131,7 +131,7 @@ Android Studio 프로젝트에서 다음을 수행하십시오.
 	```XML
 	<uses-permission android:name="android.permission.INTERNET" />
 	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
- <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+	<uses-permission android:name="android.permission.USE_CREDENTIALS" />
 	```
 	{: codeblock}
 
@@ -145,10 +145,10 @@ Android Studio 프로젝트에서 다음을 수행하십시오.
 	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_UK);
 
 	BMSClient.getInstance().setAuthorizationManager(
-					MCAAuthorizationManager.createInstance(this, "<MCAServiceTenantId>"));
+		MCAAuthorizationManager.createInstance(this, "<MCAServiceTenantId>"));
 
 	GoogleAuthenticationManager.getInstance().register(this);
-```
+	```
 	{: codeblock}
 
 	* `BMSClient.REGION_UK`를 해당 {{site.data.keyword.Bluemix_notm}} **지역**으로 대체하십시오.
@@ -156,7 +156,7 @@ Android Studio 프로젝트에서 다음을 수행하십시오.
 
 	이러한 값을 얻는 방법에 대한 자세한 정보는 [시작하기 전에](##before-you-begin)를 참조하십시오. 
 
-	**참고:** Android 애플리케이션이 Android 버전 6.0(API 레벨 23) 이상을 대상으로 하는 경우, `register`를 호출하기 전에 애플리케이션에 `android.permission.GET_ACCOUNTS` 호출이 있는지 확인해야 합니다. 자세한 정보는 [https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}을 참조하십시오.
+	**참고:** Android 애플리케이션이 Android 버전 6.0(API 레벨 23) 이상을 대상으로 하는 경우, `register`를 호출하기 전에 애플리케이션에 `android.permission.GET_ACCOUNTS` 호출이 있는지 확인해야 합니다. 자세한 정보는 [Android에서 권한 요청 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.android.com/training/permissions/requesting.html "외부 링크 아이콘"){: new_window}을 참조하십시오. 
 
 1. 다음 코드를 활동에 추가하십시오. 
 
@@ -175,7 +175,7 @@ Android Studio 프로젝트에서 다음을 수행하십시오.
 
 클라이언트 SDK가 초기화되고 Google 인증 관리자가 등록되면 백엔드 애플리케이션에 대한 요청을 작성할 수 있습니다.
 
-테스트를 시작하기 전에, **MobileFirst Services Starter** 표준 유형으로 작성된 모바일 백엔드 애플리케이션이 있어야 하며 {{site.data.keyword.amashort}} `/protected` 엔드포인트에서 보호되는 리소스가 이미 있어야 합니다. 자세한 정보는 [리소스 보호](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)를 참조하십시오. 
+테스트를 시작하기 전에, **MobileFirst Services Starter** 표준 유형으로 작성된 모바일 백엔드 애플리케이션이 있어야 하며 {{site.data.keyword.amashort}} `/protected` 엔드포인트에서 보호되는 리소스가 이미 있어야 합니다. 자세한 정보는 [리소스 보호](protecting-resources.html)를 참조하십시오. 
 
 1. `{applicationRoute}/protected`(예: `http://my-mobile-backend.mybluemix.net/protected`)를 열어 데스크탑 브라우저에서 모바일 백엔드 애플리케이션의 보호 엔드포인트로 요청을 전송하십시오. `{applicationRoute}` 값을 얻는 방법에 대한 정보는 [시작하기 전에](#before-you-begin)를 참조하십시오. 
 
@@ -220,8 +220,8 @@ Android Studio 프로젝트에서 다음을 수행하십시오.
 	다음 코드를 추가하여 로그아웃 기능을 추가할 수도 있습니다. 
 
 	```Java
- GoogleAuthenticationManager.getInstance().logout(getApplicationContext(), listener);
- ```
+	GoogleAuthenticationManager.getInstance().logout(getApplicationContext(), listener);
+	```
 	{: codeblock}
 
 	Google에서 사용자가 로그인한 후에 이 코드를 호출하면 사용자가 Google에서 로그아웃됩니다. 사용자가 로그인을 다시 시도하는 경우, 다시 로그인하기 위해 Google 계정을 선택해야 합니다. 이전에 로그인한 Google ID로 로그인을 시도하는 경우, 사용자에게는 다시 해당 신임 정보에 대한 프롬프트가 제시되지 않습니다. 다시 로그인 신임 정보에 대한 프롬프트를 받으려면, 사용자가 Android 디바이스에서 해당 Google 계정을 제거해야 합니다. 

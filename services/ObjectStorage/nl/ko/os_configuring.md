@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -22,7 +22,7 @@ Swift 또는 Cloud Foundry 명령을 사용하여 {{site.data.keyword.objectstor
 
 다음 필수 소프트웨어가 없는 경우 설치하십시오. 
 * Python 2.7 이상
-* 설치 도구 패키지
+* setuptools 패키지
 * pip 패키지
 * Cloud Foundry CLI
 
@@ -46,8 +46,8 @@ pip install python-keystoneclient
 
 Swift 클라이언트를 구성하려면 인증 정보를 `export`해야 합니다. Cloud Foundry 또는 URL 명령을 사용한 CLI를 통해 또는 {{site.data.keyword.Bluemix_notm}} UI를 통해서 [신임 정보를 생성](/docs/services/ObjectStorage/os_credentials.html)할 수 있습니다. 클라이언트는 다음 표에 있는 환경 변수에서 정보를 가져옵니다. 
 
-
 <table>
+<caption> 표 1. 환경 변수 및 설명</caption>
   <tr>
     <th> 환경 변수 </th>
     <th> 설명 </th>
@@ -74,7 +74,6 @@ Swift 클라이언트를 구성하려면 인증 정보를 `export`해야 합니�
   </tr>
 </table>
 
-표 1: 인증 변수와 설명
 
 
 인증 정보를 내보내려면 신임 정보를 입력하고 다음 명령을 실행하십시오. 

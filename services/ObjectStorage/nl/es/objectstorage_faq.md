@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -19,6 +19,7 @@ Estas preguntas más frecuentes proporcionan respuestas a preguntas comunes sobr
 El servicio de {{site.data.keyword.objectstorageshort}} ofrece dos opciones de planes: Gratuito y Estándar. El [precio](https://www.ibm.com/cloud-computing/bluemix/pricing/) varía en función del plan escogido.
 
 <table>
+<caption> Tabla 1. Comparación de los planes Gratuito y Estándar</caption>
   <tr>
     <th> Plan gratuito </th>
     <th> Plan estándar </th>
@@ -40,8 +41,6 @@ El servicio de {{site.data.keyword.objectstorageshort}} ofrece dos opciones de p
     <td> Almacenamiento ilimitado </td>
   </tr>
 </table>
-
-Tabla 1: Comparación de planes Gratuito y Estándar
 
 **Atención**: Los usuarios que trabajan con una cuenta de prueba de {{site.data.keyword.Bluemix_notm}} pueden utilizar el plan Gratuito. Una vez que caduque el tiempo de la versión de prueba, la instancia de servicio asociada de {{site.data.keyword.objectstorageshort}} se inhabilitará, lo que significa que no podrá acceder a la cuenta de almacenamiento. Tras un periodo de 30 días, se depurará la cuenta de {{site.data.keyword.Bluemix_notm}} y se suprimirán todos los datos. Para evitar la pérdida de datos, actualice a una [Cuenta de pago de {{site.data.keyword.Bluemix_notm}}](/docs/admin/account.html) lo antes posible.
 

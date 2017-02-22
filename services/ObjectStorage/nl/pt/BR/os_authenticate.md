@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -18,14 +18,12 @@ Para interagir com o serviço, deve-se autenticar a instância do {{site.data.ke
 {: shortdesc}
 
 
-O provisionamento de uma nova instância do {{site.data.keyword.objectstorageshort}} cria um projeto Keystone isolado no IBM Public Cloud. A estrutura de credenciais do Keystone contém um conjunto
-completo de atributos para permitir a escolha do método de solicitação de token do OpenStack ou
-o OpenStack SDK que melhor se ajuste ao seu app. Ao vincular um novo app à instância, um novo
-usuário do Keystone com acesso ao projeto será criado. Quando você desprovisiona a instância, o projeto e o usuário são excluídos.
+O provisionamento de uma nova instância do {{site.data.keyword.objectstorageshort}} cria um projeto Keystone isolado no IBM Public Cloud. A estrutura de credenciais do Keystone contém um conjunto completo de atributos para que seja possível escolher o método de solicitação de token do OpenStack ou do SDK do OpenStack que melhor se ajuste ao seu
+aplicativo. Ao ligar um novo app à instância, um novo usuário Keystone com acesso ao projeto será criado. Quando você desprovisiona a instância, o projeto e o usuário são excluídos.
 
 Para obter mais informações sobre como usar o OpenStack Swift e o Keystone, visualize o [site de documentação do OpenStack](http://docs.openstack.org).
 
-1. A solicitação de token v3 recomendada é uma solicitação de POST para https://identity.open.softlayer.com/v1/auth/tokens conforme mostrado no comando cURL a seguir:
+1. Faça uma solicitação de POST em `https://identity.open.softlayer.com/v3/auth/tokens` conforme mostrado no comando cURL a seguir.
   ```
   	curl -i \
 	  -H "Content-Type: application/json" \
@@ -54,8 +52,7 @@ Para obter mais informações sobre como usar o OpenStack Swift e o Keystone, vi
   ```
   {: codeblock}
 
-2. Quando você autenticar com o Keystone, receberá uma resposta do catálogo. Selecione um terminal `object-store` e tome nota. Ele será necessário para construir a URL completa. O exemplo
-de resposta a seguir foi cortado para mostrar somente informações relevantes para o {{site.data.keyword.objectstorageshort}}.
+2. Selecione um terminal `object-store` na resposta do catálogo e tome nota. Ele será necessário para construir a URL completa. O exemplo de resposta a seguir foi cortado para mostrar somente informações relevantes para o {{site.data.keyword.objectstorageshort}}.
 
   ```
   	HTTP/1.1 201 Created
@@ -159,6 +156,7 @@ de resposta a seguir foi cortado para mostrar somente informações relevantes p
   {: screen}
 
   <table>
+  <caption> Tabela 1. Resposta de solicitação de post explicada</caption>
     <tr>
       <th> Terminal de resposta </th>
       <th> Explicação </th>
@@ -177,12 +175,10 @@ de resposta a seguir foi cortado para mostrar somente informações relevantes p
     </tr>
     <tr>
       <td> <code> url </code> </td>
-      <td> Sua URL do {{site.data.keyword.objectstorageshort}}. Usada para interagir com o serviço usando comandos cURL. </td>
+      <td> Sua URL do {{site.data.keyword.objectstorageshort}}. </td>
     </tr>
     <tr>
       <td> <code> interface </code> </td>
       <td> A interface interna não pode ser acessada por meio do {{site.data.keyword.Bluemix_notm}}. Use a interface pública (<code>publicURL</code>). </td>
     </tr>
   </table>
-
-  Tabela 1: Resposta de solicitação de post explicada

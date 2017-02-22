@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
   
-lastupdated: "2016-10-23"
+lastupdated: "2017-01-11"
 
 ---
 
@@ -49,10 +49,10 @@ Siga el proceso de registro para crear una cuenta de {{site.data.keyword.Bluemix
 {: tsResolve}
 
 En función de cómo se haya configurado su cuenta, se podrán aplicar algunas de estas opciones de inicio de sesión: 
- * Los usuarios de SoftLayer con ID de SoftLayer deben iniciar sesión a través del [Portal de cliente](https://control.softlayer.com).
- * Los usuarios de SoftLayer con un ID de IBM y con o sin una cuenta de Bluemix enlazada pueden iniciar sesión mediante el [Portal de cliente](https://control.softlayer.com) para abrir el Portal de cliente de SoftLayer o mediante la [consola de Bluemix](https://console.{DomainName}) para abrir el panel de control Infraestructura. 
+ * Los usuarios de SoftLayer con ID de SoftLayer deben iniciar sesión a través del [Portal de cliente ![icono de enlace externo](../icons/launch-glyph.svg)](https://control.softlayer.com){: new_window}. 
+ * Los usuarios de SoftLayer con un ID de IBM y con o sin una cuenta de Bluemix enlazada pueden iniciar sesión mediante el [Portal de cliente ![icono de enlace externo](../icons/launch-glyph.svg)](https://control.softlayer.com){: new_window} para abrir el Portal de cliente de SoftLayer o mediante la [consola de Bluemix ![icono de enlace externo](../icons/launch-glyph.svg)](https://console.{DomainName}){: new_window} para abrir el panel de control Infraestructura. 
  * Los usuarios de Bluemix sin una cuenta de SoftLayer enlazada deben iniciar sesión mediante la consola de Bluemix.
- * Los usuarios de Bluemix con una cuenta de SoftLayer enlazada pueden iniciar sesión mediante la [consola de Bluemix](https://console.{DomainName}) o el [Portal de cliente](https://control.softlayer.com).
+ * Los usuarios de Bluemix con una cuenta de SoftLayer enlazada pueden iniciar sesión mediante la [consola de Bluemix ![icono de enlace externo](../icons/launch-glyph.svg)](https://console.{DomainName}){: new_window} o el [Portal de cliente ![icono de enlace externo](../icons/launch-glyph.svg)](https://control.softlayer.com){: new_window}.
  
 
 ## La contraseña no es válida
@@ -152,13 +152,13 @@ Si la cuenta está pendiente, no puede iniciar una sesión en {{site.data.keywor
 Después de registrarse para una cuenta de prueba de {{site.data.keyword.Bluemix_notm}}, es posible que no pueda iniciar una sesión en {{site.data.keyword.Bluemix_notm}}. Verá en su lugar el siguiente mensaje:
 {: tsSymptoms}
 
-<code>Su cuenta está pendiente. Debe esperar hasta 24 horas a recibir una confirmación por correo electrónico y debe comprobar la carpeta spam. Si transcurrido este tiempo no ha recibido la confirmación por correo electrónico, póngase en contacto con el <a href="http://ibm.biz/bluemixsupport.com" target="_blank">soporte de Bluemix</a>.</code>
+<code>Su cuenta está pendiente. Debe esperar hasta 24 horas a recibir una confirmación por correo electrónico y debe comprobar la carpeta spam. Si transcurrido este tiempo no ha recibido la confirmación por correo electrónico, póngase en contacto con el <a href="http://ibm.biz/bluemixsupport.com" target="_blank">equipo de soporte de Bluemix<img src="../icons/launch-glyph.svg" alt="icono de enlace externo"></a>.</code>
 
 
 Después de registrarse para una cuenta de prueba de {{site.data.keyword.Bluemix_notm}}, recibirá un correo electrónico de confirmación. Debe pulsar el enlace del correo electrónico de confirmación para completar el proceso de registro.
 {: tsCauses} 
 
-El correo electrónico de confirmación se envía a la dirección de correo electrónico que ha especificado. Consulte la bandeja de entrada de la carpeta de correo basura. Si no ha recibido el correo electrónico de confirmación, póngase en contacto con el soporte de [{{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport.com){: new_window}.  
+El correo electrónico de confirmación se envía a la dirección de correo electrónico que ha especificado. Consulte la bandeja de entrada de la carpeta de correo basura. Si no ha recibido el correo electrónico de confirmación, póngase en contacto con el [equipo de soporte de {{site.data.keyword.Bluemix_notm}}![icono de enlace externo](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}.  
 {: tsResolve}
 
 
@@ -213,7 +213,7 @@ para cambiar el rol. Para identificar el gestor de la organización, siga estos 
   
 Si no puede invitar usuarios porque es colaborador y no un miembro, debe suprimir la cuenta anterior de {{site.data.keyword.Bluemix_notm}} y luego se le debe invitar como un miembro de la organización. Para suprimir la cuenta anterior y unirse como miembro, complete los siguientes pasos: 
 
-  1. Póngase en contacto con el [Soporte de {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport){: new_window} para abrir una incidencia de soporte y solicitar que se suprima la cuenta. Si tiene datos asociados con su antigua cuenta que desea guardar y moverlos a la nueva cuenta, incluya es información en el correo. 
+  1. Póngase en contacto con el [equipo de soporte de {{site.data.keyword.Bluemix_notm}}![icono de enlace externo](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window} para abrir una incidencia de soporte y solicitar que se suprima la cuenta. Si tiene datos asociados con su antigua cuenta que desea guardar y moverlos a la nueva cuenta, incluya es información en el correo. 
   2. Cuando se suprima la cuenta, tendrá un usuario con el rol de gestor de la organización y le invitará a unirse como gestor. Luego, inicie sesión en {{site.data.keyword.Bluemix_notm}} desde la invitación. 
 
 
@@ -265,7 +265,7 @@ Puede llevar a cabo una o varias de estas acciones si es necesario:
   * Finalice la sesión de {{site.data.keyword.Bluemix_notm}} y vuélvala a iniciar.
   * Utilice la modalidad de navegación privada del navegador. 
   * Borre las cookies y la memoria caché del navegador.
-  * Utilice otro navegador. Para obtener información sobre las versiones de los navegadores a las que da soporte {{site.data.keyword.Bluemix_notm}}, consulte Requisitos previos de [{{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}.
+  * Utilice otro navegador. Para obtener información sobre las versiones de los navegadores a las que da soporte {{site.data.keyword.Bluemix_notm}}, consulte [Requisitos previos de {{site.data.keyword.Bluemix_notm}}![icono de enlace externo](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}.
   * Si ha instalado la interfaz de línea de mandatos cf, escriba el mandato `cf
 apps` para ver si la app se está ejecutando.
   

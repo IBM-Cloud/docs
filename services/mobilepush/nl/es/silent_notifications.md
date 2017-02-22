@@ -1,7 +1,7 @@
 ------
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,41 +12,12 @@ copyright:
 
 # Manejo de notificaciones silenciosas para iOS
 {: #silent-notifications}
-Última actualización: 06 de diciembre de 2016
+Última actualización: 16 de enero de 2017
 {: .last-updated}
 
-Las notificaciones silenciosas no aparecen en la pantalla del dispositivo. Estas notificaciones se reciben mediante la aplicación en segundo plano, que activa la aplicación durante 30 segundos para realizar la tarea en segundo plano. Puede que el usuario no tenga en cuenta la llegada de la notificación. Para enviar notificaciones silenciosas para iOS, utilice la [API REST](https://mobile.{DomainName}/imfpush/).   
+Las notificaciones silenciosas no aparecen en la pantalla del dispositivo. Estas notificaciones se reciben mediante la aplicación en segundo plano, que activa la aplicación durante 30 segundos para realizar la tarea en segundo plano. Puede que el usuario no tenga en cuenta la llegada de la notificación. Para enviar notificaciones silenciosas para iOS, utilice la [API REST ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://mobile.{DomainName}/imfpush/ "icono de enlace externo"){: new_window}.   
 
-1. Para enviar notificaciones push silenciosas, implemente el siguiente método en el archivo `appDelegate.m` del proyecto.
-
-```
-//For Objective C
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult result))handler
-{
-   NSNumber *contentAvailable = userInfo[@"aps"][@"content-available"];
-   if([contentAvailable intValue]== 1){
-      [[IMFPushClient sharedInstance] application:application didReceiveRemoteNotification:userInfo];
-       //Perform background task
-       NSLog(@"Received a silent push..");
-       NSLog(@"userInfo: %@", userInfo.description);
-       _appDelegateVC.result.text = userInfo.description;
-       handler(UIBackgroundFetchResultNewData);
-    }
-    else
-	{
-    //Notificación normal
-    [[IMFPushAppManager get] notificationReceived:userInfo];
-    NSLog(@"Received a normal notification.");
-    NSLog(@"userInfo: %@", userInfo.description);
-     _appDelegateVC.result.text = userInfo.description;
-    handler(UIBackgroundFetchResultNoData);
-    }
-    //Success
-}
-```
-    {: codeblock}
-
-Para Swift, el valor `contentAvailable` que envía el servidor para las instalaciones silenciosas es igual a 1.
+1. Para enviar notificaciones push silenciosas, implemente el siguiente método en el archivo `appDelegate.m` del proyecto.En Swift, el valor `contentAvailable` que envía el servidor para las instalaciones silenciosas es igual a 1.
 ```
 // Para Swift
 func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {

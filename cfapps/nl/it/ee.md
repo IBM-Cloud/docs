@@ -4,9 +4,9 @@
 
 copyright:
 
-  year: 2015, 2016
+  years: 2015，2017
 
-lastupdated: "2016-10-18"
+lastupdated: "2017-01-11"
 
 ---
 
@@ -28,7 +28,7 @@ end-to-end.
 ## Registrazione
 {: #ee_start}
 
-Prima di iniziare, esegui la registrazione per un ID IBM da [https://console.ng.bluemix.net/](https://console.ng.bluemix.net/). Successivamente, potrai accedere a {{site.data.keyword.Bluemix_notm}} e
+Prima di iniziare, esegui la registrazione per un ID IBM da [https://console.ng.bluemix.net/ ![icona link esterno](../icons/launch-glyph.svg)](https://console.ng.bluemix.net/){: new_window}. Successivamente, potrai accedere a {{site.data.keyword.Bluemix_notm}} e
 iniziare il periodo di prova di 30 giorni. {{site.data.keyword.Bluemix_notm}} fornisce
 una franchigia di 2 GB di memoria di runtime e 10 istanze del servizio per la tua prova
 gratuita.
@@ -54,7 +54,7 @@ Per questo scenario, vuoi distribuire un'applicazione Web che utilizza Node.js. 
 tua applicazione. Decidi di creare ed eseguire la tua applicazione vicino alla base
 dei tuoi utenti, in modo da poter usufruire di una più bassa latenza di rete. Dopo che ti sei collegato a {{site.data.keyword.Bluemix_notm}}, fai clic sul link delle preferenze dell'account utente e seleziona la regione **Stati Uniti Sud**. Puoi quindi attenerti alla seguente procedura per creare un'applicazione:
 
-  1. Vai a **Catalogo** 
+  1. Vai a **Catalogo**
   2. Seleziona **Runtime Cloud Foundry**.
   3. Seleziona **SDK for Node.js**.
   4. Immetti un nome univoco per la tua applicazione, ad esempio TestNode, e fai clic su **Crea**. Il nome dell'applicazione deve essere univoco
@@ -242,7 +242,7 @@ per le comunicazioni tra l'applicazione e il servizio.
   <dt>password</dt>
   <dd>b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424</dd>
   <dt>url</dt>
-  <dd>https://d72837bb-b341-4038-9c8e-7f7232916197-bluemix:b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424@d72837bb-b341-4038-9c8e-7f7232916197-bluemix.cloudant.com</dd></dt></dl>
+  <dd>https://d72837bb-b341-4038-9c8e-7f7232916197-bluemix:b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424@d72837bb-b341-4038-9c8e-7f7232916197-bluemix.cloudant.com</dd></dl>
 
   Ad esempio, la tua applicazione Node.js potrebbe accedere a queste
 informazioni nel seguente modo:

@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,12 +12,18 @@ copyright:
 
 # 关于 {{site.data.keyword.mobilepushshort}}
 {: #overview-push}
-上次更新时间：2016 年 12 月 6 日
+上次更新时间：2017 年 1 月 18 日
 {: .last-updated}
 
-IBM {{site.data.keyword.mobilepushshort}} 是可用于将通知发送至 iOS 和 Android 移动设备、Google Chrome、Mozilla Firefox 和 Safari Web 浏览器，以及 Google Chrome Apps and Extensions 的服务。通知可以针对所有应用程序用户，也可以针对一组使用标记的特定用户和设备。您可以管理设备、标记和预订。还可以使用 SDK（软件开发包）和具象状态传输 (REST) 应用程序编程接口 (API) 来进一步开发您的客户机应用程序。 
+IBM {{site.data.keyword.mobilepushshort}} 是一项服务，您可以使用该服务将通知发送到设备和平台。通知可以针对所有应用程序用户，也可以针对一组使用标记的特定用户和设备。您可以管理设备、标记和预订。  
 
-此外，{{site.data.keyword.mobilepushshort}} 还作为一种 Bluemix Dedicated 服务提供。有关 {{site.data.keyword.mobilepushshort}} 专用服务的信息，请参阅[专用服务](/docs/dedicated/index.html)。请注意，{{site.data.keyword.mobilepushshort}} 监视选项卡并不显示分析数据。
+您可以使用以下任何选项，来创建绑定或未绑定服务：
+
+- 通过从目录使用 MobileFirst Services Starter 样板创建 Bluemix 应用程序。这会创建绑定到 Bluemix 后端应用程序的 Push Notifications 服务。
+- 通过从 Mobile 目录直接创建未绑定的 Push Notifications 服务。您可以稍后绑定到应用程序或者选择在未绑定的情况下使用它。 
+- 通过使用 [Mobile 仪表板 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.ng.bluemix.net/docs/mobile/services.html "外部链接图标"){: new_window}。
+
+请注意，{{site.data.keyword.mobilepushshort}} 监视选项卡并不显示分析数据。
 
 {{site.data.keyword.mobilepushshort}} 服务现在支持 OpenWhisk。有关更多信息，请参阅 [OpenWhisk](/docs/openwhisk/index.html)。
 
@@ -58,10 +64,15 @@ IBM {{site.data.keyword.mobilepushshort}} 是可用于将通知发送至 iOS 和
 ###推送安全
 {: push-security}
 
-{{site.data.keyword.mobilepushshort}} API 由两种类型的私钥进行保护 - i) appSecret ii) clientSecret。“appSecret”会保护通常由后端应用程序调用的 API，如用于发送 {{site.data.keyword.mobilepushshort}} 的 API 和用于配置设置的 API。“clientSecret”会保护通常由移动客户端应用程序调用的 API。只有一个 API 与设备注册相关，且其相关联用户标识需要此“clientSecret”。从移动客户端调用的其他 API 没有一个需要 clientSecret。在将应用程序与 {{site.data.keyword.mobilepushshort}} 服务绑定在一起时，“appSecret”和“clientSecret”会分配给每一个服务实例。
-请参阅 ReST API 文档，以获取如何传递私钥以及相关联的 API 的更多信息。
+{{site.data.keyword.mobilepushshort}} API 由两种类型的私钥进行保护：
 
-注：仅在使用用户标识字段注册或更新设备时需要较早版本的应用程序来传递 clientSecret。移动和浏览器客户端调用的所有其他 API 不
+- **appSecret**：“appSecret”会保护通常由后端应用程序调用的 API，如用于发送 {{site.data.keyword.mobilepushshort}} 的 API 和用于配置设置的 API。
+- **clientSecret**：“clientSecret”会保护通常由移动客户端应用程序调用的 API。只有一个 API 与设备注册相关，且其相关联用户标识需要此“clientSecret”。从移动客户端调用的其他 API 没有一个需要 clientSecret。 
+
+在将应用程序与 {{site.data.keyword.mobilepushshort}} 服务绑定在一起时，“appSecret”和“clientSecret”会分配给每一个服务实例。
+请参阅 [REST API ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://mobile.{DomainName}/imfpush/ "外部链接图标")文档，以获取如何传递私钥以及相关联的 API 的更多信息。
+
+**注**：仅在使用用户标识字段注册或更新设备时需要较早版本的应用程序来传递 clientSecret。移动和浏览器客户端调用的所有其他 API 不
 需要 clientSecret。这些旧应用程序可以选择针对设备注册或更新调用继续使用 clientSecret。但是，强烈建议对所有客户端 API 调用强制执行 clientSecret 检查。要在现有应用程序中强制执行此检查，已发布了一个新的“verifyClientSecret”API。对于所有新的应用程序，将对所有客户端 API 调用强制执行 clientSecret 检查，而此行为无法使用“verfiyClientSecret”API 进行更改。
 
 缺省情况下，客户端密钥验证仅在新应用程序中强制执行。允许现有的和新的应用程序使用 verifyClientSecret REST API 启用或停用客户端密钥验证。建议您强制执行客户端密钥验证，以避免向可能了解 applicationId 和 deviceId 的用户公开设备。
@@ -97,8 +108,9 @@ IBM {{site.data.keyword.mobilepushshort}} 是可用于将通知发送至 iOS 和
 可将通知定向发送到特定的设备平台。例如，可以只将通知发送给所有 Android 用户或 Google Chrome 用户。要使用 REST API 发送基于平台的通知，请确保发布到消息资源时提供了目标平台。将平台指定为数组。支持的平台如下所示：
 * A (Apple) 
 * G (Google)
-* WEB_CHROME（Google Chrome 浏览器 WebPush）
-* WEB_FIREFOX（Mozilla Firefox 浏览器 WebPush）
+* WEB_CHROME（Google Chrome 浏览器 Web 推送）
+* WEB_FIREFOX（Mozilla Firefox 浏览器 Web 推送）
+* WEB_SAFARI（Safari 浏览器 Web 推送）
 * APPEXT_CHROME (Google Chrome Apps & Extensions)
 
 ## {{site.data.keyword.mobilepushshort}} 消息大小
@@ -106,7 +118,7 @@ IBM {{site.data.keyword.mobilepushshort}} 是可用于将通知发送至 iOS 和
 
 {{site.data.keyword.mobilepushshort}} 消息有效内容大小取决于网关（FCM/GCM、APNs）和客户机平台规定的约束。 
 
-###iOS
+### iOS 和 Safari
 {: ios-message-size}
 
 对于 iOS 8 和更高版本，所允许的最大大小为 2 KB。Apple 推送通知服务不会发送超过此限制的通知。

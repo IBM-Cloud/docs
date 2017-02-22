@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-23"
+  years: 2016, 2017
+lastupdated: "2017-01-11"
 ---
 
 {:shortdesc: .shortdesc}
@@ -250,7 +250,7 @@ Integration. Com o serviço Cloud Integration, é possível criar uma API de Clo
 
 <dl>
 <dt>API de Cloud Integration</dt>
-    <dd>Uma API de Cloud Integration fornece acesso seguro para os sistemas de registro que residem por trás de um firewall por meio das APIs da web. Ao criar a API de Cloud Integration, escolha o recurso que deseja acessar por meio da API da web, especifique as operações que são permitidas e inclua SDKs e amostras para acessar a API. Para obter mais informações sobre como criar uma API de Cloud Integration, consulte [Criando APIs de Cloud Integration](/docs/services/CloudIntegration/index.html#cloudint_add_service).</dd>
+    <dd>Uma API de Cloud Integration fornece acesso seguro para os sistemas de registro que residem por trás de um firewall por meio das APIs da web. Ao criar a API de Cloud Integration, escolha o recurso que deseja acessar por meio da API da web, especifique as operações que são permitidas e inclua SDKs e amostras para acessar a API. Para obter mais informações sobre como criar uma API de Cloud Integration, veja [Introdução ao Cloud Integration](/docs/services/CloudIntegration/CldInt_GetStart.html).</dd>
 <dt>Serviço privado</dt>
     <dd>Um serviço privado consiste em uma API de Cloud Integration, SDKs e políticas de autorização. O serviço privado também pode conter documentação ou outros itens do provedor de serviços. Somente o gerenciador de organização pode publicar uma API de Cloud Integration como um serviço privado. Para
 ver os serviços privados que estão disponíveis para você,
@@ -305,7 +305,7 @@ Os pré-requisitos para usar a plataforma do {{site.data.keyword.Bluemix_notm}} 
 A lista a seguir especifica o software do navegador mínimo necessário para o {{site.data.keyword.Bluemix_notm}}:
 
  * Chrome: versão mais recente para seu sistema operacional
- * Firefox: versão mais recente para seu sistema operacional e ESR 38
+ * Firefox: versão mais recente para seu sistema operacional e ESR 45
  * Internet Explorer: versão 11
  * Safari: versão mais recente para Mac
 
@@ -319,9 +319,9 @@ Interface da linha de comandos do Cloud Foundry, Versão 6.5.1 ou mais recente
 {: #rellinks}
 ## gerais
 {: #general}
-* [O que é o {{site.data.keyword.Bluemix_notm}}](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){:new_window}
-* [Informações Iniciais](http://www.ibm.com/cloud-computing/bluemix/getting-started/)
+* [O que é {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){:new_window}
+* [Introdução ao ![Ícone de link externo](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/getting-started/){:new_window}
 * [O que há de novo no {{site.data.keyword.Bluemix_notm}}](/docs/whatsnew/index.html)
-* [Aprenda sobre o modelo híbrido](http://www.ibm.com/cloud-computing/bluemix/hybrid/)
+* [Aprenda sobre o modelo híbrido ![Ícone de link externo](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/hybrid/){:new_window}
 * [Gerenciando sua conta](/docs/admin/adminpublic.html#mngacct)
 * [{{site.data.keyword.Bluemix_notm}} glossário](/docs/overview/glossary/index.html)

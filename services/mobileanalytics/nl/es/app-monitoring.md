@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-31"
+  years: 2015, 2017
+lastupdated: "2017-01-10"
 
 ---
 {:new_window: target="_blank"}
@@ -143,6 +143,8 @@ En este ejemplo se utilizan los datos de bloqueo de aplicaciones para crear una 
 	* Nombre de la alerta: alerta para bloqueos de aplicaciones
 	* Mensaje: alerta de bloqueo de app
 	* Frecuencia de consulta: bloqueos de aplicación
+		* Frecuencia de consulta: 2 minutos
+	* Tipo de evento: bloqueos de aplicación
 		* Nombre de la aplicación: cualquier aplicación
 		* Versión de la aplicación: cualquier versión
     * Umbral
@@ -190,7 +192,7 @@ Puede consultar la información de los bloqueos de aplicaciones en la consola de
 ### Supervisión de bloqueos de aplicaciones
 {: #app-crash}
 
-En la tabla **Visión general de bloqueos** se muestran las siguientes columnas de datos:
+En la tabla **Visión general de bloqueos** de la página **Bloqueos** se muestran las siguientes columnas de datos:
 
 * Aplicación: nombre de la aplicación
 * Bloqueos: número total de bloqueos de dicha app
@@ -207,7 +209,7 @@ Puede visualizar los datos de bloqueos de dos formas:
 ### Resolución de problemas de bloqueos de apps
 {: #app-crash-troubleshooting}
 
-La página **Resolución de problemas** de la consola de <!-- **Applications** section of the --> {{site.data.keyword.mobileanalytics_short}} ofrece una vista granular de los bloqueos de app. 
+La página **Resolución de problemas** de la consola de <!-- **Applications** section of the --> {{site.data.keyword.mobileanalytics_short}} ofrece una vista granular de los bloqueos de app, utilizando la tabla **Resumen de bloqueos**. 
 
 La tabla **Resumen de bloqueos** se puede ordenar e incluye las siguientes columnas de datos:
 
@@ -249,4 +251,7 @@ Las métricas que ve en la consola de {{site.data.keyword.mobileanalytics_short}
 
 Configure dashDB en la consola de {{site.data.keyword.mobileanalytics_short}} pulsando **DashDB** en la página **Exportar**. Una vez que finalice la configuración, también se reenviarán datos nuevos enviados a {{site.data.keyword.mobileanalytics_short}} a dashDB en las siguientes 2 horas. 
 
+<!--
+If you have existing DashDB instances, those instances will no longer accept new data because the incoming data no longer matches the schema. Manually add columns for the new data to resume incoming data. Modifying {{site.data.keyword.mobileanalytics_short}} collection tables by adding new columns also breaks the stream of incoming data.
+-->
 

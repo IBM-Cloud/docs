@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  year: 2016
-lastupdated: "2016-06-15"
+  year: 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
 
@@ -62,8 +62,8 @@ Gehen Sie wie folgt vor, um den Autorisierungsprozess zu starten:
   Der Parameter `state` ist momentan nicht im Gebrauch und kann leer gelassen werden.
   Der Parameter `redirect_uri` entspricht dem uri für die Weiterleitung nach erfolgreicher oder fehlgeschlagener Authentifizierung bei Facebook.
 
-1. Nach der Weiterleitung zum Autorisierungsendpunkt wird ein Anmeldeformular von
-   Facebook angezeigt. Geben Sie den Benutzernamen und das Kennwort für die Weiterleitung an den `redirect_uri` ein.
+1. Nach der Weiterleitung zum Autorisierungsendpunkt wird ein Anmeldeformular von  
+Facebook angezeigt. Geben Sie den Benutzernamen und das Kennwort für die Weiterleitung an den `redirect_uri` ein.
    Die nach der Weiterleitung zurückgegebene Antwort enthält den Autorisierungscode in den Abfrageparametern.
 
 1. Senden Sie eine `POST`-Anforderung an den Token-Endpunkt des Autorisierungsservers:

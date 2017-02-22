@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2016, 2017
 
 lastupdated: "2016-09-06"
 
@@ -13,9 +13,9 @@ lastupdated: "2016-09-06"
 # Monitoramento e criação de log de aplicativos Cloud Foundry
 {: #monitoring_logging_cloud_foundry_apps}
 
-O {{site.data.keyword.Bluemix_notm}} possui um mecanismo de criação de log integrado para produzir arquivos de log para seus apps enquanto estão sendo executados. 
-Nos logs, é possível visualizar os erros, os avisos e as mensagens informativas que são produzidas para o seu app. Além disso, também é possível configurar o seu app
-para gravar mensagens de log no arquivo de log. Para
+O {{site.data.keyword.Bluemix_notm}} possui um mecanismo de criação de log integrado para produzir arquivos de log para seus apps enquanto estão sendo executados. Nos
+logs, é possível visualizar os erros, os avisos e as mensagens informativas que são produzidas para o seu app. Além disso, também é possível configurar o seu app para
+gravar mensagens de log no arquivo de log. Para
 obter mais informações sobre formatos de log e como visualizar os logs, consulte [Criação de log para aplicativos em execução no Cloud Foundry](/docs/monitor_log/monitoringandlogging.html#logging_for_bluemix_apps).
 
 Monitorar o app permite ver e controlar a implementação do app. Com o monitoramento, é possível realizar as tarefas a seguir:

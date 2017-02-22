@@ -50,6 +50,7 @@ Die folgenden Aspekte sind bei Desktop Sync zu beachten:
 * Desktop Sync wird auf diesen Betriebssystemen ausgeführt:
   * Windows 7 oder 8
   * Mac OS X ab Version 10.9
+         
       **Hinweis:** Für Windows ist .NET Framework Version 4.5 erforderlich. Wenn .NET nicht installiert ist, werden Sie bei der Installation des {{site.data.keyword.Bluemix_notm}} Live Sync-Befehlszeilenschnittstelle (CLI) dazu aufgefordert, .NET zu installieren.  
 * Das Git-Repository muss nicht geklont werden.
 * Unabhängig von dem Anwendungstyp, den Sie entwickeln, können Sie das Desktop-Projekt mit dem Cloud-Arbeitsbereich synchronisieren.
@@ -70,7 +71,7 @@ Weitere Details zu den Befehlen finden Sie unter [Bluemix Live Sync-Befehle (bl)
 <li>Melden Sie sich in einer Befehlszeile mit dem folgenden Befehl an. Sie werden zur Eingabe Ihrer Benutzer-ID und des entsprechenden Kennworts aufgefordert.  
 <pre class="codeblock">bl login</pre>
 
-<strong>Hinweis:</strong> Ihre Benutzer-ID für DevOps Services kann entweder eine IBM ID oder eine eingebundene ID (Unternehmens-ID) sein. Wenn Sie die eingebundene Authentifizierung für die Anmeldung am Bluemix Live Sync-Befehlszeilenclient verwenden, müssen Sie ein persönliches Zugriffstoken anstatt eines Kennworts verwenden. Wenn Sie die eingebundene Authentifizierung nicht verwenden, funktionieren die IBM ID und das zugehörige Kennwort bei allen Clients. Weitere Informationen zum Erstellen eines persönlichen Zugriffstokens finden Sie unter <a class="xref" href="https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/" target="_blank" alt="Bluemix DevOps Services"> What's federated authentication and how does it affect me?</a>.
+<strong>Hinweis:</strong> Ihre Benutzer-ID für DevOps Services kann entweder eine IBMid oder eine eingebundene ID (Unternehmens-ID) sein. Wenn Sie die eingebundene Authentifizierung für die Anmeldung am Bluemix Live Sync-Befehlszeilenclient verwenden, müssen Sie ein persönliches Zugriffstoken anstatt eines Kennworts verwenden. Wenn Sie die eingebundene Authentifizierung nicht verwenden, funktionieren die IBMid und das zugehörige Kennwort bei allen Clients. Weitere Informationen zum Erstellen eines persönlichen Zugriffstokens finden Sie unter <a class="xref" href="https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/" target="_blank" alt="Bluemix DevOps Services"> What's federated authentication and how does it affect me?</a>.
 </li>
 
 <li>Zeigen Sie die Liste der für die {{site.data.keyword.Bluemix_notm}} Live Sync-Synchronisation verfügbaren Projekte an, indem Sie den folgenden Befehl eingeben:
@@ -170,9 +171,9 @@ Die App muss das IBM SDK for Node.js-Buildpack verwenden. Angepasste Buildpacks 
 
 Nach der Installation von {{site.data.keyword.Bluemix_notm}} Live Debug können Sie die Debug-Tools verwenden.
 
-Stellen Sie die App per Push-Operation bereit und rufen Sie dann `https://app-host.mybluemix.net/bluemix-debug/manage` auf, um auf die Benutzerschnittstelle des {{site.data.keyword.Bluemix_notm}}-Debug-Features zuzugreifen. Wenn Sie aufgefordert werden, sich zu authentifizieren, geben Sie Ihre Benutzer-ID und das persönliche Zugriffstoken oder das Kennwort zur IBM ID ein.    
+Stellen Sie die App per Push-Operation bereit und rufen Sie dann `https://app-host.mybluemix.net/bluemix-debug/manage` auf, um auf die Benutzerschnittstelle des {{site.data.keyword.Bluemix_notm}}-Debug-Features zuzugreifen. Wenn Sie aufgefordert werden, sich zu authentifizieren, geben Sie Ihre Benutzer-ID und das persönliche Zugriffstoken oder das Kennwort zur IBMid ein.    
 
-   **Hinweis**: Ihre Benutzer-ID für DevOps Services kann entweder eine IBM ID oder eine eingebundene ID (Unternehmens-ID) sein. Wenn Sie die eingebundene Authentifizierung für die Anmeldung am Bluemix Live Sync-Befehlszeilenclient verwenden, müssen Sie ein persönliches Zugriffstoken anstatt eines Kennworts verwenden. Wenn Sie die eingebundene Authentifizierung nicht verwenden, funktionieren die IBM ID und das zugehörige Kennwort bei allen Clients. Weitere Informationen zum Erstellen eines persönlichen Zugriffstokens finden Sie unter [What's federated authentication and how does it affect me?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/).
+   **Hinweis:** Ihre Benutzer-ID für DevOps Services kann entweder eine IBMid oder eine eingebundene ID (Unternehmens-ID) sein. Wenn Sie die eingebundene Authentifizierung für die Anmeldung am Bluemix Live Sync-Befehlszeilenclient verwenden, müssen Sie ein persönliches Zugriffstoken anstatt eines Kennworts verwenden. Wenn Sie die eingebundene Authentifizierung nicht verwenden, funktionieren die IBMid und das zugehörige Kennwort bei allen Clients. Weitere Informationen zum Erstellen eines persönlichen Zugriffstokens finden Sie unter [What's federated authentication and how does it affect me?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/).
 
 ###App-Konfigurationen wiederherstellen und Bluemix Live Debug inaktivieren {: #restore_live_debug}
 
@@ -291,11 +292,11 @@ Verwenden Sie diesen Befehl für die Anmeldung bei {{site.data.keyword.Bluemix_n
 
 -u *benutzername*: Die Benutzer-ID zum Anmelden an {{site.data.keyword.Bluemix_notm}}.
 
--p *kennwort*: Das persönliche Zugriffstoken oder das Kennwort zur IBM ID.
+-p *kennwort*: Das persönliche Zugriffstoken oder das Kennwort zur IBMid.
 
 -s *server*: Der Servername oder die IP-Adresse des {{site.data.keyword.jazzhub_short}}-Servers.    
 
-   **Hinweis**: Ihre Benutzer-ID für DevOps Services kann entweder eine IBM ID oder eine eingebundene ID (Unternehmens-ID) sein. Wenn Sie die eingebundene Authentifizierung für die Anmeldung am Bluemix Live Sync-Befehlszeilenclient verwenden, müssen Sie ein persönliches Zugriffstoken anstatt eines Kennworts verwenden. Wenn Sie die eingebundene Authentifizierung nicht verwenden, funktionieren die IBM ID und das zugehörige Kennwort bei allen Clients. Weitere Informationen zum Erstellen eines persönlichen Zugriffstokens finden Sie unter [What's federated authentication and how does it affect me?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/).
+   **Hinweis:** Ihre Benutzer-ID für DevOps Services kann entweder eine IBMid oder eine eingebundene ID (Unternehmens-ID) sein. Wenn Sie die eingebundene Authentifizierung für die Anmeldung am Bluemix Live Sync-Befehlszeilenclient verwenden, müssen Sie ein persönliches Zugriffstoken anstatt eines Kennworts verwenden. Wenn Sie die eingebundene Authentifizierung nicht verwenden, funktionieren die IBMid und das zugehörige Kennwort bei allen Clients. Weitere Informationen zum Erstellen eines persönlichen Zugriffstokens finden Sie unter [What's federated authentication and how does it affect me?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/).
 
 **Beispiele**
 

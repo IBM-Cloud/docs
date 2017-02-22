@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-08-25"
 
 ---
 
@@ -13,9 +14,6 @@ copyright:
 
 #Actualización de apps
 {: #updatingapps}
-
-Última actualización: 25 de agosto de 2016
-{: .last-updated}
 
 
 Puede utilizar el mandato cf push o {{site.data.keyword.Bluemix}} DevOps Services para actualizar las apps en {{site.data.keyword.Bluemix_notm}}. En muchos casos, incluso para los paquetes de compilación integrados como Node.js, también debe escribir un parámetro -c para especificar el mandato que se sebe utilizar para iniciar la aplicación.
@@ -37,7 +35,7 @@ Para crear y utilizar un dominio personalizado en {{site.data.keyword.Bluemix_no
 	1. Vaya al icono **{{site.data.keyword.avatar}}** ![icono Avatar](../icons/i-avatar-icon.svg) &gt; **Gestionar organizaciones** &gt; **Ver detalles** de la organización &gt; **Editar organización** &gt; **Dominios**.
 
 	2. En el separador **DOMINIOS**, **AÑADIR DOMINIO**, escriba el nombre del dominio personalizado y pulse **GUARDAR**.
-	
+
 	**Nota**: por ejemplo, puede utilizar `mycompany.com` para asociar la ruta `www.mycompany.com` a su app. También puede utilizar `example.mycompany.com` para asociar la ruta `www.example.mycompany.com` a su app.
 
   2. Añada la ruta con el dominio personalizado a una aplicación.
@@ -47,7 +45,7 @@ Para crear y utilizar un dominio personalizado en {{site.data.keyword.Bluemix_no
 	2. En el menú **Ver app**, seleccione **Editar rutas y acceso**.
 
 	3. Pulse **Añadir ruta** y especifique la ruta que desea utilizar para la aplicación.
-	4. Pulse **Guardar**. 
+	4. Pulse **Guardar**.
 
 * Utilice la interfaz de línea de mandatos cf:
 
@@ -85,16 +83,16 @@ Para crear y utilizar un dominio personalizado en {{site.data.keyword.Bluemix_no
     *nombre_host*
 
         El nombre de host de la ruta que desea utilizar para la aplicación.
-        
+
     *mycontainergroup*
-    
-        Para grupos de contenedores, el nombre del grupo de contenedores.  
+
+        Para grupos de contenedores, el nombre del grupo de contenedores.
 
 
 Tras configurar su dominio personalizado en {{site.data.keyword.Bluemix_notm}}, debe correlacionarlo con el
 dominio del sistema {{site.data.keyword.Bluemix_notm}} en su servidor DNS registrado:
 
-  1. Configure un registro 'CNAME' para el nombre de dominio personalizado en su servidor DNS. Los pasos para configurar el registro CNAME varían en función del proveedor de DNS. Por ejemplo, si utiliza GoDaddy, seguirá las directrices de la [Ayuda sobre dominios](https://www.godaddy.com/help/add-a-cname-record-19236){: new_window} de GoDaddy.
+  1. Configure un registro 'CNAME' para el nombre de dominio personalizado en su servidor DNS. Los pasos para configurar el registro CNAME varían en función del proveedor de DNS. Por ejemplo, si utiliza GoDaddy, seguirá las directrices de la [Ayuda sobre dominios ![icono de enlace externo](../icons/launch-glyph.svg)](https://www.godaddy.com/help/add-a-cname-record-19236){: new_window} de GoDaddy.
   2. Correlacione el nombre de dominio personalizado con el punto final seguro para la región {{site.data.keyword.Bluemix_notm}} en la que se ejecuta su aplicación. Utilice los puntos finales de región siguientes para proporcionar la ruta al URL asignado a la organización en {{site.data.keyword.Bluemix_notm}}:
 
     * US-SOUTH: `secure.us-south.bluemix.net`
@@ -307,5 +305,5 @@ delete`.
 ## Enlaces relacionados
 {: #general}
 
-* [Despliegues Blue-Green](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
-* [IBM {{site.data.keyword.Bluemix_notm}} DevOps Services](https://hub.jazz.net/){:new_window}
+* [Despliegues blue-green ![icono de enlace externo](../icons/launch-glyph.svg)](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
+* [IBM {{site.data.keyword.Bluemix_notm}} DevOps Services ![icono de enlace externo](../icons/launch-glyph.svg)](https://hub.jazz.net/){:new_window}

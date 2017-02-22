@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -85,7 +85,7 @@ lastupdated: "2016-12-06"
   ```
   {: pre}
 
-2. 使用下表中说明的变量运行以下命令，以生成服务凭证。
+2. 运行以下命令以生成服务凭证。
 
   ```
   curl "https://api.ng.bluemix.net/v2/service_keys" -d '{   "service_instance_guid": "<service_instance_guid>",   "name: <service_instance_name>", "role: <user_role>"}' -X POST -H "Authorization: <bearer_token>" -H "Content-Type: <content_type" -H "Cookie: <cookie>"
@@ -93,12 +93,13 @@ lastupdated: "2016-12-06"
   {: pre}
 
   <table>
+  <caption> 表 1. cURL 服务凭证变量说明</caption>
     <tr>
       <th> 变量</th>
       <th> 说明</th>
     </tr>
     <tr>
-      <td> https://api.ng.bluemix.net/v2/service_keys</td>
+      <td> <code>https://api.ng.bluemix.net/v2/service_keys</code> </td>
       <td> 服务密钥端点。</td>
     </tr>
     <tr>
@@ -119,7 +120,7 @@ lastupdated: "2016-12-06"
     </tr>
   </table>
 
-  表 1：cURL 服务凭证变量说明
+
 
 3. 通过运行以下命令验证凭证。
 

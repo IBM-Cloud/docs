@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2015, 2017
 lastupdated: "2016-10-19"
 
 ---
@@ -47,7 +47,7 @@ lastupdated: "2016-10-19"
 <td valign="top"><b>用户身份提供者</b> <br/>您可以使用以下身份提供者：<ul><li>Facebook</li><li>Google</li><li> 定制</li></ul></td>
 </tr>
 <tr>
-<td><img src="images/push_icon.png" alt="Push Notifications 服务图标"> "> <b>{{site.data.keyword.mobilepushshort}}</b><br/>{{site.data.keyword.mobilepushfull}} 服务提供一个统一平台来发送和管理针对移动（iOS 和 Android）平台和 Web 浏览器应用程序的推送通知。此服务会管理您的应用程序用户与其设备、设备平台和浏览器之间的映射，还会处理将推送通知派送给订户。使用此服务，可以基于推送通知，向客户发送广播、单点广播（基于用户标识、设备标识）和标记（或主题）。</td>
+<td><img src="images/push_icon.png" alt="{{site.data.keyword.mobilepushshort}} 服务图标"> <b>{{site.data.keyword.mobilepushshort}}</b><br/>{{site.data.keyword.mobilepushfull}} 服务提供一个统一平台来发送和管理针对移动（iOS 和 Android）平台和 Web 浏览器应用程序的推送通知。此服务会管理您的应用程序用户与其设备、设备平台和浏览器之间的映射，还会处理将推送通知派送给订户。使用此服务，可以基于推送通知，向客户发送广播、单点广播（基于用户标识、设备标识）和标记（或主题）。</td>
 <td valign="top"><b>推送服务提供者</b><ul><li>Apple 推送通知服务</li><li>Firebase 云消息传递</li></ul></td>
 </tr>
 <tr>

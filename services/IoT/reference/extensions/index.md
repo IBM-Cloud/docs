@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-04"
+  years: 2015, 2016, 2017
+lastupdated: "2017-02-03"
 
 ---
 
@@ -39,7 +39,7 @@ The built-in Jasper integration that is provided by our platform provides suppor
 You can access the supported operations in the device drilldown of a Jasper connected device after the following configuration steps are completed.
 
 ### REST APIs for Jasper
-To access the REST API for Jasper, see the Jasper Extension section in the [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension) documentation.
+To access the REST API for Jasper, see the Jasper Extension section in the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension){: new_window} documentation.
 
 ### Configuration for Jasper
 
@@ -91,7 +91,7 @@ The AT&T extension enables the following AT&T operations:
 - Change rate plan
 
 ### REST APIs for AT&T
-To access the REST API for AT&T, see the AT&T Extension section in the [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension) documentation.
+To access the REST API for AT&T, see the AT&T Extension section in the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension){: new_window} documentation.
 
 ### Configuration for AT&T
 
@@ -223,7 +223,7 @@ If you have a device which is connected to your {{site.data.keyword.iot_short_no
 - Location status
 
 ### REST APIs for Orange
-To access the REST API for Orange, see the Orange Extension section in the [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension) documentation.
+To access the REST API for Orange, see the Orange Extension section in the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension){: new_window} documentation.
 
 ### Configuration for Orange
 
@@ -256,13 +256,25 @@ When the organization is successfully configured, the *Extensions* section displ
 
 The historical data storage extension lets you locate and configure compatible message storage services such as [{{site.data.keyword.cloudantfull}}](../../cloudant_connector.html) or [{{site.data.keyword.messagehub_full}}](../../message_hub.html) for your IoT data.
 
-## Custom Device Management Packages
+## Custom device management packages
 {: #device_mgmt}
 
-Device management is a core feature of the {{site.data.keyword.iot_short_notm}}, however, it can be extended to develop additional functionality.
+Device management is a core feature of the {{site.data.keyword.iot_short_notm}}, however, it can be extended to develop additional functionality. Custom device management packages must consist of valid JSON and define at least one custom device management action.
 
-The device management extension allows you to install custom functions for device management. For more information on custom device management functions, see [device management custom extensions](../../devices/device_mgmt/custom_actions.html){: new_window}.
+For more information on custom device management functions, including an example of the required JSON format, see [device management custom extensions](../../devices/device_mgmt/custom_actions.html){: new_window}.
 
+### Adding a custom device management package
+
+Custom device management packages can be added either by using the {{site.data.keyword.iot_short_notm}} dashboard, or by using the API.
+
+To add a custom device management package by using the {{site.data.keyword.iot_short_notm}} dashboard:
+
+1. From your {{site.data.keyword.iot_short_notm}} dashboard, click **Settings** from the navigation bar.
+2. Click **Custom Device Management Packages**.
+3. Click the **Add Package** button.
+4. Select your package file and click **Open**.
+
+To add a custom device management package by using the API, see the [{{site.data.keyword.iot_short_notm}} API documentation ![External link icon](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 ## Blockchain
 {: #blockchain}
@@ -281,7 +293,7 @@ The device management extension allows you to install custom functions for devic
  2. In the **Extensions** page, click **Add Extension**.
  3. Click **Add** next to the Blockchain extension.
  4. In the Blockchain tile, click **Setup**.
- 3. In the **Activate Blockchain** section, click the **Learn more** link to go to the [IoT Blockchain Services Offering page](http://www.ibm.com/internet-of-things/iot-news/announcements/private-blockchain/).
+ 3. In the **Activate Blockchain** section, click the **Learn more** link to go to the [IoT Blockchain Services Offering page ![External link icon](../../../../icons/launch-glyph.svg)](http://www.ibm.com/internet-of-things/iot-news/announcements/private-blockchain/){: new_window}.
  4. Click **Kick-start your blockchain project** to fill out and submit the *Explore the potential of IoT and Blockchain* form.  
  5. After your request is approved, IBM will contact you to enable blockchain integration for your organization.
  6. Return to the {{site.data.keyword.iot_short_notm}} dashboard for your organization to complete the setup by following the steps in [{{site.data.keyword.iot_short_notm}} blockchain integration](../../bl_blockchain_integration.html).
@@ -297,7 +309,7 @@ The Weather Company extension combines weather data with your existing {{site.da
 
 ### REST APIs for The Weather Company
 To access the REST API for The Weather Company, see the
-Device Location Weather section in the [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather) documentation.
+Device Location Weather section in the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather){: new_window} documentation.
 
 ### Weather Data
 
@@ -314,4 +326,4 @@ To view the weather data retrieved for a device location, find the device in the
 - Latitude.
 - Longitude.
 
-<!-- Weather data from The Weather Company extension can be retrieved by using the API. For information on the Weather Company API, see [The Weather Company API documentation](https://docs.internetofthings.ibmcloud.com/swagger/ext-twc.html). -->
+<!-- Weather data from The Weather Company extension can be retrieved by using the API. For information on the Weather Company API, see [The Weather Company API documentation ![External link icon](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/ext-twc.html){: new_window}. -->

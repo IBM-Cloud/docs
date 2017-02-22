@@ -1,16 +1,16 @@
 ---
 
- 
+
 
 copyright:
 
-  years: 2015，20166
+  years: 2015，2017
 
-lastupdated: "2016-04-18" 
+lastupdated: "2016-04-18"
 
 ---
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
 # Cloud Foundry-Apps erstellen
@@ -72,6 +72,7 @@ lokalen Speicher verloren. Verwenden Sie zwecks Persistenz einen der Datenspeich
 <dd>Berücksichtigen Sie die Grenzwerte im Hinblick auf die Ressourcenmengen, die bei einem Testkonto verwendet
 werden können. Es gelten folgende Grenzwerte:
 <table style="width:100%">
+<caption>Tabelle 1. {{site.data.keyword.Bluemix_notm}}-Ressourcengrenzen für Testkonten</caption>
   <th>Ressourcentyp</th>	<th>Mengenbegrenzung</th>
 <tr><td>Anzahl der in allen Apps verwendeten Services</td> <td>10</td>
 <tr><td>Menge des in allen Apps belegten Hauptspeichers</td> <td>	2 GB</td>

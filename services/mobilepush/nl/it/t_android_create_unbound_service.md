@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Creazione di un servizio {{site.data.keyword.mobilepushshort}} senza binding per Android
 {: #create_android_unbound}
-Ultimo aggiornamento: 06 dicembre 2016
+Ultimo aggiornamento: 11 gennaio 2017
 {: .last-updated}
 
 Crea un'istanza del servizio

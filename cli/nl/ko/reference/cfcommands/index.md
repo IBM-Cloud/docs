@@ -4,9 +4,10 @@
 
 copyright:
 
-  years: 2016
+  years: 2016, 2017
 
-lastupdated: "2016-11-14"
+lastupdated: "2017-01-12"
+
 
 ---
 
@@ -19,11 +20,10 @@ lastupdated: "2016-11-14"
 # Cloud Foundry(cf) 명령
 {: #cf}
 
-Cloud Foundry(cf) 명령행 인터페이스(CLI)는 앱 관리를 위한 명령 세트를 제공합니다. 다음 정보는 앱 관리를 위해 가장 공통적으로 사용되는 cf 명령을 나열하며, 해당 이름, 옵션, 사용법, 전제조건, 설명 및 예제가 포함됩니다.
-cf 명령과 연관된 도움말 정보를 모두 나열하려면 `cf help`를 사용하십시오. `cf command_name -h`를 사용하면 특정 명령에 대한 자세한 도움말 정보를 볼 수 있습니다.
+Cloud Foundry(cf) 명령행 인터페이스(CLI)는 앱 관리를 위한 명령 세트를 제공합니다. 다음 정보는 앱 관리를 위해 가장 공통적으로 사용되는 cf 명령을 나열하며, 해당 이름, 옵션, 사용법, 전제조건, 설명 및 예제가 포함됩니다. cf 명령과 연관된 도움말 정보를 모두 나열하려면 `cf help`를 사용하십시오. `cf command_name -h`를 사용하면 특정 명령에 대한 자세한 도움말 정보를 볼 수 있습니다.
 {: shortdesc}
 
-**참고**: 네트워크에서 cf 명령을 실행하는 호스트와 Cloud Foundry API 엔드포인트 사이에 HTTP 프록시 서버가 있으면 `HTTP_PROXY` 환경 변수를 설정하여 프록시 서버의 호스트 이름 또는 IP 주소를 지정해야 합니다. 자세한 정보는 [HTTP 프록시 서버에 cf CLI 사용](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html)을 참조하십시오.
+**참고**: 네트워크에서 cf 명령을 실행하는 호스트와 Cloud Foundry API 엔드포인트 사이에 HTTP 프록시 서버가 있으면 `HTTP_PROXY` 환경 변수를 설정하여 프록시 서버의 호스트 이름 또는 IP 주소를 지정해야 합니다. 세부사항은 [Using the cf CLI with an HTTP Proxy Server ![외부 링크 아이콘](..![외부 링크 아이콘](../../../icons/launch-glyph.svg)/icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}를 참조하십시오. 
 
 
 ## Cloud Foundry CLI 명령 색인
@@ -32,53 +32,52 @@ cf 명령과 연관된 도움말 정보를 모두 나열하려면 `cf help`를 �
 자주 사용되는 Cloud Foundry 명령을 참조하려면 다음 표의 색인을 사용하십시오.
 
 <table summary="알파벳순으로 표시된 일반 Cloud Foundry 명령입니다. 명령에 대한 세부 정보를 제공하는 링크가 포함되어 있습니다.">
+ <caption>표 1. 일반 Cloud Foundry 명령</caption>
  <thead>
  <th colspan="6">일반 Cloud Foundry 명령</th>
  </thead>
  <tbody>
  <tr>
- <td>[api](index.html#cf_api)</td>
- <td>[help](index.html#cf_help)</td>
- <td>[login](index.html#cf_login)</td>
- <td>[stacks](index.html#cf_stacks)</td>
- <td>[target](index.html#cf_target)</td>
- <td>[-v ](index.html#cf_v)</td>
+ <td>[api](/docs/cli/reference/cfcommands/index.html#cf_api)</td>
+ <td>[help](/docs/cli/reference/cfcommands/index.html#cf_help)</td>
+ <td>[login](/docs/cli/reference/cfcommands/index.html#cf_login)</td>
+ <td>[stacks](/docs/cli/reference/cfcommands/index.html#cf_stacks)</td>
+ <td>[target](/docs/cli/reference/cfcommands/index.html#cf_target)</td>
+ <td>[-v](/docs/cli/reference/cfcommands/index.html#cf_v)</td>
  </tr>
    </tbody>
  </table>
-{: caption="Table 1. General Cloud Foundry commands" caption-side="top"}
 
 
 <table summary="알파벳순으로 표시된 앱, 영역 및 서비스 관리를 위한 명령입니다. 각 명령에는 명령에 대한 세부 정보를 제공하는 링크가 포함되어 있습니다.">
+ <caption>표 2. 앱, 영역 및 서비스 관리를 위한 명령</caption>
  <thead>
  <th colspan="5">앱, 영역 및 서비스 관리를 위한 명령</th>
  </thead>
  <tbody>
  <tr>
- <td>[apps](index.html#cf_apps)</td>
- <td>[bind-service](index.html#cf_bind-service)</td>
- <td>[create-service](index.html#cf_create-service)</td>
- <td>[create-space](index.html#cf_create-space)</td>
- <td>[delete](index.html#cf_delete)</td>
+ <td>[apps](/docs/cli/reference/cfcommands/index.html#cf_apps)</td>
+ <td>[bind-service](/docs/cli/reference/cfcommands/index.html#cf_bind-service)</td>
+ <td>[create-service](/docs/cli/reference/cfcommands/index.html#cf_create-service)</td>
+ <td>[create-space](/docs/cli/reference/cfcommands/index.html#cf_create-space)</td>
+ <td>[delete](/docs/cli/reference/cfcommands/index.html#cf_delete)</td>
   </tr>
  <tr>
- <td>[delete-space](index.html#cf_delete-space)</td>
- <td>[events](index.html#cf_events)</td>
- <td>[logs](index.html#cf_logs)</td>
- <td>[marketplace](index.html#cf_marketplace)</td>
- <td>[push](index.html#cf_push)</td>
+ <td>[delete-space](/docs/cli/reference/cfcommands/index.html#cf_delete-space)</td>
+ <td>[events](/docs/cli/reference/cfcommands/index.html#cf_events)</td>
+ <td>[logs](/docs/cli/reference/cfcommands/index.html#cf_logs)</td>
+ <td>[marketplace](/docs/cli/reference/cfcommands/index.html#cf_marketplace)</td>
+ <td>[push](/docs/cli/reference/cfcommands/index.html#cf_push)</td>
   </tr>
  <tr>
- <td>[scale](index.html#cf_scale)</td>
- <td>[services](index.html#cf_services)
- <td>[set-env](index.html#cf_set-env)</td>
+ <td>[scale](/docs/cli/reference/cfcommands/index.html#cf_scale)</td>
+ <td>[services](/docs/cli/reference/cfcommands/index.html#cf_services)
+ <td>[set-env](/docs/cli/reference/cfcommands/index.html#cf_set-env)</td>
  <td>[ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh)</td>
- <td>[stop](index.html#cf_stop)</td>
+ <td>[stop](/docs/cli/reference/cfcommands/index.html#cf_stop)</td>
  </tr>
  </tbody>
  </table>
-{: caption="Table 2. Commands for managing apps, spaces, and services" caption-side="top"}
-
 
 ## cf api
 {: #cf_api}
@@ -91,7 +90,7 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 
 <strong>전제조건</strong>: 없음
 
-<strong>명령 옵션</strong>:  
+<strong>명령 옵션</strong>:
 
    <dl>
    <dt>BluemixServerURL(선택사항)</dt>
@@ -141,8 +140,7 @@ cf apps
 ## cf bind-service
 {: #cf_bind-service}
 
-기존 서비스 인스턴스를 애플리케이션에 바인딩합니다.
-
+기존 서비스 인스턴스를 애플리케이션에 바인딩합니다. 
 
 ```
 cf bind-service appname service_instance
@@ -150,7 +148,7 @@ cf bind-service appname service_instance
 
 <strong>전제조건</strong>: `cf api`, `cf login`, `cf target`
 
-<strong>명령 옵션</strong>:  
+<strong>명령 옵션</strong>:
 
    <dl>
    <dt>appname(필수)</dt>
@@ -179,7 +177,7 @@ cf create-service service_name service_plan service_instance
 
 <strong>전제조건</strong>: `cf api`, `cf login`, `cf target`
 
-<strong>명령 옵션</strong>:  
+<strong>명령 옵션</strong>:
 
    <dl>
    <dt>service_name(필수)</dt>
@@ -202,8 +200,7 @@ cf create-service DataWorks free my_dataworks
 ## cf create-space
 {: #cf_create-space}
 
-영역을 작성합니다.
-
+영역을 작성합니다. 
 
 ```
 cf create-space space_name [-o] [-q]
@@ -211,7 +208,7 @@ cf create-space space_name [-o] [-q]
 
 <strong>전제조건</strong>: `cf api`, `cf login`
 
-<strong>명령 옵션</strong>:  
+<strong>명령 옵션</strong>:
 
    <dl>
    <dt>space_name(필수)</dt>
@@ -234,8 +231,7 @@ cf create-space new_space
 ## cf delete
 {: #cf_delete}
 
-기존 애플리케이션을 삭제합니다.
-
+기존 애플리케이션을 삭제합니다. 
 
 ```
 cf delete appname [-f] [-r]
@@ -243,7 +239,7 @@ cf delete appname [-f] [-r]
 
 <strong>전제조건</strong>: `cf api`, `cf login`, `cf target`
 
-<strong>명령 옵션</strong>:  
+<strong>명령 옵션</strong>:
 
    <dl>
    <dt>appname(필수)</dt>
@@ -284,8 +280,7 @@ cf delete my_app -f -r
 ## cf delete-space
 {: #cf_delete-space}
 
-영역을 삭제합니다.
-
+영역을 삭제합니다. 
 
 ```
 cf delete-space space_name [-f]
@@ -293,7 +288,7 @@ cf delete-space space_name [-f]
 
 <strong>전제조건</strong>: `cf api`, `cf login`
 
-<strong>명령 옵션</strong>:  
+<strong>명령 옵션</strong>:
 
    <dl>
    <dt>space_name(필수)</dt>
@@ -333,8 +328,7 @@ cf delete my_app -f -r
 ## cf events
 {: #cf_events}
 
-애플리케이션과 관련된 런타임 이벤트를 표시합니다.
-
+애플리케이션과 관련된 런타임 이벤트를 표시합니다. 
 
 ```
 cf events [appname]
@@ -342,7 +336,7 @@ cf events [appname]
 
 <strong>전제조건</strong>: `cf api`, `cf login`, `cf target`
 
-<strong>명령 옵션</strong>:  
+<strong>명령 옵션</strong>:
 
    <dl>
    <dt>appname</dt>
@@ -361,8 +355,7 @@ cf events my_app
 ## cf help
 {: #cf_help}
 
-모든 cf 명령 또는 특정 cf 명령에 대한 도움말 정보를 표시합니다.
-
+모든 cf 명령 또는 특정 cf 명령에 대한 도움말 정보를 표시합니다. 
 
 ```
 cf help [command_name]
@@ -370,7 +363,7 @@ cf help [command_name]
 
 <strong>전제조건</strong>: 없음
 
-<strong>명령 옵션</strong>:  
+<strong>명령 옵션</strong>:
 
    <dl>
    <dt>command_name(선택사항)</dt>
@@ -395,10 +388,9 @@ cf help events
 ## cf login
 {: #cf_login}
 
-{{site.data.keyword.Bluemix_notm}}에 로그인됩니다.
+{{site.data.keyword.Bluemix_notm}}에 로그인됩니다. 
 
-
-**참고**: 연합된 ID로 로그인하는 경우 싱글 사인온(SSO) 매개변수를 사용하여 로그인해야 합니다.
+**참고**: [연합 ID](/docs/admin/account.html#signup)로 로그인하는 경우 싱글 사인온(SSO) 매개변수를 사용하여 로그인해야 합니다. 
 
 ```
 cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s space_name] [--skip-ssl-validation]
@@ -458,8 +450,7 @@ cf login -a https://api.ng.bluemix.net -u user_name -o org_name -s space_name
 ## cf logs
 {: #cf_logs}
 
-애플리케이션의 STDOUT 및 STDERR 로그 스트림을 표시합니다.
-
+애플리케이션의 STDOUT 및 STDERR 로그 스트림을 표시합니다. 
 
 ```
 cf logs appname [--recent]
@@ -493,8 +484,7 @@ cf logs my_app --recent
 ## cf marketplace
 {: #cf_marketplace}
 
-Marketplace에서 사용 가능한 모든 서비스를 나열합니다. 이 명령을 통해 나열된 서비스가 {{site.data.keyword.Bluemix_notm}} 카탈로그에도 표시됩니다.
-
+Marketplace에서 사용 가능한 모든 서비스를 나열합니다. 이 명령을 통해 나열된 서비스가 {{site.data.keyword.Bluemix_notm}} 카탈로그에도 표시됩니다. 
 
 ```
 cf marketplace
@@ -515,9 +505,7 @@ cf marketplace
 ## cf push
 {: #cf_push}
 
-새 애플리케이션을 {{site.data.keyword.Bluemix_notm}}에 배치하거나,
-{{site.data.keyword.Bluemix_notm}}에서 기존 애플리케이션을
-업데이트합니다. 
+새 애플리케이션을 {{site.data.keyword.Bluemix_notm}}에 배치하거나, {{site.data.keyword.Bluemix_notm}}에서 기존 애플리케이션을 업데이트합니다. 
 
 ```
 cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i instance_number] [-k disk_limit] [-m memory_limit] [-n host_name] [-p app_path] [-s stack_name] [-t timeout_length] [--no-hostname] [--no-manifest] [--no-route] [--no-start] [--random-route]
@@ -531,7 +519,7 @@ cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i in
 <dt>appname(필수)</dt>
 <dd>애플리케이션 이름입니다. </dd>
 <dt>*-b* buildpack_name(선택사항)</dt>
-<dd>빌드팩 이름입니다. buildpack_name은 이름 또는 Git URL로 된 사용자 정의 빌드팩일 수 있습니다(예: `my-buildpack` 또는 `https://github.com/heroku/heroku-buildpack-play.git`).</dd>
+<dd>빌드팩 이름입니다. buildpack_name은 이름(예: liberty-for-java)별 사용자 정의 빌드팩이거나 Git URL(예: https://github.com/cloudfoundry/java-buildpack.git) 또는 분기나 태그가 포함된 Git URL(예: v3.3.0 태그의 경우 https://github.com/cloudfoundry/java-buildpack.git#v3.3.0)일 수 있습니다. </dd>
 <dt>*-c* start_command(선택사항)</dt>
 <dd>애플리케이션의 시작 명령입니다. 기본 시작 명령을 사용하려면 이 옵션에 대해 null 값을 지정하십시오. </dd>
 <dt>*-f* manifest_path(선택사항)</dt>
@@ -551,8 +539,7 @@ cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i in
 <dt>*-t* timeout(선택사항)</dt>
 <dd>애플리케이션 시작에 걸리는 최대 시간(초)입니다. 다른 서버 측 제한시간이 이 값을 대체할 수 있습니다. </dd>
 <dt>*--no-hostname*(선택사항)</dt>
-<dd>{{site.data.keyword.Bluemix_notm}} 시스템 도메인을
-이 애플리케이션에 맵핑합니다. </dd>
+<dd>{{site.data.keyword.Bluemix_notm}} 시스템 도메인을 이 애플리케이션에 맵핑합니다. </dd>
 <dt>*--no-manifest*(선택사항)</dt>
 <dd>기본 Manifest 파일을 무시합니다. </dd>
 <dt>*--no-route*(선택사항)</dt>
@@ -582,8 +569,7 @@ cf push `my_app` -c "bash ./<run.sh>"
 ## cf scale
 {: #cf_scale}
 
-애플리케이션에 대한 인스턴스 번호, 디스크 공간 한계 및 메모리 한계를 표시하거나 변경합니다.
-
+애플리케이션에 대한 인스턴스 번호, 디스크 공간 한계 및 메모리 한계를 표시하거나 변경합니다. 
 
 ```
 cf scale appname [-i instance_number] [-k disk_limit] [-m memory_limit] [-f]
@@ -599,11 +585,9 @@ cf scale appname [-i instance_number] [-k disk_limit] [-m memory_limit] [-f]
 <dt>*-i* instance_number(선택사항)</dt>
 <dd>인스턴스 수입니다. </dd>
 <dt>*-k* disk_limit(선택사항)</dt>
-<dd>애플리케이션에 대한 디스크 한계입니다. 가능한 값은 `256M`, `1024M`
-또는 `1G`입니다. </dd>
+<dd>애플리케이션에 대한 디스크 한계입니다. 가능한 값은 `256M`, `1024M` 또는 `1G`입니다. </dd>
 <dt>*-m* memory_limit(선택사항)</dt>
-<dd>애플리케이션에 대한 메모리 한계입니다. 가능한 값은 `256M`, `1024M`
-또는 `1G`입니다. </dd>
+<dd>애플리케이션에 대한 메모리 한계입니다. 가능한 값은 `256M`, `1024M` 또는 `1G`입니다. </dd>
 <dt>*-f*(선택사항)</dt>
 <dd>프롬프트 없이 애플리케이션을 강제로 다시 시작합니다. </dd>
 </dl>
@@ -626,8 +610,7 @@ cf scale appname -i 1234 -k 1G -m 1G
 ## cf services
 {: #cf_services}
 
-현재 영역에서 사용 가능한 모든 서비스를 나열합니다.
-
+현재 영역에서 사용 가능한 모든 서비스를 나열합니다. 
 
 ```
 cf services
@@ -678,23 +661,24 @@ cf set-env my_app variable_a 123
 ## cf ssh
 {: #cf_ssh}
 
-애플리케이션 컨테이너에 안전하게 로그인합니다.
-기본적으로 SSH는 애플리케이션의 첫 번째 인스턴스(인덱스 0인 인스턴스)를 실행하는 컨테이너에 액세스합니다.
+애플리케이션 컨테이너에 안전하게 액세스합니다. `cf ssh` 명령을 사용하면 대화식 SSH 세션을 설정하고, 리모트 명령을 실행하고, 파일을 전송하고, 특정 애플리케이션 컨테이너 인스턴스를 사용하여 포트 전달을 설정할 수 있습니다. 
 
 ```
 cf ssh
 ```
 <strong>전제조건</strong>: `cf api`, `cf login`, `cf target`
 
-또한 애플리케이션 인스턴스에 대한 SSH 액세스를 허용하도록 Cloud Foundry 배치를 구성해야 합니다. 세부사항은 [Configuring SSH Access for Cloud Foundry](https://docs.cloudfoundry.org/running/config-ssh.html){:new_window}를 참조하십시오. 
+기본적으로, SSH 액세스는 Diego 애플리케이션에 대해 사용 가능하도록 설정되어 있습니다. `cf ssh-enabled` 명령을 사용하여 SSH 액세스가 사용 가능하도록 설정되어 있는지 확인하거나, 사용 안함으로 설정되어 있는 경우 `cf enable-ssh` 명령을 사용하여 액세스를 사용으로 설정할 수 있습니다.  
 
 <strong>명령 옵션</strong>:
 
 <dl>
 <dt>appname</dt>
-<dd>애플리케이션 이름입니다. SSH가 허용되면 이 옵션을 사용하여 애플리케이션을 호스팅하는 VM과 대화식 SSH 세션을 시작할 수 있습니다.</dd>
+<dd>애플리케이션 이름입니다. </dd>
+<dt>-c</dt>
+<dd>실행할 원격 명령을 지정합니다. </dd>
 <dt>-i</dt>
-<dd>애플리케이션의 특정 인스턴스를 대상으로 합니다. </dd>
+<dd>애플리케이션의 특정 인스턴스를 대상으로 합니다. 지정되지 않은 경우 애플리케이션의 첫 번째 인스턴스가 사용됩니다(인덱스가 0인 인스턴스). </dd>
 <dt>-L</dt>
 <dd>시스템의 출력 포트를 애플리케이션 VM의 입력 포트에 바인딩하도록 로컬 포트 전달을 사용으로 설정합니다.</dd>
 <dt>-N</dt>
@@ -705,18 +689,32 @@ cf ssh
 
 <strong>예제</strong>:
 
-`my_app`라는 애플리케이션을 호스팅하는 VM과 대화식 SSH 세션을 시작하십시오.
+`my_app` 애플리케이션을 실행하는 컨테이너 인스턴스로 대화식 SSH 세션을 시작합니다. 
 ```
 $ cf ssh my_app
 ```
 {: codeblock}
 
+`my_app` 애플리케이션 컨테이너 인스턴스에서 단일 명령을 실행합니다. 
+```
+$ cf ssh my_app -c "ls -l"
+```
+
+`my_app` 애플리케이션 컨테이너 인스턴스에서 하나의 파일을 전송합니다. 
+```
+$ cf ssh my_app -c "/bin/cat logs/messages.log" > messages.log
+```
+
+로컬 시스템의 7777 포트의 포트 전달을 `my_app` 애플리케이션 컨테이너 인스턴스의 8888 포트로 설정합니다. 
+```
+$ cf ssh -N -T -L 7777:localhost:8888 my_app
+
+```
 
 ## cf stacks
 {: #cf_stacks}
 
-모든 스택을 나열합니다. 스택은 앱을 실행할 수 있는 운영 체제를 포함하여 미리 빌드된 파일 시스템입니다.
-
+모든 스택을 나열합니다. 스택은 앱을 실행할 수 있는 운영 체제를 포함하여 미리 빌드된 파일 시스템입니다. 
 
 ```
 cf stacks
@@ -791,8 +789,7 @@ cf target -o my_org -s my_space
 ## cf -v
 {: #cf_v}
 
-명령행 인터페이스의 버전을 표시합니다.
-
+명령행 인터페이스의 버전을 표시합니다. 
 
 ```
 cf -v
@@ -817,7 +814,7 @@ cf -v
 ## 관련 링크
 {: #general}
 
-* [Cloud Foundry CLI 다운로드](https://github.com/cloudfoundry/cli/releases)
-{:new_window}
-* [Quick Reference Card - cf commands](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html)
-{:new_window}
+* [Cloud Foundry CLI 다운로드 ![외부 링크 아이콘](![외부 링크 아이콘](../../../icons/launch-glyph.svg)../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases)
+{: new_window}
+* [빠른 참조 카드 - cf commands ![외부 링크 아이콘](![외부 링크 아이콘](../../../icons/launch-glyph.svg)../icons/launch-glyph.svg)](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html)
+{: new_window}

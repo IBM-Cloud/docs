@@ -1,10 +1,12 @@
 ---
 
-
+ 
 
 copyright:
+
   years: 2016
 lastupdated: "2016-09-09"
+ 
 
 ---
 
@@ -17,7 +19,6 @@ lastupdated: "2016-09-09"
 # Implémentation de flux
 {: #openwhisk_feeds}
 
-
 OpenWhisk prend en charge une API ouverte, dans laquelle tous les utilisateurs peuvent exposer un service de producteur
 d'événement sous forme de **flux** dans un **package**.   Cette section décrit les options d'architecture et
 d'implémentation pour la mise à disposition de votre propre flux.
@@ -25,30 +26,30 @@ d'implémentation pour la mise à disposition de votre propre flux.
 Ce document s'adresse aux utilisateurs avancés d'OpenWhisk qui souhaitent publier leurs propres flux.  La plupart des utilisateurs d'OpenWhisk peuvent
 ignorer cette section.
 
-# Architecture de flux
+## Architecture de flux
 
 Il existe aux moins trois modèles d'architecture pour la création d'un flux : **Points d'ancrage**,
 **Interrogation** et
 **Connexions**.
 
-## Points d'ancrage
+### Points d'ancrage
 Dans le modèle *Points d'ancrage*, nous configurons un flux à l'aide d'une fonction de
 [webhook](https://en.wikipedia.org/wiki/Webhook) exposée par un autre service.   Dans cette stratégie, nous configurons un webhook sur un
 service externe afin d'envoyer des données directement à une adresse URL pour exécuter un déclencheur.  Il s'agit de loin de l'option la plus simple et la plus
 attrayante pour l'implémentation de flux à faible fréquence.
 
-## Interrogation
+### Interrogation
 Dans le modèle "Interrogation", nous définissons une *action* OpenWhisk de sorte qu'elle interroge un noeud final régulièrement afin
 d'extraire de nouvelles données.
 Ce modèle est relativement facile à générer, mais la fréquence des événements sera évidemment limitée par l'intervalle
 d'interrogation.
 
-## Connexions
+### Connexions
 Dans le modèle "Connexions", nous établissons un service distinct quelque part, qui maintient une connexion permanente à une source de flux.    L'implémentation reposant sur la connexion peut interagir avec un noeud final de service via une interrogation longue, ou pour configurer une notification
 push.
 
 
-# Différence entre un flux et un déclencheur
+## Différence entre un flux et un déclencheur
 
 Les flux et les déclencheurs sont étroitement liés, mais ce sont des concepts techniquement distincts.   
 
@@ -62,7 +63,7 @@ seul ; par analogie, un déclencheur ressemble à une *rubrique* dans les systè
 **action de flux** qui gère la création, la suppression, l'interruption et la reprise du flot d'événements comprenant un flux.    En règle
 générale, l'action de flux interagit avec des services externes qui produisent les événements, via une API REST qui gère les notifications.
 
-#  Implémentation d'actions de flux
+##  Implémentation d'actions de flux
 
 L'*action de flux* est une *action* OpenWhisk normale, mais elle doit accepter les paramètres suivants :
 * **lifecycleEvent** : 'CREATE', 'DELETE', 'PAUSE' ou 'UNPAUSE'
@@ -94,7 +95,7 @@ avons implémenté avec une architecture reposant sur les connexions.   Les autr
 
 Un protocole d'action de flux similaire existe pour `wsk trigger delete`.    
 
-# Implémentation de flux avec des points d'ancrage
+## Implémentation de flux avec des points d'ancrage
 
 Il est facile de configurer un flux via un point d'ancrage si le producteur d'événement prend en charge une fonction de webhook/rappel.
 
@@ -111,7 +112,7 @@ Le webhook doit envoyer les notifications à une adresse URL telle que :
 Le formulaire associé à la demande d'envoi est interprété comme un document JSON définissant des paramètres pour l'événement déclencheur.
 Les règles OpenWhisk transmettent ces paramètres de déclencheur pour que des actions soient déclenchées suite à l'événement.
 
-# Implémentation de flux avec le modèle Interrogation
+## Implémentation de flux avec le modèle Interrogation
 
 Il est possible de configurer une *action* OpenWhisk afin d'interroger une source de flux uniquement dans OpenWhisk, sans
 qu'il ne soit nécessaire d'établir des connexions permanentes ou un service externe.
@@ -131,7 +132,7 @@ Pour configurer un flux reposant sur l'interrogation, l'action de flux effectue 
 Cette procédure implémente un déclencheur reposant sur l'interrogation qui n'utilise que des actions OpenWhisk, sans recourir à un service
 distinct.
 
-# Implémentation de flux via le modèle Connexions
+## Implémentation de flux via le modèle Connexions
 
 Les deux choix d'architecture précédents sont simples et faciles à implémenter. Cependant, si vous voulez créer un flux dont les performances
 sont élevées, il n'existe pas d'alternative aux connexions permanentes et à l'interrogation longue, ou à des techniques similaires.

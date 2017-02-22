@@ -26,12 +26,12 @@ lastupdated: "2016-11-11"
 
 運用「{{site.data.keyword.Bluemix_notm}} 本端」，您可以利用資料中心內專用雲端的實際值。「{{site.data.keyword.Bluemix_notm}} 本端」是以服務形式交付，並且持續與您的 IT 團隊協同作業。它也可讓您在現代雲端平台中利用現有的大型主機、服務導向架構、程序及資料。進一步瞭解 [{{site.data.keyword.Bluemix_notm}} 本端](/docs/local/index.html)。
 
-# 相關鏈結
+# rellinks
 {: #rellinks}
-## 一般
+## general
 {: #general}
-* [何謂 {{site.data.keyword.Bluemix_notm}}](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){:new_window}
-* [開始使用](http://www.ibm.com/cloud-computing/bluemix/getting-started/)
-* [瞭解混合式模型](http://www.ibm.com/cloud-computing/bluemix/hybrid/)
+* [何謂 {{site.data.keyword.Bluemix_notm}} ![外部鏈結圖示](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){:new_window}
+* [開始使用 ![外部鏈結圖示](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/getting-started/){:new_window}
+* [瞭解混合式模型 ![外部鏈結圖示](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/hybrid/){:new_window}
 * [{{site.data.keyword.Bluemix_notm}} 新增功能](/docs/whatsnew/index.html)
 * [{{site.data.keyword.Bluemix_notm}} 名詞解釋](/docs/overview/glossary/index.html)

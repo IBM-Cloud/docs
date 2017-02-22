@@ -1,13 +1,16 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-03"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
-{:screen:  .screen}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
 {:codeblock: .codeblock}
+{:pre: .pre}
+
 
 # Benutzer mit Google-Berechtigungsnachweisen authentifizieren
 {: #google-auth}
@@ -54,5 +57,4 @@ Der {{site.data.keyword.amashort}}-Anforderungsablauf für eine Webanwendung ist
 
 * [Google-Authentifizierung für Android-Apps aktivieren](google-auth-android.html)
 * [Google-Authentifizierung für iOS-Apps aktivieren (Swift-SDK)](google-auth-ios-swift-sdk.html)
-* [Google-Authentifizierung für iOS-Apps aktivieren (Objective-C-SDK)](google-auth-ios.html)
 * [Google-Authentifizierung für Cordova-Apps aktivieren](google-auth-cordova.html)

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-05"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 {:new_window: target="_blank"}
@@ -35,7 +35,7 @@ La configuration de l'authentification Google pour votre application Android {{s
 ## Création d'un projet sur Google Developer Console
 {: #create-google-project}
 
-Pour commencer à utiliser Google en tant que fournisseur d'identité, vous devez créer un projet dans [Google Developer Console](https://console.developers.google.com).
+Pour commencer à utiliser Google en tant que fournisseur d'identité, créez un projet dans la [Console Google Developer ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.developers.google.com "Icône de lien externe"){: new_window}.
 Une partie de la création d'une projet consiste à obtenir un ID client Google.  L'ID client Google est un identificateur unique pour votre application utilisé par
 l'authentification Google et nécessaire pour configurer le service {{site.data.keyword.amashort}}.
 
@@ -54,7 +54,8 @@ Pour terminer la procédure de création des données d'identification, vous dev
 
 Pour que Google puisse vérifier l'authenticité de votre applications, vous devez spécifier l'empreinte digitale du certificat signataire.
 
-Sur le système d'exploitation Android, toutes les applications installées sur un appareil Android doivent être signées avec un certificat de développeur. Une application Android peut être générée dans deux modes : Debug (débogage) et Release (publication). Il est généralement recommandé d'avoir des certificats différents pour ces deux modes.  Les certificats utilisés pour signer les applications Android en mode Debug sont fournies avec le SDK Android.  Celui-ci est généralement installé automatiquement par Android Studio. Au moment de publier votre application dans Google Play, vous devez la signer avec un autre certificat, généralement généré par vous. Pour plus d'informations, voir [Signing your Android applications](http://developer.android.com/tools/publishing/app-signing.html).
+Sur le système d'exploitation Android, toutes les applications installées sur un appareil Android doivent être signées avec un certificat de développeur. Une application Android peut être générée dans deux modes : Debug (débogage) et Release (publication). Il est généralement recommandé d'avoir des certificats différents pour ces deux modes.  Les certificats utilisés pour signer les applications Android en mode Debug sont fournies avec le SDK Android.  Celui-ci est généralement installé automatiquement par Android Studio. Au moment de publier votre application dans Google Play, vous devez la signer avec un autre certificat, généralement généré par vous. 
+Pour plus d'informations, voir [Signing your Android applications ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://developer.android.com/tools/publishing/app-signing.html "Icône de lien externe"){: new_window}.
 
 Un magasin de clés contenant un certificat pour les environnements de développement est stocké dans un fichier `~/.android/debug.keystore`. Le mot de passe du magasin de clés par défaut est `android`. Ce certificat est utilisé pour générer des applications en mode Debug.
 
@@ -158,7 +159,7 @@ principale dans votre application Android, bien que cet emplacement ne soit pas 
 
 	Pour plus d'informations sur l'obtention de ces valeurs, voir [Avant de commencer](##before-you-begin).
 
-	**Remarque :** si votre application Android a pour cible Android version 6.0 (API niveau 23) ou supérieure, vous devez vous assurer que l'application dispose d'un appel `android.permission.GET_ACCOUNTS` avant d'appeler `register`. Pour plus d'informations, voir [https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}.
+	**Remarque :** si votre application Android a pour cible Android version 6.0 (API niveau 23) ou supérieure, vous devez vous assurer que l'application dispose d'un appel `android.permission.GET_ACCOUNTS` avant d'appeler `register`. Pour plus d'informations, voir [Requesting permissions on Android ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.android.com/training/permissions/requesting.html "Icône de lien externe"){: new_window}.
 
 1. Ajoutez le code suivant à votre activité :
 
@@ -177,7 +178,7 @@ principale dans votre application Android, bien que cet emplacement ne soit pas 
 
 Une fois que le SDK client est initialisé et que le gestionnaire d'authentification Google est enregistré, vous pouvez commencer à envoyer des demandes à votre application de back end.
 
-Avant de commencer à tester, vous devez disposer d'une application back end mobile créée depuis le conteneur boilerplate **MobileFirst Services Starter**, ainsi que d'une ressource protégée par le noeud final {{site.data.keyword.amashort}} `/protected`. Pour plus d'informations, voir [Protection des ressources](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
+Avant de commencer à tester, vous devez disposer d'une application back end mobile créée depuis le conteneur boilerplate **MobileFirst Services Starter**, ainsi que d'une ressource protégée par le noeud final {{site.data.keyword.amashort}} `/protected`. Pour plus d'informations, voir [Protection des ressources](protecting-resources.html).
 
 1. Essayez d'envoyer une demande à un noeud final protégé de votre application back end mobile dans votre navigateur de bureau en ouvrant `{applicationRoute}/protected`, par exemple : `http://my-mobile-backend.mybluemix.net/protected`.  Pour plus d'informations sur l'obtention de la valeur `{applicationRoute}`, voir [Avant de commencer](#before-you-begin).
 

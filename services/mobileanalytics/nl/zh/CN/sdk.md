@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-29"
+  years: 2015, 2017
+lastupdated: "2017-01-10"
 
 ---
 {:new_window: target="_blank"}
@@ -89,7 +89,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 	```
 	{: codeblock}
 
-  您必须使用 **bluemixRegion** 参数，初始化 ``BMSClient``。在初始化程序中，**bluemixRegion** 值指定您使用的是哪一个 {{site.data.keyword.Bluemix_notm}} 部署，例如 ``BMSClient.REGION_US_SOUTH` 和 ``BMSClient.REGION_UK`。<!-- , or `BMSClient.REGION_SYDNEY`.--> 
+  您必须使用 **bluemixRegion** 参数，初始化 `BMSClient`。在初始化程序中，**bluemixRegion** 值指定您使用的是哪一个 {{site.data.keyword.Bluemix_notm}} 部署，例如 `BMSClient.REGION_US_SOUTH` 和 `BMSClient.REGION_UK`。<!-- , or `BMSClient.REGION_SYDNEY`.--> 
     
  ### iOS
  {: #ios-init}
@@ -148,8 +148,8 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
  	```
  	{: codeblock}
  	
- #### watchOS
- {: #watchos-initialize-analytics}
+   ### watchOS
+   {: #watchos-initialize-analytics}
 	 	
  	```Swift
  	Analytics.initialize(appName: "your_app_name_here", apiKey: "your_api_key_here", deviceEvents: .network)
@@ -159,6 +159,9 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
  	可选 `deviceEvents` 参数会自动收集设备级别事件的分析。
 	
  **注**：将 `hasUserContext` 的值设置为 **true** 或 **false**。如果是 false（缺省值），那么在计数时，每个设备都会被计为活动用户。通过 [`Analytics.userIdentity = "username"`](sdk.html#ios-tracking-users) 方法，您可以跟踪当前使用应用程序的每个装置的用户数，但是当 `hasUserContext` 为 false 时无法使用。如果 `hasUserContext` 为 true，那么每次使用 [`Analytics.userIdentity="username"`](sdk.html#ios-tracking-users) 都会在计数时被计为活动用户。当 `hasUserContext` 为 true 时，没有缺省用户身份，因此必须设置该身份以填充活动用户图表。
+
+ #### watchOS
+ {: #watchos-record-device}
 
  您可以使用 `Analytics.recordApplicationDidBecomeActive()` 和 `Analytics.recordApplicationWillResignActive()` 方法，来记录 WatchOS 上的设备事件。
   
@@ -270,7 +273,13 @@ Analytics.log(metadata: eventObject)
   BMSAnalytics.disable();
 
   // Send recorded usage analytics to the {{site.data.keyword.mobileanalytics_short}} Service
-  BMSAnalytics.send();
+  BMSAnalytics.send(
+	function(response) {
+		console.log('success: ' + response);
+		},
+	function (err) {
+		console.log('fail: ' + err);
+		});
   ```
   {: codeblock}
 
@@ -408,8 +417,8 @@ Logger.send(completionHandler: { (response: Response?, error: Error?) in
   // Set the minimum log level to be printed and persisted
   BMSLogger.setLogLevel(BMSLogger.INFO);
 
-  var logger1 = BMSLogger.getInstance("logger1");
-  var logger2 = BMSLogger.getInstance("logger2");   
+  var logger1 = BMSLogger.getLogger("logger1");
+  var logger2 = BMSLogger.getLogger("logger2");   
 
   // Log messages with different levels
   logger1.debug ("debug message");
@@ -790,4 +799,4 @@ The {{site.data.keyword.mobileanalytics_short}} service saves the following data
 
 ## API 参考
 {: #api}
-* [REST API](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}
+* [REST API ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}

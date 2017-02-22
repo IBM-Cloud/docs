@@ -2,10 +2,14 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-01-31"
 
 ---
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # Tutorial - Weather Code Starter
 {: #tutorial_weather}
@@ -14,14 +18,14 @@ The {{site.data.keyword.Bluemix}} Mobile Code Starter for Weather showcases a sc
 
 
 ## Requirements
-{: #tutorial_requirements}
+{: #tutorial_requirements notoc}
 
 * A [Bluemix ![External link icon](../icons/launch-glyph.svg "External link icon")](http://bluemix.net) Account
 * A [Weather Company Data ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/catalog/services/weather-company-data/) service instance obtained from the [Bluemix Catalog ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/catalog/)
 
 
 ## Getting Started
-{: #tutorial_gs}
+{: #tutorial_gs notoc}
 
 To get up and running quickly with the Weather Code Starter, follow these steps:
 
@@ -75,32 +79,41 @@ To get up and running quickly with the Weather Code Starter, follow these steps:
 
    5. See [Getting started with Mobile Client Access ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/mobileaccess/index.html){: new_window} for more information about configuring authentication.
 
-5. Download your project.
+5. Optional: Add the Data capability.
+
+   1. Click **View** for **Data** on the **Project Overview** page.
+
+      You can alternatively select **Create** on the **Data** page.
+      
+   2. Choose **{{site.data.keyword.cloudant_short_notm}}** or **{{site.data.keyword.objectstorageshort}}**.
+
+   3. Enter your service name and click **Create**.
+
+   4. See [Getting started with {{site.data.keyword.cloudant_short_notm}} ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/Cloudant/index.html){: new_window} for more information about configuring {{site.data.keyword.cloudant_short_notm}}.
+
+   5. [Getting started with {{site.data.keyword.objectstorageshort}} ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/ObjectStorage/index.html){: new_window} for more information about configuring {{site.data.keyword.objectstorageshort}}.
+
+6. Download your project.
 
    1. Click **Code** and select your preferred language.
 
    2. Click **Download Code**.
 
-5. Extract the archive and follow the instructions in the `README.md` file.
+7. Extract the archive and follow the instructions in the `README.md` file.
 
 
 ## What to do next
-{: #tutorial_next}
+{: #tutorial_next notoc}
 
-[Try it out! ![External link icon](../icons/launch-glyph.svg "External link icon")](http://console.{DomainName}/mobile/create-project?starter=fad1d49e-f7b6-3aff-9b53-14673fca4399){: new_window}
-
-
-### UI Starter tutorials
-{: #tutorials_UI}
-
-* [Tutorial - Store Catalog](tutorial_store_catalog.html)
+View other tutorials.
 
 
 ### Code Starter tutorials
-{: #tutorials_Code}
+{: #tutorials_Code notoc}
 
 * [Tutorial - Basic](tutorial.html)
-* [Tutorial - Cloudant Sync](tutorial_cloudant_synd.html)
+* [Tutorial - Cloudant Sync](tutorial_cloudant_sync.html)
 * [Tutorial - {{site.data.keyword.openwhisk_short}}](tutorial_openwhisk.html)
 * [Tutorial - {{site.data.keyword.visualrecognitionshort}}](tutorial_visual_recognition.html)
+* [Tutorial - Watson {{site.data.keyword.conversationshort}}](tutorial_conversation.html)
 * [Tutorial - Watson Language](tutorial_watson_language.html)

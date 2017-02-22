@@ -1,7 +1,7 @@
----
+﻿---
 
 copyright:
- years: 2015, 2016
+years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Activation des applications Android pour recevoir des notifications de type {{site.data.keyword.mobilepushshort}}
 {: #tag_based_notifications}
-Dernière mise à jour : 7 décembre 2016
+Dernière mise à jour : 16 janvier 2017
 {: .last-updated}
 
 Vous pouvez activer des applications Android pour recevoir des notifications push sur vos appareils. Android Studio, qui est un prérequis, est la méthode recommandée pour générer des projets Android. Une connaissance de base d'Android Studio est essentielle.
@@ -22,16 +22,21 @@ Vous pouvez activer des applications Android pour recevoir des notifications pus
 
 Cette section explique comment installer et utiliser le logiciel SDK Push du client afin de développer davantage vos applications Android.
 
-Le logiciel SDK Push de Bluemix® Mobile Services peut être ajouté en utilisant Gradle. Gradle télécharge automatiquement des artefacts depuis des référentiels et les met à la disposition de votre application Android. Assurez-vous de configurer correctement Android Studio et le logiciel SDK Android Studio. Pour plus d'informations sur la configuration de votre système, voir [Android Studio Overview](https://developer.android.com/tools/studio/index.html). Pour plus d'informations sur Gradle, voir [Configuring Gradle Builds](http://developer.android.com/tools/building/configuring-gradle.html).
+Le logiciel SDK Push de Bluemix® Mobile Services peut être ajouté en utilisant Gradle. Gradle télécharge automatiquement des artefacts depuis des référentiels et les met à la disposition de votre application Android. Assurez-vous de configurer correctement Android Studio et le logiciel SDK Android Studio. Pour
+plus d'informations sur la configuration de votre système, visitez le site
+[Android Studio
+Overview ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.android.com/tools/studio/index.html){: new_window}. Pour
+plus d'informations sur Gradle, voir [Configuring Gradle Builds ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](http://developer.android.com/tools/building/configuring-gradle.html){: new_window}.
 
 Après avoir créé et ouvert votre application mobile, effectuez les étapes suivantes à l'aide d'Android Studio.
 
-1. Ajoutez des dépendances à votre fichier **build.gradle** de niveau Module. 
+1. Ajoutez des dépendances à votre fichier **build.gradle** de niveau Module. 	
+
 	- Ajoutez la dépendance suivante pour inclure le logiciel SDK Push du client Bluemix™ Mobile Services et le logiciel SDK des services Google Play à vos dépendances de compilation.
 	```
-	com.ibm.mobilefirstplatform.clientsdk.android:push:2.+
+	com.ibm.mobilefirstplatform.clientsdk.android:push:3.+
 	```
-    {: codeblock}
+    	{: codeblock}
 	
 	- Ajoutez les dépendances suivantes pour importer des instructions qui sont requises pour les fragments de code.
 	```
@@ -42,16 +47,26 @@ Après avoir créé et ouvert votre application mobile, effectuez les étapes su
 	import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationListener;
 	import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPSimplePushNotification;
 	```
-    {: codeblock}
+    	{: codeblock}
+
+	- Ajoutez la dépendance suivante à la fin de votre fichier de niveau Module **build.gradle**.
+	```
+		apply plugin: 'com.google.gms.google-services'
+	```
+		{: codeblock}
 3. Ajoutez les dépendances suivantes à votre fichier **build.gradle** de niveau Projet.
 ```
 dependencies {
-    classpath 'com.android.tools.build:gradle:2.2.0'
+    classpath 'com.android.tools.build:gradle:3.0.0'
     classpath 'com.google.gms:google-services:3.0.0'
 }
 ``` 
     {: codeblock}
-5. Dans le fichier **AndroidManifest.xml**, ajoutez les droits ci-dessous. Pour afficher un exemple de manifeste, voir le [modèle d'application Android helloPush](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml). Pour afficher un exemple de fichier Gradle, voir l'[exemple de fichier de génération Gradle](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle).
+5. Dans le fichier **AndroidManifest.xml**, ajoutez les droits ci-dessous. Pour consulter un exemple de manifeste, accédez au site
+[Android helloPush Sample Application ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml){: new_window}. Pour
+consulter un exemple de fichier Gradle, accédez au site
+[Exemple de fichier de génération Gradle![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle){: new_window}.
+
 ```
 <uses-permission android:name="android.permission.INTERNET"/>
 <uses-permission android:name="android.permission.GET_ACCOUNTS" />
@@ -60,8 +75,7 @@ dependencies {
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 ```
 	{: codeblock}
- Vous trouverez davantage d'informations sur les [droits Android](http://developer.android.com/guide/topics/security/permissions.html) ici.
-
+ Pour plus d'informations sur les autorisations Android, visitez le site [Android permissions  ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](http://developer.android.com/guide/topics/security/permissions.html){: new_window}.
 4. Ajoutez les paramètres d'intention de notification pour l'activité. Ce paramètre démarre l'application lorsque l'utilisateur clique sur la
 notification reçue dans la zone de notification.
 ```
@@ -109,12 +123,10 @@ Pour configurer le projet FCM et obtenir vos données d'identification, consulte
     ![Ajout de Firebase à Android](images/FCM_5.jpg)
 
 4. Dans la fenêtre Add Firebase to your Android app, ajoutez **com.ibm.mobilefirstplatform.clientsdk.android.push** en tant que nom du
-package. La zone App nickname est facultative. Cliquez sur **Ajouter une application**.
+package. La zone App nickname est facultative. Cliquez sur **Ajouter une application**. 
     ![Ajout de Firebase à votre fenêtre Android](images/FCM_1.jpg)
 
-5. Incluez le nom de package de votre application en l'entrant dans la fenêtre Add Firebase to your Android app. La zone App nickname est facultative. Cliquez
-sur **Ajouter une application**.
-    Pour chaque package ajouté, Firebase requiert de modifier `build.gradle` en ajoutant le nom du package.
+5. Incluez le nom de package de votre application en l'entrant dans la fenêtre Add Firebase to your Android app. La zone App nickname est facultative. Cliquez sur **Ajouter une application**. 
 
 	![Ajout du nom de package de votre application](images/FCM_2.jpg)
 
@@ -236,12 +248,12 @@ protected void onPause() {
 2. Générez le projet et exécutez-le sur l'appareil ou l'émulateur. Quand la méthode onSuccess() pour le programme d'écoute des réponses dans la méthode register() est appelée, cela signifie que l'appareil a été enregistré auprès du service {{site.data.keyword.mobilepushshort}}. A ce stade, vous pouvez envoyer un message comme décrit dans la rubrique Envoi de notifications push de base.
 3. Vérifiez que vos appareils ont reçu votre notification. Si l'application se trouve au premier-plan, la notification est traitée par **MFPPushNotificationListener**. Si elle se trouve en arrière-plan, un message est affiché dans la barre de notification.
 
-## Suivi des notifications push sur les appareils Android 
+## Suivi des notifications push sur les appareils Android
 {: #android_monitor}
 
 Pour surveillance du statut actuel de la notification dans l'application, vous pouvez implémenter l'interface `com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationStatusListener` et définir la méthode onStatusChange(String messageId, MFPPushNotificationStatus status). 
 
-Le **messageId** est l'identificateur du message envoyé depuis le serveur. **MFPPushNotificationStatus** définit le
+Le **messageId** est l'identificateur du message envoyé depuis le serveur.  **MFPPushNotificationStatus** définit le
 statut des notifications sous forme de valeurs :
 
 - **RECEIVED** - L'application a reçu la notification. 
@@ -322,7 +334,7 @@ Une fois que vous avez développé vos applications, vous pouvez envoyer des not
 Pour envoyer des notifications push de base, procédez comme suit :
 
 1. Sélectionnez **Envoyer des notifications** et rédigez un message en choisissant une option **Envoyer à**. Les options prises en charge sont **Appareil par étiquette**, **ID de l'appareil**, **ID utilisateur**, **Appareils Android**, **Appareils IOS**, **Notifications Web** et **Tous les appareils**.
-**Remarque **: quand vous sélectionnez l'option relative à tous les appareils, tous les appareils qui sont abonnés à des notifications de type {{site.data.keyword.mobilepushshort}} recevront les notifications.
+**Remarque **: si vous sélectionnez l'option **Tous les appareils**, tous les appareils qui sont abonnés à des notifications de type {{site.data.keyword.mobilepushshort}} recevront les notifications.
 ![Ecran Notifications](images/tag_notification.jpg)
 
 2. Dans la zone **Message**, composez votre message. Configurez les paramètres facultatifs, selon les besoins.

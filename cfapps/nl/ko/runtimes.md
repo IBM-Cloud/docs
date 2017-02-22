@@ -1,12 +1,12 @@
 ---
 
- 
+
 
 copyright:
 
-  years: 2015，2016
+  years: 2015，2017
 
-lastupdated: "2015-11-11" 
+lastupdated: "2015-11-11"
 
 ---
 
@@ -15,10 +15,7 @@ lastupdated: "2015-11-11"
 
 # 런타임 개요
 
-VM 및 운영 체제를 설정하고 관리할 필요 없이 신속하게 앱을 시작하고 실행하려면 런타임을 사용하십시오. {{site.data.keyword.Bluemix}}의 런타임은
-Cloud Foundry를 기반으로 합니다. 즉, Cloud Foundry에 대한
-커뮤니티 빌드팩 또는 도구 플러그인 또한 {{site.data.keyword.Bluemix_notm}}와 함께 작동합니다.
-시작하기 위해 꾸준히 증가하고 있는 런타임 목록을 확인하십시오.
+VM 및 운영 체제를 설정하고 관리할 필요 없이 신속하게 앱을 시작하고 실행하려면 런타임을 사용하십시오. {{site.data.keyword.Bluemix}}의 런타임은 Cloud Foundry를 기반으로 합니다. 즉, Cloud Foundry에 대한 커뮤니티 빌드팩 또는 도구 플러그인 또한 {{site.data.keyword.Bluemix_notm}}와 함께 작동합니다. 시작하기 위해 꾸준히 증가하고 있는 런타임 목록을 확인하십시오.
 {:shortdesc}
 
 <ul class="runtimeIconList">

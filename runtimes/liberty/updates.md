@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-12"
+  years: 2015, 2017
+lastupdated: "2017-01-19"
 
 ---
 
@@ -13,6 +13,11 @@ lastupdated: "2016-12-12"
 {: #latest_updates}
 
 ## A list of the latest updates in the Liberty buildpack.
+
+### January 23, 2017: Updated Liberty buildpack v3.7-20170118-2046
+* The monthly Liberty runtime version was updated to the [2017.1.0.0](https://developer.ibm.com/wasdev/blog/2017/01/20/beta-websphere-liberty-tools-january-2017/) release.
+* The IBM JRE version 8 was updated to SR3 FP22 version.
+* The [auto-configuration](autoConfig.html) support was also extended to work with the [Compose for MongoDB service](https://console.ng.bluemix.net/docs/services/ComposeForMongoDB/index.html) (Currently only available with the monthly Liberty runtime).
 
 ### December 13, 2016: Updated Liberty buildpack v3.6-20161209-1351
 * The default Liberty runtime version was updated to the [16.0.0.4](http://www-01.ibm.com/support/docview.wss?uid=swg27009661) release.

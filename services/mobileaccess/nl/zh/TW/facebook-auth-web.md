@@ -1,26 +1,28 @@
 ---
 
 copyright:
-  year: 2016
-lastupdated: "2016-12-04"
+  year: 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
 {:codeblock: .codeblock}
+{:pre: .pre}
 
 
 # 啟用 Web 應用程式的 Facebook 鑑別
 {: #facebook-auth-web}
 
-在 {{site.data.keyword.amafull}} Web 應用程式上使用 Facebook 來鑑別使用者。新增 {{site.data.keyword.amashort}} 安全功能。 
+在 {{site.data.keyword.amafull}} Web 應用程式上使用 Facebook 來鑑別使用者。新增 {{site.data.keyword.amashort}} 安全功能。
 
 ## 開始之前
 {: #facebook-auth-android-before}
 您必須具有：
 
-* Web 應用程式。 
+* Web 應用程式。
 * {{site.data.keyword.amashort}} 服務。如需相關資訊，請參閱[開始使用](index.html)。
 * 最終重新導向的 URI（在授權處理程序完成之後）。
 
@@ -30,7 +32,7 @@ lastupdated: "2016-12-04"
 
 若要使用 Facebook 作為網站上的身分提供者，您必須在 Facebook 應用程式上新增及配置網站平台。
 
-1. 在 [Facebook for Developers](https://developers.facebook.com) 網站上登入您的帳戶。如需建立新應用程式的相關資訊，請參閱[在 Facebook for Developers 網站上建立應用程式](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID)。 
+1. 在 [Facebook for Developers](https://developers.facebook.com) 網站上登入您的帳戶。如需建立新應用程式的相關資訊，請參閱[在 Facebook for Developers 網站上建立應用程式](facebook-auth-overview.html#facebook-appID)。
 1. 記下**應用程式 ID** 及**應用程式密碼**。當您在 Mobile Client Access 儀表板中配置 Web 專案來進行 Facebook 鑑別時，會需要這些值。
 1. 從**產品清單**中，選擇 **Facebook 登入**。
 4. 新增 **Web** 平台（如果不存在）。
@@ -60,30 +62,30 @@ lastupdated: "2016-12-04"
 
 若要開始授權處理程序，請執行下列動作：
 
-1. 從 `VCAP_SERVICES` 環境變數中儲存的服務認證，擷取授權端點 (`authorizationEndpoint`) 及用戶端 ID (`clientId`)。 
+1. 從 `VCAP_SERVICES` 環境變數中儲存的服務認證，擷取授權端點 (`authorizationEndpoint`) 及用戶端 ID (`clientId`)。
 
-	`var cfEnv = require("cfenv");` 
+	`var cfEnv = require("cfenv");`
 
-	**附註：**如果您在新增 Web 支援之前，已將 {{site.data.keyword.amashort}} 服務新增至應用程式，則在**服務認證**中可能沒有記號端點。請改用下列 URL（視 {{site.data.keyword.Bluemix_notm}} 地區而定）： 
- 
-	美國南部： 
+	**附註：**如果您在新增 Web 支援之前，已將 {{site.data.keyword.amashort}} 服務新增至應用程式，則在**服務認證**中可能沒有記號端點。請改用下列 URL（視 {{site.data.keyword.Bluemix_notm}} 地區而定）：
+
+	美國南部：
 
 	`  https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization 
-  ` 
+  `
 
 	    倫敦：
-       
+      
 
 	` https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization
-   ` 
+   `
 
 	    雪梨：
-       
+      
 
 	`  https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization 
-  ` 
+  `
 
-2. 使用 `response_type("code")`、`client_id` 及 `redirect_uri` 作為查詢參數，來建置授權伺服器 URI。 
+2. 使用 `response_type("code")`、`client_id` 及 `redirect_uri` 作為查詢參數，來建置授權伺服器 URI。
 
 3. 從您的 Web 應用程式重新導向至所產生的 URI。
 
@@ -95,8 +97,8 @@ lastupdated: "2016-12-04"
   app.get("/protected", checkAuthentication, function(req, res, next){  
       res.send("Hello from protected endpoint"); 
     }
-  ); 
-  
+  );
+
 	function checkAuthentication(req, res, next){ 
   // Check if user is authenticated 
   
@@ -131,29 +133,29 @@ lastupdated: "2016-12-04"
 
 下一步是使用先前收到的授權碼，取得存取記號及身分記號：
 
-1.  從 `VCAP_SERVICES` 環境變數中儲存的服務認證，擷取記號 `tokenEndpoint`、`clientId` 及 `secret`。 
- 
-	**附註：**如果您已在新增 Web 支援之前使用 {{site.data.keyword.amashort}}，則在服務認證中可能沒有記號端點。請改用下列 URL（視 Bluemix 地區而定）： 
+1.  從 `VCAP_SERVICES` 環境變數中儲存的服務認證，擷取記號 `tokenEndpoint`、`clientId` 及 `secret`。
 
-	美國南部： 
-  
+	**附註：**如果您已在新增 Web 支援之前使用 {{site.data.keyword.amashort}}，則在服務認證中可能沒有記號端點。請改用下列 URL（視 Bluemix 地區而定）：
+
+	美國南部：
+
 	`    https://mobileclientaccess.ng.bluemix.net/oauth/v2/token
      `
- 
+
 	    倫敦：
-       
- 
+      
+
 	`    https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token  
-     ` 
- 
+     `
+
 	    雪梨：
-       
- 
+      
+
 	`     https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/token 
  `
- 
+
 2. 將 POST 要求傳送至記號伺服器 URI，並以授權類型 ("authorization_code")、`clientId` 及您的重新導向 URI 作為表單參數。傳送 `clientId` 及 `secret` 作為基本 HTTP 鑑別認證。
- 
+
 	下列程式碼會擷取必要值，並透過 POST 要求傳送它們。
 
 	```Java
@@ -194,7 +196,7 @@ lastupdated: "2016-12-04"
 	請注意，`redirect_uri` 參數必須符合前一個授權要求所使用的 `redirect_uri`。`code` 參數值應該是來自授權要求之回應中收到的授權碼。授權碼的有效時間只有 10 分鐘，過了此時間則必須擷取新的授權碼。
 
 
-	回應內文將包含 JWT 格式 (https://jwt.io/) 的存取碼及記號 ID。
+	回應內文將包含 JWT 格式的存取碼及記號 ITD（請參閱 [JWT 網站 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://jwt.io/ "外部鏈結圖示"){: new_window}）。
 
 	取得存取記號並收到身分記號之後，您就可以將 Web 階段作業標示為已鑑別，並可選擇性地持續保存這些記號。  
 
@@ -205,17 +207,13 @@ lastupdated: "2016-12-04"
 
 存取記號可容許與受到 {{site.data.keyword.amashort}} 授權過濾器保護的資源進行通訊，請參閱[保護資源](protecting-resources.html)。
 
-若要對受保護的資源提出要求，請將結構如下的授權標頭新增至要求： 
+若要對受保護的資源提出要求，請將結構如下的授權標頭新增至要求：
 
 `Authorization=Bearer <accessToken> <idToken>`
 
 #### 提示
-{: #tips} 
+{: #tips}
 
 * 您必須以空格區隔 `accessToken` 及 `idToken`。
 
-* `idToken` 是選用項目。如果您未提供身分記號，則可以存取受保護的資源，但不會收到已授權使用者的任何相關資訊。 
- 
-
-
-
+* `idToken` 是選用項目。如果您未提供身分記號，則可以存取受保護的資源，但不會收到已授權使用者的任何相關資訊。

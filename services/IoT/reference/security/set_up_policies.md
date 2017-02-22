@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015,2016
+  years: 2016, 2017
 
 ---
 
@@ -11,15 +11,15 @@ copyright:
 {:codeblock:.codeblock}
 {:pre: .pre}
 
-# Configuring security policies (Beta)
+# Configuring security policies
 {: #set_up_policies.md}
-Last updated: 29 December 2016
+Last updated: 2017-02-02
 {: .last-updated}
 
 A security analyst can configure connection security policies and blacklists or whitelists.
 
 ## Configuring connection policies
-{: #config_connect.md}
+{: #config_connect}
 
 You can set the default security level that is applied to all devices. You can then add custom security settings for specific devices.
 
@@ -37,12 +37,12 @@ Based on the security level you select, the table shows the number of devices th
 4. Click **Save**.  
 
 ## Configuring blacklists and whitelists
-{: #config_black_white.md}
+{: #config_black_white}
 
 Restrict access to the server from certain devices by using a blacklist or use a whitelist to grant server access to specific devices. You an use either a blacklist or a whitelist -- they cannot be used together.
 
 ### Configure a blacklist
-{: #config_blacklist.md}
+{: #config_blacklist}
 
 1. On the Risk and Security Management **Policies** page, in the **Blacklist** section, click **Configure**.
 2. On the **Blacklist** page, click **Add to Blacklist**.
@@ -55,7 +55,7 @@ Restrict access to the server from certain devices by using a blacklist or use a
 6. Click **Save**.
 
 ### Configure a whitelist
-{: #config_whitelist.md}
+{: #config_whitelist}
 
 1. On the Risk and Security Management **Policies**, click **Configure** beside **Whitelist**.
 2. On the **Whitelist** page, click **Add to Whitelist**.

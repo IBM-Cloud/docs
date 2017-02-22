@@ -57,8 +57,8 @@ actualizar con rapidez la instancia de app en {{site.data.keyword.Bluemix_notm}}
 Desktop Sync tiene las siguientes consideraciones:
 * Desktop Sync se ejecuta en estos sistemas operativos:
   * Windows 7 u 8
-  * Mac OS X versión 10.9 o posterior
-      **Nota:** Windows requiere .NET Framework versión 4.5. Si no tiene .NET instalado, se le solicitará que lo instale cuando instale la interfaz de línea de mandatos (CLI) de {{site.data.keyword.Bluemix_notm}} Live Sync.  
+  * Mac OS X versión 10.9 o posterior   
+      **Nota:** Windows necesita .NET Framework versión 4.5. Si no tiene .NET instalado, se le solicitará que lo instale cuando instale la interfaz de línea de mandatos (CLI) de {{site.data.keyword.Bluemix_notm}} Live Sync.  
 * No es necesario clonar el repositorio Git.
 * Independientemente del tipo de app que esté desarrollando, puede sincronizar su proyecto de escritorio con el espacio de trabajo en la nube.
 * Si la app está escrita en Node.js, puede propagar los cambios en las apps que están en ejecución.

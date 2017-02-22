@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  year: 2016
-lastupdated: "2016-06-15"
+  year: 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
 
@@ -62,7 +62,7 @@ response_type='authorization_code'
 
   `state` 参数目前暂不使用，可以保留为空。`redirect_uri` 参数是 URI，用于在使用 Facebook 成功认证或认证失败之后进行重定向。
 
-1. 重定向到授权端点之后，您将从 Facebook 获取登录表单。输入用户名和密码，以重定向到 `redirect_uri`。
+1. 重定向到授权端点之后，您将从 Facebook 获取登录表单。  输入用户名和密码，以重定向到 `redirect_uri`。
 重定向之后获取的响应包含请求查询参数中的授权代码。
 
 1. 向授权服务器的令牌端点发出 `POST` 请求：
@@ -70,7 +70,6 @@ response_type='authorization_code'
   https://imf-newauthserver.bluemix.net/oauth/v2/token
 
   使用以下查询参数：
-  
   ```
 grant_type='authorization_code'
   client_id= <bluemix_app_guid>

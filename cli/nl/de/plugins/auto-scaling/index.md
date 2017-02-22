@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015，20166
+  years: 2015，2017
 
-lastupdated: "2016-02-24"
+lastupdated: "2011-01-12"
 
 
 ---
@@ -18,14 +18,11 @@ lastupdated: "2016-02-24"
 # Benutzerschnittstelle (CLI) für Autoskalierung
 {: #autoscalingcli}
 
-Letzte Aktualisierung: 25. Februar 2016
-{: .last-updated}
-
 
 Sie können den Service {{site.data.keyword.autoscaling}} unter Verwendung der {{site.data.keyword.autoscaling}}-CLI für {{site.data.keyword.Bluemix_notm}} konfigurieren. Die {{site.data.keyword.autoscaling}}-CLI unterstützt Linux64, Win64 und OSX und stellt eine ähnliche Funktionalität wie die REST-konforme API für Autoskalierung (Auto-Scaling RESTful API) bereit.
 {: shortdesc}
 
-Bevor Sie beginnen, müssen Sie die {{site.data.keyword.Bluemix_notm}}-CLI installieren. Anweisungen hierzu enthält das Dokument zum [Download der {{site.data.keyword.Bluemix_notm}}-CLI](http://plugins.ng.bluemix.net/ui/home.html){: new_window}.
+Bevor Sie beginnen, müssen Sie die {{site.data.keyword.Bluemix_notm}}-CLI installieren. Anweisungen hierzu enthält die Seite zum [Herunterladen der {{site.data.keyword.Bluemix_notm}} CLI ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/home.html){: new_window}.
 
 ## {{site.data.keyword.Bluemix_notm}}-CLI-Plug-in hinzufügen
 
@@ -43,7 +40,7 @@ bluemix plugin install auto-scaling -r bluemix-plugin-repo
 
 ## Autoskalierungsrichtlinie zuordnen
 
-Sie können eine Autoskalierungsrichtlinie einer bestimmten App zuordnen. Führen Sie den folgenden Befehl aus: 
+Sie können eine Autoskalierungsrichtlinie einer bestimmten App zuordnen. Führen Sie den folgenden Befehl aus:
 
 ```
 bx as policy-attach <APP_NAME> -p <policy_file>
@@ -87,7 +84,7 @@ bx as policy-show <APP_NAME> [--json]
 
 ## Zuordnung einer Autoskalierungsrichtlinie aufheben
 
-Sie können eine Autoskalierungsrichtlinie aus einer App entfernen. Führen Sie den folgenden Befehl aus: 
+Sie können eine Autoskalierungsrichtlinie aus einer App entfernen. Führen Sie den folgenden Befehl aus:
 
 ```
 bx as policy-detach <APP_NAME>
@@ -102,7 +99,7 @@ bx as policy-detach <APP_NAME>
 
 ## Autoskalierungsrichtlinie aktivieren oder inaktivieren
 
-Sie können die Autoskalierungsrichtlinie einer bestimmten App aktivieren oder inaktivieren. Führen Sie den folgenden Befehl aus: 
+Sie können die Autoskalierungsrichtlinie einer bestimmten App aktivieren oder inaktivieren. Führen Sie den folgenden Befehl aus:
 
 ```
 bx as policy-enable|policy-disable <APP_NAME>
@@ -142,5 +139,5 @@ bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<en
 ## Allgemein
 {: general}
 * [{{site.data.keyword.autoscaling}}-Service](/docs/services/Auto-Scaling/index.html)
-* [{{site.data.keyword.Bluemix_notm}}-CLI](http://plugins.ng.bluemix.net/ui/home.html){: new_window}
-* [W3C-Standard 'Date and Time Formats'](https://www.w3.org/TR/NOTE-datetime){: new_window}
+* [{{site.data.keyword.Bluemix_notm}} CLI ![Symbol für externen Link](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/home.html){: new_window}
+* [W3C-Standard 'Date and Time Formats' ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://www.w3.org/TR/NOTE-datetime){: new_window}

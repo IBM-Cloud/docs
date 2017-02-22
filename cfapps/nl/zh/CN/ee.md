@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015，2016
+  years: 2015，2017
 
-lastupdated: "2016-10-18"
+lastupdated: "2017-01-11"
 
 ---
 
@@ -25,7 +25,7 @@ lastupdated: "2016-10-18"
 ## 注册
 {: #ee_start}
 
-开始之前，需要通过以下链接注册 IBM 标识：[https://console.ng.bluemix.net/](https://console.ng.bluemix.net/)。注册后，登录到 {{site.data.keyword.Bluemix_notm}}，即可开始 30 天免费试用。{{site.data.keyword.Bluemix_notm}} 提供了 2 GB 运行时内存和 10 个服务实例供您免费试用。
+开始之前，请通过以下链接注册 IBM 标识：[https://console.ng.bluemix.net/ ![外部链接图标](../icons/launch-glyph.svg)](https://console.ng.bluemix.net/){: new_window}。注册后，登录到 {{site.data.keyword.Bluemix_notm}}，即可开始 30 天免费试用。{{site.data.keyword.Bluemix_notm}} 提供了 2 GB 运行时内存和 10 个服务实例供您免费试用。
 
 ## 使用 {{site.data.keyword.Bluemix_notm}} 用户界面创建 Web 应用程序
 {: #ee_appui}
@@ -36,7 +36,7 @@ lastupdated: "2016-10-18"
 
 对于此场景，应使用 Node.js 来开发 Web 应用程序。假定您在美国，并且您的大部分应用程序用户也在美国。您决定在靠近您用户群的位置构建并运行应用程序，以便能够减少网络等待时间。登录到 {{site.data.keyword.Bluemix_notm}} 之后，单击用户帐户首选项链接，然后选择**美国南部**区域。然后，可以执行以下步骤来创建应用程序：
 
-  1. 转至**目录** 
+  1. 转至**目录**
   2. 选择 **Cloud Foundry 运行时**。
   3. 选择 **SDK for Node.js**。
   4. 键入应用程序的唯一名称（例如 TestNode），然后单击**创建**。应用程序名称必须在整个 {{site.data.keyword.Bluemix_notm}} 环境中唯一。
@@ -178,7 +178,7 @@ cf bind-service TestNode cloudant100
   <dt>password</dt>
   <dd>b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424</dd>
   <dt>url</dt>
-  <dd>https://d72837bb-b341-4038-9c8e-7f7232916197-bluemix:b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424@d72837bb-b341-4038-9c8e-7f7232916197-bluemix.cloudant.com</dd></dt></dl>
+  <dd>https://d72837bb-b341-4038-9c8e-7f7232916197-bluemix:b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424@d72837bb-b341-4038-9c8e-7f7232916197-bluemix.cloudant.com</dd></dl>
 
   例如，Node.js 应用程序可能会按如下方式访问这些信息：
   

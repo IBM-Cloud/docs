@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
   
-lastupdated: "2016-08-18"
+lastupdated: "2017-01-11"
 
 ---
 
@@ -48,14 +48,14 @@ lastupdated: "2016-08-18"
 您可以使用具有內建機制的建置套件來避免載入已作廢的元件。下列建置套件是其中兩個範例：
 {: tsResolve}
 
-  * [Cloud Foundry Java 建置套件](https://github.com/cloudfoundry/java-buildpack){: new_window}。這個建置套件具有內建的機制，可以確保使用最新版本的建置套件。如需此機制運作方式的相關資訊，請參閱 [extending-caches.md](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}。 
-  * [Cloud Foundry Node.js 建置套件](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}。這個建置套件功能與使用環境變數類似。為了讓 Node.js 建置套件能每次從網際網路下載 node 模組，請在 cf 指令行介面中，鍵入下列指令： 	
+  * [Cloud Foundry Java 建置套件 ![外部鏈結圖示](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack){: new_window}。這個建置套件具有內建的機制，可以確保使用最新版本的建置套件。如需此機制運作方式的相關資訊，請參閱 [extending-caches.md ![外部鏈結圖示](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}。 
+  * [Cloud Foundry Node.js 建置套件 ![外部鏈結圖示](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}。這個建置套件功能與使用環境變數類似。為了讓 Node.js 建置套件能每次從網際網路下載 node 模組，請在 cf 指令行介面中，鍵入下列指令： 	
   ```
 set NODE_MODULES_CACHE=false
 ```
 如果您使用的建置套件未提供自動載入最新元件的機制，可以手動刪除快取目錄中的內容，然後採取下列步驟來重新推送應用程式：
-  1. 移出空值建置套件的分支，例如 https://github.com/ryandotsmith/null-buildpack。如需如何移出分支的相關資訊，請參閱 [Git Basics - Getting a Git Repository](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}。  
-  2. 將下行新增到 `null-buildpack/bin/compile` 檔案並確定變更。如需如何確定變更的相關資訊，請參閱 [Git Basics - Recording Changes to the Repository](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}。
+  1. 移出空值建置套件的分支，例如 https://github.com/ryandotsmith/null-buildpack。如需如何移出分支的相關資訊，請參閱 [Git Basics - Getting a Git Repository ![外部鏈結圖示](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}。  
+  2. 將下行新增到 `null-buildpack/bin/compile` 檔案並確定變更。如需如何確定變更的相關資訊，請參閱 [Git Basics - Recording Changes to the Repository ![外部鏈結圖示](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}。
   ```
 rm -rfv $2/*
 ```
@@ -90,7 +90,7 @@ cf push appname -p app_path -b <latest_buildpack>
 
 
 
-在 PHP 建置套件中，error_log 參數可用來定義記載層次。依預設，`error_log` 參數的值為 **stderr notice**。下列範例顯示 Cloud Foundry 所提供之 PHP 建置套件的 `nginx-defaults.conf` 檔案中的預設記載層次配置。如需相關資訊，請參閱 [cloudfoundry/php-buildpack](https://github.com/cloudfoundry/php-buildpack/blob/ff71ea41d00c1226d339e83cf2c7d6dda6c590ef/defaults/config/nginx/1.5.x/nginx-defaults.conf){: new_window}。
+在 PHP 建置套件中，error_log 參數可用來定義記載層次。依預設，`error_log` 參數的值為 **stderr notice**。下列範例顯示 Cloud Foundry 所提供之 PHP 建置套件的 `nginx-defaults.conf` 檔案中的預設記載層次配置。如需相關資訊，請參閱 [cloudfoundry/php-buildpack ![外部鏈結圖示](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/php-buildpack/blob/ff71ea41d00c1226d339e83cf2c7d6dda6c590ef/defaults/config/nginx/1.5.x/nginx-defaults.conf){: new_window}。
 {: tsCauses} 
 
 ```
@@ -109,7 +109,7 @@ daemon off;
 error_log stderr error;
 pid @{HOME}/nginx/logs/nginx.pid;
 ```
-如需如何變更預設記載配置的相關資訊，請參閱 [error_log](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}。
+如需如何變更預設記載配置的相關資訊，請參閱 [error_log ![外部鏈結圖示](../icons/launch-glyph.svg)](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}。
 	
 
 ## 無法將協力廠商的 Python 檔案庫匯入 {{site.data.keyword.Bluemix_notm}}

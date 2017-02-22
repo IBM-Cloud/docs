@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-01"
+  years: 2016, 2017
+lastupdated: "2016-12-15"
 
 ---
 {:new_window: target="_blank"}
@@ -16,7 +16,7 @@ Der Benutzerschnittstellenstarter für {{site.data.keyword.Bluemix}} Store Catal
 ## Voraussetzungen
 {: #tutorial_requirements}
 
-* Ein [Bluemix](http://bluemix.net)Konto
+* Ein [Bluemix ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://bluemix.net "Symbol für externen Link")-Konto
 
 
 ## Einführung
@@ -36,17 +36,17 @@ Zur schnellen Einrichtung und Ausführung mit dem Benutzerschnittstellenstarter 
 
    4. Geben Sie Ihren Projektnamen ein und klicken Sie auf **Erstellen**.
 
-2. Optional: Fügen Sie die Push Notifications-Funktion hinzu.
+2. Optional: Fügen Sie die {{site.data.keyword.mobilepushshort}}-Funktion hinzu.
 
-   1. Klicken Sie auf der Seite **Projektübersicht** für **Push Notifications** auf **Hinzufügen**.
+   1. Klicken Sie auf der Seite **Projektübersicht** für **{{site.data.keyword.mobilepushshort}}** auf **Hinzufügen**.
 
-      Alternativ können Sie auf der Seite **Push Notifications** auf **Erstellen** klicken.
+      Alternativ können Sie auf der Seite **{{site.data.keyword.mobilepushshort}}** auf **Erstellen** klicken.
 
    2. Geben Sie Ihren Servicenamen ein und klicken Sie auf **Erstellen**.
 
-   3. Unter iOS [konfigurieren Sie den Apple-Service 'Push Notification'](/docs/services/mobilepush/t_push_provider_ios.html){: new_window}.
+   3. Für iOS: [Apple Push Notification Service konfigurieren ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/mobilepush/t_push_provider_ios.html "Symbol für externen Link"){: new_window}.
 
-   4. Unter Android [konfigurieren Sie Google Cloud Messaging](/docs/services/mobilepush/t_push_provider_android.html){: new_window}.
+   4. Für Android: [Google Cloud Messaging konfigurieren ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/mobilepush/t_push_provider_android.html "Symbol für externen Link"){: new_window}.
 
 3. Optional: Fügen Sie andere Funktionen hinzu.
 
@@ -90,16 +90,18 @@ Zur schnellen Einrichtung und Ausführung mit dem Benutzerschnittstellenstarter 
       Sie können auch in der Tabelle vorhandenen Inhalt importieren, exportieren oder ändern, wenn sie lokal ist, indem Sie die Schaltflächen verwenden und den Inhalt in der Tabelle auswählen.
 
 	  Hinweis: Wenn Sie Daten importieren, die nicht mit der Struktur der Standarddaten übereinstimmen, aktivieren Sie die Schiebeleiste zum Ersetzen des Schemas. Ein Beispiel hierfür ist eine CSV-Datei, die weniger Spalten besitzt als die Daten, die mit Ihrem Starter bereitgestellt werden.
+	  
+   6. Wählen Sie **Navigation** aus, um die Navigationsaktionen in Ihrer App anzupassen. Dieser Vorgang ist optional, da die Navigationsaktionen für viele der Anzeigen entsprechend den Beziehungen zwischen den Anzeigen automatisch erstellt werden. Sie können die Zielanzeige ändern, indem Sie in der Liste der Menüelemente zuerst die Anzeige bzw. das Feld auswählen, *von* der bzw. dem die Navigation ausgehen soll. Wählen Sie anschließend im Zielanzeigefeld die Anzeige aus, *zu* der navigiert werden soll. 
 
-   6. Wählen Sie in der Navigation die Option **Benutzerzugriff** aus, um die Zugangsvoraussetzungen Ihres Projekts zu ändern. Mit dem Switch können Sie den Benutzerzugriff ein- und ausschalten. Wenn der Benutzerzugriff eingeschaltet ist, können Sie das Zeitlimit für inaktive Benutzer sowie die Berechtigungsnachweise für Benutzer festlegen, die auf die App zugreifen.
+   7. Wählen Sie in der Navigation die Option **Benutzerzugriff** aus, um die Zugangsvoraussetzungen Ihres Projekts zu ändern. Mit dem Switch können Sie den Benutzerzugriff ein- und ausschalten. Wenn der Benutzerzugriff eingeschaltet ist, können Sie das Zeitlimit für inaktive Benutzer sowie die Berechtigungsnachweise für Benutzer festlegen, die auf die App zugreifen.
 
-   7. Wählen Sie im Navigationsmenü die Option **Einstellungen** aus, um die Gesamtinformationen zu Ihrem Projekt und die farbliche Darstellung zu ändern. In dieser Anzeige geben Sie Ihren Google-API-Schlüssel ein, wenn dieser für die Services, die Sie Ihrem Projekt hinzugefügt haben, erforderlich ist. In dieser Anzeige geben Sie auch Ihre eindeutige Bundle-ID ein, die im Apple Store oder Google Play Store registriert ist.
+   8. Wählen Sie im Navigationsmenü die Option **Einstellungen** aus, um die Gesamtinformationen zu Ihrem Projekt und die farbliche Darstellung zu ändern. In dieser Anzeige geben Sie Ihren Google-API-Schlüssel ein, wenn dieser für die Services, die Sie Ihrem Projekt hinzugefügt haben, erforderlich ist. In dieser Anzeige geben Sie auch Ihre eindeutige Bundle-ID ein, die im Apple Store oder Google Play Store registriert ist.
 
       Wenn Sie Ihrem Projekt das IBM MobileFirst Foundation-SDK hinzufügen wollen, schalten Sie den Switch ein.
 
-   8. Wenn Sie den Switch umgeschaltet haben, um Ihrem Projekt in der Anzeige *Einstellungen* IBM MobileFirst Platform Foundation hinzuzufügen, wird in der Navigation die Auswahl **Foundation** angezeigt. Wählen Sie **Foundation** aus und füllen Sie die für IBM MobileFirst Platform Foundation spezifischen erforderlichen Informationen aus.
+   9. Wenn Sie den Switch umgeschaltet haben, um Ihrem Projekt in der Anzeige *Einstellungen* IBM MobileFirst Platform Foundation hinzuzufügen, wird in der Navigation die Auswahl **Foundation** angezeigt. Wählen Sie **Foundation** aus und füllen Sie die für IBM MobileFirst Platform Foundation spezifischen erforderlichen Informationen aus.
 
-   9. Wählen Sie im Navigationsmenü die Option **Veröffentlichen** aus, um die endgültigen für die Erstellung Ihrer mobilen App erforderlichen Informationen einzugeben. Sie können Ihre Bundle-ID für iOS und die Anwendungs-ID für Android eingeben.
+   10. Wählen Sie im Navigationsmenü die Option **Veröffentlichen** aus, um die endgültigen für die Erstellung Ihrer mobilen App erforderlichen Informationen einzugeben. Sie können Ihre Bundle-ID für iOS und die Anwendungs-ID für Android eingeben.
 
        Wenn Sie eine iOS-App erstellen, müssen Sie Ihre Bundle-ID, Ihr Verteilungszertifikat in Form einer *.p12*-Datei und Ihr Bereitstellungsprofil in Form einer *.mobileprovision*-Datei aus dem Apple-Bereitstellungsportal abrufen. Diese drei sollten zum selben Zeitpunkt und mit demselben Computer erstellt werden, der auch zum Posten Ihrer App im Apple-Store verwendet werden soll. Das Verteilungszertifikat und das Bereitstellungsprofil müssen auf der Bundle-ID basieren. 	
 
@@ -125,4 +127,22 @@ Zur schnellen Einrichtung und Ausführung mit dem Benutzerschnittstellenstarter 
 ## Nächste Schritte
 {: #tutorial_next}
 
-[Testen Sie Ihre App!](http://console.{DomainName}/mobile/create-project?starter=fb5e31a9-1186-4d46-939e-2f620f35b83b){: new_window}
+[Testen Sie Ihre App! ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://console.{DomainName}/mobile/create-project?starter=fb5e31a9-1186-4d46-939e-2f620f35b83b "Symbol für externen Link"){: new_window}
+
+
+### Lernprogramme zu Benutzerschnittstellenstartern
+{: #tutorials_UI}
+
+* [Lernprogramm - Store Catalog](tutorial_store_catalog.html)
+
+
+### Lernprogramme zu Code-Startern
+{: #tutorials_Code}
+
+* [Lernprogramm - Basic](tutorial.html)
+* [Lernprogramm - Cloudant Sync](tutorial_cloudant_synd.html)
+* [Lernprogramm - {{site.data.keyword.openwhisk_short}}](tutorial_openwhisk.html)
+* [Lernprogramm - {{site.data.keyword.visualrecognitionshort}}](tutorial_visual_recognition.html)
+* [Lernprogramm - Watson Language](tutorial_watson_language.html)
+* [Lernprogramm - Weather](tutorial_weather.html)
+

@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2016
-lastupdated: "2016-09-09"
+  years: 2016, 2017
+lastupdated: "2017-01-04"
  
 
 ---
@@ -139,7 +139,7 @@ packages
 可以使用 `changes` 订阅源来配置服务，以在每次对 Cloudant 数据库进行更改时都触发触发器。参数如下所示：
 
 - `dbname`：Cloudant 数据库的名称。
-- `maxTriggers`：达到此限制时，停止触发触发器。缺省值为 1000。您可以将其设置为最大值 10,000。如果您尝试设置超过 10,000，那么会拒绝该请求。
+- `maxTriggers`：达到此限制时，停止触发触发器。缺省值为无限。
 
 1. 使用先前创建的包绑定中的 `changes` 订阅源来创建触发器。确保将 `/myNamespace/myCloudant` 替换为您的包名。
 
@@ -234,11 +234,10 @@ wsk activation poll
   ```
   {: screen}
 
-### 使用操作序列从 Cloudant 数据库处理更改事件相关的文档
+### 使用操作序列和更改触发器处理 Cloudant 数据库中的文档
 
 您可以使用规则中的操作序列来访存和处理与 Cloudant 更改事件相关联的文档。
 
-创建将从 Cloudant 处理文档的操作，它期望将文档作为参数。
 以下是处理文档的操作的样本代码：
 ```
 function main(doc){
@@ -246,40 +245,34 @@ function main(doc){
 }
 ```
 {: codeblock}
+
+创建用于处理 Cloudant 中文档的操作：
 ```
 wsk action create myAction myAction.js
 ```
 {: pre}
-要从数据库读取文档，您可以使用 Cloudant 包中的 `read` 操作，此操作可随附于操作序列的 `myAction` 操作中。
-使用 `read` 操作创建操作序列，然后调用期望将文档作为输入的 `myAction` 操作。
+
+要从数据库读取文档，您可以使用 Cloudant 包中的 `read` 操作。`read` 操作可随 `myAction` 一起编写以创建操作序列。
 ```
 wsk action create sequenceAction --sequence /myNamespace/myCloudant/read,myAction
 ```
 {: pre}
 
-现在，创建将触发器与新操作 `sequenceAction` 相关联的规则
+在用于激活对新 Cloudant 触发器事件的操作的规则中，可使用操作 `sequenceAction`。
 ```
 wsk rule create myRule myCloudantTrigger sequenceAction
 ```
 {: pre}
 
-操作序列需要了解数据库名称以从中访存文档。
-在 `dbname` 的触发器上设置参数
-```
-wsk trigger update myCloudantTrigger --param dbname testdb
-```
-{: pre}
+**注**：Cloudant `changes` 触发器曾经支持参数 `includeDoc`，现在该参数已不再受支持。您需要重新创建之前使用 `includeDoc` 创建的触发器。请执行以下步骤来重新创建触发器：
 
-**注**：不再支持用于支持参数 `includeDoc` 的 Cloudant 更改触发器。
-您需要重新创建之前使用 `includeDoc` 创建的触发器：不使用 `includeDoc` 参数创建触发器
   ```
   wsk trigger delete myCloudantTrigger
   wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb
   ```
   {: pre}
-您可以遵循上述步骤，来创建操作序列，以获取文档并调用现有操作。
-然后，更新规则以使用新操作序列。
 
+  上述示例可用于创建操作序列，以读取更改后的文档并调用现有操作。请务必禁用可能不再有效的任何规则，然后使用操作序列模式创建新规则。
 
 ## 使用 Alarm 包
 {: #openwhisk_catalog_alarm}
@@ -308,13 +301,14 @@ wsk trigger update myCloudantTrigger --param dbname testdb
 
 - `trigger_payload`：此参数的值成为每次触发器触发时触发器的内容。
 
-- `maxTriggers`：达到此限制时，停止触发触发器。缺省值为 1000。您可以将其设置为最大值 10,000。如果您尝试设置超过 10,000，那么会拒绝该请求。
+- `maxTriggers`：达到此限制时，停止触发触发器。缺省值为 1,000,000。您可以将其设置为无限 (-1)。
 
 以下是通过触发器事件中的 `name` 和 `place` 值创建每 2 分钟将触发一次的触发器的示例。
 
   ```
   wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron "*/2 * * * *" --param trigger_payload "{\"name\":\"Odin\",\"place\":\"Asgard\"}"
   ```
+  {: pre}
 
 每次生成的事件将包含 `trigger_payload` 值中指定的属性作为参数。在本例中，每个触发器事件将包含参数 `name=Odin` 和 `place=Asgard`。
 
@@ -391,15 +385,16 @@ wsk trigger update myCloudantTrigger --param dbname testdb
 
 ## 使用 Watson 包
 {: #openwhisk_catalog_watson}
+
 通过 Watson 包，可以方便地调用各种 Watson API。
 
 提供以下 Watson 包：
 
 | 包 | 描述 |
 | --- | --- |
-| `/whisk.system/watson-translator`   | Watson API 的操作，用于翻译文本和语言标识 |
-| `/whisk.system/watson-textToSpeech` | Watson API 的操作，用于将文本转换为语音 |
-| `/whisk.system/watson-speechToText` | Watson API 的操作，用于将语音转换为文本 |
+| `/whisk.system/watson-translator`   | 用于文本翻译和语言识别的包 |
+| `/whisk.system/watson-textToSpeech` | 用于将文本转换为语音的包 |
+| `/whisk.system/watson-speechToText` | 用于将语音转换为文本的包 |
 
 **注**：当前不推荐使用 `/whisk.system/watson` 包，请迁移到上述新包，而新操作提供相同的接口。
 
@@ -411,7 +406,7 @@ wsk trigger update myCloudantTrigger --param dbname testdb
 
 | 实体 | 类型 | 参数 | 描述 |
 | --- | --- | --- | --- |
-| `/whisk.system/watson-translator` | 包 | username 和 password | Watson API 的操作，用于翻译文本和语言标识  |
+| `/whisk.system/watson-translator` | 包 | username 和 password | 用于文本翻译和语言识别的包  |
 | `/whisk.system/watson-translator/translator` | 操作 | payload、translateFrom、translateTo、translateParam、username、password | 翻译文本 |
 | `/whisk.system/watson-translator/languageId` | 操作 | payload、username 和 password | 识别语言 |
 
@@ -450,7 +445,6 @@ wsk package refresh
   wsk package list
   ```
   {: pre}
-  
   ```
   packages
   /myBluemixOrg_myBluemixSpace/Bluemix_Watson_Translator_Credentials-1 private
@@ -531,7 +525,7 @@ wsk package refresh
 
 | 实体 | 类型 | 参数 | 描述 |
 | --- | --- | --- | --- |
-| `/whisk.system/watson-textToSpeech` | 包 | username 和 password | Watson API 的操作，用于将文本转换为语音 |
+| `/whisk.system/watson-textToSpeech` | 包 | username 和 password | 用于将文本转换为语音的包 |
 | `/whisk.system/watson-textToSpeech/textToSpeech` | 操作 | payload、voice、accept、encoding、username、password | 将文本转换为音频 |
 
 **注**：不推荐使用包含 `/whisk.system/watson/textToSpeech` 操作的 `/whisk.system/watson` 包。
@@ -590,6 +584,7 @@ wsk package refresh
 
 #### 将某些文本转换为语音
 {: #openwhisk_catalog_watson_speechtotext}
+
 `/whisk.system/watson-speechToText/textToSpeech` 操作可将某些文本转换为音频语音。参数如下所示：
 
 - `username`：Watson API 用户名。
@@ -613,6 +608,7 @@ wsk package refresh
   ```
   {: screen}
 
+
 ### 使用 Watson Speech to Text 包
 {: #openwhisk_catalog_watson_speechtotext}
 
@@ -622,11 +618,10 @@ wsk package refresh
 
 | 实体 | 类型 | 参数 | 描述 |
 | --- | --- | --- | --- |
-| `/whisk.system/watson-speechToText` | 包 | username 和 password | Watson API 的操作，用于将语音转换为文本 |
+| `/whisk.system/watson-speechToText` | 包 | username 和 password | 用于将语音转换为文本的包 |
 | `/whisk.system/watson-speechToText/speechToText` | 操作 | payload、content_type、encoding、username、password、continuous、inactivity_timeout、interim_results、keywords、keywords_threshold、max_alternatives、model、timestamps、watson-token、word_alternatives_threshold、word_confidence、X-Watson-Learning-Opt-Out | 将音频转换为文本 |
 
 **注**：不推荐使用包含 `/whisk.system/watson/speechToText` 操作的 `/whisk.system/watson` 包。
-
 
 #### 在 Bluemix 中设置 Watson Speech to Text 包
 
@@ -680,7 +675,6 @@ wsk package refresh
   {: pre}
 
 
-
 #### 将语音转换为文本
 
 `/whisk.system/watson-speechToText/speechToText` 操作可将音频语音转换为文本。参数如下所示：
@@ -718,6 +712,128 @@ wsk package refresh
   {: screen}
  
  
+## 使用 Message Hub 包
+{: #openwhisk_catalog_message_hub}
+
+此包允许您创建用于在消息发布到 Bluemix 上的 [Message Hub](https://developer.ibm.com/messaging/message-hub/) 服务实例时做出反应的触发器。
+
+### 创建用于侦听 Message Hub 实例的触发器
+{: #openwhisk_catalog_message_hub_trigger}
+为了创建用于在消息发布到 Message Hub 实例时做出反应的触发器，您需要使用名为 `messaging/messageHubFeed` 的订阅源。此订阅源支持以下参数：
+
+|名称|类型|描述|
+|---|---|---|
+|kafka_brokers_sasl|字符串的 JSON 数组|此参数是 `<host>:<port>` 字符串的数组，字符串中包含 Message Hub 实例中的代理程序|
+|user|字符串|您的 Message Hub 用户名|
+|password|字符串|您的 Message Hub 密码|
+|topic|字符串|希望触发器侦听的主题|
+|kafka_admin_url|URL 字符串|Message Hub Admin REST 接口的 URL|
+|api_key|字符串|您的 Message Hub API 密钥|
+|isJSONData|布尔值（可选 - 缺省值为 false）|设置为 `true` 时，订阅源在将消息内容作为触发器有效内容传递之前，会先尝试将其解析为 JSON。|
+
+此参数列表可能看起来让人望而生畏，但可以使用包刷新 CLI 命令自动设置这些参数：
+
+1. 在正用于 OpenWhisk 的当前组织和空间下创建 Message Hub 服务实例。
+
+2. 验证要侦听的主题在 Message Hub 中是否已存在，或者创建要侦听消息的新主题，例如 `mytopic`。
+
+2. 刷新名称空间中的包。刷新操作将自动为已创建的 Message Hub 服务实例创建包绑定。
+
+  ```
+wsk package refresh
+  ```
+  {: pre}
+  ```
+  created bindings:
+  Bluemix_Message_Hub_Credentials-1
+  ```
+  {: screen}
+
+  ```
+  wsk package list
+  ```
+  {: pre}
+  ```
+  packages
+  /myBluemixOrg_myBluemixSpace/Bluemix_Message_Hub_Credentials-1 private
+  ```
+  {: screen}
+
+  现在，包绑定包含与 Message Hub 实例关联的凭证。
+
+3. 现在，您只需创建要在新消息发布到 Message Hub 时触发的触发器即可。
+
+  ```
+  wsk trigger create MyMessageHubTrigger -f /myBluemixOrg_myBluemixSpace/Bluemix_Message_Hub_Credentials-1/messageHubFeed -p topic mytopic
+  ```
+  {: pre}
+
+### 在 Bluemix 外设置 Message Hub 包
+
+如果不是在 Bluemix 中使用 OpenWhisk，或者如果要在 Bluemix 外部设置 Message Hub，那么必须为 Message Hub 服务手动创建包绑定。您需要 Message Hub 服务凭证和连接信息。
+
+- 创建为 Message Hub 服务配置的包绑定。
+
+  ```
+  wsk trigger create MyMessageHubTrigger -f /whisk.system/messaging/messageHubFeed -p kafka_brokers_sasl "[\"kafka01-prod01.messagehub.services.us-south.bluemix.net:9093\", \"kafka02-prod01.messagehub.services.us-south.bluemix.net:9093\", \"kafka03-prod01.messagehub.services.us-south.bluemix.net:9093\"]" -p topic mytopic -p user <your Message Hub user> -p password <your Message Hub password> -p kafka_admin_url https://kafka-admin-prod01.messagehub.services.us-south.bluemix.net:443 -p api_key <your API key>
+  ```
+  {: pre}
+
+### 侦听发往 Message Hub 实例的消息
+{: #openwhisk_catalog_message_hub_listen}
+创建触发器后，系统将监视消息传递服务中指定的主题。发布新消息时，将触发触发器。
+
+该触发器的有效内容将包含 `messages` 字段，此字段是自上次触发触发器以来已发布的消息的数组。数组中的每个消息对象都将包含以下字段：
+- topic
+- partition
+- offset
+- key
+- value
+
+在 Kafka 术语中，这些字段应该可顾名思义。但是，需要特别注意 `value`。如果创建触发器时 `isJSONData` 参数设置为 `false`（或根本未设置），那么 `value` 字段将为所发布消息的原始值。然而，如果创建触发器时将 `isJSONData` 设置为 `true`，那么系统将尽力尝试将此值解析为 JSON 对象。如果解析成功，那么触发器有效内容中的 `value` 将为生成的 JSON 对象。
+
+例如，如果在 `isJSONData` 设置为 `true` 的情况下发布消息 `{"title": "Some string", "amount": 5, "isAwesome": true}`，触发器有效内容可能类似于以下内容：
+
+```
+{
+  "messages": [
+      {
+        "partition": 0,
+        "key": null,
+        "offset": 421760,
+        "topic": "mytopic",
+        "value": {
+            "amount": 5,
+            "isAwesome": true,
+            "title": "Some string"
+        }
+      }
+  ]
+}
+```
+
+但是，如果在 `isJSONData` 设置为 `false` 的情况下发布相同的消息，触发器有效内容将类似于以下内容：
+
+```
+{
+  "messages": [
+    {
+      "partition": 0,
+      "key": null,
+      "offset": 421761,
+      "topic": "mytopic",
+      "value": "{\"title\": \"Some string\", \"amount\": 5, \"isAwesome\": true}"
+    }
+  ]
+}
+```
+
+### 消息将批量处理
+您会注意到触发器有效内容包含消息数组。这意味着如果向消息传递系统生成消息的速度非常快，订阅源将尝试在单次触发触发器时对发布的消息进行批量处理。这将允许消息更快速、更高效地发布到触发器。
+
+请记住，对触发器所触发的操作进行编码时，有效内容中的消息数在技术上是无限的，但始终会大于 0。
+
+
 ## 使用 Slack 包
 {: #openwhisk_catalog_slack}
 

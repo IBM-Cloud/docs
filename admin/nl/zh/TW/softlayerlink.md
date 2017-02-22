@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2016
-lastupdated: "2016-12-01"
+  years: 2016, 2017
+lastupdated: "2017-01-11"
  
 
 ---
@@ -92,28 +92,61 @@ lastupdated: "2016-12-01"
 ## 切換至 IBM ID
 {: #ibmid_switch}
 
-SoftLayer 中的鑑別現在使用 IBM ID 來提供 {{site.data.keyword.Bluemix_notm}} 的單一登入。如果您有現有的 SoftLayer 帳戶，則可以切換至 IBM ID。移轉精靈將引導您完成這項切換。
+SoftLayer 中的鑑別現在使用 IBM ID 來提供所有 {{site.data.keyword.Bluemix_notm}} 的單一登入。將會啟用現有 SoftLayer 帳戶來切換至 IBM ID 鑑別，而且移轉精靈會引導您完成這項切換。
 {:shortdesc}
 
-開始切換至 IBM ID 之後，只要未完成此處理程序，就可以予以取消。但是，下次登入時，系統還是會提示您切換至 IBM ID。
+如果您是 {{site.data.keyword.slportal}} 中的主要使用者，而且沒有看到切換至 IBM ID 的提示，請[聯絡 IBM 支援中心](https://console.ng.bluemix.net/docs/support/index.html#contacting-support)以取得啟用此特性的協助。
 
-若要開始將現有 SoftLayer 使用者名稱切換至 IBM ID，請完成下列步驟：
+開始切換至 IBM ID 時，一律可以先取消這項切換，再完成此處理程序。不過，在下次登入時，系統還是會提示您切換至 IBM ID。您計劃要鏈結至 {{site.data.keyword.Bluemix_notm}} 帳戶的每一個帳戶都必須為具有唯一電子郵件位址的唯一 IBM ID 所擁有。
 
- 1. 在 {{site.data.keyword.slportal}} 中，移至「編輯使用者設定檔」頁面，然後按一下**切換至 IBM ID**。
- 2. 遵循移轉精靈提示，以建立 IBM ID。建立 IBM ID 之後，即無法變更 ID（即電子郵件位址）。您可以更新與設定檔相關聯的電子郵件，但該值預設為您針對 IBM ID 所定義的值。在您完成精靈之後，會傳送一封電子郵件給您。
- 3. 當您收到電子郵件時，請遵循鏈結，或將 URL 複製到瀏覽器，並輸入登錄碼。此代碼的有效期為 7 天，而且它是僅限一次性使用的代碼。使用過之後，就無法再次使用。
- 設定好 IBM ID 對 SoftLayer 的使用者鏈結之後，便只能使用 IBM ID 登入帳戶。在登入對話框上，您必須使用**使用 IBM ID 登入**按鈕，而非輸入 SoftLayer 使用者名稱和密碼。
+若要將現有 SoftLayer 使用者名稱切換至 IBM ID，請完成下列步驟：
+
+ 1. 如果您在登入之後於起始提示時選取**稍後**，但之後決定您要在現行階段作業中開始切換至 IBM ID 鑑別，請移至「編輯使用者設定檔」頁面，然後按一下**切換至 IBM ID**。
+ 2. 遵循精靈提示，以建立您的 IBM ID。您的 IBM ID 是唯一電子郵件位址，建立之後即無法進行變更。您稍後可以更新與設定檔相關聯的電子郵件，預設電子郵件設定為您針對 IBM ID 所定義的電子郵件。您將會收到一封含有登錄碼的電子郵件，指出您已完成移轉精靈。 
+ 3. 當您收到電子郵件時，請遵循鏈結，或將 URL 複製到瀏覽器，並輸入登錄碼。此登錄碼的有效時間是 7 天，而且只能使用一次。
  
-如果您是新客戶，則會在您查看訂單時要求您輸入現有 IBM ID 帳戶的電子郵件位址，或建立新的 IBM ID 帳戶。 
+ 
+在您切換至 IBM ID 鑑別之後，就只能使用 IBM ID 來登入帳戶。在登入提示時，按一下**使用 IBM ID 登入**，而非輸入 SoftLayer 使用者名稱和密碼。
+ 
+以新客戶身分查看訂單時，系統會要求您輸入現有 IBM ID 帳戶的電子郵件位址，或建立新的 IBM ID 帳戶。如果您建立新的 IBM ID，請輸入新 IBM ID 的電子郵件位址。電子郵件位址是收到邀請電子郵件的電子郵件位址，也是新 IBM ID 的使用者名稱。
 
-### 將多個 SoftLayer 帳戶對映至一個 IBM ID
+### 允許使用者切換至 IBM ID
+{: #link_accounts_resellers}
+
+在部分情況下，轉銷商或經銷商必須允許帳戶使用 IBM ID 鑑別，使用者才能切換至 IBM ID。 
+
+ * 若要允許具有舊式 SoftLayer 認證的現有帳戶使用 IBM ID 鑑別，請[聯絡 IBM 支援中心](https://console.ng.bluemix.net/docs/support/index.html#contacting-support)來啟用 IBM ID 移轉。對於每一個您要鏈結至 {{site.data.keyword.Bluemix_notm}} 帳戶的現有一般使用者帳戶都必須予以啟用。
+ 
+ * 若要確保使用 IBM ID 來建立新的使用者帳戶，則必須在立即主要使用者帳戶上設定 `CREATE_NEW_ACCOUNT_WITH_IBMid_AUTHENTICATION` 屬性。請[聯絡 IBM 支援中心](https://console.ng.bluemix.net/docs/support/index.html#contacting-support)或供應商，為您的帳戶設定此項目。
+ 
+### 鏈結使用者帳戶
+{: #link_user_accounts}
+在您的使用者切換至 IBM ID 鑑別之後，轉銷商及經銷商就可以鏈結 SoftLayer 及 {{site.data.keyword.Bluemix_notm}} 帳戶。
+
+**附註：** 
+  * 所鏈結之帳戶的主要使用者必須是 IBM ID。
+  * 以主要使用者身分登入每一個一般使用者帳戶。移至使用者設定檔頁面，然後按一下**切換至 IBM ID**。
+  * 您鏈結至 {{site.data.keyword.Bluemix_notm}} 帳戶的每一個帳戶都必須為具有唯一電子郵件位址的唯一 IBM ID 所擁有。雖然一個 IBM ID 可以擁有多個 SoftLayer 帳戶，但是您無法將這些帳戶鏈結至 {{site.data.keyword.Bluemix_notm}} 帳戶。如果一個 IBM ID 是多個 SoftLayer 帳戶的主要使用者，而且您要將那些帳戶鏈結至 {{site.data.keyword.Bluemix_notm}} 帳戶，則必須將主要使用者變更為每一個帳戶的唯一 IBM ID。請聯絡 [IBM SoftLayer 支援中心 ![外部鏈結圖示](../icons/launch-glyph.svg)](https://knowledgelayer.softlayer.com/topic/support){: new_window}，以變更 SoftLayer 帳戶上的主要使用者。
+  
+完成下列步驟，以將每一個帳戶鏈結至 {{site.data.keyword.Bluemix_notm}} 帳戶： 
+
+ 1. 若要建立新的 {{site.data.keyword.Bluemix_notm}} 帳戶，或鏈結至現有 {{site.data.keyword.Bluemix_notm}} 帳戶，請以主要使用者身分登入 SoftLayer 帳戶，然後按一下 **{{site.data.keyword.Bluemix_notm}}** 鏈結。這可讓您建立新的 {{site.data.keyword.Bluemix_notm}} 帳戶，或者鏈結至現有 {{site.data.keyword.Bluemix_notm}} 帳戶。作為 SoftLayer 帳戶之主要使用者的 IBM ID 必須是您所鏈結至之 Bluemix 帳戶的擁有者。請遵循精靈提示（包括將 SoftLayer 帳戶中的使用者新增至 {{site.data.keyword.Bluemix_notm}} 帳戶）。 
+ 2. 在您鏈結帳戶之後，請通知一般使用者帳戶將移轉至 IBM ID。一般使用者接著可以在 {{site.data.keyword.Bluemix_notm}} 主控台中存取「基礎架構」、「應用程式」及「服務」儀表板。
+ 3. 將新使用者新增至鏈結的帳戶時，您需要將他們新增至 SoftLayer 帳戶及 {{site.data.keyword.Bluemix_notm}} 帳戶，他們才能存取統一主控台內的所有功能。
+ 
+**建議：**僅將一般使用者帳戶移轉至 IBM ID。請不要移轉品牌帳戶，這是一般使用者帳戶的母帳戶，未包含任何資源。移轉至 IBM ID 的品牌帳戶使用者將無法登入 Brand Agent Portal (BAP) 入口網站。
+
+<!--
+### Mapping multiple SoftLayer accounts to one IBMid
 {: #map_multiple_accounts}
 
-設定帳戶時，您可以透過使用現有 IBM ID 電子郵件位址，來建立一個 IBM ID 與多個 SoftLayer 帳戶的關聯。每一個帳戶都只有一個 SoftLayer 使用者可以對映至單一 IBM ID。IBM ID 在每一個 SoftLayer 帳戶內都必須是唯一的。不過，一個使用者可以存取多個 SoftLayer 帳戶，則可以使用一個 IBM ID 來存取多個 SoftLayer 帳戶。
+You can associate one IBMid with multiple SoftLayer accounts by using an existing IBMid email address when setting up the account. Only one SoftLayer user for each account can be mapped to the single IBMid. The IBMid must be unique within each SoftLayer account. However, one user with access to multiple SoftLayer accounts can use one IBMid to access multiple SoftLayer accounts.
 
-例如，IBM ID 可以對映至帳戶 A 及 B 中的主要使用者，以及對映至帳戶 C 及 D 中的其他使用者。其中一個對映至該 IBM ID 的帳戶就是預設帳戶。預設帳戶通常是第一個對映至 IBM ID 的帳戶。不過，在「客戶入口網站」中，您可以透過帳戶切換特性來切換哪一個帳戶是預設帳戶。
+For example, an IBMid can map to the master user in accounts A and B, and to an additional user in accounts C and D. One of the accounts mapped to that IBMid is the default account.  Usually, the default account is the account that was first mapped to the IBMid. However, you can switch which account is the default account  through an account switching feature in the Customer Portal.
 
-如果使用者可以使用 IBM ID 存取多個帳戶並啟用雙重鑑別，則在帳戶登入及帳戶切換期間需要每個帳戶的適當雙重鑑別驗證碼。
+For a user with IBMid access to multiple accounts with two-factor authentication enabled, an appropriate two-factored authentication verification code per account is required during account log in and account switching.
+-->
+
 
 ## 將 {{site.data.keyword.Bluemix_notm}} 服務與 SoftLayer 資產搭配使用
 {: #bluemix_services}
@@ -161,7 +194,6 @@ SoftLayer 中的鑑別現在使用 IBM ID 來提供 {{site.data.keyword.Bluemix_
 * {{site.data.keyword.presenceinsightsshort}}
 * {{site.data.keyword.relationshipextractionshort}}
 * {{site.data.keyword.retrieveandrankshort}}
-* {{site.data.keyword.servicediscoveryshort}}
 * {{site.data.keyword.speechtotextshort}}
 * {{site.data.keyword.sqldb}}
 * {{site.data.keyword.streaminganalyticsshort}}

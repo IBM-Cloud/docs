@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015, 2017
 
-lastupdated: "2016-10-27"
+lastupdated: "2017-01-12"
 
 
 ---
@@ -38,6 +38,7 @@ autenticar com a senha descartável.</dd>
 </dl>
 
 <table summary="comandos do Bluemix que podem ser usados para gerenciar contêineres no Bluemix.">
+<caption>Tabela 1. Comandos para gerenciar contêineres no Bluemix</caption>
  <thead>
  <th colspan="5">Comandos para gerenciar contêineres no Bluemix</th>
  </thead>
@@ -95,15 +96,15 @@ autenticar com a senha descartável.</dd>
  <td>[bluemix ic service-bind](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_service_bind)</td>
  <td>[bluemix ic service-unbind](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_service_unbind)</td>
  <td>[bluemix ic start](/docs/cli/reference/bluemix_cli/index.html#ic_start)</td>
- <td>[bluemix ic stats](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_stats)</td>  
+ <td>[bluemix ic stats](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_stats)</td>
  <td>[bluemix ic stop](/docs/cli/reference/bluemix_cli/index.html#ic_stop)</td>
  </tr>
  <tr>
  <td>[bluemix ic top](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_top)</td>
  <td>[bluemix ic unpause](/docs/cli/reference/bluemix_cli/index.html#unpause)</td>
- <td>[bluemix ic unprovision](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_unprovision)</td>  
+ <td>[bluemix ic unprovision](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_unprovision)</td>
  <td>[bluemix ic volume-inspect](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_volume_inspect)</td>
- <td>[bluemix ic volume-create](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_volume_create)</td> 
+ <td>[bluemix ic volume-create](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_volume_create)</td>
  </tr>
  <tr>
  <td>[bluemix ic volume-fs](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_volume_fs)</td>
@@ -121,14 +122,12 @@ autenticar com a senha descartável.</dd>
  </tr>
   </tbody>
  </table>
-{: caption="Table 1. Commands for managing containers on Bluemix" caption-side="top"}
-
 
 
 ## bluemix ic attach
 {: #bluemix_ic_attach}
 
-Controlar um contêiner em execução ou visualizar sua saída. Use `CTRL+C` para sair e parar o contêiner. Esse comando chama a CLI do Docker. Para obter mais informações, consulte o comando [attach](https://docs.docker.com/engine/reference/commandline/attach/){: new_window} na ajuda do Docker.
+Controlar um contêiner em execução ou visualizar sua saída. Use `CTRL+C` para sair e parar o contêiner. Esse comando chama a CLI do Docker. Para obter mais informações, veja o comando [attach ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/attach/){: new_window} na ajuda do Docker.
 
 ```
 bluemix ic attach [--no-stdin] [--sig-proxy] CONTAINER
@@ -160,9 +159,7 @@ bluemix ic attach my_container
 ## bluemix ic build
 {: #bluemix_ic_build}
 
-Chame o serviço de construção IBM Containers para construir uma imagem do Docker localmente ou em seu repositório privado do {{site.data.keyword.Bluemix_notm}}. Esse comando chama a CLI do Docker. Para obter mais informações, consulte o comando
-[build](https://docs.docker.com/engine/reference/commandline/build/){: new_window}
-na ajuda do Docker.
+Chame o serviço de construção IBM Containers para construir uma imagem do Docker localmente ou em seu repositório privado do {{site.data.keyword.Bluemix_notm}}. Esse comando chama a CLI do Docker. Para obter mais informações, veja o comando [build ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/build/){: new_window} na ajuda do Docker.
 
 ```
 bluemix ic build -t TAG|--tag TAG [--no-cache] [-p|--pull] [-q|--quiet] DOCKERFILE_LOCATION
@@ -194,7 +191,7 @@ bluemix ic build -t registry.ng.bluemix.net/mynamespace/myimage .
 
 ## bluemix ic cp
 {: #bluemix_ic_cp}
-Copie arquivos ou pastas entre um contêiner e o sistema de arquivos local. Esse comando chama a CLI do Docker. Para obter mais informações, consulte o comando [cp](https://docs.docker.com/engine/reference/commandline/cp/){: new_window} na ajuda do Docker.
+Copie arquivos ou pastas entre um contêiner e o sistema de arquivos local. Esse comando chama a CLI do Docker. Para obter mais informações, veja o comando [cp ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/cp/){: new_window} na ajuda do Docker.
 
 
 ## bluemix ic cpi
@@ -234,7 +231,7 @@ bluemix ic cpi training/sinatra registry.ng.bluemix.net/mynamespace/mysinatra:v1
 ## bluemix ic exec
 {: #bluemix_ic_exec}
 
-Executar um comando em um contêiner. Para obter mais informações, consulte o comando [exec](https://docs.docker.com/engine/reference/commandline/exec/){: new_window} na ajuda do Docker.
+Executar um comando em um contêiner. Para obter mais informações, veja o comando [exec ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/exec/){: new_window} na ajuda do Docker.
 
 ```
 bluemix ic exec [-d|--detach] [-it] [-u USER|--user USER] CONTAINER [CMD]
@@ -309,7 +306,7 @@ exemplo: `-e "key1=value1" -e "key2=value2" -e "key3=value3"`.  A tabela a segui
 | CCS_BIND_APP=*&lt;appname&gt;*       | Faça a ligação de um serviço a um contêiner. Use a variável de ambiente `CCS_BIND_APP` para ligar um aplicativo ao contêiner. O app é ligado ao serviço de destino e age como uma ponte que permite que o {{site.data.keyword.Bluemix_notm}} traga as informações de `VCAP_SERVICES` de seu app de ponte para a instância do contêiner em execução. Para obter mais informações sobre como criar um app de ponte, consulte [Ligando um serviço a um contêiner](../../../containers/container_integrations_binding.html){: new_window}. |
 | CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | Para ligar um serviço Bluemix diretamente a um contêiner, sem usar um app de ponte, use CCS_BIND_SRV. Essa ligação permite que o Bluemix injete as informações de VCAP_SERVICES na instância do contêiner em execução. Para listar vários serviços do Bluemix, inclua-os como parte da mesma variável de ambiente. |
 | LOG_LOCATIONS=*&lt;path_to_file&gt;* | Inclua um arquivo de log a ser monitorado no contêiner. Inclua a variável de ambiente `LOG_LOCATIONS` com um caminho para o arquivo de log. |
-{: caption="Table 8. Commonly used environment variables" caption-side="top"}
+{: caption="Table 2. Commonly used environment variables" caption-side="top"}
 
  <dl>
    <dt>--env-file <i>ENVIRONMENT_VARIABLE_FILE</i> (opcional)</dt>
@@ -519,7 +516,7 @@ bluemix ic groups [-q]
 ## bluemix ic images
 {: #bluemix_ic_images}
 
-Visualize uma lista de todas as imagens disponíveis no repositório privado do {{site.data.keyword.Bluemix_notm}} da organização. Para obter mais informações, consulte o comando [images](https://docs.docker.com/engine/reference/commandline/images){: new_window} na ajuda do Docker. A lista inclui o ID da imagem, a data de criação e o nome da imagem.
+Visualize uma lista de todas as imagens disponíveis no repositório privado do {{site.data.keyword.Bluemix_notm}} da organização. Para obter mais informações, veja o comando [images ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/images){: new_window} na ajuda do Docker. A lista inclui o ID da imagem, a data de criação e o nome da imagem.
 
 ```
 bluemix ic images [-a|--all] [-f CONDITION] [--no-trunc] [-q|--quiet]
@@ -585,7 +582,7 @@ bluemix region-set us-south
 ## bluemix ic inspect
 {: #bluemix_ic_inspect}
 
-Visualize as informações sobre um contêiner. Para obter mais informações, consulte o comando [inspect](https://docs.docker.com/engine/reference/commandline/inspect){: new_window} na ajuda do Docker.
+Visualize as informações sobre um contêiner. Para obter mais informações, veja o comando [inspect ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/inspect){: new_window} na ajuda do Docker.
 
 ```
 bluemix ic inspect [IMAGE|images|CONTAINER]
@@ -740,10 +737,7 @@ bluemix ic ips -q
 ## bluemix ic kill
 {: #bluemix_ic_kill}
 
-Pare um processo em execução em um contêiner sem parar o contêiner. Para obter mais
-informações, consulte o comando
-[kill](https://docs.docker.com/engine/reference/commandline/kill/){: new_window}
-na ajuda do Docker.
+Pare um processo em execução em um contêiner sem parar o contêiner. Para obter mais informações, veja o comando [kill ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/kill/){: new_window} na ajuda do Docker.
 
 ```
 bluemix ic kill [-s CMD|--signal CMD] CONTAINER
@@ -772,7 +766,7 @@ bluemix ic kill proxy
 ## bluemix ic logs
 {: #bluemix_ic_logs}
 
-Mostre os logs de saída ou de erro para um contêiner em execução. Para obter mais informações, consulte o comando [logs](https://docs.docker.com/engine/reference/commandline/logs/){: new_window} na ajuda do Docker.
+Mostre os logs de saída ou de erro para um contêiner em execução. Para obter mais informações, veja o comando [logs ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/logs/){: new_window} na ajuda do Docker.
 ```
 bluemix ic logs [OPTIONS] CONTAINER
 ```
@@ -814,7 +808,7 @@ bluemix ic namespace-set NAME
 ## bluemix ic pause
 {: #pause}
 
-Pausar todos os processos em um contêiner em execução. Para obter mais informações, consulte o comando [pause](https://docs.docker.com/engine/reference/commandline/pause/){: new_window} na ajuda do Docker. Para parar um contêiner, consulte o comando [bluemix ic unpause](#unpause).
+Pausar todos os processos em um contêiner em execução. Para obter mais informações, veja o comando [pause ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/pause/){: new_window} na ajuda do Docker. Para parar um contêiner, consulte o comando [bluemix ic unpause](#unpause).
 
 ```
 bluemix ic pause CONTAINER
@@ -852,14 +846,12 @@ bluemix ic pause proxy
 ## bluemix ic port
 {: #bluemix_ic_port}
 
-Liste mapeamentos de porta ou um mapeamento específico para o contêiner. Esse comando agrupa o comando `docker port`. Para obter mais informações, consulte o comando [port](https://docs.docker.com/engine/reference/commandline/port/){: new_window} na ajuda do Docker.
+Liste mapeamentos de porta ou um mapeamento específico para o contêiner. Esse comando agrupa o comando `docker port`. Para obter mais informações, veja o comando [port ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/port/){: new_window} na ajuda do Docker.
 
 
 ## bluemix ic ps
 {: #bluemix_ic_ps}
-Visualize uma lista de contêineres que estão em execução no namespace do usuário com login efetuado. Por padrão, esse comando mostra somente os contêineres que estão em execução. Para obter mais informações, consulte o comando
-[ps](https://docs.docker.com/engine/reference/commandline/ps/){: new_window}
-na ajuda do Docker.
+Visualize uma lista de contêineres que estão em execução no namespace do usuário com login efetuado. Por padrão, esse comando mostra somente os contêineres que estão em execução. Para obter mais informações, veja o comando [ps ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/ps/){: new_window} na ajuda do Docker.
 
 ```
 bluemix ic ps [-a|--all] [--filter env=SEARCH_CRITERIA] [-s|--size] [-l NUM|--limit NUM] [-q|--quiet]
@@ -895,7 +887,7 @@ bluemix ic ps -a
 
 ## bluemix ic rename
 {: #bluemix_ic_rename}
-Renomear um contêiner. Para obter mais informações, consulte o comando [rename](https://docs.docker.com/engine/reference/commandline/rename/){: new_window} na ajuda do Docker.
+Renomear um contêiner. Para obter mais informações, veja o comando [rename ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/rename/){: new_window} na ajuda do Docker.
 
 ```
 bluemix ic rename OLD_NAME NEW_NAME
@@ -918,7 +910,7 @@ bluemix ic rename OLD_NAME NEW_NAME
 Recrie o serviço IBM Containers no espaço do Bluemix em que você efetuou login. A
 cota original para o espaço é mantida.
 
-<strong>Importante</strong>: quando você executa esse comando, nenhum dos seus contêineres únicos e grupos nesse espaço será migrado para o espaço reprovisionado e eles serão removidos durante o processo de migração. 
+<strong>Importante</strong>: quando você executa esse comando, nenhum dos seus contêineres únicos e grupos nesse espaço será migrado para o espaço reprovisionado e eles serão removidos durante o processo de migração.
 
 ```
 bluemix ic reprovision [--force|-f] [ENVIRONMENT_NAME]
@@ -936,7 +928,7 @@ bluemix ic reprovision [--force|-f] [ENVIRONMENT_NAME]
 ## bluemix ic restart
 {: #bluemix_ic_restart}
 
-Reiniciar um contêiner. Para obter mais informações, consulte o comando [restart](https://docs.docker.com/engine/reference/commandline/restart/){: new_window} na ajuda do Docker.
+Reiniciar um contêiner. Para obter mais informações, veja o comando [restart ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/restart/){: new_window} na ajuda do Docker.
 
 ```
 bluemix ic restart CONTAINER [-t SECS|--time SECS]
@@ -978,7 +970,7 @@ bluemix ic restart proxy
 ## bluemix ic rm
 {: #bluemix_ic_rm}
 
-Remover um contêiner. Para obter mais informações, consulte o comando [rm](https://docs.docker.com/engine/reference/commandline/rm/){: new_window} na ajuda do Docker.
+Remover um contêiner. Para obter mais informações, veja o comando [rm ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/rm/){: new_window} na ajuda do Docker.
 
 ```
 bluemix ic rm [-f|--force] CONTAINER
@@ -1019,7 +1011,7 @@ bluemix ic rm proxy
 ## bluemix ic rmi
 {: #bluemix_ic_rmi}
 
-Remover uma imagem do namespace do usuário com login efetuado. Para obter mais informações, consulte o comando [rmi](https://docs.docker.com/engine/reference/commandline/rmi/){: new_window} na ajuda do Docker.
+Remover uma imagem do namespace do usuário com login efetuado. Para obter mais informações, veja o comando [rmi ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/rmi/){: new_window} na ajuda do Docker.
 
 ```
 bluemix ic rmi [-R REGISTRY|--registry REGISTRY] IMAGE
@@ -1125,7 +1117,7 @@ bluemix ic route-unmap -n my_host -d organization.com GROUP1
 ## bluemix ic run
 {: #bluemix_ic_run}
 
-Iniciar um novo contêiner no serviço de nuvem de contêiner a partir de um nome de imagem. Para obter mais informações, consulte o comando [run](https://docs.docker.com/engine/reference/commandline/run/){: new_window} na ajuda do Docker.
+Iniciar um novo contêiner no serviço de nuvem de contêiner a partir de um nome de imagem. Para obter mais informações, veja o comando [run ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/run/){: new_window} na ajuda do Docker.
 
 
 ```
@@ -1159,7 +1151,7 @@ exemplo: -e "key1=value1" -e "key2=value2" -e "key3=value3". A tabela a seguir m
 | CCS_BIND_APP=*&lt;appname&gt;*       | Faça a ligação de um serviço a um contêiner. Use a variável de ambiente `CCS_BIND_APP` para ligar um aplicativo ao contêiner. O app é ligado ao serviço de destino e age como uma ponte que permite que o {{site.data.keyword.Bluemix_notm}} traga as informações de `VCAP_SERVICES` de seu app de ponte para a instância do contêiner em execução. Para obter mais informações sobre como criar um app de ponte, consulte [Ligando um serviço a um contêiner](../../../containers/container_integrations_binding.html){: new_window}. |
 | CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | Para ligar um serviço Bluemix diretamente a um contêiner, sem usar um app de ponte, use CCS_BIND_SRV. Essa ligação permite que o Bluemix injete as informações de VCAP_SERVICES na instância do contêiner em execução. Para listar vários serviços do Bluemix, inclua-os como parte da mesma variável de ambiente. |
 | LOG_LOCATIONS=*&lt;path_to_file&gt;* | Inclua um arquivo de log a ser monitorado no contêiner. Inclua a variável de ambiente `LOG_LOCATIONS` com um caminho para o arquivo de log. |
-{: caption="Table 9. Commonly used environment variables" caption-side="top"}
+{: caption="Table 3. Commonly used environment variables" caption-side="top"}
 
 
    <dl>
@@ -1249,7 +1241,7 @@ bluemix ic service-unbind GROUP_NAME SERVICE_INSTANCE
 
 ## bluemix ic start
 {: #ic_start}
-Iniciar um contêiner interrompido. Para obter mais informações, consulte o comando [start](https://docs.docker.com/engine/reference/commandline/start/){: new_window} na ajuda do Docker. Para parar um contêiner, consulte o comando [bluemix ic stop](#ic_stop).
+Iniciar um contêiner interrompido. Para obter mais informações, veja o comando [start ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/start/){: new_window} na ajuda do Docker. Para parar um contêiner, consulte o comando [bluemix ic stop](#ic_stop).
 
 ```
 bluemix ic start CONTAINER
@@ -1289,7 +1281,7 @@ bluemix ic start proxy
 ## bluemix ic stats
 {: #bluemix_ic_stats}
 
-Para um ou mais contêineres, visualizar estatísticas de uso em tempo real. Use `CTRL+C` para sair. Para obter mais informações, consulte o comando [stats](https://docs.docker.com/engine/reference/commandline/stats/){: new_window} na ajuda do Docker.
+Para um ou mais contêineres, visualizar estatísticas de uso em tempo real. Use `CTRL+C` para sair. Para obter mais informações, veja o comando [stats ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/stats/){: new_window} na ajuda do Docker.
 
 ```
 bluemix ic stats [--no-stream] CONTAINER [CONTAINER]
@@ -1314,9 +1306,9 @@ bluemix ic stats --no-stream my_container
 ```
 
 
-## bluemix ic stop  
+## bluemix ic stop
 {: #ic_stop}
-Parar um contêiner em execução. Para obter mais informações, consulte o comando [stop](https://docs.docker.com/engine/reference/commandline/stop/){: new_window} na ajuda do Docker. Para iniciar um contêiner, consulte o comando [bluemix ic start](#ic_start).
+Parar um contêiner em execução. Para obter mais informações, veja o comando [stop ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/stop/){: new_window} na ajuda do Docker. Para iniciar um contêiner, consulte o comando [bluemix ic start](#ic_start).
 
 ```
 bluemix ic stop CONTAINER [-t SECS|--time SECS]
@@ -1357,7 +1349,7 @@ bluemix ic stop proxy
 ## bluemix ic top
 {: #bluemix_ic_top}
 
-Mostrar os processos que estão em execução no contêiner. Para obter mais informações, consulte o comando [top](https://docs.docker.com/engine/reference/commandline/top/){: new_window} na ajuda do Docker.
+Mostrar os processos que estão em execução no contêiner. Para obter mais informações, veja o comando [top ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/top/){: new_window} na ajuda do Docker.
 
 ```
 bluemix ic top CONTAINER [CONTAINER]
@@ -1383,7 +1375,7 @@ bluemix ic top my_container
 ## bluemix ic unpause
 {: #unpause}
 
-Remover pausa de todos os processos em um contêiner em execução. Para obter mais informações, consulte o comando [unpause](https://docs.docker.com/engine/reference/commandline/unpause/){: new_window} na ajuda do Docker. Para pausar um contêiner, consulte o comando [bluemix ic pause](#pause).
+Remover pausa de todos os processos em um contêiner em execução. Para obter mais informações, veja o comando [unpause ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/unpause/){: new_window} na ajuda do Docker. Para pausar um contêiner, consulte o comando [bluemix ic pause](#pause).
 
 ```
 bluemix ic unpause CONTAINER
@@ -1450,8 +1442,7 @@ bluemix ic version
 
 <strong>Pré-requisitos</strong>: Docker
 
-Para ver a versão do IBM Containers, execute `bluemix ic info`. Para obter mais informações, consulte o comando
-[version](https://docs.docker.com/engine/reference/commandline/version/){: new_window} na ajuda do Docker.
+Para ver a versão do IBM Containers, execute `bluemix ic info`. Para obter mais informações, veja o comando [version ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/version/){: new_window} na ajuda do Docker.
 
 
 ## bluemix ic volume-create
@@ -1651,7 +1642,7 @@ bluemix ic volumes
 ## bluemix ic wait
 {: #bluemix_ic_wait}
 
-Sair de um contêiner e exibir o código de saída como confirmação. Para obter mais informações, consulte o comando [wait](https://docs.docker.com/engine/reference/commandline/wait/){: new_window} na ajuda do Docker.
+Sair de um contêiner e exibir o código de saída como confirmação. Para obter mais informações, veja o comando [wait ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/wait/){: new_window} na ajuda do Docker.
 
 ```
 bluemix ic wait CONTAINER [CONTAINER]
@@ -1704,4 +1695,3 @@ O exemplo a seguir mostra uma solicitação para sair de um contêiner denominad
 ```
 bluemix ic wait my_container
 ```
-

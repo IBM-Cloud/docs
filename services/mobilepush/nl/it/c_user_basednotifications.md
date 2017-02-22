@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Abilitazione delle notifiche basate sull'utente
 {: #user_based_notifications}
-Ultimo aggiornamento: 06 dicembre 2016
+Ultimo aggiornamento: 16 gennaio 2017
 {: .last-updated}
 
 Le {{site.data.keyword.mobilepushshort}} basate su ID utente sono destinate agli utenti dell'applicazione mobile con messaggi personalizzati. Con le notifiche basate sull'utente, puoi scegliere di inviare la notifica a delle persone specifiche in base alle rispettive preferenze.
@@ -20,7 +20,7 @@ Le {{site.data.keyword.mobilepushshort}} basate su ID utente sono destinate agli
 ## Registrazione del dispositivo con l'ID utente
 Per abilitare le notifiche di push indirizzate dall'ID utente, assicurati di aver registrato il dispositivo con un campo ID utente impostato.     
 
-L'ID utente può essere una qualsiasi stringa fornita dall'applicazione all'API di registrazione del dispositivo. Normalmente, un'applicazione mobile prima eseguirà un ciclo di autenticazione in cui l'utente dell'applicazione mobile viene autenticato in un servizio di autenticazione come [{{site.data.keyword.amafull}}](https://console.ng.bluemix.net/docs/services/mobileaccess/index.html). Dopo la corretta autenticazione, l'ID dell'utente autenticato viene trasmesso all'API Push Device Registration. 
+L'ID utente può essere una qualsiasi stringa fornita dall'applicazione all'API di registrazione del dispositivo. Normalmente, un'applicazione mobile prima eseguirà un ciclo di autenticazione in cui l'utente dell'applicazione mobile viene autenticato in un servizio di autenticazione come [{{site.data.keyword.amafull}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.ng.bluemix.net/docs/services/mobileaccess/index.html "Icona link esterno"){: new_window}. Dopo la corretta autenticazione, l'ID dell'utente autenticato viene trasmesso all'API Push Device Registration. 
 
 ## Sincronizzazione di accesso/disconnessione dell'utente 
 

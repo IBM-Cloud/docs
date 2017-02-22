@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # サンドボックス・モードおよび実動モード
 {: #push-sandboxandproduction-modes}
-最終更新日: 2016 年 12 月 06 日
+最終更新日: 2017 年 1 月 11 日
 {: .last-updated}
 
 {{site.data.keyword.mobilepushshort}} は、サンドボックス・モードまたは実動モードのいずれかで使用できます。サンドボックスは、サーバー・アプリケーション・プッシュ・サービスとのプッシュ API の統合を開発およびテストするための自己完結型のテスト環境です。 
@@ -25,8 +25,7 @@ Push ダッシュボードを使用して、サンドボックス・モードと
 
 1. PUT ApplicationID Settings REST API 呼び出しを使用します。
 2. JSON 本体で、[GET ApplicationID Settings REST](https://mobile.{DomainName}/imfpush/){: new_window} API 呼び出しを使用して、モードが切り替えられたことを確認します。予想される応答は、"mode": "PRODUCTION です。
-```
-    { 
+```{ 
     "mode": "PRODUCTION"
     }
 ```

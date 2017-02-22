@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -20,7 +20,7 @@ Swift REST API は、cURL などのコマンド・ライン・クライアント
 
 {{site.data.keyword.objectstorageshort}} REST API のオプションと例の総合リストについては、[OpenStack Swift API complete reference](http://developer.openstack.org/api-ref-objectstorage-v1.html) を参照してください。
 
-Keystone を使用してサービス・インスタンスを認証した時に、カタログ応答をメモしました。その応答は、以下の例のようになっているはずです。
+URL を作成する前に、Keystone を使用してサービス・インスタンスを[認証](/docs/services/ObjectStorage/os_authenticate.html)する必要があります。カタログ応答を忘れずにメモしておいてください。以下に例を示します。
 
 ```
 {
@@ -36,5 +36,6 @@ Keystone を使用してサービス・インスタンスを認証した時に�
 
 以下のイメージに示されているように、コンテナーおよびオブジェクトの名前空間を {{site.data.keyword.objectstorageshort}} URL の最後に追加します。
 
-  ![例のイメージに示されている、{{site.data.keyword.objectstorageshort}} URL の断片。](images/swift_URL.png)
-  図 1: {{site.data.keyword.objectstorageshort}} URL 例
+![{{site.data.keyword.objectstorageshort}} URL の構成要素が例のイメージで示されています](images/Swift_URL.png)
+
+図 1. {{site.data.keyword.objectstorageshort}} URL 例

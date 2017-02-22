@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Cordova-Anwendungen für den Empfang von Push-Benachrichtigungen aktivieren
 {: #cordova_enable}
-Letzte Aktualisierung: 06. November 2016
+Letzte Aktualisierung: 18. Januar 2017
 {: .last-updated}
 
 Cordova ist eine Plattform zum Erstellen von Hybridanwendungen mit JavaScript, CSS und HTML. Der {{site.data.keyword.mobilepushshort}}-Service unterstützt die Entwicklung von iOS- und Android-Anwendungen, die auf Cordova basieren.
@@ -28,12 +28,11 @@ Installieren und verwenden Sie das Client-Push-Plug-in für die weitere Entwickl
 
 1. Laden Sie die aktuelle Version für das Android Studio-SDK und Xcode herunter.
 1. Richten Sie den Emulator ein. Verwenden Sie für Android Studio einen Emulator, der die Google Play-API unterstützt.
-1. Installieren Sie das Git-Befehlszeilentool. Stellen Sie unter Windows sicher, dass Sie die Option zum Ausführen von Git über die Windows-Eingabeaufforderung auswählen. Informationen zum Herunterladen und Installieren dieses Tools finden Sie unter [Git](https://git-scm.com/downloads).
-1. Installieren Sie Node.js und das NPM-Tool (NPM = Node Package Manager). Das NPM-Befehlszeilentool wird als Produktpaket mit Node.js bereitgestellt. Informationen zum Herunterladen und Installieren von Node.js finden Sie unter [Node.js](https://nodejs.org/en/download/).
-1. Installieren Sie über die Befehlszeile die Cordova-Befehlszeilentools mithilfe des Befehls **npm install -g cordova**. Dies ist eine Voraussetzung für die Verwendung des Cordova-Push-Plug-ins. Informationen zum Installieren von Cordova und zum Einrichten Ihrer Cordova-App finden Sie unter [Cordova Apache](https://cordova.apache.org/#getstarted). Weitere Informationen finden Sie in der [Readme](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push)-Datei im Abschnitt zum Cordova-Push-Plug-in.
+1. Installieren Sie das Git-Befehlszeilentool. Stellen Sie unter Windows sicher, dass Sie die Option zum Ausführen von Git über die Windows-Eingabeaufforderung auswählen. Informationen zum Herunterladen und Installieren dieses Tools finden Sie unter [Git ![External link icon](../../icons/launch-glyph.svg "Symbol für externen Link")](https://git-scm.com/downloads "Symbol für externen Lin"){: new_window}.
+1. Installieren Sie Node.js und das NPM-Tool (NPM = Node Package Manager). Das NPM-Befehlszeilentool wird als Produktpaket mit Node.js bereitgestellt. Informationen zum Herunterladen und Installieren von Node.js finden Sie unter [Node.js ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://nodejs.org/en/download/ "Symbol für externen Link"){: new_window}.
+1. Installieren Sie über die Befehlszeile die Cordova-Befehlszeilentools mithilfe des Befehls **npm install -g cordova**. Dies ist eine Voraussetzung für die Verwendung des Cordova-Push-Plug-ins. Informationen zum Installieren von Cordova und zum Einrichten Ihrer Cordova-App finden Sie unter [Cordova Apache ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cordova.apache.org/#getstarted "Symbol für externen Lin"){: new_window}. Weitere Informationen finden Sie in der [Readme-Datei ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push "Symbol für externen Link"){: new_window} für das Cordova-Push-Plug-in.
 1. Wechseln Sie in den Ordner, in dem Sie Ihre Cordova-App erstellen möchten, und führen Sie den folgenden Befehl aus, um eine Cordova-Anwendung zu erstellen. Wenn Sie bereits über eine Cordova-App verfügen, fahren Sie mit Schritt 3 fort.
-```
-cordova create your_app_name
+```cordova create your_app_name
 	cd your_app_name
 ```
 	{: codeblock}
@@ -46,24 +45,27 @@ Stellen Sie sicher, dass Sie die richtige Bundle-ID angegeben haben. Folgende Fe
 
 1. Fügen Sie die Mindestversion der unterstützten API oder die Bereitstellungszieldeklaration zur Datei 'config.xml' Ihrer Cordova-Anwendung hinzu: Der Wert für 'minSdkVersion' muss größer als 15 sein. Der Wert für 'targetSdkVersion' muss immer das neueste Android-SDK angeben, das bei Google verfügbar ist.
 	
-	* Android - Öffnen Sie die Datei 'config.xml' mit dem Editor und aktualisieren Sie das Element `<platform name="android">` mit der SDK-Mindestversion und -Zielversion:
+	* Android - Öffnen Sie die Datei **config.xml** mit dem Editor und aktualisieren
+das Element `<platform name="android">` mit der SDK-Mindestversion und -Zielversion:
 
-```
-< !-- add deployment target declaration --> 
-add deployment target declaration <preference name="android-minSdkVersion" value="15" />
-  <preference name="android-targetSdkVersion" value="23" />
-</platform>
-```
-    {: codeblock}
+	```
+	<platform name="android">
+    	<preference name="android-minSdkVersion" value="15" />
+    	<preference name="android-targetSdkVersion" value="23" />
+    	<!-- add minimum and target Android API level declaration -->
+	</platform>
+	```
+    	{: codeblock}
 
    * iOS - Aktualisieren Sie das Element <platform name="ios"> mit einer Bereitstellungszieldeklaration:
 
-```
-<platform name ="ios">
-<preference name=deployment-target" value="8.0" /> <!-- other properties -->
-</ platform>
-```
-	{: codeblock}
+	```
+	<platform name="ios">
+	    <preference name="deployment-target" value="8.0" />
+	    <!-- add deployment target declaration -->
+	</platform>
+	```
+		{: codeblock}
 
 1. Fügen Sie über die Cordova-Befehlszeilenschnittstelle (CLI) mit einem oder beiden der folgenden Befehle Ihre Plattform (iOS und/oder Android) hinzu:
 ```
@@ -86,11 +88,20 @@ bms-push <version> "BMSPush"
 ```
 	{: codeblock}
 
-1. (nur iOS): Konfigurieren Sie Ihre iOS-Entwicklungsumgebung.
+1. Konfigurieren Sie Ihre iOS-Entwicklungsumgebung.
 2. Erstellen Sie die Anwendung und führen Sie sie aus mit Xcode.
-1. (Nur Android): Erstellen Sie Ihr Android-Projekt mit dem folgenden Befehl:
-**cordova build android**.
-
+1. Laden Sie Ihre Firebase-Datei `google-services.json` für Android herunter und speichern Sie sie im Stammordner Ihres Cordova-Projekts in `[name-ihrer-anwendung]/platforms/android.
+	1. Wechseln Sie in das Verzeichnis `[name-ihrer-anwendung]/platforms/android`.
+	2. Öffnen Sie die Datei `build.gradle` (Pfad: plattform > android > build.gradle).
+	3. Suchen Sie die Zeichenfolge `buildscript` in der Datei `build.gradle`.
+	4. Fügen Sie nach der Zeile für den Klassenpfad (classpath) die folgende Zeile hinzu: classpath 'com.google.gms:google-services:3.0.0'
+	5. Suchen Sie nach "dependencies" (Abhängigkeiten). Wählen Sie Abhängigkeiten aus, die den Text `compile` enthalten, und fügen Sie unmittelbar nach dem Ende dieser Abhängigkeiten die folgende Zeile hinzu: :apply plugin: 'com.google.gms.google-services'.
+	6. Bereiten Sie Ihr Cordova-Android-Projekt vor und erstellen Sie es.
+		```
+		cordova prepare android
+		cordova build android
+		```
+			{: codeblock}
 	**Hinweis**: Erstellen Sie zuerst die Cordova-Anwendung über die Cordova-Befehlszeilenschnittstelle, bevor Sie das Projekt in Android Studio öffnen. Dies hilft bei der Vermeidung von Buildfehlern.
 
 ## Cordova-Plug-in
@@ -102,8 +113,18 @@ Bevor Sie das Cordova-Plug-in für den  {{site.data.keyword.mobilepushshort}}-Se
 
 ```
 onDeviceReady: function() {
-app.receivedEvent('deviceready');
-BMSClient.initialize("YOUR APP REGION");
+	app.receivedEvent('deviceready');
+	BMSClient.initialize("YOUR APP REGION");
+	var category =  {};
+	BMSPush.initialize(appGUID,clientSecret,category);
+	var success = function(message) { console.log("Success: " + message); };
+	var failure = function(message) { console.log("Error: " + message); };
+	BMSPush.registerDevice({}, success, failure);
+	var showNotification = function(notif)
+	{
+	alert(JSON.stringify(notif));
+	};
+	BMSPush.registerNotificationsCallback(showNotification);
     }
 ```
 	{: codeblock}
@@ -156,26 +177,6 @@ BMSPush.registerDevice({}, success, failure);
 BMSPush.registerNotificationsCallback(showNotification); 
 ```
 	{: codeblock}
-
-### Objective-C
-{: #cordova_register_objective}
-Fügen Sie das folgende Objective-C-Code-Snippet der Klasse 'delegate' Ihrer Anwendung hinzu.
-
-```
-// Register the device token with Bluemix Push Notification Service
-	- (void)application:(UIApplication *)application
-     didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
-       [[CDVBMSPush sharedInstance] didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
-} 
-// Handle error when failed to register device token with APNs
-	- (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error {
-      [[CDVBMSPush sharedInstance] didFailToRegisterForRemoteNotificationsWithError:error];
-} 
-```
-	{: codeblock}
-
-###Swift
-{: #cordova_register_swift}
 
 Fügen Sie das folgende Swift-Code-Snippet zur Klasse 'delegate' Ihrer Anwendung hinzu.
 
@@ -259,31 +260,6 @@ action-loc-key - Diese Zeichenfolge dient als Schlüssel zum Abrufen einer lokal
 * **badge** - Die Nummer, die als Badge des App-Symbols angezeigt werden soll. Wenn diese Eigenschaft fehlt, wird das Badge nicht geändert. Um das Badge zu entfernen, legen Sie für diese Eigenschaft den Wert 0 fest.
 * **sound** - Der Name einer Audiodatei im App-Bundle oder im Ordner 'Library/Sounds' des Datencontainers der App.
 
-###Objective-C
-
-Fügen Sie die folgenden Objective-C-Code-Snippets zur Klasse 'delegate' Ihrer Anwendung hinzu.
-
-```
-// Handle receiving a remote notification
--(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
-   [[CDVBMSPush sharedInstance] didReceiveRemoteNotificationWithNotification:userInfo];
-} 
-```
-	{: codeblock}
-
-
-
-```
-//Handle receiving a remote notification on launch
-- (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions {
-  if (launchOptions != nil) {
-   [[CDVBMSPush sharedInstance] didReceiveRemoteNotificationOnLaunchWithLaunchOptions:launchOptions];
-     }
- }
-```
-	{: codeblock}
-
-###Swift
 
 Fügen Sie die folgenden Swift-Code-Snippets zur Klasse 'delegate' Ihrer Anwendung hinzu.
 ```

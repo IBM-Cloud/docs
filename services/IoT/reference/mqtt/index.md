@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2016, 2017
 lastupdated: "2016-11-18"
 
 ---
@@ -47,7 +47,7 @@ Applications and devices work with different MQTT topic spaces.  Devices work wi
 {: #qos-levels}
 
 The MQTT protocol provides three qualities of service for delivering messages between clients and servers: "at most once", "at least once", and "exactly once".
-While you can send events and commands by using any quality of service level, you must carefully consider whether what the right service level is for your needs. Quality of service level '2' is not always a better option than level '0'.
+While you can send events and commands by using any quality of service level, you must carefully consider what the right service level is for your needs. Quality of service level '2' is not always a better option than level '0'.
 
 ### At most once (QoS0)
 

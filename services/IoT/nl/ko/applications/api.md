@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-07"
+  years: 2015, 2017
+lastupdated: "2017-02-21"
 
 ---
 
@@ -38,7 +38,7 @@ lastupdated: "2016-09-07"
 ## HTTP REST API에 액세스
 {: #api_link}
 
-{{site.data.keyword.iot_short_notm}} HTTP REST API에 액세스하고 애플리케이션 빌드 및 사용자 정의 방법에 대한 자세한 정보를 가져오려면 https://docs.internetofthings.ibmcloud.com/swagger/v0002.html로 이동하십시오. 
+{{site.data.keyword.iot_short_notm}} HTTP REST API에 액세스하고 애플리케이션 빌드 및 사용자 정의 방법에 대한 자세한 정보를 가져오려면 https://docs.internetofthings.ibmcloud.com/swagger/v0002.html 이동하십시오. 
 
 지원되는 {{site.data.keyword.iot_short_notm}} HTTP REST API의 유일한 버전은 버전 2입니다. {{site.data.keyword.iot_short_notm}} 솔루션이 버전 2를 사용 중인지 확인하십시오. 
 

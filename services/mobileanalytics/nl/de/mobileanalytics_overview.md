@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-28"
+  years: 2015, 2017
+lastupdated: "2017-01-13"
 
 ---
 {:new_window: target="_blank"}
@@ -118,7 +118,7 @@ Pro Sitzungen können zwischen zwei und mehrere Hundert Ereignisse auftreten. Di
 	<dt>Worin liegt der Unterschied zwischen {{site.data.keyword.mobileanalytics_full}} und der mobilen Analyse in MobileFirst Platform Foundation?</dt>
 		<dd>Benutzer und Sitzungen unterscheiden sich bei beiden Konsolen kaum. Die Analysedaten von MobileFirst Platform Foundation enthalten allerdings zusätzliche Metriken und Einstellungen, die es Kunden ermöglichen, ihre eigenen Analysecluster lokal zu verwalten. Außerdem werden in der Analysekonsole von MobileFirst Platform Foundation Metriken für Adapter und Adapterprozeduren aufgegliedert, während beim {{site.data.keyword.mobileanalytics_short}}-Service diese Metriken in Netzanforderungsdiagramme und -tabellen integriert sind.</dd>
 	<dt>Ich verwende MobileFirst Platform Foundation lokal zur Entwicklung meiner Apps, möchte aber nicht meinen eigenen Analysecluster hosten. Kann ich stattdessen {{site.data.keyword.mobileanalytics_full}} verwenden?</dt>
-		<dd>Ja. Sie haben mehrere Optionen zur Auswahl: Wenn Sie MobileFirst Platform Foundation 7.x oder 8.0 verwenden und Ihre Apps mit MobileFirst Platform-SDKs instrumentiert sind, können Sie Ihren Worklight Server so konfigurieren, dass er Analysedaten an {{site.data.keyword.mobileanalytics_short}} for {{site.data.keyword.Bluemix_notm}} meldet. Im Blogbeitrag [Configuring Mobile Analytics and Mobile Foundation Bluemix services](https://mobilefirstplatform.ibmcloud.com/blog/2016/07/11/analytics-bm-service/) finden Sie weitere Details. Alternativ können Sie Ihre Apps auch mit dem {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.mobileanalytics_short}}-SDK instrumentieren und Daten direkt an den {{site.data.keyword.mobileanalytics_short}}-Service melden.</dd>
+		<dd>Ja. Sie haben mehrere Optionen zur Auswahl: Wenn Sie MobileFirst Platform Foundation 7.x oder 8.0 verwenden und Ihre Apps mit MobileFirst Platform-SDKs instrumentiert sind, können Sie Ihren Worklight Server so konfigurieren, dass er Analysedaten an {{site.data.keyword.mobileanalytics_short}} for {{site.data.keyword.Bluemix_notm}} meldet. Im Blogbeitrag [Configuring Mobile Analytics and Mobile Foundation Bluemix services![Symbol für externen Link](https://mobilefirstplatform.ibmcloud.com/blog/2016/07/11/analytics-bm-service/){: new_window}(../../icons/launch-glyph.svg "Symbol für externen Link")] finden Sie weitere Details. Alternativ können Sie Ihre Apps auch mit dem {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.mobileanalytics_short}}-SDK instrumentieren und Daten direkt an den {{site.data.keyword.mobileanalytics_short}}-Service melden.</dd>
 	<!-- <dt>My instance of  {{site.data.keyword.mobileanalytics_short}} does not look like the screen shots in the catalog. What's going on?</dt> -->
 		<!-- <dd>Most likely you are using the Classic view interface for {{site.data.keyword.Bluemix_notm}}. Classic view is deprecated, so {{site.data.keyword.mobileanalytics_short}} runs best in the new {{site.data.keyword.Bluemix_notm}} interface. If you are in Classic view, you will see a link in the {{site.data.keyword.Bluemix_notm}} header that says <strong>Try the new {{site.data.keyword.Bluemix_notm}}</strong>. Click that link to use the new interface.</dd> -->
 </dl>
@@ -130,7 +130,7 @@ Pro Sitzungen können zwischen zwei und mehrere Hundert Ereignisse auftreten. Di
 ## SDK
 {: rellink-sdk}
 <!-- Links to SDK download and SDK Developer Guide -->
-* [Android-SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core)  
-* [iOS-SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core)  
+* [Android-SDK ![Symbol für externen Link](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window}(../../icons/launch-glyph.svg "Symbol für externen Link")] 
+* [iOS-SDK ![Symbol für externen Link](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}(../../icons/launch-glyph.svg "Symbol für externen Link")]
 
 <!-- {:elementKind="article" id="rellinks"} -->

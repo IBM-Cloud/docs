@@ -12,7 +12,7 @@ years: 2015, 2017
 
 # Enabling Android applications to receive {{site.data.keyword.mobilepushshort}}
 {: #tag_based_notifications}
-Last updated: 16 January 2017
+Last updated: 14 February 2017
 {: .last-updated}
 
 You can enable Android applications to receive push notifications to your devices. Android Studio is a prerequisite and is the recommended method to build Android projects. A basic knowledge of Android Studio is essential.
@@ -53,56 +53,56 @@ After creating and opening your mobile application, complete the following steps
 3. Add the following dependencies to your Project level **build.gradle** file.
 ```
 dependencies {
-    classpath 'com.android.tools.build:gradle:3.0.0'
+    classpath 'com.android.tools.build:gradle:2.2.3'
     classpath 'com.google.gms:google-services:3.0.0'
 }
 ``` 
     {: codeblock}
 5. In the **AndroidManifest.xml** file, add the following permissions. To view a sample manifest, see [Android helloPush Sample Application ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml){: new_window}. To view a sample Gradle file, see [Sample Build Gradle file ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle){: new_window}.
 ```
-<uses-permission android:name="android.permission.INTERNET"/>
-<uses-permission android:name="android.permission.GET_ACCOUNTS" />
-<uses-permission android:name="android.permission.USE_CREDENTIALS" />
-<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+	<uses-permission android:name="android.permission.USE_CREDENTIALS" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 ```
 	{: codeblock}
  Read more about [Android permissions ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://developer.android.com/guide/topics/security/permissions.html){: new_window} here.
 
 4. Add the notification intent settings for the activity. This setting starts the application when the user clicks the received notification from the notification area.
 ```
-<intent-filter>
-	<action android:name="Your_Android_Package_Name.IBMPushNotification"/>
-	<category  android:name="android.intent.category.DEFAULT"/>
-</intent-filter>
+	<intent-filter>
+		<action android:name="Your_Android_Package_Name.IBMPushNotification"/>
+		<category  android:name="android.intent.category.DEFAULT"/>
+	</intent-filter>
 ```
 	{: codeblock}
 **Note**: Replace *Your_Android_Package_Name* in the previous action with the application package name used in your application.
 
 5. Add the Firebase Cloud Messaging (FCM) or Google Cloud Messaging (GCM) intent service and intent filters for the RECEIVE and REGISTRATION event notifications.
 ```
-<service android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushIntentService"
-    android:exported="true" >
-    <intent-filter>
-        <action android:name="com.google.firebase.MESSAGING_EVENT" />
+	<service android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushIntentService"
+    	android:exported="true" >
+    	<intent-filter>
+    	    <action android:name="com.google.firebase.MESSAGING_EVENT" />
     </intent-filter>
-</service>
-<service
+	</service>
+	<service
     android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPush"
     android:exported="true" >
     <intent-filter>
         <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
     </intent-filter>
-</service>
+	</service>
 ```
     {: codeblock}
 
 6. {{site.data.keyword.mobilepushshort}} service supports retrieval of  individual notifications from the notification tray. For notifications accessed from the notification tray, you are provided with a handle only to the notification that is being clicked. All notifications are displayed when the application is openend normally. Update your **AndroidManifest.xml** file with the following snippet to use this functionality:
 
 ```
-<activity android:name="
-com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationHandler"
-android:theme="@android:style/Theme.NoDisplay"/>
+	<activity android:name="
+	com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationHandler"
+	android:theme="@android:style/Theme.NoDisplay"/>
 ```
     {: codeblock}
 
@@ -175,29 +175,29 @@ Use the `MFPPush.register()` API to register the device with {{site.data.keyword
 Copy the following code snippets to your Android mobile application.
 
 ```
-//Register Android devices
-push.registerDevice(new MFPPushResponseListener<String>() {
-    @Override
-    public void onSuccess(String deviceId) {
-//handle success here
-    }
-    @Override
-    public void onFailure(MFPPushException ex) {
-//handle failure here
-    }
-});
+	//Register Android devices
+	push.registerDevice(new MFPPushResponseListener<String>() {
+    	@Override
+    	public void onSuccess(String response) {
+    		//handle success here
+    	}
+		@Override
+    	public void onFailure(MFPPushException ex) {
+    		//handle failure here
+		}
+		});
 ```
 	{: codeblock}
 
 
 ```
-//Handles the notification when it arrives
-MFPPushNotificationListener notificationListener = new MFPPushNotificationListener() {
+	//Handles the notification when it arrives
+	MFPPushNotificationListener notificationListener = new MFPPushNotificationListener() {
     @Override
     public void onReceive (final MFPSimplePushNotification message){
-// Handle Push Notification
-    }
-};
+		// Handle Push Notification
+   		 }
+		};
 ```
 	{: codeblock}
 
@@ -210,26 +210,26 @@ To register the notificationListener object with push, call the **MFPPush.listen
 
 
 ```
-@Override
-protected void onResume(){
-   super.onResume();
-   if(push != null) {
+	@Override
+	protected void onResume(){
+   	super.onResume();
+   	if(push != null) {
        push.listen(notificationListener);
    }
-}
+	}
 ```
 	{: codeblock}
 
 
 
 ```
-@Override
-protected void onPause() {
+	@Override
+	protected void onPause() {
     super.onPause();
     if (push != null) {
         push.hold();
     }
-}
+	}
 ```
 	{: codeblock}
 
@@ -251,12 +251,12 @@ The **messageId** is the identifier of the message sent from the server.  **MFPP
 You need to register the **com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationStatusListener** class with MFPPush.
 
 ```
-push.setNotificationStatusListener(new MFPPushNotificationStatusListener() {
-@Override
-public void onStatusChange(String messageId, MFPPushNotificationStatus status) {
-// Handle status change
-}
-});
+	push.setNotificationStatusListener(new MFPPushNotificationStatusListener() {
+	@Override
+	public void onStatusChange(String messageId, MFPPushNotificationStatus status) {
+		// Handle status change
+	}
+	});
 ```
     {: codeblock}
 
@@ -270,11 +270,11 @@ You can choose to listen to the DISMISSED status on either of the following cond
   Add the snippet to your `AndroidManifest.xml` file:
 
 ```
-<receiver android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationDismissHandler">
-<intent-filter>
-<action android:name="Your_Android_Package_Name.Cancel_IBMPushNotification"/>
-</intent-filter>
-</receiver>
+	<receiver android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationDismissHandler">
+	<intent-filter>
+	<action android:name="Your_Android_Package_Name.Cancel_IBMPushNotification"/>
+	</intent-filter>
+	</receiver>
 ```
 	{: codeblock}
 
@@ -283,18 +283,18 @@ You can choose to listen to the DISMISSED status on either of the following cond
 You need to extend the  **com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationDismissHandler** broadcast receiver and override the method **onReceive()**, where the **MFPPushNotificationStatusListener** should be registered before calling  method **onReceive()**of the base class.
 
 ```
-public class MyDismissHandler extends MFPPushNotificationDismissHandler {
-@Override
-public void onReceive(Context context, Intent intent) {
-MFPPush.getInstance().setNotificationStatusListener(new MFPPushNotificationStatusListener() {
-@Override
-public void onStatusChange(String messageId, MFPPushNotificationStatus status) {
-// Handle status change
-}
-});
-super.onReceive(context, intent);
-}
-}
+	public class MyDismissHandler extends MFPPushNotificationDismissHandler {
+	@Override
+	public void onReceive(Context context, Intent intent) {
+	MFPPush.getInstance().setNotificationStatusListener(new MFPPushNotificationStatusListener() {
+	@Override
+	public void onStatusChange(String messageId, MFPPushNotificationStatus status) {
+	// Handle status change
+	}
+	});
+	super.onReceive(context, intent);
+	}
+	}
 ```
     {: codeblock}
 
@@ -302,11 +302,11 @@ super.onReceive(context, intent);
 Add the following snippet to you `AndroidManifest.xml` file:
 
 ```
-<receiver android:name="Your_Android_Package_Name.Your_Handler">
-<intent-filter>
-<action android:name="Your_Android_Package_Name.Cancel_IBMPushNotification"/>
-</intent-filter>
-</receiver>
+	<receiver android:name="Your_Android_Package_Name.Your_Handler">
+	<intent-filter>
+	<action android:name="Your_Android_Package_Name.Cancel_IBMPushNotification"/>
+	</intent-filter>
+	</receiver>
 ```
     {: codeblock}
 

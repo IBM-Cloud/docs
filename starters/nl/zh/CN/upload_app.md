@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015，2016
+  years: 2015，2017
 
-lastupdated: "2016-02-17"
+lastupdated: "2017-01-12"
 
 
 
@@ -57,4 +57,4 @@ lastupdated: "2016-02-17"
 
   2. 如果更改了应用程序，可以通过再次输入 cf push 命令来上传这些更改。cf 命令行界面会使用您先前的选项并根据您对提示的响应，以新的代码段来更新任何运行中应用程序实例。
 
-**提示：**您还可以从 DevOps Services 上传或部署应用程序。请参阅[在 Node.js 中使用 Web IDE 开发 {{site.data.keyword.Bluemix_notm}} 应用程序](https://hub.jazz.net/tutorials/devopsweb/){: new_window}。
+**提示：**您还可以从 DevOps Services 上传或部署应用程序。请参阅 [Developing a {{site.data.keyword.Bluemix_notm}} application in Node.js with the Web IDE ![外部链接图标](../icons/launch-glyph.svg)](https://hub.jazz.net/tutorials/devopsweb/){: new_window}。

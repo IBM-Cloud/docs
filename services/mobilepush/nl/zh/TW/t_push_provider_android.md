@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,10 +12,10 @@ copyright:
 
 # 配置 FCM 的認證
 {: #create-push-enable-gcm}
-前次更新：2016 年 12 月 6 日
+前次更新：2017 年 1 月 16 日
 {: .last-updated}
 
-Firebase Cloud Messaging (FCM) 是用來將推送通知遞送至 Android 裝置、Google Chrome 及 Mozilla Web 瀏覽器的閘道。FCM 已取代 Google Cloud Messaging (GCM)。您需要取得 FCM 認證，然後在儀表板上設定 {{site.data.keyword.mobilepushshort}} Service。請確定將 FCM 配置用於新的應用程式。現有應用程式將繼續使用 GCM 配置運作。
+Firebase Cloud Messaging (FCM) 是用來將推送通知遞送至 Android 裝置及 Google Chrome 的閘道。FCM 是新版本的 Google Cloud Messaging (GCM)。若要在儀表板上設定 {{site.data.keyword.mobilepushshort}} 服務，您需要取得 FCM 認證。請確定將 FCM 配置用於新的應用程式。現有應用程式將繼續使用 GCM 配置運作。
 
 ##取得傳送端 ID 及 API 金鑰
 {: #android-senderid-apikey}
@@ -24,7 +24,7 @@ API 金鑰會安全地儲存並供 {{site.data.keyword.mobilepushshort}} Service
 
 若要設定 FCM 以及產生 API 金鑰和「傳送端 ID」，請完成下列步驟：
 
-1. 造訪 [Firebase 主控台](https://console.firebase.google.com/?pli=1)。
+1. 造訪 [Firebase 主控台 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.firebase.google.com/?pli=1 "外部鏈結圖示"){: new_window}。
 2. 選取**建立新專案**。 
 3. 在「建立專案」視窗中，提供專案名稱、選擇國家/地區，然後按一下**建立專案**。
 3. 在導覽窗格中，按一下「設定」圖示，然後選取**專案設定**。
@@ -45,12 +45,4 @@ API 金鑰會安全地儲存並供 {{site.data.keyword.mobilepushshort}} Service
 4. 按一下**儲存**。
 5. 後續步驟。[啟用 Android 的通知](c_enable_push.html)或[啟用 Google Chrome Apps & Extensions 的通知](c_enable_push.html)。
 
-###配置 Google Chrome 及 Mozilla Firefox Web Push（使用 FCM/GCM）
-{: #config-gcm-mozilla}
 
-1. 在「Push 儀表板」導覽窗格上，選取**配置**。
-2. 選取 Web 標籤。
-![WebPush 配置](images/webpush_configure.jpg)
-3. 配置 FCM/GCM API 金鑰，以及將登錄以接收推送通知的網站 URL。
-4. 按一下**儲存**。
-5. 後續步驟。[啟用 Google Chrome 及 Mozilla Firefox 瀏覽器的通知](c_enable_push.html)。

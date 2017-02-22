@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2016
-lastupdated: "2017-01-11"
+years: 2016, 2017
+lastupdated: "2017-01-17"
 
 ---
 
@@ -199,14 +199,14 @@ Use the following information to create a scenario in which two temperature sens
 
 You must have a {{site.data.keyword.iot_short_notm}} organization instance and an API key or token for that organization. For more information about API keys and tokens, see [HTTP REST API for applications](../applications/api.html#authentication).
 
-### About this task
+### About this scenario
 
 In this scenario, two devices are configured.
 
 One device is called *TemperatureSensor1*. This device publishes temperature events that are measured in degrees Celsius. The temperature event is published on the topic `iot-2/evt/tevt/fmt/json` and has the following example payload:
 ```
 {
-  “t” : 34.5
+  "t" : 34.5
 }
 ```
 
@@ -215,7 +215,7 @@ One device is called *TemperatureSensor1*. This device publishes temperature eve
 The other device is called *TemperatureSensor2*. This device publishes temperature events that are measured in degrees Fahrenheit. The temperature event is published on the topic `iot-2/evt/tempevt/fmt/json` and has the following example payload:
 ```
 {
-  “temp” : 72.55
+  "temp" : 72.55
 }
 ```
 
@@ -224,7 +224,7 @@ The other device is called *TemperatureSensor2*. This device publishes temperatu
 An application interface is also configured. This application interface represents the state for devices of this type in the following structure:
 ```
 {
-  “temperature” : <current temperature value in Celsius>
+  "temperature" : <current temperature value in Celsius>
   }
 ```
 This configuration means that you can configure your application to process the value that is associated with **temperature**, rather than configuring your application to process the value that is associated with **t** and to process the value that is associated with **temp** after converting that value to degrees Celsius.
@@ -252,7 +252,7 @@ The following example shows how to create a schema file that is called *tEventSc
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type" : "object",
   "title" : "EnvSensor1 tEvent Schema",
-  "description" : “defines the structure of a temperature event in degrees Celsius",
+  "description" : "defines the structure of a temperature event in degrees Celsius",
   "properties" : {
     "t" : {
       "description" : "temperature in degrees Celsius",
@@ -274,7 +274,7 @@ The following example shows how to create a schema file that is called *tempEven
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type" : "object",
   "title" : "EnvSensor2 tempEvent Schema",
-  "description" : “defines the structure of a temperature event in degrees Fahrenheit",
+  "description" : "defines the structure of a temperature event in degrees Fahrenheit",
   "properties" : {
     "temp" : {
       "description" : "temperature in degrees Fahrenheit",
@@ -313,7 +313,7 @@ The following example shows a response to the POST method:
 
 ```
 {
-  "name" : “tEventSchema",
+  "name" : "tEventSchema",
   "createdBy" : "a-8x7nmj-9iqt56kfil",
   "contentType" : "application/octet-stream",
   "updated" : "2016-12-06T14:38:52Z",
@@ -381,7 +381,7 @@ curl --request POST \
   --url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/event/types \
   --header 'authorization: Basic MK2fdJpobP6tOWlhgTR2a4Hklss2eXC7AZIxZWxPL9B8XlVwSZL=' \
   --header 'content-type: application/json' \
-  --data '{"name" : "tEvent", "schemaId" : "5846cd7c6522050001db0e0d”}'
+  --data '{"name" : "tEvent", "schemaId" : "5846cd7c6522050001db0e0d"}'
 ```
 
 The schema identifier *5846cd7c6522050001db0e0d* is used to add the event schema to the event type. This identifier was returned in response to the POST method that was used to create the event schema resource *tEventSchema.json*
@@ -425,7 +425,7 @@ The following example shows a response to the POST method:
   "created" : "2016-12-06T15:00:20Z",
   "id" : "5846d2846522050001db0e10",
   "updated" : "2016-12-06T15:00:20Z",
-  "name" : “tempEvent”,
+  "name" : "tempEvent",
   "refs" : {
     "schema" : "/schemas/5846cee36522050001db0e0e"
   },
@@ -524,7 +524,7 @@ curl --request POST \
   --url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/physicalinterfaces/5847d1df6522050001db0e1a/events \
   --header 'authorization: Basic MK2fdJpobP6tOWlhgTR2a4Hklss2eXC7AZIxZWxPL9B8XlVwSZL=' \
   --header 'content-type: application/json' \
-  --data '{"eventId" : “tevt", "eventTypeId" : "5846d0fd6522050001db0e0f"}'
+  --data '{"eventId" : "tevt", "eventTypeId" : "5846d0fd6522050001db0e0f"}'
 ```
 
 The following example shows a response to the POST method:
@@ -551,7 +551,7 @@ The following example shows a response to the POST method:
 ```
 {
   "eventTypeId" : "5846d2846522050001db0e10",
-  "eventId" : “tempevt"
+  "eventId" : "tempevt"
 }
 ```
 
@@ -575,7 +575,7 @@ curl --request PUT \
 --url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/device/types/EnvSensor1 \
   --header 'authorization: Basic MK2fdJpobP6tOWlhgTR2a4Hklss2eXC7AZIxZWxPL9B8XlVwSZL=' \
   --header 'content-type: application/json' \
-  --data '{"description" : "an environment sensor","deviceInfo" : {},"metadata" : {}, "physicalInterfaceId" : "5847d1df6522050001db0e1a”}’
+  --data '{"description" : "an environment sensor","deviceInfo" : {},"metadata" : {}, "physicalInterfaceId" : "5847d1df6522050001db0e1a"}’
 ```
 
 The following example shows a response to the POST method:
@@ -606,7 +606,7 @@ curl --request PUT \
 --url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/device/types/EnvSensor2 \
   --header 'authorization: Basic MK2fdJpobP6tOWlhgTR2a4Hklss2eXC7AZIxZWxPL9B8XlVwSZL=' \
   --header 'content-type: application/json' \
-  --data '{"description" : "an env sensor","deviceInfo" : {},"metadata" : {}, "physicalInterfaceId" : "5847d1df6522050001db0e1b”}’
+  --data '{"description" : "an env sensor","deviceInfo" : {},"metadata" : {}, "physicalInterfaceId" : "5847d1df6522050001db0e1b"}’
 ```
 
 The following example shows a response to the POST method:
@@ -760,7 +760,7 @@ curl --request POST \
               "schema" : "/schemas/5846ec826522050001db0e11"
           },
           "schemaId" : "5846ec826522050001db0e11", "created" : "2016-12-06T16:53:27Z", \
-          "updatedBy" : "a-8x7nmj-9iqt56kfil","id" : "5846ed076522050001db0e12","updated" : "2016-12-06T16:53:27Z","name" : "environment sensor interface”
+          "updatedBy" : "a-8x7nmj-9iqt56kfil","id" : "5846ed076522050001db0e12","updated" : "2016-12-06T16:53:27Z","name" : "environment sensor interface"
         }'
 ```
 
@@ -793,7 +793,7 @@ curl --request POST \
               "schema" : "/schemas/5846ec826522050001db0e11"
           },
           "schemaId" : "5846ec826522050001db0e11", "created" : "2016-12-06T16:53:27Z", \
-          "updatedBy" : "a-8x7nmj-9iqt56kfil","id" : "5846ed076522050001db0e12","updated" : "2016-12-06T16:53:27Z","name" : "environment sensor interface”
+          "updatedBy" : "a-8x7nmj-9iqt56kfil","id" : "5846ed076522050001db0e12","updated" : "2016-12-06T16:53:27Z","name" : "environment sensor interface"
         }'
 ```
 

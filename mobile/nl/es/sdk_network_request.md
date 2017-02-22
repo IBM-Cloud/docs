@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016, 2017
 lastupdated: "2016-11-30"
 
 ---
@@ -43,7 +43,7 @@ También puede utilizar el SDK `BMSCore` para realizar solicitudes de red a cual
 ## iOS
 {: #request-ios}
 
-1. Asegúrese de haber [importado e inicializado el cliente](/docs/mobile/sdk_BMSClient.html#init-BMSClient-ios) en la aplicación iOS. 
+1. Asegúrese de haber [importado e inicializado el SDK de cliente](/docs/mobile/sdk_BMSClient.html#init-BMSClient-ios) en la aplicación iOS. 
 
 2. Cree una solicitud de red. 
 

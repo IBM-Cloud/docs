@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-08-25"
 
 ---
 
@@ -13,9 +14,6 @@ copyright:
 
 #Mise à jour d'applications
 {: #updatingapps}
-
-Dernière mise à jour : 25 août 2016
-{: .last-updated}
 
 
 Vous pouvez utiliser la commande cf push ou {{site.data.keyword.Bluemix}} DevOps Services pour mettre à jour les applications dans {{site.data.keyword.Bluemix_notm}}. Dans de nombreux cas, même pour les packs de construction intégrés tels que Node.js, vous devez également fournir un paramètre -c afin de spécifier la
@@ -46,7 +44,7 @@ l'interface utilisateur {{site.data.keyword.Bluemix_notm}} ou l'interface de lig
 
 	2. Dans l'onglet **Domaines**, cliquez sur **Ajouter un domaine**, entrez votre nom de domaine personnalisé et
 cliquez sur **Sauvegarder**.
-	
+
 	**Remarque** : Par exemple, vous pouvez utiliser `mon_entreprise.com` pour associer la route `www.mon_entreprise.com` à votre application.
 Vous pouvez aussi utiliser `exemple.mon_entreprise.com` pour associer la route `www.exemple.mon_entreprise.com` à votre application.
 
@@ -58,7 +56,7 @@ laquelle ajouter la route. La page **Vue d'ensemble** s'affiche.
 	2. Dans le menu **Afficher l'application**, sélectionnez **Editer les routes et l'accès**.
 
 	3. Cliquez sur **Ajouter une route** et spécifiez la route à utiliser pour l'application.
-	4. Cliquez sur **Sauvegarder**. 
+	4. Cliquez sur **Sauvegarder**.
 
 * Utilisez l'interface de ligne de commande cf :
 
@@ -81,7 +79,7 @@ laquelle ajouter la route. La page **Vue d'ensemble** s'affiche.
     ```
     cf map-route mon_app mon_domaine -n nom_hôte
     ```
-    Pour les groupes de conteneurs, entrez la commande suivante :	
+    Pour les groupes de conteneurs, entrez la commande suivante :
      ```
      cf ic route map -n nom_hôte -d mon_domaine mon_groupe_de_conteneurs
      ```
@@ -96,18 +94,17 @@ laquelle ajouter la route. La page **Vue d'ensemble** s'affiche.
     *nom_hôte*
 
         Nom d'hôte sur la route que vous désirez utiliser pour votre application.
-        
+
     *mon_groupe_de_conteneurs*
-    
-        Pour les groupes de conteneurs, nom du groupe de conteneurs.  
+
+        Pour les groupes de conteneurs, nom du groupe de conteneurs.
 
 
 Une fois le domaine personnalisé configuré dans {{site.data.keyword.Bluemix_notm}}, vous devez le mapper au domaine de système
 {{site.data.keyword.Bluemix_notm}} sur votre serveur DNS enregistré :
 
   1. Configurez un enregistrement 'CNAME' pour le nom de domaine personnalisé sur votre serveur DNS. Les étapes de configuration de l'enregistrement
-CNAME varient selon votre fournisseur DNS. Par exemple, si vous utilisez GoDaddy, vous suivez la procédure de la page
-[Domaines Aide](https://www.godaddy.com/help/add-a-cname-record-19236){: new_window} de GoDaddy.
+CNAME varient selon votre fournisseur DNS. Par exemple, si vous utilisez GoDaddy, vous suivez la procédure de la page [Domains Help ![icône de lien externe](../icons/launch-glyph.svg)](https://www.godaddy.com/help/add-a-cname-record-19236){: new_window} de GoDaddy.
   2. Mappez le nom de domaine personnalisé au noeud final sécurisé pour la région {{site.data.keyword.Bluemix_notm}} dans laquelle s'exécute
 votre application. Utilisez les noeuds finaux de région suivants pour fournir la route d'URL allouée à votre organisation dans
 {{site.data.keyword.Bluemix_notm}} :
@@ -330,6 +327,5 @@ delete`.
 ## Liens connexes
 {: #general}
 
-* [Déploiements Blue-Green](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
-* [IBM {{site.data.keyword.Bluemix_notm}} DevOps
-Services](https://hub.jazz.net/){:new_window}
+* [Blue-green deployments ![icône de lien externe](../icons/launch-glyph.svg)](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
+* [IBM {{site.data.keyword.Bluemix_notm}} DevOps Services ![icône de lien externe](../icons/launch-glyph.svg)](https://hub.jazz.net/){:new_window}

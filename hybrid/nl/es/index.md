@@ -38,8 +38,8 @@ una plataforma de nube moderna. Más información sobre [{{site.data.keyword.Blu
 {: #rellinks}
 ## general
 {: #general}
-* [¿Qué es {{site.data.keyword.Bluemix_notm}}](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){:new_window}?
-* [Introducción](http://www.ibm.com/cloud-computing/bluemix/getting-started/)
-* [Obtener información sobre el modelo híbrido](http://www.ibm.com/cloud-computing/bluemix/hybrid/)
+* [What is {{site.data.keyword.Bluemix_notm}} ![icono de enlace externo](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){:new_window}
+* [Iniciación a ![icono de enlace externo](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/getting-started/){:new_window}
+* [Obtener información sobre el modelo híbrido ![icono de enlace externo](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/hybrid/){:new_window}
 * [Novedades de {{site.data.keyword.Bluemix_notm}}](/docs/whatsnew/index.html)
 * [{{site.data.keyword.Bluemix_notm}} glosario](/docs/overview/glossary/index.html)

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-29"
+  years: 2015, 2017
+lastupdated: "2017-01-10"
 
 ---
 {:new_window: target="_blank"}
@@ -191,8 +191,8 @@ por dispositivo que estão ativamente usando o seu aplicativo, não funcionará 
  	```
  	{: codeblock}
  	
- #### watchOS
- {: #watchos-initialize-analytics}
+   ### watchOS
+   {: #watchos-initialize-analytics}
 	 	
  	```Swift
  	Analytics.initialize(appName: "your_app_name_here", apiKey: "your_api_key_here", deviceEvents: .network)
@@ -204,6 +204,9 @@ por dispositivo que estão ativamente usando o seu aplicativo, não funcionará 
  **Nota:** configure o valor de `hasUserContext` como **true** ou **false**. Se false (valor padrão), cada dispositivo será contado como um usuário ativo. O
 método [`Analytics.userIdentity = "username"`](sdk.html#ios-tracking-users), que permite a você controlar o número de usuários por
 dispositivo que estão ativamente usando o seu aplicativo, não funcionará quando `hasUserContext` for false. Se `hasUserContext` for true, cada uso de [`Analytics.userIdentity = "username"`](sdk.html#ios-tracking-users) será contado como um usuário ativo. Não há nenhuma identidade de usuário padrão quando `hasUserContext` é true e, portanto, deve ser configurado para preencher os gráficos de usuário ativo.
+
+ #### watchOS
+ {: #watchos-record-device}
 
  É possível registrar eventos do dispositivo no WatchOS usando os métodos `Analytics.recordApplicationDidBecomeActive()` e `Analytics.recordApplicationWillResignActive()`.
   
@@ -316,7 +319,13 @@ Analytics.log(metadata: eventObject)
   BMSAnalytics.disable();
 
   // Send recorded usage analytics to the {{site.data.keyword.mobileanalytics_short}} Service
-  BMSAnalytics.send();
+  BMSAnalytics.send(
+	function(response) {
+		console.log('success: ' + response);
+		},
+	function (err) {
+		console.log('fail: ' + err);
+		});
   ```
   {: codeblock}
 
@@ -451,8 +460,8 @@ Logger.send(completionHandler: { (response: Response?, error: Error?) Em
   // Set the minimum log level to be printed and persisted
   BMSLogger.setLogLevel(BMSLogger.INFO);
 
-  var logger1 = BMSLogger.getInstance("logger1");
-  var logger2 = BMSLogger.getInstance("logger2");   
+  var logger1 = BMSLogger.getLogger("logger1");
+  var logger2 = BMSLogger.getLogger("logger2");   
 
   // Log messages with different levels
   logger1.debug ("debug message");
@@ -848,4 +857,4 @@ alertas](app-monitoring.html#alerts) e [monitorando travamentos do aplicativo](a
 
 ## Referência da API
 {: #api}
-* [API REST](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}
+* [API de REST![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://mobile-analytics-dashboard.{DomainName}/analytics-service/ "Ícone de link externo"){:new_window}

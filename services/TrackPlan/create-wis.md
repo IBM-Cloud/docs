@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-04-29"
+  years: 2016, 2017
+lastupdated: "2017-2-16"
 
 ---
 
@@ -44,15 +44,8 @@ When you view work items in a table, each work item is in a condensed format. So
 ![Table display](images/table_view.png)
 
 ###Lanes
-
-###Table  
-When you view work items in a table, each work item is in a condensed format. Some attributes are shown as icons and text and are arranged into columns.
-
-![Table display](images/table_view.png)
-
-###Lanes
 When you view work items in lanes, the work items are grouped by states. Attributes are shown as icons. You can view two states at a time. To view the third state, scroll horizontally.
 
 ![Lane display](images/lane_view.png)
 
-For more information about creating work items and defining their attributes, [see the documentation for IBM Rational Team Concert](http://www.ibm.com/support/knowledgecenter/SSYMRC_6.0.1/com.ibm.team.workitem.doc/topics/t_creating_work_items_web.html). 
+For more information about creating work items and defining their attributes, [see the documentation for IBM Rational Team Concert![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/support/knowledgecenter/SSYMRC_6.0.1/com.ibm.team.workitem.doc/topics/t_creating_work_items_web.html){:new_window}. 

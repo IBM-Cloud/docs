@@ -164,10 +164,10 @@ Manifest 파일을 사용하여 다음을 지정할 수 있습니다.
 	<li> 앱을 배치하기 전에 빌드해야 하는 경우, 저장소에 빌드 파일이 있어야 합니다. 빌드 스크립트가 저장소의 루트 디렉토리에서 발견되는 경우, 배치 전에 코드의 자동 빌드가 트리거됩니다.
 	
 	지원되는 빌더는 다음과 같습니다.
-<ul>
+	    <ul>
 		<li> <a href="http://ant.apache.org/manual/using.html" target="_blank">Ant:</a> /<code>build.xml</code> - 출력을 <code>./output/</code> 폴더에 빌드합니다. </li>
 		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank">Gradle:</a> <code>/build.gradle</code> - 출력을 <code>.</code> 폴더에 빌드합니다. </li>
-				<li> <a href="http://gruntjs.com/getting-started#the-gruntfile" target="_blank">Grunt:</a> <code>/Gruntfile.js</code> - 출력을 <code>.</code> 폴더에 빌드합니다. </li>
+		<li> <a href="http://gruntjs.com/getting-started#the-gruntfile" target="_blank">Grunt:</a> <code>/Gruntfile.js</code> - 출력을 <code>.</code> 폴더에 빌드합니다. </li>
 		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven" target="_blank">Maven:</a> <code>/pom.xml</code> - 출력을 <code>./target/</code> 폴더에 빌드합니다.</li>
 	   </ul>
 	</li>	
@@ -192,7 +192,5 @@ Manifest 파일을 사용하여 다음을 지정할 수 있습니다.
  </ul>
 </ul>
 
-문제점 해결 도움말은
-[Bluemix에
-배치 단추로 앱이 배치되지 않는 경우](/docs/troubleshoot/index.html#deploytobluemixbuttondoesntdeployanapp){:new_window}를 참조하십시오.	
+문제점 해결 도움말은 [Bluemix에 배치 단추로 앱이 배치되지 않는 경우](/docs/troubleshoot/index.html#deploytobluemixbuttondoesntdeployanapp){:new_window}를 참조하십시오.	
 

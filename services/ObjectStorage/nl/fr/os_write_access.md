@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -18,6 +18,7 @@ Un utilisateur {{site.data.keyword.objectstorageshort}} avec un [rôle admin](/d
 {: shortdesc}
 
 <table>
+<caption> Tableau 1. Options d'octroi de droits d'accès en écriture </caption>
   <tr>
     <th> Droit d'accès </th>
     <th> Options LCA en écriture </th>
@@ -39,8 +40,6 @@ Un utilisateur {{site.data.keyword.objectstorageshort}} avec un [rôle admin](/d
     <td>  <code> &#42;:&#42; </code> </td>
   </tr>
 </table>
-
-Tableau 1 : droits d'accès en écriture par option
 
 
 

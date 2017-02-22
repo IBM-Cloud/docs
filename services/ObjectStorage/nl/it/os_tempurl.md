@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 
@@ -13,65 +13,64 @@ lastupdated: "2016-12-06"
 {:pre: .pre}
 
 
-# Creazione di un URL temporaneo {: #create-temporary-url}
+# Creating a temporary URL {: #create-temporary-url}
 
-Un URL temporaneo è un URL lungo e difficile da indovinare che può essere utilizzato per uno specifico periodo per scaricare oggetti senza che sia richiesta ulteriore autenticazione.
+A temporary URL is a long, difficult-to-guess URL that can be used for a specified period of time to download objects without requiring further authentication or giving full access to the storage account.
 {: shortdesc}
 
 
-1. Identifica le tue informazioni di autenticazione stampando le tue informazioni sull'account con il seguente comando:
+1. Identify your authentication information by printing your account information with the following command:
 
   ```
   swift stat
   ```
   {: pre}
-  **Nota**: prendi nota della stringa completa dietro *Account*, incluso `AUTH_`.
+  **Note**: Take note of the full string behind *Account*, including `AUTH_`.
 
-2. Imposta una chiave segreta. Questa chiave può essere qualsiasi cosa tu selezioni ma è buona prassi selezionare una stringa lunga, casuale e difficile da indovinare. Per impostare la chiave, esegui il seguente comando:
+2. Set a secret key. Choose a long, random, and hard to guess string. To set the key, run the following command:
 
   ```
-  swift post -m "Temp-URL-Key:<chiave>"
+  swift post -m "Temp-URL-Key:<key>"
   ```
   {: pre}
 
-3. Verifica che `Temp-URL-Key` sia stato impostato correttamente eseguendo il seguente comando.
+3. Verify that the `Temp-URL-Key` was set successfully by running the following command.
 
   ```
   swift stat
   ```
   {: pre}
 
-4. Crea un URL temporaneo eseguendo il seguente comando:
+4. Create a temporary URL by running the following command:
 
   ```
-  swift tempurl GET <secondi> <percorso> <chiave>
+  swift tempurl GET <seconds> <path> <key>
   ```
   {: pre}
 
-  La seguente tabella illustra gli argomenti posizionali che utilizza il comando `tempurl` Swift.
+  The following table explains the positional arguments that the Swift `tempurl` command takes.
   <table>
+  <caption> Table 1. Temporary URL positional arguments </caption>
     <tr>
-      <th> Argomento </th>
-      <th> Descrizione </th>
+      <th> Argument </th>
+      <th> Description </th>
     </tr>
     <tr>
       <td> <i> method </i> </td>
-      <td> GET per consentire lo scaricamento. PUT per consentire il caricamento. </td>
+      <td> GET to allow download. PUT to allow upload. </td>
     </tr>
     <tr>
       <td> <i> seconds </i> </td>
-      <td> Il tempo in secondi in cui l'URL temporaneo è disponibile. </td>
+      <td> Time that the temporary URL is available, expressed in seconds. </td>
     </tr>
     <tr>
       <td> <i> path </i> </td>
-      <td> Il percorso completo dell'oggetto espresso come <code>/v1/<i>auth_account</i>/<i>container_name</i>/<i>object_name</i></code>. </td>
+      <td> The full path of the object expressed as <code>/v1/<i>auth_account</i>/<i>container_name</i>/<i>object_name</i></code>. </td>
     </tr>
     <tr>
       <td> <i> key </i> </td>
-      <td> La chiave segreta da te impostata al passo 2. </td>
+      <td> The secret key that you set in step 2. </td>
     </tr>
   </table>
 
-  Tabella 1: Argomenti posizionali URL temporanei 
-
-5. Facoltativo: Aggiunge l'URL restituito al tuo nome cluster per ottenere un URL completo. Puoi quindi utilizzare l'URL completo per scaricare gli oggetti con qualsiasi client HTTP compatibile come cURL, wget o Firefox.
+5. Optional: Append the returned URL to your cluster name to get a full URL. You can then use the full URL to download objects with any compatible HTTP client such as cURL, wget, or Firefox.

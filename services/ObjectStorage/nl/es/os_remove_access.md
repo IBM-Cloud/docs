@@ -1,11 +1,11 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
-{:new_window: target="_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -14,16 +14,19 @@ lastupdated: "2016-12-06"
 
 # Eliminación de acceso
 
-Puede eliminar el acceso que se ha concedido a un contenedor u objeto mediante las Listas de control de acceso.
+Puede eliminar el acceso a un contenedor u objeto mediante listas de control de acceso.
 {: shortdesc}
 
 Para eliminar los ACL de lectura de un contenedor, ejecute uno de los mandatos siguientes.
 
-Mandato Swift:
+* Mandato Swift:
 
-  <codeblock>swift post <container_name> --read-acl “”</codeblock>
+```
+  swift post <nombre_contenedor> --read-acl “”
+  ```
+{: pre}
 
-Mandato cURL:
+* Mandato cURL:
 
 ```
 curl -i <URL_ALMACENAMIENTO_SO> -X POST -H "Content-Length: 0" -H "X-Container-Read: " -H "X-Auth-Token: <SEÑAL_AUTENTICACIÓN_SO>"
@@ -32,33 +35,33 @@ curl -i <URL_ALMACENAMIENTO_SO> -X POST -H "Content-Length: 0" -H "X-Container-R
 
 Para eliminar los ACL de escritura de un contenedor, ejecute uno de los mandatos siguientes.
 
-    Mandato Swift:
+* Mandato Swift:
 
-    ```
-    swift post <nombre_contenedor> --write-acl “”
-    ```
-    {: pre}
+```
+  swift post <nombre_contenedor> --write-acl “”
+  ```
+{: pre}
 
-    Mandato cURL:
+* Mandato cURL:
 
-    ```
-    curl -i <URL_ALMACENAMIENTO_SO> -X POST -H "Content-Length: 0" -H "X-Container-Write: " -H "X-Auth-Token: <SEÑAL_AUTENTICACIÓN_SO>"
-    ```
-    {: pre}
+```
+  curl -i <URL_ALMACENAMIENTO_SO> -X POST -H "Content-Length: 0" -H "X-Container-Write: " -H "X-Auth-Token: <SEÑAL_AUTENTICACIÓN_SO>"
+  ```
+{: pre}
 
 Para comprobar que se ha eliminado un ACL, ejecute uno de los mandatos siguientes.
 
-    Mandato Swift:
+* Mandato Swift:
 
-    ```
+```
     swift stat <nombre_contenedor>
     ```
-    {: pre}
+{: pre}
 
-    La siguiente salida de ejemplo muestra tanto el ACL de lectura como el ACL de escritura en blanco, lo que significa que se ha eliminado el acceso.
+* La siguiente salida de ejemplo muestra tanto el ACL de lectura como el ACL de escritura en blanco, lo que significa que se ha eliminado el acceso.
 
-    ```
-             Account: AUTH_c727d7e248b448f6b268f31a1bd8691e
+```
+         Account: AUTH_c727d7e248b448f6b268f31a1bd8691e
        Container: Test
          Objects: 1
            Bytes: 31512
@@ -71,11 +74,13 @@ X-Storage-Policy: standard
      X-Timestamp: 1462818314.11220
       X-Trans-Id: txf04968bc9ef8431982b77-005772e34b
     Content-Type: text/plain; charset=utf-8
-    ```
-    {: screen}
 
-    Mandato cURL:
-    ```
-    curl -i <URL_ALMACENAMIENTO_SO> -I -H "X-Auth-Token: <SEÑAL_AUTENTICACIÓN_SO>"
-    ```
-    {: pre}
+  ```
+{: screen}
+
+* Mandato cURL:
+
+```
+  curl -i <URL_ALMACENAMIENTO_SO> -I -H "X-Auth-Token: <SEÑAL_AUTENTICACIÓN_SO>"
+  ```
+{: pre}

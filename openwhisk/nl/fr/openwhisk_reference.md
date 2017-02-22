@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-09-27"
+  years: 2016, 2017
+lastupdated: "2017-01-04"
 
 ---
 
@@ -63,10 +63,11 @@ Vous utiliserez ce schéma de dénomination dans l'interface de ligne de command
 Les noms de toutes les entités, notamment les actions, les déclencheurs, les règles, les packages et les espaces de noms sont une séquence de
 caractères au format suivant :
 
-* Le premier caractère doit être un caractère alphanumérique, un chiffre ou un trait de soulignement.
-* Les caractères qui suivent doivent être des caractères alphanumériques, des chiffres, des espaces ou l'un des caractères suivants
-: `_`, `@`,
-`.`, `-`.
+* Le premier caractère doit être un caractère alphanumérique ou un trait de soulignement.
+* Les caractères qui suivent doivent être des caractères
+alphanumériques, des espaces ou l'un des caractères suivants :
+`_`, `@`, `.`,
+`-`.
 * Le dernier caractère ne peut pas être un espace.
 
 Plus précisément, un nom doit correspondre à l'expression régulière suivante (exprimée avec la syntaxe des métacaractères Java) :
@@ -159,7 +160,7 @@ l'activation a échoué, `result` contient la clé `error`, généralement accom
 {: #openwhisk_ref_javascript_fnproto}
 
 Les actions {{site.data.keyword.openwhisk_short}} JavaScript
-s'exécutent dans un contexte d'exécution Node.js. 
+s'exécutent dans un contexte d'exécution Node.js.
 
 Les actions écrites en JavaScript doivent se trouver dans un seul fichier. Ce dernier peut contenir plusieurs fonctions mais par convention, une
 fonction appelée `main` doit exister ; c'est celle qui est appelée lorsque l'action est appelée. Voici un exemple d'action avec plusieurs
@@ -200,8 +201,8 @@ Voici un exemple d'action qui s'exécute de façon synchrone :
   } else if (params.payload == 1) {
      return {payload: 'Hello, World!'};
   } else if (params.payload == 2) {
-    return whisk.error();   // indique une fin anormale
-}
+    return {error: 'payload must be 0 or 1'};
+  }
 }
 ```
 {: codeblock}
@@ -257,69 +258,22 @@ Une action peut être synchrone pour certaines entrées et asynchrone pour d'aut
 
 Remarque : que l'activation soit synchrone ou asynchrone, l'appel de l'action peut être bloquant ou non bloquant.
 
-### Méthodes de logiciel SDK supplémentaires
+### Objet global whisk JavaScript déprécié
 
-La fonction `whisk.invoke()` appelle une autre action et renvoie une promesse pour l'activation générée. Elle admet comme argument un dictionnaire qui définit les paramètres suivants :
-
-- *name* : nom qualifié complet de l'action à appeler.
-- *parameters* : objet JSON qui représente l'entrée de l'action appelée. S'il est omis, la valeur par défaut est un objet vide.
-- *apiKey* : clé d'autorisation avec laquelle appeler l'action. La valeur par défaut est `whisk.getAuthKey()`.
-- *blocking* : indique si l'action doit être appelée en mode bloquant ou non bloquant. Lorsque `blocking` a pour
-valeur true, l'appel attend le résultat de l'action appelée avant de résoudre la promesse renvoyée. La valeur par défaut est
-`false` et signifie que l'appel est non bloquant.
-
-`whisk.invoke()` renvoie une promesse. Pour que le système OpenWhisk attende la fin de l'appel, vous devez renvoyer cette promesse
-depuis la fonction `main` de votre action.
-- Si l'appel échoue, la promesse est rejetée avec un objet décrivant l'appel ayant échoué. Cet objet comprend potentiellement deux zones :
-  - *error* : objet décrivant l'erreur, généralement une chaîne.
-  - *activation* : dictionnaire facultatif qui peut ou non être présent selon la nature de l'échec de l'appel. S'il est présent, il
-comporte les zones suivantes :
-    - *activationId* : ID d'activation
-    - *result* : si l'action a été appelée en mode bloquant, résultat de l'action en tant qu'objet JSON, ou bien `undefined`.
-- Si l'appel aboutit, la promesse est résolue avec un dictionnaire décrivant l'activation à l'aide des zones *activationId* et
-*result*, comme décrit ci-dessus.
-
-Voici un exemple d'appel bloquant qui utilise la promesse renvoyée :
-```javascript
-return whisk.invoke({
-  name: 'monAction',
-  blocking: true
-})
-.then(function (activation) {
-    // activation terminée correctement ; elle contient le résultat
-    console.log('Activation ' + activation.activationId + ' terminée correctement et voici le résultat ' +
-activation.result); })
-.catch(function (reason) {
-    console.log('Une erreur est survenue ' + reason.error);
-
-    if(reason.activation) {
-      console.log('Reportez-vous à l'activation ' + reason.activation.activationId + ' pour des détails.');
-    } else {
-      console.log('Echec de la création de l'activation.');
-    }
-});
-```
-{: codeblock}
-
-La fonction `whisk.trigger()` exécute un déclencheur et renvoie une promesse pour l'activation générée. Elle admet comme argument un objet JSON avec les paramètres suivants :
-
-- *name* : nom qualifié complet du déclencheur à appeler.
-- *parameters* : objet JSON qui représente l'entrée du déclencheur. S'il est omis, la valeur par défaut est un objet vide.
-- *apiKey* : clé d'autorisation avec laquelle exécuter le déclencheur. La valeur par défaut est `whisk.getAuthKey()`.
-
-`whisk.trigger()` renvoie une promesse. Si le système OpenWhisk doit attendre la fin du déclencheur, renvoyez cette promesse depuis
-la fonction `main` de votre action.
-- Si le déclencheur échoue, la promesse est rejetée avec un objet décrivant l'erreur.
-- Si le déclencheur aboutit, la promesse est résolue avec un dictionnaire comportant une zone `activationId` contenant l'ID
-d'activation.
-
-La fonction `whisk.getAuthKey()` renvoie la clé d'autorisation avec laquelle l'action s'exécute. En général, il n'est pas nécessaire de l'appeler directement car elle est utilisée implicitement par les fonctions `whisk.invoke()` et `whisk.trigger()`.
+L'objet global `whisk` est actuellement déprécié ;
+vous devez migrer vos actions nodejs pour qu'elles utilisent d'autres
+méthodes.
+Pour les fonctions `whisk.invoke()` et
+`whisk.trigger()`, vous pouvez utiliser la bibliothèque client [openwhisk](https://www.npmjs.com/package/openwhisk).
+Pour `whisk.getAuthKey()`, vous pouvez extraire la valeur de
+la clé d'API à partir de la variable d'environnement `__OW_API_KEY`.
+Pour `whisk.error()`, vous pouvez renvoyer une promesse rejetée (Promise.reject).
 
 ### Environnements d'exécution JavaScript
 {: #openwhisk_ref_javascript_environments}
 
 Les actions JavaScript sont exécutées par défaut dans un environnement
-Node.js version 6.9.1. L'environnement 6.9.1 est également utilisé pour une
+Node.js version 6.9.1.  L'environnement 6.9.1 est également utilisé pour une
 action si l'option `--kind` est explicitement spécifiée avec
 la valeur 'nodejs:6' lors de la création/mise à jour de l'action.
 Les packages suivants sont disponibles pour être utilisés dans l'environnement
@@ -349,6 +303,7 @@ Node.js 6.9.1 :
 - node-uuid v1.4.7
 - nodemailer v2.6.4
 - oauth2-server v2.4.1
+- openwhisk v3.0.0
 - pkgcloud v1.4.0
 - process v0.11.9
 - pug v2.0.0-beta6
@@ -405,6 +360,7 @@ migrez toutes vos actions Node.js de telle sorte qu'elles utilisent Node.js vers
 - nano v5.10.0
 - node-uuid v1.4.2
 - oauth2-server v2.4.0
+- openwhisk v3.0.0
 - process v0.11.0
 - request v2.79.0
 - rimraf v2.5.1
@@ -492,7 +448,7 @@ Les noeuds finaux de collection sont les suivants :
 - `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">NomDomaine</span>`/api/v1/namespaces/{espace_nom}/packages`
 - `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">NomDomaine</span>`/api/v1/namespaces/{espace_nom}/activations`
 
-``openwhisk.``<span class="keyword" data-hd-keyref="DomainName">NomDomaine</span>` est le nom d'hôte de l'API OpenWhisk (par exemple
+`openwhisk.`<span class="keyword" data-hd-keyref="DomainName">NomDomaine</span>` est le nom d'hôte de l'API OpenWhisk (par exemple
 openwhisk.ng.bluemix.net, 172.17.0.1, etc.).
 
 Pour `{espace_nom}`, le caractère `_` peut être utilisé afin de spécifier l'*espace de nom par défaut* (adresse électronique) pour l'utilisateur
@@ -554,7 +510,11 @@ avec précaution.
 {: #openwhisk_syslimits}
 
 ### Actions
-{{site.data.keyword.openwhisk_short}} présente quelques limites relatives au système, notamment la quantité de mémoire qu'une action utilise et le nombre d'appels d'action autorisés par heure. Le tableau ci-dessous répertorie les limites par défaut pour les actions.
+{{site.data.keyword.openwhisk_short}} présente quelques limites
+relatives au système, notamment la quantité de mémoire qu'une action
+peut utiliser et le nombre d'appels d'action autorisés par minute. 
+
+Le tableau ci-dessous répertorie les limites par défaut pour les actions.
 
 | limite | description | configurable | unité | défaut |
 | ----- | ----------- | ------------ | -----| ------- |
@@ -626,7 +586,7 @@ TOO MANY REQUESTS`.
 
 ### Déclencheurs
 
-Les déclencheurs sont soumis à un débit de déclenchements par minute et par heure, comme indiqué dans le tableau ci-dessous.
+Les déclencheurs sont soumis à un débit de déclenchements par minute, comme indiqué dans le tableau ci-dessous.
 
 | limite | description | configurable | unité | défaut |
 | ----- | ----------- | ------------ | -----| ------- |

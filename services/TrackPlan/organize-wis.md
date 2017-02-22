@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-04-29"
+  years: 2016, 2017
+lastupdated: "2017-2-16"
 
  
 
@@ -47,11 +47,6 @@ You can create queries that use any work item attribute by typing the attribute 
 
 When you click the **Filter work items by keyword** field, the operators and filters that you can use to create queries are shown.
 
-You can create queries that use any work item attribute by typing the attribute name. For example, if you type `Created by`, the query options and the syntax are shown. You can use operators, such as "and," "or," and "not" in your filter criteria. You can also include complex operations that nest multiple operators by using parentheses. To see examples, click the **Help** icon. 
-![Filter help icon](images/filter_helpicon.png)
-
-When you click the **Filter work items by keyword** field, the operators and filters that you can use to create queries are shown.
-
 ![Filtering with auto-complete choices](images/filterMenu2.png)
 
 ##Saving custom views {: #tp-customviews}
@@ -89,4 +84,4 @@ In the Incoming Work view, you can triage work items in several ways:
 
 ![Triaging work items in the Incoming work view](images/incoming_work_attributes.png)  
 
-For more information about managing work items, [see Managing a project with Quick Planner](http://www.ibm.com/support/knowledgecenter/SSYMRC_6.0.1/com.ibm.team.concert.tutorial.doc/topics/tut_quick_planner_lesson.html).
+For more information about managing work items, [see Managing a project with Quick Planner![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/support/knowledgecenter/SSYMRC_6.0.1/com.ibm.team.concert.tutorial.doc/topics/tut_quick_planner_lesson.html){:new_window}.

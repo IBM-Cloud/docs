@@ -1,35 +1,37 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-04"
+  years: 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:codeblock:.codeblock}
+{:codeblock: .codeblock}
+{:pre: .pre}
+
 
 # 設定 iOS Swift SDK
 {: #getting-started-ios}
 
-{{site.data.keyword.amafull}} 已發行新的 Swift SDK，可新增至現有 {{site.data.keyword.amashort}} Objective-C SDK 所提供的功能並加以改善，更輕鬆地鑑別應用程式並為後端資源提供更好的保護。使用 {{site.data.keyword.amashort}} SDK 檢測 iOS Swift 應用程式、起始設定 SDK，以及對受保護資源及未受保護資源提出要求。
+使用 {{site.data.keyword.amashort}} SDK 檢測 iOS Swift 應用程式、起始設定 SDK，以及對受保護資源及未受保護資源提出要求。
 
 
 {:shortdesc}
-
-雖然仍然完全支援 Objective-C SDK 且將它視為 {{site.data.keyword.Bluemix_notm}} Mobile Services 的主要 SDK，不過預計在今年稍晚將停止使用 Objective-C SDK，改用這個新的 Swift SDK。
 
 
 ## 開始之前
 {: #before-you-begin}
 您必須具有：
+
 * {{site.data.keyword.Bluemix_notm}} 應用程式的實例。
 * {{site.data.keyword.amafull}} 服務的實例。
 * **承租戶 ID**。在 {{site.data.keyword.amashort}} 儀表板中，開啟服務。按一下**行動選項**。`tenantId`（也稱為 `appGUID`）值會顯示在**應用程式 GUID/承租戶 ID** 欄位中。您需要此值來起始設定「{{site.data.keyword.amashort}} 授權管理程式」。
 * **應用程式路徑**。這是後端應用程式的 URL。在傳送要求至其受保護端點時，將需要此值。
 * {{site.data.keyword.Bluemix_notm}} **地區**。您可以在標頭中找到您目前的 {{site.data.keyword.Bluemix_notm}} 地區，就在**虛擬人像**圖示 ![「虛擬人像」圖示](images/face.jpg "「虛擬人像」圖示") 的旁邊。出現的地區值應該是下列其中一項：`美國南部`、`雪梨`或`英國`，並對應至程式碼中所需的 SDK 值：`BMSClient.Region.usSouth`、`BMSClient.Region.unitedKingdom` 或 `BMSClient.Region.sydney`。您需要此值來起始設定 {{site.data.keyword.amashort}} SDK。
-* Xcode 專案。如需如何設定 iOS 開發環境的相關資訊，請參閱 [Apple Developer 網站](https://developer.apple.com/support/xcode/)。
+* Xcode 專案。如需如何設定 iOS 開發環境的相關資訊，請參閱 [Apple Developer 網站 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.apple.com/support/xcode/ "External link icon"){: new_window}。
 
 
 ## 安裝 {{site.data.keyword.amashort}} 用戶端 SDK
@@ -50,7 +52,7 @@ sudo gem install cocoapods
 ```
 {: codeblock}
 
-如需相關資訊，請參閱 [CocoaPods 網站](https://cocoapods.org/)。
+如需相關資訊，請參閱 [CocoaPods 網站 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cocoapods.org/ "外部鏈結圖示"){: new_window}。
 
 ### 使用 CocoaPods 安裝 {{site.data.keyword.amashort}} 用戶端 SDK
 {: #install-sdk-cocoapods}
@@ -96,7 +98,7 @@ use_frameworks!
 
 1. 起始設定 {{site.data.keyword.amashort}} 用戶端 SDK。
 
-```Swift
+ ```Swift
 	let tenantId = "<serviceTenantID>"
 	let regionName = <applicationBluemixRegion>
 
@@ -110,12 +112,12 @@ use_frameworks!
 	return true
 	}
  ```
- {: codeblock}
+  {: codeblock}
 
-* 將 `tenantId` 取代為從**行動選項**中取得的值。 
-* 將 `<applicationBluemixRegion>` 取代為管理您 {{site.data.keyword.Bluemix_notm}} 應用程式的地區。 
+* 將 `tenantId` 取代為從**行動選項**中取得的值。
+* 將 `<applicationBluemixRegion>` 取代為管理您 {{site.data.keyword.Bluemix_notm}} 應用程式的地區。
 
-如需這些值的相關資訊，請參閱[開始之前](#before-you-begin)。 
+如需這些值的相關資訊，請參閱[開始之前](#before-you-begin)。
 
 
 ## 對行動後端應用程式提出要求
@@ -159,6 +161,7 @@ use_frameworks!
 ## 後續步驟
 {: #next-steps}
 當您連接至受保護端點時，不需要任何認證。若需要使用者登入應用程式，您必須配置 Facebook、Google 或自訂鑑別。
+
   * [Facebook](facebook-auth-ios-swift-sdk.html)
   * [Google](google-auth-ios-swift-sdk.html)
   * [自訂](custom-auth-ios-swift-sdk.html)

@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
   
-lastupdated: "2016-08-18"
+lastupdated: "2017-01-11"
 
 ---
 
@@ -58,13 +58,8 @@ evitar o carregamento de componentes obsoletos. Os buildpacks a seguir são dois
 exemplos: 
 {: tsResolve}
 
-  * [Buildpack Java do Cloud Foundry](https://github.com/cloudfoundry/java-buildpack){: new_window}. Esse buildpack tem um mecanismo integrado
-para assegurar que a versão mais recente do buildpack seja usada. Para obter mais
-informações sobre como esse mecanismo funciona, consulte [extending-caches.md](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}. 
-  * [Buildpack Node.js do Cloud Foundry](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}. Esse buildpack tem funcionalidade semelhante
-usando variáveis de ambiente. Para que o buildpack Node.js sempre possa
-fazer download de módulos do nó a partir da Internet, digite o comando
-a seguir na interface de linha de comandos cf: 	
+  * [Buildpack Java do Cloud Foundry ![Ícone de link externo](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack){: new_window}. Esse buildpack tem um mecanismo integrado para assegurar que a versão mais recente do buildpack seja usada. Para obter mais informações sobre como esse mecanismo funciona, veja [extending-caches.md ![Ícone de link externo](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}. 
+  * [Buildpack Node.js do Cloud Foundry ![Ícone de link externo](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}. Esse buildpack tem funcionalidade semelhante usando variáveis de ambiente. Para que o buildpack Node.js sempre possa fazer download de módulos do nó a partir da Internet, digite o comando a seguir na interface de linha de comandos cf: 	
   ```
   set NODE_MODULES_CACHE=false
   ```
@@ -72,10 +67,9 @@ Se o buildpack que você estiver usando não fornecer um mecanismo
 para carregar os componentes mais recentes automaticamente, será possível excluir manualmente
 os conteúdos no diretório de cache e enviar por push seu app novamente executando
 as etapas a seguir:
-  1. Efetue o check-out de uma ramificação de um buildpack nulo, por exemplo, https://github.com/ryandotsmith/null-buildpack. Para obter informações sobre como verificar uma ramificação, consulte [Git Basics - Getting a Git Repository](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}.  
+  1. Efetue o check-out de uma ramificação de um buildpack nulo, por exemplo, https://github.com/ryandotsmith/null-buildpack. Para obter informações sobre como efetuar check-out de uma ramificação, veja [Conceitos básicos do Git - Obtendo um repositório Git ![Ícone de link externo](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}.  
   2. Inclua a linha a seguir no arquivo `null-buildpack/bin/compile`
-e confirme as mudanças. Para obter informações sobre como confirmar mudanças,
-consulte [Git Basics - Recording Changes to the Repository](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}.
+e confirme as mudanças. Para obter informações sobre como confirmar mudanças, veja [Conceitos básicos do Git - Registrando mudanças no repositório ![Ícone de link externo](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}.
   ```
   rm -rfv $2/*
   ```
@@ -117,7 +111,7 @@ Ao enviar por push um aplicativo para o Bluemix usando um buildpack PHP, você p
 No buildpack PHP, o parâmetro error_log é usado para definir o nível de criação de log. Por padrão, o valor do parâmetro `error_log`
 é **stderr notice**. O exemplo a seguir mostra a
 configuração do nível de criação de log padrão no arquivo `nginx-defaults.conf`
-do buildpack PHP que é fornecido pelo Cloud Foundry. Para obter mais informações, veja [cloudfoundry/php-buildpack](https://github.com/cloudfoundry/php-buildpack/blob/ff71ea41d00c1226d339e83cf2c7d6dda6c590ef/defaults/config/nginx/1.5.x/nginx-defaults.conf){: new_window}.
+do buildpack PHP que é fornecido pelo Cloud Foundry. Para obter mais informações, veja [cloudfoundry/php-buildpack ![Ícone de link externo](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/php-buildpack/blob/ff71ea41d00c1226d339e83cf2c7d6dda6c590ef/defaults/config/nginx/1.5.x/nginx-defaults.conf){: new_window}.
 {: tsCauses} 
 
 ```
@@ -138,8 +132,7 @@ daemon off;
 error_log stderr error;
 pid @{HOME}/nginx/logs/nginx.pid;
 ```
-Para obter mais informações sobre como alterar
-a configuração de criação de log padrão, consulte [error_log](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}.
+Para obter mais informações sobre como mudar a configuração de criação de log padrão, veja [error_log ![Ícone de link externo](../icons/launch-glyph.svg)](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}.
 	
 
 ## Impossível importar uma biblioteca Python de terceiro para o {{site.data.keyword.Bluemix_notm}}

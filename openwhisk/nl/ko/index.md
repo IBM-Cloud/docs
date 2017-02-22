@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2016, 2017
 lastupdated: "2016-09-09"
 
 ---
@@ -12,7 +12,7 @@ lastupdated: "2016-09-09"
 {:screen: .screen}
 {:pre: .pre}
 
-# {{site.data.keyword.openwhisk_short}}(베타) 시작하기
+# {{site.data.keyword.openwhisk_short}} 시작하기
 
 
 {{site.data.keyword.openwhisk}}는 이벤트로 구동되는 분산형 컴퓨팅 서비스이며 Serverless 컴퓨팅 또는 FaaS(Function as a Service)라고도 합니다. {{site.data.keyword.openwhisk_short}}는 HTTP를 통한 웹 또는 모바일 앱에서의 직접 호출이나 이벤트에 응답하여 애플리케이션 로직을 실행합니다. Cloudant 같은 Bluemix 서비스와 외부 소스에서 이벤트를 제공할 수 있습니다. 개발자는 애플리케이션 로직 작성 및 On-Demand 실행이 수행되는 조치 작성에 집중할 수 있습니다. 조치 실행 비율은 항상 이벤트 비율과 일치하므로 스케일링, 복원성, 최적 활용도가 상속됩니다. 사용한 부분만 요금을 지불하며 서버를 관리할 필요가 없습니다. 또한 [소스 코드](https://github.com/openwhisk/openwhisk)를 얻어서 스스로 시스템을 실행할 수 있습니다.
@@ -33,14 +33,15 @@ OpenWhisk 사용자 인터페이스 둘러보기를 보려면 [자세히 보기]
 ## {{site.data.keyword.openwhisk_short}} CLI 설정
 {: #openwhisk_start_configure_cli}
 
-{{site.data.keyword.openwhisk_short}} 명령행 인터페이스(CLI)를 사용하여 네임스페이스 및 권한 키를 설정할 수 있습니다. [CLI 구성](https://new-console.{DomainName}/openwhisk/cli){: new_window}으로 이동하고 지시사항에 따라 이를 설치하십시오.
-
+{{site.data.keyword.openwhisk_short}} 명령행 인터페이스(CLI)를 사용하여 네임스페이스 및 권한 키를 설정할 수 있습니다.
+[CLI 구성](https://new-console.{DomainName}/openwhisk/cli){: new_window}으로 이동하고 지시사항에 따라 이를 설치하십시오. 
 
 ### HTTPS 프록시를 사용하도록 CLI 구성
 {: #openwhisk_configure_https_proxy_cli}
 
 HTTPS 프록시를 사용하도록 CLI를 설정할 수 있습니다. HTTPS 프록시를 설정하려면 `HTTPS_PROXY`라는 환경 변수를
- 작성해야 합니다. 이 변수는 `{PROXY IP}:{PROXY PORT}` 형식을 사용하여 HTTPS 프록시의 주소 및 해당 포트로 설정해야 합니다. 
+ 작성해야 합니다. 이 변수는 `{PROXY IP}:{PROXY PORT}` 형식을 사용하여
+HTTPS 프록시의 주소 및 해당 포트로 설정해야 합니다. 
 
 CLI를 사용하여 {{site.data.keyword.openwhisk_short}}를 설정한 후 명령행에서 이를 시작할 수 있습니다. 
 
@@ -63,7 +64,8 @@ CLI를 사용하여 {{site.data.keyword.openwhisk_short}}를 설정한 후 명�
 ## {{site.data.keyword.openwhisk_short}}와 함께 REST API 사용
 {: #openwhisk_start_using_restapi}
 
-{{site.data.keyword.openwhisk_short}} 환경이 사용 가능하도록 설정된 후에 REST API 호출을 사용하여 웹 앱 및 모바일 앱과 함께 {{site.data.keyword.openwhisk_short}}를 사용할 수 있습니다. 조치, 활성화, 패키지, 규칙, 트리거 관련 API에 대한 세부사항은 [{{site.data.keyword.openwhisk_short}} API 문서](https://new-console.{DomainName}/apidocs/98)를 참조하십시오. 
+{{site.data.keyword.openwhisk_short}} 환경이 사용 가능하도록 설정된 후에 REST API 호출을 사용하여 웹 앱 및 모바일 앱과 함께 {{site.data.keyword.openwhisk_short}}를 사용할 수 있습니다.
+조치, 활성화, 패키지, 규칙, 트리거 관련 API에 대한 세부사항은 [{{site.data.keyword.openwhisk_short}} API 문서](https://new-console.{DomainName}/apidocs/98)를 참조하십시오. 
 
 ## {{site.data.keyword.openwhisk_short}} Hello World 예
 {: #openwhisk_start_hello_world}
@@ -87,14 +89,14 @@ function main(params) {
 2. {{site.data.keyword.openwhisk_short}} CLI 명령행에 다음 명령을 입력하여 조치를 작성하십시오.
 
     ```
-wsk action create hello hello.js
+    wsk action create hello hello.js
     ```
     {: pre}
 
 3. 그런 다음 아래 명령을 입력하여 조치를 호출하십시오.
 
     ```
-wsk action invoke hello --blocking --result
+    wsk action invoke hello --blocking --result
     ```
     {: pre}  
 
@@ -108,7 +110,7 @@ wsk action invoke hello --blocking --result
     {: screen}
 
     ```
-wsk action invoke hello --blocking --result --param name Fred
+    wsk action invoke hello --blocking --result --param name Fred
     ```
     {: pre}  
 
@@ -135,7 +137,7 @@ wsk action invoke hello --blocking --result --param name Fred
 * [REST API](https://new-console.{DomainName}/apidocs/98)
 
 # 관련 링크
-{: #rellinks}
+{: #rellinks notoc}
 
 ## API 참조
 {: #api}

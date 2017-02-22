@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+years: 2015, 2017
 
 ---
 
@@ -10,9 +10,9 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# {{site.data.keyword.mobilepushshort}}을 수신하도록 Android 애플리케이션 설정
+# {{site.data.keyword.mobilepushshort}}를 수신하도록 Android 애플리케이션 설정
 {: #tag_based_notifications}
-마지막 업데이트 날짜: 2016년 12월 7일
+마지막 업데이트 날짜: 2017년 1월 16일
 {: .last-updated}
 
 Android 애플리케이션에서 사용자 디바이스에 푸시 알림을 수신하도록 설정할 수 있습니다. Android Studio는 필수 소프트웨어이며 이를 사용하여 Android 프로젝트를 빌드하는 것이 좋습니다. Android Studio에 대한 기본 지식이 반드시 있어야 합니다. 
@@ -22,16 +22,17 @@ Android 애플리케이션에서 사용자 디바이스에 푸시 알림을 수�
 
 이 섹션에서는 클라이언트 푸시 SDK를 설치하고 이를 사용하여 추가적으로 Android 애플리케이션을 개발하는 방법에 대해 설명합니다.
 
-Gradle을 사용하여 Bluemix® 모바일 서비스 푸시 SDK를 추가할 수 있습니다. Gradle은 저장소에서 아티팩트를 자동으로 다운로드하여 Android 애플리케이션에 제공합니다. Android Studio 및 Android Studio SDK를 올바로 설정해야 합니다. 시스템 설정 방법에 대한 자세한 정보는 [Android Studio 개요](https://developer.android.com/tools/studio/index.html)를 참조하십시오. Gradle에 대한 자세한 정보는 [Gradle 빌드 구성](http://developer.android.com/tools/building/configuring-gradle.html)을 참조하십시오.
+Gradle을 사용하여 Bluemix® 모바일 서비스 푸시 SDK를 추가할 수 있습니다. Gradle은 저장소에서 아티팩트를 자동으로 다운로드하여 Android 애플리케이션에 제공합니다. Android Studio 및 Android Studio SDK를 올바로 설정해야 합니다. 시스템을 설정하는 방법에 대한 자세한 정보는 [Android Studio 개요 ![외부 링크 아이콘](../../icons/launch-glyph.svg "External link icon")](https://developer.android.com/tools/studio/index.html){: new_window}을 참조하십시오. Gradle에 대한 자세한 정보는 [Gradle 빌드 구성 ![외부 링크 아이콘](../../icons/launch-glyph.svg "External link icon")](http://developer.android.com/tools/building/configuring-gradle.html){: new_window}을 참조하십시오.
 
 모바일 애플리케이션을 작성하고 연 후 Android Studio를 사용하여 다음 단계를 완료하십시오. 
 
-1. 모듈 레벨 **build.gradle** 파일에 종속 항목을 추가하십시오.  
+1. 모듈 레벨 **build.gradle** 파일에 종속 항목을 추가하십시오.  	
+
 	- 다음 종속 항목을 추가하여 Bluemix™ 모바일 서비스 푸시 클라이언트 SDK 및 Google 플레이 서비스 SDK를 사용자의 컴파일 범위 종속 항목에 추가하십시오. 
 	```
-	com.ibm.mobilefirstplatform.clientsdk.android:push:2.+
-```
-    {: codeblock}
+	com.ibm.mobilefirstplatform.clientsdk.android:push:3.+
+	```
+    	{: codeblock}
 	
 	- 코드 스니펫에 필요한 import 문에 다음 종속 항목을 추가하십시오. 
 	```
@@ -42,16 +43,22 @@ Gradle을 사용하여 Bluemix® 모바일 서비스 푸시 SDK를 추가할 수
 	import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationListener;
 	import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPSimplePushNotification;
 	```
-    {: codeblock}
+    	{: codeblock}
+
+	- 끝에 있는 모듈 레벨 **build.gradle** 파일에 다음 종속 항목을 추가하십시오.
+	```
+		apply plugin: 'com.google.gms.google-services'
+	```
+		{: codeblock}
 3. 프로젝트 레벨 **build.gradle** 파일에 다음 종속 항목을 추가하십시오. 
 ```
 dependencies {
-classpath 'com.android.tools.build:gradle:2.2.0'
+    classpath 'com.android.tools.build:gradle:3.0.0'
     classpath 'com.google.gms:google-services:3.0.0'
 }
 ``` 
     {: codeblock}
-5. **AndroidManifest.xml** 파일에서 다음 권한을 추가하십시오. 샘플 Manifest를 보려면 [Android helloPush 샘플 애플리케이션](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml)을 참조하십시오. 샘플 Gradle 파일을 보려면 [샘플 빌드 Gradle 파일](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle)을 참조하십시오.
+5. **AndroidManifest.xml** 파일에서 다음 권한을 추가하십시오. 샘플 Manifest를 보려면 [Android helloPush 샘플 애플리케이션 ![외부 링크 아이콘](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml){: new_window}을 참조하십시오. 샘플 Gradle 파일을 보려면 [샘플 빌드 Gradle 파일 ![외부 링크 아이콘](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle){: new_window}을 참조하십시오.
 ```
 <uses-permission android:name="android.permission.INTERNET"/>
 <uses-permission android:name="android.permission.GET_ACCOUNTS" />
@@ -60,7 +67,7 @@ classpath 'com.android.tools.build:gradle:2.2.0'
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 ```
 	{: codeblock}
-   여기에서 [Android 권한](http://developer.android.com/guide/topics/security/permissions.html)에 대한 정보를 읽을 수 있습니다.
+ 여기에서 [Android 권한 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://developer.android.com/guide/topics/security/permissions.html "외부 링크 아이콘"){: new_window}에 대해 자세히 보십시오.
 
 4. 활동에 대한 알림 의도 설정을 추가하십시오. 사용자가 알림 영역에서 수신한 알림을 클릭할 경우 이 설정을 통해 애플리케이션이 시작됩니다. 
 ```
@@ -110,7 +117,7 @@ FCM 프로젝트를 설정하고 신임 정보를 얻으려면 [발신인 ID 및
 4. Android 앱에 Firebase 추가 창에서 패키지 이름으로 **com.ibm.mobilefirstplatform.clientsdk.android.push**를 추가하십시오. 앱 닉네임 필드는 선택사항입니다. **앱 추가**를 클릭하십시오.
     ![Android에 Firebase 추가 창](images/FCM_1.jpg)
 
-5. 'Android 앱에 Firebase 추가' 창에서 패키지 이름을 입력하여 애플리케이션의 패키지 이름을 포함하십시오. 앱 닉네임 필드는 선택사항입니다. **앱 추가**를 클릭하십시오. 추가된 개별 패키지는 패키지 이름을 추가하여 Firebase에서 `build.gradle`을 변경해야 합니다. 
+5. 'Android 앱에 Firebase 추가' 창에서 패키지 이름을 입력하여 애플리케이션의 패키지 이름을 포함하십시오. 앱 닉네임 필드는 선택사항입니다. **앱 추가**를 클릭하십시오.  
 
 	![애플리케이션의 패키지 이름 추가](images/FCM_2.jpg)
 
@@ -311,7 +318,7 @@ super.onReceive(context, intent);
 기본 푸시 알림을 전송하려면 다음 단계를 완료하십시오. 
 
 1. **알림 전송**을 선택하고 **받는 사람** 옵션을 선택하여 메시지를 작성하십시오. 지원되는 옵션은 **태그별 디바이스**, **디바이스 ID**, **사용자 ID**, **Android 디바이스**, **iOS 디바이스**, **웹 알림** 및 **모든 디바이스**입니다.
-**참고**: **모든 디바이스** 옵션을 선택하는 경우 {{site.data.keyword.mobilepushshort}}을 구독하는 모든 디바이스가 알림을 수신합니다.
+**참고**: **모든 디바이스** 옵션을 선택하는 경우 {{site.data.keyword.mobilepushshort}}를 구독하는 모든 디바이스가 알림을 수신합니다.
 ![알림 화면](images/tag_notification.jpg)
 
 2. **메시지** 필드에 메시지를 작성하십시오. 필요에 따라 선택적 옵션을 구성하도록 선택하십시오.

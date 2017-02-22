@@ -25,7 +25,7 @@ lastupdated: "2016-08-26"
 
 您可以使用 CocoaPods 或 Carthage 或者從來源目錄中安裝行動 SDK。
 
-### 使用 CocoaPods 安裝
+### 使用 CocoaPods 進行安裝
 {: #openwhisk_add_sdk_cocoapods}
 
 適用於行動的 {{site.data.keyword.openwhisk_short}} SDK 可用於透過 CocoaPods 進行的公用配送。假設已安裝 CocoaPods，請將下列幾行放入入門範本應用程式專案目錄內名為 'Podfile' 的檔案中。
@@ -61,7 +61,7 @@ end
 ```
 {: codeblock}
 
-### 使用 Carthage 安裝
+### 使用 Carthage 進行安裝
 {: #openwhisk_add_sdk_carthage}
 
 在應用程式的專案目錄中建立檔案，並將它命名為 'Cartfile'。請在檔案中放入下一行：
@@ -74,7 +74,7 @@ github "openwhisk/openwhisk-client-swift.git" ~> 0.2.2 # Or latest version
 
 然後，您必須將 {{site.data.keyword.openwhisk_short}}.framework 新增至 Xcode 專案中的內嵌架構
 
-### 從原始碼安裝
+### 從原始碼進行安裝
 {: #openwhisk_add_sdk_source}
 
 原始碼位於 https://github.com/openwhisk/openwhisk-client-swift.git。使用 Xcode，以透過使用 `OpenWhisk.xcodeproj` 來開啟專案。

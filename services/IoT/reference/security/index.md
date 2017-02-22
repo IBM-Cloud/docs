@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-21"
+  years: 2016, 2017
+lastupdated: "2017-02-03"
 
 ---
 
@@ -15,8 +15,6 @@ lastupdated: "2016-10-21"
 
 # {{site.data.keyword.iot_short_notm}} security
 {: #sec-index}
-Last updated: 21 October 2016
-{: .last-updated}
 
 As a cloud-hosted service the {{site.data.keyword.iot_full}} embeds security as an important aspect of its architecture.
 {: shortdesc}
@@ -33,7 +31,7 @@ The following document answers some common questions about how your organization
 
 {{site.data.keyword.iot_short_notm}} runs within {{site.data.keyword.Bluemix_notm}} platform and so relies upon both {{site.data.keyword.Bluemix_notm}} and {{site.data.keyword.BluSoftlayer_full}} for access and connectivity. The reliance upon {{site.data.keyword.Bluemix_notm}} and {{site.data.keyword.BluSoftlayer}} makes {{site.data.keyword.Bluemix_notm}} and {{site.data.keyword.BluSoftlayer}} security and reliability important to users of {{site.data.keyword.iot_short_notm}}
 
-For more details about the security of the {{site.data.keyword.Bluemix_notm}}, see [{{site.data.keyword.Bluemix_notm}} platform security](https://console.ng.bluemix.net/docs/security/index.html#platform-security).
+For more details about the security of the {{site.data.keyword.Bluemix_notm}}, see [{{site.data.keyword.Bluemix_notm}} platform security ![External link icon](../../../../icons/launch-glyph.svg)](https://console.ng.bluemix.net/docs/security/index.html#platform-security){: new_window}.
 
 ## {{site.data.keyword.iot_short_notm}} Security compliance
 {: #compliance}  
@@ -73,7 +71,7 @@ Devices connected use a combination of clientId and the authentication token tha
 
 ![image](connectivity_platform.svg)
 
-For more information about TLS and cipher suite requirements, see the [TLS requirements](https://console.ng.bluemix.net/docs/services/IoT/reference/security/connect_devices_apps_gw.html#tls_requirements)  section in the `Application, device, and gateway connections to Watson IoT Platform` documentation.
+For more information about TLS and cipher suite requirements, see the [TLS requirements ![External link icon](../../../../icons/launch-glyph.svg)](https://console.ng.bluemix.net/docs/services/IoT/reference/security/connect_devices_apps_gw.html#tls_requirements){: new_window} section in the `Application, device, and gateway connections to Watson IoT Platform` documentation.
 
 ## How do we prevent data leaking between IoT devices?
 {: #prevent-leak-devices}
@@ -106,8 +104,8 @@ The topic space in which devices and applications operate is scoped within a sin
 ## Related Links
 {: #general}
 * [Getting started with {{site.data.keyword.iot_short_notm}}](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-* [{{site.data.keyword.Bluemix_notm}} security](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
-* [{{site.data.keyword.Bluemix_notm}} platform security](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
+* [{{site.data.keyword.Bluemix_notm}} security ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
+* [{{site.data.keyword.Bluemix_notm}} platform security ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
 * [{{site.data.keyword.Bluemix_notm}} compliance](https://console.ng.bluemix.net/docs/security/index.html#compliance){:new_window}
-* [{{site.data.keyword.BluSoftlayer}} security](http://www.softlayer.com/security){:new_window}
-* [{{site.data.keyword.BluSoftlayer}} compliance](http://www.softlayer.com/compliance){:new_window}
+* [{{site.data.keyword.BluSoftlayer}} security ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](http://www.softlayer.com/security){:new_window}
+* [{{site.data.keyword.BluSoftlayer}} compliance ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](http://www.softlayer.com/compliance){:new_window}

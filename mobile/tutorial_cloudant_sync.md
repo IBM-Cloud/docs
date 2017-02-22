@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-01-31"
 
 ---
 {:new_window: target="_blank"}
@@ -12,19 +12,19 @@ lastupdated: "2017-01-17"
 {:pre: .pre}
 
 # End-to-end tutorial of the Cloudant Sync Code Starter
-{: #tutorial}
+{: #tutorial_cloudant_sync}
 
 The following end-to-end tutorial walks through the steps to create a project from the Cloudant Sync Code Starter, including the tools that you must have installed, and subsequently, the steps to run the starter in Android Studio.
 
 
-### Installing developer tools
-{: #dev_tools}
+## Installing developer tools
+{: #dev_tools notoc}
 
 Ensure that you have installed the [prerequisite developer tools ![External link icon](../icons/launch-glyph.svg "External link icon")](get_code.html#prereq-dev-tools){: new_window}.
 
 
-### Creating a project from the Cloudant Sync Code Starter
-{: #create_project}
+## Creating a project from the Cloudant Sync Code Starter
+{: #create_project notoc}
 
 1. Create a Mobile dashboard project in {{site.data.keyword.Bluemix}}.
 
@@ -105,8 +105,8 @@ Ensure that you have installed the [prerequisite developer tools ![External link
    3. When the project code is finished generating, click **Download Code** to download your project archive.
 
 
-### Running your Android project in Android Studio
-{: #run_android}
+## Running your Android project in Android Studio
+{: #run_android notoc}
 
 1. Extract the `CloudantSyncProject-Android.zip` file.
 
@@ -136,22 +136,17 @@ Ensure that you have installed the [prerequisite developer tools ![External link
 
 
 ## What to do next
-{: #what_next}
+{: #what_next notoc}
 
 View other tutorials.
 
 
-### UI Starter tutorials
-{: #tutorials_UI}
-
-* [Tutorial - Store Catalog](tutorial_store_catalog.html)
-
-
 ### Code Starter tutorials
-{: #tutorials_Code}
+{: #tutorials_Code notoc}
 
 * [Tutorial - Basic](tutorial.html)
 * [Tutorial - {{site.data.keyword.openwhisk_short}}](tutorial_openwhisk.html)
 * [Tutorial - {{site.data.keyword.visualrecognitionshort}}](tutorial_visual_recognition.html)
+* [Tutorial - Watson {{site.data.keyword.conversationshort}}](tutorial_conversation.html)
 * [Tutorial - Watson Language](tutorial_watson_language.html)
 * [Tutorial - Weather](tutorial_weather.html)

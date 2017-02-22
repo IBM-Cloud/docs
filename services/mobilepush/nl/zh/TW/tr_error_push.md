@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # {{site.data.keyword.mobilepushshort}} Service 錯誤訊息
 {: #errors}
-前次更新：2016 年 12 月 7 日
+前次更新：2017 年 1 月 16 日
 {: .last-updated}
 
 
@@ -52,7 +52,7 @@ copyright:
 
 **說明**：{{site.data.keyword.mobilepushshort}} Service 的必要配置未完成。在配置之前，請嘗試取得 Apple Push Notification Service (APNs) 認證。
 
-**使用者回應**：請確定已使用 APNs 的有效安全憑證配置 {{site.data.keyword.mobilepushshort}} Service。如需相關資訊，請參閱[配置 APNs 的認證](t_push_provider_ios.html){: new_window}。
+**使用者回應**：請確定已使用 APNs 的有效安全憑證配置 {{site.data.keyword.mobilepushshort}} Service。如需相關資訊，請參閱 [配置 APNs 的認證 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](t_push_provider_ios.html "外部鏈結圖示"){: new_window}。
 
 
 ## FPWSE0004E
@@ -81,7 +81,8 @@ copyright:
 **說明**：要求的 JSON 主體具有 {{site.data.keyword.mobilepushshort}} 伺服器不瞭解的參數。
 
 
-**使用者回應**：請確認要求中的 JSON 主體遵循 {{site.data.keyword.mobilepushshort}} 伺服器所預期要求的格式。如需相關資訊，請參閱 [REST API](https://mobile.{DomainName}/imfpush/)。
+**使用者回應**：請確認要求中的 JSON 主體遵循 {{site.data.keyword.mobilepushshort}} 伺服器所預期要求的格式。如需相關資訊，請參閱
+[REST API ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://mobile.{DomainName}/imfpush/ "外部鏈結圖示"){: new_window}。
 
 
 
@@ -91,7 +92,8 @@ copyright:
 **說明**：要求 URL 的查詢字串含有無法辨識的參數。例如，如果刪除訂閱的要求中含有 deviceId 及 tagName 以外的參數，則可能發生此錯誤。
 
 
-**使用者回應**：請確認要求中的 JSON 主體遵循 {{site.data.keyword.mobilepushshort}} 伺服器所預期要求的格式。如需相關資訊，請參閱 [REST API](https://mobile.{DomainName}/imfpush/)。
+**使用者回應**：請確認要求中的 JSON 主體遵循 {{site.data.keyword.mobilepushshort}} 伺服器所預期要求的格式。如需相關資訊，請參閱
+[REST API ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://mobile.{DomainName}/imfpush/ "外部鏈結圖示"){: new_window}。
 
 
 
@@ -101,7 +103,8 @@ copyright:
 **說明**：要求 URL 的查詢字串遺漏必要的參數。例如，刪除訂閱的要求中遺漏 deviceId 及 tagName 參數。
 
 
-**使用者回應**：請確認要求中的 JSON 主體遵循 {{site.data.keyword.mobilepushshort}} 伺服器所預期要求的格式。如需相關資訊，請參閱 [REST API](https://mobile.{DomainName}/imfpush/)。
+**使用者回應**：請確認要求中的 JSON 主體遵循 {{site.data.keyword.mobilepushshort}} 伺服器所預期要求的格式。如需相關資訊，請參閱
+[REST API ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://mobile.{DomainName}/imfpush/ "外部鏈結圖示"){: new_window}。
 
 
 

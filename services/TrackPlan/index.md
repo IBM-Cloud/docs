@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-04-27"
+  years: 2016, 2017
+lastupdated: "2017-2-17"
 
  
 
@@ -29,26 +29,19 @@ Complete these steps to set up the {{site.data.keyword.trackplan}} service:
    
 On the {{site.data.keyword.Bluemix_notm}} Dashboard, you can see your {{site.data.keyword.jazzhub_short}} projects and their member counts, visibility, and whether they have the {{site.data.keyword.trackplan}} service enabled. You can create work items for any of your {{site.data.keyword.jazzhub_short}} projects or go to your planning tools. 
 
-<article class="topic reference nested1" aria-labelledby="d68e338" lang="en-us" id="rellinks">
-<h2 class="topictitle2" id="d68e338">Related links</h2>
-<aside>
-<div class="linklist" id="general"><h3 class="linklistlabel">Related Links</h3>
-<ul>
-<li><img src="./sout.gif" alt=""><a href="https://developer.ibm.com/bluemix/support/#prereqs" rel="external" title="(Opens in a new tab or window)">{{site.data.keyword.Bluemix_notm}} Prerequisites</a></li>
-</ul>
-</div>
 
-<div class="linklist" id="samples">
-</div>
+# Related Links
+{: #rellinks}
 
-<div class="linklist" id="samples">
-<h3 class="linklistlabel">Tutorials and Samples</h3>
-<ul>
-<li><img src="./sout.gif" alt=""><a href="https://hub.jazz.net/tutorials/devopsweb/" rel="external" title="(Opens in a new tab or window)">Clone, edit, and deploy an app</a></li>
-<li><img src="./sout.gif" alt=""><a href="https://hub.jazz.net/tutorials/jazzeditor" rel="external" title="(Opens in a new tab or window)">Develop and deploy a Node.js app</a></li>
-<li><img src="./sout.gif" alt=""><a href="https://hub.jazz.net/tutorials/jazzeditorjava" rel="external" title="(Opens in a new tab or window)">Develop and deploy a Java app</a></li>
-<li><img src="./sout.gif" alt=""><a href="http://www.ibm.com/developerworks/topics/track%20and%20plan%20service" rel="external" title="(Opens in a new tab or window)">developerWorks: {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.trackplan}} service</a></li>
-</ul>
-</div>
-</aside>
-</article>
+## Tutorials and Samples
+{: #samples}
+
+* [Clone, edit, and deploy an app![External link icon](../../icons/launch-glyph.svg "External link icon")](https://hub.jazz.net/tutorials/devopsweb/){:new_window}
+* [Develop and deploy a Node.js app![External link icon](../../icons/launch-glyph.svg "External link icon")](https://hub.jazz.net/tutorials/jazzeditor){:new_window}
+* [Develop and deploy a Java app![External link icon](../../icons/launch-glyph.svg "External link icon")](https://hub.jazz.net/tutorials/jazzeditorjava){:new_window}
+* [developerWorks: {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.trackplan}} service![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/developerworks/topics/track%20and%20plan%20service){:new_window}
+
+## Related Links
+{: #general}
+
+* [{{site.data.keyword.Bluemix_notm}} Prerequisites![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/bluemix/support/#prereqs){:new_window}

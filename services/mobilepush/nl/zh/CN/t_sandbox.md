@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # 沙箱和生产方式
 {: #push-sandboxandproduction-modes}
-上次更新时间：2016 年 12 月 6 日
+上次更新时间：2017 年 1 月 11 日
 {: .last-updated}
 
 您可以通过以下任何一种方式来使用 {{site.data.keyword.mobilepushshort}}：沙箱或生产。沙箱是独立的测试环境，用于开发和测试 Push API 与服务器应用程序推送服务的集成。 
@@ -25,8 +25,7 @@ copyright:
 
 1. 使用 PUT ApplicationID 设置 REST API 调用
 2. 在 JSON 主体中，确认是否已使用 [GET ApplicationID 设置 REST](https://mobile.{DomainName}/imfpush/){: new_window} API 调用切换了该方式。响应应该为 "mode": "PRODUCTION"
-```
-    { 
+```{ 
     "mode": "PRODUCTION"
  }
  ```

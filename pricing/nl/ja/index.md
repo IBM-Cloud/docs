@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2015, 2016
-lastupdated: "2016-11-30"
+  years: 2015, 2017
+lastupdated: "2017-01-11"
  
 
 ---
@@ -115,7 +115,7 @@ lastupdated: "2016-11-30"
 
 有料アカウントの作成後に、以前に提供した情報を編集することができます。**「プロファイル設定」アイコン**をクリックしてから、**「アカウント」&gt;「アカウント・タイプ」**とクリックして情報を編集します。
 
-「従量課金 (PAYG)」アカウントまたは「サブスクリプション」アカウントを使用していて {{site.data.keyword.Bluemix_notm}} で何らかの問題に直面した場合、詳細については[「オンライン・ヘルプの表示 (Getting online help)」](https://www.ng.bluemix.net/docs/troubleshoot/getting_customer_support.html#online_help)を参照してください。
+「従量課金 (PAYG)」アカウントまたは「サブスクリプション」アカウントを使用していて {{site.data.keyword.Bluemix_notm}} で何らかの問題に直面した場合、詳細については[「オンライン・ヘルプの表示 (Getting online help)」](/docs/troubleshoot/getting_customer_support.html#online_help)を参照してください。
 
 **注:** {{site.data.keyword.Bluemix_notm}} 請求アカウントを SoftLayer アカウントにリンクした場合は、翌月の最初から {{site.data.keyword.Bluemix_notm}} および SoftLayer の料金が {{site.data.keyword.Bluemix_notm}} の請求書に含まれます。詳しくは、[「クレジットの表示」](/docs/admin//softlayerlink.html#bill_usage)を参照してください。
 
@@ -262,7 +262,7 @@ SoftLayer DirectLink やプレミアム・サポートのオプションなど�
 ####ブロック階層
 {: #block_tier}
 
-ブロック階層モデルでは、価格は、任意の使用量レベル内でユーザーが使用する数量に対して設定された料金となります。合計額は、実際の使用量に関わらず、該当する使用量レベルに対して設定された料金です。連続するそれぞれの階層は、量比により低い価格を提供します。例えば次のようにします。
+ブロック階層モデルでは、価格は、任意の使用量レベル内でユーザーが使用する数量に対して設定された料金となります。合計額は、実際の使用量にかかわらず、該当する使用量レベルに対して設定された料金です。連続するそれぞれの階層は、量比により低い価格を提供します。例えば次のようにします。
 
 |アイテムの数量 |	すべてのアイテムの合計額|
 |------------------|-----------------------------|
@@ -363,7 +363,7 @@ IBM パブリック・クラウドの {{site.data.keyword.virtualmachineslong}} 
 <dd>Auto-Scaling ポリシーは無料です。</dd>
 
 <dt>1 月あたり 2 GB の Data Cache</dt>
-<dd>Data Cache サービスが提供する 50 MB プランは無料です。ただし、無料のプランでは、1 カ月当たり 2 GB と予測される使用量をカバーできません。Data Cache の 3 つの有料プランでは、実際に使用したスペースの量に関わらず、特定のスペース量に対する一定の料金がかかります。そのため、予測される使用量を満たす最小限のプランである 5 GB の標準プランを選択することにします。総額は 1 月あたり $155 になります。</dd>
+<dd>Data Cache サービスが提供する 50 MB プランは無料です。ただし、無料のプランでは、1 カ月当たり 2 GB と予測される使用量をカバーできません。Data Cache の 3 つの有料プランでは、実際に使用したスペースの量にかかわらず、特定のスペース量に対する一定の料金がかかります。そのため、予測される使用量を満たす最小限のプランである 5 GB の標準プランを選択することにします。総額は 1 月あたり $155 になります。</dd>
 
 <dt>1 月あたり 150 GB の NoSQL データベース</dt>
 <dd>IBM Cloudant NoSQL DB for {{site.data.keyword.Bluemix_notm}} のサービス料金は、データ・ストレージおよび各 API メソッドでそのデータにアクセスする機能に基づきます。<strong>PUT</strong> コマンドおよび
@@ -422,7 +422,7 @@ GB 数を合計して、2 GB の無料枠を減算します。1 月あたり 148
 
 アカウント所有者は、各請求サイクルの最後の時点ですべての組織に渡り発生した総使用量に対して課金されます。各請求サイクルは 1 カ月です。
 
-アカウント所有者は、地域および組織で使用量サマリーをフィルタリングできます。示された料金は、アカウント所有者としてその月に請求される金額を表します。
+アカウント所有者は、地域および組織で使用量サマリーをフィルタリングできます。アカウント所有者は、**「組織」**を**「すべての組織」**に設定して、12 カ月の期間のアカウント全体の使用量を表示できます。特定の月をクリックすると、その月の使用量が表示されます。示された料金は、アカウント所有者としてその月に請求される金額を表します。
 
 **「組織」**に特定組織を選択すると、その組織の合計使用量を表示できます。これには、無料枠に含まれる使用量も含まれます。組織に示される料金は、請求される料金ではありません。アカウント・レベルでは無料枠の使用量が無料として表示されますが、組織レベルではそうではありません。そのため、組織の使用量を表示した場合、無料の使用量と課金される使用量の両方を含む、その組織の実使用量が表示されます。無料枠を除いた後、すべての組織の使用量を累積して、アカウントの使用量になります。
 
@@ -463,11 +463,11 @@ GB 数を合計して、2 GB の無料枠を減算します。1 月あたり 148
 ```
 cf update-service <service_name> [-p <new_plan>]
 ```
-# 関連リンク
+# rellinks
 {: rellinks}
-## 一般
-{: general}
+## general
+{: general} 
 * [{{site.data.keyword.Bluemix_notm}} 価格設定シート](https://console.{DomainName}/pricing/)
-* [{{site.data.keyword.Bluemix_notm}} Developers Community Forum](https://developer.ibm.com/bluemix/)
+* [{{site.data.keyword.Bluemix_notm}} Developers Community Forum ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/){: new_window}
 * [オンライン・ヘルプの表示 (Getting online help)](https://www.{DomainName}/docs/troubleshoot/getting_customer_support.html#online_help)
 * [お問い合わせ](https://console.{DomainName}/#/contactUs/cloudOEPaneId=contactUs)

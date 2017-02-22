@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-12"
+  years: 2016, 2017
+lastupdated: "2017-2-16"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -34,4 +34,4 @@ The usage behaviors that are not permitted include, but are not limited to, thes
 * The use in the normal development process for sites or services that promote hate speech, or other activities that violate the IBM Business Conduct Guidelines
 * The use of event-generated behavior for malicious intrusion or attacks against {{site.data.keyword.Bluemix_notm}} or other sites 
 
-At the discretion of IBM, users who violate the acceptable usage behaviors of the {{site.data.keyword.contdelivery_short}} services or the [IBM Business Conduct Guidelines](https://www.ibm.com/investor/governance/business-conduct-guidelines.html){: new_window} ![External link icon, link opens in new window](images/launch--glyph.svg) may be disabled without notice. At the discretion of IBM, some services may be restored if users correct their usage behaviors after they are notified of the offensive action. Otherwise, accounts may be suspended or terminated. 
+At the discretion of IBM, users who violate the acceptable usage behaviors of the {{site.data.keyword.contdelivery_short}} services or the [IBM Business Conduct Guidelines![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/investor/governance/business-conduct-guidelines.html){: new_window} may be disabled without notice. At the discretion of IBM, some services may be restored if users correct their usage behaviors after they are notified of the offensive action. Otherwise, accounts may be suspended or terminated. 

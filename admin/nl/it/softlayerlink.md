@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2016
-lastupdated: "2016-12-01"
+  years: 2016, 2017
+lastupdated: "2017-01-11"
  
 
 ---
@@ -22,7 +22,7 @@ Se disponi di un account {{site.data.keyword.Bluemix_notm}} di prova e vuoi acce
 
 Puoi unificare i tuoi account {{site.data.keyword.Bluemix_notm}} e SoftLayer esistenti collegando tali account. Quando colleghi i tuoi account, ricevi la fattura attraverso {{site.data.keyword.Bluemix_notm}} sia per le risorse {{site.data.keyword.Bluemix_notm}} che per le risorse SoftLayer.
 
-**Attenzione:** un account di sottoscrizione {{site.data.keyword.Bluemix_notm}} non può essere collegato a un account SoftLayer. Per accedere al dashboard Infrastruttura, devi creare un account Pagamento a consumo, un secondo account che viene collegato automaticamente a un account SoftLayer. Riceverai quindi due fatture, una per ogni account {{site.data.keyword.Bluemix_notm}}. Anche se le risorse dell'infrastruttura verranno fatturate in un account Pagamento a consumo separato, le risorse possono essere utilizzate con applicazioni e servizi nel tuo account di sottoscrizione. Ad esempio, se attivi un servizio Watson nel tuo account di sottoscrizione, puoi copiare le credenziali del servizio e quindi aggiungerle alla tua applicazione bare metal proveniente dal tuo account Pagamento a consumo.
+**Attenzione:** un account di sottoscrizione {{site.data.keyword.Bluemix_notm}} non può essere collegato a un account SoftLayer. Per accedere al dashboard Infrastruttura, devi creare un account Pagamento a consumo, un secondo account che viene collegato automaticamente a un account SoftLayer. Riceverai quindi due fatture, una per ogni account {{site.data.keyword.Bluemix_notm}}. Anche se le risorse dell'infrastruttura verranno fatturate in un account Pagamento a consumo separato, le risorse possono essere utilizzate con applicazioni e servizi nel tuo account di sottoscrizione. Ad esempio, se attivi un servizio Watson nel tuo account di sottoscrizione, puoi copiare le credenziali del servizio e quindi aggiungerle alla tua applicazione bare metal proveniente dal tuo account Pagamento a consumo. 
 {:shortdesc}
 
 ## Aggiornamento a un account Pagamento a consumo di {{site.data.keyword.Bluemix_notm}}
@@ -91,28 +91,61 @@ Per ulteriori informazioni su come invitare i membri del team attraverso l'inter
 ## Passaggio all'ID IBM
 {: #ibmid_switch}
 
-L'autenticazione in SoftLayer adesso utilizza l'ID IBM per fornire un singolo accesso in {{site.data.keyword.Bluemix_notm}}. Se disponi di un account SoftLayer esistente, puoi passare a un ID IBM. Una procedura guidata di migrazione ti guiderà in questo passaggio. 
+L'autenticazione in SoftLayer adesso utilizza l'ID IBM per fornire un singolo accesso per tutti i {{site.data.keyword.Bluemix_notm}}. Gli account SoftLayer esistenti stanno venendo abilitati per il passaggio all'autenticazione con ID IBM e una procedura guidata di migrazione ti guiderà in questo passaggio. 
 {:shortdesc}
 
-Dopo aver iniziato il passaggio all'ID IBM, finché non si completa il processo, è possibile annullarlo. Tuttavia, ti verrà richiesto di passare all'ID IBM la prossima volta che effettuerai l'accesso.
+Se sei un utente master o non visualizzi un prompt per passare a ID IBM nel {{site.data.keyword.slportal}}, [Contatta il supporto IBM](https://console.ng.bluemix.net/docs/support/index.html#contacting-support) per supporto su come abilitare questa funzione.
 
-Per iniziare il passaggio dal tuo nome utente SoftLayer esistente a un ID IBM, completa la seguente procedura:
+Dopo aver iniziato il passaggio all'ID IBM, puoi sempre annullare questo passaggio prima del completamento del processo. Tuttavia, ti continuerà a venire richiesto di passare all'ID IBM la prossima volta che effettuerai l'accesso. Ogni account che pianifichi di collegare all'account {{site.data.keyword.Bluemix_notm}} deve essere gestito da un solo ID IBM univoco con un indirizzo email univoco.
 
- 1. In {{site.data.keyword.slportal}}, vai alla pagina Modifica profilo utente e fai clic su **Passa a ID IBM**.
- 2. Segui le istruzioni della procedura guidata di migrazione per creare il tuo ID IBM. Dopo aver creato il tuo ID IBM, non puoi modificare l'ID, che corrisponde a un indirizzo e-mail. Puoi aggiornare l'e-mail associata al tuo profilo, ma per impostazione predefinita il valore è impostato su quello che hai definito per l'ID IBM. Dopo aver completato la procedura guidata, ti viene inviata un'e-mail.
- 3. Quando ricevi l'e-mail, segui il link o copia l'URL in un browser e immetti il codice di registrazione. Il codice è valido per 7 giorni ed è un codice monouso.  Una volta utilizzato, non è possibile riutilizzarlo.
- Dopo aver impostato il collegamento tra l'ID IBM e l'utente SoftLayer, puoi accedere al tuo account solo con l'ID IBM.  Nella finestra di dialogo di accesso, devi utilizzare il pulsante **Accedi con ID IBM** invece di immettere nome utente e password SoftLayer.
+Per passare il tuo nome utente SoftLayer esistente a un ID IBM, completa la seguente procedura:
+
+ 1. Se hai selezionato **Dopo** nella schermata iniziale dopo l'accesso, ma hai deciso di voler iniziare il passaggio all'autenticazione tramite ID IBM nella sessione corrente, vai alla pagina Modifica profilo utente e fai clic su **Passa a ID IBM**.
+ 2. Segui le istruzioni della procedura guidata per creare il tuo ID IBM. Il tuo ID IBM è un indirizzo email univoco e non può essere modificato dopo la sua creazione. Puoi aggiornare l'e-mail associata al tuo profilo in seguito, l'email predefinita viene impostata su quello che hai definito per l'ID IBM. Riceverai un'email con il tuo codice di registrazione che indica che hai completato la procedura guidata di migrazione. 
+ 3. Quando ricevi l'e-mail, segui il link o copia l'URL in un browser e immetti il codice di registrazione. Il codice è valido per 7 giorni e può essere utilizzato solo una volta.
  
-Se sei un nuovo cliente, quando controlli il tuo ordine ti verrà chiesto un indirizzo e-mail per il tuo account ID IBM esistente o di creare un nuovo account. 
+ 
+Dopo il passaggio all'autenticazione tramite ID IBM, puoi accedere al tuo account solo con il tuo ID IBM. Nel prompt di accesso, fai clic su **Accedi con ID IBM** invece di immettere nome utente e password SoftLayer.
+ 
+Quando controlli il tuo ordine come un nuovo cliente, ti verrà chiesto un indirizzo e-mail per il tuo account ID IBM esistente o di creare un nuovo account. Se crei un nuovo ID IBM, immetti l'indirizzo email per il tuo nuovo ID IBM. L'indirizzo email è dove viene inviato l'email di invito ed è anche il nome utente per il tuo nuovo ID IBM.
 
-### Associazione di più account SoftLayer a un ID IBM
+### Abilitazione degli utenti al passaggio all'ID IBM
+{: #link_accounts_resellers}
+
+In alcuni casi, prima che un utente possa passare a un ID IBM, un rivenditore o un distributore deve abilitare l'account ad utilizzare l'autenticazione tramite ID IBM. 
+
+ * Per abilitare un account esistente con le credenziali legacy SoftLayer per utilizzare l'autenticazione ID IBM, [Contattare il supporto IBM](https://console.ng.bluemix.net/docs/support/index.html#contacting-support) per abilitare la migrazione all'ID IBM. Questa procedura deve essere abilitata per ogni account utente finale esistente che desideri collegare a un account {{site.data.keyword.Bluemix_notm}}.
+ 
+ * Per assicurarti che i nuovi account utente sono stati creati con un ID IBM, l'attributo `CREATE_NEW_ACCOUNT_WITH_IBMid_AUTHENTICATION`       deve essere impostato nell'account utente master immediato. [Contatta il supporto IBM](https://console.ng.bluemix.net/docs/support/index.html#contacting-support) o il tuo fornitore per avere questa impostazione configurata per i tuoi account.
+ 
+### Collegamento dei tuoi account utente
+{: #link_user_accounts}
+Dopo che i tuoi utenti sono passati all'autenticazione tramite ID IBM, i rivenditori e i distributori possono collegare gli account SoftLayer e {{site.data.keyword.Bluemix_notm}}.
+
+**Nota:** 
+  * L'utente master dell'account che sta venendo collegato deve essere un ID IBM.
+  * Accedi ad ogni account utente finale come utente master. Vai alla pagina del profilo e fai clic su **Passa a ID IBM**.
+  * Ogni account che colleghi all'account {{site.data.keyword.Bluemix_notm}} deve essere gestito da un solo ID IBM univoco con un indirizzo email univoco. Anche se un ID IBM può visualizzare più account SoftLayer, non puoi collegarli agli account {{site.data.keyword.Bluemix_notm}}. Se un ID IBM è l'utente master per più account SoftLayer e desideri collegarli agli account {{site.data.keyword.Bluemix_notm}}, devi modificare gli utenti master in modo che siano un ID IBM univoco per ogni account. Contatta il [Supporto IBM SoftLayer ![icona link esterno](../icons/launch-glyph.svg)](https://knowledgelayer.softlayer.com/topic/support){: new_window} per modificare l'utente master per un account SoftLayer.
+  
+Completa la seguente procedura per collegare tutti gli account all'account {{site.data.keyword.Bluemix_notm}}: 
+
+ 1. Per creare un nuovo account {{site.data.keyword.Bluemix_notm}} o per il collegamento a un account {{site.data.keyword.Bluemix_notm}} esistente, accedi al tuo account SoftLayer come utente master e fai clic sul link **{{site.data.keyword.Bluemix_notm}}**. Questo ti darà la possibilità di creare un nuovo account {{site.data.keyword.Bluemix_notm}} o di collegare un account {{site.data.keyword.Bluemix_notm}} esistente. L'ID IBM che è l'utente master per l'account SoftLayer deve essere il proprietario dell'account Bluemix a cui stati eseguendo il collegamento. Segui le istruzioni nella procedura guidata, inclusa l'aggiunta di utenti nell'account SoftLayer all'account {{site.data.keyword.Bluemix_notm}}. 
+ 2. Dopo aver collegato l'account, informa gli utenti finali dell'account di migrare all'ID IBM. Gli utenti finali possono quindi accedere ai dashboard Infrastruttura, Applicazioni e Servizi nella console {{site.data.keyword.Bluemix_notm}}.
+ 3. Quando vengono aggiunti nuovi utenti all'account collegato, dovrai aggiungerli all'account SoftLayer e {{site.data.keyword.Bluemix_notm}} in modo da fornirgli l'accesso a tutte le funzionalità nella console unificata.
+ 
+**Raccomandazione:** migra solo gli account utente finale all'ID IBM. Non migrare gli account dell'azienda che sono account principali per gli account utente finale e non contengono alcuna risorsa. Gli utenti degli account dell'azienda che eseguono la migrazione all'ID IBM perdono la possibilità di accedere al portale BAP (Brand Agent Portal).
+
+<!--
+### Mapping multiple SoftLayer accounts to one IBMid
 {: #map_multiple_accounts}
 
-Puoi associare un ID IBM a più account SoftLayer utilizzando un'e-mail ID IBM esistente durante l'impostazione dell'account. È possibile associare un solo utente SoftLayer per ogni account al singolo ID IBM. L'ID IBM deve essere univoco all'interno di ogni account SoftLayer. Tuttavia, un utente con accesso a più account SoftLayer può utilizzare un ID IBM per accedere a diversi account SoftLayer.
+You can associate one IBMid with multiple SoftLayer accounts by using an existing IBMid email address when setting up the account. Only one SoftLayer user for each account can be mapped to the single IBMid. The IBMid must be unique within each SoftLayer account. However, one user with access to multiple SoftLayer accounts can use one IBMid to access multiple SoftLayer accounts.
 
-Ad esempio, un ID IBM può essere associato all'utente master negli account A e B e a un ulteriore utente negli account C e D. Uno degli account associato a tale ID IBM è l'account predefinito.  Di solito, l'account predefinito è quello che è stato associato per primo all'ID IBM. Tuttavia, puoi cambiare l'account predefinito utilizzando una funzione di passaggio tra account nel portale clienti.
+For example, an IBMid can map to the master user in accounts A and B, and to an additional user in accounts C and D. One of the accounts mapped to that IBMid is the default account.  Usually, the default account is the account that was first mapped to the IBMid. However, you can switch which account is the default account  through an account switching feature in the Customer Portal.
 
-Per un utente che dispone dell'accesso ID IBM a più account e per cui è abilitata l'autenticazione a due fattori, è richiesto un codice di verifica appropriato per tale autenticazione durante l'accesso e il passaggio tra gli account.
+For a user with IBMid access to multiple accounts with two-factor authentication enabled, an appropriate two-factored authentication verification code per account is required during account log in and account switching.
+-->
+
 
 ## Utilizzo di servizi {{site.data.keyword.Bluemix_notm}} con risorse SoftLayer
 {: #bluemix_services}
@@ -161,7 +194,6 @@ Non tutti i servizi {{site.data.keyword.Bluemix_notm}} possono essere utilizzati
 * {{site.data.keyword.presenceinsightsshort}}
 * {{site.data.keyword.relationshipextractionshort}}
 * {{site.data.keyword.retrieveandrankshort}}
-* {{site.data.keyword.servicediscoveryshort}}
 * {{site.data.keyword.speechtotextshort}}
 * {{site.data.keyword.sqldb}}
 * {{site.data.keyword.streaminganalyticsshort}}

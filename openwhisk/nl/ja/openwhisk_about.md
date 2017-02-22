@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2016
+  years: 2016, 2017
 lastupdated: "2016-08-02"
  
 
@@ -66,4 +66,4 @@ lastupdated: "2016-08-02"
 ### IoT
 {: #openwhisk_use_cases_iot}
 
-モノのインターネットは、その性質上、センサーで駆動されることがよくあります。例えば、一定の気温を超えたセンサーに反応することが必要な場合に、{{site.data.keyword.openwhisk_short}} のアクションが起動されることがあります。
+IoT は、その性質上、センサーで駆動されることがよくあります。例えば、一定の気温を超えたセンサーに反応することが必要な場合に、{{site.data.keyword.openwhisk_short}} のアクションが起動されることがあります。

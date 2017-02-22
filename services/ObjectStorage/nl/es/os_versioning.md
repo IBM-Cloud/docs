@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -14,7 +14,7 @@ lastupdated: "2016-12-06"
 
 # Configuración del mantenimiento de versiones de objetos {: #setting-up-versioning}
 
-El mantenimiento de versiones de objetos le permite conservar versiones anteriores de los objetos almacenándolos automáticamente en un contenedor de copia de seguridad. El mantenimiento de versiones le permite ver un historial de cada objeto y realizar el seguimiento de cuándo se realizaron cambios.
+Puede conservar versiones anteriores de los objetos automáticamente configurando el mantenimiento de versiones de objetos. Con el mantenimiento de versiones, puede ver un historial de cada objeto.
 {: shortdesc}
 
 Al cargar una versión nueva del archivo en el contenedor principal, la versión anterior se moverá automáticamente al contenedor de copia de seguridad. Si suprime el archivo del contenedor principal, la versión más reciente se moverá automáticamente del contenedor de copia de seguridad al contenedor principal para sustituir al archivo suprimido.
@@ -67,6 +67,7 @@ Al cargar una versión nueva del archivo en el contenedor principal, la versión
 
 7.  Los objetos del contenedor de copia de seguridad se cambian de nombre automáticamente con el siguiente formato: `<Length><Object_name>/<Timestamp>`.
   <table>
+  <caption> Tabla 1. Denominación de atributos descritos</caption>
     <tr>
       <th> Atributo </th>
       <th> Descripción </th>
@@ -85,7 +86,6 @@ Al cargar una versión nueva del archivo en el contenedor principal, la versión
     </tr>
   </table>
 
-  Tabla 1: Denominación de atributos descritos
 
 6. Enumere los objetos del contenedor principal para ver la versión nueva del archivo.
 
@@ -94,7 +94,7 @@ Al cargar una versión nueva del archivo en el contenedor principal, la versión
     ```
     {: pre}
 
-7. Enumere los objetos del contenedor de copia de seguridad. Verá la versión anterior del archivo que se almacenará en este contenedor. Tenga en cuenta que se ha añadido una indicación de fecha y hora al archivo.
+7. Enumere los objetos del contenedor de copia de seguridad. Verá la versión anterior del archivo que se almacenará en este contenedor. Observe que se ha añadido una indicación de fecha y hora al archivo.
 
     ```
     swift list --lh <nombre_contenedor_copia_de_seguridad>

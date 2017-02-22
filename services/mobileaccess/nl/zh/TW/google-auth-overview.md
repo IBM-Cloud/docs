@@ -1,13 +1,16 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-03"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
-{:screen:  .screen}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
 {:codeblock: .codeblock}
+{:pre: .pre}
+
 
 # 使用 Google 認證鑑別使用者
 {: #google-auth}
@@ -54,5 +57,4 @@ lastupdated: "2016-11-03"
 
 * [啟用 Android 應用程式的 Google 鑑別](google-auth-android.html)
 * [啟用 iOS 應用程式的 Google 鑑別 (Swift SDK)](google-auth-ios-swift-sdk.html)
-* [啟用 iOS 應用程式的 Google 鑑別 (Objective-C SDK)](google-auth-ios.html)
 * [啟用 Cordova 應用程式的 Google 鑑別](google-auth-cordova.html)

@@ -29,8 +29,8 @@ Com o {{site.data.keyword.Bluemix_notm}} Local, é possível tirar vantagem do v
 {: #rellinks}
 ## gerais
 {: #general}
-* [O que é o {{site.data.keyword.Bluemix_notm}}](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){:new_window}
-* [Informações Iniciais](http://www.ibm.com/cloud-computing/bluemix/getting-started/)
-* [Aprenda sobre o modelo híbrido](http://www.ibm.com/cloud-computing/bluemix/hybrid/)
+* [O que é {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){:new_window}
+* [Introdução ao ![Ícone de link externo](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/getting-started/){:new_window}
+* [Aprenda sobre o modelo híbrido ![Ícone de link externo](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/hybrid/){:new_window}
 * [O que há de novo no {{site.data.keyword.Bluemix_notm}}](/docs/whatsnew/index.html)
 * [{{site.data.keyword.Bluemix_notm}} glossário](/docs/overview/glossary/index.html)

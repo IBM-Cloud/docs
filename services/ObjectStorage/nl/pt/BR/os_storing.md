@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -44,14 +44,14 @@ caixa de diálogo é aberta.
   ```
   {: pre}
 
-2. Crie um novo contêiner do {{site.data.keyword.objectstorageshort}} executando o comando a seguir. A variável *container_name* é configurada, por você, neste momento.
+2. Crie um contêiner do {{site.data.keyword.objectstorageshort}} executando o comando a seguir. A variável *container_name* é agora configurada por você.
 
   ```
   swift post <container_name>
   ```
   {: pre}
 
-**Nota**: se obtiver uma mensagem de erro, confirme se você tem [o software obrigatório](/docs/services/ObjectStorage/os_configuring.html#install-swift-client) instalado.
+**Observação**: se você receber uma mensagem de erro, confirme que o [software obrigatório](/docs/services/ObjectStorage/os_configuring.html#install-swift-client) está instalado.
 
 3. Opcional: para verificar se o contêiner foi criado, execute o comando a seguir para listar os contêineres.
 

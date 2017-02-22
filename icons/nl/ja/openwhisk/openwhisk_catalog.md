@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2016
-lastupdated: "2016-09-09"
+  years: 2016, 2017
+lastupdated: "2017-01-04"
  
 
 ---
@@ -143,7 +143,7 @@ packages
 
 
 - `dbname`: Cloudant データベースの名前。
-- `maxTriggers`: この限界に達するとトリガーの発生を停止します。デフォルトは 1000 です。最大 10,000 に設定できます。10,000 を超える値に設定しようとすると、要求は拒否されます。
+- `maxTriggers`: この限界に達するとトリガーの発生を停止します。デフォルトは無限です。
 
 1. 前に作成したパッケージ・バインディングの `changes` フィードを使用してトリガーを作成します。`/myNamespace/myCloudant` を、ご使用のパッケージ名に置き換えてください。
 
@@ -241,11 +241,10 @@ wsk activation poll
   ```
   {: screen}
 
-### Cloudant データベースからの変更イベントに関する文書の処理におけるアクション・シーケンスの使用
+### Cloudant データベースからの文書の処理を行うためのアクション・シーケンスおよび変更トリガーの使用
 
 ルールでアクション・シーケンスを使用して、Cloudant 変更イベントに関連する文書をフェッチして処理することができます。
 
-Cloudant からの文書を処理するアクションを作成します。これは、パラメーターとして文書を予期します。
 以下は、文書を処理するアクションのサンプル・コードです。
 ```
 function main(doc){
@@ -253,41 +252,36 @@ function main(doc){
 }
 ```
 {: codeblock}
+
+Cloudant からの文書を処理するアクションを作成します。
 ```
 wsk action create myAction myAction.js
 ```
 {: pre}
-データベースから文書を読み取るには、cloudant パッケージで `read` アクションを使用できます。このアクションは、アクション `myAction` とともにアクション・シーケンスに組み込むことができます。
-`read` アクションを使用してアクション・シーケンスを作成し、その後、文書を入力として予期するアクション `myAction` を呼び出します。
+
+データベースから文書を読み取るには、Cloudant パッケージから `read` アクションを使用できます。
+`read` アクションを `myAction` と組み合わせてアクション・シーケンスを作成することもできます。
 ```
 wsk action create sequenceAction --sequence /myNamespace/myCloudant/read,myAction
 ```
 {: pre}
 
-ここで、トリガーを新しいアクション `sequenceAction` と関連付けるルールを作成します。
+新規 Cloudant トリガー・イベントでアクションを活動化するルール内で、アクション `sequenceAction` を使用できます。
 ```
 wsk rule create myRule myCloudantTrigger sequenceAction
 ```
 {: pre}
 
-このアクション・シーケンスには、文書のフェッチ元のデータベース名が必要です。
-トリガーで、`dbname` のパラメーターを設定します。
-```
-wsk trigger update myCloudantTrigger --param dbname testdb
-```
-{: pre}
-
-**注** Cloudant の変更トリガーでは以前、パラメーター `includeDoc` がサポートされていましたが、これはサポートされなくなりました。
-`includeDoc` を使用して以前に作成されたトリガーは作成し直す必要があります。
-`includeDoc` パラメーターを使用せずに、トリガーを作成し直してください。
+**注:** Cloudant `changes` トリガーは、以前はパラメーター `includeDoc` を使用していましたが、これはもうサポートされなくなりました。
+  `includeDoc` を使用して以前に作成されたトリガーは作成し直す必要があります。トリガーを作成し直すには、以下のステップを実行してください。
   ```
   wsk trigger delete myCloudantTrigger
   wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb
   ```
   {: pre}
-  上記のステップに従うことで、文書を取得して既存のアクションを呼び出すアクション・シーケンスを作成できます。
-  その後、新しいアクション・シーケンスを使用するようにルールを更新してください。
 
+  上の例を使用して、変更された文書を読み取って既存のアクションを呼び出すアクション・シーケンスを作成できます。
+  もう有効ではない可能性のあるすべてのルールを忘れずに使用不可にし、アクション・シーケンス・パターンを使用して新しく作成するようにしてください。
 
 ## Alarm パッケージの使用
 {: #openwhisk_catalog_alarm}
@@ -319,13 +313,14 @@ Alarm サービスを構成して、指定した頻度でトリガー・イベ�
 - `trigger_payload`: このパラメーターの値は、
 トリガーが発生するたびにトリガーのコンテンツになります。
 
-- `maxTriggers`: この限界に達するとトリガーの発生を停止します。デフォルトは 1000 です。最大 10,000 に設定できます。10,000 を超える値に設定しようとすると、要求は拒否されます。
+- `maxTriggers`: この限界に達するとトリガーの発生を停止します。デフォルトは 1,000,000 です。無限 (-1) に設定できます。
 
 以下は、トリガー・イベントに `name` と `place` の値を指定して、2 分ごとに 1 回発生するトリガーを作成する例です。
 
   ```
   wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron "*/2 * * * *" --param trigger_payload "{\"name\":\"Odin\",\"place\":\"Asgard\"}"
   ```
+  {: pre}
 
 生成される各イベントは、`trigger_payload` の値に指定されるプロパティーをパラメーターとして含みます。この場合、各トリガー・イベントは、
 パラメーター `name=Odin` と `place=Asgard` を含みます。
@@ -406,15 +401,16 @@ Alarm サービスを構成して、指定した頻度でトリガー・イベ�
 
 ## Watson パッケージの使用
 {: #openwhisk_catalog_watson}
+
 Watson パッケージは、各種の Watson API を呼び出すために便利な方法を提供します。
 
 以下の Watson パッケージが提供されています。
 
 | パッケージ | 説明 |
 | --- | --- |
-| `/whisk.system/watson-translator`   | テキストおよび言語の識別を変換する Watson API のアクション |
-| `/whisk.system/watson-textToSpeech` | テキストをスピーチに変換する Watson API のアクション |
-| `/whisk.system/watson-speechToText` | スピーチをテキストに変換する Watson API のアクション |
+| `/whisk.system/watson-translator`   | テキスト翻訳および言語識別のパッケージ |
+| `/whisk.system/watson-textToSpeech` | テキストをスピーチに変換するパッケージ |
+| `/whisk.system/watson-speechToText` | スピーチをテキストに変換するパッケージ |
 
 **注** パッケージ `/whisk.system/watson` は現在、非推奨です。上記の新しいパッケージにマイグレーションしてください。新しいアクションでは、同じインターフェースが提供されています。
 
@@ -426,11 +422,11 @@ Watson パッケージは、各種の Watson API を呼び出すために便利�
 
 | エンティティー | タイプ  | パラメーター | 説明 |
 | --- | --- | --- | --- |
-| `/whisk.system/watson-translator` | パッケージ | username、password | テキストおよび言語の識別を変換する Watson API のアクション  |
+| `/whisk.system/watson-translator` | パッケージ | username、password | テキスト翻訳および言語識別のパッケージ  |
 | `/whisk.system/watson-translator/translator` | アクション | payload、translateFrom、translateTo、translateParam、username、password | テキストの変換 |
 | `/whisk.system/watson-translator/languageId` | アクション | payload、username、password | 言語の識別 |
 
-**注**: パッケージ `/whisk.system/watson` は、アクション `/whisk.system/watson/translate` および `/whisk.system/watson/languageId` を含め、非推奨です。
+**注:** パッケージ `/whisk.system/watson` は、アクション `/whisk.system/watson/translate` および `/whisk.system/watson/languageId` を含め、非推奨です。
 
 #### Bluemix での Watson Translator パッケージのセットアップ
 
@@ -465,7 +461,6 @@ wsk package refresh
 wsk package list
   ```
   {: pre}
-  
   ```
   packages
   /myBluemixOrg_myBluemixSpace/Bluemix_Watson_Translator_Credentials-1 private
@@ -548,10 +543,10 @@ Bluemix で OpenWhisk を使用していない場合、または Bluemix の外�
 
 | エンティティー | タイプ  | パラメーター | 説明 |
 | --- | --- | --- | --- |
-| `/whisk.system/watson-textToSpeech` | パッケージ | username、password | テキストをスピーチに変換する Watson API のアクション |
+| `/whisk.system/watson-textToSpeech` | パッケージ | username、password | テキストをスピーチに変換するパッケージ |
 | `/whisk.system/watson-textToSpeech/textToSpeech` | アクション | payload、voice、accept、encoding、username、password | テキストの音声への変換 |
 
-**注**: パッケージ `/whisk.system/watson` は、アクション `/whisk.system/watson/textToSpeech` を含め、非推奨です。
+**注:** パッケージ `/whisk.system/watson` は、アクション `/whisk.system/watson/textToSpeech` を含め、非推奨です。
 
 #### Bluemix での Watson Text to Speech パッケージのセットアップ
 
@@ -607,6 +602,7 @@ Bluemix で OpenWhisk を使用していない場合、または Bluemix の外�
 
 #### テキストをスピーチに変換
 {: #openwhisk_catalog_watson_speechtotext}
+
 `/whisk.system/watson-speechToText/textToSpeech` アクショ
 ンはテキストを音声スピーチに変換します。パラメーターは次のとおりです。
 
@@ -635,6 +631,7 @@ Bluemix で OpenWhisk を使用していない場合、または Bluemix の外�
   ```
   {: screen}
 
+
 ### Watson Speech to Text パッケージの使用
 {: #openwhisk_catalog_watson_speechtotext}
 
@@ -644,11 +641,10 @@ Bluemix で OpenWhisk を使用していない場合、または Bluemix の外�
 
 | エンティティー | タイプ  | パラメーター | 説明 |
 | --- | --- | --- | --- |
-| `/whisk.system/watson-speechToText` | パッケージ | username、password | スピーチをテキストに変換する Watson API のアクション |
+| `/whisk.system/watson-speechToText` | パッケージ | username、password | スピーチをテキストに変換するパッケージ |
 | `/whisk.system/watson-speechToText/speechToText` | アクション | payload、content_type、encoding、username、password、continuous、inactivity_timeout、interim_results、keywords、keywords_threshold、max_alternatives、model、timestamps、watson-token、word_alternatives_threshold、word_confidence、X-Watson-Learning-Opt-Out | 音声のテキストへの変換 |
 
-**注**: パッケージ `/whisk.system/watson` は、アクション `/whisk.system/watson/speechToText` を含め、非推奨です。
-
+**注:** パッケージ `/whisk.system/watson` は、アクション `/whisk.system/watson/speechToText` を含め、非推奨です。
 
 #### Bluemix での Watson Speech to Text パッケージのセットアップ
 
@@ -702,7 +698,6 @@ Bluemix で OpenWhisk を使用していない場合、または Bluemix の外�
   {: pre}
 
 
-
 #### スピーチのテキストへの変換
 
 `/whisk.system/watson-speechToText/speechToText` アクショ
@@ -746,6 +741,128 @@ Bluemix で OpenWhisk を使用していない場合、または Bluemix の外�
   {: screen}
  
  
+## Message Hub パッケージの使用
+{: #openwhisk_catalog_message_hub}
+
+このパッケージを使用すると、Bluemix 上の [Message Hub](https://developer.ibm.com/messaging/message-hub/) サービス・インスタンスにメッセージがポストされたときに反応するトリガーを作成できます。
+
+### Message Hub インスタンスを listen するトリガーの作成
+{: #openwhisk_catalog_message_hub_trigger}
+Message Hub インスタンスにメッセージがポストされたときに反応するトリガーを作成するためには、`messaging/messageHubFeed` という名前のフィードを使用する必要があります。このフィードは、以下のパラメーターをサポートします。
+
+|名前|タイプ |説明|
+|---|---|---|
+|kafka_brokers_sasl|JSON ストリング配列|このパラメーターは、Message Hub インスタンス内のブローカーを構成する `<host>:<port>` ストリングの配列です。|
+|user|ストリング|Message Hub ユーザー名|
+|password|ストリング|Message Hub パスワード|
+|topic|ストリング|トリガーを listen したいトピック|
+|kafka_admin_url|URL ストリング|Message Hub 管理 REST インターフェースの URL|
+|api_key|ストリング|Message Hub API キー|
+|isJSONData|ブール (オプション - デフォルトは false)|`true` に設定されると、フィードは、メッセージ・コンテンツをトリガー・ペイロードとして渡す前に JSON として構文解析しようとします。|
+
+このパラメーター・リストは難しそうに見えるかもしれませんが、package refresh CLI コマンドを使用して自動的に設定できます。
+
+1. OpenWhisk 用に使用している現行の組織およびスペースの下に、Message Hub サービスのインスタンスを作成します。
+
+2. listen したいトピックが既に Message Hub にあることを検証するか、メッセージを確認するために listen の対象とする新規トピック (例: `mytopic`) を作成します。
+
+2. 名前空間でパッケージを最新表示します。このリフレッシュにより、作成した Message Hub サービス・インスタンスのパッケージ・バインディングが自動的に作成されます。
+
+  ```
+wsk package refresh
+  ```
+  {: pre}
+  ```
+  created bindings:
+  Bluemix_Message_Hub_Credentials-1
+  ```
+  {: screen}
+
+  ```
+wsk package list
+  ```
+  {: pre}
+  ```
+  packages
+  /myBluemixOrg_myBluemixSpace/Bluemix_Message_Hub_Credentials-1 private
+  ```
+  {: screen}
+
+  これで、パッケージ・バインディングには、Message Hub インスタンスと関連付けられた資格情報が含まれるようになります。
+
+3. 残っている作業は、新規メッセージが Message Hub にポストされたら発生するトリガーを作成することだけです。
+
+  ```
+  wsk trigger create MyMessageHubTrigger -f /myBluemixOrg_myBluemixSpace/Bluemix_Message_Hub_Credentials-1/messageHubFeed -p topic mytopic
+  ```
+  {: pre}
+
+### Bluemix 外部での Message Hub パッケージのセットアップ
+
+Bluemix 内で OpenWhisk を使用していない場合、または、Message Hub を Bluemix の外部でセットアップしたい場合は、Message Hub サービスのパッケージ・バインディングを手動で作成する必要があります。Message Hub サービス資格情報と接続情報が必要です。
+
+- Message Hub サービス用に構成されたパッケージ・バインディングを作成します。
+
+  ```
+  wsk trigger create MyMessageHubTrigger -f /whisk.system/messaging/messageHubFeed -p kafka_brokers_sasl "[\"kafka01-prod01.messagehub.services.us-south.bluemix.net:9093\", \"kafka02-prod01.messagehub.services.us-south.bluemix.net:9093\", \"kafka03-prod01.messagehub.services.us-south.bluemix.net:9093\"]" -p topic mytopic -p user <your Message Hub user> -p password <your Message Hub password> -p kafka_admin_url https://kafka-admin-prod01.messagehub.services.us-south.bluemix.net:443 -p api_key <your API key>
+  ```
+  {: pre}
+
+### Message Hub インスタンスへのメッセージの listen
+{: #openwhisk_catalog_message_hub_listen}
+トリガー作成後、システムはメッセージング・サービス内で指定されたトピックをモニターするようになります。新規メッセージがポストされると、トリガーが発生します。
+
+そのトリガーのペイロードには、トリガーが最後に発生した以降にポストされたメッセージの配列である `messages` フィールドが含まれます。配列内の各メッセージ・オブジェクトには以下のフィールドが含まれます。
+- topic
+- partition
+- offset
+- key
+- value
+
+Kafka 用語では、これらのフィールドは自明です。ただし、`value` には特別な考慮が必要です。トリガーが作成されたときに `isJSONData` パラメーターが `false` に設定された (またはまったく設定されなかった) 場合、`value` フィールドは、ポストされたメッセージの未加工値になります。しかし、トリガーが作成されたときに `isJSONData` が `true` に設定された場合は、システムはこの値をできる限り JSON オブジェクトとして構文解析しようとします。構文解析が成功すると、その結果の JSON オブジェクトがトリガー・ペイロード内の `value` になります。
+
+例えば、`isJSONData` を `true` に設定して、`{"title": "Some string", "amount": 5, "isAwesome": true}` のメッセージがポストされた場合、トリガー・ペイロードは次のようになります。
+
+```
+{
+  "messages": [
+      {
+        "partition": 0,
+        "key": null,
+        "offset": 421760,
+        "topic": "mytopic",
+        "value": {
+            "amount": 5,
+            "isAwesome": true,
+            "title": "Some string"
+        }
+      }
+  ]
+}
+```
+
+しかし、`isJSONData` を `false` に設定して、同じメッセージ内容がポストされた場合は、トリガー・ペイロードは次のようになります。
+
+```
+{
+  "messages": [
+    {
+      "partition": 0,
+      "key": null,
+      "offset": 421761,
+      "topic": "mytopic",
+      "value": "{\"title\": \"Some string\", \"amount\": 5, \"isAwesome\": true}"
+    }
+  ]
+}
+```
+
+### メッセージのバッチ処理
+トリガー・ペイロードにはメッセージの配列が含まれます。これは、非常に高速でメッセージング・システムにメッセージが生成されている場合には、フィードはポストされたメッセージをひとまとめにして 1 回のトリガー発生にしようとすることを意味します。これによって、メッセージがトリガーにポストされるのが、より高速かつ効率的になります。
+
+トリガーによって起動されるアクションをコーディングするときには、ペイロード内のメッセージの数は技術的には無制限だが、常に 0 より大きいことに留意してください。
+
+
 ## Slack パッケージの使用
 {: #openwhisk_catalog_slack}
 

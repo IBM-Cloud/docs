@@ -39,12 +39,12 @@ Klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../i
 ## Informationen zu Ihrer IBMid bearbeiten
 {: #ibmid}
 
-Eine IBM ID ist eine einzelne ID, die Sie für die Anmeldung an Ihrem {{site.data.keyword.Bluemix_notm}}-Konto für Infrastruktur-, Service- und Anwendungsfeatures verwenden. Ihre IBM ID ist mit der ID identisch, die Sie für den Zugriff auf andere IBM Anwendungen verwenden. 
+Eine IBMid ist eine einzelne ID, die Sie für die Anmeldung an Ihrem {{site.data.keyword.Bluemix_notm}}-Konto für Infrastruktur-, Service- und Anwendungsfeatures verwenden. Ihre IBMid ist mit der ID identisch, die Sie für den Zugriff auf andere IBM Anwendungen verwenden. 
 
-Sie können Ihre IBM ID nicht ändern, aber Sie können Ihre Profilinformationen bearbeiten, die der ID zugeordnet sind. Wenn Sie Informationen zu Ihrer IBMid wie beispielsweise Ihren Namen, Ihre E-Mail-Adresse, Ihre Telefonnummer, Ihr Kennwort oder Ihren Firmennamen ändern müssen, führen Sie die folgenden Schritte aus:
+Sie können Ihre IBMid nicht ändern, aber Sie können Ihre Profilinformationen bearbeiten, die der ID zugeordnet sind. Wenn Sie Informationen zu Ihrer IBMid wie beispielsweise Ihren Namen, Ihre E-Mail-Adresse, Ihre Telefonnummer, Ihr Kennwort oder Ihren Firmennamen ändern müssen, führen Sie die folgenden Schritte aus:
 
 1. Klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../icons/i-avatar-icon.svg) &gt; **Benutzerprofil**.
-2. Klicken Sie auf **Eigene IBM ID bearbeiten**.
+2. Klicken Sie auf **Eigene IBMid bearbeiten**.
 3. Bearbeiten Sie Ihre Benutzerdaten.
 4. Klicken Sie auf **Speichern**.
 

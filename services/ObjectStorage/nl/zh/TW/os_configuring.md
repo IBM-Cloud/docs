@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -46,8 +46,8 @@ pip install python-keystoneclient
 
 若要配置 Swift 用戶端，您必須`匯出`鑑別資訊。您可以使用 Cloud Foundry 或 cURL 指令，透過 CLI [產生認證](/docs/services/ObjectStorage/os_credentials.html)，或是透過 {{site.data.keyword.Bluemix_notm}} 使用者介面來進行。用戶端會從下表的環境變數中取得資訊。
 
-
 <table>
+<caption> 表 1. 環境變數與說明</caption>
   <tr>
     <th> 環境變數</th>
     <th> 說明</th>
@@ -74,7 +74,6 @@ pip install python-keystoneclient
   </tr>
 </table>
 
-表 1：鑑別變數及說明
 
 
 若要匯出您的鑑別資訊，請輸入您的認證並執行下列指令：

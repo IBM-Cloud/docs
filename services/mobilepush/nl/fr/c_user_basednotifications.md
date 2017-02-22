@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Activation des notifications utilisateur
 {: #user_based_notifications}
-Dernière mise à jour : 6 décembre 2016
+Dernière mise à jour : 16 janvier 2017
 {: .last-updated}
 
 Les notifications de type {{site.data.keyword.mobilepushshort}} basées sur les utilisateurs sont envoyées vers les utilisateurs d'applications mobiles avec des messages personnalisés. Avec ce type de notifications, vous pouvez choisir de notifier certains individus spécifiques en fonction de leurs préférences.
@@ -20,7 +20,10 @@ Les notifications de type {{site.data.keyword.mobilepushshort}} basées sur les 
 ## Enregistrement de l'appareil avec l'ID utilisateur
 Pour activer les notifications push ciblées par ID utilisateur, prenez soin d'enregistrer l'appareil avec une zone ID utilisateur définie.     
 
-L'ID utilisateur peut être toute chaîne fournie par l'application à l'API d'enregistrement d'appareil. En général, une application mobile exécute d'abord un cycle d'authentification au cours duquel l'utilisateur d'application mobile est authentifié auprès d'un service d'authentification comme [{{site.data.keyword.amafull}}](https://console.ng.bluemix.net/docs/services/mobileaccess/index.html). Si l'authentification aboutit, l'ID de l'utilisateur authentifié est transféré vers l'API d'enregistrement d'appareil Push. 
+L'ID utilisateur peut être toute chaîne fournie par l'application à l'API d'enregistrement d'appareil. En général, une application mobile exécute d'abord un
+cycle d'authentification au cours duquel l'utilisateur d'application mobile est authentifié auprès d'un service d'authentification tel que
+[{{site.data.keyword.amafull}}
+![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.ng.bluemix.net/docs/services/mobileaccess/index.html "Icône de lien externe"){: new_window}. Si l'authentification aboutit, l'ID de l'utilisateur authentifié est transféré vers l'API d'enregistrement d'appareil Push. 
 
 ## Synchronisation de la connexion et de la déconnexion utilisateur 
 

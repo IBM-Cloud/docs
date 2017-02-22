@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-30"
+  years: 2016, 2017
+lastupdated: "2017-01-13"
 
 ---
 {:new_window: target="_blank"}
@@ -10,20 +10,25 @@ lastupdated: "2016-11-30"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# {{site.data.keyword.mobileanalytics_short}}(베타) 시작하기
+# {{site.data.keyword.mobileanalytics_short}} 시작하기
 
 {: #gettingstartedtemplate}
 
-{{site.data.keyword.mobileanalytics_full}}는 개발자, IT 관리자, 비즈니스 이해 당사자에게 모바일 앱의 성능 및 사용 실태에 대한 통찰을 제공합니다. 데스크 탑이나 태블릿에서 사용자의 모든 애플리케이션의 성능과 사용량을 모니터하십시오. 상태동향과 이상 항목을 빠르게 식별하고 문제를 해결하기 위해 세부적으로 분석하며 핵심 메트릭이 중요 임계값을 초과할 때 경보를 트리거합니다.
+{{site.data.keyword.mobileanalytics_full}}는 개발자, IT 관리자, 비즈니스 이해 당사자에게 모바일 앱의 성능 및 사용 실태에 대한 통찰을 제공합니다. {{site.data.keyword.mobileanalytics_short}}를 사용하면 다음을 수행할 수 있습니다.
+
+* 데스크 탑이나 태블릿에서 사용자의 모든 애플리케이션의 성능과 사용량을 모니터하십시오.  
+* 상태동향과 이상 항목을 빠르게 식별하고 문제를 해결하기 위해 세부적으로 분석하며 핵심 메트릭이 중요 임계값을 초과할 때 경보를 트리거합니다.
 {: shortdesc}
 
-{{site.data.keyword.mobileanalytics_short}} 서비스를 빠르게 시작하고 실행하려면 다음 단계를 따르십시오.
+**중요:** {{site.data.keyword.mobileanalytics_short}} 콘솔은 아직 Internet Explorer 브라우저를 지원하지 않으며 일부 기능이 제대로 작동하지 않을 수 있습니다. Firefox, Chrome 또는 Safari를 사용하십시오.
+
+{{site.data.keyword.mobileanalytics_short}} 서비스를 빨리 시작하고 실행하려면 다음 단계를 수행하십시오.
 
 1. {{site.data.keyword.mobileanalytics_short}} 서비스의 <!--[create an instance](https://console.{DomainName}/docs/services/reqnsi.html#req_instance)--> 인스턴스를 작성한 후에는 {{site.data.keyword.Bluemix}} 대시보드의 **서비스** 섹션에서 타일을 클릭하여 {{site.data.keyword.mobileanalytics_short}} 콘솔에 액세스할 수 있습니다. 
 
- **데모 모드**를 사용하는 {{site.data.keyword.mobileanalytics_short}} 서비스를 시작합니다. 데모 모드는 **앱 데이터** 페이지와 **경보** 페이지에서 차트를 채우므로 데이터가 표시되는 방식을 볼 수 있습니다. 사용자 자체 데이터가 있는 경우 데모 모드를 토글하여 끌 수 있습니다. {{site.data.keyword.mobileanalytics_short}} 콘솔은 데모 모드에 있는 경우 읽기 전용이므로 새 경보 정의를 작성할 수 없습니다. 
+ 다양한 보기와 차트 및 해당 값을 바로 확인하는 데 도움이 되도록 {{site.data.keyword.mobileanalytics_short}} 콘솔에 **데모 모드** 옵션을 제공하며, 이 옵션을 통해 보기와 차트에 *데모 데이터*가 표시됩니다. 데모 데이터는 서비스가 인스턴스화된 후 처음에 실행될 때 콘솔의 기본 모드입니다. 고유 애플리케이션 및 분석 데이터를 서비스에 채운 후 데모 모드를 토글 *해제*하여 애플리케이션의 데이터를 여러 차트에서 볼 수 있습니다. Mobile Analytics 콘솔은 데모 모드에 있는 경우 읽기 전용이므로 새 경보 정의를 작성할 수 없습니다.
 
-2. {{site.data.keyword.mobileanalytics_short}} [클라이언트 SDK](/docs/services/mobileanalytics/install-client-sdk.html)를 설치하십시오. 선택적으로 {{site.data.keyword.mobileanalytics_short}} [REST API](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}를 사용할 수 있습니다. 
+2. {{site.data.keyword.mobileanalytics_short}} [클라이언트 SDK](/docs/services/mobileanalytics/install-client-sdk.html)를 설치하십시오. 선택적으로 {{site.data.keyword.mobileanalytics_short}} [REST API ![외부 링크 아이콘](../../icons/launch-glyph.svg "External link icon")](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}을 사용할 수 있습니다.
 
 3. 클라이언트 SDK를 가져와서 다음 코드 스니펫을 사용하여 초기화하여 사용 분석을 기록하십시오.
 
@@ -75,6 +80,8 @@ lastupdated: "2016-11-30"
     
  **bluemixRegion** 매개변수는 사용 중인 {{site.data.keyword.Bluemix_notm}} 배치(예: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK`)를 지정합니다.  
     <!-- , or `BMSClient.Region.Sydney`.-->
+    
+ `hasUserContext`의 값을 **true** 또는 **false**로 설정하십시오. False(기본값)인 경우 각 디바이스는 활성 사용자로 계수됩니다. 
 
  #### iOS
  {: #ios-initialize}
@@ -89,6 +96,8 @@ lastupdated: "2016-11-30"
 			
    **bluemixRegion** 매개변수는 사용 중인 Bluemix 배치(예: `BMSClient.Region.usSouth` 또는 `BMSClient.Region.unitedKingdom`)를 지정합니다. 
 	<!-- , or `BMSClient.REGION_SYDNEY`. -->
+ 
+ `hasUserContext`의 값을 **true** 또는 **false**로 설정하십시오. False(기본값)인 경우 각 디바이스는 활성 사용자로 계수됩니다. 
 	
  #### Cordova
  {: #cordova-initialize}
@@ -138,7 +147,7 @@ lastupdated: "2016-11-30"
 	`BMSAnalytics.send` 메소드를 사용하여 분석 데이터를 서버에 전송하십시오. `BMSAnalytics.send` 메소드를 프로젝트에 가장 적합한 위치에 배치하십시오. 
 	
 	```
-	BMSAnalytics.send
+	BMSAnalytics.send()
 	```
 	{: codeblock}
 	
@@ -152,10 +161,10 @@ lastupdated: "2016-11-30"
 # 관련 링크
 
 ## SDK
-* [Android SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics){: new_window}  
-* [iOS SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics){: new_window}
-* [Cordova 플러그인 코어 SDK](https://www.npmjs.com/package/bms-core){: new_window}
+* [Android SDK ![외부 링크 아이콘](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics){: new_window}  
+* [iOS SDK ![외부 링크 아이콘](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics){: new_window}
+* [Cordova 플러그인 코어 SDK ![외부 링크 아이콘](../../icons/launch-glyph.svg "External link icon")](https://www.npmjs.com/package/bms-core){: new_window}
 
 ## API 참조
 {: #api}
-* [REST API](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}
+* [REST API ![외부 링크 아이콘](../../icons/launch-glyph.svg "External link icon")](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}

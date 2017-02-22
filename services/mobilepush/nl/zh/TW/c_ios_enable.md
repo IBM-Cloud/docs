@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 #啟用 iOS 應用程式來傳送 {{site.data.keyword.mobilepushshort}}
 {: #enable-push-ios-notifications}
-前次更新：2016 年 12 月 7 日
+前次更新：2017 年 1 月 16 日
 {: .last-updated}
 
 您可讓 iOS 應用程式傳送 {{site.data.keyword.mobilepushshort}} 至您的裝置。
@@ -23,41 +23,29 @@ copyright:
 
 針對現有的 Xcode 專案，您可以使用 CocoaPods 相依關係管理工具來設定 Bluemix Mobile Services Client SDK。替代方案是手動安裝 SDK。
 
-若要檢視 Swift Push Readme 檔，請移至 [Readme](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/tree/master)。
+若要檢視 Swift Push Readme 檔，請移至 [Readme ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/tree/master "外部鏈結圖示"){: new_window}。
 
 
 
 1. 在 Mac 終端機中，使用下列指令來安裝 CocoaPods。
-```
-$ sudo gem install cocoapods
+```$ sudo gem install cocoapods
 ```
 	{: codeblock}
 2. 在終端機中輸入 `pod init` 指令，以起始設定 CocoaPods。請確定您從 Xcode 專案所在的目錄執行指令。`pod init` 指令會建立 Podfile。  
-3. 在產生的 Podfile 中，新增必要 SDK 相依關係。根據您的喜好設定，複製下列其中一個 Podfile。
- 
-**Objective-C**
+3. 在產生的 Podfile 中，新增必要 SDK 相依關係。請複製下列 Podfile。
    
-```
-source 'https://github.com/CocoaPods/Specs.git'
-	# Copy the following list as is and remove the dependencies you do not need.
-	pod 'IMFCore'
-	pod 'IMFPush'
-```
-	{: codeblock}
-
-**Swift**
-   
-```
-source 'https://github.com/CocoaPods/Specs.git'
-	# Copy the following list as is and remove the dependencies you do not need.
-	use_frameworks!target 'MyApp' do
-	    platform :ios, '9.0'
+	```
+	source 'https://github.com/CocoaPods/Specs.git'
+	// Copy the following list as is and remove the dependencies you do not need.
+	use_frameworks!
+	target 'MyApp' do
+	    platform :ios, '8.0'
 	    pod 'BMSCore'
 	    pod 'BMSPush'
       pod 'BMSAnalyticsAPI'
 	end
 	```
-	{: codeblock}
+		{: codeblock}
 
 3. 從終端機中，移至您的專案資料夾，並使用 `pod update` 指令來安裝相依關係。
 
@@ -73,7 +61,7 @@ $ open App.xcworkspace
 ##使用 Carthage 新增架構
 {: #carthage}
 
-使用 [Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos) 新增專案架構。請注意，不支援 Xcode8 形式的 Carthage。
+使用 [Carthage ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos "外部鏈結圖示"){: new_window}，將架構新增至您的專案。請注意，不支援 Xcode8 形式的 Carthage。
 
 1. 在 Cartfile 中新增 `BMSPush` 架構：
 ```
@@ -81,17 +69,17 @@ github "github "ibm-bluemix-mobile-services/bms-clientsdk-swift-push" ~> 1.0"
 ```
 	{: codeblock}
 2. 執行 `carthage update` 指令。建置完成時，請將 `BMSPush.framework`、`BMSCore.framework` 及 `BMSAnalyticsAPI.framework` 拖曳至 Xcode 專案。
-3. 遵循 [Carthage](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos) 網站上的指示，以完成整合。
+3. 遵循在 [Carthage ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos "外部鏈結圖示"){: new_window}網站的指示，以完成整合。
 
 ##設定 iOS SDK
 {: ios-sdk}
 
-設定 iOS SDK，並新增下列程式碼至應用程式中的 **AppDelegate.swift** 檔案。
+設定 iOS SDK，並新增下列程式碼至應用程式中的 **AppDelegate.swift** 檔案。請注意，這也會使用 APNs 登錄。  
 ```
 func application(_ application: UIApplication,
 didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
  {
- BMSPushClient.sharedInstance.setupPush()
+ BMSPushClient.sharedInstance.initializeWithAppGUID(appGUID: "APP-GUID-HERE", clientSecret:"CLIENT-SECRET-HERE")
   }
 ```
     {: codeblock}
@@ -99,44 +87,29 @@ didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
 ##使用匯入的架構和來源資料夾
 {: using-imported-frameworks}
 
-在您的程式碼中參照 SDK。根據您的喜好設定，使用下列一種方法。
-
-**Objective-C**
+在您的程式碼中參照 SDK。請確定已具備下列必備項目。
+	- iOS 8.0 或以上版本	
+	- Xcode 7
 
 撰寫相關標頭的 `#import` 指引，例如：
+	```
+	//swift
+	import BMSCore
+	import BMSPush
+	```
+		{: codeblock}
 
-```
-	//Objective-C
-	#import <IMFCore/IMFCore.h>
-	#import <IMFPush/IMFPush.h>
-```
-	{: codeblock}
+若要讀取 Swift Push Readme 檔案，請參閱 [Readme ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/tree/master "外部鏈結圖示"){: new_window}。
 
 **附註**：使用 CocoaPods 指令 `pod install` 或 `pod update` 更新 Pods 專案時，可能會置換 Bluemix Mobile Services 來源資料夾。如果您要保留原始檔案的自訂版本，請確保先進行備份，然後再發出下列其中一個指令。
 
-**Swift**
-
-請確定已具備下列必備項目：
-
-- iOS 8.0 或以上版本
-- Xcode 7
-
-
-撰寫相關標頭的 `#import` 指引，例如：
-```
-//swift
-import BMSCore
-import BMSPush
-```
-	{: codeblock}
-若要檢視 Swift Push Readme 檔，請移至 [Readme](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/tree/master)。
 
 ##建置設定
 {: build-settings}
 
 移至 **Xcode > 建置設定 > 建置選項，然後將啟用位元碼**設為**否**。
 
-**注意**：自 iOS 9 開始，對「應用程式傳輸安全 (ATS)」特性進行的變更可能會影響您處理鑑別處理程序的方式。下列部落格文章說明這些變更的相關資訊：[ATS and Bitcode in iOS 9](https://developer.ibm.com/mobilefirstplatform/2015/09/09/ats-and-bitcode-in-ios9/) 及 [Connect your iOS 9 app to Bluemix today](https://developer.ibm.com/bluemix/2015/09/16/connect-your-ios-9-app-to-bluemix/)。
+**注意**：自 iOS 9 開始，對「應用程式傳輸安全 (ATS)」特性進行的變更可能會影響您處理鑑別處理程序的方式。下列部落格文章說明這些變更的相關資訊：[ATS and Bitcode in iOS 9![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/mobilefirstplatform/2015/09/09/ats-and-bitcode-in-ios9/ "外部鏈結圖示"){: new_window} 及 [Connect your iOS 9 app to Bluemix today![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/bluemix/2015/09/16/connect-your-ios-9-app-to-bluemix/ "外部鏈結圖示"){: new_window}。
 
 ## 起始設定 Push SDK for iOS 應用程式
 {: #enable-push-ios-notifications-initialize}
@@ -146,22 +119,11 @@ import BMSPush
 ###起始設定 Core SDK
 {: Initializing-the-core-sdk}
 
-**Objective-C**
-
-```
-// Initialize the SDK for Object-C with IBM Bluemix GUID and route
-IMFClient *imfClient = [IMFClient sharedInstance];
-[imfClient initializeWithBackendRoute:"add_your_applicationRoute_here" backendGUID:"add_your_appId_here"];
-```
-	{: codeblock}
-
-**Swift**
 
 ```
 // Initialize the Core SDK for Swift with IBM Bluemix GUID, route, and region
 let myBMSClient = BMSClient.sharedInstance
 myBMSClient.initialize(bluemixRegion: "Location where your app is hosted.")
-myBMSClient.defaultRequestTimeout = 10.0 // Timeout in seconds
 ```
 	{: codeblock}
 
@@ -183,9 +145,9 @@ myBMSClient.defaultRequestTimeout = 10.0 // Timeout in seconds
 
 指定管理應用程式的位置。`bluemixRegion` 參數指定您所使用的 Bluemix 部署。您可以使用 `BMSClient.REGION` 靜態內容設定此值，然後使用下列三個值的其中一個：
 
-- BMSClient.REGION_US_SOUTH
-- BMSClient.REGION_UK
-- BMSClient.REGION_SYDNEY
+- BMSClient.Region.usSouth 
+- BMSClient.Region.unitedKingdom
+- BMSClient.Region.sydney
 
 ####AppGUID
 {: ios-AppGUID}
@@ -194,17 +156,6 @@ myBMSClient.defaultRequestTimeout = 10.0 // Timeout in seconds
 
 ###起始設定 Client Push SDK
 {: initializing-the-client-Push-SDK}
-
-**Objective-C**
-
-```
-//Initialize client Push SDK for Objective-C
-IMFPushClient *push = [IMFPushClient sharedInstance];
-[push initializeWithAppGUID:@"appGUID" clientSecret:@"clientSecret"];
-```
-	{: codeblock}
-
-**Swift**
 
 ```
 //Initialize client Push SDK for Swift
@@ -231,74 +182,20 @@ push.initializeWithAppGUID("appGUID", clientSecret:"clientSecret")
 
 在 Bluemix® 型錄的「樣板」區段中建立後端應用程式，以自動將 {{site.data.keyword.mobilepushshort}} Service 連結至此應用程式。如果您已建立後端應用程式，請確定將應用程式連結至 {{site.data.keyword.mobilepushshort}} Service。
 
-**Objective-C**
-
-```
-//For Objective-C
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0){
-    [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:categories]];
-    [[UIApplication sharedApplication] registerForRemoteNotifications];
-    }
-    else{
-    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
-    (UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert)];
-    }
-    return YES;
-	}
-```
-	{: codeblock}
-
-**Swift**
-
-```
-//For Swift
-func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-	let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil)
-    UIApplication.sharedApplication().registerUserNotificationSettings(settings)
-    UIApplication.sharedApplication().registerForRemoteNotifications()
-	}
-```
-	{: codeblock}
 
 ###將記號傳遞至 {{site.data.keyword.mobilepushshort}}
 {: pass-token-push-notifications}
 
 從 APNs 接收到記號之後，將記號傳遞至 {{site.data.keyword.mobilepushshort}}，這是 `registerWithDeviceToken` 方法的一部分。
 
-**Objective-C**
-
-```
-//For Objective-C
--( void) application:( UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:( NSData *)deviceToken{
-    IMFClient *client = [IMFClient sharedInstance];
-	[client initializeWithBackendRoute: @"your-backend-route-here" backendGUID: @"Your-backend-GUID-here"];
-	// get Push instance
-	IMFPushClient* push = [IMFPushClient sharedInstance];
-	[push initializeWithAppGUID:@"appGUID"];
-	[push registerWithDeviceToken:deviceToken completionHandler:^(IMFResponse *response,  NSError *error) {
-    if (error){
-     NSLog(@"%@",error.description);
-    }  else
-		{
-    NSLog(@"%@",response.responseJson.description);
-		}
-	}];
- }
-```
-	{: codeblock}
-
-**Swift**
-
 從 APNs 接收到記號之後，將記號傳遞至 Push Notifications，這是 `didRegisterForRemoteNotificationsWithDeviceToken` 方法的一部分。
 
 ```
-func application (application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData){
+func application (_application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data){
    let push =  BMSPushClient.sharedInstance
-   push.initializeWithAppGUID("appGUID")
    push.registerWithDeviceToken(deviceToken) { (response, statusCode, error) -> Void in
-       if error.isEmpty {
-            print( "Response during device registration : \(response)")
+      if error.isEmpty {
+           print( "Response during device registration : \(response)")
             print( "status code during device registration : \(statusCode)")
        }
         else{
@@ -306,7 +203,7 @@ func application (application: UIApplication, didRegisterForRemoteNotificationsW
             print( "Error during device registration \n  - status code: \(statusCode) \n Error :\(error) \n")
         }
     }
-	}
+}
 ```
 	{: codeblock}
 
@@ -314,30 +211,53 @@ func application (application: UIApplication, didRegisterForRemoteNotificationsW
 ## 在 iOS 裝置上接收推送通知
 {: #enable-push-ios-notifications-receiving}
 
-您可以使用下列一種方法，在 iOS 裝置上接收推送通知。
 
-**Objective-C**
-
-若要在 iOS 裝置上接收推送通知，請將下列 Objective-C 方法新增至應用程式的應用程式委派。
+若要在 iOS 裝置上接收推送通知，請將下列 Swift 方法新增至應用程式的應用程式委派。
 
 ```
-// For Objective-C
--(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
-//userInfo dictionary will contain data sent from server.
+// For Swift
+func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) 
+{ //UserInfo dictionary will contain data sent from the server }
+```
+	{: codeblock}
+
+## 監視 iOS 裝置上的推送通知
+{: ios-monitoring}
+
+若要監視通知的現行狀態，請將下列 Swift 方法新增至應用程式的應用程式委派。
+
+```
+// Send notification status when app is opened by clicking the notifications
+func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
+ let push =  BMSPushClient.sharedInstance
+ let respJson = (userInfo as NSDictionary).value(forKey: "payload") as! String
+ let data = respJson.data(using: String.Encoding.utf8)
+ let jsonResponse:NSDictionary = try! JSONSerialization.jsonObject(with: data! , options: JSONSerialization.ReadingOptions.allowFragments) as! NSDictionary
+ let messageId:String = jsonResponse.value(forKey: "nid") as! String
+    push.sendMessageDeliveryStatus(messageId: messageId) { (res, ss, ee) in
+      print("Send message status to the Push server")
+     }
 }
 ```
 	{: codeblock}
 
-**Swift**
-
-若要在 iOS 裝置上接收推送通知，請將下列 Swift 方法新增至應用程式的應用程式委派。
 ```
-// For Swift
-func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
-//UserInfo dictionary will contain data sent from the server
-    }
+// Send notification status when the app is in background mode.
+func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+ let payLoad = ((((userInfo as NSDictionary).value(forKey: "aps") as! NSDictionary).value(forKey: "alert") as! NSDictionary).value(forKey: "body") as! NSString)
+ self.showAlert(title: "Recieved Push notifications", message: payLoad)
+ let push =  BMSPushClient.sharedInstance
+ let respJson = (userInfo as NSDictionary).value(forKey: "payload") as! String
+ let data = respJson.data(using: String.Encoding.utf8)
+ let jsonResponse:NSDictionary = try! JSONSerialization.jsonObject(with: data! , options: JSONSerialization.ReadingOptions.allowFragments) as! NSDictionary
+ let messageId:String = jsonResponse.value(forKey: "nid") as! String
+ push.sendMessageDeliveryStatus(messageId: messageId) { (res, ss, ee) in
+       completionHandler(UIBackgroundFetchResult.newData)
+   }
+}
 ```
 	{: codeblock}
+
 
 ## 傳送基本推送通知
 {: #send}
@@ -347,8 +267,7 @@ func application(application: UIApplication, didReceiveRemoteNotification userIn
 若要傳送基本推送通知，請完成下列步驟：
 
 1. 選取**傳送通知**，然後選擇**傳送至**選項來編寫訊息。支援的選項是**依標籤的裝置**、**裝置 ID**、**使用者 ID**、**Android 裝置**、**iOS 裝置**、**Web 通知**及**所有裝置**。  
-**附註**：當您選取**所有裝置**選項時，所有已訂閱 {{site.data.keyword.mobilepushshort}} 的裝置都會接收到通知。
-![通知畫面](images/tag_notification.jpg)
+**附註**：當您選取**所有裝置**選項時，所有已訂閱 {{site.data.keyword.mobilepushshort}} 的裝置都會接收到通知。![通知畫面](images/tag_notification.jpg)
 
 2. 在**訊息**欄位中，編寫訊息。視需要選擇配置選用設定。
 3. 按一下**傳送**。
@@ -389,7 +308,7 @@ let category = BMSPushNotificationActionCategory(identifierName: "category", but
 // This updates the registration to include the buttonsPass the defined category into iOS BMSPushClientOptions
 let notificationOptions = BMSPushClientOptions(categoryName: [category])
 let push = BMSPushClient.sharedInstance
-push.notificationOptions = notificationOptions
+push.initializeWithAppGUID(appGUID: "APP-GUID-HERE", clientSecret:"CLIENT-SECRET-HERE", options: notificationOptions)
 ```
 	{: codeblock}
 

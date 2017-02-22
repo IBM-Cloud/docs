@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  year: 2016
-lastupdated: "2016-06-15"
+  year: 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
 
@@ -62,8 +62,9 @@ Para iniciar o processo de autorização:
   O parâmetro `state` não está em uso por enquanto e pode permanecer vazio.
   O parâmetro `redirect_uri` é o URI para redirecionamento após a autenticação bem-sucedida ou com falha com o Facebook.
 
-1. Depois de redirecionar para o terminal de autorização, você obtém um formulário de login do
-Facebook. Insira o nome do usuário e a senha para redirecionar para o `redirect_uri`.
+1. Após o redirecionamento para o terminal de autorização, você obterá um formulário de login
+do      
+   Facebook. Insira o nome do usuário e a senha para redirecionar para o `redirect_uri`.
    A resposta obtida após o redirecionamento contém o código de autorização nos parâmetros de consulta da solicitação.
 
 1. Faça uma solicitação `POST` para o terminal de token do servidor de autorizações:

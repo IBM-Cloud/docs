@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
   
-lastupdated: "2016-10-11"
+lastupdated: "2017-01-11"
 
 ---
 
@@ -100,7 +100,7 @@ Pour vérifier la version Java utilisée par IBM Eclipse Tools for Bluemix, proc
 
 Si la machine virtuelle Java de votre plan de travail utilise la JVM 7 ou 8 d'IBM, ou une version antérieure à la JVM 8 d'Oracle 8, procédez comme suit pour passer à la JVM 8 d'Oracle :
 
-  1. Téléchargez et installez la JVM 8 d'Oracle. Voir [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window} pour plus d'informations.
+  1. Téléchargez et installez la JVM 8 d'Oracle. Voir [Java SE Downloads ![icône de lien externe](../icons/launch-glyph.svg)](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window} pour plus d'informations.
   2. Redémarrez Eclipse.
   3. Vérifiez que la propriété `eclipse.vm` pointe sur votre nouvelle installation de la JVM 8 d'Oracle.
 
@@ -161,7 +161,7 @@ Vérifiez que vous avez créé un espace dans votre organisation.  Pour créer u
 l'organisation dans laquelle créer l'espace, puis cliquez sur **Créer un espace**.
   * Dans l'interface de ligne de commande cf, tapez `cf create-space <nom_espace> -o <nom_organisation>`.
 
-Essayez à nouveau. Si ce message réapparaît, ouvrez la page de [statut Bluemix](http://ibm.biz/bluemixstatus){: new_window} pour déterminer si un service ou un composant présente un problème.
+Essayez à nouveau. Si ce message réapparaît, ouvrez la page de [statut Bluemix ![icône de lien externe](../icons/launch-glyph.svg)](http://ibm.biz/bluemixstatus){: new_window} pour déterminer si un service ou un composant présente un problème.
 
 
 
@@ -190,7 +190,7 @@ Vous ne disposez pas du niveau de droits approprié requis pour effectuer les ac
 Pour obtenir le niveau de droits approprié, appliquez l'une des méthodes suivantes : 
 {: tsResolve}
  * Sélectionnez une autre organisation et un autre espace pour laquelle ou lequel vous disposez du rôle Développeur. 
- * Demandez au responsable de l'organisation de vous attribuer le rôle Développeur ou de créer un espace, puis de vous attribuer le rôle Développeur. Pour plus d'informations, voir [Gestion des organisations et des espaces](/docs/admin/orgs_spaces.html){: new_window}.
+ * Demandez au responsable de l'organisation de vous attribuer le rôle Développeur ou de créer un espace, puis de vous attribuer le rôle Développeur. Pour plus d'informations, voir [Gestion des organisations et des espaces](/docs/admin/orgs_spaces.html).
  
 
 
@@ -213,11 +213,11 @@ Au lieu de coder en dur les données d'identification dans votre application, ut
 ```
 process.env.VCAP_SERVICES
 ```
-Pour plus d'informations sur les commandes que vous pouvez utiliser dans d'autres langages de programmation, voir [Java](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} et [Ruby](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}. 
- 
+Pour plus d'informations sur les commandes que vous pouvez utiliser dans d'autres langages de programmation, voir [Java ![icône de lien externe](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} et [Ruby ![icône de lien externe](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}.
 
- 
- 
+
+
+
 
 
 
@@ -286,7 +286,7 @@ cache du navigateur.
 
  
 
-Si vous suspectez l'arrêt d'un service {{site.data.keyword.Bluemix_notm}}, consultez d'abord la page de [statut de {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixstatus){: new_window}. Vous pouvez souhaiter utiliser le service en tant que solution palliative dans une autre région {{site.data.keyword.Bluemix_notm}}. Des informations détaillées sont disponibles à la section [Utilisation des services dans une autre région](/docs/services/reqnsi.html#cross_region_service){: new_window}. Si le statut du service est normal, essayez la procédure suivante pour résoudre le problème : 
+Si vous suspectez l'arrêt d'un service {{site.data.keyword.Bluemix_notm}}, consultez d'abord la page de [statut de {{site.data.keyword.Bluemix_notm}} ![icône de lien externe](../icons/launch-glyph.svg)](http://ibm.biz/bluemixstatus){: new_window}. Vous pouvez souhaiter utiliser le service en tant que solution palliative dans une autre région {{site.data.keyword.Bluemix_notm}}. Des informations détaillées sont disponibles à la section [Utilisation des services dans une autre région](/docs/services/reqnsi.html#cross_region_service). Si le statut du service est normal, essayez la procédure suivante pour résoudre le problème : 
 {: tsResolve}
 
   * Exécutez à nouveau l'action :
@@ -296,7 +296,7 @@ Si vous suspectez l'arrêt d'un service {{site.data.keyword.Bluemix_notm}}, cons
 unités peut éliminer diverses erreurs à l'origine de l'erreur 502. 
   * Attendez et recommencez ultérieurement. Dans certaines instances, des problèmes temporaires peuvent se produire
 avec votre fournisseur d'accès Internet ou les services {{site.data.keyword.Bluemix_notm}}. Vous pouvez attendre jusqu'à ce que les problèmes temporaires soient résolus.
-  * Si le problème existe toujours, contactez le support {{site.data.keyword.Bluemix_notm}}. Pour plus d'informations, voir [Contacter le support {{site.data.keyword.Bluemix_notm}}](/docs/support/index.html#contacting-bluemix-support){: new_window}. 
+  * Si le problème existe toujours, contactez le support {{site.data.keyword.Bluemix_notm}}. Pour plus d'informations, voir [Contacter le support {{site.data.keyword.Bluemix_notm}} ![icône de lien externe](../icons/launch-glyph.svg)](/docs/support/index.html#contacting-bluemix-support){: new_window}. 
 
 
 
@@ -322,7 +322,7 @@ Le quota de disque par défaut alloué à une application est de  1 Go. Si vous 
 
  
 Utilisez l'une des méthodes suivantes pour spécifier votre quota de disque. Le quota de disque maximal que vous pouvez spécifier est de 2 Go. Si les 2 Go ne sont toujours pas suffisants, essayez un service externe
-tel que [Object Store](/docs/services/ObjectStorage/index.html){: new_window}.
+tel que [Object Store](/docs/services/ObjectStorage/index.html).
 {: tsResolve}
 
   * Dans le fichier manifest.yml, ajoutez l'élément suivant :
@@ -348,7 +348,7 @@ Le service IBM {{site.data.keyword.mobilepushshort}} utilise le service de messa
 {: tsCauses}
 
  
-Utilisez des services de tiers qui ne sont pas basés sur le service GCM comme solution palliative, par exemple [Pushy](https://pushy.me){: new_window}, [igetui](http://www.getui.com/){: new_window} et [jpush](https://www.jpush.cn/){: new_window}.
+Utilisez des services de tiers qui ne sont pas basés sur le service GCM comme solution palliative, par exemple, [Pushy ![icône de lien externe](../icons/launch-glyph.svg)](https://pushy.me){: new_window}, [igetui ![icône de lien externe](../icons/launch-glyph.svg)](http://www.getui.com/){: new_window} et [jpush ![icône de lien externe](../icons/launch-glyph.svg)](https://www.jpush.cn/){: new_window}.
 {: tsResolve}
 
 
@@ -391,7 +391,7 @@ unbind-service <nom_app> <nom_instance_service>`.
 `cf restage <nom_app>`.
   * Pour supprimer la limite relative au nombre d'instances de service dont vous pouvez disposer, convertissez votre compte d'essai en compte
 payant. Pour des informations sur la conversion de votre compte d'essai en compte payant, voir [Comment
-changer votre plan ?](/docs/pricing/index.html#changing){: new_window}.
+changer votre plan ?](/docs/pricing/index.html#changing).
 
   
   
@@ -458,7 +458,7 @@ Vous pouvez augmenter le quota de mémoire de votre compte ou réduire la mémoi
 {: tsResolve} 
 
   * Pour augmenter le quota de mémoire de votre compte, convertissez votre compte d'essai en compte payant. Pour des informations sur la conversion
-de votre compte d'essai en compte payant, voir [Comptes payants](/docs/pricing/index.html#pay-accounts){: new_window}. 
+de votre compte d'essai en compte payant, voir [Comptes payants](/docs/pricing/index.html#pay-accounts). 
   * Pour réduire la quantité de mémoire que vos applications utilisent, servez-vous de la console {{site.data.keyword.Bluemix_notm}} ou de l'interface de ligne de commande cf.
     Si vous utilisez la console {{site.data.keyword.Bluemix_notm}}, procédez comme suit :
 	  1. Dans le tableau de bord {{site.data.keyword.Bluemix_notm}}, sélectionnez votre application. La page des détails de l'application
@@ -605,7 +605,7 @@ La fonction de débogage ne peut pas activée dans les cas suivants :
 Utilisez l'une des options suivantes pour résoudre le problème : 
 {: tsResolve}
 
-  * La pratique recommandée consiste à utiliser le pack de construction IBM Node.js pour démarrer l'application. Pour plus d'informations, voir la section sur la commande de démarrage dans la rubrique [Déploiement d'une application Node.js sur {{site.data.keyword.Bluemix_notm}}](/docs/runtimes/nodejs/index.html#nodejs_runtime){: new_window}. 
+  * La pratique recommandée consiste à utiliser le pack de construction IBM Node.js pour démarrer l'application. Pour plus d'informations, voir la section sur la commande de démarrage dans la rubrique [Déploiement d'une application Node.js sur {{site.data.keyword.Bluemix_notm}}](/docs/runtimes/nodejs/index.html#nodejs_runtime). 
   * Désactivez la commande pour votre application existante en modifiant l'attribut command dans le fichier `manifest.yml` par command: null ou en éditant votre commande push en y ajoutant `-c null`. 
   * Retirez l'attribut **command** du fichier `manifest.yml`. Supprimez ensuite l'application en cours de {{site.data.keyword.Bluemix_notm}} et insérez de nouveau l'application.
   
@@ -664,7 +664,7 @@ Si vous envoyez votre application par commande push à
 {{site.data.keyword.Bluemix_notm}} et spécifier le noeud final d'API de la région
 {{site.data.keyword.Bluemix_notm}} dans laquelle votre organisation a été créée. Pour plus d'informations sur l'utilisation des outils Eclipse, voir
 [Déploiement d'applications avec IBM Eclipse Tools for
-Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html){: new_window}.
+Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html).
   
   
 
@@ -813,7 +813,7 @@ Effectuez les opérations suivantes en fonction de l'origine du problème :
         ```
 		cf push MonNoeudJsUnique01 -p chemin_app -c "node app.js"
 		```
-	  * Utilisez le fichier [package.json](https://docs.npmjs.com/json){: new_window}. Exemple :
+	  * Utilisez le fichier [package.json ![icône de lien externe](../icons/launch-glyph.svg)](https://docs.npmjs.com/json){: new_window}. Exemple :
 	    ```
 		{
       ...
@@ -832,7 +832,7 @@ Effectuez les opérations suivantes en fonction de l'origine du problème :
         ```
 
   * Vérifiez qu'un fichier `package.json` existe dans votre application Node.js pour que le pack de construction Node.js puisse reconnaître
-l'application. Vous devez de plus placer ce fichier dans le répertoire racine de votre application.
+l'application. Vous devez de plus placer ce fichier dans le répertoire racine de votre application.	
     L'exemple suivant représente un fichier `package.json` simple :  
 	```
 	{
@@ -852,30 +852,24 @@ l'application. Vous devez de plus placer ce fichier dans le répertoire racine d
  }
     ```
 	
-Pour d'autres conseils relatifs aux applications Node.js, voir [Tips for Node.js Applications](http://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}.	
+Pour d'autres conseils relatifs aux applications Node.js, voir [Tips for Node.js Applications ![icône de lien externe](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}.	
 
 
 
 
-## Des erreurs de configuration apparaissent dans le fichier `server.xml` après l'importation d'une application
-{{site.data.keyword.Bluemix_notm}} Liberty depuis Bluemix DevOps Services dans Eclipse
+## Des erreurs de configuration apparaissent dans le fichier `server.xml` après l'importation d'une application {{site.data.keyword.Bluemix_notm}} Liberty depuis Bluemix DevOps Services dans Eclipse
 {: #ts_eclipse}
 
-Si des erreurs de configuration apparaissent dans le fichier `server.xml` après l'importation d'une application
-{{site.data.keyword.Bluemix_notm}} Liberty depuis IBM Bluemix DevOps Services dans Eclipse, il peut être nécessaire de retirer le fichier
-`server.xml` du projet. 
+Si des erreurs de configuration apparaissent dans le fichier `server.xml` après l'importation d'une application {{site.data.keyword.Bluemix_notm}} Liberty depuis IBM Bluemix DevOps Services dans Eclipse, il peut être nécessaire de retirer le fichier `server.xml` du projet. 
 
  
 
-Après avoir importé une application {{site.data.keyword.Bluemix_notm}} Liberty depuis {{site.data.keyword.Bluemix_notm}}
-DevOps Services dans Eclipse, vous constatez que le fichier `server.xml` contient des erreurs de configuration dans la vue Erreurs
-d'Eclipse. 
+Après avoir importé une application {{site.data.keyword.Bluemix_notm}} Liberty depuis {{site.data.keyword.Bluemix_notm}} DevOps Services dans Eclipse, vous constatez que le fichier `server.xml` contient des erreurs de configuration dans la vue Erreurs d'Eclipse.
 {: tsSymptoms}
 
  
 
-Le pack de construction Liberty utilise le fichier `server.xml` pour configurer l'application et génère un fichier
-`runtime-vars.xml` lorsque l'application Liberty est envoyée par commande push dans {{site.data.keyword.Bluemix_notm}}. Lorsque
+Le pack de construction Liberty utilise le fichier `server.xml` pour configurer l'application et génère un fichier `runtime-vars.xml` lorsque l'application Liberty est envoyée par commande push dans {{site.data.keyword.Bluemix_notm}}. Lorsque
 vous importez l'application dans Eclipse, le fichier `runtime-vars.xml` n'existe pas dans votre environnement local.
 {: tsCauses}
 
@@ -883,7 +877,7 @@ vous importez l'application dans Eclipse, le fichier `runtime-vars.xml` n'existe
 
 Pou résoudre ce problème, supprimez le fichier server.xml du projet. Le pack de construction crée le fichier `server.xml` de manière
 dynamique lorsque vous envoyez par commande push l'application sous forme d'application WAR. Pour
-plus d'informations, voir [Liberty for Java](/docs/runtimes/liberty/index.html){: new_window}.
+plus d'informations, voir [Liberty for Java](/docs/runtimes/liberty/index.html).
 {: tsResolve}
 	
 	
@@ -906,9 +900,7 @@ Ce problème peut se produire si des scripts (tels que le script de détection, 
 
  
 
-Vous pouvez utiliser la commande
-[git update](http://git-scm.com/docs/git-update-index){: new_window} pour activer le droit
-d'exécution pour chaque script. Par exemple, vous pouvez entrer `git update --chmod=+x script.sh`.
+Vous pouvez utiliser la commande [git update ![icône de lien externe](../icons/launch-glyph.svg)](http://git-scm.com/docs/git-update-index){: new_window} pour activer le droit d'exécution pour chaque script. Par exemple, vous pouvez entrer `git update --chmod=+x script.sh`.
 {: tsResolve}
 	
 	
@@ -932,7 +924,7 @@ Ce problème peut survenir car DevOps Services requiert un fichier `manifest.yml
 
  
 
-Pour remédier à ce problème, vous devez créer un fichier `manifest.yml`. Pour plus d'informations sur la création du fichier `manifest.yml`, voir [Manifeste d'application](/docs/manageapps/depapps.html#appmanifest){: new_window}.
+Pour remédier à ce problème, vous devez créer un fichier `manifest.yml`. Pour plus d'informations sur la création du fichier `manifest.yml`, voir [Manifeste d'application](/docs/manageapps/depapps.html#appmanifest).
 {: tsResolve}	
 	
 
@@ -1147,7 +1139,7 @@ Si vous avez configuré votre projet GitHub pour qu'il crée des liens d'éléme
 6. Vérifiez l'absence d'erreurs en consultant à nouveau l'icône d'état.
    ![Icône d'état sans erreur](images/githubResolved_small.png)
 
-Pour plus d'informations, voir [Setting up GitHub for Bluemix DevOps Services projects](https://hub.jazz.net/docs/githubhooks/){: new_window}.
+Pour plus d'informations, voir [Setting up GitHub for Bluemix DevOps Services projects ![icône de lien externe](../icons/launch-glyph.svg)](https://hub.jazz.net/docs/githubhooks/){: new_window}.
 
 
 # Traitement des incidents liés à la gestion des comptes
@@ -1177,8 +1169,7 @@ Le statut de votre compte {{site.data.keyword.Bluemix_notm}} devient inactif lor
 
  
 
-Pour réactiver votre compte, prenez contact avec le [support {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport.com){: new_window}. Dans le courrier électronique, incluez les informations
-suivantes :
+Pour réactiver votre compte, prenez contact avec le [support {{site.data.keyword.Bluemix_notm}} ![icône de lien externe](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}. Dans le courrier électronique, incluez les informations suivantes :
 {: tsResolve}
 
   * L'IBMid que vous utilisez pour vous connecter à {{site.data.keyword.Bluemix_notm}}.
@@ -1328,14 +1319,14 @@ Certains packs de construction ne sont pas configurés pour télécharger automa
 Vous pouvez utiliser des packs de construction disposant de mécanismes intégrés pour éviter de charger des composants obsolètes. Exemples de packs de construction : 
 {: tsResolve}
 
-  * [Pack de construction Java Cloud Foundry](https://github.com/cloudfoundry/java-buildpack){: new_window}. Ce pack de construction comporte un mécanisme intégré qui permet de s'assurer d'utiliser la version la plus récente. Pour plus d'informations sur le fonctionnement de ce mécanisme, voir [extending-caches.md](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}. 
-  * [Pack de construction Node.js Cloud Foundry](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}. Ce pack de construction a une fonctionnalité similaire qui utilise des variables d'environnement. Pour permettre au pack de construction Node.js de télécharger des modules de noeud sur internet à chaque fois, entrez la commande suivante dans l'interface de ligne de commande cf : 	
+  * [Pack de construction Java Cloud Foundry ![icône de lien externe](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack){: new_window}. Ce pack de construction comporte un mécanisme intégré qui permet de s'assurer d'utiliser la version la plus récente. Pour plus d'informations sur le fonctionnement de ce mécanisme, voir [extending-caches.md ![icône de lien externe](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}. 
+  * [Pack de construction Node.js Cloud Foundry ![icône de lien externe](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}. Ce pack de construction a une fonctionnalité similaire qui utilise des variables d'environnement. Pour permettre au pack de construction Node.js de télécharger des modules de noeud sur internet à chaque fois, entrez la commande suivante dans l'interface de ligne de commande cf : 	
   ```
   set NODE_MODULES_CACHE=false
   ```
 Si le pack de construction que vous utilisez ne dispose pas d'un mécanisme permettant de charger automatiquement les composants les plus récents,  vous pouvez supprimer manuellement le contenu du répertoire cache et envoyer à nouveau votre application par commande push en procédant comme suit :
-  1. Réservez une branche d'un pack de construction null, par exemple https://github.com/ryandotsmith/null-buildpack. Pour plus d'informations sur la réservation d'une branche, voir [Git Basics - Getting a Git Repository](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}.  
-  2. Ajoutez la ligne suivante au fichier `null-buildpack/bin/compile` et validez les modifications. Pour plus d'informations sur la validation des modifications, voir [Git Basics - Recording Changes to the Repository](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}.
+  1. Réservez une branche d'un pack de construction null, par exemple https://github.com/ryandotsmith/null-buildpack. Pour plus d'informations sur la réservation d'une branche, voir [Git Basics - Getting a Git Repository ![icône de lien externe](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}.  
+  2. Ajoutez la ligne suivante au fichier `null-buildpack/bin/compile` et validez les modifications. Pour plus d'informations sur la validation des modifications, voir [Git Basics - Recording Changes to the Repository ![icône de lien externe](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}.
   ```
   rm -rfv $2/*
   ```
@@ -1375,7 +1366,7 @@ Lorsque vous envoyez par commande push une application dans Bluemix à l'aide d'
 
 Dans le pack de construction PHP, le paramètre error_log est utilisé pour définir le niveau de journalisation. Par défaut, la valeur du paramètre `error_log` est **stderr notice**. L'exemple
 ci-dessous illustre la configuration du niveau de journalisation par défaut dans le fichier `nginx-defaults.conf` du pack de
-construction PHP fourni par Cloud Foundry. Pour plus d'informations, voir [cloudfoundry/php-buildpack](https://github.com/cloudfoundry/php-buildpack/blob/ff71ea41d00c1226d339e83cf2c7d6dda6c590ef/defaults/config/nginx/1.5.x/nginx-defaults.conf){: new_window}.
+construction PHP fourni par Cloud Foundry. Pour plus d'informations, voir [cloudfoundry/php-buildpack ![icône de lien externe](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/php-buildpack/blob/ff71ea41d00c1226d339e83cf2c7d6dda6c590ef/defaults/config/nginx/1.5.x/nginx-defaults.conf){: new_window}.
 {: tsCauses} 
 
 ```
@@ -1394,7 +1385,7 @@ daemon off;
 error_log stderr error;
 pid @{HOME}/nginx/logs/nginx.pid;
 ```
-Pour plus d'informations sur la modification de la configuration de journalisation par défaut, voir [error_log](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}.
+Pour plus d'informations sur la modification de la configuration de journalisation par défaut, voir [error_log ![icône de lien externe](../icons/launch-glyph.svg)](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}.
 	
 
 ## Impossible d'importer une bibliothèque Python tierce dans {{site.data.keyword.Bluemix_notm}}
@@ -1403,30 +1394,22 @@ Pour plus d'informations sur la modification de la configuration de journalisati
 Il se peut que vous ne puissiez pas importer une bibliothèque Python tierce dans {{site.data.keyword.Bluemix_notm}}. Vous pouvez résoudre le problème en ajoutant des fichiers de configuration dans le répertoire racine de votre application Python.
 
 
-Lorsque vous essayez d'importer une bibliothèque Python tierce, par
-exemple la bibliothèque `web.py`, la commande `cf push` échoue.
+Lorsque vous essayez d'importer une bibliothèque Python tierce, par exemple la bibliothèque `web.py`, la commande `cf push` échoue.
 {: tsSymptoms}
 
 
  
 
-Ce problème survient lorsque les informations de configuration pour
-l'application Python manquent.
+Ce problème survient lorsque les informations de configuration pour l'application Python manquent.
 {: tsCauses}
 
 
  
 
-Pour résoudre le problème, ajoutez un fichier `requirements.txt` et un fichier `Procfile` dans le répertoire racine
-de votre application Python. Les informations suivantes supposent que vous
-importiez la bibliothèque web.py :
+Pour résoudre le problème, ajoutez un fichier `requirements.txt` et un fichier `Procfile` dans le répertoire racine de votre application Python. Les informations suivantes supposent que vous importiez la bibliothèque web.py :
 {: tsResolve}
 
-  1. Ajoutez un fichier `requirements.txt` dans le répertoire racine de votre application Python.
-     Le fichier
-`requirements.txt` spécifie les packages de bibliothèque requis pour votre application Python ainsi que la version des packages. L'exemple
-ci-après illustre le contenu du fichier `requirements.txt`, où `web.py==0.37` indique que la version de la bibliothèque
-`web.py` qui sera téléchargée est la version 0.37 et `wsgiref==0.1.2` indique que la version de l'interface Web de
+  1. Ajoutez un fichier `requirements.txt` dans le répertoire racine de votre application Python. Le fichier `requirements.txt` spécifie les packages de bibliothèque requis pour votre application Python ainsi que la version des packages. L'exemple ci-après illustre le contenu du fichier `requirements.txt`, où `web.py==0.37` indique que la version de la bibliothèque `web.py` qui sera téléchargée est la version 0.37 et `wsgiref==0.1.2` indique que la version de l'interface Web de
 Secure Gateway requise par la bibliothèque web.py est la version 0.1.2.
 	 ```
 	 web.py==0.37

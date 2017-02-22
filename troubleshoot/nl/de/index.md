@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
   
-lastupdated: "2016-08-11"
+lastupdated: "2017-01-11"
   
 
 ---
@@ -117,13 +117,13 @@ Wenn sich Ihr Konto im Wartestatus befindet, können Sie sich nicht an {{site.da
 Wenn Sie sich für ein {{site.data.keyword.Bluemix_notm}}-Testkonto registriert haben, kann es vorkommen, dass Sie sich nicht an {{site.data.keyword.Bluemix_notm}} anmelden können. Stattdessen wird die folgende Nachricht angezeigt:
 {: tsSymptoms}
 
-<code>Your account is pending. (Ihr Konto befindet sich im Zustand 'Anstehend'.) Please wait up to 24 hours for email confirmation and also check your spam folder. (Warten Sie bitte maximal 24 Stunden auf die E-Mail-Bestätigung und überprüfen Sie auch Ihren Spamordner.) Wenn Sie trotzdem keine E-Mail-Bestätigung erhalten haben, wenden Sie sich für weitere Hilfe an den <a href="http://ibm.biz/bluemixsupport.com" target="_blank">Bluemix-Support</a>.</code>
+<code>Your account is pending. (Ihr Konto befindet sich im Zustand 'Anstehend'.) Please wait up to 24 hours for email confirmation and also check your spam folder. (Warten Sie bitte maximal 24 Stunden auf die E-Mail-Bestätigung und überprüfen Sie auch Ihren Spamordner.) If you still have not received your email confirmation, contact Bluemix Support. (Wenn Sie trotzdem keine E-Mail-Bestätigung erhalten haben, wenden Sie sich für weitere Hilfe an den <a href="http://ibm.biz/bluemixsupport.com" target="_blank">Bluemix-Support <img src="../icons/launch-glyph.svg" alt="Symbol für externen Link"></a>). </code>
 
 
 Wenn Sie sich für ein {{site.data.keyword.Bluemix_notm}}-Testkonto registriert haben, erhalten Sie eine Bestätigungs-E-Mail. Sie müssen auf den Link in dieser Bestätigungs-E-Mail klicken, um den Registrierungsprozess abzuschließen.
 {: tsCauses} 
 
-Die Bestätigungs-E-Mail wird an die E-Mail-Adresse gesendet, die Sie angegeben haben. Überprüfen Sie Ihren Posteingang und Ihren Ordner für Junk-Mail. Wenn Sie die Bestätigungs-E-Mail nicht empfangen haben, wenden Sie sich an den [{{site.data.keyword.Bluemix_notm}}-Support](http://ibm.biz/bluemixsupport.com){: new_window}.  
+Die Bestätigungs-E-Mail wird an die E-Mail-Adresse gesendet, die Sie angegeben haben. Überprüfen Sie Ihren Posteingang und Ihren Ordner für Junk-Mail. Wenn Sie die Bestätigungs-E-Mail nicht empfangen haben, wenden Sie sich an den [{{site.data.keyword.Bluemix_notm}}-Support ![Symbol für externen Link](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}.  
 {: tsResolve}
 
 
@@ -167,7 +167,7 @@ Wenn Sie nicht Benutzer zu Ihrer Organisation einladen können und zum Einladen 
   
 Wenn Sie nicht die Möglichkeit haben, Benutzer einzuladen, weil Sie ein Mitarbeiter und kein Mitglied sind, müssen Sie Ihr vorheriges {{site.data.keyword.Bluemix_notm}}-Konto löschen und anschließend eingeladen werden, als Mitglied der Organisation am Konto teilzunehmen. Um Ihr vorheriges Konto zu löschen und dem Konto als Mitglied beizutreten, führen Sie die folgenden Schritte durch: 
 
-  1. Wenden Sie sich an den [{{site.data.keyword.Bluemix_notm}} Support](http://ibm.biz/bluemixsupport){: new_window}, um ein Support-Ticket zu öffnen und die Löschung Ihres Kontos anzufordern. Wenn Sie Daten besitzen, die zu Ihrem alten Konto gehören, und die Sie speichern und in das neue Konto verschieben möchten, beziehen Sie diese Informationen in Ihre E-Mail ein. 
+  1. Wenden Sie sich an den [{{site.data.keyword.Bluemix_notm}}-Support ![Symbol für externen Link](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window}, um ein Support-Ticket zu öffnen und die Löschung Ihres Kontos anzufordern. Wenn Sie Daten besitzen, die zu Ihrem alten Konto gehören, und die Sie speichern und in das neue Konto verschieben möchten, beziehen Sie diese Informationen in Ihre E-Mail ein. 
   2. Nachdem Ihr Konto gelöscht ist, lassen Sie sich von dem Benutzer mit der Organisationsmanager-Rolle als Organisationsmanager in die Organisation einladen. Anschließend melden Sie sich über die Einladung bei {{site.data.keyword.Bluemix_notm}} an. 
 
 
@@ -218,7 +218,7 @@ Sie können nach Bedarf mindestens eine der folgenden Aktionen ausführen:
   * Von {{site.data.keyword.Bluemix_notm}} abmelden und anschließend wieder anmelden.
   * Den persönlichen Browsingmodus des Browsers verwenden. 
   * Die Cookies und den Cache des Browsers löschen.
-  * Einen anderen Browser verwenden. Informationen zu den Versionen der Browser, die von {{site.data.keyword.Bluemix_notm}} unterstützt werden, finden Sie unter [{{site.data.keyword.Bluemix_notm}} Voraussetzungen](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}.
+  * Einen anderen Browser verwenden. Informationen zu den Versionen der Browser, die von {{site.data.keyword.Bluemix_notm}} unterstützt werden, finden Sie in den [Voraussetzungen für {{site.data.keyword.Bluemix_notm}} ![Symbol für externen Link](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}.
   * Wenn Sie die cf-Befehlszeilenschnittstelle installiert haben, geben Sie den Befehl `cf apps` ein, um anzuzeigen, ob die Anwendung aktiv ist.
   
   
@@ -310,7 +310,7 @@ Führen Sie die folgenden Schritte aus, um zu überprüfen, welche Java-Version 
 
 Wenn Ihre Workbench IBM JVM 7 oder 8 verwendet bzw. eine frühere Version als Oracle JVM 8, führen Sie die folgenden Schritte aus, um zu Oracle JVM 8 zu wechseln:
 
-  1. Laden Sie Oracle JVM 8 herunter und installieren Sie es (Details hierzu finden Sie in [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window}).
+  1. Laden Sie Oracle JVM 8 herunter und installieren Sie es (Details hierzu finden Sie unter [Java SE Downloads ![Symbol für externen Link](../icons/launch-glyph.svg)](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window}).
   2. Starten Sie Eclipse erneut.
   3. Überprüfen Sie, ob die Eigenschaft `eclipse.vm` auf Ihre neue Oracle JVM 8-Installation verweist.
 
@@ -376,7 +376,7 @@ um einen Bereich zu erstellen:
   * Klicken Sie auf das Symbol {{site.data.keyword.avatar}} ![Avatarsymbol](images/account_support.svg), um das Widget 'Konto und Unterstützung' zu öffnen. Wählen Sie die Organisation aus, in der Sie den Bereich erstellen möchten, und klicken Sie anschließend auf **Bereich erstellen**.
   * Geben Sie in der Befehlszeilenschnittstelle 'cf' Folgendes ein: `cf create-space <Name des Bereichs> -o <Name der Organisation>`.
 
-Wiederholen Sie den Vorgang. Wird diese Nachricht erneut angezeigt, rufen Sie die [Bluemix-Statusseite](http://ibm.biz/bluemixstatus){: new_window} auf, um zu prüfen, ob für einen Service oder eine Komponente ein Problem vorliegt.
+Wiederholen Sie den Vorgang. Wird diese Nachricht erneut angezeigt, rufen Sie die [Bluemix-Statusseite ![Symbol für externen Link](../icons/launch-glyph.svg)](http://ibm.biz/bluemixstatus){: new_window} auf, um zu prüfen, ob für einen Service oder eine Komponente ein Problem vorliegt.
 
 
 
@@ -406,7 +406,7 @@ Sie verfügen nicht über die erforderliche Berechtigungsebene zum Ausführen de
 Verwenden Sie zum Abrufen der erforderlichen Berechtigungsebene eine der folgenden Methoden: 
 {: tsResolve}
  * Wählen Sie eine andere Organisation und einen anderen Bereich aus, für die bzw. den Sie die Rolle des Entwicklers ausfüllen. 
- * Bitten Sie den Manager der Organisation, Ihre Rolle in die eines Entwicklers zu ändern oder einen Bereich zu erstellen und Ihnen dann eine Entwicklerrolle zuzuweisen. Informationen hierzu finden Sie unter [Organisationen und Bereiche verwalten](/docs/admin/orgs_spaces.html){: new_window}.
+ * Bitten Sie den Manager der Organisation, Ihre Rolle in die eines Entwicklers zu ändern oder einen Bereich zu erstellen und Ihnen dann eine Entwicklerrolle zuzuweisen. Informationen hierzu finden Sie unter [Organisationen und Bereiche verwalten](/docs/admin/orgs_spaces.html).
  
 
  
@@ -430,7 +430,7 @@ Statt die Berechtigungsnachweise in Ihrer App fest zu codieren, verwenden Sie Ve
 ```
 process.env.VCAP_SERVICES
 ```
-Weitere Informationen zu den Befehlen, die Sie in anderen Programmsprachen verwenden können, finden Sie unter [Java](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} und [Ruby](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}. 
+Weitere Informationen zu den Befehlen, die Sie in anderen Programmsprachen verwenden können, finden Sie unter [Java ![Symbol für externen Link](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} und [Ruby ![Symbol für externen Link](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}. 
  
 
  
@@ -506,12 +506,9 @@ Fehler des Browser-Cache.
 
  
 
-Wenn Sie vermuten, dass
-ein {{site.data.keyword.Bluemix_notm}}-Service
-inaktiv ist, überprüfen Sie zunächst die
-[{{site.data.keyword.Bluemix_notm}}-Seite 'Status'](http://ibm.biz/bluemixstatus){: new_window}. Sie können, wenn Sie möchten, den Service in einer anderen {{site.data.keyword.Bluemix_notm}}-Region
+Wenn Sie vermuten, dass ein {{site.data.keyword.Bluemix_notm}}-Service inaktiv ist, überprüfen Sie zunächst die [{{site.data.keyword.Bluemix_notm}}-Statusseite ![Symbol für externen Link](../icons/launch-glyph.svg)](http://ibm.biz/bluemixstatus){: new_window}. Sie können, wenn Sie möchten, den Service in einer anderen {{site.data.keyword.Bluemix_notm}}-Region
 als Ausweichlösung verwenden. Ausführliche Informationen finden Sie in [Services
-in einer anderen Region verwenden](/docs/services/reqnsi.html#cross_region_service){: new_window}. Wenn der Status des Service normal ist,
+in einer anderen Region verwenden](/docs/services/reqnsi.html#cross_region_service). Wenn der Status des Service normal ist,
 führen Sie die folgenden Schritte aus, um das Problem zu lösen: 
 {: tsResolve}
 
@@ -524,7 +521,7 @@ und laden Sie die Seite anschließend erneut.
 können verschiedene Fehler bereinigt werden, die zu dem Fehler 502 führen. 
   * Warten Sie und wiederholen Sie den Vorgang zu einem späteren Zeitpunkt. Bei einigen Instanzen kann es in Verbindung mit
 Ihrem Internet-Service-Provider oder den {{site.data.keyword.Bluemix_notm}}-Services zu vorübergehenden Problemen kommen. Warten Sie, bis die vorübergehenden Probleme gelöst wurden.
-  * Wenn das Problem dennoch bestehen bleibt, wenden Sie sich an den {{site.data.keyword.Bluemix_notm}}-Support. Weitere Informationen finden Sie unter [Kontaktaufnahme mit dem {{site.data.keyword.Bluemix_notm}}-Support](/docs/support/index.html#contacting-bluemix-support){: new_window}. 
+  * Wenn das Problem dennoch bestehen bleibt, wenden Sie sich an den {{site.data.keyword.Bluemix_notm}}-Support. Weitere Informationen finden Sie unter [Kontaktaufnahme mit dem {{site.data.keyword.Bluemix_notm}}-Support ![Symbol für externen Link](../icons/launch-glyph.svg)](/docs/support/index.html#contacting-bluemix-support){: new_window}. 
 
 
 
@@ -551,7 +548,7 @@ Das Standardplattenkontingent, das für eine App zugeordnet wird, beträgt
 {: tsCauses}
 
  
-Verwenden Sie eine der folgenden Methoden, um Ihr Plattenkontingent anzugeben. Sie können ein maximales Plattenkontingent von 2 GB angeben. Falls 2 GB dennoch nicht genug sein sollten, setzen Sie versuchsweise einen externen Service ein, z. B. [Object Store](/docs/services/ObjectStorage/index.html){: new_window}.
+Verwenden Sie eine der folgenden Methoden, um Ihr Plattenkontingent anzugeben. Sie können ein maximales Plattenkontingent von 2 GB angeben. Falls 2 GB dennoch nicht genug sein sollten, setzen Sie versuchsweise einen externen Service ein, z. B. [Object Store](/docs/services/ObjectStorage/index.html).
 {: tsResolve}
 
   * Fügen Sie in der Datei 'manifest.yml' den folgenden Teil hinzu:
@@ -598,11 +595,11 @@ Zur Lösung dieses Problems stehen Ihnen die folgenden Möglichkeiten zur Verfü
 zurück und aktualisieren Sie die Seite. Klicken Sie erneut auf **Git hinzufügen**.
   * Ändern Sie Ihre Browsereinstellungen so, dass Cookies von Drittanbietern möglich sind, und klicken Sie erneut auf 'Git hinzufügen'. Details zur Konfiguration dieser Einstellungen
 finden Sie in der Dokumentation Ihres Browsers:
-    * [Mozilla Firefox](https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences#w_how-do-i-change-cookie-settings){: new_window}
-	* [Google
-Chrome](https://support.google.com/chrome/answer/95647){: new_window}
-	* [Apple Safari](https://support.apple.com/kb/PH17191){: new_window}
-	* [Microsoft Internet Explorer](http://windows.microsoft.com/en-us/internet-explorer/delete-manage-cookies#ie=ie-11){: new_window} Falls durch diese Ausweichlösungen das Problem nicht behoben wird, senden Sie eine E-Mail an idslogin@jazz.net.
+    * [Mozilla Firefox ![Symbol für externen Link](../icons/launch-glyph.svg)](https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences#w_how-do-i-change-cookie-settings){: new_window}
+	* [Google Chrome ![Symbol für externen Link](../icons/launch-glyph.svg)](https://support.google.com/chrome/answer/95647){: new_window}
+	* [Apple Safari ![Symbol für externen Link](../icons/launch-glyph.svg)](https://support.apple.com/kb/PH17191){: new_window}
+	* [Microsoft Internet Explorer ![Symbol für externen Link](../icons/launch-glyph.svg)](http://windows.microsoft.com/en-us/internet-explorer/delete-manage-cookies#ie=ie-11){: new_window}
+Falls das Problem durch diese Ausweichlösungen nicht behoben wird, senden Sie eine E-Mail an idslogin@jazz.net.
 
 
 
@@ -626,9 +623,7 @@ können die Android-Apps keine Push-Benachrichtigungen empfangen.
 {: tsCauses}
 
  
-Verwenden Sie Services von Drittanbietern,
-die nicht vom GCM-Service als Ausweichlösung abhängig sind, z. B. [Pushy](https://pushy.me){: new_window},
-[igetui](http://www.getui.com/){: new_window} und [jpush](https://www.jpush.cn/){: new_window}.
+Verwenden Sie Services von Drittanbietern, die nicht vom GCM-Service als Ausweichlösung abhängig sind, z. B. [Pushy ![Symbol für externen Link](../icons/launch-glyph.svg)](https://pushy.me){: new_window}, [igetui ![Symbol für externen Link](../icons/launch-glyph.svg)](http://www.getui.com/){: new_window} und [jpush ![Symbol für externen Link](../icons/launch-glyph.svg)](https://www.jpush.cn/){: new_window}.
 {: tsResolve}
 
 
@@ -663,7 +658,7 @@ Löschen Sie alle nicht benötigten Serviceinstanzen oder entfernen Sie den Gren
 	  1. Heben Sie die Bindung zwischen der Serviceinstanz und der Anwendung auf, indem Sie Folgendes eingeben: `cf unbind-service <appname> <service_instance_name>`.
 	  2. Löschen Sie die Serviceinstanz durch Eingeben von `cf delete-service <service_instance_name>`.
 	  3. Nach dem Löschen der Serviceinstanz möchten Sie möglicherweise Ihre Anwendung, an die die Serviceinstanz gebunden war, erneut bereitstellen, indem Sie `cf restage <appname>` eingeben.
-  * Zum Löschen des Grenzwerts für die Anzahl Serviceinstanzen, die für Sie bestehen können, wandeln Sie Ihr Testkonto in ein Zahlungskonto um. Informationen dazu, wie Ihr Testkonto in ein Zahlungskonto umgewandelt wird, finden Sie unter [Vorgehensweise zum Ändern des Plans](/docs/pricing/index.html#changing){: new_window}.
+  * Zum Löschen des Grenzwerts für die Anzahl Serviceinstanzen, die für Sie bestehen können, wandeln Sie Ihr Testkonto in ein Zahlungskonto um. Informationen dazu, wie Ihr Testkonto in ein Zahlungskonto umgewandelt wird, finden Sie unter [Vorgehensweise zum Ändern des Plans](/docs/pricing/index.html#changing).
 
   
   
@@ -718,12 +713,11 @@ Dieser Fehler tritt auf, wenn die für Ihre Organisation verbleibende Speicherme
 Sie können entweder das Speicherkontingent für Ihr Konto erhöhen oder den von Ihren Apps verwendeten Speicherplatz verringern.
 {: tsResolve} 
 
-  * Zum Erhöhen des Speicherkontingents für Ihr Konto wandeln Sie Ihr Testkonto in ein Zahlungskonto um. Informationen dazu, wie Ihr Testkonto in ein Zahlungskonto umgewandelt wird, finden Sie in [Zahlungskonten](/docs/pricing/index.html#pay-accounts){: new_window}. 
+  * Zum Erhöhen des Speicherkontingents für Ihr Konto wandeln Sie Ihr Testkonto in ein Zahlungskonto um. Informationen dazu, wie Ihr Testkonto in ein Zahlungskonto umgewandelt wird, finden Sie in [Zahlungskonten](/docs/pricing/index.html#pay-accounts). 
   * Zum Verringern des von Ihren Apps verwendeten Speicherplatzes verwenden Sie entweder die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle oder die cf-Befehlszeilenschnittstelle.
     Wenn Sie die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle verwenden, führen Sie die folgenden Schritte durch:
 	  1. Wählen Sie im {{site.data.keyword.Bluemix_notm}}-Dashboard Ihre Anwendung aus. Die Seite mit den Anwendungsdetails wird geöffnet.
 	  2. Im Teilfenster für die Laufzeit können Sie die maximale Hauptspeicherkapazität und/oder die Anzahl der App-Instanzen für Ihre App reduzieren. Führen Sie bei Verwendung der cf-Befehlszeilenschnittstelle folgende Schritte aus:
-	
 	  1. Überprüfen Sie, wie viel Speicherplatz für Ihre Apps verwendet wird:
 	  ```
 	  cf apps
@@ -762,7 +756,7 @@ Sie können die App manuell starten, indem Sie den folgenden Befehl in die Befeh
 ```
 cf push <appname> -p <app_path>
 ```
-Darüber hinaus können Sie die App so codieren, dass Probleme wie Ausfallzeiten, Ausnahmebedingungen und Verbindungsfehler erkannt werden und eine Recovery durchgeführt wird.
+Darüber hinaus können Sie die App so codieren, dass Probleme wie Ausfallzeiten, Ausnahmebedingungen und Verbindungsfehler erkannt werden und eine Recovery durchgeführt wird. 
 
 	  
 
@@ -863,7 +857,7 @@ Wenn Sie eine Anwendung mithilfe der cf-Befehlszeilenschnittstelle per Push-Oper
 cf api https://api.eu-gb.bluemix.net
 ```
 Wenn Sie eine Anwendung mithilfe von Eclipse Tools mit einer Push-Operation an {{site.data.keyword.Bluemix_notm}} übertragen, müssen Sie zuerst einen {{site.data.keyword.Bluemix_notm}}-Server erstellen und den API-Endpunkt der {{site.data.keyword.Bluemix_notm}}-Region angeben, in der die Organisation erstellt wurde. Weitere Informationen zur Verwendung
-der Eclipse-Tools finden Sie im Thema zur [Bereitstellung von Apps mit IBM Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html){: new_window}.  
+der Eclipse-Tools finden Sie im Thema zur [Bereitstellung von Apps mit IBM Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html).  
   
   
 
@@ -875,7 +869,7 @@ Wenn Sie eine App unter {{site.data.keyword.Bluemix_notm}} bereitstellen, kann d
 
 
 
-Wenn Sie eine App unter {{site.data.keyword.Bluemix_notm}} bereitstellen, wird die folgende Fehlernachricht angezeigt:
+Wenn Sie eine App unter {{site.data.keyword.Bluemix_notm}} bereitstellen, wird die folgende Fehlernachricht angezeigt: 
 {: tsSymptoms} 
 
 `Creating route hostname.domainname ... FAILED Server error, status code: 400, error code: 210003, message: The host is taken: hostname` (Erstellen von Route 'hostname.domänenname' ... FEHLGESCHLAGEN Serverfehler, Statuscode: 400, Fehlercode: 210003, Nachricht: Der Hostname ist vergeben: 'hostname')
@@ -1005,7 +999,7 @@ in Abhängigkeit von der Ursache durch, die zu dem Problem geführt hat:
         ```
 		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 		```
-	  * Mithilfe der Datei [package.json](https://docs.npmjs.com/json){: new_window}. Beispiel:
+	  * Mithilfe der Datei [package.json ![Symbol für externen Link](../icons/launch-glyph.svg)](https://docs.npmjs.com/json){: new_window}. Beispiel:
 	    ```
 		{
       ...
@@ -1023,7 +1017,8 @@ in Abhängigkeit von der Ursache durch, die zu dem Problem geführt hat:
   ...
         ```
 
-  * Stellen Sie sicher, dass in Ihrer Node.js-App eine Datei des Typs `package.json` existiert, damit das Node.js-Buildpack für die Erkennung der App aktiviert werden kann. Außerdem müssen Sie diese Datei in das Stammverzeichnis Ihrer App stellen.	Das folgende Beispiel zeigt eine einfache `package.json`-Datei:  
+  * Stellen Sie sicher, dass in Ihrer Node.js-App eine Datei des Typs `package.json` existiert, damit das Node.js-Buildpack für die Erkennung der App aktiviert werden kann. Außerdem müssen Sie diese Datei in das Stammverzeichnis Ihrer App stellen.	
+    Das folgende Beispiel zeigt eine einfache `package.json`-Datei:  
 	```
 	{
         "name": "MyUniqueNodejs01",
@@ -1042,8 +1037,7 @@ in Abhängigkeit von der Ursache durch, die zu dem Problem geführt hat:
  }
     ```
 	
-Weitere Tipps
-zu Node.js-Apps finden Sie unter [Tips for Node.js Applications](http://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}.	
+Weitere Tipps zu Node.js-Apps finden Sie in den [Tipps zu Node.js-Anwendungen ![Symbol für externen Link](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}.	
 
 
 
@@ -1065,7 +1059,7 @@ Das Liberty-Buildpack verwendet die Datei `server.xml` zum Konfigurieren der App
 
  
 
-Sie können dieses Problem durch Entfernen der Datei server.xml aus dem Projekt beheben. Vom Buildpack wird die Datei `server.xml` dynamisch erstellt, wenn Sie die App mit einer Push-Operation als WAR-App übertragen. Weitere Informationen finden Sie unter [Liberty for Java](/docs/runtimes/liberty/index.html){: new_window}.
+Sie können dieses Problem durch Entfernen der Datei server.xml aus dem Projekt beheben. Vom Buildpack wird die Datei `server.xml` dynamisch erstellt, wenn Sie die App mit einer Push-Operation als WAR-App übertragen. Weitere Informationen finden Sie unter [Liberty for Java](/docs/runtimes/liberty/index.html).
 {: tsResolve}
 	
 	
@@ -1085,7 +1079,7 @@ Dieses Problem kann auftreten, wenn Scripts, wie zum Beispiel die Scripts zum Id
 
  
 
-Mit dem Befehl [git update](http://git-scm.com/docs/git-update-index){: new_window} können Sie die Berechtigung für jedes einzelne Script in 'ausführbar' ändern. Sie können zum Beispiel `git update --chmod=+x script.sh` eingeben.
+Mit dem Befehl [git update ![Symbol für externen Link](../icons/launch-glyph.svg)](http://git-scm.com/docs/git-update-index){: new_window} können Sie die Berechtigung für jedes einzelne Script in 'ausführbar' ändern. Sie können zum Beispiel `git update --chmod=+x script.sh` eingeben.
 {: tsResolve}
 	
 	
@@ -1108,7 +1102,7 @@ Dieses Problem kann auftreten, weil für DevOps Services die Datei `manifest.yml
  
 
 Zum Beheben dieses Problems müssen Sie die Datei `manifest.yml` erstellen. Weitere Informationen zum Erstellen der Datei `manifest.yml` finden Sie im
-[Abschnitt zum Anwendungsmanifest](/docs/manageapps/depapps.html#appmanifest){: new_window}.
+[Abschnitt zum Anwendungsmanifest](/docs/manageapps/depapps.html#appmanifest).
 {: tsResolve}	
 	
 
@@ -1305,7 +1299,7 @@ Wenn Sie das GitHub-Projekt so konfiguriert haben, dass bei der Übertragung von
 6. Stellen Sie sicher, dass keine Fehler vorliegen, indem Sie das Statussymbol erneut überprüfen.
    ![Statussymbol ohne Fehler](images/githubResolved_small.png)
 
-Weitere Informationen finden Sie in [Setting up GitHub for Bluemix DevOps Services projects](https://hub.jazz.net/docs/githubhooks/){: new_window}.
+Weitere Informationen finden Sie unter [Setting up GitHub for Bluemix DevOps Services projects ![Symbol für externen Link](../icons/launch-glyph.svg)](https://hub.jazz.net/docs/githubhooks/){: new_window}.
 
 
 # Fehlerbehebung für die Verwaltung von Konten
@@ -1333,7 +1327,7 @@ Der Status Ihres {{site.data.keyword.Bluemix_notm}}-Kontos verändert sich in 'I
 
  
 
-Wenden Sie sich an den [{{site.data.keyword.Bluemix_notm}}-Support](http://ibm.biz/bluemixsupport.com){: new_window}, um Ihr Konto zu reaktivieren. In der E-Mail müssen die folgenden Angaben enthalten sein:
+Wenden Sie sich an den [{{site.data.keyword.Bluemix_notm}}-Support ![Symbol für externen Link](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}, um Ihr Konto zu reaktivieren. In der E-Mail müssen die folgenden Angaben enthalten sein:
 {: tsResolve}
 
   * Die IBMid, mit der Sie sich bei {{site.data.keyword.Bluemix_notm}} anmelden.
@@ -1436,7 +1430,7 @@ Es können Probleme bei der Verwendung von IBM® Bluemix™-Laufzeiten auftreten
 {: #ts_loading_bp}
 
 
-Bei einer Push-Operation für eine App können möglicherweise nicht die neuesten Buildpack-Komponenten verwendet werden. Sie können Buildpacks mit integrierten Mechanismen verwenden, die das Laden veralteter Komponenten verhindern, oder Sie können den Inhalt des Cacheverzeichnisses der App löschen, bevor Sie eine Push-Operation oder ein erneutes Staging für die App durchführen.  
+Bei einer Push-Operation für eine App können möglicherweise nicht die neuesten Buildpack-Komponenten verwendet werden. Sie können Buildpacks mit integrierten Mechanismen verwenden, die das Laden veralteter Komponenten verhindern, oder Sie können den Inhalt des Cacheverzeichnisses der App löschen, bevor Sie eine Push-Operation oder ein erneutes Staging für die App durchführen. 
 
  
 
@@ -1453,14 +1447,14 @@ Einige Buildpacks sind nicht so konfiguriert, dass sie alle aktualisierten Kompo
 Sie können Buildpacks verwenden, die über integrierte Mechanismen verfügen, mit denen das Laden veralteter Komponenten vermieden wird. Zwei Beispiele für diese Buildpacks sind nachfolgend aufgeführt: 
 {: tsResolve}
 
-  * [Cloud Foundry Java-Buildpack](https://github.com/cloudfoundry/java-buildpack){: new_window}. Dieses Buildpack verfügt über einen integrierten Mechanismus, der sicherstellt, dass die neueste Version des Buildpacks verwendet wird. Weitere Informationen zur Funktionsweise dieses Mechanismus finden Sie in [extending-caches.md](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}. 
-  * [Cloud Foundry Node.js-Buildpack](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}. Dieses Buildpack verfügt über eine ähnliche Funktionalität, die Umgebungsvariablen nutzt. Damit das Node.js-Buildpack jedes mal Knotenmodule aus dem Internet herunterladen kann, geben Sie in der cf-Befehlszeilenschnittstelle den folgenden Befehl ein: 	
+  * [Cloud Foundry Java-Buildpack ![Symbol für externen Link](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack){: new_window}. Dieses Buildpack verfügt über einen integrierten Mechanismus, der sicherstellt, dass die neueste Version des Buildpacks verwendet wird. Weitere Informationen zur Funktionsweise dieses Mechanismus finden Sie unter [extending-caches.md ![Symbol für externen Link](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}. 
+  * [Cloud Foundry Node.js-Buildpack ![Symbol für externen Link](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}. Dieses Buildpack verfügt über eine ähnliche Funktionalität, die Umgebungsvariablen nutzt. Damit das Node.js-Buildpack jedes mal Knotenmodule aus dem Internet herunterladen kann, geben Sie in der cf-Befehlszeilenschnittstelle den folgenden Befehl ein: 	
   ```
   set NODE_MODULES_CACHE=false
   ```
 Wenn das verwendete Buildpack keinen Mechanismus zum automatischen Laden der neuesten Komponenten bereitstellt, können Sie den Inhalt des Cacheverzeichnisses manuell löschen und eine Push-Operation für Ihre App durchführen, indem Sie die folgenden Schritte ausführen:
-  1. Checken Sie eine Verzweigung eines Null-Buildpacks aus, z. B. https://github.com/ryandotsmith/null-buildpack. Informationen zum Auschecken einer Verzweigung finden Sie in [Git Basics - Getting a Git Repository](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}.  
-  2. Fügen Sie die folgende Zeile zur Datei `null-buildpack/bin/compile` hinzu und schreiben Sie die Änderungen fest. Informationen zum Festschreiben von Änderungen finden Sie in [Git Basics - Recording Changes to the Repository](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}.
+  1. Checken Sie eine Verzweigung eines Null-Buildpacks aus, z. B. https://github.com/ryandotsmith/null-buildpack. Informationen zum Auschecken einer Verzweigung finden Sie unter [Git Basics - Getting a Git Repository ![Symbol für externen Link](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}.  
+  2. Fügen Sie die folgende Zeile zur Datei `null-buildpack/bin/compile` hinzu und schreiben Sie die Änderungen fest. Informationen zum Festschreiben von Änderungen finden Sie unter [Git Basics - Recording Changes to the Repository ![Symbol für externen Link](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}.
   ```
   rm -rfv $2/*
   ```
@@ -1495,7 +1489,7 @@ Wenn Sie eine Anwendung per Push-Operation an Bluemix übertragen, indem Sie ein
 
 
 
-Im PHP-Buildpack wird der Parameter 'error_log' zum Definieren der Protokollstufe verwendet. Der Wert des Parameters `error_log` lautet standardmäßig **stderr notice**. Das folgende Beispiel zeigt die Standardkonfiguration für die Protokollstufe in der Datei `nginx-defaults.conf` des von Cloud Foundry bereitgestellten PHP-Buildpacks. Weitere Informationen finden Sie unter [cloudfoundry/php-buildpack](https://github.com/cloudfoundry/php-buildpack/blob/ff71ea41d00c1226d339e83cf2c7d6dda6c590ef/defaults/config/nginx/1.5.x/nginx-defaults.conf){: new_window}.
+Im PHP-Buildpack wird der Parameter 'error_log' zum Definieren der Protokollstufe verwendet. Der Wert des Parameters `error_log` lautet standardmäßig **stderr notice**. Das folgende Beispiel zeigt die Standardkonfiguration für die Protokollstufe in der Datei `nginx-defaults.conf` des von Cloud Foundry bereitgestellten PHP-Buildpacks. Weitere Informationen finden Sie unter [cloudfoundry/php-buildpack ![Symbol für externen Link](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/php-buildpack/blob/ff71ea41d00c1226d339e83cf2c7d6dda6c590ef/defaults/config/nginx/1.5.x/nginx-defaults.conf){: new_window}.
 {: tsCauses} 
 
 ```
@@ -1514,7 +1508,7 @@ daemon off;
 error_log stderr error;
 pid @{HOME}/nginx/logs/nginx.pid;
 ```
-Weitere Informationen dazu, wie die Standardkonfiguration für die Protokollierung geändert wird, finden Sie unter [error_log](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}.
+Weitere Informationen dazu, wie die Standardkonfiguration für die Protokollierung geändert wird, finden Sie unter [error_log ![Symbol für externen Link](../icons/launch-glyph.svg)](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}.
 	
 
 ## Importieren der Python-Bibliothek eines Drittanbieters in {{site.data.keyword.Bluemix_notm}} nicht möglich

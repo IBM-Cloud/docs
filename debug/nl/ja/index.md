@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
   
-lastupdated: "2016-10-23"
+lastupdated: "2017-01-11"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2016-10-23"
 
 ログは、ジョブが正常に実行されているか失敗しているかなどの情報を提供します。また、問題の原因のデバッグおよび判別に使用できる関連情報も提供します。
 
-ログは固定フォーマットで提供されます。詳細ログの場合、ログをフィルターに掛けたり、外部ロギング・ホストを使用してログを保管および処理したりできます。ログのフォーマット、ログの表示とフィルター処理、および外部ロギングの構成について詳しくは、『[Cloud Foundry で実行されているアプリのロギング](/docs/monitor_log/monitoringandlogging.html#logging_for_bluemix_apps){: new_window}』を参照してください。
+ログは固定フォーマットで提供されます。詳細ログの場合、ログをフィルターに掛けたり、外部ロギング・ホストを使用してログを保管および処理したりできます。ログのフォーマット、ログの表示とフィルター処理、および外部ロギングの構成について詳しくは、『[Cloud Foundry で実行されているアプリのロギング](/docs/monitor_log/monitoringandlogging.html#logging_for_bluemix_apps)』を参照してください。
 
 
 ## ステージング・エラーのデバッグ
@@ -34,17 +34,17 @@ lastupdated: "2016-10-23"
 を究明し、問題から復旧することができます。Bluemix アプリケーションのログの表示方法につい
 て詳しくは、
 [『ロ
-グの表示』](/docs/monitor_log/monitoringandlogging.html#viewing_logs){: new_window}を参照してください。
+グの表示』](/docs/monitor_log/monitoringandlogging.html#viewing_logs)を参照してください。
 
 {{site.data.keyword.Bluemix_notm}} 上でアプリが失敗する
 場合の原因を理解するには、アプリがどのように
 {{site.data.keyword.Bluemix_notm}} にデプロイされ、実行される
 かを把握する必要があります。詳細については、[「アプリケーション・デプロイメント (Application
-deployment)」](/docs/manageapps/depapps.html#appdeploy){: new_window}を参照してください。
+deployment)」](/docs/manageapps/depapps.html#appdeploy)を参照してください。
 
 
 以下の手順は、`cf
-logs` コマンドを使用してステージング・エラーをデバッグする方法を示しています。以下のステップを実行する前に、cf コマンド・ライン・インターフェースがインストール済みであることを確認してください。cf コマンド・ライン・インターフェースのインストールについて詳しくは、[「cf コマンド・ライン・インターフェースのインストール」](/docs/starters/install_cli.html){: new_window}を参照してください。
+logs` コマンドを使用してステージング・エラーをデバッグする方法を示しています。以下のステップを実行する前に、cf コマンド・ライン・インターフェースがインストール済みであることを確認してください。cf コマンド・ライン・インターフェースのインストールについて詳しくは、[「cf コマンド・ライン・インターフェースのインストール」](/docs/starters/install_cli.html)を参照してください。
 
   1. cf コマンド・ライン・インターフェースに次のコードを入力して、{{site.data.keyword.Bluemix_notm}} に接続します。
      ```
@@ -125,13 +125,12 @@ Node.js アプリケーションに対し、DEA は `package.json` ファイル�
 特に、STDOUT および STDERR へのロギングを使用可能にできます。
 {{site.data.keyword.Bluemix_notm}} 組み込みビルドパックを使用してデプロイされたアプリケーション用のログ・ファイルの構成方法について詳しくは、以下のリストを参照してください。
 
-  * Liberty for Java™ アプリケーションの場合は、『[Liberty Profile: Logging and Trace](http://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/rwlp_logging.html){: new_window}』を参照してください。
-  * Node.js アプリケーションの場合は、[「How to log in node.js」](http://docs.nodejitsu.com/articles/intermediate/how-to-log){: new_window}を参照してください。
-  * PHP アプリケーションの場合は、 『[error_log](http://php.net/manual/en/function.error-log.php){: new_window}』を参照してください。
-  * Python アプリケーションの場合は、 「[Logging
-HOWTO](https://docs.python.org/2/howto/logging.html){: new_window}」を参照してください。
-  * Ruby on Rails アプリケーションの場合は、[「The Logger」](http://guides.rubyonrails.org/debugging_rails_applications.html#the-logger){: new_window}を参照してください。
-  * Ruby Sinatra アプリケーションの場合は、[「Logging」](http://www.sinatrarb.com/intro.html#Logging){: new_window}を参照してください。
+  * Liberty for Java™ アプリケーションの場合、[Liberty Profile: Logging and Trace ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/rwlp_logging.html){: new_window} を参照してください。
+  * Node.js アプリケーションの場合、[How to log in node.js ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://docs.nodejitsu.com/articles/intermediate/how-to-log){: new_window} を参照してください。
+  * PHP アプリケーションの場合、[error_log ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://php.net/manual/en/function.error-log.php){: new_window} を参照してください。
+  * Python アプリケーションの場合、[Logging HOWTO ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://docs.python.org/2/howto/logging.html){: new_window} を参照してください。
+  * Ruby on Rails アプリケーションの場合、[The Logger ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://guides.rubyonrails.org/debugging_rails_applications.html#the-logger){: new_window} を参照してください。
+  * Ruby Sinatra アプリケーションの場合、[Logging ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://www.sinatrarb.com/intro.html#Logging){: new_window} を参照してください。
 
 cf コマンド・ライン・インターフェースに `cf logs appname --recent` と入力すると、最新のログのみが表示されます。以前に発生したエラーのログを表示するには、すべてのログを取得してエラーを検索する必要があります。ご使用のアプリケーションのログをすべて取得するには、以下のいずれかの方法を使用して下さい。
 <dl>
@@ -172,12 +171,12 @@ SystemErr のエントリーをそれぞれ探してください。
 コマンドを使用して、問題を解決するためのさらなるヒントを検索すること
 ができます。*cf logs* コマンドの使用方法について詳しくは、
 [
-『コマンド・ライン・インターフェースからのログの表示』](../monitor_log/monitoringandlogging.html#viewing_logs_cli){: new_window}を参照
+『コマンド・ライン・インターフェースからのログの表示』](/docs/monitor_log/monitoringandlogging.html#viewing_logs_cli)を参照
 してください。
 
   * {{site.data.keyword.Bluemix_notm}} コンソール、DevOps Delivery Pipeline、または Travis-CI のような GUI からデプロイされた新規コードの場合は、インターフェースからログを確認します。例えば、{{site.data.keyword.Bluemix_notm}} コンソールから新規コードをデプロイする場合は、ダッシュボードに移動し、アプリを見つけてから、ログを表示してヒントを確認します。{{site.data.keyword.Bluemix_notm}} コンソールからログを表示する方法について詳しくは、
 [
-『Bluemix ダッシュボードからのログの表示』](../monitor_log/monitoringandlogging.html#viewing_logs_UI){: new_window}を参照してください。
+『Bluemix ダッシュボードからのログの表示』](/docs/monitor_log/monitoringandlogging.html#viewing_logs_UI)を参照してください。
 
 
 # 関連リンク
@@ -186,11 +185,11 @@ SystemErr のエントリーをそれぞれ探してください。
 ## 一般
 {: #general}
 
-  * [Droplet Execution Agent (DEA)](http://docs.cloudfoundry.org/concepts/architecture/execution-agent.html){: new_window}
-  * [IBM Monitoring and Analytics for Bluemix サービス概説](../services/monana/index.html#gettingstartedtemplate){: new_window}
-  * [Bluemix の動作](../overview/whatisbluemix.html#howwork){: new_window}
-  * [cf コマンド・ツールのインストール](../starters/install_cli.html){: new_window}
-  * [ログの表示](../monitor_log/monitoringandlogging.html#viewing_logs){: new_window}
+  * [Droplet Execution Agent (DEA) ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/concepts/architecture/execution-agent.html){: new_window}
+  * [IBM Monitoring and Analytics for Bluemix サービス概説](/docs/services/monana/index.html#gettingstartedtemplate)
+  * [Bluemix の動作](/docs/overview/whatisbluemix.html#howwork)
+  * [cf コマンド・ツールのインストール](/docs/starters/install_cli.html)
+  * [ログの表示](/docs/monitor_log/monitoringandlogging.html#viewing_logs)
 
   
   

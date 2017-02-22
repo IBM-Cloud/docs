@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2016, 2017
 lastupdated: "2016-09-09"
 
 ---
@@ -12,7 +12,7 @@ lastupdated: "2016-09-09"
 {:screen: .screen}
 {:pre: .pre}
 
-# {{site.data.keyword.openwhisk_short}} (Beta) 入门
+# {{site.data.keyword.openwhisk_short}} 入门
 
 
 {{site.data.keyword.openwhisk}} 是一种分布式事件驱动型计算服务，也称为无服务器计算或功能即服务 (FaaS)。{{site.data.keyword.openwhisk_short}} 从 Web 或移动应用程序通过 HTTP 运行应用程序逻辑来响应事件或直接调用。事件可以通过 Bluemix 服务（如 Cloudant）提供，也可以从外部源提供。开发者可以专注于编写应用程序逻辑，以及创建按需执行的操作。执行操作的速率始终与事件速率相匹配，从而产生固有的扩展和弹性以及最佳利用率。您只需为您使用的内容付费，而且不必管理服务器。您也可以获取[源代码](https://github.com/openwhisk/openwhisk)，然后自行运行系统。
@@ -133,7 +133,7 @@ wsk action invoke hello --blocking --result --param name Fred
 * [REST API](https://new-console.{DomainName}/apidocs/98)
 
 # 相关链接
-{: #rellinks}
+{: #rellinks notoc}
 
 ## API 参考
 {: #api}

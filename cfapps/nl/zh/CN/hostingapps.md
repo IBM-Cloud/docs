@@ -1,16 +1,16 @@
 ---
 
- 
+
 
 copyright:
 
-  years: 2015，2016
+  years: 2015，2017
 
-lastupdated: "2016-05-09" 
+lastupdated: "2016-05-09"
 
 ---
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -76,14 +76,14 @@ lastupdated: "2016-05-09"
 
   至少应将应用程序安装脚本化为一组独立于操作系统的统一脚本。尽量确保应用程序安装足够小且可移植，以适应不同的自动化方法。此外，尽可能减少应用程序安装需要的依赖关系。
 
-有关云就绪型应用程序的更多信息，请参阅 [The 12-factor application](http://12factor.net/){:new_window}。
+有关云就绪型应用程序的更多信息，请参阅 [The 12-factor application ![外部链接图标](../icons/launch-glyph.svg)](http://12factor.net/){: new_window}。
 
 ##迁移应用程序
 {: #ht_hostapp}
 
 您可以将应用程序以递增方式迁移到 {{site.data.keyword.Bluemix_notm}} 中，而不是一下子将应用程序完全转移到云环境中。您可以先迁移应用程序的一部分，然后使用 Cloud Integration 服务来连接到现有数据或记录系统。
 
-在云应用程序中，可能需要访问后端数据或服务，例如记录系统。在 {{site.data.keyword.Bluemix_notm}} 中，可以使用 Secure Gateway 服务在 {{site.data.keyword.Bluemix_notm}} 组织和企业后端网络之间建立一条安全的隧道。该服务支持 {{site.data.keyword.Bluemix_notm}} 上的应用程序访问后端网络的数据和服务。有关详细信息，请参阅 [Reaching enterprise backend with Bluemix Secure Gateway via console](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){:new_window}。
+在云应用程序中，可能需要访问后端数据或服务，例如记录系统。在 {{site.data.keyword.Bluemix_notm}} 中，可以使用 Secure Gateway 服务在 {{site.data.keyword.Bluemix_notm}} 组织和企业后端网络之间建立一条安全的隧道。该服务支持 {{site.data.keyword.Bluemix_notm}} 上的应用程序访问后端网络的数据和服务。有关详细信息，请参阅 [Reaching enterprise backend with Bluemix Secure Gateway via console ![外部链接图标](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window}。
 
 要将应用程序作为 Cloud Foundry 应用程序部署到 {{site.data.keyword.Bluemix_notm}}，请从 {{site.data.keyword.Bluemix_notm}}“目录”中选择运行时。运行时包含 Hello World 入门模板应用程序，您可以将其替换为自己的应用程序。如果找不到入门模板来提供所需的运行时，那么可以通过在 cf push 命令中使用 -b 选项，将 Cloud Foundry 兼容的定制 buildpack 添加到 {{site.data.keyword.Bluemix_notm}} 中。有关详细信息，请参阅[使用社区 buildpack](/docs/cfapps/byob.html)。
 
@@ -166,7 +166,7 @@ services = JSON.parse(ENV['VCAP_SERVICES'], :symbolize_names => true)
             end
           end
         end.flatten!.first
-```		
+```
 {:codeblock}
 
 要确保应用程序可以在本地环境中运行，请在针对 {{site.data.keyword.Bluemix_notm}} 修改应用程序后，检查是否存在为所有 {{site.data.keyword.Bluemix_notm}} Cloud Foundry 应用程序设置的 VCAP_SERVICES 环境变量。
@@ -182,5 +182,5 @@ services = JSON.parse(ENV['VCAP_SERVICES'], :symbolize_names => true)
 * [虚拟机](/docs/virtualmachines/vm_index.html)
 * [Delivery Pipeline 入门](/docs/services/DeliveryPipeline/index.html)
 * [使用 IBM Eclipse Tools for Bluemix 部署应用程序](/docs/manageapps/eclipsetools/eclipsetools.html)
-* [twelve-factor app](http://12factor.net/){:new_window}
-* [Reaching enterprise backend with Bluemix Secure Gateway via console](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){:new_window}
+* [The twelve-factor app ![外部链接图标](../icons/launch-glyph.svg)](http://12factor.net/){: new_window}
+* [Reaching enterprise backend with Bluemix Secure Gateway via console ![外部链接图标](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window}。

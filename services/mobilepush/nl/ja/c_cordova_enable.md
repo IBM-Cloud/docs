@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Cordova アプリケーションによるプッシュ通知受け取りの可能化
 {: #cordova_enable}
-最終更新日: 2016 年 11 月 06 日
+最終更新日: 2017 年 1 月 18 日
 {: .last-updated}
 
 Cordova は、JavaScript、CSS、および HTML を使用したハイブリッド・アプリケーションの構築用プラットフォームです。
@@ -29,14 +29,13 @@ Cordova アプリケーションをさらに開発するために、クライア
 
 1. 最新バージョンの Android Studio SDK と Xcode をダウンロードします。
 1. エミュレーターをセットアップします。Android Studio では、Google Play API をサポートするエミュレーターを使用します。
-1. Git のコマンド・ライン・ツールをインストールします。Windows では、必ず **「Windows コマンド・プロンプトから Git を実行する (Run Git from the Window Command Prompt)」**オプションを選択してください。このツールのダウンロードとインストールの方法については、[Git](https://git-scm.com/downloads) を参照してください。
-1. Node.js と Node Package Manager (NPM) ツールをインストールします。NPM コマンド・ライン・ツールは Node.js とバンドルされています。Node.js のダウンロードとインストールの方法については、[Node.js](https://nodejs.org/en/download/) を参照してください。
-1. コマンド・ラインから、**npm install -g cordova** コマンドを使用して、Cordova コマンド・ライン・ツールをインストールします。これは、Cordova の Push プラグインを使用するために必要です。Cordova のインストールと Cordova アプリのセットアップの方法については、[Cordova Apache](https://cordova.apache.org/#getstarted) を参照してください。詳しくは、Cordova プッシュ・プラグインの [Readme ファイル](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push)を参照してください。
+1. Git のコマンド・ライン・ツールをインストールします。Windows では、必ず **「Windows コマンド・プロンプトから Git を実行する (Run Git from the Window Command Prompt)」**オプションを選択してください。このツールのダウンロードとインストールの方法については、[Git ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://git-scm.com/downloads "外部リンク・アイコン"){: new_window}を参照してください。
+1. Node.js と Node Package Manager (NPM) ツールをインストールします。NPM コマンド・ライン・ツールは Node.js とバンドルされています。Node.js のダウンロードとインストールの方法については、[Node.js ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://nodejs.org/en/download/ "外部リンク・アイコン"){: new_window}を参照してください。
+1. コマンド・ラインから、**npm install -g cordova** コマンドを使用して、Cordova コマンド・ライン・ツールをインストールします。これは、Cordova の Push プラグインを使用するために必要です。Cordova をインストールして Cordova アプリをセットアップする方法については、[Apache Cordova  ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cordova.apache.org/#getstarted "外部リンク・アイコン"){: new_window}を参照してください。詳細については、Cordova プッシュ・プラグインの [Readme ファイル![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push "外部リンク・アイコン"){: new_window}を参照してください。
 1. Cordova アプリを作成するフォルダーに移動し、次のコマンドを実行して Cordova アプリケーションを作成します。
 既存の Cordova アプリがある場合は、ステップ 3 に進みます。
 
-```
-cordova create your_app_name
+```cordova create your_app_name
 	cd your_app_name
 ```
 	{: codeblock}
@@ -49,24 +48,26 @@ cordova create your_app_name
 
 1. サポートされる最低レベルの API またはデプロイメント・ターゲット (Deployment Target) の宣言を、Cordova アプリケーションの config.xml ファイルに追加します。minSdkVersion の値は、15 より高くなければなりません。targetSdkVersion の値は、常に、Google から入手可能な最新の Android SDK を反映している必要があります。
 	
-	* Android - ご使用のエディターで config.xml ファイルを開き、`<platform name="android">` エレメントを最低レベルのターゲット SDK バージョンに更新し、
+	* Android - ご使用のエディターで **config.xml** ファイルを開き、以下のように、最低 SDK バージョンとターゲット SDK バージョンで `<platform name="android">` エレメントを更新します。
 
-```
-< !-- add deployment target declaration -->
-デプロイメント・ターゲット宣言 <preference name="android-minSdkVersion" value="15" />
-  <preference name="android-targetSdkVersion" value="23" />
-</platform> を追加します。
-```
-    {: codeblock}
+	```
+	<platform name="android">
+    	<preference name="android-minSdkVersion" value="15" />
+    	<preference name="android-targetSdkVersion" value="23" />
+    	<!-- add minimum and target Android API level declaration -->
+	</platform> 
+	```
+    	{: codeblock}
 
    * iOS - <platform name="ios"> エレメントを、以下のデプロイメント・ターゲット宣言を使用して更新します。
 
-```
-<platform name ="ios">
-<preference name=deployment-target" value="8.0" /> <!-- other properties -->
-</ platform>
-```
-	{: codeblock}
+	```
+	<platform name="ios">
+	    <preference name="deployment-target" value="8.0" />
+	    <!-- add deployment target declaration -->
+	</platform>
+	```
+		{: codeblock}
 
 1. Cordova コマンド・ライン・インターフェース (CLI) から、以下のコマンドを使用して、プラットフォーム (iOS、Android、またはその両方) を追加します。
 ```
@@ -89,13 +90,21 @@ bms-push <version> "BMSPush"
 ```
 	{: codeblock}
 
-1. (iOS のみ) - iOS 開発環境を構成します。
+1. iOS 開発環境を構成します。
 2. Xcode を使用してアプリケーションをビルドおよび実行します。
-1. (Android のみ)- コマンド **cordova build android** を使用して、Android プロジェクトをビルドします。
-
-	**注**: Android Studio でプロジェクトを開く前に、Cordova CLI を使用して Cordova アプリケーションをビルドしてください。これは、ビルド・エラーの回避に有効です。
-
-## Cordova プラグインの初期化
+1. Firebase `google-services.json` for android をダウンロードし、Cordova プロジェクトのルート・フォルダー、[your-app-name]/platforms/android に置きます。
+	1. `[your-app-name]/platforms/android` に移動します。
+	2. ファイル `build.gradle` (パス : platform > android > build.gradle) を開きます。
+	3. `build.gradle` ファイル内で `buildscript` テキストを検索します。
+	4. クラスパス行の後に、classpath 'com.google.gms:google-services:3.0.0' という行を追加します。
+	5. 次に、「dependencies」を検索します。`compile` というテキストがある場所の dependencies を選択します。そして、その dependencies が終了している場所のすぐ後に、次の行を追加します :apply plugin: 'com.google.gms.google-services'。
+	6. Cordova Android プロジェクトの準備とビルド
+		```
+		cordova prepare android
+		cordova build android
+		```
+			{: codeblock}
+	**注**: Android Studio でプロジェクトを開く前に、Cordova CLI を使用して Cordova アプリケーションをビルドしてください。これは、ビルド・エラーの回避に有効です。## Cordova プラグインの初期化
 {: #cordova_initialize}
 
 {{site.data.keyword.mobilepushshort}}サービスの Cordova プラグインを使用するには、事前に、アプリケーション経路とアプリケーション GUID を受け渡すことでプラグインを初期化しておく必要があります。プラグインを初期化したら、Bluemix ダッシュボードで作成したサーバー・アプリに接続することができます。Cordova プラグインは、Cordova アプリが Bluemix サービスと通信できるようにするための Android および iOS のクライアント SDK のラッパーです。
@@ -103,10 +112,19 @@ bms-push <version> "BMSPush"
 1. 以下のコード・スニペットをメイン JavaScript ファイル (通常、**www/js** ディレクトリーの下にある) にコピー・アンド・ペーストして、BMSClient を初期化します。
 
 ```
-onDeviceReady: function() {
-app.receivedEvent('deviceready');
-BMSClient.initialize("YOUR APP REGION");
-    }
+onDeviceReady: function() {app.receivedEvent('deviceready');
+	BMSClient.initialize("YOUR APP REGION");
+	var category =  {};
+	BMSPush.initialize(appGUID,clientSecret,category);
+	var success = function(message) { console.log("Success: " + message); };
+	var failure = function(message) { console.log("Error: " + message); };
+	BMSPush.registerDevice({}, success, failure);
+	var showNotification = function(notif)
+	{
+	alert(JSON.stringify(notif));
+	};
+	BMSPush.registerNotificationsCallback(showNotification);
+    } 
 ```
 	{: codeblock}
 
@@ -158,27 +176,6 @@ BMSPush.registerDevice({}, success, failure);
 BMSPush.registerNotificationsCallback(showNotification);
 ```
 	{: codeblock}
-
-### Objective-C
-{: #cordova_register_objective}
-アプリケーション代行クラスに次の Objective-C コード・スニペットを追加します。
-
-
-```
-// Register the device token with Bluemix Push Notification Service
-	- (void)application:(UIApplication *)application
-     didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
-       [[CDVBMSPush sharedInstance] didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
-}
-// Handle error when failed to register device token with APNs
-	- (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error {
-   [[CDVBMSPush sharedInstance] didFailToRegisterForRemoteNotificationsWithError:error];
-}
-```
-	{: codeblock}
-
-###Swift
-{: #cordova_register_swift}
 
 アプリケーション代行クラスに次の Swift コード・スニペットを追加します。
 
@@ -263,32 +260,6 @@ action-loc-key - このストリングは、現行ローカリゼーションに
 * **badge** - アプリ・アイコンのバッジとして表示する数。このプロパティーがないと、バッジは変更されません。バッジを削除するには、このプロパティーの値を 0 に設定します。
 * **sound** - アプリ・バンドル内、またはアプリ・データ・コンテナーの Library/Sounds フォルダー内にある音声ファイルの名前。
 
-###Objective-C
-
-アプリケーション代行クラスに次の Objective-C コード・スニペットを追加します。
-
-```
-// Handle receiving a remote notification
- -(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
-  {
- [[CDVBMSPush sharedInstance] didReceiveRemoteNotificationWithNotification:userInfo];
-}
-```
-	{: codeblock}
-
-
-
-```
-//Handle receiving a remote notification on launch
-- (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions {
-  if (launchOptions != nil) {
-   [[CDVBMSPush sharedInstance] didReceiveRemoteNotificationOnLaunchWithLaunchOptions:launchOptions];
-     }
- }
-```
-	{: codeblock}
-
-###Swift
 
 アプリケーション代行クラスに次の Swift コード・スニペットを追加します。
 ```

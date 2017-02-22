@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-28"
+  years: 2015, 2017
+lastupdated: "2017-01-13"
 
 ---
 {:new_window: target="_blank"}
@@ -118,7 +118,7 @@ lastupdated: "2016-11-28"
 	<dt>MobileFirst Platform Foundation에서 발견된 Mobile Analytics와 {{site.data.keyword.mobileanalytics_full}} 사이의 차이점은 무엇입니까?</dt>
 		<dd>두 콘솔에서 사용자 및 세션은 매우 유사하지만 MobileFirst Platform Foundation에서 제공하는 분석은 클라이언트가 자체 분석 클러스터 온프레미스를 관리할 수 있는 추가 메트릭 및 설정을 포함합니다. 또한 MobileFirst Platform Foundation 분석 콘솔에서는 어댑터와 어댑터 프로시저에 대한 메트릭을 세분화할 수 있는 반면, {{site.data.keyword.mobileanalytics_short}} 서비스에서는 이러한 메트릭이 네트워크 요청 차트와 테이블로 통합됩니다. </dd>
 	<dt>MobileFirst Platform Foundation 온프레미스를 앱 개발에 사용 중이지만 자체 분석 클러스터를 호스트할 의향이 없습니다. 대신 {{site.data.keyword.mobileanalytics_full}}를 사용해도 됩니까?</dt>
-		<dd>예. 다음과 같은 몇 개의 옵션이 있습니다. MobileFirst Platform Foundation 7.x 또는 8.0을 사용하고 앱이 MobileFirst Platform SDK로 인스트루먼트된 경우에는 {{site.data.keyword.mobileanalytics_short}} for {{site.data.keyword.Bluemix_notm}}에 분석 데이터를 보고하도록 MobileFirst 서버를 구성할 수 있습니다. [Mobile Analytics 및 Mobile Foundation Bluemix 서비스 구성](https://mobilefirstplatform.ibmcloud.com/blog/2016/07/11/analytics-bm-service/) 블로그 포스트에서 세부사항을 읽으십시오. 또는, {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.mobileanalytics_short}} SDK를 사용하여 앱을 인스트루먼트하고 보고서를 {{site.data.keyword.mobileanalytics_short}} 서비스에 직접 보고할 수 있습니다. </dd>
+		<dd>예. 다음과 같은 몇 개의 옵션이 있습니다. MobileFirst Platform Foundation 7.x 또는 8.0을 사용하고 앱이 MobileFirst Platform SDK로 인스트루먼트된 경우에는 {{site.data.keyword.mobileanalytics_short}} for {{site.data.keyword.Bluemix_notm}}에 분석 데이터를 보고하도록 MobileFirst 서버를 구성할 수 있습니다. [Mobile Analytics 및 Mobile Foundation Bluemix 서비스 구성 ![외부 링크 아이콘](../../icons/launch-glyph.svg "External link icon")](https://mobilefirstplatform.ibmcloud.com/blog/2016/07/11/analytics-bm-service/){: new_window} 블로그 포스트에서 세부사항을 읽으십시오. 또는, {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.mobileanalytics_short}} SDK를 사용하여 앱을 인스트루먼트하고 보고서를 {{site.data.keyword.mobileanalytics_short}} 서비스에 직접 보고할 수 있습니다. </dd>
 	<!-- <dt>My instance of  {{site.data.keyword.mobileanalytics_short}} does not look like the screen shots in the catalog. What's going on?</dt> -->
 		<!-- <dd>Most likely you are using the Classic view interface for {{site.data.keyword.Bluemix_notm}}. Classic view is deprecated, so {{site.data.keyword.mobileanalytics_short}} runs best in the new {{site.data.keyword.Bluemix_notm}} interface. If you are in Classic view, you will see a link in the {{site.data.keyword.Bluemix_notm}} header that says <strong>Try the new {{site.data.keyword.Bluemix_notm}}</strong>. Click that link to use the new interface.</dd> -->
 </dl>
@@ -130,7 +130,7 @@ lastupdated: "2016-11-28"
 ## SDK
 {: rellink-sdk}
 <!-- Links to SDK download and SDK Developer Guide -->
-* [Android SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core)  
-* [iOS SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core)  
+* [Android SDK ![외부 링크 아이콘](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window} 
+* [iOS SDK ![외부 링크 아이콘](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}
 
 <!-- {:elementKind="article" id="rellinks"} -->

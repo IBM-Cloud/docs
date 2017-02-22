@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015，2016
+  years: 2015，2017
 
-lastupdated: "2016-02-17"
+lastupdated: "2017-01-12"
 
 
 
@@ -63,5 +63,4 @@ riga di comando cf utilizza le tue opzioni precedenti e le tue risposte
 ai prompt per aggiornare con i nuovi bit di codice le eventuali istanze dell'applicazione
 in esecuzione.
 
-**Suggerimento:** puoi anche caricare o distribuire un'applicazione da DevOps Services. Vedi [Developing a {{site.data.keyword.Bluemix_notm}} application
-in Node.js with the Web IDE](https://hub.jazz.net/tutorials/devopsweb/){: new_window}.
+**Suggerimento:** puoi anche caricare o distribuire un'applicazione da DevOps Services. Consulta [Developing a {{site.data.keyword.Bluemix_notm}} application in Node.js with the Web IDE ![icona link esterno](../icons/launch-glyph.svg)](https://hub.jazz.net/tutorials/devopsweb/){: new_window}.

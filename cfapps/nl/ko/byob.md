@@ -1,12 +1,12 @@
 ---
 
- 
+
 
 copyright:
 
-  years: 2015，2016
+  years: 2015，2017
 
-lastupdated: "2016-03-15" 
+lastupdated: "2016-03-15"
 
 
 
@@ -88,14 +88,8 @@ cf push app_name -p app_path -b https://github.com/dmikusa-pivotal/cf-php-build-
 <li>
 <strong>cf set-env</strong> 명령을 사용하십시오. 예를 들어 다음 명령을 입력하여 Java 버전을 1.7.0으로 설정하십시오.
 <pre class="pre"><code>cf set-env app_name JBP_CONFIG_OPEN_JDK_JRE &apos;{jre: { version: 1.7.0_+ }}&apos;</code></pre>
-<p>그런 다음
-앱을 다시 스테이징하여 변경사항을 적용하십시오.</p>
+<p>그런 다음 앱을 다시 스테이징하여 변경사항을 적용하십시오.</p>
 <pre class="pre"><code>cf restage app_name</code></pre>
 </li>
 <li>
-<code>manifest.yml</code> 파일을 사용하십시오. 파일에 직접 지정할
-환경 변수와 값을 추가할 수 있습니다. 자세한 정보는
-<a href="https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html#env-block">환경 변수</a>를
-참조하십시오.</li></ul>
-  
-
+<code>manifest.yml</code> 파일을 사용하십시오. 파일에 직접 지정할 환경 변수와 값을 추가할 수 있습니다. 자세한 정보는 <a href="https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html#env-block">환경 변수</a>를 참조하십시오.</li></ul>

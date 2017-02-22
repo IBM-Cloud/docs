@@ -1,13 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-25"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 
 # {{site.data.keyword.amashort}} SDK、サンプル、および API リファレンス
@@ -24,8 +26,7 @@ Core SDK には、カスタム認証およびロギングを使用可能にす�
 ### Android
 {: #coresdk-android}
 
-[GitHub リポジトリー](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core)、
-[API リファレンス](https://console.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html)
+[GitHub リポジトリー![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core "外部リンク・アイコン"){: new_window}
 
 #### Gradle を使用した Core SDK のインストール
 {: #coresdk-android-gradle}
@@ -44,7 +45,7 @@ Core SDK には、カスタム認証およびロギングを使用可能にす�
 ### iOS (Swift SDK)
 {: #coresdk-ios-swift}
 
-[GitHub リポジトリー](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security)
+[GitHub リポジトリー![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security "外部リンク・アイコン"){: new_window}
 
 #### CocoaPods を使用した Core SDK のインストール
 {: #coresdk-ios-siwft-cocoapods}
@@ -56,27 +57,11 @@ pod 'BMSSecurity'
 ```
 {: codeblock}
 
-### iOS (Objective-C SDK)
-{: #coresdk-ios}
-
-Objective-C SDK は現在も完全にサポートされており、{{site.data.keyword.Bluemix_notm}} モバイル・サービス用の主要 SDK とされていますが、今年後半には廃止され、新しい Swift SDK が後継になる予定です ([iOS Swift SDK のセットアップ](getting-started-ios-swift-sdk.html) を参照してください)。
-
-[Git リポジトリー](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master)、
-[API リファレンス](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html)
-
-#### CocoaPods を使用した Core SDK のインストール
-{: #coresdk-ios-cocoapods}
-
-Podfile を編集して、必要なターゲットに以下の行を追加し、実行します。
-```Bash
-pod 'IMFCore'
-```
-{: codeblock}
 
 ### Cordova
 {: #coresdk-cordova}
 
-[GitHub リポジトリーおよび API リファレンス](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
+[GitHub リポジトリーおよび API リファレンス![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core "外部リンク・アイコン"){: new_window}
 
 #### Cordova CLI を使用した Core SDK のインストール
 {: #coresdk-cordova-cli}
@@ -93,8 +78,7 @@ cordova plugin add bms-core
 ### Android
 {: #facebooksdk-android}
 
-[GitHub リポジトリー](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-facebookauthentication)、
-[API リファレンス](https://console.{DomainName}/docs/api/content/api/mobilefirst/android/facebook-api-doc/index.html)
+[GitHub リポジトリー![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-facebookauthentication "外部リンク・アイコン"){: new_window}
 
 #### Gradle を使用した Facebook SDK のインストール
 {: #facebooksdk-android-gradle}
@@ -112,7 +96,7 @@ cordova plugin add bms-core
 ### iOS (Swift SDK)
 {: #facebooksdk-ios-swift}
 
-[GitHub リポジトリー](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-facebookauthentication)
+[GitHub リポジトリー![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-facebookauthentication "外部リンク・アイコン"){: new_window}
 
 #### CocoaPods を使用した Facebook SDK のインストール
 {: #facebooksdk-ios-swift-cocoapods}
@@ -124,27 +108,11 @@ pod 'BMSFacebookAuthentication'
  ```
 {: codeblock}
 
-### iOS (Objective-C SDK)
-{: #facebooksdk-ios}
-
-[Git リポジトリー](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk.git)、
-[API リファレンス](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFFacebookAuthentication_api-doc/html/index.html)
-
-**注:** Objective-C SDK は現在も完全にサポートされており、{{site.data.keyword.Bluemix_notm}} モバイル・サービス用の主要 SDK とされていますが、この SDK は今年後半には廃止され、新しい Swift SDK が後継になる予定です。新規アプリケーションには Swift SDK を強くお勧めします (『iOS Swift SDK のセットアップ』を参照してください)。
-#### CocoaPods を使用した Facebook SDK のインストール
-{: #facebooksdk-ios-cocoapods}
-
-Podfile を編集して以下の行を追加し、実行します。
-
-```Bash
-pod 'IMFFacebookAuthentication'
-```
-{: codeblock}
 
 ### Cordova
 {: #facebooksdk-cordova}
 
-[GitHub リポジトリーおよび API リファレンス](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
+[GitHub リポジトリーおよび API リファレンス![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core "外部リンク・アイコン"){: new_window}
 
 #### Cordova CLI を使用した Facebook SDK のインストール
 {: #facebooksdk-cordova-cli}
@@ -162,8 +130,8 @@ cordova plugin add ibm-mfp-core
 ### Android
 {: #googlesdk-android}
 
-[GitHub リポジトリー](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-googleauthentication)、
-[API リファレンス](https://console.{DomainName}/docs/api/content/api/mobilefirst/android/google-api-doc/index.html)
+[GitHub リポジトリー![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-googleauthentication "外部リンク・アイコン"){: new_window}
+
 
 #### Gradle を使用した Google+ SDK のインストール
 {: #googlesdk-android-gradle}
@@ -182,7 +150,7 @@ cordova plugin add ibm-mfp-core
 ### iOS (Swift SDK)
 {: #googlesdk-ios-swift}
 
-[GitHub リポジトリー](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-googleauthentication)
+[GitHub リポジトリー![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-googleauthentication "外部リンク・アイコン"){: new_window}
 
 #### CocoaPods を使用した Google+ SDK のインストール
 {: #googlesdk-ios-swift-cocoapods}
@@ -195,26 +163,11 @@ pod 'BMSGoogleAuthentication'
 ```
 {: codeblock}
 
-### iOS (Objective-C SDK - 非推奨)
-{: #googlesdk-ios}
-
-[Git リポジトリー](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk.git)、
-[API リファレンス](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFGoogleAuthentication_api-doc/html/index.html)
-
-#### CocoaPods を使用した Google+ SDK のインストール
-{: #googlesdk-ios-cocoapods}
-
-Podfile を編集して以下の行を追加し、実行します。
-
-```Bash
-pod 'IMFGoogleAuthentication'
-```
-{: codeblock}
 
 ### Cordova
 {: #googlesdk-cordova}
 
-[GitHub リポジトリーおよび API リファレンス](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
+[GitHub リポジトリーおよび API リファレンス![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core "外部リンク・アイコン"){: new_window}
 
 #### Cordova CLI を使用した Google+ SDK のインストール
 {: #googlesdk-cordova-cli}
@@ -229,7 +182,7 @@ cordova plugin add ibm-mfp-core
 ## Server SDK for Node.js サーバー
 {: #serversdk}
 
-[GitHub リポジトリー](https://github.com/ibm-bluemix-mobile-services/bms-mca-token-validation-strategy)
+[GitHub リポジトリー![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-mca-token-validation-strategy "外部リンク・アイコン"){: new_window}
 
 #### npm を使用した Server SDK のインストール
 {: #serversdk-npm}
@@ -259,7 +212,7 @@ npm install -save bms-mca-token-validation-strategy
 ## Node.js OAuth SDK
 {: #serverlibertysdk-github}
 
-[GitHub リポジトリー](https://github.com/ibm-bluemix-mobile-services/bms-mca-oauth-sdk)
+[GitHub リポジトリー![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-mca-oauth-sdk "外部リンク・アイコン"){: new_window}
 
 #### npm を使用した OAuth SDK のインストール
 {: #oauthsdk}
@@ -273,21 +226,8 @@ npm install -save bms-mca-oauth-sdk
 ## カスタム ID プロバイダーのサンプル
 {: #customidprovider}
 
-[簡単なサンプル GitHub リポジトリー](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
+[簡単なサンプル GitHub リポジトリー![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample "外部リンク・アイコン"){: new_window}
 
-[高度なサンプル GitHub リポジトリー](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
+[高度なサンプル GitHub リポジトリー![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management "外部リンク・アイコン"){: new_window}
 
-## IMFURLProtocol
-{: #IMFURLProtocol}
 
-[API リファレンス ](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFURLProtocol_api-doc/html/index.html)
-
-#### CocoaPods を使用した IMFURLProtocol のインストール
-{: #IMFURLProtocol-cocoapods}
-
-Podfile を編集して以下の行を追加し、実行します。
-
-```Bash
-pod 'IMFURLProtocol'
-```
-{: codeblock}

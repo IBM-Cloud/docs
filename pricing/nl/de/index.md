@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2015, 2016
-lastupdated: "2016-11-30"
+  years: 2015, 2017
+lastupdated: "2017-01-11"
  
 
 ---
@@ -117,7 +117,7 @@ Sie können Ihre kostenlose Testversion jederzeit in ein belastbares Konto konve
 
 Nach der Erstellung eines belastbaren Kontos können Sie die von Ihnen angegebenen Informationen bearbeiten. Klicken Sie auf das Symbol **Profileinstellungen** und klicken Sie anschließend auf **Konto &gt; Kontotyp**, um Ihre Informationen zu bearbeiten.
 
-Falls während der Verwendung eines Kontos vom Typ Nutzungsabhängige Zahlung oder Abonnement Probleme mit {{site.data.keyword.Bluemix_notm}} auftreten, finden Sie weitere Informationen unter [Onlinehilfe abrufen](https://www.ng.bluemix.net/docs/troubleshoot/getting_customer_support.html#online_help).
+Falls während der Verwendung eines Kontos vom Typ Nutzungsabhängige Zahlung oder Abonnement Probleme mit {{site.data.keyword.Bluemix_notm}} auftreten, finden Sie weitere Informationen unter [Onlinehilfe abrufen](/docs/troubleshoot/getting_customer_support.html#online_help).
 
 **Hinweis:** Wenn Sie Ihr {{site.data.keyword.Bluemix_notm}}-Abrechnungskonto mit einem SoftLayer-Konto verknüpfen, werden Ihre {{site.data.keyword.Bluemix_notm}}- und SoftLayer-Gebühren ab dem Ersten des folgenden Monats über die {{site.data.keyword.Bluemix_notm}}-Rechnung abgerechnet. Weitere Details hierzu finden Sie unter [Guthaben anzeigen](/docs/admin//softlayerlink.html#bill_usage).
 
@@ -411,13 +411,13 @@ Obwohl in den Preisbeispielen US-Dollar (USD) verwendet werden, werden in {{site
 ##Nutzungsdashboard
 {: #usage}
 
-Als Kontoeigner oder Abrechnungsmanager können Sie die Ansicht 'Nutzungsdashboard' verwenden, um die Gebühren für die Laufzeiten und Services, die monatlich in Ihrer Organisation genutzt werden, in Echtzeit anzuzeigen. Sie können die GB-Stunden für Laufzeiten und die Servicenutzung in allen Regionen anzeigen oder eine bestimmte Region und einen bestimmten Bereich für die Anzeige der vergangenen 12 Stunden auswählen.
+Als Kontoeigner oder Abrechnungsmanager können Sie die Seite 'Nutzungsdashboard' verwenden, um die Gebühren für die Laufzeiten und Services, die monatlich in Ihrer Organisation genutzt werden, in Echtzeit anzuzeigen. Sie können die GB-Stunden für Laufzeiten und die Servicenutzung in allen Regionen anzeigen oder eine bestimmte Region und einen bestimmten Bereich für die Anzeige der vergangenen 12 Stunden auswählen.
 
-Um die Ansicht **Nutzungsdashboard** zu öffnen, klicken Sie auf **Konto** &gt; *eigener_kontoname* &gt; **Nutzungsdashboard**. Auf dieser Seite finden Sie eine Zusammenfassung der Laufzeit- und Servicenutzung für das Konto. Abrechnungsmanager können nur die Details für die Organisationen anzeigen, in denen ihnen die Rolle des Abrechnungsmanagers zugewiesen ist.
+Um die Ansicht **Nutzungsdashboard** zu öffnen, klicken Sie auf **Konto** &gt; *Name_des_eigenen_Kontos* &gt; **Nutzungsdashboard**. Auf dieser Seite finden Sie eine Zusammenfassung der Laufzeit- und Servicenutzung für das Konto. Abrechnungsmanager können nur die Details für die Organisationen anzeigen, in denen ihnen die Rolle des Abrechnungsmanagers zugewiesen ist.
 
 Dem Kontoeigner werden die Gebühren für die Gesamtnutzung, die für alle Organisationen anfallen, am Ende jedes Abrechnungszyklus in Rechnung gestellt. Jeder Abrechnungszyklus dauert einen Monat.
 
-Kontoeigner können die Nutzungszusammenfassung nach Region und Organisation filtern. Die angezeigten Gebühren stellen den Betrag dar, der Ihnen als Kontoeigner für diesen Monat in Rechnung gestellt wird.
+Kontoeigner können die Nutzungszusammenfassung nach Region und Organisation filtern. Wenn Sie Kontoeigner sind, legen Sie **Organisation** auf **Alle Organisationen** fest, um die Nutzung für das gesamte Konto für einen 12-monatigen Zeitraum anzuzeigen. Klicken Sie auf einen bestimmten Monat, um die Nutzung für diesen Monat anzuzeigen.  Die angezeigten Gebühren stellen den Betrag dar, der Ihnen als Kontoeigner für diesen Monat in Rechnung gestellt wird.
 
 Wenn Sie unter **Organisation** eine bestimmte Organisation auswählen, können Sie die gesamte Nutzung für diese Organisation, einschließlich der Nutzung als Teil eines gebührenfreien Nutzungskontingents anzeigen. Die für die Organisation angezeigten Gebühren sind nicht die Gebühren, die Ihnen in Rechnung gestellt werden. Die Nutzung des gebührenfreien Nutzungskontingents wird auf Kontoebene als kostenlos angezeigt, aber nicht auf Organisationsebene. Aus diesem Grund wird beim Anzeigen der Nutzung der Organisation die tatsächliche Nutzung für diese Organisation einschließlich der kostenlosen und der gebührenpflichtigen Nutzung angezeigt. Beim Anzeigen der Nutzung aller Organisationen wird die Nutzung für das Konto aufsummiert, nachdem das gebührenfreie Nutzungskontingent entfernt wurde.
 
@@ -433,7 +433,7 @@ Um die Ansicht **Nutzungsdashboard** zu öffnen, klicken Sie auf **Konto** &gt; 
 
 Als Manager eines Kontos vom Typ Nutzungsabhängige Zahlung können Sie Benachrichtigungen über Ausgaben für die Gesamtkosten Ihres Kontos, für Laufzeit, Services und für individuelle Services einrichten, mit Ausnahme von Services anderer Anbieter. Sie erhalten Benachrichtigungen, wenn Sie 80 %, 90 % und 100 % des angegebenen Schwellenwerts für die Ausgaben erreicht haben.
 
-Um die Ansicht **Benachrichtigungen** zu öffnen, klicken Sie auf **Konto** &gt; *eigener_kontoname* &gt; **Benachrichtigungen über Ausgaben**. Geben Sie einen numerischen Wert ein, um bei Bedarf das Ausgabelimit für das Auslösen einer Benachrichtigung für jeden Typ der Benachrichtigung über Ausgaben festzulegen. Sie können auch Benachrichtigungen für einzelne Services hinzufügen und löschen.
+Um die Ansicht **Benachrichtigungen** zu öffnen, klicken Sie auf **Konto** &gt; *Name_des_eigenen_Kontos* &gt; **Benachrichtigungen über Ausgaben**. Geben Sie einen numerischen Wert ein, um bei Bedarf das Ausgabelimit für das Auslösen einer Benachrichtigung für jeden Typ der Benachrichtigung über Ausgaben festzulegen. Sie können auch Benachrichtigungen für einzelne Services hinzufügen und löschen.
 
 ##Vorgehensweise zum Ändern des Plans
 {: #changing}
@@ -457,11 +457,11 @@ Geben Sie zum Aktualisieren des Serviceplans den folgenden Befehl ein:
 ```
 cf update-service <Servicename> [-p <neuer Plan>]
 ```
-# Zugehörige Links
+# rellinks
 {: rellinks}
-## Allgemein
-{: general}
+## general
+{: general} 
 * [{{site.data.keyword.Bluemix_notm}} - Preisliste](https://console.{DomainName}/pricing/)
-* [{{site.data.keyword.Bluemix_notm}} Developers Community Forum](https://developer.ibm.com/bluemix/)
+* [{{site.data.keyword.Bluemix_notm}} Developers Community Forum ![Symbol für externen Link](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/){: new_window}
 * [Onlinehilfe abrufen](https://www.{DomainName}/docs/troubleshoot/getting_customer_support.html#online_help)
 * [Kontaktaufnahme](https://console.{DomainName}/#/contactUs/cloudOEPaneId=contactUs)

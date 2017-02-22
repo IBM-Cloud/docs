@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2016, 2017
 lastupdated: "2016-09-09"
 
 ---
@@ -12,7 +12,7 @@ lastupdated: "2016-09-09"
 {:screen: .screen}
 {:pre: .pre}
 
-# Einführung in {{site.data.keyword.openwhisk_short}} (Beta)
+# Einführung in {{site.data.keyword.openwhisk_short}}
 
 
 {{site.data.keyword.openwhisk}} ist ein verteilter, ereignisgesteuerter Berechnungsservice (auch serverunabhängiges Computing oder Function as a Service (FaaS)). {{site.data.keyword.openwhisk_short}} führt Code in Reaktion auf Ereignisse oder direkte Aufrufe über das Web oder mobile Apps über HTTP aus. Ereignisse können von Bluemix-Services wie Cloudant und von externen Quellen bereitgestellt werden. Entwickler können sich auf das Schreiben von Anwendungslogik sowie auf das Erstellen von Aktionen, die auf Anforderung ausgeführt werden, konzentrieren. Die Rate der Ausführung von Aktionen entspricht immer der Ereignisrate, sodass sich eine inhärente Skalierung und Ausfallsicherheit sowie eine optimale Auslastung ergeben. Sie bezahlen nur für das, was Sie nutzen, und Sie brauchen keinen Server zu verwalten. Sie können darüber hinaus den [Quellcode](https://github.com/openwhisk/openwhisk) erhalten und das System selbst ausführen.
@@ -27,7 +27,7 @@ Beide Komponenten haben ein ähnliches Leistungsspektrum in Hinblick auf die Ent
 ## Im eigenen Browser entwickeln
 {: #openwhisk_start_editor}
 
-Testen Sie {{site.data.keyword.openwhisk_short}} in Ihrem [Browser](https://console.{DomainName}/openwhisk/editor){: new_window}, um Aktionen zu erstellen, Aktionen mit Auslösern zu automatisieren und öffentliche Pakete zu untersuchen.
+Testen Sie {{site.data.keyword.openwhisk_short}} in Ihrem [Browser](https://console.{DomainName}/openwhisk/editor){: new_window}, um Aktionen zu erstellen, Aktionen mit Auslösern zu automatisieren und öffentliche Pakete zu untersuchen. 
 Besuchen Sie die Seite [Weitere Informationen](https://console.{DomainName}/openwhisk/learn){: new_window}, auf der Sie eine Schnelleinführung zur OpenWhisk-Benutzerschnittstelle finden.
 
 ## {{site.data.keyword.openwhisk_short}}-CLI einrichten
@@ -136,7 +136,7 @@ Weitere Informationen zu {{site.data.keyword.openwhisk_short}} finden Sie in den
 * [REST-API](https://new-console.{DomainName}/apidocs/98)
 
 # Zugehörige Links
-{: #rellinks}
+{: #rellinks notoc}
 
 ## API-Referenz
 {: #api}

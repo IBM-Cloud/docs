@@ -1,11 +1,8 @@
 ---
 
-
-
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-25"
-
+  years: 2015, 2017
+lastupdated: "2017-01-24"
 
 ---
 
@@ -23,22 +20,23 @@ lastupdated: "2016-10-25"
 Wenn Sie über Administratorzugriff für {{site.data.keyword.Bluemix}} Local oder {{site.data.keyword.Bluemix_notm}} Dedicated verfügen, können Sie über die Seite **Verwaltung** Ressourcen verwalten, die Kontingentnutzung überwachen, Benutzerberechtigungen verwalten, Upgradebenachrichtigungen planen, Sicherheitsberichte und Protokolle anzeigen und vieles mehr. Sie können Ihre Organisationen verwalten, indem Sie Bereiche erstellen und [Benutzerrollen und Berechtigungen festlegen](/docs/admin/index.html#oc_useradmin). Weitere Informationen finden Sie in [Organisationen verwalten](/docs/admin/orgs_spaces.html).
 {:shortdesc}
 
-*Tabelle 1. Verwaltungstasks zur Verwaltung einer {{site.data.keyword.Bluemix_notm}} Local- oder Dedicated-Instanz*
+{: #ld_table1}
 
 | Verwaltungstask | Details |    
 |----------------|---------|
 |Systemnutzung überwachen | Klicken Sie auf **Verwaltung &gt; Nutzung**. Zeigen Sie Systeminformationen an, überwachen Sie die CPU-Nutzung und planen Sie die Nutzung, um die besten Entscheidungen für Ihr Unternehmen zu treffen. Siehe [Nutzungsinformationen anzeigen](/docs/admin/index.html#oc_resource).|
 |Eigenen Katalog verwalten | Klicken Sie auf **Verwaltung &gt; Katalogverwaltung**, um die Services zu verwalten, die für Ihre Benutzer und Organisationen sichtbar sind. Siehe [Eigenen Katalog verwalten](/docs/admin/index.html#oc_catalog).|
 |Organisationen verwalten | Klicken Sie auf **Verwaltung &gt; Organisationsadministration**, um Organisationen zu erstellen, Kontingente für Organisationen zu überwachen und rasch bedarfsorientierte Entscheidungen zu treffen. Siehe [Organisationen verwalten](/docs/admin/index.html#oc_organizations).|
-|Bereiche erstellen und Benutzerrollen zuweisen | Klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../support/images/account_support.svg) und wählen Sie **Organisationen verwalten** aus, um Bereiche in Ihren Organisationen zu erstellen. Fügen Sie Benutzer hinzu und weisen Sie Benutzern Organisations- und Bereichsrollen zu. Siehe [Organisationen verwalten](/docs/admin/orgs_spaces.html). |
+|Bereiche erstellen und Benutzerrollen zuweisen | Klicken Sie auf **Konto** &gt; **Organisationen verwalten**, um in Ihren Organisationen Bereiche zu erstellen. Fügen Sie Benutzer hinzu und weisen Sie Benutzern Organisations- und Bereichsrollen zu. Siehe [Organisationen verwalten](/docs/admin/orgs_spaces.html). |
 |Administratorberechtigungen verwalten | Klicken Sie auf **Verwaltung &gt; Benutzeradministration**, um Benutzer hinzuzufügen, Benutzer zu entfernen und Benutzerberechtigungen anzupassen. Siehe [Benutzer und Berechtigungen verwalten](/docs/admin/index.html#oc_useradmin). |
 |Berichte und Protokolle prüfen | Klicken Sie auf **Verwaltung &gt; Berichte und Protokolle**, um Sicherheitsberichte und Prüfprotokolle für Ihre Instanz anzuzeigen. Siehe [Berichte anzeigen](/docs/admin/index.html#oc_report). |
 |Systeminformationen anzeigen | Klicken Sie auf **Verwaltung &gt; Systeminformationen**, um Systeminformationen wie anstehende Wartungsaktualisierungen, Name und Version Ihrer Instanz, Region, API-URL, CLI-URL, LDAP-Konfigurationsdetails, Gruppen- und Benutzerzuordnungen, Statistiken und gemeinsam genutzte Domänen anzuzeigen. Siehe [Systeminformationen anzeigen](/docs/admin/index.html#oc_system). |
 |Benachrichtigungen erweitern und Benachrichtigungsabonnements einrichten | Klicken Sie auf **Verwaltung &gt; Systeminformationen &gt; *Anzahl* anstehend**. Sie können Web-Hooks zur Integration in einen Web-Service Ihrer Wahl verwenden, um ein Abonnement für Ereignisbenachrichtigungen für eine Aktualisierung oder einen Vorfall einzurichten. Siehe [Benachrichtigungen und Benachrichtigungsabonnements](/docs/admin/index.html#oc_eventsubscription). |
+{: caption="Table 1. Administrative tasks for managing your {{site.data.keyword.Bluemix_notm}} local or dedicated instance" caption-side="top"}
 
 <!-- staging only for WoW start -->
 
-**Tipp**: Das Infrastruktur-Dashboard in der {{site.data.keyword.Bluemix_notm}}-Konsole steht nur in verknüpften Konten in {{site.data.keyword.Bluemix_notm}} Public-Umgebungen zur Verfügung.
+**Tipp:** Das Infrastruktur-Dashboard in der {{site.data.keyword.Bluemix_notm}}-Konsole steht nur in verknüpften Konten in {{site.data.keyword.Bluemix_notm}} Public-Umgebungen zur Verfügung.
 
 
 <!-- staging only for WoW end -->
@@ -53,16 +51,15 @@ Sie können den Status Ihrer Umgebung jederzeit über die Seite 'Status' ermitte
 
 Sie können Benachrichtigungen für Ihre lokale oder dedizierte Umgebung anzeigen, um den Status Ihrer Umgebung zu überwachen. Die folgende Tabelle enthält Informationen zu den verschiedenen Typen von Benachrichtigungen und zu den Positionen, an die die verschiedenen Benachrichtigungstypen gesendet werden.
 
-*Tabelle 2. Ereignistypen und Benachrichtigungsmethoden*
+{: #ld_table2}
 
 | **Ereignistyp** | **Benachrichtigungsmethode** |       
 |-----------------|-------------------|
-| Wartungsaktualisierungen | Sie werden im Bereich 'Benachrichtigungen' auf der Seite 'Verwaltung' über bevorstehende Wartungsaktualisierungen benachrichtigt. Wechseln Sie zur Seite **Verwaltung** und wählen Sie das Symbol **Benachrichtigungen** ![Benachrichtigungen](images/icon_announcement.svg) aus. Zum Anzeigen einer vollständigen Liste und des Verlaufs der anstehenden und abgeschlossenen Benachrichtigungen klicken Sie auf **Verwaltung &gt; Systeminformationen** &gt; *Anzahl* **Anstehend**.|
-|  | Sie werden auch über geplante Wartungsaktualisierungsereignisse mit Unterbrechungen auf der Seite 'Status' benachrichtigt. Klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatar](../support/images/account_support.svg) und wählen Sie **Status** aus.|
-|  | Sie können die Benachrichtigungsfunktion erweitern, indem Sie ein Abonnement einrichten, das eine E-Mail an die Empfänger Ihrer Wahl sendet. Sie können auch ein Abonnement einrichten, das die Benachrichtigungen auf der Seite 'Verwaltung' mithilfe von Web-Hooks in einen Web-Service Ihrer Wahl integriert.|
-| Kritische Vorfälle | Sie werden über kritische Vorfälle auf der Seite 'Status' benachrichtigt. Klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatar](../support/images/account_support.svg) und wählen Sie **Status** aus. Sie können die Benachrichtigungsfunktion erweitern, indem Sie ein Benachrichtigungsabonnement einrichten, das eine E-Mail an einen Empfänger Ihrer Wahl sendet. Sie können auch ein Abonnement einrichten, das die Benachrichtigungen auf der Seite 'Verwaltung' mithilfe von Web-Hooks in einen Web-Service Ihrer Wahl integriert.  |  
+| Wartungsaktualisierungen | Zum Anzeigen einer vollständigen Liste und des Verlaufs der anstehenden und abgeschlossenen Benachrichtigungen klicken Sie auf **Verwaltung &gt; Systeminformationen** &gt; *Anzahl* **Anstehend**. Sie werden auch über geplante Wartungsaktualisierungsereignisse mit Unterbrechungen auf der Seite 'Status' benachrichtigt. Klicken Sie auf **Support** &gt; **Status**. Sie können die Benachrichtigungsfunktion erweitern, indem Sie ein Abonnement einrichten, das eine E-Mail an die Empfänger Ihrer Wahl sendet. Sie können auch ein Abonnement einrichten, das die Benachrichtigungen auf der Seite 'Verwaltung' mithilfe von Web-Hooks in einen Web-Service Ihrer Wahl integriert.|
+| Kritische Vorfälle | Sie werden über kritische Vorfälle auf der Seite 'Status' benachrichtigt. Klicken Sie auf **Support** &gt; **Status**. Sie können die Benachrichtigungsfunktion erweitern, indem Sie ein Benachrichtigungsabonnement einrichten, das eine E-Mail an einen Empfänger Ihrer Wahl sendet. Sie können auch ein Abonnement einrichten, das die Benachrichtigungen auf der Seite 'Verwaltung' mithilfe von Web-Hooks in einen Web-Service Ihrer Wahl integriert.  |  
 | Schwellenwertereignisse | Sie können ein Benachrichtigungsabonnement einrichten, das eine E-Mail an einen Empfänger Ihrer Wahl sendet, wenn in Ihrer Umgebung Ressourcenschwellenwerte für physische Platte, physischen Speicher, reservierte Platte oder reservierten Speicher erreicht wurden. Alternativ können Sie ein Abonnement einrichten, das die Benachrichtigungen mithilfe von Web-Hooks in einen Web-Service Ihrer Wahl integriert.  |  
-| {{site.data.keyword.Bluemix_notm}}-Status | Sie können den neuesten Status für die Plattform, die Services und Ihre {{site.data.keyword.Bluemix_notm}}-Instanz immer auf der Seite 'Status' anzeigen. Klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatar](../support/images/account_support.svg) und wählen Sie **Status** aus.  |
+| {{site.data.keyword.Bluemix_notm}}-Status | Sie können den neuesten Status für die Plattform, die Services und Ihre {{site.data.keyword.Bluemix_notm}}-Instanz immer auf der Seite 'Status' anzeigen. Klicken Sie auf **Support** &gt; **Status**.  |
+{: caption="Table 2. Event types and notifications methods" caption-side="top"}
 
 ### Benachrichtigungsabonnements einrichten
 {: #seteventsub}
@@ -71,7 +68,7 @@ Sie können die Funktionalität der Benachrichtigungen, die an die Seiten 'Verwa
  * Wenn Sie die E-Mail-Option auswählen, werden die Benachrichtigungen an die von Ihnen angegebene E-Mail-Adresse gesendet. Sie haben die Wahl zwischen Benachrichtigungen für Vorfälle, Wartungsaktualisierungen oder Schwellenwerte. Eine erste E-Mail-Benachrichtigung wird gesendet. Wenn dann am Ereignis eine Änderung vorgenommen wird, wird für jede Änderung jeweils eine weitere Benachrichtigung gesendet.  
  * Bei Auswahl von Web-Hooks werden Ihre Benachrichtigungen direkt an ein Ziel Ihrer Wahl weitergeleitet, wie zum Beispiel an eine Telefonnummer (durch eine SMS-Nachricht). Sie können den Typ der Benachrichtigung für Wartungsaktualisierungen, Alerts über kritische Vorfälle oder Schwellenwerte anpassen. Außerdem können Sie festlegen, ob neue Benachrichtigungen oder Benachrichtigungen zu Änderungen an Abonnements empfangen werden sollen, sowie die Art der Informationen, die in den Hauptteil der jeweiligen Benachrichtigung eingeschlossen werden.
 
-**Hinweis**: Nur Benutzer mit Superuserberechtigung (`ops.admin`) können Benachrichtigungsabonnements einrichten.
+**Hinweis:** Nur Benutzer mit Superuserberechtigung (`ops.admin`) können Benachrichtigungsabonnements einrichten.
 
 Führen Sie folgende Schritte aus, um ein E-Mail- oder Web-Hook-Abonnement auf der Seite **Benachrichtigungsabonnements** zu erstellen:
 
@@ -90,7 +87,6 @@ Führen Sie folgende Schritte aus, um ein E-Mail- oder Web-Hook-Abonnement auf d
   * Klicken Sie auf **Speichern und testen**, um die Benachrichtigung zu speichern und zu testen.
   * Klicken Sie auf **Speichern und schließen**, um das Abonnement in Ihrer Benachrichtigungs-Abonnementliste zu speichern, und kehren Sie zur vorherigen Seite zurück.
 
-*Tabelle 3. Felder für Abonnements von E-Mail-Benachrichtigungen über Wartungsaktualisierungen oder Vorfälle*
 {: #emailnotmaintinc}
 
 | **Feld** | **Beschreibung** |
@@ -103,8 +99,9 @@ Führen Sie folgende Schritte aus, um ein E-Mail- oder Web-Hook-Abonnement auf d
 | Hauptteil | Geben Sie den Nachrichtentext für die E-Mail ein. Sie können die IBM Nutzdaten verwenden, um relevante Informationen in die E-Mail-Benachrichtigung einzugeben. In der Tabelle [Werte für den Abschnitt 'Nutzdaten zu Wartungen und Vorfällen'](index.html#payload) finden Sie die Werte, die Sie verwenden können. Verwenden Sie zum Strukturieren der E-Mail HTML-Basistags. Dies ist ein erforderliches Feld. |
 | An | Geben Sie die E-Mail-Adresse(n) der Empfänger der E-Mail-Benachrichtigung in Form einer durch Kommas getrennte Liste ein. Erweitern Sie die Optionen "cc" bzw. "bcc", um andere Benutzer auf Kopie zu setzen. Dies ist ein erforderliches Feld. |
 | Beschreibung | Fügen Sie eine eindeutige Beschreibung für das Abonnement hinzu, das Sie erstellen. |
+{: caption="Table 3. Fields for email notification subscriptions about thresholds" caption-side="top"}
 
-*Tabelle 4. Felder für Abonnements von E-Mail-Benachrichtigungen über Schwellenwerte*
+
 {: #emailnottrhesh}
 
 | **Feld** | **Beschreibung** |
@@ -120,12 +117,13 @@ Führen Sie folgende Schritte aus, um ein E-Mail- oder Web-Hook-Abonnement auf d
 | Betreff | Geben Sie die Betreffzeile für die E-Mail ein. Dies ist ein erforderliches Feld.  |
 | Nachrichtentext | Geben Sie den Nachrichtentext für die E-Mail ein. Sie können die IBM Nutzdaten verwenden, um relevante Informationen in die E-Mail-Benachrichtigung einzugeben. In der Tabelle [Werte für den Abschnitt 'Nutzdaten zu Schwellenwerten'](index.html#threshpayload) finden Sie die Werte, die Sie verwenden können. Verwenden Sie zum Strukturieren der E-Mail HTML-Basistags. Dies ist ein erforderliches Feld. |
 | An | Geben Sie die E-Mail-Adresse(n) der Empfänger der E-Mail-Benachrichtigung in Form einer durch Kommas getrennte Liste ein. Erweitern Sie die Optionen "cc" bzw. "bcc", um andere Benutzer auf Kopie zu setzen. Dies ist ein erforderliches Feld. |
+{: caption="Table 4. Fields for email notification subscriptions about maintenance updates or incidents" caption-side="top"}
 
 Schwellenwertdaten werden alle 6 Stunden erfasst. Eine Benachrichtigung wird nur einmal gesendet, wenn der Wert den von Ihnen festgelegten Schwellenwert über- oder unterschreitet. Eine neue Benachrichtigung wird nur dann gesendet, wenn Sie 'absteigend' gewählt haben, der Wert den Schwellenwert unterschreitet und dann wieder überschreitet. Wenn Sie 'absteigend' gewählt haben, werden Sie entsprechend nur dann benachrichtigt, wenn der Wert den von Ihnen festgelegten Schwellenwert überschreitet und dann wieder unterschreitet. 
 
 Wenn Sie nicht 6 Stunden warten möchten, bis die Benachrichtigung über das Erreichen des Schwellenwerts gesendet wird, können Sie nach dem Ausfüllen der Felder im Formular auf **Speichern und testen** klicken, um die Benachrichtigung mit Beispieldaten zu speichern und zu testen.
 
-*Tabelle 5. Formularfelder für Abonnements für Web-Hook-Benachrichtigungen über Wartungsaktualisierungen oder Vorfälle*
+
 {: #webhooknotsub}
 
 | **Feld** | **Beschreibung** |
@@ -148,8 +146,9 @@ Wenn Sie nicht 6 Stunden warten möchten, bis die Benachrichtigung über das Err
 | URL | Geben Sie die URL für die Verbindung mit dem Web-Service ein. |
 | Nutzdaten | Wenn Sie die Methode POST oder PUT ausgewählt haben, geben Sie die Eigenschaften ein, die für den von Ihnen verwendeten Web-Service gelten, gepaart mit den Nutzdatenwerten, die für die IBM Benachrichtigung verwendet werden. In der Tabelle [Werte für den Abschnitt 'Nutzdaten zu Wartungen und Vorfällen'](index.html#payload) finden Sie die Werte, die Sie verwenden können. Wenn Sie in diesem Abschnitt keine Informationen eingeben, empfangen Sie die Benachrichtigung ganz ohne zusätzliche Informationen. |
 | Benachrichtigungen kombinieren | Wählen Sie diese Option aus, um die Benachrichtigungen zu Vorfällen für alle Regionen in einer einzigen Benachrichtigung zu kombinieren. Diese Option ist nur für Vorfälle verfügbar. |
+{: caption="Table 5. Form fields for a webhook notification subscription about maintenance or incidents" caption-side="top"}
 
-*Tabelle 6. Formularfelder für Abonnements für Web-Hook-Benachrichtigungen über Schwellenwerte*
+
 {: #webhooknotthresh}
 
 | **Feld** | **Beschreibung** |
@@ -167,8 +166,9 @@ Wenn Sie nicht 6 Stunden warten möchten, bis die Benachrichtigung über das Err
 | Kennwort | Wenn Sie die Basisautorisierung ausgewählt haben, geben Sie das Kennwort für Ihren Web-Service ein. |
 | Methode | Wählen Sie **GET**, **POST** oder **PUT** aus. |
 | URL | Geben Sie die URL für die Verbindung mit dem Web-Service ein. |
+{: caption="Table 6. Form fields for a webhook notification subscription about thresholds" caption-side="top"}
 
-*Tabelle 7. Werte für den Abschnitt 'Nutzdaten zu Wartungen und Vorfällen'*
+
 {: #payload}
 
 | **IBM Wert** | **Beschreibung** | **Ereignistyp** |
@@ -184,8 +184,9 @@ Wenn Sie nicht 6 Stunden warten möchten, bis die Benachrichtigung über das Err
 | {{region}} | Betroffene Region | Wartungsaktualisierung und Vorfall |
 | {{status}} | Status der Aktualisierung | Wartungsaktualisierung |
 | {{type}} | Aktualisierung und Vorfall | Wartungsaktualisierung und Vorfall |
+{: caption="Table 7. Maintenance and incident payload section values" caption-side="top"}
 
-*Tabelle 8. Werte für den Abschnitt 'Nutzdaten zu Schwellenwerten'*
+
 {: #threshpayload}
 
 | **IBM Wert** | **Beschreibung** | **Ereignistyp** |
@@ -194,6 +195,7 @@ Wenn Sie nicht 6 Stunden warten möchten, bis die Benachrichtigung über das Err
 | {{content.physical_memory}} | Schwellenwert für physischen Speicher | Schwellenwert |  
 | {{content.reserved_disk}} | Schwellenwert für reservierte Platte | Schwellenwert |
 | {{content.reserved_memory}} | Schwellenwert für reservierten Speicher | Schwellenwert |
+{: caption="Table 8. Threshold payload section values" caption-side="top"}
 
 Nach dem Speichern des Benachrichtigungsabonnements empfangen Sie Benachrichtigungen über die Methode, die Sie eingerichtet haben. Benachrichtigungen werden weiterhin an die folgenden Positionen gesendet:  
  * Für Vorfälle auf der Seite 'Status'
@@ -205,9 +207,9 @@ Sie können ein beliebiges gespeichertes Benachrichtigungsabonnement auswählen,
 ## Wartungsaktualisierungen
 {: #oc_schedulemaintenance}
 
-Wenn Sie die Superuserberechtigung (`ops.admin`) besitzen, können Sie geplante und ausstehende Wartungsaktualisierungen anzeigen, indem Sie über **VERWALTUNG &gt; SYSTEMINFORMATIONEN &gt; *Anzahl* anstehend** auf die Seite **Systemaktualisierungen** zugreifen.  Alle Benutzer Ihrer Umgebung können die geplanten Wartungsaktualisierungsereignisse mit Unterbrechungen anzeigen, indem sie auf das **{{site.data.keyword.avatar}}**-Symbol ![Avatar](../support/images/account_support.svg) klicken und dann **Status** auswählen.
+Wenn Sie die Superuserberechtigung (`ops.admin`) besitzen, können Sie geplante und ausstehende Wartungsaktualisierungen anzeigen, indem Sie über **VERWALTUNG &gt; SYSTEMINFORMATIONEN &gt; *Anzahl* anstehend** auf die Seite **Systemaktualisierungen** zugreifen.  Alle Benutzer Ihrer Umgebung können die geplanten Wartungsaktualisierungsereignisse mit Unterbrechungen anzeigen, indem sie auf **Support** &gt; **Status** klicken.
 
-**Hinweis**: Lesen Sie als Einführung den Abschnitt [Vorab genehmigte Wartungszeiten einstellen](index.html#preapprovedmaintenance). Diese Fenster müssen definiert sein, damit IBM die Wartungszeiten für Ihre Umgebung planen kann.
+**Hinweis:** Lesen Sie als Einführung den Abschnitt [Vorab genehmigte Wartungszeiten einstellen](index.html#preapprovedmaintenance). Diese Fenster müssen definiert sein, damit IBM die Wartungszeiten für Ihre Umgebung planen kann.
 
 <dl>
 <dt>Unterbrechungsfreie Aktualisierungen</dt>
@@ -228,7 +230,7 @@ Um Ihre Änderungen speichern zu können, müssen Sie immer noch für jede Woche
 
 Sie müssen mindestens 12 verfügbare Stunden pro Woche an mindestens zwei Tagen der Woche festlegen. Sie können zum Beispiel 6-Stunden-Zeitfenster an zwei verschiedenen Tagen oder an drei Tagen 4-Stunden-Zeitfenster festlegen. Um sicherzustellen, dass die Zeiträume ausreichend Zeit für das Anwenden einer Aktualisierung bieten, muss jeder Zeitraum mindestens vier Stunden andauern.  
 
-**Hinweis**: Nur Benutzer mit der Superuserberechtigung (`ops.admin`) können Wartungsaktualisierungen planen und genehmigen.
+**Hinweis:** Nur Benutzer mit der Superuserberechtigung (`ops.admin`) können Wartungsaktualisierungen planen und genehmigen.
 
 1. Klicken Sie auf **Verwaltung &gt; Systeminformationen &gt; *Anzahl* anstehend &gt; Verfügbarkeit verwalten**.
 2. Erweitern Sie den Abschnitt zum Thema **Verfügbare Aktualisierungszeiten verwalten**.
@@ -366,12 +368,12 @@ Um weitere Informationen zur physischen und reservierten Speicher- oder Plattenn
 ### Kontonutzung
 {: #accountusage}
 
-Sie können die monatliche Nutzung für Ihr Konto für Ihre dedizierte oder lokale Umgebung anzeigen. Mithilfe dieser Daten können Sie ermitteln, wie viel bestimmten Organisationen auf Grundlage ihrer Nutzung zu berechnen ist. Alle Administrationskonsolenbenutzer mit der Berechtigung **Benutzer** und mit dem Zugriffsrecht **Lesen** können die Kontonutzungsdaten anzeigen. Abrechnungsmanager der Organisation können außerdem die Kontonutzungsdaten für ihre Organisationen anzeigen, selbst wenn Abrechnungsmanagern die Administrationskonsolenberechtigung **Benutzer** nicht zugewiesen wurde. Administratoren der Administrationskonsole (Superuserberechtigung) können Organisationen die Rolle eines Abrechnungsmanagers zuweisen, indem sie auf das **{{site.data.keyword.avatar}}**-Symbol ![Avatar](../support/images/account_support.svg) &gt; **Organisationen verwalten** klicken.
+Sie können die monatliche Nutzung für Ihr Konto für Ihre dedizierte oder lokale Umgebung anzeigen. Mithilfe dieser Daten können Sie ermitteln, wie viel bestimmten Organisationen auf Grundlage ihrer Nutzung zu berechnen ist. Alle Administrationskonsolenbenutzer mit der Berechtigung **Benutzer** und mit dem Zugriffsrecht **Lesen** können die Kontonutzungsdaten anzeigen. Abrechnungsmanager der Organisation können außerdem die Kontonutzungsdaten für ihre Organisationen anzeigen, selbst wenn Abrechnungsmanagern die Administrationskonsolenberechtigung **Benutzer** nicht zugewiesen wurde. Administratoren der Administrationskonsole (Superuserberechtigung) können Organisationen die Rolle eines Abrechnungsmanagers zuweisen, indem sie auf **Konto** &gt; **Organisationen verwalten** klicken.
 
 Führen Sie die folgenden Schritte durch, um die Kontonutzungsdaten anzuzeigen:
 
 <ol>
-<li>Klicken Sie auf das Symbol <strong>{{site.data.keyword.avatar}}</strong> ![Avatar](../support/images/account_support.svg) &gt; <strong>Konto</strong> &gt; <strong>Nutzungsdetails</strong>.</li>
+<li>Klicken Sie auf <strong>Konto</strong> &gt; <strong>Nutzungsdashboard</strong>.</li>
 <li>Wählen Sie die Organisation aus, für die Daten angezeigt werden sollen.</li>
 <li>Sie können Nutzungsdetails für die folgenden Kategorien anzeigen:
 <ul>
@@ -387,7 +389,7 @@ Führen Sie die folgenden Schritte durch, um die Kontonutzungsdaten anzuzeigen:
 Sie können auch die monatliche Nutzung und die damit verbundenen Gebühren auf Kontoebene für Ihre Laufzeiten, Apps und Services anzeigen, die aus {{site.data.keyword.Bluemix_notm}} Public syndiziert wurden. Mithilfe dieser Daten können Sie ermitteln, wie viel bestimmten Organisationen auf Grundlage ihrer Nutzung zu berechnen ist.
 
 <ol>
-<li>Klicken Sie auf das Symbol <strong>{{site.data.keyword.avatar}}</strong> ![Avatar](../support/images/account_support.svg) &gt; <strong>Konto</strong> &gt; <strong>Nutzungsdetails</strong>.</li>
+<li>Klicken Sie auf <strong>Konto</strong> &gt; <strong>Nutzungsdashboard</strong>.</li>
 <li>Klicken Sie auf <strong>Öffentlich</strong>.</li>
 <li>Wählen Sie die Organisation aus, für die Daten angezeigt werden sollen.</li>
 <li>Sie können Nutzungsdetails für die folgenden Kategorien anzeigen:
@@ -412,7 +414,7 @@ Zum Anzeigen der Nutzung pro Organisation klicken Sie auf **Verwaltung &gt; Orga
 - Anzahl der Routen, die zurzeit verwendet werden.
 - Speicherkontingentdiagramm, das zeigt, wie viel des Kontingents zurzeit verwendet und wie viel nicht verwendet wird.
 - Diagramm zur Anwendungszuordnung, das zeigt, welche Anwendungen in dem Wert für das genutzte Speicherkontingent enthalten sind.
-- Diagramm zur gemessenen Anwendungsnutzung, das einen dreimonatigen Bericht zu den genutzten GB-Stunden pro bereitgestellter App zeigt. Sie können die **Listenansicht** auswählen, um Daten für alle Apps mit Speicherzuordnung pro App und gemessener GB-Stundennutzung für die vergangenen drei Monate anzuzeigen. 
+- Diagramm zur gemessenen Anwendungsnutzung, das einen dreimonatigen Bericht zu den genutzten GB-Stunden pro bereitgestellter App zeigt. Sie können die **Listenansicht** auswählen, um Daten für alle Apps mit Speicherzuordnung pro App und gemessener GB-Stundennutzung für die vergangenen drei Monate anzuzeigen.
 
 Weitere Informationen zum Anzeigen der Nutzung pro Organisation, zum Anpassen von Kontingentplänen und zum Verwalten der Organisationen finden Sie unter [Organisationen verwalten](../admin/index.html#oc_organizations).
 
@@ -433,7 +435,8 @@ Anmeldeprüfungsberichte einsetzen.
 
 In der folgenden Tabelle sind Sicherheitsberichte aufgelistet, die für {{site.data.keyword.Bluemix_notm}} Local und {{site.data.keyword.Bluemix_notm}} Dedicated generiert werden. Die meisten Berichte werden täglich generiert. Die Berichte zur Verschlüsselung und zu den wichtigsten Verwaltungsereignissen werden jedoch monatlich generiert. Alle Berichte werden in der Administrationskonsole gespeichert und können 90 Tage lang abgerufen werden. Nach Ablauf dieser 90 Tage sind die Berichte auf Anforderung an {{site.data.keyword.Bluemix_notm}} 9 Monate lang offline verfügbar. Insgesamt sind die Berichte bis zu 1 Jahr verfügbar.
 
-*Tabelle 9. Liste der Sicherheitsberichte*
+
+{: #ld_table9}
 
 | **Kategorie** | **Bericht** | **Beschreibung** |      
 |-----------------|-------------------|---------------------|
@@ -454,6 +457,7 @@ In der folgenden Tabelle sind Sicherheitsberichte aufgelistet, die für {{site.d
 | Virenschutz | Bericht zum Virenscan | Installierte Virenschutzsoftware. |
 | Software-Fix-Management | Patchanwendungsbericht | Angewendete Software-Fixes. |
 | Verwaltung von Sicherheitsvorfällen | Bericht zur Korrektur von Sicherheitsvorfällen | Nachweis von Sicherheitsvorfällen für die Verwaltung von Sicherheitsvorfällen. |
+{: caption="Table 9. Security report list" caption-side="top"}
 
 ## Status anzeigen
 {: #oc_status}
@@ -462,7 +466,7 @@ Sie können den Status für die {{site.data.keyword.Bluemix_notm}}-Umgebung und 
 
 ### {{site.data.keyword.Bluemix_notm}}-Umgebungsstatus
 
-Sie können den Status für Ihre {{site.data.keyword.Bluemix_notm}}-Instanz über die {{site.data.keyword.Bluemix_notm}}-Statusseite anzeigen. Klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatar](../support/images/account_support.svg) und wählen Sie **Status** aus.
+Sie können den Status für Ihre {{site.data.keyword.Bluemix_notm}}-Instanz über die {{site.data.keyword.Bluemix_notm}}-Statusseite anzeigen. Klicken Sie auf **Support** &gt; **Status**.
 
 Die Seite 'Status' ist die zentrale Position für die Suche nach Benachrichtigungen und Ankündigungen in Bezug auf bedeutende Ereignisse, die die {{site.data.keyword.Bluemix_notm}}-Plattform und die übergeordneten Services in {{site.data.keyword.Bluemix_notm}} betreffen. Sie können einen RSS-Feed abonnieren, damit Sie nicht immer überprüfen müssen, ob Sie eine Benachrichtigung erhalten haben. Weitere Informationen zur Seite 'Status' und zur Einrichtung des RSS-Feeds finden Sie in [{{site.data.keyword.Bluemix_notm}} anzeigen](../support/index.html#viewing-bluemix-status).
 
@@ -502,11 +506,11 @@ Sie können auch die Priorität der verfügbaren Buildpacks festlegen, die beim 
 ### Service-Broker registrieren
 {: #servicebrokerui}
 
-Wenn Sie einen Service haben, den Sie in Ihrem {{site.data.keyword.Bluemix_notm}}-Katalog anzeigen wollen, müssen sie einen [Service-Broker](http://docs.cloudfoundry.org/services/api.html){: new_window} implementieren und registrieren. Nach der Registrierung des Brokers können Sie die Organisationen auswählen, die auf den Service in Ihrer lokalen oder dedizierten Instanz zugreifen können.
+Wenn Sie über einen Service verfügen, den Sie in Ihrem {{site.data.keyword.Bluemix_notm}}-Katalog anzeigen möchten, müssen Sie einen [Service-Broker ![Symbol für externen Link](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/services/api.html){: new_window} implementieren und registrieren. Nach der Registrierung des Brokers können Sie die Organisationen auswählen, die auf den Service in Ihrer lokalen oder dedizierten Instanz zugreifen können.
 
 Die Methoden zur Arbeit mit Ihrem Service-Broker variieren abhängig von der Anzahl der durch den Service-Broker verwalteten Services sowie davon, ob er bereits in {{site.data.keyword.Bluemix_notm}} registriert wurde.
 
-- Wenn Ihr Service-Broker nur einen Service verwaltet, können Sie die Benutzerschnittstelle zum Registrieren des Brokers verwenden, nachdem Sie die [Service-Broker-API](http://docs.cloudfoundry.org/services/api.html){: new_window} implementiert haben. Siehe [Service-Broker registrieren, der nur einen Service verwaltet](index.html#registerbrokerui).
+- Wenn Ihr Service-Broker nur einen Service verwaltet, können Sie die Benutzerschnittstelle zum Registrieren des Brokers verwenden, nachdem Sie die [Service-Broker-API ![Symbol für externen Link](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/services/api.html){: new_window} implementiert haben. Siehe [Service-Broker registrieren, der nur einen Service verwaltet](index.html#registerbrokerui).
 - Verwenden Sie die Befehlszeilenschnittstelle 'cf' mit dem [{{site.data.keyword.Bluemix_notm}}-Administrator-CLI](../cli/plugins/bluemix_admin/index.html)-Plug-in (Unterbefehl `ba`) oder die [API für angepasste Services](index.html#servicebrokerapi).
 - Wenn Ihr Service-Broker bereits registriert ist und Sie ihn aktualisieren oder löschen wollen, verwenden Sie die Befehlszeilenschnittstelle mit dem [{{site.data.keyword.Bluemix_notm}}-Administrator-CLI](../cli/plugins/bluemix_admin/index.html)-Plug-in (Unterbefehl `ba`) oder die [API für angepasste Services](index.html#servicebrokerapi).
 
@@ -517,7 +521,7 @@ Die Methoden zur Arbeit mit Ihrem Service-Broker variieren abhängig von der Anz
 
 Prüfen Sie die folgenden Informationen und führen Sie diese Schritte aus, um Ihren Service-Broker zu registrieren:
 
-**Vorbereitende Schritte**: <a href="http://docs.cloudfoundry.org/services/api.html" target="_blank">Implementieren Sie die Cloud Foundry-Service-Broker-API</a>, um die Kommunikation zwischen Ihrem Service und {{site.data.keyword.Bluemix_notm}} einzurichten. Die Service-Broker-API besteht aus einer Gruppe von REST-Endpunkten, die von {{site.data.keyword.Bluemix_notm}} genutzt werden.
+**Vorbereitende Schritte:** <a href="http://docs.cloudfoundry.org/services/api.html" target="_blank">Implementieren Sie die Cloud Foundry-Service-Broker-API <img src="../icons/launch-glyph.svg" alt="Symbol für externen Link"></a>, um die Kommunikation zwischen Ihrem Service und {{site.data.keyword.Bluemix_notm}} einzurichten. Die Service-Broker-API besteht aus einer Gruppe von REST-Endpunkten, die von {{site.data.keyword.Bluemix_notm}} genutzt werden.
 
 Wenn Sie den Service-Broker implementieren, müssen Sie in der JSON-Antwort von <code>GET /v2/catalog</code> die Definitionen für Ihren Service und Ihre Servicepläne, einschließlich der Serviceinformationen, die angezeigt werden sollen, angeben. Sehen Sie sich als Beispiel den folgenden JSON-Beispielcode der GET-Antwort für den Katalog an:
 
@@ -610,7 +614,8 @@ Wenn Sie den Service-Broker implementieren, müssen Sie in der JSON-Antwort von 
 
 Mithilfe der folgenden Tabellen können Sie die JSON-Datei füllen.
 
-*Tabelle 10. JSON-Felder*
+
+{: #ld_table10}
 
 | **JSON-Felder** | **Beschreibung** |
 |-----------------|-----------------|
@@ -620,8 +625,9 @@ Mithilfe der folgenden Tabellen können Sie die JSON-Datei füllen.
 |id  | Die ID des Service. Diese ID muss in {{site.data.keyword.Bluemix_notm}} eindeutig und eine global eindeutige ID (GUID; Globally Unique Identifier) sein. Sie können die ID des Service nicht mehr ändern, nachdem Sie den Service mit {{site.data.keyword.Bluemix_notm}} registriert haben. |
 |metadata | Die Metadaten des Serviceplans, die im Katalog und in der Preisliste für {{site.data.keyword.Bluemix_notm}} angezeigt werden. Das Feld für die Metadaten ist ein optionales Feld. Sie können für die Metadaten weitere Felder angeben. Weitere Informationen zu [Metadatenfeldern](index.html#metadatafields) finden Sie in der folgenden Tabelle. |
 |plans | Ein Array von Serviceplandefinitionen. Weitere Informationen zu [Planfeldern](index.html#planfields) finden Sie in der folgenden Tabelle. |
+{: caption="Table 10. JSON fields" caption-side="top"}
 
-*Tabelle 11. Metadatenfelder*
+
 {: #metadatafields}
 
 | **Metadatenwerte** | **Beschreibung** |
@@ -648,6 +654,8 @@ Mithilfe der folgenden Tabellen können Sie die JSON-Datei füllen.
 |sdkDownloadUrl (optional) | Die URL der Webseite, die geöffnet wird, wenn Sie auf die Schaltfläche 'SDKs herunterladen' klicken. Die Schaltfläche 'SDKs herunterladen' befindet sich in der Service-Kachel auf der Seite mit der Anwendungsübersicht im Dashboard. Die Webseite wird daraufhin in einer neuen Browserregisterkarte geöffnet. |
 |serviceMonitorApi    | Die URL zu einer API, die die JSON-Daten zurückgibt, wie im folgenden Beispiel, das den Servicezustand auflistet. Dazu muss 'serviceMonitorApi' oder 'serviceMonitorApp' in Ihren Servicemetadaten vorhanden sein. Siehe folgendes Codebeispiel. |
 |serviceMonitorApp    | Die URL zu einer Anwendung, die {{site.data.keyword.Bluemix_notm}} bereitgestellt und an einen Service gebunden werden kann, um die spezifische Ausgabe des Servicestatus bereitzustellen. Die Anwendung muss dasselbe JSON-Datenformat wie 'serviceMonitorApi' zurückgeben. Dazu muss 'serviceMonitorApi' oder 'serviceMonitorApp' in Ihren Servicemetadaten vorhanden sein. Siehe folgendes Codebeispiel. |
+{: caption="Table 11. Metadata fields" caption-side="top"}
+
 
 ```
 {
@@ -677,7 +685,7 @@ Im folgenden Beispiel wird dargestellt, wie eine JSON-Antwort von 'GET /v2/catal
 
 ![Servicedetails im Katalog.](images/metadata.png "Ansicht der Servicedetails im Bluemix-Katalog")
 
-*Tabelle 12. Planfelder*
+
 {: #planfields}
 
 | **Planwerte** | **Beschreibung** |
@@ -685,10 +693,11 @@ Im folgenden Beispiel wird dargestellt, wie eine JSON-Antwort von 'GET /v2/catal
 |name       | Der Name des Serviceplans, der in der cf-Befehlszeilenschnittstelle verwendet wird. Der Planname wird beispielsweise in der Ausgabe des Befehls 'cf marketplace' angezeigt. Der Planname muss in Kleinbuchstaben und ohne Leerzeichen geschrieben sein. Er muss auch innerhalb des Service eindeutig sein.  |
 |description       | Die Beschreibung des Serviceplans. Die Beschreibung wird angezeigt, nachdem Sie auf der Seite mit den Servicedetails im {{site.data.keyword.Bluemix_notm}}-Katalog einen Plan ausgewählt haben. |
 |free      | Ein boolescher Wert, der angibt, ob der Serviceplan kostenfrei ist. Der Standardwert ist 'true'. |
-|id       | Die ID des Serviceplans. Die ID muss in {: new_window}eindeutig und eine GUID sein.  |
+|id       | Die ID des Serviceplans. Die ID muss eindeutig und eine GUID sein.  |
 |metadata (optional)    | Die Metadaten des Serviceplans, die im Katalog und in der Preisliste für {{site.data.keyword.Bluemix_notm}} angezeigt werden. Das Feld für die Metadaten ist ein optionales Feld. Sie können im Metadatenfeld die folgenden Felder angeben: displayName, type (Abonnement, reservierbar, planDetails), bullets, costs (unitId, Einheit, partNumber) und paidOnly. Weitere Informationen zu [Planmetadatenfelder](index.html#planmetadata) finden Sie in der folgenden Tabelle. |
+{: caption="Table 12. Plan fields" caption-side="top"}
 
-*Tabelle 13. Planmetadatenfelder*
+
 {: #planmetadata}
 
 | **Planmetadatenwerte** | **Beschreibung** |
@@ -698,6 +707,7 @@ Im folgenden Beispiel wird dargestellt, wie eine JSON-Antwort von 'GET /v2/catal
 |bullets                 | Eine Beschreibung der Ressourcen, die mit dem Plan verwendet werden können. Die Beschreibung wird in der Spalte **Features** auf der Seite mit den Servicedetails im Katalog und in der Preisliste angezeigt. |
 |costs                   | Die Informationen zu den Kosten des Service, der in der Spalte 'Preis' auf der Seite mit den Servicedetails im Katalog und in der Preisliste angezeigt  wird. Jedes Array enthält die folgenden Felder: unitId (ID der Einheit; Plural und nur Großbuchstaben verwenden; für kostenlose Pläne ist das Feld optional), unit (die Metrik, die zur Berechnung der Servicegebühren verwendet wird; Wert dieses Felds wird in der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle zur Darstellung der Gebührenmetrik verwendet)und partNumber (ID `part_number`, die im Abrechnungssystem verwendet wird; für kostenlose Pläne ist das Feld optional).   |
 |paidOnly (optional)     | Ein boolescher Wert, der angibt, ob der Serviceplan nur für {{site.data.keyword.Bluemix_notm}}-Zahlungskonten verfügbar ist. Der Wert **true** gibt an, dass der Serviceplan nur für Zahlungskonten verfügbar ist und keinen Testkonten hinzugefügt werden kann. Der Wert **false** gibt an, dass der Serviceplan sowohl Zahlungskonten als auch Testkonten hinzugefügt werden kann. Der Standardwert ist **false**.	  |
+{: caption="Table 13. Plan metadata fields" caption-side="top"}
 
 Im folgenden Beispiel wird dargestellt, wie eine JSON-Antwort von 'GET /v2/catalog' der Seite mit den Servicedetails im {{site.data.keyword.Bluemix_notm}}-Katalog zugeordnet wird. Es wird insbesondere dargestellt, wie die Planmetadatenfelder, die in der Tabelle oben beschrieben werden, der Benutzerschnittstelle zugeordnet werden:
 
@@ -753,12 +763,11 @@ mehrere Namen ein bzw. wählen Sie mehrere Namen aus, wenn Sie mehrere Manager h
 
 Sie können in Ihrer Organisation Bereiche erstellen, z. B. einen Bereich *dev* als Entwicklungsumgebung, einen Bereich *test* als Testumgebung und einen Bereich *production* als Produktionsumgebung. Anschließend können Sie Ihre Apps den Bereichen zuordnen. Führen Sie die folgenden Schritte aus, um einen Bereich zu erstellen:
 
-1. Klicken Sie auf das Symbol **{{site.data.keyword.avatar}}** ![Avatarsymbol](../admin/images/account_support.svg) &gt; **Organisationen verwalten**.
+1. Klicken Sie in der Menüleiste auf **Konto** &gt; **Organisationen verwalten**.
 2. Wählen Sie die Organisation aus, der Sie einen Bereich hinzufügen möchten.
 3. Klicken Sie auf **Bereich erstellen**.
 4. Geben Sie einen Bereichsnamen ein.
 5. Klicken Sie auf **Erstellen**.
-
 
 ### Kontingentüberwachung
 
@@ -784,7 +793,7 @@ Die folgenden Typen der Speicherbelegung werden im Diagramm angezeigt.
 	<dt><strong>Gesamtkontingent</strong></dt>
 	<dd>Das gesamte Speicherkontingent für alle Organisationen.</dd>
 	</dl>
-	**Hinweis**: Die Daten werden alle 4 Stunden automatisch aktualisiert. Klicken Sie auf **Neu berechnen**, wenn Sie die Daten auf der Seite vor der automatischen Aktualisierung aktualisieren möchten.
+	**Hinweis:** Die Daten werden alle 4 Stunden automatisch aktualisiert. Klicken Sie auf **Neu berechnen**, wenn Sie die Daten auf der Seite vor der automatischen Aktualisierung aktualisieren möchten.
 
 - Hauptspeichernutzung für Organisation. Dieser Bereich enthält Details zur Speicherbelegung auf
 Organisationsebene. Sie können das gesamte Speicherkontingent, das reservierte Kontingent und den physischen Speicher anzeigen, die von jeder Organisation verwendet werden. Das Diagramm liefert Informationen, die nach der höchsten Speicherbelegung pro Organisation reserviert sind. Die Organisation, die den größten Speicherumfang reserviert, wird standardmäßig an erster Stelle angezeigt. Sie können die Liste nach
@@ -797,19 +806,47 @@ der höchsten Speicherbelegung und der überschüssigen Speicherzuordnung sortie
 	<dd>Ermitteln Sie mithilfe dieser Option die Organisationen, die ein gesamtes Speicherkontingent haben, der mehr größer ist als erforderlich. Sortieren Sie die Liste nach der überschüssigen Speicherzuordnung, um Organisationen zu ermitteln, die im Verhältnis zu dem jeweils zugeordneten Speicher am wenigsten Speicher belegen. </dd>
 	</dl>
 
-### Kontingentpläne anpassen
+### Kontingente verwalten
+{: #manageorgquota}
 
-Führen Sie die folgenden Schritte aus, um den Kontingentplan für eine Organisation zu ändern:
+Ein Kontingent stellt die Ressourcengrenzen für die Organisationen in Ihrer Umgebung dar, die beim Erstellen der Organisation zugeordnet wird. Jede Anwendung oder jeder Service in einem Bereich der Organisation trägt zur Nutzung des zugeordneten Kontingents bei. Führen Sie die folgenden Schritte aus, um das Kontingent für eine Organisation zu verwalten:
 
 <ol>
-<li>Klicken Sie im Abschnitt 'Hauptspeichernutzung für Organisation' auf den Balken im Diagramm für die Organisation, die bearbeitet werden soll, oder wählen Sie den Namen der Organisation im Bereich 'Organisationsliste' aus.</li>
-<li>Auf der Seite 'Organisation verwalten' können Sie den Kontingentplan und den Organisationsnamen ändern und Manager hinzufügen oder entfernen.<br />
-<p><strong>Hinweis:</strong> Wenn Sie einen Kontingentplan auswählen, der für die aktuelle Speichernutzung einer Organisation nicht ausreicht, erhalten Sie eine Nachricht.</p>
+<li>Klicken Sie im Abschnitt 'Hauptspeichernutzung für Organisation' auf den Balken im Diagramm für die Organisation, die bearbeitet werden soll, oder wählen Sie den Namen der Organisation im Bereich 'Organisationsliste' aus. Auf der Seite 'Informationen zu Organisation' können Sie die Organisation umbenennen oder Manager hinzufügen oder entfernen.
+<p><strong>Hinweis:</strong> Wenn Sie einen Kontingentplan auswählen, der für die aktuelle Speichernutzung einer Organisation nicht ausreicht, erhalten Sie eine Nachricht.</p></li>
+<li>Klicken Sie auf <strong>Cloud Foundry</strong> oder <strong>Container</strong>.  Standardmäßig wird die Kontingentseite 'Cloud Foundry' geöffnet. 
+<ul>
+<li>Auf der Seite 'Cloud Foundry' können Sie einen Plan auswählen und die Kontingentdetails für die folgenden Ressourcen anzeigen:
+<ul>
+<li>Services</li>
+<li>Routen</li>
+<li>Speicherkontingent</li>
+<li>Anwendungszuordnung</li>
+</ul>
 </li>
+<li>Auf der Seite <strong>Container</strong> können Sie für die folgenden Felder Werte zuweisen (diese müssen Ganzzahlen sein):
+<dl class="parml">
+<dt class="pt dlterm">Imagegrenzwert</dt>
+<dd class="pd">Die maximale Anzahl von Container-Images, die in Ihrer privaten Registry vorhanden sein darf. Ein Container-Image ist die Basis für jeden von Ihnen erstellten Container. Ein Image wird aus einer Docker-Datei erstellt. Dabei handelt es sich um eine schreibgeschützte Datei, in der das Betriebssystem, die App und alle ihre Abhängigkeiten gespeichert sind, und in der beschrieben wird, wie ein Container konfiguriert wird. Images werden mit allen Mitgliedern einer Organisation gemeinsam genutzt.</dd>
+<dt class="pt dlterm">Hauptspeicherzuordnung - Standard</dt>
+<dd>Die Containerspeichermenge, die automatisch zugewiesen wird, wenn ein neuer Bereich erstellt wird. Beim Erstellen eines Containers müssen Sie eine Containergröße auswählen. Durch die Größe wird die Speichermenge bestimmt, die der Container auf dem Berechnungshost verwenden kann, und sie wird bei der Speicherbegrenzung für den Container berücksichtigt. </dd>
+<dt class="pt dlterm">Hauptspeicherzuordnung - Maximum</dt>
+<dd>Die maximale Containerspeichermenge, die bereichsübergreifend in einer Organisation zugeordnet verteilt werden kann.</dd>
+<dt class="pt dlterm">Variable IPs - Standard</dt>
+<dd>Die Anzahl öffentlicher IP-Adressen, die automatisch zugeordnet wird, wenn ein neuer Bereich erstellt wird. Sie können öffentliche IP-Adressen an einzelne Container und Containergruppen binden, damit über das Internet auf sie zugegriffen werden kann.</dd>
+<dt class="pt dlterm">Variable IPs - Maximum</dt>
+<dd>Die maximale Anzahl öffentlicher IP-Adressen, die Sie bereichsübergreifend in einer Organisation zuordnen können.</dd>
+</dl>
+<strong>Hinweis:</strong> Wenn in Ihrer Umgebung noch keine Container vorhanden oder konfiguriert sind, wird eine Fehlernachricht angezeigt.
+<p>Weitere Informationen zu Containern finden Sie in den [Informationen zu IBM Containern](https://console.ng.bluemix.net/docs/containers/container_ov.html). Weitere Informationen zu Containerkontingenten finden Sie unter [Kontingent und Bluemix-Konten]( https://console.ng.bluemix.net/docs/containers/container_planning_org_ov.html#container_planning_quota).</p>
+<strong>Hinweis:</strong> In der {{site.data.keyword.Bluemix_notm}}-Region 'Sydney' stehen keine Container zur Verfügung.</li>
+</ul>
 <li>Speichern Sie Ihre Änderungen auf der Seite 'Organisation verwalten', indem Sie auf <strong>Speichern</strong> klicken.</li>
 </ol>
 
+
 ### Organisationen über die Organisationsliste verwalten
+{: #manageorgfrolis}
 
 Im Bereich der Organisationsliste werden alle Organisationen in der {{site.data.keyword.Bluemix_notm}}-Umgebung angezeigt und Sie können Aktionen für einzelne Organisationen durch Klicken auf den Organisationsnamen ausführen.
 
@@ -820,9 +857,10 @@ Im Bereich der Organisationsliste werden alle Organisationen in der {{site.data.
   - Anzahl der Routen, die zurzeit verwendet werden.
   - Speicherkontingentdiagramm, das zeigt, wie viel des Kontingents zurzeit verwendet und wie viel nicht verwendet wird.
   - Diagramm zur Anwendungszuordnung, das zeigt, welche Anwendungen in dem Wert für das genutzte Speicherkontingent enthalten sind.
-  - Diagramm zur gemessenen Anwendungsnutzung, das einen dreimonatigen Bericht zu den genutzten GB-Stunden pro bereitgestellter App zeigt. Sie können die **Listenansicht** auswählen, um Daten für alle Apps mit Speicherzuordnung pro App und gemessener GB-Stundennutzung für die vergangenen drei Monate anzuzeigen. 
+  - Diagramm zur gemessenen Anwendungsnutzung, das einen dreimonatigen Bericht zu den genutzten GB-Stunden pro bereitgestellter App zeigt. Sie können die **Listenansicht** auswählen, um Daten für alle Apps mit Speicherzuordnung pro App und gemessener GB-Stundennutzung für die vergangenen drei Monate anzuzeigen.
 
 - Zum Bearbeiten des Namens der Organisation sowie zum Hinzufügen oder Entfernen von Managern klicken Sie auf den Namen der Organisation in der Liste und folgen den Anweisungen in der Anzeige.
+- Um Informationen zu einem bestimmten Benutzer der angezeigten Organisation anzuzeigen, klicken Sie auf den Benutzernamen, um die Benutzerinformationen anzuzeigen. Anschließend können Sie auf den Namen der Organisation klicken, um zur Anzeige der Organisationsinformationen zurückzukehren. 
 
 ## Benutzer und Berechtigungen verwalten
 {: #oc_useradmin}
@@ -833,6 +871,7 @@ Auf der Seite für die Benutzerverwaltung werden alle Benutzer für die lokale o
 Für die Berechtigungen **Superuser** und **Basic Access** kann **On** oder **Off** eingestellt werden; die restlichen Berechtigungen werden mithilfe bestimmter Zugriffstypen aktiviert oder inaktiviert, unter anderem durch den Zugriff **Lesen** oder **Schreiben** für die Berechtigung, die durch Symbole angezeigt wird. Beschreibungen der einzelnen Typen und Erläuterungen der Symbole finden Sie in [Berechtigungen](#permissions).
 
 ### Mit Benutzern arbeiten
+{: #workwithusers}
 
 Abhängig vom Zugriff **Lesen** oder **Schreiben** für die Berechtigungen des Benutzers können Sie nach vorhandenen Benutzern suchen, Benutzer entfernen und Benutzer einzeln oder in Gruppen hinzufügen. Sie verfügen über vollen Zugriff zum Ausführen jeder Task für die Benutzerverwaltung in der Umgebung, wenn Sie die Berechtigung **Superuser** besitzen. Überprüfen Sie die folgenden Benutzermanagement-Tasks sowie die zur Ausführung der einzelnen Tasks erforderlichen Zugriffsebenen:
 
@@ -858,7 +897,7 @@ Abhängig vom Zugriff **Lesen** oder **Schreiben** für die Berechtigungen des B
   3. Wählen Sie neben dem Feld **Organisation** die Organisation aus, zu der Sie den Benutzer hinzufügen möchten, indem Sie den Namen der Organisation eingeben und diesen aus der gefüllten Liste auswählen.
   4. Klicken Sie auf **Benutzer hinzufügen**, um den Benutzer zur ausgewählten Organisation hinzuzufügen.
 
-  **Hinweis**: Wenn die Operation zum Hinzufügen erfolgreich ist, wird der Benutzer für Sie zum Anzeigen und zum Durchsuchen zu der Tabelle hinzugefügt. Wenn Benutzer hinzugefügt werden, sind ihnen keine Berechtigungen zugewiesen.
+  **Hinweis:** Wenn die Operation zum Hinzufügen erfolgreich ist, wird der Benutzer für Sie zum Anzeigen und zum Durchsuchen zu der Tabelle hinzugefügt. Wenn Benutzer hinzugefügt werden, sind ihnen keine Berechtigungen zugewiesen.
 
 * Fügen Sie eine Benutzergruppe aus Ihrem LDAP-Verzeichnis hinzu. Wenn Sie die Berechtigung **Superuser** oder die Berechtigung **Users** mit dem Zugriff **Schreiben** besitzen, können Sie Benutzer hinzufügen.
 
@@ -867,18 +906,18 @@ Abhängig vom Zugriff **Lesen** oder **Schreiben** für die Berechtigungen des B
   3. Wählen Sie neben dem Feld **Organisation** die Organisation aus, zu der Sie die Benutzergruppe hinzufügen möchten, indem Sie den Namen der Organisation eingeben und diesen aus der gefüllten Liste auswählen.
   4. Klicken Sie auf **Benutzer hinzufügen**, um die Benutzergruppe zu der ausgewählten Organisation hinzuzufügen.
 
-  **Hinweis**: Gruppen oder mehr als 50 Benutzer werden über einen Stapeljob im Hintergrund hinzugefügt. Wenn die Hinzufügeoperation erfolgreich war, wird der Benutzer bzw. die Gruppe zur Tabelle hinzugefügt und Sie können ihn bzw. sie anzeigen und durchsuchen. Wenn Benutzer hinzugefügt werden, sind ihnen keine Berechtigungen zugewiesen.
+  **Hinweis:** Gruppen oder mehr als 50 Benutzer werden über einen Stapeljob im Hintergrund hinzugefügt. Wenn die Hinzufügeoperation erfolgreich war, wird der Benutzer bzw. die Gruppe zur Tabelle hinzugefügt und Sie können ihn bzw. sie anzeigen und durchsuchen. Wenn Benutzer hinzugefügt werden, sind ihnen keine Berechtigungen zugewiesen.
 
 * Eine Gruppe von Benutzern hinzufügen, indem ein Arbeitsblatt importiert wird, das die Benutzer-IDs, E-Mail-Adressen und die Organisation enthält, zu der Sie die Benutzer hinzufügen möchten. Wenn Sie die Berechtigung **Superuser** oder die Berechtigung **Users** mit dem Zugriff **Schreiben** besitzen, können Sie Benutzer hinzufügen.
 
-**Hinweis**: Geben Sie die Benutzer-IDs ein, die mit den in Ihrer Benutzerregistry verwendeten Werten übereinstimmen.
+**Hinweis:** Geben Sie die Benutzer-IDs ein, die mit den in Ihrer Benutzerregistry verwendeten Werten übereinstimmen.
 
   1. Klicken Sie auf **Benutzer importieren**.
   2. Klicken Sie auf **Vorlage herunterladen (.CSV)**, um ein Arbeitsblatt mit den erforderlichen Spalten herunterzuladen, das Sie ausfüllen können, oder um Ihr eigenes Arbeitsblatt zu erstellen, das mindestens die folgenden erforderlichen Spaltenüberschriften enthält: **Benutzer-ID**, **E-Mail**, **Organisation**.  In der Vorlage sind zwei optionale Spalten enthalten: **Vorname** und **Nachname**.
   3. Geben Sie die Benutzerwerte in die erforderlichen Spalten ein. Falls Sie kein LDAP-Verzeichnis verwenden, verwenden Sie die erforderlichen und optionalen Spaltenüberschriften für die Benutzer, die Sie importieren.
   4. Speichern Sie Ihre Datei und klicken Sie auf **Datei hochladen**.
 
-  **Hinweis**: Die Spalten innerhalb des Arbeitsblatts können in beliebiger Reihenfolge angeordnet sein, solange Sie über alle erforderlichen Spalten verfügen. Wenn der Import erfolgreich war, erhalten Sie eine Bestätigungsnachricht, in der bestätigt wird, dass alle Benutzer hinzugefügt wurden. Wenn der Import für einige Benutzer erfolgreich war, für andere hingegen nicht, prüfen Sie die Fehlernachricht, um Aktionen für die Benutzer zu ergreifen, die nicht hinzugefügt werden konnten.
+  **Hinweis:** Die Spalten innerhalb des Arbeitsblatts können in beliebiger Reihenfolge angeordnet sein, solange Sie über alle erforderlichen Spalten verfügen. Wenn der Import erfolgreich war, erhalten Sie eine Bestätigungsnachricht, in der bestätigt wird, dass alle Benutzer hinzugefügt wurden. Wenn der Import für einige Benutzer erfolgreich war, für andere hingegen nicht, prüfen Sie die Fehlernachricht, um Aktionen für die Benutzer zu ergreifen, die nicht hinzugefügt werden konnten.
 
 * Entfernen Sie Benutzer. Wenn Sie die Berechtigung **Superuser** oder die Berechtigung **Users** mit dem Zugriff **Schreiben** besitzen, können Sie Benutzer permanent aus der Umgebung entfernen.
 
@@ -891,19 +930,22 @@ Abhängig vom Zugriff **Lesen** oder **Schreiben** für die Berechtigungen des B
     * Wählen Sie in der Liste **Lesen** (Read) aus, um dem Benutzer den Zugriff **Lesen** (schreibgeschützt) für diese Berechtigung zu erteilen, oder wählen Sie **Schreiben** (Write) aus, um dem Benutzer den Schreibzugriff **Schreiben** zum Bearbeiten, Hinzufügen und Entfernen für diese Berechtigung zu erteilen.
     * Wählen Sie **Off** aus, um alle Berechtigungen zu inaktivieren.
 
-    **Hinweis**: Wenn für die Berechtigung **Superuser** die Einstellung **On** festgelegt wird, wird für alle anderen Berechtigungen **Schreiben** eingestellt.
+    **Hinweis:** Wenn für die Berechtigung **Superuser** die Einstellung **On** festgelegt wird, wird für alle anderen Berechtigungen **Schreiben** eingestellt.
 
 * Wenn Sie einen Benutzer zu einer bestimmten Organisation hinzufügen oder aus ihr entfernen möchten, müssen Sie über die Berechtigung **Superuser** oder die Berechtigung **Users** mit dem Zugriff **Schreiben** verfügen.
 
     1. Wählen Sie den Benutzernamen in der Tabelle aus, um auf die Seite **Benutzer bearbeiten** zuzugreifen und einen Benutzer zu einer Organisation hinzuzufügen. Verwenden Sie anschließend das Suchfeld, um eine Organisation zu lokalisieren, wählen Sie die Organisation aus der Liste aus und klicken Sie anschließend auf **Speichern**.
     2. Wählen Sie den Benutzernamen in der Tabelle aus, um auf die Seite **Benutzer bearbeiten** zuzugreifen und einen Benutzer aus einer Organisation zu entfernen. Klicken Sie anschließend für die Organisation, aus der der Benutzer entfernt werden soll, auf ![Entfernen](images/icon_remove.svg) und dann auf **Speichern**.
+    
+* Um Informationen zu der Organisation anzuzeigen, der der Benutzer zugewiesen ist, klicken Sie auf den Namen der Organisation, um die Organisationsinformationen anzuzeigen. Anschließend können Sie auf den Benutzernamen klicken, um zur Anzeige der Benutzerinformationen zurückzukehren. 
 
 ### Berechtigungen
 {: #permissions}
 
 Den Benutzern können die folgenden Berechtigungen mit bestimmten Zugriffsebenen (Lesen oder Schreiben) zugeordnet werden, die dem Benutzer die Ausführung bestimmter Tasks in der Administrationskonsole ermöglichen.
 
-*Tabelle 14. Berechtigungen*
+
+{: #ld_table14}
 
 | **Benutzerberechtigung** | **Beschreibung** |       
 |-----------------|-------------------|
@@ -912,7 +954,7 @@ Den Benutzern können die folgenden Berechtigungen mit bestimmten Zugriffsebenen
 | Catalog | Benutzern mit der Berechtigung **Catalog** kann der Zugriff auf **Lesen** oder **Schreiben** (Ändern) zugewiesen werden, und zwar für die in der lokalen oder dedizierten Instanz verfügbaren Services. Ein Benutzer mit Lesezugriff kann auf die Kachel 'Katalogverwaltung' zugreifen, um verfügbare Services anzuzeigen. Ein Benutzer mit Schreibzugriff kann auf die Kachel [Katalogverwaltung](#oc_catalog) zugreifen, um Services anzuzeigen, die Sichtbarkeit der Services zu bearbeiten, angepasste Services zu registrieren und die Liste für die Buildpack-Priorität zu steuern. |  
 | Reports | Benutzern mit der Berechtigung **Reports** kann für Sicherheitsberichte der Zugriff **Lesen** oder **Schreiben** (Ändern) zugewiesen werden. Ein Benutzer mit Lesezugriff kann auf die Kachel 'Berichte und Protokolle' zugreifen, um Berichte herunterzuladen. Benutzer mit Schreibzugriff können die Kachel [Berichte und Protokolle](#oc_report) anzeigen und mithilfe der Befehlszeilenschnittstelle neue Berichte hochladen sowie neue Kategorien für den Zugriff durch die Benutzer erstellen. |
 | Users | Benutzern mit der Berechtigung **Users** kann der Zugriff **Lesen** (Anzeigen) für die Liste der Benutzer oder **Schreiben** (Hinzufügen oder Entfernen) für Benutzer zugewiesen werden. Diese Berechtigung erlaubt es Ihnen nicht, Berechtigungen für andere Benutzer festzulegen. Benutzer mit Schreibzugriff können neue Benutzer zur Umgebung hinzufügen, Benutzer aus der Umgebung löschen und vorhandene Benutzer zu Organisationen hinzufügen, die in der Umgebung bereits vorhanden sind. Außerdem können Benutzer mit dem Zugriff **Schreiben** neue Organisationen hinzufügen, Organisationen löschen und die Benutzer in den Organisationen bearbeiten. |
-
+{: caption="Table 14. Permissions" caption-side="top"}
 
 ## Benutzer mit der Admin-REST-API verwalten
 {: #usingadminapi}
@@ -920,9 +962,10 @@ Den Benutzern können die folgenden Berechtigungen mit bestimmten Zugriffsebenen
 Sie können die REST-API `Admin` verwenden, um Benutzer für Ihre {{site.data.keyword.Bluemix_notm}}-Instanz hinzuzufügen und zu entfernen.
 Die Endpunkte und JSON-Antworten der `Admin`-REST-API werden probeweise zu Verfügung gestellt, um Basisoperationen über eine Befehlszeile zu ermöglichen. Die in den vorliegenden Informationen zu den Beispielen enthaltenen Endpunkte und URLs können jederzeit geändert oder entfernt werden.
 
-Die folgenden Tools sind Voraussetzungen für die Verwendung der nachfolgenden Beispiele. Wenn Sie möchten, können Sie auch andere Tools verwenden.
-* cURL für die Eingabe von REST-API-Anforderungen als Befehle. cURL ist ein Dienstprogramm zur freien Verwendung, mit dessen Hilfe Sie über eine Befehlszeilenschnittstelle HTTP-Anforderungen an einen Server senden und Antworten vom Server empfangen können. Sie können cURL von der [cURL Download-Site](http://curl.haxx.se/download.html){: new_window} herunterladen.
-* Python für die Verwendung des Python-Tools für JSON-Schöndruck. Dieses optionale Tool akzeptiert JSON-Text als Eingabe und stellt eine übersichtliche Ausgabe zur Verfügung. Sie können Python von der [Python Download-Site](https://www.python.org/downloads){: new_window} herunterladen.
+Sie können zwar auswählen, ob Sie andere Tools verwenden möchten, jedoch sind die folgenden Tools Voraussetzungen für die Verwendung der nachfolgenden Beispiele:
+* cURL für die Eingabe von REST-API-Anforderungen als Befehle. cURL ist ein Dienstprogramm zur freien Verwendung, mit dessen Hilfe Sie über eine Befehlszeilenschnittstelle HTTP-Anforderungen an einen Server senden und Antworten vom Server empfangen können. Sie können
+cURL von der [cURL-Download-Site ![Symbol für externen Link](../icons/launch-glyph.svg)](http://curl.haxx.se/download.html){: new_window} herunterladen.
+* Python für die Verwendung des Python-Tools für JSON-Schöndruck. Dieses optionale Tool akzeptiert JSON-Text als Eingabe und stellt eine übersichtliche Ausgabe zur Verfügung. Sie können Python von der [Python-Download-Site ![Symbol für externen Link](../icons/launch-glyph.svg)](https://www.python.org/downloads){: new_window} herunterladen.
 
 ### Bei der Administrationskonsole anmelden
 
@@ -934,9 +977,8 @@ Zum Anmelden bei der Administrationskonsole können Sie die Basiszugriffsauthent
 
 Führen Sie zum Anmelden bei der Administrationskonsole den folgenden Befehl aus:
 
-```
-curl --user <Benutzer-ID>:<Kennwort> -c ./cookies.txt --header "Accept: application/json" https://<eigener Host>.ibm.com/login | python -m json.tool
-```
+
+`curl --user <Benutzer-ID>:<Kennwort> -c ./cookies.txt --header "Accept: application/json" https://<eigener Host>.ibm.com/login | python -m json.tool`
 {: codeblock}
 
 <dl class="parml">
@@ -944,10 +986,8 @@ curl --user <Benutzer-ID>:<Kennwort> -c ./cookies.txt --header "Accept: applicat
 <dt class="pt dlterm">--user <em>Benutzer-ID</em>:<em>Kennwort</em></dt>
 <dd class="pd">Akzeptiert die Benutzer-ID und das Kennwort und sendet einen Header für die Basisauthentifizierung.</dd>
 
-
 <dt class="pt dlterm">-c <em>Dateiname</em></dt>
 <dd class="pd">Speichert die angegebene Benutzer-ID und das angegebene Kennwort als Cookie in der angegebenen Datei.</dd>
-
 
 <dt class="pt dlterm">--header</dt>
 <dd class="pd">Sendet einen Akzeptanzheader.</dd>
@@ -955,7 +995,6 @@ curl --user <Benutzer-ID>:<Kennwort> -c ./cookies.txt --header "Accept: applicat
 </dl>
 
 Das folgende Beispiel zeigt die Ausgabe dieses Befehls:
-
 ```
 {
     "message": "Logged in",
@@ -972,9 +1011,7 @@ Das folgende Beispiel zeigt die Ausgabe dieses Befehls:
 
 Beim Hinzufügen eines Benutzers müssen Sie eine Organisation angeben. Sie können die `Admin`-REST-API verwenden, um alle Organisationen aufzulisten. Zum Auflisten der Organisationen müssen Sie die Berechtigung **Users** mit dem Zugriff **Lesen** besitzen. Führen Sie zum Auflisten von Organisationen den folgenden Befehl aus:
 
-```
-curl -b ./cookies.txt https://<eigener Host>.ibm.com/codi/v1/organizations | python -m json.tool
-```
+`curl -b ./cookies.txt https://<eigener Host>.ibm.com/codi/v1/organizations | python -m json.tool`
 {: codeblock}
 
 <dl class="parml">
@@ -1014,9 +1051,7 @@ Das folgende Beispiel zeigt die Ausgabe dieses Befehls:
 
 Sie können feststellen, ob ein Benutzer bereits zu Ihrer {{site.data.keyword.Bluemix_notm}}-Umgebung hinzugefügt wurde, und zwar mithilfe der REST-API `Admin` zum Auflisten der registrierten Benutzer. Zum Auflisten der registrierten Benutzer müssen Sie die Berechtigung **Users** mit dem Zugriff **Lesen** besitzen. Zum Auflisten aller Benutzer führen Sie den folgenden Befehl aus:
 
-```
-curl -b ./cookies.txt https://<eigener Host>.ibm.com/codi/v1/users | python -m json.tool
-```
+`curl -b ./cookies.txt https://<eigener Host>.ibm.com/codi/v1/users | python -m json.tool`
 {: codeblock}
 
 <dl class="parml">
@@ -1084,6 +1119,8 @@ Das folgende Beispiel zeigt die Ausgabe dieses Befehls:
 ```
 {: screen}
 
+
+
 ### Benutzer hinzufügen
 
 Sie können die REST-API `Admin` verwenden, um Benutzer zur {{site.data.keyword.Bluemix_notm}}-Instanz hinzuzufügen. Zum Hinzufügen von Benutzern müssen Sie die Berechtigung **Users** mit dem Zugriff **Schreiben** oder die Berechtigung **Superuser** (ops.admin) für die Administrationskonsole besitzen. Ferner können Sie als Administrator den Mitglieder der Organisation, die nicht die allgemeinen Berechtigungen `Users` oder `Superuser` für die Administrationskonsole besitzen, die Berechtigung zum Hinzufügen neuer Benutzer für ihre Organisation erteilen. Verwenden Sie den folgenden API-Befehl, um diese Funktion für Organisationsmanager einzurichten:
@@ -1101,9 +1138,7 @@ Sie können einen Benutzer oder eine Liste von Benutzern hinzufügen. Dabei kön
 
 Diese Informationen werden in einer JSON-Datei angegeben.
 
-```
-curl -b ./cookies.txt https://<eigener Host>.ibm.com/codi/v1/users | python -m json.tool
-```
+`curl -b ./cookies.txt https://<eigener Host>.ibm.com/codi/v1/users | python -m json.tool`
 {: codeblock}
 
 <dl class="parml">
@@ -1139,25 +1174,15 @@ curl -b ./cookies.txt https://<eigener Host>.ibm.com/codi/v1/users | python -m j
 </ol>
 
 <dl class="parml">
-
 <dt class="pt dlterm">-v </dt>
 <dd class="pd">Gibt die Ausgabe mit ausführlichen Informationen an.</dd>
-
-
 <dt class="pt dlterm">-X POST</dt>
 <dd class="pd">Gibt eine POST-Anforderung an, die die standardmäßige GET-Anforderung außer Kraft setzt.</dd>
-
-
 <dt class="pt dlterm">-H "Content-Type: application/json"</dt>
 <dd class="pd">Gibt den Inhaltstypheader an (in diesem Beispiel JSON).</dd>
-
-
 <dt class="pt dlterm">-d *daten*</dt>
 <dd class="pd">Gibt die Daten an (in diesem Beispiel die Datei `user.json`), die in der POST-Anforderung an den HTTP-Server gesendet werden sollen.</dd>
-
 </dl>
-
-
 
 Das folgende Beispiel zeigt die Ausgabe dieses Befehls:
 
@@ -1189,9 +1214,7 @@ Sie können die REST-API `Admin` verwenden, um Benutzer aus der {{site.data.keyw
 
 Beim Entfernen eines Benutzers müssen Sie die Benutzer-ID des Benutzers angeben. Führen Sie den folgenden Befehl aus:
 
-```
-curl -v -b ./cookies.txt -X DELETE https://<eigener Host>.ibm.com/codi/v1/users?user_id=<Benutzer-ID@Domäne.com>
-```
+`curl -v -b ./cookies.txt -X DELETE https://<eigener Host>.ibm.com/codi/v1/users?user_id=<Benutzer-ID@Domäne.com>`
 {: codeblock}
 
 <dl class="parml">
@@ -1225,7 +1248,12 @@ Das folgende Beispiel zeigt die Ausgabe dieses Befehls:
 ## API für Metriken (experimentell)
 {: #envappmetricsapi}
 
-Zur Erfassung von Metriken über Ihre Umgebung oder Anwendungen können Sie zwei experimentelle APIs verwenden. Beide APIs geben ein Array von Datenpunkten für die angeforderten Metriken und den von Ihnen angegebenen Zeitraum zurück.
+Zur Erfassung von Metriken über Ihre Umgebung oder Anwendungen können Sie zwei experimentelle APIs verwenden. Diese APIs geben ein Array von Datenpunkten für die angeforderten Metriken und den von Ihnen angegebenen Zeitraum zurück.
+
+Auf die in den folgenden Abschnitten beschriebenen Metrik-APIs kann über den regionsspezifischen Endpunkt zugegriffen werden. Beispiel: 
+
+ `https://console.<region>.bluemix.net/admin/metrics`
+{: codeblock}
 
 **Hinweise**:
 
@@ -1236,20 +1264,31 @@ Zur Erfassung von Metriken über Ihre Umgebung oder Anwendungen können Sie zwei
 
 Mit der experimentellen Umgebungs-API können Sie allgemeine Information zur Umgebung für einen von Ihnen angegebenen Zeitraum erfassen. Zurückgegeben werden die verfügbaren Datenpunkte im angegebenen Zeitraum. Daten werden ungefähr ein Mal pro Stunde aufgezeichnet. Falls Sie beispielsweise sechs Stunden von CPU-Daten für die Umgebung angefordert haben, würde die Antwort CPU-Daten für jede der angeforderten sechs Stunden enthalten.
 
+ ### Umgebungsendpunkte 
+ 
+Zum Aufrufen dieses API-Befehls können Sie den folgenden Endpunkt verwenden: `/api/v1/env`
+
 ### Abfrageparameter für Umgebungsmetriken
 
 Mit den folgenden Abfrageparametern können Sie Metriken für die CPU, die Platte, den Hauptspeicher, das Netz und Apps erfassen:
 
 <dl class="parml">
 <dt class="pt dlterm">metric</dt>
-<dd class="pd">Einer oder mehrere der folgenden Werte, durch Kommas getrennt: 'memory', 'disk', 'cpu', 'network' und 'apps.'</dd>
+<dd class="pd">Einer oder mehrere der folgenden Werte, durch Kommas getrennt: `memory`, `disk`, `cpu`, `network` und `apps`.</dd>
 <dt class="pt dlterm">startTime</dt>
 <dd class="pd">Der früheste Zeitpunkt, für den Daten zurückgegeben werden. Falls der Parameter 'startTime' nicht angegeben ist, wird der früheste verfügbare Datenpunkt einbezogen. Um beispielsweise Daten für den Zeitraum zwischen 14.00 und 17.00 Uhr zu erfassen, geben Sie als Startzeit 14.00 Uhr an.</dd>
 <dt class="pt dlterm">endTime</dt>
 <dd class="pd">Der späteste Zeitpunkt, für den Daten zurückgegeben werden. Falls der Parameter 'endTime' nicht angegeben ist, wird der neueste Datenpunkt verwendet. Um beispielsweise Daten für den Zeitraum zwischen 14.00 und 17.00 Uhr zu erfassen, geben Sie als Endzeit 17.00 Uhr an.</dd>
 <dt class="pt dlterm">sort</dt>
-<dd class="pd">Die Reihenfolge, in der die Daten zurückgegeben werden. Gültige Werte sind 'asc' (aufsteigend) und 'desc' (absteigend). Standardeinstellung ist die absteigende Reihenfolge; hierbei werden zuerst die neuesten Daten zurückgegeben. </dd>
+<dd class="pd">Die Reihenfolge, in der die Daten zurückgegeben werden. Gültige Werte sind: `asc` (aufsteigend) und `desc` (absteigend). Standardeinstellung ist die absteigende Reihenfolge; hierbei werden zuerst die neuesten Daten zurückgegeben. </dd>
 </dl>
+
+ Im folgenden Beispiel werden die Abfrageparameter zum Erfassen von Metriken für die Umgebung verwendet: 
+ 
+ ```
+ curl -b ./cookies.txt --header "Accept: application/json" https://console.<Region>.bluemix.net/admin/metrics/api/v1/env?metric=cpu,network,disk,apps,memory
+ ```
+{: codeblock}
 
 ### Datenformat für Umgebungsmetriken
 
@@ -1261,19 +1300,37 @@ Das Datenformat ist in den folgenden Abschnitten erläutert.
 {
   "sample_time": 1477494000000,
   "memory": {
-    "physical": {
-      "total_gb": 864,
+    "cell": {
+      "physical": {
+        "total_gb": 864,
       "used": {
-        "value_gb": 336.84,
+          "value_gb": 336.84,
         "percent": 38.99
       }
-    },
+      },
     "allocated": {
-      "reserved_gb": 1728,
+        "reserved_gb": 1728,
       "total_allocated": {
-        "value_gb": 1287.59,
+          "value_gb": 1287.59,
         "percent": 74.51
       }
+      },
+    },
+    "dea": {
+      "physical": {
+      	"total_gb": 864,
+      "used": {
+          "value_gb": 336.84,
+        "percent": 38.99
+      }
+      },
+    "allocated": {
+        "reserved_gb": 1728,
+      "total_allocated": {
+          "value_gb": 1287.59,
+        "percent": 74.51
+      }
+      },
     },
     "memory_by_container": [
       {
@@ -1312,19 +1369,37 @@ Das Datenformat ist in den folgenden Abschnitten erläutert.
 {
   "sample_time": 1477494000000,
   "disk": {
-    "physical": {
-      "total_gb": 8100,
+    "cell": {
+      "physical": {
+        "total_gb": 8100,
       "used": {
-        "value_gb": 807,
+          "value_gb": 807,
         "percent": 9.96
       }
-    },
+      },
     "allocated": {
-      "reserved_gb": 16200,
+        "reserved_gb": 16200,
       "total_allocated": {
-        "value_gb": 1989.5,
+          "value_gb": 1989.5,
         "percent": 12.28
       }
+      },
+    },
+    "dea": {
+      "physical": {
+        "total_gb": 8100,
+      "used": {
+          "value_gb": 807,
+        "percent": 9.96
+      }
+      },
+    "allocated": {
+        "reserved_gb": 16200,
+      "total_allocated": {
+          "value_gb": 1989.5,
+        "percent": 12.28
+      }
+      },
     },
     "disk_by_container": [
       {
@@ -1363,7 +1438,12 @@ Das Datenformat ist in den folgenden Abschnitten erläutert.
 {
   "sample_time": 1477494000000,
   "cpu": {
-    "average_percent_cpu_used": 27.288461538461544,
+    "cell": {
+      "average_percent_cpu_used": 27.288461538461544
+    },
+    "dea": {
+      "average_percent_cpu_used": 27.288461538461544
+    },
     "cpu_by_container": [
       {
         "name": "dea_next/0",
@@ -1456,7 +1536,7 @@ Das Datenformat ist in den folgenden Abschnitten erläutert.
 {: screen}
 
 * Um Datensätze über Ihre Anwendungen zu erfassen, verwenden Sie das folgende Datenformat:
- 
+
 ```
 {
   "sample_time": 1477494000000,
@@ -1490,11 +1570,12 @@ Um die Menge der Informationen zu verringern, die für jede Datenstichprobe im a
 ### Anwendungsendpunkte 
 
 Zum Aufrufen dieses API-Befehls können Sie die folgenden Endpunkte verwenden:
-* /api/v1/app/cpu/physical 
-* /api/v1/app/memory/physical
-* /api/v1/app/memory/reserved
-* /api/v1/app/disk/physical
-* /api/v1/app/disk/reserved
+* `/api/v1/app/cpu/physical` 
+* `/api/v1/app/memory/physical`
+* `/api/v1/app/memory/reserved`
+* `/api/v1/app/disk/physical`
+* `/api/v1/app/disk/reserved`
+
 
 ### Abfrageparameter für Anwendungen
  
@@ -1508,7 +1589,17 @@ Mit den folgenden Abfrageparametern können Sie Metriken für Ihre Anwendungen e
 <dt class="pt dlterm">count</dt>
 <dd class="pd">Die Anzahl der Datensätze in jeder Datenstichprobe, die zurückgegeben werden sollen.
 </dd>
+<dt class="pt dlterm">minValue</dt>
+<dd class="pd">Der kleinste Wert, der für die angegebene Metrik zurückgegeben werden soll. Wenn minValue nicht angegeben wird, werden alle Werte zurückgegeben. Beispiel: Zum Erfassen von Anwendungen, die mindestens 20000 Byte physischen Speicher belegen, geben Sie für minValue den Wert 20000 an.
+</dd>
 </dl>
+
+Mit dem folgenden Beispiel werden Metriken zur Anwendung erfasst:
+
+```
+curl -b ./cookies.txt --header "Accept: application/json" https://console.<Region>.bluemix.net/admin/metrics/api/v1/app/cpu/physical?count=5&startTime=2016-12-02T16:54:09.467Z
+```
+{: codeblock}
 
 ### Antwortformat für Anwendungen
 
@@ -1550,6 +1641,8 @@ POST /codi/v1/serviceBrokers
 ### Anforderung
 {: #registerrequest}
 
+{: #ld_table15}
+
 | **Name** | **Beschreibung** |
 |-----------------|-------------------|
 | name | Name des Service-Brokers. |
@@ -1557,8 +1650,7 @@ POST /codi/v1/serviceBrokers
 | auth_password | Kennwort für die Verbindung mit dem Service-Broker. |
 | broker_url | URL für die Verbindung zum Service-Broker. |
 | owningOrganization | Anfangsorganisation, bei der der Service in die Whitelist eingetragen werden soll. |
-
-*Tabelle 15. Felder*
+{: caption="Table 15. Fields" caption-side="top"}
 
 #### Hauptteil
 {: #registerbody}
@@ -1618,15 +1710,13 @@ Verwenden Sie die folgende API und die folgenden Codebeispiele zum Aktualisieren
 ### Route
 {: #updateroute}
 
-```
-PUT /codi/v1/serviceBrokers
-```
+`PUT /codi/v1/serviceBrokers`
 {: screen}
 
 ### Anforderung
 {: #updaterequest}
 
-*Tabelle 16. Felder*
+{: #ld_table16}
 
 | **Name** | **Beschreibung** |
 |-----------------|-------------------|
@@ -1635,6 +1725,7 @@ PUT /codi/v1/serviceBrokers
 | auth_password | Kennwort für die Verbindung mit dem Service-Broker. |
 | broker_url | URL für die Verbindung zum Service-Broker. |
 | owningOrganization | Anfangsorganisation, bei der der Service in die Whitelist eingetragen werden soll. |
+{: caption="Table 16. Requests" caption-side="top"}
 
 #### Hauptteil
 {: #updatebody}
@@ -1690,11 +1781,13 @@ Content-Type: application/json
 
 Verwenden Sie die folgende API und die folgenden Codebeispiele zum Löschen eines Service.
 
-*Tabelle 17. Parameter*
+
+{: #ld_table17}
 
 | **Name** | **Beschreibung** |
 |-----------------|-------------------|
 | name | Name des Service-Brokers. Dieser Name kann in keinen anderen Namen als den Erstellungsnamen des Service geändert werden. |
+{: caption="Table 17. Parameter" caption-side="top"}
 
 ### Route
 
@@ -1732,9 +1825,10 @@ Content-Type: application/json
 
 Sie können Benutzer für Ihre {{site.data.keyword.Bluemix_notm}}-Umgebung über die Cloud Foundry-Befehlszeilenschnittstelle mit dem {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in verwalten. Sie können Benutzer beispielsweise aus einer LDAP-Registry hinzufügen.
 
-Vor dem Beginn müssen Sie die Befehlszeilenschnittstelle 'cf' installieren. Für das {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in ist cf Version 6.11.2 oder höher erforderlich. [Cloud Foundry-Befehlszeilenschnittstelle herunterladen](https://github.com/cloudfoundry/cli/releases){: new_window}
+Vor dem Beginn müssen Sie die Befehlszeilenschnittstelle 'cf' installieren. Für das {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in ist cf Version 6.11.2 oder höher erforderlich. [Laden Sie die Cloud Foundry-Befehlszeilenschnittstelle herunter. ![Symbol für externen Link](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}
 
-**Einschränkung:** Die Cloud Foundry-Befehlszeilenschnittstelle wird nicht von Cygwin unterstützt. Verwenden Sie die Cloud Foundry-Befehlszeilenschnittstelle in einem Befehlszeilenfenster, das sich von dem Befehlszeilenfenster von Cygwin unterscheidet.
+**Einschränkung:** Die
+Cloud Foundry-Befehlszeilenschnittstelle wird nicht von Cygwin unterstützt. Verwenden Sie die Cloud Foundry-Befehlszeilenschnittstelle in einem Befehlszeilenfenster, das sich von dem Befehlszeilenfenster von Cygwin unterscheidet.
 
 ### {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in hinzufügen
 

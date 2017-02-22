@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # タグの管理
 {: #manage_tags}
-最終更新日: 2016 年 12 月 07 日
+最終更新日: 2017 年 1 月 11 日
 {: .last-updated}
 
 {{site.data.keyword.mobilepushshort}}ダッシュボードを使用して、ご使用のアプリケーション向けのタグを作成および削除し、タグ・ベースの通知を開始します。タグ・ベースの通知は、タグにサブスクライブしているデバイスが受け取ります。
@@ -120,47 +120,6 @@ BMSPush.retrieveSubscriptions(function(tags) {
 ```
 	{: codeblock}
 
-## Objective-C 上でのタグの取得
-{: objc-get-tags}
-
-デバイスがサブスクライブしているタグのリストを取得したり、デバイスがサブスクライブできる使用可能なタグのリストを取得したりするには、Objective-C を使用して開発された iOS アプリケーションに以下のコード・スニペットをコピーします。
-
-以下の **retrieveAvailableTags** API を使用して、デバイスをサブスクライブできる対象として使用可能なタグのリストを取得します。
-
-```
-//Get a list of available tags to which the device can subscribe
-	[push retrieveAvailableTagsWithCompletionHandler:
-	^(IMFResponse *response, NSError *error){
-	if(error){
-    [self updateMessage:error.description];
-    } else {
-    [self updateMessage:@"Successfully retrieved available tags."];
-    NSDictionary *availableTags = [[NSDictionary alloc]init];
-    availableTags = [response tags];
-    [self.appDelegateVC updateMessage:availableTags.description];
-    }
-    }];
- ```
-	{: codeblock}
-
-**retrieveSubscriptions** API を使用して、デバイスがサブスクライブする対象タグのリストを取得します。
-
-
-```
-// Get a list of tags that to which the device is subscribed.
-[push retrieveSubscriptionsWithCompletionHandler:
-	^(IMFResponse *response, NSError *error) {
-    if(error){
-     [self updateMessage:error.description];
-    } else {
-     [self updateMessage:@"Successfully retrieved subscriptions."];
-    NSDictionary *subscribedTags = [[NSDictionary alloc]init];
-    subscribedTags = [response subscriptions];
-    [self.appDelegateVC updateMessage:subscribedTags.description];
-    }
-    }];
-  ```
-	{: codeblock}
 
 ## Swift 上でのタグの取得
 {: swift-get-tags}
@@ -195,8 +154,7 @@ BMSPush.retrieveSubscriptions(function(tags) {
         print( "Response during retrieving subscribed tags : \(response?.description)")
         print( "status code during retrieving subscribed tags : \(statusCode)")
         }
-    else
-	{
+    else {
     print( "Error dur]ing retrieving subscribed tags \(error) ")
          Print( "Error during retrieving subscribed tags \n  - status code: \(statusCode) \n Error :\(error) \n")
         }
@@ -313,50 +271,11 @@ BMSPush.unsubscribe(tag, success, failure);
 ```
 	{: codeblock}
 
-## Objective-C 上でのタグのサブスクライブとアンサブスクライブ
-{: objc-subscribe-tags}
-
-このコード・スニペットを Objective-C モバイル・アプリケーションにコピー・アンド・ペーストします。
-
-タグにサブスクライブするには、**subscribeToTags** API を使用します。
-
-```
-[push subscribeToTags:tags completionHandler:
-	^(IMFResponse *response, NSError *error) {
-    if(error){
-     [self updateMessage:error.description];
-    }else{
-      NSDictionary* subStatus = [[NSDictionary alloc]init];
-      subStatus = [response subscribeStatus];
-      [self updateMessage:@"Parsed subscribe status is:"];
-      [self updateMessage:subStatus.description];
-    }
-    }];
-```
-	{: codeblock}
-
-タグからアンサブスクライブするには、**unsubscribeFromTags** API を使用します。
-
-```
-[push unsubscribeFromTags:tags completionHandler:
-^(IMFResponse *response, NSError *error) {
-   if (error){
-       [self updateMessage:error.description];
-    } else {
-       NSDictionary* subStatus = [[NSDictionary alloc]init];
-       subStatus = [response unsubscribeStatus];
-       [self updateMessage:subStatus.description];
-    }
-    }];
-```
-	{: codeblock}
 
 ## Swift 上でのタグのサブスクライブとアンサブスクライブ
 {: swift-subscribe-tags}
 
 このコード・スニペットを Swift モバイル・アプリケーションにコピー・アンド・ペーストします。
-
-**使用可能なタグへのサブスクライブ**
 
 タグにサブスクライブするには、**subscribeToTags** API を使用します。
 
@@ -372,8 +291,6 @@ push.subscribeToTags(tagsArray: ["MyTag"], completionHandler: { (response, statu
 })
 ```
 	{: codeblock}
-
-**タグからのアンサブスクライブ**
 
 タグからアンサブスクライブするには、**unsubscribeFromTags** API を使用します。
 
@@ -404,7 +321,7 @@ bmsPush.subscribe(tagsArray,function(response) {
 ```
 	{: codeblock}
 
-タグをアンサブスクライブするには、`unSubscribe` メソッドを使用します。
+タグをアンサブスクライブするには、**unSubscribe** メソッドを使用します。
 
 ```
 var tagsArray = ["tag1", "Tag2"]

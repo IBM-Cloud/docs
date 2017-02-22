@@ -1,12 +1,12 @@
 ---
 
- 
+
 
 copyright:
 
-  years: 2015 2016
+  years: 2015，2017
 
-lastupdated: "2016-03-15" 
+lastupdated: "2016-03-15"
 
 
 
@@ -110,5 +110,3 @@ vuelva a transferir la app para que el cambio sea efectivo:</p>
 Utilice el archivo <code>manifest.yml</code>. Puede añadir la variable
 de entorno y el valor que desee especificar directamente
 en el archivo. Para obtener más información, consulte <a href="https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html#env-block">Variables de entorno</a>.</li></ul>
-  
-

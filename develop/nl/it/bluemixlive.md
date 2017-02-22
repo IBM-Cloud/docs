@@ -57,7 +57,7 @@ Puoi utilizzare la funzione Desktop Sync di Bluemix Live Sync per aggiornare rap
 Per Desktop Sync valgono le seguenti considerazioni:
 * Desktop Sync viene eseguito nei seguenti sistemi operativi:
   * Windows 7 o 8
-  * Mac OS X versione 10.9 o successive
+  * Mac OS X versione 10.9 o successive   
       **Nota:** Windows richiede .NET Framework versione 4.5. Se non hai .NET installato, ti viene richiesto di installarlo quando installi l'interfaccia riga di comando {{site.data.keyword.Bluemix_notm}} Live Sync.  
 * Non devi necessariamente clonare il tuo repository Git.
 * Indipendentemente dal tipo di applicazione che stai sviluppando, puoi

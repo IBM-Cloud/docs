@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-20"
+  years: 2015, 2017
+lastupdated: "2017-2-21"
 
 ---
 
@@ -94,7 +94,7 @@ Configure the {{site.data.keyword.deliverypipeline}} to add a Sauce Labs test jo
   
 1. Click **SAVE**. Whenever your pipeline runs, your Sauce Labs tests run.
 
-To learn more, see [Delivery Pipeline](https://www.ibm.com/devops/method/content/deliver/tool_build_and_deploy/){: new_window} ![External link icon](images/launch--glyph.svg).
+To learn more, see [Delivery Pipeline![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/tool_build_and_deploy/){: new_window}.
 
 
 ## Adding {{site.data.keyword.DRA_short}} (Experimental)
@@ -110,7 +110,7 @@ Add {{site.data.keyword.DRA_short}} to maintain and improve the quality of your 
 1. Click **Add a Tool**.
 1. In the Tool Integrations section, click **{{site.data.keyword.DRA_short}}**. 
 1. Click **Create Integration**.
-1. Click **{{site.data.keyword.DRA_short}}**, and then complete the getting started steps: create criteria, connect the criteria to the pipeline, and run the pipeline. For more information, see [{{site.data.keyword.DRA_short}}](https://www.ibm.com/devops/method/content/learn/tool_devops_insights/){: new_window} ![External link icon](images/launch--glyph.svg).
+1. Click **{{site.data.keyword.DRA_short}}**, and then complete the getting started steps: create criteria, connect the criteria to the pipeline, and run the pipeline. For more information, see [{{site.data.keyword.DRA_short}}![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/learn/tool_devops_insights/){: new_window}.
 
 
 ## Adding the Eclipse Orion {{site.data.keyword.webide}}
@@ -167,7 +167,7 @@ Configure GitHub to manage your source code on the cloud:
 
 1. If you enabled GitHub Issues, click **GitHub Issues** to open it. You can use this instance of GitHub Issues for your entire toolchain, even if the toolchain contains multiple GitHub repos. 
 
-For more information, see [GitHub](https://www.ibm.com/devops/method/content/code/tool_github/){: new_window} ![External link icon](images/launch--glyph.svg) and [GitHub Issues](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window} ![External link icon](images/launch--glyph.svg).
+For more information, see [GitHub![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/code/tool_github/){: new_window} and [GitHub Issues![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window}.
 
 
 ## Configuring {{site.data.keyword.ghe_short}} on {{site.data.keyword.Bluemix_notm}} Dedicated
@@ -175,7 +175,7 @@ For more information, see [GitHub](https://www.ibm.com/devops/method/content/cod
 
  **Note:** These instructions apply to {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}. If you are using your own managed version of {{site.data.keyword.ghe_short}}, some steps might differ depending on your internal procedures.
 
-{{site.data.keyword.ghe_long}} is an on-premises, web-based hosting service for Git repos. Dedicated {{site.data.keyword.ghe_short}} is for {{site.data.keyword.Bluemix_notm}} Dedicated customers only. GitHub Issues is a tracking tool that keeps your work and your plans in one place. It is integrated with your development repo so that you can focus on important tasks. For more information about Dedicated {{site.data.keyword.ghe_short}} and GitHub Issues, see [Getting started with {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window} and [GitHub Issues](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window} ![External link icon](images/launch--glyph.svg).
+{{site.data.keyword.ghe_long}} is an on-premises, web-based hosting service for Git repos. Dedicated {{site.data.keyword.ghe_short}} is for {{site.data.keyword.Bluemix_notm}} Dedicated customers only. GitHub Issues is a tracking tool that keeps your work and your plans in one place. It is integrated with your development repo so that you can focus on important tasks. For more information about Dedicated {{site.data.keyword.ghe_short}} and GitHub Issues, see [Getting started with {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window} and [GitHub Issues![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window}.
 
 You can configure {{site.data.keyword.ghe_short}} as a tool integration in your toolchain so that you can manage source code in your company's [{{site.data.keyword.Bluemix_notm}} Dedicated](/docs/dedicated/index.html#dedicated){: new_window} instance.
 
@@ -232,7 +232,7 @@ Configure a custom tool so that it works with other tools in your toolchain and 
 1. (Advanced) Add more properties as needed. For example, list any information or attributes that are required for your tool to integrate with other tools in the toolchain.  
 1. Click **Create Integration**.
 
-To learn more, see [Introducing custom tool integration for {{site.data.keyword.Bluemix_notm}} toolchains](https://www.ibm.com/blogs/bluemix/2016/10/custom-tool-integration-with-bluemix-toolchains/){: new_window} ![External link icon](images/launch--glyph.svg).
+To learn more, see [Introducing custom tool integration for {{site.data.keyword.Bluemix_notm}} toolchains![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2016/10/custom-tool-integration-with-bluemix-toolchains/){: new_window}.
 
 
 ## Configuring PagerDuty
@@ -246,15 +246,15 @@ Configure PagerDuty to send notifications when pipeline stage failures occur so 
 1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the **Toolchains** page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View Toolchain**. Then, click **Overview**. 
 1. Click **Add a Tool**.
 1. In the Tool Integrations section, click **PagerDuty**
-1. Type the PagerDuty site name that is associated with your PagerDuty account. If you don't have a PagerDuty account, [register for one](https://signup.pagerduty.com/accounts/new){: new_window} ![External link icon](images/launch--glyph.svg).
-1. Type the API access key for your PagerDuty account. For instructions to find the key, see [Generating an API Key](https://support.pagerduty.com/hc/en-us/articles/202829310-Generating-an-API-Key){: new_window} ![External link icon](images/launch--glyph.svg).
+1. Type the PagerDuty site name that is associated with your PagerDuty account. If you don't have a PagerDuty account, [register for one![External link icon](../../icons/launch-glyph.svg "External link icon")](https://signup.pagerduty.com/accounts/new){: new_window}.
+1. Type the API access key for your PagerDuty account. For instructions to find the key, see [Generating an API Key![External link icon](../../icons/launch-glyph.svg "External link icon")](https://support.pagerduty.com/hc/en-us/articles/202829310-Generating-an-API-Key){: new_window}.
 1. Type the name of your PagerDuty service.
 1. Type the email address for the primary PagerDuty contact.
 1. Type the phone number for the primary PagerDuty contact.
 1. Click **Create Integration**.
 1. Click **PagerDuty** to go to pagerduty.com. You can view the events that are associated with the PagerDuty service that you specified when you configured this tool integration for your toolchain. 
 
-To learn more, see [PagerDuty](https://www.ibm.com/devops/method/content/manage/tool_pagerduty/){: new_window} ![External link icon](images/launch--glyph.svg).
+To learn more, see [PagerDuty![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/manage/tool_pagerduty/){: new_window}.
 
 
 ## Configuring Sauce Labs
@@ -270,14 +270,14 @@ Configure Sauce Labs to run automated functional tests on multiple operating sys
 1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the **Toolchains** page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View Toolchain**. Then, click **Overview**. 
 1. Click **Add a Tool**.
 1. In the Tool Integrations section, click **Sauce Labs**.
-1. Type the user name that is associated with your Sauce Labs account. You can [find your user name in the welcome message at the top of your Sauce Labs account page](https://saucelabs.com/account){: new_window} ![External link icon](images/launch--glyph.svg).
-1. Type the access key for your Sauce Labs account. You can [find the key on your Sauce Labs account page](https://saucelabs.com/account){: new_window} ![External link icon](images/launch--glyph.svg).
+1. Type the user name that is associated with your Sauce Labs account. You can [find your user name in the welcome message at the top of your Sauce Labs account page![External link icon](../../icons/launch-glyph.svg "External link icon")](https://saucelabs.com/account){: new_window}.
+1. Type the access key for your Sauce Labs account. You can [find the key on your Sauce Labs account page![External link icon](../../icons/launch-glyph.svg "External link icon")](https://saucelabs.com/account){: new_window}.
 1. Click **Create Integration**.
 1. Click **Sauce Labs** to go to saucelabs.com and view the test activity for the toolchain.
 
  **Tip**: If you added a Sauce Labs test job to the {{site.data.keyword.deliverypipeline}}, you can select the service instance.
 
-To learn more, see [Sauce Labs](https://www.ibm.com/devops/method/content/code/tool_sauce_labs/){: new_window} ![External link icon](images/launch--glyph.svg).
+To learn more, see [Sauce Labs![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/code/tool_sauce_labs/){: new_window}.
 
 
 ## Configuring Slack
@@ -293,12 +293,12 @@ Configure Slack to receive notifications about your toolchain from the tool inte
 1. If you have a toolchain and are adding this tool integration to it, on the DevOps dashboard, on the **Toolchains** page, click the toolchain to open its Overview page. Alternatively, on your app's Overview page, on the Continuous delivery card, click **View Toolchain**. Then, click **Overview**.
 1. Click **Add a Tool**.
 1. In the Tool Integrations section, click **Slack**.
-1. Type the API authentication token for your Slack account. You must use a generated full-access token to authenticate with Slack. For instructions to find the token, see [Slack authentication](https://api.slack.com/web#authentication){: new_window} ![External link icon](images/launch--glyph.svg).
+1. Type the API authentication token for your Slack account. You must use a generated full-access token to authenticate with Slack. For instructions to find the token, see [Slack authentication![External link icon](../../icons/launch-glyph.svg "External link icon")](https://api.slack.com/web#authentication){: new_window}.
 1. Type the name of the Slack channel that you want notifications to be sent to. If the channel that you specify doesn't exist, it is created. If the channel was archived, it is reactivated.
 1. Click **Create Integration**.
 1. Click **Slack**. You can view all of the activity for your toolchain in the configured Slack channel.
 
-To learn more, see [Slack](https://www.ibm.com/devops/method/content/culture/tool_slack/){: new_window} ![External link icon](images/launch--glyph.svg).
+To learn more, see [Slack![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/culture/tool_slack/){: new_window}.
 
 
 # Related Links
@@ -307,22 +307,22 @@ To learn more, see [Slack](https://www.ibm.com/devops/method/content/culture/too
 ## Tutorials and Samples
 {: #samples}
 
-* [Create a pipeline](https://www.ibm.com/devops/method/tutorials/tutorial_first_pipeline){:new_window} ![External link icon](images/launch--glyph.svg)
-* [Create and use your first toolchain](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow){:new_window} ![External link icon](images/launch--glyph.svg)
-* [Create a custom toolchain](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_custom){:new_window} ![External link icon](images/launch--glyph.svg)
-* [Create a toolchain that includes {{site.data.keyword.DRA_short}}](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_devops_insights){:new_window} ![External link icon](images/launch--glyph.svg)
-* [Create and use a microservices toolchain](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices){:new_window} ![External link icon](images/launch--glyph.svg)
-* [Create a toolchain from a template on {{site.data.keyword.Bluemix_notm}} Dedicated](https://www.ibm.com/devops/method/tutorials/tutorial_dedicated_toolchain_template_flow){:new_window} ![External link icon](images/launch--glyph.svg)
-* [Create a toolchain from an app on {{site.data.keyword.Bluemix_notm}} Dedicated](https://www.ibm.com/devops/method/tutorials/tutorial_dedicated_toolchain_app_flow){:new_window} ![External link icon](images/launch--glyph.svg)
+* [Create a pipeline![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_first_pipeline){:new_window}
+* [Create and use your first toolchain![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow){:new_window}
+* [Create a custom toolchain![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_custom){:new_window}
+* [Create a toolchain that includes {{site.data.keyword.DRA_short}}![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_devops_insights){:new_window}
+* [Create and use a microservices toolchain![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices){:new_window}
+* [Create a toolchain from a template on {{site.data.keyword.Bluemix_notm}} Dedicated![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_dedicated_toolchain_template_flow){:new_window}
+* [Create a toolchain from an app on {{site.data.keyword.Bluemix_notm}} Dedicated![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_dedicated_toolchain_app_flow){:new_window}
 
 ## Related Links
 {: #general}
 
-* [{{site.data.keyword.contdelivery_full}}](https://www.ibm.com/devops/method/content/deliver/tool_continuous_delivery/){:new_window} ![External link icon](images/launch--glyph.svg)
-* [Empty toolchain](https://www.ibm.com/devops/method/toolchains/toolchain_empty){:new_window} ![External link icon](images/launch--glyph.svg)
-* [Microservices toolchain](https://www.ibm.com/devops/method/toolchains/microservices_toolchain){:new_window} ![External link icon](images/launch--glyph.svg)
-* [Simple Cloud Foundry toolchain](https://www.ibm.com/devops/method/toolchains/simple_toolchain){:new_window} ![External link icon](images/launch--glyph.svg)
-* [Simple Cloud Foundry toolchain with {{site.data.keyword.DRA_short}}](https://www.ibm.com/devops/method/toolchains/toolchain_devops_insights){:new_window} ![External link icon](images/launch--glyph.svg)
-* [Simple container toolchain](https://www.ibm.com/devops/method/toolchains/toolchain_simple_container){:new_window} ![External link icon](images/launch--glyph.svg)
-* [Simple secure container toolchain](https://www.ibm.com/devops/method/toolchains/toolchain_simple_secure_container){:new_window} ![External link icon](images/launch--glyph.svg)
-* [IBM Bluemix Garage Method](https://www.ibm.com/devops/method){:new_window} ![External link icon](images/launch--glyph.svg)
+* [{{site.data.keyword.contdelivery_full}}![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/tool_continuous_delivery/){:new_window}
+* [Empty toolchain![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/toolchains/toolchain_empty){:new_window}
+* [Microservices toolchain![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/toolchains/microservices_toolchain){:new_window}
+* [Simple Cloud Foundry toolchain![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/toolchains/simple_toolchain){:new_window}
+* [Simple Cloud Foundry toolchain with {{site.data.keyword.DRA_short}}![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/toolchains/toolchain_devops_insights){:new_window}
+* [Simple container toolchain![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/toolchains/toolchain_simple_container){:new_window}
+* [Simple secure container toolchain![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/toolchains/toolchain_simple_secure_container){:new_window}
+* [IBM Bluemix Garage Method![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method){:new_window}

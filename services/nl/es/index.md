@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-03"
+  years: 2016, 2017
+lastupdated: "2017-01-11"
 
 ---
 
@@ -21,10 +21,10 @@ Se proporcionan varios niveles de soporte para los servicios de {{site.data.keyw
 
 |Tipo	|Descripción	|Detalles de soporte|
 |:------|:--------------|:--------------|
-|IBM	|Un servicio proporcionado por IBM y disponible generalmente.	|Se da soporte a los problemas que se determinen que son un defecto de un servicio proporcionado por IBM disponible generalmente. Se proporciona soporte en función de la gravedad que establezca. Para obtener más información sobre la gravedad de las incidencias, consulte [Cómo obtener soporte](/docs/support/index.html#contacting-bluemix-support){: new_window}.|
+|IBM	|Un servicio proporcionado por IBM y disponible generalmente.	|Se da soporte a los problemas que se determinen que son un defecto de un servicio proporcionado por IBM disponible generalmente. Se proporciona soporte en función de la gravedad que establezca. Para obtener más información sobre la gravedad de las incidencias, consulte [Cómo obtener soporte](/docs/support/index.html#contacting-bluemix-support).|
 |Otro proveedor	|Un servicio que está proporcionado por una empresa que no es IBM.	|El soporte para servicios de terceros está proporcionado por un proveedor de servicios. Si IBM investiga un problema y se determina que el problema es un defecto de un servicio de terceros, IBM no está obligado a proporcionar un arreglo. IBM compartirá análisis con el proveedor de servicios de terceros si es necesario.|
 |Comunidad	|Un servicio que está proporcionado por una comunidad de código abierto.	|El soporte para servicios de la comunidad se proporciona a través de la Comunidad de desarrolladores de {{site.data.keyword.Bluemix_notm}}. Si IBM investiga un problema y se determina que el problema es un defecto de un servicio de comunidad, IBM no está obligado a proporcionar un arreglo.|
-|Beta	|Servicio que no está listo para producción que está en una etapa de prueba de desarrollo. Un servicio beta puede ayudar a los equipos de desarrollo y marketing a evaluar el valor de los servicios antes de que el servició esté generalmente disponible.	|Se da soporte a los problemas que se determinen que son un defecto de un servicio beta proporcionado por IBM, aunque IBM no está obligado a proporcionar un arreglo. Además, se asignará una incidencia de problema con una gravedad de 3 o 4 cuando proceda. Para obtener información sobre la gravedad de las incidencias, consulte [Cómo obtener soporte](/docs/support/index.html#contacting-bluemix-support){: new_window}.|
+|Beta	|Servicio que no está listo para producción que está en una etapa de prueba de desarrollo. Un servicio beta puede ayudar a los equipos de desarrollo y marketing a evaluar el valor de los servicios antes de que el servició esté generalmente disponible.	|Se da soporte a los problemas que se determinen que son un defecto de un servicio beta proporcionado por IBM, aunque IBM no está obligado a proporcionar un arreglo. Además, se asignará una incidencia de problema con una gravedad de 3 o 4 cuando proceda. Para obtener información sobre la gravedad de las incidencias, consulte [Cómo obtener soporte](/docs/support/index.html#contacting-bluemix-support).|
 {: caption="Table 1. {{site.data.keyword.Bluemix_notm}} información de soporte de los servicios" caption-side="top"}
 
 ##Servicios experimentales
@@ -95,7 +95,7 @@ No todos los servicios están disponibles para su adquisición en cada región d
 |{{site.data.keyword.iot_short}}		|Alojado en Dallas,US		|Alojado en Londres,UK		|No disponible en la región|
 |{{site.data.keyword.iotrtinsights_short}}		|Alojado en Dallas,US		|Alojado en Londres,UK		|Alojado en Sídney,AU|
 |Entorno de trabajo de IoT		|Alojado en Dallas,US		|Alojado en Londres,UK		|Alojado en Sídney,AU|
-|{{site.data.keyword.keymanagementserviceshort}}	|Alojado en Dallas,US		|Alojado en Londres,UK		|No disponible en la región|
+|{{site.data.keyword.keymanagementserviceshort}}	|Alojado en Dallas,US		|No disponible en la región		|No disponible en la región|
 |{{site.data.keyword.languagetranslationshort}}	|Alojado en Dallas,US		|Alojado en Dallas,US		|Alojado en Dallas,US |
 |{{site.data.keyword.pm_short}}   |Alojado en Dallas,US		|Alojado en Londres,UK		|No disponible en la región|
 |{{site.data.keyword.eventhubshort}}		|Alojado en Dallas,US		|No disponible en la región		|No disponible en la región|
@@ -117,8 +117,6 @@ No todos los servicios están disponibles para su adquisición en cada región d
 |{{site.data.keyword.runbook_short}}				|Alojado en Dallas,US		|Alojado en Londres,UK			|Alojado en Sídney,AU |
 |{{site.data.keyword.SecureGateway}}		|Alojado en Dallas,US		|Alojado en Londres,UK		|Alojado en Sídney,AU |
 |{{site.data.keyword.sescashort}}		|Alojado en Dallas,US		|Alojado en Londres,UK		|Alojado en Sídney,AU |
-|{{site.data.keyword.servicediscoveryshort}}		|Alojado en Dallas,US		|Alojado en Londres,UK		|No disponible en la región|
-|{{site.data.keyword.serviceproxyshort}}		|Alojado en Dallas,US		|Alojado en Londres,UK		|No disponible en la región|
 |{{site.data.keyword.ssofull}}			|Alojado en Washington,US		|No disponible en la región		|No disponible en la región|
 |{{site.data.keyword.speechtotextshort}}	|Alojado en Dallas,US		|Alojado en Dallas,US		|Alojado en Dallas,US |
 |{{site.data.keyword.streaminganalyticsshort}}	|Alojado en Dallas,US		|Alojado en Londres,UK		|Alojado en Londres,UK|

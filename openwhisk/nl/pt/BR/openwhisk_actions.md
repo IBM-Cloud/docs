@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2016
-lastupdated: "2016-09-27"
- 
+  years: 2016, 2017
+lastupdated: "2017-01-04"
+
 
 ---
 
@@ -30,11 +30,7 @@ As ações podem ser compostas por chamadas a outras ações ou uma sequência d
 ## Criando e chamando ações JavaScript
 {: #openwhisk_create_action_js}
 
-As seções a seguir o orientam pelo trabalho com ações em JavaScript. Você começa
-com a criação e a chamada de uma ação simples. Em seguida, move para a inclusão de
-parâmetros em uma ação e a chamada dessa ação com os parâmetros. Em seguida, está
-configurando parâmetros padrão e chamando-os. Em seguida, você cria ações assíncronas e,
-por fim, trabalha com sequências de ações.
+As seções a seguir o orientam pelo trabalho com ações em JavaScript. Você começa com a criação e a chamada de uma ação simples. Em seguida, move para a inclusão de parâmetros em uma ação e a chamada dessa ação com os parâmetros. Em seguida, está configurando parâmetros padrão e chamando-os. Em seguida, você cria ações assíncronas e, por fim, trabalha com sequências de ações.
 
 
 ### Criando e chamando uma ação simples JavaScript
@@ -78,11 +74,7 @@ Revise as etapas e os exemplos a seguir para criar sua primeira ação JavaScrip
 
   É possível ver a ação `hello` que acabou de criar.
 
-4. Após você criar a sua ação, será possível executá-la na nuvem no OpenWhisk com o comando 'invoke'. É possível chamar ações com uma chamada de *bloqueio* (ou seja, estilo de
-solicitação/resposta) ou uma chamada de *não bloqueio* especificando uma sinalização no comando. Uma solicitação de chamada de bloqueio irá *esperar* que o resultado de ativação
-fique disponível. O período de espera é o menor dentre 60 segundos ou o [limite de tempo](./openwhisk_reference.html#openwhisk_syslimits_timeout) configurado da ação. O resultado da ativação será
-retornado se ele estiver disponível dentro do período de espera. Caso contrário, a ativação continuará o processamento no sistema e um ID de ativação será retornado para seja possível verificar o resultado
-posteriormente, como com solicitações de não bloqueio (consulte [aqui](#watching-action-output) para obter dicas sobre ativações de monitoramento).
+4. Após você criar a sua ação, será possível executá-la na nuvem no OpenWhisk com o comando 'invoke'. É possível chamar ações com uma chamada de *bloqueio* (ou seja, estilo de solicitação/resposta) ou uma chamada de *não bloqueio* especificando uma sinalização no comando. Uma solicitação de chamada de bloqueio irá *esperar* que o resultado de ativação fique disponível. O período de espera é o menor dentre 60 segundos ou o [limite de tempo](./openwhisk_reference.html#openwhisk_syslimits_timeout) configurado da ação. O resultado da ativação será retornado se ele estiver disponível dentro do período de espera. Caso contrário, a ativação continuará o processamento no sistema e um ID de ativação será retornado para seja possível verificar o resultado posteriormente, como com solicitações de não bloqueio (consulte [aqui](#watching-action-output) para obter dicas sobre ativações de monitoramento).
 
   Este exemplo usa o parâmetro de bloqueio, `--blocking`:
 
@@ -245,11 +237,9 @@ Em vez de passar todos os parâmetros para uma ação toda vez, é possível faz
   ```
   {: screen}
 
-  Observe que você não precisou especificar o parâmetro place quando chamou a
-ação. Os parâmetros ligados ainda podem ser substituídos especificando o valor de parâmetro no momento da chamada.
+  Observe que você não precisou especificar o parâmetro place quando chamou a ação. Os parâmetros ligados ainda podem ser substituídos especificando o valor de parâmetro no momento da chamada.
 
-3. Chame a ação, passando os valores `name` e `place`. O
-último sobrescreve o valor que está ligado à ação.
+3. Chame a ação, passando os valores `name` e `place`. O último sobrescreve o valor que está ligado à ação.
 
   Usando a sinalização `--param`:
 
@@ -285,9 +275,7 @@ ação. Os parâmetros ligados ainda podem ser substituídos especificando o val
 ### Criando ações assíncronas
 {: #openwhisk_asynchrony_js}
 
-As funções JavaScript que são executadas de forma assíncrona podem precisar
-retornar o resultado da ativação após a função `main` ter retornado. É
-possível fazer isso retornando uma Promessa em sua ação.
+As funções JavaScript que são executadas de forma assíncrona podem precisar retornar o resultado da ativação após a função `main` ter retornado. É possível fazer isso retornando uma Promessa em sua ação.
 
 1. Salve o conteúdo a seguir em um arquivo chamado `asyncAction.js`.
 
@@ -304,12 +292,9 @@ possível fazer isso retornando uma Promessa em sua ação.
 
   Observe que a função `main` retorna uma Promessa, que indica que a ativação não foi concluída ainda, mas espera-se que seja no futuro.
 
-  A função JavaScript `setTimeout()` nesse caso aguarda dois segundos antes de chamar a função de retorno de chamada.  Isso representa o código
-assíncrono e vai dentro da função de retorno de chamada da Promessa.
+  A função JavaScript `setTimeout()` nesse caso aguarda dois segundos antes de chamar a função de retorno de chamada.  Isso representa o código assíncrono e vai dentro da função de retorno de chamada da Promessa.
 
-  O retorno de chamada da Promessa aceita dois argumentos, resolver e rejeitar, que
-são ambos funções.  A chamada para `resolve ()` cumpre a Promessa e
-indica que a ativação foi concluída normalmente.
+  O retorno de chamada da Promessa aceita dois argumentos, resolver e rejeitar, que são ambos funções.  A chamada para `resolve ()` cumpre a Promessa e indica que a ativação foi concluída normalmente.
 
   Uma chamada para `reject()` pode ser usada para rejeitar a Promessa e sinalizar que a ativação foi concluída de forma anormal.
 
@@ -358,8 +343,7 @@ indica que a ativação foi concluída normalmente.
   ```
   {: screen}
 
-  Comparando os registros de data e hora de `start` e de `end` no registro de ativação, será possível ver que essa ativação levou um pouco mais de dois segundos para ser
-concluída.
+  Comparando os registros de data e hora de `start` e de `end` no registro de ativação, será possível ver que essa ativação levou um pouco mais de dois segundos para ser concluída.
 
 
 ### Usando ações para chamar uma API externa
@@ -376,34 +360,29 @@ Este exemplo chama um serviço Yahoo Weather para obter as condições atuais em
   
   function main(params) {
       var location = params.location || 'Vermont';
-        var url = 'https://query.yahooapis.com/v1/public/yql?q=select item.condition from weather.forecast where woeid in (select woeid from geo.places(1) where text="' + location + '")&format=json';
+      var url = 'https://query.yahooapis.com/v1/public/yql?q=select item.condition from weather.forecast where woeid in (select woeid from geo.places(1) where text="' + location + '")&format=json';
   
       return new Promise(function(resolve, reject) {
           request.get(url, function(error, response, body) {
               if (error) {
-                  reject(error);    
-                }
-                else {
+                  reject(error);
+              }
+              else {
                   var condition = JSON.parse(body).query.results.channel.item.condition;
-                    var text = condition.text;
-                    var temperature = condition.temp;
-                    var output = 'It is ' + temperature + ' degrees in ' + location + ' and ' + text;
-                    resolve({msg: output});
-                }
+                  var text = condition.text;
+                  var temperature = condition.temp;
+                  var output = 'It is ' + temperature + ' degrees in ' + location + ' and ' + text;
+                  resolve({msg: output});
+              }
           });
       });
   }
   ```
   {: codeblock}
   
-  Observe que a ação no exemplo usa a biblioteca JavaScript `request` para fazer uma solicitação de HTTP à API do Yahoo Weather e extrai campos do resultado JSON. As [Referências](./openwhisk_reference.html#openwhisk_ref_javascript_environments) detalham os pacotes
-do Node.js que podem ser usados em suas ações.
+  Observe que a ação no exemplo usa a biblioteca JavaScript `request` para fazer uma solicitação de HTTP à API do Yahoo Weather e extrai campos do resultado JSON. As [Referências](./openwhisk_reference.html#openwhisk_ref_javascript_environments) detalham os pacotes do Node.js que podem ser usados em suas ações.
   
-  Este exemplo também mostra a necessidade de ações assíncronas. A ação retorna uma
-Promessa para indicar que o resultado dessa ação não está disponível ainda quando a
-função é retornada. Em vez disso, o resultado está disponível no retorno de chamada
-`request` após a chamada HTTP ser concluída e é passado como um
-argumento para a função `resolve()`.
+  Este exemplo também mostra a necessidade de ações assíncronas. A ação retorna uma Promessa para indicar que o resultado dessa ação não está disponível ainda quando a função é retornada. Em vez disso, o resultado está disponível no retorno de chamada `request` após a chamada HTTP ser concluída e é passado como um argumento para a função `resolve()`.
   
 2. Execute os comandos a seguir para criar a ação e chamá-la:
   
@@ -432,7 +411,6 @@ Primeiro, `package.json`:
 ```
 {
   "name": "my-action",
-  "version": "1.0.0",
   "main": "index.js",
   "dependencies" : {
     "left-pad" : "1.1.3"
@@ -455,6 +433,8 @@ exports.main = myAction;
 {: codeblock}
 
 Observe que a ação é exposta por meio de `exports.main`; o próprio manipulador de ações pode ter qualquer nome, contanto que se adeque à assinatura usual de aceitação e retorno de um objeto (ou uma `Promessa` de objeto).
+De acordo com a convenção Node.js, deve-se nomear esse arquivo `index.js` ou especificar
+o nome do arquivo que você preferir como a propriedade `main` no package.json.
 
 Para criar uma ação do OpenWhisk a partir deste pacote:
 
@@ -560,29 +540,25 @@ Portanto, parâmetros que são transmitidos para a sequência de ações estão 
 O resultado da primeira ação na sequência torna-se o objeto JSON de entrada para a segunda ação na sequência (e assim por diante).
 Esse objeto não inclui nenhum dos parâmetros originalmente transmitidos para a sequência, a menos que a primeira ação os inclua explicitamente em seu resultado.
 Os parâmetros de entrada para uma ação são mesclados com os parâmetros padrão da ação, com o antigo tendo precedência e substituindo qualquer parâmetro padrão correspondente.
-Para obter mais informações sobre como chamar sequências de ações com múltiplos parâmetros nomeados, consulte [Configurando parâmetros
-padrão](./openwhisk_actions.html#openwhisk_binding_actions).
+Para obter mais informações sobre como chamar sequências de ações com múltiplos parâmetros nomeados, consulte [Configurando parâmetros padrão](./openwhisk_actions.html#openwhisk_binding_actions).
 
 ## Criando ações Python
 {: #openwhisk_actions_python}
 
-O processo de criação de ações Python é semelhante ao de ações JavaScript. As
-seções a seguir orientam você na criação e chamada de uma única ação Python e na inclusão
-de parâmetros nessa ação.
+O processo de criação de ações Python é semelhante ao de ações JavaScript. As seções a seguir orientam você na criação e chamada de uma única ação Python e na inclusão de parâmetros nessa ação.
 
 ### Criando e chamando uma ação
 {: #openwhisk_actions_python_invoke}
 
-Uma ação é simplesmente uma função Python de nível superior, o que significa que é
-necessário ter um método chamado `principal`. Por exemplo, crie um
+Uma ação é simplesmente uma função Python de nível superior, o que significa que é necessário ter um método chamado `principal`. Por exemplo, crie um
 arquivo chamado `hello.py` com o conteúdo a seguir:
 
 ```
 def main(dict):
-        name = dict.get("name", "stranger")
-        greeting = "Hello " + name + "!"
+    name = dict.get("name", "stranger")
+    greeting = "Hello " + name + "!"
     print(greeting)
-        return {"greeting": greeting}
+    return {"greeting": greeting}
 ```
 {: codeblock}
 
@@ -625,7 +601,8 @@ Também é possível usar o [Ambiente de simulação do Swift ](https://swiftlan
 ### Criando e chamando uma ação
 {: #openwhisk_actions_invoke_swift}
 
-Uma ação é simplesmente uma função Swift de nível superior. Por exemplo, crie um arquivo chamado `hello.swift` com o conteúdo a seguir:
+Uma ação é simplesmente uma função Swift de nível superior. Por exemplo, crie um arquivo chamado
+`hello.swift` com o conteúdo a seguir:
 
 ```
 func main(args: [String:Any]) -> [String:Any] {
@@ -640,7 +617,8 @@ func main(args: [String:Any]) -> [String:Any] {
 
 As ações swift sempre consomem um dicionário e produzem um dicionário.
 
-É possível criar uma ação do {{site.data.keyword.openwhisk_short}} chamada `helloSwift` a partir desta função da seguinte forma:
+É possível criar uma ação do {{site.data.keyword.openwhisk_short}} chamada `helloSwift` a partir desta função da seguinte
+forma:
 
 ```
 wsk action create helloSwift hello.swift
@@ -665,7 +643,8 @@ wsk action invoke --blocking --result helloSwift --param name World
 ```
 {: screen}
 
-**Atenção:** as ações Swift são executadas em um ambiente Linux. Swift no Linux ainda está em desenvolvimento e o {{site.data.keyword.openwhisk_short}} geralmente usa a liberação mais recente disponível, que não está necessariamente estável. Além disso, a versão do Swift usada com o {{site.data.keyword.openwhisk_short}} pode estar inconsistente com versões do Swift de liberações estáveis do XCode no MacOS.
+**Atenção:** as ações Swift são executadas em um ambiente Linux. Swift no Linux ainda está em desenvolvimento
+e o {{site.data.keyword.openwhisk_short}} geralmente usa a liberação mais recente disponível, que não está necessariamente estável. Além disso, a versão do Swift usada com o {{site.data.keyword.openwhisk_short}} pode estar inconsistente com versões do Swift de liberações estáveis do XCode no MacOS.
 
 ## Criando ações Java
 {: #openwhisk_actions_java}
@@ -713,13 +692,18 @@ jar cvf hello.jar Hello.class
 a seguir:
 
 ```
-wsk action create helloJava hello.jar
+wsk action create helloJava hello.jar --main Hello
 ```
 {: pre}
 
 Ao usar a linha de comandos e um arquivo de origem `.jar`, não é necessário
 especificar que você está criando uma ação Java;
 a ferramenta determina isso a partir da extensão do arquivo.
+
+É necessário especificar o nome da classe principal usando `--main`. Uma classe principal
+elegível é aquela que implementa um método `main` estático, conforme descrito acima. Se a
+classe não estiver no pacote padrão, use o nome de classe completo Java,
+por exemplo, `--main com.example.MyMain`.
 
 A chamada de ação para as ações Java é a mesma que para as ações Swift e JavaScript:
 
@@ -735,8 +719,6 @@ wsk action invoke --blocking --result helloJava --param name World
 ```
 {: screen}
 
-**Nota:** se o arquivo JAR tiver mais de uma classe com um método principal correspondendo à assinatura necessária, a ferramenta CLI usará a primeira relatada por `jar -tf`.
-
 
 ## Criando ações Docker
 {: #openwhisk_actions_docker}
@@ -747,8 +729,7 @@ O seu código é compilado em um binário executável e integrado em uma imagem 
 
 Como um pré-requisito, deve-se ter uma conta do Docker Hub.  Para configurar um ID e uma conta do Docker grátis, acesse o [Docker Hub](https://hub.docker.com){: new_window}.
 
-Para as instruções a seguir, suponha que o ID do usuário do Docker seja `janesmith` e a senha seja `janes_password`.  Supondo que a CLI já esteja configurada,
-três etapas serão necessárias para configurar um binário customizado para uso pelo {{site.data.keyword.openwhisk_short}}. Depois disso, a imagem do Docker transferida por upload poderá ser usada como uma ação.
+Para as instruções a seguir, suponha que o ID do usuário do Docker seja `janesmith` e a senha seja `janes_password`.  Supondo que a CLI já esteja configurada, três etapas serão necessárias para configurar um binário customizado para uso pelo {{site.data.keyword.openwhisk_short}}. Depois disso, a imagem do Docker transferida por upload poderá ser usada como uma ação.
 
 1. Faça download da estrutura básica do Docker. É possível fazer download da mesma usando a CLI da seguinte forma:
 
@@ -808,17 +789,11 @@ três etapas serão necessárias para configurar um binário customizado para us
   ```
   {: pre}
   ```
-  chmod +x buildAndPush.sh
-  ```
-  {: pre}
-  ```
   ./buildAndPush.sh janesmith/blackboxdemo
   ```
   {: pre}
   
-  Observe que parte do arquivo example.c é compilada como parte do processo de
-construção da imagem do Docker, de modo que você não precisa de C compilado em sua
-máquina.
+  Observe que parte do arquivo example.c é compilada como parte do processo de construção da imagem do Docker, de modo que você não precisa de C compilado em sua máquina.
   Na verdade, a menos que você esteja compilando o binário em uma máquina host compatível, ele pode não ser executado dentro do contêiner pois os formatos não irão corresponder.
   
   O seu contêiner do Docker agora pode ser usado como uma ação do {{site.data.keyword.openwhisk_short}}.
@@ -921,3 +896,18 @@ As ações do {{site.data.keyword.openwhisk_short}} podem ser chamadas por outro
   actions
   ```
   {: screen}
+  
+## Acessando metadados de ação dentro do corpo de ação
+
+O ambiente de ação contém várias propriedades que são específicas da ação em execução.
+Elas permitem que a ação trabalhe programaticamente com ativos do OpenWhisk por meio da API de REST
+ou configure um alarme interno quando a ação estiver prestes a esgotar seu orçamento de tempo atribuído.
+As propriedades são acessíveis por meio do ambiente do sistema a todos os tempos de execução suportados:
+ações do Node.js, Python, Swift, Java e Docker ao usar a estrutura básica do OpenWhisk Docker.
+
+* `__OW_API_HOST` o host da API para a implementação do OpenWhisk que executa esta ação
+* `__OW_API_KEY` a chave API para o assunto que chama a ação, essa chave pode ser uma chave API restrita
+* `__OW_NAMESPACE` o namespace para a *ativação* (este não pode ser o mesmo namespace que para a ação)
+* `__OW_ACTION_NAME` o nome completo da ação em execução
+* `__OW_ACTIVATION_ID` o ID de ativação para esta instância de ação em execução
+* `__OW_DEADLINE` o tempo aproximado quando essa ação terá consumido toda sua cota de duração (medido em milissegundos de época)

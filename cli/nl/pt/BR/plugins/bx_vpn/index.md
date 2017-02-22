@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2015，2016
+  years: 2015，2017
 
 lastupdated: "2016-06-20"
 
@@ -21,7 +21,7 @@ lastupdated: "2016-06-20"
 
 É possível usar a interface da linha de comandos (CLI) para configurar e gerenciar o seu serviço do {{site.data.keyword.vpn_full}}. O plug-in da CLI do {{site.data.keyword.vpn_short}}
 está disponível em duas versões: uma para uso com o plug-in da CLI do Cloud Foundry e a outra para uso com o plug-in da CLI do {{site.data.keyword.Bluemix}}. Ambas as versões do plug-in fornecem a
-mesma funcionalidade.  
+mesma funcionalidade.
 {:shortdesc}
 
 O plug-in do {{site.data.keyword.vpn_short}} está disponível para sistemas operacionais Windows, MAC e Linux. Assegure-se de usar aquele que for aplicável a você.

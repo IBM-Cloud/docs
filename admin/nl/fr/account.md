@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2015, 2016
-lastupdated: "2016-12-05"  
+  years: 2015, 2017
+lastupdated: "2017-01-09"
 
 
 ---
@@ -26,7 +26,7 @@ Cliquez sur le lien **Compte** pour définir des notifications, afficher l'utili
 
 Vous pouvez vous inscrire à un compte {{site.data.keyword.Bluemix_notm}} en utilisant un IBMid existant, en créant un nouvel IBMid ou en utilisant un ID fédéré. Un ID fédéré est un ID présent dans le domaine d'une société qui a été enregistré auprès d'IBM de sorte que le domaine et les données d'identification de l'utilisateur puissent être utilisés pour accéder aux applications Web IBM.  
 
-Un ID fédéré peut être utilisé pour s'inscrire à {{site.data.keyword.Bluemix_notm}} uniquement si votre société a déjà travaillé avec IBM.  L'enregistrement du domaine d'une société auprès d'IBM permet aux utilisateurs de se connecter pour recevoir des produits et des services IBM en utilisant leurs données d'identification d'utilisateur de société existantes. L'authentification est alors gérée par le fournisseur d'identité de votre société. Lorsque vous vous connectez à {{site.data.keyword.Bluemix_notm}} avec un ID fédéré, vous êtes invité à le faire via la page de connexion de votre société. Pour savoir comment demander à enregistrer le domaine de votre société ou de votre organisation auprès d'IBM ou pour obtenir plus d'informations sur cette opération, voir [IBMid Enterprise Federation Adoption Guide](https://ibm.box.com/v/IBMid-Federation-Guide){: #new_window}. Un sponsor IBM, tel qu'un représentant du client ou un service de conseil, est requis lorsque vous demandez à enregistrer des ID fédérés.
+Un ID fédéré peut être utilisé pour s'inscrire à {{site.data.keyword.Bluemix_notm}} uniquement si votre société a déjà travaillé avec IBM. L'enregistrement du domaine d'une société auprès d'IBM permet aux utilisateurs de se connecter pour recevoir des produits et des services IBM en utilisant leurs données d'identification d'utilisateur de société existantes. L'authentification est alors gérée par le fournisseur d'identité de votre société. Lorsque vous vous connectez à {{site.data.keyword.Bluemix_notm}} avec un ID fédéré, vous êtes invité à le faire via la page de connexion de votre société. Pour savoir comment demander à enregistrer le domaine de votre société ou de votre organisation auprès d'IBM ou pour obtenir plus d'informations sur cette opération, voir [IBMid Enterprise Federation Adoption Guide ![icône de lien externe](../icons/launch-glyph.svg)](https://ibm.box.com/v/IBMid-Federation-Guide){: new_window}. Un sponsor IBM, tel qu'un représentant du client ou un service de conseil, est requis lorsque vous demandez à enregistrer des ID fédérés.
 
 | Méthodes d'inscription | Détails |    
 |-----------------|---------|
@@ -47,6 +47,20 @@ Vous pouvez définir des notifications par courrier électronique de plateforme 
 
 Cliquez sur **Compte** &gt; **Notifications** &gt; **Plateforme** pour définir des
 notifications par courrier électronique relatives aux incidents {{site.data.keyword.Bluemix_notm}} et à la maintenance planifiée. Vous pouvez sélectionner ou désélectionner chaque option pour activer ou désactiver la notification par courrier électronique.
+
+<!-- staging only
+
+**Note**: You are always alerted by email about emergencies and pricing changes.
+
+On the **Platform** tab you can also customize notifications for your orgs, spaces, or applications. Complete the following steps to add a customized notification:
+
+<ol>
+<li>Select **Add a Notification**.</li>
+<li>Use the search field to find the org, application, service, or resource that you want to set a notification for, or expand the item in the pre-populated list.</li>
+<li>Select *Email* to set the notification type.</li>
+</ol>
+
+staging only end -->
 
 ### Définition des notifications relatives aux dépenses
 {: #spendingnotifications}
@@ -81,19 +95,25 @@ voir
 ## Affichage de l'utilisation
 {: #acctusage}
 
-En tant que propriétaire de compte ou responsable de la facturation pour une organisation, vous pouvez vous servir de la vue Tableau de bord de l'utilisation afin d'afficher les
-frais en temps réel pour les contextes d'exécution, les conteneurs, les services et le support que vous utilisez par mois dans vos
-organisations. Vous pouvez afficher le nombre de Go/heure utilisés pour le contexte d'exécution, ainsi que la consommation des services dans toutes les
+En tant que propriétaire de compte ou responsable de la facturation pour
+une organisation, vous pouvez vous servir de la page Tableau de bord de
+l'utilisation afin d'afficher les frais en temps réel pour les contextes
+d'exécution, les conteneurs, les services et le support que vous utilisez par
+mois dans vos organisations. Vous pouvez afficher le nombre de Go/heure utilisés pour le contexte d'exécution, ainsi que la consommation des services dans toutes les
 régions, ou sélectionner une région particulière.
 
-Pour ouvrir la vue Tableau de bord de l'utilisation, cliquez sur **Compte** &gt; *nom_de_votre_compte* &gt;
+Pour ouvrir la page Tableau de bord de l'utilisation, cliquez sur
+**Compte** &gt; *nom_de_votre_compte* &gt;
 **Tableau de bord de l'utilisation**. Les responsables de la facturation ne peuvent afficher les détails que pour les organisations pour lesquelles ils sont responsables de la
 facturation.
 
 Le propriétaire de compte est facturé pour l'utilisation totale occasionnée dans toutes les organisations à la fin de chaque cycle de
 facturation. En tant que propriétaire de compte, vous pouvez filtrer le récapitulatif de l'utilisation par région et organisation. Vous pouvez aussi
 cliquer sur un mois
-particulier afin d'afficher l'utilisation pour ce mois.
+particulier afin d'afficher l'utilisation pour ce mois. Sélectionnez
+**Toutes les organisations** dans la liste
+**Organisation** pour afficher l'utilisation de toutes
+les organisations du compte.
 
 ## Mise à jour des informations de facturation
 {: #account_billing}

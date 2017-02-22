@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2016
-lastupdated: "2016-09-27"
- 
+  years: 2016, 2017
+lastupdated: "2017-01-04"
+
 
 ---
 
@@ -41,7 +41,8 @@ lastupdated: "2016-09-27"
 1. 다음 컨텐츠를 사용하여 JavaScript 파일을 작성하십시오. 이 예에서 파일 이름은 'hello.js'입니다.
   
   ```
-function main() {      return {payload: 'Hello world'};
+  function main() {
+      return {payload: 'Hello world'};
   }
   ```
   {: codeblock}
@@ -51,11 +52,11 @@ function main() {      return {payload: 'Hello world'};
 2. 다음 JavaScript 함수에서 조치를 작성하십시오. 이 예에서 조치를 'hello'라고 합니다.
 
   ```
-wsk action create hello hello.js
+  wsk action create hello hello.js
   ```
   {: pre}
   ```
-ok: created action hello
+  ok: created action hello
   ```
   {: screen}
 
@@ -66,7 +67,7 @@ ok: created action hello
   ```
   {: pre}
   ```
-actions
+  actions
   hello       private
   ```
   {: screen}
@@ -78,12 +79,13 @@ actions
   이 예에서는 블로킹 매개변수인 `--blocking`을 사용합니다. 
 
   ```
-wsk action invoke --blocking hello
+  wsk action invoke --blocking hello
   ```
   {: pre}
   ```
-ok: invoked hello with id 44794bd6aab74415b4e42a308d880e5b
-  {      "result": {
+  ok: invoked hello with id 44794bd6aab74415b4e42a308d880e5b
+  {
+      "result": {
           "payload": "Hello world"
       },
       "status": "success",
@@ -101,21 +103,21 @@ ok: invoked hello with id 44794bd6aab74415b4e42a308d880e5b
 5. 지금 당장 조치 결과가 필요하지 않은 경우, `--blocking` 플래그를 생략하여 비블로킹 호출을 작성할 수 있습니다. 나중에 활성화 ID를 사용하여 결과를 얻을 수 있습니다. 다음 예를 참조하십시오.
 
   ```
-wsk action invoke hello
+  wsk action invoke hello
   ```
   {: pre}
   ```
-ok: invoked hello with id 6bf1f670ee614a7eb5af3c9fde813043
+  ok: invoked hello with id 6bf1f670ee614a7eb5af3c9fde813043
   ```
   {: screen}
 
   ```
-wsk activation result 6bf1f670ee614a7eb5af3c9fde813043
+  wsk activation result 6bf1f670ee614a7eb5af3c9fde813043
   ```
   {: pre}
   ```
   {
-            "payload": "Hello world"
+      "payload": "Hello world"
   }
   ```
   {: screen}
@@ -123,11 +125,11 @@ wsk activation result 6bf1f670ee614a7eb5af3c9fde813043
 6. 활성화 ID를 기록하는 것을 잊은 경우, 가장 최신에서 가장 오래된 순서로 정렬된 활성화 목록을 얻을 수 있습니다. 다음 명령을 실행하여 활성화 목록을 얻으십시오.
 
   ```
-wsk activation list
+  wsk activation list
   ```
   {: pre}
   ```
-activations
+  activations
   44794bd6aab74415b4e42a308d880e5b         hello
   6bf1f670ee614a7eb5af3c9fde813043         hello
   ```
@@ -141,8 +143,8 @@ activations
 1. 조치에 매개변수를 사용하십시오. 예를 들어, 다음 컨텐츠로 'hello.js' 파일을 업데이트하십시오.
   
   ```
-function main(params) {
-     return {payload:  'Hello, ' + params.name + ' from ' + params.place};
+  function main(params) {
+      return {payload:  'Hello, ' + params.name + ' from ' + params.place};
   }
   ```
   {: codeblock}
@@ -152,7 +154,7 @@ function main(params) {
 2. `name` 및 `place` 매개변수값을 전달하면서 `hello` 조치를 업데이트하고 조치를 호출하십시오. 다음 예를 참조하십시오.
   
   ```
-wsk action update hello hello.js
+  wsk action update hello hello.js
   ```
   {: pre}
 
@@ -164,8 +166,8 @@ wsk action update hello hello.js
   ```
   {: pre}
 
-  매개변수 내용이 포함된 파일을 사용하려면 매개변수가 포함된 파일을 JSON 형식으로 작성하십시오.
-파일 이름은 `param-file` 플래그에 전달되어야 합니다.
+  매개변수 내용이 포함된 파일을 사용하려면 매개변수가 포함된 파일을 JSON 형식으로 작성하십시오. 파일
+  이름은 `param-file` 플래그에 전달되어야 합니다.
 
   parameters.json이라는 예제 매개변수 파일: 
   ```
@@ -183,7 +185,7 @@ wsk action update hello hello.js
 
   ```
   {
-            "payload": "Hello, Bernie from Vermont"
+      "payload": "Hello, Bernie from Vermont"
   }
   ```
   {: screen}
@@ -206,7 +208,8 @@ wsk action update hello hello.js
   ```
   {: pre}
 
-  파일의 매개변수를 전달하려면 원하는 컨텐츠를 JSON 형식으로 포함하여 파일을 작성해야 합니다. 파일 이름은 `param-file` 플래그에 전달되어야 합니다.
+  파일의 매개변수를 전달하려면 원하는 컨텐츠를 JSON 형식으로 포함하여 파일을 작성해야 합니다.
+  파일 이름은 `param-file` 플래그에 전달되어야 합니다.
 
   parameters.json이라는 예제 매개변수 파일: 
   ```
@@ -229,7 +232,7 @@ wsk action update hello hello.js
   {: pre}
   ```
   {
-            "payload": "Hello, Bernie from Vermont"
+      "payload": "Hello, Bernie from Vermont"
   }
   ```
   {: screen}
@@ -279,8 +282,8 @@ wsk action update hello hello.js
   ```
   function main(args) {
        return new Promise(function(resolve, reject) {
-               setTimeout(function() {
-          resolve({ done: true });
+         setTimeout(function() {
+           resolve({ done: true });
          }, 2000);
       })
    }
@@ -298,16 +301,16 @@ wsk action update hello hello.js
 2. 다음 명령을 실행하여 조치를 작성하고 호출하십시오.
 
   ```
-wsk action create asyncAction asyncAction.js
+  wsk action create asyncAction asyncAction.js
   ```
   {: pre}
   ```
-wsk action invoke --blocking --result asyncAction
+  wsk action invoke --blocking --result asyncAction
   ```
   {: pre}
   ```
   {
-            "done": true
+      "done": true
   }
   ```
   {: screen}
@@ -317,23 +320,23 @@ wsk action invoke --blocking --result asyncAction
 3. 활성화 완료에 걸린 시간을 보려면 활성화 로그를 페치하십시오.
 
   ```
-wsk activation list --limit 1 asyncAction
+  wsk activation list --limit 1 asyncAction
   ```
   {: pre}
   ```
-activations
+  activations
   b066ca51e68c4d3382df2d8033265db0             asyncAction
   ```
   {: screen}
 
 
   ```
-wsk activation get b066ca51e68c4d3382df2d8033265db0
+  wsk activation get b066ca51e68c4d3382df2d8033265db0
   ```
   {: pre}
  ```
   {
-            "start": 1455881628103,
+      "start": 1455881628103,
       "end":   1455881648126,
       ...
   }
@@ -350,27 +353,28 @@ wsk activation get b066ca51e68c4d3382df2d8033265db0
 
 이 예에서는 Yahoo 날씨 서비스를 호출하여 특정 위치에서의 현재 상태를 얻습니다. 
 
-1. `weather.js`라는 파일에 다음 컨텐츠를 저장하십시오.
-  
+1. `weather.js`라는 파일에 다음 컨텐츠를 저장하십시오. 
   
   ```
-var request = require('request');function main(params) {
-     var location = params.location || 'Vermont';
-        var url = 'https://query.yahooapis.com/v1/public/yql?q=select item.condition from weather.forecast where woeid in (select woeid from geo.places(1) where text="' + location + '")&format=json';
-    
-        return new Promise(function(resolve, reject) {
-            request.get(url, function(error, response, body) {
-            if (error) {
-                    reject(error);    
-                }
-                else {
-                    var condition = JSON.parse(body).query.results.channel.item.condition;
-                    var text = condition.text;
-                    var temperature = condition.temp;
-                    var output = 'It is ' + temperature + ' degrees in ' + location + ' and ' + text;
-                    resolve({msg: output});
-                }
-            });
+  var request = require('request');
+
+  function main(params) {
+      var location = params.location || 'Vermont';
+      var url = 'https://query.yahooapis.com/v1/public/yql?q=select item.condition from weather.forecast where woeid in (select woeid from geo.places(1) where text="' + location + '")&format=json';
+
+      return new Promise(function(resolve, reject) {
+          request.get(url, function(error, response, body) {
+              if (error) {
+                  reject(error);
+              }
+              else {
+                  var condition = JSON.parse(body).query.results.channel.item.condition;
+                  var text = condition.text;
+                  var temperature = condition.temp;
+                  var output = 'It is ' + temperature + ' degrees in ' + location + ' and ' + text;
+                  resolve({msg: output});
+              }
+          });
       });
   }
   ```
@@ -383,7 +387,7 @@ var request = require('request');function main(params) {
 2. 다음 명령을 실행하여 조치를 작성하고 호출하십시오.
   
   ```
-wsk action create weather weather.js
+  wsk action create weather weather.js
   ```
   {: pre}
   ```
@@ -407,7 +411,6 @@ wsk action create weather weather.js
 ```
 {
   "name": "my-action",
-  "version": "1.0.0",
   "main": "index.js",
   "dependencies" : {
     "left-pad" : "1.1.3"
@@ -429,7 +432,8 @@ exports.main = myAction;
 ```
 {: codeblock}
 
-조치는 `exports.main`을 통해 표시됨에 유의하십시오. 조치 핸들러가 오브젝트(또는 오브젝트의 `Promise`) 채택 및 리턴의 일반적인 시그니처를 따르는 한 조치 핸들러는 자체적으로 이름을 지정할 수 있습니다. 
+조치는 `exports.main`을 통해 표시됨에 유의하십시오. 조치 핸들러가 오브젝트(또는 오브젝트의 `Promise`) 채택 및 리턴의 일반적인 시그니처를 따르는 한 조치 핸들러는 자체적으로 이름을 지정할 수 있습니다.
+Node.js 규칙에 따라, 이 파일을 `index.js`로 이름 지정하거나 package.json에서 `main` 특성으로 선호하는 파일 이름을 지정해야 합니다.
 
 이 패키지에서 OpenWhisk 조치를 작성하려면 다음을 수행하십시오.
 
@@ -549,11 +553,11 @@ Python 조치 작성 프로세스는 JavaScript 조치 작성 프로세스와 �
 `hello.py` 파일을 작성합니다. 
 
 ```
-    def main(dict):
-        name = dict.get("name", "stranger")
-        greeting = "Hello " + name + "!"
-        print(greeting)
-        return {"greeting": greeting}
+def main(dict):
+    name = dict.get("name", "stranger")
+    greeting = "Hello " + name + "!"
+    print(greeting)
+    return {"greeting": greeting}
 ```
 {: codeblock}
 
@@ -596,13 +600,15 @@ Swift 조치 작성 프로세스는 JavaScript 조치 작성 프로세스와 유
 ### 조치 작성 및 호출
 {: #openwhisk_actions_invoke_swift}
 
-조치는 단순히 최상위 레벨의 Swift 함수입니다. 예를 들어, 다음 컨텐츠를 사용하여 `hello.swift`라는 파일을 작성하십시오.
+조치는 단순히 최상위 레벨의 Swift 함수입니다. 예를 들어, 다음 컨텐츠를 사용하여
+`hello.swift`라는 파일을 작성하십시오.
 
 ```
-func main(args: [String:Any]) -> [String:Any] {if let name = args["name"] as? String {
-          return [ "greeting" : "Hello \(name)!" ]
+func main(args: [String:Any]) -> [String:Any] {
+    if let name = args["name"] as? String {
+        return [ "greeting" : "Hello \(name)!" ]
     } else {
-return [ "greeting" : "Hello stranger!" ]
+        return [ "greeting" : "Hello stranger!" ]
     }
 }
 ```
@@ -610,7 +616,8 @@ return [ "greeting" : "Hello stranger!" ]
 
 Swift 조치는 항상 사전을 이용하며 사전을 생성합니다. 
 
-다음과 같이 이 함수에서 `helloSwift`라는 {{site.data.keyword.openwhisk_short}} 조치를 작성할 수 있습니다.
+다음과 같이 이 함수에서 `helloSwift`라는 {{site.data.keyword.openwhisk_short}} 조치를
+작성할 수 있습니다.
 
 ```
 wsk action create helloSwift hello.swift
@@ -636,15 +643,12 @@ wsk action invoke --blocking --result helloSwift --param name World
 {: screen}
 
 **주의:** Swift 조치는 Linux 환경에서 실행됩니다. Swift on Linux는 아직
-개발 중이며 {{site.data.keyword.openwhisk_short}}에서는 일반적으로 사용 가능한 가장 최신 릴리스를
-사용합니다. 이러한 최신 릴리스가 항상 안정적인 것은 아닙니다. 또한 {{site.data.keyword.openwhisk_short}}와
-함께 사용되는 Swift의 버전이 XCode on MacOS의 안정적인 릴리스의 Swift 버전과 일치하지 않을 수 있습니다.
+개발 중이며 {{site.data.keyword.openwhisk_short}}에서는 일반적으로 사용 가능한 가장 최신 릴리스를 사용합니다. 이러한 최신 릴리스가 항상 안정적인 것은 아닙니다. 또한 {{site.data.keyword.openwhisk_short}}와 함께 사용되는 Swift의 버전이 XCode on MacOS의 안정적인 릴리스의 Swift 버전과 일치하지 않을 수 있습니다.
 
 ## Java 조치 작성
 {: #openwhisk_actions_java}
 
-Java 조치 작성 프로세스는 JavaScript 및 Swift 조치 작성 프로세스와 유사합니다.
-다음 절에서는 단일 Java 조치를 작성하고 호출하여 해당 조치에 매개변수를 추가하는 방법에 대해 안내합니다.
+Java 조치 작성 프로세스는 JavaScript 및 Swift 조치 작성 프로세스와 유사합니다. 다음 절에서는 단일 Java 조치를 작성하고 호출하여 해당 조치에 매개변수를 추가하는 방법에 대해 안내합니다.
 
 Java 파일을 컴파일, 테스트 및 아카이브하려면 [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html)이 로컬에 설치되어 있어야 합니다. 
 
@@ -683,14 +687,22 @@ jar cvf hello.jar Hello.class
 
 **참고:** [google-gson](https://github.com/google/gson)은 Java 파일을 컴파일할 때 Java CLASSPATH에 있어야 합니다.
 
-다음과 같이 이 JAR 파일에서 `helloJava`라는 OpenWhisk 조치를 작성할 수 있습니다.
+다음과 같이 이 JAR 파일에서 `helloJava`라는 OpenWhisk 조치를
+작성할 수 있습니다.
 
 ```
-wsk action create helloJava hello.jar
+wsk action create helloJava hello.jar --main Hello
 ```
 {: pre}
 
-명령행과 `.jar` 소스 파일을 사용하는 경우 Java 조치를 작성하도록 지정할 필요가 없습니다. 도구가 파일 확장자에서 이를 판별합니다. 
+명령행과 `.jar` 소스 파일을 사용하는 경우
+Java 조치를 작성하도록 지정할 필요가 없습니다. 도구가
+파일 확장자에서 이를 판별합니다. 
+
+`--main`을 사용하여 기본 클래스의 이름을 지정해야 합니다. 적합한 기본 클래스는
+위에 설명된 대로 정적 `main` 메소드를 구현하는 클래스입니다. 클래스가
+기본 패키지에 없는 경우 완전한 Java 클래스
+이름(예: `--main com.example.MyMain`)을 사용하십시오. 
 
 Java 조치에 대한 조치 호출은 Swift 및 JavaScript 조치에 대한 조치 호출과 동일합니다. 
 
@@ -705,8 +717,6 @@ wsk action invoke --blocking --result helloJava --param name World
   }
 ```
 {: screen}
-
-**참고:** JAR 파일에 필수 시그니처와 일치하는 기본 메소드가 포함된 둘 이상의 클래스가 있는 경우, CLI 도구는 `jar -tf`에 의해 보고된 첫 번째 클래스를 사용합니다.
 
 
 ## Docker 조치 작성
@@ -723,16 +733,16 @@ wsk action invoke --blocking --result helloJava --param name World
 1. Docker 스켈레톤을 다운로드하십시오. 다음과 같이 CLI를 사용하여 다운로드할 수 있습니다.
 
   ```
-wsk sdk install docker
+  wsk sdk install docker
   ```
   {: pre}
   ```
-The Docker skeleton is now installed at the current directory.
+  The Docker skeleton is now installed at the current directory.
   ```
   {: screen}
 
   ```
-ls dockerSkeleton/
+  ls dockerSkeleton/
   ```
   {: pre}
   ```
@@ -750,8 +760,9 @@ ls dockerSkeleton/
   {: pre}
   ```
   #include <stdio.h>
-  
-  int main(int argc, char *argv[]) {printf("This is an example log message from an arbitrary C program!\n");
+
+  int main(int argc, char *argv[]) {
+      printf("This is an example log message from an arbitrary C program!\n");
       printf("{ \"msg\": \"Hello from arbitrary C program!\", \"args\": %s }",
              (argc == 1) ? "undefined" : argv[1]);
   }
@@ -769,15 +780,11 @@ ls dockerSkeleton/
 3. Docker 이미지를 빌드하고 제공된 스크립트를 사용하여 이를 업로드하십시오. 먼저 `docker login`을 실행하여 인증한 다음 선택된 이미지 이름을 사용하여 스크립트를 실행하십시오.
   
   ```
-docker login -u janesmith -p janes_password
+  docker login -u janesmith -p janes_password
   ```
   {: pre}
   ```
-cd dockerSkeleton
-  ```
-  {: pre}
-  ```
-  chmod +x buildAndPush.sh
+  cd dockerSkeleton
   ```
   {: pre}
   ```
@@ -785,13 +792,14 @@ cd dockerSkeleton
   ```
   {: pre}
   
-  example.c 파일의 일부는 Docker 이미지 빌드 프로세스의 일부로 컴파일되므로 사용자 시스템에서 C 컴파일이 필요하지 않습니다. 실제로 호환 가능한 호스트 시스템에서 2진을 컴파일하지 않는 경우 형식이 일치하지 않기 때문에 컨테이너 내에서 실행되지 않을 수 있습니다. 
+  example.c 파일의 일부는 Docker 이미지 빌드 프로세스의 일부로 컴파일되므로 사용자 시스템에서 C 컴파일이 필요하지 않습니다.
+  실제로 호환 가능한 호스트 시스템에서 2진을 컴파일하지 않는 경우 형식이 일치하지 않기 때문에 컨테이너 내에서 실행되지 않을 수 있습니다. 
   
   Docker 컨테이너는 이제 {{site.data.keyword.openwhisk_short}} 조치로 사용될 수 있습니다. 
   
   
   ```
-wsk action create --docker example janesmith/blackboxdemo
+  wsk action create --docker example janesmith/blackboxdemo
   ```
   {: pre}
   
@@ -799,7 +807,7 @@ wsk action create --docker example janesmith/blackboxdemo
   이 조치는 다른 {{site.data.keyword.openwhisk_short}} 조치로서 호출할 수 있습니다. 
   
   ```
-wsk action invoke --blocking --result example --param payload Rey
+  wsk action invoke --blocking --result example --param payload Rey
   ```
   {: pre}
   ```
@@ -812,11 +820,12 @@ wsk action invoke --blocking --result example --param payload Rey
   ```
   {: screen}
   
-  Docker 조치를 업데이트하려면 buildAndPush.sh를 실행하여 Docker 허브에 최신 이미지로 업로드하십시오. 이에 따라 다음에 시스템이 사용자의 조치에 대한 코드를 실행할 때 새 Docker 이미지를 가져올 수 있습니다. 웜(warm) 컨테이너가 없는 경우 새 호출은 새 Docker 이미지를 사용합니다.
+  Docker 조치를 업데이트하려면 buildAndPush.sh를 실행하여 Docker 허브에 최신 이미지로 업로드하십시오. 이에 따라 다음에 시스템이 사용자의 조치에 대한 코드를 실행할 때 새 Docker 이미지를 가져올 수 있습니다.
+  웜(warm) 컨테이너가 없는 경우 새 호출은 새 Docker 이미지를 사용합니다.
   그러나 이전 버전의 Docker 이미지를 사용하는 웜(warm) 컨테이너가 있는 경우, wsk 조치 업데이트를 실행하지 않는 한 새 호출은 계속해서 이 이미지를 사용합니다. wsk 조치 업데이트는 새 호출에 대해 새 Docker 이미지를 가져오는 docker pull을 실행하도록 시스템에 지시합니다.
  
   ```
-./buildAndPush.sh janesmith/blackboxdemo
+  ./buildAndPush.sh janesmith/blackboxdemo
   ```
   {: pre}
   ```
@@ -834,9 +843,8 @@ wsk action invoke --blocking --result example --param payload Rey
 {{site.data.keyword.openwhisk_short}} CLI를 사용하여 조치가 호출될 때 조치의 출력을 감시할 수 있습니다.
 
 1. 쉘에서 다음 명령 실행:
-  
   ```
-wsk activation poll
+  wsk activation poll
   ```
   {: pre}
 
@@ -845,11 +853,11 @@ wsk activation poll
 2. 다른 창으로 전환하여 조치 호출:
 
   ```
-wsk action invoke /whisk.system/samples/helloWorld --param payload Bob
+  wsk action invoke /whisk.system/samples/helloWorld --param payload Bob
   ```
   {: pre}
   ```
-ok: invoked /whisk.system/samples/helloWorld with id 7331f9b9e2044d85afd219b12c0f1491
+  ok: invoked /whisk.system/samples/helloWorld with id 7331f9b9e2044d85afd219b12c0f1491
   ```
   {: screen}
 
@@ -887,3 +895,18 @@ ok: invoked /whisk.system/samples/helloWorld with id 7331f9b9e2044d85afd219b12c0
   actions
   ```
   {: screen}
+  
+## 조치 본문 내의 조치 메타데이터 액세스
+
+조치 환경에는 실행 중인 조치에 특정한 여러 특성이 포함되어 있습니다. 이러한 특성을 사용하면
+REST API를 통해 조치가 프로그래밍 방식으로 OpenWhisk 자산과 연동되게 하거나
+조치가 할당된 시간을 다 사용하려는 경우 내부 알림이 생성되도록 설정할 수 있습니다.
+OpenWhisk Docker 스켈레톤을 사용 중인 경우 Node.js, Python, Swift, Java 및 Docker 조치와 같이
+지원되는 모든 런타임용 시스템 환경을 통해 특성을 액세스할 수 있습니다. 
+
+* `__OW_API_HOST` 이 조치를 실행 중인 OpenWhisk 배치에 대한 API 호스트
+* `__OW_API_KEY` 조치를 호출하는 대상의 API 키. 이 키는 제한 API 키일 수 있음
+* `__OW_NAMESPACE` *activation*을 위한 네임스페이스(조치에 대한 네임스페이스와 동일할 수 있음)
+* `__OW_ACTION_NAME` 실행 중인 조치의 완전한 이름
+* `__OW_ACTIVATION_ID` 실행 중인 이 조치 인스턴스에 대한 활성화 ID
+* `__OW_DEADLINE` 이 조치가 전체 기간 할당량을 이용하는 대략적인 시간(epoch 밀리초 단위로 측정됨)

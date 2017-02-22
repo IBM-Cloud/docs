@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
   
-lastupdated: "2016-10-23"
+lastupdated: "2017-01-11"
 
 ---
 
@@ -52,11 +52,10 @@ Siga o processo de inscrição para criar uma conta do {{site.data.keyword.Bluem
 {: tsResolve}
 
 Dependendo de como sua conta foi configurada, algumas dessas opções de login podem se aplicar a você: 
- * Os usuários do SoftLayer com IDs do SoftLayer devem efetuar login por meio do [Portal do Cliente](https://control.softlayer.com).
- * Os usuários do SoftLayer com um IBMid e com ou sem uma conta do Bluemix vinculada podem efetuar login por meio do [Portal do Cliente](https://control.softlayer.com) para abrir o Portal do Cliente SoftLayer ou por meio do
-[console do Bluemix](https://console.{DomainName}) para abrir o painel Infraestrutura. 
+ * Os usuários do SoftLayer com IDs do SoftLayer devem efetuar login por meio do [Portal do cliente ![Ícone de link externo](../icons/launch-glyph.svg)](https://control.softlayer.com){: new_window}.
+ * Os usuários do SoftLayer com um IBMid e com ou sem uma conta do Bluemix vinculada podem efetuar login por meio do [Portal do cliente ![Ícone de link externo](../icons/launch-glyph.svg)](https://control.softlayer.com){: new_window} para abrir o Portal do cliente SoftLayer ou por meio do [console do Bluemix ![Ícone de link externo](../icons/launch-glyph.svg)](https://console.{DomainName}){: new_window} para abrir o painel Infraestrutura. 
  * Os usuários do Bluemix sem uma conta do SoftLayer vinculada devem efetuar login por meio do console do Bluemix.
- * Os usuários do Bluemix com uma conta do SoftLayer vinculada podem efetuar login por meio do [console do Bluemix](https://console.{DomainName}) ou do [Portal do Cliente](https://control.softlayer.com).
+ * Os usuários do Bluemix com uma conta do SoftLayer vinculada podem efetuar login por meio do [console do Bluemix ![Ícone de link externo](../icons/launch-glyph.svg)](https://console.{DomainName}){: new_window} ou do [Portal do cliente ![Ícone de link externo](../icons/launch-glyph.svg)](https://control.softlayer.com){: new_window}.
  
 
 ## A Senha é inválida
@@ -165,7 +164,7 @@ Depois de registrar em uma conta de avaliação do {{site.data.keyword.Bluemix_n
 talvez você não possa efetuar login no {{site.data.keyword.Bluemix_notm}}. Em vez disso, você verá a mensagem a seguir:
 {: tsSymptoms}
 
-<code>Sua conta está pendente. Aguarde até 24 horas pela confirmação por email e verifique também sua pasta de spam. Se você ainda não recebeu sua confirmação por e-mail, entre em contato com <a href="http://ibm.biz/bluemixsupport.com" target="_blank">Suporte Bluemix</a>.</code>
+<code>Sua conta está pendente. Aguarde até 24 horas pela confirmação por email e verifique também sua pasta de spam. Se você ainda não tiver recebido sua confirmação por e-mail, entre em contato com o <a href="http://ibm.biz/bluemixsupport.com" target="_blank">Suporte do Bluemix <img src="../icons/launch-glyph.svg" alt="Ícone de link externo"></a>.</code>
 
 
 Depois de registrar em uma conta de avaliação do {{site.data.keyword.Bluemix_notm}},
@@ -173,7 +172,7 @@ você receberá um email de confirmação. Deve-se clicar no link
 que está no email de confirmação para concluir o processo de registro.
 {: tsCauses} 
 
-O email de confirmação é enviado ao endereço de email fornecido. Verifique sua caixa de entrada e sua pasta de emails não desejados. Se você não tiver recebido o e-mail de confirmação, entre em contato com o [Suporte {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport.com){: new_window}.  
+O email de confirmação é enviado ao endereço de email fornecido. Verifique sua caixa de entrada e sua pasta de emails não desejados. Se você não tiver recebido o e-mail de confirmação, entre em contato com o [Suporte do {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}.  
 {: tsResolve}
 
 
@@ -231,7 +230,7 @@ e não um membro, deve-se excluir a conta anterior do {{site.data.keyword.Bluemi
 e, em seguida, ser convidado para se associar como um membro da organização. Para excluir sua conta anterior e se associar à conta como um membro,
 conclua as etapas a seguir: 
 
-  1. Entre em contato com o [Suporte ao {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport){: new_window} para abrir um chamado de suporte e solicitar que sua conta seja excluída. Se houver dados associados
+  1. Entre em contato com o [Suporte do {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window} para abrir um chamado de suporte e solicitar a exclusão de sua conta. Se houver dados associados
 à sua conta antiga que você deseja salvar e mover para a nova conta,
 inclua essas informações em seu email. 
   2. Após sua conta ser excluída, peça a um usuário com a função de gerenciador
@@ -291,7 +290,7 @@ a seguir, conforme for necessário:
 efetuar login novamente.
   * Usar o modo de navegação privada do seu navegador. 
   * Limpar os cookies e o cache do navegador.
-  * Usar um navegador diferente. Para obter informações sobre as versões dos navegadores que são suportadas pelo {{site.data.keyword.Bluemix_notm}}, veja [{{site.data.keyword.Bluemix_notm}} Pré-requisitos](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}.
+  * Usar um navegador diferente. Para obter informações sobre as versões dos navegadores que são suportadas pelo {{site.data.keyword.Bluemix_notm}}, veja [Pré-requisitos do {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}.
   * Se você tiver instalado a interface de linha de comandos cf, insira o comando `cf apps` para ver se seu aplicativo está em execução.
   
   

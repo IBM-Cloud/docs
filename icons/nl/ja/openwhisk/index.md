@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2016, 2017
 lastupdated: "2016-09-09"
 
 ---
@@ -12,7 +12,7 @@ lastupdated: "2016-09-09"
 {:screen: .screen}
 {:pre: .pre}
 
-# {{site.data.keyword.openwhisk_short}} 概説 (ベータ)
+# {{site.data.keyword.openwhisk_short}} 入門
 
 
 {{site.data.keyword.openwhisk}} は、サーバーレス・コンピューティングまたは Function as a Service (FaaS) とも呼ばれる分散イベント・ドリブン計算サービスです。{{site.data.keyword.openwhisk_short}} は、イベントに応えて、または、Web アプリやモバイル・アプリからの HTTP を介した直接起動に応えて、アプリケーション・ロジックを実行します。イベントは、Bluemix サービス (Cloudant など) および外部ソースから提供できます。開発者は、アプリケーション・ロジックの開発と、オンデマンドで実行されるアクションの作成に専念できます。アクションの実行率は常にイベント率に一致するため、本来の拡張性と回復力に応じたものになり、最適な使用効率をもたらします。使用した分のみ支払えばよく、サーバーを管理する必要はありません。[ソース・コード](https://github.com/openwhisk/openwhisk)を入手し、システムを自身で実行することもできます。
@@ -133,7 +133,7 @@ function main(params) {
 * [REST API](https://new-console.{DomainName}/apidocs/98)
 
 # 関連リンク
-{: #rellinks}
+{: #rellinks notoc}
 
 ## API リファレンス
 {: #api}

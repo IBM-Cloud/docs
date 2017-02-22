@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2015, 2016
-lastupdated: "2016-12-05"  
+  years: 2015, 2017
+lastupdated: "2017-01-09"
 
 
 ---
@@ -26,7 +26,7 @@ lastupdated: "2016-12-05"
 
 您可以使用现有的 IBM 标识，通过创建新 IBM 标识或使用联合标识，来注册 {{site.data.keyword.Bluemix_notm}} 帐户。联合标识是公司域内已向 IBM 注册的标识，因此域和用户凭证可用于访问 IBM Web 应用程序。  
 
-仅当您的公司已经和 IBM 合作进行注册时，联合标识才可用于注册 {{site.data.keyword.Bluemix_notm}}。通过向 IBM 注册公司域，用户可以使用现有公司用户凭证，登录到 IBM 产品和服务。公司的身份提供者随后会处理认证。当您使用联合标识登录到 {{site.data.keyword.Bluemix_notm}} 时，系统会提示您通过您公司的登录页面进行登录。有关向 IBM 请求注册公司或组织域的更多信息，或者相关流程的更多信息，请参阅 [IBMid Enterprise Federation Adoption Guide](https://ibm.box.com/v/IBMid-Federation-Guide){: #new_window}。当您请求注册联合标识时，需要 IBM 产品负责人（如产品支持者或客户支持者）。
+仅当您的公司已经和 IBM 合作进行注册时，联合标识才可用于注册 {{site.data.keyword.Bluemix_notm}}。通过向 IBM 注册公司域，用户可以使用现有公司用户凭证，登录到 IBM 产品和服务。公司的身份提供者随后会处理认证。当您使用联合标识登录到 {{site.data.keyword.Bluemix_notm}} 时，系统会提示您通过您公司的登录页面进行登录。有关向 IBM 请求注册公司或组织域的信息，或者有关流程的更多信息，请参阅 [IBMid Enterprise Federation Adoption Guide ![外部链接图标](../icons/launch-glyph.svg)](https://ibm.box.com/v/IBMid-Federation-Guide){: new_window}。当您请求注册联合标识时，需要 IBM 产品负责人（如产品支持者或客户支持者）。
 
 | 注册方法 | 详细信息 |    
 |-----------------|---------|
@@ -45,6 +45,20 @@ lastupdated: "2016-12-05"
 ### 设置平台通知
 
 单击**帐户** &gt; **通知** &gt; **平台**，以针对 {{site.data.keyword.Bluemix_notm}} 事件和计划内维护设置电子邮件通知。您可以选择或清除每个选项，以启用或禁用电子邮件通知。
+
+<!-- staging only
+
+**Note**: You are always alerted by email about emergencies and pricing changes.
+
+On the **Platform** tab you can also customize notifications for your orgs, spaces, or applications. Complete the following steps to add a customized notification:
+
+<ol>
+<li>Select **Add a Notification**.</li>
+<li>Use the search field to find the org, application, service, or resource that you want to set a notification for, or expand the item in the pre-populated list.</li>
+<li>Select *Email* to set the notification type.</li>
+</ol>
+
+staging only end -->
 
 ### 设置花费通知
 {: #spendingnotifications}
@@ -72,11 +86,11 @@ lastupdated: "2016-12-05"
 ## 查看使用情况
 {: #acctusage}
 
-作为组织的帐户所有者或记帐管理员，您可使用“使用情况仪表板”视图来查看组织中每月使用的运行时、容器、服务和支持的实时费用。您可以查看所有区域中的运行时 GB-小时数和服务使用情况，也可选择查看特定区域的情况。
+作为组织的帐户所有者或记帐管理员，您可使用“使用情况仪表板”页面来查看组织中每月使用的运行时、容器、服务和支持的实时费用。您可以查看所有区域中的运行时 GB-小时数和服务使用情况，也可选择查看特定区域的情况。
 
-要打开“使用情况仪表板”视图，请单击**帐户** &gt; *your_account_name* &gt; **使用情况仪表板**。记帐管理员只能查看其作为记帐管理员的组织的详细信息。
+要打开“使用情况仪表板”页面，请单击**帐户** &gt; *your_account_name* &gt; **使用情况仪表板**。记帐管理员只能查看其作为记帐管理员的组织的详细信息。
 
-在每个记帐周期结束时，将向帐户所有者收取所有组织中发生的总使用量费用。作为帐户所有者，您可以按区域和组织过滤使用情况摘要。您还可以单击特定的月份来查看该月份的使用情况。
+在每个记帐周期结束时，将向帐户所有者收取所有组织中发生的总使用量费用。作为帐户所有者，您可以按区域和组织过滤使用情况摘要。您还可以单击特定的月份来查看该月份的使用情况。从**组织**列表中选择**所有组织**以查看帐户中所有组织的使用情况。
 
 ## 更新记帐信息
 {: #account_billing}

@@ -1,7 +1,7 @@
 ------
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,43 +12,12 @@ copyright:
 
 # iOS のサイレント通知の処理
 {: #silent-notifications}
-最終更新日: 2016 年 12 月 06 日
+最終更新日: 2017 年 1 月 16 日
 {: .last-updated}
 
-サイレント通知は、デバイスの画面に表示されません。これらの通知は、アプリケーションがバックグラウンドで受け取ります。その結果、アプリケーションは最大で 30 秒までウェイク状態になり、指定されたバックグラウンド・タスクを実行します。ユーザーは、この通知の着信に気付かない可能性があります。iOS のサイレント通知の送信には、[REST API](https://mobile.{DomainName}/imfpush/) を使用します。   
+サイレント通知は、デバイスの画面に表示されません。これらの通知は、アプリケーションがバックグラウンドで受け取ります。その結果、アプリケーションは最大で 30 秒までウェイク状態になり、指定されたバックグラウンド・タスクを実行します。ユーザーは、この通知の着信に気付かない可能性があります。iOS のサイレント通知を送信するには、[REST API ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://mobile.{DomainName}/imfpush/ "外部リンク・アイコン"){: new_window}を使用します。   
 
-1. サイレント・プッシュ通知を送信するには、プロジェクトの `appDelegate.m` ファイルで以下のメソッドを実装します。
-
-```
-//For Objective C
- - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult result))handler
-   {
-   NSNumber *contentAvailable = userInfo[@"aps"][@"content-available"];
-   if([contentAvailable intValue]== 1)
-	{
-      [[IMFPushClient sharedInstance] application:application didReceiveRemoteNotification:userInfo];
-       //Perform background task
-       NSLog(@"Received a silent push..");
-       NSLog(@"userInfo: %@", userInfo.description);
-       _appDelegateVC.result.text = userInfo.description;
-       handler(UIBackgroundFetchResultNewData);
-    }
-    else
-	{
-    //Normal Notification
-    [[IMFPushAppManager get] notificationReceived:userInfo];
-    NSLog(@"Received a normal notification.");
-    NSLog(@"userInfo: %@", userInfo.description);
-     _appDelegateVC.result.text = userInfo.description;
-    handler(UIBackgroundFetchResultNoData);
-    }
-    //Success
-    }
-```
-    {: codeblock}
-
-Swift では、サイレント通知でサーバーから送信される `contentAvailable` の値は 1 です。
-
+1. サイレント・プッシュ通知を送信するには、プロジェクトの `appDelegate.m` ファイルで以下のメソッドを実装します。Swift では、サーバーから送信される、サイレント通知の `contentAvailable` 値は 1 になります。
 ```
 //For Swift
 	 func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {

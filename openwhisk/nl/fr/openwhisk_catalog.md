@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2016
-lastupdated: "2016-09-09"
+  years: 2016, 2017
+lastupdated: "2017-01-04"
  
 
 ---
@@ -157,7 +157,7 @@ Vous pouvez utiliser le flux `changes` pour configurer un service afin d'exécut
 est apportée dans votre base de données Cloudant. Les paramètres sont les suivants :
 
 - `dbname` : nom de la base de données Cloudant.
-- `maxTriggers` : l'exécution de déclencheurs s'arrête lorsque cette limite est atteinte. La valeur par défaut est 1000. La valeur maximale que vous pouvez définir est 10 000. Si vous tentez de définir une valeur supérieure à 10 000, la demande est rejetée.
+- `maxTriggers` : l'exécution de déclencheurs s'arrête lorsque cette limite est atteinte. Par défaut, cette valeur est infinie. 
 
 1. Créez un déclencheur avec le flux `changes` dans la liaison de package que vous avez créée précédemment. Prenez
 soin de remplacer `/monEspaceNom/monCloudant` par votre nom de package.
@@ -188,7 +188,7 @@ Cloudant sont correctes.
 
 A présent, vous pouvez créer des règles et les associer à des actions afin de réagir aux mises à jour de document.
 
-Le contenu des événements générés possède les paramètres suivants : 
+Le contenu des événements générés possède les paramètres suivants :
 
 - `id` : ID de document.
 - `seq` : identificateur de séquence généré par Cloudant.
@@ -261,15 +261,12 @@ soin de remplacer `/monEspaceNom/monCloudant` par votre nom de package.
   ```
   {: screen}
 
-### Utilisation d'une séquence d'actions pour traiter un document à
-l'occasion d'un événement de changement provenant d'une base de données
-Cloudant
+### Utilisation d'une séquence d'actions et d'un déclencheur de
+changement pour traiter un document provenant d'une base de données Cloudant
 
 Vous pouvez utiliser une séquence d'actions dans une règle pour extraire
-et traiter le document associé à un événement de changement Cloudant. 
+et traiter le document associé à un événement de changement Cloudant.
 
-Créez une action qui traite un document provenant de Cloudant ; elle
-s'attend à un document comme paramètre.
 Voici un exemple de code d'une action qui traite un document :
 ```
 function main(doc){
@@ -277,51 +274,45 @@ function main(doc){
 }
 ```
 {: codeblock}
+
+Créez l'action permettant de traiter le document depuis Cloudant :
 ```
 wsk action create myAction myAction.js
 ```
 {: pre}
-Pour lire le document à partir de la base de données, vous pouvez utiliser
-l'action `read` dans le package cloudant. Cette action peut
-être incluse avec votre action `myAction` dans une séquence
-d'actions.
-Créez une séquence d'actions utilisant l'action `read`, puis
-appelez votre action `myAction` qui attend un document en
-entrée.
+
+Pour lire un document à partir de la base de données, vous pouvez utiliser
+l'action `read` dans le package Cloudant.
+L'action `read` peut être associée à
+`myAction` pour créer une séquence d'actions.
 ```
 wsk action create sequenceAction --sequence /myNamespace/myCloudant/read,myAction
 ```
 {: pre}
 
-Créez maintenant une règle qui associe votre déclencher à la nouvelle action
-`sequenceAction`.
+L'action `sequenceAction` peut être utilisée dans une
+règle qui active l'action sur de nouveaux événements déclencheurs Cloudant.
 ```
 wsk rule create myRule myCloudantTrigger sequenceAction
 ```
 {: pre}
 
-La séquence d'actions doit maintenant connaître le nom de la base de
-données afin d'en extraire le document.
-Définissez un paramètre sur le déclencheur pour `dbname`.
-```
-wsk trigger update myCloudantTrigger --param dbname testdb
-```
-{: pre}
-
-**Remarque** Le déclencheur de changement Cloudant
-prenait en charge le paramètre `includeDoc`, mais cela n'est
-plus le cas.
-  Vous devez recréer les déclencheurs précédemment créés avec `includeDoc` :
-  Créez à nouveau le déclencheur sans le paramètre `includeDoc`. 
+**Remarque** : Le déclencher Cloudant
+`changes` prenait en charge le paramètre
+`includeDoc`, mais cela n'est plus le cas.
+  Vous devez recréer les déclencheurs précédemment créés avec `includeDoc`. Pour
+recréer le déclencheur, procédez comme suit :
   ```
   wsk trigger delete myCloudantTrigger
   wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb
   ```
   {: pre}
-Vous pouvez suivre les étapes ci-dessus pour créer une séquence d'actions
-permettant d'obtenir le document et appeler votre action existante.
-Mettez ensuite à jour votre règle de telle sorte qu'elle utilise la nouvelle
-séquence d'actions.
+
+  Vous pouvez utiliser l'exemple illustré ci-dessus pour créer une
+séquence d'actions permettant de lire le document modifié et appeler les
+actions existantes.
+  N'oubliez pas de désactiver les règles qui ne sont
+plus valides et d'en créer de nouvelles avec le modèle de séquence d'actions.
 
 ## Utilisation du package Alarm
 {: #openwhisk_catalog_alarm}
@@ -344,7 +335,7 @@ Le flux `/whisk.system/alarms/alarm` configure le service Alarm pour exécuter u
 spécifiée. Les paramètres sont les suivants :
 
 - `cron` : chaîne basée sur la syntaxe crontab UNIX, qui indique quand déclencher la tâche périodique (en temps universel coordonné). Il s'agit d'une
-séquence de cinq zones séparées par un espace :`X X X X X`.
+séquence de cinq zones séparées par un espace : `X X X X X`.
 Pour plus d'informations sur l'utilisation de la syntaxe cron, voir : http://crontab.org. Voici quelques exemples de la fréquence indiquée par la chaîne :
 
   - `* * * * *` : au début de chaque minute.
@@ -355,7 +346,9 @@ Pour plus d'informations sur l'utilisation de la syntaxe cron, voir : http://cro
 
 - `trigger_payload` : la valeur de ce paramètre devient le contenu du déclencheur à chaque fois que le déclencheur est exécuté.
 
-- `maxTriggers` : l'exécution de déclencheurs s'arrête lorsque cette limite est atteinte. La valeur par défaut est 1000. La valeur maximale que vous pouvez définir est 10 000. Si vous tentez de définir une valeur supérieure à 10 000, la demande est rejetée.
+- `maxTriggers` : l'exécution de déclencheurs s'arrête lorsque cette limite est atteinte. La
+valeur par défaut est 1 000 000. Vous pouvez définir cette limite sur l'infini
+(-1).
 
 Voici un exemple de création de déclencheur qui sera exécuté toutes les 2
 minutes avec les valeurs `name` et `place`
@@ -364,17 +357,18 @@ dans l'événement déclencheur :
   ```
   wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron "*/2 * * * *" --param trigger_payload "{\"name\":\"Odin\",\"place\":\"Asgard\"}"
   ```
+  {: pre}
 
 Chaque événement généré inclut sous forme de paramètres les propriétés spécifiées dans la valeur `trigger_payload`. Dans ce cas,
 chaque événement déclencheur possède les paramètres `name=Odin` et `place=Asgard`.
 
 **Remarque** : Le paramètre `cron`
 prend également en charge une syntaxe personnalisée de six zones, dans laquelle
-la sixième zone représente les secondes.
+la sixième zone représente les secondes. 
 Pour plus de détails sur l'utilisation de cette syntaxe cron personnalisée,
-voir : https://github.com/ncb000gt/node-cron.
-Voici un exemple d'utilisation de la notation sur six zones : 
-  - `*/30 * * * * *` : toutes les trente secondes. 
+voir : https://github.com/ncb000gt/node-cron. 
+Voici un exemple d'utilisation de la notation sur six zones :
+  - `*/30 * * * * *` : toutes les trente secondes.
 
 ## Utilisation du package Weather
 {: #openwhisk_catalog_weather}
@@ -402,7 +396,7 @@ The Weather Company. Les paramètres sont les suivants :
 - `longitude` : coordonnée de longitude du lieu.
 - `timeperiod` : période sur laquelle porte la prévision. Les options valides sont '10day' - (valeur par défaut) Renvoie une
 prévision quotidienne sur 10 jours, '48hour' - Renvoie une prévision horaire sur 2 jours, 'current' - Renvoie les conditions météorologiques actuelles,
-'timeseries' - Renvoie les observations actuelles et jusqu'à 24 heures d'observations antérieures à partir de la date et et de l'heure en cours.
+'timeseries' - Renvoie les observations actuelles et jusqu'à 24 heures d'observations antérieures à partir de la date et de l'heure en cours.
 
 
 Voici un exemple de création d'une liaison de package, puis d'obtention d'une prévision à 10 jours :
@@ -448,15 +442,16 @@ Voici un exemple de création d'une liaison de package, puis d'obtention d'une p
 
 ## Utilisation des packages Watson
 {: #openwhisk_catalog_watson}
-Les packages Watson permettent d'appeler diverses API Watson. 
+
+Les packages Watson permettent d'appeler diverses API Watson.
 
 Les packages Watson suivants sont fournis :
 
 | Package | Description |
 | --- | --- |
-| `/whisk.system/watson-translator`   | Actions des API Watson pour la traduction du texte et l'identification de la langue |
-| `/whisk.system/watson-textToSpeech` | Actions des API Watson pour la conversion du texte en parole |
-| `/whisk.system/watson-speechToText` | Actions des API Watson pour la conversion des paroles en texte |
+| `/whisk.system/watson-translator`   | Package pour la traduction de texte et l'identification de la langue |
+| `/whisk.system/watson-textToSpeech` | Package pour la conversion de texte en paroles |
+| `/whisk.system/watson-speechToText` | Package pour la conversion de paroles en texte |
 
 **Remarque** Le package `/whisk.system/watson` est actuellement obsolète ; vous devez le migrer vers les nouveaux packages mentionnés plus haut. Les nouvelles actions offrent la même interface.
 
@@ -469,7 +464,7 @@ Le package inclut les actions ci-dessous.
 
 | Entité | Type | Paramètres | Description |
 | --- | --- | --- | --- |
-| `/whisk.system/watson-translator` | package | username, password | Actions des API Watson pour la traduction du texte et l'identification de la langue  |
+| `/whisk.system/watson-translator` | package | username, password | Package pour la traduction de texte et l'identification de la langue  |
 | `/whisk.system/watson-translator/translator` | action | payload, translateFrom, translateTo, translateParam, username, password | Traduire le texte |
 | `/whisk.system/watson-translator/languageId` | action | payload, username, password | Identifier la langue |
 
@@ -479,9 +474,8 @@ Le package inclut les actions ci-dessous.
 
 #### Configuration du package Watson Translator dans Bluemix
 
-Si vous utilisez OpenWhisk depuis Bluemix, OpenWhisk crée
-automatiquement des liaisons de package pour vos instances de service Bluemix
-Watson.
+Si vous utilisez OpenWhisk depuis Bluemix, OpenWhisk crée automatiquement
+des liaisons de package pour vos instances de service Bluemix Watson.
 
 1. Créez une instance de service Watson Translator dans votre
 [tableau de bord](http://console.ng.Bluemix.net) Bluemix.
@@ -489,8 +483,9 @@ Watson.
   Mémorisez le nom de l'instance de service ainsi que l'organisation et
 l'espace Bluemix dans lesquels vous vous trouvez.
 
-2. Assurez-vous que votre interface de ligne de commande OpenWhisk se trouve dans l'espace de nom qui correspond
-à l'organisation et à l'espace Bluemix que vous avez utilisés à l'étape précédente.
+2. Assurez-vous que votre interface de ligne de commande OpenWhisk se
+trouve dans l'espace de nom qui correspond à l'organisation et à l'espace
+Bluemix que vous avez utilisés à l'étape précédente.
 
   ```
   wsk property set --namespace myBluemixOrg_myBluemixSpace
@@ -518,7 +513,6 @@ que vous avez créée.
   wsk package list
   ```
   {: pre}
-  
   ```
   packages
   /myBluemixOrg_myBluemixSpace/Bluemix_Watson_Translator_Credentials-1 private
@@ -555,7 +549,7 @@ L'action `/whisk.system/watson-translator/translator` traduit un texte d'une lan
 - `translateFrom` : code à deux chiffres de la langue source.
 - `translateTo` : code à deux chiffres de la langue cible.
 
-- Appelez l'action `translator` dans votre liaison de package pour traduire du texte anglais en français. 
+- Appelez l'action `translator` dans votre liaison de package pour traduire du texte anglais en français.
 
   ```
   wsk action invoke myWatsonTranslator/translator --blocking --result --param payload 'Blue skies ahead' --param translateFrom 'en' --param translateTo 'fr'
@@ -599,13 +593,13 @@ L'action `/whisk.system/watson-translator/languageId` identifie la langue d'un t
 {: #openwhisk_catalog_watson_texttospeech}
 
 Le package `/whisk.system/watson-textToSpeech` permet
-d'appeler diverses API Watson pour convertir le texte en parole. 
+d'appeler diverses API Watson pour convertir le texte en parole.
 
 Le package inclut les actions ci-dessous.
 
 | Entité | Type | Paramètres | Description |
 | --- | --- | --- | --- |
-| `/whisk.system/watson-textToSpeech` | package | username, password | Actions des API Watson pour la conversion du texte en parole |
+| `/whisk.system/watson-textToSpeech` | package | username, password | Package pour la conversion de texte en paroles |
 | `/whisk.system/watson-textToSpeech/textToSpeech` | action | payload, voice, accept, encoding, username, password | Convertir le texte en contenu audio |
 
 **Remarque** : Le package `/whisk.system/watson` est obsolète, y compris l'action `/whisk.system/watson/textToSpeech`.
@@ -677,6 +671,7 @@ Speech to Text.
 
 #### Conversion de texte en paroles
 {: #openwhisk_catalog_watson_speechtotext}
+
 L'action `/whisk.system/watson-speechToText/textToSpeech`
 convertit du texte en contenu audio. Les paramètres sont les suivants :
 
@@ -701,23 +696,21 @@ convertit du texte en contenu audio. Les paramètres sont les suivants :
   ```
   {: screen}
 
+
 ### Utilisation du package Watson Speech to Text
 {: #openwhisk_catalog_watson_speechtotext}
 
 Le package `/whisk.system/watson-speechToText`
-permet d'appeler diverses API Watson pour convertir des paroles en texte. 
+permet d'appeler diverses API Watson pour convertir des paroles en texte.
 
 Le package inclut les actions ci-dessous.
 
 | Entité | Type | Paramètres | Description |
 | --- | --- | --- | --- |
-| `/whisk.system/watson-speechToText` | package | username, password | Actions des API Watson pour la conversion des paroles en texte |
+| `/whisk.system/watson-speechToText` | package | username, password | Package pour la conversion de paroles en texte |
 | `/whisk.system/watson-speechToText/speechToText` | action | payload, content_type, encoding, username, password, continuous, inactivity_timeout, interim_results, keywords, keywords_threshold, max_alternatives, model, timestamps, watson-token, word_alternatives_threshold, word_confidence, X-Watson-Learning-Opt-Out | Convertir le contenu audio en texte |
 
-**Remarque** : Le package
-`/whisk.system/watson` est obsolète, y compris l'action
-`/whisk.system/watson/speechToText`.
-
+**Remarque** : Le package `/whisk.system/watson` est obsolète, y compris l'action `/whisk.system/watson/speechToText`.
 
 #### Configuration du package Watson Speech to Text dans Bluemix
 
@@ -783,7 +776,6 @@ Speech to Text.
   {: pre}
 
 
-
 #### Conversion de paroles en texte
 
 L'action `/whisk.system/watson-speechToText/speechToText` convertit un
@@ -824,6 +816,168 @@ comme alternative possible d'un mot.
   {: screen}
  
  
+## Utilisation du package Message Hub
+{: #openwhisk_catalog_message_hub}
+
+Ce package vous permet de créer des déclencheurs qui réagissent
+lorsque des messages sont publiés dans une instance de service
+[Message
+Hub](https://developer.ibm.com/messaging/message-hub/) sur Bluemix.
+
+### Création d'un déclencheur qui écoute une instance Message Hub
+{: #openwhisk_catalog_message_hub_trigger}
+Pour créer un déclencheur qui réagit lorsque des messages sont publiés dans une
+instance Message Hub, vous devez utiliser le flux nommé `messaging/messageHubFeed`. Ce
+flux prend en charge les paramètres suivants :
+
+|Nom|Type|Description|
+|---|---|---|
+|kafka_brokers_sasl|Tableau JSON de chaînes|Ce paramètre est un tableau de chaînes `<hôte>:<port>` qui comprend les courtiers de votre instance Message Hub|
+|utilisateur|Chaîne|Votre nom d'utilisateur Message Hub|
+|password|Chaîne|Votre mot de passe Message Hub|
+|topic|Chaîne|Rubrique que vous souhaitez faire écouter par le déclencheur|
+|kafka_admin_url|Chaîne d'URL|URL de l'interface REST d'administration de Message Hub|
+|api_key|Chaîne|Votre clé d'API Message Hub|
+|isJSONData|Booléen (facultatif - par défaut=false)|Lorsqu'il prend la valeur `true`, ce paramètre indique au flux d'essayer d'analyser le contenu du message en tant que JSON avant de le transmettre en tant que contenu du déclencheur.|
+
+Cette liste de paramètres peut vous sembler impressionnante, mais vous
+pouvez les définir automatiquement à l'aide de la commande d'interface de ligne
+de commande package refresh :
+
+1. Créez une instance du service Message Hub sous l'organisation et
+l'espace en cours que vous utilisez pour OpenWhisk.
+
+2. Vérifiez que la rubrique que vous souhaitez écouter existe déjà dans
+Message Hub ou créez une rubrique dont vous écouterez les messages, par exemple, `mytopic`.
+
+2. Actualisez les packages dans votre espace de nom. L'actualisation
+crée automatiquement une liaison de package pour l'instance de service Message
+Hub que vous avez créée.
+
+  ```
+  wsk package refresh
+  ```
+  {: pre}
+  ```
+  created bindings:
+  Bluemix_Message_Hub_Credentials-1
+  ```
+  {: screen}
+
+  ```
+  wsk package list
+  ```
+  {: pre}
+  ```
+  packages
+  /myBluemixOrg_myBluemixSpace/Bluemix_Message_Hub_Credentials-1 private
+  ```
+  {: screen}
+
+  Votre liaison de package contient désormais les données
+d'identification associées à votre instance Message Hub.
+
+3. A présent, il ne vous reste plus qu'à créer un déclencheur à
+exécuter lorsque de nouveaux messages sont publiés sur Message Hub.
+
+  ```
+  wsk trigger create MyMessageHubTrigger -f /myBluemixOrg_myBluemixSpace/Bluemix_Message_Hub_Credentials-1/messageHubFeed -p topic mytopic
+  ```
+  {: pre}
+
+### Configuration d'un package Message Hub hors de Bluemix
+
+Si vous n'utilisez pas OpenWhisk dans Bluemix ou si vous voulez
+configurer votre service Message Hub hors de Bluemix, vous devez créer
+manuellement une liaison de package pour le service Message Hub. Pour ce faire,
+vous avez besoin des données d'identification et des informations de connexion du
+service Message Hub.
+
+- Créez une liaison de package configurée pour votre service Message Hub.
+
+  ```
+  wsk trigger create MyMessageHubTrigger -f /whisk.system/messaging/messageHubFeed -p kafka_brokers_sasl "[\"kafka01-prod01.messagehub.services.us-south.bluemix.net:9093\", \"kafka02-prod01.messagehub.services.us-south.bluemix.net:9093\", \"kafka03-prod01.messagehub.services.us-south.bluemix.net:9093\"]" -p topic mytopic -p user <your Message Hub user> -p password <your Message Hub password> -p kafka_admin_url https://kafka-admin-prod01.messagehub.services.us-south.bluemix.net:443 -p api_key <your API key>
+  ```
+  {: pre}
+
+### Ecoute des messages sur une instance Message Hub
+{: #openwhisk_catalog_message_hub_listen}
+Une fois le déclencheur créé, le  système surveille la rubrique indiquée dans
+votre service de messagerie. Lorsque de nouveaux messages sont publiés, le
+déclencheur est exécuté.
+
+Le contenu de ce déclencheur comporte une zone
+`messages`, qui est un tableau des messages publiés depuis
+la dernière exécution du déclencheur. Chaque objet de message figurant dans
+le tableau contient les zones suivantes :
+- topic
+- partition
+- offset
+- key
+- value
+
+En Kafka, ces zones sont évidentes. Toutefois, la zone `value` requiert une attention spéciale. Si
+le paramètre `isJSONData` a été défini sur
+`false` (ou n'a pas été défini du tout) lors de la création du
+déclencheur, la zone `value` sera la valeur brute du message
+publié. Cependant, si `isJSONData` a été défini sur
+`true` à la création du déclencheur, le système tente
+d'analyser cette valeur pour le mieux en tant qu'objet JSON. Si l'analyse
+aboutit, la zone `value` du contenu du déclencheur sera
+l'objet JSON qui en résulte.
+
+Par exemple, si un message `{"title": "Une chaîne", "amount": 5,
+"isAwesome": true}` est publié avec `isJSONData`
+défini sur `true`, le contenu du déclencheur sera similaire à
+ce qui suit :
+
+```
+{
+  "messages": [
+      {
+        "partition": 0,
+        "key": null,
+        "offset": 421760,
+        "topic": "mytopic",
+        "value": {
+            "amount": 5,
+            "isAwesome": true,
+            "title": "Une chaîne"
+        }
+      }
+  ]
+}
+```
+
+Cependant, si le même contenu de message est publié avec
+`isJSONData` défini sur `false`, le contenu
+du déclencheur sera similaire à l'exemple suivant :
+
+```
+{
+  "messages": [
+    {
+      "partition": 0,
+      "key": null,
+      "offset": 421761,
+      "topic": "mytopic",
+      "value": "{\"title\": \"Une chaîne\", \"amount\": 5, \"isAwesome\": true}" }
+  ]
+}
+```
+
+### Les messages sont traités par lots
+Vous remarquerez que le contenu du déclencheur comporte un tableau de messages. Cela
+signifie que si vous produisez des messages très rapidement vers votre système de
+messagerie, le flux tente de générer un lot à partir des messages publiés afin
+de les traiter en une seule exécution du déclencheur. Cela permet de publier
+les messages dans le déclencher de manière plus rapide et plus efficace.
+
+Lorsque vous codez des actions exécutées par votre déclencheur, gardez à
+l'esprit que le nombre de messages du contenu est techniquement illimité, mais
+qu'il est toujours supérieur à 0.
+
+
 ## Utilisation du package Slack
 {: #openwhisk_catalog_slack}
 
@@ -848,15 +1002,13 @@ L'action `/whisk.system/slack/post` publie un message dans un canal Slack spéci
 - `channel` : canal Slack dans lequel publier le message.
 - `username` : nom sous lequel publier le message.
 - `text` : message à publier.
-- `token` : (facultatif) [Jeton d'accès](https://api.slack.com/tokens) Slack. Voir
-[ci-après](./openwhisk_catalog.html#openwhisk_catalog_slack_token) pour plus de détails sur l'utilisation de jetons d'accès Slack.
+- `token` : (facultatif) [Jeton d'accès](https://api.slack.com/tokens) Slack. Voir [ci-après](./openwhisk_catalog.html#openwhisk_catalog_slack_token) pour plus de détails sur l'utilisation de jetons d'accès Slack.
 
 L'exemple ci-dessous explique comment configurer Slack, créer une liaison de package et publier un message dans un canal.
 
 1. Configurez un [webhook entrant](https://api.slack.com/incoming-webhooks) Slack pour votre équipe.
 
-  Une fois Slack configuré, vous obtenez une adresse URL de webhook similaire à `https://hooks.slack.com/services/aaaaaaaaa/bbbbbbbbb/cccccccccccccccccccccccc`. Vous
-en aurez besoin à l'étape suivante.
+  Une fois Slack configuré, vous obtenez une adresse URL de webhook similaire à `https://hooks.slack.com/services/aaaaaaaaa/bbbbbbbbb/cccccccccccccccccccccccc`. Vous en aurez besoin à l'étape suivante.
 
 2. Créez une liaison de package avec vos données d'identification Slack, le canal dans lequel publier le message, et le nom d'utilisateur sous
 lequel publier le message.
@@ -876,10 +1028,7 @@ lequel publier le message.
 ### Utilisation de l'API reposant sur le jeton Slack
 {: #openwhisk_catalog_slack_token}
 
-Si vous préférez, vous pouvez choisir d'utiliser l'API reposant sur le jeton Slack plutôt que l'API de webhook. Dans ce cas, transmettez un paramètre `token` contenant votre [jeton d'accès](https://api.slack.com/tokens) Slack. Vous
-pourrez ensuite utiliser l'une des [méthodes d'API Slack](https://api.slack.com/methods) comme paramètre `url`. Par
-exemple, pour envoyer un message, utilisez [slack.postMessage](https://api.slack.com/methods/chat.postMessage) comme valeur de
-paramètre `url`.
+Si vous préférez, vous pouvez choisir d'utiliser l'API reposant sur le jeton Slack plutôt que l'API de webhook. Dans ce cas, transmettez un paramètre `token` contenant votre [jeton d'accès](https://api.slack.com/tokens) Slack. Vous pourrez ensuite utiliser l'une des [méthodes d'API Slack](https://api.slack.com/methods) comme paramètre `url`. Par exemple, pour envoyer un message, utilisez [slack.postMessage](https://api.slack.com/methods/chat.postMessage) comme valeur de paramètre `url`.
 
 ## Utilisation du package GitHub
 {: #openwhisk_catalog_github}

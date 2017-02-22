@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-01-31"
 
 ---
 {:new_window: target="_blank"}
@@ -17,14 +17,14 @@ lastupdated: "2017-01-17"
 The following end-to-end tutorial walks through the steps to create a project from the Basic Code Starter, including the tools that you must have installed, and subsequently, the steps to run the starter in Xcode and Android Studio.
 
 
-### Installing developer tools
-{: #dev_tools}
+## Installing developer tools
+{: #dev_tools notoc}
 
 Ensure that you have installed the [prerequisite developer tools ![External link icon](../icons/launch-glyph.svg "External link icon")](get_code.html#prereq-dev-tools){: new_window}.
 
 
-### Creating a project from the Basic Code Starter
-{: #create_project}
+## Creating a project from the Basic Code Starter
+{: #create_project notoc}
 
 1. Create a Mobile dashboard project in {{site.data.keyword.Bluemix}}.
 
@@ -78,7 +78,21 @@ Ensure that you have installed the [prerequisite developer tools ![External link
 
    5. See [Getting started with {{site.data.keyword.amashort}} ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/mobileaccess/index.html){: new_window} for more information about configuring Authentication.
 
-5. Generate your project code.
+5. Optional: Add the Data capability.
+
+   1. Click **View** for **Data** on the **Project Overview** page.
+
+      You can alternatively select **Create** on the **Data** page.
+      
+   2. Choose **{{site.data.keyword.cloudant_short_notm}}** or **{{site.data.keyword.objectstorageshort}}**.
+
+   3. Enter your service name and click **Create**.
+
+   4. See [Getting started with {{site.data.keyword.cloudant_short_notm}} ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/Cloudant/index.html){: new_window} for more information about configuring {{site.data.keyword.cloudant_short_notm}}.
+
+   5. [Getting started with {{site.data.keyword.objectstorageshort}} ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/ObjectStorage/index.html){: new_window} for more information about configuring {{site.data.keyword.objectstorageshort}}.
+
+6. Generate your project code.
 
    1. Click **Get Code** on the **Project Overview** page to select your platform and language.
    
@@ -95,8 +109,8 @@ Ensure that you have installed the [prerequisite developer tools ![External link
    6. When the project code is finished generating, click **Download Code** to download your project archive.
 
 
-### Running your Objective-C project in Xcode
-{: #run_obj-c}
+## Running your Objective-C project in Xcode
+{: #run_obj-c notoc}
 
 1. Extract the `BasicProject-ObjC.zip` file.
 
@@ -115,8 +129,8 @@ Ensure that you have installed the [prerequisite developer tools ![External link
 3. Run your app.
 
 
-### Running your Swift project in Xcode
-{: #run_swift}
+## Running your Swift project in Xcode
+{: #run_swift notoc}
 
 1. Extract the `BasicProject-Swift.zip` file.
 
@@ -135,8 +149,8 @@ Ensure that you have installed the [prerequisite developer tools ![External link
 3. Run your app.
 
 
-### Running your Cordova project in Xcode
-{: #run_cordova_xcode}
+## Running your Cordova project in Xcode
+{: #run_cordova_xcode notoc}
 
 1. Extract the `BasicProject-Cordova.zip` file.
 
@@ -147,8 +161,8 @@ Ensure that you have installed the [prerequisite developer tools ![External link
 3. Run your app.
 
 
-### Running your Cordova project in Android Studio
-{: #run_cordova_studio}
+## Running your Cordova project in Android Studio
+{: #run_cordova_studio notoc}
 
 1. Extract the `BasicProject-Cordova.zip` file.
 
@@ -159,8 +173,8 @@ Ensure that you have installed the [prerequisite developer tools ![External link
 3. Run your app.
 
 
-### Running your Android project in Android Studio
-{: #run_android}
+## Running your Android project in Android Studio
+{: #run_android notoc}
 
 1. Extract the `BasicProject-Android.zip` file.
 
@@ -172,22 +186,17 @@ Ensure that you have installed the [prerequisite developer tools ![External link
 
 
 ## What to do next
-{: #what_next}
+{: #what_next notoc}
 
 View other tutorials.
 
 
-### UI Starter tutorials
-{: #tutorials_UI}
-
-* [Tutorial - Store Catalog](tutorial_store_catalog.html)
-
-
 ### Code Starter tutorials
-{: #tutorials_Code}
+{: #tutorials_Code notoc}
 
-* [Tutorial - Cloudant Sync](tutorial_cloudant_synd.html)
+* [Tutorial - Cloudant Sync](tutorial_cloudant_sync.html)
 * [Tutorial - {{site.data.keyword.openwhisk_short}}](tutorial_openwhisk.html)
 * [Tutorial - {{site.data.keyword.visualrecognitionshort}}](tutorial_visual_recognition.html)
+* [Tutorial - Watson {{site.data.keyword.conversationshort}}](tutorial_conversation.html)
 * [Tutorial - Watson Language](tutorial_watson_language.html)
 * [Tutorial - Weather](tutorial_weather.html)

@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Enviando notificações básicas para navegadores da web
 {: #web_notifications}
-Última atualização: 06 de dezembro de 2016
+Última atualização: 11 de janeiro de 2017
 {: .last-updated}
 
 Depois de ter desenvolvido seus aplicativos, é possível enviar uma notificação push. 

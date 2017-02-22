@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -14,9 +14,11 @@ lastupdated: "2016-12-06"
 
 # Lesezugriff erteilen
 
-Ein {{site.data.keyword.objectstorageshort}}-Benutzer mit [Administratorrolle](/docs/services/ObjectStorage/os_access_types.html) kann einem anderen Benutzer Lesezugriff auf einen Container erteilen und verschiedene ACL-Kombinationen für Lesezugriff angeben. {: shortdesc}
+Ein {{site.data.keyword.objectstorageshort}}-Benutzer mit [Administratorrolle](/docs/services/ObjectStorage/os_access_types.html) kann einem anderen Benutzer Lesezugriff auf einen Container erteilen und verschiedene ACL-Kombinationen für Lesezugriff angeben.
+{: shortdesc}
 
 <table>
+<caption> Tabelle 1. Lesezugriffsberechtigungen nach Option</caption>
   <tr>
     <th> Berechtigung </th>
     <th> Optionen für Lesezugriffssteuerung (Read ACL) </th>
@@ -38,7 +40,7 @@ Ein {{site.data.keyword.objectstorageshort}}-Benutzer mit [Administratorrolle](/
     <td> <code> &#42;:user_id </code> </td>
   </tr>
   <tr>
-    <td> Lesen und Auflisten für jeden Benutzer in angegebenem Projekt </td>
+    <td> Lesen und Auflisten für jeden Benutzer in einem angegebenen Projekt </td>
     <td> <code> project_id:&#42; </code> </td>
   </tr>
   <tr>
@@ -46,8 +48,6 @@ Ein {{site.data.keyword.objectstorageshort}}-Benutzer mit [Administratorrolle](/
     <td> <code> &#42;:&#42; </code> </td>
   </tr>
 </table>
-
-Tabelle 1: Lesezugriffsberechtigungen nach Option
 
 
 
@@ -89,7 +89,7 @@ Tabelle 1: Lesezugriffsberechtigungen nach Option
     curl -i <OS_STORAGE_URL> -X POST -H "Content-Length: 0" -H "X-Container-Read: <Tenant-ID>:<Projekt-ID>" -H "X-Auth-Token: <OS_AUTH_TOKEN>"
     ```
     {: pre}
-    **Anmerkung**: Verwenden Sie zum Trennen der Zugriffssteuerungslisten ein Komma (,).
+    **Hinweis**: Verwenden Sie zum Trennen der Zugriffssteuerungslisten ein Komma (,).
 
 
 3. Überprüfen Sie den Wert für die Lesezugriffssteuerungsliste (Read ACL).
@@ -108,7 +108,7 @@ Tabelle 1: Lesezugriffsberechtigungen nach Option
     ```
     {: pre}
 
-    Im folgenden Beispiel sehen Sie, dass Lesezugriff erteilt wurde:
+    Beispiel: Der Wert für `X-Container-Read` zeigt, für welchen Container Lesezugriff erteilt wird und welchen Personen Lesezugriff gewährt wird.
 
     ```
     HTTP/1.1 204 No Content

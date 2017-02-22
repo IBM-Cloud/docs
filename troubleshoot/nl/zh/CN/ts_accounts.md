@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
   
-lastupdated: "2016-08-18"
+lastupdated: "2017-01-11"
 
 ---
 
@@ -44,7 +44,7 @@ lastupdated: "2016-08-18"
 
  
 
-要重新激活您的帐户，请联系 [{{site.data.keyword.Bluemix_notm}} 支持](http://ibm.biz/bluemixsupport.com){: new_window}。在该电子邮件中，必须包含以下信息：
+要重新激活您的帐户，请联系 [{{site.data.keyword.Bluemix_notm}} 支持 ![外部链接图标](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}。在该电子邮件中，必须包含以下信息：
 {: tsResolve}
 
   * 您用于登录到 {{site.data.keyword.Bluemix_notm}} 的 IBM 标识。

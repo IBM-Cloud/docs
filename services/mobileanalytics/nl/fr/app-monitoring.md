@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-31"
+  years: 2015, 2017
+lastupdated: "2017-01-10"
 
 ---
 {:new_window: target="_blank"}
@@ -164,6 +164,8 @@ Définitions d'alertes.
 	* Nom d'alerte : Alerte pour les pannes d'application
 	* Message : Alerte de panne d'application
 	* Fréquence des requêtes : Pannes d'application
+		* Fréquence des requêtes : 2 minutes
+	* Type d'événement : Pannes d'application
 		* Nom d'application : N'importe quelle application
 		* Version d'application : N'importe quelle version
     * Seuil
@@ -213,7 +215,7 @@ Vous pouvez consulter des informations sur les pannes de votre application dans 
 ### Surveillance des pannes d'application
 {: #app-crash}
 
-Le tableau **Présentation des pannes** affiche les colonnes de données suivantes :
+Sur la page **Pannes**, le tableau **Présentation des pannes** affiche les colonnes de données suivantes :
 
 * Application : Nom d'application
 * Pannes : Nombre total de pannes pour cette application
@@ -231,8 +233,8 @@ Vous pouvez afficher les données de panne de deux façons :
 ### Traitement des incidents liés aux pannes d'application
 {: #app-crash-troubleshooting}
 
-La page **Identification et résolution des problèmes** dans la console <!-- **Applications** section of the -->
-{{site.data.keyword.mobileanalytics_short}} offre une vue granulaire des pannes de votre application.
+La page **Traitement des incidents** dans la console <!-- **Applications** section of the -->
+{{site.data.keyword.mobileanalytics_short}} offre une vue granulaire des pannes de votre application grâce au tableau **Récapitulatif des pannes**. 
 
 Le tableau **Récapitulatif des pannes** inclut les colonnes de données suivantes et peut être trié :
 
@@ -282,4 +284,7 @@ Installez dashDB dans la console {{site.data.keyword.mobileanalytics_short}} en 
 **Exporter**. Une fois que vous l'avez configuré, les nouvelles données envoyées à
 {{site.data.keyword.mobileanalytics_short}} sont également acheminées à dashDB sous 1 à 2 heures. 
 
+<!--
+If you have existing DashDB instances, those instances will no longer accept new data because the incoming data no longer matches the schema. Manually add columns for the new data to resume incoming data. Modifying {{site.data.keyword.mobileanalytics_short}} collection tables by adding new columns also breaks the stream of incoming data.
+-->
 

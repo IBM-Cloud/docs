@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2015, 2016
-lastupdated: "2016-12-05"  
+  years: 2015, 2017
+lastupdated: "2017-01-09"
 
 
 ---
@@ -26,7 +26,7 @@ Vai al link **Account** per impostare le notifiche, visualizzare l'utilizzo del 
 
 Puoi registrarti per un account {{site.data.keyword.Bluemix_notm}} utilizzando un ID IBM esistente, creando un nuovo ID IBM o utilizzando un ID federato. Un ID federato è un ID all'interno di un dominio aziendale che è stato registrato con IBM, in modo che le credenziali di dominio e utente possano essere utilizzate per accedere alle applicazioni Web.  
 
-Un ID federato può essere utilizzato per la registrazione a {{site.data.keyword.Bluemix_notm}} solo se la tua azienda ha già effettuato una registrazione con IBM.  La registrazione di un dominio aziendale con IBM consente agli utenti di accedere a prodotti e servizi IBM utilizzando le proprie credenziali aziendali esistenti. L'autenticazione viene quindi gestita dal provider di identità dell'azienda. Quando accedi a {{site.data.keyword.Bluemix_notm}} con un ID federato, ti viene richiesto di accedere tramite la pagina di accesso della tua azienda. Per informazioni sulla richiesta di registrazione del dominio della tua organizzazione o azienda con IBM o per ulteriori informazioni sul processo, consulta [IBMid Enterprise Federation Adoption Guide](https://ibm.box.com/v/IBMid-Federation-Guide){: #new_window}. Quando richiedi di registrare gli ID federati, è necessario uno sponsor IBM, ad esempio un rappresentate di offerte o clienti.
+Un ID federato può essere utilizzato per la registrazione a {{site.data.keyword.Bluemix_notm}} solo se la tua azienda ha già effettuato una registrazione con IBM.  La registrazione di un dominio aziendale con IBM consente agli utenti di accedere a prodotti e servizi IBM utilizzando le proprie credenziali aziendali esistenti. L'autenticazione viene quindi gestita dal provider di identità dell'azienda. Quando accedi a {{site.data.keyword.Bluemix_notm}} con un ID federato, ti viene richiesto di accedere tramite la pagina di accesso della tua azienda. Per informazioni sulla richiesta di registrazione del dominio della tua organizzazione o azienda con IBM o per ulteriori informazioni sul processo, consulta [IBMid Enterprise Federation Adoption Guide ![Icona link esterno](../icons/launch-glyph.svg)](https://ibm.box.com/v/IBMid-Federation-Guide){: new_window}. Quando richiedi di registrare gli ID federati, è necessario uno sponsor IBM, ad esempio un rappresentate di offerte o clienti.
 
 | Metodi di registrazione | Dettagli |    
 |-----------------|---------|
@@ -45,6 +45,20 @@ Puoi impostare le notifiche email della piattaforma per gli incidenti e la manut
 ### Configurazione delle notifiche della piattaforma
 
 Fai clic su **Account** &gt; **Notifiche** &gt; **Piattaforma** per impostare le notifiche e-mail per gli incidenti e la manutenzione pianificata {{site.data.keyword.Bluemix_notm}}. Puoi selezionare o cancellare ogni opzione per abilitare o disabilitare la notifica email.
+
+<!-- staging only
+
+**Note**: You are always alerted by email about emergencies and pricing changes.
+
+On the **Platform** tab you can also customize notifications for your orgs, spaces, or applications. Complete the following steps to add a customized notification:
+
+<ol>
+<li>Select **Add a Notification**.</li>
+<li>Use the search field to find the org, application, service, or resource that you want to set a notification for, or expand the item in the pre-populated list.</li>
+<li>Select *Email* to set the notification type.</li>
+</ol>
+
+staging only end -->
 
 ### Configurazione delle notifiche di spesa
 {: #spendingnotifications}
@@ -72,13 +86,13 @@ Completa la seguente procedura per impostare le notifiche via email per i limiti
 ## Visualizzazione dell'utilizzo
 {: #acctusage}
 
-In qualità di proprietario dell'account o gestore della fatturazione per un'organizzazione, puoi utilizzare la vista Dashboard di utilizzo per visualizzare gli addebiti in
+In qualità di proprietario dell'account o gestore della fatturazione per un'organizzazione, puoi utilizzare la pagina Dashboard di utilizzo per visualizzare gli addebiti in
 tempo reale per i runtime, i contenitori, i servizi e il supporto utilizzati al mese nelle tue organizzazioni. Puoi vedere i GB-ora di runtime e il consumo dei servizi in tutte le regioni oppure puoi
 selezionare la visualizzazione di una specifica regione.
 
-Per aprire la vista Dashboard di utilizzo, fai clic su **Account** &gt; *nome_del_tuo_account* &gt; **Dashboard di utilizzo**. I gestori della fatturazione possono visualizzare i dettagli solo per le organizzazioni in cui ricoprono tale ruolo.
+Per aprire la pagina Dashboard di utilizzo, fai clic su **Account** &gt; *nome_del_tuo_account* &gt; **Dashboard di utilizzo**. I gestori della fatturazione possono visualizzare i dettagli solo per le organizzazioni in cui ricoprono tale ruolo.
 
-Al proprietario dell'account viene addebitato l'utilizzo totale sostenuto su tutte le organizzazioni alla fine di ciascun ciclo di fatturazione. In qualità di proprietario dell'account, puoi filtrare il riepilogo dell'utilizzo in base alla regione e all'organizzazione. Puoi anche fare clic su uno specifico mese per visualizzare il relativo utilizzo.
+Al proprietario dell'account viene addebitato l'utilizzo totale sostenuto su tutte le organizzazioni alla fine di ciascun ciclo di fatturazione. In qualità di proprietario dell'account, puoi filtrare il riepilogo dell'utilizzo in base alla regione e all'organizzazione. Puoi anche fare clic su uno specifico mese per visualizzare il relativo utilizzo. Seleziona **Tutte le organizzazioni** dall'elenco **Organizzazione** per visualizzare l'utilizzo per tutte le organizzazioni nell'account.
 
 ## Aggiornamento delle informazioni di fatturazione
 {: #account_billing}

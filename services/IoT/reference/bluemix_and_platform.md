@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2016, 2017
 lastupdated: "2016-12-12"
 
 ---
@@ -26,11 +26,11 @@ Instances of the {{site.data.keyword.iot_short_notm}} can be created in the {{si
 ## {{site.data.keyword.iot_short_notm}} Service Level Agreement
 {: #iot-sla}
 
-The {{site.data.keyword.iot_short_notm}} has provisions for a specified level of service. For details of the service level agreement, see [{{site.data.keyword.iot_short_notm}} service level agreement](http://www-03.ibm.com/software/sla/sladb.nsf/pdf/6738-03/$file/i126-6738-03_06-2016_en_US.pdf).
+The {{site.data.keyword.iot_short_notm}} has provisions for a specified level of service. For details of the service level agreement, see [{{site.data.keyword.iot_short_notm}} service level agreement ![External link icon](../../../icons/launch-glyph.svg)](http://www-03.ibm.com/software/sla/sladb.nsf/pdf/6738-03/$file/i126-6738-03_06-2016_en_US.pdf){: new_window}.
 
 ## {{site.data.keyword.Bluemix_notm}} Service Level Agreement
 
-{{site.data.keyword.Bluemix_notm}} publishes terms of use which differ depending on whether the [IBM Cloud Services Agreement](http://www-05.ibm.com/support/operations/files/pdf/csa_us.pdf?cm_mc_uid=65870113399114371461368&cm_mc_sid_50200000=1469524513) or the [IBM International Passport Advantage Agreement](https://www-01.ibm.com/software/passportadvantage/pa_agreements.html) apply to the user. For more information on the {{site.data.keyword.Bluemix_notm}} Service Level Agreement, please see [{{site.data.keyword.Bluemix_notm}} Terms](.../.../.../navigation/notices.html#terms).
+{{site.data.keyword.Bluemix_notm}} publishes terms of use which differ depending on whether the [IBM Cloud Services Agreement ![External link icon](../../../icons/launch-glyph.svg)](http://www-05.ibm.com/support/operations/files/pdf/csa_us.pdf?cm_mc_uid=65870113399114371461368&cm_mc_sid_50200000=1469524513){: new_window} or the [IBM International Passport Advantage Agreement ![External link icon](../../../icons/launch-glyph.svg)](https://www-01.ibm.com/software/passportadvantage/pa_agreements.html){: new_window} apply to the user. For more information on the {{site.data.keyword.Bluemix_notm}} Service Level Agreement, please see [{{site.data.keyword.Bluemix_notm}} Terms](.../.../.../navigation/notices.html#terms).
 
 ## {{site.data.keyword.iot_short_notm}} Pricing
 {: #iot-pricing}
@@ -39,7 +39,7 @@ The {{site.data.keyword.iot_short_notm}} offers two pricing models: Free and Sta
 
 ### IoT Pricing calculator
 For more information on the available {{site.data.keyword.iot_short_notm}} plans and pricing models:
-1. Go to the [IoT Pricing calculator](http://iot-cost-calculator.ng.bluemix.net/).  
+1. Go to the [IoT Pricing calculator ![External link icon](../../../icons/launch-glyph.svg)](http://iot-cost-calculator.ng.bluemix.net/){: new_window}.  
 2. Click **Add** or **Configure** next to the Internet of Things Platform item.
 3. Select a **Pricing tier** and then enter estimated values for the amount of data that you plan to exchange, analyze on the cloud, and analyze on edge devices.  
 The price estimate for the selected tier and data load is displayed.
@@ -56,9 +56,9 @@ The details for your current pricing plan are displayed.
 ## Related Links
 {: #general}
 
-* [IoT Pricing calculator](http://iot-cost-calculator.ng.bluemix.net/){:new_window}
-* [{{site.data.keyword.Bluemix_notm}} security](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
-* [{{site.data.keyword.Bluemix_notm}} platform security](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
-* [{{site.data.keyword.Bluemix_notm}} compliance](https://console.ng.bluemix.net/docs/security/index.html#compliance){:new_window}
-* [{{site.data.keyword.BluSoftlayer}} security](http://www.softlayer.com/security){:new_window}
-* [{{site.data.keyword.BluSoftlayer}} compliance](http://www.softlayer.com/compliance){:new_window}
+* [IoT Pricing calculator ![External link icon](../../../icons/launch-glyph.svg)](http://iot-cost-calculator.ng.bluemix.net/){:new_window}
+* [{{site.data.keyword.Bluemix_notm}} security ![External link icon](../../../icons/launch-glyph.svg)](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
+* [{{site.data.keyword.Bluemix_notm}} platform security ![External link icon](../../../icons/launch-glyph.svg)](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
+* [{{site.data.keyword.Bluemix_notm}} compliance ![External link icon](../../../icons/launch-glyph.svg)](https://console.ng.bluemix.net/docs/security/index.html#compliance){:new_window}
+* [{{site.data.keyword.BluSoftlayer}} security ![External link icon](../../../icons/launch-glyph.svg)](http://www.softlayer.com/security){:new_window}
+* [{{site.data.keyword.BluSoftlayer}} compliance ![External link icon](../../../icons/launch-glyph.svg)](http://www.softlayer.com/compliance){:new_window}

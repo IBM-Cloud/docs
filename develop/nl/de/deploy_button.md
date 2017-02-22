@@ -19,7 +19,7 @@ Die Schaltfläche für die Bereitstellung in {{site.data.keyword.Bluemix}} biete
 
 **Tipp:** Falls Unternehmensbranding ein wichtiges Thema ist, können Sie in Ihren Inhalt ein [iFrame-Muster 'In {{site.data.keyword.Bluemix_notm}} bereitstellen'](/docs/develop/deploy_button_embed.html) integrieren, statt eine Schaltfläche einzufügen. Wenn Benutzer eine geklonte Kopie Ihrer öffentlichen Git-basierten App erstellen, verbleiben sie in Ihrem Inhalt und werden nicht an die Bluemix-Website 'bluemix.net' weitergeleitet. 
 
-**Hinweis**: Die Toolchains-Funktion ist nun verfügbar. Jeder Benutzer, der auf die Schaltfläche zum Bereitstellen in {{site.data.keyword.Bluemix_notm}} klickt, kann auf den Link im Banner klicken, um zu versuchen, die Anwendung mithilfe einer Toolchain bereitzustellen.
+**Hinweis:** Die Toolchains-Funktion ist nun verfügbar. Jeder Benutzer, der auf die Schaltfläche zum Bereitstellen in {{site.data.keyword.Bluemix_notm}} klickt, kann auf den Link im Banner klicken, um zu versuchen, die Anwendung mithilfe einer Toolchain bereitzustellen.
 
 Wenn eine Person auf die Schaltfläche klickt, werden folgende Aktionen ausgeführt: 
 
@@ -65,7 +65,7 @@ Gehen Sie wie folgt vor, um eine Schaltfläche für die Bereitstellung in {{site
 <li> Kopieren und modifizieren Sie eine der folgenden Snippetvorlagen und schließen Sie ein öffentliches Git-Repository ein.
 <p></p>
 <p>
-<strong>Tipp</strong>: Wenn Sie die Buildeingabe für ein DevOps Services-Projekt angeben wollen, fügen Sie der Git-URL einen Zweigparameter (Branch) hinzu. Wenn Sie einen Zweigparameter hinzufügen, wird das ursprüngliche öffentliche Git-Repository, einschließlich aller Zweige, in ein neues, privates DevOps Services-Projekt mit einem neuen Git-Repository geklont. Der angegebene Git-Zweig wird als Eingabe für den Build-Job festgelegt. Wenn Sie keinen Zweig angeben, wird als Eingabe für den Build-Job standardmäßig der Master-Zweig festgelegt.
+<strong>Tipp:</strong> Wenn Sie die Buildeingabe für ein DevOps Services-Projekt angeben wollen, fügen Sie der Git-URL einen Zweigparameter (Branch) hinzu. Wenn Sie einen Zweigparameter hinzufügen, wird das ursprüngliche öffentliche Git-Repository, einschließlich aller Zweige, in ein neues, privates DevOps Services-Projekt mit einem neuen Git-Repository geklont. Der angegebene Git-Zweig wird als Eingabe für den Build-Job festgelegt. Wenn Sie keinen Zweig angeben, wird als Eingabe für den Build-Job standardmäßig der Master-Zweig festgelegt.
 </p>
 <ul>
 <li>HTML:
@@ -125,7 +125,7 @@ Ziehen Sie diese Aspekte für das Projektrepository zurate, das Sie für Ihre Sc
 Mit der Manifestdatei können Sie Folgendes angeben: 
     <ul>
     <li>Einen eindeutigen App-Namen.</li>  
-    <li>Deklarierte Services: Eine Manifesterweiterung, die die erforderlichen oder optionalen Services erstellt (bzw. nach ihnen sucht), die eingerichtet werden müssen, bevor die App bereitgestellt wird (wie ein Datencache-Service). Sie können eine Liste der infrage kommenden {{site.data.keyword.Bluemix_notm}}-Services, -Bezeichnungen und -Pläne aufrufen, indem Sie die <a href="https://github.com/cloudfoundry/cli/releases">cf-Befehlszeilenschnittstelle</a> zum Ausführen des Befehls <code>cf marketplace</code> verwenden oder den <a href="https://console.ng.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-*-dWdevcenter-*-devops-services-_-lp#/store">{{site.data.keyword.Bluemix_notm}}-Katalog</a> durchsuchen.
+    <li>Deklarierte Services: Eine Manifesterweiterung, die die erforderlichen oder optionalen Services erstellt (bzw. nach ihnen sucht), die eingerichtet werden müssen, bevor die App bereitgestellt wird (wie ein Datencache-Service). Sie können eine Liste der infrage kommenden {{site.data.keyword.Bluemix_notm}}-Services, -Bezeichnungen und -Pläne aufrufen, indem Sie die <a href="https://github.com/cloudfoundry/cli/releases">cf-Befehlszeilenschnittstelle</a> zum Ausführen des Befehls <code>cf marketplace</code> verwenden oder den <a href="https://console.ng.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-*-dWdevcenter-*-devops-services-_-lp#/store">{{site.data.keyword.Bluemix_notm}}-Katalog</a> durchsuchen. 
     
     <strong>Hinweis:</strong> Deklarierte Services sind eine IBM Erweiterung des Cloud Foundry-Standardmanifestformats. Diese Erweiterung wird in einem zukünftigen Release möglicherweise im Rahmen der Weiterentwicklung und Verbesserung des Features überarbeitet.
 	
@@ -161,7 +161,7 @@ Mit der Manifestdatei können Sie Folgendes angeben:
 </pre>
    </li>
    </ul>
-	<li> Wenn die App vor der Bereitstellung zuerst erstellt werden muss, dann müssen Sie in Ihr Repository eine Builddatei einschließen. Wenn im Stammverzeichnis des Repositorys eine Build-Script-Datei gefunden wird, wird vor der Bereitstellung ein automatischer Build des Codes ausgelöst.
+	<li> Wenn die App vor der Bereitstellung zuerst erstellt werden muss, dann müssen Sie in Ihr Repository eine Builddatei einschließen. Wenn im Stammverzeichnis des Repositorys eine Build-Script-Datei gefunden wird, wird vor der Bereitstellung ein automatischer Build des Codes ausgelöst. 
 	
 	Unterstützte Buildprogramme: 
 	    <ul>
@@ -181,7 +181,7 @@ Mit der Manifestdatei können Sie Folgendes angeben:
 <li>Erstellen Sie im Stammverzeichnis Ihres Projekts ein Verzeichnis <code>.bluemix</code>.</li>
 <li>Laden Sie die Datei <code>pipeline.yml</code> in das Repository <code>.bluemix</code> hoch.</li>
 </ol> </li>
-	<li>Wenn Sie mithilfe von <strong>IBM Containers</strong> eine App in einem Container bereitstellen wollen, müssen Sie ins Stammverzeichnis des Repositorys eine Dockerfile und in ein Verzeichnis <code>.bluemix</code> eine Datei <code>pipeline.yml</code> aufnehmen.
+	<li>Wenn Sie mithilfe von <strong>IBM Containers</strong> eine App in einem Container bereitstellen wollen, müssen Sie ins Stammverzeichnis des Repositorys eine Dockerfile und in ein Verzeichnis <code>.bluemix</code> eine Datei <code>pipeline.yml</code> aufnehmen. 
 	<ul>
 	    <li>Die Dockerfile fungiert als Build-Script für die App. Wenn eine Dockerfile im Repository festgestellt wird, dann wird die App automatisch in einem Image erstellt, bevor sie in einem Container bereitgestellt wird. Wenn die App selbst erstellt werden muss, bevor sie in einem Image erstellt wird, dann schließen Sie ein Build-Script für die App und auch eine Dockerfile (siehe vorherige Beschreibung) ein.</li>
 	    <li> Weitere Informationen zur Erstellung von Dockerfiles finden Sie in der <a href="https://docs.docker.com/reference/builder/" target="_blank">Docker-Dokumentation</a>. </li>

@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2015, 2016
-lastupdated: "2016-11-30"
+  years: 2015, 2017
+lastupdated: "2017-01-11"
  
 
 ---
@@ -131,7 +131,7 @@ Puoi convertire il tuo account di prova gratuito in un account fatturabile in qu
 
 Dopo che hai creato un account fatturabile, puoi modificare le informazioni da te fornite. Fai clic sull'**icona Impostazioni profilo**, quindi fai clic su **Account &gt; Tipo di account ** per modificare le tue informazioni.
 
-Se riscontri qualche problema con {{site.data.keyword.Bluemix_notm}} quando utilizzi un account Pagamento a consumo o Sottoscrizione, vedi [Come ottenere aiuto online](https://www.ng.bluemix.net/docs/troubleshoot/getting_customer_support.html#online_help) per ulteriori informazioni.
+Se riscontri qualche problema con {{site.data.keyword.Bluemix_notm}} quando utilizzi un account Pagamento a consumo o Sottoscrizione, vedi [Come ottenere aiuto online](/docs/troubleshoot/getting_customer_support.html#online_help) per ulteriori informazioni.
 
 **Nota:** se colleghi il tuo account di fatturazione {{site.data.keyword.Bluemix_notm}} a un account SoftLayer, dal primo giorno del mese successivo, gli addebiti per {{site.data.keyword.Bluemix_notm}} e SoftLayer saranno effettuati sulla fattura {{site.data.keyword.Bluemix_notm}}. Per ulteriori dettagli, vedi [Visualizzazione dei crediti](/docs/admin//softlayerlink.html#bill_usage).
 
@@ -510,7 +510,7 @@ Per aprire la pagina **Dashboard di utilizzo**, fai clic su **Account** &gt; *no
 
 Al proprietario dell'account viene addebitato l'utilizzo totale sostenuto su tutte le organizzazioni alla fine di ciascun ciclo di fatturazione. Ogni ciclo di fatturazione dura un mese.
 
-I proprietari dell'account possono filtrare il riepilogo dell'utilizzo in base a regione e organizzazione. Gli addebiti visualizzati rappresentano l'importo che ti viene addebitato per quel mese in qualità di proprietario dell'account.
+I proprietari dell'account possono filtrare il riepilogo dell'utilizzo in base a regione e organizzazione. Se sei un proprietario di account, imposta **Organizzazione** su **Tutte le organizzazioni** per visualizzare l'utilizzo per l'intero account per un periodo di 12 mesi. Fai clic su uno specifico mese per visualizzare il relativo utilizzo.  Gli addebiti visualizzati rappresentano l'importo che ti viene addebitato per quel mese in qualità di proprietario dell'account.
 
 Se selezioni una specifica organizzazione per l'**Organizzazione**, puoi vedere l'utilizzo totale per tale organizzazione, compresi gli eventuali utilizzi come parte di un periodo di prova gratuito. Gli addebiti visualizzati per l'organizzazione non sono gli addebiti che ti verranno fatturati. L'utilizzo del periodo di prova gratuito viene visualizzato come gratuito, a livello dell'account, ma non a livello dell'organizzazione. Pertanto, quando visualizzi l'utilizzo dell'organizzazione, vedi l'utilizzo reale per tale organizzazione, compresi sia l'utilizzo a titolo gratuito che quello che viene invece addebitato. Tutto l'utilizzo dell'organizzazione viene sommato all'utilizzo dell'account dopo la rimozione del periodo di prova gratuito.
 
@@ -557,8 +557,10 @@ il piano di servizio, immetti il seguente comando:
 cf update-service <nome_servizio> [-p <nuovo_piano>]
 ```
 # rellinks
-## general 
+{: rellinks}
+## general
+{: general} 
 * [Listino prezzi di {{site.data.keyword.Bluemix_notm}}](https://console.{DomainName}/pricing/)
-* [Forum della community degli sviluppatori {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/)
+* [{{site.data.keyword.Bluemix_notm}} Developers Community Forum ![icona link esterno](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/){: new_window}
 * [Come ottenere aiuto online](https://www.{DomainName}/docs/troubleshoot/getting_customer_support.html#online_help)
 * [Contatti](https://console.{DomainName}/#/contactUs/cloudOEPaneId=contactUs)

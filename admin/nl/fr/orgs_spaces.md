@@ -73,10 +73,7 @@ d'organisation est déjà utilisé par un autre utilisateur d'environnement {{si
 spécifier un autre nom. Une fois que vous avez créé l'organisation, le droit *Responsable de l'organisation*, qui vous permet d'éditer le nom de l'organisation,
 d'ajouter des membres d'équipe et de créer ou de supprimer des espaces dans l'organisation, vous est attribué automatiquement.
 
-Vous devez prendre contact avec le [support {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport){: new_window} pour
-supprimer une organisation. Lorsque vous demandez à l'équipe de support de supprimer une organisation, tous les espaces, toutes les applications et tous les
-services dans l'organisation
-sont supprimés.
+Vous devez prendre contact avec le [support {{site.data.keyword.Bluemix_notm}} ![icône de lien externe](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window} pour supprimer une organisation. Lorsque vous demandez à l'équipe de support de supprimer une organisation, tous les espaces, toutes les applications et tous les services dans l'organisation sont supprimés.
 
 Les [rôles utilisateur](/docs/admin/users_roles.html#userrolesinfo) suivants peuvent être affectés aux membres d'équipe dans une organisation :
 
@@ -141,8 +138,7 @@ Procédez comme suit pour renommer votre organisation :
 ## Suppression d'une organisation ou d'un espace existant
 {: #deleteorgs}
 
-En tant que propriétaire de compte, vous pouvez prendre contact avec le
-[support {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport){: new_window} pour supprimer une organisation. 
+En tant que propriétaire de compte, vous pouvez prendre contact avec le [support {{site.data.keyword.Bluemix_notm}} ![icône de lien externe](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window} pour supprimer une organisation. 
 
 **Remarque** : les opérations de suppression sont irréversibles. Vous perdez toutes vos applications et tous les services qui sont
 associés à l'organisation.
@@ -194,7 +190,7 @@ région que vous souhaitez visualiser.
 5. Cliquez sur **QUOTA**. 
 6. Par défaut, la page du quota **Cloud
 Foundry** s'ouvre. Vous pouvez afficher les détails de quota des
-ressources suivantes : 
+ressources suivantes :
  * MEMOIRE
  * Services
  * PLAN
@@ -202,7 +198,7 @@ ressources suivantes :
 7. Cliquez sur **Conteneurs** pour afficher
 l'allocation des quotas de conteneur utilisé et disponible. L'allocation de
 conteneur varie en fonction du plan de tarification. Vous pouvez afficher les
-détails de quota des ressources suivantes : 
+détails de quota des ressources suivantes :
  * MEMOIRE
  * Adresse IP publique
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-13"
+  years: 2016, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -23,20 +23,20 @@ Für Services in Ihrem heruntergeladenen Projekt, die nicht konfigurierbar sind,
 Für die Arbeit mit generiertem Code über das {{site.data.keyword.Bluemix_notm}} Mobile-Dashboard sind folgende Entwicklertools erforderlich:
 
 #### Android
-* [Android Studio 2.2](https://developer.android.com/studio)
-	* Installieren Sie die aktuelle [Android 7.0](https://www.android.com/versions/nougat-7-0/)-Laufzeit.
+* [Android Studio 2.2 ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.android.com/studio "Symbol für externen Link")
+	* Installieren Sie die aktuelle [Android 7.0 ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://www.android.com/versions/nougat-7-0/ "Symbol für externen Link ")-Laufzeit.
 
 #### iOS
-* [Xcode 8.0](https://developer.apple.com/xcode/) (empfohlen)
-	* Installieren Sie die aktuelle [iOS 10](http://www.apple.com/ios/ios-10/)-Laufzeit.
-* [Homebrew](http://brew.sh/)
+* [Xcode 8.0 ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.apple.com/xcode/ "Symbol für externen Link") (empfohlen)
+	* Installieren Sie die aktuelle [iOS 10 ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://www.apple.com/ios/ios-10/ "Symbol für externen Link")-Laufzeit.
+* [Homebrew ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://brew.sh/ "Symbol für externen Link")
 	* Befehlszeilentool zur Unterstützung der Installation anderer Tools und Laufzeiten, z. B. CocoaPods und Carthage, für Apple-Entwickler.
-* [CocoaPods](https://cocoapods.org/)-Abhängigkeitenmanager für die Installation von iOS-SDK-Abhängigkeiten. Verwenden Sie die aktuelle Version:
+* [CocoaPods ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://cocoapods.org/ "Symbol für externen Link")-Abhängigkeitenmanager zum Installieren von iOS-SDK-Abhängigkeiten. Verwenden Sie die aktuelle Version:
 
 	```
 	$ sudo gem install cocoapods --pre
 	```
-* [Carthage](https://github.com/Carthage/Carthage)-Abhängigkeitenmanager für die Installation von Watson Developer Cloud-SDKs.
+* [Carthage ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/Carthage/Carthage "Symbol für externen Link")-Abhängigkeitenmanager zum Installieren von Watson Developer Cloud-SDKs.
 
 	```
 	$ brew install carthage
@@ -50,5 +50,5 @@ Für die Arbeit mit generiertem Code über das {{site.data.keyword.Bluemix_notm}
 	$ brew install Node5
 	```
 
-* [Bluemix-CLI-Tools](http://clis.ng.bluemix.net/ui/home.html).
+* [Bluemix CLI-Tools ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://clis.ng.bluemix.net/ui/home.html "Symbol für externen Link").
 Befehlszeilentools für die einfache Bereitstellung von Cloud Foundry-Laufzeiten über eine Befehlszeilenschnittstelle mit Bluemix.  

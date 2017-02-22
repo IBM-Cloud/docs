@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Creación de un servicio {{site.data.keyword.mobilepushshort}} desenlazado para Android
 {: #create_android_unbound}
-Última actualización: 06 de diciembre de 2016
+Última actualización: 11 de enero de 2017
 {: .last-updated}
 
 Cree una instancia del servicio {{site.data.keyword.mobilepushshort}}. Puede utilizar la instancia del servicio {{site.data.keyword.mobilepushshort}} sin enlazar ninguna aplicación de fondo.

@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -11,7 +11,7 @@ copyright:
 {:codeblock:.codeblock}
 
 #Erweiterte Push-Benachrichtigungen aktivieren
-Letzte Aktualisierung: 06. Dezember 2016
+Letzte Aktualisierung: 11. Januar 2017
 {: .last-updated}
 
 Konfigurieren Sie ein iOS Badge, zusätzliche JSON-Nutzdaten, umsetzbare Benachrichtigungen und Blockierungsnachrichten.
@@ -82,24 +82,8 @@ eine Auswahl zu treffen, ohne die App zu öffnen.
 Führen Sie die entsprechenden Schritte aus, um umsetzbare Push-Benachrichtigungen in Ihrer Anwendung zu aktivieren.
 
 1. Erstellen Sie eine Benutzeraktion.
-
-   Objective-C
-
 ```
-	// Für Objective-C
-	UIMutableUserNotificationAction *acceptAction = [[UIMutableUserNotificationAction alloc] init];
-	    acceptAction.identifier = @"ACCEPT_ACTION";
-	    acceptAction.title = @"Accept";
-	     /* Optional properties
-	     acceptAction.destructive = NO;
-	  acceptAction.authenticationRequired = NO; */
-```
-	{: codeblock}
-
-   Swift
-
-```
-	//For Swift
+//For Swift
 	let acceptAction = UIMutableUserNotificationAction()
 	acceptAction.identifier = "ACCEPT_ACTION"
 	acceptAction.title = "Accept"
@@ -108,9 +92,8 @@ Führen Sie die entsprechenden Schritte aus, um umsetzbare Push-Benachrichtigung
 	acceptAction.activationMode = UIUserNotificationActivationMode.Foreground
 ```
 	{: codeblock}
-	
 ```
-	//For Swift
+//For Swift
 	let declineAction = UIMutableUserNotificationAction()
 	declineAction.identifier = "DECLINE_ACTION"
 	declineAction.title = "Decline"
@@ -121,21 +104,8 @@ Führen Sie die entsprechenden Schritte aus, um umsetzbare Push-Benachrichtigung
 	{: codeblock}
 
 2. Erstellen Sie die Benachrichtigungskategorie und legen Sie eine Aktion fest. Gültige Kontexte sind **UIUserNotificationActionContextDefault** oder **UIUserNotificationActionContextMinimal**.
-
-Objective-C
-
 ```
-	// Für Objective-C
-	UIMutableUserNotificationCategory *callCat = [[UIMutableUserNotificationCategory alloc] init];
-	    callCat.identifier = @"POLL_CATEGORY";
-	    [callCat setActions:@[acceptAction, declineAction] forContext:UIUserNotificationActionContextDefault];
-```    
-	{: codeblock}
-
-Swift
-
-```
-	// For Swift
+// For Swift
 	let pushCategory = UIMutableUserNotificationCategory()
 	pushCategory.identifier = "TODO_CATEGORY"
 	pushCategory.setActions([acceptAction, declineAction], forContext: UIUserNotificationActionContext.Default)
@@ -143,38 +113,15 @@ Swift
 	{: codeblock}
 
 1. Erstellen Sie die Benachrichtigungseinstellung und weisen Sie die Kategorien aus dem vorherigen Schritt zu.
-
-Objective-C
-
 ```
-	// For Objective-C
-	NSSet *categories = [NSSet setWithObjects:callCat, nil];
-```
-	{: codeblock}
-
-Swift
-
-```
-	// For Swift
+// For Swift
 	let categories = NSSet(array:[pushCategory]);
 ```
 	{: codeblock}
 
 1. Erstellen Sie die lokale oder ferne Benachrichtigung und weisen Sie ihr die Identität der Kategorie zu.
-
-Objective-C
-
 ```
-	//For Objective-C
-	[[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:categories]];
-	[[UIApplication sharedApplication] registerForRemoteNotifications];
-```
-	{: codeblock}
-
-Swift
-
-```
-	//For Swift
+//For Swift
 	let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: categories as? Set<UIUserNotificationCategory>)
     UIApplication.sharedApplication().registerUserNotificationSettings(settings)
     UIApplication.sharedApplication().registerForRemoteNotifications() 
@@ -186,20 +133,6 @@ Swift
 
 Wenn eine umsetzbare Benachrichtigung empfangen wird, wird die Steuerung basierend auf der ausgewählten Kennung an die folgende Methode weitergeleitet.
 
-Objective-C
-
-```
-(void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forRemoteNotification:
-(UILocalNotification *)notification completionHandler:(void (^)())completionHandler
-{
-  NSLog(@"actionable notification received.");
-  //must call completion handler when finished
-  completionHandler();
-}
-```
-	{: codeblock}
-
-Swift
  
 ```
 func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], completionHandler: () -> Void) {

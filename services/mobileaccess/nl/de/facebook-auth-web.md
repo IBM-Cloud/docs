@@ -1,26 +1,28 @@
 ---
 
 copyright:
-  year: 2016
-lastupdated: "2016-12-04"
+  year: 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
 {:codeblock: .codeblock}
+{:pre: .pre}
 
 
 # Facebook-Authentifizierung für Webanwendungen aktivieren
 {: #facebook-auth-web}
 
-Sie können Benutzer über Facebook für Ihre {{site.data.keyword.amafull}}-Webanwendung authentifizieren. Fügen Sie die Sicherheitsfunktionalität von {{site.data.keyword.amashort}} hinzu. 
+Sie können Benutzer über Facebook für Ihre {{site.data.keyword.amafull}}-Webanwendung authentifizieren. Fügen Sie die Sicherheitsfunktionalität von {{site.data.keyword.amashort}} hinzu.
 
 ## Vorbereitungen
 {: #facebook-auth-android-before}
 Voraussetzungen:
 
-* Eine Web-App. 
+* Eine Web-App.
 * Ein {{site.data.keyword.amashort}}-Service. Weitere Informationen finden Sie in der [Einführung](index.html).
 * URI für die letzte Weiterleitung (nach Beendigung des Berechtigungsprozesses).
 
@@ -30,8 +32,8 @@ Voraussetzungen:
 
 Zur Verwendung von Facebook als Identitätsprovider auf Ihrer Website müssen Sie die Website-Plattform Ihrer Facebook-Anwendung hinzufügen und sie konfigurieren.
 
-1. Melden Sie sich auf der Site [Facebook for Developers](https://developers.facebook.com) bei Ihrem Konto an. 
-	Informationen zum Erstellen einer neuen App finden Sie unter [Anwendung auf der Site 'Facebook for Developers' erstellen](https://console.{DomainName}/docs/services/mobileaccess/facebook-auth-overview.html#facebook-appID). 
+1. Melden Sie sich auf der Site [Facebook for Developers](https://developers.facebook.com) bei Ihrem Konto an.
+	Informationen zum Erstellen einer neuen App finden Sie unter [Anwendung auf der Site 'Facebook for Developers' erstellen](facebook-auth-overview.html#facebook-appID).
 1. Notieren Sie die **App-ID** und den **geheimen Schlüssel der App**. Sie benötigen diese Werte beim Konfigurieren Ihres Webprojekts für die Facebook-Authentifizierung im Mobile Client Access-Dashboard.
 1. Wählen Sie unter **Products List** die Option **Facebook Login** aus.
 4. Fügen Sie die **Web**-Plattform hinzu, falls sie nicht vorhanden ist.
@@ -61,41 +63,41 @@ Die Umgebungsvariable `VCAP_SERVICES` wird automatisch für jede {{site.data.key
 
 Gehen Sie wie folgt vor, um den Berechtigungsprozess zu starten:
 
-1. Rufen Sie den Berechtigungsendpunkt (`authorizationEndpoint`) und die Client-ID (`clientId`) von den Serviceberechtigungsnachweisen ab, die in der Umgebungsvariablen `VCAP_SERVICES` gespeichert sind. 
+1. Rufen Sie den Berechtigungsendpunkt (`authorizationEndpoint`) und die Client-ID (`clientId`) von den Serviceberechtigungsnachweisen ab, die in der Umgebungsvariablen `VCAP_SERVICES` gespeichert sind.
 
-	`var cfEnv = require("cfenv");` 
+	`var cfEnv = require("cfenv");`
 
-	**Hinweis:** Wenn Sie den {{site.data.keyword.amashort}}-Service vor der Webunterstützung zur Ihrer Anwendung hinzugefügt haben, ist möglicherweise kein Tokenendpunkt in den **Serviceberechtigungsnachweisen** enthalten. Verwenden Sie stattdessen die folgenden URLs, abhängig von Ihrer {{site.data.keyword.Bluemix_notm}}-Region: 
- 
-	USA (Süden): 
+	**Hinweis:** Wenn Sie den {{site.data.keyword.amashort}}-Service vor der Webunterstützung zur Ihrer Anwendung hinzugefügt haben, ist möglicherweise kein Tokenendpunkt in den **Serviceberechtigungsnachweisen** enthalten. Verwenden Sie stattdessen die folgenden URLs, abhängig von Ihrer {{site.data.keyword.Bluemix_notm}}-Region:
 
-	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization` 
+	USA (Süden):
 
-	London: 
+	`https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization`
 
-	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization` 
+	London:
 
-	Sydney: 
+	`https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization`
 
-	`https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization` 
+	Sydney:
 
-2. Erstellen Sie den Berechtigungsserver-URI mit `response_type("code")`, `client_id` und `redirect_uri` als Abfrageparameter. 
+	`https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization`
+
+2. Erstellen Sie den Berechtigungsserver-URI mit `response_type("code")`, `client_id` und `redirect_uri` als Abfrageparameter.
 
 3. Leiten Sie von Ihrer Web-App zum generierten URI weiter.
 
 	Im nachfolgenden Beispiel werden die Parameter von der Variablen `VCAP_SERVICES` abgerufen, außerdem wird die URL erstellt und die Weiterleitungsanforderung wird gesendet.
 
 	```Java
-  var cfEnv = require("cfenv"); 
+  var cfEnv = require("cfenv");
 
 	app.get("/protected", checkAuthentication, function(req, res, next){  
 		res.send("Hello from protected endpoint"); 
     }
-	); 
-  
+	);
+
 	function checkAuthentication(req, res, next){
-		// Prüfen, ob Benutzer authentifiziert ist 
-  
+		// Prüfen, ob Benutzer authentifiziert ist
+
 		if (req.session.userIdentity){   
 			next()  
      } else {   
@@ -109,10 +111,10 @@ Gehen Sie wie folgt vor, um den Berechtigungsprozess zu starten:
 			var redirectUrl = authorizationEndpoint + "?response_type=code";
         redirectUrl += "&client_id=" + clientId;   
         redirectUrl += "&redirect_uri=" + redirectUri;   
-  
+
 			res.redirect(redirectUrl);  
   
-      } 
+      }
 	}
 	```
 	{: codeblock}
@@ -127,38 +129,38 @@ Gehen Sie wie folgt vor, um den Berechtigungsprozess zu starten:
 
 Im nächsten Schritt werden das Zugriffs- und das Identitätstoken mithilfe des zuvor empfangenen Autorisierungscodes abgerufen:
 
-1.  Rufen Sie das Token (`tokenEndpoint`), die Client-ID (`clientId`) und den geheimen Schlüssel (`secret`) von den Serviceberechtigungsnachweisen ab, die in der Umgebungsvariablen `VCAP_SERVICES` gespeichert sind. 
- 
-	**Hinweis:** Wenn Sie {{site.data.keyword.amashort}} verwendet haben, bevor die Webunterstützung hinzugefügt wurde, ist möglicherweise kein Tokenendpunkt in den Serviceberechtigungsnachweisen enthalten. Verwenden Sie stattdessen die folgenden URLs, abhängig von Ihrer Bluemix-Region: 
+1.  Rufen Sie das Token (`tokenEndpoint`), die Client-ID (`clientId`) und den geheimen Schlüssel (`secret`) von den Serviceberechtigungsnachweisen ab, die in der Umgebungsvariablen `VCAP_SERVICES` gespeichert sind.
 
-	USA (Süden): 
-  
+	**Hinweis:** Wenn Sie {{site.data.keyword.amashort}} verwendet haben, bevor die Webunterstützung hinzugefügt wurde, ist möglicherweise kein Tokenendpunkt in den Serviceberechtigungsnachweisen enthalten. Verwenden Sie stattdessen die folgenden URLs, abhängig von Ihrer Bluemix-Region:
+
+	USA (Süden):
+
 	`     https://mobileclientaccess.ng.bluemix.net/oauth/v2/token   
  `
- 
-	London: 
- 
+
+	London:
+
 	`     https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token
- ` 
- 
-	Sydney: 
- 
+ `
+
+	Sydney:
+
 	`     https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/token 
  `
- 
+
 2. Senden Sie eine POST-Anforderung an die Token-Server-URI mit Bewilligungstyp ("authorization_code"), `clientId` und Ihrer Weiterleitungs-URI als Formularparameter. Senden Sie `clientId` und `secret` als HTTP-Basisauthentifizierungsnachweise.
- 
+
 	Der folgende Code ruft die erforderlichen Werte ab und sendet sie mit einer POST-Anforderung.
 
 	```Java    
   var cfEnv = require("cfenv");
   var base64url = require("base64url ");
   var request = require('request');
-  
-	app.get("/oauth/callback", function(req, res, next){ 
+
+	app.get("/oauth/callback", function(req, res, next){
 		var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials; 
     var tokenEndpoint = mcaCredentials.tokenEndpoint; 
-    var formData = { 
+    var formData = {
 			grant_type: "authorization_code",
 			client_id: mcaCredentials.clientId,
 			redirect_uri: "http://some-server/oauth/callback",
@@ -166,10 +168,10 @@ Im nächsten Schritt werden das Zugriffs- und das Identitätstoken mithilfe des 
 			code: req.query.code
 		}
 
-		request.post( { 
+		request.post( {
 			url: tokenEndpoint, 
     formData: formData 
-    }, function (err, response, body){ 
+    }, function (err, response, body){
 			var parsedBody = JSON.parse(body); 
 			req.session.accessToken = parsedBody.access_token; 
 			req.session.idToken = parsedBody.id_token; 
@@ -188,7 +190,7 @@ Im nächsten Schritt werden das Zugriffs- und das Identitätstoken mithilfe des 
 
 	Beachten Sie, dass der Parameter `redirect_uri` mit dem Parameter `redirect_uri` aus der vorhergehenden Berechtigungsanforderung übereinstimmen muss. Als Wert für den Parameter `code` muss der Autorisierungscode angegeben werden, der in der Antwort von der Berechtigungsanforderung empfangen wurde. Der Autorisierungscode ist 10 Minuten gültig, danach muss ein neuer Code abgerufen werden.
 
-	Der Antworthauptteil enthält den Zugriffscode und die Token-ID in JWT-Format (https://jwt.io/).
+	Der Antworthauptteil enthält den Zugriffscode und die Token-ID im JWT-Format (siehe die [JWT-Website ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://jwt.io/ "Symbol für externen Link"){: new_window}.
 
 	Nachdem Sie das Zugriffstoken und das Identitätstoken empfangen haben, können Sie die Websitzung als authentifiziert markieren und optional diese Tokens speichern.  
 
@@ -199,17 +201,13 @@ Das Identitätstoken enthält Informationen zu der Benutzeridentität. Bei der F
 
 Das Zugriffstoken ermöglicht die Kommunikation mit Ressourcen, die von den {{site.data.keyword.amashort}}-Berechtigungsfiltern geschützt werden; weitere Informationen hierzu finden Sie unter [Ressourcen schützen](protecting-resources.html).
 
-Um Anforderungen an geschützte Ressourcen zu stellen, fügen Sie einen Berechtigungsheader mit folgender Struktur zu den Anforderungen hinzu: 
+Um Anforderungen an geschützte Ressourcen zu stellen, fügen Sie einen Berechtigungsheader mit folgender Struktur zu den Anforderungen hinzu:
 
 `Authorization=Bearer <accessToken> <idToken>`
 
 #### Tipps:
-{: #tips} 
+{: #tips}
 
 * `accessToken` und `idToken` müssen durch ein Leerzeichen getrennt werden.
 
-* `idToken` ist optional. Wenn kein Identitätstoken angegeben wird, besteht zwar Zugriff auf die geschützte Ressource, es können jedoch keine Informationen zu dem berechtigten Benutzer abgerufen werden. 
- 
-
-
-
+* `idToken` ist optional. Wenn kein Identitätstoken angegeben wird, besteht zwar Zugriff auf die geschützte Ressource, es können jedoch keine Informationen zu dem berechtigten Benutzer abgerufen werden.

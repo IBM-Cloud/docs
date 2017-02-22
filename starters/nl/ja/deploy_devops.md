@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2015，2016
+  years: 2015，2017
 
 lastupdated: "2016-03-02"
 
@@ -22,26 +22,26 @@ lastupdated: "2016-03-02"
 {:shortdesc}
 
 1. 開始するには、アプリの「概要」ページで、**「Git リポジトリーおよびパイプラインの追加」**をクリックするか、{{site.data.keyword.Bluemix_notm}} Classic Experience で**「Git の追加」**をクリックします。
-2. オープンしたウィンドウで、**「リポジトリーにスターター・アプリ・パッケージを取り込み、Build & Deploy パイプラインを使用可能にします」**チェック・ボックスが選択されていることを確認します。Git リポジトリーが作成されました。スターター・コードが使用可能な場合、リポジトリーにロードされます。さらに、{{site.data.keyword.jazzhub}} で実行されている Delivery Pipeline サービスによってアプリケーションもデプロイされます。  
+2. オープンしたウィンドウで、**「リポジトリーにスターター・アプリ・パッケージを取り込み、Build & Deploy パイプラインを使用可能にします」**チェック・ボックスが選択されていることを確認します。Git リポジトリーが作成されました。スターター・コードが使用可能な場合、リポジトリーにロードされます。さらに、{{site.data.keyword.jazzhub}} で実行されている Delivery Pipeline サービスによってアプリケーションもデプロイされます。
 3. アプリを更新するには、コマンド・ラインまたは Web IDE を使用します。
-**コマンド・ラインを使用する場合:**
-   a. アプリの「概要」ページ上の Git URL から Git リポジトリーを複製します。
+**コマンド・ラインを使用する場合は、次のようにします。**
+   a. アプリの「概要」ページの Git URL から Git リポジトリーを複製します。
    b. お好きなエディターでコードを更新します。
-   c. Git コマンド・ライン・インターフェースから変更をプッシュします。  
+   c. Git コマンド・ライン・インターフェースから変更をプッシュします。
 
-   **Web IDE を使用する場合:**  
-   a. アプリの「概要」ページで、**「コードの編集」**をクリックします。Web IDE でプロジェクトが開きます。  
-   b. 必要に応じて変更を行い、次に、組み込み Git サポートを使用してプッシュします。  
+   **Web IDE を使用する場合は、次のようにします。**
+   a. アプリの「概要」ページで、**「コードの編集」**をクリックします。Web IDE でプロジェクトが開きます。
+   b. 必要に応じて変更を行い、次に、組み込み Git サポートを使用してプッシュします。
 
-更新されたアプリが {{site.data.keyword.Bluemix_notm}} に再デプロイされます。  
+更新されたアプリが {{site.data.keyword.Bluemix_notm}} に再デプロイされます。
 
-ステップバイステップの指示については、『[Set up Git integration and auto-deploy in DevOps Services](https://hub.jazz.net/tutorials/jazzeditor/#git_integration_and_autodeployment)』を参照してください。  
+ステップごとの詳しい手順の説明については、[Set up Git integration and auto-deploy in DevOps Services ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://hub.jazz.net/tutorials/jazzeditor/#git_integration_and_autodeployment){: new_window} を参照してください。
 
-## Git を追加しましたか。{{site.data.keyword.Bluemix_notm}} Live Sync を試してください  
+## Git を追加しましたか。{{site.data.keyword.Bluemix_notm}} Live Sync を試してください
 
-Node.js アプリをビルドする場合、{{site.data.keyword.Bluemix_notm}} Live Sync を使用すれば、{{site.data.keyword.Bluemix_notm}} 上のアプリ・インスタンスを素早く更新でき、デスクトップ上で行う場合と同じように開発することができます。  
+Node.js アプリをビルドする場合、{{site.data.keyword.Bluemix_notm}} Live Sync を使用すれば、{{site.data.keyword.Bluemix_notm}} 上のアプリ・インスタンスを素早く更新でき、デスクトップ上で行う場合と同じように開発することができます。
 
-{{site.data.keyword.Bluemix_notm}} Live Sync について詳しくは、『[{{site.data.keyword.Bluemix_notm}} Live Sync](/docs/develop/bluemixlive.html)』を参照してください。コマンドについて詳しくは、[{{site.data.keyword.Bluemix_notm}} Live Sync CLI の資料](/docs/cli/reference/bl/index.html)を参照してください。{{site.data.keyword.Bluemix_notm}} Live Sync を Web IDE とともに使用するには、『[Live Edit](/docs/develop/bluemixlive.html)』を参照してください。  
+{{site.data.keyword.Bluemix_notm}} Live Sync について詳しくは、『[{{site.data.keyword.Bluemix_notm}} Live Sync](/docs/develop/bluemixlive.html)』を参照してください。コマンドについて詳しくは、[{{site.data.keyword.Bluemix_notm}} Live Sync CLI の資料](/docs/cli/reference/bl/index.html)を参照してください。{{site.data.keyword.Bluemix_notm}} Live Sync を Web IDE とともに使用するには、『[Live Edit](/docs/develop/bluemixlive.html)』を参照してください。
 
 始める前に、{{site.data.keyword.Bluemix_notm}} Live Sync bl コマンド・ラインをダウンロードし、インストールします。
 
@@ -75,7 +75,7 @@ bl sync projectName -d localDirectory --verbose
 
 ```
 bl start
-```  
+```
 
 ローカル・ディレクトリーにあるファイルを変更すると、その変更内容は、{{site.data.keyword.Bluemix_notm}} で稼動しているアプリケーションとプロジェクト・クラウド・ワークスペースの両方に自動的に伝搬します。
 Node アプリケーションの再始動が必要な場合は、以下のコマンドを使用できます。

@@ -1,19 +1,19 @@
 ---
 
- 
+
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015, 2017
 
- 
+
 
 ---
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# Cálculo
+# Computação
 *Última atualização: 24 de junho de 2016*
 {: .last-updated}
 

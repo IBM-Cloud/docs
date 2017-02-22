@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated:  "2017-01-17"
+lastupdated:  "2017-02-17"
 
 ---
 
@@ -11,7 +11,7 @@ lastupdated:  "2017-01-17"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Configuring custom domain for  {{site.data.keyword.mobilefoundation_short}} server
+# Configuring custom domain for Mobile Foundation server
 {: #configcustomdomain}
 
 {{site.data.keyword.mobilefoundation_short}} provisions a {{site.data.keyword.mfserver_short_notm}}, which is<!--on {{site.data.keyword.containerlong}} as a container group. The container group will be mapped to--> accessible using a URL having the  domain names based on the {{site.data.keyword.Bluemix_notm}} **Region**. You can also configure your own custom domain.

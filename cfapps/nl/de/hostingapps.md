@@ -1,16 +1,16 @@
 ---
 
- 
+
 
 copyright:
 
-  years: 2015，20166
+  years: 2015，2017
 
-lastupdated: "2016-05-09" 
+lastupdated: "2016-05-09"
 
 ---
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -76,14 +76,14 @@ Wenn alle der folgenden Prinzipien in einer Anwendung beachtet werden, ist die A
 
   Erfassen Sie die Anwendungsinstallation mindestens als einheitlichen Satz aus Scripts, die vom Betriebssystem unabhängig sind. Halten Sie die Anwendungsinstallation klein und portierbar, damit sie an abweichende Automatisierungsverfahren angepasst werden kann. Minimieren Sie auch die Abhängigkeiten, die für die Anwendungsinstallation erforderlich sind.
 
-Weitere Informationen zu Cloud-fähigen Anwendungen finden Sie unter [The Twelve-Factor App](http://12factor.net/){:new_window}.
+Weitere Informationen zu Cloud-fähigen Anwendungen finden Sie unter [The 12-factor application ![Symbol für externen Link](../icons/launch-glyph.svg)](http://12factor.net/){: new_window}.
 
 ##Apps migrieren
 {: #ht_hostapp}
 
 Sie können Ihre Anwendungen schrittweise nach {{site.data.keyword.Bluemix_notm}} migrieren, anstatt eine Anwendung vollständig in die Cloudumgebung zu verschieben. Sie können zuerst einen Teil der Anwendung migrieren und danach mit dem Service 'Cloud Integration' eine Verbindung zu vorhandenen Daten oder einem System of Record herstellen.
 
-Es kann erforderlich sein, in den Cloudanwendungen auf die Back-End-Daten oder -Services zuzugreifen, zum Beispiel auf ein System of Record (SOR, Kerndatensystem). In {{site.data.keyword.Bluemix_notm}} können Sie den Service 'Secure Gateway' zum Herstellen eines sicheren Tunnels zwischen einer {{site.data.keyword.Bluemix_notm}}-Organisation und dem Back-End-Netz des Unternehmens verwenden. Mithilfe des Service können die Anwendungen in {{site.data.keyword.Bluemix_notm}} auf die Daten und Services des Back-End-Netzes zugreifen. Details hierzu finden Sie unter [Reaching enterprise backend with Bluemix Secure Gateway via console](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){:new_window}.
+Es kann erforderlich sein, in den Cloudanwendungen auf die Back-End-Daten oder -Services zuzugreifen, zum Beispiel auf ein System of Record (SOR, Kerndatensystem). In {{site.data.keyword.Bluemix_notm}} können Sie den Service 'Secure Gateway' zum Herstellen eines sicheren Tunnels zwischen einer {{site.data.keyword.Bluemix_notm}}-Organisation und dem Back-End-Netz des Unternehmens verwenden. Mithilfe des Service können die Anwendungen in {{site.data.keyword.Bluemix_notm}} auf die Daten und Services des Back-End-Netzes zugreifen. Details hierzu finden Sie unter [Reaching enterprise backend with Bluemix Secure Gateway via console ![Symbol für externen Link](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window}.
 
 Wenn Sie eine Anwendung in {{site.data.keyword.Bluemix_notm}} als Cloud Foundry-Anwendung bereitstellen möchten, wählen Sie eine Laufzeit aus dem {{site.data.keyword.Bluemix_notm}}-Katalog aus. Bestandteil der Laufzeit ist die Startanwendung Hello World, die Sie durch eine eigene Anwendung ersetzen können. Wenn Sie keine Startanwendung finden, von der die gewünschte Laufzeit bereitgestellt wird, können Sie ein angepasstes Cloud Foundry-kompatibles Buildpack zu {{site.data.keyword.Bluemix_notm}} hinzufügen; verwenden Sie hierzu den Befehl 'cf push' mit der Option '-b'. Details hierzu finden Sie unter [Community-Buildpacks verwenden](/docs/cfapps/byob.html).
 
@@ -179,7 +179,7 @@ services = JSON.parse(ENV['VCAP_SERVICES'], :symbolize_names => true)
             end
           end
         end.flatten!.first
-```		
+```
 {:codeblock}
 
 Wenn Sie sicherstellen möchten, dass die Anwendung nach ihrer Änderung für {{site.data.keyword.Bluemix_notm}} in der lokalen Umgebung ausgeführt werden kann, überprüfen Sie, ob die Variable VCAP_SERVICES vorhanden ist, die für alle {{site.data.keyword.Bluemix_notm}} Cloud Foundry-Anwendungen festgelegt wird.
@@ -195,5 +195,5 @@ Wenn Sie sicherstellen möchten, dass die Anwendung nach ihrer Änderung für {{
 * [Virtual Machines](/docs/virtualmachines/vm_index.html)
 * [Einführung in Delivery Pipeline](/docs/services/DeliveryPipeline/index.html)
 * [Apps mit IBM Eclipse Tools for Bluemix bereitstellen](/docs/manageapps/eclipsetools/eclipsetools.html)
-* [The Twelve-Factor App](http://12factor.net/){:new_window}
-* [Reaching enterprise backend with Bluemix Secure Gateway via console](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){:new_window}
+* [The twelve-factor app ![Symbol für externen Link](../icons/launch-glyph.svg)](http://12factor.net/){: new_window}
+* [Reaching enterprise backend with Bluemix Secure Gateway via console ![Symbol für externen Link](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window}

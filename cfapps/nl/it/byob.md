@@ -1,12 +1,12 @@
 ---
 
- 
+
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015，2017
 
-lastupdated: "2016-03-15" 
+lastupdated: "2016-03-15"
 
 
 
@@ -105,5 +105,3 @@ le modifiche, prepara di nuovo la tua applicazione:</p>
 Utilizza il file <code>manifest.yml</code>. Puoi aggiungere la
 variabile di ambiente e il valore che vuoi specificare direttamente
 nel file. Per informazioni dettagliate, vedi <a href="https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html#env-block">Variabili di ambiente</a>.</li></ul>
-  
-

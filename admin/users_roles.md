@@ -15,10 +15,11 @@ lastupdated: "2016-12-05"
 {:screen: .screen}
 {:new_window: target="_blank"}
 
+
 # Managing team members and roles
 {: #userroles}
 
-From the **Team Directory** page for your account, you can manage existing team members and their roles in your organization and spaces, as well as invite new team members. To access the team directory for your account, click **Account** &gt; **Team Directory**. 
+From the **Team Directory** page for your account, you can manage existing team members and their roles in your organization and spaces, as well as invite new team members. To access the team directory for your account, click **Account** > **Team Directory**. 
 {:shortdesc}
 
 Account owners perform all operations on organizations and spaces including managing team members and their assigned roles. Organization managers  have access to invite team members and manage roles. Space managers can use the **Manage Organizations** page to add existing account members to the space and adjust their roles. Check out the following information to learn more about roles.
@@ -28,7 +29,7 @@ Account owners perform all operations on organizations and spaces including mana
 
 At the account level, there are two roles that enable access to different account management features:
 
-| Account role | Permissions |    
+| Account role | Permissions |
 |----------------|---------|
 |Owner | An owner for the account has access to their profile, team directory, billing information, spending notifications, and usage dashboard. From the team directory page, the owner can invite new team members and adjust roles. The owner can also add promotional credits, set or change the billing limit, set service access, and manage organizations and spaces. |
 |Member | A member has access to their profile, team directory, and account credits and billing limits in the {{site.data.keyword.Bluemix_notm}} header. However, on the team directory page, a member can only view the team members within the account. |
@@ -38,7 +39,7 @@ At the account level, there are two roles that enable access to different accoun
 
 The following roles can be assigned at the organization level:
 
-| Organization role | Permissions |    
+| Organization role | Permissions |
 |-------------------|-------------|
 |Manager | Organization managers can create, view, edit, or delete spaces within the organization, view the organization's usage and quota, invite team members to the organization, manage who has access to the organization and their roles in the organization, and manage custom domains for the organization. |
 |Billing manager | Billing managers can view runtime and service usage information for the organization on the Usage Dashboard page.  |
@@ -47,7 +48,7 @@ The following roles can be assigned at the organization level:
 
 The following roles can be assigned at the space level:
 
-| Space role | Permissions |    
+| Space role | Permissions |
 |------------|-------------|
 |Manager | Space managers can add existing team members and manage roles within the space. The space manager can also view the number of instances, service bindings, and resource use for each application in the space. |
 |Developer | Space developers can create, delete, and manage applications and services within the space. Some of the managing tasks include deploying apps, starting or stopping apps, renaming an app, deleting an app, renaming a space, binding or unbinding a service to an application, view the number or instances, service bindings, and resource use for each application in the space. In addition, the space developer can associate an internal or external URL with an application in the space.   |
@@ -90,19 +91,23 @@ Account owners and organization managers can invite team members to orgs from th
 
 Click **View Pending** to check if invites are pending or accepted. You can choose to resend the invitation email or cancel the invitation for a pending invite at any time.
 
+
 ### Adding SoftLayer team members
-If you have a SoftLayer account linked with your {{site.data.keyword.Bluemix_notm}} account, you can add your SoftLayer team members.
- 1. Go to **Account** > **Invite Team Members**. 
- 2. Click **Add** in the **Add SoftLayer Team Members** section to authenticate into your SoftLayer account and view a list of team members from your SoftLayer account. 
- 
-Adding team members to your {{site.data.keyword.Bluemix_notm}} account does not grant them access to {{site.data.keyword.Bluemix_notm}} Infrastructure. To give users access to the Infrastructure dashboard, go to **Infrastructure** > **Account** > **Users** and click the **Add User** link. You must have permission to add users.
- 
- For more information about adding team members from your SoftLayer account, see [Inviting SoftLayer team members to {{site.data.keyword.Bluemix_notm}}](/docs/admin/softlayerlink.html#invite_users).
+
+If you have a SoftLayer account linked with your Bluemix account, you can add your SoftLayer team members.
+
+1. Go to **Account** > **Invite Team Members**.  
+2. Click **Add** in the **Add SoftLayer Team Members** section to authenticate into your SoftLayer account and view a list of team members from your SoftLayer account.
+
+Adding team members to your Bluemix account does not grant them access to Bluemix Infrastructure. To give users access to the Infrastructure dashboard, go to **Infrastructure** > **Account** > **Users** and click the **Add User** link. You must have permission to add users.
+
+For more information about adding team members from your SoftLayer account, see [Inviting SoftLayer team members to Bluemix](https://console.ng.bluemix.net/docs/admin/softlayerlink.html#invite_users).
+
 
 ## Editing roles
 {: #editinguserroles}
 
-Account owners and organization managers can edit organization and space roles for existing team members on the **Team Directory** page. 
+Account owners and organization managers can edit organization and space roles for existing team members on the **Team Directory** page.
 
 1. Click **Account** &gt; **Team Directory**.
 2. Locate the team member whose roles you want to edit.

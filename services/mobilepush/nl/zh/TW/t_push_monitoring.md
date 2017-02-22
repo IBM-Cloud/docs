@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # 監視 Push Notifications 
 {: #monitor-notifications}
-前次更新：2016 年 12 月 6 日
+前次更新：2017 年 1 月 16 日
 {: .last-updated}
 
 

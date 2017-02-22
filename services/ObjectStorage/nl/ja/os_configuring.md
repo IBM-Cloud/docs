@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -46,8 +46,8 @@ pip install python-keystoneclient
 
 Swift クライアントを構成するには、認証情報を `export` する必要があります。[資格情報の生成](/docs/services/ObjectStorage/os_credentials.html)は、Cloud Foundry または cURL のコマンドを使用して CLI を介して行うか、{{site.data.keyword.Bluemix_notm}} UI を介して行うことができます。クライアントは、以下の表の環境変数から情報を取得します。
 
-
 <table>
+<caption> 表 1. 環境変数と説明</caption>
   <tr>
     <th> 環境変数 </th>
     <th> 説明 </th>
@@ -74,7 +74,6 @@ Swift クライアントを構成するには、認証情報を `export` する�
   </tr>
 </table>
 
-表 1: 認証の変数と説明
 
 
 認証情報をエクスポートするには、資格情報を入力して、以下のコマンドを実行します。

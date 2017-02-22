@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-05"
+  years: 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 {:new_window: target="_blank"}
@@ -21,24 +21,23 @@ lastupdated: "2016-12-05"
 {: #before-you-begin}
 
  다음이 있어야 합니다.
+
 * {{site.data.keyword.Bluemix_notm}} 애플리케이션 및 {{site.data.keyword.amafull}} 서비스의 인스턴스. {{site.data.keyword.Bluemix_notm}} 백엔드 애플리케이션 작성 방법에 대한 자세한 정보는 [시작하기](index.html)를 참조하십시오.
 * 백엔드 애플리케이션의 URL(**앱 라우트**). 이 값은 백엔드 애플리케이션의 보호 엔드포인트에 요청을 전송하는 데 필요합니다. 
 * **테넌트 ID** 값. {{site.data.keyword.amashort}} 대시보드에서 서비스를 여십시오. **모바일 옵션** 단추를 클릭하십시오. **앱 GUID / TenantId** 필드에 `tenantId`(`appGUID`라고도 함) 값이 표시됩니다. 이 값은 권한 관리자를 초기화하는 데 필요합니다. 
 * {{site.data.keyword.Bluemix_notm}} **지역**. 헤더에서 **아바타** 아이콘 ![아바타 아이콘](images/face.jpg "아바타 아이콘") 옆에 현재 {{site.data.keyword.Bluemix_notm}} 지역이 표시됩니다. 표시되는 지역 값은 `US South`, `United Kingdom` 및 `Sydney` 중 하나여야 하며 Swift SDK `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` 또는 `BMSClient.Region.sydney`에 필요한 SDK 값에 해당해야 합니다. 이 값은 {{site.data.keyword.amashort}} 클라이언트를 초기화하는 데 필요합니다. 
-* CocoaPods와 작동하도록 설정된 iOS 프로젝트가 있어야 합니다. 자세한 정보는 [iOS Swift SDK 설정](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html)의 **CocoaPods 설치**를 참조하십시오.
+* CocoaPods와 작동하도록 설정된 iOS 프로젝트가 있어야 합니다. 자세한 정보는 [iOS Swift SDK 설정](getting-started-ios-swift-sdk.html)의 **CocoaPods 설치**를 참조하십시오.  
    **참고:** 계속하기 전에 코어 {{site.data.keyword.amashort}} 클라이언트 SDK를 설치하지 않아도 됩니다.
-* [Facebook for Developers](https://developers.facebook.com) 웹 사이트의 Facebook 애플리케이션. 
+* [개발자용 Facebook ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developers.facebook.com "외부 링크 아이콘"){: new_window} 웹 사이트의 Facebook 애플리케이션. 
 
 **중요:** Facebook SDK(`com.facebook.FacebookSdk`)를 별도로 설치하지 않아도 됩니다. Facebook SDK는 {{site.data.keyword.amashort}} `BMSFacebookAuthentication` Pod와 함께 자동으로 설치합니다. 개발자용 Facebook 웹 사이트에서 앱을 추가하거나 구성하는 경우 **Xcode 프로젝트에 Facebook SDK 추가** 설정을 건너뛸 수 있습니다.
-
-**참고:** Objective-C SDK는 그대로 완벽하게 지원되며 여전히 {{site.data.keyword.Bluemix_notm}} 모바일 서비스의 기본 SDK로 간주되지만 새로운 Swift SDK를 위해 올해 말해 중단될 계획입니다. 
 
 ## iOS 플랫폼에 대한 Facebook 애플리케이션 구성
 {: #facebook-auth-ios-config}
 
 개발자용 Facebook 사이트에서: 
 
-1. [Facebook for Developers](https://developers.facebook.com)에서 계정에 로그인하십시오.  
+1. [개발자용 Facebook ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developers.facebook.com "외부 링크 아이콘"){: new_window}에서 사용자 계정으로 로그인하십시오. 
 
 1. iOS 플랫폼이 앱에 추가되었는지 확인하십시오. iOS 플랫폼을 추가하거나 구성하는 경우 iOS 애플리케이션의 **bundleId**를 제공해야 합니다. iOS 애플리케이션의 **번들 ID**를 찾으려면, `info.plist` 파일 또는 Xcode 프로젝트 **일반** 탭에서 **번들 ID**를 검색하십시오.
 
@@ -67,11 +66,11 @@ iOS 클라이언트에 서비스를 제공하도록 Facebook 앱 ID와 Facebook 
 1. CocoaPods가 설치되어 있지 않은 경우에는 다음을 실행하십시오. 
 
    ```
-sudo gem install cocoapods
-```
+   sudo gem install cocoapods
+   ```
    {: codeblock}
 
-자세한 정보는 [CocoaPods 웹 사이트](https://cocoapods.org/)를 참조하십시오.
+자세한 정보는 [CocoaPods 웹 사이트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cocoapods.org/ "외부 링크 아이콘"){: new_window}를 참조하십시오. 
 
 ### CocoaPods를 사용하여 {{site.data.keyword.amashort}} 클라이언트 Swift SDK 설치
 {: #facebook-auth-install-swift-cocoapods}
@@ -81,9 +80,9 @@ sudo gem install cocoapods
 1. `Podfile`을 편집하고 다음 행을 추가하십시오.
 
    ```
-use_frameworks!
-pod 'BMSFacebookAuthentication'
- ```
+   use_frameworks!
+   pod 'BMSFacebookAuthentication'
+   ```
    {: codeblock}
 
    **참고:** Pod 파일에 `pod 'BMSSecurity'` 행이 있으면 제거해야 합니다. `BMSFacebookAuthentication` pod에서 필요한 모든 프레임워크를 설치합니다. 
@@ -165,7 +164,7 @@ pod 'BMSFacebookAuthentication'
 
    `CFBundleURLSchemes` 및 `FacebookappID` 특성을 Facebook 애플리케이션 ID로 업데이트하십시오. `FacebookDisplayName`을 Facebook 애플리케이션의 이름으로 업데이트하십시오. 
 
-   **중요**: `info.plist` 파일의 기존 특성을 대체하고 있지 않는지 확인하십시오. 중첩된 특성이 있는 경우 수동으로 병합해야 합니다. 자세한 정보는 [Xcode 프로젝트 구성](https://developers.facebook.com/docs/ios/getting-started/) 및 [iOS9를 위한 앱 준비](https://developers.facebook.com/docs/ios/ios9)를 참조하십시오.
+   **중요**: `info.plist` 파일의 기존 특성을 대체하고 있지 않는지 확인하십시오. 중첩된 특성이 있는 경우 수동으로 병합해야 합니다. 자세한 정보는 [Xcode 프로젝트 구성 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developers.facebook.com/docs/ios/getting-started/){: new_window} 및 [iOS9용 앱 준비 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developers.facebook.com/docs/ios/ios9){: new_window}를 참조하십시오. 
 
 ## {{site.data.keyword.amashort}} 클라이언트 Swift SDK 초기화
 {: #facebook-auth-ios-initalize-swift}
@@ -177,19 +176,19 @@ pod 'BMSFacebookAuthentication'
 1. 다음 헤더를 추가하여 {{site.data.keyword.amashort}} 클라이언트 SDK를 사용하려는 클래스에 필수 프레임워크를 가져오십시오. 
 
    ```swift
- import UIKit
- import BMSCore
- import BMSSecurity
- ```
+   import UIKit
+   import BMSCore
+   import BMSSecurity
+   ```
    {: codeblock}
 
 1. 클라이언트 SDK를 초기화하십시오.
 
    ```Swift
-	  let tenantId = "<serviceTenantID>"
-	  let regionName = <applicationBluemixRegion>
+   let tenantId = "<serviceTenantID>"
+   let regionName = <applicationBluemixRegion>
 
-	  func application(_ application: UIApplication,
+   func application(_ application: UIApplication,
       didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
       let mcaAuthManager = MCAAuthorizationManager.sharedInstance
       mcaAuthManager.initialize(tenantId: tenantId, bluemixRegion: regionName)
@@ -204,14 +203,14 @@ pod 'BMSFacebookAuthentication'
 
    * {{site.data.keyword.Bluemix_notm}} 애플리케이션을 호스트하는 지역으로 `<applicationBluemixRegion>`을 바꾸십시오. 
    * `tenantId`를 **TenantId/앱 GUID** 값으로 대체하십시오. 
- 
-   이러한 값에 대한 자세한 정보는 [시작하기 전에](#before-you-begin)를 참조하십시오.
+
+   이러한 값에 대한 자세한 정보는 [시작하기 전에](#before-you-begin)를 참조하십시오. 
 
 1. 앱 활성화에 대한 알림을 Facebook SDK에 전송하고, 앱 위임자의 `application:didFinishLaunchingWithOptions` 메소드에 다음 코드를 추가하여 Facebook 인증 핸들러를 등록하십시오. BMSClient 인스턴스를 초기화한 후 이 코드를 추가하고 Facebook을 인증 관리자로 등록하십시오.
 
    ```Swift
-  return FacebookAuthenticationManager.sharedInstance.onFinishLaunching(application, withOptions: launchOptions)
- ```
+   return FacebookAuthenticationManager.sharedInstance.onFinishLaunching(application, withOptions: launchOptions)
+   ```
    {: codeblock}
 
 1. `BMSFacebookAuthentication` pod 소스 파일의 `FacebookAuthenticationManager.swift` 파일을 프로젝트 디렉토리에 복사하십시오.
@@ -235,7 +234,7 @@ pod 'BMSFacebookAuthentication'
 ### 시작하기 전에
 {: #facebook-auth-ios-testing-before}
 
-{{site.data.keyword.mobilefirstbp}} 표준 유형을 사용 중 이어야 하며 이미 `/protected` 엔드포인트에 {{site.data.keyword.amashort}}가 보호하는 리소스가 있어야 합니다. `/protected` 엔드포인트를 설정해야 하는 경우 [리소스 보호](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html)를 참조하십시오. 
+{{site.data.keyword.mobilefirstbp}} 표준 유형을 사용 중 이어야 하며 이미 `/protected` 엔드포인트에 {{site.data.keyword.amashort}}가 보호하는 리소스가 있어야 합니다. `/protected` 엔드포인트를 설정해야 하는 경우 [리소스 보호](protecting-resources.html)를 참조하십시오. 
 
 1. 브라우저에서 새로 작성된 모바일 백엔드 애플리케이션의 보호 엔드포인트로 요청을 전송해 보십시오. `{applicationRoute}`를 **모바일 옵션**에서 검색한 값으로 바꿔 URL `{applicationRoute}/protected`를 여십시오([Facebook 인증에 사용할 Mobile Client Access 구성](#facebook-auth-ios-configmca) 참조).
 (예: `http://my-mobile-backend.mybluemix.net/protected`)
@@ -244,18 +243,18 @@ pod 'BMSFacebookAuthentication'
 1. iOS 애플리케이션을 사용하여 동일한 엔드포인트에 대해 요청을 작성하십시오. 
 
    ```Swift
-  	let protectedResourceURL = "<your protected resource absolute path>"
-	  let request = Request(url: protectedResourceURL, method: HttpMethod.GET)
+   let protectedResourceURL = "<your protected resource absolute path>"
+   let request = Request(url: protectedResourceURL, method: HttpMethod.GET)
 
-  	let callBack:BMSCompletionHandler = {(response: Response?, error: Error?) in
+   let callBack:BMSCompletionHandler = {(response: Response?, error: Error?) in
       if error == nil {
          print ("response:\(response?.responseText), no error")
       } else {
          print ("error: \(error)")
-       }
-  }
+      }
+   }
 
-	request.send(completionHandler: callBack)
+   request.send(completionHandler: callBack)
    ```
    {: codeblock}
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -18,11 +18,15 @@ Pour interagir avec le service, vous devez authentifier votre instance {{site.da
 {: shortdesc}
 
 
-La mise à disposition d'une nouvelle instance {{site.data.keyword.objectstorageshort}} crée un projet Keystone isolé dans le cloud public IBM. La structure des données d'identification Keystone contient un ensemble complet d'attributs pour vous permettre de choisir la méthode de demande de jeton OpenStack ou le kit SDK OpenStack qui convient le mieux pour votre application. Quand vous liez une nouvelle application à l'instance, un nouvel utilisateur Keystone avec un accès au projet est créé. Quand vous annulez la mise à disposition de l'instance, le projet et l'utilisateur sont supprimés.
+La mise à disposition d'une nouvelle instance {{site.data.keyword.objectstorageshort}} crée un projet Keystone isolé dans le cloud public IBM. La
+structure des données d'identification Keystone inclut un jeu complet d'attributs de sorte que vous pouvez choisir la méthode de demande de jeton
+OpenStack ou bien le SDK OpenStack qui convient le mieux à votre application. Lorsque vous liez une nouvelle application à
+l'instance, un nouvel utilisateur Keystone avec accès au projet est créé. Quand vous annulez la mise à disposition de l'instance, le projet et l'utilisateur sont supprimés.
 
 Pour plus d'informations sur l'utilisation d'OpenStack Swift et de Keystone, voir le [site de documentation d'OpenStack](http://docs.openstack.org).
 
-1. La demande de jeton v3 recommandée est une demande POST vers https://identity.open.softlayer.com/v1/auth/tokens, comme illustré dans la commande cURL suivante : 
+1. Soumettez une requête POST à `https://identity.open.softlayer.com/v3/auth/tokens` comme illustré dans la commande
+cURL suivante.
   ```
   	curl -i \
 	  -H "Content-Type: application/json" \
@@ -51,7 +55,8 @@ Pour plus d'informations sur l'utilisation d'OpenStack Swift et de Keystone, voi
   ```
   {: codeblock}
 
-2. Quand vous vous authentifiez à Keystone, vous recevez une réponse de catalogue. Sélectionnez un noeud final `object-store` et notez-le. Vous en aurez besoin pour construire votre URL complète. L'exemple de réponse suivant a été tronqué afin de n'afficher que les informations pertinentes pour {{site.data.keyword.objectstorageshort}}.
+2. Sélectionnez un noeud final `object-store` dans la réponse du catalogue et prenez-en note. Vous en aurez besoin pour construire votre URL complète. L'exemple
+de réponse suivant a été élagué afin d'afficher uniquement les informations pertinentes sur {{site.data.keyword.objectstorageshort}}.
 
   ```
   	HTTP/1.1 201 Created
@@ -155,17 +160,18 @@ Pour plus d'informations sur l'utilisation d'OpenStack Swift et de Keystone, voi
   {: screen}
 
   <table>
+  <caption> Tableau 1. Explication de la réponse à la requête Post</caption>
     <tr>
-      <th> Noeud final de réponse</th>
+      <th> Noeud final de réponse </th>
       <th> Explication </th>
     </tr>
     <tr>
       <td> <code> X-Subject-Token </code> </td>
-      <td> Votre jeton d'authentification.</td>
+      <td> Votre jeton d'authentification. </td>
     </tr>
     <tr>
       <td> <code> id </code> </td>
-      <td> Votre ID d'instance {{site.data.keyword.objectstorageshort}}. </td>
+      <td> ID de votre instance {{site.data.keyword.objectstorageshort}}. </td>
     </tr>
     <tr>
       <td> <code> region </code> </td>
@@ -173,12 +179,10 @@ Pour plus d'informations sur l'utilisation d'OpenStack Swift et de Keystone, voi
     </tr>
     <tr>
       <td> <code> url </code> </td>
-      <td> Votre URL {{site.data.keyword.objectstorageshort}}. Utilisée pour interagir avec le service utilisant les commandes cURL. </td>
+      <td> Votre URL {{site.data.keyword.objectstorageshort}}. </td>
     </tr>
     <tr>
       <td> <code> interface </code> </td>
       <td> L'interface interne n'est pas accessible depuis {{site.data.keyword.Bluemix_notm}}. Utilisez l'interface publique (<code>publicURL</code>). </td>
     </tr>
   </table>
-
-  Tableau 1 : explications des réponses aux demandes POST

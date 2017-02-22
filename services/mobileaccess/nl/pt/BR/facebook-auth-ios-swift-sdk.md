@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-05"
+  years: 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 {:new_window: target="_blank"}
@@ -21,6 +21,7 @@ Para usar o Facebook como um provedor de identidade em seus aplicativos {{site.d
 {: #before-you-begin}
 
 Você deve ter
+
 * Uma instância de um serviço
 {{site.data.keyword.amafull}} e um aplicativo
 {{site.data.keyword.Bluemix_notm}}. Para obter mais informações sobre como criar um aplicativo backend do {{site.data.keyword.Bluemix_notm}}, consulte [Introdução](index.html).
@@ -44,21 +45,19 @@ valores de SDK requeridos no código Swift SDK:
 `BMSClient.Region.sydney`. Você precisará desse
 valor para inicializar o cliente
 {{site.data.keyword.amashort}}.
-* Um projeto do iOS configurado para funcionar com o CocoaPods.  Para obter mais informações, veja **Instalar o
-CocoaPods** em [Configurando o SDK do Swift iOS](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html).  
+* Um projeto do iOS configurado para funcionar com o CocoaPods.  Para obter mais informações,
+veja **Instalar o CocoaPods** em [Configurando o iOS Swift SDK](getting-started-ios-swift-sdk.html).  
    **Nota:** não é necessário instalar o {{site.data.keyword.amashort}} client SDK principal antes de continuar.
-* Um aplicativo do Facebook no website [Facebook for Developers](https://developers.facebook.com).
+* Um aplicativo Facebook no website [Facebook for Developers ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developers.facebook.com "Ícone de link externo"){: new_window}.
 
 **Importante:** não é necessário instalar separadamente o Facebook SDK (`com.facebook.FacebookSdk`). O Facebook SDK é instalado automaticamente com o pod {{site.data.keyword.amashort}} `BMSFacebookAuthentication`. É possível ignorar a etapa **Incluir o Facebook SDK em seu projeto do Xcode** ao incluir ou configurar seu app no website Facebook for Developers.
-
-**Nota:** embora o Objective-C SDK permaneça totalmente suportado e ainda seja considerado o SDK primário para o {{site.data.keyword.Bluemix_notm}} Mobile Services, há planos para descontinuar o Objective-C SDK posteriormente este ano em favor deste novo Swift SDK.
 
 ## Configurando seu aplicativo Facebook para a plataforma iOS
 {: #facebook-auth-ios-config}
 
 No site Facebook for Developers:
 
-1. Efetue login em sua conta em [Facebook for Developers](https://developers.facebook.com). 
+1. Efetue login em sua conta no  [Facebook for Developers ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developers.facebook.com "Ícone de link externo"){: new_window}.
 
 1. Assegure-se de que a plataforma iOS tenha sido incluída em seu app. Ao incluir ou
 configurar a plataforma iOS, será necessário fornecer o **bundleId** do
@@ -102,8 +101,7 @@ autenticação do Facebook no seu serviço
    ```
    {: codeblock}
 
-Para obter mais informações, consulte o [website do
-CocoaPods](https://cocoapods.org/).
+Para obter mais informações, veja o [website CocoaPods ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cocoapods.org/ "Ícone de link externo"){: new_window}.
 
 ### Instalando o {{site.data.keyword.amashort}} client Swift SDK com o CocoaPods
 {: #facebook-auth-install-swift-cocoapods}
@@ -203,7 +201,7 @@ a guia `Recursos` e mude
 `FacebookappID` com seu ID do aplicativo Facebook. Atualize o
 `FacebookDisplayName` com o nome do seu aplicativo Facebook.
 
-   **Importante**: assegure-se de não substituir quaisquer propriedades existentes no arquivo `info.plist`. Se você tiver propriedades de sobreposição, deverá mesclá-las manualmente. Para obter mais informações, consulte [Configurar o projeto Xcode](https://developers.facebook.com/docs/ios/getting-started/) e [Preparando seus apps para iOS9](https://developers.facebook.com/docs/ios/ios9).
+   **Importante**: assegure-se de não substituir quaisquer propriedades existentes no arquivo `info.plist`. Se você tiver propriedades de sobreposição, deverá mesclá-las manualmente. Para obter mais informações, veja [Configurar o Projeto Xcode![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developers.facebook.com/docs/ios/getting-started/ "Ícone de link externo"){: new_window} e [Preparando seus apps para o iOS9 ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developers.facebook.com/docs/ios/ios9 "Ícone de link externo"){: new_window}.
 
 ## Inicializando o {{site.data.keyword.amashort}} client Swift SDK
 {: #facebook-auth-ios-initalize-swift}
@@ -241,9 +239,8 @@ didFinishLaunchingWithOptions launchOptions: 		[UIApplicationLaunchOptionsKey: A
    * Substitua `<applicationBluemixRegion>` pela região em que seu aplicativo {{site.data.keyword.Bluemix_notm}} está hospedado.
    * Substitua `tenantId` pelo valor
 **TenantId/App GUID**.
- 
-   Para obter mais informações sobre esses valores, consulte
-[Antes de iniciar](#before-you-begin)).
+
+   Para obter mais informações sobre esses valores, veja [Antes de iniciar](#before-you-begin).
 
 1. Notifique o Facebook SDK sobre a ativação do app e registre o Manipulador de
 autenticação do Facebook incluindo o código a seguir no método
@@ -280,7 +277,7 @@ aplicativo backend móvel.
 ### Antes de iniciar
 {: #facebook-auth-ios-testing-before}
 
-Deve-se usar o modelo do {{site.data.keyword.mobilefirstbp}} e já ter um recurso protegido por {{site.data.keyword.amashort}} no terminal `/protected`. Se for necessário configurar um terminal `/protected`, consulte [Protegendo recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
+Deve-se estar usando o modelo do {{site.data.keyword.mobilefirstbp}} e já ter um recurso protegido pelo {{site.data.keyword.amashort}} no terminal `/protected`. Se for necessário configurar um terminal `/protected`, consulte [Protegendo recursos](protecting-resources.html).
 
 1. Tente enviar uma solicitação para o terminal protegido do seu aplicativo backend móvel recém-criado em seu navegador. Abra a URL a seguir:
 `{applicationRoute}/protected`, substituindo o `{applicationRoute}` pelo valor que você recuperou a partir das

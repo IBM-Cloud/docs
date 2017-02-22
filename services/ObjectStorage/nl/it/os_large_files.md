@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -12,35 +12,40 @@ lastupdated: "2016-12-06"
 {:pre: .pre}
 
 
-# Archiviazione di oggetti grandi {: #large-files}
+# Storing large objects {: #large-files}
 
-I caricamenti sono limitati a una dimensione massima di 5 GB per singolo caricamento. Tuttavia, puoi suddividere gli oggetti grandi in parti più piccole e utilizzare il file manifest per concatenare i segmenti. Se ogni segmento è più piccolo di 5 GB durante il processo di caricamento, non esiste una dimensione massima per il tuo oggetto concatenato.
+Uploads are limited to a maximum size of 5 GB for a single upload. However, you can segment larger objects into smaller pieces and use a manifest file to concatenate the segments. Once an object is concatenated, there is no maximum size.
 {: shortdesc}
 
-Esistono due modi per caricare oggetti grandi: DLO (Dynamic Large Objects) e SLO (Static Large Objects). 
+Large objects can either be dynamic or static. With static large objects (SLO), segments don't have to be in the same container; each segment can be stored in any container and given any name. With dynamic large objects, the Swift client, creates container and numbered segments are uploaded in parallel to the container.
 
-## DLO (Dynamic Large Objects): {: #dynamic}
 
-Esistono due modi per gestire DLO:
-  * Lasciare al client Swift gestire tutto automaticamente
-  * Utilizzare l'API Swift per farlo personalmente
+## Dynamic large objects: {: #dynamic}
 
-#### Utilizzo del client Swift per gestire DLO (Dynamic Large Objects)
+You can upload dynamic large objects in two ways:
+  * Have the Swift client handle everything automatically
+  * Use the Swift API to do it yourself
 
-Il client Swift utilizza il parametro `-segment-size` per dividere il tuo oggetto in parti più piccole. Il client crea un nuovo contenitore con il nome del contenitore in cui desideri caricare i file e aggiunge un suffisso con il numero di segmento (`<container_name>_segments`). I segmenti vengono caricati in parallelo. Dopo che sono stati caricati tutti i segmenti, vengono scaricati come un oggetto concatenato in un file manifest con il nome del file originale.
+#### Using the Swift client to handle dynamic large objects
 
-1. Dopo aver eseguito l'accesso a {{site.data.keyword.Bluemix_notm}} ed essere pronto per il caricamento, esegui il seguente comando per frazionare il tuo file.
+The Swift client uses the `-segment-size` parameter to break down your object into smaller pieces. The client creates a new container with the name of the container you want to upload the files to and adds a suffix with the segment number (`<container_name>_segments`). Segments are uploaded in parallel. After all of the segments are uploaded, they are downloaded as one concatenated object to a manifest file with the original file name.
+
+1. After you've logged in to {{site.data.keyword.Bluemix_notm}} and you're ready to upload, run the following command to segment your file.
     ```
     swift upload <container_name> <file_name> --segment-size <size_in_bytes>
     ```
     {: pre}
 
-#### Utilizzo dell'API Swift per gestire DLO (Dynamic Large Objects)
+#### Using the Swift API to handle Dynamic Large Objects
 
-Puoi personalmente frazionare gli oggetti in modo che siano di 5 GB o meno e quindi caricarli tramite l'API Swift È importante che durante il caricamento per prima cosa carichi tutti i segmenti prima di caricare il manifest. Se l'oggetto viene scaricato prima che sia finito il caricamento di tutti i segmenti, l'oggetto scaricato non sarà congruente. Puoi caricare file grandi completando la seguente procedura.
+You can segment the objects so that they are 5 GB or less yourself, and then upload them through the Swift API.
 
-1. Ordina i segmenti per nome nell'ordine in cui dovrebbero essere concatenati per formare l'oggetto originale.
-2. Carica i tuoi segmenti in un contenitore separato dal contenitore che ospita il file manifest. Limita in modo che i caricamenti si avviino dopo che il decimo segmento è stato caricato e incrementa il tempo di caricamento sensibilmente.  Per questo motivo, è raccomandato che la dimensione del segmento sia non più piccola della dimensione del file divisa per 10.
+**Note**: When uploading, all of the segments must be uploaded before the manifest file. If the object is downloaded before all of the segments are uploaded, the downloaded object concatenates inconsistently.
+
+You can upload large files by completing the following steps.
+
+1. Sort the segments by name in the order in which they need to concatenate to form the original object.
+2. Upload your segments into one container that is separate from the container that holds the manifest file. Throttling for uploads starts after the 10th segment is uploaded, and increases the upload time considerably.  
 
     ```
     curl -i -X PUT --data-binary @segment1 -H "X-Auth-Token: <token>" https://<object-storage_url>/<container_name>/<object_name>/000001
@@ -48,15 +53,15 @@ Puoi personalmente frazionare gli oggetti in modo che siano di 5 GB o meno e qui
     ```
     {: pre}
 
-3. Carica un file manifest vuoto con l'intestazione `X-Object-Manifest` impostata sul valore `<container>/prefix>` corrispondente.
+3. Upload an empty manifest file with the header `X-Object-Manifest` set to the corresponding `<container>/prefix>` value.
 
     ```
     curl -i -X PUT -H "X-Auth-Token: <token>" -H "X-Object-Manifest: <container_name>/<object_name>/" https://<object-storage_url>/<manifest_container_name>/<object_name>
     ```
     {: pre}
 
-    **Nota**: il file manifest deve essere vuoto. Se non lo è, il contenuto del file sarà considerato come uno dei segmenti e si riscontrerà un malfunzionamento nell'ordinamento della concatenazione indicata dai nomi ordinati.
-4. Scarica l'oggetto. Come risultato riceverai l'oggetto completo. Puoi aggiungere o rimuovere segmenti senza dover aggiornare il file manifest. I segmenti con il prefisso corretto rimarranno parte dell'oggetto. L'eliminazione del manifest non eliminerà i segmenti.
+    **Note**: The manifest file must be empty. If not, the content of the file is considered as one of the segments and falls in the order of concatenation that is dictated by the sorted names.
+4. Download the object. As a result, you receive the whole object. You can add or remove segments without having to update the manifest file. Segments with the correct prefix remain part of the object. Deleting the manifest does not delete the segments.
 
     ```
     curl -i -O -H "X-Auth-Token: <token>" https://<object-storage_url>/<manifest_container_name>/<object_name>
@@ -64,37 +69,38 @@ Puoi personalmente frazionare gli oggetti in modo che siano di 5 GB o meno e qui
     {: pre}
 
 
-## SLO (Static Large Objects) {: #static}
+## Static large objects {: #static}
 
-SLO (Static Large Objects) utilizza i segmenti e un file manifest, ma non ti consente ulteriore controllo. Con SLO, i segmenti non devono essere nello stesso contenitore; ogni segmento può essere archiviato in un qualsiasi contenitore e può avere un nome qualsiasi. Tuttavia, i segmenti devono essere di almeno 1 MB. Non ti viene richiesto di impostare un'intestazione per il file manifest, anche se l'intestazione “X-Static-Large-Object” viene aggiunta automaticamente e impostata su true dopo che è stato caricato un manifest correttamente.
+Static large objects use segments and a manifest file, but you have more control. With SLO, segments don't have to be in the same container; each segment can be stored in any container and given any name. However, segments must be at least 1 MB. You are not required to set a header for the manifest file, although the header “X-Static-Large-Object” is automatically added and set to true after a correct manifest is uploaded.
 {: shortdesc}
 
-Il file manifest è un documento JSON che fornisce i dettagli sui segmenti e deve essere caricato dopo che sono stati caricati tutti i segmenti. I dati forniti per ogni documento nel manifest vengono confrontati con i metadati dei segmenti attuali. Se qualcosa non corrisponde, il manifest non sarà caricato.
+The manifest file is a JSON document that provides details of the segments and must be uploaded after all the segments have been uploaded. The data that is provided for each segment in the manifest is compared to the metadata of the actual segments. If something doesn’t match, the manifest isn't uploaded.
 
 <table>
+<caption> Table.1 JSON attributes in the manifest file </caption>
   <tr>
-    <th> Attributo </th>
-    <th> Descrizione </th>
+    <th> Attribute </th>
+    <th> Description </th>
   </tr>
   <tr>
     <td> <i> path </i> </td>
-    <td> L'ubicazione e il nome del segmento. Specificati come container_name/object_name. </td>
+    <td> The location and name of the segment. Specified as container_name/object_name. </td>
   </tr>
   <tr>
     <td> <i> etag </i> </td>
-    <td> Fornita dalla richiesta PUT quando l'oggetto viene caricato. Puoi anche trovarla eseguendo un HEAD all'oggetto. </td>
+    <td> Provided by the PUT request when the object is uploaded. You can also find it by doing a HEAD to the object. </td>
   </tr>
   <tr>
     <td> <i> size_bytes </i> </td>
-    <td> La dimensione dell'oggetto in byte. </td>
+    <td> The size of the object in bytes. </td>
   </tr>
 </table>
 
-*Tabella 1: gli attributi JSON nel file manifest nell'ordine di concatenazione *
 
-#### Per caricare file grandi
 
-1. Esegui il seguente comando per caricare i segmenti. Limita in modo che i caricamenti si avviino dopo che il decimo segmento è stato caricato e incrementa il tempo di caricamento sensibilmente.  Per questo motivo, è raccomandato che la dimensione del segmento sia non più piccola della dimensione del file divisa per 10.
+#### To upload large files
+
+1. Run the following command to upload the segments. Throttling for uploads starts after the 10th segment is uploaded, and increases the upload time considerably.  
 
     ```
     curl -i -X PUT --data-binary @segment1 -H "X-Auth-Token: <token>" https://<object-storage_url>/<container_one>/<segment>
@@ -103,7 +109,7 @@ Il file manifest è un documento JSON che fornisce i dettagli sui segmenti e dev
     ```
     {: pre}
 
-2. Crea il manifest:
+2. Build the manifest:
 
     ```
     [
@@ -126,14 +132,14 @@ Il file manifest è un documento JSON che fornisce i dettagli sui segmenti e dev
     ```
     {: pre}
 
-3. Carica il manifest. Per farlo, devi aggiungere la query `multipart-manifest=put` al nome del manifest eseguendo il seguente comando:
+3. Upload the manifest file by adding the query `multipart-manifest=put` to the name of the manifest.
 
     ```
     curl -i -X PUT --data-binary @object_name -H "X-Auth-Token: <token>" https://<object-storage_url>/container_two/<object_name>?multipart-manifest=put
     ```
     {: pre}
 
-4. Scarica l'oggetto.
+4. Download the object.
 
     ```
     curl -O -X GET -H "X-Auth-Token: <token>" https://<object-storage_url>/<container_two>/<object_name>
@@ -141,28 +147,29 @@ Il file manifest è un documento JSON che fornisce i dettagli sui segmenti e dev
     {: pre}
 
 
+#### Working with static large objects
 
-Questi sono alcuni comandi di cui potresti aver bisogno quando utilizzi SLO (Static Large Objects).
+You can manage your files by using the following commands.
 
-* Per scaricare il contenuto del file manifest, devi aggiungere la query `multipart-manifest=get` al tuo comando. Il contenuto che ricevi non sarà identico al contenuto caricato.
+**Note**: To add or remove segments to the object, upload a new manifest file with a new list of segments. The manifest name can stay the same.
+
+* To download the content of the manifest file, you must add the query `multipart-manifest=get` to your command. The content that you receive is not identical to the content that you uploaded.
 
     ```
     curl -O -X GET -H "X-Auth-Token:<token>" https://<object-storage_url>/<container_two>/<object_name>?multipart-manifest=get
     ```
     {: pre}
 
-* Per eliminare il manifest esegui il seguente comando:
+* To delete the manifest run the following command:
 
     ```
     curl -i -X DELETE -H "X-Auth-Token: <token>" https://<object-storage_url>/<container_two>/<object_name>
     ```
     {: pre}
 
-* Per eliminare il manifest e tutti i segmenti, aggiungi la query `multipart-manifest=delete` dopo il nome del manifest:
+* To delete the manifest and all the segments, add the query `multipart-manifest=delete` after the name of the manifest:
 
     ```
     curl -i -X DELETE -H "X-Auth-Token: <token>" https://<object-storage_url>/<container_two>/<object_name>?multipart-manifest=delete
     ```
     {: pre}
-
-**Nota**: per aggiungere i segmenti all'oggetto o per rimuoverli da esso, devi caricare un nuovo file manifest con un nuovo elenco di segmenti. Il nome del manifest può rimanere lo stesso.

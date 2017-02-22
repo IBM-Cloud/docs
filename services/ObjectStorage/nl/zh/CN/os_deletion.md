@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -55,12 +55,12 @@ swift delete <container_name> <file_name>
 ## 安排对象删除 {: #schedule-object-deletion}
 
 
-您可以安排删除对象。通过使用 `X-Delete-At` 或 `X-Delete-After` 标头，可以完成此操作。
+通过使用 `X-Delete-At` 或 `X-Delete-After` 头，可以安排删除对象。
 {: shortdesc}
 
-`X-Delete-At` 标头采用整数代表删除对象的戳记时间。`X-Delete_After` 标头采用整数，代表在该秒数之后删除对象。要使用 Swift 客户机来安排对象删除，请运行以下命令中最适合您需求的命令。
+`X-Delete-At` 头采用整数，代表删除对象的戳记时间。`X-Delete_After` 头采用整数，代表在该秒数之后删除对象。
 
-**注：**对象的实际删除可能不会在所指示的确切时间发生。但事实上，对象会在指定的时间到期。这表示将无法再使用该对象。实际删除操作将会在下一次 Swift 集群中配置的 swift-object-expirer 守护程序运行时发生。
+**注：**对象的实际删除可能不会在所指示的确切时间发生。但事实上，对象会在指定的时间到期。此时无法再使用该对象。实际删除操作将会在下一次 Swift 集群中配置的 swift-object-expirer 守护程序运行时发生。
 
 #### 使用 Swift 命令：
 

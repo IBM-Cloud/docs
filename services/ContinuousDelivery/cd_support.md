@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-20"
+  years: 2015, 2017
+lastupdated: "2017-2-8"
 
 ---
 
@@ -15,15 +15,34 @@ lastupdated: "2016-12-20"
 # Getting help and support for {{site.data.keyword.contdelivery_short}}    
 {: #cd_support}  
 
-If you have problems or questions when you use {{site.data.keyword.contdelivery_full}}, you can get help by searching for information or by asking questions in a forum. You can also [open a support ticket](https://www.{DomainName}/docs/support/index.html#open-ticket).    
-{:shortdesc}
+The {{site.data.keyword.contdelivery_full}} team actively monitors the Stack Overflow and developerWorks forums for questions about the {{site.data.keyword.contdelivery_short}} service, toolchains, and pipelines. Don't be shy; ask a question!    
 
-The {{site.data.keyword.Bluemix_notm}} development and support teams actively monitor Stack Overflow and dW Answers, and follow the questions that are tagged with ibm-bluemix, continuous-delivery, and bluemix-continuous-delivery. When you create a question in either forum, tag your question so that the {{site.data.keyword.Bluemix_notm}} development and support teams see it.
+<table>
+ <td align="center">
+ <strong>Stack Overflow</strong>
+  <p>
+   <a class="xref" href="http://stackoverflow.com/questions/ask?tags=ibm-bluemix,continuous-delivery" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/ask-a-question.png" alt="Ask a question"/></a></p>
+   <p>
+    <a class="xref" href="http://stackoverflow.com/questions/tagged/continuous-delivery" target="_blank" title="(Opens in a new tab or window)">Show recent<img class="image" src="../../icons/launch-glyph.svg" alt="External link icon"/></a> {{site.data.keyword.contdelivery_short}} questions on Stack Overflow.</p></td>
+  <td align="center">
+  <strong>dW Answers</strong>
+   <p>
+   <a class="xref" href="https://developer.ibm.com/answers/questions/ask/?topics=continuous-delivery,bluemix" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/ask-a-question.png" alt="Ask a question"/></a></p>
+   <p>
+    <a class="xref" href="https://developer.ibm.com/answers/topics/continuous-delivery.html" target="_blank" title="(Opens in a new tab or window)">Show recent<img class="image" src="../../icons/launch-glyph.svg" alt="External link icon"/></a> {{site.data.keyword.contdelivery_short}} questions on dW Answers.</p></td>
+  </table>  
 
-* If you have technical questions about continuous delivery, post your question on [Stack Overflow](http://stackoverflow.com/questions/ask?tags=ibm-bluemix,continuous-delivery){:new_window} ![External link icon](images/launch--glyph.svg).
 
-* If you have questions about the {{site.data.keyword.contdelivery_short}} service, post your question on [IBM developerWorks dW Answers](https://developer.ibm.com/answers/questions/ask/?topics=continuous-delivery,bluemix){:new_window} ![External link icon](images/launch--glyph.svg) forum.
+## Support tickets
 
-For more details about using the forums, see [Getting help](https://www.{DomainName}/docs/support/index.html#getting-help).
+If you have a more serious issue or encounter problems with the {{site.data.keyword.contdelivery_short}} service, open a support ticket.    
 
-For information about opening an IBM support ticket, or about support levels and ticket severities, see [Contacting support](https://www.{DomainName}/docs/support/index.html#contacting-support).
+1. Log in to {{site.data.keyword.Bluemix_notm}}.
+1. From the menu bar, click **Support**, and then click **Add Ticket**.
+1. Complete the form to indicate what you need technical support for.
+
+For more information about opening an IBM {{site.data.keyword.Bluemix_notm}} support ticket, or about support levels and ticket severities, see [Contacting support](https://console.ng.bluemix.net/docs/support/index.html#contacting-support).
+
+
+## Support for {{site.data.keyword.Bluemix_notm}}
+For other problems or questions about your {{site.data.keyword.Bluemix_notm}} service, see [Getting customer support](https://www.{DomainName}/docs/support/index.html#getting-customer-support).

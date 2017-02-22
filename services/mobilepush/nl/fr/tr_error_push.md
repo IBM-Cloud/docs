@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Message d'erreur de service {{site.data.keyword.mobilepushshort}}
 {: #errors}
-Dernière mise à jour : 7 décembre 2016
+Dernière mise à jour : 16 janvier 2017
 {: .last-updated}
 
 
@@ -52,9 +52,11 @@ n'est pas disponible sur le serveur.
 {: #error_fpwse0003e}
 
 **Explication **: la configuration requise pour le service {{site.data.keyword.mobilepushshort}} est incomplète. Vous essayez peut-être d'obtenir les données d'identification du service
-de notifications Push Apple (APNs) avant qu'elles ne soient configurées.
+de notifications Push Apple (APNS) avant qu'elles ne soient configurées.
 
-**Réponse de l'utilisateur **: vérifiez que le service {{site.data.keyword.mobilepushshort}} a été configuré avec des certificats de sécurité valides pour les APN. Pour plus d'informations, voir [Configuration des données d'identification pour le service APNs](t_push_provider_ios.html){: new_window}.
+**Réponse de l'utilisateur **: vérifiez que le service {{site.data.keyword.mobilepushshort}} a été configuré avec des certificats de sécurité valides pour les APN. Pour
+plus d'informations, voir [Configuration des données d'identification pour les APN
+![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](t_push_provider_ios.html "Icône de lien externe"){: new_window}.
 
 
 ## FPWSE0004E
@@ -83,7 +85,9 @@ de notifications Push Apple (APNs) avant qu'elles ne soient configurées.
 **Explication **: le corps JSON de la demande comporte des paramètres que ne comprend pas le serveur {{site.data.keyword.mobilepushshort}}.
 
 
-**Réponse de l'utilisateur **: vérifiez que le corps JSON dans la demande respecte le format de demande attendu par le serveur {{site.data.keyword.mobilepushshort}}. Pour plus d'informations, voir [API REST](https://mobile.{DomainName}/imfpush/).
+**Réponse de l'utilisateur **: vérifiez que le corps JSON dans la demande respecte le format de demande attendu par le serveur {{site.data.keyword.mobilepushshort}}. Pour
+plus d'informations, voir [API REST
+![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://mobile.{DomainName}/imfpush/ "Icône de lien externe"){: new_window}.
 
 
 
@@ -93,7 +97,9 @@ de notifications Push Apple (APNs) avant qu'elles ne soient configurées.
 **Explication **: l'URL de la demande comporte une chaîne de requête avec des paramètres non reconnus. Par exemple, si la demande de suppression de l'abonnement comporte des paramètres autres que deviceId et tagName, cette erreur peut se produire.
 
 
-**Réponse de l'utilisateur **: vérifiez que le corps JSON dans la demande respecte le format de demande attendu par le serveur {{site.data.keyword.mobilepushshort}}. Pour plus d'informations, voir [API REST](https://mobile.{DomainName}/imfpush/).
+**Réponse de l'utilisateur **: vérifiez que le corps JSON dans la demande respecte le format de demande attendu par le serveur {{site.data.keyword.mobilepushshort}}. 
+Pour plus d'informations, voir [API REST
+![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://mobile.{DomainName}/imfpush/ "Icône de lien externe"){: new_window}.
 
 
 
@@ -103,14 +109,16 @@ de notifications Push Apple (APNs) avant qu'elles ne soient configurées.
 **Explication **: l'URL de la demande comporte une chaîne de requête avec des paramètres requis manquants. Par exemple, les paramètres deviceId et tagName peuvent être absents de la demande de suppression de l'abonnement.
 
 
-**Réponse de l'utilisateur **: vérifiez que le corps JSON dans la demande respecte le format de demande attendu par le serveur {{site.data.keyword.mobilepushshort}}. Pour plus d'informations, voir [API REST](https://mobile.{DomainName}/imfpush/).
+**Réponse de l'utilisateur **: vérifiez que le corps JSON dans la demande respecte le format de demande attendu par le serveur {{site.data.keyword.mobilepushshort}}. 
+Pour plus d'informations, voir [API REST
+![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://mobile.{DomainName}/imfpush/ "Icône de lien externe"){: new_window}.
 
 
 
 ## FPWSE0009E
 {: #error_fpwse0009e}
 
-**Explication **: une tentative d'envoi de notifications a été effectuée mais aucun appareil n'est enregistré auprès de l'application. 
+**Explication **: une tentative d'envoi de notifications a été effectuée mais aucun appareil n'est enregistré auprès de l'application.
 
 **Réponse de l'utilisateur **: vérifiez que des appareils ont été enregistrés auprès de l'application avant de tenter d'envoyer des notifications.
 
@@ -147,7 +155,7 @@ exemple, lorsque vous créez un abonnement qui existe déjà.
 survient lorsqu'une demande d'extraction ou de suppression d'un abonnement qui n'existe pas est soumise.
 
 
-**Réponse de l'utilisateur **: utilisez le nom d'étiquette et l'identificateur d'appareil corrects dans la demande. 
+**Réponse de l'utilisateur **: utilisez le nom d'étiquette et l'identificateur d'appareil corrects dans la demande.
 
 
 

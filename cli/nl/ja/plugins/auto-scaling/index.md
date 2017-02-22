@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015，2016
+  years: 2015，2017
 
-lastupdated: "2016-02-24"
+lastupdated: "2011-01-12"
 
 
 ---
@@ -18,14 +18,11 @@ lastupdated: "2016-02-24"
 # Auto-Scaling CLI
 {: #autoscalingcli}
 
-最終更新日: 2016 年 2 月 25 日
-{: .last-updated}
-
 
 {{site.data.keyword.autoscaling}} サービスは、{{site.data.keyword.autoscaling}} CLI for {{site.data.keyword.Bluemix_notm}} を使用して構成することができます。{{site.data.keyword.autoscaling}} CLI は Linux64、Win64、および OSX をサポートしており、Auto-Scaling RESTful API が提供する機能と同様の機能を提供します。
 {: shortdesc}
 
-始めに、{{site.data.keyword.Bluemix_notm}} CLI をインストールします。手順については、「[{{site.data.keyword.Bluemix_notm}} CLI のダウンロード](http://plugins.ng.bluemix.net/ui/home.html){: new_window}」を参照してください。
+始めに、{{site.data.keyword.Bluemix_notm}} CLI をインストールします。手順については、[{{site.data.keyword.Bluemix_notm}} CLI のダウンロード ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/home.html){: new_window} を参照してください。
 
 ## {{site.data.keyword.Bluemix_notm}} CLI プラグインの追加
 
@@ -142,5 +139,5 @@ bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<en
 ## 一般
 {: general}
 * [{{site.data.keyword.autoscaling}} サービス](/docs/services/Auto-Scaling/index.html)
-* [{{site.data.keyword.Bluemix_notm}} CLI](http://plugins.ng.bluemix.net/ui/home.html){: new_window}
-* [W3C Date and Time Formats standard](https://www.w3.org/TR/NOTE-datetime){: new_window}
+* [{{site.data.keyword.Bluemix_notm}} CLI ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/home.html){: new_window}
+* [W3C Date and Time Formats standard ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://www.w3.org/TR/NOTE-datetime){: new_window}

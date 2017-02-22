@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -18,6 +18,7 @@ lastupdated: "2016-12-06"
 {: shortdesc}
 
 <table>
+<caption> 表 1. 定義済みのユーザー役割</caption>
   <tr>
     <th> 管理ユーザー (管理者) </th>
     <th> 非管理ユーザー (メンバー) </th>
@@ -36,6 +37,5 @@ lastupdated: "2016-12-06"
   </tr>
 </table>
 
-表 1: 定義済みのユーザー役割
 
 {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェース、Cloud Foundry API、または Cloud Foundry CLI を使用して、{{site.data.keyword.objectstorageshort}} ユーザーを管理できます。

@@ -1,16 +1,16 @@
 ---
 
- 
+
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015，2017
 
-lastupdated: "2016-05-09" 
+lastupdated: "2016-05-09"
 
 ---
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -78,14 +78,14 @@ lastupdated: "2016-05-09"
 
   最起碼要將應用程式安裝擷取為一組統一且與作業系統無關的 Script。請將應用程式安裝保持到最小並為可攜式，以適合不同的自動化技術。此外，也請將應用程式安裝所需的相依關係降到最少。
 
-如需具有雲端功能的應用程式的相關資訊，請參閱 [The Twelve-Factor App](http://12factor.net/){:new_window}。
+如需具有雲端功能的應用程式的相關資訊，請參閱 [The 12-factor application ![外部鏈結圖示](../icons/launch-glyph.svg)](http://12factor.net/){: new_window}。
 
 ##移轉應用程式
 {: #ht_hostapp}
 
 您可以使用漸進式方式將應用程式移轉至 {{site.data.keyword.Bluemix_notm}}，而不要將應用程式全面轉移至雲端環境。您可以先移轉應用程式的某個部分，並使用 Cloud Integration 服務以連接至現有資料或記錄系統。
 
-在您的雲端應用程式中，您可能需要存取後端資料或服務（例如，記錄系統）。在 {{site.data.keyword.Bluemix_notm}} 中，您可以使用 Secure Gateway 服務以在 {{site.data.keyword.Bluemix_notm}} 組織與企業後端網路之間建立安全通道。服務可讓 {{site.data.keyword.Bluemix_notm}} 上的應用程式存取後端網路的資料及服務。如需詳細資料，請參閱 [Reaching enterprise backend with Bluemix Secure Gateway via console](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){:new_window}。
+在您的雲端應用程式中，您可能需要存取後端資料或服務（例如，記錄系統）。在 {{site.data.keyword.Bluemix_notm}} 中，您可以使用 Secure Gateway 服務以在 {{site.data.keyword.Bluemix_notm}} 組織與企業後端網路之間建立安全通道。服務可讓 {{site.data.keyword.Bluemix_notm}} 上的應用程式存取後端網路的資料及服務。如需詳細資料，請參閱 [Reaching enterprise backend with Bluemix Secure Gateway via console ![外部鏈結圖示](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window}。
 
 若要將應用程式部署至 {{site.data.keyword.Bluemix_notm}} 以作為 Cloud Foundry 應用程式，請從 {{site.data.keyword.Bluemix_notm}}「型錄」中選取運行環境。此運行環境包含入門範本 Hello World 應用程式，您可以將它取代為自己的應用程式。如果您找不到提供您想要之運行環境的入門範本，則可以使用 -b 選項與 cf push 指令搭配，將自訂 Cloud Foundry 相容建置套件帶到 {{site.data.keyword.Bluemix_notm}}。如需詳細資料，請參閱[使用社群建置套件](/docs/cfapps/byob.html)。
 
@@ -170,7 +170,7 @@ services = JSON.parse(ENV['VCAP_SERVICES'], :symbolize_names => true)
             end
           end
         end.flatten!.first
-```		
+```
 {:codeblock}
 
 若要確定在修改 {{site.data.keyword.Bluemix_notm}} 的應用程式之後可以在本端環境中執行您的應用程式，請檢查 VCAP_SERVICES 環境變數是否存在（此環境變數是針對所有 {{site.data.keyword.Bluemix_notm}} Cloud Foundry 應用程式所設定）。
@@ -186,5 +186,5 @@ services = JSON.parse(ENV['VCAP_SERVICES'], :symbolize_names => true)
 * [Virtual Machines](/docs/virtualmachines/vm_index.html)
 * [開始使用 Delivery Pipeline](/docs/services/DeliveryPipeline/index.html)
 * [使用 IBM Eclipse Tools for Bluemix 來部署應用程式](/docs/manageapps/eclipsetools/eclipsetools.html)
-* [The Twelve-Factor App](http://12factor.net/){:new_window}
-* [Reaching enterprise backend with Bluemix Secure Gateway via console](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){:new_window}
+* [The twelve-factor app ![外部鏈結圖示](../icons/launch-glyph.svg)](http://12factor.net/){: new_window}
+* [Reaching enterprise backend with Bluemix Secure Gateway via console ![外部鏈結圖示](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window}

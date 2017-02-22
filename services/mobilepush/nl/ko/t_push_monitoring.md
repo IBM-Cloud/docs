@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # 푸시 알림 모니터링 
 {: #monitor-notifications}
-마지막 업데이트 날짜: 2016년 12월 6일
+마지막 업데이트 날짜: 2017년 1월 16일
 {: .last-updated}
 
 

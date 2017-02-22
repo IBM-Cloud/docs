@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-23"
+  years: 2016, 2017
+lastupdated: "2017-01-11"
 ---
 
 {:shortdesc: .shortdesc}
@@ -53,8 +53,7 @@ lastupdated: "2016-10-23"
 * 블록체인은 비즈니스 프로세스를 간소화하면서 신뢰, 책임 및 투명성을 확립하는 차세대 트랜잭션 애플리케이션을 위한 피어 투 피어 분배 원장 기술입니다.   
 * Watson은 사용자의 앱에 음성, 영상 및 데이터 API의 전체 세트로 코그너티브 컴퓨팅의 강력함을 제공합니다. Watson 서비스를 통해 코그너티브 플랫폼을 배치하여 가장 복잡한 비즈니스 문제점을 해결하십시오. 
 * {{site.data.keyword.IBM_notm}}를 통해 풍부한 통합 클라우드 데이터베이스, Data & Analytics 서비스로 더 많은 작업을 수행할 수 있습니다. 
-* {{site.data.keyword.IBM_notm}} Internet of Things 서비스를 사용하여 앱은 연결된 디바이스, 센서 및 게이트웨이와 통신하고 여기서 수집한 데이터를 이용할 수 있습니다. IBM이 제안하는 방법을 사용하여 Internet of Things 클라우드에 연결된 디바이스를 쉽게 얻을 수 있습니다. 그러면 앱에서 실시간 및 REST API를 사용하여 디바이스와 통신하고 수집하도록 설정된 데이터를 이용할 수 있습니다.
- 
+* {{site.data.keyword.IBM_notm}} Internet of Things 서비스를 사용하여 앱은 연결된 디바이스, 센서 및 게이트웨이와 통신하고 여기서 수집한 데이터를 이용할 수 있습니다. IBM이 제안하는 방법을 사용하여 Internet of Things 클라우드에 연결된 디바이스를 쉽게 얻을 수 있습니다. 그러면 앱에서 실시간 및 REST API를 사용하여 디바이스와 통신하고 수집하도록 설정된 데이터를 이용할 수 있습니다.  
 * {{site.data.keyword.IBM_notm}}는 멀티플랫폼, 기본 또는 하이브리드 앱을 모니터하고 테스트하는 동시에 이들을 빌드할 수 있는 모바일 백엔드 인프라를 제공합니다. 또한 분석, 보안, 사용자 통찰력 및 Continuous Delivery를 사용하여 앱을 개선시킬 수도 있습니다.  
  
 {{site.data.keyword.Bluemix_notm}}는 사용해 볼 수 있는 시범 서비스도 제공합니다. 서비스 유형 및 가용성에 대한 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} 서비스](/docs/services/index.html)를 참조하십시오.
@@ -69,8 +68,7 @@ lastupdated: "2016-10-23"
 
 {{site.data.keyword.Bluemix_notm}} 인프라는 완벽한 단일 플랫폼에서 강력한 베어메탈 서버 및 유연한 가상 서버를 제공합니다. 모든 것은 요청 시 제공되며 월별 및 시간별로 빌드됩니다. 베어메탈 서버는 프로세서 중심 및 디스크 I/O 중심 워크로드에 대한 원시 마력을 제공하며 사용자의 정확한 스펙으로 구성될 수 있습니다. 가상 서버는 배치의 빠른 속도, 유연한 확장성 및 종량과금제 청구를 허용합니다. 고성능 컴퓨팅을 위해 시간별 또는 월별로 사용 가능한 GPU(Graphics Processing Unit) 서버를 사용하여 클라우드의 효과를 증대시키십시오.  
 
-{{site.data.keyword.Bluemix_notm}} 인프라 오퍼링은 3계층 네트워크, 퍼블릭, 사설 및 관리 트래픽 세분화에 연결됩니다. 고객의 {{site.data.keyword.Bluemix_notm}} 계정에 대한 인프라는 무료로 사설 네트워크에서 데이터를 서로 전송할 수 있습니다.
-베어메탈 서버, 가상 서버 및 클라우드 스토리지와 같은 인프라 오퍼링은 퍼블릭 네트워크를 통해 {{site.data.keyword.Bluemix_notm}} 카탈로그(예: Watson 서비스, 컨테이너 또는 런타임)의 다른 애플리케이션 및 서비스에 연결합니다. 두 유형의 오퍼링 간의 데이터 전송은 표준 퍼블릭 네트워크 대역폭 비율로 측정되고 청구됩니다. 
+{{site.data.keyword.Bluemix_notm}} 인프라 오퍼링은 3계층 네트워크, 퍼블릭, 사설 및 관리 트래픽 세분화에 연결됩니다. 고객의 {{site.data.keyword.Bluemix_notm}} 계정에 대한 인프라는 무료로 사설 네트워크에서 데이터를 서로 전송할 수 있습니다. 베어메탈 서버, 가상 서버 및 클라우드 스토리지와 같은 인프라 오퍼링은 퍼블릭 네트워크를 통해 {{site.data.keyword.Bluemix_notm}} 카탈로그(예: Watson 서비스, 컨테이너 또는 런타임)의 다른 애플리케이션 및 서비스에 연결합니다. 두 유형의 오퍼링 간의 데이터 전송은 표준 퍼블릭 네트워크 대역폭 비율로 측정되고 청구됩니다. 
 
 ## {{site.data.keyword.Bluemix_notm}} 콘솔 사용
 {: #bluemixoverviewui}
@@ -93,8 +91,7 @@ lastupdated: "2016-10-23"
 
 모바일 앱, 외부에서 실행되는 앱, {{site.data.keyword.Bluemix_notm}}에서 빌드된 앱 또는 브라우저를 사용하는 개발자일 수 있는 클라이언트는 {{site.data.keyword.Bluemix_notm}}에서 호스팅되는 앱과 상호 작용합니다. 클라이언트는 REST 또는 HTTP API를 사용하여 {{site.data.keyword.Bluemix_notm}}를 통해 앱 인스턴스 또는 복합 서비스 중 하나로 요청을 라우팅합니다.
 
-다음 그림에서는 상위 레벨 {{site.data.keyword.Bluemix_notm}} Cloud Foundry 아키텍처를 보여줍니다.
-
+다음 그림에서는 상위 레벨 {{site.data.keyword.Bluemix_notm}} Cloud Foundry 아키텍처를 보여줍니다. 
 
 ![{{site.data.keyword.Bluemix_notm}} 아키텍처](images/arch.png)
 
@@ -121,8 +118,7 @@ lastupdated: "2016-10-23"
 
 그림 3. 앱 배치
 
-앱을 작성하고 이를 {{site.data.keyword.Bluemix_notm}} Cloud Foundry에 배치할 때 {{site.data.keyword.Bluemix_notm}} 환경에 따라 앱 및 이 앱이 나타내는 아티팩트를 보낼 적절한 가상 서버가 결정됩니다. 모바일 앱의 경우 모바일 백엔드 투영이
-{{site.data.keyword.Bluemix_notm}}에 작성됩니다. 클라우드에서 실행 중인 모바일 앱의 코드는 {{site.data.keyword.Bluemix_notm}} 환경에서 실행됩니다. 웹 앱의 경우 클라우드에서 실행 중인 코드는 개발자가 {{site.data.keyword.Bluemix_notm}}에 배치하는 앱 자체입니다. 가상 서버는 다음을 포함하여 여러 요인을 기반으로 결정됩니다.
+앱을 작성하고 이를 {{site.data.keyword.Bluemix_notm}} Cloud Foundry에 배치할 때 {{site.data.keyword.Bluemix_notm}} 환경에 따라 앱 및 이 앱이 나타내는 아티팩트를 보낼 적절한 가상 서버가 결정됩니다. 모바일 앱의 경우 모바일 백엔드 투영이 {{site.data.keyword.Bluemix_notm}}에 작성됩니다. 클라우드에서 실행 중인 모바일 앱의 코드는 {{site.data.keyword.Bluemix_notm}} 환경에서 실행됩니다. 웹 앱의 경우 클라우드에서 실행 중인 코드는 개발자가 {{site.data.keyword.Bluemix_notm}}에 배치하는 앱 자체입니다. 가상 서버는 다음을 포함하여 여러 요인을 기반으로 결정됩니다.
 
 * 시스템의 기존 로드
 * 해당 가상 서버에서 지원되는 런타임 또는 프레임워크
@@ -135,8 +131,7 @@ lastupdated: "2016-10-23"
 
 그림 4. 가상 서버 디자인
 
-각 가상 서버에서 애플리케이션 관리자는 {{site.data.keyword.Bluemix_notm}} 인프라의 나머지 부분과 통신하고 이 가상 서버에 배치되는 앱을 관리합니다. 각 가상 서버는 앱을 분리하고 보호하기 위한 컨테이너를 가지고 있습니다. 각 컨테이너에서 {{site.data.keyword.Bluemix_notm}}는 각 앱에
-필요한 적절한 프레임워크 및 런타임을 설치합니다. 
+각 가상 서버에서 애플리케이션 관리자는 {{site.data.keyword.Bluemix_notm}} 인프라의 나머지 부분과 통신하고 이 가상 서버에 배치되는 앱을 관리합니다. 각 가상 서버는 앱을 분리하고 보호하기 위한 컨테이너를 가지고 있습니다. 각 컨테이너에서 {{site.data.keyword.Bluemix_notm}}는 각 앱에 필요한 적절한 프레임워크 및 런타임을 설치합니다. 
 
 앱을 배치할 때 웹 인터페이스(예: Java 웹 앱) 또는 다른 REST 기반 서비스(예: 모바일 앱에 공개적으로 노출된 모바일 서비스)가 있으면 앱의 사용자가 일반적인 HTTP 요청을 사용하여 앱과 통신할 수 있습니다. 
 
@@ -169,7 +164,7 @@ cf api https://api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net
 | 미국 남부 지역 | 댈러스, 미국 | ng | api.ng.bluemix.net | console.ng.bluemix.net |
 | 영국 지역 | 런던, 영국 | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
 | 시드니 지역 | 시드니, 호주 | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
-{: caption="Table 1. {{site.data.keyword.Bluemix_notm}} region list" caption-side="top"}
+{: caption="표 1. {{site.data.keyword.Bluemix_notm}} 지역 목록" caption-side="top"}
 
 
 ### {{site.data.keyword.Bluemix_notm}} 복원성
@@ -203,10 +198,9 @@ cf api https://api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net
 
 <dl>
 <dt>Cloud Integration API</dt>
-    <dd>Cloud Integration API는 웹 API를 통해 방화벽 뒤에 있는 SOR(System of Record)에 대한 보안 액세스를 제공합니다. Cloud Integration API를 작성할 때 웹 API를 통해 액세스하려는 리소스를 선택하고 허용되는 오퍼레이션을 지정하고 API에 액세스하기 위해 SDK와 샘플을 포함합니다. Cloud Integration API를 작성하는 방법에 대한 자세한 정보는 [Cloud Integration API 작성](/docs/services/CloudIntegration/index.html#cloudint_add_service)을 참조하십시오.</dd>
+    <dd>Cloud Integration API는 웹 API를 통해 방화벽 뒤에 있는 SOR(System of Record)에 대한 보안 액세스를 제공합니다. Cloud Integration API를 작성할 때 웹 API를 통해 액세스하려는 리소스를 선택하고 허용되는 오퍼레이션을 지정하고 API에 액세스하기 위해 SDK와 샘플을 포함합니다. Cloud Integration API 작성 방법에 대한 자세한 정보는 [클라우드 통합 시작하기](/docs/services/CloudIntegration/CldInt_GetStart.html)를 참조하십시오. </dd>
 <dt>개인 서비스</dt>
-    <dd>개인 서비스는 Cloud Integration API, SDK 및 자격부여 정책으로 구성됩니다. 개인 서비스에는 서비스 제공업체가 제공하는 문서 또는 기타 항목도 포함될 수 있습니다.
-조직 관리자만 Cloud Integration API를 개인 서비스로 공개할 수 있습니다. 사용자에게 제공되는 개인 서비스를 보려면 {{site.data.keyword.Bluemix_notm}} 카탈로그에서 개인 선택란을 선택하십시오. 클라우드 통합 서비스에 연결하지 않고 개인 서비스를 선택하고 앱에 바인딩할 수 있습니다. 다른 {{site.data.keyword.Bluemix_notm}} 서비스에서와 동일한 방식으로 개인 서비스를 앱에 바인딩합니다. API를 개인 서비스로 공개하는 방법에 대한 자세한 정보는 API를 개인 서비스로 공개를 참조하십시오. </dd>
+    <dd>개인 서비스는 Cloud Integration API, SDK 및 자격부여 정책으로 구성됩니다. 개인 서비스에는 서비스 제공업체가 제공하는 문서 또는 기타 항목도 포함될 수 있습니다. 조직 관리자만 Cloud Integration API를 개인 서비스로 공개할 수 있습니다. 사용자에게 제공되는 개인 서비스를 보려면 {{site.data.keyword.Bluemix_notm}} 카탈로그에서 개인 선택란을 선택하십시오. 클라우드 통합 서비스에 연결하지 않고 개인 서비스를 선택하고 앱에 바인딩할 수 있습니다. 다른 {{site.data.keyword.Bluemix_notm}} 서비스에서와 동일한 방식으로 개인 서비스를 앱에 바인딩합니다. API를 개인 서비스로 공개하는 방법에 대한 자세한 정보는 API를 개인 서비스로 공개를 참조하십시오. </dd>
 </dl>
 
 #### 시나리오: SOR(System of Record)에 연결할 RMA(Rich Mobile Application) 작성
@@ -236,23 +230,22 @@ cf api https://api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net
 다음 목록은 {{site.data.keyword.Bluemix_notm}}에 필요한 최소한의 브라우저 소프트웨어입니다. 
 
  * Chrome: 운영 체제용 최신 버전
- * Firefox: 운영 체제 및 ESR 38용 최신 버전
+ * Firefox: 운영 체제 및 ESR 45용 최신 버전
  * Internet Explorer: 버전 11
  * Safari: Mac용 최신 버전
 
-### Cloud
-Foundry
+### Cloud Foundry
 {: #cf}
 
 Cloud Foundry 명령행 인터페이스, 버전 6.5.1 이상 
 
-# 관련 링크
+# rellinks
 {: #rellinks}
-## 일반
+## general
 {: #general}
-* [{{site.data.keyword.Bluemix_notm}} 개념](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){:new_window}
-* [시작하기](http://www.ibm.com/cloud-computing/bluemix/getting-started/)
+* [{{site.data.keyword.Bluemix_notm}}의 개념 ![외부 링크 아이콘](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){:new_window}
+* [시작하기 ![외부 링크 아이콘](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/getting-started/){:new_window}
 * [{{site.data.keyword.Bluemix_notm}}의 새로운 기능](/docs/whatsnew/index.html)
-* [하이브리드 모델 학습](http://www.ibm.com/cloud-computing/bluemix/hybrid/)
+* [하이브리드 모델 자세히 보기 ![외부 링크 아이콘](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/hybrid/){:new_window}
 * [계정 관리](/docs/admin/adminpublic.html#mngacct)
 * [{{site.data.keyword.Bluemix_notm}} 용어집](/docs/overview/glossary/index.html)

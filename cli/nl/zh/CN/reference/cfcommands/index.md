@@ -4,9 +4,10 @@
 
 copyright:
 
-  years: 2016
+  years: 2016, 2017
 
-lastupdated: "2016-11-14"
+lastupdated: "2017-01-12"
+
 
 ---
 
@@ -22,7 +23,8 @@ lastupdated: "2016-11-14"
 Cloud Foundry (cf) 命令行界面 (CLI) 提供了一组用于管理应用程序的命令。以下信息列出了管理应用程序最常用的 cf 命令，并包含命令名称、选项、用法、先决条件、描述和示例。要列出所有 cf 命令及其关联的帮助信息，请使用 `cf help`。使用 `cf command_name -h` 可查看特定命令的详细帮助信息。
 {: shortdesc}
 
-**注**：如果您的网络中有 HTTP 代理服务器位于运行 cf 命令的主机和 Cloud Foundry API 端点之间，那么必须通过设置 `HTTP_PROXY` 环境变量来指定该代理服务器的主机名或 IP 地址。有关详细信息，请参阅 [Using the cf CLI with an HTTP Proxy Server](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html)。
+**注**：如果您的网络中有 HTTP 代理服务器位于运行 cf 命令的主机和 Cloud Foundry API 端点之间，那么必须通过设置 `HTTP_PROXY` 环境变量来指定该代理服务器的主机名或 IP 地址。有关详细信息，请参阅 [Using the cf CLI with an HTTP Proxy Server ![外部链接图标](..![外部链接图标](../../../icons/launch-glyph.svg)/icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}。
+
 
 
 ## Cloud Foundry CLI 命令索引
@@ -31,53 +33,52 @@ Cloud Foundry (cf) 命令行界面 (CLI) 提供了一组用于管理应用程序
 使用下表中的索引可查看常用 Cloud Foundry 命令：
 
 <table summary="按字母顺序列出的常规 Cloud Foundry 命令（命令具有可获取命令更多信息的链接）">
+ <caption>表 1. 常规 Cloud Foundry 命令</caption>
  <thead>
  <th colspan="6">常规 Cloud Foundry 命令</th>
  </thead>
  <tbody>
  <tr>
- <td>[api](index.html#cf_api)</td>
- <td>[help](index.html#cf_help)</td>
- <td>[login](index.html#cf_login)</td>
- <td>[stacks](index.html#cf_stacks)</td>
- <td>[target](index.html#cf_target)</td>
- <td>[-v](index.html#cf_v)</td>
+ <td>[api](/docs/cli/reference/cfcommands/index.html#cf_api)</td>
+ <td>[help](/docs/cli/reference/cfcommands/index.html#cf_help)</td>
+ <td>[login](/docs/cli/reference/cfcommands/index.html#cf_login)</td>
+ <td>[stacks](/docs/cli/reference/cfcommands/index.html#cf_stacks)</td>
+ <td>[target](/docs/cli/reference/cfcommands/index.html#cf_target)</td>
+ <td>[-v](/docs/cli/reference/cfcommands/index.html#cf_v)</td>
  </tr>
    </tbody>
  </table>
-{: caption="Table 1. General Cloud Foundry commands" caption-side="top"}
 
 
 <table summary="按字母顺序列出的用于管理应用程序、空间和服务的命令。每个命令都具有可获取命令更多信息的链接。">
+ <caption>表 2. 用于管理应用程序、空间和服务的命令</caption>
  <thead>
  <th colspan="5">用于管理应用程序、空间和服务的命令</th>
  </thead>
  <tbody>
  <tr>
- <td>[apps](index.html#cf_apps)</td>
- <td>[bind-service](index.html#cf_bind-service)</td>
- <td>[create-service](index.html#cf_create-service)</td>
- <td>[create-space](index.html#cf_create-space)</td>
- <td>[delete](index.html#cf_delete)</td>
+ <td>[apps](/docs/cli/reference/cfcommands/index.html#cf_apps)</td>
+ <td>[bind-service](/docs/cli/reference/cfcommands/index.html#cf_bind-service)</td>
+ <td>[create-service](/docs/cli/reference/cfcommands/index.html#cf_create-service)</td>
+ <td>[create-space](/docs/cli/reference/cfcommands/index.html#cf_create-space)</td>
+ <td>[delete](/docs/cli/reference/cfcommands/index.html#cf_delete)</td>
   </tr>
  <tr>
- <td>[delete-space](index.html#cf_delete-space)</td>
- <td>[events](index.html#cf_events)</td>
- <td>[logs](index.html#cf_logs)</td>
- <td>[marketplace](index.html#cf_marketplace)</td>
- <td>[push](index.html#cf_push)</td>
+ <td>[delete-space](/docs/cli/reference/cfcommands/index.html#cf_delete-space)</td>
+ <td>[events](/docs/cli/reference/cfcommands/index.html#cf_events)</td>
+ <td>[logs](/docs/cli/reference/cfcommands/index.html#cf_logs)</td>
+ <td>[marketplace](/docs/cli/reference/cfcommands/index.html#cf_marketplace)</td>
+ <td>[push](/docs/cli/reference/cfcommands/index.html#cf_push)</td>
   </tr>
  <tr>
- <td>[scale](index.html#cf_scale)</td>
- <td>[services](index.html#cf_services)
- <td>[set-env](index.html#cf_set-env)</td>
+ <td>[scale](/docs/cli/reference/cfcommands/index.html#cf_scale)</td>
+ <td>[services](/docs/cli/reference/cfcommands/index.html#cf_services)
+ <td>[set-env](/docs/cli/reference/cfcommands/index.html#cf_set-env)</td>
  <td>[ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh)</td>
- <td>[stop](index.html#cf_stop)</td>
+ <td>[stop](/docs/cli/reference/cfcommands/index.html#cf_stop)</td>
  </tr>
  </tbody>
  </table>
-{: caption="Table 2. Commands for managing apps, spaces, and services" caption-side="top"}
-
 
 ## cf api
 {: #cf_api}
@@ -90,7 +91,7 @@ cf api [BluemixServerURL] [--skip-ssl-validation] [--unset]
 
 <strong>先决条件</strong>：无。
 
-<strong>命令选项</strong>：  
+<strong>命令选项</strong>：
 
    <dl>
    <dt>BluemixServerURL（可选）</dt>
@@ -149,7 +150,7 @@ cf bind-service appname service_instance
 
 <strong>先决条件</strong>：`cf api`、`cf login` 和 `cf target`
 
-<strong>命令选项</strong>：  
+<strong>命令选项</strong>：
 
    <dl>
    <dt>appname（必需）</dt>
@@ -178,7 +179,7 @@ cf create-service service_name service_plan service_instance
 
 <strong>先决条件</strong>：`cf api`、`cf login` 和 `cf target`
 
-<strong>命令选项</strong>：  
+<strong>命令选项</strong>：
 
    <dl>
    <dt>service_name（必需）</dt>
@@ -210,7 +211,7 @@ cf create-space space_name [-o] [-q]
 
 <strong>先决条件</strong>：`cf api` 和 `cf login`
 
-<strong>命令选项</strong>：  
+<strong>命令选项</strong>：
 
    <dl>
    <dt>space_name（必需）</dt>
@@ -242,7 +243,7 @@ cf delete appname [-f] [-r]
 
 <strong>先决条件</strong>：`cf api`、`cf login` 和 `cf target`
 
-<strong>命令选项</strong>：  
+<strong>命令选项</strong>：
 
    <dl>
    <dt>appname（必需）</dt>
@@ -291,7 +292,7 @@ cf delete-space space_name [-f]
 
 <strong>先决条件</strong>：`cf api` 和 `cf login`
 
-<strong>命令选项</strong>：  
+<strong>命令选项</strong>：
 
    <dl>
    <dt>space_name（必需）</dt>
@@ -340,7 +341,7 @@ cf events [appname]
 
 <strong>先决条件</strong>：`cf api`、`cf login` 和 `cf target`
 
-<strong>命令选项</strong>：  
+<strong>命令选项</strong>：
 
    <dl>
    <dt>appname</dt>
@@ -367,7 +368,7 @@ cf help [command_name]
 
 <strong>先决条件</strong>：无。
 
-<strong>命令选项</strong>：  
+<strong>命令选项</strong>：
 
    <dl>
    <dt>command_name（可选）</dt>
@@ -395,7 +396,7 @@ cf help events
 登录到 {{site.data.keyword.Bluemix_notm}}。
 
 
-**注**：如果您使用联合标识登录，那么您必须使用单点登录 (SSO) 参数才能登录。
+**注**：如果您使用[联合标识](/docs/admin/account.html#signup)登录，那么必须使用单点登录 (SSO) 参数才能登录。
 
 ```
 cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s space_name] [--skip-ssl-validation]
@@ -526,7 +527,7 @@ cf push appname [-b buildpack_name] [-c start_command] [-f manifest_path] [-i in
 <dt>appname（必需）</dt>
 <dd>应用程序的名称。</dd>
 <dt>*-b* buildpack_name（可选）</dt>
-<dd>buildpack 的名称。buildpack_name 可以是定制 buildpack 的名称，也可以是 Git URL，例如，`my-buildpack` 或 `https://github.com/heroku/heroku-buildpack-play.git`。</dd>
+<dd>buildpack 的名称。buildpack_name 可以是定制 buildpack 的名称（例如，liberty-for-java），也可以是 Git URL（例如，https://github.com/cloudfoundry/java-buildpack.git）或者带有分支或标记的 Git URL（例如，对于 v3.3.0 标记，URL 为 https://github.com/cloudfoundry/java-buildpack.git#v3.3.0）。</dd>
 <dt>*-c* start_command（可选）</dt>
 <dd>应用程序的启动命令。要使用缺省启动命令，请为此选项指定 null 值。</dd>
 <dt>*-f* manifest_path（可选）</dt>
@@ -671,22 +672,24 @@ cf set-env my_app variable_a 123
 ## cf ssh
 {: #cf_ssh}
 
-使您以安全方式登录到应用程序容器。缺省情况下，SSH 会访问运行应用程序第一个实例的容器，也就是索引号为 0 的实例。
+以安全方式访问应用程序容器。`cf ssh` 命令可以用于设置交互式 SSH 会话、运行远程命令、传输文件以及设置特定应用程序容器实例的端口转发。
 
 ```
 cf ssh
 ```
 <strong>先决条件</strong>：`cf api`、`cf login` 和 `cf target`
 
-此外，还必须配置 Cloud Foundry 部署，以允许对应用程序实例进行 SSH 访问。有关详细信息，请参阅[针对 Cloud Foundry 配置 SSH 访问](https://docs.cloudfoundry.org/running/config-ssh.html){:new_window}。
+缺省情况下，Diego 应用程序已启用 SSH 访问。可以使用 `cf ssh-enabled` 命令来验证是否启用了 SSH 访问，或者使用 `cf enable-ssh` 命令来启用 SSH 访问（如果已禁用）。 
 
 <strong>命令选项</strong>：
 
 <dl>
 <dt>appname</dt>
-<dd>应用程序的名称。如果允许使用 SSH，那么可以使用此选项来启动与托管应用程序的 VM 的交互式 SSH 会话。</dd>
+<dd>应用程序的名称。</dd>
+<dt>-c</dt>
+<dd>指定要运行的远程命令。</dd>
 <dt>-i</dt>
-<dd>将应用程序的特定实例设为目标。</dd>
+<dd>将应用程序的特定实例设为目标。如果未指定，将使用应用程序的第一个实例（索引为 0 的实例）。</dd>
 <dt>-L</dt>
 <dd>启用本地端口转发，这会将计算机上的输出端口绑定到应用程序 VM 的输入端口。</dd>
 <dt>-N</dt>
@@ -697,12 +700,27 @@ cf ssh
 
 <strong>示例</strong>：
 
-启动与托管名为 `my_app` 的应用程序的 VM 的交互式 SSH 会话。
+启动与运行 `my_app` 应用程序的容器实例的交互式 SSH 会话。
 ```
 $ cf ssh my_app
 ```
 {: codeblock}
 
+在 `my_app` 应用程序容器实例上运行单个命令。
+```
+$ cf ssh my_app -c "ls -l"
+```
+
+从 `my_app` 应用程序容器实例传输单个文件。
+```
+$ cf ssh my_app -c "/bin/cat logs/messages.log" > messages.log
+```
+
+设置从本地计算机上 7777 端口到 `my_app` 应用程序容器实例上 8888 端口的端口转发。
+```
+$ cf ssh -N -T -L 7777:localhost:8888 my_app
+
+```
 
 ## cf stacks
 
@@ -810,7 +828,7 @@ cf -v
 ## 相关链接
 {: #general}
 
-* [下载 Cloud Foundry CLI](https://github.com/cloudfoundry/cli/releases)
-{:new_window}
-* [快速参考卡 - cf 命令](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html)
-{:new_window}
+* [Download Cloud Foundry CLI ![外部链接图标](![外部链接图标](../../../icons/launch-glyph.svg)../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases)
+{: new_window}
+* [Quick Reference Card - cf commands ![外部链接图标](![外部链接图标](../../../icons/launch-glyph.svg)../icons/launch-glyph.svg)](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html)
+{: new_window}

@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Einfache Push-Benachrichtigungen senden
 {: #push-send-notifications}
-Letzte Aktualisierung: 06. Dezember 2016
+Letzte Aktualisierung: 11. Januar 2017
 {: .last-updated}
 
 Nach dem Entwickeln Ihrer Anwendungen können Sie einfache Push-Benachrichtigungen (ohne Tags, Badges, zusätzliche Nutzdaten oder Audiodateien) senden.

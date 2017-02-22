@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated:  "2017-01-17"
+lastupdated:  "2017-02-17"
 
 ---
 
@@ -31,7 +31,7 @@ Consider the following before you configure  {{site.data.keyword.mobilefoundatio
 
 After you create the {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application service instance, follow the procedure below to get started.
 
-### Setting up connection to {{site.data.keyword.dashdbshort_notm}} service instance
+### Setting up connection to dashDB service instance
 {: #connect_dashdb_p2}
 
 After the {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application service instance is created you will see the *Overview* page where you will need to specify the connection information for the {{site.data.keyword.dashdbshort_notm}} for Transactions service instance, that the {{site.data.keyword.mobilefoundation_short}} service instance should connect to.
@@ -68,7 +68,7 @@ In a few seconds, you can access the `Overview` page that provides you with  tut
 **Note**: You cannot change the {{site.data.keyword.dashdbshort_notm}} service instance that is configured to be used by your {{site.data.keyword.mobilefoundation_short}} service instance. However, you can use the same {{site.data.keyword.dashdbshort_notm}} service instance across multiple {{site.data.keyword.mobilefoundation_short}} service instances, as each {{site.data.keyword.mobilefoundation_short}} service instance creates its own schema in the selected {{site.data.keyword.dashdbshort_notm}} service instance.
 
 
-## Starting the {{site.data.keyword.mobilefirst}} server
+## Starting the MobileFirst server
 {: #start_mobilefoundation_p2}
 
 * To start the {{site.data.keyword.mfserver_short_notm}}, with default settings, click **Start Basic Server**.
@@ -124,7 +124,7 @@ You can now delete the Mobile Analytics server that was added to the {{site.data
  This will delete the analytics container group. The process of deleting analytics containers takes about 10 minutes. You can refresh the screen to view the updated status. Once the analytics containers are deleted, the **Add Analytics** button is re-enabled, you can use this to add the Mobile Analytics server again if you choose to.
 
 
-## Re-creating the {{site.data.keyword.mobilefirst}} server
+## Re-creating the MobileFirst server
 {: #recreate_mobilefoundation_p2}
 
 *	Click **Recreate** to re-create the server.

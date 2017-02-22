@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,10 +12,10 @@ copyright:
 
 # Utilización de API REST
 {: #push-api-rest}
-Última actualización: 06 de diciembre de 2016
+Última actualización: 16 de enero de 2017
 {: .last-updated}
 
-Puede utilizar una API (application program interface, interfaz de programa de aplicaciones) REST (Representational State Transfer) para {{site.data.keyword.mobilepushshort}}. También puede utilizar las API SDK y [Push](https://mobile.{DomainName}/imfpush/) para desarrollar más las aplicaciones de cliente.
+Puede utilizar una API (application program interface, interfaz de programa de aplicaciones) REST (Representational State Transfer) para {{site.data.keyword.mobilepushshort}}. También puede utilizar el SDK y la [API Push ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://mobile.{DomainName}/imfpush/ "icono de enlace externo"){: new_window} para seguir desarrollando aplicaciones cliente. 
 
 Con la API REST Push, los clientes y las aplicaciones de servidor de fondo pueden acceder a las funciones {{site.data.keyword.mobilepushshort}}.
 
@@ -44,12 +44,12 @@ También puede utilizar la línea de mandatos para obtener las credenciales del 
 ## Cabecera Accept Language
 {: #push-api-rest-accept}
 
-La cabecera "Accept-Language" especifica qué idioma se utilizará para los mensajes de error que resultan de la [API REST de Push](https://mobile.{DomainName}/imfpush/){: new_window}. Se da soporte a los siguientes idiomas para ver si contienen mensajes de error: chino (simplificado), chino (tradicional), inglés (EE.UU.), alemán, francés, italiano, japonés, coreano, portugués y español.
+La cabecera "Accept-Language" especifica el idioma que se utilizará para los mensajes de error que emite la [API REST de Push ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://mobile.{DomainName}/imfpush/ "icono de enlace externo"){: new_window}. Se da soporte a los siguientes idiomas para ver si contienen mensajes de error: chino (simplificado), chino (tradicional), inglés (EE.UU.), alemán, francés, italiano, japonés, coreano, portugués y español.
 
 ## appSecret 
 {: #push-api-rest-secret}
 
-Cuando una aplicación se enlaza a las {{site.data.keyword.mobilepushshort}}, el servicio generará un appSecret (una clave exclusiva) y la pasa en la cabecera de respuesta. Si está utilizando IBM {{site.data.keyword.mobilepushshort}} para la API REST de Bluemix, utilice la referencia de la API REST para obtener información sobre qué API se deben proteger. Para más información, consulte la [API REST Push](https://mobile.{DomainName}/imfpush/).
+Cuando una aplicación se enlaza a las {{site.data.keyword.mobilepushshort}}, el servicio generará un appSecret (una clave exclusiva) y la pasa en la cabecera de respuesta. Si está utilizando IBM {{site.data.keyword.mobilepushshort}} para la API REST de Bluemix, utilice la referencia de la API REST para obtener información sobre qué API se deben proteger. Para obtener información, consulte [API REST de Push ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://mobile.{DomainName}/imfpush/ "icono de enlace externo"){: new_window}.
 
 La cabecera de la solicitud debe contener el appSecret. Si no, el servidor devuelve un código 401 Unauthorized Error. Cuando se añade la {{site.data.keyword.mobilepushshort}} a una aplicación, se creará una AppID específica. Como parte de la respuesta, obtiene una cabecera denominada appSecret que se utiliza para crear etiquetas o para enviar mensajes. La operación sucede a través de servicios del catálogo o del contenedor modelo.
 

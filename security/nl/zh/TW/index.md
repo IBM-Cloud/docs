@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2014, 2016
+  years: 2014, 2017
   
-lastupdated: "2016-10-19"
+lastupdated: "2017-01-11"
 
  
 
@@ -21,7 +21,7 @@ lastupdated: "2016-10-19"
 {{site.data.keyword.Bluemix}} 平台以安全工程作法進行設計，具有跨網路及基礎架構的分層安全控制。{{site.data.keyword.Bluemix_notm}} 提供一組安全服務，可讓應用程式開發人員用來保護其行動及 Web 應用程式。這些元素結合在一起，讓 {{site.data.keyword.Bluemix_notm}} 成為具有清楚的安全應用程式開發選擇的平台。
 {:shortdesc}
 
-{{site.data.keyword.Bluemix_notm}} 堅守由 IBM 在系統、網路及安全工程方面的最佳作法所驅動的安全原則，進而確保安全無虞。這些原則包括原始碼掃描、動態掃描、威脅建模以及滲透測試等作法。{{site.data.keyword.Bluemix_notm}} 遵循 IBM Product Security Incident Response Team (PSIRT) 處理程序，來進行資安突發事件管理。如需詳細資料，請參閱 [IBM Security Vulnerability Management (PSIRT)](http://www-03.ibm.com/security/secure-engineering/process.html){: new_window} 網站。
+{{site.data.keyword.Bluemix_notm}} 堅守由 IBM 在系統、網路及安全工程方面的最佳作法所驅動的安全原則，進而確保安全無虞。這些原則包括原始碼掃描、動態掃描、威脅建模以及滲透測試等作法。{{site.data.keyword.Bluemix_notm}} 遵循 IBM Product Security Incident Response Team (PSIRT) 處理程序，來進行資安突發事件管理。如需詳細資料，請參閱 [IBM Security Vulnerability Management (PSIRT) ![外部鏈結圖示](../icons/launch-glyph.svg)](http://www-03.ibm.com/security/secure-engineering/process.html){: new_window} 網站。
 
 「{{site.data.keyword.Bluemix_notm}} 公用」及「Bluemix 專用」使用「{{site.data.keyword.BluSoftlayer}} 基礎架構即服務 (IaaS)」雲端服務，並充分運用其安全架構。{{site.data.keyword.BluSoftlayer}} IaaS 為您的應用程式及資料提供層層重疊的多個保護層級。若為「{{site.data.keyword.Bluemix_notm}} 本端」，您藉由在公司防火牆後、自己的資料中心內管理「{{site.data.keyword.Bluemix_notm}} 本端」，而掌控實體安全並提供基礎架構。此外，{{site.data.keyword.Bluemix_notm}} 也在「平台即服務」層新增不同種類（平台、資料及應用程式）的安全功能。
 
@@ -206,7 +206,7 @@ Single Sign On 服務支援數個儲存使用者認證的身分來源：
 
 IBM Application Security Testing for {{site.data.keyword.Bluemix_notm}} 外掛程式可讓您針對 {{site.data.keyword.Bluemix_notm}} 上管理的 Web 或 Android 應用程式執行安全掃描。此外掛程式由 IBM UrbanCode™ Deploy Community 在 IBM Bluemix DevOps Services 平台上開發及支援。
 
-如需相關資訊，請造訪 [IBM Application Security Testing for Bluemix](https://developer.ibm.com/urbancode/plugindoc/ibmucd/ibm-application-security-testing-bluemix/1-0/){: new_window}。
+如需相關資訊，請造訪 [IBM Application Security Testing for Bluemix ![外部鏈結圖示](../icons/launch-glyph.svg)](https://developer.ibm.com/urbancode/plugindoc/ibmucd/ibm-application-security-testing-bluemix/1-0/){: new_window}。
 
 ### dashDB
 
@@ -222,7 +222,7 @@ Secure Gateway 服務可讓您將 {{site.data.keyword.Bluemix_notm}} 應用程�
 
 ### 安全資訊及事件管理
 
-您可以使用安全資訊及事件管理 (SIEM) 工具來分析應用程式日誌中的安全警示。其中一種這類工具是 IBM Security QRadar&reg; SIEM，其提供雲端環境中的安全智慧。如需相關資訊，請參閱 [IBM QRadar Security Intelligence Platform](http://www-01.ibm.com/support/knowledgecenter/SS42VS/welcome?lang=en){: new_window}。
+您可以使用安全資訊及事件管理 (SIEM) 工具來分析應用程式日誌中的安全警示。其中一種這類工具是 IBM Security QRadar&reg; SIEM，其提供雲端環境中的安全智慧。如需相關資訊，請參閱 [IBM QRadar Security Intelligence Platform ![外部鏈結圖示](../icons/launch-glyph.svg)](http://www-01.ibm.com/support/knowledgecenter/SS42VS/welcome?lang=en){: new_window}。
 
 ## {{site.data.keyword.Bluemix_notm}} 安全部署
 {: #security-deployment}
@@ -271,25 +271,24 @@ Secure Gateway 服務可讓您將 {{site.data.keyword.Bluemix_notm}} 應用程�
 {{site.data.keyword.Bluemix}} 提供了一個您可以信任的安全雲端平台。{{site.data.keyword.Bluemix_notm}} 規範來自於根據業界最佳安全標準（包括 ISO 27001 和 ISO 27002）建置的平台和服務。
 {:shortdesc}
 
-![歐盟 (EU) 資料保護示範條款](images/icon_eumc.png) **歐盟 (EU) 示範條款**是一種協議，用於保護從歐盟 (EU) 或歐洲經濟區 (EEA) 傳輸到第三方國家或地區的個人資料。「歐盟 (EU) 示範條款」是由位於 EU 或 EEA 的用戶（資料匯出方）與位於第三方國家或地區的 IBM 資料處理方（資料匯入方）之間所簽訂。[IBM SaaS 歐盟 (EU) 示範條款](http://www-01.ibm.com/common/ssi/cgi-bin/ssialias?subtype=ST&infotype=SA&htmlfid=KUJ12408USEN&attachment=KUJ12408USEN.PDF){: new_window}包含資料匯出方和資料匯入方的權利和責任，以及資料主體的權利。「IBM SaaS 歐盟示範條款」可確保個人資料在第三方國家或地區處理時仍能受到像在 EU 或 EEA 中一樣的保護。
+![EU 資料保護示範條款](images/icon_eumc.png) **歐盟 (EU) 示範條款**是一種協議，用於保護從歐盟 (EU) 或歐洲經濟區 (EEA) 傳輸到第三方國家或地區的個人資料。「歐盟 (EU) 示範條款」是由位於 EU 或 EEA 的用戶（資料匯出方）與位於第三方國家或地區的 IBM 資料處理方（資料匯入方）之間所簽訂。[IBM SaaS 歐盟示範條款 ![外部鏈結圖示](../icons/launch-glyph.svg)](http://www-01.ibm.com/common/ssi/cgi-bin/ssialias?subtype=ST&infotype=SA&htmlfid=KUJ12408USEN&attachment=KUJ12408USEN.PDF){: new_window} 包含資料匯出方和資料匯入方的權利和責任，以及資料主體的權利。「IBM SaaS 歐盟示範條款」可確保個人資料在第三方國家或地區處理時仍能受到像在 EU 或 EEA 中一樣的保護。
 
 針對要將源自歐洲經濟區的資料傳送到 EEA 以外國家或地區的客戶，{{site.data.keyword.Bluemix}} 以歐洲委員會及歐盟資料保護權限所核准的表單提供「歐洲示範條款」。「歐洲示範條款」向歐洲客戶保證，{{site.data.keyword.Bluemix_notm}} 支援全球每個位置的必要資料隱私保護。
 
 ![金融行業資訊系統](images/FISC.gif) 對於日本的銀行和相關金融機構，電腦系統必須具有適當的安全程序，這些程序應根據「金融行業資訊系統中心 (FISC)」安全準則。FISC 安全準則由「日本金融廳 (FSA)」、「日本央行 (BOJ)」和 FISC 貫徹實施。
-
-您可以在 [IBM Bluemix 風險意見調查結果](https://www.ibm.com/cloud-computing/jp/ja/bluemix_fisc.html){: new_window}上，找到 FISC 安全準則的 {{site.data.keyword.Bluemix_notm}} 自我評量文件（日文）。  
+ 
 
 ![ISO 27001/2](images/icon_iso27k1.png) {{site.data.keyword.Bluemix_notm}} 已通過**國際標準化組織 (ISO) 27001 和 27002 標準**的認證，這兩個標準定義了資訊安全管理程序的最佳做法。ISO 27001 是一種廣泛採用的廣域安全標準，概述資訊安全管理系統的需求。它提供系統化的方式，根據定期風險評量來管理公司及客戶資訊。**國際標準化組織 (ISO) 及國際電子技術委員會 (IEC)** 的聯合 ISO 及 IEC 子委員會已在 2013 年 9 月 25 日發佈最新標準 (ISO/IEC 27001:2013)。ISO 27001 標準根據不同組織的需求規定了應如何建立、實施和記錄「資訊安全管理系統 (ISMS)」，以及應如何實施安全性控制。ISO 27002 標準對 ISO 27001 中的每種安全控制進行了詳細的說明。ISO 27000 系列標準中包含了一個確定風險規模和評估資產價值的處理程序，旨在保護書面、口頭和電子資訊的機密性、完整性和可用性。
 
 若要達到 ISO 27001:2013 憑證，公司必須顯示它具有系統化且進行中的方式，以管理影響公司及客戶資訊機密性、完整性及可用性的資訊安全風險。此標準強調組織之「資訊安全管理系統 (ISMS)」執行效能的測量及評估，同時包括根據系統需求及其他需求的資訊安全相關控制。
 
-{{site.data.keyword.Bluemix_notm}} 經第三方安全公司審核，符合 ISO 27001 的所有需求：[Bluemix ISO 27001:2013 Certificate of Registration](ftp://public.dhe.ibm.com/cloud/bluemix/compliance/Bluemix_ISO27K1_WWCert_2016.pdf){: new_window}。
+{{site.data.keyword.Bluemix_notm}} 經第三方安全公司審核，符合 ISO 27001 的所有需求：[Bluemix ISO 27001:2013 Certificate of Registration ![外部鏈結圖示](../icons/launch-glyph.svg)](ftp://public.dhe.ibm.com/cloud/bluemix/compliance/Bluemix_ISO27K1_WWCert_2016.pdf){: new_window}。
 
 ![PCI DSS](images/icon_pci.png) **支付卡產業 (PCI) 資料安全標準 (DSS)** 是為了保護信用卡資料而設計的資訊安全標準。PCI DSS 適用於所有涉及支付卡處理的實體，包括特約商家、處理方、發卡機構及服務提供者。它也適用於儲存、處理或傳輸持卡人資料或機密鑑別資料的所有其他實體。
 
 如果您儲存或處理信用卡資料，「支付卡產業 (PCI)」相符性及網路安全就是您公司的主要考量。為了確保特約商家具有一致的標準，「支付卡產業安全標準協會」已建立 PCI 資料安全標準。這些標準納入了保護持卡人資料的最佳作法，而且經常要求第三方合格「服務評量機構 (QSA)」加以驗證。IBM 透過提供獨立 QSA 的「相符性認證」，協助客戶符合其 PCI 相符性需求。「相符性認證」可以與 SOC 2 報告及 ISO 27001 憑證一起使用，以示範基礎架構如何符合 PCI 控制項。
 
-{{site.data.keyword.Bluemix}} 使用核准的「安全評量機構 (QSA)」來完成年度 PCI DSS 評量。{{site.data.keyword.Bluemix_notm}} 已檢閱為符合 [Bluemix PCI DSS AOC](ftp://public.dhe.ibm.com/cloud/bluemix/compliance/IBM_Bluemix_PCI){: new_window} 所概述的 PCI DSS 3.1 版「服務提供者層次 1」的標準。如需符合 {{site.data.keyword.Bluemix_notm}} 環境之 PCI DSS 的相關資訊及協助，請利用[與我們聯絡](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs){: new_window}來聯絡業務代表。
+{{site.data.keyword.Bluemix}} 使用核准的「安全評量機構 (QSA)」來完成年度 PCI DSS 評量。{{site.data.keyword.Bluemix_notm}} 已檢閱為符合 [Bluemix PCI DSS AOC ![外部鏈結圖示](../icons/launch-glyph.svg)](ftp://public.dhe.ibm.com/cloud/bluemix/compliance/IBM_Bluemix_PCI.pdf){: new_window} 所概述的 PCI DSS 3.1 版「服務提供者層次 1」的標準。如需符合 {{site.data.keyword.Bluemix_notm}} 環境之 PCI DSS 的相關資訊及協助，請利用[與我們聯絡 ![外部鏈結圖示](../icons/launch-glyph.svg)](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs){: new_window} 來聯絡業務代表。
 
 ![SSAE16 SOC1/2/3](images/icon_aicpa.png) **服務組織控制 (SOC)** 報告定義了如何對服務組織評估與安全性、可用性、處理完整性、機密性和隱私性相關的主要內部控制做法。這些報告是使用「美國註冊會計師協會 (AICPA) 手冊」產生的，包含下列各項目： 
   * 組織監督
@@ -297,12 +296,12 @@ Secure Gateway 服務可讓您將 {{site.data.keyword.Bluemix_notm}} 應用程�
   * 內部組織治理和風險管理程序
   * 法規監督
  
-{{site.data.keyword.Bluemix_notm}} 提供 SOC 1、SOC 2 及 SOC 3 報告。如需相關資訊，請聯絡 [{{site.data.keyword.Bluemix_notm}} 銷售](mailto:bmxcert1@us.ibm.com){:new_window}團隊。 
+{{site.data.keyword.Bluemix_notm}} 提供 SOC 1、SOC 2 及 SOC 3 報告。如需相關資訊，請聯絡 [{{site.data.keyword.Bluemix_notm}} 銷售 ![外部鏈結圖示](../icons/launch-glyph.svg)](mailto:bmxcert1@us.ibm.com){:new_window} 團隊。 
 
 
 ![HIPAA](images/icon_hipaa.png)「醫療保險轉移和責任法 (HIPAA)」是美國國會在 1996 年所頒布，保護員工失業後的醫療保險範圍。HIPAA 是由美國民權辦公室及美國衛生及公共服務部所制定並施行。HIPAA 包含 1996 法案的條例，以及 2009 年健康資訊技術促進經濟和臨床健康法 (HITECH) 的隱私需求。{{site.data.keyword.Bluemix_notm}} 的資料中心或服務提供者端符合所有 HIPAA 需求。
 
-如需達到、認證及維護 Bluemix 環境之 HIPAA 相符性的相關資訊或協助，請聯絡 {{site.data.keyword.Bluemix_notm}} [銷售](mailto:cloudplatform_compliance@us.ibm.com){:new_window}團隊。
+如需達到、認證及維護 Bluemix 環境之 HIPAA 相符性的相關資訊或協助，請聯絡 {{site.data.keyword.Bluemix_notm}} [銷售 ![外部鏈結圖示](../icons/launch-glyph.svg)](mailto:cloudplatform_compliance@us.ibm.com){:new_window} 團隊。
 
 
 ![ISO 27017](images/icon_ISO27017.png) ISO/IEC 27017:2015 提供適用於佈建及使用雲端服務的資訊安全控制準則。此外，它也提供雲端服務供應商及雲端服務客戶的實作指引。ISO 27017 提供 ISO/IEC 27002 中所指定之相關控制的實作指引，以及雲端服務特有的其他控制及指引。
@@ -347,5 +346,5 @@ Secure Gateway 服務可讓您將 {{site.data.keyword.Bluemix_notm}} 應用程�
 ## 相關鏈結
 {: #general}
 
-* [IBM SaaS 安全](http://www.ibm.com/cloud-computing/built-on-cloud/saas-security)
+* [IBM SaaS Security ![外部鏈結圖示](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/built-on-cloud/saas-security){: new_window}
 * [開始使用 Single Sign On](/docs/services/SingleSignOn/index.html)

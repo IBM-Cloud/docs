@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated:  "2016-11-16"
+  years: 2016, 2017
+lastupdated:  "2017-01-17"
 
 ---
 
@@ -54,9 +54,7 @@ Après avoir créé une instance du service
 Application, vous pouvez commencer à générer votre canal d'accès mobile en
 procédant comme suit :
 
-1.  Connectez-vous à un service
-{{site.data.keyword.dashdbshort}}: Enterprise Transactional
-existant sur {{site.data.keyword.Bluemix_notm}}.
+1.  Connectez-vous à un service {{site.data.keyword.dashdbshort}} for Transactions existant sur {{site.data.keyword.Bluemix_notm}}.
 
     1.  Sélectionnez l'{{site.data.keyword.Bluemix_notm}} `organisation` dans laquelle l'instance de service {{site.data.keyword.dashdbshort_notm}} existe.
 
@@ -68,13 +66,11 @@ Name`) et les données d'identification
 pour la connexion à l'instance de service
 {{site.data.keyword.dashdbshort_notm}}.
 
-    + Testez la connexion à l'instance de service
-{{site.data.keyword.dashdbshort_notm}}: Enterprise Transactional
-sélectionnée en cliquant sur **Test Connection**.
+    + Testez la connexion à l'instance de service {{site.data.keyword.dashdbshort_notm}} for Transactions sélectionnée en cliquant sur
+**Tester la connexion**.
 
-    + Cliquez sur **Add**, puis sur
-**Continue** dans la fenêtre en incrustation vous demandant
-de confirmer la sélection du service {{site.data.keyword.dashdbshort_notm}}. Cela permet de créer les tables requises dans l'instance de service de base de
+    + Cliquez sur **Ajouter**, puis sur **Continuer** dans la fenêtre en incrustation vous demandant de confirmer la sélection du service
+{{site.data.keyword.dashdbshort_notm}} for Transactions. Cela permet de créer les tables requises dans l'instance de service de base de
 données {{site.data.keyword.dashdbshort_notm}} configurée.
 
     **Remarque :** Une fois que vous avez ajouté une connexion {{site.data.keyword.dashdbshort_notm}} à l'instance {{site.data.keyword.mobilefoundation_short}}, vous ne pouvez plus la modifier.
@@ -95,7 +91,112 @@ Configuration**. Pour plus d'informations, voir
 [Paramétrage d'une
 configuration avancée](c_using_mfs_p2.html#using_mfs_advanced_p2).
 
-Accédez à la page [Using the Mobile Foundation service to set up MobileFirst Server<!-- on IBM Containers-->](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/bluemix/using-mobile-foundation/) pour vous initier à {{site.data.keyword.mobilefoundation_short}}.
+## Initiation au plan {{site.data.keyword.mobilefoundation_short}}: Developer Pro
+
+Après avoir créé une instance du service {{site.data.keyword.mobilefoundation_short}}: Developer Pro, vous pouvez commencer à construire votre
+canal d'accès mobile en procédant comme suit.
+
+  1.  Connectez-vous à un service {{site.data.keyword.dashdbshort}} for Transactions existant sur {{site.data.keyword.Bluemix_notm}}.
+
+      1.  Sélectionnez l'{{site.data.keyword.Bluemix_notm}} `organisation` dans laquelle l'instance de service {{site.data.keyword.dashdbshort_notm}} existe.
+
+      + Depuis la liste des espaces disponibles dans `Organisation`, sélectionnez l'élément `Espace` {{site.data.keyword.Bluemix_notm}} dans lequel se trouve l'instance de service {{site.data.keyword.dashdbshort_notm}},
+
+      + Sélectionnez également le nom du service (`Service
+Name`) et les données d'identification
+(`Credentials`) {{site.data.keyword.dashdbshort_notm}}
+pour la connexion à l'instance de service
+{{site.data.keyword.dashdbshort_notm}}.
+
+      + Testez la connexion à l'instance de service {{site.data.keyword.dashdbshort_notm}} for Transactions sélectionnée en cliquant sur
+**Tester la connexion**.
+
+      + Cliquez sur **Ajouter**, puis sur **Continuer** dans la fenêtre en incrustation vous demandant de confirmer la
+sélection du service {{site.data.keyword.dashdbshort_notm}} for Transactions. Cela permet de créer les tables requises dans l'instance de service de base de
+données {{site.data.keyword.dashdbshort_notm}} configurée.
+
+      **Remarque :** Une fois que vous avez ajouté une connexion {{site.data.keyword.dashdbshort_notm}} à l'instance {{site.data.keyword.mobilefoundation_short}}, vous ne pouvez plus la modifier.
+
+  2.  Créez et démarrez le serveur.
+
+      * Pour créer une instance de serveur
+{{site.data.keyword.mobilefirst_notm}} avec la configuration par
+défaut, cliquez sur **Start Basic Server**.
+
+      * Cette option affecte les paramètres suivants à un serveur
+{{site.data.keyword.mfserver_long_notm}} :
+
+          - Noeud unique avec 1 Go de mémoire. Cette taille est
+suffisante pour des activités de développement et des activités de
+test sommaires et pour des charges de travail à faible échelle.
+
+          -	Le `nom_d'utilisateur` et le
+`mot_de_passe` sont générés automatiquement pour
+vous. Vous pouvez y accéder une fois que le
+serveur est en opération.
+
+      * Pour créer une instance de serveur
+{{site.data.keyword.mobilefirst_notm}} avec la configuration avancée de
+la topologie, de la sécurité et d'autres paramètres de configuration du
+serveur, cliquez sur **Start Server with Advanced
+Configuration**. Pour
+plus d'informations, voir
+[Paramétrage
+d'une configuration avancée](c_using_mfs_p3.html#using_mfs_advanced_p3).
+
+## Initiation au plan {{site.data.keyword.mobilefoundation_short}}: Professional Per Capacity
+
+Après avoir créé une instance du service {{site.data.keyword.mobilefoundation_short}}: Professional Per Capacity, vous pouvez commencer à construire votre
+canal d'accès mobile en procédant comme suit. 
+
+  1.  Connectez-vous à un service {{site.data.keyword.dashdbshort}} for Transactions existant sur {{site.data.keyword.Bluemix_notm}}.
+
+      1.  Sélectionnez l'{{site.data.keyword.Bluemix_notm}} `organisation` dans laquelle l'instance de service {{site.data.keyword.dashdbshort_notm}} existe.
+
+      + Depuis la liste des espaces disponibles dans `Organisation`, sélectionnez l'élément `Espace` {{site.data.keyword.Bluemix_notm}} dans lequel se trouve l'instance de service {{site.data.keyword.dashdbshort_notm}},
+
+      + Sélectionnez également le nom du service (`Service
+Name`) et les données d'identification
+(`Credentials`) {{site.data.keyword.dashdbshort_notm}}
+pour la connexion à l'instance de service
+{{site.data.keyword.dashdbshort_notm}}.
+
+      + Testez la connexion à l'instance de service {{site.data.keyword.dashdbshort_notm}} for Transactions sélectionnée en cliquant sur
+**Tester la connexion**.
+
+      + Cliquez sur **Ajouter**, puis sur **Continuer** dans la fenêtre en incrustation vous demandant de confirmer la
+sélection du service {{site.data.keyword.dashdbshort_notm}} for Transactions. Cela permet de créer les tables requises dans l'instance de service de base de
+données {{site.data.keyword.dashdbshort_notm}} configurée.
+
+      **Remarque :** Une fois que vous avez ajouté une connexion {{site.data.keyword.dashdbshort_notm}} à l'instance {{site.data.keyword.mobilefoundation_short}}, vous ne pouvez plus la modifier.
+
+  2.  Créez et démarrez le serveur.
+
+      * Pour créer une instance de serveur
+{{site.data.keyword.mobilefirst_notm}} avec la configuration par
+défaut, cliquez sur **Start Basic Server**.
+
+      * Cette option affecte les paramètres suivants à un serveur
+{{site.data.keyword.mfserver_long_notm}} :
+          -  2 noeuds avec 1 Go de mémoire chacun. Cette taille
+convient pour des activités de développement et des activités de
+test sommaires et pour des charges de travail à faible échelle.
+
+          -	Le `nom_d'utilisateur` et le
+`mot_de_passe` sont générés automatiquement pour
+vous. Vous pouvez y accéder une fois que le
+serveur est en opération.
+
+      * Pour créer une instance de serveur
+{{site.data.keyword.mobilefirst_notm}} avec la configuration avancée de
+la topologie, de la sécurité et d'autres paramètres de configuration du
+serveur, cliquez sur **Start Server with Advanced
+Configuration**. Pour
+plus d'informations, voir
+[Paramétrage
+d'une configuration avancée](c_using_mfs_p4.html#using_mfs_advanced_p4).
+
+Visitez le site [Using the Mobile Foundation service to set up MobileFirst Server<!-- on IBM Containers--> ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/bluemix/using-mobile-foundation/ "Icône de lien externe"){: new_window} pour vous familiariser avec {{site.data.keyword.mobilefoundation_short}}.
 
 ##  Limitations connues
 
@@ -108,6 +209,5 @@ Accédez à la page [Using the Mobile Foundation service to set up MobileFirst S
 ## Liens connexes
 {: #general}
 
-*	[Documentation
-du produit IBM MobileFirst Platform Foundation V8.0.0](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html){: new_window}
-*	[IBM MobileFirst Platform Developer Center](https://mobilefirstplatform.ibmcloud.com){: new_window}
+*	[Documentation du produit IBM MobileFirst Platform Foundation V8.0.0![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html "Icône de lien externe"){: new_window}
+*	[IBM MobileFirst Platform Developer Center ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://mobilefirstplatform.ibmcloud.com "Icône de lien externe"){: new_window}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-13"
+  years: 2016, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -23,20 +23,20 @@ lastupdated: "2016-10-13"
 {{site.data.keyword.Bluemix_notm}} 모바일 대시보드에서 생성된 코드에 대한 작업을 수행할 경우 다음 개발자 도구가 필요합니다. 
 
 #### Android
-* [Android Studio 2.2](https://developer.android.com/studio)
-	* 최신 [Android 7.0](https://www.android.com/versions/nougat-7-0/) 런타임을 설치하십시오. 
+* [Android Studio 2.2 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.android.com/studio "외부 링크 아이콘")
+	* 최신 [Android 7.0 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.android.com/versions/nougat-7-0/ "외부 링크 아이콘") 런타임을 설치하십시오. 
 
 #### iOS
-* [Xcode 8.0](https://developer.apple.com/xcode/)(권장)
-	* 최신 [iOS 10](http://www.apple.com/ios/ios-10/) 런타임을 설치하십시오. 
-* [Homebrew](http://brew.sh/)
+* [Xcode 8.0 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.apple.com/xcode/ "외부 링크 아이콘")(권장)
+	* 최신 [iOS 10 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.apple.com/ios/ios-10/ "외부 링크 아이콘") 런타임을 설치하십시오. 
+* [Homebrew ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://brew.sh/ "외부 링크 아이콘")
 	* Apple 개발자가 기타 도구와 런타임(예: CocoaPods, Carthage)을 설치할 수 있도록 지원하는 명령행 도구입니다. 
-* iOS SDK 종속 항목 설치에 필요한 [CocoaPods](https://cocoapods.org/) 종속 항목 관리자. 최신 버전을 사용하십시오. 
+* iOS SDK 종속 항목 설치에 필요한 [CocoaPods ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://cocoapods.org/ "외부 링크 아이콘") 종속 항목 관리자. 최신 버전을 사용하십시오. 
 
 	```
 	$ sudo gem install cocoapods --pre
 	```
-* Watson Developer Cloud SDK 설치에 필요한 [Carthage](https://github.com/Carthage/Carthage) 종속 항목 관리자. 
+* Watson Developer Cloud SDK 설치에 필요한 [Carthage ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/Carthage/Carthage "외부 링크 아이콘") 종속 항목 관리자. 
 
 	```
 	$ brew install carthage
@@ -50,5 +50,5 @@ lastupdated: "2016-10-13"
 	$ brew install Node5
 	```
 
-* [Bluemix CLI 도구](http://clis.ng.bluemix.net/ui/home.html).
+* [Bluemix CLI 도구 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://clis.ng.bluemix.net/ui/home.html "외부 링크 아이콘").
 Bluemix를 사용하여 명령행 인터페이스에서 Cloud Foundry 런타임을 간편하게 배치하는 명령행 도구입니다.   

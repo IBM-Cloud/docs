@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Messaggi di errore del servizio {{site.data.keyword.mobilepushshort}}
 {: #errors}
-Ultimo aggiornamento: 07 dicembre 2016
+Ultimo aggiornamento: 16 gennaio 2017
 {: .last-updated}
 
 
@@ -33,7 +33,7 @@ Per ottenere ulteriori informazioni su un errore, cerca il relativo codice di er
 ## FPWSE0001E
 {: #error_fpwse0001e}
 
-**Spiegazione**: la  risorsa che stai tentando di sottoporre a query, come una tag o sottoscrizione, non è disponibile sul server. 
+**Spiegazione**: la  risorsa che stai tentando di sottoporre a query, come una tag o sottoscrizione, non è disponibile sul server.
 
 **Risposta utente**: crea la risorsa indicata nel messaggio. In alternativa, fornisci l'identificativo corretto per eseguire la query della risorsa.
 
@@ -54,7 +54,7 @@ Per ottenere ulteriori informazioni su un errore, cerca il relativo codice di er
         di richiamare le credenziali del servizio APNS (Apple Push Notification Service) prima della loro
         configurazione.
 
-**Risposta utente**: assicurati che il servizio {{site.data.keyword.mobilepushshort}} sia stato configurato con certificati di sicurezza validi per APNs. Per ulteriori informazioni, consulta [Configurazione delle credenziali per APNs](t_push_provider_ios.html){: new_window}.
+**Risposta utente**: assicurati che il servizio {{site.data.keyword.mobilepushshort}} sia stato configurato con certificati di sicurezza validi per APNs. Per ulteriori informazioni, vedi [Configurazione delle credenziali per APNs ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](t_push_provider_ios.html "Icona link esterno"){: new_window}.
 
 
 ## FPWSE0004E
@@ -74,7 +74,7 @@ Per ottenere ulteriori informazioni su un errore, cerca il relativo codice di er
         manca un token del dispositivo.
 
 
-**Risposta utente**: esamina il messaggio per individuare quale valore di proprietà risulta non valido o mancante, quindi fornisci le informazioni richieste. 
+**Risposta utente**: esamina il messaggio per individuare quale valore di proprietà risulta non valido o mancante, quindi fornisci le informazioni richieste.
 
 
 
@@ -84,7 +84,7 @@ Per ottenere ulteriori informazioni su un errore, cerca il relativo codice di er
 **Spiegazione**: il corpo JSON della richiesta contiene dei parametri non riconosciuti dal server {{site.data.keyword.mobilepushshort}}.
 
 
-**Risposta utente**: verifica che il corpo JSON nella richiesta rispetti il formato della richiesta previsto dal server {{site.data.keyword.mobilepushshort}}. Per ulteriori informazioni, vedi [API REST](https://mobile.{DomainName}/imfpush/).
+**Risposta utente**: verifica che il corpo JSON nella richiesta rispetti il formato della richiesta previsto dal server {{site.data.keyword.mobilepushshort}}. Per ulteriori informazioni, vedi [API REST ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://mobile.{DomainName}/imfpush/ "Icona link esterno"){: new_window}.
 
 
 
@@ -94,7 +94,7 @@ Per ottenere ulteriori informazioni su un errore, cerca il relativo codice di er
 **Spiegazione**: l'URL della richiesta ha una stringa di query con parametri non riconosciuti. Ad esempio, se la richiesta di eliminazione della sottoscrizione ha parametri diversi da deviceId e tagName, si potrebbe verificare questo errore.
 
 
-**Risposta utente**: verifica che il corpo JSON nella richiesta rispetti il formato della richiesta previsto dal server {{site.data.keyword.mobilepushshort}}. Per ulteriori informazioni, vedi [API REST](https://mobile.{DomainName}/imfpush/).
+**Risposta utente**: verifica che il corpo JSON nella richiesta rispetti il formato della richiesta previsto dal server {{site.data.keyword.mobilepushshort}}. Per ulteriori informazioni, vedi [API REST ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://mobile.{DomainName}/imfpush/ "Icona link esterno"){: new_window}.
 
 
 
@@ -104,7 +104,7 @@ Per ottenere ulteriori informazioni su un errore, cerca il relativo codice di er
 **Spiegazione **: l'URL della richiesta ha una stringa di query in cui mancano dei parametri richiesti. Ad esempio, i parametri deviceId e tagName potrebbero non essere presenti nella richiesta di eliminazione della sottoscrizione.
 
 
-**Risposta utente**: verifica che il corpo JSON nella richiesta rispetti il formato della richiesta previsto dal server {{site.data.keyword.mobilepushshort}}. Per ulteriori informazioni, vedi [API REST](https://mobile.{DomainName}/imfpush/).
+**Risposta utente**: verifica che il corpo JSON nella richiesta rispetti il formato della richiesta previsto dal server {{site.data.keyword.mobilepushshort}}. Per ulteriori informazioni, vedi [API REST ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://mobile.{DomainName}/imfpush/ "Icona link esterno"){: new_window}.
 
 
 
@@ -158,7 +158,7 @@ seguenti condizioni:
 ## FPWSE0013E
 {: #error_fpwse0013e}
 
-**Spiegazione**: il payload JSON nella richiesta non è valido. 
+**Spiegazione**: il payload JSON nella richiesta non è valido.
 
 
 **Risposta utente**: assicurati che il payload JSON sia valido.

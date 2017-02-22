@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-14"
+  years: 2015, 2017
+lastupdated: "2017-01-17"
 
 ---
 # Ejemplos
@@ -15,36 +15,36 @@ Los siguientes ejemplos muestran cómo utilizar los servicios {{site.data.keywor
 <!-- Android -->
 <p>Android</p>
 <ul>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld">HelloBluemix</a></li>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush" rel="external" title="(Se abre en un nuevo separador o ventana)" target="_blank">HelloPush</a>
+<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloworld" target="_blank">HelloBluemix <img src="../icons/launch-glyph.svg" alt="icono de enlace externo"></a></li>
+<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush" target="_blank">HelloPush <img src="../icons/launch-glyph.svg" alt="icono de enlace externo"></a>
 </li>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloauthentication" rel="external" title="(Se abre en un nuevo separador o ventana)" target="_blank">HelloAuthentication</a>
+<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-android-helloauthentication" target="_blank">HelloAuthentication <img src="../icons/launch-glyph.svg" alt="icono de enlace externo"></a>
 </li>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellotodo" rel="external" title="(Se abre en un nuevo separador o ventana)" target="_blank">Hello ToDo</a></li>
+<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellotodo" target="_blank">Hello ToDo <img src="../icons/launch-glyph.svg" alt="icono de enlace externo"></a></li>
 </ul>
 
 <!-- iOS -->
 <td valign="top">
 <p>iOS</p>
 <ul>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-hellobluemix">HelloBluemix</a></li>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-hellopush" rel="external" title="(Se abre en un nuevo separador o ventana)" target="_blank">HelloPush</a>
+<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-hellobluemix" target="_blank">HelloBluemix <img src="../icons/launch-glyph.svg" alt="icono de enlace externo"></a></li>
+<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-hellopush" target="_blank">HelloPush <img src="../icons/launch-glyph.svg" alt="icono de enlace externo"></a>
 </li>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-helloauthentication" rel="external" title="(Se abre en un nuevo separador o ventana)" target="_blank">HelloAuthentication</a>
+<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-helloauthentication" target="_blank">HelloAuthentication <img src="../icons/launch-glyph.svg" alt="icono de enlace externo"></a>
 </li>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-hellotodo" rel="external" title="(Se abre en un nuevo separador o ventana)" target="_blank">Hello ToDo</a></li>
+<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-swift-hellotodo" rel="external" target="_blank">Hello ToDo <img src="../icons/launch-glyph.svg" alt="icono de enlace externo"></a></li>
 </ul>
 
 <!-- Cordova -->
 <td valign="top">
 <p>Cordova</p> 
 <ul>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloworld">HelloBluemix</a></li>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-hellopush" rel="external" title="(Se abre en un nuevo separador o ventana)" target="_blank">HelloPush</a>
+<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloworld" target="_blank">HelloBluemix <img src="../icons/launch-glyph.svg" alt="icono de enlace externo"></a></li>
+<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-hellopush" target="_blank">HelloPush <img src="../icons/launch-glyph.svg" alt="icono de enlace externo"></a>
 </li>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloauthentication" rel="external" title="(Se abre en un nuevo separador o ventana)" target="_blank">HelloAuthentication</a>
+<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloauthentication" target="_blank">HelloAuthentication <img src="../icons/launch-glyph.svg" alt="icono de enlace externo"></a>
 </li>
-<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-hellotodo/" rel="external" title="(Se abre en un nuevo separador o ventana)" target="_blank">Hello ToDo</a></li>
+<li><a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-hellotodo/" target="_blank">Hello ToDo <img src="../icons/launch-glyph.svg" alt="icono de enlace externo"></a></li>
 </ul>
 </td>
 </tr>

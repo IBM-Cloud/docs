@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-12"
+  years: 2016, 2017
+lastupdated: "2017-02-03"
 
 ---
 
@@ -20,7 +20,7 @@ To use {{site.data.keyword.iot_short}} features such as rules and actions, you m
 
 **Important:** Schemas are required to use rules and actions. For information, see [Cloud Analytics](cloud_analytics.html#rules).
 
-**Important:** The analytics features are merged in from the {{site.data.keyword.iotrtinsights_full}} service. If your {{site.data.keyword.iot_short_notm}} organization is used as a data source for an existing {{site.data.keyword.iotrtinsights_short}} instance, Cloud and Edge Analytics is not enabled until after the existing {{site.data.keyword.iotrtinsights_short}} instances have been migrated. Continue to use the {{site.data.keyword.iotrtinsights_short}} dashboard for your analytics needs until the migration is complete. For more information, see the [IBM Watson IoT Platform blog](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} on IBM developerWorks and your existing {{site.data.keyword.iotrtinsights_short}} instance dashboards.  
+**Important:** The analytics features are merged in from the {{site.data.keyword.iotrtinsights_full}} service. If your {{site.data.keyword.iot_short_notm}} organization is used as a data source for an existing {{site.data.keyword.iotrtinsights_short}} instance, Cloud and Edge Analytics is not enabled until after the existing {{site.data.keyword.iotrtinsights_short}} instances have been migrated. Continue to use the {{site.data.keyword.iotrtinsights_short}} dashboard for your analytics needs until the migration is complete. For more information, see the [IBM Watson IoT Platform blog ![External link icon](../../icons/launch-glyph.svg)](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} on IBM developerWorks and your existing {{site.data.keyword.iotrtinsights_short}} instance dashboards.  
 
 ## Adding a device schema
 {: #add_schema}

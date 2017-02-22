@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,10 +12,10 @@ copyright:
 
 # Abilitazione di notifiche basate sulle tag
 {: #tag_based_notifications}
-Ultimo aggiornamento: 06 dicembre 2016
+Ultimo aggiornamento: 16 gennaio 2017
 {: .last-updated}
 
-Le notifiche basate sulle tag sono messaggi destinati a tutti i dispositivi che hanno sottoscritto una specifica tag. 
+I messaggi di notifica basata su tag sono destinati a tutti i dispositivi sottoscritti una specifica tag. 
 
 Puoi definire le tag e quindi utilizzarle per
                         inviare e ricevere messaggi. Devi prima creare le tag per l'applicazione, impostare

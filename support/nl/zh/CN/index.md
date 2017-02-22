@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
   
-lastupdated: "2016-10-22"
+lastupdated: "2017-01-02"
 
 ---
 
@@ -32,7 +32,7 @@ lastupdated: "2016-10-22"
 {: #using-avatar}
 通过“支持”窗口小部件，可获取帮助并提供反馈。
 
-要打开“支持”窗口小部件，请登录到 {{site.data.keyword.Bluemix_notm}} 控制台。在菜单栏中，单击**支持** &gt; **获取帮助**来查找问题的答案。在显示的页面上，在搜索字段中键入问题。这会显示来自 {{site.data.keyword.Bluemix_notm}} 文档和 Stack Overflow 中的答案。此页面还提供了多个选项，用于将问题发布到 Stack Overflow 或通过单击**取得联系**开具凭单。
+要打开“支持”窗口小部件，请登录到 {{site.data.keyword.Bluemix_notm}} 控制台。在菜单栏中，单击**支持** &gt; **获取帮助**来查找问题的答案。在显示的页面上，在搜索字段中键入问题。这会显示来自 {{site.data.keyword.Bluemix_notm}} 文档和 Stack Overflow 中的答案。此页面还提供了多个选项，用于将问题发布到 Stack Overflow 或通过单击**取得联系**开具凭单。虽然使用支持窗口小部件是获取支持的首选方法，但如果无法登录到 Bluemix，那么也可以使用[获取帮助](https://support.ng.bluemix.net/gethelp/)页面来提交凭单。
 
 ### 使用链接帐户的支持窗口小部件
 {: #using-avatar-linked}
@@ -44,6 +44,7 @@ lastupdated: "2016-10-22"
 * 可以向 IBM User Voice 提交构想。
 * 可以通过致电或查找销售代表，或者链接到“查找销售代表”表单来联系销售人员。
 * 可以与 Twitter 上的 **@IBMBluemixHelp** 进行连接，以改善您的 Bluemix 体验。
+* 虽然使用支持窗口小部件是获取支持的首选方法，但如果无法登录到 Bluemix，那么也可以使用[获取帮助](https://support.ng.bluemix.net/gethelp/)页面来提交凭单。
 
 
 
@@ -58,8 +59,8 @@ lastupdated: "2016-10-22"
 
 Stack Overflow 和 dW Answers 这两个论坛都针对 Bluemix 问题提供了丰富的可供搜索的答案。如果找不到现有答案，请提出新问题。 
 
-  * 转至 [Stack Overflow](http://stackoverflow.com/questions/tagged/ibm-bluemix){: new_window}，以提出有关使用 Bluemix 平台和服务开发应用程序的技术问题。
-  * 转至 [dW Answers](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window}，以提出有关 {{site.data.keyword.Bluemix_notm}} 产品以及入门指示信息的问题。
+  * 转至 [Stack Overflow ![外部链接图标](../icons/launch-glyph.svg)](http://stackoverflow.com/questions/tagged/ibm-bluemix){: new_window}，以提出有关使用 Bluemix 平台和服务开发应用程序的技术问题。
+  * 转至 [dW Answers ![外部链接图标](../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window}，以提出有关 {{site.data.keyword.Bluemix_notm}} 产品以及入门指示信息的问题。
 
 
 您还可以通过完成以下步骤，在 Stack Overflow 中直接从“支持”窗口小部件提出问题：
@@ -90,7 +91,7 @@ Stack Overflow 和 dW Answers 这两个论坛都针对 Bluemix 问题提供了�
 可以通过选择以下两个选项之一来找到“状态”页面：
 
   * 登录到 {{site.data.keyword.Bluemix_notm}} 控制台。在菜单栏中，单击**支持**，然后单击**状态**。检查列出的资源中是否存在 ![某些问题](images/some_issues.svg) 图标。此图标可能指示有中断情况。
-  * 直接通过 [IBM {{site.data.keyword.Bluemix_notm}} - System Status](http://ibm.biz/bluemixstatus){: new_window} 进行访问。
+  * 直接通过 [IBM {{site.data.keyword.Bluemix_notm}} - System Status ![外部链接图标](../icons/launch-glyph.svg)](http://ibm.biz/bluemixstatus){: new_window} 进行访问。
 
 
 ### 预订 RSS 订阅源
@@ -108,12 +109,12 @@ Stack Overflow 和 dW Answers 这两个论坛都针对 Bluemix 问题提供了�
 	有关更多信息，请参阅阅读器的**帮助**部分。 	   
 
 通过 Web 浏览器插件可以使用其他阅读 RSS 订阅源的方法，如下所示： 
-  * Chrome 的 [RSS 订阅源](http://feeder.co/){: new_window}阅读器
-  * Firefox 的 [Brief](https://addons.mozilla.org/en-US/firefox/addon/brief/){: new_window} 附加组件
+  * Chrome 的 [RSS 订阅源 ![外部链接图标](../icons/launch-glyph.svg)](http://feeder.co/){: new_window} 阅读器
+  * Firefox 的 [Brief ![外部链接图标](../icons/launch-glyph.svg)](https://addons.mozilla.org/en-US/firefox/addon/brief/){: new_window} 附加组件
 
 如下所示的新源也会提供阅读 RSS 订阅源的方法：
-  * [Feedly](http://www.feedly.com/){: new_window} 
-  * [G2reader](http://www.g2reader.com/en/){: new_window}
+  * [Feedly ![外部链接图标](../icons/launch-glyph.svg)](http://www.feedly.com/){: new_window} 
+  * [G2reader ![外部链接图标](../icons/launch-glyph.svg)](http://www.g2reader.com/en/){: new_window}
 
 您还可以通过第三方服务自动发送电子邮件来通知每个 RSS 更新。以下列表提供了一些第三方服务示例：
 
@@ -140,12 +141,12 @@ Stack Overflow 和 dW Answers 这两个论坛都针对 Bluemix 问题提供了�
   * 检查即将开始的维护时段
 
 	通过使用以下某个选项，检查状态页面上发布的即将开始的维护时段，至少每 24 小时检查一次：
-	  * 直接浏览到[状态](http://ibm.biz/bluemixstatus){: new_window}页面
+	  * 直接浏览到 [Status ![外部链接图标](../icons/launch-glyph.svg)](http://ibm.biz/bluemixstatus){: new_window} 页面
 	  * 使用 RSS 订阅源或 RSS-to-email 转发器
 
   * 检查当前维护时段或进行中事件
 
-	如果您怀疑 {{site.data.keyword.Bluemix_notm}} 未按预期运作，请检查状态页面上的当前维护时段或进行中事件。要报告尚未在状态页面上列出的事件，请通过菜单栏上的**支持**菜单项或 [IBM Bluemix 支持](https://support.eu-gb.bluemix.net/gethelp/){: new_window}帮助页面来开具支持凭单。
+	如果您怀疑 {{site.data.keyword.Bluemix_notm}} 未按预期运作，请检查状态页面上的当前维护时段或进行中事件。要报告尚未在状态页面上列出的事件，请通过菜单栏上的**支持**菜单项或 [IBM Bluemix 支持 ![外部链接图标](../icons/launch-glyph.svg)](https://support.eu-gb.bluemix.net/gethelp/){: new_window} 帮助页面来开具支持凭单。
 
   * 利用多个 {{site.data.keyword.Bluemix_notm}} 区域
 
@@ -178,10 +179,12 @@ Stack Overflow 和 dW Answers 这两个论坛都针对 Bluemix 问题提供了�
 级别 | 免费 |  基本 | 标准 | 高级
 --- | --- | --- | --- | --- |
 描述 | 支持所有 Bluemix 试用客户。  |  支持非生产环境或无需传统严重性和响应时间的工作负载。 | 支持具有有限数量的业务关键型应用程序的环境。{{site.data.keyword.Bluemix_notm}} Dedicated 和 {{site.data.keyword.Bluemix_notm}} Local 客户会获得标准支持。 | 支持对 {{site.data.keyword.Bluemix_notm}} 具有战略依赖关系的任务关键型环境。
-高严重性支持 |  不适用 | 不适用 | 已包含 | 包含的
-支持语言 | 英语 | 英语 | 英语 | 英语
+严重性 1-4 支持 |  不适用 | 不适用 | 已包含 | 包含的
+支持语言 | 英语 | 英语 | 英语、日语 | 英语、日语
 分配的客户成功经理 (CSM) | 不包含 | 不包含 | 不包含 | 包含：<br> 8 小时/周
 {: caption="Table 1. Support levels" caption-side="top"}
+
+**重要事项：**日语支持从上午 9 点到下午 5 点，适用于严重性为 2-4 的凭单。社区和第三方服务不包含在内。
 
 ### 开具支持凭单
 {: #open-ticket}
@@ -193,10 +196,10 @@ Stack Overflow 和 dW Answers 这两个论坛都针对 Bluemix 问题提供了�
 如果问题不是因中断而引起的，请使用以下某个选项来开具支持凭单：
 
   * 在“支持”窗口小部件中，单击**获取帮助**。在显示的页面上，单击**取得联系**。填写表单，指出您需要技术支持帮助您解决的问题。
-  * 使用 [IBM {{site.data.keyword.Bluemix_notm}} 支持](http://ibm.biz/bluemixsupport){: new_window}帮助页面。可以提交有关销售、记帐、IBM 标识和登录以及技术支持问题的凭单。有关技术支持问题，可以在单击**技术支持**后，进一步选择技术组。例如，如果需要有关 Cloud Foundry 应用程序、OpenWhisk、Containers、Virtual Servers 或裸机服务器的帮助，可以选择**应用程序服务**。如果需要有关特定服务的帮助，请选择相应的服务类别。要确定服务所属的类别，请查看导航窗格中的[服务](/docs/services/index.html){: new_window}下的类别。  
-  * 在 [IBM Client Success Portal](https://support.ibmcloud.com){: new_window} 中。登录到该门户网站后，单击**开具凭单**，然后填写支持表单。 
+  * 使用 [IBM {{site.data.keyword.Bluemix_notm}} 支持 ![外部链接图标](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window} 帮助页面。可以提交有关销售、记帐、IBM 标识和登录以及技术支持问题的凭单。有关技术支持问题，可以在单击**技术支持**后，进一步选择技术组。例如，如果需要有关 Cloud Foundry 应用程序、OpenWhisk、Containers、Virtual Servers 或裸机服务器的帮助，可以选择**应用程序服务**。如果需要有关特定服务的帮助，请选择相应的服务类别。要确定服务所属的类别，请查看导航窗格中的[服务](/docs/services/index.html)下的类别。  
+  * 在 [IBM Client Success Portal ![外部链接图标](../icons/launch-glyph.svg)](https://support.ibmcloud.com){: new_window} 中。登录到该门户网站后，单击**开具凭单**，然后填写支持表单。 
   
-开具支持凭单时，确保为您的凭单指示了适当的严重性。严重性将决定凭单的处理方式。请参阅[支持凭单严重性和响应时间](index.html#support-ticket-severity){: new_window}，以获取有关不同严重性的信息。如果请求非常紧急，但您只具有免费或基本支持，那么可以升级您的帐户以提交高严重性（1 级、2 级和 3 级）凭单。要将帐户升级到更高支持级别，请通过电子邮件 sales@bluemix.net 联系 IBM 销售代表。
+开具支持凭单时，确保为您的凭单指示了适当的严重性。严重性将决定凭单的处理方式。请参阅[支持凭单严重性和响应时间](index.html#support-ticket-severity)，以获取有关不同严重性的信息。如果支持查询需要更即时的响应，建议您升级到标准或高级支持层，以便可以开具严重性为 1-4 的支持凭单。要将帐户升级到更高支持级别，请联系 [IBM 销售代表 ![外部链接图标](../icons/launch-glyph.svg)](https://www.ibm.com/cloud-computing/bluemix/contact-us){: new_window}，或向我们发送电子邮件：sales@bluemix.net。
 
 ### 为链接帐户开具支持凭单
 {: #open-ticket-linked}
@@ -209,7 +212,7 @@ Stack Overflow 和 dW Answers 这两个论坛都针对 Bluemix 问题提供了�
 ### 检查支持凭单状态
 {: #check-ticket-status}
 
-每张支持凭单都会分配有唯一的凭单编号以方便查询。您可以在 [IBM Client Success Portal](https://support.ibmcloud.com){: new_window} 中使用凭单号来查看支持凭单的进度以及更新支持凭单。更新和响应会通过电子邮件发送给您并记录在凭单说明中。  
+每张支持凭单都会分配有唯一的凭单编号以方便查询。您可以在 [IBM Client Success Portal ![外部链接图标](../icons/launch-glyph.svg)](https://support.ibmcloud.com){: new_window} 中使用凭单号来查看支持凭单的进度以及更新支持凭单。更新和响应会通过电子邮件发送给您并记录在凭单说明中。  
 
 
 
@@ -222,7 +225,7 @@ Stack Overflow 和 dW Answers 这两个论坛都针对 Bluemix 问题提供了�
 如果您是 {{site.data.keyword.Bluemix_notm}} Dedicated 客户，那么支持由 {{site.data.keyword.Bluemix_notm}} 支持团队提供。根据您是否具有 IBM 标识，您可以从几个不同的选项进行选择来获取支持。
 
 <ul>
-<li>与支持人员联系，方法是使用 <a href="http://ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} 支持</a>帮助页面来开具新凭单。在此表单中，您可以使用电子邮件地址或 IBM 标识。在“区域”字段中，选择 **{{site.data.keyword.Bluemix_notm}} Dedicated** 选项。<p>IBM 会在星期日晚上 10:00 (UTC) 到星期五晚上 11:59 (UTC) 监视表单的提交。</p>
+<li>与支持人员联系，方法是使用 <a href="http://ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} 支持 <img src="../icons/launch-glyph.svg" alt="外部链接图标"></a> 帮助页面来开具新凭单。在此表单中，您可以使用电子邮件地址或 IBM 标识。在“区域”字段中，选择 **{{site.data.keyword.Bluemix_notm}} Dedicated** 选项。<p>IBM 会在星期日晚上 10:00 (UTC) 到星期五晚上 11:59 (UTC) 监视表单的提交。</p>
 </li>
 <li>如果您具有 IBM 标识并有权访问 {{site.data.keyword.Bluemix_notm}} Public 环境，请单击菜单栏中的 {{site.data.keyword.avatar}} 图标 <img src="images/account_support.svg" alt="Avatar 图标" />，然后单击**获取帮助**。在显示的页面上，单击**取得联系**。</li>
 <li>如果您没有 IBM 标识，那么可以联系您组织中拥有标识的人员，也可以与 IBM 代表合作。<p>**注**：您可以请求在 Dedicated 环境中 {{site.data.keyword.Bluemix_notm}} 控制台的**支持**页面上显示您组织中可用作支持凭单联系人的用户的列表。</p></li>
@@ -236,7 +239,7 @@ Stack Overflow 和 dW Answers 这两个论坛都针对 Bluemix 问题提供了�
 如果您是 {{site.data.keyword.Bluemix_notm}} Local 客户，那么支持由 {{site.data.keyword.Bluemix_notm}} 支持团队提供。但是，由于您可能没有 IBM 标识，所以可以通过几个不同的选项来获取支持。
 
 <ul>
-<li>与支持人员联系，方法是使用 <a href="http://ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} 支持</a>帮助页面来开具新凭单。在此表单中，您可以使用电子邮件地址或 IBM 标识。在“区域”字段中，选择 **{{site.data.keyword.Bluemix_notm}} Local** 选项。<p>IBM 会在星期日晚上 10:00 (UTC) 到星期五晚上 11:59 (UTC) 监视表单的提交。</p>
+<li>与支持人员联系，方法是使用 <a href="http://ibm.biz/bluemixsupport" target="_blank">IBM {{site.data.keyword.Bluemix_notm}} 支持 <img src="../icons/launch-glyph.svg" alt="外部链接图标"></a> 帮助页面来开具新凭单。在此表单中，您可以使用电子邮件地址或 IBM 标识。在“区域”字段中，选择 **{{site.data.keyword.Bluemix_notm}} Local** 选项。<p>IBM 会在星期日晚上 10:00 (UTC) 到星期五晚上 11:59 (UTC) 监视表单的提交。</p>
 </li>
 <li>如果您有 IBM 标识并有权访问 {{site.data.keyword.Bluemix_notm}} Public 环境，请单击**支持**菜单栏项，然后单击**获取帮助**。在显示的页面上，单击**取得联系**。</li>
 <li>如果您没有 IBM 标识，那么可以联系您组织中拥有标识的人员，也可以与 IBM 代表合作。<p>**注**：您可以请求在 Local 环境中 {{site.data.keyword.Bluemix_notm}} 控制台的**支持**页面上显示您组织中可用作支持凭单联系人的用户的列表。</p></li>
@@ -249,7 +252,7 @@ Stack Overflow 和 dW Answers 这两个论坛都针对 Bluemix 问题提供了�
 
 下表列出了支持问题、建议严重性级别和响应时间目标的一些常见示例。响应时间目标仅用于描述 IBM 的目标，并不表示性能保证。
 
-**工作时间：**星期日晚上 10:00 (GMT) 到星期五晚上 11:59 (GMT)（不包括美国/意大利/澳大利亚节假日）。有关节假日安排的更多信息，请参阅 [Bluemix Support Holidays](http://ibm.biz/bluemixholidays){: new_window}。 
+**工作时间：**星期日晚上 10:00 (GMT) 到星期五晚上 11:59 (GMT)（不包括美国/意大利/澳大利亚节假日）。有关节假日安排的更多信息，请参阅 [Bluemix Support Holidays ![外部链接图标](../icons/launch-glyph.svg)](http://ibm.biz/bluemixholidays){: new_window}。 
 
 
 严重性 | 严重性定义 | 响应时间目标 | 响应时间覆盖范围
@@ -267,7 +270,7 @@ Stack Overflow 和 dW Answers 这两个论坛都针对 Bluemix 问题提供了�
 如果您认为发生了潜在的安全漏洞，请通过开具支持凭单向 Bluemix 进行报告。 
 
 要报告潜在安全漏洞，请完成以下步骤：
-  1. 开具严重性级别为 1 的凭单，或开具您的支持所允许最高严重性级别的凭单。有关如何开具凭单的信息，请参阅[开具支持凭单](#open-ticket){: new_window}。 
+  1. 开具严重性级别为 1 的凭单，或开具您的支持所允许最高严重性级别的凭单。有关如何开具凭单的信息，请参阅[开具支持凭单](#open-ticket)。 
   2. 在凭单摘要中清楚地描述该凭单是关于潜在安全漏洞的。
   2. 通过包含以下某项，提供潜在安全漏洞的详细信息：
        * 可以联系到您来讨论此问题的电话号码。
@@ -294,18 +297,18 @@ Stack Overflow 和 dW Answers 这两个论坛都针对 Bluemix 问题提供了�
 
 在收集诊断信息之前，请完成以下步骤：
 
-  1. 确保已安装最新的 cf 命令行界面。有关更多信息，请参阅[安装 cf 命令行界面](/docs/starters/install_cli.html){: new_window}。
+  1. 确保已安装最新的 cf 命令行界面。有关更多信息，请参阅[安装 cf 命令行界面](/docs/starters/install_cli.html)。
 
      **注：**如果未安装最新 cf 命令行界面，那么在 cf 命令行连接到 {{site.data.keyword.Bluemix_notm}} 后，`cf logs` 命令可能不会返回输出。
 
   2. 确保使用 `cf api` 命令将 cf 命令行界面连接到 {{site.data.keyword.Bluemix_notm}} 正在运行的位置。
 
-  3. 确保满足 [{{site.data.keyword.Bluemix_notm}} 先决条件](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}中的所有先决条件。
+  3. 确保满足 [{{site.data.keyword.Bluemix_notm}} 先决条件 ![外部链接图标](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/support/#prereqs){: new_window} 中的所有先决条件。
 
 使用以下脚本来收集诊断信息：
 
-  * 对于 Windows 操作系统，下载并运行 [bmdiag-general.bat](http://bluemix-mustgather.mybluemix.net/mustgather/general/bmdiag-general.bat){: new_window} 文件。
-  * 对于 Linux 和 Mac 操作系统，下载并运行 [bmdiag-general.sh](http://bluemix-mustgather.mybluemix.net/mustgather/general/bmdiag-general.sh){: new_window} 文件。
+  * 对于 Windows 操作系统，下载并运行 [bmdiag-general.bat ![外部链接图标](../icons/launch-glyph.svg)](http://bluemix-mustgather.mybluemix.net/mustgather/general/bmdiag-general.bat){: new_window} 文件。
+  * 对于 Linux 和 Mac 操作系统，下载并运行 [bmdiag-general.sh ![外部链接图标](../icons/launch-glyph.svg)](http://bluemix-mustgather.mybluemix.net/mustgather/general/bmdiag-general.sh){: new_window} 文件。
 
 脚本使用 cf 命令行界面来从应用程序环境抽取以下信息：
 
@@ -342,15 +345,15 @@ Stack Overflow 和 dW Answers 这两个论坛都针对 Bluemix 问题提供了�
 IBM 会定期向 Bluemix 客户发送调查，以获取客户对最近使用客户支持的体验方面的反馈。调查着眼于支持服务的质量和整体体验。IBM 管理人员会复查这些调查结果，以改进支持体验。 
 
 
-# 相关链接
+# rellinks
 {: #rellinks}
 
-## 常规
+## general
 {: #general}
 
-  * [Bluemix 支持门户网站](https://support.ibmcloud.com){: new_window} 
-  * [dW Answers](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} 
-  * [安装 cf 命令工具](/docs/starters/install_cli.html){: new_window} 
-  * [SaaS 支持手册](http://www-01.ibm.com/software/support/handbook.html){: new_window}
-  * [Stack Overflow](http://stackoverflow.com/questions/tagged/ibm-bluemix){: new_window} 
+  * [Bluemix 支持门户网站 ![外部链接图标](../icons/launch-glyph.svg)](https://support.ibmcloud.com){: new_window} 
+  * [dW Answers ![外部链接图标](../icons/launch-glyph.svg)](https://developer.ibm.com/answers/smart-spaces/12/bluemix.html){: new_window} 
+  * [安装 cf 命令工具](/docs/starters/install_cli.html)
+  * [SaaS Support Handbook ![外部链接图标](../icons/launch-glyph.svg)](http://www-01.ibm.com/software/support/handbook.html){: new_window}
+  * [Stack Overflow ![外部链接图标](../icons/launch-glyph.svg)](http://stackoverflow.com/questions/tagged/ibm-bluemix){: new_window} 
   

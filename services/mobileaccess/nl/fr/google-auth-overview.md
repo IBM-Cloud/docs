@@ -1,13 +1,16 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-03"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
-{:screen:  .screen}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
 {:codeblock: .codeblock}
+{:pre: .pre}
+
 
 # Authentification des utilisateurs avec des données d'identification Google
 {: #google-auth}
@@ -55,5 +58,4 @@ Le flux de requête d'une application Web {{site.data.keyword.amashort}} est sim
 
 * [Activation de l'authentification Google pour les applications Android](google-auth-android.html)
 * [Activation de l'authentification Google pour les applications iOS (SDK Swift)](google-auth-ios-swift-sdk.html)
-* [Activation de l'authentification Google pour les applications iOS (SDK Objective-C)](google-auth-ios.html)
 * [Activation de l'authentification Google pour les applications Cordova](google-auth-cordova.html)

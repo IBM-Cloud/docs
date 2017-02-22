@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,10 +12,10 @@ copyright:
 
 # 使用 REST API
 {: #push-api-rest}
-上次更新时间：2016 年 12 月 6 日
+上次更新时间：2017 年 1 月 16 日
 {: .last-updated}
 
-您可以将 REST（具象状态传输）API（应用程序编程接口）用于 {{site.data.keyword.mobilepushshort}}。还可以使用 SDK 和 [Push API](https://mobile.{DomainName}/imfpush/) 来进一步开发您的客户机应用程序。
+您可以将 REST（具象状态传输）API（应用程序编程接口）用于 {{site.data.keyword.mobilepushshort}}。您还可以使用 SDK 和 [Push API ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://mobile.{DomainName}/imfpush/ "外部链接图标"){: new_window} 来进一步开发您的客户机应用程序。
 
 通过 Push REST API，后端服务器应用程序和客户机可以访问 {{site.data.keyword.mobilepushshort}} 功能。
 
@@ -44,12 +44,12 @@ copyright:
 ## 接受语言头
 {: #push-api-rest-accept}
 
-“Accept-Language”头指定要将哪种语言用于 [Push REST API](https://mobile.{DomainName}/imfpush/){: new_window} 输出的错误消息。支持的错误消息语言如下：简体中文、繁体中文、英语（美国）、德语、法语、意大利语、日语、韩语、葡萄牙语和西班牙语。
+“Accept-Language”头指定要将哪种语言用于 [Push REST API ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://mobile.{DomainName}/imfpush/ "外部链接图标"){: new_window} 输出的错误消息。支持的错误消息语言如下：简体中文、繁体中文、英语（美国）、德语、法语、意大利语、日语、韩语、葡萄牙语和西班牙语。
 
 ## appSecret 
 {: #push-api-rest-secret}
 
-应用程序绑定到 {{site.data.keyword.mobilepushshort}} 后，该服务会生成一个 appSecret（唯一密钥），并会在响应头中传递该密钥。如果是使用 IBM {{site.data.keyword.mobilepushshort}} for Bluemix Rest API，请参阅 REST API 参考来获取有关需要保护哪些 API 的信息。有关更多信息，请参阅[推送 REST API](https://mobile.{DomainName}/imfpush/)。
+应用程序绑定到 {{site.data.keyword.mobilepushshort}} 后，该服务会生成一个 appSecret（唯一密钥），并会在响应头中传递该密钥。如果是使用 IBM {{site.data.keyword.mobilepushshort}} for Bluemix Rest API，请参阅 REST API 参考来获取有关需要保护哪些 API 的信息。有关更多信息，请参阅 [Push REST API ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://mobile.{DomainName}/imfpush/ "外部链接图标"){: new_window}。
 
 请求头必须包含 appSecret。如果不包含，服务器会返回“401 未授权”错误代码。将 {{site.data.keyword.mobilepushshort}} 添加到应用程序时，会创建特定的 AppID。作为响应的一部分，您会获取名为 appSecret 的头，其用于创建标记或发送消息。通过目录或样板中的服务，可执行该操作。
 

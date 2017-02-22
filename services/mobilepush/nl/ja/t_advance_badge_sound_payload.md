@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -11,7 +11,7 @@ copyright:
 {:codeblock:.codeblock}
 
 #拡張プッシュ通知の使用可能化
-最終更新日: 2016 年 12 月 06 日
+最終更新日: 2017 年 1 月 11 日
 {: .last-updated}
 
 iOS バッジ、音声、追加の JSON ペイロード、アクション可能通知、および保留通知を構成します。
@@ -81,24 +81,8 @@ protected void onPause() {
 アプリケーションでアクション可能{{site.data.keyword.mobilepushshort}}を使用可能にするには、以下の手順を行います。
 
 1. ユーザー応答アクションを作成します。
-
-   Objective-C
-
 ```
-	// For Objective-C
-	UIMutableUserNotificationAction *acceptAction = [[UIMutableUserNotificationAction alloc] init];
-	    acceptAction.identifier = @"ACCEPT_ACTION";
-	    acceptAction.title = @"Accept";
-	     /* Optional properties
-	     acceptAction.destructive = NO;
-	  acceptAction.authenticationRequired = NO; */
-```
-	{: codeblock}
-
-   Swift
-
-```
-	//For Swift
+//For Swift
 	let acceptAction = UIMutableUserNotificationAction()
 	acceptAction.identifier = "ACCEPT_ACTION"
 	acceptAction.title = "Accept"
@@ -107,9 +91,8 @@ protected void onPause() {
 	acceptAction.activationMode = UIUserNotificationActivationMode.Foreground
 ```
 	{: codeblock}
-	
 ```
-	//For Swift
+//For Swift
 	let declineAction = UIMutableUserNotificationAction()
 	declineAction.identifier = "DECLINE_ACTION"
 	declineAction.title = "Decline"
@@ -120,21 +103,8 @@ protected void onPause() {
 	{: codeblock}
 
 2. 通知カテゴリーを作成し、アクションを設定します。**UIUserNotificationActionContextDefault** または **UIUserNotificationActionContextMinimal** が有効なコンテキストです。
-
-Objective-C
-
 ```
-	// For Objective-C
-	UIMutableUserNotificationCategory *callCat = [[UIMutableUserNotificationCategory alloc] init];
-	    callCat.identifier = @"POLL_CATEGORY";
-	    [callCat setActions:@[acceptAction, declineAction] forContext:UIUserNotificationActionContextDefault];
-```    
-	{: codeblock}
-
-Swift
-
-```
-	// For Swift
+// For Swift
 	let pushCategory = UIMutableUserNotificationCategory()
 	pushCategory.identifier = "TODO_CATEGORY"
 	pushCategory.setActions([acceptAction, declineAction], forContext: UIUserNotificationActionContext.Default)
@@ -142,38 +112,15 @@ Swift
 	{: codeblock}
 
 1. 通知設定を作成し、前のステップのカテゴリーを割り当てます。
-
-Objective-C
-
 ```
-	// For Objective-C
-	NSSet *categories = [NSSet setWithObjects:callCat, nil];
-```
-	{: codeblock}
-
-Swift
-
-```
-	// For Swift
+// For Swift
 	let categories = NSSet(array:[pushCategory]);
 ```
 	{: codeblock}
 
 1. ローカル通知またはリモート通知を作成し、その通知にカテゴリーの ID を割り当てます。
-
-Objective-C
-
 ```
-	//For Objective-C
-	[[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:categories]];
-	[[UIApplication sharedApplication] registerForRemoteNotifications];
-```
-	{: codeblock}
-
-Swift
-
-```
-	//For Swift
+//For Swift
 	let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: categories as? Set<UIUserNotificationCategory>)
     UIApplication.sharedApplication().registerUserNotificationSettings(settings)
     UIApplication.sharedApplication().registerForRemoteNotifications()
@@ -183,22 +130,8 @@ Swift
 ## アクション可能 iOS 通知の処理  
 {: #actionable-notifications}
 
-アクション可能通知を受け取ると、選択した ID に基づいて制御が以下のメソッドに渡されます。
+要アクション通知を受け取ると、選択した ID に基づいて制御が以下のメソッドに渡されます。
 
-Objective-C
-
-```
-(void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forRemoteNotification:
-(UILocalNotification *)notification completionHandler:(void (^)())completionHandler
-{
-  NSLog(@"actionable notification received.");
-  //must call completion handler when finished
-  completionHandler();
-}
-```
-	{: codeblock}
-
-Swift
  
 ```
 func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], completionHandler: () -> Void) {

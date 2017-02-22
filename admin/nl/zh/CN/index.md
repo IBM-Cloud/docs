@@ -1,11 +1,8 @@
 ---
 
-
-
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-25"
-
+  years: 2015, 2017
+lastupdated: "2017-01-24"
 
 ---
 
@@ -23,18 +20,19 @@ lastupdated: "2016-10-25"
 如果您具有 {{site.data.keyword.Bluemix}} Local 或 {{site.data.keyword.Bluemix_notm}} Dedicated 的管理员访问权，请转至**管理**页面来管理资源、监视配额使用情况、管理用户许可权、安排升级通知，以及查看安全报告和日志等。您可以通过创建空间并设置[用户角色和许可权](/docs/admin/index.html#oc_useradmin)来管理组织；请参阅[管理组织](/docs/admin/orgs_spaces.html)。
 {:shortdesc}
 
-*表 1. 用于管理 {{site.data.keyword.Bluemix_notm}} Local 或 Dedicated 实例的管理任务*
+{: #ld_table1}
 
 | 我能执行哪些操作？ | 详细信息 |    
 |----------------|---------|
 |监视系统使用情况 | 单击**管理 &gt; 使用情况**。查看系统信息、监视 CPU 使用情况以及计划使用情况，以便做出最佳业务决策。请参阅[查看使用情况信息](/docs/admin/index.html#oc_resource)。|
 |管理目录 | 单击**管理 &gt; 目录管理**可管理哪些服务对用户和组织可视。请参阅[管理目录](/docs/admin/index.html#oc_catalog)。|
 |管理组织 | 单击**管理 &gt; 组织管理**可创建组织、监视组织配额以及基于需求快速做出决策。请参阅[管理组织](/docs/admin/index.html#oc_organizations)。|
-|创建空间和分配用户角色 | 单击 **{{site.data.keyword.avatar}}** 图标 ![Avatar](../support/images/account_support.svg)，然后选择**管理组织**可在您的组织内创建空间。添加用户并为用户分配组织和空间角色。请参阅[管理组织](/docs/admin/orgs_spaces.html)。 |
+|创建空间和分配用户角色 | 单击**帐户** &gt; **管理组织**以在组织内创建空间。添加用户并为用户分配组织和空间角色。请参阅[管理组织](/docs/admin/orgs_spaces.html)。 |
 |对管理用户许可权进行管理 | 单击**管理 &gt; 用户管理**可添加用户、除去用户和调整用户许可权。请参阅[管理用户和许可权](/docs/admin/index.html#oc_useradmin)。 |
 |查看报告和日志 | 单击**管理 &gt; 报告和日志**可查看针对您实例的安全报告和审计日志。请参阅[查看报告](/docs/admin/index.html#oc_report)。 |
 |查看系统信息 | 单击**管理 &gt; 系统信息**可查看系统信息，例如暂挂维护更新数、实例的名称和版本、区域、API URL、CLI URL、LDAP 配置详细信息、组和用户映射、统计信息以及共享域。请参阅[查看系统信息](/docs/admin/index.html#oc_system)。 |
 |扩展通知和设置通知预订 | 单击**管理 &gt; 系统信息 &gt; *Number* 个暂挂**。可以使用 Webhook 来与所选 Web 服务集成，以设置某个更新或事件的事件通知预订。请参阅[通知和通知预订](/docs/admin/index.html#oc_eventsubscription)。 |
+{: caption="Table 1. Administrative tasks for managing your {{site.data.keyword.Bluemix_notm}} local or dedicated instance" caption-side="top"}
 
 <!-- staging only for WoW start -->
 
@@ -53,16 +51,15 @@ lastupdated: "2016-10-25"
 
 您可以查看有关您本地或专用环境的通知，以监视您环境的状态。复查下表以获取有关不同类型通知的信息以及每一个通知类型的发布位置。
 
-*表 2. 事件类型和通知方法*
+{: #ld_table2}
 
 | **事件类型** | **通知方法** |       
 |-----------------|-------------------|
-| 维护更新 | 您将在“管理”页面的“通知”区域中获得有关即将到来的维护更新的警报。转至**管理**页面，然后选择**通知**图标 ![通知](images/icon_announcement.svg)。要查看暂挂和完成的通知的完整列表和历史记录，请单击**管理 &gt; 系统信息** &gt; *数字* **个暂挂**。|
-|  | 您还可以在“状态”页面上发出有关安排的中断性维护更新事件的警报。单击 **{{site.data.keyword.avatar}}** 图标 ![Avatar](../support/images/account_support.svg)，然后选择**状态**。|
-|  | 您可以通过设置预订，向您选择的收件人发送电子邮件，来扩展通知功能。或者，您可以设置预订，使用 Webhook 将“管理”页面的通知与您选择的 Web Service 相集成。|
-| 严重事件 | 您将在“状态”页面上获得有关严重事件的警报。单击 **{{site.data.keyword.avatar}}** 图标 ![Avatar](../support/images/account_support.svg)，然后选择**状态**。您可以通过设置通知预订，向您选择的收件人发送电子邮件，以扩展通知功能。或者，您可以设置预订，使用 Webhook 将“管理”页面的通知与您选择的 Web Service 相集成。  |  
+| 维护更新 | 要查看暂挂和完成的通知的完整列表和历史记录，请单击**管理 &gt; 系统信息** &gt; *数字* **个暂挂**。您还可以在“状态”页面上发出有关安排的中断性维护更新事件的警报。单击**支持** &gt; **状态**。您可以通过设置预订，向您选择的收件人发送电子邮件，来扩展通知功能。或者，您可以设置预订，使用 Webhook 将“管理”页面的通知与您选择的 Web Service 相集成。|
+| 严重事件 | 您将在“状态”页面上获得有关严重事件的警报。单击**支持** &gt; **状态**。您可以通过设置通知预订，向您选择的收件人发送电子邮件，以扩展通知功能。或者，您可以设置预订，使用 Webhook 将“管理”页面的通知与您选择的 Web Service 相集成。  |  
 | 阈值事件 | 您可以设置通知预订，在环境中的物理磁盘、物理内存、保留磁盘或保留内存达到资源阈值时，向您选择的收件人发送电子邮件。或者，您可以设置预订，使用 Webhook 将通知与您选择的 Web Service 相集成。  |  
-| {{site.data.keyword.Bluemix_notm}} 状态 | 您始终可以在“状态”页面查看平台、服务和您的 {{site.data.keyword.Bluemix_notm}} 实例的最新状态。单击 **{{site.data.keyword.avatar}}** 图标 ![Avatar](../support/images/account_support.svg)，然后选择**状态**。  |
+| {{site.data.keyword.Bluemix_notm}} 状态 | 您始终可以在“状态”页面查看平台、服务和您的 {{site.data.keyword.Bluemix_notm}} 实例的最新状态。单击**支持** &gt; **状态**。  |
+{: caption="Table 2. Event types and notifications methods" caption-side="top"}
 
 ### 设置通知预订
 {: #seteventsub}
@@ -90,7 +87,6 @@ lastupdated: "2016-10-25"
   * 单击**保存并测试**，以保存并测试通知。
   * 单击**保存并关闭**，以将预订保存到通知预订列表，然后返回上一页。
 
-*表 3. 用于有关维护更新或事件的电子邮件通知预订的字段*
 {: #emailnotmaintinc}
 
 | **字段** | **描述** |
@@ -104,8 +100,9 @@ lastupdated: "2016-10-25"
 | 主体 | 输入要在电子邮件中发送的消息体文本。您可以使用 IBM 有效内容值，向电子邮件通知填充相关信息。请参阅[维护和事件有效内容部分值](index.html#payload)表，以识别可以使用的值。使用基本 HTML 标记，来构建您的电子邮件。这是必填字段。 |
 | 收件人 | 使用电子邮件通知收件人的逗号分隔列表，输入一个或多个电子邮件地址。展开“抄送”或“密件抄送”选项，将电子邮件抄送给其他人。这是必填字段。 |
 | 描述 | 添加要创建的预订的唯一描述。 |
+{: caption="Table 3. Fields for email notification subscriptions about thresholds" caption-side="top"}
 
-*表 4. 用于有关阈值的电子邮件通知预订的字段*
+
 {: #emailnottrhesh}
 
 | **字段** | **描述** |
@@ -121,12 +118,13 @@ lastupdated: "2016-10-25"
 | 主题 | 输入电子邮件的主题行。这是必填字段。  |
 | 消息体 | 输入要在电子邮件中发送的消息体文本。您可以使用 IBM 有效内容值，向电子邮件通知填充相关信息。请参阅[阈值有效内容部分值](index.html#threshpayload)表，以识别可以使用的值。使用基本 HTML 标记，来构建您的电子邮件。这是必填字段。 |
 | 收件人 | 使用电子邮件通知收件人的逗号分隔列表，输入一个或多个电子邮件地址。展开“抄送”或“密件抄送”选项，将电子邮件抄送给其他人。这是必填字段。 |
+{: caption="Table 4. Fields for email notification subscriptions about maintenance updates or incidents" caption-side="top"}
 
 阈值数据每 6 个小时收集一次。当值跨越设置的阈值时，只发送一次通知。如果选择“升序”，那么当值低于阈值，然后再次高于阈值时，才会发送新通知。同样，如果选择“降序”，那么仅当值高于设置的阈值，然后再次低于阈值时，才会再次向您发送通知。 
 
 如果在达到阈值时不想等 6 小时再发送通知，在填完表单上的字段后，可以单击**保存并测试**以保存通知并使用样本数据来测试通知。
 
-*表 5. 用于有关维护或事件的 Webhook 通知预订的表单字段*
+
 {: #webhooknotsub}
 
 | **字段** | **描述** |
@@ -150,8 +148,9 @@ lastupdated: "2016-10-25"
 | 有效内容 | 如果选择了 POST 或 PUT 方法，请输入特定于要使用的 Web Service 的属性，以及与属性成对的用于 IBM 通知的有效内容值。请参阅[维护和事件有效内容部分值](index.html#payload)表，以识别可以使用的值。如果未在此部分中输入信息，您会收到不含任何更多信息的通知。 |
 | 组合通知 | 选中该选项可将所有区域的事件通知组合到单个通知。此选项仅可用于事件。
  |
+{: caption="Table 5. Form fields for a webhook notification subscription about maintenance or incidents" caption-side="top"}
 
-*表 6. 用于有关阈值的 Webhook 通知预订的表单字段*
+
 {: #webhooknotthresh}
 
 | **字段** | **描述** |
@@ -169,8 +168,9 @@ lastupdated: "2016-10-25"
 | 密码 | 如果选择基本授权，请输入您的 Web Service 的密码。 |
 | 方法 | 选择 **GET**、**POST** 或 **PUT**。 |
 | URL | 输入要连接到 Web Service 的 URL。 |
+{: caption="Table 6. Form fields for a webhook notification subscription about thresholds" caption-side="top"}
 
-*表 7. 维护和事件有效内容部分值*
+
 {: #payload}
 
 | **IBM 值** | **描述** | **事件类型** |
@@ -186,8 +186,9 @@ lastupdated: "2016-10-25"
 | {{region}} | 受影响的区域 | 维护更新和事件 |
 | {{status}} | 更新的状态 | 维护更新 |
 | {{type}} | 更新或事件 | 维护更新和事件 |
+{: caption="Table 7. Maintenance and incident payload section values" caption-side="top"}
 
-*表 8. 阈值有效内容部分值*
+
 {: #threshpayload}
 
 | **IBM 值** | **描述** | **事件类型** |
@@ -196,6 +197,7 @@ lastupdated: "2016-10-25"
 | {{content.physical_memory}} | 物理内存阈值 | 阈值 |  
 | {{content.reserved_disk}} | 保留磁盘阈值 | 阈值 |
 | {{content.reserved_memory}} | 保留内存阈值 | 阈值 |
+{: caption="Table 8. Threshold payload section values" caption-side="top"}
 
 保存通知预订时，您会通过设置的方法接收通知。通知仍将在以下位置中进行发布：  
  * 在“状态”页面上发布事件
@@ -207,7 +209,7 @@ lastupdated: "2016-10-25"
 ## 维护更新
 {: #oc_schedulemaintenance}
 
-如果您具有 Superuser 许可权 (`ops.admin`)，那么可以通过单击**管理 &gt; 系统信息 &gt; *数字* 个暂挂**来访问**系统更新**页面，从而查看安排的和暂挂的维护更新。环境中的所有用户都可以通过单击 **{{site.data.keyword.avatar}}** 图标 ![Avatar](../support/images/account_support.svg)，然后选择**状态**来查看安排的中断性维护更新事件。
+如果您具有 Superuser 许可权 (`ops.admin`)，那么可以通过单击**管理 &gt; 系统信息 &gt; *数字* 个暂挂**来访问**系统更新**页面，从而查看安排的和暂挂的维护更新。环境中的所有用户都可以通过单击**支持** &gt; **状态**来查看安排的中断性维护更新事件。
 
 **注**：请参阅以下[设置预先批准的维护时段](index.html#preapprovedmaintenance)部分，以开始进行操作。必须设置这些时段，IBM 才能安排对您环境的维护。
 
@@ -365,12 +367,12 @@ lastupdated: "2016-10-25"
 ### 帐户使用情况
 {: #accountusage}
 
-可以查看您的帐户每月在专用或本地环境中的使用情况。可以使用这些数据，根据特定组织的使用量来确定相应费用。所有分配了具有**读**访问权的**用户**许可权的管理控制台用户，都可以查看帐户使用情况数据。此外，组织记帐管理员也可以查看其组织的帐户使用情况数据，即使没有为记帐管理员分配管理控制台**用户**许可权时也是如此。作为管理控制台管理员（Superuser 许可权），您可以通过单击 **{{site.data.keyword.avatar}}** 图标 ![Avatar](../support/images/account_support.svg) &gt; **管理组织**来为组织分配记帐管理员角色。
+可以查看您的帐户每月在专用或本地环境中的使用情况。可以使用这些数据，根据特定组织的使用量来确定相应费用。所有分配了具有**读**访问权的**用户**许可权的管理控制台用户，都可以查看帐户使用情况数据。此外，组织记帐管理员也可以查看其组织的帐户使用情况数据，即使没有为记帐管理员分配管理控制台**用户**许可权时也是如此。作为管理控制台管理员（Superuser 许可权），您可以通过单击**帐户** &gt; **管理组织**来为组织分配记帐管理员角色。
 
 要查看帐户使用情况数据，请完成以下步骤：
 
 <ol>
-<li>单击 <strong>{{site.data.keyword.avatar}}</strong> 图标 ![Avatar](../support/images/account_support.svg) &gt; <strong>帐户</strong> &gt; <strong>使用情况详细信息</strong>。</li>
+<li>单击<strong>帐户</strong> &gt; <strong>使用情况仪表板</strong>。</li>
 <li>选择要查看其数据的组织。</li>
 <li>可以查看以下类别的使用情况详细信息：
 <ul>
@@ -386,7 +388,7 @@ lastupdated: "2016-10-25"
 您还可以在帐户级别查看从 {{site.data.keyword.Bluemix_notm}} Public 联合的运行时、应用程序和服务的每月使用量和关联费用。可以使用这些数据，根据特定组织的使用量来确定相应费用。
 
 <ol>
-<li>单击 <strong>{{site.data.keyword.avatar}}</strong> 图标 ![Avatar](../support/images/account_support.svg) &gt; <strong>帐户</strong> &gt; <strong>使用情况详细信息</strong>。</li>
+<li>单击<strong>帐户</strong> &gt; <strong>使用情况仪表板</strong>。</li>
 <li>单击 <strong>Public</strong>。</li>
 <li>选择要查看其数据的组织。</li>
 <li>可以查看以下类别的使用情况详细信息：
@@ -429,7 +431,9 @@ lastupdated: "2016-10-25"
 
 下表显示了为 {{site.data.keyword.Bluemix_notm}} Local 和 {{site.data.keyword.Bluemix_notm}} Dedicated 生成的安全报告的列表。大多数报告会每天生成。但是，加密和密钥管理事件报告是每月生成一次。所有报告都会在管理控制台中保留 90 天，以供您检索。在 90 天后，报告在 {{site.data.keyword.Bluemix_notm}} 中可根据请求脱机提供，这一时间为 9 个月。报告总计可供检索的时间最长为 1 年。
 
-*表 9. 安全报告列表*
+
+{: #ld_table9}
+
 | **类别** | **报告** | **描述** |      
 |-----------------|-------------------|---------------------|
 | 防火墙 | 防火墙登录 | 与管理员登录到 Vyatta 防火墙设备相关的事件。 |
@@ -449,6 +453,7 @@ lastupdated: "2016-10-25"
 | 防病毒 | 防病毒扫描报告 | 已就位的防病毒软件。 |
 | 软件修订管理 | 补丁安装报告 | 已应用的软件修订。 |
 | 安全事件管理 | 安全事件补救报告 | 用于安全事件管理的安全事件证据。 |
+{: caption="Table 9. Security report list" caption-side="top"}
 
 ## 查看状态
 {: #oc_status}
@@ -457,7 +462,7 @@ lastupdated: "2016-10-25"
 
 ### {{site.data.keyword.Bluemix_notm}} 环境状态
 
-您可以使用 {{site.data.keyword.Bluemix_notm}}“状态”页面来监视 {{site.data.keyword.Bluemix_notm}} 实例的状态。单击 **{{site.data.keyword.avatar}}** 图标 ![Avatar](../support/images/account_support.svg)，然后选择**状态**。
+您可以使用 {{site.data.keyword.Bluemix_notm}}“状态”页面来监视 {{site.data.keyword.Bluemix_notm}} 实例的状态。单击**支持** &gt; **状态**。
 
 “状态”页面是查找通知和公告的一个中心位置，从中可了解影响 {{site.data.keyword.Bluemix_notm}} 平台以及 {{site.data.keyword.Bluemix_notm}} 中主要服务的关键事件。您可以预订 RSS 订阅源来获取通知，这样就不必检查是否有通知。有关“状态”页面和设置 RSS 订阅源的更多信息，请参阅[查看 {{site.data.keyword.Bluemix_notm}}](../support/index.html#viewing-bluemix-status)。
 
@@ -493,11 +498,11 @@ lastupdated: "2016-10-25"
 ### 注册服务代理程序
 {: #servicebrokerui}
 
-如果您有一个服务要显示在 {{site.data.keyword.Bluemix_notm}}“目录”中，那么必须实现并注册[服务代理程序](http://docs.cloudfoundry.org/services/api.html){: new_window}。注册代理程序后，可以选择哪些组织可在本地或专用实例中访问该服务。
+如果您有一个服务要显示在 {{site.data.keyword.Bluemix_notm}}“目录”中，那么必须实现并注册[服务代理程序 ![外部链接图标](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/services/api.html){: new_window}。注册代理程序后，可以选择哪些组织可在本地或专用实例中访问该服务。
 
 服务代理程序的使用方法根据其管理的服务数，或根据其是否已向 {{site.data.keyword.Bluemix_notm}} 注册而有所不同。
 
-- 如果服务代理程序管理一个服务，那么在实现了[服务代理程序 API](http://docs.cloudfoundry.org/services/api.html){: new_window} 之后，可以使用该用户界面来注册该服务代理程序。请参阅[注册管理一个服务的服务代理程序](index.html#registerbrokerui)。
+- 如果服务代理程序管理一个服务，那么在实现了[服务代理程序 API ![外部链接图标](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/services/api.html){: new_window} 之后，可以使用该用户界面来注册该服务代理程序。请参阅[注册管理一个服务的服务代理程序](index.html#registerbrokerui)。
 - 如果服务代理程序管理多个服务，请将 cf CLI 与 [{{site.data.keyword.Bluemix_notm}} 管理 CLI](../cli/plugins/bluemix_admin/index.html) 插件（`ba` 子命令）一起使用，或者使用[定制服务 API](index.html#servicebrokerapi)。
 - 如果服务代理程序已注册，但希望对其执行更新或删除操作，请将 cf CLI 与 [{{site.data.keyword.Bluemix_notm}} 管理 CLI](../cli/plugins/bluemix_admin/index.html) 插件（`ba` 子命令）一起使用，或者使用[定制服务 API](index.html#servicebrokerapi)。
 
@@ -508,7 +513,7 @@ lastupdated: "2016-10-25"
 
 查看以下信息并完成相应步骤来注册服务代理程序：
 
-**开始之前**：<a href="http://docs.cloudfoundry.org/services/api.html" target="_blank">实现 Cloud Foundry 服务代理程序 API</a> 以支持您的服务与 {{site.data.keyword.Bluemix_notm}} 之间的通信。服务代理程序 API 是由 {{site.data.keyword.Bluemix_notm}} 使用的一组 REST 端点。
+**开始之前**：<a href="http://docs.cloudfoundry.org/services/api.html" target="_blank">实现 Cloud Foundry 服务代理程序 API <img src="../icons/launch-glyph.svg" alt="外部链接图标"></a> 以支持您的服务与 {{site.data.keyword.Bluemix_notm}} 之间的通信。服务代理程序 API 是由 {{site.data.keyword.Bluemix_notm}} 使用的一组 REST 端点。
 
 要实现服务代理程序时，在 <code>GET /v2/catalog</code> 的 JSON 响应中，必须提供服务和服务套餐的定义，包括要显示的服务信息。例如，查看目录 (GET) 响应的以下样本 JSON：
 
@@ -601,7 +606,8 @@ lastupdated: "2016-10-25"
 
 以下各表可以帮助您填写 JSON 文件。
 
-*表 10. JSON 字段*
+
+{: #ld_table10}
 
 | **JSON 字段** | **描述** |
 |-----------------|-----------------|
@@ -611,8 +617,9 @@ lastupdated: "2016-10-25"
 |id  | 服务的标识。此标识必须在 {{site.data.keyword.Bluemix_notm}} 中唯一，并且必须是 GUID（全局唯一标识）。向 {{site.data.keyword.Bluemix_notm}} 注册服务后，不能更改该服务的标识。 |
 |metadata | 服务套餐元数据，在 {{site.data.keyword.Bluemix_notm}}“目录”和价格表中显示。metadata 字段是可选字段。可以指定 metadata 的更多字段。请参阅下表 [Metadata 字段](index.html#metadatafields)，以获取更多信息。 |
 |plans | 服务套餐定义的数组。请参阅下表 [Plan 字段](index.html#planfields)，以获取更多信息。 |
+{: caption="Table 10. JSON fields" caption-side="top"}
 
-*表 11. Metadata 字段*
+
 {: #metadatafields}
 
 | **Metadata 值** | **描述** |
@@ -639,6 +646,8 @@ lastupdated: "2016-10-25"
 |sdkDownloadUrl（可选） | 单击“下载 SDK”按钮时打开的 Web 页面的 URL。“下载 SDK”按钮位于“仪表板”中“应用程序概述”页面的服务磁贴上。Web 页面会在新的浏览器选项卡中打开。 |
 |serviceMonitorApi    | 返回 JSON 数据的 API 的 URL，如以下示例中所示，用于报告服务运行状况。必须在服务元数据中具有 serviceMonitorApi 或 serviceMonitorApp。请参阅以下代码样本以获取示例。 |
 |serviceMonitorApp    | 应用程序的 URL，该应用程序可部署到 {{site.data.keyword.Bluemix_notm}} 并绑定服务，以提供特定于服务状态的输出。应用程序返回的 JSON 数据格式必须与 serviceMonitorApi 相同。必须在服务元数据中具有 serviceMonitorApi 或 serviceMonitorApp。请参阅以下代码样本以获取示例。 |
+{: caption="Table 11. Metadata fields" caption-side="top"}
+
 
 ```
 {
@@ -668,7 +677,7 @@ lastupdated: "2016-10-25"
 
 ![“目录”中的服务详细信息。](images/metadata.png "Bluemix“目录”的服务详细信息视图")
 
-*表 12. Plan 字段*
+
 {: #planfields}
 
 | **Plan 值** | **描述** |
@@ -676,10 +685,11 @@ lastupdated: "2016-10-25"
 |name       | 服务套餐的名称，在 cf 命令行界面中使用。例如，套餐名称显示在 cf marketplace 命令的输出中。套餐名称必须为小写字母且不能包含空格，并且必须在服务中唯一。  |
 |描述       | 服务套餐的描述。在 {{site.data.keyword.Bluemix_notm}}“目录”中的服务详细信息页面上选择套餐后，会显示相应描述。 |
 |free      | 布尔值，指示服务套餐是否免费。缺省值为 true。 |
-|id       | 服务套餐的标识。该标识必须在 {: new_window} 中唯一，并且必须为 GUID。  |
+|id       | 服务套餐的标识。标识必须唯一，并且必须为 GUID。  |
 |metadata（可选）    | 服务套餐元数据，在 {{site.data.keyword.Bluemix_notm}}“目录”和价格表中显示。metadata 字段是可选字段。可以在 metadata 字段内指定以下字段：displayName, type（subscription、reservable 或 planDetails）、bullets、costs（unitId、unit 或 partNumber）和 paidOnly。请参阅下表 [Plan metadata 字段](index.html#planmetadata)，以获取更多信息。 |
+{: caption="Table 12. Plan fields" caption-side="top"}
 
-*表 13. Plan metadata 字段*
+
 {: #planmetadata}
 
 | **Plan metadata 值** | **描述** |
@@ -689,6 +699,7 @@ lastupdated: "2016-10-25"
 |bullets                 | 可用于套餐的资源的描述。描述会显示在“目录”中服务详细信息页面上的**功能**列中以及价格表上。 |
 |costs                   | 有关服务的成本信息，显示在“目录”中服务详细信息页面上的“价格”列中以及价格表上。每个数组条目都包含以下字段：unitId（单位标识。使用复数形式并且所有字母均大写。对于免费套餐，此字段是可选的。）、unit（用于计算服务费用的度量值。此字段的值在 {{site.data.keyword.Bluemix_notm}} 用户界面中用于表示费用度量值。）和 partNumber（记帐系统使用的 `part_number` 标识。对于免费套餐，此字段是可选的。）.   |
 |paidOnly（可选）     | 布尔值，指示此服务套餐是否只可用于 {{site.data.keyword.Bluemix_notm}} 付费帐户。值为 **true** 表示此服务套餐只可用于付费帐户，不能添加到试用帐户。值为 **false** 表示此服务套餐可以添加到付费帐户和试用帐户。缺省值为 **false**。	  |
+{: caption="Table 13. Plan metadata fields" caption-side="top"}
 
 以下示例显示了 GET /v2/catalog 的 JSON 响应如何映射到 {{site.data.keyword.Bluemix_notm}}“目录”中的服务详细信息页面。具体而言，即上表中描述的 plan metadata 字段如何映射到用户界面：
 
@@ -741,12 +752,11 @@ lastupdated: "2016-10-25"
 
 您可以在组织中创建空间；例如，*dev* 空间（作为开发环境）、*test* 空间（作为测试环境）和 *production* 空间（作为生产环境）。然后，可以将应用程序与空间相关联。要创建空间，请完成以下步骤：
 
-1. 转至 **{{site.data.keyword.avatar}}** 图标 ![Avatar 图标](../admin/images/account_support.svg) &gt; **管理组织**页面。
+1. 在菜单栏中，单击**帐户** &gt; **管理组织**。
 2. 选择要向其添加空间的组织。
 3. 单击**创建空间**。
 4. 输入空间名称。
 5. 单击**创建**。
-
 
 ### 配额监视
 
@@ -783,19 +793,47 @@ lastupdated: "2016-10-25"
 	<dd>使用此选项可识别其内存配额总量大于需求的组织。按多余内存分配量排序可识别在为组织分配的配额中所使用的内存量最低的组织。</dd>
 	</dl>
 
-### 调整配额计划
+### 管理配额
+{: #manageorgquota}
 
-要更改组织的配额计划，请完成以下步骤：
+配额表示在环境中创建组织时为其分配的资源限制。组织空间中的任何应用程序或服务都会使用一定的已分配的配额。要管理组织的配额，请完成以下步骤：
 
 <ol>
-<li>在“组织内存使用情况”部分中，单击图表中要编辑的组织所对应的条形，或者从“组织列表”部分中选择组织的名称。</li>
-<li>在“管理组织”页面上，可以更改配额计划，更改组织的名称，以及添加或除去管理员。<br />
-<p><strong>注</strong>：如果所选的配额计划无法满足组织的当前使用量，那么您会收到一条消息。</p>
+<li>在“组织内存使用情况”部分中，单击图表中要编辑的组织所对应的条形，或者从“组织列表”部分中选择组织的名称。在“组织信息”页面中，可以重命名组织，也可以添加或除去管理员。
+<p><strong>注</strong>：如果所选的配额计划无法满足组织的当前使用量，那么您会收到一条消息。</p></li>
+<li>单击 <strong>Cloud Foundry</strong> 或 <strong>Containers</strong>。缺省情况下，会打开 Cloud Foundry 配额页面。
+<ul>
+<li>在 Cloud Foundry 页面中，可以选择套餐，并查看以下资源的配额详细信息：
+<ul>
+<li>服务</li>
+<li>路径</li>
+<li>内存配额</li>
+<li>应用程序分配</li>
+</ul>
 </li>
+<li>在 <strong>Containers</strong> 页面中，可以为以下字段分配值（值必须为整数）：
+<dl class="parml">
+<dt class="pt dlterm">映像限制</dt>
+<dd class="pd">在专用注册表中可以拥有的最大容器映像数。容器映像是所创建的每一个容器的基础。映像通过 Dockerfile 创建，该文件为只读文件，用于保存操作系统、应用程序及其所有依赖项，并描述如何配置容器。映像在组织的所有成员之间共享。</dd>
+<dt class="pt dlterm">缺省内存分配量</dt>
+<dd>创建新空间时，自动分配的容器内存量。创建容器时，必须选择容器大小。该大小将确定容器可以在计算主机上使用的内存量，并计入容器内存限制。</dd>
+<dt class="pt dlterm">最大内存分配量</dt>
+<dd>可以在组织的所有空间中分配的最大容器内存量。</dd>
+<dt class="pt dlterm">缺省浮动 IP 数</dt>
+<dd>创建新空间时，自动分配的公共 IP 地址数。可以将公共 IP 地址绑定到单个容器和容器组，使其可以通过因特网访问。</dd>
+<dt class="pt dlterm">最大浮动 IP 数</dt>
+<dd>可以在组织的所有空间中分配的最大公共 IP 地址数。</dd>
+</dl>
+<strong>注</strong>：如果环境中尚无容器，或者如果在环境中尚未设置容器，那么您将收到错误消息。
+<p>有关容器的更多信息，请参阅[关于 IBM Containers](https://console.ng.bluemix.net/docs/containers/container_ov.html)。有关容器配额的更多信息，请参阅[配额和 Bluemix 帐户]( https://console.ng.bluemix.net/docs/containers/container_planning_org_ov.html#container_planning_quota)。</p>
+<strong>注：</strong>在 {{site.data.keyword.Bluemix_notm}} 悉尼区域中无法使用容器。</li>
+</ul>
 <li>要保存在“管理组织”页面上进行的任何更改，请单击<strong>保存</strong>。</li>
 </ol>
 
+
 ### 通过组织列表管理组织
+{: #manageorgfrolis}
 
 在“组织列表”部分中，可以查看 {{site.data.keyword.Bluemix_notm}} 环境中的所有组织，并可以通过单击组织名称，对各个组织分别执行操作。
 
@@ -809,6 +847,7 @@ lastupdated: "2016-10-25"
   - 计量应用程序使用情况图，显示三个月的报告，内容是每个已部署应用程序使用的 GB-小时。可以选择**列表视图**来查看所有应用程序的数据，包括过去三个月中每个应用程序的内存分配和计量的 GB-小时使用量。
 
 - 要编辑组织的名称，以及添加或除去管理员，请在列表中单击组织的名称，然后按照屏幕上的提示执行操作。
+- 要查看有关所查看组织的特定用户的信息，请单击该用户名以显示“用户信息”。然后，可以单击组织名称返回以查看“组织信息”。 
 
 ## 管理用户和许可权
 {: #oc_useradmin}
@@ -819,6 +858,7 @@ lastupdated: "2016-10-25"
 **Superuser** 和 **Basic Access** 许可权可以设置为**打开**或**关闭**，而其余的许可权则通过特定访问权类型进行启用或禁用，包括该许可权的 **Read** 或 **Write** 访问权，如图标所示。有关每种类型的描述和图标说明，请参阅[许可权](#permissions)。
 
 ### 处理用户
+{: #workwithusers}
 
 根据您对用户许可权具有 **Read** 还是 **Write** 访问权，您可以搜索现有的用户、除去用户，以及单个或成组添加用户。如果您具有 **Superuser** 许可权，那么您具有完全访问权，可完成环境中用户管理的任何任务。请复查以下用户管理任务和完成每一项任务所需的访问级别：
 
@@ -882,13 +922,17 @@ lastupdated: "2016-10-25"
 
     1. 要向组织添加用户，请从表中选择相应用户名以访问**编辑用户**页面。接着，使用搜索字段来查找组织，从列表中选择组织，然后单击**保存**。
     2. 要从组织中除去用户，请从表中选择相应用户名以访问**编辑用户**页面。接着，对要从中除去用户的组织，单击 ![除去](images/icon_remove.svg)，然后单击**保存**。
+    
+* 要查看有关用户分配到的组织的信息，请单击组织名称以显示“组织信息”。然后，可以单击用户名返回以查看“用户信息”。 
 
 ### 许可权
 {: #permissions}
 
 可以为用户分配以下具有特定访问级别（读或写）的许可权，使用户可以在管理控制台中完成特定任务：
 
-*表 14. 许可权*
+
+{: #ld_table14}
+
 | **用户许可权** | **描述** |       
 |-----------------|-------------------|
 | Superuser | **Superuser** 许可权设置为**打开**的用户可以编辑其他用户的许可权。如果您打开该许可权，那么它会自动对所有其他许可权启用完全访问权。除了针对此表中每个许可权所概括的任务之外，它们还可以设置通知预订，以直接获取有关维护或事件的警报、安排维护、对控制台组件运行验证检查，以及为环境创建组织和空间。此许可权等同于管理控制台的管理员 (admin) 角色。  |
@@ -896,16 +940,16 @@ lastupdated: "2016-10-25"
 | 目录 | 可以为拥有 **Catalog** 许可权的用户分配 **Read** 或 **Write**（修改）的访问权，以指出本地或专用实例中哪些服务可用。Read 访问权允许用户访问“目录管理”磁贴，以查看可用的服务。Write 访问权允许用户访问[目录管理](#oc_catalog)磁贴，以查看服务、编辑服务的可视性、注册定制服务并控制 buildpack 优先级列表。 |  
 | Reports | 可以为拥有 **Reports** 许可权的用户分配 **Read** 或 **Write**（修改）安全报告的访问权。Read 访问权允许用户访问“报告和日志”磁贴，以下载报告。Write 访问权允许用户查看[报告和日志](#oc_report)磁贴，以及使用 CLI 上传新报告，并创建新类别以供用户访问。 |
 | Users | 可以为拥有 **Users** 许可权的用户分配针对用户列表执行 **Read**（查看）操作或针对用户执行 **Write**（添加或除去）操作的访问权。此许可权不允许为其他用户设置许可权。Write 访问权允许用户向环境添加新用户、从环境删除用户，并向环境内已经存在的组织添加现有用户。此外，**Write** 访问权允许用户添加新组织、删除组织并编辑组织内的用户。 |
-
+{: caption="Table 14. Permissions" caption-side="top"}
 
 ## 使用 Admin REST API 管理用户
 {: #usingadminapi}
 
 您可以使用 `Admin` REST API 为 {{site.data.keyword.Bluemix_notm}} 实例添加和除去用户。为了能够从命令行执行基本操作，提供了试验性 `Admin` REST API 端点和 JSON 响应。本信息的示例中的端点和 URL 可能会发生变化，也可能会临时通知停止使用。
 
-下面是使用后续示例时所需的必备工具。也可以选择使用其他工具。
-* cURL - 将 REST API 请求作为命令进行输入。cURL 是一个免费的实用程序，可用于通过命令行界面将 HTTP 请求发送到服务器并接收服务器响应。可以从 [cURL 下载站点](http://curl.haxx.se/download.html){: new_window}来下载 cURL。
-* Python - 使用 Python 直观显示 JSON 工具的输出。此可选工具接受 JSON 文本作为输入，并提供易读输出。可以从 [Python 下载站点](https://www.python.org/downloads){: new_window}来下载 Python。
+虽然可以选择使用其他工具，但下面是使用后续示例时所需的必备工具：
+* cURL - 将 REST API 请求作为命令进行输入。cURL 是一个免费的实用程序，可用于通过命令行界面将 HTTP 请求发送到服务器并接收服务器响应。可以从 [cURL 下载站点 ![外部链接图标](../icons/launch-glyph.svg)](http://curl.haxx.se/download.html){: new_window} 来下载 cURL。
+* Python - 使用 Python 直观显示 JSON 工具的输出。此可选工具接受 JSON 文本作为输入，并提供易读输出。可以从 [Python 下载站点 ![外部链接图标](../icons/launch-glyph.svg)](https://www.python.org/downloads){: new_window} 来下载 Python。
 
 ### 登录到管理控制台
 
@@ -917,9 +961,8 @@ lastupdated: "2016-10-25"
 
 要登录到管理控制台，请运行以下命令：
 
-```
-curl --user <user_id>:<password> -c ./cookies.txt --header "Accept: application/json" https://<your_host>.ibm.com/login | python -m json.tool
-```
+
+`curl --user <user_id>:<password> -c ./cookies.txt --header "Accept: application/json" https://<your_host>.ibm.com/login | python -m json.tool`
 {: codeblock}
 
 <dl class="parml">
@@ -927,10 +970,8 @@ curl --user <user_id>:<password> -c ./cookies.txt --header "Accept: application/
 <dt class="pt dlterm">--user <em>user_id</em>:<em>password</em></dt>
 <dd class="pd">接受用户标识和密码，并发送基本授权头。</dd>
 
-
 <dt class="pt dlterm">-c <em>filename</em></dt>
 <dd class="pd">将指定的用户标识和密码作为 cookie 存储在指定的文件中。</dd>
-
 
 <dt class="pt dlterm">--header</dt>
 <dd class="pd">发送 Accept 头。</dd>
@@ -938,7 +979,6 @@ curl --user <user_id>:<password> -c ./cookies.txt --header "Accept: application/
 </dl>
 
 以下示例显示了此命令的输出：
-
 ```
 {
     "message": "Logged in",
@@ -955,9 +995,7 @@ curl --user <user_id>:<password> -c ./cookies.txt --header "Accept: application/
 
 添加用户时，必须指定组织。可以使用 `Admin` REST API 来列出所有组织。您必须拥有具有 **Read** 访问权的 **Users** 许可权，才能列出组织。要列出所有组织，请运行以下命令：
 
-```
-curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/organizations | python -m json.tool
-```
+`curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/organizations | python -m json.tool`
 {: codeblock}
 
 <dl class="parml">
@@ -997,9 +1035,7 @@ curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/organizations | python
 
 您可以使用 `Admin` REST API 来列出已注册的用户，以确定用户是否已添加到 {{site.data.keyword.Bluemix_notm}} 环境。您必须拥有具有 **Read** 访问权的 **Users** 许可权，才能列出已注册的用户。要列出所有用户，请运行以下命令：
 
-```
-curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/users | python -m json.tool
-```
+`curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/users | python -m json.tool`
 {: codeblock}
 
 <dl class="parml">
@@ -1067,6 +1103,8 @@ curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/users | python -m json
 ```
 {: screen}
 
+
+
 ### 添加用户
 
 您可以使用 `Admin` REST API 将用户添加到 {{site.data.keyword.Bluemix_notm}} 实例。您必须拥有具有 **Write** 访问权的 **Users** 许可权才能添加用户，或者具有管理控制台的 **Superuser** 许可权 (ops.admin)。此外，作为 Admin，您可以允许没有一般管理控制台 `user` 或 `superuser` 许可权的组织成员能够仅向其组织添加新用户。请使用以下 API 命令，为组织管理员提供此特定能力：
@@ -1084,9 +1122,7 @@ PUT console.<subdomain>.bluemix.net/codi/env_config/allow_managers?flag=<TRUE or
 
 您需要使用 JSON 文件来提供信息。
 
-```
-curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/users | python -m json.tool
-```
+`curl -b ./cookies.txt https://<your_host>.ibm.com/codi/v1/users | python -m json.tool`
 {: codeblock}
 
 <dl class="parml">
@@ -1124,25 +1160,15 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
 </ol>
 
 <dl class="parml">
-
 <dt class="pt dlterm">-v</dt>
 <dd class="pd">指定详细输出。</dd>
-
-
 <dt class="pt dlterm">-X POST</dt>
 <dd class="pd">指定 POST 请求（覆盖缺省 GET 请求）。</dd>
-
-
 <dt class="pt dlterm">-H "Content-Type: application/json"</dt>
 <dd class="pd">指定 Content-Type 头，本例中为 JSON。</dd>
-
-
 <dt class="pt dlterm">-d *data*</dt>
 <dd class="pd">指定要通过 POST 请求发送到 HTTP 服务器的数据，本例中为 `user.json` 文件。</dd>
-
 </dl>
-
-
 
 以下示例显示了此命令的输出：
 
@@ -1174,9 +1200,7 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
 
 要除去用户，必须提供用户的用户标识。运行以下命令：
 
-```
-curl -v -b ./cookies.txt -X DELETE https://<your_host>.ibm.com/codi/v1/users?user_id=<some_user_id@domain.com>
-```
+`curl -v -b ./cookies.txt -X DELETE https://<your_host>.ibm.com/codi/v1/users?user_id=<some_user_id@domain.com>`
 {: codeblock}
 
 <dl class="parml">
@@ -1212,6 +1236,11 @@ curl -v -b ./cookies.txt -X DELETE https://<your_host>.ibm.com/codi/v1/users?use
 
 您可以使用两个试验性 API 来收集有关环境或应用程序的度量值。这两个 API 都会返回在指定的时间内所请求度量值的数据点数组。
 
+以下各部分中描述的度量值 API 可以从特定于区域的端点进行访问，例如： 
+
+ `https://console.<region>.bluemix.net/admin/metrics`
+{: codeblock}
+
 **注**：
 
 1. 用户每小时最多可以对度量值发起 200 个 API 请求。
@@ -1221,20 +1250,31 @@ curl -v -b ./cookies.txt -X DELETE https://<your_host>.ibm.com/codi/v1/users?use
 
 您可以使用试验性环境 API 来收集指定时间段内的高级别环境信息。这将返回指定时间内的可用数据点。数据大约每小时记录一次。例如，如果请求 6 个小时的环境 CPU 数据，那么响应将包含请求 6 个小时内每个小时的 CPU 数据。
 
+ ### 环境端点 
+ 
+您可以使用以下端点来调用此 API 命令：`/api/v1/env`
+
 ### 环境度量值查询参数
 
 使用以下查询参数可以收集 CPU、磁盘、内存、网络和应用程序的度量值：
 
 <dl class="parml">
 <dt class="pt dlterm">metric</dt>
-<dd class="pd">以下一个或多个值，各值之间用逗号分隔：“memory”、“disk”、“cpu”、“network”和“apps”。</dd>
+<dd class="pd">以下一个或多个值，各值之间用逗号分隔：`memory`、`disk`、`cpu`、`network` 和 `apps`。</dd>
 <dt class="pt dlterm">startTime</dt>
 <dd class="pd">开始返回数据的最早时间点。如果未指定 startTime，那么将包含最早的可用数据点。例如，要收集下午 2 点到 5 点的数据，请将 startTime 指定为 2 PM。</dd>
 <dt class="pt dlterm">endTime</dt>
 <dd class="pd">结束返回数据的最晚时间点。如果未指定 endTime，那么将使用最新的数据点。例如，要收集下午 2 点到 5 点的数据，请将 endTime 指定为 5 PM。</dd>
 <dt class="pt dlterm">sort</dt>
-<dd class="pd">数据的返回顺序。有效值为“asc”（升序）和“desc”（降序）。缺省值为降序，即首先返回最新的数据。</dd>
+<dd class="pd">数据的返回顺序。有效值为 `asc`（升序）和 `desc`（降序）。缺省值为降序，即首先返回最新的数据。</dd>
 </dl>
+
+ 以下示例使用查询参数来收集环境的度量值：
+ 
+ ```
+ curl -b ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/admin/metrics/api/v1/env?metric=cpu,network,disk,apps,memory
+ ```
+{: codeblock}
 
 ### 环境度量值数据格式
 
@@ -1246,7 +1286,8 @@ curl -v -b ./cookies.txt -X DELETE https://<your_host>.ibm.com/codi/v1/users?use
 {
   "sample_time": 1477494000000,
   "memory": {
-    "physical": {
+    "cell": {
+      "physical": {
       "total_gb": 864,
       "used": {
         "value_gb": 336.84,
@@ -1259,6 +1300,23 @@ curl -v -b ./cookies.txt -X DELETE https://<your_host>.ibm.com/codi/v1/users?use
         "value_gb": 1287.59,
         "percent": 74.51
       }
+    },
+    },
+    "dea": {
+      "physical": {
+      "total_gb": 864,
+      "used": {
+        "value_gb": 336.84,
+        "percent": 38.99
+      }
+    },
+    "allocated": {
+      "reserved_gb": 1728,
+      "total_allocated": {
+        "value_gb": 1287.59,
+        "percent": 74.51
+      }
+    },
     },
     "memory_by_container": [
       {
@@ -1297,7 +1355,8 @@ curl -v -b ./cookies.txt -X DELETE https://<your_host>.ibm.com/codi/v1/users?use
 {
   "sample_time": 1477494000000,
   "disk": {
-    "physical": {
+    "cell": {
+      "physical": {
       "total_gb": 8100,
       "used": {
         "value_gb": 807,
@@ -1310,6 +1369,23 @@ curl -v -b ./cookies.txt -X DELETE https://<your_host>.ibm.com/codi/v1/users?use
         "value_gb": 1989.5,
         "percent": 12.28
       }
+    },
+    },
+    "dea": {
+      "physical": {
+      "total_gb": 8100,
+      "used": {
+        "value_gb": 807,
+        "percent": 9.96
+      }
+    },
+    "allocated": {
+      "reserved_gb": 16200,
+      "total_allocated": {
+        "value_gb": 1989.5,
+        "percent": 12.28
+      }
+    },
     },
     "disk_by_container": [
       {
@@ -1348,7 +1424,12 @@ curl -v -b ./cookies.txt -X DELETE https://<your_host>.ibm.com/codi/v1/users?use
 {
   "sample_time": 1477494000000,
   "cpu": {
-    "average_percent_cpu_used": 27.288461538461544,
+    "cell": {
+      "average_percent_cpu_used": 27.288461538461544
+    },
+    "dea": {
+      "average_percent_cpu_used": 27.288461538461544
+    },
     "cpu_by_container": [
       {
         "name": "dea_next/0",
@@ -1441,7 +1522,7 @@ curl -v -b ./cookies.txt -X DELETE https://<your_host>.ibm.com/codi/v1/users?use
 {: screen}
 
 * 要收集有关应用程序的数据记录，请使用以下数据格式：
- 
+
 ```
 {
   "sample_time": 1477494000000,
@@ -1475,11 +1556,12 @@ curl -v -b ./cookies.txt -X DELETE https://<your_host>.ibm.com/codi/v1/users?use
 ### 应用程序端点 
 
 您可以使用以下端点来调用此 API 命令：
-* /api/v1/app/cpu/physical 
-* /api/v1/app/memory/physical
-* /api/v1/app/memory/reserved
-* /api/v1/app/disk/physical
-* /api/v1/app/disk/reserved
+* `/api/v1/app/cpu/physical` 
+* `/api/v1/app/memory/physical`
+* `/api/v1/app/memory/reserved`
+* `/api/v1/app/disk/physical`
+* `/api/v1/app/disk/reserved`
+
 
 ### 应用程序查询参数
  
@@ -1493,7 +1575,17 @@ curl -v -b ./cookies.txt -X DELETE https://<your_host>.ibm.com/codi/v1/users?use
 <dt class="pt dlterm">count</dt>
 <dd class="pd">每次数据采样中返回的记录数。
 </dd>
+<dt class="pt dlterm">minValue</dt>
+<dd class="pd">针对指定度量值返回的最小值。如果未指定 minValue，那么会返回所有值。例如，要使用最少 20000 字节的物理内存来收集应用程序，请将 minValue 指定为 20000。
+</dd>
 </dl>
+
+以下示例收集应用程序的度量值：
+
+```
+curl -b ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/admin/metrics/api/v1/app/cpu/physical?count=5&startTime=2016-12-02T16:54:09.467Z
+```
+{: codeblock}
 
 ### 应用程序响应格式
 
@@ -1535,6 +1627,8 @@ POST /codi/v1/serviceBrokers
 ### 请求
 {: #registerrequest}
 
+{: #ld_table15}
+
 | **名称** | **描述** |
 |-----------------|-------------------|
 | name | 服务代理程序的名称。 |
@@ -1542,8 +1636,7 @@ POST /codi/v1/serviceBrokers
 | auth_password | 用于与服务代理程序连接的密码。 |
 | broker_url | 用于连接服务代理程序的 URL。 |
 | owningOrganization | 将服务列入白名单时要使用的初始组织。 |
-
-*表 15. 字段*
+{: caption="Table 15. Fields" caption-side="top"}
 
 #### 主体
 {: #registerbody}
@@ -1603,15 +1696,13 @@ Content-Type: application/json
 ### 路径
 {: #updateroute}
 
-```
-PUT /codi/v1/serviceBrokers
-```
+`PUT /codi/v1/serviceBrokers`
 {: screen}
 
 ### 请求
 {: #updaterequest}
 
-*表 16. 字段*
+{: #ld_table16}
 
 | **名称** | **描述** |
 |-----------------|-------------------|
@@ -1620,6 +1711,7 @@ PUT /codi/v1/serviceBrokers
 | auth_password | 用于与服务代理程序连接的密码。 |
 | broker_url | 用于连接服务代理程序的 URL。 |
 | owningOrganization | 将服务列入白名单时要使用的初始组织。 |
+{: caption="Table 16. Requests" caption-side="top"}
 
 #### 主体
 {: #updatebody}
@@ -1675,11 +1767,13 @@ Content-Type: application/json
 
 要删除服务，请使用以下 API 和代码示例。
 
-*表 17. 参数*
+
+{: #ld_table17}
 
 | **名称** | **描述** |
 |-----------------|-------------------|
 | name | 服务代理程序的名称。此名称是创建服务时使用的名称，无法更改。 |
+{: caption="Table 17. Parameter" caption-side="top"}
 
 ### 路径
 
@@ -1717,7 +1811,7 @@ Content-Type: application/json
 
 您可以将 Cloud Foundry 命令行界面与 {{site.data.keyword.Bluemix_notm}} 管理 CLI 插件一起使用来管理 {{site.data.keyword.Bluemix_notm}} 环境的用户。例如，可以从 LDAP 注册表添加用户。
 
-开始之前，请安装 cf 命令行界面。{{site.data.keyword.Bluemix_notm}} 管理 CLI 插件需要 cf V6.11.2 或更高版本。[下载 Cloud Foundry 命令行界面](https://github.com/cloudfoundry/cli/releases){: new_window}
+开始之前，请安装 cf 命令行界面。{{site.data.keyword.Bluemix_notm}} 管理 CLI 插件需要 cf V6.11.2 或更高版本。[下载 Cloud Foundry 命令行界面 ![外部链接图标](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}。
 
 **限制：**Cygwin 不支持 Cloud Foundry 命令行界面。请在非 Cygwin 命令行窗口中使用 Cloud Foundry 命令行界面。
 

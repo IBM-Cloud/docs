@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015，2016
+  years: 2015，2017
 
-lastupdated: "2016-05-12"
+lastupdated: "2017-01-12"
 
 
 
@@ -76,6 +76,7 @@ cf plugins
 以下の表の索引を使用して、使用頻度の高い dev_mode CLI コマンドを参照してください。
 
 <table summary="dev_mode コマンドの索引">
+ <caption>表 1. dev_mode のコマンド</caption>
  <thead>
  <th colspan="4">dev_mode のコマンド</th>
  </thead>
@@ -94,8 +95,6 @@ cf plugins
  </tr>
   </tbody>
  </table>
-{: caption="Table 1. dev_mode commands" caption-side="top"}
-
 
 
 ## help
@@ -208,5 +207,5 @@ cf restart-inplace <appName>
 
 ## 関連リンク
 {: #general}
-* [開発モード CLI](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){:new_window}
-* [DevOps Web IDE](https://hub.jazz.net/docs/deploy/){:new_window}
+* [開発モード CLI ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){:new_window}
+* [DevOps Web IDE ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://hub.jazz.net/docs/deploy/){:new_window}

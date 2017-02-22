@@ -3,8 +3,8 @@
 
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-02"
+  years: 2016, 2017
+lastupdated: "2017-01-04"
 
 
 ---
@@ -270,12 +270,11 @@ I feed possono essere opportunamente utilizzati per configurare un'origine event
 5. Crea una regola che chiama l'azione `hello` ogni volta che viene attivato il trigger `everyEightSeconds`.
 
   ```
-  wsk rule create --enable myRule everyEightSeconds hello
+  wsk rule create myRule everyEightSeconds hello
   ```
   {: pre}
   ```
   ok: created rule myRule
-  ok: rule myRule is activating
   ```
   {: screen}
 
@@ -462,7 +461,7 @@ Una volta eseguiti i test e il debug delle azioni e dei feed compresi in un pacc
 1. Condividi i pacchetti con tutti gli utenti:
 
   ```
-  wsk package update custom --shared
+  wsk package update custom --shared yes
   ```
   {: pre}
   ```

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-07"
+  years: 2016, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -71,14 +71,9 @@ e abra o arquivo `.xcworkspace` gerado. Para
 atualizar para uma liberação mais recente do
 `BMSCore`, use `pod update BMSCore`.
 
-  Para obter mais informações sobre o uso de CocoaPods,
-consulte os
-[Guias
-do CocoaPods](https://guides.cocoapods.org/using/index.html){: new_window}.
+  Para obter mais informações sobre como usar o CocoaPods, veja os [Guias do CocoaPods ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://guides.cocoapods.org/using/index.html "Ícone de link externo"){: new_window}.
 
-2. Para instalar o `BMSCore` usando o Carthage,
-siga estas
-[instruções](https://github.com/Carthage/Carthage#getting-started){: new_window}.
+2. Para instalar o `BMSCore` usando o Carthage, siga estas [instruções ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/Carthage/Carthage#getting-started "Ícone de link externo"){: new_window}.
 
   1. Inclua a linha a seguir em seu Cartfile:
 
@@ -89,7 +84,7 @@ siga estas
 
   2. Execute o comando `carthage update`.
 
-  3. Após a conclusão da construção, inclua `BMSCore.framework` em seu projeto seguindo a [Etapa 3](https://github.com/Carthage/Carthage#getting-started) nas instruções do Carthage.
+  3. Após a conclusão da construção, inclua `BMSCore.framework` no projeto seguindo a [Etapa 3 ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/Carthage/Carthage#getting-started "Ícone de link externo") nas instruções do Carthage.
 
       Para aplicativos que são construídos com o Swift 2.3, use o comando `carthage update --toolchain com.apple.dt.toolchain.Swift_2_3`. Caso contrário, use o comando `carthage update`.
 
@@ -109,7 +104,8 @@ siga estas
   ```
   {: codeblock}
 
-  Deve-se inicializar o `BMSClient` com o parâmetro **bluemixRegion**. No inicializador, o valor **bluemixRegion** especifica qual implementação {{site.data.keyword.Bluemix_notm}} você está usando, por exemplo, `BMSClient.Region.usSouth`,
+  Deve-se inicializar o `BMSClient` com o
+parâmetro **bluemixRegion**. No inicializador, o valor **bluemixRegion** especifica qual implementação {{site.data.keyword.Bluemix_notm}} você está usando, por exemplo, `BMSClient.Region.usSouth`,
 `BMSClient.Region.unitedKingdom` ou `BMSClient.Region.sydney`.
 
 
@@ -130,7 +126,8 @@ siga estas
   ```
   {: codeblock}
 	
-  Deve-se inicializar o `BMSClient` com o parâmetro **bluemixRegion**. No inicializador, o valor **bluemixRegion** especifica qual implementação do {{site.data.keyword.Bluemix_notm}} está sendo usada, por exemplo, `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK` ou `BMSClient.REGION_SYDNEY`.
+  Deve-se inicializar o `BMSClient` com o
+parâmetro **bluemixRegion**. No inicializador, o valor **bluemixRegion** especifica qual implementação do {{site.data.keyword.Bluemix_notm}} está sendo usada, por exemplo, `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_UK` ou `BMSClient.REGION_SYDNEY`.
 
 
 # Links relacionados

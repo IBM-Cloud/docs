@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 
@@ -15,7 +15,8 @@ lastupdated: "2016-12-06"
 
 # Création d'une URL temporaire {: #create-temporary-url}
 
-Une URL temporaire est une URL longue et difficile à deviner qui peut être utilisée pour une période spécifiée pour télécharger des objets sans nécessiter plus d'authentification.
+Une URL temporaire est une URL longue et difficile à deviner, qui peut être utilisée pendant une période déterminée
+afin de télécharger des objets sans requérir d'authentification supplémentaire ou d'accorder un accès complet au compte de stockage.
 {: shortdesc}
 
 
@@ -26,7 +27,8 @@ Une URL temporaire est une URL longue et difficile à deviner qui peut être uti
   ```
   {: pre}
   **Remarque** : notez la chaîne complète qui suit *Account*, incluant `AUTH_`.
-2. Définissez une clé secrète. Vous pouvez choisir la clé de votre choix, mais il est conseillé de choisir une chaîne longue, aléatoire et difficile à deviner. Pour définir la clé, exécutez la commande suivante :
+
+2. Définissez une clé secrète. Choisissez une chaîne longue, aléatoire et difficile à deviner. Pour définir la clé, exécutez la commande suivante :
 
   ```
   swift post -m "Temp-URL-Key:<key>"
@@ -49,6 +51,7 @@ Une URL temporaire est une URL longue et difficile à deviner qui peut être uti
 
   Le tableau suivant présente les arguments de position utilisés par la commande Swift `tempurl`.
   <table>
+  <caption> Tableau 1. Arguments de position d'URL temporaire </caption>
     <tr>
       <th> Argument </th>
       <th> Description </th>
@@ -59,7 +62,7 @@ Une URL temporaire est une URL longue et difficile à deviner qui peut être uti
     </tr>
     <tr>
       <td> <i> secondes </i> </td>
-      <td> Durée pendant laquelle l'URL temporaire est disponible, exprimée en secondes.</td>
+      <td> Durée pendant laquelle l'URL temporaire est disponible, exprimée en secondes. </td>
     </tr>
     <tr>
       <td> <i> chemin </i> </td>
@@ -70,7 +73,5 @@ Une URL temporaire est une URL longue et difficile à deviner qui peut être uti
       <td> Clé secrète que vous avez définie à l'étape 2. </td>
     </tr>
   </table>
-
-  Tableau 1 : arguments de l'URL temporaire
 
 5. Facultatif - ajoutez l'URL retournée à votre nom de cluster pour obtenir une URL complète. Vous pouvez ensuite utiliser cette URL complète pour télécharger des objets avec tout client HTTP compatible comme cURL, wget ou Firefox.

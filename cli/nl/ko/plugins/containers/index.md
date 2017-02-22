@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015, 2017
 
-lastupdated: "2016-10-27"
+lastupdated: "2017-01-12"
 
 
 ---
@@ -36,6 +36,7 @@ IBM Containers CLI는 Bluemix에서 컨테이너와 컨테이너 그룹을 관�
 </dl>
 
 <table summary="Bluemix의 컨테이너 관리에 사용 가능한 Bluemix 명령.">
+ <caption>표 1. Bluemix의 컨테이너 관리를 위한 명령</caption>
  <thead>
  <th colspan="5">Bluemix의 컨테이너 관리를 위한 명령</th>
  </thead>
@@ -56,12 +57,9 @@ IBM Containers CLI는 Bluemix에서 컨테이너와 컨테이너 그룹을 관�
  </tr>
  <tr>
   <td>[bluemix ic groups](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_groups)</td>
-  <td>[bluemix ic info
-](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_info)</td>
-  <td>[bluemix ic init
-](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_init)</td>
-  <td>[bluemix ic images
-](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_images)</td>
+  <td>[bluemix ic info](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_info)</td>
+  <td>[bluemix ic init](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_init)</td>
+  <td>[bluemix ic images](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_images)</td>
   <td>[bluemix ic inspect](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_inspect)</td>
  </tr>
  <tr>
@@ -74,8 +72,7 @@ IBM Containers CLI는 Bluemix에서 컨테이너와 컨테이너 그룹을 관�
  <tr>
  <td>[bluemix ic kill](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_kill)</td>
  <td>[bluemix ic logs](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_logs)</td>
- <td>[bluemix ic namespace-get
-](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_namespace_get)</td>
+ <td>[bluemix ic namespace-get](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_namespace_get)</td>
  <td>[bluemix ic namespace-set](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_namespace_set)</td>
  <td>[bluemix ic pause](/docs/cli/reference/bluemix_cli/index.html#pause)</td>
  </tr>
@@ -97,44 +94,38 @@ IBM Containers CLI는 Bluemix에서 컨테이너와 컨테이너 그룹을 관�
  <td>[bluemix ic service-bind](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_service_bind)</td>
  <td>[bluemix ic service-unbind](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_service_unbind)</td>
  <td>[bluemix ic start](/docs/cli/reference/bluemix_cli/index.html#ic_start)</td>
- <td>[bluemix ic stats](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_stats)</td>  
+ <td>[bluemix ic stats](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_stats)</td>
  <td>[bluemix ic stop](/docs/cli/reference/bluemix_cli/index.html#ic_stop)</td>
  </tr>
  <tr>
  <td>[bluemix ic top](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_top)</td>
  <td>[bluemix ic unpause](/docs/cli/reference/bluemix_cli/index.html#unpause)</td>
- <td>[bluemix ic unprovision](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_unprovision)</td>  
+ <td>[bluemix ic unprovision](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_unprovision)</td>
  <td>[bluemix ic volume-inspect](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_volume_inspect)</td>
- <td>[bluemix ic volume-create](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_volume_create)</td> 
+ <td>[bluemix ic volume-create](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_volume_create)</td>
  </tr>
  <tr>
- <td>[bluemix ic volume-fs
-](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_volume_fs)</td>
+ <td>[bluemix ic volume-fs](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_volume_fs)</td>
  <td>[bluemix ic volume-fs-create](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_volume_fs_create)</td>
  <td>[bluemix ic volume-fs-remove](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_volume_fs_remove)</td>
  <td>[bluemix ic volume-fs-inspect](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_volume_fs_inspect)</td>
- <td>[bluemix ic volume-fs-flavors
-](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_volume_fs_flavors)</td>
+ <td>[bluemix ic volume-fs-flavors](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_volume_fs_flavors)</td>
  </tr>
  <tr>
  <td>[bluemix ic volume-remove](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_volume_remove)</td>
- <td>[bluemix ic volumes
-](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_volumes)</td>
+ <td>[bluemix ic volumes](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_volumes)</td>
  <td>[bluemix ic wait](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_wait)</td>
  <td>[bluemix ic wait-status](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_wait_status)</td>
- <td>[bluemix ic version
-](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_version)</td>
+ <td>[bluemix ic version](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_version)</td>
  </tr>
   </tbody>
  </table>
-{: caption="Table 1. Commands for managing containers on Bluemix" caption-side="top"}
-
 
 
 ## bluemix ic attach
 {: #bluemix_ic_attach}
 
-실행 중인 컨테이너를 제어하거나 해당 출력을 봅니다. 컨테이너를 종료하고 중지하려면 `CTRL+C`를 사용하십시오. 이 명령은 Docker CLI를 호출합니다. 자세한 정보는 Docker 도움말에서 [attach](https://docs.docker.com/engine/reference/commandline/attach/){: new_window} 명령을 참조하십시오.
+실행 중인 컨테이너를 제어하거나 해당 출력을 봅니다. 컨테이너를 종료하고 중지하려면 `CTRL+C`를 사용하십시오. 이 명령은 Docker CLI를 호출합니다. 자세한 정보는 Docker 도움말에서 [attach ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/attach/){: new_window} 명령을 참조하십시오. 
 
 ```
 bluemix ic attach [--no-stdin] [--sig-proxy] CONTAINER
@@ -165,7 +156,7 @@ bluemix ic attach my_container
 ## bluemix ic build
 {: #bluemix_ic_build}
 
-IBM Containers 빌드 서비스를 호출하여 로컬에 또는 사설 {{site.data.keyword.Bluemix_notm}} 저장소에 Docker 이미지를 빌드합니다. 이 명령은 Docker CLI를 호출합니다. 자세한 정보는 Docker 도움말에서 [build](https://docs.docker.com/engine/reference/commandline/build/){: new_window} 명령을 참조하십시오.
+IBM Containers 빌드 서비스를 호출하여 로컬에 또는 사설 {{site.data.keyword.Bluemix_notm}} 저장소에 Docker 이미지를 빌드합니다. 이 명령은 Docker CLI를 호출합니다. 자세한 정보는 Docker 도움말에서 [build ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/build/){: new_window} 명령을 참조하십시오. 
 
 ```
 bluemix ic build -t TAG|--tag TAG [--no-cache] [-p|--pull] [-q|--quiet] DOCKERFILE_LOCATION
@@ -189,8 +180,7 @@ bluemix ic build -t TAG|--tag TAG [--no-cache] [-p|--pull] [-q|--quiet] DOCKERFI
 
 <strong>예제</strong>:
 
-다음 예제는 이름이 *myimage*인 이미지를 빌드하기 위한 요청을 보여줍니다. 빌드에 사용할 Dockerfile 및 기타 아티팩트는 명령이 실행되는 디렉토리와 동일한 디렉토리에 있습니다. 레지스트리 및 네임스페이스가 이미지 이름과 함께 포함되기 때문에 이미지는 조직의 개인용 {{site.data.keyword.Bluemix_notm}} 저장소에 빌드됩니다.
-
+다음 예제는 이름이 *myimage*인 이미지를 빌드하기 위한 요청을 보여줍니다. 빌드에 사용할 Dockerfile 및 기타 아티팩트는 명령이 실행되는 디렉토리와 동일한 디렉토리에 있습니다. 레지스트리 및 네임스페이스가 이미지 이름과 함께 포함되기 때문에 이미지는 조직의 개인용 {{site.data.keyword.Bluemix_notm}} 저장소에 빌드됩니다. 
 ```
 bluemix ic build -t registry.ng.bluemix.net/mynamespace/myimage .
 ```
@@ -198,7 +188,7 @@ bluemix ic build -t registry.ng.bluemix.net/mynamespace/myimage .
 
 ## bluemix ic cp
 {: #bluemix_ic_cp}
-컨테이너와 로컬 파일 시스템 간에 파일 또는 폴더를 복사합니다. 이 명령은 Docker CLI를 호출합니다. 자세한 정보는 Docker 도움말에서 [cp](https://docs.docker.com/engine/reference/commandline/cp/){: new_window} 명령을 참조하십시오. 
+컨테이너와 로컬 파일 시스템 간에 파일 또는 폴더를 복사합니다. 이 명령은 Docker CLI를 호출합니다. 자세한 정보는 Docker 도움말에서 [cp ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/cp/){: new_window} 명령을 참조하십시오. 
 
 
 ## bluemix ic cpi
@@ -238,7 +228,7 @@ bluemix ic cpi training/sinatra registry.ng.bluemix.net/mynamespace/mysinatra:v1
 ## bluemix ic exec
 {: #bluemix_ic_exec}
 
-컨테이너에서 명령을 실행합니다. 자세한 정보는 Docker 도움말에서 [exec](https://docs.docker.com/engine/reference/commandline/exec/){: new_window} 명령을 참조하십시오.
+컨테이너에서 명령을 실행합니다. 자세한 정보는 Docker 도움말에서 [exec ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/exec/){: new_window} 명령을 참조하십시오. 
 
 ```
 bluemix ic exec [-d|--detach] [-it] [-u USER|--user USER] CONTAINER [CMD]
@@ -312,7 +302,7 @@ NMENT_VARIABLE_FILE] [-P false|true] [--volume] [--min MIN_INSTANCE_COUNT] [--ma
 | CCS_BIND_APP=*&lt;appname&gt;*       | 컨테이너에 서비스를 바인드합니다. `CCS_BIND_APP` 환경 변수를 사용하여 앱을 컨테이너에 바인드하십시오. 앱은 대상 서비스에 바인드되어 브릿지 역할을 하며, 이 브릿지를 통해 {{site.data.keyword.Bluemix_notm}}는 사용자 브릿지 앱의 `VCAP_SERVICES` 정보를 실행 중인 컨테이너 인스턴스로 가져올 수 있습니다. 브릿지 앱 작성에 대한 자세한 정보는 [컨테이너에 서비스 바인딩](../../../containers/container_integrations_binding.html){: new_window}을 참조하십시오. |
 | CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | 브릿지 앱을 사용하지 않고 컨테이너에 직접 Bluemix 서비스를 바인드하려면 CCS_BIND_SRV를 사용하십시오. 이 바인딩을 통해 Bluemix가 실행 중인 컨테이너 인스턴스에 VCAP_SERVICES 정보를 삽입할 수 있습니다. 여러 Bluemix 서비스를 표시하려면 동일한 환경 변수의 일부로 Bluemix 서비스를 포함시키십시오. |
 | LOG_LOCATIONS=*&lt;path_to_file&gt;* | 컨테이너에서 모니터링할 로그 파일을 추가합니다. `LOG_LOCATIONS` 환경 변수를 로그 파일의 경로와 함께 포함시키십시오. |
-{: caption="Table 8. Commonly used environment variables" caption-side="top"}
+{: caption="표 2. 공통으로 사용되는 환경 변수" caption-side="top"}
 
  <dl>
    <dt>--env-file <i>ENVIRONMENT_VARIABLE_FILE</i>(선택사항)</dt>
@@ -341,7 +331,7 @@ NMENT_VARIABLE_FILE] [-P false|true] [--volume] [--min MIN_INSTANCE_COUNT] [--ma
    <dd>필요한 인스턴스 수입니다. 기본값은 2입니다.</dd>
    <dt>--auto(선택사항)</dt>
    <dd>컨테이너 그룹이 작성되고 자동 복구가 사용되는 경우, IBM Containers는 지정된 포트에 대한 HTTP 요청으로 각 인스턴스의 상태를 확인합니다. <br>
-두 개의 후속 90초 간격에서 컨테이너 인스턴스로부터 응답이 수신되지 않으면 해당 인스턴스가 제거되고 새 인스턴스로 바뀝니다. 컨테이너가 응답하면 아무 조치도 수행되지 않습니다. 이 프로세스는 계속해서 반복됩니다. 30분 창 동안 그룹의 멤버인 서로 다른 컨테이너의 총 수가 해당 그룹의 관찰된 최대 크기의 3배보다 크거나 같으면 해당 컨테이너 그룹에 대해 자동 복구가 영구적으로 사용되지 않습니다. 자동 복구를 다시 사용하려면 컨테이너 그룹을 다시 작성해야 합니다.</dd>
+   두 개의 후속 90초 간격에서 컨테이너 인스턴스로부터 응답이 수신되지 않으면 해당 인스턴스가 제거되고 새 인스턴스로 바뀝니다. 컨테이너가 응답하면 아무 조치도 수행되지 않습니다. 이 프로세스는 계속해서 반복됩니다. 30분 창 동안 그룹의 멤버인 서로 다른 컨테이너의 총 수가 해당 그룹의 관찰된 최대 크기의 3배보다 크거나 같으면 해당 컨테이너 그룹에 대해 자동 복구가 영구적으로 사용되지 않습니다. 자동 복구를 다시 사용하려면 컨테이너 그룹을 다시 작성해야 합니다.</dd>
   <dt>--anti(선택사항)</dt>
   <dd> 컨테이너 그룹의 가용성을 높이려면 anti-affinity를 사용하십시오. --anti 옵션은 사용자 그룹의 모든 컨테이너 인스턴스를 별도의 실제 컴퓨팅 노드에 배치하여 하드웨어 장애로 인해 그룹의 모든 컨테이너가 충돌하는 경우가 줄어들도록 강제 실행합니다. 각 Bluemix 지역과 조직에서 배치에 사용할 수 있는 컴퓨팅 노드의 세트는 제한되어 있으므로 그룹 크기가 큰 경우 이 옵션을 사용하지 못할 수 있습니다. 배치에 성공하지 못한 경우에는 그룹의 컨테이너 인스턴스 수를 줄이거나 --anti 옵션을 제거하십시오. </dd>
    <dt><i>CMD</i>(선택사항)</dt>
@@ -366,8 +356,7 @@ IBM Containers에서 제공하는 `registry.ng.bluemix.net/ibmnode` 이미지를
 bluemix ic group-create --name my_container_group registry.ng.bluemix.net/ibmnode -- tail -f /dev/null
 ```
 
-`registry.ng.bluemix.net/ibmliberty` 이미지를 사용하여 자동 복구가 사용되는 확장 가능한 그룹 `mygroup`을 작성합니다. 포트는 `9080`이고 호스트 이름은 `mycontainerhost`이며 도메인 이름은 `mybluemix.net`입니다.
-
+`registry.ng.bluemix.net/ibmliberty` 이미지를 사용하여 자동 복구가 사용되는 확장 가능한 그룹 `mygroup`을 작성합니다. 포트는 `9080`이고 호스트 이름은 `mycontainerhost`이며 도메인 이름은 `mybluemix.net`입니다. 
 ```
 bluemix ic group-create -p 9080 --auto -n mycontainerhost -d mybluemix.net --name mygroup registry.ng.bluemix.net/ibmliberty
 ```
@@ -393,8 +382,7 @@ bluemix ic group-inspect CONTAINER_GROUP
 
 <strong>예제</strong>:
 
-다음 예제는 `my_group` 컨테이너 그룹을 검사하기 위한 요청을 보여줍니다.
-
+다음 예제는 `my_group` 컨테이너 그룹을 검사하기 위한 요청을 보여줍니다. 
 ```
 bluemix ic group-inspect my_group
 ```
@@ -420,8 +408,7 @@ bluemix ic group-instances CONTAINER_GROUP
 
 <strong>예제</strong>:
 
-`my_group` 컨테이너 그룹의 모든 인스턴스를 나열합니다.
-
+`my_group` 컨테이너 그룹의 모든 인스턴스를 나열합니다. 
 ```
 bluemix ic group-instances my_group
 ```
@@ -450,8 +437,7 @@ bluemix ic group-remove [-f|--force] GROUP_NAME [GROUP_NAME2 [...]]
 
 <strong>예제</strong>:
 
-다음 예제는 컨테이너 그룹을 제거하기 위한 요청을 보여줍니다. 여기서 `my_group`은 컨테이너 그룹의 이름입니다.
-
+다음 예제는 컨테이너 그룹을 제거하기 위한 요청을 보여줍니다. 여기서 `my_group`은 컨테이너 그룹의 이름입니다. 
 ```
 bluemix ic group-remove my_group
 ```
@@ -485,8 +471,7 @@ bluemix ic group-update [--anti] [--desired DESIRED_INSTANCE_COUNT] [-e ENV_KEY=
 
 <strong>예제</strong>:
 
-다음 예제는 `my_group` 컨테이너 그룹을 업데이트하기 위한 요청을 보여줍니다.
-
+다음 예제는 `my_group` 컨테이너 그룹을 업데이트하기 위한 요청을 보여줍니다. 
 ```
 bluemix ic group-update --desired 5 my_group
 ```
@@ -513,7 +498,7 @@ bluemix ic groups [-q]
 ## bluemix ic images
 {: #bluemix_ic_images}
 
-조직의 개인용 {{site.data.keyword.Bluemix_notm}} 저장소에 있는 사용 가능한 모든 이미지 목록을 봅니다. 자세한 정보는 Docker 도움말에서 [images](https://docs.docker.com/engine/reference/commandline/images){: new_window} 명령을 참조하십시오. 목록에는 이미지 ID, 작성된 날짜 및 이미지 이름이 포함됩니다.
+조직의 개인용 {{site.data.keyword.Bluemix_notm}} 저장소에 있는 사용 가능한 모든 이미지 목록을 봅니다. 자세한 정보는 Docker 도움말에서 [images ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/images){: new_window} 명령을 참조하십시오. 목록에는 이미지 ID, 작성된 날짜 및 이미지 이름이 포함됩니다.
 
 ```
 bluemix ic images [-a|--all] [-f CONDITION] [--no-trunc] [-q|--quiet]
@@ -536,8 +521,7 @@ bluemix ic images [-a|--all] [-f CONDITION] [--no-trunc] [-q|--quiet]
 
 <strong>예제</strong>:
 
-다음 예제는 조직의 사용 가능한 이미지 목록을 수신하기 위한 요청을 보여줍니다.
-
+다음 예제는 조직의 사용 가능한 이미지 목록을 수신하기 위한 요청을 보여줍니다. 
 ```
 bluemix ic images
 ```
@@ -580,7 +564,7 @@ bluemix region-set us-south
 ## bluemix ic inspect
 {: #bluemix_ic_inspect}
 
-컨테이너에 대한 정보를 봅니다. 자세한 정보는 Docker 도움말에서 [inspect](https://docs.docker.com/engine/reference/commandline/inspect){: new_window} 명령을 참조하십시오.
+컨테이너에 대한 정보를 봅니다. 자세한 정보는 Docker 도움말에서 [inspect ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/inspect){: new_window} 명령을 참조하십시오. 
 
 ```
 bluemix ic inspect [IMAGE|images|CONTAINER]
@@ -603,8 +587,7 @@ bluemix ic inspect [IMAGE|images|CONTAINER]
 
 <strong>예제</strong>:
 
-다음 예제는 `proxy`라는 컨테이너를 검사하기 위한 요청을 보여줍니다.
-
+다음 예제는 `proxy`라는 컨테이너를 검사하기 위한 요청을 보여줍니다. 
 ```
 bluemix ic inspect proxy
 ```
@@ -632,8 +615,7 @@ bluemix ic ip-bind IP_ADDRESS CONTAINER
 
 <strong>예제</strong>:
 
-다음 예제는 IP 주소 `192.123.12.12`를 `proxy` 컨테이너로 바인드하기 위한 요청을 보여줍니다.
-
+다음 예제는 IP 주소 `192.123.12.12`를 `proxy` 컨테이너로 바인드하기 위한 요청을 보여줍니다. 
 ```
 bluemix ic ip-bind 192.123.12.12 proxy
 ```
@@ -700,8 +682,7 @@ bluemix ic ip-unbind IP_ADDRESS CONTAINER
 
 <strong>예제</strong>:
 
-다음 예제는 IP 주소 `192.123.12.12`를 `proxy` 컨테이너에서 바인드 해제하기 위한 요청을 보여줍니다.
-
+다음 예제는 IP 주소 `192.123.12.12`를 `proxy` 컨테이너에서 바인드 해제하기 위한 요청을 보여줍니다. 
 ```
 bluemix ic ip-unbind 192.123.12.12 proxy
 ```
@@ -737,7 +718,7 @@ bluemix ic ips -q
 ## bluemix ic kill
 {: #bluemix_ic_kill}
 
-컨테이너를 중지하지 않고 컨테이너에서 실행 중인 프로세스를 중지합니다. 자세한 정보는 Docker 도움말에서 [kill](https://docs.docker.com/engine/reference/commandline/kill/){: new_window} 명령을 참조하십시오.
+컨테이너를 중지하지 않고 컨테이너에서 실행 중인 프로세스를 중지합니다. 자세한 정보는 Docker 도움말에서 [kill ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/kill/){: new_window} 명령을 참조하십시오. 
 
 ```
 bluemix ic kill [-s CMD|--signal CMD] CONTAINER
@@ -757,8 +738,7 @@ bluemix ic kill [-s CMD|--signal CMD] CONTAINER
 
 <strong>예제</strong>:
 
-다음 예제는 `proxy`라는 컨테이너의 프로세스를 강제 종료하기 위한 요청을 보여줍니다.
-
+다음 예제는 `proxy`라는 컨테이너의 프로세스를 강제 종료하기 위한 요청을 보여줍니다. 
 ```
 bluemix ic kill proxy
 ```
@@ -767,7 +747,7 @@ bluemix ic kill proxy
 ## bluemix ic logs
 {: #bluemix_ic_logs}
 
-실행 중인 컨테이너의 출력 또는 오류 로그를 표시합니다. 자세한 정보는 Docker 도움말에서 [logs](https://docs.docker.com/engine/reference/commandline/logs/){: new_window} 명령을 참조하십시오.
+실행 중인 컨테이너의 출력 또는 오류 로그를 표시합니다. 자세한 정보는 Docker 도움말에서 [logs ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/logs/){: new_window} 명령을 참조하십시오. 
 ```
 bluemix ic logs [OPTIONS] CONTAINER
 ```
@@ -809,7 +789,7 @@ bluemix ic namespace-set NAME
 ## bluemix ic pause
 {: #pause}
 
-실행 중인 컨테이너 내의 모든 프로세스를 일시정지합니다. 자세한 정보는 Docker 도움말에서 [pause](https://docs.docker.com/engine/reference/commandline/pause/){: new_window} 명령을 참조하십시오. 컨테이너를 중지하려면 [bluemix ic unpause](#unpause) 명령을 참조하십시오.
+실행 중인 컨테이너 내의 모든 프로세스를 일시정지합니다. 자세한 정보는 Docker 도움말에서 [pause ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/pause/){: new_window} 명령을 참조하십시오. 컨테이너를 중지하려면 [bluemix ic unpause](#unpause) 명령을 참조하십시오.
 
 ```
 bluemix ic pause CONTAINER
@@ -837,8 +817,7 @@ bluemix ic pause CONTAINER
 
 <strong>예제</strong>:
 
-다음 예제는 `proxy`라는 컨테이너를 일시정지하기 위한 요청을 보여줍니다.
-
+다음 예제는 `proxy`라는 컨테이너를 일시정지하기 위한 요청을 보여줍니다. 
 ```
 bluemix ic pause proxy
 ```
@@ -847,12 +826,12 @@ bluemix ic pause proxy
 ## bluemix ic port
 {: #bluemix_ic_port}
 
-컨테이너의 포트 맵핑 또는 특정 맵핑을 나열합니다. 이 명령은 `docker port` 명령을 랩핑합니다. 자세한 정보는 Docker 도움말에서 [port](https://docs.docker.com/engine/reference/commandline/port/){: new_window} 명령을 참조하십시오.
+컨테이너의 포트 맵핑 또는 특정 맵핑을 나열합니다. 이 명령은 `docker port` 명령을 랩핑합니다. 자세한 정보는 Docker 도움말에서 [port ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/port/){: new_window} 명령을 참조하십시오. 
 
 
 ## bluemix ic ps
 {: #bluemix_ic_ps}
-로그인한 사용자의 네임스페이스에서 실행 중인 컨테이너 목록을 봅니다. 기본적으로 이 명령은 실행 중인 컨테이너만 표시합니다. 자세한 정보는 Docker 도움말에서 [ps](https://docs.docker.com/engine/reference/commandline/ps/){: new_window} 명령을 참조하십시오.
+로그인한 사용자의 네임스페이스에서 실행 중인 컨테이너 목록을 봅니다. 기본적으로 이 명령은 실행 중인 컨테이너만 표시합니다. 자세한 정보는 Docker 도움말에서 [ps ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/ps/){: new_window} 명령을 참조하십시오. 
 
 ```
 bluemix ic ps [-a|--all] [--filter env=SEARCH_CRITERIA] [-s|--size] [-l NUM|--limit NUM] [-q|--quiet]
@@ -878,8 +857,7 @@ bluemix ic ps [-a|--all] [--filter env=SEARCH_CRITERIA] [-s|--size] [-l NUM|--li
 
 <strong>예제</strong>:
 
-다음 예제는 실행 중인 컨테이너와 중지된 컨테이너를 모두 표시하기 위한 요청을 보여줍니다.
-
+다음 예제는 실행 중인 컨테이너와 중지된 컨테이너를 모두 표시하기 위한 요청을 보여줍니다. 
 ```
 bluemix ic ps -a
 ```
@@ -887,12 +865,14 @@ bluemix ic ps -a
 
 ## bluemix ic rename
 {: #bluemix_ic_rename}
-컨테이너의 이름을 바꿉니다. 자세한 정보는 Docker 도움말에서 [rename](https://docs.docker.com/engine/reference/commandline/rename/){: new_window} 명령을 참조하십시오. 
+컨테이너의 이름을 바꿉니다. 자세한 정보는 Docker 도움말에서 [rename ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/rename/){: new_window} 명령을 참조하십시오. 
 
 ```
 bluemix ic rename OLD_NAME NEW_NAME
 ```
-<strong>전제조건</strong>:  엔드포인트, 로그인, 대상, Docker<strong>명령 옵션</strong>:
+<strong>전제조건</strong>:  엔드포인트, 로그인, 대상, Docker
+
+<strong>명령 옵션</strong>:
 
 <dl>
    <dt><i>OLD_NAME</i>(필수)</dt>
@@ -907,12 +887,14 @@ bluemix ic rename OLD_NAME NEW_NAME
 
 로그인한 Bluemix 영역에서 IBM Containers 서비스를 다시 작성합니다. 영역의 원래 할당량은 유지보수됩니다. 
 
-<strong>중요</strong>: 이 명령을 실행할 때 이 영역에 있는 단일 컨테이너와 그룹은 다시 프로비저닝된 영역으로 마이그레이션되지 않고 마이그레이션 프로세스 중에 제거됩니다.  
+<strong>중요</strong>: 이 명령을 실행할 때 이 영역에 있는 단일 컨테이너와 그룹은 다시 프로비저닝된 영역으로 마이그레이션되지 않고 마이그레이션 프로세스 중에 제거됩니다. 
 
 ```
 bluemix ic reprovision [--force|-f] [ENVIRONMENT_NAME]
 ```
-<strong>명령 옵션</strong>:<dl>
+<strong>명령 옵션</strong>:
+
+<dl>
    <dt>--force|-f(선택사항)</dt>
    <dd>Bluemix 영역에서 IBM Containers 서비스를 다시 작성하도록 강제 실행합니다. </dd>
    <dt><i>AVAILABILITY_ZONE</i>(선택사항)</dt>
@@ -923,7 +905,7 @@ bluemix ic reprovision [--force|-f] [ENVIRONMENT_NAME]
 ## bluemix ic restart
 {: #bluemix_ic_restart}
 
-컨테이너를 다시 시작합니다. 자세한 정보는 Docker 도움말에서 [restart](https://docs.docker.com/engine/reference/commandline/restart/){: new_window} 명령을 참조하십시오.
+컨테이너를 다시 시작합니다. 자세한 정보는 Docker 도움말에서 [restart ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/restart/){: new_window} 명령을 참조하십시오. 
 
 ```
 bluemix ic restart CONTAINER [-t SECS|--time SECS]
@@ -955,8 +937,7 @@ bluemix ic restart CONTAINER [-t SECS|--time SECS]
 
 <strong>예제</strong>:
 
-다음 예제는 `proxy`라는 컨테이너를 다시 시작하기 위한 요청을 보여줍니다.
-
+다음 예제는 `proxy`라는 컨테이너를 다시 시작하기 위한 요청을 보여줍니다. 
 ```
 bluemix ic restart proxy
 ```
@@ -965,7 +946,7 @@ bluemix ic restart proxy
 ## bluemix ic rm
 {: #bluemix_ic_rm}
 
-컨테이너를 제거합니다. 자세한 정보는 Docker 도움말에서 [rm](https://docs.docker.com/engine/reference/commandline/rm/){: new_window} 명령을 참조하십시오.
+컨테이너를 제거합니다. 자세한 정보는 Docker 도움말에서 [rm ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/rm/){: new_window} 명령을 참조하십시오. 
 
 ```
 bluemix ic rm [-f|--force] CONTAINER
@@ -996,8 +977,7 @@ bluemix ic rm [-f|--force] CONTAINER
 
 <strong>예제</strong>:
 
-다음 예제는 `proxy`라는 컨테이너를 제거하기 위한 요청을 보여줍니다.
-
+다음 예제는 `proxy`라는 컨테이너를 제거하기 위한 요청을 보여줍니다. 
 ```
 bluemix ic rm proxy
 ```
@@ -1006,7 +986,7 @@ bluemix ic rm proxy
 ## bluemix ic rmi
 {: #bluemix_ic_rmi}
 
-로그인한 사용자의 네임스페이스에서 이미지를 제거합니다. 자세한 정보는 Docker 도움말에서 [rmi](https://docs.docker.com/engine/reference/commandline/rmi/){: new_window} 명령을 참조하십시오.
+로그인한 사용자의 네임스페이스에서 이미지를 제거합니다. 자세한 정보는 Docker 도움말에서 [rmi ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/rmi/){: new_window} 명령을 참조하십시오. 
 
 ```
 bluemix ic rmi [-R REGISTRY|--registry REGISTRY] IMAGE
@@ -1041,8 +1021,7 @@ bluemix ic rmi [-R REGISTRY|--registry REGISTRY] IMAGE
 
 <strong>예제</strong>:
 
-다음 예제는 `mynamespace/myimage:latest` 이미지를 제거하기 위한 요청을 보여줍니다.
-
+다음 예제는 `mynamespace/myimage:latest` 이미지를 제거하기 위한 요청을 보여줍니다. 
 ```
 bluemix ic rmi registry.ng.bluemix.net/mynamespace/myimage:latest
 ```
@@ -1065,8 +1044,7 @@ bluemix ic route-map [-n HOST|--hostname HOST] [-d DOMAIN|--domain DOMAIN] CONTA
    <dt>-n <i>HOST</i>|--hostname <i>HOST</i>(선택사항)</dt>
    <dd>라우트의 호스트 이름입니다. 호스트 이름은 전체 공용 라우트 URL의 첫 번째 파트입니다(예: URL <i>mycontainerhost.mybluemix.net</i>의 <i>mycontainerhost</i>).</dd>
    <dt>-d <i>DOMAIN</i>|--domain <i>DOMAIN</i>(선택사항)</dt>
-   <dd>라우트의 도메인 이름이며, 이는 전체 공용 라우트 URL의 두 번째 파트입니다. 대부분의 경우, 도메인은 <i>mybluemix.net</i>입니다. 이 매개변수를 사용하여 개인용 도메인을
-지정할 수도 있습니다. </dd>
+   <dd>라우트의 도메인 이름이며, 이는 전체 공용 라우트 URL의 두 번째 파트입니다. 대부분의 경우, 도메인은 <i>mybluemix.net</i>입니다. 이 매개변수를 사용하여 개인용 도메인을 지정할 수도 있습니다. </dd>
    <dt><i>CONTAINER_GROUP</i>(필수)</dt>
    <dd>컨테이너 그룹 ID 또는 이름입니다. </dd>
    </dl>
@@ -1112,7 +1090,7 @@ bluemix ic route-unmap -n my_host -d organization.com GROUP1
 ## bluemix ic run
 {: #bluemix_ic_run}
 
-이미지 이름에서 생성된 컨테이너 클라우드 서비스에서 새 컨테이너를 시작합니다. 자세한 정보는 Docker 도움말에서 [run](https://docs.docker.com/engine/reference/commandline/run/){: new_window} 명령을 참조하십시오. 
+이미지 이름에서 생성된 컨테이너 클라우드 서비스에서 새 컨테이너를 시작합니다. 자세한 정보는 Docker 도움말에서 [run ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/run/){: new_window} 명령을 참조하십시오. 
 
 
 ```
@@ -1142,13 +1120,13 @@ bluemix ic run [-p PORT|--publish PORT] [-P] [-m MEMORY|--memory MEMORY] [-e ENV
 | CCS_BIND_APP=*&lt;appname&gt;*       | 컨테이너에 서비스를 바인드합니다. `CCS_BIND_APP` 환경 변수를 사용하여 앱을 컨테이너에 바인드하십시오. 앱은 대상 서비스에 바인드되어 브릿지 역할을 하며, 이 브릿지를 통해 {{site.data.keyword.Bluemix_notm}}는 사용자 브릿지 앱의 `VCAP_SERVICES` 정보를 실행 중인 컨테이너 인스턴스로 가져올 수 있습니다. 브릿지 앱 작성에 대한 자세한 정보는 [컨테이너에 서비스 바인딩](../../../containers/container_integrations_binding.html){: new_window}을 참조하십시오. |
 | CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | 브릿지 앱을 사용하지 않고 컨테이너에 직접 Bluemix 서비스를 바인드하려면 CCS_BIND_SRV를 사용하십시오. 이 바인딩을 통해 Bluemix가 실행 중인 컨테이너 인스턴스에 VCAP_SERVICES 정보를 삽입할 수 있습니다. 여러 Bluemix 서비스를 표시하려면 동일한 환경 변수의 일부로 Bluemix 서비스를 포함시키십시오. |
 | LOG_LOCATIONS=*&lt;path_to_file&gt;* | 컨테이너에서 모니터링할 로그 파일을 추가합니다. `LOG_LOCATIONS` 환경 변수를 로그 파일의 경로와 함께 포함시키십시오. |
-{: caption="Table 9. Commonly used environment variables" caption-side="top"}
+{: caption="표 3. 공통으로 사용되는 환경 변수" caption-side="top"}
 
 
    <dl>
    <dt>--volume <i>VOLUME</i>:<i>CONTAINER_PATH</i>[:ro] (선택사항)</dt>
    <dd><i>VolumeId:ContainerPath[:ro]</i> 형식의 세부사항을 지정하여 컨테이너에 볼륨을 첨부합니다.
-<ul>
+   <ul>
    <li><i>VOLUME</i>: 볼륨 ID 또는 이름입니다.</li>
    <li><i>CONTAINER_PATH</i>: 컨테이너의 볼륨에 대한 절대 경로입니다. </li>
    <li>ro: 선택사항입니다. <i>ro</i>를 지정하면 기본값 "읽기/쓰기"가 아닌 "읽기 전용"으로 볼륨이 설정됩니다. </li></ul>
@@ -1168,27 +1146,23 @@ bluemix ic run [-p PORT|--publish PORT] [-P] [-m MEMORY|--memory MEMORY] [-e ENV
 
 <strong>예제</strong>:
 
-`registry.ng.bluemix.net/ibmnode` 이미지에 빌드된 `my_container` 컨테이너에 대해 `sh -c "while true; do date; sleep 20; done"` 장시간 실행 명령을 실행합니다.
-
+`registry.ng.bluemix.net/ibmnode` 이미지에 빌드된 `my_container` 컨테이너에 대해 `sh -c "while true; do date; sleep 20; done"` 장시간 실행 명령을 실행합니다. 
 ```
 bluemix ic run --name my_container registry.ng.bluemix.net/ibmnode -- sh -c "while true; do date; sleep 20; done"
 ```
 
 
-`my_namespace/nginx` 이미지(여기서 `my_namespace`는 로그인한 사용자와 연관된 네임스페이스임)를 사용하여 메모리 한계가 `1024`MB인 `proxy` 컨테이너를 작성한 후 시작합니다.
-
+`my_namespace/nginx` 이미지(여기서 `my_namespace`는 로그인한 사용자와 연관된 네임스페이스임)를 사용하여 메모리 한계가 `1024`MB인 `proxy` 컨테이너를 작성한 후 시작합니다. 
 ```
 bluemix ic run -n proxy -m 1024 registry.ng.bluemix.net/my_namespace/nginx
 ```
 
-`my_namespace/blog` 이미지를 사용하여 컨테이너를 작성한 후 시작하고 신임 정보를 환경 변수로 전달합니다. `my_namespace`는 로그인한 사용자와 연관된 네임스페이스입니다.
-
+`my_namespace/blog` 이미지를 사용하여 컨테이너를 작성한 후 시작하고 신임 정보를 환경 변수로 전달합니다. `my_namespace`는 로그인한 사용자와 연관된 네임스페이스입니다. 
 ```
 bluemix ic run -n my_container -e USER=johnsmith -e PASS=password registry.ng.bluemix.net/my_namespace/blog
 ```
 
-`my_namespace/blog` 이미지(여기서 `my_namespace`는 로그인한 사용자와 연관된 네임스페이스임)를 사용하여 컨테이너에 볼륨을 추가합니다.
-
+`my_namespace/blog` 이미지(여기서 `my_namespace`는 로그인한 사용자와 연관된 네임스페이스임)를 사용하여 컨테이너에 볼륨을 추가합니다. 
 ```
 bluemix ic run -n my_container -v VolId1:/first/path -v VolId2:/second/path registry.ng.bluemix.net/my_namespace/blog
 ```
@@ -1202,7 +1176,9 @@ bluemix ic run -n my_container -v VolId1:/first/path -v VolId2:/second/path regi
 ```
 bluemix ic service-bind GROUP_NAME SERVICE_INSTANCE 
 ```
-<strong>명령 옵션</strong>:<dl>
+<strong>명령 옵션</strong>:
+
+   <dl>
    <dt><i>GROUP_NAME</i>(필수)</dt>
    <dd>그룹 ID 또는 이름입니다. </dd>
    <dt><i>SERVICE_INSTANCE</i>(필수)</dt>
@@ -1218,7 +1194,9 @@ bluemix ic service-bind GROUP_NAME SERVICE_INSTANCE
 ```
 bluemix ic service-unbind GROUP_NAME SERVICE_INSTANCE 
 ```
-<strong>명령 옵션</strong>:<dl>
+<strong>명령 옵션</strong>:
+
+   <dl>
    <dt><i>GROUP_NAME</i>(필수)</dt>
    <dd>그룹 ID 또는 이름입니다. </dd>
    <dt><i>SERVICE_INSTANCE</i>(필수)</dt>
@@ -1228,7 +1206,7 @@ bluemix ic service-unbind GROUP_NAME SERVICE_INSTANCE
 
 ## bluemix ic start
 {: #ic_start}
-중지된 컨테이너를 시작합니다. 자세한 정보는 Docker 도움말에서 [start](https://docs.docker.com/engine/reference/commandline/start/){: new_window} 명령을 참조하십시오. 컨테이너를 중지하려면 [bluemix ic stop](#ic_stop) 명령을 참조하십시오.
+중지된 컨테이너를 시작합니다. 자세한 정보는 Docker 도움말에서 [start ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/start/){: new_window} 명령을 참조하십시오. 컨테이너를 중지하려면 [bluemix ic stop](#ic_stop) 명령을 참조하십시오.
 
 ```
 bluemix ic start CONTAINER
@@ -1258,8 +1236,7 @@ bluemix ic start CONTAINER
 
 <strong>예제</strong>:
 
-다음 예제는 `proxy`라는 컨테이너를 시작하기 위한 요청을 보여줍니다.
-
+다음 예제는 `proxy`라는 컨테이너를 시작하기 위한 요청을 보여줍니다. 
 ```
 bluemix ic start proxy
 ```
@@ -1268,7 +1245,7 @@ bluemix ic start proxy
 ## bluemix ic stats
 {: #bluemix_ic_stats}
 
-하나 이상의 컨테이너에 대해 실시간 사용량 통계를 봅니다. 종료하려면 `CTRL+C`를 사용하십시오. 자세한 정보는 Docker 도움말에서 [stats](https://docs.docker.com/engine/reference/commandline/stats/){: new_window} 명령을 참조하십시오.
+하나 이상의 컨테이너에 대해 실시간 사용량 통계를 봅니다. 종료하려면 `CTRL+C`를 사용하십시오. 자세한 정보는 Docker 도움말에서 [stats ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/stats/){: new_window} 명령을 참조하십시오. 
 
 ```
 bluemix ic stats [--no-stream] CONTAINER [CONTAINER]
@@ -1287,16 +1264,15 @@ bluemix ic stats [--no-stream] CONTAINER [CONTAINER]
 
 <strong>예제</strong>:
 
-다음 예제는 컨테이너에 대한 가장 최근의 통계를 얻기 위한 요청을 보여줍니다.
-
+다음 예제는 컨테이너에 대한 가장 최근의 통계를 얻기 위한 요청을 보여줍니다. 
 ```
 bluemix ic stats --no-stream my_container
 ```
 
 
-## bluemix ic stop  
+## bluemix ic stop
 {: #ic_stop}
-실행 중인 컨테이너를 중지합니다. 자세한 정보는 Docker 도움말에서 [stop](https://docs.docker.com/engine/reference/commandline/stop/){: new_window} 명령을 참조하십시오. 컨테이너를 시작하려면 [bluemix ic start](#ic_start) 명령을 참조하십시오.
+실행 중인 컨테이너를 중지합니다. 자세한 정보는 Docker 도움말에서 [stop ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/stop/){: new_window} 명령을 참조하십시오. 컨테이너를 시작하려면 [bluemix ic start](#ic_start) 명령을 참조하십시오.
 
 ```
 bluemix ic stop CONTAINER [-t SECS|--time SECS]
@@ -1327,8 +1303,7 @@ bluemix ic stop CONTAINER [-t SECS|--time SECS]
 
 <strong>예제</strong>:
 
-다음 예제는 `proxy`라는 컨테이너를 중지하기 위한 요청을 보여줍니다.
-
+다음 예제는 `proxy`라는 컨테이너를 중지하기 위한 요청을 보여줍니다. 
 ```
 bluemix ic stop proxy
 ```
@@ -1337,7 +1312,7 @@ bluemix ic stop proxy
 ## bluemix ic top
 {: #bluemix_ic_top}
 
-컨테이너에서 실행 중인 프로세스를 표시합니다. 자세한 정보는 Docker 도움말에서 [top](https://docs.docker.com/engine/reference/commandline/top/){: new_window} 명령을 참조하십시오.
+컨테이너에서 실행 중인 프로세스를 표시합니다. 자세한 정보는 Docker 도움말에서 [top ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/top/){: new_window} 명령을 참조하십시오. 
 
 ```
 bluemix ic top CONTAINER [CONTAINER]
@@ -1354,8 +1329,7 @@ bluemix ic top CONTAINER [CONTAINER]
 
 <strong>예제</strong>:
 
-다음 예제는 `my_container`라는 컨테이너의 프로세스를 표시하기 위한 요청을 보여줍니다.
-
+다음 예제는 `my_container`라는 컨테이너의 프로세스를 표시하기 위한 요청을 보여줍니다. 
 ```
 bluemix ic top my_container
 ```
@@ -1364,7 +1338,7 @@ bluemix ic top my_container
 ## bluemix ic unpause
 {: #unpause}
 
-실행 중인 컨테이너 내에 있는 모든 프로세스의 일시정지를 해제합니다. 자세한 정보는 Docker 도움말에서 [unpause](https://docs.docker.com/engine/reference/commandline/unpause/){: new_window} 명령을 참조하십시오. 컨테이너를 일시정지하려면 [bluemix ic pause](#pause) 명령을 참조하십시오.
+실행 중인 컨테이너 내에 있는 모든 프로세스의 일시정지를 해제합니다. 자세한 정보는 Docker 도움말에서 [unpause ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/unpause/){: new_window} 명령을 참조하십시오. 컨테이너를 일시정지하려면 [bluemix ic pause](#pause) 명령을 참조하십시오.
 
 ```
 bluemix ic unpause CONTAINER
@@ -1393,8 +1367,7 @@ bluemix ic unpause CONTAINER
 
 <strong>예제</strong>:
 
-다음 예제는 `proxy`라는 컨테이너의 일시정지를 해제하기 위한 요청을 보여줍니다.
-
+다음 예제는 `proxy`라는 컨테이너의 일시정지를 해제하기 위한 요청을 보여줍니다. 
 ```
 bluemix ic unpause proxy
 ```
@@ -1410,7 +1383,9 @@ bluemix ic unpause proxy
 ```
 bluemix ic reprovision [--force|-f] 
 ```
-<strong>명령 옵션</strong>:<dl>
+<strong>명령 옵션</strong>:
+
+   <dl>
    <dt>--force|-f(선택사항)</dt>
    <dd>Bluemix 영역에서 Bluemix의 삭제를 강제 실행합니다. </dd>
  </dl>
@@ -1427,7 +1402,7 @@ bluemix ic version
 
 <strong>전제조건</strong>:  Docker
 
-IBM Containers의 버전을 보려면 `bluemix ic info`를 실행하십시오. 자세한 정보는 Docker 도움말에서 [version](https://docs.docker.com/engine/reference/commandline/version/){: new_window} 명령을 참조하십시오.
+IBM Containers의 버전을 확인하려면 `bluemix ic info`를 실행하십시오. 자세한 정보는 [version ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/version/){: new_window} 명령을 참조하십시오. 
 
 
 ## bluemix ic volume-create
@@ -1453,8 +1428,7 @@ bluemix ic volume-create VOLUME_NAME FS_NAME
 
 <strong>예제</strong>:
 
-다음 예제는 볼륨을 작성하기 위한 요청을 보여줍니다.
-
+다음 예제는 볼륨을 작성하기 위한 요청을 보여줍니다. 
 ```
 bluemix ic volume-create volume_name fileshare_name
 ```
@@ -1490,8 +1464,7 @@ bluemix ic volume-fs-create FILE_SHARE_NAME
 
 <strong>예제</strong>:
 
-다음 예제는 파일 공유 작성 요청을 표시합니다.
-
+다음 예제는 파일 공유 작성 요청을 표시합니다. 
 ```
 bluemix ic volume-fs-create my_file_share
 ```
@@ -1555,8 +1528,7 @@ bluemix ic volume-fs-remove FILE_SHARE_NAME
 
 <strong>예제</strong>:
 
-다음 예제는 파일 공유 제거 요청을 표시합니다. 여기서 `my_file_share`는 파일 공유의 이름입니다.
-
+다음 예제는 파일 공유 제거 요청을 표시합니다. 여기서 `my_file_share`는 파일 공유의 이름입니다. 
 ```
 bluemix ic volume-fs-remove my_file_share
 ```
@@ -1582,8 +1554,7 @@ bluemix ic volume-inspect VOLUME_NAME
 
 <strong>예제</strong>:
 
-다음 예제는 볼륨을 검사하기 위한 요청입니다. 여기서 `volume_name`은 볼륨의 이름입니다.
-
+다음 예제는 볼륨을 검사하기 위한 요청입니다. 여기서 `volume_name`은 볼륨의 이름입니다. 
 ```
 bluemix ic volume-inspect volume_name
 ```
@@ -1609,8 +1580,7 @@ bluemix ic volume-remove VOLUME_NAME
 
 <strong>예제</strong>:
 
-다음 예제는 볼륨을 제거하기 위한 요청입니다. 여기서 `volume_name`은 볼륨의 이름입니다.
-
+다음 예제는 볼륨을 제거하기 위한 요청입니다. 여기서 `volume_name`은 볼륨의 이름입니다. 
 ```
 bluemix ic volume-remove volume_name
 ```
@@ -1631,7 +1601,7 @@ bluemix ic volumes
 ## bluemix ic wait
 {: #bluemix_ic_wait}
 
-컨테이너를 종료하고 확인으로 종료 코드를 표시합니다. 자세한 정보는 Docker 도움말에서 [wait](https://docs.docker.com/engine/reference/commandline/wait/){: new_window} 명령을 참조하십시오.
+컨테이너를 종료하고 확인으로 종료 코드를 표시합니다. 자세한 정보는 Docker 도움말에서 [wait ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/wait/){: new_window} 명령을 참조하십시오. 
 
 ```
 bluemix ic wait CONTAINER [CONTAINER]
@@ -1648,8 +1618,7 @@ bluemix ic wait CONTAINER [CONTAINER]
 
 <strong>예제</strong>:
 
-다음 예제는 `my_container`라는 컨테이너를 종료하기 위한 요청을 보여줍니다.
-
+다음 예제는 `my_container`라는 컨테이너를 종료하기 위한 요청을 보여줍니다. 
 ```
 bluemix ic wait my_container
 ```
@@ -1675,9 +1644,7 @@ bluemix ic wait-status CONTAINER
 
 <strong>예제</strong>:
 
-다음 예제는 `my_container`라는 컨테이너를 종료하기 위한 요청을 보여줍니다.
-
+다음 예제는 `my_container`라는 컨테이너를 종료하기 위한 요청을 보여줍니다. 
 ```
 bluemix ic wait my_container
 ```
-

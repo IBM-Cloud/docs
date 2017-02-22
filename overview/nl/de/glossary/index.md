@@ -570,7 +570,7 @@ Ein Service, der nicht produktionsreif ist und jederzeit aus der Produktion entf
 ### föderieren
 {: #x2763229}
 
-Das Zusammenfügen von zwei oder mehreren Entitäten. Zum Beispiel kann die registrierte Domäne eines Unternehmens mit einer IBM ID förderiert werden.
+Das Zusammenfügen von zwei oder mehreren Entitäten. Zum Beispiel kann die registrierte Domäne eines Unternehmens mit einer IBMid förderiert werden.
 
 ### Feed
 {: #x3129185}

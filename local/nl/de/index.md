@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015, 2017
 
-lastupdated: "2016-11-07"
+lastupdated: "2017-01-12"
 
 
 ---
@@ -17,7 +17,6 @@ lastupdated: "2016-11-07"
 # {{site.data.keyword.Bluemix_local_notm}}
 {: #local}
 
-<!-- 10/30/16 Most sections are currently being updated and edited. Do not move full file for production -->
 
 {{site.data.keyword.Bluemix_local}} bringt die Leistungsstärke und Beweglichkeit der cloudbasierten {{site.data.keyword.Bluemix_notm}}-Plattform in Ihr Rechenzentrum. Mit {{site.data.keyword.Bluemix_local_notm}} können Sie die hochsensiblen Verarbeitungsprozesse hinter der Firewall Ihres Unternehmens schützen und gleichzeitig eine sichere Verbindung und Synchronisation mit {{site.data.keyword.Bluemix_notm}} Public gewährleisten.
 {:shortdesc}
@@ -35,7 +34,7 @@ Darüber hinaus ist eine Reihe von Services als {{site.data.keyword.Bluemix_loca
 |Inbegriffen | [{{site.data.keyword.Bluemix_notm}}-Laufzeiten](/docs/cfapps/runtimes.html) | Machen Sie mit Laufzeiten Ihre App schnell betriebsbereit, ohne Maschinen und Betriebssysteme einrichten und verwalten zu müssen. Alle {{site.data.keyword.Bluemix_notm}}-Laufzeiten stehen Ihnen zur Verwendung in Ihrer {{site.data.keyword.Bluemix_notm}} Local-Instanz zur Verfügung.|
 |Inbegriffen | [{{site.data.keyword.autoscaling}}](/docs/services/Auto-Scaling/index.html)| Dynamisches Erhöhen oder Verringern der Rechenleistung Ihrer Anwendung basierend auf Richtlinien. Mit diesem Service können Sie Ihre {{site.data.keyword.Bluemix}} Local-Umgebung unbegrenzt nutzen.|
 |Optional | [{{site.data.keyword.apiconnect_short}}](/docs/services/apiconnect/index.html) | {{site.data.keyword.apiconnect_long}} integriert {{site.data.keyword.APIM}} und IBM StrongLoop in ein einzelnes Angebot, das eine Komplettlösung bietet, um APIs und Microservices zu erstellen, auszuführen, zu verwalten und durchzusetzen. |
-|Optional | [{{site.data.keyword.cloudant}}](/docs/services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}} bietet Zugriff auf eine vollständig verwaltete NoSQL-JSON-Datenebene, die permanent aktiv ist. Dieser Service ist mit CouchDB kompatibel und über eine einfache HTTP-Schnittstelle für mobile Anwendungsmodelle und Webanwendungsmodelle zugänglich. Weitere Informationen finden Sie in der vollständigen [Dokumentation](http://docs.cloudant.com/BluemixLocal.html){: new_window} und in den [Hardwarevoraussetzung](http://docs.cloudant.com/BluemixLocalHardware.html){: new_window} für eine lokale Umgebung. |
+|Optional | [{{site.data.keyword.cloudant}}](/docs/services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}} bietet Zugriff auf eine vollständig verwaltete NoSQL-JSON-Datenebene, die permanent aktiv ist. Dieser Service ist mit CouchDB kompatibel und über eine einfache HTTP-Schnittstelle für mobile Anwendungsmodelle und Webanwendungsmodelle zugänglich. Weitere Informationen finden Sie in der vollständigen [Dokumentation ![Symbol für externen Link](../icons/launch-glyph.svg)](http://docs.cloudant.com/BluemixLocal.html){: new_window} und in den [Hardwarevoraussetzungen ![Symbol für externen Link](../icons/launch-glyph.svg)](http://docs.cloudant.com/BluemixLocalHardware.html){: new_window} für eine lokale Umgebung. |
 |Optional | [{{site.data.keyword.containershort}}](/docs/containers/container_index.html) | Docker-Container in {{site.data.keyword.Bluemix_notm}} Local ausführen. Container sind virtuelle Softwareobjekte, die alle für die Ausführung von Apps erforderlichen Elemente enthalten. Container bieten den Vorteil der Ressourcenisolation und -zuordnung, wobei sie besser portierbar und effizienter als beispielsweise virtuelle Maschinen sind. Informationen zu den Hardwarevoraussetzungen finden Sie unter [IBM {{site.data.keyword.containershort}} in {{site.data.keyword.Bluemix_notm}} Dedicated and Bluemix Local](/docs/containers/container_dl.html). |
 |Optional | [{{site.data.keyword.datacshort}}](/docs/services/DataCache/index.html#data_cache) | Dieser Service bietet ein speicherinternes Datengitter, durch das Szenarios mit verteiltem Caching für Ihre Apps unterstützt werden. Umfasst 50 GB speicherinternen Cache. |
 | Optional (Beta) | [Protokollierung](/docs/monitoringandlogging/cfapps_ml_logs_dedicated_ov.html#container_ml_logs_dedicated_ov) | Stellt Protokolle für Ihre Cloud Foundry-Apps in der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle sowie durchsuchbare Protokolle und Dashboards in Kibana bereit. |
@@ -70,7 +69,7 @@ Durch optionale Komponenten, die zusätzlich zum Kauf angeboten werden, können 
 {: caption="Table 3. Optional platform add-on components for purchase" caption-side="top"}
 {: #table03}
 
-**Hinweis**: Für {{site.data.keyword.Bluemix_notm}} Local-Komponenten wird möglicherweise eine bestimmte konfigurierte Kapazität (z. B. Gigabyte oder Transaktionen pro Sekunde) angegeben. Da die tatsächliche Kapazität im realen Einsatz für eine bestimmte Konfiguration des Cloud-Service von vielen verschiedenen Faktoren abhängt, kann die tatsächliche Kapazität in der Praxis nach oben oder unten von der konfigurierten Kapazität abweichen.
+**Hinweis:** Für {{site.data.keyword.Bluemix_notm}} Local-Komponenten wird möglicherweise eine bestimmte konfigurierte Kapazität (z. B. Gigabyte oder Transaktionen pro Sekunde) angegeben. Da die tatsächliche Kapazität im realen Einsatz für eine bestimmte Konfiguration des Cloud-Service von vielen verschiedenen Faktoren abhängt, kann die tatsächliche Kapazität in der Praxis nach oben oder unten von der konfigurierten Kapazität abweichen.
 
 ### Syndizierter Katalog
 {: #cataloglocal}
@@ -133,7 +132,7 @@ Wenn es sich um eine private Instanz eines {{site.data.keyword.Bluemix_notm}}-Se
 {: caption="Table 4. Services available for syndication from {{site.data.keyword.Bluemix_notm}} Public by region" caption-side="top"}
 {: #table04}
 
-**Hinweis**: Diese Tabelle enthält keine Services von Drittanbietern. Überprüfen Sie Ihren Katalog auf Optionen für Services von Drittanbietern.
+**Hinweis:** Diese Tabelle enthält keine Services von Drittanbietern. Überprüfen Sie Ihren Katalog auf Optionen für Services von Drittanbietern.
 
 
 ## {{site.data.keyword.Bluemix_local_notm}}-Architektur
@@ -220,7 +219,7 @@ Bereitstellung und Wartungsaktualisierungen
 </dt>
 <dd>
 Mit Ausnahme der Erstinstallation der virtuellen Konzeptionsmaschine, die relativ früh im Bereitstellungsprozess erfolgt, ist die Bereitstellung der meisten anderen Komponenten mittels UrbanCode Deploy automatisiert.<br>
-<p>Bei den Bereitstellungsaktivitäten stützt sich UrbanCode Deploy auf [BOSH](https://bosh.cloudfoundry.org/){:new_window}; hierbei werden zuerst unter anderem die BOSH-Komponenten aus der virtuellen Konzeptionsmaschine bereitgestellt. Mit der Continuous-Delivery-Funktionalität von UrbanCode Deploy werden Plattformaktualisierungen im Rahmen eines konsistenten Test- und Validierungsprozesses bereitgestellt.</p>
+<p>Bei den Bereitstellungsaktivitäten stützt sich UrbanCode Deploy auf [BOSH ![Symbol für externen Link](../icons/launch-glyph.svg)](https://bosh.cloudfoundry.org/){:new_window}. Hierbei werden zuerst unter anderem die BOSH-Komponenten aus der virtuellen Konzeptionsmaschine bereitgestellt. Mit der Continuous-Delivery-Funktionalität von UrbanCode Deploy werden Plattformaktualisierungen im Rahmen eines konsistenten Test- und Validierungsprozesses bereitgestellt.</p>
 <p>Scripts und Pakete werden vom {{site.data.keyword.IBM_notm}} Operations Center über Relay an Ihre lokale {{site.data.keyword.Bluemix_notm}}-Plattform übertragen.</p>
 </dd>
 <dt>
@@ -241,26 +240,35 @@ Die Umgebung ist für Sie als Administrator für die Verwaltung von Vorfällen, 
 </dd>
 </dl>
 
+### SSL-Inspektion
+{: #sslinspection}
+
+Cloud Foundry- und {{site.data.keyword.Bluemix_notm}}-Anwendungen können mit SSL-Inspektionszertifikaten arbeiten, wenn sie auf Quellen außerhalb der lokalen Umgebung zugreifen. Die Inspektion von SSL-Inhalten ist für Ihre Umgebung verfügbar, wenn Sie ein Stammzertifikat zum Signieren inspizierter SSL-Datenströme bereitstellen. 
+
+Das {{site.data.keyword.Bluemix_notm}}-Bereitstellungsteam lädt das Stammzertifikat, um die SSL-Inspektion während des Bereitstellungsprozesses für Ihre lokale Umgebung in der Umgebung zu aktivieren. Durch das Aktivieren der SSL-Inspektion während der Umgebungseinrichtung wird keine zusätzliche Zeit für die Bereitstellung hinzugefügt. Wenn diese Funktion nicht bei der Erstbereitstellung aktiviert wird, können Sie ihre Aktivierung anfordern. Dies kann jedoch zusätzliche Kosten verursachen und abhängig von Ihren verfügbaren Wartungszeiten zwei bis vier Tage dauern.
+
 
 ## {{site.data.keyword.Bluemix_local_notm}}-Instanz einrichten
 {: #setuplocal}
 
-{{site.data.keyword.Bluemix_local_notm}} wurde konzipiert, um eine private Version des Produktangebots {{site.data.keyword.Bluemix_notm}} Public bereitzustellen, die auf Ihrer eigenen, von Ihnen verwalteten Hardware gehostet ist. Sie können {{site.data.keyword.Bluemix_notm}}-Services und -Laufzeiten verwenden, um Ihre Datenverarbeitungsanforderungen in einer sicheren, vom Kunden gehosteten und verwalteten Cloudumgebung zu unterstützen.
+{{site.data.keyword.Bluemix_local_notm}} wurde konzipiert, um eine private Version des Produktangebots {{site.data.keyword.Bluemix_notm}} Public bereitzustellen, die auf der von Ihnen ausgewählten Hardware gehostet wird. Sie haben zwei Optionen: Sie können die Hardware in Form von VMware bereitstellen oder {{site.data.keyword.Bluemix_notm}} Local System bestellen. Dieses System befindet sich auf einer vorkonfigurierten PureApplication-Appliance, die Sie über {{site.data.keyword.IBM_notm}} bestellen können. Weitere Informationen zu den Optionen der PureApplication-Appliance finden Sie unter [IBM {{site.data.keyword.Bluemix_notm}} Local System W3500 and W3550 models run cloud native services, enabled middleware, and open pattern workloads concurrently ![Symbol für externen Link](../icons/launch-glyph.svg)](https://www-01.ibm.com/common/ssi/rep_ca/5/897/ENUS216-325/){: new_window}.
 
-{{site.data.keyword.IBM_notm}} bietet Ihnen über eine kennwortgesicherte Anmeldung Zugriff auf {{site.data.keyword.Bluemix_local_notm}}. Sie können auf die Services, Laufzeiten und zugehörigen Ressourcen zugreifen und {{site.data.keyword.Bluemix_notm}}-Apps bereitstellen und entfernen. Überprüfen Sie die folgenden Schritte zur Arbeit mit Ihrem {{site.data.keyword.IBM_notm}} Ansprechpartner zum Einrichten Ihrer lokalen Instanz von {{site.data.keyword.Bluemix_notm}}.
+Für {{site.data.keyword.Bluemix_local_notm}} können Sie die {{site.data.keyword.Bluemix_notm}}-Services und -Laufzeiten verwenden, um Ihre Datenverarbeitungsanforderungen in einer sicheren, vom Kunden gehosteten und verwalteten Cloudumgebung zu unterstützen. {{site.data.keyword.IBM_notm}} bietet Ihnen über eine kennwortgesicherte Anmeldung Zugriff auf {{site.data.keyword.Bluemix_local_notm}}. Sie können auf die Services, Laufzeiten und zugehörigen Ressourcen zugreifen und {{site.data.keyword.Bluemix_notm}}-Apps bereitstellen und entfernen. Überprüfen Sie die folgenden Schritte zur Arbeit mit Ihrem {{site.data.keyword.IBM_notm}} Ansprechpartner zum Einrichten Ihrer lokalen Instanz von {{site.data.keyword.Bluemix_notm}}.
+
+**Hinweis:** Wenn Sie {{site.data.keyword.Bluemix_local_notm}} auf der Hardwareoption {{site.data.keyword.Bluemix_notm}} Local System ausführen möchten, weicht der Einrichtungsprozess möglicherweise insofern ab, als Sie dem IBM Ansprechpartner nicht so viele Informationen zur Verfügung stellen müssen. Des Weiteren können Ihre Rollen und Zuständigkeiten in den Konzeptions- und Fortschrittsphasen aufgrund des Wartungsmodells "Call Home" der PureApplication-Appliance im Umfang reduziert werden, da sich dieses von dem Managementmodell unterscheidet, das für die Verwendung von vom Kunden gehosteten VMware-Systemen erforderlich ist. 
 
 Gehen Sie wie folgt vor, um Ihre private Version von {{site.data.keyword.Bluemix_notm}} einzurichten:
 
 <ol>
 <li>Informationen zur Einrichtung Ihrer lokalen Instanz finden Sie auf der Seite <a href="index.html#localinfra" title="Wird in einem neuen Fenster geöffnet">Infrastrukturanforderungen für {{site.data.keyword.Bluemix_local_notm}}</a>.</li>
-<li>Wenden Sie sich an Ihren zugewiesenen {{site.data.keyword.IBM_notm}} Kundenbeauftragten oder wenden Sie sich an <a href="https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs" target="_blank">{{site.data.keyword.Bluemix_notm}}</a>, um mit der Arbeit zu beginnen.</li>
+<li>Wenden Sie sich an Ihren zugewiesenen {{site.data.keyword.IBM_notm}} Kundenbeauftragten oder <a href="https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs" target="_blank">wenden Sie sich an {{site.data.keyword.Bluemix_notm}} <img src="../icons/launch-glyph.svg" alt="Symbol für externen Link"></a>, um mit der Arbeit zu beginnen.</li>
 <li>Erstellen Sie Ihre Vereinbarung zu {{site.data.keyword.Bluemix_local_notm}} einschließlich Meilensteindaten für die Bereitstellung mit {{site.data.keyword.IBM_notm}}.
 	<ol type="a">
 	<li>Erarbeiten Sie mit IBM Ihre einmalige Einrichtung und die monatlich fälligen Gebühren für Ihre {{site.data.keyword.Bluemix_notm}} Local-Instanz. Die monatlich fällige Gebühr basiert auf den lokalen Services, die Sie nutzen möchten. Hinzu kommt ein Abonnement für alle {{site.data.keyword.Bluemix_notm}} Public-Services. Sie erhalten dann eine Rechnung für alle Nutzungen, die über die Abonnementvereinbarung hinausgehen.</li>
 	<li>Ermitteln Sie die Fristen für die einzelnen Einrichtungsphasen Ihrer {{site.data.keyword.Bluemix_local_notm}}-Instanz.</li>
 	</ol>
 	</li>
-<li>Nach dem Erstellen der Plattform und des Kontos ermitteln Sie die Personen in Ihrer Organisation für die Rollen, die benötigt werden, um Ihre lokale Instanz betriebsbereit zu machen. Weitere Informationen zu den Rollen, die Sie zuweisen, finden Sie unter <a href="/docs/local/index.html#rolesresponsibilities" target="_blank">{{site.data.keyword.Bluemix_notm}} Local-Rollen und -Zuständigkeiten</a>.
+<li>Nach dem Erstellen der Plattform und des Kontos ermitteln Sie die Personen in Ihrer Organisation für die Rollen, die benötigt werden, um Ihre lokale Instanz betriebsbereit zu machen. Weitere Informationen zu den Rollen, die Sie zuweisen, finden Sie unter <a href="/docs/local/index.html#rolesresponsibilities">{{site.data.keyword.Bluemix_notm}} Local-Rollen und -Zuständigkeiten</a>.
 </li>
 <li>Sie stellen die Hardware bereit und {{site.data.keyword.IBM_notm}} hilft Ihnen beim Definieren und Festlegen der Netzkonnektivität zwischen Ihrem Unternehmensnetz und Ihrer {{site.data.keyword.Bluemix_local_notm}} Local-Instanz. Weitere Informationen zu Infrastrukturanforderungen finden Sie unter <a href="index.html#localinfra">Infrastrukturanforderungen für {{site.data.keyword.Bluemix_local_notm}}</a>.
 	<ol type="a">
@@ -272,6 +280,8 @@ Gehen Sie wie folgt vor, um Ihre private Version von {{site.data.keyword.Bluemix
 </ol>
 
 Für die Erstbereitstellung und Erstkonfiguration Ihrer Umgebung können Sie einen Prozess wie in der folgenden Liste dargestellt erwarten. Details dazu, wer für die einzelnen Tasks verantwortlich ist, finden Sie unter [Rollen und Zuständigkeiten](/docs/local/index.html#rolesresponsibilities).
+
+**Hinweis:** Wenn Sie Ihre lokale Instanz auf der Hardwareoption {{site.data.keyword.Bluemix_notm}} Local System hosten möchten, können Sie in der folgenden Liste die Schritte 1 bis 3 überspringen.
 
 <ol>
 <li>Sie stellen die VMware-Konfiguration bereit, die die Spezifikationen für Rechenressourcen, Netzbetrieb und Speicher erfüllt. Weitere Informationen zu den Infrastrukturanforderungen finden Sie unter <a href="/docs/local/index.html#localinfra">Infrastrukturanforderungen für {{site.data.keyword.Bluemix_notm}} Local</a>.</li>
@@ -289,19 +299,22 @@ die Sie in der vorherigen Task bereitgestellt haben.</li>
 <li>Sie stellen sieben IP-Adressen in Ihrem Netz bereit. Wenn Sie einen gesicherten Web-Proxy haben, um ausgehenden Zugriff auf das Internet für interne {{site.data.keyword.Bluemix_notm}}-Komponenten zuzulassen, müssen Sie die Berechtigungsnachweise für die entsprechende Verbindung bereitstellen.
 <p>**Hinweis:** Wenn Ihr Web-Proxy nicht geschützt wird, brauchen Sie die Berechtigungsnachweise nicht bereitzustellen. Beachten Sie außerdem, dass nicht alle {{site.data.keyword.Bluemix_local_notm}}-Kunden einen Web-Proxy verwenden.</p></li>
 <li>{{site.data.keyword.IBM_notm}} stellt eine Whitelist von URLs bereit, die über Ihren Web-Proxy zugelassen werden müssen, bevor die Bereitstellung beginnt.<br />
-<p>**Hinweis**: Damit die vorhandenen bzw. neuen Anwendungen auf die erforderlichen Ressourcen zugreifen können, müssen Sie möglicherweise zusätzliche Schritte ausführen, um die Ressourcen mit dem Buildpack zu bündeln oder die zur Ausführung der Anwendungen erforderlichen URLs in Zusammenarbeit mit dem Sicherheitsteam in die Whitelist einzutragen. Weitere Informationen zum Arbeiten mit Node.js- und Liberty for Java-Buildpacks finden Sie in <a href="../runtimes/nodejs/offlineMode.html">Offlinemodus für Node.js</a> und <a href="../runtimes/liberty/offlineMode.html">Offlinemodus für Liberty for Java</a>.</p>
+<p>**Hinweis:** Damit die vorhandenen bzw. neuen Anwendungen auf die erforderlichen Ressourcen zugreifen können, müssen Sie möglicherweise zusätzliche Schritte ausführen, um die Ressourcen mit dem Buildpack zu bündeln oder die zur Ausführung der Anwendungen erforderlichen URLs in Zusammenarbeit mit dem Sicherheitsteam in die Whitelist einzutragen. Weitere Informationen zum Arbeiten mit Node.js- und Liberty for Java-Buildpacks finden Sie in <a href="../runtimes/nodejs/offlineMode.html">Offlinemodus für Node.js</a> und <a href="../runtimes/liberty/offlineMode.html">Offlinemodus für Liberty for Java</a>.</p>
 </li>
-<li>Sie geben die Domänennamen für die Bereitstellung und die gewünschten IDs an. Sie erhalten zwei teilweise definierte Domänen, wenn Sie Ihre lokale Instanz einrichten, und wählen das Präfix für die beiden Domänen aus. Beispiel: Sie wählen das Präfix für <code>*mycompany*.bluemix.net</code> und <code>*mycompany*.mybluemix.net</code> aus. Anschließend können Sie auch einen vollständigen Domänennamen auswählen, um eine angepasste Domäne zu erstellen.<br />
-<p>Sie können so viele angepasste Domänen wählen, wie Sie möchten. Sie sind jedoch für die Zertifikate für die angepassten Domänen verantwortlich. Informationen zur Erstellung einer angepassten Domäne finden Sie unter <a href="../manageapps/updapps.html#domain">Angepasste Domäne erstellen und verwenden</a>.</p></li>
+<li>Sie geben die Domänennamen für die Bereitstellung und die gewünschten IDs an. Sie erhalten zwei teilweise definierte Domänen, wenn Sie Ihre lokale Instanz einrichten, und wählen das Präfix für die beiden Domänen aus. Beispiel: Sie wählen das Präfix für <code>*mycompany*.bluemix.net</code> und <code>*mycompany*.mybluemix.net</code> aus.<br />
+<br />
+Sie können auch eine vollständig angepasste Domäne definieren, z. B. mycustombmx.mycompany.com oder application.mycompany.com. Sie müssen das SSL-Zertifikat, den Zertifikatsschlüssel und das Stammzertifikat angeben, bevor die Umgebung bereitgestellt wird. Das bereitgestellte Stammzertifikat kann auch verwendet werden, um auf Wunsch die <a href="index.html#sslinspection">SSL-Inspektion</a> für Ihre Umgebung einzurichten. <br />
+<br />
+Sie können beliebig viele angepasste Domänen für Ihre Anwendungen auswählen, sofern Sie die Zertifikate für die angepassten Domänen bereitstellen. Informationen zur Erstellung einer angepassten Domäne finden Sie unter <a href="../manageapps/updapps.html#domain">Angepasste Domäne erstellen und verwenden</a>.</li>
 <li>Sie wählen die Technologie (IPSec- oder OpenVPN-Tunnel) aus, die zur Konfiguration von Relay für die Rückverbindung zum {{site.data.keyword.IBM_notm}} Operations Center verwendet wird.</li>
-<li>{{site.data.keyword.IBM_notm}} installiert und startet die virtuelle Konzeptionsmaschine im {{site.data.keyword.Bluemix_notm}}-Cluster. Wenn Sie ein eigenes VMware bereitstellen, wird Ihr Kundenvertreter von einem {{site.data.keyword.IBM_notm}} Ansprechpartner bei der Ausführung dieser Task unterstützt.</li>
+<li>{{site.data.keyword.IBM_notm}} installiert und startet die virtuelle Konzeptionsmaschine im {{site.data.keyword.Bluemix_notm}}-Cluster. Wenn Sie ein eigenes VMware bereitstellen, wird Ihr Kundenvertreter von einem {{site.data.keyword.IBM_notm}} Ansprechpartner bei der Ausführung dieser Task unterstützt. Wenn Sie die Hardwareoption {{site.data.keyword.Bluemix_notm}} Local System bestellt haben, wird diese Task von einem IBM Ansprechpartner durchgeführt.</li>
 <li>{{site.data.keyword.IBM_notm}} konfiguriert Relay für die Kommunikation mit dem {{site.data.keyword.IBM_notm}} Operations Center.</li>
 <li>Das Repository für die virtuelle Konzeptionsmaschine extrahiert die aktualisierten Buildartefakte.</li>
 <li>Sie stellen {{site.data.keyword.IBM_notm}} die Berechtigungsnachweise für die Verbindung zur unternehmenseigenen LDAP-Verzeichnisinstanz zur Verfügung.</li>
 <li>{{site.data.keyword.IBM_notm}} arbeitet mit einer Automatisierung, um die zentrale {{site.data.keyword.Bluemix_notm}}-Plattform bereitzustellen.</li>
 <li>{{site.data.keyword.IBM_notm}} stellt die zentrale Plattform bereit, die elastische Laufzeiten, Konsolen, Verwaltungsfunktionen und Überwachung umfasst.</li>
-<li>{{site.data.keyword.IBM_notm}} konfiguriert Ihren Verwaltungszugriff auf die Umgebung.</li>
 <li>{{site.data.keyword.IBM_notm}} verlinkt Ihren syndizierten Katalog aus Ihrer lokalen Bereitstellung mit einer öffentlichen {{site.data.keyword.Bluemix_notm}}-Instanz für die Verwendung öffentlicher Services. Eine Gruppe öffentlicher Services ist standardmäßig in Ihrer lokalen Instanz verfügbar. Sie können die Verwaltungsseite für die Katalogverwaltung verwenden, um die Services für Ihre lokale Instanz zu aktivieren oder zu inaktivieren.</li>
+<li>{{site.data.keyword.IBM_notm}} konfiguriert Ihren Verwaltungszugriff auf die Umgebung.</li>
 <li>Sie können mit der Verwendung Ihrer lokalen Instanz beginnen, die vom {{site.data.keyword.IBM_notm}} Operationsteam überwacht wird, um auf Alerts zu reagieren.</li>
 </ol>
 
@@ -383,7 +396,7 @@ Problembestimmung auf der
 |Unterzeichnen von Infrastruktur-, Plattform- und Supportvereinbarungen | Unterzeichnen Sie die Abonnementvereinbarung, einschließlich der finanziellen Vertragsbedingungen für die Umgebung. Unterzeichnen Sie das Supportabonnement. | Kunde |
 |Beschaffen einer Umgebung | Beschaffen Sie Rechen-, Netz- und Speicherressourcen. Weitere Informationen zu den Infrastrukturanforderungen für die Umgebung finden Sie unter [ Local-Infrastrukturanforderungen](../local/index.html#localinfra). | Kunde |
 |Installieren einer VPN-Lösung | Installieren Sie eine bidirektionale VPN-Lösung. | {{site.data.keyword.IBM_notm}} |
-|Installieren von Plattform-, Anwendungs- sowie Überwachungs- und Verwaltungskomponenten | Installieren, konfigurieren und überprüfen Sie Plattformkomponenten wie BOSH Director, Cloud-Controller, Statusmanager, Messaging, Routers, DEAs und Service-Provider sowie die Überwachungskomponenten, die im Eskalations- und Problemerkennungsplan definiert sind. | {{site.data.keyword.IBM_notm}} |
+|Installieren von Plattform-, Anwendungs- sowie Überwachungs- und Verwaltungskomponenten | Installieren, konfigurieren und überprüfen Sie Plattformkomponenten wie BOSH Director, Cloud-Controller, Statusmanager, Messaging, Router, DEAs und Service-Provider sowie die Überwachungskomponenten, die im Eskalations- und Problemerkennungsplan definiert sind. | {{site.data.keyword.IBM_notm}} |
 |Installieren und Konfigurieren von Sicherheitskomponenten | Installieren und
 konfigurieren Sie Sicherheitskomponenten, die in den Überwachungs- und
 Eskalationsplan eingebunden sind, darunter {{site.data.keyword.IBM_notm}} QRadar, Vault für
@@ -450,7 +463,7 @@ Die finale Phase der Fertigstellung stellt das Ende der Beziehung zwischen Ihnen
 für {{site.data.keyword.Bluemix_local_notm}}
 {: #localinfra}
 
-Bei {{site.data.keyword.Bluemix_local_notm}} entscheiden Sie über die physische Sicherheit und die Hosting-Infrastruktur für die lokale Instanz.
+Bei {{site.data.keyword.Bluemix_local_notm}} entscheiden Sie über die physische Sicherheit und die Hosting-Infrastruktur für die lokale Instanz. Die Infrastrukturanforderungen sind identisch, und zwar unabhängig davon, ob Sie ein eigenes VMware-System verwenden und verwalten oder das {{site.data.keyword.Bluemix_local_notm}}-System kaufen, das eine von IBM bestellte PureApp-Appliance enthält. Es gibt jedoch zwei PureApp-Applianceoptionen, aus denen Sie bei Ihrer Bestellung wählen können, und der Skalierungsprozess für Ihre Umgebung ist bei VMware und dem {{site.data.keyword.Bluemix_local_notm}}-System unterschiedlich. Weitere Informationen zu den PureApp-Applianceoptionen finden Sie unter [IBM {{site.data.keyword.Bluemix_notm}} Local System W3500 and W3550 models run cloud native services, enabled middleware, and open pattern workloads concurrently ![Symbol für externen Link](../icons/launch-glyph.svg)](https://www-01.ibm.com/common/ssi/rep_ca/5/897/ENUS216-325/){: new_window}.
 
 Die Mindestanforderungen für das Einrichten von {{site.data.keyword.Bluemix_local_notm}} sind von {{site.data.keyword.IBM_notm}} wie im Folgenden angegeben festgelegt.
 
@@ -516,7 +529,7 @@ vSphere Enterprise plus, wenn Sie beabsichtigen, verteilte virtuelle Switches zu
 </dt>**Datenspeicher**</dt>
 <dd>Erfordert 7,5 TB für die Erstbereitstellung von {{site.data.keyword.Bluemix_notm}}.<br />
 <br />
-**Hinweis**: Wenn Sie mehrere Datenspeicher verwenden, müssen Sie sicherstellen, dass alle Datenspeicher mit demselben Präfix beginnen. Die Datenspeicher könnten z. B. als `bluemix_datastore_01` und `bluemix_datastore_02` bezeichnet werden.</dd>
+**Hinweis:** Wenn Sie mehrere Datenspeicher verwenden, müssen Sie sicherstellen, dass alle Datenspeicher mit demselben Präfix beginnen. Die Datenspeicher könnten z. B. als `bluemix_datastore_01` und `bluemix_datastore_02` bezeichnet werden.</dd>
 <dt>**Netz**</dt>
 <dd>Sie müssen über ein für Kunden zugängliches Netz mit ausgehender Internetfähigkeit verfügen. Das VLAN hostet das private Teilnetz, in dem die Bluemix Local-Komponenten ausgeführt werden. Aller Datenverkehr wird aus dem privaten Teilnetz an das Kundenteilnetz geleitet. Für alle Zugriffe auf Bluemix Local wird eine Kundenteilnetz-ID verwendet. Anschließend können Sie ein zweites privates VLAN definieren, das auf die ESXi-Server beschränkt ist, die für Bluemix Local verwendet werden. Dieses VLAN wird in VMware als Portgruppe angezeigt. Bluemix Local verwendet dieses VLAN für das private Teilnetz, das sicherer ist und Probleme bei der Weiterleitung verringern kann.
 <p>Wenn Sie verteilte vSphere-Switches (vDS, vSphere Distributed Switches) verwenden, erstellen Sie einen Ordner für die vDS und platzieren Sie die vDS in diesem Ordner.</p>
@@ -542,7 +555,7 @@ Legen Sie die im Folgenden beschriebenen Rollen und Berechtigungen fest. Für al
 <li>Für **vApp** legen Sie **Import** fest.</li>
 <li>Für die Gruppe **dvPort** legen Sie **Modify** fest. Dies gilt nur für die Verwendung durch vDS.</li>
 </ul>
-**Hinweis**: Diese Rolle wird zur Unterstützung von Dateisendungen an die Datenspeicher benötigt.</dd>
+**Hinweis:** Diese Rolle wird zur Unterstützung von Dateisendungen an die Datenspeicher benötigt.</dd>
 <dt>**Cluster**</dt>
 <dd>Definieren Sie die Rolle als Administratorrolle mit Weitergabe.</dd>
 <dt>**Datenspeicher**</dt>
@@ -557,13 +570,24 @@ Legen Sie die im Folgenden beschriebenen Rollen und Berechtigungen fest. Für al
 </dd>
 </dl>
 
-### Droplet Execution Agent-Pool (DEA-Pool) vergrößern
-Jeder DEA (Droplet Execution Agent) ist wie folgt konfiguriert:
+### Umgebung skalieren
+
+#### VMware-Option
+
+Wenn Sie basierend auf den Mindestspezifikationen Ihre eigene VMware-Hardwareoption bereitstellen möchten, stehen Ihnen 64 GB verfügbarer Speicher zur Verfügung. Wenn Sie 16 oder 32 GB hinzufügen möchten, müssen Sie mit Ihrem Hardwareteam zusammenarbeiten, um den verfügbaren Speicher bereitzustellen oder bei Bedarf einen ESXi-Server hinzuzufügen, wie im folgenden Beispiel beschrieben. Wenn die Hardwarekapazität verfügbar ist, arbeiten Sie mit Ihrem Kundenerfolgsmanager zusammen, der wiederum mit dem IBM Team zusammenarbeiten kann, um die Vergrößerung des Rechenspeichers vorzunehmen.
+
+Zur Vergrößerung des DEA-Pools ist jeder DEA (Droplet Execution Agent) wie folgt konfiguriert:
+
 - 16 oder 32 GB RAM
 - 2 oder 4 vCPU
 - 150 oder 300 GB Speicher
 
 Ist z. B. der ESXi-Host mit 256 GB Hauptspeicher und 16 Kernen ausgestattet, werden acht DEA hinzugefügt. Sind für den ESXi-Host 64 GB Hauptspeicher und 8 Kerne vorgesehen, werden zwei ESXi-Server benötigt und es müssen vier DEA hinzugefügt werden. Weitere 1,5 TB Speicher werden für jeweils vier DEA benötigt. Bei diesem Beispiel wird davon ausgegangen, dass ein DEA mit 32 GB RAM, 4 vCPUs und 300 GB Speicher konfiguriert ist.
+
+
+#### Bluemix Local System-Option
+
+Wenn Sie die PureApplication-Hardware über {{site.data.keyword.IBM_notm}} bestellen, um Ihre {{site.data.keyword.Bluemix_notm}} Local-Instanz zu hosten, müssen Sie einen weiteren Rechenknoten in der Spezifikationsgröße bestellen, die Sie bereits zuvor gekauft haben. Sie können einen weiteren Knoten über Ihren Kundenerfolgsmanager bestellen, der mit dem IBM Team zusammenarbeitet, um die aktualisierte Hardware direkt zu Ihnen liefern zu lassen. Nachdem die Hardware zugestellt und installiert wurde, wird IBM benachrichtigt und das Bereitstellungsteam fügt weitere 64 GB hinzu. Abhängig von der Größe des bestellten Rechenknotens steht Ihnen möglicherweise weitere Kapazität für zukünftige Upgrades zur Verfügung. Wenden Sie sich in diesem Fall einfach an IBM, damit das Team bei Bedarf weiteren verfügbaren Speicher in 64-GB-Schritten hinzufügen kann.
 
 ## Lokale Instanz warten
 {: #maintainlocal}
@@ -643,7 +667,7 @@ Standardmäßig wird {{site.data.keyword.Bluemix_notm}} Public an mehreren Stand
 * Stellen Sie entweder manuell oder mithilfe eines automatisierten Prozesses sicher, dass Ihre Entwickler Apps in mehr als einer Region bereitstellen. Die ausgewählten Regionen sollten mehr als 200 km auseinander liegen, damit sichergestellt ist, dass eine Naturkatastrophe nicht beide Standorte betrifft.
 * Konfigurieren Sie eine globale Lastausgleichsfunktion wie Akamai oder Dyn, um auf Apps in mindestens zwei unterschiedlichen Regionen zu verweisen.
 
-**Hinweis**: Nicht alle {{site.data.keyword.Bluemix_notm}}-Services unterstützen eine regionale Verteilung. Wenn Sie eine App erstellen, müssen Sie, falls Sie eine geografische Verteilung erzielen möchten, sicherstellen, dass die von dieser App verwendeten Services über eine Datensynchronisation als Schlüsselfunktion verfügen.
+**Hinweis:** Nicht alle {{site.data.keyword.Bluemix_notm}}-Services unterstützen eine regionale Verteilung. Wenn Sie eine App erstellen, müssen Sie, falls Sie eine geografische Verteilung erzielen möchten, sicherstellen, dass die von dieser App verwendeten Services über eine Datensynchronisation als Schlüsselfunktion verfügen.
 
 #### {{site.data.keyword.Bluemix_local_notm}}-Apps an mehreren Standorten bereitstellen
 {: #deploying}
@@ -667,7 +691,7 @@ Eine globale Lastausgleichsfunktion stellt nicht nur eine kontinuierliche Verfü
 * Bereitstellung von Failover für einen Standort auf der Basis einer Anwendungsdiagnose.
 * Gewichtete Weiterleitung zwischen Endpunkten.
 
-Sie können eine globale Lastausgleichsfunktion wie Akamai oder Dyn auswählen. Weitere Informationen zur Verwendung von Akamai als globaler Lastausgleichsfunktion finden Sie unter [Global Traffic Management](https://www.akamai.com/us/en/solutions/products/web-performance/global-traffic-management.jsp){: new_window}. Weitere Informationen zur Verwendung von Dyn als globaler Lastausgleichsfunktion finden Sie unter [4 Reasons Businesses Are Taking Global Load Balancing to the Cloud](http://dyn.com/blog/4-reasons-businesses-are-taking-global-load-balancing-to-the-cloud/){: new_window}.
+Sie können eine globale Lastausgleichsfunktion wie Akamai oder Dyn auswählen. Weitere Informationen zur Verwendung von Akamai als globale Lastausgleichsfunktion finden Sie unter [Global Traffic Management ![Symbol für externen Link](../icons/launch-glyph.svg)](https://www.akamai.com/us/en/solutions/products/web-performance/global-traffic-management.jsp){: new_window}. Weitere Informationen zur Verwendung von Dyn als globale Lastausgleichsfunktion finden Sie unter [4 Reasons Businesses Are Taking Global Load Balancing to the Cloud ![Symbol für externen Link](../icons/launch-glyph.svg)](http://dyn.com/blog/4-reasons-businesses-are-taking-global-load-balancing-to-the-cloud/){: new_window}.
 
 ### Hochverfügbarkeit
 {: #ha}
@@ -678,7 +702,9 @@ Zu diesen Technologien zählen die folgenden:
 
 <dl>
 <dt>DEA-Skalierbarkeit in Cloud Foundry</dt>
-<dd>Ein Cloud Foundry <a href="https://docs.cloudfoundry.org/concepts/architecture/execution-agent.html" target="_blank">Droplet Execution Agent (DEA)</a> führt Diagnosen der integrierten Apps aus. Falls ein Problem mit der App oder dem DEA selbst auftritt, werden zusätzliche Instanzen der App in einem alternativen DEA bereitgestellt, um das Problem zu beheben. Weitere Informationen finden Sie unter <a href="https://docs.cloudfoundry.org/concepts/high-availability.html" target="_blank">Configuring CF for High Availability with Redundancy</a>.
+<dd>Ein Cloud Foundry <a href="https://docs.cloudfoundry.org/concepts/architecture/execution-agent.html" target="_blank">Droplet
+Execution Agent (DEA) <img src="../icons/launch-glyph.svg" alt="Symbol für externen Link"></a> führt Diagnosen
+der integrierten Apps aus. Falls ein Problem mit der App oder dem DEA selbst auftritt, werden zusätzliche Instanzen der App in einem alternativen DEA bereitgestellt, um das Problem zu beheben. Weitere Informationen finden Sie unter <a href="https://docs.cloudfoundry.org/concepts/high-availability.html" target="_blank">Configuring CF for High Availability with Redundancy <img src="../icons/launch-glyph.svg" alt="Symbol für externen Link"></a>.
 <p>Um die Hochverfügbarkeit für Ihre Anwendungen sicherzustellen, benötigen Sie genügend Rechenressourcen für den Lastausgleich sowie gegebenenfalls weitere Rechenressourcen zur Unterstützung einer möglichen Störung. Wenn Sie Ihre Umgebung skalieren möchten, indem Sie den DEA-Pool vergrößern, um für eine Störung vorbereitet zu sein oder eine Lastspitze für Ihre App-Instanzen auszugleichen, können Sie in Absprache mit Ihrem IBM Ansprechpartner zusätzliche DEAs bestellen und sicherstellen, dass Sie über die entsprechende Hardware verfügen, um die zusätzlichen Ressourcen zu unterstützen.
 </p>
 </dd>
@@ -708,12 +734,12 @@ Da der Schutz privater Daten kritisch ist, ist {{site.data.keyword.IBM_notm}} be
 <li>Stellen Sie die Sicherungsdateien für den {{site.data.keyword.IBM_notm}} Administrator bereit, falls eine Wiederherstellung erforderlich sein sollte.</li>
 </ul>
 
-# Zugehörige Links
+# rellinks
 {: rellinks}
-## Allgemein
+## general
 {: general}
-* [Entdecken Sie: {{site.data.keyword.Bluemix_local_notm}}](http://www.ibm.com/cloud-computing/bluemix/hybrid/local/)
+* [Entdecken Sie: {{site.data.keyword.Bluemix_local_notm}} ![Symbol für externen Link](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/hybrid/local/){: new_window}
 * [Neuerungen in {{site.data.keyword.Bluemix_notm}}](/docs/whatsnew/index.html)
 * [{{site.data.keyword.Bluemix_notm}}-Glossar](/docs/overview/glossary/index.html)
-* [{{site.data.keyword.Bluemix_local_notm}} und {{site.data.keyword.Bluemix_notm}} Dedicated verwalten](../admin/index.html#mng)
+* [{{site.data.keyword.Bluemix_local_notm}} und {{site.data.keyword.Bluemix_notm}} Dedicated verwalten](/docs/admin/index.html#mng)
 * [Support kontaktieren](/docs/support/index.html#getting-customer-support)

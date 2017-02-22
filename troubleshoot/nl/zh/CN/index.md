@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
   
-lastupdated: "2016-08-11"
+lastupdated: "2017-01-11"
   
 
 ---
@@ -108,13 +108,14 @@ nslookup mybluemix.net
 在注册 {{site.data.keyword.Bluemix_notm}} 试用帐户后，可能无法登录到 {{site.data.keyword.Bluemix_notm}}。相反，会看到以下消息：
 {: tsSymptoms}
 
-<code>帐户暂挂。请等待最多 24 小时以获取电子邮件确认并请检查垃圾邮件文件夹。如果仍未收到确认电子邮件，请联系 <a href="http://ibm.biz/bluemixsupport.com" target="_blank">Bluemix 支持</a>。</code>
+<code>帐户暂挂。请等待最多 24 小时以获取电子邮件确认并请检查垃圾邮件文件夹。如果仍未收到确认电子邮件，请联系 <a href="http://ibm.biz/bluemixsupport.com" target="_blank">Bluemix 支持 <img src="../icons/launch-glyph.svg" alt="外部链接图标"></a>。</code>
+
 
 
 在注册 {{site.data.keyword.Bluemix_notm}} 试用帐户后，您将收到确认电子邮件。必须单击确认电子邮件中的链接以完成注册过程。
 {: tsCauses} 
 
-确认电子邮件将发送到提供的电子邮件地址。请检查收件箱和垃圾邮件文件夹。如果未收到确认电子邮件，请联系 [{{site.data.keyword.Bluemix_notm}} 支持](http://ibm.biz/bluemixsupport.com){: new_window}。  
+确认电子邮件将发送到提供的电子邮件地址。请检查收件箱和垃圾邮件文件夹。如果未收到确认电子邮件，请联系 [{{site.data.keyword.Bluemix_notm}} 支持 ![外部链接图标](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}。  
 {: tsResolve}
 
 
@@ -158,7 +159,7 @@ nslookup mybluemix.net
   
 如果由于您是合作者（并非成员）而无法邀请用户，那么您必须删除您先前的 {{site.data.keyword.Bluemix_notm}} 帐户，然后被邀请以组织成员身份加入帐户。要删除您先前的帐户并以成员身份加入帐户，请完成以下步骤： 
 
-  1. 联系 [{{site.data.keyword.Bluemix_notm}} 支持](http://ibm.biz/bluemixsupport){: new_window}，以开具一个支持凭单，请求删除您的帐户。如果存在与旧帐户相关联的数据并且想要将其保存并移动到新帐户，请在您的电子邮件中包含此信息。 
+  1. 联系 [{{site.data.keyword.Bluemix_notm}} 支持 ![外部链接图标](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window}，以开具一个支持凭单，请求删除您的帐户。如果存在与旧帐户相关联的数据并且想要将其保存并移动到新帐户，请在您的电子邮件中包含此信息。 
   2. 在您的帐户被删除后，让具有组织管理员角色的用户以组织管理员身份邀请您加入组织。然后，通过邀请注册 {{site.data.keyword.Bluemix_notm}}。 
 
 
@@ -209,7 +210,7 @@ nslookup mybluemix.net
   * 注销 {{site.data.keyword.Bluemix_notm}}，并重新登录。
   * 使用浏览器的隐私浏览模式。 
   * 清除浏览器的 cookie 和高速缓存。
-  * 使用其他浏览器。有关 {{site.data.keyword.Bluemix_notm}} 支持的浏览器版本的信息，请参阅 [{{site.data.keyword.Bluemix_notm}} 先决条件](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}。
+  * 使用其他浏览器。有关 {{site.data.keyword.Bluemix_notm}} 支持的浏览器版本的信息，请参阅 [{{site.data.keyword.Bluemix_notm}} 先决条件 ![外部链接图标](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}。
   * 如果安装了 cf 命令行界面，请输入 `cf apps` 命令以查看应用程序是否正在运行。
   
   
@@ -300,7 +301,7 @@ at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketC
 
 如果工作台 JVM 为 IBM JVM 7 或 8，或者为早于 Oracle JVM 8 的版本，请完成以下步骤来切换到 Oracle JVM 8：
 
-  1. 下载并安装 Oracle JVM 8；请参阅 [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window} 以获取详细信息。
+  1. 下载并安装 Oracle JVM 8；请参阅 [Java SE Downloads ![外部链接图标](../icons/launch-glyph.svg)](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window} 以获取详细信息。
   2. 重新启动 Eclipse。
   3. 检查 `eclipse.vm` 属性是否指向 Oracle JVM 8 的新安装。
 
@@ -365,7 +366,7 @@ at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketC
   * 单击 {{site.data.keyword.avatar}} 图标 ![Avatar 图标](images/account_support.svg)，以打开“帐户和支持”窗口小部件，选择要在其中创建空间的组织，然后单击**创建空间**。
   * 在 cf 命令行界面中，键入 `cf create-space <space_name> -o <organization_name>`。
 
-请重试。如果再次看到此消息，请转至 [Bluemix 状态](http://ibm.biz/bluemixstatus){: new_window}页面，查看服务或组件是否存在问题。
+请重试。如果再次看到此消息，请转至 [Bluemix 状态 ![外部链接图标](../icons/launch-glyph.svg)](http://ibm.biz/bluemixstatus){: new_window} 页面，查看服务或组件是否存在问题。
 
 
 
@@ -395,7 +396,7 @@ at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketC
 要获取相应级别的权限，请使用以下其中一种方法：
 {: tsResolve}
  * 选择您具有其开发者角色的另一个组织和空间。 
- * 请求组织管理员将您的角色更改为开发者，或者创建空间，然后为您分配开发者角色。有关详细信息，请参阅[管理组织和空间](/docs/admin/orgs_spaces.html){: new_window}。
+ * 请求组织管理员将您的角色更改为开发者，或者创建空间，然后为您分配开发者角色。有关详细信息，请参阅[管理组织和空间](/docs/admin/orgs_spaces.html)。
  
 
  
@@ -419,7 +420,9 @@ at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketC
 ```
 process.env.VCAP_SERVICES
 ```
-有关可在其他程序语言中使用的命令的更多信息，请参阅 [Java](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} 和 [Ruby](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}。
+有关可以通过其他程序语言使用的命令的更多信息，请参阅 [Java ![外部链接图标](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} 和 [Ruby ![外部链接图标](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}。
+
+
 
 
 
@@ -468,7 +471,7 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 通过项目构面将�
 
  
 
-如果您怀疑 {{site.data.keyword.Bluemix_notm}} 服务关闭，请先检查 [{{site.data.keyword.Bluemix_notm}} 状态](http://ibm.biz/bluemixstatus){: new_window}页面。您可能想要在其他 {{site.data.keyword.Bluemix_notm}} 区域使用该服务来作为一种变通方法。有关详细信息，请参阅[在另一个区域使用服务](/docs/services/reqnsi.html#cross_region_service){: new_window}。如果服务状态正常，请尝试执行以下步骤来解决问题： 
+如果您怀疑 {{site.data.keyword.Bluemix_notm}} 服务已关闭，请先检查 [{{site.data.keyword.Bluemix_notm}} 状态 ![外部链接图标](../icons/launch-glyph.svg)](http://ibm.biz/bluemixstatus){: new_window} 页面。您可能想要在其他 {{site.data.keyword.Bluemix_notm}} 区域使用该服务来作为一种变通方法。有关详细信息，请参阅[在另一个区域使用服务](/docs/services/reqnsi.html#cross_region_service)。如果服务状态正常，请尝试执行以下步骤来解决问题： 
 {: tsResolve}
 
   * 重试操作：
@@ -476,7 +479,7 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 通过项目构面将�
 	* 使用其他浏览器。
 	* 重新引导您的路由器、调制解调器和计算机。重新引导这些设备可以清理导致 502 错误的各种错误。 
   * 稍等，然后重试。在某些情况下，您的因特网服务提供商或 {{site.data.keyword.Bluemix_notm}} 服务可能会发生临时问题。您可以一直等到临时问题得到解决为止。
-  * 如果问题持续存在，请联系 {{site.data.keyword.Bluemix_notm}} 支持。有关更多信息，请参阅[联系 {{site.data.keyword.Bluemix_notm}} 支持](/docs/support/index.html#contacting-bluemix-support){: new_window}。 
+  * 如果问题持续存在，请联系 {{site.data.keyword.Bluemix_notm}} 支持。有关更多信息，请参阅[联系 {{site.data.keyword.Bluemix_notm}} 支持 ![外部链接图标](../icons/launch-glyph.svg)](/docs/support/index.html#contacting-bluemix-support){: new_window}。 
 
 
 
@@ -496,7 +499,7 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 通过项目构面将�
 {: tsCauses}
 
  
-使用以下某个方法可指定磁盘配额。可指定的最大磁盘配额为 2 GB。如果 2 GB 仍不够，请尝试外部服务，例如[对象存储](/docs/services/ObjectStorage/index.html){: new_window}。
+使用以下某个方法可指定磁盘配额。可指定的最大磁盘配额为 2 GB。如果 2 GB 仍不够，请尝试外部服务，例如[对象存储](/docs/services/ObjectStorage/index.html)。
 {: tsResolve}
 
   * 在 manifest.yml 文件中，添加以下项：
@@ -536,10 +539,10 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 通过项目构面将�
   * 按照从 {{site.data.keyword.Bluemix_notm}} 控制台打开的窗口中的指示信息执行操作。单击按钮。另一个浏览器窗口会暂时打开。在该窗口中，DevOps Services 会设置认证 cookie。
   * 在另一个浏览器选项卡中，转至 https://hub.jazz.net，然后登录。返回到 {{site.data.keyword.Bluemix_notm}} 控制台，然后刷新页面。再次单击**添加 GIT**。
   * 更改浏览器设置以启用第三方 cookie，然后再次单击“添加 GIT”。有关配置设置的详细信息，请参阅适用于您的浏览器的文档：
-    * [Mozilla Firefox](https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences#w_how-do-i-change-cookie-settings){: new_window}
-	* [Google Chrome](https://support.google.com/chrome/answer/95647){: new_window}
-	* [Apple Safari](https://support.apple.com/kb/PH17191){: new_window}
-	* [Microsoft Internet Explorer](http://windows.microsoft.com/en-us/internet-explorer/delete-manage-cookies#ie=ie-11){: new_window}
+    * [Mozilla Firefox ![外部链接图标](../icons/launch-glyph.svg)](https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences#w_how-do-i-change-cookie-settings){: new_window}
+	* [Google Chrome ![外部链接图标](../icons/launch-glyph.svg)](https://support.google.com/chrome/answer/95647){: new_window}
+	* [Apple Safari ![外部链接图标](../icons/launch-glyph.svg)](https://support.apple.com/kb/PH17191){: new_window}
+	* [Microsoft Internet Explorer ![外部链接图标](../icons/launch-glyph.svg)](http://windows.microsoft.com/en-us/internet-explorer/delete-manage-cookies#ie=ie-11){: new_window}
 如果这些变通方法无法解决该问题，请向 idslogin@jazz.net 发送电子邮件。
 
 
@@ -559,7 +562,7 @@ IBM Push 服务使用 Google 云消息传递 (GCM) 服务将通知分派到在 A
 {: tsCauses}
 
  
-使用不依赖于 GCM 服务的第三方服务作为一种变通方法，例如 [Pushy](https://pushy.me){: new_window}、[igetui](http://www.getui.com/){: new_window} 和 [jpush](https://www.jpush.cn/){: new_window}。
+使用不依赖于 GCM 服务的第三方服务作为一种变通方法，例如 [Pushy ![外部链接图标](../icons/launch-glyph.svg)](https://pushy.me){: new_window}、[igetui ![外部链接图标](../icons/launch-glyph.svg)](http://www.getui.com/){: new_window} 和 [jpush ![外部链接图标](../icons/launch-glyph.svg)](https://www.jpush.cn/){: new_window}。
 {: tsResolve}
 
 
@@ -594,7 +597,7 @@ IBM Push 服务使用 Google 云消息传递 (GCM) 服务将通知分派到在 A
 	  1. 取消服务实例与应用程序的绑定，方法是输入 `cf unbind-service <appname> <service_instance_name>`。
 	  2. 删除服务实例，方法是输入 `cf delete-service <service_instance_name>`。
 	  3. 在删除服务实例之后，可能需要重新编译打包绑定该服务实例的应用程序，方法是输入 `cf restage <appname>`。
-  * 要除去您可拥有的服务实例数的限制，请将试用帐户转换为付费帐户。有关如何将试用帐户转换为付费帐户的信息，请参阅[如何更改套餐](/docs/pricing/index.html#changing){: new_window}。
+  * 要除去您可拥有的服务实例数的限制，请将试用帐户转换为付费帐户。有关如何将试用帐户转换为付费帐户的信息，请参阅[如何更改套餐](/docs/pricing/index.html#changing)。
 
   
   
@@ -649,7 +652,7 @@ cf push appname -p <app_path> -c ./RunMeNow -b https://github.com/ryandotsmith/n
 您可以增加帐户的内存配额，或者减少应用程序使用的内存。
 {: tsResolve} 
 
-  * 要增加帐户的内存配额，请将试用帐户转换为付费帐户。有关将试用帐户转换为付费帐户的信息，请参阅[付费帐户](/docs/pricing/index.html#pay-accounts){: new_window}。 
+  * 要增加帐户的内存配额，请将试用帐户转换为付费帐户。有关将试用帐户转换为付费帐户的信息，请参阅[付费帐户](/docs/pricing/index.html#pay-accounts)。 
   * 要减少应用程序使用的内存，请使用 {{site.data.keyword.Bluemix_notm}} 用户界面或 cf 命令行界面。
     如果使用 {{site.data.keyword.Bluemix_notm}} 用户界面，请完成以下步骤：
 	  1. 在 {{site.data.keyword.Bluemix_notm}}“仪表板”上，选择应用程序。这将打开应用程序详细信息页面。
@@ -791,7 +794,7 @@ cf push <appname> -p <app_path>
 ```
 cf api https://api.eu-gb.bluemix.net
 ```
-如果要使用 Eclipse 工具将应用程序推送到 {{site.data.keyword.Bluemix_notm}}，必须先创建 {{site.data.keyword.Bluemix_notm}} 服务器，然后指定所创建组织所在的 {{site.data.keyword.Bluemix_notm}} 区域的 API 端点。有关使用 Eclipse 工具的更多信息，请参阅[使用 IBM Eclipse Tools for Bluemix 部署应用程序](/docs/manageapps/eclipsetools/eclipsetools.html){: new_window}。  
+如果要使用 Eclipse 工具将应用程序推送到 {{site.data.keyword.Bluemix_notm}}，必须先创建 {{site.data.keyword.Bluemix_notm}} 服务器，然后指定所创建组织所在的 {{site.data.keyword.Bluemix_notm}} 区域的 API 端点。有关使用 Eclipse 工具的更多信息，请参阅[使用 IBM Eclipse Tools for Bluemix 部署应用程序](/docs/manageapps/eclipsetools/eclipsetools.html)。  
   
   
 
@@ -928,7 +931,7 @@ cf push MyUniqueAppName02 -p "./app.war"
         ```
 		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 		```
-	  * 使用 [package.json](https://docs.npmjs.com/json){: new_window} 文件。例如：
+	  * 使用 [package.json ![外部链接图标](../icons/launch-glyph.svg)](https://docs.npmjs.com/json){: new_window} 文件。例如：
 	    ```
 		{
       ...
@@ -966,7 +969,7 @@ cf push MyUniqueAppName02 -p "./app.war"
  }
     ```
 	
-有关 Node.js 应用程序的更多提示，请参阅 [Tips for Node.js Applications](http://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}。	
+有关 Node.js 应用程序的更多提示，请参阅 [Tips for Node.js Applications ![外部链接图标](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}。	
 
 
 
@@ -988,7 +991,7 @@ cf push MyUniqueAppName02 -p "./app.war"
 
  
 
-您可以通过从项目中除去 server.xml 文件来解决此问题。将应用程序作为 WAR 应用程序进行推送时，buildpack 会动态创建 `server.xml` 文件。有关更多信息，请参阅 [Liberty for Java](/docs/runtimes/liberty/index.html){: new_window}。
+您可以通过从项目中除去 server.xml 文件来解决此问题。将应用程序作为 WAR 应用程序进行推送时，buildpack 会动态创建 `server.xml` 文件。有关更多信息，请参阅 [Liberty for Java](/docs/runtimes/liberty/index.html)。
 {: tsResolve}
 	
 	
@@ -1008,7 +1011,7 @@ cf push MyUniqueAppName02 -p "./app.war"
 
  
 
-您可以使用 [git update](http://git-scm.com/docs/git-update-index){: new_window} 命令将每个脚本的许可权更改为“可执行”。例如，可以键入 `git update --chmod=+x script.sh`。
+您可以使用 [git update ![外部链接图标](../icons/launch-glyph.svg)](http://git-scm.com/docs/git-update-index){: new_window} 命令将每个脚本的许可权更改为“可执行”。例如，可以键入 `git update --chmod=+x script.sh`。
 {: tsResolve}
 	
 	
@@ -1030,7 +1033,7 @@ cf push MyUniqueAppName02 -p "./app.war"
 
  
 
-要解决此问题，您必须创建 `manifest.yml` 文件。有关如何创建 `manifest.yml` 文件的更多信息，请参阅[应用程序清单](/docs/manageapps/depapps.html#appmanifest){: new_window}。
+要解决此问题，您必须创建 `manifest.yml` 文件。有关如何创建 `manifest.yml` 文件的更多信息，请参阅[应用程序清单](/docs/manageapps/depapps.html#appmanifest)。
 {: tsResolve}	
 	
 
@@ -1230,7 +1233,7 @@ buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
 6. 通过再次检查状态图标，验证没有错误。
 ![没有错误的状态图标](images/githubResolved_small.png)
 
-有关更多信息，请参阅[设置 Bluemix DevOps Services 项目的 GitHub](https://hub.jazz.net/docs/githubhooks/){: new_window}。
+有关更多信息，请参阅 [Setting up GitHub for Bluemix DevOps Services projects ![外部链接图标](../icons/launch-glyph.svg)](https://hub.jazz.net/docs/githubhooks/){: new_window}。
 
 
 # 有关管理帐户的故障诊断
@@ -1258,7 +1261,7 @@ buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
 
  
 
-要重新激活您的帐户，请联系 [{{site.data.keyword.Bluemix_notm}} 支持](http://ibm.biz/bluemixsupport.com){: new_window}。在该电子邮件中，必须包含以下信息：
+要重新激活您的帐户，请联系 [{{site.data.keyword.Bluemix_notm}} 支持 ![外部链接图标](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}。在该电子邮件中，必须包含以下信息：
 {: tsResolve}
 
   * 您用于登录到 {{site.data.keyword.Bluemix_notm}} 的 IBM 标识。
@@ -1375,14 +1378,14 @@ buildpack 更新后推送或重新编译打包应用程序时，不会自动装�
 您可以使用具有内置机制的 buildpack 来避免装入过时的组件。以下 buildpack 是 2 个示例： 
 {: tsResolve}
 
-  * [Cloud Foundry Java buildpack](https://github.com/cloudfoundry/java-buildpack){: new_window}。此 buildpack 具有内置机制来确保使用 buildpack 的最新版本。有关此机制如何工作的更多信息，请参阅 [extending-caches.md](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}。 
-  * [Cloud Foundry Node.js buildpack](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}。此 buildpack 通过使用环境变量具有类似功能。要使 Node.js buildpack 每次都能够从因特网下载节点模型，请在 cf 命令行界面中键入以下命令： 	
+  * [Cloud Foundry Java buildpack ![外部链接图标](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack){: new_window}。此 buildpack 具有内置机制来确保使用 buildpack 的最新版本。有关此机制的工作原理的更多信息，请参阅 [extending-caches.md ![外部链接图标](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}。 
+  * [Cloud Foundry Node.js buildpack ![外部链接图标](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}。此 buildpack 通过使用环境变量具有类似功能。要使 Node.js buildpack 每次都能够从因特网下载节点模型，请在 cf 命令行界面中键入以下命令： 	
   ```
   set NODE_MODULES_CACHE=false
   ```
 如果您使用的 buildpack 不提供自动装入最新组件的机制，那么您可以手动删除高速缓存目录中的内容，并通过执行以下步骤重新推送应用程序：
-  1. 检出空 buildpack 的分支，例如 https://github.com/ryandotsmith/null-buildpack。有关如何检出分支的信息，请参阅 [Git Basics - Getting a Git Repository](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}。  
-  2. 将以下行添加到 `null-buildpack/bin/compile` 文件，并落实更改。有关如何落实更改的信息，请参阅 [Git Basics - Recording Changes to the Repository](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}。
+  1. 检出空 buildpack 的分支，例如 https://github.com/ryandotsmith/null-buildpack。有关如何检出分支的信息，请参阅 [Git Basics - Getting a Git Repository ![外部链接图标](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}。  
+  2. 将以下行添加到 `null-buildpack/bin/compile` 文件，并落实更改。有关如何落实更改的信息，请参阅 [Git Basics - Recording Changes to the Repository ![外部链接图标](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}。
   ```
   rm -rfv $2/*
   ```
@@ -1417,7 +1420,7 @@ buildpack 更新后推送或重新编译打包应用程序时，不会自动装�
 
 
 
-在 PHP buildpack 中，error_log 参数用于定义日志记录级别。缺省情况下，`error_log` 参数的值为 **stderr notice**。以下示例显示 Cloud Foundry 所提供的 PHP buildpack 的 `nginx-defaults.conf` 文件中的缺省日志记录级别配置。有关更多信息，请参阅 [cloudfoundry/php-buildpack](https://github.com/cloudfoundry/php-buildpack/blob/ff71ea41d00c1226d339e83cf2c7d6dda6c590ef/defaults/config/nginx/1.5.x/nginx-defaults.conf){: new_window}。
+在 PHP buildpack 中，error_log 参数用于定义日志记录级别。缺省情况下，`error_log` 参数的值为 **stderr notice**。以下示例显示 Cloud Foundry 所提供的 PHP buildpack 的 `nginx-defaults.conf` 文件中的缺省日志记录级别配置。有关更多信息，请参阅 [cloudfoundry/php-buildpack ![外部链接图标](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/php-buildpack/blob/ff71ea41d00c1226d339e83cf2c7d6dda6c590ef/defaults/config/nginx/1.5.x/nginx-defaults.conf){: new_window}。
 {: tsCauses} 
 
 ```
@@ -1436,8 +1439,8 @@ daemon off;
 error_log stderr error;
 pid @{HOME}/nginx/logs/nginx.pid;
 ```
-有关如何更改缺省日志记录配置的更多信息，请参阅 [error_log](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}。
-
+有关如何更改缺省日志记录配置的更多信息，请参阅 [error_log ![外部链接图标](../icons/launch-glyph.svg)](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}。
+	
 
 ## 无法将第三方 Python 库导入到 {{site.data.keyword.Bluemix_notm}}
 {: #ts_importpylib}

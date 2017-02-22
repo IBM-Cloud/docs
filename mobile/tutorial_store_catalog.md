@@ -2,10 +2,18 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-12-15"
+lastupdated: "2017-01-31"
 
 ---
 {:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:note:.deprecated}
+
+**UI Starters are deprecated:** Existing projects that were created from a UI Starter can be used until 30 April 2017. For more information about migration steps and removal dates, see the [deprecation announcement blog post ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/01/bluemix-mobile-dashboard-update/).
+{:deprecated}
 
 # Tutorial - Store Catalog UI Starter
 {: #tutorial_store_catalog}
@@ -14,13 +22,13 @@ The {{site.data.keyword.Bluemix}} Store Catalog UI Starter provides a basic sale
 
 
 ## Requirements
-{: #tutorial_requirements}
+{: #tutorial_requirements notoc}
 
 * A [Bluemix ![External link icon](../icons/launch-glyph.svg "External link icon")](http://bluemix.net) Account
 
 
 ## Getting Started
-{: #tutorial_gs}
+{: #tutorial_gs notoc}
 
 To get up and running quickly with the Store Catalog UI Starter, follow these steps:
 
@@ -125,24 +133,25 @@ To get up and running quickly with the Store Catalog UI Starter, follow these st
 
 
 ## What to do next
-{: #tutorial_next}
+{: #tutorial_next notoc}
 
 [Try it out! ![External link icon](../icons/launch-glyph.svg "External link icon")](http://console.{DomainName}/mobile/create-project?starter=fb5e31a9-1186-4d46-939e-2f620f35b83b){: new_window}
 
 
 ### UI Starter tutorials
-{: #tutorials_UI}
+{: #tutorials_UI notoc}
 
 * [Tutorial - Store Catalog](tutorial_store_catalog.html)
 
 
 ### Code Starter tutorials
-{: #tutorials_Code}
+{: #tutorials_Code notoc}
 
 * [Tutorial - Basic](tutorial.html)
-* [Tutorial - Cloudant Sync](tutorial_cloudant_synd.html)
+* [Tutorial - Cloudant Sync](tutorial_cloudant_sync.html)
 * [Tutorial - {{site.data.keyword.openwhisk_short}}](tutorial_openwhisk.html)
 * [Tutorial - {{site.data.keyword.visualrecognitionshort}}](tutorial_visual_recognition.html)
+* [Tutorial - Watson {{site.data.keyword.coversationshort}}](tutorial_conversation.html)
 * [Tutorial - Watson Language](tutorial_watson_language.html)
 * [Tutorial - Weather](tutorial_weather.html)
 

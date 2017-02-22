@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -18,6 +18,7 @@ lastupdated: "2016-12-06"
 {: shortdesc}
 
 <table>
+<caption> 표 1. 정의된 사용자 역할</caption>
   <tr>
     <th> 관리 사용자(admin) </th>
     <th> 비관리 사용자(member) </th>
@@ -36,6 +37,5 @@ lastupdated: "2016-12-06"
   </tr>
 </table>
 
-표 1: 정의된 사용자 역할
 
 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스, Cloud Foundry API 또는 Cloud Foundry CLI를 통해 {{site.data.keyword.objectstorageshort}} 사용자를 관리할 수 있습니다.

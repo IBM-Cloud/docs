@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -10,12 +10,12 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# {{site.data.keyword.mobilepushshort}}을 수신하도록 Chrome 앱과 확장 프로그램 설정
+# {{site.data.keyword.mobilepushshort}}를 수신하도록 Chrome 앱과 확장 프로그램 설정
 {: #web_notifications}
-마지막 업데이트 날짜: 2016년 12월 6일
+마지막 업데이트 날짜: 2017년 1월 18일
 {: .last-updated}
 
-Google Chrome 앱과 확장 프로그램에서 {{site.data.keyword.mobilepushshort}}을 수신하도록 설정할 수 있습니다. 
+Google Chrome 앱과 확장 프로그램에서 {{site.data.keyword.mobilepushshort}}를 수신하도록 설정할 수 있습니다.  단계를 진행하기 전에 [알림 제공자의 신임 정보 구성](t__main_push_config_provider.html)을 수행했는지 확인하십시오.
 
 ## {{site.data.keyword.mobilepushshort}}에 사용할 클라이언트 SDK 설치
 {: #web_install}
@@ -26,7 +26,7 @@ Google Chrome 앱과 확장 프로그램에서 {{site.data.keyword.mobilepushsho
 
 Chrome 앱과 확장 프로그램에 Javascript SDK를 설치하려면 다음 단계를 완료하십시오. 
 
-[Bluemix 웹 푸시 SDK](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master)에서 `BMSPushSDK.js`와 `manifest_Chrome_Ext.json`(Chrome 확장 프로그램의 경우) 또는 `manifest_Chrome_App.json`(Chrome 앱의 경우)을 다운로드하십시오. 
+ [Bluemix 웹 푸시 SDK ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master "외부 링크 아이콘"){: new_window}에서 `BMSPushSDK.js` 및 `manifest_Chrome_Ext.json`(chrome 확장기능의 경우) 또는 `manifest_Chrome_App.json`(Chrome 앱의 경우)을 다운로드하십시오.
 
 
 
@@ -86,18 +86,18 @@ Mozilla Firefox에서 등록하는 경우, Firefox 설정 아래의 Bluemix {{si
 
 Bluemix {{site.data.keyword.mobilepushshort}} 서비스에 등록하려면 다음 코드 스니펫을 사용하십시오.
 ```
-    var bmsPush = new BMSPush();
-    function callback(response) {
-        alert(response.response)
-    }
-    var initParams = {
-      "appGUID":"push app GUID",
+var bmsPush = new BMSPush();
+function callback(response) {
+     alert(response.response)
+  }
+  var initParams = {
+  "appGUID":"push app GUID",
   "appRegion":"Region where service hosted",
   "clientSecret":"clientSecret of your push service"
   }
   bmsPush.initialize(params, callback)
-    bmsPush.register(function(response) {
-      alert(response.response)
+  bmsPush.register(function(response) {
+    alert(response.response)
   })
 ```
     {: codeblock}

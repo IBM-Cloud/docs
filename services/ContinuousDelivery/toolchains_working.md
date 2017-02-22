@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-13"
+  years: 2015, 2017
+lastupdated: "2017-2-16"
 
 ---
  
@@ -23,9 +23,9 @@ Each toolchain is associated with a specific organization (org) and any user tha
 ##Creating a toolchain from a template   
 {: #creating_a_toolchain_from_a_template}
 
-You can use a template as a starting point to [create a toolchain](https://console.ng.bluemix.net/devops/create){: new_window} ![External link icon](images/launch--glyph.svg) that includes a specific set of tool integrations. Learn more about how to use the templates from the [IBM Bluemix Garage Method](https://www.ibm.com/devops/method/category/tools){:new_window} ![External link icon](images/launch--glyph.svg).
+You can use a template as a starting point to [create a toolchain![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/devops/create){: new_window} that includes a specific set of tool integrations. Learn more about how to use the templates from the [IBM Bluemix Garage Method![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/category/tools){:new_window}.
 
-1. If you use {{site.data.keyword.Bluemix_notm}} Public, log in to [{{site.data.keyword.Bluemix_notm}}](http://console.ng.bluemix.net){:new_window} ![External link icon](images/launch--glyph.svg).
+1. If you use {{site.data.keyword.Bluemix_notm}} Public, log in to [{{site.data.keyword.Bluemix_notm}}![External link icon](../../icons/launch-glyph.svg "External link icon")](http://console.ng.bluemix.net){:new_window}.
 1. If you use {{site.data.keyword.Bluemix_notm}} Dedicated, log in to your Dedicated environment on {{site.data.keyword.Bluemix_notm}}.
 1. From the hamburger menu, click **Services**, and then click **DevOps**.
 1. On the DevOps dashboard, on the **Toolchains** page, click **Create a Toolchain**.
@@ -82,21 +82,21 @@ After you configure the toolchain and its tool integrations, you can view a visu
 ## Tutorials and Samples
 {: #samples}
 
-* [Create and use your first toolchain](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow){:new_window} ![External link icon](images/launch--glyph.svg)
-* [Create a custom toolchain](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_custom){:new_window} ![External link icon](images/launch--glyph.svg)
-* [Create a toolchain that includes {{site.data.keyword.DRA_short}}](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_devops_insights){:new_window} ![External link icon](images/launch--glyph.svg)
-* [Create and use a microservices toolchain](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices){:new_window} ![External link icon](images/launch--glyph.svg)
-* [Create a toolchain from a template on {{site.data.keyword.Bluemix_notm}} Dedicated](https://www.ibm.com/devops/method/tutorials/tutorial_dedicated_toolchain_template_flow){:new_window} ![External link icon](images/launch--glyph.svg)
-* [Create a toolchain from an app on {{site.data.keyword.Bluemix_notm}} Dedicated](https://www.ibm.com/devops/method/tutorials/tutorial_dedicated_toolchain_app_flow){:new_window} ![External link icon](images/launch--glyph.svg)
+* [Create and use your first toolchain![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow){:new_window}
+* [Create a custom toolchain![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_custom){:new_window}
+* [Create a toolchain that includes {{site.data.keyword.DRA_short}}![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_devops_insights){:new_window}
+* [Create and use a microservices toolchain![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices){:new_window}
+* [Create a toolchain from a template on {{site.data.keyword.Bluemix_notm}} Dedicated![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_dedicated_toolchain_template_flow){:new_window}
+* [Create a toolchain from an app on {{site.data.keyword.Bluemix_notm}} Dedicated![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_dedicated_toolchain_app_flow){:new_window}
 
 ## Related Links
 {: #general}
 
-* [{{site.data.keyword.contdelivery_full}}](https://www.ibm.com/devops/method/content/deliver/tool_continuous_delivery/){:new_window} ![External link icon](images/launch--glyph.svg)
-* [Empty toolchain](https://www.ibm.com/devops/method/toolchains/toolchain_empty){:new_window} ![External link icon](images/launch--glyph.svg) 
-* [Microservices toolchain](https://www.ibm.com/devops/method/toolchains/microservices_toolchain){:new_window} ![External link icon](images/launch--glyph.svg)
-* [Simple Cloud Foundry toolchain](https://www.ibm.com/devops/method/toolchains/simple_toolchain){:new_window} ![External link icon](images/launch--glyph.svg)
-* [Simple Cloud Foundry toolchain with {{site.data.keyword.DRA_short}}](https://www.ibm.com/devops/method/toolchains/toolchain_devops_insights){:new_window} ![External link icon](images/launch--glyph.svg)
-* [Simple container toolchain](https://www.ibm.com/devops/method/toolchains/toolchain_simple_container){:new_window} ![External link icon](images/launch--glyph.svg)
-* [Simple secure container toolchain](https://www.ibm.com/devops/method/toolchains/toolchain_simple_secure_container){:new_window} ![External link icon](images/launch--glyph.svg)
-* [IBM Bluemix Garage Method](https://www.ibm.com/devops/method){:new_window} ![External link icon](images/launch--glyph.svg)
+* [{{site.data.keyword.contdelivery_full}}![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/tool_continuous_delivery/){:new_window}
+* [Empty toolchain![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/toolchains/toolchain_empty){:new_window} 
+* [Microservices toolchain![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/toolchains/microservices_toolchain){:new_window}
+* [Simple Cloud Foundry toolchain![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/toolchains/simple_toolchain){:new_window}
+* [Simple Cloud Foundry toolchain with {{site.data.keyword.DRA_short}}![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/toolchains/toolchain_devops_insights){:new_window}
+* [Simple container toolchain![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/toolchains/toolchain_simple_container){:new_window}
+* [Simple secure container toolchain![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/toolchains/toolchain_simple_secure_container){:new_window}
+* [IBM Bluemix Garage Method![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method){:new_window}

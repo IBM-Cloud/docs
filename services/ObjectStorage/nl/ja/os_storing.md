@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -38,14 +38,14 @@ UI または CLI を使用してオブジェクトをストレージにアップ
   ```
   {: pre}
 
-2. 次のコマンドを実行して、新しい {{site.data.keyword.objectstorageshort}} コンテナーを作成します。*container_name* 変数をこの時点で設定します。
+2. 次のコマンドを実行して、{{site.data.keyword.objectstorageshort}} コンテナーを作成します。*container_name* 変数をこの時点で設定します。
 
   ```
   swift post <container_name>
   ```
   {: pre}
 
-**注**: エラー・メッセージを受け取った場合は、[前提ソフトウェア](/docs/services/ObjectStorage/os_configuring.html#install-swift-client)がインストールされていることを確認してください。
+**Note**: エラー・メッセージを受け取った場合は、[前提ソフトウェア](/docs/services/ObjectStorage/os_configuring.html#install-swift-client)がインストールされていることを確認してください。
 
 3. オプション: コンテナーが作成されたことを確認するには、以下のコマンドを実行してコンテナーをリストします。
 

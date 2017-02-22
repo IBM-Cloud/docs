@@ -1,7 +1,8 @@
----
+﻿---
 
 copyright:
-  years: 2015, 2016 lastupdated: "2016-11-29"
+  years: 2015, 2016
+lastupdated: "2016-11-29"
 
 ---
 
@@ -126,7 +127,7 @@ Revise estas considerações para o repositório do projeto que você usará no 
 Com o arquivo manifest, é possível especificar: 
     <ul>
     <li>Um nome de app exclusivo.</li>  
-    <li>Serviços declarados: Uma extensão manifest, que cria ou procura por serviços obrigatórios ou opcionais que devem ser configurados antes que o app seja implementado, como um serviço de cache de dados. É possível localizar uma lista de serviços, rótulos e planos elegíveis do     {{site.data.keyword.Bluemix_notm}}, usando a <a href="https://github.com/cloudfoundry/cli/releases">Interface da linha de comandos CF</a> para executar o comando <code>cf marketplace</code> ou procurando no <a href="https://console.ng.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-*-dWdevcenter-*-devops-services-_-lp#/store">catálogo do {{site.data.keyword.Bluemix_notm}}</a>. 
+    <li>Serviços declarados: Uma extensão manifest, que cria ou procura por serviços obrigatórios ou opcionais que devem ser configurados antes que o app seja implementado, como um serviço de cache de dados. É possível localizar uma lista de serviços, rótulos e planos elegíveis do     {{site.data.keyword.Bluemix_notm}}, usando a <a href="https://github.com/cloudfoundry/cli/releases">Interface da linha de comandos CF</a> para executar o comando <code>cf marketplace</code> ou procurando no <a href="https://console.ng.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-_-dWdevcenter-_-devops-services-_-lp#/store">catálogo do {{site.data.keyword.Bluemix_notm}}</a>. 
     
     <strong>Nota:</strong> serviços declarados são uma extensão IBM do formato de manifest padrão do Cloud Foundry. Essa extensão pode ser revisada em uma liberação futura conforme o recurso evolui e melhora.
 	
@@ -163,7 +164,8 @@ Com o arquivo manifest, é possível especificar:
    </li>
    </ul>
 	<li> Se o app deve ser construído antes de poder ser implementado, deve-se incluir um arquivo de construção em seu repositório. Se um arquivo do script de
-construção for detectado no diretório-raiz do repositório, uma construção automatizada do código será acionada antes da implementação.  	
+construção for detectado no diretório-raiz do repositório, uma construção automatizada do código será acionada antes da implementação. 
+	
 	Construtores suportados: 
 	    <ul>
 		<li> <a href="http://ant.apache.org/manual/using.html" target="_blank">Ant:</a> /<code>build.xml</code>, que constrói a saída para a pasta <code>./output/</code> </li>
@@ -184,7 +186,7 @@ que constrói a saída para a pasta <code>.</code> </li>
 <li>Faça upload do arquivo <code>pipeline.yml</code> para o repositório <code>.bluemix</code>.</li>
 </ol> </li>
 	<li>Para implementar um app em um contêiner usando o <strong>IBM Containers</strong>, deve-se incluir o Dockerfile no diretório-raiz do repositório e, em um
-diretório <code>.bluemix</code>, incluir um arquivo <code>pipeline.yml</code>.
+diretório <code>.bluemix</code>, incluir um arquivo <code>pipeline.yml</code>. 
 	<ul>
 	    <li>O Dockerfile age como uma espécie de script de construção para o app. Se um Dockerfile for detectado no repositório, o app será construído automaticamente em
 uma imagem antes que seja implementado em um contêiner. Se o próprio app precisar ser construído antes do app ser construído em uma imagem, inclua um script de construção

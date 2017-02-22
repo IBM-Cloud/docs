@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -22,7 +22,7 @@ Durch die Bereitstellung einer neuen {{site.data.keyword.objectstorageshort}}-In
 
 Weitere Informationen zur Verwendung von OpenStack Swift und Keystone sind auf der [OpenStack-Dokumentationssite](http://docs.openstack.org) verfügbar.
 
-1. Die empfohlene v3-Tokenanforderung ist eine POST-Anforderung an https://identity.open.softlayer.com/v1/auth/tokens, wie im folgenden cURL-Befehl gezeigt:
+1. Senden Sie eine POST-Anforderung an `https://identity.open.softlayer.com/v3/auth/tokens`, wie im folgenden cURL-Befehl dargestellt.
   ```
   	curl -i \
 	  -H "Content-Type: application/json" \
@@ -51,7 +51,7 @@ Weitere Informationen zur Verwendung von OpenStack Swift und Keystone sind auf d
   ```
   {: codeblock}
 
-2. Bei der Authentifizierung mit Keystone erhalten Sie eine Katalogantwort. Wählen Sie einen `object-store`-Endpunkt aus und notieren Sie ihn. Sie benötigen diesen für die vollständige URL. Von dem folgenden Antwortbeispiel wurde ein Ausschnitt erstellt, um nur die für den {{site.data.keyword.objectstorageshort}} relevanten Informationen zu zeigen. 
+2. Wählen Sie einen `object-store`-Endpunkt in der Katalogantwort aus und notieren Sie ihn. Sie benötigen diesen für die vollständige URL. Von dem folgenden Antwortbeispiel wurde ein Ausschnitt erstellt, um nur die für den {{site.data.keyword.objectstorageshort}} relevanten Informationen zu zeigen.
 
   ```
   	HTTP/1.1 201 Created
@@ -155,6 +155,7 @@ Weitere Informationen zur Verwendung von OpenStack Swift und Keystone sind auf d
   {: screen}
 
   <table>
+  <caption> Tabelle 1. Erläuterung zu Antworten auf POST-Anforderungen</caption>
     <tr>
       <th> Antwortendpunkt </th>
       <th> Erläuterung </th>
@@ -173,12 +174,10 @@ Weitere Informationen zur Verwendung von OpenStack Swift und Keystone sind auf d
     </tr>
     <tr>
       <td> <code> url </code> </td>
-      <td> Die {{site.data.keyword.objectstorageshort}}-URL. Wird für die Interaktion mit dem Service über cURL-Befehle verwendet. </td>
+      <td> Die {{site.data.keyword.objectstorageshort}}-URL. </td>
     </tr>
     <tr>
       <td> <code> interface </code> </td>
       <td> Auf die interne Schnittstelle kann nicht über {{site.data.keyword.Bluemix_notm}} zugegriffen werden. Verwenden Sie die allgemein zugängliche Schnittstelle (<code>publicURL</code>). </td>
     </tr>
   </table>
-
-  Tabelle 1: Erläuterung zu Antworten auf POST-Anforderungen

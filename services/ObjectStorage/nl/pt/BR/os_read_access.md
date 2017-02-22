@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -18,6 +18,7 @@ Um usuário do {{site.data.keyword.objectstorageshort}} com uma [função admini
 {: shortdesc}
 
 <table>
+<caption> Tabela 1. Permissões de acesso de leitura por opção</caption>
   <tr>
     <th> Permissão </th>
     <th> Opções de ACL de leitura </th>
@@ -47,8 +48,6 @@ Um usuário do {{site.data.keyword.objectstorageshort}} com uma [função admini
     <td> <code> &#42;:&#42; </code> </td>
   </tr>
 </table>
-
-Tabela 1: Permissões de acesso de leitura por opção
 
 
 
@@ -113,7 +112,7 @@ informações sobre como gerar novas credenciais, consulte
     ```
     {: pre}
 
-    É possível ver no exemplo a seguir que o acesso de leitura foi concedido:
+    Exemplo: o valor `X-Container-Read` mostra qual é o contêiner e para quem é concedido o acesso de leitura.
 
     ```
     HTTP/1.1 204 No Content

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -14,19 +14,19 @@ lastupdated: "2016-12-06"
 
 # Armazenando objetos grandes {: #large-files}
 
-Os uploads são limitados a um tamanho máximo de 5 GB para um único upload. No entanto, é possível segmentar objetos maiores em partes menores e usar um arquivo manifest para concatenar os segmentos. Contanto que cada segmento tenha 5 GB ou menos durante o processo de upload, não há tamanho máximo para seu objeto após ele ser concatenado.
+Os uploads são limitados a um tamanho máximo de 5 GB para um único upload. No entanto, é possível segmentar objetos maiores em partes menores e usar um arquivo manifest para concatenar os segmentos. Quando um objeto é concatenado não há tamanho máximo.
 {: shortdesc}
 
-Há duas maneiras de fazer upload de objetos grandes: Dynamic Large Objects (DLO) e Static Large Objects (SLO).
+Os objetos grandes podem ser dinâmicos ou estáticos. Com objetos grandes estáticos (SLO), os segmentos não precisam estar no mesmo contêiner; cada segmento pode ser armazenado em qualquer contêiner e receber qualquer nome. Com os objetos grandes dinâmicos, o Cliente Swift cria um contêiner e segmentos numerados que são transferidos por upload em paralelo ao contêiner.
 
 
-## Objetos grandes dinâmicos: {: #dynamic}
+## Objetos grandes dinâmicos:{: #dynamic}
 
-Há duas maneiras de manipular DLO:
+É possível fazer upload de objetos grandes dinâmicos de duas maneiras:
   * Ter o cliente Swift manipulando tudo automaticamente
   * Usar a API Swift para fazer isso você mesmo
 
-#### Usando o cliente Swift para manipular objetos grandes dinâmicos
+#### Usando o Cliente Swift para lidar com objetos grandes dinâmicos
 
 O cliente Swift usa o parâmetro `-segment-size` para dividir seu
 objeto em partes menores. O cliente cria um novo contêiner com o nome do contêiner no
@@ -45,18 +45,16 @@ estar pronto para o upload, execute o comando a seguir para segmentar seu arquiv
 
 #### Usando a API Swift para manipular Objetos grandes dinâmicos
 
-É possível segmentar os objetos para que eles tenham 5 GB ou menos e, em seguida, fazer upload deles por meio da API do Swift. Ao fazer upload, é importante que seja
-feito primeiro o upload de todos os segmentos antes de fazer o do manifest. Se o objeto
-for transferido por download antes de todos os segmentos terem concluído o upload, o
-objeto transferido por download será inconsistente. É possível fazer upload de arquivos
+É possível segmentar os objetos para que eles tenham 5 GB ou menos e, em seguida, fazer upload deles por meio da API do Swift.
+
+**Observação**: ao fazer upload, todos os segmentos devem ser transferidos por upload antes do arquivo manifest. Se o objeto for transferido por download antes de todos os segmentos serem transferidos por upload, o objeto transferido por download será concatenado inconsistentemente.
+
+É possível fazer upload de arquivos
 grandes concluindo as etapas a seguir.
 
-1. Classifique os segmentos por nome na ordem em que eles deverão ser concatenados para formar o objeto original.
+1. Classifique os segmentos por nome na ordem em que eles precisarão ser concatenados para formar o objeto original.
 2. Faça upload de seus segmentos em um contêiner que seja separado do contêiner
-que contém o arquivo manifest. O regulador para uploads inicia após o décimo segmento ter
-sido transferido por upload e aumenta o tempo de upload consideravelmente.  Por esse
-motivo, é recomendado que o tamanho do segmento não seja menor que o tamanho do arquivo
-dividido por 10.
+que contém o arquivo manifest. A limitação para uploads começa após o décimo segmento ser transferido por upload e aumenta consideravelmente o tempo de upload.  
 
     ```
     curl -i -X PUT --data-binary @segment1 -H "X-Auth-Token: <token>" https://<object-storage_url>/<container_name>/<object_name>/000001
@@ -73,13 +71,9 @@ dividido por 10.
     ```
     {: pre}
 
-    **Nota**: o arquivo manifest deve ficar vazio. Se não estiver, o
-conteúdo do arquivo será considerado como um dos segmentos e cairá na ordem de concatenação que é
-ditada pelos nomes classificados.
-4. Faça download do objeto. Você receberá o objeto inteiro como resultado. É
-possível incluir ou remover segmentos sem precisar atualizar o arquivo manifest. Os
-segmentos com o prefixo correto continuarão parte do objeto. A exclusão do manifest não
-excluirá os segmentos.
+    **Nota**: o arquivo manifest deve ficar vazio. Se não, o conteúdo do arquivo é considerado como um dos segmentos e cai na ordem de concatenação que é ditada pelos nomes classificados.
+4. Faça download do objeto. Como resultado, você recebe o objeto inteiro. É
+possível incluir ou remover segmentos sem precisar atualizar o arquivo manifest. Segmentos com o prefixo correto permanecem como parte do objeto. Excluir o manifest não exclui os segmentos.
 
     ```
     curl -i -O -H "X-Auth-Token: <token>" https://<object-storage_url>/<manifest_container_name>/<object_name>
@@ -87,20 +81,15 @@ excluirá os segmentos.
     {: pre}
 
 
-## Objetos grandes estáticos {: #static}
+## Objetos grandes estáticos{: #static}
 
-Objetos grandes estáticos usam segmentos e um arquivo manifest, mas permitem mais
-controle. Com SLO, os segmentos não precisam estar no mesmo contêiner; cada segmento
-pode ser armazenado em qualquer contêiner e receber qualquer nome. No entanto, os
-segmentos devem ter pelo menos 1 MB. Você não é obrigado a configurar um cabeçalho para o arquivo manifest, embora o cabeçalho “X-Static-Large-Object” seja automaticamente incluído e configurado como true após um manifest correto ter sido transferido por upload.
+Os objetos grandes estáticos usam segmentos e um arquivo manifest, mas você tem mais controle. Com SLO, os segmentos não precisam estar no mesmo contêiner; cada segmento pode ser armazenado em qualquer contêiner e receber qualquer nome. No entanto, os segmentos devem ter pelo menos 1 MB. Não é necessário definir um cabeçalho para o arquivo manifest, embora o cabeçalho “X-Static-Large-Object” seja automaticamente incluído e configurado como true após um manifest correto ser transferido por upload.
 {: shortdesc}
 
-O arquivo manifest é um documento JSON que fornece detalhes dos segmentos e
-deve ser transferido por upload depois que todos os segmentos foram transferidos por
-upload. Os dados fornecidos para cada segmento no manifest são comparados com os metadados dos segmentos reais. Se algo não corresponder, o manifest não será transferido
-por upload.
+O arquivo manifest é um documento JSON que fornece detalhes dos segmentos e deve ser transferido por upload depois que todos os segmentos foram transferidos por upload. Os dados que são fornecidos para cada segmento no manifest é comparado com os metadados de segmentos reais. Se algo não corresponder, o manifest não será transferido por upload.
 
 <table>
+<caption> Tabela 1. Atributos JSON o arquivo manifest </caption>
   <tr>
     <th> Atributo </th>
     <th> Descrição </th>
@@ -119,14 +108,11 @@ por upload.
   </tr>
 </table>
 
-*Tabela 1: Atributos JSON no arquivo manifest na ordem de concatenação*
+
 
 #### Para fazer upload de arquivos grandes
 
-1. Execute o comando a seguir para fazer upload dos segmentos. O regulador para uploads inicia após o décimo segmento ter
-sido transferido por upload e aumenta o tempo de upload consideravelmente.  Por esse
-motivo, é recomendado que o tamanho do segmento não seja menor que o tamanho do arquivo
-dividido por 10.
+1. Execute o comando a seguir para fazer upload dos segmentos. A limitação para uploads começa após o décimo segmento ser transferido por upload e aumenta consideravelmente o tempo de upload.  
 
     ```
     curl -i -X PUT --data-binary @segment1 -H "X-Auth-Token: <token>" https://<object-storage_url>/<container_one>/<segment>
@@ -158,9 +144,7 @@ dividido por 10.
     ```
     {: pre}
 
-3. Faça upload do manifest. Para fazer isso, deve-se incluir a consulta
-`multipart-manifest=put` no nome do manifest executando o comando a
-seguir:
+3. Faça upload do arquivo manifest incluindo a consulta `multipart-manifest=put` no nome do manifest.
 
     ```
     curl -i -X PUT --data-binary @object_name -H "X-Auth-Token: <token>" https://<object-storage_url>/container_two/<object_name>?multipart-manifest=put
@@ -175,12 +159,15 @@ seguir:
     {: pre}
 
 
+#### Trabalhando com objetos grandes estáticos
 
-Aqui estão alguns comandos que podem ser necessários ao trabalhar com Objetos grandes estáticos.
+É possível gerenciar seus arquivos usando os comandos a seguir.
+
+**Observação**: para incluir ou remover segmentos no objeto, faça upload de um novo arquivo manifest com uma nova lista de segmentos. O
+nome do manifest pode permanecer o mesmo.
 
 * Para fazer download do conteúdo do arquivo manifest, deve-se incluir a
-consulta `multipart-manifest=get` em seu comando. O conteúdo que você
-recebe não será idêntico ao conteúdo transferido por upload.
+consulta `multipart-manifest=get` em seu comando. O conteúdo que você recebe não é idêntico ao conteúdo que você transferiu por upload.
 
     ```
     curl -O -X GET -H "X-Auth-Token:<token>" https://<object-storage_url>/<container_two>/<object_name>?multipart-manifest=get
@@ -200,7 +187,3 @@ recebe não será idêntico ao conteúdo transferido por upload.
     curl -i -X DELETE -H "X-Auth-Token: <token>" https://<object-storage_url>/<container_two>/<object_name>?multipart-manifest=delete
     ```
     {: pre}
-
-**Nota**: para incluir segmentos no objeto ou removê-los dele,
-você precisa fazer upload de um novo arquivo manifest com uma nova lista de segmentos. O
-nome do manifest pode permanecer o mesmo.

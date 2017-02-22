@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-23"
+  years: 2016, 2017
+lastupdated: "2017-01-11"
 ---
 
 {:shortdesc: .shortdesc}
@@ -209,7 +209,7 @@ Per integrare un system of record con le applicazioni che hai creato in {{site.d
 <dl>
 <dt>API Cloud Integration</dt>
     <dd>Una API Cloud Integration fornisce un accesso protetto ai system of record che si trovano dietro un firewall tramite le API web. Quando
-crei la API Cloud Integration, scegli la risorsa a cui si desideri accedere tramite la API web, specifichi le operazioni consentite e includi SDK ed esempi per accedere alla API. Per ulteriori informazioni su come creare una API Cloud Integration, consulta [Creazione delle API Cloud Integration](/docs/services/CloudIntegration/index.html#cloudint_add_service).</dd>
+crei la API Cloud Integration, scegli la risorsa a cui si desideri accedere tramite la API web, specifichi le operazioni consentite e includi SDK ed esempi per accedere alla API. Per ulteriori informazioni su come creare una API Cloud Integration, consulta [Introduzione a Cloud Integration](/docs/services/CloudIntegration/CldInt_GetStart.html).</dd>
 <dt>Servizio privato</dt>
     <dd>Un servizio privato consiste in una API Cloud Integration, degli SDK e delle politiche di titolarità. Il servizio privato può inoltre contenere della documentazione o altri elementi dal provider di servizi. Solo il gestore dell'organizzazione può pubblicare una API Cloud Integration come un servizio privato. Per visualizzare i servizi privati a tua disposizione, seleziona la casella di spunta Privato nel catalogo {{site.data.keyword.Bluemix_notm}}. Puoi selezionare un servizio privato ed eseguire il bind a un'applicazione senza stabilire una connessione al servizio Cloud Integration. Puoi eseguire il bind di servizi privati alla tua applicazione nello stesso modo che adotti per altri servizi {{site.data.keyword.Bluemix_notm}}. Per informazioni su come pubblicare una API come un servizio privato, vedi Pubblicazione di una API come un servizio privato.</dd>
 </dl>
@@ -246,7 +246,7 @@ I prerequisiti per l'utilizzo della piattaforma {{site.data.keyword.Bluemix_notm
 Il seguente elenco indica il software browser minimo richiesto per {{site.data.keyword.Bluemix_notm}}:
 
  * Chrome: la versione più recente per il tuo sistema operativo
- * Firefox: la versione più recente per il tuo sistema operativo e ESR 38
+ * Firefox: la versione più recente per il tuo sistema operativo e ESR 45
  * Internet Explorer: versione 11
  * Safari: la versione più recente per Mac
 
@@ -259,9 +259,9 @@ Interfaccia riga di comando Cloud Foundry, Versione 6.5.1 o successive
 {: #rellinks}
 ## generale
 {: #general}
-* [Informazioni su {{site.data.keyword.Bluemix_notm}}](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){:new_window}
-* [Introduzione](http://www.ibm.com/cloud-computing/bluemix/getting-started/)
+* [Cos'è {{site.data.keyword.Bluemix_notm}} ![icona link esterno](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){:new_window}
+* [Introduzione a ![icona link esterno](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/getting-started/){:new_window}
 * [Novità in {{site.data.keyword.Bluemix_notm}}](/docs/whatsnew/index.html)
-* [Informazioni sul modello ibrido](http://www.ibm.com/cloud-computing/bluemix/hybrid/)
+* [Informazioni sul modello ibrido ![icona link esterno](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/hybrid/){:new_window}
 * [Gestione del tuo account](/docs/admin/adminpublic.html#mngacct)
 * [{{site.data.keyword.Bluemix_notm}} glossario](/docs/overview/glossary/index.html)

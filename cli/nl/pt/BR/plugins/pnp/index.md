@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2016
+  years: 2016, 2017
 
-lastupdated: "2016-10-14"
+lastupdated: "2017-01-12"
 
 ---
 
@@ -38,25 +38,25 @@ Instale o plug-in de peering de rede privada usando o comando a seguir:
 
 **Observação**: alterne para o local do plug-in ou especifique o caminho para o local do plug-in.
 
-* Para o sistema operacional Microsoft Windows:  
+* Para o sistema operacional Microsoft Windows:
 
 ```
 bluemix plugin install private-network-peering-windows-amd64.exe
 ```
 
-* Para o Apple MAC OS:  
+* Para o Apple MAC OS:
 
 ```
 bluemix plugin install private-network-peering-darwin-amd64
 ```
 
-* Para o sistema operacional Linux:  
+* Para o sistema operacional Linux:
 
 ```
 bluemix plugin install private-network-peering-linux-amd64
 ```
 
-**Observação**: enquanto estiver instalando o plug-in para o sistema operacional Linux, se for exibida uma mensagem de erro que mostra que a permissão é negada, então, execute o comando a seguir e mude as permissões:  
+**Observação**: enquanto estiver instalando o plug-in para o sistema operacional Linux, se for exibida uma mensagem de erro que mostra que a permissão é negada, então, execute o comando a seguir e mude as permissões:
 
 ```
 chmod a+x ./private-network-peering-linux-amd64
@@ -66,16 +66,16 @@ chmod a+x ./private-network-peering-linux-amd64
 
 Siga estas etapas para instalar o plug-in a partir do repositório do Bluemix:
 
-1. Inclua o terminal de registro de plug-in do Bluemix:  
+1. Inclua o terminal de registro de plug-in do Bluemix:
 	```
 	bluemix plugin repo-add bluemix-bx http://plugins.ng.bluemix.net
-	```  
+	```
 
 2. Execute o seguinte comando:
 
 	```
 	bluemix plugin install private-network-peering -r bluemix-bx
-	```  
+	```
 
 ## Lista de comandos de peering de rede privada
 Os comandos a seguir são compatíveis. Use o comando `bluemix network` para ver a lista de comandos disponíveis:
@@ -105,7 +105,7 @@ bluemix network pnp-routers [--verbose (or -v)]
 ######Exemplo de comando
 {: #ex1}
 
-Para visualizar as informações de rede sobre todos os roteadores:  
+Para visualizar as informações de rede sobre todos os roteadores:
 
 	$ bluemix network pnp-routers
 	Listing available routers ...
@@ -117,7 +117,7 @@ Para visualizar as informações de rede sobre todos os roteadores:
 	129.41.238.212  default-router  Container  United-Kingdom  ywu@us.ibm.com  demo3
 
 
-Para visualizar informações de rede detalhadas sobre todos os roteadores:  
+Para visualizar informações de rede detalhadas sobre todos os roteadores:
 
 
 	$ bluemix network pnp-routers -v
@@ -215,7 +215,7 @@ bluemix network pnp-show [--verbose (or -v)]
 ######Exemplo de comando
 {: #ex4}
 
-Visualizar informações básicas:  
+Visualizar informações básicas:
 
 	$ bluemix network pnp-show
 	Listing private network peering connections ...

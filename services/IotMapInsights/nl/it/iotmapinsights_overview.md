@@ -14,48 +14,73 @@ copyright:
 
 # Informazioni su {{site.data.keyword.iotmapinsights_short}}
 {: #iotmapinsights_overview}
+Ultimo aggiornamento: 20 luglio 2016
+{: .last-updated}
 
-Il servizio {{site.data.keyword.iotmapinsights_short}} è basato sui dati di rete stradale memorizzati nella cache di memoria. Il servizio fornisce un accesso ad alta velocità ai dati sulla rete stradale statici, ai dati di evento dinamici e agli strumenti geospaziali basati sulla rete, che abilita la tua applicazione a integrare le funzionalità geospaziali.
+{{site.data.keyword.iotmapinsights_full}} è un servizio su {{site.data.keyword.Bluemix_notm}} che puoi utilizzare per ottenere un rapido accesso ai dati di rete stradale statici e dati di evento dinamici. {{site.data.keyword.iotmapinsights_short}} fornisce anche strumenti geospaziali per le reti stradali, che puoi utilizzare per integrare le funzionalità geospaziali con le tue applicazioni.
 {:shortdesc}
 
-## Query di dati di mappa statici
+Il servizio {{site.data.keyword.iotmapinsights_short}} fornisce le seguenti funzioni:
+
+- Dati di mappa statici
+- Dati di evento dinamici
+- Strumenti geospaziali
+
+Il servizio {{site.data.keyword.iotmapinsights_short}} raccoglie e utilizza i dati di rete stradale [OpenStreetMap](http://www.openstreetmap.org/){: new_window} che vengono memorizzati nella cache di memoria del servizio per l'elaborazione.
+
+I dati provenienti da OpenStreetMap vengono resi disponibili in Open Data Common Open Database License (ODbL) mediante OpenStreetMap Foundation (OSMF). Per ulteriori informazioni, vedi [OpenStreetMap Copyright and License](http://www.openstreetmap.org/copyright){: new_window}.
+
+## Dati di mappa statici
 {: #static_map_data_query}
 
-Per accedere ai dati di attributo di collegamento stradale, il servizio {{site.data.keyword.iotmapinsights_short}} fornisce un'interfaccia API REST per l'esecuzione di query dei collegamenti. L'interfaccia riceve un ID collegamento come un parametro che può essere identificato da una funzione di messa in corrispondenza con la mappa e restituisce le informazioni dettagliate per il collegamento richiesto, come il tipo di strada, la lunghezza, gli array di punti di forma (shape point) dettagliati, i nodi adiacenti e i collegamenti adiacenti.Utilizzando le informazioni sui collegamenti dettagliate oggetto delle query, la tua applicazione può percorrere una rete di collegamenti stradali osservando le informazioni sui collegamenti adiacenti.
+Una delle funzioni principali del prodotto è la possibilità di recuperare informazioni stradali dettagliate da utilizzare con le tue applicazioni. Utilizza l'interfaccia API REST per l'esecuzione di query dei collegamenti per eseguire una query dei dati di attributo statici della mappa stradale in base all'ID collegamento. Utilizza la [funzione di messa in corrispondenza con la mappa](#map_matching) di  {{site.data.keyword.iotmapinsights_short}} per identificare il parametro dell'ID collegamento richiesto.
+
+I dati che vengono restituiti includono le seguenti informazioni relative all'ID di collegamento richiesto:
+
+- Tipo di strada
+- Lunghezza della strada
+- Un array di punti di forma (shape point) dettagliati
+- Informazioni relative a nodi adiacenti e collegamenti adiacenti
+
+Eseguendo query di informazioni dettagliate sui collegamenti stradali, la tua applicazione può percorrere una rete di collegamenti stradali utilizzando in modo intelligente le informazioni sui collegamenti adiacenti che vengono restituite.
 
 ## Dati di evento dinamici
 {: #dynamic_event_data}
 
-Un evento nel servizio {{site.data.keyword.iotmapinsights_short}} è un modello di oggetto per un evento di traffico che viene posizionato dinamicamente su uno specifico collegamento stradale. L'evento ha degli attributi di base di un evento di traffico, come le coordinate GPS, l'ora, il tipo, la durata dell'evento e la lunghezza interessata. Puoi inserire ed eliminare eventi in modo dinamico.
+Oltre ai dati di mappa statici, la reale condizione mondiale delle strade comprende necessariamente eventi dinamici come la congestione del traffico e i lavori stradali. Utilizza {{site.data.keyword.iotmapinsights_short}} per creare, gestire e integrare gli eventi di traffico con le [ricerche di collegamenti interessati](#link_search) ai fini della pianificazione dei percorsi.
 
-## Inserimento ed eliminazione di eventi
+### Inserimento ed eliminazione di eventi
 {: #inject_event}
 
-Con l'interfaccia API REST di inserimento di eventi, puoi archiviare un evento su una mappa. Per inserire un evento, puoi pubblicare le informazioni sull'evento sull'interfaccia con il tipo di evento definito per classificare gli eventi e i suoi attributi conformemente all'uso previsto della tua applicazione. Con l'interfaccia API REST di eliminazione di eventi, puoi rimuovere gli eventi dalla mappa per consentire la gestione degli eventi obsoleti.
+Utilizza l'API REST di inserimento di eventi del servizio {{site.data.keyword.iotmapinsights_short}} per inserire e rimuovere dinamicamente gli eventi di traffico sotto forma di modelli oggetto di mappa che vengono collocati su specifici collegamenti stradali. Ogni evento include attributi di base come le coordinate GPS, l'ora di inizio, il tipo di evento, la durata dell'evento e la lunghezza della strada interessata.
 
-## Query di eventi
+Utilizza l'interfaccia API REST di eliminazione di eventi per rimuovere eventi dalla mappa una volta ritenuti obsoleti.
+
+### Query di eventi
 {: #query_event}
 
-Con l'interfaccia API REST di query di eventi, puoi eseguire query di eventi, a determinate condizioni impostate come parametri di richiesta. Per una condizione di query, puoi impostare l'area con un intervallo di longitudini e latitudini e degli attributi di evento per restringere gli eventi di destinazione restituiti come una risposta alla richiesta.
+Utilizza l'API REST di query di eventi per acquisire informazioni dettagliate su tutti gli eventi dinamici in una determinata area geografica. Puoi eseguire query in base all'area con un intervallo di longitudini e latitudini e puoi includere attributi di evento per restringere il numero di eventi di destinazione restituiti.
 
 ## Strumenti geospaziali
 {: #geospatial_tools}
 
-Per gli strumenti geospaziali, il servizio {{site.data.keyword.iotmapinsights_short}} fornisce un'interfaccia API REST per le funzioni di messa in corrispondenza con la mappa e di ricerca di rotte.
+Migliora la tua applicazione con le funzioni di messa in corrispondenza con la mappa e di ricerca di rotte fornite dagli strumenti geospaziali {{site.data.keyword.iotmapinsights_short}}.
 
-## Corrispondenza di mappe
+### Corrispondenza di mappe
 {: #map_matching}
 
-Se i dati GPS non sono sufficientemente accurati per utilizzare l'analisi o la visualizzazione, o se gli attributi della rete di collegamenti stradali sono richiesti per la tua applicazione, puoi utilizzare l'interfaccia API REST di messa in corrispondenza con la mappa. L'API REST di messa in corrispondenza con la mappa abilita la tua applicazione ad adattare un punto di dati GPS non elaborati a un punto messo in corrispondenza sul collegamento stradale. L'interfaccia API REST di messa in corrispondenza con la mappa riceve un punto di dati di coordinate GPS di longitudine e latitudine e restituisce un punto messo in corrispondenza con la mappa. Questo punto viene analizzato tenendo conto dei dati cronologici per ciascun veicolo entro uno specifico periodo di tempo per trovare il punto più probabile in tempo reale. Per i punti che non hanno dei dati di ubicazione cronologici, l'interfaccia di messa in corrispondenza con la mappa restituisce il punto più prossimo sul collegamento stradale per il punto GPS richiesto.
+Utilizza l'interfaccia API REST di messa in corrispondenza con la mappa con la tua applicazione per mappare le coordinate GPS del dispositivo reale con i dati di rete stradale [OpenStreetMap](http://www.openstreetmap.org/){: new_window} per aumentare la precisione della localizzazione per i dati GPS inesatti. Puoi anche ricevere informazioni sugli attributi della strada in base alla posizione. L'API REST di messa in corrispondenza con la mappa consente alla tua applicazione di adattare un punto di dati GPS non elaborati a un punto messo in corrispondenza sul collegamento stradale.
 
-## Ricerca rotta
+L'interfaccia API REST di messa in corrispondenza con la mappa riceve un punto di dati di coordinate GPS di longitudine e latitudine e restituisce un punto messo in corrispondenza con la mappa. Il punto messo in corrispondenza con la mappa viene analizzato tenendo conto dei dati cronologici per ciascuna automobile entro uno specifico periodo di tempo per trovare il punto più probabile in tempo reale. Per i punti che non hanno dei dati di ubicazione cronologici, l'interfaccia di messa in corrispondenza con la mappa restituisce il punto più prossimo sul collegamento stradale dal punto GPS richiesto.
+
+### Ricerca rotta
 {: #route_search}
 
-Se devi implementare un'applicazione con delle funzioni geospaziali, dovrai cercare il percorso più breve tra due punti. L'interfaccia API REST di ricerca delle rotte del servizio
-{{site.data.keyword.iotmapinsights_short}} calcola il percorso più breve tra le coordinate GPS di punto di inizio e punto di fine. Le coordinate ricevute vengono messe in corrispondenza con il collegamento della mappa più prossimo utilizzando la funzione di messa in corrispondenza con la mappa e viene calcolato il percorso più breve tra questi punti messi in corrispondenza con la mappa.
+Una delle funzioni di base di un'applicazione con funzionalità geospaziali è la capacità di trovare il percorso più breve tra due punti.  
 
-## Ricerca collegamenti interessati
+L'interfaccia API REST di ricerca delle rotte del servizio {{site.data.keyword.iotmapinsights_short}} calcola il percorso più breve tra le coordinate GPS di un punto di inizio e un punto di fine. Le coordinate ricevute vengono messe in corrispondenza con il collegamento della mappa più prossimo utilizzando la funzione di messa in corrispondenza con la mappa e viene calcolato il percorso più breve tra questi punti messi in corrispondenza con la mappa.
+
+### Ricerca collegamenti interessati
 {: #link_search}
 
-Un evento che si verifica su una strada potrebbe interessare diversi collegamenti stradali. Puoi utilizzare le API REST per cercare i collegamenti interessati dove i veicoli potrebbero raggiungere l'evento. La ricerca tiene conto della topologia delle reti di collegamenti stradali, non solo della distanza dai veicoli all'evento.
-
+Un evento che si verifica su una strada potrebbe interessare diversi collegamenti stradali. Puoi utilizzare le API REST per cercare i collegamenti interessati e per trovare anche i collegamenti stradali in cui le automobili potrebbero raggiungere l'evento. La ricerca tiene conto della topologia della rete di collegamenti stradali, non solo della distanza dalle automobili all'evento.

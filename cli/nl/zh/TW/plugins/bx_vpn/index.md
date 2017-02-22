@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015，2017
 
 lastupdated: "2016-06-20"
 
@@ -19,8 +19,7 @@ lastupdated: "2016-06-20"
 
 *版本：*1.4.0
 
-您可以使用指令行介面 (CLI) 來配置及管理 {{site.data.keyword.vpn_full}} 服務。{{site.data.keyword.vpn_short}} CLI 外掛程式有兩個版本：一個適用於 Cloud Foundry CLI 外掛程式，另一個適用於 {{site.data.keyword.Bluemix}} CLI 外掛程式。這兩個版本的外掛程式都提供相同的功能。  
-{:shortdesc}
+您可以使用指令行介面 (CLI) 來配置及管理 {{site.data.keyword.vpn_full}} 服務。{{site.data.keyword.vpn_short}} CLI 外掛程式有兩個版本：一個適用於 Cloud Foundry CLI 外掛程式，另一個適用於 {{site.data.keyword.Bluemix}} CLI 外掛程式。這兩個版本的外掛程式都提供相同的功能。{:shortdesc}
 
 {{site.data.keyword.vpn_short}} 外掛程式適用於 Windows、MAC 和 Linux 作業系統。請確定您是使用適用的版本。
 

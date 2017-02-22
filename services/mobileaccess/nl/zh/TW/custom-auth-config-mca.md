@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-07"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
 
@@ -30,5 +30,5 @@ lastupdated: "2016-11-07"
 ## 後續步驟
 {: #next-steps}
 * [配置 Android 應用程式的自訂鑑別](custom-auth-android.html)
-* [配置 iOS 應用程式的自訂鑑別](custom-auth-ios.html)
+* [配置適用於 iOS 的自訂鑑別](custom-auth-ios-swift-sdk.html)
 * [配置 Cordova 應用程式的自訂鑑別](custom-auth-cordova.html)

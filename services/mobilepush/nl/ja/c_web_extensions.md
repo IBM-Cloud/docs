@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,10 +12,10 @@ copyright:
 
 # Chrome アプリケーションおよびエクステンションによる {{site.data.keyword.mobilepushshort}} の受信の可能化
 {: #web_notifications}
-最終更新日: 2016 年 12 月 06 日
+最終更新日: 2017 年 1 月 18 日
 {: .last-updated}
 
-Google Chrome アプリケーションおよびエクステンションによる {{site.data.keyword.mobilepushshort}} の受信を可能にできるようになりました。
+Google Chrome のアプリケーションおよび拡張機能を有効にして、{{site.data.keyword.mobilepushshort}} を受信することができます。以下のステップに進む前に、[通知プロバイダーの資格情報の構成](t__main_push_config_provider.html)を確実に実行してください。
 
 ## {{site.data.keyword.mobilepushshort}} 用のクライアント SDK のインストール
 {: #web_install}
@@ -26,7 +26,7 @@ Google Chrome アプリケーションおよびエクステンションによる
 
 Chrome アプリケーションおよびエクステンションに Javascript SDK をインストールする場合、以下の手順を実行します。
 
-[Bluemix Web push SDK](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master) から `BMSPushSDK.js` および `manifest_Chrome_Ext.json` (Chrome エクステンションの場合) または `manifest_Chrome_App.json` (Chrome アプリケーションの場合) をダウンロードします。
+`BMSPushSDK.js` と `manifest_Chrome_Ext.json` (Chrome 拡張機能の場合) または `manifest_Chrome_App.json` (Chrome アプリケーションの場合) を[Bluemix Web push SDK ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://codeload.github.com/ibm-bluemix-mobile-services/bms-clientsdk-javascript-webpush/zip/master "外部リンク・アイコン"){: new_window}からダウンロードします。
 
 
 
@@ -53,7 +53,7 @@ chrome.notifications.onButtonClicked.addListener(BMSPushBackground.notifiation_b
 ## Push SDK の初期化 
 {: #web_initialize}
 
-Bluemix {{site.data.keyword.mobilepushshort}}サービスの `app GUID` と `app Region` を使用して Push SDK を初期化します。  
+Bluemix {{site.data.keyword.mobilepushshort}} サービスの `app GUID` と `app Region` を使用して Push SDK を初期化します。  
 
 app GUID を入手するには、初期化されたプッシュ・サービスのナビゲーション・ペインで**「構成」**オプションを選択し、**「モバイル・オプション」**をクリックします。Bluemix のプッシュ通知サービス appGUID パラメーターを使用するようにコード・スニペットを変更します。
 

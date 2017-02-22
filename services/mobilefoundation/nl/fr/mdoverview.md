@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated:  "2016-08-03"
+  years: 2016, 2017
+lastupdated:  "2017-01-17"
 
 ---
 
@@ -61,10 +61,10 @@ Si vous avez des problèmes ou des questions quand vous utilisez {{site.data.key
 
 Quand vous utilisez les forums pour poser une question, prenez soin d'étiqueter cette dernière de façon à ce qu'elle soit vue par les équipes de développement {{site.data.keyword.Bluemix_notm}}.
 
-Si vous avez des questions techniques sur le développement ou le déploiement d'une application avec {{site.data.keyword.mobilefoundation_short}}, postez votre question sur [stackoverflow](http://stackoverflow.com/search?q=ibm-mobilefirst+bluemix){:new_window} et marquez votre question avec les étiquettes `bluemix` et `ibm-mobilefirst`.
+En cas de questions d'ordre technique sur le développement et le déploiement d'une application avec {{site.data.keyword.mobilefoundation_short}}, postez votre question sur le forum [Stack Overflow ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://stackoverflow.com/search?q=ibm-mobilefirst+bluemix "Icône de lien externe"){:new_window} en lui adjoignant les balises `bluemix` et `ibm-mobilefirst`.
 
-Pour des questions relatives au service et aux instructions de mise en route, utilisez le forum [IBM developerWorks - dW Answers](https://developer.ibm.com/answers/topics/mobilefirst/?smartspace=bluemix){:new_window}. Incluez les étiquettes `bluemix` et `mobilefirst`.
+Pour des questions relatives au service et aux instructions de mise en route, utilisez le forum [IBM developerWorks dW Answers ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/answers/topics/mobilefirst/?smartspace=bluemix "Icône de lien externe"){:new_window}. Incluez les étiquettes `bluemix` et `mobilefirst`.
 
-Voir la rubrique expliquant comment [obtenir de l'aide](https://www.{DomainName}/docs/support/index.html#getting-help) pour plus de détails sur l'utilisation des forums.
+Voir [Comment obtenir de l'aide![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.{DomainName}/docs/support/index.html#getting-help "Icône de lien externe"){: new_window} pour plus d'informations sur l'utilisation des forums.
 
-Pour plus d'informations sur l'ouverture d'un ticket de demande de service IBM, sur les niveaux de support disponibles ou les niveaux de gravité des tickets, voir la rubrique décrivant [comment contacter le support](https://www.{DomainName}/docs/support/index.html#contacting-support).
+Pour plus d'informations sur l'ouverture d'un ticket de demande de service IBM, sur les niveaux de support disponibles ou les niveaux de gravité des tickets, voir la rubrique décrivant [Comment contacter le support ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.{DomainName}/docs/support/index.html#contacting-support "Icône de lien externe"){: new_window}.

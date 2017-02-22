@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  2015, 2016
+  years: 2015, 2017
   
-lastupdated: "2016-10-23"
+lastupdated: "2017-01-11"
 
 ---
 
@@ -28,7 +28,7 @@ Les journaux ont un format fixe. Vous pouvez filtrer les journaux prolixes ou ut
 journalisation externes pour
 stocker et traiter les journaux. Pour plus d'informations sur les formats des journaux, leur affichage et leur filtrage, ainsi que sur la configuration de
 la journalisation externe, voir [Journalisation pour les applications qui s'exécutent dans Cloud
-Foundry](/docs/monitor_log/monitoringandlogging.html#logging_for_bluemix_apps){: new_window}.
+Foundry](/docs/monitor_log/monitoringandlogging.html#logging_for_bluemix_apps).
 
 
 ## Débogage des erreurs de constitution
@@ -36,13 +36,13 @@ Foundry](/docs/monitor_log/monitoringandlogging.html#logging_for_bluemix_apps){:
 Vous pouvez rencontrer des problèmes lorsque vous constituez vos applications dans {{site.data.keyword.Bluemix_notm}}. Si le transfert de votre application
 échoue, vous pouvez rechercher et examiner les journaux de transfert (STG) afin de déterminer ce qui s'est passé lors du déploiement
 de l'application et corriger le problème. Pour plus d'informations sur les méthodes d'affichage des journaux des applications
-Bluemix, voir [Affichage des journaux](/docs/monitor_log/monitoringandlogging.html#viewing_logs){: new_window}.  
+Bluemix, voir [Affichage des journaux](/docs/monitor_log/monitoringandlogging.html#viewing_logs).  
 
 Pour comprendre la raison pour laquelle votre application ne fonctionne pas dans {{site.data.keyword.Bluemix_notm}}, vous devez savoir comment une
-application est déployée et exécutée dans {{site.data.keyword.Bluemix_notm}}. Pour plus d'informations, voir [Déploiement d'une application](/docs/manageapps/depapps.html#appdeploy){: new_window}.
+application est déployée et exécutée dans {{site.data.keyword.Bluemix_notm}}. Pour plus d'informations, voir [Déploiement d'une application](/docs/manageapps/depapps.html#appdeploy).
 
 
-La procédure suivante présente l'utilisation de la commande `cf logs` pour déboguer des erreurs constitution. Avant de continuer, vérifiez que vous avez installé l'interface de ligne de commande cf. Pour plus d'informations sur l'installation de l'interface de ligne de commande cf, voir [Installation de l'interface de ligne de commande cf](/docs/starters/install_cli.html){: new_window}.
+La procédure suivante présente l'utilisation de la commande `cf logs` pour déboguer des erreurs constitution. Avant de continuer, vérifiez que vous avez installé l'interface de ligne de commande cf. Pour plus d'informations sur l'installation de l'interface de ligne de commande cf, voir [Installation de l'interface de ligne de commande cf](/docs/starters/install_cli.html).
 
   1. Connectez-vous à {{site.data.keyword.Bluemix_notm}} en entrant la commande suivante sur l'interface de ligne de commande cf :
      ```
@@ -119,16 +119,12 @@ Si vous rencontrez des problèmes lors de l'exécution de votre application, les
 
 La journalisation vers stdout (sortie standard) et stderr (erreur standard) peut être activée. Pour plus d'informations sur la manière de configurer les fichiers journaux pour des applications déployées à l'aide du pack de construction intégré {{site.data.keyword.Bluemix_notm}}, consultez la liste ci-après :
 
-  * Pour les applications Liberty for Java™, voir [Liberty Profile: Logging and Trace](http://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/rwlp_logging.html){: new_window}.
-  * Pour les applications Node.js, voir [How
-to log in node.js](http://docs.nodejitsu.com/articles/intermediate/how-to-log){: new_window}.
-  * Pour les applications PHP, voir [error_log](http://php.net/manual/en/function.error-log.php){: new_window}.
-  * Pour les applications Python, voir [Logging
-HOWTO](https://docs.python.org/2/howto/logging.html){: new_window}.
-  * Pour les applications Ruby on Rails, voir
-[The Logger](http://guides.rubyonrails.org/debugging_rails_applications.html#the-logger){: new_window}.
-  * Pour les applications Ruby Sinatra, voir
-[Logging](http://www.sinatrarb.com/intro.html#Logging){: new_window}.
+  * Pour les applications Liberty for Java™, voir [Liberty Profile: Logging and Trace ![icône de lien externe](../icons/launch-glyph.svg)](http://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/rwlp_logging.html){: new_window}.
+  * Pour les applications Node.js, voir [How to log in node.js ![icône de lien externe](../icons/launch-glyph.svg)](http://docs.nodejitsu.com/articles/intermediate/how-to-log){: new_window}.
+  * Pour les applications PHP, voir [error_log ![icône de lien externe](../icons/launch-glyph.svg)](http://php.net/manual/en/function.error-log.php){: new_window}.
+  * Pour les applications Python, voir [Logging HOWTO ![icône de lien externe](../icons/launch-glyph.svg)](https://docs.python.org/2/howto/logging.html){: new_window}.
+  * Pour les applications Ruby on Rails, voir [The Logger ![icône de lien externe](../icons/launch-glyph.svg)](http://guides.rubyonrails.org/debugging_rails_applications.html#the-logger){: new_window}.
+  * Pour les applications Ruby Sinatra, voir [Logging ![icône de lien externe](../icons/launch-glyph.svg)](http://www.sinatrarb.com/intro.html#Logging){: new_window}.
 
 Lorsque vous entrez la commande `cf logs nom_app --recent` dans l'interface de ligne de commande cf, seuls les journaux les plus
 récents s'affichent. Pour accéder aux erreurs précédentes, vous devez extraire tous les journaux. Pour ce faire, utilisez l'une des méthodes suivantes :
@@ -172,13 +168,13 @@ Selon la manière dont le nouveau code est déployé, choisissez l'une des méth
   * Pour un nouveau code déployé depuis la ligne de commande cf, examinez la sortie de la commande *cf
 push*. Vous pouvez utiliser en plus la commande *cf logs* pour trouver d'autres indices pour résoudre le problème. Pour plus d'informations, sur
 l'utilisation de la commande *cf logs*, voir [Affichage des journaux dans
-l'interface de ligne de commande](../monitor_log/monitoringandlogging.html#viewing_logs_cli){: new_window}.
+l'interface de ligne de commande](/docs/monitor_log/monitoringandlogging.html#viewing_logs_cli).
 
   * Pour un nouveau code déployé depuis une interface graphique, telle que la console {{site.data.keyword.Bluemix_notm}},
 DevOps Delivery Pipeline ou Travis-CI, vous pouvez consulter les journaux depuis l'interface. Par exemple, si vous déployez le nouveau code depuis
 la console {{site.data.keyword.Bluemix_notm}}, vous pouvez accéder au tableau de bord, rechercher votre application, puis afficher
 tous les journaux pour repérer des indices.   Pour plus d'informations sur l'affichage de journaux depuis la console {{site.data.keyword.Bluemix_notm}}, voir [Affichage des journaux dans le
-tableau de bord Bluemix](../monitor_log/monitoringandlogging.html#viewing_logs_UI){: new_window}.
+tableau de bord Bluemix](/docs/monitor_log/monitoringandlogging.html#viewing_logs_UI).
 
 
 # rellinks
@@ -187,11 +183,11 @@ tableau de bord Bluemix](../monitor_log/monitoringandlogging.html#viewing_logs_U
 ## general
 {: #general}
 
-  * [Droplet Execution Agent (DEA)](http://docs.cloudfoundry.org/concepts/architecture/execution-agent.html){: new_window}
-  * [Initiation au service IBM Monitoring and Analytics for Bluemix](../services/monana/index.html#gettingstartedtemplate){: new_window}
-  * [Fonctionnement de Bluemix](../overview/whatisbluemix.html#howwork){: new_window}
-  * [Installation de l'outil de commande cf](../starters/install_cli.html){: new_window}
-  * [Affichage des journaux](../monitor_log/monitoringandlogging.html#viewing_logs){: new_window}
+  * [Droplet Execution Agent (DEA) ![icône de lien externe](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/concepts/architecture/execution-agent.html){: new_window}
+  * [Initiation au service IBM Monitoring and Analytics for Bluemix](/docs/services/monana/index.html#gettingstartedtemplate)
+  * [Fonctionnement de Bluemix](/docs/overview/whatisbluemix.html#howwork)
+  * [Installation de l'outil de commande cf](/docs/starters/install_cli.html)
+  * [Affichage des journaux](/docs/monitor_log/monitoringandlogging.html#viewing_logs)
 
   
   

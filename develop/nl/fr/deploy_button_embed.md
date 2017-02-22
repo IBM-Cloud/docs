@@ -21,8 +21,7 @@ vous pouvez incorporer la trame d'information dans des fichiers Readme, des blog
 
 {: shortdesc}
 
-Le flux de trame d'information est utile si vous voulez gérer l'image de marque de votre entreprise. Lorsque des personnes cliquent sur votre trame d'information incorporée, elles restent dans votre contenu au lieu d'être redirigées vers le site Web bluemix.net. 
-Si vous ne vous préoccupez pas de l'image de marque de votre entreprise, vous
+Le flux de trame d'information est utile si vous voulez gérer l'image de marque de votre entreprise. Lorsque des personnes cliquent sur votre trame d'information incorporée, elles restent dans votre contenu au lieu d'être redirigées vers le site Web bluemix.net. Si vous ne vous préoccupez pas de l'image de marque de votre entreprise, vous
 pouvez insérer un bouton [Déployer
 dans {{site.data.keyword.Bluemix_notm}}](/docs/develop/deploy_button.html) standard dans votre
 contenu à la place de la trame d'information.

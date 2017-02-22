@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-02"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
 
@@ -54,7 +54,7 @@ var options = {
 
 oauthSDK.getAuthorizationHeader(options).then(function(authHeader){
 
-	// In the request that you want to send to the protected resource, 
+	// In the request that you want to send to the protected resource,
 	// add the authHeader value.
 
 	request.headers.Authorization = authHeader;

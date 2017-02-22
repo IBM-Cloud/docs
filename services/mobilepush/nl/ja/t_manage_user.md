@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # userId によるデバイスの登録
 {: #register_device_with_userId}
-最終更新日: 2016 年 12 月 07 日
+最終更新日: 2017 年 1 月 11 日
 {: .last-updated}
 
 userId ベースの通知への登録を行うには、以下の手順を実行します。
@@ -69,40 +69,6 @@ BMSPush.registerDevice(options,success, failure);
 
 - **userId**: {{site.data.keyword.mobilepushshort}} への登録を行うための固有の userId 値を渡します。
 
-
-## Objective-C
-{: objc-register}
-
-以下の API を使用して、UserId ベースの {{site.data.keyword.mobilepushshort}} への登録を行います。
-```
-// Initialize the MFPPush
-	IMFPushClient* push = [IMFPushClient sharedInstance];
-	[push initializeWithAppGUID:@"appGUID" clientSecret:@"clientSecret"];
-```
-	{: codeblock}
-
-
-- **AppGUID**: これは、{{site.data.keyword.mobilepushshort}} サービスの AppGUID キーです。
-- **clientSecret**: これは、{{site.data.keyword.mobilepushshort}} サービスの clientSecret キーです。
-
-**registerWithUserId** API を使用して、デバイスを{{site.data.keyword.mobilepushshort}}に登録します。
-```
-// Register the device to push notifications service.
-	[push registerWithDeviceToken:deviceToken WithUserId:@"userId" completionHandler:^(IMFResponse *response, NSError *error) {
-    NSString *message=@"";
-	if (error){
-        message = [NSString stringWithFormat:@"Error registering for push notifications: %@", error.description];
-        NSLog(@"%@",message);
-    } else {
-        message=@"Successfully registered for push notifications";
-        NSLog(@"%@",message);
-    }
-	}];
-```
-	{: codeblock}
-
-
-- **userId**: {{site.data.keyword.mobilepushshort}} への登録を行うための固有の userId 値を渡します。
 
 ## Swift
 {: swift-register}

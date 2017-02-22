@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-30"
+  years: 2016, 2017
+lastupdated: "2017-01-13"
 
 ---
 {:new_window: target="_blank"}
@@ -10,20 +10,25 @@ lastupdated: "2016-11-30"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# 開始使用 {{site.data.keyword.mobileanalytics_short}}（測試版）
+# 開始使用 {{site.data.keyword.mobileanalytics_short}}
 
 {: #gettingstartedtemplate}
 
-{{site.data.keyword.mobileanalytics_full}} 可提供開發人員、IT 管理者及商業利害關係人，對其行動應用程式的效能及其使用情形的見解。請從桌面或平板電腦監視所有應用程式的效能及使用情形。可快速識別趨勢和異常、往下探查以解決這些問題，以及在重要度量值超過重大臨界值時觸發警示。
+{{site.data.keyword.mobileanalytics_full}} 可提供開發人員、IT 管理者及商業利害關係人，對其行動應用程式的效能及其使用情形的見解。{{site.data.keyword.mobileanalytics_short}} 可讓您：
+
+* 從桌面或平板電腦監視所有應用程式的效能及使用情形。 
+* 快速識別趨勢和異常、往下探查以解決這些問題，以及在重要度量值超過重大臨界值時觸發警示。
 {: shortdesc}
 
-若要快速啟動並執行 {{site.data.keyword.mobileanalytics_short}} 服務，請遵循下列步驟：
+**重要事項：**Internet Explorer 瀏覽器尚無法使用「{{site.data.keyword.mobileanalytics_short}} 主控台」，而且有些功能無法正確地運作。如需最佳體驗，請使用 Firefox、Chrome 或 Safari。
+
+若要快速開始進行 {{site.data.keyword.mobileanalytics_short}} 服務，請遵循下列步驟：
 
 1. 為 {{site.data.keyword.mobileanalytics_short}} 服務建立實例<!--[create an instance](https://console.{DomainName}/docs/services/reqnsi.html#req_instance)-->之後，可以在「{{site.data.keyword.Bluemix}} 儀表板」的**服務**區段中按一下您的磚，以存取「{{site.data.keyword.mobileanalytics_short}} 主控台」。
 
- {{site.data.keyword.mobileanalytics_short}} 服務在啟動時已啟用**展示模式**。展示模式會在**應用程式資料**及**警示**頁面上移入圖表，讓您可以查看資料的顯示方式。當您有自己的資料時，即可關閉展示模式。處於展示模式時，{{site.data.keyword.mobileanalytics_short}} 主控台是唯讀的，因此您無法建立新的警示定義。
+ 為了協助您立即感受各種視圖及圖表，以及它們產生的值，我們會在 {{site.data.keyword.mobileanalytics_short}} 主控台中提供**展示模式**選項，視圖及圖表可以藉此顯示*展示資料*。展示資料是主控台在服務實例化之後初次啟動時的預設模式。當您將自己的應用程式及分析資料移入服務時，您可以*關閉* 展示模式，以在不同圖表中檢視您的應用程式資料。處於展示模式時，Mobile Analytics 主控台是唯讀的，因此您無法建立新的警示定義。
 
-2. 安裝 {{site.data.keyword.mobileanalytics_short}} [Client SDK](/docs/services/mobileanalytics/install-client-sdk.html)。您可以選擇性地使用 {{site.data.keyword.mobileanalytics_short}} [REST API](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}。
+2. 安裝 {{site.data.keyword.mobileanalytics_short}} [Client SDK](/docs/services/mobileanalytics/install-client-sdk.html)。您可以選擇性地使用 {{site.data.keyword.mobileanalytics_short}} [REST API ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://mobile-analytics-dashboard.{DomainName}/analytics-service/ "外部鏈結圖示"){:new_window}。
 
 3. 匯入 Client SDK，並使用下列程式碼 Snippet 起始設定它們，以記錄用量分析：
 
@@ -75,6 +80,8 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
     
  **bluemixRegion** 參數指定您所使用的 {{site.data.keyword.Bluemix_notm}} 部署（例如，`BMSClient.REGION_US_SOUTH` 及 `BMSClient.REGION_UK`）。 
     <!-- , or `BMSClient.Region.Sydney`.-->
+    
+ 將 `hasUserContext` 的值設為 **true** 或 **false**。如果是 false（預設值），每一個裝置即視為作用中使用者。
 
  #### iOS
  {: #ios-initialize}
@@ -89,6 +96,8 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 			
    **bluemixRegion** 參數指定您所使用的 Bluemix 部署（例如，`BMSClient.Region.usSouth` 或 `BMSClient.Region.unitedKingdom`）。
 	<!-- , or `BMSClient.REGION_SYDNEY`. -->
+ 
+ 將 `hasUserContext` 的值設為 **true** 或 **false**。如果是 false（預設值），每一個裝置即視為作用中使用者。
 	
  #### Cordova
  {: #cordova-initialize}
@@ -138,7 +147,7 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 	使用 `BMSAnalytics.send` 方法，將分析資料傳送至伺服器。將 `BMSAnalytics.send` 方法放在最適合您專案的位置中。
 	
 	```
-	BMSAnalytics.send
+	BMSAnalytics.send()
 	```
 	{: codeblock}
 	
@@ -152,10 +161,10 @@ import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
 # 相關鏈結
 
 ## SDK
-* [Android SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics){: new_window}  
-* [iOS SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics){: new_window}
-* [Cordova 外掛程式核心 SDK](https://www.npmjs.com/package/bms-core){: new_window}
+* [Android SDK ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-analytics "外部鏈結圖示"){: new_window}  
+* [iOS SDK ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-analytics "外部鏈結圖示"){: new_window}
+* [Cordova 外掛程式核心 SDK ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.npmjs.com/package/bms-core "外部鏈結圖示"){: new_window}
 
 ## API 參考資料
 {: #api}
-* [REST API](https://mobile-analytics-dashboard.{DomainName}/analytics-service/){:new_window}
+* [REST API ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://mobile-analytics-dashboard.{DomainName}/analytics-service/ "外部鏈結圖示"){:new_window}

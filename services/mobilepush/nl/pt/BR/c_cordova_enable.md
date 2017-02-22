@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -13,7 +13,7 @@ copyright:
 # Ativando aplicativos Cordova para receber
 notificações push
 {: #cordova_enable}
-Última atualização: 06 de novembro de 2016
+Última atualização: 18 de janeiro de 2017
 {: .last-updated}
 
 Cordova é uma plataforma para criar aplicativos híbridos
@@ -32,21 +32,15 @@ Instale e use o plug-in de push do cliente para desenvolver ainda mais seus apli
 1. Faça download das versões mais recentes do Android Studio SDK e Xcode.
 1. Configure o emulador. Para Android Studio, use um emulador que suporte a API do Google.
 1. Instale a ferramenta de linha de comandos Git. Para Windows, certifique-se de
-selecionar a opção **Executar Git no prompt de comandos do Windows**. Para
-obter informações sobre como fazer download e instalar essa ferramenta, consulte
-[Git](https://git-scm.com/downloads).
+selecionar a opção **Executar Git no prompt de comandos do Windows**. Para obter informações sobre como fazer download e instalar essa ferramenta, veja [Git ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://git-scm.com/downloads "Ícone de link externo"){: new_window}.
 1. Instale o Node.js e a ferramenta Node Package Manager (NPM). A ferramenta de
-linha de comandos NPM é empacotada com o Node.js. Para obter informações sobre como fazer download e instalar o Node.js, consulte
-[Node.js](https://nodejs.org/en/download/).
+linha de comandos NPM é empacotada com o Node.js. Para obter informações sobre como fazer download e instalar o Node.js, veja [Node.js ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://nodejs.org/en/download/ "Ícone de link externo"){: new_window}.
 1. Na linha de comandos, instale as ferramentas de linha de comandos Cordova
-usando o comando **npm install -g cordova**. Isso é necessário para usar o plug-in de push Cordova. Para obter informações sobre como instalar o Cordova e configurar o app Cordova, consulte [Cordova Apache](https://cordova.apache.org/#getstarted). Para
-obter mais informações, veja o [arquivo
-Leia-me](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push) do plug-in push do Cordova.
+usando o comando **npm install -g cordova**. Isso é necessário para usar o plug-in de push Cordova. Para obter informações sobre como instalar o Cordova e configurar o app Cordova, veja [Cordova Apache ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://cordova.apache.org/#getstarted "Ícone de link externo"){: new_window}. Para obter mais informações, veja o plug-in push do Cordova [Arquivo leia-me ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push "Ícone de link externo"){: new_window}.
 1. Mude para a pasta na qual deseja criar seu app Cordova e
 execute o comando a seguir para criar um aplicativo Cordova. Se
 você tiver um app Cordova existente, vá para a etapa 3.
-```
-cordova create your_app_name
+```cordova create your_app_name
 	cd your_app_name
 ```
 	{: codeblock}
@@ -65,25 +59,27 @@ implementação no arquivo config.xml do seu aplicativo Cordova. O valor minSdkV
 ser maior que 15. O valor targetSdkVersion deve sempre refletir o SDK mais recente do
 Android que esta disponível no Google.
 	
-	* Android - com seu editor, abra o arquivo config.xml e atualize o
+	* Android - com seu editor, abra o arquivo **config.xml** e atualize o
 elemento `<platform name="android">` com as versões de SDK mínima e de destino:
 
-```
-< !-- add deployment target declaration --> 
-add deployment target declaration <preference name="android-minSdkVersion" value="15" />
-  <preference name="android-targetSdkVersion" value="23" />
-</platform>
-```
-    {: codeblock}
+	```
+	<platform name="android">
+    	<preference name="android-minSdkVersion" value="15" />
+    	<preference name="android-targetSdkVersion" value="23" />
+    	<!-- add minimum and target Android API level declaration -->
+	</platform> 
+	```
+    	{: codeblock}
 
    * iOS - atualize o elemento <platform name="ios"> com uma declaração de destino de implementação:
 
-```
-<platform name ="ios">
-<preference name=deployment-target" value="8.0" /> <!-- other properties -->
-</ platform>
-```
-	{: codeblock}
+	```
+	<platform name="ios">
+	    <preference name="deployment-target" value="8.0" />
+	    <!-- add deployment target declaration -->
+	</platform>
+	```
+		{: codeblock}
 
 1. Na interface da linha de comandos (CLI) do Cordova, inclua suas plataformas: iOS, Android, ou ambas, usando o comando:
 ```
@@ -106,24 +102,46 @@ bms-push <version> "BMSPush"
 ```
 	{: codeblock}
 
-1. (Somente iOS) - Configure seu ambiente de desenvolvimento iOS.
+1. Configure o ambiente de desenvolvimento iOS.
 2. Compile e execute seu aplicativo com Xcode.
-1. (Somente Android)- Compile seu projeto Android usando o comando a seguir:
-**cordova build android**.
-
+1. Faça download do `google-services.json` do Firebase para android e coloque-o na pasta raiz do projeto Cordova, em `[your-app-name]/platforms/android.
+	1. Acesse `[your-app-name]/platforms/android`.
+	2. Abra o arquivo `build.gradle` (caminho: plataforma > android > build.gradle).
+	3. Localize o texto `buildscript` no arquivo `build.gradle`.
+	4. Após a linha de caminho de classe, inclua a linha classpath 'com.google.gms:google-services:3.0.0'
+	5. Em seguida, localize "dependencies". Selecione as dependências que tenham o texto `compile` e onde essas dependências terminam, logo após isso, inclua esta linha :apply plugin: 'com.google.gms.google-services'.
+	6. Prepare e construa o projeto Cordova Android.
+		```
+		cordova prepare android
+		cordova build android
+		```
+			{: codeblock}
 	**Nota**: antes de abrir o projeto no Android Studio, construa seu aplicativo Cordova por meio da CLI do Cordova. Isso ajudará a evitar erros de construção.
 
 ## Inicializando o plug-in Cordova
 {: #cordova_initialize}
 
-Antes de poder usar o plug-in do Cordova do serviço {{site.data.keyword.mobilepushshort}}, é necessário inicializá-lo passando a rota do aplicativo e o GUID do aplicativo. Depois de inicializar o plug-in, é possível conectar-se ao app de servidor criado no painel do Bluemix. O plug-in do Cordova é o wrapper dos SDKs de cliente Android e iOS para permitir que um app Cordova se comunique com serviços Bluemix.
+Antes de poder usar o plug-in do Cordova do serviço {{site.data.keyword.mobilepushshort}}, é necessário inicializá-lo passando a rota do aplicativo e o GUID do aplicativo. Depois de inicializar o plug-in, é possível conectar-se ao app de
+servidor criado no painel do Bluemix. O plug-in Cordova é o wrapper dos SDKs de cliente
+Android e iOS para permitir que um app Cordova se comunique com serviços Bluemix.
 
-1. Inicialize o BMSClient copiando e colando o fragmento de código a seguir no arquivo JavaScript principal (em geral, localizado no diretório **www/js**).
+1. Inicialize o BMSClient copiando e colando o fragmento de código a seguir no
+arquivo JavaScript principal (em geral, localizado no diretório **www/js**).
 
 ```
 onDeviceReady: function() {
-app.receivedEvent('deviceready');
-BMSClient.initialize("YOUR APP REGION");
+	app.receivedEvent('deviceready');
+	BMSClient.initialize("YOUR APP REGION");
+	var category =  {};
+	BMSPush.initialize(appGUID,clientSecret,category);
+	var success = function(message) { console.log("Success: " + message); };
+	var failure = function(message) { console.log("Error: " + message); };
+	BMSPush.registerDevice({}, success, failure);
+	var showNotification = function(notif)
+	{
+	alert(JSON.stringify(notif));
+	};
+	BMSPush.registerNotificationsCallback(showNotification);
     } 
 ```
 	{: codeblock}
@@ -176,26 +194,6 @@ BMSPush.registerDevice({}, success, failure);
 BMSPush.registerNotificationsCallback(showNotification); 
 ```
 	{: codeblock}
-
-### Objective-C
-{: #cordova_register_objective}
-Inclua o fragmento de código Objective-C a seguir em sua classe de delegação de aplicativo.
-
-```
-// Register the device token with Bluemix Push Notification Service
-	- (void)application:(UIApplication *)application
-     didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
-       [[CDVBMSPush sharedInstance] didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
-} 
-// Handle error when failed to register device token with APNs
-	- (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error {
-      [[CDVBMSPush sharedInstance] didFailToRegisterForRemoteNotificationsWithError:error];
-} 
-```
-	{: codeblock}
-
-###Swift
-{: #cordova_register_swift}
 
 Inclua o seguinte fragmento de código Swift em sua classe de
 delegação de aplicativo.
@@ -283,35 +281,6 @@ configure o valor dessa propriedade para 0.
 * **sound** - o nome de um arquivo de som no pacote configurável de app ou na
 pasta Biblioteca/Sons do contêiner de dados de app.
 
-###Objective-C
-
-Inclua os fragmentos de código Objective-C a seguir em sua classe de delegação de
-aplicativo.
-
-```
-// Handle receiving a remote notification
--(void)application:(UIApplication *)application
-didReceiveRemoteNotification:(NSDictionary *)userInfo
-fetchCompletionHandler:(void
-(^)(UIBackgroundFetchResult))completionHandler {
-   [[CDVBMSPush sharedInstance] didReceiveRemoteNotificationWithNotification:userInfo];
-} 
-```
-	{: codeblock}
-
-
-
-```
-//Handle receiving a remote notification on launch
-- (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions {
-  if (launchOptions != nil) {
-   [[CDVBMSPush sharedInstance] didReceiveRemoteNotificationOnLaunchWithLaunchOptions:launchOptions];
-     }
- }
-```
-	{: codeblock}
-
-###Swift
 
 Inclua os fragmentos de código Swift a seguir em sua classe de delegação de
 aplicativo.
@@ -374,4 +343,5 @@ avançadas.
 
 Inclua os recursos de serviço do {{site.data.keyword.mobilepushshort}} no seu app. Para usar
 notificações baseadas em tag, consulte [Notificações baseadas em
-tag](c_tag_basednotifications.html). Para usar opções de notificações avançadas, veja [Ativando notificações push avançadas](t_advance_badge_sound_payload.html).
+tag](c_tag_basednotifications.html).
+Para usar opções de notificações avançadas, veja [Ativando notificações push avançadas](t_advance_badge_sound_payload.html).

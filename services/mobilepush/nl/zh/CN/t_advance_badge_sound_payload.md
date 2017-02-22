@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -11,7 +11,7 @@ copyright:
 {:codeblock:.codeblock}
 
 #启用高级推送通知
-上次更新时间：2016 年 12 月 6 日
+上次更新时间：2017 年 1 月 11 日
 {: .last-updated}
 
 配置 iOS 角标、声音、其他 JSON 有效内容、可操作通知和暂停通知。
@@ -82,25 +82,8 @@ protected void onPause() {
 请完成以下步骤，以在应用程序中启用可操作的 {{site.data.keyword.mobilepushshort}}。
 
 1. 创建用户响应操作。
-
-   Objective-C
-
 ```
-	// For Objective-C
-	UIMutableUserNotificationAction *acceptAction = [[UIMutableUserNotificationAction alloc] init];
-	    acceptAction.identifier = @"ACCEPT_ACTION";
-	    acceptAction.title = @"Accept";
-	     /* Optional properties
-	     acceptAction.destructive = NO;
-	  acceptAction.authenticationRequired = NO; */
-	  
-	 ```
-	{: codeblock}
-
-   Swift
-
-```
-	//For Swift
+//For Swift
 	let acceptAction = UIMutableUserNotificationAction()
 	acceptAction.identifier = "ACCEPT_ACTION"
 	acceptAction.title = "Accept"
@@ -109,9 +92,8 @@ protected void onPause() {
 	acceptAction.activationMode = UIUserNotificationActivationMode.Foreground
 	```
 	{: codeblock}
-	
 ```
-	//For Swift
+//For Swift
 	let declineAction = UIMutableUserNotificationAction()
 	declineAction.identifier = "DECLINE_ACTION"
 	declineAction.title = "Decline"
@@ -122,21 +104,8 @@ protected void onPause() {
 	{: codeblock}
 
 2. 创建通知类别并设置操作。**UIUserNotificationActionContextDefault** 或 **UIUserNotificationActionContextMinimal** 是有效的上下文。
-
-Objective-C
-
 ```
-	// For Objective-C
-	UIMutableUserNotificationCategory *callCat = [[UIMutableUserNotificationCategory alloc] init];
-	    callCat.identifier = @"POLL_CATEGORY";
-	    [callCat setActions:@[acceptAction, declineAction] forContext:UIUserNotificationActionContextDefault];
-	```    
-	{: codeblock}
-
-Swift
-
-```
-	// For Swift
+// For Swift
 	let pushCategory = UIMutableUserNotificationCategory()
 	pushCategory.identifier = "TODO_CATEGORY"
 	pushCategory.setActions([acceptAction, declineAction], forContext: UIUserNotificationActionContext.Default)
@@ -144,38 +113,15 @@ Swift
 	{: codeblock}
 
 1. 创建通知设置并分配前一步中的类别。
-
-Objective-C
-
 ```
-	// For Objective-C
-	NSSet *categories = [NSSet setWithObjects:callCat, nil];
-	```
-	{: codeblock}
-
-Swift
-
-```
-	// For Swift
+// For Swift
 	let categories = NSSet(array:[pushCategory]);
 	```
 	{: codeblock}
 
 1. 创建本地或远程通知，并为其分配类别的标识。
-
-Objective-C
-
 ```
-	//For Objective-C
-	[[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:categories]];
-	[[UIApplication sharedApplication] registerForRemoteNotifications];
-```
-	{: codeblock}
-
-Swift
-
-```
-	//For Swift
+//For Swift
 	let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: categories as? Set<UIUserNotificationCategory>)
     UIApplication.sharedApplication().registerUserNotificationSettings(settings)
     UIApplication.sharedApplication().registerForRemoteNotifications() 
@@ -187,20 +133,6 @@ Swift
 
 收到可操作通知时，会根据所选择的标识将控制权传递到以下方法上。
 
-Objective-C
-
-```
-(void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forRemoteNotification:
-(UILocalNotification *)notification completionHandler:(void (^)())completionHandler
-{
-  NSLog(@"actionable notification received.");
-  //must call completion handler when finished
-  completionHandler();
-}
-```
-	{: codeblock}
-
-Swift
  
 ```
 func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], completionHandler: () -> Void) {

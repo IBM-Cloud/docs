@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -11,61 +11,61 @@ lastupdated: "2016-12-06"
 {:screen: .screen}
 {:pre: .pre}
 
-# Archiviazione di oggetti
+# Storing objects
 
-Puoi caricare gli oggetti per l'archiviazione utilizzando la IU o la CLI. Il caricamento degli oggetti è limitato a una dimensione massima di 5 GB per singolo caricamento. Tuttavia, puoi caricare oggetti grandi segmentandoli in oggetti più piccoli.
+You can upload objects to storage by using the UI or CLI. Uploading objects is limited to a maximum size of 5 GB in a single upload. However, you can upload larger objects by segmenting them into smaller objects.
 {: shortdesc}
 
 
-## Archiviazione degli oggetti nei contenitori tramite la IU {: #storing-ui}
+## Storing objects in containers through the UI {: #storing-ui}
 
-**Nota**: quando carichi un file con lo stesso nome, {{site.data.keyword.objectstorageshort}} sostituisce il file archiviato con il nuovo file. Se scarichi un file ed effettui delle modifiche, assicurati di fornire al file un altro nome o [imposta le versioni dell'oggetto](/docs/services/ObjectStorage/os_versioning.html) prima del tuo caricamento per mantenere entrambe le versioni del file.
-
-
-1. Dal tuo dashboard dell'istanza del servizio, aggiungi un contenitore dal menu a discesa **Azioni**. 
-2. Denomina il tuo contenitore e fai clic su **CREA**.
-3. Dal menu a discesa **Azioni**, seleziona **Aggiungi file**. Viene visualizzata una finestra di dialogo. 
-4. Seleziona il file o i file che desideri caricare e fai clic su **Apri**.
+**Note**: When you upload a file with the same name, {{site.data.keyword.objectstorageshort}} replaces the stored file with the new file. If you download a file and make edits, be sure to give the file another name, or [set up object versioning](/docs/services/ObjectStorage/os_versioning.html) before you upload to keep both versions of the file.
 
 
+1. From your service instance dashboard, add a container from the **Actions** drop-down menu.
+2. Name your container and click **CREATE**.
+3. From the **Actions** drop-down menu, select **Add Files**. A dialog box opens.
+4. Select the file, or files you want to upload and click **Open**.
 
-## Archiviazione degli oggetti nei contenitori tramite la CLI {: #storing-cli}
 
-1. Se non hai eseguito l'accesso a {{site.data.keyword.Bluemix_notm}}, accedi all'organizzazione o allo spazio che contiene la tua istanza di {{site.data.keyword.objectstorageshort}}.
+
+## Storing objects in containers through the CLI {: #storing-cli}
+
+1. If you are not logged in to {{site.data.keyword.Bluemix_notm}}, log in to the org and space that contains your instance of {{site.data.keyword.objectstorageshort}}.
 
   ```
   cf login -a api.ng.bluemix.net -u <userid> -p <password> -o <organization> -s <space>
   ```
   {: pre}
 
-2. Crea un nuovo contenitore {{site.data.keyword.objectstorageshort}} eseguendo il seguente comando. La variabile *container_name* viene impostata, da te, in questo momento.
+2. Create an {{site.data.keyword.objectstorageshort}} container by running the following command. The *container_name* variable is set, by you, now.
 
   ```
   swift post <container_name>
   ```
   {: pre}
 
-**Nota**: se ricevi un messaggio di errore, conferma di aver installato [il software prerequisito](/docs/services/ObjectStorage/os_configuring.html#install-swift-client).
+**Note**: If you receive an error message, confirm that the [the prerequisite software](/docs/services/ObjectStorage/os_configuring.html#install-swift-client) installed.
 
-3. Facoltativo: Per verificare che il contenitore sia stato creato, esegui il seguente comando per elencare i tuoi contenitori. 
+3. Optional: To verify that your container was created, run the following command to list your containers.
 
   ```
   swift list
   ```
   {: pre}
 
-4. Per prevenire la distruzione di dati a causa di sovrascritture non intenzionali, [configura le versioni dell'oggetto](/docs/services/ObjectStorage/os_versioning.html). Se non desideri le versioni dell'oggetto, elenca i tuoi file esistenti in un archivio e se necessario, ridenomina la directory o i file prima del caricamento.
+4. To prevent data destruction by unintentional over-writes, [set up object versioning](/docs/services/ObjectStorage/os_versioning.html). If you do not want object versioning, list your existing files in the store, and if necessary, rename the directory or the files before you upload.
 
-5. Carica un file nel tuo contenitore eseguendo il seguente comando.
+5. Upload a file to your container by running the following command.
 
   ```
   swift upload <container_name> <file_name>
   ```
   {: pre}
 
-  **Nota**: per caricare file più grandi di 5 GB [sono necessari ulteriori passi](/docs/services/ObjectStorage/os_large_files.html).
+  **Note**: To upload files larger than 5 GB [extra steps are needed](/docs/services/ObjectStorage/os_large_files.html).
 
-6. Facoltativo: Per verificare che il caricamento ha avuto esito positivo, visualizza il contenuto del tuo contenitore eseguendo il seguente comando. 
+6. Optional: To verify that upload was successful, view the content of your container by running the following command.
 
   ```
   swift list <container_name>

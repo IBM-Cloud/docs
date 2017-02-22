@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-08-25"
 
 ---
 
@@ -13,9 +14,6 @@ copyright:
 
 #Apps aktualisieren
 {: #updatingapps}
-
-Letzte Aktualisierung: 25. August 2016
-{: .last-updated}
 
 
 Sie können den Befehl 'cf push' oder {{site.data.keyword.Bluemix}} DevOps Services verwenden, um die Anwendungen in {{site.data.keyword.Bluemix_notm}} zu aktualisieren. In vielen Fällen müssen Sie (selbst für die integrierten Buildpacks wie beispielsweise 'Node.js') auch den Parameter '-c' verwenden, um anzugeben, welcher Befehl zum Starten Ihrer Anwendung verwendet wird.
@@ -42,8 +40,8 @@ entweder die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle oder die B
 
 	2. Klicken Sie auf der Registerkarte **Domänen** auf **Domäne hinzufügen**,
 geben Sie den Namen Ihrer angepassten Domäne ein und klicken Sie auf **Speichern**.
-	
-	**Hinweis**: Sie können beispielsweise `mycompany.com` verwenden, um Ihrer App die Route `www.mycompany.com` zuzuordnen. Sie können auch `example.mycompany.com` verwenden, um Ihrer App die Route `www.example.mycompany.com` zuzuordnen. 
+
+	**Hinweis:** Sie können beispielsweise `mycompany.com` verwenden, um Ihrer App die Route `www.mycompany.com` zuzuordnen. Sie können auch `example.mycompany.com` verwenden, um Ihrer App die Route `www.example.mycompany.com` zuzuordnen.
 
   2. Fügen Sie die Route mit der angepassten Domäne zu einer Anwendung hinzu.
 
@@ -52,7 +50,7 @@ geben Sie den Namen Ihrer angepassten Domäne ein und klicken Sie auf **Speicher
 	2. Wählen Sie im Menü **App anzeigen** die Option **Routen und Zugriff bearbeiten** aus.
 
 	3. Klicken Sie auf **Route hinzufügen**. Geben Sie die Route an, die Sie für die Anwendung verwenden möchten.
-	4. Klicken Sie auf **Speichern**. 
+	4. Klicken Sie auf **Speichern**.
 
 * Verwendung der Befehlszeilenschnittstelle 'cf':
 
@@ -75,7 +73,7 @@ geben Sie den Namen Ihrer angepassten Domäne ein und klicken Sie auf **Speicher
     ```
     cf map-route myapp mydomain -n host_name
     ```
-    Geben Sie für Containergruppen den folgenden Befehl ein:	
+    Geben Sie für Containergruppen den folgenden Befehl ein:
      ```
      cf ic route map -n host_name -d mydomain mycontainergroup
      ```
@@ -90,15 +88,15 @@ geben Sie den Namen Ihrer angepassten Domäne ein und klicken Sie auf **Speicher
     *host_name*
 
         Der Hostname in der Route für Ihre Anwendung.
-        
+
     *mycontainergroup*
-    
-        Bei Containergruppen der Name der Containergruppe.  
+
+        Bei Containergruppen der Name der Containergruppe.
 
 
 Nach der Konfiguration der angepassten Domäne in {{site.data.keyword.Bluemix_notm}} müssen Sie die angepasste Domäne der {{site.data.keyword.Bluemix_notm}}-Systemdomäne auf Ihrem registrierten DNS-Server zuordnen:
 
-  1. Richten Sie einen Datensatz 'CNAME' für den Namen der angepassten Domäne auf Ihrem DNS-Server ein. Die Schritte zum Einrichten des CNAME-Datensatzes hängen von Ihrem DNS-Provicer ab. Beispiel: Wenn Sie GoDaddy verwenden, befolgen Sie die Anleitung [Domains Help](https://www.godaddy.com/help/add-a-cname-record-19236){: new_window} von GoDaddy.
+  1. Richten Sie einen Datensatz 'CNAME' für den Namen der angepassten Domäne auf Ihrem DNS-Server ein. Die Schritte zum Einrichten des CNAME-Datensatzes hängen von Ihrem DNS-Provicer ab. Beispiel: Wenn Sie GoDaddy verwenden, befolgen Sie die Anleitung [Domains Help ![Symbol für externen Link](../icons/launch-glyph.svg)](https://www.godaddy.com/help/add-a-cname-record-19236){: new_window} von GoDaddy.
   2. Ordnen Sie den Namen der angepassten Domäne dem sicheren Endpunkt für die {{site.data.keyword.Bluemix_notm}}-Region zu, in der Ihre Anwendung ausgeführt wird. Verwenden Sie die folgenden Regionsendpunkte, um die URL-Route anzugeben, die Ihrer Organisation in {{site.data.keyword.Bluemix_notm}} zugeordnet ist:
 
     * US-SOUTH: `secure.us-south.bluemix.net`
@@ -323,5 +321,5 @@ delete`.
 ## Zugehörige Links
 {: #general}
 
-* [Blue-Green-Bereitstellungen](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
-* [IBM {{site.data.keyword.Bluemix_notm}} DevOps Services](https://hub.jazz.net/){:new_window}
+* [Blue-Green-Bereitstellungen ![Symbol für externen Link](../icons/launch-glyph.svg)](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
+* [IBM {{site.data.keyword.Bluemix_notm}} DevOps Services ![Symbol für externen Link](../icons/launch-glyph.svg)](https://hub.jazz.net/){:new_window}

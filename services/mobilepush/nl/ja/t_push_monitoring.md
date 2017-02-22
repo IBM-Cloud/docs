@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # プッシュ通知のモニター 
 {: #monitor-notifications}
-最終更新日: 2016 年 12 月 06 日
+最終更新日: 2017 年 1 月 16 日
 {: .last-updated}
 
 

@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Envío de notificaciones básicas a aplicaciones y extensiones de Chrome 
 {: #web_extensions_notifications}
-Última actualización: 06 de diciembre de 2016
+Última actualización: 11 de enero de 2017
 {: .last-updated}
 
 Una vez que haya desarrollado sus aplicaciones, puede enviar una notificación push. 

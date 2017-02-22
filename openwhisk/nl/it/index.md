@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2016, 2017
 lastupdated: "2016-09-09"
 
 ---
@@ -12,7 +12,7 @@ lastupdated: "2016-09-09"
 {:screen: .screen}
 {:pre: .pre}
 
-# Introduzione a {{site.data.keyword.openwhisk_short}} (Beta)
+# Introduzione a {{site.data.keyword.openwhisk_short}}
 
 
 {{site.data.keyword.openwhisk}} è un servizio di calcolo distribuito guidato dagli eventi, indicato anche come Serverless computing o FaaS (Function as a Service); {{site.data.keyword.openwhisk_short}} esegue la logica dell'applicazione in risposta a eventi o chiamate dirette provenienti da applicazioni Web o mobili su HTTP. Gli eventi possono essere forniti da servizi Bluemix come Cloudant e da fonti esterne. Gli sviluppatori possono concentrarsi sulla scrittura della logica dell'applicazione e sulla creazione di azioni eseguite su richiesta. La frequenza di esecuzione delle azioni corrisponde sempre alla frequenza degli eventi, con conseguente resilienza e ridimensionamento intrinseci e utilizzo ottimale. Paghi solo per ciò che usi e non devi gestire alcun server. Puoi anche ottenere il [codice sorgente](https://github.com/openwhisk/openwhisk) ed eseguire il sistema autonomamente.
@@ -27,7 +27,7 @@ Entrambi hanno funzionalità simili per sviluppare le applicazioni, tuttavia la 
 ## Sviluppa nel tuo browser
 {: #openwhisk_start_editor}
 
-Prova {{site.data.keyword.openwhisk_short}} nel tuo [Browser](https://console.{DomainName}/openwhisk/editor){: new_window} per creare azioni, automatizzare le azioni mediante i trigger e scoprire i pacchetti pubblici.
+Prova {{site.data.keyword.openwhisk_short}} nel tuo [Browser](https://console.{DomainName}/openwhisk/editor){: new_window} per creare azioni, automatizzare le azioni mediante i trigger e scoprire i pacchetti pubblici. 
 Visita la pagina [Ulteriori informazioni](https://console.{DomainName}/openwhisk/learn){: new_window} per un rapido tour dell'interfaccia utente OpenWhisk.
 
 ## Configurazione della CLI {{site.data.keyword.openwhisk_short}}
@@ -137,7 +137,7 @@ Puoi trovare ulteriori informazioni su {{site.data.keyword.openwhisk_short}} nei
 * [API REST](https://new-console.{DomainName}/apidocs/98)
 
 # Link correlati
-{: #rellinks}
+{: #rellinks notoc}
 
 ## Guida di riferimento API
 {: #api}

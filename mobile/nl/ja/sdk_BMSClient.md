@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-07"
+  years: 2016, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -54,9 +54,9 @@ lastupdated: "2016-11-07"
 
   次に、`pod install` コマンドを実行し、生成された `.xcworkspace` ファイルを開きます。新しいリリースの `BMSCore` に更新するには、`pod update BMSCore` を使用します。
 
-  CocoaPods の使用について詳しくは、[CocoaPods Guides](https://guides.cocoapods.org/using/index.html){: new_window} を参照してください。
+  CocoaPods の使用について詳しくは、[「CocoaPods Guides」 ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://guides.cocoapods.org/using/index.html "外部リンク・アイコン"){: new_window}を参照してください。
 
-2. Carthage を使用して `BMSCore` をインストールするには、以下の[手順](https://github.com/Carthage/Carthage#getting-started){: new_window}に従います。
+2. Carthage を使用して `BMSCore` をインストールするには、次の[手順![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/Carthage/Carthage#getting-started "外部リンク・アイコン"){: new_window}に従ってください。
 
   1. 次の行を Cartfile に追加します。
 
@@ -67,7 +67,7 @@ lastupdated: "2016-11-07"
 
   2. `carthage update` コマンドを実行します。
 
-  3. ビルドが終了した後、Carthage の手順の[ステップ 3](https://github.com/Carthage/Carthage#getting-started) に従って、`BMSCore.framework` をプロジェクトに追加します。
+  3. ビルドが終了したら、Carthage の手順の[ステップ 3 ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/Carthage/Carthage#getting-started "外部リンク・アイコン")に従って `BMSCore.framework` をプロジェクトに追加します。
 
       Swift 2.3 でビルドされているアプリケーションの場合は、`carthage update --toolchain com.apple.dt.toolchain.Swift_2_3` コマンドを使用します。その他の場合は、`carthage update` コマンドを使用します。
 

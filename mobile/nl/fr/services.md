@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-18"
+  years: 2016, 2017
+lastupdated: "2017-01-11"
 
 ---
 {:new_window: target="_blank"}
@@ -27,13 +27,12 @@ Le tableau suivant décrit les services {{site.data.keyword.Bluemix_notm}} Mobil
 <th>Service {{site.data.keyword.Bluemix_notm}} Mobile</th>
 <th>Description</th>
 <tr>
-<td> <img src="images/mobile_analytics_icon.png" alt="icône {{site.data.keyword.mobileanalytics_short}}"><br/>{{site.data.keyword.mobileanalytics_short}} (Bêta)</td>
+<td> Icône du service <img src="images/mobile_analytics_icon.png" alt="{{site.data.keyword.mobileanalytics_short}} "><br/>{{site.data.keyword.mobileanalytics_short}}</td>
 <td valign="top">Le service {{site.data.keyword.mobileanalytics_full}} permet d'obtenir plus de détails sur les performances et l'utilisation de vos applications mobiles.<br/><br/> Découvrez plus en détails le fonctionnement de ce service dans la <a href="/docs/services/mobileanalytics/index.html" alt="lien vers la documentation {{site.data.keyword.mobileanalytics_short}}">documentation {{site.data.keyword.mobileanalytics_short}}</a>.
 </td>
 </tr>
 <tr>
-<td><img src="images/authentication_icon
-.png" alt="icône du service {{site.data.keyword.amashort}}"><br/>{{site.data.keyword.amashort}}</td>
+<td><img src="images/authentication_icon.png" alt="icône du service {{site.data.keyword.amashort}}"><br/>{{site.data.keyword.amashort}}</td>
 <td valign="top">Utilisez le service {{site.data.keyword.amafull}}  pour ajouter des fonctionnalités de sécurité à votre application mobile. Vous pouvez configurer l'authentification et les fournisseurs d'identité pour que les utilisateurs puissent se connecter dans l'application avec leurs comptes Google ou Facebook existants.<br/><br/>
 Découvrez plus en détails le fonctionnement de ce service dans la <a href="/docs/services/mobileaccess/index.html" alt="lien vers la documentation {{site.data.keyword.amashort}}">documentation {{site.data.keyword.amashort}}</a>.</td>
 </tr>
@@ -48,9 +47,12 @@ Découvrez plus en détails le fonctionnement de ce service dans la <a href="/do
 Découvrez plus en détails le fonctionnement de ce service dans la <a href="/docs/services/MobileQualityAssurance/index.html" alt="lien vers la documentation {{site.data.keyword.mqa}}">documentation {{site.data.keyword.mqa}}</a>.</td>
 </tr>
 <tr>
-<td><img src="images/push_icon.png" alt="Icône Push Notifications"><br/>{{site.data.keyword.mobilepushshort}}</td>
-<td valign="top">Utilisez le service {{site.data.keyword.mobilepushfull}} pour envoyer et gérer des notifications push mobiles ciblant les plateformes iOS et Android. Il gère le mappage des utilisateurs de votre application à leurs périphériques ainsi que la plateforme des périphériques, et traite la distribution des notifications push aux périphériques. Avec ce service, vous pouvez envoyer des diffusions, des monodiffusions (en fonction de l'ID utilisateur ou de l'ID de périphérique) et des étiquettes (ou rubriques) en fonction de notifications push aux utilisateurs de votre application mobile.<br/><br/>
-Découvrez plus en détails le fonctionnement de ce service dans la <a href="/docs/services/mobilepush/index.html" alt="lien vers la documentation {{site.data.keyword.mobilepushshort}}">documentation {{site.data.keyword.mobilepushshort}}</a>.</td>
+<td>Icône du service <img src="images/push_icon.png" alt="{{site.data.keyword.mobilepushshort}} "><br/>{{site.data.keyword.mobilepushshort}}</td>
+<td valign="top">Le service {{site.data.keyword.mobilepushfull}} fournit une plateforme unifiée pour envoyer et gérer des notifications push aux applications mobiles et de navigateur Web et ciblant plusieurs plateformes.
+<br/><br/>
+Le service {{site.data.keyword.mobilepushshort}} gère le mappage des utilisateurs de votre application à leurs périphériques, à la plateforme du périphérique, aux navigateurs Web et gère la distribution des notifications push à ceux-ci. Vous pouvez envoyer des diffusions, des monodiffusions (basées sur l'ID du périphérique et de l'utilisateur) et également sur des balises (ou des rubriques) sous forme de notifications push aux utilisateurs de votre application mobile et du navigateur Web. Vous pouvez également utiliser un SDK et des API REST pour développer davantage vos applications client.
+<br/><br/>
+Pour plus d'informations sur le fonctionnement de ce service, reportez-vous à la documentation <a href="/docs/services/mobilepush/index.html" alt="{{site.data.keyword.mobilepushshort}} lien vers la documentation">{{site.data.keyword.mobilepushshort}}</a>.</td>
 </table>
 
 ## Intégration des services mobiles

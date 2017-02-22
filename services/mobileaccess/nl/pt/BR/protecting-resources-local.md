@@ -1,12 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-04"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 
 # Usando o {{site.data.keyword.amashort}} com um ambiente de desenvolvimento local
@@ -20,6 +23,7 @@ lastupdated: "2016-12-04"
 {: #before-you-begin}
 
 Você deve ter:
+
 * Uma instância de um aplicativo {{site.data.keyword.Bluemix_notm}} que seja protegida pelo serviço {{site.data.keyword.amashort}}. Para obter mais informações sobre como criar um aplicativo backend do {{site.data.keyword.Bluemix_notm}}, consulte [Introdução](index.html).
 * Seu **TenantID**. Abra o seu serviço no painel do {{site.data.keyword.amafull}}. Clique no botão **Opções móveis**. Os valores
 `tenantId` (também conhecido como
@@ -39,7 +43,7 @@ ou `United Kingdom`. Para a sintaxe exata requerida pelo SDK, veja os comentári
 nas amostras de código. Você precisará desse
 valor para inicializar o cliente
 {{site.data.keyword.amashort}}.
-* Um projeto Android Studio, configure para trabalhar com Gradle. Para obter mais informações sobre como configurar seu ambiente de desenvolvimento do Android, veja [Google Developer Tools](http://developer.android.com/sdk/index.html).
+* Um projeto Android Studio, configure para trabalhar com Gradle. Para obter mais informações sobre como configurar seu ambiente de desenvolvimento Android, veja [Google Developer Tools ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://developer.android.com/sdk/index.html "Ícone de link externo"){: new_window}.
 
 ## Configurando o SDK do servidor
 {: #serversetup}
@@ -109,14 +113,16 @@ Para obter informações sobre a localização do valor *tenantID*, veja [Antes 
 
 Inicialize os SDKs do cliente {{site.data.keyword.amashort}} com a URL real do seu aplicativo {{site.data.keyword.Bluemix_notm}} e use o localhost (ou endereço IP) em cada uma de suas solicitações. Consulte as amostras a seguir.
 
-Substitua a região pela região apropriada.
+Substitua a região pela região apropriada. Veja os exemplos de código para a sintaxe correta.
 
-Substitua os valores *appGUID* e *bluemixAppRoute* pelos valores obtidos em [Antes de iniciar](#before-you-begin).
+Substitua os valores *appGUID* e *bluemixAppRoute*. Para obter informações sobre como obter esses valores, consulte
+[Antes de iniciar](#before-you-begin).
 
 Pode ser necessário mudar `localhost` para um endereço IP real de seu servidor de desenvolvimento nos exemplos a seguir.
 
 ### Android
 {: #android}
+
 ```Java
 String baseRequestUrl = "http://localhost:3000";
 String bluemixAppRoute = "http://myapp.mybluemix.net";
@@ -154,41 +160,6 @@ request.send(this, new ResponseListener() {
 {: codeblock}
 
 
-
-### iOS - Objective C
-{: #objc}
-
-```Objective-C
-NSString *baseRequestUrl = @"http://localhost:3000";
-NSString *bluemixAppRoute = @"http://myapp.mybluemix.net";
-NSString *bluemixAppGUID = @"your-bluemix-app-guid";
-NSString *tenantId = "your-MCA-service-tenantID";
-
-[[IMFClient sharedInstance]
-			initializeWithBackendRoute:bluemixAppRoute
-			backendGUID:bluemixAppGUID];
-
-[[IMFAuthorizationManager sharedInstance]  initializeWithTenantId: tenantId];
-
-
-NSString *requestPath = [NSString stringWithFormat:@"%@/resource/path",
-								baseRequestUrl];
-
-IMFResourceRequest *request =  [IMFResourceRequest
-				requestWithPath:requestPath
-				method:@"GET"];
-
-[request sendWithCompletionHandler:^(IMFResponse *response, NSError *error) {
-	if (error){
-		NSLog(@"Error :: %@", [error description]);
-	} else {
-		NSLog(@"Response :: %@", [response responseText]);
-	}
-}];
-```
-{: codeblock}
-
-
 ### iOS - Swift
 {: #swift}
 
@@ -201,11 +172,11 @@ IMFResourceRequest *request =  [IMFResourceRequest
  let mcaAuthManager = MCAAuthorizationManager.sharedInstance
  mcaAuthManager.initialize(tenantId: tenantId, bluemixRegion: regionName)
  BMSClient.sharedInstance.authorizationManager = mcaAuthManager
-        
-        
+
+
  let requestPath = baseRequestUrl + "/protectedResource"
  let request = Request(url: requestPath, method: HttpMethod.GET)
-        
+
     request.send { (response, error) in
 	if let error = error {
             print("Connection failure")

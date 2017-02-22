@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -38,7 +38,7 @@ UI나 CLI를 사용하여 오브젝트를 스토리지에 업로드할 수 있�
   ```
   {: pre}
 
-2. 다음 명령을 실행하여 새 {{site.data.keyword.objectstorageshort}} 컨테이너를 작성하십시오. 이때 사용자가 *container_name* 변수를 설정합니다. 
+2. 다음 명령을 실행하여 {{site.data.keyword.objectstorageshort}} 컨테이너를 작성하십시오. 이제 *container_name* 변수가 사용자에 의해 설정됩니다. 
 
   ```
 swift post <container_name>

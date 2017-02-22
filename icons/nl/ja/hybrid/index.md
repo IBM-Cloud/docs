@@ -30,8 +30,8 @@ lastupdated: "2016-11-11"
 {: #rellinks}
 ## 一般
 {: #general}
-* [{{site.data.keyword.Bluemix_notm}} とは](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){:new_window}
-* [概説](http://www.ibm.com/cloud-computing/bluemix/getting-started/)
-* [ハイブリッド・モデルについて](http://www.ibm.com/cloud-computing/bluemix/hybrid/)
+* [{{site.data.keyword.Bluemix_notm}} とは? ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){:new_window}
+* [使用を開始するには ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/getting-started/){:new_window}
+* [ハイブリッド・モデルについて ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/hybrid/){:new_window}
 * [{{site.data.keyword.Bluemix_notm}} の新機能](/docs/whatsnew/index.html)
 * [{{site.data.keyword.Bluemix_notm}} 用語集](/docs/overview/glossary/index.html)

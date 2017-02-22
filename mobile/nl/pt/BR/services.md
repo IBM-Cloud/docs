@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-18"
+  years: 2016, 2017
+lastupdated: "2017-01-11"
 
 ---
 {:new_window: target="_blank"}
@@ -27,7 +27,7 @@ A tabela a seguir representa os serviços do {{site.data.keyword.Bluemix_notm}}.
 <th>Serviço móvel do {{site.data.keyword.Bluemix_notm}}</th>
 <th>Descrição</th>
 <tr>
-<td> <img src="images/mobile_analytics_icon.png" alt="{{site.data.keyword.mobileanalytics_short}}icon"><br/>{{site.data.keyword.mobileanalytics_short}} (Beta)</td>
+<td> <img src="images/mobile_analytics_icon.png" alt="{{site.data.keyword.mobileanalytics_short}} ícone"><br/>{{site.data.keyword.mobileanalytics_short}}</td>
 <td valign="top">Use o serviço do {{site.data.keyword.mobileanalytics_full}} para obter insight sobre como os seus apps móveis estão executando e como eles estão sendo usados.<br/><br/>
 Leia mais sobre a operação deste serviço na <a href="/docs/services/mobileanalytics/index.html" alt="{{site.data.keyword.mobileanalytics_short}} documentation link">documentação do {{site.data.keyword.mobileanalytics_short}}</a>.
 </td>
@@ -50,9 +50,12 @@ Leia mais sobre a operação deste serviço na <a href="/docs/services/mobilefou
 Leia mais sobre a operação deste serviço na <a href="/docs/services/MobileQualityAssurance/index.html" alt="{{site.data.keyword.mqa}} documentation link">documentação do {{site.data.keyword.mqa}}</a>.</td>
 </tr>
 <tr>
-<td><img src="images/push_icon.png" alt="ícone de serviço das Notificações Push"><br/>{{site.data.keyword.mobilepushshort}}</td>
-<td valign="top">Use o serviço {{site.data.keyword.mobilepushfull}} para enviar e gerenciar notificações push móveis destinadas a plataformas iOS e Android. Esse serviço gerencia o mapeamento dos usuários do aplicativo para seus dispositivos, plataforma de dispositivo e manipula o despacho de notificações push para os dispositivos. Com este serviço, é possível enviar transmissões, unicasts (com base no userID e deviceID) e tags (ou tópicos) com base em notificações push para os seus usuários de aplicativo móvel.<br/><br/>
-Leia mais sobre a operação deste serviço na <a href="/docs/services/mobilepush/index.html" alt="{{site.data.keyword.mobilepushshort}} documentation link">documentação do {{site.data.keyword.mobilepushshort}}</a>.</td>
+<td><img src="images/push_icon.png" alt="{{site.data.keyword.mobilepushshort}}ícone de serviço"><br/>{{site.data.keyword.mobilepushshort}}</td>
+<td valign="top">O serviço {{site.data.keyword.mobilepushfull}} fornece uma plataforma unificada para enviar e gerenciar notificações push móveis e da web que são destinadas entre plataformas.
+<br/><br/>
+O {{site.data.keyword.mobilepushshort}} gerencia o mapeamento dos usuários do aplicativo para seus dispositivos, plataforma de dispositivo e navegadores da web, bem como manipula o despacho de notificações push para eles. É possível enviar transmissões, unicasts (com base em deviceID e userID) e também tags (ou tópicos) como notificações push para os usuários do aplicativo do dispositivo móvel e do navegador da web. Também é possível usar o SDK e as APIs de REST para desenvolver melhor os aplicativos cliente.
+<br/><br/>
+Leia mais sobre a operação desse serviço na <a href="/docs/services/mobilepush/index.html" alt="{{site.data.keyword.mobilepushshort}} link sw documentação">documentação do {{site.data.keyword.mobilepushshort}}</a>.</td>
 </table>
 
 ## Integrando serviços móveis

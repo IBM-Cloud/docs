@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-08-25"
 
 ---
 
@@ -13,9 +14,6 @@ copyright:
 
 #アプリの更新
 {: #updatingapps}
-
-最終更新日: 2016 年 8 月 25 日
-{: .last-updated}
 
 
 cf push コマンドまたは {{site.data.keyword.Bluemix}} DevOps Services を使用して、{{site.data.keyword.Bluemix_notm}} 内のアプリケーションを更新することができます。多くの場合、Node.js などの組み込みビルドパックにおいても、-c パラメーターを使用して、アプリケーションの開始にどのコマンドを使用するかを指定する必要があります。
@@ -37,7 +35,7 @@ CF アプリおよびコンテナー・グループには、デフォルトの {
 	1. **「{{site.data.keyword.avatar}}」**アイコン ![「アバター」アイコン](../icons/i-avatar-icon.svg)&gt;**「組織の管理」**&gt;**「組織の詳細の表示」**&gt;**「組織の編集」**&gt;**「ドメイン」**と進みます。
 
 	2. **「ドメイン」**タブで**「ドメインの追加」**をクリックし、カスタム・ドメイン名を入力し、**「保存」**をクリックします。
-	
+
 	**注**: 例えば、`mycompany.com` を使用して、経路 `www.mycompany.com` をアプリに関連付けることができます。`example.mycompany.com` を使用して、経路 `www.example.mycompany.com` をアプリに関連付けることもできます。
 
   2. カスタム・ドメインを使用した経路をアプリケーションに追加します。
@@ -47,7 +45,7 @@ CF アプリおよびコンテナー・グループには、デフォルトの {
 	2. **「アプリの表示」**メニューから**「経路とアクセスの編集」**を選択します。
 
 	3. **「経路の追加」**をクリックし、アプリケーションに使用する経路を指定します。
-	4. **「保存」**をクリックします。 
+	4. **「保存」**をクリックします。
 
 * cf コマンド・ライン・インターフェースを使用する
 
@@ -85,15 +83,15 @@ cf create-domain <your org name> mydomain
     *host_name*
 
         アプリケーションに使用する経路内のホスト名。
-        
+
     *mycontainergroup*
-    
-        コンテナー・グループの場合、コンテナー・グループの名前。  
+
+        コンテナー・グループの場合、コンテナー・グループの名前。
 
 
 {{site.data.keyword.Bluemix_notm}} でカスタム・ドメインを構成した後、登録された DNS サーバー上の {{site.data.keyword.Bluemix_notm}} システム・ドメインにカスタム・ドメインをマップする必要があります。
 
-  1. DNS サーバー上のカスタム・ドメイン・ネームに 'CNAME' レコードをセットアップします。CNAME レコードのセットアップ手順は、使用している DNS プロバイダーによって異なります。例えば、GoDaddy を使用している場合、GoDaddy の[ドメインのヘルプ](https://www.godaddy.com/help/add-a-cname-record-19236){: new_window}にあるガイダンスに従ってください。
+  1. DNS サーバー上のカスタム・ドメイン・ネームに 'CNAME' レコードをセットアップします。CNAME レコードのセットアップ手順は、使用している DNS プロバイダーによって異なります。例えば、GoDaddy を使用する場合、GoDaddy の[ドメインのヘルプ ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://www.godaddy.com/help/add-a-cname-record-19236){: new_window} にあるガイダンスに従ってください。
   2. アプリケーションが実行されている {{site.data.keyword.Bluemix_notm}} 地域のセキュア・エンドポイントにカスタム・ドメイン・ネームをマップします。以下の地域エンドポイントを使用して、{{site.data.keyword.Bluemix_notm}} で組織に割り振られた URL 経路を指定します。
 
     * US-SOUTH: `secure.us-south.bluemix.net`
@@ -297,5 +295,5 @@ cf delete Blue -f
 ## 関連リンク
 {: #general}
 
-* [Blue-Green デプロイメント](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
-* [IBM{{site.data.keyword.Bluemix_notm}} DevOps Services](https://hub.jazz.net/){:new_window}
+* [Blue-Green デプロイメント ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
+* [IBM {{site.data.keyword.Bluemix_notm}} DevOps Services ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://hub.jazz.net/){:new_window}

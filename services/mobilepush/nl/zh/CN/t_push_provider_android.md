@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,10 +12,10 @@ copyright:
 
 # 为 FCM 配置凭证
 {: #create-push-enable-gcm}
-上次更新时间：2016 年 12 月 6 日
+上次更新时间：2017 年 1 月 16 日
 {: .last-updated}
 
-Firebase 云消息传递 (FCM) 是用于向 Android 设备、Google Chrome 和 Mozilla Web 浏览器传递推送通知的网关。FCM 已经替换了 Google 云消息传递 (GCM)。您需要获取 FCM 凭证，然后在仪表板上设置 {{site.data.keyword.mobilepushshort}} 服务。请确保您为新应用程序使用 FCM 配置。现有应用程序将继续以 GCM 配置运作。
+Firebase 云消息传递 (FCM) 是用于向 Android 设备和 Google Chrome 传递推送通知的网关。FCM 是 Google 云消息传递 (GCM) 的新版本。要在仪表板上设置 {{site.data.keyword.mobilepushshort}} 服务，您需要获取 FCM 凭证。请确保您为新应用程序使用 FCM 配置。现有应用程序将继续以 GCM 配置运作。
 
 ##获取发送方标识和 API 密钥
 {: #android-senderid-apikey}
@@ -24,7 +24,7 @@ API 密钥以安全方式存储，并由 {{site.data.keyword.mobilepushshort}} �
 
 要设置 FCM，产生 API 密钥和发送方标识，请完成以下步骤：
 
-1. 访问 [Firebase Console](https://console.firebase.google.com/?pli=1)。
+1. 访问 [Firebase 控制台 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.firebase.google.com/?pli=1 "外部链接图标"){: new_window}。
 2. 选择**创建新项目**。 
 3. 在“创建项目”窗口中，提供项目名称，选择国家/地区并单击**创建项目**。
 3. 在导航窗格中，单击“设置”图标并选择**项目设置**。
@@ -44,11 +44,4 @@ API 密钥以安全方式存储，并由 {{site.data.keyword.mobilepushshort}} �
 4. 单击**保存**。
 5. 后续步骤：[针对 Android 启用通知](c_enable_push.html)或[针对 Google Chrome Apps & Extensions 启用通知](c_enable_push.html)。
 
-###配置 Google Chrome 和 Mozilla Firefox Web 推送（使用 FCM/GCM）
-{: #config-gcm-mozilla}
 
-1. 在“推送仪表板”导航窗格上，选择**配置**。
-2. 选择 Web 选项卡。![WebPush 配置](images/webpush_configure.jpg)
-3. 配置 FCM/GCM API 密钥和将注册以接收推送通知的 Web 站点的 URL。
-4. 单击**保存**。
-5. 后续步骤：[为 Google Chrome 和 Mozilla Firefox 浏览器启用通知](c_enable_push.html)。

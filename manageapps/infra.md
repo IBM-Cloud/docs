@@ -13,7 +13,7 @@ lastupdated: "2016-03-15"
 
 {:shortdesc: .shortdesc}
 
-#  Bluemix infrastructure layers
+# Bluemix infrastructure layers
 
 
 

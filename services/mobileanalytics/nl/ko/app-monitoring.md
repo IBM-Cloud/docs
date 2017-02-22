@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-31"
+  years: 2015, 2017
+lastupdated: "2017-01-10"
 
 ---
 {:new_window: target="_blank"}
@@ -143,6 +143,8 @@ You can also export and import custom chart definitions programmatically by usin
 	* 경보 이름: 애플리케이션 충돌에 대한 경보
 	* 메시지: 앱 충돌 경보
 	* 조회 빈도: 애플리케이션 충돌
+		* 조회 빈도: 2분
+	* 이벤트 유형: 애플리케이션 충돌
 		* 애플리케이션 이름: 임의의 애플리케이션
 		* 애플리케이션 버전: 임의의 버전
     * 임계값
@@ -190,14 +192,14 @@ You can also export and import custom chart definitions programmatically by usin
 ### 애플리케이션 충돌 모니터링
 {: #app-crash}
 
-**충돌 개요** 표에는 다음 데이터 열이 표시됩니다.
+**충돌** 페이지에서 **충돌 개요** 테이블에 다음 데이터 열이 표시됩니다.
 
 * 애플리케이션: 애플리케이션 이름
 * 충돌: 해당 앱에 대한 충돌 총계
 * 총 사용: 사용자가 해당 앱을 열고 닫은 총 횟수
 * 충돌 비율: 사용에 따른 충돌 백분율
 
-**충돌** 표에서 애플리케이션 충돌에 대한 정보를 빨리 볼 수 있습니다. <!--In the **Overview** page of the **Dashboard** section,--> **충돌** 막대 그래프에 시간 경과에 따른 충돌 히스토그램이 표시됩니다. 
+**충돌** 표에서 애플리케이션 충돌에 대한 정보를 빨리 볼 수 있습니다. <!--In the **Overview** page of the **Dashboard** section,--> **충돌** 막대 그래프에 시간 경과에 따른 충돌 히스토그램이 표시됩니다.
 
 다음 두 가지 방법으로 충돌 데이터를 표시할 수 있습니다.
 
@@ -207,7 +209,7 @@ You can also export and import custom chart definitions programmatically by usin
 ### 앱 충돌 문제점 해결
 {: #app-crash-troubleshooting}
 
-**문제점 해결** 페이지(<!-- **Applications** section of the -->{{site.data.keyword.mobileanalytics_short}} 콘솔)에서는 앱 충돌에 대한 세부 단위의 보기를 제공합니다.
+**문제점 해결** 페이지(<!-- **Applications** section of the --> {{site.data.keyword.mobileanalytics_short}} 콘솔의)에는 **충돌 요약** 테이블을 통해 앱 충돌의 세부 보기가 제공됩니다.
 
 **충돌 요약** 표는 정렬 가능하며 다음 데이터 열을 포함합니다.
 
@@ -249,4 +251,7 @@ You can also export and import custom chart definitions programmatically by usin
 
 **내보내기** 페이지에서 **DashDB**를 클릭하여 {{site.data.keyword.mobileanalytics_short}} 콘솔에서 dashDB를 설정하십시오. 설정을 완료하고 나면 {{site.data.keyword.mobileanalytics_short}}로 전송된 새 데이터도 1-2시간 내에 dashDB로 전달됩니다.  
 
+<!--
+If you have existing DashDB instances, those instances will no longer accept new data because the incoming data no longer matches the schema. Manually add columns for the new data to resume incoming data. Modifying {{site.data.keyword.mobileanalytics_short}} collection tables by adding new columns also breaks the stream of incoming data.
+-->
 

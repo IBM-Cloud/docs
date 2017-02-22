@@ -1,12 +1,13 @@
 ---
 
- 
+
 
 copyright:
 
-  years: 2016
+  years: 2016, 2017
+lastupdated: "2016-03-15"
 
- 
+
 
 ---
 
@@ -14,8 +15,7 @@ copyright:
 
 #  Livelli dell'infrastruttura Bluemix
 
-*Ultimo aggiornamento: 15 marzo 2016*
-{: .last-updated}
+
 
 {{site.data.keyword.Bluemix_notm}} astrae e nasconde i
 livelli di sistema operativo e infrastruttura in modo che tu non debba occuparti della loro gestione. Tuttavia, potrebbe capitare che

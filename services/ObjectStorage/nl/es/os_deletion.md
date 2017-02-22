@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -55,12 +55,12 @@ Una vez que no los necesite, puede suprimir objetos y contenedores de la instanc
 ## Planificación de la supresión de objetos {: #schedule-object-deletion}
 
 
-Puede planificar la supresión de los objetos. Puede hacer esto haciendo uso de las cabeceras `X-Delete-At` o `X-Delete-After`.
+Puede planificar la supresión de los objetos mediante las cabeceras `X-Delete-At` o `X-Delete-After`.
 {: shortdesc}
 
-La cabecera `X-Delete-At` toma un número entero que representa el tiempo Epoch en el que se suprime el objeto. La cabecera `X-Delete_After` toma un número entero que representa el número de segundos tras los que se suprime el objeto. Para utilizar el cliente de Swift para planificar la supresión de objetos, ejecute el siguiente mandato que se ajuste mejor a sus necesidades.
+La cabecera `X-Delete-At` toma un número entero que representa el tiempo Epoch en el que se suprime el objeto. La cabecera `X-Delete_After` toma un número entero que representa el número de segundos tras los que se suprime el objeto. 
 
-**Nota:** La supresión real de un objeto puede que no se produzca a la hora exacta indicada. Sin embargo, el objeto caducará de hecho a la hora especificada. Esto significa que no se podrá llegar más a él. La supresión real tendrá lugar la próxima vez que se ejecute el daemon swift-object-expirer configurado en el clúster Swift.
+**Nota:** La supresión real de un objeto puede que no se produzca a la hora exacta indicada. Sin embargo, el objeto caducará de hecho a la hora especificada. En ese momento, ya no se puede acceder al objeto. La supresión real tendrá lugar la próxima vez que se ejecute el daemon swift-object-expirer configurado en el clúster Swift.
 
 #### Para utilizar mandatos de Swift:
 

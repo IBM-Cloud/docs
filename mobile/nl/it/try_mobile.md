@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2015, 2017
 lastupdated: "2016-10-19"
 
 ---
@@ -49,7 +49,7 @@ Puoi utilizzare tutti i servizi mobili {{site.data.keyword.Bluemix_notm}} insiem
 <td valign="top"><b>Provider di identità utente</b> <br/>Puoi utilizzare i seguenti provider di identità: <ul><li>Facebook</li><li>Google</li><li> Personalizzata </li></ul></td>
 </tr>
 <tr>
-<td><img src="images/push_icon.png" alt="Icona di servizio Push Notifications"> <b>{{site.data.keyword.mobilepushshort}}</b><br/>Il servizio  {{site.data.keyword.mobilepushfull}}  indirizzate alle piattaforme mobili (iOS & Android) e alle applicazioni browser web. Questo servizio gestisce l'associazione dei tuoi utenti delle applicazioni ai loro dispositivi, alla loro piattaforma del dispositivo e ai browser e gestisce l'invio delle notifiche di push ai sottoscrittori. Con questo servizio, puoi inviare broadcast, unicast (basati su ID utente e ID dispositivo) e tag (o argomenti) basati sulle notifiche di push ai tuoi clienti.</td>
+<td><img src="images/push_icon.png" alt="{{site.data.keyword.mobilepushshort}} icona servizio "> <b>{{site.data.keyword.mobilepushshort}}</b><br/>Il servizio  {{site.data.keyword.mobilepushfull}} fornisce una piattaforma unificata per inviare e gestire le notifiche di push destinate alle piattaforme mobili (iOS e Android) e alle applicazioni del browser Web. Questo servizio gestisce l'associazione dei tuoi utenti delle applicazioni ai loro dispositivi, alla loro piattaforma del dispositivo e ai browser e gestisce l'invio delle notifiche di push ai sottoscrittori. Con questo servizio, puoi inviare broadcast, unicast (basati su ID utente e ID dispositivo) e tag (o argomenti) basati sulle notifiche di push ai tuoi clienti.</td>
 <td valign="top"><b>Provider di servizi di push</b><ul><li>APNS (Apple Push Notifications Service)</li><li>FCM (Firebase Cloud Messaging)</li></ul></td>
 </tr>
 <tr>

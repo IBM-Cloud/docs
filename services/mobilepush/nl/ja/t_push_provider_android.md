@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,10 +12,10 @@ copyright:
 
 # FCM の資格情報の構成
 {: #create-push-enable-gcm}
-最終更新日: 2016 年 12 月 06 日
+最終更新日: 2017 年 1 月 16 日
 {: .last-updated}
 
-Firebase Cloud Messaging (FCM) は、プッシュ通知を Android デバイス、Google Chrome、および Mozilla の各 Web ブラウザーに配信するために使用されるゲートウェイです。Google Cloud Messaging (GCM) が FCM に置き換えられました。FCM 資格情報を取得してから、ダッシュボード上で {{site.data.keyword.mobilepushshort}} サービスをセットアップする必要があります。新規アプリケーションには必ず FCM 構成を使用してください。既存のアプリケーションは、引き続き GCM 構成で機能します。
+Firebase Cloud Messaging (FCM) は、プッシュ通知を Android デバイスおよび Google Chrome に送信するために使用されるゲートウェイです。FCM は、Google Cloud Messaging (GCM) の新規バージョンです。ダッシュボード上に {{site.data.keyword.mobilepushshort}} サービスをセットアップするには、FCM の資格情報が必要です。新規アプリケーションには必ず FCM 構成を使用してください。既存のアプリケーションは、引き続き GCM 構成で機能します。
 
 ##送信側 ID と API キーの取得
 {: #android-senderid-apikey}
@@ -24,7 +24,7 @@ API キーは、{{site.data.keyword.mobilepushshort}} サービスによって�
 
 FCM をセットアップして、API キーおよび送信側 ID を生成するには、以下の手順を実行します。
 
-1. [Firebase コンソール](https://console.firebase.google.com/?pli=1)にアクセスします。
+1. [Firebase Console ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.firebase.google.com/?pli=1 "外部リンク・アイコン"){: new_window}にアクセスしてください。
 2. **「新規プロジェクトを作成」**を選択します。 
 3. 「プロジェクトの作成」ウィンドウで、プロジェクト名を指定し、国/地域を選択して、**「プロジェクトを作成」**をクリックします。
 3. ナビゲーション・ペインで、「Settings」アイコンをクリックして、**「プロジェクトの設定」**を選択します。
@@ -44,12 +44,4 @@ FCM をセットアップして、API キーおよび送信側 ID を生成す�
 4. **「保存」**をクリックします。
 5. 次のステップ。[Android 用の通知の使用可能化](c_enable_push.html)または[Google Chrome アプリケーション & エクステンション用の通知の使用可能化](c_enable_push.html)。
 
-###Google Chrome と Mozilla Firefox の Web プッシュの構成 (FCM/GCM を使用)
-{: #config-gcm-mozilla}
 
-1. Push ダッシュボードのナビゲーション・ペインで、**「構成」**を選択します。
-2. 「Web」タブを選択します。
-	![WebPush 構成](images/webpush_configure.jpg)
-3. プッシュ通知を受信するために登録する FCM/GCM API キーと Web サイトの URL を構成します。
-4. **「保存」**をクリックします。
-5. 次のステップ。[Google Chrome および Mozilla Firefox ブラウザー用の通知の使用可能化](c_enable_push.html)を行います。

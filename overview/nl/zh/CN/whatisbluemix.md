@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-23"
+  years: 2016, 2017
+lastupdated: "2017-01-11"
 ---
 
 {:shortdesc: .shortdesc}
@@ -198,7 +198,7 @@ cf api https://api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net
 
 <dl>
 <dt>Cloud Integration API</dt>
-    <dd>通过 Cloud Integration API，可以经由 Web API 安全访问位于防火墙后的记录系统。创建 Cloud Integration API 时，请选择要通过 Web API 访问的资源，指定允许的操作，并包括用于访问 API 的 SDK 和样本。有关如何创建 Cloud Integration API 的更多信息，请参阅[创建 Cloud Integration API](/docs/services/CloudIntegration/index.html#cloudint_add_service)。</dd>
+    <dd>通过 Cloud Integration API，可以经由 Web API 安全访问位于防火墙后的记录系统。创建 Cloud Integration API 时，请选择要通过 Web API 访问的资源，指定允许的操作，并包括用于访问 API 的 SDK 和样本。有关如何创建 Cloud Integration API 的更多信息，请参阅 [Cloud Integration 入门](/docs/services/CloudIntegration/CldInt_GetStart.html)。</dd>
 <dt>私有服务</dt>
     <dd>私有服务由 Cloud Integration API、SDK 和权利政策构成。私有服务还可能包含来自服务提供者的文档或其他项。只有组织管理员可以将 Cloud Integration API 发布为私有服务。要查看可供您使用的私有服务，请选中 {{site.data.keyword.Bluemix_notm}}“目录”中的“私有”复选框。您可以选择私有服务，并将其绑定到应用程序，而无需连接 Cloud Integration 服务。您可以使用与其他 {{site.data.keyword.Bluemix_notm}} 服务相同的方式，将私有服务绑定到应用程序。有关如何将 API 发布为私有服务的信息，请参阅“将 API 发布为私有服务”。</dd>
 </dl>
@@ -230,7 +230,7 @@ cf api https://api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net
 以下列表指定了 {{site.data.keyword.Bluemix_notm}} 的最低必需浏览器软件：
 
  * Chrome：适用于操作系统的最新版本
- * Firefox：适用于操作系统的最新版本和 ESR 38
+ * Firefox：适用于操作系统的最新版本和 ESR 45
  * Internet Explorer：V11
  * Safari：适用于 Mac 的最新版本
 
@@ -239,13 +239,13 @@ cf api https://api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net
 
 Cloud Foundry 命令行界面 V6.5.1 或更高版本 
 
-# 相关链接
+# rellinks
 {: #rellinks}
-## 常规
+## general
 {: #general}
-* [什么是 {{site.data.keyword.Bluemix_notm}}](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){:new_window}
-* [入门](http://www.ibm.com/cloud-computing/bluemix/getting-started/)
+* [{{site.data.keyword.Bluemix_notm}} 是什么？![外部链接图标](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){:new_window}
+* [入门 ![外部链接图标](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/getting-started/){:new_window}
 * [{{site.data.keyword.Bluemix_notm}} 中的新增功能](/docs/whatsnew/index.html)
-* [了解有关混合模型的信息](http://www.ibm.com/cloud-computing/bluemix/hybrid/)
+* [了解有关混合模型的信息 ![外部链接图标](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/hybrid/){:new_window}
 * [管理您的帐户](/docs/admin/adminpublic.html#mngacct)
 * [{{site.data.keyword.Bluemix_notm}} 词汇表](/docs/overview/glossary/index.html)

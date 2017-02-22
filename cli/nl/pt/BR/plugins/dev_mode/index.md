@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015，2016
+  years: 2015，2017
 
-lastupdated: "2016-05-12"
+lastupdated: "2017-01-12"
 
 
 
@@ -41,7 +41,8 @@ Use um dos métodos a seguir para instalar a ferramenta de linha de comandos dev
 - Instalar localmente.
   1. Faça o download do plug-in dev_mode para sua plataforma a partir do [Repositório de
 Plug-ins de CLI do IBM Bluemix](http://plugins.ng.bluemix.net).
-  2. Acesse a pasta em que o plug-in dev_mode está salvo e instale o plug-in dev_mode usando o comando cf install-plugin. Por exemplo:
+  2. Acesse a pasta em que o plug-in dev_mode está salvo e instale o plug-in dev_mode usando o comando cf install-plugin. Por
+exemplo:
 
         ```
         cf install-plugin dev_mode-linux64
@@ -80,6 +81,7 @@ cf plugins
 Use o índice na tabela a seguir para referir-se aos comandos da CLI dev_mode usados frequentemente:
 
 <table summary="índice de comandos do dev_mode">
+<caption>Tabela 1. Comandos do dev_mode</caption>
  <thead>
  <th colspan="4">Comandos do dev_mode</th>
  </thead>
@@ -98,8 +100,6 @@ Use o índice na tabela a seguir para referir-se aos comandos da CLI dev_mode us
  </tr>
   </tbody>
  </table>
-{: caption="Table 1. dev_mode commands" caption-side="top"}
-
 
 
 ## help
@@ -214,5 +214,5 @@ cf restart-inplace <appName>
 
 ## Links Relacionados
 {: #general}
-* [CLI do Modo de desenvolvimento](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){:new_window}
-* [DevOps Web IDE](https://hub.jazz.net/docs/deploy/){:new_window}
+* [CLI do Modo de desenvolvimento ![Ícone de link externo](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){:new_window}
+* [DevOps Web IDE ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://hub.jazz.net/docs/deploy/){:new_window}

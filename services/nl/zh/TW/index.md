@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-03"
+  years: 2016, 2017
+lastupdated: "2017-01-11"
 
 ---
 
@@ -21,10 +21,10 @@ lastupdated: "2016-11-03"
 
 |類型	|說明	|支援詳細資料|
 |:------|:--------------|:--------------|
-|IBM	|IBM 所提供且正式發行的服務。	|在 IBM 所提供且正式發行的服務中，判定為錯誤的問題會受到支援。支援會根據您設定的嚴重性來提供。如需問題單嚴重性的相關資訊，請參閱[與支援中心聯絡](/docs/support/index.html#contacting-bluemix-support){: new_window}。|
+|IBM	|IBM 所提供且正式發行的服務。	|在 IBM 所提供且正式發行的服務中，判定為錯誤的問題會受到支援。支援會根據您設定的嚴重性來提供。如需問題單嚴重性的相關資訊，請參閱[與支援中心聯絡](/docs/support/index.html#contacting-bluemix-support)。|
 |協力廠商	|由 IBM 以外的公司所提供的服務。	|協力廠商服務支援是由服務提供者所提供。如果是由 IBM 調查問題，且該問題經判定為協力廠商服務中的錯誤，IBM 並不負責提供修正程式。IBM 會視需要與協力廠商服務提供者分享分析資訊。|
 |社群	|開放程式碼社群所提供的服務。	|社群服務支援是由「{{site.data.keyword.Bluemix_notm}} Developers 社群」所提供。如果是由 IBM 調查問題，且該問題經判定為社群服務中的錯誤，IBM 並不負責提供修正程式。|
-|測試版	|尚未準備好進入正式作業且目前處於開發試用階段的服務。「測試版」服務可協助開發及行銷小組先評量服務價值，再正式發行該服務。	|在 IBM 所提供的測試版服務中判定為錯誤的問題會受到支援，但是 IBM 不負責提供修正程式。此外，還會將問題單的嚴重性指派為 3 或 4（適用時）。如需問題單嚴重性的相關資訊，請參閱[與支援中心聯絡](/docs/support/index.html#contacting-bluemix-support){: new_window}。|
+|測試版	|尚未準備好進入正式作業且目前處於開發試用階段的服務。「測試版」服務可協助開發及行銷小組先評量服務價值，再正式發行該服務。	|在 IBM 所提供的測試版服務中判定為錯誤的問題會受到支援，但是 IBM 不負責提供修正程式。此外，還會將問題單的嚴重性指派為 3 或 4（適用時）。如需問題單嚴重性的相關資訊，請參閱[與支援中心聯絡](/docs/support/index.html#contacting-bluemix-support)。|
 {: caption="Table 1. {{site.data.keyword.Bluemix_notm}} services support information" caption-side="top"}
 
 ##實驗性服務
@@ -32,7 +32,7 @@ lastupdated: "2016-11-03"
 
 {{site.data.keyword.Bluemix_notm}} 也有您可以試用的實驗性服務。若要檢視所有可用的實驗性服務、樣板及運行環境，請登入 {{site.data.keyword.Bluemix_notm}} 主控台，按一下**型錄**，捲動至型錄底端，然後按一下 **{{site.data.keyword.Bluemix_notm}} 實驗性服務**。
 
-實驗性服務可能不穩定，而且可能會變更，而與較舊版不相容。這些服務不建議用於正式作業環境。實驗性服務支援是透過「{{site.data.keyword.Bluemix_notm}} Developers 社群」所提供。如果是由 IBM 調查問題，且該問題經判定為實驗性服務中的錯誤，則 IBM 不負責提供修正程式。
+實驗性服務可能不穩定，且可能變更而與舊版不相容。不建議在正式作業環境中使用這些服務。實驗性服務支援是透過「{{site.data.keyword.Bluemix_notm}} Developers 社群」所提供。如果是由 IBM 調查問題，且該問題經判定為實驗性服務中的錯誤，則 IBM 不負責提供修正程式。
 
 ##各地區的服務
 {: #services_region}
@@ -50,7 +50,7 @@ lastupdated: "2016-11-03"
 |Apache Spark			|在美國達拉斯進行管理		|在此地區無法使用		|在此地區無法使用|
 |{{site.data.keyword.apiconnect_short}}			|在美國南部進行管理		|在英國進行管理		|在雪梨進行管理 |
 |{{site.data.keyword.APIHarmony}}			|在美國南部進行管理		|在英國進行管理		|在雪梨進行管理 |
-|自動化可存取性測試程式			|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
+|Automated Accessibility Tester			|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
 |{{site.data.keyword.autoscaling}}		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
 |{{site.data.keyword.prf_hubshort}}		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
 |{{site.data.keyword.bigicloudst}}		|在美國達拉斯進行管理		|在此地區無法使用		|在此地區無法使用 |
@@ -59,7 +59,7 @@ lastupdated: "2016-11-03"
 |CDN			|在美國達拉斯進行管理		|在此地區無法使用		|在此地區無法使用 |
 |{{site.data.keyword.conversationshort}}		|在美國達拉斯進行管理		|在美國達拉斯進行管理		|在美國達拉斯進行管理 |
 |{{site.data.keyword.iotmapinsights_short}}			|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
-|Cloud Foundry 運行環境		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
+|Cloud Foundry Runtimes		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
 |{{site.data.keyword.cloudant}}			|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
 |{{site.data.keyword.composeForEtcd}}	|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
 |{{site.data.keyword.composeForMongoDB}}			|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
@@ -72,8 +72,8 @@ lastupdated: "2016-11-03"
 |{{site.data.keyword.datacshort}}		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
 |{{site.data.keyword.DB2OnCloud_short}}		|在美國達拉斯進行管理		|在美國達拉斯進行管理		|在澳洲雪梨進行管理 |
 |{{site.data.keyword.deliverypipeline}}		|在美國達拉斯進行管理		|在美國達拉斯進行管理		|在美國達拉斯進行管理 |
-|部署風險分析		|在美國達拉斯進行管理		|在此地區無法使用		|在此地區無法使用 |
-|數位內容檢查程式		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
+|Deployment Risk Analytics		|在美國達拉斯進行管理		|在此地區無法使用		|在此地區無法使用 |
+|Digital Content Checker		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
 |{{site.data.keyword.documentconversionshort}}	|在美國休斯頓進行管理		|在美國休斯頓進行管理		|在美國休斯頓進行管理 |
 |{{site.data.keyword.docgen_short}}		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在此地區無法使用 |
 |Elasticsearch by Compose	|在美國達拉斯及美國北維吉尼亞州進行管理	|在英國倫敦及愛爾蘭進行管理		|在澳洲雪梨進行管理 |
@@ -85,7 +85,7 @@ lastupdated: "2016-11-03"
 |{{site.data.keyword.datastagefull}}		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
 |{{site.data.keyword.graphshort}}       |在美國達拉斯進行管理		|在美國達拉斯進行管理		|在此地區無法使用 |
 |{{site.data.keyword.mdmcloudfull}}		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
-|身分混合器		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
+|Identity Mixer		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
 |{{site.data.keyword.IOCloud_short}}		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
 |{{site.data.keyword.twittershort}}		|在美國達拉斯進行管理		|在美國達拉斯進行管理		|在澳洲雪梨進行管理 |
 |{{site.data.keyword.IntegrationTestingshort}}	|在美國聖荷西進行管理		|在此地區無法使用		|在此地區無法使用|
@@ -95,7 +95,7 @@ lastupdated: "2016-11-03"
 |{{site.data.keyword.iot_short}}		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在此地區無法使用|
 |{{site.data.keyword.iotrtinsights_short}}		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理|
 |IoT Workbench		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理|
-|{{site.data.keyword.keymanagementserviceshort}}	|在美國達拉斯進行管理		|在英國倫敦進行管理		|在此地區無法使用|
+|{{site.data.keyword.keymanagementserviceshort}}	|在美國達拉斯進行管理		|在此地區無法使用		|在此地區無法使用|
 |{{site.data.keyword.languagetranslationshort}}	|在美國達拉斯進行管理		|在美國達拉斯進行管理		|在美國達拉斯進行管理 |
 |{{site.data.keyword.pm_short}}   |在美國達拉斯進行管理		|在英國倫敦進行管理		|在此地區無法使用|
 |{{site.data.keyword.eventhubshort}}		|在美國達拉斯進行管理		|在此地區無法使用		|在此地區無法使用|
@@ -117,8 +117,6 @@ lastupdated: "2016-11-03"
 |{{site.data.keyword.runbook_short}}				|在美國達拉斯進行管理		|在英國倫敦進行管理			|在澳洲雪梨進行管理 |
 |{{site.data.keyword.SecureGateway}}		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
 |{{site.data.keyword.sescashort}}		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在澳洲雪梨進行管理 |
-|{{site.data.keyword.servicediscoveryshort}}		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在此地區無法使用|
-|{{site.data.keyword.serviceproxyshort}}		|在美國達拉斯進行管理		|在英國倫敦進行管理		|在此地區無法使用|
 |{{site.data.keyword.ssofull}}			|在美國華盛頓州進行管理		|在此地區無法使用		|在此地區無法使用|
 |{{site.data.keyword.speechtotextshort}}	|在美國達拉斯進行管理		|在美國達拉斯進行管理		|在美國達拉斯進行管理 |
 |{{site.data.keyword.streaminganalyticsshort}}	|在美國達拉斯進行管理		|在英國倫敦進行管理		|在英國倫敦進行管理|

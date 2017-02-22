@@ -80,7 +80,7 @@ Klicken Sie auf <a class="xref" href="https://hub.jazz.net/project/idsorg/d2bm-i
 <dd class="pd">Die ID der Standardzielregion. Beispiel: <code>ibm:yp:us-south</code>. Dieser Wert ist optional.</dd>
 
 <dt class="pt dlterm">organization_guid</dt>
-<dd class="pd">Die GUID der standardmäßigen Zielorganisation. Klicken Sie auf <strong>Organisationen verwalten</strong> > <i>Organisationsname</i>, um diesen Wert zu ermitteln. Die URL für die Organisation enthält die GUID für diese Organisation. Dieser Wert ist optional. </dd>
+<dd class="pd">Die GUID der standardmäßigen Zielorganisation. Klicken Sie auf <strong>Organisationen verwalten</strong> > <i>Organisationsname</i>, um diesen Wert zu ermitteln. Die URL für die Organisation enthält die GUID für diese Organisation. Dieser Wert ist optional.</dd>
 
 <dt class="pt dlterm">space_guid</dt>
 <dd class="pd">Die GUID des Standardzielbereichs. Klicken Sie auf <strong>Organisationen verwalten</strong> > <i>Bereichsname</i>, um diesen Wert herauszufinden. Die URL für den Bereich enthält die GUID für diesen Bereich. Dieser Wert ist optional.</dd>

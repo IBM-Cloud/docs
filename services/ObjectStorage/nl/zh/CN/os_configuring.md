@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -46,8 +46,8 @@ pip install python-keystoneclient
 
 要配置 Swift 客户机，必须执行 `export` 命令以导出认证信息。您可以通过 CLI 使用 Cloud Foundry 或 cURL 命令，或通过 {{site.data.keyword.Bluemix_notm}} UI 来[生成凭证](/docs/services/ObjectStorage/os_credentials.html)。客户机将通过下表中的环境变量获取相关信息。
 
-
 <table>
+<caption> 表 1. 环境变量和描述</caption>
   <tr>
     <th> 环境变量</th>
     <th> 描述</th>
@@ -74,7 +74,6 @@ pip install python-keystoneclient
   </tr>
 </table>
 
-表 1：认证变量和描述
 
 
 要导出认证信息，请输入您的凭证并运行以下命令：

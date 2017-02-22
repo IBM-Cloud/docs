@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-10"
+lastupdated: "2017-02-16"
 
 ---
 
@@ -15,43 +15,21 @@ lastupdated: "2017-01-10"
 # Integrating {{site.data.keyword.DRA_short}} with Jenkins
 {: #toolchain_configure_jenkins}
 
-After you define the policies for {{site.data.keyword.DRA_full}} to monitor, the next step is to add {{site.data.keyword.DRA_short}} to a toolchain, and then configure a continuous delivery pipeline.
+After you define the policies for {{site.data.keyword.DRA_full}} to monitor, you can add {{site.data.keyword.DRA_short}} to a toolchain and configure a continuous delivery pipeline.
 {:shortdesc}
 
-<!--##Configuring a Jenkins project-->
-
-You can integrate {{site.data.keyword.DRA_short}} into one Jenkins project or across several related Jenkins projects. This allows you set quality gates, as well as receive build quality data on the {{site.data.keyword.DRA_short}} dashboard.
+You can integrate {{site.data.keyword.DRA_short}} into one Jenkins project or across several related Jenkins projects by installing a plugin. After you install the plugin, you can set quality gates and view analytic data in {{site.data.keyword.DRA_short}}.
 
 ##Prerequisites    
 {: #DI_jenkins_prereqs}
 
-* You must have access to a local Jenkins project, or to the server that is running a Jenkins project.
+* You must have access to a local Jenkins project or to the server that is running a Jenkins project.
 
-##Installing the {{site.data.keyword.DRA_short}} plugin
+##Installing and configuring the {{site.data.keyword.DRA_short}} plugin
 {: #DI_jenkins_install}
 
-To install the {{site.data.keyword.DRA_short}} plugin in your Jenkins project, follow these steps:
+Before you begin, download the [the {{site.data.keyword.DRA_short}} plugin installation file (.hpi)](https://github.ibm.com/oneibmcloud/Jenkins-IBM-Bluemix-Toolchains/tree/release/target/dra.hpi). 
 
-  1. [Download the IBM DevOps Insight Plugin installation file (.hpi)](https://github.ibm.com/oneibmcloud/DRA-Jenkins/blob/hpi-release/target/dra.hpi) from the plugin's GitHub repository.
-  2. In your Jenkins installation, click **Manage Jenkins**, select **Manage Plugins**, and click the **Advanced** tab.
-  3. Click **Choose File** and select the DevOps Insight plugin installation file.
-  4. Click **Upload**.
-  5. Restart Jenkins and verify that the plugin was installed.
+For the latest installation and configuration instructions, see [the plugin documentation](https://github.com/imvijay2007/Jenkins-IBM-Bluemix-Toolchains).
 
-##Integrating {{site.data.keyword.DRA_short}} with Jenkins    
-{: #DI_jenkins_integrate}
-
-After the plugin is installed, but before you integrate {{site.data.keyword.DRA_short}} into your Jenkins installation, go to the [control center](https://control-center.stage1.ng.bluemix.net/) and create at least one policy.
-
-For each of the jobs that you already have, and in which you want to use {{site.data.keyword.DRA_short}}:
-
-1. Add a post-build action with the type **Publish build information to {{site.data.keyword.DRA_short}}**, **Publish deployment information to {{site.data.keyword.DRA_short}}**, or **Publish test result to {{site.data.keyword.DRA_short}}**. The specific type should match the job type (build, deploy, or test). Complete the required fields.
-  * In the Credential field, choose your Bluemix ID and password. If they are not saved in Jenkins, click the **Add** button to add and save them.
-  * In the Build Job Name field, specify your build job's name exactly as it is in Jenkins. If the build occurs together with the test job, leave this field empty. If the build job occurs outside of Jenkins, check **Builds are being done outside of Jenkins** and specify the build number and build URL.
-  * For the Result File Location field, specify the result file's location. If the test doesn't generate a result file, leave this field empty. The plugin will upload a default result file based on the status of current test job.
-3. *Optional*: If you want the DRA policy gates in the test job to control the downstream deploy job, add another post-build action with the type **DevOps Risk Analytics Gate** and complete the required fields. The gate will prevent the downstream job from running if the test job fails to meet the associated policies.
-4. Click **Apply**, and then click **Save**.
-
-You can click **Build Now** from the project page to run the project.
-
-After the build runs, go to the [control center](https://control-center.stage1.ng.bluemix.net/) to check your build status in the dashboard. If you configured policy gates, you can also see {{site.data.keyword.DRA_short}} results on the Status page of the current build.
+**Note:** If you are not an IBM employee, you must request access before you can download the {{site.data.keyword.DRA_short}} plugin. To submit a request for access, email Vijay Aggarwal (aggarwav@us.ibm.com) with Jinfang Chen (jichen@us.ibm.com) copied. In the subject, include "Need Jenkins plugin".

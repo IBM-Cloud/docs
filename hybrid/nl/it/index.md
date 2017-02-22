@@ -29,8 +29,8 @@ Con {{site.data.keyword.Bluemix_notm}} locale, puoi sfruttare il valore reale di
 {: #rellinks}
 ## generale
 {: #general}
-* [Informazioni su {{site.data.keyword.Bluemix_notm}}](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){:new_window}
-* [Introduzione](http://www.ibm.com/cloud-computing/bluemix/getting-started/)
-* [Informazioni sul modello ibrido](http://www.ibm.com/cloud-computing/bluemix/hybrid/)
+* [Cos'è {{site.data.keyword.Bluemix_notm}} ![icona link esterno](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){:new_window}
+* [Introduzione a ![icona link esterno](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/getting-started/){:new_window}
+* [Informazioni sul modello ibrido ![icona link esterno](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/hybrid/){:new_window}
 * [Novità in {{site.data.keyword.Bluemix_notm}}](/docs/whatsnew/index.html)
 * [{{site.data.keyword.Bluemix_notm}} glossario](/docs/overview/glossary/index.html)

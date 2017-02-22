@@ -29,8 +29,8 @@ Mit {{site.data.keyword.Bluemix_notm}} Local können Sie den realen Wert einer p
 {: #rellinks}
 ## Allgemein
 {: #general}
-* [Was ist {{site.data.keyword.Bluemix_notm}}](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){:new_window}
-* [Einführung](http://www.ibm.com/cloud-computing/bluemix/getting-started/)
-* [Informationen zum Hybrid-Modell](http://www.ibm.com/cloud-computing/bluemix/hybrid/)
+* [Was ist {{site.data.keyword.Bluemix_notm}} ![Symbol für externen Link](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){:new_window}
+* [Einführung ![Symbol für externen Link](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/getting-started/){:new_window}
+* [Informationen zum Hybridmodell ![Symbol für externen Link](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/hybrid/){:new_window}
 * [Neuerungen in {{site.data.keyword.Bluemix_notm}}](/docs/whatsnew/index.html)
 * [{{site.data.keyword.Bluemix_notm}}-Glossar](/docs/overview/glossary/index.html)

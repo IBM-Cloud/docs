@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  year: 2015, 2016
+  years: 2015, 2017
   
-lastupdated: "2016-08-18"
+lastupdated: "2017-01-11"
 
 ---
 
@@ -44,7 +44,7 @@ Lo stato del tuo account {{site.data.keyword.Bluemix_notm}} diventa inattivo qua
 
  
 
-Per riattivare il tuo account, contatta il [Supporto {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport.com){: new_window}. Nell'email, devi includere le seguenti informazioni:
+Per riattivare il tuo account, contatta il [Supporto {{site.data.keyword.Bluemix_notm}} ![icona link esterno](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}. Nell'email, devi includere le seguenti informazioni:
 {: tsResolve}
 
   * L'ID IBM utilizzato per accedere a {{site.data.keyword.Bluemix_notm}}.

@@ -15,12 +15,13 @@ lastupdated: "2016-12-05"
 {:screen: .screen}
 {:new_window: target="_blank"}
 
+
 # Gestion des membres d'équipe et des rôles
 {: #userroles}
 
 Depuis la page **Répertoire d'équipe** pour votre compte, vous pouvez gérer les membres d'équipe existants et leurs rôles dans votre
 organisation et vos espaces, ainsi qu'inviter de nouveaux membres d'équipe. Afin d'accéder au répertoire d'équipe pour votre compte, cliquez sur
-**Compte** &gt; **Répertoire d'équipe**. 
+**Compte** > **Répertoire d'équipe**. 
 {:shortdesc}
 
 Un propriétaire de compte effectue toutes les opérations sur les organisations et les espaces, y compris la gestion des membres d'équipe et des
@@ -33,29 +34,30 @@ les informations ci-après pour en savoir plus sur les rôles.
 
 Au niveau du compte, deux rôles permettent l'accès à différentes fonctions de gestion des comptes :
 
-| Rôle de compte | Droits |    
+| Rôle de compte | Droits |
 |----------------|---------|
 |Propriétaire | Un propriétaire de compte peut accéder à son profil, au répertoire d'équipe, aux informations de facturation, aux notifications relatives aux dépenses et au tableau de bord de l'utilisation. Dans la page Répertoire d'équipe, le propriétaire peut inviter de nouveaux membres d'équipe et ajuster les rôles. Il peut également ajouter des offres promotionnelles, définir ou changer la limite de facturation, définir l'accès aux services et gérer les organisations et les espaces. |
 |Membre | Un membre peut accéder à son profil, au répertoire d'équipe, aux crédits du compte et aux limites de facturation dans l'en-tête {{site.data.keyword.Bluemix_notm}}. Toutefois, dans la page Répertoire d'équipe, un membre ne peut afficher que les membres d'équipe existants sur le compte. |
 {:caption="Table 1. Account roles and permissions" caption-side="top"}
 
  Les nouveaux membres d'équipe sont ajoutés en tant que membre du compte. Vous pouvez affecter des rôles d'organisation et d'espace aux invités afin
-d'activer des vues et des droits spécifiques dans {{site.data.keyword.Bluemix_notm}}. Les nouveaux membres d'équipe ajoutés à une organisation
-possèdent le rôle Auditeur de l'organisation par défaut. Pour un espace spécifique, vous pouvez choisir d'affecter le rôle Développeur ou Auditeur aux invités. Une fois que vos invités ont accepté l'invitation et rejoint {{site.data.keyword.Bluemix_notm}}, vous pouvez éditer leurs rôles dans la page
+d'activer des vues et des droits spécifiques dans {{site.data.keyword.Bluemix_notm}}. Les nouveaux membres d'équipe ajoutés à une organisation, sauf dans un
+environnement local ou dédié, possèdent le rôle Auditeur de l'organisation par défaut. Pour un espace spécifique, vous pouvez choisir d'affecter le rôle Développeur ou Auditeur aux invités. Une fois que vos invités ont accepté l'invitation et rejoint {{site.data.keyword.Bluemix_notm}}, vous pouvez éditer leurs rôles dans la page
 **Répertoire d'équipe**.
 
 Les rôles suivants peuvent être affectés au niveau de l'organisation :
 
-| Rôle d'organisation | Droits |    
+| Rôle d'organisation | Droits |
 |-------------------|-------------|
 |Responsable | Un responsable de l'organisation peut créer, éditer ou supprimer des espaces dans l'organisation, afficher l'utilisation et le quota de l'organisation, inviter des membres d'équipe dans l'organisation, définir quels sont les membres qui ont accès à l'organisation ainsi que les rôles de ces membres dans l'organisation, et gérer des domaines personnalisés pour l'organisation. |
 |Responsable de la facturation | Un responsable de la facturation peut afficher des informations sur l'utilisation des contextes d'exécution et des services pour l'organisation dans la page Tableau de bord de l'utilisation.  |
-|Auditeur | Un auditeur de l'organisation peut afficher le contenu des applications et des services dans l'organisation. Il peut également afficher les membres d'équipe dans l'organisation et les rôles qui leur sont affectés, ainsi que le quota pour l'organisation. Ce rôle est affecté à tous les invités par défaut.|
+|Auditeur | Un auditeur de l'organisation peut afficher le contenu des applications et des services dans l'organisation. Il peut également afficher les membres d'équipe dans l'organisation et les rôles qui leur sont affectés, ainsi que le quota pour l'organisation. Ce rôle est affecté à tous les invités par défaut, sauf dans un environnement
+local ou dédié. |
 {:caption="Table 2. Organization roles and permissions" caption-side="top"}
 
 Les rôles suivants peuvent être affectés au niveau de l'espace :
 
-| Rôle d'espace | Droits |    
+| Rôle d'espace | Droits |
 |------------|-------------|
 |Responsable | Un responsable de l'espace peut ajouter des membres d'équipe existants et gérer les rôles dans l'espace. Il peut également afficher le nombre d'instances, les liaisons de service et l'utilisation des ressources pour chaque application dans l'espace. |
 |Développeur | Un développeur de l'espace peut créer, supprimer et gérer des applications et des services dans l'espace. Certaines tâches de gestion impliquent le déploiement d'applications, le démarrage ou l'arrêt d'applications, le changement de nom d'une application, la suppression d'une application, le changement de nom d'un espace, la liaison d'un service ou l'annulation de la liaison d'un service à une application ainsi que l'affichage du nombre d'instances, des liaisons de service et de l'utilisation des ressources pour chaque application dans l'espace. De plus, le développeur de l'espace peut associer une adresse URL interne ou externe à une application dans l'espace.   |
@@ -82,7 +84,9 @@ Pour modifier la visibilité de la page du répertoire d'équipe, procédez comm
 {: #inviteteammembers}
 
 Les propriétaires de compte et les responsables de l'organisation peuvent inviter des membres d'équipe dans des organisations depuis la page Inviter
-des membres d'équipe. Lorsque vous ajoutez de nouveaux membres d'équipe, le rôle Auditeur leur est affecté automatiquement. Vous pouvez changer les rôles
+des membres d'équipe. Lorsque vous ajoutez de nouveaux membres d'équipe, le
+rôle Auditeur leur est affecté automatiquement, sauf dans un environnement
+local ou dédié. Vous pouvez changer les rôles
 ultérieurement dans la page Répertoire d'équipe. Pour inviter un membre d'équipe, procédez comme suit :
 
 <ol>
@@ -105,25 +109,31 @@ adresses électroniques auxquelles envoyer les invitations, puis cliquez sur **E
 Cliquez sur **Afficher les éléments en attente** pour déterminer si les invitations sont en attente ou ont été acceptées. Vous
 pouvez choisir de renvoyer le courrier électronique d'invitation ou d'annuler l'invitation pour une invitation en attente à tout moment.
 
+
 ### Ajout de membres d'équipe SoftLayer
-Si vous avez un compte SoftLayer lié à votre compte {{site.data.keyword.Bluemix_notm}}, vous pouvez ajouter les membres de votre équipe SoftLayer.
- 1. Sélectionnez **Compte** > **Inviter des membres d'équipe**. 
- 2. Cliquez sur **Ajouter** dans la section **Ajouter des membres d'équipe SoftLayer** afin de vous
-authentifier auprès de votre compte SoftLayer et d'afficher la liste des membres d'équipe de votre compte SoftLayer. 
- 
-L'ajout de membres d'équipe à votre compte {{site.data.keyword.Bluemix_notm}} n'accorde pas à ces membres l'accès au tableau de bord
-Infrastructure de {{site.data.keyword.Bluemix_notm}}. Pour accorder aux utilisateurs l'accès au tableau de bord Infrastructure, accédez à
+
+Si vous avez un compte SoftLayer lié à votre compte Bluemix, vous pouvez ajouter les membres de votre équipe SoftLayer.
+
+1. Sélectionnez **Compte** > **Inviter des membres d'équipe**.  
+2. Cliquez sur **Ajouter** dans la section **Ajouter des membres d'équipe SoftLayer** afin de vous
+authentifier auprès de votre compte SoftLayer et d'afficher la liste des membres d'équipe de votre compte SoftLayer.
+
+L'ajout de membres d'équipe à votre compte Bluemix ne permet pas
+d'accorder à ces membres l'accès à l'infrastructure Bluemix. Pour accorder aux utilisateurs l'accès au tableau de bord Infrastructure, accédez à
 **Infrastructure** > **Compte** > **Utilisateurs**, puis cliquez sur le lien **Ajouter
 un utilisateur**. Vous devez disposer du droit permettant d'ajouter des utilisateurs.
- 
- Pour plus d'informations sur l'ajout de membres d'équipe de votre compte
-SoftLayer, voir [Invitation de membres d'équipe SoftLayer dans {{site.data.keyword.Bluemix_notm}}](/docs/admin/softlayerlink.html#invite_users).
+
+Pour plus d'informations sur l'ajout de membres d'équipe de votre compte
+SoftLayer, voir
+[Invitation
+de membres d'équipe SoftLayer dans Bluemix](https://console.ng.bluemix.net/docs/admin/softlayerlink.html#invite_users).
+
 
 ## Edition des rôles
 {: #editinguserroles}
 
 Les propriétaires de compte et les responsables de l'organisation peuvent éditer les rôles d'organisation et d'espace pour
-les membres d'équipe existants dans la page **Répertoire d'équipe**. 
+les membres d'équipe existants dans la page **Répertoire d'équipe**.
 
 1. Cliquez sur **Compte** &gt; **Répertoire d'équipe**.
 2. Localisez le membre d'équipe dont vous voulez éditer les rôles.

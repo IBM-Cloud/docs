@@ -30,7 +30,7 @@ Die Management-Tasks umfassen folgende Tasks:
 * Kontingente verwalten oder anzeigen
 * Angepasste Domänen verwalten
 
-**Hinweis**: Sie müssen der Kontoeigner eines nutzungsabhängigen Kontos sein, um eine Organisation erstellen zu können.
+**Hinweis:** Sie müssen der Kontoeigner eines nutzungsabhängigen Kontos sein, um eine Organisation erstellen zu können.
 
 ## Organisationen
 {: #orginfo}
@@ -42,7 +42,7 @@ Organisationen können mehrere Regionen umfassen und sind durch folgende Element
 <dd>Die Rolle mit Basisberechtigungen in Organisationen und Bereichen. Sie müssen einer Organisation zugewiesen sein, bevor Ihnen weitere Berechtigungen für Bereiche innerhalb der Organisation erteilt werden können. Detaillierte Informationen hierzu finden Sie unter [Benutzer und Rollen](users_roles.html#userrolesinfo).</dd>
 <dt>Domänen</dt>
 <dd>Stellen die Route im Internet bereit, die der Organisation zugeordnet ist. Eine Route hat eine Unterdomäne und eine Domäne. Eine Unterdomäne ist in der Regel der Anwendungsname. Eine Domäne kann eine Systemdomäne oder eine angepasste Domäne sein, die Sie für Ihre Anwendung registriert haben. Siehe den Abschnitt zum Thema [Angepasste Domänen verwalten](orgs_spaces.html#managedomains).<br/>
-<p>**Hinweis**: Wenn Sie eine angepasste Domäne hinzufügen, müssen Sie Ihren DNS-Server so konfigurieren, dass er Ihre angepasste Domäne in einen Verweis auf die {{site.data.keyword.Bluemix_notm}}-Systemdomäne auflöst. Auf diese Weise kann {{site.data.keyword.Bluemix_notm}} eine aus Ihrer angepassten Domäne empfangene Anforderung ordnungsgemäß an Ihre Anwendung weiterleiten.</p></dd>
+<p>**Hinweis:** Wenn Sie eine angepasste Domäne hinzufügen, müssen Sie Ihren DNS-Server so konfigurieren, dass er Ihre angepasste Domäne in einen Verweis auf die {{site.data.keyword.Bluemix_notm}}-Systemdomäne auflöst. Auf diese Weise kann {{site.data.keyword.Bluemix_notm}} eine aus Ihrer angepassten Domäne empfangene Anforderung ordnungsgemäß an Ihre Anwendung weiterleiten.</p></dd>
 <dt>Kontingent</dt>
 <dd>Stellt die Ressourcengrenzen für die Organisation dar, einschließlich der Anzahl der Services und die Speicherkapazität, die für die Verwendung durch Ihre Organisation zugeordnet werden können. Kontingente werden bei der Erstellung von Organisationen zugeordnet. Jede Anwendung und jeder Service in einem Bereich der Organisation trägt zur Nutzung des Kontingents bei. Sowohl mit dem nutzungsabhängigen Plan als auch dem Abonnementplan können Sie Ihr Kontingent für Cloud Foundry-Anwendungen und -Container anpassen, sobald sich die Bedürfnisse für Ihre Organisation ändern. Siehe den Abschnitt zum Thema [Kontingent verwalten](orgs_spaces.html#managequota).</dd>
 </dl>
@@ -56,7 +56,7 @@ In {{site.data.keyword.Bluemix_notm}} können Sie Organisationen verwenden, um d
 
 Wenn Sie eine Organisation erstellen, muss der Organisationsname in {{site.data.keyword.Bluemix_notm}} eindeutig sein. Falls der Organisationsname bereits von einem anderen Benutzer von {{site.data.keyword.Bluemix_notm}} Public, Dedicated oder Local verwendet wird, müssen Sie einen neuen Namen angeben. Nachdem Sie die Organisation erstellt haben, wird Ihnen automatisch die Berechtigung *Organisationsmanager* zugeordnet, die es Ihnen ermöglicht, den Organisationsnamen zu bearbeiten, Teammitglieder hinzuzufügen und Bereiche in der Organisation zu erstellen oder zu löschen.
 
-Sie müssen sich an die [Unterstützung für {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport){: new_window} wenden, um eine Organisation zu löschen. Wenn Sie das Unterstützungsteam auffordern, eine Organisation zu löschen, werden alle Bereiche, Anwendungen und Services innerhalb der Organisation gelöscht.
+Sie müssen sich an den [{{site.data.keyword.Bluemix_notm}}-Support ![Symbol für externen Link](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window} wenden, um eine Organisation zu löschen. Wenn Sie das Unterstützungsteam auffordern, eine Organisation zu löschen, werden alle Bereiche, Anwendungen und Services innerhalb der Organisation gelöscht.
 
 Die folgenden [Benutzerrollen](/docs/admin/users_roles.html#userrolesinfo) können Teammitgliedern in der Organisation zugeordnet werden:
 
@@ -81,7 +81,7 @@ Nachdem Sie Teammitglieder zu einer Organisation hinzugefügt haben, können Sie
 <li>Bereichsauditor</li>
 </ul>
 
-**Hinweis**: Einem Teammitglied muss mindestens eine der Berechtigungen im Bereich zugeordnet sein.
+**Hinweis:** Einem Teammitglied muss mindestens eine der Berechtigungen im Bereich zugeordnet sein.
 
 ## Organisationen und Bereiche erstellen
 {: #createorg}
@@ -116,9 +116,9 @@ Führen Sie die folgenden Schritte aus, um Ihre Organisation umzubenennen:
 ## Eine vorhandene Organisation oder einen vorhandenen Bereich löschen
 {: #deleteorgs}
 
-Als Kontoeigner können Sie sich an die [Unterstützung für {{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport){: new_window} wenden, um eine Organisation zu löschen. 
+Als Kontoeigner können Sie sich an den [{{site.data.keyword.Bluemix_notm}}-Support ![Symbol für externen Link](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window} wenden, um eine Organisation zu löschen. 
 
-**Hinweis**: Das Löschen von Operationen kann nicht rückgängig gemacht werden. Alle der Organisation zugeordneten Anwendungen und Services gehen verloren.
+**Hinweis:** Das Löschen von Operationen kann nicht rückgängig gemacht werden. Alle der Organisation zugeordneten Anwendungen und Services gehen verloren.
 
 Sie können einen Bereich von der Seite **Organisationen verwalten** löschen:
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-09-12"
+  years: 2016, 2017
+lastupdated:  "2017-01-17"
 
 ---
 
@@ -30,14 +30,12 @@ lastupdated: "2016-09-12"
 *	**콘솔 실행**을 클릭하여 {{site.data.keyword.mfp_oc_short_notm}}을 실행하십시오.
 
 
-<!--This console runs inside the container.--> 콘솔을 사용하여 모바일 앱 및 모바일 디바이스를 관리하고 서버를 모바일 백엔드로 사용하고 푸시 알림을 전송하는 등의 작업을 수행할 수 있습니다.
-
-
+<!--This console runs inside the container.--> 콘솔을 사용하여 모바일 앱 및 모바일 디바이스를 관리하고 서버를 모바일 백엔드로 사용하고 푸시 알림을 전송하는 등의 작업을 수행할 수 있습니다. 
 
 ##  Mobile Analytics 서버 추가
 {: #adding_analytics_server_dev}
 
- 이제 {{site.data.keyword.mobilefoundation_short}} 서비스 인스턴스에 Mobile Analytics 서버를 추가하여 {{site.data.keyword.mobilefirst}} 서버에서 모바일 애플리케이션을 모니터링할 수 있습니다. 개발자 플랜을 통해 메모리가 1GB인 단일 노드가 포함된 컨테이너 그룹에 Mobile Analytics 서버를 작성합니다.
+ 이제 {{site.data.keyword.mobilefoundation_short}} 서비스 인스턴스에 Mobile Analytics 서버를 추가하여 {{site.data.keyword.mobilefirst}} 서버에서 모바일 애플리케이션을 모니터링할 수 있습니다. Developer 플랜을 통해 메모리가 1GB인 단일 노드가 포함된 컨테이너 그룹에 Mobile Analytics 서버를 작성합니다.
 
 * **분석 추가**를 클릭하여 {{site.data.keyword.mobilefoundation_short}} 서비스 인스턴스에 Mobile Analytics 서버를 추가하십시오.
 
@@ -47,9 +45,19 @@ lastupdated: "2016-09-12"
 
 * {{site.data.keyword.mfserver_short_notm}}와 Mobile Analytics 서버 간에 싱글 사인온이 사용됩니다. Mobile Analytics 서버는 {{site.data.keyword.mfserver_short_notm}}와 동일한 LTPA 키 및 사용자 신임 정보를 사용하여 구성합니다. {{site.data.keyword.mfp_oc_short_notm}}에 로그인하는 데 사용한 `사용자 이름` 및 `비밀번호`를 사용하여 Mobile Analytics 콘솔에 로그인할 수 있습니다.
 
-MobileFirst Analytics에 대한 자세한 정보는 [MobileFirst Foundation Operational Analytics](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/){: new_window}를 참조할 수 있습니다.
+MobileFirst Analytics에 대한 자세한 정보는 [MobileFirst Foundation Operational Analytics ![외부 링크 아이콘](../../icons/launch-glyph.svg "External link icon")](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/){: new_window}을 참조할 수 있습니다.
 
 **참고:** {{site.data.keyword.mobilefoundation_short}} 서버 인스턴스를 삭제하거나 {{site.data.keyword.mfserver_short_notm}}를 다시 작성하려고 할 때 Mobile Analytics 서버가 제거됩니다.
+
+##  Mobile Analytics 서버 삭제
+{: #deleting_analytics_server_dev}
+
+이제 {{site.data.keyword.mobilefoundation_short}} 서비스 대시보드에서 {{site.data.keyword.mobilefoundation_short}} 서비스 인스턴스에 추가된 Mobile Analytics 서버를 삭제할 수 있습니다.
+
+* **분석 삭제**를 클릭하여 {{site.data.keyword.mobilefoundation_short}} 서비스 인스턴스에 추가된 Mobile Analytics 서버를 삭제하십시오.
+
+ 이렇게 하면 분석 컨테이너 그룹이 삭제됩니다. 분석 컨테이너 삭제 프로세스에는 약 10분이 걸립니다. 화면을 새로 고쳐 업데이트된 상태를 볼 수 있습니다. 분석 컨테이너가 삭제되면 **분석 추가** 단추가 다시 사용 가능하게 되고 이 단추를 사용하여 Mobile Analytics 서버를 다시 추가할 수 있습니다(선택하는 경우).
+
 
 ## {{site.data.keyword.mobilefirst}} 서버 재작성
 {: #recreate_mobilefoundation_p1}
@@ -67,6 +75,6 @@ MobileFirst Analytics에 대한 자세한 정보는 [MobileFirst Foundation Oper
 
   - 사용자 요구사항에 따라 적절한 서버 크기를 선택하십시오.
 
-* **노드**는 작성된 노드의 수를 표시합니다. 이 필드는 {{site.data.keyword.mobilefoundation_short}}: Developer에서 편집할 수 없습니다. 개발자 플랜에서 <!--in your {{site.data.keyword.IBM_notm}} container group--> 노드 수는 기본적으로 **1**입니다.
+* **노드**는 작성된 노드의 수를 표시합니다. 이 필드는 {{site.data.keyword.mobilefoundation_short}}: Developer에서 편집할 수 없습니다. Developer 플랜에서 <!--in your {{site.data.keyword.IBM_notm}} container group--> 노드 수는 기본적으로 **1**입니다.
 
-세부사항은 [{{site.data.keyword.mobilefoundation_long}} 문서](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html){: new_window}를 참조하십시오.
+세부사항은 [{{site.data.keyword.mobilefoundation_long}} 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html){: new_window}을 참조하십시오.

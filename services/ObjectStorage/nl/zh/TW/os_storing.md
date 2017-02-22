@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -38,14 +38,14 @@ lastupdated: "2016-12-06"
   ```
   {: pre}
 
-2. 執行下列指令，以建立新的 {{site.data.keyword.objectstorageshort}} 容器。您目前可以設定 *container_name* 變數。
+2. 執行下列指令，以建立 {{site.data.keyword.objectstorageshort}} 容器。您現在可以設定 *container_name* 變數。
 
   ```
   swift post <container_name>
   ```
   {: pre}
 
-**附註**：您收到錯誤訊息，請確認您已安裝[必備軟體](/docs/services/ObjectStorage/os_configuring.html#install-swift-client)。
+**附註**：如果收到錯誤訊息，請確認已安裝[必備軟體](/docs/services/ObjectStorage/os_configuring.html#install-swift-client)。
 
 3. 選用：若要驗證已建立容器，請執行下列指令來列出容器。
 

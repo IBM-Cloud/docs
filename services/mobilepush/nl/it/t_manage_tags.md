@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Gestione delle tag
 {: #manage_tags}
-Ultimo aggiornamento: 07 dicembre 2016
+Ultimo aggiornamento: 11 gennaio 2017
 {: .last-updated}
 
 Utilizza il dashboard {{site.data.keyword.mobilepushshort}} per creare ed eliminare tag per la tua applicazione e avviare quindi le notifiche basate sulle tag. La notifica basata sulle tag viene ricevuta dai dispositivi che hanno sottoscritto le tag.
@@ -122,47 +122,6 @@ BMSPush.retrieveSubscriptions(function(tags) {
 ```
 	{: codeblock}
 
-## Come ottenere le tag su Objective-C
-{: objc-get-tags}
-
-Copia i seguenti frammenti di codice nella tua applicazione iOS sviluppata con Objective-C per ottenere un elenco di tag sottoscritte dal dispositivo e per ottenere un elenco delle tag disponibili a cui può sottoscriversi il dispositivo.
-
-Utilizza la seguente API **retrieveAvailableTags** per ottenere un elenco delle tag disponibili a cui può sottoscriversi il dispositivo.
-
-```
-//Ottieni un elenco di tag disponibili a cui può sottoscriversi il dispositivo
-[push retrieveAvailableTagsWithCompletionHandler:
-^(IMFResponse *response, NSError *error){
- if(error){
-   [self updateMessage:error.description];
- } else {
-   [self updateMessage:@"Successfully retrieved available tags."];
- NSDictionary *availableTags = [[NSDictionary alloc]init];
- availableTags = [response tags];
-[self.appDelegateVC updateMessage:availableTags.description];
-}
-   }];
- ```
-	{: codeblock}
-
-Utilizza la API **retrieveSubscriptions** per ottenere un elenco delle tag sottoscritte dal dispositivo.
-
-
-```
-// Ottieni un elenco delle tag sottoscritte dal dispositivo.
-[push retrieveSubscriptionsWithCompletionHandler:
-^(IMFResponse *response, NSError *error) {
-  if(error){
-     [self updateMessage:error.description];
-   } else {
-   [self updateMessage:@"Successfully retrieved subscriptions."];
- NSDictionary *subscribedTags = [[NSDictionary alloc]init];
-subscribedTags = [response subscriptions];
-[self.appDelegateVC updateMessage:subscribedTags.description];
-}
-  }];
-  ```
-	{: codeblock}
 
 ## Come ottenere le tag su Swift
 {: swift-get-tags}
@@ -315,52 +274,11 @@ BMSPush.unsubscribe(tag, success, failure);
 ```
 	{: codeblock}
 
-## Sottoscrizione e annullamento di sottoscrizioni alle tag su Objective-C
-{: objc-subscribe-tags}
-
-Copia e incolla questo frammento di codice nella tua applicazione mobile Objective-C.
-
-Utilizza la API **subscribeToTags** per sottoscrivere a una
-                tag.
-
-```
-[push subscribeToTags:tags completionHandler:
-^(IMFResponse *response, NSError *error) {
-  if(error){
-     [self updateMessage:error.description];
-  }else{
-      NSDictionary* subStatus = [[NSDictionary alloc]init];
-      subStatus = [response subscribeStatus];
-      [self updateMessage:@"Parsed subscribe status is:"];
-      [self updateMessage:subStatus.description];
-  }
-  }];
-```
-	{: codeblock}
-
-Utilizza la API **unsubscribeFromTags** per annullare la sottoscrizione a una
-                tag.
-
-```
-[push unsubscribeFromTags:tags completionHandler:
-^(IMFResponse *response, NSError *error) {
-  if (error){
-       [self updateMessage:error.description];
- } else {
-     NSDictionary* subStatus = [[NSDictionary alloc]init];
-       subStatus = [response unsubscribeStatus];
-       [self updateMessage:subStatus.description];
-  }
-  }];
-```
-	{: codeblock}
 
 ## Sottoscrizione e annullamento di sottoscrizioni alle tag su Swift
 {: swift-subscribe-tags}
 
 Copia e incolla questo frammento di codice nella tua applicazione mobile Swift.
-
-**Sottoscrizione alle tag disponibili**
 
 Utilizza la API **subscribeToTags** per sottoscrivere a una
                 tag.
@@ -377,8 +295,6 @@ push.subscribeToTags(tagsArray: ["MyTag"], completionHandler: { (response, statu
 })
 ```
 	{: codeblock}
-
-**Annullare la sottoscrizione alle tag**
 
 Utilizza la API **unsubscribeFromTags** per annullare la sottoscrizione a una
                 tag.
@@ -410,7 +326,7 @@ bmsPush.subscribe(tagsArray,function(response) {
 ```
 	{: codeblock}
 
-Per annullare la sottoscrizione alle tag utilizza il metodo `unSubscribe`.
+Per annullare la sottoscrizione alle tag utilizza il metodo **unSubscribe**.
 
 ```
 var tagsArray = ["tag1", "Tag2"]

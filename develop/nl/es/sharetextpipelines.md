@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-29"
+lastupdated: "2016-12-21"
 
 ---
 
@@ -198,7 +198,7 @@ CF_SPACE |	Nombre de espacio
 CF_SPACE_ID |	GUID de espacio
 CF_APP	| Nombre de app
 
-*Tabla - Variables de entorno*
+{: caption="Table 1. Environment variables" caption-side="top"}
 
 **GENERACIÓN DE UN ARCHIVO YAML DESDE UN CONDUCTO** 
 

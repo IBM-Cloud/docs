@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-12"
+lastupdated: "2017-02-03"
 
 ---
 
@@ -63,6 +63,19 @@ The following code sample shows the typical format of a device management extens
 	}
 
 ```
+
+### Adding a custom device management package
+
+Custom device management packages can be added either by using the {{site.data.keyword.iot_short_notm}} dashboard, or by using the API.
+
+To add a custom device management package by using the {{site.data.keyword.iot_short_notm}} dashboard:
+
+1. From your {{site.data.keyword.iot_short_notm}} dashboard, click **Settings** from the navigation bar.
+2. Click **Custom Device Management Packages**.
+3. Click the **Add Package** button.
+4. Select your package file and click **Open**.
+
+To add a custom device management package by using the API, see the [{{site.data.keyword.iot_short_notm}} API documentation ![External link icon](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 ### Extension package properties
 
@@ -455,4 +468,4 @@ Use the following API requests to manage your devices:
 
 The following recipes demonstrate the flow that is required to handle Device Management Extensions:
 
-- [Device Management Extension Packages in WIoT Platform](https://developer.ibm.com/recipes/tutorials/device-management-extension-packages-in-wiot-platform/) recipe provides instructions to register a managed device with {{site.data.keyword.iot_short}} so that the device can receive and handle Device Management Extension actions. The code samples in the recipe are written using the Python Client Library.	
+- [Device Management Extension Packages in WIoT Platform ![External link icon](../../../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/device-management-extension-packages-in-wiot-platform/){: new_window} recipe provides instructions to register a managed device with {{site.data.keyword.iot_short}} so that the device can receive and handle Device Management Extension actions. The code samples in the recipe are written using the Python Client Library.

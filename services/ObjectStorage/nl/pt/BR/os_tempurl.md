@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2016-12-06"
 
 # Criando uma URL provisória {: #create-temporary-url}
 
-Uma URL provisória é uma URL longa, difícil de adivinhar que pode ser usada por um período especificado para fazer download de objetos sem requerer autenticação adicional.
+Uma URL provisória é uma URL longa e difícil de adivinhar que pode ser usada por um período especificado de tempo para fazer download de objetos sem exigir autenticação adicional nem dar acesso total à conta de armazenamento.
 {: shortdesc}
 
 
@@ -27,7 +27,7 @@ Uma URL provisória é uma URL longa, difícil de adivinhar que pode ser usada p
   {: pre}
   **Nota**: tome nota da sequência integral atrás de *Conta*, incluindo `AUTH_`.
 
-2. Configure uma chave secreta. Essa chave pode ser qualquer coisa que você selecionar, mas a melhor prática é selecionar uma sequência longa, aleatória e difícil de adivinhar. Para
+2. Configure uma chave secreta. Escolha uma sequência longa, aleatória e difícil de adivinhar. Para
 configurar a chave, execute o comando a seguir:
 
   ```
@@ -51,6 +51,7 @@ configurar a chave, execute o comando a seguir:
 
   A tabela a seguir explica os argumentos posicionais que o comando Swift `tempurl` executa.
   <table>
+  <caption> Tabela 1. Argumentos posicionais da URL provisória </caption>
     <tr>
       <th> Argumento </th>
       <th> Descrição </th>
@@ -72,8 +73,6 @@ configurar a chave, execute o comando a seguir:
       <td> A chave secreta que você configura na etapa 2. </td>
     </tr>
   </table>
-
-  Tabela 1: Argumentos posicionais da URL provisória
 
 5. Opcional: anexe a URL retornada ao nome do cluster para obter uma URL completa. É possível então usar a URL completa para fazer download de objetos com
 qualquer cliente HTTP compatível, como cURL, wget ou Firefox.

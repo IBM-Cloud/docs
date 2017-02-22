@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-31"
+  years: 2015, 2017
+lastupdated: "2017-01-10"
 
 ---
 {:new_window: target="_blank"}
@@ -154,6 +154,8 @@ obter mais informações sobre travamentos de aplicativo, veja [Travamentos de a
 	* Nome do alerta: alerta para travamentos de aplicativo
 	* Mensagem: alerta de travamento de aplicativo
 	* Frequência de consulta: travamentos de aplicativo
+		* Frequência de consulta: 2 minutos
+	* Tipo de evento: travamentos do aplicativo
 		* Nome do aplicativo: qualquer aplicativo
 		* Versão do aplicativo: qualquer versão
     * Tipo de Limite
@@ -202,7 +204,7 @@ problemas de seus aplicativos.
 ### Monitoramento de travamento de aplicativo
 {: #app-crash}
 
-A tabela **Visão geral de travamento** mostra as colunas de dados a seguir:
+Na página **Travamentos**, a tabela **Visão geral de travamento** mostra as colunas de dados a seguir:
 
 * Aplicativo: nome do aplicativo
 * Travamentos: número total de travamentos para esse aplicativo
@@ -220,8 +222,7 @@ A tabela **Visão geral de travamento** mostra as colunas de dados a seguir:
 ### Resolução de problemas de travamento de aplicativo
 {: #app-crash-troubleshooting}
 
-A página **Resolução de problemas** no console do <!-- **Applications** section of the -->{{site.data.keyword.mobileanalytics_short}} oferece uma visualização granular
-dos travamentos do seu app.
+A página **Resolução de problemas** no console do <!-- **Applications** section of the --> {{site.data.keyword.mobileanalytics_short}} oferece uma visualização granular dos travamentos do seu app, usando a tabela **Resumo do travamento**.
 
 A tabela **Resumo de travamento** é classificável e inclui as colunas de dados a seguir:
 
@@ -278,4 +279,7 @@ em **DashDB** na página **Exportar**. Após concluir a
 configuração, novos dados enviados para o {{site.data.keyword.mobileanalytics_short}} também
 serão encaminhados para o dashDB dentro de uma a duas horas. 
 
+<!--
+If you have existing DashDB instances, those instances will no longer accept new data because the incoming data no longer matches the schema. Manually add columns for the new data to resume incoming data. Modifying {{site.data.keyword.mobileanalytics_short}} collection tables by adding new columns also breaks the stream of incoming data.
+-->
 

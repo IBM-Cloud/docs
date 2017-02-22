@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
   
-lastupdated: "2016-08-18"
+lastupdated: "2017-01-11"
 
 ---
 
@@ -44,7 +44,7 @@ lastupdated: "2016-08-18"
 
  
 
-若要重新啟動您的帳戶，請與 [{{site.data.keyword.Bluemix_notm}} 支援中心](http://ibm.biz/bluemixsupport.com){: new_window}聯絡。在電子郵件中，您必須包含下列資訊：
+若要重新啟動您的帳戶，請聯絡 [{{site.data.keyword.Bluemix_notm}} 支援中心 ![外部鏈結圖示](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}。在電子郵件中，您必須包含下列資訊：
 {: tsResolve}
 
   * 您用來登入 {{site.data.keyword.Bluemix_notm}} 的 IBM ID。

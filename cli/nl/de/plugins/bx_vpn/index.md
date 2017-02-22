@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2015，20166
+  years: 2015，2017
 
 lastupdated: "2016-06-20"
 
@@ -19,7 +19,7 @@ lastupdated: "2016-06-20"
 
 *Version:* 1.4.0
 
-Sie können den {{site.data.keyword.vpn_full}}-Service mit der Befehlszeilenschnittstelle konfigurieren und verwalten. Das Plug-in für die {{site.data.keyword.vpn_short}}-Befehlszeilenschnittstelle ist in zwei Versionen verfügbar: für die Verwendung mit dem Plug-in für die Cloud Foundry-Befehlszeilenschnittstelle und für die Verwendung mit dem Plug-in für die {{site.data.keyword.Bluemix}}-Befehlszeilenschnittstelle. Von beiden Versionen des Plug-ins werden dieselben Funktionen bereitgestellt.  
+Sie können den {{site.data.keyword.vpn_full}}-Service mit der Befehlszeilenschnittstelle konfigurieren und verwalten. Das Plug-in für die {{site.data.keyword.vpn_short}}-Befehlszeilenschnittstelle ist in zwei Versionen verfügbar: für die Verwendung mit dem Plug-in für die Cloud Foundry-Befehlszeilenschnittstelle und für die Verwendung mit dem Plug-in für die {{site.data.keyword.Bluemix}}-Befehlszeilenschnittstelle. Von beiden Versionen des Plug-ins werden dieselben Funktionen bereitgestellt.
 {:shortdesc}
 
 Das {{site.data.keyword.vpn_short}}-Plug-in ist für Windows-, MAC- und Linux-Betriebssysteme verfügbar. Stellen Sie sicher, dass Sie das für Sie geeignete Plug-in verwenden.

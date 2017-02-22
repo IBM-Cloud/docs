@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Modalidades de pruebas y de producción
 {: #push-sandboxandproduction-modes}
-Última actualización: 06 de diciembre de 2016
+Última actualización: 11 de enero de 2017
 {: .last-updated}
 
 Puede utilizar {{site.data.keyword.mobilepushshort}} en cualquiera de las modalidades siguientes: prueba o producción. El recinto de pruebas es un entorno de prueba autocontenido para desarrollar y probar la integración de API push con el servicio push de la aplicación de servidor. 
@@ -25,8 +25,7 @@ Para conmutar la modalidad de operación del servicio push de pruebas a producci
 
 1. Utilice la llamada de la API PUT ApplicationID Settings REST
 2. En el cuerpo de JSON, confirme que la modalidad se ha cambiado utilizando la llamada de la API [GET ApplicationID Settings REST](https://mobile.{DomainName}/imfpush/){: new_window}. La respuesta esperada es "mode": "PRODUCTION
-```
-    { 
+```{ 
     "mode": "PRODUCTION"
  }
 ```

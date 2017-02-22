@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Einfache Benachrichtigungen an Chrome Apps and Extensions senden 
 {: #web_extensions_notifications}
-Letzte Aktualisierung: 06. Dezember 2016
+Letzte Aktualisierung: 11. Januar 2017
 {: .last-updated}
 
 Nach dem Entwickeln Ihrer Anwendungen können Sie Push-Benachrichtigungen senden. 

@@ -30,9 +30,7 @@ lastupdated: "2016-02-22"
 트리거는 키-값 쌍 사전을 사용하여 *실행*(활성화)될 수 있습니다. 이 사전을 *이벤트*라고 부르기도 합니다. 조치와 같이 각 트리거 실행으로 인해 활성화 ID가 발생합니다.
 
 트리거는 사용자에 의해 명시적으로 실행되거나 외부 이벤트 소스에 의해 사용자 대신 실행될 수 있습니다.
-*피드*는 {{site.data.keyword.openwhisk_short}}에 의해
-이용될 수 있는 트리거 이벤트를 실행하기 위해 외부 이벤트 소스를 구성하는 편리한 방법입니다. 피드의
-예는 다음과 같습니다.
+*피드*는 {{site.data.keyword.openwhisk_short}}에 의해 이용될 수 있는 트리거 이벤트를 실행하기 위해 외부 이벤트 소스를 구성하는 편리한 방법입니다. 피드의 예는 다음과 같습니다.
 - 데이터베이스 내의 문서가 추가되거나 수정될 때마다 트리거 이벤트를 실행하는 Cloudant 데이터 변경 피드
 - Git 저장소에 대한 커미트마다 트리거 이벤트를 실행하는 Git 피드
 
@@ -42,7 +40,8 @@ lastupdated: "2016-02-22"
 규칙은 하나의 트리거를 하나의 조치와 연관시키며 트리거를 실행할 때마다 입력으로 트리거 이벤트를 사용하여 해당 조치가 호출됩니다.
 
 적절한 규칙 세트를 사용하여 단일 트리거 이벤트가
-다중 조치를 호출하거나 조치가 다중 트리거의 이벤트에 대한 응답으로 호출될 수 있습니다.
+다중 조치를 호출하거나 조치가 다중 트리거의
+이벤트에 대한 응답으로 호출될 수 있습니다.
 
 예를 들어, 다음 조치가 있는 시스템을 고려해 보십시오.
 - 이미지에서 오브젝트를 발견하여 분류하는 `classifyImage` 조치
@@ -69,24 +68,24 @@ lastupdated: "2016-02-22"
 1. 다음 명령을 입력하여 트리거를 작성하십시오.
 
   ```
-wsk trigger create locationUpdate
+  wsk trigger create locationUpdate
   ```
   {: pre}
 
   ```
-ok: created trigger locationUpdate
+  ok: created trigger locationUpdate
   ```
   {: screen}
 
 2. 트리거 세트를 나열하여 작성된 트리거를 확인하십시오.
 
   ```
-wsk trigger list
+  wsk trigger list
   ```
   {: pre}
 
   ```
-triggers
+  triggers
   /someNamespace/locationUpdate                            private
   ```
   {: screen}
@@ -101,7 +100,7 @@ triggers
   {: pre}
 
   ```
-ok: triggered locationUpdate with id fa495d1223a2408b999c3e0ca73b2677
+  ok: triggered locationUpdate with id fa495d1223a2408b999c3e0ca73b2677
   ```
   {: screen}
 
@@ -115,29 +114,26 @@ ok: triggered locationUpdate with id fa495d1223a2408b999c3e0ca73b2677
 
 예를 들어, 위치 업데이트가 게시될 때마다 hello 조치를 호출하는 규칙을 작성하십시오.
 
-1. 사용할 조치 코드를 사용하여 'hello.js' 파일을 작성하십시오.
-  
+1. 사용할 조치 코드를 사용하여 'hello.js' 파일을 작성하십시오. 
   ```
-function main(params) {
+  function main(params) {
      return {payload:  'Hello, ' + params.name + ' from ' + params.place};
   }
   ```
   {: codeblock}
 
-2. 트리거 및 조치가 있는지 확인하십시오.
-  
+2. 트리거 및 조치가 있는지 확인하십시오. 
   ```
-wsk trigger update locationUpdate
-  ```
-  {: pre}
-
-  ```
-wsk action update hello hello.js
+  wsk trigger update locationUpdate
   ```
   {: pre}
 
-3. 규칙을 작성하십시오. 규칙은 작성 즉시 사용 가능합니다. 즉, 트리거의 활성화에 곧바로 응답할 수 있습니다. 세 가지 매개변수는 규칙, 트리거 및 조치의 이름입니다.
-  
+  ```
+  wsk action update hello hello.js
+  ```
+  {: pre}
+
+3. 규칙을 작성하십시오. 규칙은 작성 즉시 사용 가능합니다. 즉, 트리거의 활성화에 곧바로 응답할 수 있습니다. 세 가지 매개변수는 규칙, 트리거 및 조치의 이름입니다. 
   ```
   wsk rule create myRule locationUpdate hello
   ```
@@ -156,25 +152,24 @@ wsk action update hello hello.js
   {: pre}
 
   ```
-ok: triggered locationUpdate with id d5583d8e2d754b518a9fe6914e6ffb1e
+  ok: triggered locationUpdate with id d5583d8e2d754b518a9fe6914e6ffb1e
   ```
   {: screen}
 
-5. 최신 활성화를 검사하여 조치가 호출되었는지 확인하십시오.
-  
+5. 최신 활성화를 검사하여 조치가 호출되었는지 확인하십시오. 
   ```
-wsk activation list --limit 1 hello
+  wsk activation list --limit 1 hello
   ```
   {: pre}
 
   ```
-activations
+  activations
   9c98a083b924426d8b26b5f41c5ebc0d             hello
   ```
   {: screen}
 
   ```
-wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
+  wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
   ```
   {: pre}
   ```
@@ -186,8 +181,9 @@ wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
 
   hello 조치가 이벤트 페이로드를 수신하고 예상 문자열을 리턴한 것을 볼 수 있습니다.
 
-동일한 트리거를 다른 조치와 연관시키는 다중 규칙을 작성할 수 있습니다. 트리거 및 규칙은 패키지에 속할 수 없습니다. 그러나 규칙은 패키지에 속한 조치와 연결시킬 수 있습니다. 예:
-
+동일한 트리거를 다른 조치와 연관시키는 다중 규칙을 작성할 수 있습니다.
+트리거 및 규칙은 패키지에 속할 수 없습니다. 그러나 규칙은 패키지에 속한 조치와
+연결시킬 수 있습니다. 예: 
   ```
   wsk rule create recordLocation locationUpdate /whisk.system/utils/echo
   ```
@@ -200,3 +196,4 @@ wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
   wsk rule create anotherRule locationUpdate recordLocationAndHello
   ```
   {: pre}
+ 

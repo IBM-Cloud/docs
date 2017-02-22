@@ -196,3 +196,4 @@ sequence `recordLocationAndHello` that is activated by the rule `anotherRule`.
   wsk rule create anotherRule locationUpdate recordLocationAndHello
   ```
   {: pre}
+ 

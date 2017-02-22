@@ -1,18 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-17"
+  years: 2015, 2017
+
+lastupdated: "2017-01-11"
 
 ---
 
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#Surveillance et journalisation avec Cloud Foundry
+# Surveillance et journalisation avec Cloud Foundry
 {: #monitoringandlogging}
 
 
@@ -24,7 +25,7 @@ Les applications {{site.data.keyword.Bluemix}} peuvent être des applications à
 l'exécution de votre application et de ses données peut être partagée entre plusieurs services. Dans cet environnement complexe, la surveillance de vos
 applications et la consultation des journaux sont essentielles pour la gestion de vos applications.
 
-##Surveillance et journalisation d'applications Cloud Foundry
+## Surveillance et journalisation d'applications Cloud Foundry
 {: #monitoring_logging_bluemix_apps}
 
 {{site.data.keyword.Bluemix_notm}} intègre un mécanisme de journalisation qui génère des fichiers journaux pour vos applications, au cours de
@@ -42,28 +43,20 @@ Pour un fonctionnement stable de vos déploiements sur la plateforme {{site.data
 rapidement et identifier les causes efficacement. Pour ce faire, gardez l'aspect traitement des incidents à l'esprit lorsque vous concevez vos applications
 et utilisez des services ou des outils de surveillance et de journalisation lorsque votre application est déployée dans {{site.data.keyword.Bluemix_notm}}.
 
-###Surveillance des applications qui s'exécutent dans Cloud Foundry
+### Surveillance des applications qui s'exécutent dans Cloud Foundry
 {: #monitoring_bluemix_apps}
 
 Lorsque vous utilisez l'infrastructure Cloud Foundry pour exécuter vos applications dans {{site.data.keyword.Bluemix_notm}}, il est
-souhaitable d'avoir connaissance des informations sur la disponibilité et
-les performances d'une application, de savoir s'il s'agit d'une application Web
-affichée grâce à un navigateur ou de pouvoir définir un ensemble d'API
-auxquelles les applications mobiles se connectent. Utilisez la
-[surveillance
-de disponibilité Bluemix](https://console.ng.bluemix.net/catalog/services/availability-monitoring){:new_window} pour surveiller votre
-application depuis quinze emplacements géographiques différents à travers le
-monde. 
+souhaitable d'avoir connaissance des informations sur les performances, telles que l'état de santé, l'utilisation des ressources et les mesures du trafic. Elles
+vous permettent de prendre des décisions ou des mesures en conséquence.
 
-Pour surveiller les statistiques d'utilisation des ressources de vos
-applications {{site.data.keyword.Bluemix_notm}}, appliquez l'une des méthodes suivantes : 
+Pour surveiller des applications {{site.data.keyword.Bluemix_notm}}, appliquez l'une des méthodes suivantes :
 
-* Bluemix Monitoring and Analytics propose un service que vous pouvez
-utiliser pour surveiller les ressources et obtenir des diagnostics de votre
-application basée sur Node, Liberty ou Ruby. Pour plus d'informations, voir [Monitoring and Analytics](/docs/services/monana/index.html).
-* Options de tiers. Exemple : [New Relic](http://newrelic.com/){:new_window}.
+* Services {{site.data.keyword.Bluemix_notm}}. Monitoring and Analytics propose un service que vous pouvez utiliser pour surveiller les
+performances de votre application. De plus, ce service fournit également des fonctions d'analyse telles que l'analyse de journal. Pour plus d'informations, voir [Monitoring and Analytics](/docs/services/monana/index.html#gettingstartedtemplate).
+* Options de tiers. Par exemple, [New Relic ![icône de lien externe](../icons/launch-glyph.svg)](http://newrelic.com/){:new_window}.
 
-###Journalisation pour les applications qui s'exécutent dans Cloud Foundry
+### Journalisation pour les applications qui s'exécutent dans Cloud Foundry
 {: #logging_for_bluemix_apps}
 
 Des fichiers journaux sont créés automatiquement lorsque vous utilisez l'infrastructure Cloud
@@ -75,7 +68,7 @@ déploiement et l'exécution, vous pouvez consulter les journaux pour détermine
 
 
 
-###Format et conservation du journal
+### Format et conservation du journal
 {: #log_format}
 
 Dans les applications Cloud Foundry de l'environnement {{site.data.keyword.Bluemix_notm}} public, les données de journal sont stockées par
@@ -146,12 +139,14 @@ deuxième instance, etc.</dd>
 
 </dl>
 
-###Affichage des journaux
+### Affichage des journaux
 {: #viewing_logs}
 
-Vous pouvez afficher les journaux pour vos applications Cloud Foundry à trois endroits :
+Vous pouvez afficher les journaux pour vos applications Cloud Foundry à
+quatre endroits :
 
   * Dans le tableau de bord {{site.data.keyword.Bluemix_notm}}
+  * Dans le tableau de bord
   * Dans l'interface de ligne de commande
   * Sur des hôtes de journaux externes
 
@@ -165,8 +160,30 @@ Pour afficher les journaux de déploiement ou d'exécution, procédez comme suit
 Dans la console **Journaux**, vous pouvez afficher les journaux récents pour votre application ou afficher les dernières lignes des
 journaux en temps réel. De plus, vous pouvez filtrer les journaux par type et canal.
 
-**Remarque :** les journaux ne sont pas conservés en cas de panne ou après un déploiement d'application.
+**Remarque :** les journaux ne sont pas conservés en
+cas de panne ou après un déploiement d'application.
 
+
+#### Affichage des journaux dans le tableau de bord Kibana
+{: #viewing_logs_Kibana}
+
+Créez un tableau de bord personnalisé permettant d'afficher, de manière
+simple ou créative, les journaux des applications qui s'exécutent dans un espace.
+
+1. Ouvrez
+[https://logmet.<span class="keyword" data-hd-keyref="DomainName">NomDomaine</span>](https://logmet.{DomainName})
+pour vous connecter à l'interface utilisateur Kibana.
+2. Sélectionnez l'onglet **Kibana 3**.
+3. Si vous ne voyez aucun journal, ajustez le sélecteur de période situé
+dans l'en-tête.
+4. Sauvegardez le tableau de bord en tant que nouveau tableau de bord.
+  1. Dans la barre d'outils, cliquez sur l'icône
+**Save**.
+  2. Entrez un nom pour le tableau de bord.
+  3. En regard de la zone du nom, cliquez sur l'icône
+**Save**.
+
+Pour plus d'informations sur la personnalisation d'un tableau de bord Kibana, voir [cet article de blogue ![icône de lien externe](../icons/launch-glyph.svg)](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/){: new_window} ou la documentation [Kibana ![icône de lien externe](../icons/launch-glyph.svg)](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}.
 
 
 #### Affichage des journaux dans l'interface de ligne de commande
@@ -178,9 +195,7 @@ Choisissez l'une des options suivantes pour afficher les journaux depuis l'inter
 <li>Affichage des dernières lignes des journaux lorsque vous déployez des applications.
 <p>Utilisez la commande **cf logs** pour afficher les journaux de votre application et des composants système qui interagissent
 avec votre application lorsque vous déployez des applications dans {{site.data.keyword.Bluemix_notm}}. Vous pouvez entrer les commandes
-ci-dessous dans l'interface de ligne de commande cf. Pour plus d'informations sur les journaux cf, voir
-<a href="http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html" target="_blank">Log Types and Their Messages dans la documentation Cloud
-Foundry</a>. </p>
+ci-dessous dans l'interface de ligne de commande cf. Pour plus d'informations sur cf logs, voir <a href="http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html" target=" _blank">Log Types and Their Messages in Cloud Foundry <img src="../icons/launch-glyph.svg" alt="icône de lien externe"></a>. </p>
 <dl>
 <dt><strong>cf logs <var class="keyword varname">nom_app</var> --recent</strong></dt>
 <dd>Affichez les journaux récents.</dd>
@@ -198,18 +213,18 @@ Foundry</a>. </p>
 <p>Lorsque la journalisation des applications est activée, vous pouvez afficher les journaux d'application ci-après si vous rencontrez des problèmes liés
 à votre application à l'exécution. Les journaux d'application peuvent permettre de déterminer la cause de l'erreur.</p>
 
-<dl><strong>buildpack.log</strong></dt>
+<dl>
+<dt><strong>buildpack.log</strong></dt>
 <dd>
 <p>Ce fichier journal enregistre des événements d'information à granularité fine pour le débogage. Vous pouvez l'utiliser pour identifier les problèmes liés à l'exécution du pack de construction.</p>
 <p>Pour générer des données dans le fichier <span class="ph filepath">buildpack.log</span>, vous devez activer la fonction de trace du pack de construction
 avec la commande suivante :
    <pre class="pre">cf set-env <var class="keyword varname">nom_app</var> JBP_LOG_LEVEL DEBUG</pre>
-<p>
+</p>
 <p>Pour afficher ce journal, entrez la commande suivante :
 <pre class="pre">cf files <var class="keyword varname">nom_app</var> app/.buildpack-diagnostics/buildpack.log</pre>
 </p>
 </dd>
-
 <dt><strong>staging_task.log</strong></dt>
 <dd><p>Ce fichier journal enregistre des messages après les étapes principales de la tâche de constitution. Vous pouvez l'utiliser pour
 identifier les problèmes liés à la constitution.</p>
@@ -226,17 +241,19 @@ identifier les problèmes liés à la constitution.</p>
 #### Affichage des journaux à partir d'hôtes externes
 {: #viewing_logs_external}
 
-	 
+
 Lorsque des journaux sont générés, vous pouvez consulter les messages après un bref délai sur votre hôte de journaux externe. Ceux-ci sont similaires
 aux messages que vous pouvez afficher dans l'interface utilisateur de {{site.data.keyword.Bluemix_notm}} ou dans l'interface de ligne de commande
 cf.  S'il existe plusieurs instances de votre application, les journaux sont regroupés et vous pouvez tous les afficher. De plus, ils sont conservés en cas
 de panne et après un déploiement.
 
 **Remarque :** les journaux que vous affichez dans l'interface de ligne de commande ne sont pas au format syslog et il se peut
-qu'ils ne correspondent pas exactement aux messages qui sont affichés sur votre hôte de journaux externe. 
+qu'ils ne correspondent pas exactement aux messages qui sont affichés sur votre hôte de journaux externe.
 
 
-###Filtrage des journaux
+
+
+### Filtrage des journaux
 {: #filtering_logs}
 
 Pour afficher les journaux qui vous intéressent ou exclure le contenu que vous ne voulez pas afficher, vous pouvez utiliser la commande **cf
@@ -246,10 +263,10 @@ cf.
 * Pour afficher une partie des journaux à la place des journaux prolixes complets, utilisez l'option **cut**. Par exemple, pour
 afficher les informations de composant et de message, utilisez la commande suivante :
 ```
-cf logs nom_app --recent | cut -c 29-40,46- 
+cf logs nom_app --recent | cut -c 29-40,46-
 ```
 
-Pour plus d'informations sur l'option **grep**, entrez cut --help.
+Pour plus d'informations sur l'option **cut**, entrez cut --help.
 * Pour afficher les entrées de journal qui contiennent certains mots clés, utilisez l'option **grep**. Par exemple, pour afficher
 les entrées de journal contenant le mot clé `[APP`, utilisez la commande suivante :
 
@@ -270,28 +287,28 @@ journaux tiers ou sur un autre hôte.
 
 Pour transférer les journaux de votre application et du système vers un hôte de journaux externe, procédez comme suit :
 
-  1. Déterminez le noeud final de journalisation. 
-     
+  1. Déterminez le noeud final de journalisation.
+
 	 Vous pouvez envoyer des journaux à un regroupeur de journaux tiers, comme Papertrail,
 Splunk ou Sumologic. Vous pouvez aussi envoyer des journaux à un hôte syslog, un hôte syslog chiffré avec TLS (Transport Layer Security) ou un noeud final
 HTTPS POST. Les méthodes d'obtention de noeuds finaux de journalisation varient selon l'hôte de journaux.
 
   2. Créez une instance de service fournie par l'utilisateur.
-     
+
 	 Utilisez la commande `cf create-user-provided-service` (ou sa version courte `cups`) pour créer une instance de
-service fournie par l'utilisateur : 
+service fournie par l'utilisateur :
 	 ```
 	 cf create-user-provided-service <nom_service> -l <noeud_final_journalisation>
 	 ```
 	 &lt;nom_service&gt;
-	 
+
 	 Nom de l'instance de service fournie par l'utilisateur.
-	 
+
 	 &lt;noeud_final_journalisation&gt;
-	 
+
 	 Noeud final de journalisation auquel {{site.data.keyword.Bluemix_notm}} envoie des journaux. Reportez-vous au tableau suivant pour
 remplacer *noeud_final_journalisation* par la valeur appropriée :
-	 
+
 	 <table>
      <thead>
      <tr>
@@ -319,54 +336,53 @@ pour Papertrail.</td>
 	 <td>Ce noeud final doit se trouver sur l'Internet public et {{site.data.keyword.Bluemix_notm}} doit pouvoir y accéder.</td>
      </tr>
      </tbody>
-     </table>	
+     </table>
   3. Liez l'instance de service à votre application.
 
-	 Utilisez la commande suivante pour lier l'instance de service à votre application : 
-	
+	 Utilisez la commande suivante pour lier l'instance de service à votre application :
+
 	 ```
 	 cf bind-service <nom_app> <nom_service>
 	 ```
 	 &lt;nom_app&gt;
-	 
+
 	 Nom de votre application.
-	 
+
 	 &lt;nom_service&gt;
-	 
+
 	 Nom de l'instance de service fournie par l'utilisateur.
-	 
-  4. Reconstituez l'application. Entrez `cf restage nom_app` pour que les modifications soient appliquées. 
+
+  4. Reconstituez l'application. Entrez `cf restage nom_app` pour que les modifications soient appliquées.
 
 
-### Exemple : transmission des journaux d'application Cloud Foundry à Splunk 
+### Exemple : transmission des journaux d'application Cloud Foundry à Splunk
 {: #splunk}
 
 Dans cet exemple, un développeur nommé Jeanne crée un serveur virtuel à l'aide d'IBM Virtual Servers Beta et de l'image Ubuntu.  Jeanne tente de transmettre
-les journaux d'application Cloud Foundry de {{site.data.keyword.Bluemix_notm}} à Splunk. 
+les journaux d'application Cloud Foundry de {{site.data.keyword.Bluemix_notm}} à Splunk.
 
   1. Pour commencer, Jeanne configure Splunk.
 
-     a. Jeanne télécharge Splunk Light depuis le site [Download Splunk
-Light](https://www.splunk.com/en_us/download/splunk-light.html){:new_window}, puis l'installe via la commande suivante. Le logiciel est installé sous /opt/splunk. 
-       
+     a. Jeanne télécharge Splunk Light depuis le site [Download Splunk Light ![icône de lien externe](../icons/launch-glyph.svg)](https://www.splunk.com/en_us/download/splunk-light.html){:new_window},
+puis l'installe à l'aide de la commande suivante. Le logiciel est installé sous */opt/splunk*.
+
 	    ```
         dpkg -i  ~/splunklight-6.3.0-aa7d4b1ccb80-linux-2.6-amd64.deb
         ```
-	   
+
      b. Jeanne installe et adjoint le module complémentaire RFC5424 de la technologie syslog pour son intégration avec
-{{site.data.keyword.Bluemix_notm}}. Pour les instructions d'installation du module complémentaire, reportez-vous au document
-[Cloud Foundry guideline](https://docs.cloudfoundry.org/devguide/services/integrate-splunk.html){:new_window}.  
+{{site.data.keyword.Bluemix_notm}}. Pour plus d'informations sur les instructions d'installation du module complémentaire, voir [Cloud Foundry guideline ![icône de lien externe](../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/devguide/services/integrate-splunk.html){:new_window}.
 
 	    Jeanne installe le module complémentaire via les commandes suivantes :
-        
+
 	    ```
         cd /opt/splunk/etc/apps
         tar xvfz ~/rfc5424-syslog_11.tgz
         ```
-	   
+
         Jeanne associe le module complémentaire en remplaçant */opt/splunk/etc/apps/rfc5424/default/transforms.conf* par un nouveau
 fichier *transforms.conf* contenant le texte suivant :
-	   
+
 	    ```
         [rfc5424_host]
         DEST_KEY = MetaData:Host
@@ -378,69 +394,66 @@ fichier *transforms.conf* contenant le texte suivant :
         FORMAT = prival::$1 appname::$2 procid::$3 msgid::$4
         MV_ADD = true
         ```
-        {:screen}	   
+        {:screen}
 
      c. Une fois Splunk configuré, Jeanne doit ouvrir certains ports sur la machine Ubuntu pour accepter le flux syslog entrant
 (port 5140) et l'interface utilisateur Web de Splunk (port
 8000) vu que, par défaut, le pare-feu est en place sur le serveur virtuel {{site.data.keyword.Bluemix_notm}}.
-	   
-	    **Remarque :** la configuration iptable est réalisée ici à des fins d'évaluation par Jeanne et n'est que temporaire. Pour configurer le
-paramètre de pare-feu dans le serveur virtuel Bluemix en environnement de production, reportez-vous au document
-[Network Security Groups](https://new-console.ng.bluemix.net/docs/services/networksecuritygroups/index.html){:new_window} pour plus
-d'informations.
-	 
+
+	    **Remarque :** la configuration iptable est réalisée ici à des fins d'évaluation par Jeanne et n'est que temporaire. Pour configurer le paramètre de pare-feu dans le serveur virtuel Bluemix en environnement de production, voir le document [Network Security Groups ![icône de lien externe](../icons/launch-glyph.svg)](https://new-console.ng.bluemix.net/docs/services/networksecuritygroups/index.html){:new_window} afin d'avoir plus de détails.
+
 	   ```
 	   iptables -A INPUT -p tcp --dport 5140 -j ACCEPT
        iptables -A INPUT -p tcp --sport 5140 -j ACCEPT
        iptables -A INPUT -p tcp --dport 8000 -j ACCEPT
        iptables -A INPUT -p tcp --sport 8000 -j ACCEPT
 	   ```
-	   {:screen}	
-	  
+	   {:screen}
+
 	   Jeanne lance ensuite Splunk à l'aide de la commande suivante :
 
        ```
 	   /opt/splunk/bin/splunk start --accept-license
        ```
-		
+
   2. Jeanne configure les paramètres Splunk afin d'accepter le flux syslog de {{site.data.keyword.Bluemix_notm}}. Elle doit créer une entrée de données
 pour le flux syslog.
 
      a. Depuis l'interface Web Splunk, Jeanne clique sur **Data > Data inputs**. Une liste des types d'entrées pris en
-charge par Splunk s'affiche. 
-	 
+charge par Splunk s'affiche.
+
      b. Elle sélectionne **TCP** vu que le flux syslog utilise ce protocole.
-	 
+
      c. Dans le panneau **TCP**, elle entre **5140** dans la zone **Port**, en laissant vides
 les autres zones, puis clique sur **Next**.
-	 
+
      d. Dans la liste **Source Type**, elle sélectionne **Uncategorized > rfc5424_syslog**.
-	 
+
      e. Pour le type **Method**, elle sélectionne **IP**.
-	 
+
      f. Dans la zone **Index**, Jeanne clique sur **Create a new index**. Elle nomme le nouvel index
 "bluemix", puis clique sur **Save**.
-	 
+
      g. Enfin, dans la fenêtre **Review**, Jeanne confirme que le paramètre est correct, puis clique sur
 **Submit** pour activer cette entrée de données.
 
   3. Dans {{site.data.keyword.Bluemix_notm}}, Jeanne crée un service de flux syslog et le lie à une application.
 
      a. Jeanne crée un service de flux à l'aide de la commande suivante dans l'interface de ligne de commande cf :
-	 
+
      ```
      cf cups splunk -l syslog://dummyhost:5140
      ```
-        
-     **Remarque :** *dummyhost* n'est pas le nom réel. Il est utilisé pour masquer le nom d'hôte véritable. 
+
+     **Remarque :** *dummyhost* n'est pas le nom réel. Il est utilisé pour masquer le nom d'hôte véritable.
 
      b. Jeanne lie le service de flux syslog à une application dans son espace, puis retransfère l'application.
-	 
+
 	 ```
      cf bind-service monapp splunk
      cf restage monapp
      ```
-		
+
 
 Jeanne teste son application, puis entre la chaîne de requête suivante dans l'interface Web de Splunk :
 
@@ -449,7 +462,7 @@ source="tcp:5140" index="bluemix" sourcetype="rfc5424_syslog"
 ```
 
 Jeanne observe un flux de journaux dans son interface Web Splunk. Bien qu'elle ait installé la version Splunk Light, Jeanne dispose toujours d'une capacité
-de 500 Mo par jour pour ses journaux.  
+de 500 Mo par jour pour ses journaux.
 
 ## Journalisation pour les applications Cloud Foundry dans
 {{site.data.keyword.Bluemix_dedicated_notm}} et {{site.data.keyword.Bluemix_local_notm}}
@@ -494,10 +507,7 @@ dans [Affichage des journaux](#hybrid_apps_logs_dash). Si vous
 ne disposez pas du bouton **Vue avancée**, la fonction n'est
 pas activée.
 
-* Pour activer la journalisation avancée dans votre environnement,
-suivez les étapes indiquées dans la documentation de
-[{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated)
-ou de [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local). 
+* Pour activer la journalisation avancée dans votre environnement, suivez les étapes indiquées dans la documentation de [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) ou de [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local).
 
 ### Conservation des journaux
 
@@ -523,13 +533,6 @@ cours d'exécution.
 4. Cliquez sur le bouton **Vue avancée**. La
 **Vue avancée** est une vue plus détaillée des journaux ;
 elle utilise Kibana, un outil de visualisation qui se sert des journaux
-et des données d'horodatage pour créer des visualisations personnalisées. Pour
-plus d'informations sur l'utilisation de la vue avancée, voir la documentation
-[Kibana](https://www.elastic.co/guide/en/kibana/current/index.html).
+et des données d'horodatage pour créer des visualisations personnalisées. Pour plus d'informations sur l'utilisation de la vue avancée, voir la documentation [Kibana ![icône de lien externe](../icons/launch-glyph.svg)](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}.
 
-Vous pouvez ensuite personnaliser un tableau de bord Kibana. Pour plus
-d'informations, voir
-[Personnalisation
-de l'affichage des journaux dans le tableau de bord Kibana](/docs/containers/monitoringandlogging/container_ml_logs.html#container_ml_dash_logs_custom).
-
-
+Vous pouvez ensuite personnaliser un tableau de bord Kibana. Pour plus d'informations, voir [Personnalisation de l'affichage des journaux dans le tableau de bord Kibana](/docs/containers/monitoringandlogging/container_ml_logs.html#container_ml_dash_logs_custom).

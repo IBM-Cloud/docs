@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,10 +12,10 @@ copyright:
 
 # FCM의 신임 정보 구성
 {: #create-push-enable-gcm}
-마지막 업데이트 날짜: 2016년 12월 6일
+마지막 업데이트 날짜: 2017년 1월 16일
 {: .last-updated}
 
-FCM(Firebase Cloud Messaging)은 Android 디바이스, Google Chrome과 Mozilla 웹 브라우저에 푸시 알림을 전달하는 데 사용되는 게이트웨이입니다. FCM이 GCM(Google Cloud Messaging)을 대체했습니다. FCM 신임 정보를 가져온 후 대시보드에서 {{site.data.keyword.mobilepushshort}} 서비스를 설정해야 합니다. 새 앱에 FCM 구성을 사용하십시오. 기존 앱은 계속해서 GCM 구성으로 작동합니다. 
+FCM(Firebase Cloud Messaging)은 Android 디바이스 및 Google Chrome에 푸시 알림을 전달하는 데 사용되는 게이트웨이입니다. FCM은 GCM(Google Cloud Messaging)의 새 버전입니다. 대시보드에서 {{site.data.keyword.mobilepushshort}} 서비스를 설정하려면 FCM 신임 정보를 가져와야 합니다. 새 앱에 FCM 구성을 사용하십시오. 기존 앱은 계속해서 GCM 구성으로 작동합니다. 
 
 ##발신인 ID 및 API 키 가져오기
 {: #android-senderid-apikey}
@@ -24,7 +24,7 @@ API 키는 안전하게 저장되어 {{site.data.keyword.mobilepushshort}} 서�
 
 FCM을 설정하려면 API 키와 발신인 ID를 생성하고 다음 단계를 완료하십시오. 
 
-1. [Firebase 콘솔](https://console.firebase.google.com/?pli=1)을 방문하십시오. 
+1. [Firebase 콘솔 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.firebase.google.com/?pli=1 "외부 링크 아이콘"){: new_window}을 방문하십시오.
 2. **새 프로젝트 작성**을 선택하십시오.  
 3. 프로젝트 작성 창에서 프로젝트 이름을 입력하고 국가/지역을 선택한 후 **프로젝트 작성**을 클릭하십시오. 
 3. 탐색 분할창에서 설정 아이콘을 클릭한 후 **프로젝트 설정**을 선택하십시오. 
@@ -44,12 +44,4 @@ FCM을 설정하려면 API 키와 발신인 ID를 생성하고 다음 단계를 
 4. **저장**을 클릭하십시오.
 5. 다음 단계. [Android의 알림 사용](c_enable_push.html) 또는 [Google Chrome 앱 및 확장 프로그램의 알림 사용](c_enable_push.html)을 설정하십시오. 
 
-###Google Chrome 및 Mozilla Firefox 웹 푸시 구성(FCM/GCM 사용)
-{: #config-gcm-mozilla}
 
-1. 푸시 대시보드 탐색 분할창에서 **구성**을 선택하십시오. 
-2. 웹 탭을 선택하십시오.
-	![WebPush 구성](images/webpush_configure.jpg)
-3. 푸시 알림을 수신하도록 등록할 웹 사이트의 URL과 FCM/GCM API 키를 구성하십시오. 
-4. **저장**을 클릭하십시오.
-5. 다음 단계. [Google Chrome 및 Mozilla Firefox 브라우저에 알림 사용](c_enable_push.html).

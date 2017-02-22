@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -14,10 +14,31 @@ lastupdated: "2017-01-17"
 
 # Setting up object versioning {: #setting-up-versioning}
 
-You can keep older versions of your objects automatically by setting up object versioning. With versioning, you can see a history of each object.
+You can keep older versions of your objects automatically, by setting up object versioning. With versioning, you can prevent unintentional overwrites and retrieve previous versions of your files.
 {: shortdesc}
 
-When you upload a new version of your file to your main container, the previous version is automatically moved into your backup container. If you delete the file from your main container, the most recent version is automatically moved from your backup container into the main container to replace the deleted file.
+
+#### How object versioning works
+
+Object versioning is a way for a user to store an object that might change. With versioning, the current version of your object is always available in your working container, and all previous versions are backed up in your archive container.
+
+<dl>
+  <dt>Store</dt>
+    <dd>A new object is an object that you are storing for the first time. This object can be a brand new object, or an edited object that you are uploading for the second time.</dd>
+  <dt>Archive</dt>
+    <dd>With versioning, when an object with the same name as an existing object is saved to the working container, the older object is moved to the archive container. A time stamp is appended to the name of the object.</dd>
+  <dt>Restore</dt>
+    <dd>If an object is deleted from the working container and an archived version of that object exists, the archived version is restored.  You can restore an archived object, at any time.</dd>
+</dl>
+
+![Object versioning overview](images/os_versioning.png)
+
+Figure 1. Object versioning overview
+
+
+#### Tutorial
+
+To understand object versioning, complete the following tutorial.
 
 1. Create a container and give it a name. Replace the variable *container_name* with the name you want to give your container.
 
@@ -29,7 +50,7 @@ When you upload a new version of your file to your main container, the previous 
 2. Create a second container to act as your backup storage and give it a name.
 
     ```
-    swift post <backup_container_name>
+    swift post <archive_container_name>
     ```
     {: pre}
 
@@ -38,77 +59,76 @@ When you upload a new version of your file to your main container, the previous 
     Swift command:
 
     ```
-    swift post <container_name> -H "X-Versions-Location: <backup_container_name>"
+    swift post <container_name> -H "X-Versions-Location: <archive_container_name>"
     ```
     {: pre}
 
     cURL command:
 
     ```
-    curl -i -X PUT -H "X-Auth-Token: <token>" -H "X-Versions-Location:<backup_container_name>" https://<object-storage_url>/<container_name>
+    curl -i -X PUT -H "X-Auth-Token: <token>" -H "X-Versions-Location:<archive_container_name>" https://<object-storage_url>/<container_name>
     ```
     {: pre}
 
-4. Upload an object to your main container for the first time.
+4. Upload an object to your working container for the first time.
 
     ```
     swift upload <container_name> <object>
     ```
     {: pre}
 
-5. Make a change to your object.
-
-6. Upload the new version of the object to your main container.
+5. Edit to your object and upload the new version to your working container.
 
     ```
     swift upload <container_name> <object>
     ```
     {: pre}
 
-7.  The objects in your backup container are automatically named with the following format: `<Length><Object_name>/<Timestamp>`.
-  <table>
-  <caption> Table 1. Naming attributes described </caption>
-    <tr>
-      <th> Attribute </th>
-      <th> Description </th>
-    </tr>
-    <tr>
-      <td> <i> Length </i> </td>
-      <td> The length of the name of your object. This is a 3-character, zero-padded hexadecimal number. </td>
-    </tr>
-    <tr>
-      <td> <i> Object_name </i> </td>
-      <td> The name of your object. </td>
-    </tr>
-    <tr>
-      <td> <i> Timestamp </i> </td>
-      <td> The timestamp of when that version of the object was originally uploaded. </td>
-    </tr>
-  </table>
+6.  The object in your archive container is automatically named with the following format: `<Length><Object_name>/<time stamp>`.
+    <table>
+    <caption> Table 1. Naming attributes described </caption>
+      <tr>
+        <th> Attribute </th>
+        <th> Description </th>
+      </tr>
+      <tr>
+        <td> <i> Length </i> </td>
+        <td> The length of the name of your object. This is a 3-character, zero-padded hexadecimal number. </td>
+      </tr>
+      <tr>
+        <td> <i> Object_name </i> </td>
+        <td> The name of your object. </td>
+      </tr>
+      <tr>
+        <td> <i> time stamp </i> </td>
+        <td> The time stamp of when that version of the object was originally uploaded. </td>
+      </tr>
+    </table>
 
-
-6. List the objects in your main container to see the new version of your file.
+7. List the objects in your working container to see the new version of your file.
 
     ```
     swift list --lh <container_name>
     ```
     {: pre}
 
-7. List objects in your backup container. You see the previous version of your file that is stored in this container. Note that a timestamp is added to your file.
+8. List the objects in your archive container to see the previous version of your file with an appended time stamp.
 
     ```
     swift list --lh <backup_container_name>
     ```
     {: pre}
 
-8. Delete the object in your main container. When you delete the object, the most recent version in your backup container is automatically moved back into your main container.
+9. Delete the object in your working container. The most recent version in your archive container is automatically restored to your working container.
+
+    **Note**: You must delete all versions of your file in order for the object to be deleted.
 
     ```
     swift delete <container_name> <object>
     ```
     {: pre}
 
-9. Optional: Disable object versioning.
+10. Optional: Disable object versioning.
 
     Swift command:
 

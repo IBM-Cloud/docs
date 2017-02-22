@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  year: 2016
-lastupdated: "2016-06-15"
+  year: 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
 
@@ -61,7 +61,8 @@ lastupdated: "2016-06-15"
 
   `state` 參數目前未在使用中，可以保留為空白。`redirect_uri` 參數是使用 Facebook 進行成功或失敗鑑別之後用於重新導向的 URI。
 
-1. 重新導向至授權端點之後，您將從 Facebook 取得登入表單。輸入使用者名稱和密碼來重新導向至 `redirect_uri`。
+1. 在重新導向至授權端點之後，您將從 Facebook 取得      
+   登入表單。輸入使用者名稱和密碼來重新導向至 `redirect_uri`。
    重新導向之後所取得的回應包含要求查詢參數中的授權碼。
 
 1. 對授權伺服器的記號端點提出 `POST` 要求：

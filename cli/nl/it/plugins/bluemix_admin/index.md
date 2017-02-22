@@ -2,9 +2,9 @@
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015, 2017
 
-lastupdated: "2016-10-26"
+lastupdated: "2017-01-12"
 
 ---
 
@@ -21,8 +21,7 @@ Puoi gestire gli ambienti {{site.data.keyword.Bluemix_notm}} locale o {{site.dat
 esempio, puoi aggiungere utenti da un registro LDAP. Se stai cercando informazioni sulla gestione del tuo account {{site.data.keyword.Bluemix_notm}} pubblico, vedi [Amministrazione](/docs/admin/adminpublic.html#administer).
 
 Prima di iniziare, installa l'interfaccia riga di comando cf. Il plug-in {{site.data.keyword.Bluemix_notm}} Admin
-CLI richiede cf versione 6.11.2 o successive. [Scarica
-l'interfaccia riga di comando Cloud Foundry](https://github.com/cloudfoundry/cli/releases){: new_window}
+CLI richiede cf versione 6.11.2 o successive. [Scarica interfaccia riga di comando Cloud Foundry ![icona link esterno](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}
 
 **Limitazione:** l'interfaccia riga di comando Cloud Foundry non
 è supportata da Cygwin. Utilizza l'interfaccia riga di comando Cloud Foundry
@@ -105,7 +104,10 @@ cf login
 </li>
 </ol>
 
-## Aggiunta di un utente
+## Gestione degli utenti
+{: #admin_users}
+
+### Aggiunta di un utente
 {: #admin_add_user}
 
 Per aggiungere un utente al tuo ambiente {{site.data.keyword.Bluemix_notm}} dal registro
@@ -130,7 +132,7 @@ il più lungo nome comando **ba add-user**.
 
 <!-- staging-only commands start. Live for interconnect -->
 
-## Ricerca di un utente
+### Ricerca di un utente
 {: #admin_search_user}
 
 Per ricercare un utente, utilizza il seguente comando insieme ai parametri di filtro di ricerca facoltativi
@@ -157,7 +159,7 @@ cf ba search-users -name=<valore_nome_utente> -permission=<valore_autorizzazione
 **Suggerimento: ** puoi anche utilizzare **ba su** come alias per
 il più lungo nome comando **ba search-users**.
 
-## Impostazione di autorizzazioni per un utente
+### Impostazione di autorizzazioni per un utente
 {: #admin_setperm_user}
 
 Per impostare le autorizzazioni per uno specifico utente, utilizza il seguente comando:
@@ -183,7 +185,7 @@ il più lungo nome comando **ba set-permissions**.
 
 <!-- staging-only commands end -->
 
-## Rimozione di un utente
+### Rimozione di un utente
 {: #admin_remov_user}
 
 Per rimuovere un utente dal tuo ambiente {{site.data.keyword.Bluemix_notm}}, utilizza il seguente comando:
@@ -203,7 +205,7 @@ cf ba remove-user <nome_utente>
 **Suggerimento: ** puoi anche utilizzare **ba ru** come alias per
 il più lungo nome comando **ba remove-user**.
 
-## Abilitazione dei gestori all'aggiunta di utenti
+### Abilitazione dei gestori all'aggiunta di utenti
 {: #clius_emau}
 
 Se disponi dell'autorizzazione **Superuser** nel tuo ambiente {{site.data.keyword.Bluemix_notm}}, puoi abilitare i gestori organizzazione ad aggiungere utenti alle organizzazioni che essi gestiscono. Per abilitare i gestori ad aggiungere utenti, utilizza il seguente comando:
@@ -216,7 +218,7 @@ cf ba enable-managers-add-users
 **Suggerimento:** puoi anche utilizzare **ba emau** come alias per il più lungo
 nome comando **ba enable-managers-add-users**.
 
-## Disabilitazione dei gestori all'aggiunta di utenti
+### Disabilitazione dei gestori all'aggiunta di utenti
 {: #clius_dmau}
 
 Se i gestori organizzazione sono stati abilitati ad aggiungere utenti alle organizzazioni che essi gestiscono nel tuo ambiente {{site.data.keyword.Bluemix_notm}} con il comando **enable-managers-add-users** e disponi dell'autorizzazione **Superuser**, puoi rimuovere questa impostazione.  Per disabilitare i gestori all'aggiunta di utenti, utilizza il seguente comando:
@@ -229,7 +231,10 @@ cf ba disable-managers-add-users
 **Suggerimento:** puoi anche utilizzare **ba dmau** come alias per il più lungo
 nome comando **ba disable-managers-add-users**.
 
-## Aggiunta di un'organizzazione
+## Amministrazione delle organizzazioni
+{: #admin_orgs}
+
+### Aggiunta di un'organizzazione
 {: #admin_add_org}
 
 Per aggiungere un'organizzazione, utilizza il seguente comando:
@@ -249,7 +254,7 @@ cf ba create-organization <organizzazione> <gestore>
 **Suggerimento: ** puoi anche utilizzare **ba co** come alias per
 il più lungo nome comando **ba create-organization**.
 
-## Eliminazione di un'organizzazione
+### Eliminazione di un'organizzazione
 {: #admin_delete_org}
 
 Per eliminare un'organizzazione, utilizza il seguente comando:
@@ -267,7 +272,7 @@ cf ba delete-organization <organizzazione>
 **Suggerimento: ** puoi anche utilizzare **ba do** come alias per
 il più lungo nome comando **ba delete-organization**.
 
-## Assegnazione di un utente a un'organizzazione
+### Assegnazione di un utente a un'organizzazione
 {: #admin_ass_user_org}
 
 Per assegnare un utente del tuo ambiente {{site.data.keyword.Bluemix_notm}} a
@@ -291,7 +296,7 @@ descrizioni.</dd>
 **Suggerimento: ** puoi anche utilizzare **ba so** come alias per
 il più lungo nome comando **ba set-org**.
 
-## Annullamento dell'assegnazione di un utente da un'organizzazione
+### Annullamento dell'assegnazione di un utente da un'organizzazione
 {: #admin_unass_user_org}
 
 Per annullare l'assegnazione di un utente del tuo ambiente {{site.data.keyword.Bluemix_notm}} da
@@ -316,7 +321,7 @@ descrizioni.</dd>
 **Suggerimento: ** puoi anche utilizzare **ba uo** come alias per
 il più lungo nome comando **ba unset-org**.
 
-### Assegnazione di ruoli
+#### Assegnazione di ruoli
 
 <dl class="parml">
 <dt class="pt dlterm">OrgManager</dt>
@@ -335,7 +340,7 @@ per l'organizzazione.</dd>
 spazio.</dd>
 </dl>
 
-## Impostazione di una quota per un'organizzazione
+### Impostazione di una quota per un'organizzazione
 {: #admin_set_org_quota}
 
 Per impostare la quota di utilizzo per una specifica organizzazione, utilizza il seguente comando:
@@ -356,7 +361,7 @@ cf ba set-quota <organizzazione> <piano>
 il più lungo nome comando **ba set-quota**.
 
 
-## Ricerca di quote contenitore per un'organizzazione
+### Ricerca di quote contenitore per un'organizzazione
 {: #admin_find_containquotas}
 
 Per trovare la quota per i contenitori di un'organizzazione, utilizza il seguente comando:
@@ -374,7 +379,7 @@ cf bluemix-admin containers-quota <organization>
 **Suggerimento:** puoi anche utilizzare **ba cq** come alias per il più lungo
 nome comando **bluemix-admin containers-quota**.
 
-## Impostazione di quote contenitore per un'organizzazione
+### Impostazione di quote contenitore per un'organizzazione
 {: #admin_set_containquotas}
 
 Per impostare la quota per i contenitori di un'organizzazione, utilizza il seguente comando con almeno una delle opzioni incluse:
@@ -439,7 +444,7 @@ Il file JSON deve avere il formato mostrato nel seguente esempio:
 **Suggerimento:** puoi anche utilizzare **ba scq** come alias per il più lungo
 nome comando **bluemix-admin set-containers-quota**.
 
-## Abilitazione dei servizi per tutte le organizzazioni
+### Abilitazione dei servizi per tutte le organizzazioni
 {: #admin_ena_service_org}
 
 Per abilitare la visualizzazione di un servizio nel
@@ -459,7 +464,7 @@ cf ba enable-service-plan <identificativo_piano>
 **Suggerimento:** puoi anche utilizzare **ba esp** come alias per il più lungo
 nome comando **ba enable-service-plan**.
 
-## Disabilitazione dei servizi per tutte le organizzazioni
+### Disabilitazione dei servizi per tutte le organizzazioni
 {: #admin_dis_service_org}
 
 Per disabilitare la visualizzazione di un servizio nel Catalogo {{site.data.keyword.Bluemix_notm}} per tutte le
@@ -478,7 +483,7 @@ cf ba disable-service-plan <identificativo_piano>
 **Suggerimento: ** puoi anche utilizzare **ba dsp** come alias per il più
 lungo nome comando **ba disable-service-plan**.
 
-## Aggiunta della visibilità dei servizi per le organizzazioni
+### Aggiunta della visibilità dei servizi per le organizzazioni
 {: #admin_addvis_service_org}
 
 Puoi aggiungere un'organizzazione dall'elenco di organizzazioni che possono vedere uno specifico servizio nel Catalogo {{site.data.keyword.Bluemix_notm}}. Per consentire a un'organizzazione di visualizzare uno specifico servizio nel
@@ -499,7 +504,7 @@ cf ba add-service-plan-visibility <identificativo_piano> <organizzazione>
 **Suggerimento:** puoi anche utilizzare **ba aspv** come alias per il più lungo
 nome comando **ba add-service-plan-visibility**.
 
-## Rimozione della visibilità dei servizi per le organizzazioni
+### Rimozione della visibilità dei servizi per le organizzazioni
 {: #admin_remvis_service_org}
 
 Puoi rimuovere un'organizzazione dall'elenco di organizzazioni che possono vedere
@@ -522,7 +527,7 @@ cf ba remove-service-plan-visibility <identificativo_piano> <organizzazione>
 **Suggerimento: ** puoi anche utilizzare **ba rspv** come alias per il più
 lungo nome comando **ba remove-service-plan-visibility**.
 
-## Modifica della visibilità dei servizi per le organizzazioni
+### Modifica della visibilità dei servizi per le organizzazioni
 {: #admin_editvis_service_org}
 
 Puoi modificare e sostituire l'elenco di servizi che specifiche
@@ -545,7 +550,10 @@ cf ba edit-service-plan-visibilities <identificativo_piano> <organizzazione_1> <
 **Suggerimento:** puoi anche utilizzare **ba espv** come alias per il più lungo
 nome comando **ba edit-service-plan-visibility**.
 
-## Aggiunta di report
+## Gestione dei report
+{: #admin_add_report}
+
+### Aggiunta di report
 {: #admin_add_report}
 
 Per aggiungere un report di sicurezza, utilizza il seguente comando:
@@ -573,7 +581,7 @@ hai incluso il percorso del PDF del report. La versione RTF è utilizzata per l'
 **Suggerimento: ** puoi anche utilizzare **ba ar** come alias per
 il più lungo nome comando **ba add-report**.
 
-## Eliminazione di report
+### Eliminazione di report
 {: #admin_del_report}
 
 Per eliminare un report di sicurezza, utilizza il seguente comando:
@@ -596,7 +604,7 @@ tra virgolette.</dd>
 **Suggerimento: ** puoi anche utilizzare **ba dr** come alias per
 il più lungo nome comando **ba delete-report**.
 
-## Recupero di report
+### Recupero di report
 {: #admin_retr_report}
 
 Per recuperare un report di sicurezza, utilizza il seguente comando:
@@ -618,7 +626,6 @@ tra virgolette.</dd>
 
 **Suggerimento: ** puoi anche utilizzare **ba rr** come alias per il più lungo nome comando **ba retrieve-report**.
 
-
 ## Visualizzazione delle informazioni sulle metriche della risorsa
 {: #cliresourceusage}
 
@@ -639,7 +646,11 @@ cf ba resource-metrics <monthly> <weekly>
 **Suggerimento:** puoi anche utilizzare **ba rsm** come alias per il più lungo
 nome comando **ba resource-metrics**.
 
-## Elenco dei broker dei servizi
+
+## Gestione dei broker di servizi
+{: #admin_servbro}
+
+### Elenco dei broker dei servizi
 {: #clilistservbro}
 
 Per elencare tutti i broker dei servizi, utilizza il seguente comando:
@@ -659,7 +670,7 @@ cf ba service-brokers <nome_broker>
 **Suggerimento: ** puoi anche utilizzare **ba sb** come alias per il più
 lungo nome comando **ba service-brokers**.
 
-## Aggiunta di un broker dei servizi
+### Aggiunta di un broker dei servizi
 {: #cliaddservbro}
 
 Per aggiungere un broker dei servizi, in modo da poter aggiungere un servizio personalizzato al tuo
@@ -684,7 +695,7 @@ cf ba add-service-broker <nome_broker> <nome_utente> <password> <url_broker>
 **Suggerimento:** puoi anche utilizzare **ba asb** come alias per il più lungo
 nome comando **ba add-service-broker**.
 
-## Eliminazione di un broker dei servizi
+### Eliminazione di un broker dei servizi
 {: #clidelservbro}
 
 Per eliminare un broker dei servizi per rimuovere il servizio personalizzato dal tuo
@@ -703,7 +714,7 @@ cf ba delete-service-broker <broker_servizi>
 **Suggerimento: ** puoi anche utilizzare **ba dsb** come alias per il più
 lungo nome comando **ba delete-service-broker**.
 
-## Aggiornamento di un broker dei servizi
+### Aggiornamento di un broker dei servizi
 {: #cliupdservbro}
 
 Per aggiornare un broker dei servizi, utilizza il seguente comando:
@@ -729,16 +740,17 @@ nome comando **ba update-service-broker**.
 
 
 ## Gestione dei gruppi di sicurezza dell'applicazione
+{: #admin_secgro}
 
 Per gestire i gruppi di sicurezza dell'applicazione (ASG), devi essere un amministratore con accesso completo all'ambiente locale o dedicato. Tutti gli utenti dell'ambiente possono elencare gli ASG disponibili per l'organizzazione a cui si fa riferimento con il comando. Tuttavia, per creare, aggiornare o associare gli ASG, devi essere l'amministratore dell'ambiente {{site.data.keyword.Bluemix_notm}}.
 
 I gruppi ASG funzionano come firewall virtuali che controllano il traffico dall'applicazione presente nel tuo ambiente {{site.data.keyword.Bluemix_notm}}. Ogni ASG è costituito da un elenco di regole che consentono un traffico specifico e la comunicazione da e verso la rete esterna. Puoi associare uno o più ASG a una specifica serie di gruppi di sicurezza, ad esempio a una serie di gruppi utilizzata per applicare l'accesso globale, oppure associarli agli spazi all'interno di un'organizzazione nel tuo ambiente {{site.data.keyword.Bluemix_notm}}.
 
-{{site.data.keyword.Bluemix_notm}} è inizialmente impostato con limitazioni a tutti gli accessi alla rete esterna. Due gruppi di sicurezza creati da IBM, `public_networks` e `dns`, abilitano l'accesso globale alla rete esterna quando esegui il bind di tali gruppi alla serie di gruppi di sicurezza Cloud Foundry predefinita. Le due serie di gruppi di sicurezza in Cloud Foundry utilizzate per applicare l'accesso globale sono **Preparazione predefinita** ed **Esecuzione predefinita**. Queste serie di gruppi applicano le regole per consentire il traffico a tutte le applicazioni in esecuzione o a tutte le applicazioni in fase di preparazione. Se non vuoi eseguire il bind a queste due serie di gruppi di sicurezza, puoi annullare il bind alle serie di gruppi Cloud Foundry e quindi associare il gruppo a uno specifico spazio. Per ulteriori informazioni, vedi [Binding Application Security Groups](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}.
+{{site.data.keyword.Bluemix_notm}} è inizialmente impostato con limitazioni a tutti gli accessi alla rete esterna. Due gruppi di sicurezza creati da IBM, `public_networks` e `dns`, abilitano l'accesso globale alla rete esterna quando esegui il bind di tali gruppi alla serie di gruppi di sicurezza Cloud Foundry predefinita. Le due serie di gruppi di sicurezza in Cloud Foundry utilizzate per applicare l'accesso globale sono **Preparazione predefinita** ed **Esecuzione predefinita**. Queste serie di gruppi applicano le regole per consentire il traffico a tutte le applicazioni in esecuzione o a tutte le applicazioni in fase di preparazione. Se non vuoi eseguire il bind a queste due serie di gruppi di sicurezza, puoi annullare il bind alle serie di gruppi Cloud Foundry e quindi associare il gruppo a uno specifico spazio. Per ulteriori informazioni, vedi [Binding Application Security Groups ![icona link esterno](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}.
 
-**Nota**: i seguenti comandi che consentono di gestire i gruppi di sicurezza, si basano su Cloud Foundry versione 1.6. Per ulteriori informazioni, inclusi i campi obbligatori e facoltativi, consulta la sezione Cloud Foundry relativa a [Creating Application Security Groups](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}.
+**Nota**: i seguenti comandi che consentono di gestire i gruppi di sicurezza, si basano su Cloud Foundry versione 1.6. Per ulteriori informazioni, inclusi i campi obbligatori e facoltativi, consulta la sezione Cloud Foundry relativa a [Creating Application Security Groups ![icona link esterno](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}.
 
-## Elenco dei gruppi di sicurezza
+### Elenco dei gruppi di sicurezza
 {: #clilissecgro}
 
 * Per elencare tutti i gruppi di sicurezza, utilizza il seguente comando:
@@ -767,10 +779,10 @@ cf ba security-groups <gruppo-di-sicurezza>
 **ba security-groups** con il parametro `security-group`.
 
 
-## Creazione di un gruppo di sicurezza
+### Creazione di un gruppo di sicurezza
 {: #clicreasecgro}
 
-Per ulteriori informazioni sulla creazione di gruppi di sicurezza e sulle regole che definiscono il traffico in uscita, vedi [Creating Application Security Groups](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}.
+Per ulteriori informazioni sulla creazione di gruppi di sicurezza e sulle regole che definiscono il traffico in uscita, vedi [Creating Application Security Groups ![icona link esterno](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}.
 
 Per creare un gruppo di sicurezza, utilizza il seguente comando:
 
@@ -791,7 +803,7 @@ Al nome di ciascun gruppo di sicurezza creato, viene aggiunto il prefisso `admin
 **Suggerimento:** puoi anche utilizzare **ba csg** come alias per il più lungo nome comando
 **ba create-security-group**.
 
-## Aggiornamento di un gruppo di sicurezza
+### Aggiornamento di un gruppo di sicurezza
 {: #cliupdsecgro}
 
 Per aggiornare un gruppo di sicurezza, utilizza il seguente comando:
@@ -811,7 +823,7 @@ cf ba update-security-group <gruppo-di-sicurezza> <percorso-del-file-di-regole>
 **Suggerimento:** puoi anche utilizzare **ba usg** come alias per il più lungo nome comando
 **ba update-security-group**.
 
-## Eliminazione di un gruppo di sicurezza
+### Eliminazione di un gruppo di sicurezza
 {: #clidelsecgro}
 
 Per eliminare un gruppo di sicurezza, utilizza il seguente comando:
@@ -830,10 +842,10 @@ cf ba delete-security-group <gruppo-di-sicurezza>
 **ba delete-security-group**.
 
 
-## Esecuzione del bind dei gruppi di sicurezza
+### Esecuzione del bind dei gruppi di sicurezza
 {: #clibindsecgro}
 
-Per ulteriori informazioni sull'esecuzione del bind dei gruppi di sicurezza, vedi [Binding Application Security Groups](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}.
+Per ulteriori informazioni sull'esecuzione del bind dei gruppi di sicurezza, vedi [Binding Application Security Groups ![icona link esterno](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}.
 
 * Per eseguire il bind alla serie di gruppi di sicurezza Preparazione predefinita, utilizza il seguente comando:
 
@@ -884,10 +896,10 @@ cf ba bind-security-group <gruppo-di-sicurezza> <organizzazione> <spazio>
 **Suggerimento:** puoi anche utilizzare **ba bsg** come alias per il più lungo nome comando
 **ba bind-security-group**.
 
-## Annullamento del bind dei gruppi di sicurezza
+### Annullamento del bind dei gruppi di sicurezza
 {: #cliunbindsecgro}
 
-Per ulteriori informazioni sull'annullamento del bind dei gruppi di sicurezza, vedi [Unbinding Application Security Groups](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window}.
+Per ulteriori informazioni sull'annullamento del bind dei gruppi di sicurezza, vedi [Unbinding Application Security Groups ![icona link esterno](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window}.
 
 * Per annullare il bind dalla serie di gruppi di sicurezza Preparazione predefinita, utilizza il seguente comando:
 
@@ -938,7 +950,10 @@ cf ba unbind-security-group <gruppo-di-sicurezza> <organizzazione> <spazio>
 **Suggerimento:** puoi anche utilizzare **ba usg** come alias per il più lungo nome comando
 **ba unbind-staging-security-group**.
 
-## Elenco dei pacchetti di build
+## Gestione dei pacchetti di build
+{: #admin_buildpack}
+
+### Elenco dei pacchetti di build
 {: #clilistbuildpack}
 
 Se disponi di autorizzazioni di scrittura nel catalogo di applicazioni, puoi elencare i pacchetti di build. Per elencare tutti i pacchetti di build o visualizzarne uno specifico, utilizza il seguente comando:
@@ -956,7 +971,7 @@ cf ba buildpacks <nome_pacchettodibuild>
 **Suggerimento:** puoi anche utilizzare **ba lb** come alias per il più lungo
 nome comando **ba buildpacks**.
 
-## Creazione e caricamento di un pacchetto di build
+### Creazione e caricamento di un pacchetto di build
 {: #clicreupbuildpack}
 
 Se disponi di autorizzazioni di scrittura nel catalogo di applicazioni, puoi creare e caricare un pacchetto di build. Puoi caricare qualsiasi file compresso che presenta un tipo di file .zip. Per caricare un pacchetto di build, utilizza il seguente comando:
@@ -978,10 +993,10 @@ cf ba create-buildpack <nome_pacchettodibuild> <percorso_file> <posizione>
 **Suggerimento: ** puoi anche utilizzare **ba cb** come alias per il più lungo
 nome comando **ba create-buildpack**.
 
-## Aggiornamento di un pacchetto di build
+### Aggiornamento di un pacchetto di build
 {: #cliupdabuildpack}
 
-Se disponi di autorizzazioni di scrittura nel catalogo di applicazioni, puoi aggiornare un pacchetto di build esistente. Per aggiornare un pacchetto di build, utilizza il seguente comando:
+Se disponi di autorizzazioni di scrittura nel catalogo di applicazioni, puoi aggiornare un pacchetto di build esistente.  Per aggiornare un pacchetto di build, utilizza il seguente comando:
 
 ```
 cf ba update-buildpack <nome_pacchettodibuild> <posizione> <abilitato> <bloccato>
@@ -1002,10 +1017,10 @@ cf ba update-buildpack <nome_pacchettodibuild> <posizione> <abilitato> <bloccato
 **Suggerimento:** puoi anche utilizzare **ba ub** come alias per il più lungo
 nome comando **ba update-buildpack**.
 
-## Eliminazione di un pacchetto di build
+### Eliminazione di un pacchetto di build
 {: #clidelbuildpack}
 
-Se disponi di autorizzazioni di scrittura nel catalogo di applicazioni, puoi eliminare un pacchetto di build esistente. Per eliminare un pacchetto di build, utilizza il seguente comando:
+Se disponi di autorizzazioni di scrittura nel catalogo di applicazioni, puoi eliminare un pacchetto di build esistente.  Per eliminare un pacchetto di build, utilizza il seguente comando:
 
 ```
 cf ba delete-buildpack <nome_pacchettodibuild>

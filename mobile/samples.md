@@ -6,7 +6,7 @@ lastupdated: "2017-01-17"
 
 ---
 # Samples
-{: #sdk}
+{: #samples}
 
 To following samples demonstrate how to use the {{site.data.keyword.mobilepushfull}}, {{site.data.keyword.amafull}}, and {{site.data.keyword.mobileanalytics_full}} services.
 

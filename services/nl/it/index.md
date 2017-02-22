@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-03"
+  years: 2016, 2017
+lastupdated: "2017-01-11"
 
 ---
 
@@ -23,7 +23,7 @@ Per i servizi {{site.data.keyword.Bluemix_notm}} vengono forniti più livelli di
 |Tipo	|Descrizione	|Dettagli sul supporto|
 |:------|:--------------|:--------------|
 |IBM	|Un servizio fornito da IBM e che è generalmente disponibile.	|Viene fornito supporto per i problemi considerati come un difetto
-in un servizio fornito da IBM generalmente disponibile. Il supporto viene fornito in base alla severità da te impostata. Per ulteriori informazioni sulla severità del ticket, vedi [Come contattare il supporto](/docs/support/index.html#contacting-bluemix-support){: new_window}.|
+in un servizio fornito da IBM generalmente disponibile. Il supporto viene fornito in base alla severità da te impostata. Per ulteriori informazioni sulla severità del ticket, vedi [Come contattare il supporto](/docs/support/index.html#contacting-bluemix-support).|
 |Terze parti	|Un servizio fornito da un'azienda diversa da IBM.	|Il supporto per i servizi di terze parti è fornito dal
 fornitore del servizio. Se un problema viene analizzato da IBM e tale problema viene considerato come un difetto in un servizio di terze parti, IBM non è tenuto a fornire una correzione. IBM condividerà l'analisi con il fornitore del servizio di terze parti laddove necessario.|
 |Community	|Un servizio fornito da una community
@@ -32,7 +32,7 @@ open source.	|Il supporto per i servizi di community viene fornito dalla Communi
 ed è a una fase di sviluppo di prova. Un servizio beta può aiutare i team di sviluppo
 e di marketing a valutare la qualità dei servizi prima di
 renderli generalmente disponibili.	|Viene fornito supporto per i problemi considerati come un difetto in un servizio beta fornito da IBM, tuttavia  IBM non è tenuto a fornire una correzione. Inoltre,
-laddove applicabile, al ticket del problema verrà assegnata una severità 3 o 4. Per informazioni sulla severità del ticket, vedi [Come contattare il supporto](/docs/support/index.html#contacting-bluemix-support){: new_window}.|
+laddove applicabile, al ticket del problema verrà assegnata una severità 3 o 4. Per informazioni sulla severità del ticket, vedi [Come contattare il supporto](/docs/support/index.html#contacting-bluemix-support).|
 {: caption="Table 1. {{site.data.keyword.Bluemix_notm}} services support information" caption-side="top"}
 
 ##Servizi sperimentali
@@ -105,7 +105,7 @@ Non tutti i servizi sono disponibili per l'acquisto in ogni regione {{site.data.
 |{{site.data.keyword.iot_short}}		|Ospitato a Dallas,USA		|Ospitato a Londra,UK		|Non disponibile nella regione|
 |{{site.data.keyword.iotrtinsights_short}}		|Ospitato a Dallas,USA		|Ospitato a Londra,UK		|Ospitato a Sydney,AU|
 |IoT Workbench		|Ospitato a Dallas,USA		|Ospitato a Londra,UK		|Ospitato a Sydney,AU|
-|{{site.data.keyword.keymanagementserviceshort}}	|Ospitato a Dallas,USA		|Ospitato a Londra,UK		|Non disponibile nella regione|
+|{{site.data.keyword.keymanagementserviceshort}}	|Ospitato a Dallas,USA		|Non disponibile nella regione		|Non disponibile nella regione|
 |{{site.data.keyword.languagetranslationshort}}	|Ospitato a Dallas,USA		|Ospitato a Dallas,USA		|Ospitato a Dallas,USA |
 |{{site.data.keyword.pm_short}}   |Ospitato a Dallas,USA		|Ospitato a Londra,UK		|Non disponibile nella regione|
 |{{site.data.keyword.eventhubshort}}		|Ospitato a Dallas,USA		|Non disponibile nella regione		|Non disponibile nella regione|
@@ -127,8 +127,6 @@ Non tutti i servizi sono disponibili per l'acquisto in ogni regione {{site.data.
 |{{site.data.keyword.runbook_short}}				|Ospitato a Dallas,USA		|Ospitato a Londra,UK			|Ospitato a Sydney,AU |
 |{{site.data.keyword.SecureGateway}}		|Ospitato a Dallas,USA		|Ospitato a Londra,UK		|Ospitato a Sydney,AU |
 |{{site.data.keyword.sescashort}}		|Ospitato a Dallas,USA		|Ospitato a Londra,UK		|Ospitato a Sydney,AU |
-|{{site.data.keyword.servicediscoveryshort}}		|Ospitato a Dallas,USA		|Ospitato a Londra,UK		|Non disponibile nella regione|
-|{{site.data.keyword.serviceproxyshort}}		|Ospitato a Dallas,USA		|Ospitato a Londra,UK		|Non disponibile nella regione|
 |{{site.data.keyword.ssofull}}			|Ospitato a Washington,USA		|Non disponibile nella regione		|Non disponibile nella regione|
 |{{site.data.keyword.speechtotextshort}}	|Ospitato a Dallas,USA		|Ospitato a Dallas,USA		|Ospitato a Dallas,USA |
 |{{site.data.keyword.streaminganalyticsshort}}	|Ospitato a Dallas,USA		|Ospitato a Londra,UK		|Ospitato a Londra,UK|

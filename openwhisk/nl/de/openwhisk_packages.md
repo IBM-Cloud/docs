@@ -3,8 +3,8 @@
 
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-02"
+  years: 2016, 2017
+lastupdated: "2017-01-04"
 
 
 ---
@@ -269,12 +269,11 @@ Feeds sind eine bequeme Methode zum Konfigurieren einer externen Ereignisquelle 
 5. Erstellen Sie eine Regel, die die Aktion `hello` jedes Mal aufruft, wenn der Auslöser `everyEightSeconds` aktiviert wird.
 
   ```
-  wsk rule create --enable myRule everyEightSeconds hello
+  wsk rule create myRule everyEightSeconds hello
   ```
   {: pre}
   ```
   ok: created rule myRule
-  ok: rule myRule is activating
   ```
   {: screen}
 
@@ -461,7 +460,7 @@ Wenn die Aktionen und Feeds, die ein Paket bilden, auf Fehler geprüft und getes
 1. Stellen Sie das Paket zur gemeinsamen Nutzung durch alle Benutzer bereit:
 
   ```
-  wsk package update custom --shared
+  wsk package update custom --shared yes
   ```
   {: pre}
   ```

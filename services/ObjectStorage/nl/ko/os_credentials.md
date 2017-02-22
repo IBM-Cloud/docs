@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -46,7 +46,6 @@ lastupdated: "2016-12-06"
   예:
   ```
   cf create-service-key "Object-Storage-AclTest" GeorgeKey -c '{"role":"member"}'
-
   ```
   {: screen}
 
@@ -86,7 +85,7 @@ lastupdated: "2016-12-06"
   ```
   {: pre}
 
-2. 서비스 신임 정보를 생성하려면 표에 설명된 변수를 사용하여 다음 명령을 실행하십시오. 
+2. 다음 명령을 실행하여 서비스 신임 정보를 생성하십시오. 
 
   ```
   curl "https://api.ng.bluemix.net/v2/service_keys" -d '{   "service_instance_guid": "<service_instance_guid>",   "name: <service_instance_name>", "role: <user_role>"}' -X POST -H "Authorization: <bearer_token>" -H "Content-Type: <content_type" -H "Cookie: <cookie>"
@@ -94,12 +93,13 @@ lastupdated: "2016-12-06"
   {: pre}
 
   <table>
+  <caption> 표 1. cURL 서비스 신임 정보 변수 설명</caption>
     <tr>
       <th> 변수 </th>
       <th> 설명 </th>
     </tr>
     <tr>
-      <td> https://api.ng.bluemix.net/v2/service_keys </td>
+      <td> <code>https://api.ng.bluemix.net/v2/service_keys</code> </td>
       <td> 서비스 키 엔드포인트입니다. </td>
     </tr>
     <tr>
@@ -112,7 +112,7 @@ lastupdated: "2016-12-06"
     </tr>
     <tr>
       <td><i> role </i></td>
-      <td> <a href= /docs/services/ObjectStorage/os_constructing.html>사용자 역할</a>을 관리자 또는 구성원으로 지정하십시오. </td>
+      <td> <a href= /docs/services/ObjectStorage/os_constructing.html>사용자 역할</a>을 admin 또는 member로 지정하십시오. </td>
     </tr>
     <tr>
       <td><i> bearer_token </i></td>
@@ -120,7 +120,7 @@ lastupdated: "2016-12-06"
     </tr>
   </table>
 
-  표 1: cURL 서비스 신임 정보 변수 설명
+
 
 3. 다음 명령을 실행하여 신임 정보 유효성을 검증하십시오. 
 

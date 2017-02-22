@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2016-11-28"
+lastupdated: "2017-01-13"
 
 ---
 {:new_window: target="_blank"}
@@ -73,7 +73,7 @@ By adding your own **custom events** you can answer questions like:
 Client-side logs and usage data are gathered automatically and sent to the Mobile Analytics service on demand. Developers and administrators can use the {{site.data.keyword.mobileanalytics_short}} service dashboard to view data that is gathered by the client SDK.
 
 ## Data visualization
-{: data-visualization}
+{: data-visualization notoc}
 
 All data that is collected by the analytics service can be visualized through the {{site.data.keyword.mobileanalytics_short}} dashboard which is accessible from your {{site.data.keyword.Bluemix_notm}} dashboard by clicking your IBM {{site.data.keyword.mobileanalytics_short}} service tile instance. <!--You can also create custom charts, based on data that is collected by the analytics service in the dashboard.--> In addition to an at-a-glance view of your mobile analytics, the analytics feature includes the capability to perform a raw search against client logs, captured client crash data, and any extra data that you explicitly provide through client API function calls that feed into the {{site.data.keyword.mobileanalytics_short}} service. 
 
@@ -118,19 +118,18 @@ Events per session can vary widely from 2 to several hundred, depending on what 
 	<dt>What is the difference between {{site.data.keyword.mobileanalytics_full}} and the mobile analytics found in MobileFirst Platform Foundation?</dt>
 		<dd>User and session are very similar in these two consoles, but analytics that come with MobileFirst Platform Foundation contains additional metrics and settings that allow clients to manage their own analytics cluster on-premises. Also, the MobileFirst Platform Foundation analytics console breaks out metrics for adapters and adapter procedures, whereas in the {{site.data.keyword.mobileanalytics_short}} service, these metrics are integrated into network request charts and tables.</dd>
 	<dt>I am using MobileFirst Platform Foundation on premises to develop my apps, but I don't want to host my own analytics cluster. Can I use {{site.data.keyword.mobileanalytics_full}} instead?</dt>
-		<dd>Yes. You have a couple of options: If you are using MobileFirst Platform Foundation 7.x or 8.0 and your apps are instrumented with MobileFirst Platform SDKs, you can configure your MobileFirst server to report analtyics data to {{site.data.keyword.mobileanalytics_short}} for {{site.data.keyword.Bluemix_notm}}. Read the [Configuring Mobile Analytics and Mobile Foundation Bluemix services](https://mobilefirstplatform.ibmcloud.com/blog/2016/07/11/analytics-bm-service/) blog post for details. Alternatively, you can instrument your apps using the {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.mobileanalytics_short}} SDK and report directly to the {{site.data.keyword.mobileanalytics_short}} service.</dd>
+		<dd>Yes. You have a couple of options: If you are using MobileFirst Platform Foundation 7.x or 8.0 and your apps are instrumented with MobileFirst Platform SDKs, you can configure your MobileFirst server to report analtyics data to {{site.data.keyword.mobileanalytics_short}} for {{site.data.keyword.Bluemix_notm}}. Read the [Configuring Mobile Analytics and Mobile Foundation Bluemix services ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://mobilefirstplatform.ibmcloud.com/blog/2016/07/11/analytics-bm-service/){: new_window} blog post for details. Alternatively, you can instrument your apps using the {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.mobileanalytics_short}} SDK and report directly to the {{site.data.keyword.mobileanalytics_short}} service.</dd>
 	<!-- <dt>My instance of  {{site.data.keyword.mobileanalytics_short}} does not look like the screen shots in the catalog. What's going on?</dt> -->
 		<!-- <dd>Most likely you are using the Classic view interface for {{site.data.keyword.Bluemix_notm}}. Classic view is deprecated, so {{site.data.keyword.mobileanalytics_short}} runs best in the new {{site.data.keyword.Bluemix_notm}} interface. If you are in Classic view, you will see a link in the {{site.data.keyword.Bluemix_notm}} header that says <strong>Try the new {{site.data.keyword.Bluemix_notm}}</strong>. Click that link to use the new interface.</dd> -->
 </dl>
 
 
-# rellinks
- {:class="linklist"}
+# Related Links
+{: #rellinks notoc}
 
 ## SDK
-{: rellink-sdk}
+{: #sdk notoc}
 <!-- Links to SDK download and SDK Developer Guide -->
-* [Android SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core)  
-* [iOS SDK](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core)  
+* [Android SDK ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core){: new_window} 
+* [iOS SDK ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core){: new_window}
 
-<!-- {:elementKind="article" id="rellinks"} -->

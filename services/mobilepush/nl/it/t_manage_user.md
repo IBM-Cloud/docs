@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Registrazione di un dispositivo con l'ID utente
 {: #register_device_with_userId}
-Ultimo aggiornamento: 07 dicembre 2016
+Ultimo aggiornamento: 11 gennaio 2017
 {: .last-updated}
 
 Per registrare la notifica basate sull'ID utente, completa la seguente procedura:
@@ -69,40 +69,6 @@ BMSPush.registerDevice(options,success, failure);
 
 - **userId**: passa il valore ID utente univoco per la registrazione per {{site.data.keyword.mobilepushshort}}.
 
-
-## Objective-C
-{: objc-register}
-
-Utilizza le seguenti API per registrare le {{site.data.keyword.mobilepushshort}} basate sull'ID utente.
-```
-// Inizializza MFPPush
-IMFPushClient* push = [IMFPushClient sharedInstance];
-[push initializeWithAppGUID:@"appGUID" clientSecret:@"clientSecret"];
-```
-	{: codeblock}
-
-
-- **AppGUID**: questa è la chiave AppGUID del servizio {{site.data.keyword.mobilepushshort}}.
-- **clientSecret**: questa è la chiave clientSecret del servizio {{site.data.keyword.mobilepushshort}}.
-
-Utilizza l'API **registerWithUserId** per registrare il dispositivo per {{site.data.keyword.mobilepushshort}}.
-```
-// Registra il dispositivo per il servizio push notifications.
-[push registerWithDeviceToken:deviceToken WithUserId:@"userId" completionHandler:^(IMFResponse *response, NSError *error) {
-  NSString *message=@"";
-	if (error){
-        message = [NSString stringWithFormat:@"Error registering for push notifications: %@", error.description];
-        NSLog(@"%@",message);
-    } else {
-     message=@"Successfully registered for push notifications";
-        NSLog(@"%@",message);
-    }
-}];
-```
-	{: codeblock}
-
-
-- **userId**: passa il valore ID utente univoco per la registrazione per {{site.data.keyword.mobilepushshort}}.
 
 ## Swift
 {: swift-register}

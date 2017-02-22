@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-31"
+  years: 2016, 2017
+lastupdated: "2017-01-31"
 
 ---
 
@@ -10,63 +10,62 @@ lastupdated: "2016-10-31"
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-## About IBM Hybrid Connect
+# About IBM {{site.data.keyword.HybridConnect_short}}
 {: #about_hybridconnect}
 
-{{site.data.keyword.HybridConnect_full}} is a Bluemix service, which is part of IBM Connect to Cloud. It connects your on-premises IBM software products to your Hybrid Connect service and provides insights into your running inventory and runtime usage metrics.
+{{site.data.keyword.HybridConnect_full}} is a Bluemix service, which is part of IBM Connect to Cloud. It connects your on-premises IBM software products to your {{site.data.keyword.HybridConnect_short}} service and provides insights into your running inventory and runtime usage metrics.
 
 {:shortdesc}
 
-The Experimental service is the entry point and more functions may be added in the future.
+The {{site.data.keyword.HybridConnect_short}} service is an entry point and more functions may be added in the future.
 
-Hybrid Connect includes the following goals at the Experimental phase:
+{{site.data.keyword.HybridConnect_short}} provides the following features:
 
-* To allow customers to register on-premises IBM software products with IBM, specifically with a Bluemix service.
-* To gather product information and usage data from enabled and configured on-premises software products.
-* To provide customers with a view of enabled and configured on-premises software products and their usage.
-* To provide runtime usage data for customers to gain more insights into the workload of those products.
+* Registration of your on-premises IBM software products with IBM, specifically with a Bluemix service.
+* Data collection for enabled and configured on-premise products and associated usage data.
+* Through a dashboard, you can view runtime usage data to provide real insights into your product usage and workload.
 
 
 To use the IBM Hybrid Connect capabilities, complete the following steps:
 
-1. Create at least one service within Bluemix of the Hybrid Connect.
-1. Update your on-premises IBM software products to their prerequisite levels, and add the enablement code for each product installation. 
-1. Configure the software installation to provide the credentials for the Hybrid Connect service instance. All of your data is securely stored with these credentials. The data is available only to the individuals with proper permissions to the service.
+1. Create at least one service within Bluemix for {{site.data.keyword.HybridConnect_short}}.
+1. Upgrade your on-premises IBM software products to the required release levels, and add the enablement code for each product installation. 
+1. Configure the software installation with the Bluemix credentials for your {{site.data.keyword.HybridConnect_short}} service instance. All of your data is securely stored with these credentials. The data is available only to the individuals with proper permissions to the service.
 
 
 
-### How it works
+## How it works
 {: #hybridconnect_howitworks}
-The {{site.data.keyword.HybridConnect_short}}  service integrates with your on-premises IBM software products to gather and display runtime product information and usage metrics. During the Experimental service phase, a subset of IBM software products is enabled to integrate with the service. The on-premises software products periodically send startup and usage information after they are enabled and configured. The startup and usage information is stored in relation to this service instance through the configured credentials. You can then view the information by using the service instance dashboard within Bluemix.
+The {{site.data.keyword.HybridConnect_full}} service integrates with your on-premises IBM software products to gather and display runtime product information and usage metrics. Initially, a subset of IBM software products is enabled to integrate with this service. When enabled and configured, on-premise software products periodically send startup and usage information. The information is stored in relation to this service instance through the configured credentials. You can use the service instance dashboard to view the information within Bluemix.
 
-The {{site.data.keyword.HybridConnect_full}} solution includes multiple components, as shown in the following graphic:
+The {{site.data.keyword.HybridConnect_short}} solution includes multiple components, as shown in the following graphic:
 
 ![{{site.data.keyword.HybridConnect_full}} architecture](images/architecture_hybridconnect.png "{{site.data.keyword.HybridConnect_full}} architecture").  
 
 
-### Organizations and spaces
+## Organizations and spaces
 {: #hybridconnect_orgs}
-Your {{site.data.keyword.HybridConnect_short}} service is associated with a single organization and space and has unique credentials. You must set up at least one organization and space. If you want to separate the data, for example, to limit access to specific individuals, you can create multiple spaces within an organization with one service instance in each space. Each service instance has unique credentials that you need to provide for your IBM software products.
+Your {{site.data.keyword.HybridConnect_full}} service is associated with a single organization and space and has unique credentials. You must set up at least one organization and space. If you want to separate the data, for example, to limit access to specific individuals, you can create multiple spaces within an organization with one service instance in each space. Each service instance has unique credentials that you need to provide for your IBM software products.
 
-Information for the products that are configured with a set of credentials is only visible within the service with those credentials. Multiple services can be created to separate the data if needed, each with unique credentials. For the Experimental service, a single service instance can be used for simplicity.
+Information for the products that are configured with a set of credentials is only visible within the service with those credentials. Multiple services can be created to separate the data if needed, each with unique credentials.
 
 
-### Service dashboard
+## Service dashboard
 {: #service_dashboard}
 After you create your service instance, you are directed to the service dashboard. You can always return to the service dashboard by clicking the service icon in your organization dashboard. From the service dashboard, you can access the following items:
 
 * The Getting started documentation
 * The service credentials that you need to configure your on-premises products
-* The inventory of enabled products and the runtime instances that are registered to the Hybrid Connect service instance
+* The inventory of enabled products and the runtime instances that are registered to the {{site.data.keyword.HybridConnect_short}} service instance
 * Product and environment information for the runtime instances
 * Usage information for the runtime instances
 
 If there are no registered products, a message is shown.
 ![Service dashboard with no registered products](images/NoRegisteredProducts.jpg "Service dashboard with no registered products")  
 
-### Product inventory
+## Product inventory
 {: #hybridconnect_products}
-After you configure your products to send data to  {{site.data.keyword.HybridConnect_short}}, you can view your inventory by selecting **Manage** in the service dashboard.
+After you configure your products to send data to {{site.data.keyword.HybridConnect_short}}, you can view your inventory by selecting **Manage** in the service dashboard.
 
 ![Service dashboard](images/products.png "Service dashboard") 
 
@@ -82,7 +81,7 @@ To show product instances of a single product, select that product from the **Pr
 In the example, the list of product instances is filtered to show only the instances of IBM Product ABC. You can see your selection at the top of the window.
 
 
-### Product instance information
+## Product instance information
 {: #hybridconnect_productinstances}
 When a product instance is selected, the *Details* pane is displayed on the right side. The Details pane shows details of the product instance and the usage information for that instance.
 
@@ -106,7 +105,7 @@ The product instance also provides the following optional information:
 
 ![Product instance details - Component tab](images/instancedetails-comps.png "Product instance details - Component tab") 
 
-### Usage information
+## Usage information
 {: #hybridconnect_usage}
 The usage information is shown on the **Usage** tab. Use the two drop-down lists to select the metric to display (if the product instance sends more than one metric) and the time period to be displayed.
 
@@ -117,9 +116,9 @@ The first section shows the average maximum, average, average minimum, and total
 A message is shown if there is no data for that time period. For example, a stopped instance would not provide data and no data will be shown for the time period when it was stopped. Other time periods can have usage to display. Change the time period in the drop-down to see other time periods.
 
 
-### Searching 
+## Searching 
 {: #hybridconnect_search}
-The **Product instance** pane provides a basic search capability to narrow down the product list. In the search field, type in the string that you want to use for the search. The search can be done only for product instance data (that is, the information in the **Details** tab). In the following example, from all product instances, the display is filtered to show only product instances that have the product instance data that contains 1.4. Only one instance in the list contains 1.4, IBM Product XYZ within the version attribute. The attribute that the search string is found in and the value of the search string are highlighted.
+The **Product instance** pane provides a basic search capability to filter the product list. In the search field, type in the string that you want to use for the search. The search can be done only for product instance data (that is, the information in the **Details** tab). In the following example, from all product instances, the display is filtered to show only product instances that have product instance data that contains 1.4. Only one instance in the list contains 1.4, IBM Product XYZ within the version attribute. The attribute that the search string is found in and the value of the search string are highlighted.
 
 
 
@@ -128,9 +127,9 @@ The **Product instance** pane provides a basic search capability to narrow down 
 ## Getting help for {{site.data.keyword.HybridConnect_short}}
 {: #gettinghelp}
 
-Detailed information about creating a service, getting the updates to the enabled IBM software products, and installation and configuration steps are found in the [IBM Connections Community for Hybrid Connect Experimental](https://apps.na.collabserv.com/communities/service/html/communityoverview?communityUuid=503c096d-ee56-4d05-888a-c5056adff0bd). If you have problems or questions when you are using {{site.data.keyword.HybridConnect_short}}, view or post questions in the forums section of the Community. These questions are handled by the development and customer programs team.
+Detailed information about creating a service, getting the updates to the enabled IBM software products, and installation and configuration steps are found in the [{{site.data.keyword.HybridConnect_full}} Customer Community](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W04c8ca6d7a05_453c_8e2d_b784cde378be). If you have problems or questions when you are using {{site.data.keyword.HybridConnect_short}}, view or post questions in the forums section of the Community. These questions are handled by the development and customer programs team.
 
-You can also use Stack Overflow and IBM DeveloperWorks dw Answers forums to view or post questions. For questions about the service and getting start instructions, use IBM developerWorks dW Answers. When you post a question on those two forums, apply the following tagging rules so that the Bluemix development teams can easily see your question.
+You can also use Stack Overflow and IBM DeveloperWorks dw Answers forums to view or post questions. For questions about the service and getting start instructions, use IBM developerWorks dW Answers. When you post a question on either of those two forums, apply the following tagging rules so that the Bluemix development teams can easily see your question.
 
 * If you post on [Stack Overflow](http://stackoverflow.com/search?q=hybrid-connect+ibm-bluemix){:new_window}, tag your question with "ibm-bluemix" and "hybrid-connect".
 * If you post on [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/hybrid-connect/?smartspace=bluemix){:new_window}, tag your questions with "hybrid-connect" and "bluemix".

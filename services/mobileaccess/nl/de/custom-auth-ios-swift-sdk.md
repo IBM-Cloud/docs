@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-27"
+  years: 2016, 2017
+lastupdated: "2017-01-16"
 
 ---
 
@@ -12,27 +12,26 @@ lastupdated: "2016-10-27"
 # Angepasste Authentifizierung für {{site.data.keyword.amashort}}-iOS-App konfigurieren (Swift-SDK)
 {: #custom-ios}
 
-Konfigurieren Sie Ihre iOS-Anwendung, die mit der angepassten Authentifizierung arbeitet, zur Verwendung des {{site.data.keyword.amafull}}-Client-SDK und verbinden Sie Ihre Anwendung mit {{site.data.keyword.Bluemix}}.  Das neu freigegebene {{site.data.keyword.amashort}}-Swift-SDK ergänzt und verbessert die vom vorhandenen Mobile Client Access-Objective-C-SDK bereitgestellte Funktionalität.
+Konfigurieren Sie Ihre iOS-Anwendung, die mit der angepassten Authentifizierung arbeitet, zur Verwendung des {{site.data.keyword.amafull}}-Client-SDK und verbinden Sie Ihre Anwendung mit {{site.data.keyword.Bluemix}}.  
 
-**Hinweis:** Das Objective-C-SDK wird zwar weiterhin vollständig unterstützt und gilt noch als primäres SDK für {{site.data.keyword.Bluemix_notm}} Mobile Services, seine Verwendung und Unterstützung sollen jedoch zugunsten des neuen Swift-SDK noch dieses Jahr eingestellt werden.
 
 ## Vorbereitungen
 {: #before-you-begin}
 
 Voraussetzungen:
 
-* Eine Ressource, die durch eine Instanz des {{site.data.keyword.amashort}}-Service geschützt wird, die zur Verwendung eines angepassten Identitätsproviders konfiguriert ist (siehe die Veröffentlichung zur [Konfiguration der angepassten Authentifizierung](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).  
+* Eine Ressource, die durch eine Instanz des {{site.data.keyword.amashort}}-Service geschützt wird, die zur Verwendung eines angepassten Identitätsproviders konfiguriert ist (siehe die Veröffentlichung zur [Konfiguration der angepassten Authentifizierung](custom-auth-config-mca.html)).  
 * Der Wert für die Tenant-ID. Öffnen Sie den Service im {{site.data.keyword.amashort}}-Dashboard. Klicken Sie auf die Schaltfläche **Mobile Systemerweiterungen**. Im Feld **App-GUID/TenantId** wird der Wert `tenantId` (auch als `appGUID` bezeichnet) angezeigt. Sie benötigen diesen Wert für die Initialisierung von Authorization Manager.
 * Der Realname. Dies ist der Wert, den Sie im Feld **Realmname** des Abschnitts **Angepasst** auf der Registerkarte **Management** des {{site.data.keyword.amashort}}-Dashboards angegeben haben.
 * Die URL der Back-End-Anwendung (**App-Route**). Sie benötigen diese Werte zum Senden von Anforderungen an die geschützten Endpunkte der Back-End-Anwendung.
 * Die {{site.data.keyword.Bluemix_notm}}-**Region**. Ihre aktuelle {{site.data.keyword.Bluemix_notm}}-Region finden Sie im Header neben dem Symbol **Avatar** ![Avatarsymbol](images/face.jpg "Avatarsymbol"). Der Regionswert, der angezeigt wird, sollte einer der folgenden sein: **USA (Süden)**, **Vereinigtes Königreich** oder **Sydney**. Zudem sollte er den Konstanten entsprechen, die im Code erforderlich sind: `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` oder `BMSClient.Region.sydney`.
 
 Weitere Informationen finden Sie über die folgenden Links:
- * [Einführung in {{site.data.keyword.amashort}}](https://console.{DomainName}/docs/services/mobileaccess/index.html)
- * [iOS-Swift-SDK einrichten](https://console.{DomainName}/docs/services/mobileaccess/getting-started-ios-swift-sdk.html)
- * [Angepassten Identitätsprovider verwenden](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)
- * [Angepassten Identitätsprovider erstellen](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)
- * [{{site.data.keyword.amashort}} für die angepasste Authentifizierung konfigurieren](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)
+ * [Einführung in {{site.data.keyword.amashort}}](index.html)
+ * [iOS-Swift-SDK einrichten](getting-started-ios-swift-sdk.html)
+ * [Angepassten Identitätsprovider verwenden](custom-auth.html)
+ * [Angepassten Identitätsprovider erstellen](custom-auth-identity-provider.html)
+ * [{{site.data.keyword.amashort}} für die angepasste Authentifizierung konfigurieren](custom-auth-config-mca.html)
 
 ### Gemeinsame Nutzung der Schlüsselkette (Keychain) für iOS aktivieren
 {: #enable_keychain}
@@ -100,11 +99,11 @@ Initialisieren Sie das SDK, indem Sie den Parameter `applicationGUID` (**TenantI
 {: codeblock}
 
 Gehen Sie im Code wie folgt vor:
-* Ersetzen Sie `MCAServiceTenantId` durch den Wert der **Tenant-ID** und `<applicationBluemixRegion>` durch Ihre {{site.data.keyword.amashort}}-**Region** (siehe [Vorbereitungen](##before-you-begin)). 
-* Verwenden Sie den Wert für `realmName`, den Sie im {{site.data.keyword.amashort}}-Dashboard angegeben haben (siehe [Angepasste Authentifizierung konfigurieren](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).
+* Ersetzen Sie `MCAServiceTenantId` durch den Wert der **Tenant-ID** und `<applicationBluemixRegion>` durch Ihre {{site.data.keyword.amashort}}-**Region** (siehe [Vorbereitungen](##before-you-begin)).
+* Verwenden Sie den Wert für `realmName`, den Sie im {{site.data.keyword.amashort}}-Dashboard angegeben haben (siehe [Angepasste Authentifizierung konfigurieren](custom-auth-config-mca.html)).
 * Ersetzen Sie `<applicationBluemixRegion>` durch die Region, in der Ihre {{site.data.keyword.Bluemix_notm}}-Anwendung per Hosting bereitgestellt wird. Klicken Sie zur Anzeige der {{site.data.keyword.Bluemix_notm}}-Region auf das Symbol 'Avatar' ![Avatarsymbol](images/face.jpg "Avatarsymbol") in der Menüleiste, um das Widget **Konto und Unterstützung** zu öffnen.  Der Regionswert, der angezeigt wird, sollte einer der folgenden sein: **USA (Süden)**, **Vereinigtes Königreich** oder **Sydney**. Zudem sollte er den Konstanten entsprechen, die im Code erforderlich sind: `BMSClient.Region.usSouth`, `BMSClient.Region.unitedKingdom` oder `BMSClient.Region.sydney`.
-   
-  
+
+
 ## Authentifizierung testen
 {: #custom-ios-testing}
 
@@ -156,7 +155,7 @@ Nachdem Sie das Client-SDK initialisiert und ein angepasstes Authentifizierungsd
 
 	 ```
 	 MCAAuthorizationManager.sharedInstance.logout(callBack)
-	 ``` 
+	 ```
 	 {: codeblock}
 
  Wenn Sie diesen Code aufrufen, nachdem sich ein Benutzer angemeldet hat, wird der Benutzer abgemeldet. Wenn der Benutzer versucht, sich wieder anzumelden, muss er auf die vom Server empfangene Anforderung erneut reagieren.

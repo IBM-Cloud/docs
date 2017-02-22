@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -21,18 +21,20 @@ representar um layout de diretório. Se você especificar um nome de diretório,
 
 Para incluir um diretório em um contêiner, deve-se ter a estrutura de diretório no local em seu dispositivo local.
 
-1. Localmente, crie um diretório e salve seu arquivo nele.
-2. Execute o comando a seguir para fazer upload de um diretório em seu contêiner:
-```
-swift upload <container_name> <directory_name>
-```
-{: pre}
+1. Localmente, crie um diretório e salve o seu arquivo.
+2. Execute o comando a seguir para fazer upload de um diretório para seu contêiner.
+
+    ```
+    swift upload <container_name> <directory_name>
+    ```
+    {: pre}
 
 ## Fazendo download de um diretório com a CLI
 Para fazer download de uma estrutura de diretório, use o parâmetro `-prefix` para indicar o diretório ou a estrutura de diretório da qual você deseja fazer download.
 
-1. Execute o comando a seguir para fazer download de um diretório:
-```
-swift download <container_name> --prefix <directory>
-```
-{: pre}
+1. Execute o comando a seguir para fazer download de um diretório.
+
+    ```
+    swift download <container_name> --prefix <directory>
+    ```
+    {: pre}

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2016, 2017
 lastupdated: "2016-11-30"
 
 ---
@@ -89,7 +89,7 @@ solicitações de rede para qualquer recurso.
 A classe `Request` é uma maneira simples de fazer uma solicitação de HTTP e
 de obter a resposta após a solicitação ser concluída. Se deseja mais flexibilidade e controle do que é
 possível obter com a classe `Request`, a classe `BMSURLSession`
-pode ser usada.  Alguns recursos da classe `BMSURLSession` incluem monitoramento do
+pode ser usada. Alguns recursos da classe `BMSURLSession` incluem monitoramento do
 progresso de uploads e pausa ou cancelamento de solicitações. Para obter as respostas, há a opção de
 escolher manipuladores ou delegados de conclusão.
 

@@ -194,7 +194,7 @@ d'événement.
 Vous pouvez créer plusieurs règles qui associent le même déclencheur à des actions différentes.
 Les déclencheurs et les règles ne peuvent pas appartenir à un package. Cependant,
 la règle peut être associée à une action qui appartient à un package, par
-exemple : 
+exemple :
   ```
   wsk rule create recordLocation locationUpdate /whisk.system/utils/echo
   ```
@@ -208,3 +208,4 @@ pouvez ainsi créer une séquence d'actions
   wsk rule create anotherRule locationUpdate recordLocationAndHello
   ```
   {: pre}
+ 

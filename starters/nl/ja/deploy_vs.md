@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2015，2016
+  years: 2015，2017
 
 lastupdated: "2016-06-25"
 
@@ -17,7 +17,7 @@ lastupdated: "2016-06-25"
 
 # Visual Studio を使用した開発
 
-  1. Visual Studio をまだインストールしていない場合は、[ここ](https://msdn.microsoft.com/en-us/library/e2h7fzkw.aspx){: new_window}に示されている手順に従って、Visual Studio 2015 または Visual Studio Code をインストールします。
+  1. Visual Studio をまだインストールしていない場合は、[ここ ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://msdn.microsoft.com/en-us/library/e2h7fzkw.aspx){: new_window} に示されている手順に従って、Visual Studio 2015 または Visual Studio Code をインストールします。
 
   1. {: download} スターター・コードをダウンロードし、ハード・ディスク上のフォルダーに解凍します。
 
@@ -28,4 +28,4 @@ lastupdated: "2016-06-25"
 
   1. コードを変更した後、CF または Bluemix の CLI ツールを使用して、コードを再デプロイできます。
 
-アプリのデプロイのステップバイステップ手順については、『[Deploying apps with CF CLI](./install_cli.html){: new_window}』を参照してください。
+アプリのデプロイに関するステップごとの詳しい手順の説明については、[Deploying apps with CF CLI ![「外部リンク」アイコン](../icons/launch-glyph.svg)](./install_cli.html){: new_window} を参照してください。

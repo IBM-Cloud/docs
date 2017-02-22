@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-07"
+  years: 2015, 2016, 2017
+lastupdated: "2016-12-01"
 
 ---
 
@@ -35,12 +35,10 @@ The {{site.data.keyword.iot_short_notm}} HTTP REST API supports the following ca
 - Device event publishing (beta)
 - Service status querying (retrieve service statuses by organization)
 
-## Accessing the HTTP REST API
+## Accessing the HTTP REST API documentation
 {: #api_link}
 
-To access the {{site.data.keyword.iot_short_notm}} HTTP REST API and obtain more information about how to build and customize your applications, go to  https://docs.internetofthings.ibmcloud.com/swagger/v0002.html.
-
-To access the {{site.data.keyword.iot_short_notm}} HTTP Messaging API and obtain more information about how to configure your applications to publish events and commands over HTTP, go to https://docs.internetofthings.ibmcloud.com/swagger/http-messaging.html.
+To access the {{site.data.keyword.iot_short_notm}} HTTP REST API documentation and obtain more information about how to build and customize your applications, go to  https://docs.internetofthings.ibmcloud.com/swagger/v0002.html.
 
 The only version of the {{site.data.keyword.iot_short_notm}} HTTP REST API that is supported is version 2. Ensure that your {{site.data.keyword.iot_short_notm}} solutions are using version 2.
 
@@ -62,6 +60,8 @@ In addition to using the MQTT messaging protocol, you can also configure your ap
 <pre class="pre">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/application/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
 {: codeblock}
 
+**Note:** Port 443, the default SSL port, can also be specified for secure HTTP API calls.
+
 ### Non-secure command POST request
 <pre class="pre">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/application/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">eventId</var></pre>
 {: codeblock}
@@ -72,7 +72,9 @@ In addition to using the MQTT messaging protocol, you can also configure your ap
 
 If you are connecting a device or application to the Quickstart service, replace **orgId** with the string 'quickstart'.
 
-NOTE: While applications can reuse an HTTP connection to post events or commands to different devices, the authorization HTTP header cannot be changed.
+**Notes:** 
+- While applications can reuse an HTTP connection to post events or commands to different devices, the authorization HTTP header cannot be changed. 
+- Port 443, the default SSL port, can also be specified for secure HTTP API calls.
 
 ### Authentication
 

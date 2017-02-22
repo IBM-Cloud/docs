@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-07"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
 
@@ -30,5 +30,5 @@ lastupdated: "2016-11-07"
 ## 다음 단계
 {: #next-steps}
 * [Android용 사용자 정의 인증 구성](custom-auth-android.html)
-* [iOS용 사용자 정의 인증 구성](custom-auth-ios.html)
+* [iOS용 사용자 정의 인증 구성](custom-auth-ios-swift-sdk.html)
 * [Cordova용 사용자 정의 인증 구성](custom-auth-cordova.html)

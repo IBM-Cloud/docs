@@ -62,8 +62,8 @@ Read more about operating this service in the <a href="/docs/services/mobilepush
 You can integrate your existing {{site.data.keyword.Bluemix_notm}} Mobile services, such as {{site.data.keyword.cloudant}}, into your project.
 
 
-#### Integrating {{site.data.keyword.cloudant}}
-{: #cloudant_integration}
+### Integrating {{site.data.keyword.cloudant}}
+{: #cloudant_integration notoc}
 
 To integrate your existing {{site.data.keyword.cloudant}} service, follow these steps:
 

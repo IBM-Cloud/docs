@@ -12,78 +12,71 @@ lastupdated: "2016-11-29"
 {:codeblock: .codeblock}
 
 
-#Creazione di un pulsante Distribuisci a {{site.data.keyword.Bluemix_notm}} {: #deploy-button} 
+#Creating a Deploy to {{site.data.keyword.Bluemix_notm}} button {: #deploy-button} 
 
-Il pulsante Distribuisci a {{site.data.keyword.Bluemix}} è un modo efficiente per condividere la tua applicazione originata da Git pubblica in modo che altri utenti possano sperimentarne il codice ed eseguirne la distribuzione a IBM {{site.data.keyword.Bluemix_notm}}. Il pulsante
-richiede una configurazione minima e puoi inserirlo dovunque siano supportate le markup. Un utente che fa clic sul pulsante crea
-una copia clonata del codice in un nuovo repository Git in modo che la tua applicazione originale rimanga invariata. 
+The Deploy to {{site.data.keyword.Bluemix}} button is an efficient way to share your public Git-sourced app so that other people can experiment with the code and deploy it to IBM {{site.data.keyword.Bluemix_notm}}. The button requires minimal configuration and you can insert it anywhere that supports markup. Anyone who clicks the button creates a cloned copy of the code in a new Git repository so that your original app remains unaffected. 
 {: shortdesc} 
 
-**Suggerimento:** se il branding dell'azienda è importante, puoi [incorporare un flusso iFrame Distribuisci a {{site.data.keyword.Bluemix_notm}}](/docs/develop/deploy_button_embed.html) nel tuo contenuto invece di inserire un pulsante. Quando le persone creano una copia clonata della tua applicazione
-originata da Git pubblica, restano nel tuo contenuto invece di essere reindirizzati al sito web di bluemix.net. 
+**Tip:** If company branding is important, you can [embed a Deploy to {{site.data.keyword.Bluemix_notm}} iFrame flow](/docs/develop/deploy_button_embed.html) in your content instead of inserting a button. When people create a cloned copy of your public Git-sourced app, they stay in your content instead of being redirected to the bluemix.net website. 
 
-**Nota**: è ora disponibile la funzione toolchain. Chiunque faccia clic sul pulsante Distribuisci a {{site.data.keyword.Bluemix_notm}}, può selezionare il link nel banner per provare a distribuire la propria applicazione utilizzando una toolchain.
+**Note**: The toolchains feature is now available. Anyone who clicks the Deploy to {{site.data.keyword.Bluemix_notm}} button can click the link in the banner to try deploying their application by using a toolchain.
 
-Quando qualcuno fa clic sul tuo pulsante, si verificano le seguenti azioni: 
+When someone clicks your button, these actions occur: 
 
-1. Se la persona non ha un account {{site.data.keyword.Bluemix_notm}} attivo,
-è necessario che venga creato un account di prova. 
+1. If the person does not have an active {{site.data.keyword.Bluemix_notm}} account, a trial account must be created. 
 
-2. La persona può selezionare una regione, organizzazione, spazio e nome applicazione. Il nome applicazione consigliato viene creato in base al nome applicazione precedente,
-al nome utente della persona e all'ora. 
+2. The person can select a region, organization, space, and app name. The suggested app name is constructed from the previous app name, the person's user name, and the time. 
 
-3. Il ramo master del repository Git pubblico originale viene clonato in un nuovo progetto {{site.data.keyword.jazzhub_title}} privato con un nuovo repository Git. 
+3. The master branch of the original public Git repository is cloned into a new, private {{site.data.keyword.jazzhub_title}} project with a new Git repository. 
 
-4. Se l'applicazione richiede un file di build, esso viene rilevato automaticamente e l'applicazione viene creata. 
+4. If the app requires a build file, the build file is detected automatically and the app is built. 
 
-5. Se per il processo di creazione e distribuzione è stata configurata una pipeline, l'applicazione viene distribuita con un file `pipeline.yml`.
+5. If a pipeline is configured for the build and deployment process,  a `pipeline.yml` file is used to deploy the app.
 
-6. Se l'applicazione richiede un contenitore, per distribuire l'applicazione in un contenitore {{site.data.keyword.Bluemix_notm}} vengono utilizzati un file `pipeline.yml`, che definisce il servizio **IBM Containers**, e un Dockerfile, che definisce un'immagine. 
+6. If the app requires a container, a `pipeline.yml` that defines the **IBM Containers** service and a Dockerfile that defines an image are used to deploy the app in a {{site.data.keyword.Bluemix_notm}} container. 
 
-7. L'applicazione viene distribuita all'organizzazione {{site.data.keyword.Bluemix_notm}} della persona. 
+7. The app is deployed to the person's {{site.data.keyword.Bluemix_notm}} organization. 
 
-##Esempi del pulsante {: #button-examples} 
+##Examples of the button {: #button-examples} 
 
-Vedi un esempio di pulsante dell'applicazione per un repository {{site.data.keyword.jazzhub_short}} pubblico:
+See an app button example for a public {{site.data.keyword.jazzhub_short}} repository:
 
 <p>
-<a class="xref" href="https://bluemix.net/deploy?repository=https://hub.jazz.net/git/idsorg/sample-java-cloudant" target="_blank" title="(Si apre in una nuova scheda o finestra)"><img class="image" src="images/deploy_buttonx2.png" alt="Distribuisci a Bluemix" /></a>
+<a class="xref" href="https://bluemix.net/deploy?repository=https://hub.jazz.net/git/idsorg/sample-java-cloudant" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/deploy_buttonx2.png" alt="Deploy to Bluemix" /></a>
 </p> 
 
-Vedi
-un esempio di pulsante dell'applicazione per un repository GitHub pubblico: 
+See an app button example for a public GitHub repository: 
 
 <p>
-<a class="xref" href="https://bluemix.net/deploy?repository=https://github.com/ibmjstart/bluemix-node-mysql-uploader" target="_blank" title="(Si apre in una nuova scheda o finestra)"><img class="image" src="images/deploy_buttonx2.png" alt="Distribuisci a Bluemix" /></a>
+<a class="xref" href="https://bluemix.net/deploy?repository=https://github.com/ibmjstart/bluemix-node-mysql-uploader" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/deploy_buttonx2.png" alt="Deploy to Bluemix" /></a>
 </p> 
 
-Vedi un esempio
-di pulsante per un'applicazione distribuita in un contenitore {{site.data.keyword.Bluemix_notm}}: 
+See a button example for an app that is deployed in a {{site.data.keyword.Bluemix_notm}} container: 
 
 <p>
-<a class="xref" href="https://bluemix.net/deploy?repository=https://github.com/Puquios/hello-containers" target="_blank" title="(Si apre in una nuova scheda o finestra)"><img class="image" src="images/deploy_buttonx2.png" alt="Distribuisci a Bluemix" /></a>
+<a class="xref" href="https://bluemix.net/deploy?repository=https://github.com/Puquios/hello-containers" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/deploy_buttonx2.png" alt="Deploy to Bluemix" /></a>
 </p> 
 
-##Creazione di un pulsante {: #create-button}
+##Creating a button {: #create-button}
 
-Per creare un pulsante Distribuisci a {{site.data.keyword.Bluemix_notm}}: 
+To create a Deploy to {{site.data.keyword.Bluemix_notm}} button: 
 
 <ol>
-<li> Copia e modifica uno dei seguenti template di frammento e includi un repository Git pubblico.
+<li> Copy and modify one of the following snippet templates and include a public Git repository.
 <p></p>
 <p>
-<strong>Suggerimento</strong>: se vuoi specificare l'input di build per un progetto DevOps Services, aggiungi un parametro di ramo all'URL Git. Quando aggiungi un parametro di ramo, il repository Git pubblico originale, inclusi tutti i sui rami, viene clonato in un nuovo progetto DevOps Services privato con un nuovo repository Git. Il ramo Git specificato viene impostato come input per il lavoro di build. Se non specifichi un ramo, l'input per il lavoro di build viene impostato sul ramo master per impostazione predefinita.
+<strong>Tip</strong>: If you want to specify the build input for a DevOps Services project, add a branch parameter to the Git URL. When you add a branch parameter, the original public Git repository, including all of its branches, is cloned into a new, private DevOps Services project with a new Git repository. The specified Git branch is set as the input for the build job. If you don't specify a branch, the input for the build job is set to the master branch by default.
 </p>
 <ul>
 <li>HTML:
 <p>
-Ramo master predefinito:
+Default master branch:
 </p>
 <pre class="codeblock">
 &lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL>" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"&gt;&lt;/a&gt;
 </pre>
 <p>
-Ramo Git specificato:
+Specified Git branch:
 </p>
 <pre class="codeblock">
 &lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;&branch=&lt;git_branch>" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"&gt;&lt;/a&gt;
@@ -91,12 +84,12 @@ Ramo Git specificato:
 </li>
 <li>Markdown:
 <p>
-Ramo master predefinito:
+Default master branch:
 </p>
 <pre class="codeblock">
 [&excl;[Deploy to Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;git_repository_URL> # [required]&rpar;
 </pre>
-<p>Ramo Git specificato:
+<p>Specified Git branch:
 </p>
 <pre class="codeblock">
 [&excl;[Deploy to Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;git_repository_URL> &branch=&lt;git_branch&gt; # [required]&rpar;
@@ -104,69 +97,62 @@ Ramo master predefinito:
 </li>
 </ul>
 </li>
-<li>Inserisci il frammento in blog, articoli, wiki, file readme o dovunque tu desideri
-promuovere la tua applicazione. 
+<li>Insert the snippet into blogs, articles, wikis, readme files, or anywhere you want to promote your app. 
 </li>
 </ol>
 
-##Considerazione sul frammento per il pulsante {: #button-snippet}
+##Snippet considerations for the button {: #button-snippet}
 
-Consulta queste considerazioni quando personalizzi il frammento per il pulsante Distribuisci a Bluemix. 
+Review these considerations when you are customizing the snippet for your Deploy to Bluemix button. 
 
-* Entrambi i template utilizzano un percorso predefinito a un'immagine pulsante esterna in formato PNG e in inglese. 
+* Both of the templates use a default path to an external button image in PNG format and in English. 
 
-    * Se preferisci utilizzare un'immagine SVG per il pulsante invece di un PNG, è disponibile una versione SVG. Puoi modificare il
-percorso all'immagine pulsante esterna utilizzata nel frammento impostandolo come `https://bluemix.net/deploy/button.svg`.
+    * If you prefer to use an SVG image for the button instead of a PNG, there is an SVG version available. You can change the path to the external button image that is used in the snippet to `https://bluemix.net/deploy/button.svg`.
 	
-	* Se preferisci utilizzare un'immagine più grande per il pulsante, è disponibile un'immagine PNG la cui dimensione è il doppio di quella originale. Puoi
-modificare il percorso dell'immagine pulsante esterna utilizzata nel frammento impostandolo come `https://bluemix.net/deploy/button_x2.png`. 
+	* If you prefer to use a larger image for the button, there is a PNG image available that is twice the size of the original. You can change the path of the external button image that is used in the snippet to `https://bluemix.net/deploy/button_x2.png`. 
 	
-	* Se preferisci memorizzare l'immagine localmente, puoi scaricare l'immagine e memorizzarla nel repository Git. Regola il percorso per utilizzare l'ubicazione relativa dell'immagine. 
+	* If you prefer to store the image locally, you can download the image and store it in your Git repository. Adjust the path to use the relative location of the image. 
 	
-	* Se vuoi utilizzare una versione tradotta del pulsante, puoi fare riferimento a esso in remoto oppure scaricarlo da [ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button](ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button). 
+	* If you want to use a translated version of the button, you can reference it remotely or download it from [ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button](ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button). 
 	
-##Considerazione sul repository per il pulsante {: #button-repo} 
+##Repository considerations for the button {: #button-repo} 
 
-Consulta queste considerazioni per il repository del progetto che utilizzerai nel pulsante Distribuisci a Bluemix. 
+Review these considerations for the project repository that you will use in your Deploy to Bluemix button. 
 
 <ul>
-<li>Non è necessario che un <code>manifest.yml</code> sia presente nel
-tuo repository. Tuttavia, se la tua applicazione richiede che siano eseguiti degli altri servizi, devi
-fornire un file manifest che dichiara tali servizi.  
+<li>A <code>manifest.yml</code> is not required to be in your repository. However, if your app requires other services to run, you must provide a manifest file that declares those services.  
 
-Con il file manifest, puoi specificare: 
+With the manifest file, you can specify: 
     <ul>
-    <li>Un nome applicazioni univoco.</li>  
-    <li>Declared services: un'estensione manifest, che crea o cerca i servizi obbligatori o facoltativi
-di cui è prevista la configurazione prima che venga distribuita l'applicazione, come ad esempio
-il servizio di memorizzazione nella cache dei dati. Puoi trovare un elenco dei piani, delle etichette e dei servizi {{site.data.keyword.Bluemix_notm}} idonei utilizzando l'<a href="https://github.com/cloudfoundry/cli/releases">interfaccia riga di comando CF</a> per eseguire il comando <code>cf marketplace</code> oppure sfogliando il <a href="https://console.ng.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-*-dWdevcenter-*-devops-services-_-lp#/store"> catalogo {{site.data.keyword.Bluemix_notm}}</a>. 
+    <li>A unique app name.</li>  
+    <li>Declared services: A manifest extension, which creates or looks for the required or optional services that are expected to be     set up before the app is deployed, such as a data cache service. You can find a list of the eligible     {{site.data.keyword.Bluemix_notm}} services, labels, and plans by using the <a href="https://github.com/cloudfoundry/cli/releases">CF Command Line Interface</a> to run the <code>cf marketplace</code> command or by browsing the <a href="https://console.ng.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-_-dWdevcenter-_-devops-services-_-lp#/store">{{site.data.keyword.Bluemix_notm}} catalog</a>. 
     
-    <strong>Nota:</strong> è un'estensione IBM del formato manifest Cloud Foundry standard. Questa estensione potrebbe essere modificata in una futura release man mano che la funzione si evolve e viene migliorata.
+    <strong>Note:</strong> Declared services is an IBM extension of the standard Cloud Foundry manifest format. This extension might be revised in a future release as the feature evolves and improves.
 	
-	<a href="http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html#minimal-manifest" target="_blank">Impara come creare un file <code>manifest.yml</code>.</a>  
+	<a href="http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html#minimal-manifest" target="_blank">Learn how to create a <code>manifest.yml</code> file.</a>  
 <pre class="codeblock">
 	---
     #Template manifest.yml
 
   declared-services:
-    &lt;`nome_istanza_servizio_arbitrario`&gt;:  # [obbligatorio]
-      label: &lt;`nome_servizio_effettivo`&gt; # [obbligatorio] Il nome servizio effettivo dal marketplace
-      plan: Shared # [facoltativo] Se fornito, utilizzato per richiamare il servizio dichiarato. Altrimenti, assume come valore predefinito 'Free' o 'free'.
+    &lt;`arbitrary_service_instance_name`&gt;:  # [required] 
+      label: &lt;`actual_service_name`&gt; # [required] The actual service name from market place 
+      plan: Shared # [optional] If provided, used to fetch the declared service. Otherwise, defaults to 'Free' or 'free'.
   applications:
   - services
-    - &lt;`nome_istanza_servizio_arbitrario`&gt;
-    name: &lt;`nomeapplicazione`&gt;
+    - &lt;`arbitrary_service_instance_name`&gt;
+    name: &lt;`appname`&gt;
     host: &lt;`apphostname`&gt;
 </pre>
 
 <pre class="codeblock">
 	---
-    #Esempio di manifest.yml
+    #Example manifest.yml
 
   declared-services: 
-      sample-java-cloudant-cloudantNoSQLDB:
-        label: cloudantNoSQLDB
-        plan: Shared
+      sample-java-cloudant-cloudantNoSQLDB: 
+        label: cloudantNoSQLDB 
+        plan: Shared 
   applications:
   - services
     - sample-java-cloudant-cloudantNoSQLDB
@@ -175,38 +161,36 @@ il servizio di memorizzazione nella cache dei dati. Puoi trovare un elenco dei p
 </pre>
    </li>
    </ul>
-	<li> Se occorre creare l'applicazione prima che possa essere distribuita, devi includere un file di build nel tuo repository. Se viene rilevato un file script di build nella directory root del repository, viene attivato un build automatico del codice prima della distribuzione.
+	<li> If the app must be built before it can be deployed, you must include a build file in your repository. If a build script file is detected in the root directory of the repository, an automated build of the code is triggered before deployment. 
 	
-	Builder supportati: 
+	Supported builders: 
 	    <ul>
-		<li> <a href="http://ant.apache.org/manual/using.html" target="_blank">Ant:</a> /<code>build.xml</code>, che crea l'output nella cartella <code>./output/</code> </li>
-		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank">Gradle:</a> <code>/build.gradle</code>, che crea l'output nella cartella <code>. </code> </li>
-		<li> <a href="http://gruntjs.com/getting-started#the-gruntfile" target="_blank">Grunt:</a> <code>/Gruntfile.js</code>,
-che crea l'output nella cartella <code>.</code> </li>
-		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven" target="_blank">Maven: </a> <code>/pom.xml</code>, che
-crea l'output nella cartella <code>./target/</code></li>
+		<li> <a href="http://ant.apache.org/manual/using.html" target="_blank">Ant:</a> /<code>build.xml</code>, which builds output to the <code>./output/</code> folder </li>
+		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank">Gradle:</a> <code>/build.gradle</code>, which builds output to the <code>. </code> folder </li>
+		<li> <a href="http://gruntjs.com/getting-started#the-gruntfile" target="_blank">Grunt:</a> <code>/Gruntfile.js</code>, which builds output to the <code>. </code> folder </li>
+		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven" target="_blank">Maven:</a> <code>/pom.xml</code>, which builds output to the <code>./target/</code> folder</li>
 	   </ul>
 	</li>	
-	<li>Per configurare la pipeline per il progetto, includi un file <code>pipeline.yml</code> in una directory <code>.bluemix</code>. Puoi creare un file <code>pipeline.yml</code> manualmente oppure puoi generarne uno da un progetto DevOps Services esistente. Per creare un file pipeline.yml da un progetto {{site.data.keyword.jazzhub_short}} e aggiungerlo al tuo repository, completa questa procedura. 
+	<li>To configure pipeline for the project, in a <code>.bluemix</code> directory, include a <code>pipeline.yml</code> file. You can create a <code>pipeline.yml</code> file manually or you can generate one from an existing DevOps Services project. To create a pipeline.yml file from a {{site.data.keyword.jazzhub_short}} project and add it to your repository, complete these steps. 
 <ol>
-<li>Apri il progetto DevOps Services in un browser e fai clic su <b>Crea e distribuisci</b>.</li>
-<li>Configura la tua pipeline con i lavori di creazione e distribuzione.</li>
-<li>Nel tuo browser, aggiungi <code>/yaml</code> all'URL del pipeline del progetto e premi Invio. 
-<br>Esempio: <code>https://hub.jazz.net/pipeline/<proprietario>/<nome_progetto>/yaml</code></li>
-<li>Salva il file <code>pipeline.yml</code> risultante.</li>
-<li>Nella directory root del tuo progetto, crea una directory <code>.bluemix</code>.</li>
-<li>Carica il file <code>pipeline.yml</code> nel repository <code>.bluemix</code>.</li>
+<li>Open your DevOps Services project in a browser and click <b>Build and Deploy</b>.</li>
+<li>Configure your pipeline with build and deployment jobs.</li>
+<li>In your browser, add <code>/yaml</code> to the project pipeline URL and press Enter. 
+<br>Example: <code>https://hub.jazz.net/pipeline/<owner>/<project_name>/yaml</code></li>
+<li>Save the resulting <code>pipeline.yml</code> file.</li>
+<li>In the root directory of your project, create a <code>.bluemix</code> directory.</li>
+<li>Upload the <code>pipeline.yml</code> file to the <code>.bluemix</code> repository.</li>
 </ol> </li>
-	<li>Per distribuire un'applicazione in un contenitore tramite <strong>IBM Containers</strong>, devi includere Dockerfile nella directory root del repository e un file <code>pipeline.yml</code> in una directory <code>.bluemix</code>.
+	<li>To deploy an app in a container by using <strong>IBM Containers</strong>, you must include Dockerfile in the root directory of the repository and, in a <code>.bluemix</code> directory, include a <code>pipeline.yml</code> file. 
 	<ul>
-	    <li>Il Dockerfile agisce come una sorta di script di build per l'applicazione. Se un Dockerfile viene rilevato nel repository, l'applicazione viene integrata automaticamente in un'immagine prima che venga distribuita in un contenitore. Se la stessa applicazione deve essere creata prima di essere integrata in un'immagine, includi uno script di build per l'applicazione insieme a un Dockerfile, come descritto in precedenza.</li>
-	    <li> Per saperne di più sulla creazione dei Dockerfile, <a href="https://docs.docker.com/reference/builder/" target="_blank">vedi la documentazione di Docker</a>. </li>
-	    <li>Puoi creare un file <code>pipeline.yml</code> manualmente oppure puoi generarne uno da un progetto DevOps Services esistente. Per creare manualmente un file <code>pipeline.yml</code> specifico per i contenitori, <a href="https://github.com/Puquios/" target="_blank">vedi gli esempi in GitHub</a>. </li>
+	    <li>The Dockerfile acts as a kind of build script for the app. If a Dockerfile is detected in the repository, the app is automatically built into an image before it is deployed in a container. If the app itself must be built before the app is built into an image, include a build script for the app as well as a Dockerfile, as previously described.</li>
+	    <li> To learn more about creating Dockerfiles, <a href="https://docs.docker.com/reference/builder/" target="_blank">see the Docker documentation</a>. </li>
+	    <li>You can create a <code>pipeline.yml</code> file manually or you can generate one from an existing DevOps Services project. To create a <code>pipeline.yml</code> manually that is specifically for containers, <a href="https://github.com/Puquios/" target="_blank">see the examples in GitHub</a>. </li>
         </ul>
 
  </li>
  </ul>
 </ul>
 
-Per un aiuto nella risoluzione dei problemi, vedi [Il pulsante Distribuisci a Bluemix non distribuisce un'applicazione](/docs/troubleshoot/index.html#deploytobluemixbuttondoesntdeployanapp){:new_window}.	
+For troubleshooting help, see [Deploy to Bluemix button doesn't deploy an app](/docs/troubleshoot/index.html#deploytobluemixbuttondoesntdeployanapp){:new_window}.	
 

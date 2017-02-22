@@ -1,18 +1,21 @@
 ---
 
 copyright:
-  year: 2016
-lastupdated: "2016-11-22"
+  year: 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
 {:codeblock: .codeblock}
+{:pre: .pre}
 
 # Habilitación de la autenticación de Google para aplicaciones web
 {: #google-auth-web}
 
-Utilice el inicio de sesión de Google para autenticar usuarios para la aplicación web. Añada la funcionalidad de seguridad de {{site.data.keyword.amafull}}. 
+Utilice el inicio de sesión de Google para autenticar usuarios para la aplicación web. Añada la funcionalidad de seguridad de {{site.data.keyword.amafull}}.
 
 
 ## Antes de empezar
@@ -28,11 +31,12 @@ Debe tener lo siguiente:
 ## Configuración de la aplicación de Google para su sitio web
 {: #google-auth-config}
 
-Para empezar a utilizar Google como proveedor de identidad, cree un proyecto en [Google Developer Console](https://console.developers.google.com). Parte de la creación de un proyecto consiste en obtener un **ID de cliente de Google** y **Secreto**. El ID de cliente de Google y Secreto son los únicos identificadores para la aplicación utilizados por la autenticación de Google y se necesitan para configurar el panel de control de {{site.data.keyword.amashort}}.
+Para empezar a utilizar Google como proveedor de identidad, cree un proyecto en la [Google Developer Console ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.developers.google.com "Icono de enlace externo"){: new_window}.
+Parte de la creación de un proyecto consiste en obtener un **ID de cliente de Google** y **Secreto**. El ID de cliente de Google y Secreto son los únicos identificadores para la aplicación utilizados por la autenticación de Google y se necesitan para configurar el panel de control de {{site.data.keyword.amashort}}.
 
-1. Abra la aplicación de Google en la consola del desarrollador de Google. 
-3. Añada la API de **Google+**. 
-3. Cree credenciales mediante OAuth. Seleccione la Aplicación web en el tipo de aplicación. Especifique el URI de redireccionamiento de {{site.data.keyword.amashort}} en el recuadro URI de redirección autorizados. Obtenga el URI de autorización de redireccionamiento de {{site.data.keyword.amashort}} desde la pantalla de configuración de Google del panel de control de {{site.data.keyword.amashort}} (consulte los pasos siguientes). 
+1. Abra la aplicación de Google en la consola del desarrollador de Google.
+3. Añada la API de **Google+**.
+3. Cree credenciales mediante OAuth. Seleccione la Aplicación web en el tipo de aplicación. Especifique el URI de redireccionamiento de {{site.data.keyword.amashort}} en el recuadro URI de redirección autorizados. Obtenga el URI de autorización de redireccionamiento de {{site.data.keyword.amashort}} desde la pantalla de configuración de Google del panel de control de {{site.data.keyword.amashort}} (consulte los pasos siguientes).
 4. Guarde los cambios realizados. Anote el **ID de cliente de Google** y el **Secreto de la aplicación**.
 
 
@@ -59,35 +63,35 @@ La variable de entorno `VCAP_SERVICES` se crea automáticamente para cada instan
 
 Para iniciar el proceso de autorización:
 
-1. Recupere el punto final de autorización (`authorizationEndpoint`) y el clientId (`clientId`) de las credenciales de servicio almacenadas en la variable de entorno `VCAP_SERVICES`. 
+1. Recupere el punto final de autorización (`authorizationEndpoint`) y el clientId (`clientId`) de las credenciales de servicio almacenadas en la variable de entorno `VCAP_SERVICES`.
 
-	`var cfEnv = require("cfenv");` 
-	
-	`var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;` 
+	`var cfEnv = require("cfenv");`
 
-	**Nota:** En el caso de que haya añadido el servicio de {{site.data.keyword.amashort}} a la aplicación antes de que se añadiera el soporte Web, es posible que no tenga el punto final de la señal en las credenciales del servicio. En este caso, utilice las URL siguientes, en función de la región de {{site.data.keyword.Bluemix_notm}}: 
- 
-	EE.UU. sur: 
+	`var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;`
+
+	**Nota:** En el caso de que haya añadido el servicio de {{site.data.keyword.amashort}} a la aplicación antes de que se añadiera el soporte Web, es posible que no tenga el punto final de la señal en las credenciales del servicio. En este caso, utilice las URL siguientes, en función de la región de {{site.data.keyword.Bluemix_notm}}:
+
+	EE.UU. sur:
 
 	`  https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization 
-  ` 
+  `
 
-	Londres: 
+	Londres:
 
 	` https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/authorization
-   ` 
+   `
 
-	Sídney: 
+	Sídney:
 
 	`  https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/authorization 
   `
-	 
+
 2. Cree el URI del servidor de autorizaciones utilizando `response_type("code")`, `client_id` y `redirect_uri` como parámetros de consulta.
 
 3. Redireccione desde su app web al URI generado.
-  
+
 	En el ejemplo siguiente se recuperan los parámetros de la variable `VCAP_SERVICES`, creando el URL y enviando la solicitud de redireccionamiento.
-  
+
 	```Java
 var cfEnv = require("cfenv"); 
 app.get("/protected", checkAuthentication, function(req, res, next){ 
@@ -100,8 +104,8 @@ app.get("/protected", checkAuthentication, function(req, res, next){
 
 			// Compruebe si el usuario está autenticado
   if (req.session.userIdentity){ 
-				next() 
-			} else { 
+				next()
+			} else {
 				// If not - redirect to authorization server
 				var mcaCredentials = cfEnv.getAppEnv().services.AdvancedMobileAccess[0].credentials;
 				var authorizationEndpoint = mcaCredentials.authorizationEndpoint;
@@ -112,7 +116,7 @@ app.get("/protected", checkAuthentication, function(req, res, next){
 				redirectUrl += "&redirect_uri=" + redirectUri;
 				res.redirect(redirectUrl);
 			} 
-		 	} 
+		 	}
 	   	}
        }
 	```
@@ -125,31 +129,31 @@ app.get("/protected", checkAuthentication, function(req, res, next){
 ## Obtención de las señales
 {: #google-auth-tokens}
 
-El siguiente paso consiste en obtener la señal de acceso y las señales de identidad utilizando el código de concesión previamente recibido. 
+El siguiente paso consiste en obtener la señal de acceso y las señales de identidad utilizando el código de concesión previamente recibido.
 
-1. Recupere la señal `tokenEndpoint`, `clientId` y `secret` desde las credenciales de servicio, almacenadas en la variable de entorno `VCAP_SERVICES`. 
- 
-	**Nota: ** En el caso de que haya utilizado {{site.data.keyword.amashort}} antes de que se añadiera el soporte web, es posible que no tenga puntos finales de la señal en las credenciales del servicio. En este caso, utilice los URL siguientes, en función de la región de Bluemix: 
+1. Recupere la señal `tokenEndpoint`, `clientId` y `secret` desde las credenciales de servicio, almacenadas en la variable de entorno `VCAP_SERVICES`.
 
-	EE.UU. sur: 
-  
+	**Nota: ** En el caso de que haya utilizado {{site.data.keyword.amashort}} antes de que se añadiera el soporte web, es posible que no tenga puntos finales de la señal en las credenciales del servicio. En este caso, utilice los URL siguientes, en función de la región de Bluemix:
+
+	EE.UU. sur:
+
 	`    https://mobileclientaccess.ng.bluemix.net/oauth/v2/token 
      `
- 
-	Londres: 
- 
+
+	Londres:
+
 	`    https://mobileclientaccess.eu-gb.bluemix.net/oauth/v2/token  
-     ` 
- 
-	Sídney: 
- 
+     `
+
+	Sídney:
+
 	`     https://mobileclientaccess.au-syd.bluemix.net/oauth/v2/token 
  `
 
 2. Envíe una solicitud POST al URI de servidor de señal con grant_type ("authorization_code"), client_id, redirect_uri y code como parámetros de formulario. Envíe `clientId` y `clientSecret` como credenciales de autenticación HTTP básicas.
- 
+
 	El código siguiente recupera los valores necesarios, y los envía con una solicitud POST.
-    
+
 	```Java    
   var cfEnv = require("cfenv");
   var base64url = require("base64url ");
@@ -165,10 +169,10 @@ El siguiente paso consiste en obtener la señal de acceso y las señales de iden
 			code: req.query.code
 		}
 
-		request.post({ 
-			url: tokenEndpoint, 
-    formData: formData 
-    }, function (err, response, body){ 
+		request.post({
+			url: tokenEndpoint,
+			formData: formData
+		}, function (err, response, body) {
 			var parsedBody = JSON.parse(body); 
 			req.session.accessToken = parsedBody.access_token; 
 			req.session.idToken = parsedBody.id_token; 
@@ -179,12 +183,12 @@ El siguiente paso consiste en obtener la señal de acceso y las señales de iden
 			}
 			).auth(mcaCredentials.clientId, mcaCredentials.secret); 
   }
-	); 
+	);
 	```
 	{: codeblock}
 
 	El parámetro `redirect_uri` es el URI para la redirección, después de una autenticación satisfactoria o con error con Google+, y debe coincidir con el `redirect_uri` definido en el panel de control de {{site.data.keyword.amashort}}.  
-   
+
 	Asegúrese de enviar esta solicitud POST en el plazo de 10 minutos tras los cuales caducará el código de concesión. Después de 10 minutos, se necesitará un código nuevo.
 
 	El cuerpo de la respuesta POST contiene el `access_token` y el `id_token` codificado en base64.
@@ -199,16 +203,13 @@ La señal de identidad contiene información sobre la identidad del usuario. En 
 
 La señal de acceso permite comunicaciones con los recursos que están protegidos por filtros de autorización de {{site.data.keyword.amashort}}. Más información sobre [Protección de recursos](protecting-resources.html).
 
-Para realizar solicitudes a los recursos protegidos, añada una cabecera de autorización a las solicitudes con la estructura siguiente: 
+Para realizar solicitudes a los recursos protegidos, añada una cabecera de autorización a las solicitudes con la estructura siguiente:
 
 `Authorization=Bearer <accessToken> <idToken>`
 
 ####Sugerencias:
-{: #tips} 
+{: #tips}
 
 * El `accessToken` e `idToken` deben estar separados por un espacio en blanco.
 
-* El `idToken` es opcional. En el caso de que no proporcione la señal de identidad, se puede acceder al recurso protegido, pero no recibirá ninguna información sobre el usuario autorizado. 
-
-
-
+* El `idToken` es opcional. En el caso de que no proporcione la señal de identidad, se puede acceder al recurso protegido, pero no recibirá ninguna información sobre el usuario autorizado.

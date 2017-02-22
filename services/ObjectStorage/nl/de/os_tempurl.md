@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2016-12-06"
 
 # Temporäre URL erstellen {: #create-temporary-url}
 
-Eine temporäre URL ist eine lange, schwer zu erratende URL, die für einen angegebenen Zeitraum zum Herunterladen von Objekten verwendet werden kann, ohne dass eine weitere Authentifizierung erforderlich ist.
+Eine temporäre URL ist eine lange, schwer zu erratende URL, die für einen angegebenen Zeitraum zum Herunterladen von Objekten verwendet werden kann, ohne dass eine weitere Authentifizierung oder uneingeschränkter Zugriff auf das Speicherkonto erforderlich ist.
 {: shortdesc}
 
 
@@ -25,8 +25,9 @@ Eine temporäre URL ist eine lange, schwer zu erratende URL, die für einen ange
   swift stat
   ```
   {: pre}
-  **Anmerkung**: Notieren Sie sich die Zeichenfolge hinter *Account*, einschließlich `AUTH_`.
-2. Legen Sie einen geheimen Schlüssel fest. Dieser Schlüssel kann eine Zeichenfolge Ihrer Wahl sein. Ein bewährtes Verfahren ist, eine lange, zufällig zusammengesetzte und schwer zu erratende Zeichenfolge zu wählen. Zum Festlegen des Schlüssels führen Sie den folgenden Befehl aus:
+  **Hinweis**: Notieren Sie sich die Zeichenfolge hinter *Account*, einschließlich `AUTH_`.
+
+2. Legen Sie einen geheimen Schlüssel fest. Wählen Sie eine lange, zufällig zusammengesetzte und schwer zu erratende Zeichenfolge. Zum Festlegen des Schlüssels führen Sie den folgenden Befehl aus:
 
   ```
   swift post -m "Temp-URL-Key:<Schlüssel>"
@@ -49,6 +50,7 @@ Eine temporäre URL ist eine lange, schwer zu erratende URL, die für einen ange
 
   In der folgenden Tabelle sind die Positionsargumente aufgeführt, mit denen der Swift-Befehl `tempurl` arbeitet.
   <table>
+  <caption> Tabelle 1. Temporäre URL-Positionsargumente</caption>
     <tr>
       <th> Argument </th>
       <th> Beschreibung </th>
@@ -70,7 +72,5 @@ Eine temporäre URL ist eine lange, schwer zu erratende URL, die für einen ange
       <td> Der in Schritt 2 festgelegte geheime Schlüssel. </td>
     </tr>
   </table>
-
-  Tabelle 1: Temporäre URL-Positionsargumente
 
 5. Optional: Hängen Sie die zurückgegebene URL an Ihren Clusternamen an, um eine vollständige URL zu erhalten. Anschließend können Sie die vollständige URL verwenden, um Objekte mit einem kompatiblen HTT_Client wie cURL, wget oder Firefox herunterzuladen.

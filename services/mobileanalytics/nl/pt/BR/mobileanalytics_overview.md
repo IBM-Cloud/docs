@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-28"
+  years: 2015, 2017
+lastupdated: "2017-01-13"
 
 ---
 {:new_window: target="_blank"}
@@ -199,7 +199,7 @@ Platform Foundation 7.x ou 8.0 e seus apps forem instrumentados
 com os SDKs do MobileFirst Platform,
 poderá configurar seu servidor MobileFirst para relatar dados de
 analítica para o {{site.data.keyword.mobileanalytics_short}} for
-{{site.data.keyword.Bluemix_notm}}. Leia a postagem do blog [Configurando os serviços Mobile Analytics e Mobile Foundation do Bluemix](https://mobilefirstplatform.ibmcloud.com/blog/2016/07/11/analytics-bm-service/) para obter detalhes. Como alternativa, é possível instrumentar seus apps usando o {{site.data.keyword.mobileanalytics_short}} SDK do {{site.data.keyword.Bluemix_notm}} e relatar diretamente para o serviço {{site.data.keyword.mobileanalytics_short}}.</dd>
+{{site.data.keyword.Bluemix_notm}}. Leia a postagem do blog [Configurando os serviços Mobile Analytics e Mobile Foundation do Bluemix ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://mobilefirstplatform.ibmcloud.com/blog/2016/07/11/analytics-bm-service/ "Ícone de link externo"){: new_window} para obter detalhes. Como alternativa, é possível instrumentar seus apps usando o {{site.data.keyword.mobileanalytics_short}} SDK do {{site.data.keyword.Bluemix_notm}} e relatar diretamente para o serviço {{site.data.keyword.mobileanalytics_short}}.</dd>
 	<!-- <dt>My instance of  {{site.data.keyword.mobileanalytics_short}} does not look like the screen shots in the catalog. What's going on?</dt> -->
 		<!-- <dd>Most likely you are using the Classic view interface for {{site.data.keyword.Bluemix_notm}}. Classic view is deprecated, so {{site.data.keyword.mobileanalytics_short}} runs best in the new {{site.data.keyword.Bluemix_notm}} interface. If you are in Classic view, you will see a link in the {{site.data.keyword.Bluemix_notm}} header that says <strong>Try the new {{site.data.keyword.Bluemix_notm}}</strong>. Click that link to use the new interface.</dd> -->
 </dl>
@@ -211,7 +211,8 @@ analítica para o {{site.data.keyword.mobileanalytics_short}} for
 ## SDK
 {: rellink-sdk}
 <!-- Links to SDK download and SDK Developer Guide -->
-* [SDK Android ](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core)  
-* [SDK iOS ](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core)  
+* [SDK do
+Android![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core "Ícone de link externo"){: new_window} 
+* [SDK do iOS![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-core "Ícone de link externo"){: new_window}
 
 <!-- {:elementKind="article" id="rellinks"} -->

@@ -5,8 +5,7 @@
 copyright:
 
   years: 2015, 2017
-
-lastupdated: "2017-01-12"
+lastupdated: "2017-02-16"
 
 ---
 
@@ -17,7 +16,7 @@ lastupdated: "2017-01-12"
 # Getting started with {{site.data.keyword.Bluemix_notm}} CLI
 {: #getting-started}
 
-{{site.data.keyword.Bluemix_notm}} CLI provides a unified way for you to interact with your applications, virtual servers, containers, and other services in {{site.data.keyword.Bluemix_notm}} by using a command line interface. {{site.data.keyword.Bluemix_notm}} CLI also integrates community tools, such as Cloud Foundry CLI, Docker CLI, and OpenStack CLI, and initializes environment settings for you to interact with different compute types.
+{{site.data.keyword.Bluemix_notm}} CLI provides a unified way for you to interact with your applications, virtual servers, containers, and other services by using a command line interface. {{site.data.keyword.Bluemix_notm}} CLI also integrates community tools, such as Cloud Foundry CLI, Docker CLI, and OpenStack CLI, and initializes environment settings for you to interact with different compute types.
 
 **Restriction**: The {{site.data.keyword.Bluemix_notm}} CLI is not supported by Cygwin, so do not use the {{site.data.keyword.Bluemix_notm}} CLI in the Cygwin command line window.
 
@@ -26,9 +25,9 @@ lastupdated: "2017-01-12"
 ## Installing {{site.data.keyword.Bluemix_notm}} CLI
 {: #install_bluemix_cli}
 
-Before you install {{site.data.keyword.Bluemix_notm}} CLI, ensure that the Cloud Foundry CLI is installed on your system.
+Before you install {{site.data.keyword.Bluemix_notm}} CLI, install the [cf CLI ![External link icon](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}.
 
-For Mac OS and Windows, download the [{{site.data.keyword.Bluemix_notm}} CLI package](index.html#downloads), and run the installer.
+For Mac OS and Windows, download the [{{site.data.keyword.Bluemix_notm}} CLI package](/docs/cli/index.html#downloads), and run the installer.
 
 For Linux, follow these steps:
 
@@ -59,12 +58,12 @@ For Linux, follow these steps:
   ~/Bluemix_CLI#
   ```
 
-You can now get started with {{site.data.keyword.Bluemix_notm}} CLI or install additional plug-ins.
+You can now start using {{site.data.keyword.Bluemix_notm}} CLI or install additional plug-ins.
 
 ## Installing a plug-in
 {: #install_plug-in}
 
-Like Cloud Foundry CLI, {{site.data.keyword.Bluemix_notm}} CLI also supports a plug-in extension framework to integrate other commands besides the built-in ones.
+Like Cloud Foundry CLI, {{site.data.keyword.Bluemix_notm}} CLI supports a plug-in extension framework to integrate other commands besides the built-in ones.
 
 To install a plug-in from your local environment, take the following steps:
 
@@ -117,8 +116,8 @@ To install from a remote server, take the following steps:
 
 You can also install a plug-in from the repository. {{site.data.keyword.Bluemix_notm}} has repositories that host {{site.data.keyword.Bluemix_notm}} CLI plug-ins and Cloud Foundry CLI plug-ins:
 
-  * [Cloud Foundry CLI plug-ins repository ![External link icon](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){: new_window}, which hosts plug-ins for Cloud Foundry CLI.
-  * [{{site.data.keyword.Bluemix_notm}} CLI plug-ins repository ![External link icon](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window}, which hosts plug-ins specifically for {{site.data.keyword.Bluemix_notm}} CLI.
+  * [Cloud Foundry CLI plug-ins repository](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){: new_window} ![External link icon](../../../icons/launch-glyph.svg), which hosts plug-ins for Cloud Foundry CLI.
+  * [{{site.data.keyword.Bluemix_notm}} CLI plug-ins repository](http://clis.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window} ![External link icon](../../../icons/launch-glyph.svg), which hosts plug-ins specifically for {{site.data.keyword.Bluemix_notm}} CLI.
 
 To install from the repository, take the following steps:
 
@@ -136,7 +135,7 @@ To install from the repository, take the following steps:
   ~$
   ```
 
-  2. Then, install the plug-in from the `Bluemix` repository by using the `bluemix plugin install` command. For example:
+  2. Install the plug-in from the `Bluemix` repository by using the `bluemix plugin install` command. For example:
 
   ```
   ~$ bluemix plugin install auto-scaling -r Bluemix
@@ -151,7 +150,7 @@ To install from the repository, take the following steps:
 ## Logging in to {{site.data.keyword.Bluemix_notm}} CLI
 {: #log_bmcli}
 
-After you installed {{site.data.keyword.Bluemix_notm}} CLI, you can log in to {{site.data.keyword.Bluemix_notm}} by using your {{site.data.keyword.Bluemix_notm}} account and password. For example:
+After you install {{site.data.keyword.Bluemix_notm}} CLI, you can log in to {{site.data.keyword.Bluemix_notm}} by using your IBMid and password. For example:
 
 ```
 ~$ bluemix login -a https://api.ng.bluemix.net
@@ -164,7 +163,7 @@ Authenticating...
 OK
 ```
 
-You are now ready to use {{site.data.keyword.Bluemix_notm}} built-in commands. For example, run the `bluemix catalog templates` command to list all the available {{site.data.keyword.Bluemix_notm}} boilerplate templates:
+You're now ready to use {{site.data.keyword.Bluemix_notm}} built-in commands. For example, run the `bluemix catalog templates` command to list all the available {{site.data.keyword.Bluemix_notm}} boilerplate templates:
 
 ```
 ~$ bluemix catalog templates
@@ -183,7 +182,7 @@ javacloudantbp          Java Cloudant Web Starter
 # {{site.data.keyword.Bluemix_notm}} (bx) commands
 {: #bluemix_cli}
 
-Version: 0.4.4
+Version: 0.4.6
 
 The {{site.data.keyword.Bluemix_notm}} command line interface (CLI) provides a set of commands that are grouped by namespace for users to interact with {{site.data.keyword.Bluemix_notm}}. Some {{site.data.keyword.Bluemix_notm}} commands are wrappers of existing cf commands, while others provide extended capabilities for {{site.data.keyword.Bluemix_notm}} users. The following information lists commands that are supported by {{site.data.keyword.Bluemix_notm}} CLI, and includes their names, options, usage, prerequisites, descriptions, and examples.
 {:shortdesc}
@@ -201,13 +200,13 @@ The {{site.data.keyword.Bluemix_notm}} command line interface (CLI) provides a s
 <dd>The Docker CLI (docker) must be installed to run this command.</dd>
 </dl>
 
-
 ## bluemix commands index
 {: #bx_commands_index}
 
 Use the indexes in the following tables to refer to the frequently used bluemix commands.
 
 **Note:** You can use the short format of bluemix commands; for example, `bx api` is short for `bluemix api`.
+
 
 <table summary="General bluemix commands.">
 <caption>Table 1. General bluemix commands</caption>
@@ -225,13 +224,10 @@ Use the indexes in the following tables to refer to the frequently used bluemix 
  <tr>
  <td>[bluemix info](index.html#bluemix_info) </td>
  <td>[bluemix config](index.html#bluemix_config)</td>
- <td>[bluemix list](index.html#bluemix_list)</td>
- <td>[bluemix scale](index.html#bluemix_scale)</td>
  <td>[bluemix curl](index.html#bluemix_curl)</td>
  </tr>
   </tbody>
  </table>
-
 
 
 <table summary="bluemix commands that you can use to manage orgs, spaces, and users.">
@@ -256,17 +252,22 @@ Use the indexes in the following tables to refer to the frequently used bluemix 
  </tr>
  <tr>
  <td>[bluemix iam space-delete](index.html#bluemix_iam_space_delete)</td>
- <td>[bluemix iam account-users](index.html#bluemix_iam_account-users)</td>
- <td>[bluemix iam account-user-invite](index.html#bluemix_iam_account-user-invite)</td>
+ <td>[bluemix iam account-users](index.html#bluemix_iam_account_users)</td>
+ <td>[bluemix iam account-users-delete](index.html#bluemix_iam_account_users_delete)</td>
+ <td>[bluemix iam account-user-invite](index.html#bluemix_iam_account_user_invite)</td>
+ <td>[bluemix iam account-user-reinvite](index.html#bluemix_iam_account_user_reinvite)</td>
  <td>[bluemix iam org-users](index.html#bluemix_iam_org_users)</td>
- <td>[bluemix iam org-role-set](index.html#bluemix_iam_org_role_set)</td>
  </tr>
  <tr>
+ <td>[bluemix iam org-user-add](index.html#bluemix_iam_org_user_add)</td>
+ <td>[bluemix iam org-user-remove](index.html#bluemix_iam_org_user_remove)</td>
+ <td>[bluemix iam org-role-set](index.html#bluemix_iam_org_role_set)</td>
  <td>[bluemix iam org-role-unset](index.html#bluemix_iam_org_role_unset)</td>
  <td>[bluemix iam space-users](index.html#bluemix_iam_space_users)</td>
  <td>[bluemix iam space-role-set](index.html#bluemix_iam_space_role_set)</td>
+ </tr>
+ <tr>
  <td>[bluemix iam space-role-unset](index.html#bluemix_iam_space_role_unset)</td>
- <td></td>
  </tr>
  </tbody>
  </table>
@@ -407,8 +408,6 @@ Use the indexes in the following tables to refer to the frequently used bluemix 
   </tbody>
  </table>
 
-
-
 <table summary="bluemix commands that you can use to manage containers on Bluemix.">
 <caption>Table 7. Commands for managing containers on Bluemix</caption>
  <thead>
@@ -496,7 +495,6 @@ Use the indexes in the following tables to refer to the frequently used bluemix 
  </table>
 
 
-
 ### bluemix help
 {: #bluemix_help}
 Display the general help for first-level built-in commands and supported namespaces of {{site.data.keyword.Bluemix_notm}} CLI, or the help for a specific built-in command or namespace.
@@ -562,16 +560,16 @@ bluemix api [API_ENDPOINT] [--unset]
 <strong>Command options</strong>:
    <dl>
    <dt>API_ENDPOINT (optional)</dt>
-   <dd>The API endpoint that is targeted, for example, `https://api.ng.bluemix.net`. If both *API_ENDPOINT* and `--unset` options are not specified, the current API endpoint is displayed.</dd>
+   <dd>The API endpoint that is targeted, for example, `https://api.chinabluemix.net`. If both *API_ENDPOINT* and `--unset` options are not specified, the current API endpoint is displayed.</dd>
    <dt>--unset (optional)</dt>
    <dd>Remove the API endpoint setting.</dd>
     </dl>
 <strong>Examples</strong>:
 
-Set the API endpoint to api.ng.bluemix.net:
+Set the API endpoint to api.chinabluemix.net:
 
 ```
-bluemix api api.ng.bluemix.net
+bluemix api api.chinabluemix.net
 ```
 
 View the current API endpoint:
@@ -603,7 +601,7 @@ bluemix login [OPTIONS...]
 <strong>Command options</strong>:
 For information about options supported by the `login` command, see `cf login` command usage information for cf commands for managing applications.
 
-<strong>Note</Strong>:
+<strong>Note</strong>:
 If logging in with federated ID, use '--sso' option to authenticate with one time passcode.
 
 ### bluemix logout
@@ -732,100 +730,10 @@ bluemix config --locale CLEAR
 ```
 
 
-### bluemix list
-{: #bluemix_list}
-
-List all cf applications, containers, container groups, and VM groups in the current space.
-
-```
-bluemix list [apps|containers|container-groups|vm-groups]
-```
-
-<strong>Prerequisites</strong>:  Endpoint, Login, Target
-
-<strong>Command options</strong>:
-   <dl>
-   <dt>apps (optional)</dt>
-   <dd>Display only the applications information.</dd>
-   <dt>containers (optional)</dt>
-   <dd>Display only the containers information.</dd>
-   <dt>container-groups (optional)</dt>
-   <dd>Display only the container groups information.</dd>
-   <dt>vm-groups (optional)</dt>
-   <dd>Display only the VM groups information.</dd>
-    </dl>
-Only one of `apps`, `containers`, `container-groups`, or `vm-groups` can be specified at a time. If none of them is specified, all the cf apps, containers, container groups, and VM groups are listed.
-
-<strong>Examples</strong>:
-
-List all cf applications:
-
-```
-bluemix list apps
-```
-
-List all container instances:
-
-```
-bluemix list containers
-```
-
-List all apps, containers, container groups, and VM groups:
-
-```
-bluemix list
-```
-
-
-### bluemix scale
-{: #bluemix_scale}
-
-Scale in or scale out the cf application or container group to a specified instance count, disk quota, and memory size.
-
-**Note:** Only an instance number can be specified for scaling a container group. If no option is specified, this command lists the current instance count for the container group, and also disk quota and memory size for the cf application.
-
-```
-bluemix scale CF_APP_NAME|CONTAINER_GROUP_NAME [-i INSTANCE_COUNT] [-k DISK_QUOTA] [-m MEMORY_SIZE]
-```
-
-<strong>Prerequisites</strong>:  Endpoint, Login, Target
-
-<strong>Command options</strong>:
-   <dl>
-   <dt><i>CF_APP_NAME</i>|<i>CONTAINER_GROUP_NAME</i> (required)</dt>
-   <dd>The name of the cf application or container group to be scaled.</dd>
-   <dt>-i <i>INSTANCE_COUNT</i> (optional)</dt>
-   <dd>The new instance number for the cf application or container group to be scaled. This option is the only valid option for container group to be scaled.</dd>
-   <dt>-k <i>DISK_QUOTA</i> (optional)</dt>
-   <dd>The new disk quota of the cf application. Not valid for scaling a container group.</dd>
-   <dt>-m <i>MEMORY_SIZE</i> (optional)</dt>
-   <dd>The new memory size for the cf application. Not valid for scaling a container group.</dd>
-    </dl>
-<strong>Examples</strong>:
-
-Display the current instance number for `my-container-group`:
-
-```
-bluemix scale my-container-group
-```
-
-Scale `my-container-group` to 2 instances:
-
-```
-bluemix scale my-container-group -i 2
-```
-
-Scale `my-java-app` to 3 instances, 8G disk quota, and 1024M memory size:
-
-```
-bluemix scale my-java-app -i 3 -k 8G -m 1024M
-```
-
-
 ### bluemix curl
 {: #bluemix_curl}
 
-Execute a raw HTTP request to {{site.data.keyword.Bluemix_notm}}. *Content-Type* is set to *application/json* by default. This command sends the request to {{site.data.keyword.Bluemix_notm}} Multi-Cloud Control Proxy. For supported paths, refer to the API path definitions in the [CloudFoundry API document ![External link icon](../../../icons/launch-glyph.svg)](http://apidocs.cloudfoundry.org/){: new_window}.
+Execute a raw HTTP request to {{site.data.keyword.Bluemix_notm}}. *Content-Type* is set to *application/json* by default. This command sends the request to {{site.data.keyword.Bluemix_notm}} Multi-Cloud Control Proxy. For supported paths, refer to the API path definitions in the [CloudFoundry API document](http://apidocs.cloudfoundry.org/){: new_window} ![External link icon](../../../icons/launch-glyph.svg).
 
 ```
 bluemix curl PATH [OPTIONS...]
@@ -1032,7 +940,7 @@ This command has the same function and options as the `cf delete-space` command.
 
 
 ### bluemix iam account-users
-{: #bluemix_iam_account-users}
+{: #bluemix_iam_account_users}
 
 Displays users associated with the account. This operation can be performed only by the account owner.
 
@@ -1041,7 +949,7 @@ bluemix iam account-users
 ```
 
 ### bluemix iam account-user-invite
-{: #bluemix_iam_account-user-invite}
+{: #bluemix_iam_account_user_invite}
 
 
 Invites a user to the account with an organization and space role already set. This operation can be performed only by the account owner.
@@ -1087,6 +995,16 @@ Invite user `Mary` to the organization `IBM` as `OrgManager` role and the space 
 bluemix iam account-user-invite Mary IBM OrgManager Cloud SpaceAuditor
 ```
 
+
+### bluemix iam account-user-reinvite
+{: #bluemix_iam_account_user_reinvite}
+
+Resend invitation to a user(org manager or account owner is required)
+```
+ bluemix iam account-user-reinvite USER_EMAIL ORG_NAME
+```
+
+
 ### bluemix iam org-users
 {: #bluemix_iam_org_users}
 
@@ -1106,6 +1024,27 @@ bluemix iam org-users ORG_NAME [-a]
    <dd>List all the users in the specified organization, not grouped by role.</dd>
     </dl>
 
+### bluemix iam org-user-add
+{: #bluemix_iam_org_user_add}
+
+Add a user into org (org manager required).
+```
+ bluemix iam org-user-add USER_NAME ORG
+```
+
+### bluemix iam org-user-remove
+{: #bluemix_iam_org_user_remove}
+
+Remove a user from org (org manager or user him/herself only)
+```
+   bluemix iam org-user-remove USER_NAME ORG [-f, --force]
+```
+
+<strong>Command options</strong>:
+  <dl>
+   <dt>--force, -f</dt>
+   <dd>Force deletion without confirmation.</dd>
+ </dl>
 
 ### bluemix iam org-role-set
 {: #bluemix_iam_org_role_set}
@@ -1119,9 +1058,7 @@ bluemix iam org-role-set USER_NAME ORG_NAME ORG_ROLE
 <strong>Prerequisites</strong>:  Endpoint, Login
 
 <strong>Command options</strong>:
-
-
-   <dl>
+  <dl>
    <dt>USER_NAME (required)</dt>
    <dd>The name of the user being assigned.</dd>
    <dt>ORG_NAME (required)</dt>
@@ -1570,10 +1507,10 @@ Create a cf application `my-app` based on `javaHelloWorld` template:
 bluemix catalog template-run javaHelloWorld my-app
 ```
 
-Create an application `my-ruby-app` based on `rubyHelloWorld` template with route `myrubyapp.ng.bluemix.net` and description `My first ruby app on {{site.data.keyword.Bluemix_notm}}.`:
+Create an application `my-ruby-app` based on `rubyHelloWorld` template with route `myrubyapp.chinabluemix.net` and description `My first ruby app on {{site.data.keyword.Bluemix_notm}}.`:
 
 ```
-bluemix catalog template-run rubyHelloWorld my-ruby-app -u myrubyapp.ng.bluemix.net -d "My first ruby app on {{site.data.keyword.Bluemix_notm}}."
+bluemix catalog template-run rubyHelloWorld my-ruby-app -u myrubyapp.chinabluemix.net -d "My first ruby app on {{site.data.keyword.Bluemix_notm}}."
 ```
 
 Create an application `my-python-app` based on `pythonHelloWorld` template without automatic start:
@@ -1651,7 +1588,7 @@ bluemix network route-map CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAM
    <dt>CF_APP_NAME|CONTAINER_GROUP_NAME (required)</dt>
    <dd>The name of the cf application or container group to be mapped with a route.</dd>
    <dt>DOMAIN (required)</dt>
-   <dd>The domain of the route. For example, mybluemix.net or ng.bluemix.net. </dd>
+   <dd>The domain of the route. For example, mychinabluemix.net or chinabluemix.net. </dd>
    <dt>-n <i>HOST_NAME</i> (optional)</dt>
    <dd>The host name of the route. If not provided, the host name is set to the app name or container group name by default.</dd>
    </dl>
@@ -1661,13 +1598,13 @@ bluemix network route-map CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_NAM
 Map a route to `my-app` with specified domain:
 
 ```
-bluemix network route-map my-app mybluemix.net
+bluemix network route-map my-app mychinabluemix.net
 ```
 
 Map a route to 'my-container-group' with specified domain and host name:
 
 ```
-bluemix network route-map my-container-group ng.bluemix.net -n abc
+bluemix network route-map my-container-group chinabluemix.net -n abc
 ```
 
 
@@ -1688,23 +1625,23 @@ bluemix network route-unmap CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST_N
    <dt>CF_APP_NAME|CONTAINER_GROUP_NAME (required)</dt>
    <dd>The name of the cf application or container group.</dd>
    <dt>DOMAIN (required)</dt>
-   <dd>The domain of the route (for example, mybluemix.net or ng.bluemix.net).</dd>
+   <dd>The domain of the route (for example, mychinabluemix.net or chinabluemix.net).</dd>
    <dt>-n <i>HOST_NAME</i> (optional)</dt>
    <dd>The host name of the route. If not provided, the host name is set to app name or container group name by default.</dd>
    </dl>
 
 <strong>Examples</strong>:
 
-Unmap `my-app.mybluemix.net` from `my-app`:
+Unmap `my-app.mychinabluemix.net` from `my-app`:
 
 ```
-bluemix network route-unmap my-app mybluemix.net
+bluemix network route-unmap my-app mychianbluemix.net
 ```
 
-Unmap `abc.ng.bluexmix.net` from `my-container-group`:
+Unmap `abc.chinabluexmix.net` from `my-container-group`:
 
 ```
-bluemix network route-unmap my-container-group ng.bluemix.net -n abc
+bluemix network route-unmap my-container-group chinabluemix.net -n abc
 ```
 
 
@@ -2084,6 +2021,10 @@ bluemix plugin install IBM-Containers -r bluemix-repo -v 0.5.800
 ```
 
 
+
+
+
+
 ### bluemix plugin uninstall
 {: #bluemix_plugin_uninstall}
 
@@ -2114,7 +2055,7 @@ bluemix plugin uninstall IBM-Containers
 ### bluemix ic attach
 {: #bluemix_ic_attach}
 
-Control a running container or view its output. Use `CTRL+C` to exit and stop the container. This command calls the Docker CLI. For more information, see the [attach ![External link icon](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/attach/){: new_window} command in the Docker help.
+Control a running container or view its output. Use `CTRL+C` to exit and stop the container. This command calls the Docker CLI. For more information, see the [attach](https://docs.docker.com/engine/reference/commandline/attach/){: new_window} ![External link icon](../../../icons/launch-glyph.svg) command in the Docker help.
 
 ```
 bluemix ic attach [--no-stdin] [--sig-proxy] CONTAINER
@@ -2144,7 +2085,7 @@ bluemix ic attach my_container
 ### bluemix ic build
 {: #bluemix_ic_build}
 
-Call the IBM Containers build service to build a Docker image locally or in your private {{site.data.keyword.Bluemix_notm}} repository. This command calls the Docker CLI. For more information, see the [build ![External link icon](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/build/){: new_window} command in the Docker help.
+Call the IBM Containers build service to build a Docker image locally or in your private {{site.data.keyword.Bluemix_notm}} repository. This command calls the Docker CLI. For more information, see the [build](https://docs.docker.com/engine/reference/commandline/build/){: new_window} ![External link icon](../../../icons/launch-glyph.svg) command in the Docker help.
 
 ```
 bluemix ic build -t TAG|--tag TAG [--no-cache] [-p|--pull] [-q|--quiet] DOCKERFILE_LOCATION
@@ -2176,7 +2117,7 @@ bluemix ic build -t registry.ng.bluemix.net/mynamespace/myimage .
 
 ### bluemix ic cp
 {: #bluemix_ic_cp}
-Copy files or folders between a container and the local filesystem. This command calls the Docker CLI. For more information, see the [cp ![External link icon](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/cp/){: new_window} command in the Docker help.
+Copy files or folders between a container and the local filesystem. This command calls the Docker CLI. For more information, see the [cp](https://docs.docker.com/engine/reference/commandline/cp/){: new_window} ![External link icon](../../../icons/launch-glyph.svg) command in the Docker help.
 
 
 ### bluemix ic cpi
@@ -2216,7 +2157,7 @@ bluemix ic cpi training/sinatra registry.ng.bluemix.net/mynamespace/mysinatra:v1
 ### bluemix ic exec
 {: #bluemix_ic_exec}
 
-Execute a command within a container. For more information, see the [exec ![External link icon](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/exec/){: new_window} command in the Docker help.
+Execute a command within a container. For more information, see the [exec](https://docs.docker.com/engine/reference/commandline/exec/){: new_window} ![External link icon](../../../icons/launch-glyph.svg) command in the Docker help.
 
 ```
 bluemix ic exec [-d|--detach] [-it] [-u USER|--user USER] CONTAINER [CMD]
@@ -2285,10 +2226,11 @@ bluemix ic group-create [--publish,-p PORT] --name GROUP_NAME [--memory,-m MEMOR
 
 |  Environment variable                              |     Description                            |
 | :----------------------------- | :------------------------------ |
-| CCS_BIND_APP=*&lt;appname&gt;*       | Bind a service to a container. Use the `CCS_BIND_APP` environment variable to bind an app to the container. The app is bound to the target service and acts as a bridge that allows {{site.data.keyword.Bluemix_notm}} to bring your bridge app’s `VCAP_SERVICES` information to the running container instance. For more information about creating a bridge app, see [Binding a service to a container](../../../containers/container_integrations_binding.html){: new_window}. |
+| CCS_BIND_APP=*&lt;appname&gt;*       | Bind a service to a container. Use the `CCS_BIND_APP` environment variable to bind an app to the container. The app is bound to the target service and acts as a bridge that allows {{site.data.keyword.Bluemix_notm}} to bring your bridge app’s `VCAP_SERVICES` information to the running container instance.|
 | CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | To bind a Bluemix service directly to a container without using a bridge app, use CCS_BIND_SRV. This binding allows Bluemix to inject the VCAP_SERVICES information into the running container instance. To list multiple Bluemix services, include them as part of the same environment variable. |
 | LOG_LOCATIONS=*&lt;path_to_file&gt;* | Add a log file to be monitored in the container. Include the `LOG_LOCATIONS` environment variable with a path to the log file. |
 {: caption="Table 8. Commonly used environment variables" caption-side="top"}
+
 
  <dl>
    <dt>--env-file <i>ENVIRONMENT_VARIABLE_FILE</i> (optional)</dt>
@@ -2484,7 +2426,7 @@ bluemix ic groups [-q]
 ### bluemix ic images
 {: #bluemix_ic_images}
 
-View a list of all available images in the organization's private {{site.data.keyword.Bluemix_notm}} repository. For more information, see the [images ![External link icon](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/images){: new_window} command in the Docker help. The list includes the image ID, the created date, and the image name.
+View a list of all available images in the organization's private {{site.data.keyword.Bluemix_notm}} repository. For more information, see the [images](https://docs.docker.com/engine/reference/commandline/images){: new_window} ![External link icon](../../../icons/launch-glyph.svg) command in the Docker help. The list includes the image ID, the created date, and the image name.
 
 ```
 bluemix ic images [-a|--all] [-f CONDITION] [--no-trunc] [-q|--quiet]
@@ -2550,7 +2492,7 @@ bluemix region-set us-south
 ### bluemix ic inspect
 {: #bluemix_ic_inspect}
 
-View the information about a container. For more information, see the [inspect ![External link icon](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/inspect){: new_window} command in the Docker help.
+View the information about a container. For more information, see the [inspect](https://docs.docker.com/engine/reference/commandline/inspect){: new_window} command in the Docker help.
 
 ```
 bluemix ic inspect [IMAGE|images|CONTAINER]
@@ -2704,7 +2646,7 @@ bluemix ic ips -q
 ### bluemix ic kill
 {: #bluemix_ic_kill}
 
-Stop a running process in a container without stopping the container. For more information, see the [kill ![External link icon](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/kill/){: new_window} command in the Docker help.
+Stop a running process in a container without stopping the container. For more information, see the [kill](https://docs.docker.com/engine/reference/commandline/kill/){: new_window} ![External link icon](../../../icons/launch-glyph.svg) command in the Docker help.
 
 ```
 bluemix ic kill [-s CMD|--signal CMD] CONTAINER
@@ -2733,7 +2675,7 @@ bluemix ic kill proxy
 ### bluemix ic logs
 {: #bluemix_ic_logs}
 
-Show the output or error logs for a running container. For more information, see the [logs ![External link icon](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/logs/){: new_window} command in the Docker help.
+Show the output or error logs for a running container. For more information, see the [logs](https://docs.docker.com/engine/reference/commandline/logs/){: new_window} ![External link icon](../../../icons/launch-glyph.svg) command in the Docker help.
 ```
 bluemix ic logs [OPTIONS] CONTAINER
 ```
@@ -2775,7 +2717,7 @@ bluemix ic namespace-set NAME
 ### bluemix ic pause
 {: #pause}
 
-Pause all processes within a running container. For more information, see the [pause ![External link icon](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/pause/){: new_window} command in the Docker help. To stop a container, see the [bluemix ic unpause](#unpause) command.
+Pause all processes within a running container. For more information, see the [pause](https://docs.docker.com/engine/reference/commandline/pause/){: new_window} ![External link icon](../../../icons/launch-glyph.svg) command in the Docker help. To stop a container, see the [bluemix ic unpause](#unpause) command.
 
 ```
 bluemix ic pause CONTAINER
@@ -2812,12 +2754,12 @@ bluemix ic pause proxy
 ### bluemix ic port
 {: #bluemix_ic_port}
 
-List port mappings or a specific mapping for the container. This command wraps the `docker port` command. For more information, see the [port ![External link icon](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/port/){: new_window} command in the Docker help.
+List port mappings or a specific mapping for the container. This command wraps the `docker port` command. For more information, see the [port](https://docs.docker.com/engine/reference/commandline/port/){: new_window} ![External link icon](../../../icons/launch-glyph.svg) command in the Docker help.
 
 
 ### bluemix ic ps
 {: #bluemix_ic_ps}
-View a list of containers that are running in the logged-in user's namespace. By default, this command shows only containers that are running. For more information, see the [ps](https://docs.docker.com/engine/reference/commandline/ps/){: new_window} command in the Docker help.
+View a list of containers that are running in the logged-in user's namespace. By default, this command shows only containers that are running. For more information, see the [ps](https://docs.docker.com/engine/reference/commandline/ps/){: new_window} ![External link icon](../../../icons/launch-glyph.svg) command in the Docker help.
 
 ```
 bluemix ic ps [-a|--all] [--filter env=SEARCH_CRITERIA] [-s|--size] [-l NUM|--limit NUM] [-q|--quiet]
@@ -2851,7 +2793,7 @@ bluemix ic ps -a
 
 ### bluemix ic rename
 {: #bluemix_ic_rename}
-Rename a container. For more information, see the [rename ![External link icon](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/rename/){: new_window} command in the Docker help.
+Rename a container. For more information, see the [rename](https://docs.docker.com/engine/reference/commandline/rename/){: new_window} ![External link icon](../../../icons/launch-glyph.svg) command in the Docker help.
 
 ```
 bluemix ic rename OLD_NAME NEW_NAME
@@ -2876,7 +2818,7 @@ Re-create the IBM Containers service in the Bluemix space that you are logged in
 <strong>Important</strong>: When you run this command, none of your single containers and groups in this space will be migrated to the re-provisioned space and they will be removed during the migration process.
 
 ```
-bluemix ic reprovision [--force|-f] [AVAILABILITY_ZONE]
+bluemix ic reprovision [--force|-f] [ENVIRONMENT_NAME]
 ```
 <strong>Command options</strong>:
 
@@ -2891,7 +2833,7 @@ bluemix ic reprovision [--force|-f] [AVAILABILITY_ZONE]
 ### bluemix ic restart
 {: #bluemix_ic_restart}
 
-Restart a container. For more information, see the [restart ![External link icon](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/restart/){: new_window} command in the Docker help.
+Restart a container. For more information, see the [restart](https://docs.docker.com/engine/reference/commandline/restart/){: new_window} ![External link icon](../../../icons/launch-glyph.svg) command in the Docker help.
 
 ```
 bluemix ic restart CONTAINER [-t SECS|--time SECS]
@@ -2932,7 +2874,7 @@ bluemix ic restart proxy
 ### bluemix ic rm
 {: #bluemix_ic_rm}
 
-Remove a container. For more information, see the [rm ![External link icon](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/rm/){: new_window} command in the Docker help.
+Remove a container. For more information, see the [rm](https://docs.docker.com/engine/reference/commandline/rm/){: new_window} ![External link icon](../../../icons/launch-glyph.svg) command in the Docker help.
 
 ```
 bluemix ic rm [-f|--force] CONTAINER
@@ -2972,7 +2914,7 @@ bluemix ic rm proxy
 ### bluemix ic rmi
 {: #bluemix_ic_rmi}
 
-Remove an image from the logged-in user's namespace. For more information, see the [rmi ![External link icon](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/rmi/){: new_window} command in the Docker help.
+Remove an image from the logged-in user's namespace. For more information, see the [rmi](https://docs.docker.com/engine/reference/commandline/rmi/){: new_window} ![External link icon](../../../icons/launch-glyph.svg) command in the Docker help.
 
 ```
 bluemix ic rmi [-R REGISTRY|--registry REGISTRY] IMAGE
@@ -3076,7 +3018,7 @@ bluemix ic route-unmap -n my_host -d organization.com GROUP1
 ### bluemix ic run
 {: #bluemix_ic_run}
 
-Start a new container in the container cloud service from an image name. For more information, see the [run ![External link icon](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/run/){: new_window} command in the Docker help.
+Start a new container in the container cloud service from an image name. For more information, see the [run](https://docs.docker.com/engine/reference/commandline/run/){: new_window} ![External link icon](../../../icons/launch-glyph.svg) command in the Docker help.
 
 
 ```
@@ -3103,7 +3045,7 @@ bluemix ic run [-p PORT|--publish PORT] [-P] [-m MEMORY|--memory MEMORY] [-e ENV
 
 |      Environment variable                          |   Description                              |
 | :----------------------------- | :------------------------------ |
-| CCS_BIND_APP=*&lt;appname&gt;*       | Bind a service to a container. Use the `CCS_BIND_APP` environment variable to bind an app to the container. The app is bound to the target service and acts as a bridge that allows {{site.data.keyword.Bluemix_notm}} to bring your bridge app’s `VCAP_SERVICES` information into the running container instance. For more information about creating a bridge app, see [Binding a service to a container](../../../containers/container_integrations_binding.html){: new_window}. |
+| CCS_BIND_APP=*&lt;appname&gt;*       | Bind a service to a container. Use the `CCS_BIND_APP` environment variable to bind an app to the container. The app is bound to the target service and acts as a bridge that allows {{site.data.keyword.Bluemix_notm}} to bring your bridge app’s `VCAP_SERVICES` information into the running container instance. For more information about creating a bridge app, see [Binding a service to a container](/docs/containers/container_integrations_binding.html){: new_window}. |
 | CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | To bind a Bluemix service directly to a container without using a bridge app, use CCS_BIND_SRV. This binding allows Bluemix to inject the VCAP_SERVICES information into the running container instance. To list multiple Bluemix services, include them as part of the same environment variable. |
 | LOG_LOCATIONS=*&lt;path_to_file&gt;* | Add a log file to be monitored in the container. Include the `LOG_LOCATIONS` environment variable with a path to the log file. |
 {: caption="Table 9. Commonly used environment variables" caption-side="top"}
@@ -3192,7 +3134,7 @@ bluemix ic service-unbind GROUP_NAME SERVICE_INSTANCE
 
 ### bluemix ic start
 {: #ic_start}
-Start a stopped container. For more information, see the [start ![External link icon](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/start/){: new_window} command in the Docker help. To stop a container, see the [bluemix ic stop](#ic_stop) command.
+Start a stopped container. For more information, see the [start](https://docs.docker.com/engine/reference/commandline/start/){: new_window} ![External link icon](../../../icons/launch-glyph.svg) command in the Docker help. To stop a container, see the [bluemix ic stop](#ic_stop) command.
 
 ```
 bluemix ic start CONTAINER
@@ -3231,7 +3173,7 @@ bluemix ic start proxy
 ### bluemix ic stats
 {: #bluemix_ic_stats}
 
-For one or more containers, view live usage statistics. Use `CTRL+C` to exit. For more information, see the [stats ![External link icon](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/stats/){: new_window} command in the Docker help.
+For one or more containers, view live usage statistics. Use `CTRL+C` to exit. For more information, see the [stats](https://docs.docker.com/engine/reference/commandline/stats/){: new_window} command in the Docker help.
 
 ```
 bluemix ic stats [--no-stream] CONTAINER [CONTAINER]
@@ -3258,7 +3200,7 @@ bluemix ic stats --no-stream my_container
 
 ### bluemix ic stop
 {: #ic_stop}
-Stop a running container. For more information, see the [stop ![External link icon](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/stop/){: new_window} command in the Docker help. To start a container, see the [bluemix ic start](#ic_start) command.
+Stop a running container. For more information, see the [stop](https://docs.docker.com/engine/reference/commandline/stop/){: new_window} ![External link icon](../../../icons/launch-glyph.svg) command in the Docker help. To start a container, see the [bluemix ic start](#ic_start) command.
 
 ```
 bluemix ic stop CONTAINER [-t SECS|--time SECS]
@@ -3298,7 +3240,7 @@ bluemix ic stop proxy
 ### bluemix ic top
 {: #bluemix_ic_top}
 
-Show the processes that are running in the container. For more information, see the [top ![External link icon](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/top/){: new_window} command in the Docker help.
+Show the processes that are running in the container. For more information, see the [top](https://docs.docker.com/engine/reference/commandline/top/){: new_window} ![External link icon](../../../icons/launch-glyph.svg) command in the Docker help.
 
 ```
 bluemix ic top CONTAINER [CONTAINER]
@@ -3324,7 +3266,7 @@ bluemix ic top my_container
 ### bluemix ic unpause
 {: #unpause}
 
-Unpause all processes within a running container. For more information, see the [unpause ![External link icon](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/unpause/){: new_window} command in the Docker help. To pause a container, see the [bluemix ic pause](#pause) command.
+Unpause all processes within a running container. For more information, see the [unpause](https://docs.docker.com/engine/reference/commandline/unpause/){: new_window} ![External link icon](../../../icons/launch-glyph.svg) command in the Docker help. To pause a container, see the [bluemix ic pause](#pause) command.
 
 ```
 bluemix ic unpause CONTAINER
@@ -3388,7 +3330,7 @@ bluemix ic version
 
 <strong>Prerequisites</strong>:  Docker
 
-To see the version of the IBM Containers, run `bluemix ic info`. For more information, see the [version ![External link icon](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/version/){: new_window} command in the Docker help.
+To see the version of the IBM Containers, run `bluemix ic info`. For more information, see the [version](https://docs.docker.com/engine/reference/commandline/version/){: new_window} ![External link icon](../../../icons/launch-glyph.svg) command in the Docker help.
 
 
 ### bluemix ic volume-create
@@ -3587,7 +3529,7 @@ bluemix ic volumes
 ### bluemix ic wait
 {: #bluemix_ic_wait}
 
-Exit a container and display the exit code as confirmation. For more information, see the [wait ![External link icon](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/wait/){: new_window} command in the Docker help.
+Exit a container and display the exit code as confirmation. For more information, see the [wait](https://docs.docker.com/engine/reference/commandline/wait/){: new_window} ![External link icon](../../../icons/launch-glyph.svg) command in the Docker help.
 
 ```
 bluemix ic wait CONTAINER [CONTAINER]
@@ -3643,4 +3585,4 @@ bluemix ic wait my_container
 ## Related Links
 {: #general}
 
-* [bx tool ![External link icon](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/home.html){:new_window}
+* [bx tool](http://clis.ng.bluemix.net/ui/home.html){: new_window} ![External link icon](../../../icons/launch-glyph.svg)

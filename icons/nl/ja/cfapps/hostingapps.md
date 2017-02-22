@@ -1,16 +1,16 @@
 ---
 
- 
+
 
 copyright:
 
-  years: 2015，2016
+  years: 2015，2017
 
-lastupdated: "2016-05-09" 
+lastupdated: "2016-05-09"
 
 ---
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -76,14 +76,14 @@ lastupdated: "2016-05-09"
 
   少なくとも、アプリケーションのインストールを、オペレーティング・システムから独立した一様なスクリプトのセットとして捉えてください。さまざまな自動化技法に適応できるよう、アプリケーションのインストールを小さくポータブルなものにしてください。また、アプリケーションのインストールに必要な依存関係を最小限にしてください。
 
-クラウド対応アプリケーションについて詳しくは、「[The 12-factor application](http://12factor.net/){:new_window}」を参照してください。
+クラウド対応のアプリケーションについて詳しくは、[The 12-factor application ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://12factor.net/){: new_window} を参照してください。
 
 ##アプリのマイグレーション
 {: #ht_hostapp}
 
 アプリケーションを完全にクラウド環境に移す代わりに、アプリケーションを {{site.data.keyword.Bluemix_notm}} にインクリメンタルにマイグレーションできます。アプリケーションの一部を先にマイグレーションし、Cloud Integration サービスを使用して、既存のデータまたは SoR (Systems of Record、定型業務処理システム) に接続することができます。
 
-クラウド・アプリケーション内で、バックエンドのデータまたはサービス (例えば、SoR) にアクセスすることが必要になる場合があります。{{site.data.keyword.Bluemix_notm}} では、Secure Gateway サービスを使用して、{{site.data.keyword.Bluemix_notm}} 組織とエンタープライズ・バックエンド・ネットワークの間にセキュア・トンネルを確立できます。このサービスによって、{{site.data.keyword.Bluemix_notm}} 上のアプリケーションがバックエンド・ネットワークのデータおよびサービスにアクセスできるようになります。詳細については、「[Reaching enterprise backend with Bluemix Secure Gateway via console](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){:new_window}」を参照してください。
+クラウド・アプリケーション内で、バックエンドのデータまたはサービス (例えば、SoR) にアクセスすることが必要になる場合があります。{{site.data.keyword.Bluemix_notm}} では、Secure Gateway サービスを使用して、{{site.data.keyword.Bluemix_notm}} 組織とエンタープライズ・バックエンド・ネットワークの間にセキュア・トンネルを確立できます。このサービスによって、{{site.data.keyword.Bluemix_notm}} 上のアプリケーションがバックエンド・ネットワークのデータおよびサービスにアクセスできるようになります。詳細については、[Reaching enterprise backend with Bluemix Secure Gateway via console ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window} を参照してください。
 
 アプリケーションを Cloud Foundry アプリケーションとして {{site.data.keyword.Bluemix_notm}} にデプロイするには、{{site.data.keyword.Bluemix_notm}} カタログからランタイムを選択します。ランタイムには、スターター・アプリケーション Hello World が含まれていて、これを自分のアプリケーションに置き換えることができます。使用したいランタイムを提供するスターターが見つからない場合は、cf push コマンドで -b オプションを使用して、Cloud Foundry 互換のカスタム・ビルドパックを {{site.data.keyword.Bluemix_notm}} に持ち込むことができます。詳しくは、『[コミュニティー・ビルドパックの使用](/docs/cfapps/byob.html)』を参照してください。
 
@@ -174,7 +174,7 @@ services = JSON.parse(ENV['VCAP_SERVICES'], :symbolize_names => true)
             end
           end
         end.flatten!.first
-```		
+```
 {:codeblock}
 
 {{site.data.keyword.Bluemix_notm}} 用にアプリケーションを変更した後、アプリケーションをローカル環境で確実に実行できるようにするため、すべての {{site.data.keyword.Bluemix_notm}} Cloud Foundry アプリケーションに対して設定される VCAP_SERVICES 環境変数があるかどうかをチェックしてください。
@@ -190,5 +190,5 @@ services = JSON.parse(ENV['VCAP_SERVICES'], :symbolize_names => true)
 * [仮想マシン](/docs/virtualmachines/vm_index.html)
 * [Delivery Pipeline 概説](/docs/services/DeliveryPipeline/index.html)
 * [IBM Eclipse Tools for Bluemix を使用したアプリのデプロイ](/docs/manageapps/eclipsetools/eclipsetools.html)
-* [The twelve-factor app](http://12factor.net/){:new_window}
-* [Reaching enterprise backend with Bluemix Secure Gateway via console](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){:new_window}
+* [The twelve-factor app ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://12factor.net/){: new_window}
+* [Reaching enterprise backend with Bluemix Secure Gateway via console ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window}

@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015,2016
+  years: 2016, 2017
+lastupdated: "2017-02-07"
 
 ---
 
@@ -11,14 +12,10 @@ copyright:
 {:codeblock:.codeblock}
 {:pre: .pre}
 
-# Risk and Security Management (Beta)
+# Risk and Security Management
 {: #RM_security}
-Last updated: 29 December 2016
-{: .last-updated}
 
 The Risk and Security Management add-on enables organizations to enhance {{site.data.keyword.iot_full}} security by creating, enforcing, and reporting on device connection security. With this add-on, certificates and transport layer security (TLS) authentication are used, on top of the user IDs and tokens that are used by {{site.data.keyword.iot_short_notm}} to determine how and where devices connect with the platform. During communication between devices and the server, any devices that do not have valid certificates with server access, as configured in the Risk and Security Management add-on, are denied access, even if they use valid user IDs and passwords.
-
-**Note:** To sign up for and enable the {{site.data.keyword.iot_full}} Risk and Security Management beta program, go to https://developer.ibm.com/iotplatform/2016/11/02/experience-the-latest-iot-security-capabilities-sign-up-to-our-november-beta-today/. The configuration of security certificates is no longer part of the Risk and Security Management beta. It is a generally available component of the Watson IoT Platform security.
 
 ## Connection security policy
 {: #connect_policy}

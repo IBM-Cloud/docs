@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-23"
+  years: 2016, 2017
+lastupdated: "2017-01-11"
 ---
 
 {:shortdesc: .shortdesc}
@@ -218,7 +218,7 @@ Para integrar un sistema de registros con las apps que cree en {{site.data.keywo
 
 <dl>
 <dt>API de Cloud Integration</dt>
-    <dd>Una API de Cloud Integration proporciona un acceso seguro a los sistemas de registro que residen detrás de un cortafuegos mediante las API web. Al crear la API de Cloud Integration, debe elegir el recurso al que desea acceder mediante la API web, especificar las operaciones que se permiten e incluye los SDK y ejemplos para acceder a la API. Para obtener más información sobre cómo crear una API de Cloud Integration, consulte [Creación de API de Cloud Integration](/docs/services/CloudIntegration/index.html#cloudint_add_service).</dd>
+    <dd>Una API de Cloud Integration proporciona un acceso seguro a los sistemas de registro que residen detrás de un cortafuegos mediante las API web. Al crear la API de Cloud Integration, debe elegir el recurso al que desea acceder mediante la API web, especificar las operaciones que se permiten e incluye los SDK y ejemplos para acceder a la API. Para obtener más información sobre cómo crear una API de Cloud Integration, consulte [Iniciación a Cloud Integration](/docs/services/CloudIntegration/CldInt_GetStart.html).</dd>
 <dt>Servicio privado</dt>
     <dd>Un servicio privado consiste en una API de Cloud Integration, los SDK y políticas de titularidad. El servicio privado también podría contener documentación u otros elementos del proveedor de servicios. Sólo el gestor de la organización puede publicar una API de Cloud Integration como un servicio privado. Para ver los servicios privados que tiene disponibles, marque el recuadro de selección Privado en el catálogo de {{site.data.keyword.Bluemix_notm}}. Puede seleccionar y enlazar un servicio privado a una app sin conectarse al servicio de Cloud Integration. Los servicios privados se enlazan a su app de la misma forma en que se hace en otros servicios de {{site.data.keyword.Bluemix_notm}}. Para obtener información sobre cómo publicar una API como un servicio privado, consulte Publicación de una API como un servicio privado.</dd>
 </dl>
@@ -252,7 +252,7 @@ Los requisitos previos para utilizar la plataforma de {{site.data.keyword.Bluemi
 La lista siguiente especifica el software de navegador mínimo requerido para {{site.data.keyword.Bluemix_notm}}:
 
  * Chrome: versión más reciente para el sistema operativo
- * Firefox: versión más reciente para su sistema operativo y ESR 38
+ * Firefox: versión más reciente para su sistema operativo y ESR 45
  * Internet Explorer: versión 11
  * Safari: versión más reciente para Mac
 
@@ -266,9 +266,9 @@ Interfaz de línea de mandatos de Cloud Foundry, versión 6.5.1 o posterior
 {: #rellinks}
 ## general
 {: #general}
-* [¿Qué es {{site.data.keyword.Bluemix_notm}}](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){:new_window}?
-* [Introducción](http://www.ibm.com/cloud-computing/bluemix/getting-started/)
+* [What is {{site.data.keyword.Bluemix_notm}} ![icono de enlace externo](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){:new_window}
+* [Iniciación a ![icono de enlace externo](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/getting-started/){:new_window}
 * [Novedades de {{site.data.keyword.Bluemix_notm}}](/docs/whatsnew/index.html)
-* [Obtener información sobre el modelo híbrido](http://www.ibm.com/cloud-computing/bluemix/hybrid/)
+* [Obtener información sobre el modelo híbrido ![icono de enlace externo](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/hybrid/){:new_window}
 * [Gestión de la cuenta](/docs/admin/adminpublic.html#mngacct)
 * [{{site.data.keyword.Bluemix_notm}} glosario](/docs/overview/glossary/index.html)

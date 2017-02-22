@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015，2016
+  years: 2015，2017
 
-lastupdated: "2016-10-18"
+lastupdated: "2017-01-11"
 
 ---
 
@@ -25,7 +25,7 @@ lastupdated: "2016-10-18"
 ## 등록
 {: #ee_start}
 
-시작하기 전에 [https://console.ng.bluemix.net/](https://console.ng.bluemix.net/)에서 IBM ID를 등록해야 합니다. 그 다음에 {{site.data.keyword.Bluemix_notm}}에 로그인하고 30일 무료 평가판 사용을 시작하십시오. {{site.data.keyword.Bluemix_notm}}에서는 무료 평가판에 대해 2GB의 런타임 메모리와 10개의 서비스 인스턴스 사용을 허용합니다. 
+시작하기 전에 [https://console.ng.bluemix.net/ ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://console.ng.bluemix.net/){: new_window}에서 IBM ID를 등록해야 합니다. 그 다음에 {{site.data.keyword.Bluemix_notm}}에 로그인하고 30일 무료 평가판 사용을 시작하십시오. {{site.data.keyword.Bluemix_notm}}에서는 무료 평가판에 대해 2GB의 런타임 메모리와 10개의 서비스 인스턴스 사용을 허용합니다. 
 
 ## {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스를 사용한 웹 앱 작성
 {: #ee_appui}
@@ -36,7 +36,7 @@ lastupdated: "2016-10-18"
 
 이 시나리오에서는 Node.js를 사용하여 웹 앱을 개발하고자 합니다. 현재 미국에 거주하고 있으며 대부분의 앱 사용자도 미국에 있다고 가정합니다. 네트워크 대기 시간 감소의 장점을 이용할 수 있도록, 사용자 기반에 근접한 앱을 빌드하고 실행하기로 결정합니다. {{site.data.keyword.Bluemix_notm}}에 로그인하고 사용자 계정 환경 설정 링크를 클릭한 후 **미국 남부** 지역을 선택하십시오. 그리고 다음 단계에 따라 앱을 작성하십시오.
 
-  1. **카탈로그**로 이동하십시오. 
+  1. **카탈로그**로 이동하십시오.
   2. **Cloud Foundry 런타임**을 선택하십시오.
   3. **SDK for Node.js**를 선택하십시오. 
   4. 앱의 고유 이름(예: TestNode)을 입력하고 **작성**을 클릭하십시오. 앱 이름은 전체 {{site.data.keyword.Bluemix_notm}} 환경에서 고유해야 합니다. 
@@ -107,10 +107,9 @@ lastupdated: "2016-10-18"
 
   ```
   cf api https://api.ng.bluemix.net
-  ```
+   ```
 
-  기타 {{site.data.keyword.Bluemix_notm}} 지역에 연결하는 방법에 대한 자세한 정보는
-{{site.data.keyword.Bluemix_notm}} 지역을 참조하십시오. {{site.data.keyword.Bluemix_notm}} 지역을 지정한 후에 사용자가 지정한 위치 정보가 저장됩니다.
+  기타 {{site.data.keyword.Bluemix_notm}} 지역에 연결하는 방법에 대한 자세한 정보는 {{site.data.keyword.Bluemix_notm}} 지역을 참조하십시오. {{site.data.keyword.Bluemix_notm}} 지역을 지정한 후에 사용자가 지정한 위치 정보가 저장됩니다.
 
   4. 그런 다음, cf login 명령을 사용하여 {{site.data.keyword.Bluemix_notm}}에 로그인할 수 있습니다.
 
@@ -164,8 +163,7 @@ lastupdated: "2016-10-18"
   cf bind-service TestNode cloudant100
   ```
 
-  서비스 인스턴스를 애플리케이션에 바인딩하면 {{site.data.keyword.Bluemix_notm}}가 서비스와 통신할 수 있으며 새 애플리케이션이 해당 서비스 인스턴스와 통신하도록 지정할 수 있습니다. 다른 서비스의 경우, {{site.data.keyword.Bluemix_notm}}가 바인딩 동안 애플리케이션 및 서비스 인스턴스를 다르게 처리할 수 있습니다. 예를 들어, 일부 서비스는 서비스 인스턴스와 통신하는 각 애플리케이션에 대해 새 테넌트를 작성할 수 있습니다. 서비스는 애플리케이션과 서비스 사이의 통신을 위해 반드시 애플리케이션에 전달되어야 하는
-신임 정보 등의 정보를 사용하여 {{site.data.keyword.Bluemix_notm}}에 다시 응답합니다. 
+  서비스 인스턴스를 애플리케이션에 바인딩하면 {{site.data.keyword.Bluemix_notm}}가 서비스와 통신할 수 있으며 새 애플리케이션이 해당 서비스 인스턴스와 통신하도록 지정할 수 있습니다. 다른 서비스의 경우, {{site.data.keyword.Bluemix_notm}}가 바인딩 동안 애플리케이션 및 서비스 인스턴스를 다르게 처리할 수 있습니다. 예를 들어, 일부 서비스는 서비스 인스턴스와 통신하는 각 애플리케이션에 대해 새 테넌트를 작성할 수 있습니다. 서비스는 애플리케이션과 서비스 사이의 통신을 위해 반드시 애플리케이션에 전달되어야 하는 신임 정보 등의 정보를 사용하여 {{site.data.keyword.Bluemix_notm}}에 다시 응답합니다. 
 
   **참고:** 애플리케이션이 서비스 인스턴스에 바인딩될 때 실행 중이면 애플리케이션이 다시 시작될 때까지 VCAP_SERVICES 환경 변수가 업데이트되지 않습니다. 애플리케이션을 다시 시작하려면 cf restart 명령을 사용하십시오.
 
@@ -178,10 +176,9 @@ lastupdated: "2016-10-18"
   <dt>password</dt>
   <dd>b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424</dd>
   <dt>url</dt>
-  <dd>https://d72837bb-b341-4038-9c8e-7f7232916197-bluemix:b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424@d72837bb-b341-4038-9c8e-7f7232916197-bluemix.cloudant.com</dd></dt></dl>
+  <dd>https://d72837bb-b341-4038-9c8e-7f7232916197-bluemix:b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424@d72837bb-b341-4038-9c8e-7f7232916197-bluemix.cloudant.com</dd></dl>
 
-  예를 들어, Node.js 앱이 다음과 같이 이 정보에 액세스할 수 있습니다.
-
+  예를 들어, Node.js 앱이 다음과 같이 이 정보에 액세스할 수 있습니다. 
   ```
   if (process.env.VCAP_SERVICES) {
         var env = JSON.parse(process.env.VCAP_SERVICES);
@@ -199,8 +196,7 @@ lastupdated: "2016-10-18"
 
   4. 서비스 인스턴스와 상호작용하십시오.
 
-  신임 정보를 사용하여 서비스 인스턴스와 상호작용할 수 있습니다. 취할 수 있는 조치에는 읽기, 쓰기 및 업데이트가 포함됩니다. 다음 예는 JSON 오브젝트를 {{site.data.keyword.cloudant}} 서비스 인스턴스에 삽입하는 방법을 예시합니다.
-
+  신임 정보를 사용하여 서비스 인스턴스와 상호작용할 수 있습니다. 취할 수 있는 조치에는 읽기, 쓰기 및 업데이트가 포함됩니다. 다음 예는 JSON 오브젝트를 {{site.data.keyword.cloudant}} 서비스 인스턴스에 삽입하는 방법을 예시합니다. 
   ```
   // create a new message
 var create_message = function(req, res) {

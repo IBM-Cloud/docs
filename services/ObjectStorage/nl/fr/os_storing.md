@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -38,14 +38,16 @@ Vous pouvez télécharger des objets dans l'espace de stockage via l'interface u
   ```
   {: pre}
 
-2. Créez un nouveau conteneur {{site.data.keyword.objectstorageshort}} en exécutant la commande suivante. Vous définissez vous-même la variable *nom_conteneur*, à ce moment là.
+2. Créez un conteneur {{site.data.keyword.objectstorageshort}} en exécutant la commande suivante. Vous y définissez par la même occasion la variable
+*nom_conteneur*.
 
   ```
   swift post <nom_conteneur>
   ```
   {: pre}
 
-**Remarque** : si vous recevez un message d'erreur, confirmez que vous avez installé [les logiciels prérequis](/docs/services/ObjectStorage/os_configuring.html#install-swift-client).
+**Remarque **: Si vous recevez un message d'erreur, vérifiez que les
+[logiciels prérequis](/docs/services/ObjectStorage/os_configuring.html#install-swift-client) ont été installés.
 
 3. Facultatif - pour vérifier que votre conteneur a été créé, exécutez la commande suivante pour répertorier vos conteneurs.
 

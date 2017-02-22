@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-21"
+  years: 2016, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -16,8 +16,8 @@ El Iniciador de código de {{site.data.keyword.Bluemix}} Mobile para Weather mue
 ## Requisitos
 {: #tutorial_requirements}
 
-* Una cuenta de [Bluemix](http://bluemix.net)
-* Una instancia de servicio de [Datos de Weather Company](https://console.{DomainName}/catalog/services/weather-company-data/) obtenida desde el [Catálogo de Bluemix](https://console.{DomainName}/catalog/)
+* Una cuenta de [Bluemix ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](http://bluemix.net "icono de enlace externo")
+* Una instancia de servicio de [Weather Company Data ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://console.{DomainName}/catalog/services/weather-company-data/ "icono de enlace externo") obtenida del [Catálogo de Bluemix ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://console.{DomainName}/catalog/ "icono de enlace externo")
 
 
 ## Guía de inicio
@@ -37,17 +37,17 @@ Para comenzar a utilizar rápidamente el Iniciador de código de Weather, siga e
 
    4. Especifique el nombre de proyecto y pulse **Crear**.
 
-2. Opcional: Añada capacidad de notificaciones Push.
+2. Opcional: Añada la función de {{site.data.keyword.mobilepushshort}}. 
 
-   1. Pulse **Añadir** para **Notificaciones Push** en la página **Visión general del proyecto**.
+   1. Pulse **Añadir** para **{{site.data.keyword.mobilepushshort}}** en la página **Visión general del proyecto**.
 
-      De forma alternativa, puede pulsar **Crear** desde la página **Notificaciones Push**.
+      De forma alternativa, puede pulsar **Crear** desde la página **{{site.data.keyword.mobilepushshort}}**. 
 
    2. Especifique el nombre del servicio y pulse **Crear**.
 
-   3. Para iOS, [configure el Servicio de notificaciones Push de Apple](/docs/services/mobilepush/t_push_provider_ios.html){: new_window}.
+   3. Para iOS, [configure el servicio de notificación Push de Apple ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](/docs/services/mobilepush/t_push_provider_ios.html "icono de enlace externo"){: new_window}.
 
-   4. Para Android, [configure Google Cloud Messaging](/docs/services/mobilepush/t_push_provider_android.html){: new_window}.
+   4. Para Android, [configure Google Cloud Messaging ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](/docs/services/mobilepush/t_push_provider_android.html "icono de enlace externo"){: new_window}.
    
 3. Opcional: Añada capacidad de análisis.
 
@@ -58,6 +58,8 @@ Para comenzar a utilizar rápidamente el Iniciador de código de Weather, siga e
    2. Especifique el nombre del servicio y pulse **Crear**.
    
    3. Desactive la **Modalidad de demostración** para ver los datos del análisis después de ejecutar la app.
+
+   4. Consulte [Iniciación a {{site.data.keyword.mobileanalytics_short}} ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](/docs/services/mobileanalytics/index.html "icono de enlace externo"){: new_window} para obtener más información sobre cómo configurar Analytics.
 
 4. Opcional: Añada capacidad de autenticación.
 
@@ -71,7 +73,7 @@ Para comenzar a utilizar rápidamente el Iniciador de código de Weather, siga e
    
    4. Seleccione su proveedor de identidad y especifique la información necesaria para configurarlo. Solo puede habilitar un proveedor de identidad.
 
-   5. Consulte [Iniciación a Mobile Client Access](/docs/services/mobileaccess/index.html){: new_window} para obtener más información sobre cómo configurar la autenticación.
+   5. Consulte [Iniciación a Mobile Client Access ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](/docs/services/mobileaccess/index.html "icono de enlace externo"){: new_window} para obtener más información sobre cómo configurar la autenticación. 
 
 5. Descargue el proyecto.
 
@@ -85,4 +87,20 @@ Para comenzar a utilizar rápidamente el Iniciador de código de Weather, siga e
 ## Qué hacer a continuación
 {: #tutorial_next}
 
-[Pruébelo.](http://console.{DomainName}/mobile/create-project?starter=fad1d49e-f7b6-3aff-9b53-14673fca4399){: new_window}
+[¡Pruébelo!![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](http://console.{DomainName}/mobile/create-project?starter=fad1d49e-f7b6-3aff-9b53-14673fca4399 "icono de enlace externo"){: new_window}
+
+
+### Guías de aprendizaje del Iniciador de IU
+{: #tutorials_UI}
+
+* [Guía de aprendizaje: Catálogo de almacenamiento](tutorial_store_catalog.html)
+
+
+### Guías de aprendizaje del Iniciador de código
+{: #tutorials_Code}
+
+* [Guía de aprendizaje: Basic](tutorial.html)
+* [Guía de aprendizaje: Cloudant Sync](tutorial_cloudant_synd.html)
+* [Guía de aprendizaje: {{site.data.keyword.openwhisk_short}}](tutorial_openwhisk.html)
+* [Guía de aprendizaje: {{site.data.keyword.visualrecognitionshort}}](tutorial_visual_recognition.html)
+* [Guía de aprendizaje: Lenguaje Watson](tutorial_watson_language.html)

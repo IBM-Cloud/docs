@@ -1,13 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-25"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 
 # {{site.data.keyword.amashort}} SDK, 샘플 및 API 참조
@@ -26,8 +28,7 @@ lastupdated: "2016-10-25"
 ### Android
 {: #coresdk-android}
 
-[GitHub 저장소](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core),
-[API 참조](https://console.{DomainName}/docs/api/content/api/mobilefirst/android/core-api-doc/overview-summary.html)
+[GitHub repo ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-core "외부 링크 아이콘"){: new_window}
 
 #### Gradle로 코어 SDK 설치
 {: #coresdk-android-gradle}
@@ -46,7 +47,7 @@ lastupdated: "2016-10-25"
 ### iOS(Swift SDK)
 {: #coresdk-ios-swift}
 
-[GitHub 저장소](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security)
+[GitHub repo ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security "외부 링크 아이콘"){: new_window}
 
 #### CocoaPods로 코어 SDK 설치
 {: #coresdk-ios-siwft-cocoapods}
@@ -58,27 +59,11 @@ pod 'BMSSecurity'
 ```
 {: codeblock}
 
-### iOS(Objective-C SDK)
-{: #coresdk-ios}
-
-Objective-C SDK는 그대로 완벽하게 지원되며 여전히 {{site.data.keyword.Bluemix_notm}} 모바일 서비스의 기본 SDK로 간주되지만, 새로운 Swift SDK를 위해 올해 말에 중단될 계획입니다([iOS Swift SDK 설정](getting-started-ios-swift-sdk.html) 참조).
-
-[Git 저장소](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk/archive?revstr=master),
-[API 참조](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFCore_api-doc/html/index.html)
-
-#### CocoaPods로 코어 SDK 설치
-{: #coresdk-ios-cocoapods}
-
-Podfile을 편집하여 다음 행을 필요한 대상에 추가한 후 실행하십시오. 
-```Bash
-pod 'IMFCore'
-```
-{: codeblock}
 
 ### Cordova
 {: #coresdk-cordova}
 
-[GitHub 저장소 및 API 참조](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
+[GitHub repo 및 API 참조![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core "외부 링크 아이콘"){: new_window}
 
 #### Cordova CLI로 코어 SDK 설치
 {: #coresdk-cordova-cli}
@@ -95,8 +80,7 @@ cordova plugin add bms-core
 ### Android
 {: #facebooksdk-android}
 
-[GitHub 저장소](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-facebookauthentication),
-[API 참조](https://console.{DomainName}/docs/api/content/api/mobilefirst/android/facebook-api-doc/index.html)
+[GitHub repo ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-facebookauthentication "외부 링크 아이콘"){: new_window},
 
 #### Gradle로 Facebook SDK 설치
 {: #facebooksdk-android-gradle}
@@ -114,7 +98,7 @@ cordova plugin add bms-core
 ### iOS(Swift SDK)
 {: #facebooksdk-ios-swift}
 
-[GitHub 저장소](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-facebookauthentication)
+[GitHub repo ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-facebookauthentication "외부 링크 아이콘"){: new_window}
 
 #### CocoaPods로 Facebook SDK 설치
 {: #facebooksdk-ios-swift-cocoapods}
@@ -126,27 +110,11 @@ pod 'BMSFacebookAuthentication'
  ```
 {: codeblock}
 
-### iOS(Objective-C SDK)
-{: #facebooksdk-ios}
-
-[Git 저장소](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk.git),
-[API 참조](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFFacebookAuthentication_api-doc/html/index.html)
-
-**참고:** Objective-C SDK는 그대로 완벽하게 지원되며 여전히 {{site.data.keyword.Bluemix_notm}} 모바일 서비스의 기본 SDK로 간주되지만, 새로운 Swift SDK를 위해 올해 말에 중단될 계획입니다. 새 애플리케이션의 경우 Swift SDK를 사용하는 것이 좋습니다(iOS Swift SDK 설정 참조). 
-#### CocoaPods로 Facebook SDK 설치
-{: #facebooksdk-ios-cocoapods}
-
-Podfile을 편집하여 다음 행을 추가한 후 실행하십시오. 
-
-```Bash
-pod 'IMFFacebookAuthentication'
-```
-{: codeblock}
 
 ### Cordova
 {: #facebooksdk-cordova}
 
-[GitHub 저장소 및 API 참조](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
+[GitHub repo 및 API 참조![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core "외부 링크 아이콘"){: new_window}
 
 #### Cordova CLI로 Facebook SDK 설치
 {: #facebooksdk-cordova-cli}
@@ -164,8 +132,8 @@ cordova plugin add ibm-mfp-core
 ### Android
 {: #googlesdk-android}
 
-[GitHub 저장소](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-googleauthentication),
-[API 참조](https://console.{DomainName}/docs/api/content/api/mobilefirst/android/google-api-doc/index.html)
+[GitHub repo ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-android-security-googleauthentication "외부 링크 아이콘"){: new_window},
+
 
 #### Gradle로 Google+ SDK 설치
 {: #googlesdk-android-gradle}
@@ -184,7 +152,7 @@ cordova plugin add ibm-mfp-core
 ### iOS(Swift SDK)
 {: #googlesdk-ios-swift}
 
-[GitHub 저장소](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-googleauthentication)
+[GitHub repo ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-security-googleauthentication "외부 링크 아이콘"){: new_window}
 
 #### CocoaPods로 Google+ SDK 설치
 {: #googlesdk-ios-swift-cocoapods}
@@ -197,26 +165,11 @@ pod 'BMSGoogleAuthentication'
 ```
 {: codeblock}
 
-### iOS(Objective-C SDK - 더 이상 사용되지 않음)
-{: #googlesdk-ios}
-
-[Git 저장소](https://hub.jazz.net/git/bluemixmobilesdk/imf-ios-sdk.git),
-[API 참조](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFGoogleAuthentication_api-doc/html/index.html)
-
-#### CocoaPods로 Google+ SDK 설치
-{: #googlesdk-ios-cocoapods}
-
-Podfile을 편집하여 다음 행을 추가한 후 실행하십시오. 
-
-```Bash
-pod 'IMFGoogleAuthentication'
-```
-{: codeblock}
 
 ### Cordova
 {: #googlesdk-cordova}
 
-[GitHub 저장소 및 API 참조](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core)
+[GitHub repo 및 API 참조![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-core "외부 링크 아이콘"){: new_window}
 
 #### Cordova CLI로 Google+ SDK 설치 
 {: #googlesdk-cordova-cli}
@@ -231,7 +184,7 @@ cordova plugin add ibm-mfp-core
 ## Node.js 서버용 서버 SDK
 {: #serversdk}
 
-[GitHub 저장소](https://github.com/ibm-bluemix-mobile-services/bms-mca-token-validation-strategy)
+[GitHub repo ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-mca-token-validation-strategy "외부 링크 아이콘"){: new_window}
 
 #### npm으로 서버 SDK 설치
 {: #serversdk-npm}
@@ -261,7 +214,7 @@ npm install -save bms-mca-token-validation-strategy
 ## Node.js OAuth SDK
 {: #serverlibertysdk-github}
 
-[GitHub 저장소](https://github.com/ibm-bluemix-mobile-services/bms-mca-oauth-sdk)
+[GitHub repo ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-mca-oauth-sdk "외부 링크 아이콘"){: new_window}
 
 #### npm으로 OAuth SDK 설치
 {: #oauthsdk}
@@ -275,21 +228,8 @@ npm install -save bms-mca-oauth-sdk
 ## 사용자 정의 ID 제공자 샘플
 {: #customidprovider}
 
-[단순 샘플 GitHub 저장소](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)
+[단순 샘플 GitHub repo ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample "외부 링크 아이콘"){: new_window}
 
-[고급 샘플 GitHub 저장소](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management)
+[고급 샘플 GitHub repo ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management "외부 링크 아이콘"){: new_window}
 
-## IMFURLProtocol
-{: #IMFURLProtocol}
 
-[API 참조 ](https://console.{DomainName}/docs/api/content/api/mobilefirst/ios/IMFURLProtocol_api-doc/html/index.html)
-
-#### CocoaPods로 IMFURLProtocol 설치
-{: #IMFURLProtocol-cocoapods}
-
-Podfile을 편집하여 다음 행을 추가한 후 실행하십시오. 
-
-```Bash
-pod 'IMFURLProtocol'
-```
-{: codeblock}

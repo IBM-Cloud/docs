@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015，2016
+  years: 2015，2017
 
-lastupdated: "2016-10-18"
+lastupdated: "2017-01-11"
 
 ---
 
@@ -25,7 +25,7 @@ lastupdated: "2016-10-18"
 ## サインアップ
 {: #ee_start}
 
-開始するには、その前に [https://console.ng.bluemix.net/](https://console.ng.bluemix.net/) からサインアップして IBMid を取得する必要があります。その後、{{site.data.keyword.Bluemix_notm}} にログインし、30 日間の無料トライアルを開始します。{{site.data.keyword.Bluemix_notm}} の無料トライアルでは、2 GB のランタイム・メモリーと 10 個のサービス・インスタンスを使用できます。
+始める前に、[https://console.ng.bluemix.net/ ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://console.ng.bluemix.net/){: new_window} から登録を行って IBM ID を取得する必要があります。その後、{{site.data.keyword.Bluemix_notm}} にログインし、30 日間の無料トライアルを開始します。{{site.data.keyword.Bluemix_notm}} の無料トライアルでは、2 GB のランタイム・メモリーと 10 個のサービス・インスタンスを使用できます。
 
 ## {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースを使用した Web アプリの作成
 {: #ee_appui}
@@ -36,7 +36,7 @@ lastupdated: "2016-10-18"
 
 このシナリオでは、Node.js を使用して Web アプリを開発します。開発者は米国にいて、このアプリのユーザーの大部分も米国にいるものとします。ネットワーク待ち時間を少なくできるように、ユーザー・ベースの近くでアプリの作成と実行を行うことに決めます。{{site.data.keyword.Bluemix_notm}} にログインした後に、ユーザー・アカウント設定リンクをクリックし、次に**「米国南部」**地域を選択します。次に、以下の手順を実行してアプリを作成します。
 
-  1. **「カタログ」**に移動します。 
+  1. **「カタログ」**に移動します。
   2. **「Cloud Foundry Runtimes」**を選択します。
   3. **「SDK for Node.js」**を選択します。
   4. アプリ名として固有の名前 (例えば TestNode) を入力し、**「作成」**をクリックします。このアプリ名は {{site.data.keyword.Bluemix_notm}} 環境全体で固有でなければなりません。
@@ -176,7 +176,7 @@ cf bind-service TestNode cloudant100
   <dt>password</dt>
   <dd>b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424</dd>
   <dt>url</dt>
-  <dd>https://d72837bb-b341-4038-9c8e-7f7232916197-bluemix:b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424@d72837bb-b341-4038-9c8e-7f7232916197-bluemix.cloudant.com</dd></dt></dl>
+  <dd>https://d72837bb-b341-4038-9c8e-7f7232916197-bluemix:b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424@d72837bb-b341-4038-9c8e-7f7232916197-bluemix.cloudant.com</dd></dl>
 
   例えば、Node.js アプリはこの情報に次のようにアクセスします。
   ```

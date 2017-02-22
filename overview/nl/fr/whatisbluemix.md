@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-23"
+  years: 2016, 2017
+lastupdated: "2017-01-11"
 ---
 
 {:shortdesc: .shortdesc}
@@ -26,9 +26,7 @@ disposition par {{site.data.keyword.IBM_notm}}. Vous et votre équipe pouvez acc
 outils d'infrastructure sous forme de services existants. Les développeurs peuvent exploiter l'écosystème en pleine expansion de services et
 d'infrastructures d'exécution disponibles afin de construire des applications avec des approches de programmation polyglottes.
  
-Avec {{site.data.keyword.Bluemix_notm}}, il n'est plus nécessaire d'effectuer des investissements importants en termes de matériel pour tester ou exécuter une nouvelle application. A la place, nous gérons tout pour vous et ne vous facturons que ce que vous utilisez. {{site.data.keyword.Bluemix_notm}}
-met à disposition des modèles de déploiement intégrés publics, [dédiés](/docs/dedicated/index.html) et
-[locaux](/docs/local/index.html). 
+Avec {{site.data.keyword.Bluemix_notm}}, il n'est plus nécessaire d'effectuer des investissements importants en termes de matériel pour tester ou exécuter une nouvelle application. A la place, nous gérons tout pour vous et ne vous facturons que ce que vous utilisez. {{site.data.keyword.Bluemix_notm}} met à disposition des modèles de déploiement intégrés publics, [dédiés](/docs/dedicated/index.html) et [locaux](/docs/local/index.html). 
 
 Vous pouvez mener une idée de la création au bac à sable de développement, dans un environnement de production distribué globalement avec une
 infrastructure de traitement et de stockage, des services de plateforme open source et des conteneurs, ainsi que des services logiciels et des outils mis à
@@ -54,7 +52,7 @@ open source et des développeurs tiers.
 d'API.
 * D'utiliser ou non des ressources en temps réel en fonction de l'évolution de vos besoins métier ou des demandes imposées par la charge de travail.
 
-### Applis
+### Applications
 {: #bluemixoverviewapplications}
 
 Le tableau de bord Applis fournit tout ce dont vous avez besoin pour rendre vos applications opérationnelles et pour les gérer lors de leur
@@ -155,7 +153,7 @@ de tickets et à la connexion. Un lien vers le tableau de bord Infrastructure et
 En général, il est inutile de se préoccuper des couches du système d'exploitation et de l'infrastructure lorsque vous exécutez des applications dans
 {{site.data.keyword.Bluemix_notm}}, dans Cloud Foundry. Les
 couches, telles que les systèmes de fichiers racine et les composants de
-middleware, sont masquées pour que vous puissiez vous consacrer au code de
+middleware, sont masquées pour que vous puissiez vous concentrer sur le code de
 votre application. Cependant, vous pouvez obtenir plus de détails sur ces couches si vous avez besoin d'informations spécifiques sur
 l'emplacement d'exécution de votre application. 
 
@@ -273,6 +271,7 @@ Un préfixe unique est affecté à chaque région. {{site.data.keyword.Bluemix_n
 | Région Sydney | Sydney, Australie | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
 {: caption="Table 1. {{site.data.keyword.Bluemix_notm}} - liste des régions" caption-side="top"}
 
+
 ### Résilience de {{site.data.keyword.Bluemix_notm}}
 {: #resiliency}
 
@@ -323,8 +322,9 @@ organisation.
 <dt>API Cloud Integration</dt>
     <dd>Une API Cloud Integration fournit un accès sécurisé aux systèmes d'enregistrement résidant derrière un pare-feu
 via des API Web. Lorsque vous créez l'API Cloud Integration, vous choisissez la ressource à laquelle vous voulez accéder via l'API Web, spécifiez les
-opérations qui sont autorisées et incluez les logiciels SDK et les exemples pour accéder à l'API. Pour plus d'informations sur la création d'une API Cloud
-Integration, voir [Création d'une API Cloud Integration](/docs/services/CloudIntegration/index.html#cloudint_add_service).</dd>
+opérations qui sont autorisées et incluez les logiciels SDK et les exemples pour accéder à l'API. Pour
+plus d'informations sur la création d'une API Cloud Integration, voir
+[Initiation à Cloud Integration](/docs/services/CloudIntegration/CldInt_GetStart.html).</dd>
 <dt>Service privé</dt>
     <dd>Un service privé est composé d'une API Cloud Integration, de logiciels SDK et de règles de droits. Le service privé peut également contenir de la
 documentation ou d'autres éléments appartenant au fournisseur de services. Seul le responsable de l'organisation peut publier une API Cloud Integration en tant que service privé. Pour connaître les services privés à votre
@@ -367,7 +367,7 @@ tout de même quelques-uns.
 La liste suivante spécifie les versions minimales requises des logiciels de navigateur pour {{site.data.keyword.Bluemix_notm}} :
 
  * Chrome : version la plus récente pour votre système d'exploitation
- * Firefox : version la plus récente pour votre système d'exploitation et ESR 38
+ * Firefox : version la plus récente pour votre système d'exploitation et ESR 45
  * Internet Explorer : version 11
  * Safari : version la plus récente pour Mac
 
@@ -380,9 +380,9 @@ Interface de ligne de commande Cloud Foundry, version 6.5.1 ou ultérieure
 {: #rellinks}
 ## general
 {: #general}
-* [Qu'est ce que {{site.data.keyword.Bluemix_notm}} ?](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){:new_window}
-* [Initiation](http://www.ibm.com/cloud-computing/bluemix/getting-started/)
+* [Qu'est-ce que {{site.data.keyword.Bluemix_notm}} ? ![icône de lien externe](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){:new_window}
+* [Initiation ![icône de lien externe](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/getting-started/){:new_window}
 * [Nouveautés de {{site.data.keyword.Bluemix_notm}}](/docs/whatsnew/index.html)
-* [En savoir plus sur le modèle hybride](http://www.ibm.com/cloud-computing/bluemix/hybrid/)
+* [En savoir plus sur le modèle hybride ![icône de lien externe](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/hybrid/){:new_window}
 * [Gestion de votre compte](/docs/admin/adminpublic.html#mngacct)
 * [Glossaire {{site.data.keyword.Bluemix_notm}}](/docs/overview/glossary/index.html)

@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Abilitazione delle applicazioni Android alla ricezione di {{site.data.keyword.mobilepushshort}}
 {: #tag_based_notifications}
-Ultimo aggiornamento: 07 dicembre 2016
+Ultimo aggiornamento: 16 gennaio 2017
 {: .last-updated}
 
 Puoi abilitare le applicazioni Android a ricevere le notifiche di push ai tuoi dispositivi. Android Studio è un prerequisito ed è il metodo raccomandato per creare progetti Android. Una conoscenza di base di Android Studio è essenziale.
@@ -24,16 +24,17 @@ Questa sezione descrive come installare e utilizzare il Push SDK client per svil
     ulteriormente le tue applicazioni Android.
 
 Il Push SDK dei servizi mobili Bluemix® può essere aggiunto utilizzando Gradle. Gradle
-          scarica automaticamente le risorse dai repository e le rende disponibili alla tua applicazione Android. Assicurati di impostare correttamente Android Studio e Android Studio SDK. Per ulteriori informazioni su come impostare il tuo sistema, consulta la [panoramica di Android Studio](https://developer.android.com/tools/studio/index.html). Per informazioni su Gradle, consulta [Configuring Gradle Builds](http://developer.android.com/tools/building/configuring-gradle.html).
+          scarica automaticamente le risorse dai repository e le rende disponibili alla tua applicazione Android. Assicurati di impostare correttamente Android Studio e Android Studio SDK. Per ulteriori informazioni su come impostare il tuo sistema, consulta la [Panoramica di Android Studio ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.android.com/tools/studio/index.html "Icona link esterno"){: new_window}. Per informazioni su Gradle, vedi [Configuring Gradle Builds ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://developer.android.com/tools/building/configuring-gradle.html "Icona link esterno"){: new_window}.
 
 Dopo aver creato e aperto la tua applicazione mobile, completa la seguente procedura utilizzando Android Studio.
 
-1. Aggiungi le dipendenze al tuo file **build.gradle** di livello del modulo. 
+1. Aggiungi le dipendenze al tuo file **build.gradle** di livello del modulo. 	
+
 	- Aggiungi la seguente dipendenza per includere il client di push dei servizi Bluemix™ Mobile e l'SDK dei servizi Google Play alle tue dipendenze dell'ambito di compilazione.
 	```
-	com.ibm.mobilefirstplatform.clientsdk.android:push:2.+
+	com.ibm.mobilefirstplatform.clientsdk.android:push:3.+
 	```
-    {: codeblock}
+    	{: codeblock}
 	
 	- Aggiungi le seguenti dipendenze per importare le istruzioni obbligatorie per i frammenti di codice.
 	```
@@ -44,16 +45,22 @@ Dopo aver creato e aperto la tua applicazione mobile, completa la seguente proce
 	import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationListener;
 	import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPSimplePushNotification;
 	```
-    {: codeblock}
+    	{: codeblock}
+
+	- Aggiungi le seguenti dipendenze alla fine del tuo file **build.gradle** di livello del modulo.
+	```
+		apply plugin: 'com.google.gms.google-services'
+	```
+		{: codeblock}
 3. Aggiungi le seguenti dipendenze al tuo file **build.gradle** di livello del progetto.
 ```
 dependencies {
-    classpath 'com.android.tools.build:gradle:2.2.0'
+    classpath 'com.android.tools.build:gradle:3.0.0'
     classpath 'com.google.gms:google-services:3.0.0'
 }
 ``` 
     {: codeblock}
-5. Nel file **AndroidManifest.xml**, aggiungi le seguenti autorizzazioni. Per visualizzare un manifest di esempio, consulta [Applicazione di esempio Android helloPush](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml). Per visualizzare un file Gradle di esempio, consulta [Sample Build Gradle file](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle).
+5. Nel file **AndroidManifest.xml**, aggiungi le seguenti autorizzazioni. Per visualizzare un manifest di esempio, vedi [Applicazione di esempio helloPush Android ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml "Icona link esterno"){: new_window}. Per visualizzare un file Gradle di esempio, vedi [File Build Gradle di esempio ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle "Icona link esterno"){: new_window}.
 ```
 <uses-permission android:name="android.permission.INTERNET"/>
 <uses-permission android:name="android.permission.GET_ACCOUNTS" />
@@ -62,7 +69,7 @@ dependencies {
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 ```
 	{: codeblock}
- Leggi ulteriori informazioni sulle [autorizzazioni Android](http://developer.android.com/guide/topics/security/permissions.html) qui.
+ Leggi ulteriori informazioni sulle [Autorizzazioni Android ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://developer.android.com/guide/topics/security/permissions.html "Icona link esterno"){: new_window} qui.
 
 4. Aggiungi le impostazioni di intento di notifica per l'attività. Questa impostazione avvia l'applicazione
           quando l'utente fa clic sulla notifica ricevuta dall'area di notifica.
@@ -110,10 +117,10 @@ Per configurare il progetto FCM e ottenere le tue credenziali, consulta [Come ot
 3. Seleziona **AGGIUNGI APPLICAZIONE** o l'**icona Aggiungi Firebase alla tua applicazione Android** dalla scheda Generale nel pannello Tue applicazioni.
     ![Aggiunta di Firebase a Android](images/FCM_5.jpg)
 
-4. Nella finestra Aggiungi Firebase alla tua applicazione Android, aggiungi **com.ibm.mobilefirstplatform.clientsdk.android.push** come nome pacchetto. Il campo Nome alternativo applicazione è facoltativo. Fai clic su **AGGIUNGI APPLICAZIONE**.
+4. Nella finestra Aggiungi Firebase alla tua applicazione Android, aggiungi **com.ibm.mobilefirstplatform.clientsdk.android.push** come nome pacchetto. Il campo Nome alternativo applicazione è facoltativo. Fai clic su **AGGIUNGI APPLICAZIONE**. 
     ![Finestra Aggiunta di Firebase al tuo Android](images/FCM_1.jpg)
 
-5. Includi il nome pacchetto della tua applicazione immettendolo nella finestra Aggiungi Firebase alla tua applicazione Android. Il campo Nome alternativo applicazione è facoltativo. Fai clic su **AGGIUNGI APPLICAZIONE**. Per ogni pacchetto aggiunto, Firebase richiede di modificare `build.gradle`, aggiungendo il nome del pacchetto.
+5. Includi il nome pacchetto della tua applicazione immettendolo nella finestra Aggiungi Firebase alla tua applicazione Android. Il campo Nome alternativo applicazione è facoltativo. Fai clic su **AGGIUNGI APPLICAZIONE**. 
 
 	![Aggiunta del nome pacchetto della tua applicazione](images/FCM_2.jpg)
 

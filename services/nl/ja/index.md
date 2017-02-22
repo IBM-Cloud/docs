@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-03"
+  years: 2016, 2017
+lastupdated: "2017-01-11"
 
 ---
 
@@ -23,10 +23,10 @@ lastupdated: "2016-11-03"
 
 |タイプ 	|説明	|サポートの詳細|
 |:------|:--------------|:--------------|
-|IBM	|IBM が提供するサービスで、一般出荷可能。	|IBM が提供する一般出荷可能なサービスの欠陥であると判定された問題は、サポート対象となります。サポートは、ユーザーが設定した重大度に基づいて提供されます。チケット重大度について詳しくは、『[サポートへのお問い合わせ](/docs/support/index.html#contacting-bluemix-support){: new_window}』を参照してください。|
+|IBM	|IBM が提供するサービスで、一般出荷可能。	|IBM が提供する一般出荷可能なサービスの欠陥であると判定された問題は、サポート対象となります。サポートは、ユーザーが設定した重大度に基づいて提供されます。チケット重大度について詳しくは、『[サポートへのお問い合わせ](/docs/support/index.html#contacting-bluemix-support)』を参照してください。|
 |サード・パーティー	|IBM 以外の企業が提供するサービス。	|サード・パーティー・サービスに対するサポートは、各サービス・プロバイダーから提供されます。IBM が問題を調査し、その問題がサード・パーティー・サービスの欠陥であると判定された場合、IBM は修正を提供する義務を負いません。IBM は、必要に応じてサード・パーティー・サービスのプロバイダーと分析内容を共有します。|
 |コミュニティー	|オープン・ソース・コミュニティーにより提供されるサービス。	|コミュニティー・サービスに対するサポートは、{{site.data.keyword.Bluemix_notm}} Developers Community から提供されます。IBM が問題を調査し、その問題がコミュニティー・サービスの欠陥であると判定された場合、IBM は修正を提供する義務を負いません。|
-|ベータ	|生産準備が未完了で、開発のトライアル・ステージにあるサービス。ベータ・サービスは、開発チームやマーケティング・チームがサービスを一般出荷可能にする前にそのサービスの価値を評価するのに役立ちます。	|IBM が提供するベータ・サービスの欠陥であると判定された問題はサポート対象となりますが、IBM は修正を提供する義務を負いません。また、該当する場合、問題チケットには重大度 3 または 4 が割り当てられます。チケット重大度については、『[サポートへのお問い合わせ](/docs/support/index.html#contacting-bluemix-support){: new_window}』を参照してください。|
+|ベータ	|生産準備が未完了で、開発のトライアル・ステージにあるサービス。ベータ・サービスは、開発チームやマーケティング・チームがサービスを一般出荷可能にする前にそのサービスの価値を評価するのに役立ちます。	|IBM が提供するベータ・サービスの欠陥であると判定された問題はサポート対象となりますが、IBM は修正を提供する義務を負いません。また、該当する場合、問題チケットには重大度 3 または 4 が割り当てられます。チケット重大度については、『[サポートへのお問い合わせ](/docs/support/index.html#contacting-bluemix-support)』を参照してください。|
 {: caption="Table 1. {{site.data.keyword.Bluemix_notm}} services support information" caption-side="top"}
 
 ##試験的サービス
@@ -97,7 +97,7 @@ lastupdated: "2016-11-03"
 |{{site.data.keyword.iot_short}}		|米国ダラスでホスト		|英国ロンドンでホスト		|地域で使用不可|
 |{{site.data.keyword.iotrtinsights_short}}		|米国ダラスでホスト		|英国ロンドンでホスト		|オーストラリアのシドニーでホスト|
 |IoT Workbench		|米国ダラスでホスト		|英国ロンドンでホスト		|オーストラリアのシドニーでホスト|
-|{{site.data.keyword.keymanagementserviceshort}}	|米国ダラスでホスト		|英国ロンドンでホスト		|地域で使用不可|
+|{{site.data.keyword.keymanagementserviceshort}}	|米国ダラスでホスト		|地域で使用不可		|地域で使用不可|
 |{{site.data.keyword.languagetranslationshort}}	|米国ダラスでホスト		|米国ダラスでホスト		|米国ダラスでホスト |
 |{{site.data.keyword.pm_short}}   |米国ダラスでホスト		|英国ロンドンでホスト		|地域で使用不可|
 |{{site.data.keyword.eventhubshort}}		|米国ダラスでホスト		|地域で使用不可		|地域で使用不可|
@@ -119,8 +119,6 @@ lastupdated: "2016-11-03"
 |{{site.data.keyword.runbook_short}}				|米国ダラスでホスト		|英国ロンドンでホスト			|オーストラリアのシドニーでホスト |
 |{{site.data.keyword.SecureGateway}}		|米国ダラスでホスト		|英国ロンドンでホスト		|オーストラリアのシドニーでホスト |
 |{{site.data.keyword.sescashort}}		|米国ダラスでホスト		|英国ロンドンでホスト		|オーストラリアのシドニーでホスト |
-|{{site.data.keyword.servicediscoveryshort}}		|米国ダラスでホスト		|英国ロンドンでホスト		|地域で使用不可|
-|{{site.data.keyword.serviceproxyshort}}		|米国ダラスでホスト		|英国ロンドンでホスト		|地域で使用不可|
 |{{site.data.keyword.ssofull}}			|米国ワシントンでホスト		|地域で使用不可		|地域で使用不可|
 |{{site.data.keyword.speechtotextshort}}	|米国ダラスでホスト		|米国ダラスでホスト		|米国ダラスでホスト |
 |{{site.data.keyword.streaminganalyticsshort}}	|米国ダラスでホスト		|英国ロンドンでホスト		|英国ロンドンでホスト|

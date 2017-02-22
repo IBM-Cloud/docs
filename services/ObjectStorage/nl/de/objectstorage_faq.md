@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -16,11 +16,12 @@ Diese FAQ bieten Antworten auf häufig gestellte Fragen zum {{site.data.keyword.
 
 ## Welche Konten und Zahlungspläne können für {{site.data.keyword.objectstorageshort}} verwendet werden? {: #account-payment}
 
-Der {{site.data.keyword.objectstorageshort}}-Service bietet zwei Planoptionen: Kostenlos und Standard. Die [Preisstruktur](https://www.ibm.com/cloud-computing/bluemix/pricing/) ist vom ausgewählten Plan abhängig.
+Der {{site.data.keyword.objectstorageshort}}-Service bietet zwei Planoptionen: Kostenfrei und Standard. Die [Preisstruktur](https://www.ibm.com/cloud-computing/bluemix/pricing/) ist vom ausgewählten Plan abhängig.
 
 <table>
+<caption> Tabelle 1. Vergleich des kostenfreien Plans und des Standardplans</caption>
   <tr>
-    <th> Kostenloser Plan </th>
+    <th> Kostenfeier Plan </th>
     <th> Standardplan </th>
   </tr>
   <tr>
@@ -32,7 +33,7 @@ Der {{site.data.keyword.objectstorageshort}}-Service bietet zwei Planoptionen: K
     <td> Verfügbar nur für kostenpflichtige {{site.data.keyword.Bluemix_notm}}-Konten und interne IBM Benutzer </td>
   </tr>
   <tr>
-    <td> Kostenlos </td>
+    <td> Kostenfrei</td>
     <td> Nutzungsabhängige oder Subskriptions-Zahlungspläne </td>
   </tr>
   <tr>
@@ -41,9 +42,7 @@ Der {{site.data.keyword.objectstorageshort}}-Service bietet zwei Planoptionen: K
   </tr>
 </table>
 
-Tabelle 1: Vergleich des gebührenfreien Plans und des Standardplans
-
-**Achtung**: Benutzer, die mit einem {{site.data.keyword.Bluemix_notm}}-Testkonto arbeiten, können den kostenlosen Plan nutzen. Wenn der Zeitraum für den Test abläuft, wird die zugeordnete {{site.data.keyword.objectstorageshort}}-Serviceinstanz inaktiviert, d. h. Sie können nicht auf das Speicherkonto zugreifen. Nach 30 Tagen wird Ihr {{site.data.keyword.Bluemix_notm}}-Konto bereinigt und alle Daten werden gelöscht. Zur Vermeidung von Datenverlust aktualisieren Sie das [gebührenpflichtige {{site.data.keyword.Bluemix_notm}}-Konto ](/docs/admin/account.html) so bald wie möglich.
+**Achtung**: Benutzer, die mit einem {{site.data.keyword.Bluemix_notm}}-Testkonto arbeiten, können den kostenfreien Plan nutzen. Wenn der Zeitraum für den Test abläuft, wird die zugeordnete {{site.data.keyword.objectstorageshort}}-Serviceinstanz inaktiviert, d. h. Sie können nicht auf das Speicherkonto zugreifen. Nach 30 Tagen wird Ihr {{site.data.keyword.Bluemix_notm}}-Konto bereinigt und alle Daten werden gelöscht. Zur Vermeidung von Datenverlust aktualisieren Sie das [gebührenpflichtige {{site.data.keyword.Bluemix_notm}}-Konto ](/docs/admin/account.html) so bald wie möglich.
 
 ## Wie ändere ich meinen Plan? {: #changeplan}  
 Für Instanzen, die im Rahmen des Beta-Plans oder des kostenfreien Plans erstellt werden, kann ein Upgrade auf auf den Standardplan durchgeführt werden. Die zugeordnete Organisation muss ein gebührenpflichtiges {{site.data.keyword.Bluemix_notm}}-Konto sein. Testkonten mit Object Storage-Instanzen können nicht auf den Standardplan aktualisiert werden und Instanzen im Standardplan können nicht auf andere Pläne herabgestuft werden. Ihre Serviceinstanzen und Kundendaten werden bei einem Upgrade in den neuen Plan verschoben.
@@ -66,4 +65,4 @@ Am Ende des Fakturierungszyklus wird Ihnen die Nutzung von {{site.data.keyword.B
 
 ## Entspricht meine {{site.data.keyword.Bluemix_notm}}-Region meiner Speicherregion? {: #region}
 
-Der {{site.data.keyword.objectstorageshort}}-Service unterstützt die Speicherregionen Dallas und London. Diese Speicherregionen sind unabhängig von der {{site.data.keyword.Bluemix_notm}}-Region, wie zum Beispiel 'US-South' und 'United Kingdom', in der die {{site.data.keyword.objectstorageshort}}-Serviceinstanz erstellt wurde. Wenn Sie eine Instanz in der {{site.data.keyword.Bluemix_notm}}-Region 'USA-Süden' erstellen, haben Sie Lese- und Schreibzugriff auf Daten in der Speicherregion Dallas oder in der Speicherregion London. Die Standardwerte der Speicherregion basieren auf Ihrer {{site.data.keyword.Bluemix_notm}}-Region. Sie können zwischen Regionen wechseln, indem Sie in der Dropdown-Liste in der Benutzerschnittstelle eine andere Region auswählen. 
+Der {{site.data.keyword.objectstorageshort}}-Service unterstützt die Speicherregionen Dallas und London. Diese Speicherregionen sind unabhängig von der {{site.data.keyword.Bluemix_notm}}-Region, wie zum Beispiel 'US-South' und 'United Kingdom', in der die {{site.data.keyword.objectstorageshort}}-Serviceinstanz erstellt wurde. Wenn Sie eine Instanz in der {{site.data.keyword.Bluemix_notm}}-Region 'USA-Süden' erstellen, haben Sie Lese- und Schreibzugriff auf Daten in der Speicherregion Dallas oder in der Speicherregion London. Die Standardwerte der Speicherregion basieren auf Ihrer {{site.data.keyword.Bluemix_notm}}-Region. Sie können zwischen Regionen wechseln, indem Sie in der Dropdown-Liste in der Benutzerschnittstelle eine andere Region auswählen.

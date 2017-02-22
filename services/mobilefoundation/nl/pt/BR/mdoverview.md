@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated:  "2016-08-03"
+  years: 2016, 2017
+lastupdated:  "2017-01-17"
 
 ---
 
@@ -53,25 +53,10 @@ Ao usar os fóruns para fazer uma pergunta, marque a sua
 pergunta para que ela possa ser vista pelas equipes de
 desenvolvimento da IBM {{site.data.keyword.Bluemix_notm}}.
 
-Se você tiver perguntas técnicas sobre o desenvolvimento ou a
-implementação de um aplicativo com o
-{{site.data.keyword.mobilefoundation_short}}, poste a sua
-pergunta no
-[Stack
-Overflow](http://stackoverflow.com/search?q=ibm-mobilefirst+bluemix){:new_window} e marque a sua pergunta com
-`bluemix` e `ibm-mobilefirst`.
+Se você tiver questões técnicas sobre o desenvolvimento ou a implementação de um app com o {{site.data.keyword.mobilefoundation_short}}, poste a sua pergunta no [Stack Overflow ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://stackoverflow.com/search?q=ibm-mobilefirst+bluemix "Ícone de link externo"){:new_window} e identifique sua pergunta com `bluemix` e `ibm-mobilefirst`.
 
-Para perguntas sobre as instruções de serviço e introdução,
-use o fórum
-[Respostas
-do IBM developerWorks dW](https://developer.ibm.com/answers/topics/mobilefirst/?smartspace=bluemix){:new_window}. Inclua
-as marcações `bluemix` e `mobilefirst`.
+Para perguntas sobre o serviço e instruções para iniciar, use o fórum [IBM developerWorks dW Answers ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/answers/topics/mobilefirst/?smartspace=bluemix "Ícone de link externo"){:new_window}. Inclua as marcações `bluemix` e `mobilefirst`.
 
-Consulte
-[Obtendo
-ajuda](https://www.{DomainName}/docs/support/index.html#getting-help) para obter mais detalhes sobre o uso dos fóruns.
+Veja [Obtendo ajuda ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.{DomainName}/docs/support/index.html#getting-help "Ícone de link externo"){: new_window} para obter mais detalhes sobre o uso dos fóruns.
 
-Para obter informações sobre como abrir um chamado de suporte
-IBM ou sobre os níveis de suporte e severidades de chamado, consulte
-[Entrando
-em contato com o suporte](https://www.{DomainName}/docs/support/index.html#contacting-support).
+Para obter informações sobre a abertura de um chamado de suporte IBM ou sobre os níveis de suporte e as severidades de chamado, veja [Entrando em contato com o suporte ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.{DomainName}/docs/support/index.html#contacting-support "Ícone de link externo"){: new_window}.

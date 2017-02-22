@@ -1,7 +1,7 @@
 ------
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,41 +12,12 @@ copyright:
 
 # Hintergrundbenachrichtigungen für iOS verarbeiten
 {: #silent-notifications}
-Letzte Aktualisierung: 06. Dezember 2016
+Letzte Aktualisierung: 16. Januar 2017
 {: .last-updated}
 
-Hintergrundbenachrichtigungen werden nicht auf dem Gerät angezeigt. Diese Benachrichtigungen werden von der Anwendung im Hintergrund empfangen; dadurch wird die Anwendung für maximal 30 Sekunden aktiviert, um die angegebene Hintergrundtask auszuführen. Der Eingang der Benachrichtigung wird vom Benutzer möglicherweise nicht bemerkt. Verwenden Sie zum Senden von Hintergrundbenachrichtigungen für iOS die [REST-API](https://mobile.{DomainName}/imfpush/).   
+Hintergrundbenachrichtigungen werden nicht auf dem Gerät angezeigt. Diese Benachrichtigungen werden von der Anwendung im Hintergrund empfangen; dadurch wird die Anwendung für maximal 30 Sekunden aktiviert, um die angegebene Hintergrundtask auszuführen. Der Eingang der Benachrichtigung wird vom Benutzer möglicherweise nicht bemerkt. Verwenden Sie zum Senden von Hintergrundbenachrichtigungen für iOS die [REST-API ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://mobile.{DomainName}/imfpush/ "Symbol für externen Link"){: new_window}.   
 
-1. Wenn Sie Push-Hintergrundbenachrichtigungen senden möchten, implementieren Sie die folgende Methode in der Datei `appDelegate.m` in Ihrem Projekt.
-
-```
-//For Objective C
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult result))handler
-{
-   NSNumber *contentAvailable = userInfo[@"aps"][@"content-available"];
-   if([contentAvailable intValue]== 1){
-      [[IMFPushClient sharedInstance] application:application didReceiveRemoteNotification:userInfo];
-       //Perform background task
-       NSLog(@"Received a silent push..");
-       NSLog(@"userInfo: %@", userInfo.description);
-       _appDelegateVC.result.text = userInfo.description;
-       handler(UIBackgroundFetchResultNewData);
-    }
-    else
-	{
-    //Normal Notification
-    [[IMFPushAppManager get] notificationReceived:userInfo];
-    NSLog(@"Received a normal notification.");
-    NSLog(@"userInfo: %@", userInfo.description);
-     _appDelegateVC.result.text = userInfo.description;
-    handler(UIBackgroundFetchResultNoData);
-    }
-    //Success
-}
-```
-    {: codeblock}
-
-Bei Swift ist der Wert für `contentAvailable`, der vom Server für Hintergrundbenachrichtigungen gesendet wird, gleich 1.
+1. Wenn Sie Push-Hintergrundbenachrichtigungen senden möchten, implementieren Sie die folgende Methode in der Datei `appDelegate.m` in Ihrem Projekt. In Swift ist der Wert für `contentAvailable` , der vom Server für Hintergrundbenachrichtigungen gesendet wird, gleich 1.
 ```
 // For Swift
 func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {

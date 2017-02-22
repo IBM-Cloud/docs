@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015, 2017
 
-lastupdated: "2016-10-27"
+lastupdated: "2017-01-12"
 
 
 ---
@@ -27,7 +27,7 @@ IBM Containers CLI は、Bluemix でコンテナーおよびコンテナー・�
 <dl>
 <dt>エンドポイント</dt>
 <dd>このコマンドを使用する前に、<code>bluemix api</code> を介して API エンドポイントを設定する必要があります。</dd>
-<dt>login</dt>
+<dt>ログイン</dt>
 <dd>このコマンドを使用する前に、<code>bluemix login</code> コマンドを使用してログインする必要があります。フェデレーテッド ID でログインする場合は、「--sso」オプションを使用し、ワンタイム・パスコードを使って認証します。</dd>
 <dt>ターゲット</dt>
 <dd>このコマンドを使用する前に、<code>bluemix target</code> コマンドを使用して組織およびスペースを設定する必要があります。</dd>
@@ -36,6 +36,7 @@ IBM Containers CLI は、Bluemix でコンテナーおよびコンテナー・�
 </dl>
 
 <table summary="Bluemix 上のコンテナーの管理に使用することができる bluemix コマンド。">
+ <caption>表 1. Bluemix 上のコンテナーを管理するためのコマンド</caption>
  <thead>
  <th colspan="5">Bluemix 上のコンテナーを管理するためのコマンド</th>
  </thead>
@@ -93,15 +94,15 @@ IBM Containers CLI は、Bluemix でコンテナーおよびコンテナー・�
  <td>[bluemix ic service-bind](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_service_bind)</td>
  <td>[bluemix ic service-unbind](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_service_unbind)</td>
  <td>[bluemix ic start](/docs/cli/reference/bluemix_cli/index.html#ic_start)</td>
- <td>[bluemix ic stats](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_stats)</td>  
+ <td>[bluemix ic stats](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_stats)</td>
  <td>[bluemix ic stop](/docs/cli/reference/bluemix_cli/index.html#ic_stop)</td>
  </tr>
  <tr>
  <td>[bluemix ic top](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_top)</td>
  <td>[bluemix ic unpause](/docs/cli/reference/bluemix_cli/index.html#unpause)</td>
- <td>[bluemix ic unprovision](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_unprovision)</td>  
+ <td>[bluemix ic unprovision](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_unprovision)</td>
  <td>[bluemix ic volume-inspect](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_volume_inspect)</td>
- <td>[bluemix ic volume-create](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_volume_create)</td> 
+ <td>[bluemix ic volume-create](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_volume_create)</td>
  </tr>
  <tr>
  <td>[bluemix ic volume-fs](/docs/cli/reference/bluemix_cli/index.html#bluemix_ic_volume_fs)</td>
@@ -119,14 +120,12 @@ IBM Containers CLI は、Bluemix でコンテナーおよびコンテナー・�
  </tr>
   </tbody>
  </table>
-{: caption="Table 1. Commands for managing containers on Bluemix" caption-side="top"}
-
 
 
 ## bluemix ic attach
 {: #bluemix_ic_attach}
 
-実行中のコンテナーを制御するか、その出力を表示します。終了してコンテナーを停止するには `CTRL+C` を使用します。このコマンドは Docker CLI を呼び出します。詳細については、Docker ヘルプで [attach](https://docs.docker.com/engine/reference/commandline/attach/){: new_window} コマンドを参照してください。
+実行中のコンテナーを制御するか、その出力を表示します。終了してコンテナーを停止するには `CTRL+C` を使用します。このコマンドは Docker CLI を呼び出します。詳細については、Docker ヘルプで [attach ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/attach/){: new_window} コマンドを参照してください。
 
 ```
 bluemix ic attach [--no-stdin] [--sig-proxy] CONTAINER
@@ -158,7 +157,7 @@ bluemix ic attach my_container
 ## bluemix ic build
 {: #bluemix_ic_build}
 
-IBM Containers ビルド・サービスを呼び出して、Docker イメージをローカルにビルドするか、またはプライベート {{site.data.keyword.Bluemix_notm}} リポジトリー内にビルドします。このコマンドは Docker CLI を呼び出します。詳細については、Docker ヘルプで [build](https://docs.docker.com/engine/reference/commandline/build/){: new_window} コマンドを参照してください。
+IBM Containers ビルド・サービスを呼び出して、Docker イメージをローカルにビルドするか、またはプライベート {{site.data.keyword.Bluemix_notm}} リポジトリー内にビルドします。このコマンドは Docker CLI を呼び出します。詳細については、Docker ヘルプで [build ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/build/){: new_window} コマンドを参照してください。
 
 ```
 bluemix ic build -t TAG|--tag TAG [--no-cache] [-p|--pull] [-q|--quiet] DOCKERFILE_LOCATION
@@ -194,7 +193,7 @@ bluemix ic build -t registry.ng.bluemix.net/mynamespace/myimage
 
 ## bluemix ic cp
 {: #bluemix_ic_cp}
-コンテナーとローカル・ファイル・システムの間でファイルまたはフォルダーをコピーします。このコマンドは Docker CLI を呼び出します。詳細については、Docker ヘルプで [cp](https://docs.docker.com/engine/reference/commandline/cp/){: new_window} コマンドを参照してください。
+コンテナーとローカル・ファイル・システムの間でファイルまたはフォルダーをコピーします。このコマンドは Docker CLI を呼び出します。詳細については、Docker ヘルプで [cp ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/cp/){: new_window} コマンドを参照してください。
 
 
 ## bluemix ic cpi
@@ -234,7 +233,7 @@ bluemix ic cpi training/sinatra registry.ng.bluemix.net/mynamespace/mysinatra:v1
 ## bluemix ic exec
 {: #bluemix_ic_exec}
 
-コンテナー内でコマンドを実行します。詳細については、Docker ヘルプで [exec](https://docs.docker.com/engine/reference/commandline/exec/){: new_window} コマンドを参照してください。
+コンテナー内でコマンドを実行します。詳細については、Docker ヘルプで [exec ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/exec/){: new_window} コマンドを参照してください。
 
 ```
 bluemix ic exec [-d|--detach] [-it] [-u USER|--user USER] CONTAINER [CMD]
@@ -313,7 +312,7 @@ NMENT_VARIABLE_FILE] [-P false|true] [--volume] [--min MIN_INSTANCE_COUNT] [--ma
 | CCS_BIND_APP=*&lt;appname&gt;*       | コンテナーにサービスをバインドします。`CCS_BIND_APP` 環境変数を使用して、アプリをコンテナーにバインドします。このアプリはターゲット・サービスにバインドされ、ブリッジとして機能します。これにより、{{site.data.keyword.Bluemix_notm}} は、ブリッジ・アプリの `VCAP_SERVICES` 情報を、実行中のコンテナー・インスタンスに注入することができます。ブリッジ・アプリの作成について詳しくは、[コンテナーへのサービスのバインド](../../../containers/container_integrations_binding.html){: new_window}を参照してください。 |
 | CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | ブリッジ・アプリを使用せずに Bluemix サービスをコンテナーに直接バインドするには、CCS_BIND_SRV を使用します。このバインディングにより、Bluemix は、実行中のコンテナー・インスタンスに VCAP_SERVICES 情報を注入できます。複数の Bluemix サービスをリストするには、同じ環境変数の一部としてそれらのサービスを組み込みます。 |
 | LOG_LOCATIONS=*&lt;path_to_file&gt;* | コンテナー内でモニターされるログ・ファイルを追加します。`LOG_LOCATIONS` 環境変数をログ・ファイルへのパスと共に組み込んでください。 |
-{: caption="Table 8. Commonly used environment variables" caption-side="top"}
+{: caption="Table 2. Commonly used environment variables" caption-side="top"}
 
  <dl>
    <dt>--env-file <i>ENVIRONMENT_VARIABLE_FILE</i> (オプション)</dt>
@@ -521,7 +520,7 @@ bluemix ic groups [-q]
 ## bluemix ic images
 {: #bluemix_ic_images}
 
-組織のプライベート {{site.data.keyword.Bluemix_notm}} リポジトリー内の使用可能なすべてのイメージのリストを表示します。詳細については、Docker ヘルプで [images](https://docs.docker.com/engine/reference/commandline/images){: new_window} コマンドを参照してください。リストには、イメージ ID、作成日、およびイメージ名が含まれます。
+組織のプライベート {{site.data.keyword.Bluemix_notm}} リポジトリー内の使用可能なすべてのイメージのリストを表示します。詳細については、Docker ヘルプで [images ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/images){: new_window} コマンドを参照してください。リストには、イメージ ID、作成日、およびイメージ名が含まれます。
 
 ```
 bluemix ic images [-a|--all] [-f CONDITION] [--no-trunc] [-q|--quiet]
@@ -589,7 +588,7 @@ bluemix region-set us-south
 ## bluemix ic inspect
 {: #bluemix_ic_inspect}
 
-コンテナーに関する情報を表示します。詳細については、Docker ヘルプで [inspect](https://docs.docker.com/engine/reference/commandline/inspect){: new_window} コマンドを参照してください。
+コンテナーに関する情報を表示します。詳細については、Docker ヘルプで [inspect ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/inspect){: new_window} コマンドを参照してください。
 
 ```
 bluemix ic inspect [IMAGE|images|CONTAINER]
@@ -750,7 +749,7 @@ bluemix ic ips -q
 ## bluemix ic kill
 {: #bluemix_ic_kill}
 
-コンテナーを停止せずにコンテナー内の実行中のプロセスを停止します。詳細については、Docker ヘルプで [kill](https://docs.docker.com/engine/reference/commandline/kill/){: new_window} コマンドを参照してください。
+コンテナーを停止せずにコンテナー内の実行中のプロセスを停止します。詳細については、Docker ヘルプで [kill ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/kill/){: new_window} コマンドを参照してください。
 
 ```
 bluemix ic kill [-s CMD|--signal CMD] CONTAINER
@@ -780,7 +779,7 @@ bluemix ic kill proxy
 ## bluemix ic logs
 {: #bluemix_ic_logs}
 
-実行中のコンテナーの出力ログまたはエラー・ログを表示します。詳細については、Docker ヘルプで [logs](https://docs.docker.com/engine/reference/commandline/logs/){: new_window} コマンドを参照してください。
+実行中のコンテナーの出力ログまたはエラー・ログを表示します。詳細については、Docker ヘルプで [logs ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/logs/){: new_window} コマンドを参照してください。
 ```
 bluemix ic logs [OPTIONS] CONTAINER
 ```
@@ -823,7 +822,7 @@ bluemix ic namespace-set NAME
 ## bluemix ic pause
 {: #pause}
 
-実行中のコンテナー内のすべてのプロセスを休止します。詳細については、Docker ヘルプで [pause](https://docs.docker.com/engine/reference/commandline/pause/){: new_window} コマンドを参照してください。コンテナーを停止する場合は、[bluemix ic unpause](#unpause) コマンドを参照してください。
+実行中のコンテナー内のすべてのプロセスを休止します。詳細については、Docker ヘルプで [pause ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/pause/){: new_window} コマンドを参照してください。コンテナーを停止する場合は、[bluemix ic unpause](#unpause) コマンドを参照してください。
 
 ```
 bluemix ic pause CONTAINER
@@ -862,12 +861,12 @@ bluemix ic pause proxy
 ## bluemix ic port
 {: #bluemix_ic_port}
 
-コンテナーのポート・マッピングまたは特定のマッピングをリストします。このコマンドは `docker port` コマンドをラップします。詳細については、Docker ヘルプで [port](https://docs.docker.com/engine/reference/commandline/port/){: new_window} コマンドを参照してください。
+コンテナーのポート・マッピングまたは特定のマッピングをリストします。このコマンドは `docker port` コマンドをラップします。詳細については、Docker ヘルプで [port ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/port/){: new_window} コマンドを参照してください。
 
 
 ## bluemix ic ps
 {: #bluemix_ic_ps}
-ログインしているユーザーの名前空間で実行中のコンテナーのリストを表示します。デフォルトでは、このコマンドは実行中のコンテナーのみを表示します。詳細については、Docker ヘルプで [ps](https://docs.docker.com/engine/reference/commandline/ps/){: new_window} コマンドを参照してください。
+ログインしているユーザーの名前空間で実行中のコンテナーのリストを表示します。デフォルトでは、このコマンドは実行中のコンテナーのみを表示します。詳細については、Docker ヘルプで [ps ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/ps/){: new_window} コマンドを参照してください。
 
 ```
 bluemix ic ps [-a|--all] [--filter env=SEARCH_CRITERIA] [-s|--size] [-l NUM|--limit NUM] [-q|--quiet]
@@ -906,7 +905,7 @@ bluemix ic ps -a
 
 ## bluemix ic rename
 {: #bluemix_ic_rename}
-コンテナーの名前を変更します。詳細については、Docker ヘルプで [rename](https://docs.docker.com/engine/reference/commandline/rename/){: new_window} コマンドを参照してください。
+コンテナーの名前を変更します。詳細については、Docker ヘルプで [rename ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/rename/){: new_window} コマンドを参照してください。
 
 ```
 bluemix ic rename OLD_NAME NEW_NAME
@@ -926,7 +925,7 @@ bluemix ic rename OLD_NAME NEW_NAME
 
 ログインしている Bluemix スペースで IBM Containers サービスを再作成します。スペースの元の割り当て量は維持されます。
 
-<strong>重要</strong>: このコマンドを実行した場合、このスペース内の単一コンテナーおよびグループはどれも、再プロビジョンされたスペースにマイグレーションされず、マイグレーション・プロセス中に削除されます。 
+<strong>重要</strong>: このコマンドを実行した場合、このスペース内の単一コンテナーおよびグループはどれも、再プロビジョンされたスペースにマイグレーションされず、マイグレーション・プロセス中に削除されます。
 
 ```
 bluemix ic reprovision [--force|-f] [ENVIRONMENT_NAME]
@@ -942,7 +941,7 @@ bluemix ic reprovision [--force|-f] [ENVIRONMENT_NAME]
 ## bluemix ic restart
 {: #bluemix_ic_restart}
 
-コンテナーを再始動します。詳細については、Docker ヘルプで [restart](https://docs.docker.com/engine/reference/commandline/restart/){: new_window} コマンドを参照してください。
+コンテナーを再始動します。詳細については、Docker ヘルプで [restart ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/restart/){: new_window} コマンドを参照してください。
 
 ```
 bluemix ic restart CONTAINER [-t SECS|--time SECS]
@@ -985,7 +984,7 @@ bluemix ic restart proxy
 ## bluemix ic rm
 {: #bluemix_ic_rm}
 
-コンテナーを削除します。詳細については、Docker ヘルプで [rm](https://docs.docker.com/engine/reference/commandline/rm/){: new_window} コマンドを参照してください。
+コンテナーを削除します。詳細については、Docker ヘルプで [rm ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/rm/){: new_window} コマンドを参照してください。
 
 ```
 bluemix ic rm [-f|--force] CONTAINER
@@ -1028,7 +1027,7 @@ bluemix ic rm proxy
 ## bluemix ic rmi
 {: #bluemix_ic_rmi}
 
-ログインしているユーザーの名前空間からイメージを削除します。詳細については、Docker ヘルプで [rmi](https://docs.docker.com/engine/reference/commandline/rmi/){: new_window} コマンドを参照してください。
+ログインしているユーザーの名前空間からイメージを削除します。詳細については、Docker ヘルプで [rmi ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/rmi/){: new_window} コマンドを参照してください。
 
 ```
 bluemix ic rmi [-R REGISTRY|--registry REGISTRY] IMAGE
@@ -1141,7 +1140,7 @@ bluemix ic route-unmap -n my_host -d organization.com GROUP1
 {: #bluemix_ic_run}
 
 イメージ名を使用して、コンテナー・クラウド・サービスで新しいコンテナーを開始します。
-詳細については、Docker ヘルプで [run](https://docs.docker.com/engine/reference/commandline/run/){: new_window} コマンドを参照してください。
+詳細については、Docker ヘルプで [run ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/run/){: new_window} コマンドを参照してください。
 
 
 ```
@@ -1182,7 +1181,7 @@ init` を使用した正常なログインによって、必要なトークン�
 | CCS_BIND_APP=*&lt;appname&gt;*       | コンテナーにサービスをバインドします。`CCS_BIND_APP` 環境変数を使用して、アプリをコンテナーにバインドします。このアプリはターゲット・サービスにバインドされ、ブリッジとして機能します。これにより、{{site.data.keyword.Bluemix_notm}} は、ブリッジ・アプリの `VCAP_SERVICES` 情報を、実行中のコンテナー・インスタンスに注入することができます。ブリッジ・アプリの作成について詳しくは、[コンテナーへのサービスのバインド](../../../containers/container_integrations_binding.html){: new_window}を参照してください。 |
 | CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | ブリッジ・アプリを使用せずに Bluemix サービスをコンテナーに直接バインドするには、CCS_BIND_SRV を使用します。このバインディングにより、Bluemix は、実行中のコンテナー・インスタンスに VCAP_SERVICES 情報を注入できます。複数の Bluemix サービスをリストするには、同じ環境変数の一部としてそれらのサービスを組み込みます。 |
 | LOG_LOCATIONS=*&lt;path_to_file&gt;* | コンテナー内でモニターされるログ・ファイルを追加します。`LOG_LOCATIONS` 環境変数をログ・ファイルへのパスと共に組み込んでください。 |
-{: caption="Table 9. Commonly used environment variables" caption-side="top"}
+{: caption="Table 3. Commonly used environment variables" caption-side="top"}
 
 
    <dl>
@@ -1269,7 +1268,7 @@ bluemix ic service-unbind GROUP_NAME SERVICE_INSTANCE
 
 ## bluemix ic start
 {: #ic_start}
-停止しているコンテナーを開始します。詳細については、Docker ヘルプで [start](https://docs.docker.com/engine/reference/commandline/start/){: new_window} コマンドを参照してください。コンテナーを停止する場合は、[bluemix ic stop](#ic_stop) コマンドを参照してください。
+停止しているコンテナーを開始します。詳細については、Docker ヘルプで [start ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/start/){: new_window} コマンドを参照してください。コンテナーを停止する場合は、[bluemix ic stop](#ic_stop) コマンドを参照してください。
 
 ```
 bluemix ic start CONTAINER
@@ -1310,7 +1309,7 @@ bluemix ic start proxy
 ## bluemix ic stats
 {: #bluemix_ic_stats}
 
-1 つ以上のコンテナーについて、使用状況統計をライブで表示します。終了するには `CTRL+C` を使用します。詳細については、Docker ヘルプで [stats](https://docs.docker.com/engine/reference/commandline/stats/){: new_window} コマンドを参照してください。
+1 つ以上のコンテナーについて、使用状況統計をライブで表示します。終了するには `CTRL+C` を使用します。詳細については、Docker ヘルプで [stats ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/stats/){: new_window} コマンドを参照してください。
 
 ```
 bluemix ic stats [--no-stream] CONTAINER [CONTAINER]
@@ -1336,9 +1335,9 @@ bluemix ic stats --no-stream my_container
 ```
 
 
-## bluemix ic stop  
+## bluemix ic stop
 {: #ic_stop}
-実行中のコンテナーを停止します。詳細については、Docker ヘルプで [stop](https://docs.docker.com/engine/reference/commandline/stop/){: new_window} コマンドを参照してください。コンテナーを開始する場合は、[bluemix ic start](#ic_start) コマンドを参照してください。
+実行中のコンテナーを停止します。詳細については、Docker ヘルプで [stop ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/stop/){: new_window} コマンドを参照してください。コンテナーを開始する場合は、[bluemix ic start](#ic_start) コマンドを参照してください。
 
 ```
 bluemix ic stop CONTAINER [-t SECS|--time SECS]
@@ -1380,7 +1379,7 @@ bluemix ic stop proxy
 ## bluemix ic top
 {: #bluemix_ic_top}
 
-コンテナーで実行されているプロセスを表示します。詳細については、Docker ヘルプで [top](https://docs.docker.com/engine/reference/commandline/top/){: new_window} コマンドを参照してください。
+コンテナーで実行されているプロセスを表示します。詳細については、Docker ヘルプで [top ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/top/){: new_window} コマンドを参照してください。
 
 ```
 bluemix ic top CONTAINER [CONTAINER]
@@ -1407,7 +1406,7 @@ bluemix ic top my_container
 ## bluemix ic unpause
 {: #unpause}
 
-実行中のコンテナー内のすべてのプロセスを休止解除します。詳細については、Docker ヘルプで [unpause](https://docs.docker.com/engine/reference/commandline/unpause/){: new_window} コマンドを参照してください。コンテナーを休止する場合は、[bluemix ic pause](#pause) コマンドを参照してください。
+実行中のコンテナー内のすべてのプロセスを休止解除します。詳細については、Docker ヘルプで [unpause ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/unpause/){: new_window} コマンドを参照してください。コンテナーを休止する場合は、[bluemix ic pause](#pause) コマンドを参照してください。
 
 ```
 bluemix ic unpause CONTAINER
@@ -1471,7 +1470,7 @@ bluemix ic version
 
 <strong>前提条件</strong>:  Docker
 
-IBM Containers のバージョンを表示するには、`bluemix ic info` を実行します。詳細については、Docker ヘルプで [version](https://docs.docker.com/engine/reference/commandline/version/){: new_window} コマンドを参照してください。
+IBM Containers のバージョンを表示するには、`bluemix ic info` を実行します。詳細については、Docker ヘルプで [version ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/version/){: new_window} コマンドを参照してください。
 
 
 ## bluemix ic volume-create
@@ -1678,7 +1677,7 @@ bluemix ic volumes
 ## bluemix ic wait
 {: #bluemix_ic_wait}
 
-コンテナーを終了し、確認のために終了コードを表示します。詳細については、Docker ヘルプで [wait](https://docs.docker.com/engine/reference/commandline/wait/){: new_window} コマンドを参照してください。
+コンテナーを終了し、確認のために終了コードを表示します。詳細については、Docker ヘルプで [wait ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/wait/){: new_window} コマンドを参照してください。
 
 ```
 bluemix ic wait CONTAINER [CONTAINER]
@@ -1727,4 +1726,3 @@ bluemix ic wait-status CONTAINER
 ```
 bluemix ic wait my_container
 ```
-

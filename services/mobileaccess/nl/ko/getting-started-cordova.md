@@ -1,30 +1,35 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-04"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
+
 
 # Cordova 플러그인 설정
 {: #getting-started-cordova}
 
-{{site.data.keyword.amafull}} 클라이언트 SDK로 Cordova 클라이언트 애플리케이션을 인스트루먼트하십시오. Android(Java) 또는 iOS(Objective C) 코드에서 권한 관리자를 초기화하십시오. 클라이언트를 초기화하고 WebView에서 보호 및 비보호 리소스에 대한 요청을 작성하십시오. 
+{{site.data.keyword.amafull}} 클라이언트 SDK로 Cordova 클라이언트 애플리케이션을 인스트루먼트하십시오. Android(Java) 또는 iOS 코드(관련 헤더 파일 및 Swift SDK를 사용하는 Objective C)에서 권한 관리자를 초기화하십시오. 클라이언트를 초기화하고 WebView에서 보호 및 비보호 리소스에 대한 요청을 작성하십시오. 
 
 {:shortdesc}
 
 ## 시작하기 전에
 {: #before-you-begin}
 다음이 있어야 합니다.
+
 * {{site.data.keyword.Bluemix_notm}} 애플리케이션의 인스턴스. {{site.data.keyword.Bluemix_notm}} 백엔드 애플리케이션 작성 방법에 대한 자세한 정보는 [시작하기](index.html)를 참조하십시오.
 * {{site.data.keyword.amafull}} 서비스의 인스턴스
 * 백엔드 애플리케이션의 URL(**앱 라우트**). 이 값은 백엔드 애플리케이션의 보호 엔드포인트에 요청을 전송하는 데 필요합니다. 
 * **테넌트 ID** 값. {{site.data.keyword.amashort}} 대시보드에서 서비스를 여십시오. **모바일 옵션** 단추를 클릭하십시오. **앱 GUID / TenantId** 필드에 `tenantId`(`appGUID`라고도 함) 값이 표시됩니다. 이 값은 권한 관리자를 초기화하는 데 필요합니다. 
 * {{site.data.keyword.Bluemix_notm}} **지역**. 헤더에서 **아바타** 아이콘 ![아바타 아이콘](images/face.jpg "아바타 아이콘") 옆에 현재 {{site.data.keyword.Bluemix_notm}} 지역이 표시됩니다. 표시되는 지역 값은 `US South`, `United Kingdom` 및 `Sydney` 중 하나여야 하며 WebView Javascript 코드 `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` 또는 `BMSClient.REGION_UK`에 필요한 SDK 값에 해당해야 합니다. 이 값은 {{site.data.keyword.amashort}} 클라이언트를 초기화하는 데 필요합니다. 
-* Cordova 애플리케이션 또는 기존 프로젝트. Cordova 애플리케이션을 설정하는 방법에 대한 자세한 정보는 [Cordova 웹 사이트](https://cordova.apache.org/)를 참조하십시오. 
+* Cordova 애플리케이션 또는 기존 프로젝트. Cordova 애플리케이션을 설정하는 방법에 대한 자세한 정보는 [Cordova 웹 사이트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cordova.apache.org/){: new_window}를 참조하십시오. 
 
 ## {{site.data.keyword.amashort}} Cordova 플러그인 설치
 {: #getting-started-cordova-plugin}
@@ -60,12 +65,12 @@ Cordova용 {{site.data.keyword.amashort}} 클라이언트 SDK는 원시 {{site.d
 	```
 	{: codeblock}
 
-	*minSdkVersion* 값은 `15` 이상이어야 합니다. *targetSdkVersion* 값은 `23`이어야 합니다. 현재 Cordova에서는 **Android-23** 이후 버전을 지원하지 않습니다. 
-	
+	*minSdkVersion* 값은 `15` 이상이어야 합니다. Android SDK용으로 지원되는 *targetSdkVersion*의 최신 상태를 유지하려면 [Android 플랫폼 안내서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cordova.apache.org/docs/en/latest/guide/platforms/android/){: new_window}를 참조하십시오. 
+
 3. iOS 운영 체제를 추가한 경우 `<platform name="ios">` 요소를 대상 선언으로 업데이트하십시오. 
 
 	```XML
-	<platform name="ios">
+ 	  <platform name="ios">
 		<preference name="deployment-target" value="8.0"/>
 		<!-- add deployment target declaration -->
 	 </platform>
@@ -102,7 +107,7 @@ Cordova용 {{site.data.keyword.amashort}} 클라이언트 SDK는 원시 {{site.d
 
 	2. Xcode로 애플리케이션을 빌드하고 실행하십시오.
 
-	**참고**: `cordova build ios`를 실행할 때 다음 오류가 수신될 수 있습니다. [문제 12](https://github.com/blakgeek/cordova-plugin-cocoapods-support/issues/12)에서 추적되는 종속성 플러그인의 버그로 인해 이러한 문제가 발생합니다. 시뮬레이터 또는 디바이스를 통해 XCode에서 iOS 프로젝트를 계속 실행할 수 있습니다. 
+	**참고**: `cordova build ios`를 실행할 때 다음 오류가 수신될 수 있습니다. 이 문제는 [문제 12 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/blakgeek/cordova-plugin-cocoapods-support/issues/12 "외부 링크 아이콘"){: new_window}에서 추적 중인 종속성 플러그인의 버그 때문에 발생합니다. 시뮬레이터 또는 디바이스를 통해 XCode에서 iOS 프로젝트를 계속 실행할 수 있습니다. 
 
 	```
 	xcodebuild: error: Unable to find a destination matching the provided destination specifier:
@@ -112,16 +117,16 @@ Cordova용 {{site.data.keyword.amashort}} 클라이언트 SDK는 원시 {{site.d
 		The device type “iOS Simulator” requires that either “name” or “id” be specified.
 		Please supply either “name” or “id”.
 	```
-	
+
 6. 다음 명령을 실행하여 플러그인이 설치되었는지 확인하십시오. 
 
 	```Bash
 	cordova plugin list
 	```
 	{: codeblock}
-	
+
 7. **기능** 탭에서 **키 체인 공유**를 `On`으로 전환하여 iOS에 대해 키 체인 공유를 사용 가능하게 설정하십시오. 
-  
+
 8. **빌드 설정** > **패키징** 탭에서 **모듈 정의**를 `YES`로 전환하여 iOS에 대해 **모듈 정의**를 사용 가능하게 설정하십시오. 
 
 
@@ -156,9 +161,14 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 사용하는 Xcode의 버전에 따라 `AppDelegate.m`에서 권한 관리자 초기화를 추가하십시오. 
 
 ```Objective-C
-  [CDVBMSClient initMCAAuthorizationManagerManagerWithTenantId:@"<tenantId>"]; 
+  #import "<your_module_name>-Swift.h"
+  [CDVBMSClient initMCAAuthorizationManagerManagerWithTenantId:@"<tenantId>"];
 ```
 {: codeblock}
+
+**참고:** 가져오는 헤더 파일 이름은 모듈 이름과 `-Swift.h` 문자열로 구성됩니다. 예를 들어, 모듈 이름이 `Cordova`이면 import 행은 `#import "Cordova-Swift.h"`가 됩니다. 모듈 이름을 찾으려면
+`빌드 설정` > `패키징` > `제품 모듈 이름`으로 이동하십시오.
+`<tenantId>`를 사용하는 테넌트 ID로 대체하십시오([시작하기 전에](#before-you-begin) 참조).
 
 
 ## 모바일 백엔드 서비스에 대한 요청 작성

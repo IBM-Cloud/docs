@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated:  "2016-09-12"
+  years: 2016, 2017
+lastupdated:  "2017-01-17"
 
 ---
 
@@ -56,11 +56,29 @@ janela de mensagem indica o progresso dessa operação.
 credenciais do usuário que o {{site.data.keyword.mfserver_short_notm}}. É possível usar o mesmo `username` e `password` para efetuar login no console do Mobile
 Analytics que aqueles usados no {{site.data.keyword.mfp_oc_short_notm}}.
 
-Para obter mais informações sobre o MobileFirst Analytics é possível referir-se ao [MobileFirst
-Foundation Operational Analytics](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/){: new_window}.
+Para obter mais informações sobre o MobileFirst Analytics, é possível consultar o [MobileFirst Foundation Operational Analytics ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/ "Íconede link externo"){: new_window}.
+
 
 **Nota:** o servidor Mobile Analytics é removido quando você exclui a instância de serviço do {{site.data.keyword.mobilefoundation_short}} ou quando você tenta recriar o
 {{site.data.keyword.mfserver_short_notm}}.
+
+##  Excluindo o servidor Mobile Analytics
+{: #deleting_analytics_server_dev}
+
+Agora, é possível excluir o servidor Mobile Analytics que foi incluído na instância
+de serviço {{site.data.keyword.mobilefoundation_short}}, por meio do painel do
+serviço {{site.data.keyword.mobilefoundation_short}}.
+
+* Clique em **Excluir Analytics** para excluir o servidor
+Mobile Analytics que foi incluído na instância de serviço
+{{site.data.keyword.mobilefoundation_short}}.
+
+ Isso excluirá o grupo de contêiner de analítica. O processo de exclusão de contêineres de
+analítica leva cerca de 10 minutos. É possível atualizar a tela para visualizar o status
+atualizado. Quando os contêineres de analítica forem excluídos, o botão
+**Incluir Analytics** será reativado e você poderá usá-lo para incluir
+novamente o servidor Mobile Analytics, caso escolha fazê-lo.
+
 
 ## Recriando o servidor {{site.data.keyword.mobilefirst}}
 {: #recreate_mobilefoundation_p1}
@@ -84,5 +102,4 @@ e o número de instâncias necessárias. O servidor padrão de 1 GB é suficient
 
 * **Nós** exibe o número de nós que são criados. Esse campo não é editável no {{site.data.keyword.mobilefoundation_short}}: Developer. O número de nós <!--in your {{site.data.keyword.IBM_notm}} container group--> é definido por padrão como **1** no plano do Desenvolvedor.
 
-Consulte a documentação do
-[{{site.data.keyword.mobilefoundation_long}}](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html){: new_window} para obter mais detalhes.
+Consulte a documentação [{{site.data.keyword.mobilefoundation_long}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html "Ícone de link externo"){: new_window} para obter mais detalhes.

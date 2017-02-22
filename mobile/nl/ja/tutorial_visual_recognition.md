@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-21"
+  years: 2016, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -16,7 +16,7 @@ lastupdated: "2016-10-21"
 ### 開発者ツールのインストール
 {: #dev_tools}
 
-[前提条件の開発者ツール](get_code.html#prereq-dev-tools){: new_window}がインストール済みであることを確認してください。
+[前提条件の開発者ツール![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](get_code.html#prereq-dev-tools "外部リンク・アイコン"){: new_window}をインストール済みであることを確認します。
 
 
 ### {{site.data.keyword.visualrecognitionshort}} コード・スターターからのプロジェクトの作成
@@ -36,17 +36,17 @@ lastupdated: "2016-10-21"
    
    5. **「作成」**をクリックします。
 
-2. オプション: Push Notifications (プッシュ通知) 機能を追加します。
+2. オプション: {{site.data.keyword.mobilepushshort}} 機能を追加します。
 
-   1. **「プロジェクト概要 (Project Overview)」**ページで、**「Push Notifications」**に対して**「追加」**をクリックします。
+   1. **「プロジェクト概要 (Project Overview)」**ページで**「{{site.data.keyword.mobilepushshort}}」**に対して**「追加」**をクリックします。
 
-      代替方法として、**「Push Notifications」**ページから**「作成」**をクリックすることもできます。
+      代替方法として、**「{{site.data.keyword.mobilepushshort}}」**ページから**「作成」**をクリックすることもできます。
 
    2. サービス名を入力し、**「作成」**をクリックします。
 
-   3. iOS の場合、[Apple プッシュ通知サービスの構成](/docs/services/mobilepush/t_push_provider_ios.html){: new_window}を行います。
+   3. iOS の場合、[Apple Push Notification Service を構成します![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/mobilepush/t_push_provider_ios.html "外部リンク・アイコン"){: new_window}。
 
-   4. Android の場合、[configure Firebase Cloud Messaging](/docs/services/mobilepush/t_push_provider_android.html){: new_window} を行います。
+   4. Android の場合、[Firebase Cloud Messaging を構成します![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/mobilepush/t_push_provider_android.html "外部リンク・アイコン"){: new_window}。
    
 3. オプション: Analytics (分析) 機能を追加します。
 
@@ -58,7 +58,7 @@ lastupdated: "2016-10-21"
    
    3. アプリを実行した後、**「デモ・モード」**をオフに切り替えて、分析データを確認できます。
    
-   4. Analytics (分析) の構成について詳しくは、[{{site.data.keyword.mobileanalytics_short}} 概説](/docs/services/mobileanalytics/index.html){: new_window}を参照してください。
+   4. Analytics の構成について詳しくは、[「{{site.data.keyword.mobileanalytics_short}} 概説」![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/mobileanalytics/index.html "外部リンク・アイコン"){: new_window}を参照してください。
   
 4. オプション: Authentication (認証) 機能を追加します。
 
@@ -72,7 +72,7 @@ lastupdated: "2016-10-21"
    
    4. ID プロバイダーを選択し、必要な情報を入力して構成します。ID プロバイダーは 1 つだけ有効にすることができます。
 
-   5. Authentication (認証) の構成について詳しくは、[{{site.data.keyword.amashort}} 概説](/docs/services/mobileaccess/index.html){: new_window}を参照してください。
+   5. Authentication (認証) の構成について詳しくは、[「{{site.data.keyword.amashort}} 概説」![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/mobileaccess/index.html "外部リンク・アイコン"){: new_window}を参照してください。
 
 5. プロジェクト・コードを生成します。
 
@@ -94,7 +94,7 @@ lastupdated: "2016-10-21"
 
 2. Markdown ビューアーで `README.md` ファイルを開き、プロジェクトを構成する手順を確認します。
 
-   1. [{{site.data.keyword.visualrecognitionshort}}](https://console.{DomainName}/catalog/services/visual-recognition/){: new_window} サービス・インスタンスを作成します。
+   1. [{{site.data.keyword.visualrecognitionshort}} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.{DomainName}/catalog/services/visual-recognition/ "外部リンク・アイコン"){: new_window}サービス・インスタンスを作成します。
    
    2. ターミナルを開き、プロジェクト・フォルダーに移動します。
    
@@ -124,7 +124,7 @@ lastupdated: "2016-10-21"
 
 2. Markdown ビューアーで `README.md` ファイルを開き、プロジェクトを構成します。
 
-   1. [{{site.data.keyword.visualrecognitionshort}}](https://console.{DomainName}/catalog/services/visual-recognition/){: new_window} サービス・インスタンスを作成します。
+   1. [{{site.data.keyword.visualrecognitionshort}} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.{DomainName}/catalog/services/visual-recognition/ "外部リンク・アイコン"){: new_window}サービス・インスタンスを作成します。
    
       {{site.data.keyword.visualrecognitionshort}} サービス・インスタンスが既にある場合は、このステップをスキップしてください。
    
@@ -154,5 +154,9 @@ lastupdated: "2016-10-21"
 ### コード・スターターのチュートリアル
 {: #tutorials_Code}
 
+* [チュートリアル - ベーシック](tutorial.html)
+* [チュートリアル - Cloudant Sync](tutorial_cloudant_synd.html)
+* [チュートリアル - {{site.data.keyword.openwhisk_short}}](tutorial_openwhisk.html)
 * [チュートリアル - Watson Language](tutorial_watson_language.html)
 * [チュートリアル - Weather](tutorial_weather.html)
+

@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
   
-lastupdated: "2016-10-23"
+lastupdated: "2017-01-11"
 
 ---
 
@@ -23,21 +23,21 @@ Se você tiver problemas com o {{site.data.keyword.Bluemix}}, será possível vi
 
 Os logs fornecem informações, tais como se uma tarefa é executada com sucesso ou se ela falha. Eles também fornecem informações relevantes que podem ser usadas para depurar e determinar a causa de um problema.
 
-Os logs estão em um formato fixo. Para logs detalhados, é possível filtrar os logs ou usar os hosts de criação de log externa para armazenar e processar os logs. Para obter mais informações sobre formatos de log, visualização e filtragem de logs e configuração de criação de log externa, consulte [Criação de log para apps em execução no Cloud Foundry](/docs/monitor_log/monitoringandlogging.html#logging_for_bluemix_apps){: new_window}.
+Os logs estão em um formato fixo. Para logs detalhados, é possível filtrar os logs ou usar os hosts de criação de log externa para armazenar e processar os logs. Para obter mais informações sobre formatos de log, visualização e filtragem de logs e configuração de criação de log externa, consulte [Criação de log para apps em execução no Cloud Foundry](/docs/monitor_log/monitoringandlogging.html#logging_for_bluemix_apps).
 
 
 ## Depurando erros de preparação
 {: #debugging-staging-errors}
 Você poderá ter problemas ao preparar seus aplicativos no {{site.data.keyword.Bluemix_notm}}. Se o seu aplicativo falhar na preparação, será possível procurar e revisar os logs de preparação (STG)
 para determinar o que aconteceu durante a implementação do aplicativo e recuperar-se do problema. Para obter mais informações sobre os métodos de visualizar logs para aplicativos Bluemix, consulte
-[Visualizando Logs](/docs/monitor_log/monitoringandlogging.html#viewing_logs){: new_window}.  
+[Visualizando Logs](/docs/monitor_log/monitoringandlogging.html#viewing_logs).  
 
 Para entender por que o seu aplicativo pode estar falhando no {{site.data.keyword.Bluemix_notm}}, é necessário saber como um aplicativo é implementado no
 {{site.data.keyword.Bluemix_notm}} e executado nele. Para obter informações detalhadas, consulte [Implementação do
-aplicativo](/docs/manageapps/depapps.html#appdeploy){: new_window}.
+aplicativo](/docs/manageapps/depapps.html#appdeploy).
 
 
-O procedimento a seguir mostra como você pode usar o comando `cf logs` para depurar os erros de preparação. Antes de executar as etapas a seguir, assegure-se de que tenha instalado a interface de linha de comandos cf. Para obter mais informações sobre como instalar a interface da linha de comandos cf, veja [Instalando a interface da linha de comandos cf](/docs/starters/install_cli.html){: new_window}.
+O procedimento a seguir mostra como você pode usar o comando `cf logs` para depurar os erros de preparação. Antes de executar as etapas a seguir, assegure-se de que tenha instalado a interface de linha de comandos cf. Para obter mais informações sobre como instalar a interface da linha de comandos cf, veja [Instalando a interface da linha de comandos cf](/docs/starters/install_cli.html).
 
   1. Conecte-se ao {{site.data.keyword.Bluemix_notm}} inserindo o código a seguir na interface de linha de comandos:
      ```
@@ -123,13 +123,12 @@ sobre como configurar os arquivos de log para aplicativos que são implementados
 usando os buildpacks integrados do {{site.data.keyword.Bluemix_notm}},
 consulte a lista a seguir:
 
-  * Para aplicativos Liberty for Java™, veja [Perfil Liberty: criação de log e rastreio](http://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/rwlp_logging.html){: new_window}.
-  * Para aplicativos Node.js, consulte [Como efetuar login em node.js](http://docs.nodejitsu.com/articles/intermediate/how-to-log){: new_window}.
-  * Para aplicativos PHP, consulte [error_log](http://php.net/manual/en/function.error-log.php){: new_window}.
-  * Para aplicativos Python, consulte [Criação de log
-HOWTO](https://docs.python.org/2/howto/logging.html){: new_window}.
-  * Para aplicativos Ruby on Rails, consulte [O criador de logs](http://guides.rubyonrails.org/debugging_rails_applications.html#the-logger){: new_window}.
-  * Para aplicativos Ruby Sinatra, consulte [Criação de log](http://www.sinatrarb.com/intro.html#Logging){: new_window}.
+  * Para aplicativos Liberty for Java™, veja [Perfil Liberty: criação de log e rastreio ![Ícone de link externo](../icons/launch-glyph.svg)](http://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/rwlp_logging.html){: new_window}.
+  * Para aplicativos Node.js, veja [Como efetuar login em node.js ![Ícone de link externo](../icons/launch-glyph.svg)](http://docs.nodejitsu.com/articles/intermediate/how-to-log){: new_window}.
+  * Para aplicativos PHP, veja [error_log ![Ícone de link externo](../icons/launch-glyph.svg)](http://php.net/manual/en/function.error-log.php){: new_window}.
+  * Para aplicativos Python, veja [Criação de log HOWTO ![Ícone de link externo](../icons/launch-glyph.svg)](https://docs.python.org/2/howto/logging.html){: new_window}.
+  * Para aplicativos Ruby on Rails, veja [O criador de logs ![Ícone de link externo](../icons/launch-glyph.svg)](http://guides.rubyonrails.org/debugging_rails_applications.html#the-logger){: new_window}.
+  * Para aplicativos Ruby Sinatra, veja [Criação de log ![Ícone de link externo](../icons/launch-glyph.svg)](http://www.sinatrarb.com/intro.html#Logging){: new_window}.
 
 Ao inserir `cf logs appname --recent` na interface de linha de comandos cf, somente os logs mais recentes são exibidos. Para visualizar os logs com relação a erros que ocorreram anteriormente, deve-se recuperar todos os logs e procurar pelos erros. Para recuperar todos os logs do seu aplicativo, use um dos métodos a seguir:
 <dl>
@@ -170,10 +169,10 @@ Dependendo da forma como o novo código é implementado, escolha um dos métodos
 
   * Para o novo código que é implementado a partir da linha de comandos cf, verifique a saída do comando *cf push*. Além disso, é possível usar o comando *cf logs* para
 localizar mais pistas para resolver o problema. Para obter mais informações sobre como usar o comando *cf logs*, consulte
-[visualizando logs a partir da interface da linha de comandos](../monitor_log/monitoringandlogging.html#viewing_logs_cli){: new_window}.
+[visualizando logs a partir da interface da linha de comandos](/docs/monitor_log/monitoringandlogging.html#viewing_logs_cli).
 
   * Para o novo código que é implementado a partir de uma GUI, como o console do {{site.data.keyword.Bluemix_notm}}, o DevOps Delivery Pipeline ou o Travis-CI, é possível verificar os logs a partir da interface. Por exemplo, se você implementar o novo código do console do {{site.data.keyword.Bluemix_notm}}, será possível ir para Painel, localizar o seu aplicativo e, em seguida, visualizar os logs para obter pistas.   Para obter mais informações sobre como visualizar logs a partir do console do {{site.data.keyword.Bluemix_notm}}, consulte [Visualizando
-logs a partir do Painel do Bluemix](../monitor_log/monitoringandlogging.html#viewing_logs_UI){: new_window}.
+logs a partir do Painel do Bluemix](/docs/monitor_log/monitoringandlogging.html#viewing_logs_UI).
 
 
 # rellinks
@@ -182,11 +181,11 @@ logs a partir do Painel do Bluemix](../monitor_log/monitoringandlogging.html#vie
 ## general
 {: #general}
 
-  * [Droplet Execution Agent (DEA)](http://docs.cloudfoundry.org/concepts/architecture/execution-agent.html){: new_window}
-  * [Introdução ao serviço IBM Monitoring and Analytics for Bluemix](../services/monana/index.html#gettingstartedtemplate){: new_window}
-  * [Como o Bluemix funciona](../overview/whatisbluemix.html#howwork){: new_window}
-  * [Instalando a ferramenta de comando cf](../starters/install_cli.html){: new_window}
-  * [Visualizando logs](../monitor_log/monitoringandlogging.html#viewing_logs){: new_window}
+  * [Droplet Execution Agent (DEA) ![Ícone de link externo](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/concepts/architecture/execution-agent.html){: new_window}
+  * [Introdução ao serviço IBM Monitoring and Analytics for Bluemix](/docs/services/monana/index.html#gettingstartedtemplate)
+  * [Como o Bluemix funciona](/docs/overview/whatisbluemix.html#howwork)
+  * [Instalando a ferramenta de comando cf](/docs/starters/install_cli.html)
+  * [Visualizando logs](/docs/monitor_log/monitoringandlogging.html#viewing_logs)
 
   
   

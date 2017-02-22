@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -19,6 +19,7 @@ lastupdated: "2016-12-06"
 {{site.data.keyword.objectstorageshort}} サービスでは、無料と標準の 2 つのプラン・オプションが提供されています。[料金](https://www.ibm.com/cloud-computing/bluemix/pricing/)は、選択したプランに応じて異なります。
 
 <table>
+<caption> 表 1. 無料プランと標準プランの比較</caption>
   <tr>
     <th> 無料プラン</th>
     <th> 標準プラン</th>
@@ -40,8 +41,6 @@ lastupdated: "2016-12-06"
     <td> ストレージの制限なし</td>
   </tr>
 </table>
-
-表 1: 無料プランと標準プランの比較
 
 **注意**: {{site.data.keyword.Bluemix_notm}} トライアル・アカウントで作業するユーザーは無料プランを使用できます。トライアル期間の満了後、関連付けられている {{site.data.keyword.objectstorageshort}} サービス・インスタンスは無効になります。つまり、ストレージ・アカウントにアクセスできなくなります。30 日後、ご使用の {{site.data.keyword.Bluemix_notm}} アカウントはパージされ、すべてのデータが削除されます。データが失われないようにするために、可能な限り早急に[有料 {{site.data.keyword.Bluemix_notm}} アカウント](/docs/admin/account.html)にアップグレードしてください。
 

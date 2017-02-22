@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015，2017
 
-lastupdated: "2016-02-24"
+lastupdated: "2011-01-12"
 
 
 ---
@@ -18,14 +18,11 @@ lastupdated: "2016-02-24"
 # Auto-Scaling CLI
 {: #autoscalingcli}
 
-前次更新：2016 年 2 月 25 日
-{: .last-updated}
-
 
 您可以利用 {{site.data.keyword.autoscaling}} CLI for {{site.data.keyword.Bluemix_notm}} 來配置 {{site.data.keyword.autoscaling}} 服務。{{site.data.keyword.autoscaling}} CLI 支援 Linux64、Win64 及 OSX，並提供類似於 Auto-Scaling RESTful API 所提供的功能。
 {: shortdesc}
 
-開始之前，請先安裝 {{site.data.keyword.Bluemix_notm}} CLI。如需指示，請參閱[下載 {{site.data.keyword.Bluemix_notm}} CLI](http://plugins.ng.bluemix.net/ui/home.html){: new_window}。
+開始之前，請先安裝 {{site.data.keyword.Bluemix_notm}} CLI。如需指示，請參閱[下載 {{site.data.keyword.Bluemix_notm}} CLI ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/home.html){: new_window}。
 
 ## 新增 {{site.data.keyword.Bluemix_notm}} CLI 外掛程式
 
@@ -142,10 +139,10 @@ bx as history-show <APP_NAME>  [--start-date=<start_timestamp>]  [--end-date=<en
 
 **提示：**您也可以使用 **--json** 選項，來進行原始 JSON 回應的細緻列印。
 
-# 相關鏈結
+# rellinks
 {: rellinks}
-## 一般
+## general
 {: general}
 * [{{site.data.keyword.autoscaling}} 服務](/docs/services/Auto-Scaling/index.html)
-* [{{site.data.keyword.Bluemix_notm}} CLI](http://plugins.ng.bluemix.net/ui/home.html){: new_window}
-* [W3C 日期和時間格式標準](https://www.w3.org/TR/NOTE-datetime){: new_window}
+* [{{site.data.keyword.Bluemix_notm}} CLI ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/home.html){: new_window}
+* [W3C Date and Time Formats standard ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://www.w3.org/TR/NOTE-datetime){: new_window}

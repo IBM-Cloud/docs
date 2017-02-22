@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,10 +12,13 @@ copyright:
 
 # Utilisation des API REST
 {: #push-api-rest}
-Dernière mise à jour : 6 décembre 2016
+Dernière mise à jour : 16 janvier 2017
 {: .last-updated}
 
-Vous pouvez utiliser une interface de programmation d'application REST (Representational State Transfer) pour {{site.data.keyword.mobilepushshort}}. Vous pouvez aussi utiliser le logiciel SDK et les [API Push](https://mobile.{DomainName}/imfpush/) pour développer davantage vos applications client.
+Vous pouvez utiliser une interface de programmation d'application REST (Representational State Transfer) pour {{site.data.keyword.mobilepushshort}}. Vous
+pouvez également utiliser le
+SDK et l'[API Push ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lienexterne")](https://mobile.{DomainName}/imfpush/ "Icône de lien externe"){: new_window} pour développer plus encore vos applications client. 
+
 
 Avec l'API REST Push, les applications serveur de back end et les clients peuvent accéder à des fonctions {{site.data.keyword.mobilepushshort}}.
 
@@ -32,7 +35,7 @@ Pour obtenir l'URL de base pour l'API REST, procédez comme suit :
 1. Dans la page principale du tableau de bord Bluemix, accédez à la zone **Applications** et sélectionnez votre application.
 3. Cliquez sur **OPTIONS POUR APPLICATION MOBILE**. Les valeurs de route et d'identificateur global unique de l'application sont affichées au début de la page des détails de votre application. L'écran Afficher les données d'identification affiche des informations sur la valeur confidentielle AppSecret. Vous pouvez obtenir la valeur confidentielle d'application depuis les options pour application mobile ainsi que la valeur confidentielle de client pour certaines des interfaces API.
 
-Il vous est aussi possible d'utiliser la ligne de commande pour obtenir les données d'identification pour le service :
+Vous pouvez aussi utiliser la ligne de commande pour obtenir les données d'identification pour le service :
 
 ```
     cf create-service-key {push_instance_name} {key_name}
@@ -44,12 +47,16 @@ Il vous est aussi possible d'utiliser la ligne de commande pour obtenir les donn
 ## En-tête Accept-Language
 {: #push-api-rest-accept}
 
-L'en-tête "Accept-Language" spécifie la langue à utiliser pour les messages d'erreur qui sont générés par l'[API REST Push](https://mobile.{DomainName}/imfpush/){: new_window}. Les langues suivantes sont prises en charge pour les messages d'erreur : chinois (simplifié), chinois (traditionnel), anglais (Etats-Unis), allemand, français, italien, japonais, coréen, portugais et espagnol.
+L'en-tête "Accept-Language" spécifie la langue à utiliser pour les messages d'erreur générés par
+l'[API REST
+Push![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://mobile.{DomainName}/imfpush/ "Icône de lien externe"){: new_window}. Les langues suivantes sont prises en charge pour les messages d'erreur : chinois (simplifié), chinois (traditionnel), anglais (Etats-Unis), allemand, français, italien, japonais, coréen, portugais et espagnol.
 
 ## Valeur confidentielle d'application 
 {: #push-api-rest-secret}
 
-Quand une application est liée à {{site.data.keyword.mobilepushshort}}, le service génère une valeur confidentielle appSecret (clé unique) et la transmet dans l'en-tête de réponse. Si vous utilisez l'API REST IBM {{site.data.keyword.mobilepushshort}} for Bluemix, servez-vous de la référence de l'API REST pour savoir quelles sont les API que vous devez sécuriser. Pour plus d'informations, reportez-vous à l'[API REST Push](https://mobile.{DomainName}/imfpush/).
+Quand une application est liée à {{site.data.keyword.mobilepushshort}}, le service génère une valeur confidentielle appSecret (clé unique) et la transmet dans l'en-tête de réponse. Si vous utilisez l'API REST IBM {{site.data.keyword.mobilepushshort}} for Bluemix, servez-vous de la référence de l'API REST pour savoir quelles sont les API que vous devez sécuriser. Pour
+plus d'informations, reportez-vous à la rubrique [API REST Push
+![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://mobile.{DomainName}/imfpush/ "Icône de lien externe"){: new_window}.
 
 L'en-tête de demande doit contenir la valeur appSecret. Si tel n'est pas le cas, le serveur renvoie le code d'erreur 401 Unauthorized. Quand {{site.data.keyword.mobilepushshort}} est ajouté à une application, un ID d'application spécifique est créé. Dans le cadre de la réponse, vous obtenez un en-tête intitulé appSecret (valeur confidentielle d'application) qui est utilisé pour créer des balises ou envoyer des messages. L'opération est effectuée via des services dans le catalogue ou le conteneur boilerplate.
 

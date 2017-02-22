@@ -4,7 +4,8 @@
 
 copyright:
 
-  years: 2015, 2016 lastupdated: "2016-12-05"  
+  years: 2015, 2016
+lastupdated: "2016-12-05"  
 
 
 ---
@@ -73,7 +74,7 @@ criar uma organização, o nome da organização deve ser exclusivo no {{site.da
 Local, então, deverá especificar um novo nome. Depois de criar a organização, você será designado automaticamente com a permissão de
 *Gerenciador de organização*, que permite editar o nome da organização, incluir membros da equipe e criar ou excluir espaços na organização.
 
-Deve-se entrar em contato com o [{{site.data.keyword.Bluemix_notm}} Suporte](http://ibm.biz/bluemixsupport){: new_window}, para excluir uma organização. Ao solicitar que
+Deve-se entrar em contato com o [Suporte do {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window} para excluir uma organização. Ao solicitar que
 a equipe de suporte exclua uma organização, todos os espaços, aplicativos e serviços dentro da organização são excluídos.
 
 As [funções de usuário](/docs/admin/users_roles.html#userrolesinfo) a seguir podem ser designadas para membros da equipe em uma organização:
@@ -141,8 +142,7 @@ Conclua as etapas a seguir para renomear sua organização:
 ## Excluir uma organização ou um espaço existente
 {: #deleteorgs}
 
-Como o proprietário da conta, é possível entrar em contato com o [{{site.data.keyword.Bluemix_notm}} Suporte](http://ibm.biz/bluemixsupport){: new_window} para excluir uma
-organização. 
+Como o proprietário da conta, é possível entrar em contato com o [Suporte do {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window} para excluir uma organização. 
 
 **Nota**: Não é possível inverter operações de exclusão. Você perderá todos os aplicativos e
 serviços que estiverem associados à organização.

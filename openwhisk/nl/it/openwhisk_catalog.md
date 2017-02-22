@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2016
-lastupdated: "2016-09-09"
+  years: 2016, 2017
+lastupdated: "2017-01-04"
  
 
 ---
@@ -139,7 +139,7 @@ Se non stai utilizzando {{site.data.keyword.openwhisk_short}} in {{site.data.key
 Puoi utilizzare il feed `changes` per configurare un servizio per attivare un trigger ogni volta che viene apportata una modifica al tuo database Cloudant. I parametri sono i seguenti:
 
 - `dbname`: nome del database Cloudant.
-- `maxTriggers`: arrestare l'attivazione dei trigger quando viene raggiunto questo limite. Il valore predefinito è 1000. Puoi impostarlo su un massimo di 10.000. Se tenti di impostare più di 10.000, la richiesta viene rifiutata.
+- `maxTriggers`: arrestare l'attivazione dei trigger quando viene raggiunto questo limite. Il valore predefinito è infinito.
 
 1. Crea un trigger con il feed `changes` nel bind di pacchetto che hai creato precedentemente. Accertati di sostituire `/myNamespace/myCloudant` con il tuo nome pacchetto.
 
@@ -234,11 +234,10 @@ Puoi utilizzare un'azione per recuperare un documento da un database Cloudant de
   ```
   {: screen}
 
-### Utilizzo di una sequenza di azioni per elaborare un documento su un evento di modifica da un database Cloudant
+### Utilizzo di una sequenza di azioni e un trigger di modifica per elaborare un documento da un database Cloudant
 
 Puoi utilizzare una sequenza di azioni in una regola per recuperare ed elaborare il documento associato a un evento di modifica Cloudant.
 
-Crea un'azione che elaborerà un documento da Cloudant; il documento è previsto come parametro.
 Di seguito è riportato un codice di esempio di un'azione che gestisce un documento:
 ```
 function main(doc){
@@ -246,41 +245,36 @@ function main(doc){
 }
 ```
 {: codeblock}
+
+Crea l'azione per elaborare il documento da Cloudant:
 ```
 wsk action create myAction myAction.js
 ```
 {: pre}
-Per leggere il documento dal database, puoi utilizzare l'azione `read` nel pacchetto cloudant; questa azione può essere inclusa con la tua azione `myAction` in una sequenza di azioni.
-Crea una sequenza di azioni mediante l'azione `read`, quindi richiama la tua azione `myAction` che prevede un documento come input.
+
+Per leggere un documento dal database, puoi utilizzare l'azione `read` dal pacchetto Cloudant.
+L'azione `read` potrebbe essere formata con `myAction` per creare una sequenza di azioni.
 ```
 wsk action create sequenceAction --sequence /myNamespace/myCloudant/read,myAction
 ```
 {: pre}
 
-Adesso crea una regola che associ il tuo trigger alla nuova azione `sequenceAction`
+L'azione `sequenceAction` può essere utilizzata in una regola che attiva l'azione sui nuovi eventi di trigger Cloudant.
 ```
 wsk rule create myRule myCloudantTrigger sequenceAction
 ```
 {: pre}
 
-La sequenza di azioni dovrà conoscere il nome del database da cui recuperare il documento.
-Imposta un parametro sul trigger per `dbname`
-```
-wsk trigger update myCloudantTrigger --param dbname testdb
-```
-{: pre}
-
-**Nota:** il trigger di modifica Cloudant veniva utilizzato per supportare il parametro `includeDoc`; questo non è più supportato.
-  Dovrai ricreare i trigger creati in precedenza con `includeDoc`:
-  Ricrea il trigger senza il parametro `includeDoc`
+**Nota** il trigger `changes` Cloudant è utilizzato per supportare il parametro `includeDoc` che non è più supportato.
+  Avrai bisogno di ricreare i trigger precedentemente creati con `includeDoc`. Segui queste istruzioni per ricreare il trigger:
   ```
   wsk trigger delete myCloudantTrigger
   wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb
   ```
   {: pre}
-  Puoi seguire i passaggi precedenti per creare una sequenza di azioni per ottenere il documento e chiamare la tua azione esistente.
-  Quindi, aggiorna la tua regola per utilizzare la nuova sequenza di azioni.
 
+  L'esempio di seguito illustrato può essere utilizzato per creare una sequenza di azioni per leggere il documento modificato e chiamare le tue azioni esistenti.
+  Ricorda di disabilitare tutte le regole che non sono più valide e creane di nuove utilizzando il modello della sequenza di azioni.
 
 ## Utilizzo del pacchetto Alarm
 {: #openwhisk_catalog_alarm}
@@ -310,18 +304,19 @@ Per ulteriori dettagli sull'utilizzo di sintassi cron, consulta: http://crontab.
 
 - `trigger_payload`: il valore di questo parametro diventa il contenuto del trigger ogni volta che il trigger viene attivato.
 
-- `maxTriggers`: arrestare l'attivazione dei trigger quando viene raggiunto questo limite. Il valore predefinito è 1000. Puoi impostarlo su un massimo di 10.000. Se tenti di impostare più di 10.000, la richiesta viene rifiutata.
+- `maxTriggers`: arrestare l'attivazione dei trigger quando viene raggiunto questo limite. Il valore predefinito è 1.000.000. Puoi impostarlo su infinito (-1).
 
 Di seguito viene riportato un esempio di creazione di un trigger che verrà attivato una volta ogni 2 minuti con i valori `name` e `place` nell'evento di trigger.
 
   ```
   wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron "*/2 * * * *" --param trigger_payload "{\"name\":\"Odin\",\"place\":\"Asgard\"}"
   ```
+  {: pre}
 
 Ogni evento generato includerà come parametri le proprietà specificate nel valore `trigger_payload`. In questo caso, ogni evento di trigger avrà i parametri `name=Odin` e `place=Asgard`.
 
-**Nota**: il parametro `cron` supporta anche una sintassi personalizzata di sei campi, dove il primo campo rappresenta i secondi.
-Per ulteriori dettagli sull'utilizzo di sintassi cron personalizzata, consulta: https://github.com/ncb000gt/node-cron.
+**Nota**: il parametro `cron` supporta anche una sintassi personalizzata di sei campi, dove il primo campo rappresenta i secondi. 
+Per ulteriori dettagli sull'utilizzo di sintassi cron personalizzata, consulta: https://github.com/ncb000gt/node-cron. 
 Di seguito è riportato un esempio che utilizza una notazione di sei campi:
   - `*/30 * * * * *`: ogni trenta secondi.
 
@@ -394,15 +389,16 @@ Di seguito viene riportato un esempio di creazione di un bind di pacchetto e suc
 
 ## Utilizzo dei pacchetti Watson
 {: #openwhisk_catalog_watson}
+
 I pacchetti Watson offrono una soluzione pratica per richiamare le diverse API Watson.
 
 Sono forniti i seguenti pacchetti Watson:
 
 | Pacchetto | Descrizione |
 | --- | --- |
-| `/whisk.system/watson-translator`   | Azioni per le API per la traduzione di testo e identificazione della lingua |
-| `/whisk.system/watson-textToSpeech` | Azioni per le API per la conversione da testo a voce |
-| `/whisk.system/watson-speechToText` | Azioni per le API per la conversione da voce a testo |
+| `/whisk.system/watson-translator`   | Pacchetto per la traduzione del testo e per l'identificazione della lingua |
+| `/whisk.system/watson-textToSpeech` | Pacchetto per convertire il testo in voce |
+| `/whisk.system/watson-speechToText` | Pacchetto per convertire la voce in testo |
 
 **Nota** il pacchetto `/whisk.system/watson` è attualmente obsoleto; esegui la migrazione ai nuovi pacchetti menzionati sopra. Le nuove azioni forniscono la stessa interfaccia.
 
@@ -414,7 +410,7 @@ Il pacchetto include le seguenti azioni.
 
 | Entità | Tipo | Parametri | Descrizione |
 | --- | --- | --- | --- |
-| `/whisk.system/watson-translator` | pacchetto | username, password | Azioni per le API per la traduzione di testo e identificazione della lingua  |
+| `/whisk.system/watson-translator` | pacchetto | username, password | Pacchetto per la traduzione del testo e per l'identificazione della lingua  |
 | `/whisk.system/watson-translator/translator` | azione | payload, translateFrom, translateTo, translateParam, username, password | Tradurre il testo |
 | `/whisk.system/watson-translator/languageId` | azione | payload, username, password | Identificare la lingua |
 
@@ -453,7 +449,6 @@ Se stai utilizzando OpenWhisk da Bluemix, OpenWhisk crea automaticamente i bind 
   wsk package list
   ```
   {: pre}
-  
   ```
   packages
   /myBluemixOrg_myBluemixSpace/Bluemix_Watson_Translator_Credentials-1 private
@@ -534,7 +529,7 @@ Il pacchetto include le seguenti azioni.
 
 | Entità | Tipo | Parametri | Descrizione |
 | --- | --- | --- | --- |
-| `/whisk.system/watson-textToSpeech` | pacchetto | username, password | Azioni per le API per la conversione da testo a voce |
+| `/whisk.system/watson-textToSpeech` | pacchetto | username, password | Pacchetto per convertire il testo in voce |
 | `/whisk.system/watson-textToSpeech/textToSpeech` | azione | payload, voice, accept, encoding, username, password | Convertire testo in audio |
 
 **Nota**: il pacchetto `/whisk.system/watson` è obsoleto, inclusa l'azione `/whisk.system/watson/textToSpeech`.
@@ -593,6 +588,7 @@ Se non stai utilizzando OpenWhisk in Bluemix o se vuoi configurare Watson Text t
 
 #### Conversione da testo a voce
 {: #openwhisk_catalog_watson_speechtotext}
+
 L'azione `/whisk.system/watson-speechToText/textToSpeech` converte un testo in audio. I parametri sono i seguenti:
 
 - `username`: il nome utente dell'API Watson API.
@@ -616,6 +612,7 @@ L'azione `/whisk.system/watson-speechToText/textToSpeech` converte un testo in a
   ```
   {: screen}
 
+
 ### Utilizzo del pacchetto Watson Speech to Text
 {: #openwhisk_catalog_watson_speechtotext}
 
@@ -625,11 +622,10 @@ Il pacchetto include le seguenti azioni.
 
 | Entità | Tipo | Parametri | Descrizione |
 | --- | --- | --- | --- |
-| `/whisk.system/watson-speechToText` | pacchetto | username, password | Azioni per le API per la conversione da voce a testo |
+| `/whisk.system/watson-speechToText` | pacchetto | username, password | Pacchetto per convertire la voce in testo |
 | `/whisk.system/watson-speechToText/speechToText` | azione | payload, content_type, encoding, username, password, continuous, inactivity_timeout, interim_results, keywords, keywords_threshold, max_alternatives, model, timestamps, watson-token, word_alternatives_threshold, word_confidence, X-Watson-Learning-Opt-Out | Convertire audio in testo |
 
 **Nota**: il pacchetto `/whisk.system/watson` è obsoleto, inclusa l'azione `/whisk.system/watson/speechToText`.
-
 
 #### Configurazione del pacchetto Watson Speech to Text in Bluemix
 
@@ -683,7 +679,6 @@ Se non stai utilizzando OpenWhisk in Bluemix o se vuoi configurare  Watson Speec
   {: pre}
 
 
-
 #### Conversione da voce a testo
 
 L'azione `/whisk.system/watson-speechToText/speechToText` converte l'audio in testo. I parametri sono i seguenti:
@@ -721,6 +716,128 @@ L'azione `/whisk.system/watson-speechToText/speechToText` converte l'audio in te
   {: screen}
  
  
+## Utilizzo del pacchetto Message Hub
+{: #openwhisk_catalog_message_hub}
+
+Questo pacchetto ti consente di creare trigger che reagiscono quando vengono pubblicati dei messaggi nell'istanza del servizio [Message Hub](https://developer.ibm.com/messaging/message-hub/) su Bluemix.
+
+### Creazione di un trigger in ascolto su un'istanza Message Hub
+{: #openwhisk_catalog_message_hub_trigger}
+Per creare un trigger che reagisce quando vengono pubblicati i messaggi in un'istanza Message Hub, devi utilizzare il feed denominato `messaging/messageHubFeed`. Questo feed supporta i seguenti parametri:
+
+|Nome|Tipo|Descrizione|
+|---|---|---|
+|kafka_brokers_sasl|Array JSON di stringhe|Questo parametro è un array di stringhe `<host>:<port>` che comprime i broker nella tua istanza Message Hub|
+|user|Stringa|Il tuo nome utente Message Hub|
+|password|Stringa|La tua password Message Hub|
+|topic|Stringa|L'argomento per cui vuoi che il trigger sia in ascolto|
+|kafka_admin_url|Stringa URL|L'URL dell'interfaccia REST di gestione Message Hub|
+|api_key|Stringa|La tua chiave API Message Hub|
+|isJSONData|Booleano (facoltativo - default=false)|Quando impostato su `true` farà in modo che il feed tenti di analizzare il contenuto del messaggio come JSON prima di trasmetterlo come il payload del trigger.|
+
+Mentre questo elenco di parametri può sembrare scoraggiante, ti possono venire automaticamente impostati utilizzando il comando CLI di aggiornamento del pacchetto:
+
+1. Crea un'istanza del servizio Message Hub nella tua organizzazione e nel tuo spazio correnti che stai utilizzando per OpenWhisk.
+
+2. Verifica che l'argomento che desideri ascoltare già esista in Message Hub o creane uno nuovo per ascoltare i messaggi, come `mytopic`.
+
+2. Aggiorna i pacchetti nel tuo spazio dei nomi. L'aggiornamento crea automaticamente un bind di pacchetto per l'istanza del servizio Message Hub da te creata.
+
+  ```
+  wsk package refresh
+  ```
+  {: pre}
+  ```
+  created bindings:
+  Bluemix_Message_Hub_Credentials-1
+  ```
+  {: screen}
+
+  ```
+  wsk package list
+  ```
+  {: pre}
+  ```
+  packages
+  /myBluemixOrg_myBluemixSpace/Bluemix_Message_Hub_Credentials-1 private
+  ```
+  {: screen}
+
+  Il tuo bind del pacchetto contiene ora le credenziali associate alla tua istanza Message Hub.
+
+3. Ora, tutto quello di cui hai bisogno, è di creare un trigger da attivare quando vengono pubblicati nuovi messaggi nel tuo Message Hub.
+
+  ```
+  wsk trigger create MyMessageHubTrigger -f /myBluemixOrg_myBluemixSpace/Bluemix_Message_Hub_Credentials-1/messageHubFeed -p topic mytopic
+  ```
+  {: pre}
+
+### Configurazione di un pacchetto Message Hub esternamente a Bluemix
+
+Se non stai utilizzando OpenWhisk in Bluemix o se desideri configurare il Message Hub esternamente a Bluemix, devi creare manualmente un bind del pacchetto per il tuo servizio Message Hub. Hai bisogno delle credenziali del servizio Message Hub e delle informazioni di connessione.
+
+- Crea un bind di pacchetto configurato per il tuo servizio Message Hub.
+
+  ```
+  wsk trigger create MyMessageHubTrigger -f /whisk.system/messaging/messageHubFeed -p kafka_brokers_sasl "[\"kafka01-prod01.messagehub.services.us-south.bluemix.net:9093\", \"kafka02-prod01.messagehub.services.us-south.bluemix.net:9093\", \"kafka03-prod01.messagehub.services.us-south.bluemix.net:9093\"]" -p topic mytopic -p user <your Message Hub user> -p password <your Message Hub password> -p kafka_admin_url https://kafka-admin-prod01.messagehub.services.us-south.bluemix.net:443 -p api_key <your API key>
+  ```
+  {: pre}
+
+### In ascolto per i messaggi su un'istanza Message Hub
+{: #openwhisk_catalog_message_hub_listen}
+Dopo aver creato un trigger, il sistema monitorerà l'argomento specificato nel tuo servizio di messaggistica. Quando vengono pubblicati nuovi messaggi, il trigger sarà attivato.
+
+Il payload di questo trigger conterrà un campo `messages` che è un array di messaggi che sono stati pubblicati dall'ultima volta in cui è stato attivato il tuo trigger. Ogni oggetto del messaggio nell'array conterrà i seguenti campi:
+- topic
+- partition
+- offset
+- key
+- value
+
+In termini Kafka, questi campi devono essere evidenti. Tuttavia, `value` richiede una considerazione speciale. Se il parametro `isJSONData` è stato impostato su `false` (o non impostato affatto) quando il trigger è stato creato, il campo `value` sarà il valore non elaborato nel messaggio pubblicato. Tuttavia, se `isJSONData` è stato impostato su `true` quando è stato creato il trigger, il sistema tenterà di analizzare questo valore come un oggetto JSON, con il principio del massimo impegno. Se l'analisi ha esito positivo, `value` nel payload del trigger sarà il risultante oggetto JSON.
+
+Ad esempio, se viene pubblicato un messaggio `{"title": "Some string", "amount": 5, "isAwesome": true}` con `isJSONData` impostato su `true`, il payload del trigger sarà simile a:
+
+```
+{
+  "messages": [
+      {
+        "partition": 0,
+        "key": null,
+        "offset": 421760,
+        "topic": "mytopic",
+        "value": {
+            "amount": 5,
+            "isAwesome": true,
+            "title": "Some string"
+        }
+      }
+  ]
+}
+```
+
+Tuttavia, se viene pubblicato lo stesso contenuto del messaggio con `isJSONData` impostato su `false`, il payload del trigger sarà simile a:
+
+```
+{
+  "messages": [
+    {
+      "partition": 0,
+      "key": null,
+      "offset": 421761,
+      "topic": "mytopic",
+      "value": "{\"title\": \"Some string\", \"amount\": 5, \"isAwesome\": true}"
+    }
+  ]
+}
+```
+
+### I messaggi vengono organizzati
+Riceverai una notifica che il payload del trigger contiene un array di messaggi. Ciò significa che stai producendo dei messaggi al tuo sistema di messaggistica molto velocemente, il feed tenterà di organizzare i messaggi pubblicati in una sola attivazione del tuo trigger. Ciò consente ai messaggi di essere pubblicati nel tuo trigger più velocemente ed efficacemente.
+
+Tieni in mente quando codifichi le azioni attivate dal tuo trigger, che il numero di messaggi nel payload è tecnicamente illimitato, ma sarà sempre maggiore di 0.
+
+
 ## Utilizzo del pacchetto Slack
 {: #openwhisk_catalog_slack}
 

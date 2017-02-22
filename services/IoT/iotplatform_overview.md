@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-01"
+  years: 2016, 2017
+lastupdated: "2017-02-3"
 
 ---
 
@@ -24,7 +24,7 @@ lastupdated: "2016-08-01"
 {: #watsoniotplatform_architecture}
 ![IBM Watson IoT Platform Architecture](images/architecture_platform.svg "IBM Watson IoT Platform architecture")
 
-**Important:** The analytics features are merged in from the {{site.data.keyword.iotrtinsights_full}} service. If your {{site.data.keyword.iot_short_notm}} organization is used as a data source for an existing {{site.data.keyword.iotrtinsights_short}} instance, Cloud and Edge Analytics is not enabled until after the existing {{site.data.keyword.iotrtinsights_short}} instances have been migrated. Continue to use the {{site.data.keyword.iotrtinsights_short}} dashboard for your analytics needs until the migration is complete. For more information, see the [IBM Watson IoT Platform blog](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} on IBM developerWorks and your existing {{site.data.keyword.iotrtinsights_short}} instance dashboards.  
+**Important:** The analytics features are merged in from the {{site.data.keyword.iotrtinsights_full}} service. If your {{site.data.keyword.iot_short_notm}} organization is used as a data source for an existing {{site.data.keyword.iotrtinsights_short}} instance, Cloud and Edge Analytics is not enabled until after the existing {{site.data.keyword.iotrtinsights_short}} instances have been migrated. Continue to use the {{site.data.keyword.iotrtinsights_short}} dashboard for your analytics needs until the migration is complete. For more information, see the [IBM Watson IoT Platform blog ![External link icon](../../icons/launch-glyph.svg)](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} on IBM developerWorks and your existing {{site.data.keyword.iotrtinsights_short}} instance dashboards.  
 
 The {{site.data.keyword.iot_short_notm}} communicates with your applications and devices by using the {{site.data.keyword.iot_short_notm}} API and the {{site.data.keyword.iot_short_notm}} messaging protocol. The {{site.data.keyword.iot_short_notm}} dashboard connects as a front-end user interface to simplify operations within the platform. Device data can be stored or used with analytics solutions.
 

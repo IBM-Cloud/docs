@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2016
-lastupdated: "2016-09-09"
+  years: 2016, 2017
+lastupdated: "2017-01-04"
  
 
 ---
@@ -254,11 +254,10 @@ esta base de datos exista en su cuenta Cloudant.
   ```
   {: screen}
 
-### Utilización de una secuencia de acciones para procesar un documento en un suceso de cambio desde una base de datos Cloudant
+### Utilización de una secuencia de acciones y de un desencadenante de cambios para procesar un documento desde una base de datos Cloudant
 
 Puede utilizar una secuencia de acciones en una regla para captar y procesar el documento asociado a un suceso de cambio Cloudant.
 
-Cree una acción que procesará un documento desde Cloudant, esperará un documento como un parámetro.
 A continuación se muestra un código de ejemplo de una acción que maneja un documento:
 ```
 function main(doc){
@@ -266,41 +265,37 @@ function main(doc){
 }
 ```
 {: codeblock}
+
+Cree la acción para procesar el documento desde Cloudant:
 ```
 wsk action create myAction myAction.js
 ```
 {: pre}
-Para leer el documento desde la base de datos, puede utilizar la acción `read` en el paquete cloudant, esta acción se puede incluir con la acción `myAction` en una secuencia de acciones.
-Cree una secuencia de acciones mediante la acción `read` y, a continuación, invoque la acción `myAction` que espera un documento como entrada.
+
+Para leer un documento desde la base de datos, puede utilizar la acción `read` del paquete de Cloudant.
+La acción `read` puede estar compuesta de `myAction` para crear una secuencia de acciones. 
 ```
 wsk action create sequenceAction --sequence /myNamespace/myCloudant/read,myAction
 ```
 {: pre}
 
-Ahora, cree una regla que asocie el desencadenante con la nueva acción `sequenceAction`
+Se puede utilizar la acción `sequenceAction` en una regla que active la acción sobre nuevos sucesos de desencadenante de Cloudant. 
 ```
 wsk rule create myRule myCloudantTrigger sequenceAction
 ```
 {: pre}
 
-La secuencia de acciones necesitará saber el nombre de base de datos desde la que se captará el documento.
-Establezca un parámetro en el desencadenante para `dbname`
-```
-wsk trigger update myCloudantTrigger --param dbname testdb
-```
-{: pre}
+**Nota**: el desencadenante de `cambios` de Cloudant utilizado para dar soporte al parámetro `includeDoc` ya no recibe soporte. Tendrá que volver a crear desencadenantes creados anteriormente con `includeDoc`.
+Siga estos pasos para volver a crear el desencadenante:
 
-**Nota**: El desencadenante de cambio de Cloudant utilizado para dar soporte al parámetro `includeDoc`, ya no está soportado.
-  Necesitará volver a crear desencadenantes creados anteriormente con `includeDoc`:
-  Vuelva a crear el desencadenante sin el parámetro `includeDoc`
   ```
   wsk trigger delete myCloudantTrigger
   wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb
   ```
   {: pre}
-  Puede seguir los pasos anteriores para crear una secuencia de acciones para obtener el documento e invocar la acción existente.
-  A continuación, actualice la regla para que utilice la nueva secuencia de acciones.
 
+  Puede utilizar el ejemplo anterior para crear una secuencia de acciones para leer el documento modificado e invocar las acciones existentes.
+  No olvide inhabilitar las reglas que ya no sean válidas y crear nuevas utilizando el patrón de la secuencia de acciones. 
 
 ## Uso del paquete Alarm
 {: #openwhisk_catalog_alarm}
@@ -340,11 +335,12 @@ A continuación se muestra un ejemplo de la creación de un desencadenante que s
   ```
   wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron "*/2 * * * *" --param trigger_payload "{\"name\":\"Odin\",\"place\":\"Asgard\"}"
   ```
+  {: pre}
 
 Cada suceso generado incluirá como parámetros las propiedades especificadas en el valor `trigger_payload`. En este caso,
 cada suceso desencadenante tendrá los parámetros `name=Odin` y `place=Asgard`.
 
-**Nota**: El parámetro `cron` también da soporte a una sintaxis personalizada de seis campos, donde el primer campo representa segundos.
+**Nota**: el parámetro `cron` también da soporte a una sintaxis personalizada de seis campos, donde el primer campo representa segundos.
 Para obtener más detalles sobre cómo utilizar esta sintaxis cron personalizada, consulte: https://github.com/ncb000gt/node-cron.
 A continuación se muestra un ejemplo que utiliza la notación de seis campos:
   - `*/30 * * * * *`: cada treinta segundos.
@@ -419,17 +415,18 @@ A continuación se muestra un ejemplo de la creación de un enlace de paquete y 
 
 ## Uso de los paquetes Watson
 {: #openwhisk_catalog_watson}
+
 Los paquetes Watson ofrecen una forma cómoda de invocar distintas API de Watson.
 
 Se proporcionan los siguientes paquetes Watson:
 
 | Paquete | Descripción |
 | --- | --- |
-| `/whisk.system/watson-translator`   | Acciones para que las API Watson conviertan texto e identificación de idioma |
-| `/whisk.system/watson-textToSpeech` | Acciones para que las API Watson conviertan el texto a voz |
-| `/whisk.system/watson-speechToText` | Acciones para que las API Watson conviertan la voz a texto |
+| `/whisk.system/watson-translator`   | Paquete de traducción de texto e identificación de idioma |
+| `/whisk.system/watson-textToSpeech` | Paquete para convertir texto en habla |
+| `/whisk.system/watson-speechToText` | Paquete para convertir habla en texto |
 
-**Nota**: El paquete `/whisk.system/watson` actualmente está en desuso, migre a los nuevos paquetes mencionados anteriormente, las nuevas acciones proporcionan la misma interfaz.
+**Nota**: el paquete `/whisk.system/watson` actualmente está en desuso, migre a los nuevos paquetes mencionados anteriormente, las nuevas acciones proporcionan la misma interfaz.
 
 ### Uso del paquete de Watson Translator
 
@@ -439,11 +436,11 @@ El paquete incluye las acciones siguientes.
 
 | Entidad | Tipo | Parámetros | Descripción |
 | --- | --- | --- | --- |
-| `/whisk.system/watson-translator` | paquete | usuario, contraseña | Acciones para que las API Watson conviertan texto e identificación de idioma  |
+| `/whisk.system/watson-translator` | paquete | usuario, contraseña | Paquete de traducción de texto e identificación de idioma  |
 | `/whisk.system/watson-translator/translator` | acción | payload, translateFrom, translateTo, translateParam, username, password | Traducir texto |
 | `/whisk.system/watson-translator/languageId` | acción | payload, username, password | Identificar idioma |
 
-**Nota**: El paquete `/whisk.system/watson` está en desuso, incluidas las acciones `/whisk.system/watson/translate` y `/whisk.system/watson/languageId`.
+**Nota**: el paquete `/whisk.system/watson` está en desuso, incluidas las acciones `/whisk.system/watson/translate` y `/whisk.system/watson/languageId`.
 
 #### Configuración del paquete de Watson Translator en Bluemix
 
@@ -479,7 +476,6 @@ aquellos que tenga accesibles.
   wsk package list
   ```
   {: pre}
-  
   ```
   packages
   /myBluemixOrg_myBluemixSpace/Bluemix_Watson_Translator_Credentials-1 private
@@ -560,10 +556,10 @@ El paquete incluye las acciones siguientes.
 
 | Entidad | Tipo | Parámetros | Descripción |
 | --- | --- | --- | --- |
-| `/whisk.system/watson-textToSpeech` | paquete | usuario, contraseña | Acciones para que las API Watson conviertan el texto a voz |
+| `/whisk.system/watson-textToSpeech` | paquete | usuario, contraseña | Paquete para convertir texto en habla |
 | `/whisk.system/watson-textToSpeech/textToSpeech` | acción | payload, voice, accept, encoding, username, password | Convertir texto en audio |
 
-**Nota**: El paquete `/whisk.system/watson` está en desuso, incluida la acción `/whisk.system/watson/textToSpeech`.
+**Nota**: el paquete `/whisk.system/watson` está en desuso, incluida la acción `/whisk.system/watson/textToSpeech`.
 
 #### Configuración del paquete Watson Text to Speech en Bluemix
 
@@ -620,6 +616,7 @@ Si no utiliza OpenWhisk en Bluemix o si quiere configurar Watson Text to Speech 
 
 #### Conversión de texto a habla
 {: #openwhisk_catalog_watson_speechtotext}
+
 La acción `/whisk.system/watson-speechToText/textToSpeech` convierte texto en un texto hablado. Los parámetros son según se indica a continuación:
 
 - `username`: el nombre de usuario de la API de Watson.
@@ -643,6 +640,7 @@ La acción `/whisk.system/watson-speechToText/textToSpeech` convierte texto en u
   ```
   {: screen}
 
+
 ### Uso del paquete Watson Speech to Text
 {: #openwhisk_catalog_watson_speechtotext}
 
@@ -652,11 +650,10 @@ El paquete incluye las acciones siguientes.
 
 | Entidad | Tipo | Parámetros | Descripción |
 | --- | --- | --- | --- |
-| `/whisk.system/watson-speechToText` | paquete | usuario, contraseña | Acciones para que las API Watson conviertan la voz a texto |
+| `/whisk.system/watson-speechToText` | paquete | usuario, contraseña | Paquete para convertir habla en texto |
 | `/whisk.system/watson-speechToText/speechToText` | acción | payload, content_type, encoding, username, password, continuous, inactivity_timeout, interim_results, keywords, keywords_threshold, max_alternatives, model, timestamps, watson-token, word_alternatives_threshold, word_confidence, X-Watson-Learning-Opt-Out | Convertir audio en texto |
 
-**Nota**: El paquete `/whisk.system/watson` está en desuso, incluida la acción `/whisk.system/watson/speechToText`.
-
+**Nota**: el paquete `/whisk.system/watson` está en desuso, incluida la acción `/whisk.system/watson/speechToText`.
 
 #### Configuración del paquete Watson Speech to Text en Bluemix
 
@@ -711,7 +708,6 @@ Si no utiliza OpenWhisk en Bluemix o si quiere configurar Watson Speech to Text 
   {: pre}
 
 
-
 #### Conversión de habla a texto
 
 La acción `/whisk.system/watson-speechToText/speechToText` convierte el audio en texto. Los parámetros son según se indica a continuación:
@@ -749,6 +745,128 @@ La acción `/whisk.system/watson-speechToText/speechToText` convierte el audio e
   {: screen}
  
  
+## Utilización del paquete Message Hub
+{: #openwhisk_catalog_message_hub}
+
+Este paquete le permite crear desencadenantes que reaccionan cuando se publica un mensaje en una instancia del servicio [Message Hub](https://developer.ibm.com/messaging/message-hub/) en Bluemix.
+
+### Creación de un desencadenante que escuche una instancia de Message Hub
+{: #openwhisk_catalog_message_hub_trigger}
+Para crear un desencadenante que reaccione cuando se publican mensajes en una instancia de Message Hub, debe utilizar el canal de información denominado `messaging/messageHubFeed`. Este canal de información admite los siguientes parámetros: 
+
+|Nombre|Tipo|Descripción|
+|---|---|---|
+|kafka_brokers_sasl|Matriz JSON de series|Este parámetro es una matriz de series de caracteres `<host>:<port>` que comprenden los intermediarios de la instancia de Message Hub|
+|user|Serie|Su nombre de usuario de Message Hub|
+|password|Serie|Su contraseña de Message Hub|
+|topic|Serie|El tema que desea que escuche el desencadenante|
+|kafka_admin_url|Serie de URL|El URL de la interfaz REST de administración de Message Hub|
+|api_key|Serie|Su clave de API de Message Hub|
+|isJSONData|Booleano (Opcional - default=false)|Si tiene el valor `true`, el canal de información intentará analizar el contenido del mensaje como JSON antes de pasarlo como carga útil del desencadenante. |
+
+Aunque esta lista de parámetros puede parecer larga, se pueden establecer automáticamente mediante el mandato de CLI package refresh: 
+
+1. Cree una instancia del servicio Message Hub bajo su organización actual y el espacio que utiliza para OpenWhisk.
+
+2. Compruebe que el tema que desea escuchar ya existe en Message Hub o cree un tema nuevo para escuchar mensajes, como por ejemplo `mytopic`.
+
+2. Actualizar los paquetes de su espacio de nombres. La renovación crea automáticamente un enlace de paquete para la instancia del servicio Message Hub que ha creado.
+
+  ```
+  wsk package refresh
+  ```
+  {: pre}
+  ```
+  created bindings:
+  Bluemix_Message_Hub_Credentials-1
+  ```
+  {: screen}
+
+  ```
+  wsk package list
+  ```
+  {: pre}
+  ```
+  packages
+  /myBluemixOrg_myBluemixSpace/Bluemix_Message_Hub_Credentials-1 private
+  ```
+  {: screen}
+
+  Ahora su enlace de paquete contiene credenciales asociadas a la instancia de Message Hub. 
+
+3. Todo lo que tiene que hacer es crear un desencadenante que se active cuando se publiquen mensajes nuevos en Message Hub.
+
+  ```
+  wsk trigger create MyMessageHubTrigger -f /myBluemixOrg_myBluemixSpace/Bluemix_Message_Hub_Credentials-1/messageHubFeed -p topic mytopic
+  ```
+  {: pre}
+
+### Configuración de un paquete de Message Hub fuera de Bluemix
+
+Si no utiliza OpenWhisk en Bluemix o si quiere configurar Message Hub fuera de Bluemix, debe crear manualmente un enlace de paquete para el servicio Message Hub. Necesita la información sobre conexión y credenciales del servicio Message Hub. 
+
+- Cree un enlace de paquete configurado para el servicio de Message Hub.
+
+  ```
+  wsk trigger create MyMessageHubTrigger -f /whisk.system/messaging/messageHubFeed -p kafka_brokers_sasl "[\"kafka01-prod01.messagehub.services.us-south.bluemix.net:9093\", \"kafka02-prod01.messagehub.services.us-south.bluemix.net:9093\", \"kafka03-prod01.messagehub.services.us-south.bluemix.net:9093\"]" -p topic mytopic -p user <your Message Hub user> -p password <your Message Hub password> -p kafka_admin_url https://kafka-admin-prod01.messagehub.services.us-south.bluemix.net:443 -p api_key <your API key>
+  ```
+  {: pre}
+
+### Escucha de mensajes destinados a una instancia de Message Hub
+{: #openwhisk_catalog_message_hub_listen}
+Después de crear un desencadenante, el sistema supervisará el tema específico en el servicio de mensajería. Cuando se publiquen nuevos mensajes, se activará el desencadenante. 
+
+La carga útil del desencadenante contendrá un campo `messages`, que es una matriz de mensajes publicados desde la última vez que se activó el desencadenante. Cada objeto de mensaje de la matriz contendrá los siguientes campos: 
+- topic
+- partition
+- offset
+- key
+- value
+
+En términos de Kafka, estos campos deberían resultar evidentes. Sin embargo, el campo `value` requiere una especial consideración. Si el parámetro `isJSONData` se ha establecido `false` (o no se ha establecido) al crear el desencadenante, el campo `value` será el valor sin formato del mensaje publicado. Sin embargo, si `isJSONData` se ha establecido en `true` al crear el desencadenante, el sistema intentará analizar este valor como objeto JSON en la medida de lo posible. Si el análisis se realiza correctamente, `value` en la carga útil del desencadenante será el objeto JSON resultante. 
+
+Por ejemplo, si se publica el mensaje `{"title": "Some string", "amount": 5, "isAwesome": true}` con `isJSONData` establecido en `true`, la carga útil del desencadenante se parecerá a la siguiente: 
+
+```
+{
+  "messages": [
+      {
+        "partition": 0,
+        "key": null,
+        "offset": 421760,
+        "topic": "mytopic",
+        "value": {
+            "amount": 5,
+            "isAwesome": true,
+            "title": "Some string"
+        }
+      }
+  ]
+}
+```
+
+Sin embargo, si se publica el mismo contenido de mensaje con `isJSONData` establecido en `false`, la carga útil del desencadenante se parecerá a esta: 
+
+```
+{
+  "messages": [
+    {
+      "partition": 0,
+      "key": null,
+      "offset": 421761,
+      "topic": "mytopic",
+      "value": "{\"title\": \"Some string\", \"amount\": 5, \"isAwesome\": true}"
+    }
+  ]
+}
+```
+
+### Los mensajes se colocan por lotes
+Habrá notado que la carga útil del desencadenante contiene una matriz de mensajes. Esto significa que si genera mensajes destinados al sistema de mensajería con rapidez, el canal de información intentará colocar por lotes los mensajes publicados en una sola activación del desencadenante. Esto permite publicar los mensajes en el desencadenante de forma más rápida y eficiente. 
+
+Tenga en cuenta que, si el desencadenante activa acciones de codificación, el número de mensajes de la carga útil no está técnicamente enlazado, aunque siempre será mayor que 0. 
+
+
 ## Uso del paquete Slack
 {: #openwhisk_catalog_slack}
 

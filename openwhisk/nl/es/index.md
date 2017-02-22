@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2016, 2017
 lastupdated: "2016-09-09"
 
 ---
@@ -12,7 +12,7 @@ lastupdated: "2016-09-09"
 {:screen: .screen}
 {:pre: .pre}
 
-# Iniciación a {{site.data.keyword.openwhisk_short}} (Beta)
+# Iniciación a {{site.data.keyword.openwhisk_short}}
 
 
 {{site.data.keyword.openwhisk}} es un servicio de computación dirigido por sucesos, también conocido como Computación sin servidor o Function as a Service (FaaS), {{site.data.keyword.openwhisk_short}} ejecuta lógica de aplicación en respuesta a sucesos o invocaciones directas desde aplicaciones web o móvil a través de HTTP. Los sucesos se pueden

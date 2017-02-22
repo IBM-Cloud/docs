@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-29"
+lastupdated: "2016-12-21"
 
 ---
 
@@ -20,8 +20,7 @@ lastupdated: "2016-11-29"
 
 {{site.data.keyword.Bluemix_notm}}에 배치 단추를 사용하여 프로젝트를 복제하는 경우, {{site.data.keyword.jazzhub_short}}에서 `pipeline.yml` 파일을 기반으로 하는 파이프라인을 작성합니다. 
 
-예: 
- 
+예:  
 ``` 
 <sample root>
 	.bluemix
@@ -81,8 +80,7 @@ stages:
 
 파이프라인은 다음 구문을 사용하여 텍스트로 표시할 수 있습니다.
 
-Pipeline:
-
+Pipeline: 
 ```
 ---
 stages:
@@ -90,8 +88,7 @@ stages:
 ```
 {: codeblock} 
 
-Stage: 
- 
+Stage:  
 ```
 ---
 name: <name>
@@ -106,8 +103,7 @@ name: <name>
 ```
 {: codeblock} 
 
-Input:
-
+Input: 
 ```
 type: 'git' | 'job'
 [branch: <branch name>] ;only for Git inputs
@@ -116,16 +112,14 @@ job: <job name>			   	;only for job inputs
 ```
 {: codeblock} 
 
-Trigger:
-
+Trigger: 
 ```
 type: 'commit' | 'stage'
 [enabled: 'true | 'false'] ;true is assumed if not specified
 ```
 {: codeblock} 	
 	
-Property:
-
+Property: 
 ```
 name: <property name>
 value: <property value>
@@ -133,8 +127,7 @@ value: <property value>
 ```
 {: codeblock} 
 
-Job:
-
+Job: 
 ```
 [name: <job name>]
 type: 'builder' | 'deployer' | 'tester'
@@ -151,8 +144,7 @@ fail_stage: 'true' | 'false'
 ```
 {: codeblock} 
 
-Target:
-
+Target: 
 ```
 url: <target url>
 organization: <org name>
@@ -175,7 +167,8 @@ space: <space name>
 ```
 {
   "project_id": "_ljkahfliasdlk",
-  "env": {"CF_ORGANIZATION" : "user@se.ibm.com"
+  "env": {
+     "CF_ORGANIZATION" : "user@se.ibm.com"
   },
   "config": {
     "format" : "yaml",
@@ -184,7 +177,8 @@ space: <space name>
         target:
           url: http://api.ng.bluemix.net
           organization: ${CF_ORGANIZATION}
-        script: \"echo ${CF_ORGANIZATION}\"...
+        script: \"echo ${CF_ORGANIZATION}\"
+      ...
     "
   }
 }
@@ -203,8 +197,7 @@ CF_ORGANIZATION_ID	| 조직 GUID
 CF_SPACE |	영역 이름
 CF_SPACE_ID |	영역 GUID
 CF_APP	| 앱 이름
-
-*표 - 환경 변수*
+{: caption="표 1. 환경 변수" caption-side="top"}
 
 **파이프라인에서 YAML 파일 생성** 
 
@@ -217,6 +210,6 @@ CF_APP	| 앱 이름
 ```
 {: codeblock} 
 
-이 호출에는 승인 머리글이 필요하지 않습니다. 이 호출은 브라우저에서 사용할 수 있습니다. 
+이 호출에는 승인 헤더가 필요하지 않습니다. 이 호출은 브라우저에서 사용할 수 있습니다. 
 
 **참고:** 안전을 위해 생성된 파이프라인 YAML 파일에서 secure-stage 환경 특성 값은 생략됩니다. 

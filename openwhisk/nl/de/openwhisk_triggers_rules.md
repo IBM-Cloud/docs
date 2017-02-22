@@ -180,7 +180,7 @@ Erstellen Sie zum Beispiel eine Regel, die die Aktion "hello" aufruft, wenn eine
   Wie Sie sehen, hat die Aktion 'hello' die Ereignisnutzdaten (payload) empfangen und die erwartete Zeichenfolge zurückgegeben.
 
 Sie können mehrere Regeln erstellen, die denselben Auslöser verschiedenen Aktionen zuordnen.
-Auslöser und Regeln können nicht zu einem Paket gehören. Die Regel kann jedoch einer Aktion zugeordnet werden, die zu einem Paket gehört. Beispiel: 
+Auslöser und Regeln können nicht zu einem Paket gehören. Die Regel kann jedoch einer Aktion zugeordnet werden, die zu einem Paket gehört. Beispiel:
   ```
   wsk rule create recordLocation locationUpdate /whisk.system/utils/echo
   ```
@@ -192,3 +192,4 @@ Sie können Regeln auch mit Sequenzen verwenden. Beispielsweise können Sie eine
   wsk rule create anotherRule locationUpdate recordLocationAndHello
   ```
   {: pre}
+ 

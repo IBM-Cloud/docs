@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -20,7 +20,9 @@ To interact with the service, you must authenticate your {{site.data.keyword.obj
 
 Provisioning a new {{site.data.keyword.objectstorageshort}} instance creates an isolated Keystone project in the IBM Public Cloud. The Keystone credentials structure contains a complete set of attributes so that you can choose the OpenStack token request method or OpenStack SDK that best fits your app. When you bind a new app to the instance, a new Keystone user with access to the project is created. When you deprovision the instance, the project and user are deleted.
 
-For more information about using OpenStack Swift and Keystone, view the [OpenStack documentation site](http://docs.openstack.org).
+For more information about using OpenStack Swift and Keystone, view the <a href="http://docs.openstack.org" target="_blank">OpenStack documentation site. <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>
+
+
 
 1. Make a POST request to `https://identity.open.softlayer.com/v3/auth/tokens` as shown in the following cURL command.
   ```

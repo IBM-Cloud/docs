@@ -134,7 +134,7 @@ SDK를 가져와서 모바일 앱에 통합하는 방법에 대한 정보는 다
 * [Mobile Client Access: Cordova 플러그인 설정](../../services/mobileaccess/getting-started-cordova.html)
 * [Push Notifications: Cordova 플러그인 설정](../../services/mobilepush/enablepush_cordova.html#setup_sdk_cordova)
 
-# 관련 링크
+# rellinks
 
 ## 샘플
    * [Hello Bluemix(Cordova)](https://github.com/ibm-bluemix-mobile-services/bms-samples-cordova-helloworld)

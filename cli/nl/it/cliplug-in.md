@@ -4,9 +4,9 @@
 
 copyright:
 
-  year: 2015, 2016
+  years: 2015, 2017
 
-lastupdated: "2016-02-02"
+lastupdated: "2017-01-12"
 
 ---
 
@@ -17,5 +17,5 @@ lastupdated: "2016-02-02"
 
 # Plug-in interfaccia riga di comando Cloud Foundry
 
-Puoi installare e utilizzare i plug-in dell'interfaccia riga di comando Cloud Foundry (cli cf) disponibili nel [Repository di plug-in CLI](http://plugins.ng.bluemix.net/){: new_window}. Ciascun plug-in viene identificato dal proprio nome file binario, dal nome plug-in definito dallo sviluppatore e dai comandi forniti dal plug-in. Puoi utilizzare il nome file binario solo per installare un plug-in, mentre per eseguire qualsiasi altra azione puoi utilizzare il nome plug-in o un comando.
+Puoi installare e utilizzare i plug-in interfaccia riga di comando Cloud Foundry (cf cli) disponibili in [Repository di plug-in CLI ![icona link esterno](../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/){: new_window}. Ciascun plug-in viene identificato dal proprio nome file binario, dal nome plug-in definito dallo sviluppatore e dai comandi forniti dal plug-in. Puoi utilizzare il nome file binario solo per installare un plug-in, mentre per eseguire qualsiasi altra azione puoi utilizzare il nome plug-in o un comando.
 {:shortdesc}

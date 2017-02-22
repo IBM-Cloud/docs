@@ -51,7 +51,7 @@ For more details on the **cf push** command, see [cf push](/docs/cli/reference/c
 ### Migrating an existing app to Diego
 {: #migrateapp}
 
-Diego is the default Cloud Foundry architecture for {{site.data.keyword.Bluemix_notm}}, and support for DEAs will be removed, so you must migrate all of your existing applications by updating each app. Start migrating your apps to Diego by updating the application with the Diego flag. The application immediately attempts to start running on Diego and stops running on the DEAs. 
+Diego is the default Cloud Foundry architecture for {{site.data.keyword.Bluemix_notm}}, and support for DEAs will be removed, so you must migrate all of your existing applications by updating each app. Start migrating your apps to Diego by updating the application with the Diego flag. The application immediately attempts to start running on Diego and stops running on the DEAs.
 
 As your application is updated from DEA architecture to Diego, you might experience a short downtime, or a prolonged downtime, if the application is not compatible with Diego. To limit downtime, perform a [blue-green deploy](/docs/manageapps/updapps.html#blue_green) by deploying a copy of your application to Diego, and then swapping routes and scaling down the DEA application.
 
@@ -67,7 +67,7 @@ Complete the following steps to migrate your app to Diego:
 After you update your app, verify that your app started. If your migrated app fails to start, it will remain offline until you identify and resolve the issue, and then restart the app.
 
 IBM will alert you of the upcoming mandatory migration period when DEA architecture support will be removed, and if you have not migrated your apps, the operations team will migrate all apps for you.
-  
+
 To validate which backend the application is running on, use the following command:
 
   ```
@@ -80,8 +80,6 @@ To validate which backend the application is running on, use the following comma
 There are the following known issues that you might need to address when migrating your apps to Diego:
 
   * Worker applications deployed with the `--no-route` option do not report as healthy. To prevent this, disable the port-based health check with the `cf set-health-check APP_NAME none` command.
-  * Diego does not use the VCAP_APP_HOST environment variable. If your code references this variable, remove it.
-  * Diego does not use the VCAP_APP_PORT environment variable. If your code references this variable, replace it with PORT.
   * The **cf files** command is no longer supported. The replacement is the **cf ssh** command. For more details on the **cf ssh** command, see [cf ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh).
   * Some apps might use a high number of file descriptors (inodes). If you encounter this issue, you must increase disk quota for your app with the `cf scale APP_NAME [-k DISK]` command.
 
@@ -241,7 +239,7 @@ cf push -f appManifest.yml
 |**env**	|The custom environment variables for the application.|`env: DEV_ENV: production`|
 {: caption="Table 1. Supported options in the manifest YAML file" caption-side="top"}
 
-### A sample `manifest.yml` file
+### A sample manifest.yml file
 
 The following example shows a manifest file for a Node.js application that uses the built-in community Node.js buildpack in {{site.data.keyword.Bluemix_notm}}.
 
@@ -421,7 +419,7 @@ Variables that are defined by buildpacks are different for each buildpack. See [
 	  <dt><strong>WLP_OUTPUT_DIR</strong></dt>
 	  <dd>The location of generated output such as log files and working directory of a running Liberty profile server instance.</dd>
 	  </dl>
-</li>   
+</li>
 <li>The following variables are defined by the Node.js Buildpack:
 	<dl>
 	<dt><strong>BUILD_DIR</strong></dt>
@@ -522,7 +520,7 @@ tmp/
 ```
 
 # Related Links
-{: #rellinks}
+{: #rellinks notoc}
 
 ## Related Links
 {: #general}

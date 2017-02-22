@@ -4,9 +4,9 @@
 
 copyright:
 
-  2015，2016
+  years: 2015，2017
 
-lastupdated: "2016-02-24"
+lastupdated: "2011-01-12"
 
 
 ---
@@ -18,16 +18,11 @@ lastupdated: "2016-02-24"
 # Interface de ligne de commande Auto-Scaling
 {: #autoscalingcli}
 
-Dernière mise à jour : 25 février 2016
-{: .last-updated}
-
 
 Vous pouvez configurer le service {{site.data.keyword.autoscaling}} à l'aide de l'interface de ligne de commande {{site.data.keyword.autoscaling}} for {{site.data.keyword.Bluemix_notm}}. L'interface de ligne de commande {{site.data.keyword.autoscaling}} prend en charge Linux64, Win64 et OSX, et fournit des fonctionnalités semblables à celles de l'API RESTful de mise à l'échelle automatique.
 {: shortdesc}
 
-Avant de commencer, installez l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}. Voir
-[Télécharger l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}](http://plugins.ng.bluemix.net/ui/home.html){: new_window} pour des
-instructions.
+Avant de commencer, installez l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}. Voir [Télécharger l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} ![icône de lien externe](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/home.html){: new_window} pour des instructions.
 
 ## Ajout du plug-in d'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}
 
@@ -144,5 +139,5 @@ bx as history-show <NOM_APP>  [--start-date=<horodatage_début>]  [--end-date=<h
 ## general
 {: general}
 * [{{site.data.keyword.autoscaling}} service](/docs/services/Auto-Scaling/index.html)
-* [Interface de ligne de commande {{site.data.keyword.Bluemix_notm}}](http://plugins.ng.bluemix.net/ui/home.html){: new_window}
-* [W3C Date and Time Formats](https://www.w3.org/TR/NOTE-datetime){: new_window}
+* [Interface de ligne de commande {{site.data.keyword.Bluemix_notm}} ![icône de lien externe](../../../icons/launch-glyph.svg)](http://plugins.ng.bluemix.net/ui/home.html){: new_window}
+* [W3C Date and Time Formats standard ![icône de lien externe](../../../icons/launch-glyph.svg)](https://www.w3.org/TR/NOTE-datetime){: new_window}

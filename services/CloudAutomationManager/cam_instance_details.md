@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-20"
+  years: 2016, 2017
+lastupdated: "2017-02-10"
 
 ---
 <!-- Copyright info and last updated date at top of file: REQUIRED
@@ -41,7 +41,7 @@ To view the instance details, follow these steps:
 
 2. Click the instance of which you want to see the details. 
 
-3. In the instance window, you can see the instance status, the instance information, and the related resource details. You can view or donwload the instance logs and you can also access the template from which the instance was deployed.
+3. In the instance window, you can see the instance status, the instance information, and the related resource details. You can view or download the instance logs and you can also access the template from which the instance was deployed.
 
  For each related resource, you can access the console (if existing) and eventually perform the actions listed by clicking in the **ACTIONS** column.
  

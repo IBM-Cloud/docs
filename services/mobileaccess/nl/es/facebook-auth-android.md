@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-05"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-15"
 
 ---
 {:new_window: target="_blank"}
@@ -27,7 +27,7 @@ Debe tener lo siguiente:
 * El valor de **TenantID**. Abra el servicio en el panel de control de {{site.data.keyword.amashort}}. Pulse el botón **Opciones móviles**. El valor `tenantId` (también conocido como `appGUID`) se muestra en el campo **GUID de app / TenantId**. Necesitará este valor para inicializar el gestor de autorización.
 * Su {{site.data.keyword.Bluemix_notm}} **Región**. Encontrará su región de {{site.data.keyword.Bluemix_notm}} actual en la cabecera, junto al icono **Avatar** ![icono Avatar](images/face.jpg "icono Avatar"). El valor de región que aparece debe ser uno de los siguientes: `EE.UU. Sur`, `Reino Unido` o `Sidney` y debe corresponder con el valor de SDK necesario en el código Javascript de WebView: `BMSClient.REGION_US_SOUTH`, `BMSClient.REGION_SYDNEY` o `BMSClient.REGION_UK`. Necesitará este valor para inicializar el cliente {{site.data.keyword.amashort}}.
 * Un proyecto Android configurado para funcionar con Gradle. No es necesario instrumentar el proyecto con el SDK de cliente de {{site.data.keyword.amashort}}.  
-* Una app de Facebook con una plataforma Android en el sitio Facebook for Developers (https://developers.facebook.com).
+* Una app de Facebook con una plataforma Android en el [sitio Facebook for Developers ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://developers.facebook.com/ "Icono de enlace externo"){: new_window}.
 
 **Importante:** no es necesario instalar de forma independiente el SDK de SDK (`com.facebook.FacebookSdk`). Gradle instala el SDK de Facebook automáticamente al añadir el SDK de cliente de Facebook {{site.data.keyword.amashort}}. Puede saltarse este paso al añadir la plataforma Android en el sitio Facebook for Developers.
 
@@ -36,11 +36,11 @@ Debe tener lo siguiente:
 
 En el sitio web Facebook for Developers:
 
-1. Inicie una sesión con su cuenta en el sitio web de Facebook for Developers (https://developers.facebook.com). 
+1. Inicie sesión en su cuenta en el [sitio web Facebook for Developers ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://developers.facebook.com "Icono de enlace externo"){: new_window}.
 
 1. En la **Lista de productos**, seleccione **Inicio de sesión de Facebook**.
 
-1. Añada o configure la plataforma Android. 
+1. Añada o configure la plataforma Android.
 
 1. Indique el nombre del paquete de la aplicación de Android en la solicitud de nombre de paquete de Google Play. Para encontrar el nombre del paquete de la aplicación de Android, busque `<manifest ..... package="{your-package-name}">` en el archivo `AndroidManifest.xml` del proyecto Android Studio.
 
@@ -57,14 +57,14 @@ En el sitio web Facebook for Developers:
 	</activity>
 	```
 	{: codeblock}
-	
+
 1. Para que Facebook compruebe la autenticidad de la aplicación, debe especificar un hash del SHA1 de su certificado del desarrollador.
 
 	**Más información sobre la seguridad en Android:** el sistema operativo Android necesita que todas las aplicaciones instaladas en un dispositivo Android estén firmadas con un certificado de desarrollador. La aplicación de Android se puede compilar con dos modos: depuración y publicación.
-	
+
 	Utilice diferentes certificados para los modos de depuración y publicación. Los certificados que se utilizan para firmar aplicaciones de Android en modo de depuración se empaquetan con el SDK de Android, que normalmente Android Studio instala automáticamente. Cuando quiera publicar la app en la tienda Google Play deberá firmar la app con otro certificado, que normalmente genera usted mismo.
-	
-	Puede introducir dos conjuntos de hash de clave con Facebook: un hash de clave para aplicaciones que se crean en modo de depuración con un certificado de depuración y otro hash de clave para aplicaciones que se crean en modo de publicación con un certificado de publicación. Para obtener más información, consulte [Firma de aplicaciones Android](http://developer.android.com/tools/publishing/app-signing.html).
+
+	Puede introducir dos conjuntos de hash de clave con Facebook: un hash de clave para aplicaciones que se crean en modo de depuración con un certificado de depuración y otro hash de clave para aplicaciones que se crean en modo de publicación con un certificado de publicación. Para obtener más información, consulte [firma de sus aplicaciones Android ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://developer.android.com/tools/publishing/app-signing.html "Icono de enlace externo"){: new_window}.
 
 1. El almacén de claves que contiene el certificado que utiliza para el entorno de desarrollo se almacena en el archivo `~/.android/debug.keystore`. La contraseña del almacén de claves por defecto es: `android`. Utilice este certificado para compilar aplicaciones en modo de depuración.
 
@@ -185,12 +185,12 @@ Es posible que el proyecto de Android tenga dos archivos `build.gradle`: para el
 	```
 	{: codeblock}
 
-   * Sustituya `BMSClient.REGION_UK` con la región adecuada. 
-   * Sustituya `<MCAServiceTenantId>` por el valor `tenantId` 
-   
+   * Sustituya `BMSClient.REGION_UK` con la región adecuada.
+   * Sustituya `<MCAServiceTenantId>` por el valor `tenantId`
+
 	Para obtener más información sobre cómo obtener estos valores, consulte [Antes de empezar](#before-you-begin)).
 
-	**Nota:** Si su aplicación Android está dirigida a Android versión 6.0 (nivel de API 23) o superior, deberá asegurarse de que la aplicación tenga una llamada `android.permission.GET_ACCOUNTS` antes de llamar al `registro`. Para obtener más información, consulte [https://developer.android.com/training/permissions/requesting.html](https://developer.android.com/training/permissions/requesting.html){: new_window}.
+	**Nota:** Si su aplicación Android está dirigida a Android versión 6.0 (nivel de API 23) o superior, deberá asegurarse de que la aplicación tenga una llamada `android.permission.GET_ACCOUNTS` antes de llamar al `registro`. Para obtener más información, consulte [este tema ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.android.com/training/permissions/requesting.html "Icono de enlace externo"){: new_window} sobre el sitio de Android Developers.
 
 1. Añada el código siguiente a la actividad:
 
@@ -213,7 +213,7 @@ Después de inicializar el SDK del cliente y registrar el gestor de autenticaci�
 ### Antes de empezar a probar
 {: #facebook-auth-android-testing-before}
 
-Debe utilizar el contenedor modelo de {{site.data.keyword.mobilefirstbp}} y debe disponer de un recurso que esté protegido por {{site.data.keyword.amashort}} en el punto final `/protected`. Si tiene que configurar un punto final `/protected`, consulte [Protección de recursos](https://console.{DomainName}/docs/services/mobileaccess/protecting-resources.html).
+Debe utilizar el contenedor modelo de {{site.data.keyword.mobilefirstbp}} y debe disponer de un recurso que esté protegido por {{site.data.keyword.amashort}} en el punto final `/protected`. Si tiene que configurar un punto final `/protected`, consulte [Protección de recursos](protecting-resources.html).
 
 1. Intente enviar una solicitud a un punto final protegido de la aplicación de programa de fondo móvil recién creada en su navegador. Abra el siguiente URL:  
 
@@ -244,7 +244,7 @@ Debe utilizar el contenedor modelo de {{site.data.keyword.mobilefirstbp}} y debe
 	});
 	```
 	{: codeblock}
-	
+
 1. Ejecute la aplicación. Aparece una pantalla de inicio de sesión de Facebook.
 
 	![imagen](images/android-facebook-login.png)

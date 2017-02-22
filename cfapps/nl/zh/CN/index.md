@@ -1,16 +1,16 @@
 ---
 
- 
+
 
 copyright:
 
-  years: 2015，2016
+  years: 2015，2017
 
-lastupdated: "2016-04-18" 
+lastupdated: "2016-04-18"
 
 ---
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
 # 创建 Cloud Foundry 应用程序
@@ -54,6 +54,7 @@ lastupdated: "2016-04-18"
 <dd>请不要为应用程序指定任何本地存储器。应用程序的每个实例随时都可能会重新启动或被移动到其他虚拟机上（通常是为了实现负载均衡），即使只有一个实例在运行也不例外。移动或删除应用程序时，会擦除本地存储器中存储的所有内容。请使用某个 {{site.data.keyword.Bluemix_notm}} 数据存储服务来实现持久性。</dd>
 <dt>资源限制</dt>
 <dd>请注意，试用帐户在资源数量方面具有使用限制。这些限制如下：<table style="width:100%">
+<caption>表 1. 试用帐户的 {{site.data.keyword.Bluemix_notm}} 资源限制</caption>
   <th>资源类型</th>	<th>数量限制</th>
 <tr><td>在所有应用程序上使用的服务数</td> <td>10</td>
 <tr><td>在所有应用程序上使用的内存</td> <td>	2 G</td>

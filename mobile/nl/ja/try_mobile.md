@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2015, 2017
 lastupdated: "2016-10-19"
 
 ---
@@ -50,7 +50,7 @@ lastupdated: "2016-10-19"
 <td valign="top"><b>ユーザー ID プロバイダー</b> <br/>以下の ID プロバイダーを使用できます。<ul><li>Facebook</li><li>Google</li><li> カスタム</li></ul></td>
 </tr>
 <tr>
-<td><img src="images/push_icon.png" alt="プッシュ通知サービスのアイコン"> <b>{{site.data.keyword.mobilepushshort}}</b><br/>The  {{site.data.keyword.mobilepushfull}} サービスは、モバイル (iOS & Android) プラットフォームおよび Web ブラウザー・アプリケーションをターゲットとしたプッシュ通知を送信および管理するための統合プラットフォームを提供します。このサービスは、デバイス、デバイス・プラットフォーム、およびブラウザーへのアプリケーション・ユーザーのマッピングを管理し、サブスクライバーへのプッシュ通知のディスパッチを処理します。このサービスを使用して、ブロードキャスト、ユニキャスト (ユーザー ID、デバイス ID に基づく)、およびタグ (またはトピック) をプッシュ通知に基づいてカスタマーに送信することができます。</td>
+<td><img src="images/push_icon.png" alt="{{site.data.keyword.mobilepushshort}} サービス・アイコン"> <b>{{site.data.keyword.mobilepushshort}}</b><br/>{{site.data.keyword.mobilepushfull}} サービスは、モバイル (iOS および Android) プラットフォームと Web ブラウザー・アプリケーションをターゲットとするプッシュ通知を送信および管理するための統合プラットフォームを提供します。このサービスは、デバイス、デバイス・プラットフォーム、およびブラウザーへのアプリケーション・ユーザーのマッピングを管理し、サブスクライバーへのプッシュ通知のディスパッチを処理します。このサービスを使用して、ブロードキャスト、ユニキャスト (ユーザー ID、デバイス ID に基づく)、およびタグ (またはトピック) をプッシュ通知に基づいてカスタマーに送信することができます。</td>
 <td valign="top"><b>プッシュ・サービス・プロバイダー</b><ul><li>Apple プッシュ通知サービス</li><li>Firebase Cloud Messaging</li></ul></td>
 </tr>
 <tr>

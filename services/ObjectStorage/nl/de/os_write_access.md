@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -14,9 +14,11 @@ lastupdated: "2016-12-06"
 
 # Schreibzugriff erteilen
 
-Ein {{site.data.keyword.objectstorageshort}}-Benutzer mit [Administratorrolle](/docs/services/ObjectStorage/os_access_types.html) kann einem anderen Benutzer Schreibzugriff erteilen und verschiedene ACL-Kombinationen für Schreibzugriff angeben. {: shortdesc}
+Ein {{site.data.keyword.objectstorageshort}}-Benutzer mit [Administratorrolle](/docs/services/ObjectStorage/os_access_types.html) kann einem anderen Benutzer Schreibzugriff erteilen und verschiedene ACL-Kombinationen für Schreibzugriff angeben.
+{: shortdesc}
 
 <table>
+<caption> Tabelle 1. Schreibzugriffsberechtigungen nach Option</caption>
   <tr>
     <th> Berechtigung </th>
     <th> Optionen für Schreibzugriffssteuerung (Write ACL) </th>
@@ -38,8 +40,6 @@ Ein {{site.data.keyword.objectstorageshort}}-Benutzer mit [Administratorrolle](/
     <td>  <code> &#42;:&#42; </code> </td>
   </tr>
 </table>
-
-Tabelle 1: Schreibzugriffsberechtigungen nach Option
 
 
 
@@ -83,7 +83,7 @@ Tabelle 1: Schreibzugriffsberechtigungen nach Option
     ```
     {: pre}
 
-    **Anmerkung**: Verwenden Sie zum Trennen der Zugriffssteuerungslisten ein Komma (,).
+    **Hinweis**: Verwenden Sie zum Trennen der Zugriffssteuerungslisten ein Komma (,).
 
 3. Überprüfen Sie den Wert für die Schreibzugriffssteuerungsliste (Write ACL).
 

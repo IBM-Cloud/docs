@@ -13,10 +13,10 @@
                     <polyline id="Stroke-36" stroke="#FF2F2F" stroke-width="6" points="147 545 399.6837 544 411.5038 504"></polyline>
                     <polyline id="Stroke-38" stroke="#5596E6" stroke-width="6" points="147 253 399.6837 254 411.5038 294"></polyline>
                     <text id="Bluemix-bill" fill="#3C3232" font-family="HelvNeueBoldforIBM, HelvNeue Bold for IBM" font-size="32" font-weight="bold">
-                        <tspan x="14.424" y="307">Facture Bluemix</tspan>
+                        <tspan x="14.424" y="307">Bluemix bill</tspan>
                     </text>
                     <text id="SoftLayer-bill" fill="#3C3232" font-family="HelvNeueBoldforIBM, HelvNeue Bold for IBM" font-size="32" font-weight="bold">
-                        <tspan x="0.952" y="597">Facture SoftLayer</tspan>
+                        <tspan x="0.952" y="597">SoftLayer bill</tspan>
                     </text>
                     <g id="Page-1" transform="translate(59.000000, 444.000000)" fill="#FF2F2F">
                         <path d="M0,0.9994 L0,120.9994 L80,120.9994 L80,32.9994 L48,0.9994 L0,0.9994 L0,0.9994 Z M4,5.0014 L44,5.0014 L44,36.9994 L76,36.9994 L76,117.0014 L4,117.0014 L4,5.0014 L4,5.0014 Z" id="Fill-1"></path>
@@ -25,7 +25,7 @@
                         <polygon id="Fill-4" points="16 69 40 69 40 65 16 65"></polygon>
                     </g>
                     <text id="SoftLayer-bill" fill="#3C3232" font-family="HelvNeueBoldforIBM, HelvNeue Bold for IBM" font-size="32" font-weight="bold">
-                        <tspan x="848.952" y="594">Facture SoftLayer</tspan>
+                        <tspan x="848.952" y="594">SoftLayer bill</tspan>
                     </text>
                     <g id="Page-1" transform="translate(907.000000, 433.000000)" fill="#FF2F2F">
                         <path d="M0,0.9994 L0,120.9994 L80,120.9994 L80,32.9994 L48,0.9994 L0,0.9994 L0,0.9994 Z M4,5.0014 L44,5.0014 L44,36.9994 L76,36.9994 L76,117.0014 L4,117.0014 L4,5.0014 L4,5.0014 Z" id="Fill-1"></path>
@@ -40,7 +40,7 @@
                         <polygon id="Fill-4" points="16 67.4952381 40 67.4952381 40 63.5333333 16 63.5333333"></polygon>
                     </g>
                     <text id="Bluemix-bill" fill="#3C3232" font-family="HelvNeueBoldforIBM, HelvNeue Bold for IBM" font-size="32" font-weight="bold">
-                        <tspan x="609.924" y="161">Facture Bluemix</tspan>
+                        <tspan x="609.924" y="161">Bluemix bill</tspan>
                     </text>
                     <g id="Page-1" transform="translate(654.000000, 0.000000)" fill="#5596E6">
                         <path d="M0,0.9994 L0,120.9994 L80,120.9994 L80,32.9994 L48,0.9994 L0,0.9994 L0,0.9994 Z M4,5.0014 L44,5.0014 L44,36.9994 L76,36.9994 L76,117.0014 L4,117.0014 L4,5.0014 L4,5.0014 Z" id="Fill-1"></path>
@@ -64,53 +64,53 @@
                         </g>
                     </g>
                     <text id="Link-Bluemix-and" fill="#3C3232" font-family="HelvNeueBoldforIBM, HelvNeue Bold for IBM" font-size="32" font-weight="bold">
-                        <tspan x="284.956" y="441">Liez des comptes</tspan>
+                        <tspan x="284.956" y="441">Link Bluemix and</tspan>
                     </text>
                     <text id="SoftLayer-accounts" fill="#3C3232" font-family="HelvNeueBoldforIBM, HelvNeue Bold for IBM" font-size="32" font-weight="bold">
-                        <tspan x="265.916" y="480">Bluemix et SoftLayer</tspan>
+                        <tspan x="265.916" y="480">SoftLayer accounts</tspan>
                     </text>
                     <text id="For-the-next-billing-cycle,-you" fill="#3C3232" font-family="HelveticaNeue, Helvetica Neue" font-size="30" font-weight="normal">
-                        <tspan x="1050" y="433">A partir du prochain cycle de</tspan>
+                        <tspan x="1115.285" y="433">For the next billing cycle, you</tspan>
                     </text>
                     <text id="will-receive-a-singl" fill="#3C3232" font-family="HelveticaNeue, Helvetica Neue" font-size="30" font-weight="normal">
-                        <tspan x="1050" y="465">facturation, vous allez recevoir</tspan>
+                        <tspan x="1121.395" y="465">will receive a single Bluemix </tspan>
                     </text>
                     <text id="bill-that-includes-your-SoftLayer" fill="#3C3232" font-family="HelveticaNeue, Helvetica Neue" font-size="30" font-weight="normal">
-                        <tspan x="1050" y="497">une seule facture incluant vos</tspan>
+                        <tspan x="1100" y="497">bill that includes your SoftLayer</tspan>
                     </text>
                     <text id="and-Bluemix-charges" fill="#3C3232" font-family="HelveticaNeue, Helvetica Neue" font-size="30" font-weight="normal">
-                        <tspan x="1050" y="529">frais SoftLayer et Bluemix</tspan>
+                        <tspan x="1170.005" y="529">and Bluemix charges</tspan>
                     </text>
                     <text id="Bluemix-bill" fill="#3C3232" font-family="HelvNeueBoldforIBM, HelvNeue Bold for IBM" font-size="32" font-weight="bold">
-                        <tspan x="1227.864" y="377">Facture Bluemix</tspan>
+                        <tspan x="1227.864" y="377">Bluemix bill</tspan>
                     </text>
                     <g id="Group" transform="translate(823.500000, 368.500000) scale(1, -1) translate(-823.500000, -368.500000) translate(458.000000, 365.000000)" stroke="#AF6EE8" stroke-width="6">
                         <path d="M0.26034483,3.5 L730,3.5" id="Line"></path>
                         <path d="M730,0.5 L730,6.5" id="Line-decoration-1"></path>
                     </g>
                     <text id="After-you-link-accounts,-you" fill="#1A1314" font-family="HelveticaNeue, Helvetica Neue" font-size="30" font-weight="normal">
-                        <tspan x="480.04" y="203">Une fois vos comptes liés, vous</tspan>
+                        <tspan x="480.04" y="203">After you link accounts, you</tspan>
                     </text>
                     <text id="will-receive-a-separate-bill-for-your" fill="#1A1314" font-family="HelveticaNeue, Helvetica Neue" font-size="30" font-weight="normal">
-                        <tspan x="439" y="235">recevrez une facture distincte pour votre</tspan>
+                        <tspan x="439" y="235">will receive a separate bill for your</tspan>
                     </text>
                     <text id="Bluemix-usage-for-the-current" fill="#1A1314" font-family="HelveticaNeue, Helvetica Neue" font-size="30" font-weight="normal">
-                        <tspan x="468.385" y="267">utilisation de Bluemix pour le cycle</tspan>
+                        <tspan x="468.385" y="267">Bluemix usage for the current</tspan>
                     </text>
                     <text id="month’s-billing-cycle." fill="#1A1314" font-family="HelveticaNeue, Helvetica Neue" font-size="30" font-weight="normal">
-                        <tspan x="525.04" y="299">de facturation du mois en cours.</tspan>
+                        <tspan x="525.04" y="299">month’s billing cycle.</tspan>
                     </text>
                     <text id="You-might-receive-a-separate-bill" fill="#3C3232" font-family="HelveticaNeue, Helvetica Neue" font-size="30" font-weight="normal">
-                        <tspan x="723.77" y="639">Il se peut que vous receviez une facture distincte</tspan>
+                        <tspan x="723.77" y="639">You might receive a separate bill</tspan>
                     </text>
                     <text id="for-SoftLayer-usage-for-the-current" fill="#3C3232" font-family="HelveticaNeue, Helvetica Neue" font-size="30" font-weight="normal">
-                        <tspan x="709.93" y="671">pour votre utilisation de SoftLayer pour le cycle</tspan>
+                        <tspan x="709.93" y="671">for SoftLayer usage for the current</tspan>
                     </text>
                     <text id="billing-cycle,-depending-on-when-you" fill="#3C3232" font-family="HelveticaNeue, Helvetica Neue" font-size="30" font-weight="normal">
-                        <tspan x="692" y="703">de facturation du mois en cours, selon le moment</tspan>
+                        <tspan x="692" y="703">billing cycle, depending on when you</tspan>
                     </text>
                     <text id="linked-your-accounts." fill="#3C3232" font-family="HelveticaNeue, Helvetica Neue" font-size="30" font-weight="normal">
-                        <tspan x="798.73" y="735">auquel vous avez lié vos comptes.</tspan>
+                        <tspan x="798.73" y="735">linked your accounts.</tspan>
                     </text>
                     <g id="Group-2" transform="translate(581.000000, 325.000000)">
                         <path d="M2.62030075,0 L220.515038,0" id="Line" stroke="#5596E6" stroke-dasharray="15,5" transform="translate(111.567669, 0.500000) scale(1, -1) translate(-111.567669, -0.500000) "></path>

@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2016
-lastupdated: "2016-12-01"
+  years: 2016, 2017
+lastupdated: "2017-01-11"
  
 
 ---
@@ -92,28 +92,63 @@ SoftLayer アカウントがあり、SoftLayer アカウントと {{site.data.ke
 ## IBM ID への切り替え
 {: #ibmid_switch}
 
-SoftLayer での認証では、
-{{site.data.keyword.Bluemix_notm}} 用の単一のログインを提供するために、IBM ID を使用するようになりました。既存の SoftLayer アカウントがある場合、IBM ID に切り替えることができます。マイグレーション・ウィザードを使用して、この切り替えの処理を行います。
+SoftLayer での認証は、IBM ID を使用して {{site.data.keyword.Bluemix_notm}} のすべてに対して単一のログインを提供するようになりました。既存の SoftLayer アカウントは IBM ID 認証への切り替えが有効にされていて、マイグレーション・ウィザードに従うことで切り替えを行うことができます。
 {:shortdesc}
 
-IBM ID への切り替えを開始しても、プロセスを完了しない限り、キャンセルできます。ただし、その場合でも、次回ログイン時に IBM ID に切り替えるように求めるプロンプトが出されます。
+マスター・ユーザーであるのに {{site.data.keyword.slportal}} に IBM ID への切り替えを促すプロンプトが表示されない場合、[IBM サポートに連絡](https://console.ng.bluemix.net/docs/support/index.html#contacting-support)して、この機能の有効化についての支援を依頼してください。
 
-IBM ID への既存の SoftLayer ユーザー名の切り替えを開始するには、以下のステップを実行します。
+IBM ID への切り替えを開始しても、切り替え処理が完了する前であればいつでもキャンセルできます。ただし、次回ログイン時に、IBM ID に切り替えるように求めるプロンプトが出され続けます。{{site.data.keyword.Bluemix_notm}} アカウントにリンクする予定の各アカウントは、固有の E メール・アドレスを持つ固有の IBM ID によって所有される必要があります。
 
- 1. {{site.data.keyword.slportal}} で、「ユーザー・プロファイルの編集」ページに移動し、**「IBM ID への切り替え (Switch to IBMid)」**をクリックします。
- 2. マイグレーション・ウィザードのプロンプトに従って、IBM ID を作成します。IBM ID の作成後にその ID (E メール・アドレス) を変更することはできません。プロファイルに関連付けられている E メールを更新することはできますが、デフォルトでは、その値は IBM ID 用に定義したものに設定されます。ウィザードの完了後に、E メールが送信されます。
- 3. E メールを受信したら、リンクをたどるか URL をブラウザーにコピーし、登録コードを入力します。コードは 7 日間有効であり、1 回限り使用できるコードです。使用後、再使用することはできません。IBM ID から SoftLayer ユーザーへのリンクをセットアップした後には、IBM ID でのみアカウントにログインできます。ログイン・ダイアログで、SoftLayer ユーザー名とパスワードを入力するのではなく、**「IBM ID でログイン」**ボタンを使用する必要があります。
+既存の SoftLayer ユーザー名を IBM ID に切り替えるには、以下のステップを実行します。
+
+ 1. ログイン後の最初のプロンプトで**「後で」**を選択したが、IBM ID 認証への切り替えを現行セッションで開始することにした場合、「ユーザー・プロファイルの編集」ページに移動し、**「IBM ID への切り替え」**をクリックします。
+ 2. ウィザードのプロンプトに従って IBM ID を作成します。IBM ID は、固有の E メール・アドレスであり、作成後に変更することはできません。プロファイルに関連付けられた E メールは後で更新することができ、デフォルトの E メールは IBM ID 用に定義したものに設定されます。マイグレーション・ウィザードが完了したことを示す登録コードが記載された E メールが届けられます。 
+ 3. E メールを受信したら、リンクをたどるか URL をブラウザーにコピーし、登録コードを入力します。コードは 7 日間有効であり、1 回のみ使用できます。
  
-新規のお客様の場合、オーダーをチェックアウトすると、既存の IBM ID アカウントの E メール・アドレスを入力するか、新規 IBM ID アカウントを作成するように求められます。 
+ 
+IBM ID 認証に切り替えた後は、IBM ID でのみアカウントにログインできます。ログイン・プロンプトで、SoftLayer ユーザー名とパスワードを入力するのではなく、**「IBM ID でログイン」**をクリックしてください。
+ 
+新規のお客様としてオーダーをチェックアウトすると、既存 IBM ID アカウントの E メール・アドレスを入力するか、新規 IBM ID アカウントを作成するように求められます。新規 IBM ID を作成する場合、新規 IBM ID の E メール・アドレスを入力します。その E メール・アドレスは、招待 E メールの送信先であり、新規 IBM ID のユーザー名でもあります。
 
-### 単一の IBM ID への複数の SoftLayer アカウントのマップ
+### ユーザーの IBM ID への切り替えの有効化
+{: #link_accounts_resellers}
+
+場合によっては、アカウントでの IBM ID 認証の使用を販売店または流通業者が前もって有効にしておかないと、ユーザーが IBM ID に切り替えることができないことがあります。 
+
+ * 古い SoftLayer 資格情報を持つ既存アカウントでの IBM ID 認証の使用を有効にするには、[IBM サポートに連絡](https://console.ng.bluemix.net/docs/support/index.html#contacting-support)して IBM ID マイグレーションを有効にします。これは、{{site.data.keyword.Bluemix_notm}} アカウントにリンクしたいすべての既存エンド・ユーザー・アカウントで有効にする必要があります。
+ 
+ * 新規ユーザー・アカウントが確実に IBM ID を使用して作成されるようにするには、即時マスター・ユーザー・アカウントに `CREATE_NEW_ACCOUNT_WITH_IBMid_AUTHENTICATION` 属性が設定される必要があります。[IBM サポートに連絡](https://console.ng.bluemix.net/docs/support/index.html#contacting-support)するか、またはベンダーに連絡して、ご使用のアカウントに対してこれを設定するよう依頼してください。
+ 
+### ユーザー・アカウントのリンク
+{: #link_user_accounts}
+ユーザーが IBM ID 認証に切り替えた後、販売店および流通業者は SoftLayer アカウントと {{site.data.keyword.Bluemix_notm}} アカウントをリンクすることができます。
+
+**注:** 
+  * リンクされるアカウントのマスター・ユーザーは IBM ID でなければなりません。
+  * 各エンド・ユーザー・アカウントにマスター・ユーザーとしてログインします。「ユーザー・プロファイル」ページに移動し、**「IBM ID への切り替え」**をクリックします。
+  * {{site.data.keyword.Bluemix_notm}} アカウントにリンクする各アカウントは、固有の E メール・アドレスを持つ固有の IBM ID によって所有される必要があります。1 つの IBM ID が複数の SoftLayer アカウントを所有できますが、それらのアカウントを {{site.data.keyword.Bluemix_notm}} アカウントにリンクすることはできません。
+1 つの IBM ID が複数の SoftLayer アカウントのマスター・ユーザーであり
+、それらのアカウントを {{site.data.keyword.Bluemix_notm}} アカウントにリンクしたい場合は、アカウントごとに固有の IBM ID になるようにマスター・ユーザーを変更する必要があります。SoftLayer アカウントのマスター・ユーザーを変更するには、[IBM SoftLayer サポート ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://knowledgelayer.softlayer.com/topic/support){: new_window} に連絡してください。
+  
+各アカウントを {{site.data.keyword.Bluemix_notm}} アカウントにリンクするには、以下のステップを実行します。 
+
+ 1. 新規 {{site.data.keyword.Bluemix_notm}} アカウントを作成するか、既存 {{site.data.keyword.Bluemix_notm}} アカウントをリンクするには、マスター・ユーザーとして SoftLayer アカウントにログインし、**{{site.data.keyword.Bluemix_notm}}** リンクをクリックします。これによって、新規 {{site.data.keyword.Bluemix_notm}} アカウントの作成または既存 {{site.data.keyword.Bluemix_notm}} アカウントのリンクを行うことができるようになります。SoftLayer アカウントのマスター・ユーザーである IBM ID は、リンクする先の Bluemix アカウントの所有者でなければなりません。SoftLayer アカウントのユーザーを {{site.data.keyword.Bluemix_notm}} アカウントに追加する操作も含めて、ウィザードのプロンプトに従います。 
+ 2. アカウントをリンクした後、そのアカウントのエンド・ユーザーに IBM ID にマイグレーションするよう通知します。エンド・ユーザーは、その後、{{site.data.keyword.Bluemix_notm}} コンソールで、「インフラストラクチャー」ダッシュボード、「アプリケーション」ダッシュボード、および「サービス」ダッシュボードにアクセスできます。
+ 3. リンクされたアカウントに新規ユーザーが追加される場合、それらのユーザーが一元化されたコンソール内ですべての機能にアクセスできるようにするため、それらのユーザーを SoftLayer アカウントと {{site.data.keyword.Bluemix_notm}} アカウントの両方に追加することが必要になります。
+ 
+**推奨:** エンド・ユーザー・アカウントのみを IBM ID にマイグレーションしてください。ブランド・アカウント (エンド・ユーザー・アカウントの親アカウントであり、リソースを含んでいない) はマイグレーションしないでください。ブランド・アカウント・ユーザーは、IBM ID にマイグレーションすると、Brand Agent Portal (BAP) ポータルにログインできなくなります。
+
+<!--
+### Mapping multiple SoftLayer accounts to one IBMid
 {: #map_multiple_accounts}
 
-アカウントのセットアップ時に既存の IBM ID の E メール・アドレスを使用することで、単一の IBM ID を複数の SoftLayer アカウントに関連付けることができます。単一の IBM ID にマップできる各アカウントの SoftLayer ユーザーは 1 つのみです。IBM ID は、各 SoftLayer アカウント内で固有でなければなりません。ただし、複数の SoftLayer アカウントにアクセスできる単一のユーザーが、単一の IBM ID を使用して複数の SoftLayer アカウントにアクセスできます。
+You can associate one IBMid with multiple SoftLayer accounts by using an existing IBMid email address when setting up the account. Only one SoftLayer user for each account can be mapped to the single IBMid. The IBMid must be unique within each SoftLayer account. However, one user with access to multiple SoftLayer accounts can use one IBMid to access multiple SoftLayer accounts.
 
-例えば、ある IBM ID をアカウント A と B のマスター・ユーザーにマップし、さらにアカウント C と D の追加ユーザーにマップできます。当該 IBM ID にマップされたアカウントの 1 つが、デフォルト・アカウントになります。通常、デフォルト・アカウントは、IBM ID に最初にマップされたアカウントです。ただし、カスタマー・ポータルのアカウント切り替え機能を使用して、デフォルトのアカウントにするアカウントを切り替えることができます。
+For example, an IBMid can map to the master user in accounts A and B, and to an additional user in accounts C and D. One of the accounts mapped to that IBMid is the default account.  Usually, the default account is the account that was first mapped to the IBMid. However, you can switch which account is the default account  through an account switching feature in the Customer Portal.
 
-2 要素認証が有効になっていて、複数のアカウントに IBM ID でアクセスできるユーザーの場合、アカウントのログインおよびアカウントの切り替え時に、アカウントごとに適切な 2 要素認証検証コードが必要になります。
+For a user with IBMid access to multiple accounts with two-factor authentication enabled, an appropriate two-factored authentication verification code per account is required during account log in and account switching.
+-->
+
 
 ## SoftLayer 資産での {{site.data.keyword.Bluemix_notm}} サービスの使用
 {: #bluemix_services}
@@ -162,7 +197,6 @@ SoftLayer のアプリから Watson API を呼び出して*洞察およびコグ
 * {{site.data.keyword.presenceinsightsshort}}
 * {{site.data.keyword.relationshipextractionshort}}
 * {{site.data.keyword.retrieveandrankshort}}
-* {{site.data.keyword.servicediscoveryshort}}
 * {{site.data.keyword.speechtotextshort}}
 * {{site.data.keyword.sqldb}}
 * {{site.data.keyword.streaminganalyticsshort}}

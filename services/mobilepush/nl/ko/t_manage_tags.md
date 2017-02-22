@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # 태그 관리
 {: #manage_tags}
-마지막 업데이트 날짜: 2016년 12월 7일
+마지막 업데이트 날짜: 2017년 1월 11일
 {: .last-updated}
 
 {{site.data.keyword.mobilepushshort}} 대시보드를 사용하여 애플리케이션의 태그를 작성 및 삭제하고 태그 기반 알림을 시작합니다. 태그를 구독하는 디바이스에서 태그 기반 알림이 수신됩니다.
@@ -53,7 +53,7 @@ copyright:
 ## Android에서 태그 가져오기
 {: android-get-tags}
 
-**getTags** API는 디바이스를 구독할 수 있는 사용 가능한 태그 목록을 리턴합니다. 디바이스에서 특정 태그를 구독하면 디바이스가 해당 태그와 관련하여 전송되는 {{site.data.keyword.mobilepushshort}}을 수신할 수 있습니다. 
+**getTags** API는 디바이스를 구독할 수 있는 사용 가능한 태그 목록을 리턴합니다. 디바이스에서 특정 태그를 구독하면 디바이스가 해당 태그와 관련하여 전송되는 {{site.data.keyword.mobilepushshort}}를 수신할 수 있습니다. 
 
 디바이스가 구독하는 태그 목록을 가져오고 사용 가능한 태그 목록을 가져오려면 다음 코드 스니펫을 Android 모바일 애플리케이션에 복사하십시오. 
 
@@ -120,54 +120,13 @@ BMSPush.retrieveSubscriptions(function(tags) {
 ```
 	{: codeblock}
 
-## Objective-C에서 태그 가져오기
-{: objc-get-tags}
-
-디바이스가 구독하는 태그 목록을 가져오고 디바이스가 구독할 수 있는 사용 가능한 태그 목록을 가져오려면 Objective-C를 사용하여 개발된 iOS 애플리케이션에 다음 코드 스니펫을 복사하십시오. 
-
-디바이스가 구독할 수 있는 사용 가능 태그 목록을 가져오려면 다음 **retrieveAvailableTags** API를 사용하십시오.
-
-```
-//Get a list of available tags to which the device can subscribe
-[push retrieveAvailableTagsWithCompletionHandler:
-^(IMFResponse *response, NSError *error){
- if(error){    
-   [self updateMessage:error.description];  
- } else {
-   [self updateMessage:@"Successfully retrieved available tags."];
- NSDictionary *availableTags = [[NSDictionary alloc]init];
- availableTags = [response tags];
-[self.appDelegateVC updateMessage:availableTags.description];
-}
-}];
- ```
-	{: codeblock}
-
-디바이스가 구독된 태그 목록을 가져오려면 **retrieveSubscriptions** API를 사용하십시오.
-
-
-```
-// Get a list of tags that to which the device is subscribed.
-[push retrieveSubscriptionsWithCompletionHandler:
-^(IMFResponse *response, NSError *error) {
-  if(error){
-     [self updateMessage:error.description];
-   } else {
-     [self updateMessage:@"Successfully retrieved subscriptions."];
- NSDictionary *subscribedTags = [[NSDictionary alloc]init];
-subscribedTags = [response subscriptions];
-[self.appDelegateVC updateMessage:subscribedTags.description];
-}
-}];
-  ```
-	{: codeblock}
 
 ## Swift에서 태그 가져오기
 {: swift-get-tags}
 
-**retrieveAvailableTagsWithCompletionHandler** API는 디바이스가 구독하는 데 사용할 수 있는 모든 태그의 목록을 리턴합니다. 디바이스에서 특정 태그를 구독하면 디바이스가 해당 태그와 관련하여 전송되는 {{site.data.keyword.mobilepushshort}}을 수신할 수 있습니다. 
+**retrieveAvailableTagsWithCompletionHandler** API는 디바이스가 구독하는 데 사용할 수 있는 모든 태그의 목록을 리턴합니다. 디바이스에서 특정 태그를 구독하면 디바이스가 해당 태그와 관련하여 전송되는 {{site.data.keyword.mobilepushshort}}를 수신할 수 있습니다. 
 
-태그를 구독하려면 {{site.data.keyword.mobilepushshort}}을 호출하십시오. 
+태그를 구독하려면 {{site.data.keyword.mobilepushshort}}를 호출하십시오. 
 
 디바이스가 구독된 사용 가능한 태그 목록을 가져오고 디바이스가 구독할 수 있는 사용 가능한 태그 목록을 가져오려면 다음 코드 스니펫을 Swift 모바일 애플리케이션에 복사하십시오. 
 ```
@@ -210,18 +169,18 @@ push.retrieveSubscriptionsWithCompletionHandler { (response, statusCode, error) 
 고객이 구독할 수 있는 사용 가능한 태그 목록을 얻으려면 다음 코드를 사용하십시오. 
 
 ```
-  var bmsPush = new BMSPush();
-  bmsPush.retrieveAvailableTags(function(response) 
-	{
-    alert(response.response)
-    var json = JSON.parse(response.response);
-    var tagsA = []
-    for (i in json.tags)
-	{
-      tagsA.push(json.tags[i].name)
-    }
-    alert(tagsA)
-  })
+var bmsPush = new BMSPush();
+bmsPush.retrieveAvailableTags(function(response)
+{
+  alert(response.response)
+  var json = JSON.parse(response.response);
+  var tagsA = []
+  for (i in json.tags)
+{
+    tagsA.push(json.tags[i].name)
+   }
+   alert(tagsA)
+ })
 ```
 	{: codeblock}
 
@@ -232,29 +191,29 @@ push.retrieveSubscriptionsWithCompletionHandler { (response, statusCode, error) 
 고객이 구독할 수 있는 사용 가능한 태그 목록을 얻으려면 다음 코드를 사용하십시오. 
 
 ```
-  var bmsPush = new BMSPush();
-  bmsPush.retrieveAvailableTags(function(response) 
-	{
-    alert(response.response)
-    var json = JSON.parse(response.response);
-    var tagsA = []
-    for (i in json.tags)
-	{
-      tagsA.push(json.tags[i].name)
-    }
-    alert(tagsA)
-  })
+var bmsPush = new BMSPush();
+bmsPush.retrieveAvailableTags(function(response)
+{
+  alert(response.response)
+  var json = JSON.parse(response.response);
+  var tagsA = []
+  for (i in json.tags)
+{
+    tagsA.push(json.tags[i].name)
+   }
+   alert(tagsA)
+ })
 ```
 	{: codeblock}
 
 고객이 구독한 태그 목록을 가져오려면 다음 코드 스니펫을 Google Chrome 앱과 확장 프로그램에 복사하십시오. 
 
 ```
-  var bmsPush = new BMSPush();
-  bmsPush.retrieveSubscriptions(function(response) 
-	{
-    alert(response.response)
-})
+var bmsPush = new BMSPush();
+bmsPush.retrieveSubscriptions(function(response)
+{
+   alert(response.response)
+ })
 ```
 	{: codeblock}
 
@@ -313,50 +272,11 @@ BMSPush.unsubscribe(tag, success, failure);
 ```
 	{: codeblock}
 
-## Objective-C에서 태그 구독 및 구독 해지
-{: objc-subscribe-tags}
-
-다음 코드 스니펫을 복사하여 Objective-C 모바일 애플리케이션에 붙여넣으십시오. 
-
-태그를 구독하려면 **subscribeToTags** API를 사용하십시오.
-
-```
-[push subscribeToTags:tags completionHandler:
-^(IMFResponse *response, NSError *error) {
-  if(error){
-     [self updateMessage:error.description];
-  }else{
-      NSDictionary* subStatus = [[NSDictionary alloc]init];
-      subStatus = [response subscribeStatus];
-      [self updateMessage:@"Parsed subscribe status is:"];
-      [self updateMessage:subStatus.description];
-  }
-}];
-```
-	{: codeblock}
-
-태그 구독을 취소하려면 **unsubscribeFromTags** API를 사용하십시오.
-
-```
-[push unsubscribeFromTags:tags completionHandler:
-^(IMFResponse *response, NSError *error) {
-   if (error){
-       [self updateMessage:error.description];
- } else {
-       NSDictionary* subStatus = [[NSDictionary alloc]init];
-       subStatus = [response unsubscribeStatus];
-       [self updateMessage:subStatus.description];
-  }
-}];
-```
-	{: codeblock}
 
 ## Swift에서 태그 구독 및 구독 해지
 {: swift-subscribe-tags}
 
 다음 코드 스니펫을 복사하여 Swift 모바일 애플리케이션에 붙여넣으십시오. 
-
-**사용 가능한 태그 구독**
 
 태그를 구독하려면 **subscribeToTags** API를 사용하십시오.
 
@@ -372,8 +292,6 @@ push.subscribeToTags(tagsArray: ["MyTag"], completionHandler: { (response, statu
 })
 ```
 	{: codeblock}
-
-**태그 구독 해지**
 
 태그 구독을 취소하려면 **unsubscribeFromTags** API를 사용하십시오.
 
@@ -404,7 +322,7 @@ bmsPush.subscribe(tagsArray,function(response) {
 ```
 	{: codeblock}
 
-태그 구독을 취소하려면 `unSubscribe` 메소드를 사용합니다. 
+태그 구독을 취소하려면 **unSubscribe** 메소드를 사용합니다. 
 
 ```
 var tagsArray = ["tag1", "Tag2"]

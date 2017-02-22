@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015 2016
+  years: 2015，2017
 
-lastupdated: "2016-10-18"
+lastupdated: "2017-01-11"
 
 ---
 
@@ -25,7 +25,7 @@ Puede utilizar la interfaz de usuario y la plataforma de {{site.data.keyword.Blu
 ## Registro
 {: #ee_start}
 
-Para poder empezar a trabajar, debe registrarse para obtener un ID de IBM en [https://console.ng.bluemix.net/](https://console.ng.bluemix.net/). A continuación,
+Para poder empezar a trabajar, debe registrarse para obtener un ID de IBM en [https://console.ng.bluemix.net/![icono de enlace externo](../icons/launch-glyph.svg)](https://console.ng.bluemix.net/){: new_window}. A continuación,
 puede iniciar una sesión en {{site.data.keyword.Bluemix_notm}} e iniciar su prueba
 gratuita de 30 días. {{site.data.keyword.Bluemix_notm}}
 proporciona 2 GB de memoria en tiempo de ejecución y 10 instancias de servicio
@@ -41,7 +41,7 @@ En {{site.data.keyword.Bluemix_notm}}, las apps están asociados a organizacione
 En este caso de ejemplo, va a desarrollar una app web utilizando Node.js. Supongamos que está en EE. UU. y la mayoría de los usuarios de su app también están en los EE. UU. Decide para crear y ejecutar su app cerca de la base de usuarios, para poder beneficiarse de una menor latencia de la red. Tras iniciar sesión en {{site.data.keyword.Bluemix_notm}}, pulse el enlace de preferencias de la cuenta de usuario y, a continuación, seleccione la región **EE.UU. sur**. A continuación, puede llevar a cabo los
 siguientes pasos para crear una app:
 
-  1. Vaya a **Catálogo** 
+  1. Vaya a **Catálogo**
   2. Seleccione **Tiempos de ejecución de Cloud Foundry**.
   3. seleccione **SDK for Node.js**.
   4. Escriba un nombre exclusivo para la app, como por ejemplo NodoPrueba, y pulse **Crear**. El nombre de la app debe ser exclusivo en todo el entorno {{site.data.keyword.Bluemix_notm}}.
@@ -182,7 +182,7 @@ Para utilizar el servicio {{site.data.keyword.cloudant}} dentro de la app, debe 
   <dt>password</dt>
   <dd>b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424</dd>
   <dt>url</dt>
-  <dd>https://d72837bb-b341-4038-9c8e-7f7232916197-bluemix:b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424@d72837bb-b341-4038-9c8e-7f7232916197-bluemix.cloudant.com</dd></dt></dl>
+  <dd>https://d72837bb-b341-4038-9c8e-7f7232916197-bluemix:b6fc4708942b70a88853177ee52a528d07a43fa8575a69abeb8e044a7b0a7424@d72837bb-b341-4038-9c8e-7f7232916197-bluemix.cloudant.com</dd></dl>
 
   Por ejemplo, una app Node.js puede acceder a esta información del siguiente modo:
   ```

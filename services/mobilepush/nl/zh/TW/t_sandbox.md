@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # 沙盤推演及正式作業模式
 {: #push-sandboxandproduction-modes}
-前次更新：2016 年 12 月 6 日
+前次更新：2017 年 1 月 11 日
 {: .last-updated}
 
 您可以透過下列其中一種模式來使用 {{site.data.keyword.mobilepushshort}}：沙盤推演或正式作業。沙盤推演是一種自行包含的測試環境，可開發及測試 Push API 與伺服器應用程式 Push 服務的整合。 
@@ -25,8 +25,7 @@ copyright:
 
 1. 使用 PUT ApplicationID Settings REST API 呼叫
 2. 在 JSON 主體中，使用 [GET ApplicationID Settings REST](https://mobile.{DomainName}/imfpush/){: new_window} API 呼叫來確認已切換模式。預期的回應為 "mode": "PRODUCTION"
-```
-    { 
+```{ 
     "mode": "PRODUCTION"
     }
 ```

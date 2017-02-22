@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated:  "2016-08-03"
+  years: 2016, 2017
+lastupdated:  "2017-01-17"
 
 ---
 
@@ -46,10 +46,10 @@ lastupdated:  "2016-08-03"
 
 使用討論區提問時，請標記您的問題，以及 IBM  {{site.data.keyword.Bluemix_notm}} 開發團隊能看到它。
 
-如果您有使用 {{site.data.keyword.mobilefoundation_short}} 開發或部署應用程式的相關技術問題，請將問題張貼在 [Stack Overflow](http://stackoverflow.com/search?q=ibm-mobilefirst+bluemix){:new_window}，並使用 `bluemix` 和 `ibm-mobilefirst` 來標記您的問題。
+如果您有使用 {{site.data.keyword.mobilefoundation_short}} 開發或部署應用程式的相關技術問題，請將問題張貼在 [Stack Overflow ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://stackoverflow.com/search?q=ibm-mobilefirst+bluemix "外部鏈結圖示"){:new_window}，並使用 `bluemix` 及 `ibm-mobilefirst` 來標記您的問題。
 
-如需服務的相關問題和開始使用的指示，請使用 [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/mobilefirst/?smartspace=bluemix){:new_window} 討論區。請包含 `bluemix` 和 `mobilefirst` 標籤。
+如需服務的相關問題和開始使用的指示，請使用 [IBM developerWorksdW Answers ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/answers/topics/mobilefirst/?smartspace=bluemix "外部鏈結圖示"){:new_window} 討論區。請包含 `bluemix` 和 `mobilefirst` 標籤。
 
-請參閱[取得協助](https://www.{DomainName}/docs/support/index.html#getting-help)以取得使用討論區的詳細資料。
+如需使用討論區的詳細資料，請參閱[取得說明 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.{DomainName}/docs/support/index.html#getting-help "外部鏈結圖示"){: new_window}。
 
-如需開啟 IBM 支援問題單的相關資訊，或支援層次與問題單嚴重性的相關資訊，請參閱[與支援中心聯絡](https://www.{DomainName}/docs/support/index.html#contacting-support)。
+如需開啟 IBM 支援問題單的相關資訊，或支援層次與問題單嚴重性的相關資訊，請參閱[與支援中心聯絡 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.{DomainName}/docs/support/index.html#contacting-support "外部鏈結圖示"){: new_window}。

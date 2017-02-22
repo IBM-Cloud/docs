@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
   
-lastupdated: "2016-08-18"
+lastupdated: "2017-01-11"
 
 ---
 
@@ -46,7 +46,7 @@ El estado de la cuenta de {{site.data.keyword.Bluemix_notm}} pasa a ser inactivo
 
  
 
-Para volver a activar la cuenta, póngase en contacto con el soporte de [{{site.data.keyword.Bluemix_notm}}](http://ibm.biz/bluemixsupport.com){: new_window}. En el correo incluya la siguiente información:
+Para volver a activar la cuenta, póngase en contacto con el [equipo de soporte de {{site.data.keyword.Bluemix_notm}}![icono de enlace externo](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}. En el correo incluya la siguiente información:
 {: tsResolve}
 
   * El ID de IBM que utiliza para iniciar la sesión en {{site.data.keyword.Bluemix_notm}}.

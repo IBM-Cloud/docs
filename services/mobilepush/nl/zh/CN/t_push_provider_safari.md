@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -10,15 +10,36 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# 为 Safari Web 浏览器配置凭证
-{: #configure-credential-for-safari}
-上次更新时间：2016 年 12 月 6 日
+# 配置 Web 浏览器的凭证
+{: #configure-credential-for-browsers}
+上次更新时间：2017 年 1 月 11 日
 {: .last-updated}
 
-IBM {{site.data.keyword.mobilepushshort}} 服务现已扩展了功能，可以向 Safari 浏览器发送通知。请注意，受支持的版本为 Safari 10.0。
+IBM {{site.data.keyword.mobilepushshort}} 服务现已扩展了功能，可以向浏览器发送通知。 
 
-## 生成证书
-  {: #certificate-generation}
+{{site.data.keyword.mobilepushshort}} 服务需要 Web 站点 URL 或 Web 站点的域名来识别需要允许的请求。{{site.data.keyword.mobilepushshort}} 服务实例一次仅支持一个域名。因此，确保针对 Chrome、Firefox 和 Safari 设置相同的值。 
+
+Chrome 和 Safari 浏览器需要针对 Web 推送进行额外的配置。您需要 FCM API 密钥，因为 FCM 端点用于在 Chrome 中传递消息。要获取 FCM API 密钥，请参阅[配置 FCM 的凭证](t_push_provider_android.html)。
+
+
+
+##针对 Chrome 和 Firefox Web 推送进行配置 
+{: #config-chrome-firefox}
+
+1. 在“推送仪表板”面板上，选择**配置**。
+2. 选择 Web 选项卡。![WebPush 配置](images/webpush_configure.jpg)
+3. 配置 FCM/GCM API 密钥和将注册以接收推送通知的 Web 站点的 URL。
+4. 单击**保存**。
+5. 后续步骤：[为 Google Chrome 和 Mozilla Firefox 浏览器启用通知](c_enable_push.html)。
+
+
+## 针对 Safari Web 推送进行配置 
+{: #configure-safari}
+
+在 Safari 上受支持的 {{site.data.keyword.mobilepushshort}} 服务是 10.0。您需要通过 Apple Developer 帐户生成证书，然后才能配置浏览器来接收通知。
+
+### 生成证书
+{: #certificate-generation}
 
 确保您已拥有 Apple Developer 帐户。您需要注册 Web 站点推送标识，并生成证书，以配置您的 Safari 浏览器来接收通知。以下步骤将帮助您开始使用该功能。
 
@@ -36,7 +57,7 @@ IBM {{site.data.keyword.mobilepushshort}} 服务现已扩展了功能，可以�
 11. 在“钥匙串访问”工具中打开证书。右键单击并导出为 p12 证书。记下在生成 p12 证书时提供的密码。
 
 
-## 为通知配置
+### 为通知配置
   {: #configuration-notification}
  
 生成证书之后，您可以配置服务以将通知发送到 Safari。 

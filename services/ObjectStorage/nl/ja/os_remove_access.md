@@ -1,11 +1,11 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
-{:new_window: target="_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -14,16 +14,19 @@ lastupdated: "2016-12-06"
 
 # アクセス権限の削除 
 
-アクセス制御リストを使用してコンテナーまたはオブジェクトに付与されたアクセス権を削除できます。
+アクセス制御リストを使用して、コンテナーまたはオブジェクトのアクセス権限を削除できます。
 {: shortdesc}
 
 読み取り ACL をコンテナーから削除するには、以下のいずれかのコマンドを実行します。
 
-Swift コマンド:
+* Swift コマンド:
 
-  <codeblock>swift post <container_name> --read-acl “”</codeblock>
+```
+  swift post <container_name> --read-acl “”
+  ```
+{: pre}
 
-cURL コマンド:
+* cURL コマンド:
 
 ```
   curl -i <OS_STORAGE_URL> -X POST -H "Content-Length: 0" -H "X-Container-Read: " -H "X-Auth-Token: <OS_AUTH_TOKEN>"
@@ -32,32 +35,32 @@ cURL コマンド:
 
 書き込み ACL をコンテナーから削除するには、以下のいずれかのコマンドを実行します。
 
-    Swift コマンド:
+* Swift コマンド:
 
-    ```
+```
     swift post <container_name> --write-acl “”
     ```
-    {: pre}
+{: pre}
 
-    cURL コマンド:
+* cURL コマンド:
 
-    ```
+```
     curl -i <OS_STORAGE_URL> -X POST -H "Content-Length: 0" -H "X-Container-Write: " -H "X-Auth-Token: <OS_AUTH_TOKEN>"
     ```
-    {: pre}
+{: pre}
 
 ACL が削除されたことを確認するには、以下のいずれかのコマンドを実行します。
 
-    Swift コマンド:
+* Swift コマンド:
 
-    ```
+```
     swift stat <container_name>
     ```
-    {: pre}
+{: pre}
 
-    以下の出力例では、読み取り ACL と書き込み ACL がブランクとして示されています。これは、アクセス権限が削除されたことを意味します。
+* 以下の出力例では、Read ACL と Write ACL の両方がブランクで示されています。これは、該当するアクセス権限が削除されたことを意味します。
 
-    ```
+```
            Account: AUTH_c727d7e248b448f6b268f31a1bd8691e
          Container: Test
            Objects: 1
@@ -72,10 +75,11 @@ ACL が削除されたことを確認するには、以下のいずれかのコ�
         X-Trans-Id: txf04968bc9ef8431982b77-005772e34b
       Content-Type: text/plain; charset=utf-8
   ```
-    {: screen}
+{: screen}
 
-    cURL コマンド:
-    ```
+* cURL コマンド:
+
+```
   curl -i <OS_STORAGE_URL> -I -H "X-Auth-Token: <OS_AUTH_TOKEN>"
   ```
-    {: pre}
+{: pre}

@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
   
-lastupdated: "2016-10-23"
+lastupdated: "2017-01-11"
 
 ---
 
@@ -20,10 +20,7 @@ lastupdated: "2016-10-23"
 {: #accessing}
 
 
-{{site.data.keyword.Bluemix}} 액세스와 관련한
-일반적인 문제점으로는 사용자가 {{site.data.keyword.Bluemix_notm}}에
-로그인할 수 없거나, 계정이 보류 상태로 남아 있는 경우 등이 있습니다. 그러나 대부분의 경우
-몇 가지 간단한 단계를 수행하여 이러한 문제점에서 복구할 수 있습니다. 
+{{site.data.keyword.Bluemix}} 액세스와 관련한 일반적인 문제점으로는 사용자가 {{site.data.keyword.Bluemix_notm}}에 로그인할 수 없거나, 계정이 보류 상태로 남아 있는 경우 등이 있습니다. 그러나 대부분의 경우 몇 가지 간단한 단계를 수행하여 이러한 문제점에서 복구할 수 있습니다.
 {:shortdesc}
 
 ## {{site.data.keyword.Bluemix_notm}}에 로그인할 수 없음
@@ -52,10 +49,10 @@ lastupdated: "2016-10-23"
 {: tsResolve}
 
 계정 설정의 방법에 따라 로그인 옵션 중 일부가 적용될 수 있습니다. 
- * SoftLayer ID가 있는 SoftLayer 사용자는 [고객 포털](https://control.softlayer.com)을 통해 로그인해야 합니다.
- * IBM ID가 있고 연결된 Bluemix 계정이 있거나 없는 SoftLayer 사용자는 [고객 포털](https://control.softlayer.com)을 통해 로그인하여 SoftLayer 고객 포털을 열 수 있거나 [Bluemix 콘솔](https://console.{DomainName})을 통해 인프라 대시보드를 열 수 있습니다. 
+ * SoftLayer ID가 있는 SoftLayer 사용자는 [고객 포털 ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://control.softlayer.com){: new_window}을 통해 로그인해야 합니다. 
+ * IBM ID가 있고 연결된 Bluemix 계정이 있거나 없는 SoftLayer 사용자는 [고객 포털 ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://control.softlayer.com){: new_window}을 통해 로그인하여 SoftLayer 고객 포털을 열거나 [Bluemix 콘솔 ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://console.{DomainName}){: new_window}을 통해 로그인하여 인프라 대시보드를 열 수 있습니다.  
  * 연결된 SoftLayer 계정이 없는 Bluemix 사용자는 Bluemix 콘솔을 통해 로그인해야 합니다.
- * 연결된 SoftLayer 계정이 있는 Bluemix 사용자는 [Bluemix 콘솔](https://console.{DomainName}) 또는 [고객 포털](https://control.softlayer.com)을 통해 로그인할 수 있습니다.
+ * 연결된 SoftLayer 계정이 있는 Bluemix 사용자는 [Bluemix 콘솔![외부 링크 아이콘](../icons/launch-glyph.svg)](https://console.{DomainName}){: new_window} 또는 [고객 포털 ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://control.softlayer.com){: new_window}을 통해 로그인할 수 있습니다. 
  
 
 ## 비밀번호가 올바르지 않음
@@ -154,13 +151,13 @@ nslookup stage1.mybluemix.net
 {{site.data.keyword.Bluemix_notm}} 평가판 계정에 등록하면 {{site.data.keyword.Bluemix_notm}}에 로그인하지 못할 수 있습니다. 대신 다음 메시지가 표시됩니다.
 {: tsSymptoms}
 
-<code>사용자 계정이 보류 중입니다. 사용자 계정의 이메일 확인을 위해 최대 24시간 동안 기다려야 할 수 있습니다. 스팸 폴더도 확인하십시오. 아직 이메일 확인을 받지 못했다면, <a href="http://ibm.biz/bluemixsupport.com" target="_blank">Bluemix Support</a>에 문의하십시오.</code>
+<code>사용자 계정이 보류 중입니다. 사용자 계정의 이메일 확인을 위해 최대 24시간 동안 기다려야 할 수 있습니다. 스팸 폴더도 확인하십시오. 아직 이메일 확인을 받지 못했다면, <a href="http://ibm.biz/bluemixsupport.com" target="_blank">Bluemix 지원 <img src="../icons/launch-glyph.svg" alt="외부 링크 아이콘"></a>에 문의하십시오.</code>
 
 
 {{site.data.keyword.Bluemix_notm}} 평가판 계정에 등록하면 확인 이메일을 받습니다. 확인 이메일에 있는 링크를 클릭하여 등록 프로세스를 완료해야 합니다.
 {: tsCauses} 
 
-확인 이메일이 사용자가 제공한 이메일 주소로 전송됩니다. 받은 편지함과 정크 메일 폴더를 확인하십시오. 확인 이메일을 받지 못한 경우, [{{site.data.keyword.Bluemix_notm}} Support](http://ibm.biz/bluemixsupport.com){: new_window}에 문의하십시오.  
+확인 이메일이 사용자가 제공한 이메일 주소로 전송됩니다. 받은 편지함과 정크 메일 폴더를 확인하십시오. 확인 이메일을 받지 못한 경우 [{{site.data.keyword.Bluemix_notm}} 지원 ![외부 링크 아이콘](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}에 문의하십시오.   
 {: tsResolve}
 
 
@@ -204,7 +201,7 @@ nslookup stage1.mybluemix.net
   
 구성원이 아니라 협업자이기 때문에 사용자를 초대할 수 없는 경우 이전 {{site.data.keyword.Bluemix_notm}} 계정을 삭제한 다음 조직의 구성원으로 참여할 수 있도록 초대를 받아야 합니다. 이전 계정을 삭제하고 구성원으로 계정에 참여하려면 다음 단계를 수행하십시오. 
 
-  1. [{{site.data.keyword.Bluemix_notm}} Support](http://ibm.biz/bluemixsupport){: new_window}에 문의하여 지원 티켓을 열고 계정 삭제를 요청하십시오. 이전 계정과 연관된 데이터가 있어 이 데이터를 저장한 다음 새 계정으로 이동하려면 이메일에 이 정보를 포함시키십시오. 
+  1. [{{site.data.keyword.Bluemix_notm}} 지원 ![외부 링크 아이콘](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window}에 문의하여 지원 티켓을 열고 계정 삭제를 요청하십시오. 이전 계정과 연관된 데이터가 있어 이 데이터를 저장한 다음 새 계정으로 이동하려면 이메일에 이 정보를 포함시키십시오. 
   2. 계정이 삭제되면 조직 관리자 역할을 보유한 사용자가 자신을 조직 관리자로 조직에 초대하도록 하십시오. 그런 다음 초대장을 통해 {{site.data.keyword.Bluemix_notm}}에 등록하십시오. 
 
 
@@ -235,8 +232,7 @@ nslookup stage1.mybluemix.net
 ## {{site.data.keyword.Bluemix_notm}} 페이지를 로드할 수 없음
 {: #ts_err}
 
-{{site.data.keyword.Bluemix_notm}} 콘솔을 사용하는 경우 {{site.data.keyword.Bluemix_notm}} 페이지를
-로드하지 못할 수 있습니다. 대신, BXNUI0001E 또는 BXNUI0016E 오류 메시지가 표시될 수 있습니다.
+{{site.data.keyword.Bluemix_notm}} 콘솔을 사용하는 경우 {{site.data.keyword.Bluemix_notm}} 페이지를 로드하지 못할 수 있습니다. 대신, BXNUI0001E 또는 BXNUI0016E 오류 메시지가 표시될 수 있습니다.
  
 
 {{site.data.keyword.Bluemix_notm}} 콘솔을 사용할 경우 다음과 같은 오류 메시지가 표시될 수 있습니다.
@@ -255,7 +251,7 @@ nslookup stage1.mybluemix.net
   * {{site.data.keyword.Bluemix_notm}}에서 로그아웃한 후 다시 로그인하십시오.
   * 브라우저의 개인용 브라우징 모드를 사용하십시오. 
   * 브라우저의 쿠키와 캐시를 지우십시오.
-  * 다른 브라우저를 사용하십시오. {{site.data.keyword.Bluemix_notm}}에서 지원하는 브라우저 버전에 대한 정보는 [{{site.data.keyword.Bluemix_notm}} Prerequisites](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}를 참조하십시오.
+  * 다른 브라우저를 사용하십시오. {{site.data.keyword.Bluemix_notm}}에서 지원하는 브라우저 버전에 대한 정보는 [{{site.data.keyword.Bluemix_notm}} 전제조건 ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}을 참조하십시오. 
   * cf 명령행 인터페이스를 설치한 경우 `cf apps` 명령을 입력하여 애플리케이션이 실행 중인지 확인하십시오.
   
   

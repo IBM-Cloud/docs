@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -18,6 +18,7 @@ lastupdated: "2016-12-06"
 {: shortdesc}
 
 <table>
+<caption> 표 1. 옵션별 읽기 액세스 권한</caption>
   <tr>
     <th> 권한 </th>
     <th> 읽기 ACL 옵션 </th>
@@ -47,8 +48,6 @@ lastupdated: "2016-12-06"
     <td> <code> &#42;:&#42; </code> </td>
   </tr>
 </table>
-
-표 1: 옵션별 읽기 액세스 권한
 
 
 
@@ -109,7 +108,7 @@ lastupdated: "2016-12-06"
     ```
     {: pre}
 
-    다음 예제에서 읽기 액세스 권한이 부여된 것을 확인할 수 있습니다. 
+    예제: `X-Container-Read` 값은 읽기 액세스 권한이 부여된 사용자 및 컨테이너를 표시합니다. 
 
     ```
     HTTP/1.1 204 No Content

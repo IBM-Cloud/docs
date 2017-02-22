@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-12-01"
+  years: 2015, 2017
+lastupdated: "2017-01-16"
 
 ---
 
@@ -98,7 +98,7 @@ See the following example:
   "version": "0.1",
   "engines": {
      "node": "4.2.4",
-     "npm": "2.11.3"
+     "npm": "3.10.10"
   }
 }
 ```

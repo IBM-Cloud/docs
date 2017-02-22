@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2016
-lastupdated: "2016-09-09"
+  years: 2016, 2017
+lastupdated: "2017-01-04"
  
 
 ---
@@ -139,7 +139,7 @@ packages
 您可以使用 `changes` 資訊來源，配置服務在每次變更 Cloudant 資料庫時發動觸發程式。參數如下所示：
 
 - `dbname`：Cloudant 資料庫的名稱。
-- `maxTriggers`：在達到此限制時停止發動觸發程式。預設值為 1000。您可以將其設定至上限 10,000。如果您嘗試設定超過 10,000 的值，將會拒絕要求。
+- `maxTriggers`：在達到此限制時停止發動觸發程式。預設值為無限。
 
 1. 使用您先前建立的套件連結中的 `changes` 資訊來源，來建立觸發程式。請務必將 `/myNamespace/myCloudant` 取代為套件名稱。
 
@@ -148,14 +148,14 @@ packages
   ```
   {: pre}
   ```
-ok: created trigger feed myCloudantTrigger
+  ok: created trigger feed myCloudantTrigger
   ```
   {: screen}
 
 2. 輪詢啟動。
 
   ```
-wsk activation poll
+  wsk activation poll
   ```
   {: pre}
 
@@ -234,11 +234,10 @@ wsk activation poll
   ```
   {: screen}
 
-### 使用動作序列來處理 Cloudant 資料庫中有關變更事件的文件
+### 使用動作序列及變更觸發程式來處理 Cloudant 資料庫中的文件
 
 您可以在規則中使用動作序列，來提取及處理與 Cloudant 變更事件相關聯的文件。
 
-建立一個將處理 Cloudant 中文件的動作，它會將文件預期為參數。
 以下是可處理文件的動作的範例程式碼：
 ```
 function main(doc){
@@ -246,43 +245,38 @@ function main(doc){
 }
 ```
 {: codeblock}
+
+建立動作來處理 Cloudant 中的文件：
 ```
 wsk action create myAction myAction.js
 ```
 {: pre}
-若要從資料庫中讀取文件，您可以使用 cloudant 套件中的 `read` 動作，在動作序列中，這個動作可以隨附於您的動作 `myAction`。
-請使用 `read` 動作來建立動作序列，然後呼叫將文件預期為輸入的 `myAction` 動作。
+
+若要從資料庫中讀取文件，您可以使用 Cloudant 套件中的 `read` 動作。
+可以使用 `myAction` 來編寫 `read` 動作，以建立動作序列。
 ```
 wsk action create sequenceAction --sequence /myNamespace/myCloudant/read,myAction
 ```
 {: pre}
 
-現在，建立一個規則，用來建立您的觸發程式與新動作 `sequenceAction` 的關聯
+動作 `sequenceAction` 可以用於在新 Cloudant 觸發程式事件上啟動動作的規則。
 ```
 wsk rule create myRule myCloudantTrigger sequenceAction
 ```
 {: pre}
 
-動作序列將需要知道從中提取文件的資料庫名稱。
-請針對 `dbname` 設定觸發程式的參數
-```
-wsk trigger update myCloudantTrigger --param dbname testdb
-```
-{: pre}
-
-**附註** Cloudant 變更觸發程式用來支援參數 `includeDoc`，但不再支援此作業。
-  您需要重建先前使用 `includeDoc` 所建立的觸發程式：
-  請重建觸發程式，但不使用 `includeDoc` 參數。
+**附註** Cloudant `changes` 觸發程式用來支援不再受支援的參數 `includeDoc`。
+  您需要重建先前使用 `includeDoc` 所建立的觸發程式。請遵循下列步驟來重建觸發程式：
   ```
   wsk trigger delete myCloudantTrigger
   wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb
   ```
   {: pre}
-  您可以遵循上述步驟來建立動作序列，以取得文件以及呼叫您的現有動作。
-  然後更新您的規則，以使用新的動作序列。
 
+  上述範例可以用來建立動作序列，以讀取已變更的文件以及呼叫您的現有動作。
+  請記得停用所有可能不再有效的規則，並且使用動作序列型樣來建立新規則。
 
-## 使用警示套件
+## 使用 Alarm 套件
 {: #openwhisk_catalog_alarm}
 
 `/whisk.system/alarms` 套件可以用來依指定的頻率發動觸發程式。這適用於設定循環工作或作業（例如，每個小時呼叫系統備份動作）。
@@ -298,7 +292,7 @@ wsk trigger update myCloudantTrigger --param dbname testdb
 ### 定期發動觸發程式事件
 {: #openwhisk_catalog_alarm_fire}
 
-`/whisk.system/alarms/alarm` 資訊來源會配置「警示」服務依指定的頻率發動觸發程式事件。參數如下所示：
+`/whisk.system/alarms/alarm` 資訊來源會配置 Alarm 服務依指定的頻率發動觸發程式事件。參數如下所示：
 
 - `cron`：根據 UNIX crontab 語法，指出何時發動觸發程式的字串（世界標準時間，UTC）。字串是五個欄位的序列，以空格區隔：`X X X X X`。
 如需使用 cron 語法的詳細資料，請參閱：http://crontab.org。以下是一些以該字串指出的頻率範例：
@@ -310,13 +304,14 @@ wsk trigger update myCloudantTrigger --param dbname testdb
 
 - `trigger_payload`：每次發動觸發程式時，此參數的值都會變成觸發程式的內容。
 
-- `maxTriggers`：在達到此限制時停止發動觸發程式。預設值為 1000。您可以將其設定至上限 10,000。如果您嘗試設定超過 10,000 的值，將會拒絕要求。
+- `maxTriggers`：在達到此限制時停止發動觸發程式。預設值為 1,000,000。您可以將其設定為無限 (-1)。
 
 下列範例說明如何使用觸發程式事件中的 `name` 及 `place` 值來建立每 2 分鐘發動一次的觸發程式。
 
   ```
   wsk trigger create periodic --feed /whisk.system/alarms/alarm --param cron "*/2 * * * *" --param trigger_payload "{\"name\":\"Odin\",\"place\":\"Asgard\"}"
   ```
+  {: pre}
 
 每一個產生的事件都會包含為參數，即 `trigger_payload` 值所指定的內容。在此情況下，每一個觸發程式事件都會有參數 `name=Odin` 及 `place=Asgard`。
 
@@ -394,15 +389,16 @@ wsk trigger update myCloudantTrigger --param dbname testdb
 
 ## 使用 Watson 套件
 {: #openwhisk_catalog_watson}
+
 Watson 套件提供一種簡便的方式來呼叫各種 Watson API。
 
 下列是提供的 Watson 套件：
 
 | 套件 | 說明 |
 | --- | --- |
-| `/whisk.system/watson-translator`   | Watson API 用來翻譯文字及語言識別的動作 |
-| `/whisk.system/watson-textToSpeech` | Watson API 用來將文字轉換成語音的動作 |
-| `/whisk.system/watson-speechToText` | Watson API 用來將語音轉換成文字的動作 |
+| `/whisk.system/watson-translator`   | 文字翻譯及語言識別的套件 |
+| `/whisk.system/watson-textToSpeech` | 將文字轉換為語音的套件 |
+| `/whisk.system/watson-speechToText` | 將語音轉換為文字的套件 |
 
 **附註** 目前已淘汰套件 `/whisk.system/watson`，請移轉至上面所提及的新套件，新的動作提供相同的介面。
 
@@ -414,7 +410,7 @@ Watson 套件提供一種簡便的方式來呼叫各種 Watson API。
 
 | 實體 | 類型 | 參數 | 說明 |
 | --- | --- | --- | --- |
-| `/whisk.system/watson-translator` | 套件 | username、password | Watson API 用來翻譯文字及語言識別的動作  |
+| `/whisk.system/watson-translator` | 套件 | username、password | 文字翻譯及語言識別的套件  |
 | `/whisk.system/watson-translator/translator` | 動作 | payload、translateFrom、translateTo、translateParam、username、password | 翻譯文字 |
 | `/whisk.system/watson-translator/languageId` | 動作 | payload、username、password | 識別語言 |
 
@@ -453,7 +449,6 @@ wsk package refresh
 wsk package list
   ```
   {: pre}
-  
   ```
   packages
   /myBluemixOrg_myBluemixSpace/Bluemix_Watson_Translator_Credentials-1 private
@@ -528,14 +523,14 @@ wsk package list
 ### 使用 Watson Text to Speech 套件
 {: #openwhisk_catalog_watson_texttospeech}
 
-`/whisk.system/watson-textToSpeech` 套件提供一種簡便的方式來呼叫要將文字轉換成語音的 Watson API。
+`/whisk.system/watson-textToSpeech` 套件提供一種簡便的方式來呼叫要將文字轉換為語音的 Watson API。
 
 該套件包含下列動作。
 
 | 實體 | 類型 | 參數 | 說明 |
 | --- | --- | --- | --- |
-| `/whisk.system/watson-textToSpeech` | 套件 | username、password | Watson API 用來將文字轉換成語音的動作 |
-| `/whisk.system/watson-textToSpeech/textToSpeech` | 動作 | payload、voice、accept、encoding、username、password | 將文字轉換成音訊 |
+| `/whisk.system/watson-textToSpeech` | 套件 | username、password | 將文字轉換為語音的套件 |
+| `/whisk.system/watson-textToSpeech/textToSpeech` | 動作 | payload、voice、accept、encoding、username、password | 將文字轉換為音訊 |
 
 **附註**：已淘汰套件 `/whisk.system/watson`（包括動作 `/whisk.system/watson/textToSpeech`）。
 
@@ -591,13 +586,14 @@ wsk package list
   {: pre}
 
 
-#### 將某串文字轉換成語音
+#### 將某串文字轉換為語音
 {: #openwhisk_catalog_watson_speechtotext}
-`/whisk.system/watson-speechToText/textToSpeech` 動作會將某串文字轉換成音訊語音。參數如下所示：
+
+`/whisk.system/watson-speechToText/textToSpeech` 動作會將某串文字轉換為音訊語音。參數如下所示：
 
 - `username`：Watson API 使用者名稱。
 - `password`：Watson API 密碼。
-- `payload`：要轉換成語音的文字。
+- `payload`：要轉換為語音的文字。
 - `voice`：說話者的聲音。
 - `accept`：語音檔的格式。
 - `encoding`：語音二進位資料的編碼。
@@ -616,20 +612,20 @@ wsk package list
   ```
   {: screen}
 
+
 ### 使用 Watson Speech to Text 套件
 {: #openwhisk_catalog_watson_speechtotext}
 
-`/whisk.system/watson-speechToText` 套件提供一種簡便的方式來呼叫要將語音轉換成文字的 Watson API。
+`/whisk.system/watson-speechToText` 套件提供一種簡便的方式來呼叫要將語音轉換為文字的 Watson API。
 
 該套件包含下列動作。
 
 | 實體 | 類型 | 參數 | 說明 |
 | --- | --- | --- | --- |
-| `/whisk.system/watson-speechToText` | 套件 | username、password | Watson API 用來將語音轉換成文字的動作 |
-| `/whisk.system/watson-speechToText/speechToText` | 動作 | payload、content_type、encoding、username、password、continuous、inactivity_timeout、interim_results、keywords、keywords_threshold、max_alternatives、model、timestamps、watson-token、word_alternatives_threshold、word_confidence、X-Watson-Learning-Opt-Out | 將音訊轉換成文字 |
+| `/whisk.system/watson-speechToText` | 套件 | username、password | 將語音轉換為文字的套件 |
+| `/whisk.system/watson-speechToText/speechToText` | 動作 | payload、content_type、encoding、username、password、continuous、inactivity_timeout、interim_results、keywords、keywords_threshold、max_alternatives、model、timestamps、watson-token、word_alternatives_threshold、word_confidence、X-Watson-Learning-Opt-Out | 將音訊轉換為文字 |
 
 **附註**：已淘汰套件 `/whisk.system/watson`（包括動作 `/whisk.system/watson/speechToText`）。
-
 
 #### 在 Bluemix 中設定 Watson Speech to Text 套件
 
@@ -683,14 +679,13 @@ wsk package list
   {: pre}
 
 
+#### 將語音轉換為文字
 
-#### 將語音轉換成文字
-
-`/whisk.system/watson-speechToText/speechToText` 動作會將音訊語音轉換成文字。參數如下所示：
+`/whisk.system/watson-speechToText/speechToText` 動作會將音訊語音轉換為文字。參數如下所示：
 
 - `username`：Watson API 使用者名稱。
 - `password`：Watson API 密碼。
-- `payload`：要轉換成文字的已編碼語音二進位資料。
+- `payload`：要轉換為文字的已編碼語音二進位資料。
 - `content_type`：音訊的 MIME 類型。
 - `encoding`：語音二進位資料的編碼。
 - `continuous`：指出是否傳回代表以長間歇分隔之連續詞組的多個最終結果。
@@ -721,6 +716,128 @@ wsk package list
   {: screen}
  
  
+## 使用 Message Hub 套件
+{: #openwhisk_catalog_message_hub}
+
+此套件可讓您建立觸發程式，以在將訊息張貼至 Bluemix 上的 [Message Hub](https://developer.ibm.com/messaging/message-hub/) 服務實例時做出反應。
+
+### 建立接聽 Message Hub 實例的觸發程式
+{: #openwhisk_catalog_message_hub_trigger}
+若要建立在將訊息張貼至 Message Hub 實例時做出反應的觸發程式，您需要使用名為 `messaging/messageHubFeed` 的資訊來源。此資訊來源支援下列參數：
+
+|名稱|類型|說明|
+|---|---|---|
+|kafka_brokers_sasl|JSON 字串陣列|此參數是在 Message Hub 實例中包含分配管理系統的 `<host>:<port>` 字串陣列|
+|使用者|字串|您的 Message Hub 使用者名稱|
+|password|字串|您的 Message Hub 密碼|
+|topic|字串|您想要觸發程式接聽的主題|
+|kafka_admin_url|URL 字串|Message Hub 管理 REST 介面的 URL|
+|api_key|字串|您的 Message Hub API 金鑰|
+|isJSONData|布林（選用 - 預設=false）|設為 `true` 時，這會導致資訊來源先嘗試將訊息內容剖析為 JSON，然後再將它傳遞為觸發程式有效負載。|
+
+雖然此參數清單看起來令人卻步，但是使用套件重新整理 CLI 指令時會自動進行設定：
+
+1. 在用於 OpenWhisk 的現行組織及空間下，建立 Message Hub 服務實例。
+
+2. 驗證您要接聽的主題已存在於 Message Hub 中，或建立新主題來接聽訊息（例如 `mytopic`）。
+
+2. 重新整理名稱空間中的套件。重新整理會自動建立您所建立之 Message Hub 服務實例的套件連結。
+
+  ```
+wsk package refresh
+  ```
+  {: pre}
+  ```
+  created bindings:
+  Bluemix_Message_Hub_Credentials-1
+  ```
+  {: screen}
+
+  ```
+wsk package list
+  ```
+  {: pre}
+  ```
+  packages
+  /myBluemixOrg_myBluemixSpace/Bluemix_Message_Hub_Credentials-1 private
+  ```
+  {: screen}
+
+  您的套件連結現在包含與 Message Hub 實例相關聯的認證。
+
+3. 您現在只需要建立「觸發程式」，以在將新訊息張貼至 Message Hub 時發動。
+
+  ```
+  wsk trigger create MyMessageHubTrigger -f /myBluemixOrg_myBluemixSpace/Bluemix_Message_Hub_Credentials-1/messageHubFeed -p topic mytopic
+  ```
+  {: pre}
+
+### 在 Bluemix 外部設定 Message Hub 套件
+
+如果您不是在 Bluemix 中使用 OpenWhisk，或者要在 Bluemix 外部設定 Message Hub，則必須手動建立 Message Hub 服務的套件連結。您需要 Message Hub 服務認證及連線資訊。
+
+- 建立針對 Message Hub 服務所配置的套件連結。
+
+  ```
+  wsk trigger create MyMessageHubTrigger -f /whisk.system/messaging/messageHubFeed -p kafka_brokers_sasl "[\"kafka01-prod01.messagehub.services.us-south.bluemix.net:9093\", \"kafka02-prod01.messagehub.services.us-south.bluemix.net:9093\", \"kafka03-prod01.messagehub.services.us-south.bluemix.net:9093\"]" -p topic mytopic -p user <your Message Hub user> -p password <your Message Hub password> -p kafka_admin_url https://kafka-admin-prod01.messagehub.services.us-south.bluemix.net:443 -p api_key <your API key>
+  ```
+  {: pre}
+
+### 接聽 Message Hub 實例的訊息
+{: #openwhisk_catalog_message_hub_listen}
+建立觸發程式之後，系統將會監視傳訊服務中的指定主題。張貼新的訊息時，將會發動觸發程式。
+
+該觸發程式的有效負載將包含 `messages` 欄位，此欄位是自上次發動觸發程式後張貼的訊息陣列。陣列中的每一個訊息物件都會包含下列欄位：
+- topic
+- partition
+- offset
+- key
+- value
+
+在 Kafka 術語中，這些欄位應該十分清楚明瞭。不過，`value` 需要特殊考量。如果 `isJSONData` 參數在建立觸發程式時設為 `false`（或根本未設定），則 `value` 欄位將是所張貼訊息的原始值。不過，如果 `isJSONData` 在建立觸發程式時設為 `true`，則系統會嘗試根據最佳效能來將此值剖析為 JSON 物件。如果剖析成功，則觸發程式有效負載中的 `value` 將是產生的 JSON 物件。
+
+例如，如果張貼 `{"title": "Some string", "amount": 5, "isAwesome": true}` 的訊息時 `isJSONData` 設為 `true`，則觸發程式有效負載可能類似下列內容：
+
+```
+{
+  "messages": [
+      {
+        "partition": 0,
+        "key": null,
+        "offset": 421760,
+        "topic": "mytopic",
+        "value": {
+            "amount": 5,
+            "isAwesome": true,
+            "title": "Some string"
+        }
+      }
+  ]
+}
+```
+
+不過，如果張貼相同的訊息內容時 `isJSONData` 設為 `false`，則觸發程式有效負載會類似下列內容：
+
+```
+{
+  "messages": [
+    {
+      "partition": 0,
+      "key": null,
+      "offset": 421761,
+      "topic": "mytopic",
+      "value": "{\"title\": \"Some string\", \"amount\": 5, \"isAwesome\": true}"
+    }
+  ]
+}
+```
+
+### 分批處理訊息
+您會注意到觸發程式有效負載包含訊息陣列。這表示，如果您正在極快速地產生傳訊系統的訊息，則資訊來源會嘗試將張貼的訊息分批處理為單一發動的觸發程式。這容許將訊息更快速且更有效率地張貼至觸發程式。
+
+請記住，使用程式碼編寫觸發程式所發動的動作時，有效負載中的訊息數目在技術上是無界限的，但一律會大於 0。
+
+
 ## 使用 Slack 套件
 {: #openwhisk_catalog_slack}
 

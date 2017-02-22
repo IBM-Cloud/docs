@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -50,7 +50,6 @@ An {{site.data.keyword.objectstorageshort}} user with an [admin role](/docs/serv
 </table>
 
 
-
 1. Authenticate your credentials. You can use either the credentials that are found in the service credentials tab of the UI or you can generate new credentials. For more information about generating new credentials, see [Generating service credentials](/docs/services/ObjectStorage/os_credentials.html). You receive your {{site.data.keyword.objectstorageshort}} URL and authentication token as an output.
 
     Swift command:
@@ -90,7 +89,6 @@ An {{site.data.keyword.objectstorageshort}} user with an [admin role](/docs/serv
     ```
     {: pre}
     **Note**: Use a comma (,) to separate access control lists.
-
 
 3. Verify the Read ACL value.
 

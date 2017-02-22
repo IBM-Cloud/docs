@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2016
-lastupdated: "2016-09-27"
- 
+  years: 2016, 2017
+lastupdated: "2017-01-04"
+
 
 ---
 
@@ -407,7 +407,6 @@ wsk action create weather weather.js
 ```
 {
   "name": "my-action",
-  "version": "1.0.0",
   "main": "index.js",
   "dependencies" : {
     "left-pad" : "1.1.3"
@@ -429,7 +428,7 @@ exports.main = myAction;
 ```
 {: codeblock}
 
-請注意，動作是透過 `exports.main` 公開；動作處理程式本身可以有任何名稱，只要符合接受物件以及傳回物件的正常簽章（或物件的 `Promise`）。
+請注意，動作是透過 `exports.main` 公開；動作處理程式本身可以有任何名稱，只要符合接受物件以及傳回物件的正常簽章（或物件的 `Promise`）。根據 Node.js 使用慣例，您必須將這個檔案命名為 `index.js`，或是將您喜好的檔名指定為 package.json 中的 `main` 內容。
 
 若要從此套件建立 OpenWhisk 動作，請執行下列動作：
 
@@ -508,7 +507,7 @@ exports.main = myAction;
   ```
   {: pre}
   
-  此動作序列會將數行文字轉換成一個陣列，並排序這些行。
+  此動作序列會將數行文字轉換為一個陣列，並排序這些行。
   
 3. 呼叫動作：
   
@@ -676,11 +675,13 @@ jar cvf hello.jar Hello.class
 您可以從這個 JAR 檔建立稱為 `helloJava` 的 OpenWhisk 動作，如下所示：
 
 ```
-wsk action create helloJava hello.jar
+wsk action create helloJava hello.jar --main Hello
 ```
 {: pre}
 
 當使用指令行及 `.jar` 原始檔時，您不需要指定您是建立 Java 動作；工具會根據副檔名判定。
+
+您需要使用 `--main` 來指定 main 類別的名稱。合格的 main 類別會如上所述實作 static `main` 方法。如果類別不在預設套件中，請使用 Java 完整類別名稱（例如，`--main com.example.MyMain`）。
 
 對於 Java 動作，動作呼叫是相同的，因為其適用於 Swift 及 JavaScript 動作：
 
@@ -695,8 +696,6 @@ wsk action invoke --blocking --result helloJava --param name World
   }
 ```
 {: screen}
-
-**附註：**如果 JAR 檔具有多個類別，其 main 方法符合必要簽章，則 CLI 工具會使用 `jar -tf` 所報告的第一個類別。
 
 
 ## 建立 Docker 動作
@@ -764,10 +763,6 @@ docker login -u janesmith -p janes_password
   {: pre}
   ```
 cd dockerSkeleton
-  ```
-  {: pre}
-  ```
-  chmod +x buildAndPush.sh
   ```
   {: pre}
   ```
@@ -880,3 +875,16 @@ wsk action list
 actions
   ```
   {: screen}
+  
+## 存取動作內文內的動作 meta 資料
+
+動作環境包含執行中動作特有的數個內容。
+這些內容容許透過 REST API 以程式設計方式使用 OpenWhisk 資產的動作，或設定在動作即將使用其分配時間預算時的內部警示。
+使用 OpenWhisk Docker 架構時，可以透過所有支援運行環境的系統環境來存取這些內容：Node.js、Python、Swift、Java 及 Docker 動作。
+
+* `__OW_API_HOST`：執行此動作之 OpenWhisk 部署的 API 主機
+* `__OW_API_KEY`：呼叫動作之主題的 API 金鑰，此金鑰可能是受限 API 金鑰
+* `__OW_NAMESPACE`：*啟動* 的名稱空間（這可能與動作的名稱空間不同）
+* `__OW_ACTION_NAME`：執行中動作的完整名稱
+* `__OW_ACTIVATION_ID`：此執行中動作實例的啟動 ID
+* `__OW_DEADLINE`：此動作已使用其整個期間配額的大約時間（以新紀元毫秒測量）

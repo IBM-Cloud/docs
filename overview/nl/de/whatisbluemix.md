@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-23"
+  years: 2016, 2017
+lastupdated: "2017-01-11"
 ---
 
 {:shortdesc: .shortdesc}
@@ -248,8 +248,8 @@ und die API als privaten Service für Ihre Organisation veröffentlichen.
 Cloud Integration-API wählen Sie die Ressource aus,
 auf die Sie über die Web-API zugreifen möchten, geben die zulässigen Operationen
 an und beziehen die SDKs und Beispiele für den Zugriff auf die API ein. Weitere Informationen zur Erstellung
-einer Cloud Integration-API finden Sie
-unter [Cloud Integration-APIs erstellen](/docs/services/CloudIntegration/index.html#cloudint_add_service).</dd>
+einer Cloud Integration-API finden sie unter
+[Erste Schritte mit Cloud Integration](/docs/services/CloudIntegration/CldInt_GetStart.html).</dd>
 <dt>Privater Service</dt>
     <dd>Ein privater Service besteht aus einer Cloud Integration-API,
 SDKs und Berechtigungsrichtlinien. Der private Service kann außerdem Dokumentation oder andere Elemente des Service-Providers enthalten. Eine Cloud Integration-API kann nur vom Organisationsmanager als privater Service veröffentlicht werden. Wenn Sie die
@@ -301,10 +301,10 @@ Es gibt nur wenige Vorbedingungen für die Verwendung der {{site.data.keyword.Bl
 
 Die folgende Liste enthält die für {{site.data.keyword.Bluemix_notm}} mindestens erforderlichen Browser:
 
- * Chrome: Aktuellste Version für Ihr Betriebssystem
- * Firefox: Aktuellste Version für Ihr Betriebssystem und ESR 38
+ * Chrome: Aktuelle Version für Ihr Betriebssystem
+ * Firefox: Aktuelle Version für Ihr Betriebssystem und ESR 45
  * Internet Explorer: Version 11
- * Safari: Aktuellste Version für Mac
+ * Safari: Aktuelle Version für Mac
 
 ### Cloud Foundry
 {: #cf}
@@ -315,9 +315,9 @@ Cloud Foundry-Befehlszeilenschnittstelle, Version 6.5.1 oder höher
 {: #rellinks}
 ## Allgemein
 {: #general}
-* [Was ist {{site.data.keyword.Bluemix_notm}}](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){:new_window}
-* [Einführung](http://www.ibm.com/cloud-computing/bluemix/getting-started/)
+* [Was ist {{site.data.keyword.Bluemix_notm}} ![Symbol für externen Link](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/what-is-bluemix/){:new_window}
+* [Einführung ![Symbol für externen Link](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/getting-started/){:new_window}
 * [Neuerungen in {{site.data.keyword.Bluemix_notm}}](/docs/whatsnew/index.html)
-* [Informationen zum Hybrid-Modell](http://www.ibm.com/cloud-computing/bluemix/hybrid/)
+* [Informationen zum Hybridmodell ![Symbol für externen Link](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/hybrid/){:new_window}
 * [Konto verwalten](/docs/admin/adminpublic.html#mngacct)
 * [{{site.data.keyword.Bluemix_notm}}-Glossar](/docs/overview/glossary/index.html)

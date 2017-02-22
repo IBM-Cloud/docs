@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2016, 2017
 lastupdated: "2016-10-27"
 
 ---
@@ -22,8 +22,7 @@ Vous pouvez utiliser le SDK serveur de {{site.data.keyword.amashort}} pour prot�
 [Création d'applications à l'aide du SDK pour Node.js](https://console.{DomainName}/docs/runtimes/nodejs/index.html#nodejs_runtime).
 * Le SDK serveur de {{site.data.keyword.amashort}} nécessite que le serveur Node.js soit implémenté avec l'infrastructure `Express`. Notez
 que d'autres infrastructures, telle que LoopBack, utilisent les structures `Express`. Vous pouvez utiliser le SDK serveur de
-{{site.data.keyword.amashort}} avec toutes ces infrastructures. Pour plus d'informations sur l'infrastructure Express,
-voir [Expressjs.com](http://expressjs.com/).
+{{site.data.keyword.amashort}} avec toutes ces infrastructures. Pour plus d'informations sur la structure Express, accédez au site [Expressjs.com ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://expressjs.com/ "Icône de lien externe"){: new_window}.
 
 ## A propos du SDK serveur
 {: #about}
@@ -33,7 +32,7 @@ dans les applications de back end déployées sur IBM {{site.data.keyword.Bluemi
 module npm `bms-mca-token-validation-strategy` fournit la stratégie de passeport `MCABackendStrategy` et la méthode de
 vérification pour valider le jeton d'accès et le jeton d'ID émis par {{site.data.keyword.amashort}}. Ce module fournit aussi automatiquement les informations de surveillance relatives aux événements de sécurité.
 
-Le SDK serveur de {{site.data.keyword.amashort}} utilise l'infrastructure `Passport` pour mettre en oeuvre l'autorisation.  Pour plus d'informations, voir [Passportjs.org](http://passportjs.org/).
+Le SDK serveur de {{site.data.keyword.amashort}} utilise l'infrastructure `Passport` pour mettre en oeuvre l'autorisation.  Pour plus d'informations, accédez au site [Passportjs.org ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://passportjs.org/ "Icône de lien externe"){: new_window}.
 
 ## Installation du SDK serveur
 {: #protecting-resources-serversdk}

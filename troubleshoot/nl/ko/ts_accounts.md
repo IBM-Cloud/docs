@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
   
-lastupdated: "2016-08-18"
+lastupdated: "2017-01-11"
 
 ---
 
@@ -22,8 +22,7 @@ lastupdated: "2016-08-18"
 {: #managingaccounts}
 
 
-계정을 관리할 때 여러 앱이 동일한 도메인 이름을 공유하거나 관리자가 일부 조직을 볼 수 없는 것과 같은 문제점이 발생할 수 있습니다. 그러나 대부분의 경우
-몇 가지 간단한 단계를 수행하여 이러한 문제점에서 복구할 수 있습니다. 
+계정을 관리할 때 여러 앱이 동일한 도메인 이름을 공유하거나 관리자가 일부 조직을 볼 수 없는 것과 같은 문제점이 발생할 수 있습니다. 그러나 대부분의 경우 몇 가지 간단한 단계를 수행하여 이러한 문제점에서 복구할 수 있습니다.
 {:shortdesc}
 
 
@@ -45,7 +44,7 @@ lastupdated: "2016-08-18"
 
  
 
-계정을 다시 활성화하려면 [{{site.data.keyword.Bluemix_notm}} Support](http://ibm.biz/bluemixsupport.com){: new_window}에 문의하십시오. 이메일에 다음 정보를 포함해야 합니다.
+계정을 다시 활성화하려면 [{{site.data.keyword.Bluemix_notm}} 지원 ![외부 링크 아이콘](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}에 문의하십시오. 이메일에 다음 정보를 포함해야 합니다.
 {: tsResolve}
 
   * {{site.data.keyword.Bluemix_notm}}에 로그인하는 데 사용하는 IBM ID입니다.
@@ -56,8 +55,7 @@ lastupdated: "2016-08-18"
 ## 현재 조직과 연관된 영역이 없음
 {: #ts_no_space}
 
-영역이 현재 조직과 연관되어 있지 않은 경우
-애플리케이션을 작성할 수 없습니다.
+영역이 현재 조직과 연관되어 있지 않은 경우 애플리케이션을 작성할 수 없습니다.
 
 
 
@@ -86,8 +84,7 @@ lastupdated: "2016-08-18"
 ## 앱이 동일한 도메인 이름을 공유함
 {: #ts_domain_diff}
 
-{{site.data.keyword.Bluemix_notm}}에서
-여러 애플리케이션이 동일한 URL을 공유할 수 있습니다.
+{{site.data.keyword.Bluemix_notm}}에서 여러 애플리케이션이 동일한 URL을 공유할 수 있습니다.
 
  
 

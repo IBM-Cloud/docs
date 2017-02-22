@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2016
-lastupdated: "2016-09-27"
- 
+  years: 2016, 2017
+lastupdated: "2017-01-04"
+
 
 ---
 
@@ -411,7 +411,6 @@ lastupdated: "2016-09-27"
 ```
 {
   "name": "my-action",
-  "version": "1.0.0",
   "main": "index.js",
   "dependencies" : {
     "left-pad" : "1.1.3"
@@ -433,7 +432,7 @@ exports.main = myAction;
 ```
 {: codeblock}
 
-なお、アクションは `exports.main` を介して公開されます。アクション・ハンドラー自体の名前は、オブジェクトを受け入れ、オブジェクトを返す通常のシグニチャー (オブジェクトの `Promise`) に準拠している限り、任意のものにすることができます。
+なお、アクションは `exports.main` を介して公開されます。アクション・ハンドラー自体の名前は、オブジェクトを受け入れ、オブジェクトを返す通常のシグニチャー (オブジェクトの `Promise`) に準拠している限り、任意のものにすることができます。Node.js 規則により、このファイルの名前は `index.js` にするか、または、package.json 内の `main` プロパティーとして任意のファイル名を指定する必要があります。
 
 このパッケージから OpenWhisk アクションを作成するには、以下のようにします。
 
@@ -682,11 +681,13 @@ jar cvf hello.jar Hello.class
 以下に示すように、この JAR ファイルから `helloJava` という OpenWhisk アクションを作成できます。
 
 ```
-wsk action create helloJava hello.jar
+wsk action create helloJava hello.jar --main Hello
 ```
 {: pre}
 
 コマンド・ラインと `.jar` ソース・ファイルを使用する場合、Java アクションを作成していることを指定する必要はありません。ツールは、ファイル拡張子からそのことを判別します。
+
+`--main` を使用して、メイン・クラスの名前を指定する必要があります。適格なメイン・クラスは、上で説明されているように静的 `main` メソッドを実装するクラスです。クラスがデフォルト・パッケージ内にない場合は、完全修飾 Java クラス名を使用してください (例: `--main com.example.MyMain`)。
 
 Java アクションのアクション呼び出しは、Swift アクションおよび JavaScript アクションの場合と同じです。
 
@@ -701,8 +702,6 @@ wsk action invoke --blocking --result helloJava --param name World
   }
 ```
 {: screen}
-
-**注:** JAR ファイルに、必要なシグニチャーに一致する main メソッドを持つクラスが複数ある場合、CLI ツールは、`jar -tf` によって報告された最初のクラスを使用します。
 
 
 ## Docker アクションの作成
@@ -770,10 +769,6 @@ Docker スケルトンが現在のディレクトリーにインストールさ�
   {: pre}
   ```
   cd dockerSkeleton
-  ```
-  {: pre}
-  ```
-  chmod +x buildAndPush.sh
   ```
   {: pre}
   ```
@@ -885,3 +880,17 @@ Docker スケルトンが現在のディレクトリーにインストールさ�
   actions
   ```
   {: screen}
+  
+## アクション・ボディー内のアクション・メタデータへのアクセス
+
+アクション環境は、実行中のアクションに固有のいくつかのプロパティーを含んでいます。
+これらによって、アクションは REST API を介して OpenWhisk アセットをプログラマチックに処理したり、
+アクションに割り当てられた時間を使い切ってしまいそうなときに内部アラームを設定したりできます。
+OpenWhisk Docker スケルトンを使用している場合、すべてのサポートされるランタイム (Node.js、Python、Swift、Java、および Docker アクション) で、以下のシステム環境変数を介してこれらのプロパティーにアクセスできます。
+
+* `__OW_API_HOST` このアクションを実行している OpenWhisk デプロイメントの API ホスト
+* `__OW_API_KEY` アクションを起動するサブジェクトの API キー (制限付き API キーである場合もあります)
+* `__OW_NAMESPACE` *アクティベーション* の名前空間 (アクションの名前空間と同じでないこともあります)
+* `__OW_ACTION_NAME` 実行しているアクションの完全修飾名
+* `__OW_ACTIVATION_ID` 実行しているアクション・インスタンスのアクティベーション ID
+* `__OW_DEADLINE` このアクションに割り当てられた期間全体をアクションが使い切ると推定されるおよその時刻 (エポック・ミリ秒で測定されます)

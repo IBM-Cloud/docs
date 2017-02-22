@@ -1,16 +1,16 @@
 ---
 
- 
+
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015，2017
 
-lastupdated: "2016-04-18" 
+lastupdated: "2016-04-18"
 
 ---
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
 # Creazione di applicazioni Cloud Foundry
@@ -79,6 +79,7 @@ o eliminata. Per la persistenza, usa uno dei servizi di archivio dati {{site.dat
 <dd>Tieni presente i limiti sulle quantità di risorse che un account di prova
 può utilizzare. I limiti sono i seguenti:
 <table style="width:100%">
+<caption>Tabella 1. Limiti delle risorse {{site.data.keyword.Bluemix_notm}} per un account di prova</caption>
   <th>Tipo di risorsa</th>	<th>Quantità limite</th>
 <tr><td>Numero di servizi utilizzati in tutte le applicazioni</td> <td>10</td>
 <tr><td>Memoria utilizzata in tutte le applicazioni</td> <td>	2 G</td>

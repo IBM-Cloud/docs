@@ -1,16 +1,16 @@
 ---
 
- 
+
 
 copyright:
 
-  2015，2016
+  years: 2015，2017
 
-lastupdated: "2016-05-09" 
+lastupdated: "2016-05-09"
 
 ---
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -104,8 +104,9 @@ dynamique. Le processus d'installation doit être scripté et fiable, et les don
 
   Au minimum, capturez votre installation d'application sous forme d'ensemble uniforme de scripts indépendants du système d'exploitation. Veillez à ce que l'installation d'application reste petite et portable pour qu'elle puisse s'adapter à différentes techniques d'automatisation. De plus, limitez les dépendances requises par l'installation d'application.
 
-Pour plus d'informations sur les applications prêtes pour le cloud, voir [The
-Twelve-Factor App](http://12factor.net/){:new_window}.
+Pour plus d'informations sur les applications prêtes pour le cloud, voir
+[The 12-factor application
+![icône de lien externe](../icons/launch-glyph.svg)](http://12factor.net/){: new_window}.
 
 ##Migration de vos applications
 {: #ht_hostapp}
@@ -114,9 +115,7 @@ Vous pouvez migrer vos applications dans {{site.data.keyword.Bluemix_notm}} de m
 au lieu de les envoyer intégralement dans l'environnement de cloud. Vous pouvez d'abord migrer une partie de votre application, puis vous connecter aux
 données ou au système d'enregistrement qui existent à l'aide du service Cloud Integration.
 
-Dans vos applications en cloud, il peut être nécessaire d'accéder aux données ou aux services de back end, par exemple un système d'enregistrement. Dans {{site.data.keyword.Bluemix_notm}}, vous pouvez utiliser le service Secure Gateway afin d'établir un tunnel
-sécurisé entre une organisation {{site.data.keyword.Bluemix_notm}} et le réseau de back end de l'entreprise. Le service permet aux applications dans {{site.data.keyword.Bluemix_notm}} d'accéder aux données et aux services
-du réseau de back end. Pour des détails, voir [Reaching enterprise backend with Bluemix Secure Gateway via console](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){:new_window}.
+Dans vos applications en cloud, il peut être nécessaire d'accéder aux données ou aux services de back end, par exemple un système d'enregistrement. Dans {{site.data.keyword.Bluemix_notm}}, vous pouvez utiliser le service Secure Gateway afin d'établir un tunnel sécurisé entre une organisation {{site.data.keyword.Bluemix_notm}} et le réseau de back end de l'entreprise. Le service permet aux applications dans {{site.data.keyword.Bluemix_notm}} d'accéder aux données et aux services du réseau de back end. Pour plus de détails, voir [Reaching enterprise backend with Bluemix Secure Gateway via console ![icône de lien externe](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window}.
 
 Pour déployer votre application dans {{site.data.keyword.Bluemix_notm}} en tant qu'application Cloud Foundry,
 sélectionnez un contexte d'exécution dans le catalogue {{site.data.keyword.Bluemix_notm}}. Le contexte d'exécution contient une application Hello
@@ -134,6 +133,7 @@ Vous pouvez utiliser les outils et les services suivants mis à disposition par
 |intégration Git	|Gérez votre code sur GitHub et intégrez Git dans {{site.data.keyword.Bluemix_notm}}. Vous pouvez collaborer avec d'autres développeurs. Votre application est déployée dans {{site.data.keyword.Bluemix_notm}} automatiquement lorsque vous validez les modifications dans le code. Il n'est pas nécessaire d'envoyer manuellement l'application par commande push.|
 |{{site.data.keyword.Bluemix_notm}} DevOps Delivery Pipeline	|Gérez votre code dans le référentiel DevOps GitHub et déployez votre application dans {{site.data.keyword.Bluemix_notm}} à l'aide de DevOps Delivery Pipeline.|
 {: caption="Table 1. {{site.data.keyword.Bluemix_notm}} - outils" caption-side="top"}
+
 
 Si la plateforme Cloud Foundry ne prend pas en charge les exigences relatives à votre application, vous pouvez utiliser un conteneur ou une machine
 virtuelle où le contexte d'exécution est défini, configuré et géré avec des options personnalisées supplémentaires.
@@ -231,7 +231,7 @@ services = JSON.parse(ENV['VCAP_SERVICES'], :symbolize_names => true)
             end
           end
         end.flatten!.first
-```		
+```
 {:codeblock}
 
 Pour garantir l'exécution de votre application dans un environnement local après sa modification pour
@@ -250,5 +250,5 @@ Foundry.
 * [Virtual Machines](/docs/virtualmachines/vm_index.html)
 * [Initiation à Delivery Pipeline](/docs/services/DeliveryPipeline/index.html)
 * [Déploiement d'applications avec IBM Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html)
-* [The Twelve-Factor App](http://12factor.net/){:new_window}
-* [Reaching enterprise backend with Bluemix Secure Gateway via console](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){:new_window}
+* [The twelve-factor app ![icône de lien externe](../icons/launch-glyph.svg)](http://12factor.net/){: new_window}
+* [Reaching enterprise backend with Bluemix Secure Gateway via console ![icône de lien externe](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window}

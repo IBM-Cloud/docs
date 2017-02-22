@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-04-28"
+  years: 2016, 2017
+lastupdated: "2017-2-16"
 
 
  
@@ -42,4 +42,4 @@ You can also review these statistics:
 
 To review all of the work items by state, see the All Work view.
 
-For more information about planning work, [see Managing a project with Quick Planner](http://www.ibm.com/support/knowledgecenter/SSYMRC_6.0.1/com.ibm.team.concert.tutorial.doc/topics/tut_quick_planner_lesson.html).
+For more information about planning work, [see Managing a project with Quick Planner![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/support/knowledgecenter/SSYMRC_6.0.1/com.ibm.team.concert.tutorial.doc/topics/tut_quick_planner_lesson.html){:new_window}.

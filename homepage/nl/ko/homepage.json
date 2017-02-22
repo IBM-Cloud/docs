@@ -16,10 +16,10 @@
 				"name": "IBM Bluemix OpenWhisk",
 				"href": "openwhisk/index.html"
 			}, {
-				"name": "Containers",
+				"name": "컨테이너",
 				"href": "containers/container_index.html"
 			}, {
-				"name": "Virtual Servers",
+				"name": "가상 서버",
 				"href": "virtualmachines/vm_index.html"
 			}]
 		}, {
@@ -27,16 +27,16 @@
 			"img": "homepage/images/network.svg",
 			"href": "services/network.html",
 			"links": [{
-				"name": "블록체인",
+				"name": "Blockchain",
 				"href": "services/blockchain/index.html"
 			}, {
-				"name": "CDN(Content Delivery Network)",
+				"name": "Content Delivery Network(CDN)",
 				"href": "services/cdn/index.html"
 			}, {
 				"name": "Network Security Groups",
 				"href": "services/networksecuritygroups/index.html"
 			}, {
-				"name": "VPN(Virtual Private Network)",
+				"name": "Virtual Private Network(VPN)",
 				"href": "services/vpn/index.html"
 			}]
 		}, {
@@ -51,7 +51,7 @@
 				"href": "services/ObjectStorage/index.html"
 			}]
 		}, {
-			"title": "Data & Analytics",
+			"title": "데이터 및 분석",
 			"img": "homepage/images/data.svg",
 			"href": "services/data_analytics.html",
 			"links": [{
@@ -244,7 +244,7 @@
 			"img": "homepage/images/mobile.svg",
 			"href": "services/mobile.html",
 			"links": [{
-				"name": "Bluemix 모바일 서비스 시도",
+				"name": "Bluemix 모바일 서비스 사용해 보기",
 				"href": "mobile/index.html"
 			},{
 				"name": "Mobile Application Content Manager",
@@ -270,7 +270,7 @@
 			"img": "homepage/images/iot.svg",
 			"href": "services/internetofthings.html",
 			"links": [{
-				"name": "Internet of Things 플랫폼",
+				"name": "Internet of Things Platform",
 				"href": "services/IoT/index.html"
 			}, {
 				"name": "IoT Real-Time Insights",
@@ -312,7 +312,7 @@
 			"img": "homepage/images/DevOpsServices-icon.svg",
 			"href": "https://hub.jazz.net/docs"
 		}, {
-			"title": "CLI 및 개발 도구",
+			"title": "CLI 및 Dev 도구",
 			"img": "homepage/images/CLI-icon.svg",
 			"href": "cli/index.html"
 		}, {

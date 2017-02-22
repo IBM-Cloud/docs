@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-09-27"
+  years: 2016, 2017
+lastupdated: "2017-01-04"
 
 ---
 
@@ -58,8 +58,8 @@ Userai questo schema di denominazione quando utilizzi, ad esempio, la CLI {{site
 
 I nomi di tutte le entità, inclusi azioni, trigger, regole, pacchetti e spazi dei nomi, sono una sequenza di caratteri aventi il seguente formato:
 
-* Il primo carattere deve essere un carattere alfanumerico, una cifra o un carattere di sottolineatura.
-* I caratteri successivi possono essere alfanumerici, cifre, spazi o i seguenti: `_`, `@`, `.`, `-`.
+* Il primo carattere deve essere un carattere alfanumerico o un carattere di sottolineatura.
+* I caratteri successivi possono essere alfanumerici, spazi o i seguenti: `_`, `@`, `.`, `-`.
 * L'ultimo carattere non può essere uno spazio.
 
 Più precisamente, un nome deve corrispondere alla seguente espressione regolare (indicata utilizzando la sintassi metacharacter Java): `\A([\w]|[\w][\w@ .-]*[\w@.-]+)\z`.
@@ -174,7 +174,7 @@ function main(params) {
   } else if (params.payload == 1) {
      return {payload: 'Hello, World!'};
   } else if (params.payload == 2) {
-    return whisk.error();   // indica un completamento anomalo
+    return {error: 'payload must be 0 or 1'};
   }
 }
 ```
@@ -231,56 +231,12 @@ function main(args) {
 
 Nota che, indipendentemente dal fatto che un attivazione sia sincrona o asincrona, il richiamo dell'azione può essere bloccante o non bloccante.
 
-### Ulteriori metodi SDK
+### Oggetto whisk globale JavaScript obsoleto
 
-La funzione `whisk.invoke()` richiama un'altra azione e restituisce una Promessa per l'attivazione risultante. Essa prende come argomento un dizionario che definisce i seguenti parametri:
-
-- *name*: il nome completo dell'azione da richiamare,
-- *parameters*: un oggetto JSON che rappresenta l'input dell'azione richiamata. Se omesso, il valore predefinito è un oggetto vuoto.
-- *apiKey*: la chiave di autorizzazione con cui richiamare l'azione. Il valore predefinito è `whisk.getAuthKey()`.
-- *blocking*: indica se l'azione deve essere richiamata in modalità bloccante o non bloccante. Quando `blocking` è true, la chiamata attenderà il risultato dell'azione richiamata prima di risolvere la Promessa restituita. Il valore predefinito è `false`, che indica una chiamata non bloccante.
-
-`whisk.invoke()` restituisce una Promessa. Affinché il sistema OpenWhisk attenda il termine della chiamata, è necessario che questa Promessa venga restituita dalla funzione `main` della tua azione.
-- Se la chiamata non riesce, la promessa verrà rifiutata con un oggetto che descrive la chiamata non riuscita. Contiene potenzialmente due campi:
-  - *error*: un oggetto che descrive l'errore, in genere una stringa.
-  - *activation*: un dizionario facoltativo che può essere presente o meno a seconda della natura dell'errore della chiamata. Se presente, comprenderà i seguenti campi:
-    - *activationId*: l'ID attivazione:
-    - *result*: se l'azione è stata richiamata in modalità bloccante, il risultato dell'azione è un oggetto JSON, altrimenti è `undefined`.
-- Se la chiamata ha esito positivo, la promessa restituirà un dizionario che descrive l'attivazione con i campi *activationId* e *result* descritti in precedenza.
-
-Di seguito è riportato un esempio di chiamata bloccante che utilizza la promessa restituita:
-```javascript
-return whisk.invoke({
-  name: 'myAction',
-  blocking: true
-})
-.then(function (activation) {
-    // activation completed successfully, activation contains the result
-    console.log('Activation ' + activation.activationId + ' completed successfully and here is the result ' + activation.result);
-})
-.catch(function (reason) {
-    console.log('An error has occured ' + reason.error);
-
-    if(reason.activation) {
-      console.log('Please check activation ' + reason.activation.activationId + ' for details.');
-    } else {
-      console.log('Failed to create activation.');
-    }
-});
-```
-{: codeblock}
-
-La funzione `whisk.trigger()` attiva un trigger e restituisce una Promessa per l'attivazione risultante. Prende come argomento un oggetto JSON con i seguenti parametri:
-
-- *name*: il nome completo del trigger da richiamare.
-- *parameters*: un oggetto JSON che rappresenta l'input del trigger. Se omesso, il valore predefinito è un oggetto vuoto.
-- *apiKey*: la chiave di autorizzazione con cui attivare il trigger. Il valore predefinito è `whisk.getAuthKey()`.
-
-`whisk.trigger()` restituisce una Promessa. Se desideri che OpenWhisk attenda il completamento del trigger, è necessario che questa Promessa venga restituita dalla funzione `main` della tua azione.
-- Se il trigger non riesce, la promessa verrà rifiutata con un oggetto che descrive l'errore.
-- Se il trigger ha esito positivo, la promessa restituirà un dizionario con un campo `activationId` contenente l'ID attivazione.
-
-La funzione `whisk.getAuthKey()` restituisce la chiave di autorizzazione con cui viene eseguita l'azione. Di solito, non è necessario richiamare direttamente questa funzione in quanto è utilizzata implicitamente dalle funzioni `whisk.invoke()` e `whisk.trigger()`.
+L'oggetto globale `whisk` è al momento obsoleto; migra le tue azioni nodejs per utilizzare metodi alternativi.
+Per le funzioni `whisk.invoke()` e `whisk.trigger()` puoi utilizzare la libreria client [openwhisk](https://www.npmjs.com/package/openwhisk).
+Per `whisk.getAuthKey()` puoi ottenere il valore della chiave API dalla variabile di ambiente `__OW_API_KEY`.
+Per `whisk.error()` puoi restituire un rejected Promise (ad esempio Promise.reject).
 
 ### Ambienti di runtime JavaScript
 {: #openwhisk_ref_javascript_environments}
@@ -312,6 +268,7 @@ I seguenti pacchetti sono utilizzabili nell'ambiente Node.js 6.9.1:
 - node-uuid v1.4.7
 - nodemailer v2.6.4
 - oauth2-server v2.4.1
+- openwhisk v3.0.0
 - pkgcloud v1.4.0
 - process v0.11.9
 - pug v2.0.0-beta6
@@ -363,6 +320,7 @@ I seguenti pacchetti sono utilizzabili nell'ambiente  Node.js 0.12.17:
 - nano v5.10.0
 - node-uuid v1.4.2
 - oauth2-server v2.4.0
+- openwhisk v3.0.0
 - process v0.11.0
 - request v2.79.0
 - rimraf v2.5.1
@@ -445,7 +403,7 @@ Gli endpoint di raccolta sono:
 - `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/packages`
 - `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/activations`
 
-``openwhisk.``<span class="keyword" data-hd-keyref="DomainName">DomainName</span>` è il nome host dell'API OpenWhisk (ad esempio, openwhisk.ng.bluemix.net, 172.17.0.1 e così via).
+`openwhisk.`<span class="keyword" data-hd-keyref="DomainName">DomainName</span>` è il nome host dell'API OpenWhisk (ad esempio, openwhisk.ng.bluemix.net, 172.17.0.1 e così via).
 
 Per `{namespace}`, il carattere `_` può essere utilizzato per specificare lo *spazio dei nomi
 predefinito* dell'utente (ovvero, l'indirizzo di posta elettronica).
@@ -500,7 +458,9 @@ L'API OpenWhisk supporta chiamate di richiesta-risposta dai client web. OpenWhis
 {: #openwhisk_syslimits}
 
 ### Azioni
-{{site.data.keyword.openwhisk_short}} ha dei limiti di sistema, tra cui la quantità di memoria utilizzata da un'azione e il numero di chiamate di azioni consentite per ciascuna ora. La seguente tabella elenca i limiti predefiniti per le azioni.
+{{site.data.keyword.openwhisk_short}} ha dei limiti di sistema, tra cui la quantità di memoria che un'azione può utilizzare e il numero di chiamate di azioni consentite per ciascun mniuto. 
+
+La seguente tabella elenca i limiti predefiniti per le azioni.
 
 | limite | descrizione | configurabile | unità | valore predefinito |
 | ----- | ----------- | ------------ | -----| ------- |
@@ -571,7 +531,7 @@ L'API OpenWhisk supporta chiamate di richiesta-risposta dai client web. OpenWhis
 
 ### Trigger
 
-I trigger sono soggetti a una frequenza di attivazione al minuto e all'ora come indicato nella seguente tabella.
+I trigger sono soggetti a una frequenza di attivazione al minuto come indicato nella seguente tabella.
 
 | limite | descrizione | configurabile | unità | valore predefinito |
 | ----- | ----------- | ------------ | -----| ------- |

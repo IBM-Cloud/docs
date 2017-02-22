@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2015，20166
+  years: 2015，2017
 
 lastupdated: "2016-03-02"
 
@@ -22,26 +22,26 @@ Sie können ein gehostetes Git-Repository erstellen, das für {{site.data.keywor
 {:shortdesc}
 
 1. Klicken Sie zu Beginn auf der Übersichtsseite der App auf **Pipeline und Git-Repository hinzufügen** oder klicken Sie in der klassischen {{site.data.keyword.Bluemix_notm}}-Ansicht auf **Git hinzufügen**.
-2. Stellen Sie in dem Fenster, das geöffnet wird, sicher, dass das Kontrollkästchen zum Auffüllen der Repository mit dem Starteranwendungspaket und zum Aktivieren der Build- und Bereitstellungspipeline (Build & Deploy) ausgewählt ist. Das Git-Repository wird erstellt. Wenn Starter-Code verfügbar ist, wird er in das Repository geladen. Die Anwendung wird zudem durch den in {{site.data.keyword.jazzhub}} ausgeführten Service Delivery Pipeline bereitgestellt.  
-3. Zum Aktualisieren Ihrer App können Sie die Befehlszeile oder die Web-IDE verwenden.  
+2. Stellen Sie in dem Fenster, das geöffnet wird, sicher, dass das Kontrollkästchen zum Auffüllen der Repository mit dem Starteranwendungspaket und zum Aktivieren der Build- und Bereitstellungspipeline (Build & Deploy) ausgewählt ist. Das Git-Repository wird erstellt. Wenn Starter-Code verfügbar ist, wird er in das Repository geladen. Die Anwendung wird zudem durch den in {{site.data.keyword.jazzhub}} ausgeführten Service Delivery Pipeline bereitgestellt.
+3. Zum Aktualisieren Ihrer App können Sie die Befehlszeile oder die Web-IDE verwenden.
    **Bei Verwendung der Befehlszeile:**
-   a. Klonen Sie das Git-Repository aus der Git-URL auf der Übersichtsseite der App.  
-   b. Aktualisieren Sie den Code in Ihrem bevorzugten Editor.  
-   c. Übertragen Sie Ihre Änderungen mit Push-Operation über die Git-Befehlszeilenschnittstelle.  
+   a. Klonen Sie das Git-Repository aus der Git-URL auf der Übersichtsseite der App.
+   b. Aktualisieren Sie den Code in Ihrem bevorzugten Editor.
+   c. Übertragen Sie Ihre Änderungen mit Push-Operation über die Git-Befehlszeilenschnittstelle.
 
-   **Bei Verwendung der Web-IDE:**  
-   a. Klicken Sie auf der Übersichtseite der App auf **Code bearbeiten**. Ihr Projekt wird in der Web-IDE geöffnet.  
-   b. Nehmen Sie die gewünschten Änderungen vor und führen Sie dann mithilfe der integrierten Git-Unterstützung eine Push-Operation durch.  
+   **Bei Verwendung der Web-IDE:**
+   a. Klicken Sie auf der Übersichtsseite der App auf **Code bearbeiten**. Ihr Projekt wird in der Web-IDE geöffnet.
+   b. Nehmen Sie die gewünschten Änderungen vor und führen Sie dann mithilfe der integrierten Git-Unterstützung eine Push-Operation durch.
 
-Die aktualisierte App wird erneut in {{site.data.keyword.Bluemix_notm}} bereitgestellt.  
+Die aktualisierte App wird erneut in {{site.data.keyword.Bluemix_notm}} bereitgestellt.
 
-Schrittweise Anweisungen finden Sie in den Informationen zur [Einrichtung der Git-Integration und zur automatischen Bereitstellung in DevOps Services](https://hub.jazz.net/tutorials/jazzeditor/#git_integration_and_autodeployment).  
+Schrittweise Anweisungen finden Sie in den Informationen zur [Einrichtung der Git-Integration und zur automatischen Bereitstellung in DevOps Services![Symbol für externen Link](../icons/launch-glyph.svg)](https://hub.jazz.net/tutorials/jazzeditor/#git_integration_and_autodeployment){: new_window}.
 
-## Haben Sie Git hinzugefügt? Testen Sie {{site.data.keyword.Bluemix_notm}} Live Sync!  
+## Haben Sie Git hinzugefügt? Testen Sie {{site.data.keyword.Bluemix_notm}} Live Sync!
 
-Wenn Sie eine Node.js-App erstellen, können Sie mit {{site.data.keyword.Bluemix_notm}} Live Sync die App-Instanz in {{site.data.keyword.Bluemix_notm}} schnell aktualisieren und Ihren Anforderungen entsprechend wie auf dem Desktop entwickeln.  
+Wenn Sie eine Node.js-App erstellen, können Sie mit {{site.data.keyword.Bluemix_notm}} Live Sync die App-Instanz in {{site.data.keyword.Bluemix_notm}} schnell aktualisieren und Ihren Anforderungen entsprechend wie auf dem Desktop entwickeln.
 
-Weitere Informationen zu {{site.data.keyword.Bluemix_notm}} Live Sync finden Sie unter [{{site.data.keyword.Bluemix_notm}} Live Sync](/docs/develop/bluemixlive.html). Weitere Details zu den Befehlen finden Sie in der [Dokumentation zur {{site.data.keyword.Bluemix_notm}} Live Sync-Befehlszeilenschnittstelle (CLI)](/docs/cli/reference/bl/index.html). Informationen zur Verwendung von {{site.data.keyword.Bluemix_notm}} Live Sync mit der Web-IDE finden Sie unter [Live Edit](/docs/develop/bluemixlive.html).  
+Weitere Informationen zu {{site.data.keyword.Bluemix_notm}} Live Sync finden Sie unter [{{site.data.keyword.Bluemix_notm}} Live Sync](/docs/develop/bluemixlive.html). Weitere Details zu den Befehlen finden Sie in der [Dokumentation zur {{site.data.keyword.Bluemix_notm}} Live Sync-Befehlszeilenschnittstelle (CLI)](/docs/cli/reference/bl/index.html). Informationen zur Verwendung von {{site.data.keyword.Bluemix_notm}} Live Sync mit der Web-IDE finden Sie unter [Live Edit](/docs/develop/bluemixlive.html).
 
 Laden Sie zunächst die Befehlszeile 'bl' für {{site.data.keyword.Bluemix_notm}} Live Sync herunter und installieren Sie sie.
 
@@ -74,7 +74,7 @@ Dieser Befehl (und die Synchronisation) wird solange ausgeführt, bis Sie ein "q
 4. Stellen Sie in einem weiteren Befehlszeilenfenster in Ihrem lokalen Verzeichnis die Anwendung für {{site.data.keyword.Bluemix_notm}} im Live Edit-Modus bereit, indem Sie den folgenden Befehl eingeben:
 ```
 bl start
-```  
+```
 
 Wenn Sie die Dateien in Ihrem lokalen Verzeichnis ändern, werden die Änderungen automatisch in der aktiven Anwendung in {{site.data.keyword.Bluemix_notm}} und im Cloud-Arbeitsbereich des Projekts bereitgestellt. Wenn Sie die Node-Anwendung erneut starten müssen, können Sie den folgenden Befehl verwenden:
 ```

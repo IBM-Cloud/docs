@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -18,6 +18,7 @@ lastupdated: "2016-12-06"
 {: shortdesc}
 
 <table>
+<caption> 表 1. 依選項列出的讀取權</caption>
   <tr>
     <th> 許可權</th>
     <th> 讀取 ACL 選項</th>
@@ -47,8 +48,6 @@ lastupdated: "2016-12-06"
     <td> <code> &#42;:&#42; </code> </td>
   </tr>
 </table>
-
-表 1：依選項列出的讀取權
 
 
 
@@ -108,7 +107,7 @@ lastupdated: "2016-12-06"
     ```
     {: pre}
 
-    在下列範例中，您可以看到已授與讀取權：
+    範例：`X-Container-Read` 值顯示已將讀取權授與哪個容器及哪個人。
 
     ```
     HTTP/1.1 204 No Content

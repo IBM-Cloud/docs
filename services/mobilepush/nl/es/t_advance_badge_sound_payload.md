@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -11,7 +11,7 @@ copyright:
 {:codeblock:.codeblock}
 
 #Habilitación de notificaciones push avanzadas
-Última actualización: 06 de diciembre de 2016
+Última actualización: 11 de enero de 2017
 {: .last-updated}
 
 Configure un identificador de iOS, un sonido, una carga útil de JSON adicional, notificaciones accionables y notificaciones retenidas.
@@ -81,24 +81,8 @@ A diferencia de las {{site.data.keyword.mobilepushshort}} convencionales, estas 
 Siga estos pasos para habilitar las {{site.data.keyword.mobilepushshort}} accionables en la aplicación.
 
 1. Cree una acción de respuesta del usuario.
-
-   Objective-C
-
 ```
-	// For Objective-C
-	UIMutableUserNotificationAction *acceptAction = [[UIMutableUserNotificationAction alloc] init];
-	    acceptAction.identifier = @"ACCEPT_ACTION";
-	    acceptAction.title = @"Accept";
-	     /* Optional properties
-	     acceptAction.destructive = NO;
-	  acceptAction.authenticationRequired = NO; */
-```
-	{: codeblock}
-
-   Swift
-
-```
-	//For Swift
+//For Swift
 	let acceptAction = UIMutableUserNotificationAction()
 	acceptAction.identifier = "ACCEPT_ACTION"
 	acceptAction.title = "Accept"
@@ -107,9 +91,8 @@ Siga estos pasos para habilitar las {{site.data.keyword.mobilepushshort}} accion
 	acceptAction.activationMode = UIUserNotificationActivationMode.Foreground
 ```
 	{: codeblock}
-	
 ```
-	//For Swift
+//For Swift
 	let declineAction = UIMutableUserNotificationAction()
 	declineAction.identifier = "DECLINE_ACTION"
 	declineAction.title = "Decline"
@@ -120,21 +103,8 @@ Siga estos pasos para habilitar las {{site.data.keyword.mobilepushshort}} accion
 	{: codeblock}
 
 2. Cree la categoría de notificaciones y configure una acción. **UIUserNotificationActionContextDefault** o **UIUserNotificationActionContextMinimal** son contextos válidos.
-
-Objective-C
-
 ```
-	// For Objective-C
-	UIMutableUserNotificationCategory *callCat = [[UIMutableUserNotificationCategory alloc] init];
-	    callCat.identifier = @"POLL_CATEGORY";
-	    [callCat setActions:@[acceptAction, declineAction] forContext:UIUserNotificationActionContextDefault];
-```    
-	{: codeblock}
-
-Swift
-
-```
-	// For Swift
+// For Swift
 	let pushCategory = UIMutableUserNotificationCategory()
 	pushCategory.identifier = "TODO_CATEGORY"
 	pushCategory.setActions([acceptAction, declineAction], forContext: UIUserNotificationActionContext.Default)
@@ -142,38 +112,15 @@ Swift
 	{: codeblock}
 
 1. Cree el valor de notificación y asigne las categorías del paso anterior.
-
-Objective-C
-
 ```
-	// For Objective-C
-	NSSet *categories = [NSSet setWithObjects:callCat, nil];
-```
-	{: codeblock}
-
-Swift
-
-```
-	// For Swift
+// For Swift
 	let categories = NSSet(array:[pushCategory]);
 ```
 	{: codeblock}
 
 1. Cree una notificación remota o local y asígnele la identidad de la categoría.
-
-Objective-C
-
 ```
-	//Para Objective-C
-	[[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:categories]];
-	[[UIApplication sharedApplication] registerForRemoteNotifications];
-```
-	{: codeblock}
-
-Swift
-
-```
-	//For Swift
+//For Swift
 	let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: categories as? Set<UIUserNotificationCategory>)
     UIApplication.sharedApplication().registerUserNotificationSettings(settings)
     UIApplication.sharedApplication().registerForRemoteNotifications() 
@@ -185,20 +132,6 @@ Swift
 
 Al recibir una notificación que necesita reacciones, el control se pasa al siguiente método según el identificador seleccionado.
 
-Objective-C
-
-```
-(void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forRemoteNotification:
-(UILocalNotification *)notification completionHandler:(void (^)())completionHandler
-{
-  NSLog(@"actionable notification received.");
-  //must call completion handler when finished
-  completionHandler();
-}
-```
-	{: codeblock}
-
-Swift
  
 ```
 func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], completionHandler: () -> Void) {

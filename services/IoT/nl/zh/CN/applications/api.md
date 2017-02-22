@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-07"
+  years: 2015, 2017
+lastupdated: "2017-02-16"
 
 ---
 
@@ -38,9 +38,9 @@ lastupdated: "2016-09-07"
 ## 访问 HTTP REST API
 {: #api_link}
 
-要访问 {{site.data.keyword.iot_short_notm}} HTTP REST API 并获取有关如何构建和定制应用程序的更多信息，请转至 https://docs.internetofthings.ibmcloud.com/swagger/v0002.html。
+要访问 {{site.data.keyword.iot_short_notm}} HTTP REST API 并获取有关如何构建和定制应用程序的更多信息，请转至 https://docs.internetofthings.ibmcloud.com/swagger/v0002.html.
 
-{{site.data.keyword.iot_short_notm}} HTTP REST API 的唯一受支持版本是 V2。请确保您的 {{site.data.keyword.iot_short_notm}} 解决方案使用的是 V2。
+{{site.data.keyword.iot_short_notm}} HTTP REST API 的唯一受支持版本是 V2。请确保您的 {{site.data.keyword.iot_short_notm}} 解决方案使用的是 V2.
 
 
 
@@ -97,4 +97,4 @@ password = 认证令牌
 与 MQTT 服务质量“至多一次”传递服务级别 0 类似，HTTP REST 消息传递提供了非持久性消息传递，但它会验证请求是否正确，并在发送 HTTP 响应之前，验证其是否可以传递到服务器。包含 HTTP 状态码 200 的回复将确认消息已传递到服务器。使用“至多一次”MQTT 服务质量级别或 HTTP 同等级别来传递事件消息时，设备或应用程序必须实现重试逻辑以保证传递。
 
 
-有关 {{site.data.keyword.iot_short_notm}} 的 MQTT 协议和服务质量级别的更多信息，请参阅 [MQTT 消息传递](../reference/mqtt/index.html)。
+有关 {{site.data.keyword.iot_short_notm}} 的 MQTT 协议和服务质量级别的更多信息，请参阅 [MQTT 消息传递](../reference/mqtt/index.html).

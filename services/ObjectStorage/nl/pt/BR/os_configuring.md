@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -46,8 +46,8 @@ Para obter mais informações sobre os pré-requisitos, veja [a documentação d
 
 Para configurar o cliente Swift, deve-se `exportar` suas informações sobre autenticação. É possível [gerar credenciais](/docs/services/ObjectStorage/os_credentials.html) por meio da CLI usando comandos Cloud Foundry ou cURL ou por meio da UI do {{site.data.keyword.Bluemix_notm}}. O cliente obtém as informações das variáveis de ambiente na tabela a seguir.
 
-
 <table>
+<caption> Tabela 1. Variáveis de ambiente e descrições</caption>
   <tr>
     <th> Variável de ambiente </th>
     <th> Descrição </th>
@@ -76,7 +76,6 @@ Londres. </td>
   </tr>
 </table>
 
-Tabela 1: Variáveis e descrições de autenticação
 
 
 Para exportar suas informações autenticação, insira suas credenciais e execute o comando a seguir:

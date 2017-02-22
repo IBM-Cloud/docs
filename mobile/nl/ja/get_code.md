@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-13"
+  years: 2016, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -23,20 +23,20 @@ lastupdated: "2016-10-13"
 生成されたコードについての作業を {{site.data.keyword.Bluemix_notm}} 「モバイル」ダッシュボードから行うときには、以下の開発者ツールが必要です。
 
 #### Android
-* [Android Studio 2.2](https://developer.android.com/studio)
-	* 最新の [Android 7.0](https://www.android.com/versions/nougat-7-0/) ランタイムをインストールしてください。
+* [Android Studio 2.2 ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.android.com/studio "外部リンク・アイコン")
+	* [Android 7.0 ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.android.com/versions/nougat-7-0/ "外部リンク・アイコン")ランタイムをインストールします。
 
 #### iOS
-* [Xcode 8.0](https://developer.apple.com/xcode/) (推奨)
-	* 最新の [iOS 10](http://www.apple.com/ios/ios-10/) ランタイムをインストールしてください。
-* [Homebrew](http://brew.sh/)
+* [Xcode 8.0 ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.apple.com/xcode/ "外部リンク・アイコン") (推奨)
+	* 最新の [iOS 10 ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.apple.com/ios/ios-10/ "外部リンク・アイコン")ランタイムをインストールします。
+* [Homebrew ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://brew.sh/ "外部リンク・アイコン")
 	* 他のツールおよびランタイム (CocoaPods や Carthage など) のインストールを支援する、Apple 開発者向けのコマンド・ライン・ツール。
-* iOS SDK 依存関係のインストールのための [CocoaPods](https://cocoapods.org/) 依存関係マネージャー。最新バージョンを使用してください。
+* iOS SDK 依存関係をインストールするための [CocoaPods ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://cocoapods.org/ "外部リンク・アイコン") の依存関係マネージャー。最新バージョンを使用してください。
 
 	```
 	$ sudo gem install cocoapods --pre
 	```
-* Watson Developer Cloud SDK のインストールのための [Carthage](https://github.com/Carthage/Carthage) 依存関係マネージャー。
+* Watson Developer Cloud SDK をインストールするための [Carthage ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/Carthage/Carthage "外部リンク・アイコン")の依存関係マネージャー。
 
 	```
 	$ brew install carthage
@@ -50,5 +50,5 @@ lastupdated: "2016-10-13"
 	$ brew install Node5
 	```
 
-* [Bluemix CLI ツール](http://clis.ng.bluemix.net/ui/home.html)。
+* [Bluemix CLI ツール![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://clis.ng.bluemix.net/ui/home.html "外部リンク・アイコン")。
 Bluemix とのコマンド・ライン・インターフェースから簡単に Cloud Foundry ランタイムをデプロイするためのコマンド・ライン・ツール。  

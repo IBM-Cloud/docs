@@ -1,7 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
+lastupdated: "2016-03-17"
 
 ---
 
@@ -14,8 +15,6 @@ copyright:
 #Sviluppo di applicazioni
 {: #developingapps}
 
-*Ultimo aggiornamento: 17 marzo 2016*
-{: .last-updated}
 
 Puoi sviluppare applicazioni utilizzando un ambiente di sviluppo integrato (IDE) o un editor di testo oppure puoi utilizzare {{site.data.keyword.Bluemix}} DevOps Services.
-{:shortdesc} 
+{:shortdesc}

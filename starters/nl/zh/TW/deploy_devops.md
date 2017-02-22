@@ -4,7 +4,7 @@
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015，2017
 
 lastupdated: "2016-03-02"
 
@@ -22,26 +22,25 @@ lastupdated: "2016-03-02"
 {:shortdesc}
 
 1. 若要開始使用，請在應用程式的「概觀」頁面上按一下**新增 Git 儲存庫及管線**，或在「{{site.data.keyword.Bluemix_notm}} 一般經驗」中按一下**新增 GIT**。
-2. 在開啟的視窗中，確定已選取**將入門範本應用程式套件移入儲存庫並啟用「建置並部署」管線**勾選框。隨即建立 Git 儲存庫。如果有入門範本程式碼，就會將其載入儲存庫中。此外，在 {{site.data.keyword.jazzhub}} 中執行的 Delivery Pipeline 服務也會部署應用程式。  
+2. 在開啟的視窗中，確定已選取**將入門範本應用程式套件移入儲存庫並啟用「建置並部署」管線**勾選框。隨即建立 Git 儲存庫。如果有入門範本程式碼，就會將其載入儲存庫中。此外，在 {{site.data.keyword.jazzhub}} 中執行的 Delivery Pipeline 服務也會部署應用程式。
 3. 若要更新應用程式，您可以使用指令行或 Web IDE。
-   **如果您使用指令行：**
+   **如果您使用指令行，請執行下列動作：**
    a. 在應用程式的「概觀」頁面上，從 Git URL 複製 Git 儲存庫。
    b. 在您偏好的編輯器中更新程式碼。
-   c. 從 Git 指令行介面中，推送變更。  
+   c. 從 Git 指令行介面中，推送變更。
 
-   **如果您使用 Web IDE：**  
-   a. 在應用程式的「概觀」頁面上，按一下**編輯程式碼**。您的專案就會在 Web IDE 中開啟。  
-   b. 視需要進行變更，然後使用內建 Git 支援來推送。  
+   **如果您使用 Web IDE，請執行下列動作：**
+   a. 在應用程式的「概觀」頁面上，按一下**編輯程式碼**。您的專案就會在 Web IDE 中開啟。   b. 視需要進行變更，然後使用內建 Git 支援來推送。
 
-已更新的應用程式即會重新部署至 {{site.data.keyword.Bluemix_notm}}。  
+已更新的應用程式即會重新部署至 {{site.data.keyword.Bluemix_notm}}。
 
-如需逐步指示，請參閱 [Set up Git integration and auto-deploy in DevOps Services](https://hub.jazz.net/tutorials/jazzeditor/#git_integration_and_autodeployment)。  
+如需逐步指示，請參閱 [Set up Git integration and auto-deploy in DevOps Services ![外部鏈結圖示](../icons/launch-glyph.svg)](https://hub.jazz.net/tutorials/jazzeditor/#git_integration_and_autodeployment){: new_window}。
 
-## 已新增 Git？請試用 {{site.data.keyword.Bluemix_notm}} Live Sync  
+## 已新增 Git？請試用 {{site.data.keyword.Bluemix_notm}} Live Sync
 
-如果您要建置 Node.js 應用程式，可以使用 {{site.data.keyword.Bluemix_notm}} Live Sync 來快速更新 {{site.data.keyword.Bluemix_notm}} 上的應用程式實例，並如同在桌面上一樣進行開發。  
+如果您要建置 Node.js 應用程式，可以使用 {{site.data.keyword.Bluemix_notm}} Live Sync 來快速更新 {{site.data.keyword.Bluemix_notm}} 上的應用程式實例，並如同在桌面上一樣進行開發。
 
-若要進一步瞭解 {{site.data.keyword.Bluemix_notm}} Live Sync，請參閱 [{{site.data.keyword.Bluemix_notm}} Live Sync](/docs/develop/bluemixlive.html)。如需指令的詳細資料，請參閱 [{{site.data.keyword.Bluemix_notm}} Live Sync CLI 文件](/docs/cli/reference/bl/index.html)。若要使用 {{site.data.keyword.Bluemix_notm}} Live Sync 來搭配 Web IDE，請參閱[即時編輯](/docs/develop/bluemixlive.html)。  
+若要進一步瞭解 {{site.data.keyword.Bluemix_notm}} Live Sync，請參閱 [{{site.data.keyword.Bluemix_notm}} Live Sync](/docs/develop/bluemixlive.html)。如需指令的詳細資料，請參閱 [{{site.data.keyword.Bluemix_notm}} Live Sync CLI 文件](/docs/cli/reference/bl/index.html)。若要使用 {{site.data.keyword.Bluemix_notm}} Live Sync 來搭配 Web IDE，請參閱[即時編輯](/docs/develop/bluemixlive.html)。
 
 開始之前，請下載並安裝 {{site.data.keyword.Bluemix_notm}} Live Sync bl 指令行。
 
@@ -76,7 +75,7 @@ bl sync projectName -d localDirectory --verbose
 
 ```
 bl start
-```  
+```
 
 當您變更本端目錄中的檔案時，變更會自動延伸到 {{site.data.keyword.Bluemix_notm}} 上執行的應用程式，以及專案雲端工作區。如果您需要重新啟動 Node 應用程式，可以使用下列指令：
 

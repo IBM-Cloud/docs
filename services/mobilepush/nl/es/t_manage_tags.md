@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -12,7 +12,7 @@ copyright:
 
 # Gestión de etiquetas
 {: #manage_tags}
-Última actualización: 07 de diciembre de 2016
+Última actualización: 11 de enero de 2017
 {: .last-updated}
 
 Utilice el panel de control {{site.data.keyword.mobilepushshort}} para crear y suprimir etiquetas para la aplicación y, a continuación, iniciar las notificaciones basadas en etiquetas. La notificación basada en etiquetas se recibe en los dispositivos suscritos a las etiquetas.
@@ -80,7 +80,7 @@ push.getTags(new MFPPushResponseListener<List<String>>(){
 Utilice la API **getSubscriptions** para obtener una lista de etiquetas a las que está suscrito el dispositivo.
 
 ```
-// Get a list of tags that to which the device is subscribed.
+// Obtenga una lista de las etiquetas disponibles a las que el dispositivo se suscribe.
 push.getSubscriptions(new MFPPushResponseListener<List<String>>() {
   @Override
     public void onSuccess(List<String> tags) {
@@ -120,47 +120,6 @@ BMSPush.retrieveSubscriptions(function(tags) {
 ```
 	{: codeblock}
 
-## Obtención de etiquetas en Objective-C
-{: objc-get-tags}
-
-Copie los siguientes fragmentos de código en la aplicación iOS desarrollada utilizando Objective-C para obtener una lista de las etiquetas a las que el dispositivo está suscrito y para obtener una lista de las etiquetas disponibles a las que se puede suscribir el dispositivo.
-
-Utilice la API **retrieveAvailableTags** siguiente para obtener una lista de etiquetas disponibles a las que está suscrito el dispositivo.
-
-```
-//Obtenga una lista de etiquetas disponibles a las que se puede suscribir el dispositivo
-[push retrieveAvailableTagsWithCompletionHandler:
-^(IMFResponse *response, NSError *error){
- if(error){
-   [self updateMessage:error.description];
- } else {
-   [self updateMessage:@"Successfully retrieved available tags."];
- NSDictionary *availableTags = [[NSDictionary alloc]init];
- availableTags = [response tags];
-[self.appDelegateVC updateMessage:availableTags.description];
-}
-   }];
- ```
-	{: codeblock}
-
-Utilice la API **retrieveSubscriptions** para obtener una lista de etiquetas a las que está suscrito el dispositivo.
-
-
-```
-// Get a list of tags that to which the device is subscribed.
-[push retrieveSubscriptionsWithCompletionHandler:
-^(IMFResponse *response, NSError *error) {
-  if(error){
-     [self updateMessage:error.description];
-   } else {
-   [self updateMessage:@"Successfully retrieved subscriptions."];
- NSDictionary *subscribedTags = [[NSDictionary alloc]init];
-subscribedTags = [response subscriptions];
-[self.appDelegateVC updateMessage:subscribedTags.description];
-}
-  }];
-  ```
-	{: codeblock}
 
 ## Obtención de etiquetas en Swift
 {: swift-get-tags}
@@ -312,50 +271,11 @@ BMSPush.unsubscribe(tag, success, failure);
 ```
 	{: codeblock}
 
-## Suscripción y cancelación de la suscripción a las etiquetas en Objective-C
-{: objc-subscribe-tags}
-
-Copie y pegue este fragmento de código en la aplicación para móviles de Objective-C.
-
-Utilice la API **subscribeToTags** para suscribirse a una etiqueta.
-
-```
-[push subscribeToTags:tags completionHandler:
-^(IMFResponse *response, NSError *error) {
-  if(error){
-     [self updateMessage:error.description];
-  }else{
-      NSDictionary* subStatus = [[NSDictionary alloc]init];
-      subStatus = [response subscribeStatus];
-      [self updateMessage:@"Parsed subscribe status is:"];
-      [self updateMessage:subStatus.description];
-  }
-  }];
-```
-	{: codeblock}
-
-Utilice la API **unsubscribeFromTags** para anular la suscripción a una etiqueta.
-
-```
-[push unsubscribeFromTags:tags completionHandler:
-^(IMFResponse *response, NSError *error) {
-  if (error){
-       [self updateMessage:error.description];
- } else {
-     NSDictionary* subStatus = [[NSDictionary alloc]init];
-       subStatus = [response unsubscribeStatus];
-       [self updateMessage:subStatus.description];
-  }
-  }];
-```
-	{: codeblock}
 
 ## Suscripción y cancelación de la suscripción a las etiquetas en Swift
 {: swift-subscribe-tags}
 
 Copie y pegue este fragmento de código en la aplicación para móviles de Swift.
-
-**Suscribirse a etiquetas disponibles**
 
 Utilice la API **subscribeToTags** para suscribirse a una etiqueta.
 
@@ -371,8 +291,6 @@ push.subscribeToTags(tagsArray: ["MyTag"], completionHandler: { (response, statu
 })
 ```
 	{: codeblock}
-
-**Eliminar suscripción a etiquetas**
 
 Utilice la API **unsubscribeFromTags** para anular la suscripción a una etiqueta.
 
@@ -403,7 +321,7 @@ bmsPush.subscribe(tagsArray,function(response) {
 ```
 	{: codeblock}
 
-La anulación de la suscripción de etiquetas utiliza el método `unSubscribe`.
+La anulación de la suscripción de etiquetas utiliza el método **unSubscribe**.
 
 ```
 var tagsArray = ["tag1", "Tag2"]

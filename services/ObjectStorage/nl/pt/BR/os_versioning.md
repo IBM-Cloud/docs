@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -14,7 +14,7 @@ lastupdated: "2016-12-06"
 
 # Configurando versão de objeto {: #setting-up-versioning}
 
-A versão de objeto permite manter as versões mais antigas de seus objetos armazenando-as automaticamente em um contêiner de backup. A versão permite ver um histórico de cada objeto e controlar quando as mudanças são feitas.
+É possível manter versões antigas de seus objetos automaticamente configurando a versão do objeto. Com a versão, é possível ver um histórico de cada objeto.
 {: shortdesc}
 
 Ao fazer upload de uma nova versão de seu arquivo para o contêiner principal, a versão
@@ -68,6 +68,7 @@ anterior será movida automaticamente para o contêiner de backup. Se você excl
 
 7.  Os objetos no contêiner de backup são nomeados automaticamente com o formato a seguir: `<Length><Object_name>/<Timestamp>`.
   <table>
+  <caption> Tabela 1. Atributos de nomenclatura descritos</caption>
     <tr>
       <th> Atributo </th>
       <th> Descrição </th>
@@ -86,7 +87,6 @@ anterior será movida automaticamente para o contêiner de backup. Se você excl
     </tr>
   </table>
 
-  Tabela 1: Atributos de nomenclatura descritos
 
 6. Liste os objetos em seu contêiner principal para ver a nova versão de seu arquivo.
 
@@ -95,7 +95,7 @@ anterior será movida automaticamente para o contêiner de backup. Se você excl
     ```
     {: pre}
 
-7. Liste os objetos no contêiner de backup. Você vê a versão anterior de seu arquivo que está armazenada nesse contêiner. Observe que um registro de data e hora foi incluído em seu arquivo.
+7. Liste os objetos no contêiner de backup. Você vê a versão anterior de seu arquivo que está armazenada nesse contêiner. Observe que um registro de data e hora está incluído em seu arquivo.
 
     ```
     swift list --lh <backup_container_name>

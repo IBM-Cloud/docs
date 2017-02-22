@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -14,14 +14,15 @@ lastupdated: "2016-12-06"
 
 # 存储大对象 {: #large-files}
 
-对于单个上传，上传内容的最大大小限制为 5 GB。但是，可以将较大的对象分段成较小的部分，并使用清单文件来合并这些分段。在上传过程中，只要每个分段的大小不超过 5 GB 即可，对于合并后对象的最大大小没有限制。
+对于单个上传，上传内容的最大大小限制为 5 GB。但是，可以将较大的对象分段成较小的部分，并使用清单文件来合并这些分段。合并对象之后，将不存在最大大小。
 {: shortdesc}
 
-上传大对象可通过两种方式实现：动态大对象 (DLO) 和静态大对象 (SLO)。
+大对象可为动态，也可为静态。通过静态大对象 (SLO)，分段不必位于同一容器中；每个分段可以存储在任意容器中，并且可以任意命名。通过动态大对象，Swift 客户机会创建容器，并将已编号的分段并行上传到容器中。
 
-## 动态大对象： {: #dynamic}
 
-处理 DLO 的方式有两种：
+## 动态大对象 {: #dynamic}
+
+您可以使用两种方式来上传动态大对象：
   * 使 Swift 客户机自动处理一切操作
   * 使用 Swift API 手动处理
 
@@ -37,10 +38,14 @@ swift upload <container_name> <file_name> --segment-size <size_in_bytes>
 
 #### 使用 Swift API 处理动态大对象
 
-您可以手动对对象分段，使其大小小于或等于 5 GB，然后通过 Swift API 进行上传。上传时，一定要先上传所有分段，然后再上传清单。如果还未上传完所有分段就下载了对象，那么下载的对象将不一致。可以通过完成以下步骤上传大型文件。
+您可以手动对对象分段，使其大小小于或等于 5 GB，然后通过 Swift API 进行上传。
 
-1. 按名称对分段排序，分段应该按此顺序合并才能构成原始对象。
-2. 将分段上传到一个容器，该容器须不同于保存清单文件的容器。上传第 10 个分段之后将开始对上传进行调速，这会大大延长上传时间。为此，建议分段大小不要小于文件大小的十分之一。
+**注**：上传时，必须先上传所有分段，然后再上传清单文件。如果还未上传完所有分段就下载了对象，那么所下载对象的合并会不一致。
+
+可以通过完成以下步骤上传大型文件。
+
+1. 按名称对分段排序，分段需要按此顺序合并才能构成原始对象。
+2. 将分段上传到一个容器，该容器须不同于保存清单文件的容器。上传第 10 个分段之后将开始对上传进行调速，这会大大延长上传时间。  
 
     ```
     curl -i -X PUT --data-binary @segment1 -H "X-Auth-Token: <token>" https://<object-storage_url>/<container_name>/<object_name>/000001
@@ -55,7 +60,7 @@ swift upload <container_name> <file_name> --segment-size <size_in_bytes>
     ```
     {: pre}
 
-    **注**：清单文件必须为空。如果不为空，该文件的内容将被视为其中一个分段，并且将按已排序名称所指示的合并顺序排列。
+    **注**：清单文件必须为空。如果不为空，该文件的内容将被视为其中一个分段，并且按已排序名称所指示的合并顺序排列。
 4. 下载对象。结果您将收到整个对象。您可以添加或除去分段，而不必更新清单文件。分段只要前缀正确，就将一直是对象的组成部分。删除清单不会删除这些分段。
 
     ```
@@ -66,12 +71,13 @@ swift upload <container_name> <file_name> --segment-size <size_in_bytes>
 
 ## 静态大对象 {: #static}
 
-静态大对象也使用分段和清单文件，但您可以进行更多控制。通过 SLO，分段不必位于同一容器中；每个分段可以存储在任意容器中，并且可以任意命名。但是，分段的大小必须至少为 1 MB。您无需设置清单文件的头，但在上传了正确的清单后，头“X-Static-Large-Object”会自动添加并设置为 true。
+静态大对象使用分段和清单文件，但您可以进行更多控制。通过 SLO，分段不必位于同一容器中；每个分段可以存储在任意容器中，并且可以任意命名。但是，分段的大小必须至少为 1 MB。您无需设置清单文件的头，但在上传了正确的清单后，头“X-Static-Large-Object”会自动添加并设置为 true。
 {: shortdesc}
 
 清单文件是一种提供分段详细信息的 JSON 文档，必须在上传了所有分段之后上传。在清单中为每个分段提供的数据会与实际分段元数据进行比较。如果有内容不匹配，那么不会上传清单。
 
 <table>
+<caption> 表 1. 清单文件中的 JSON 属性</caption>
   <tr>
     <th> 属性</th>
     <th> 描述</th>
@@ -90,11 +96,11 @@ swift upload <container_name> <file_name> --segment-size <size_in_bytes>
   </tr>
 </table>
 
-*表 1：清单文件中按合并顺序列出的 JSON 属性*
+
 
 #### 上传大型文件 
 
-1. 运行以下命令上传分段。上传第 10 个分段之后将开始对上传进行调速，这会大大延长上传时间。为此，建议分段大小不要小于文件大小的十分之一。
+1. 运行以下命令上传分段。上传第 10 个分段之后将开始对上传进行调速，这会大大延长上传时间。  
 
     ```
     curl -i -X PUT --data-binary @segment1 -H "X-Auth-Token: <token>" https://<object-storage_url>/<container_one>/<segment>
@@ -126,7 +132,7 @@ swift upload <container_name> <file_name> --segment-size <size_in_bytes>
     ```
     {: pre}
 
-3. 上传清单。为此，必须通过运行以下命令，将查询 `multipart-manifest=put` 添加到清单的名称：
+3. 通过将查询 `multipart-manifest=put` 添加到清单的名称来上传清单文件。
 
     ```
     curl -i -X PUT --data-binary @object_name -H "X-Auth-Token: <token>" https://<object-storage_url>/container_two/<object_name>?multipart-manifest=put
@@ -141,10 +147,13 @@ swift upload <container_name> <file_name> --segment-size <size_in_bytes>
     {: pre}
 
 
+#### 使用静态大对象
 
-下面是使用静态大对象时可能会需要的一些命令。
+使用以下命令可管理文件。
 
-* 要下载清单文件的内容，必须将查询 `multipart-manifest=get` 添加到命令。收到的内容不会与上传的内容相同。
+**注**：要将分段添加到对象或从对象中除去，请上传具有新分段列表的新清单文件。清单名称可以保持不变。
+
+* 要下载清单文件的内容，必须将查询 `multipart-manifest=get` 添加到命令。收到的内容与上传的内容不同。
 
     ```
     curl -O -X GET -H "X-Auth-Token:<token>" https://<object-storage_url>/<container_two>/<object_name>?multipart-manifest=get
@@ -164,5 +173,3 @@ swift upload <container_name> <file_name> --segment-size <size_in_bytes>
     curl -i -X DELETE -H "X-Auth-Token: <token>" https://<object-storage_url>/<container_two>/<object_name>?multipart-manifest=delete
     ```
     {: pre}
-
-**注**：要将分段添加到对象或从对象中除去分段，您需要上传具有新分段列表的新清单文件。清单名称可以保持不变。

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2016, 2017
 lastupdated: "2016-09-09"
 
 ---
@@ -12,7 +12,7 @@ lastupdated: "2016-09-09"
 {:screen: .screen}
 {:pre: .pre}
 
-# Introdução ao {{site.data.keyword.openwhisk_short}} (Beta)
+# Introdução ao {{site.data.keyword.openwhisk_short}}
 
 
 O {{site.data.keyword.openwhisk}} é um serviço de cálculo distribuído, orientado para eventos também referido como Cálculo sem servidor ou como Função como um serviço (FaaS), o
@@ -33,7 +33,7 @@ Ambos têm recursos semelhantes para desenvolver aplicativos; a CLI fornece mais
 {: #openwhisk_start_editor}
 
 Teste o {{site.data.keyword.openwhisk_short}} e seu [Navegador](https://console.{DomainName}/openwhisk/editor){: new_window} para
-criar ações, automatizar ações usando acionadores e explorar pacotes públicos.
+criar ações, automatizar ações usando acionadores e explorar pacotes públicos. 
 Visite a página [saiba mais](https://console.{DomainName}/openwhisk/learn){: new_window} para um tour rápido da Interface com o Usuário do OpenWhisk.
 
 ## Configurando a CLI do {{site.data.keyword.openwhisk_short}}
@@ -151,7 +151,7 @@ Também é possível usar os recursos acionados por eventos no {{site.data.keywo
 ](https://new-console.{DomainName}/apidocs/98)
 
 # Links Relacionados
-{: #rellinks}
+{: #rellinks notoc}
 
 ## Referência de API
 {: #api}

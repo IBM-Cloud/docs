@@ -1,16 +1,16 @@
 ---
 
- 
+
 
 copyright:
 
-  2015，2016
+  years: 2015，2017
 
-lastupdated: "2016-04-18" 
+lastupdated: "2016-04-18"
 
 ---
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
 # Création d'applications Cloud Foundry
@@ -72,6 +72,7 @@ persistance.</dd>
 <dt>Limites de ressources</dt>
 <dd>Prenez connaissance des limites relatives aux quantités de ressources qu'un compte d'essai peut utiliser. Ces limites sont les suivantes :
 <table style="width:100%">
+<caption>Tableau 1. Limites de ressources {{site.data.keyword.Bluemix_notm}} pour un compte d'essai</caption>
   <th>Type de ressource</th>	<th>Quantité maximale</th>
 <tr><td>Nombre de services utilisés par toutes les applications</td> <td>10</td>
 <tr><td>Mémoire utilisée dans toutes les applications</td> <td>	2 G</td>

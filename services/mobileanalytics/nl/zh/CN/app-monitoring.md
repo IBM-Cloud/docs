@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-31"
+  years: 2015, 2017
+lastupdated: "2017-01-10"
 
 ---
 {:new_window: target="_blank"}
@@ -145,6 +145,8 @@ You can also export and import custom chart definitions programmatically by usin
 	* 警报名称：应用程序崩溃的警报
 	* 消息：应用程序崩溃警报
 	* 查询频率：应用程序崩溃
+		* 查询频率：2 分钟
+	* 事件类型：应用程序崩溃
 		* 应用程序名称：任何应用程序
 		* 应用程序版本：任何版本
     * 阈值
@@ -192,7 +194,7 @@ You can also export and import custom chart definitions programmatically by usin
 ### 应用程序崩溃监视
 {: #app-crash}
 
-**崩溃概述**表显示以下数据列：
+在**崩溃**页面上，**崩溃概述**表显示以下数据列：
 
 * 应用程序：应用程序名称
 * 崩溃：应用程序的总崩溃次数
@@ -209,7 +211,7 @@ You can also export and import custom chart definitions programmatically by usin
 ### 应用程序崩溃故障诊断
 {: #app-crash-troubleshooting}
 
-{{site.data.keyword.mobileanalytics_short}} 控制台中的**故障诊断**页面<!-- **Applications** section of the -->提供了应用程序崩溃的详细视图。
+{{site.data.keyword.mobileanalytics_short}} 控制台中的**故障诊断**页面<!-- **Applications** section of the -->使用**崩溃摘要**表提供应用程序崩溃的详细视图。
 
 **崩溃摘要**表可进行排序，且包含下列数据列：
 
@@ -251,4 +253,7 @@ You can also export and import custom chart definitions programmatically by usin
 
 在 {{site.data.keyword.mobileanalytics_short}} 控制台中，通过单击**导出**页面上的 **DashDB**，对 dashDB 进行设置。完成设置之后，发送到 {{site.data.keyword.mobileanalytics_short}} 的新数据也会在 1-2 小时内转发给 dashDB。 
 
+<!--
+If you have existing DashDB instances, those instances will no longer accept new data because the incoming data no longer matches the schema. Manually add columns for the new data to resume incoming data. Modifying {{site.data.keyword.mobileanalytics_short}} collection tables by adding new columns also breaks the stream of incoming data.
+-->
 

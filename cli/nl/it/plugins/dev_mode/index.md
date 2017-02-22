@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2015, 2016
+  years: 2015，2017
 
-lastupdated: "2016-05-12"
+lastupdated: "2017-01-12"
 
 
 
@@ -76,6 +76,7 @@ cf plugins
 Utilizza l'indice nella seguente tabella in modo che faccia riferimento ai comandi CLI dev_mode utilizzati più frequentemente:
 
 <table summary="dev_mode commands index">
+<caption>Tabella 1. Comandi dev_mode</caption>
  <thead>
  <th colspan="4">Comandi dev_mode</th>
  </thead>
@@ -94,8 +95,6 @@ Utilizza l'indice nella seguente tabella in modo che faccia riferimento ai coman
  </tr>
   </tbody>
  </table>
-{: caption="Table 1. dev_mode commands" caption-side="top"}
-
 
 
 ## help
@@ -210,5 +209,5 @@ cf restart-inplace <nomeApplicazione>
 
 ## Link correlati
 {: #general}
-* [CLI modalità di sviluppo](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){:new_window}
-* [DevOps Web IDE](https://hub.jazz.net/docs/deploy/){:new_window}
+* [CLI modalità di sviluppo ![icona link esterno](../../../icons/launch-glyph.svg)](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){:new_window}
+* [IDE web DevOps ![icona link esterno](../../../icons/launch-glyph.svg)](https://hub.jazz.net/docs/deploy/){:new_window}

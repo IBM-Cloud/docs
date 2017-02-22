@@ -1,13 +1,16 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-22"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
 
-{:codeblock:.codeblock}
-
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # {{site.data.keyword.amashort}} Cordova 앱용 사용자 정의 인증 구성
 {: #custom-cordova}
@@ -16,16 +19,17 @@ lastupdated: "2016-11-22"
 
 ## 시작하기 전에
 {: #before-you-begin}
-* 사용자 정의 ID 제공자를 사용하도록 구성된 {{site.data.keyword.amashort}} 서비스 인스턴스에 의해 보호되는 리소스([사용자 정의 인증 구성 참조](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)).  
+* 사용자 정의 ID 제공자를 사용하도록 구성된 {{site.data.keyword.amashort}} 서비스 인스턴스에 의해 보호되는 리소스([사용자 정의 인증 구성 참조](custom-auth-config-mca.html)).  
 * **테넌트 ID** 값. {{site.data.keyword.amashort}} 대시보드에서 서비스를 여십시오. **모바일 옵션** 단추를 클릭하십시오. **앱 GUID / TenantId** 필드에 `tenantId`(`appGUID`라고도 함) 값이 표시됩니다. 이 값은 권한 관리자를 초기화하는 데 필요합니다. 
 * **영역** 이름. 이 값은 {{site.data.keyword.amashort}} 대시보드의 **관리** 탭에서 **사용자 정의** 섹션의 **영역 이름** 필드에 지정한 값입니다. 
 * {{site.data.keyword.Bluemix_notm}} **지역**. 헤더에서 **아바타** 아이콘 ![아바타 아이콘](images/face.jpg "아바타 아이콘") 옆에 현재 {{site.data.keyword.Bluemix_notm}} 지역이 표시됩니다. 표시되는 지역 값은 `US South`, `United Kingdom` 및 `Sydney` 중 하나여야 합니다. 코드 예제에서 해당하는 SDK 상수의 정확한 구문을 제공합니다. 
 
 자세한 정보는 다음 내용을 참조하십시오. 
- * [사용자 정의 인증용 {{site.data.keyword.amashort}} 구성](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html). 여기서는 사용자 정의 인증용으로 {{site.data.keyword.amashort}} 서비스를 설정하는 방법을 설명합니다. 또한 **영역** 값을 정의합니다. 
- * [Cordova SDK 설정](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html). Cordova 클라이언트 앱 설정에 관한 정보를 제공합니다. 
- * [사용자 정의 ID 제공자 사용](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html). 사용자 정의 ID 제공자를 사용하여 사용자를 인증하는 방법을 설명합니다. 
- * [사용자 정의 ID 제공자 작성](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html). 사용자 정의 ID 제공자가 작동하는 방법의 몇 가지 예를 제공합니다.  
+
+ * [사용자 정의 인증용 {{site.data.keyword.amashort}} 구성](custom-auth-config-mca.html). 여기서는 사용자 정의 인증용으로 {{site.data.keyword.amashort}} 서비스를 설정하는 방법을 설명합니다. 또한 **영역** 값을 정의합니다. 
+ * [Cordova SDK 설정](getting-started-cordova.html). Cordova 클라이언트 앱 설정에 관한 정보를 제공합니다. 
+ * [사용자 정의 ID 제공자 사용](custom-auth.html). 사용자 정의 ID 제공자를 사용하여 사용자를 인증하는 방법을 설명합니다. 
+ * [사용자 정의 ID 제공자 작성](custom-auth-identity-provider.html). 사용자 정의 ID 제공자가 작동하는 방법의 몇 가지 예를 제공합니다. 
 
 ## Cordova WebView 코드 구성
 ### Cordova WebView에서 {{site.data.keyword.amashort}} 클라이언트 SDK 초기화
@@ -37,8 +41,8 @@ BMSClient.initialize("<applicationBluemixRegion>");
 ```
 {: codeblock}
 
-`<applicationBluemixRegion>`을 해당 지역으로 대체하십시오([시작하기 전에](#before-you-begin) 참조). 
- 
+`<applicationBluemixRegion>`을 해당 지역으로 대체하십시오([시작하기 전에](#before-you-begin) 참조).
+
 
 ### 인증 리스너 인터페이스
 {: #custom-cordva-auth}
@@ -103,7 +107,7 @@ authenticationContext.submitAuthenticationFailure(info);
 ## 사용자 정의 인증 리스너 워크플로우의 샘플 구현
 {: #custom-cordova-authlisten-sample}
 
-이 인증 리스너 샘플은 사용자 정의 ID 제공자와 함께 작동하도록 설계되었습니다. 사용자 정의 ID 제공자는 [이 Github 저장소](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)에서 다운로드할 수 있습니다. 
+이 인증 리스너 샘플은 사용자 정의 ID 제공자와 함께 작동하도록 설계되었습니다. [이 Github 저장소 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample "외부 링크 아이콘"){: new_window}에서 사용자 정의 ID 제공자를 다운로드할 수 있습니다. 
 
 ```JavaScript
 var customAuthenticationListener = {
@@ -174,20 +178,20 @@ Xcode의 버전에 따라 권한 관리자를 등록하십시오.
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 
 {  
-	
+
     //[CDVBMSClient initMCAAuthorizationManagerManagerWithTenantId:@"<tenantId>"];
  }
 ```
 {: codeblock}
 
-참고: ``your_module_name``을 프로젝트의 모듈 이름으로 대체하십시오. 예를 들어, 모듈 이름이 ``Cordova`인 경우 ``#import "Cordova-Swift.h"`가 되어야 합니다. 모듈 이름을 찾으려면 **빌드 설정 > 패키징` > 제품 모듈 이름**으로 이동하십시오. 
+참고: 올바른 Swift 헤더 파일 이름을 지정하려면 `your_module_name`을 프로젝트의 모듈 이름으로 대체하십시오. 예를 들어, 모듈 이름이 `Cordova`이면 이는 `#import "Cordova-Swift.h"`가 되어야 합니다. 모듈 이름을 찾으려면 **빌드 설정 > 패키징` > 제품 모듈 이름**으로 이동하십시오. 
 
 **참고:** `tenantId`를 {{site.data.keyword.amashort}} 서비스 대시보드의 **모바일 옵션** 단추에 있는 테넌트 ID로 대체하십시오. 
 
 
 ## iOS에서 키 체인 공유 사용
 
-`기능` 탭으로 이동한 후 Xcode 프로젝트에서 `키 체인 공유`를 `On`으로 전환하여 `키 체인 공유`를 사용 가능하게 설정하십시오.  
+`기능` 탭으로 이동한 후 Xcode 프로젝트에서 `키 체인 공유`를 `On`으로 전환하여 `키 체인 공유`를 사용 가능하게 설정하십시오. 
 
 
 ## 인증 테스트
@@ -200,7 +204,7 @@ Xcode의 버전에 따라 권한 관리자를 등록하십시오.
 
 
 1. `{applicationRoute}/protected`(예: `http://my-mobile-backend.mybluemix.net/protected`)를 열어 브라우저에서 모바일 백엔드 애플리케이션의 보호 엔드포인트로 요청을 전송하십시오.
- {{site.data.keyword.mobilefirstbp}} 표준 유형으로 작성된 모바일 백엔드 애플리케이션의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}에서 보호됩니다. 이 엔드포인트는 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트된 모바일 애플리케이션에서만 액세스할 수 있습니다. 따라서 `Unauthorized` 메시지는 브라우저에 표시됩니다. 
+ {{site.data.keyword.mobilefirstbp}} 표준 유형으로 작성된 모바일 백엔드 애플리케이션의 `/protected` 엔드포인트는 {{site.data.keyword.amashort}}로 보호됩니다. 이 엔드포인트는 {{site.data.keyword.amashort}} 클라이언트 SDK로 인스트루먼트된 모바일 애플리케이션에서만 액세스할 수 있습니다. 따라서 `Unauthorized` 메시지는 브라우저에 표시됩니다. 
 
 1. Cordova 애플리케이션을 사용하여 동일한 엔드포인트를 요청하십시오. `BMSClient`를 초기화하고 사용자 정의 AuthenticationListener를 등록한 후 다음 코드를 추가하십시오. 
 
@@ -215,8 +219,8 @@ Xcode의 버전에 따라 권한 관리자를 등록하십시오.
 	request.send(success, failure);
 	```
 	{: codeblock}
-	
-	`<your-application-route>`를 백엔드 애플리케이션 URL로 대체하십시오([시작하기 전에](#before-you-begin) 참조). 
+
+	`<your-application-route>`를 백엔드 애플리케이션 URL로 대체하십시오([시작하기 전에](#before-you-begin) 참조).
 
 1. 	요청이 성공하면 `LogCat` 또는 Xcode 콘솔에 다음과 같은 출력이 표시됩니다. 
 

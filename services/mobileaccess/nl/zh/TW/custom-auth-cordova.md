@@ -1,13 +1,16 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-22"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-08"
 
 ---
 
-{:codeblock:.codeblock}
-
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # 配置適用於 {{site.data.keyword.amashort}} Cordova 應用程式的自訂鑑別
 {: #custom-cordova}
@@ -16,16 +19,17 @@ lastupdated: "2016-11-22"
 
 ## 開始之前
 {: #before-you-begin}
-* 配置為使用自訂身分提供者之 {{site.data.keyword.amashort}} 服務實例所保護的資源（請參閱[配置自訂鑑別](https://console.stage1.ng.bluemix.net/docs/services/mobileaccess/custom-auth-config-mca.html)）。  
+* 配置為使用自訂身分提供者之 {{site.data.keyword.amashort}} 服務實例所保護的資源（請參閱[配置自訂鑑別](custom-auth-config-mca.html)）。  
 * **承租戶 ID** 值。在 {{site.data.keyword.amashort}} 儀表板中，開啟服務。按一下**行動選項**按鈕。`tenantId`（也稱為 `appGUID`）值會顯示在**應用程式 GUID/承租戶 ID** 欄位中。您需要此值來起始設定「授權管理程式」。
 * **領域**名稱。這是您在 {{site.data.keyword.amashort}} 儀表板的**管理**標籤上，**自訂**區段內的**領域名稱**欄位中指定的值。
 * {{site.data.keyword.Bluemix_notm}} **地區**。您可以在標頭中找到您目前的 {{site.data.keyword.Bluemix_notm}} 地區，就在**虛擬人像**圖示 ![「虛擬人像」圖示](images/face.jpg "「虛擬人像」圖示") 的旁邊。出現的地區值應該是下列其中一項：`美國南部`、`英國`或`雪梨`。程式碼範例中有提供相對應之 SDK 常數的確切語法。
 
 如需相關資訊，請參閱下列資訊：
- * [配置 {{site.data.keyword.amashort}} 以進行自訂鑑別](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-config-mca.html)。這會為您示範如何設定 {{site.data.keyword.amashort}} 服務，以進行自訂鑑別。您要在這裡定義**領域**值。
- * [設定 Cordova SDK](https://console.{DomainName}/docs/services/mobileaccess/getting-started-cordova.html)。設定 Cordova 用戶端應用程式的相關資訊。
- * [使用自訂身分提供者](https://console.{DomainName}/docs/services/mobileaccess/custom-auth.html)。如何使用自訂身分提供者來鑑別使用者。
- * [建立自訂身分提供者](https://console.{DomainName}/docs/services/mobileaccess/custom-auth-identity-provider.html)。自訂身分提供者如何運作的部分範例。 
+
+ * [配置 {{site.data.keyword.amashort}} 以進行自訂鑑別](custom-auth-config-mca.html)。這會為您示範如何設定 {{site.data.keyword.amashort}} 服務，以進行自訂鑑別。您要在這裡定義**領域**值。
+ * [設定 Cordova SDK](getting-started-cordova.html)。設定 Cordova 用戶端應用程式的相關資訊。
+ * [使用自訂身分提供者](custom-auth.html)。如何使用自訂身分提供者來鑑別使用者。
+ * [建立自訂身分提供者](custom-auth-identity-provider.html)。自訂身分提供者如何運作的部分範例。
 
 ## 配置 Cordova WebView 程式碼
 ### 在 Cordova WebView 中起始設定 {{site.data.keyword.amashort}} 用戶端 SDK
@@ -37,8 +41,8 @@ BMSClient.initialize("<applicationBluemixRegion>");
 ```
 {: codeblock}
 
-將 `<applicationBluemixRegion>` 取代為您的地區（請參閱[開始之前](#before-you-begin)）。 
- 
+將 `<applicationBluemixRegion>` 取代為您的地區（請參閱[開始之前](#before-you-begin)）。
+
 
 ### 鑑別接聽器介面
 {: #custom-cordva-auth}
@@ -104,7 +108,7 @@ authenticationContext.submitAuthenticationFailure(info);
 ## 自訂鑑別接聽器工作流程的範例實作
 {: #custom-cordova-authlisten-sample}
 
-此鑑別接聽器範例設計成使用自訂身分提供者。您可以從[此 Github 儲存庫](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample)下載自訂身分提供者。
+此鑑別接聽器範例設計成使用自訂身分提供者。您可以從[這個 Github 儲存庫 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample "外部鏈結圖示"){: new_window} 下載自訂身分提供者。
 
 ```JavaScript
 var customAuthenticationListener = {
@@ -175,20 +179,20 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 
 {  
-	
+
     //[CDVBMSClient initMCAAuthorizationManagerManagerWithTenantId:@"<tenantId>"];
  }
 ```
 {: codeblock}
 
-附註：將 `your_module_name` 取代為您專案的模組名稱，例如，如果模組名稱為 `Cordova`，則應為 `#import "Cordova-Swift.h"`。若要尋找模組名稱，請移至 **Build Settings > Packaging > Product Module Name**。
+附註：如需正確的 Swift 標頭檔名稱，請將 `your_module_name` 取代為您專案的模組名稱，例如，如果模組名稱為 `Cordova`，則應為 `#import "Cordova-Swift.h"`。若要尋找模組名稱，請移至 **Build Settings > Packaging > Product Module Name**。
 
 **附註：**將 `tenantId` 取代為您的承租戶 ID（位在 {{site.data.keyword.amashort}} 服務儀表板上的**行動選項**按鈕中）。
 
 
 ## 針對 iOS 啟用金鑰鏈共用
 
-移至 `Capabilities` 標籤，並將 Xcode 專案中的 `Keychain Sharing` 切換為 `On`，以啟用 `Keychain Sharing`。 
+移至 `Capabilities` 標籤，並將 Xcode 專案中的 `Keychain Sharing` 切換為 `On`，以啟用 `Keychain Sharing`。
 
 
 ## 測試鑑別
@@ -216,8 +220,8 @@ BMSClient.getInstance().setAuthorizationManager(mcaAuthorizationManager);
 	request.send(success, failure);
 	```
 	{: codeblock}
-	
-	將 `<your-application-route>` 取代為您的後端應用程式 URL（請參閱[開始之前](#before-you-begin)）。 
+
+	將 `<your-application-route>` 取代為您的後端應用程式 URL（請參閱[開始之前](#before-you-begin)）。
 
 1. 	當要求成功時，在 `LogCat` 或 Xcode 主控台中會有下列輸出：
 

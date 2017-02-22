@@ -3,8 +3,8 @@
 
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-02"
+  years: 2016, 2017
+lastupdated: "2017-01-04"
 
 
 ---
@@ -37,7 +37,7 @@ lastupdated: "2016-08-02"
 1. `/whisk.system` 네임스페이스 내의 패키지 목록을 가져오십시오.
 
   ```
-wsk package list /whisk.system
+  wsk package list /whisk.system
   ```
   {: pre}
   ```
@@ -59,7 +59,7 @@ wsk package list /whisk.system
 2. `/whisk.system/cloudant` 패키지 내의 엔티티 목록을 가져오십시오.
 
   ```
-wsk package get --summary /whisk.system/cloudant
+  wsk package get --summary /whisk.system/cloudant
   ```
   {: pre}
   ```
@@ -78,7 +78,7 @@ wsk package get --summary /whisk.system/cloudant
 3. `/whisk.system/cloudant/read` 조치에 대한 설명을 가져오십시오.
 
   ```
-wsk action get --summary /whisk.system/cloudant/read
+  wsk action get --summary /whisk.system/cloudant/read
   ```
   {: pre}
   ```
@@ -98,7 +98,7 @@ wsk action get --summary /whisk.system/cloudant/read
 1. `/whisk.system/samples/greeting` 조치에 대한 설명을 가져오십시오.
 
   ```
-wsk action get --summary /whisk.system/samples/greeting
+  wsk action get --summary /whisk.system/samples/greeting
   ```
   {: pre}
   ```
@@ -112,7 +112,7 @@ wsk action get --summary /whisk.system/samples/greeting
 2. 매개변수 없이 조치를 호출하십시오.
 
   ```
-wsk action invoke --blocking --result /whisk.system/samples/greeting
+  wsk action invoke --blocking --result /whisk.system/samples/greeting
   ```
   {: pre}
   ```
@@ -127,7 +127,7 @@ wsk action invoke --blocking --result /whisk.system/samples/greeting
 3. 매개변수를 사용하여 조치를 호출하십시오.
 
   ```
-wsk action invoke --blocking --result /whisk.system/samples/greeting --param name Mork --param place Ork
+  wsk action invoke --blocking --result /whisk.system/samples/greeting --param name Mork --param place Ork
   ```
   {: pre}
   ```
@@ -152,18 +152,18 @@ wsk action invoke --blocking --result /whisk.system/samples/greeting --param nam
 1. `/whisk.system/samples` 패키지에 바인딩하고 기본 `place` 매개변수값을 설정하십시오.
 
   ```
-wsk package bind /whisk.system/samples valhallaSamples --param place Valhalla
+  wsk package bind /whisk.system/samples valhallaSamples --param place Valhalla
   ```
   {: pre}
   ```
-ok: created binding valhallaSamples
+  ok: created binding valhallaSamples
   ```
   {: screen}
 
 2. 패키지 바인딩의 설명을 가져오십시오.
 
   ```
-wsk package get --summary valhallaSamples
+  wsk package get --summary valhallaSamples
   ```
   {: pre}
   ```
@@ -180,7 +180,7 @@ wsk package get --summary valhallaSamples
 3. 패키지 바인딩에서 조치를 호출하십시오.
 
   ```
-wsk action invoke --blocking --result valhallaSamples/greeting --param name Odin
+  wsk action invoke --blocking --result valhallaSamples/greeting --param name Odin
   ```
   {: pre}
   ```
@@ -190,13 +190,12 @@ wsk action invoke --blocking --result valhallaSamples/greeting --param name Odin
   ```
   {: screen}
 
-  결과를 보면, 사용자가 `valhallaSamples` 패키지 바인딩을
-작성할 때 설정한 `place` 매개변수를 조치에서 상속했음을 알 수 있습니다.
+  결과를 보면, 사용자가 `valhallaSamples` 패키지 바인딩을 작성할 때 설정한 `place` 매개변수를 조치에서 상속했음을 알 수 있습니다.
 
 4. 조치를 호출하고 기본 매개변수값을 겹쳐쓰십시오.
 
   ```
-wsk action invoke --blocking --result valhallaSamples/greeting --param name Odin --param place Asgard
+  wsk action invoke --blocking --result valhallaSamples/greeting --param name Odin --param place Asgard
   ```
   {: pre}
   ```
@@ -217,17 +216,17 @@ wsk action invoke --blocking --result valhallaSamples/greeting --param name Odin
 1. `/whisk.system/alarms` 패키지에서 피드의 설명을 가져오십시오.
 
   ```
-wsk package get --summary /whisk.system/alarms
+  wsk package get --summary /whisk.system/alarms
   ```
   {: pre}
   ```
-package /whisk.system/alarms
+  package /whisk.system/alarms
    feed   /whisk.system/alarms/alarm
   ```
   {: screen}
 
   ```
-wsk action get --summary /whisk.system/alarms/alarm
+  wsk action get --summary /whisk.system/alarms/alarm
   ```
   {: pre}
   ```
@@ -247,15 +246,15 @@ wsk action get --summary /whisk.system/alarms/alarm
   ```
   {: pre}
   ```
-ok: created trigger feed everyEightSeconds
+  ok: created trigger feed everyEightSeconds
   ```
   {: screen}
 
 3. 다음 조치 코드를 사용하여 'hello.js' 파일을 작성하십시오.
 
   ```
-function main(params) {
-     return {payload:  'Hello, ' + params.name + ' from ' + params.place};
+  function main(params) {
+      return {payload:  'Hello, ' + params.name + ' from ' + params.place};
   }
   ```
   {: codeblock}
@@ -263,26 +262,25 @@ function main(params) {
 4. 조치가 있는지 확인하십시오.
 
   ```
-wsk action update hello hello.js
+  wsk action update hello hello.js
   ```
   {: pre}
 
 5. `everyEightSeconds` 트리거가 실행될 때마다 `hello` 조치를 호출하는 규칙을 작성하십시오.
 
   ```
-wsk rule create --enable myRule everyEightSeconds hello
+  wsk rule create myRule everyEightSeconds hello
   ```
   {: pre}
   ```
-ok: created rule myRule
-  ok: rule myRule is activating
+  ok: created rule myRule
   ```
   {: screen}
 
 6. 활성화 로그에 대한 폴링에 의해 조치가 호출되는지 확인하십시오.
 
   ```
-wsk activation poll
+  wsk activation poll
   ```
   {: pre}
 
@@ -300,22 +298,22 @@ wsk activation poll
 1. "custom"이라는 패키지를 작성하십시오.
 
   ```
-wsk package create custom
+  wsk package create custom
   ```
   {: pre}
   ```
-ok: created package custom
+  ok: created package custom
   ```
   {: screen}
 
 2. 패키지의 요약을 가져오십시오.
 
   ```
-wsk package get --summary custom
+  wsk package get --summary custom
   ```
   {: pre}
   ```
-package /myNamespace/custom
+  package /myNamespace/custom
   ```
   {: screen}
 
@@ -324,18 +322,18 @@ package /myNamespace/custom
 3. 다음 조치 코드를 포함하는 `identity.js`라는 파일을 작성하십시오. 이 조치는 모든 입력 매개변수를 리턴합니다.
 
   ```
-function main(args) { return args; }
+  function main(args) { return args; }
   ```
   {: codeblock}
 
 4. `custom` 패키지에서 `identity` 조치를 작성하십시오.
 
   ```
-wsk action create custom/identity identity.js
+  wsk action create custom/identity identity.js
   ```
   {: pre}
   ```
-ok: created action custom/identity
+  ok: created action custom/identity
   ```
   {: screen}
 
@@ -344,11 +342,11 @@ ok: created action custom/identity
 5. 패키지의 요약을 다시 가져오십시오.
 
   ```
-wsk package get --summary custom
+  wsk package get --summary custom
   ```
   {: pre}
   ```
-package /myNamespace/custom
+  package /myNamespace/custom
    action /myNamespace/custom/identity
   ```
   {: screen}
@@ -358,7 +356,7 @@ package /myNamespace/custom
 6. 패키지에서 조치를 호출하십시오.
 
   ```
-wsk action invoke --blocking --result custom/identity
+  wsk action invoke --blocking --result custom/identity
   ```
   {: pre}
   ```
@@ -372,11 +370,11 @@ wsk action invoke --blocking --result custom/identity
 1. 두 매개변수(`city` 및 `country`)를 사용하여 `custom` 패키지를 업데이트하십시오.
 
   ```
-wsk package update custom --param city Austin --param country USA
+  wsk package update custom --param city Austin --param country USA
   ```
   {: pre}
   ```
-ok: updated package custom
+  ok: updated package custom
   ```
   {: screen}
 
@@ -427,7 +425,7 @@ ok: updated package custom
 3. 조치가 실제로 매개변수를 상속하는지 확인하려면 매개변수 없이 identity 조치를 호출하십시오.
 
   ```
-wsk action invoke --blocking --result custom/identity
+  wsk action invoke --blocking --result custom/identity
   ```
   {: pre}
   ```
@@ -441,7 +439,7 @@ wsk action invoke --blocking --result custom/identity
 4. 일부 매개변수를 사용하여 identity 조치를 호출하십시오. 호출 매개변수가 패키지 매개변수와 병합되어 호출 매개변수가 패키지 매개변수를 대체합니다.
 
   ```
-wsk action invoke --blocking --result custom/identity --param city Dallas --param state Texas
+  wsk action invoke --blocking --result custom/identity --param city Dallas --param state Texas
   ```
   {: pre}
   ```
@@ -462,11 +460,11 @@ wsk action invoke --blocking --result custom/identity --param city Dallas --para
 1. 모든 사용자와 패키지를 공유하십시오.
 
   ```
-wsk package update custom --shared
+  wsk package update custom --shared yes
   ```
   {: pre}
   ```
-ok: updated package custom
+  ok: updated package custom
   ```
   {: screen}
 
@@ -490,11 +488,11 @@ ok: updated package custom
 1. 패키지 및 조치의 완전한 이름을 표시하려면 패키지의 설명을 가져오십시오.
 
   ```
-wsk package get --summary custom
+  wsk package get --summary custom
   ```
   {: pre}
   ```
-package /myNamespace/custom
+  package /myNamespace/custom
    action /myNamespace/custom/identity
   ```
   {: screen}

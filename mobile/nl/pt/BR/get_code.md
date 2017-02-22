@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-13"
+  years: 2016, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -32,24 +32,21 @@ trabalhando com código gerado a partir do painel do
 {{site.data.keyword.Bluemix_notm}} Mobile:
 
 #### Android
-* [Android Studio 2.2](https://developer.android.com/studio)
-	* Instale o tempo de execução mais recente do [Android 7.0](https://www.android.com/versions/nougat-7-0/).
+* [Android Studio 2.2 ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://developer.android.com/studio "Ícone de link externo")
+	* Instale o tempo de execução mais recente do [Android 7.0 ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://www.android.com/versions/nougat-7-0/ "Ícone de link externo").
 
 #### iOS
-* [Xcode
-8.0](https://developer.apple.com/xcode/) (recomendado)
-	* Instale o tempo de execução mais recente do [iOS 10](http://www.apple.com/ios/ios-10/).
-* [Homebrew](http://brew.sh/)
+* [Xcode 8.0 ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://developer.apple.com/xcode/ "Ícone de link externo") (recomendado)
+	* Instale o tempo de execução mais recente do [iOS 10 ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://www.apple.com/ios/ios-10/ "Ícone de link externo").
+* [Homebrew ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://brew.sh/ "Ícone de link externo")
 	* Ferramenta de linha de comandos para ajudar na instalação de outras ferramentas
 e tempos de execução, como CocoaPods e Carthage, para desenvolvedores da Apple.
-* Gerenciador de dependência [CocoaPods](https://cocoapods.org/)
-para instalar dependências do iOS SDK. Use a versão mais recente:
+* Gerenciador de dependência do [CocoaPods ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://cocoapods.org/ "Ícone de link externo") para instalar dependências do SDK iOS. Use a versão mais recente:
 
 	```
 	$ sudo gem install cocoapods --pre
 	```
-* Gerenciador de dependência
-[Carthage](https://github.com/Carthage/Carthage) para instalar Watson Developer Cloud SDKs.
+* Gerenciador de dependência do [Carthage ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/Carthage/Carthage "Ícone de link externo") para instalar SDKs do Watson Developer Cloud.
 
 	```
 	$ brew install carthage
@@ -64,6 +61,6 @@ Connect Loopback e outras ferramentas de produtividade do Bluemix.
 	$ brew install Node5
 	```
 
-* [Ferramentas da CLI do Bluemix](http://clis.ng.bluemix.net/ui/home.html).
+* [Ferramentas de CLI do Bluemix ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://clis.ng.bluemix.net/ui/home.html "Ícone de link externo").
 Ferramentas de linha de comandos para implementar facilmente os tempos de execução do
 Cloud Foundry a partir de uma interface da linha de comandos com o Bluemix.  

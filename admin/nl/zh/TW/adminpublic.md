@@ -4,8 +4,8 @@
 
 copyright:
 
-  years: 2015, 2016
-lastupdated: "2016-10-23"
+  years: 2015, 2017
+lastupdated: "2017-01-09"
 
 
 ---
@@ -15,6 +15,7 @@ lastupdated: "2016-10-23"
 {:screen: .screen}
 {:new_window: target="_blank"}
 
+<!-- staging only content beginning -->
 
 # 設定帳戶
 {: #account}
@@ -32,7 +33,7 @@ lastupdated: "2016-10-23"
 
 - **通知** 
   
-  註冊以收到下列項目的通知：{{site.data.keyword.Bluemix_notm}} 平台的「公用」地區的維護更新、關聯的服務，以及突發事件、安全通知和其他公告。您可以將 RSS 資訊來源讀取器指向 [Bluemix 狀態頁面](http://ibm.biz/Bluemixstatus)的 RSS 鏈結，以掌握「{{site.data.keyword.Bluemix_notm}} 公用」變更的最新資訊。如需設定通知的詳細資料，請參閱[檢視 Bluemix 狀態](/docs/support/index.html#viewing-bluemix-status)。
+  註冊以收到下列項目的通知：{{site.data.keyword.Bluemix_notm}} 平台的「公用」地區的維護更新、關聯的服務，以及突發事件、安全通知和其他公告。您可以將 RSS 資訊來源讀取器指向 [Bluemix 狀態頁面 ![外部鏈結圖示](../icons/launch-glyph.svg)](http://ibm.biz/Bluemixstatus){: new_window} 的 RSS 鏈結，以掌握「{{site.data.keyword.Bluemix_notm}} 公用」變更的最新資訊。如需設定通知的詳細資料，請參閱[檢視 Bluemix 狀態](/docs/support/index.html#viewing-bluemix-status)。
 
 - **支援選項** 
   
@@ -46,8 +47,6 @@ lastupdated: "2016-10-23"
   
   您可以提供有關產品或文件的意見。 
   
-  若要提交 {{site.data.keyword.Bluemix_notm}} 及服務增進功能的構想，請移至 [IBM Cloud Ideas](https://ibmcloud.ideas.aha.io)。如需如何使用新構想入口網站的相關資訊，請參閱 [Think, write, submit: New ideas portal for IBM Cloud](https://developer.ibm.com/bluemix/2016/10/05/think-write-submit/)。 
+  若要提交 {{site.data.keyword.Bluemix_notm}} 及服務增進功能的構想，請移至 [IBM Cloud Ideas ![外部鏈結圖示](../icons/launch-glyph.svg)](https://ibmcloud.ideas.aha.io){: new_window}。如需如何使用新構想入口網站的相關資訊，請參閱 [Think, write, submit: New ideas portal for IBM Cloud ![外部鏈結圖示](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2016/10/05/think-write-submit/){: new_window}。 
   
-  若要提供有關文件的意見，請按一下每一個頁面上的**意見**鏈結，或者按一下標題後面的**在 GitHub 中編輯**鏈結，以與我們分工合作。如需撰寫文件的相關資訊，請參閱 [When it comes to docs, everyone can contribute in Bluemix](https://developer.ibm.com/bluemix/2016/01/13/bluemix-docs-now-open-source-on-github/)。
-
-
+  若要提供有關文件的意見，請按一下每一個頁面上的**意見**鏈結，或者按一下標題後面的**在 GitHub 中編輯**鏈結，以與我們分工合作。如需撰寫文件的相關資訊，請參閱 [When it comes to docs, everyone can contribute in Bluemix ![外部鏈結圖示](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2016/01/13/bluemix-docs-now-open-source-on-github/){: new_window}。

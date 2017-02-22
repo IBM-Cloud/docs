@@ -50,10 +50,10 @@ Bluemix Live Sync の Desktop Sync フィーチャーを使用すれば、{{site
 Desktop Sync では以下の点を考慮してください。
 * Desktop Sync は、以下のオペレーティング・システムで稼働します。
   * Windows 7 または 8
-  * Mac OS X バージョン 10.9 以降
+  * Mac OS X バージョン 10.9 以降   
       **注:** Windows には .NET Framework バージョン 4.5 が必要です。.NET がインストールされていない場合、{{site.data.keyword.Bluemix_notm}} Live Sync コマンド・ライン・インターフェース (CLI) のインストール時に、それもインストールするようにプロンプトが出されます。  
 * Git リポジトリーの複製は不要です。
-* 開発するアプリケーションのタイプに関わらず、デスクトップのプロジェクトをクラウド・ワークスペースと同期させることができます。
+* 開発するアプリケーションのタイプにかかわらず、デスクトップのプロジェクトをクラウド・ワークスペースと同期させることができます。
 * アプリケーションが Node.js で書かれている場合、変更内容を実行中のアプリケーションに伝搬できます。
 
 コマンドについて詳しくは、[「Bluemix Live Sync (bl) コマンド」](bluemixlive.html#bl-commands)を参照してください。
@@ -582,7 +582,7 @@ bl start –m “mymanifest.yml”
 ```
 {: pre}
 
-このコマンドは、マニフェスト・ファイル ``manifest.yml`` で現行ディレクトリーに関連付けられたプロジェクトのアプリケーション・インスタンスを開始し、``bl start –m manifest.yml`` と同等です。
+このコマンドは、マニフェスト・ファイル `manifest.yml`` で現行ディレクトリーに関連付けられたプロジェクトのアプリケーション・インスタンスを開始し、``bl start –m manifest.yml`` と同等です。
 
 ```
 bl start

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2016
-lastupdated: "2016-12-06"
+  years: 2014, 2017
+lastupdated: "2017-01-17"
 
 ---
 {:new_window: target="_blank"}
@@ -18,6 +18,7 @@ lastupdated: "2016-12-06"
 {: shortdesc}
 
 <table>
+<caption> 表 1. オプション別の読み取りアクセス許可</caption>
   <tr>
     <th> 許可 </th>
     <th> 読み取り ACL オプション </th>
@@ -47,8 +48,6 @@ lastupdated: "2016-12-06"
     <td> <code> &#42;:&#42; </code> </td>
   </tr>
 </table>
-
-表 1: オプション別の読み取りアクセス許可
 
 
 
@@ -109,7 +108,7 @@ lastupdated: "2016-12-06"
     ```
     {: pre}
 
-    以下の例で、読み取り権限が付与されているのが確認できます。
+    例: `X-Container-Read` 値は、読み取り権限が付与されるコンテナーおよびユーザーを示します。
 
     ```
     HTTP/1.1 204 No Content

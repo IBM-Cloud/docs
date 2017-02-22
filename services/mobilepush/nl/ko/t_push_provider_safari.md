@@ -1,7 +1,7 @@
 ---
 
 copyright:
- years: 2015, 2016
+ years: 2015, 2017
 
 ---
 
@@ -10,15 +10,37 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Safari 웹 브라우저의 신임 정보 구성
-{: #configure-credential-for-safari}
-마지막 업데이트 날짜: 2016년 12월 6일
+# 웹 브라우저의 신임 정보 구성
+{: #configure-credential-for-browsers}
+마지막 업데이트 날짜: 2017년 1월 11일
 {: .last-updated}
 
-IBM {{site.data.keyword.mobilepushshort}} 서비스는 이제 기능을 확장하여 Safari 브라우저에 알림을 전송합니다. 지원되는 버전은 Safari 10.0입니다. 
+IBM {{site.data.keyword.mobilepushshort}} 서비스는 이제 기능을 확장하여 사용자의 브라우저에 알림을 전송합니다. 
 
-## 인증서 생성
-  {: #certificate-generation}
+{{site.data.keyword.mobilepushshort}} 서비스에서 허용해야 할 요청을 식별하려면 웹 사이트 URL 또는 웹 사이트의 도메인 이름이 필요합니다. {{site.data.keyword.mobilepushshort}} 서비스 인스턴스는 한 번에 하나의 도메인 이름만 지원합니다. 그러므로 Chrome, Firefox 및 Safari에 동일한 값이 설정되는지 확인하십시오. 
+
+Chrome 및 Safari 브라우저에서는 웹 푸시를 위해 추가 구성이 필요합니다. FCM 엔드포인트를 사용하여 Chrome에서 메시지를 제공하므로 FCM API 키가 필요합니다. FCM API 키를 얻으려면 [FCM의 신임 정보 구성](t_push_provider_android.html)을 참조하십시오.
+
+
+
+##Chrome 및 Firefox 웹 푸시 구성 
+{: #config-chrome-firefox}
+
+1. 푸시 대시보드 패널에서 **구성**을 선택하십시오.
+2. 웹 탭을 선택하십시오.
+	![WebPush 구성](images/webpush_configure.jpg)
+3. 푸시 알림을 수신하도록 등록할 웹 사이트의 URL과 FCM/GCM API 키를 구성하십시오. 
+4. **저장**을 클릭하십시오.
+5. 다음 단계. [Google Chrome 및 Mozilla Firefox 브라우저에 알림 사용](c_enable_push.html).
+
+
+## Safari 웹 푸시 구성 
+{: #configure-safari}
+
+Safari에서 {{site.data.keyword.mobilepushshort}} 서비스에 지원되는 버전은 10.0입니다. Apple Developer 계정을 통해 인증서를 생성해야 알림을 받도록 브라우저를 구성할 수 있습니다.
+
+### 인증서 생성
+{: #certificate-generation}
 
 Apple 개발자 계정이 있는지 확인하십시오. 알림을 수신하도록 Safari 브라우저를 구성하려면 웹 사이트 푸시 ID를 등록하고 인증서를 생성해야 합니다. 다음 단계를 수행하면 시작에 도움이 됩니다. 
 
@@ -37,7 +59,7 @@ Apple 개발자 계정이 있는지 확인하십시오. 알림을 수신하도�
 11. KeyChain Access 도구에서 인증서를 여십시오. 마우스 오른쪽 단추를 클릭하고 p12 인증서로 내보내십시오. p12 인증서 생성 중에 입력한 비밀번호를 기록하십시오. 
 
 
-## 알림 구성
+### 알림 구성
   {: #configuration-notification}
  
 인증서를 생성한 후에 서비스를 구성하여 알림을 Safari로 보낼 수 있습니다.  

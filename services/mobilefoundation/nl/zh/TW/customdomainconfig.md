@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated:  "2016-08-08"
+  years: 2016, 2017
+lastupdated:  "2017-01-17"
 
 ---
 
@@ -19,13 +19,12 @@ lastupdated:  "2016-08-08"
 
 <!--container group is created with a--> URL 或路徑建立時是使用根據 {{site.data.keyword.Bluemix_notm}} `Region` 的預設網域名稱。
 
-*表 1. 應用程式網域名稱，根據 {{site.data.keyword.Bluemix_notm}} 中的地區*
-
   |網域 |  地區  |    
   |:----- | :----- |    
   |`mybluemix.net` | 美國南部 |    
   |`eu-gb.mybluemix.net` | 英國  |
   |`au-syd.mybluemix.net` | 雪梨  |      
+  {: caption="Table 1. Application domain names based on Region in {{site.data.keyword.Bluemix_notm}}" caption-side="top"}
 
 您需要執行下列步驟配置自訂網域，才能使用自己的網域：
 
@@ -37,4 +36,4 @@ lastupdated:  "2016-08-08"
 
 + 移至網域的 DNS 提供者，然後新增 CNAME 項目，它會將您網域的資料流量遞送到預設的 {{site.data.keyword.Bluemix_notm}} 路徑，即<!--container group-->伺服器執行所在位置。
 
-+ 如果您想要為自訂網域配置 `https`，則請在 {{site.data.keyword.Bluemix_notm}} 中上傳網域的 SSL 憑證。若要這麼做，請移至**管理組織 > 網域**、選取您要配置 SSL 憑證的自訂網域、按一下**上傳憑證**來上傳網域的 SSL 憑證。如需相關資訊，請參閱 [SSL Certificates and Bluemix Custom Domains](https://developer.ibm.com/bluemix/2014/09/28/ssl-certificates-bluemix-custom-domains/)。
++ 如果您想要為自訂網域配置 `https`，則請在 {{site.data.keyword.Bluemix_notm}} 中上傳網域的 SSL 憑證。若要這麼做，請移至**管理組織 > 網域**、選取您要配置 SSL 憑證的自訂網域、按一下**上傳憑證**來上傳網域的 SSL 憑證。如需相關資訊，請參閱 [SSL 憑證與 Bluemix 自訂網域 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/bluemix/2014/09/28/ssl-certificates-bluemix-custom-domains/ "外部鏈結圖示"){: new_window}。

@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2016
-lastupdated: "2016-09-27"
- 
+  years: 2016, 2017
+lastupdated: "2017-01-04"
+
 
 ---
 
@@ -411,7 +411,6 @@ Prima, `package.json`:
 ```
 {
   "name": "my-action",
-  "version": "1.0.0",
   "main": "index.js",
   "dependencies" : {
     "left-pad" : "1.1.3"
@@ -434,6 +433,7 @@ exports.main = myAction;
 {: codeblock}
 
 Nota che l'azione viene esposta tramite `exports.main`; il gestore azione può avere qualsiasi nome purché sia conforme alla solita indicazione di accettare un oggetto e restituire un oggetto ( o una `Promessa` di un oggetto).
+Per convenzione Node.js, devi denominare questo file `index.js` o specificare il nome file che preferisci come proprietà `main` in package.json.
 
 Per creare un'azione OpenWhisk da questo pacchetto:
 
@@ -690,13 +690,18 @@ jar cvf hello.jar Hello.class
 Puoi creare un'azione OpenWhisk denominata `helloJava` da questo file JAR nel seguente modo:
 
 ```
-wsk action create helloJava hello.jar
+wsk action create helloJava hello.jar --main Hello
 ```
 {: pre}
 
 Quando utilizzi la riga di comando e un file di origine `.jar`, non devi necessariamente
 specificare che stai creando un'azione Java;
 lo strumento lo desume dall'estensione del file.
+
+Devi specificare il nome della classe principale utilizzando `--main`. Una classe principale eleggibile
+è una classe che implementa un metodo `main` statico come descritto qui di seguito. Se la classe
+non è il pacchetto predefinito, utilizza il nome della classe completo,
+ad esempio, `--main com.example.MyMain`.
 
 Le azioni Java vengono richiamate come le azioni JavaScript e Swift:
 
@@ -711,8 +716,6 @@ wsk action invoke --blocking --result helloJava --param name World
   }
 ```
 {: screen}
-
-**Nota:** se il file JAR dispone di più di una classe con un metodo main corrispondente alla firma necessaria, lo strumento CLI utilizza la prima classe riportata da `jar -tf`.
 
 
 ## Creazione di azioni Docker
@@ -781,10 +784,6 @@ Per le seguenti istruzioni, supponiamo che l'ID utente Docker sia `janesmith` e 
   {: pre}
   ```
   cd dockerSkeleton
-  ```
-  {: pre}
-  ```
-  chmod +x buildAndPush.sh
   ```
   {: pre}
   ```
@@ -895,3 +894,18 @@ Puoi effettuare una pulizia eliminando le azioni che non desideri utilizzare.
   actions
   ```
   {: screen}
+  
+## Accesso ai metadati dell'azione nel corpo dell'azione
+
+L'ambiente dell'azione contiene diverse proprietà specifiche per l'azione in esecuzione.
+Questo permette all'azione di funzionare programmaticamente con gli asset OpenWhisk tramite l'API REST
+o di impostare un avviso quando l'azione sta per terminare il suo budget di tempo assegnato.
+Le proprietà sono accessibili tramite l'ambiente del sistema per tutti i runtime supportati:
+le azioni Node.js, Python, Swift, Java e Docker quando si utilizza la struttura di base Docker OpenWhisk.
+
+* `__OW_API_HOST` l'host dell'API per la distribuzione OpenWhisk che sta eseguendo questa azione
+* `__OW_API_KEY` la chiave API per l'oggetto che sta richiamando l'azione, questa chiave potrebbe essere una chiave API limitata.
+* `__OW_NAMESPACE` lo spazio dei nomi per l'*attivazione* (potrebbe non essere lo stesso dell'azione)
+* `__OW_ACTION_NAME` il nome completo dell'azione in esecuzione
+* `__OW_ACTIVATION_ID` l'ID di attivazione per l'istanza dell'azione in esecuzione
+* `__OW_DEADLINE` il tempo approssimativo in cui questa azione avrà consumato la propria intera quota di durata (misurato in millisecondi)

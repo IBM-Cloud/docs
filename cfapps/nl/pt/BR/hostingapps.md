@@ -1,16 +1,16 @@
 ---
 
- 
+
 
 copyright:
 
-  years: 2015，2016
+  years: 2015，2017
 
-lastupdated: "2016-05-09" 
+lastupdated: "2016-05-09"
 
 ---
 
-{:shortdesc: .shortdesc} 
+{:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -19,8 +19,7 @@ lastupdated: "2016-05-09"
 
 <!--The whole topic is staging only -->
 
-Com o {{site.data.keyword.Bluemix}},
-é possível criar aplicativos, assim como hospedar seus aplicativos existentes. É possível migrar seus apps para o {{site.data.keyword.Bluemix_notm}}, desde que ele esteja pronto para nuvem. O {{site.data.keyword.Bluemix_notm}} fornece várias maneiras de executar seus aplicativos, por exemplo, Cloud Foundry, IBM Containers e Virtual Machines.
+Com o {{site.data.keyword.Bluemix}}, é possível criar aplicativos, assim como hospedar seus aplicativos existentes. É possível migrar seus apps para o {{site.data.keyword.Bluemix_notm}}, desde que ele esteja pronto para nuvem. O {{site.data.keyword.Bluemix_notm}} fornece várias maneiras de executar seus aplicativos, por exemplo, Cloud Foundry, IBM Containers e Virtual Machines.
 
 ##Tornando seus apps prontos para nuvem
 {: #cloud-readyapps}
@@ -77,14 +76,14 @@ Se todos os princípios a seguir forem observados em seu aplicativo, o aplicativ
 
   No mínimo, capture a instalação do aplicativo como um conjunto uniforme de scripts que sejam independentes do sistema operacional. Mantenha a instalação do aplicativo pequena e móvel para adaptar-se a diferentes técnicas de automação. Além disso, minimize as dependências necessárias para a instalação do aplicativo.
 
-Para obter mais informações sobre aplicativos prontos para nuvem, consulte [O aplicativo de 12 fatores](http://12factor.net/){:new_window}.
+Para obter mais informações sobre aplicativos prontos para a nuvem, veja [O aplicativo de 12 fatores ![Ícone de link externo](../icons/launch-glyph.svg)](http://12factor.net/){: new_window}.
 
 ##Migrando seus apps
 {: #ht_hostapp}
 
 É possível migrar seus aplicativos para o {{site.data.keyword.Bluemix_notm}} de uma maneira incremental, em vez de deslocar o aplicativo completamente para o ambiente de nuvem. É possível migrar uma parte de seu aplicativo primeiro e conectar aos dados existentes ou sistema de registros usando o serviço de Integração de nuvem.
 
-Em seus aplicativos em nuvem, poderá ser necessário acessar os dados ou serviços de backend, por exemplo, um sistema de registro. No {{site.data.keyword.Bluemix_notm}}, é possível usar o serviço Secure Gateway para estabelecer um túnel seguro entre uma organização do {{site.data.keyword.Bluemix_notm}} e a rede de backend corporativa. O serviço permite que os aplicativos no {{site.data.keyword.Bluemix_notm}} acessem os dados e serviços da rede de backend. Para obter detalhes, consulte [Atingindo backend corporativo com o Bluemix Secure Gateway via console](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){:new_window}.
+Em seus aplicativos em nuvem, poderá ser necessário acessar os dados ou serviços de backend, por exemplo, um sistema de registro. No {{site.data.keyword.Bluemix_notm}}, é possível usar o serviço Secure Gateway para estabelecer um túnel seguro entre uma organização do {{site.data.keyword.Bluemix_notm}} e a rede de backend corporativa. O serviço permite que os aplicativos no {{site.data.keyword.Bluemix_notm}} acessem os dados e serviços da rede de backend. Para obter detalhes, veja [Acessando o backend corporativo com o Bluemix Secure Gateway por meio do console ![Ícone de link externo](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window}.
 
 Para implementar seu aplicativo no {{site.data.keyword.Bluemix_notm}} como um aplicativo Cloud Foundry, selecione um tempo de execução no catálogo {{site.data.keyword.Bluemix_notm}}. O tempo de execução contém um aplicativo iniciador Hello World que pode ser substituído por seu próprio aplicativo. Se não for possível localizar um iniciador que forneça o tempo de execução desejado, será possível trazer um buildpack customizado compatível com Cloud Foundry para o {{site.data.keyword.Bluemix_notm}} usando a opção –b com o comando cf push. Para obter detalhes, consulte [Usando buildpacks da comunidade](/docs/cfapps/byob.html).
 
@@ -130,7 +129,8 @@ Execute as etapas a seguir para migrar seu aplicativo.
   domain: mybluemix.net
   instances: 1
   memory: 512M</code></pre>
-<p>Para obter mais informações sobre as opções suportadas que podem ser usadas neste arquivo, consulte [Manifest do aplicativo](/docs/manageapps/depapps.html#appmanifest). 
+<p>Para obter mais informações sobre as opções suportadas que podem ser usadas neste arquivo, consulte [Manifest do aplicativo](/docs/manageapps/depapps.html#appmanifest).
+
 </p></li></ol>
 </li>
 
@@ -175,7 +175,7 @@ services = JSON.parse(ENV['VCAP_SERVICES'], :symbolize_names => true)
             end
           end
         end.flatten!.first
-```		
+```
 {:codeblock}
 
 Para assegurar que seu aplicativo possa ser executado em um ambiente local depois de modificar o aplicativo para o {{site.data.keyword.Bluemix_notm}}, verifique a presença da variável de ambiente VCAP_SERVICES, a qual está configurada para todos os aplicativos {{site.data.keyword.Bluemix_notm}} Cloud Foundry.
@@ -191,5 +191,5 @@ Para assegurar que seu aplicativo possa ser executado em um ambiente local depoi
 * [Virtual Machines](/docs/virtualmachines/vm_index.html)
 * [Introdução ao pipeline de entrega](/docs/services/DeliveryPipeline/index.html)
 * [Implementando apps com IBM Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html)
-* [O app de doze fatores](http://12factor.net/){:new_window}
-* [Atingindo o backend corporativo com o Bluemix Secure Gateway via console](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){:new_window}
+* [O app de 12 fatores ![Ícone de link externo](../icons/launch-glyph.svg)](http://12factor.net/){: new_window}
+* [Acessando o backend corporativo com o Bluemix Secure Gateway por meio do console ![Ícone de link externo](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -60,7 +60,7 @@ You can schedule the deletion of your objects by using either of the `X-Delete-A
 
 The `X-Delete-At` header takes an integer that represents the epoch time at which to delete the object. The `X-Delete_After` header takes an integer that represents the number of seconds after which the object is deleted.
 
-**Note:** The actual deletion of an object might not happen at the exact time indicated. However, the object will in fact expire at the specified time. At that time, the object is longer reachable. The actual deletion will take place the next time the swift-object-expirer daemon that is configured in your Swift cluster runs.
+**Note:** The actual deletion of an object might not happen at the exact time indicated. However, the object will expire at the specified time. At that time, the object is longer reachable. The actual deletion will take place the next time the swift-object-expirer daemon that is configured in your Swift cluster runs.
 
 #### To use Swift commands:
 

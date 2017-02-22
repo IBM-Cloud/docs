@@ -4,9 +4,9 @@
 
 copyright:
 
-  years: 2016
-lastupdated: "2016-09-27"
- 
+  years: 2016, 2017
+lastupdated: "2017-01-04"
+
 
 ---
 
@@ -422,7 +422,6 @@ Zunächst `package.json`:
 ```
 {
   "name": "my-action",
-  "version": "1.0.0",
   "main": "index.js",
   "dependencies" : {
     "left-pad" : "1.1.3"
@@ -445,6 +444,7 @@ exports.main = myAction;
 {: codeblock}
 
 Beachten Sie, dass die Aktion über `exports.main` zugänglich gemacht wird; der Aktionshandler selbst kann einen beliebigen Namen haben, solange er der üblichen Signatur für die Annahme und die Rückgabe eines Objekts (oder einem `Promise` eines Objekts) entspricht.
+Den Node.js-Konventionen entsprechend muss diese Datei entweder den Namen `index.js` erhalten oder Sie müssen den bevorzugten Dateinamen in der Eigenschaft `main` in package.json angeben.
 
 Gehen Sie wie folgt vor, um aus diesem Paket eine OpenWhisk-Aktion zu erstellen:
 
@@ -545,7 +545,7 @@ Verschiedene Dienstprogrammaktionen werden in einem Paket mit dem Namen `/whisk.
   
   Wie leicht zu erkennen ist, sind die Zeilen im Ergebnis sortiert.
 
-**Hinweis**: Parameter, die zwischen Aktionen in der Sequenz übergeben werden, sind explizit. Ausgenommen davon sind die Standardparameter.
+**Hinweis:** Parameter, die zwischen Aktionen in der Sequenz übergeben werden, sind explizit. Ausgenommen davon sind die Standardparameter.
 Daher sind die Parameter, die der Aktionssequenz übergeben werden, nur für die erste Aktion in der Sequenz verfügbar.
 Das Ergebnis der ersten Aktion in der Sequenz wird zum JSON-Eingabeobjekt für die zweite Aktion in der Sequenz usw.
 Das Objekt enthält keine Parameter, die ursprünglich an die Sequenz übergeben wurden, es sei denn, die erste Aktion enthält sie explizit in ihrem Ergebnis.
@@ -706,7 +706,7 @@ Aus dieser JAR-Datei können Sie folgendermaßen eine OpenWhisk-Aktion
 namens `helloJava` erstellen:
 
 ```
-wsk action create helloJava hello.jar
+wsk action create helloJava hello.jar --main Hello
 ```
 {: pre}
 
@@ -714,6 +714,11 @@ Bei Verwendung der Befehlszeile und einer Swift-Quellendatei
 (`.jar`) brauchen Sie nicht anzugeben, dass Sie eine
 Java-Aktion erstellen; das Tool
 bestimmt dies anhand der Dateierweiterung.
+
+Sie müssen den Namen der Hauptklasse mit `--main` angeben. Mit einer infrage kommenden
+Hauptklasse wird wie oben beschrieben eine statische `main`-Methode implementiert. Wenn sich die
+Klasse nicht im Standardpaket befindet, verwenden Sie den vollständig qualifizierten Java-Klassennamen,
+z. B. `--main com.example.MyMain`.
 
 Der Aktionsaufruf für Java-Aktionen stimmt mit dem für
 Swift- und JavaScript-Aktionen überein:
@@ -729,11 +734,6 @@ wsk action invoke --blocking --result helloJava --param name World
   }
 ```
 {: screen}
-
-**Hinweis:** Falls die JAR-Datei mehrere Klassen
-mit einer Methode 'main' enthält, die mit der erforderlichen Signatur
-übereinstimmt, verwendet das CLI-Tool die erste Klasse, die von `jar
--tf` gemeldet wird.
 
 
 ## Docker-Aktionen erstellen
@@ -802,10 +802,6 @@ In den nachfolgenden Anweisungen wird die Docker-Benutzer-ID `janesmith` und das
   {: pre}
   ```
   cd dockerSkeleton
-  ```
-  {: pre}
-  ```
-  chmod +x buildAndPush.sh
   ```
   {: pre}
   ```
@@ -916,3 +912,18 @@ Sie können eine Bereinigung durchführen, indem Sie Aktionen löschen, die nich
   actions
   ```
   {: screen}
+  
+## In der Aktionskomponente auf Aktionsmetadaten zugreifen
+
+Die Aktionsumgebung enthält mehrere Eigenschaften, die für die aktive Aktion spezifisch sind.
+Mit diesen kann die Aktion programmgestützt über die REST-API mit OpenWhisk-Assets arbeiten oder einen internen
+Alarm auslösen, wenn die Aktion kurz davor ist, das zugeteilte Zeitbudget aufzubrauchen.
+Auf die Eigenschaften kann über die Systemumgebung für alle unterstützten Laufzeiten zugegriffen werden:
+Node.js-, Python-, Swift-, Java- und Docker-Aktionen bei Verwendung des Docker-Gerüsts für OpenWhisk.
+
+* `__OW_API_HOST`: Der API-Host für die OpenWhisk-Bereitstellung, in der diese Aktion ausgeführt wird.
+* `__OW_API_KEY`: Der API-Schlüssel für das Subjekt, das die Aktion aufruft; bei diesem Schlüssel kann es sich um einen eingeschränkten API-Schlüssel handeln.
+* `__OW_NAMESPACE`: Der Namensbereich für die Aktivierung (*activation*) (möglicherweise nicht mit dem Namensbereich für die Aktion identisch).
+* `__OW_ACTION_NAME`: Der vollständig qualifizierte Name der aktiven Aktion.
+* `__OW_ACTIVATION_ID`: Die Aktivierungs-ID für diese aktive Aktionsinstanz.
+* `__OW_DEADLINE`: Der näherungsweise berechnete Zeitpunkt, an dem diese Aktion das gesamte Zeitkontingent aufgebraucht hat (in Epoch-Millisekunden).

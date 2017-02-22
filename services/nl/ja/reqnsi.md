@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-03"
+  years: 2016, 2017
+lastupdated: "2017-01-11"
 
 ---
 
@@ -38,10 +38,10 @@ lastupdated: "2016-11-03"
 
 |タイプ 	|説明	|サポートの詳細|
 |:------|:--------------|:--------------|
-|IBM	|IBM が提供するサービスで、一般出荷可能。	|IBM が提供する一般出荷可能なサービスの欠陥であると判定された問題は、サポート対象となります。サポートは、ユーザーが設定した重大度に基づいて提供されます。チケット重大度について詳しくは、『[サポートへのお問い合わせ](/docs/support/index.html#contacting-bluemix-support){: new_window}』を参照してください。|
+|IBM	|IBM が提供するサービスで、一般出荷可能。	|IBM が提供する一般出荷可能なサービスの欠陥であると判定された問題は、サポート対象となります。サポートは、ユーザーが設定した重大度に基づいて提供されます。チケット重大度について詳しくは、『[サポートへのお問い合わせ](/docs/support/index.html#contacting-bluemix-support)』を参照してください。|
 |サード・パーティー	|IBM 以外の企業が提供するサービス。	|サード・パーティー・サービスに対するサポートは、各サービス・プロバイダーから提供されます。IBM が問題を調査し、その問題がサード・パーティー・サービスの欠陥であると判定された場合、IBM は修正を提供する義務を負いません。IBM は、必要に応じてサード・パーティー・サービスのプロバイダーと分析内容を共有します。|
 |コミュニティー	|オープン・ソース・コミュニティーにより提供されるサービス。	|コミュニティー・サービスに対するサポートは、{{site.data.keyword.Bluemix_notm}} Developers Community から提供されます。IBM が問題を調査し、その問題がコミュニティー・サービスの欠陥であると判定された場合、IBM は修正を提供する義務を負いません。|
-|ベータ	|生産準備が未完了で、開発のトライアル・ステージにあるサービス。ベータ・サービスは、開発チームやマーケティング・チームがサービスを一般出荷可能にする前にそのサービスの価値を評価するのに役立ちます。	|IBM が提供するベータ・サービスの欠陥であると判定された問題はサポート対象となりますが、IBM は修正を提供する義務を負いません。また、該当する場合、問題チケットには重大度 3 または 4 が割り当てられます。チケット重大度については、『[サポートへのお問い合わせ](/docs/support/index.html#contacting-bluemix-support){: new_window}』を参照してください。|
+|ベータ	|生産準備が未完了で、開発のトライアル・ステージにあるサービス。ベータ・サービスは、開発チームやマーケティング・チームがサービスを一般出荷可能にする前にそのサービスの価値を評価するのに役立ちます。	|IBM が提供するベータ・サービスの欠陥であると判定された問題はサポート対象となりますが、IBM は修正を提供する義務を負いません。また、該当する場合、問題チケットには重大度 3 または 4 が割り当てられます。チケット重大度については、『[サポートへのお問い合わせ](/docs/support/index.html#contacting-bluemix-support)』を参照してください。|
 {: caption="Table 1. {{site.data.keyword.Bluemix_notm}} services support information" caption-side="top"}
 
 {{site.data.keyword.Bluemix_notm}} には、試すことができる試験的サービスもあります。使用可能な試験的サービス、ボイラープレート、およびランタイムをすべて表示するには、{{site.data.keyword.Bluemix_notm}} にログインした後、「カタログ」の終わりまでスクロールし、**「{{site.data.keyword.Bluemix_notm}} ラボ・カタログ ({{site.data.keyword.Bluemix_notm}} Lab Catalog)」**をクリックします。
@@ -111,14 +111,13 @@ lastupdated: "2016-11-03"
 |{{site.data.keyword.nlclassifierlshort}} 	|はい 		|はい 		|はい|
 |{{site.data.keyword.objectstorageshort}}	|はい		|いいえ		|いいえ|
 |{{site.data.keyword.personalityinsightsshort}}	|はい		|はい		|はい|
-|{{site.data.keyword.mobilepush}}Push		|はい		|はい		|いいえ|
+|{{site.data.keyword.mobilepush}}		|はい		|はい		|いいえ|
 |Push for iOS 8					|はい		|はい		|いいえ|
 |{{site.data.keyword.questionandanswershort}}	|はい		|はい		|はい|
 |{{site.data.keyword.rapidApps}}		|はい		|はい		|いいえ|
 |{{site.data.keyword.relationshipextractionshort}}	|はい	|はい		|はい|
 |{{site.data.keyword.retrieveandrankshort}}	|はい 		|はい 		|はい|
 |{{site.data.keyword.SecureGateway}}		|はい		|はい		|いいえ|
-|{{site.data.keyword.servicediscoveryshort}}	|はい		|いいえ		|いいえ|
 |{{site.data.keyword.sescashort}}		|はい		|はい		|はい|
 |{{site.data.keyword.ssofull}}			|はい		|いいえ		|いいえ|
 |{{site.data.keyword.speechtotextshort}}	|はい 		|はい	 	|はい|
@@ -152,7 +151,7 @@ lastupdated: "2016-11-03"
 
 * {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースから。{{site.data.keyword.Bluemix_notm}} カタログを表示します。
 * cf コマンド・ライン・インターフェースから。**cf marketplace** コマンドを使用します。
-* ご使用のアプリケーションから。[GET /v2/services Services API](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window} を使用します。
+* ご使用のアプリケーションから。[GET /v2/services Services API ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window} を使用します。
 
 アプリケーションを開発するときに、必要なサービスを選択できます。選択すると、{{site.data.keyword.Bluemix_notm}} はサービスと対話し、サービスのリソースをプロビジョンするのに必要な手順を実行します。提供のプロセスは、異なるタイプのサービスに対しては異なる可能性があります。例えば、データベース・サービスはデータベースを作成し、モバイル・アプリケーションのプッシュ通知サービスは構成情報を生成します。
 
@@ -196,7 +195,7 @@ cf create-service service_name service_plan service_instance
 cf bind-service appname service_instance
     ```
 
-サービス・インスタンスは、同じスペースまたは組織内のアプリ・インスタンスにのみバインド可能です。ただし、外部アプリと同じように他のスペースまたは組織からサービス・インスタンスを使用できます。バインディングを作成する代わりに、資格情報を使用してアプリ・インスタンスを直接構成します。外部アプリが {{site.data.keyword.Bluemix_notm}} サービスを使用する方法について詳しくは、[『外部アプリが {{site.data.keyword.Bluemix_notm}} サービスを使用できるようにする』](#accser_external){: new_window}を参照してください。
+サービス・インスタンスは、同じスペースまたは組織内のアプリ・インスタンスにのみバインド可能です。ただし、外部アプリと同じように他のスペースまたは組織からサービス・インスタンスを使用できます。バインディングを作成する代わりに、資格情報を使用してアプリ・インスタンスを直接構成します。外部アプリが {{site.data.keyword.Bluemix_notm}} サービスを使用する方法について詳しくは、[『外部アプリが {{site.data.keyword.Bluemix_notm}} サービスを使用できるようにする』](#accser_external)を参照してください。
 
 
 ## サービスと対話するようアプリケーションを構成する
@@ -291,7 +290,7 @@ cf uups testups2 -l syslog://example2.com
 
 ある地域でサービス・インスタンスを作成してアプリにバインドした場合、以下のいずれかの方法でそのサービス・インスタンスを他の地域で利用できます。
 
-  * サービス資格情報を使用して、アプリ・インスタンスを直接構成します。詳しくは、[『外部アプリが {{site.data.keyword.Bluemix_notm}} サービスを使用できるようにする』](#accser_external){: new_window}を参照してください。
+  * サービス資格情報を使用して、アプリ・インスタンスを直接構成します。詳しくは、[『外部アプリが {{site.data.keyword.Bluemix_notm}} サービスを使用できるようにする』](#accser_external)を参照してください。
   * ブリッジとしてユーザー提供サービスを作成します。
 
 	サービス・インスタンスを利用する地域で開始すると想定します。他の地域にあるサービス・インスタンスを利用するには、以下のステップを実行します。
@@ -305,7 +304,7 @@ cf uups testups2 -l syslog://example2.com
 
       3. サービス・インスタンスを利用する地域に切り替えます。{{site.data.keyword.Bluemix_notm}} のメニュー・バーで、**「地域」**を展開するか、または**「地域」**アイコンをクリックして、サービス・インスタンスを利用する地域を選択します。
 
-      4. *VCAP_SERVICES* 環境変数から記録した資格情報と接続パラメーターを使用して、ユーザー提供のサービス・インスタンスを作成します。ユーザー提供のサービス・インスタンスを作成する方法について詳しくは、[ユーザー提供のサービス・インスタンスの作成](#user_provide_services){: new_window} を参照してください。
+      4. *VCAP_SERVICES* 環境変数から記録した資格情報と接続パラメーターを使用して、ユーザー提供のサービス・インスタンスを作成します。ユーザー提供のサービス・インスタンスを作成する方法について詳しくは、[ユーザー提供のサービス・インスタンスの作成](#user_provide_services) を参照してください。
 
       5. 以下のコマンドを使用して、ユーザー提供のサービス・インスタンスをアプリにバインドします。
 
