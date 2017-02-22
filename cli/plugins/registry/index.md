@@ -18,7 +18,7 @@ lastupdated: "2017-02-01"
 # {{site.data.keyword.registrylong}} CLI
 {: #containerregcli}
 
-The {{site.data.keyword.registrylong}} CLI is a plug-in that lets you manage your registry resources, such as namespaces, images, and quotas, across your org.
+The {{site.data.keyword.registrylong}} CLI is a plug-in that lets you manage your registry resources, such as namespaces and images, across your org.
 {: shortdesc}
 
 **Prerequisites**
@@ -49,7 +49,7 @@ The {{site.data.keyword.registrylong}} CLI is a plug-in that lets you manage you
 
  
 ## bx cr login
-If Docker is installed, this command runs `Docker login` against the registry. `Docker login` is required to be able to `Docker push` or `Docker pull` to the registry. This command is not required to run other `bx cr` commands. If Docker is not installed, this command returns an error message.
+If Docker is installed, this command runs `docker login` against the registry. docker login` is required to be able to `docker push` or `docker pull` to the registry. This command is not required to run other `bx cr` commands. If Docker is not installed, this command returns an error message.
 
 ```
 bx cr login [--target REGISTRY]
@@ -105,20 +105,18 @@ bx cr namespace-list
 View all images in your {{site.data.keyword.Bluemix_short}} org. You can also run this command as `bx cr images`.
 
 ```
- bx cr image-list [-a, --all] [--no-trunc] [-q, --quiet] [--public] [--format FORMAT]
+ bx cr image-list [--no-trunc] [-q, --quiet] [--ibm-list] [--format FORMAT]
 ```
 {: codeblock}
 
 **Parameters**
 <dl>
-<dt>-a, --all</dt>
-<dd>(Optional) Includes all of the image layers for each image in your org's registry, not just the most recent layer.</dd>
 <dt>--no-trunc</dt>
 <dd>(Optional) Do not truncate the output.</dd>
 <dt>-q, --quiet</dt>
 <dd>(Optional) Displays a unique identifier for the image in the format: `repository:tag`.</dd>
-<dt>--public</dt>
-<dd>(Optional) Only display public images.</dd>
+<dt>--ibm-list</dt>
+<dd>(Optional) Includes IBM-provided public images in the output. Without this option, private images are listed only.</dd>
 <dt>--format FORMAT</dt>
 <dd>(Optional) Format the output using a Go template. Strings: `Tag`, `Digest`, `Vulnerable`, `Namespace`. Integer (64 bit): `Created`, `Size`.</dd>
 </dl>
