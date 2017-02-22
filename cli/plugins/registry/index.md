@@ -6,7 +6,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-02-01"
+lastupdated: "2017-02-22"
 
 
 ---
@@ -103,7 +103,7 @@ bx cr namespace-list
 View all images in your {{site.data.keyword.Bluemix_short}} org.
 
 ```
- bx cr image-list [-a, --all] [--no-trunc] [-q, --quiet] [--public] [--digests] [--format FORMAT]
+ bx cr image-list [-a, --all] [--no-trunc] [-q, --quiet] [--public] [--format FORMAT]
 ```
 {: codeblock}
 
@@ -114,13 +114,9 @@ View all images in your {{site.data.keyword.Bluemix_short}} org.
 <dt>--no-trunc</dt>
 <dd>(Optional) Do not truncate the output.</dd>
 <dt>-q, --quiet</dt>
-<dd>(Optional) Display the numeric IDs only.</dd>
-<dt>--public</dt>
-<dd>(Optional) Only display public images.</dd>
-<dt>--digests</dt>
-<dd>(Optional) Show digests.</dd>
+<dd>(Optional) Displays `repo:tag`, which is the unique identifier for the image.</dd>
 <dt>--format FORMAT</dt>
-<dd>(Optional) Format the output using a Go template, as described in https://golang.org/pkg/html/template/.</dd>
+<dd>(Optional) Format the output using a Go template. Strings: `Tag`, `Digest`, `Vulnerable`, `Namespace`. Integer (64 bit): `Created`, `Size`.</dd>
 </dl>
 
 ## bx cr image-rm
