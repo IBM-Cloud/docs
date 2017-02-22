@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-16"
+lastupdated: "2017-02-17"
 
 ---
 
@@ -24,7 +24,7 @@ For example, you might create a rule to ensure that when the device is dropped o
 {: #byb}
 Make sure that the device properties that you want to use as conditions in your rules have been mapped to schemas. See [Connecting devices](iotplatform_task.html) and [Creating schemas](im_schemas.html) for more information.
 
-Also, review the recipe [Using Rules and Actions with {{site.data.keyword.iot_short}} Cloud Analytics](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/) to understand the rules and actions that are used in Cloud Analytics.
+Also, review the recipe [Using Rules and Actions with {{site.data.keyword.iot_short}} Cloud Analytics ![External link icon](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/){: new_window} to understand the rules and actions that are used in Cloud Analytics.
 
 ## Managing rules and actions  
 {: #managing_rules}
@@ -160,7 +160,7 @@ To create the email action:
 ### IFTTT  
 {: #ifttt}
 
-Use the IFTTT action to trigger an IFTTT recipe when a rule is triggered. For more information about triggering actions as IFTTT recipes, see [Maker Channel](https://ifttt.com/maker) on the IFTTT site.
+Use the IFTTT action to trigger an IFTTT recipe when a rule is triggered. For more information about triggering actions as IFTTT recipes, see [Maker Channel ![External link icon](../../icons/launch-glyph.svg)](https://ifttt.com/maker){: new_window} on the IFTTT site.
 
 Example: [Use IFTTT to post a Trello card](#iftttex).
 
@@ -229,7 +229,7 @@ Body | By default, the body field is pre-populated with all variables that are l
 In this example, the action is configured to use Node-RED with a Twilio node to send a text message to the service engineer.
 
 To create the send text message action:
-1. In Twilio, locate or create a new Messaging Service to use to send text messages from your Twilio account. For information, see the [Twilio documentation](https://www.twilio.com/help).
+1. In Twilio, locate or create a new Messaging Service to use to send text messages from your Twilio account. For information, see the [Twilio documentation ![External link icon](../../icons/launch-glyph.svg)](https://www.twilio.com/help){: new_window}.
 2. In Bluemix, set up and access your Node-RED account with the Node-RED URL `http://mynodered.mybluemix.net/red/`. For more information, see the [Creating apps with Node-RED Starter](https://www.ng.bluemix.net/docs/starters/Node-RED/nodered.html) topic in the Bluemix documentation.
 3. In Node-RED, create a simple two node flow, such as [RTI-alert]->[SMS].  
 Where the first node is an http node, and the second is a twilio node.
@@ -290,7 +290,7 @@ Body | The body of the webhook call.  Available for the OPTIONS, PATCH, PUT, POS
 In this example, the action is configured to use a webhook to post a message to the #service-requests Slack channel.
 
 To create the post to slack action:
-1. In Slack, set up the Incoming Webhooks integration for the channel #service-requests. Make a note of the webhooks URL. For more information, see the [Slack documentation](https://api.slack.com/incoming-webhooks).
+1. In Slack, set up the Incoming Webhooks integration for the channel #service-requests. Make a note of the webhooks URL. For more information, see the [Slack documentation ![External link icon](../../icons/launch-glyph.svg)](https://api.slack.com/incoming-webhooks){: new_window}.
 2. In the {{site.data.keyword.iot_short}} dashboard, go to **Rules > Actions** and create a new action that has the following parameters:
  - Name - `Post service request on Slack`
  - Type - **Webhook**
@@ -301,7 +301,7 @@ To create the post to slack action:
  ```json
  {"text":"*A device needs your attention*\n Time: {{timestamp}}\n {{site.data.keyword.iot_short}} instance: {{tenantId}}\n Device: {{deviceId}}\n Rule: {{ruleName}}\n Description: {{ruleDescription}}\n Condition: {{ruleCondition}}\n Raw device message: \n{{message}}"}
  ```  
-  **Important:** The Slack webhook must at a minimum contain the "text" field. For information, see [Incoming Webhooks](https://api.slack.com/incoming-webhooks "Slack documentation") in the Slack documentation.
+  **Important:** The Slack webhook must at a minimum contain the "text" field. For information, see [Incoming Webhooks ![External link icon](../icons/launch-glyph.svg)](https://api.slack.com/incoming-webhooks "Slack documentation"){: new_window} in the Slack documentation.
 11. Click **Finish** to save the action.
 
 
@@ -328,12 +328,12 @@ Variable | Description
 
 The following recipes describe how to use Cloud Analytics features for different use cases:
 
-- [Real Time Data Analysis Using IBM Watson™ IoT Platform Analytics](https://developer.ibm.com/recipes/tutorials/real-time-data-analysis-using-ibm-watson-iot-platform-analytics/)
+- [Real Time Data Analysis Using IBM Watson™ IoT Platform Analytics ![External link icon](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/real-time-data-analysis-using-ibm-watson-iot-platform-analytics/){: new_window}
 
-- [Predictive Analytics on IOT Sample Data](https://developer.ibm.com/recipes/tutorials/predictive-analytics-on-iot-sample-data/)
+- [Predictive Analytics on IOT Sample Data ![External link icon](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/predictive-analytics-on-iot-sample-data/){: new_window}
 
-- [Device List Card SIMPLIFIES Real Time Device Monitoring on WIoTP Dashboard](https://developer.ibm.com/recipes/tutorials/device-list-card-simplifies-real-time-device-monitoring-on-wiotp-dashboard/)
+- [Device List Card SIMPLIFIES Real Time Device Monitoring on WIoTP Dashboard ![External link icon](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/device-list-card-simplifies-real-time-device-monitoring-on-wiotp-dashboard/){: new_window}
 
-- [Perform Actions in IBM Watson IoT Platform Cloud Analytics](https://developer.ibm.com/recipes/tutorials/perform-actions-in-ibm-watson-iot-platform-cloud-analytics/)
+- [Perform Actions in IBM Watson IoT Platform Cloud Analytics ![External link icon](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/perform-actions-in-ibm-watson-iot-platform-cloud-analytics/){: new_window}
 
-- [Use IBM Data Science Experience to detect time series anomalies](https://developer.ibm.com/recipes/tutorials/use-ibm-data-science-experience-to-detect-time-series-anomalies/)
+- [Use IBM Data Science Experience to detect time series anomalies ![External link icon](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/use-ibm-data-science-experience-to-detect-time-series-anomalies/){: new_window}

@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016, 2017
+lastupdated: "2017-02-22"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # Configuring security policies
 {: #set_up_policies.md}
-Last updated: 2017-02-02
-{: .last-updated}
 
 A security analyst can configure connection security policies and blacklists or whitelists.
 
@@ -30,10 +29,8 @@ You can set the default security level that is applied to all devices. You can t
     - TLS with Client Certificate Authentication
     - TLS with Token and Client Certificate Authentication
     - TLS with Client Certificate or Token
-
-Based on the security level you select, the table shows the number of devices that are impacted, and the predicted level of compliance at the set security level.
-
-3. If necessary, click **Add Custom Connection** and select the device types and custom security levels. The predicted compliance value is updated to reflect changes resulting from the custom security settings.
+3. If necessary, click **Add Custom Connection** and select the device types and custom security levels. 
+3. Click **Refresh Compliance**. Based on the security level you select, the refreshed table shows the number of devices that are impacted, and the predicted level of compliance at the set security level.
 4. Click **Save**.  
 
 ## Configuring blacklists and whitelists
@@ -53,6 +50,7 @@ Restrict access to the server from certain devices by using a blacklist or use a
 4. In the **Add to Blacklist** window, click **Save**.
 5. Review the list of blocked devices. Any devices that are a part of the list, based on IP address, CIDR, or country, are not able to connect to the {{site.data.keyword.iot_short_notm}} server.
 6. Click **Save**.
+7. Enable the blacklist. If you had a whitelist enabled, it becomes disabled.
 
 ### Configure a whitelist
 {: #config_whitelist}
@@ -66,3 +64,4 @@ Restrict access to the server from certain devices by using a blacklist or use a
 4. In the **Add to Whitelist** window, click **Save**.
 5. Review the list of allowed devices. Any devices that are a part of the list, based on IP address, CIDR, or country, are  able to connect to the {{site.data.keyword.iot_short_notm}} server.
 6. Click **Save**.
+7. Enable the whitelist. If you had a blacklist enabled, it becomes disabled.

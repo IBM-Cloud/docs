@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2016-12-01"
+lastupdated: "2016-02-17"
 
 ---
 
@@ -38,11 +38,9 @@ The {{site.data.keyword.iot_short_notm}} HTTP REST API supports the following ca
 ## Accessing the HTTP REST API documentation
 {: #api_link}
 
-To access the {{site.data.keyword.iot_short_notm}} HTTP REST API documentation and obtain more information about how to build and customize your applications, go to  https://docs.internetofthings.ibmcloud.com/swagger/v0002.html.
+To access the {{site.data.keyword.iot_short_notm}} HTTP REST API documentation and obtain more information about how to build and customize your applications, go to the following URL:  [https://docs.internetofthings.ibmcloud.com/swagger/v0002.html](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html)
 
 The only version of the {{site.data.keyword.iot_short_notm}} HTTP REST API that is supported is version 2. Ensure that your {{site.data.keyword.iot_short_notm}} solutions are using version 2.
-
-
 
 # HTTP REST messaging API for applications
 {: #rest_messaging_api}
@@ -72,8 +70,8 @@ In addition to using the MQTT messaging protocol, you can also configure your ap
 
 If you are connecting a device or application to the Quickstart service, replace **orgId** with the string 'quickstart'.
 
-**Notes:** 
-- While applications can reuse an HTTP connection to post events or commands to different devices, the authorization HTTP header cannot be changed. 
+**Notes:**
+- While applications can reuse an HTTP connection to post events or commands to different devices, the authorization HTTP header cannot be changed.
 - Port 443, the default SSL port, can also be specified for secure HTTP API calls.
 
 ### Authentication

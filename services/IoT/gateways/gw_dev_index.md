@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2016-11-22"
+lastupdated: "2017-02-17"
 
 ---
 
@@ -26,13 +26,20 @@ Client libraries for developing gateways that can connect to {{site.data.keyword
 
 |Client library |Link to library and further documentation
 |:---|:---
-|C++| https://github.com/ibm-watson-iot/iot-cpp
-|C#| https://github.com/ibm-watson-iot/iot-csharp
-|Embedded C| https://github.com/ibm-watson-iot/iot-embeddedc
-|Java™|https://github.com/ibm-watson-iot/iot-java
-|mBed C++|https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/
-|Node.js|https://github.com/ibm-watson-iot/iot-nodejs
-|Node-RED|https://github.com/ibm-watson-iot/iot-nodered
-|Python|https://github.com/ibm-watson-iot/iot-python
+|C++|[https://github.com/ibm-watson-iot/iot-cpp](https://github.com/ibm-watson-iot/iot-cpp)
+|C#|[https://github.com/ibm-watson-iot/iot-csharp](https://github.com/ibm-watson-iot/iot-csharp)
+|Embedded C| [https://github.com/ibm-watson-iot/iot-embeddedc](https://github.com/ibm-watson-iot/iot-embeddedc)
+|Java™|[https://github.com/ibm-watson-iot/iot-java](https://github.com/ibm-watson-iot/iot-java)
+|mBed C++|[https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/)
+|Node.js|[https://github.com/ibm-watson-iot/iot-nodejs](https://github.com/ibm-watson-iot/iot-nodejs)
+|Node-RED|[https://github.com/ibm-watson-iot/iot-nodered](https://github.com/ibm-watson-iot/iot-nodered)
+|Python|[https://github.com/ibm-watson-iot/iot-python](https://github.com/ibm-watson-iot/iot-python)
 
 For more information and links to the client libraries that are available, see also [Client libraries for {{site.data.keyword.iot_short_notm}} development](../iot_platform_client_lib.html).
+
+## Edge Analytics
+{: #eaa_community}
+
+The {{site.data.keyword.iot_short_notm}} Edge Analytics feature enables you to run {{site.data.keyword.iot_short_notm}} Analytics on a gateway device. Use Edge Analytics to bring analytics to analyze and respond to data collected at the edge of the network. You can also send device data to {{site.data.keyword.iot_short_notm}} for additional analytic processing, dashboard visualization, as input to other analytics, or to be stored in a cloud-based historian repository.
+
+You can download the Edge Analytics SDK from the [IBM Edge Analytics community page](https://www.ibm.com/developerworks/community/groups/service/html/communitystart?communityUuid=3df173af-0c21-4b9c-9fd1-e8e5561ef460&ftHelpTip=true). The SDK includes the SDK JAR file, javadoc, sample code, recipe links, and README files. In the community, you can also watch videos to get up and running with Edge Analytics, and you can use the community forum to ask questions.

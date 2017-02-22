@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-07"
+lastupdated: "2017-02-22"
 
 ---
 
@@ -20,11 +20,13 @@ The Risk and Security Management add-on enables organizations to enhance {{site.
 ## Connection security policy
 {: #connect_policy}
 
-The Connection Security policy enforces how devices connect to the platform. You can set up default connection policies for all device types, as well as custom settings for specific device types. The policy can be set to allow unencrypted connections, to enforce only transport layer security (TLS) connections, and to enable devices to authenticate with client-side certificates. When client-side certificates are being used, the security policy provides an additional option of using only the certificate for client authentication or using a combination of both a client certificate and client ID and authentication token pair.
+The Connection Security policy enforces how devices connect to the platform and are used with Free and Advanced security plans. You can set up default connection policies for all device types, as well as custom settings for specific device types. The policy can be set to allow unencrypted connections, to enforce only transport layer security (TLS) connections, and to enable devices to authenticate with client-side certificates.
 
-For information about how to configure connection security policies, see [Configuring security policies](set_up_policies.html).
+If you use a standard security plan, connection policies are not available. For information about how to configure connection security policies, see [Configuring security policies](set_up_policies.html).
 
 Connection security can also be set up for clients to use their own server-side certificate instead of the default certificate that is provided. This can be useful, for example, if the users’ devices will be authenticating to the server during the TLS handshake. In this initial release of Risk and Security Management the domain name of the {{site.data.keyword.iot_short_notm}} server cannot not be changed and must be used as-is in the server certificate.
+
+
 
 ## Client certificates
 {: #certificates}

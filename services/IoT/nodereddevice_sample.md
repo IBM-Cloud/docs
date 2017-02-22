@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-08-26"
+lastupdated: "2017-02-17"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2016-08-26"
 Use Node-RED to create a device simulator and send simulated device data to your {{site.data.keyword.iot_full}} organization.  
 {:shortdesc}
 
-Node-RED is a tool for wiring together hardware devices, APIs and online services in new and interesting ways. For more information, see the [Node-RED](http://nodered.org/) web site.  
+Node-RED is a tool for wiring together hardware devices, APIs and online services in new and interesting ways. For more information, see the [Node-RED ![External link icon](../../icons/launch-glyph.svg)](http://nodered.org/){: new_window} web site.  
 
 You can run your Node-RED instance in your own environment or use it as a {{site.data.keyword.Bluemix_notm}} application. The following process includes the instructions for {{site.data.keyword.Bluemix_notm}}.
 
@@ -26,7 +26,7 @@ To create and connect the Node-RED device simulator:
    Use the device simulator to send MQTT device messages to {{site.data.keyword.iot_short_notm}}. The device simulator simulated sending data for a freight container to an MQTT broker such as {{site.data.keyword.iot_short_notm}}.
     1. Log in to {{site.data.keyword.Bluemix_notm}} at: https://console.ng.bluemix.net
     2. Select the **Catalog** tab.
-    3. Locate the Boilerplates section of the service catalog and click  **Node-RED Starter Community BETA**. **Tip:** Click  [here](https://console.ng.bluemix.net/catalog/starters/node-red-starter/) to go directly to the Node-RED Starter page.
+    3. Locate the Boilerplates section of the service catalog and click  **Node-RED Starter Community BETA**. **Tip:** Click  [here ![External link icon](../../icons/launch-glyph.svg)](https://console.ng.bluemix.net/catalog/starters/node-red-starter/){: new_window} to go directly to the Node-RED Starter page.
     4. On the Node-RED Starter page, select the space where you want to deploy Node-RED, verify the Create an app selections, and click **Create** to add Node-RED to your Bluemix organization.  
     For example:  
      - Space: dev
