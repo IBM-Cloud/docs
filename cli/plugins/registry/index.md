@@ -116,7 +116,7 @@ View all images in your {{site.data.keyword.Bluemix_short}} org. You can also ru
 <dt>--no-trunc</dt>
 <dd>(Optional) Do not truncate the output.</dd>
 <dt>-q, --quiet</dt>
-<dd>(Optional) Displays `repo:tag`, which is the unique identifier for the image.</dd>
+<dd>(Optional) Displays a unique identifier for the image in the format: `repository:tag`.</dd>
 <dt>--public</dt>
 <dd>(Optional) Only display public images.</dd>
 <dt>--format FORMAT</dt>
