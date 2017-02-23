@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-02-10"
+lastupdated: "2017-02-23"
 
 ---
 {:new_window: target="_blank"}
@@ -76,7 +76,7 @@ Service credentials are used to provide authentication and security for the serv
 
 
 
-#### To add credentials by using cURL commands in the CLI:
+## To add credentials by using cURL commands in the CLI:
 
 1. If you are not logged in to {{site.data.keyword.Bluemix_notm}}, log in as a user with a developer role. You must be located within the space of the service instance you want to manage.
 

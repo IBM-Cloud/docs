@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-02-10"
+lastupdated: "2017-02-23"
 
 ---
 {:new_window: target="_blank"}
@@ -26,7 +26,7 @@ You can upload dynamic large objects in two ways:
   * Have the Swift client handle everything automatically
   * Use the Swift API to do it yourself
 
-#### Using the Swift client to handle dynamic large objects
+### Using the Swift client to handle dynamic large objects
 
 The Swift client uses the `-segment-size` parameter to break down your object into smaller pieces. The client creates a new container with the name of the container you want to upload the files to and adds a suffix with the segment number (`<container_name>_segments`). Segments are uploaded in parallel. After all of the segments are uploaded, they are downloaded as one concatenated object to a manifest file with the original file name.
 
@@ -36,7 +36,7 @@ The Swift client uses the `-segment-size` parameter to break down your object in
     ```
     {: pre}
 
-#### Using the Swift API to handle Dynamic Large Objects
+### Using the Swift API to handle Dynamic Large Objects
 
 You can segment the objects so that they are 5 GB or less yourself, and then upload them through the Swift API.
 
@@ -98,7 +98,7 @@ The manifest file is a JSON document that provides details of the segments and m
 
 
 
-#### To upload large files
+### To upload large files
 
 1. Run the following command to upload the segments. Throttling for uploads starts after the 10th segment is uploaded, and increases the upload time considerably.  
 
@@ -147,7 +147,7 @@ The manifest file is a JSON document that provides details of the segments and m
     {: pre}
 
 
-#### Working with static large objects
+## Working with static large objects
 
 You can manage your files by using the following commands.
 

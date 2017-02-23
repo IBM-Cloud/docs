@@ -2,36 +2,29 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-02-11"
+lastupdated: "2017-02-23"
 
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
 
-
 # Getting started with {{site.data.keyword.objectstorageshort}} {: #getting-started-with-object-storage}
 
 
-{{site.data.keyword.objectstoragefull}} provides unstructured cloud data storage. You can store and access your content as well as interactively compose and connect to apps and services.
+{{site.data.keyword.objectstoragefull}} provides unstructured cloud data storage. You can store and access your content, as well as interactively compose and connect to apps and services.
 {: shortdesc}
 
-Some common use cases for the {{site.data.keyword.objectstorageshort}} service are:
 
-* Backing up volume data from your instances
-* Using as an intermediary location when you transfer large amounts of data
-* Transferring data between environments that are not directly connected
-* Acting as a central repository
+1. Provision your service instance from the {{site.data.keyword.Bluemix_notm}} catalog. Configure your instance and click **Create**. If you initially choose the **Leave Unbound** option for the **App** field, you can bind the service instance to your {{site.data.keyword.Bluemix_notm}} app later.
 
-
-{{site.data.keyword.Bluemix_notm}} Public {{site.data.keyword.objectstorageshort}} provides you with access to a fully provisioned Swift {{site.data.keyword.objectstorageshort}} account to manage your data. Provider side encryption is not provided.
-
-
-1.	Provision your service instance from the {{site.data.keyword.Bluemix_notm}} catalog. Configure your instance and click **Create**. If you initially choose the **Leave Unbound** option for the **App** field, you can still bind the service instance to your {{site.data.keyword.Bluemix_notm}} app later.
 2. In your service instance dashboard, create a container to start storing objects.
-3. Add a file to your container from the **Actions** drop-down menu.
+
+3. Add a file to your container by using the **Actions** menu.
+
 4. To test access to your objects, click **Download** and review the file.
-5. When you're ready to connect your instance to an application, set up your service credentials and [bind the service](/docs/services/reqnsi.html#add_service).
+
+5. When you're ready, [bind the service](/docs/services/reqnsi.html#add_service) to an application.
 
 
 

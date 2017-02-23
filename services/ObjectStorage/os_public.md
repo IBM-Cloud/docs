@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-02-10"
+lastupdated: "2017-02-23"
 
 ---
 {:new_window: target="_blank"}
@@ -22,4 +22,4 @@ To get started with Object Storage, complete the following tasks:
 
 Now, you're ready to manage [objects](/docs/services/ObjectStorage/os_managing.html) and [access](/docs/services/ObjectStorage/os_security.html).
 
-To learn more about how the service works, see [About Object Storage](/docs/services/ObjectStorage/objectstorage_overview.html).
+To learn more about how the service works, see [About Object Storage](/docs/services/ObjectStorage/os_works_public.html).
