@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-21"
+  years: 2016, 2017
+lastupdated: "2017-02-03"
 
 ---
 
@@ -15,8 +15,6 @@ lastupdated: "2016-10-21"
 
 # {{site.data.keyword.iot_short_notm}}-Sicherheit
 {: #sec-index}
-Letzte Aktualisierung: 21. Oktober 2016
-{: .last-updated}
 
 In {{site.data.keyword.iot_full}}, das in der Cloud gehostet wird, ist Sicherheit als wichtiger Aspekt der Architektur integriert.
 {: shortdesc}
@@ -33,7 +31,7 @@ Im folgenden Dokument werden einige häufig gestellte Fragen zum Schutz der Date
 
 {{site.data.keyword.iot_short_notm}} wird innerhalb der {{site.data.keyword.Bluemix_notm}}-Plattform ausgeführt und gründet sich in Bezug auf Zugriff und Konnektivität daher sowohl auf {{site.data.keyword.Bluemix_notm}} als auch auf {{site.data.keyword.BluSoftlayer_full}}. Durch die Abhängigkeit von {{site.data.keyword.Bluemix_notm}} und {{site.data.keyword.BluSoftlayer}} ist die Sicherheit und Zuverlässigkeit von {{site.data.keyword.Bluemix_notm}} und {{site.data.keyword.BluSoftlayer}} wichtig für Benutzer von {{site.data.keyword.iot_short_notm}}.
 
-Weitere Details zur Sicherheit von {{site.data.keyword.Bluemix_notm}} finden Sie in [Sicherheit der {{site.data.keyword.Bluemix_notm}}-Plattform](https://console.ng.bluemix.net/docs/security/index.html#platform-security).
+Weitere Details zur Sicherheit von {{site.data.keyword.Bluemix_notm}} finden Sie in [Sicherheit der {{site.data.keyword.Bluemix_notm}}-Plattform ![Symbol für externen Link](../../../../icons/launch-glyph.svg)](https://console.ng.bluemix.net/docs/security/index.html#platform-security){: new_window}.
 
 ## Einhaltung von Sicherheitsbestimmungen in {{site.data.keyword.iot_short_notm}}
 {: #compliance}  
@@ -73,7 +71,7 @@ Verbundene Geräte verwenden eine Kombination aus Client-ID und dem Authentifizi
 
 ![Abbildung](connectivity_platform.svg)
 
-Weitere Informationen zu den Anforderungen für TLS und die Cipher-Suite finden Sie im Abschnitt [TLS-Anforderungen](https://console.ng.bluemix.net/docs/services/IoT/reference/security/connect_devices_apps_gw.html#tls_requirements) in der Dokumentation `Verbindungen für Anwendungen, Geräte und Gateways in Watson IoT Platform`.
+Weitere Informationen zu den Anforderungen für TLS und Cipher-Suite finden Sie im Abschnitt [TLS-Anforderungen ![Symbol für externen Link](../../../../icons/launch-glyph.svg)](https://console.ng.bluemix.net/docs/services/IoT/reference/security/connect_devices_apps_gw.html#tls_requirements){: new_window} in der Dokumentation `Verbindungen für Anwendungen, Geräte und Gateways in Watson IoT Platform`.
 
 ## Wie verhindern wir, dass es zwischen Geräten Datenlecks gibt?
 {: #prevent-leak-devices}
@@ -106,8 +104,8 @@ Der Topic-Bereich, in dem Geräte und Anwendungen operieren, befindet sich berei
 ## Zugehörige Links
 {: #general}
 * [Einführung in {{site.data.keyword.iot_short_notm}}](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-* [Sicherheit in {{site.data.keyword.Bluemix_notm}}](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
-* [{{site.data.keyword.Bluemix_notm}}-Plattformsicherheit](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
+* [{{site.data.keyword.Bluemix_notm}} - Sicherheit ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.ng.bluemix.net/docs/security/index.html#security "Symbol für externen Link"){:new_window}
+* [ Sicherheit für die {{site.data.keyword.Bluemix_notm}}-Plattform ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.ng.bluemix.net/docs/security/index.html#platform-security "Symbol für externen Link"){:new_window}
 * [{{site.data.keyword.Bluemix_notm}} - Einhaltung von Sicherheitsbestimmungen](https://console.ng.bluemix.net/docs/security/index.html#compliance){:new_window}
-* [Sicherheit in {{site.data.keyword.BluSoftlayer}}](http://www.softlayer.com/security){:new_window}
-* [{{site.data.keyword.BluSoftlayer}} - Compliance](http://www.softlayer.com/compliance){:new_window}
+* [{{site.data.keyword.BluSoftlayer}} - Sicherheit ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](http://www.softlayer.com/security "Symbol für externen Link"){:new_window}
+* [{{site.data.keyword.BluSoftlayer}} - Compliance ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](http://www.softlayer.com/compliance "Symbol für externen Link"){:new_window}

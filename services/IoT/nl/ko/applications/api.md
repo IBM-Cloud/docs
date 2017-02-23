@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-02-21"
+  years: 2015, 2016, 2017
+lastupdated: "2016-12-01"
 
 ---
 
@@ -35,10 +35,10 @@ lastupdated: "2017-02-21"
 - 디바이스 이벤트 공개(베타)
 - 서비스 상태 조회(조직별 서비스 상태 검색)
 
-## HTTP REST API에 액세스
+## HTTP REST API 문서에 액세스
 {: #api_link}
 
-{{site.data.keyword.iot_short_notm}} HTTP REST API에 액세스하고 애플리케이션 빌드 및 사용자 정의 방법에 대한 자세한 정보를 가져오려면 https://docs.internetofthings.ibmcloud.com/swagger/v0002.html 이동하십시오. 
+{{site.data.keyword.iot_short_notm}} HTTP REST API 문서에 액세스하여 애플리케이션을 빌드하고 사용자 정의하는 방법에 대한 자세한 정보를 얻으려면 https://docs.internetofthings.ibmcloud.com/swagger/v0002.html로 이동하십시오. 
 
 지원되는 {{site.data.keyword.iot_short_notm}} HTTP REST API의 유일한 버전은 버전 2입니다. {{site.data.keyword.iot_short_notm}} 솔루션이 버전 2를 사용 중인지 확인하십시오. 
 
@@ -60,6 +60,8 @@ MQTT 메시징 프로토콜의 사용과 함께, 다음 HTTP REST API 명령 중
 <pre class="pre">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/application/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
 {: codeblock}
 
+**참고:** 기본 SSL 포트인 443 포트가 보안 HTTP API 호출에 대해 지정될 수도 있습니다. 
+
 ### 비보안 명령 POST 요청
 <pre class="pre">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/application/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">eventId</var></pre>
 {: codeblock}
@@ -70,7 +72,9 @@ MQTT 메시징 프로토콜의 사용과 함께, 다음 HTTP REST API 명령 중
 
 디바이스 또는 애플리케이션을 Quickstart 서비스에 연결 중인 경우에는 **orgId**를 'quickstart' 문자열로 대체하십시오. 
 
-참고: 애플리케이션이 HTTP 연결을 재사용하여 서로 다른 디바이스에 이벤트 또는 명령을 게시할 수 있는 동안에는 권한 부여 HTTP 헤더를 변경할 수 없습니다. 
+**참고:** 
+- 애플리케이션이 HTTP 연결을 재사용하여 이벤트 또는 명령을 다른 디바이스에 게시할 수 있지만, 권한 부여 HTTP 헤더는 변경될 수 없습니다.  
+- 기본 SSL 포트인 443 포트가 보안 HTTP API 호출에 대해 지정될 수도 있습니다. 
 
 ### 인증
 

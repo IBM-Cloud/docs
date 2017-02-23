@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-24"
+  years: 2015, 2016, 2017
+lastupdated: "2016-11-22"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2016-10-24"
 {: #java}
 
 
-Sie können mithilfe von Java Anwendungen erstellen und anpassen, die in {{site.data.keyword.iot_full}} mit Ihrer Organisation interagieren. Es werden eine Java-Clientbibliothek für {{site.data.keyword.iot_short_notm}}, Dokumentation und Beispiele bereitgestellt, die Sie bei den ersten Schritten der Anwendungsentwicklung unterstützen.
+Sie können mithilfe von Java™ Anwendungen erstellen und anpassen, die in {{site.data.keyword.iot_full}} mit Ihrer Organisation interagieren. Es werden eine Java-Clientbibliothek für {{site.data.keyword.iot_short_notm}}, Dokumentation und Beispiele bereitgestellt, die Sie bei den ersten Schritten der Anwendungsentwicklung unterstützen.
 
 {:shortdesc}
 

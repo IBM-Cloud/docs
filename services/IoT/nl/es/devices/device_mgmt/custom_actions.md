@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-05"
+  years: 2015, 2016, 2017
+lastupdated: "2017-02-03"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2016-09-05"
 # Ampliación de la gestión de dispositivos
 {: #custom_actions}
 
-Puede ampliar las funciones de gestión de dispositivos en {{site.data.keyword.iot_full}} para que cumplan sus requisitos añadiendo extensiones de gestión de dispositivos. Las extensiones de gestión de dispositivos se pueden añadir mediante la API REST o el panel de control de {{site.data.keyword.iot_short_notm}}. 
+Puede ampliar las funciones de gestión de dispositivos en {{site.data.keyword.iot_full}} para que cumplan sus requisitos añadiendo extensiones de gestión de dispositivos. Las extensiones de gestión de dispositivos se pueden añadir mediante la API REST o el panel de control de {{site.data.keyword.iot_short_notm}}.
 
 De forma predeterminada, las siguientes acciones de gestión de dispositivos reciben soporte de {{site.data.keyword.iot_short_notm}}:
 - Rearranque de dispositivo
@@ -63,6 +63,19 @@ El ejemplo de código siguiente muestra el formato típico de un paquete de ampl
 	}
 
 ```
+
+### Adición de un paquete de gestión de dispositivos personalizados
+
+Los paquetes de gestión de dispositivos personalizados se pueden añadir mediante el panel de control de {{site.data.keyword.iot_short_notm}} o mediante la API.
+
+Para añadir un paquete de gestión de dispositivos personalizados mediante el panel de control de {{site.data.keyword.iot_short_notm}}:
+
+1. En el panel de control de {{site.data.keyword.iot_short_notm}}, pulse **Valores** en la barra de navegación.
+2. Pulse **Paquetes de gestión de dispositivos personalizados**.
+3. Pulse el botón **Añadir paquete**.
+4. Seleccione el archivo de paquete y pulse **Abrir**.
+
+Para añadir un paquete de gestión de dispositivos personalizados mediante la API, consulte la documentación de la API de [{{site.data.keyword.iot_short_notm}} ![icono de enlace externo](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 ### Propiedades del paquete de ampliación
 
@@ -450,3 +463,9 @@ Utilice las siguientes solicitudes API para gestionar los dispositivos:
 - Para ver el estado de una determinada solicitud de gestión de dispositivos:
 
 `curl -XGET -H "Content-Type: application/json" -u "<apiKey>:<apiToken>" https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/requests/<requestId>`
+
+## Recetas sobre las extensiones de gestión de dispositivos
+
+En las siguientes recetas se muestra el flujo necesario para manejar las extensiones de gestión de dispositivos:
+
+- La receta [Paquetes de extensiones de gestión de dispositivos en WIoT Platform ![icono de enlace externo](../../../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/device-management-extension-packages-in-wiot-platform/){: new_window} contiene instrucciones para registrar un dispositivo gestionado con {{site.data.keyword.iot_short}} de modo que el dispositivo pueda recibir y manejar acciones de extensión de gestión de dispositivos. Los ejemplos de código de la receta están escritos utilizando la biblioteca de cliente Python.

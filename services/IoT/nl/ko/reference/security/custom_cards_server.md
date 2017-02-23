@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-13"
+  years: 2016, 2017
+lastupdated: "2016-11-29"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2016-10-13"
 {:pre: .pre}
 
 # 사용자 정의 카드 서버 보안
-{: #securing_custom_cards
+{: #securing_custom_cards}
 
 사용자 정의 카드 서버는 사용자 정의 카드 Javascript 코드를 호스팅하는 표준 웹 서버입니다. {{site.data.keyword.iot_short_notm}} 환경의 무결성을 보장하려면 이 주제에서 논의된 대로 카드 소스를 보안하는 단계를 수행하여 사용자 정의 카드 서버를 보안해야 합니다.
 {:shortdesc}
@@ -29,7 +29,7 @@ lastupdated: "2016-10-13"
 {: #server_requirements}
 
 다음 요구사항은 {{site.data.keyword.iot_short_notm}}에서 설정됩니다.
-- 서버에 사용자 정의 카드 컨텐츠를 제공하는 디렉토리에는 신임 정보에 대한 액세스가 필요하지 않습니다.
+- 서버에 사용자 정의 카드 컨텐츠를 제공하는 디렉토리에는 신임 정보에 대한 액세스가 필요하지 않습니다.  
 사용자 정의 카드를 액세스하고 로드하기 위해 연결할 때 사용자 정의 카드 서버에 인증이 제공되지 않습니다.
 - 서버가 HTTPS(HTTP Secure) 프로토콜을 사용해야 합니다.
 - 서버가 CORS(Cross-Origin Resource Sharing) 연결을 지원해야 합니다.  

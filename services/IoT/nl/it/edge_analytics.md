@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-27"
+  years: 2016, 2017
+lastupdated: "2017-01-10"
 
 ---
 
@@ -19,12 +19,10 @@ lastupdated: "2016-10-27"
 Con le analisi edge, puoi spostare il processo di attivazione della regola di analisi dal cloud al gateway abilitato per l'analisi edge che riduce drasticamente la quantità di traffico dati del dispositivo nel cloud eseguendo l'elaborazione delle analisi vicino al dispositivo.
 {:shortdesk}
 
-I dispositivi inviano i loro dati a un gateway abilitato per l'analisi edge in cui le regole di analisi edge analizzano i dati. In base alla tua regola e alle relative azioni, i dati critici e gli avvisi possono essere inviati a {{site.data.keyword.iot_full}}, possono essere attivati nel gateway o essere scritti in un file di testo locale nel gateway. 
+I dispositivi inviano i loro dati a un gateway abilitato per l'analisi edge in cui le regole di analisi edge analizzano i dati. In base alla tua regola e alle relative azioni, i dati critici e gli avvisi possono essere inviati a {{site.data.keyword.iot_full}}, possono essere attivati nel gateway o essere scritti in un file di testo locale nel gateway.
 
 Il seguente diagramma illustra l'architettura generale di un ambiente di analisi edge {{site.data.keyword.iot_full}}.
 ![IBM Watson IoT Platform con l'architettura di analisi edge](images/architecture_platform_edge.svg "IBM Watson IoT Platform con l'architettura di analisi edge")
-
-**Importante:** le funzioni di analisi vengono unite dal servizio {{site.data.keyword.iotrtinsights_full}} Se la tua organizzazione {{site.data.keyword.iot_short_notm}} viene utilizzata come origine dati per un'istanza {{site.data.keyword.iotrtinsights_short}} esistente, Cloud and Edge Analytics non è abilitato finché non siano state migrate le istanze {{site.data.keyword.iotrtinsights_short}} esistenti. Continuare ad utilizzare il dashboard {{site.data.keyword.iotrtinsights_short}} per le tue analisi finché non viene completata la migrazione. Per ulteriori informazioni, consulta il blog [IBM Watson IoT Platform](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} in IBM developerWorks e i tuoi dashboard dell'istanza {{site.data.keyword.iotrtinsights_short}} esistenti.  
 
 ## Prima di cominciare
 {: #byb}
@@ -33,6 +31,10 @@ Prima di iniziare la creazione di regole e azioni edge:
 - Assicurati che il tuo gateway sia collegato a {{site.data.keyword.iot_short}} e che i dati del dispositivo siano stati trasmessi. Consulta [Connessione ai gateway](gateways/dashboard.html) per ulteriori informazioni.
 - Installa EAA (Edge Analytics Agent) sul tuo gateway. Per informazioni, consulta [Installazione dell'agent di analisi edge](gateways/dashboard.html#edge). </br> **Suggerimento:** i gateway abilitati EAA forniscono dati di diagnostica EAA sotto forma di messaggi del dispositivo gateway. Per informazioni, consulta [Metriche di diagnostica di EAA (Edge Analytics Agent)](#eaa_metrics).
 - Assicurati che le proprietà del dispositivo che desideri utilizzare come le condizioni nelle tue regole siano associate agli schemi. Consulta [Connessione dispositivi](iotplatform_task.html) e [Creazione di schemi](im_schemas.html) per ulteriori informazioni.
+- Ricette Edge Analytics  
+Nel nostro portale delle ricette, un paio di ricette descrivono i passi necessari per eseguire IBM Edge Analytics. Le ricette descrivono chiaramente come installare e configurare l'EAA (Edge Analytics Agent) IBM su un dispositivo creato con Apache Edgent per eseguire le analisi vicino a un'origine dati IoT.
+ - [La ricetta Getting Started with Edge Analytics in IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/getting-started-with-edge-analytics-in-watson-iot-platform/) è la prima di questa serie. Questa ricetta descrive la configurazione della piattaforma Cisco DSA su un sistema di un portatile e sul dispositivo Raspberry Pi 3, l'installazione e la configurazione di EAA (Edge Analytics Agent) IBM per il collegamento a {{site.data.keyword.iot_short}}, l'installazione del link System DS e la sua configurazione per il collegamento al gateway Edge su {{site.data.keyword.iot_short}} come un dispositivo allegato, definendo e attivando la regola edge nel gateway edge e la gestione della regola edge da {{site.data.keyword.iot_short}}.
+ - Per mostrare un utilizzo avanzato di Edge Analytics, la ricetta [Handling Alerts and Device Actions with Edge Analytics in IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/handling-alerts-and-device-actions-with-edge-analytics-in-ibm-watson-iot-platform/) illustra come creare il tuo proprio link DS per trasferire i dati da un dispositivo Arduino Uno collegato a un dispositivo Raspberry Pi 3. La ricetta illustra inoltre i dati di filtro e gestione delle azioni del dispositivo locale come parte di un avviso della regola edge.
 
 ## Gestione delle regole e delle azioni edge  
 {: #managing_rules}
@@ -41,7 +43,7 @@ Le regole edge sono gestite nel seguente modo:
 - Il dashboard **Rules** viene utilizzato per creare e modificare le regole e le azioni edge e cloud per i tuoi dispositivi e gateway.
 - La tabella **Edge Rules Gateways** viene utilizzata per attivare, disattivare, aggiornare e rimuovere una regola edge dai tuoi gateway. Per accedere alla tabella Edge Rules Gateways, dal dashboard Rules fai clic su **Manage Rule** per la regola edge che desideri gestire. Per ulteriori informazioni, consulta [ Attivazione, disattivazione e gestione delle regole edge per i tuoi gateway](#manage).
 
-Per ottenere una panoramica delle regole e degli avvisi edge che sono stati attivati dai tuoi dispositivi collegati al gateway, utilizza le seguenti tabelle: 
+Per ottenere una panoramica delle regole e degli avvisi edge che sono stati attivati dai tuoi dispositivi collegati al gateway, utilizza le seguenti tabelle:
 
 |Nome tabella | Descrizione |  
  |:---|:---|  
@@ -193,25 +195,25 @@ Per visualizzare le informazioni sullo stato del gateway:
  Proprietà | Descrizione
  --- | ---
  `MsgInCount` |Il numero di messaggi che sono stati inviati a EEA (Edge Analytics Agent).
- `MsgInRate` | Il numero stimato di messaggi al secondo che sono stati inviati al EAA nell'ultimo minuto.   
+ `MsgInRate` | Il numero stimato di messaggi al secondo che sono stati inviati al EAA nell'ultimo minuto.  
  `LastHeartBeat` | La data/ora in millisecondi in cui è stat ogenerato l'ultimo messaggio di heartbeat. Un messaggio di heartbeat viene generato almeno ogni 10 secondi.
-`CurrentTimestamp` | La data/ora in millisecondi in cui è stato generato il corrente messaggio di monitoraggio.
-`IsAlive` | Questa proprietà è 0 se la differenza tra `LastHeartBeat` e `CurrentTimestamp` è maggiore di 20 secondi.
+ `CurrentTimestamp` | La data/ora in millisecondi in cui è stato generato il corrente messaggio di monitoraggio.
+ `IsAlive` | Questa proprietà è 0 se la differenza tra `LastHeartBeat` e `CurrentTimestamp` è maggiore di 20 secondi.
  `BytesOutCount` | Il numero di byte del messaggio inviati da EAA a {{site.data.keyword.iot_short}}.
  `BytesOutRate` | Il numero stimato di byte del messaggio al secondo inviati da EAA a {{site.data.keyword.iot_short}} durante l'ultimo minuto.
-`BytesInCount` | Il numero di byte del messaggio che sono stati inviati da {{site.data.keyword.iot_short}} a EAA.
+ `BytesInCount` | Il numero di byte del messaggio che sono stati inviati da {{site.data.keyword.iot_short}} a EAA.
  `BytesInRate` | Il numero stimato di byte del messaggio al secondo che sono stati inviati da {{site.data.keyword.iot_short}} a EAA nell'ultimo minuto.
-`RuleBytesInCount` |Il numero di byte del messaggio che sono stati inviati da EAA al core del motore della regola. </br> **Nota:** se non è impostata alcuna regola per un tipo di dispositivo, i messaggi per tale tipo di dispositivo non sono inviati al core del motore della regola.
+ `RuleBytesInCount` |Il numero di byte del messaggio che sono stati inviati da EAA al core del motore della regola. </br> **Nota:** se non è impostata alcuna regola per un tipo di dispositivo, i messaggi per tale tipo di dispositivo non sono inviati al core del motore della regola.
  `RuleBytesInRate` | Il numero stimato di byte del messaggio al secondo inviati al core del motore della regola EAA durante l'ultimo minuto.
-`MsgOutCount` | Il numero di messaggi che sono stati inviati da EAA a {{site.data.keyword.iot_short}}.
+ `MsgOutCount` | Il numero di messaggi che sono stati inviati da EAA a {{site.data.keyword.iot_short}}.
  `MsgOutRate` | Il numero stimato di byte dei messaggi al secondo inviati da EAA a {{site.data.keyword.iot_short}} durante l'ultimo minuto.
-`MsgReducePercent` | La differenza percentuale tra i messaggi in entrata e in uscita. </br>La seguente formula viene utilizzata per il calcolo: `(msgIn - msgOut) / msgIn`
+ `MsgReducePercent` | La differenza percentuale tra i messaggi in entrata e in uscita. </br>La seguente formula viene utilizzata per il calcolo: `(msgIn - msgOut) / msgIn`
 `BytesReducePercent` | La differenza percentuale tra i byte in entrata e in uscita. </br>La seguente formula viene utilizzata per il calcolo: `(bytesIn - bytesOut) / bytesIn`
 `MsgRateReduce` | La differenza percentuale tra la frequenza dl messaggio in entrata e in uscita. </br>La seguente formula viene utilizzata per il calcolo: `(msgInRate - msgOutRate) / msgInRate`
 `BytesRateReduce` | La differenza percentuale tra i byte dei messaggi in entrata e in uscita. </br>La seguente formula viene utilizzata per il calcolo: `(bytesInRate - bytesOutRate) / bytesInRate`
 `SystemLoad` | Il carico di sistema corrente per il sistema in cui è in esecuzione EAA. **Nota:** la velocità della CPU sarà inviata solo se il comando `mpstat` è disponibile nel sistema in cui è in esecuzione EAA. Altrimenti, viene inviato il carico del sistema medio per l'ultimo minuto. </br>“Il carico del sistema medio è la somma del numero di entità eseguibili accodato ai processori disponibili e il numero di entità eseguibili in esecuzione sui processori disponibili come media in un periodo di tempo. Il modo in cui viene calcolato il carico medio è il sistema operativo specifico ma è normalmente una media moderata dipendente dal tempo. Se il carico medio non è disponibile, viene restituito un valore negativo. ” - javadoc per *ManagementFactory.getOperatingSystemMXBean*.
- `FreeMemory` | Il numero di byte di memoria libera per la JVM (Java Virtual Machine) dove è in esecuzione EAA.
-`MemoryUsed` | Il numero di byte di memoria JVM utilizzato da EAA.
+ `FreeMemory` | Il numero di byte di memoria libera per la JVM (Java™ Virtual Machine) dove è in esecuzione EAA.
+ `MemoryUsed` | Il numero di byte di memoria JVM utilizzato da EAA.
  `InQueueSize` | Il numero di messaggi in coda per l'elaborazione EAA.
  `RuleNumber` | Il numero di regole definite nel core del motore della regola.
  `ProcessorNumber` | Per l'utilizzo di debug. Il numero di processori definiti nel core del motore della regola. </br>**Nota:** un processore è un'unità di esecuzione minima nel core del motore della regola.

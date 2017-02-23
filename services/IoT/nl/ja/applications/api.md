@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-07"
+  years: 2015, 2016, 2017
+lastupdated: "2016-12-01"
 
 ---
 
@@ -35,10 +35,10 @@ lastupdated: "2016-09-07"
 - デバイス・イベントのパブリッシュ (ベータ)
 - サービス状況の照会 (組織別のサービス状況の取得)
 
-## HTTP REST API へのアクセス
+## HTTP REST API 資料へのアクセス
 {: #api_link}
 
-{{site.data.keyword.iot_short_notm}} HTTP REST API にアクセスしてアプリケーションの作成とカスタマイズを行う方法に関する情報をさらに入手するには、https://docs.internetofthings.ibmcloud.com/swagger/v0002.html をご覧ください。
+{{site.data.keyword.iot_short_notm}} HTTP REST API 資料にアクセスしてアプリケーションの作成とカスタマイズを行う方法に関する情報をさらに入手するには、https://docs.internetofthings.ibmcloud.com/swagger/v0002.html をご覧ください。
 
 サポートされている {{site.data.keyword.iot_short_notm}} HTTP REST API のバージョンはバージョン 2 のみです。{{site.data.keyword.iot_short_notm}} ソリューションには必ずバージョン 2 を使用してください。
 
@@ -60,6 +60,8 @@ MQTT メッセージング・プロトコルを使用するほかにも、HTTP �
 <pre class="pre">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/application/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
 {: codeblock}
 
+**注:** デフォルト SSL ポートのポート 443 も、セキュアな HTTP API 呼び出し用に指定できます。
+
 ### 無保護のコマンド POST 要求
 <pre class="pre">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/application/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">eventId</var></pre>
 {: codeblock}
@@ -70,7 +72,9 @@ MQTT メッセージング・プロトコルを使用するほかにも、HTTP �
 
 Quickstart サービスにデバイスまたはアプリケーションを接続している場合は、**orgId** を文字列「quickstart」に置換してください。
 
-注: アプリケーションで 1 つの HTTP 接続を再利用してさまざまなデバイスにイベントまたはコマンドをポストすることができますが、許可 HTTP ヘッダーを変更することはできません。
+**注:** 
+- アプリケーションで 1 つの HTTP 接続を再利用してさまざまなデバイスにイベントまたはコマンドをポストすることができますが、許可 HTTP ヘッダーを変更することはできません。 
+- ポート 443 (デフォルトの SSL ポート) は、セキュアな HTTP API 呼び出しにも指定できます。
 
 ### 認証
 

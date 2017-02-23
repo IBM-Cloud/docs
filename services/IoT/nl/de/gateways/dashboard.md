@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-27"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-10"
 
 ---
 
@@ -48,7 +48,8 @@ Gehen Sie wie folgt vor, um ein Gateway über das {{site.data.keyword.iot_short_
 3. Wählen oder erstellen Sie einen Gerätetyp für das Gerät, das Sie hinzufügen.  
 Jedem Gerät, das mit {{site.data.keyword.iot_short_notm}} verbunden ist, muss ein Gerätetyp zugeordnet sein. Gerätetypen sind Gruppen von Geräten, denen allgemeine Merkmale gemeinsam sind.  
  1. Klicken Sie auf **Gerätetyp erstellen** und anschließend auf **Gateway-Typ erstellen**.
- 2. Geben Sie einen Namen für den Gerätetyp, wie beispielsweise `my_gateway_type`, und eine Beschreibung des Gateway-Typs ein.**Wichtig:** Der Name des Gerätetyps darf maximal 36 Zeichen umfassen und nur folgende Zeichen enthalten:
+ 2. Geben Sie einen Namen für den Gerätetyp, wie beispielsweise `my_gateway_type`, und eine Beschreibung des Gateway-Typs ein.   
+ **Wichtig:** Der Name des Gerätetyps darf maximal 36 Zeichen umfassen und nur folgende Zeichen enthalten:
  <ul>
   <li>Alphanumerische Zeichen (a-z, A-Z, 0-9)</li>
   <li>Bindestriche (-)</li>
@@ -58,7 +59,8 @@ Jedem Gerät, das mit {{site.data.keyword.iot_short_notm}} verbunden ist, muss e
  **Tipp:** Sie können Attribute und Metadaten später hinzufügen und bearbeiten.
  4. Klicken Sie auf **Erstellen**, um den neuen Gateway-Typ hinzuzufügen.
 10. Klicken Sie auf **Weiter**, um mit dem Hinzufügen Ihres Gateway-Geräts mit dem ausgewählten Gateway-Typ zu beginnen.
-11. Geben Sie eine Geräte-ID, wie beispielsweise `my_gateway_device`, ein. Die Geräte-ID wird zum Ermitteln des Gateway-Geräts im {{site.data.keyword.iot_short_notm}}-Dashboard verwendet und ist auch ein erforderlicher Parameter für das Herstellen einer Verbindung zwischen Ihrem Gateway-Gerät und {{site.data.keyword.iot_short_notm}}.  
+11. Geben Sie eine Geräte-ID, wie beispielsweise `my_gateway_device`, ein.  
+Die Geräte-ID wird zum Ermitteln des Gateway-Geräts im {{site.data.keyword.iot_short_notm}}-Dashboard verwendet und ist auch ein erforderlicher Parameter für das Herstellen einer Verbindung zwischen Ihrem Gateway-Gerät und {{site.data.keyword.iot_short_notm}}.  
 **Wichtig:** Die Geräte-ID darf maximal 36 Zeichen umfassen und nur folgende Zeichen enthalten:
  <ul>
  <li>Alphanumerische Zeichen (a-z, A-Z, 0-9)</li>
@@ -79,10 +81,12 @@ Jedem Gerät, das mit {{site.data.keyword.iot_short_notm}} verbunden ist, muss e
  - Gerätetyp, wie beispielsweise `my_gateway_type`
  - Geräte-ID. **Tipp:** Bei netzverbundenen Geräten kann dies beispielsweise die MAC-Adresse ohne trennende Doppelpunkte sein.
  - Authentifizierungsmethode, wie beispielsweise `token`
- - Authentifizierungstoken, wie beispielsweise `PtBVriRqIg4uh)_-Kl`
-  **Hinweis:** Sie benötigen die Organisations-ID, das Authentifizierungstoken, den Gerätetyp und die Geräte-ID, um Ihr Gerät für das Herstellen einer Verbindung zu {{site.data.keyword.iot_short_notm}} zu konfigurieren.  
+ - Authentifizierungstoken, wie beispielseise `PtBVriRqIg4uh)_-Kl`  
+  **Tipp:** Sie benötigen die Organisations-ID, das Authentifizierungstoken, den Gerätetyp und die Geräte-ID, um Ihr Gerät für das Herstellen einer Verbindung zu {{site.data.keyword.iot_short_notm}} zu konfigurieren.  
 
 Herzlichen Glückwunsch, Ihr Gateway-Gerät wurde registriert. Sie können Ihr Gateway-Gerät nun für das Herstellen einer Verbindung zu {{site.data.keyword.iot_short_notm}} konfigurieren.
+
+Die Anleitung [Gateways in IBM Watson IoT Platform registrieren](https://developer.ibm.com/recipes/tutorials/how-to-register-gateways-in-ibm-watson-iot-platform/) enthält eine Erläuterung der erforderlichen Schritte zum Registrieren eines Gateways.
 
 ## Schritt 2: Verbinden des Gateways mit {{site.data.keyword.iot_short_notm}}
 {: #connect_gateway}
@@ -103,6 +107,8 @@ Informationen zur automatischen Registrierung des Geräts und zum Publizieren un
 
 
 Wenn ein Gerät erfolgreich mit Ihrem Gateway verbunden wurde, wird es im Dashboard Ihrer {{site.data.keyword.iot_short_notm}}-Organisation angezeigt.
+
+Die Anleitung [Raspberry Pi als Gateway mit Watson IoT verbinden ](https://developer.ibm.com/recipes/tutorials/connecting-raspberry-pi-as-a-gateway-to-watson-iot-using-node-red/) enthält eine schrittweise Erläuterung des Ablaufs. 
 
 **Hinweis:** Für Geräte und Gateways, die direkt mit {{site.data.keyword.iot_short_notm}} verbunden sind, wird im {{site.data.keyword.iot_short_notm}}-Dashboard ein Statussymbol angezeigt, mit dem angegeben wird, dass sie verbunden sind. Das Dashboard zeigt Geräte, die über ein Gateway indirekt verbunden sind, als nicht verbunden an, da es keine Kenntnis der Konnektivität von Geräten zum Gateway hat.
 

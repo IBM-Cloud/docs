@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-01"
+  years: 2016, 2017
+lastupdated: "2017-02-3"
 
 ---
 
@@ -24,7 +24,7 @@ lastupdated: "2016-08-01"
 {: #watsoniotplatform_architecture}
 ![IBM Watson IoT Platform のアーキテクチャー](images/architecture_platform.svg "IBM Watson IoT Platform のアーキテクチャー")
 
-**重要:** 分析機能は、{{site.data.keyword.iotrtinsights_full}} サービスからマージされます。既存の {{site.data.keyword.iotrtinsights_short}} インスタンスのデータ・ソースとして {{site.data.keyword.iot_short_notm}} 組織を使用する場合は、既存の {{site.data.keyword.iotrtinsights_short}} インスタンスのマイグレーションが完了するまでクラウド分析とエッジ分析が有効になりません。マイグレーションが完了するまでは、引き続き {{site.data.keyword.iotrtinsights_short}} ダッシュボードを使用して分析要件に対応してください。詳しくは、IBM developerWorks にある [IBM Watson IoT Platform のブログ](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window}や既存の {{site.data.keyword.iotrtinsights_short}} インスタンス・ダッシュボードをご覧ください。  
+**重要:** 分析機能は、{{site.data.keyword.iotrtinsights_full}} サービスからマージされます。既存の {{site.data.keyword.iotrtinsights_short}} インスタンスのデータ・ソースとして {{site.data.keyword.iot_short_notm}} 組織を使用する場合は、既存の {{site.data.keyword.iotrtinsights_short}} インスタンスのマイグレーションが完了するまでクラウド分析とエッジ分析が有効になりません。マイグレーションが完了するまでは、引き続き {{site.data.keyword.iotrtinsights_short}} ダッシュボードを使用して分析要件に対応してください。詳しくは、IBM developerWorks にある [IBM Watson IoT Platform のブログ ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} や既存の {{site.data.keyword.iotrtinsights_short}} インスタンス・ダッシュボードをご覧ください。  
 
 {{site.data.keyword.iot_short_notm}} は、{{site.data.keyword.iot_short_notm}} API と {{site.data.keyword.iot_short_notm}} メッセージ・プロトコルを使用してアプリケーションやデバイスと通信します。{{site.data.keyword.iot_short_notm}} ダッシュボードは、プラットフォーム内の操作を簡略化するためのフロントエンド・ユーザー・インターフェースとして接続します。分析ソリューションでは、そのようなデバイス・データを格納したり使用したりできます。
 

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2016, 2017
 lastupdated: "2016-09-14"
 
 ---
@@ -27,6 +27,7 @@ lastupdated: "2016-09-14"
 要创建新的 API 密钥和认证令牌对，请执行以下操作：  
 1.	在 {{site.data.keyword.iot_short_notm}} 仪表板中，转至**应用程序 > API 密钥**。  
 2.	单击**生成 API 密钥**。
+  
 **重要信息：**记录 API 密钥和令牌对。认证令牌是不可恢复的。如果丢失或忘记此令牌，需要重新注册 API 密钥以生成新的认证令牌。
  - API 密钥示例为 `a-organization_id-a84ps90Ajs`  
  - 令牌示例为 `MP$08VKz!8rXwnR-Q*`  

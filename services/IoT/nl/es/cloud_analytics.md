@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-23"
+  years: 2016, 2017
+lastupdated: "2017-01-16"
 
 ---
 
@@ -20,12 +20,11 @@ Al utilizar cloud analytics de {{site.data.keyword.iot_short}}, especifique cond
 
 Por ejemplo, puede crear una regla para asegurarse de que cuando el dispositivo se ha eliminado o cuando se dispara la temperatura del dispositivo, se envíe una alerta al panel de control del dispositivo de un usuario, y se envíe un correo electrónico al administrador.
 
-**Importante:** Las características de análisis se fusionan desde el servicio de {{site.data.keyword.iotrtinsights_full}}. Si la organización de {{site.data.keyword.iot_short_notm}} se utiliza como un origen de datos para una instancia existente de {{site.data.keyword.iotrtinsights_short}}, Cloud y Edge Analytics no se habilitarán hasta que se hayan migrado las instancias existentes de {{site.data.keyword.iotrtinsights_short}}. Siga utilizando el panel de control de {{site.data.keyword.iotrtinsights_short}} para sus necesidades de análisis hasta que se haya completado la migración. Para obtener más información, consulte el [Blog de IBM Watson IoT Platform](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} en IBM developerWorks y los paneles de control de instancias existentes de {{site.data.keyword.iotrtinsights_short}}.  
-
 ## Antes de empezar
 {: #byb}
 Asegúrese de que las propiedades de dispositivos que desea utilizar como condiciones en las reglas se hayan correlacionado con esquemas. Consulte [Conexión de dispositivos](iotplatform_task.html) y [Creación de esquemas](im_schemas.html) para obtener más información.
 
+Consulte también la receta [Utilización de reglas y acciones con {{site.data.keyword.iot_short}} Cloud Analytics](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/) para comprender las reglas y acciones que se utilizan en Cloud Analytics.
 
 ## Gestión de reglas y acciones  
 {: #managing_rules}
@@ -55,9 +54,9 @@ Para crear una regla:
 3. Para configurar la lógica de la regla, añada una o varias condiciones IF para utilizarlas como desencadenantes para la regla.  
 Puede añadir condiciones en filas paralelas para aplicarlas como condiciones OR, o puede añadir condiciones en columnas secuenciales para aplicarlas como condiciones AND.  
 **Importante:** Para desencadenar una condición que compara dos propiedades o para desencadenar dos o más condiciones de propiedades que se combinan secuencialmente utilizando AND, deben incluirse los puntos de datos desencadenantes en el mismo mensaje de dispositivos. Si los datos se reciben en más de un mensaje, la condición o las condiciones secuenciales no se desencadenarán.  
-**Ejemplos:**
+**Ejemplos:**   
 Una regla sencilla puede desencadenar una alerta si un valor de parámetro es mayor que un valor especificado:
-Condición = `temp_cpu>80`
+Condición = `temp_cpu>80`  
 Una regla más compleja puede desencadenarse cuando se cumple una combinación de umbrales:
 Condición = `temp_cpu>60 AND cpu_load>90`   
 
@@ -248,8 +247,8 @@ Donde el primer nodo es un nodo http, y el segundo es un nodo twilio.
   <li>SMS para: `Número de teléfono para el ingeniero de servicio`</li>
   <li>Nombre: **SMS**</li>
   </ul>
-  4. Conectar los nodos
-  Conecte los nodos http y twilio arrastrando entre el puerto de salida de uno al puerto de entrada del otro.
+  4. Conecte los nodos entre sí  
+  Conecte los nodos http y twilio entre sí arrastrando entre el puerto de salida de uno y el puerto de entrada del otro.
   5. Pulse el botón **Desplegar** para desplegar el flujo para el servidor
 4. En el panel de instrumentos {{site.data.keyword.iot_short}}, vaya a **Reglas > Acciones** y cree una acción nueva que tenga los parámetros siguientes:
  - Tipo: **Node-RED**
@@ -324,3 +323,17 @@ Variable | Descripción
 `{{ruleDescription}}`| La descripción de la regla que incluye la acción.
 `{{ruleCondition}}` | La condición de la regla que ha desencadenado la acción.
 `{{message}}` | El mensaje de dispositivo en bruto que incluía el valor de punto de datos que ha desencadenado la regla.
+
+## Recetas sobre Cloud Analytics
+
+En las siguientes recetas se describe cómo utilizar las características de Cloud Analytics para distintos casos de uso:
+
+- [Análisis de datos en tiempo real mediante analíticas de IBM Watson™ IoT Platform](https://developer.ibm.com/recipes/tutorials/real-time-data-analysis-using-ibm-watson-iot-platform-analytics/)
+
+- [Análisis predictivo sobre datos de ejemplo de IOT](https://developer.ibm.com/recipes/tutorials/predictive-analytics-on-iot-sample-data/)
+
+- [La tarjeta de lista de dispositivos SIMPLIFICA la supervisión de dispositivos en tiempo real en el panel de control de WIoTP](https://developer.ibm.com/recipes/tutorials/device-list-card-simplifies-real-time-device-monitoring-on-wiotp-dashboard/)
+
+- [Realización de acciones sobre analíticas de nube de IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/perform-actions-in-ibm-watson-iot-platform-cloud-analytics/)
+
+- [Utilización de IBM Data Science Experience para detectar anomalías en series temporales](https://developer.ibm.com/recipes/tutorials/use-ibm-data-science-experience-to-detect-time-series-anomalies/)

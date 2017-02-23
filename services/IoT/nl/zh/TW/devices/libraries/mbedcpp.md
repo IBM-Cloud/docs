@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-08-02"
+  years: 2015, 2016, 2017
+lastupdated: "2016-11-22"
 
 ---
 
@@ -19,8 +19,7 @@ lastupdated: "2016-08-02"
 使用 [mBed C++ 用戶端程式庫](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/)，可以輕鬆地將 [mBed 裝置](https://www.mbed.com/en/)（例如 [LPC1768](https://developer.mbed.org/platforms/mbed-LPC1768/) 或 [FRDM-K64F](https://developer.mbed.org/platforms/FRDM-K64F/)）連接至 {{site.data.keyword.iot_full}} 服務。
 {:shortdesc}
 
-
-如需相關資訊，請參閱 [developer.mbed.org](https://developer.mbed.org/) 上的 [ibmiotf](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/)。
+如需相關資訊，請參閱 [developer.mbed.org](https://developer.mbed.org/) 上的 [ibmiotf](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/)
 
 雖然程式庫使用 C++，但是它仍會避免動態記憶體配置及使用 STL 函數，因為 mBed 裝置有時具有讓移轉難以進行的特殊記憶體模型。在任何情況下，程式庫都可讓您使記憶體盡可能如預期般使用。
 
@@ -29,7 +28,7 @@ lastupdated: "2016-08-02"
 
 |相依關係 |說明|
 |:---|:---|
-|[Eclipse Paho MQTT 程式庫](https://developer.mbed.org/teams/mqtt/code/MQTT/)|提供 mBed 裝置的 MQTT 用戶端程式庫。如需相關資訊，請參閱 [Embedded MQTT C/C++ Client Libraries](http://www.eclipse.org/paho/clients/c/embedded/)。|
+|[Eclipse Paho MQTT 程式庫](https://developer.mbed.org/teams/mqtt/code/MQTT/)|提供 mBed 裝置的 MQTT 用戶端程式庫。如需相關資訊，請參閱[嵌入式 MQTT C/C++ 用戶端程式庫](http://www.eclipse.org/paho/clients/c/embedded/)。|
 |[EthernetInterface 程式庫](https://developer.mbed.org/users/mbed_official/code/EthernetInterface/)|透過乙太網路的 mBed IP 程式庫。|
 
 ## 如何使用程式庫
@@ -39,7 +38,7 @@ lastupdated: "2016-08-02"
 
 **附註：**您不必安裝或設定任何項目，即可開始執行 mBed。
 
-如需將 ARM mBed NXP LPC 1768 微型控制器連接至 {{site.data.keyword.iot_short_notm}} 的相關資訊，請參閱 [mBed C++ Client Library for IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/mbed-c-client-library-for-ibm-iot-foundation/) 秘訣。
+如需將 ARM mBed NXP LPC 1768 微型控制器連接至 {{site.data.keyword.iot_short_notm}} 的相關資訊，請參閱 [IBM Watson IoT Platform 的 mBed C++ 用戶端程式庫](https://developer.ibm.com/recipes/tutorials/mbed-c-client-library-for-ibm-iot-foundation/)秘訣。
 
 ## 建構子
 {: #constructor}

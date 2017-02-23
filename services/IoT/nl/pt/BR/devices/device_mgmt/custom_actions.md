@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-05"
+  years: 2015, 2016, 2017
+lastupdated: "2017-02-03"
 
 ---
 
@@ -63,6 +63,19 @@ A amostra de código a seguir mostra o formato típico de um pacote de extensão
 	}
 
 ```
+
+### Incluindo um pacote de gerenciamento de dispositivo customizado
+
+Os pacotes de gerenciamento de dispositivo customizado podem ser incluídos usando o painel do {{site.data.keyword.iot_short_notm}} ou usando a API.
+
+Para incluir um pacote de gerenciamento de dispositivo customizado usando o painel do {{site.data.keyword.iot_short_notm}}:
+
+1. No painel do {{site.data.keyword.iot_short_notm}}, clique em **Configurações** na barra de navegação.
+2. Clique em **Pacotes de gerenciamento de dispositivo customizado**.
+3. Clique no botão **Incluir pacote**.
+4. Selecione seu arquivo de pacote e clique em **Abrir**.
+
+Para incluir um pacote de gerenciamento de dispositivo customizado usando a API, veja a [documentação da API do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 ### Propriedades do pacote de extensão
 
@@ -450,3 +463,9 @@ Use as solicitações da API (interface de programação de aplicativos) a segui
 - Para visualizar o status de uma solicitação gerenciamento de dispositivo específica:
 
 `curl -XGET -H "Content-Type: application/json" -u "<apiKey>:<apiToken>" https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/requests/<requestId>`
+
+## Orientações sobre Extensões de gerenciamento de dispositivo
+
+As orientações a seguir demonstram o fluxo que é necessário para manipular Extensões de gerenciamento de dispositivo:
+
+- A orientação [Pacotes de Extensão de gerenciamento de dispositivo no WIoT Platform ![Ícone de link externo](../../../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/device-management-extension-packages-in-wiot-platform/){: new_window} fornece instruções para registrar um dispositivo gerenciado com o {{site.data.keyword.iot_short}} para que o dispositivo possa receber e manipular ações de Extensão de gerenciamento de dispositivo. As amostras de código na orientação são gravadas usando a Biblioteca do Cliente Python.

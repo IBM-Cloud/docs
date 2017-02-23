@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-01"
+  years: 2016, 2017
+lastupdated: "2017-02-03"
 
 ---
 
@@ -17,6 +17,26 @@ lastupdated: "2016-08-01"
 
 여기에는 {{site.data.keyword.Bluemix_notm}}에서 {{site.data.keyword.iot_full}}을 사용하는 데 대한 일반 문제점 해결 질문에 대한 응답이 있습니다.
 {:shortdesc}
+
+## {{site.data.keyword.iot_short_notm}} 조직에 액세스하는 문제점
+{: #access-expiry-problem}
+
+소유한 {{site.data.keyword.iot_short_notm}} 조직에 로그인할 수 없습니다.
+{:shortdesc}
+
+`https://internetofthings.ibmcloud.com`을 사용하거나 조직 URL을 사용하여 직접 {{site.data.keyword.iot_short_notm}} 조직에 로그인할 수 없습니다.
+{: tsSymptoms}
+
+{{site.data.keyword.iot_short_notm}} 조직에 대한 액세스 권한이 만료되었을 수 있습니다. {{site.data.keyword.Bluemix}}를 사용하여 작성된 {{site.data.keyword.iot_short_notm}} 조직은 기본적으로 임시 사용자 프로파일을 사용합니다.
+{: tsCauses}
+
+{{site.data.keyword.Bluemix_notm}}를 사용하여 {{site.data.keyword.iot_short_notm}} 조직에 액세스하고 사용자 프로파일의 만기 설정을 변경하여 이 문제점을 해결할 수 있습니다. 사용자 만기 설정을 변경하려면 다음을 수행하십시오. 
+
+1. {{site.data.keyword.Bluemix_notm}} 대시보드에서 {{site.data.keyword.iot_short_notm}} 서비스를 여십시오. 
+2. 탐색줄에서 **멤버**를 클릭하십시오. 
+3. **편집** 아이콘을 클릭하십시오. 
+4. **액세스 만료** 상자를 선택 취소하고 **저장**을 클릭하십시오.
+{: tsResolve}
 
 ## {{site.data.keyword.iot_short_notm}}에 연결 문제점
 {: #connection_problem}
@@ -56,10 +76,10 @@ lastupdated: "2016-08-01"
 
 포럼을 사용하여 질문하는 경우 {{site.data.keyword.Bluemix_notm}} 개발 팀이 볼 수 있도록 질문에 태그를 지정하십시오.
 
-* {{site.data.keyword.iot_short_notm}}으로 앱을 개발하거나 배치하는 데 관한 기술 질문이 있으면 [스택 오버플로우](http://stackoverflow.com/search?q=watson-iot+ibm-bluemix){:new_window}에 질문을 게시하고 "ibm-bluemix" 및 "watson-iot"로 질문에 태그를 지정하십시오.
+* {{site.data.keyword.iot_short_notm}}에서 앱을 개발하거나 배치하는 데 대한 기술적 질문이 있으면 [스택 오버플로우 ![외부 링크 아이콘](../../icons/launch-glyph.svg)](http://stackoverflow.com/search?q=watson-iot+ibm-bluemix){:new_window}에 질문을 게시하고 질문에 "ibm-bluemix" 및 "watson-iot" 태그를 지정하십시오. 
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
-* 서비스 및 시작하기 지시사항에 대한 질문은 [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/watson-iot/?smartspace=bluemix){:new_window} 포럼을 사용하십시오. "watson-iot" 및 "bluemix" 태그를 포함하십시오.
+* 서비스 및 시작하기 지시사항에 대한 질문이 있으면 [IBM developerWorks dW 응답 ![External link icon](../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/topics/watson-iot/?smartspace=bluemix){:new_window} 포럼을 사용하십시오. "watson-iot" 및 "bluemix" 태그를 포함하십시오.
 
-포럼 사용에 대한 자세한 정보는 [도움 받기](https://www.{DomainName}/docs/support/index.html#getting-help)를 참조하십시오.
+포럼 사용에 대한 세부사항은 [도움 받기 ![외부 링크 아이콘](../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/support/index.html#getting-help){: new_window}를 참조하십시오. 
 
-IBM 지원 티겟 열기 또는 지원 레벨 및 티켓 심각도에 대한 정보는 [지원 문의](https://www.{DomainName}/docs/support/index.html#contacting-support)를 참조하십시오.
+IBM 지원 티겟 열기에 대한 정보나 지원 레벨 및 티켓 심각도에 대한 정보는 [지원 센터에 문의 ![외부 링크 아이콘](../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/support/index.html#contacting-support){: new_window}를 참조하십시오. 

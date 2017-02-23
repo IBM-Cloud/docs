@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-08"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-10"
 
 ---
 
@@ -591,3 +591,17 @@ La lista siguiente proporciona alguna información útil para el manejo de error
 
 
 **Importante:** Todos los parámetros que se listan como parte del atributo `mgmt.firmware` deben establecerse al mismo tiempo, de modo que si hay una observación actual para `mgmt.firmware`, sólo se enviará un único mensaje de notificación.
+
+## Recetas sobre las acciones de dispositivo y acciones de firmware
+
+En las siguientes recetas se muestra el flujo completo necesario para realizar acciones de dispositivo y de firmware.
+
+- [Gestión de dispositivos en WIoT Platform – Retrotracción y restablecimiento de valores de fábrica](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/)
+
+- [Actualización de firmware iniciada por el dispositivo](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-device-initiated-firmware-upgrade/)
+
+- [Actualización de firmware iniciada por la plataforma](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-platform-initiated-firmware-upgrade/)
+
+- [Actualización de firmware iniciada por la plataforma con ejecución de fondo](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-platform-initiated-firmware-upgrade/)
+
+- [Retrotracción y restablecimiento de valores de fábrica de firmware](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/)

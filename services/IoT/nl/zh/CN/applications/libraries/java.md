@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-24"
+  years: 2015, 2016, 2017
+lastupdated: "2016-11-22"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2016-10-24"
 {: #java}
 
 
-您可以使用 Java 来构建和定制应用程序，以用于在 {{site.data.keyword.iot_full}} 上与您的组织进行交互。提供的 {{site.data.keyword.iot_short_notm}} Java 客户机库、文档和示例可帮助您开始进行应用程序开发。
+您可以使用 Java™ 来构建和定制应用程序，以用于在 {{site.data.keyword.iot_full}} 上与您的组织进行交互。提供的 {{site.data.keyword.iot_short_notm}} Java 客户机库、文档和示例可帮助您开始进行应用程序开发。
 
 {:shortdesc}
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-13"
+  years: 2016, 2017
+lastupdated: "2017-02-03"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2016-10-13"
 
 **重要事項：**綱目必須利用規則和動作。如需相關資訊，請參閱[雲端分析](cloud_analytics.html#rules)。
 
-**重要事項：**合併的分析特性來自 {{site.data.keyword.iotrtinsights_full}} 服務。如果您的 {{site.data.keyword.iot_short_notm}} 組織用來作為現有 {{site.data.keyword.iotrtinsights_short}} 實例的資料來源，則除非移轉現有 {{site.data.keyword.iotrtinsights_short}} 實例，否則不會啟用「雲端和邊緣分析」。在移轉完成之前，請繼續使用 {{site.data.keyword.iotrtinsights_short}} 儀表板來因應分析的需求。如需相關資訊，請參閱 IBM developerWorks 上的 [IBM Watson IoT Platform 部落格](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window}，以及您的現有 {{site.data.keyword.iotrtinsights_short}} 實例儀表板。  
+**重要事項：**合併的分析特性來自 {{site.data.keyword.iotrtinsights_full}} 服務。如果您的 {{site.data.keyword.iot_short_notm}} 組織用來作為現有 {{site.data.keyword.iotrtinsights_short}} 實例的資料來源，則除非移轉現有 {{site.data.keyword.iotrtinsights_short}} 實例，否則不會啟用「雲端和邊緣分析」。在移轉完成之前，請繼續使用 {{site.data.keyword.iotrtinsights_short}} 儀表板來因應分析的需求。如需相關資訊，請參閱 IBM developerWorks 上的 [IBM Watson IoT Platform 部落格 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window}，以及您的現有 {{site.data.keyword.iotrtinsights_short}} 實例儀表板。  
 
 ## 新增裝置綱目
 {: #add_schema}
@@ -29,7 +29,8 @@ lastupdated: "2016-10-13"
 1. 移至**裝置 > 管理綱目**，然後按一下**新增綱目**。  
 2. 選取要與此訊息綱目建立關聯的裝置類型。**重要事項：**一種裝置類型只能定義一個綱目。
 
-3. 新增一個以上內容。您可以從連接的裝置選取內容、建立用來修改或結合現有內容的虛擬內容，或是手動新增內容。  
+3. 新增一個以上內容。  
+您可以從連接的裝置選取內容、建立用來修改或結合現有內容的虛擬內容，或是手動新增內容。  
 
     **提示：**可用的內容定義在裝置所傳送的訊息有效負載中。如需 {{site.data.keyword.iot_short}} 有效負載格式的相關資訊，請參閱[訊息有效負載](reference/mqtt/index.html#message-payloadl "訊息有效負載。")主題。   
   <dl>
@@ -66,7 +67,9 @@ lastupdated: "2016-10-13"
  `Float` 或 `Integer`。</li>
  <li>內容 - 虛擬內容的內容 ID。例如：  
 `temp_virt`</li>
-    <li>運算式 - 新增一個以上元件，以定義有效的函數。您可以使用內容、數值和數學運算子（例如 +、-、\*、/、(、)、AVG 及 Z-score）來建置運算式。</br>AVG 元件可用來計算一段指定時間內的平均內容值。</br>Z-score 元件會傳回該資料點與某些資料點或某時段內之資料點平均值的差異（標準差單位）。</br> **重要事項：**如果所選取內容的資料是來自連接至已安裝「邊緣分析代理程式」之閘道的裝置，則 AVG 和 Z-score 元件只會傳回內容資料點。如需相關資訊，請參閱[安裝邊緣分析代理程式](gateways/dashboard.html#edge)。此外，不支援比較 AVG 和 Z-score 值的規則條件。</li>
+    <li>運算式 - 新增一個以上元件，以定義有效的函數。您可以使用內容、數值和數學運算子（例如 +、-、\*、/、( 及 )）。  
+    按一下一組公式的**進階**，以與邊緣裝置上的一系列資料點搭配使用。如需進階公式的相關資訊，請參閱[邊緣虛擬內容的進階計算](im_vir_calculations.html)。  
+    **重要事項：**不支援根據進階公式來比較虛擬內容的規則條件。</li>
     <li>內容單位 - 選用項目：內容的資料單位。例如：`C` 或 `Mph`</li>
     <li> 小數位數 - 選用項目，僅限 Float：裝置資料中所包含的小數位數。</li>
    </ul>

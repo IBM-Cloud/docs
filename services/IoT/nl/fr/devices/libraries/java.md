@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2016, 2017
 lastupdated: "2016-10-18"
 
 ---
@@ -40,6 +40,7 @@ Le constructeur génère l'instance client et accepte l'objet `Propriétés` con
 |`MaxInflightMessages`  |Définit le nombre maximal de messages en cours pour la connexion. La valeur par défaut est 100.|
 |`Automatic-Reconnect`  |Valeur true ou false qui est requise lorsque vous souhaitez reconnecter automatiquement le terminal à {{site.data.keyword.iot_short_notm}} alors qu'il est en ode déconnecté. La valeur par défaut est false.|
 |`Disconnected-Buffer-Size`|Nombre maximal de messages qui peut être stocké en mémoire alors que le client est déconnecté. La valeur par défaut est 5 000.|
+|`WebSocket`|Valeur true ou false requise uniquement si vous souhaitez utiliser des connexions WebSocket avec {{site.data.keyword.iot_short_notm}}. La valeur par défaut est false.|
 
 **Remarque :** Pour connecter le terminal en mode d'abonnement durable, affectez la valeur `false` à l'option `clean-session`. Pour plus d'informations sur l'option 'clean-session', voir la section 'Subscription Buffers and Clean Session' de la [documentation MQTT](../../reference/mqtt/index.html#subscription-buffers-and-clean-session).
 

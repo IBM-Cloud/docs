@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-06-29"
+  years: 2016, 2017
+lastupdated: "2017-01-12"
 
 ---
 
@@ -78,6 +78,6 @@ Con las analíticas de extremo, mueva el proceso de desencadenamiento de reglas 
 
 La arquitectura del {{site.data.keyword.iot_short_notm}} está diseñada para evitar que los dispositivos suplanten a otros dispositivos, lo que mantiene la integridad de los datos de dispositivo. Los dispositivos se conectan con el {{site.data.keyword.iot_short_notm}} mediante una combinación de un ID de cliente y una señal de autenticación, que sólo conocerá usted. Una vez que se registren los dispositivos o que se generen claves de API, se añade sal y se aplica una función hash a la señal de autenticación para mantener la seguridad de las credenciales.
 
-El complemento Risk and Security Management le permite mejorar la seguridad de {{site.data.keyword.iot_short_notm}} para asegurarse de que todos los puntos de conexión entre el servidor y los dispositivos se autentican con credenciales probadas. Con este complemento se utilizan certificados y autenticación TLS (seguridad de capa de transporte) sobre el uso de {{site.data.keyword.iot_short_notm}} de ID de usuario y señales. Durante la comunicación entre los dispositivos y el servidor, a cualquier dispositivo que no tenga certificados válidos con acceso al servidor, configurado en el complemento Risk and Security Management, se le deniega el acceso, aunque utilice ID de usuario y contraseñas válidos. 
+El complemento Risk and Security Management le permite mejorar la seguridad de {{site.data.keyword.iot_short_notm}} para asegurarse de que todos los puntos de conexión entre el servidor y los dispositivos se autentican con credenciales probadas. Con este complemento se utilizan certificados y autenticación TLS (seguridad de capa de transporte) sobre el uso de {{site.data.keyword.iot_short_notm}} de ID de usuario y señales. Durante la comunicación entre los dispositivos y el servidor, a cualquier dispositivo que no tenga certificados válidos con acceso al servidor, configurado en el complemento Risk and Security Management, se le deniega el acceso, aunque utilice ID de usuario y contraseñas válidos.
 
 ---

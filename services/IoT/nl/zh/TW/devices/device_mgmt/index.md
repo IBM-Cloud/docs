@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-13"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-12"
 
 ---
 
@@ -36,6 +36,8 @@ lastupdated: "2016-09-13"
 4. 裝置可以使用「裝置管理通訊協定」來傳遞有關其位置、診斷資訊及錯誤碼的更新。
 5. 若要處理大型裝置母體中的已廢止裝置，**受管理裝置**作業要求會包含選用性的 lifetime 參數。lifetime 參數是秒數，裝置必須在這段時間內提出另一個**管理裝置**要求，來避免被分類為休眠及變成未受管理裝置。
 6. 裝置解除任務時，您可以使用儀表板或 REST API，將它從 {{site.data.keyword.iot_short_notm}} 中移除。
+
+請參閱[將 Raspberry Pi 當作受管理裝置連接至 IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-managed-device-to-ibm-iot-foundation/) 秘訣。
 
 ### 回覆碼摘要
 

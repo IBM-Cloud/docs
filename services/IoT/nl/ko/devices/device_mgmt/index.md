@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-13"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-12"
 
 ---
 
@@ -36,6 +36,8 @@ lastupdated: "2016-09-13"
 4. 디바이스는 디바이스 관리 프로토콜을 사용하여 오류 코드 및 진단 정보, 해당 위치에 대한 업데이트를 전달할 수 있습니다. 
 5. 대형 디바이스 군집의 작동되지 않는 디바이스를 처리하기 위해 **관리 디바이스** 오퍼레이션 요청에는 선택적 수명 매개변수가 포함되어 있습니다. 수명 매개변수는 휴면으로 분류되어 비관리 디바이스가 되지 않도록 디바이스가 또 다른 **관리 디바이스** 요청을 작성해야 하는 시간(초)입니다. 
 6. 디바이스가 더 이상 사용되지 않는 경우에는 대시보드 또는 REST API를 사용하여 {{site.data.keyword.iot_short_notm}}에서 이를 제거할 수 있습니다. 
+
+[IBM Watson IoT Platform에 관리 디바이스로서 Raspberry Pi 연결](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-managed-device-to-ibm-iot-foundation/) 레시피를 참조하십시오. 
 
 ### 리턴 코드 요약
 

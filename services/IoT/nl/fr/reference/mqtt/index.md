@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-09"
+  years: 2015, 2016, 2017
+lastupdated: "2016-11-18"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -34,11 +34,14 @@ Dans {{site.data.keyword.iot_short_notm}}, les principales classes d'objet sont 
 
 Votre client MQTT s'identifie auprès du service {{site.data.keyword.iot_short_notm}} en tant que classe de chose. La classe de chose détermine les fonctionnalités du client quand il est connecté. La classe d'objets détermine également le mécanisme d'authentification de client.
 
-Les applications et les terminaux fonctionnent avec des espaces de sujet MQTT différents. Les terminaux fonctionnent dans un espace de sujet délimité pour les terminaux alors que les applications disposent d'un accès complet à l'espace de sujet de l'ensemble de l'organisation. Pour plus d'informations, voir les rubriques suivantes :
+Les applications et les terminaux fonctionnent avec des espaces de sujet MQTT différents.  Les terminaux fonctionnent dans un espace de sujet délimité pour les terminaux alors que les applications disposent d'un accès complet à l'espace de sujet de l'ensemble de l'organisation. Pour plus d'informations, voir les rubriques suivantes :
 
-- [Terminaux](../../devices/mqtt.html)
-- [Applications](../../applications/mqtt.html)
-- [Passerelles](../../gateways/mqtt.html)
+- [Messagerie MQTT pour les terminaux](../../devices/mqtt.html)
+- [Messagerie MQTT pour les applications](../../applications/mqtt.html)
+- [Messagerie MQTT pour les passerelles](../../gateways/mqtt.html)
+
+### Messages conservés
+{{site.data.keyword.iot_short_notm}} fournit une prise en charge limitée pour la fonction de messages conservés de la messagerie MQTT. Si l'indicateur de message conservé a pour valeur true dans un message MQTT qui est envoyé d'un terminal, d'une passerelle ou d'une application à {{site.data.keyword.iot_short_notm}}, le message est traité comme un message non conservé. Les organisations {{site.data.keyword.iot_short_notm}} ne sont pas autorisées à publier des messages conservés. Le service {{site.data.keyword.iot_short_notm}} écrase l'indicateur de message conservé lorsqu'il a pour valeur true et traite le message comme si l'indicateur de message conservé avait pour valeur false.
 
 ## Niveaux de qualité de service
 {: #qos-levels}

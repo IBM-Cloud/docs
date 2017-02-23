@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-08"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-19"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2016-09-08"
 # {{site.data.keyword.iot_short_notm}}에 애플리케이션, 디바이스 및 게이트웨이 연결
 {: #connect_devices_apps_gw}
 
-MQTT 프로토콜을 통해 애플리케이션, 디바이스 및 게이트웨이를 {{site.data.keyword.iot_full}}에 연결할 수 있습니다. 디바이스에서 HTTP API를 통해 {{site.data.keyword.iot_short_notm}}에 연결하고 이벤트를 공개할 수 있습니다.
+MQTT 프로토콜을 통해 {{site.data.keyword.iot_full}}에 애플리케이션, 디바이스 및 게이트웨이를 연결할 수 있습니다. 또한 HTTP REST API를 사용하여 {{site.data.keyword.iot_short_notm}}에 디바이스를 연결할 수도 있습니다.
 {: shortdesc}
 
 
@@ -35,13 +35,13 @@ MQTT 프로토콜을 통해 애플리케이션, 디바이스 및 게이트웨이
 {: codeblock}
 
 **참고**
-- *orgId*는 서비스 인스턴스를 등록할 때 생성된 고유 구성 ID입니다.
+- 여기서 *orgId*는 서비스 인스턴스를 등록할 때 생성된 고유 조직 ID입니다. 
 - Quickstart 서비스에 디바이스 또는 애플리케이션을 연결하는 경우 *orgId* 값으로 'quickstart'를 지정하십시오.
 
 ## 포트 보안
 {: #client_port_security}
 
-필수 포트가 열리고 통신에 사용 가능한지 확인하십시오.
+필수 포트가 열리고 통신에 사용 가능한지 확인하십시오. 8883 및 443 포트는 MQTT 및 HTTP 프로토콜의 TLS를 사용한 보안 연결을 지원합니다. 1883 포트는 MQTT 및 HTTP 프로토콜의 비보안 연결을 지원합니다. 연결 유형 및 연관된 포트 번호에 대한 정보는 다음 표에 요약되어 있습니다.    
 
 |연결 유형 |포트 번호|
 |:---|:---|
@@ -49,20 +49,54 @@ MQTT 프로토콜을 통해 애플리케이션, 디바이스 및 게이트웨이
 |보안|8883|
 |보안|443|
 
-MQTT 클라이언트에서는 디바이스 인증 토큰(디바이스의 경우) 및 API 키와 토큰(애플리케이션의 경우)과 같은 적절한 신임 정보를 사용하여 연결합니다. 비보안 포트 1883에 보내는 MQTT 메시징에서는 일반 텍스트로 신임 정보를 보내므로 항상 보안 대체 포트인 8883 또는 443을 대신 사용하십시오. 보안 포트에서는 TLS 신임 정보를 강제로 암호화합니다. Python MQTT 라이브러리에서 tls_set() 메소드를 사용하여 애플리케이션에서 TLS를 사용으로 설정해야 합니다. 그렇지 않으면 데이터가 보안되지 않은 상태로 전송될 수 있습니다.
+MQTT는 TCP 및 WebSocket에서 지원됩니다. MQTT 클라이언트에서는 디바이스 인증 토큰(디바이스의 경우) 및 API 키와 토큰(애플리케이션의 경우)과 같은 적절한 신임 정보를 사용하여 연결합니다. 비보안 포트 1883에 보내는 MQTT 메시징에서는 일반 텍스트로 신임 정보를 보내므로 항상 보안 대체 포트인 8883 또는 443을 대신 사용하십시오. TLS 신임 정보는 보안 포트에서 전송될 때 항상 암호화됩니다. Python MQTT 라이브러리에 있는 tls_set() 메소드를 사용하여 애플리케이션에서 TLS를 반드시 사용해야 합니다. 그렇지 않으면 데이터가 보안되지 않은 상태로 전송될 수 있습니다.
 
 8883 또는 443 포트에서 보안 MQTT 메시징을 사용하면 새 클라이언트 라이브러리는 {{site.data.keyword.iot_short_notm}}에서 제공하는 인증서를 자동으로 신뢰합니다. 사용자의 클라이언트 환경에서는 이와 다른 경우 [messaging.pem](https://github.com/ibm-messaging/iot-python/blob/master/src/ibmiotf/messaging.pem)에서 전체 인증서 체인을 다운로드하여 사용할 수 있습니다.
 
 
 ## TLS 요구사항
 {: #tls_requirements}
+
 일부 TLS(Transport Layer Security) 클라이언트 라이브러리에서는 와일드 카드를 포함하는 도메인을 지원하지 않습니다. 라이브러리를 변경할 수 없으면 인증 검사를 사용 안함으로 설정하십시오.
 
-{{site.data.keyword.iot_short_notm}}에는 TLS V1.2와 다음 암호 스위트가 필요합니다.
-- ECDHE-RSA-AES256-GCM-SHA384
-- AES256-GCM-SHA384
-- ECDHE-RSA-AES128-GCM-SHA256
-- AES128-GCM-SHA256
+TLS 요구사항은 MQTT 또는 HTTP 프로토콜로 {{site.data.keyword.iot_short_notm}}에 연결 중인지 여부에 따라 다릅니다. 다음 절에서는 기본 서버 인증서가 사용되는 경우에 지원되는 암호 스위트를 표시합니다. 자체 클라이언트 인증서를 사용 중인 경우, 지원되는 암호 스위트는 사용되는 인증서에 따라 다릅니다. 
+
+### MQTT 연결을 위한 TLS 요구사항
+
+{{site.data.keyword.iot_short_notm}}에서는 TLS v1.2 및 다음 암호 스위트가 필요합니다. 
+
+
+- TLS_RSA_WITH_AES_128_CBC_SHA
+- TLS_DHE_RSA_WITH_AES_128_CBC_SHA
+- TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+- TLS_RSA_WITH_AES_128_CBC_SHA256
+- TLS_DHE_RSA_WITH_AES_128_CBC_SHA256
+- TLS_RSA_WITH_AES_128_GCM_SHA256
+- TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
+- TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
+- TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+- TLS_RSA_WITH_AES_256_CBC_SHA
+- TLS_DHE_RSA_WITH_AES_256_CBC_SHA
+- TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+- TLS_RSA_WITH_AES_256_CBC_SHA256
+- TLS_DHE_RSA_WITH_AES_256_CBC_SHA256
+- TLS_RSA_WITH_AES_256_GCM_SHA384
+- TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+- TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+- TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+
+### HTTP 연결을 위한 TLS 요구사항
+
+기본 서버 인증서를 사용 중인 경우, {{site.data.keyword.iot_short_notm}}에서는 TLS v1, TLS v1.1 또는 TLS v1.2 및 다음 암호 스위트가 필요합니다. 
+
+
+- TLS_RSA_WITH_AES_128_CBC_SHA
+- TLS_RSA_WITH_AES_128_CBC_SHA256
+- TLS_RSA_WITH_AES_128_GCM_SHA256
+- TLS_RSA_WITH_AES_256_CBC_SHA
+- TLS_RSA_WITH_AES_256_CBC_SHA256
+- TLS_RSA_WITH_AES_256_GCM_SHA384
+
 
 ## MQTT 클라이언트 인증
 {: #mqtt_authentication}
@@ -83,7 +117,6 @@ MQTT 클라이언트에서는 디바이스 인증 토큰(디바이스의 경우)
 |게이트웨이|g|<pre class="pre">g:<var class="keyword varname">orgId</var>:<var class="keyword varname">typeId</var>:<var class="keyword varname">deviceId</var></pre>|
 
 여기서
-
 - *orgId*는 서비스 인스턴스를 등록할 때 생성된 6자의 고유 구성 ID입니다.
 - *appId*는 클라이언트의 사용자 정의 고유 문자열 ID입니다.
 - *deviceId*는 모든 유형에서 디바이스나 게이트웨이를 고유하게 식별하며 일련 번호와 비슷합니다.
@@ -130,7 +163,7 @@ API 키를 사용하여 MQTT 연결 시, 다음 요구사항이 충족되는지 
 {{site.data.keyword.iot_short_notm}} 서비스에서는 디바이스의 토큰 기반 인증만 지원하므로 각 디바이스에는 올바른 사용자 이름이 하나뿐입니다.
 `use-token-auth`의 값을 사용하여 게이트웨이 또는 디바이스의 인증 토큰을 MQTT 연결의 비밀번호로 사용함을 서비스에 표시합니다.
 
-자세한 정보는 [디바이스용 MQTT 연결](../../devices/mqtt.html)을 참조하십시오.
+자세한 정보는 [디바이스용 MQTT 연결](../../devices/mqtt.html)을 참조하십시오. 
 
 #### 비밀번호
 클라이언트에서 토큰 기반 인증을 사용 중인 경우 모든 MQTT 연결에 사용하는 비밀번호로 디바이스 인증 토큰을 제출하십시오.

@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-14"
+  years: 2015, 2016, 2017
+lastupdated: "2016-11-17"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -58,11 +58,16 @@ Ein Gateway kann Ereignisse von sich aus und im Namen eines beliebigen anderen G
 |Gerät 1 |mydevice |device1 |
 
 -   Gateway 1 kann eigene Statusereignisse publizieren:
+      
     `iot-2/type/mygateway/id/gateway1/evt/status/fmt/json`
 -   Gateway 1 kann Statusereignisse im Namen von Gerät 1 publizieren:
+      
     `iot-2/type/mydevice/id/device1/evt/status/fmt/json`
 
 **Wichtig:** Der Umfang der Nachrichtennutzdaten ist auf maximal 131072 Byte begrenzt. Nachrichten, die größer sind als dieser Wert, werden abgelehnt.
+
+### Aufbewahrte Nachrichten
+{{site.data.keyword.iot_short_notm}}-Organisationen sind nicht dazu berechtigt, aufbewahrte MQTT-Nachrichten zu publizieren. Wenn ein Gateway eine aufbewahrte Nachricht sendet, überschreibt der {{site.data.keyword.iot_short_notm}}-Service das Flag für aufbewahrte Nachricht, sofern es auf 'true' gesetzt ist, und verarbeitet die Nachricht so, als wäre das Flag auf 'false' gesetzt.
 
 ## Befehle subskribieren
 {: #subscribing_cmds}
@@ -83,10 +88,13 @@ Das MQTT-Platzhalterzeichen `+` kann als `Typ-ID`, `Geräte-ID`, `Befehls-ID` un
 
 
 -   Gateway 1 kann Befehle subskribieren, die an das Gateway gerichtet sind:
-`iot-2/type/mygateway/id/gateway1/cmd/+/fmt/+`
+  
+    `iot-2/type/mygateway/id/gateway1/cmd/+/fmt/+`
 -   Gateway 1 kann Befehle subskribieren, die an Gerät 1 gesendet wurden:
+      
     `iot-2/type/mydevice/id/device1/cmd/+/fmt/+`
 -   Gateway 1 kann beliebige Befehle subskribieren, die an Geräte des Typs `mydevice` gesendet werden:
+       
      `iot-2/type/mydevice/id/+/cmd/+/fmt/+`
 
 **Wichtig:** Persistente MQTT-Sitzungen, die als `cleansession=false` angegeben sind, suchen nicht nach Geräten, die Verbindungen zu Gateways herstellen. Wenn ein Gerät eine Verbindung zu Gateway A und anschließend eine Verbindung zu Gateway B herstellt, empfängt es keine Nachrichten, die für dieses Gerät an Gateway A publiziert wurden, während die Verbindung unterbrochen war. Ein Gateway ist Eigner des MQTT-Clients und der Subskription, aber nicht der Geräte, die mit diesem Gateway verbunden sind.
@@ -154,7 +162,7 @@ Die Unterstützung für das Lebenszyklusmanagement von Geräten ist optional. Da
 ### Servicequalitätsstufen und bereinigte Sitzung
 {: #quality_service}
 
-Verwaltete Gateways können Nachrichten publizieren, deren Servicequalitätsstufe (QoS) '0' oder '1' ist. Nachrichten vom Gateway dürfen keine aufbewahrten Nachrichten sein.
+Verwaltete Gateways können Nachrichten publizieren, deren Servicequalitätsstufe (QoS) '0' oder '1' ist.
 
 Nachrichten, für die 'QoS=0' gilt, können verworfen werden; sie bleiben nach dem Neustart des Nachrichtenservers nicht bestehen. Nachrichten, für die 'QoS=1' gilt, können in die Warteschlange gestellt werden; sie bleiben nach dem Neustart des Nachrichtenservers bestehen. Durch die für eine Subskription geltende Permanenz ist festgelegt, ob eine Anforderung in die Warteschlange gestellt wird. Durch den Parameter `cleansession` der Verbindung, die die Subskription vorgenommen hat, wird die Permanenz der Subskription festgelegt.  
 

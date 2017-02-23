@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-13"
+  years: 2016, 2017
+lastupdated: "2016-11-29"
 
 ---
 
@@ -14,7 +14,6 @@ lastupdated: "2016-10-13"
 
 # 确保定制卡服务器的安全
 {: #securing_custom_cards}
-
 
 定制卡服务器是标准 Web 服务器，用于托管定制卡 JavaScript 代码。要确保 {{site.data.keyword.iot_short_notm}} 环境的完整性，您应该如本主题中所述，通过采取步骤确保卡源安全，从而确保定制卡服务器的安全。
 {:shortdesc}
@@ -30,7 +29,8 @@ lastupdated: "2016-10-13"
 {: #server_requirements}
 
 以下需求通过 {{site.data.keyword.iot_short_notm}} 进行设置：
-- 服务器上提供定制卡内容的目录必须无需凭证即可访问。连接以访问并装入定制卡时，不会向定制卡服务器提供任何认证。
+- 服务器上提供定制卡内容的目录必须无需凭证即可访问。  
+连接以访问并装入定制卡时，不会向定制卡服务器提供任何认证。
 - 服务器必须使用 HTTP 安全 (HTTPS) 协议。
 - 服务器必须支持跨源资源共享 (CORS) 连接。  
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-27"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-10"
 
 ---
 
@@ -48,8 +48,8 @@ Per aggiungere un gateway dal dashboard {{site.data.keyword.iot_short_notm}}:
 3. Seleziona o crea un tipo di dispositivo per il dispositivo che stai aggiungendo.  
 Ogni dispositivo collegato a {{site.data.keyword.iot_short_notm}} deve essere associato a un tipo di dispositivo. I tipi di dispositivo sono gruppi di dispositivi che condividono caratteristiche comuni.  
  1. Fai clic su **Create device type** quindi su **Create gateway type**.
- 2. Immetti un nome del tipo di dispositivo come ad esempio `my_gateway_type` e una descrizione per il tipo di gateway.
-**Importante:** il nome del tipo di dispositivo non deve essere più lungo di 36 caratteri e può contenere solo:
+ 2. Immetti un nome del tipo di dispositivo come ad esempio `my_gateway_type` e una descrizione per il tipo di gateway.   
+ **Importante:** il nome del tipo di dispositivo non deve essere più lungo di 36 caratteri e può contenere solo:
  <ul>
   <li>Caratteri alfanumerici (a-z, A-Z, 0-9)</li>
   <li>Trattini (-)</li>
@@ -59,16 +59,16 @@ Ogni dispositivo collegato a {{site.data.keyword.iot_short_notm}} deve essere as
  **Suggerimento:** puoi aggiungere e modificare gli attributi e i metadati successivamente.
  4. Fai clic su **Create** per aggiungere il nuovo tipo di gateway.
 10. Fai clic su **Next** per avviare il processo di aggiunta del tuo dispositivo gateway con il tipo di gateway selezionato.
-11. Immetti un ID dispositivo, come ad esempio `my_gateway_device`.
+11. Immetti un ID dispositivo, come ad esempio `my_gateway_device`.  
 L'ID dispositivo viene utilizzato per identificare il dispositivo gateway nel dashboard {{site.data.keyword.iot_short_notm}} ed è anche un parametro obbligatorio per la connessione del tuo dispositivo gateway a {{site.data.keyword.iot_short_notm}}.  
-**Importante:** l'ID del tipo di dispositivo non deve essere più lungo di 36 caratteri e può contenere solo: 
+**Importante:** l'ID del tipo di dispositivo non deve essere più lungo di 36 caratteri e può contenere solo:
  <ul>
  <li>Caratteri alfanumerici (a-z, A-Z, 0-9)</li>
  <li>Trattini (-)</li>
  <li>Caratteri di sottolineatura (&lowbar;)</li>
  <li>Punti (.)</li>  
  </ul>
- **Suggerimento:** per i dispositivi collegati alla rete, l'ID del dispositivo può essere ad esempio l'indirizzo MAC del dispositivo senza i due punti di separazione.   
+ **Suggerimento:** per i dispositivi collegati alla rete, l'ID del dispositivo può essere ad esempio l'indirizzo MAC del dispositivo senza i due punti di separazione.  
 12. Facoltativo: fai clic su **Additional fields** per aggiungere informazioni sul dispositivo gateway, come il numero di serie, il produttore, il modello e così via.  
  **Suggerimento:** puoi aggiungere e modificare le informazioni successivamente.
 12. Facoltativo: immetti i metadati JSON del dispositivo.  
@@ -81,10 +81,12 @@ L'ID dispositivo viene utilizzato per identificare il dispositivo gateway nel da
  - Tipo del dispositivo, come ad esempio `my_gateway_type`
  - ID del dispositivo. **Suggerimento:** per i dispositivi collegati alla rete, questo può essere ad esempio l'indirizzo MAC senza i due punti di separazione.
  - Metodo di autenticazione, come ad esempio `token`
- - Token di autenticazione, come ad esempio `PtBVriRqIg4uh)_-Kl`
+ - Token di autenticazione, come ad esempio `PtBVriRqIg4uh)_-Kl`  
   **Suggerimento:** hai bisogno dell'ID organizzazione, del token di autenticazione, del tipo di dispositivo e dell'ID del dispositivo per configurare il tuo dispositivo per il collegamento a {{site.data.keyword.iot_short_notm}}.  
 
 Congratulazioni, hai registrato il tuo dispositivo gateway. Ora puoi configurare il tuo dispositivo gateway per collegarsi a {{site.data.keyword.iot_short_notm}}
+
+Fai riferimento alla ricetta [How to Register Gateways in IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/how-to-register-gateways-in-ibm-watson-iot-platform/) per le istruzioni dettagliate che mostrano il flusso necessario per registrare un gateway.
 
 ## Passo 2: collegamento del tuo gateway a {{site.data.keyword.iot_short_notm}}
 {: #connect_gateway}
@@ -106,6 +108,8 @@ Per informazioni sulla registrazione e sulla pubblicazione automatica del dispos
 
 
 Quando un dispositivo è stato collegato correttamente a un gateway, viene visualizzato sul dashboard della tua organizzazione {{site.data.keyword.iot_short_notm}}.
+
+Fai riferimento alla ricetta [Connecting Raspberry Pi as a Gateway to Watson IoT](https://developer.ibm.com/recipes/tutorials/connecting-raspberry-pi-as-a-gateway-to-watson-iot-using-node-red/) per il flusso e la descrizione dettagliati. 
 
 **Nota:** nel dashboard {{site.data.keyword.iot_short_notm}}, i dispositivi e i gateway collegati direttamente a {{site.data.keyword.iot_short_notm}} visualizzano un'icona di stato che indica che sono collegati. Il dashboard visualizza i dispositivi che sono collegati indirettamente tramite un gateway come scollegati perché non ha informazioni relative alla connettività dei dispositivi al gateway.
 

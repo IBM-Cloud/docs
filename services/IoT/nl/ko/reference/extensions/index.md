@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-18"
+  years: 2015, 2016, 2017
+lastupdated: "2017-02-03"
 
 ---
 
@@ -39,7 +39,7 @@ IBM 플랫폼을 통해 제공되는 기본 제공 Jasper 통합에서는 다음
 다음 구성 단계가 완료된 후 Jasper에 연결된 디바이스의 디바이스 드릴 다운에서 지원되는 오퍼레이션에 액세스할 수 있습니다.
 
 ### Jasper용 REST API
-Jasper용 REST API에 액세스하려면 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension) 문서의 Jasper Extension 절을 참조하십시오. 
+Jasper용 REST API에 액세스하려면 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![외부 링크 아이콘](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension){: new_window} 문서의 Jasper 확장기능 절을 참조하십시오. 
 
 ### Jasper 구성
 
@@ -54,15 +54,15 @@ Jasper용 REST API에 액세스하려면 [{{site.data.keyword.iot_short_notm}} H
   5. **완료**를 클릭하십시오.
 
 2. 디바이스를 구성하십시오.
-{{site.data.keyword.iot_short_notm}} 대시보드에서 Jasper의 데이터를 표시하도록 {{site.data.keyword.iot_short_notm}} 조직과 Jasper 계정에 모두 연결된 디바이스를 구성할 수 있습니다.
-**중요:** Jasper 구성은 디바이스 추가 프로세스의 일부로 적용할 수 없습니다. 이전에 연결된 디바이스만 Jasper로 구성할 수 있습니다.
+{{site.data.keyword.iot_short_notm}} 대시보드에서 Jasper의 데이터를 표시하도록 {{site.data.keyword.iot_short_notm}} 조직과 Jasper 계정에 모두 연결된 디바이스를 구성할 수 있습니다.  
+**중요:** Jasper 구성은 디바이스 추가 프로세스의 일부로 적용할 수 없습니다. 이전에 연결된 디바이스만 Jasper로 구성할 수 있습니다.  
 Jasper 연결 디바이스를 구성하려면 다음 단계를 완료하십시오.
  1. {{site.data.keyword.iot_short_notm}} 대시보드의 디바이스 탭에서 구성할 Jasper 연결 디바이스를 찾으십시오.
  2. *디바이스 드릴 다운* 보기를 열 디바이스를 선택하십시오.
  3. *확장기능 구성*까지 아래로 화면이동하십시오.
  4. 다음 JSON 형식을 사용하여 확장기능 구성을 입력한 다음 **변경 확인**을 클릭하여 구성을 저장하십시오.  
 
-```json
+```json  
     {
         "jasper": {
             "iccid": "string"
@@ -91,7 +91,7 @@ AT&T 확장기능을 사용하면 다음 AT&T 오퍼레이션을 수행할 수 �
 - 요금제 변경
 
 ### AT&T용 REST API
-AT&T용 REST API에 액세스하려면 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension) 문서의 AT&T Extension 절을 참조하십시오. 
+AT&T용 REST API에 액세스하려면 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![외부 링크 아이콘](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension){: new_window} 문서의 AT&T 확장기능 절을 참조하십시오. 
 
 ### AT&T의 구성
 
@@ -110,15 +110,15 @@ AT&T용 REST API에 액세스하려면 [{{site.data.keyword.iot_short_notm}} HTT
 
 
 2. 디바이스를 구성하십시오.
-{{site.data.keyword.iot_short_notm}} 대시보드에서 AT&T의 데이터를 표시하도록 {{site.data.keyword.iot_short_notm}} 조직과 AT&T 계정에 모두 연결된 디바이스를 구성할 수 있습니다.
-**중요:** AT&T 구성은 디바이스 추가 프로세스의 일부로 적용할 수 없습니다. 이전에 연결된 디바이스만 AT&T로 구성할 수 있습니다.
+{{site.data.keyword.iot_short_notm}} 대시보드에서 AT&T의 데이터를 표시하도록 {{site.data.keyword.iot_short_notm}} 조직과 AT&T 계정에 모두 연결된 디바이스를 구성할 수 있습니다.  
+**중요:** AT&T 구성은 디바이스 추가 프로세스의 일부로 적용할 수 없습니다. 이전에 연결된 디바이스만 AT&T로 구성할 수 있습니다.  
 AT&T 연결 디바이스를 구성하려면 다음 단계를 완료하십시오.
  1. {{site.data.keyword.iot_short_notm}} 대시보드의 디바이스 탭에서 구성할 AT&T 연결 디바이스를 찾으십시오.
  2. *디바이스 드릴 다운* 보기를 열 디바이스를 선택하십시오.
  3. *확장기능 구성*까지 아래로 화면이동하십시오.
  4. 다음 JSON 형식을 사용하여 확장기능 구성을 입력한 다음 **변경 확인**을 클릭하여 구성을 저장하십시오.  
 
-```json
+```json  
     {
         "atnt": {
             "iccid": "string"
@@ -223,7 +223,7 @@ https://developer.ibm.com/iotplatform/2016/03/30/watson-iot-platform-integration
 - 위치 상태
 
 ### Orange용 REST API
-Orange용 REST API에 액세스하려면 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension) 문서의 Orange Extension 절을 참조하십시오. 
+Orange용 REST API에 액세스하려면 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![외부 링크 아이콘](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension){: new_window} 문서의 Orange 확장기능 절을 참조하십시오. 
 
 ### Orange 구성
 
@@ -251,7 +251,6 @@ Orange 확장기능을 사용으로 설정하고 나면 Orange SIM 데이터를 
 ```
 조직이 정상적으로 구성되면 *확장기능* 섹션이 *디바이스 드릴 다운* 보기의 *확장기능 구성* 섹션에 표시됩니다.
 
-
 ## 히스토리 데이터 스토리지
 {: #historical_data}
 
@@ -260,9 +259,22 @@ Orange 확장기능을 사용으로 설정하고 나면 Orange SIM 데이터를 
 ## 사용자 정의 디바이스 관리 패키지
 {: #device_mgmt}
 
-디바이스 관리는 {{site.data.keyword.iot_short_notm}}의 코어 기능이지만 추가 기능을 개발하기 위해 확장할 수 있습니다.
+디바이스 관리는 {{site.data.keyword.iot_short_notm}}의 코어 기능이지만 추가 기능을 개발하기 위해 확장할 수 있습니다. 사용자 정의 디바이스 관리 패키지는 올바른 JSON으로 구성되어야 하며 최소한 하나의 사용자 정의 디바이스 관리 조치를 정의해야 합니다. 
 
-디바이스 관리 확장기능을 사용하면 디바이스 관리용 사용자 정의 기능을 설치할 수 있습니다. 사용자 정의 디바이스 관리 기능에 대한 자세한 정보는 [디바이스 관리 사용자 정의 확장기능](../../devices/device_mgmt/custom_actions.html){: new_window}을 참조하십시오.
+필수 JSON 형식의 예제를 포함하여 사용자 정의 디바이스 관리 기능에 대한 자세한 정보는 [디바이스 관리 사용자 정의 확장기능](../../devices/device_mgmt/custom_actions.html){: new_window}을 참조하십시오. 
+
+### 사용자 정의 디바이스 관리 패키지 추가
+
+{{site.data.keyword.iot_short_notm}} 대시보드를 사용하거나 API를 사용하여 사용자 정의 디바이스 관리 패키지를 추가할 수 있습니다. 
+
+{{site.data.keyword.iot_short_notm}} 대시보드를 사용하여 사용자 정의 디바이스 관리 패키지를 추가하려면 다음을 수행하십시오. 
+
+1. {{site.data.keyword.iot_short_notm}} 대시보드의 탐색줄에서 **설정**을 클릭하십시오. 
+2. **사용자 정의 디바이스 관리 패키지**를 클릭하십시오. 
+3. **패키지 추가** 단추를 클릭하십시오. 
+4. 패키지 파일을 선택하고 **열기**를 클릭하십시오. 
+
+API를 사용하여 사용자 정의 디바이스 관리 패키지를 추가하려면 [{{site.data.keyword.iot_short_notm}} API 문서 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}를 참조하십시오. 
 
 ## 블록체인(Blockchain)
 {: #blockchain}
@@ -276,22 +288,27 @@ Orange 확장기능을 사용으로 설정하고 나면 Orange SIM 데이터를 
 
 ### 블록체인 구성
 
-{{site.data.keyword.iot_short_notm}} 블록체인 통합은 {{site.data.keyword.iot_short_notm}}에서 기본적으로 활성화되지 않는 서비스 오퍼링입니다. 사용자 환경에서 이 기능을 활성화하려면 다음 단계를 완료하십시오.
- 1. {{site.data.keyword.iot_short_notm}} 대시보드에서 **확장기능**을 클릭하십시오.
- 2. 블록체인 확장기능 옆의 **자세한 정보** 링크를 클릭하여 IoT 블록체인 서비스 오퍼링 페이지로 이동하십시오.
- 3. 서비스 요청 양식을 작성하여 제출하십시오.
-일반적으로 서비스를 승인하는 데는 하루 정도 걸립니다. 요청이 승인되고 나면 {{site.data.keyword.iot_short_notm}} 조직에서 블록체인 통합을 활성화하는 방법에 대한 지시사항이 포함된 이메일이 전송됩니다.
- 5. 조직이 설정을 완료하도록 {{site.data.keyword.iot_short_notm}} 대시보드로 돌아가십시오. 자세한 정보는 [{{site.data.keyword.iot_short_notm}} 블록체인 통합](../../bl_blockchain_integration.html)을 참조하십시오.
+{{site.data.keyword.iot_short_notm}} 블록체인 통합은 {{site.data.keyword.iot_short_notm}}에서 기본적으로 활성화되지 않는 서비스 오퍼링입니다. 조직에서 기능을 활성화하려면 다음 단계를 완료하십시오. 
+ 1. {{site.data.keyword.iot_short_notm}} 대시보드에서 **확장기능**을 선택하십시오.
+ 2. **확장기능** 페이지에서 **확장기능 추가**를 클릭하십시오.
+ 3. 블록체인 확장기능 옆의 **추가**를 클릭하십시오. 
+ 4. 블록체인 타일에서 **설정**을 클릭하십시오. 
+ 3. **블록체인 활성화** 섹션에서 **자세히 보기** 링크를 클릭하여 [IoT 블록체인 서비스 오퍼링 페이지 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg)](http://www.ibm.com/internet-of-things/iot-news/announcements/private-blockchain/){: new_window}로 이동하십시오. 
+ 4. **블록체인 프로젝트 시작**을 클릭하여 *IoT 및 블록체인의 가능성 탐색* 양식을 채우고 제출하십시오.   
+ 5. 요청이 승인되면 사용자 조직의 블록체인 통합을 사용할 수 있도록 IBM이 사용자에게 연락합니다. 
+ 6. 조직의 {{site.data.keyword.iot_short_notm}} 대시보드로 돌아와서 [{{site.data.keyword.iot_short_notm}} 블록체인 통합](../../bl_blockchain_integration.html)의 단계에 따라 설정을 완료하십시오. 
 
-## Weather Company
+
+
+## The Weather Company
 {: #weathercompany}
 
-Weather Company 확장기능은 기존 {{site.data.keyword.iot_short_notm}} 디바이스와 날씨 데이터를 결합합니다. API를 사용하여 업데이트 위치 요청이 작성되었거나 디바이스 관리 메시지를 사용하여 디바이스가 이미 해당 위치를 설정한 경우 Weather Company의 날씨 데이터가 디바이스 세부사항 보기에 표시됩니다.
+The Weather Company 확장기능은 기존 {{site.data.keyword.iot_short_notm}} 디바이스와 날씨 데이터를 결합합니다. API를 사용하여 업데이트 위치 요청이 작성되었거나 디바이스 관리 메시지를 사용하여 디바이스가 이미 해당 위치를 설정한 경우 The Weather Company의 날씨 데이터가 디바이스 세부사항 보기에 표시됩니다.
 
 **참고:** 관리 디바이스만 고유 위치를 설정할 수 있습니다. 모든 비관리 디바이스에 API를 사용하여 수동으로 설정된 위치가 있어야 합니다. 디바이스 위치 설정에 대한 자세한 정보는 [위치 찾기 요청](../../devices/device_mgmt/index.html#update-location)을 참조하십시오.
 
-### Weather Company용 REST API
-Weather Company용 REST API에 액세스하려면 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather) 문서의 Device Location Weather 절을 참조하십시오. 
+### The Weather Company용 REST API
+The Weather Company용 REST API에 액세스하려면 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![외부 링크 아이콘](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather){: new_window} 문서의 디바이스 위치 날씨 절을 참조하십시오. 
 
 ### 날씨 데이터
 
@@ -308,4 +325,4 @@ Weather Company용 REST API에 액세스하려면 [{{site.data.keyword.iot_short
 - 위도.
 - 경도.
 
-<!-- Weather data from The Weather Company extension can be retrieved by using the API. For information on the Weather Company API, see [The Weather Company API documentation](https://docs.internetofthings.ibmcloud.com/swagger/ext-twc.html). -->
+<!-- Weather data from The Weather Company extension can be retrieved by using the API. For information on the Weather Company API, see [The Weather Company API documentation ![External link icon](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/ext-twc.html){: new_window}. -->

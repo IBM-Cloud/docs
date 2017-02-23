@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2016, 2017
 lastupdated: "2016-08-02"
 
 ---
@@ -162,6 +162,7 @@ Embedded C의 {{site.data.keyword.iot_short_notm}} 클라이언트 라이브러�
 
 ```
 	#include "iotfclient.h"
+
 	void myCallback (char* commandName, char* format, void* payload)
 	{
 	printf("The command received :: %s\n", commandName);

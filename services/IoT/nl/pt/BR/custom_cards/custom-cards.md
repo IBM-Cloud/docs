@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2016, 2017
 lastupdated: "2016-10-13"
 
 ---
@@ -131,13 +131,13 @@ Tudo certo! Você configurou um servidor de cartões com sucesso e implementou s
 Após configurar e verificar o cartão HelloWorld, será possível expandir os cartões customizados e criar os seus próprios.
 
 O repositório de cartão customizado de exemplo inclui os cartões de amostra a seguir:
-- HelloWorld
+- HelloWorld  
 Um cartão simples que fornece um exemplo básico do Hello World.
-- Empty
+- Empty  
 Um cartão vazio que contém a infraestrutura para um cartão. Use esse cartão como um modelo ao construir um cartão a partir do zero.
-- Webcam
+- Webcam  
 Um cartão simples de câmera web. Configure o cartão com uma URL de webcam e configure a taxa de atualização.
-- iFrame
+- iFrame  
 Um cartão iFrame básico que pode ser usado para integrar qualquer página da web segura (HTTPS) em sua placa.
 
 As seguintes etapas de alto nível criam um novo cartão:

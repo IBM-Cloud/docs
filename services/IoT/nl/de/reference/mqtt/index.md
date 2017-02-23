@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-09"
+  years: 2015, 2016, 2017
+lastupdated: "2016-11-18"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -36,15 +36,18 @@ Ihr MQTT-Client identifiziert sich beim {{site.data.keyword.iot_short_notm}}-Ser
 
 Anwendungen und Geräte arbeiten mit unterschiedlichen Bereichen für MQTT-Topics.  Geräte arbeiten innerhalb eines für das Gerät festgelegten Topic-Bereichs, während Anwendungen vollständigen Zugriff auf den Topic-Bereich einer ganzen Organisation haben. Weitere Informationen finden Sie in den folgenden Abschnitten:
 
-- [Geräte](../../devices/mqtt.html)
-- [Anwendungen](../../applications/mqtt.html)
-- [Gateways](../../gateways/mqtt.html)
+- [MQTT-Messaging für Geräte](../../devices/mqtt.html)
+- [MQTT-Messaging für Anwendungen](../../applications/mqtt.html)
+- [MQTT-Messaging für Gateways](../../gateways/mqtt.html)
+
+### Aufbewahrte Nachrichten
+{{site.data.keyword.iot_short_notm}} bietet eingeschränkte Unterstützung für die Funktion für aufbewahrte Nachrichten im MQTT-Messaging. Wenn das Flag für aufbewahrte Nachricht in einer MQTT-Nachricht, die von einem Gerät, Gateway oder von einer Anwendung an {{site.data.keyword.iot_short_notm}} gesendet wird, auf den Wert 'true' gesetzt ist, wird die Nachricht als nicht aufbewahrte Nachricht behandelt.{{site.data.keyword.iot_short_notm}}-Organisationen sind nicht dazu berechtigt, aufbewahrte Nachrichten zu publizieren. Der {{site.data.keyword.iot_short_notm}}-Service überschreibt das Flag für aufbewahrte Nachricht, sofern es auf den Wert 'true' gesetzt ist, und verarbeitet die Nachricht so, als wäre das Flag auf 'false' gesetzt.
 
 ## Servicequalitätsstufen
 {: #qos-levels}
 
 Das MQTT-Protokoll bietet für das Übergeben von Nachrichten zwischen Clients und Servern drei Servicequalitäten: 'höchstens einmal', 'mindestens einmal' und 'genau einmal'.
-Zwar können Sie Ereignisse und Befehle mithilfe einer beliebigen Servicequalitätsstufe senden; Sie müssen jedoch sorgfältig in Erwägung ziehen, welcher Service-Level für Ihre Bedürfnisse der richtige ist. Servicequalitätsstufe '2' ist nicht immer die bessere Option als Stufe '0'.
+Zwar können Sie Ereignisse und Befehle mit jeder beliebigen Servicequalität senden, Sie sollten jedoch sorgfältig überlegen, welche Servicequalität für Ihre Bedürfnisse die richtige ist. Servicequalitätsstufe '2' ist nicht immer die bessere Option als Stufe '0'.
 
 ### Höchstens einmal (QoS0)
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-08-02"
+  years: 2015, 2016, 2017
+lastupdated: "2016-11-22"
 
 ---
 
@@ -19,7 +19,6 @@ lastupdated: "2016-08-02"
 Utilice la [biblioteca de clientes mBed C++](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/) para conectarse fácilmente a [dispositivos mBed](https://www.mbed.com/en/), como por ejemplo [LPC1768](https://developer.mbed.org/platforms/mbed-LPC1768/) o [FRDM-K64F](https://developer.mbed.org/platforms/FRDM-K64F/), al servicio de {{site.data.keyword.iot_full}}.
 {:shortdesc}
 
-
 Para obtener más información, consulte [ibmiotf](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/) en [developer.mbed.org](https://developer.mbed.org/).
 
 Aunque la biblioteca utiliza C++, evita las ubicaciones de memoria dinámicas y el uso de funciones STL, porque los dispositivos mBed a veces cuentan con modelos de memoria idiosincráticos que hacen que la importación sea difícil. En cualquier caso, la biblioteca le permite realizar el uso de memoria de forma tan predecible como sea posible.
@@ -29,7 +28,7 @@ Aunque la biblioteca utiliza C++, evita las ubicaciones de memoria dinámicas y 
 
 |Dependencia |Descripción|
 |:---|:---|
-|[Biblioteca de Eclipse Paho MQTT](https://developer.mbed.org/teams/mqtt/code/MQTT/)|Proporciona una biblioteca de cliente MQTT para dispositivos mBed. Para obtener más información, consulte [Bibliotecas de clientes Embedded MQTT C/C++](http://www.eclipse.org/paho/clients/c/embedded/)|
+|[Biblioteca de Eclipse Paho MQTT](https://developer.mbed.org/teams/mqtt/code/MQTT/)|Proporciona una biblioteca de cliente MQTT para dispositivos mBed. Para obtener más información, consulte [Bibliotecas de cliente Embedded MQTT C/C++](http://www.eclipse.org/paho/clients/c/embedded/)|
 |[Biblioteca EthernetInterface](https://developer.mbed.org/users/mbed_official/code/EthernetInterface/)|Una biblioteca mBed IP en Ethernet.|
 
 ## Cómo utilizar la biblioteca
@@ -39,7 +38,7 @@ Utilice el [compilador mBed](https://developer.mbed.org/compiler/) para crear la
 
 **Nota:** No tiene que instalar o configurar nada para utilizar mBed.
 
-Para obtener información sobre cómo conectar un microcontrolador ARM mBed NXP LPC 1768 al {{site.data.keyword.iot_short_notm}}, consulte la receta [mBed C++ Client Library for IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/mbed-c-client-library-for-ibm-iot-foundation/).
+Para obtener información sobre cómo conectar un microcontrolador ARM mBed NXP LPC 1768 a {{site.data.keyword.iot_short_notm}}, consulte la receta [Biblioteca de cliente mBed C++ para IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/mbed-c-client-library-for-ibm-iot-foundation/).
 
 ## Constructor
 {: #constructor}

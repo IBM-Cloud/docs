@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-30"
+  years: 2016, 2017
+lastupdated: "2017-2-6"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -71,12 +71,11 @@ Bevor Sie mit der Bereitstellung und dem Testen von intelligenten Verträgen beg
 **Hinweis:** Die {{site.data.keyword.iot_short_notm}}-Blockchain-Integration unterstützt das Herstellen von Verbindungen sowohl zu {{site.data.keyword.blockchainfull_notm}}-Fabrics als auch zu Hyperledger-Fabrics. In den folgenden Beispielen wird {{site.data.keyword.blockchainfull_notm}} verwendet.
 
 1. Erstellen und konfigurieren Sie Ihr {{site.data.keyword.blockchainfull_notm}}-Fabric.
-
 Für die {{site.data.keyword.iot_short_notm}}-Blockchain-Integration ist das {{site.data.keyword.blockchainfull_notm}}-Fabric erforderlich, damit das Blockchain-Konto, intelligente Verträge und die allgemeine Blockchain-Infrastruktur verwaltet werden können. Bei der {{site.data.keyword.Bluemix_notm}}-Blockchain-Integration wird zum Verwalten der Ketten (Chains) {{site.data.keyword.blockchainfull_notm}} verwendet. Wenn Sie Zugriff auf eine vorhandene {{site.data.keyword.blockchainfull_notm}}-Umgebung haben, können Sie diese verwenden. Falls nicht, müssen Sie ausgehend vom {{site.data.keyword.Bluemix_notm}}-[Katalog](https://console.ng.bluemix.net/catalog/services/blockchain/) eine Instanz von {{site.data.keyword.blockchainfull_notm}} erstellen.
 
   1. Klicken Sie im Dashboard Ihres {{site.data.keyword.Bluemix_notm}}-Kontos auf **Services oder APIs verwenden**.
-  2. Suchen Sie den Abschnitt 'Experimentell' des Servicekatalogs und wählen Sie **Blockchain** aus.  
-   **Tipp:** Klicken Sie [hier](https://console.ng.bluemix.net/catalog/services/blockchain/), um direkt zur {{site.data.keyword.blockchainfull_notm}}-Seite mit dem experimentellen Service zu gelangen.
+  2. Suchen Sie den Abschnitt für Anwendungsservices im Servicekatalog und wählen Sie **Blockchain** aus.  
+   **Tipp:** Klicken Sie [hier](https://console.ng.bluemix.net/catalog/services/blockchain/), um direkt zur Seite mit dem {{site.data.keyword.blockchainfull_notm}}-Service zu gelangen.
   3. Überprüfen Sie auf der Seite des {{site.data.keyword.blockchainfull_notm}}-Service die Auswahl für 'Service hinzufügen':  
     - Bereich - Wenn Sie außer dem Standardbereich `dev` weitere Bereiche haben, müssen Sie überprüfen, dass der Service im gewünschten Bereich bereitgestellt wird.
     - App - Nicht binden.
@@ -85,7 +84,7 @@ Für die {{site.data.keyword.iot_short_notm}}-Blockchain-Integration ist das {{s
   4. Klicken Sie auf **Erstellen**, um {{site.data.keyword.blockchainfull_notm}} in {{site.data.keyword.Bluemix_notm}} bereitzustellen.  
   Die Blockchain-Instanz wird zunächst mit zwei Peerknoten bereitgestellt. Sie können nach Bedarf weitere Knoten hinzufügen.
 
-4. Verlinken Sie {{site.data.keyword.iot_short_notm}} mit Ihrem {{site.data.keyword.blockchainfull_notm}}-Service
+4. Verlinken Sie {{site.data.keyword.iot_short_notm}} mit Ihrem {{site.data.keyword.blockchainfull_notm}}-Service.  
     Um von {{site.data.keyword.iot_short_notm}} aus an Blockchain zu schreiben, müssen Sie die Services zunächst verlinken.
      1. Wechseln Sie in {{site.data.keyword.Bluemix_notm}} zum Dashboard.
      2. Wählen Sie den Bereich aus, in dem Sie {{site.data.keyword.blockchainfull_notm}} bereitgestellt haben.
@@ -130,19 +129,49 @@ Für die {{site.data.keyword.iot_short_notm}}-Blockchain-Integration ist das {{s
      8. Wählen Sie den Bereich aus, in dem Sie {{site.data.keyword.iot_short_notm}} bereitgestellt haben.
      9. Klicken Sie auf die Kachel für **{{site.data.keyword.iot_short_notm}}**.
      10. Klicken Sie auf die Option zum **Starten**, um das {{site.data.keyword.iot_short_notm}}-Dashboard zu öffnen.
-     11. Wählen Sie im {{site.data.keyword.iot_short_notm}}-Dashboard die Optionen **Einstellungen > Verbindungen** aus, indem Sie in der seitlichen Menüleiste auf ![Einstellungen](images/platform_settings.png "Einstellungen") klicken.
-     12. Klicken Sie unter 'Blockchain' im Abschnitt 'Erweiterungen' auf **Fabric-Verbindung hinzufügen**.   
-    Felder für die Fabric-Verbindung werden auf der Seite automatisch angezeigt, das ersetzt die Tabelle.  
-    **Hinweis:** Damit Fabrics hinzugefügt werden können, muss die Blockchain-Integration aktiviert sein. Informationen dazu finden Sie unter [Blockchain](../../reference/extensions/index.html#blockchain) im Abschnitt 'Externe Services integrieren'.
-     14. Geben Sie folgende Informationen ein, um eine Verbindung zum Fabric herzustellen:
-      - Fabric-Name - Geben Sie einen Namen ein, um das Fabric in {{site.data.keyword.iot_short_notm}} anzugeben.
-      - Peeradresswert - Geben Sie die Adresse `api_host` an.
-      - Portnummer - Geben Sie die Nummer für `api_port` oder für `api_port_tls` ein. Verwenden Sie Port 80, wenn Ihre Implementierung kein TLS verwendet. Verwenden Sie Port 443, wenn Ihre Implementierung TLS verwendet.
-      - TLS verwenden? - Verwenden Sie Transport Layer Security, um die Kommunikation zwischen {{site.data.keyword.iot_short_notm}} und dem Vertrag im Fabric zu verschlüsseln. Die Standardportnummern werden durch die bereitgestellte {{site.data.keyword.iot_short_notm}}-Instanz festgelegt, zu der Sie eine Verbindung herstellen.
-      - Benutzer-ID - Geben Sie die Zeichenfolge für `username` (Benutzername) ein.
-      - Geheimer Schlüssel - Geben Sie die Zeichenfolge für `secret` ein.
-     15. Klicken Sie auf **Alle Änderungen bestätigen**.
-Die Fabric-Tabelle wird mit der neuen Verbindung für das Fabric gefüllt.  
+     11. Wählen Sie im {{site.data.keyword.iot_short_notm}}-Dashboard in der seitlichen Menüleiste die Option **Erweiterungen** aus.
+     12. Klicken Sie auf der Seite **Erweiterungen** der Kachel 'Blockchain' auf **Einrichten** oder klicken Sie auf ![Zahnradsymbol](../images/gear.png "Konfigurieren"), falls bereits Fabrics verbunden sind.
+     13. Klicken Sie im Abschnitt zum Konfigurieren von Blockchain auf **Fabric hinzufügen** und geben Sie anschließend die Fabric-Informationen ein.
+    **Hinweis:** Damit Fabrics hinzugefügt werden können, muss die Blockchain-Integration aktiviert sein. Informationen dazu finden Sie unter [Blockchain](../reference/extensions/index.html#blockchain) im Abschnitt 'Externe Services integrieren'.
+    1. Geben Sie auf der Registerkarte **Fabric** einen Namen ein, um das Fabric in {{site.data.keyword.iot_short_notm}} anzugeben, und klicken Sie anschließend auf **Weiter**.   
+    2. Geben Sie auf der Registerkarte **Peer** die Peerinformationen ein.  
+   <table>
+   <thead>
+   <tr>
+   <th>Parameter</th>
+   <th>Wert</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>Name</td>
+   <td>Geben Sie einen Namen ein, um den Peer in {{site.data.keyword.iot_short_notm}} anzugeben.</td>
+   </tr>
+   <tr>
+   <td>Host</td>
+   <td>Die Adresse `api_host` für den Server des überprüfenden Peers 1.</td>
+   </tr>
+   <tr>
+   <td>Port</td>
+   <td>Die Nummer `api_port`.<ul><li>Verwenden Sie Port 80, wenn Ihre Implementierung kein TLS verwendet.</li><li>Verwenden Sie Port 443, wenn Ihre Implementierung TLS verwendet.</li></ul></td>
+   </tr>
+   <tr>
+   <td>Benutzer-ID</td>
+   <td>Die Zeichenfolge `username` (Benutzername) für den Benutzer, die zum Registrieren des intelligenten Vertrags bei Blockchain verwendet wurde. Sie verwenden diese Benutzer-ID auch, wenn Sie später die einfache Benutzerschnittstelle konfigurieren (Simple UI).</td>
+   </tr>
+   <tr>
+   <td>Geheimer Schlüssel</td>
+   <td>Die Zeichenfolge `secret` für den Benutzer.</td>
+   </tr>
+   <tr>
+   <td>TLS verwenden</td>
+   <td>An oder Aus</br>Verwenden Sie Transport Layer Security, um die Kommunikation zwischen {{site.data.keyword.iot_short_notm}} und dem Vertrag im Fabric zu verschlüsseln. Die Standardportnummern werden durch die bereitgestellte {{site.data.keyword.iot_short_notm}}-Instanz festgelegt, zu der Sie eine Verbindung herstellen.</td>
+   </tr></tbody>
+   </table>  
+    3. Klicken Sie auf **Fertigstellen**.
+     3. Klicken Sie im Abschnitt zum Konfigurieren von Blockchain auf **Fertig**, um die Fabric-Informationen zu speichern.    
+
+Die Fabric-Tabelle wird mit der neuen Verbindung für das Fabric gefüllt..  
 
 ## Intelligente Verträge erstellen, testen und bereitstellen
 {: #test_contracts}
@@ -163,7 +192,7 @@ Um Ihren eigenen Chaincode vor dem Bereitstellen in {{site.data.keyword.blockcha
 3. Optional: Laden Sie die von IBM bereitgestellten Beispiele für intelligente Verträge herunter.  
 IBM stellt eine Reihe von intelligenten Verträgen bereit, die Sie herunterladen und unverändert sofort verwenden können bzw. für Ihre Unternehmensziele anpassen können.  
 Gehen Sie wie folgt vor, um die Beispielverträge herunterzuladen:
- 1. Wechseln Sie zum GitHub-Repository mit den Blockchain-Beispielen unter https://github.com/ibm-watson-iot/blockchain-samples/.
+ 1. Wechseln Sie zum GitHub-Repository mit den Blockchain-Beispielen unter https://github.com/ibm-watson-iot/blockchain-samples/.  
 Die Ordner 'basic_contract_hyperledger' und 'trade_lane_contract_hyperledger' enthalten den Basisvertrag bzw. den Trade Lane-Vertrag.
  3. Mit der Option `git clone` im Terminal können Sie das https://github.com/ibm-watson-iot/blockchain-samples-Projekt klonen.  
  **Tipp:** Sie können auch eine komprimierte Datei des Projekts herunterladen, indem Sie auf der Projektseite auf **Download ZIP** klicken.
@@ -189,6 +218,7 @@ Die Ordner 'basic_contract_hyperledger' und 'trade_lane_contract_hyperledger' en
  Nach dem lokalen Testen und Bestätigen Ihres Vertrags können Sie ihn zum Testen in Ihrem {{site.data.keyword.blockchainfull_notm}}-Fabric bereitstellen.
   1. Laden Sie Ihren Vertrag in Ihr öffentliches GitHub-Repository hoch.  
   Laden Sie die Datei 'sample.go' beispielsweise an diese Position hoch:
+    
   `http://github.com/{my organization}/{my project}/`
   2. Registrieren Sie den Vertrag auf dem Peer, zu dem Sie zuvor eine Verbindung hergestellt haben.  
   Verwenden Sie einen REST-Client wie beispielsweise CURL oder Postman, um den Registrierungsaufruf zu übergeben. Weitere Informationen zum Registrierungsaufruf finden Sie in der [Dokumentation zur POST-Registrator-API](https://ibmblockchainapi.mybluemix.net/swagger/ui.html?scheme=http&host=127.0.0.1:3000&basepath=/#!/Registrar/registerUser). Verwenden Sie bei der Registrierung folgende Informationen:
@@ -314,12 +344,12 @@ Zum Testen Ihres intelligenten Vertrags führen Sie einen umfassenden Test durch
 
 3. Überprüfen Sie in der Benutzerschnittstelle für die Überwachung, dass Ihr Setup wie erwartet funktioniert.  
 Verwenden Sie die Komponenten der Benutzerschnittstelle für die Überwachung, um mit dem Blockchain-Vertrag zu interagieren:  
- - Chaincode-Operationen
+ - Chaincode-Operationen  
 Überprüfen Sie, dass die vertragsspezifischen Chaincode-Operationen wie erwartet ausgeführt werden können. Überprüfen Sie beispielsweise für den Basisvertrag, dass die Ausführung der Funktion `createAsset` dazu führt, dass ein Asset zu Blockchain hinzugefügt wird.
- - Antwortnutzdaten
-Stellen Sie sicher, dass wie erwartet Antworten auf Peer-Anforderungen angezeigt werden, wenn Sie REST-Anforderungen über die Registerkarte für Chaincode-Operationen übergeben.
- - Blockchain
-Überprüfen Sie, dass der Kette (Chain) Blöcke hinzugefügt werden, wenn Sie Daten von einem zugeordneten Gerät einfügen oder wenn Sie die Komponente für Chaincode-Operationen verwenden.    
+ - Antwortnutzdaten  
+Stellen Sie sicher, dass Antworten auf Peer-Anforderungen wie erwartet angezeigt werden, wenn Sie REST-Anforderungen über die Registerkarte für Chaincode-Operationen übergeben.
+ - Blockchain  
+Überprüfen Sie, dass beim Einfügen von Daten, die von einem verbundenen Gerät stammen, oder bei der Verwendung der Komponente für Chaincode-Operationen in der Kette (Chain) Blöcke hinzugefügt werden.    
 
 ## Nächste Schritte
 {: #next_steps}

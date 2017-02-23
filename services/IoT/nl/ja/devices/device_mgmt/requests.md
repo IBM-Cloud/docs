@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-08"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-10"
 
 ---
 
@@ -256,6 +256,7 @@ REST API を使用してファームウェア・ダウンロードを開始す�
 
 1. ファームウェア詳細更新要求がトピック `iotdm-1/device/update` で送信されます。
 この更新要求に基づいて、デバイスは、要求されたファームウェアが現在インストールされているファームウェアと異なるかどうかを検証できます。違いがある場合は、`rc` パラメーターを `204` に設定します。これは`変更済み`という状況を意味します。
+  
 次の例は、前に送信したファームウェア・ダウンロード要求例に関して予期されるメッセージと、違いが検出されたときに送信される応答を示しています。
 ```
    {{site.data.keyword.iot_short_notm}} からの着信要求:
@@ -591,3 +592,17 @@ Message:
 
 
 **重要:** `mgmt.firmware` 属性の一部としてリストされているすべてのパラメーターは、同時に設定する必要があります。そうすることで、`mgmt.firmware` が現在監視されている場合に、通知メッセージが 1 つだけ送信されるようにします。
+
+## デバイス・アクションとファームウェア・アクションに関するレシピ
+
+以下のレシピには、デバイス・アクションとファームウェア・アクションの実行に必要なフロー全体が示されています。
+
+- [Device Management in WIoT Platform – Roll Back & Factory Reset](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/)
+
+- [Device Initiated Firmware Update](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-device-initiated-firmware-upgrade/)
+
+- [Platform Initiated Firmware Update](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-platform-initiated-firmware-upgrade/)
+
+- [Platform Initiated Firmware Update with Background Execution](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-platform-initiated-firmware-upgrade/)
+
+- [Firmware Roll Back & Factory Reset](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/)

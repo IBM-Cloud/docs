@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-13"
+  years: 2016, 2017
+lastupdated: "2016-11-29"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2016-10-13"
 {:pre: .pre}
 
 # Protegendo seu servidor de cartões customizados
-{: #securing_custom_cards
+{: #securing_custom_cards}
 
 Servidores de cartões customizados são servidores da web padrão que hospedam o código javascript de cartões customizados. Para assegurar a integridade de seu ambiente {{site.data.keyword.iot_short_notm}}, é necessário proteger seu servidor de cartões customizados tomando medidas para proteger a origem do cartão, conforme discutidos neste tópico.
 {:shortdesc}

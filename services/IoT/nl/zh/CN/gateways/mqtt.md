@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-14"
+  years: 2015, 2016, 2017
+lastupdated: "2016-11-17"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -57,10 +57,15 @@ MQTT 是设备和应用程序用于与 {{site.data.keyword.iot_full}} 通信的�
 |Gateway 1 |mygateway |gateway1 |
 |Device 1 |mydevice |device1 |
 
--   Gateway 1 可以发布其自己的状态事件：`iot-2/type/mygateway/id/gateway1/evt/status/fmt/json`
--   Gateway 1 可以代表 Device 1 发布状态事件：`iot-2/type/mydevice/id/device1/evt/status/fmt/json`
+-   Gateway 1 可以发布其自己的状态事件：  
+    `iot-2/type/mygateway/id/gateway1/evt/status/fmt/json`
+-   Gateway 1 可以代表 Device 1 发布状态事件：  
+    `iot-2/type/mydevice/id/device1/evt/status/fmt/json`
 
 **重要信息：**消息有效内容限制为最大 131072 字节。大于此限制的消息将被拒绝。
+
+### 保留消息
+{{site.data.keyword.iot_short_notm}} 组织无权发布保留的 MQTT 消息。如果网关发送保留消息，{{site.data.keyword.iot_short_notm}} 服务将覆盖已设置为 true 的保留消息标志，并将消息当作保留消息标志设置为 false 进行处理。
 
 ## 预订命令
 {: #subscribing_cmds}
@@ -81,9 +86,12 @@ MQTT `+` 通配符可用于 `typeId`、`deviceId`、`commandId` 和 `formatStrin
 |Device 1 | mydevice    | device1    |
 
 
--   Gateway 1 可以预订针对该网关的命令：`iot-2/type/mygateway/id/gateway1/cmd/+/fmt/+`
--   Gateway 1 可以预订发送到 Device 1 的命令：`iot-2/type/mydevice/id/device1/cmd/+/fmt/+`
--   Gateway 1 可以预订发送到类型为 `mydevice` 的设备的任何命令：`iot-2/type/mydevice/id/+/cmd/+/fmt/+`
+-   Gateway 1 可以预订针对该网关的命令：  
+    `iot-2/type/mygateway/id/gateway1/cmd/+/fmt/+`
+-   Gateway 1 可以预订发送到 Device 1 的命令：  
+    `iot-2/type/mydevice/id/device1/cmd/+/fmt/+`
+-   Gateway 1 可以预订发送到类型为 `mydevice` 的设备的任何命令：  
+     `iot-2/type/mydevice/id/+/cmd/+/fmt/+`
 
 **重要信息：**指定为 `cleansession=false` 的 MQTT 持久会话不会搜索连接到网关的设备。如果设备先连接到网关 A，以后又连接到网关 B，那么该设备在断开连接后不会接收发布到该设备的网关 A 的任何消息。网关拥有 MQTT 客户机和预订，但并不拥有连接到网关的设备。
 
@@ -150,7 +158,7 @@ iot-2/type/**typeId**/id/**deviceId**/notify
 ### 服务质量级别和干净会话
 {: #quality_service}
 
-受管网关可以发布服务质量 (QoS) 级别为 0 或 1 的消息。来自网关的消息不能是保留消息。
+受管网关可以发布服务质量 (QoS) 级别为 0 或 1 的消息。
 
 QoS 为 0 的消息可以废弃，并且在消息传递服务器重新启动后不会持久存储。QoS 为 1 的消息可以排队，并且在消息传递服务器重新启动后会持久存储。预订的持久性将确定请求是否排队。进行预订的连接的 `cleansession` 参数将确定预订的持久性。  
 

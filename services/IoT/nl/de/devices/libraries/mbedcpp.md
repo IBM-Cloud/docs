@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-08-02"
+  years: 2015, 2016, 2017
+lastupdated: "2016-11-22"
 
 ---
 
@@ -19,7 +19,6 @@ lastupdated: "2016-08-02"
 Verwenden Sie die [mBed C++-Clientbibliothek](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/), um ohne großen Aufwand eine Verbindung zwischen [mBed-Geräten](https://www.mbed.com/en/) wie beispielsweise [LPC1768](https://developer.mbed.org/platforms/mbed-LPC1768/) oder [FRDM-K64F](https://developer.mbed.org/platforms/FRDM-K64F/) und dem {{site.data.keyword.iot_full}}-Service herzustellen.
 {:shortdesc}
 
-
 Weitere Informationen finden Sie in [ibmiotf](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/) unter [developer.mbed.org](https://developer.mbed.org/).
 
 Die Bibliothek verwendet zwar C++, es wird jedoch vermieden, dynamische Speicherzuordnungen und STL-Funktionen zu verwenden, da die mBed-Geräte in manchen Fällen idiosynkratische Speichermodelle aufweisen, die Probleme bei der Portierbarkeit verursachen können. In jedem Fall ermöglicht die Bibliothek es Ihnen die Speicherbelegung so vorhersehbar wie möglich zu gestalten.
@@ -29,7 +28,7 @@ Die Bibliothek verwendet zwar C++, es wird jedoch vermieden, dynamische Speicher
 
 |Abhängigkeit |Beschreibung|
 |:---|:---|
-|[Eclipse Paho-MQTT-Bibliothek](https://developer.mbed.org/teams/mqtt/code/MQTT/)|Bietet eine MQTT-Clientbibliothek für mBed-Geräte. Weitere Informationen finden Sie unter [Embedded MQTT C/C++ Client Libraries](http://www.eclipse.org/paho/clients/c/embedded/).|
+|[Eclipse Paho-MQTT-Bibliothek](https://developer.mbed.org/teams/mqtt/code/MQTT/)|Bietet eine MQTT-Clientbibliothek für mBed-Geräte. Weitere Informationen finden Sie in [Eingebettete MQTT-C/C++-Clientbibliotheken](http://www.eclipse.org/paho/clients/c/embedded/).|
 |[Ethernet-Schnittstellenbibliothek](https://developer.mbed.org/users/mbed_official/code/EthernetInterface/)|Eine mBed-IP-Bibliothek über Ethernet.|
 
 ## Verwendung der Bibliothek
@@ -39,7 +38,7 @@ Verwenden Sie bei Verwendung der mBed C++-Clientbibliothek 'IBMIoTF' den [mBed-C
 
 **Hinweis:** Für die Ausführung von mBed müssen Sie nichts installieren oder einrichten.
 
-Informationen zur Vorgehensweise beim Herstellen einer Verbindung zwischen dem Mikrocontroller ARM mBed NXP LPC 1768 und {{site.data.keyword.iot_short_notm}} finden Sie in der Anleitung [mBed C++ Client Library for IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/mbed-c-client-library-for-ibm-iot-foundation/).
+Informationen zur Vorgehensweise beim Herstellen einer Verbindung zwischen dem Mikrocontroller ARM mBed NXP LPC 1768 und {{site.data.keyword.iot_short_notm}} finden Sie in der Anleitung [mBed-C++-Clientbibliothek für IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/mbed-c-client-library-for-ibm-iot-foundation/).
 
 ## Konstruktor
 {: #constructor}

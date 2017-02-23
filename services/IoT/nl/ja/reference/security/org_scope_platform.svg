@@ -92,19 +92,19 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.1566406"
-     inkscape:cx="324.76197"
-     inkscape:cy="123.41672"
+     inkscape:cx="444.2897"
+     inkscape:cy="191.71797"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g6488"
      showgrid="false"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:window-width="1920"
-     inkscape:window-height="1019"
-     inkscape:window-x="-9"
-     inkscape:window-y="-9"
+     inkscape:window-width="1280"
+     inkscape:window-height="667"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata5571">
@@ -114,7 +114,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -390,29 +390,22 @@
          ry="0" />
       <text
          sodipodi:linespacing="125%"
-         y="293.83942"
-         x="148.67015"
-         font-size="11"
-         id="text44191"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Watson IoT Platform</text>
-      <text
-         sodipodi:linespacing="125%"
          id="text266398"
-         y="248.15953"
-         x="103.48978"
+         y="286.15955"
+         x="151.48978"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
          xml:space="preserve"><tspan
-           y="248.15953"
-           x="103.48978"
+           y="286.15955"
+           x="151.48978"
            id="tspan266400"
-           sodipodi:role="line">Watson™ IoT Platform </tspan><tspan
+           sodipodi:role="line"> </tspan><tspan
            id="tspan4887"
-           y="263.15955"
-           x="103.48978"
+           y="301.15955"
+           x="151.48978"
            sodipodi:role="line">Org: q1bc3a</tspan><tspan
            id="tspan266402"
-           y="278.15955"
-           x="103.48978"
+           y="316.15955"
+           x="151.48978"
            sodipodi:role="line" /></text>
       <text
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
@@ -509,29 +502,18 @@
          ry="0" />
       <text
          sodipodi:linespacing="125%"
-         y="456.59052"
-         x="151.96257"
-         font-size="11"
-         id="text44191-9"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">Watson IoT Platform</text>
-      <text
-         sodipodi:linespacing="125%"
          id="text266398-8"
-         y="410.91064"
-         x="106.78222"
+         y="464.91064"
+         x="154.78223"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
          xml:space="preserve"><tspan
-           y="410.91064"
-           x="106.78222"
-           id="tspan266400-1"
-           sodipodi:role="line">Watson™ IoT Platform </tspan><tspan
            id="tspan4887-4"
-           y="425.91064"
-           x="106.78222"
+           y="464.91064"
+           x="154.78223"
            sodipodi:role="line">Org: f9gh4b</tspan><tspan
            id="tspan266402-7"
-           y="440.91064"
-           x="106.78222"
+           y="479.91064"
+           x="154.78223"
            sodipodi:role="line" /></text>
       <g
          transform="translate(107.17405,430.37976)"
@@ -648,6 +630,44 @@
            sodipodi:role="line"
            x="139.05605"
            y="366.68427">アプリケーション 1</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text266398-1"
+         y="250.94772"
+         x="123.83478"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           y="250.94772"
+           x="123.83478"
+           id="tspan266400-4"
+           sodipodi:role="line">Watson™ IoT Platform</tspan><tspan
+           id="tspan4887-47"
+           y="265.94772"
+           x="123.83478"
+           sodipodi:role="line" /><tspan
+           id="tspan266402-5"
+           y="280.94772"
+           x="123.83478"
+           sodipodi:role="line" /></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text266398-7"
+         y="410.35199"
+         x="124.00162"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           y="410.35199"
+           x="124.00162"
+           id="tspan266400-2"
+           sodipodi:role="line">Watson™ IoT Platform</tspan><tspan
+           id="tspan4887-7"
+           y="425.35199"
+           x="124.00162"
+           sodipodi:role="line" /><tspan
+           id="tspan266402-0"
+           y="440.35199"
+           x="124.00162"
+           sodipodi:role="line" /></text>
     </g>
     <g
        id="g6562"

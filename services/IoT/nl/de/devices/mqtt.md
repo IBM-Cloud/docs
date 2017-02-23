@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-21"
+  years: 2015, 2016, 2017
+lastupdated: "2016-11-17"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -69,6 +69,9 @@ Dabei gilt:
 
 **Wichtig:** Der Umfang der Nachrichtennutzdaten ist auf maximal 131072 Byte begrenzt. Nachrichten, die größer sind als dieser Wert, werden abgelehnt.
 
+### Aufbewahrte Nachrichten
+{{site.data.keyword.iot_short_notm}}-Organisationen sind nicht dazu berechtigt, aufbewahrte MQTT-Nachrichten zu publizieren. Wenn ein Gerät eine aufbewahrte Nachricht sendet, überschreibt der {{site.data.keyword.iot_short_notm}}-Service das Flag für aufbewahrte Nachricht, sofern es auf 'true' gesetzt ist, und verarbeitet die Nachricht so, als wäre das Flag auf 'false' gesetzt.
+
 
 ## Befehle subskribieren
 {: #subscribing_to_commands}
@@ -91,7 +94,7 @@ Die Unterstützung für das Lebenszyklusmanagement von Geräten ist optional. Da
 
 ### Servicequalitätsstufen und bereinigte Sitzung
 
-Verwaltete Geräte können Nachrichten publizieren, deren Servicequalitätsstufe '0' oder '1' ist. Nachrichten vom Gerät dürfen keine aufbewahrten Nachrichten sein.
+Verwaltete Geräte können Nachrichten publizieren, deren Servicequalitätsstufe (QoS) '0' oder '1' ist.
 
 Nachrichten, für die 'QoS=0' gilt, können verworfen werden; sie bleiben nach dem Neustart des Nachrichtenservers nicht bestehen. Nachrichten, für die 'QoS=1' gilt, können in die Warteschlange gestellt werden; sie bleiben nach dem Neustart des Nachrichtenservers bestehen. Durch die für eine Subskription geltende Permanenz ist festgelegt, ob eine Anforderung in die Warteschlange gestellt wird. Durch den Parameter `cleansession` der Verbindung, die die Subskription vorgenommen hat, wird die Permanenz der Subskription festgelegt.  
 

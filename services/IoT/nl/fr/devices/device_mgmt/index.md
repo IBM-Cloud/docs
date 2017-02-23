@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-13"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-12"
 
 ---
 
@@ -36,6 +36,8 @@ Le protocole de gestion des terminaux est construit par dessus le protocole de m
 4. Un terminal peut communiquer des mises à jour sur son emplacement, des informations de diagnostic et des codes d'erreurs à l'aide du protocole de gestion des terminaux.
 5. Pour traiter les terminaux défectueux parmi un nombre important de terminaux, la demande d'opération sur les **terminaux gérés** inclut un paramètre de durée de vie facultatif. Ce paramètre correspond au nombre de secondes durant lesquelles le terminal doit effectuer une autre demande sur les **terminaux gérés** pour éviter d'être classé comme étant en veille et devenir un terminal non géré.
 6. Lorsqu'un terminal est déclassé, vous pouvez le retirer de {{site.data.keyword.iot_short_notm}} à l'aide du tableau de bord ou de l'API REST.
+
+Voir la recette [Connect Raspberry Pi as Managed Device to IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-managed-device-to-ibm-iot-foundation/).
 
 ### Récapitulatif des codes retour
 

@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-21"
+  years: 2015, 2016, 2017
+lastupdated: "2016-11-17"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -69,6 +69,9 @@ Quickstart 服务是速度最快的服务级别。它无需确认接收，也不
 
 **重要信息：**消息有效内容限制为最大 131072 字节。大于此限制的消息将被拒绝。
 
+### 保留消息
+{{site.data.keyword.iot_short_notm}} 组织无权发布保留的 MQTT 消息。如果设备发送保留消息，{{site.data.keyword.iot_short_notm}} 服务将覆盖已设置为 true 的保留消息标志，并将消息当作保留消息标志设置为 false 进行处理。
+
 
 ## 预订命令
 {: #subscribing_to_commands}
@@ -91,7 +94,7 @@ Quickstart 服务是速度最快的服务级别。它无需确认接收，也不
 
 ### 服务质量级别和干净会话
 
-受管设备可以发布服务质量级别 (QoS) 为 0 或 1 的消息。来自设备的消息不能是保留消息。
+受管设备可以发布服务质量 (QoS) 级别为 0 或 1 的消息。
 
 QoS 为 0 的消息可以废弃，并且在消息传递服务器重新启动后不会持久存储。QoS 为 1 的消息可以排队，并且在消息传递服务器重新启动后会持久存储。预订的持久性将确定请求是否排队。进行预订的连接的 `cleansession` 参数将确定预订的持久性。  
 

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2016, 2017
 lastupdated: "2016-10-27"
 
 ---
@@ -473,7 +473,7 @@ import ibmiotf.application
   options = ibmiotf.application.ParseConfigFile(configFilePath)
   client = ibmiotf.application.Client(options)
 
-  listOfDevicesToAdd = [
+ listOfDevicesToAdd = [
       {'typeId' : "pi-model-a", 'deviceId' : '200020002004'},
       {'typeId' : "pi-model-b", 'deviceId' : '200020002005'}
   ]
@@ -688,7 +688,7 @@ apiCli.getAllDevices({'typeId' : deviceTypeId})
 
 하나 이상의 디바이스 특성을 수정하려면 `updateDevice()` 메소드를 사용하십시오. 
 
-deviceInfo 또는 metadata 매개변수에서 특성을 업데이트할 수 있습니다. 장치 특성을 업데이트하려면 `updateDevice()` 메소드를 호출하기 전에 deviceInfo 매개변수를 정의하십시오. status 매개변수에는 `alert`: True가 포함되어야 합니다. 경보 특성은 디바이스가 {{site.data.keyword.iot_short_notm}} 사용자 인터페이스에서 오류 코드를 표시하는지 여부를 제어하며, 다음 코드 예제에서 개략적으로 설명한 대로 기본적으로 `enabled`: True로 설정되어야 합니다. 
+deviceInfo 또는 metadata 매개변수에서 특성을 업데이트할 수 있습니다. 디바이스 특성을 업데이트하려면 `updateDevice()` 메소드를 호출하기 전에 deviceInfo 매개변수를 정의하십시오. status 매개변수에는 `alert`: True가 포함되어야 합니다. 경보 특성은 디바이스가 {{site.data.keyword.iot_short_notm}} 사용자 인터페이스에서 오류 코드를 표시하는지 여부를 제어하며, 다음 코드 예제에서 개략적으로 설명한 대로 기본적으로 `enabled`: True로 설정되어야 합니다. 
 
 ```python
 status = { "alert": { "enabled": True }  }

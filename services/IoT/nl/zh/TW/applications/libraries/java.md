@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-24"
+  years: 2015, 2016, 2017
+lastupdated: "2016-11-22"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2016-10-24"
 {: #java}
 
 
-您可以使用 Java 來建置及自訂應用程式，在 {{site.data.keyword.iot_full}} 上與組織互動。我們提供了 {{site.data.keyword.iot_short_notm}} 的 Java 用戶端程式庫、文件及範例，以協助您開始進行應用程式開發。
+您可以使用 Java™ 來建置及自訂應用程式，在 {{site.data.keyword.iot_full}} 上與組織互動。我們提供了 {{site.data.keyword.iot_short_notm}} 的 Java 用戶端程式庫、文件及範例，以協助您開始進行應用程式開發。
 
 {:shortdesc}
 
@@ -393,7 +393,7 @@ lastupdated: "2016-10-24"
 ```
 **附註：**在前一個程式碼範例中，事件的有效負載必須為字串格式。
 
-任何 XML 資料都可以轉換成字串並進行發佈，如下所示：
+任何 XML 資料都可以轉換為字串並進行發佈，如下所示：
 
 ```
     status = myClient.publishEvent("load", xmlConvertedString, "xml", 2);

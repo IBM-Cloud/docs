@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-21"
+  years: 2016, 2017
+lastupdated: "2016-12-12"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -14,8 +14,6 @@ lastupdated: "2016-10-21"
 
 # {{site.data.keyword.Bluemix_notm}} と {{site.data.keyword.iot_short_notm}}
 {: #iot-bluemix-index}
-最終更新日: 2016 年 10 月 21 日
-{: .last-updated}
 
 {{site.data.keyword.iot_full}} は、{{site.data.keyword.Bluemix}} で利用可能なサービスです。{{site.data.keyword.iot_short_notm}} 組織のダッシュボードには、{{site.data.keyword.Bluemix_notm}} ダッシュボードを使用してアクセスできます。{{site.data.keyword.Bluemix_notm}} サービスとして、{{site.data.keyword.iot_short_notm}} は、{{site.data.keyword.Bluemix_notm}} 上でホストされる他のサービスと統合することができます。特定のサード・パーティー・サービス統合の詳細については、[外部サービスの統合](/extensions/index.html)を参照してください{:shortdesc}
 
@@ -27,25 +25,28 @@ lastupdated: "2016-10-21"
 ## {{site.data.keyword.iot_short_notm}} のサービス・レベル・アグリーメント
 {: #iot-sla}
 
-{{site.data.keyword.iot_short_notm}} には、指定されたサービス・レベルに対応する機能があります。サービス・レベル・アグリーメントについて詳しくは、[{{site.data.keyword.iot_short_notm}} のサービス・レベル・アグリーメント](http://www-03.ibm.com/software/sla/sladb.nsf/pdf/6738-03/$file/i126-6738-03_06-2016_en_US.pdf)を参照してください。
+{{site.data.keyword.iot_short_notm}} には、指定されたサービス・レベルに対応する機能があります。サービス・レベル・アグリーメントについて詳しくは、[{{site.data.keyword.iot_short_notm}} のサービス・レベル・アグリーメント ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://www-03.ibm.com/software/sla/sladb.nsf/pdf/6738-03/$file/i126-6738-03_06-2016_en_US.pdf){: new_window} を参照してください。
 
 ## {{site.data.keyword.Bluemix_notm}} のサービス・レベル・アグリーメント
 
-{{site.data.keyword.Bluemix_notm}} で発行されているご利用条件は、[IBM クラウド・サービス契約書](http://www-05.ibm.com/support/operations/files/pdf/csa_us.pdf?cm_mc_uid=65870113399114371461368&cm_mc_sid_50200000=1469524513)と [IBM パスポート・アドバンテージのご契約条件](https://www-01.ibm.com/software/passportadvantage/pa_agreements.html)のどちらがユーザーに適用されるかに応じて異なります。{{site.data.keyword.Bluemix_notm}} のサービス・レベル・アグリーメントについて詳しくは、[{{site.data.keyword.Bluemix_notm}} のご利用条件](.../.../.../navigation/notices.html#terms)を参照してください。
+{{site.data.keyword.Bluemix_notm}} で発行されているご利用条件は、[IBM クラウド・サービス契約書 ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://www-05.ibm.com/support/operations/files/pdf/csa_us.pdf?cm_mc_uid=65870113399114371461368&cm_mc_sid_50200000=1469524513){: new_window} と [IBM パスポート・アドバンテージのご契約条件 ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](https://www-01.ibm.com/software/passportadvantage/pa_agreements.html){: new_window} のどちらがユーザーに適用されるかに応じて異なります。{{site.data.keyword.Bluemix_notm}} のサービス・レベル・アグリーメントについて詳しくは、[{{site.data.keyword.Bluemix_notm}} のご利用条件](.../.../.../navigation/notices.html#terms)を参照してください。
 
 ## {{site.data.keyword.iot_short_notm}} の価格設定
 {: #iot-pricing}
 
-{{site.data.keyword.iot_short_notm}} では、無料と標準の 2 種類の価格設定モデルがあります。{{site.data.keyword.iot_short_notm}} の無料では、20 台までの登録デバイス、100MB のデータ交換、最大 10 個のバインド・アプリケーションが可能です。
+{{site.data.keyword.iot_short_notm}} では、無料と標準の 2 種類の価格設定モデルがあります。
 
-{{site.data.keyword.iot_short_notm}} の価格設定では、登録デバイスの台数は無制限、100 MB の無料のデータ交換が可能であり、最初の 100 MB のデータ交換後は 1 MB ごとにコストがかかります。
+### IoT 料金カリキュレーター
+利用可能な {{site.data.keyword.iot_short_notm}} のプランと価格設定モデルについて詳しくは、以下を参照してください。
+1. [IoT 料金カリキュレーター ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://iot-cost-calculator.ng.bluemix.net/){: new_window} に移動します。  
+2. IoT プラットフォーム項目の横にある**「Add」**または**「Configure」**をクリックします。
+3. **「Pricing tier」**を選択してから、交換を予定しているデータ量の見積もり値を入力し、クラウド上で分析して、エッジ・デバイス上で分析します。  
+選択した層の見積り価格とデータ・ロードが表示されます。
 
-{{site.data.keyword.iot_short_notm}} の価格設定について詳しくは、以下を参照してください。
-
-1. {{site.data.keyword.Bluemix_notm}} ダッシュボードで、{{site.data.keyword.iot_short_notm}} をクリックします。
-2. 左側のナビゲーション・メニューで、**「プラン」**を選択します。
-
-価格設定プランが表示されます。
+### 現在のプランの情報
+1. {{site.data.keyword.Bluemix_notm}} ダッシュボードで、現在のプランの情報を必要としている {{site.data.keyword.iot_short_notm}} 組織の IoT プラットフォーム・タイルをクリックします。
+2. **「プラン」**タブを選択します。  
+現在の料金プランの詳細が表示されます。
 
 # 関連リンク
 {: #rellinks}
@@ -54,8 +55,9 @@ lastupdated: "2016-10-21"
 ## 関連リンク
 {: #general}
 
-* [{{site.data.keyword.Bluemix_notm}} セキュリティー](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
-* [{{site.data.keyword.Bluemix_notm}} プラットフォームのセキュリティー](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
-* [{{site.data.keyword.Bluemix_notm}} のコンプライアンス](https://console.ng.bluemix.net/docs/security/index.html#compliance){:new_window}
-* [{{site.data.keyword.BluSoftlayer}} セキュリティー](http://www.softlayer.com/security){:new_window}
-* [{{site.data.keyword.BluSoftlayer}} のコンプライアンス](http://www.softlayer.com/compliance){:new_window}
+* [IoT 料金カリキュレーター ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://iot-cost-calculator.ng.bluemix.net/){:new_window}
+* [{{site.data.keyword.Bluemix_notm}} のセキュリティー ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
+* [{{site.data.keyword.Bluemix_notm}} プラットフォーム・セキュリティー ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
+* [{{site.data.keyword.Bluemix_notm}} のコンプライアンス ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](https://console.ng.bluemix.net/docs/security/index.html#compliance){:new_window}
+* [{{site.data.keyword.BluSoftlayer}} のセキュリティー ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://www.softlayer.com/security){:new_window}
+* [{{site.data.keyword.BluSoftlayer}} のコンプライアンス ![外部リンク・アイコン](../../../icons/launch-glyph.svg)](http://www.softlayer.com/compliance){:new_window}

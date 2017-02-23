@@ -15,19 +15,12 @@
    viewBox="0 0 645.38815 354.92773"
    id="svg5645"
    version="1.1"
-   inkscape:version="0.47 r22583"
+   inkscape:version="0.91 r13725"
    sodipodi:docname="architecture_generic.svg"
    inkscape:export-filename="C:\Users\IBM_ADMIN\GitHub\IoT\Blockchain-DOCS\iotblockchain_scratch\images\architecture_contracts.png"
    inkscape:export-xdpi="299.98132"
    inkscape:export-ydpi="299.98132"><defs
    id="defs5647">
-  <inkscape:perspective
-     sodipodi:type="inkscape:persp3d"
-     inkscape:vp_x="0 : 177.46387 : 1"
-     inkscape:vp_y="0 : 1000 : 0"
-     inkscape:vp_z="645.38806 : 177.46387 : 1"
-     inkscape:persp3d-origin="322.69403 : 118.30924 : 1"
-     id="perspective218" />
   <marker
      style="overflow:visible"
      id="TriangleOutM"
@@ -469,17 +462,15 @@
    fit-margin-left="0"
    fit-margin-right="0"
    fit-margin-bottom="0"
-   inkscape:zoom="2.72"
+   inkscape:zoom="1.36"
    inkscape:cx="417.2305"
    inkscape:cy="206.17199"
-   inkscape:window-width="1440"
-   inkscape:window-height="853"
-   inkscape:window-x="-4"
-   inkscape:window-y="-4"
+   inkscape:window-width="1920"
+   inkscape:window-height="1019"
+   inkscape:window-x="-9"
+   inkscape:window-y="1041"
    inkscape:window-maximized="1"
    inkscape:current-layer="svg5645" />
-
-
 
 
 
@@ -516,7 +507,7 @@
       <dc:format>image/svg+xml</dc:format>
       <dc:type
          rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-      <dc:title />
+      <dc:title></dc:title>
     </cc:Work>
   </rdf:RDF>
 </metadata>
@@ -695,8 +686,7 @@
      cx="-133"
      cy="16"
      r="15.5"
-     id="circle6576"
-     d="m -117.5,16 c 0,8.560414 -6.93959,15.5 -15.5,15.5 -8.56041,0 -15.5,-6.939586 -15.5,-15.5 0,-8.5604136 6.93959,-15.5 15.5,-15.5 8.56041,0 15.5,6.9395864 15.5,15.5 z" />
+     id="circle6576" />
   <linearGradient
      id="linearGradient7728"
      gradientUnits="userSpaceOnUse"
@@ -722,8 +712,7 @@
      cx="-133"
      cy="15.8"
      r="1.7"
-     id="circle6585"
-     d="m -131.3,15.8 c 0,0.938884 -0.76112,1.7 -1.7,1.7 -0.93888,0 -1.7,-0.761116 -1.7,-1.7 0,-0.938884 0.76112,-1.7 1.7,-1.7 0.93888,0 1.7,0.761116 1.7,1.7 z" />
+     id="circle6585" />
   <path
      style="fill:#ffffff"
      inkscape:connector-curvature="0"
@@ -779,8 +768,7 @@
      cx="-133"
      cy="15.8"
      r="1.7"
-     id="circle6604"
-     d="m -131.3,15.8 c 0,0.938884 -0.76112,1.7 -1.7,1.7 -0.93888,0 -1.7,-0.761116 -1.7,-1.7 0,-0.938884 0.76112,-1.7 1.7,-1.7 0.93888,0 1.7,0.761116 1.7,1.7 z" />
+     id="circle6604" />
   <path
      style="fill:#ffffff"
      inkscape:connector-curvature="0"
@@ -796,7 +784,7 @@
    sodipodi:linespacing="125%">IBM Blockchain</text>
 <text
    xml:space="preserve"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.24999963px;line-height:125%;font-family:MS UI Gothic;-inkscape-font-specification:MS UI Gothic;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
    x="464.91357"
    y="44.784241"
    id="text266398-3-9"
@@ -835,7 +823,7 @@
    x="542.29352"
    font-size="11"
    id="text56834-0-3"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.24999963px;line-height:125%;font-family:MS UI Gothic;-inkscape-font-specification:MS UI Gothic;text-align:start;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1">驗證</text>
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">驗證</text>
 <text
    sodipodi:linespacing="125%"
    y="289.89551"
@@ -883,7 +871,7 @@
    style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" />
 <text
    xml:space="preserve"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.24999963px;line-height:125%;font-family:MS UI Gothic;-inkscape-font-specification:MS UI Gothic;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
    x="517.93188"
    y="324.27954"
    id="text18189-6-6"
@@ -946,10 +934,10 @@
    x="547.18237"
    font-size="11"
    id="text59612"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.25707584px;line-height:125%;font-family:MS UI Gothic;-inkscape-font-specification:MS UI Gothic;text-align:start;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.25707579px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
    transform="scale(1.0456227,0.95636791)">
   <tspan
-     style="font-size:7.25707584px;-inkscape-font-specification:MS UI Gothic;font-family:MS UI Gothic;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+     style="font-size:4.94800615px"
      id="tspan6509">智慧型合約</tspan>
 </text>
 <g
@@ -987,15 +975,15 @@
    sodipodi:linespacing="125%"
    id="text44235-49"
    y="146.08774"
-   x="518.43842"
-   style="font-size:11.25px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:MS UI Gothic;-inkscape-font-specification:MS UI Gothic"
+   x="526.43842"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
    xml:space="preserve"><tspan
      id="tspan44239-5"
      y="146.08774"
-     x="518.43842"
+     x="519"
      sodipodi:role="line">對等節點 A</tspan><tspan
-     y="160.15024"
-     x="518.43842"
+     y="159.83774"
+     x="526.43842"
      sodipodi:role="line"
      id="tspan6445" /></text>
 <path
@@ -1016,15 +1004,15 @@
    sodipodi:linespacing="125%"
    id="text44235-7"
    y="229.48593"
-   x="518.98096"
-   style="font-size:11.25px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:MS UI Gothic;-inkscape-font-specification:MS UI Gothic"
+   x="526.98096"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
    xml:space="preserve"><tspan
      id="tspan44239-7"
      y="229.48593"
-     x="518.98096"
+     x="519"
      sodipodi:role="line">對等節點 B</tspan><tspan
-     y="243.54843"
-     x="518.98096"
+     y="243.23593"
+     x="526.98096"
      sodipodi:role="line"
      id="tspan6445-3" /></text>
 <path
@@ -1038,10 +1026,10 @@
    x="547.41492"
    font-size="11"
    id="text59612-2"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.25707584px;line-height:125%;font-family:MS UI Gothic;-inkscape-font-specification:MS UI Gothic;text-align:start;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.25707579px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
    transform="scale(1.0456227,0.95636791)">
   <tspan
-     style="font-size:7.25707584px;-inkscape-font-specification:MS UI Gothic;font-family:MS UI Gothic;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+     style="font-size:4.94800615px"
      id="tspan6509-5">智慧型合約</tspan>
 </text>
 <g
@@ -1083,7 +1071,7 @@
    height="50.000004"
    width="149.25002"
    id="rect79371-1-6-6-9-8-7-3-5-2-4"
-   style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;-inkscape-font-specification:MS UI Gothic;font-family:MS UI Gothic;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.24999963px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%" />
+   style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none" />
 <path
    inkscape:connector-curvature="0"
    id="path13579-8"
@@ -1110,8 +1098,6 @@
 
 
 
-
-
     image
        y=&quot;504.73132&quot;
        x=&quot;627.01056&quot;
@@ -1122,7 +1108,7 @@
        width=&quot;50&quot; /&gt;
     <text
    xml:space="preserve"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.24999963px;line-height:125%;font-family:MS UI Gothic;-inkscape-font-specification:MS UI Gothic;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
    x="235.86133"
    y="39.842865"
    id="text266398"
@@ -1176,7 +1162,7 @@
 </g>
 <text
    xml:space="preserve"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.24999963px;line-height:125%;font-family:MS UI Gothic;-inkscape-font-specification:MS UI Gothic;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
    x="71.955322"
    y="87.296356"
    id="text44241"
@@ -1193,8 +1179,6 @@
      x="71.955322"
      y="114.79636"
      id="tspan9810">儀表板</tspan></text>
-
-
 
 
 
@@ -1232,7 +1216,7 @@
    style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
 <text
    xml:space="preserve"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.24999963px;line-height:125%;font-family:MS UI Gothic;-inkscape-font-specification:MS UI Gothic;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
    x="69.512451"
    y="152.5499"
    id="text18189-1"
@@ -1249,12 +1233,12 @@
      x="69.512451"
      y="180.0499"
      id="tspan6878-8"
-     style="font-size:11.24999963px;stroke:none;-inkscape-font-specification:MS UI Gothic;font-family:MS UI Gothic;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%" /><tspan
+     style="font-size:7.5px;stroke:none" /><tspan
      sodipodi:role="line"
      x="69.512451"
      y="193.7999"
      id="tspan18193-4"
-     style="font-size:11.24999963px;stroke:none;-inkscape-font-specification:MS UI Gothic;font-family:MS UI Gothic;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%" /></text>
+     style="font-size:7.5px;stroke:none" /></text>
 <path
    inkscape:connector-curvature="0"
    id="path8199-4-4"
@@ -1297,7 +1281,7 @@
 </g>
 <text
    xml:space="preserve"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.9999996px;line-height:125%;font-family:MS UI Gothic;-inkscape-font-specification:MS UI Gothic;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
    x="301.34351"
    y="140.62759"
    id="text18189-6-6-7"
@@ -1310,8 +1294,6 @@
      x="301.34351"
      y="154.37759"
      id="tspan5893">Proxy</tspan></text>
-
-
 
 
 

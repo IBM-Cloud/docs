@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-18"
+  years: 2015, 2016, 2017
+lastupdated: "2017-02-03"
 
 ---
 
@@ -39,7 +39,7 @@ Jasper 是一款用于 SIM 设备的管理平台。Jasper 集成到 {{site.data.
 完成以下配置步骤后，可在连接了 Jasper 的设备的设备向下钻取中访问受支持的操作。
 
 ### 用于 Jasper 的 REST API
-要访问用于 Jasper 的 REST API，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension) 文档的“Jasper 扩展”部分。
+要访问用于 Jasper 的 REST API，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部链接图标](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension){: new_window} 文档中的“Jasper 扩展”部分。
 
 ### Jasper 的配置
 
@@ -54,8 +54,8 @@ Jasper 是一款用于 SIM 设备的管理平台。Jasper 集成到 {{site.data.
   5. 单击**完成**。
 
 2. 配置设备
-您可以配置同时连接到您的 {{site.data.keyword.iot_short_notm}} 组织和 Jasper 帐户的设备以在 {{site.data.keyword.iot_short_notm}} 仪表板中显示 Jasper 中的数据。
-**重要信息：**在执行“添加设备”过程时，无法应用 Jasper 配置，只有先前连接的设备可使用 Jasper 进行配置。
+您可以配置同时连接到您的 {{site.data.keyword.iot_short_notm}} 组织和 Jasper 帐户的设备以在 {{site.data.keyword.iot_short_notm}} 仪表板中显示 Jasper 中的数据。  
+**重要信息：**在执行“添加设备”过程时，无法应用 Jasper 配置，只有先前连接的设备可使用 Jasper 进行配置。  
 要配置连接了 Jasper 的设备，请完成以下步骤：
  1. 在 {{site.data.keyword.iot_short_notm}} 仪表板的“设备”选项卡中，找到要配置的连接了 Jasper 的设备。
  2. 选择此设备以打开*设备向下钻取*视图。
@@ -91,7 +91,7 @@ AT&T 扩展支持以下 AT&T 操作：
 - 更改套餐
 
 ### 用于 AT&T 的 REST API
-要访问用于 AT&T 的 REST API，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension) 文档中的“AT&T 扩展”部分。
+要访问用于 AT&T 的 REST API，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部链接图标](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension){: new_window} 文档中的“AT&T 扩展”部分。
 
 ### AT&T 的配置
 
@@ -106,11 +106,12 @@ AT&T 扩展支持以下 AT&T 操作：
   4. 输入 AT&T 用户名、密码、访问键和域标识。
   5. 单击**完成**。
 
-要将您的 {{site.data.keyword.iot_short_notm}} 组织与 AT& 帐户相连接，首先必须完成两个配置阶段。完成组织配置，然后配置设备。
+要将您的 {{site.data.keyword.iot_short_notm}} 组织与 AT&T 帐户相连接，首先必须完成两个配置阶段。完成组织配置，然后配置设备。
 
 
 2. 配置设备
-您可以配置同时连接到您的 {{site.data.keyword.iot_short_notm}} 组织和 AT&T 帐户的设备以在 {{site.data.keyword.iot_short_notm}} 仪表板中显示 AT&T 中的数据。**重要信息：**在执行“添加设备”过程时，无法应用 AT&T 配置，只有先前连接的设备可使用 AT&T 进行配置。
+您可以配置同时连接到您的 {{site.data.keyword.iot_short_notm}} 组织和 AT&T 帐户的设备以在 {{site.data.keyword.iot_short_notm}} 仪表板中显示 AT&T 中的数据。  
+**重要信息：**在执行“添加设备”过程时，无法应用 AT&T 配置，只有先前连接的设备可使用 AT&T 进行配置。  
 要配置连接了 AT&T 的设备，请完成以下步骤：
  1. 在 {{site.data.keyword.iot_short_notm}} 仪表板的“设备”选项卡中，找到要配置的连接了 AT&T 的设备。
  2. 选择此设备以打开*设备向下钻取*视图。
@@ -222,7 +223,7 @@ https://developer.ibm.com/iotplatform/2016/03/30/watson-iot-platform-integration
 - 位置状态
 
 ### 用于 Orange 的 REST API
-要访问用于 Orange 的 REST API，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension) 文档的“Orange 扩展”部分。
+要访问用于 Orange 的 REST API，请参阅 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部链接图标](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension){: new_window} 文档中的“Orange 扩展”部分。
 
 ### Orange 的配置
 
@@ -259,11 +260,24 @@ https://developer.ibm.com/iotplatform/2016/03/30/watson-iot-platform-integration
 ## 定制设备管理软件包
 {: #device_mgmt}
 
-设备管理是 {{site.data.keyword.iot_short_notm}} 的核心功能，但是，也可以对其进行扩展以开发其他功能。
+设备管理是 {{site.data.keyword.iot_short_notm}} 的核心功能，但是，也可以对其进行扩展以开发其他功能。定制设备管理软件包必须由有效的 JSON 构成，并至少定义一个定制设备管理操作。
 
-通过设备管理扩展，可安装用于设备管理的定制功能。有关定制设备管理功能的更多信息，请参阅[设备管理定制扩展](../../devices/device_mgmt/custom_actions.html){: new_window}。
+有关定制设备管理功能的更多信息（包括必需 JSON 格式的示例），请参阅[设备管理定制扩展](../../devices/device_mgmt/custom_actions.html){: new_window}。
 
-## Blockchain
+### 添加定制设备管理软件包
+
+可以使用 {{site.data.keyword.iot_short_notm}} 仪表板或 API 来添加定制设备管理软件包。
+
+要使用 {{site.data.keyword.iot_short_notm}} 仪表板来添加定制设备管理软件包，请执行以下操作：
+
+1. 在 {{site.data.keyword.iot_short_notm}} 仪表板的导航栏中，单击**设置**。
+2. 单击**定制设备管理软件包**。
+3. 单击**添加软件包**按钮。
+4. 选择软件包文件，然后单击**打开**。
+
+要使用 API 来添加定制设备管理软件包，请参阅 [{{site.data.keyword.iot_short_notm}} API 文档 ![外部链接图标](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}。
+
+## 区块链
 {: #blockchain}
 
 通过具有 Blockchain 的 {{site.data.keyword.iot_short_notm}}，IoT 设备可为 Blockchain 事务提供数据，这会将数据存储在 Blockchain 的不可变分类帐中，并在智能合同业务规则中使用这些数据。{{site.data.keyword.iot_short_notm}} 将设备数据映射为 Blockchain 的智能合同所需的数据格式，并将其传递到 Blockchain 光纤网以存储在 Blockchain 分类帐中。
@@ -275,12 +289,17 @@ https://developer.ibm.com/iotplatform/2016/03/30/watson-iot-platform-integration
 
 ### Blockchain 的配置
 
-{{site.data.keyword.iot_short_notm}} Blockchain 集成是一款服务产品，缺省情况下在 {{site.data.keyword.iot_short_notm}} 中未激活。要在您的环境中激活此功能，请完成以下步骤：
- 1. 在 {{site.data.keyword.iot_short_notm}} 仪表板中，选择**扩展**。
- 2. 单击 Blockchain 扩展旁的**更多信息**链接，以转至“IoT Blockchain 服务产品”页面。
- 3. 填写并提交服务请求表单。
-通常，服务核准需要花费大约一天时间。核准请求后，您会收到一封电子邮件，其中提供了有关如何在 {{site.data.keyword.iot_short_notm}} 组织中激活 Blockchain 集成的指示信息。
- 5. 返回到组织的 {{site.data.keyword.iot_short_notm}} 仪表板以完成此设置。有关更多信息，请参阅 [{{site.data.keyword.iot_short_notm}} Blockchain 集成](../../bl_blockchain_integration.html)。
+{{site.data.keyword.iot_short_notm}} Blockchain 集成是一款服务产品，缺省情况下在 {{site.data.keyword.iot_short_notm}} 中未激活。要在您的组织中激活此功能，请完成以下步骤：
+ 1. 从 {{site.data.keyword.iot_short_notm}} 仪表板选择**扩展**。
+ 2. 在**扩展**页面上，单击**添加扩展**。
+ 3. 单击“区块链”扩展旁的**添加**。
+ 4. 在“区块链”磁贴中，单击**设置**。
+ 3. 在**激活区块链**部分中，单击**了解更多**链接以转至 [IoT Blockchain 服务产品页面 ![外部链接图标](../../../../icons/launch-glyph.svg)](http://www.ibm.com/internet-of-things/iot-news/announcements/private-blockchain/){: new_window}。
+ 4. 单击**开始使用区块链项目**以填充并提交*探索 IoT 和区块链的潜力*表单。  
+ 5. 请求得到批准后，IBM 将联系您来为您的组织启用区块链集成。
+ 6. 通过执行 [{{site.data.keyword.iot_short_notm}} 区块链集成](../../bl_blockchain_integration.html)中的步骤，返回到组织的 {{site.data.keyword.iot_short_notm}} 仪表板以完成此设置。
+
+
 
 ## The Weather Company
 {: #weathercompany}
@@ -291,7 +310,7 @@ The Weather Company 扩展将天气数据与现有 {{site.data.keyword.iot_short
 
 ### 用于 The Weather Company 的 REST API 
 要访问用于 The Weather Company 的 REST API，请参阅
-[{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather) 文档的“设备位置天气”部分。
+[{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部链接图标](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather){: new_window} 文档中“设备位置天气”部分。
 
 ### 天气数据
 
@@ -308,4 +327,4 @@ The Weather Company 扩展将天气数据与现有 {{site.data.keyword.iot_short
 - 纬度。
 - 经度。
 
-<!-- Weather data from The Weather Company extension can be retrieved by using the API. For information on the Weather Company API, see [The Weather Company API documentation](https://docs.internetofthings.ibmcloud.com/swagger/ext-twc.html). -->
+<!-- Weather data from The Weather Company extension can be retrieved by using the API. For information on the Weather Company API, see [The Weather Company API documentation ![External link icon](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/ext-twc.html){: new_window}. -->

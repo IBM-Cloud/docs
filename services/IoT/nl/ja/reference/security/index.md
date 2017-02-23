@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-21"
+  years: 2016, 2017
+lastupdated: "2017-02-03"
 
 ---
 
@@ -15,8 +15,6 @@ lastupdated: "2016-10-21"
 
 # {{site.data.keyword.iot_short_notm}} のセキュリティー
 {: #sec-index}
-最終更新日: 2016 年 10 月 21 日
-{: .last-updated}
 
 {{site.data.keyword.iot_full}} はクラウド・ホスティング・サービスであるため、セキュリティーを重要視したアーキテクチャーが採用されています。
 {: shortdesc}
@@ -33,7 +31,7 @@ lastupdated: "2016-10-21"
 
 {{site.data.keyword.iot_short_notm}} は {{site.data.keyword.Bluemix_notm}} プラットフォーム内で実行されるため、アクセスと接続を {{site.data.keyword.Bluemix_notm}} と {{site.data.keyword.BluSoftlayer_full}} の両方に依存しています。{{site.data.keyword.Bluemix_notm}} と {{site.data.keyword.BluSoftlayer}} に依存しているため、{{site.data.keyword.iot_short_notm}} のユーザーにとって、{{site.data.keyword.Bluemix_notm}} と {{site.data.keyword.BluSoftlayer}} のセキュリティーと信頼性は重要です。
 
-{{site.data.keyword.Bluemix_notm}} のセキュリティーについて詳しくは、[{{site.data.keyword.Bluemix_notm}} プラットフォームのセキュリティー](https://console.ng.bluemix.net/docs/security/index.html#platform-security)を参照してください。
+{{site.data.keyword.Bluemix_notm}} のセキュリティーについて詳しくは、[{{site.data.keyword.Bluemix_notm}} プラットフォームのセキュリティー ![外部リンク・アイコン](../../../../icons/launch-glyph.svg)](https://console.ng.bluemix.net/docs/security/index.html#platform-security){: new_window} を参照してください。
 
 ## {{site.data.keyword.iot_short_notm}} のセキュリティー・コンプライアンス
 {: #compliance}  
@@ -73,7 +71,7 @@ lastupdated: "2016-10-21"
 
 ![画像](connectivity_platform.svg)
 
-TLS および暗号スイートの要件について詳しくは、`Watson IoT Platform へのアプリケーション、デバイス、ゲートウェイの接続`という資料の [TLS 要件](https://console.ng.bluemix.net/docs/services/IoT/reference/security/connect_devices_apps_gw.html#tls_requirements)セクションを参照してください。
+TLS および暗号スイートの要件について詳しくは、`Watson IoT Platform へのアプリケーション、デバイス、ゲートウェイの接続`という資料の [TLS 要件 ![外部リンク・アイコン](../../../../icons/launch-glyph.svg)](https://console.ng.bluemix.net/docs/services/IoT/reference/security/connect_devices_apps_gw.html#tls_requirements){: new_window} セクションを参照してください。
 
 ## IoT デバイス間のデータ・リークを回避する方法
 {: #prevent-leak-devices}
@@ -106,8 +104,8 @@ TLS および暗号スイートの要件について詳しくは、`Watson IoT P
 ## 関連リンク
 {: #general}
 * [{{site.data.keyword.iot_short_notm}} の概説](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-* [{{site.data.keyword.Bluemix_notm}} セキュリティー](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
-* [{{site.data.keyword.Bluemix_notm}} プラットフォームのセキュリティー](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
+* [{{site.data.keyword.Bluemix_notm}} のセキュリティー ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.ng.bluemix.net/docs/security/index.html#security "外部リンク・アイコン"){:new_window}
+* [{{site.data.keyword.Bluemix_notm}} プラットフォームのセキュリティー ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.ng.bluemix.net/docs/security/index.html#platform-security "外部リンク・アイコン"){:new_window}
 * [{{site.data.keyword.Bluemix_notm}} のコンプライアンス](https://console.ng.bluemix.net/docs/security/index.html#compliance){:new_window}
-* [{{site.data.keyword.BluSoftlayer}} セキュリティー](http://www.softlayer.com/security){:new_window}
-* [{{site.data.keyword.BluSoftlayer}} のコンプライアンス](http://www.softlayer.com/compliance){:new_window}
+* [{{site.data.keyword.BluSoftlayer}} のセキュリティー ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.softlayer.com/security "外部リンク・アイコン"){:new_window}
+* [{{site.data.keyword.BluSoftlayer}} のコンプライアンス ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "External link icon")](http://www.softlayer.com/compliance "外部リンク・アイコン"){:new_window}

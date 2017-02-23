@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-27"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-10"
 
 ---
 
@@ -48,18 +48,19 @@ Para añadir una pasarela desde el panel de instrumentos de {{site.data.keyword.
 3. Seleccione o cree un tipo de dispositivo para el dispositivo que está añadiendo.  
 Cada dispositivo conectado al {{site.data.keyword.iot_short_notm}} debe estar asociado con un tipo de dispositivo. Los tipos de dispositivos son grupos de dispositivos que comparten características comunes.  
  1. Pulse **Crear tipo de dispositivo** y, a continuación, **Crear tipo de pasarela**.
- 2. Especifique un nombre de tipo de dispositivo como, por ejemplo, `my_gateway_type` y una descripción para el tipo de pasarela.**Importante:** el nombre del tipo de dispositivo no debe tener más de 36 caracteres y sólo puede contener:
+ 2. Especifique un nombre de tipo de dispositivo como, por ejemplo, `my_gateway_type` y una descripción para el tipo de pasarela.   
+ **Importante:** el nombre del tipo de dispositivo no debe tener más de 36 caracteres y sólo puede contener:
  <ul>
   <li>Caracteres alfanuméricos (a-z, A-Z, 0-9)</li>
   <li>Guiones (-)</li>
   <li>Signos de subrayado (&lowbar;)</li>
   <li>Puntos (.)</li>
-  </ul>3. Opcional: Especifique los metadatos y los atributos de tipo de pasarela.
-     
+  </ul>3. Opcional: Especifique los metadatos y los atributos de tipo de pasarela.    
  **Consejo:** Puede añadir y editar atributos y metadatos más tarde.
  4. Pulse **Crear** para añadir el nuevo tipo de pasarela.
 10. Pulse **Siguiente** para comenzar el proceso de adición del dispositivo de pasarela con el tipo de pasarela seleccionado.
-11. Especifique un ID de dispositivo como por ejemplo `my_gateway_device`.El ID de dispositivo se utiliza para identificar el dispositivo de pasarela en el panel de instrumentos de {{site.data.keyword.iot_short_notm}} y también es un parámetro obligatorio para conectar el dispositivo de pasarela a {{site.data.keyword.iot_short_notm}}.  
+11. Especifique un ID de dispositivo como por ejemplo `my_gateway_device`.  
+El ID de dispositivo se utiliza para identificar el dispositivo de pasarela en el panel de instrumentos de {{site.data.keyword.iot_short_notm}} y también es un parámetro obligatorio para conectar el dispositivo de pasarela a {{site.data.keyword.iot_short_notm}}.  
 **Importante:** el ID de dispositivo no debe tener más de 36 caracteres y sólo puede contener:
  <ul>
  <li>Caracteres alfanuméricos (a-z, A-Z, 0-9)</li>
@@ -67,8 +68,7 @@ Cada dispositivo conectado al {{site.data.keyword.iot_short_notm}} debe estar as
  <li>Signos de subrayado (&lowbar;)</li>
  <li>Puntos (.)</li>  
  </ul>
- **Consejo:** para los dispositivos conectados a la red, el ID de dispositivo podría ser, por ejemplo, la dirección MAC del dispositivo sin dos puntos de separación.
-  
+ **Consejo:** para los dispositivos conectados a la red, el ID de dispositivo podría ser, por ejemplo, la dirección MAC del dispositivo sin dos puntos de separación.  
 12. Opcional: Pulse **Campos adicionales** para añadir información de dispositivo de pasarela, como por ejemplo el número de serie, el fabricante, el modelo, etc.  
  **Consejo:** Puede añadir y editar esta información más tarde.
 12. Opcional: Especifique los metadatos JSON de dispositivo.  
@@ -81,10 +81,12 @@ Cada dispositivo conectado al {{site.data.keyword.iot_short_notm}} debe estar as
  - Tipo de dispositivo, como por ejemplo `my_gateway_type`
  - ID de dispositivo. **Consejo:** Para dispositivos conectados a la red, esto podría ser, por ejemplo, la dirección MAC sin dos puntos de separación.
  - Método de autenticación, como por ejemplo `señal`
- - Señal de autenticación, como por ejemplo `PtBVriRqIg4uh)_-Kl`
-  **Consejo:** Necesitará ID de organización, Señal de autenticación, Tipo de dispositivo e ID de dispositivo para configurar el dispositivo para conectarse a {{site.data.keyword.iot_short_notm}}.  
+ - Señal de autenticación, como por ejemplo `PtBVriRqIg4uh)_- Kl`  
+  **Consejo:** necesitará los valores de ID de organización, Señal de autenticación, Tipo de dispositivo e ID de dispositivo para configurar el dispositivo para conectarse a {{site.data.keyword.iot_short_notm}}.  
 
 Enhorabuena, ha registrado el dispositivo de pasarela. Ahora puede configurar el dispositivo de pasarela para conectarse a {{site.data.keyword.iot_short_notm}}
+
+Consulte la receta [Cómo registrar pasarelas en IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/how-to-register-gateways-in-ibm-watson-iot-platform/) para ver instrucciones paso a paso sobre cómo registrar una pasarela.
 
 ## Paso 2: Conexión de la pasarela a {{site.data.keyword.iot_short_notm}}
 {: #connect_gateway}
@@ -106,6 +108,8 @@ Para obtener información sobre el registro automático de dispositivos y la pub
 
 
 Cuando un dispositivo se ha conectado satisfactoriamente a la pasarela, se muestra en el panel de instrumentos de su organización de {{site.data.keyword.iot_short_notm}}.
+
+Consulte la receta [Conexión de Raspberry Pi como pasarela a Watson IoT](https://developer.ibm.com/recipes/tutorials/connecting-raspberry-pi-as-a-gateway-to-watson-iot-using-node-red/) para ver el flujo detallado y una descripción. 
 
 **Nota:** En el panel de instrumentos de {{site.data.keyword.iot_short_notm}}, los dispositivos y las pasarelas que se conectan directamente al {{site.data.keyword.iot_short_notm}} muestran un icono de estado para indicar que están conectados. El panel de instrumentos muestra dispositivos que se conectan indirectamente a través de una pasarela como desconectados, ya que no saben la conectividad de dispositivos a la pasarela.
 

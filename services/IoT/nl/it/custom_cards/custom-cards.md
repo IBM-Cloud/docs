@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2016, 2017
 lastupdated: "2016-10-13"
 
 ---
@@ -130,13 +130,13 @@ Ok! Hai correttamente configurato un server delle schede e distribuito la tua pr
 Dopo aver configurato e verificato la scheda HelloWorld, puoi ampliare le schede personalizzate e crearne di tue.
 
 Il repository delle schede personalizzate di esempio include le seguenti schede di esempio:
-- HelloWorld
+- HelloWorld  
 Una scheda semplice che fornisce un esempio Hello World di base.
-- Vuota
+- Vuota  
 Una scheda vuota che contiene l'infrastruttura di una scheda. Utilizza questa scheda quando crei una scheda da zero.
-- Webcam
+- Webcam  
 Una scheda webcam semplice. Configura la scheda con un URL webcam e imposta la frequenza di aggiornamento.
-- iFrame
+- iFrame  
 Una scheda iFrame di base che puoi utilizzare per integrare qualsiasi pagina web (HTTPS) sicura nella tua tabella.
 
 I seguenti passi avanzati creano una nuova scheda:

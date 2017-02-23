@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-01"
+  years: 2016, 2017
+lastupdated: "2017-02-03"
 
 ---
 
@@ -17,6 +17,26 @@ lastupdated: "2016-08-01"
 
 Queste sono le risposte a domande sulla risoluzione dei problemi comuni riguardo l'utilizzo di {{site.data.keyword.iot_full}} su {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
+
+## Problema di accesso alla tua organizzazione {{site.data.keyword.iot_short_notm}}
+{: #access-expiry-problem}
+
+Non puoi accedere all'organizzazione {{site.data.keyword.iot_short_notm}} che ti appartiene.
+{:shortdesc}
+
+Non puoi accedere alla tua organizzazione {{site.data.keyword.iot_short_notm}} direttamente utilizzando l'URL dell'organizzazione o utilizzando `https://internetofthings.ibmcloud.com`.
+{: tsSymptoms}
+
+Il tuo accesso alla tua organizzazione {{site.data.keyword.iot_short_notm}} potrebbe essere scaduto. Le organizzazioni {{site.data.keyword.iot_short_notm}} create utilizzando {{site.data.keyword.Bluemix}} utilizzano i profili utente temporanei per impostazione predefinita.
+{: tsCauses}
+
+Puoi risolvere questo problema accedendo alla tua organizzazione {{site.data.keyword.iot_short_notm}} utilizzando {{site.data.keyword.Bluemix_notm}} e modificando le impostazioni sulla scadenza del tuo profilo utente. Per modificare le tue impostazioni di scadenza utente:
+
+1. Dal tuo dashboard {{site.data.keyword.Bluemix_notm}}, apri il tuo servizio {{site.data.keyword.iot_short_notm}}.
+2. Fai clic su **Membri** dalla barra di navigazione.
+3. Fai clic sull'icona **Modifica**.
+4. Deseleziona la casella **Accesso con scadenza** e fai clic su **Salva**.
+{: tsResolve}
 
 ## Problema di connessione a {{site.data.keyword.iot_short_notm}}
 {: #connection_problem}
@@ -56,12 +76,10 @@ Se hai dei problemi o delle domande quando utilizzi {{site.data.keyword.iot_shor
 
 Quando utilizzi i forum per fare una domanda, contrassegnala con una tag in modo che sia visualizzabile dai team di sviluppo {{site.data.keyword.Bluemix_notm}}.
 
-* Se hai domande tecniche sullo sviluppo o la distribuzione di un'applicazione con {{site.data.keyword.iot_short_notm}}, inserisci la tua domanda in
-[Stack Overflow](http://stackoverflow.com/search?q=watson-iot+ibm-bluemix){:new_window} e contrassegnala con le tag "ibm-bluemix" e "watson-iot".
+* Se hai domande tecniche sullo sviluppo o la distribuzione di un'applicazione con {{site.data.keyword.iot_short_notm}}, inserisci la tua domanda in [Stack Overflow ![icona link esterno](../../icons/launch-glyph.svg)](http://stackoverflow.com/search?q=watson-iot+ibm-bluemix){:new_window} e contrassegnala con le tag "ibm-bluemix" e "watson-iot".
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
-* Per domande sul servizio e sulle istruzioni per l'utilizzo iniziale, utilizza il forum [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/watson-iot/?smartspace=bluemix){:new_window}. Includi le tag  "watson-iot" e "bluemix".
+* Per domande sul servizio e sulle istruzioni per l'utilizzo iniziale, utilizza il forum [IBM developerWorks dW Answers ![icona link esterno](../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/topics/watson-iot/?smartspace=bluemix){:new_window}. Includi le tag  "watson-iot" e "bluemix".
 
-Consulta [Come ottenere supporto](https://www.{DomainName}/docs/support/index.html#getting-help) per ulteriori dettagli sull'utilizzo dei forum.
+Consulta [Come ottenere supporto ![icona link esterno](../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/support/index.html#getting-help){: new_window} per ulteriori dettagli sull'utilizzo dei forum.
 
-Per informazioni su come aprire un ticket di supporto IBM o sui livelli di supporto e sulla gravità dei ticket, consulta
-[Come contattare il supporto](https://www.{DomainName}/docs/support/index.html#contacting-support).
+Per informazioni su come aprire un ticket di supporto IBM o sui livelli di supporto e sulla gravità dei ticket, consulta [Come contattare il supporto ![icona link esterno](../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/support/index.html#contacting-support){: new_window}.

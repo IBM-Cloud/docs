@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-08-02"
+  years: 2015, 2016, 2017
+lastupdated: "2016-11-22"
 
 ---
 
@@ -12,19 +12,16 @@ lastupdated: "2016-08-02"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Libreria client Java - dispositivi gestiti
+# Sviluppo dei dispositivi gestiti utilizzando Java
 {: #java_deviceManagement}
 
 ##Introduzione
 {: #introduction}
 
-Questa libreria client illustra come utilizzare i dispositivi con la libreria client 'ibmiotf' Java. Per assistenza nell'iniziare ad utilizzare questo modulo, consulta [Libreria client Java - Introduzione](../java/javaintro.html).
+In {{site.data.keyword.iot_full}}, un dispositivo gestito è un dispositivo che può eseguire operazioni di gestione dispositivo, come gli aggiornamenti del firmware, dell'ubicazione e della diagnostica.
+Utilizzando la libreria client Java™ {{site.data.keyword.iot_short}} e le informazioni fornite, puoi sviluppare il codice Java per modificare i tuoi dispositivi collegati in dispositivi gestiti. Vengono inoltre forniti degli esempi per aiutarti nello sviluppo del codice Java per collegare un dispositivo al servizio di gestione del dispositivo ed eseguire le operazioni di gestione del dispositivo.
 
-Questa sezione contiene le informazioni su come i dispositivi del servizio di gestione del dispositivo {{site.data.keyword.iot_full}} possono utilizzare Java e eseguire le operazioni di gestione del dispositivo come l'aggiornamento firmware, dell'ubicazione e delle diagnostiche.
-
-La sezione Dispositivo contiene informazioni su come i dispositivi possono pubblicare gli eventi e gestire i comandi utilizzando la libreria client ibmiotf Java.
-
-La sezione Applicazioni contiene informazioni su come le applicazioni possono utilizzare la libreria client ibmiotf Java per interagire con i dispositivi.
+Per ulteriori informazioni su come le tue applicazioni possono utilizzare la libreria client Java per interagire con i dispositivi, consulta [Java per gli sviluppatori dell'applicazione](../../applications/libraries/java.html).
 
 ## Gestione del dispositivo
 {: #device_management}
@@ -598,7 +595,7 @@ L'implementazione deve aggiungere una logica per reimpostare il dispositivo alle
 ```
 public void handleFactoryReset(DeviceAction action) {
     try {
-        // codice per eseguire la reimpostazne dei valori predefiniti
+        // codice per eseguire la reimpostazione dei valori predefiniti
     } catch (IOException e) {
         action.setMessage(e.getMessage());
     }

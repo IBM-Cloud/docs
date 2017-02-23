@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-30"
+  years: 2016, 2017
+lastupdated: "2017-2-6"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -71,12 +71,11 @@ Avant de commencer à déployer et tester des contrats intelligents, vous devez 
 **Remarque : L'intégration de chaîne de blocs ** {{site.data.keyword.iot_short_notm}} prend en charge la connexion aux matrices {{site.data.keyword.blockchainfull_notm}} et aux matrices Hyperledger. Les exemples suivants sont basés sur l'utilisation d'{{site.data.keyword.blockchainfull_notm}}.
 
 1. Créez et configurez votre matrice {{site.data.keyword.blockchainfull_notm}}.
-
 L'intégration de chaîne de blocs {{site.data.keyword.iot_short_notm}} requiert la matrice {{site.data.keyword.blockchainfull_notm}} pour gérer le grand livre de chaîne de blocs, les contrats intelligents et l'infrastructure de chaîne de blocs générale. L'intégration de chaîne de blocs {{site.data.keyword.Bluemix_notm}} utilise {{site.data.keyword.blockchainfull_notm}} pour gérer les chaînes. Si vous avez accès à un environnement {{site.data.keyword.blockchainfull_notm}} existant, vous pouvez l'utiliser. Sinon, vous devez créer une instance d'{{site.data.keyword.blockchainfull_notm}} à partir du [catalogue](https://console.ng.bluemix.net/catalog/services/blockchain/) {{site.data.keyword.Bluemix_notm}}.
 
   1. A partir de votre tableau de bord de compte {{site.data.keyword.Bluemix_notm}}, cliquez sur **Utiliser des services ou des API**.
-  2. Localisez la section expérimentale du catalogue de service et sélectionnez **Chaîne de blocs**.  
-   **Astuce :** Cliquez [ici](https://console.ng.bluemix.net/catalog/services/blockchain/) pour accéder directement à la page de service expérimental d'{{site.data.keyword.blockchainfull_notm}}.
+  2. Localisez la section Services d'application du catalogue de service et sélectionnez **Chaîne de blocs**.  
+   **Astuce :** Cliquez sur [here](https://console.ng.bluemix.net/catalog/services/blockchain/) pour accéder directement à la page de service d'{{site.data.keyword.blockchainfull_notm}}. 
   3. Sur la page de service d'{{site.data.keyword.blockchainfull_notm}}, vérifiez les sélections pour Ajout de service :  
     - Espace - Si l'espace dont vous disposez est plus étendu que l'espace `dev` par défaut, vérifiez que vous déployez bien le service dans l'espace souhaité.
     - Appli - Laissez non lié.
@@ -85,7 +84,7 @@ L'intégration de chaîne de blocs {{site.data.keyword.iot_short_notm}} requiert
   4. Cliquez sur **Créer** pour déployer {{site.data.keyword.blockchainfull_notm}} sur {{site.data.keyword.Bluemix_notm}}.  
   La chaîne de blocs est initialement déployée avec deux noeuds homologues. Vous pouvez ajouter d'autres noeuds selon vos besoins.
 
-4. Liez {{site.data.keyword.iot_short_notm}} à votre service {{site.data.keyword.blockchainfull_notm}}
+4. Liez {{site.data.keyword.iot_short_notm}} à votre service {{site.data.keyword.blockchainfull_notm}}  
     Pour écrire sur la chaîne de blocs depuis {{site.data.keyword.iot_short_notm}}, vous devez d'abord lier les services.
      1. Dans {{site.data.keyword.Bluemix_notm}}, accédez au tableau de bord.
      2. Sélectionnez l'espace dans lequel vous avez déployé {{site.data.keyword.blockchainfull_notm}}.
@@ -130,19 +129,50 @@ L'intégration de chaîne de blocs {{site.data.keyword.iot_short_notm}} requiert
      8. Sélectionnez l'espace dans lequel vous avez déployé {{site.data.keyword.iot_short_notm}}.
      9. Cliquez sur la vignette **{{site.data.keyword.iot_short_notm}}**.
      10. Cliquez sur **Lancer** pour ouvrir le tableau de bord {{site.data.keyword.iot_short_notm}}.
-     11. Dans le tableau de bord {{site.data.keyword.iot_short_notm}}, sélectionnez **Paramètres > Connexions** en cliquant sur ![Paramètres.](images/platform_settings.png "Paramètres") dans la barre latérale de menus.
-     12. Dans la section Extensions, sous la chaîne de blocs, cliquez sur **Ajouter connexion de matrice**.   
-    Les zones de connexion de matrice s'affichent automatiquement sur la page, et remplacent la table.  
-    **Remarque :** L'intégration de chaîne de blocs doit être activée pour permettre l'ajout de matrices. Pour plus d'informations, voir [Chaîne de blocs](../../reference/extensions/index.html#blockchain) dans la rubrique Intégrations de service externe.
-     14. Entrez les informations suivantes pour vous connecter à la matrice :
-      - Nom de matrice - Entrez un nom permettant d'identifier la matrice dans {{site.data.keyword.iot_short_notm}}.
-      - Adresse homologue - Entrez l'adresse `api_host`.
-      - Numéro de port - Entrez le numéro `api_port` ou le numéro `api_port_tls`. Utilisez le port 80 si votre implémentation n'utilise pas TLS. Utilisez le port 443 si votre implémentation utilise TLS.
-      - Utiliser TLS - Utilisez le protocole TLS pour chiffrer la communication entre {{site.data.keyword.iot_short_notm}} et le contrat dans la matrice. Les numéros de port par défaut sont définis par l'instance {{site.data.keyword.iot_short_notm}} déployée à laquelle vous vous connectez.
-      - ID utilisateur - Entrez la chaîne `username`.
-      - Valeur confidentielle de l'utilisateur - Entrez la chaîne `secret`.
-     15. Cliquez sur **Confirmer toutes les modifications**
-  La table de matrice est renseignée avec la nouvelle connexion de matrice.  
+     11. Dans le tableau de bord {{site.data.keyword.iot_short_notm}}, sélectionnez **Extensions** dans barre latérale de menus. 
+     12. Sur la page **Extensions**, dans le titre Blockchain, cliquez sur **Configuration** ou sur l'![icône représentant un engrenage](../images/gear.png "Configure") si des matrices sont déjà liées. 
+     13. Dans la section Configuration de la chaîne de blocs, cliquez sur **Ajouter une matrice**, puis entrez des informations sur la matrice.
+    **Remarque :** L'intégration de chaîne de blocs doit être activée pour permettre l'ajout de matrices. Pour plus d'informations, voir [Chaîne de blocs](../reference/extensions/index.html#blockchain) dans la rubrique Intégrations de service externe.
+    1. Dans l'onglet **Matrice**, entrez un nom permettant d'identifier la matrice dans {{site.data.keyword.iot_short_notm}}, puis cliquez sur **Suivant**.   
+    2. Dans l'onglet **Homologue**, entrez les informations sur l'homologue :  
+   <table>
+   <thead>
+   <tr>
+   <th>Paramètre</th>
+   <th>Valeur</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>Nom</td>
+   <td>Entrez un nom permettant d'identifier l'homologue dans {{site.data.keyword.iot_short_notm}}.</td>
+   </tr>
+   <tr>
+   <td>Hôte</td>
+   <td>Adresse `api_host` pour le serveur homologue de validation 1</td>
+   </tr>
+   <tr>
+   <td>Port</td>
+   <td>Numéro `api_port`<ul><li>Utilisez le port 80 si votre implémentation n'utilise pas TLS.</li><li>Utilisez le port 443 si votre implémentation utilise TLS.</li></ul></td>
+   </tr>
+   <tr>
+   <td>ID d'utilisateur</td>
+   <td>Chaîne `nom d'utilisateur` pour l'utilisateur qui a été utilisée afin d'enregistrer le contrat intelligent avec la chaîne de blocs. Vous utiliserez également cet ID d'utilisateur pour configurer ultérieurement l'interface utilisateur simple.</td>
+   </tr>
+   <tr>
+   <td>Clé secrète</td>
+   <td>Chaîne `secrète` pour l'utilisateur</td>
+   </tr>
+   <tr>
+   <td>Utiliser TLS</td>
+   <td>En fonction ou Hors fonction</br>Utilisez le protocole TLS pour chiffrer la communication entre {{site.data.keyword.iot_short_notm}} et le contrat dans la matrice. Les numéros de port par défaut sont définis par l'instance {{site.data.keyword.iot_short_notm}} déployée à laquelle vous vous connectez.</td>
+   </tr></tbody>
+   </table>  
+    3. Cliquez sur **Terminer**.
+     3. Dans la section Configuration de la chaîne de blocs, cliquez sur **Terminé** pour sauvegarder les informations sur la matrice.
+        
+
+La table de matrice est renseignée avec la nouvelle connexion de matrice.   
 
 ## Création, test et déploiement de vos contrats intelligents
 {: #test_contracts}
@@ -164,7 +194,8 @@ Pour développer et tester votre propre code en chaîne avant de le déployer su
 IBM fournit un certain nombre de contrats intelligents que vous pouvez télécharger et utiliser directement en l'état ou que vous pouvez adapter aux objectifs de votre organisation.  
 Pour télécharger les exemples de contrats :
  1. Accédez au référentiel d'exemples de chaîne de blocs à l'adresse https://github.com/ibm-watson-iot/blockchain-samples/
- Les dossiers basic_contract_hyperledger et trade_lane_contract_hyperledger contiennent respectivement les contrats de base et les contrats commerciaux.
+  
+Les dossiers basic_contract_hyperledger et trade_lane_contract_hyperledger contiennent respectivement les contrats de base et les contrats commerciaux. 
  3. Utilisez `git clone` dans le terminal pour cloner le projet https://github.com/ibm-watson-iot/blockchain-samples.  
  **Astuce :** Vous pouvez également télécharger un fichier compressé du projet en cliquant sur **Download ZIP** depuis la page de projet.
 
@@ -189,6 +220,7 @@ Pour télécharger les exemples de contrats :
  Après avoir testé et vérifié votre contrat localement, vous pouvez le déployer sur votre matrice {{site.data.keyword.blockchainfull_notm}} pour le tester.
   1. Téléchargez votre contrat sur votre référentiel GitHub public.  
   Par exemple, téléchargez le fichier sample.go sur :
+    
   `http://github.com/{my organization}/{my project}/`
   2. Enregistrez le contrat avec l'homologue auquel vous vous êtes connecté précédemment.  
   Utilisez un client REST, tel que CURL ou Postman, pour soumettre l'appel d'enregistrement. Pour plus d'informations sur l'appel d'enregistrement, voir la [documentation d'API POST registrar](https://ibmblockchainapi.mybluemix.net/swagger/ui.html?scheme=http&host=127.0.0.1:3000&basepath=/#!/Registrar/registerUser). Utilisez les informations suivantes lors de l'enregistrement :
@@ -314,11 +346,11 @@ Pour tester votre contrat intelligent, effectuez un test de bout en bout en cré
 
 3. Dans l'interface utilisateur de surveillance, vérifiez que votre configuration fonctionne comme prévu.  
 Utilisez les composants de l'interface utilisateur de surveillance pour interagir avec votre contrat de chaîne de blocs :  
- - Opérations sur le code en chaîne
+ - Opérations sur le code en chaîne  
  Vérifiez que les opérations sur le code en chaîne propres au contrat peuvent être exécutées comme prévu. Par exemple, pour le contrat de base, vérifiez que l'exécution d'une fonction `createAsset` entraîne l'ajout d'un actif sur la chaîne de blocs.
- - Contenu de réponse
+ - Contenu de réponse  
  Vérifiez que les réponses aux demandes des homologues apparaissent comme prévu lorsque vous soumettez des demandes REST à partir de l'onglet des opérations sur le code en chaîne.
- - Chaîne de blocs
+ - Chaîne de blocs  
 Vérifiez que des blocs sont ajoutés à la chaîne lorsque vous injectez des données à partir d'un terminal lié ou lorsque vous utilisez le composant des opérations sur le code en chaîne.    
 
 ## Etapes suivantes

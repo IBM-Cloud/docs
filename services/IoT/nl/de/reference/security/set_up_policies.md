@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015,2016
+  years: 2016, 2017
 
 ---
 
@@ -13,12 +13,13 @@ copyright:
 
 # Sicherheitsrichtlinien konfigurieren
 {: #set_up_policies.md}
-Letzte Aktualisierung: 15. November 2016
+Letzte Aktualisierung: 2017-02-02
 {: .last-updated}
 
 Ein Sicherheitsanalyst kann die Verbindungssicherheitsrichtlinien sowie die Black- oder Whitelists konfigurieren.
 
 ## Verbindungsrichtlinien konfigurieren
+{: #config_connect}
 
 Sie können die Standardsicherheitsebene festlegen, die auf alle Geräte angewendet wird. Anschließend können Sie angepasste Sicherheitseinstellungen für bestimmte Geräte hinzufügen.
 
@@ -27,7 +28,8 @@ Sie können die Standardsicherheitsebene festlegen, die auf alle Geräte angewen
     - TLS Optional
     - TLS mit Tokenauthentifizierung
     - TLS mit Clientzertifikatsauthentifizierung
-    - TLS mit Token- Clientzertifikatsauthentifizierung
+    - TLS mit Token- und Clientzertifikatsauthentifizierung
+    - TLS mit Clientzertifikat oder Token
 
 Basierend auf der von Ihnen ausgewählten Sicherheitsebene enthält die Tabelle die Anzahl der betroffenen Geräte und den vorhergesagte Umfang der Einhaltung auf der angegebenen Sicherheitsebene.
 
@@ -35,28 +37,32 @@ Basierend auf der von Ihnen ausgewählten Sicherheitsebene enthält die Tabelle 
 4. Klicken Sie auf **Speichern**.  
 
 ## Blacklists und Whitelists konfigurieren
+{: #config_black_white}
 
 Schränken Sie den Zugriff auf den Server von bestimmten Geräten durch die Verwendung einer Blacklist ein oder gewähren Sie mithilfe einer Whitelist den Serverzugriff für bestimmte Geräte. Sie können entweder eine Blacklist oder eine Whitelist verwenden, nicht jedoch beide gemeinsam.
 
 ### Blacklist konfigurieren
+{: #config_blacklist}
 
 1. Klicken Sie auf der Seite **Richtlinien** des Add-ons für Risiko- und Sicherheitsmanagement im Abschnitt **Blacklist** auf **Konfigurieren**.
 2. Klicken Sie auf der Seite **Blacklist** auf **Zu Blacklist hinzufügen**.
 3. Führen Sie im Fenster **Zu Blacklist hinzufügen** eine der folgenden Aktionen durch:
     - Geben Sie auf der Registerkarte **IP-Adresse/Bereich** die IP-Adressen der Geräte ein, die blockiert werden sollen, oder Bereiche von IP-Adressen für mehrere aufeinander folgende Geräte.
     - Geben Sie auf der Registerkarte **CIDR** einen notierten CIDR-Block (CIDR, Classless Inter-Domain Routing) ein.
-    - Geben Sie auf der Registerkarte **Land** das Land an, für das Sie alle Geräte blockieren möchten. 
+    - Geben Sie auf der Registerkarte **Land** das Land an, für das Sie alle Geräte blockieren möchten.
 4. Klicken Sie im Fenster **Zu Blacklist hinzufügen** auf **Speichern**.
-5. Überprüfen Sie die Liste der blockierten Geräte. Alle Geräte aus der Liste können basierend auf der IP-Adresse, CIDR oder dem Land keine Verbindung mit dem Watson IoT Platform-Server herstellen.
+5. Überprüfen Sie die Liste der blockierten Geräte. Alle Geräte aus der Liste können basierend auf der IP-Adresse, CIDR oder dem Land keine Verbindung mit dem {{site.data.keyword.iot_short_notm}}-Server herstellen.
 6. Klicken Sie auf **Speichern**.
 
 ### Whitelist konfigurieren
+{: #config_whitelist}
+
 1. Klicken Sie auf der Seite **Richtlinien** des Add-ons für Risiko- und Sicherheitsmanagement neben **Whitelist** auf **Konfigurieren**.
 2. Klicken Sie auf der Seite **Whitelist** auf **Zu Whitelist hinzufügen**.
 3. Führen Sie im Fenster **Zu Whitelist hinzufügen** eine der folgenden Aktionen durch:
     - Geben Sie auf der Registerkarte **IP-Adresse/Bereich** die IP-Adressen der Geräte ein, auf die der Zugriff möglich sein soll, oder Bereiche von IP-Adressen für mehrere aufeinander folgende Geräte.
     - Geben Sie auf der Registerkarte **CIDR** einen notierten CIDR-Block (CIDR, Classless Inter-Domain Routing) ein.
-    - Geben Sie auf der Registerkarte **Land** das Land an, für das Sie die Verbindung für alle Geräte zulassen möchten. 
+    - Geben Sie auf der Registerkarte **Land** das Land an, für das Sie die Verbindung für alle Geräte zulassen möchten.
 4. Klicken Sie im Fenster **Zu Whitelist hinzufügen** auf **Speichern**.
-5. Überprüfen Sie die Liste der zulässigen Geräte. Alle Geräte aus der Liste können basierend auf der IP-Adresse, CIDR oder dem Land eine Verbindung mit dem Watson IoT Platform-Server herstellen.
+5. Überprüfen Sie die Liste der zulässigen Geräte. Alle Geräte aus der Liste können basierend auf der IP-Adresse, CIDR oder dem Land eine Verbindung mit dem {{site.data.keyword.iot_short_notm}}-Server herstellen.
 6. Klicken Sie auf **Speichern**.

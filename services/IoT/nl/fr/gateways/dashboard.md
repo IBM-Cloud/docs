@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-27"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-10"
 
 ---
 
@@ -26,7 +26,7 @@ Les passerelles représentent une classe spécialisée de terminal dans {{site.d
 {: #Prerequisites}
 
 Les terminaux de passerelle possèdent des autorisations supplémentaires par rapport aux terminaux réguliers et peuvent exécuter les fonctions suivantes :
-- Enregistrer de nouveaux terminaux sur {{site.data.keyword.iot_short_notm}} 
+- Enregistrer de nouveaux terminaux sur {{site.data.keyword.iot_short_notm}}
 - Envoyer et recevoir leurs propres données de détection, tout comme un terminal connecté
 - Envoyer et recevoir des données pour le compte des terminaux qui leur sont connectés
 - Exécuter un agent de gestion des terminaux, de manière à pouvoir le gérer, et gérer les terminaux qui lui sont connectés  
@@ -48,17 +48,19 @@ Pour ajouter une passerelle depuis le tableau de bord {{site.data.keyword.iot_sh
 3. Sélectionnez ou créez un type de terminal pour le terminal que vous ajoutez.  
 Chaque terminal connecté à {{site.data.keyword.iot_short_notm}} doit être associé à un type de terminal. Les types de terminal sont des groupes de terminaux ayant des caractéristiques communes.  
  1. Cliquez sur **Créer un type de terminal**, puis sur **Créer un type de passerelle**.
- 2. Entrez un nom de type de terminal, par exemple, `my_gateway_type`, et une description pour le type de passerelle.**Important :** Le nom du type de terminal ne doit pas dépasser 36 caractères et peut uniquement contenir les caractères suivants :
+ 2. Entrez un nom de type de terminal, par exemple, `my_gateway_type`, et une description pour le type de passerelle.   
+ **Important :** Le nom du type de terminal ne doit pas dépasser 36 caractères et peut uniquement contenir les caractères suivants :
  <ul>
   <li>Caractères alphanumériques (a-z, A-Z, 0-9)</li>
   <li>Traits d'union (-)</li>
   <li>Traits de soulignement (&lowbar;)</li>
   <li>Points (.)</li>
-  </ul>3. Facultatif : Entrez des métadonnées et des attributs de type de passerelle.     
+  </ul>3. Facultatif : Entrez des métadonnées et des attributs de type de passerelle.    
  **Astuce :** Vous pouvez ajouter et éditer des attributs et des métadonnées ultérieurement.
  4. Cliquez sur **Créer** pour ajouter le nouveau type de passerelle.
 10. Cliquez sur **Suivant** pour commencer le processus d'ajout de votre terminal de passerelle avec le type de passerelle sélectionné.
-11. Entrez un ID de terminal, tel que `my_gateway_device`.  L'ID de terminal permet d'identifier le terminal de passerelle dans le tableau de bord {{site.data.keyword.iot_short_notm}} et représente également un paramètre requis pour la connexion de votre terminal de passerelle à {{site.data.keyword.iot_short_notm}}.  
+11. Entrez un ID de terminal, tel que `my_gateway_device`.  
+L'ID de terminal permet d'identifier le terminal de passerelle dans le tableau de bord {{site.data.keyword.iot_short_notm}} et représente également un paramètre requis pour la connexion de votre terminal de passerelle à {{site.data.keyword.iot_short_notm}}.  
 **Important :** L'ID de terminal ne doit pas dépasser 36 caractères et peut uniquement contenir les caractères suivants :
  <ul>
  <li>Caractères alphanumériques (a-z, A-Z, 0-9)</li>
@@ -66,8 +68,7 @@ Chaque terminal connecté à {{site.data.keyword.iot_short_notm}} doit être ass
  <li>Traits de soulignement (&lowbar;)</li>
  <li>Points (.)</li>  
  </ul>
- **Astuce :** Pour les terminaux connectés à un réseau, l'ID de terminal pourrait être par exemple l'adresse MAC du terminal sans aucun deux-points de séparation.
-  
+ **Astuce :** Pour les terminaux connectés à un réseau, l'ID de terminal pourrait être par exemple l'adresse MAC du terminal sans aucun deux-points de séparation.  
 12. Facultatif : Cliquez sur **Zones supplémentaires** pour ajouter des informations de terminal de passerelle, par exemple, le numéro de série, le fabricant, le modèle, etc.  
  **Astuce :** Vous pouvez ajouter et éditer ces informations ultérieurement.
 12. Facultatif : Entrez les métadonnées JSON de terminal.  
@@ -80,10 +81,12 @@ Chaque terminal connecté à {{site.data.keyword.iot_short_notm}} doit être ass
  - Type de terminal, par exemple, `my_gateway_type`
  - ID de terminal. **Astuce :** Pour les terminaux connectés à un réseau, cela pourrait être par exemple l'adresse MAC sans aucun deux-points de séparation.
  - Méthode d'authentification, par exemple, `token`
- - Jeton d'authentification, par exemple, `PtBVriRqIg4uh)_-Kl`
+ - Jeton d'authentification, par exemple, `PtBVriRqIg4uh)_-Kl`  
   **Astuce :** Vous aurez besoin d'un ID d'organisation, d'un jeton d'authentification, d'un type de terminal et d'un ID de terminal pour configurer votre terminal afin qu'il se connecte à {{site.data.keyword.iot_short_notm}}.  
 
 Félicitations, vous avez enregistré votre terminal de passerelle. Vous pouvez maintenant configurer votre terminal de passerelle pour qu'il se connecte à {{site.data.keyword.iot_short_notm}}.
+
+Pour obtenir les instructions étape par étape qui illustrent le flux requis pour enregistrer une passerelle, voir la recette [How to Register Gateways in IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/how-to-register-gateways-in-ibm-watson-iot-platform/). 
 
 ## Etape2 : Connexion de votre passerelle à {{site.data.keyword.iot_short_notm}}
 {: #connect_gateway}
@@ -104,6 +107,8 @@ Pour plus d'informations sur l'enregistrement automatique de terminal et la publ
 
 
 Lorsqu'un terminal se connecte à votre passerelle, il s'affiche sur le tableau de bord de votre organisation {{site.data.keyword.iot_short_notm}}.
+
+Pour obtenir un flux détaillé et une description, voir la recette[Connecting Raspberry Pi as a Gateway to Watson IoT](https://developer.ibm.com/recipes/tutorials/connecting-raspberry-pi-as-a-gateway-to-watson-iot-using-node-red/).  
 
 **Remarque :** Dans le tableau de bord {{site.data.keyword.iot_short_notm}}, les terminaux et les passerelles qui sont directement connectés à {{site.data.keyword.iot_short_notm}} affichent une icône de statut sur le tableau de bord pour indiquer qu'ils sont connectés. Le tableau de bord affiche les terminaux qui sont connectés indirectement via une passerelle comme des terminaux étant déconnectés car il ne reconnaît pas les terminaux qui sont connectés via la passerelle.
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-27"
+  years: 2016, 2017
+lastupdated: "2017-01-10"
 
 ---
 
@@ -23,8 +23,10 @@ Prima di poter iniziare a ricevere i dati dai tuoi dispositivi IoT, devi collega
 
 Prima di iniziare il processo di connessione, devi assicurarti che i tuoi dispositivi rispettino i seguenti requisiti per la comunicazione con {{site.data.keyword.iot_short_notm}}:
 
-- Il tuo dispositivo deve essere in grado di comunicare inviando messaggi del dispositivo nel [formato MQTT](reference/mqtt/index.html).
-- I messaggi del dispositivo devono essere conformi ai requisiti del [payload del messaggio](reference/mqtt/index.html#/message-payload) di {{site.data.keyword.iot_short_notm}}.
+- Il tuo dispositivo deve essere in grado di comunicare utilizzando i protocolli HTTP o MQTT.
+- I messaggi del dispositivo devono essere conformi ai requisiti del payload del messaggio di {{site.data.keyword.iot_short_notm}}.
+
+Per ulteriori informazioni, consulta [Sviluppo dei dispositivi su Watson IoT Platform](https://console.ng.bluemix.net/docs/services/IoT/devices/device_dev_index.html).
 
 Completa la seguente procedura per collegare il tuo dispositivo a {{site.data.keyword.iot_short_notm}}.
 
@@ -50,8 +52,8 @@ Per aggiungere un dispositivo dal dashboard {{site.data.keyword.iot_short_notm}}
 Ogni dispositivo collegato a {{site.data.keyword.iot_short_notm}} deve essere associato a un tipo di dispositivo. I tipi di dispositivo sono gruppi di dispositivi che condividono caratteristiche comuni.  
 Quando aggiungi il tuo primo dispositivo alla tua organizzazione {{site.data.keyword.iot_short_notm}}, non è disponibile alcun tipo di dispositivo nel menu **Device type**. Devi prima creare un tipo di dispositivo:
  1. Fai clic su **Create device type**.
- 2. Immetti un nome del tipo di dispositivo come ad esempio `my_device_type` e una descrizione per il tipo di dispositivo.
-**Importante:** il nome del tipo di dispositivo non deve essere più lungo di 36 caratteri e può contenere solo:
+ 2. Immetti un nome del tipo di dispositivo come ad esempio `my_device_type` e una descrizione per il tipo di dispositivo.   
+ **Importante:** il nome del tipo di dispositivo non deve essere più lungo di 36 caratteri e può contenere solo:
  <ul>
   <li>Caratteri alfanumerici (a-z, A-Z, 0-9)</li>
   <li>Trattini (-)</li>
@@ -62,16 +64,16 @@ Quando aggiungi il tuo primo dispositivo alla tua organizzazione {{site.data.key
  **Suggerimento:** puoi aggiungere e modificare gli attributi e i metadati successivamente.
  4. Fai clic su **Create** per aggiungere il nuovo tipo di dispositivo.
 10. Fai clic su **Next** per avviare il processo di aggiunta del tuo dispositivo. con il tipo di dispositivo.
-11. Immetti un ID dispositivo, come ad esempio `my_first_device`.
+11. Immetti un ID dispositivo, come ad esempio `my_first_device`.  
 L'ID dispositivo viene utilizzato per identificare il dispositivo nel dashboard {{site.data.keyword.iot_short_notm}} ed è anche un parametro obbligatorio per la connessione del tuo dispositivo a {{site.data.keyword.iot_short_notm}}.  
-**Importante:** l'ID del tipo di dispositivo non deve essere più lungo di 36 caratteri e può contenere solo: 
+**Importante:** l'ID del tipo di dispositivo non deve essere più lungo di 36 caratteri e può contenere solo:
  <ul>
  <li>Caratteri alfanumerici (a-z, A-Z, 0-9)</li>
  <li>Trattini (-)</li>
  <li>Caratteri di sottolineatura (&lowbar;)</li>
  <li>Punti (.)</li>  
  </ul>
- **Suggerimento:** per i dispositivi collegati alla rete, l'ID del dispositivo può essere ad esempio l'indirizzo MAC del dispositivo senza i due punti di separazione.   
+ **Suggerimento:** per i dispositivi collegati alla rete, l'ID del dispositivo può essere ad esempio l'indirizzo MAC del dispositivo senza i due punti di separazione.  
 12. Facoltativo: fai clic su **Additional fields** per aggiungere informazioni sul dispositivo, come il numero di serie, il produttore, il modello e così via.  
  **Suggerimento:** puoi aggiungere e modificare le informazioni successivamente.
 12. Facoltativo: immetti i metadati JSON del dispositivo.  
@@ -85,7 +87,7 @@ Se scegli di creare il tuo proprio token, assicurati che sia compreso tra 8 e 36
  - Punto esclamativo (!)
  - E commerciale (&)
  - Simbolo chiocciola (@)
- - Punto interrogativo (?) 
+ - Punto interrogativo (?)
  - Asterisco (\*)
  - Segno più (+)
  - Punto (.)
@@ -97,7 +99,7 @@ Se scegli di creare il tuo proprio token, assicurati che sia compreso tra 8 e 36
  - Tipo del dispositivo, come ad esempio `my_device_type`
  - ID del dispositivo, come ad esempio `my_first_device`
  - Metodo di autenticazione, come ad esempio `token`
- - Token di autenticazione, come ad esempio `PtBVriRqIg4uh)_-Kl`
+ - Token di autenticazione, come ad esempio `PtBVriRqIg4uh)_-Kl`  
   **Suggerimento:** hai bisogno dell'ID organizzazione, del token di autenticazione, del tipo di dispositivo e dell'ID del dispositivo per configurare il tuo dispositivo per il collegamento a {{site.data.keyword.iot_short_notm}}.  
 
 Congratulazioni, hai registrato il tuo dispositivo. Ora puoi configurare il tuo dispositivo per collegarsi a {{site.data.keyword.iot_short_notm}}
@@ -115,22 +117,37 @@ Dopo aver registrato il dispositivo con {{site.data.keyword.iot_short_notm}}, pu
 [Device connection recipes](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/) disponibili in IBM.com.
 
 Le seguenti informazioni sono necessarie quando colleghi il tuo dispositivo:
-- URL: *org_id*.messaging.internetofthings.ibmcloud.com
+- URL: *org_id*.messaging.internetofthings.ibmcloud.com  
 Dove *org_id* è l'ID della tua organizzazione {{site.data.keyword.iot_short_notm}}.
 - Porta:
  - 1883
  - 8883 (crittografata)
  - 443 (socket web)
-- Identificativo del dispositivo: d:*org_id*:*device_type*:*device_id*
+- Identificativo del dispositivo: d:*org_id*:*device_type*:*device_id*  
 Questa combinazione di parametri identifica univocamente il tuo dispositivo.
-- Nome utente: use-token-auth
+- Nome utente: use-token-auth  
 Questo valore indica che stai utilizzando l'autorizzazione token.
-- Password: *Token di autenticazione*
+- Password: *Token di autenticazione*  
 Questo valore è il token univoco che hai definito o che è stato assegnato al tuo dispositivo quando lo hai registrato.
-- Formato argomento dell'evento: iot-2/evt/*event_id*/fmt/*format_string*
+- Formato argomento dell'evento: iot-2/evt/*event_id*/fmt/*format_string*  
  Dove *event_id* specifica il nome dell'evento visualizzato in {{site.data.keyword.iot_short_notm}} e *format_string* è il formato dell'evento, come ad esempio JSON.
 - Formato del messaggio: JSON
+   
  {{site.data.keyword.iot_short_notm}} supporta diversi formati, come JSON e testo.
 
 Per ulteriori informazioni sulla connessione del tuo dispositivo, consulta [Connettività MQTT per i dispositivi](devices/mqtt.html) nella documentazione tecnica.
 La sezione [Connectivity](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Connectivity/post_device_types_deviceType_devices_deviceId_events_eventName) della documentazione API contiene inoltre le informazioni richieste.
+
+## Ricette sulla connessione dei dispositivi
+
+Le seguenti ricette descrivono il flusso completo utilizzato per registrare e collegare i dispositivi a Watson IoT Platform.
+
+- [How to Register Devices in IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/how-to-register-devices-in-ibm-iot-foundation/)
+
+- [Connecting Raspberry Pi as a Device to Watson IoT using Node-RED](https://developer.ibm.com/recipes/tutorials/deploy-watson-iot-node-on-raspberry-pi/)
+
+- [Connect an Arduino Uno device to the IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/connect-an-arduino-uno-device-to-the-ibm-internet-of-things-foundation/)
+
+- [Connecting a Sense HAT to Watson IoT using Node-RED](https://developer.ibm.com/recipes/tutorials/connecting-a-sense-hat-to-watson-iot-using-node-red/)
+
+- [Connecting Raspberry Pi with Windows IoT Core as a Device to Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/connecting-raspberry-pi-with-windows-iot-core-as-a-device-to-watson-iot-using-node-red/)

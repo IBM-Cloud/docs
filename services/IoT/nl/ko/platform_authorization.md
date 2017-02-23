@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2016, 2017
 lastupdated: "2016-09-14"
 
 ---
@@ -23,10 +23,9 @@ API 키는 {{site.data.keyword.iot_short_notm}} 조직에 애플리케이션을 
 
 애플리케이션 연결에 대한 자세한 정보는 기술 문서에서 [애플리케이션용 MQTT 연결](https://docs.internetofthings.ibmcloud.com/applications/mqtt.html)을 참조하십시오.
 
-
 새 API 키와 인증 토큰 쌍을 작성하려면 다음을 수행하십시오.  
 1.	{{site.data.keyword.iot_short_notm}} 대시보드에서 **앱 > API 키**로 이동합니다.  
-2.	**API 키 생성**을 클릭합니다.
+2.	**API 키 생성**을 클릭합니다.  
 **중요:** API 키와 토큰 쌍을 기록해 두십시오. 인증 토큰은 복구할 수 없습니다. 이 토큰을 잃어버리거나 잊어버리면 새 인증 토큰을 생성하기 위해 API 키를 다시 등록해야 합니다.
  - API 키의 예는 `a-organization_id-a84ps90Ajs`입니다.  
  - 토큰의 예는 `MP$08VKz!8rXwnR-Q*`입니다.  

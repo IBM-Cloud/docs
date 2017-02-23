@@ -16,7 +16,7 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="management_platform.svg"
-   inkscape:export-filename="C:\Users\IBM_ADMIN\GitHub\IoT\Blockchain-DOCS\iotblockchain_scratch\images\architecture_contracts.png"
+   inkscape:export-filename="S:\PUB\ABD142\ART\WORK\ship1\iot\reference\security\management_platform.png"
    inkscape:export-xdpi="299.98132"
    inkscape:export-ydpi="299.98132">
   <defs
@@ -706,8 +706,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.7590935"
-     inkscape:cx="155.84829"
-     inkscape:cy="155.56231"
+     inkscape:cx="239.39022"
+     inkscape:cy="150.13184"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -892,13 +892,6 @@
        width="159.05859"
        id="rect79371-1-6-6-9-8-7-3-5-1-8-2-9"
        style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" />
-    <text
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
-       id="text44191"
-       font-size="11"
-       x="271.81931"
-       y="416.98788"
-       sodipodi:linespacing="125%">Watson IoT Platform</text>
     <rect
        ry="0"
        rx="0"
@@ -924,7 +917,7 @@
          y="464.11569"
          id="tspan8202">IoT <tspan
    style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.00000122px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
-   id="tspan4668">디바이스</tspan></tspan><tspan
+   id="tspan4670">디바이스</tspan></tspan><tspan
          sodipodi:role="line"
          x="42.015415"
          y="477.86569"
@@ -988,7 +981,7 @@
          y="391.96463"
          id="tspan8202-7">IoT <tspan
    style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.00000122px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
-   id="tspan4666">게이트웨이</tspan></tspan><tspan
+   id="tspan4668">게이트웨이</tspan></tspan><tspan
          sodipodi:role="line"
          x="40.151447"
          y="405.71463"
@@ -1006,23 +999,23 @@
          style="font-size:7.5px" /></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-       x="226.63893"
-       y="371.30804"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.25000095px;line-height:100%;font-family:Arial;-inkscape-font-specification:'Arial, Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       x="260.63895"
+       y="377.30804"
        id="text266398"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
-         id="tspan266400"
-         x="226.63893"
-         y="371.30804">Watson™ IoT Platform </tspan><tspan
+         id="tspan3630"
+         x="260.63895"
+         y="377.30804">Watson™ IoT Platform </tspan><tspan
          sodipodi:role="line"
-         x="226.63893"
-         y="386.30804"
-         id="tspan4887">Org: q1bc3a</tspan><tspan
+         id="tspan3632"
+         x="260.63895"
+         y="388.55804" /><tspan
          sodipodi:role="line"
-         x="226.63893"
-         y="401.30804"
-         id="tspan266402" /></text>
+         id="tspan3634"
+         x="260.63895"
+         y="399.80804" /></text>
     <text
        sodipodi:linespacing="125%"
        y="348.52588"
@@ -1049,10 +1042,10 @@
          id="flowPara7065" /></flowRoot>    <text
        sodipodi:linespacing="125%"
        y="599.23334"
-       x="149.24741"
+       x="151.24741"
        font-size="11"
        id="text66184"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000122px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;">인터넷</text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000095px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">인터넷</text>
     <path
        inkscape:connector-curvature="0"
        id="path13593"
@@ -1450,7 +1443,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">REST</text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.50000004;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="-27.538048"
        y="590.55298"
        id="text4681-6"
@@ -1458,55 +1451,51 @@
          sodipodi:role="line"
          x="-27.538048"
          y="590.55298"
-         style="font-size:12.50000191px;stroke-width:0.50000004;stroke-miterlimit:4;stroke-dasharray:none"
+         style="font-size:12.50000191px"
          id="tspan4687-8"><tspan
-           style="font-weight:bold;stroke-width:0.50000004;stroke-miterlimit:4;stroke-dasharray:none"
+           style="font-weight:bold"
            id="tspan5838"> API </tspan><tspan
-           id="tspan4676"
-           style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12.50000112px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;stroke-width:0.50000004;stroke-miterlimit:4;stroke-dasharray:none"><tspan
-   style="stroke:#000000;stroke-opacity:1;stroke-width:0.50000004;stroke-miterlimit:4;stroke-dasharray:none"
-   id="tspan4686">키</tspan>를 사용하여 </tspan></tspan><tspan
+           id="tspan4678"
+           style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12.50000112px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%">키를 사용하여 </tspan></tspan><tspan
          sodipodi:role="line"
          x="-27.538048"
          y="606.17798"
-         style="font-size:12.50000191px;stroke-width:0.50000004;stroke-miterlimit:4;stroke-dasharray:none"
+         style="font-size:12.50000191px"
          id="tspan5834"><tspan
-   style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12.50000112px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;stroke-width:0.50000004;stroke-miterlimit:4;stroke-dasharray:none"
-   id="tspan4674">인증된</tspan> REST <tspan
-   style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12.50000112px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;stroke-width:0.50000004;stroke-miterlimit:4;stroke-dasharray:none"
-   id="tspan4678">호출 </tspan></tspan><tspan
+   style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12.50000112px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+   id="tspan4676">인증된 </tspan>REST <tspan
+   style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12.50000112px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+   id="tspan4680">호출 </tspan></tspan><tspan
          sodipodi:role="line"
          x="-27.538048"
          y="621.80298"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.50000095px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.50000004;stroke-miterlimit:4;stroke-dasharray:none"
-         id="tspan11042"> 수행</tspan><tspan
+         style="font-size:12.50000112px;-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+         id="tspan11042">수행 </tspan><tspan
          sodipodi:role="line"
          x="-27.538048"
          y="637.42798"
-         style="font-size:12.50000191px;stroke-width:0.50000004;stroke-miterlimit:4;stroke-dasharray:none"
+         style="font-size:12.50000191px"
          id="tspan5836" /><tspan
          sodipodi:role="line"
          x="-27.538048"
          y="653.05298"
-         style="font-size:12.50000191px;stroke-width:0.50000004;stroke-miterlimit:4;stroke-dasharray:none"
+         style="font-size:12.50000191px"
          id="tspan5832" /></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="231.09512"
-       y="639.03857"
+       y="639.76343"
        id="text4681"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          x="231.09512"
-         y="639.03857"
+         y="639.76343"
          style="font-size:12.50000191px"
-         id="tspan4687"><tspan
-   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.50000095px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:start;writing-mode:lr-tb;text-anchor:start"
-   id="tspan4688">IBM ID</tspan><tspan
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.50000095px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-   id="tspan4682">를 통해 </tspan><tspan
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.50000095px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+         id="tspan4687">IBM ID<tspan
+   style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12.50000112px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+   id="tspan4682">를 통한 </tspan><tspan
+   style="font-weight:normal;-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12.50000112px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
    id="tspan5809">인증</tspan>.</tspan></text>
     <g
        id="g11065"
@@ -1592,5 +1581,20 @@
         </g>
       </g>
     </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.25000095px;line-height:100%;font-family:Arial;-inkscape-font-specification:'Arial, Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       x="278.90833"
+       y="434.47974"
+       id="text266398-3"
+       sodipodi:linespacing="100%"><tspan
+         sodipodi:role="line"
+         id="tspan3626"
+         x="278.90833"
+         y="434.47974">Org: q1bc3a</tspan><tspan
+         sodipodi:role="line"
+         id="tspan3628"
+         x="278.90833"
+         y="445.72974" /></text>
   </g>
 </svg>

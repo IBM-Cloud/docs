@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2016, 2017
 lastupdated: "2016-09-19"
 
 ---
@@ -16,7 +16,7 @@ lastupdated: "2016-09-19"
 
 [Quickstart](https://quickstart.internetofthings.ibmcloud.com/#/) ist eine offene Sandbox, die Sie verwenden können, um für Ihre Geräte schnell eine Verbindung zu {{site.data.keyword.iot_full}} herzustellen. Wenn Ihre Geräte das MQTT-Nachrichtenprotokoll unterstützen, können sie ohne großen Aufwand mit Quickstart verbunden werden.
 
-Beispiele, Anleitungen und Lernprogramme, in denen erklärt wird, wie unterschiedliche Geräte mit dem Quickstart-Service verbunden werden, finden Sie unter [DeveloperWorks Recipes](https://developer.ibm.com/recipes/), zum Beispiel:
+Beispiele, Anleitungen und Lernprogramme, in denen erklärt wird, wie unterschiedliche Geräte mit dem Quickstart-Service verbunden werden, finden Sie unter [DeveloperWorks - Anleitungen](https://developer.ibm.com/recipes/), zum Beispiel:
 
 - [OpenBlocks IoT BX1G](https://developer.ibm.com/recipes/tutorials/openblocks-iot-bx1g-for-iot-foundation-quickstart/)
 - [Reactive Blocks](https://developer.ibm.com/recipes/tutorials/reactive-blocks-and-java-to-iot-foundation-part-1-quickstart/)

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-06-29"
+  years: 2016, 2017
+lastupdated: "2017-01-12"
 
 ---
 
@@ -37,7 +37,7 @@ lastupdated: "2016-06-29"
 
 ### 확장기능 및 서비스 통합
 
-확장기능 및 서비스 통합을 통해 외부 서비스와 코어 서비스의 사용자 정의 확장기능을 모두 {{site.data.keyword.iot_short_notm}}의 인스턴스에 추가할 수 있습니다. {{site.data.keyword.iot_short_notm}}과 통합할 수 있는 외부 서비스에는 디바이스 위치에서 현재 날씨를 찾을 수 있는 Weather Company 날씨 위치 서비스, Jasper SIM 데이터 및 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.ssoshort}}이 포함됩니다. 써드파티 서비스 통합 및 확장기능에 대한 자세한 정보는 [외부 서비스 통합](https://console.ng.bluemix.net/docs/services/IoT/reference/extensions/index.html)을 참조하십시오.
+확장기능 및 서비스 통합을 통해 외부 서비스와 코어 서비스의 사용자 정의 확장기능을 모두 {{site.data.keyword.iot_short_notm}}의 인스턴스에 추가할 수 있습니다. {{site.data.keyword.iot_short_notm}}과 통합할 수 있는 외부 서비스에는 디바이스 위치에서 현재 날씨를 찾을 수 있는 The Weather Company 날씨 위치 서비스, Jasper SIM 데이터 및 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.ssoshort}}이 포함됩니다. 써드파티 서비스 통합 및 확장기능에 대한 자세한 정보는 [외부 서비스 통합](https://console.ng.bluemix.net/docs/services/IoT/reference/extensions/index.html)을 참조하십시오.
 
 ---
 

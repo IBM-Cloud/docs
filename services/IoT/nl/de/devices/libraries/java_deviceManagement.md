@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-08-02"
+  years: 2015, 2016, 2017
+lastupdated: "2016-11-22"
 
 ---
 
@@ -12,27 +12,24 @@ lastupdated: "2016-08-02"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Java-Clientbibliothek - verwaltete Geräte
+# Verwaltete Geräte unter Verwendung von Java entwickeln
 {: #java_deviceManagement}
 
 ##Einführung
 {: #introduction}
 
-Diese Clientbibliothek beschreibt, wie Geräte mit der Java-Clientbibliothek 'ibmiotf' verwendet werden. In [Java-Clientbibliothek - Einführung](../java/javaintro.html) finden Sie Unterstützung für die ersten Schritte mit diesem Modul.
+Ein verwaltetes Gerät ist in {{site.data.keyword.iot_full}} ein Gerät, das Gerätemanagementoperationen wie Firmware-, Positions- und Diagnoseaktualisierungen durchführen kann.
+Unter Verwendung der {{site.data.keyword.iot_short}}-Java™-Clientbibliothek und der bereitgestellten Informationen können Sie Java-Code entwickeln, der Ihre verbundenen Geräte zu verwalteten Geräten macht. Darüber hinaus werden hilfreiche Beispiele zum Entwickeln von Java-Code bereitgestellt, um ein Gerät mit dem Gerätemanagementservice zu verbinden und Gerätemanagementoperationen auszuführen. 
 
-Dieser Abschnitt enthält Informationen zur Vorgehensweise, wie Geräte mithilfe von Java eine Verbindung zum {{site.data.keyword.iot_full}}-Gerätemanagementservice herstellen und Gerätemanagementoperationen wie Firmware-Update, Positionsaktualisierung und Diagnoseaktualisierung ausführen können.
-
-Der Abschnitt 'Geräte' enthält Informationen dazu, wie Geräte mithilfe der Java-Clientbibliothek 'ibmiotf' Ereignisse publizieren und Befehle verarbeiten können.
-
-Der Abschnitt 'Anwendungen' enthält Informationen dazu, wie Anwendungen die Java-Clientbibliothekt 'ibmiotf' für die Interaktion mit Geräten verwenden können.
+Weitere Informationen dazu, wie Ihre Anwendungen die Java-Clientbibliothek für die Interaktion mit Geräten verwenden können, finden Sie in [Java für Anwendungsentwickler](../../applications/libraries/java.html).
 
 ## Gerätemanagement
 {: #device_management}
 
 Die Funktion [Gerätemanagement](../reference/device_mgmt.html) erweitert den {{site.data.keyword.iot_short_notm}}-Service um weitere Funktionen zur Verwaltung von Geräten. Beim Gerätemanagement besteht ein Unterschied zwischen verwalteten und nicht verwalteten Geräten:
 
--   **Verwaltete Geräte** sind als Geräte definiert, die über einen installierten Managementagenten verfügen. Der Managementagent sendet und empfängt auf das Gerät bezogene Metadaten und antwortet auf Gerätemanagementbefehle, die von {{site.data.keyword.iot_short_notm}} stammen.
--   **Nicht verwaltete Geräte** sind sämtliche Geräte, die über keinen Gerätemanagementagenten verfügen. Alle Geräte beginnen in ihrem Lebenszyklus als nicht verwaltete Geräte und werden dadurch zu einem verwalteten Gerät, dass ein Gerätemanagementagent eine Nachricht an {{site.data.keyword.iot_short_notm}} sendet.
+-   **Verwaltete Geräte** sind als Geräte definiert, die über einen installierten Managementagenten verfügen. Der Managementagent sendet und empfängt gerätebezogene Metadaten und antwortet auf Gerätemanagementbefehle, die von {{site.data.keyword.iot_short_notm}} stammen.
+-   **Nicht verwaltete Geräte** sind sämtliche Geräte, die über keinen Gerätemanagementagenten verfügen. Der Lebenszyklus jedes Geräts beginnt als nicht verwaltetes Gerät. Wenn vom Gerätemanagementagenten eine entsprechende Nachricht an {{site.data.keyword.iot_short_notm}} gesendet wird, kann das Gerät zu einem verwalteten Gerät werden.
 
 ## Herstellen der Verbindung zum {{site.data.keyword.iot_short_notm}}-Gerätemanagementservice
 {: #connecting_dm_service}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-05"
+  years: 2015, 2016, 2017
+lastupdated: "2017-02-03"
 
 ---
 
@@ -63,6 +63,19 @@ lastupdated: "2016-09-05"
 	}
 
 ```
+
+### 新增自訂裝置管理套件
+
+使用 {{site.data.keyword.iot_short_notm}} 儀表板，或使用 API，即可新增自訂裝置管理套件。
+
+若要使用 {{site.data.keyword.iot_short_notm}} 儀表板新增自訂裝置管理套件，請執行下列動作：
+
+1. 從 {{site.data.keyword.iot_short_notm}} 儀表板中，按一下導覽列中的**設定**。
+2. 按一下**自訂裝置管理套件**。
+3. 按一下**新增套件**按鈕。
+4. 選取套件檔，然後按一下**開啟**。
+
+若要使用 API 新增自訂裝置管理套件，請參閱 [{{site.data.keyword.iot_short_notm}} API 文件 ![外部鏈結圖示](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}。
 
 ### 延伸規格套件內容
 
@@ -450,3 +463,9 @@ lastupdated: "2016-09-05"
 - 若要檢視特定裝置管理要求的狀態，請執行下列指令：
 
 `curl -XGET -H "Content-Type: application/json" -u "<apiKey>:<apiToken>" https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/requests/<requestId>`
+
+## 裝置管理延伸規格的秘訣
+
+下列秘訣示範處理「裝置管理延伸規格」所需的流程：
+
+- [WIoT Platform 中的裝置管理延伸規格套件 ![外部鏈結圖示](../../../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/device-management-extension-packages-in-wiot-platform/){: new_window} 秘訣提供向 {{site.data.keyword.iot_short}} 登錄受管理裝置的指示，因此裝置可以接收及處理「裝置管理延伸規格」動作。秘訣中的程式碼範例是使用「Python 用戶端程式庫」所撰寫。

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-09-16"
+  years: 2016, 2017
+lastupdated: "2017-01-24"
 
 ---
 
@@ -17,7 +17,13 @@ lastupdated: "2016-09-16"
 Über das Zugriffsdashboard können Sie den Zugriff auf Ihre {{site.data.keyword.iot_full}}-Organisation steuern und verwalten. Sie können Benutzer hinzufügen, indem Sie sie hinzufügen, einladen, registrieren oder importieren. Durch die Zuweisung von Rollen können Sie Ihren Benutzern unterschiedliche Zugriffsebenen zuordnen.
 {:shortdesc}
 
-## Benutzerzugriff
+- [Neue Benutzer hinzufügen](#adding-new-users)
+- [Benutzer bearbeiten](#editing-users)
+- [Benutzerzugriff sperren](#blocking-users)
+- [Benutzer entfernen](#removing-users)
+
+## Neue Benutzer hinzufügen
+{: #adding-new-users}
 
 Über die Registerkarte **Zugriff** im Dashboard können Sie einzelne Mitglieder mithilfe der Funktionen zum Hinzufügen, Einladen oder Registrieren hinzufügen. Sie können auch mithilfe der Importfunktion mehrere Mitglieder gleichzeitig hinzufügen, einladen oder registrieren.
 
@@ -88,3 +94,31 @@ Zum gleichzeitigen Registrieren mehrerer Mitglieder müssen Sie eine CSV-Datei (
 ### CSV-Datei erstellen
 
 Beim Erstellen einer CSV-Datei für den Import von Mitgliedern in Ihre Organisation müssen Sie sicherstellen, dass Sie für die von Ihnen verwendete Methode die erforderlichen Informationen einschließen. Verwenden Sie zum Trennen von Spalten entweder Kommas oder Semikola. Stellen Sie beim Hochladen der CSV-Datei sicher, dass Sie unter **CSV-Einstellungen** das richtige Spaltentrennzeichen auswählen.
+
+## Benutzer bearbeiten
+{: #editing-users}
+
+Beim Bearbeiten eines Benutzer können Sie die Benutzerrolle ändern, ein Ablaufdatum hinzufügen, entfernen oder ändern sowie Zugriff auf eine Organisation hinzufügen oder entfernen.
+
+1. Klicken Sie in Ihrem {{site.data.keyword.iot_short_notm}}-Dashboard links in der Navigationsleiste auf **Mitglieder**.
+2. Klicken Sie auf das Bearbeitungssymbol **** ![Bearbeiten](/docs/images/edit_32.svg) neben dem Benutzer, den Sie bearbeiten möchten.
+3. Nehmen Sie die gewünschten Änderungen für den Benutzer vor.
+4. Klicken Sie auf **Speichern**.
+
+## Benutzerzugriff sperren
+{: #blocking-users}
+
+Sie können den Zugriff von Benutzern auf die {{site.data.keyword.iot_short_notm}}-Organisation sperren, ohne die Zugehörigkeit zu der Organisation zu ändern.
+
+1. Klicken Sie in Ihrem {{site.data.keyword.iot_short_notm}}-Dashboard links in der Navigationsleiste auf **Mitglieder**.
+2. Klicken Sie auf den Schalter neben dem Benutzer, für den der Zugriff auf die {{site.data.keyword.iot_short_notm}}-Organisation gesperrt werden soll.
+
+
+## Benutzer entfernen
+{: #removing-users}
+
+Sie können Benutzer vollständig aus der {{site.data.keyword.iot_short_notm}}-Organisation entfernen. Das Entfernen von Benutzern kann nicht rückgängig gemacht werden, d. h. die betreffenden Benutzer müssen erneut [zur Plattform hinzugefügt werden](#adding-new-users), um den Zugriff wiederherzustellen.
+
+1. Klicken Sie in Ihrem {{site.data.keyword.iot_short_notm}}-Dashboard links in der Navigationsleiste auf **Mitglieder**.
+2. Klicken Sie auf das Löschsymbol**** ![Löschen](/docs/images/trash_32.svg) neben dem Benutzer, den Sie entfernen möchten.
+3. Klicken Sie im Bestätigungsdialog auf **Löschen**.

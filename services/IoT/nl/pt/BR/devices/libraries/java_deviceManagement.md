@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-08-02"
+  years: 2015, 2016, 2017
+lastupdated: "2016-11-22"
 
 ---
 
@@ -12,19 +12,16 @@ lastupdated: "2016-08-02"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Biblioteca do cliente Java - dispositivos gerenciados
+# Desenvolvendo dispositivos gerenciados usando Java
 {: #java_deviceManagement}
 
 ##Introdução
 {: #introduction}
 
-Esta biblioteca do cliente descreve como usar dispositivos com a biblioteca do cliente Java 'ibmiotf'. Para obter ajuda com a introdução a este módulo, consulte [Biblioteca do cliente Java - Introdução](../java/javaintro.html).
+No {{site.data.keyword.iot_full}}, um dispositivo gerenciado é aquele que pode fazer operações de gerenciamento de dispositivo, como atualizações de firmware, de local e de diagnóstico.
+Ao usar a biblioteca do cliente Java™ do {{site.data.keyword.iot_short}} e as informações fornecidas, é possível desenvolver código Java para transformar seus dispositivos conectados em dispositivos gerenciados. Também são fornecidas amostras para ajudá-lo a desenvolver código Java para conectar um dispositivo ao serviço Device Management e executar operações de gerenciamento de dispositivo.
 
-Esta seção contém informações sobre como os dispositivos podem se conectar ao serviço de Gerenciamento de dispositivo do {{site.data.keyword.iot_full}} usando Java e executar operações de gerenciamento de dispositivo, como atualização de firmware, atualização de localização e atualização de diagnósticos.
-
-A seção Dispositivos contém informações sobre como os dispositivos podem publicar eventos e manipular comandos usando a biblioteca do cliente Java ibmiotf.
-
-A seção Aplicativos contém informações sobre como os aplicativos podem usar a Biblioteca do Cliente ibmiotf Java para interagir com dispositivos.
+Para obter mais informações sobre como os aplicativos podem usar a biblioteca do cliente Java para interagir com dispositivos, veja [Java para desenvolvedores de aplicativos](../../applications/libraries/java.html).
 
 ## Device Management
 {: #device_management}

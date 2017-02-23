@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-09-29"
+  years: 2016, 2017
+lastupdated: "2017-02-03"
 
 ---
 
@@ -22,7 +22,7 @@ La conexión de {{site.data.keyword.messagehub_full}} a {{site.data.keyword.iot_
 
 Antes de conectar un {{site.data.keyword.messagehub}} al servicio de {{site.data.keyword.iot_short}}, lleve a cabo las tareas siguientes:
 
-- Configure {{site.data.keyword.messagehub}} en el mismo espacio de {{site.data.keyword.Bluemix_notm}} como su {{site.data.keyword.iot_short_notm}} utilizando el Catálogo de {{site.data.keyword.Bluemix_notm}}. Para obtener más información sobre {{site.data.keyword.messagehub}}, consulte el [Iniciación a {{site.data.keyword.messagehub}}](https://console.{DomainName}/docs/services/MessageHub/index.html){: new_window}.
+- Configure {{site.data.keyword.messagehub}} en el mismo espacio de {{site.data.keyword.Bluemix_notm}} como su {{site.data.keyword.iot_short_notm}} utilizando el Catálogo de {{site.data.keyword.Bluemix_notm}}. Para obtener más información sobre {{site.data.keyword.messagehub}}, consulte [Iniciación a {{site.data.keyword.messagehub}} ![icono de enlace externo](../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/services/MessageHub/index.html){: new_window}.
 
 - Asegúrese de que tenga privilegios de desarrollador en la organización de {{site.data.keyword.Bluemix_notm}} y de que haya iniciado sesión mediante {{site.data.keyword.Bluemix_notm}}. Si no ha iniciado sesión a través de {{site.data.keyword.Bluemix_notm}}, o no tiene privilegios de desarrollador en esta organización de {{site.data.keyword.Bluemix_notm}}, no podrá autorizar el enlace de {{site.data.keyword.messagehub}} y {{site.data.keyword.iot_short_notm}}.
 

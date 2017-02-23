@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-13"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-12"
 
 ---
 
@@ -36,6 +36,8 @@ lastupdated: "2016-09-13"
 4. デバイスはそのロケーション、診断情報、エラー・コードに関する更新を、デバイス管理プロトコルを使用して通信できます。
 5. 大規模なデバイス群の中の機能不良デバイスに対処するために、**管理対象デバイス**操作要求にはオプションのライフタイム・パラメーターがあります。ライフタイム・パラメーターは、デバイスが次回の**管理対象デバイス**要求を行うまでの制限時間 (秒数) です。これを過ぎると、デバイスは休止として分類されて非管理対象デバイスになります。
 6. 廃止されたデバイスは、ダッシュボードまたは REST API を使用して {{site.data.keyword.iot_short_notm}} から削除できます。
+
+レシピ [Connect Raspberry Pi as Managed Device to IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-managed-device-to-ibm-iot-foundation/) を参照してください。
 
 ### 戻りコードの要約
 

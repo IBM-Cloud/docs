@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-09-16"
+  years: 2016, 2017
+lastupdated: "2017-01-10"
 
 ---
 
@@ -67,7 +67,7 @@ Stellen Sie sicher, dass Sie innerhalb der Bluemix-Organisation über Entwickler
 Führen Sie folgende Schritte aus, um für eine {{site.data.keyword.cloudant_short_notm}}-Datenbank eine Verbindung herzustellen:
 
 1. Klicken Sie in Ihrem {{site.data.keyword.iot_short}}-Dashboard in der Navigationsleiste auf **Erweiterungen**.
-2. Klicken Sie auf der Kachel 'Speicherung archivierter Daten' auf **Einrichtung**.
+2. Klicken Sie auf der Kachel für die Archivdatenspeicherung auf **Einrichten**.
 2. Alle verfügbaren {{site.data.keyword.cloudant_short_notm}}-Services, die sich innerhalb desselben Bluemix-Bereichs wie Ihr {{site.data.keyword.iot_short}}-Service befinden, werden im Abschnitt 'Speicherung archivierter Daten konfigurieren' aufgelistet.
 3. Wählen Sie den {{site.data.keyword.cloudant_short_notm}}-Service aus, für den Sie eine Verbindung herstellen wollen.
 4. Wählen Sie die Konfigurationsoptionen für {{site.data.keyword.cloudant_short_notm}} aus:
@@ -89,6 +89,18 @@ Führen Sie folgende Schritte aus, um für eine {{site.data.keyword.cloudant_sho
 6. Klicken Sie im Dialogfeld 'Berechtigung' auf **Bestätigen**.
 
 Ihre Gerätedaten werden nun in Ihrer {{site.data.keyword.cloudant}}-Datenbank gespeichert.
+
+## Anleitungen zur Verwendung der Archivierungsfunktion  
+{: #recipes}
+
+Die folgende Anleitung beschreibt die Vorgehensweise zum Verwenden von {{site.data.keyword.cloudant_short_notm}} als Archivierungsspeicher für {{site.data.keyword.iot_short}}:
+
+- [{{site.data.keyword.cloudant_short_notm}} als Archivdatenspeicher für {{site.data.keyword.iot_short}} konfigurieren](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-parti/) - Diese Anleitung beschreibt das Speichern von Gerätedaten in {{site.data.keyword.cloudant_short_notm}} und erläutert die Vorgehensweise zum Konfigurieren und Speichern von Gerätedaten mit {{site.data.keyword.cloudant_short_notm}} als Archivdatenspeicher.
+
+- [{{site.data.keyword.iot_short}}-Gerätedaten aus {{site.data.keyword.cloudant_short_notm}} abrufen und verarbeiten](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-partii) - Diese Anleitung beschreibt das Ausführen von Abfrage- und Verarbeitungsoperationen für Gerätedaten, die in {{site.data.keyword.cloudant_short_notm}} gespeichert sind.
+
+- [In der Cloudant NoSQL-Datenbank gespeicherte Watson IoT-Gerätedaten darstellen](https://developer.ibm.com/recipes/?post_type=pnext_tutorial&p=27327) - Diese Anleitung zeigt, wie eine Verknüpfung zwischen Kurvendiagrammkarten und dem Archivdatenspeicher eingerichtet wird, um Gerätedaten im Watson IoT Platform-Dashboard anzuzeigen.
+
 
 ## Neue Designdokumente erstellen  
 {: #design_docs}

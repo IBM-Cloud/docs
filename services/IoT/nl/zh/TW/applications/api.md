@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-02-16"
+  years: 2015, 2016, 2017
+lastupdated: "2016-12-01"
 
 ---
 
@@ -35,10 +35,10 @@ lastupdated: "2017-02-16"
 - 裝置事件發佈（測試版）
 - 服務狀態查詢（依組織擷取服務狀態）
 
-## 存取 HTTP REST API
+## 存取 HTTP REST API 文件
 {: #api_link}
 
-若要存取 {{site.data.keyword.iot_short_notm}} HTTP REST API，以及取得如何建置及自訂應用程式的相關資訊，請移至 https://docs.internetofthings.ibmcloud.com/swagger/v0002.html.
+若要存取 {{site.data.keyword.iot_short_notm}} HTTP REST API 文件，以及取得如何建置及自訂應用程式的相關資訊，請移至 https://docs.internetofthings.ibmcloud.com/swagger/v0002.html
 
 唯一支援的 {{site.data.keyword.iot_short_notm}} HTTP REST API 版本是第 2 版。請確定您的 {{site.data.keyword.iot_short_notm}} 解決方案使用的是第 2 版。
 
@@ -60,6 +60,8 @@ lastupdated: "2017-02-16"
 <pre class="pre">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/application/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
 {: codeblock}
 
+**附註：**您也可以指定埠 443（預設 SSL 埠）來進行安全 HTTP API 呼叫。
+
 ### 未受保護的指令 POST 要求
 <pre class="pre">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/application/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">eventId</var></pre>
 {: codeblock}
@@ -70,7 +72,9 @@ lastupdated: "2017-02-16"
 
 如果您要將裝置或應用程式連接至 Quickstart 服務，請將 **orgId** 取代為字串 'quickstart'。
 
-附註：雖然應用程式可以重複使用 HTTP 連線，將事件或指令張貼至不同的裝置，但是授權 HTTP 標頭無法變更。
+**附註：** 
+- 雖然應用程式可以重複使用 HTTP 連線，將事件或指令張貼至不同的裝置，但是無法變更授權 HTTP 標頭。 
+- 您也可以指定埠 443（預設 SSL 埠）來進行安全 HTTP API 呼叫。
 
 ### 鑑別
 

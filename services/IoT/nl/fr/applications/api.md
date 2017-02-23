@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-07"
+  years: 2015, 2016, 2017
+lastupdated: "2016-12-01"
 
 ---
 
@@ -35,10 +35,10 @@ L'API REST HTTP {{site.data.keyword.iot_short_notm}} prend en charge les fonctio
 - Publication d'événement de terminal (bêta)
 - Interrogation de statut de service (extraction des statuts de service par organisation)
 
-## Accès à l'API REST HTTP
+## Accès à la documentation de l'API REST HTTP
 {: #api_link}
 
-Pour accéder à l'API REST HTTP {{site.data.keyword.iot_short_notm}} et obtenir davantage d'informations sur la génération et la personnalisation de vos applications, voir https://docs.internetofthings.ibmcloud.com/swagger/v0002.html.
+Pour accéder à la documentation de l'API REST HTTP {{site.data.keyword.iot_short_notm}} et obtenir davantage d'informations sur la génération et la personnalisation de vos applications, voir https://docs.internetofthings.ibmcloud.com/swagger/v0002.html.
 
 La seule version de l'API REST HTTP {{site.data.keyword.iot_short_notm}} prise en charge est la version 2. Assurez-vous que vos solutions {{site.data.keyword.iot_short_notm}} utilisent bien la version 2.
 
@@ -60,6 +60,8 @@ Outre l'utilisation du protocole de messagerie MQTT, vous pouvez également conf
 <pre class="pre">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/application/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
 {: codeblock}
 
+**Remarque :** Le port 443, port SSL par défaut, peut également être spécifié pour les appels API HTTP sécurisés.
+
 ### Demande de publication (POST) de commande non sécurisée
 <pre class="pre">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/application/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">eventId</var></pre>
 {: codeblock}
@@ -70,7 +72,9 @@ Outre l'utilisation du protocole de messagerie MQTT, vous pouvez également conf
 
 Si vous connectez un terminal ou une application au service Quickstart, remplacez la valeur d'**orgId** par la chaîne 'quickstart'.
 
-Remarque : Si les applications peuvent réutiliser une connexion HTTP pour publier des événements ou des commandes sur différents terminaux, l'en-tête HTTP d'autorisation quant à lui ne peut pas être modifié.
+**Remarques :** 
+- Si les applications peuvent réutiliser une connexion HTTP pour publier des événements ou des commandes sur différents terminaux, l'en-tête HTTP d'autorisation quant à lui ne peut pas être modifié. 
+- Le port 443, port SSL par défaut, peut également être spécifié pour les appels API HTTP sécurisés. 
 
 ### Authentification
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-06-29"
+  years: 2016, 2017
+lastupdated: "2017-01-12"
 
 ---
 
@@ -76,7 +76,7 @@ Com Edge Analytics, você move o processo de acionamento da regra de análise de
 
 ### Conectividade e arquitetura seguras
 
-A arquitetura do {{site.data.keyword.iot_short_notm}} é projetada para evitar que dispositivos personifiquem outros dispositivos, o que mantém a integridade de seus dados do dispositivo. Os dispositivos se conectam ao {{site.data.keyword.iot_short_notm}} usando uma combinação de um ID do cliente e um token de autenticação que somente você conhece. Após os dispositivos serem registrados ou as chaves API (interface de programação de aplicativos) serem geradas, é efetuado salt e hash do token de autenticação para manter a segurança de suas credenciais.
+A arquitetura do {{site.data.keyword.iot_short_notm}} é projetada para evitar que dispositivos personifiquem outros dispositivos, o que mantém a integridade de seus dados do dispositivo. Os dispositivos se conectam ao {{site.data.keyword.iot_short_notm}} usando uma combinação de um identificador de cliente e um token de autenticação que somente você conhece. Após os dispositivos serem registrados ou as chaves API (interface de programação de aplicativos) serem geradas, é efetuado salt e hash do token de autenticação para manter a segurança de suas credenciais.
 
 O complemento Gerenciamento de Risco e Segurança permite aprimorar a segurança do {{site.data.keyword.iot_short_notm}} para assegurar que todos os pontos de conexão entre o servidor e os dispositivos sejam autenticados com credenciais comprovadas. Com este complemento, os certificados e a autenticação Transport Layer Security (TLS) são usados, na parte superior do uso de {{site.data.keyword.iot_short_notm}} de IDs de usuário e tokens. Durante a comunicação entre dispositivos e o servidor, quaisquer dispositivos que não tenham certificados válidos com acesso ao servidor, como configurado no complemento Gerenciamento de Risco e Segurança, têm o acesso negado, mesmo que usem IDs de usuário e senhas válidos.
 

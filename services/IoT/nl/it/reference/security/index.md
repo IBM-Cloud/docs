@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-21"
+  years: 2016, 2017
+lastupdated: "2017-02-03"
 
 ---
 
@@ -15,8 +15,6 @@ lastupdated: "2016-10-21"
 
 # {{site.data.keyword.iot_short_notm}} security
 {: #sec-index}
-Ultimo aggiornamento: 21 ottobre 2016
-{: .last-updated}
 
 Come un servizio ospitato sul cloud {{site.data.keyword.iot_full}} incorpora la sicurezza come aspetto importante della sua architettura.
 {: shortdesc}
@@ -33,7 +31,7 @@ Il seguente documento delle risposte a domande comuni su come i dati della tua o
 
 {{site.data.keyword.iot_short_notm}} viene eseguito nella piattaforma {{site.data.keyword.Bluemix_notm}} e quindi si basa su {{site.data.keyword.Bluemix_notm}} e {{site.data.keyword.BluSoftlayer_full}} per l'accesso e la connettività. La dipendenza da {{site.data.keyword.Bluemix_notm}} e {{site.data.keyword.BluSoftlayer}} rende la sicurezza e l'affidabilità di {{site.data.keyword.Bluemix_notm}} e {{site.data.keyword.BluSoftlayer}} importante per gli utenti di {{site.data.keyword.iot_short_notm}}
 
-Per ulteriori dettagli sulla sicurezza di {{site.data.keyword.Bluemix_notm}}, consulta [{{site.data.keyword.Bluemix_notm}} platform security](https://console.ng.bluemix.net/docs/security/index.html#platform-security).
+Per ulteriori dettagli sulla sicurezza di {{site.data.keyword.Bluemix_notm}}, consulta [Sicurezza della piattaforma {{site.data.keyword.Bluemix_notm}} ![icona link esterno](../../../../icons/launch-glyph.svg)](https://console.ng.bluemix.net/docs/security/index.html#platform-security){: new_window}.
 
 ## {{site.data.keyword.iot_short_notm}} Conformità di sicurezza
 {: #compliance}  
@@ -73,7 +71,7 @@ I dispositivi collegati utilizzando una combinazione di ID client e token di aut
 
 ![immagine](connectivity_platform.svg)
 
-Per ulteriori informazioni sui requisiti della suite chipher e TLS, consulta la sezione [TLS requirements](https://console.ng.bluemix.net/docs/services/IoT/reference/security/connect_devices_apps_gw.html#tls_requirements)  nella documentazione `Application, device, and gateway connections to Watson IoT Platform`.
+Per ulteriori informazioni sui requisiti della suite di cifratura e TLS, consulta la sezione [Requisiti TLS ![icona link esterno](../../../../icons/launch-glyph.svg)](https://console.ng.bluemix.net/docs/services/IoT/reference/security/connect_devices_apps_gw.html#tls_requirements){: new_window} nella documentazione `Connessioni applicazione, dispositivo e gateway a Watson IoT Platform`.
 
 ## Come preveniamo la perdita dei dati tra i dispositivi IoT?
 {: #prevent-leak-devices}
@@ -106,8 +104,8 @@ Lo spazio argomenti in cui operano i dispositivi e le applicazioni ha come ambit
 ## Link correlati
 {: #general}
 * [Introduzione a {{site.data.keyword.iot_short_notm}}](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-* [{{site.data.keyword.Bluemix_notm}} security](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
-* [{{site.data.keyword.Bluemix_notm}} platform security](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
+* [Sicurezza {{site.data.keyword.Bluemix_notm}} ![icona link esterno](../../../../icons/launch-glyph.svg "icona link esterno")](https://console.ng.bluemix.net/docs/security/index.html#security "icona link esterno"){:new_window}
+* [Sicurezza della piattaforma {{site.data.keyword.Bluemix_notm}} ![icona link esterno](../../../../icons/launch-glyph.svg "icona link esterno")](https://console.ng.bluemix.net/docs/security/index.html#platform-security "icona link esterno"){:new_window}
 * [{{site.data.keyword.Bluemix_notm}} compliance](https://console.ng.bluemix.net/docs/security/index.html#compliance){:new_window}
-* [{{site.data.keyword.BluSoftlayer}} security](http://www.softlayer.com/security){:new_window}
-* [{{site.data.keyword.BluSoftlayer}} compliance](http://www.softlayer.com/compliance){:new_window}
+* [{{site.data.keyword.BluSoftlayer}} security ![icona link esterno](../../../../icons/launch-glyph.svg "icona link esterno")](http://www.softlayer.com/security "icona link esterno"){:new_window}
+* [{{site.data.keyword.BluSoftlayer}} compliance ![icona link esterno](../../../../icons/launch-glyph.svg "icona link esterno")](http://www.softlayer.com/compliance "icona link esterno"){:new_window}

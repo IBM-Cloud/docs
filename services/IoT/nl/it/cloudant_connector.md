@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-09-16"
+  years: 2016, 2017
+lastupdated: "2017-01-10"
 
 ---
 
@@ -87,6 +87,18 @@ Completa la seguente procedura per collegarti a {{site.data.keyword.cloudant_sho
 6. Fai clic su **Confirm** nella casella di dialogo dell'autorizzazione.
 
 I tuoi dati del dispositivo sono ora archiviati nel tuo {{site.data.keyword.cloudant}}.
+
+## Ricette sull'utilizzo del servizio storico  
+{: #recipes}
+
+Le seguenti 'ricette' descrivono come utilizzare {{site.data.keyword.cloudant_short_notm}} come archivio storico per {{site.data.keyword.iot_short}}:
+
+- [La ricetta Configure {{site.data.keyword.cloudant_short_notm}} as Historian Data Storage for {{site.data.keyword.iot_short}}](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-parti/) descrive come i dati del dispositivo sono archiviati in {{site.data.keyword.cloudant_short_notm}} e mostra come configurare ed archiviare i dati del dispositivo in {{site.data.keyword.cloudant_short_notm}} come un'archiviazione dati storica.
+
+- [La ricetta Query and Process {{site.data.keyword.iot_short}} Device Data from {{site.data.keyword.cloudant_short_notm}}](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-partii) mostra come eseguire la query e l'elaborazione delle operazioni nei dati del dispositivo archiviati in {{site.data.keyword.cloudant_short_notm}}.
+
+- [La ricetta Visualize Watson IoT Device Data stored in Cloudant NoSQL DB](https://developer.ibm.com/recipes/?post_type=pnext_tutorial&p=27327) mostra come collegare le schede del grafico a linee e l'archiviazione dei dati storica per visualizzare i dati del dispositivo sul dashboard Watson IoT Platform.
+
 
 ## Creazione di nuovi documenti di progettazione  
 {: #design_docs}

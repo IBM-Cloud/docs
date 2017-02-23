@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-09-16"
+  years: 2016, 2017
+lastupdated: "2017-01-24"
 
 ---
 
@@ -17,7 +17,13 @@ lastupdated: "2016-09-16"
 Le tableau de bord d'accès vous permet de contrôler et gérer les accès à votre organisation {{site.data.keyword.iot_full}}. Vous pouvez ajouter des utilisateurs en les ajoutant, en les invitant, en les enregistrant ou en les important. Vous pouvez également accorder différents niveaux d'accès à vos utilisateurs en affectant des rôles.
 {:shortdesc}
 
-## Accès utilisateur
+- [Ajout de nouveaux utilisateurs](#adding-new-users)
+- [Edition d'utilisateurs](#editing-users)
+- [Blocage de l'accès utilisateur](#blocking-users)
+- [Retrait d'utilisateurs](#removing-users)
+
+## Ajout de nouveaux utilisateurs
+{: #adding-new-users}
 
 Sur l'onglet **Accès** du tableau de bord, vous pouvez ajouter des membres individuels en utilisant les fonctions Ajouter, Inviter ou Enregistrer. Vous pouvez également ajouter, inviter ou enregistrer plusieurs membres en même temps à l'aide de la fonction d'importation.
 
@@ -88,3 +94,31 @@ Pour enregistrer plusieurs membres en même temps, vous devez télécharger un f
 ### Construction de votre fichier CSV
 
 Lorsque vous construisez un fichier CSV pour importer des membres dans votre organisation, prenez soin d'inclure les informations requises pour la méthode que vous utilisez. Utilisez des virgules ou des points-virgule pour séparer les colonnes. Lorsque vous téléchargez le fichier CSV, sous **Paramètres CSV**, prenez soin de sélectionner le séparateur de colonnes approprié.
+
+## Edition d'utilisateurs
+{: #editing-users}
+
+Les utilisateurs peuvent être édités pour modifier leur rôle, ajouter, retirer ou modifier une date d'expiration d'accès ou ajouter ou retirer des droits d'accès à l'organisation.
+
+1. Depuis votre tableau de bord {{site.data.keyword.iot_short_notm}}, cliquez sur **Membres** dans la barre de navigation sur la gauche. 
+2. Cliquez sur l'icône **Editer** ![Edit](/docs/images/edit_32.svg) en regard de l'utilisateur que vous souhaitez éditer. 
+3. Apportez les modifications souhaitées à l'utilisateur.
+4. Cliquez sur **Sauvegarder**.
+
+## Blocage de l'accès utilisateur
+{: #blocking-users}
+
+Il est possible de bloquer l'accès des utilisateurs à l'organisation {{site.data.keyword.iot_short_notm}} tout en conservant l'appartenance de ces utilisateurs à l'organisation. 
+
+1. Depuis votre tableau de bord {{site.data.keyword.iot_short_notm}}, cliquez sur **Membres** dans la barre de navigation sur la gauche. 
+2. Cliquez sur le bouton à bascule en regard de l'utilisateur dont vous souhaitez bloquer l'accès à l'organisation {{site.data.keyword.iot_short_notm}}. 
+
+
+## Retrait d'utilisateurs
+{: #removing-users}
+
+Les utilisateurs peuvent être entièrement retirés de l'organisation {{site.data.keyword.iot_short_notm}}. Le retrait d'utilisateurs ne peut pas être annulé, et les utilisateurs doivent être [ajoutés à la plateforme](#adding-new-users) pour restaurer leur accès. 
+
+1. Depuis votre tableau de bord {{site.data.keyword.iot_short_notm}}, cliquez sur **Membres** dans la barre de navigation sur la gauche. 
+2. Cliquez sur l'icône **Supprimer** ![Supprimer](/docs/images/trash_32.svg) en regard de l'utilisateur à retirer. 
+3. Cliquez sur **Supprimer** dans la boîte de dialogue de confirmation.

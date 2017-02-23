@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-08"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-10"
 
 ---
 
@@ -590,3 +590,17 @@ La liste suivante fournit des informations utiles pour le traitement du processu
 
 
 **Important :** Tous les paramètres répertoriés avec l'attribut `mgmt.firmware` doivent être définis en même temps de sorte que s'il existe une observation en cours pour `mgmt.firmware`, un seul message de notification soit envoyé.
+
+## Recettes relatives aux actions sur les terminaux et aux actions sur un microprogramme
+
+Les recettes suivantes décrivent le flux complet requis pour effectuer des actions sur les terminaux et sur un microprogramme. 
+
+- [Device Management in WIoT Platform – Roll Back & Factory Reset](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/)
+
+- [Device Initiated Firmware Update](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-device-initiated-firmware-upgrade/)
+
+- [Platform Initiated Firmware Update](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-platform-initiated-firmware-upgrade/)
+
+- [Platform Initiated Firmware Update with Background Execution](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-platform-initiated-firmware-upgrade/)
+
+- [Firmware Roll Back & Factory Reset](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/)

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-05"
+  years: 2015, 2016, 2017
+lastupdated: "2017-02-03"
 
 ---
 
@@ -23,12 +23,12 @@ Folgende Aktionen für das Gerätemanagement werden standardmäßig von {{site.d
 - Firmware-Download
 - Firmware-Update
 
-## Erweiterungspackages für das Gerätemanagement
+## Erweiterungspakete für das Gerätemanagement
 {: #device_management_ext}
 
-Ein Erweiterungspackage für das Gerätemanagement ist ein JSON-Dokument, das mindestens eine Gerätemanagementaktion definiert. Die Aktionen können auf allen Geräten, die die Aktionen unterstützen, über das {{site.data.keyword.iot_short_notm}}-Dashboard oder die REST-API initiiert werden.
+Ein Erweiterungspaket für das Gerätemanagement ist ein JSON-Dokument, das mindestens eine Gerätemanagementaktion definiert. Die Aktionen können auf allen Geräten, die die Aktionen unterstützen, über das {{site.data.keyword.iot_short_notm}}-Dashboard oder die REST-API initiiert werden.
 
-Das folgende Codebeispiel zeigt das typische Format eines Erweiterungspackages für das Gerätemanagement:
+Das folgende Codebeispiel zeigt das typische Format eines Erweiterungspakets für das Gerätemanagement:
 
 ```
 
@@ -64,9 +64,22 @@ Das folgende Codebeispiel zeigt das typische Format eines Erweiterungspackages f
 
 ```
 
-### Eigenschaften des Erweiterungspackages
+### Angepasstes Gerätemanagementpaket hinzufügen
 
-Ein Erweiterungspackage für das Gerätemanagement enthält folgende Eigenschaften:
+Sie können angepasste Pakete für das Gerätemanagement mit dem {{site.data.keyword.iot_short_notm}}-Dashboard hinzufügen oder mithilfe der API.
+
+Gehen Sie wie folgt vor, um ein angepasstes Paket für das Gerätemanagement mithilfe des {{site.data.keyword.iot_short_notm}}-Dashboards hinzuzufügen:
+
+1. Klicken Sie in Ihrem {{site.data.keyword.iot_short_notm}}-Dashboard in der Navigationsleiste auf **Einstellungen**.
+2. Klicken Sie auf **Angepasste Gerätemanagementpakete**.
+3. Klicken Sie auf die Schaltfläche **Paket hinzufügen**.
+4. Wählen Sie Ihre Paketdatei aus und klicken Sie auf **Öffnen**.
+
+Informationen zum Hinzufügen eines angepassten Gerätemanagementpakets mithilfe der API finden Sie in der Dokumentation für die [{{site.data.keyword.iot_short_notm}}-API ![Symbol für externen Link](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
+
+### Eigenschaften für Erweiterungspakete
+
+Ein Erweiterungspaket für das Gerätemanagement enthält die folgenden Eigenschaften:
 
 |Eigenschaft|Beschreibung|Erforderlich
 |:---|:---|:---|
@@ -102,28 +115,28 @@ Ein Erweiterungspackage für das Gerätemanagement enthält folgende Eigenschaft
 ## REST-APIs
 {: #rest_api}
 
-Verwenden Sie zum Verwalten Ihrer Erweiterungspackages folgende {{site.data.keyword.iot_short_notm}}-REST-API-Befehle:
+Verwenden Sie zum Verwalten Ihrer Erweiterungspakete die folgenden {{site.data.keyword.iot_short_notm}}-REST-API-Befehle:
 
-- Gehen Sie wie folgt vor, um eine Liste aller Erweiterungspackages für das Gerätemanagement abzurufen:
+- Gehen Sie wie folgt vor, um eine Liste aller Erweiterungspakete für das Gerätemanagement abzurufen:
   `GET https://<Organisations-ID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle`
-- Gehen Sie wie folgt vor, um ein neues Erweiterungspackage für das Gerätemanagement zu erstellen:
+- Gehen Sie wie folgt vor, um ein neues Erweiterungspaket für das Gerätemanagement zu erstellen:
   `POST https://<Organisations-ID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle`
-- Gehen Sie wie folgt vor, um ein bestimmtes Erweiterungspackage für das Gerätemanagement abzurufen:
+- Gehen Sie wie folgt vor, um ein bestimmtes Erweiterungspaket für das Gerätemanagement abzurufen:
   `GET https://<Organisations-ID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle/{bundleId}`
-- Gehen Sie wie folgt vor, um ein Erweiterungspackage für das Gerätemanagement zu aktualisieren:
+- Gehen Sie wie folgt vor, um ein Erweiterungspaket für das Gerätemanagement zu aktualisieren:
   `PUT https://<Organisations-ID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle/{bundleId}`
-- Gehen Sie wie folgt vor, um ein Erweiterungspackage für das Gerätemanagement zu löschen:
+- Gehen Sie wie folgt vor, um ein Erweiterungspaket für das Gerätemanagement zu löschen:
   `DELETE https://<Organisations-ID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle/{bundleId}`
 
-Weitere Informationen zu den REST-APIs für Erweiterungspackages für das Gerätemanagement finden Sie in der Dokumentation zur [{{site.data.keyword.iot_short_notm}}-API Version 2](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
+Weitere Informationen zu den REST-APIs für Erweiterungspakete für das Gerätemanagement finden Sie in der Dokumentation zur [{{site.data.keyword.iot_short_notm}}-API Version 2](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 
 ## Unterstützung für angepasste Gerätemanagementaktionen bereitstellen
 {: #supporting_custom_device_management_actions}
 
-Gerätemanagementaktionen, die in Ihren Erweiterungspackages definiert sind, können nur von Geräten initiiert werden, die diese Aktionen unterstützen. Wenn ein Gerät eine Managementanforderung an {{site.data.keyword.iot_short_notm}} publiziert, gibt das Gerät die Aktionstypen an, die von ihm unterstützt werden können.
+Gerätemanagementaktionen, die in Ihren Erweiterungspaketen definiert sind, können nur von Geräten initiiert werden, die diese Aktionen unterstützen. Wenn ein Gerät eine Managementanforderung an {{site.data.keyword.iot_short_notm}} publiziert, gibt das Gerät die Aktionstypen an, die von ihm unterstützt werden können.
 
-Um angepasste Aktionen aus einem Erweiterungspackage anzugeben, muss das Gerät die Bundle-ID für das Erweiterungspackage wie im folgenden Beispiel gezeigt im Objekt 'supports' der Anforderung angeben:
+Um angepasste Aktionen aus einem Erweiterungspaket anzugeben, muss das Gerät die Bundle-ID für das Erweiterungspaket wie im folgenden Beispiel gezeigt im Objekt 'supports' der Anforderung angeben:
 
 ```
 	Ausgehende Nachricht vom Gerät:
@@ -314,7 +327,7 @@ In diesem Beispiel wird das folgende Erweiterungs-JSON-Dokument verwendet:
 	}
 
 ```
-In diesem Erweiterungspackage für das Gerätemanagement sind folgende Aktionen definiert:
+In diesem Erweiterungspaket für das Gerätemanagement sind folgende Aktionen definiert:
 
 - **installPlugin**
 - **enablePlugin**
@@ -450,3 +463,9 @@ Verwenden Sie zum Verwalten Ihrer Geräte folgende API-Anforderungen:
 - Gehen Sie wie folgt vor, um den Status einer bestimmten Gerätemanagementanforderung anzuzeigen:
 
 `curl -XGET -H "Content-Type: application/json" -u "<API-Schlüssel>:<API-Token>" https://<Organisations-ID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/requests/<Anforderungs-ID>`
+
+## Anleitungen für Gerätemanagementerweiterungen
+
+Die folgenden Anleitungen beschreiben den erforderlichen Ablauf für die Handhabung von Gerätemanagementerweiterungen:
+
+- [Erweiterungspakete für das Gerätemanagement in WIoT Platform ![Symbol für externen Link](../../../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/device-management-extension-packages-in-wiot-platform/){: new_window} - Diese Anleitung enthält Anweisungen zum Registrieren eines verwalteten Geräts in {{site.data.keyword.iot_short}}, damit das Gerät Erweiterungsaktionen für das Gerätemanagement empfangen und verarbeiten kann. Die Codebeispiele in der Anleitung wurden unter Verwendung der Python-Clientbibliothek erstellt.

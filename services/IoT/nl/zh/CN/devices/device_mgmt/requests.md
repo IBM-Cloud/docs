@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-08"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-10"
 
 ---
 
@@ -256,6 +256,7 @@ Topic: iotdevice-1/response
 
 1. 在 `iotdm-1/device/update` 主题上发送固件详细信息更新请求。
 更新请求让设备验证请求的固件是否不同于当前安装的固件。如果有差异，那么将 `rc` 参数设置为 `204`，这会转换为状态“`已更改`”。
+  
 以下示例显示了对于先前发送的示例固件下载请求应该会收到的消息，以及检测到差异时应该发送的响应：
 ```
    来自 {{site.data.keyword.iot_short_notm}} 的入局请求：
@@ -589,3 +590,17 @@ Message:
 
 
 **重要信息：**作为 `mgmt.firmware` 属性一部分列出的所有参数都必须同时进行设置，这样当存在 `mgmt.firmware` 的当前观察时，只会发送单个通知消息。
+
+## 关于设备操作和固件操作的诀窍
+
+以下诀窍演示了执行设备和固件操作所需的完整流程。
+
+- [Device Management in WIoT Platform – Roll Back & Factory Reset](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/)
+
+- [Device Initiated Firmware Update](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-device-initiated-firmware-upgrade/)
+
+- [Platform Initiated Firmware Update](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-platform-initiated-firmware-upgrade/)
+
+- [Platform Initiated Firmware Update with Background Execution](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-platform-initiated-firmware-upgrade/)
+
+- [Firmware Roll Back & Factory Reset](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/)

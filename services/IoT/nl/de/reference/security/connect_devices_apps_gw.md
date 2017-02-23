@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-08"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-19"
 
 ---
 
@@ -12,10 +12,10 @@ lastupdated: "2016-09-08"
 {:codeblock:.codeblock}
 {:pre: .pre}
 
-# Verbindungen zu {{site.data.keyword.iot_short_notm}} für Anwendungen, Geräte und Gateways
+# Anwendungen, Geräte und Gateways mit {{site.data.keyword.iot_short_notm}} verbinden
 {: #connect_devices_apps_gw}
 
-Anwendungen, Geräte und Gateways können über das MQTT-Protokoll eine Verbindung zu {{site.data.keyword.iot_full}} herstellen. Geräte können auch über die HTTP-API eine Verbindung zu {{site.data.keyword.iot_short_notm}} herstellen und Ereignisse publizieren.
+Anwendungen, Geräte und Gateways können über das MQTT-Protokoll eine Verbindung zu {{site.data.keyword.iot_full}} herstellen. Sie können auch die HTTP-REST-API verwenden, um Geräte mit {{site.data.keyword.iot_short_notm}} zu verbinden.
 {: shortdesc}
 
 
@@ -35,13 +35,13 @@ Zum Herstellen von Verbindungen zwischen Geräte-, Anwendungs- und Gateway-Clien
 {: codeblock}
 
 **Hinweise**
-- *Organisations-ID* ist die eindeutige Organisations-ID, die Sie beim Registrieren der Serviceinstanz generiert haben.
+- Dabei ist *orgId* die eindeutige Organisations-ID, die beim Registrieren der Serviceinstanz generiert wurde.
 - Wenn Sie für ein Gerät oder eine Anwendung eine Verbindung zum Quickstart-Service herstellen, geben Sie 'quickstart' als Wert für *Organisations-ID* an.
 
 ## Portsicherheit
 {: #client_port_security}
 
-Stellen Sie sicher, dass die erforderlichen Ports offen und für die Kommunikation aktiviert sind.
+Stellen Sie sicher, dass die erforderlichen Ports offen und für die Kommunikation aktiviert sind. Die Ports 8883 und 443 unterstützen sichere Verbindungen über TLS mit dem MQTT- und dem HTTP-Protokoll. Der Port 1883 unterstützt nicht gesicherte Verbindungen mit dem MQTT- und dem HTTP-Protokoll. Informationen zum Verbindungstyp und zu den zugehörigen Portnummern sind in der folgenden Tabelle zusammengefasst:   
 
 |Verbindungstyp |Portnummer|
 |:---|:---|
@@ -49,20 +49,54 @@ Stellen Sie sicher, dass die erforderlichen Ports offen und für die Kommunikati
 |Sicher|8883|
 |Sicher|443|
 
-MQTT-Clients stellen eine Verbindung unter Verwendung von entsprechenden Berechtigungsnachweisen her, wie beispielsweise Authentifizierungstokens für Geräte bzw. API-Schlüssel und Tokens für Anwendungen. Da diese Berechtigungsnachweise mithilfe der MQTT-Nachrichtenübermittlung in einfachem Text an den nicht sicheren Port 1883 gesendet werden, sollten Sie stattdessen stets die sicheren Alternativen 8883 oder 443 verwenden. Die sicheren Ports erzwingen die Verschlüsselung der TLS-Berechtigungsnachweise. Beachten Sie, dass Sie TLS in der Anwendung über die Methode 'tls_set()' in der Python-MQTT-Bibliothek aktivieren müssen. Andernfalls werden die Daten möglicherweise auf unsichere Weise gesendet.
+MQTT wird über TCP und WebSockets unterstützt. MQTT-Clients stellen eine Verbindung unter Verwendung von entsprechenden Berechtigungsnachweisen her, wie beispielsweise Authentifizierungstokens für Geräte bzw. API-Schlüssel und Tokens für Anwendungen. Da diese Berechtigungsnachweise mithilfe der MQTT-Nachrichtenübermittlung in einfachem Text an den nicht sicheren Port 1883 gesendet werden, sollten Sie stattdessen stets die sicheren Alternativen 8883 oder 443 verwenden. Die TLS-Berechtigungsnachweise werden immer verschlüsselt über sichere Ports gesendet. Beachten Sie, dass Sie TLS in der Anwendung mithilfe der Methode 'tls_set()' in der Python-MQTT-Bibliothek aktivieren müssen. Andernfalls werden die Daten möglicherweise auf unsichere Weise gesendet.
 
 Wenn Sie die MQTT-Nachrichtenübermittlung an den Ports 8883 oder 443 schützen, vertrauen neuere Clientbibliotheken automatisch dem Zertifikat, das von {{site.data.keyword.iot_short_notm}} angegeben wird. Wenn dies in Ihrer Clientumgebung nicht der Fall ist, können Sie die Kette des Gesamtzertifikats von [messaging.pem](https://github.com/ibm-messaging/iot-python/blob/master/src/ibmiotf/messaging.pem) herunterladen und verwenden.
 
 
 ## TLS-Anforderungen
 {: #tls_requirements}
+
 Einige TLS-Clientbibliotheken (TLS - Transport Layer Security) unterstützen keine Domänen, die ein Platzhalterzeichen enthalten. Inaktivieren Sie die Zertifikatsüberprüfung, wenn das Ändern von Bibliotheken nicht erfolgreich ist.
 
-{{site.data.keyword.iot_short_notm}} erfordert TLS Version 1.2 und folgende Cipher-Suites:
-- ECDHE-RSA-AES256-GCM-SHA384
-- AES256-GCM-SHA384
-- ECDHE-RSA-AES128-GCM-SHA256
-- AES128-GCM-SHA256
+Ihre TLS-Anforderungen sind davon abhängig, ob Sie eine Verbindung zu {{site.data.keyword.iot_short_notm}} über das MQTT- oder das HTTP-Protokoll herstellen. In den folgenden Abschnitten wird angegeben, welche Cipher-Suites bei Verwendung des Standardserverzertifikats unterstützt werden. Wenn Sie ein eigenes Clientzertifikat verwenden, hängt es vom verwendeten Zertifikat ab, welche Cipher-Suites unterstützt werden.
+
+### TLS-Anforderungen für MQTT-Verbindungen
+
+{{site.data.keyword.iot_short_notm}} erfordert TLS Version 1.2 und die folgenden Cipher-Suites:
+
+
+- TLS_RSA_WITH_AES_128_CBC_SHA
+- TLS_DHE_RSA_WITH_AES_128_CBC_SHA
+- TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+- TLS_RSA_WITH_AES_128_CBC_SHA256
+- TLS_DHE_RSA_WITH_AES_128_CBC_SHA256
+- TLS_RSA_WITH_AES_128_GCM_SHA256
+- TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
+- TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
+- TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+- TLS_RSA_WITH_AES_256_CBC_SHA
+- TLS_DHE_RSA_WITH_AES_256_CBC_SHA
+- TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+- TLS_RSA_WITH_AES_256_CBC_SHA256
+- TLS_DHE_RSA_WITH_AES_256_CBC_SHA256
+- TLS_RSA_WITH_AES_256_GCM_SHA384
+- TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+- TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+- TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+
+### TLS-Anforderungen für HTTP-Verbindungen
+
+Wenn Sie das Standardserverzertifikat verwenden, sind für {{site.data.keyword.iot_short_notm}} TLS Version 1, TLS Version 1.1 oder TLS Version 1.2 und die folgenden Cipher-Suites erforderlich:
+
+
+- TLS_RSA_WITH_AES_128_CBC_SHA
+- TLS_RSA_WITH_AES_128_CBC_SHA256
+- TLS_RSA_WITH_AES_128_GCM_SHA256
+- TLS_RSA_WITH_AES_256_CBC_SHA
+- TLS_RSA_WITH_AES_256_CBC_SHA256
+- TLS_RSA_WITH_AES_256_GCM_SHA384
+
 
 ## MQTT-Clientauthentifizierung
 {: #mqtt_authentication}
@@ -129,7 +163,7 @@ Weitere Informationen finden Sie in [MQTT-Konnektivität für Anwendungen](../..
 Der {{site.data.keyword.iot_short_notm}}-Service unterstützt nur die tokenbasierte Authentifizierung für Geräte; daher hat jedes Gerät nur einen einzigen Benutzernamen, der gültig ist.
 Der Wert `use-token-auth` gibt für den Service an, dass das Authentifizierungstoken für das Gateway oder das Gerät als Kennwort für die MQTT-Verbindung verwendet wird.
 
-Weitere Informationen finden Sie in [MQTT-Konnektivität für Geräte](../../devices/mqtt.html)
+Weitere Informationen finden Sie in [MQTT-Konnektivität für Geräte](../../devices/mqtt.html).
 
 #### Kennwörter
 Wenn der Client die tokenbasierte Authentifizierung verwendet, übergeben Sie das Authentifizierungstoken des Geräts als Kennwort für alle MQTT-Verbindungen.

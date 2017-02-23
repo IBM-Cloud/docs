@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-08"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-10"
 
 ---
 
@@ -31,7 +31,7 @@ Le richieste possono essere avviate utilizzando il seguente esempio API REST:
 
 `POST https://<org>.internetofthings.ibmcloud.com/api/v0002/mgmt/requests`
 
-Per ulteriori informazioni sul corpo di una richiesta di gestione del dispositivo, fai riferimento alla [API documentation](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html).
+Per ulteriori informazioni sul corpo di una richiesta di gestione del dispositivo, fai riferimento alla Documentazione API [](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html).
 
 ## Azioni dispositivo
 {: #device-actions}
@@ -597,3 +597,17 @@ Il seguente elenco fornisce alcune informazioni utili sulla gestione del process
 
 
 **Importante:** tutti i parametri elencati come parte dell'attributo `mgmt.firmware` devono essere impostati contemporaneamente in modo che se è in corso un'osservazione per `mgmt.firmware`, viene inviato un solo messaggio notifica.
+
+## Ricette sulle azioni dispositivo e firmware
+
+Le seguenti ricette mostrano il flusso completo necessario per eseguire le azioni dispositivo e firmware. 
+
+- [Device Management in WIoT Platform – Roll Back & Factory Reset](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/)
+
+- [Device Initiated Firmware Update](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-device-initiated-firmware-upgrade/)
+
+- [Platform Initiated Firmware Update](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-platform-initiated-firmware-upgrade/)
+
+- [Platform Initiated Firmware Update with Background Execution](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-platform-initiated-firmware-upgrade/)
+
+- [Firmware Roll Back & Factory Reset](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/)

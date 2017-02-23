@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-13"
+  years: 2016, 2017
+lastupdated: "2017-02-03"
 
 ---
 
@@ -20,7 +20,7 @@ Pour utiliser les fonctions {{site.data.keyword.iot_short}}, telles que des règ
 
 **Important :** Des schémas sont requis pour utiliser des règles et des actions. Pour plus d'informations, voir [Cloud Analytics](cloud_analytics.html#rules).
 
-**Important :** Les fonctions d'analyse sont fusionnées à partir du service {{site.data.keyword.iotrtinsights_full}}. Si votre organisation {{site.data.keyword.iot_short_notm}} est utilisée comme source de données pour une instance {{site.data.keyword.iotrtinsights_short}} existante, Cloud and Edge Analytics n'est pas activé tant que les instances {{site.data.keyword.iotrtinsights_short}} existantes n'ont pas été migrées. Continuez d'utiliser le tableau de bord {{site.data.keyword.iotrtinsights_short}} pour vos besoins en analyse tant que la migration n'est pas terminée. Pour plus d'informations, voir le [blogue IBM Watson IoT Platform](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} sur IBM developerWorks et vos tableaux de bord de l'instance {{site.data.keyword.iotrtinsights_short}} existante.  
+**Important :** Les fonctions d'analyse sont fusionnées à partir du service {{site.data.keyword.iotrtinsights_full}}. Si votre organisation {{site.data.keyword.iot_short_notm}} est utilisée comme source de données pour une instance {{site.data.keyword.iotrtinsights_short}} existante, Cloud and Edge Analytics n'est pas activé tant que les instances {{site.data.keyword.iotrtinsights_short}} existantes n'ont pas été migrées. Continuez d'utiliser le tableau de bord {{site.data.keyword.iotrtinsights_short}} pour vos besoins en analyse tant que la migration n'est pas terminée. Pour plus d'informations, voir le [blogue IBM Watson IoT Platform![](../../icons/launch-glyph.svg)](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} sur IBM developerWorks et vos tableaux de bord de l'instance {{site.data.keyword.iotrtinsights_short}} existante.   
 
 ## Ajout d'un schéma de terminal
 {: #add_schema}
@@ -67,7 +67,9 @@ Pour ajouter un schéma :
  `Flottant` ou `Entier`.</li>
  <li>Propriété - Identificateur de la propriété virtuelle. Par exemple :  
 `temp_virt`</li>
-    <li>Calcul - Ajoutez un ou plusieurs composants afin de définir une fonction valide. Vous pouvez utiliser des propriétés, des valeurs numériques et des opérateurs mathématiques, tels que +, -, \*, /, (, ), AVG et Z-score, pour construire votre calcul. </br>Le composant AVG permet de calculer la valeur de propriété moyenne sur une période donnée. </br>Le composant Z-score renvoie la différence des unités d'écart type entre le point de données et la valeur moyenne de point de données pour un nombre de points de données ou une période. </br> **Important :** Les composants AVG et Z-score renvoient uniquement des points de données de propriété si les données pour la propriété sélectionnée proviennent d'un terminal connecté à une passerelle sur laquelle un agent Edge Analytics Agent est installé. Pour plus d'informations, voir [Installation de l'agent Edge Analytics Agent](gateways/dashboard.html#edge). De plus, les conditions des règles qui comparent les valeurs d'AVG et de Z-score ne sont pas prises en charge.</li>
+    <li>Calcul - Ajoutez un ou plusieurs composants afin de définir une fonction valide. Vous pouvez utiliser des propriétés, des valeurs numériques et des opérateurs mathématiques, tels que +, -, \*, /, ( et ).  
+    Cliquez sur **Avancé** pour obtenir un ensemble de formules à utiliser avec une série de points de données sur des terminaux Edge. Pour plus d'informations sur les formules avancées, voir [Calculs avancés pour les propriétés virtuelles Edge](im_vir_calculations.html).  
+    **Important :** Les conditions de règle qui comparent des propriétés virtuelles en fonction de formules avancées ne sont pas prises en charge. </li>
     <li>Unité de données - Facultatif. Unité de données de la propriété. Par exemple : `C` ou `Mph`</li>
     <li> Positions décimales (facultatif) - Type Flottant uniquement : nombre de positions décimales à inclure dans les données d'unité.</li>
    </ul>

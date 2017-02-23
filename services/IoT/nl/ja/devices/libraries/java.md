@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2016, 2017
 lastupdated: "2016-10-18"
 
 ---
@@ -15,7 +15,7 @@ lastupdated: "2016-10-18"
 # デバイス開発者用の Java
 {: #java}
 
-Java を使用して、{{site.data.keyword.iot_full}} の組織と対話するデバイスを作成し、カスタマイズできます。デバイス開発を簡単に始められるように、{{site.data.keyword.iot_short_notm}} に対応した Java クライアント・ライブラリー、資料、サンプルが用意されています。
+Java™ を使用して、{{site.data.keyword.iot_full}} の組織と対話するデバイスを作成し、カスタマイズできます。デバイス開発を簡単に始められるように、{{site.data.keyword.iot_short_notm}} に対応した Java クライアント・ライブラリー、資料、サンプルが用意されています。
 {:shortdesc}
 
 ## Java クライアントとリソースのダウンロード
@@ -40,6 +40,7 @@ Java を使用して、{{site.data.keyword.iot_full}} の組織と対話する�
 |`MaxInflightMessages`  |接続の処理中メッセージの最大数を設定します。デフォルト値は 100 です。|
 |`Automatic-Reconnect`  |true か false の値。切断状態になったデバイスを自動的に {{site.data.keyword.iot_short_notm}} に再接続する場合は、これを指定する必要があります。デフォルト値は false です。|
 |`Disconnected-Buffer-Size`|クライアントの切断中にメモリー内に保管できるメッセージの最大数。デフォルト値は 5000 です。|
+|`WebSocket`|true または false 値。{{site.data.keyword.iot_short_notm}} との Web ソケット接続を使用する場合に必要です。デフォルト値は false です。|
 
 **注:** 永続サブスクリプション・モードでデバイスを接続するには、`clean-session` を `false` に設定します。クリーン・セッションについて詳しくは、[MQTT 資料](../../reference/mqtt/index.html#subscription-buffers-and-clean-session)の『サブスクリプション・バッファーとクリーン・セッション』のセクションを参照してください。
 

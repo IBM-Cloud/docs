@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-30"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-25"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -43,7 +43,7 @@ MP$08VKz!8rXwnR-Q*
 
 Ao fazer uma conexão MQTT usando uma chave API (interface de programação de aplicativos), assegure que as diretrizes a seguir sejam aplicadas:
 
-- O ID do cliente MQTT está no formato: a:*orgId*:*appId*
+- O identificador de cliente MQTT está no formato: a:*orgId*:*appId*
 - O nome do usuário MQTT é a chave API (interface de programação de aplicativos) (por exemplo, a-*orgId*-a84ps90Ajs)
 - A senha MQTT é o token de autenticação (por exemplo, MP$08VKz!8rXwnR-Q*)
 
@@ -55,9 +55,12 @@ Um aplicativo poderá publicar eventos como se eles viessem de qualquer disposit
 
 -  Publicar no tópico iot-2/type/*device_type*/id/*device_id*/evt/*event_id*/fmt/*format_string*
 
-Para portabilidade de dados existentes de um dispositivo para o {{site.data.keyword.iot_short_notm}}, é possível criar um aplicativo para processar os dados e publicá-los no {{site.data.keyword.iot_short_notm}}.
+Para enviar dados existentes de um dispositivo para o {{site.data.keyword.iot_short_notm}}, é possível criar um aplicativo para processar os dados e publicá-los no {{site.data.keyword.iot_short_notm}}.
 
 **Importante:** a carga útil da mensagem limita-se a no máximo 131072 bytes.  As mensagens que excederem o limite serão rejeitadas.
+
+### Mensagens retidas
+As organizações do {{site.data.keyword.iot_short_notm}} não estão autorizadas a publicar mensagens MQTT retidas. Se um aplicativo, um gateway ou um dispositivo enviar uma mensagem retida, o serviço {{site.data.keyword.iot_short_notm}} substituirá a sinalização de mensagem retida quando ela estiver configurada como true e processará a mensagem como se a sinalização estivesse configurada como false.
 
 ## Publicando comandos de dispositivo
 {: #publishing_device_commands}
@@ -133,7 +136,12 @@ Ao ajustar a maneira que seus aplicativos se conectam, é possível tornar seus 
 
 O número de clientes necessários para balanceamento de carga e escalabilidade ideais varia por implementação. Para identificar o número ideal de clientes, você precisa realizar um teste de tensão em seu sistema.
 
-Para ativar o balanceamento de carga, assegure que a assinatura do aplicativo seja não durável e que o ID do cliente da assinatura corresponda ao formato a seguir:
+Os aplicativos escaláveis são definidos como assinaturas não duráveis ou assinaturas compartilhadas de durabilidade mista (Beta).
+
+### Assinaturas não duráveis
+{: #shared_sub_non_durable}
+
+Para ativar o balanceamento de carga, assegure-se de que a assinatura do aplicativo seja não durável e que o identificador de cliente na assinatura corresponda ao formato a seguir:
 
 <pre class="pre">A:<var class="keyword varname">orgId</var>:<var class="keyword varname">appId</var></pre>
 {: codeblock}
@@ -143,20 +151,38 @@ Em que:
 -  *orgId* é o ID da organização exclusivo de seis caracteres que foi gerado quando você registrou o serviço.
 -  *appId* é um identificador de sequência exclusivo definido pelo usuário para o cliente. A sequência pode conter apenas caracteres alfanuméricos (a-z, A-Z, 0-9) e os caracteres especiais hífen (-), sublinhado (_) e ponto (.).
 
+
 **Importante:**
-- Apenas assinaturas não duráveis são suportadas para aplicativos escaláveis.
-- O ID do cliente deve iniciar com um caractere **A** maiúsculo para ser designado corretamente como um aplicativo escalável pelo {{site.data.keyword.iot_short_notm}}.
-- Outros clientes que fazem parte do aplicativo escalável devem usar o mesmo ID do cliente.
+- O identificador de cliente deve ser iniciado com um caractere **A** maiúsculo para ser designado corretamente como um aplicativo escalável pelo {{site.data.keyword.iot_short_notm}}.
+- Outros clientes que fazem parte do aplicativo escalável devem usar o mesmo identificador de cliente.
+- O valor clean session deve ser configurado como false (0) para assinaturas não duráveis.
 
+### Assinaturas compartilhadas de durabilidade mista (Beta)
+{: #shared_sub_mixed}
 
-### Como Funciona
+O serviço {{site.data.keyword.iot_short_notm}} amplia a especificação do protocolo de sistema de mensagens MQTT V3.1.1 para suportar uma avaliação beta de assinaturas compartilhadas de durabilidade mista. Assinaturas compartilhadas fornecem recursos de balanceamento de carga para aplicativos. Uma assinatura compartilhada poderá ser necessária se um aplicativo corporativo de backend não puder processar o volume de mensagens que estão sendo publicadas em um espaço de tópico específico. Por exemplo, quando muitos dispositivos publicam mensagens que estão sendo processadas por um único aplicativo, pode ser necessário usar o recurso de balanceamento de carga de uma assinatura compartilhada.
 
-O serviço do {{site.data.keyword.iot_short_notm}} estende a especificação do protocolo de sistema de mensagens MQTT V3.1.1 para suportar assinaturas compartilhadas. Assinaturas compartilhadas fornecem recursos de balanceamento de carga para aplicativos. Uma assinatura compartilhada poderá ser necessária se um aplicativo corporativo de backend não puder processar o volume de mensagens que estão sendo publicadas em um espaço de tópico específico. Por exemplo, quando muitos dispositivos publicam mensagens que estão sendo processadas por um único aplicativo, pode ser necessário usar o recurso de balanceamento de carga de uma assinatura compartilhada. O suporte de assinatura compartilhada do {{site.data.keyword.iot_short_notm}} limita-se apenas a assinaturas não duráveis.
+Para assinaturas compartilhadas de durabilidade mista, assegure-se de que o identificador de cliente na assinatura corresponda ao formato a seguir:
 
+<pre class="pre">A:<var class="keyword varname">org</var>:<var class="keyword varname">appId</var>:<var class="keyword varname">instanceId</var></pre>
+{: codeblock}
 
-**Exemplo**
+Em que:
+- O caractere **A**, *orgId* e *appId* no identificador de cliente são definidos da mesma maneira que para [assinaturas não duráveis](#shared_sub_non_durable).
+- *instanceID* é uma sequência que deve ter no máximo 36 caracteres e pode conter apenas os caracteres a seguir:
+   - Caracteres alfanuméricos (a-z, A-Z, 0-9)
+   - Traços (-)
+   - Sublinhados (_)
+   - Pontos (. )
 
-O cenário a seguir é um exemplo de como um aplicativo escalável funciona no {{site.data.keyword.iot_short_notm}}:
+**Importante:**
+- O suporte para assinaturas compartilhadas de durabilidade mista está disponível apenas como um recurso beta. Não implemente recursos beta em aplicativos de produção.
+- O valor clean session pode ser configurado como true (1) ou false (0) em assinaturas compartilhadas de durabilidade mista.
+- Os clientes que se conectam ao instanceId usam assinaturas diferentes dos clientes que se conectam sem o instanceId. Portanto, se quiser que múltiplos clientes se conectem em uma assinatura compartilhada de durabilidade mista, será necessário especificar o instanceID em todas as assinaturas.
+
+**Cenário de exemplo**
+
+O cenário a seguir é um exemplo de como um aplicativo escalável não durável funciona no {{site.data.keyword.iot_short_notm}}:
 
 - O cliente um se conecta como **A:abc123:myApplication** e assina todos os eventos de dispositivo, o que significa que o cliente um recebe 100% dos eventos de dispositivo publicados.
 - O cliente dois se conecta como **A:abc123:myApplication** e também assina todos os eventos de dispositivo, o que significa que o cliente um e o cliente dois compartilham todos os eventos publicados. A carga de processamento é compartilhada entre o cliente um e o cliente dois.

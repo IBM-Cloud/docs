@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-13"
+  years: 2016, 2017
+lastupdated: "2016-11-29"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2016-10-13"
 {:pre: .pre}
 
 # Protezione del tuo server delle schede personalizzate
-{: #securing_custom_cards
+{: #securing_custom_cards}
 
 I server delle schede personalizzate sono server web standard che ospitano il codice javascript delle schede personalizzate. Per assicurare l'integrità del tuo ambiente {{site.data.keyword.iot_short_notm}} devi proteggere il tuo server delle schede personalizzate per proteggere l'origine della scheda come descritto in questo argomento.
 {:shortdesc}
