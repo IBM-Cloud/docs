@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-30"
+  years: 2016, 2017
+lastupdated: "2017-2-6"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -71,12 +71,11 @@ Prima di iniziare a distribuire e verificare gli smart contract, devi configurar
 **Nota:** l'integrazione blockchain {{site.data.keyword.iot_short_notm}} supporta la connessione ai fabric {{site.data.keyword.blockchainfull_notm}} e Hyperledger. I seguenti esempi si basano sull'utilizzo di {{site.data.keyword.blockchainfull_notm}}.
 
 1. Crea e configura il tuo proprio fabric {{site.data.keyword.blockchainfull_notm}}.
-
 L'integrazione blockchain {{site.data.keyword.iot_short_notm}} richiede il fabric {{site.data.keyword.blockchainfull_notm}} per gestire il ledger blockchain, gli smart contract e l'infrastruttura blockchain generale. L'integrazione blockchain {{site.data.keyword.Bluemix_notm}} utilizza {{site.data.keyword.blockchainfull_notm}} per gestire le catene. Se hai accesso a un ambiente {{site.data.keyword.blockchainfull_notm}} esistente, puoi utilizzarlo. Se non hai accesso, devi creare un'istanza di {{site.data.keyword.blockchainfull_notm}} dal catalogo {{site.data.keyword.Bluemix_notm}} [](https://console.ng.bluemix.net/catalog/services/blockchain/).
 
   1. Dal tuo dashboard dell'account {{site.data.keyword.Bluemix_notm}}, fai clic su **Utilizza servizi o API**.
-  2. Individua la sezione sperimentale del catalogo del servizio e seleziona **Blockchain**.  
-   **Suggerimento:** Fai clic [qui](https://console.ng.bluemix.net/catalog/services/blockchain/) per andare direttamente alla pagina del servizio sperimentale {{site.data.keyword.blockchainfull_notm}}.
+  2. Individua la sezione Servizi applicazione del catalogo del servizio e seleziona **Blockchain**.   
+   **Suggerimento:** Fai clic [qui](https://console.ng.bluemix.net/catalog/services/blockchain/) per andare direttamente alla pagina del servizio {{site.data.keyword.blockchainfull_notm}}.
   3. Nella pagina del servizio {{site.data.keyword.blockchainfull_notm}}, verifica le selezioni di aggiunta del servizio:  
     - Spazio - Se hai più dello spazio `dev` predefinito, verifica che stai distribuendo il servizio nello spazio voluto.
     - Applicazione - Lascia senza bind.
@@ -85,7 +84,7 @@ L'integrazione blockchain {{site.data.keyword.iot_short_notm}} richiede il fabri
   4. Fai clic su **Crea** per distribuire {{site.data.keyword.blockchainfull_notm}} a {{site.data.keyword.Bluemix_notm}}.  
   Il blockchain viene distribuito con due nodi peer iniziali. Puoi aggiungere ulteriori nodi se necessario.
 
-4. Collega {{site.data.keyword.iot_short_notm}} al tuo servizio {{site.data.keyword.blockchainfull_notm}}
+4. Collega {{site.data.keyword.iot_short_notm}} al tuo servizio {{site.data.keyword.blockchainfull_notm}}  
     Per scrivere nel blockchain da {{site.data.keyword.iot_short_notm}}, devi prima collegare i servizi.
      1. In {{site.data.keyword.Bluemix_notm}}, vai al dashboard
      2. Seleziona lo spazio nel quale hai distribuito {{site.data.keyword.blockchainfull_notm}}.
@@ -130,19 +129,49 @@ L'integrazione blockchain {{site.data.keyword.iot_short_notm}} richiede il fabri
      8. Seleziona lo spazio nel quale hai distribuito {{site.data.keyword.iot_short_notm}}.
      9. Fai clic sul tile **{{site.data.keyword.iot_short_notm}}**.
      10. Fai clic su **Launch** per aprire il dashboard {{site.data.keyword.iot_short_notm}}.
-     11. Dal dashboard {{site.data.keyword.iot_short_notm}}, seleziona **Settings > Connections** facendo clic su ![Settings.](images/platform_settings.png "Settings") nella barra laterale del menu.
-     12. Nella sezione Extensions, in Blockchain, fai clic su **Add Fabric Connection**.   
-    I campi della connessione fabric vengono automaticamente visualizzati nella pagina, che sostituisce la tabella.  
-    **Nota:** l'integrazione blockchain deve essere abilitata per aggiungere fabric. Per informazioni, consulta [Blockchain](../../reference/extensions/index.html#blockchain) nell'argomento delle integrazioni dei servizi esterni.
-     14. Immetti le seguenti informazioni:
-      - Nome fabric - Immetti un nome che identifica il fabric in {{site.data.keyword.iot_short_notm}}.
-      - Indirizzo peer - immetti l'indirizzo `api_host`.
-      - Numero di porta - immetti il numero `api_port` o il numero `api_port_tls`. Utilizza la porta 80 se la tua implementazione non utilizza TLS. Utilizza la porta 443 se la tua implementazione utilizza TLS.
-      - Utilizza TLS - TLS (Transport Layer Security) per codificare la comunicazione tra {{site.data.keyword.iot_short_notm}} e il contratto nel fabric. I numeri di porta predefiniti sono impostati dall'istanza {{site.data.keyword.iot_short_notm}} distribuita a cui ti stai collegando.
-      - ID utente - Immetti la stringa `username`.
-      - Segreto utente - Immetti la stringa `secret`.
-     15. Fai clic su **Confirm all changes**
-  La tabella del fabric viene popolata con la nuova connessione fabric.  
+     11. Dal dashboard {{site.data.keyword.iot_short_notm}}, seleziona **Extensions** nella barra laterale del menu.
+     12. Nella pagina **Extensions**, nel tile Blockchain, fai clic su **Setup** o su ![Gear icon](../images/gear.png "Configure") se già disponi di fabric collegati.
+     13. Nella sezione di configurazione del blockchain, fai clic su **Add Fabric** e immetti quindi le informazioni sul fabric.
+    **Nota:** l'integrazione blockchain deve essere abilitata per aggiungere fabric. Per informazioni, consulta [Blockchain](../reference/extensions/index.html#blockchain) nell'argomento delle integrazioni dei servizi esterni.
+    1. Nella scheda **Fabric**, immetti un nome che identifica il fabric in {{site.data.keyword.iot_short_notm}}, quindi fai clic su **Next**.   
+    2. Nella scheda **Peer**, immetti le informazioni sul peer:  
+   <table>
+   <thead>
+   <tr>
+   <th>Parametro</th>
+   <th>Valore</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>Nome</td>
+   <td>Immetti un nome che identifica il peer in {{site.data.keyword.iot_short_notm}}.</td>
+   </tr>
+   <tr>
+   <td>Host</td>
+   <td>L'indirizzo `api_host` per il server di convalida del peer 1</td>
+   </tr>
+   <tr>
+   <td>Porta</td>
+   <td>Il numero `api_port`<ul><li>Utilizza la porta 80 se la tua implementazione non utilizza TLS.</li><li>Utilizza la porta 443 se la tua implementazione utilizza TLS.</li></ul></td>
+   </tr>
+   <tr>
+   <td>ID utente</td>
+   <td>La stringa `username` per l'utente che è stato utilizzato per registrare il smart contract con il blockchain. Puoi anche utilizzare questo ID quando in seguito configurerai a IU semplice.</td>
+   </tr>
+   <tr>
+   <td>Chiave segreta</td>
+   <td>La stringa `secret` per l'utente</td>
+   </tr>
+   <tr>
+   <td>Utilizza TLS</td>
+   <td>Attivo o Non attivo</br>Utilizza TLS (Transport Layer Security) per codificare la comunicazione tra {{site.data.keyword.iot_short_notm}} e il contratto nel fabric. I numeri di porta predefiniti sono impostati dall'istanza {{site.data.keyword.iot_short_notm}} distribuita a cui ti stai collegando.</td>
+   </tr></tbody>
+   </table>  
+    3. Fai clic su **Finish**.
+     3. Nella sezione di configurazione del blockchain, fai clic su **Done** per salvare le informazioni sul fabric.    
+
+La tabella del fabric viene popolata con la nuova connessione fabric.  
 
 ## Crea, verifica e distribuisci i tuoi smart contract
 {: #test_contracts}
@@ -164,13 +193,13 @@ Per sviluppare e verificare il tuo proprio chaincode prima di distribuirlo a {{s
 3. Facoltativo: scarica gli smart contract di esempio forniti da IBM.  
 IBM fornisce alcuni smart contract che puoi scaricare e utilizzare direttamente come sono o modificare per adattarsi agli obiettivi della tua organizzazione.  
 Per scaricare i contratti di esempio:
- 1. Vai nel repository GitHub degli esempi blockchain all'indirizzo: https://github.com/ibm-watson-iot/blockchain-samples/
+ 1. Vai nel repository GitHub degli esempi blockchain all'indirizzo: https://github.com/ibm-watson-iot/blockchain-samples/  
  Le cartelle basic_contract_hyperledger e trade_lane_contract_hyperledger contengono rispettivamente i contratti di base e commerciali.
  3. Utilizza `git clone` nel terminale per copiare il progetto https://github.com/ibm-watson-iot/blockchain-samples.  
  **Suggerimento:** puoi anche scaricare un file compresso del progetto facendo clic su **Download ZIP** dalla pagina del progetto.
 
 6. Crea e verifica un smart contract.   
- Utilizzando l'integrazione blockchain {{site.data.keyword.iot_short_notm}}, puoi caricare gli smart contract nel formato degli eseguibili chaincode per {{site.data.keyword.blockchainfull_notm}} per eseguire la logica di business nei dati del dispositivo scritti nel blockchain. Il chaincode del smart cotract è sviluppato con GoLang.  
+ Utilizzando l'integrazione blockchain {{site.data.keyword.iot_short_notm}}, puoi caricare gli smart contract nel formato degli eseguibili chaincode per {{site.data.keyword.blockchainfull_notm}} per eseguire la logica di business nei dati del dispositivo scritti nel blockchain. Il chaincode del smart contract è sviluppato con GoLang.  
  Il contratto di esempio è incentrato sulla scrittura dei dati del dispositivo IoT per gli eventi di interesse in un blockchain per la condivisione con terze parti o per creare le voci di log resistenti alla manomissione.
 2. Crea gli eseguibili del contratto.  
   Il codice del contratto deve essere convertito in un eseguibile prima che possa essere distribuito al blockchain.  
@@ -190,6 +219,7 @@ Per scaricare i contratti di esempio:
  Dopo il test e la verifica del tuo contratto in locale, puoi distribuirlo al tuo fabric {{site.data.keyword.blockchainfull_notm}} per la verifica.
   1. Carica il tuo contratto nel tuo repository GitHub pubblico.  
   Ad esempio, carica il file sample.go in:
+    
   `http://github.com/{my organization}/{my project}/`
   2. Registra il contratto con il peer a cui ti sei collegato precedentemente.  
   Utilizza un client REST come CURL o Postman per inviare la chiamate di registrazione. Per ulteriori informazioni sulla chiamata di registrazione, consulta [POST registrar API documentation](https://ibmblockchainapi.mybluemix.net/swagger/ui.html?scheme=http&host=127.0.0.1:3000&basepath=/#!/Registrar/registerUser). Utilizza le seguenti informazioni durante la registrazione:
@@ -315,11 +345,11 @@ Per verificare il tuo smart contract, esegui un test end-to-end creando un dispo
 
 3. Nella IU di monitoraggio, verifica che la tua configurazione stia funzionando come previsto.  
 Utilizza i componenti della IU di monitoraggio per interagire con il tuo contratto blockchain:  
- - Operazioni chaincode
+ - Operazioni chaincode  
  Verifica che le operazioni chaincode specifiche del contratto possano essere eseguite come previsto. Ad esempio, per il contratto di base, verifica che eseguendo una funzione `createAsset` venga aggiunto un asset al blockchain.
- - Payload della risposta
+ - Payload della risposta  
  Verifica che le risposte della richiesta peer vengano visualizzate come previsto quando invii le tue richieste REST dalla scheda Chaincode Operations.
- - Blockchain
+ - Blockchain  
 Verifica che i blocchi siano aggiunti alla catena quando trasmetti i dati da un dispositivo collegato o quando utilizzi il componente Chaincode Operations.    
 
 ## Passo successivo

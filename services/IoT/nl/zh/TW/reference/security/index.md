@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-21"
+  years: 2016, 2017
+lastupdated: "2017-02-03"
 
 ---
 
@@ -15,8 +15,6 @@ lastupdated: "2016-10-21"
 
 # {{site.data.keyword.iot_short_notm}} 安全
 {: #sec-index}
-前次更新：2016 年 10 月 21 日
-{: .last-updated}
 
 作為雲端代管的服務，在 {{site.data.keyword.iot_full}} 的架構中，內含的安全性是非常重要的一環。
 {: shortdesc}
@@ -33,7 +31,7 @@ lastupdated: "2016-10-21"
 
 {{site.data.keyword.iot_short_notm}} 在 {{site.data.keyword.Bluemix_notm}} 平台內執行，因此需同時仰賴 {{site.data.keyword.Bluemix_notm}} 及 {{site.data.keyword.BluSoftlayer_full}} 來進行存取及連線。對 {{site.data.keyword.Bluemix_notm}} 及 {{site.data.keyword.BluSoftlayer}} 的依賴，使得 {{site.data.keyword.Bluemix_notm}} 及 {{site.data.keyword.BluSoftlayer}} 的安全和可靠性對 {{site.data.keyword.iot_short_notm}} 使用者而言非常重要。
 
-如需 {{site.data.keyword.Bluemix_notm}} 安全的詳細資料，請參閱 [{{site.data.keyword.Bluemix_notm}} 平台安全](https://console.ng.bluemix.net/docs/security/index.html#platform-security)。
+如需 {{site.data.keyword.Bluemix_notm}} 安全的詳細資料，請參閱 [{{site.data.keyword.Bluemix_notm}} 平台安全 ![外部鏈結圖示](../../../../icons/launch-glyph.svg)](https://console.ng.bluemix.net/docs/security/index.html#platform-security){: new_window}。
 
 ## {{site.data.keyword.iot_short_notm}} 安全規範
 {: #compliance}  
@@ -73,7 +71,7 @@ lastupdated: "2016-10-21"
 
 ![影像](connectivity_platform.svg)
 
-如需 TLS 及密碼組合需求的相關資訊，請參閱「Watson IoT Platform 的應用程式、裝置及閘道連線」文件中的[傳輸層安全 (TLS) 需求](https://console.ng.bluemix.net/docs/services/IoT/reference/security/connect_devices_apps_gw.html#tls_requirements)小節。
+如需傳輸層安全 (TLS) 及密碼組合需求的相關資訊，請參閱 `Watson IoT Platform 的應用程式、裝置及閘道連線`文件中的[傳輸層安全 (TLS) 需求 ![外部鏈結圖示](../../../../icons/launch-glyph.svg)](https://console.ng.bluemix.net/docs/services/IoT/reference/security/connect_devices_apps_gw.html#tls_requirements){: new_window} 小節。
 
 ## 我們如何防止 IoT 裝置之間的資料洩漏？
 {: #prevent-leak-devices}
@@ -106,8 +104,8 @@ lastupdated: "2016-10-21"
 ## 相關鏈結
 {: #general}
 * [開始使用 {{site.data.keyword.iot_short_notm}}](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-* [{{site.data.keyword.Bluemix_notm}} 安全](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
-* [{{site.data.keyword.Bluemix_notm}} 平台安全](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
+* [{{site.data.keyword.Bluemix_notm}} 安全 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.ng.bluemix.net/docs/security/index.html#security "外部鏈結圖示"){:new_window}
+* [{{site.data.keyword.Bluemix_notm}} 平台安全 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.ng.bluemix.net/docs/security/index.html#platform-security "外部鏈結圖示"){:new_window}
 * [{{site.data.keyword.Bluemix_notm}} 規範](https://console.ng.bluemix.net/docs/security/index.html#compliance){:new_window}
-* [{{site.data.keyword.BluSoftlayer}} 安全](http://www.softlayer.com/security){:new_window}
-* [{{site.data.keyword.BluSoftlayer}} 規範](http://www.softlayer.com/compliance){:new_window}
+* [{{site.data.keyword.BluSoftlayer}} 安全 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](http://www.softlayer.com/security "外部鏈結圖示"){:new_window}
+* [{{site.data.keyword.BluSoftlayer}} 規範 ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")](http://www.softlayer.com/compliance "外部鏈結圖示"){:new_window}

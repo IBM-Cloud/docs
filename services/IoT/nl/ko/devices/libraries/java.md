@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2016, 2017
 lastupdated: "2016-10-18"
 
 ---
@@ -15,7 +15,7 @@ lastupdated: "2016-10-18"
 # 디바이스 개발자용 Java
 {: #java}
 
-Java를 사용하여 {{site.data.keyword.iot_full}}에서 조직과 상호작용하는 디바이스를 빌드하고 사용자 정의할 수 있습니다. 디바이스 개발을 시작하는 데 도움이 되도록 {{site.data.keyword.iot_short_notm}}의 Java 클라이언트 라이브러리, 문서 및 예가 제공됩니다.
+Java™를 사용하여 {{site.data.keyword.iot_full}}에서 조직과 상호작용하는 디바이스를 빌드하고 사용자 정의할 수 있습니다. 디바이스 개발을 시작하는 데 도움이 되도록 {{site.data.keyword.iot_short_notm}}의 Java 클라이언트 라이브러리, 문서 및 예가 제공됩니다.
 {:shortdesc}
 
 ## Java 클라이언트 및 자원 다운로드
@@ -40,6 +40,7 @@ Java를 사용하여 {{site.data.keyword.iot_full}}에서 조직과 상호작용
 |`MaxInflightMessages`  |연결을 위한 인플라이트 메시지의 최대 수를 설정합니다. 기본값은 100입니다.|
 |`Automatic-Reconnect`  |연결이 끊긴 상태일 때 {{site.data.keyword.iot_short_notm}}에 디바이스를 자동으로 다시 연결하려는 경우에 필요한 true 또는 false 값입니다. 기본값은 false입니다.|
 |`Disconnected-Buffer-Size`|클라이언트가 연결이 끊겼을 때 메모리에 저장할 수 있는 최대 메시지 수입니다. 기본값은 5000입니다.|
+|`WebSocket`|{{site.data.keyword.iot_short_notm}}에서 WebSocket 연결을 사용하고자 할 때 필요한 true 또는 false 값입니다. 기본값은 false입니다.|
 
 **참고:** 지속적 구독 모드에서 디바이스를 연결하려면 `clean-session`을 `false`로 설정하십시오. 정리 세션에 대한 자세한 정보는 [MQTT 문서](../../reference/mqtt/index.html#subscription-buffers-and-clean-session)의 '구독 버퍼 및 정리 세션' 섹션을 참조하십시오.
 
@@ -405,4 +406,4 @@ public class RegisteredDeviceCommandSubscribe {
 ## 샘플
 {: #samples}
 
-{{site.data.keyword.iot_short_notm}} Java 클라이언트 라이브러리를 사용하여 개발한 디바이스 및 디바이스 관리 샘플 목록은 [iot-device-samples GitHub 저장소](https://github.com/ibm-messaging/iot-device-samples/tree/master/java)를 참조하십시오.
+{{site.data.keyword.iot_short_notm}} Java 클라이언트 라이브러리를 사용하여 개발된 디바이스 관리 샘플 및 디바이스의 목록은 [iot-device-samples GitHub 저장소](https://github.com/ibm-messaging/iot-device-samples/tree/master/java)를 참조하십시오. 

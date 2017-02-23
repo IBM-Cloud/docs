@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-27"
+  years: 2016, 2017
+lastupdated: "2017-01-10"
 
 ---
 
@@ -24,8 +24,6 @@ lastupdated: "2016-10-27"
 下圖說明 {{site.data.keyword.iot_full}} 邊緣分析環境的一般架構。
 ![具有邊緣分析架構的 IBM Watson IoT Platform](images/architecture_platform_edge.svg "具有邊緣分析架構的 IBM Watson IoT Platform")
 
-**重要事項：**合併的分析特性來自 {{site.data.keyword.iotrtinsights_full}} 服務。如果您的 {{site.data.keyword.iot_short_notm}} 組織用來作為現有 {{site.data.keyword.iotrtinsights_short}} 實例的資料來源，則除非移轉現有 {{site.data.keyword.iotrtinsights_short}} 實例，否則不會啟用「雲端和邊緣分析」。在移轉完成之前，請繼續使用 {{site.data.keyword.iotrtinsights_short}} 儀表板來因應分析的需求。如需相關資訊，請參閱 IBM developerWorks 上的 [IBM Watson IoT Platform 部落格](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window}，以及您的現有 {{site.data.keyword.iotrtinsights_short}} 實例儀表板。  
-
 ## 開始之前
 {: #byb}
 
@@ -33,6 +31,10 @@ lastupdated: "2016-10-27"
 - 確定您的閘道已連接至 {{site.data.keyword.iot_short}}，而且裝置資料正在傳送中。如需相關資訊，請參閱[連接閘道](gateways/dashboard.html)。
 - 在您的閘道上安裝「邊緣分析代理程式 (EAA)」。如需相關資訊，請參閱[安裝邊緣分析代理程式](gateways/dashboard.html#edge)。</br> **提示：**啟用 EAA 功能的閘道會以閘道裝置訊息的形式提供 EAA 診斷資料。如需相關資訊，請參閱[邊緣分析代理程式診斷度量](#eaa_metrics)。
 - 確定您要在規則中用來作為條件的裝置內容，已對映至綱目。如需相關資訊，請參閱[連接裝置](iotplatform_task.html)及[建立綱目](im_schemas.html)。
+- 檢閱「邊緣分析」秘訣  
+在「秘訣」入口網站中，有一些秘訣會說明執行「IBM 邊緣分析」所需的步驟。秘訣清楚地說明如何在以 Apache Edgent 為建置基礎的裝置上安裝及配置「IBM 邊緣分析代理程式」，來執行接近 IoT 資料來源的分析。
+ - [開始在 IBM Watson IoT Platform 中使用邊緣分析](https://developer.ibm.com/recipes/tutorials/getting-started-with-edge-analytics-in-watson-iot-platform/)秘訣是此系列的開頭。此秘訣說明如何在「筆記型電腦系統及 Raspberry Pi 3 裝置」上設定 Cisco DSA Platform、安裝及配置「IBM 邊緣分析代理程式」來連接至 {{site.data.keyword.iot_short}}、安裝「系統 DS 鏈結」並將它配置成連接至 {{site.data.keyword.iot_short}} 上的「邊緣閘道」以作為連接的裝置、在「邊緣閘道」上定義及啟動「邊緣規則」，以及從 {{site.data.keyword.iot_short}} 管理「邊緣規則」。
+ - 若要說明「邊緣分析」的進階使用，[在 IBM Watson IoT Platform 中使用邊緣分析處理警示及裝置動作](https://developer.ibm.com/recipes/tutorials/handling-alerts-and-device-actions-with-edge-analytics-in-ibm-watson-iot-platform/)秘訣示範如何建置自己的「DS 鏈結」，以將資料從連接的 Arduino Uno 裝置傳送至 Raspberry Pi 3 裝置。此秘訣也會示範資料過濾，以及將本端裝置動作處理為「邊緣規則」警示。
 
 ## 管理邊緣規則及動作  
 {: #managing_rules}
@@ -61,7 +63,10 @@ lastupdated: "2016-10-27"
 若要建立規則，請執行下列動作：
 1. 在 {{site.data.keyword.iot_short}} 儀表板中，移至**規則**。
 2. 按一下**建立邊緣規則**、指定規則名稱、提供說明、選取要套用規則的邊緣裝置類型，然後按**下一步**。  
-3. 設定規則邏輯。新增一個以上的 IF 條件，用來作為規則的觸發程式。您可以在平行列中新增條件，將它們套用為 OR 條件，或者在循序欄中新增條件，將它們套用為 AND 條件。
+3. 設定規則邏輯。  
+新增一個以上的 IF 條件，用來作為規則的觸發程式。  
+您可以在平行列中新增條件，將它們套用為 OR 條件，或者在循序欄中新增條件，將它們套用為 AND 條件。
+  
 **附註：**若要能夠選取一個裝置內容作為規則的輸入，內容必須對映至綱目。如需相關資訊，請參閱[建立綱目](im_schemas.html)。  
   
 
@@ -74,7 +79,9 @@ lastupdated: "2016-10-27"
 在達到臨界值的組合時，可能會觸發較複雜的規則：  
 `temp>60 AND capacity>50`   
 
-4. 配置規則的條件式觸發需求。若要控制一段時間針對規則所觸發的警示及動作數目，您可以配置規則的條件式觸發需求。  
+4. 配置規則的條件式觸發需求。  
+若要控制一段時間針對規則所觸發的警示及動作數目，您可以配置規則的條件式觸發需求。  
+  
 **重要事項：**條件式觸發會對規則中的任何條件採取動作。例如，如果規則有五個使用 OR 設定的不同平行條件，則每一個符合的條件都會列入條件式觸發計數的計算中。若要設定規則的條件式觸發，請執行下列動作：
  1. 在規則編輯器中，按一下預設的**每次符合條件時觸發**鏈結，以開啟「設定頻率需求」對話框。
  2. 選取並配置您要在規則中使用的條件式觸發程式。
@@ -83,8 +90,11 @@ lastupdated: "2016-10-27"
  <li>在 M 個*時間單位*內符合條件 N 次時觸發</li>
  </ul>  
 如需條件式觸發程式的其他詳細說明，請參閱雲端分析一節中的[條件式規則觸發](cloud_analytics.html#conditional "條件式觸發概觀")。
-5. 建立或選取在符合規則條件時發生的一個以上動作。如需邊緣動作的相關資訊，請參閱[建立邊緣動作](#edge_actions "建立邊緣動作")。範例：動作可以是將裝置資料傳送至雲端，或將警示寫入至本端檔案。
-3. **選用項目：**選取規則的警示優先順序。優先順序是用來分類**規則型分析**板中所顯示的警示。預設優先順序是「低」。
+5. 建立或選取在符合規則條件時發生的一個以上動作。  
+如需邊緣動作的相關資訊，請參閱[建立邊緣動作](#edge_actions "建立邊緣動作")。   
+範例：動作可以是將裝置資料傳送至雲端，或將警示寫入至本端檔案。
+3. **選用項目：**選取規則的警示優先順序。  
+優先順序是用來分類**規則型分析**板中所顯示的警示。預設優先順序是「低」。
 6. 當規則符合您的要求時，請按一下**儲存**。
 
 即會建立您的規則，並新增至瀏覽儀表板。您現在可以從開啟的**邊緣規則閘道**板[啟動](#manage)規則。
@@ -98,7 +108,8 @@ lastupdated: "2016-10-27"
 若要在「動作」標籤上建立動作，請執行下列動作：
 1. 在 {{site.data.keyword.iot_short}} 儀表板中，移至**規則**。
 2. 在「規則」儀表板中，選取**動作**標籤。
-2. 按一下**建立動作**、指定動作名稱及說明，並選取動作類型，然後按**下一步**。邊緣分析支援兩個動作類型：
+2. 按一下**建立動作**、指定動作名稱及說明，並選取動作類型，然後按**下一步**。  
+邊緣分析支援兩個動作類型：
 <dl>
 <dt>將事件轉遞至雲端</dt>  
 <dd>裝置事件會傳送至 {{site.data.keyword.iot_short}}，在這裡它可以用於板及卡片中，以及符合雲端分析規則。如需相關資訊，請參閱[與雲端分析整合](#integrate_with_cloud_analytics)。    
@@ -140,8 +151,10 @@ lastupdated: "2016-10-27"
 對於要觸發動作的規則，您必須先在一個以上的閘道上啟動它。您可以使用**邊緣規則閘道**板，來啟動、取消啟動、更新及移除閘道上的邊緣規則。
 
 若要啟動邊緣規則，請執行下列動作：
-1. 從「規則」儀表板中，對您要管理的邊緣規則按一下**管理規則**按鈕。在開啟的**邊緣規則閘道**板中，您會看到一個清單，列出所有已連接之啟用 EAA 功能的閘道。未上傳及啟動規則之閘道的規則狀態為*無*。
-2. 尋找您要在其上啟動規則的閘道，然後在「選取作業」直欄中，選取功能表中的**啟動**。邊緣規則即會上傳至閘道。當上傳完成且規則作用中時，「規則」狀態會變更為**作用中**。  
+1. 從「規則」儀表板中，對您要管理的邊緣規則按一下**管理規則**按鈕。  
+在開啟的**邊緣規則閘道**板中，您會看到一個清單，列出所有已連接之啟用 EAA 功能的閘道。未上傳及啟動規則之閘道的規則狀態為*無*。
+2. 尋找您要在其上啟動規則的閘道，然後在「選取作業」直欄中，選取功能表中的**啟動**。  
+邊緣規則即會上傳至閘道。當上傳完成且規則作用中時，「規則」狀態會變更為**作用中**。  
 
 現在規則作用在閘道上，因此當符合規則條件時，配置的動作即會觸發。
 
@@ -200,7 +213,7 @@ lastupdated: "2016-10-27"
 `MsgRateReduce` | 送入訊息速率與送出訊息速率之間的百分比差異。</br>下列公式用於計算：`(msgInRate - msgOutRate) / msgInRate`
 `BytesRateReduce` | 送入訊息位元組與送出訊息位元組之間的百分比差異。</br>下列公式用於計算：`(bytesInRate - bytesOutRate) / bytesInRate`
 `SystemLoad` | 執行 EAA 之系統的現行系統負載。**附註：**只有在 EAA 執行所在系統上可以使用 `mpstat` 指令時，才會傳送 CPU 速率。否則，傳送前 1 分鐘的系統負載平均值。</br>「系統負載平均值是下列兩個數目的總和：為了可用處理器而置入佇列之可執行實體的數目，以及一段時間內在平均可用處理器上執行之可執行實體的數目。計算負載平均值的方式是作業系統特有的，但通常是衰减的時間相依平均值。如果沒有可用的負載平均值，則會傳回負值。」- javadoc for *ManagementFactory.getOperatingSystemMXBean*。
- `FreeMemory` | 執行 EAA 之「Java 虛擬機器 (JVM)」的可用記憶體位元組數。
+ `FreeMemory` | 執行 EAA 之「Java™ 虛擬機器 (JVM)」的可用記憶體位元組數。
  `MemoryUsed` | EAA 所使用之 JVM 記憶體的位元組數。
 `InQueueSize` | 置入佇列以供 EAA 處理之訊息的數目。
 `RuleNumber` | 規則引擎核心中已定義的規則數目。

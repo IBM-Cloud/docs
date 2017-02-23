@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-13"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-12"
 
 ---
 
@@ -36,6 +36,8 @@ Il protocollo di gestione del dispositivo è creato con il protocollo di messagg
 4. Un dispositivo può comunicare gli aggiornamenti sulla sua ubicazione, le informazioni di diagnostica e i codici di errore utilizzando il protocollo di gestione del dispositivo.
 5. Per gestire i dispositivi inattivi in un grande gruppo di dispositivi, la richiesta dell'operazione **dispositivi gestiti** include un parametro sul ciclo di vita facoltativo. Un parametro del ciclo di vita è il numero di secondi in cui il dispositivo deve effettuare un'altra richiesta **dispositivi gestiti** per evitare di essere classificato come inattivo e diventare un dispositivo non gestito.
 6. Quando un dispositivo viene ritirato, puoi rimuoverlo da {{site.data.keyword.iot_short_notm}} utilizzando il dashboard o l'API REST.
+
+Fai riferimento alla ricetta [Connect Raspberry Pi as Managed Device to IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-managed-device-to-ibm-iot-foundation/).
 
 ### Riepilogo codice di ritorno
 

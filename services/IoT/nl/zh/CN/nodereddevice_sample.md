@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2016, 2017
 lastupdated: "2016-08-26"
 
 ---
@@ -27,7 +27,8 @@ Node-RED 是一款以全新且有趣的方法，将硬件设备、API 和在线�
     1. 登录到 {{site.data.keyword.Bluemix_notm}}，网址为：https://console.ng.bluemix.net
     2. 选择**目录**选项卡。
     3. 找到服务目录的“样板”部分并单击 **Node-RED 入门模板社区 BETA**。**提示：**单击[此处](https://console.ng.bluemix.net/catalog/starters/node-red-starter/)可直接转至 Node-RED 入门模板页面。
-    4. 在 Node-RED 入门模板页面上，选择您要部署 Node-RED 的空间，验证“创建应用程序”的选项，并单击**创建**以将 Node-RED 添加到 Bluemix 组织。例如：  
+    4. 在 Node-RED 入门模板页面上，选择您要部署 Node-RED 的空间，验证“创建应用程序”的选项，并单击**创建**以将 Node-RED 添加到 Bluemix 组织。  
+例如：  
      - 空间：dev
      - 名称：myDevice
      - 主机：myDevice
@@ -36,14 +37,15 @@ Node-RED 是一款以全新且有趣的方法，将硬件设备、API 和在线�
     **注：**编译打包过程可能会花费几分钟。
 
     3. 单击“路由”链接以打开 Node-RED。
-    示例：`http://simulatedDevice.mybluemix.net`
+      
+示例：`http://simulatedDevice.mybluemix.net`
     4. 单击**转至 Node-RED 流程编辑器**，以打开编辑器。
     5. 复制您在本文档的 [Node-RED 节点流数据](#flow_data)部分中找到的 Node-RED 流数据。
     5. 在 Node-RED 流程编辑器中，单击右上角的菜单，并选择**导入 > 剪贴板**。  
     6. 将剪贴板粘贴到导入节点输入字段并单击**确定**。
     设备模拟器流程已导入流程编辑器。
 
-2. 向 {{site.data.keyword.iot_short_notm}} 注册您的设备
+2. 向 {{site.data.keyword.iot_short_notm}}   注册您的设备
 执行以下步骤以连接 Node-RED 样本设备：
  1. 在 {{site.data.keyword.Bluemix_notm}} 中，转至“仪表板”
  2. 选择在其中部署了 {{site.data.keyword.iot_short_notm}} 的空间。
@@ -91,9 +93,11 @@ Node-RED 是一款以全新且有趣的方法，将硬件设备、API 和在线�
 4. 验证设备连接
  1. 在另一个浏览器选项卡或窗口中，打开 {{site.data.keyword.iot_short_notm}} 仪表板。
  2. 选择**设备**并单击 **Device001** 或您添加的设备的名称（如果不同）。
- 此时将打开设备信息页面。通过此视图，您可以查看设备的连接状态。在此阶段，设备应该会显示为已断开连接。   
+   
+此时将打开设备信息页面。通过此视图，您可以查看设备的连接状态。在此阶段，设备应该会显示为已断开连接。   
  3. 回到 Node-RED 流程编辑器，单击“插入”节点上的按钮，以生成资产有效内容。
- 有效内容包含以下数据点：  
+   
+有效内容包含以下数据点：  
  ```
  {"d":
   { "name":"My Device",

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-06-29"
+  years: 2016, 2017
+lastupdated: "2017-01-12"
 
 ---
 
@@ -44,7 +44,7 @@ Les extensions et l'intégration de services permettent d'ajouter des services e
 ## Gestion des informations
 {: #information_management}
 
-La fonctionnalité de gestion des informations de {{site.data.keyword.iot_short_notm}} contrôle les données envoyées par les terminaux une fois qu'elles ont atteint le service {{site.data.keyword.iot_short_notm}}. La fonctinnalité de gestion des informations inclut la transformation et le stockage de données.
+La fonctionnalité de gestion des informations de {{site.data.keyword.iot_short_notm}} contrôle les données envoyées par les terminaux une fois qu'elles ont atteint le service {{site.data.keyword.iot_short_notm}}. La fonctionnalité de gestion des informations inclut la transformation et le stockage de données.
 
 ### Dernier cache d'événement de terminal
 

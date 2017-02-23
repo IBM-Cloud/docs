@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-26"
+  years: 2016, 2017
+lastupdated: "2017-02-23"
 
 ---
 
@@ -45,7 +45,7 @@ exemplo:
     6. Cole a área de transferência no campo de entrada de importação de nós e clique em **Ok**.
     O fluxo do simulador de dispositivo é importado para o editor de fluxo.
 
-2. Registre seu dispositivo com o {{site.data.keyword.iot_short_notm}}
+2. Registre seu dispositivo com o {{site.data.keyword.iot_short_notm}}  
 Siga estas etapas para conectar o dispositivo de amostra do Node-RED:
  1. No {{site.data.keyword.Bluemix_notm}}, acesse Painel
  2. Selecione o espaço no qual você implementou o {{site.data.keyword.iot_short_notm}}.
@@ -83,7 +83,7 @@ Siga estas etapas para conectar o dispositivo de amostra do Node-RED:
  {organization_ID}.messaging.internetofthings.ibmcloud.com
  ```  
  Em que {organization_ID} é o *ID da organização* anteriormente salvo.
- 6. Atualize o ID do cliente com seu o ID da organização, tipo de dispositivo e ID do dispositivo:
+ 6. Atualize o identificador de cliente com seu ID da organização, tipo de dispositivo e ID do dispositivo:
  ```
  d:{organization_ID}:{device_type}:{device_ID}
    ```  

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-27"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-10"
 
 ---
 
@@ -48,7 +48,7 @@ Para incluir um gateway a partir do painel do {{site.data.keyword.iot_short_notm
 3. Selecione ou crie um tipo de dispositivo para o dispositivo que você está incluindo.  
 Cada dispositivo conectado ao {{site.data.keyword.iot_short_notm}} deve estar associado a um tipo de dispositivo. Tipos de dispositivos são grupos de dispositivos que compartilham características.  
  1. Clique em **Criar tipo de dispositivo**, em seguida, em **Criar tipo de gateway**.
- 2. Insira um nome de tipo de dispositivo como `my_gateway_type` e uma descrição para o tipo de gateway.
+ 2. Insira um nome de tipo de dispositivo como `my_gateway_type` e uma descrição para o tipo de gateway.   
  **Importante:** O nome de tipo de dispositivo deve ter no máximo 36 caracteres e pode conter apenas:
  <ul>
   <li>Caracteres alfanuméricos (a-z, A-Z, 0-9)</li>
@@ -59,7 +59,7 @@ Cada dispositivo conectado ao {{site.data.keyword.iot_short_notm}} deve estar as
  **Dica:** é possível incluir e editar atributos e metadados posteriormente.
  4. Clique em **Criar** para incluir o novo tipo de gateway.
 10. Clique em **Avançar** para iniciar o processo de incluir seu dispositivo de gateway com o tipo de gateway selecionado.
-11. Insira um ID do dispositivo, como `my_gateway_device`.
+11. Insira um ID do dispositivo, como `my_gateway_device`.  
 O ID do dispositivo é usado para identificar o dispositivo de gateway no painel do {{site.data.keyword.iot_short_notm}} e também é um parâmetro necessário para conectar seu dispositivo de gateway ao {{site.data.keyword.iot_short_notm}}.  
 **Importante:** O ID do dispositivo deve ter no máximo 36 caracteres e pode conter apenas:
  <ul>
@@ -81,10 +81,12 @@ O ID do dispositivo é usado para identificar o dispositivo de gateway no painel
  - Tipo de dispositivo, como `my_gateway_type`
  - ID do dispositivo. **Dica:** para dispositivos conectados à rede, isso poderia por exemplo ser o endereço de Controle de Acesso à Mídia (MAC) sem dois pontos separando.
  - Método de autenticação, como `token`
- - Token de autenticação, como `PtBVriRqIg4uh)_-Kl`
-**Dica:** Você precisará de ID da organização, Token de autenticação, Tipo de dispositivo e ID do dispositivo para configurar seu dispositivo para se conectar ao {{site.data.keyword.iot_short_notm}}.  
+ - Token de autenticação, como `PtBVriRqIg4uh)_-Kl`  
+  **Dica:** você precisará do ID da organização, do Token de autenticação, do Tipo de dispositivo e do ID do dispositivo para configurar seu dispositivo para se conectar ao {{site.data.keyword.iot_short_notm}}.  
 
 Parabéns, você registrou seu dispositivo de gateway. Agora é possível configurar seu dispositivo de gateway para se conectar ao {{site.data.keyword.iot_short_notm}}
+
+Consulte a orientação [Como registrar gateways no IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/how-to-register-gateways-in-ibm-watson-iot-platform/) para obter instruções passo a passo que demonstram o fluxo necessário para registrar um gateway.
 
 ## Etapa 2: conectando seu gateway ao {{site.data.keyword.iot_short_notm}}
 {: #connect_gateway}
@@ -105,6 +107,8 @@ Para obter informações sobre registro automático de dispositivo e publicaçã
 
 
 Quando um dispositivo é conectado com sucesso a seu gateway, ele é exibido no painel de sua organização do {{site.data.keyword.iot_short_notm}}.
+
+Consulte a orientação [Conectando o Raspberry Pi como um gateway ao Watson IoT](https://developer.ibm.com/recipes/tutorials/connecting-raspberry-pi-as-a-gateway-to-watson-iot-using-node-red/) para obter o fluxo e a descrição detalhados. 
 
 **Nota:** no painel do {{site.data.keyword.iot_short_notm}}, dispositivos e gateways conectados diretamente ao {{site.data.keyword.iot_short_notm}} exibem um ícone de status para indicar que estão conectados. O painel exibe dispositivos que estão conectados indiretamente por meio de um gateway como desconectados, pois não tem qualquer conhecimento de uma conectividade de dispositivos com o gateway.
 

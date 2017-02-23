@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-09"
+  years: 2015, 2016, 2017
+lastupdated: "2016-11-18"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -36,15 +36,18 @@ MQTT 客户机在 {{site.data.keyword.iot_short_notm}} 服务中将自身标识�
 
 应用程序和设备使用不同的 MQTT 主题空间。设备在限定了设备的主题空间中运行，而应用程序对整个组织的主题空间具有完全访问权。有关更多信息，请参阅以下主题：
 
-- [设备](../../devices/mqtt.html)
-- [应用程序](../../applications/mqtt.html)
-- [网关](../../gateways/mqtt.html)
+- [针对设备的 MQTT 消息传递](../../devices/mqtt.html)
+- [针对应用程序的 MQTT 消息传递](../../applications/mqtt.html)
+- [针对网关的 MQTT 消息传递](../../gateways/mqtt.html)
+
+### 保留消息
+{{site.data.keyword.iot_short_notm}} 提供了对 MQTT 消息传递的保留消息功能的有限支持。如果从设备、网关或应用程序发送到 {{site.data.keyword.iot_short_notm}} 的 MQTT 消息中保留消息标志设置为 true，那么会将该消息作为非保留消息进行处理。{{site.data.keyword.iot_short_notm}} 组织无权发布保留消息。{{site.data.keyword.iot_short_notm}} 服务将覆盖已设置为 true 的保留消息标志，并将消息当作保留消息标志设置为 false 进行处理。
 
 ## 服务质量级别
 {: #qos-levels}
 
 MQTT 协议为客户机和服务器之间的消息传递提供了三种服务质量：“最多一次”、“至少一次”和“恰好一次”。
-虽然可使用任何服务质量级别发送事件和命令，但必须仔细考虑哪个合适的服务级别满足您的需求。服务质量级别“2”并不总是优于级别“0”。
+虽然可使用任何服务质量级别发送事件和命令，但必须仔细考虑哪个服务级别最适合您的需求。服务质量级别“2”并不总是优于级别“0”。
 
 ### 最多一次 (QoS0)
 

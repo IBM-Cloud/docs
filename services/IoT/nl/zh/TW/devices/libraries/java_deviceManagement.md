@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-08-02"
+  years: 2015, 2016, 2017
+lastupdated: "2016-11-22"
 
 ---
 
@@ -12,19 +12,16 @@ lastupdated: "2016-08-02"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Java 用戶端程式庫 - 受管理裝置
+# 使用 Java 開發受管理裝置
 {: #java_deviceManagement}
 
 ##簡介
 {: #introduction}
 
-此用戶端程式庫說明如何搭配使用裝置與 Java 'ibmiotf' 用戶端程式庫。如需開始使用此模組的說明，請參閱 [Java 用戶端程式庫 - 簡介](../java/javaintro.html)。
+在 {{site.data.keyword.iot_full}} 中，受管理裝置是可執行裝置管理作業（例如韌體、位置及診斷更新）的裝置。
+使用 {{site.data.keyword.iot_short}} Java™ 用戶端程式庫以及所提供的資訊，您可以開發將連接的裝置轉換成受管理裝置的 Java 程式碼。我們也會提供範例，以協助您開發將裝置連接至「裝置管理」服務以及執行裝置管理作業的 Java 程式碼。
 
-本節包含裝置如何使用 Java 執行 {{site.data.keyword.iot_full}} Device Management 服務，以及執行裝置管理作業（如「韌體更新」、位置更新及診斷更新）的相關資訊。
-
-「裝置」區段包含裝置如何使用「Java ibmiotf 用戶端程式庫」來發佈事件及處理指令的相關資訊。
-
-「應用程式」區段包含應用程式如何使用「Java ibmiotf 用戶端程式庫」與裝置互動的相關資訊。
+如需應用程式如何使用 Java 用戶端程式庫以與裝置互動的相關資訊，請參閱[適用於應用程式開發人員的 Java](../../applications/libraries/java.html)。
 
 ## 裝置管理
 {: #device_management}
@@ -32,7 +29,7 @@ lastupdated: "2016-08-02"
 [裝置管理](../reference/device_mgmt.html)功能透過管理裝置的其他功能來加強 {{site.data.keyword.iot_short_notm}} 服務。裝置管理會區別受管理與未受管理的裝置：
 
 -   **受管理裝置**定義為已安裝管理代理程式的裝置。管理代理程式會傳送及接收裝置 meta 資料，並回應來自 {{site.data.keyword.iot_short_notm}} 的裝置管理指令。
--   **未受管理裝置**是任何沒有裝置管理代理程式的裝置。所有裝置在生命週期開始時都是未受管理的裝置，並且可以透過將裝置管理代理程式中的訊息傳送至 {{site.data.keyword.iot_short_notm}}，來轉移為受管理裝置。
+-   **未受管理裝置**是任何沒有裝置管理代理程式的裝置。所有裝置在生命週期開始時都是未受管理裝置，並且可以透過將裝置管理代理程式中的訊息傳送至 {{site.data.keyword.iot_short_notm}}，來轉移為受管理裝置。
 
 ## 連接至 {{site.data.keyword.iot_short_notm}} Device Management 服務
 {: #connecting_dm_service}

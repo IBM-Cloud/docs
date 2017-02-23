@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-08-02"
+  years: 2015, 2016, 2017
+lastupdated: "2016-11-22"
 
 ---
 
@@ -19,8 +19,7 @@ lastupdated: "2016-08-02"
 使用 [mBed C++ 客户机库](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/)可轻松将 [mBed 设备](https://www.mbed.com/en/)（例如，[LPC1768](https://developer.mbed.org/platforms/mbed-LPC1768/) 或 [FRDM-K64F](https://developer.mbed.org/platforms/FRDM-K64F/)）连接到 {{site.data.keyword.iot_full}} 服务。
 {:shortdesc}
 
-
-有关更多信息，请参阅 [developer.mbed.org](https://developer.mbed.org/) 上的 [ibmiotf](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/)。
+有关更多信息，请参阅 [ibmiotf](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/)（在 [developer.mbed.org](https://developer.mbed.org/) 上）。
 
 虽然库使用的是 C++，但仍会避免动态内存分配，也不会使用 STL 函数，因为有时 mBed 设备有特殊的内存型号，会使移植变得困难。在任何情况下，库都允许您尽可能使内存使用情况可预测。
 

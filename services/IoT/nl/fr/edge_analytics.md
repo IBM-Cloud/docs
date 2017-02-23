@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-27"
+  years: 2016, 2017
+lastupdated: "2017-01-10"
 
 ---
 
@@ -24,8 +24,6 @@ Les terminaux envoient leurs données à une passerelle sur laquelle un agent Ed
 Le diagramme suivant illustre l'architecture générale d'un environnement {{site.data.keyword.iot_full}} Edge Analytics.
 ![Architecture d'IBM Watson IoT Platform avec Edge Analytics](images/architecture_platform_edge.svg "Architecture d'IBM Watson IoT Platform avec Edge Analytics")
 
-**Important :** Les fonctions d'analyse sont fusionnées à partir du service {{site.data.keyword.iotrtinsights_full}}. Si votre organisation {{site.data.keyword.iot_short_notm}} est utilisée comme source de données pour une instance {{site.data.keyword.iotrtinsights_short}} existante, Cloud and Edge Analytics n'est pas activé tant que les instances {{site.data.keyword.iotrtinsights_short}} existantes n'ont pas été migrées. Continuez d'utiliser le tableau de bord {{site.data.keyword.iotrtinsights_short}} pour vos besoins en analyse tant que la migration n'est pas terminée. Pour plus d'informations, voir le [blogue IBM Watson IoT Platform](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} sur IBM developerWorks et vos tableaux de bord de l'instance {{site.data.keyword.iotrtinsights_short}} existante.  
-
 ## Avant de commencer
 {: #byb}
 
@@ -33,6 +31,10 @@ Avant de commencer à créer des règles et des actions Edge :
 - Assurez-vous que votre passerelle est connectée à {{site.data.keyword.iot_short}} et que les données de terminal sont transmises. Pour plus d'informations, voir [Connexion de passerelles](gateways/dashboard.html).
 - Installez l'agent Edge Analytics Agent (EAA) sur votre passerelle. Pour plus d'informations, voir [Installation de l'agent Edge Analytics Agent](gateways/dashboard.html#edge). </br> **Astuce : ** Les passerelles sur lesquelles l'agent EAA est activé fournissent des données de diagnostic EAA sous la forme de messages de terminal de passerelle. Pour plus d'informations, voir [Mesures de diagnostic Edge Analytics Agent](#eaa_metrics).
 - Assurez-vous que les propriétés de terminal que vous souhaitez utiliser comme conditions dans vos règles sont mappées à des schémas. Pour plus d'informations, voir [Connexion de terminaux](iotplatform_task.html) et [Création de schémas](im_schemas.html).
+- Recettes Edge Analytics  
+Dans votre portail de recettes, deux recettes décrivent les étapes requises pour exécuter IBM Edge Analytics. Les recettes expliquent comment installer et configurer IBM Edge Analytics Agent sur un terminal qui se trouve au-dessus d'Apache Edgent pour exécuter des analyses proches d'une source de données IoT. 
+ - La première recette de cette série est [Getting Started with Edge Analytics in IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/getting-started-with-edge-analytics-in-watson-iot-platform/). Elle explique comment configurer Cisco DSA Platform sur un système d'ordinateur portable et un terminal Raspberry Pi 3, installer et configurer IBM Edge Analytics Agent pour la connexion à {{site.data.keyword.iot_short}}, installer System DS Link et le configurer pour la connexion à la passerelle Edge sur {{site.data.keyword.iot_short}} en tant que terminal connecté et définir et activer la règle Edge sur la passerelle Edge, ainsi que la gestion des règles Edge à partir de {{site.data.keyword.iot_short}}.
+ - Pour illustrer une utilisation avancée de Edge Analytics, la recette [Handling Alerts and Device Actions with Edge Analytics in IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/handling-alerts-and-device-actions-with-edge-analytics-in-ibm-watson-iot-platform/) vous montre comment créer votre propre lien DS pour transférer des données entre un terminal Arduino Uno connecté et un terminal Raspberry Pi 3. La  recette présente également les actions de filtrage de données et de traitement de terminaux locaux dans le cadre de l'alerte de règle Edge. 
 
 ## Gestion des règles et des actions Edge  
 {: #managing_rules}
@@ -191,15 +193,19 @@ Pour consulter des informations sur l'état de la passerelle :
  Propriété | Description
  --- | ---
  `MsgInCount` |Nombre de messages ayant été envoyés à l'agent Edge Analytics Agent (EAA).
- `MsgInRate` | Nombre estimé de messages par seconde ayant été envoyés à l'agent EAA durant la minute précédente.    
+ `MsgInRate` | Nombre estimé de messages par seconde ayant été envoyés à l'agent EAA durant la minute précédente.  
  `LastHeartBeat` | Horodatage en millisecondes correspondant à la génération du dernier message de contact. Un message de contact est généré au moins toutes les 10 secondes.
-`CurrentTimestamp` | Horodatage en millisecondes correspondant à la génération du message de surveillance en cours.
-`IsAlive` | Cette propriété a pour valeur 0 si la différence entre `LastHeartBeat` et `CurrentTimestamp` est supérieure à 20 secondes.
+ `CurrentTimestamp` | Horodatage en millisecondes correspondant à la génération du message de surveillance en cours.
+ `IsAlive` | Cette propriété a pour valeur 0 si la différence entre `LastHeartBeat` et `CurrentTimestamp` est supérieure à 20 secondes.
  `BytesOutCount` | Nombre d'octets de message envoyés par l'agent EAA à {{site.data.keyword.iot_short}}.
- `BytesOutRate` | Nombre estimé d'octets de message par seconde ayant été envoyés par l'agent EAA à {{site.data.keyword.iot_short}} durant la minute précédente. `BytesInCount` | Nombre d'octets de message envoyés par {{site.data.keyword.iot_short}} à l'agent EAA.
- `BytesInRate` | Nombre estimé d'octets de message par seconde ayant été envoyés par {{site.data.keyword.iot_short}} à l'agent EAA durant la minute précédente. `RuleBytesInCount` |Nombre d'octets de message envoyés au coeur du moteur de règles EAA. </br> **Remarque :** Si aucune règle n'est définie pour un type de terminal, les messages pour ce type de terminal ne sont pas envoyés au coeur du moteur de règles.
- `RuleBytesInRate` | Nombre estimé d'octets de message par seconde ayant été envoyés au coeur du moteur de règles EAA durant la minute précédente. `MsgOutCount` | Nombre de messages ayant été envoyés par l'agent EAA à {{site.data.keyword.iot_short}}.
- `MsgOutRate` | Nombre estimé d'octets de messages par seconde envoyés par l'agent EAA à {{site.data.keyword.iot_short}} durant la minute précédente.`MsgReducePercent` | Différence de pourcentage entre les messages entrants et sortants. </br>La formule suivante est utilisée pour le calcul : `(msgIn - msgOut) / msgIn`
+ `BytesOutRate` | Nombre estimé d'octets de message par seconde ayant été envoyés par l'agent EAA à {{site.data.keyword.iot_short}} durant la minute précédente.
+ `BytesInCount` | Nombre d'octets de message envoyés par {{site.data.keyword.iot_short}} à l'agent EAA.
+ `BytesInRate` | Nombre estimé d'octets de message par seconde ayant été envoyés par {{site.data.keyword.iot_short}} à l'agent EAA durant la minute précédente.
+ `RuleBytesInCount` |Nombre d'octets de message envoyés au coeur du moteur de règles EAA. </br> **Remarque :** Si aucune règle n'est définie pour un type de terminal, les messages pour ce type de terminal ne sont pas envoyés au coeur du moteur de règles.
+ `RuleBytesInRate` | Nombre estimé d'octets de message par seconde ayant été envoyés au coeur du moteur de règles EAA durant la minute précédente.
+ `MsgOutCount` | Nombre de messages ayant été envoyés par l'agent EAA à {{site.data.keyword.iot_short}}.
+ `MsgOutRate` | Nombre estimé d'octets de messages par seconde envoyés par l'agent EAA à {{site.data.keyword.iot_short}} durant la minute précédente.
+ `MsgReducePercent` | Différence de pourcentage entre les messages entrants et sortants. </br>La formule suivante est utilisée pour le calcul : `(msgIn - msgOut) / msgIn`
 `BytesReducePercent` | Différence de pourcentage entre les octets entrants et sortants. </br>La formule suivante est utilisée pour le calcul : `(bytesIn - bytesOut) / bytesIn`
 `MsgRateReduce` | Différence de pourcentage entre le débit de message entrant et sortant. </br>La formule suivante est utilisée pour le calcul : `(msgInRate - msgOutRate) / msgInRate`
 `BytesRateReduce` | Différence de pourcentage entre les octets de message entrants et sortants. </br>La formule suivante est utilisée pour le calcul : `(bytesInRate - bytesOutRate) / bytesInRate`

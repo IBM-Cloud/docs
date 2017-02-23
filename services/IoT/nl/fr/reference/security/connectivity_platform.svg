@@ -1075,11 +1075,11 @@
        id="rect79371-1-6-6-9-8-7-3-5-1-8-2-9"
        style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" />
     <text
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.50000191px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
        id="text44191"
        font-size="11"
-       x="366.57446"
-       y="465.8287"
+       x="346.57446"
+       y="429.8287"
        sodipodi:linespacing="125%">Watson IoT Platform</text>
     <rect
        ry="0"
@@ -1184,22 +1184,18 @@
          style="font-size:7.5px" /></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-       x="321.39407"
-       y="420.14883"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.25000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       x="369.39407"
+       y="484.14883"
        id="text266398"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         id="tspan266400"
-         x="321.39407"
-         y="420.14883">Watson™ IoT Platform </tspan><tspan
-         sodipodi:role="line"
-         x="321.39407"
-         y="435.14883"
+         x="369.39407"
+         y="484.14883"
          id="tspan4887">Org : q1bc3a</tspan><tspan
          sodipodi:role="line"
-         x="321.39407"
-         y="450.14883"
+         x="369.39407"
+         y="498.21133"
          id="tspan266402" /></text>
     <text
        sodipodi:linespacing="125%"
@@ -1472,14 +1468,14 @@
          x="72.772636"
          y="582.10217"
          style="font-size:12.50000191px"
-         id="tspan5510">pour la connectivité </tspan><tspan
+         id="tspan5522">pour la connectivité via </tspan><tspan
          sodipodi:role="line"
          x="72.772636"
          y="597.72717"
          style="font-size:12.50000191px"
-         id="tspan5522">via <tspan
+         id="tspan3614"><tspan
    style="font-weight:bold"
-   id="tspan5514">TLS</tspan> (v1.2). </tspan><tspan
+   id="tspan3616">TLS</tspan> (v1.2). </tspan><tspan
          sodipodi:role="line"
          x="72.772636"
          y="613.35217"
@@ -1491,7 +1487,7 @@
          x="72.772636"
          y="628.97717"
          style="font-size:12.50000191px"
-         id="tspan3615">(v3.1.1) prises en charge. </tspan></text>
+         id="tspan3620">(v3.1.1) prises en charge. </tspan></text>
     <g
        id="g11065"
        transform="translate(292.82563,483.0889)">

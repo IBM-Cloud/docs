@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2016, 2017
 lastupdated: "2016-11-10"
 
 ---
@@ -32,7 +32,7 @@ Per creare un ruolo personalizzato:
 5. Facoltativo: i ruoli personalizzati possono utilizzare un ruolo esistente come un template. Per fare in modo che il ruolo personalizzato si basi su un ruolo utente esistente, selezionare il ruolo dall'elenco.
 6. Fai clic su **Avanti**.
 7. Dall'elenco delle autorizzazioni, espandi le categorie dell'autorizzazione e seleziona le operazioni che il ruolo personalizzato deve includere.
-8. Fai clic su **Aggiungi ruolo**. 
+8. Fai clic su **Aggiungi ruolo**.
 
 Il ruolo personalizzato è stato incluso nell'elenco di ruoli disponibili.
 

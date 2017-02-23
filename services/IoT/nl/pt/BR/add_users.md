@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-09-16"
+  years: 2016, 2017
+lastupdated: "2017-01-24"
 
 ---
 
@@ -17,7 +17,13 @@ lastupdated: "2016-09-16"
 No painel de acesso, é possível controlar e gerenciar o acesso à sua organização do {{site.data.keyword.iot_full}}. É possível incluir usuários incluindo, convidando, registrando ou importando os mesmos. Também é possível fornecer diferentes níveis de acesso a seus usuários designando funções.
 {:shortdesc}
 
-## Acesso ao usuário
+- [Incluindo novos usuários](#adding-new-users)
+- [Editando usuários](#editing-users)
+- [Bloqueando o acesso de usuário](#blocking-users)
+- [Removendo usuários](#removing-users)
+
+## Incluindo novos usuários
+{: #adding-new-users}
 
 Na guia **Acesso** do painel, é possível incluir membros individuais usando as funções Incluir, Convidar ou Registrar. Também é possível incluir, convidar ou registrar vários membros simultaneamente usando a função Importar.
 
@@ -88,3 +94,31 @@ Para registrar vários membros simultaneamente, deve-se fazer upload de um arqui
 ### Construindo seu arquivo CSV
 
 Ao construir um arquivo CSV para importar membros para sua organização, assegure que sejam incluídas as informações necessárias para o método que você está usando. Use vírgulas ou pontos e vírgulas para separar colunas. Ao fazer upload do arquivo CSV, em **Configurações de CSV**, assegure que o separador de colunas correto seja selecionado.
+
+## Editando usuários
+{: #editing-users}
+
+Os usuários podem ser editados para mudar sua função, incluir, remover ou mudar uma data de expiração de acesso ou incluir ou remover o acesso à organização.
+
+1. No painel do {{site.data.keyword.iot_short_notm}}, clique em **Membros** na barra de navegação à esquerda.
+2. Clique no ícone **Editar** ![Editar](/docs/images/edit_32.svg) próximo ao usuário que você deseja editar.
+3. Faça as mudanças desejadas no usuário.
+4. Clique em **Salvar**.
+
+## Bloqueando o acesso de usuário
+{: #blocking-users}
+
+Os usuários podem ser bloqueados contra o acesso à organização do {{site.data.keyword.iot_short_notm}}, enquanto ainda mantêm a associação à organização.
+
+1. No painel do {{site.data.keyword.iot_short_notm}}, clique em **Membros** na barra de navegação à esquerda.
+2. Clique na alternância próxima ao usuário que você deseja bloquear contra o acesso à organização do {{site.data.keyword.iot_short_notm}}.
+
+
+## Removendo usuários
+{: #removing-users}
+
+Os usuários podem ser removidos completamente da organização do {{site.data.keyword.iot_short_notm}}. A remoção dos usuários não pode ser desfeita e os usuários devem ser [incluídos na plataforma](#adding-new-users) para restaurar o acesso.
+
+1. No painel do {{site.data.keyword.iot_short_notm}}, clique em **Membros** na barra de navegação à esquerda.
+2. Clique no ícone **Excluir** ![Excluir](/docs/images/trash_32.svg) próximo ao usuário a ser removido.
+3. Clique em **Excluir** no diálogo de confirmação.

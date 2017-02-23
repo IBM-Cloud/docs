@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2016, 2017
 lastupdated: "2016-10-27"
 
 ---
@@ -34,8 +34,8 @@ Il dizionario delle opzioni crea le definizioni utilizzate per interagire con il
 |Definizione|Descrizione |
 |:---|:---|
 |`orgId`|Il tuo ID dell'organizzazione.|
-|`type`|Il tipo del dispositivo. Il tipo del dispositivo è un raggruppamento di dispositivi che esegue un'attività specifica, ad esempio "weatherballoon". |
-|`id`|Un ID univoco per identificare un dispositivo. Generalmente, per determinato tipo di dispositivo, l'ID del dispositivo è un identificativo univoco di tale dispositivo, ad esempio un numero seriale o un indirizzo MAC. |
+|`type`|Il tipo del dispositivo. Il tipo del dispositivo è un raggruppamento di dispositivi che esegue un'attività specifica, ad esempio "weatherballoon".|
+|`id`|Un ID univoco per identificare un dispositivo. Generalmente, per determinato tipo di dispositivo, l'ID del dispositivo è un identificativo univoco di tale dispositivo, ad esempio un numero seriale o un indirizzo MAC.|
 |`auth-method`|Il metodo di autenticazione. L'unico metodo supportato è `apikey`.|
 |`auth-token`|Un token chiave API, che è inoltre obbligatorio quando imposti il valore di auth-method su `apikey`.|
 |`clean-session`|Un valore true o false obbligatorio solo se desideri collegarti all'applicazione con il metodo di sottoscrizione durevole. Per impostazione predefinita, `clean-session` è impostato su true.|

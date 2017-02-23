@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-09-01"
+  years: 2016, 2017
+lastupdated: "2017-01-10"
 
 ---
 
@@ -33,7 +33,7 @@ Il dashboard {{site.data.keyword.iot_full}} dispone delle seguenti tabelle prede
 |Panoramica sull'utilizzo  | Visualizza le statistiche di utilizzo per la tua organizzazione. Elenca i tipi di dispositivo e i dati utilizzati.
 |Analisi incentrata sulla regola | Visualizza le regole per la tua organizzazione. Ulteriori schede elencano gli avvisi attivati, i dispositivi associati, le proprietà del dispositivo e le informazione sull'avviso. |  
 |Analisi incentrata sul dispositivo | Visualizza i dispositivi collegati alla tua organizzazione. Ulteriori schede mostrano gli avvisi e le informazioni per un dispositivo selezionato, le proprietà del dispositivo e le informazioni sull'avviso. |
-|Gestione della sicurezza e del rischio  | Mostra le schede che riepilogano lo stato di sicurezza generale. Gli operatori di sistema e gli analisti della sicurezza possono visualizzare i dettagli di conformità, lo stato della connessione dei dispositivi, le cause dei problemi di connessione e i dispositivi bloccati o consentiti tramite una una whitelist o una blacklist.  Dalla scheda di conformità della connessione, l'utente può eseguire il drilldown di un report dettagliato sui dispositivi non conformi e può esportare il report in Excel. |
+|Gestione della sicurezza e del rischio | Mostra le schede che riepilogano lo stato di sicurezza generale. Gli operatori di sistema e gli analisti della sicurezza possono visualizzare i dettagli di conformità, lo stato della connessione dei dispositivi, le cause dei problemi di connessione e i dispositivi bloccati o consentiti tramite una una whitelist o una blacklist.  Dalla scheda di conformità della connessione, l'utente può eseguire il drilldown di un report dettagliato sui dispositivi non conformi e può esportare il report in Excel. |
 
 Puoi aggiornare queste tabelle aggiungendo, aggiornando e rimuovendo schede.
 
@@ -196,3 +196,5 @@ Per alcuni tipi di schede, puoi fare clic su **Settings** per configurare ulteri
 7.	Infine, posiziona la nuova scheda nella tua tabella trascinandola in una posizione valida.  
 
 Bene! Puoi ora visualizzare i dati in tempo reale del tuo dispositivo!
+
+Per le istruzioni dettagliate su come visualizzare i dati del dispositivo in tempo reale, consulta la ricetta [Configuring Boards & Cards in the new Watson IoT Dashboard](https://developer.ibm.com/recipes/tutorials/configuring-the-cards-in-the-new-watson-iot-dashboard/).

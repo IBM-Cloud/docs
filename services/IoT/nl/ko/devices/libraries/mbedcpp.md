@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-08-02"
+  years: 2015, 2016, 2017
+lastupdated: "2016-11-22"
 
 ---
 
@@ -19,7 +19,6 @@ lastupdated: "2016-08-02"
 [mBed C++ 클라이언트 라이브러리](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/)를 사용하여 [mBed 디바이스](https://www.mbed.com/en/)(예: [LPC1768](https://developer.mbed.org/platforms/mbed-LPC1768/) 또는 [FRDM-K64F](https://developer.mbed.org/platforms/FRDM-K64F/))를 {{site.data.keyword.iot_full}} 서비스에 쉽게 연결하십시오.
 {:shortdesc}
 
-
 자세한 정보는 [developer.mbed.org](https://developer.mbed.org/)에서 [ibmiotf](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/)를 참조하십시오.
 
 라이브러리에서 C++를 사용하기는 하지만 mBed 디바이스에 간혹 포팅을 어렵게 하는 특이한 메모리 모델이 있으므로 동적 메모리 할당과 STL 함수 사용을 방지합니다. 이 경우 라이브러리를 사용하면 메모리 사용을 최대한 예측할 수 있습니다.
@@ -29,7 +28,7 @@ lastupdated: "2016-08-02"
 
 |종속 항목 |설명 |
 |:---|:---|
-|[Eclipse Paho MQTT 라이브러리](https://developer.mbed.org/teams/mqtt/code/MQTT/)|mBed 디바이스의 MQTT 클라이언트 라이브러리를 제공합니다. 자세한 정보는 [임베디드 MQTT C/C++ 클라이언트 라이브러리](http://www.eclipse.org/paho/clients/c/embedded/)를 참조하십시오.|
+|[Eclipse Paho MQTT 라이브러리](https://developer.mbed.org/teams/mqtt/code/MQTT/)|mBed 디바이스의 MQTT 클라이언트 라이브러리를 제공합니다. 자세한 정보는 [Embedded MQTT C/C++ 클라이언트 라이브러리](http://www.eclipse.org/paho/clients/c/embedded/)를 참조하십시오. |
 |[EthernetInterface 라이브러리](https://developer.mbed.org/users/mbed_official/code/EthernetInterface/)|이더넷을 통한 mBed IP 라이브러리.|
 
 ## 라이브러리 사용 방법
@@ -39,7 +38,7 @@ mBed C++ IBMIoTF 클라이언트 라이브러리를 사용할 때 [mBed 컴파�
 
 **참고:** mBed와 실행하도록 설치하거나 설정할 사항이 없습니다.
 
-ARM mBed NXP LPC 1768 마이크로 컨트롤러를 {{site.data.keyword.iot_short_notm}}에 연결하는 방법에 대한 정보는 [mBed C++ Client Library for IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/mbed-c-client-library-for-ibm-iot-foundation/) 참조서를 확인하십시오.
+ARM mBed NXP LPC 1768 마이크로 컨트롤러를 {{site.data.keyword.iot_short_notm}}에 연결하는 방법에 대한 정보는 [IBM Watson IoT Platform용 mBed C++ 클라이언트 라이브러리](https://developer.ibm.com/recipes/tutorials/mbed-c-client-library-for-ibm-iot-foundation/) 레시피를 참조하십시오. 
 
 ## 생성자
 {: #constructor}

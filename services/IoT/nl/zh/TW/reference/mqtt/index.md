@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-09"
+  years: 2015, 2016, 2017
+lastupdated: "2016-11-18"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -36,15 +36,18 @@ MQTT 用戶端會向 {{site.data.keyword.iot_short_notm}} 服務自我識別為�
 
 應用程式和裝置搭配運作的 MQTT 主題空間不同。裝置只能在某個裝置範圍的主題空間內運作，而應用程式可以完整存取整個組織的主題空間。如需相關資訊，請參閱下列主題：
 
-- [裝置](../../devices/mqtt.html)
-- [應用程式](../../applications/mqtt.html)
-- [閘道](../../gateways/mqtt.html)
+- [裝置的 MQTT 傳訊](../../devices/mqtt.html)
+- [應用程式的 MQTT 傳訊](../../applications/mqtt.html)
+- [閘道的 MQTT 傳訊](../../gateways/mqtt.html)
+
+### 保留的訊息
+{{site.data.keyword.iot_short_notm}} 提供 MQTT 傳訊的保留的訊息特性的有限支援。如果從裝置、閘道或應用程式傳送至 {{site.data.keyword.iot_short_notm}} 的 MQTT 訊息中保留的訊息旗標設為 true，則會將訊息處理為未保留的訊息。{{site.data.keyword.iot_short_notm}} 組織未獲授權，無法發佈保留的訊息。{{site.data.keyword.iot_short_notm}} 服務會置換設為 true 的保留的訊息旗標，而且處理訊息的方式就像保留的訊息旗標設為 false 一樣。
 
 ## 服務品質水準
 {: #qos-levels}
 
 MQTT 通訊協定提供三種在用戶端與伺服器之間遞送訊息的服務品質：「最多一次」、「最少一次」，以及「正好一次」。
-雖然您可以使用任何服務品質水準來傳送事件和指令，但必須謹慎考量符合您需求的正確服務水準為何。選擇服務品質水準 '2' 並不一定會比水準 '0' 好。
+雖然您可以使用任何服務品質水準來傳送事件和指令，但必須謹慎考量符合您需求的正確服務水準。選擇服務品質水準 '2' 並不一定會比水準 '0' 好。
 
 ### 最多一次 (QoS0)
 

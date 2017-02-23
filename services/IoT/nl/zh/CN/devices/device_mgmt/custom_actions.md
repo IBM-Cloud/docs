@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-05"
+  years: 2015, 2016, 2017
+lastupdated: "2017-02-03"
 
 ---
 
@@ -63,6 +63,19 @@ lastupdated: "2016-09-05"
 	}
 
 ```
+
+### 添加定制设备管理软件包
+
+可以使用 {{site.data.keyword.iot_short_notm}} 仪表板或 API 来添加定制设备管理软件包。
+
+要使用 {{site.data.keyword.iot_short_notm}} 仪表板来添加定制设备管理软件包，请执行以下操作：
+
+1. 在 {{site.data.keyword.iot_short_notm}} 仪表板的导航栏中，单击**设置**。
+2. 单击**定制设备管理软件包**。
+3. 单击**添加软件包**按钮。
+4. 选择软件包文件，然后单击**打开**。
+
+要使用 API 来添加定制设备管理软件包，请参阅 [{{site.data.keyword.iot_short_notm}} API 文档 ![外部链接图标](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}。
 
 ### 扩展包属性
 
@@ -450,3 +463,9 @@ lastupdated: "2016-09-05"
 - 查看特定设备管理请求的状态：
 
 `curl -XGET -H "Content-Type: application/json" -u "<apiKey>:<apiToken>" https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/requests/<requestId>`
+
+## 关于设备管理扩展的诀窍
+
+以下诀窍演示了处理设备管理扩展所需的流程：
+
+- [Device Management Extension Packages in WIoT Platform ![外部链接图标](../../../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/device-management-extension-packages-in-wiot-platform/){: new_window} 诀窍提供了有关向 {{site.data.keyword.iot_short}} 注册受管设备，以便该设备可以接收和处理设备管理扩展操作的指示信息。此诀窍中的代码样本是使用 Python 客户机库编写的。

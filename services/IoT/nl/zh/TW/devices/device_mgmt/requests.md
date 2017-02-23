@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-08"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-10"
 
 ---
 
@@ -256,6 +256,7 @@ Topic: iotdevice-1/response
 
 1. 在主題 `iotdm-1/device/update` 上傳送韌體詳細資料更新要求。
 更新要求可讓裝置驗證所要求的韌體是否與目前安裝的韌體不同。如果不同，請將 `rc` 參數設為 `204`，即轉換為狀態 `Changed`。
+  
 下列範例顯示預期哪一則訊息是針對先前傳送的範例韌體下載要求，以及偵測到差異時應該傳送哪一個回應：
 ```
    Incoming request from the {{site.data.keyword.iot_short_notm}}:
@@ -589,3 +590,17 @@ Message:
 
 
 **重要事項：**必須同時設定列為 `mgmt.firmware` 屬性一部分的所有參數，以便在有 `mgmt.firmware` 的目前觀察時，只傳送單一通知訊息。
+
+## 裝置動作及韌體動作的秘訣
+
+下列秘訣示範執行裝置及韌體動作所需的完整流程。
+
+- [WIoT Platform 中的裝置管理 - 回復及重設為原廠設定](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/)
+
+- [裝置起始的韌體更新](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-device-initiated-firmware-upgrade/)
+
+- [平台起始的韌體更新](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-platform-initiated-firmware-upgrade/)
+
+- [使用背景執行的平台起始的韌體更新](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-platform-initiated-firmware-upgrade/)
+
+- [韌體回復及重設為原廠設定](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/)

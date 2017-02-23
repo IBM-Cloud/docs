@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-11"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-10"
 
 ---
 
@@ -17,12 +17,17 @@ lastupdated: "2016-10-11"
 
 **Importante:** o recurso API (interface de programação de aplicativos) REST HTTP (Protocolo de Transporte de Hipertexto) do {{site.data.keyword.iot_full}} para dispositivos está disponível apenas como parte de um programa beta limitado. Atualizações futuras podem incluir mudanças incompatíveis com a versão atual desse recurso. Experimente e [informe-nos o que acha](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html).
 
-## Acessando a API REST HTTP
+## Acessando a documentação da API de REST HTTP
 {: #api_link}
 
-Para acessar a API (interface de programação de aplicativos) REST HTTP (Protocolo de Transporte de Hipertexto) do {{site.data.keyword.iot_short_notm}} e obter mais informações sobre como integrar dispositivos à sua organização, acesse https://docs.internetofthings.ibmcloud.com/swagger/v0002.html.
+Para acessar a documentação da API de REST HTTP do {{site.data.keyword.iot_short_notm}} e obter mais informações sobre como integrar dispositivos à sua organização, acesse https://docs.internetofthings.ibmcloud.com/swagger/v0002.html.
 
 A única versão da API (interface de programação de aplicativos) REST HTTP (Protocolo de Transporte de Hipertexto) do {{site.data.keyword.iot_short_notm}} suportada é a versão 2. Assegure que suas soluções {{site.data.keyword.iot_short_notm}} estejam usando a versão 2.
+
+## Conexões do cliente
+{: #client_connections}
+
+Para obter informações sobre segurança do cliente e como conectar clientes a dispositivos no {{site.data.keyword.iot_short_notm}}, veja [Conectando aplicativos, dispositivos e gateways ao {{site.data.keyword.iot_short_notm}}](../reference/security/connect_devices_apps_gw.html).
 
 # API (interface de programação de aplicativos) do sistema de mensagens REST HTTP (Protocolo de Transporte de Hipertexto) para dispositivos
 {: #rest_messaging_api}
@@ -42,6 +47,8 @@ Use uma das URLs (Localizadores Uniformes de Recursos) a seguir para enviar uma 
 <pre class="pre">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
 {: codeblock}
 
+**Nota: **porta 443, a porta SSL padrão, também pode ser especificada para proteger as chamadas API HTTP.
+
 Se você estiver conectando um dispositivo ou um aplicativo ao serviço de iniciação rápida, use uma das URLs (Localizadores Uniformes de Recursos) a seguir em seu lugar:
 
 ### Solicitação de POST não segura para iniciação rápida
@@ -55,6 +62,7 @@ Se você estiver conectando um dispositivo ou um aplicativo ao serviço de inici
 **Notas importantes:**
 - Na versão atual da API (interface de programação de aplicativos) REST HTTP (Protocolo de Transporte de Hipertexto), é possível enviar eventos de dispositivos apenas usando o sistema de mensagens HTTP. Use o protocolo de sistema de mensagens MQTT para enviar solicitações para outros recursos de gerenciamento de dispositivo e controle.
 - Conexões HTTP (Protocolo de Transporte de Hipertexto) podem ser reutilizadas para publicar eventos para o mesmo dispositivo apenas, pois o cabeçalho HTTP de autorização não pode ser mudado.
+- Porta 443, a porta SSL padrão, também pode ser especificada para proteger as chamadas API HTTP.
 
 ### Authentication
 
@@ -83,9 +91,6 @@ Semelhante ao nível 0 de serviço de entrega de qualidade de serviço MQTT "no 
 
 Para obter mais informações sobre o protocolo MQTT e os níveis de qualidade de serviço para o {{site.data.keyword.iot_short_notm}}, consulte [Sistema de mensagens MQTT](../reference/mqtt/index.html).
 
-
-<--!
-Movido do tópico de desenvolvedor Recursos obsoletos. Local a ser discutido com o desenvolvedor.
 ## Último cache de eventos
 {: #last-event-cache}
 
@@ -140,4 +145,3 @@ A resposta incluirá todos os IDs de evento que foram enviados pelo dispositivo.
     }
 ]
 ```
--->

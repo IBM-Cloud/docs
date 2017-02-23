@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-08"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-10"
 
 ---
 
@@ -255,6 +255,7 @@ REST API를 사용하여 펌웨어 다운로드를 시작하려면 다음에 POS
 {{site.data.keyword.iot_short_notm}}의 디바이스 관리 서버는 디바이스 관리 프로토콜을 사용하여 디바이스에 요청을 전송하며, 디바이스는 펌웨어 다운로드를 시작합니다. 다운로드 프로세스는 다음 단계로 구성됩니다. 
 
 1. 펌웨어 세부사항 업데이트 요청은 `iotdm-1/device/update` 주제에서 전송됩니다. 업데이트 요청은 요청된 펌웨어가 현재 설치된 펌웨어와 다른지 여부를 디바이스가 유효성 검증할 수 있도록 합니다. 차이가 있으면 `rc` 매개변수를 `204`로 설정하십시오. 이는 `Changed` 상태로 변환됩니다.
+  
 다음 예제는 이전에 전송된 예제 펌웨어 다운로드 요청에 대해 예상되는 메시지와 차이가 발견될 때 전송되어야 하는 응답을 표시합니다. 
 ```
    Incoming request from the {{site.data.keyword.iot_short_notm}}:
@@ -425,7 +426,7 @@ Message:
   - 2(메모리 부족)
   - 3(연결 끊김)
   - 6(올바르지 않은 URI)
-- 펌웨어 검증기가 설정된 경우, 디바이스는 펌웨어 이미지를 검증하려고 시도합니다. 이미지 검증에 실패하면 `mgmt.firmware.state` 속성을 `0`(유휴)로 설정하고 `mgmt.firmware.updateStatus` 속성을 오류 상태 값 `4`(검증 실패)로 설정하십시오. 
+- 펌웨어 검사기가 설정된 경우, 디바이스는 펌웨어 이미지를 검증하려고 시도합니다. 이미지 검증에 실패하면 `mgmt.firmware.state` 속성을 `0`(유휴)로 설정하고 `mgmt.firmware.updateStatus` 속성을 오류 상태 값 `4`(검증 실패)로 설정하십시오. 
 
 ## 펌웨어 조치 - 업데이트
 {: #firmware-actions-update}
@@ -589,3 +590,17 @@ Message:
 
 
 **중요:** `mgmt.firmware`에 대한 현재 관찰이 존재할 때 단일 알림 메시지만 전송될 수 있도록 `mgmt.firmware` 속성의 일부로서 나열된 모든 매개변수를 동시에 설정해야 합니다. 
+
+## 디바이스 조치 및 펌웨어 조치에 대한 레시피
+
+다음 레시피는 디바이스 및 펌웨어 조치를 수행하는 데 필요한 전체 플로우를 예시합니다. 
+
+- [WIoT Platform에서 디바이스 관리 – 롤백 및 팩토리 재설정](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/)
+
+- [디바이스 시작 펌웨어 업데이트](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-device-initiated-firmware-upgrade/)
+
+- [플랫폼 시작 펌웨어 업데이트](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-platform-initiated-firmware-upgrade/)
+
+- [백그라운드 실행의 플랫폼 시작 펌웨어 업데이트](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-platform-initiated-firmware-upgrade/)
+
+- [펌웨어 롤백 및 팩토리 재설정](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/)

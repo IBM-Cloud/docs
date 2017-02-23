@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-27"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-10"
 
 ---
 
@@ -29,7 +29,8 @@ lastupdated: "2016-10-27"
 - 向 {{site.data.keyword.iot_short_notm}} 登錄新裝置
 - 傳送及接收其專屬的感應器資料，例如直接連接的裝置，
 - 代表與其連接的裝置來傳送及接收資料
-- 執行裝置管理代理程式，以讓它受管理，以及管理與其連接的裝置。如需閘道開發人員資訊，請參閱[閘道的 MQTT 連線功能](mqtt.html)。
+- 執行裝置管理代理程式，以讓它受管理，以及管理與其連接的裝置。  
+如需閘道開發人員資訊，請參閱[閘道的 MQTT 連線功能](mqtt.html)。
 
 您也可以使用閘道來對閘道裝置所傳送的資料執行邊緣分析。如需相關資訊，請參閱[邊緣分析](../edge_analytics.html)及[安裝邊緣分析代理程式](#edge)。
 
@@ -44,9 +45,11 @@ lastupdated: "2016-10-27"
 
 1. 在 {{site.data.keyword.iot_short_notm}} 儀表板中，選取**裝置**。
 2. 按一下**新增裝置**。
-3. 選取或建立您要新增之裝置的裝置類型。連接至 {{site.data.keyword.iot_short_notm}} 的每一個裝置都必須與裝置類型相關聯。裝置類型是一群共用相同性質的裝置。  
+3. 選取或建立您要新增之裝置的裝置類型。  
+連接至 {{site.data.keyword.iot_short_notm}} 的每一個裝置都必須與裝置類型相關聯。裝置類型是一群共用相同性質的裝置。  
  1. 按一下**建立裝置類型**，然後按一下**建立閘道類型**。
- 2. 輸入裝置類型名稱（例如 `my_gateway_type`）和閘道類型的說明。**重要事項：**裝置類型名稱不得超過 36 個字元，且只能包含：
+ 2. 輸入裝置類型名稱（例如 `my_gateway_type`）和閘道類型的說明。   
+ **重要事項：**裝置類型名稱不得超過 36 個字元，且只能包含：
  <ul>
   <li>英數字元（a-z 、A-Z、0-9）</li>
   <li>連字號 (-)</li>
@@ -56,7 +59,9 @@ lastupdated: "2016-10-27"
  **提示：**您可以稍後再新增及編輯屬性和 meta 資料。
  4. 按一下**建立**，以新增閘道類型。
 10. 按**下一步**，開始新增所選取閘道類型的閘道裝置。
-11. 輸入裝置 ID，例如 `my_gateway_device`。裝置 ID 可用來識別 {{site.data.keyword.iot_short_notm}} 儀表板中的閘道裝置，它也是將閘道裝置連接至 {{site.data.keyword.iot_short_notm}} 的必要參數。**重要事項：**裝置 ID 不得超過 36 個字元，且只能包含：
+11. 輸入裝置 ID，例如 `my_gateway_device`。  
+裝置 ID 可用來識別 {{site.data.keyword.iot_short_notm}} 儀表板中的閘道裝置，它也是將閘道裝置連接至 {{site.data.keyword.iot_short_notm}} 的必要參數。  
+**重要事項：**裝置 ID 不得超過 36 個字元，且只能包含：
  <ul>
  <li>英數字元（a-z 、A-Z、0-9）</li>
  <li>連字號 (-)</li>
@@ -65,21 +70,26 @@ lastupdated: "2016-10-27"
  </ul>
  **提示：**若為連接網路的裝置，裝置 ID 可以是（例如）不含任何分隔冒號的裝置 MAC 位址。  
 12. 選用項目：按一下**其他欄位**，以新增閘道裝置資訊，例如序號、製造商、機型等等。  
+   
  **提示：**您可以稍後再新增及編輯此資訊。
 12. 選用項目：輸入裝置 JSON meta 資料。  
+   
  **提示：**您可以稍後再新增及編輯裝置 meta 資料。
 13. 按**下一步**，以完成新增閘道裝置。
 14. 驗證摘要資訊正確無誤，然後按一下**新增**，以新增閘道裝置。  
+  
 **提示：**您可以選擇接受自動產生的鑑別記號，或是自行提供鑑別記號。如果您選擇自行建立記號，請確定其長度介於 8 到 36 個字元之間、包含大小寫混合的字母、數字，以及連字號、底線或句點。記號不得包含重複的字元順序、字典單字、使用者名稱或其他預先定義的順序。
 15. 在裝置資訊頁面中，複製並儲存下列裝置資訊：  
  - 組織 ID，例如 `tubo8x`
  - 裝置類型，例如 `my_gateway_type`
  - 裝置 ID。**提示：**若為連接網路的裝置，這個值可以是（例如）沒有任何分隔冒號的 MAC 位址。
  - 鑑別方法，例如 `token`
- - 鑑別記號，例如 `PtBVriRqIg4uh)_-Kl`。  
-  **提示：**您需要有「組織 ID」、「鑑別記號」、「裝置類型」和「裝置 ID」，才能配置您的裝置來連接至 {{site.data.keyword.iot_short_notm}}。  
+ - 鑑別記號，例如 `PtBVriRqIg4uh)_-Kl`  
+  **提示：**您需要有「組織 ID」、「鑑別記號」、「裝置類型」及「裝置 ID」，才能配置您的裝置來連接至 {{site.data.keyword.iot_short_notm}}。  
 
 恭喜，您已登錄閘道裝置。現在您可以配置閘道裝置來連接至 {{site.data.keyword.iot_short_notm}}
+
+如需示範登錄閘道所需流程的逐步指示，請參閱[如何在 IBM Watson IoT Platform 中登錄閘道](https://developer.ibm.com/recipes/tutorials/how-to-register-gateways-in-ibm-watson-iot-platform/)秘訣。
 
 ## 步驟 2：將您的閘道連接至 {{site.data.keyword.iot_short_notm}}
 {: #connect_gateway}
@@ -100,6 +110,8 @@ lastupdated: "2016-10-27"
 
 
 當裝置順利連接至閘道時，它會顯示在 {{site.data.keyword.iot_short_notm}} 組織的儀表板上。
+
+如需詳細流程及說明，請參閱[將 Raspberry Pi 當作閘道連接至 Watson IoT](https://developer.ibm.com/recipes/tutorials/connecting-raspberry-pi-as-a-gateway-to-watson-iot-using-node-red/) 秘訣。 
 
 **附註：**在 {{site.data.keyword.iot_short_notm}} 儀表板中，直接連接到 {{site.data.keyword.iot_short_notm}} 的裝置和閘道會顯示狀態圖示，指出其已連接。儀表板會將透過閘道間接連接的裝置顯示為中斷連線，因為它無法得知裝置對閘道的連線情形。
 
@@ -125,7 +137,8 @@ lastupdated: "2016-10-27"
 您可以使用 EAA config.properties 檔案來設定基本軟體配置參數。
 
 若要更新 EAA 配置，請執行下列動作：
-1. 在 EAA 執行的閘道系統上，找出 EAA config.properties 檔案。例如：
+1. 在 EAA 執行的閘道系統上，找出 EAA config.properties 檔案。  
+例如：
 `../dglux-server/dslinks/ibm-watson-iot-edge-analytics-dslink-java-0.0.1/config.properties`
 2. 在開始編輯設定之前，請先備份檔案。
 3. 開啟 config.properties 檔案以進行編輯。

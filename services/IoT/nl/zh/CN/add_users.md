@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-09-16"
+  years: 2016, 2017
+lastupdated: "2017-01-24"
 
 ---
 
@@ -17,7 +17,13 @@ lastupdated: "2016-09-16"
 在“访问权”仪表板中，可以控制和管理对 {{site.data.keyword.iot_full}} 组织的访问权。您可以通过添加、邀请、注册或导入用户来添加用户。还可以通过分配角色来向用户授予不同的访问级别。
 {:shortdesc}
 
-## 用户访问权
+- [添加新用户](#adding-new-users)
+- [编辑用户](#editing-users)
+- [阻止用户访问](#blocking-users)
+- [除去用户](#removing-users)
+
+## 添加新用户
+{: #adding-new-users}
 
 在仪表板的**访问权**选项卡中，可以使用“添加”、“邀请”或“注册”功能来添加单个成员。还可以使用“导入”功能来同时添加、邀请或注册多个成员。
 
@@ -88,3 +94,31 @@ lastupdated: "2016-09-16"
 ### 构造 CSV 文件
 
 构造用于将成员导入组织中的 CSV 文件时，确保包含所用方法的必需信息。请使用逗号或分号来分隔列。上传 CSV 文件时，确保在 **CSV 设置**下选择正确的列分隔符。
+
+## 编辑用户
+{: #editing-users}
+
+可以对用户进行编辑，以更改其角色，添加、除去或更改访问权到期日期，或者添加或除去对组织的访问权。
+
+1. 在 {{site.data.keyword.iot_short_notm}} 仪表板左侧的导航栏中，单击**成员**。
+2. 单击要编辑的用户旁的**编辑**图标 ![编辑](/docs/images/edit_32.svg)。
+3. 对用户进行所需的更改。
+4. 单击**保存**。
+
+## 阻止用户访问
+{: #blocking-users}
+
+可以阻止用户访问 {{site.data.keyword.iot_short_notm}} 组织，同时仍保留其组织成员资格。
+
+1. 在 {{site.data.keyword.iot_short_notm}} 仪表板左侧的导航栏中，单击**成员**。
+2. 单击要阻止其访问 {{site.data.keyword.iot_short_notm}} 组织的用户旁的切换开关。
+
+
+## 除去用户
+{: #removing-users}
+
+可以从 {{site.data.keyword.iot_short_notm}} 组织中完全除去用户。除去用户的操作不可撤销，要恢复已除去用户的访问权，必须将相应用户[添加到平台](#adding-new-users)。
+
+1. 在 {{site.data.keyword.iot_short_notm}} 仪表板左侧的导航栏中，单击**成员**。
+2. 单击要除去的用户旁的**删除**图标 ![删除](/docs/images/trash_32.svg)。
+3. 单击确认对话框中的**删除**。

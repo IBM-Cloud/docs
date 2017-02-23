@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-09-16"
+  years: 2016, 2017
+lastupdated: "2017-01-10"
 
 ---
 
@@ -89,6 +89,18 @@ lastupdated: "2016-09-16"
 6. 单击“授权”对话框中的**确认**。
 
 设备数据现在正在存储到 {{site.data.keyword.cloudant}}。
+
+## 关于使用历史服务的诀窍  
+{: #recipes}
+
+以下诀窍描述了如何将 {{site.data.keyword.cloudant_short_notm}} 用作 {{site.data.keyword.iot_short}} 的历史存储：
+
+- [Configure {{site.data.keyword.cloudant_short_notm}} as Historian Data Storage for {{site.data.keyword.iot_short}}](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-parti/) 诀窍描述了如何在 {{site.data.keyword.cloudant_short_notm}} 上存储设备数据，并演示了如何在作为历史数据存储的 {{site.data.keyword.cloudant_short_notm}} 上配置并存储设备数据。
+
+- [Query and Process {{site.data.keyword.iot_short}} Device Data from {{site.data.keyword.cloudant_short_notm}}](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-partii) 诀窍显示了如何对 {{site.data.keyword.cloudant_short_notm}} 中存储的设备数据进行查询和执行数据处理操作。
+
+- [Visualize Watson IoT Device Data stored in Cloudant NoSQL DB](https://developer.ibm.com/recipes/?post_type=pnext_tutorial&p=27327) 诀窍显示了如何链接折线图卡和历史数据存储，以在 Watson IoT Platform 仪表板上显示设备数据。
+
 
 ## 创建新设计文档  
 {: #design_docs}

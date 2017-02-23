@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2016, 2017
 lastupdated: "2016-06-29"
 
 ---
@@ -89,7 +89,7 @@ http://<your_application_name>.mybluemix.net
 - CSS: 스타일시트
 - Images
 - JS: 기본 JavaScript 로직 파일
-- Historian: 히스토리안 시각화 코드
+- Historian: 히스토리언 시각화 코드
 - Realtime: 실시간 시각화 코드
 - Uicontroller.js: 사용자 인터페이스 제어 코드
 - Routes: 라우팅 로직 및 웹 애플리케이션

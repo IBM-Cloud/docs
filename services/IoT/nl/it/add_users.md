@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-09-16"
+  years: 2016, 2017
+lastupdated: "2017-01-24"
 
 ---
 
@@ -17,7 +17,13 @@ lastupdated: "2016-09-16"
 Dal dashboard di accesso, puoi controllare e gestire l'accesso alla tua organizzazione {{site.data.keyword.iot_full}}. Puoi aggiungere gli utenti aggiungendoli, registrandoli o importandoli. Puoi anche fornire diversi livelli di accesso ai tuoi utenti assegnando dei ruoli.
 {:shortdesc}
 
-## Accesso utente
+- [Aggiunta di nuovi utenti](#adding-new-users)
+- [Modifica degli utenti](#editing-users)
+- [Blocco dell'accesso utenti](#blocking-users)
+- [Rimozione di utenti](#removing-users)
+
+## Aggiunta di nuovi utenti
+{: #adding-new-users}
 
 Dalla scheda **Access** del dashboard, puoi aggiungere singoli membri utilizzando le funzioni di aggiunta, invito o registrazione. Puoi anche aggiungere, invitare o registrare più membri contemporaneamente utilizzando la funzione di importazione.
 
@@ -88,3 +94,31 @@ Per registrare più membri contemporaneamente, devi caricare un file (`.csv`) CS
 ### Messa a punto del tuo file CSV
 
 Quando metti a punto un file CSV per importare i membri nella tua organizzazione, assicurati di includere le informazioni obbligatorie per il metodo che stai utilizzando. Utilizza le virgole o i punti e virgola per separare le colonne. Quando carichi il file CSV, in **CSV settings**, assicurati di selezionare il separatore di colonna corretto.
+
+## Modifica degli utenti
+{: #editing-users}
+
+Gli utenti possono modificare il proprio ruolo, aggiungere, rimuovere o modificare una data di scadenza di accesso, oppure aggiungere o rimuovere l'accesso all'organizzazione.
+
+1. Dal tuo dashboard {{site.data.keyword.iot_short_notm}}, fai clic su **Members** dalla barra di navigazione sulla sinistra.
+2. Fai clic sull'icona **Edit** ![Edit](/docs/images/edit_32.svg) accanto all'utente che desideri modificare.
+3. Apporta le modifiche desiderate all'utente.
+4. Fai clic su **Save**.
+
+## Blocco dell'accesso utenti 
+{: #blocking-users}
+
+Gli utenti possono essere bloccati dall'accedere all'organizzazione {{site.data.keyword.iot_short_notm}}, mentre ancora mantengono l'appartenenza all'organizzazione.
+
+1. Dal tuo dashboard {{site.data.keyword.iot_short_notm}}, fai clic su **Members** dalla barra di navigazione sulla sinistra.
+2. Fai clic sull'attivazione accanto all'utente che desideri bloccare dall'accedere all'organizzazione {{site.data.keyword.iot_short_notm}}.
+
+
+## Rimozione di utenti
+{: #removing-users}
+
+Gli utenti possono essere rimossi completamente dall'organizzazione {{site.data.keyword.iot_short_notm}}. La rimozione degli utenti non può essere annullata e gli utenti devono essere [aggiunti alla piattaforma](#adding-new-users) per ripristinare l'accesso.
+
+1. Dal tuo dashboard {{site.data.keyword.iot_short_notm}}, fai clic su **Members** dalla barra di navigazione sulla sinistra.
+2. Fai clic sull'icona **Delete** ![Delete](/docs/images/trash_32.svg) accanto all'utente che deve essere rimosso.
+3. Fai clic su **Delete** nella finestra di dialogo di conferma.

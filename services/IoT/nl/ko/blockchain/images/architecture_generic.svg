@@ -17,7 +17,7 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="architecture_generic.svg"
-   inkscape:export-filename="C:\Users\IBM_ADMIN\GitHub\IoT\Blockchain-DOCS\iotblockchain_scratch\images\architecture_contracts.png"
+   inkscape:export-filename="S:\PUB\ABD142\ART\WORK\ship1\iot\blockchain\images\architecture_generic.png"
    inkscape:export-xdpi="299.98132"
    inkscape:export-ydpi="299.98132"><defs
    id="defs5647">
@@ -785,7 +785,7 @@
    sodipodi:linespacing="125%">IBM Blockchain</text>
 <text
    xml:space="preserve"
-   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.50000004;stroke-miterlimit:4;stroke-dasharray:none"
    x="464.91357"
    y="44.784241"
    id="text266398-3-9"
@@ -793,7 +793,9 @@
      sodipodi:role="line"
      x="464.91357"
      y="44.784241"
-     id="tspan6717-0">IBM Blockchain Fabric</tspan><tspan
+     id="tspan6717-0">IBM Blockchain <tspan
+   style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12.00000155px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;stroke:#000000;stroke-opacity:1;stroke-width:0.50000004;stroke-miterlimit:4;stroke-dasharray:none"
+   id="tspan4504">패브릭</tspan></tspan><tspan
      sodipodi:role="line"
      x="464.91357"
      y="59.784241"
@@ -824,11 +826,7 @@
    x="542.29352"
    font-size="11"
    id="text56834-0-3"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">
-  <tspan
-     style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.00000122px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
-     id="tspan4506">유효성 검증</tspan>
-</text>
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000122px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;">유효성 검증</text>
 <text
    sodipodi:linespacing="125%"
    y="289.89551"
@@ -886,13 +884,13 @@
      y="324.27954"
      id="tspan5855">IoT <tspan
    style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.00000122px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
-   id="tspan4510">블록체인</tspan></tspan><tspan
+   id="tspan4512">블록체인</tspan></tspan><tspan
      sodipodi:role="line"
      x="517.93188"
      y="338.02954"
      id="tspan6878-4-2"><tspan
    style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.00000122px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
-   id="tspan4512">모니터링</tspan> UI</tspan><tspan
+   id="tspan4514">모니터링</tspan> UI</tspan><tspan
      sodipodi:role="line"
      x="517.93188"
      y="351.77954"
@@ -943,10 +941,10 @@
    x="547.18237"
    font-size="11"
    id="text59612"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.25707579px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.94800046px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;"
    transform="scale(1.0456227,0.95636791)">
   <tspan
-     style="font-size:4.94800046px;-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+     style="font-size:4.94800046px;-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;"
      id="tspan6509">스마트 계약</tspan>
 </text>
 <g
@@ -992,7 +990,7 @@
      x="526.43842"
      sodipodi:role="line"><tspan
    style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.00000122px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
-   id="tspan4504">피어</tspan> A</tspan><tspan
+   id="tspan4506">피어</tspan> A</tspan><tspan
      y="159.83774"
      x="526.43842"
      sodipodi:role="line"
@@ -1039,11 +1037,14 @@
    x="547.41492"
    font-size="11"
    id="text59612-2"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.25707579px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.94800046px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;"
    transform="scale(1.0456227,0.95636791)">
   <tspan
-     style="font-size:4.94800046px;-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
-     id="tspan6509-5">스마트 계약</tspan>
+     style="font-size:4.94800046px;-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;"
+     id="tspan6509-5">스마<tspan
+   style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:4.94800046px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;"
+   id="tspan4510">트</tspan>
+ 계약</tspan>
 </text>
 <g
    transform="matrix(0.68983305,0,0,0.63094859,279.36057,5.2597555)"
@@ -1131,7 +1132,7 @@
      id="tspan266400"
      x="235.86133"
      y="39.842865">IoT <tspan
-   style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12.00000155px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;stroke:#000000;stroke-opacity:1;stroke-width:0.50000004;stroke-miterlimit:4;stroke-dasharray:none"
+   style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12.00000155px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;stroke-width:0.50000004;stroke-miterlimit:4;stroke-dasharray:none;stroke:#000000;stroke-opacity:1"
    id="tspan4502">블록체인의</tspan></tspan><tspan
      sodipodi:role="line"
      x="235.86133"
@@ -1301,7 +1302,7 @@
 </g>
 <text
    xml:space="preserve"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000122px;line-height:125%;font-family:Gulim;-inkscape-font-specification:'Gulim, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;"
    x="301.34351"
    y="140.62759"
    id="text18189-6-6-7"
@@ -1309,13 +1310,11 @@
      sodipodi:role="line"
      x="301.34351"
      y="140.62759"
-     id="tspan18193-1-8-5"
-     style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.00000122px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%">블록체인</tspan><tspan
+     id="tspan18193-1-8-5">블록체인</tspan><tspan
      sodipodi:role="line"
      x="301.34351"
      y="154.37759"
-     id="tspan5893"
-     style="-inkscape-font-specification:'Gulim, Normal';font-family:Gulim;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:11.00000122px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%">프록시</tspan></text>
+     id="tspan5893">프록시</tspan></text>
 
 
 

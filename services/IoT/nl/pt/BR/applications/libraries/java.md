@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-24"
+  years: 2015, 2016, 2017
+lastupdated: "2016-11-22"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2016-10-24"
 {: #java}
 
 
-É possível construir e customizar aplicativos que interagem com sua organização na {{site.data.keyword.iot_full}} usando Java. Uma biblioteca do cliente Java para a {{site.data.keyword.iot_short_notm}}, documentação e exemplos são fornecidos para ajudá-lo a começar com o desenvolvimento de aplicativos.
+É possível construir e customizar aplicativos que interagem com sua organização no {{site.data.keyword.iot_full}} usando Java™. Uma biblioteca do cliente Java para a {{site.data.keyword.iot_short_notm}}, documentação e exemplos são fornecidos para ajudá-lo a começar com o desenvolvimento de aplicativos.
 
 {:shortdesc}
 

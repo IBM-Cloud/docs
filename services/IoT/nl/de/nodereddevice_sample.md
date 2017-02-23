@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-21"
+lastupdated: "2017-02-23"
 
 ---
 
@@ -44,7 +44,7 @@ Gehen Sie wie folgt vor, um den Node-RED-Gerätesimulator zu erstellen und zu ve
     6. Fügen Sie den Inhalt der Zwischenablage in das Eingabefeld des Importknotens ein und klicken Sie auf **Ok**.
     Der Ablauf des Gerätesimulators wird nun in den Ablaufeditor importiert.
 
-2. Gerät bei {{site.data.keyword.iot_short_notm}} registrieren
+2. Gerät bei {{site.data.keyword.iot_short_notm}}   registrieren
 Führen Sie folgende Schritte aus, um das Node-RED-Beispielgerät zu verbinden:
  1. Wechseln Sie in {{site.data.keyword.Bluemix_notm}} zum Dashboard.
  2. Wählen Sie den Bereich aus, in dem Sie {{site.data.keyword.iot_short_notm}} bereitgestellt haben.

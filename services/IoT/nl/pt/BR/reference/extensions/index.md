@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-18"
+  years: 2015, 2016, 2017
+lastupdated: "2017-02-03"
 
 ---
 
@@ -39,7 +39,7 @@ A integração de Jasper integrada fornecida por nossa plataforma fornece suport
 É possível acessar as operações suportadas no drill down de dispositivo de um dispositivo conectado Jasper após a conclusão das etapas de configuração a seguir.
 
 ### APIs de REST para Jasper
-Para acessar a API de REST para Jasper, consulte a seção Jasper Extension na documentação [{{site.data.keyword.iot_short_notm}} API de REST HTTP](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension).
+Para acessar a API de REST para Jasper, veja a seção Extensão Jasper na documentação da [API de REST HTTP do {{site.data.keyword.iot_short_notm}}![Ícone de link externo](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension){: new_window}.
 
 ### Configuração para Jasper
 
@@ -91,7 +91,7 @@ A extensão AT&T permite as operações a seguir da AT&T:
 - Alterar o plano de taxa
 
 ### APIs de REST para AT&T
-Para acessar a API de REST para AT&T, consulte a seção AT&T Extension na documentação [{{site.data.keyword.iot_short_notm}} API de REST HTTP](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension).
+Para acessar a API de REST para AT&T, veja a seção Extensão AT&T na documentação da [API de REST HTTP do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension){: new_window}.
 
 ### Configuração para a AT&T
 
@@ -223,7 +223,7 @@ Se você tiver um dispositivo que esteja conectado ao serviço do {{site.data.ke
 - Status do Local
 
 ### APIs de REST para Orange
-Para acessar a API de REST para Orange, consulte a seção Orange Extension na documentação [{{site.data.keyword.iot_short_notm}} API de REST HTTP](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension).
+Para acessar a API de REST para Orange, veja a seção Extensão Orange na documentação da [API de REST HTTP do {{site.data.keyword.iot_short_notm}}![Ícone de link externo](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension){: new_window}.
 
 ### Configuração para a Orange
 
@@ -254,15 +254,27 @@ Quando a organização estiver configurada com sucesso, a seção *Extensões* s
 ## Armazenamento de dados históricos
 {: #historical_data}
 
-A extensão de armazenamento de dados históricos permite localizar e configurar serviços de armazenamento de mensagens compatíveis, tais como [{{site.data.keyword.cloudantfull}}](../../cloudant_connector.html)
-ou [{{site.data.keyword.messagehub_full}}](../../message_hub.html) para seus dados da IoT.
+A extensão de armazenamento de dados históricos permite localizar e configurar serviços de armazenamento de mensagens compatíveis, tais como [{{site.data.keyword.cloudantfull}}](../../cloudant_connector.html) ou [{{site.data.keyword.messagehub_full}}](../../message_hub.html) para seus dados da IoT.
 
-## Pacotes de gerenciamento de dispositivos customizados
+## Pacotes de gerenciamento de dispositivo customizado
 {: #device_mgmt}
 
-O gerenciamento de dispositivo é um recurso principal do {{site.data.keyword.iot_short_notm}}, no entanto, ele pode ser estendido para desenvolver funcionalidade adicional.
+O gerenciamento de dispositivo é um recurso principal do {{site.data.keyword.iot_short_notm}}, no entanto, ele pode ser estendido para desenvolver funcionalidade adicional. Os pacotes de gerenciamento de dispositivo customizado devem consistir em JSON válido e definir pelo menos uma ação de gerenciamento de dispositivo customizado.
 
-A extensão de gerenciamento de dispositivo permite instalar funções customizadas para gerenciamento de dispositivo. Para obter mais informações sobre as funções customizadas de gerenciamento de dispositivo, consulte [extensões customizadas de gerenciamento de dispositivo](../../devices/device_mgmt/custom_actions.html){: new_window}.
+Para obter mais informações sobre as funções de gerenciamento de dispositivo customizado, incluindo um exemplo do formato JSON necessário, veja [extensões customizadas de gerenciamento de dispositivo](../../devices/device_mgmt/custom_actions.html){: new_window}.
+
+### Incluindo um pacote de gerenciamento de dispositivo customizado
+
+Os pacotes de gerenciamento de dispositivo customizado podem ser incluídos usando o painel do {{site.data.keyword.iot_short_notm}} ou usando a API.
+
+Para incluir um pacote de gerenciamento de dispositivo customizado usando o painel do {{site.data.keyword.iot_short_notm}}:
+
+1. No painel do {{site.data.keyword.iot_short_notm}}, clique em **Configurações** na barra de navegação.
+2. Clique em **Pacotes de gerenciamento de dispositivo customizado**.
+3. Clique no botão **Incluir pacote**.
+4. Selecione seu arquivo de pacote e clique em **Abrir**.
+
+Para incluir um pacote de gerenciamento de dispositivo customizado usando a API, veja a [documentação da API do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 ## Blockchain
 {: #blockchain}
@@ -276,12 +288,17 @@ O {{site.data.keyword.iot_short_notm}} com blockchain permite que dispositivos I
 
 ### Configuração para blockchain
 
-A integração de blockchain ao {{site.data.keyword.iot_short_notm}} é uma oferta de serviços que não está ativada por padrão no {{site.data.keyword.iot_short_notm}}. Para ativar o recurso em seu ambiente, conclua as etapas a seguir:
- 1. No painel {{site.data.keyword.iot_short_notm}}, **Extensões**.
- 2. Clique no link **Diga-me mais** ao lado da extensão Blockchain para acessar a página Oferta de serviços blockchain de IoT.
- 3. Preencha e envie o formulário de solicitação de serviço.   
-A aprovação do serviço geralmente leva aproximadamente um dia. Após sua solicitação ser aprovada, você receberá um e-mail com instruções sobre como ativar a integração de blockchain em sua organização do {{site.data.keyword.iot_short_notm}}.
- 5. Retorne ao painel do {{site.data.keyword.iot_short_notm}} de sua organização para concluir a configuração. Para obter mais informações, consulte [Integração de blcokchain ao {{site.data.keyword.iot_short_notm}}](../../bl_blockchain_integration.html).
+A integração de blockchain ao {{site.data.keyword.iot_short_notm}} é uma oferta de serviços que não está ativada por padrão no {{site.data.keyword.iot_short_notm}}. Para ativar o recurso em sua organização, conclua as etapas a seguir:
+ 1. No painel do {{site.data.keyword.iot_short_notm}}, selecione **Extensões**.
+ 2. Na página **Extensões**, clique em **Incluir extensão**.
+ 3. Clique em **Incluir** próximo à extensão de Blockchain.
+ 4. No quadro Blockchain, clique em **Configurar**.
+ 3. Na seção **Ativar Blockchain**, clique no link **Saiba mais** para ir para a [página Oferta de serviços do IoT Blockchain ![Ícone de link externo](../../../../icons/launch-glyph.svg)](http://www.ibm.com/internet-of-things/iot-news/announcements/private-blockchain/){: new_window}.
+ 4. Clique em **Instalar com kickstart seu projeto de blockchain** para preencher e enviar o formulário *Explorar o potencial de IoT e Blockchain*.  
+ 5. Após a aprovação de sua solicitação, a IBM entrará em contato com você para ativar a integração de blockchain para sua organização.
+ 6. Retorne ao painel do {{site.data.keyword.iot_short_notm}} de sua organização para concluir a configuração seguindo as etapas de [Integração de blockchain ao {{site.data.keyword.iot_short_notm}}](../../bl_blockchain_integration.html).
+
+
 
 ## The Weather Company
 {: #weathercompany}
@@ -291,8 +308,8 @@ A extensão Weather Company combina dados de clima com seus dispositivos {{site.
 **Observação:** apenas dispositivos gerenciados podem configurar suas próprias localizações. Todos os dispositivos não gerenciados devem ter seus locais configurados manualmente usando a API. Para obter mais informações sobre a configuração de um local do dispositivo, consulte [Atualizar solicitações de localização](../../devices/device_mgmt/index.html#update-location).
 
 ### APIs de REST para The Weather Company
-Para acessar a API de REST para The Weather Company, consulte a seção
-Device Location Weather na documentação [{{site.data.keyword.iot_short_notm}} API de REST HTTP](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather).
+Para acessar a API de REST da The Weather Company, veja a
+seção Clima do local do dispositivo na documentação da [API de REST HTTP do {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather){: new_window}.
 
 ### Dados de clima
 
@@ -309,4 +326,4 @@ Para visualizar os dados de clima recuperados para um local do dispositivo, loca
 - Latitude.
 - Longitude.
 
-<!-- Weather data from The Weather Company extension can be retrieved by using the API. For information on the Weather Company API, see [The Weather Company API documentation](https://docs.internetofthings.ibmcloud.com/swagger/ext-twc.html). -->
+<!-- Weather data from The Weather Company extension can be retrieved by using the API. For information on the Weather Company API, see [The Weather Company API documentation ![External link icon](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/ext-twc.html){: new_window}. -->

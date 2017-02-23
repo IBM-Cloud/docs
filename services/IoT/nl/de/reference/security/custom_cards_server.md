@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-13"
+  years: 2016, 2017
+lastupdated: "2016-11-29"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2016-10-13"
 {:pre: .pre}
 
 # Server für angepasste Karten schützen
-{: #securing_custom_cards
+{: #securing_custom_cards}
 
 Server für angepasste Karten sind standardmäßige Web-Server, auf dem der JavaScript-Code von angepassten Karten gehostet wird. Zum Sicherstellen der Integrität Ihrer {{site.data.keyword.iot_short_notm}}-Umgebung sollten Sie Ihren Server für angepasste Karten schützen, indem Sie Schritte vornehmen, mit denen die Kartenquelle wie in diesem Abschnitt beschrieben geschützt wird.
 {:shortdesc}

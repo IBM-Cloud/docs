@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-23"
+  years: 2016, 2017
+lastupdated: "2017-01-16"
 
 ---
 
@@ -20,12 +20,11 @@ Utilizzando le analisi cloud {{site.data.keyword.iot_short}}, specifichi le cond
 
 Ad esempio, puoi creare una regola per assicurarti che quando viene eliminato un dispositivo o quando aumenta la temperatura del dispositivo, venga inviato un avviso al dashboard in un dispositivo dell'utente e che sia inviata una email all'amministratore.
 
-**Importante:** le funzioni di analisi vengono unite dal servizio {{site.data.keyword.iotrtinsights_full}} Se la tua organizzazione {{site.data.keyword.iot_short_notm}} viene utilizzata come origine dati per un'istanza {{site.data.keyword.iotrtinsights_short}} esistente, Cloud and Edge Analytics non è abilitato finché non siano state migrate le istanze {{site.data.keyword.iotrtinsights_short}} esistenti. Continuare ad utilizzare il dashboard {{site.data.keyword.iotrtinsights_short}} per le tue analisi finché non viene completata la migrazione. Per ulteriori informazioni, consulta il blog [IBM Watson IoT Platform](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} in IBM developerWorks e i tuoi dashboard dell'istanza {{site.data.keyword.iotrtinsights_short}} esistenti.  
-
 ## Prima di cominciare
 {: #byb}
 Assicurati che le proprietà del dispositivo che desideri utilizzare come le condizioni nelle tue regole siano state associate agli schemi. Consulta [Connessione dispositivi](iotplatform_task.html) e [Creazione di schemi](im_schemas.html) per ulteriori informazioni.
 
+Inoltre, controlla la 'ricetta' [Using Rules and Actions with {{site.data.keyword.iot_short}} Cloud Analytics](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/) per comprendere le regole e le azioni che vengono utilizzate in Cloud Analytics.
 
 ## Gestione delle regole e delle azioni  
 {: #managing_rules}
@@ -55,9 +54,9 @@ Per creare una regola:
 3. Per configurare la logica della regola, aggiungi una o più condizioni IF da utilizzare come trigger per la regola.  
 Puoi aggiungere condizioni in righe parallele per applicarle come condizioni OR o puoi aggiungere le condizioni in colonne sequenziali per applicarle come condizioni AND.  
 **Importante:** per attivare una condizione che confronta due proprietà o per attivare due o più condizioni della proprietà combinate sequenzialmente utilizzando AND, i punti dei dati di attivazione devono essere inclusi nello stesso messaggio del dispositivo. Se i dati sono ricevuti in più di un messaggio, la condizione o le condizioni in sequenza non vengono attivate.  
-**Esempi:**
+**Esempi:**  
 Una regola semplice può attivare una avviso se un valore del parametro è maggiore di un valore specificato:
-Condizione = `temp_cpu>80`
+Condizione = `temp_cpu>80`  
 Una regola più complessa può essere attivata quando viene soddisfatta una combinazione di soglie:
 Condizione = `temp_cpu>60 AND cpu_load>90`   
 
@@ -95,7 +94,7 @@ Condizione | Descrizione
 Attiva ogni volta che le condizioni sono soddisfatte | La regola viene attivata ogni volta che vengono soddisfatte le condizioni della regola.
 Attiva se le condizioni sono soddisfatte *N* volte in *M* *giorni/ore/minuti/intervallo personalizzato* | La regola viene attivata quando vengono soddisfatte le condizioni *N* volte nell'intervallo di tempo selezionato e non viene riattivata nuovamente finché non trascorre l'intervallo di tempo selezionato. </br>Esempio: il requisito di attivazione condizionale =`Trigger only once if conditions are met 4 times in 30 minutes`. Il dispositivo invia un nuovo messaggio ogni cinque minuti. A mezzogiorno, la temperatura iniziale supera i 90 gradi, che soddisfa la condizione. Il contatore di attivazione condizionale viene avviato ma la regola non è ancora stata attivata.  Dopo 15 minuti e tre ulteriori messaggi che indicano che è stato ricevuto `temp > 90`, la regola viene attivata. La regola non viene quindi attivata per altri 15 minuti indipendentemente dalla temperatura.
 Attiva solo la prima volta che vengono soddisfatte le condizioni e reimposta quando le condizioni non vengono più soddisfatte. | La regola viene attivata quando vengono soddisfatte le condizioni ma non viene attivata dei successivi messaggi che soddisfano le stesse condizioni. I criteri di attivazione sono reimpostati dal primo messaggio che non soddisfa le condizioni della regola.
-Attiva se le condizioni sono soddisfatte per *M* *days/hours/minutes/custom*. | La regola viene attivata dopo l'intervallo di tempo selezionato se tutti i punti dati ricevuti durante l'intervallo di tempo soddisfano le condizioni o se non viene ricevuto alcun altro punto dati. L'intervallo di tempo avvia le condizioni inzialmente soddisfatte.
+Attiva se le condizioni sono soddisfatte per *M* *days/hours/minutes/custom*. | La regola viene attivata dopo l'intervallo di tempo selezionato se tutti i punti dati ricevuti durante l'intervallo di tempo soddisfano le condizioni o se non viene ricevuto alcun altro punto dati. L'intervallo di tempo avvia le condizioni inizialmente soddisfatte.
 
 
 
@@ -248,7 +247,7 @@ Dove il primo nodo è un nodo http e il secondo nodo è un nodo twilio.
   <li>SMS a - `Numero di telefono dell'ingegnere del servizio`</li>
   <li>Nome - **SMS**</li>
   </ul>
-  4. Collega i nodi tra loro
+  4. Collega i nodi tra loro  
   Collega i nodi http e twilio tra loro unendo la porta di output di uno alla porta di input dell'altro.
   5. Fai clic sul pulsante **Deploy** per distribuire il flusso al server
 4. Nel dashboard {{site.data.keyword.iot_short}}, vai a **Rules > Actions** e crea una nuova azione che dispone dei seguenti parametri:
@@ -324,3 +323,17 @@ Variabile | Descrizione
 `{{ruleDescription}}`| La descrizione della regola che include l'azione.
 `{{ruleCondition}}` | La condizione della regola che attiva l'azione.
 `{{message}}` | Il messaggio del dispositivo non elaborato che include il valore del punto dati che attiva la regola.
+
+## Ricette in Cloud Analytics
+
+Le seguenti 'ricette' descrivono come utilizzare le funzioni Cloud Analytics in differenti casi di utilizzo:
+
+- [Real Time Data Analysis Using IBM Watson™ IoT Platform Analytics](https://developer.ibm.com/recipes/tutorials/real-time-data-analysis-using-ibm-watson-iot-platform-analytics/)
+
+- [Predictive Analytics on IOT Sample Data](https://developer.ibm.com/recipes/tutorials/predictive-analytics-on-iot-sample-data/)
+
+- [Device List Card SIMPLIFIES Real Time Device Monitoring on WIoTP Dashboard](https://developer.ibm.com/recipes/tutorials/device-list-card-simplifies-real-time-device-monitoring-on-wiotp-dashboard/)
+
+- [Perform Actions in IBM Watson IoT Platform Cloud Analytics](https://developer.ibm.com/recipes/tutorials/perform-actions-in-ibm-watson-iot-platform-cloud-analytics/)
+
+- [Use IBM Data Science Experience to detect time series anomalies](https://developer.ibm.com/recipes/tutorials/use-ibm-data-science-experience-to-detect-time-series-anomalies/)

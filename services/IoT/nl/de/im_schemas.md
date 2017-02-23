@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-13"
+  years: 2016, 2017
+lastupdated: "2017-02-03"
 
 ---
 
@@ -20,7 +20,7 @@ Zum Verwenden von {{site.data.keyword.iot_short}}-Funktionen wie beispielsweise 
 
 **Wichtig:** Zur Verwendung von Regeln und Aktionen sind Schemas erforderlich. Informationen finden Sie in [Cloud Analytics](cloud_analytics.html#rules).
 
-**Wichtig:** Die Analysefunktionen stammen aus dem {{site.data.keyword.iotrtinsights_full}}-Service und werden zusammengeführt. Wenn Ihre {{site.data.keyword.iot_short_notm}}-Organisation als Datenquelle für eine vorhandene {{site.data.keyword.iotrtinsights_short}}-Instanz verwendet wird, sind Cloud Analytics und Edge Analytics erst aktiviert, wenn die vorhandenen {{site.data.keyword.iotrtinsights_short}}-Instanzen migriert wurden. Verwenden Sie weiterhin das {{site.data.keyword.iotrtinsights_short}}-Dashboard für Ihre Analysevorhaben, bis die Migration abgeschlossen ist. Weitere Informationen finden Sie im [Blog zu IBM Watson IoT Platform](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} in IBM developerWorks und in den Dashboards Ihrer vorhandenen {{site.data.keyword.iotrtinsights_short}}-Instanz.  
+**Wichtig:** Die Analysefunktionen stammen aus dem {{site.data.keyword.iotrtinsights_full}}-Service und werden zusammengeführt. Wenn Ihre {{site.data.keyword.iot_short_notm}}-Organisation als Datenquelle für eine vorhandene {{site.data.keyword.iotrtinsights_short}}-Instanz verwendet wird, sind Cloud Analytics und Edge Analytics erst aktiviert, wenn die vorhandenen {{site.data.keyword.iotrtinsights_short}}-Instanzen migriert wurden. Verwenden Sie weiterhin das {{site.data.keyword.iotrtinsights_short}}-Dashboard für Ihre Analysevorhaben, bis die Migration abgeschlossen ist. Weitere Informationen finden Sie im [Blog zu IBM Watson IoT Platform ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} in IBM developerWorks und in den Dashboards Ihrer bestehenden {{site.data.keyword.iotrtinsights_short}}-Instanz.  
 
 ## Geräteschema hinzufügen
 {: #add_schema}
@@ -67,7 +67,9 @@ Gehen Sie wie folgt vor, um ein Schema hinzuzufügen:
  `Float` oder `Integer`.</li>
  <li>Eigenschaft - Eigenschafts-ID für die virtuelle Eigenschaft. Beispiel:  
 `temp_virt`</li>
-    <li>Berechngung - Fügen Sie mindestens eine Komponente hinzu, um eine gültige Funktion zu definieren. Sie können Eigenschaften, numerische Werte und mathematische Operatoren wie beispielsweise +, -, \*, /, (, ), AVG und z-Faktorwerte verwenden, um Ihre Berechnung zu erstellen. </br>Die AVG-Komponente wird zum Berechnen des Eigenschaftswerts verwenden, der für einen festgelegten Zeitraum durchschnittlich auftritt. </br>Die z-Faktorwert-Komponente gibt die Differenz in Standardabweichungseinheiten zwischen dem Datenpunkt und dem durchschnittlichen Datenpunktwert in Bezug auf eine Anzahl von Datenpunkten oder einen bestimmten Zeitraum zurück.</br> **Wichtig:** Die AVG- und z-Faktorwert-Komponenten geben Eigenschaftsdatenpunkte nur zurück, wenn die Daten für die ausgewählte Eigenschaften von einem Gerät stammen, das mit einem Gateway verbunden ist, auf dem ein Edge Analytics-Agent installiert ist. Weitere Informationen finden Sie in [Edge Analytics-Agent installieren](gateways/dashboard.html#edge). Regelbedingungen, die AVG- und z-Faktorwert-Werte vergleichen, werden nicht unterstützt.</li>
+    <li>Berechnung - Fügen Sie mindestens eine Komponente hinzu, um eine gültige Funktion zu definieren. Sie können Eigenschaften, numerische Werte und mathematische Operatoren wie +, -, \*, /, ( und ) verwenden.  
+    Klicken Sie auf **Erweitert**, um eine Gruppe mit Formeln aufzurufen, die für Datenpunktreihen auf Edge-Geräten verwendet werden können. Weitere Informationen zu den erweiterten Formeln finden Sie in [Erweiterte Berechnungen für virtuelle Edge-Eigenschaften](im_vir_calculations.html).  
+    **Wichtig:** Regelbedingungen zum Vergleichen virtueller Eigenschaften auf der Basis erweiterter Formeln werden nicht unterstützt.</li>
     <li>Dateneinheit - Optional: Die Einheit für die Daten der Eigenschaft. Beispiel: `C` oder `Mph`</li>
     <li> Dezimalstellen - Optional, nur Gleitkommawert: Die Anzahl der in die Gerätedaten einzuschließenden Dezimalstellen.</li>
    </ul>

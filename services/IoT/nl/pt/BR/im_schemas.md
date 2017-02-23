@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-13"
+  years: 2016, 2017
+lastupdated: "2017-02-03"
 
 ---
 
@@ -20,7 +20,7 @@ Para usar recursos do {{site.data.keyword.iot_short}}, como regras e ações, de
 
 **Importante:** esquemas são necessários para o uso de regras e ações. Para obter informações, consulte [Cloud Analytics](cloud_analytics.html#rules).
 
-**Importante:** os recursos de análise de dados são mesclados a partir do serviço do {{site.data.keyword.iotrtinsights_full}}. Se sua organização do {{site.data.keyword.iot_short_notm}} for usada como uma origem de dados para uma instância existente do {{site.data.keyword.iotrtinsights_short}}, Cloud e Edge Analytics não estarão ativados até após a migração das instâncias existentes do {{site.data.keyword.iotrtinsights_short}}. Continue a usar o painel do {{site.data.keyword.iotrtinsights_short}} para suas necessidades de análise de dados até que a migração seja concluída. Para obter mais informações, consulte o [Blog do IBM Watson Platform IoT](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} no IBM developerWorks e os painéis de sua instância existente do {{site.data.keyword.iotrtinsights_short}}.  
+**Importante:** os recursos de análise de dados são mesclados a partir do serviço do {{site.data.keyword.iotrtinsights_full}}. Se sua organização do {{site.data.keyword.iot_short_notm}} for usada como uma origem de dados para uma instância existente do {{site.data.keyword.iotrtinsights_short}}, Cloud e Edge Analytics não estarão ativados até após a migração das instâncias existentes do {{site.data.keyword.iotrtinsights_short}}. Continue a usar o painel do {{site.data.keyword.iotrtinsights_short}} para suas necessidades de análise de dados até que a migração seja concluída. Para obter mais informações, veja o [blog do IBM Watson IoT Platform ![Ícone de link externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} no IBM developerWorks e seus painéis de instância existentes do {{site.data.keyword.iotrtinsights_short}}.  
 
 ## Incluindo um esquema de dispositivo
 {: #add_schema}
@@ -69,7 +69,9 @@ exemplo:
  <li>Propriedade - Um identificador de propriedade para a propriedade virtual. Por
 exemplo:  
 `temp_virt`</li>
-    <li>Cálculo - Inclua um ou mais componentes para definir uma função válida. É possível usar propriedades, valores numéricos e operadores matemáticos, como +, -, \*, /, (, ), AVG e Z-score para construir seu cálculo. </br>O componente AVG é usado para calcular o valor médio da propriedade por um período de tempo especificado. </br>O componente Z-score retorna a diferença em unidades de desvio padrão entre o ponto de dados e o valor do ponto de dados médio sobre um número de pontos de dados ou durante um período de tempo.</br> **Importante:**  os componentes AVG e Z-score retornam pontos de dados de propriedade apenas se os dados para a propriedade selecionada vierem de um dispositivo conectado a um gateway com um Edge Analytics Agent instalado. Para obter mais informações, consulte [Instalando o Edge Analytics Agent](gateways/dashboard.html#edge). Além disso, as condições da regra que comparam os valores AVG e Z-score não são suportadas.</li>
+    <li>Cálculo - Inclua um ou mais componentes para definir uma função válida. É possível usar propriedades, valores numéricos e operadores matemáticos, como +, -, \*, /, ( e ).  
+    Clique em **Avançado** para obter um conjunto de fórmulas para usar com séries de pontos de dados em dispositivos de borda. Para obter mais informações sobre as fórmulas avançadas, veja [Cálculos avançados para propriedades virtuais de borda](im_vir_calculations.html).  
+    **Importante:** condições de regra que comparam propriedades virtuais com base em fórmulas avançadas não são suportadas.</li>
     <li>Unidade de dados - Opcional: a unidade de dados da propriedade. Por exemplo: `C` ou `Mph`</li>
     <li> Casas decimais - Opcional, somente valor flutuante: o número de decimais para incluir nos dados do dispositivo.</li>
    </ul>

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-09-16"
+  years: 2016, 2017
+lastupdated: "2017-01-10"
 
 ---
 
@@ -89,6 +89,18 @@ Bluemix 組織で開発者特権を持っていることと、Bluemix を介し�
 6. 許可ダイアログ・ボックスの**「Confirm」**をクリックします。
 
 これで、デバイス・データが {{site.data.keyword.cloudant}} に保管されます。
+
+## ヒストリアン・サービスの使用に関するレシピ  
+{: #recipes}
+
+以下のレシピは、{{site.data.keyword.iot_short}} 用ヒストリアン・ストレージとしての {{site.data.keyword.cloudant_short_notm}} の使用法を示しています。
+
+- [Configure {{site.data.keyword.cloudant_short_notm}} as Historian Data Storage for {{site.data.keyword.iot_short}}](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-parti/) レシピでは、{{site.data.keyword.cloudant_short_notm}} にデバイス・データがどのように保管されるかを説明し、ヒストリアン・データ・ストレージとしての {{site.data.keyword.cloudant_short_notm}} にデバイス・データを構成して保管する方法を示しています。
+
+- [Query and Process {{site.data.keyword.iot_short}} Device Data from {{site.data.keyword.cloudant_short_notm}}](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-partii) レシピでは、{{site.data.keyword.cloudant_short_notm}} に保管されたデバイス・データに対する照会とデータ処理操作実行の方法について説明しています。
+
+- [Visualize Watson IoT Device Data stored in Cloudant NoSQL DB](https://developer.ibm.com/recipes/?post_type=pnext_tutorial&p=27327) レシピでは、ライン・チャート・カードとヒストリアン・データ・ストレージ間をリンクさせて、Watson IoT Platform ダッシュボードにデバイス・データを表示する方法について説明しています。
+
 
 ## 設計文書の新規作成  
 {: #design_docs}

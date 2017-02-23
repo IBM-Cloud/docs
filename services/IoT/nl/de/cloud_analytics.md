@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-23"
+  years: 2016, 2017
+lastupdated: "2017-01-16"
 
 ---
 
@@ -20,12 +20,11 @@ Mithilfe von Cloud Analytics für {{site.data.keyword.iot_short}} geben Sie Rege
 
 Beispielsweise können Sie eine Regel erstellen, um sicherzustellen, dass ein Alert an das Dashboard auf dem Gerät eines Benutzers und eine E-Mail an den Administrator gesendet wird, wenn die Verbindung zum Gerät verloren geht oder die Temperatur des Geräts einen Höchststand erreicht.
 
-**Wichtig:** Die Analysefunktionen stammen aus dem {{site.data.keyword.iotrtinsights_full}}-Service und werden zusammengeführt. Wenn Ihre {{site.data.keyword.iot_short_notm}}-Organisation als Datenquelle für eine vorhandene {{site.data.keyword.iotrtinsights_short}}-Instanz verwendet wird, sind Cloud Analytics und Edge Analytics erst aktiviert, wenn die vorhandenen {{site.data.keyword.iotrtinsights_short}}-Instanzen migriert wurden. Verwenden Sie weiterhin das {{site.data.keyword.iotrtinsights_short}}-Dashboard für Ihre Analysevorhaben, bis die Migration abgeschlossen ist. Weitere Informationen finden Sie im [Blog zu IBM Watson IoT Platform](https://developer.ibm.com/iotplatform/2016/04/28/iot-real-time-insights-and-watson-iot-platform-a-match-made-in-heaven/){: new_window} bei IBM developerWorks und in den Dashboards Ihrer vorhandenen {{site.data.keyword.iotrtinsights_short}}-Instanz.  
-
 ## Vorbereitende Schritte
 {: #byb}
 Stellen Sie sicher, dass die Geräteeigenschaften, die Sie als Bedingungen in Ihren Regeln verwenden möchten, Schemas zugeordnet wurden. Weitere Informationen finden Sie in [Geräte verbinden](iotplatform_task.html) und [Schemas erstellen](im_schemas.html).
 
+Lesen Sie außerdem die Anleitung [Regeln und Aktionen mit {{site.data.keyword.iot_short}} Cloud Analytics verwenden](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/), um die in Cloud Analytics verwendeten Regeln und Aktionen kennenzulernen.
 
 ## Regeln und Aktionen verwalten  
 {: #managing_rules}
@@ -55,9 +54,9 @@ Gehen Sie wie folgt vor, um eine Regel zu erstellen:
 3. Fügen Sie zum Einrichten der Regellogik mindestens eine IF-Bedingung hinzu, die als Auslöser für die Regel verwendet wird.  
 Sie können Bedingungen in parallelen Reihen hinzufügen, um sie als OR-Bedingungen anzuwenden, oder Sie können Bedingungen in sequenziellen Spalten hinzufügen, um sie als AND-Bedingungen anzuwenden.  
 **Wichtig:** Um eine Bedingung auszulösen, die zwei Eigenschaften vergleicht, oder um mindestens zwei Eigenschaftsbedingungen auszulösen, die sequenziell durch AND verbunden sind, müssen die auslösenden Datenpunkte in dieselbe Gerätenachricht eingeschlossen werden. Wenn die Daten in mehr als einer Nachricht empfangen werden, werden die Bedingung oder die sequenziellen Bedingungen nicht ausgelöst.  
-**Beispiele:**
+**Beispiele:**  
 Eine einfache Regel kann einen Alert auslösen, wenn ein Parameterwert größer als ein angegebener Wert ist:
-Bedingung = `temp_cpu>80`
+Bedingung = `temp_cpu>80`  
 Eine komplexere Regel kann zu einem Auslösen führen, wenn eine Übereinstimmung mit einer Kombination aus Schwellenwerten auftritt:
 Bedingung = `temp_cpu>60 AND cpu_load>90`   
 
@@ -248,8 +247,8 @@ Dabei ist der erste Knoten ein HTTP-Knoten und der zweite ist ein Twilio-Knoten.
   <li>SMS an - `Telefonnummer des Servicetechnikers`</li>
   <li>Name - **SMS**</li>
   </ul>
-  4. Knoten verbinden
-Stellen Sie eine Verbindung zwischen dem HTTP- und dem Twilio-Knoten her, indem Sie zwischen dem Ausgabeport des einen und dem Eingabeport des anderen eine Verbindung ziehen.
+  4. Verbinden Sie die Knoten miteinander  
+  Verbinden Sie die http- und twilio-Knoten miteinander, indem Sie jeweils den Ausgabeport des einen Knotens zum Eingangsport des anderen Knotens ziehen.
   5. Klicken Sie auf die Schaltfläche für **Bereitstellen**, um den Ablauf auf dem Server bereitzustellen.
 4. Wechseln Sie im {{site.data.keyword.iot_short}}-Dashboard zu **Regeln > Aktionen** und erstellen Sie eine neue Aktion, die folgende Parameter aufweist:
  - Typ - **Node-RED**
@@ -324,3 +323,17 @@ Variable | Beschreibung
 `{{ruleDescription}}`| Die Beschreibung der Regel, die die Aktion enthält.
 `{{ruleCondition}}` | Die Regelbedingung, die die Aktion ausgelöst hat.
 `{{message}}` | Die Rohfassung der Gerätenachricht, die den Datenpunktwert enthält, durch den die Regel ausgelöst wurde.
+
+## Anleitungen für Cloud Analytics
+
+Die folgenden Anleitungen beschreiben die Vorgehensweise zur Verwendung von Cloud Analytics-Funktionen in verschiedenen Anwendungsfällen:
+
+- [Analyse von Echtzeitdaten mit IBM Watson™ IoT Platform Analytics](https://developer.ibm.com/recipes/tutorials/real-time-data-analysis-using-ibm-watson-iot-platform-analytics/)
+
+- [Vorhersageanalyse für IOT-Beispieldaten](https://developer.ibm.com/recipes/tutorials/predictive-analytics-on-iot-sample-data/)
+
+- [Gerätelistenkarte VEREINFACHT die Echtzeitgeräteüberwachung im WIoTP-Dashboard](https://developer.ibm.com/recipes/tutorials/device-list-card-simplifies-real-time-device-monitoring-on-wiotp-dashboard/)
+
+- [Aktionen in IBM Watson IoT Platform Cloud Analytics ausführen](https://developer.ibm.com/recipes/tutorials/perform-actions-in-ibm-watson-iot-platform-cloud-analytics/)
+
+- [Mithilfe von IBM Data Science Experience Anomalien in Zeitreihen erkennen](https://developer.ibm.com/recipes/tutorials/use-ibm-data-science-experience-to-detect-time-series-anomalies/)

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-13"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-12"
 
 ---
 
@@ -36,6 +36,8 @@ Ein Gerätemanagementprotokoll wird auf der Grundlage eines MQTT-Nachrichtenprot
 4. Ein Gerät kann Aktualisierungen zu seiner Position, zu Diagnoseinformationen und Fehlercodes mithilfe des Gerätemanagementprotokolls kommunizieren.
 5. Zum Handhaben nicht mehr vorhandener Geräte in Beständen mit einer großen Zahl von Geräten enthält die Anforderung für die Operation **Verwaltete Geräte** einen optionalen Parameter für den Lebenszyklus. Der Parameter für den Lebenszyklus ist die Anzahl der Sekunden, in denen das Geräte eine weitere Anforderung des Typs **Verwaltete Geräte** vornehmen muss, um zu verhindern, dass es als 'ruhend' klassifiziert und damit zu einem 'nicht verwalteten Gerät' wird.
 6. Wenn ein Gerät stillgelegt wird, können Sie es mithilfe des Dashboards oder der REST-API aus {{site.data.keyword.iot_short_notm}} entfernen.
+
+Siehe die Anleitung [Raspberry Pi als verwaltetes Gerät mit IBM Watson IoT Platform verbinden](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-managed-device-to-ibm-iot-foundation/).
 
 ### Zusammenfassung der Rückkehrcodes
 

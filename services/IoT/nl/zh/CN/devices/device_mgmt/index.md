@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-13"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-12"
 
 ---
 
@@ -36,6 +36,8 @@ lastupdated: "2016-09-13"
 4. 设备可以使用设备管理协议传达有关其位置、诊断信息和错误代码的更新。
 5. 为了处理大量设备群中失效的设备，**受管设备**操作请求会包含可选的 lifetime 参数。lifetime 参数是秒数，设备必须在此期间发起另一个**受管设备**请求，才能避免被分类为休眠而变成非受管设备。
 6. 设备退役后，可以使用仪表板或 REST API 将其从 {{site.data.keyword.iot_short_notm}} 中除去。
+
+请参阅 [Connect Raspberry Pi as Managed Device to IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-managed-device-to-ibm-iot-foundation/) 诀窍。
 
 ### 返回码摘要
 

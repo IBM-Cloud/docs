@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-14"
+  years: 2015, 2016, 2017
+lastupdated: "2016-11-17"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -57,12 +57,15 @@ MQTT 인증을 사용하려면 MQTT 연결 시 사용자 이름과 비밀번호�
 |게이트웨이 1 |mygateway |gateway1 |
 |디바이스 1 |mydevice |device1 |
 
--   게이트웨이 1은 고유 상태 이벤트를 공개할 수 있습니다.
+-   게이트웨이 1은 고유 상태 이벤트를 공개할 수 있습니다.  
     `iot-2/type/mygateway/id/gateway1/evt/status/fmt/json`
--   게이트웨이 1은 디바이스 1 대신 상태 이벤트를 공개할 수 있습니다.
+-   게이트웨이 1은 디바이스 1 대신 상태 이벤트를 공개할 수 있습니다.  
     `iot-2/type/mydevice/id/device1/evt/status/fmt/json`
 
 **중요:** 메시지 페이로드는 최대 131072바이트로 제한됩니다. 이 한계보다 큰 메시지는 거부됩니다.
+
+### 보유 메시지
+{{site.data.keyword.iot_short_notm}} 조직은 보유 MQTT 메시지를 공개할 권한이 없습니다. 게이트웨이가 보유 메시지를 전송하는 경우, 보유 메시지 플래그가 true로 설정되어 있으면 {{site.data.keyword.iot_short_notm}} 서비스에서 이를 대체하며 보유 메시지 플래그가 false로 설정된 것처럼 메시지를 처리합니다. 
 
 ## 명령 구독
 {: #subscribing_cmds}
@@ -82,11 +85,11 @@ MQTT `+` 와일드카드는 여러 명령 소스를 구독하기 위해 `typeId`
 |디바이스 1 | mydevice    | device1    |
 
 
--   게이트웨이 1은 게이트웨이에서 지시하는 명령을 구독할 수 있습니다.
+-   게이트웨이 1은 게이트웨이에서 지시하는 명령을 구독할 수 있습니다.  
     `iot-2/type/mygateway/id/gateway1/cmd/+/fmt/+`
--   게이트웨이 1은 디바이스 1에 보낸 명령을 구독할 수 있습니다.
+-   게이트웨이 1은 디바이스 1에 보낸 명령을 구독할 수 있습니다.  
     `iot-2/type/mydevice/id/device1/cmd/+/fmt/+`
--   게이트웨이 1은 `mydevice` 유형의 디바이스에 전송되는 명령을 구독할 수 있습니다.
+-   게이트웨이 1은 `mydevice` 유형의 디바이스에 전송되는 명령을 구독할 수 있습니다.  
      `iot-2/type/mydevice/id/+/cmd/+/fmt/+`
 
 **중요:** `cleansession=false`로 지정되는 MQTT 지속적 세션은 게이트웨이에 연결되는 디바이스를 검색하지 않습니다. 디바이스가 게이트웨이 A에 연결한 다음 나중에 게이트웨이 B에 연결하면 연결이 끊긴 동안 해당 디바이스의 게이트웨이 A에 공개된 메시지는 받지 않습니다. 게이트웨이는 게이트웨이에 연결된 디바이스가 아니라 MQTT 클라이언트와 구독을 소유합니다.
@@ -105,7 +108,7 @@ MQTT `+` 와일드카드는 여러 명령 소스를 구독하기 위해 `typeId`
 ## 게이트웨이 알림
 {: #notification}
 
-주제 구독 또은 공개 유효성 검증 중이나 자동 등록 중에 오류가 발생하면 게이트웨이 디바이스에 알림을 보냅니다. 게이트웨이에서 다음 주제를 구독하여 이러한 알림을 받으므로 `typeId` 및 `deviceId` 값을 대체할 수 있습니다.
+주제 구독 또는 공개 유효성 검증 중이나 자동 등록 중에 오류가 발생하면 게이트웨이 디바이스에 알림을 보냅니다. 게이트웨이에서 다음 주제를 구독하여 이러한 알림을 받으므로 `typeId` 및 `deviceId` 값을 대체할 수 있습니다.
 
 ```
 iot-2/type/**typeId**/id/**deviceId**/notify
@@ -154,7 +157,7 @@ iot-2/type/**typeId**/id/**deviceId**/notify
 ### 서비스 품질(QoS) 레벨 및 정리 세션
 {: #quality_service}
 
-관리 게이트웨이에서 서비스 품질(QoS) 레벨이 0 또는 1인 메시지를 공개할 수 있습니다. 게이트웨이의 메시지는 보유된 메시지가 아니어야 합니다.
+관리 게이트웨이는 서비스 품질(QoS) 레벨이 0 또는 1인 메시지를 공개할 수 있습니다. 
 
 QoS=0인 메시지는 버릴 수 있으며 메시징 서버가 다시 시작된 후 유지되지 않습니다. QoS=1인 메시지는 큐에 넣을 수 있으며 메시징 서버가 다시 시작된 후 유지됩니다. 구독 지속성에 따라 요청을 큐에 넣을지가 판별됩니다. 구독한 연결의 `cleansession` 매개변수에 따라 구독 지속성이 판별됩니다.  
 

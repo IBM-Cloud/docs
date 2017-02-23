@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2016, 2017
 lastupdated: "2016-10-18"
 
 ---
@@ -15,7 +15,7 @@ lastupdated: "2016-10-18"
 # 针对设备开发者的 Java
 {: #java}
 
-您可以使用 Java 来构建和定制设备，以用于在 {{site.data.keyword.iot_full}} 上与您的组织进行交互。提供的 {{site.data.keyword.iot_short_notm}} Java 客户机库、文档和示例可帮助您开始进行设备开发。
+您可以使用 Java™ 来构建和定制设备，以用于在 {{site.data.keyword.iot_full}} 上与您的组织进行交互。提供的 {{site.data.keyword.iot_short_notm}} Java 客户机库、文档和示例可帮助您开始进行设备开发。
 {:shortdesc}
 
 ## 下载 Java 客户机和资源
@@ -40,6 +40,7 @@ lastupdated: "2016-10-18"
 |`MaxInflightMessages`  |设置连接的最大未完成消息数。缺省值为 100。|
 |`Automatic-Reconnect`  |true 或 false 值，要自动将处于断开连接状态的设备重新连接到 {{site.data.keyword.iot_short_notm}} 时是必需的。缺省值为 false。|
 |`Disconnected-Buffer-Size`|客户机处于断开连接状态时可以存储在内存中的最大消息数。缺省值为 5000。|
+|`WebSocket`|true 或 false 值，仅当要使用与 {{site.data.keyword.iot_short_notm}} 的 websocket 连接时是必需的。缺省值为 false。|
 
 **注：**要以持久预订方式连接设备，请将 `clean-session` 设置为 `false`。有关干净会话的更多信息，请参阅 [MQTT 文档](../../reference/mqtt/index.html#subscription-buffers-and-clean-session)的“预订缓冲区和干净会话”部分。
 

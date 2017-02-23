@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-30"
+  years: 2016, 2017
+lastupdated: "2017-2-6"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -69,12 +69,11 @@ Antes que seja possível iniciar a implementação e os testes dos contratos int
 **Nota:** a integração de blockchain ao {{site.data.keyword.iot_short_notm}} suporta a conexão a malhas de {{site.data.keyword.blockchainfull_notm}} e malhas do Hyperledger. Os exemplos a seguir são baseados no uso de {{site.data.keyword.blockchainfull_notm}}.
 
 1. Crie e configure sua malha de {{site.data.keyword.blockchainfull_notm}}.
-
 A integração de blockchain ao {{site.data.keyword.iot_short_notm}} requer que a malha de {{site.data.keyword.blockchainfull_notm}} gerencie o livro razão de blockchain, contratos inteligentes e a infraestrutura geral de blockchain. A integração de blockchain ao {{site.data.keyword.Bluemix_notm}} usa {{site.data.keyword.blockchainfull_notm}} para gerenciar as cadeias. Se você tiver acesso a um ambiente de {{site.data.keyword.blockchainfull_notm}} existente, será possível usá-lo. Caso contrário, deve-se criar uma instância de {{site.data.keyword.blockchainfull_notm}} a partir do [catálogo](https://console.ng.bluemix.net/catalog/services/blockchain/) do {{site.data.keyword.Bluemix_notm}}.
 
   1. No Painel de sua conta do {{site.data.keyword.Bluemix_notm}}, clique em **Usar serviços ou APIs (interfaces de programação de aplicativos)**.
-  2. Localize a seção experimental do catálogo de serviços e selecione **Blockchain**.  
-   **Dica:** clique [aqui](https://console.ng.bluemix.net/catalog/services/blockchain/) para acessar diretamente a página de serviço experimental de {{site.data.keyword.blockchainfull_notm}}.
+  2. Localize a seção Application Services do catálogo de serviços e selecione **Blockchain**.  
+   **Dica:** clique [aqui](https://console.ng.bluemix.net/catalog/services/blockchain/) para acessar diretamente a página de serviço do {{site.data.keyword.blockchainfull_notm}}.
   3. Na página de serviço de {{site.data.keyword.blockchainfull_notm}}, verifique as seleções de Incluir serviço:  
     - Espaço - Se você tiver mais do que o espaço padrão `dev`, verifique se você está implementando o serviço no espaço desejado.
     - App - Deixe desvinculado.
@@ -83,8 +82,8 @@ A integração de blockchain ao {{site.data.keyword.iot_short_notm}} requer que 
   4. Clique em **Criar** para implementar {{site.data.keyword.blockchainfull_notm}} no {{site.data.keyword.Bluemix_notm}}.  
   O blockchain é implementado inicialmente com dois nós peers. É possível incluir mais nós conforme necessário.
 
-4. Vincule o {{site.data.keyword.iot_short_notm}} a seu serviço de {{site.data.keyword.blockchainfull_notm}}
-Para gravar no blockchain a partir do {{site.data.keyword.iot_short_notm}}, deve-se primeiramente vincular os serviços.
+4. Vincule o {{site.data.keyword.iot_short_notm}} ao serviço {{site.data.keyword.blockchainfull_notm}}  
+    Para gravar no blockchain por meio do {{site.data.keyword.iot_short_notm}}, deve-se primeiramente vincular os serviços.
      1. No {{site.data.keyword.Bluemix_notm}}, acesse o Painel
      2. Selecione o espaço no qual você implementou {{site.data.keyword.blockchainfull_notm}}.
      3. Clique no quadro **Blockchain**.
@@ -128,18 +127,48 @@ Para gravar no blockchain a partir do {{site.data.keyword.iot_short_notm}}, deve
      8. Selecione o espaço no qual você implementou o {{site.data.keyword.iot_short_notm}}.
      9. Clique no quadro **{{site.data.keyword.iot_short_notm}}**.
      10. Clique em **Ativar** para abrir o painel do {{site.data.keyword.iot_short_notm}}.
-     11. No painel do {{site.data.keyword.iot_short_notm}}, selecione **Configurações > Conexões** clicando em ![Configurações.](images/platform_settings.png "Configurações") na barra lateral de menus.
-     12. Na seção Extensões, em Blockchain, clique em **Incluir conexão de malha**.   
-    Os campos de conexão de malha são exibidos automaticamente na página que substitui a tabela.  
-    **Nota:** a integração de blockchain deve estar ativada para a inclusão de malhas. Par a obter informações, consulte [Blockchain](../../reference/extensions/index.html#blockchain) no tópico Integrações de serviços externos.
-     14. Insira as informações a seguir para conectar-se à malha:
-      - Nome da malha - Insira um nome para identificar a malha no {{site.data.keyword.iot_short_notm}}.
-      - Endereço do peer - Insira o endereço de `api_host`.
-      - Número da porta - Insira o número de `api_port` ou o número de `api_port_tls`. Use a porta 80 se sua implementação não usar TLS (Segurança da Camada de Transporte). Use a porta 443 se sua implementação usar TLS (Segurança da Camada de Transporte).
-      - Usar TLS (Segurança da Camada de Transporte) - Use Segurança da Camada de Transporte para criptografar a comunicação entre o {{site.data.keyword.iot_short_notm}} e o contrato na malha. Os números de porta padrão são configurados pela instância do {{site.data.keyword.iot_short_notm}} implementada à qual você está se conectando.
-      - ID do usuário - Insira a sequência de `username`.
-      - Segredo do usuário - Insira a sequência de `secret`.
-     15. Clique em **Confirmar todas as mudanças**
+     11. No painel do {{site.data.keyword.iot_short_notm}}, selecione **Extensões** na barra lateral de menus.
+     12. Na página **Extensões**, no quadro Blockchain, clique em **Configurar** ou clique em ![Ícone de engrenagem](../images/gear.png "Configurar") se já houver malhas vinculadas.
+     13. Na seção Configurar blockchain, clique em **Incluir malha ** e, em seguida, insira as informações de malha.
+    **Nota:** a integração de blockchain deve estar ativada para a inclusão de malhas. Par a obter informações, consulte [Blockchain](../reference/extensions/index.html#blockchain) no tópico Integrações de serviços externos.
+    1. Na guia **Malha**, insira um nome para identificar a malha no {{site.data.keyword.iot_short_notm}} e, em seguida, clique em **Avançar**.   
+    2. Na guia **Peer**, insira as informações de peer:  
+   <table>
+   <thead>
+   <tr>
+   <th>Parâmetro</th>
+   <th>Value</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td>Name</td>
+   <td>Insira um nome para identificar o peer no {{site.data.keyword.iot_short_notm}}.</td>
+   </tr>
+   <tr>
+   <td>Host</td>
+   <td>O endereço `api_host` para o servidor de Validação do Peer 1</td>
+   </tr>
+   <tr>
+   <td>Porta</td>
+   <td>O número da `api_port`<ul><li>Use a porta 80 se sua implementação não usar TLS (Segurança da Camada de Transporte).</li><li>Use a porta 443 se sua implementação usar TLS (Segurança da Camada de Transporte).</li></ul></td>
+   </tr>
+   <tr>
+   <td>Id do usuário</td>
+   <td>A sequência `username` do usuário usado para registrar o contrato inteligente com o blockchain. Também é possível usar esse ID do usuário ao configurar posteriormente a UI (interface com o usuário) simples.</td>
+   </tr>
+   <tr>
+   <td>Chave Secreta</td>
+   <td>A sequência `secret` do usuário</td>
+   </tr>
+   <tr>
+   <td>Use TLS</td>
+   <td>Ligado ou desligado</br>Use Segurança da Camada de Transporte para criptografar a comunicação entre o {{site.data.keyword.iot_short_notm}} e o contrato na malha. Os números de porta padrão são configurados pela instância do {{site.data.keyword.iot_short_notm}} implementada à qual você está se conectando.</td>
+   </tr></tbody>
+   </table>  
+    3. Clique em **Concluir**.
+     3. Na seção Configurar blockchain, clique em **Pronto** para salvar as informações de malha.    
+
 A tabela de malha é preenchida com a nova conexão de malha.  
 
 ## Criar, testar e implementar seus contratos inteligentes
@@ -161,7 +190,7 @@ Para desenvolver e testar seu próprio código da cadeia antes de implementá-lo
 3. Opcional: faça download dos contratos inteligentes de amostra fornecidos pela IBM.  
 A IBM fornece diversos contratos inteligentes dos quais é possível fazer download e usá-los diretamente no estado em que se encontram ou modificá-los para adequação aos objetivos de sua organização.  
 Para fazer download dos contratos de amostra:
- 1. Acesse o repositório do GitHub de amostras de blockchain em: https://github.com/ibm-watson-iot/blockchain-samples/
+ 1. Acesse o repositório do GitHub de Amostras de blockchain em: https://github.com/ibm-watson-iot/blockchain-samples/  
  As pastas basic_contract_hyperledger e trade_lane_contract_hyperledger contêm, respectivamente, os contratos básicos e de linha comercial.
  3. Use `git clone` no terminal para clonar o projeto https://github.com/ibm-watson-iot/blockchain-samples.  
  **Dica:** também é possível fazer download de um arquivo compactado do projeto clicando em **Fazer download do ZIP** na página do projeto.
@@ -186,7 +215,7 @@ Para fazer download dos contratos de amostra:
 6. Implemente o código da cadeia do contrato inteligente em {{site.data.keyword.blockchainfull_notm}}.  
  Após testar e verificar seu contrato localmente, é possível implementá-lo em sua malha de {{site.data.keyword.blockchainfull_notm}} para testar.
   1. Faça upload de seu contrato para seu repositório público do GitHub.  
-  Por exemplo, faça upload do arquivo sample.go para:
+  Por exemplo, faça upload do arquivo sample.go para:  
   `http://github.com/{my organization}/{my project}/`
   2. Registre o contrato com o peer que você conectou anteriormente.  
   Use um cliente REST, como CURL ou Postman, para enviar a chamada de registro. Para obter mais informações sobre a chamada de registro, consulte a [Documentação da API (interface de programação de aplicativos) do registro de POST](https://ibmblockchainapi.mybluemix.net/swagger/ui.html?scheme=http&host=127.0.0.1:3000&basepath=/#!/Registrar/registerUser). Use as informações a seguir ao registrar:
@@ -312,12 +341,12 @@ Para testar seu contrato inteligente, execute um teste de ponta a ponta, criando
 
 3. Na UI (interface com o usuário) de monitoramento, verifique se sua configuração está funcionando conforme esperado.  
 Use os componentes da UI (interface com o usuário) de monitoramento para interagir com seu contrato de blockchain:  
- - Operações do código da cadeia
- Verifique se as operações do código da cadeia específicas do contrato podem ser executadas conforme esperado. Por exemplo, para o contrato básico, verifique se a execução de uma função `createAsset` resulta na inclusão de um ativo no blockchain.
- - Cargas úteis de respostas
- Verifique se as respostas das solicitações de peer aparecem conforme esperado ao enviar solicitações REST a partir da guia Chaincode Operations.
- - Blockchain
-Verifique se blocos são incluídos na cadeia quando você injeta dados de um dispositivo vinculado ou quando usa o componente Chaincode Operations.    
+ - Operações de Chaincode  
+ Verifique se as operações de chaincode específicas do contrato podem ser executadas conforme o esperado. Por exemplo, para o contrato básico, verifique se a execução de uma função `createAsset` resulta na inclusão de um ativo no blockchain.
+ - Cargas úteis de resposta  
+ Verifique se as respostas de solicitação de peer aparecem conforme o esperado ao enviar solicitações REST por meio da guia Chaincode Operations.
+ - Blockchain  
+Verifique se blocos são incluídos na cadeia ao injetar dados de um dispositivo vinculado ou quando usa o componente Chaincode Operations.    
 
 ## Próximas etapas
 {: #next_steps}

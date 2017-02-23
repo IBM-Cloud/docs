@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-18"
+  years: 2015, 2016, 2017
+lastupdated: "2017-02-03"
 
 ---
 
@@ -39,7 +39,7 @@ Jasper は SIM デバイスの管理プラットフォームです。Jasper は 
 以下に示す構成手順を実行すると、それ以降、Jasper 接続デバイスのデバイス・ドリルダウンの中で、サポートされている操作にアクセスできるようになります。
 
 ### Jasper 用の REST API
-Jasper 用の REST API にアクセスする場合は、[{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension) の資料にある Jasper 拡張のセクションを参照してください。
+Jasper 用の REST API にアクセスする場合は、[{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部リンク・アイコン](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension){: new_window} の資料にある Jasper 拡張のセクションを参照してください。
 
 ### Jasper 用の構成
 
@@ -55,7 +55,9 @@ Jasper サービスを {{site.data.keyword.iot_short_notm}} 組織に接続す�
 
 2. デバイスを構成します
 {{site.data.keyword.iot_short_notm}} 組織と Jasper アカウントの両方に接続されているデバイスを構成することにより、Jasper からのデータを {{site.data.keyword.iot_short_notm}} ダッシュボードに表示することができます。
+  
 **重要:** Jasper 構成を「デバイスの追加」プロセスの一部として適用することはできません。Jasper で構成できるのは、それ以前に接続されているデバイスだけです。
+  
 Jasper 接続済みデバイスを構成するには、以下の手順を実行します。
  1. {{site.data.keyword.iot_short_notm}} ダッシュボードのデバイス・タブで、構成する Jasper 接続デバイスを見つけます。
  2. デバイスを選択して、*「デバイス・ドリルダウン (Device Drilldown)」*ビューを開きます。
@@ -91,7 +93,7 @@ AT&T 拡張により、以下の AT&T 操作が有効になります。
 - 料金プランの変更
 
 ### AT&T 用の REST API
-AT&T 用の REST API にアクセスする場合は、[{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension) の資料にある AT&T 拡張のセクションを参照してください。
+AT&T 用の REST API にアクセスする場合は、[{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部リンク・アイコン](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension){: new_window} の資料にある AT&T 拡張のセクションを参照してください。
 
 ### AT&T 用の構成
 
@@ -111,7 +113,9 @@ AT&T 用の REST API にアクセスする場合は、[{{site.data.keyword.iot_s
 
 2. デバイスを構成します
 {{site.data.keyword.iot_short_notm}} 組織と AT&T アカウントの両方に接続されているデバイスを構成することにより、AT&T からのデータを {{site.data.keyword.iot_short_notm}} ダッシュボードに表示することができます。
+  
 **重要:** AT&T 構成を「デバイスの追加」プロセスの一部として適用することはできません。AT&T で構成できるのは、それ以前に接続されているデバイスだけです。
+  
 AT&T 接続済みデバイスを構成するには、以下の手順を実行します。
  1. {{site.data.keyword.iot_short_notm}} ダッシュボードのデバイス・タブで、構成する AT&T 接続デバイスを見つけます。
  2. デバイスを選択して、*「デバイス・ドリルダウン (Device Drilldown)」*ビューを開きます。
@@ -151,7 +155,7 @@ ARM mbed プラットフォームでは、通知と非同期応答の 2 種類�
 
 #### 通知
 
-通知は、デバイスまたはセンサー・データでの変更によって生成されます。{{site.data.keyword.iot_short_notm}} は、メッセージを処理した後、{{site.data.keyword.iot_short_notm}} に直接接続されているデバイスと同じ方法でデバイス・イベント・トピックに送られます。ARM mbed プラットフォームに接続されているデバイスで発生する通知で使用されるイベント・タイプは、`notify` です。
+通知は、デバイスまたはセンサー・データでの変更によって生成されます。{{site.data.keyword.iot_short_notm}} がメッセージを処理した後、そのメッセージは {{site.data.keyword.iot_short_notm}} に直接接続されているデバイスと同じ方法でデバイス・イベント・トピックに送られます。ARM mbed プラットフォームに接続されているデバイスで発生する通知で使用されるイベント・タイプは、`notify` です。
 
 以下のコード・サンプルは、ARM mbed プラットフォーム API によって送信される通知のペイロード形式を示しています。
 
@@ -167,7 +171,7 @@ ARM mbed プラットフォームでは、通知と非同期応答の 2 種類�
 
 #### 非同期応答
 
-ARM mbed プラットフォームに接続されているデバイスに {{site.data.keyword.iot_short_notm}} がコマンドを送信する際、デバイスは、{{site.data.keyword.iot_short_notm}} に確認メッセージを送り戻します。この確認メッセージは*非同期応答*と呼ばれ、イベント・タイプ `asyncResponse` を使用します。
+ARM mbed プラットフォームに接続されているデバイスに {{site.data.keyword.iot_short_notm}} がコマンドを送信すると、デバイスは {{site.data.keyword.iot_short_notm}} に確認メッセージを送り戻します。この確認メッセージは*非同期応答*と呼ばれ、イベント・タイプ `asyncResponse` を使用します。
 
 以下のコード・サンプルは、ARM mbed クラウド・サービスによって送信される非同期応答のペイロード形式を示しています。
 
@@ -223,7 +227,7 @@ Orange SIM カードを持つ、{{site.data.keyword.iot_short_notm}} サービ�
 - ロケーション状況
 
 ### Orange 用の REST API
-Orange 用の REST API にアクセスする場合は、[{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension) の資料にある Orange 拡張のセクションを参照してください。
+Orange 用の REST API にアクセスする場合は、[{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部リンク・アイコン](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension){: new_window} の資料にある Orange 拡張のセクションを参照してください。
 
 ### Orange 用の構成
 
@@ -259,9 +263,22 @@ Orange 拡張が有効になった後、Orange SIM カードを持つ各デバ�
 ## カスタム・デバイス管理パッケージ
 {: #device_mgmt}
 
-デバイス管理は {{site.data.keyword.iot_short_notm}} の中核となるフィーチャーですが、追加機能開発のため、拡張することができます。
+デバイス管理は {{site.data.keyword.iot_short_notm}} の中核となるフィーチャーですが、追加機能開発のため、拡張することができます。カスタム・デバイス管理パッケージには、有効な JSON が含まれている必要があり、少なくとも 1 つのカスタム・デバイス・アクションが定義されていなければなりません。
 
-デバイス管理拡張により、デバイス管理のためのカスタム機能をインストールすることができます。カスタム・デバイス管理機能について詳しくは、[デバイス管理のカスタム拡張](../../devices/device_mgmt/custom_actions.html){: new_window}を参照してください。
+カスタム・デバイス管理機能について詳しくは、必要な JSON フォーマットの例を含め、[デバイス管理のカスタム拡張](../../devices/device_mgmt/custom_actions.html){: new_window}を参照してください。
+
+### カスタム・デバイス管理パッケージの追加
+
+カスタム・デバイス管理パッケージは、{{site.data.keyword.iot_short_notm}} ダッシュボードまたは API のいずれかを使用して追加できます。
+
+{{site.data.keyword.iot_short_notm}} ダッシュボードを使用してカスタム・デバイス管理パッケージを追加するには、次のようにします。
+
+1. {{site.data.keyword.iot_short_notm}} ダッシュボードで、ナビゲーション・バーから**「設定」**をクリックします。
+2. **「カスタム・デバイス管理パッケージ」**をクリックします。
+3. **「パッケージの追加」**ボタンをクリックします。
+4. パッケージ・ファイルを選択し、**「開く」**をクリックします。
+
+API を使用してカスタム・デバイス管理パッケージを追加する場合は、[{{site.data.keyword.iot_short_notm}} API 資料 ![外部リンク・アイコン](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} を参照してください。
 
 ## ブロック・チェーン
 {: #blockchain}
@@ -275,12 +292,17 @@ Orange 拡張が有効になった後、Orange SIM カードを持つ各デバ�
 
 ### ブロック・チェーン用の構成
 
-{{site.data.keyword.iot_short_notm}} ブロック・チェーン統合は、{{site.data.keyword.iot_short_notm}} でデフォルトではアクティブになっていないサービス・オファリングです。ご使用の環境でこのフィーチャーをアクティブにするには、以下の手順を実行します。
+{{site.data.keyword.iot_short_notm}} ブロック・チェーン統合は、{{site.data.keyword.iot_short_notm}} でデフォルトではアクティブになっていないサービス・オファリングです。自分の組織でこのフィーチャーをアクティブにするには、以下の手順を実行します。
  1. {{site.data.keyword.iot_short_notm}} ダッシュボードから、**「拡張」**を選択します。
- 2. ブロック・チェーン拡張の横にある**「詳細 (Tell me more)」**リンクをクリックして、「IoT ブロック・チェーン・サービス・オファリング (IoT Blockchain Services Offering)」ページに移動します。
- 3. サービス要求フォームに必要事項を記入して送信します。
-サービスの承認には、通常、1 日ほどかかります。要求が承認された場合、{{site.data.keyword.iot_short_notm}} 組織でブロック・チェーン統合をアクティブにするための手順を示した E メールが送られてきます。
- 5. 自分の組織の {{site.data.keyword.iot_short_notm}} ダッシュボードに戻り、セットアップを完了します。詳しくは、[{{site.data.keyword.iot_short_notm}} ブロック・チェーン統合](../../bl_blockchain_integration.html)を参照してください。
+ 2. **「拡張」**ページで、**「拡張の追加 (Add Extension)」**をクリックします。
+ 3. ブロック・チェーン拡張の横にある**「追加」**をクリックします。
+ 4. ブロック・チェーン・タイルで、**「セットアップ」**をクリックします。
+ 3. **「ブロック・チェーンのアクティブ化 (Activate Blockchain)」**セクションで、**「詳細はこちら」**リンクをクリックして [IoT Blockchain Services Offering のページ ![外部リンク・アイコン](../../../../icons/launch-glyph.svg)](http://www.ibm.com/internet-of-things/iot-news/announcements/private-blockchain/){: new_window} に移動します。
+ 4. **「Kick-start your blockchain project」**をクリックして*「Explore the potential of IoT and Blockchain」*のフォームに記入します。  
+ 5. 要求が承認されると、IBM から、自分の組織のブロック・チェーン統合を有効にするよう、連絡があります。
+ 6. 組織の {{site.data.keyword.iot_short_notm}} ダッシュボードに戻り、[{{site.data.keyword.iot_short_notm}} ブロック・チェーン統合](../../bl_blockchain_integration.html)の手順に従ってセットアップを完了します。
+
+
 
 ## The Weather Company
 {: #weathercompany}
@@ -290,7 +312,7 @@ The Weather Company 拡張は、気象データを既存の {{site.data.keyword.
 **注:** 管理対象デバイスだけがデバイス側でロケーションを設定できます。非管理対象デバイスでは、すべて API を使用して手動でロケーションを設定する必要があります。デバイス・ロケーションの設定について詳しくは、[「ロケーションの更新」要求](../../devices/device_mgmt/index.html#update-location)を参照してください。
 
 ### The Weather Company 用の REST API
-The Weather Company 用の REST API にアクセスする場合は、[{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather) の資料の『Device Location Weather』のセクションを参照してください。
+The Weather Company 用の REST API にアクセスする場合は、[{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部リンク・アイコン](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather){: new_window} の資料の『Device Location Weather』のセクションを参照してください。
 
 ### 気象データ
 
@@ -307,4 +329,4 @@ The Weather Company 用の REST API にアクセスする場合は、[{{site.dat
 - 緯度。
 - 経度。
 
-<!-- Weather data from The Weather Company extension can be retrieved by using the API. For information on the Weather Company API, see [The Weather Company API documentation](https://docs.internetofthings.ibmcloud.com/swagger/ext-twc.html). -->
+<!-- Weather data from The Weather Company extension can be retrieved by using the API. For information on the Weather Company API, see [The Weather Company API documentation ![External link icon](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/ext-twc.html){: new_window}. -->

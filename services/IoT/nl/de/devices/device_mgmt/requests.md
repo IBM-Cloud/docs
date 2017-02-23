@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-08"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-10"
 
 ---
 
@@ -590,3 +590,17 @@ Die folgende Liste bietet einige nützliche Informationen zur Fehler- und Prozes
 
 
 **Wichtig:** Alle Parameter, die als Bestandteil des Attributs `mgmt.firmware` aufgelistet sind, müssen gleichzeitig festgelegt werden, damit nur eine einzige Hinweisnachricht gesendet wird, falls eine aktuelle Beobachtung für `mgmt.firmware` besteht.
+
+## Anleitungen zu Geräteaktionen und Firmwareaktionen
+
+Die folgenden Anleitungen beschreiben den vollständigen erforderlichen Ablauf zum Ausführen von Geräte- und Firmwareaktionen.
+
+- [Gerätemanagement in WIoT Platform – Rollback & Zurücksetzen auf Werkseinstellungen](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/)
+
+- [Vom Gerät eingeleitetes Firmware-Update](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-device-initiated-firmware-upgrade/)
+
+- [Von der Plattform eingeleitetes Firmware-Update](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-platform-initiated-firmware-upgrade/)
+
+- [Von der Plattform eingeleitetes Firmware-Update zur Ausführung im Hintergrund](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-platform-initiated-firmware-upgrade/)
+
+- [Firmware-Rollback & Zurücksetzen auf Werkseinstellungen](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/)

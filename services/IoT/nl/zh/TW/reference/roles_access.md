@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2016, 2017
 lastupdated: "2016-10-16"
 
 ---
@@ -82,7 +82,7 @@ lastupdated: "2016-10-16"
 完成邀請	|X|	X|	X|	X|	X
 建立、更新、刪除 API 金鑰	|X	|X	| -|-|-
 檢視 API 金鑰	|X	|X	|- |- |-		
-檢視組織使用資訊	|X	|X	| -|-|-		
+檢視組織用量資訊	|X	|X	| -|-|-		
 
 ### 存取控制作業 {: #user-access-ops}
 

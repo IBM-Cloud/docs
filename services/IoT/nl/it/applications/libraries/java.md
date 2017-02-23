@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-24"
+  years: 2015, 2016, 2017
+lastupdated: "2016-11-22"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2016-10-24"
 {: #java}
 
 
-Puoi utilizzare Java per creare e personalizzare le applicazioni che interagiscono con la tua organizzazione su {{site.data.keyword.iot_full}}. Una libreria client Java per {{site.data.keyword.iot_short_notm}}, la documentazione e gli esempi ti vengono forniti per iniziare ad utilizzare lo sviluppo dell'applicazione.
+Puoi utilizzare Java™ per creare e personalizzare le applicazioni che interagiscono con la tua organizzazione su {{site.data.keyword.iot_full}}. Una libreria client Java per {{site.data.keyword.iot_short_notm}}, la documentazione e gli esempi ti vengono forniti per iniziare ad utilizzare lo sviluppo dell'applicazione.
 
 {:shortdesc}
 
@@ -257,7 +257,7 @@ In modo simile alla sottoscrizione agli eventi del dispositivo, l'applicazione p
     myClient.subscribeToDeviceCommands();
 ```
 
-I metodi sottoposti a overload sono disponibili per controllare la sottoscrizione ai comandi. Il metodo `processCommand()` viene richiamato quando al dispositivo viene inviato un comando che corrisponde alla sottoscrizione al comando.
+I metodi overloaded sono disponibili per controllare la sottoscrizione ai comandi. Il metodo `processCommand()` viene richiamato quando al dispositivo viene inviato un comando che corrisponde alla sottoscrizione al comando.
 
 
 ## Sottoscrizione agli stati del dispositivo
@@ -361,7 +361,7 @@ Le applicazioni possono sottoscriversi a qualsiasi altro stato dell'applicazione
     myClient.setEventCallback(new MyEventCallback());
     myClient.subscribeToApplicationStatus();
 ```
-Il metodo di sovrascrittura è disponibile per controllare la sottoscrizione dello stato a un'applicazione in particolare. Il metodo `processApplicationStatus()` è richiamato se viene collegata o scollegata un'applicazione che corrisponde ai criteri da {{site.data.keyword.iot_short_notm}}.
+Il metodo overloaded è disponibile per controllare la sottoscrizione dello stato a un'applicazione in particolare. Il metodo `processApplicationStatus()` è richiamato se viene collegata o scollegata un'applicazione che corrisponde ai criteri da {{site.data.keyword.iot_short_notm}}.
 
 
 ## Pubblicazione degli eventi dai dispositivi

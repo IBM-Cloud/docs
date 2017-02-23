@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-24"
+  years: 2015, 2016, 2017
+lastupdated: "2016-11-22"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2016-10-24"
 {: #java}
 
 
-Puede crear y personalizar aplicaciones que interactúan con su organización en {{site.data.keyword.iot_full}} utilizando Java. Se proporciona una biblioteca de cliente Java para {{site.data.keyword.iot_short_notm}}, documentación y ejemplos para ayudarle a iniciarse con el desarrollo de aplicaciones.
+Puede crear y personalizar aplicaciones que interactúan con su organización en {{site.data.keyword.iot_full}} utilizando Java™. Se proporciona una biblioteca de cliente Java para {{site.data.keyword.iot_short_notm}}, documentación y ejemplos para ayudarle a iniciarse con el desarrollo de aplicaciones.
 
 {:shortdesc}
 
@@ -32,7 +32,7 @@ Para acceder a las bibliotecas y a los ejemplos de cliente Java para {{site.data
 ## Constructor
 {: #constructor}
 
-El constructor compila la instancia del cliente y acepta el objeto `Propiedades`, que contiene las siguientes definiciones:
+El constructor compila la instancia del cliente y acepta el objeto `Properties`, que contiene las siguientes definiciones:
 
 | Definición     |Descripción     |
 |----------------|----------------|

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2016, 2017
 lastupdated: "2016-08-26"
 
 ---
@@ -27,7 +27,8 @@ Node-RED 是一種工具，以全新且有趣的方式，將硬體裝置、API �
     1. 在 https://console.ng.bluemix.net 登入 {{site.data.keyword.Bluemix_notm}}：
     2. 選取**型錄**標籤。
     3. 找到服務型錄的「樣板」區段，然後按一下 **Node-RED 入門範本社群測試版**。**提示：**按一下[這裡](https://console.ng.bluemix.net/catalog/starters/node-red-starter/)，直接移至「Node-RED 入門範本」頁面。
-    4. 在「Node-RED 入門範本」頁面上，選取要部署 Node-RED 的空間，驗證「建立應用程式」選項，然後按一下**建立**，將 Node-RED 新增至您的 Bluemix 組織。例如：  
+    4. 在「Node-RED 入門範本」頁面上，選取要部署 Node-RED 的空間，驗證「建立應用程式」選項，然後按一下**建立**，將 Node-RED 新增至您的 Bluemix 組織。  
+例如：  
      - 空間：dev
      - 名稱：myDevice
      - 主機：myDevice
@@ -35,13 +36,14 @@ Node-RED 是一種工具，以全新且有趣的方式，將硬體裝置、API �
     將其餘選項保留為其預設值。部署應用程式之後，您會被帶到「開始使用 Node-RED 撰寫程式碼」頁面。  
     **附註：**暫置程序可能需要一些時間。
 
-    3. 按一下「路徑」鏈結，以開啟 Node-RED。範例：`http://simulatedDevice.mybluemix.net`
+    3. 按一下「路徑」鏈結，以開啟 Node-RED。  
+範例：`http://simulatedDevice.mybluemix.net`
     4. 按一下 **Go to your Node-RED flow editor**，以開啟編輯器。
     5. 複製您在本文件的 [Node-RED 節點流程資料](#flow_data)區段中找到的 Node-RED 流程資料。
     5. 在 Node-RED 流程編輯器中，按一下右上角的功能表，然後選取**匯入 > 剪貼簿**。  
     6. 在匯入節點輸入欄位中貼上剪貼簿，然後按一下**確定**。裝置模擬器流程即會匯入至流程編輯器。
 
-2. 向 {{site.data.keyword.iot_short_notm}} 登錄您的裝置  
+2. 向 {{site.data.keyword.iot_short_notm}} 登錄裝置  
 遵循下列步驟來連接 Node-RED 範例裝置：
  1. 在 {{site.data.keyword.Bluemix_notm}} 中，移至「儀表板」。
  2. 選取已在其中部署 {{site.data.keyword.iot_short_notm}} 的空間。
@@ -93,8 +95,10 @@ Node-RED 是一種工具，以全新且有趣的方式，將硬體裝置、API �
 
 4. 驗證裝置連線
  1. 在另一個瀏覽器分頁或視窗中，開啟 {{site.data.keyword.iot_short_notm}} 儀表板。
- 2. 選取**裝置**，然後按一下 **Device001**，或是您新增的裝置名稱（如果不同）。即會開啟裝置資訊頁面。此視圖可讓您查看裝置的連線狀態。在這個階段，裝置應該會顯示為斷線。   
- 3. 回到 Node-RED 流程編輯器，按一下「注入」節點上的按鈕，以產生資產有效負載。有效負載包含下列資料點：  
+ 2. 選取**裝置**，然後按一下 **Device001**，或是您新增的裝置名稱（如果不同）。  
+即會開啟裝置資訊頁面。此視圖可讓您查看裝置的連線狀態。在這個階段，裝置應該會顯示為斷線。   
+ 3. 回到 Node-RED 流程編輯器，按一下「注入」節點上的按鈕，以產生資產有效負載。  
+有效負載包含下列資料點：  
  ```
  {"d":
   { "name":"My Device",

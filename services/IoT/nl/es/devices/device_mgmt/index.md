@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-13"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-12"
 
 ---
 
@@ -36,6 +36,8 @@ El Protocolo de gestión de dispositivos se crea en la parte superior del protoc
 4. Un dispositivo puede comunicar actualizaciones sobre su ubicación, información de diagnóstico y códigos de error mediante el Protocolo de gestión de dispositivos.
 5. Para manejar dispositivos anómalos en grandes poblaciones de dispositivos, la solicitud de operaciones **dispositivos gestionados** incluye un parámetro lifetime opcional. El parámetro lifetime es el número de segundos en los que el dispositivo debe realizar otra solicitud **dispositivos gestionados** para evitar que se clasifique como inactivo y que se convierta en un dispositivo no gestionado.
 6. Cuando un dispositivo está desactivado, puede eliminarlo del {{site.data.keyword.iot_short_notm}} utilizando el panel de instrumentos o la API REST.
+
+Consulte la receta [Conexión de Raspberry Pi como dispositivo gestionado a IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/connect-raspberry-pi-as-managed-device-to-ibm-iot-foundation/).
 
 ### Resumen de código de retorno
 

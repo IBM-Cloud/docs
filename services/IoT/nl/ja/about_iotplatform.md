@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2016, 2017
 lastupdated: "2016-10-19"
 
 ---
@@ -12,7 +12,7 @@ lastupdated: "2016-10-19"
 # {{site.data.keyword.iot_full}} について
 {: #about_iotplatform}
 
-{{site.data.keyword.iot_short_notm}} は、モノのインターネットに迅速かつ安全に接続できる機能を備えています。{{site.data.keyword.iot_short_notm}} を使用すると、アプリケーションのデプロイ、デバイス・データの収集、保管、視覚化、さらにはリアルタイムのデバイス・データや保管されているデバイス・データの分析を実行することができます。
+{{site.data.keyword.iot_short_notm}} は、IoT に迅速かつ安全に接続できる機能を備えています。{{site.data.keyword.iot_short_notm}} を使用すると、アプリケーションのデプロイ、デバイス・データの収集、保管、視覚化、さらにはリアルタイムのデバイス・データや保管されているデバイス・データの分析を実行することができます。
 
 {{site.data.keyword.iot_short_notm}} を使用するには、デバイス、イベント、コマンド、ゲートウェイ、組織などのいくつかの主要な概念について理解しておく必要があります。{{site.data.keyword.iot_short_notm}} の概念について詳しくは、[{{site.data.keyword.iot_short_notm}} の重要な概念](/iotplatform_overview.html#wwatsoniotplatform_importantconcepts)を参照してください。
 

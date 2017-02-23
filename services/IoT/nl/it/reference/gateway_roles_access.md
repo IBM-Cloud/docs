@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016
+  years: 2016, 2017
 lastupdated: "2016-10-16"
 
 ---
@@ -93,7 +93,7 @@ Operazioni di controllo dell'accesso || Ruoli del gateway|
            | **Gateway standard** | **Gateway privilegiato**
 Visualizzazione delle proprietà dell'utente (inclusi i diritti di accesso)|-|-
 Visualizzazione delle proprie proprietà utente (inclusi i diritti di accesso)|-|-
-Gestione degli utenti (inclusi i diritti di accesso|-|-
+Gestione degli utenti (inclusi i diritti di accesso)|-|-
 Visualizzazione delle proprietà della chiave API (inclusi i diritti di accesso)|-|-
 Visualizzazione delle proprie proprietà della chiave API (inclusi i diritti di accesso)|-|-
 Creazione, aggiornamento o eliminazione delle chiavi API (inclusi i diritti di accesso)|-|-

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-18"
+  years: 2015, 2016, 2017
+lastupdated: "2017-02-03"
 
 ---
 
@@ -39,7 +39,7 @@ Jasper 是 SIM 裝置的系統管理和管理平台。Jasper 整合在 {{site.da
 完成下列配置步驟之後，您可以在 Jasper 連接裝置的裝置往下探查中，存取支援的作業：
 
 ### Jasper 的 REST API
-若要存取 Jasper 的 REST API，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension) 文件中的「Jasper 延伸規格」區段。
+若要存取 Jasper 的 REST API，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部鏈結圖示](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension){: new_window} 文件中的「Jasper 延伸規格」小節。
 
 ### Jasper 的配置
 
@@ -55,7 +55,9 @@ Jasper 是 SIM 裝置的系統管理和管理平台。Jasper 整合在 {{site.da
 
 2. 配置您的裝置  
 您可以配置同時連接 {{site.data.keyword.iot_short_notm}} 組織和 Jasper 帳戶的裝置，以在 {{site.data.keyword.iot_short_notm}} 儀表板中顯示 Jasper 的資料。  
-**重要事項：**在「新增裝置」程序中無法套用 Jasper 配置，只有先前已連接的裝置可以用 Jasper 來配置。若要配置 Jasper 連接的裝置，請完成下列步驟：
+  
+**重要事項：**在「新增裝置」程序中無法套用 Jasper 配置，只有先前已連接的裝置可以用 Jasper 來配置。  
+若要配置 Jasper 連接的裝置，請完成下列步驟：
  1. 在 {{site.data.keyword.iot_short_notm}} 儀表板的裝置標籤中，尋找要配置的 Jasper 連接裝置。
  2. 選取裝置，以開啟*裝置往下探查*視圖。
  3. 向下捲動至*延伸配置*。
@@ -90,7 +92,7 @@ AT&T 延伸規格可讓您執行下列 AT&T 作業：
 - 變更費率方案
 
 ### AT&T 的 REST API
-若要存取 AT&T 的 REST API，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension) 文件中的「AT&T 延伸規格」區段。
+若要存取 AT&T 的 REST API，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部鏈結圖示](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension){: new_window} 文件中的「AT&T 延伸規格」小節。
 
 ### AT&T 的配置
 
@@ -110,7 +112,9 @@ AT&T 延伸規格可讓您執行下列 AT&T 作業：
 
 2. 配置您的裝置  
 您可以配置同時連接 {{site.data.keyword.iot_short_notm}} 組織和 AT&T 帳戶的裝置，以在 {{site.data.keyword.iot_short_notm}} 儀表板中顯示 AT&T 的資料。  
-**重要事項：**在「新增裝置」程序中無法套用 AT&T 配置，只有先前已連接的裝置可以用 AT&T 來配置。若要配置 AT&T 連接的裝置，請完成下列步驟：
+  
+**重要事項：**在「新增裝置」程序中無法套用 AT&T 配置，只有先前已連接的裝置可以用 AT&T 來配置。  
+若要配置 AT&T 連接的裝置，請完成下列步驟：
  1. 在 {{site.data.keyword.iot_short_notm}} 儀表板的裝置標籤中，尋找要配置的 AT&T 連接裝置。
  2. 選取裝置，以開啟*裝置往下探查*視圖。
  3. 向下捲動至*延伸配置*。
@@ -139,7 +143,7 @@ ARM mbed 連接器可讓您將 ARM mbed 裝置連接至 {{site.data.keyword.iot_
   1. 從 {{site.data.keyword.iot_short_notm}} 儀表板選取**設定**，並導覽至**延伸規格**。
   2. 在**延伸規格**功能表中，按一下**新增延伸規格**。
   3. 按一下 ARM mbed 連接器延伸規格旁的**新增**。
-  4. 輸入 ARM mbed 存取鍵及網域 ID。您可以使用 ARM mbed 入口網站（網址為 https://connector.mbed.com）找到這些項目。
+  4. 輸入 ARM mbed 存取鍵及網域 ID。您可以使用 ARM mbed 入口網站 https://connector.mbed.com 找到這些項目。
   5. 按一下**檢查連線**按鈕，以檢查認證正確無誤。
   6. 按一下**完成**。
 
@@ -221,7 +225,7 @@ https://developer.ibm.com/iotplatform/2016/03/30/watson-iot-platform-integration
 - 位置狀態
 
 ### Orange 的 REST API
-若要存取 Orange 的 REST API，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension) 文件中的「Orange 延伸規格」區段。
+若要存取 Orange 的 REST API，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部鏈結圖示](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension){: new_window} 文件中的「Orange 延伸規格」小節。
 
 ### Orange 的配置
 
@@ -257,9 +261,22 @@ https://developer.ibm.com/iotplatform/2016/03/30/watson-iot-platform-integration
 ## 自訂裝置管理套件
 {: #device_mgmt}
 
-裝置管理是 {{site.data.keyword.iot_short_notm}} 的核心功能，不過，可加以延伸，以開發其他功能。
+裝置管理是 {{site.data.keyword.iot_short_notm}} 的核心功能，不過，可加以延伸，以開發其他功能。自訂裝置管理套件必須包含有效的 JSON，並定義至少一個自訂裝置管理動作。
 
-裝置管理延伸規格可讓您安裝裝置管理的自訂功能。如需自訂裝置管理功能的相關資訊，請參閱[裝置管理自訂延伸規格](../../devices/device_mgmt/custom_actions.html){: new_window}。
+如需自訂裝置管理功能（包括所需 JSON 格式的範例）的相關資訊，請參閱[裝置管理自訂延伸規格](../../devices/device_mgmt/custom_actions.html){: new_window}。
+
+### 新增自訂裝置管理套件
+
+使用 {{site.data.keyword.iot_short_notm}} 儀表板，或使用 API，即可新增自訂裝置管理套件。
+
+若要使用 {{site.data.keyword.iot_short_notm}} 儀表板新增自訂裝置管理套件，請執行下列動作：
+
+1. 從 {{site.data.keyword.iot_short_notm}} 儀表板中，按一下導覽列中的**設定**。
+2. 按一下**自訂裝置管理套件**。
+3. 按一下**新增套件**按鈕。
+4. 選取套件檔，然後按一下**開啟**。
+
+若要使用 API 新增自訂裝置管理套件，請參閱 [{{site.data.keyword.iot_short_notm}} API 文件 ![外部鏈結圖示](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}。
 
 ## 區塊鏈
 {: #blockchain}
@@ -273,11 +290,17 @@ https://developer.ibm.com/iotplatform/2016/03/30/watson-iot-platform-integration
 
 ### 區塊鏈的配置
 
-{{site.data.keyword.iot_short_notm}} 區塊鏈整合是 {{site.data.keyword.iot_short_notm}} 中預設不啟動的服務供應項目。若要在您的環境中啟動此功能，請完成下列步驟：
- 1. 從 {{site.data.keyword.iot_short_notm}} 儀表板中，選取**延伸規格**。
- 2. 按一下 Blockchain 延伸規格旁的**告訴我更多**鏈結，以移至「IoT 區塊鏈服務供應項目」頁面。
- 3. 填寫並提交服務要求表單。核准服務通常需要大約一天。您的要求通過核准之後，您會收到一封電子郵件，指示您如何在 {{site.data.keyword.iot_short_notm}} 組織中啟動區塊鏈整合。
- 5. 回到您組織的 {{site.data.keyword.iot_short_notm}} 儀表板，以完成設定。如需相關資訊，請參閱 [{{site.data.keyword.iot_short_notm}} 區塊鏈整合](../../bl_blockchain_integration.html)。
+{{site.data.keyword.iot_short_notm}} 區塊鏈整合是 {{site.data.keyword.iot_short_notm}} 中預設不啟動的服務供應項目。若要在組織中啟動此特性，請完成下列步驟：
+ 1. 從 {{site.data.keyword.iot_short_notm}} 儀表板選取**延伸規格**。
+ 2. 在**延伸規格**頁面中，按一下**新增延伸規格**。
+ 3. 按一下 Blockchain 延伸規格旁的**新增**。
+ 4. 在 Blockchain 磚中，按一下**設定**。
+ 3. 在**啟動 Blockchain** 區段中，按一下**進一步瞭解**鏈結，以移至 [IoT 區塊鏈服務供應項目頁面 ![外部鏈結圖示](../../../../icons/launch-glyph.svg)](http://www.ibm.com/internet-of-things/iot-news/announcements/private-blockchain/){: new_window}。
+ 4. 按一下**開始區塊鏈專案**進行填寫，並提交*探索潛在的 IoT 及區塊鏈* 表單。  
+ 5. 核准要求之後，IBM 將會聯絡您以啟用組織的區塊鏈整合。
+ 6. 回到組織的 {{site.data.keyword.iot_short_notm}} 儀表板，遵循 [{{site.data.keyword.iot_short_notm}} 區塊鏈整合](../../bl_blockchain_integration.html)中的步驟來完成設定。
+
+
 
 ## The Weather Company
 {: #weathercompany}
@@ -287,7 +310,7 @@ The Weather Company 延伸規格結合天氣資料與現有 {{site.data.keyword.
 **附註：**只有受管理裝置才能設定其專屬位置。所有未受管理裝置都必須使用 API 手動設定其位置。如需設定裝置位置的相關資訊，請參閱[更新位置要求](../../devices/device_mgmt/index.html#update-location)。
 
 ### The Weather Company 的 REST API
-若要存取 The Weather Company 的 REST API，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather) 文件中的「裝置位置天氣」區段。
+若要存取 The Weather Company 的 REST API，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部鏈結圖示](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather){: new_window} 文件中的「裝置位置天氣」小節。
 
 ### 天氣資料
 
@@ -304,4 +327,4 @@ The Weather Company 延伸規格結合天氣資料與現有 {{site.data.keyword.
 - 緯度。
 - 經度。
 
-<!-- Weather data from The Weather Company extension can be retrieved by using the API. For information on the Weather Company API, see [The Weather Company API documentation](https://docs.internetofthings.ibmcloud.com/swagger/ext-twc.html). -->
+<!-- Weather data from The Weather Company extension can be retrieved by using the API. For information on the Weather Company API, see [The Weather Company API documentation ![External link icon](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/ext-twc.html){: new_window}. -->

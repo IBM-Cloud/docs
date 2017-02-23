@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-09-16"
+  years: 2016, 2017
+lastupdated: "2017-01-10"
 
 ---
 
@@ -89,6 +89,18 @@ Siga estos pasos para conectar un {{site.data.keyword.cloudant_short_notm}}:
 6. Pulse **Confirmar** en el recuadro de diálogo de la autorización.
 
 Sus datos de dispositivo están almacenados ahora en el {{site.data.keyword.cloudant}}.
+
+## Recetas sobre la utilización del servicio histórico  
+{: #recipes}
+
+En las siguientes recetas se describe cómo utilizar {{site.data.keyword.cloudant_short_notm}} como almacén histórico para {{site.data.keyword.iot_short}}:
+
+- En las recetas sobre cómo [Configurar {{site.data.keyword.cloudant_short_notm}} como almacén de datos históricos para {{site.data.keyword.iot_short}}](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-parti/) se describe la forma en que se almacenan los datos en {{site.data.keyword.cloudant_short_notm}} y se muestra cómo configurar y almacenar datos de dispositivos en {{site.data.keyword.cloudant_short_notm}} como almacén de datos históricos.
+
+- En la receta sobre [Consulta y proceso de datos de dispositivos de {{site.data.keyword.iot_short}} desde {{site.data.keyword.cloudant_short_notm}}](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-partii) se muestra cómo consultar y realizar operaciones de proceso de datos sobre datos de dispositivos almacenados en {{site.data.keyword.cloudant_short_notm}}.
+
+- En la receta sobre cómo [Visualizar datos de dispositivos Watson IoT almacenados en una base de datos Cloudant NoSQL](https://developer.ibm.com/recipes/?post_type=pnext_tutorial&p=27327) se muestra cómo establecer un enlace entre las tarjetas de gráficos de líneas y el almacén de datos históricos para mostrar datos de dispositivos en el panel de control de la plataforma Watson IoT.
+
 
 ## Creación de nuevos documentos de diseño  
 {: #design_docs}

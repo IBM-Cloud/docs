@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017 02-21"
+lastupdated: "2017-02-22"
 
 ---
 
@@ -44,7 +44,7 @@ Para crear y conectar el simulador de dispositivos Node-RED:
     6. Pegue el portapapeles al campo de entrada de los nodos de importación y pulse **Aceptar**.
     El flujo de simulador de dispositivos se importará en el editor de flujo.
 
-2. Registrar el dispositivo con {{site.data.keyword.iot_short_notm}}
+2. Registrar el dispositivo con {{site.data.keyword.iot_short_notm}}  
 Siga estos pasos para conectar el dispositivo de ejemplo de Node-RED:
  1. En {{site.data.keyword.Bluemix_notm}}, vaya a Panel de instrumentos
  2. Seleccione el espacio en el que ha desplegado {{site.data.keyword.iot_short_notm}}.

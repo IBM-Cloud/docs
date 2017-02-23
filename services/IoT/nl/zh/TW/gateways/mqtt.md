@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-14"
+  years: 2015, 2016, 2017
+lastupdated: "2016-11-17"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -58,11 +58,16 @@ MQTT 是裝置及應用程式用來與 {{site.data.keyword.iot_full}} 通訊的�
 |裝置 1 |mydevice |device1 |
 
 -   「閘道 1」可以發佈自己的狀態事件：
+      
     `iot-2/type/mygateway/id/gateway1/evt/status/fmt/json`
 -   「閘道 1」可以代表「裝置 1」發佈狀態事件：
+      
     `iot-2/type/mydevice/id/device1/evt/status/fmt/json`
 
 **重要事項：**訊息有效負載上限為 131072 個位元組。大於此限制的訊息都會被拒絕。
+
+### 保留的訊息
+{{site.data.keyword.iot_short_notm}} 組織未獲授權，無法發佈保留的 MQTT 訊息。如果閘道傳送保留的訊息，則 {{site.data.keyword.iot_short_notm}} 服務會置換設為 true 的保留的訊息旗標，而且處理訊息的方式就像保留的訊息旗標設為 false 一樣。
 
 ## 訂閱指令
 {: #subscribing_cmds}
@@ -83,8 +88,10 @@ MQTT `+` 萬用字元可用來讓 `typeId`、`deviceId`、`commandId` 和 `forma
 
 
 -   「閘道 1」可以訂閱導向閘道的指令：
+      
     `iot-2/type/mygateway/id/gateway1/cmd/+/fmt/+`
 -   「閘道 1」可以訂閱傳送至「裝置 1」的指令：
+      
     `iot-2/type/mydevice/id/device1/cmd/+/fmt/+`
 -   「閘道 1」可以訂閱傳送至 `mydevice` 類型之裝置的任何指令：  
      `iot-2/type/mydevice/id/+/cmd/+/fmt/+`
@@ -154,7 +161,7 @@ iot-2/type/**typeId**/id/**deviceId**/notify
 ### 服務品質水準及全新階段作業
 {: #quality_service}
 
-受管理閘道可以發佈服務品質 (QoS) 水準為 0 或 1 的訊息。來自該閘道的訊息不得為保留的訊息。
+受管理閘道可以發佈服務品質 (QoS) 水準為 0 或 1 的訊息。
 
 QoS=0 的訊息可以捨棄，而且在傳訊伺服器重新啟動之後，不會持續保存。QoS=1 的訊息可以置入佇列，而且在傳訊伺服器重新啟動之後，會持續保存。訂閱的延續性會決定是否將要求置入佇列。用來訂閱之連線的 `cleansession` 參數會決定訂閱的延續性。  
 

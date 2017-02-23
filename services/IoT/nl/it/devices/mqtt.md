@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-21"
+  years: 2015, 2016, 2017
+lastupdated: "2016-11-17"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -69,6 +69,9 @@ Dove
 
 **Importante:** il payload dei messaggi è limitato ad un massimo di 131072 byte. I messaggi che superano questo limite vengono rifiutati.
 
+### Messaggi conservati
+Le organizzazioni {{site.data.keyword.iot_short_notm}} non sono autorizzate a pubblicare i messaggi MQTT conservati. Se un dispositivo invia un messaggio conservato, il servizio {{site.data.keyword.iot_short_notm}} sovrascrive l'indicatore del messaggio conservato quando viene impostato su true ed elabora il messaggio come se l'indicatore fosse impostato su false.
+
 
 ## Sottoscrizione ai comandi
 {: #subscribing_to_commands}
@@ -91,7 +94,7 @@ Il supporto per la gestione del ciclo di vita del dispositivo è facoltativo. Il
 
 ### Livelli di QOS (quality of service) e sessione di pulizia
 
-I dispositivi gestiti possono pubblicare i messaggi con un livello di QOS (quality of service) di 0 o 1. I messaggi dal dispositivo non devono essere messaggi conservati.
+I dispositivi gestiti possono pubblicare i messaggi con un livello di QOS (quality of service) di 0 o 1. 
 
 I messaggi con QoS=0 possono essere scartati e non sono conservati dopo il riavvio del server di messaggistica. I messaggi con QoS=1 possono essere accodati e sono conservati dopo il riavvio del server di messaggistica. La durata della sottoscrizione determina se una richiesta viene accodata. Il parametro `cleansession` della connessione che effettua la sottoscrizione determina la durata della sottoscrizione.  
 

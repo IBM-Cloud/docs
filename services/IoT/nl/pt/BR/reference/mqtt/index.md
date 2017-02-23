@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-09-09"
+  years: 2015, 2016, 2017
+lastupdated: "2016-11-18"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -34,18 +34,21 @@ No {{site.data.keyword.iot_short_notm}}, as principais classes de coisas são di
 
 O cliente MQTT se identifica para o serviço {{site.data.keyword.iot_short_notm}} como uma classe de coisa. A classe de coisa determina os recursos do cliente quando ele está conectado. A classe de coisa também determina o mecanismo para a autenticação de cliente.
 
-Aplicativos e dispositivos funcionam com espaços de tópico MQTT diferentes. Os dispositivos funcionam dentro de um espaço de tópico com escopo do dispositivo, enquanto os aplicativos têm acesso total ao espaço de tópico para uma organização inteira. Para obter informações adicionais, consulte os
+Aplicativos e dispositivos funcionam com espaços de tópico MQTT diferentes.  Os dispositivos funcionam dentro de um espaço de tópico com escopo do dispositivo, enquanto os aplicativos têm acesso total ao espaço de tópico para uma organização inteira. Para obter informações adicionais, consulte os
 seguintes tópicos:
 
-- [Dispositivos](../../devices/mqtt.html)
-- [Aplicativos](../../applications/mqtt.html)
-- [Gateways](../../gateways/mqtt.html)
+- [Sistema de mensagens MQTT para dispositivos](../../devices/mqtt.html)
+- [Sistema de mensagens MQTT para aplicativos](../../applications/mqtt.html)
+- [Sistema de mensagens MQTT para gateways](../../gateways/mqtt.html)
+
+### Mensagens retidas
+O {{site.data.keyword.iot_short_notm}} fornece suporte limitado para o recurso de mensagens retidas de sistema de mensagens MQTT. Se a sinalização de mensagem retida estiver configurada como true em uma mensagem MQTT enviada de um dispositivo, um gateway ou um aplicativo para o {{site.data.keyword.iot_short_notm}}, a mensagem será manipulada como uma mensagem não retida. As organizações do {{site.data.keyword.iot_short_notm}} não estão autorizadas a publicar mensagens retidas. O serviço {{site.data.keyword.iot_short_notm}} substituirá a sinalização de mensagem retida quando ela estiver configurada como true e processará a mensagem como se a sinalização de mensagem retida estivesse configurada como false.
 
 ## Níveis de qualidade de serviço
 {: #qos-levels}
 
 O protocolo MQTT fornece três qualidades de serviço para entregar mensagens entre clientes e servidores: "no máximo uma vez", "pelo menos uma vez" e "exatamente uma vez".
-Embora seja possível enviar eventos e comandos usando qualquer qualidade de nível de serviço, deve-se considerar cuidadosamente qual é o nível de serviço para suas necessidades. O nível '2' da qualidade de serviço não é sempre uma opção melhor que o nível '0'.
+Embora seja possível enviar eventos e comandos usando qualquer nível de qualidade de serviço, deve-se considerar cuidadosamente qual é o nível de serviço correto para suas necessidades. O nível '2' da qualidade de serviço não é sempre uma opção melhor que o nível '0'.
 
 ### No máximo uma vez (QoS0)
 

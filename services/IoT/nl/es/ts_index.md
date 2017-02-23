@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-01"
+  years: 2016, 2017
+lastupdated: "2017-02-03"
 
 ---
 
@@ -17,6 +17,26 @@ lastupdated: "2016-08-01"
 
 A continuación se muestran las respuestas a preguntas de resolución de problemas comunes sobre cómo utilizar {{site.data.keyword.iot_full}} en {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
+
+## Problema al acceder a la organización de {{site.data.keyword.iot_short_notm}}
+{: #access-expiry-problem}
+
+No puede iniciar una sesión en una organización de {{site.data.keyword.iot_short_notm}} de la que es propietario.
+{:shortdesc}
+
+No puede iniciar una sesión en su organización de {{site.data.keyword.iot_short_notm}} directamente mediante el URL o mediante `https://internetofthings.ibmcloud.com`.
+{: tsSymptoms}
+
+Es posible que su acceso a la organización de {{site.data.keyword.iot_short_notm}} haya caducado. Las organizaciones de {{site.data.keyword.iot_short_notm}} creadas mediante {{site.data.keyword.Bluemix}} utilizan de forma predeterminada perfiles de usuario temporales.
+{: tsCauses}
+
+Puede solucionar este problema accediendo a su organización de {{site.data.keyword.iot_short_notm}} mediante {{site.data.keyword.Bluemix_notm}} y modificando el valor de caducidad de su perfil de usuario. Para cambiar los valores de caducidad de usuario:
+
+1. En el panel de control de {{site.data.keyword.Bluemix_notm}}, abra el servicio {{site.data.keyword.iot_short_notm}}.
+2. Pulse **Miembros** en la barra de navegación.
+3. Pulse el icono **Editar**.
+4. Desmarque el recuadro **El acceso caduca** y pulse **Guardar**.
+{: tsResolve}
 
 ## Problema de conexión al {{site.data.keyword.iot_short_notm}}
 {: #connection_problem}
@@ -56,10 +76,10 @@ Si tiene problemas o preguntas al utilizar {{site.data.keyword.iot_short_notm}},
 
 Al utilizar los foros para formular una pregunta, etiquete la pregunta para que la vean los equipos de desarrollo de {{site.data.keyword.Bluemix_notm}}.
 
-* Si tiene preguntas técnicas sobre el desarrollo o el despliegue de una app con {{site.data.keyword.iot_short_notm}}, publique su pregunta en [Desbordamiento de pila](http://stackoverflow.com/search?q=watson-iot+ibm-bluemix){:new_window} y etiquete la pregunta con "ibm-bluemix" y "watson-iot".
+* Si tiene preguntas técnicas sobre el desarrollo o el despliegue de una app con {{site.data.keyword.iot_short_notm}}, publique su pregunta en [Desbordamiento de pila![icono de enlace externo](../../icons/launch-glyph.svg)](http://stackoverflow.com/search?q=watson-iot+ibm-bluemix){:new_window} y etiquete la pregunta con "ibm-bluemix" y "watson-iot".
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
-* Para formular preguntas sobre las instrucciones del servicio y cómo empezar, utilice el foro [dW Answers de IBM developerWorks](https://developer.ibm.com/answers/topics/watson-iot/?smartspace=bluemix){:new_window}. Incluya las etiquetas "watson-iot" y "bluemix".
+* Para formular preguntas sobre las instrucciones del servicio y cómo empezar, utilice el foro [dW Answers de IBM developerWorks![icono de enlace externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/topics/watson-iot/?smartspace=bluemix){:new_window}. Incluya las etiquetas "watson-iot" y "bluemix".
 
-Consulte [Obtención de ayuda](https://www.{DomainName}/docs/support/index.html#getting-help) para obtener más detalles sobre cómo utilizar los foros.
+Consulte [Obtención de ayuda![icono de enlace externo](../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/support/index.html#getting-help){: new_window} para obtener más detalles sobre cómo utilizar los foros.
 
-Para obtener información sobre la apertura de una incidencia de soporte de IBM, o sobre los niveles de soporte y la gravedad de las incidencias, consulte [Cómo ponerse en contacto con el soporte](https://www.{DomainName}/docs/support/index.html#contacting-support).
+Para obtener información sobre la apertura de una incidencia de soporte de IBM, o sobre los niveles de soporte y la gravedad de las incidencias, consulte [Cómo ponerse en contacto con el soporte![icono de enlace externo](../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/support/index.html#contacting-support){: new_window}.

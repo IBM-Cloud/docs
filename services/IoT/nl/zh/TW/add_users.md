@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-09-16"
+  years: 2016, 2017
+lastupdated: "2017-01-24"
 
 ---
 
@@ -17,7 +17,13 @@ lastupdated: "2016-09-16"
 從存取儀表板中，您可以控制及管理對 {{site.data.keyword.iot_full}} 組織的存取權。您可以透過新增、邀請、登錄或匯入，來新增使用者。您也可以透過指派角色，給與使用者不同的存取權層次。
 {:shortdesc}
 
-## 使用者存取權
+- [新增使用者](#adding-new-users)
+- [編輯使用者](#editing-users)
+- [封鎖使用者存取權](#blocking-users)
+- [移除使用者](#removing-users)
+
+## 新增使用者
+{: #adding-new-users}
 
 從儀表板的**存取**標籤中，您可以使用「新增」、「邀請」或「登錄」功能來新增個別成員。您也可以使用「匯入」功能，同時新增、邀請或登錄多位成員。
 
@@ -88,3 +94,31 @@ lastupdated: "2016-09-16"
 ### 建構 CSV 檔案
 
 建構 CSV 檔案以將成員匯入至您的組織時，請確保您在所使用的方法中包含必要資訊。使用逗點或分號來區隔直欄。上傳 CSV 檔案時，請在 **CSV 設定**下，確保您選取正確的直欄分隔字元。
+
+## 編輯使用者
+{: #editing-users}
+
+您可以編輯使用者以變更其角色；新增、移除或變更存取到期日，或是新增或移除組織的存取權。
+
+1. 從 {{site.data.keyword.iot_short_notm}} 儀表板中，按一下左側導覽列中的**成員**。
+2. 按一下您想要編輯之使用者旁的**編輯**圖示 ![編輯](/docs/images/edit_32.svg)。
+3. 對使用者進行想要的變更。
+4. 按一下**儲存**。
+
+## 封鎖使用者存取權
+{: #blocking-users}
+
+您可以封鎖使用者存取 {{site.data.keyword.iot_short_notm}} 組織，同時仍然維護組織成員資格。
+
+1. 從 {{site.data.keyword.iot_short_notm}} 儀表板中，按一下左側導覽列中的**成員**。
+2. 按一下您想要封鎖存取 {{site.data.keyword.iot_short_notm}} 組織之使用者旁的切換按鈕。
+
+
+## 移除使用者
+{: #removing-users}
+
+您可以從 {{site.data.keyword.iot_short_notm}} 組織中完全移除使用者。移除使用者是無法復原的作業，而且必須將使用者[新增至平台](#adding-new-users)才能還原存取權。
+
+1. 從 {{site.data.keyword.iot_short_notm}} 儀表板中，按一下左側導覽列中的**成員**。
+2. 按一下要移除之使用者旁的**刪除**圖示 ![刪除](/docs/images/trash_32.svg)。
+3. 按一下確認對話框中的**刪除**。

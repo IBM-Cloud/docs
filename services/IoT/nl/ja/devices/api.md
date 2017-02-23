@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-11"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-10"
 
 ---
 
@@ -17,12 +17,17 @@ lastupdated: "2016-10-11"
 
 **重要:** デバイス用の {{site.data.keyword.iot_full}} HTTP REST API 機能は、限定されたベータ・プログラムの一部としてのみ使用できます。今後の更新によって、この機能の現行バージョンと互換性のない変更が行われる可能性があります。この機能を試して、[ご意見をお寄せください](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html)。
 
-## HTTP REST API へのアクセス
+## HTTP REST API 資料へのアクセス
 {: #api_link}
 
-{{site.data.keyword.iot_short_notm}} HTTP REST API にアクセスしてデバイスを組織に統合する方法に関する情報をさらに入手するには、https://docs.internetofthings.ibmcloud.com/swagger/v0002.html をご覧ください。
+{{site.data.keyword.iot_short_notm}} HTTP REST API 資料にアクセスしてデバイスを組織に統合する方法に関する情報をさらに入手するには、https://docs.internetofthings.ibmcloud.com/swagger/v0002.html をご覧ください。
 
 サポートされている {{site.data.keyword.iot_short_notm}} HTTP REST API のバージョンはバージョン 2 のみです。{{site.data.keyword.iot_short_notm}} ソリューションには必ずバージョン 2 を使用してください。
+
+## クライアント接続
+{: #client_connections}
+
+クライアント・セキュリティーの詳細と、クライアントを {{site.data.keyword.iot_short_notm}} のデバイスに接続する方法については、[{{site.data.keyword.iot_short_notm}} へのアプリケーション、デバイス、ゲートウェイの接続](../reference/security/connect_devices_apps_gw.html)を参照してください。
 
 # デバイス用の HTTP REST Messaging API
 {: #rest_messaging_api}
@@ -42,6 +47,8 @@ MQTT メッセージング・プロトコルの使用に加えて、HTTP REST AP
 <pre class="pre">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
 {: codeblock}
 
+**注: **ポート 443 (デフォルトの SSL ポート) は、セキュアな HTTP API 呼び出しにも指定できます。
+
 デバイスまたはアプリケーションを Quickstart サービスに接続している場合は、代わりに以下のいずれかの URL を使用してください。
 
 ### Quickstart への非セキュアな POST 要求
@@ -55,6 +62,7 @@ MQTT メッセージング・プロトコルの使用に加えて、HTTP REST AP
 **重要事項:**
 - 現在の HTTP REST API バージョンでは、HTTP メッセージングを使用してのみ、デバイス・イベントを送信できます。他のデバイス管理機能と制御機能の要求を送信するには、MQTT メッセージング・プロトコルを使用します。
 - 許可 HTTP ヘッダーを変更できないときは、HTTP 接続を再使用して、同じデバイスのイベントのみをパブリッシュできます。
+- ポート 443 (デフォルトの SSL ポート) は、セキュアな HTTP API 呼び出しにも指定できます。
 
 ### 認証
 
@@ -83,9 +91,6 @@ HTTP REST メッセージングは、MQTT サービス品質における「最�
 
 {{site.data.keyword.iot_short_notm}} の MQTT プロトコルおよびサービス品質レベルについて詳しくは、[MQTT メッセージング](../reference/mqtt/index.html)を参照してください。
 
-
-<--!
-Moved from the obsolete Features dev topic. Location to be discussed with dev.
 ## 最新イベント・キャッシュ
 {: #last-event-cache}
 
@@ -140,4 +145,3 @@ GET /api/v0002/device/types/<device-type>/devices/<device-id>/events
     }
 ]
 ```
--->

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-26"
+  years: 2016, 2017
+lastupdated: "2017-02-23"
 
 ---
 
@@ -44,7 +44,7 @@ Pour créer et connecter le simulateur de terminal Node-RED :
     6. Collez le contenu du presse-papiers dans la zone d'entrée des noeuds d'importation, puis cliquez sur **Ok**.
     Le flux du simulateur de terminal est importé dans l'éditeur de flux.
 
-2. Enregistrez votre terminal auprès de {{site.data.keyword.iot_short_notm}}
+2. Enregistrez votre terminal auprès de {{site.data.keyword.iot_short_notm}}  
 Pour connecter l'exemple de terminal Node-RED, procédez comme suit :
  1. Dans {{site.data.keyword.Bluemix_notm}}, accédez au tableau de bord.
  2. Sélectionnez l'espace dans lequel vous avez déployé {{site.data.keyword.iot_short_notm}}.

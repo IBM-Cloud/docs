@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-10-11"
+  years: 2015, 2016, 2017
+lastupdated: "2017-01-10"
 
 ---
 
@@ -17,12 +17,17 @@ lastupdated: "2016-10-11"
 
 **Importante:** La API REST HTTP de {{site.data.keyword.iot_full}} para la característica de dispositivos sólo está disponible como parte de un programa beta limitado. Las actualizaciones futuras pueden incluir cambios que no son compatibles con la versión actual de esta característica. Pruébela y [denos su opinión](https://developer.ibm.com/answers/smart-spaces/17/internet-of-things.html).
 
-## Acceso a la API REST HTTP
+## Acceso a la documentación de la API REST HTTP
 {: #api_link}
 
-Para acceder a la API REST HTTP de {{site.data.keyword.iot_short_notm}} y obtener más información sobre cómo integrar dispositivos en su organización, vaya a https://docs.internetofthings.ibmcloud.com/swagger/v0002.html.
+Para acceder a la documentación de la API REST HTTP de {{site.data.keyword.iot_short_notm}} y obtener más información sobre cómo integrar dispositivos en su organización, vaya a https://docs.internetofthings.ibmcloud.com/swagger/v0002.html.
 
 La única versión de la API REST HTTP de {{site.data.keyword.iot_short_notm}} soportada es la versión 2. Asegúrese de que las soluciones de {{site.data.keyword.iot_short_notm}} utilicen la versión 2.
+
+## Conexiones de clientes
+{: #client_connections}
+
+Para obtener información sobre la seguridad del cliente y cómo conectar clientes a dispositivos en {{site.data.keyword.iot_short_notm}}, consulte [Conexión de aplicaciones, dispositivos y pasarelas a {{site.data.keyword.iot_short_notm}}](../reference/security/connect_devices_apps_gw.html).
 
 # API de mensajería de REST HTTP para dispositivos
 {: #rest_messaging_api}
@@ -42,6 +47,8 @@ Utilice uno de los URL siguientes para enviar una solicitud `POST` desde un disp
 <pre class="pre">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
 {: codeblock}
 
+**Nota: **el puerto 443, el puerto SSL predeterminado, también se puede especificar para llamadas de API HTTP seguras.
+
 Si está conectando un dispositivo o una aplicación al servicio de Quickstart, utilice uno de los siguientes URL en su lugar:
 
 ### Solicitud POST no segura para Quickstart
@@ -55,6 +62,7 @@ Si está conectando un dispositivo o una aplicación al servicio de Quickstart, 
 **Notas importantes:**
 - En la versión de la API REST HTTP actual, sólo puede enviar sucesos de dispositivo mediante la mensajería HTTP. Utilice el protocolo de mensajería MQTT para enviar solicitudes para otras características de gestión de dispositivos y de control.
 - Las conexiones HTTP se pueden utilizar para publicar sucesos para el mismo dispositivo sólo cuando no se puede cambiar la cabecera HTTP de autorización.
+- El puerto 443, el puerto SSL predeterminado, también se puede especificar para llamadas de API HTTP seguras.
 
 ### Autenticación
 
@@ -83,9 +91,6 @@ De forma parecida a la calidad de servicio MQTT "at most once" del servicio de e
 
 Para obtener más información sobre el protocolo MQTT y la calidad de los niveles de servicio para {{site.data.keyword.iot_short_notm}}, consulte [Mensajería MQTT](../reference/mqtt/index.html).
 
-
-<--!
-Movido desde el tema Desarrollo de características obsoleto. La ubicación se tratará con el desarrollo.
 ## Memoria caché del último suceso
 {: #last-event-cache}
 
@@ -140,4 +145,3 @@ La respuesta incluirá todos los ID de suceso enviados por el dispositivo. En el
     }
 ]
 ```
--->
