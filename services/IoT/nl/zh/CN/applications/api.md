@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-12-01"
+  years: 2015, 2017
+lastupdated: "2017-02-23"
 
 ---
 
@@ -38,7 +38,7 @@ lastupdated: "2016-12-01"
 ## 访问 HTTP REST API 文档
 {: #api_link}
 
-要访问 {{site.data.keyword.iot_short_notm}} HTTP REST API 文档并获取有关如何构建和定制应用程序的更多信息，请转至 https://docs.internetofthings.ibmcloud.com/swagger/v0002.html。
+要访问 {{site.data.keyword.iot_short_notm}} HTTP REST API 文档并获取有关如何构建和定制应用程序的更多信息，请转至 [https://docs.internetofthings.ibmcloud.com/swagger/v0002.html](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html)。
 
 {{site.data.keyword.iot_short_notm}} HTTP REST API 的唯一受支持版本是 V2。请确保您的 {{site.data.keyword.iot_short_notm}} 解决方案使用的是 V2。
 
@@ -72,8 +72,8 @@ lastupdated: "2016-12-01"
 
 如果要将设备或应用程序连接到 Quickstart 服务，请将 **orgId** 替换为字符串“quickstart”。
 
-**注：** 
-- 虽然应用程序可以复用 HTTP 连接来向不同设备发布事件或命令，但无法更改授权 HTTP 头。 
+**注：**
+- 虽然应用程序可以复用 HTTP 连接来向不同设备发布事件或命令，但无法更改授权 HTTP 头。
 - 还可以为安全 HTTP API 调用指定端口 443（缺省 SSL 端口）。
 
 ### 认证
