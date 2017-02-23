@@ -10,7 +10,7 @@ lastupdated: "2017-01-17"
 
 To following samples demonstrate how to use the {{site.data.keyword.mobilepushfull}}, {{site.data.keyword.amafull}}, and {{site.data.keyword.mobileanalytics_full}} services.
 
-<table id="samples"><tbody><th><img src="images/Droid_SDK_icon.png" alt="android"></th><th><img src="images/iOS_SDK_icon.png" alt="ios"></th><th><img src="images/cordova_logo_white.png" alt="cordova"></th><tr><td>
+<table id="samples-table"><tbody><th><img src="images/Droid_SDK_icon.png" alt="android"></th><th><img src="images/iOS_SDK_icon.png" alt="ios"></th><th><img src="images/cordova_logo_white.png" alt="cordova"></th><tr><td>
 
 <!-- Android -->
 <p>Android</p>
