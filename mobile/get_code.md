@@ -57,4 +57,5 @@ The following developer tools are needed when you are working with generated cod
 	```
 
 * [Bluemix CLI Tools ![External link icon](../icons/launch-glyph.svg "External link icon")](http://clis.ng.bluemix.net/ui/home.html).
-Command line tools to easily deploy Cloud Foundry runtimes from a command line interface with Bluemix.  
+
+   Command line tools to easily deploy Cloud Foundry runtimes from a command line interface with Bluemix.  
