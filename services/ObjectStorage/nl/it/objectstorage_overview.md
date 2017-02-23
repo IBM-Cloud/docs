@@ -2,38 +2,38 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-01-31"
 
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# About {{site.data.keyword.objectstorageshort}}  {: #about-object-storage}
+# Informazioni su {{site.data.keyword.objectstorageshort}}  {: #about-object-storage}
 
 
-{{site.data.keyword.objectstorageshort}} uses metadata to identify objects placed in storage so that they are easily searchable and quickly accessible even among large amounts of data.
+{{site.data.keyword.objectstorageshort}} utilizza i metadati per identificare gli oggetti posizionati nell'archivio in modo da essere facilmente ricercabili e velocemente accessibili anche per grandi quantità di dati.
 {: shortdesc}
 
 
-## How {{site.data.keyword.Bluemix_notm}} Public {{site.data.keyword.objectstorageshort}} works {: #public}
+## Come {{site.data.keyword.Bluemix_notm}} Pubblico {{site.data.keyword.objectstorageshort}} funziona {: #public}
 
-Public {{site.data.keyword.objectstorageshort}} has two separate routes a user can follow when provisioning an account. You can start within your own private network or you can access {{site.data.keyword.objectstorageshort}} through a {{site.data.keyword.Bluemix_notm}} app. Both admins and developers can store and access objects as shown in the following diagram.
+{{site.data.keyword.objectstorageshort}} Pubblico dispone di due rotte separate che un utente può seguire durante il provisioning di un account. Puoi iniziare dall'interno della tua propria rete privata o puoi accedere {{site.data.keyword.objectstorageshort}} tramite un'applicazione {{site.data.keyword.Bluemix_notm}}. Sia gli amministratori che gli sviluppatori possono archiviare e accedere agli oggetti come mostrato nel seguente diagramma.
 
 <dl>
-  <dt><dfn> {{site.data.keyword.Bluemix_notm}} app </dfn></dt>
-    <dd> You can bind the {{site.data.keyword.objectstorageshort}} service to a {{site.data.keyword.Bluemix_notm}} app.  </dd>
-  <dt><dfn> Client app </dfn></dt>
-    <dd> You can access {{site.data.keyword.objectstorageshort}} directly from your application through a firewall on a private network. </dd>
+  <dt><dfn> {{site.data.keyword.Bluemix_notm}} applicazione </dfn></dt>
+    <dd> Puoi eseguire il bind del servizio {{site.data.keyword.objectstorageshort}} a un'applicazione {{site.data.keyword.Bluemix_notm}}.  </dd>
+  <dt><dfn> Applicazione client  </dfn></dt>
+    <dd> Puoi accedere a {{site.data.keyword.objectstorageshort}} direttamente dalla tua applicazione tramite un firewall su una rete privata. </dd>
   <dt><dfn> Keystone </dfn></dt>
-    <dd> You use the credentials provided by the {{site.data.keyword.objectstorageshort}} service to obtain an authorization token from Keystone. </dd>
-  <dt><dfn> OpenStack Swift API </dfn></dt>
-    <dd> Once you have authenticated your instance, you can read and write to your stored objects using the Swift API. </dd>
-  <dt><dfn> Storage nodes </dfn></dt>
-    <dd> The service maintains three copies of your data that it <a href="http://docs.openstack.org/developer/swift/overview_replication.html">replicates across multiple storage nodes</a>. </dd>
+    <dd> Utilizza le credenziali fornite dal servizio {{site.data.keyword.objectstorageshort}} per ottenere un token di autorizzazione da Keystone. </dd>
+  <dt><dfn> API OpenStack Swift </dfn></dt>
+    <dd> Dopo aver autenticato la tua istanza, puoi leggere e scrivere nei tuoi oggetti archiviati utilizzando l'API Swift. </dd>
+  <dt><dfn> Nodi di archiviazione </dfn></dt>
+    <dd> Il servizio gestisce tre copie dei tuoi dati che <a href="http://docs.openstack.org/developer/swift/overview_replication.html">replica in più nodi di archiviazione</a>. </dd>
 </dl>
 
-![How {{site.data.keyword.objectstorageshort}} works as written above, shown in a diagram.](images/OS_howitworks.png)
+![Come {{site.data.keyword.objectstorageshort}} funziona è stato scritto in precedenza, qui viene illustrato in un diagramma.](images/OS_howitworks.png)
 
-Figure 1. How {{site.data.keyword.Bluemix_notm}} Public {{site.data.keyword.objectstorageshort}} works
+Figura 1. Come {{site.data.keyword.Bluemix_notm}} Pubblico {{site.data.keyword.objectstorageshort}} funziona
 
-**Attention**: Provider side encryption is not provided. It is the responsibility of the client application to encrypt data before uploading. Disk level encryption is not currently available for {{site.data.keyword.Bluemix_notm}} Public {{site.data.keyword.objectstorageshort}}.
+**Attenzione**: la crittografia lato provider non è fornita. È responsabilità dell'applicazione client crittografare i dati prima del loro caricamento. La crittografia a livello del disco non è al momento disponibile per {{site.data.keyword.Bluemix_notm}} Pubblico {{site.data.keyword.objectstorageshort}}.

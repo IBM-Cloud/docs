@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -20,9 +20,11 @@ Para interactuar con el servicio, debe autenticar la instancia de {{site.data.ke
 
 El suministro de una nueva instancia de {{site.data.keyword.objectstorageshort}} crea un proyecto Keystone aislado en la nube pública de IBM. La estructura de credenciales de Keystone contiene un conjunto completo de atributos para que pueda seleccionar el método de solicitud de señales OpenStack o el SDK de OpenStack que se ajuste mejor a la app. Cuando enlace una app nueva en la instancia, se creará un nuevo usuario de Keystone con acceso al proyecto. Cuando desaprovisione la instancia, se suprimen el proyecto y el usuario.
 
-Para obtener más información sobre el uso de OpenStack Swift y Keystone, vea el [sitio de documentación de OpenStack](http://docs.openstack.org).
+Para obtener más información sobre el uso de OpenStack Swift y Keystone, vea el <a href="http://docs.openstack.org" target="_blank">sitio de documentación de OpenStack. <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a>
 
-1. Realice una solicitud POST a `https://identity.open.softlayer.com/v3/auth/tokens` tal como se muestra en el siguiente mandato cURL. 
+
+
+1. Realice una solicitud POST a `https://identity.open.softlayer.com/v3/auth/tokens` tal como se muestra en el siguiente mandato cURL.
   ```
   	curl -i \
 	  -H "Content-Type: application/json" \
@@ -155,14 +157,14 @@ Para obtener más información sobre el uso de OpenStack Swift y Keystone, vea e
   {: screen}
 
   <table>
-  <caption> Tabla 1. Respuesta de solicitud POST explicada</caption>
+  <caption> Tabla 1. Respuesta de solicitud POST explicada </caption>
     <tr>
-      <th> Punto final de respuesta</th>
-      <th> Explicación</th>
+      <th> Punto final de respuesta </th>
+      <th> Explicación </th>
     </tr>
     <tr>
       <td> <code> X-Subject-Token </code> </td>
-      <td> La señal de autenticación.</td>
+      <td> La señal de autenticación. </td>
     </tr>
     <tr>
       <td> <code> id </code> </td>

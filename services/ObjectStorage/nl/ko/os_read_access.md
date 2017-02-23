@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -50,21 +50,20 @@ lastupdated: "2017-01-17"
 </table>
 
 
-
 1. 신임 정보를 인증하십시오. UI의 서비스 신임 정보 탭에 있는 신임 정보를 사용하거나 새 신임 정보를 생성할 수 있습니다. 새 신임 정보 생성에 대한 자세한 정보는 [서비스 신임 정보 생성](/docs/services/ObjectStorage/os_credentials.html)을 참조하십시오. 출력으로 {{site.data.keyword.objectstorageshort}} URL과 인증 토큰을 수신합니다. 
 
     Swift 명령:
 
     ```
-  export OS_USER_ID=<user_id>
-  export OS_PASSWORD=<password>
-  export OS_TENANT_ID=<project_id>
-  export OS_AUTH_URL=https://identity.open.softlayer.com/v3
-  export OS_REGION_NAME=<region>
-  export OS_IDENTITY_API_VERSION=3
-  export OS_AUTH_VERSION=3
+    export OS_USER_ID=<user_id>
+    export OS_PASSWORD=<password>
+    export OS_TENANT_ID=<project_id>
+    export OS_AUTH_URL=https://identity.open.softlayer.com/v3
+    export OS_REGION_NAME=<region>
+    export OS_IDENTITY_API_VERSION=3
+    export OS_AUTH_VERSION=3
 
-  swift auth
+    swift auth
     ```
     {: codeblock}
 
@@ -90,7 +89,6 @@ lastupdated: "2017-01-17"
     ```
     {: pre}
     **참고**: 액세스 제어 목록을 구분하려면 쉼표(,)를 사용하십시오.
-
 
 3. 읽기 ACL 값을 확인하십시오. 
 

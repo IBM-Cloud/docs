@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -18,10 +18,11 @@ Para interagir com o serviço, deve-se autenticar a instância do {{site.data.ke
 {: shortdesc}
 
 
-O provisionamento de uma nova instância do {{site.data.keyword.objectstorageshort}} cria um projeto Keystone isolado no IBM Public Cloud. A estrutura de credenciais do Keystone contém um conjunto completo de atributos para que seja possível escolher o método de solicitação de token do OpenStack ou do SDK do OpenStack que melhor se ajuste ao seu
-aplicativo. Ao ligar um novo app à instância, um novo usuário Keystone com acesso ao projeto será criado. Quando você desprovisiona a instância, o projeto e o usuário são excluídos.
+O provisionamento de uma nova instância do {{site.data.keyword.objectstorageshort}} cria um projeto Keystone isolado no IBM Public Cloud. A estrutura de credenciais do Keystone contém um conjunto completo de atributos para que seja possível escolher o método de solicitação de token do OpenStack ou do SDK do OpenStack que melhor se ajuste ao seu aplicativo. Ao ligar um novo app à instância, um novo usuário Keystone com acesso ao projeto será criado. Quando você desprovisiona a instância, o projeto e o usuário são excluídos.
 
-Para obter mais informações sobre como usar o OpenStack Swift e o Keystone, visualize o [site de documentação do OpenStack](http://docs.openstack.org).
+Para obter mais informações sobre como usar o OpenStack Swift e o Keystone, visualize o <a href="http://docs.openstack.org" target="_blank">site de documentação do OpenStack. <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo"></a>
+
+
 
 1. Faça uma solicitação de POST em `https://identity.open.softlayer.com/v3/auth/tokens` conforme mostrado no comando cURL a seguir.
   ```
@@ -156,7 +157,7 @@ Para obter mais informações sobre como usar o OpenStack Swift e o Keystone, vi
   {: screen}
 
   <table>
-  <caption> Tabela 1. Resposta de solicitação de post explicada</caption>
+  <caption> Tabela 1. Resposta de solicitação de post explicada </caption>
     <tr>
       <th> Terminal de resposta </th>
       <th> Explicação </th>

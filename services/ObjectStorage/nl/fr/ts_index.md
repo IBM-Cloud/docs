@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -62,8 +62,12 @@ Si vous avez des problèmes ou des questions quand vous utilisez {{site.data.key
 
 Quand vous utilisez les forums pour poser une question, prenez soin d'étiqueter cette dernière de façon à ce qu'elle soit vue par les équipes de développement {{site.data.keyword.Bluemix_notm}}.
 
-* Si vous avez des questions techniques sur le développement ou le déploiement d'une application avec {{site.data.keyword.objectstorageshort}}, postez votre question sur [stackoverflow](http://stackoverflow.com/search?q=object-storage+ibm-bluemix){: new_window} et marquez votre question avec les étiquettes "ibm-bluemix" et "object-storage".
-* Pour des questions relatives au service et aux instructions de mise en route, utilisez le forum [IBM developerWorks - dW Answers](https://developer.ibm.com/answers/topics/objectstorage/?smartspace=bluemix){: new_window}. Incluez les étiquettes "objectstorage" et "bluemix".
+* Si vous avez des questions d'ordre technique concernant {{site.data.keyword.objectstorageshort}}, postez votre question sur le forum
+<a href="http://stackoverflow.com/search?q=object-storage+ibm-bluemix" target="_blank">Stack Overflow <img src="../../icons/launch-glyph.svg" alt="Icône de lien
+externe"> </a> en lui adjoignant les étiquettes "ibm-bluemix" et "object-storage".
+* Pour des questions relatives au service et aux instructions de mise en route, utilisez le forum
+<a href="https://developer.ibm.com/answers/topics/objectstorage/?smartspace=bluemix" target="_blank">IBM developerWorks dW Answers
+<img src="../../icons/launch-glyph.svg" alt="Icône de lien externe"></a>. Incluez les étiquettes "objectstorage" et "bluemix".
 
 Voir la rubrique expliquant comment [obtenir de l'aide](/docs/support/index.html#getting-help) pour plus de détails sur l'utilisation des forums.
 

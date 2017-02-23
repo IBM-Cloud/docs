@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -48,7 +48,6 @@ lastupdated: "2017-01-17"
     <td> <code> &#42;:&#42; </code> </td>
   </tr>
 </table>
-
 
 
 1. 鑑別您的認證。您可以使用在使用者介面的服務認證標籤中找到的認證，也可以產生新的認證。如需產生新認證的相關資訊，請參閱[產生服務認證](/docs/services/ObjectStorage/os_credentials.html)。您會收到 {{site.data.keyword.objectstorageshort}} URL 及鑑別記號作為輸出。

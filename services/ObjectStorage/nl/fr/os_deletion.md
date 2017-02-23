@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -62,8 +62,8 @@ Vous pouvez planifier la suppression de vos objets à l'aide de l'en-tête
 L'en-tête `X-Delete-At` reçoit un entier qui représente la date et heure à laquelle supprimer l'objet. L'en-tête
 `X-Delete_After` reçoit un entier qui représente le nombre de secondes après lequel l'objet est supprimé.
 
-**Remarque :** il se peut que la suppression réelle d'un objet ne survienne pas exactement à l'heure indiquée. Cependant,
-l'objet arrive effectivement à expiration à l'heure spécifiée, Des lors, l'objet n'est plus accessible. La suppression effective a lieu
+**Remarque :** il se peut que la suppression réelle d'un objet ne survienne pas exactement à l'heure indiquée. Cependant, l'objet arrive
+effectivement à expiration au moment spécifié, Des lors, l'objet n'est plus accessible. La suppression effective a lieu
 lors de la prochaine exécution du démon swift-object-expirer configurée dans votre cluster Swift.
 
 #### Pour utiliser les commandes Swift :

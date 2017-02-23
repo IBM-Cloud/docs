@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -18,7 +18,7 @@ Um usuário do {{site.data.keyword.objectstorageshort}} com uma [função admini
 {: shortdesc}
 
 <table>
-<caption> Tabela 1. Permissões de acesso de leitura por opção</caption>
+<caption> Tabela 1. Permissões de acesso de leitura por opção </caption>
   <tr>
     <th> Permissão </th>
     <th> Opções de ACL de leitura </th>
@@ -50,11 +50,8 @@ Um usuário do {{site.data.keyword.objectstorageshort}} com uma [função admini
 </table>
 
 
-
 1. Autentique suas credenciais. É possível usar as credenciais que são localizadas
-na guia de credenciais de serviço da interface com o usuário ou gerar novas credenciais. Para obter mais
-informações sobre como gerar novas credenciais, consulte
-[Gerando credenciais de serviço](/docs/services/ObjectStorage/os_credentials.html). Você recebe a URL do
+na guia de credenciais de serviço da interface com o usuário ou gerar novas credenciais. Para obter mais informações sobre como gerar novas credenciais, consulte [Gerando credenciais de serviço](/docs/services/ObjectStorage/os_credentials.html). Você recebe a URL do
 {{site.data.keyword.objectstorageshort}} e o token de autenticação como saída.
 
     Comando Swift:
@@ -94,7 +91,6 @@ informações sobre como gerar novas credenciais, consulte
     ```
     {: pre}
     **Nota**: use vírgula (,) para separar listas de controle de acesso.
-
 
 3. Verifique o valor de ACL de leitura.
 

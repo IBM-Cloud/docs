@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -19,7 +19,7 @@ Diese FAQ bieten Antworten auf häufig gestellte Fragen zum {{site.data.keyword.
 Der {{site.data.keyword.objectstorageshort}}-Service bietet zwei Planoptionen: Kostenfrei und Standard. Die [Preisstruktur](https://www.ibm.com/cloud-computing/bluemix/pricing/) ist vom ausgewählten Plan abhängig.
 
 <table>
-<caption> Tabelle 1. Vergleich des kostenfreien Plans und des Standardplans</caption>
+<caption> Tabelle 1. Vergleich des kostenfreien Plans und des Standardplans </caption>
   <tr>
     <th> Kostenfeier Plan </th>
     <th> Standardplan </th>
@@ -33,7 +33,7 @@ Der {{site.data.keyword.objectstorageshort}}-Service bietet zwei Planoptionen: K
     <td> Verfügbar nur für kostenpflichtige {{site.data.keyword.Bluemix_notm}}-Konten und interne IBM Benutzer </td>
   </tr>
   <tr>
-    <td> Kostenfrei</td>
+    <td> Kostenfrei </td>
     <td> Nutzungsabhängige oder Subskriptions-Zahlungspläne </td>
   </tr>
   <tr>

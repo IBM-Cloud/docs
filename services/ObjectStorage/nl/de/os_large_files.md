@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -40,12 +40,12 @@ Der Swift-Client verwendet den Parameter `-segment-size`, um Ihr Objekt in klein
 
 Sie können die Objekte manuell auf eine Größe von maximal 5 GB segmentieren und sie anschließend über die Swift-API hochladen.
 
-**Hinweis**: Beim Upload müssen alle Segmente vor der Manifestdatei hochgeladen werden. Wenn das Objekt heruntergeladen wird, bevor alle Segmente hochgeladen sind, wird das heruntergeladene Objekt nicht korrekt verknüpft. 
+**Hinweis**: Beim Upload müssen alle Segmente vor der Manifestdatei hochgeladen werden. Wenn das Objekt heruntergeladen wird, bevor alle Segmente hochgeladen sind, wird das heruntergeladene Objekt nicht korrekt verknüpft.
 
 Sie können große Dateien hochladen, indem Sie folgende Schritte durchführen.
 
 1. Sortieren Sie die Segmente nach Namen in der Reihenfolge, in der sie zur Bildung des ursprünglichen Objekts verknüpft werden sollen.
-2. Laden Sie Ihre Segmente in einen einzigen Container hoch, der von dem Container getrennt ist, der die Manifestdatei enthält. Die Regulierung für Uploads startet nach dem Hochladen des 10. Segments und erhöht die Zeit für das Hochladen erheblich.    
+2. Laden Sie Ihre Segmente in einen einzigen Container hoch, der von dem Container getrennt ist, der die Manifestdatei enthält. Die Regulierung für Uploads startet nach dem Hochladen des 10. Segments und erhöht die Zeit für das Hochladen erheblich.  
 
     ```
     curl -i -X PUT --data-binary @segment1 -H "X-Auth-Token: <token>" https://<Objektspeicher-URL>/<Containername>/<Objektname>/000001
@@ -69,7 +69,7 @@ Sie können große Dateien hochladen, indem Sie folgende Schritte durchführen.
     {: pre}
 
 
-## Statsiche große Objekte{: #static}
+## Statsiche große Objekte {: #static}
 
 Statische große Objekte (Static Large Objects, SLO) verwenden Segmente und eine Manifestdatei, ermöglichen Ihnen aber eine größere Kontrolle. Bei SLO müssen sich die Segmente nicht im selben Container befinden; jedes Segment kann in einem beliebigen Container gespeichert werden und mit beliebigen Namen benannt werden. Die Segmente müssen jedoch eine Größe von mindestens 1 MB aufweisen. Es ist nicht erforderlich, einen Header für die Manifestdatei einzurichten, wenngleich der Header "X-Static-Large-Object" automatisch hinzugefügt und nach dem Hochladen eines korrekten Manifests auf 'true' gesetzt wird.
 {: shortdesc}
@@ -77,7 +77,7 @@ Statische große Objekte (Static Large Objects, SLO) verwenden Segmente und eine
 Die Manifestdatei ist ein JSON-Dokument, das Details der Segmente bereitstellt und hochgeladen werden muss, nachdem alle Segmente hochgeladen wurden. Die für jedes Segment bereitgestellten Daten im Manifest werden mit den Metadaten der tatsächlichen Segmente verglichen. Wenn Elemente nicht übereinstimmen, wird das Manifest nicht hochgeladen.
 
 <table>
-<caption> Tabelle 1. JSON-Attribute in der Manifestdatei</caption>
+<caption> Tabelle 1. JSON-Attribute in der Manifestdatei </caption>
   <tr>
     <th> Attribut </th>
     <th> Beschreibung </th>
@@ -100,7 +100,7 @@ Die Manifestdatei ist ein JSON-Dokument, das Details der Segmente bereitstellt u
 
 #### Große Dateien hochladen
 
-1. Führen Sie folgenden Befehl aus, um die Segmente hochzuladen. Die Regulierung für Uploads startet nach dem Hochladen des 10. Segments und erhöht die Zeit für das Hochladen erheblich.    
+1. Führen Sie folgenden Befehl aus, um die Segmente hochzuladen. Die Regulierung für Uploads startet nach dem Hochladen des 10. Segments und erhöht die Zeit für das Hochladen erheblich.  
 
     ```
     curl -i -X PUT --data-binary @segment1 -H "X-Auth-Token: <token>" https://<Objektspeicher-URL>/<container_one>/<segment>
@@ -150,7 +150,6 @@ Die Manifestdatei ist ein JSON-Dokument, das Details der Segmente bereitstellt u
 #### Mit statischen großen Objekten arbeiten
 
 Zur Verwaltung Ihrer Dateien können Sie die folgenden Befehle verwenden.
-
 
 **Hinweis**: Wenn Segmente zum Objekt hinzugefügt oder aus diesem entfernt werden sollen, laden Sie eine neue Manifestdatei mit einer neuen Liste von Segmenten hoch. Der Manifestname kann belassen werden.
 

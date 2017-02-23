@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -60,10 +60,8 @@ Se você tiver problemas ou perguntas ao usar o {{site.data.keyword.objectstorag
 
 Ao usar os fóruns para fazer uma pergunta, marque a sua pergunta para que ela possa ser vista pelas equipes de desenvolvimento do {{site.data.keyword.Bluemix_notm}}.
 
-* Se você tiver questões técnicas sobre o {{site.data.keyword.objectstorageshort}}, poste a sua pergunta em
-[Estouro
-da capacidade](http://stackoverflow.com/search?q=object-storage+ibm-bluemix){: new_window} e marque a sua pergunta com "ibm-bluemix" e "object-storage".
-* Para perguntas sobre o serviço e obter informações de introdução, use o fórum do [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/objectstorage/?smartspace=bluemix){: new_window}. Inclua
+* Se você tiver questões técnicas sobre o {{site.data.keyword.objectstorageshort}}, poste sua pergunta no <a href="http://stackoverflow.com/search?q=object-storage+ibm-bluemix" target="_blank">Stack Overflow <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo"></a> e identifique-a com "ibm-bluemix" e "object-storage".
+* Para perguntas sobre o serviço e sobre as instruções de introdução, use o fórum <a href="https://developer.ibm.com/answers/topics/objectstorage/?smartspace=bluemix" target="_blank">Respostas do IBM developerWorks dW <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo"></a>. Inclua
 as tags "objectstorage" e "bluemix".
 
 Consulte [Obtendo ajuda](/docs/support/index.html#getting-help) para obter mais detalhes sobre o uso dos fóruns.

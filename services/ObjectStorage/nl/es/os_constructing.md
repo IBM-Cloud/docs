@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -18,9 +18,11 @@ Puede utilizar la API REST de Swift con una interfaz de cliente de línea de man
 {: shortdesc}
 
 
-Para obtener una lista completa de las opciones y los ejemplos de la API REST de {{site.data.keyword.objectstorageshort}}, consulte la [Referencia completa de la API de OpenStack Swift](http://developer.openstack.org/api-ref-objectstorage-v1.html).
+Para obtener una lista completa de las opciones y los ejemplos de la API REST de {{site.data.keyword.objectstorageshort}}, consulte la <a href="http://developer.openstack.org/api-ref-objectstorage-v1.html" target="_blank">Referencia completa de la API de OpenStack Swift. <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a>
 
-Antes de componer el URL, debe [autenticar](/docs/services/ObjectStorage/os_authenticate.html) la instancia de servicio con Keystone. Asegúrese de anotar la respuesta del catálogo. Se parecerá a la del siguiente ejemplo. 
+
+
+Antes de componer el URL, debe [autenticar](/docs/services/ObjectStorage/os_authenticate.html) la instancia de servicio con Keystone. Asegúrese de anotar la respuesta del catálogo. Se parecerá a la del siguiente ejemplo.
 
 ```
 {

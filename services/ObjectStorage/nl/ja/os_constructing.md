@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -18,7 +18,9 @@ Swift REST API は、cURL などのコマンド・ライン・クライアント
 {: shortdesc}
 
 
-{{site.data.keyword.objectstorageshort}} REST API のオプションと例の総合リストについては、[OpenStack Swift API complete reference](http://developer.openstack.org/api-ref-objectstorage-v1.html) を参照してください。
+{{site.data.keyword.objectstorageshort}} REST API のオプションと例の包括的なリストについては、<a href="http://developer.openstack.org/api-ref-objectstorage-v1.html" target="_blank">OpenStack Swift API の詳細リファレンスを参照してください。<img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a>
+
+
 
 URL を作成する前に、Keystone を使用してサービス・インスタンスを[認証](/docs/services/ObjectStorage/os_authenticate.html)する必要があります。カタログ応答を忘れずにメモしておいてください。以下に例を示します。
 

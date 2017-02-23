@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -18,7 +18,7 @@ Ein {{site.data.keyword.objectstorageshort}}-Benutzer mit [Administratorrolle](/
 {: shortdesc}
 
 <table>
-<caption> Tabelle 1. Lesezugriffsberechtigungen nach Option</caption>
+<caption> Tabelle 1. Lesezugriffsberechtigungen nach Option </caption>
   <tr>
     <th> Berechtigung </th>
     <th> Optionen für Lesezugriffssteuerung (Read ACL) </th>
@@ -48,7 +48,6 @@ Ein {{site.data.keyword.objectstorageshort}}-Benutzer mit [Administratorrolle](/
     <td> <code> &#42;:&#42; </code> </td>
   </tr>
 </table>
-
 
 
 1. Authentifizieren Sie Ihre Berechtigungsnachweise. Sie können entweder die Berechtigungsnachweise aus der Registerkarte 'Serviceberechtigungsnachweise' der Benutzerschnittstelle verwenden oder neue Berechtigungsnachweise generieren. Weitere Informationen zum Generieren neuer Berechtigungsnachweise finden Sie unter [Serviceberechtigungsnachweise generieren](/docs/services/ObjectStorage/os_credentials.html). Sie erhalten Ihre {{site.data.keyword.objectstorageshort}}-URL und das Authentifizierungstoken als Ausgabe.
@@ -90,7 +89,6 @@ Ein {{site.data.keyword.objectstorageshort}}-Benutzer mit [Administratorrolle](/
     ```
     {: pre}
     **Hinweis**: Verwenden Sie zum Trennen der Zugriffssteuerungslisten ein Komma (,).
-
 
 3. Überprüfen Sie den Wert für die Lesezugriffssteuerungsliste (Read ACL).
 

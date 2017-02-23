@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -14,11 +14,36 @@ lastupdated: "2017-01-17"
 
 # Configuration de la gestion des versions d'objets {: #setting-up-versioning}
 
-Vous pouvez conserver des versions plus anciennes de vos objets en définissant une gestion des versions d'objets. La gestion de versions vous permet de
-consulter l'historique de chaque objet.
+Vous pouvez conserver automatiquement des versions plus anciennes de vos objets en configurant une gestion des versions d'objets. Via la gestion des versions
+d'objets, vous pouvez éviter des écrasements fortuits de fichiers et extraire des versions antérieures de vos fichiers.
 {: shortdesc}
 
-Quand vous téléchargez une nouvelle version de votre fichier dans votre conteneur principal, la version précédente est automatiquement déplacée dans votre conteneur de sauvegarde. Si vous supprimez le fichier depuis votre conteneur principal, la version la plus récente est automatiquement déplacée depuis le conteneur de sauvegarde vers le conteneur principal pour remplacer le fichier supprimé.
+
+#### Fonctionnement de la gestion des versions d'objets
+
+La gestion des versions d'objets permet à l'utilisateur de stocker un objet susceptible d'être modifié. Via la gestion de versions d'objets; la version actuelle de
+votre objet reste toujours disponible dans votre conteneur de travail, tandis que ses versions antérieures sont stockées dans votre conteneur d'archivage.
+
+<dl>
+  <dt>Magasin</dt>
+    <dd>Un nouvel objet est un objet que vous stockez pour la première fois. Il peut s'agir d'un objet totalement neuf ou d'un objet modifié que vous téléchargez pour la
+seconde fois.</dd>
+  <dt>Archive</dt>
+    <dd>Via la gestion de versions d'objets, lorsqu'un objet du même nom qu'un objet existant est enregistré dans le conteneur de travail, l'ancien objet est transféré
+vers le conteneur d'archivage. Un horodatage est ajouté en suffixe au nom de l'objet.</dd>
+  <dt>Restauration</dt>
+    <dd>Si un objet est supprimé du conteneur de travail et qu'une version archivée de cet objet existe, la version archivée est restaurée.
+Vous pouvez restaurer à n'importe quel moment un objet archivé.</dd>
+</dl>
+
+![Présentation de la gestion de versions d'objets](images/os_versioning.png)
+
+Figure 1. Présentation de la gestion de versions d'objets
+
+
+#### Tutoriel
+
+Pour vous familiariser avec la gestion de versions d'objets, suivez le tutoriel ci-après.
 
 1. Créez un conteneur et donnez-lui un nom. Remplacez la variable *nom_conteneur* par le nom que vous voulez donner à votre conteneur.
 
@@ -30,7 +55,7 @@ Quand vous téléchargez une nouvelle version de votre fichier dans votre conten
 2. Créez un second conteneur qui vous servira de conteneur de stockage et donnez-lui un nom.
 
     ```
-    swift post <nom_conteneur_sauvegarde>
+    swift post <nom_conteneur_archivage>
     ```
     {: pre}
 
@@ -39,78 +64,78 @@ Quand vous téléchargez une nouvelle version de votre fichier dans votre conten
     Commande Swift :
 
     ```
-    swift post <nom_conteneur> -H "X-Versions-Location:<nom_conteneur_sauvegarde>"
+    swift post <nom_conteneur> -H "X-Versions-Location: <nom_conteneur_archivage>"
     ```
     {: pre}
 
     Commande cURL :
 
     ```
-    curl -i -X PUT -H "X-Auth-Token: <jeton>" -H "X-Versions-Location:<nom_conteneur_sauvegarde>" https://<url-stockage-objet>/<nom_conteneur>
+    curl -i -X PUT -H "X-Auth-Token: <jeton>" -H "X-Versions-Location:<nom_conteneur_archivage>"
+https://<URL_stockage_objets>/<nom_conteneur>
     ```
     {: pre}
 
-4. Téléchargez un objet dans votre conteneur principal, pour la première fois.
+4. Envovez par téléchargement un objet à votre conteneur de travail pour la première fois.
 
     ```
     swift upload <nom_conteneur> <object>
     ```
     {: pre}
 
-5. Modifiez votre objet.
-
-6. Téléchargez une nouvelle version de l'objet dans votre conteneur principal.
+5. Modifiez votre objet et envoyez par téléchargement la nouvelle version à votre conteneur de travail.
 
     ```
     swift upload <nom_conteneur> <object>
     ```
     {: pre}
 
-7.  Les objets de votre conteneur de sauvegarde sont nommés automatiquement selon le format suivant : `<Longueur><Nom_objet>/<Horodatage>`.
-  <table>
-  <caption> Tableau 1. Description des attributs de désignation </caption>
-    <tr>
-      <th> Attribut </th>
-      <th> Description </th>
-    </tr>
-    <tr>
-      <td> <i>Longueur</i> </td>
-      <td> Longueur du nom de votre objet. Il s'agit d'un nombre hexadécimal de trois caractères remplis avec des zéros. </td>
-    </tr>
-    <tr>
-      <td> <i>Nom_objet</i> </td>
-      <td> Nom de votre objet. </td>
-    </tr>
-    <tr>
-      <td> <i>Horodatage</i> </td>
-      <td> Horodatage du téléchargement initial de cette version particulière de l'objet. </td>
-    </tr>
-  </table>
+6.  L'objet dans votre conteneur de travail reçoit automatiquement un nom au format suivant : `<Longueur><nom_objet>/<horodatage>`.
+    <table>
+    <caption> Tableau 1. Description des attributs de désignation </caption>
+      <tr>
+        <th> Attribut </th>
+        <th> Description </th>
+      </tr>
+      <tr>
+        <td> <i>Longueur</i> </td>
+        <td> Longueur du nom de votre objet. Il s'agit d'un nombre hexadécimal de trois caractères remplis avec des zéros. </td>
+      </tr>
+      <tr>
+        <td> <i>Nom_objet</i> </td>
+        <td> Nom de votre objet. </td>
+      </tr>
+      <tr>
+        <td> <i>horodatage</i> </td>
+        <td> Horodatage indiquant quand la version de l'objet a été initialement envoyée par téléchargement. </td>
+      </tr>
+    </table>
 
-
-6. Répertoriez les objets de votre conteneur principal pour voir la nouvelle version de votre fichier.
+7. Répertoriez les objets dans votre conteneur d'archivage pour examiner la nouvelle version de votre fichier.
 
     ```
     swift list --lh <nom_conteneur>
     ```
     {: pre}
 
-7. Répertoriez les objets de votre conteneur de sauvegarde. Vous voyez la version précédente de votre fichier qui est stockée dans ce conteneur. Notez qu'un
-horodatage est ajouté à votre fichier.
+8. Répertoriez les objets dans votre conteneur d'archivage pour examiner la version précédente de votre fichier à laquelle un horodatage a été ajouté.
 
     ```
     swift list --lh <nom_conteneur_sauvegarde>
     ```
     {: pre}
 
-8. Supprimez l'objet dans votre conteneur principal. Quand vous supprimez l'objet, la version la plus récente qui se trouve dans votre conteneur de sauvegarde est automatiquement déplacée dans votre conteneur principal.
+9. Supprimez l'objet de votre conteneur de travail. La version la plus récente dans votre conteneur d'archivage est automatiquement restaurée dans votre conteneur de
+travail.
+
+    **Remarque** : Vous devez supprimer toutes les versions de votre fichier pour que l'objet lui-même soit supprimé.
 
     ```
     swift delete <nom_conteneur> <object>
     ```
     {: pre}
 
-9. (Facultatif) - désactivez la gestion des versions d'objets.
+10. (Facultatif) - désactivez la gestion des versions d'objets.
 
     Commande Swift :
 

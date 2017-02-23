@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -29,16 +29,16 @@ lastupdated: "2017-01-17"
 
 1.  如果您未登录到 {{site.data.keyword.Bluemix_notm}}，请登录到包含您的 {{site.data.keyword.objectstorageshort}} 实例的组织和空间。
 
-```
+    ```
   cf login -a api.ng.bluemix.net -u <userid> -p <password> -o <organization> -s <space>
   ```
-{: pre}
+    {: pre}
 
 2. 为了防止意外覆盖导致数据毁坏，请[设置对象版本控制](/docs/services/ObjectStorage/os_versioning.html)。如果您不希望设置对象版本控制，请列出存储中的现有文件，在必要时重命名目录或文件，然后再下载。
 
 3. 通过运行以下命令下载文件：
 
-```
+    ```
 swift download <container_name> <file_name>
 ```
-{: pre}
+    {: pre}

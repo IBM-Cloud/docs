@@ -2,10 +2,10 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-05"
+lastupdated: "2017-02-11"
 
 ---
-{:new_window: target="blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
 
@@ -52,6 +52,7 @@ lastupdated: "2017-01-05"
 * [使用 Java 连接到 IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/recipes/tutorials/connecting-to-ibm-object-storage-for-bluemix-with-java/){: new_window}
 * [使用 Python 访问您的 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.objectstorageshort}}](https://developer.ibm.com/recipes/tutorials/use-python-to-access-your-bluemix-object-storage/){: new_window}
 * [通过 PHP 使用 {{site.data.keyword.objectstorageshort}}](https://developer.ibm.com/recipes/tutorials/use-php-to-leverage-object-storage-for-bluemix/){: new_window} 的功能
+* [使用 js 节点来访问 Object Storage for Bluemix](https://developer.ibm.com/recipes/tutorials/use-pkgcloud-to-access-ibm-object-storage-for-bluemix-with-node-js/){: new-window}
 
 ## 兼容运行时 
 {: #buildpacks}

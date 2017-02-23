@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 
@@ -50,7 +50,7 @@ Un URL temporal es un URL largo y difícil de adivinar que se puede utilizar par
 
   La tabla siguiente explica los argumentos de posición que toma el mandato `tempurl` de Swift.
   <table>
-  <caption> Tabla 1. Argumentos de posición del URL temporal</caption>
+  <caption> Tabla 1. Argumentos de posición del URL temporal </caption>
     <tr>
       <th> Argumento </th>
       <th> Descripción </th>

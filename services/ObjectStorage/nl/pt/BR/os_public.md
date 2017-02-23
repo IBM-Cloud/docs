@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -22,3 +22,4 @@ Para iniciar o Storage Object, conclua as tarefas a seguir:
 
 Agora você está pronto para gerenciar [objetos](/docs/services/ObjectStorage/os_managing.html) e [acesso](/docs/services/ObjectStorage/os_security.html).
 
+Para saber mais sobre como o serviço funciona, consulte [Sobre o Object Storage](/docs/services/ObjectStorage/objectstorage_overview.html).

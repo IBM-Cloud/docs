@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -45,7 +45,7 @@ swift post <container_name>
 ```
   {: pre}
 
-**注**：如果收到错误消息，请确认是否已安装[必备软件](/docs/services/ObjectStorage/os_configuring.html#install-swift-client)。
+  **注**：如果收到错误消息，请确认是否已安装[必备软件](/docs/services/ObjectStorage/os_configuring.html#install-swift-client)。
 
 3. 可选：要验证容器是否已创建，请运行以下命令来列出容器。
 

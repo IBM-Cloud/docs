@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -45,7 +45,7 @@ Sie können Objekte über die Benutzerschnittstelle oder die CLI in den Speicher
   ```
   {: pre}
 
-**Hinweis**: Wenn Sie eine Fehlernachricht erhalten, stellen Sie sicher, dass die [Softwarevoraussetzungen](/docs/services/ObjectStorage/os_configuring.html#install-swift-client) installiert sind.
+  **Hinweis**: Wenn Sie eine Fehlernachricht erhalten, stellen Sie sicher, dass die [Softwarevoraussetzungen](/docs/services/ObjectStorage/os_configuring.html#install-swift-client) installiert sind.
 
 3. Optional: Um zu überprüfen, ob Ihr Container erstellt wurde, führen Sie folgenden Befehl zur Auflistung Ihrer Container aus.
 

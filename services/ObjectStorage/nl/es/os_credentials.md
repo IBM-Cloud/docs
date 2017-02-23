@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -85,7 +85,7 @@ Las credenciales de servicio se utilizan para proporcionar autenticación y segu
   ```
   {: pre}
 
-2. Ejecute el siguiente mandato para generar credenciales de servicio. 
+2. Ejecute el siguiente mandato para generar credenciales de servicio.
 
   ```
   curl "https://api.ng.bluemix.net/v2/service_keys" -d '{   "service_instance_guid": "<guid_instancia_servicio>",   "name: <nombre_instancia_servicio>", "role: <rol_usuario>"}' -X POST -H "Authorization: <señal_portador>" -H "Content-Type: <content_type" -H "Cookie: <cookie>"
@@ -93,14 +93,14 @@ Las credenciales de servicio se utilizan para proporcionar autenticación y segu
   {: pre}
 
   <table>
-  <caption> Tabla 1. Variables de credenciales de servicio de cURL explicadas</caption>
+  <caption> Tabla 1. Variables de credenciales de servicio de cURL explicadas </caption>
     <tr>
       <th> Variable  </th>
-      <th> Explicación</th>
+      <th> Explicación </th>
     </tr>
     <tr>
-      <td> <code>https://api.ng.bluemix.net/v2/service_keys</code> </td>
-      <td> El punto final de la clave de servicio. </td>
+      <td> ```https://api.ng.bluemix.net/v2/service_keys``` </td>
+      <td> El punto final de la clave de servicio.  </td>
     </tr>
     <tr>
       <td><i> service_instance_guid </i></td>
@@ -119,8 +119,6 @@ Las credenciales de servicio se utilizan para proporcionar autenticación y segu
       <td> La señal que ha recibido al autenticar la instancia con Keystone. </td>
     </tr>
   </table>
-
-
 
 3. Valide las credenciales ejecutando el mandato siguiente.
 

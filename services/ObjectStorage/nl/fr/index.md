@@ -1,11 +1,11 @@
-﻿---
+---
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-05"
+lastupdated: "2017-02-11"
 
 ---
-{:new_window: target="blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
 
@@ -53,6 +53,8 @@ pourrez toujours lier l'instance de service à votre application {{site.data.key
 * [Connecting to IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}} with Java](https://developer.ibm.com/recipes/tutorials/connecting-to-ibm-object-storage-for-bluemix-with-java/){: new_window}
 * [Use Python to access your {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.objectstorageshort}}](https://developer.ibm.com/recipes/tutorials/use-python-to-access-your-bluemix-object-storage/){: new_window}
 * [Use PHP to leverage {{site.data.keyword.objectstorageshort}}](https://developer.ibm.com/recipes/tutorials/use-php-to-leverage-object-storage-for-bluemix/){: new_window}
+* [Use Node js to access Object Storage for
+Bluemix](https://developer.ibm.com/recipes/tutorials/use-pkgcloud-to-access-ibm-object-storage-for-bluemix-with-node-js/){: new-window}
 
 ## Contextes d'exécution compatibles
 {: #buildpacks}

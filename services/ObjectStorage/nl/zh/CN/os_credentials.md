@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -99,7 +99,7 @@ lastupdated: "2017-01-17"
       <th> 说明</th>
     </tr>
     <tr>
-      <td> <code>https://api.ng.bluemix.net/v2/service_keys</code> </td>
+      <td> ```https://api.ng.bluemix.net/v2/service_keys``` </td>
       <td> 服务密钥端点。</td>
     </tr>
     <tr>
@@ -119,8 +119,6 @@ lastupdated: "2017-01-17"
       <td> 使用 Keystone 认证实例时收到的令牌。</td>
     </tr>
   </table>
-
-
 
 3. 通过运行以下命令验证凭证。
 

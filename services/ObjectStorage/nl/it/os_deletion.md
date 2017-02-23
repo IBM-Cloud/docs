@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -12,39 +12,39 @@ lastupdated: "2017-01-17"
 {:pre: .pre}
 
 
-# Deleting objects
+# Eliminazione di oggetti
 
-After you no longer have a need for them, you can delete objects and containers from your storage instance. You can manually do the delete, or you can [schedule a time](/docs/services/ObjectStorage/os_deletion.html#schedule-object-deletion) for the objects to expire.
+Dopo che non hai più bisogno di essi, puoi eliminare gli oggetti e i contenitori dalla tua istanza di archiviazione. Puoi eseguire l'eliminazione manualmente o puoi [pianificare una data/ora](/docs/services/ObjectStorage/os_deletion.html#schedule-object-deletion) per la scadenza degli oggetti.
 {: shortdesc}
 
-**Note**: If you delete your container, any objects that are stored within that container are deleted.
+**Nota**: se elimini il tuo contenitore, elimini tutti gli oggetti archiviati in tale contenitore.
 
 
-## Deleting objects and containers through the UI {: #deleting-ui}
+## Eliminazione degli oggetti e dei contenitori tramite la IU {: #deleting-ui}
 
-1. In your service instance dashboard, select the container with the file that you no longer need.
-2. Select **Delete File** from the **Actions** drop-down menu.
-3. If you no longer have use for your container, select **Delete Container** from the **Actions** drop-down menu.
+1. Nel tuo dashboard dell'istanza del servizio, seleziona il contenitore con il file di cui non hai più bisogno.
+2. Seleziona **Elimina file** dal menu a discesa **Azioni**.
+3. Se non hai più bisogno di utilizzare il tuo contenitore, seleziona **Elimina contenitore** dal menu a discesa **Azioni**.
 
 
 
-## Deleting objects and containers through the CLI {: #deleting-cli}
+## Eliminazione degli oggetti e dei contenitori tramite la CLI {: #deleting-cli}
 
-1.  If you are not logged in to {{site.data.keyword.Bluemix_notm}}, log in to the org and space that contains your instance of {{site.data.keyword.objectstorageshort}}.
+1.  Se non hai eseguito l'accesso a {{site.data.keyword.Bluemix_notm}}, accedi all'organizzazione o allo spazio che contiene la tua istanza di {{site.data.keyword.objectstorageshort}}.
   ```
   cf login -a api.ng.bluemix.net -u <userid> -p <password> -o <organization> -s <space>
   ```
   {: pre}
 
-2. Optional: Confirm that you have a backup of your objects before you delete your files and containers.
+2. Facoltativo: Conferma di avere un backup dei tuoi oggetti prima di eliminare i tuoi file e contenitori.
 
-3. Run the following command to delete a file:
+3. Esegui il seguente comando per eliminare un file:
   ```
   swift delete <container_name> <file_name>
   ```
   {: pre}
 
-4. To delete your container, run the following command:
+4. Per eliminare il tuo contenitore, esegui il seguente comando:
   ```
   swift delete <container_name>
   ```
@@ -52,49 +52,49 @@ After you no longer have a need for them, you can delete objects and containers 
 
 
 
-## Scheduling object deletion {: #schedule-object-deletion}
+## Pianificazione dell'eliminazione dell'oggetto {: #schedule-object-deletion}
 
 
-You can schedule the deletion of your objects by using either of the `X-Delete-At` or `X-Delete-After` headers.
+Puoi pianificare l'eliminazione dei tuoi oggetti utilizzando le intestazioni `X-Delete-At` o `X-Delete-After`.
 {: shortdesc}
 
-The `X-Delete-At` header takes an integer that represents the epoch time at which to delete the object. The `X-Delete_After` header takes an integer that represents the number of seconds after which the object is deleted.
+L'intestazione `X-Delete-At` è un numero intero che rappresenta il momento nel quale eliminare l'oggetto. L'intestazione `X-Delete_After` è un numero intero che rappresenta il numero di secondi dopo cui l'oggetto viene eliminato.
 
-**Note:** The actual deletion of an object might not happen at the exact time indicated. However, the object will in fact expire at the specified time. At that time, the object is longer reachable. The actual deletion will take place the next time the swift-object-expirer daemon that is configured in your Swift cluster runs.
+**Nota:** l'eliminazione effettiva di un oggetto potrebbe non verificarsi nell'esatto momento indicato. Tuttavia, l'oggetto scadrà nel momento specificato. In quel momento, l'oggetto non è più raggiungibile. L'eliminazione effettiva avrà luogo la volta successiva in cui viene eseguito il daemon swift-object-expirer configurato nel tuo cluster Swift.
 
-#### To use Swift commands:
+#### Per utilizzare i comandi Swift:
 
-* To set the object to be deleted at a specific date and time, run the following command:
+* Per impostare che l'oggetto venga eliminato in una data/ora specifica, utilizza il seguente comando:
 
     ```
     swift post -H "X-Delete-At:<epoch_time>" <container_name> <object_name>
     ```
     {: pre}
 
-    Example:
-    To set the object to be deleted on "2016/04/01 08:00:00", you would run the following command:
+    Esempio:
+    Per impostare che l'oggetto venga eliminato il "2016/04/01 08:00:00", dovrai eseguire il seguente comando:
 
     ```
     swift post -H "X-Delete-At:1459515600" container1 file7
     ```
     {: screen}
 
-* To set the object to be deleted after a specific amount of time, use the following command:
+* Per impostare che l'oggetto venga eliminato dopo un lasso di tempo specifico, utilizza il seguente comando:
 
     ```
     swift post -H "X-Delete-After:<number_of_seconds>" <container_name> <object_name>
     ```
     {: pre}
 
-    Example:
-    To set the object to be deleted an hour from now, you would run the following command:
+    Esempio:
+    Per impostare che l'oggetto venga eliminato tra un'ora, dovrai eseguire il seguente comando:
 
     ```
     swift post -H "X-Delete-After:3600" container1 file7
     ```
     {: screen}
 
-* To remove the expiration time from your object, use the following command:
+* Per rimuovere la data/ora di scadenza dal tuo oggetto, utilizza il seguente comando:
 
     ```
     swift post -H "X-Remove-Delete-After:<number_of_seconds>" <container_name> <object_name>
@@ -103,30 +103,30 @@ The `X-Delete-At` header takes an integer that represents the epoch time at whic
 
 
 
-#### To use cURL commands:
+#### Per utilizzare i comandi cURL:
 
-* To set the object to be deleted on "2016/04/01 08:00:00", use the following command:
+* Per impostare che l'oggetto venga eliminato il "2016/04/01 08:00:00", utilizza il seguente comando:
 
     ```
     cURL -X POST -H "X-Auth-Token: <token>" -H "X-Delete-At:<epoch_time>" https://<object-storage_url>/<container_name>/<object_name>
     ```
     {: pre}
 
-* To set the object to be deleted an hour from now, use the following command:
+* Per impostare che l'oggetto venga eliminato tra un'ora, utilizza il seguente comando:
 
     ```
     cURL -X POST -H "X-Auth-Token: <token>" -H "X-Delete-After:<number_of_seconds>" https://<object-storage_url>/<container_name>/<object_name>
     ```
     {: pre}
 
-* To check if the object has the header, use the following command:
+* Per controllare se l'oggetto ha un'intestazione, utilizza il seguente comando:
 
     ```
     cURL -I -H "X-Auth-Token: <token>" https://<object-storage_url>/<container_name>/<object_name>
     ```
     {: pre}
 
-* To remove the expiration time, use the following command:
+* Per rimuovere la data/ora di scadenza, utilizza il seguente comando:
 
     ```
     cURL -X POST -H "X-Auth-Token: <token>" -H "X-Remove-Delete-At:<epoch_time>" https://<object-storage_url>/<container_name>/<object_name>

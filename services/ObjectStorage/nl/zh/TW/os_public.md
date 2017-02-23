@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -22,3 +22,4 @@ lastupdated: "2017-01-17"
 
 現在，您可以管理[物件](/docs/services/ObjectStorage/os_managing.html)及[存取權](/docs/services/ObjectStorage/os_security.html)。
 
+若要進一步瞭解服務運作方式，請參閱[關於 Object Storage](/docs/services/ObjectStorage/objectstorage_overview.html)。

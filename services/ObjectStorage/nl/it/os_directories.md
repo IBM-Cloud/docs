@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -11,27 +11,27 @@ lastupdated: "2017-01-17"
 {:screen: .screen}
 {:pre: .pre}
 
-# Working with directories
+# Utilizzo delle directory
 
-Swift does not have a true directory structure, but uses naming to represent a directory layout. If you specify a directory name, it is attached to all file names as part of the relative path.
+Swift non ha una vera struttura di directory ma utilizza la denominazione per rappresentare un layout di directory. Se specifichi un nome della directory, viene allegato a tutti i nomi file come parte del relativo percorso.
 {: shortdesc}
 
-## Adding a directory to a container with the Swift CLI
+## Aggiunta di una directory a un contenitore con la CLI Swift
 
-To add a directory to a container, you must have the directory structure in place on your local device.
+Per aggiungere una directory a un contenitore, devi devi disporre della struttura della directory al posto del tuo dispositivo locale.
 
-1. Locally, create a directory and save your file.
-2. Run the following command to upload a directory to your container.
+1. Localmente, crea una directory e salva il tuo file.
+2. Esegui il seguente comando per caricare una directory nel tuo contenitore.
 
     ```
     swift upload <container_name> <directory_name>
     ```
     {: pre}
 
-## Downloading a directory with the CLI
-To download a directory structure, use the `-prefix` parameter to indicate the directory or directory structure that you want to download.
+## Scaricamento di una directory con la CLI
+Per scaricare una struttura di directory, utilizza il parametro `-prefix` per indicare la directory o la struttura di directory che vuoi scaricare.
 
-1. Run the following command to download a directory.
+1. Esegui il seguente comando per scaricare una directory.
 
     ```
     swift download <container_name> --prefix <directory>

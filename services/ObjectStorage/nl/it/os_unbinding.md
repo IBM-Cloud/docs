@@ -2,40 +2,40 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# Unbinding and deprovisioning your  {{site.data.keyword.objectstorageshort}} instance {: #deprovisioning-object-storage}
+# Annullamento del bind o effettuazione del deprovisioning della tua istanza  {{site.data.keyword.objectstorageshort}} {: #deprovisioning-object-storage}
 
-If the {{site.data.keyword.objectstorageshort}} service is bound to your Cloud Foundry App, but you no longer need storage, you can unbind and deprovision your instance.
+Se il servizio {{site.data.keyword.objectstorageshort}} è associato alla tua applicazione Cloud Foundry, ma non ne hai più bisogno per l'archiviazione, puoi annullare l'associazione ed eseguire il deprovisioning della tua istanza.
 {: shortdesc}
 
 
-## Unbinding your instance
+## Annullamento del bind della tua istanza
 
-You can maintain your saved data and unbind the service from your Cloud Foundry app. The {{site.data.keyword.objectstorageshort}} account is not deleted until the service is deprovisioned.
+Puoi mantenere i tuoi dati salvati e annullare il bind al servizio dalla tua applicazione Cloud Foundry. L'account {{site.data.keyword.objectstorageshort}} non viene eliminato finché non viene annullato il provisioning del servizio.
 
-**Attention**: If you unbind an {{site.data.keyword.objectstorageshort}} instance from a {{site.data.keyword.Bluemix_notm}} application, or delete the service key, all of your credentials for that instance are deleted, and cannot be restored. You can generate new cloud credentials by rebinding your instance, or by creating a new service key.
+**Attenzione**: se annulli il bind di un'istanza {{site.data.keyword.objectstorageshort}} da un'applicazione {{site.data.keyword.Bluemix_notm}} o elimini la chiave del servizio, tutte le tue credenziali per tale istanza vengono eliminate e non possono venire ripristinate. Puoi generare delle nuove credenziali cloud eseguendo nuovamente il bind di, oppure creando, una nuova chiave di servizio.
 
-1. To see the services that are bound to your app, click the connections tab in your Cloud Foundry application.
-2. Locate the service you that you want to unbind and click the menu button on the service tile.
-3. Select **Unbind service**.
-4. Clear the **Delete service instance** box and click **OK**.
-5. Click **Restage** for your change to take effect.
+1. Per visualizzare i servizi associati alla tua applicazione, fai clic sulla scheda delle connessioni nella tua applicazione Cloud Foundry.
+2. Individua il servizio a cui desideri annullare il bind e fai clic sul pulsante del menu nel tile del servizio.
+3. Seleziona **Annulla binding del servizio**.
+4. Deseleziona la casella **Elimina le istanze del servizio** e fai clic su **OK**.
+5. Fai clic su **Riprepara** in modo che le tue modifiche abbiano effetto.
 
 
 
-## Deprovisioning your instance
+## Deprovisioning della tua istanza
 
-If you have an instance of {{site.data.keyword.objectstorageshort}} that you no longer need, you can delete the instance.
+Se hai un'istanza di {{site.data.keyword.objectstorageshort}} di cui non hai più bisogno, puoi eliminarla.
 
-**Attention**: When you deprovision an {{site.data.keyword.objectstorageshort}}  instance, the cloud project and Swift account are deleted. All containers and objects in the deprovisioned instance are deleted, and cannot be restored.
+**Attenzione**: quando esegui il deprovisioning di un'istanza {{site.data.keyword.objectstorageshort}}, il progetto cloud e l'account Swift vengono eliminati. Tutti i contenitori e gli oggetti nell'istanza di cui viene effettuato il deprovisioning vengono eliminati e non è possibile ripristinarli.
 
-1. To see the services that are bound to your app, click the connections tab in your Cloud Foundry application.
-2. Locate the service you that you want to deprovision and click the menu button on the service tile.
-3. Select **Delete service**.
-4. Click **Delete** to confirm.
-5. Click **Restage** for your change to take effect.
+1. Per visualizzare i servizi associati alla tua applicazione, fai clic sulla scheda delle connessioni nella tua applicazione Cloud Foundry.
+2. Individua il servizio a cui desideri annullare il provisioning e fai clic sul pulsante del menu nel tile del servizio.
+3. Seleziona **Elimina il servizio**.
+4. Fai clic su **Elimina** come conferma.
+5. Fai clic su **Riprepara** in modo che le tue modifiche abbiano effetto.

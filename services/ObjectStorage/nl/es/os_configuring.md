@@ -2,11 +2,11 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 
-{:new_window: target="blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -39,7 +39,8 @@ pip install python-keystoneclient
 ```
 {: pre}
 
-Para obtener más información sobre los requisitos previos, consulte [la documentación de Openstack](http://docs.openstack.org/user-guide/common/cli_install_openstack_command_line_clients.html#install-the-prerequisite-software){: new_window}.
+Para obtener más información sobre los requisitos previos, consulte <a href="http://docs.openstack.org/user-guide/common/cli_install_openstack_command_line_clients.html#install-the-prerequisite-software" target="_blank">la documentación de OpenStack. <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a>
+
 
 
 ## Configuración del cliente {: #setup-swift-client}
@@ -47,7 +48,7 @@ Para obtener más información sobre los requisitos previos, consulte [la docume
 Para configurar el cliente de Swift, debe `exportar` la información de autenticación. Puede [generar credenciales](/docs/services/ObjectStorage/os_credentials.html) mediante la CLI utilizando los mandatos de Cloud Foundry o cURL o mediante la IU de {{site.data.keyword.Bluemix_notm}}. El cliente toma la información de las variables de entorno de la tabla siguiente.
 
 <table>
-<caption> Tabla 1. Descripciones y variables de entorno</caption>
+<caption> Tabla 1. Descripciones y variables de entorno </caption>
   <tr>
     <th> Variable de entorno </th>
     <th> Descripción </th>

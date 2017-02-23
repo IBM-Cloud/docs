@@ -2,21 +2,21 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# Managing objects
+# Gestione degli oggetti
 
-You can use the Swift CLI, API, or Bluemix UI to manage your objects and containers.
+Puoi utilizzare la CLI Swift, l'API, o la IU Bluemix per gestire i tuoi oggetti e contenitori.
 {: shortdesc}
 
-Before you can manage objects, be sure that you have [authenticated](/docs/services/ObjectStorage/os_authenticate.html) your service instance, [generated](/docs/services/ObjectStorage/os_credentials.html) service credentials, and [configured](/docs/services/ObjectStorage/os_configuring.html) the Swift CLI.
+Prima di poter gestire gli oggetti, assicurati di aver [autenticato](/docs/services/ObjectStorage/os_authenticate.html) la tua istanza del servizio, [generato](/docs/services/ObjectStorage/os_credentials.html) le credenziali del servizio e [configurato](/docs/services/ObjectStorage/os_configuring.html) la CLI Swift.
 
-Keep the following points in mind when you are managing objects:
-  * There is no limit to the amount of data that you can store, but each upload can be no more than 5 GB. If you need to upload files larger than 5 GB follow the steps that are found in [storing large objects](/docs/services/ObjectStorage/os_large_files.html).
-  * Swift does not have a true directory structure, but you can add an [existing directory](/docs/services/ObjectStorage/os_directories.html) to your commands.
-  * To avoid unintentionally overwriting a file, [set up object versioning](/docs/services/ObjectStorage/os_versioning.html).
-  * You can [schedule a time](/docs/services/ObjectStorage/os_deletion.html) for your objects to be deleted.
+Tieni i seguenti punti in mente quando stai gestendo gli oggetti:
+  * Non esiste limite alla quantità di dati che puoi archiviare, ma ogni caricamento non può essere superiore a 5 GB. Se hai bisogno di caricare file più grandi di 5 GB segui le istruzioni in [archiviazione di oggetti grandi](/docs/services/ObjectStorage/os_large_files.html).
+  * Swift non dispone di una vera struttura di directory, ma puoi aggiungere una [directory esistente](/docs/services/ObjectStorage/os_directories.html) ai tuoi comandi.
+  * Per evitare la sovrascrittura non intenzionale di un file, [configura le versioni dell'oggetto](/docs/services/ObjectStorage/os_versioning.html).
+  * Puoi [pianificare una data/ora](/docs/services/ObjectStorage/os_deletion.html) per l'eliminazione dei tuoi oggetti.

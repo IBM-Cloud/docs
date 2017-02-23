@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -12,18 +12,18 @@ lastupdated: "2017-01-17"
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
 
-# {{site.data.keyword.objectstorageshort}} troubleshooting
+# Risoluzione dei problemi di {{site.data.keyword.objectstorageshort}}
 {: #troubleshooting}
 
 
-Here are the answers to common troubleshooting questions about using {{site.data.keyword.objectstoragefull}}.
+Queste sono le risposte alle domande sulla risoluzione dei problemi comuni riguardanti l'utilizzo di {{site.data.keyword.objectstoragefull}}.
 {: shortdesc}
 
-## Unrecognized token contentpack returned when using openstack4J with Liberty Profile
+## È stato restituito un token contentpack non riconosciuto durante l'utilizzo di openstack4J con il profilo Liberty
 {: #unrecognized_token}
 
 
-The following stacktrace might occur when using openstack4j with the Liberty Profile:
+È possibile che si verifichi la seguente traccia di stack quando utilizzi openstack4j con il profilo Liberty:
 ```
 Exception thrown by application class 'org.openstack4j.connectors.okhttp.HttpResponseImpl.readEntity:124'
 org.openstack4j.api.exceptions.ClientResponseException: Unrecognized token 'contentpack': was expecting ('true', 'false' or 'null') at [Source: contentpack ; line: 1, column: 12]
@@ -35,34 +35,40 @@ at org.openstack4j.openstack.internal.BaseOpenStackService$Invocation.execute(Ba
 at org.openstack4j.openstack.storage.object.internal.ObjectStorageContainerServiceImpl.list(ObjectStorageContainerServiceImpl.java:41)
 at com.mimotic.SecureMessageApp.HelloResource.getInformation(HelloResource.java:47)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
+    at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+    at java.lang.reflect.Method.invoke(Unknown Source)
 ```
 {: screen}
 {: tsSymptoms}
 
 
-This problem results from a class-loading issue, where the openstack4j library contains some of the same packages that are provided in the Liberty profile.  For example, OpenStack4j uses JERSEY, which might collide with the Wink libs.
+Questo problema è causato da un errore di caricamento della classe, dove la libreria openstack4j contiene alcuni degli stessi pacchetti forniti nel profilo Liberty.  Ad esempio, OpenStack4j utilizza JERSEY, che può essere in conflitto con le librerie Wink.
 {: tsCauses}
 
 
-You can fix this problem by either:
+Puoi risolvere questo problema nei seguenti modi:
 {: tsResolve}
-  * Using reverse classloading (parentLast).
-  * Excluding jaxrs from the enabled features.
+  * Utilizzando il caricamento della classe inverso (parentLast).
+  * Escludendo jaxrs dalle funzioni abilitate.
 
 
-## Getting help and support for {{site.data.keyword.objectstorageshort}}
+## Come ottenere aiuto e supporto per {{site.data.keyword.objectstorageshort}}
 {: #gettinghelp}
 
-If you have problems or questions when using {{site.data.keyword.objectstoragefull}}, you can get help by searching for information or by asking questions through a forum. You can also open a support ticket.
+Se hai dei problemi o delle domande quando utilizzi {{site.data.keyword.objectstoragefull}},
+puoi ottenere aiuto ricercando le informazioni o facendo delle domande in un forum. Puoi inoltre aprire un ticket di supporto.
 
-When using the forums to ask a question, tag your question so that it is seen by the {{site.data.keyword.Bluemix_notm}} development teams.
+Quando utilizzi i forum per fare una domanda, contrassegna con una tag la tua domanda in modo che sia visualizzabile dai team di sviluppo {{site.data.keyword.Bluemix_notm}}.
 
-* If you have technical questions about {{site.data.keyword.objectstorageshort}}, post your question on [Stack Overflow](http://stackoverflow.com/search?q=object-storage+ibm-bluemix){: new_window} and tag your question with "ibm-bluemix" and "object-storage".
-* For questions about the service and getting started instructions, use the [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/objectstorage/?smartspace=bluemix){: new_window} forum. Include the  "objectstorage" and "bluemix" tags.
+* Se hai domande tecniche sullo sviluppo o la distribuzione di un'applicazione con {{site.data.keyword.objectstorageshort}},
+inserisci la tua domanda in <a href="http://stackoverflow.com/search?q=object-storage+ibm-bluemix" target="_blank">Stack Overflow
+<img src="../../icons/launch-glyph.svg" alt="icona link esterno"></a> e contrassegnala con le  tag "ibm-bluemix" e "object-storage".
+* Per domande sul servizio e sulle istruzioni per l'utilizzo iniziale, utilizza il forum
+<a href="https://developer.ibm.com/answers/topics/objectstorage/?smartspace=bluemix" target="_blank">IBM developerWorks dW Answers
+<img src="../../icons/launch-glyph.svg" alt="icona link esterno"></a>. Includi le tag "objectstorage" e "bluemix".
 
-See [Getting help](/docs/support/index.html#getting-help) for more details about using the forums.
+Consulta [Come ottenere supporto](/docs/support/index.html#getting-help) per ulteriori dettagli sull'utilizzo dei forum.
 
-For information about opening an IBM support ticket, or about support levels and ticket severities, see [Contacting support](/docs/support/index.html#contacting-support).
+Per informazioni su come aprire un ticket di supporto IBM o sui livelli di supporto e sulla gravità dei ticket, consulta
+[Come contattare il supporto](/docs/support/index.html#contacting-support).

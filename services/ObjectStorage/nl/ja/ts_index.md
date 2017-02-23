@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -60,8 +60,9 @@ at java.lang.reflect.Method.invoke(Unknown Source)
 
 フォーラムを使用して質問を行う場合は、{{site.data.keyword.Bluemix_notm}} 開発チームの目にとまるように、質問にタグを付けてください。
 
-* {{site.data.keyword.objectstorageshort}} に関する技術的な質問がある場合は、[Stack Overflow](http://stackoverflow.com/search?q=object-storage+ibm-bluemix){: new_window} に質問を投稿し、質問に「ibm-bluemix」と「object-storage」のタグを付けてください。
-* サービスと使用開始の手順に関する質問の場合は、[IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/objectstorage/?smartspace=bluemix){: new_window} フォーラムを使用してください。「objectstorage」と「bluemix」のタグを含めてください。
+* {{site.data.keyword.objectstorageshort}} に関する技術的な質問がある場合は、<a href="http://stackoverflow.com/search?q=object-storage+ibm-bluemix" target="_blank">Stack Overflow <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a> に質問を投稿し、質問に「ibm-bluemix」と「object-storage」のタグを付けてください。
+* サービスおよび使用開始の手順に関する質問の場合は、
+<a href="https://developer.ibm.com/answers/topics/objectstorage/?smartspace=bluemix" target="_blank">IBM developerWorks dW Answers <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a> フォーラムを使用してください。「objectstorage」と「bluemix」のタグを含めてください。
 
 フォーラムの使用について詳しくは、[「ヘルプの取得」](/docs/support/index.html#getting-help)を参照してください。
 

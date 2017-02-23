@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -20,7 +20,9 @@ lastupdated: "2017-01-17"
 
 新しい {{site.data.keyword.objectstorageshort}} インスタンスをプロビジョンすると、IBM Public Cloud に独立した Keystone プロジェクトが作成されます。アプリに最適な OpenStack トークン要求メソッドまたは OpenStack SDK を選択できるように、Keystone の資格情報構造体には完全な属性セットが含まれています。インスタンスに新しいアプリをバインドすると、プロジェクトへのアクセス権限を持つ新しい Keystone ユーザーが作成されます。インスタンスをプロビジョン解除すると、プロジェクトとユーザーは削除されます。
 
-OpenStack Swift および Keystone について詳しくは、[OpenStack 資料サイト](http://docs.openstack.org)を参照してください。
+OpenStack Swift および Keystone の使用について詳しくは、<a href="http://docs.openstack.org" target="_blank">OpenStack 資料サイトを参照してください。<img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a>
+
+
 
 1. 以下の cURL コマンドに示されているように、`https://identity.open.softlayer.com/v3/auth/tokens` への POST 要求を実行します。
   ```

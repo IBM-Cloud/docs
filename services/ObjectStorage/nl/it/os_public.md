@@ -2,23 +2,24 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# Bluemix Public {{site.data.keyword.objectstorageshort}}
+# {{site.data.keyword.objectstorageshort}} Pubblico Bluemix
 
-Public {{site.data.keyword.objectstorageshort}}, based on  Swift, provides a fully provisioned, API accessible storage platform to manage your data. You can use it directly in your applications or for backups, making it ideal for cost effective, scale-out storage.
+{{site.data.keyword.objectstorageshort}} Pubblico, basato su Swift, fornisce una piattaforma di archiviazione accessibile con API con provisioning completo, per gestire i tuoi dati. Puoi utilizzarlo direttamente nelle tue applicazioni oppure per i backup, rendendolo ideale per un'archiviazione con un buon rapporto costo/efficacia e con scaling incrementale.
 {: shortdesc}
 
-To get started with Object Storage, complete the following tasks:
+Per iniziare ad utilizzare Object Storage, completa le seguenti attività:
 
-1. Authenticate your service instance with [Keystone](/docs/services/ObjectStorage/os_authenticate.html).
-2. Generate [credentials](/docs/services/ObjectStorage/os_credentials.html) for your service.
-3. Configure the [Swift client](/docs/services/ObjectStorage/os_configuring.html) and other prerequisite software.
-4. Construct either a [temporary](/docs/services/ObjectStorage/os_tempurl.html) or [permanent](/docs/services/ObjectStorage/os_constructing.html) URL.
+1. Autentica la tua istanza del servizio con [Keystone](/docs/services/ObjectStorage/os_authenticate.html).
+2. Genera le [credenziali](/docs/services/ObjectStorage/os_credentials.html) per il tuo servizio.
+3. Configura il [client Swift](/docs/services/ObjectStorage/os_configuring.html) e il rimanente software prerequisito.
+4. Crea un URL [temporaneo](/docs/services/ObjectStorage/os_tempurl.html) o [permanente](/docs/services/ObjectStorage/os_constructing.html).
 
-Now, you're ready to manage [objects](/docs/services/ObjectStorage/os_managing.html) and [access](/docs/services/ObjectStorage/os_security.html).
+Ora, sei pronto a gestire gli [oggetti](/docs/services/ObjectStorage/os_managing.html) e ad [accedere](/docs/services/ObjectStorage/os_security.html).
 
+Per ulteriori informazioni su come funziona il servizio, consulta [Informazioni su Object Storage](/docs/services/ObjectStorage/objectstorage_overview.html).

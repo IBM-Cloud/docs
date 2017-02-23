@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -20,35 +20,37 @@ lastupdated: "2017-01-17"
 
 새 {{site.data.keyword.objectstorageshort}} 인스턴스를 프로비저닝하면 IBM 퍼블릭 클라우드에 격리된 Keystone 프로젝트가 작성됩니다. Keystone 신임 정보 구조에는 사용자 앱에 가장 적합한 OpenStack 토큰 요청 메소드 또는 OpenStack SDK를 선택할 수 있도록 전체 속성 세트가 포함되어 있습니다. 새 앱을 인스턴스에 바인딩하면 프로젝트에 대한 액세스 권한이 있는 새 Keystone 사용자가 작성됩니다. 인스턴스를 프로비저닝 해제하면 프로젝트 및 사용자가 삭제됩니다. 
 
-OpenStack Swift 및 Keystone 사용에 대한 자세한 정보는 [OpenStack 문서 사이트](http://docs.openstack.org)를 참조하십시오. 
+OpenStack Swift 및 Keystone 사용에 대한 자세한 정보는 <a href="http://docs.openstack.org" target="_blank">OpenStack 문서 사이트를 참조하십시오. <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘"></a>
+
+
 
 1. 다음 cURL 명령에 표시된 대로 `https://identity.open.softlayer.com/v3/auth/tokens`에 대한 POST 요청을 작성하십시오. 
   ```
   	curl -i \
-	  -H "Content-Type: application/json" \
-	  -d '
-	{
-		"auth": {
-			"identity": {
-				"methods": [
-					"password"
-				],
-				"password": {
-					"user": {
-						"id": "ad78b2a3f843466988afd077731c61fc",
-						"password": "XXXXXXXXXX"
-					}
-				}
+  	  -H "Content-Type: application/json" \
+  	  -d '
+  	{
+  		"auth": {
+  			"identity": {
+  				"methods": [
+  					"password"
+  				],
+  				"password": {
+  					"user": {
+  						"id": "ad78b2a3f843466988afd077731c61fc",
+  						"password": "XXXXXXXXXX"
+  					}
+  				}
   			},
-			"scope": {
-				"project": {
-					"id": "0f47b41b06d047f9aae3b33f1db061ed"
-				}
-			}
+  			"scope": {
+  				"project": {
+  					"id": "0f47b41b06d047f9aae3b33f1db061ed"
+  				}
+  			}
   		}
   	}' \
-	  https://identity.open.softlayer.com/v3/auth/tokens ; echo
-```
+  	  https://identity.open.softlayer.com/v3/auth/tokens ; echo
+  ```
   {: codeblock}
 
 2. 카탈로그 응답에서 `object-store` 엔드포인트를 선택하고 이를 기록하십시오. 이는 전체 URL을 구성할 때 필요합니다. 다음 응답 예제는 {{site.data.keyword.objectstorageshort}} 관련 정보만 표시하도록 편집되었습니다. 

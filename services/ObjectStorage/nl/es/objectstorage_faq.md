@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -19,7 +19,7 @@ Estas preguntas más frecuentes proporcionan respuestas a preguntas comunes sobr
 El servicio de {{site.data.keyword.objectstorageshort}} ofrece dos opciones de planes: Gratuito y Estándar. El [precio](https://www.ibm.com/cloud-computing/bluemix/pricing/) varía en función del plan escogido.
 
 <table>
-<caption> Tabla 1. Comparación de los planes Gratuito y Estándar</caption>
+<caption> Tabla 1. Comparación de los planes Gratuito y Estándar </caption>
   <tr>
     <th> Plan gratuito </th>
     <th> Plan estándar </th>
@@ -55,7 +55,7 @@ También puede [modificar el plan de pago](/docs/pricing/index.html#changing) me
 
 ## ¿Cómo se me cobrará y facturará por mi uso de {{site.data.keyword.objectstorageshort}}? {: #charge-bill}
 
-El servicio {{site.data.keyword.objectstorageshort}} sólo le cobrará por lo que utilice. No existen cargos ni compromisos para empezar a utilizar el servicio. No se le cargará por las solicitudes de API ni por tráfico de red de datos entrante.
+El servicio {{site.data.keyword.objectstorageshort}} sólo le cobrará por lo que utilice.  No existen cargos ni compromisos para empezar a utilizar el servicio. No se le cargará por las solicitudes de API ni por tráfico de red de datos entrante.
 
 {{site.data.keyword.objectstorageshort}} se factura en función del uso de almacenamiento durante el ciclo de facturación. Esto incluye todos los datos de objetos en contenedores que haya creado dentro de su organización de {{site.data.keyword.Bluemix_notm}}.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -22,3 +22,4 @@ Public {{site.data.keyword.objectstorageshort}} 基于 Swift，提供了可通�
 
 现在，您可以管理[对象](/docs/services/ObjectStorage/os_managing.html)并进行[访问](/docs/services/ObjectStorage/os_security.html)。
 
+要了解有关服务工作原理的更多信息，请参阅[关于 Object Storage](/docs/services/ObjectStorage/objectstorage_overview.html)。

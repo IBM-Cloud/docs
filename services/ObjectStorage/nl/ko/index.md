@@ -2,10 +2,10 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-05"
+lastupdated: "2017-02-11"
 
 ---
-{:new_window: target="blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
 
@@ -52,6 +52,7 @@ lastupdated: "2017-01-05"
 * [Java를 사용하여 IBM {{site.data.keyword.objectstorageshort}} for {{site.data.keyword.Bluemix_notm}}에 연결](https://developer.ibm.com/recipes/tutorials/connecting-to-ibm-object-storage-for-bluemix-with-java/){: new_window}
 * [Python을 사용하여 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.objectstorageshort}}에 액세스](https://developer.ibm.com/recipes/tutorials/use-python-to-access-your-bluemix-object-storage/){: new_window}
 * [PHP를 사용하여 {{site.data.keyword.objectstorageshort}} 활용](https://developer.ibm.com/recipes/tutorials/use-php-to-leverage-object-storage-for-bluemix/){: new_window}
+* [Node.js를 사용하여 Object Storage for Bluemix에 액세스](https://developer.ibm.com/recipes/tutorials/use-pkgcloud-to-access-ibm-object-storage-for-bluemix-with-node-js/){: new-window}
 
 ## 호환 가능 런타임 
 {: #buildpacks}

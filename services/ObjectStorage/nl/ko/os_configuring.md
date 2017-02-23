@@ -2,11 +2,11 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 
-{:new_window: target="blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -39,7 +39,8 @@ pip install python-keystoneclient
 ```
 {: pre}
 
-필수 소프트웨어에 관한 자세한 정보는 [Openstack 문서](http://docs.openstack.org/user-guide/common/cli_install_openstack_command_line_clients.html#install-the-prerequisite-software){: new_window}를 참조하십시오. 
+전제조건에 대한 자세한 정보는 <a href="http://docs.openstack.org/user-guide/common/cli_install_openstack_command_line_clients.html#install-the-prerequisite-software" target="_blank">OpenStack 문서를 참조하십시오. <img src="../../icons/launch-glyph.svg" alt="외부 링크 아이콘"></a>
+
 
 
 ## 클라이언트 설정 {: #setup-swift-client}
@@ -87,7 +88,7 @@ export OS_IDENTITY_API_VERSION=
 export OS_AUTH_VERSION=
 
 swift auth
-    ```
+```
 {: codeblock}
 
 
@@ -102,5 +103,5 @@ export OS_IDENTITY_API_VERSION=3
 export OS_AUTH_VERSION=3
 
 swift auth
-    ```
+```
 {: screen}

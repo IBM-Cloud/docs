@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -84,7 +84,7 @@ Les données d'identification sont utilisées pour fournir l'authentification et
   ```
   {: pre}
 
-2. Exécutez la commande suivante pour générer les données d'identification. 
+2. Exécutez la commande suivante pour générer les données d'identification.
 
   ```
   curl "https://api.ng.bluemix.net/v2/service_keys" -d '{   "service_instance_guid": "<guid_instance_service>",   "name: <nom_instance_service>", "role: <rôle_utilisateur>"}' -X POST -H "Authorization: <jeton_bearer>" -H "Content-Type: <type_contenu" -H "Cookie: <cookie>"
@@ -92,13 +92,13 @@ Les données d'identification sont utilisées pour fournir l'authentification et
   {: pre}
 
   <table>
-  <caption> Tableau 1. Explication des variables des données d'identification du service dans la commande cURL</caption>
+  <caption> Tableau 1. Explication des variables des données d'identification du service dans la commande cURL </caption>
     <tr>
       <th> Variable  </th>
       <th> Explication </th>
     </tr>
     <tr>
-      <td> <code>https://api.ng.bluemix.net/v2/service_keys</code> </td>
+      <td> ```https://api.ng.bluemix.net/v2/service_keys``` </td>
       <td> Noeud final de clé de service  </td>
     </tr>
     <tr>
@@ -118,8 +118,6 @@ Les données d'identification sont utilisées pour fournir l'authentification et
       <td> Jeton reçu lors de l'authentification de votre instance auprès de Keystone. </td>
     </tr>
   </table>
-
-
 
 3. Validez vos données d'identification en exécutant la commande suivante.
 

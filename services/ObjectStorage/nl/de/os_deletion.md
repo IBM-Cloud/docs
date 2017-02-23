@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -36,7 +36,7 @@ Wenn Sie Objekte nicht mehr benötigen, können Sie diese und auch Container aus
   ```
   {: pre}
 
-2. Optional: Vergewissern Sie sich vor dem Löschen Ihrer Dateien und Container, dass eine Sicherung Ihrer Objekte vorhanden ist. 
+2. Optional: Vergewissern Sie sich vor dem Löschen Ihrer Dateien und Container, dass eine Sicherung Ihrer Objekte vorhanden ist.
 
 3. Führen Sie folgenden Befehl aus, um eine Datei zu löschen:
   ```
@@ -58,9 +58,9 @@ Wenn Sie Objekte nicht mehr benötigen, können Sie diese und auch Container aus
 Sie können das Löschen Ihrer Objekte planen, indem Sie den Header `X-Delete-At` oder `X-Delete-After` verwenden.
 {: shortdesc}
 
-Der Wert für den Header `X-Delete-At` ist eine ganze Zahl, die die Referenzzeit darstellt, zu der das Objekt gelöscht werden soll. Der Wert für den Header `X-Delete_After` ist eine ganze Zahl, die die Anzahl an Sekunden darstellt, nach deren Ablauf das Objekt gelöscht wird. 
+Der Wert für den Header `X-Delete-At` ist eine ganze Zahl, die die Referenzzeit darstellt, zu der das Objekt gelöscht werden soll. Der Wert für den Header `X-Delete_After` ist eine ganze Zahl, die die Anzahl an Sekunden darstellt, nach deren Ablauf das Objekt gelöscht wird.
 
-**Hinweis:** Die tatsächliche Löschung eines Objekts erfolgt möglicherweise nicht genau zur angegebenen Uhrzeit. Das Objekt läuft jedoch tatsächlich zur angegebenen Zeit ab. Von diesem Zeitpunkt an ist das Objekt nicht mehr erreichbar. Die eigentliche Löschung findet bei der nächsten Ausführung des in Ihrem Swift-Cluster konfigurierten Dämons 'swift-object-expirer' statt.
+**Hinweis:** Die tatsächliche Löschung eines Objekts erfolgt möglicherweise nicht genau zur angegebenen Uhrzeit. Das Objekt läuft jedoch zur angegebenen Zeit ab. Von diesem Zeitpunkt an ist das Objekt nicht mehr erreichbar. Die eigentliche Löschung findet bei der nächsten Ausführung des in Ihrem Swift-Cluster konfigurierten Dämons 'swift-object-expirer' statt.
 
 #### Gehen Sie zur Verwendung von Swift-Befehlen folgendermaßen vor:
 

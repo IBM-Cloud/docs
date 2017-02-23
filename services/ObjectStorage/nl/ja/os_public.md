@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -22,3 +22,4 @@ Object Storage の使用を始めるには、以下のタスクを実行して�
 
 これで、[オブジェクト](/docs/services/ObjectStorage/os_managing.html)および[アクセス権限](/docs/services/ObjectStorage/os_security.html)を管理する準備ができました。
 
+サービスの仕組みについての詳細は、[Object Storage の概要](/docs/services/ObjectStorage/objectstorage_overview.html)を参照してください。

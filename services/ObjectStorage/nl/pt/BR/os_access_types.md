@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -19,7 +19,7 @@ administrativos. As listas de controle de acesso são ativadas por usuários adm
 {: shortdesc}
 
 <table>
-<caption> Tabela 1. Funções de usuário definidas</caption>
+<caption> Tabela 1. Funções de usuário definidas </caption>
   <tr>
     <th> Usuários administrativos (administradores) </th>
     <th> Usuários não administrativos (membros) </th>

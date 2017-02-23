@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -18,7 +18,7 @@ Un usuario de {{site.data.keyword.objectstorageshort}} con un [rol de administra
 {: shortdesc}
 
 <table>
-<caption> Tabla 1. Permisos de acceso de escritura por opción</caption>
+<caption> Tabla 1. Permisos de acceso de escritura por opción </caption>
   <tr>
     <th> Permiso </th>
     <th> Opciones de ACL de escritura </th>

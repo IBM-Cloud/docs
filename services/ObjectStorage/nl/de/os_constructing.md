@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -18,7 +18,9 @@ Sie können die Swift-REST-API mit einer Befehlszeilen-Clientschnittstelle, wie 
 {: shortdesc}
 
 
-Eine umfassende Liste der Optionen und Beispiele der {{site.data.keyword.objectstorageshort}}-REST-API finden Sie in der [vollständige Referenz zur OpenStack-Swift-API](http://developer.openstack.org/api-ref-objectstorage-v1.html).
+Eine umfassende Liste der Optionen und Beispiele der {{site.data.keyword.objectstorageshort}}-REST-API finden Sie in der <a href="http://developer.openstack.org/api-ref-objectstorage-v1.html" target="_blank">vollständigen Referenz zur OpenStack-Swift-API. <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link"></a>
+
+
 
 Bevor Sie die URL bilden können, müssen Sie die Serviceinstanz mit Keystone [authentifizieren](/docs/services/ObjectStorage/os_authenticate.html). Denken Sie daran, die Katalogantwort zu notieren. Diese sieht ähnlich wie das folgende Beispiel aus.
 

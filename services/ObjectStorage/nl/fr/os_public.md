@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-02-10"
 
 ---
 {:new_window: target="_blank"}
@@ -19,9 +19,8 @@ Pour commencer à utiliser Object Storage, procédez comme suit :
 1. Authentifiez votre instance de service auprès de [Keystone](/docs/services/ObjectStorage/os_authenticate.html).
 2. Générez des [données d'identification](/docs/services/ObjectStorage/os_credentials.html) pour votre service.
 3. Configurez le [client Swift](/docs/services/ObjectStorage/os_configuring.html) et les autres logiciels prérequis.
-4. Construisez une URL [temporaire](/docs/services/ObjectStorage/os_tempurl.html) ou
-[permanente](/docs/services/ObjectStorage/os_constructing.html).
+4. Construisez une URL [temporaire](/docs/services/ObjectStorage/os_tempurl.html) ou [permanente](/docs/services/ObjectStorage/os_constructing.html).
 
-Vous pouvez à présent gérer des [objets](/docs/services/ObjectStorage/os_managing.html) et les
-[accès](/docs/services/ObjectStorage/os_security.html).
+Vous pouvez à présent gérer des [objets](/docs/services/ObjectStorage/os_managing.html) et les [accès](/docs/services/ObjectStorage/os_security.html).
 
+Pour plus d'informations sur le fonctionnement du service, voir [A propos d'Object Storage](/docs/services/ObjectStorage/objectstorage_overview.html).
