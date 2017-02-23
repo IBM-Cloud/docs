@@ -1,15 +1,15 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-26"
+  years: 2016, 2017
+lastupdated: "2016-02-23"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
+{:screen: .screen}
 {:pre: .pre}
 
 # Using the {{site.data.keyword.openwhisk_short}} mobile SDK
@@ -87,7 +87,7 @@ Build the project for the targets that you need and add the resulting frameworks
 You can use the {{site.data.keyword.openwhisk_short}} CLI to download example code that embeds the {{site.data.keyword.openwhisk_short}} SDK framework.  
 
 To install the starter app example, enter the following command:
-```
+```bash
 wsk sdk install iOS
 ```
 {: pre}
@@ -95,7 +95,7 @@ wsk sdk install iOS
 This command downloads a compressed file that contains the starter app. Inside the project directory is a podfile.
 
 To install the SDK, enter the following command:
-```
+```bash
 pod install
 ```
 {: pre}
@@ -107,7 +107,7 @@ To get up and running quickly, create a WhiskCredentials object with your {{site
 
 For example, use the following example code to create a credentials object:
 
-```
+```swift
 let credentialsConfiguration = WhiskCredentials(accessKey: "myKey", accessToken: "myToken")
 
 let whisk = Whisk(credentials: credentialsConfiguration!)
@@ -116,7 +116,7 @@ let whisk = Whisk(credentials: credentialsConfiguration!)
 
 In previous example, you pass in the `myKey` and `myToken` that you get from {{site.data.keyword.openwhisk_short}}. You can retrieve the key and token with the following CLI command:
 
-```
+```bash
 wsk property get --auth
 ```
 {: pre}
@@ -135,7 +135,7 @@ To invoke a remote action, you can call `invokeAction` with the action name. You
 
 For example:
 
-```
+```swift
 // In this example, we are invoking an action to print a message to the {{site.data.keyword.openwhisk_short}} Console
 var params = Dictionary<String, String>()
 params["payload"] = "Hi from mobile"
@@ -163,7 +163,7 @@ In the previous example, you invoke the `helloConsole` action by using the defau
 
 To fire a remote trigger, you can call the `fireTrigger` method. Pass in parameters as required by using a dictionary.
 
-```
+```swift
 // In this example we are firing a trigger when our location has changed by a certain amount
 
 var locationParams = Dictionary<String, String>()
@@ -191,7 +191,7 @@ In the previous example, you are firing a trigger that is called `locationChange
 
 If the action returns a result, set hasResult to true in the invokeAction call. The result of the action is returned in the reply dictionary, for example:
 
-```
+```swift
 do {
     try whisk.invokeAction(name: "actionWithResult", package: "mypackage", namespace: "mynamespace", parameters: params, hasResult: true, callback: {(reply, error) -> Void in
 
@@ -214,7 +214,7 @@ do {
 
 By default, the SDK returns only the activation ID and any result that is produced by the invoked action. To get metadata of the entire response object, which includes the HTTP response status code, use the following setting:
 
-```
+```swift
 whisk.verboseReplies = true
 ```
 {: codeblock}
@@ -224,7 +224,7 @@ whisk.verboseReplies = true
 
 You can configure the SDK to work with different installations of {{site.data.keyword.openwhisk_short}} by using the baseURL parameter. For instance:
 
-```
+```swift
 whisk.baseURL = "http://localhost:8080"
 ```
 {: codeblock}
@@ -233,7 +233,7 @@ In this example, you use an installation that is running at localhost:8080. If y
 
 You can pass in a custom NSURLSession in case you require special network handling. For example, you might have your own {{site.data.keyword.openwhisk_short}} installation that uses self-signed certificates:
 
-```
+```swift
 // create a network delegate that trusts everything
 class NetworkUtilsDelegate: NSObject, NSURLSessionDelegate {
     func URLSession(session: NSURLSession, didReceiveChallenge challenge: NSURLAuthenticationChallenge, completionHandler: (NSURLSessionAuthChallengeDisposition, NSURLCredential?) -> Void) {
@@ -266,7 +266,7 @@ All other combinations issue a WhiskError.QualifiedName error. Therefore, when y
 
 For convenience, the SDK includes a `WhiskButton`, which extends the `UIButton` to allow it to invoke actions.  To use the `WhiskButton`, follow this example:
 
-```
+```swift
 var whiskButton = WhiskButton(frame: CGRectMake(0,0,20,20))
 
 whiskButton.setupWhiskAction("helloConsole", package: "mypackage", namespace: "_", credentials: credentialsConfiguration!, hasResult: false, parameters: nil, urlSession: nil)

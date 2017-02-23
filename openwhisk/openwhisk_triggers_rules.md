@@ -1,22 +1,21 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-02-22"
+  years: 2016, 2017
+lastupdated: "2016-02-23"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
+{:screen: .screen}
 {:pre: .pre}
 
 # Creating triggers and rules
 {: #openwhisk_triggers}
 
-
-{{site.data.keyword.openwhisk}} triggers and rules bring event-driven capabilities to the platform. Events from external and internal event sources are channeled through a trigger, and rules allow your actions to react to these events.
+{{site.data.keyword.openwhisk_short}} triggers and rules bring event-driven capabilities to the platform. Events from external and internal event sources are channeled through a trigger, and rules allow your actions to react to these events.
 {: shortdesc}
 
 ## Creating triggers
@@ -71,11 +70,9 @@ As an example, create a trigger to send user location updates, and manually fire
   wsk trigger create locationUpdate
   ```
   {: pre}
-
   ```
   ok: created trigger locationUpdate
   ```
-  {: screen}
 
 2. Check that you created the trigger by listing the set of triggers.
 
@@ -83,12 +80,10 @@ As an example, create a trigger to send user location updates, and manually fire
   wsk trigger list
   ```
   {: pre}
-
   ```
   triggers
   /someNamespace/locationUpdate                            private
   ```
-  {: screen}
 
   So far you've created a named "channel" to which events can be fired.
 
@@ -98,11 +93,9 @@ As an example, create a trigger to send user location updates, and manually fire
   wsk trigger fire locationUpdate --param name Donald --param place "Washington, D.C."
   ```
   {: pre}
-
   ```
   ok: triggered locationUpdate with id fa495d1223a2408b999c3e0ca73b2677
   ```
-  {: screen}
 
 A trigger that is fired without an accompanying rule to match against has no visible effect.
 Triggers cannot be created inside a package; they must be created directly under a namespace.
@@ -115,7 +108,7 @@ Rules are used to associate a trigger with an action. Each time a trigger event 
 As an example, create a rule that calls the hello action whenever a location update is posted.
 
 1. Create a 'hello.js' file with the action code we will use:
-  ```
+  ```javascript
   function main(params) {
      return {payload:  'Hello, ' + params.name + ' from ' + params.place};
   }
@@ -127,7 +120,6 @@ As an example, create a rule that calls the hello action whenever a location upd
   wsk trigger update locationUpdate
   ```
   {: pre}
-
   ```
   wsk action update hello hello.js
   ```
@@ -150,34 +142,28 @@ As an example, create a rule that calls the hello action whenever a location upd
   wsk trigger fire locationUpdate --param name Donald --param place "Washington, D.C."
   ```
   {: pre}
-
   ```
   ok: triggered locationUpdate with id d5583d8e2d754b518a9fe6914e6ffb1e
   ```
-  {: screen}
 
 5. Verify that the action was invoked by checking the most recent activation.
   ```
   wsk activation list --limit 1 hello
   ```
   {: pre}
-
   ```
   activations
   9c98a083b924426d8b26b5f41c5ebc0d             hello
   ```
-  {: screen}
-
   ```
   wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
   ```
   {: pre}
-  ```
+  ```json
   {
      "payload": "Hello, Donald from Washington, D.C."
   }
   ```
-  {: screen}
 
   You see that the hello action received the event payload and returned the expected string.
 
@@ -193,7 +179,9 @@ You can also use rules with sequences. For example, one can create an action
 sequence `recordLocationAndHello` that is activated by the rule `anotherRule`.
   ```
   wsk action create recordLocationAndHello --sequence /whisk.system/utils/echo,hello
+  ```
+  {: pre}
+  ```
   wsk rule create anotherRule locationUpdate recordLocationAndHello
   ```
   {: pre}
- 
