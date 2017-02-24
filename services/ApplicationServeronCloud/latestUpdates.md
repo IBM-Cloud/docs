@@ -15,6 +15,16 @@ lastupdated: "2017-02-24"
 
 A list of the latest updates to the service.
 
+## February 10, 2017: Updated WebSphere Application Server in {{site.data.keyword.Bluemix_notm}}
+
+* Integrated miscellaneous service maintenance.
+* Upgraded the WebSphere Application Server in {{site.data.keyword.Bluemix_notm}} binaries such that fixpack 8.5.5.11 or 9.0.0.2 is installed with new instances of Traditional WebSphere Application Server.
+* Upgraded the WebSphere Application Server in {{site.data.keyword.Bluemix_notm}} binaries such that fixpack 16.0.0.4 is installed with new instances of WebSphere Application Server Liberty (Core and ND Plans).
+* Addressed [several security vulnerabilities](https://www-01.ibm.com/support/docview.wss?uid=swg21997657){: new_window} in WebSphere Application Server in {{site.data.keyword.Bluemix_notm}} including:
+  * A vulnerability to denial of service, caused by allowing serialized objects from untrusted sources to run and cause the consumption of resources.
+  * The use of malformed SOAP requests which could allow a remote attacker to obtain sensitive information.
+
+
 ## December 16, 2016: Updated WebSphere Application Server in {{site.data.keyword.Bluemix_notm}}
 
 * Integrated miscellaneous service maintenance.
