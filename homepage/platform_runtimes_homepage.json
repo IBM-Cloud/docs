@@ -1,7 +1,6 @@
 {
   "id": "homepage",
 	"items": [{
-	}, {
     "id": "docs_homepage_runtimes",
     "title": "Get started by deploying your first app",
     "items": [{
