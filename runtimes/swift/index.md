@@ -1,12 +1,16 @@
+---
+
+copyright:
+  years: 2015, 2017
+lastupdated: "2017-01-19"
+---
+
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
-{:codeblock: .pre}
-
+{:codeblock: .codeblock}
 
 # IBM Bluemix Runtime for Swift
 {: #swift_runtime}
-Last Updated: 16 October 2016
-{: .last-updated}
 
 The Runtime for Swift on {{site.data.keyword.Bluemix}} is powered by the [IBM Bluemix buildpack for Swift](https://github.com/IBM-Swift/swift-buildpack) (i.e. swift_buildpack).
 This buildpack provides a complete runtime environment for Swift applications.
@@ -81,9 +85,9 @@ There are also other online tools available from IBM for the Swift developer.
 
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## general
-{: #general}
+{: #general notoc}
 * [IBM Swift DevCenter](https://developer.ibm.com/swift/)
 * [IBM Cloud Tools for Swift](http://cloudtools.bluemix.net/)
 * [IBM Swift Package Catalog](https://swiftpkgs.ng.bluemix.net/)

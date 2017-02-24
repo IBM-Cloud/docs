@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2016-07-28"
+lastupdated: "2017-02-07"
 
 ---
 
@@ -222,8 +222,8 @@ however, the remote EJBs are not remotely accessible with the CORBA/IIOP
 protocol due to port restrictions in the Bluemix environment.
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## general
-{: #general}
+{: #general notoc}
 * [Liberty runtime](index.html)
 * [Liberty Profile Overview](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
