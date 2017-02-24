@@ -2,14 +2,14 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-18"
+lastupdated: "2017-02-07"
 
 ---
 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# Latest Updates to the sdk-for-nodejs buildpack
+# Latest Updates to the SDK for Nodejs buildpack
 {: #latest_updates}
 
 A list of the latest updates in the sdk-for-nodejs buildpack.
@@ -215,7 +215,7 @@ In addition, we revamped the App Management feature in the Node.js buildpack, wh
 The Node.js buildpack now comes with IBM SDK for Node.js v1.1.0.5. This update means you'll get a fully supported IBM Node.js runtime when you specify the latest stable Node.js runtime for your application, v0.10.29. See more about the IBM Node.js SDKs [here](https://developer.ibm.com/node/sdk/).
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## general
-{: #general}
+{: #general notoc}
 * [node.js runtime](index.html)

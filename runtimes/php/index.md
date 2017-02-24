@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-01-25"
 
 ---
 
@@ -66,10 +66,11 @@ you can use the external
 deploy the app.
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## Tutorials and Samples
-{: #samples}
+{: #samples notoc}
 * [Build and deploy a REST API](http://www.ibm.com/developerworks/library/wa-deployrest-app/)
 * [Build and deploy a mobile-friendly calorie counter](http://www.ibm.com/developerworks/library/mo-bluemix-php-nutritionix-angularjs/)
 ## general
+{: #general notoc}
 * [Cloud Foundry buildpack for PHP](https://github.com/cloudfoundry/php-buildpack.git)

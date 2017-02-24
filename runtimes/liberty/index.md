@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2016-11-14"
+lastupdated: "2017-02-07"
 
 ---
 
@@ -31,9 +31,9 @@ The Liberty buildpack is used when the following kinds of applications are deplo
 {{site.data.keyword.Bluemix}} provides several Liberty starter applications.  The Liberty starter applications are simple Liberty apps that provide a template that you can use. You can experiment with the starter apps, and make and push changes to the Bluemix environment.  See [Using the starter applications](/docs/cfapps/starter_app_usage.html) for help with using the starter applications.
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## general
-{: #general}
+{: #general notoc}
 * [Liberty Profile Overview](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
 * [Managing Liberty apps](/docs/manageapps/app_mng.html#Utilities)
 * [Deploying apps with IBM Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html#eclipsetools)

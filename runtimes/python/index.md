@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-14"
+  years: 2015, 2017
+lastupdated: "2017-01-25"
 
 ---
 
@@ -59,5 +59,7 @@ you can use the external
 deploy the app.
 
 # rellinks
+{: #rellinks notoc}
 ## general
+{: #general notoc}
 * [Cloud Foundry buildpack for Python](https://github.com/cloudfoundry/python-buildpack)

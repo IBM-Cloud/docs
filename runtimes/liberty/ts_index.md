@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-12-02"
+lastupdated: "2017-02-07"
 
 ---
 
@@ -38,7 +38,7 @@ Bluemix performs a health check on the application to see if it has successfully
 First, examine the logs for any obvious errors that might have caused the Liberty application to fail. If no obvious errors are found then try the following:
 {: tsResolve}
 
-#### **Increase the health check timeout.**
+### **Increase the health check timeout.**
 
 * When deploying the application using the “cf push” command specify a longer application start timeout using the “-t” option. For example:
 
@@ -52,7 +52,7 @@ First, examine the logs for any obvious errors that might have caused the Libert
            timeout: 180
         {: #codeblock}
 
-#### **Disable the appstate feature.**
+### **Disable the appstate feature.**
 
 The appstate feature integrates with the Bluemix health check process to ensure the Liberty application is fully initialized before the application can receive HTTP requests. Once the application is fully initialized the appstate feature has no more effect.  The side effect of this feature is that some applications might take longer to start up. To disable the appstate feature, set the following environment property on your application and restage the application:
 
@@ -61,11 +61,11 @@ $ cf set-env myApp JBP_CONFIG_LIBERTY “app_state: false”
 ```
 {: #codeblock}
 
-#### **Consider re-factoring the application.**
+### **Consider re-factoring the application.**
 
 If your application takes a long time to initialize, you might have to re-factor the application to do lazy and/or asynchronous initialization.
 
-#### **Deploy with the “no-route” option.**
+### **Deploy with the “no-route” option.**
 
 1. Deploy your application with “--no-route” option. This will disable the port health check. For example:
 
@@ -98,7 +98,7 @@ The errors can be generated once the Monitoring & Analytics service is bound to 
 Modify configuration to use the JVM's trust store with one of the options that follow.  Be sure to restage your application after making the change.
 {: tsResolve}
 
-#### Update Liberty's server.xml
+### Update Liberty's server.xml
 
 Update the server.xml to use JVM's cacerts file as the trust store. Add the following to your server.xml:
 
@@ -106,7 +106,7 @@ Update the server.xml to use JVM's cacerts file as the trust store. Add the foll
         <keyStore id="defaultTrustStoretore" location="${java.home}/lib/security/cacerts"/>
         {: codeblock}
 
-#### Update the configured trust store
+### Update the configured trust store
 
 Modify the configured trust store to trust the DigitCert ROOT CA.
   1. Download the DigiCert Root CA from https://www.digicert.com/CACerts/DigiCertGlobalRootCA.crt.
