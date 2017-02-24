@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-24"
+lastupdated: "2017-02-22"
 
 ---
 
@@ -57,7 +57,7 @@ You can view notifications for your local or dedicated environment to monitor th
 |-----------------|-------------------|
 | Maintenance updates | To see a full list and history of your pending and complete notifications, click **ADMINISTRATION &gt; SYSTEM INFORMATION** &gt; *Number* **pending**. You are also alerted about scheduled disruptive maintenance update events on the Status page. Click **Support** &gt; **Status**. You can extend the notification capability by setting up a subscription that sends an email to recipients of your choice. Or you can set up a subscription that uses webhooks to integrate the notifications from the Administration page with a web service of your choice.|
 | Critical incidents | You are alerted about critical incidents on the Status page. Click **Support** &gt; **Status**. You can extend the notification capability by setting up a notification subscription that sends an email to a recipient of your choice. Or you can set up a subscription that uses webhooks to integrate the notifications from the Administration page with a web service of your choice.  |  
-| Threshold events | You can set up a notification subscription that sends an email to a recipient of your choice when resource thresholds for physical disk, physical memory, reserved disk, or reserved memory are reached in your environment. Or, you can set up a subscription that uses webhooks to integrate the notifications with a web service of your choice.  |  
+| Threshold events | You can set up a notification subscription that sends an email to a recipient of your choice when thresholds for organization quota, physical disk, physical memory, reserved disk, or reserved memory are reached in your environment. Or, you can set up a subscription that uses webhooks to integrate the notifications with a web service of your choice.  |  
 | {{site.data.keyword.Bluemix_notm}} Status | You can always view the latest status for the platform, services, and your {{site.data.keyword.Bluemix_notm}} instance on the Status page. Click **Support** &gt; **Status**.  |
 {: caption="Table 2. Event types and notifications methods" caption-side="top"}
 
@@ -109,7 +109,7 @@ To create an email or webhook subscription from the **Notification Subscriptions
 | Enabled | Select the option to enable the email notifications. Clear the selection to disable the email notification. Subscriptions are enabled by default. |
 | Type | Select **Email**. |
 | Event | Select **Threshold**. |
-| Threshold | Select the type of threshold you want to be notified about: Physical Disk, Physical Memory, Reserved Disk, or Reserved Memory. |
+| Threshold | Select the type of threshold you want to be notified about: Organization Quota, Physical Disk, Physical Memory, Reserved Disk, or Reserved Memory. |
 | Threshold Direction | Select the direction that you want the data to be moving in, either Ascending or Descending, when it passes the Notify When Crossing value that you set. For example, if the Notify When Crossing value is 50%, and the direction is descending, you are notified only if the usage percentage goes from 50% or more to less than 50%.  If you set the direction to ascending, you would be notified when the usage percentage goes from less than 50% to more than 50%.   |
 | Notify When Crossing Above (%) | Enter the threshold percentage at which you want to be notified. If you chose the Ascending property in the Threshold Direction field, the email notification is sent when the threshold rises above this percentage. |
 | Notify When Crossing Below (%) | Enter the threshold percentage at which you want to be notified. If you chose the Descending property in the Threshold Direction field, the email notification is sent when the threshold drops beneath this percentage. |
@@ -119,10 +119,11 @@ To create an email or webhook subscription from the **Notification Subscriptions
 | To | Enter the email address or addresses using a comma-separated list for the recipients of the email notification. Expand the "cc" or "bcc" options to copy others on the email. This is a required field. |
 {: caption="Table 4. Fields for email notification subscriptions about maintenance updates or incidents" caption-side="top"}
 
-Threshold data is collected once every 6 hours. A notification is sent only once when the value crosses the threshold value you set. A new notification is not sent unless the value drops below the threshold, if you chose ascending, and then increases above the threshold again. Likewise, if you chose descending, you are only notified again if the value rises above the threshold you set and then drops below the threshold again. 
+Threshold data is collected once every 6 hours. A notification is sent only once when the value crosses the threshold value you set. If you chose ascending, a new notification is not sent unless the value drops below the threshold and then increases above the threshold again. Likewise, if you chose descending, you are notified only if the value rises above the threshold you set and then drops below the threshold again. 
 
-If you don't want to wait 6 hours for the notification to be sent when the threshold is met, after you complete the fields on the form, you can click **Save and Test** to save and test the notification with sample data.
+If you don't want to wait 6 hours for the notification to be sent when the threshold is met, after completing the fields on the form you can click **Save and Test** to receive a test notification with sample data.  
 
+An Organization Quota threshold notification includes only the organizations that have crossed the specified threshold percentage in the 6 hour time period corresponding to that notification. Organizations that have crossed a threshold during previous 6 hour time periods will not be included, even if they remain above or below the threshold.  The three resources that make up an organization's quota (reserved memory, services, and routes) are considered independently when determining if an organization quota notification should be sent. For example, if the amount of reserved memory used by an organization crosses 50% of the organization's quota, an Organization Quota threshold configured with a value of 50% would result in a notification being sent.  If the number of services used by the same organization crosses 50% of the organization's quota at a later point in time, even though the amount of memory used remains unchanged, the same Organization Quota threshold subscription would also result in a notification being sent.
 
 {: #webhooknotsub}
 
@@ -156,7 +157,7 @@ If you don't want to wait 6 hours for the notification to be sent when the thres
 | Enabled | Select the option to enable the notification. Clear the selection to disable the notification. Subscriptions are enabled by default. |
 | Type | Select **Webhook**. |
 | Event | Select **Threshold**. |
-| Threshold | Select the type of threshold you want to be notified about: Physical Disk,  Physical Memory, Reserved Disk, or Reserved Memory. |
+| Threshold | Select the type of threshold you want to be notified about: Organization Quota, Physical Disk,  Physical Memory, Reserved Disk, or Reserved Memory.|
 | Threshold Direction | Select whether you want to see the threshold data in Ascending order or Descending order.  |
 | Notify When Crossing Below (%) | If you selected the **Descending** **Threshold Direction**, enter the threshold percentage at which you want to be notified. When the threshold drops beneath this percentage, the webhook notification is sent. |
 | Notify When Crossing Above (%) | If you selected the **Ascending** **Threshold Direction**, enter the threshold percentage at which you want to be notified. When the threshold rises above this percentage, the webhook notification is sent. |
@@ -168,6 +169,11 @@ If you don't want to wait 6 hours for the notification to be sent when the thres
 | URL | Enter the URL to connect to your web service. |
 {: caption="Table 6. Form fields for a webhook notification subscription about thresholds" caption-side="top"}
 
+Threshold data is collected once every 6 hours. A notification is sent only once when the value crosses the threshold value you set. A new notification is not sent unless the value drops below the threshold, if you chose ascending, and then increases above the threshold again. Likewise, if you chose descending, you are only notified again if the value rises above the threshold you set and then drops below the threshold again. 
+
+If you don't want to wait 6 hours for the notification to be sent when the threshold is met, after you complete the fields on the form, you can click **Save and Test** to save and test the notification with sample data.
+
+An Organization Quota threshold notification includes only the organizations that have crossed the specified threshold percentage in the 6 hour time period corresponding to that notification. Organizations that have crossed a threshold during previous 6 hour time periods will not be included, even if they remain above/below threshold.  The three resources that make up an organization's quota, reserved memory, services, and routes, are considered independently when determining if an organization quota notification should be sent. For example, if the amount of reserved memory used by an organization crosses 50% of the organization's quota, an Organization Quota threshold configured with a value of 50% would result in a notification being sent.  If the number of services used by the same organization crosses 50% of the organization's quota at a later point in time, even though the amount of memory used remains unchanged, the same Organization Quota threshold subscription would also result in a notification being sent.
 
 {: #payload}
 
@@ -191,6 +197,7 @@ If you don't want to wait 6 hours for the notification to be sent when the thres
 
 | **IBM value** | **Description** | **Event type** |
 |----------------|----------------|------------------------|
+| {{content.org_quota}} | Organization quota threshold | Threshold |
 | {{content.physical_disk}} | Physical disk threshold | Threshold |
 | {{content.physical_memory}} | Physical memory threshold | Threshold |  
 | {{content.reserved_disk}} | Reserved disk threshold | Threshold |
@@ -434,7 +441,7 @@ displayed.
 - You can search within your collection of reports and logs. The search applies to report
 names as well as text content that is contained within the reports and logs. You can also choose to
 filter your search by **Administration Events**, **DataPower Reports**, **Firewall**, and **Login Audit**.
-- When displaying a report or log, you can click the ![Download](images/icon_download.png)
+- When displaying a report or log, you can click the ![Download](images/icon_download.png) 
 icon to download the report.
 
 The following table shows the list of security reports that are generated for {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated. Most reports are generated on a daily basis. However, the encryption and key management events reports are generated monthly. All reports are retained for 90 days in the administration console for your retrieval. After that 90 days, the reports are available offline per request from {{site.data.keyword.Bluemix_notm}} for 9 months. In total, reports are available for retrieval for up to 1 year.
@@ -842,7 +849,7 @@ A quota represents the resource limits for the organizations in your environment
 <dd>The maximum number of public IP addresses that you cal allocate across all spaces of an organization.</dd>
 </dl>
 <strong>Note</strong>: If you do not yet have containers in your environment or if you do not yet have the containers in your environment set up, you get an error message.
-<p>For more information about containers, see [About IBM containers](https://console.ng.bluemix.net/docs/containers/container_ov.html). For more information about container quotas, see [Quota and Bluemix accounts]( https://console.ng.bluemix.net/docs/containers/container_planning_org_ov.html#container_planning_quota).</p>
+<p>For more information about containers, see [About IBM containers](/docs/containers/container_ov.html). For more information about container quotas, see [Quota and Bluemix accounts](/docs/containers/container_planning_org_ov.html#container_planning_quota).</p>
 <strong>Note:</strong> Containers are not available in the {{site.data.keyword.Bluemix_notm}} Sydney region.</li>
 </ul>
 <li>To save any changes that you made on the Manage Organization page, click <strong>SAVE</strong>.</li>
@@ -965,53 +972,41 @@ Users can be assigned the following permissions with specific access levels (rea
 | Users | Users with **Users** permission can be assigned the access to **Read** (view) the list of users or **Write** (add or remove) users. This permission doesn't allow you to set permissions for other users. Write access allows the user to add new users to the environment, delete users from the environment, and add existing users to organizations that already exist within the environment. In addition, **Write** access allows the user to add new organizations, delete organizations, and edit the users within the organizations. |
 {: caption="Table 14. Permissions" caption-side="top"}
 
-## Managing users with the Admin REST API
-{: #usingadminapi}
+## Using REST APIs 
+{: #auth_adminapi}
 
-You can use the `Admin` REST API to add and remove users for your
-{{site.data.keyword.Bluemix_notm}} instance.
-The `Admin` REST API endpoints and JSON responses are provided on an experimental
-basis to enable basic operations from a command line. The endpoints and URLs in the examples in this
-information might change or might be discontinued at short notice.
+To use the REST API commands, you first need to autheticate. To generate and support sessions, you can use cURL commands to accomplish the following tasks:
 
-Though you can choose to use other tools, the following tools are prerequisites for using the examples that follow:
-use other tools as well.
-* cURL, to enter REST API requests as commands. cURL is a free utility that you can use to send
-HTTP requests to a server and receive the server responses through a command-line interface. You can
-download cURL from the [cURL Download site ![External link icon](../icons/launch-glyph.svg)](http://curl.haxx.se/download.html){: new_window}.
-* Python, to use the Python pretty-print JSON tool. This optional tool takes the JSON text as
-input and provides easy-to-read output. You can download Python from the [Python Downloads site ![External link icon](../icons/launch-glyph.svg)](https://www.python.org/downloads){: new_window}.
+* [Loggin in to the Admin Console](#auth_loginapi) 
+* [Storing your user ID and password](#auth_setuidpw)
+* [Storing cookies](#auth_apistorecook)
+* [Reusing cookies](#auth_apireusecook)
 
 ### Logging in to the Admin Console
+{: #auth_loginapi}
 
-Before you can run any `Admin` API requests, you must log in to the
-Admin Console. If you have **Superuser** permission or **Users**
-permission with **Write** access, you can add or remove users. You must have
-**Superuser** permission to edit other users' permissions.
+Before you can run any `Admin` API requests, you must log in to the Admin Console. 
 
-To log in to the Admin Console, you can use basic access authentication on the
-`https://<your_host>.ibm.com/login` endpoint. The server returns a cookie with your
+To log in to the Admin Console, you can use basic access authentication on the 
+`https://console.<region>.bluemix.net/login` endpoint. The server returns a cookie with your
 session. You use that cookie for all operations with the Admin Console.
 
 **Note:** The session becomes invalid if not used for a few hours.
 
 To log in to the Admin Console, run the following command:
 
-
-`curl --user <user_id>:<password> -c ./cookies.txt --header "Accept: application/json" https://<your_host>.ibm.com/login | python -m json.tool`
+`curl --user <user_id>:<password> -c ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/login | python -m json.tool`
 {: codeblock}
 
 <dl class="parml">
-
 <dt class="pt dlterm">--user <em>user_id</em>:<em>password</em></dt>
 <dd class="pd">Accepts the user ID and password and sends a Basic Authorization header.</dd>
-
 <dt class="pt dlterm">-c <em>filename</em></dt>
 <dd class="pd">Stores the specified user ID and password as a cookie in the specified file.</dd>
-
+<dt class="pt dlterm">-b <em>filename</em></dt>
+<dd class="pd">Retrieves the specified user ID and password as a cookie in the specified file.</dd>
 <dt class="pt dlterm">--header</dt>
 <dd class="pd">Sends an Accept header.</dd>
-
 </dl>
 
 The following example shows output from this
@@ -1026,6 +1021,74 @@ command:
 }
 ```
 {: screen}
+
+### Storing your user ID and password
+{: #auth_setuidpw}
+
+You can also store your user ID and password so that you don't have to enter it manually each time you log in.  To store your user ID and pasword for reuse, use the following cURL example:
+
+`curl -X GET -H "Authorization: Basic <redacted>" -H "Accept: application/json" "http://localhost:3000/login"`
+{: codeblock}
+
+To set up your log in information in a separate file and then call the file so that you don't have to re-enter it for each authentication request, use the `--netrc` option provided by the cURL command.
+
+To use the `--netrc` option with cURL first create a file in the home directory of the user in one of the following ways:
+* On a Unix system, create a file named .netrc 
+* On a Windows system, create a file named _netrc. 
+
+In the file, enter the following information:
+
+`machine console.<region>.bluemix.net
+login <id>
+password <password>`
+{: codeblock}
+
+When invoking a cURL command, add the following argument: `--netrc`.
+<p>To use a netrc file located in a different directory, use the `--netrc-file [file]` option, where `[file]` is the location of the netrc file.</p>
+</li>
+</ol>
+
+
+### Storing cookies
+{: #auth_apistorecook}
+
+When you log in to the Admin Console, the server returns a cookie with your session. That cookie is required as part of the login process for future API calls for all operations with the Admin Console. You can store cookies for later use.
+
+To store cookies after you log in, use the `-c` option, as shown in the following CURL example:
+
+`curl --user <user_id>:<password> -c ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/login | python -m json.tool`
+{: codeblock}
+
+### Reusing cookies
+{: #auth_apireusecook}
+
+To reuse cookies, use the `-b` option with the cookie file name that you assigned with the `-c` option, as shown in the following CURL example:
+
+`curl --user <user_id>:<password> -b ./cookies.txt`
+{: codeblock}
+
+## Managing users with the Admin REST API
+
+{: #usingadminapi}
+
+You can use the `Admin` REST API to add and remove users for your
+{{site.data.keyword.Bluemix_notm}} instance.
+The `Admin` REST API endpoints and JSON responses are provided on an experimental
+basis to enable basic operations from a command line. The endpoints and URLs in the examples in this
+information might change or might be discontinued at short notice.
+
+If you have **Superuser** permission or **Users**
+permission with **Write** access, you can add or remove users. You must have
+**Superuser** permission to edit other users' permissions.
+
+Though you can choose to use other tools, the following tools are prerequisites for using the examples that follow:
+use other tools as well.
+* cURL, to enter REST API requests as commands. cURL is a free utility that you can use to send
+HTTP requests to a server and receive the server responses through a command-line interface. You can
+download cURL from the [cURL Download site ![External link icon](../icons/launch-glyph.svg)](http://curl.haxx.se/download.html){: new_window}.
+* Python, to use the Python pretty-print JSON tool. This optional tool takes the JSON text as
+input and provides easy-to-read output. You can download Python from the [Python Downloads site ![External link icon](../icons/launch-glyph.svg)](https://www.python.org/downloads){: new_window}.
+
 
 ### Listing organizations
 {: #listingorg}
@@ -1148,8 +1211,6 @@ The following example shows output from this command:
 
 ```
 {: screen}
-
-
 
 ### Adding a user
 
@@ -1295,33 +1356,37 @@ command:
 ## API for metrics (experimental)
 {: #envappmetricsapi}
 
-You can use two experimental APIs to gather metrics about your environment or applications. These APIs return an array of data points for the metrics that you requested over the time that you specified.
+You can use three experimental APIs to gather metrics about your environment or applications. These APIs return an array of data points for the metrics that you requested over the time that you specified.
 
 The Metrics APIs that are described in the following sections can be accessed from the region-specific endpoint, for example: 
 
- `https://console.<region>.bluemix.net/admin/metrics`
+`https://console.<region>.bluemix.net/admin/metrics`
 {: codeblock}
 
 **Notes**:
 
 1. A user can make up to 200 API requests for metrics an hour.
 2. Each API request returns up to 200 data points per request. If more data is available, a URL is provided in the response for loading the next set of data.
+3. Each API request requires a user to have at least Basic Access to the Administration Console.  Additional permissions might be required, as specified below.
 
 ## Gathering metrics about your environment 
 
 You can use the experimental environment API to gather high-level environment information over a time period that you specify. Available data points within the time that you specify are returned. Data is recorded approximately every hour. If, for example, you requested six hours of CPU data for the environment, the response would include CPU data for each of the six requested hours.
 
- ### Environment endpoints 
- 
+
+### Environment endpoints 
+
 You can use the following endpoint to invoke this API command:  `/api/v1/env`
+
+**Note**: One of the following permissions are required to access these endpoints: **Basic Access**, **User Read**, **User Write**, or **Superuser**
 
 ### Environment metrics query parameters
 
-Using the following query parameters, you can gather metrics for your CPU, disk, memory, network, and apps:
+Using the following query parameters, you can gather metrics for your CPU, disk, memory, network, quota, and apps:
 
 <dl class="parml">
 <dt class="pt dlterm">metric</dt>
-<dd class="pd">One or more of the following values, separated by commas: `memory`, `disk`, `cpu`, `network` and `apps`.</dd>
+<dd class="pd">One or more of the following values, separated by commas: `memory`, `disk`, `cpu`, `network`, `quota`, and `apps`.</dd>
 <dt class="pt dlterm">startTime</dt>
 <dd class="pd">The earliest point in time from which data is returned. If no startTime is specified, the earliest available data point is included. For example, to gather data between 2 PM and 5 PM, specify a startTime of 2 PM.</dd>
 <dt class="pt dlterm">endTime</dt>
@@ -1330,12 +1395,13 @@ Using the following query parameters, you can gather metrics for your CPU, disk,
 <dd class="pd">The order in which the data is returned. Valid values are `asc` (ascending) and `desc` (descending). The default is descending, returning the most recent data first. </dd>
 </dl>
 
- The following example uses the query parameters to gather metrics about your environment:
- 
- ```
- curl -b ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/admin/metrics/api/v1/env?metric=cpu,network,disk,apps,memory
- ```
+The following example uses the query parameters to gather metrics about your environment:
+
+```
+curl -b ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/admin/metrics/api/v1/env?metric=cpu,network,disk,apps,memory
+```
 {: codeblock}
+
 
 ### Environment metrics data format
 
@@ -1347,7 +1413,23 @@ The following sections provide the data format.
 {
   "sample_time": 1477494000000,
   "memory": {
-    "cell": {
+    "total": {
+      "physical": {
+        "total_gb": 1728,
+        "used": {
+          "value_gb": 673.68,
+          "percent": 38.99
+        }
+      },
+      "allocated": {
+        "reserved_gb": 3456,
+        "total_allocated": {
+          "value_gb": 2575.18,
+          "percent": 74.51
+        }
+      },
+    },
+  	"cell": {
       "physical": {
         "total_gb": 864,
         "used": {
@@ -1362,7 +1444,7 @@ The following sections provide the data format.
           "percent": 74.51
         }
       },
-    },
+     },
     "dea": {
       "physical": {
       	"total_gb": 864,
@@ -1378,7 +1460,7 @@ The following sections provide the data format.
           "percent": 74.51
         }
       },
-    },
+   },
     "memory_by_container": [
       {
         "name": "dea_next/0",
@@ -1416,6 +1498,22 @@ The following sections provide the data format.
 {
   "sample_time": 1477494000000,
   "disk": {
+    "total": {
+      "physical": {
+        "total_gb": 16200,
+        "used": {
+          "value_gb": 1614,
+          "percent": 9.96
+        }
+      },
+      "allocated": {
+        "reserved_gb": 32400,
+        "total_allocated": {
+          "value_gb": 3979,
+          "percent": 12.28
+        }
+      },
+    },
     "cell": {
       "physical": {
         "total_gb": 8100,
@@ -1485,11 +1583,14 @@ The following sections provide the data format.
 {
   "sample_time": 1477494000000,
   "cpu": {
+    "total": {
+      "average_percent_cpu_used": 14.725
+    },
     "cell": {
-      "average_percent_cpu_used": 27.288461538461544
+      "average_percent_cpu_used": 19
     },
     "dea": {
-      "average_percent_cpu_used": 27.288461538461544
+      "average_percent_cpu_used": 10.45
     },
     "cpu_by_container": [
       {
@@ -1509,16 +1610,16 @@ The following sections provide the data format.
         "wait_percent": "0.0"
       },
       {
-        "name": "dea_next/2",
-        "type": "dea",
+        "name": "cell/1",
+        "type": "cell",
         "ip": "169.53.230.49",
         "sys_percent": "5.3",
         "user_percent": "1.9",
         "wait_percent": "0.0"
       },
       {
-        "name": "dea_next/3",
-        "type": "dea",
+        "name": "cell/2",
+        "type": "cell",
         "ip": "169.44.109.231",
         "sys_percent": "8.2",
         "user_percent": "22.6",
@@ -1574,16 +1675,36 @@ The following sections provide the data format.
       }
       ],
         "bandwidth": {
-        "in_mbps": 10855,
-        "out_mbps": 38090
+        "in_kbps": 10855,
+        "out_kbps": 38090
       }
   }
 }
 ```
 {: screen}
 
-* To gather data records about your applications, use the following data format:
+* To gather data records about your quota usage, use the following data format:
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "quota": {
+    "reserved_memory": {
+      "total_bytes": 33176474877952
+    },
+    "services": {
+      "total": 111650
+    },
+    "routes": {
+      "total": 1675000
+    }
+  }
+}
+```
+{: screen}
 
+* To gather data records about your applications, use the following data format:
+ 
 ```
 {
   "sample_time": 1477494000000,
@@ -1608,6 +1729,58 @@ The following sections provide the data format.
 ```
 {: screen}
 
+## Gathering metrics about your organizations
+
+Data is recorded for all organizations approximately every hour. A request for a particular metric returns information for all organizations in each data sample in the time period you specify, which is sorted in descending order by the requested metric. For example, requesting all organizations by memory over a 6-hour time period in an environment that has 200 apps returns 1200 records, 200 at a time.
+
+To reduce the amount of information that is returned for each data sample in the requested time period, you can specify a count option. Using the previous example and adding a count option of 5 returns 30 records that represent the top 5 organizations by memory for each data sample.
+
+### Organizations endpoints 
+
+You can use the following endpoints to invoke this API command:
+* `/api/v1/org/memory/physical`
+* `/api/v1/org/memory/reserved`
+* `/api/v1/org/disk/physical`
+* `/api/v1/org/disk/reserved`
+
+**Note**: One of the following permissions are required to access these endpoints: **User Read**, **User Write**, or **Superuser**
+
+### Organizations query parameters
+ 
+Use the following query parameters to gather metrics for your organizations:
+
+<dl class="parml">
+<dt class="pt dlterm">startTime</dt>
+<dd class="pd">The earliest point in time from which data is returned. If no startTime is specified, the earliest available data point is included. For example, to gather data between 2 PM and 5 PM, specify a startTime of 2 PM.</dd>
+<dt class="pt dlterm">endTime</dt>
+<dd class="pd">The latest point in time from which data is returned. If no endTime is specified, the most recent data point is used. For example, to gather data between 2 PM and 5 PM, specify an endTime of 5 PM.</dd>
+<dt class="pt dlterm">count</dt>
+<dd class="pd">The number of records to return within each data sample.
+</dd>
+<dt class="pt dlterm">minValue</dt>
+<dd class="pd">The smallest value to return for the specified metric.  If no minValue is specified, all values are returned.  For example, to gather organizations using at least 20000 bytes of physical memory, specify a minValue of 20000.
+</dd>
+</dl>
+
+The following example gathers metrics about your organizations:
+
+```
+curl -b ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/admin/metrics/api/v1/org/memory/physical?count=5&startTime=2016-12-02T16:54:09.467Z
+```
+{: codeblock}
+
+### Organizations response format
+
+```
+{
+   docs: [],
+   next_url:
+}
+```
+{: screen}
+
+Each document that is returned represents the requested metrics for an organization in each data sample, at the point in time of the request.
+
 ## Gathering metrics about your applications
 
 Data is recorded for all applications approximately every hour. A request for a particular metric returns information for all apps in each data sample in the time period you specify, which is sorted in descending order by the requested metric. For example, requesting all apps by CPU over a 6-hour time period in an environment that has 200 apps returns 1200 records, 200 at a time.
@@ -1623,6 +1796,7 @@ You can use the following endpoints to invoke this API command:
 * `/api/v1/app/disk/physical`
 * `/api/v1/app/disk/reserved`
 
+**Note**: One of the following permissions are required to access these endpoints: **User Read**, **User Write**, or **Superuser**
 
 ### Applications query parameters
  
@@ -1637,7 +1811,7 @@ Use the following query parameters to gather metrics for your applications:
 <dd class="pd">The number of records to return within each data sample.
 </dd>
 <dt class="pt dlterm">minValue</dt>
-<dd class="pd">The smallest value to return for the specified metric.  If no minValue is specified, all values are returned.  For example, to gather applications using at least 20000 bytes of physical memory, specify a minValue of 20000.
+<dd class="pd">The smallest value to return for the specified metric. If no minValue is specified, all values are returned. For example, to gather applications using at least 20000 bytes of physical memory, specify a minValue of 20000.
 </dd>
 </dl>
 
@@ -1647,6 +1821,7 @@ The following example gathers metrics about your applications:
 curl -b ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/admin/metrics/api/v1/app/cpu/physical?count=5&startTime=2016-12-02T16:54:09.467Z
 ```
 {: codeblock}
+
 
 ### Applications response format
 
