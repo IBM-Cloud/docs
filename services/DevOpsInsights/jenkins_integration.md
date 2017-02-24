@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-23"
+lastupdated: "2017-02-24"
 
 ---
 
@@ -12,10 +12,10 @@ lastupdated: "2017-02-23"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Integrating DevOps Insights with Jenkins (Experimental)
+# Integrating {{site.data.keyword.DRA_short}} with Jenkins (Experimental)
 {: #toolchain_configure_jenkins}
 
-After you define the policies for {{site.data.keyword.DRA_full}} to monitor, you can add {{site.data.keyword.DRA_short}} to a toolchain and configure a continuous delivery pipeline.
+After you define the policies for {{site.data.keyword.DRA_full}} to monitor, you can add it to a toolchain and configure a continuous delivery pipeline.
 {:shortdesc}
 
 You can integrate {{site.data.keyword.DRA_short}} into one Jenkins project or across several related Jenkins projects by installing a plugin. After you install the plugin, you can set quality gates and view analytic data in {{site.data.keyword.DRA_short}}.
@@ -32,4 +32,4 @@ Before you begin, download the [the {{site.data.keyword.DRA_short}} plugin insta
 
 For the latest installation and configuration instructions, see [the plugin documentation](https://github.com/imvijay2007/Jenkins-IBM-Bluemix-Toolchains).
 
-**Note:** If you are not an IBM employee, you must request access before you can download the {{site.data.keyword.DRA_short}} plugin. To submit a request for access, email Vijay Aggarwal (aggarwav@us.ibm.com) with Jinfang Chen (jichen@us.ibm.com) copied. In the subject, include "Need Jenkins plugin".
+**Note:** If you are not an IBM employee, you must request access before you can download the {{site.data.keyword.DRA_short}} plugin. To submit a request for access, send an email to aggarwav@us.ibm.com and jichen@us.ibm.com. In the email subject, include the phrase *Need Jenkins plugin*.
