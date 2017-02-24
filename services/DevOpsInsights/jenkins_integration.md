@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-16"
+lastupdated: "2017-02-23"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-02-16"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Integrating {{site.data.keyword.DRA_short}} with Jenkins
+# Integrating DevOps Insights with Jenkins (Experimental)
 {: #toolchain_configure_jenkins}
 
 After you define the policies for {{site.data.keyword.DRA_full}} to monitor, you can add {{site.data.keyword.DRA_short}} to a toolchain and configure a continuous delivery pipeline.
@@ -25,7 +25,7 @@ You can integrate {{site.data.keyword.DRA_short}} into one Jenkins project or ac
 
 * You must have access to a local Jenkins project or to the server that is running a Jenkins project.
 
-##Installing and configuring the {{site.data.keyword.DRA_short}} plugin
+##Installing and configuring the plugin
 {: #DI_jenkins_install}
 
 Before you begin, download the [the {{site.data.keyword.DRA_short}} plugin installation file (.hpi)](https://github.ibm.com/oneibmcloud/Jenkins-IBM-Bluemix-Toolchains/tree/release/target/dra.hpi). 

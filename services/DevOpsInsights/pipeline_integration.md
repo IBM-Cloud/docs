@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-16"
+lastupdated: "2017-02-23"
 
 ---
 
@@ -12,13 +12,13 @@ lastupdated: "2017-02-16"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Integrating {{site.data.keyword.DRA_short}} with {{site.data.keyword.deliverypipeline}}
+# Integrating DevOps Insights with Delivery Pipeline
 {: #toolchain_configure_pipeline}
 
 After you add {{site.data.keyword.DRA_full}} to a toolchain and define the policies it monitors, you must then integrate {{site.data.keyword.DRA_short}} with your pipeline.
 {:shortdesc}
 
-## Preparing pipeline stages for {{site.data.keyword.DRA_short}}
+## Preparing pipeline stages
 {: #toolchain_pipeline_props}
 
 You must create several environment properties in each pipeline stage that contains build or deploy jobs:
@@ -27,7 +27,7 @@ You must create several environment properties in each pipeline stage that conta
 
 2. Click **ENVIRONMENT PROPERTIES**.
 
-3. Add the following three text properties, and then save the changes to the stage:
+3. Add the following text properties, and then save the changes to the stage:
 
 <table><thead>
 <tr>
@@ -41,7 +41,7 @@ You must create several environment properties in each pipeline stage that conta
 </tr>
 <tr>
 <td><code>LOGICAL_ENV_NAME</code></td>
-<td>The name of the environment that the app is running in. This property is used to categorize the app in {{site.data.keyword.DRA_short}} dashboards.</td>
+<td>The name of the environment that the app is running in. This property is used to categorize the app in {{site.data.keyword.DRA_short}} dashboards. <br><em>This property is required in stages that deploy to staging or production environments, and is optional in all others.</em> Set it to <code>STAGING</code> for stages that deploy to staging and <code>PRODUCTION</code> for stages that deploy to production.</td>
 </tr>
 <tr>
 <td><code>BUILD_PREFIX</code></td>
@@ -50,7 +50,7 @@ You must create several environment properties in each pipeline stage that conta
 </tbody></table>
 
 
-## Adding {{site.data.keyword.DRA_short}} test jobs
+## Adding test jobs
 {: #toolchain_pipeline_upload}
 
 Integrate {{site.data.keyword.DRA_short}} into your pipeline using two kinds of test jobs: ones that upload results to {{site.data.keyword.DRA_short}} for analysis, and gates that act on that analysis. 
@@ -79,11 +79,11 @@ The values for the **Type of Metric** and **Result File Location** fields must m
 </thead><tbody>
 <tr>
 <td>Functional Verification Test</td>
-<td>Mocha, JUnit</td>
+<td>Mocha, xUnit</td>
 </tr>
 <tr>
 <td>Unit Test</td>
-<td>Mocha, JUnit, Karma/Mocha</td>
+<td>Mocha, xUnit, Karma/Mocha</td>
 </tr>
 <tr>
 <td>Code Coverage</td>
@@ -96,7 +96,7 @@ The values for the **Type of Metric** and **Result File Location** fields must m
 ![Deployment Risk Analytics upload job](images/insights_upload_job.png)
 Figure 1. Upload results to DevOps Analytics
 
-## Defining {{site.data.keyword.DRA_short}} gates in the pipeline
+## Defining gates in the pipeline
 {: #toolchain_pipeline_gates}
 
 {{site.data.keyword.DRA_short}} gates check whether your test results comply with a defined policy. If the policy is not met, the {{site.data.keyword.DRA_short}} gate fails by default. You can also configure gates to act in an advisory role, permitting pipeline progression even after failure.
@@ -120,6 +120,19 @@ Figure 2. DevOps Analytics gate
 
 After your pipeline is configured, start to use {{site.data.keyword.DRA_short}}. For instructions, see [Running the Delivery Pipeline](/docs/services/DevOpsInsights/pipeline_decision_reports.html#toolchain_reports).
 
+## Viewing decision reports    
+{: #DI_decision_reports}
+
+After a pipeline runs, {{site.data.keyword.DRA_short}} starts to collect and analyze the test results from it to establish a baseline. Data from every subsequent run is collected and compared against previous results. Decision gates use this data to determine when to stop a deployment. 
+
+To view the decision report for a gate from the pipeline, complete these steps:
+
+   1. On the stage that contains the gate to check, click **View logs and history**.
+
+   2. From the jobs window of the stage, click the gate's name.
+
+   3. In the log view, locate the message 'Check {{site.data.keyword.DRA_short}} report here` and click the provided link to open the report.
+
 ## Performing static code scans and dynamic app scans
 {: #toolchain_pipeline_scan}
 
@@ -128,26 +141,9 @@ You can integrate {{site.data.keyword.DRA_short}} with the IBM Security Static A
 To add static code scans or dynamic app scans to your pipeline:
  1. Add the scan test jobs to your pipeline.
    * For more information about running static code scans and dynamic app scans from pipelines, [see Extending the capabilities of your Build & Deploy pipeline](https://hub.jazz.net/docs/deploy_ext/).
- 2. Add three new environment properties to whichever stages contain those jobs:
-  <table><thead>
-  <tr>
-  <th>Environment property</th>
-  <th>Description</th>
-  </tr>
-  </thead><tbody>
-  <tr>
-  <td><code>LOGICAL_APP_NAME</code></td>
-  <td>The name of the app as it appears on {{site.data.keyword.DRA_short}} dashboards. </td>
-  </tr>
-  <tr>
-  <td><code>LOGICAL_ENV_NAME</code></td>
-  <td>The name of the environment that the app is running in. This property is used to categorize the app in {{site.data.keyword.DRA_short}} dashboards.</td>
-  </tr>
-  <tr>
-  <td><code>BUILD_PREFIX</code></td>
-  <td>A prefix that is added to builds as shown on {{site.data.keyword.DRA_short}} dashboards. This is generally the name of the branch of code that acts as build input.</td>
-  </tr>
-  </tbody></table>
+ 2. Verify that the environment properties that are described in [Preparing pipeline stages](#toolchain_pipeline_props) are configured correctly for your project.
 
 ![A pipeline stage that has the required environment properties for DevOps Insights and code or app scanning](images/insights-scan-properties.png)
 Figure 3. A pipeline stage that has the required environment properties for DevOps Insights and code or app scanning
+
+
