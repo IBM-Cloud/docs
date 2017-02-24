@@ -2,56 +2,56 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-01"
+lastupdated: "2017-02-24"
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# Getting started with IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
+# Getting started with IBM WebSphere Application Server in {{site.data.keyword.Bluemix_notm}}
 {: #getting_started}
 
-{{site.data.keyword.IBM}} WebSphere Application Server for {{site.data.keyword.Bluemix}} is a service that facilitates quick setup on a pre-configured WebSphere Application Server Liberty, Traditional Network Deployment, or Traditional WebSphere Java EE instance in a hosted cloud environment on {{site.data.keyword.Bluemix_notm}}.
+{{site.data.keyword.IBM}} WebSphere Application Server in {{site.data.keyword.Bluemix}} is a service that facilitates quick setup on a pre-configured WebSphere Application Server Liberty, Traditional Network Deployment, or Traditional WebSphere Java EE instance in a hosted cloud environment on {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
 
-## Overview of WebSphere Application Server for {{site.data.keyword.Bluemix_notm}}
+## Overview of WebSphere Application Server in {{site.data.keyword.Bluemix_notm}}
 {: #overview}
 
-WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} provides consumers with pre-configured Traditional WebSphere and Liberty Profile servers. It is hosted on virtual machine guests with root access to the guest operating system. When you are creating your service, choose between _Liberty_, _Traditional ND_, or _Traditional WebSphere_.
+WebSphere Application Server in {{site.data.keyword.Bluemix_notm}} provides consumers with pre-configured Traditional WebSphere and Liberty Profile servers. It is hosted on virtual machine guests with root access to the guest operating system. When you are creating your service, choose between _Liberty_, _Traditional ND_, or _Traditional WebSphere_.
 
 **Note:** Consumers are now able to choose between V8.5 and V9.0 when you create a new _Traditional ND_ or _Traditional WebSphere_ instance.
 
 You are given a familiar WebSphere administration experience and have full access to the underlying operating system. You can reuse your existing scripts and make the little system tweaks that you need to make to work with your own, or third party, frameworks. The Admin Center and Admin Consoles are provided to administer your WebSphere Application Server Liberty, ND or Traditional service, just like your on-premises WebSphere configurations.
 
-The WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Network Deployment Plan consists of a WebSphere Application Server Network Deployment cell environment with two or more virtual machines. The first virtual machine contains the Deployment Manager and IBM HTTP Server and the remaining virtual machines contain custom nodes (node agents) federated to the Deployment Manager. Use your existing wsadmin scripts to create your WebSphere configuration or use the WebSphere Admin Console to manually configure the environment. These new capabilities allow users to set up a clustered environment, which is a critical aspect of any middleware enterprise application. Clients can now elect to cluster a topology to load balance requests across two or more Instances.
+The WebSphere Application Server in {{site.data.keyword.Bluemix_notm}} Network Deployment Plan consists of a WebSphere Application Server Network Deployment cell environment with two or more virtual machines. The first virtual machine contains the Deployment Manager and IBM HTTP Server and the remaining virtual machines contain custom nodes (node agents) federated to the Deployment Manager. Use your existing wsadmin scripts to create your WebSphere configuration or use the WebSphere Admin Console to manually configure the environment. These new capabilities allow users to set up a clustered environment, which is a critical aspect of any middleware enterprise application. Clients can now elect to cluster a topology to load balance requests across two or more Instances.
 
-The WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Liberty Core Plan includes the use of a Liberty Collective. The Liberty Collective is an administrative domain for a group of Liberty profiles (servers) and consists of two or more virtual machines. The first virtual machine contains the Collective Controller liberty server, which is a control point for the Liberty Collective. In addition to the liberty collective, this virtual machine also contains the IBM HTTP Server, which allows access to your applications from a web browser. The remaining virtual machines are the collective hosts where the collective members reside (liberty profile servers). The Liberty Admin Center feature is also enabled on the liberty controller server.
+The WebSphere Application Server in {{site.data.keyword.Bluemix_notm}} Liberty Core Plan includes the use of a Liberty Collective. The Liberty Collective is an administrative domain for a group of Liberty profiles (servers) and consists of two or more virtual machines. The first virtual machine contains the Collective Controller liberty server, which is a control point for the Liberty Collective. In addition to the liberty collective, this virtual machine also contains the IBM HTTP Server, which allows access to your applications from a web browser. The remaining virtual machines are the collective hosts where the collective members reside (liberty profile servers). The Liberty Admin Center feature is also enabled on the liberty controller server.
 
-The following figure shows the architecture of the WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Network Deployment Cell and Liberty Collective environments.
+The following figure shows the architecture of the WebSphere Application Server in {{site.data.keyword.Bluemix_notm}} Network Deployment Cell and Liberty Collective environments.
 
 Figure 1. Network deployment cell and Liberty collective architecture
 
 ![Figure1. Architecture of Network deployment cell and Liberty collective](images/CellCollectiveDiagram.gif)
 
-**Note**: In _Figure 1_ above, the pattern that depicts collocation of the Deployment Manager or the Collective controller with the IBM HTTP Server is intended for development and testing purposes. WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} also gives you the freedom to reconfigure the preinstalled software to meet your production application and operational needs; just as you would on-premises. Further, for the strictest production requirements, contact your IBM Sales representative who can speak to our single-tenant IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} offering, which offers isolated networking and compute resources.
+**Note**: In _Figure 1_ above, the pattern that depicts collocation of the Deployment Manager or the Collective controller with the IBM HTTP Server is intended for development and testing purposes. WebSphere Application Server in {{site.data.keyword.Bluemix_notm}} also gives you the freedom to reconfigure the preinstalled software to meet your production application and operational needs; just as you would on-premises. Further, for the strictest production requirements, contact your IBM Sales representative who can speak to our single-tenant IBM WebSphere Application Server in {{site.data.keyword.Bluemix_notm}} offering, which offers isolated networking and compute resources.
 
 
 ## Operational Environment
 {: #operational_environment}
 
-IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} is a service that returns guests (virtual machines) in a shared environment for consumers to deploy applications. A VPN protects the public service from generic port scans and other unsolicited network-based attacks. However, it is important to note that the service VPN you use to access your service instance might be shared between multiple {{site.data.keyword.Bluemix_notm}} organizations and users. The virtual machines provide compute, memory, and I/O resources, which come from a shared pool of IaaS resources.
+IBM WebSphere Application Server in {{site.data.keyword.Bluemix_notm}} is a service that returns guests (virtual machines) in a shared environment for consumers to deploy applications. A VPN protects the public service from generic port scans and other unsolicited network-based attacks. However, it is important to note that the service VPN you use to access your service instance might be shared between multiple {{site.data.keyword.Bluemix_notm}} organizations and users. The virtual machines provide compute, memory, and I/O resources, which come from a shared pool of IaaS resources.
 
-As specific compute, memory, and I/O resources are run by virtual machines in a shared environment, service configurations might vary. Configurations for each specific service instance can be viewed through the IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} service dashboards and portals.
+As specific compute, memory, and I/O resources are run by virtual machines in a shared environment, service configurations might vary. Configurations for each specific service instance can be viewed through the IBM WebSphere Application Server in {{site.data.keyword.Bluemix_notm}} service dashboards and portals.
 
-IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} provides virtual machine instances. With these instances, clients use a simple portal to create and manage enterprise WebSphere Application Server deployments in a consistent, repeatable manner with significant flexibility to tune their applications. Users can get up and running on pre-configured WebSphere Application Server Liberty, ND, or Traditional virtual machines in a hosted cloud environment. Users can migrate existing WebSphere Application Server applications to {{site.data.keyword.Bluemix_notm}} and take full control of the underlying OS and middleware.
+IBM WebSphere Application Server in {{site.data.keyword.Bluemix_notm}} provides virtual machine instances. With these instances, clients use a simple portal to create and manage enterprise WebSphere Application Server deployments in a consistent, repeatable manner with significant flexibility to tune their applications. Users can get up and running on pre-configured WebSphere Application Server Liberty, ND, or Traditional virtual machines in a hosted cloud environment. Users can migrate existing WebSphere Application Server applications to {{site.data.keyword.Bluemix_notm}} and take full control of the underlying OS and middleware.
 
 ## Pricing Strategy
 {: #pricing_strategy}
 
-IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} provides T-Shirt sized instances for clients with memory-intensive applications to "right-size" their environment with larger virtual machines. Clients can select the specific resource size of a provisioned WebSphere Application Server component or single system up to 32 GB RAM virtual machines.
+IBM WebSphere Application Server in {{site.data.keyword.Bluemix_notm}} provides T-Shirt sized instances for clients with memory-intensive applications to "right-size" their environment with larger virtual machines. Clients can select the specific resource size of a provisioned WebSphere Application Server component or single system up to 32 GB RAM virtual machines.
 
-The following tables represent IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} plan prices as of April 1, 2016 and are represented in US dollars (USD).
+The following tables represent IBM WebSphere Application Server in {{site.data.keyword.Bluemix_notm}} plan prices as of April 1, 2016 and are represented in US dollars (USD).
 
 *Table 1. Liberty Core Plan*
 
@@ -85,9 +85,9 @@ The following tables represent IBM WebSphere Application Server for {{site.data.
 
 <p></p>
 
-IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} is offered in accordance with the following charge metric:
+IBM WebSphere Application Server in {{site.data.keyword.Bluemix_notm}} is offered in accordance with the following charge metric:
 
-*  *Instance-Hour*: An Instance is defined as access to a specific configuration of the IBM WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} Service. Clients are charged for each full or partial hour for each Instance of the Service that is deployed during the billing period. Each Instance Hour is billed monthly and if an instance is only used part of the month, the usage rate is prorated.
+*  *Instance-Hour*: An Instance is defined as access to a specific configuration of the IBM WebSphere Application Server in {{site.data.keyword.Bluemix_notm}} Service. Clients are charged for each full or partial hour for each Instance of the Service that is deployed during the billing period. Each Instance Hour is billed monthly and if an instance is only used part of the month, the usage rate is prorated.
 
 For example, if you use the ND Plan, one Instance equates to 1vCPU with 2 GB RAM and 12 GB HD. So if you chose to configure your Cell with one Control node and eight Custom nodes, you would be charged for nine nodes (instances).
 
