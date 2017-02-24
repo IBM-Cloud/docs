@@ -127,6 +127,60 @@ cf ba add-user <user_name> <organization> <first_name> <last_name>
 **Tip:** You can also use **ba au** as an alias for the longer
 **ba add-user** command name.
 
+<!-- staging-only commands start. Live for interconnect -->
+
+### Searching for a user
+{: #admin_search_user}
+
+To search for a user, use the following command in conjunction with the optional search filter parameters
+(name, permission, organization, and role):
+
+```
+cf ba search-users -name=<user_name_value> -permission=<permission_value> -organization=<organization_value> -role=<role_value>
+```
+{: codeblock}
+
+<dl class="parml">
+
+<dt class="pt dlterm">&lt;user_name_value&gt;</dt>
+<dd class="pd">The name of the user in {{site.data.keyword.Bluemix_notm}}. </dd>
+<dt class="pt dlterm">&lt;permission_value&gt;</dt>
+<dd class="pd">The permission assigned to the user. For example, superuser, basic, catalog, user, and reports. For more information about assigned user permissions, see [Permissions](/docs/admin/index.html#permissions). You cannot use this parameter with the organization parameter in the same query. </dd>
+<dt class="pt dlterm">&lt;organization_value&gt;</dt>
+<dd class="pd">The organization name that the user belongs to. You cannot use this parameter with the permission parameter in the same query.</dd>
+<dt class="pt dlterm">&lt;role_value&gt;</dt>
+<dd class="pd">The organization role assigned to the user. For example, manager, billing manager, or auditor for the organization. You must specify the organization with this parameter. For more information about roles, see [User roles](/docs/admin/users_roles.html#userrolesinfo).</dd>
+
+</dl>
+
+**Tip:** You can also use **ba su** as an alias for the longer
+**ba search-users** command name.
+
+### Setting permissions for a user
+{: #admin_setperm_user}
+
+To set permissions for a specified user, use the following command:
+
+```
+cf ba set-permissions <user_name> <permission> <access>
+```
+{: codeblock}
+
+**Note**: You can set one permission at a time.
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;user_name&gt;</dt>
+<dd class="pd">The name of the user in {{site.data.keyword.Bluemix_notm}}.</dd>
+<dt class="pt dlterm">&lt;permission&gt;</dt>
+<dd class="pd">Set the permissions for the user: Admin (available alternative is Superuser), Login (available alternative is Basic), Catalog (read or write access), Reports (read or write access), or Users (read or write access).</dd>
+<dt class="pt dlterm">&lt;access&gt;</dt>
+<dd class="pd">For Catalog, Reports, or Users permissions, you must also set the level of access as <code>read</code> or <code>write</code>.</dd>
+</dl>
+
+**Tip:** You can also use **ba sp** as an alias for the longer
+**ba set-permissions** command name.
+
+<!-- staging-only commands end -->
 
 ### Removing a user
 {: #admin_remov_user}
@@ -670,7 +724,7 @@ name.</dd>
 ## Viewing resource metric information
 {: #cliresourceusage}
 
-You can view resource metric information, including memory, disk, and CPU usage. You can see a summary of the available physical and reserved resources as well as the usage of physical and reserved resources. You can also see droplet execution agents (DEAs) usage data and historical memory and disk usage. Historical data for memory and disk usage is displayed, by default, weekly and in descending order. To view the resource metric information, use the following command:
+You can view resource metric information, including memory, disk, and CPU usage. You can see a summary of the available physical and reserved resources as well as the usage of physical and reserved resources. You can also see droplet execution agents (DEAs) and cells (Diego architecture) usage data and historical memory and disk usage. Historical data for memory and disk usage is displayed, by default, weekly and in descending order. To view the resource metric information, use the following command:
 
 ```
 cf ba resource-metrics <monthly> <weekly>
