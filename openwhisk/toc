@@ -1,6 +1,8 @@
 [Getting Started with OpenWhisk](/docs/openwhisk/index.html)
     index.md
+    openwhisk_cli.md
     openwhisk_about.md
+    openwhisk_use_cases.md
     openwhisk_actions.md
     openwhisk_triggers_rules.md
     openwhisk_packages.md
@@ -8,5 +10,7 @@
     openwhisk_monitoring.md
     openwhisk_mobile_sdk.md
     openwhisk_apigateway.md
+    openwhisk_webactions.md
     openwhisk_feeds.md
     openwhisk_reference.md
+    openwhisk_annotations.md
