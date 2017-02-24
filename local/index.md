@@ -137,7 +137,7 @@ If you have a private instance of a {{site.data.keyword.Bluemix_notm}} service f
 
 {{site.data.keyword.Bluemix_local_notm}} sits on a virtualized infrastructure that is behind your Enterprise firewall, providing the highest performing and most secure cloud infrastructure to you. {{site.data.keyword.IBM_notm}} installs, remotely monitors, and manages {{site.data.keyword.Bluemix_local_notm}} in your data center through {{site.data.keyword.IBM_notm}}'s [Relay](#localrelay) technology. The logical architecture in [Figure 1](#figure01) describes how {{site.data.keyword.Bluemix_notm}} is set up in your local environment and how {{site.data.keyword.IBM_notm}} maintains your local instance:
 
-![{{site.data.keyword.Bluemix_local_notm}} architecture.](images/bmlocal_arch.png "Bluemix Local architecture diagram") 
+![{{site.data.keyword.Bluemix_local_notm}} architecture.](images/bmlocal_arch.png "Bluemix Local architecture diagram")
 
 Figure 1. {{site.data.keyword.Bluemix_local_notm}} architecture
 {: #figure01}
@@ -240,7 +240,7 @@ The environment is completely visible to you, as the administrator, for incident
 ### SSL inspection
 {: #sslinspection}
 
-Cloud Foundry and {{site.data.keyword.Bluemix_notm}} applications can work with SSL inspection certificates when accessing sources outside of the local environment. SSL content inspection is available for your environment, if you provide a root certificate which is used to sign inspected SSL streams. 
+Cloud Foundry and {{site.data.keyword.Bluemix_notm}} applications can work with SSL inspection certificates when accessing sources outside of the local environment. SSL content inspection is available for your environment, if you provide a root certificate which is used to sign inspected SSL streams.
 
 The {{site.data.keyword.Bluemix_notm}} deployment team loads the root certificate to enable SSL inspection in the environment during the deployment process for your local environment. Enabling SSL inspection during the environment set up process does not add additional time for the deployment. If this capability is not enabled during the initial deployment, you can request that it is enabled; however, there might be an additional cost associated and it can take two to four days to complete depending on your available maintenance windows.
 
