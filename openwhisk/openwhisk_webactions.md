@@ -106,9 +106,9 @@ It is important to be aware of the [response size limit](./openwhisk_reference.h
 
 An OpenWhisk action that is not a web action requires both authentication and must respond with a JSON object. In contrast, web actions may be invoked without authentication, and may be used to implement HTTP handlers that respond with _headers_, _status code_, and _body_ content of different types. The web action must still return a JSON object, but the OpenWhisk system (namely the `controller`) will treat a web action differently if its result includes one or more of the following as top level JSON properties:
 
-1. `headers`: a JSON object where the keys are header-names and the values are string values for those headers (default is no headers).
-2. `code`: a valid HTTP status code (default is 200 OK).
-3. `body`: a string which is either plain text or a base64 encoded string (for binary data).
+- `headers`: a JSON object where the keys are header-names and the values are string values for those headers (default is no headers).
+- `code`: a valid HTTP status code (default is 200 OK).
+- `body`: a string which is either plain text or a base64 encoded string (for binary data).
 
 The controller will pass along the action-specified headers, if any, to the HTTP client when terminating the request/response. Similarly the controller will respond with the given status code when present. Lastly, the body is passed along as the body of the response. Unless a `content-type header` is declared in the action result’s `headers`, the body is passed along as is if it’s a string (or results in an error otherwise). When the `content-type` is defined, the controller will determine if the response is binary data or plain text and decode the string using a base64 decoder as needed. Should the body fail to decoded correctly, an error is returned to the caller.
 
@@ -118,9 +118,9 @@ _Note_: A JSON object or array is treated as binary data and must be base64 enco
 
 A web action, when invoked, receives all the HTTP request information available as additional parameters to the action input argument. They are:
 
-1. `__ow_meta_verb`: the HTTP method of the request.
-2. `__ow_meta_headers`: the request headers.
-3. `__ow_meta_path`: the unmatched path of the request (matching stops after consuming the action extension).
+- `__ow_meta_verb`: the HTTP method of the request.
+- `__ow_meta_headers`: the request headers.
+- `__ow_meta_path`: the unmatched path of the request (matching stops after consuming the action extension).
 
 The request may not override any of the named `__ow_` parameters above; doing so will result in a failed request with status equal to 400 Bad Request.
 
@@ -129,12 +129,12 @@ The request may not override any of the named `__ow_` parameters above; doing so
 
 Web actions bring some additional features that include:
 
-1. `Content extensions`: the request must specify its desired content type as one of `.json`, `.html`, `.text` or `.http`. This is done by adding an extension to the action name in the URI, so that an action `/guest/demo/hello` is referenced as `/guest/demo/hello.http` for example to receive an HTTP response back.
-2. `Projecting fields from the result`: the path that follows the action name is used to project out one or more levels of the response. For example, 
+- `Content extensions`: the request must specify its desired content type as one of `.json`, `.html`, `.text` or `.http`. This is done by adding an extension to the action name in the URI, so that an action `/guest/demo/hello` is referenced as `/guest/demo/hello.http` for example to receive an HTTP response back.
+- `Projecting fields from the result`: the path that follows the action name is used to project out one or more levels of the response. For example, 
 `/guest/demo/hello.html/body`. This allows an action which returns a dictionary `{body: "..." }` to project the `body` property and directly return its string value instead. The projected path follows an absolute path model (as in XPath).
-3. `Query and body parameters as input`: the action receives query parameters as well as parameters in the request body. The precedence order for merging parameters is: package parameters, action parameters, query parameter, body parameters with each of these overriding any previous values in case of overlap . As an example `/guest/demo/hello.http?name=Jane` will pass the argument `{name: "Jane"}` to the action.
-4. `Form data`: in addition to the standard `application/json`, web actions may receive URL encoded from data `application/x-www-form-urlencoded data` as input.
-5. `Activation via multiple HTTP verbs`: a web action may be invoked via one of four HTTP methods: `GET`, `POST`, `PUT` or `DELETE`.
+- `Query and body parameters as input`: the action receives query parameters as well as parameters in the request body. The precedence order for merging parameters is: package parameters, action parameters, query parameter, body parameters with each of these overriding any previous values in case of overlap . As an example `/guest/demo/hello.http?name=Jane` will pass the argument `{name: "Jane"}` to the action.
+- `Form data`: in addition to the standard `application/json`, web actions may receive URL encoded from data `application/x-www-form-urlencoded data` as input.
+- `Activation via multiple HTTP verbs`: a web action may be invoked via one of four HTTP methods: `GET`, `POST`, `PUT` or `DELETE`.
 
 
 The example below briefly sketches how you might use these features in a web action. Given an action `/guest/demo/hello` with the following body:
@@ -200,8 +200,8 @@ wsk action update /guest/demo/hello hello.js \
 
 When an OpenWhisk action fails, there are two different failure modes. The first is known as an _application error_ and is analogous to a caught exception: the action returns a JSON object containing a top level `error` property. The second is a _developer error_ which occurs when the action fails catastrophically and does not produce a response (this is similar to an uncaught exception). For web actions, the controller handles application errors as follows:
 
-1. Any specified path projection is ignored and the controller projects the `error` property instead.
-2. The controller applies the content handling implied by the action extension to the value of the `error` property.
+- Any specified path projection is ignored and the controller projects the `error` property instead.
+- The controller applies the content handling implied by the action extension to the value of the `error` property.
 
 Developers should be aware of how web actions might be used and generate error responses accordingly. For example, a web action that is used with the `.http` extension
 should return an HTTP response, for example: `{error: { code: 400 }`. Failing to do so will in a mismatch between the implied content-type from the extension and the action content-type in the error response. Special consideration must be given to web actions that are sequences, so that components that make up a sequence can generate adequate errors when necessary.
