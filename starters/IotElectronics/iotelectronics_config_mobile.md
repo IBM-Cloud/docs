@@ -39,7 +39,7 @@ You can get the mobile app for iOS or Android mobile devices.
 
 To connect the mobile app to your environment and register your appliances, perform the following tasks:
 
-1. Open your {{site.data.keyword.itoelectronics}} starter app. For instructions, see [Opening the starter app](iot4ecreatingappliances.html#iot4e_openAppMain).
+1. Open your {{site.data.keyword.iotelectronics}} starter app. For instructions, see [Opening the starter app](iot4ecreatingappliances.html#iot4e_openAppMain).
 
 2. Select **Remotely control your connected appliances**.
 
