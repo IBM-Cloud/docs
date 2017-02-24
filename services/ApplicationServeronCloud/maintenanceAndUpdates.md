@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-28"
+lastupdated: "2017-02-24"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2016-10-28"
 ## Maintenance Strategy
 {: #maintenance_strategy}
 
-IBM WebSphere Application Server for Bluemix is updated on a regular cadence, ensuring that new service instances are created with current fix packs and patches. The cloud brings easy and rapid provisioning of new service instances to middleware management. Many consumers are expected to upgrade to a new service instance when they want to apply maintenance. For those consumers who want to retain long lived service instances, maintenance repositories are available for the middleware and underlying operating guest. These repositories allow users to maintain their environment just like they would on-premises.
+IBM WebSphere Application Server in Bluemix is updated on a regular cadence, ensuring that new service instances are created with current fix packs and patches. The cloud brings easy and rapid provisioning of new service instances to middleware management. Many consumers are expected to upgrade to a new service instance when they want to apply maintenance. For those consumers who want to retain long lived service instances, maintenance repositories are available for the middleware and underlying operating guest. These repositories allow users to maintain their environment just like they would on-premises.
 
 ## VM Updates
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-28"
+lastupdated: "2017-02-24"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2016-10-28"
 # Network environment
 {: #networkEnvironment}
 
-After your WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} service instance is provisioned, you can access your VM in several ways. You can connect over a secure VPN to get SSH, traditional WebSphere Admin Console, and application access to your VM. You can also connect your VM to the internet with a public IP address.
+After your WebSphere Application Server in {{site.data.keyword.Bluemix_notm}} service instance is provisioned, you can access your VM in several ways. You can connect over a secure VPN to get SSH, traditional WebSphere Admin Console, and application access to your VM. You can also connect your VM to the internet with a public IP address.
 
 The following diagram shows these network paths:
 
@@ -24,12 +24,12 @@ Figure 1. Client view of Multi-tenant networking with Public IP
 ## VPN access
 {: #vpnAccess}
 
-After you provision a WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} service instance from the Service Dashboard in the {{site.data.keyword.Bluemix_notm}} UI, you can download your VPN credentials and establish an OpenVPN connection. You can then access your VM through SSH. You can also access your Liberty Admin Center, traditional WebSphere Admin Console, and applications.
+After you provision a WebSphere Application Server in {{site.data.keyword.Bluemix_notm}} service instance from the Service Dashboard in the {{site.data.keyword.Bluemix_notm}} UI, you can download your VPN credentials and establish an OpenVPN connection. You can then access your VM through SSH. You can also access your Liberty Admin Center, traditional WebSphere Admin Console, and applications.
 
 ## Public internet access
 {: #publicInternetAccess}
 
-Optionally, you can request a public IP address for your WebSphere server VM by clicking **Manage Public IP** on the Service Dashboard in the {{site.data.keyword.Bluemix_notm}} UI and requesting a public IP. This process reserves the IP address for this server. Then, click **Open IP** to open the connection from the internet to your WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} service instance.
+Optionally, you can request a public IP address for your WebSphere server VM by clicking **Manage Public IP** on the Service Dashboard in the {{site.data.keyword.Bluemix_notm}} UI and requesting a public IP. This process reserves the IP address for this server. Then, click **Open IP** to open the connection from the internet to your WebSphere Application Server in {{site.data.keyword.Bluemix_notm}} service instance.
 
 ## Public IP ports
 {: #publicIPports}
