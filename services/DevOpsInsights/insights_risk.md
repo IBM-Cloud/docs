@@ -20,7 +20,7 @@ lastupdated: "2017-02-23"
 
 After opening {{site.data.keyword.DRA_short}} from the tile in your toolchain, click **Deployment Risk**. From there, you can get a high-level overview of applications in your staging and production environments, as well as drill down to understand code coverage, test performance, and security reports. You can also see an overview of your builds only by clicking **Build Verification**. 
 
-The dashboards are automatically populated with the most recent information from your pipelines' {{site.data.keyword.DRA_short}} tests. Click the elements within the dashboards for more information about them. You can also open the last commit 
+The dashboards are automatically populated with the most recent information from your pipelines' {{site.data.keyword.DRA_short}} tests. Click the elements within the dashboards for more information about them.
 
 ## Configuration 
 
