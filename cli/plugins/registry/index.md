@@ -49,7 +49,7 @@ The {{site.data.keyword.registrylong}} CLI is a plug-in that lets you manage you
 
  
 ## bx cr login
-If Docker is installed, this command runs `docker login` against the registry. docker login` is required to be able to `docker push` or `docker pull` to the registry. This command is not required to run other `bx cr` commands. If Docker is not installed, this command returns an error message.
+If Docker is installed, this command runs `docker login` against the registry. `docker login` is required to be able to `docker push` or `docker pull` to the registry. This command is not required to run other `bx cr` commands. If Docker is not installed, this command returns an error message.
 
 ```
 bx cr login [--target REGISTRY]
@@ -65,7 +65,7 @@ bx cr api
 {: codeblock}
 
 ## bx cr namespace-add
-Add a namespace to your Bluemix org. 
+Adds a namespace to your Bluemix org. 
 
 ```
 bx cr namespace-add NAMESPACE
@@ -75,11 +75,11 @@ bx cr namespace-add NAMESPACE
 **Parameters**
 <dl>
 <dt>NAMESPACE</dt>
-<dd>The namespace you want to add. The namespace must be unique across all orgs.</dd>
+<dd>The namespace you want to add. The namespace must be unique across all {{site.data.keyword.Bluemix_short}} orgs.</dd>
 </dl>
 
 ## bx cr namespace-rm
-Removes a namespace from your Bluemix org. Images in this namespace are deleted when the namespace is removed.
+Removes a namespace from your {{site.data.keyword.Bluemix_short}}  org. Images in this namespace are deleted when the namespace is removed.
 
 ```
 bx cr namespace-rm NAMESPACE
@@ -114,11 +114,11 @@ View all images in your {{site.data.keyword.Bluemix_short}} org. You can also ru
 <dt>--no-trunc</dt>
 <dd>(Optional) Do not truncate the output.</dd>
 <dt>-q, --quiet</dt>
-<dd>(Optional) Displays a unique identifier for the image in the format: `repository:tag`.</dd>
+<dd>(Optional) Displays a unique identifier for the image in the format: 'repository:tag'.</dd>
 <dt>--ibm-list</dt>
 <dd>(Optional) Includes IBM-provided public images in the output. Without this option, private images are listed only.</dd>
 <dt>--format FORMAT</dt>
-<dd>(Optional) Format the output using a Go template. Strings: `Tag`, `Digest`, `Vulnerable`, `Namespace`. Integer (64 bit): `Created`, `Size`.</dd>
+<dd>(Optional) Format the output using a Go template. Strings: Tag, Digest, Vulnerable, Namespace. Integer (64 bit): Created, Size.</dd>
 </dl>
 
 <!--## bx cr image-inspect
