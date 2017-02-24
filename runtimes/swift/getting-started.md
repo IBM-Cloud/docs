@@ -175,9 +175,14 @@ Back in the {{site.data.keyword.Bluemix_notm}} UI, select your App -> Connection
 
 Copy and paste just the credentials to the corresponding fields in your local config.json file.
 
-Run your application locally.
+Build and run your application locally.
  ```
-.build/debug/kitura-helloworld  
+swift build  
+ ```
+ {: pre}
+ 
+  ```
+.build/debug/kitura-helloworld 
  ```
  {: pre}
 
