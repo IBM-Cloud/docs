@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-2-16"
+lastupdated: "2017-2-23"
 
 ---
 
@@ -37,8 +37,12 @@ The {{site.data.keyword.contdelivery_short}} service supports your DevOps workfl
   Understand the dynamics of your team as it develops and delivers code. Learn how users interact with your application. Review data to help you manage your application's operations.
   
   
-## Public compared to Dedicated
+## Toolchain availability on {{site.data.keyword.Bluemix_notm}} Public compared to {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #public_and_dedicated}
+
+{{site.data.keyword.Bluemix_notm}} Public is an open-standards, cloud-based platform where you can build, run, and manage applications that are accessed by [http://bluemix.net![External link icon](../../icons/launch-glyph.svg "External link icon")](http://bluemix.net){:new_window}. {{site.data.keyword.Bluemix_notm}} Dedicated provides the capabilities of {{site.data.keyword.Bluemix_notm}} in a dedicated SoftLayer environment that is securely connected to both the {{site.data.keyword.Bluemix_notm}} Public environment and your network. Your company's {{site.data.keyword.Bluemix_notm}} Dedicated environment might not contain the same tool integrations as the {{site.data.keyword.Bluemix_notm}} Public site.
+
+For source-code management and issue tracking, {{site.data.keyword.Bluemix_notm}} Public generally uses github.com. {{site.data.keyword.Bluemix_notm}} Dedicated can also use github.com, but it generally uses {{site.data.keyword.ghe_short}} that is either installed by your company or managed by IBM.
 
 {{site.data.keyword.contdelivery_short}} is available on {{site.data.keyword.Bluemix_notm}} Public and {{site.data.keyword.Bluemix_notm}} Dedicated. Toolchains differ depending on whether you use {{site.data.keyword.contdelivery_short}} on {{site.data.keyword.Bluemix_notm}} Public or {{site.data.keyword.Bluemix_notm}} Dedicated.
 
