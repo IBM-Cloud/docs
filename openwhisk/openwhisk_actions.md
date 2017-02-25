@@ -79,7 +79,6 @@ Review the following steps and examples to create your first JavaScript action.
   ```
   {: pre}
   ```
-  ```
   ok: invoked hello with id 44794bd6aab74415b4e42a308d880e5b
   ```
   ```json
