@@ -68,7 +68,7 @@ Para crear y utilizar un dominio personalizado en {{site.data.keyword.Bluemix_no
     ```
     cf map-route myapp mydomain -n nombre_host
     ```
-    Para grupos de contenedor, escriba el siguiente mandato:	
+    Para grupos de contenedor, escriba el siguiente mandato:
      ```
      cf ic route map -n host_name -d mydomain mycontainergroup
      ```
