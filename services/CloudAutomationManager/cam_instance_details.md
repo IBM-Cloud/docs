@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-10"
+lastupdated: "2017-02-24"
 
 ---
 <!-- Copyright info and last updated date at top of file: REQUIRED
@@ -43,7 +43,7 @@ To view the instance details, follow these steps:
 
 3. In the instance window, you can see the instance status, the instance information, and the related resource details. You can view or download the instance logs and you can also access the template from which the instance was deployed.
 
- For each related resource, you can access the console (if existing) and eventually perform the actions listed by clicking in the **ACTIONS** column.
+ For each related resource, you can access the console (if existing) and eventually perform the actions listed by clicking the menu in the **ACTIONS** column.
  
  **Note:** To access the KVM console in the SoftLayer Customer Portal, you must follow the procedure described in [Access the KVM Console](https://knowledgelayer.softlayer.com/procedure/access-kvm-console){:new_window}.
 
