@@ -32,7 +32,7 @@ Ambos tienen prestaciones similares para desarrollar aplicaciones; la CLI ofrece
 ## Desarrollar en el navegador
 {: #openwhisk_start_editor}
 
-Pruebe {{site.data.keyword.openwhisk_short}} en el [Navegador](https://console.{DomainName}/openwhisk/editor){: new_window} para crear acciones, automatizar acciones utilizando desencadenantes, y explorar paquetes públicos.
+Pruebe {{site.data.keyword.openwhisk_short}} en el [Navegador](https://console.{DomainName}/openwhisk/editor){: new_window} para crear acciones, automatizar acciones utilizando desencadenantes, y explorar paquetes públicos. 
 Visite la página [más información](https://console.{DomainName}/openwhisk/learn){: new_window} para realizar una visita rápida de la interfaz de usuario de OpenWhisk.
 
 ## Configuración de la CLI de {{site.data.keyword.openwhisk_short}}
@@ -153,7 +153,7 @@ Puede encontrar información adicional sobre {{site.data.keyword.openwhisk_short
 * [API REST](https://new-console.{DomainName}/apidocs/98)
 
 # Enlaces relacionados
-{: #rellinks}
+{: #rellinks notoc}
 
 ## Referencia de API
 {: #api}

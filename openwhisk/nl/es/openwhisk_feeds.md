@@ -23,22 +23,22 @@ OpenWhisk da soporte a una API abierta, donde cualquier usuario puede exponer un
 
 Este material está pensado para usuarios avanzados de OpenWhisk que deseen publicar sus propios canales de información.  La mayoría de los usuarios de OpenWhisk pueden omitir esta sección.
 
-# Arquitectura de canal de información
+## Arquitectura de canal de información
 
 Existen al menos 3 patrones de arquitectura para crear un canal de información: **Ganchos**, **Sondeo** y **Conexiones**.
 
-## Ganchos
+### Ganchos
 En el patrón *Ganchos*, se configura un canal de información utilizando un recurso [webhook](https://en.wikipedia.org/wiki/Webhook) expuesto por otro servicio.   En esta estrategia, se configura un webhook en un servicio externo para PUBLICAR directamente en un URL y activar un desencadenante.  Esta es, sin duda, la opción más fácil y atractiva para implementar canales de información de baja frecuencia.
 
-## Sondeo
+### Sondeo
 En el patrón "Sondeo", se organiza una *acción* de OpenWhisk para sondear un punto final periódicamente y obtener datos nuevos.
 La creación de este patrón es relativamente fácil, pero la frecuencia de los sucesos estará limitada, como es lógico, por el intervalo de sondeo.
 
-## Conexiones
+### Conexiones
 En el patrón "Conexiones", se configura un servicio independiente en algún lugar para mantener una conexión persistente con una fuente de canal de información.    La implementación basada en conexión puede interactuar con un punto final de servicio mediante un sondeo largo o configurar una notificación push.
 
 
-# Diferencia entre el canal de información y el desencadenante
+## Diferencia entre el canal de información y el desencadenante
 
 Los canales de información y los desencadenantes están muy relacionados, pero técnicamente son conceptos distintos.   
 
@@ -48,7 +48,7 @@ Los canales de información y los desencadenantes están muy relacionados, pero 
 
 - Un **canal de información** es una corriente de sucesos que pertenecen a un desencadenante *T*.    Un canal de información se controla mediante una **acción de canal de información** que gestiona la creación, supresión, pausa y reanudación de la corriente de sucesos que forman el canal de información.    La acción de canal de información suele interactuar con los servicios externos que producen los sucesos, mediante la API REST que gestiona las notificaciones.
 
-#  Implementación de acciones de canal de información
+##  Implementación de acciones de canal de información
 
 La *acción de canal de información* es una *acción* de OpenWhisk normal, pero debe aceptar los siguientes parámetros:
 * **lifecycleEvent**: uno de 'CREATE', 'DELETE', 'PAUSE' o 'UNPAUSE'
@@ -73,7 +73,7 @@ Para el canal de información *cambios* de Cloudant, la acción se pone en conta
 
 Se produce un protocolo de acción de canal de información similar para `wsk trigger delete`.    
 
-# Implementación de canales de información con ganchos
+## Implementación de canales de información con ganchos
 
 Es fácil configurar un canal de información mediante un gancho si el productor del suceso admite un recurso webhook/callback.
 
@@ -88,7 +88,7 @@ El webhook debería dirigirse para enviar notificaciones a un URL como:
 El formulario con la solicitud POST se interpretará como un documento JSON que define los parámetros en el suceso desencadenante.
 Las reglas de OpenWhisk pasan los parámetros del desencadenante a las acciones para activarlas como resultado del suceso.
 
-# Implementación de canales de información con sondeo
+## Implementación de canales de información con sondeo
 
 Es posible configurar una *acción* de OpenWhisk para sondear un origen de canal de información completamente dentro de OpenWhisk, sin necesidad de configurar conexiones persistentes o servicios externos.
 
@@ -102,7 +102,7 @@ Para configurar un canal de información basado en sondeos, la acción de canal 
 
 Este procedimiento implementa un desencadenante basado en sondeo utilizando únicamente acciones de OpenWhisk, sin necesidad de un servicio independiente.
 
-# Implementación de canales de información mediante Conexiones
+## Implementación de canales de información mediante Conexiones
 
 Las 2 opciones de arquitectura anteriores son fáciles y rápidas de implementar. Sin embargo, si desea un canal de información de alto rendimiento, no existe ningún sustituto para conexiones persistentes, sondeo largo o técnicas similares.
 

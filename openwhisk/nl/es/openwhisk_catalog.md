@@ -151,7 +151,7 @@ Puede utilizar la información de entrada `changes` para configurar un servicio 
 para cada cambio de su base de datos Cloudant. Los parámetros son según se indica a continuación:
 
 - `dbname`: nombre de la base de datos Cloudant.
-- `maxTriggers`: dejar de activar desencadenantes cuando se alcanza este límite. El valor predeterminado es 1000. Puede establecerlo en un máximo de 10.000. Si intenta establecerlo en más de 10.000, se rechazará la solicitud.
+- `maxTriggers`: dejar de activar desencadenantes cuando se alcanza este límite. El valor predeterminado es infinite.
 
 1. Crear un desencadenante con la información de entrada `changes` en el enlace de paquete que ha
 creado anteriormente. Asegúrese de sustituir
@@ -273,21 +273,20 @@ wsk action create myAction myAction.js
 {: pre}
 
 Para leer un documento desde la base de datos, puede utilizar la acción `read` del paquete de Cloudant.
-La acción `read` puede estar compuesta de `myAction` para crear una secuencia de acciones. 
+La acción `read` puede estar compuesta de `myAction` para crear una secuencia de acciones.
 ```
 wsk action create sequenceAction --sequence /myNamespace/myCloudant/read,myAction
 ```
 {: pre}
 
-Se puede utilizar la acción `sequenceAction` en una regla que active la acción sobre nuevos sucesos de desencadenante de Cloudant. 
+Se puede utilizar la acción `sequenceAction` en una regla que active la acción sobre nuevos sucesos de desencadenante de Cloudant.
 ```
 wsk rule create myRule myCloudantTrigger sequenceAction
 ```
 {: pre}
 
-**Nota**: el desencadenante de `cambios` de Cloudant utilizado para dar soporte al parámetro `includeDoc` ya no recibe soporte. Tendrá que volver a crear desencadenantes creados anteriormente con `includeDoc`.
-Siga estos pasos para volver a crear el desencadenante:
-
+**Nota**: el desencadenante de `cambios` de Cloudant utilizado para dar soporte al parámetro `includeDoc` ya no recibe soporte.
+  Tendrá que volver a crear desencadenantes creados anteriormente con `includeDoc`. Siga estos pasos para volver a crear el desencadenante:
   ```
   wsk trigger delete myCloudantTrigger
   wsk trigger create myCloudantTrigger --feed /myNamespace/myCloudant/changes --param dbname testdb
@@ -295,7 +294,7 @@ Siga estos pasos para volver a crear el desencadenante:
   {: pre}
 
   Puede utilizar el ejemplo anterior para crear una secuencia de acciones para leer el documento modificado e invocar las acciones existentes.
-  No olvide inhabilitar las reglas que ya no sean válidas y crear nuevas utilizando el patrón de la secuencia de acciones. 
+  No olvide inhabilitar las reglas que ya no sean válidas y crear nuevas utilizando el patrón de la secuencia de acciones.
 
 ## Uso del paquete Alarm
 {: #openwhisk_catalog_alarm}
@@ -328,7 +327,7 @@ Para obtener más detalles sobre cómo utilizar sintaxis cron, consulte: http://
 - `trigger_payload`: el valor de este parámetro pasa a ser el contenido del desencadenante cada vez que se activa
 el desencadenante.
 
-- `maxTriggers`: dejar de activar desencadenantes cuando se alcanza este límite. El valor predeterminado es 1000. Puede establecerlo en un máximo de 10.000. Si intenta establecerlo en más de 10.000, se rechazará la solicitud.
+- `maxTriggers`: dejar de activar desencadenantes cuando se alcanza este límite. El valor predeterminado es 1.000.000. Puede establecerlo en infinite (-1).
 
 A continuación se muestra un ejemplo de la creación de un desencadenante que se activará una vez cada 2 minutos con los valores `name` y `place` en el suceso desencadenante.
 
@@ -340,8 +339,8 @@ A continuación se muestra un ejemplo de la creación de un desencadenante que s
 Cada suceso generado incluirá como parámetros las propiedades especificadas en el valor `trigger_payload`. En este caso,
 cada suceso desencadenante tendrá los parámetros `name=Odin` y `place=Asgard`.
 
-**Nota**: el parámetro `cron` también da soporte a una sintaxis personalizada de seis campos, donde el primer campo representa segundos.
-Para obtener más detalles sobre cómo utilizar esta sintaxis cron personalizada, consulte: https://github.com/ncb000gt/node-cron.
+**Nota**: el parámetro `cron` también da soporte a una sintaxis personalizada de seis campos, donde el primer campo representa segundos. 
+Para obtener más detalles sobre cómo utilizar esta sintaxis cron personalizada, consulte: https://github.com/ncb000gt/node-cron. 
 A continuación se muestra un ejemplo que utiliza la notación de seis campos:
   - `*/30 * * * * *`: cada treinta segundos.
 
@@ -752,7 +751,7 @@ Este paquete le permite crear desencadenantes que reaccionan cuando se publica u
 
 ### Creación de un desencadenante que escuche una instancia de Message Hub
 {: #openwhisk_catalog_message_hub_trigger}
-Para crear un desencadenante que reaccione cuando se publican mensajes en una instancia de Message Hub, debe utilizar el canal de información denominado `messaging/messageHubFeed`. Este canal de información admite los siguientes parámetros: 
+Para crear un desencadenante que reaccione cuando se publican mensajes en una instancia de Message Hub, debe utilizar el canal de información denominado `messaging/messageHubFeed`. Este canal de información admite los siguientes parámetros:
 
 |Nombre|Tipo|Descripción|
 |---|---|---|
@@ -762,9 +761,9 @@ Para crear un desencadenante que reaccione cuando se publican mensajes en una in
 |topic|Serie|El tema que desea que escuche el desencadenante|
 |kafka_admin_url|Serie de URL|El URL de la interfaz REST de administración de Message Hub|
 |api_key|Serie|Su clave de API de Message Hub|
-|isJSONData|Booleano (Opcional - default=false)|Si tiene el valor `true`, el canal de información intentará analizar el contenido del mensaje como JSON antes de pasarlo como carga útil del desencadenante. |
+|isJSONData|Booleano (Opcional - default=false)|Si tiene el valor `true`, el canal de información intentará analizar el contenido del mensaje como JSON antes de pasarlo como carga útil del desencadenante.|
 
-Aunque esta lista de parámetros puede parecer larga, se pueden establecer automáticamente mediante el mandato de CLI package refresh: 
+Aunque esta lista de parámetros puede parecer larga, se pueden establecer automáticamente mediante el mandato de CLI package refresh:
 
 1. Cree una instancia del servicio Message Hub bajo su organización actual y el espacio que utiliza para OpenWhisk.
 
@@ -792,7 +791,7 @@ Aunque esta lista de parámetros puede parecer larga, se pueden establecer autom
   ```
   {: screen}
 
-  Ahora su enlace de paquete contiene credenciales asociadas a la instancia de Message Hub. 
+  Ahora su enlace de paquete contiene credenciales asociadas a la instancia de Message Hub.
 
 3. Todo lo que tiene que hacer es crear un desencadenante que se active cuando se publiquen mensajes nuevos en Message Hub.
 
@@ -803,7 +802,7 @@ Aunque esta lista de parámetros puede parecer larga, se pueden establecer autom
 
 ### Configuración de un paquete de Message Hub fuera de Bluemix
 
-Si no utiliza OpenWhisk en Bluemix o si quiere configurar Message Hub fuera de Bluemix, debe crear manualmente un enlace de paquete para el servicio Message Hub. Necesita la información sobre conexión y credenciales del servicio Message Hub. 
+Si no utiliza OpenWhisk en Bluemix o si quiere configurar Message Hub fuera de Bluemix, debe crear manualmente un enlace de paquete para el servicio Message Hub. Necesita la información sobre conexión y credenciales del servicio Message Hub.
 
 - Cree un enlace de paquete configurado para el servicio de Message Hub.
 
@@ -814,18 +813,18 @@ Si no utiliza OpenWhisk en Bluemix o si quiere configurar Message Hub fuera de B
 
 ### Escucha de mensajes destinados a una instancia de Message Hub
 {: #openwhisk_catalog_message_hub_listen}
-Después de crear un desencadenante, el sistema supervisará el tema específico en el servicio de mensajería. Cuando se publiquen nuevos mensajes, se activará el desencadenante. 
+Después de crear un desencadenante, el sistema supervisará el tema específico en el servicio de mensajería. Cuando se publiquen nuevos mensajes, se activará el desencadenante.
 
-La carga útil del desencadenante contendrá un campo `messages`, que es una matriz de mensajes publicados desde la última vez que se activó el desencadenante. Cada objeto de mensaje de la matriz contendrá los siguientes campos: 
+La carga útil del desencadenante contendrá un campo `messages`, que es una matriz de mensajes publicados desde la última vez que se activó el desencadenante. Cada objeto de mensaje de la matriz contendrá los siguientes campos:
 - topic
 - partition
 - offset
 - key
 - value
 
-En términos de Kafka, estos campos deberían resultar evidentes. Sin embargo, el campo `value` requiere una especial consideración. Si el parámetro `isJSONData` se ha establecido `false` (o no se ha establecido) al crear el desencadenante, el campo `value` será el valor sin formato del mensaje publicado. Sin embargo, si `isJSONData` se ha establecido en `true` al crear el desencadenante, el sistema intentará analizar este valor como objeto JSON en la medida de lo posible. Si el análisis se realiza correctamente, `value` en la carga útil del desencadenante será el objeto JSON resultante. 
+En términos de Kafka, estos campos deberían resultar evidentes. Sin embargo, el campo `value` requiere una especial consideración. Si el parámetro `isJSONData` se ha establecido `false` (o no se ha establecido) al crear el desencadenante, el campo `value` será el valor sin formato del mensaje publicado. Sin embargo, si `isJSONData` se ha establecido en `true` al crear el desencadenante, el sistema intentará analizar este valor como objeto JSON en la medida de lo posible. Si el análisis se realiza correctamente, `value` en la carga útil del desencadenante será el objeto JSON resultante.
 
-Por ejemplo, si se publica el mensaje `{"title": "Some string", "amount": 5, "isAwesome": true}` con `isJSONData` establecido en `true`, la carga útil del desencadenante se parecerá a la siguiente: 
+Por ejemplo, si se publica el mensaje `{"title": "Some string", "amount": 5, "isAwesome": true}` con `isJSONData` establecido en `true`, la carga útil del desencadenante se parecerá a la siguiente:
 
 ```
 {
@@ -845,7 +844,7 @@ Por ejemplo, si se publica el mensaje `{"title": "Some string", "amount": 5, "is
 }
 ```
 
-Sin embargo, si se publica el mismo contenido de mensaje con `isJSONData` establecido en `false`, la carga útil del desencadenante se parecerá a esta: 
+Sin embargo, si se publica el mismo contenido de mensaje con `isJSONData` establecido en `false`, la carga útil del desencadenante se parecerá a esta:
 
 ```
 {
@@ -862,9 +861,9 @@ Sin embargo, si se publica el mismo contenido de mensaje con `isJSONData` establ
 ```
 
 ### Los mensajes se colocan por lotes
-Habrá notado que la carga útil del desencadenante contiene una matriz de mensajes. Esto significa que si genera mensajes destinados al sistema de mensajería con rapidez, el canal de información intentará colocar por lotes los mensajes publicados en una sola activación del desencadenante. Esto permite publicar los mensajes en el desencadenante de forma más rápida y eficiente. 
+Habrá notado que la carga útil del desencadenante contiene una matriz de mensajes. Esto significa que si genera mensajes destinados al sistema de mensajería con rapidez, el canal de información intentará colocar por lotes los mensajes publicados en una sola activación del desencadenante. Esto permite publicar los mensajes en el desencadenante de forma más rápida y eficiente.
 
-Tenga en cuenta que, si el desencadenante activa acciones de codificación, el número de mensajes de la carga útil no está técnicamente enlazado, aunque siempre será mayor que 0. 
+Tenga en cuenta que, si el desencadenante activa acciones de codificación, el número de mensajes de la carga útil no está técnicamente enlazado, aunque siempre será mayor que 0.
 
 
 ## Uso del paquete Slack

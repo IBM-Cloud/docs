@@ -202,3 +202,4 @@ También puede utilizar reglas con secuencias. Por ejemplo, se puede crear una s
   wsk rule create anotherRule locationUpdate recordLocationAndHello
   ```
   {: pre}
+ 

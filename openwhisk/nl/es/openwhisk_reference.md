@@ -260,7 +260,7 @@ Para `whisk.error()`, puede devolver un objeto Promise rechazado (es decir, Prom
 ### Entornos de ejecución JavaScript
 {: #openwhisk_ref_javascript_environments}
 
-Las acciones de JavaScript se ejecutan de forma predeterminada en un entorno de Node.js versión 6.9.1. El entorno 6.9.1 se utilizará también para una acción si se especifica de forma explícita el distintivo `--kind` con un valor de 'nodejs:6' al crear/actualizar la acción.
+Las acciones de JavaScript se ejecutan de forma predeterminada en un entorno de Node.js versión 6.9.1.  El entorno 6.9.1 se utilizará también para una acción si se especifica de forma explícita el distintivo `--kind` con un valor de 'nodejs:6' al crear/actualizar la acción.
 Los paquetes siguientes están disponibles para su uso en el entorno de Node.js 6.9.1:
 
 - apn v2.1.2
@@ -477,7 +477,7 @@ La API de OpenWhisk admite llamadas solicitud-respuesta de clientes web. OpenWhi
 
 ### Acciones
 {{site.data.keyword.openwhisk_short}} tiene algunos límites del sistema, incluyendo la cantidad de memoria que puede utilizar una acción y
-cuántas invocaciones de acción se permiten por minuto.  
+cuántas invocaciones de acción se permiten por minuto. 
 
 En la tabla siguiente se proporciona una lista con los límites predeterminados de las acciones.
 

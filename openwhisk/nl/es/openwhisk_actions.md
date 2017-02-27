@@ -433,7 +433,6 @@ En primer lugar, `package.json`:
 ```
 {
   "name": "my-action",
-  "version": "1.0.0",
   "main": "index.js",
   "dependencies" : {
     "left-pad" : "1.1.3"
@@ -456,6 +455,7 @@ exports.main = myAction;
 {: codeblock}
 
 Tenga en cuenta que la acción se expone a través de `exports.main`; el manejador de acciones en sí puede tener cualquier nombre, siempre que cumpla con la firma habitual de aceptar un objeto y devolverlo (o una `Promesa` de un objeto).
+Por convención Node.js, puede poner un nombre a este archivo `index.js` o especificar el nombre de archivo que prefiera como la propiedad `main` en package.json.
 
 Para crear una acción OpenWhisk desde este paquete:
 
@@ -814,10 +814,6 @@ la autenticación y, a continuación, ejecute el script con el nombre de imagen 
   ```
   {: pre}
   ```
-  chmod +x buildAndPush.sh
-  ```
-  {: pre}
-  ```
   ./buildAndPush.sh janesmith/blackboxdemo
   ```
   {: pre}
@@ -934,7 +930,7 @@ Puede realizar una limpieza mediante la supresión de acciones que no quiera usa
 
 El entorno de acción contiene varias propiedades que son específicas de la acción que se está ejecutando.
 Esto permite que la acción funcione según programa con activos de OpenWhisk mediante la API REST o permite establecer una alarma interna cuando la acción está a punto de alcanzar su presupuesto de tiempo permitido.
-Se accede a las propiedades mediante el entorno del sistema para todos los tiempos de ejecución admitidos: Node.js, Python, Swift, Java y acciones Docker cuando se utiliza el esqueleto OpenWhisk Docker. 
+Se accede a las propiedades mediante el entorno del sistema para todos los tiempos de ejecución admitidos: Node.js, Python, Swift, Java y acciones Docker cuando se utiliza el esqueleto OpenWhisk Docker.
 
 * `__OW_API_HOST` el host de API correspondiente al despliegue OpenWhisk que ejecuta esta acción
 * `__OW_API_KEY` la clave de API del asunto que invoca la acción; esta clave puede ser una clave de API restringida
