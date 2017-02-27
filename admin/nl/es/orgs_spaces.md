@@ -118,7 +118,7 @@ Siga los pasos siguientes para cambiar el nombre de la organización:
 ## Supresión de una organización o un espacio existente
 {: #deleteorgs}
 
-Como propietario de la cuenta, puede ponerse en contacto con el [equipo de soporte de {{site.data.keyword.Bluemix_notm}} ![icono de enlace externo](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window} para suprimir una organización.  
+Como propietario de la cuenta, puede ponerse en contacto con el [equipo de soporte de {{site.data.keyword.Bluemix_notm}} ![icono de enlace externo](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window} para suprimir una organización. 
 
 **Nota**: La supresión de operaciones no se puede invertir. Perderá todas las apps y servicios asociados a la app.
 

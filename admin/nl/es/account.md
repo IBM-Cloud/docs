@@ -33,8 +33,7 @@ Es posible utilizar un ID federado para registrarse en {{site.data.keyword.Bluem
 |-----------------|---------|
 |ID de IBM existente | Si ya tiene un ID de IBM, regístrese en {{site.data.keyword.Bluemix_notm}} con sus credenciales existentes que utilice para otros productos y servicios de IBM. Se le solicitará que especifique un número de teléfono al registrarse. |
 |ID de IBM nuevo | Si no aún no tiene un ID de IBM, puede optar por crear uno. El ID de IBM le permite utilizar un nombre de usuario de inicio de sesión para todos los productos y servicios de IBM que utilice, incluyendo {{site.data.keyword.Bluemix_notm}}. Deberá especificar su información personal, incluyendo su nombre y apellido, número de teléfono y contraseña para las nuevas credenciales. Puede utilizar este ID de IBM para iniciar sesión al utilizar otros productos y servicios de IBM.  |
-|ID federado | Si la empresa ha solicitado registrar las credenciales de usuario desde el dominio de su empresa con IBM, puede registrarse en
-{{site.data.keyword.Bluemix_notm}} utilizando las credenciales que ya utilice para el inicio de sesión de su empresa. Se le solicitará que especifique un número de teléfono al registrarse. |
+|ID federado | Si la empresa ha solicitado registrar las credenciales de usuario desde el dominio de su empresa con IBM, puede registrarse en {{site.data.keyword.Bluemix_notm}} utilizando las credenciales que ya utilice para el inicio de sesión de su empresa. Se le solicitará que especifique un número de teléfono al registrarse. |
 {:caption="Table 1. Sign up methods" caption-side="top"}
 
 ## Configuración de notificaciones
@@ -93,7 +92,7 @@ Como propietario de cuenta o gestor de facturación para una organización, pued
 
 Para abrir la página Panel de control de uso, pulse **Cuenta** &gt; *nombre_cuenta* &gt; **Panel de control de uso**. Los gestores de facturación pueden ver los detalles sólo para las organizaciones en las que hay gestores de facturación.
 
-La cuenta se factura al propietario por el uso total en el que han incurrido todas las organizaciones al final de cada ciclo de facturación. Como propietario de cuenta puede filtrar el resumen de uso por región y organización. También puede pulsar un mes concreto para ver el uso para ese mes. Seleccione **Todas las organizaciones** en la lista **organización** para ver el uso para todas las organizaciones de la cuenta. 
+La cuenta se factura al propietario por el uso total en el que han incurrido todas las organizaciones al final de cada ciclo de facturación. Como propietario de cuenta puede filtrar el resumen de uso por región y organización. También puede pulsar un mes concreto para ver el uso para ese mes. Seleccione **Todas las organizaciones** en la lista **organización** para ver el uso para todas las organizaciones de la cuenta.
 
 ## Actualización de la información de facturación
 {: #account_billing}

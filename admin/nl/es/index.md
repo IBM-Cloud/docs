@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-01-24"
 
 ---
 
@@ -25,14 +25,11 @@ Si tiene acceso de administrador para {{site.data.keyword.Bluemix}} Local o {{si
 | ¿Qué puedo hacer? | Detalles |    
 |----------------|---------|
 |Supervisar el uso del sistema | Pulse **ADMINISTRACIÓN &gt; USO**. Visualice la información del sistema, supervise el uso de la CPU y planifique el uso para tomar las mejores decisiones para su empresa. Consulte [Visualización de información de uso](/docs/admin/index.html#oc_resource).|
-|Gestionar el catálogo | Pulse **ADMINISTRACIÓN &gt; GESTIÓN DE CATÁLOGO** para gestionar qué servicios están visibles a sus
-usuarios y organizaciones. Consulte [Gestión de su catálogo](/docs/admin/index.html#oc_catalog).|
+|Gestionar el catálogo | Pulse **ADMINISTRACIÓN &gt; GESTIÓN DE CATÁLOGO** para gestionar qué servicios están visibles a sus usuarios y organizaciones. Consulte [Gestión de su catálogo](/docs/admin/index.html#oc_catalog).|
 |Administrar organizaciones | Pulse **ADMINISTRACIÓN &gt; ADMINISTRACIÓN DE ORGANIZACIÓN ** para crear organizaciones, supervisar cuotas para organizaciones y realizar rápidamente las decisiones basadas en necesidades. Consulte [Administración de organizaciones](/docs/admin/index.html#oc_organizations).|
 |Crear espacios y asignar roles de usuario | Pulse **Cuenta** &gt; **Gestionar organizaciones** para crear espacios dentro de sus organizaciones. Añada usuarios y asigne roles de organización y de espacio a los usuarios. Consultar [Gestión de sus organizaciones](/docs/admin/orgs_spaces.html). |
-|Gestionar permisos de usuarios administrativos | Pulse **ADMINISTRACIÓN &gt; ADMINISTRACIÓN DE USUARIOS** para añadir usuarios,
-eliminar usuarios y ajustar permisos de usuario. Consultar [Gestión de usuarios y permisos](/docs/admin/index.html#oc_useradmin). |
-|Revisar informes y registros | Pulse **ADMINISTRACIÓN &gt; INFORMES Y REGISTROS** para ver informes de seguridad y
-registros de auditoría para su instancia. Ver [Visualización de informes](/docs/admin/index.html#oc_report). |
+|Gestionar permisos de usuarios administrativos | Pulse **ADMINISTRACIÓN &gt; ADMINISTRACIÓN DE USUARIOS** para añadir usuarios, eliminar usuarios y ajustar permisos de usuario. Consultar [Gestión de usuarios y permisos](/docs/admin/index.html#oc_useradmin). |
+|Revisar informes y registros | Pulse **ADMINISTRACIÓN &gt; INFORMES Y REGISTROS** para ver informes de seguridad y registros de auditoría para su instancia. Ver [Visualización de informes](/docs/admin/index.html#oc_report). |
 |Ver información del sistema | Pulse **ADMINISTRACIÓN &gt; INFORMACIÓN DEL SISTEMA** para ver información del sistema como actualizaciones de mantenimiento pendientes, el nombre y la versión de la instancia, la región, el URL de API, el URL de CLI, los detalles de configuración de LDAP, las correlaciones de usuario y de grupo, las estadísticas y los dominios compartidos. Consulte [Visualización de información del sistema](/docs/admin/index.html#oc_system). |
 |Ampliar notificaciones y configurar suscripciones de notificaciones | Pulse **ADMINISTRACIÓN &gt; INFORMACIÓN DEL SISTEMA &gt; *Number* pendientes**. Puede usar webhooks para integrar con el servicio web que quiera para configurar la suscripción a notificación de sucesos para una actualización o incidencia. Consulte [Suscripción de notificaciones](/docs/admin/index.html#oc_eventsubscription). |
 {: caption="Table 1. Administrative tasks for managing your {{site.data.keyword.Bluemix_notm}} local or dedicated instance" caption-side="top"}
@@ -60,11 +57,10 @@ tabla siguiente para obtener información sobre los distintos tipos de notificac
 
 | **Tipo de suceso** | **Método de notificación** |       
 |-----------------|-------------------|
-| Actualizaciones de mantenimiento | Para ver un listado completo y el historial de notificaciones pendientes y
-completas, pulse **ADMINISTRACIÓN &gt; INFORMACIÓN DEL SISTEMA** &gt; *Número* **pendientes**.Los sucesos planificados de actualización disruptiva de mantenimiento también se informan mediante alertas en la página Estado. Pulse **Soporte** &gt; **Estado**. Puede ampliar la capacidad de notificación configurando una suscripción que envíe un mensaje de correo electrónico a los destinatarios que usted elija. También puede configurar una suscripción que utilice a webhooks para integrar las notificaciones de la página de administración con el servicio de su elección.|
+| Actualizaciones de mantenimiento | Para ver un listado completo y el historial de notificaciones pendientes y completas, pulse **ADMINISTRACIÓN &gt; INFORMACIÓN DEL SISTEMA** &gt; *Número* **pendientes**. Los sucesos planificados de actualización disruptiva de mantenimiento también se informan mediante alertas en la página Estado. Pulse **Soporte** &gt; **Estado**. Puede ampliar la capacidad de notificación configurando una suscripción que envíe un mensaje de correo electrónico a los destinatarios que usted elija. También puede configurar una suscripción que utilice a webhooks para integrar las notificaciones de la página de administración con el servicio de su elección.|
 | Incidencias críticas | Se alerta sobre incidencias críticas en la página Estado. Pulse **Soporte** &gt; **Estado**. Puede ampliar la capacidad de notificación configurando una suscripción a una notificación que envíe un mensaje de correo electrónico a los destinatarios que usted elija. También puede configurar una suscripción que utilice a webhooks para integrar las notificaciones de la página de administración con el servicio de su elección.  |  
 | Eventos de umbral | Puede configurar una suscripción de notificación que envía un mensaje de correo electrónico a un destinatario de su elección cuando se alcancen en el entorno los umbrales de recurso para el disco físico, la memoria física, el disco reservado o la memoria reservada. O bien, puede configurar una suscripción que utilice a webhooks para integrar las notificaciones con el servicio de su elección.  |  
-| Estado de {{site.data.keyword.Bluemix_notm}} | Siempre puede ver el estado más reciente de la plataforma, servicios y de su instancia {{site.data.keyword.Bluemix_notm}} en la página Estado. Pulse **Soporte** &gt; **Estado**.   |
+| Estado de {{site.data.keyword.Bluemix_notm}} | Siempre puede ver el estado más reciente de la plataforma, servicios y de su instancia {{site.data.keyword.Bluemix_notm}} en la página Estado. Pulse **Soporte** &gt; **Estado**.  |
 {: caption="Table 2. Event types and notifications methods" caption-side="top"}
 
 ### Configuración de suscripciones de notificaciones
@@ -139,8 +135,7 @@ Si no desea esperar 6 horas para que se envíe la notificación cuando se alcanz
 | Tipo | Seleccione **Webhook** |
 | Suceso | Seleccionar la suscripción a notificaciones para un suceso de **Mantenimiento** o **Incidencia**. |
 | Autorización | Seleccione si desea habilitar la autorización.  Las opciones son: **Básica** o **Ninguna**. |
-| Nombre de usuario | Si elige la autorización **Básica**, especifique el nombre de usuario para el servicio web. Si no quiere usar sus credenciales personales, puede configurar
-un ID funcional a usar específicamente con {{site.data.keyword.Bluemix_notm}}. |
+| Nombre de usuario | Si elige la autorización **Básica**, especifique el nombre de usuario para el servicio web. Si no quiere usar sus credenciales personales, puede configurar un ID funcional a usar específicamente con {{site.data.keyword.Bluemix_notm}}. |
 | Contraseña | Si elige la autorización **Básica**, especifique la contraseña para el servicio web. |
 | Descripción | Añada una descripción única para la suscripción que está creando. |
 | Nuevo suceso | Seleccione esta opción para habilitar la notificación para nuevos sucesos de mantenimiento o de incidencia. Anule la selección para inhabilitar la notificación. |
@@ -170,8 +165,7 @@ un ID funcional a usar específicamente con {{site.data.keyword.Bluemix_notm}}. 
 | Notificar al aumentar por encima de (%) | Si ha seleccionado la **Dirección de umbral** **Ascendente**, especifique el porcentaje de umbral en el que desea que se le notifique. Cuando el umbral está por encima de este porcentaje, se enviará la notificación de webhook. |
 | Descripción | Añada una descripción única para la suscripción que está creando. |
 | Autorización | Seleccione si desea habilitar la autorización.  Las opciones son: **Básica** o **Ninguna**. |
-| Nombre de usuario | Si elige la autorización básica, especifique el nombre de usuario para el servicio web. Si no quiere usar sus credenciales personales, puede configurar
-un ID funcional a usar específicamente con {{site.data.keyword.Bluemix_notm}}. |
+| Nombre de usuario | Si elige la autorización básica, especifique el nombre de usuario para el servicio web. Si no quiere usar sus credenciales personales, puede configurar un ID funcional a usar específicamente con {{site.data.keyword.Bluemix_notm}}. |
 | Contraseña | Si elige la autorización básica, especifique la contraseña para el servicio web. |
 | Método | Seleccione **GET**, **POST** o **PUT**. |
 | URL | Especificar el URL al que conectar su servicio web. |
@@ -381,7 +375,7 @@ Para ver información más detallada sobre el uso de memoria física y reservada
 {: #accountusage}
 
 Puede ver el uso mensual de su cuenta para su entorno local o dedicado. Puede utilizar estos datos para identificar cuánto cargar
-a organizaciones específicas según su uso. Todos los usuarios de la consola administrativa que tienen asignado el permiso **Usuarios** con acceso de **lectura** pueden ver los datos de uso de la cuenta. Además, los gestores de facturación de las organizaciones pueden ver los datos del uso de cuenta de las organizaciones, incluso si el gestor de facturación no tiene asignado el permiso **Usuarios** de la consola administrativa. Como administrador de la consola administrativa (permiso de superusuario), puede asignar el rol de gestor de facturación para organizaciones pulsando **Cuenta** &gt; **Gestionar organizaciones**. 
+a organizaciones específicas según su uso. Todos los usuarios de la consola administrativa que tienen asignado el permiso **Usuarios** con acceso de **lectura** pueden ver los datos de uso de la cuenta. Además, los gestores de facturación de las organizaciones pueden ver los datos del uso de cuenta de las organizaciones, incluso si el gestor de facturación no tiene asignado el permiso **Usuarios** de la consola administrativa. Como administrador de la consola administrativa (permiso de superusuario), puede asignar el rol de gestor de facturación para organizaciones pulsando **Cuenta** &gt; **Gestionar organizaciones**.
 
 Para ver los datos de uso de la cuenta, siga estos pasos:
 
@@ -490,7 +484,7 @@ Puede ver el estado para el entorno {{site.data.keyword.Bluemix_notm}} y para la
 
 ### Estado de entorno de {{site.data.keyword.Bluemix_notm}}
 
-Puede supervisar el estado para su instancia de {{site.data.keyword.Bluemix_notm}} utilizando la página Estado de {{site.data.keyword.Bluemix_notm}}. Pulse **Soporte** &gt; **Estado**. 
+Puede supervisar el estado para su instancia de {{site.data.keyword.Bluemix_notm}} utilizando la página Estado de {{site.data.keyword.Bluemix_notm}}. Pulse **Soporte** &gt; **Estado**.
 
 La página Estado es el recurso central para buscar notificaciones y anuncios sobre sucesos clave que afectan a la plataforma {{site.data.keyword.Bluemix_notm}} y a los servicios principales de {{site.data.keyword.Bluemix_notm}}. Puede suscribirse a un hilo RSS para recibir notificaciones de forma que no tenga que comprobar si se han publicado. Para obtener más información sobre la página Estado y la configuración del hilo RSS, consulte [Visualización de {{site.data.keyword.Bluemix_notm}}](../support/index.html#viewing-bluemix-status).
 
@@ -790,7 +784,7 @@ Para crear una organización y añadir gestores, realice los pasos siguientes:
 
 Puede crear espacios en la organización; por ejemplo, un espacio *dev* como entorno de desarrollo, un espacio *test* como entorno de prueba y un espacio *production* como entorno de producción. Luego puede asociar sus apps a los espacios. Complete los siguientes pasos para crear un espacio:
 
-1. En la barra de menús, pulse **Cuenta** &gt; **Gestionar organizaciones**. 
+1. En la barra de menús, pulse **Cuenta** &gt; **Gestionar organizaciones**.
 2. Seleccione la organización a la que desea añadir un espacio.
 3. Pulse **Crear un espacio**.
 4. Especifique un nombre de espacio.
@@ -834,12 +828,13 @@ En el gráfico se muestran los siguientes tipos de uso de memoria.
 ### Gestión de cuotas
 {: #manageorgquota}
 
-Una cuota representa los límites de recursos para las organizaciones del entorno se asignan cuando se crea la organización. Cualquier aplicación o servicio de un espacio de la organización contribuye al uso de la cuota asignada. Siga estos pasos para gestionar la cuota de una organización: 
+Una cuota representa los límites de recursos para las organizaciones del entorno se asignan cuando se crea la organización. Cualquier aplicación o servicio de un espacio de la organización contribuye al uso de la cuota asignada. Siga estos pasos para gestionar la cuota de una organización:
 
 <ol>
 <li>Pulse la barra del gráfico de la organización que desea editar en la sección Uso de memoria de la organización, o bien seleccione el nombre de la organización en la sección Lista de organizaciones. En la página Información de la organización, puede cambiar el nombre de la organización y añadir o eliminar gestores.
 <p><strong>Nota</strong>: Si selecciona un plan de cuotas insuficiente para el uso actual de la organización, recibirá un mensaje.</p></li>
-<li>Pulse <strong>Cloud Foundry</strong> o <strong>Contenedores</strong>. De forma predeterminada, se abrirá la página de cuota de Cloud Foundry. <ul>
+<li>Pulse <strong>Cloud Foundry</strong> o <strong>Contenedores</strong>.  De forma predeterminada, se abrirá la página de cuota de Cloud Foundry. 
+<ul>
 <li>En la página Cloud Foundry, puede seleccionar un plan y ver los detalles de la cuota de los siguientes recursos:
 <ul>
 <li>Servicios</li>
@@ -851,15 +846,15 @@ Una cuota representa los límites de recursos para las organizaciones del entorn
 <li>En la página <strong>Contenedores</strong> puede asignar valores, que deben ser enteros, para los campos siguientes:
 <dl class="parml">
 <dt class="pt dlterm">Límite de imágenes</dt>
-<dd class="pd">El número máximo de imágenes de contenedor que puede tener en su registro privado. Una imagen de contenedor es la base para cada contenedor que cree. Una imagen se crea desde un Dockerfile, que es un archivo de solo lectura que alberga el sistema operativo y la app y todas sus dependencias y describe cómo está configurado un contenedor. Las imágenes se comparten entre todos los miembros de una organización. </dd>
+<dd class="pd">El número máximo de imágenes de contenedor que puede tener en su registro privado. Una imagen de contenedor es la base para cada contenedor que cree. Una imagen se crea desde un Dockerfile, que es un archivo de solo lectura que alberga el sistema operativo y la app y todas sus dependencias y describe cómo está configurado un contenedor. Las imágenes se comparten entre todos los miembros de una organización.</dd>
 <dt class="pt dlterm">Asignación de memoria predeterminada</dt>
 <dd>La cantidad de memoria de contenedor que se asigna automáticamente cuando se crea un nuevo espacio. Cuando cree un contenedor, deberá elegir un tamaño de contenedor. El tamaño determina la cantidad de memoria que puede utilizar el contenedor en el host y cuenta en el cálculo del límite de memoria del contenedor. </dd>
 <dt class="pt dlterm">Asignación de memoria máxima</dt>
-<dd>La cantidad máxima de memoria de contenedor que se puede asignar entre todos los espacios de una organización. </dd>
+<dd>La cantidad máxima de memoria de contenedor que se puede asignar entre todos los espacios de una organización.</dd>
 <dt class="pt dlterm">IP flotantes predeterminadas</dt>
-<dd>El número de direcciones IP públicas que se asignan automáticamente cuando se crea un nuevo espacio. Puede enlazar direcciones IP públicas a contenedores individuales y a grupos de contenedores para que resulten accesibles desde Internet. </dd>
+<dd>El número de direcciones IP públicas que se asignan automáticamente cuando se crea un nuevo espacio. Puede enlazar direcciones IP públicas a contenedores individuales y a grupos de contenedores para que resulten accesibles desde Internet.</dd>
 <dt class="pt dlterm">IP flotantes máximas</dt>
-<dd>El número máximo de direcciones IP públicas que puede asignar entre todos los espacios de una organización. </dd>
+<dd>El número máximo de direcciones IP públicas que puede asignar entre todos los espacios de una organización.</dd>
 </dl>
 <strong>Nota</strong>: si aún no tiene contenedores en su entorno o si aún no tiene los contenedores del entorno configurados, recibirá un mensaje de error.
 <p>Para obtener más información sobre contenedores, consulte [Acerca de los contenedores de IBM](https://console.ng.bluemix.net/docs/containers/container_ov.html). Para obtener más información sobre cuotas de contenedor, consulte [Cuota y cuentas de Bluemix]( https://console.ng.bluemix.net/docs/containers/container_planning_org_ov.html#container_planning_quota).</p>
@@ -889,7 +884,7 @@ seleccionar la **Vista de lista** para ver los datos de todas las aplicaciones, 
 el uso de GB-hora medido para los últimos tres meses.
 
 - Para editar el nombre de la organización y añadir o eliminar gestores, pulse el nombre de la organización en la lista y siga las indicaciones en pantalla.
-- Para ver información sobre un determinado usuarios de la organización que está visualizando, pulse el nombre del usuario para ver Información de usuario. Luego puede pulsar el nombre de la organización para volver a ver la Información de organización.  
+- Para ver información sobre un determinado usuarios de la organización que está visualizando, pulse el nombre del usuario para ver Información de usuario. Luego puede pulsar el nombre de la organización para volver a ver la Información de organización. 
 
 ## Gestión de usuarios y permisos
 {: #oc_useradmin}
@@ -975,7 +970,7 @@ acceso **Escritura** (editar o añadir y eliminar) para dicho permiso.
     1. Para añadir un usuario a una organización, seleccione el nombre de usuario en la tabla para acceder a la página **Editar usuario**. A continuación, utilice el campo de búsqueda para localizar una organización, seleccione la organización en la lista y pulse **Guardar**.
     2. Para eliminar un usuario de una organización, seleccione el nombre de usuario de la tabla para acceder a la página **Editar usuario**. A continuación, pulse ![Eliminar](images/icon_remove.svg) para la organización de la que desea eliminar el usuario y pulse **Guardar**.
     
-* Para ver información sobre la organización a la que está asignado el usuario, pulse el nombre de la organización para ver Información de la organización. Luego puede pulsar el nombre del usuario para volver a ver la Información de usuario.  
+* Para ver información sobre la organización a la que está asignado el usuario, pulse el nombre de la organización para ver Información de la organización. Luego puede pulsar el nombre del usuario para volver a ver la Información de usuario. 
 
 ### Permisos
 {: #permissions}
@@ -990,8 +985,7 @@ Es posible asignar a los usuarios los permisos siguientes con niveles de acceso 
 | Superuser | Los usuarios con el permiso **Superuser** establecido en **Activado** pueden editar los permisos de otros usuarios. Si tiene el permiso activado, tendrá habilitado de forma automática el acceso completo a todos los demás permisos. Además de las tareas descritas para cada permiso en esta tabla, también puede configurar suscripciones de notificaciones para que se le avise directamente sobre incidencias o mantenimiento, mantenimiento planificado, ejecutar comprobaciones de verificación sobre componentes de consola y crear organizaciones y espacios para el entorno. Este permiso equivale al rol de administrador (admin) de la consola de administración.  |
 | Basic Access | Los usuarios con el permiso **Basic Access** establecido en **Activado** pueden ver la opción de la página Administración en la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}. Los usuarios que tienen el permiso habilitado pueden acceder a los mosaicos [Información del sistema](#oc_system) y [Uso de recursos](#oc_resource). Sin este permiso, los usuarios no pueden ver ni acceder a la opción de menú Administración. Este permiso equivale al rol de administrador (admin) de la consola de administración. Este permiso equivale al permiso de inicio de sesión utilizado previamente para la consola de administración. |
 | Catalog | A los usuarios con el permiso **Catalog** se les puede asignar el acceso de **Lectura** o **Escritura** (modificar) los servicios que están disponibles en la instancia local o dedicada. El acceso de lectura permite que el usuario pueda acceder al mosaico Gestión de catálogos para ver los servicios disponibles. El acceso de escritura permite que el usuario pueda acceder al mosaico [Gestión de catálogos](#oc_catalog) para ver servicios, editar la visibilidad de los servicios, registrar servicios personalizados y controlar la lista de prioridades del paquete de compilación. |  
-| Reports | A los usuarios con el permiso **Reports** se les puede asignar acceso **Lectura** o **Escritura** (modificar) sobre los informes de seguridad. El acceso de lectura permite que el usuario pueda acceder al mosaico Informes y registros para descargar informes. El acceso de escritura permite que el usuario pueda ver el mosaico
-[Informes y registros](#oc_report), así como utilizar la CLI para cargar nuevos informes y crear nuevas categorías para que los usuarios accedan a ellas. |
+| Reports | A los usuarios con el permiso **Reports** se les puede asignar acceso **Lectura** o **Escritura** (modificar) sobre los informes de seguridad. El acceso de lectura permite que el usuario pueda acceder al mosaico Informes y registros para descargar informes. El acceso de escritura permite que el usuario pueda ver el mosaico [Informes y registros](#oc_report), así como utilizar la CLI para cargar nuevos informes y crear nuevas categorías para que los usuarios accedan a ellas. |
 | Users | A los usuarios con el permiso **Users** se les puede asignar el acceso de **Lectura** (ver) sobre la lista de usuarios o de **Escritura** (añadir o eliminar) sobre los usuarios. Este permiso no le permite definir permisos para otros usuarios. El acceso de escritura permite que el usuario pueda añadir nuevos usuarios al entorno, suprimir usuarios del entorno y añadir usuarios existentes a las organizaciones que ya existen en el entorno. Además, el acceso de **Escritura** permite que el usuario pueda añadir nuevas organizaciones, suprimir organizaciones y editar los usuarios dentro de las organizaciones. |
 {: caption="Table 14. Permissions" caption-side="top"}
 
@@ -1002,18 +996,15 @@ Puede utilizar la API REST `Admin` para añadir y eliminar usuarios de la instan
 {{site.data.keyword.Bluemix_notm}}.
 Se proporcionan puntos finales de la API REST `Admin` y respuestas JSON a modo experimental para habilitar operaciones básicas desde una línea de mandatos. Los puntos finales y URL de los ejemplos de esta información pueden cambiar o pueden ser retirados previo aviso.
 
-Aunque puede optar por utilizar otras herramientas, las herramientas siguientes constituyen requisitos previos para utilizar los ejemplos siguientes; utilice también otras herramientas. 
-* cURL, para especificar solicitudes de la API REST como mandatos. cURL es un programa de utilidad gratuito que puede utilizar para enviar solicitudes HTTP a un servidor y recibir las respuestas del servidor a través de una interfaz de línea de mandatos. Puede
-descargar cURL desde el [sitio de descargas de cURL ![icono de enlace externo](../icons/launch-glyph.svg)](http://curl.haxx.se/download.html){: new_window}.
-* Python, para utilizar la herramienta JSON pretty-print de Python. Esta herramienta opcional toma texto JSON como entrada y genera información de salida de fácil lectura. Puede
-descargar Python desde el [sitio de descargas de Python ![icono de enlace externo](../icons/launch-glyph.svg)](https://www.python.org/downloads){: new_window}.
+Aunque puede optar por utilizar otras herramientas, las herramientas siguientes constituyen requisitos previos para utilizar los ejemplos siguientes; utilice también otras herramientas.
+* cURL, para especificar solicitudes de la API REST como mandatos. cURL es un programa de utilidad gratuito que puede utilizar para enviar solicitudes HTTP a un servidor y recibir las respuestas del servidor a través de una interfaz de línea de mandatos. Puede descargar cURL desde el [sitio de descargas de cURL ![icono de enlace externo](../icons/launch-glyph.svg)](http://curl.haxx.se/download.html){: new_window}.
+* Python, para utilizar la herramienta JSON pretty-print de Python. Esta herramienta opcional toma texto JSON como entrada y genera información de salida de fácil lectura. Puede descargar Python desde el [sitio de descargas de Python ![icono de enlace externo](../icons/launch-glyph.svg)](https://www.python.org/downloads){: new_window}.
 
 ### Inicio de sesión en la consola de administración
 
 Para poder ejecutar cualquier solicitud de la API `Admin`, debe iniciar una sesión en la consola de administración. Si tiene el permiso **Superuser** o el permiso **Users** con el acceso **Escritura**, puede añadir o eliminar usuarios. Debe tener el permiso **Superuser** para poder editar los permisos de otros usuarios.
 
-Para iniciar la sesión en la Consola de administración, puede utilizar la autenticación de acceso básica en el punto final
-`https://<su_host>.ibm.com/login`. El servidor devuelve una cookie con la sesión. Utilice dicha cookie para todas las operaciones con la consola de administración.
+Para iniciar la sesión en la Consola de administración, puede utilizar la autenticación de acceso básica en el punto final `https://<su_host>.ibm.com/login`. El servidor devuelve una cookie con la sesión. Utilice dicha cookie para todas las operaciones con la consola de administración.
 
 **Nota:** La sesión deja de ser válida si no se utiliza durante unas cuantas horas.
 
@@ -1308,11 +1299,10 @@ El siguiente ejemplo muestra la salida de este mandato:
 
 Puede utilizar dos API experimentales para obtener métricas sobre el entorno o las aplicaciones. Estas API devuelven una matriz de puntos de datos correspondientes a las métricas que ha solicitado durante el periodo de tiempo especificado.
 
-Se puede acceder a las API para métricas que se describen en las secciones desde el punto final específico de la región, por ejemplo:  
+Se puede acceder a las API para métricas que se describen en las secciones desde el punto final específico de la región, por ejemplo: 
 
- ```
-https://console.<region>.bluemix.net.
- ```
+ `https://console.<region>.bluemix.net/admin/metrics`
+{: codeblock}
 
 **Notas**:
 
@@ -1323,20 +1313,31 @@ https://console.<region>.bluemix.net.
 
 Puede utilizar la API de entorno experimental para obtener información sobre el entorno durante el periodo de tiempo que especifique. Se devuelven los puntos de datos disponibles dentro del periodo de tiempo que especifique. Se registran datos cada hora aproximadamente. Si, por ejemplo, ha solicitado seis horas de datos de CPU para el entorno, la respuesta incluirá datos de CPU correspondientes a cada una de las seis horas solicitadas.
 
+ ### Puntos finales del entorno 
+ 
+Puede utilizar el punto final siguiente para invocar este mandato de API: `/api/v1/env`
+
 ### Parámetros de consulta de métricas del entorno
 
 Con los siguientes parámetros de consulta puede obtener métricas correspondientes a CPU, disco, memoria, red y apps:
 
 <dl class="parml">
 <dt class="pt dlterm">métrica</dt>
-<dd class="pd">Uno o varios de los siguientes valores, separados por comas: 'memory', 'disk', 'cpu', 'network' y 'apps.'</dd>
+<dd class="pd">Uno o varios de los siguientes valores, separados por comas: `memory`, `disk`, `cpu`, `network` y `apps`.</dd>
 <dt class="pt dlterm">startTime</dt>
 <dd class="pd">El primer punto en el tiempo a partir del que se devuelven datos. Si no se especifica startTime, se incluye el punto de datos más antiguo disponible. Por ejemplo, para obtener datos entre las 2 PM y las 5 PM, especifique para startTime el valor 2 PM.</dd>
 <dt class="pt dlterm">endTime</dt>
 <dd class="pd">El último punto en el tiempo a partir del que se devuelven datos. Si no se especifica endTime, se utiliza el punto de datos más reciente. Por ejemplo, para obtener datos entre las 2 PM y las 5 PM, especifique para endTime el valor 5 PM.</dd>
 <dt class="pt dlterm">sort</dt>
-<dd class="pd">El orden en el que se devuelven los datos. Los valores válidos son 'asc' (ascendente) y 'desc' (descendente). El valor predeterminado es descendente, que devuelve en primer lugar los datos más recientes. </dd>
+<dd class="pd">El orden en el que se devuelven los datos. Los valores válidos son `asc` (ascendente) y `desc` (descendente). El valor predeterminado es descendente, que devuelve en primer lugar los datos más recientes. </dd>
 </dl>
+
+ El ejemplo siguiente utiliza los parámetros de consulta para obtener métricas sobre el entorno:
+ 
+ ```
+ curl -b ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/admin/metrics/api/v1/env?metric=cpu,network,disk,apps,memory
+ ```
+{: codeblock}
 
 ### Formato de los datos de las métricas del entorno
 
@@ -1348,19 +1349,37 @@ En las secciones siguientes se proporciona al formato de los datos.
 {
   "sample_time": 1477494000000,
   "memory": {
-    "physical": {
-      "total_gb": 864,
+    "cell": {
+      "physical": {
+        "total_gb": 864,
       "used": {
-        "value_gb": 336.84,
+          "value_gb": 336.84,
         "percent": 38.99
       }
-    },
+      },
     "allocated": {
-      "reserved_gb": 1728,
+        "reserved_gb": 1728,
       "total_allocated": {
-        "value_gb": 1287.59,
+          "value_gb": 1287.59,
         "percent": 74.51
       }
+      },
+    },
+    "dea": {
+      "physical": {
+      	"total_gb": 864,
+      "used": {
+          "value_gb": 336.84,
+        "percent": 38.99
+      }
+      },
+    "allocated": {
+        "reserved_gb": 1728,
+      "total_allocated": {
+          "value_gb": 1287.59,
+        "percent": 74.51
+      }
+      },
     },
     "memory_by_container": [
       {
@@ -1399,19 +1418,37 @@ En las secciones siguientes se proporciona al formato de los datos.
 {
   "sample_time": 1477494000000,
   "disk": {
-    "physical": {
-      "total_gb": 8100,
+    "cell": {
+      "physical": {
+        "total_gb": 8100,
       "used": {
-        "value_gb": 807,
+          "value_gb": 807,
         "percent": 9.96
       }
-    },
+      },
     "allocated": {
-      "reserved_gb": 16200,
+        "reserved_gb": 16200,
       "total_allocated": {
-        "value_gb": 1989.5,
+          "value_gb": 1989.5,
         "percent": 12.28
       }
+      },
+    },
+    "dea": {
+      "physical": {
+        "total_gb": 8100,
+      "used": {
+          "value_gb": 807,
+        "percent": 9.96
+      }
+      },
+    "allocated": {
+        "reserved_gb": 16200,
+      "total_allocated": {
+          "value_gb": 1989.5,
+        "percent": 12.28
+      }
+      },
     },
     "disk_by_container": [
       {
@@ -1450,7 +1487,12 @@ En las secciones siguientes se proporciona al formato de los datos.
 {
   "sample_time": 1477494000000,
   "cpu": {
-    "average_percent_cpu_used": 27.288461538461544,
+    "cell": {
+      "average_percent_cpu_used": 27.288461538461544
+    },
+    "dea": {
+      "average_percent_cpu_used": 27.288461538461544
+    },
     "cpu_by_container": [
       {
         "name": "dea_next/0",
@@ -1543,7 +1585,7 @@ En las secciones siguientes se proporciona al formato de los datos.
 {: screen}
 
 * Para obtener registros de datos sobre las aplicaciones, utilice el siguiente formato de datos:
- 
+
 ```
 {
   "sample_time": 1477494000000,
@@ -1577,11 +1619,11 @@ Para reducir la cantidad de información que se devuelve para cada muestra de da
 ### Puntos finales de las aplicaciones 
 
 Puede utilizar los siguientes puntos finales para invocar este mandato de API:
-* /api/v1/app/cpu/physical 
-* /api/v1/app/memory/physical
-* /api/v1/app/memory/reserved
-* /api/v1/app/disk/physical
-* /api/v1/app/disk/reserved
+* `/api/v1/app/cpu/physical` 
+* `/api/v1/app/memory/physical`
+* `/api/v1/app/memory/reserved`
+* `/api/v1/app/disk/physical`
+* `/api/v1/app/disk/reserved`
 
 
 ### Parámetros de consulta de aplicaciones
@@ -1596,7 +1638,17 @@ Utilice los siguientes parámetros de consulta para obtener métricas correspond
 <dt class="pt dlterm">count</dt>
 <dd class="pd">El número de registros que se devolverán para cada muestra de datos.
 </dd>
+<dt class="pt dlterm">minValue</dt>
+<dd class="pd">El valor más pequeño a devolver para la métrica especificada. Si no se especifica ningún minValue, se devolverán todos los valores. Por ejemplo, para recopilar aplicaciones utilizando al menos 20000 bytes de memoria física, especifique un minValue de 20000.
+</dd>
 </dl>
+
+El siguiente ejemplo recopila métricas sobre las aplicaciones:
+
+```
+curl -b ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/admin/metrics/api/v1/app/cpu/physical?count=5&startTime=2016-12-02T16:54:09.467Z
+```
+{: codeblock}
 
 ### Formato de respuesta de aplicaciones
 
@@ -1829,7 +1881,7 @@ de LDAP.
 
 Antes de empezar, instale la interfaz de línea de mandatos cf. El plug-in CLI de administración de {{site.data.keyword.Bluemix_notm}} necesita
 cf versión 6.11.2 o posterior. [Descargue la interfaz de línea de mandatos
-de Cloud Foundry ![icono de enlace externo](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}. 
+de Cloud Foundry ![icono de enlace externo](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}.
 
 **Restricción:** Cygwin no admite la interfaz de línea de mandatos de Cloud Foundry. Utilice esta interfaz en una ventana de línea de mandatos que no sea la ventana de Cygwin.
 
