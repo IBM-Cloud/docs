@@ -65,6 +65,8 @@ curl https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com
 ```
 {:codeblock}
 
+<!--
+
 _Example including basic authentication credentials in a request, using Javascript:_
 
 ```javascript
@@ -77,6 +79,8 @@ account.request(function (err, body) {
 });
 ```
 {:codeblock}
+
+-->
 
 _Example including basic authentication credentials in a request, using Python:_
 
@@ -140,6 +144,8 @@ curl https://$USERNAME.cloudant.com/_session \
 ```
 {:codeblock}
 
+<!--
+
 _Example of requesting a cookie, using Javascript:_
 
 ```javascript
@@ -165,6 +171,8 @@ cloudant.auth($USERNAME, $PASSWORD, function (err, body, headers) {
 });
 ```
 {:codeblock}
+
+-->
 
 _Example of requesting a cookie, using Python:_
 

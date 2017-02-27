@@ -46,6 +46,8 @@ curl https://$USERNAME.cloudant.com/_active_tasks \
 ```
 {:codeblock}
 
+<!--
+
 _Example request to retrieve list of active tasks using Javascript:_
 
 ```javascript
@@ -60,6 +62,8 @@ account.request({
 });
 ```
 {:codeblock}
+
+-->
 
 The returned structure includes the following fields for each task:
 

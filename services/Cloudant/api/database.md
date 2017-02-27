@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-10"
+lastupdated: "2017-02-27"
 
 ---
 
@@ -58,6 +58,8 @@ curl https://$USERNAME:$PASSWORD@$ACCOUNT.cloudant.com/$DATABASE -X PUT
 ```
 {:codeblock}
 
+<!--
+
 _Example of using JavaScript to create a database:_
 
 ```javascript
@@ -71,6 +73,8 @@ account.db.create($DATABASE, function (err, body, headers) {
 });
 ```
 {:codeblock}
+
+-->
 
 <div id="response"></div>
 
@@ -134,6 +138,8 @@ curl https://$USERNAME.cloudant.com/$DATABASE \
 ```
 {:codeblock}
 
+<!--
+
 _Example of using JavaScript to get database details:_
 
 ```javascript
@@ -147,6 +153,8 @@ account.db.get($DATABASE, function (err, body, headers) {
 });
 ```
 {:codeblock}
+
+-->
 
 The elements of the returned structure are shown in the following table:
 
@@ -211,6 +219,8 @@ curl https://$USERNAME.cloudant.com/_all_dbs \
 ```
 {:codeblock}
 
+<!--
+
 _Example of using JavaScript to list all databases:_
 
 ```javascript
@@ -224,6 +234,8 @@ account.db.list(function (err, body, headers) {
 });
 ```
 {:codeblock}
+
+-->
 
 The response is a JSON array with all the database names.
 
@@ -282,9 +294,11 @@ GET /_all_docs HTTP/1.1
 _Example of using the command line to list all documents in a database,_
 
 ```sh
-curl https://%USERNAME:$PASSWORD@$USERNAME.cloudant.com/$DATABASE/_all_docs
+curl https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com/$DATABASE/_all_docs
 ```
 {:codeblock}
+
+<!--
 
 _Example of using JavaScript to list all documents in a database:_
 
@@ -301,6 +315,8 @@ db.list(function (err, body, headers) {
 ```
 {:codeblock}
 
+-->
+
 _Example of using HTTP to list all documents in a database that match at least one of the specified keys:_
 
 ```http
@@ -311,7 +327,7 @@ GET /_all_docs?keys=["somekey","someotherkey"] HTTP/1.1
 _Example of using the command line to list all documents in a database that match at least one of the specified keys:_
 
 ```sh
-curl https://%USERNAME:$PASSWORD@$USERNAME.cloudant.com/$DATABASE/_all_docs?keys=["somekey","someotherkey"]
+curl https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com/$DATABASE/_all_docs?keys=["somekey","someotherkey"]
 ```
 {:codeblock}
 
@@ -404,6 +420,8 @@ curl https://$USERNAME.cloudant.com/$DATABASE/_changes \
 ```
 {:codeblock}
 
+<!--
+
 _Example of using JavaScript to get a list of changes made to documents in a database:_
 
 ```javascript
@@ -417,6 +435,8 @@ account.db.changes($DATABASE, function (err, body, headers) {
 });
 ```
 {:codeblock}
+
+-->
 
 ### Changes in a distributed database
 
@@ -515,9 +535,13 @@ several built-in filters available:
 
 *   `_design`: The `_design` filter accepts only changes to design documents.
 *   `_doc_ids`: This filter accepts only changes for documents whose ID is specified in the `doc_ids` parameter.
+    
+    >   **Note**: The `_docs_ids` parameter works only with versions of Cloudant that are compatible with CouchDB 2.0.
 *   `_selector`: Accepts only changes for documents that match a specified selector,
     which is defined by using the same [selector syntax](cloudant_query.html#selector-syntax) that is used
     for [`_find`](cloudant_query.html#finding-documents-using-an-index).
+    
+    >   **Note**: The `_selector` parameter works only with versions of Cloudant that are compatible with CouchDB 2.0.
 *   `_view`: Enables use of an existing [map function](creating_views.html#a-simple-view) as the filter.
 
 ### The `since` argument
@@ -686,6 +710,8 @@ curl https://$USERNAME.cloudant.com/$DATABASE \
 ```
 {:codeblock}
 
+<!--
+
 _Example of using JavaScript to delete a Cloudant database:_
 
 ```javascript
@@ -699,6 +725,8 @@ account.db.destroy($DATABASE, function (err, body, headers) {
 });
 ```
 {:codeblock}
+
+-->
 
 The response confirms successful deletion of the database or describes any errors that occurred,
 for example if you try to delete a database that does not exist.

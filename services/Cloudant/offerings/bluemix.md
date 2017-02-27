@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-31"
+lastupdated: "2017-02-23"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-01-31"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-<!-- Acrolinx: 2017-01-26 -->
+<!-- Acrolinx: 2017-02-23 -->
 
 # IBM Bluemix
 
@@ -25,7 +25,7 @@ cloud platform for building,
 running,
 and managing applications.
 Find out more about Bluemix,
-and start using it,
+and start to use it,
 at the [home page ![External link icon](../images/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/){:new_window}.
 
 ## Bluemix Public
@@ -108,7 +108,7 @@ move to the [Standard plan](#standard-plan).
 ### Standard plan
 
 The Standard plan includes 20 GB of data storage.
-Above 20 GB,
+If you store more than 20 GB,
 you are charged a defined cost per GB per hour.
 See the [Pricing ![External link icon](../images/launch-glyph.svg "External link icon")](http://cloudant.com/bluemix){:new_window} information for the current cost.
 On the Standard plan,
@@ -142,7 +142,9 @@ Throughput provision is identified and measured as one of three kinds of events:
     which is a read of a specific document,
     based on the `_id` of the document.
 2.	A write,
-    which is the creation or modification of an individual document,
+    which is the creation,
+    modification,
+    or deletion of an individual document,
     or any update due to an index build.
 3.	A query,
     which is a request made to one of the Cloudant query endpoints,
@@ -166,7 +168,7 @@ For example,
 if you are on the Standard plan with provision for 200 lookups per second,
 your account might make a maximum of 200 lookup requests during a consecutive period of 1,000 milliseconds (1 second).
 Subsequent lookup requests made during the sliding 1,000-millisecond period
-are rejected until the number of lookup requests in that period drops below 200 again.
+are rejected until the number of lookup requests in that period drops to less than 200 again.
 
 When a request is rejected because the number of events is exceeded,
 applications receive a [`429` Too Many Requests](../api/http.html#429).
@@ -226,7 +228,7 @@ for 12 hours.
 Therefore,
 you would be billed an overage charge based on 87 GB x 12 hours = 1044 GB hours for that extra space.
 
-Overage is calculated by using the maximum number of GB above the plan allocation during a particular hour within the billing cycle.
+Overage is calculated by using the maximum number of GB more than the plan allocation during a particular hour within the billing cycle.
 
 #### A worked overage example
 
@@ -238,10 +240,10 @@ then increases to 108 GB for the next 25 minutes of hour 02:00.
 Finally,
 your instance finishes the hour and indeed the rest of month by dropping down to 28 GB.
 
-This pattern means the maximum number of GB above the plan allocation was 88 GB during hour 2 of day 3.
+This pattern means the maximum number of GB more than the plan allocation was 88 GB during hour 2 of day 3.
 For hour 03:00 of day 3,
 and for the rest of the month,
-your instance was 8 GB above the plan allocation.
+your instance was 8 GB more than the plan allocation.
 
 Therefore,
 for hour 02:00 of day 3,

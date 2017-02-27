@@ -45,6 +45,8 @@ curl https://$ACCOUNT.cloudant.com/
 ```
 {:codeblock}
 
+<!--
+
 _Example request to get server meta information, using Javascript:_
 
 ```javascript
@@ -59,6 +61,8 @@ account.request({
 });
 ```
 {:codeblock}
+
+-->
 
 _Example JSON response:_
 
@@ -118,6 +122,8 @@ curl https://$USERNAME.cloudant.com/_db_updates \
 ```
 {:codeblock}
 
+<!--
+
 _Example request to get a list of changes to the database, using Javascript:_
 
 ```javascript
@@ -132,6 +138,8 @@ account.request({
 });
 ```
 {:codeblock}
+
+-->
 
 _Example response:_
 
@@ -171,6 +179,8 @@ curl https://$USERNAME.cloudant.com/$DATABASE/_shards \
 ```
 {:codeblock}
 
+<!--
+
 _Example request, using Javascript:_
 
 ```javascript
@@ -186,6 +196,8 @@ account.request({
 });
 ```
 {:codeblock}
+
+-->
 
 _Example response:_
 
@@ -254,6 +266,8 @@ curl https://$USERNAME.cloudant.com/$DATABASE/_missing_revs \
 ```
 {:codeblock}
 
+<!--
+
 _Example request, using Javascript:_
 
 ```javascript
@@ -272,6 +286,8 @@ function (err, body) {
 });
 ```
 {:codeblock}
+
+-->
 
 _Example response:_
 
@@ -323,6 +339,8 @@ curl https://$USERNAME.cloudant.com/$DATABASE/_revs_diff \
 ```
 {:codeblock}
 
+<!--
+
 _Example request, using Javascript:_
 
 ```javascript
@@ -340,6 +358,8 @@ account.request({
 });
 ```
 {:codeblock}
+
+-->
 
 _Example response:_
 
@@ -383,6 +403,8 @@ curl https://$USERNAME.cloudant.com/$DATABASE/_revs_limit \
 ```
 {:codeblock}
 
+<!--
+
 _Example request, using Javascript:_
 
 ```javascript
@@ -397,6 +419,8 @@ account.request({
 });
 ```
 {:codeblock}
+
+-->
 
 _Example response:_
 
@@ -431,6 +455,8 @@ curl https://$USERNAME.cloudant.com/_revs_limit \
 ```
 {:codeblock}
 
+<!--
+
 _Example request, using Javascript:_
 
 ```javascript
@@ -447,6 +473,8 @@ account.request({
 });
 ```
 {:codeblock}
+
+-->
 
 _Example response:_
 
@@ -484,6 +512,8 @@ curl https://$USERNAME.cloudant.com/_membership \
 ```
 {:codeblock}
 
+<!--
+
 _Example request to list nodes in the cluster, using Javascript:_
 
 ```javascript
@@ -498,6 +528,8 @@ account.request({
 });
 ```
 {:codeblock}
+
+-->
 
 ### Response structure
 
@@ -552,6 +584,8 @@ curl https://$USERNAME.cloudant.com/_uuids \
 ```
 {:codeblock}
 
+<!--
+
 _Example request for a single UUID, using Javascript:_
 
 ```javascript
@@ -566,6 +600,8 @@ account.request({
 });
 ```
 {:codeblock}
+
+-->
 
 _Example response to a request for a single UUID:_
 
@@ -593,6 +629,8 @@ curl https://$USERNAME.cloudant.com/_uuids?count=5 \
 ```
 {:codeblock}
 
+<!--
+
 _Example request for five UUIDs, using Javascript:_
 
 ```javascript
@@ -607,6 +645,8 @@ account.request({
 });
 ```
 {:codeblock}
+
+-->
 
 _Example response to a request for five UUIDs:_
 

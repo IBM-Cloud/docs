@@ -271,6 +271,8 @@ curl https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com/_active_tasks
 ```
 {:codeblock}
 
+<!--
+
 _Example instructions for monitoring a replication, using Javascript:_
 
 ```javascript
@@ -289,6 +291,8 @@ account.request(
 );
 ```
 {:codeblock}
+
+-->
 
 _Example response (abbreviated) following active task request, including continuous replication:_
 

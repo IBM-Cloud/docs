@@ -125,6 +125,8 @@ curl https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com/$DATABASE \
 ```
 {:codeblock}
 
+<!--
+
 _Creating a document, using Javascript:_
 
 ```javascript
@@ -139,6 +141,8 @@ db.insert($JSON, function (err, body, headers) {
 });
 ```
 {:codeblock}
+
+-->
 
 _Example document, specified using JSON:_
 
@@ -216,6 +220,8 @@ curl https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com/$DATABASE/$DOCUMENT_ID
 ```
 {:codeblock}
 
+<!--
+
 _Example of retrieving a document, using Javascript:_
 
 ```javascript
@@ -230,6 +236,8 @@ db.get($JSON._id, function (err, body, headers) {
 });
 ```
 {:codeblock}
+
+-->
 
 The response contains the document you requested or a description of the error if the document could not be retrieved.
 
@@ -313,6 +321,8 @@ curl https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com/$DATABASE/$DOCUMENT_ID \
 ```
 {:codeblock}
 
+<!--
+
 _Example of updating a document, using Javascript:_
 
 ```javascript
@@ -330,6 +340,8 @@ db.insert($JSON, $JSON._id, function (err, body, headers) {
 });
 ```
 {:codeblock}
+
+-->
 
 _Example of JSON data containing an updated document:_
 
@@ -403,6 +415,8 @@ curl https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com/$DATABASE/$DOCUMENT_ID?r
 ```
 {:codeblock}
 
+<!--
+
 _Example of a delete request, using Javascript:_
 
 ```javascript
@@ -418,6 +432,8 @@ db.destroy($JSON._id, $REV, function (err, body, headers) {
 });
 ```
 {:codeblock}
+
+-->
 
 _Example response following a successful deletion request:_
 
@@ -661,6 +677,8 @@ curl https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com/$DATABASE/_bulk_docs \
 ```
 {:codeblock}
 
+<!--
+
 _Example request to create, update, or delete multiple documents, using Javascript:_
 
 ```javascript
@@ -675,6 +693,8 @@ db.bulk($JSON, function (err, body) {
 });
 ```
 {:codeblock}
+
+-->
 
 _Example JSON describing the update, creation, and deletion of three documents in one bulk request:_
 

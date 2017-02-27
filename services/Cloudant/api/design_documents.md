@@ -436,6 +436,8 @@ curl "https://$ACCOUNT.cloudant.com/$DATABASE/$DESIGN_ID/_list/$LIST_FUNCTION/$M
 ```
 {:codeblock}
 
+<!--
+
 _Example invocation of a list function, using Javascript:_
 
 ```javascript
@@ -450,6 +452,8 @@ db.view_with_list($DESIGN_ID, $MAPREDUCE_INDEX, $LIST_FUNCTION, function (err, b
 });
 ```
 {:codeblock}
+
+-->
 
 ### head
 
@@ -548,6 +552,8 @@ curl https://$USERNAME.cloudant.com/$DATABASE/$DESIGN_ID/_show/$SHOW_FUNCTION/$D
 ```
 {:codeblock}
 
+<!--
+
 _Example of a show function query, using Javascript:_
 
 ```javascript
@@ -562,6 +568,8 @@ db.show($DESIGN_ID, $SHOW_FUNCTION, $DOCUMENT_ID, function (err, body) {
 });
 ```
 {:codeblock}
+
+-->
 
 ## Update Handlers
 
@@ -652,6 +660,8 @@ curl "https://$ACCOUNT.cloudant.com/$DATABASE/$DESIGN_ID/_update/$UPDATE_HANDLER
 ```
 {:codeblock}
 
+<!--
+
 _Example of an update handler query, using Javascript:_
 
 ```javascript
@@ -666,6 +676,8 @@ db.atomic($DESIGN_ID, $UPDATE_HANDLER, $DOCUMENT_ID, $JSON, function (err, body)
 });
 ```
 {:codeblock}
+
+-->
 
 ## Filter Functions
 
