@@ -36,7 +36,7 @@ CLI de IBM Containers es un plug-in de CLI de {{site.data.keyword.Bluemix_notm}}
 </dl>
 
 <table summary="Mandatos bluemix que pueden utilizarse para gestionar contenedores en Bluemix.">
- <caption>Tabla 1. Mandatos para gestionar contenedores en Bluemix</caption>
+<caption>Tabla 1. Mandatos para gestionar contenedores en Bluemix</caption>
  <thead>
  <th colspan="5">Mandatos para gestionar contenedores en Bluemix</th>
  </thead>
@@ -308,8 +308,7 @@ NMENT_VARIABLE_FILE] [-P false|true] [--volume] [--min MIN_INSTANCE_COUNT] [--ma
 
 |  Variable de entorno                              |     Descripción                            |
 | :----------------------------- | :------------------------------ |
-| CCS_BIND_APP=*&lt;nombre_app&gt;*       | Enlazar un servicio con un contenedor. Utilice la variable de entorno `CCS_BIND_APP` para enlazar una app con un contenedor. La app se enlaza al servicio de destino y actúa como un puente que permite a {{site.data.keyword.Bluemix_notm}} aportar la información de `VCAP_SERVICES` de la app del puente a la instancia de contenedor en ejecución. Para obtener más información sobre la creación de una app de puente, consulte [Enlazar un servicio a un
-contenedor](../../../containers/container_integrations_binding.html){: new_window}. |
+| CCS_BIND_APP=*&lt;nombre_app&gt;*       | Enlazar un servicio con un contenedor. Utilice la variable de entorno `CCS_BIND_APP` para enlazar una app con un contenedor. La app se enlaza al servicio de destino y actúa como un puente que permite a {{site.data.keyword.Bluemix_notm}} aportar la información de `VCAP_SERVICES` de la app del puente a la instancia de contenedor en ejecución. Para obtener más información sobre la creación de una app de puente, consulte [Enlazar un servicio a un contenedor](../../../containers/container_integrations_binding.html){: new_window}. |
 | CCS_BIND_SRV=*&lt;nombre_instancia_servicio1&gt;*,*&lt;nombre_instancia_servicio2&gt;* | Para enlazar un servicio de Bluemix directamente a un contenedor sin utilizar una app puente, utilice CCS_BIND_SRV. Este enlace permite a Bluemix inyectar la información de VCAP_SERVICES en la instancia del contenedor de ejecución. Para proporcionar una lista de varios servicios de Bluemix, inclúyalos como parte de la misma variable de entorno. |
 | LOG_LOCATIONS=*&lt;vía_al_archivo&gt;* | Añadir un archivo de registro para supervisar en el contenedor. Incluir la variable de entorno de `LOG_LOCATIONS` con una vía de acceso al archivo de registro. |
 {: caption="Table 2. Commonly used environment variables" caption-side="top"}
@@ -510,7 +509,7 @@ bluemix ic groups [-q]
 ## bluemix ic images
 {: #bluemix_ic_images}
 
-Ver una lista de todas las imágenes disponibles en el repositorio {{site.data.keyword.Bluemix_notm}} privado de la organización. Para obtener más información, consulte el mandato [images ![icono de enlace externo](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/images){: new_window} en la ayuda de Docker.La lista incluye el ID de imagen, la fecha de creación y el nombre de imagen.
+Ver una lista de todas las imágenes disponibles en el repositorio {{site.data.keyword.Bluemix_notm}} privado de la organización. Para obtener más información, consulte el mandato [images ![icono de enlace externo](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/images){: new_window} en la ayuda de Docker. La lista incluye el ID de imagen, la fecha de creación y el nombre de imagen.
 
 ```
 bluemix ic images [-a|--all] [-f CONDITION] [--no-trunc] [-q|--quiet]
@@ -805,7 +804,7 @@ bluemix ic namespace-set NAME
 ## bluemix ic pause
 {: #pause}
 
-Colocar en pausa todos los procesos dentro de un contenedor en ejecución. Para obtener más información, consulte el mandato [pause ![icono de enlace externo](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/pause/){: new_window} en la ayuda de Docker.Para detener un contenedor, consulte el mandato [bluemix ic unpause](#unpause).
+Colocar en pausa todos los procesos dentro de un contenedor en ejecución. Para obtener más información, consulte el mandato [pause ![icono de enlace externo](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/pause/){: new_window} en la ayuda de Docker. Para detener un contenedor, consulte el mandato [bluemix ic unpause](#unpause).
 
 ```
 bluemix ic pause CONTAINER
@@ -1133,8 +1132,7 @@ bluemix ic run [-p PORT|--publish PORT] [-P] [-m MEMORY|--memory MEMORY] [-e ENV
 
 |      Variable de entorno                          |   Descripción                              |
 | :----------------------------- | :------------------------------ |
-| CCS_BIND_APP=*&lt;nombre_app&gt;*       | Enlazar un servicio con un contenedor. Utilice la variable de entorno `CCS_BIND_APP` para enlazar una app con un contenedor. La app se enlaza al servicio de destino y actúa como un puente que permite a {{site.data.keyword.Bluemix_notm}} aportar la información de `VCAP_SERVICES` de la app del puente a la instancia de contenedor en ejecución. Para obtener más información sobre la creación de una app de puente, consulte [Enlazar un servicio a un
-contenedor](../../../containers/container_integrations_binding.html){: new_window}. |
+| CCS_BIND_APP=*&lt;nombre_app&gt;*       | Enlazar un servicio con un contenedor. Utilice la variable de entorno `CCS_BIND_APP` para enlazar una app con un contenedor. La app se enlaza al servicio de destino y actúa como un puente que permite a {{site.data.keyword.Bluemix_notm}} aportar la información de `VCAP_SERVICES` de la app del puente a la instancia de contenedor en ejecución. Para obtener más información sobre la creación de una app de puente, consulte [Enlazar un servicio a un contenedor](../../../containers/container_integrations_binding.html){: new_window}. |
 | CCS_BIND_SRV=*&lt;nombre_instancia_servicio1&gt;*,*&lt;nombre_instancia_servicio2&gt;* | Para enlazar un servicio de Bluemix directamente a un contenedor sin utilizar una app puente, utilice CCS_BIND_SRV. Este enlace permite a Bluemix inyectar la información de VCAP_SERVICES en la instancia del contenedor de ejecución. Para proporcionar una lista de varios servicios de Bluemix, inclúyalos como parte de la misma variable de entorno. |
 | LOG_LOCATIONS=*&lt;vía_al_archivo&gt;* | Añadir un archivo de registro para supervisar en el contenedor. Incluir la variable de entorno de `LOG_LOCATIONS` con una vía de acceso al archivo de registro. |
 {: caption="Table 3. Commonly used environment variables" caption-side="top"}
@@ -1224,7 +1222,7 @@ bluemix ic service-unbind GROUP_NAME SERVICE_INSTANCE
 
 ## bluemix ic start
 {: #ic_start}
-Iniciar un contenedor detenido. Para obtener más información, consulte el mandato [start ![icono de enlace externo](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/start/){: new_window} en la ayuda de Docker.Para detener un contenedor, consulte el mandato [bluemix ic stop](#ic_stop).
+Iniciar un contenedor detenido. Para obtener más información, consulte el mandato [start ![icono de enlace externo](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/start/){: new_window} en la ayuda de Docker. Para detener un contenedor, consulte el mandato [bluemix ic stop](#ic_stop).
 
 ```
 bluemix ic start CONTAINER
@@ -1290,7 +1288,7 @@ bluemix ic stats --no-stream my_container
 
 ## bluemix ic stop
 {: #ic_stop}
-Detener un contenedor en ejecución. Para obtener más información, consulte el mandato [stop ![icono de enlace externo](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/stop/){: new_window} en la ayuda de Docker.Para iniciar un contenedor, consulte el mandato [bluemix ic start](#ic_start).
+Detener un contenedor en ejecución. Para obtener más información, consulte el mandato [stop ![icono de enlace externo](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/stop/){: new_window} en la ayuda de Docker. Para iniciar un contenedor, consulte el mandato [bluemix ic start](#ic_start).
 
 ```
 bluemix ic stop CONTAINER [-t SECS|--time SECS]
@@ -1356,7 +1354,7 @@ bluemix ic top my_container
 ## bluemix ic unpause
 {: #unpause}
 
-Reanudar todos los procesos de un contenedor en ejecución. Para obtener más información, consulte el mandato [unpause ![icono de enlace externo](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/unpause/){: new_window} en la ayuda de Docker.Para poner en pausa un contenedor, consulte el mandato [bluemix ic pause](#pause).
+Reanudar todos los procesos de un contenedor en ejecución. Para obtener más información, consulte el mandato [unpause ![icono de enlace externo](../../../icons/launch-glyph.svg)](https://docs.docker.com/engine/reference/commandline/unpause/){: new_window} en la ayuda de Docker. Para poner en pausa un contenedor, consulte el mandato [bluemix ic pause](#pause).
 
 ```
 bluemix ic unpause CONTAINER

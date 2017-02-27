@@ -44,7 +44,7 @@ De forma predeterminada, ambas herramientas de CLI utilizan el puerto 443. Si ti
 
 Amplíe fácilmente su interfaz de línea de mandatos de {{site.data.keyword.Bluemix_notm}} con más mandatos. Para acceder
 a los plugins de la interfaz de línea de mandatos de {{site.data.keyword.Bluemix_notm}}, consulte el
-[Repositorio de plugin de la CLI ![icono de enlace externo](../icons/launch-glyph.svg)](https://plugins.ng.bluemix.net/). 
+[Repositorio de plugin de la CLI ![icono de enlace externo](../icons/launch-glyph.svg)](https://plugins.ng.bluemix.net/).
 
 ### Amplíe su interfaz de línea de mandatos de {{site.data.keyword.Bluemix_notm}}: bx
 {: cli_bluemix_ext}
@@ -111,5 +111,5 @@ Descargue e instale plugins para integrar sus servicios favoritos de {{site.data
 
 | *{{site.data.keyword.jazzhub_short}}* | *Liberty for Java* | *MobileFirst* | *{{site.data.keyword.rules_short}}* | *Eclipse Tools for Bluemix* |
 |-------------|----------|----------|----------|----------|
-| [Plugin Egit Eclipse ![icono de enlace externo](../icons/launch-glyph.svg)](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_egit){: new_window} <br> [Plugin RTC Eclipse ![icono de enlace externo](../icons/launch-glyph.svg)](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_rtc){: new_window}  | [Plugin Liberty Eclipse ![icono de enlace externo](../icons/launch-glyph.svg)](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window}  | [Plugin Eclipse ![icono de enlace externo](../icons/launch-glyph.svg)](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window}  | [Plugin Rules Designer Eclipse ![icono de enlace externo](../icons/launch-glyph.svg)](/docs/services/rules/index.html#rulov002)  | [Plugin Bluemix Eclipse ![icono de enlace externo](../icons/launch-glyph.svg)](https://console.ng.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html){: new_window}  |
+| [Plugin Egit Eclipse ![icono de enlace externo](../icons/launch-glyph.svg)](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_egit){: new_window} <br> [Plugin RTC Eclipse ![icono de enlace externo](../icons/launch-glyph.svg)](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_rtc){: new_window} | [Plugin Liberty Eclipse ![icono de enlace externo](../icons/launch-glyph.svg)](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Plugin Eclipse ![icono de enlace externo](../icons/launch-glyph.svg)](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Plugin Rules Designer Eclipse ![icono de enlace externo](../icons/launch-glyph.svg)](/docs/services/rules/index.html#rulov002) | [Plugin Bluemix Eclipse ![icono de enlace externo](../icons/launch-glyph.svg)](https://console.ng.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html){: new_window} |
 {: caption="Table 6. Plug-ins" caption-side="top"}

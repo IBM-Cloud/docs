@@ -23,7 +23,7 @@ de LDAP. Si busca información sobre la gestión de su cuenta {{site.data.keywor
 
 Antes de empezar, instale la interfaz de línea de mandatos cf. El plug-in CLI de administración de {{site.data.keyword.Bluemix_notm}} necesita
 cf versión 6.11.2 o posterior. [Descargue la interfaz de línea de mandatos
-de Cloud Foundry ![icono de enlace externo](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window} 
+de Cloud Foundry ![icono de enlace externo](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}
 
 **Restricción:** Cygwin no admite la interfaz de línea de mandatos de Cloud Foundry. Utilice esta interfaz en una ventana de línea de mandatos que no sea la ventana de Cygwin.
 
@@ -214,7 +214,7 @@ cf ba enable-managers-add-users
 ### No permitir a los gestores agregar usuarios
 {: #clius_dmau}
 
-Si a los gestores de la organización se les permite agregar usuarios a las organizaciones que gestionan en el entorno de {{site.data.keyword.Bluemix_notm}} con el mandato **enable-managers-add-users**, y si tiene el permiso **Superusuario**, puede eliminar este valor. Para no permitir a los gestores añadir usuarios, utilice el mandato siguiente:
+Si a los gestores de la organización se les permite agregar usuarios a las organizaciones que gestionan en el entorno de {{site.data.keyword.Bluemix_notm}} con el mandato **enable-managers-add-users**, y si tiene el permiso **Superusuario**, puede eliminar este valor.  Para no permitir a los gestores añadir usuarios, utilice el mandato siguiente:
 
 ```
 cf ba disable-managers-add-users
@@ -988,7 +988,7 @@ cf ba create-buildpack <nombre_paquete_compilación> <vía_acceso_archivo> <posi
 ### Actualización de un paquete de compilación
 {: #cliupdabuildpack}
 
-Si tiene permisos de grabación en el catálogo de las apps, puede actualizar un paquete de compilación existente. Para actualizar un paquete de compilación, utilice el siguiente mandato:
+Si tiene permisos de grabación en el catálogo de las apps, puede actualizar un paquete de compilación existente.  Para actualizar un paquete de compilación, utilice el siguiente mandato:
 
 ```
 cf ba update-buildpack <nombre_paquete_compilación> <posición> <habilitado> <bloqueado>
@@ -1012,7 +1012,7 @@ cf ba update-buildpack <nombre_paquete_compilación> <posición> <habilitado> <b
 ### Supresión de un paquete de compilación
 {: #clidelbuildpack}
 
-Si tiene permisos de grabación en el catálogo de las apps, puede suprimir un paquete de compilación existente. Para suprimir un paquete de compilación, utilice el siguiente mandato:
+Si tiene permisos de grabación en el catálogo de las apps, puede suprimir un paquete de compilación existente.  Para suprimir un paquete de compilación, utilice el siguiente mandato:
 
 ```
 cf ba delete-buildpack <nombre_paquete_compilación>
