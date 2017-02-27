@@ -130,7 +130,7 @@ Cada entrada de registro contiene cuatro campos. Consulte la siguiente lista par
 Puede ver los registros para sus apps de Cloud Foundry en cuatro lugares:
 
   * Panel de control de {{site.data.keyword.Bluemix_notm}}
-  * Panel de control 
+  * Panel de control
   * Interfaz de línea de mandatos
   * Hosts de registro externo
 
@@ -149,17 +149,17 @@ En la consola **Registros**, puede ver los registros recientes para su app o la 
 #### Visualización de registros desde el panel de control de Kibana
 {: #viewing_logs_Kibana}
 
-Cree un panel de control personalizado para visualizar, de forma sencilla y creativa, los registros de las apps que se ejecutan en un espacio. 
+Cree un panel de control personalizado para visualizar, de forma sencilla y creativa, los registros de las apps que se ejecutan en un espacio.
 
-1. Abra [https://logmet.<span class="keyword" data-hd-keyref="DomainName">NombreDominio</span>](https://logmet.{DomainName}) para iniciar una sesión en la interfaz de usuario de Kibana. 
-2. Seleccione el separador **Kibana 3**. 
-3. Si no ve ningún registro, ajuste el selector de tiempo de la cabecera. 
+1. Abra [https://logmet.<span class="keyword" data-hd-keyref="DomainName">NombreDominio</span>](https://logmet.{DomainName}) para iniciar una sesión en la interfaz de usuario de Kibana.
+2. Seleccione el separador **Kibana 3**.
+3. Si no ve ningún registro, ajuste el selector de tiempo de la cabecera.
 4. Guarde el panel de control como un panel de control nuevo.
   1. En la barra de herramientas, pulse el icono **Guardar**.
   2. Escriba un nombre para el panel de control.
   3. Junto al campo de nombre, pulse el icono **Guardar**.
 
-Para obtener más información sobre cómo personalizar un panel de control de Kibana, consulte [esta publicación del blog ![icono de enlace externo](../icons/launch-glyph.svg)](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/){: new_window} o la documentación de [Kibana ![icono de enlace externo](../icons/launch-glyph.svg)](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}. 
+Para obtener más información sobre cómo personalizar un panel de control de Kibana, consulte [esta publicación del blog ![icono de enlace externo](../icons/launch-glyph.svg)](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/){: new_window} o la documentación de [Kibana ![icono de enlace externo](../icons/launch-glyph.svg)](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}.
 
 
 #### Visualización de registros desde la interfaz de línea de mandatos
@@ -231,7 +231,7 @@ Para ver los registros en los que está interesado o para excluir el contenido q
 
 * Para ver una parte en lugar de todos los registros detallados, utilice la opción **cut**. Por ejemplo, para visualizar la información de los componentes y de los mensajes, utilice el mandato siguiente:
 ```
-cf logs appname --recent | cut -c 29-40,46- 
+cf logs appname --recent | cut -c 29-40,46-
 ```
 
 Para obtener más información sobre la opción **cut**, escriba cut --help.
@@ -326,11 +326,13 @@ En este ejemplo, un desarrollador llamado Jane crea un servidor virtual mediante
   1. Para empezar, Jane configura Splunk.
 
      a. Jane descarga Splunk Light desde [sitio de Download Splunk Light
-![icono de enlace externo](../icons/launch-glyph.svg)](https://www.splunk.com/en_us/download/splunk-light.html){:new_window}y lo instala con el siguiente mandato. El software se instala en */opt/splunk*.```
+![icono de enlace externo](../icons/launch-glyph.svg)](https://www.splunk.com/en_us/download/splunk-light.html){:new_window}y lo instala con el siguiente mandato. El software se instala en */opt/splunk*.
+
+	    ```
         dpkg -i  ~/splunklight-6.3.0-aa7d4b1ccb80-linux-2.6-amd64.deb
         ```
 
-b. Jane instala y aplica los parches del complemento de tecnología syslog RFC5424 para integrarlos con {{site.data.keyword.Bluemix_notm}}. Para obtener más información e instrucciones para instalar el complemento, consulte [directrices de Cloud Foundry
+     b. Jane instala y aplica los parches del complemento de tecnología syslog RFC5424 para integrarlos con {{site.data.keyword.Bluemix_notm}}. Para obtener más información e instrucciones para instalar el complemento, consulte [directrices de Cloud Foundry
 ![icono de enlace externo](../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/devguide/services/integrate-splunk.html){:new_window}.
 
 	    Jane instala el complemento utilizando estos mandatos:
@@ -456,6 +458,6 @@ Puede revisar los registros de las apps que ejecutan en {{site.data.keyword.Blue
 Para ver los registros de una app, siga estos pasos:
 1. Seleccione una app en ejecución.
 2. Pulse **Registros**. En la vista **Registros** puede ver los registros de la app en ejecución.
-4. Pulse el botón **Vista avanzada**. **Vista avanzada** muestra una vista más detallada de los registros mediante Kibana, una herramienta de visualización que utiliza registros y datos con indicación de hora para crear visualizaciones personalizadas. Para obtener más información sobre cómo utilizar la vista avanzada, consulte la documentación de [Kibana ![icono de enlace externo](../icons/launch-glyph.svg)](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}. 
+4. Pulse el botón **Vista avanzada**. **Vista avanzada** muestra una vista más detallada de los registros mediante Kibana, una herramienta de visualización que utiliza registros y datos con indicación de hora para crear visualizaciones personalizadas. Para obtener más información sobre cómo utilizar la vista avanzada, consulte la documentación de [Kibana ![icono de enlace externo](../icons/launch-glyph.svg)](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}.
 
 Luego puede personalizar un panel de instrumentos de Kibana. Consulte [Personalización de la visualización de registros en un panel de control de Kibana](/docs/containers/monitoringandlogging/container_ml_logs.html#container_ml_dash_logs_custom) para obtener más información.
