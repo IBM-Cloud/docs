@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-02-21"
+lastupdated: "2016-02-27"
 
 ---
 
@@ -29,7 +29,7 @@ There are two required properties to configure in order to use the CLI:
 Run the following command to set the API host:
 
 ```
-wsk property set --apihost openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>
+wsk property set --apihost openwhisk.ng.bluemix.net
 ```
 {: pre} 
 
