@@ -43,7 +43,7 @@ siguientes pasos para crear una app:
 
   1. Vaya a **Catálogo**
   2. Seleccione **Tiempos de ejecución de Cloud Foundry**.
-  3. seleccione **SDK for Node.js**.
+  3. Seleccione **SDK for Node.js**.
   4. Escriba un nombre exclusivo para la app, como por ejemplo NodoPrueba, y pulse **Crear**. El nombre de la app debe ser exclusivo en todo el entorno {{site.data.keyword.Bluemix_notm}}.
   5. Pulse **Crear**.
 
