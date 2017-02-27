@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-17"
+lastupdated: "2017-02-24"
 
 ---
 <!-- Copyright info and last updated date at top of file: REQUIRED
@@ -63,14 +63,10 @@ To delete a connection, follow these steps:
 
 1. Click **Clouds**.
 
-2. In the connection list, click in the **ACTIONS** column on the right of the connection that you want to delete.
+2. In the connection list, click the menu in the **ACTIONS** column for the connection that you want to delete.
 
 3. In the action list, click **Delete Connection**. A confirmation window is opened.
 
 4. Click **Delete** to confirm that you want to delete the connection.
-
-
-
-
 
 
