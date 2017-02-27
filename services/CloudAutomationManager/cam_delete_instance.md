@@ -23,27 +23,31 @@ lastupdated: "2017-02-24"
 <!-- Additional task topic: OPTIONAL
 This is the template for additional task topics that are needed beyond the basic tasks in the getting started index.md.  As needed, other task topics can be included, with titles such as "Configuring x", "Administering y", "Managing z", etc. This topic is a peer of the getting started index.md in the <servicename>.ditamap. This topic can have one level of children and they also can be referenced in <servicename>.ditamap -->
 
-# Viewing instance details
+# Deleting an instance
 <!-- for example, Uploading your data -->
-{: #cam_viewing_instance_details}
+{: #cam_delete_instance}
 <!-- Provide an appropriate ID above -->
 
 <!-- The short description section should include a sentence describing why this task is needed. For search engine optimization, include the service long name and "Bluemix". For example: -->
 
-After you deployed a template, you can view the related instance details and perform actions on the related resources.
+You can delete an instance and all the related resources when you do not need them any more.
 {:shortdesc}
 
-To view the instance details, follow these steps:
+To delete an instance details, follow these steps:
 
 <!-- Use ordered list markup for the step section. Include code examples as needed. -->
 
 1. Click **Deployed Instances**.
 
-2. Click the instance of which you want to see the details. 
+2. In the instance list, click the menu in the **ACTIONS** column for the instance that you want to delete. The action list is displayed.
 
-3. In the instance window, you can see the instance status, the instance information, and the related resource details. You can view or download the instance logs and you can also access the template from which the instance was deployed.
+3. In the action list, click **Destroy Instance** to delete all the resources related to the instance in the cloud provider.
 
- For each related resource, you can access the console (if existing) and eventually perform the actions listed by clicking the menu in the **ACTIONS** column.
+ If you do not run this step, even if you delete the instance, all the related resources are still accessible on the cloud provider.
  
- **Note:** To access the KVM console in the SoftLayer Customer Portal, you must follow the procedure described in [Access the KVM Console](https://knowledgelayer.softlayer.com/procedure/access-kvm-console){:new_window}.
+ When the action completes, the instance state is changed to `destroyed`. You may need to refresh the instance state to see the change.
+ 
+2. In the instance list, click the menu in the **ACTIONS** column for the instance that you want to delete. The action list is displayed.
+
+5. In the action list, click **Delete Instance** to delete the instance from the Cloud Automation Manager environment. The instance is deleted from the list.
 

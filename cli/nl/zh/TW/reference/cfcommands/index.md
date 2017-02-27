@@ -23,7 +23,7 @@ lastupdated: "2017-01-12"
 Cloud Foundry (cf) 指令行介面 (CLI) 提供一組管理應用程式的指令。下列資訊列出最常用來管理應用程式的 cf 指令，並且包括其名稱、選項、用法、必要條件、說明及範例。若要列出所有 cf 指令及關聯的說明資訊，請使用 `cf help`。使用 `cf command_name -h` 可檢視特定指令的詳細說明資訊。
 {: shortdesc}
 
-**附註**：如果您的網路在執行 cf 指令的主機與 Cloud Foundry API 端點之間包含 HTTP Proxy 伺服器，則必須設定 `HTTP_PROXY` 環境變數來指定 Proxy 伺服器的主機名稱或 IP 位址。如需詳細資料，請參閱 [Using the cf CLI with an HTTP Proxy Server ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}。
+**附註**：如果您的網路在執行 cf 指令的主機與 Cloud Foundry API 端點之間包含 HTTP Proxy 伺服器，則必須設定 `HTTP_PROXY` 環境變數來指定 Proxy 伺服器的主機名稱或 IP 位址。如需詳細資料，請參閱 [Using the cf CLI with an HTTP Proxy Server ![外部鏈結圖示](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}。
 
 
 ## Cloud Foundry CLI 指令索引
@@ -825,5 +825,5 @@ cf -v
 ## 相關鏈結
 {: #general}
 
-* [下載 Cloud Foundry CLI ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/cloudfoundry/cli/releases){: new_window}
-* [快速參照卡 - cf 指令 ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html){: new_window}
+* [下載 Cloud Foundry CLI ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}
+* [快速參照卡 - cf 指令 ![外部鏈結圖示](../../../icons/launch-glyph.svg)](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html){: new_window}

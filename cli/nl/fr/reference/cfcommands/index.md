@@ -23,7 +23,7 @@ lastupdated: "2017-01-12"
 L'interface de ligne de commande Cloud Foundry (cf) fournit un ensemble de commandes permettant de gérer vos applications. Les informations ci-après répertorient les commandes cf le plus souvent utilisées pour gérer les applications avec leurs noms, leurs options, leur syntaxe, les éléments prérequis, leur description et des exemples. Pour afficher toutes les commandes cf et les informations d'aide associées, entrez `cf help`. Entrez `cf nom_commande -h` afin d'afficher des informations d'aide détaillées pour une commande particulière.
 {: shortdesc}
 
-**Remarque** : sur votre réseau, si un serveur proxy HTTP se trouve entre l'hôte qui exécute les commandes cf et le noeud final d'API Cloud Foundry, vous devez spécifier le nom d'hôte ou l'adresse IP du serveur proxy en définissant la variable d'environnement `HTTP_PROXY`. Pour plus de détails, voir [Using the cf CLI with an HTTP Proxy Server ![icône de lien externe](..![icône de lien externe](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}.
+**Remarque** : sur votre réseau, si un serveur proxy HTTP se trouve entre l'hôte qui exécute les commandes cf et le noeud final d'API Cloud Foundry, vous devez spécifier le nom d'hôte ou l'adresse IP du serveur proxy en définissant la variable d'environnement `HTTP_PROXY`. Pour plus de détails, voir [Using the cf CLI with an HTTP Proxy Server ![icône de lien externe](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}.
 
 
 ## Index des commandes de l'interface de ligne de commande Cloud Foundry
@@ -851,7 +851,7 @@ cf -v
 ## Liens connexes
 {: #general}
 
-* [Télécharger l'interface de ligne de commande Cloud Foundry ![icône de lien externe](![icône de lien externe](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases) 
+* [Télécharger l'interface de ligne de commande Cloud Foundry ![icône de lien externe](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases) 
 {: new_window}
-* [Fiche de référence rapide - Commandes cf ![icône de lien externe](![icône de lien externe](../../../icons/launch-glyph.svg)](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html)
+* [Fiche de référence rapide - Commandes cf ![icône de lien externe](../../../icons/launch-glyph.svg)](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html)
 {: new_window}
