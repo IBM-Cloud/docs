@@ -30,9 +30,10 @@ lastupdated: "2017-01-12"
 
 # Descargue, modifique y vuelva a desplegar la app Cloud Foundry con la interfaz de línea de mandatos
 
-Utilice la interfaz de línea de mandatos de Cloud Foundry para descargar, modificar y volver a desplegar aplicaciones e instancias de servicio de Cloud Foundry.{:shortdesc}
+Utilice la interfaz de línea de mandatos de Cloud Foundry para descargar, modificar y volver a desplegar aplicaciones e instancias de servicio de Cloud Foundry.
+{:shortdesc}
 
-Antes de empezar, descargue e instale la interfaz de línea de mandatos de Cloud Foundry.  
+Antes de empezar, descargue e instale la interfaz de línea de mandatos de Cloud Foundry. 
 
 <p>
 <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(se abre en un separador o ventana nueva)"><img class="image" src="images/btn_cf_commandline.svg" alt="Descargar interfaz de línea de mandatos de Cloud Foundry" /> </a>
@@ -56,11 +57,11 @@ antes de volver a desplegarla en {{site.data.keyword.Bluemix_notm}}.
 
     Preste atención al archivo `manifest.yml`. Cuando despliegue su app nuevamente en
 {{site.data.keyword.Bluemix_notm}}, este archivo se utiliza para determinar el URL de la aplicación, la
-asignación de memoria, el número de instancias y otros parámetros cruciales. Puede [obtener más información sobre el archivo de manifiesto ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html "icono de enlace externo"){: new_window} en la documentación de Cloud Foundry. 
+asignación de memoria, el número de instancias y otros parámetros cruciales. Puede [obtener más información sobre el archivo de manifiesto ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html "icono de enlace externo"){: new_window} en la documentación de Cloud Foundry.
 
-    Preste también atención al archivo `README.md`, que contiene detalles como instrucciones de compilación, si procede. 
+    Preste también atención al archivo `README.md`, que contiene detalles como instrucciones de compilación, si procede.
 
-    Nota: si la aplicación es una app Liberty, debe compilarla antes de volverla a desplegar. 
+    Nota: si la aplicación es una app Liberty, debe compilarla antes de volverla a desplegar.
 
   4. Conecte e inicie una sesión en {{site.data.keyword.Bluemix_notm}}.
 
@@ -68,7 +69,7 @@ asignación de memoria, el número de instancias y otros parámetros cruciales. 
 
   <pre class="pre">cf login -u <var class="keyword varname" data-hd-keyref="user_ID">nombre_usuario</var> -o <var class="keyword varname" data-hd-keyref="org_name">nombre_org</var> -s <var class="keyword varname" data-hd-keyref="space_name">nombre_espacio</var></pre>
 
-  Si está utilizando un ID federado, utilice la opción `-sso`. 
+  Si está utilizando un ID federado, utilice la opción `-sso`.
 
   <pre class="pre">cf login -u <var class="keyword varname" data-hd-keyref="user_ID">nombre_usuario</var> -o <var class="keyword varname" data-hd-keyref="org_name">nombre_org</var> -s <var class="keyword varname" data-hd-keyref="space_name">nombre_espacio</var> -sso</pre>
 

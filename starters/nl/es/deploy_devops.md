@@ -26,14 +26,15 @@ Git alojado que se desplegará automáticamente en {{site.data.keyword.Bluemix}}
 {{site.data.keyword.Bluemix_notm}} Classic Experience, pulse **ADD GIT**.
 2. En la ventana que se abre, asegúrese de que el recuadro de selección **Rellenar el repositorio con el paquete de apps del iniciador y habilitar el conducto (Build & Deploy)** está marcado. Se crea el repositorio Git. Si el código del iniciador está disponible,
 se carga en el repositorio. Además, el servicio de Delivery Pipeline que se ejecuta en {{site.data.keyword.jazzhub}} despliega la app.
-3. Para actualizar la app puede utilizar la línea de mandatos o Web IDE.  
+3. Para actualizar la app puede utilizar la línea de mandatos o Web IDE.
    **Si utiliza la línea de mandatos:**
    a. Clone el repositorio Git desde el URL de Git en la ventana Visión general de la app.
-   b. En su editor favorito, actualice el código.  
+   b. En su editor favorito, actualice el código.
    c. En la interfaz de línea de mandatos de Git, envíe los cambios.
 
    **Si utiliza el IDE Web:**
-   a. En la página Visión general de la app, pulse **Editar código**. El proyecto se abrirá en Web IDE.   b. Realice los cambios necesarios y, a continuación, envíelos con el soporte Git integrado.
+   a. En la página Visión general de la app, pulse **Editar código**. El proyecto se abrirá en Web IDE.
+   b. Realice los cambios necesarios y, a continuación, envíelos con el soporte Git integrado.
 
 La app actualizada se vuelve a desplegar para {{site.data.keyword.Bluemix_notm}}.
 
