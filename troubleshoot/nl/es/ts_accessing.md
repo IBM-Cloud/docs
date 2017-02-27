@@ -49,7 +49,7 @@ Siga el proceso de registro para crear una cuenta de {{site.data.keyword.Bluemix
 {: tsResolve}
 
 En función de cómo se haya configurado su cuenta, se podrán aplicar algunas de estas opciones de inicio de sesión: 
- * Los usuarios de SoftLayer con ID de SoftLayer deben iniciar sesión a través del [Portal de cliente ![icono de enlace externo](../icons/launch-glyph.svg)](https://control.softlayer.com){: new_window}. 
+ * Los usuarios de SoftLayer con ID de SoftLayer deben iniciar sesión a través del [Portal de cliente ![icono de enlace externo](../icons/launch-glyph.svg)](https://control.softlayer.com){: new_window}.
  * Los usuarios de SoftLayer con un ID de IBM y con o sin una cuenta de Bluemix enlazada pueden iniciar sesión mediante el [Portal de cliente ![icono de enlace externo](../icons/launch-glyph.svg)](https://control.softlayer.com){: new_window} para abrir el Portal de cliente de SoftLayer o mediante la [consola de Bluemix ![icono de enlace externo](../icons/launch-glyph.svg)](https://console.{DomainName}){: new_window} para abrir el panel de control Infraestructura. 
  * Los usuarios de Bluemix sin una cuenta de SoftLayer enlazada deben iniciar sesión mediante la consola de Bluemix.
  * Los usuarios de Bluemix con una cuenta de SoftLayer enlazada pueden iniciar sesión mediante la [consola de Bluemix ![icono de enlace externo](../icons/launch-glyph.svg)](https://console.{DomainName}){: new_window} o el [Portal de cliente ![icono de enlace externo](../icons/launch-glyph.svg)](https://control.softlayer.com){: new_window}.

@@ -214,11 +214,11 @@ En lugar de codificar las credenciales en la app, utilice parámetros de conexi�
 ```
 process.env.VCAP_SERVICES
 ```
-Para obtener más información sobre los mandatos que puede utilizar en otros lenguajes de programación, consulte [Java ![icono de enlace externo](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} y [Ruby ![icono de enlace externo](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}.
+Para obtener más información sobre los mandatos que puede utilizar en otros lenguajes de programación, consulte [Java ![icono de enlace externo](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} y [Ruby ![icono de enlace externo](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}. 
+ 
 
-
-
-
+ 
+ 
 
 
 
@@ -278,7 +278,7 @@ Si cree que algún servicio de {{site.data.keyword.Bluemix_notm}} no está dispo
 	* Utilice otro navegador.
 	* Rearranque el direccionador, el módem y el sistema. Rearrancar estos dispositivos puede borrar varios errores que provocan el error 502. 
   * Espere y vuelva a intentarlo más adelante. En algunas instancias, pueden ocurrir problemas temporales en el proveedor de servicios de Internet o en los servicios de {{site.data.keyword.Bluemix_notm}}. Puede esperar a que se resuelvan los problemas temporales.
-  * Si el problema todavía existe, póngase en contacto con el equipo de soporte de {{site.data.keyword.Bluemix_notm}}. Consulte [Cómo ponerse en contacto con el equipo de soporte de {{site.data.keyword.Bluemix_notm}} ![icono de enlace externo](../icons/launch-glyph.svg)](/docs/support/index.html#contacting-bluemix-support){: new_window} para obtener más información.  
+  * Si el problema todavía existe, póngase en contacto con el equipo de soporte de {{site.data.keyword.Bluemix_notm}}. Consulte [Cómo ponerse en contacto con el equipo de soporte de {{site.data.keyword.Bluemix_notm}} ![icono de enlace externo](../icons/launch-glyph.svg)](/docs/support/index.html#contacting-bluemix-support){: new_window} para obtener más información. 
 
 
 
