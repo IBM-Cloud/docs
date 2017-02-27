@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-02-23"
+lastupdated: "2016-02-27"
 
 ---
 
@@ -360,7 +360,6 @@ You can set default parameters for all the entities in a package. You do this by
   wsk package get custom parameters
   ```
   {: pre}
-  ```
   ```
   ok: got package custom, displaying field parameters
   ```

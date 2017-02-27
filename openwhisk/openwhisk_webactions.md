@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-02-23"
+lastupdated: "2016-02-27"
 
 ---
 
@@ -18,9 +18,9 @@ lastupdated: "2016-02-23"
 Web actions are OpenWhisk actions annotated to quickly enable you to build web based applications. This allows you to program backend logic which your web application can access anonymously without requiring an OpenWhisk authentication key. It is up to the action developer to implement their own desired authentication and authorization (i.e. OAuth flow).
 {: shortdesc}
 
-**Note:** This feature is currently an experimental offering that enables users an early opportunity to try it out and provide feedback.
+Web action activations will be associated with the user that created the action. This actions defers the cost of an action activation from the caller to the owner of the action. 
 
-Web action activations will be associated with the user that created the action. This actions defers the cost of an action activation from the caller to the owner of the action. **Note**: This feature is currently an experimental offering that enables users an early opportunity to try it out and provide feedback.
+**Note**: This feature is currently an experimental offering that enables users an early opportunity to try it out and provide feedback.
 
 Let's take the following JavaScript action `hello.js`,
 ```javascript
@@ -152,12 +152,11 @@ curl https://openwhisk.{DomainName}/api/v1/experimental/web/guest/demo/hello.jso
 {: pre}
 ```json
 {
-    "name": "Jane"
+    "name": "Jane",
     "__ow_meta_verb": "get",
     "__ow_meta_headers": {
         "accept": "*/*",
-        "user-agent": "curl/7.51.0",
-        ...
+        "user-agent": "curl/7.51.0"
     },
     "__ow_meta_path": "/response"
 }
