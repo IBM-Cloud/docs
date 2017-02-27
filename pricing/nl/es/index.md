@@ -288,13 +288,10 @@ se pagaría con un plan basado en un modelo de precios de nivel por bloque:
 
 |Cantidad de elementos |	Cálculo del cargo |	Precio total|
 |------------------|-----------------------|---------------|
-|500 |	El número de elementos cae en el Nivel 1, por lo que el precio
-total es $1000 USD. |	$1000 USD|
-|1500 |	El número de elementos cae en el Nivel 2, por lo que el precio
-total es $1900 USD. |	$1900 USD|
+|500 |	El número de elementos cae en el Nivel 1, por lo que el precio total es $1000 USD. |	$1000 USD|
+|1500 |	El número de elementos cae en el Nivel 2, por lo que el precio total es $1900 USD. |	$1900 USD|
 |... |	... |	...|
-|5200 |	El número de elementos cae en el Nivel 5, por lo que el precio
-total es $5000 USD. |	$5000 USD|
+|5200 |	El número de elementos cae en el Nivel 5, por lo que el precio total es $5000 USD. |	$5000 USD|
 {:caption="Table 6. Charge calculation by using the block tier pricing model" caption-side="top"}
 
 ### Concesiones gratuitas para servidores virtuales
@@ -386,9 +383,10 @@ los mandatos <strong>GET</strong> se consideran llamadas de API ligeras.
 Añada el número de GB y deduzca 2 GB de concesión gratuita. Se cargan 148 GB al mes. Sustraiga la concesión gratuita de 50.000 para llamadas de api ligeras y 10.000 para llamadas de api pesadas. El precio de almacenamiento total incluye las partes siguientes:</p>
 <pre class="codeblock">
 <codeblock>
-148 x 1 = 148
-(450,000 / 1000) x 0.03 = 13,5 dólares
-(90,000 / 1000) x 0.15 = 13,5 dólares</codeblock>
+    148 x 1 = 148
+    (450,000 / 1000) x 0.03 = 13,5 dólares
+    (90,000 / 1000) x 0.15 = 13,5 dólares
+</codeblock>
 </pre>
 <p>
 El precio total es 148 + 13.5 + 13.5 = 175 dólares.</p></dd>
@@ -434,7 +432,7 @@ Para abrir la página **Panel de control de uso**, pulse **Cuenta** &gt; *nombre
 
 La cuenta se factura al propietario por el uso total en el que han incurrido todas las organizaciones al final de cada ciclo de facturación. Cada ciclo de factura dura un mes.
 
-Los propietarios de las cuentas pueden filtrar el resumen de uso por región y organización. Si es propietario de una cuenta, establezca **Organización** en **Todas las organizaciones** para ver el uso en toda la cuenta para un período de 12 meses. Pulse un mes concreto para ver el uso para ese mes. Los cargos mostrados representan la cantidad que se le factura a usted, como propietario de cuenta, para dicho mes.
+Los propietarios de las cuentas pueden filtrar el resumen de uso por región y organización. Si es propietario de una cuenta, establezca **Organización** en **Todas las organizaciones** para ver el uso en toda la cuenta para un período de 12 meses. Pulse un mes concreto para ver el uso para ese mes.  Los cargos mostrados representan la cantidad que se le factura a usted, como propietario de cuenta, para dicho mes.
 
 Si selecciona una organización específica para la **Organización**, puede ver la utilización total para esa organización, incluido cualquier uso como parte de un nivel libre. Los cargos que se muestran para la organización no son los cargos que se le facturan. El uso de la capa libre se muestra como gratuita en el nivel de cuenta, pero no a nivel organizativo. Por lo tanto, cuando se ve el uso de la organización, verá el uso real para esa organización incluido el uso gratuito y de pago. Todo el uso organizativo se despliega en el uso de la cuenta una vez que se haya eliminado la capa libre.
 
