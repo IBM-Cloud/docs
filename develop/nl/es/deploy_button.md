@@ -172,7 +172,8 @@ En el archivo de manifiesto puede especificar:
 </pre>
    </li>
    </ul>
-	<li> Si la app debe compilarse antes de que se pueda desplegar, debe incluir un archivo de compilación en el repositorio. Si se detecta un archivo script de construcción en el directorio raíz del repositorio, se desencadenará una compilación automatizada del código antes del despliegue. 	
+	<li> Si la app debe compilarse antes de que se pueda desplegar, debe incluir un archivo de compilación en el repositorio. Si se detecta un archivo script de construcción en el directorio raíz del repositorio, se desencadenará una compilación automatizada del código antes del despliegue. 
+	
 	Compiladores soportados: 
 	    <ul>
 		<li> <a href="http://ant.apache.org/manual/using.html" target="_blank">Ant:</a> /<code>build.xml</code>, que crea la salida en la carpeta <code>./output/</code> </li>
@@ -192,7 +193,7 @@ En el archivo de manifiesto puede especificar:
 <li>En el directorio raíz del proyecto, cree un directorio <code>.bluemix</code>.</li>
 <li>Suba el archivo <code>pipeline.yml</code> al repositorio <code>.bluemix</code>.</li>
 </ol> </li>
-	<li>Para desplegar una app en un contenedor utilizando <strong>IBM Containers</strong>, debe incluir Dockerfile en el directorio raíz del repositorio y, en un directorio <code>.bluemix</code>, incluya un archivo <code>pipeline.yml</code>.
+	<li>Para desplegar una app en un contenedor utilizando <strong>IBM Containers</strong>, debe incluir Dockerfile en el directorio raíz del repositorio y, en un directorio <code>.bluemix</code>, incluya un archivo <code>pipeline.yml</code>. 
 	<ul>
 	    <li>El Dockerfile actúa como un tipo de script de construcción para la app. Si se detecta un Dockerfile en el repositorio, la app se creará automáticamente en una imagen antes de que se despliegue en un contenedor. Si la app debe compilarse antes de que se incorpore la app en una imagen, incluya un script de construcción para la app, así como un Dockerfile, como se ha descrito anteriormente.</li>
 	    <li> Para obtener más información sobre cómo crear Dockerfiles, <a href="https://docs.docker.com/reference/builder/" target="_blank">consulte la documentación de Docker</a>. </li>
