@@ -299,7 +299,7 @@ Ahora puede configurar la aplicación para que utilice recursos externos. Para o
 
 Si tiene una instancia de servicio creada y enlazada a apps en una región, puede utilizar eta instancia de servicio en otra región mediante uno de los métodos siguientes:
 
-  * Utilice las credenciales del servicio para configurar directamente su instancia de app. Consulte [Habilitación de apps externas para que utilice el servicio {{site.data.keyword.Bluemix_notm}}](#accser_external) para obtener más información. 
+  * Utilice las credenciales del servicio para configurar directamente su instancia de app. Consulte [Habilitación de apps externas para que utilice el servicio {{site.data.keyword.Bluemix_notm}}](#accser_external) para obtener más información.
   * Crear un servicio proporcionado por el usuario como un puente.
 
 	Supongamos que va a iniciar la región en la que desea utilizar la instancia de servicio. Para utilizar una instancia de servicio existente en otra región, siga estos pasos:
