@@ -26,6 +26,8 @@ After you open {{site.data.keyword.DRA_short}} from your toolchain, click **Deve
 
 The data that {{site.data.keyword.DRA_short}} uses to populate its dashboards is mined automatically from your team's source-control repository. By default, this data is not restricted to any particular period or set of labels, but you can configure the data from the **Settings** menu. 
 
+On any chart, click the **Information** or **Guidance** buttons for more information about what the data means and how you can apply it to your project. 
+
 ### Error Proneness
 
 *Error proneness* is the likelihood that a file or commit might generate defects according to historical trends, committer experience, change frequency, change weight, and other factors. 

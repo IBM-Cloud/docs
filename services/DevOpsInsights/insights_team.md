@@ -26,6 +26,8 @@ After you open {{site.data.keyword.DRA_short}} from your toolchain, click **Team
 
 The data that {{site.data.keyword.DRA_short}} uses to populate its dashboards is mined automatically from your team's source-control repository. By default, this data is not restricted to any particular period or set of labels, but you can configure the data from the **Settings** menu. 
 
+On any chart, click the **Information** or **Guidance** buttons for more information about what the data means and how you can apply it to your project. 
+
 ### Social Coding
 
 The Social Coding graph shows the connections between your project contributors in a visual, highly interactive way. Each node in the graph represents a developer. The size of a node scales logarithmically to a developer's contributions to a project. The lines between nodes indicate collaboration; the thicker a line is, the more two developers collaborated over the selected period. 
