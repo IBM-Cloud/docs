@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-25"
+  years: 2016, 2017
+lastupdated: "2017-02-28"
 ---
 
 {:new_window: target="_blank"}
@@ -32,13 +32,16 @@ The {{site.data.keyword.iotdriverinsights_short}} service includes subservices t
 {: #starter_exp}
 Experience the capabilities of {{site.data.keyword.iotdriverinsights_short}} and other IoT for Automotive services. Visit the [{{site.data.keyword.iot4auto_short}} Starter Experience](https://iot-for-automotive-starter-experience.mybluemix.net){:new_window} page to play an interactive demo and try out some starter apps that provide examples of how you can use IoT Automotive services on {{site.data.keyword.Bluemix_notm}} to build automotive solutions.
 
+## Service availability and updates
+{: #service_up}
+To find out about the status and any upcoming planned service maintenance updates for the {{site.data.keyword.iotdriverinsights_short}} API services on {{site.data.keyword.Bluemix_notm}}, go to the [IBM Watson IoT Service Health Dashboard](https://status.internetofthings.ibmcloud.com).
 
 # Related Links
 {: #rellinks}
 
 ## Related links
 {: #general}
-
+* [IBM Watson IoT Service Health Dashboard](https://status.internetofthings.ibmcloud.com){:new_window}
 * [Getting started with {{site.data.keyword.iot4auto_short}} ](../IoTAutomotive/index.html){:new_window}
 * [Getting started with {{site.data.keyword.iotmapinsights_short}}](../IotMapInsights/index.html){:new_window}
 * [Getting started with {{site.data.keyword.iot_full}}](https://www.ng.bluemix.net/docs/services/IoT/index.html){:new_window}
