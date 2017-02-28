@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-13"
+lastupdated: "2017-02-27"
 
 ---
 <!-- Copyright info and last updated date at top of file: REQUIRED
@@ -37,7 +37,7 @@ To deploy a template, follow these steps:
 
 <!-- Use ordered list markup for the step section. Include code examples as needed. -->
 
-1. Click **Templates**.
+1. Click **Library**.
 2. Click **Bring your own template** if you want to create and deploy a template from scratch or click one of the pre-built templates.
 3. If you selected a pre-built template, read the information about the template and click **Deploy an Instance**.
 4. In the Deploy Instance pane, provide the required information as the instance name. If you are creating a template from scratch, specify the template format (JSON or HCL) and the type of the cloud provider where you want to deploy the template. 
