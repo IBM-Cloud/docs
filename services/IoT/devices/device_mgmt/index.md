@@ -23,7 +23,7 @@ The {{site.data.keyword.iot_full}} recognizes two classes of device: **managed d
 
 **Managed devices** are defined as devices that contain a device management agent. A device management agent is a set of logic that allows the device to interact with the {{site.data.keyword.iot_short_notm}} Device Management service by using the Device Management Protocol. Managed devices can perform device management operations including location updates, firmware downloads and updates, reboots, and factory resets.
 
-The Device Management Protocol defines a set of supported operations. A device management agent can support a subset of the operations, but the **managed devices** and **unmanaged devices** operations must be supported. A device that supports firmware action operations must also support observation.
+The Device Management Protocol defines a set of supported operations. A device management agent can support a subset of the operations, but the **manage** and **unmanage** operations must be supported. A device that supports firmware action operations must also support observation.
 
 The Device Management Protocol is built on top of the MQTT messaging protocol. For more information about how the Device Management Protocol interacts with MQTT, see [MQTT connectivity for devices](../mqtt.html).
 
