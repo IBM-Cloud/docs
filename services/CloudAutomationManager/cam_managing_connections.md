@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-24"
+lastupdated: "2017-02-28"
 
 ---
 <!-- Copyright info and last updated date at top of file: REQUIRED
@@ -41,7 +41,11 @@ To add a new connection, follow these steps:
 
 2. Click **Create Connections**. 
 
-3. Select the cloud provider to which you want you connect. The supported cloud providers are Amazon EC2 and Bluemix.
+3. Select the cloud provider to which you want you connect. The following cloud providers are supported:
+ - Bluemix
+ - SoftLayer
+ - Amazon EC2
+ - vSphere (Beta)
 
 4. Click **Next**.
 
