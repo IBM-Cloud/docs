@@ -26,7 +26,7 @@ and [Guides](../guides/index.html#-guides) assume you know some basic things abo
 
 To access {{site.data.keyword.cloudant}},
 you must have either a [{{site.data.keyword.cloudant}} account](../api/account.html),
-or an [{{site.data.keyword.bluemix}} account](../offerings/bluemix.html).
+or an [{{site.data.keyword.Bluemix}} account](../offerings/bluemix.html).
 
 ## HTTP API
 
