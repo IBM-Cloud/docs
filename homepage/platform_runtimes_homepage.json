@@ -8,7 +8,7 @@
       "img": "homepage/images/javaweb_featured.svg",
       "href": "runtimes/liberty/getting-started.html"
     }, {
-      "title": "SDK for Nodejs",
+      "title": "SDK for Node.js",
       "img": "homepage/images/node_featured.svg",
       "href": "runtimes/nodejs/getting-started.html"
     }, {
