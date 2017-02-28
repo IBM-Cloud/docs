@@ -12,7 +12,7 @@ lastupdated: "2017-02-24"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Getting started with {{site.data.keyword.DRA_short}} (Experimental)
+# Getting started with {{site.data.keyword.DRA_short}} (Beta)
 {: #gettingstarted}
 
 {{site.data.keyword.DRA_full}} applies code, team, and continuous delivery analytics to your busiest DevOps projects.  
