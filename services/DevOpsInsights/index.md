@@ -24,7 +24,7 @@ lastupdated: "2017-02-24"
 
    * Developer Insights provides a comprehensive way to explore your project’s development risk. You can identify files with high error proneness and get a compliance view of the project against DevOps practices.
 
-   * Team Dynamics uses social coding analysis to help you learn how your team members work together and understand what they need to do to collaborate better.
+   * Team Dynamics uses social coding analysis to help you learn how your team collaborates and understand what it can change to work better.
 
    * Deployment Risk is like a safety net for your continuous delivery pipeline. It analyzes the results from unit tests, functional tests, application scans, and code coverage tools at specified gates in your deployment process and prevents risky changes from being released. It also offers data visualizations and analysis that you can use to understand your project's health at a glance.
 
