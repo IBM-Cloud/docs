@@ -128,7 +128,9 @@ Initialize the {{site.data.keyword.amashort}} Authorization Manager in Objective
 ```
 {: codeblock}
 
-**Note:**
+
+####Note:
+{: #note notoc}
 
 * Replace `<your_module_name>` with the module name of your project. For example, if your module name is `Cordova`, then the import line should be `#import "Cordova-Swift.h"` Find the module name go to the
 `Build Settings`  tab,  `Packaging` > `Product Module Name`.
