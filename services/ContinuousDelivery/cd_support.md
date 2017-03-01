@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-2-8"
+lastupdated: "2017-2-28"
 
 ---
 
@@ -21,15 +21,15 @@ The {{site.data.keyword.contdelivery_full}} team actively monitors the Stack Ove
  <td align="center">
  <strong>Stack Overflow</strong>
   <p>
-   <a class="xref" href="http://stackoverflow.com/questions/ask?tags=ibm-bluemix,continuous-delivery" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/ask-a-question.png" alt="Ask a question"/></a></p>
+   <a class="xref" href="http://stackoverflow.com/questions/ask?tags=ibm-bluemix,http://stackoverflow.com/questions/tagged/devops-services" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/ask-a-question.png" alt="Ask a question"/></a></p>
    <p>
-    <a class="xref" href="http://stackoverflow.com/questions/tagged/continuous-delivery" target="_blank" title="(Opens in a new tab or window)">Show recent<img class="image" src="../../icons/launch-glyph.svg" alt="External link icon"/></a> {{site.data.keyword.contdelivery_short}} questions on Stack Overflow.</p></td>
+    <a class="xref" href="http://stackoverflow.com/questions/tagged/devops-services" target="_blank" title="(Opens in a new tab or window)">Show recent<img class="image" src="../../icons/launch-glyph.svg" alt="External link icon"/></a> {{site.data.keyword.contdelivery_short}} questions on Stack Overflow.</p></td>
   <td align="center">
   <strong>dW Answers</strong>
    <p>
-   <a class="xref" href="https://developer.ibm.com/answers/questions/ask/?topics=continuous-delivery,bluemix" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/ask-a-question.png" alt="Ask a question"/></a></p>
+   <a class="xref" href="https://developer.ibm.com/answers/questions/ask/?topics=devops-services,bluemix" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/ask-a-question.png" alt="Ask a question"/></a></p>
    <p>
-    <a class="xref" href="https://developer.ibm.com/answers/topics/continuous-delivery.html" target="_blank" title="(Opens in a new tab or window)">Show recent<img class="image" src="../../icons/launch-glyph.svg" alt="External link icon"/></a> {{site.data.keyword.contdelivery_short}} questions on dW Answers.</p></td>
+    <a class="xref" href="https://developer.ibm.com/answers/topics/devops-services.html" target="_blank" title="(Opens in a new tab or window)">Show recent<img class="image" src="../../icons/launch-glyph.svg" alt="External link icon"/></a> {{site.data.keyword.contdelivery_short}} questions on dW Answers.</p></td>
   </table>  
 
 
