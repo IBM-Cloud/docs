@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//IBM//DTD DITA IBM Map//EN"
+ "ibm-map.dtd">
+
+
+<map xml:lang="pt-br">
+	<title>Introdução ao Streaming Analytics</title>
+	
+	<!--About information-->
+	
+	<topicref href="index.html#gettingstarted" navtitle="Streaming Analytics" format="html" scope="peer">
+		<topicref href="index.html#gettingstarted" navtitle="Introdução" format="html" scope="peer"/>
+		<topicref href="StreamingAnalytics.html#about" navtitle="Sobre" format="html" scope="peer" chunk="to-content">
+			<topicref href="r_integrating_cloudant_rest.html#tutorials" format="html" navtitle="Integrando a outros serviços" scope="peer"/>
+			<topicref href="c_streams_console.html#console" navtitle="Console do Streaming Analytics" format="html" scope="peer"/>
+			<topicref href="r_service_dashboard.html#dashboard" navtitle="Painel de serviço" format="html" scope="peer"/>
+			<topicref href="c_ha.html#c_ha" navtitle="Alta disponibilidade do Streaming Analytics" format="html" scope="peer"/>
+		</topicref>
+		
+		<!--Starter applications-->
+		<topicref href="c_starterapps.html#starterapps" navtitle="Usando os aplicativos iniciadores" format="html" scope="peer" chunk="to-content">
+			<topicref href="t_starter_app_deploy.html#starterapps_deploy" format="html" scope="peer" navtitle="Implementando os apps iniciadores">
+			</topicref>
+		</topicref>
+		
+		<!--Deploying and developing-->
+		<topicref href="c_getting_app_bluemix.html#c_getting_app_bluemix" format="html" scope="peer" navtitle="Implementando e desenvolvendo seus apps" chunk="to-content">
+<topicref href="t_deploytocloud.html#t_deploytocloud" format="html"
+navtitle="Implementando aplicativos na nuvem" scope="peer"/>
+			<topicref href="t_develop_apps_python.html#t_develop_apps_python" format="html"
+navtitle="Desenvolvendo aplicativos Streams no Python" scope="peer"/>
+			<topicref href="c_beta_adapters.html#c_beta_adapters" navtitle="operadores suportados" format="html" scope="peer">
+				<topicref href="c_compatible_adapters.html#c_compatible_adapters" navtitle="Adaptadores compatíveis" format="html" scope="peer"/>
+				<topicref href="c_analytics_utilities.html#c_analytics_utilities" navtitle="Analíticos e utilitários compatíveis" format="html" scope="peer"/>
+				<topicref href="c_other_operators.html#c_other_operators" navtitle="Outros operadores" format="html" scope="peer"/>
+			</topicref>
+			<topicref navtitle="Ferramentas de desenvolvimento" href="c_beta_tooling.html#c_beta_tooling" format="html" scope="peer"/>
+			<topicref href="r_vcap_services.html#vcap_services" navtitle="Informações sobre VCAP_SERVICES" format="html" scope="peer"/>
+		</topicref>
+
+		<!--REST API docs-->
+		<topicref href="https://console.ng.bluemix.net/apidocs/220" format="html" navtitle="API de REST do Streaming Analytics" scope="external"/>
+
+		<!--Troubleshooting-->
+		<topicref href="ts_StreamingAnalytics.html#ts_StreamingAnalytics" format="html" navtitle="Solucionando problemas" scope="peer" chunk="to-content">
+		</topicref>
+	</topicref>
+	
+</map>
+
