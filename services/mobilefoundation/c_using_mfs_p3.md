@@ -30,7 +30,7 @@ Consider the following before you configure  {{site.data.keyword.mobilefoundatio
 ###  First steps
 {: #firststeps_p3}
 
-After you create the {{site.data.keyword.mobilefoundation_short}}: Developer Pro service instance, follow the procedure below to get started.
+After you create the {{site.data.keyword.mobilefoundation_short}}: Developer Pro service instance, follow the procedure to get started.
 
 ### Setting up connection to dashDB service instance
 {: #connect_dashdb_p3}
@@ -41,7 +41,7 @@ After the {{site.data.keyword.mobilefoundation_short}}: Developer Pro service in
 
 You can also create a new {{site.data.keyword.dashdbshort_notm}} for Transactions service instance, if you do not have one already existing.
 
-Follow the steps below to create a new dashDB for Transactions service instance:
+Follow these steps to create a new dashDB for Transactions service instance:
 
 1. In the *Overview* page select **Create New Service** section.
 
@@ -51,7 +51,7 @@ Follow the steps below to create a new dashDB for Transactions service instance:
 
 A new {{site.data.keyword.dashdbshort_notm}} for Transactions: EnterpriseForTransactions2.8.500 service instance is created, which provides a dedicated {{site.data.keyword.dashdbshort_notm}} instance with 8GB RAM and 2 vCPUs, and 500 GB of storage.
 
-Follow the steps below to connect to an existing {{site.data.keyword.dashdbshort_notm}} service instance or to the {{site.data.keyword.dashdbshort_notm}} for Transactions service instance that you just created:
+Follow these steps to connect to an existing {{site.data.keyword.dashdbshort_notm}} service instance or to the {{site.data.keyword.dashdbshort_notm}} for Transactions service instance that you just created:
 
 1. Select the {{site.data.keyword.Bluemix_notm}} `Organization` where the {{site.data.keyword.dashdbshort_notm}} service instance exists.
 
