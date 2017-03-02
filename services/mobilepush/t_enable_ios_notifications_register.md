@@ -45,7 +45,7 @@ Create a backend application in the Boilerplates section Bluemix® catalog, whic
 
 ##Pass the token to Push Notifications
 
-After the token is received from APNs, pass the token to Push Notifications as part of the ```registerDevice:withDeviceToken``` method.
+After the token is received from APNs, pass the token to Push Notifications as part of the `registerDevice:withDeviceToken` method.
 
 ###Objective-C
 
@@ -71,7 +71,7 @@ IMFPushClient* push = [IMFPushClient sharedInstance];
 
 ###Swift
 
-After the token is received from APNS, pass the token to Push Notifications as part of the ```didRegisterForRemoteNotificationsWithDeviceToken``` method.
+After the token is received from APNS, pass the token to Push Notifications as part of the `didRegisterForRemoteNotificationsWithDeviceToken` method.
 
 ```
 func application (application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData){

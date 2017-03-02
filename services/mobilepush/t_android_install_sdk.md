@@ -125,7 +125,7 @@ push.initialize(getApplicationContext());
 # Registering Android devices
 {: #android_register}
 
-Use the ```IMFPush.register()``` API to register the device with a Push Notification Service. For registering for Android devices, you first add the Google Cloud Messaging (GCM) information in the Bluemix push service configuration dashboard. For more information, see [Configuring credentials for Google Cloud Messaging](t_push_provider_android.html).
+Use the `IMFPush.register()` API to register the device with a Push Notification Service. For registering for Android devices, you first add the Google Cloud Messaging (GCM) information in the Bluemix push service configuration dashboard. For more information, see [Configuring credentials for Google Cloud Messaging](t_push_provider_android.html).
 
 Copy and paste the following code snippets into your Android mobile application.
 
@@ -170,7 +170,7 @@ To register the notificationListener object with Push, call the **MFPPush.listen
 	       push.listen(notificationListener);
 	   }
 	}
-```
+	```
 2. Build the project and run it on the device or emulator. When the onSuccess() method for the response listener in the register() method is invoked, it confirms that the device has successfully registered with Push Notification Service. At this time you can send a message as described in Sending basic push notifications.
 3. Verify that your devices have received your notification. If the application is in the foreground, the notification is handled by the **MFPPushNotificationListener**. If the application is in the background, a message is displayed in the notification bar.
 
