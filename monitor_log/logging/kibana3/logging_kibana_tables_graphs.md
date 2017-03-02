@@ -5,35 +5,21 @@ copyright:
 lastupdated: "2017-02-07"
 
 ---
-<!-- Copyright info and last updated date at top of file: REQUIRED
-    The copyright and lastupdated info is YAML content that must occur at the top of the MD file, before attributes are listed.
-    It must be --- surrounded by 3 dashes ---
-    The value "years" can contain just one year or a two years separated by a comma. (years: 2014, 2016)
-    The value "lastupdated" must be followed by a machine date in quotes in the following format: "YYYY-MM-DD"
-    The value for "years" must be indented 2 spaces under "copyright", followed by "lastupdated" which should start on its own non-indented line.
 
--->
 
-<!-- Common attributes used in the template are defined as follows: -->
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-<!-- Additional task topic: OPTIONAL
-This is the template for additional task topics that are needed beyond the basic tasks in the getting started index.md.  As needed, other task topics can be included, with titles such as "Configuring x", "Administering y", "Managing z", etc. This topic is a peer of the getting started index.md in the <servicename>.ditamap. This topic can have one level of children and they also can be referenced in <servicename>.ditamap -->
 
 # Creating tables and graphs from queries in Kibana
-<!-- for example, Uploading your data -->
 {: #logging_kibana_tables_graphs}
-<!-- Provide an appropriate ID above -->
 
-<!-- The short description section should include a sentence describing why this task is needed. For search engine optimization, include the service long name and "Bluemix". For example: -->
 
 Use Kibana to create graphs and tables for your queries to visualize your log data and compare results. You can access the Kibana dashboard from the **Logs** tab for your Cloud Foundry app. 
 {:shortdesc}
 
-<!-- Include a sentence to briefly introduce the steps/subtopics. Example: -->
 The Kibana dashboard is laid out as a series of rows, with each row containing one or more panels. You can configure panels to display graphical representations of your data. Use queries to determine which data to display. To create a graph or table, you must first create a blank row; then, create a panel. If you access the Kibana dashboard from the **Logs** tab on your CF app, the dashboard automatically displays two panels: a histogram and a table.
 
 Complete the following tasks to add a graph or table on the Kibana dashboard:
