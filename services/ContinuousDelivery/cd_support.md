@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-2-28"
+lastupdated: "2017-3-2"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2017-2-28"
 # Getting help and support for {{site.data.keyword.contdelivery_short}}    
 {: #cd_support}  
 
-The {{site.data.keyword.contdelivery_full}} team actively monitors the Stack Overflow and developerWorks forums for questions about the {{site.data.keyword.contdelivery_short}} service, toolchains, and pipelines. Don't be shy; ask a question!    
+The {{site.data.keyword.contdelivery_full}} team actively monitors the Stack Overflow and developerWorks forums for questions about the {{site.data.keyword.contdelivery_short}} service and DevOps Insights.   
 
 <table>
  <td align="center">
@@ -23,13 +23,13 @@ The {{site.data.keyword.contdelivery_full}} team actively monitors the Stack Ove
   <p>
    <a class="xref" href="http://stackoverflow.com/questions/ask?tags=ibm-bluemix,http://stackoverflow.com/questions/tagged/devops-services" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/ask-a-question.png" alt="Ask a question"/></a></p>
    <p>
-    <a class="xref" href="http://stackoverflow.com/questions/tagged/devops-services" target="_blank" title="(Opens in a new tab or window)">Show recent<img class="image" src="../../icons/launch-glyph.svg" alt="External link icon"/></a> {{site.data.keyword.contdelivery_short}} questions on Stack Overflow.</p></td>
+    <a class="xref" href="http://stackoverflow.com/questions/tagged/devops-services" target="_blank" title="(Opens in a new tab or window)">Show recent<img class="image" src="../../icons/launch-glyph.svg" alt="External link icon"/></a> {{site.data.keyword.Bluemix_notm}} DevOps Services questions on Stack Overflow.</p></td>
   <td align="center">
   <strong>dW Answers</strong>
    <p>
    <a class="xref" href="https://developer.ibm.com/answers/questions/ask/?topics=devops-services,bluemix" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/ask-a-question.png" alt="Ask a question"/></a></p>
    <p>
-    <a class="xref" href="https://developer.ibm.com/answers/topics/devops-services.html" target="_blank" title="(Opens in a new tab or window)">Show recent<img class="image" src="../../icons/launch-glyph.svg" alt="External link icon"/></a> {{site.data.keyword.contdelivery_short}} questions on dW Answers.</p></td>
+    <a class="xref" href="https://developer.ibm.com/answers/topics/devops-services.html" target="_blank" title="(Opens in a new tab or window)">Show recent<img class="image" src="../../icons/launch-glyph.svg" alt="External link icon"/></a> {{site.data.keyword.Bluemix_notm}} DevOps Services questions on dW Answers.</p></td>
   </table>  
 
 
