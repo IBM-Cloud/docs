@@ -39,7 +39,7 @@ cd your_app_name
 
 1. Add the minimum supported API or the deployment target declaration to the config.xml file for your Cordova application. The minSdkVersion value must be higher than 15. The targetSdkVersion value must always reflect the latest Android SDK that is available from Google.
 	* **Android** - With your editor, open the config.xml file and update the
-```<platform name="android">``` element with minimum and target SDK versions:
+`<platform name="android">` element with minimum and target SDK versions:
 
 	```
 	<!-- add deployment target declaration -->
@@ -112,9 +112,9 @@ Before you can use the Push Notification Service Cordova plug-in, you need to in
 	```
 	BMSClient.initialize("https://myapp.mybluemix.net","abcd1234-abcd-1234-abcd-abcd1234abcd");
 	```
-1. Modify the code snippet to use your Bluemix Route and appGUID parameters. Click the **Mobile Options** link in your Bluemix Application Dashboard to get the application Route and App GUID. Use the Route and App GUID values as your parameters in your ```BMSClient.initialize``` code snippet.
+1. Modify the code snippet to use your Bluemix Route and appGUID parameters. Click the **Mobile Options** link in your Bluemix Application Dashboard to get the application Route and App GUID. Use the Route and App GUID values as your parameters in your `BMSClient.initialize` code snippet.
 
-	**Note**: If you have created a Cordova app using the Cordova CLI, for example, Cordova create app-name command, put this Javascript code in the **index.js** file, after the ```app.receivedEvent``` function within the o```nDeviceReady: function()``` function to initialize the BMS client.
+	**Note**: If you have created a Cordova app using the Cordova CLI, for example, Cordova create app-name command, put this Javascript code in the **index.js** file, after the `app.receivedEvent` function within the `onDeviceReady: function()` function to initialize the BMS client.
 
 ```
 onDeviceReady: function() {
@@ -174,7 +174,7 @@ You can access the contents of the success response parameter in Javascript usin
 **var token = JSON.parse(response).token**
 
 
-Available keys are as follows: ```token```, ```userId```, and ```deviceId```.
+Available keys are as follows: `token`, `userId`, and `deviceId`.
 
 The following JavaScript code snippet shows how to initialize your Bluemix Mobile Services client SDK, register a device with the Push Notification Service, and listen to push notifications. You put this code in your Javascript file.
 

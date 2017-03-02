@@ -56,7 +56,7 @@ You can access the contents of the success response parameter in Javascript usin
 **var token = JSON.parse(response).token**
 
 
-Available keys are as follows: ```token```, ```userId```, and ```deviceId```.
+Available keys are as follows: `token`, `userId`, and `deviceId`.
 
 The following JavaScript code snippet shows how to initialize your Bluemix Mobile Services client SDK, register a device with the Push Notification Service, and listen to push notifications. You put this code in your Javascript file.
 

@@ -22,7 +22,9 @@ The following diagram shows an overview of the BFF architecture.
 
 Figure 1: BFF architecture
 
-The concept of a BFF is to abstract away common business logic and integration logic from you microservices or high-value {{site.data.keyword.Bluemix}} cloud services.With this architecture, you can deploy and release updates to your mobile or Web application and deploy new versions of your BFF by using continous delivery pipelines with the dev ops service.
+The concept of a BFF is to abstract away common business logic and integration logic from you microservices or high-value {{site.data.keyword.Bluemix}} cloud services.
+
+With this architecture, you can deploy and release updates to your mobile or Web application and deploy new versions of your BFF by using continous delivery pipelines with the dev ops service.
 
 If you have one BFF for iOS and a separate BFF for Android, the engineering teams that are delivering the function for these apps are not constrained to release features by a centralized API release schedule. This is a common goal for microservice and digital channel architectures - to free the teams to release function and features often, without being tightly coupled to another team's release schedule.
 
@@ -108,7 +110,7 @@ Follow the [README ![External link icon](../icons/launch-glyph.svg "External lin
 ## Using Backend for Frontend with a Developer Experience project
 {: #bff-devex}
 
-The {{site.data.keyword.Bluemix_notm}} Mobile Developer Experience is designed to make it simple to define a mobile project with a number of cloud services associated. You can easily add [{{site.data.keyword.mobilepushshort}} ![External link icon](../icons/launch-glyph.svg)](/docs/services/mobilepush/index.html), [Analytics ![External link icon](../icons/launch-glyph.svg)](/docs/services/mobileanalytics/index.html), and Data or Storage services. 
+The {{site.data.keyword.Bluemix_notm}} Mobile Developer Experience is designed to make it simple to define a mobile project with a number of cloud services associated. You can easily add [{{site.data.keyword.mobilepushshort}} ![External link icon](../icons/launch-glyph.svg)](/docs/services/mobilepush/index.html), [Analytics ![External link icon](../icons/launch-glyph.svg)](/docs/services/mobileanalytics/index.html), and Data or Storage services.
 
 The {{site.data.keyword.Bluemix_notm}} Mobile dashboard introduced the ability to integrate a BFF into a mobile project in the **Compute** page. You can add existing Compute service instances to your mobile project. After they are added, you can either generate a native SDK for your language choice or you can generate the full project and the SDK will be integrated into the source package of the project in the **Code** page. This is particularly useful when you are integrating with BFFs that are already well-defined.
 
@@ -171,7 +173,7 @@ Using the `--unzip` option will automatically extract the SDK into your current 
 ## Working with SDK generated models and APIs
 {: #models-apis}
 
-Now that your BFF is integrated into your mobile app using a generated SDK, you can start working with it. 
+Now that your BFF is integrated into your mobile app using a generated SDK, you can start working with it.
 
 The SDK comes with fully generated documentation in the `docs` directory and the `source` directory. You can open the `README.html` file for a web view of the docs or open the `README.md` file for a Markdown view of the docs. The Markdown docs are useful when you are publishing the SDK into Cocoapods or Maven Central.
 

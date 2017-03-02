@@ -20,7 +20,9 @@ As a developer on {{site.data.keyword.Bluemix_notm}}, you can use this plug-in t
 
 You can also see if your Cloud Foundry apps in a given space have REST API definitions that are valid for SDK generation. Finally, you can use the {{site.data.keyword.IBM_notm}} SDK Generator plug-in to validate any REST API definitions to ensure that they comply with the SDK generator requirements.
 
-This {{site.data.keyword.IBM_notm}} SDK Generator plug-in allows you to easily integrate your backend services to your app with a generated SDK. When a change to a REST API occurs, you can re-generate the SDK and replace the old one for a seamless SDK upgrade. You can also integrate the CLI into a devops pipeline and ensure that the SDK is always consistent with the API spec each time the app is built.The REST API definition must be valid and either hosted on a live server endpoint or a local file on your system. If the REST API definition is hosted, the relative URL must be defined in the `OPENAPI_SPEC` environment variable.
+This {{site.data.keyword.IBM_notm}} SDK Generator plug-in allows you to easily integrate your backend services to your app with a generated SDK. When a change to a REST API occurs, you can re-generate the SDK and replace the old one for a seamless SDK upgrade. You can also integrate the CLI into a devops pipeline and ensure that the SDK is always consistent with the API spec each time the app is built.
+
+The REST API definition must be valid and either hosted on a live server endpoint or a local file on your system. If the REST API definition is hosted, the relative URL must be defined in the `OPENAPI_SPEC` environment variable.
 
 
 ## Requirements
@@ -38,7 +40,7 @@ Ensure that you satisfy the following requirements.
 1. [Install the {{site.data.keyword.Bluemix}} CLI ![External link icon](../icons/launch-glyph.svg "External link icon")](http://clis.ng.bluemix.net/ui/home.html).
 
 2. Download the latest [SDK Gen plug-in ![External link icon](../icons/launch-glyph.svg "External link icon")](http://clis.ng.bluemix.net/ui/repository.html#bluemix-plugins).
-   
+
    1. Extract the downloaded file.
 
    2. [Install the plug-in ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/cli/reference/bluemix_cli/index.html#install_plug-in).
@@ -120,7 +122,7 @@ To validate a Cloud Foundry app's API spec that is running in {{site.data.keywor
 bluemix sdk validate [APP_NAME]
 ```
 {: codeblock}
-      
+
 To validate an SDK from the URL to an API spec document or a local JSON or Yaml file, use the following command.
 
 ```
