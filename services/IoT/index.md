@@ -2,11 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-22"
+lastupdated: "2017-03-03"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -68,6 +68,8 @@ For more information, see the following topics:
 
 # Related Links
 {: #rellinks}
+* [IBM Watson IoT Service Health Dashboard](https://status.internetofthings.ibmcloud.com){:new_window}
+
 ## Tutorials and Samples
 {: #samples}
 * [Recipes for connecting your devices ![External link icon](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}
