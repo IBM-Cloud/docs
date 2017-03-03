@@ -2,21 +2,21 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-08-11"
+lastupdated: "2017-02-28"
 
 ---
 
-{:new_window: target="\_blank"}
+{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
 
 
-# Analytics
+# Real-Time IoT Data Analytics
 {: #analytics}  
 
-Use Watson {{site.data.keyword.iot_full}} analytics to get the analytical information that you need from the raw data that your devices produce.  
+Use Watson {{site.data.keyword.iot_full}} analytics to get the real-time analytical information that you need from the raw data that your devices produce.  
 {: shortdesc}
 
 By using [boards and cards](data_visualization.html), you can view graphics that represent data set values from one or more devices for a quick overview and understanding of the device data.

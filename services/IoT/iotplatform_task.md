@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-21"
+lastupdated: "2017-03-02"
 
 ---
 
@@ -39,13 +39,17 @@ You can add devices one at a time from the {{site.data.keyword.iot_short_notm}} 
 
 To add a device from the {{site.data.keyword.iot_short_notm}} dashboard:
 
-1. Click the {{site.data.keyword.iot_short_notm}} service tile in your {{site.data.keyword.Bluemix}} dashboard to open the service dashboard or go directly to the dashboard by using the following URL:
+1. Click the {{site.data.keyword.iot_short_notm}} service tile in your {{site.data.keyword.Bluemix}} dashboard.
 
- ``https://org_id.internetofthings.ibmcloud.com/dashboard/#/overview ``
+2. On the service page, click **Launch** to start administering your {{site.data.keyword.iot_short_notm}} organization.
 
-    Where *org_id* is the ID of your {{site.data.keyword.Bluemix}} organization.
+  The {{site.data.keyword.iot_short_notm}} web console opens in a new browser tab at the following URL:
 
-2. On the service page, click **Launch Dashboard** to start administering your {{site.data.keyword.iot_short_notm}} organization.
+ ```
+ https://org_id.internetofthings.ibmcloud.com/dashboard/#/overview
+ ```
+
+    Where *org_id* is the ID of [your {{site.data.keyword.iot_short_notm}} organization](iotplatform_overview.html#organizations){: new_window}.
 
 3. In the Overview dashboard, from the menu pane, select **Devices** and then click **Add Device**.
 5. Select or create a device type for the device that you are adding.  
