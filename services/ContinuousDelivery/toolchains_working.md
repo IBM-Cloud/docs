@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-2-16"
+lastupdated: "2017-2-23"
 
 ---
  
@@ -17,7 +17,7 @@ A *toolchain* is a set of tool integrations that support development, deployment
 
 Toolchains are available in the Public and Dedicated environments on {{site.data.keyword.Bluemix}}. You can create a toolchain in two ways: use a template to create a toolchain or create a toolchain from an app. On {{site.data.keyword.Bluemix_notm}} Public, toolchains are available in the US South region only.
 
-Each toolchain is associated with a specific organization (org) and any user that is a member of that org can access its associated toolchains. Before you create a toolchain, make sure that you are working in the org where you want to create the toolchain. The org that you are currently working in is displayed in the menu bar. To switch to another org, click the org in the menu bar, and then select the org that you want to switch to.
+Each toolchain is associated with a specific organization (org), and any user that is a member of that org can be added to the access control list for any of its associated toolchains. For more information about access control for toolchains, see [Managing access](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){: new_window}. Before you create a toolchain, make sure that you are working in the org where you want to create the toolchain. The org that you are working in is displayed on the menu bar. To switch to another org, click the org in the menu bar and select the org that you want to switch to.
 
 
 ##Creating a toolchain from a template   
@@ -27,7 +27,7 @@ You can use a template as a starting point to [create a toolchain![External link
 
 1. If you use {{site.data.keyword.Bluemix_notm}} Public, log in to [{{site.data.keyword.Bluemix_notm}}![External link icon](../../icons/launch-glyph.svg "External link icon")](http://console.ng.bluemix.net){:new_window}.
 1. If you use {{site.data.keyword.Bluemix_notm}} Dedicated, log in to your Dedicated environment on {{site.data.keyword.Bluemix_notm}}.
-1. From the hamburger menu, click **Services**, and then click **DevOps**.
+1. From the hamburger menu, click **Services** and then click **DevOps**.
 1. On the DevOps dashboard, on the **Toolchains** page, click **Create a Toolchain**.
 1. On the **Create a Toolchain** page, click a toolchain template.
 1. Review the diagram of the toolchain that you are about to create. The diagram shows each tool integration in its lifecycle phase in the toolchain. 
