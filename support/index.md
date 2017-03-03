@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
   
-lastupdated: "2017-02-20"
+lastupdated: "2017-03-01"
 
 ---
 
@@ -182,7 +182,7 @@ Support language | English | English | English, Japanese | English, Japanese
 Assigned client success manager (CSM) | Not included | Not included | Not included | Included at<br> 8 hours per week
 {: caption="Table 1. Support levels" caption-side="top"}
 
-**Important:** Support for the Japanese lanugage is available for severity 2-4 tickets from 9 a.m. - 5 p.m. JST. Community and Third-party services are excluded.
+**Important:** Support in the Japanese language is available for severity 2-4 tickets on Monday through Friday from 9:00 a.m. to 5:00 p.m. JST, excluding national or statutory holidays. Community and third-party services are excluded. Severity 1 tickets are addressed in English only.
 
 ### Opening a support ticket
 {: #open-ticket}
