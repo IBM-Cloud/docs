@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-3-2"
+lastupdated: "2017-3-3"
 
 ---
 
@@ -97,9 +97,9 @@ When a product instance is selected, the **Instance details** pane is populated.
 {: #product-insights_usage}
 The usage information is shown on the **Usage** tab. Use the two drop-down lists to select the metric to display (if the product instance sends more than one metric) and the time period to be displayed.
 
-If the product instance sends more than one metric, use the first drop-down to select which metric to display. Select the time period to display from the second drop-down. The selections impact the sections below the drop-downs. The options for the time period for the sections are Last 24 hours, 1 week, 1 month, 6 months, 1 year.
+If the product instance sends more than one metric, use the first drop-down to select which metric to display. Select the time period to display from the second drop-down. The options for the time period for the sections are Last 24 hours, 1 week, 1 month, 6 months, 1 year.
 
-The first section shows the average maximum, average, average minimum, and total of the metric values over the selected time period. The second section shows a graph of the values within the time period with the x-axis period, which changes based on the selected time period. For example, Last 24 hours shows graph points for each hour, while the 1-week display shows graph points for each day within that week). The final section shows the maximum, average, and minimum for the selected graph point. To see the values for another point on the graph, drag the blue time bar left and right.
+The first section shows the average maximum, average, average minimum, and total of the metric values over the selected time period. The second section shows a graph of the values within the time period with the x-axis period, which changes based on the selected time period. For example, Last 24 hours shows graph points for each hour, while the 1-week display shows graph points for each day within that week). The final section shows the maximum, average, and minimum for the selected graph point. To see the values for another point on the graph, drag the time bar to a new position.
 
 A message is shown if there is no data for that time period. For example, a stopped instance would not provide data and no data will be shown for the time period when it was stopped. Other time periods can have usage to display. Change the time period in the drop-down to see other time periods.
 
@@ -139,7 +139,7 @@ Detailed information about creating a service, getting the updates to the enable
 
 You can also use Stack Overflow and IBM DeveloperWorks dw Answers forums to view or post questions. For questions about the service and getting start instructions, use IBM developerWorks dW Answers. When you post a question on either of those two forums, apply the following tagging rules so that the Bluemix development teams can easily see your question.
 
-* If you post on [Stack Overflow](http://stackoverflow.com/search?q=hybrid-connect+ibm-bluemix){:new_window}, tag your question with "ibm-bluemix" and "productinsights".
-* If you post on [IBM developerWorks dW Answers](https://developer.ibm.com/answers/smartspace/productinsights/){:new_window}, tag your questions with "productinsights" or "hybridconnect".
+* Click to post on [Stack Overflow](http://stackoverflow.com/search?q=hybrid-connect+ibm-bluemix){:new_window}, tag your question with "ibm-bluemix" and "productinsights".
+* Click to post on [IBM developerWorks dW Answers](https://developer.ibm.com/answers/smartspace/productinsights/){:new_window}, tag your questions with "productinsights" or "hybridconnect".
 
 For more information about using the forums, see the [Getting help](https://www.{DomainName}/docs/support/index.html#getting-help) topic.
