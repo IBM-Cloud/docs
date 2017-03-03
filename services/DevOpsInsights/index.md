@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-24"
+lastupdated: "2017-03-03"
 
 ---
 
@@ -15,27 +15,29 @@ lastupdated: "2017-02-24"
 # Getting started with {{site.data.keyword.DRA_short}} (Beta)
 {: #gettingstarted}
 
-{{site.data.keyword.DRA_full}} applies code, team, and continuous delivery analytics to your busiest DevOps projects.  
+{{site.data.keyword.DRA_full}} applies developer, team, and deployment analytics to your busiest DevOps projects. Use it to learn how compliant your team is with DevOps and developer practices, to manage risk in your codebase, and to automatically enforce quality standards in continuous delivery projects.
 {:shortdesc}
-
-{{site.data.keyword.DRA_short}} is an end-to-end analytics solution that you can use to learn how compliant your team is with DevOps practices. It gathers developer, test, build, and deployment insights in one place so that you can view them and take the appropriate actions. It reduces risk by highlighting defect likelihood and stops problem deployments before they happen.
 
 {{site.data.keyword.DRA_short}} comprises three groups of capabilities:
 
-   * Developer Insights provides a comprehensive way to explore your project’s development risk. You can identify files with high error proneness and get a compliance view of the project against DevOps practices.
+   * Developer Insights provides a comprehensive way to explore your project’s development maturity. You can identify files with high error proneness and get a compliance view of the project against developer practices.
 
-   * Team Dynamics uses social coding analysis to help you learn how your team collaborates and understand what it can change to work better.
+   * Team Dynamics uses social coding analysis to help you learn how your team collaborates and understand how it can work better.
 
-   * Deployment Risk is like a safety net for your continuous delivery pipeline. It analyzes the results from unit tests, functional tests, application scans, and code coverage tools at specified gates in your deployment process and prevents risky changes from being released. It also offers data visualizations and analysis that you can use to understand your project's health at a glance.
+   * Deployment Risk is like a continuous delivery safety net. It analyzes the results from unit tests, functional tests, application scans, and code coverage tools at specified gates in your deployment process and prevents risky changes from being released.
 
-**Note:** Developer Insights and Team Dynamics are available only to IBM employees and a limited number of external parties. 
+{{site.data.keyword.DRA_short}} is an integration in the Bluemix toolchain catalog. For more information about toolchains, see [Working with toolchains](/docs/services/ContinuousDelivery/toolchains_working.html).
 
-{{site.data.keyword.DRA_short}} is part of {{site.data.keyword.contdelivery_full}}. You can add {{site.data.keyword.DRA_short}} to any toolchain that uses {{site.data.keyword.deliverypipeline}} in {{site.data.keyword.contdelivery_short}}. {{site.data.keyword.DRA_short}} is also part of many toolchain templates. 
+To use {{site.data.keyword.DRA_short}}, you must add it to a toolchain. Many toolchain templates already include {{site.data.keyword.DRA_short}}. Be sure to also [add it to your {{site.data.keyword.Bluemix_notm}} org as a service](/docs/services/reqnsi.html) so that you can see information about {{site.data.keyword.DRA_short}} and access some of the toolchain templates that include it from your {{site.data.keyword.Bluemix_notm}} dashboard.  
 
-##Adding {{site.data.keyword.DRA_short}} to a toolchain
+## Adding {{site.data.keyword.DRA_short}} to a toolchain
 {: #catalog}
 
-To add {{site.data.keyword.DRA_short}} to a toolchain, complete these steps. If you created a toolchain from a template that includes {{site.data.keyword.DRA_short}}, skip to step 5.
+{{site.data.keyword.DRA_short}} is part of {{site.data.keyword.contdelivery_short}}. You can add {{site.data.keyword.DRA_short}} to any toolchain by selecting it from the tool integration catalog.
+
+{{site.data.keyword.DRA_short}} is also part of many toolchain templates. If you create a toolchain from a template that includes {{site.data.keyword.DRA_short}}, skip to [Using Insights](#using).
+
+To add {{site.data.keyword.DRA_short}} to a toolchain:
 
 1. Click **Add a Tool**.
 
@@ -43,16 +45,24 @@ To add {{site.data.keyword.DRA_short}} to a toolchain, complete these steps. If 
 
 3. Click **Create Integration**.
 
-4. On the toolchain's Overview page, click **{{site.data.keyword.DRA_short}}**.
+{{site.data.keyword.DRA_short}} is now available on your toolchain's Overview page.
 
-5. Complete your setup:
+**Important**: When you first add {{site.data.keyword.DRA_short}} to a toolchain, it does not gather data by default. You must enable data collection from the **Settings** menu before you can fully use {{site.data.keyword.DRA_short}}.
 
-	1. [Configure your {{site.data.keyword.deliverypipeline}} integration](/docs/services/DevOpsInsights/pipeline_integration.html).
-	2. Run the pipeline and review the [Developer Insights](/docs/services/DevOpsInsights/insights_developer.html), [Team Dynamics](/docs/services/DevOpsInsights/insights_team.html), and [Deployment Risk](/docs/services/DevOpsInsights/insights_risk.html) dashboards.
-	3. [Define policies](/docs/services/DevOpsInsights/create_criteria.html) for {{site.data.keyword.DRA_short}} to manage.
-	4. Run the pipeline again to verify that your project passes your policies.
+If you create a toolchain from a template that includes {{site.data.keyword.DRA_short}}, data collection is enabled by default. 
 
-**Note:** IBM internal organizations and a limited number of other organizations can configure Jenkins projects to integrate with {{site.data.keyword.DRA_short}}. For more information, [see Integrating DevOps Insights with Jenkins](/docs/services/DevOpsInsights/jenkins_integration.html).
+## Using {{site.data.keyword.DRA_short}}
+{: #using}
+
+If your toolchain includes GitHub, GitLab, or JIRA, {{site.data.keyword.DRA_short}} automatically provides you with information about your codebase and team after some initial data gathering and analysis. If your toolchain does not include any of those integrations, add one of them and then follow these steps: 
+
+1. From your toolchain's Overview page, click **{{site.data.keyword.DRA_short}}**.
+
+2. From the left navigation, click **Team Dynamics** or **Developer Insights** and then choose a data category. 
+
+3. Explore your project's data by viewing the dashboards in the data category. If you want to know more about a graph or what you might do with its information, click **Information** or **Guidance**. 
+
+After you explore Team Dynamics and Developer Insights, [configure Deployment Risk](/docs/services/DevOpsInsights/insights_risk.html) to help you enforce code quality. Deployment Risk is compatible with both the {{site.data.keyword.contdelivery_short}} pipeline and Jenkins.   
 
 # Related Links
 {: #rellinks notoc}
