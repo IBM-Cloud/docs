@@ -87,36 +87,40 @@ lastupdated: "2017-2-6"
     要从 {{site.data.keyword.iot_short_notm}} 写入区块链，必须首先链接服务。
      1. 在 {{site.data.keyword.Bluemix_notm}} 中，转至“仪表板”。
      2. 选择在其中部署了 {{site.data.keyword.blockchainfull_notm}} 的空间。
-     3. 单击**区块链**磁贴。
-     4. 在左侧窗格中，单击**服务凭证**。
-     5. 选择一组服务凭证，或单击**添加凭证**以创建一组新的服务凭证，并为其提供描述性名称，例如“IoT-Platform-integration”。
+     3. 单击**服务**下的**区块链**链接。
+     4. 单击**服务凭证**选项卡。
+     5. 选择一组服务凭证，或单击**新建凭证**以创建一组新的服务凭证，并为其提供描述性名称，例如“IoT-Platform-integration”。
      6. 在 JSON 格式的服务凭证中，记录以下参数：  
-      - 同级信息：`api_host` 和 `api_port`
+      - 同级信息：`api_host` 和 `api_port_tls`
       - 类型为 1（客户机）的用户的信息：`username` 和 `secret`  
 
       服务凭证的示例：
      ```json
      {
-      "credentials": {
-"peers": [
+      "peers": [
       {
-       "discovery_host": "169.44.63.203",
-       "discovery_port": "32904",
-       "api_host": "169.44.63.203",
-       "api_port_tls": "443",
-       "api_port": "80",
-       "type": "peer",
-       "network_id": "f621cde2-bdec-4897-b737-da4df144c41f",
-       "container_id": "5750f7734fb06c64d70c443b1dfcf39a3f5de7b51b792294c05dbdbe7d8356f7",
-       "id": "f621cde2-bdec-4897-b737-da4df144c41f_vp1",
-       "api_url": "http://169.44.63.203:32905"
-      },
+       "discovery_host": "fa68cbcbfcec4726932e53e2fa4f3afc-vp0.us.blockchain.ibm.com",
+        "discovery_port": 30003,
+        "api_host": "fa68cbcbfcec4726932e53e2fa4f3afc-vp0.us.blockchain.ibm.com",
+        "api_port_tls": 5003,
+        "api_port": 5003,
+        "event_host": "fa68cbcbfcec4726932e53e2fa4f3afc-vp0.us.blockchain.ibm.com",
+        "event_port": 31003,
+        "type": "peer",
+        "network_id": "fa68cbcbfcec4726932e53e2fa4f3afc",
+        "container_id": "e33f08f85988bf57ccfcf34ccdb80d72489e5bfb46786b570e1a74a6679f804e",
+        "id": "fa68cbcbfcec4726932e53e2fa4f3afc-vp0",
+        "api_url": "http://fa68cbcbfcec4726932e53e2fa4f3afc-vp0.us.blockchain.ibm.com:5003"
+    },
        ...
       ],
       "users": [
       {
-       "username": "user_type1_fa8e6ef0dc",
-       "secret": "33401036a9"
+       "enrollId": "user_type1_0",
+        "enrollSecret": "63c58806d6",
+        "affiliation": "group1",
+        "username": "user_type1_0",
+        "secret": "63c58806d6"
       },
        ...
        ]
@@ -126,7 +130,7 @@ lastupdated: "2017-2-6"
      **重要信息：**选择的用户不能是先前已向非所选同级注册的用户。
      7. 单击**返回到仪表板**以返回到 {{site.data.keyword.Bluemix_notm}}“仪表板”。
      8. 选择在其中部署了 {{site.data.keyword.iot_short_notm}} 的空间。
-     9. 单击 **{{site.data.keyword.iot_short_notm}}** 磁贴。
+     9. 单击**服务**下的 **{{site.data.keyword.iot_short_notm}}** 链接。
      10. 单击**启动**以打开 {{site.data.keyword.iot_short_notm}} 仪表板。
      11. 在 {{site.data.keyword.iot_short_notm}} 仪表板的菜单侧边栏中，选择**扩展**。
      12. 在**扩展**页面的“区块链”磁贴中，单击**设置**，或者如果已经链接了光纤网，请单击 ![“齿轮”图标](../images/gear.png "配置")。
@@ -152,7 +156,7 @@ lastupdated: "2017-2-6"
    </tr>
    <tr>
    <td>端口</td>
-   <td>`api_port` 端口号<ul><li>如果您的实现未使用 TLS，请使用端口 80。</li><li>如果您的实现使用了 TLS，请使用端口 443。</li></ul></td>
+   <td>`api_port_tls` 端口号</td>
    </tr>
    <tr>
    <td>用户标识</td>
@@ -164,7 +168,7 @@ lastupdated: "2017-2-6"
    </tr>
    <tr>
    <td>使用 TLS</td>
-   <td>开启或关闭</br>使用传输层安全性对光纤网中 {{site.data.keyword.iot_short_notm}} 与合同之间的通信加密。缺省端口号由您要连接的已部署 {{site.data.keyword.iot_short_notm}} 实例进行设置。</td>
+   <td>开启或关闭</br>使用传输层安全性对光纤网中 {{site.data.keyword.iot_short_notm}} 与合同之间的通信加密。当链接至 {{site.data.keyword.blockchainfull_notm}} 光纤网时，必须启用 TLS。</td>
    </tr></tbody>
    </table>  
     3. 单击**完成**。
@@ -221,9 +225,9 @@ IBM 提供了若干智能合同，您可以下载并按原样直接使用，也�
   2. 向早先连接的同级注册合同。  
   使用 REST 客户机（例如 CURL 或 Postman）来提交注册调用。有关注册调用的更多信息，请参阅 [POST registrar API 文档](https://ibmblockchainapi.mybluemix.net/swagger/ui.html?scheme=http&host=127.0.0.1:3000&basepath=/#!/Registrar/registerUser)。注册时，请使用以下信息：
   <ul>
-  <li>URL：`http://api_host:api_port/registrar`
-  <li>类型：POST
-  <li>头：`Content type: application/x-www-form-urlencoded`
+  <li>URL：`http://api_host:api_port_tls/registrar`
+<li>类型：POST
+  <li>头：`Content type: application/json`
   <li>有效内容：  
   ```json
    {  
@@ -237,26 +241,28 @@ IBM 提供了若干智能合同，您可以下载并按原样直接使用，也�
   有关部署调用的更多信息，请参阅 [POST devops/deploy API 文档](https://ibmblockchainapi.mybluemix.net/swagger/ui.html?scheme=http&host=127.0.0.1:3000&basepath=/#!/Devops/chaincodeDeploy)。  
   部署时，请使用以下信息：  
   <ul>
-  <li>URL：`http://api_host:api_port/devops/deploy`
+  <li>URL：`http://api_host:api_port_tls/chaincode`
   <li>类型：POST
-  <li>头：`Content type: application/x-www-form-urlencoded`
+  <li>头：`Accept: application/json`
+  <li>头：`Content type: application/json`
   <li>有效内容：  
   ```
   {
-      "type": "GOLANG",   
-      "chaincodeID": {  
-      "path": "http://github.com/{my organization}/{my project}/sample.go",
-      "name": "string"
+    "jsonrpc": "2.0",
+    "method": "deploy",
+    "params": {
+        "type": 1,
+        "chaincodeID":{
+              "path": "http://github.com/{my organization}/{my project}/sample.go"
+        },
+        "ctorMsg": {
+            "function":"init",
+            "args":["{\"version\":\"1.0\",\"nickname\":\"sample_contract\"}"]
+        },
+        "secureContext": "username"
     },
-    "ctorMsg": {  
-      "function": "init",  
-      "args": [
-        "{\"version\":\"1.0\}"}"
-      ]
-    },
-    "secureContext": "'username'",
-    "confidentialityLevel": "PUBLIC"
-  }
+    "id":1234
+}
   ```  
   </ul>  
   您的合同已部署到光纤网。  
@@ -266,16 +272,16 @@ IBM 提供了若干智能合同，您可以下载并按原样直接使用，也�
   要开始将设备数据写入新的区块链智能合同，必须首先将设备数据映射到合同。  
    1. 在 {{site.data.keyword.Bluemix_notm}} 中，转至“仪表板”。
    2. 选择在其中部署了 {{site.data.keyword.iot_short_notm}} 的空间。
-   3. 单击 **{{site.data.keyword.iot_short_notm}}** 磁贴。
+   3. 单击 **{{site.data.keyword.iot_short_notm}}** 服务。
    4. 单击**启动**以打开 {{site.data.keyword.iot_short_notm}} 仪表板。
    5. 通过单击菜单侧边栏中的 ![区块链](images/platform_blockchain.png "区块链")，选择**区块链**。
-   6. 单击**链接合同**。
-   6. 选择早先创建的光纤网的光纤网名称。
-   7. 输入以下信息：  
+   6. 单击**映射设备数据**。
+   7. 选择要在区块链中存储其设备数据的设备类型，以及要存储事件的事件名称。单击**下一步**。
+   8. 选择早先创建的光纤网的光纤网名称。单击**下一步**。
+   9. 输入以下信息并单击**下一步**：
      - 合同标识 - 粘贴您在部署合同时保存的由 128 个字符组成的合同标识。
      - 合同名称 - 输入名称以在 {{site.data.keyword.iot_short_notm}} 中标识合同。
-     - 选择要在区块链中存储其设备数据的设备类型。
-     - 选择要存储的事件的事件名称。  
+     
      **提示：**要查找设备的事件类型，请转至**设备**页面，然后单击设备名称以打开设备详细信息页面。向下滚动到**传感器信息**部分，以查看设备的可用事件和数据点的列表。
 
    11. 将可用设备属性映射到合同参数。   
@@ -315,7 +321,7 @@ IBM 提供了若干智能合同，您可以下载并按原样直接使用，也�
 <tr>
 <td>API 主机和端口</td>
 <td>`http://peer_URL:port`</td>
-<td>{{site.data.keyword.blockchainfull_notm}} REST API 的主机和端口，前缀为 `http://`。使用 `api_host` 地址和 `api_port` 端口号。</td>
+<td>{{site.data.keyword.blockchainfull_notm}} REST API 的主机和端口，前缀为 `https://`。使用 `api_host` 地址和 `api_port_tls` 端口号。</td>
 </tr>
 <tr>
 <td>链代码标识</td>

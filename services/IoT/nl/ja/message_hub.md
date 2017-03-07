@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-03"
+lastupdated: "2017-02-17"
 
 ---
 
@@ -22,7 +22,7 @@ lastupdated: "2017-02-03"
 
 {{site.data.keyword.messagehub}} を {{site.data.keyword.iot_short}} サービスに接続する前に、以下のタスクを完了してください。
 
-- {{site.data.keyword.Bluemix_notm}} カタログを使用して、{{site.data.keyword.iot_short_notm}} と同じ {{site.data.keyword.Bluemix_notm}} スペースに {{site.data.keyword.messagehub}} をセットアップします。{{site.data.keyword.messagehub}} について詳しくは、[{{site.data.keyword.messagehub}} の概説 ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/services/MessageHub/index.html){: new_window} を参照してください。
+- {{site.data.keyword.Bluemix_notm}} カタログを使用して、{{site.data.keyword.iot_short_notm}} と同じ {{site.data.keyword.Bluemix_notm}} スペースに {{site.data.keyword.messagehub}} をセットアップします。{{site.data.keyword.messagehub}} について詳しくは、[{{site.data.keyword.messagehub}} の概説](https://console.{DomainName}/docs/services/MessageHub/index.html)を参照してください。
 
 - {{site.data.keyword.Bluemix_notm}} 組織で開発者特権を持っていることと、{{site.data.keyword.Bluemix_notm}} を介してサインインしていることを確認してください。{{site.data.keyword.Bluemix_notm}} を介してサインインしていないか、この {{site.data.keyword.Bluemix_notm}} 組織で開発者特権を持っていない場合、{{site.data.keyword.messagehub}} や {{site.data.keyword.iot_short_notm}} のバインディングを許可することはできません。
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-24"
+lastupdated: "2017-02-17"
 
 ---
 
@@ -79,7 +79,7 @@ lastupdated: "2017-01-24"
 3. 输入成员的电子邮件地址。
 4. 为此成员选择角色。
 5. 输入主题、域名和签发者。
-   **重要信息：**确保`主题`、`域名`和`签发者`字段符合 OpenID Connect 的建议和标准。有关更多信息，请参阅 [OpenID Connect](http://openid.net/connect/) Web 站点。
+   **重要信息：**确保`主题`、`域名`和`签发者`字段符合 OpenID Connect 的建议和标准。有关更多信息，请参阅 [OpenID Connect ![外部链接图标](../../icons/launch-glyph.svg)](http://openid.net/connect/){: new_window} Web 站点。
 6. 可选：为成员设置到期日期。
 7. 单击**注册成员**。
 

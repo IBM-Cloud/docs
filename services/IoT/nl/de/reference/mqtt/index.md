@@ -41,7 +41,7 @@ Anwendungen und Geräte arbeiten mit unterschiedlichen Bereichen für MQTT-Topic
 - [MQTT-Messaging für Gateways](../../gateways/mqtt.html)
 
 ### Aufbewahrte Nachrichten
-{{site.data.keyword.iot_short_notm}} bietet eingeschränkte Unterstützung für die Funktion für aufbewahrte Nachrichten im MQTT-Messaging. Wenn das Flag für aufbewahrte Nachricht in einer MQTT-Nachricht, die von einem Gerät, Gateway oder von einer Anwendung an {{site.data.keyword.iot_short_notm}} gesendet wird, auf den Wert 'true' gesetzt ist, wird die Nachricht als nicht aufbewahrte Nachricht behandelt.{{site.data.keyword.iot_short_notm}}-Organisationen sind nicht dazu berechtigt, aufbewahrte Nachrichten zu publizieren. Der {{site.data.keyword.iot_short_notm}}-Service überschreibt das Flag für aufbewahrte Nachricht, sofern es auf den Wert 'true' gesetzt ist, und verarbeitet die Nachricht so, als wäre das Flag auf 'false' gesetzt.
+{{site.data.keyword.iot_short_notm}} bietet eingeschränkte Unterstützung für die Funktion für aufbewahrte Nachrichten im MQTT-Messaging. Wenn das Flag für aufbewahrte Nachricht in einer MQTT-Nachricht, die von einem Gerät, Gateway oder von einer Anwendung an {{site.data.keyword.iot_short_notm}} gesendet wird, auf den Wert 'true' gesetzt ist, wird die Nachricht als nicht aufbewahrte Nachricht behandelt. {{site.data.keyword.iot_short_notm}}-Organisationen sind nicht dazu berechtigt, aufbewahrte Nachrichten zu publizieren. Der {{site.data.keyword.iot_short_notm}}-Service überschreibt das Flag für aufbewahrte Nachricht, sofern es auf den Wert 'true' gesetzt ist, und verarbeitet die Nachricht so, als wäre das Flag auf 'false' gesetzt.
 
 ## Servicequalitätsstufen
 {: #qos-levels}

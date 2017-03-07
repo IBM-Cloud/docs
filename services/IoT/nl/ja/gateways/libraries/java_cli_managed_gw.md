@@ -398,7 +398,7 @@ public abstract void updateFirmware(DeviceFirmware deviceFirmware);
 
 以下のコード・サンプルは、ファームウェア・ダウンロードの実装の例を示しています。
 
-**重要:** ここに示すコード・サンプルには、スレッド・プールのセクションは含まれていません。ファームウェア・ハンドラーの完全な実装のサンプルは、 [IBM Java ゲトウェイ・サンプル GitHub リポジトリ](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java)にあります。
+**重要:** ここに示すコード・サンプルには、スレッド・プールのセクションは含まれていません。ファームウェア・ハンドラーの完全な実装のサンプルは、 [IBM Java ゲトウェイ・サンプル GitHub リポジトリリ](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java)にあります。
 
 ```java
 public void downloadFirmware(DeviceFirmware deviceFirmware) {
@@ -533,7 +533,7 @@ public void updateFirmware(DeviceFirmware deviceFirmware) {
 }
 ```
 
-完全なコードは、[ゲトウェイ・サンプル GitHub リポジトリ](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java)の `GatewayFirmwareHandlerSample` サンプルにあります。
+完全なコードは、[ゲトウェイ・サンプル GitHub リポジトリリ](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java)の `GatewayFirmwareHandlerSample` サンプルにあります。
 
 ### ステップ 4: `ManagedGateway` へのハンドラーの追加
 
@@ -589,7 +589,7 @@ public abstract void handleReboot(DeviceAction action);
 public abstract void handleFactoryReset(DeviceAction action);
 ```
 
-**注:** デバイス・アクション要求を転送するゲートウェイと接続されているデバイスの両方のために 1 つだけハンドラーをライブラリーに追加する必要があります。実装では、複数のデバイス・アクション要求を同時に処理するために、スレッドまたはスレッド・プールを作成する必要があります。スレッド・プールを使用するハンドラー実装のサンプルは、[iot-gateway-samples GitHub リポジトリ](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayActionHandlerSample.java)にあります。
+**注:** デバイス・アクション要求を転送するゲートウェイと接続されているデバイスの両方のために 1 つだけハンドラーをライブラリーに追加する必要があります。実装では、複数のデバイス・アクション要求を同時に処理するために、スレッドまたはスレッド・プールを作成する必要があります。スレッド・プールを使用するハンドラー実装のサンプルは、[iot-gateway-samples GitHub リポジトリー](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayActionHandlerSample.java)にあります。
 
 ### `handleReboot` のサンプル実装
 
@@ -616,7 +616,7 @@ public void handleReboot(DeviceAction action) {
 }
 ```
 
-スレッド・プールを使用するハンドラーの実装サンプルの完全版は、[iot-gateway-samples GitHub リポジトリ](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayActionHandlerSample.java)にあります。
+スレッド・プールを使用するハンドラーの実装サンプルの完全版は、[iot-gateway-samples GitHub リポジトリー](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayActionHandlerSample.java)にあります。
 
 
 ### `handleFactoryReset` のサンプル実装
@@ -700,7 +700,7 @@ public void propertyChange(PropertyChangeEvent evt) {
 ## サンプル
 {: #samples}
 
-ゲートウェイとゲートウェイの背後にあるデバイスを {{site.data.keyword.iot_short_notm}} インスタンスに接続するために利用できるサンプルがいくつか用意されています。これらのサンプルは {{site.data.keyword.iot_short_notm}} Java クライアント・ライブラリーを使用しており、[ゲトウェイ・サンプル GitHub リポジトリ](https://github.com/ibm-messaging/iot-gateway-samples/tree/master/java/gateway-samples)に置かれています。
+ゲートウェイとゲートウェイの背後にあるデバイスを {{site.data.keyword.iot_short_notm}} インスタンスに接続するために利用できるサンプルがいくつか用意されています。これらのサンプルは {{site.data.keyword.iot_short_notm}} Java クライアント・ライブラリーを使用しており、[ゲトウェイ・サンプル GitHub リポジトリリ](https://github.com/ibm-messaging/iot-gateway-samples/tree/master/java/gateway-samples)に置かれています。
 
 ## レシピ
 {: #recipes}

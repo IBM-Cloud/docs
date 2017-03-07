@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2016-12-01"
+lastupdated: "2016-02-17"
 
 ---
 
@@ -35,14 +35,12 @@ L'API REST HTTP {{site.data.keyword.iot_short_notm}} supporta le seguenti funzio
 - Pubblicazione di un evento del dispositivo (beta)
 - Query dello stato del servizio (richiamo degli stati del servizio per organizzazione)
 
-## Accesso alla documentazione dell'API REST HTTP 
+## Accesso alla documentazione dell'API REST HTTP
 {: #api_link}
 
-Per accedere alla documentazione dell'API REST HTTP {{site.data.keyword.iot_short_notm}} e ottenere ulteriori informazioni su come creare e personalizzare le tue applicazioni, vai all'indirizzo  https://docs.internetofthings.ibmcloud.com/swagger/v0002.html.
+Per accedere alla documentazione dell'API REST HTTP {{site.data.keyword.iot_short_notm}} e ottenere ulteriori informazioni su come creare e personalizzare le tue applicazioni, vai al seguente URL:  [https://docs.internetofthings.ibmcloud.com/swagger/v0002.html](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html)
 
 L'unica versione dell'API REST HTTP {{site.data.keyword.iot_short_notm}} supportata è la versione 2. Assicurati che le tue soluzioni {{site.data.keyword.iot_short_notm}} utilizzino la versione 2.
-
-
 
 # API di messaggistica REST HTTP per le applicazioni
 {: #rest_messaging_api}
@@ -72,9 +70,9 @@ In aggiunta all'utilizzo del protocollo di messaggistica MQTT, puoi anche config
 
 Se stai collegando un dispositivo o un'applicazione al servizio Quickstart, sostituisci **orgId** con la stringa 'quickstart'.
 
-**Note:** 
-- Mentre le applicazioni possono riutilizzare una connessione HTTP per pubblicare eventi o comandi a dispositivi diversi, l'intestazione HTTP dell'autorizzazione non può essere modificata.  
-- La porta 443, la porta SSL predefinita, può anche essere specificata per le chiamate API HTTP sicure. 
+**Note:**
+- Mentre le applicazioni possono riutilizzare una connessione HTTP per pubblicare eventi o comandi a dispositivi diversi, l'intestazione HTTP dell'autorizzazione non può essere modificata.
+- La porta 443, la porta SSL predefinita, può anche essere specificata per le chiamate API HTTP sicure.
 
 ### Autenticazione
 

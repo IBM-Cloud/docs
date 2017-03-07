@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2017-01-10"
+  years: 2015, 2017
 
+lastupdated: "2017-02-23"
 ---
 
 {:new_window: target="_blank"}
@@ -20,7 +20,7 @@ lastupdated: "2017-01-10"
 ## HTTP REST API 資料へのアクセス
 {: #api_link}
 
-{{site.data.keyword.iot_short_notm}} HTTP REST API 資料にアクセスしてデバイスを組織に統合する方法に関する情報をさらに入手するには、https://docs.internetofthings.ibmcloud.com/swagger/v0002.html をご覧ください。
+{{site.data.keyword.iot_short_notm}} HTTP REST API 資料にアクセスしてデバイスを組織に統合する方法についての詳細を確認するには、[https://docs.internetofthings.ibmcloud.com/swagger/v0002.html](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html) を参照してください。
 
 サポートされている {{site.data.keyword.iot_short_notm}} HTTP REST API のバージョンはバージョン 2 のみです。{{site.data.keyword.iot_short_notm}} ソリューションには必ずバージョン 2 を使用してください。
 
@@ -40,24 +40,21 @@ MQTT メッセージング・プロトコルの使用に加えて、HTTP REST AP
 {{site.data.keyword.iot_short_notm}} に接続されているデバイスから `POST` 要求を送信するには、以下のいずれかの URL を使用します。
 
 ### 非セキュアな POST 要求
-<pre class="pre">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
-{: codeblock}
+<pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
 ### セキュアな POST 要求
-<pre class="pre">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
-{: codeblock}
+
+<pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
 **注: **ポート 443 (デフォルトの SSL ポート) は、セキュアな HTTP API 呼び出しにも指定できます。
 
 デバイスまたはアプリケーションを Quickstart サービスに接続している場合は、代わりに以下のいずれかの URL を使用してください。
 
 ### Quickstart への非セキュアな POST 要求
-<pre class="pre">http://quickstart.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
-{: codeblock}
+<pre class="pre"><code class="hljs">http://quickstart.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
 ### Quickstart へのセキュアな POST 要求
-<pre class="pre">https://quickstart.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
-{: codeblock}
+<pre class="pre"><code class="hljs">https://quickstart.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
 **重要事項:**
 - 現在の HTTP REST API バージョンでは、HTTP メッセージングを使用してのみ、デバイス・イベントを送信できます。他のデバイス管理機能と制御機能の要求を送信するには、MQTT メッセージング・プロトコルを使用します。

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-07"
+lastupdated: "2017-02-22"
 
 ---
 
@@ -20,11 +20,13 @@ Il componente Gestione della sicurezza e del rischio consente alle organizzazion
 ## Politica di sicurezza della connessione
 {: #connect_policy}
 
-La politica di sicurezza della connessione definisce come i dispositivi si collegano alla piattaforma. Puoi impostare le politiche di connessione predefinite, così come le impostazioni personalizzate per i tipi di dispositivo specifici. La politica può essere impostata per consentire le connessioni non crittografate, per definire solo le connessioni TLS (transport layer security) e per consentire ai dispositivi di autenticarsi con i certificati lato client. Quando vengono utilizzati i certificati lato client, la politica di sicurezza fornisce un'opzione aggiuntiva per utilizzare soltanto il certificato per l'autenticazione client o per utilizzare una combinazione di un certificato client e una coppia di token di autenticazione e ID client.
+La politica di sicurezza della connessione definisce come i dispositivi si collegano alla piattaforma e come vengono utilizzati con i piani di sicurezza Gratuito e Avanzato. Puoi impostare le politiche di connessione predefinite, così come le impostazioni personalizzate per i tipi di dispositivo specifici. La politica può essere impostata per consentire le connessioni non crittografate, per definire solo le connessioni TLS (transport layer security) e per consentire ai dispositivi di autenticarsi con i certificati lato client.
 
-Per informazioni su come configurare le politiche di connessione, consulta [Configurazione delle politiche di sicurezza](set_up_policies.html).
+Se utilizzi un piano di sicurezza standard, le politiche di connessione non sono disponibili. Per informazioni su come configurare le politiche di connessione, consulta [Configurazione delle politiche di sicurezza](set_up_policies.html).
 
 La sicurezza della connessione può anche essere impostata per i client in modo che utilizzino il proprio certificato invece del certificato predefinito fornito. Questo può essere utile, ad esempio, se i dispositivi dell'utente verranno autenticati per il server durante l'handshake TLS. In questa release iniziale della Gestione della sicurezza e del rischio il nome del dominio del server di {{site.data.keyword.iot_short_notm}} non può essere modificato e deve essere utilizzato nello stato un cui viene fornito nel certificato del server.
+
+
 
 ## Certificati client
 {: #certificates}

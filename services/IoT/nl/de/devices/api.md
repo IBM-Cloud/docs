@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2017-01-10"
+  years: 2015, 2017
 
+lastupdated: "2017-02-23"
 ---
 
 {:new_window: target="_blank"}
@@ -20,7 +20,7 @@ lastupdated: "2017-01-10"
 ## Zugriff auf die Dokumentation der HTTP-REST-API
 {: #api_link}
 
-Für den Zugriff auf die Dokumentation der {{site.data.keyword.iot_short_notm}}-HTTP-REST-API und zum Abrufen weiterer Informationen zur Vorgehensweise bei der Integration von Geräten in Ihre Organisation rufen Sie die Webadresse https://docs.internetofthings.ibmcloud.com/swagger/v0002.html auf.
+Für den Zugriff auf die Dokumentation der {{site.data.keyword.iot_short_notm}}-HTTP-REST-API und zum Abrufen weiterer Informationen zur Vorgehensweise bei der Integration von Geräten in Ihre Organisation rufen Sie die folgende URL auf: [https://docs.internetofthings.ibmcloud.com/swagger/v0002.html](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html)
 
 Die einzige unterstützte {{site.data.keyword.iot_short_notm}}-HTTP-REST-API ist Version 2. Stellen Sie sicher, dass Ihre {{site.data.keyword.iot_short_notm}}-Lösungen Version 2 verwenden.
 
@@ -40,24 +40,21 @@ Zusätzlich zum MQTT-Nachrichtenprotokoll können Sie Ihre Geräte auch so konfi
 Verwenden Sie eine der folgenden URLs, um eine `POST`-Anforderung von einem Gerät zu übergeben, das mit {{site.data.keyword.iot_short_notm}} verbunden ist:
 
 ### Nicht sichere POST-Anforderung
-<pre class="pre">http://<var class="keyword varname">Organisations-ID</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">Typ-ID</var>/devices/<var class="keyword varname">Geräte-ID</var>/events/<var class="keyword varname">Ereignis-ID</var></pre>
-{: codeblock}
+<pre class="pre"><code class="hljs">http://<var class="keyword varname">Organisations-ID</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">Typ-ID</var>/devices/<var class="keyword varname">Geräte-ID</var>/events/<var class="keyword varname">Ereignis-ID</var></code></pre>
 
 ### Sichere POST-Anforderung
-<pre class="pre">https://<var class="keyword varname">Organisations-ID</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">Typ-ID</var>/devices/<var class="keyword varname">Geräte-ID</var>/events/<var class="keyword varname">Ereignis-ID</var></pre>
-{: codeblock}
+
+<pre class="pre"><code class="hljs">https://<var class="keyword varname">Organisations-ID</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">Typ-ID</var>/devices/<var class="keyword varname">Geräte-ID</var>/events/<var class="keyword varname">Ereignis-ID</var></code></pre>
 
 **Hinweis: **Port 443, der SSL-Standardport, kann auch für sichere HTTP-API-Aufrufe angegeben werden.
 
 Wenn Sie eine Verbindung zwischen einem Gerät oder einer Anwendung und dem Quickstart-Service herstellen, verwenden Sie stattdessen eine der folgenden URLs:
 
 ### Nicht sichere POST-Anforderung an Quickstart
-<pre class="pre">http://quickstart.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">Typ-ID</var>/devices/<var class="keyword varname">Geräte-ID</var>/events/<var class="keyword varname">Ereignis-ID</var></pre>
-{: codeblock}
+<pre class="pre"><code class="hljs">http://quickstart.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">Typ-ID</var>/devices/<var class="keyword varname">Geräte-ID</var>/events/<var class="keyword varname">Ereignis-ID</var></code></pre>
 
 ### Sichere POST-Anforderung an Quickstart
-<pre class="pre">https://quickstart.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">Typ-ID</var>/devices/<var class="keyword varname">Geräte-ID</var>/events/<var class="keyword varname">Ereignis-ID</var></pre>
-{: codeblock}
+<pre class="pre"><code class="hljs">https://quickstart.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">Typ-ID</var>/devices/<var class="keyword varname">Geräte-ID</var>/events/<var class="keyword varname">Ereignis-ID</var></code></pre>
 
 **Wichtige Hinweise:**
 - In der aktuellen Version der HTTP-REST-API können Sie Geräteereignisse nur mithilfe der HTTP-Nachrichtenübertragung übergeben. Verwenden Sie das MQTT-Nachrichtenprotokoll, um Anforderungen nach anderen Gerätemanagement- und Steuerfunktionen zu übergeben.

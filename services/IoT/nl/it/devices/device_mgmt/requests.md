@@ -600,7 +600,7 @@ Il seguente elenco fornisce alcune informazioni utili sulla gestione del process
 
 ## Ricette sulle azioni dispositivo e firmware
 
-Le seguenti ricette mostrano il flusso completo necessario per eseguire le azioni dispositivo e firmware. 
+Le seguenti ricette mostrano il flusso completo necessario per eseguire le azioni dispositivo e firmware.
 
 - [Device Management in WIoT Platform – Roll Back & Factory Reset](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/)
 

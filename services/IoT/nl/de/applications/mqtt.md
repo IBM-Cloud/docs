@@ -178,7 +178,7 @@ Dabei gilt:
 **Wichtig:**
 - Unterstützung für gemeinsam genutzte Subskriptionen mit variabler Permanenz wird nur als Betafunktion bereitgestellt. Implementieren Sie Betafunktionen nicht in Produktionsanwendungen.
 - Der Wert für bereinigte Sitzung kann in gemeinsam genutzten Subskriptionen mit variabler Permanenz auf 'true' (1) oder 'false' (0) gesetzt werden.
-- Clients, die Verbindungen mit der Instanz-ID herstellen, verwenden andere Subskriptionen als Clients, die Verbindungen ohne die Instanz-ID herstellen. Wenn mehrere Clients Verbindungen in einer gemeinsam genutzten Subskription mit variabler Permanenz herstellen sollen, müssen Sie daher die Instanz-ID in allen Subskriptionen angeben. 
+- Clients, die Verbindungen mit der Instanz-ID herstellen, verwenden andere Subskriptionen als Clients, die Verbindungen ohne die Instanz-ID herstellen. Wenn mehrere Clients Verbindungen in einer gemeinsam genutzten Subskription mit variabler Permanenz herstellen sollen, müssen Sie daher die Instanz-ID in allen Subskriptionen angeben.
 
 **Beispielszenario**
 

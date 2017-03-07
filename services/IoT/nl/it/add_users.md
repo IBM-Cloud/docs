@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-24"
+lastupdated: "2017-02-17"
 
 ---
 
@@ -79,7 +79,7 @@ Per registrare un membro con la tua organizzazione {{site.data.keyword.iot_short
 3. Immetti l'indirizzo email del membro.
 4. Seleziona un ruolo per questo membro.
 5. Immetti un oggetto, un nome realm e un emittente.
-   **Importante:** assicurati che i campi `Subject`, `Realm Name` e `Issuer` siano conformi agli standard e alle raccomandazioni di OpenID Connect. Per ulteriori informazioni, consulta il sito web [OpenID Connect](http://openid.net/connect/).
+   **Importante:** assicurati che i campi `Subject`, `Realm Name` e `Issuer` siano conformi agli standard e alle raccomandazioni di OpenID Connect. Per ulteriori informazioni, consulta il sito web [OpenID Connect ![icona link esterno](../../icons/launch-glyph.svg)](http://openid.net/connect/){: new_window}.
 6. Facoltativo: imposta una data di scadenza per il membro.
 7. Fai clic su **Register Member**.
 
@@ -105,7 +105,7 @@ Gli utenti possono modificare il proprio ruolo, aggiungere, rimuovere o modifica
 3. Apporta le modifiche desiderate all'utente.
 4. Fai clic su **Save**.
 
-## Blocco dell'accesso utenti 
+## Blocco dell'accesso utenti
 {: #blocking-users}
 
 Gli utenti possono essere bloccati dall'accedere all'organizzazione {{site.data.keyword.iot_short_notm}}, mentre ancora mantengono l'appartenenza all'organizzazione.

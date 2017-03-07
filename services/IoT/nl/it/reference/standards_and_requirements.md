@@ -14,7 +14,7 @@ lastupdated: "2016-11-28"
 # Requisiti e standard
 {: #standards_and_requirements}
 
-{{site.data.keyword.iot_full}} supporta vari standard e requisitii per la messaggistica e lo sviluppo dell'applicazione e del dispositivo generale.
+{{site.data.keyword.iot_full}} supporta vari standard e requisiti per la messaggistica e lo sviluppo dell'applicazione e del dispositivo generale.
 {:shortdesc}
 
 
@@ -37,7 +37,7 @@ Support for MQTT over SSL requires at least Python v2.7.9 or v3.4, and OpenSSL v
 
 Versione MQTT | Note
 --- | --- | ---
-[3.1.1](https://www.oasis-open.org/standards#mqttv3.1.1) (consigliato)  | <ul><li>Standard OASIS<li>Standard ISO (ISO/IEC PRF 20922) <li>Migliore interoperabilità tra vari client e server grazie a una definizione più accurata del protocollo in confronto alla V3.1. <li>La lunghezza massima dell'identificativo client MQTT (ClientId) è stata aumentata a 256 rispetto al limite di 23 caratteri imposto dalla V3.1. </br>Il servizio {{site.data.keyword.iot_short_notm}} spesso richiede ID client più lunghi. </br>Gli ID client lunghi sono supportati indipendentemente dalla versione del protocollo MQTT. Tuttavia alcune librerie client V3.1 controllano la lunghezza del valore ClientId e forzano il limite di 23 caratteri.</ul>
+[3.1.1](https://www.oasis-open.org/standards#mqttv3.1.1) (consigliato)  | <ul><li>Standard OASIS<li>Standard ISO (ISO/IEC PRF 20922) <li>Migliore interoperabilità tra vari client e server grazie a una definizione più accurata del protocollo in confronto alla V3.1.   <li>La lunghezza massima dell'identificativo client MQTT (ClientId) è stata aumentata a 256 rispetto al limite di 23 caratteri imposto dalla V3.1. </br>Il servizio {{site.data.keyword.iot_short_notm}} spesso richiede ID client più lunghi. </br>Gli ID client lunghi sono supportati indipendentemente dalla versione del protocollo MQTT. Tuttavia alcune librerie client V3.1 controllano la lunghezza del valore ClientId e forzano il limite di 23 caratteri.</ul>
 3.1 | MQTT V3.1 è la versione del protocollo maggiormente utilizzata oggi.
 
 {{site.data.keyword.iot_short_notm}} supporta tutto il contenuto consentito dallo standard MQTT. MQTT è indipendente dai dati, per cui è possibile inviare immagini, testo con qualsiasi codifica, dati crittografati e virtualmente qualsiasi tipo di dati nel formato binario. Per ulteriori informazioni sullo standard MQTT, consulta le seguenti risorse:

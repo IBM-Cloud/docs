@@ -64,7 +64,7 @@ Il seguente esempio di codice mostra il formato tipico di un pacchetto di estens
 
 ```
 
-### Aggiunta di un pacchetto di gestione del dispositivo personalizzato 
+### Aggiunta di un pacchetto di gestione del dispositivo personalizzato
 
 I pacchetti di gestione del dispositivo personalizzati possono essere aggiunti utilizzando il dashboard {{site.data.keyword.iot_short_notm}} o l'API.
 

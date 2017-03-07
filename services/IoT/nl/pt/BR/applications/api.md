@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2016-12-01"
+lastupdated: "2016-02-17"
 
 ---
 
@@ -38,11 +38,9 @@ A API (interface de programação de aplicativos) REST HTTP (Protocolo de Transp
 ## Acessando a documentação da API de REST HTTP
 {: #api_link}
 
-Para acessar a documentação da API de REST HTTP do {{site.data.keyword.iot_short_notm}} e obter mais informações sobre como construir e customizar seus aplicativos, acesse https://docs.internetofthings.ibmcloud.com/swagger/v0002.html.
+Para acessar a documentação da API de REST HTTP do {{site.data.keyword.iot_short_notm}} e obter mais informações sobre como construir e customizar seus aplicativos, acesse a URL a seguir:  [https://docs.internetofthings.ibmcloud.com/swagger/v0002.html](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html)
 
 A única versão da API (interface de programação de aplicativos) REST HTTP (Protocolo de Transporte de Hipertexto) do {{site.data.keyword.iot_short_notm}} suportada é a versão 2. Assegure que suas soluções {{site.data.keyword.iot_short_notm}} estejam usando a versão 2.
-
-
 
 # API (interface de programação de aplicativos) do sistema de mensagens REST HTTP (Protocolo de Transporte de Hipertexto) para aplicativos
 {: #rest_messaging_api}
@@ -72,8 +70,8 @@ Além de usar o protocolo de sistema de mensagens MQTT, também é possível con
 
 Se você estiver conectando um dispositivo ou aplicativo ao serviço de iniciação rápida, substitua **orgId** pela sequência 'quickstart'.
 
-**Notas:** 
-- Embora os aplicativos possam reutilizar uma conexão HTTP para postar eventos ou comandos em dispositivos diferentes, o cabeçalho de HTTP de autorização não pode ser mudado. 
+**Notas:**
+- Embora os aplicativos possam reutilizar uma conexão HTTP para postar eventos ou comandos em dispositivos diferentes, o cabeçalho de HTTP de autorização não pode ser mudado.
 - Porta 443, a porta SSL padrão, também pode ser especificada para proteger as chamadas API HTTP.
 
 ### Authentication

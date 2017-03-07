@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-02"
+lastupdated: "2017-02-22"
 ---
 
 {:new_window: target="\_blank"}
@@ -26,12 +26,12 @@ Os certificados de autoridade de certificação permitem que a organização rec
 
 Se você incluir um certificado de autoridade de certificação ou substituir o certificado do servidor de sistema de mensagens, todos os dispositivos deverão se conectar usando um cliente MQTT que suporte a Server Name Indication (SNI) para que o servidor possa usar as CAs apropriadas para autenticar o dispositivo.
 
-Se você incluir um certificado de autoridade de certificação, mas não tiver o complemento Gerenciamento de Risco e Segurança ativado, todos os dispositivos se conectarão ao TLS com a política de conexão Autenticação por Token e Certificado de Cliente. Se o complemento Gerenciamento de Risco e Segurança estiver ativado, será possível configurar diferentes políticas de conexão. Para obter informações sobre como configurar políticas de segurança de conexão, veja [Configurando políticas de segurança](set_up_policies.html).
+Se você incluir um certificado de autoridade de certificação e estiver usando um plano de segurança padrão, todos os dispositivos se conectarão ao TLS com a política de conexão Autenticação por Token e Certificado de Cliente. Se você tiver um plano de segurança grátis ou avançado, será possível configurar políticas de conexão diferentes. Para obter informações sobre como configurar políticas de segurança de conexão, veja [Configurando políticas de segurança](set_up_policies.html).
 
 ### Certificados de cliente ou de dispositivo
-Os certificados individuais de cliente ou de dispositivo permanecem nos dispositivos e não são transferidos por upload para a plataforma. O certificado de assinatura de CA usado para assinar todos os certificados de dispositivo é o único certificado transferido por upload para a plataforma. Caso você esteja usando certificados de servidor autoassinados, deverá ser feito upload da Raiz e da CA intermediária (ca.pem) usada para assinar o certificado de cliente (cert.pem).
+Os certificados individuais de cliente ou de dispositivo permanecem nos dispositivos e não são transferidos por upload para a plataforma. O certificado de assinatura de CA usado para assinar todos os certificados de dispositivo é o único certificado transferido por upload para a plataforma. Se você estiver usando certificados de servidor autoassinados, deverá fazer upload dos certificados raiz e intermediários usados para assinar o certificado de cliente (cert.pem).
 
-O certificado de dispositivo individual que você assina com o certificado de autoridade de certificação deve ter o ID do dispositivo inserido como Nome Comum (CN) ou SubjectAltName no certificado. Para o campo *CN*, o formato é 'CN=d:devtype:devid'. Para o campo SubjectAltName, o formato é 'SubjectAltName=email:d:devtype:devid', em que 'devtype' é o Tipo de dispositivo do dispositivo e 'devid' é o identificador de cliente do dispositivo.
+O certificado de dispositivo individual que você assina com o certificado de autoridade de certificação deve ter o ID do dispositivo inserido como Nome Comum (CN) ou SubjectAltName no certificado. Para o campo *CN*, o formato é 'CN=d:devtype:devid'. Para o campo SubjectAltName, o formato é 'SubjectAltName=email:d:*devtype:devid*' em que 'email:d' é constante, '*devtype*' é o tipo do dispositivo e '*devid*' é o identificador de cliente do dispositivo.
 
 ## Registrando certificados de Autoridade de Certificação (CA) para autenticação de dispositivo
 {: #reg_ca_cert}
@@ -68,4 +68,4 @@ Se você desejar usar um novo certificado de servidor de sistema de mensagens, s
  1. Na seção **Segurança** de **Configurações gerais**, em **Certificados do servidor de sistema de mensagens**, clique em **Gerar CSR**.
  2. Insira os detalhes para solicitar uma CSR para seu servidor e clique em **Gerar**. A CSR é exibida na tabela.
  3. Faça download da solicitação e envie-a para uma autoridade de certificação para assinatura.
- 4. Depois de obter um certificado, é possível fazer upload dele seguindo as etapas em [Fazendo upload de um certificado de sua organização](#upload_cert). Depois que o certificado for transferido por upload, a CSR na tabela será substituída pelo certificado transferido por upload.
+ 4. Depois de obter um certificado, retorne para a entrada CSR na tabela e faça upload do novo certificado. Depois que o certificado for transferido por upload, a CSR na tabela será substituída pelo certificado transferido por upload.

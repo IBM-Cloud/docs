@@ -90,36 +90,40 @@ Go 言語のチェーン・コードの実行可能ファイル形式で、ス�
     {{site.data.keyword.iot_short_notm}} からブロック・チェーンに書き込むには、最初にサービスをリンクする必要があります。
      1. {{site.data.keyword.Bluemix_notm}} で、ダッシュボードに移動します。
      2. {{site.data.keyword.blockchainfull_notm}} をデプロイしたスペースを選択します。
-     3. **「ブロック・チェーン」**タイルをクリックします。
-     4. 左側で、**「サービス資格情報」**をクリックします。
-     5. サービス資格情報を選択するか、**「資格情報の追加」**をクリックして新しいサービス資格情報のセットを作成し、「IoT Platform 統合」などの記述名を指定します。
+     3. **「サービス」**の下の**「ブロック・チェーン」**」リンクをクリックします。
+     4. **「サービス資格情報」**タブをクリックします。
+     5. サービス資格情報のセットを選択するか、**「新規資格情報」**をクリックして新しいサービス資格情報のセットを作成し、「IoT-Platform 統合」などの記述名を指定します。
      6. JSON 形式のサービス資格情報の次のパラメーターをメモします。  
-      - ピア情報: `api_host` と `api_port`
+      - ピア情報: `api_host` と `api_port_tls`
       - タイプ 1 (クライアント) ユーザーの情報: `username` と `secret`  
 
       サービス資格情報の例:
      ```json
      {
-      "credentials": {
       "peers": [
       {
-       "discovery_host": "169.44.63.203",
-       "discovery_port": "32904",
-       "api_host": "169.44.63.203",
-       "api_port_tls": "443",
-       "api_port": "80",
-       "type": "peer",
-       "network_id": "f621cde2-bdec-4897-b737-da4df144c41f",
-       "container_id": "5750f7734fb06c64d70c443b1dfcf39a3f5de7b51b792294c05dbdbe7d8356f7",
-       "id": "f621cde2-bdec-4897-b737-da4df144c41f_vp1",
-       "api_url": "http://169.44.63.203:32905"
-      },
+       "discovery_host": "fa68cbcbfcec4726932e53e2fa4f3afc-vp0.us.blockchain.ibm.com",
+        "discovery_port": 30003,
+        "api_host": "fa68cbcbfcec4726932e53e2fa4f3afc-vp0.us.blockchain.ibm.com",
+        "api_port_tls": 5003,
+        "api_port": 5003,
+        "event_host": "fa68cbcbfcec4726932e53e2fa4f3afc-vp0.us.blockchain.ibm.com",
+        "event_port": 31003,
+        "type": "peer",
+        "network_id": "fa68cbcbfcec4726932e53e2fa4f3afc",
+        "container_id": "e33f08f85988bf57ccfcf34ccdb80d72489e5bfb46786b570e1a74a6679f804e",
+        "id": "fa68cbcbfcec4726932e53e2fa4f3afc-vp0",
+        "api_url": "http://fa68cbcbfcec4726932e53e2fa4f3afc-vp0.us.blockchain.ibm.com:5003"
+    },
        ...
       ],
       "users": [
       {
-       "username": "user_type1_fa8e6ef0dc",
-       "secret": "33401036a9"
+       "enrollId": "user_type1_0",
+        "enrollSecret": "63c58806d6",
+        "affiliation": "group1",
+        "username": "user_type1_0",
+        "secret": "63c58806d6"
       },
        ...
        ]
@@ -129,7 +133,7 @@ Go 言語のチェーン・コードの実行可能ファイル形式で、ス�
      **重要:** 選択するユーザーが、選択したピア以外のピアに既に登録されていてはなりません。
      7. **「ダッシュボードに戻る」**をクリックして、{{site.data.keyword.Bluemix_notm}}ダッシュボードに戻ります。
      8. {{site.data.keyword.iot_short_notm}} をデプロイしたスペースを選択します。
-     9. **{{site.data.keyword.iot_short_notm}}** タイルをクリックします。
+     9. **「サービス」**の下の**{{site.data.keyword.iot_short_notm}}** リンクをクリックします。
      10. **「起動 (Launch)」**をクリックして {{site.data.keyword.iot_short_notm}} ダッシュボードを開きます。
      11. {{site.data.keyword.iot_short_notm}} ダッシュボードのメニュー・サイド・バーから**「拡張」**を選択します。
      12. **「拡張」**ページの「ブロック・チェーン」タイルで、**「セットアップ」**をクリックするか、すでにファブリックをリンクしてある場合は ![歯車アイコン](../images/gear.png "構成") をクリックします。
@@ -155,7 +159,7 @@ Go 言語のチェーン・コードの実行可能ファイル形式で、ス�
    </tr>
    <tr>
    <td>ポート</td>
-   <td>`api_port` 番号<ul><li>実装環境で TLS を使用しない場合は、ポート 80 を使用します。</li><li>実装環境で TLS を使用する場合は、ポート 443 を使用します。</li></ul></td>
+   <td>`api_port_tls` 番号</td>
    </tr>
    <tr>
    <td>ユーザー ID</td>
@@ -167,7 +171,7 @@ Go 言語のチェーン・コードの実行可能ファイル形式で、ス�
    </tr>
    <tr>
    <td>TLS の使用 (Use TLS)</td>
-   <td>オンまたはオフにします。</br>{{site.data.keyword.iot_short_notm}} とファブリックのコントラクトの間の通信を暗号化する場合は、Transport Layer Security を使用します。デフォルトのポート番号は、接続先のデプロイ済みの {{site.data.keyword.iot_short_notm}} インスタンスによって設定されます。</td>
+   <td>オンまたはオフにします。</br>{{site.data.keyword.iot_short_notm}} とファブリックのコントラクトの間の通信を暗号化する場合は、Transport Layer Security を使用します。{{site.data.keyword.blockchainfull_notm}} ファブリックに接続するときには、TLS が有効になっていなければなりません。</td>
    </tr></tbody>
    </table>  
     3. **「完了」**をクリックします。
@@ -246,9 +250,9 @@ IBM は多数のスマート・コントラクトを提供しています。ダ�
     
 REST クライアント (CURL、Postman など) を使用して、登録呼び出しを送信します。登録呼び出しについて詳しくは、[POST registrar API 資料](https://ibmblockchainapi.mybluemix.net/swagger/ui.html?scheme=http&host=127.0.0.1:3000&basepath=/#!/Registrar/registerUser)を参照してください。登録するときには、次の情報を使用してください。
   <ul>
-  <li>URL: `http://api_host:api_port/registrar`
+  <li>URL: `http://api_host:api_port_tls/registrar`
   <li>タイプ: POST
-  <li>ヘッダー: `コンテンツ・タイプ: application/x-www-form-urlencoded`
+  <li>ヘッダー: `Content type:  application/json`
   <li>ペイロード:  
   ```json
    {  
@@ -264,26 +268,28 @@ REST クライアント (CURL、Postman など) を使用して、登録呼び�
     
 デプロイするときには、次の情報を使用してください。  
   <ul>
-  <li>URL: `http://api_host:api_port/devops/deploy`
+  <li>URL: `http://api_host:api_port_tls/chaincode`
   <li>タイプ: POST
-  <li>ヘッダー: `コンテンツ・タイプ: application/x-www-form-urlencoded`
+  <li>ヘッダー: `Accept: application/json`
+  <li>ヘッダー: `Content type:  application/json`
   <li>ペイロード:  
   ```
   {
-      "type": "GOLANG",   
-      "chaincodeID": {  
-      "path": "http://github.com/{my organization}/{my project}/sample.go",
-      "name": "string"
+    "jsonrpc": "2.0",
+    "method": "deploy",
+    "params": {
+        "type": 1,
+        "chaincodeID":{
+              "path": "http://github.com/{my organization}/{my project}/sample.go"
+        },
+        "ctorMsg": {
+            "function":"init",
+            "args":["{\"version\":\"1.0\",\"nickname\":\"sample_contract\"}"]
+        },
+        "secureContext": "username"
     },
-    "ctorMsg": {  
-      "function": "init",  
-      "args": [
-        "{\"version\":\"1.0\}"}"
-      ]
-    },
-    "secureContext": "'username'",
-    "confidentialityLevel": "PUBLIC"
-  }
+    "id":1234
+}
   ```  
   </ul>  
   コントラクトがファブリックにデプロイされます。  
@@ -294,17 +300,16 @@ REST クライアント (CURL、Postman など) を使用して、登録呼び�
 デバイス・データからブロック・チェーンの新しいスマート・コントラクトへの書き込みを開始するには、まず、デバイス・データをコントラクトにマップする必要があります。  
    1. {{site.data.keyword.Bluemix_notm}} で、ダッシュボードに移動します。
    2. {{site.data.keyword.iot_short_notm}} をデプロイしたスペースを選択します。
-   3. **{{site.data.keyword.iot_short_notm}}** タイルをクリックします。
+   3. **{{site.data.keyword.iot_short_notm}}** サービスをクリックします。
    4. **「起動 (Launch)」**をクリックして {{site.data.keyword.iot_short_notm}} ダッシュボードを開きます。
    5. サイド・バー・メニューで![「ブロック・チェーン」](images/platform_blockchain.png "ブロック・チェーン")をクリックして、**「ブロック・チェーン」**を選択します。
-   6. **「契約のリンク」**をクリックします。
-   6. 前に作成したファブリックのファブリック名を選択します。
-   7. 次の情報を入力します。  
+   6. **「デバイス・データのマップ (Map Device Data)」**をクリックします。
+   7. ブロック・チェーンにデバイス・データを保管するデバイス・タイプと、保管するイベントのイベント名を選択します。**「次へ」**をクリックします。
+   8. 前に作成したファブリックのファブリック名を選択します。**「次へ」**をクリックします。
+   9. 以下の情報を入力して、**「次へ」**をクリックします。
      - 契約 ID - コントラクトをデプロイしたときに保存した 128 文字のコントラクト ID を貼り付けます。
      - 契約名 - {{site.data.keyword.iot_short_notm}} でコントラクトを識別するための名前を入力します。
-     - ブロック・チェーンにデバイス・データを保管するデバイス・タイプを選択します。
-     - 保管するイベントのイベント名を選択します。
-       
+     
      **ヒント:** デバイスのイベント・タイプを検索するには、**「デバイス」**ページに移動し、デバイス名をクリックしてデバイスの詳細ページを開きます。**「センサー情報」**セクションにスクロールダウンして、そのデバイスの使用可能なイベントとデータ・ポイントのリストを確認します。
 
    11. 使用可能なデバイス・プロパティーをコントラクト・パラメーターにマップします。
@@ -354,7 +359,7 @@ REST クライアント (CURL、Postman など) を使用して、登録呼び�
 <tr>
 <td>API Host and Port</td>
 <td>`http://peer_URL:port`</td>
-<td>{{site.data.keyword.blockchainfull_notm}} REST API のホストとポート (前に `http://` を付加したもの)。`api_host` アドレスと `api_port` 番号を使用してください。</td>
+<td>{{site.data.keyword.blockchainfull_notm}} REST API のホストとポート (前に `https://` を付加したもの)。`api_host` アドレスと `api_port_tls` 番号を使用してください。</td>
 </tr>
 <tr>
 <td>Chaincode ID</td>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-10"
+lastupdated: "2017-02-21"
 
 ---
 
@@ -35,7 +35,7 @@ lastupdated: "2017-01-10"
 
 若要登錄裝置，需要將裝置分類成裝置類型、為裝置命名，並提供裝置資訊。然後，您可以提供連線記號，或是接受 {{site.data.keyword.iot_short_notm}} 產生的記號。
 
-您可以從 {{site.data.keyword.iot_short_notm}} 儀表板一次新增一個裝置，或者可以使用 [{{site.data.keyword.iot_short_notm}} API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/post_bulk_devices_add)，一次新增一個以上裝置。
+您可以從 {{site.data.keyword.iot_short_notm}} 儀表板一次新增一個裝置，或者可以使用 [{{site.data.keyword.iot_short_notm}} API ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/post_bulk_devices_add){: new_window}，一次新增一個以上裝置。
 
 若要從 {{site.data.keyword.iot_short_notm}} 儀表板新增裝置，請執行下列動作：
 
@@ -117,7 +117,7 @@ lastupdated: "2017-01-10"
 - 設定裝置來進行 MQTT 傳訊，並使用「組織 ID」、「鑑別記號」、「裝置類型」和「裝置 ID」來鑑別。  
 - 使用 MQTT 通訊協定將裝置訊息傳送至 {{site.data.keyword.iot_short_notm}} 組織。
 
-**提示：**常用的裝置有許多連線秘訣。若要取得秘訣清單，請參閱 IBM.com 上的[裝置連線秘訣](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/)。
+**提示：**常用的裝置有許多連線秘訣。若要取得秘訣清單，請參閱 IBM.com 上的[裝置連線秘訣 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){: new_window}。
 
 連接裝置時，需要下列資訊：
 - URL：*org_id*.messaging.internetofthings.ibmcloud.com  
@@ -138,18 +138,18 @@ lastupdated: "2017-01-10"
  {{site.data.keyword.iot_short_notm}} 支援數種格式，例如 JSON 及文字。
 
 如需連接裝置的相關資訊，請參閱技術說明文件中的[裝置的 MQTT 連線功能](devices/mqtt.html)。
-API 文件的[連線功能](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Connectivity/post_device_types_deviceType_devices_deviceId_events_eventName)區段也包含必要的資訊。
+API 文件的[連線功能 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Connectivity/post_device_types_deviceType_devices_deviceId_events_eventName){: new_window} 區段也包含必要的資訊。
 
 ## 連接裝置的秘訣
 
 下列秘訣說明用來登錄以及將裝置連接至 Watson IoT Platform 的完整流程。
 
-- [如何在 IBM Watson IoT Platform 中登錄裝置](https://developer.ibm.com/recipes/tutorials/how-to-register-devices-in-ibm-iot-foundation/)
+- [如何在 IBM Watson IoT Platform 中登錄裝置 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/how-to-register-devices-in-ibm-iot-foundation/){: new_window}
 
-- [使用 Node-RED 將 Raspberry Pi 當作裝置連接至 Watson IoT](https://developer.ibm.com/recipes/tutorials/deploy-watson-iot-node-on-raspberry-pi/)
+- [使用 Node-RED 將 Raspberry Pi 當作裝置連接至 Watson IoT ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/deploy-watson-iot-node-on-raspberry-pi/){: new_window}
 
-- [將 Arduino Uno 裝置連接至 IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/connect-an-arduino-uno-device-to-the-ibm-internet-of-things-foundation/)
+- [將 Arduino Uno 裝置連接至 IBM Watson IoT Platform ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/connect-an-arduino-uno-device-to-the-ibm-internet-of-things-foundation/){: new_window}
 
-- [使用 Node-RED 將 Sense HAT 連接至 Watson IoT](https://developer.ibm.com/recipes/tutorials/connecting-a-sense-hat-to-watson-iot-using-node-red/)
+- [使用 Node-RED 將 Sense HAT 連接至 Watson IoT ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/connecting-a-sense-hat-to-watson-iot-using-node-red/){: new_window}
 
-- [將含 Windows IoT Core 的 Raspberry Pi 當作裝置連接至 Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/connecting-raspberry-pi-with-windows-iot-core-as-a-device-to-watson-iot-using-node-red/)
+- [將含 Windows IoT Core 的 Raspberry Pi 當作裝置連接至 Watson IoT Platform ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/connecting-raspberry-pi-with-windows-iot-core-as-a-device-to-watson-iot-using-node-red/){: new_window}

@@ -195,7 +195,7 @@ managedGateway.sendDeviceManageRequest(typeId, deviceId, lifetime, true, true);
 
 ### Enviando uma solicitação de cancelamento de gerenciamento de um gateway
 
-Quando um gateway não precisar mais ser gerenciado, para parar as atividades de gerenciamento de dispositivo no gateway, chame o método `sendGatewayUnmanageRequet()`. Quando `sendGatewayUnmanageRequet()` for chamado, o {{site.data.keyword.iot_short}} não mais enviará novas solicitações de gerenciamento de dispositivo para o gateway e todas as solicitações de gerenciamento de dispositivo do gateway serão rejeitadas, exceto para solicitações de **Gerenciamento**. As solicitações de dispositivos protegidos pelo gateway não são rejeitadas.
+Quando um gateway não precisar mais ser gerenciado, para parar as atividades de gerenciamento de dispositivo no gateway, chame o método `sendGatewayUnmanageRequet()`.  Quando `sendGatewayUnmanageRequet()` for chamado, o {{site.data.keyword.iot_short}} não mais enviará novas solicitações de gerenciamento de dispositivo para o gateway e todas as solicitações de gerenciamento de dispositivo do gateway serão rejeitadas, exceto para solicitações de **Gerenciamento**. As solicitações de dispositivos protegidos pelo gateway não são rejeitadas.
 
 #### Exemplo de envio de uma solicitação de cancelamento de gerenciamento de um gateway
 

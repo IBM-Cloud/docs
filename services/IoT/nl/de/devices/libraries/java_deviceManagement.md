@@ -19,7 +19,7 @@ lastupdated: "2016-11-22"
 {: #introduction}
 
 Ein verwaltetes Gerät ist in {{site.data.keyword.iot_full}} ein Gerät, das Gerätemanagementoperationen wie Firmware-, Positions- und Diagnoseaktualisierungen durchführen kann.
-Unter Verwendung der {{site.data.keyword.iot_short}}-Java™-Clientbibliothek und der bereitgestellten Informationen können Sie Java-Code entwickeln, der Ihre verbundenen Geräte zu verwalteten Geräten macht. Darüber hinaus werden hilfreiche Beispiele zum Entwickeln von Java-Code bereitgestellt, um ein Gerät mit dem Gerätemanagementservice zu verbinden und Gerätemanagementoperationen auszuführen. 
+Unter Verwendung der {{site.data.keyword.iot_short}}-Java™-Clientbibliothek und der bereitgestellten Informationen können Sie Java-Code entwickeln, der Ihre verbundenen Geräte zu verwalteten Geräten macht. Darüber hinaus werden hilfreiche Beispiele zum Entwickeln von Java-Code bereitgestellt, um ein Gerät mit dem Gerätemanagementservice zu verbinden und Gerätemanagementoperationen auszuführen.
 
 Weitere Informationen dazu, wie Ihre Anwendungen die Java-Clientbibliothek für die Interaktion mit Geräten verwenden können, finden Sie in [Java für Anwendungsentwickler](../../applications/libraries/java.html).
 

@@ -185,7 +185,7 @@ Quando o cliente do dispositivo conecta, ele automaticamente assina qualquer com
 |`commandName`  | Uma sequência, especificando o nome do comando que foi chamado. |  
 |`format`  | Uma sequência, especificando o formato do evento, por exemplo, JSON. |
 |`payload`  | Uma sequência, especificando os dados para a carga útil do comando.  |
-|`topic`  | Ao publicar como um dispositivo, a sequência de tópicos não inclui o tipo de dispositivo ou o ID do dispositivo; estes são obtidos do identificador de cliente. Por exemplo, `iot-2/evt/event_id/fmt/format_string`.  Ao publicar como um aplicativo ou gateway em nome de um dispositivo, o tópico deve incluir o tipo de dispositivo e o ID do dispositivo.  Por exemplo, `iot-2/type/device_type/id/device_id/evt/event_id/fmt/format_string`.|
+|`topic`  | Ao publicar como um dispositivo, a sequência de tópicos não inclui o tipo de dispositivo ou o ID do dispositivo; estes são obtidos do identificador de cliente.  Por exemplo, `iot-2/evt/event_id/fmt/format_string`.  Ao publicar como um aplicativo ou gateway em nome de um dispositivo, o tópico deve incluir o tipo de dispositivo e o ID do dispositivo.  Por exemplo, `iot-2/type/device_type/id/device_id/evt/event_id/fmt/format_string`.|
 
 
 ```

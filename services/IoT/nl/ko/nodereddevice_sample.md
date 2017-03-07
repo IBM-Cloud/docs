@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-08-26"
+lastupdated: "2017-02-17"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2016-08-26"
 Node-RED를 사용하여 디바이스 시뮬레이터를 작성하고 시뮬레이션된 디바이스 데이터를 {{site.data.keyword.iot_full}} 조직에 보냅니다.  
 {:shortdesc}
 
-Node-RED는 새롭고 흥미로운 방식으로 하드웨어 디바이스, API 및 온라인 서비스를 함께 연결하는 데 사용하는 도구입니다. 자세한 정보는 [Node-RED](http://nodered.org/) 웹 사이트를 참조하십시오.  
+Node-RED는 새롭고 흥미로운 방식으로 하드웨어 디바이스, API 및 온라인 서비스를 함께 연결하는 데 사용하는 도구입니다. 자세한 정보는 [Node-RED ![외부 링크 아이콘](../../icons/launch-glyph.svg)](http://nodered.org/){: new_window} 웹 사이트를 참조하십시오.  
 
 고유 환경에서 Node-RED 인스턴스를 실행하고 {{site.data.keyword.Bluemix_notm}} 애플리케이션으로 사용할 수 있습니다. 다음 프로세스에는 {{site.data.keyword.Bluemix_notm}}의 지시사항이 포함됩니다.
 
@@ -26,7 +26,7 @@ Node-RED 디바이스 시뮬레이터를 작성하여 연결하려면 다음을 
    디바이스 시뮬레이터를 사용하여 MQTT 디바이스 메시지를 {{site.data.keyword.iot_short_notm}}에 보냅니다. 디바이스 시뮬레이터는 운송 컨테이너의 데이터를 MQTT 브로커(예: {{site.data.keyword.iot_short_notm}})에 보내기를 시뮬레이션합니다.
     1. https://console.ng.bluemix.net에서 {{site.data.keyword.Bluemix_notm}}에 로그인합니다.
     2. **카탈로그** 탭을 선택합니다.
-    3. 서비스 카탈로그의 표준 유형 섹션을 찾아 **Node-RED Starter Community BETA**를 클릭합니다. **팁:** [여기](https://console.ng.bluemix.net/catalog/starters/node-red-starter/)를 클릭하여 Node-RED Starter 페이지로 직접 이동하십시오.
+    3. 서비스 카탈로그의 표준 유형 섹션을 찾아 **Node-RED Starter Community BETA**를 클릭합니다. **팁:** [여기(![외부 링크 아이콘](../../icons/launch-glyph.svg))](https://console.ng.bluemix.net/catalog/starters/node-red-starter/){: new_window}를 클릭하여 Node-RED Starter 페이지로 직접 이동하십시오.
     4. Node-RED Starter 페이지에서 Node-RED를 배치할 영역을 선택하고 앱 작성 선택사항을 확인하고 **작성**을 클릭하여 Node-RED를 Bluemix 조직에 추가합니다.  
 예를 들어 다음과 같습니다.  
      - 영역: dev
@@ -67,7 +67,7 @@ Node-RED 디바이스 시뮬레이터를 작성하여 연결하려면 다음을 
   <li> 조직 ID
   <li> 디바이스 유형
   <li> 디바이스 ID
-  <li> 인증 메소드
+<li> 인증 메소드
   <li> 인증 토큰
   </ul>
   **팁:** 연결을 완료하기 위해 Node-Red 애플리케이션 구성을 완료하려면 다음 몇 단계에서 조직 ID, 인증 토큰, 디바이스 유형 및 디바이스 ID가 필요합니다.
