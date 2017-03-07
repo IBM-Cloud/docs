@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-12"
+lastupdated: "2017-02-24"
 ---
 
 {:new_window: target="\_blank"}
@@ -11,14 +11,13 @@ lastupdated: "2017-01-12"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-<!--ATTENTION WRITERS: IMPORTANT. These two topics are twins: iot500.md and start_iot.md. The ONLY difference is that iot500 contains the section called "Deploying the {{site.data.keyword.iot_short_notm}} Starter" and start_iot does not. The reason is that start_iot is displayed as the Getting Started information within the Starter app and NOT in the product docs. ALL UPDATES MUST BE MADE IN BOTH TOPICS.  -->
+<!--ATTENTION WRITERS: IMPORTANT. These two topics are closely related: iot500.md and start_iot.md. The reason is that start_iot is displayed as the Getting Started information within the Starter app and NOT in the product docs. UPDATES MIGHT BE NEEDED IN BOTH TOPICS.  -->
 
 # Getting started with {{site.data.keyword.iot_short_notm}} Starter
 {: #gettingstartedtemplate}
-<!-- Provide and appropriate ID above -->
 
 Get started with {{site.data.keyword.iot_full}} by using the {{site.data.keyword.iot_short_notm}} Starter boilerplate. By using the Starter, you can quickly simulate a device, create cards, generate data, and begin analyzing and displaying data in the {{site.data.keyword.iot_short_notm}} dashboard.
-{: shortdesc}
+{:shortdesc}
 
 The Starter automatically deploys and connects these services:
 
@@ -28,15 +27,7 @@ The Starter automatically deploys and connects these services:
 
 - **{{site.data.keyword.cloudantfull}}** - The database in which Node-RED stores metadata.
 
-
-## About {{site.data.keyword.iot_short_notm}}
-{: #about_iotplatform}
-{{site.data.keyword.iot_short_notm}} provides powerful application access to IoT devices and data to help you rapidly compose analytics applications, visualization dashboards, and mobile IoT apps.
-You can use {{site.data.keyword.iot_short_notm}} to perform powerful device management operations, and store and access device data, connect a wide variety of devices and gateway devices. {{site.data.keyword.iot_short_notm}} provides secure communication to and from your devices by using MQTT and TLS.
-
-## About Node-RED
-{: #about_nodered}
-Node-RED is a tool for wiring together hardware devices, APIs, and online services in new and interesting ways.  You can use Node-RED to create a simulated thermostat that sends simulated data to your {{site.data.keyword.iot_short_notm}} service. You can create cards to display real-time data in the {{site.data.keyword.iot_short_notm}} dashboard. For more information, see the [Node-RED documentation](https://console.ng.bluemix.net/docs/starters/Node-RED/nodered.html#nodered).
+- **Node-RED application** - An instance of the Node-RED application that includes nodes designed for {{site.data.keyword.iot_short_notm}}.
 
 ## Getting Around
 {: #gettingaround}
