@@ -1,17 +1,17 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-26"
-
+  years: 2016, 2017
+lastupdated: "2017-03-08"
 ---
 
-
-
-{:new_window: target="\_blank"}
+<!-- Common attributes used in the template are defined as follows: -->
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
+
 
 
 # Device Toolkit
@@ -19,7 +19,9 @@ lastupdated: "2016-10-26"
 By using the {{site.data.keyword.iotinsurance_full}} Device Toolkit, you can connect devices that are made by any device vendor to your {{site.data.keyword.iotinsurance_short}} service.
 {:shortdesc}
 
-Devices can send data directly to {{site.data.keyword.iot_full}} or through the device vendor's cloud. You connect devices by registering authorized users and then setting up device event generation and reception. Use the instructions in the following sections to connect your devices.
+Devices can send data directly to {{site.data.keyword.iot_full}} or through the device vendor's cloud. You connect devices by registering authorized users and then setting up device event generation and reception. For a list of supported devices and vendors and sample intergration procedures, see [Supported devices and vendors](iotinsurance_supporteddevices.html).
+
+Use the instructions in the following sections to connect your devices.
 
 ## Registering authorized users
 {: #reg_users}
@@ -33,6 +35,14 @@ The following diagram shows a simplified OAuth flow in which {{site.data.keyword
 
 ### User registration flow
 {: #user_reg_flow}
+
+User registration varies by vendor. To understand how to get the required cloud access tokens and how to register them to {{site.data.keyword.iotinsurance_short}} by using the API, see [Supported devices and vendors](iotinsurance_supporteddevices.html).
+
+#### Mobile registration flow (*deprecated*)
+
+**Note**: The mobile app supports only Wink and changes to {{site.data.keyword.amashort}}
+have disabled the user registration flow that is described in this section. This flow is available only for existing instances of version 1.0 of {{site.data.keyword.iotinsurance_short}}.
+
 The following diagram shows a simplified user registration flow. In this example, a new user registration request is made from a mobile device. The request is processed by {{site.data.keyword.amafull}}, which provides an identifier to the customer's support system and sends the request to the API registration service. The API registration service redirects the OAuth request to the device vendor's cloud, which in turn verifies authentication with the customer's support system. The device vendor's cloud returns the authorization code or token to the API registration service. The registration service then creates the user and a unique API token in {{site.data.keyword.iot_short_notm}} and in {{site.data.keyword.cloudant}}.
 
 ![{{site.data.keyword.iotinsurance_short}} User registration flow. This diagram is described in the main body of the topic.](images/IoT4I_reg_user.svg "{{site.data.keyword.iotinsurance_short}} User registration flow")
@@ -45,8 +55,8 @@ When the device is connected through the vendor's cloud, device events are sent 
 
 When the device is connected directly to {{site.data.keyword.iot_short_notm}}, the link between the device and user is stored in {{site.data.keyword.iot_short_notm}}. The {{site.data.keyword.iotinsurance_short}} transformer caches that information and then enriches device events with the link to the user.
 
-### Device event registration flow
-{: #device_event_reg}
+### Cloud to Cloud - device event flow
+{: #device_event_flow}
 The following diagram shows a simplified device event flow. In this example, a device detects a water leak. The {{site.data.keyword.iotinsurance_short}} transformer periodically polls the vendor's cloud for changes in device status. When the event is detected, the transformer sends it to {{site.data.keyword.iot_short_notm}}. The {{site.data.keyword.iotinsurance_short}} shield engine analyzes the event and then generates an alert and stores the alert in {{site.data.keyword.cloudant}}. {{site.data.keyword.iot_short_notm}} transfers the alert to the {{site.data.keyword.iotinsurance_short}} action engine for analysis. The action engine then pushes the alert to the consumer's mobile app through {{site.data.keyword.mobilepushshort}}.  
 
 ![{{site.data.keyword.iotinsurance_short}} Device event registration flow. This diagram is described in the main body of the topic.](images/IoT4I_device_reg.svg "{{site.data.keyword.iotinsurance_short}} Device event registration flow")
@@ -148,7 +158,9 @@ dbhelper.bulkDelDevices(userDevices, function (err, results) {
 {: #deploy_new_transformer}
 You can deploy a new transformer instance in the same organization and space in which your {{site.data.keyword.iotinsurance_short}} is deployed.  
 
-Before you begin, download and install the Cloud Foundry command line interface. Use the Cloud Foundry command line interface to modify and deploy service instances to {{site.data.keyword.iot_short_notm}}. For more information, see [Start coding with the cf command line interface](https://www.ng.bluemix.net/docs/#starters/install_cli.html).
+**Note:** For information and assistance when deploying a new transformer instance, see [Contacting support](../support/index.html#contacting-support).
+
+Before you begin, download and install the Cloud Foundry command line interface. Use the Cloud Foundry command line interface to modify and deploy service instances to {{site.data.keyword.iot_short_notm}}. For more information, see [Start coding with the cf command line interface ![External link icon](../../icons/launch-glyph.svg)](https://www.ng.bluemix.net/docs/#starters/install_cli.html){:new_window}.
 
 1. In the command line interface, change your directory to the `directory with sources and deployment descriptor YML file` by using the following command:
 ```
@@ -188,21 +200,3 @@ $ cf stop iot4i-dev-transformer
   ```
   $ cf logs iot4i-dev-transformer
   ```
-
-# Related Links
-{: #rellinks}
-
-## Tutorials and Samples
-{: #samples}
-* [Sample mobile app code on GitHub](https://github.com/ibm-watson-iot/ioti-mobile){:new_window}
-
-## API Reference
-{: #api}
-* [{{site.data.keyword.iotinsurance_short}} API](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [{{site.data.keyword.iotinsurance_short}} API Examples](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
-
-## Related Links
-{: #general}
-* [{{site.data.keyword.iot_full}} documentation](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-* [Developer support forum](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
-* [Stack overflow support forum](http://stackoverflow.com/questions/tagged/ibm-bluemix)
