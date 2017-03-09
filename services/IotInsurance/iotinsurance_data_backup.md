@@ -1,16 +1,17 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-11"
+  years: 2016, 2017
+lastupdated: "2017-03-01"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="\_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
 
 
 <!-- {{site.data.keyword.iotinsurance_full}}  {{site.data.keyword.iotinsurance_short}}  -->
@@ -40,7 +41,7 @@ To back up the {{site.data.keyword.iotinsurance_short}} data, perform the follow
 
 ## Creating a replica {{site.data.keyword.cloudant}} instance
 {: #createinstance}
-Create a replica {{site.data.keyword.cloudant}} instance by using the [{{site.data.keyword.cloudant}} Replication instructions](https://docs.cloudant.com/replication.html). For disaster recovery purposes, create the replica in a different location from your original {{site.data.keyword.iotinsurance_short}} service. For example, if your original instance is in Dallas, the replica might be in London.
+Create a replica {{site.data.keyword.cloudant}} instance by using the [{{site.data.keyword.cloudant}} Replication instructions ![External link icon](../../icons/launch-glyph.svg)](https://docs.cloudant.com/replication.html). For disaster recovery purposes, create the replica in a different location from your original {{site.data.keyword.iotinsurance_short}} service. For example, if your original instance is in Dallas, the replica might be in London.
 
 ## Locate the credentials and URLs
 {: #locate_credentials}
@@ -70,7 +71,7 @@ Create a replication task for each database that must be backed up. The database
 
 8. Click **Replicate Data**.  
 
-9. (optional) Because subsequent replication tasks overwrite the previous data,  consider exporting the data to a CSV file.  For instructions, see [Export Cloudant JSON as CSV, RSS, or iCal](https://developer.ibm.com/clouddataservices/2015/09/22/export-cloudant-json-as-csv-rss-or-ical/).
+9. (optional) Because subsequent replication tasks overwrite the previous data,  consider exporting the data to a CSV file.  For instructions, see [Export Cloudant JSON as CSV, RSS, or iCal ![External link icon](../../icons/launch-glyph.svg)](https://developer.ibm.com/clouddataservices/2015/09/22/export-cloudant-json-as-csv-rss-or-ical/){: new_window}.
 
 10. Repeat these steps for each database.
 
@@ -92,26 +93,6 @@ You can restore the data from a replicated database or by loading a saved CSV fi
 3. Restore the data in one of the following ways:
   - Load the data from a CSV backup file directly into the primary Cloudant instance
   - Create a replication task that has the replicated database as the source and the original database as the target. This task moves the replicated data into the original database.
-4. Run the following scripts to re-create design documents and restore referential integrity.  The scripts are located in the [{{site.data.keyword.iotinsurance_short}} API examples GitHub site](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/)
+4. Run the following scripts to re-create design documents and restore referential integrity.  The scripts are located in the [{{site.data.keyword.iotinsurance_short}} API examples GitHub site ![External link icon](../../icons/launch-glyph.svg)](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/){: new_window}.
   - iot4i-api/wearable-framework/auto-create/create.sh - This script re-creates the design documents within {{site.data.keyword.cloudant}}.
   - iot4i-api/wearable-framework/health/check-relations - This script reestablishes referential integrity. For example, the script corrects a case in which a shield is deleted but the association to a user still exists.
-
-
-# Related Links
-{: #rellinks}
-
-## Tutorials and Samples
-{: #samples}
-* [Sample mobile app code on GitHub](https://github.com/ibm-watson-iot/ioti-mobile){:new_window}
-
-## API Reference
-{: #api}
-* [{{site.data.keyword.iotinsurance_short}} API](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [{{site.data.keyword.iotinsurance_short}} API Examples](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
-
-
-## Related Links
-{: #general}
-* [{{site.data.keyword.iot_full}} documentation](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-* [Developer support forum](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
-* [Stack overflow support forum](http://stackoverflow.com/questions/tagged/ibm-bluemix)

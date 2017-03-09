@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-26"
+  years: 2016, 2017
+lastupdated: "2017-03-08"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="\_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -22,17 +22,20 @@ lastupdated: "2016-10-26"
 The {{site.data.keyword.iotinsurance_full}} sample mobile app is a reference implementation for a mobile client of {{site.data.keyword.iotinsurance_short}}. You can use the app to register new devices in the system and receive alerts for the devices.
 {:shortdesc}
 
+**Note**: {{site.data.keyword.iotinsurance_short}} no longer deploys either {{site.data.keyword.amafull}} or {{site.data.keyword.mobilepushfull}}. Earlier versions of {{site.data.keyword.iotinsurance_short}} used the {{site.data.keyword.amashort}} service to process the responses from the mobile app. This process continues to work for all existing instances of {{site.data.keyword.iotinsurance_short}}. However, you must create a custom authentication process to use the mobile app with new instances of
+{{site.data.keyword.iotinsurance_short}}. You can also optionally [create an instance of  {{site.data.keyword.mobilepushshort}}](../mobilepush/index.html), configure it, and bind it to the {{site.data.keyword.iotinsurance_short}} API.
+
 **Prerequisites:** Before you begin, ensure that the following prerequisites are in place:
   - Apple Xcode 8 or higher integrated development environment.
   - An iOS 9.0 or higher iPhone mobile device.
-  - CocoaPods installed on your computer. See the [CocoaPods website](https://guides.cocoapods.org/using/getting-started.html).
+  - CocoaPods installed on your computer. See the [CocoaPods website ![External link icon](../../icons/launch-glyph.svg)](https://guides.cocoapods.org/using/getting-started.html){: new_window}.
   - The [parameters](#iot4i_mobileParam) that are required to connect the sample mobile app to your instance of the service.
 
 ## Building the sample mobile app
 {: #building_mobile}
 To try the sample mobile app, perform the following tasks:
 
-1. Clone the [source code repository for the sample mobile app](https://github.com/ibm-watson-iot/ioti-mobile) onto a computer on which Xcode 7.3 or above is installed.
+1. Clone the [source code repository for the sample mobile app ![External link icon](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/ioti-mobile){: new_window} onto a computer on which Xcode 7.3 or above is installed.
 2. Install the required packages and generate the IoT4I.xcworkspace file by running a CocoaPods pod install command on your project. CocoaPods must be installed to complete this task.
 3. Open the project in Xcode by double-clicking the IoT4I.xcworkspace file.
 4. Connect your iPhone to your computer and select it as a build destination.
@@ -42,8 +45,8 @@ To try the sample mobile app, perform the following tasks:
   - Set **Team** to your personal team name and then click **Fix Issue**.
 7. To connect your app to your instance of {{site.data.keyword.iotinsurance_short}}, set the following parameters in the **constants.swift** file:  
     - [applicationRoute](#iot4i_mobileParam) = the URL for the {{site.data.keyword.iotinsurance_short}} API application. You can find this value in the Service Credentials tab of the {{site.data.keyword.iotinsurance_short}} service console.
-    - [applicationId](#iot4i_mobileParam) = the GUID for your instance of {{site.data.keyword.amashort}}. You can find this value by opening {{site.data.keyword.amashort}}, then clicking **Mobile Options**.  The value is called App GUID / TenantId. 
-8. On your computer, click the arrow to build and run the current scheme. The sample mobile app is installed on your phone. For more information, see the [Apple developer instructions for running apps on devices from Xcode](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/LaunchingYourApponDevices/LaunchingYourApponDevices.html).
+    - [applicationId](#iot4i_mobileParam) = the GUID for your instance of {{site.data.keyword.amashort}}. You can find this value by opening {{site.data.keyword.amashort}}, then clicking **Mobile Options**.  The value is called App GUID / TenantId.
+8. On your computer, click the arrow to build and run the current scheme. The sample mobile app is installed on your phone. For more information, see the [Apple developer instructions for running apps on devices from Xcode ![External link icon](../../icons/launch-glyph.svg)](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/LaunchingYourApponDevices/LaunchingYourApponDevices.html){: new_window}.
 
   **Note:** If an error is displayed when you try to build that says *Could not launch IoT4I because you have not yet verified that your Developer App certificate is trusted on your device*, select yourself as a Trusted Developer, as follows:  
     1. On your phone, go to **Settings > General > Device Management > yourDeveloperID**.
@@ -55,7 +58,7 @@ To try the sample mobile app, perform the following tasks:
 
 Perform the following tasks to enable push notifications for your mobile device. You must have a valid Apple Developer Account membership to use the push notification service.
 
-1. Log in to your Apple developer account at https://developer.apple.com/account.
+1. Log in to your [Apple developer account ![External link icon](../../icons/launch-glyph.svg)](https://developer.apple.com/account){: new_window}.
 
 2. Create a certificate file.
   1. Select **Certificates, Identifiers & Profiles**.
@@ -92,17 +95,3 @@ Perform the following tasks to enable push notifications for your mobile device.
   5. In the Apple Push Notifications Certificate section, upload the PKCS 12 file and enter the password.
   6. In Xcode, change the bundle identifier to the one you created previously.
   7. Run the app and grant permissions for the Push Notification service.
-
-# Related Links
-{: #rellinks}
-
-## API Reference
-{: #api}
-* [{{site.data.keyword.iotinsurance_short}} API](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [{{site.data.keyword.iotinsurance_short}} API Examples](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
-
-## Related Links
-{: #general}
-* [{{site.data.keyword.iot_full}} documentation](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-* [Developer support forum](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
-* [Stack overflow support forum](http://stackoverflow.com/questions/tagged/ibm-bluemix)

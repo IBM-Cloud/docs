@@ -1,16 +1,17 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-27"
-
+  years: 2016, 2017
+lastupdated: "2017-03-08"
 ---
+
 <!-- Common attributes used in the template are defined as follows: -->
-{:tsSymptoms: .tsSymptoms}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
-{:new_window: target="\_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
+
 
 # {{site.data.keyword.iotinsurance_short}} troubleshooting
 {: #ts}
@@ -55,33 +56,14 @@ Upgrade to the standard version of {{site.data.keyword.cloudant}}.
 
 If you have problems or questions when using {{site.data.keyword.iotinsurance_full}}, you can check {{site.data.keyword.Bluemix_notm}}, or get help by searching for information or by asking questions through a forum. You can also open a support ticket.
 
-* You can check whether {{site.data.keyword.Bluemix_notm}} is available by going to the [Bluemix status page](https://developer.ibm.com/bluemix/support/#status){:new_window}.
+- You can check whether {{site.data.keyword.Bluemix_notm}} is available by going to the [Bluemix status page ![External link icon](../../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/support/#status){:new_window}.
 
-* You can review the forums to see whether other users ran into the same problem. When using the forums to ask a question, tag your question so that it is seen by the {{site.data.keyword.Bluemix_notm}} development teams.
+- You can review the forums to see whether other users ran into the same problem. When using the forums to ask a question, tag your question so that it is seen by the {{site.data.keyword.Bluemix_notm}} development teams.
   <!--Insert the appropriate Stack Overflow tag for your service for <service_keyword> in URL and text below:  -->
-* If you have technical questions about developing or deploying an app with {{site.data.keyword.iotinsurance_short}}, post your question on [Stack Overflow](http://stackoverflow.com/search?q=iot-insurance+ibm-bluemix){:new_window} and tag your question with "ibm-bluemix" and "iot-for-insurance".
+- If you have technical questions about developing or deploying an app with {{site.data.keyword.iotinsurance_short}}, post your question on [Stack Overflow ![External link icon](../../icons/launch-glyph.svg)](http://stackoverflow.com/search?q=iot-insurance+ibm-bluemix){:new_window} and tag your question with "ibm-bluemix" and "iot-for-insurance".
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
-* For questions about the service and getting started instructions, use the [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/iot-insurance/?smartspace=bluemix){:new_window} forum. Include the  "iot-for-insurance" and "bluemix" tags.
+- For questions about the service and getting started instructions, use the [IBM developerWorks dW Answers ![External link icon](../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/topics/iot-insurance/?smartspace=bluemix){:new_window} forum. Include the  "iot-for-insurance" and "bluemix" tags.
 
 See [Getting help](https://www.{DomainName}/docs/support/index.html#getting-help) for more details about using the forums.
 
-* If you still can't resolve the problem, you can open an IBM support ticket. For information about opening an IBM support ticket, or about support levels and ticket severities, see [Contacting support](https://www.{DomainName}/docs/support/index.html#contacting-support).
-
-
-# Related Links
-{: #rellinks}
-
-## Tutorials and Samples
-{: #samples}
-* [Sample mobile app code on GitHub](https://github.com/ibm-watson-iot/ioti-mobile){:new_window}
-
-## API Reference
-{: #api}
-* [{{site.data.keyword.iotinsurance_short}} API](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [{{site.data.keyword.iotinsurance_short}} API Examples](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
-
-## Related Links
-{: #general}
-* [{{site.data.keyword.iot_full}} documentation](https://console.ng.bluemix.net/docs/services/IoT/index.html)
-* [Developer support forum](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix])
-  * [Stack overflow support forum](http://stackoverflow.com/questions/tagged/ibm-bluemix)
+- If you still can't resolve the problem, you can open an IBM support ticket. For information about opening an IBM support ticket, or about support levels and ticket severities, see [Contacting support](../support/index.html#contacting-support).
