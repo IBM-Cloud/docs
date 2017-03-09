@@ -2,11 +2,11 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-09"
+lastupdated: "2017-03-09"
 
 ---
 
-<!-- Attribute definitions --> 
+<!-- Attribute definitions -->
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
@@ -31,8 +31,8 @@ A simple modification is to raise or remove the event limit in the starter appli
 		    status_step[3] = "Completed";
 		    console.log("\nTarget event count has been reached.  Geospatial Analytics service will be stopped.\n");
 		    callback(null, null);
-		    } 
-	</code></pre> 
+		    }
+	</code></pre>
 4. Redeploy your modified application to {{site.data.keyword.Bluemix_short}} with the cf push command.
 	 <pre><code>  
 	cf push myapp
