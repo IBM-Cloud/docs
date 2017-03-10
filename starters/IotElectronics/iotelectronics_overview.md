@@ -2,11 +2,16 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-11-29"
+lastupdated: "2017-03-10"
 ---
 
-{:new_window: target="\_blank"}
+<!-- Common attributes used in the template are defined as follows: -->
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
+
 
 # About {{site.data.keyword.iotelectronics}}
 {: #iotelectronics_about}
@@ -52,17 +57,3 @@ The {{site.data.keyword.iotelectronics}} starter uses the {{site.data.keyword.io
 **{{site.data.keyword.sdk4nodefull}}** enables you to develop, deploy, and scale server-side JavaScript&reg; apps and provides enhanced performance, security, and serviceability.
 
 **Sample mobile app** lets you view the status of and communicate with a simulated appliance by using your mobile device such as a smart phone or tablet. Find out how to get the mobile app in [Using the Mobile app](iotelectronics_config_mobile.html).
-
-# Related Links
-{: #rellinks}
-## Components
-{: #general}
-* [{{site.data.keyword.iot_short}} documentation](https://console.ng.bluemix.net/docs/services/IoT/index.html#gettingstartedtemplate)
-* [{{site.data.keyword.amafull}} documentation](https://console.ng.bluemix.net/docs/services/mobileaccess/index.html)
-* [{{site.data.keyword.sdk4nodefull}} documentation](https://console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime)
-
-
-## API documentation
-{: #api}
-*  [{{site.data.keyword.iotelectronics}} API](http://ibmiotforelectronics.mybluemix.net/public/iot4eregistrationapi.html)
-*  [{{site.data.keyword.iot_short}} API](https://developer.ibm.com/iotfoundation/recipes/api-documentation/)
