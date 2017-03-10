@@ -2,16 +2,15 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-11-29"
-
+lastupdated: "2017-03-10"
 ---
 
-
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="\_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # Configuring mobile connectivity and security
 {: #iot4e_configureMCA}
