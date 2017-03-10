@@ -87,36 +87,40 @@ La integración de blockchain de {{site.data.keyword.iot_short_notm}} requiere q
     Para grabar en blockchain desde {{site.data.keyword.iot_short_notm}}, primero debe enlazar los servicios.
      1. En {{site.data.keyword.Bluemix_notm}}, vaya al Panel de control.
      2. Seleccione el espacio en el que ha desplegado {{site.data.keyword.blockchainfull_notm}}.
-     3. Pulse el mosaico **Blockchain**.
-     4. En el panel izquierdo, pulse **Credenciales de servicio**.
-     5. Seleccione un conjunto de credenciales de servicio o pulse **Añadir credenciales** para crear un nuevo conjunto de credenciales de servicio y para proporcionarles un nombre descriptivo, como por ejemplo "IoT-Platform-integration."
+     3. Pulse el enlace **Blockchain** en **Servicios**.
+     4. Pulse el separador **Credenciales de servicio**.
+     5. Seleccione un conjunto de credenciales de servicio o pulse **Nueva credencial** para crear un nuevo conjunto de credenciales de servicio y para proporcionarles un nombre descriptivo, como por ejemplo "IoT-Platform-integration".
      6. En las credenciales de servicio formateadas por JSON, tome nota de los parámetros siguientes:  
-      - Información de iguales: `api_host` y `api_port`
+      - Información de iguales: `api_host` y `api_port_tls`
       - Información de usuario de tipo 1 (cliente): `username` y `secret`  
 
       Ejemplo de credenciales de servicio:
      ```json
      {
-      "credentials": {
       "peers": [
       {
-       "discovery_host": "169.44.63.203",
-       "discovery_port": "32904",
-       "api_host": "169.44.63.203",
-       "api_port_tls": "443",
-       "api_port": "80",
-       "type": "peer",
-       "network_id": "f621cde2-bdec-4897-b737-da4df144c41f",
-       "container_id": "5750f7734fb06c64d70c443b1dfcf39a3f5de7b51b792294c05dbdbe7d8356f7",
-       "id": "f621cde2-bdec-4897-b737-da4df144c41f_vp1",
-       "api_url": "http://169.44.63.203:32905"
-      },
+        "discovery_host": "fa68cbcbfcec4726932e53e2fa4f3afc-vp0.us.blockchain.ibm.com",
+        "discovery_port": 30003,
+        "api_host": "fa68cbcbfcec4726932e53e2fa4f3afc-vp0.us.blockchain.ibm.com",
+        "api_port_tls": 5003,
+        "api_port": 5003,
+        "event_host": "fa68cbcbfcec4726932e53e2fa4f3afc-vp0.us.blockchain.ibm.com",
+        "event_port": 31003,
+        "type": "peer",
+        "network_id": "fa68cbcbfcec4726932e53e2fa4f3afc",
+        "container_id": "e33f08f85988bf57ccfcf34ccdb80d72489e5bfb46786b570e1a74a6679f804e",
+        "id": "fa68cbcbfcec4726932e53e2fa4f3afc-vp0",
+        "api_url": "http://fa68cbcbfcec4726932e53e2fa4f3afc-vp0.us.blockchain.ibm.com:5003"
+    },
        ...
       ],
       "users": [
       {
-       "username": "user_type1_fa8e6ef0dc",
-       "secret": "33401036a9"
+        "enrollId": "user_type1_0",
+        "enrollSecret": "63c58806d6",
+        "affiliation": "group1",
+        "username": "user_type1_0",
+        "secret": "63c58806d6"
       },
        ...
        ]
@@ -126,7 +130,7 @@ La integración de blockchain de {{site.data.keyword.iot_short_notm}} requiere q
      **Importante:** El usuario que ha seleccionado no debe estar registrado previamente con un igual distinto al igual seleccionado.
      7. Pulse **Volver al Panel de control** para volver al panel de instrumentos de {{site.data.keyword.Bluemix_notm}}.
      8. Seleccione el espacio en el que ha desplegado {{site.data.keyword.iot_short_notm}}.
-     9. Pulse el mosaico **{{site.data.keyword.iot_short_notm}}**.
+     9. Pulse el enlace **{{site.data.keyword.iot_short_notm}}** en **Servicios**.
      10. Pulse **Launch** para abrir el panel de control de {{site.data.keyword.iot_short_notm}}.
      11. En el panel de control de {{site.data.keyword.iot_short_notm}}, seleccione **Extensiones** en la barra lateral del menú.
      12. En la página **Extensiones**, en el mosaico de Blockchain, pulse **Configuración** o pulse ![icono de engranaje](../images/gear.png "Configure") si ya tiene estructuras enlazadas.
@@ -152,7 +156,7 @@ La integración de blockchain de {{site.data.keyword.iot_short_notm}} requiere q
    </tr>
    <tr>
    <td>Puerto</td>
-   <td>El número `api_port`<ul><li>Utilice el puerto 80 si su implementación no utiliza TLS.</li><li>Utilice el puerto 443 si la implementación utiliza TLS.</li></ul></td>
+   <td>El número `api_port_tls`</td>
    </tr>
    <tr>
    <td>ID de usuario</td>
@@ -164,7 +168,7 @@ La integración de blockchain de {{site.data.keyword.iot_short_notm}} requiere q
    </tr>
    <tr>
    <td>Utilizar TLS</td>
-   <td>Encendido o Apagado</br>Utilice Transport Layer Security para cifrar la comunicación entre {{site.data.keyword.iot_short_notm}} y el contrato en el entramado. Los números de puerto predeterminados los establece la instancia de {{site.data.keyword.iot_short_notm}} desplegada a la que se está conectando.</td>
+   <td>Encendido o Apagado</br>Utilice Transport Layer Security para cifrar la comunicación entre {{site.data.keyword.iot_short_notm}} y el contrato en el entramado. TLS debe estar habilitado al conectarse a un entramado {{site.data.keyword.blockchainfull_notm}}.</td>
    </tr></tbody>
    </table>  
     3. Pulse **Finalizar**.
@@ -222,9 +226,9 @@ Para descargar los contratos de ejemplo:
   2. Registre el contrato con el igual al que se ha conectado anteriormente.  
   Utilice un cliente REST como CURL o Postman para enviar la llamada de registro. Para obtener más información sobre la llamada de registro, consulte la [Documentación de la API de registrador POST](https://ibmblockchainapi.mybluemix.net/swagger/ui.html?scheme=http&host=127.0.0.1:3000&basepath=/#!/Registrar/registerUser). Utilice la siguiente información al registrarse:
   <ul>
-  <li>URL: `http://api_host:api_port/registrar`
+  <li>URL: `http://api_host:api_port_tls/registrar`
   <li>Type: POST
-  <li>Header: `Content type: application/x-www-form-urlencoded`
+  <li>Header: `Content type: application/json`
   <li>Payload:  
   ```json
    {  
@@ -238,26 +242,28 @@ Para descargar los contratos de ejemplo:
   Para obtener más información sobre la llamada de despliegue, consulte la [Documentación de la API de despliegue/devops POST](https://ibmblockchainapi.mybluemix.net/swagger/ui.html?scheme=http&host=127.0.0.1:3000&basepath=/#!/Devops/chaincodeDeploy).  
   Utilice la siguiente información al desplegar:  
   <ul>
-  <li>URL: `http://api_host:api_port/devops/deploy`
+  <li>URL: `http://api_host:api_port_tls/chaincode`
   <li>Type: POST
-  <li>Header: `Content type: application/x-www-form-urlencoded`
+  <li>Header: `Accept: application/json`
+  <li>Header: `Content type:  application/json`
   <li>Payload:  
   ```
   {
-      "type": "GOLANG",   
-      "chaincodeID": {  
-      "path": "http://github.com/{my organization}/{my project}/sample.go",
-      "name": "string"
+    "jsonrpc": "2.0",
+    "method": "deploy",
+    "params": {
+        "type": 1,
+        "chaincodeID":{
+              "path": "http://github.com/{my organization}/{my project}/sample.go"
+        },
+        "ctorMsg": {
+            "function":"init",
+            "args":["{\"version\":\"1.0\",\"nickname\":\"sample_contract\"}"]
+        },
+        "secureContext": "username"
     },
-    "ctorMsg": {  
-      "function": "init",  
-      "args": [
-        "{\"version\":\"1.0\}"}"
-      ]
-    },
-    "secureContext": "'username'",
-    "confidentialityLevel": "PUBLIC"
-  }
+    "id":1234
+}
   ```  
   </ul>  
   Su contrato se despliega en el entramado.  
@@ -267,16 +273,16 @@ Para descargar los contratos de ejemplo:
   Para empezar a grabar datos de dispositivos en los nuevos contratos inteligentes de blockchain, en primer lugar debe correlacionar datos de dispositivos en los contratos.  
    1. En {{site.data.keyword.Bluemix_notm}}, vaya al Panel de control.
    2. Seleccione el espacio en el que ha desplegado {{site.data.keyword.iot_short_notm}}.
-   3. Pulse el mosaico **{{site.data.keyword.iot_short_notm}}**.
+   3. Pulse el servicio **{{site.data.keyword.iot_short_notm}}**.
    4. Pulse **Launch** para abrir el panel de control de {{site.data.keyword.iot_short_notm}}.
    5. Seleccione **Blockchain** pulsando ![Blockchain](images/platform_blockchain.png "Blockchain") en la barra lateral del menú.
-   6. Pulse **Enlazar contrato**.
-   6. Seleccione el nombre de entramado para el entramado que ha creado anteriormente.
-   7. Escriba la información siguiente:  
+   6. Pulse **Correlacionar datos de dispositivo**.
+   7. Seleccione el tipo de dispositivo para el que desea almacenar datos de dispositivos en el blockchain y el nombre de suceso para los sucesos que desea almacenar.Pulse **Siguiente**.
+   8. Seleccione el nombre de entramado para el entramado que ha creado anteriormente. Pulse **Siguiente**.
+   9. Escriba la información siguiente y haga clic en **Siguiente**:
      - ID de contrato: Pegar en el ID de contrato de 128 caracteres que ha guardado al desplegar el contrato.
      - Nombre de contrato: Especifique un nombre para identificar el contrato en {{site.data.keyword.iot_short_notm}}.
-     - Seleccione el tipo de dispositivo para el que desea almacenar datos de dispositivos en el blockchain.
-     - Seleccione el nombre de suceso para los sucesos que desea almacenar.  
+     
      **Consejo:** Para encontrar los tipos de sucesos para un dispositivo, vaya a la página **Dispositivos** y pulse el nombre de la imagen para abrir la página de detalles de dispositivos. Desplácese hacia abajo en la sección **Información de sensor** para ver una lista de los sucesos y de los puntos de datos disponibles para el dispositivo.
 
    11. Correlacionar las propiedades de dispositivos disponibles en los parámetros de contratos.   
@@ -316,7 +322,7 @@ Para probar el contrato inteligente, realice una prueba completa creando un disp
 <tr>
 <td>Host y puerto de API</td>
 <td>`http://peer_URL:port`</td>
-<td>El host y el puerto para la API REST de {{site.data.keyword.blockchainfull_notm}}, que se antepone con `http://`. Utilice la dirección `api_host` y el número `api_port`. </td>
+<td>El host y el puerto para la API REST de {{site.data.keyword.blockchainfull_notm}}, que se antepone con `https://`. Utilice la dirección `api_host` y el número `api_port_tls`. </td>
 </tr>
 <tr>
 <td>ID de Chaincode</td>

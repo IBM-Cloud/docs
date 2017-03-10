@@ -71,7 +71,7 @@ Los dispositivos conectados utilizan una combinación de clientId y de la señal
 
 ![imagen](connectivity_platform.svg)
 
-Para obtener más información sobre los requisitos de TLS y de la suite de cifrado, consulte la sección [Requisitos de TLS![icono de enlace externo](../../../../icons/launch-glyph.svg)](https://console.ng.bluemix.net/docs/services/IoT/reference/security/connect_devices_apps_gw.html#tls_requirements){: new_window} en la documentación `Conexiones de aplicaciones, dispositivos y pasarelas a la Watson IoT Platform`.
+Para obtener más información sobre los requisitos de TLS y de la suite de cifrado, consulte la sección [Requisitos de TLS ![icono de enlace externo](../../../../icons/launch-glyph.svg)](https://console.ng.bluemix.net/docs/services/IoT/reference/security/connect_devices_apps_gw.html#tls_requirements){: new_window} en la documentación `Conexiones de aplicaciones, dispositivos y pasarelas a la Watson IoT Platform`.
 
 ## ¿Cómo evitamos el filtrado de datos entre dispositivos IoT?
 {: #prevent-leak-devices}
