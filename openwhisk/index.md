@@ -23,7 +23,7 @@ You get billed by millisecond of execution time (rounded up to the nearest 100ms
 
 This programming model is a perfect match for microservices, mobile, IoT and many other apps – you get inherent auto-scaling and load balancing out of the box without having to manually configure clusters, load balancers, http plugins, etc. If you happen to run on {{site.data.keyword.openwhisk}}, you also get a benefit of zero administration - meaning that all of the hardware, networking and software is maintaned by IBM. All you need to do is to provide the code you want to execute and give it to {{site.data.keyword.openwhisk}}. The rest is “magic”. A good introduction into the serverless programming model is available on [Martin Fowler's blog](https://martinfowler.com/articles/serverless.html).
 
-You can also get the [Apache OpenWHisk source code](https://github.com/openwhisk/openwhisk) and run the system yourself.
+You can also get the [Apache OpenWhisk source code](https://github.com/openwhisk/openwhisk) and run the system yourself.
 
 For more details about how {{site.data.keyword.openwhisk_short}} works, see [About {{site.data.keyword.openwhisk_short}}](./openwhisk_about.html).
 
