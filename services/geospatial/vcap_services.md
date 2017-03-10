@@ -2,11 +2,11 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-09"
+lastupdated: "2017-03-09"
 
 ---
 
-<!-- Attribute definitions --> 
+<!-- Attribute definitions -->
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
@@ -23,7 +23,7 @@ The VCAP_SERVICES environment variable includes information that is required to 
 ##Description
 {: #vcap_description}
 
-The VCAP_SERVICES environment variable includes information similar to the following example: 
+The VCAP_SERVICES environment variable includes information similar to the following example:
 
 <pre><code>
 "Geospatial Analytics": {
@@ -48,11 +48,11 @@ The VCAP_SERVICES environment variable includes information similar to the follo
 
 The VCAP_SERVICES environment variable includes the following items:
 
-* key: The name of the {{site.data.keyword.geospatialshort_Geospatial}} service [{{site.data.keyword.geospatialshort_Geospatial}}]. 
-* name: The name of the service instance. 
-* label: The name of the service. 
-* plan: The name of the service plan. 
-* start_path: The path that is used by the start method of the REST API. 
+* key: The name of the {{site.data.keyword.geospatialshort_Geospatial}} service [{{site.data.keyword.geospatialshort_Geospatial}}].
+* name: The name of the service instance.
+* label: The name of the service.
+* plan: The name of the service plan.
+* start_path: The path that is used by the start method of the REST API.
 * geo_host: The host name of the {{site.data.keyword.geospatialshort_Geospatial}} server.
 * status_path: The path that is used by the status method of the REST API.
 * remove_region_path: The path that is used by the remove_region method of the REST API.
@@ -68,7 +68,7 @@ The VCAP_SERVICES environment variable includes the following items:
 ##Example: Retrieving VCAP_SERVICES environment variable information
 {: #vcap_example}
 
-The following Node.js code retrieves the service environment information: 
+The following Node.js code retrieves the service environment information:
 
 <pre><code>
 var geo_props = {};
@@ -90,5 +90,5 @@ if (process.env.VCAP_SERVICES)
 	else {
 		console.log('You must bind the Geospatial Analytics service to this application');
 	}
-} 
+}
 </code></pre>
