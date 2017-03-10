@@ -99,6 +99,7 @@ Learn what you can do with {{site.data.keyword.iotinsurance_short}}.
 
 ## Tutorials and Samples
 {: #samples}
+* [{{site.data.keyword.iotinsurance_short}} shields library ![External link icon](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/ioti-shields){: new_window}
 * [Sample mobile app code on GitHub ![External link icon](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/ioti-mobile){:new_window}
 
 ## API Reference
