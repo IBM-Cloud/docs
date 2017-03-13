@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-3-10"
+lastupdated: "2017-3-13"
 
 ---
 
@@ -267,14 +267,18 @@ Before you can integrate {{site.data.keyword.DRA_short}} with a Jenkins project,
 
 ### Installing the plugin
 
-In your Jenkins project, install the plugin. 
+First, download the plugin from {{site.data.keyword.DRA_short}}.  
 
-  1. If you are an IBM employee, download the plugin from [GitHub](https://github.ibm.com/oneibmcloud/Jenkins-IBM-Bluemix-Toolchains/blob/release/target/ibmclouddevops.hpi). Otherwise, contact jichen@us.ibm.com or aggarwav@us.ibm.com to get the plugin.
-  2. In Jenkins, enter `DevOps` in the search field. If the IBM DevOps Insights Plugin is installed, uninstall it.
-  3. Click **Manage Jenkins &gt; Manage Plugins** and click the **Advanced** tab.
-  4. Click **Choose File** and select the IBM Cloud DevOps plugin installation file. 
-  5. Click **Upload**.
-  6. Restart Jenkins and verify that the plugin was installed.
+1. From the toolchain's Overview page, click **DevOps Insights**.
+2. Click **Settings**, then **Jenkins Plugin Setup**.
+3. Follow the instructions on the page to download the plugin.
+
+Then, on your Jenkins server, install the plugin.
+
+1. Click **Manage Jenkins &gt; Manage Plugins** and click the **Advanced** tab.
+2. Click **Choose File** and select the IBM Cloud DevOps plugin installation file. 
+3. Click **Upload**.
+4. Restart Jenkins and verify that the plugin was installed.
 
 ### Configuring Jenkins jobs for the Deployment Risk dashboard
 
@@ -331,15 +335,6 @@ This example shows how to configure `ICD_WEBHOOK_URL` for job configurations:
 
 This example shows how to configure post-build actions for job notifications: 
 ![Post-build Actions for WebHook notification](images/PostBuild-WebHookNotification.png "Configure WebHook Notification in Post-build Actions")
-
-<!--### Installing and configuring the plugin
-{: #DI_jenkins_install}
-
-Before you begin, download the [the {{site.data.keyword.DRA_short}} plugin installation file (.hpi)](https://github.ibm.com/oneibmcloud/Jenkins-IBM-Bluemix-Toolchains/tree/release/target/dra.hpi). 
-
-For plugin installation and project configuration instructions, see [the plugin documentation](https://github.com/imvijay2007/Jenkins-IBM-Bluemix-Toolchains).
-
-**Note:** If you are not an IBM employee, you must request access before you can download the {{site.data.keyword.DRA_short}} plugin. To submit a request for access, send an email to aggarwav@us.ibm.com and jichen@us.ibm.com. In the email subject, include the phrase *Need Jenkins plugin*.-->
 
 ## Viewing results
 {: #view_results}
