@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-27"
+lastupdated: "2017-03-13"
 
 ---
 
@@ -44,13 +44,18 @@ wsk action create /guest/demo/hello hello.js -a web-export true
 ```
 {: pre}
 
-The `web-export` annotation allows the action to be accessible as a web action via a new REST interface. The URL that is structured as follows: `https://{APIHOST}/api/v1/experimental/web/{QUALIFIED ACTION NAME}.{EXT}`. The fully qualified name of an action consists of three parts: the namespace, the package name, and the action name. An example is `guest/demo/hello`. The last part of the URI called the `extension` which is typically `.http` although other values are permitted as described later. The web action API path may be used with `curl` or `wget` without an API key. It may even be entered directly in your browser.
+The `web-export` annotation allows the action to be accessible as a web action via a new REST interface. The URL that is structured as follows: `https://{APIHOST}/api/v1/experimental/web/{QUALIFIED ACTION NAME}.{EXT}`. The fully qualified name of an action consists of three parts: the namespace, the package name, and the action name. 
+
+*The fully qualified name of the action must include its package name, which is `default` if the action is not in a named package.*
+
+An example is `guest/demo/hello`. The last part of the URI called the `extension` which is typically `.http` although other values are permitted as described later. The web action API path may be used with `curl` or `wget` without an API key. It may even be entered directly in your browser.
 
 Try opening [https://${APIHOST}/api/v1/experimental/web/guest/demo/hello.http?name=Jane](https://${APIHOST}/api/v1/experimental/web/guest/demo/hello.http?name=Jane) in your web browser. Or try invoking the action via `curl`:
 ```
-curl https://openwhisk.{DomainName}/api/v1/experimental/web/guest/demo/hello.http?name=Jane
+curl https://openwhisk.ng.bluemix.net/api/v1/experimental/web/guest/demo/hello.http?name=Jane
 ```
 {: pre}
+
 Here is an example of a web action that performs an HTTP redirect:
 ```javascript
 function main() {
@@ -137,29 +142,64 @@ Web actions bring some additional features that include:
 - `Activation via multiple HTTP verbs`: a web action may be invoked via one of four HTTP methods: `GET`, `POST`, `PUT` or `DELETE`.
 
 
-The example below briefly sketches how you might use these features in a web action. Given an action `/guest/demo/hello` with the following body:
+The example below briefly sketches how you might use these features in a web action. Consider an action `/guest/demo/hello` with the following body:
 ```javascript
 function main(params) { 
-    return { 'response': params};
+    return { response: params };
 }
 ```
 {: codeblock}
 
-and invoking the action with a query parameter `name`, using the `.json` extension to indicate a JSON response, and projecting the field `/response` will yield the following HTTP response:
+When this action is invoked as a web action, you can alter the response of the web action by projecting different paths from the result.
+For example, to return the entire object, and see what arguments the action receives:
+
 ```
-curl https://openwhisk.{DomainName}/api/v1/experimental/web/guest/demo/hello.json/response?name=Jane
+curl https://openwhisk.ng.bluemix.net/api/v1/experimental/web/guest/demo/hello.json
 ```
 {: pre}
 ```json
 {
+  "response": {
+    "__ow_meta_verb": "get",
+    "__ow_meta_headers": {
+      "host": "172.17.0.1",
+      "connection": "close",
+      "user-agent": "curl/7.43.0",
+      "accept": "*/*"
+    },
+    "__ow_meta_path": ""
+  }
+}
+```
+
+and with a query parameter:
+```
+curl https://openwhisk.ng.bluemix.net/api/v1/experimental/web/guest/demo/hello.json?name=Jane
+```
+{: pre}
+```json
+{
+  "response": {
     "name": "Jane",
     "__ow_meta_verb": "get",
     "__ow_meta_headers": {
-        "accept": "*/*",
-        "user-agent": "curl/7.51.0"
+      "host": "172.17.0.1",
+      "connection": "close",
+      "user-agent": "curl/7.43.0",
+      "accept": "*/*"
     },
-    "__ow_meta_path": "/response"
+    "__ow_meta_path": ""
+  }
 }
+```
+
+and to project just the name (as text):
+```
+curl https://${APIHOST}/api/v1/experimental/web/guest/demo/hello.text/response/name?name=Jane
+```
+{: pre}
+```
+Jane
 ```
 
 ## Content extensions
