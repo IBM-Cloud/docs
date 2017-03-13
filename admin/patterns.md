@@ -209,7 +209,7 @@ When you adopt a single-organization architecture, the level of segregation and 
   For example, you can define one or more spaces for applications that are being developed, one or more spaces for applications that are in the test phase, and one or more 
   spaces for applications that are in production.
 * If the delivery lifecycle boundary is not sufficient, you can achieve more segregation by defining one or more spaces per LOB and delivery phase.
-* If you need to enforce boundaries for different users groups.
+* Identify if you need to enforce boundaries for different users groups.
   For example, your developers cannot develop the application and test it. You require a different set of users to test the application. In this scenario, you create two spaces, one for 
   developers of the application and one for testers of the application. Then grant each set of users access to the correct space.
 
@@ -356,7 +356,7 @@ In a multi-organization architecture or in a single-organization architecture, d
 2. Define the permissions for these users in the account. Divide permissions to manage the catalog and reports between users of the team.
 3. Select one or more roles for each user to match the permissions required to manage the account:
 
-   * Admin role: Grant this role to two more users in the account. Users with this role have the authority to manage the entire organization.
+   * Admin role: Grant this role to two or more users in the account. Users with this role have the authority to manage the entire organization.
    * User role: This role can be configured with read or write permissions. Grant this role with write permissions to managers of organizations to allow them to add users to the account and their organizations. Grant this role with read permissions to managers of organizations that might need access to see the list of members in the account.
    * Catalog role: This role can be configured with read or write permissions. Grant this role to a set of users with write permissions to allow them to define and manage which Bluemix services and starters are visible to users in the {{site.data.keyword.Bluemix_notm}} Catalog. Grant this role with read permissions to managers of organizations.
    * Reports role: This role can be configured with read or write permissions. Grant this role to a set of users with write permissions to allow them to view and add reports that other users with read permissions can download. Grant read permissions to all members of the admin team.
