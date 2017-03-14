@@ -69,7 +69,7 @@ To create a policy:
 
 1. From the left navigation, click **Settings**.
 
-2. Click **Policy**.
+2. Click **Policies**.
 
 3. Click **Create Policy** and then type a name and description for the new policy.
 
@@ -254,10 +254,12 @@ After you install the IBM Cloud DevOps plugin, you can publish test results to {
 The plugin provides post-build actions and CLIs to support the integration. {{site.data.keyword.DRA_short}} aggregates and analyzes the results from unit tests, functional tests, code coverage tools, static security code scans, and dynamic security code scans to determine whether your code meets predefined policies at gates in your deployment process. If your code does not meet or exceed a policy, the deployment is halted, preventing risky changes from being released. You can use {{site.data.keyword.DRA_short}} as a safety net for your continuous delivery environment, a way to implement and improve quality standards over time, and a data visualization tool to help you understand your project's health.
 
 ### Prerequisites
+{: #jenkins_prerequisites}
 
 You must have access to a server that is running a Jenkins project.
 
 ### Creating a toolchain
+{: #jenkins_create}
 
 Before you can integrate {{site.data.keyword.DRA_short}} with a Jenkins project, you must create a toolchain. 
 
@@ -266,6 +268,7 @@ Before you can integrate {{site.data.keyword.DRA_short}} with a Jenkins project,
 2. After you create the toolchain, add {{site.data.keyword.DRA_short}} to it. For instructions, see the [{{site.data.keyword.DRA_short}} documentation](https://console.ng.bluemix.net/docs/services/DevOpsInsights/index.html). 
 
 ### Installing the plugin
+{: #jenkins_install}
 
 First, download the plugin from {{site.data.keyword.DRA_short}}.  
 
@@ -281,6 +284,7 @@ Then, on your Jenkins server, install the plugin.
 4. Restart Jenkins and verify that the plugin was installed.
 
 ### Configuring Jenkins jobs for the Deployment Risk dashboard
+{: #jenkins_configure}
 
 After the plugin is installed, you can integrate {{site.data.keyword.DRA_short}} into your Jenkins project. 
 
@@ -327,6 +331,7 @@ Follow these steps to use Deployment Risk's gates and dashboard with your projec
 
     
 ### Configuring notifications
+{: #jenkins notifications}
 
 You can configure your Jenkins jobs to send notifications to tools like Slack or PagerDuty by following the instructions in the [Bluemix Docs](https://console.ng.bluemix.net/docs/services/ContinuousDelivery/toolchains_integrations.html#jenkins).
 

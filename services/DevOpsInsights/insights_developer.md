@@ -24,9 +24,7 @@ After you open {{site.data.keyword.DRA_short}} from your toolchain, click **Deve
 
 ## Data categories
 
-The data that {{site.data.keyword.DRA_short}} uses to populate its dashboards is mined automatically from your team's source-control repository. By default, this data is not restricted to any particular period or set of labels, but you can configure the data from the **Settings** menu. 
-
-On any chart, click the **Information** or **Guidance** buttons for more information about what the data means and how you can apply it to your project. 
+The data that {{site.data.keyword.DRA_short}} uses to populate its dashboards is mined automatically from your team's source-control repository. You can get more information about what the data means and how you can apply it to your project by clicking **Information** or **Guidance** on any chart.
 
 ### Error Proneness
 
