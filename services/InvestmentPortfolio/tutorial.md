@@ -14,7 +14,7 @@ lastupdated: "2017-03-14"
 
 # Tutorial
 
-This tutorial shows you how to obtain access to the IBM Investment Portfolio service and invoke API methods. To use the {{site.data.keyword.investportshort}} REST API, it is important that you understand the basics of RESTful web services and JSON representations.
+This tutorial shows you how to obtain access to the {{site.data.keyword.investportshort}} service and invoke API methods. To use the {{site.data.keyword.investportshort}} REST API, it is important that you understand the basics of RESTful web services and JSON representations.
 {:shortdesc}
 
 Before using the tutorial, do the following:
@@ -26,7 +26,7 @@ Before using the tutorial, do the following:
 
 ## Calling the {{site.data.keyword.investportshort}} API
 
-Use the Investment Portfolio service to store and retrieve portfolios and associated holdings.
+Use the {{site.data.keyword.investportshort}} service to store and retrieve portfolios and associated holdings.
 
 ### Creating a portfolio entry
 
