@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-27"
+lastupdated: "2017-03-13"
 
 ---
 
@@ -40,7 +40,9 @@ Run the following command to set the Authorization key:
 ```
 wsk property set --auth <authorization_key>
 ```
-{: pre} 
+{: pre}
+
+**Tip:** The OpenWhisk CLI stores the properties set in `~/.wskprops` by default. The location of this file can be altered by setting the `WSK_CONFIG_FILE` environment variable. 
 
 To verify your CLI setup, try [creating and running an action](./index.html#openwhisk_start_hello_world).
 

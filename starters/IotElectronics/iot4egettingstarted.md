@@ -2,14 +2,17 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-11-29"
-
+lastupdated: "2017-03-10"
 ---
 
-{:new_window: target="\_blank"}
-
+<!-- Common attributes used in the template are defined as follows: -->
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
+<!-- Note to writers - index.md and iot4egettingstarted.md are (almost) duplicates and a change to one should be made to both. index.md appears within the product app as the getting started page. iot4egettingstarted.md appears as the top level topic in the docs toc. -->
 
 # Creating apps with the {{site.data.keyword.iotelectronics}} starter
 
@@ -36,15 +39,16 @@ See what you can do with {{site.data.keyword.iotelectronics}}.
 
 - [Explore the starter app](iot4ecreatingappliances.html) to experience how an enterprise manufacturer can monitor appliances that are connected to the {{site.data.keyword.iot_short_notm}}.
 - [Explore the sample mobile app](iotelectronics_config_mobile.html) to experience how appliance owners can register and interact with their appliances.
-- [Explore the APIs](http://ibmiotforelectronics.mybluemix.net/public/iot4eregistrationapi.html) to see how you can customize and expand your own {{site.data.keyword.iotelectronics}} apps.
+- [Explore and manage data](iotelectronics_dashboard.html) for your registered appliances in {{site.data.keyword.iot_short_notm}}.
+- [Explore the APIs ![External link icon](../../icons/launch-glyph.svg)](http://ibmiotforelectronics.mybluemix.net/public/iot4eregistrationapi.html){:new_window} to see how you can customize and expand your own {{site.data.keyword.iotelectronics}} apps.
 
 # Related Links
 {: #rellinks}
 <!-- Related Links last updated 23 October 2016 - new API source -->
 ## API documentation
 {: #api}
-* [{{site.data.keyword.iotelectronics}} API](https://broker-uss-iot4e.electronics.internetofthings.ibmcloud.com/public/iot4eregistrationapi.html){:new_window}
-* [{{site.data.keyword.iot_short}} API](https://developer.ibm.com/iotfoundation/recipes/api-documentation/){:new_window}
+* [{{site.data.keyword.iotelectronics}} API ![External link icon](../../icons/launch-glyph.svg)](https://broker-uss-iot4e.electronics.internetofthings.ibmcloud.com/public/iot4eregistrationapi.html){:new_window}
+* [{{site.data.keyword.iot_short}} API ![External link icon](../../icons/launch-glyph.svg)](https://developer.ibm.com/iotfoundation/recipes/api-documentation/){:new_window}
 
 
 ## Components
