@@ -87,36 +87,40 @@ Golang 체인코드 실행 파일 양식으로 스마트 계약을 개발하고 
     {{site.data.keyword.iot_short_notm}}에서 블록체인에 쓰려면 우선 서비스를 링크해야 합니다. 
      1. {{site.data.keyword.Bluemix_notm}}에서 대시보드로 이동하십시오. 
      2. {{site.data.keyword.blockchainfull_notm}}이 배치된 영역을 선택하십시오. 
-     3. **블록체인** 타일을 클릭하십시오. 
-     4. 왼쪽 분할창에서 **서비스 신임 정보**를 클릭하십시오. 
-     5. 서비스 신임 정보 세트를 선택하거나 **신임 정보 추가**를 클릭하여 새 서비스 신임 정보 세트를 작성하고 여기에 설명적 이름을 부여하십시오(예: "IoT-Platform-integration"). 
+     3. **서비스**에서 **블록체인** 링크를 클릭하십시오.
+     4. **서비스 신임 정보** 탭을 클릭하십시오.
+     5. 서비스 신임 정보 세트를 선택하거나 **새 신임 정보**를 클릭하여 새 서비스 신임 정보 세트를 작성하고 여기에 설명적 이름을 부여하십시오(예: "IoT-Platform-integration").
      6. JSON 형식의 서비스 신임 정보에서 다음 매개변수를 기록하십시오.   
-      - 피어 정보: `api_host` 및 `api_port`
+      - 피어 정보: `api_host` 및 `api_port_tls`
       - 유형 1 사용자(클라이언트) 정보: `username` 및 `secret`  
 
       서비스 신임 정보의 예제:
      ```json
-     {
-      "credentials": {
+  {
       "peers": [
       {
-       "discovery_host": "169.44.63.203",
-       "discovery_port": "32904",
-       "api_host": "169.44.63.203",
-       "api_port_tls": "443",
-       "api_port": "80",
-       "type": "peer",
-       "network_id": "f621cde2-bdec-4897-b737-da4df144c41f",
-       "container_id": "5750f7734fb06c64d70c443b1dfcf39a3f5de7b51b792294c05dbdbe7d8356f7",
-       "id": "f621cde2-bdec-4897-b737-da4df144c41f_vp1",
-       "api_url": "http://169.44.63.203:32905"
-      },
+        "discovery_host": "fa68cbcbfcec4726932e53e2fa4f3afc-vp0.us.blockchain.ibm.com",
+        "discovery_port": 30003,
+        "api_host": "fa68cbcbfcec4726932e53e2fa4f3afc-vp0.us.blockchain.ibm.com",
+        "api_port_tls": 5003,
+        "api_port": 5003,
+        "event_host": "fa68cbcbfcec4726932e53e2fa4f3afc-vp0.us.blockchain.ibm.com",
+        "event_port": 31003,
+        "type": "peer",
+        "network_id": "fa68cbcbfcec4726932e53e2fa4f3afc",
+        "container_id": "e33f08f85988bf57ccfcf34ccdb80d72489e5bfb46786b570e1a74a6679f804e",
+        "id": "fa68cbcbfcec4726932e53e2fa4f3afc-vp0",
+        "api_url": "http://fa68cbcbfcec4726932e53e2fa4f3afc-vp0.us.blockchain.ibm.com:5003"
+    },
        ...
       ],
-      "users": [
+      "users": [      
       {
-       "username": "user_type1_fa8e6ef0dc",
-       "secret": "33401036a9"
+        "enrollId": "user_type1_0",
+        "enrollSecret": "63c58806d6",
+        "affiliation": "group1",
+        "username": "user_type1_0",
+        "secret": "63c58806d6"
       },
        ...
        ]
@@ -126,7 +130,7 @@ Golang 체인코드 실행 파일 양식으로 스마트 계약을 개발하고 
      **중요:** 선택하는 사용자는 선택한 피어가 아닌 다른 피어에서 이전에 등록되지 않았어야 합니다.
      7. **대시보드로 돌아가기**를 클릭하여 {{site.data.keyword.Bluemix_notm}} 대시보드로 돌아가십시오. 
      8. {{site.data.keyword.iot_short_notm}}이 배치된 영역을 선택하십시오. 
-     9. **{{site.data.keyword.iot_short_notm}}** 타일을 클릭하십시오. 
+     9. **서비스**에서 **{{site.data.keyword.iot_short_notm}}** 링크를 클릭하십시오.
      10. **시작**을 클릭하여 {{site.data.keyword.iot_short_notm}} 대시보드를 여십시오. 
      11. {{site.data.keyword.iot_short_notm}} 대시보드의 메뉴 사이드바에서 **확장기능**을 선택하십시오. 
      12. **확장기능** 페이지의 블록체인 타일에서 **설정**을 클릭하거나, 패브릭이 이미 링크되어 있으면 ![기어 아이콘](../images/gear.png "구성")을 클릭하십시오. 
@@ -152,7 +156,7 @@ Golang 체인코드 실행 파일 양식으로 스마트 계약을 개발하고 
    </tr>
    <tr>
    <td>포트</td>
-   <td>`api_port` 번호<ul><li>구현에서 TLS을 사용하지 않으면 포트 80을 사용하십시오. </li><li>구현에서 TLS을 사용하면 포트 443을 사용하십시오. </li></ul></td>
+   <td>`api_port_tls` 번호</td>
    </tr>
    <tr>
    <td>사용자 ID</td>
@@ -164,7 +168,7 @@ Golang 체인코드 실행 파일 양식으로 스마트 계약을 개발하고 
    </tr>
    <tr>
    <td>TLS 사용</td>
-   <td>켜짐 또는 꺼짐</br>전송 계층 보안을 사용하여 패브릭의 계약 및 {{site.data.keyword.iot_short_notm}} 간의 통신을 암호화할 수 있습니다. 기본 포트 번호는 연결 중인 배치된 {{site.data.keyword.iot_short_notm}} 인스턴스에 의해 설정됩니다. </td>
+   <td>켜짐 또는 꺼짐</br>전송 계층 보안을 사용하여 패브릭의 계약 및 {{site.data.keyword.iot_short_notm}} 간의 통신을 암호화할 수 있습니다. {{site.data.keyword.blockchainfull_notm}} 패브릭에 연결 시 TLS를 사용해야 합니다.</td>
    </tr></tbody>
    </table>  
     3. **완료**를 클릭합니다.
@@ -222,9 +226,9 @@ IBM에서는 다운로드하여 그대로 직접 사용하거나 조직의 목�
   2. 이전에 연결된 피어에서 계약을 등록하십시오.   
   REST 클라이언트(예: CURL 또는 Postman)를 사용하여 등록 호출을 제출하십시오. 등록 호출에 대한 자세한 정보는 [POST registrar API 문서](https://ibmblockchainapi.mybluemix.net/swagger/ui.html?scheme=http&host=127.0.0.1:3000&basepath=/#!/Registrar/registerUser)를 참조하십시오. 등록 시에는 다음 정보를 사용하십시오. 
   <ul>
-  <li>URL: `http://api_host:api_port/registrar`
+  <li>URL: `http://api_host:api_port_tls/registrar`
   <li>유형: POST
-  <li>헤더: `Content type: application/x-www-form-urlencoded`
+  <li>헤더: `Content type: application/json`
   <li>페이로드:  
   ```json
    {  
@@ -238,26 +242,28 @@ IBM에서는 다운로드하여 그대로 직접 사용하거나 조직의 목�
   배치 호출에 대한 자세한 정보는 [POST devops/deploy API 문서](https://ibmblockchainapi.mybluemix.net/swagger/ui.html?scheme=http&host=127.0.0.1:3000&basepath=/#!/Devops/chaincodeDeploy)를 참조하십시오.   
   배치 시에 다음 정보를 사용하십시오.   
   <ul>
-  <li>URL: `http://api_host:api_port/devops/deploy`
+  <li>URL: `http://api_host:api_port_tls/chaincode`
   <li>유형: POST
-  <li>헤더: `Content type: application/x-www-form-urlencoded`
+  <li>헤더: `Accept: application/json`
+  <li>헤더: `Content type: application/json`
   <li>페이로드:  
   ```
   {
-      "type": "GOLANG",   
-      "chaincodeID": {  
-      "path": "http://github.com/{my organization}/{my project}/sample.go",
-      "name": "string"
+    "jsonrpc": "2.0",
+    "method": "deploy",
+    "params": {
+        "type": 1,
+        "chaincodeID":{
+              "path": "http://github.com/{my organization}/{my project}/sample.go"
+        },
+        "ctorMsg": {
+            "function":"init",
+            "args":["{\"version\":\"1.0\",\"nickname\":\"sample_contract\"}"]
+        },
+        "secureContext": "username"
     },
-    "ctorMsg": {  
-      "function": "init",  
-      "args": [
-        "{\"version\":\"1.0\}"}"
-      ]
-    },
-    "secureContext": "'username'",
-    "confidentialityLevel": "PUBLIC"
-  }
+    "id":1234
+}
   ```  
   </ul>  
   계약이 패브릭에 배치되었습니다.   
@@ -267,16 +273,16 @@ IBM에서는 다운로드하여 그대로 직접 사용하거나 조직의 목�
   디바이스 데이터를 새 블록체인 스마트 계약에 쓰기 시작하려면 우선 디바이스 데이터를 계약에 맵핑해야 합니다.   
    1. {{site.data.keyword.Bluemix_notm}}에서 대시보드로 이동하십시오. 
    2. {{site.data.keyword.iot_short_notm}}이 배치된 영역을 선택하십시오. 
-   3. **{{site.data.keyword.iot_short_notm}}** 타일을 클릭하십시오. 
+   3. **{{site.data.keyword.iot_short_notm}}** 서비스를 클릭하십시오.
    4. **시작**을 클릭하여 {{site.data.keyword.iot_short_notm}} 대시보드를 여십시오. 
    5. 메뉴 사이드바에서 ![블록체인](images/platform_blockchain.png "블록체인")을 클릭하여 **블록체인**을 선택하십시오. 
-   6. **계약 링크**를 클릭하십시오. 
-   6. 이전에 작성한 패브릭에 대한 패브릭 이름을 선택하십시오. 
-   7. 다음 정보를 입력하십시오.   
+   6. **디바이스 데이터 맵핑**을 클릭하십시오. 
+   7. 블록체인에 디바이스 데이터를 저장할 대상 디바이스 유형 및 저장할 이벤트의 이벤트 이름을 선택하십시오. **다음**을 클릭하십시오. 
+   8. 이전에 작성한 패브릭에 대한 패브릭 이름을 선택하십시오. **다음**을 클릭하십시오. 
+   9. 다음 정보를 입력하고 **다음**을 클릭하십시오.
      - 계약 ID - 계약을 배치할 때 저장한 128자 계약 ID를 붙여넣으십시오. 
      - 계약 이름 - {{site.data.keyword.iot_short_notm}}에서 계약을 식별하는 이름을 입력하십시오. 
-     - 블록체인에 디바이스 데이터를 저장할 대상 디바이스 유형을 선택하십시오. 
-     - 저장할 이벤트에 대한 이벤트 이름을 선택하십시오.   
+     
      **팁:** 디바이스의 이벤트 유형을 찾으려면 **디바이스** 페이지로 이동하고 디바이스 이름을 클릭하여 디바이스 세부사항 페이지를 여십시오. 아래의 **센서 정보** 섹션으로 화면이동하면 디바이스에 대해 사용 가능한 이벤트 및 데이터 점의 목록을 볼 수 있습니다. 
 
    11. 사용 가능한 디바이스 특성을 계약 매개변수에 맵핑하십시오.    
@@ -316,7 +322,7 @@ IBM에서는 다운로드하여 그대로 직접 사용하거나 조직의 목�
 <tr>
 <td>API 호스트 및 포트</td>
 <td>`http://peer_URL:port`</td>
-<td>`http://`가 접두어로 지정된 {{site.data.keyword.blockchainfull_notm}} REST API에 대한 호스트 및 포트입니다. `api_host` 주소 및 `api_port` 번호를 사용하십시오. </td>
+<td>`https://`가 접두어로 지정된 {{site.data.keyword.blockchainfull_notm}} REST API에 대한 호스트 및 포트입니다. `api_host` 주소 및 `api_port_tls` 번호를 사용하십시오. </td>
 </tr>
 <tr>
 <td>체인코드 ID</td>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-10"
+lastupdated: "2017-02-17"
 
 ---
 
@@ -95,11 +95,16 @@ Os dados de seu dispositivo agora estão sendo armazenados em seu {{site.data.ke
 
 As orientações a seguir descrevem como usar o {{site.data.keyword.cloudant_short_notm}} como o armazenamento de Historian para o {{site.data.keyword.iot_short}}:
 
-- A orientação [Configurar o {{site.data.keyword.cloudant_short_notm}} como o Armazenamento de dados do Historian para o {{site.data.keyword.iot_short}}](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-parti/) descreve como os dados do dispositivo são armazenados no {{site.data.keyword.cloudant_short_notm}} e demonstra como configurar e armazenar dados do dispositivo no {{site.data.keyword.cloudant_short_notm}} como Armazenamento de dados do Historian.
+- A orientação [Configurar
+o {{site.data.keyword.cloudant_short_notm}} como o Armazenamento de dados do Historian para o {{site.data.keyword.iot_short}} ![Ícone de link externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-parti/){: new_window} descreve como os dados do dispositivo são armazenados no
+{{site.data.keyword.cloudant_short_notm}} e demonstra como configurar e armazenar dados do dispositivo no {{site.data.keyword.cloudant_short_notm}} como Armazenamento
+de dados do Historian.
 
-- A orientação [Consultar e processar dados de dispositivo do {{site.data.keyword.iot_short}} por meio do {{site.data.keyword.cloudant_short_notm}}](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-partii) mostra como consultar e executar operações de processamento de dados nos dados do dispositivo que são armazenados no {{site.data.keyword.cloudant_short_notm}}.
+- A orientação [Consultar e processar dados do dispositivo do {{site.data.keyword.iot_short}}
+no {{site.data.keyword.cloudant_short_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-partii){: new_window} mostra como consultar e executar operações de processamento de dados nos dados do dispositivo armazenados no {{site.data.keyword.cloudant_short_notm}}.
 
-- A orientação [Visualizar dados de dispositivo do Watson IoT armazenados no Cloudant NoSQL DB](https://developer.ibm.com/recipes/?post_type=pnext_tutorial&p=27327) mostra como vincular entre Cartões de gráfico de linha e o Armazenamento de dados do Historian para exibir dados de dispositivo no Painel do Watson IoT Platform.
+- A orientação [Visualizar os dados do dispositivo Watson IoT armazenados no Cloudant NoSQL DB ![Ícone de link
+externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/?post_type=pnext_tutorial&p=27327){: new_window} mostra como vincular os Cartões de gráfico de linha e o Armazenamento de dados do Historian para exibir os dados do dispositivo no painel do Watson IoT Platform.
 
 
 ## Criando novos documentos de design  
@@ -110,7 +115,7 @@ e usa os mesmos parâmetros que os nomes dos bancos de dados descritos na etapa 
 
 Os documentos de design padrão contidos no {{site.data.keyword.iot_short_notm}} implementam consultas disponíveis no historiador atual, além da função de resumo.
 
-Documentos de design adicionais podem ser incluídos no banco de dados de configuração e serão copiados para os novos bancos de dados de intervalo do depósito à medida que forem criados. Para incluir documentos de design no banco de dados de configuração, consulte a [Documentação da API (interface de programação de aplicativos) do Cloudant](https://docs.cloudant.com/document.html).
+Documentos de design adicionais podem ser incluídos no banco de dados de configuração e serão copiados para os novos bancos de dados de intervalo do depósito à medida que forem criados. Para incluir documentos de design no banco de dados de configuração, consulte a documentação da API do [Cloudant ![Ícone de link externo](../icons/launch-glyph.svg)](https://docs.cloudant.com/document.html){: new_window}.
 
 <!--  # Related links
 {: #rellinks}

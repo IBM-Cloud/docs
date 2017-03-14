@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-03"
+lastupdated: "2017-02-20"
 
 ---
 
@@ -85,6 +85,8 @@ Ao usar os fóruns para fazer uma pergunta, marque a sua pergunta para que ela p
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
 * Para perguntas sobre o serviço e instruções de introdução, use o fórum [IBM developerWorks dW Answers ![Ícone de link externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/topics/watson-iot/?smartspace=bluemix){:new_window}. Inclua as identificações "watson-iot" e "bluemix".
 
-Veja [Obtendo ajuda ![Ícone de link externo](../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/support/index.html#getting-help){: new_window} para obter mais detalhes sobre o uso de fóruns.
+Consulte
+[Obtendo
+ajuda](https://www.{DomainName}/docs/support/index.html#getting-help) para obter mais detalhes sobre o uso dos fóruns.
 
-Para obter informações sobre como abrir um chamado de suporte IBM ou sobre os níveis de suporte e as severidades dos chamados, veja [Entrando em contato com o suporte ![Ícone de link externo](../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/support/index.html#contacting-support){: new_window}.
+Para obter informações sobre como abrir um chamado de suporte IBM ou sobre os níveis de suporte e as severidades dos chamados, veja [Entrando em contato com o suporte ![Ícone de link externo](../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/support/index.html#contacting-support).

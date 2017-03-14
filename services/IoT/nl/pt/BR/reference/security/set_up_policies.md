@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016, 2017
+lastupdated: "2017-02-22"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # Configurando as Políticas de Segurança
 {: #set_up_policies.md}
-Última atualização: 02/02/2017
-{: .last-updated}
 
 Um analista de segurança pode configurar políticas de segurança de conexão e listas de bloqueio ou listas de desbloqueio.
 
@@ -30,10 +29,8 @@ Um analista de segurança pode configurar políticas de segurança de conexão e
     - TLS com Autenticação por Certificado de Cliente
     - TLS com Autenticação do Token e Autenticação por Certificado de Cliente
     - TLS com Certificado de cliente ou Token
-
-Com base no nível de segurança selecionado, a tabela mostra o número de dispositivos que são impactados e o nível previsto de conformidade no nível de segurança configurado.
-
-3. Se necessário, clique em **Incluir conexão customizada** e selecione os tipos de dispositivo e os níveis de segurança customizados. O valor de conformidade previsto é atualizado para refletir as mudanças resultantes das configurações de segurança customizadas.
+3. Se necessário, clique em **Incluir conexão customizada** e selecione os tipos de dispositivo e os níveis de segurança customizados. 
+3. Clique em **Atualizar conformidade**. Com base no nível de segurança selecionado, a tabela atualizada mostra o número de dispositivos que são impactados e o nível previsto de conformidade no nível de segurança configurado.
 4. Clique em **Salvar**.  
 
 ## Configurando listas de bloqueio e listas de desbloqueio
@@ -53,6 +50,7 @@ Restrinja o acesso ao servidor de determinados dispositivos usando uma lista de 
 4. Na janela **Incluir na Lista de Bloqueio**, clique em **Salvar**.
 5. Revise a lista de dispositivos bloqueados. Todos os dispositivos que fazem parte da lista, com base no endereço IP, no CIDR ou no país, não podem se conectar ao servidor {{site.data.keyword.iot_short_notm}}.
 6. Clique em **Salvar**.
+7. Ative a lista de bloqueio. Se você tem uma lista de desbloqueio ativada, ela se torna desativada.
 
 ### Configure uma lista de desbloqueio
 {: #config_whitelist}
@@ -66,3 +64,4 @@ Restrinja o acesso ao servidor de determinados dispositivos usando uma lista de 
 4. Na janela **Incluir na Lista de Desbloqueio**, clique em **Salvar**.
 5. Revise a lista de dispositivos permitidos. Todos os dispositivos que fazem parte da lista, com base no endereço IP, no CIDR ou no país, podem se conectar ao servidor {{site.data.keyword.iot_short_notm}}.
 6. Clique em **Salvar**.
+7. Ative a lista de desbloqueio. Se você tem uma lista de bloqueio ativada, ela se torna desativada.

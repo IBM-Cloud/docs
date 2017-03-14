@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-03"
+lastupdated: "2017-02-17"
 
 ---
 
@@ -22,7 +22,7 @@ lastupdated: "2017-02-03"
 
 在将 {{site.data.keyword.messagehub}} 连接到 {{site.data.keyword.iot_short}} 服务之前，请完成以下任务：
 
-- 使用 {{site.data.keyword.Bluemix_notm}}“目录”，在 {{site.data.keyword.iot_short_notm}} 所在的 {{site.data.keyword.Bluemix_notm}} 空间中设置 {{site.data.keyword.messagehub}}。有关 {{site.data.keyword.messagehub}} 的更多信息，请参阅 [{{site.data.keyword.messagehub}} 入门 ![外部链接图标](../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/services/MessageHub/index.html){: new_window}。
+- 使用 {{site.data.keyword.Bluemix_notm}}“目录”，在 {{site.data.keyword.iot_short_notm}} 所在的 {{site.data.keyword.Bluemix_notm}} 空间中设置 {{site.data.keyword.messagehub}}。有关 {{site.data.keyword.messagehub}} 的更多信息，请参阅 [{{site.data.keyword.messagehub}}入门](https://console.{DomainName}/docs/services/MessageHub/index.html)。
 
 - 确保您在已通过 {{site.data.keyword.Bluemix_notm}} 登录的 {{site.data.keyword.Bluemix_notm}} 组织中具有开发者特权。如果您未通过 {{site.data.keyword.Bluemix_notm}} 登录，或者在此 {{site.data.keyword.Bluemix_notm}} 组织中不具有开发者特权，那么您无法授权绑定 {{site.data.keyword.messagehub}} 和 {{site.data.keyword.iot_short_notm}}。
 

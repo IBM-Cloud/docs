@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-24"
+lastupdated: "2017-02-17"
 
 ---
 
@@ -79,7 +79,7 @@ Gehen Sie wie folgt vor, um ein Mitglied in Ihrer {{site.data.keyword.iot_short_
 3. Geben Sie die E-Mail-Adresse des Mitglieds ein.
 4. Wählen Sie eine Rolle für dieses Mitglied aus.
 5. Geben Sie den Betreff, den Realmnamen und den Aussteller ein.
-   **Wichtig:** Stellen Sie sicher, dass die Felder für den Betreff (`Subject`), den Realmnamen (`Realm Name`) und den Aussteller (`Issuer`) die Empfehlungen und Standards von OpenID Connect einhalten. Weitere Informationen finden Sie auf der Website von [OpenID Connect](http://openid.net/connect/).
+   **Wichtig:** Stellen Sie sicher, dass die Felder für den Betreff (`Subject`), den Realmnamen (`Realm Name`) und den Aussteller (`Issuer`) die Empfehlungen und Standards von OpenID Connect einhalten. Weitere Informationen finden Sie auf der Website von [OpenID Connect ![Symbol für externen Link](../../icons/launch-glyph.svg)](http://openid.net/connect/){: new_window}.
 6. Optional: Legen Sie ein Ablaufdatum für das Mitglied fest.
 7. Klicken Sie auf **Benutzer registrieren**.
 

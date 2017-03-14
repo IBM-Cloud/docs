@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016, 2017
+lastupdated: "2017-02-22"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # Configuración de políticas de seguridad
 {: #set_up_policies.md}
-Última actualización: 2017-02-02
-{: .last-updated}
 
 Un analista de seguridad puede configurar políticas de seguridad de conexión y listas negras o listas blancas.
 
@@ -30,10 +29,8 @@ Puede establecer el nivel de seguridad predeterminado que se aplica a todos los 
     - TLS con autenticación de certificado de cliente
     - TLS con autenticación de señal y de certificado de cliente
     - TLS con señal o certificado de cliente
-
-En función del nivel de seguridad que seleccione, la tabla muestra el número de dispositivos que se ven afectados y el nivel previsto de conformidad en el nivel de seguridad establecido.
-
-3. Si es necesario, pulse **Añadir conexión personalizada** y seleccione los tipos de dispositivo y los niveles de seguridad personalizada. El valor de conformidad previsto se actualiza para reflejar los cambios resultantes de los valores de seguridad personalizados.
+3. Si es necesario, pulse **Añadir conexión personalizada** y seleccione los tipos de dispositivo y los niveles de seguridad personalizada. 
+3. Pulse **Renovar conformidad**. En función del nivel de seguridad que seleccione, la tabla renovada muestra el número de dispositivos que se ven afectados y el nivel previsto de conformidad en el nivel de seguridad establecido.
 4. Pulse **Guardar**.  
 
 ## Configuración de listas negras y listas blancas
@@ -53,6 +50,7 @@ Puede restringir el acceso al servidor desde determinados dispositivos utilizand
 4. En la ventana **Añadir a lista negra**, pulse **Guardar**.
 5. Revise la lista de dispositivos bloqueados. Cualquier dispositivo que forme parte de la lista, en función de dirección IP, CIDR o país, no podrá conectar con el servidor de {{site.data.keyword.iot_short_notm}}.
 6. Pulse **Guardar**.
+7. Habilite la lista negra. Si tenía una lista blanca habilitada, se inhabilitará. 
 
 ### Configure una lista blanca
 {: #config_whitelist}
@@ -66,3 +64,4 @@ Puede restringir el acceso al servidor desde determinados dispositivos utilizand
 4. En la ventana **Añadir a lista blanca**, pulse **Guardar**.
 5. Revise la lista de dispositivos permitidos. Cualquier dispositivo que forme parte de la lista, en función de dirección IP, CIDR o país, podrá conectar con el servidor de {{site.data.keyword.iot_short_notm}}.
 6. Pulse **Guardar**.
+7. Habilite la lista blanca. Si tenía una lista negra habilitada, se inhabilitará. 

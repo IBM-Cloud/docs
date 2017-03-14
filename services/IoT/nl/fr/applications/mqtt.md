@@ -136,7 +136,7 @@ En ajustant le mode de connexion de vos applications {{site.data.keyword.iot_sho
 
 Le nombre de clients requis pour optimiser l'équilibrage de charge et l'évolutivité varie d'un déploiement à l'autre. Pour déterminer le nombre optimal de clients, vous devez réaliser un test de charge sur votre système.
 
-Des applications évolutives sont définies en tant qu'abonnements non durables ou abonnements partagés à durabilité mixte (bêta). 
+Des applications évolutives sont définies en tant qu'abonnements non durables ou abonnements partagés à durabilité mixte (bêta).
 
 ### Abonnements non durables
 {: #shared_sub_non_durable}
@@ -155,7 +155,7 @@ Où :
 **Important :**
 - L'ID de client doit débuter par un caractère **A** en majuscule pour être correctement désigné en tant qu'application évolutive par {{site.data.keyword.iot_short_notm}}.
 - Les autres clients qui font partie de l'application évolutive doivent utiliser le même ID de client.
-- La valeur de l'option clean session doit être false (0) pour des abonnements non durables. 
+- La valeur de l'option clean session doit être false (0) pour des abonnements non durables.
 
 ### Abonnements partagés à durabilité mixte (bêta)
 {: #shared_sub_mixed}
@@ -176,8 +176,8 @@ Où :
    - Points (. )
 
 **Important :**
-- La prise en charge des abonnements partagés à durabilité mixte est uniquement disponible en tant que fonction bêta. N'implémentez pas les fonctions bêta dans les applications en production. 
-- La session de l'option clean session peut avoir pour valeur true (1) ou false (0) dans les abonnements partagés à durabilité mixte. 
+- La prise en charge des abonnements partagés à durabilité mixte est uniquement disponible en tant que fonction bêta. N'implémentez pas les fonctions bêta dans les applications en production.
+- La session de l'option clean session peut avoir pour valeur true (1) ou false (0) dans les abonnements partagés à durabilité mixte.
 - Les clients qui se connectent à l'aide de l'ID instance utilisent des abonnements différents de ceux utilisés par les clients qui se connectent sans l'ID instance. Par conséquent, si vous souhaitez que plusieurs clients se connectent à un abonnement partagé à durabilité mixte, vous devez spécifier l'ID instance dans tous les abonnements.
 
 **Exemple de scénario**

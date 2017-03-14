@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-24"
+lastupdated: "2017-02-17"
 
 ---
 
@@ -79,7 +79,7 @@ lastupdated: "2017-01-24"
 3. 구성원의 이메일 주소를 입력하십시오. 
 4. 이 구성원의 역할을 선택하십시오. 
 5. 제목, 영역 이름 및 발행자를 입력하십시오.
-   **중요:** `Subject`, `Realm Name` 및 `Issuer` 필드가 OpenID Connect 권장사항 및 표준을 준수하는지 확인하십시오. 자세한 정보는 [OpenID Connect](http://openid.net/connect/) 웹 사이트를 참조하십시오. 
+   **중요:** `Subject`, `Realm Name` 및 `Issuer` 필드가 OpenID Connect 권장사항 및 표준을 준수하는지 확인하십시오. 자세한 정보는 [OpenID Connect ![외부 링크 아이콘](../../icons/launch-glyph.svg)](http://openid.net/connect/){: new_window} 웹 사이트를 참조하십시오.
 6. 선택사항: 구성원의 만료 날짜를 설정하십시오. 
 7. **구성원 등록**을 클릭하십시오. 
 

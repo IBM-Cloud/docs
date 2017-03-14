@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2016-10-27"
+lastupdated: "2017-02-20"
 
 ---
 
@@ -26,7 +26,8 @@ Use as informações e exemplos que são fornecidos para iniciar o desenvolvimen
 ## Fazendo download de cliente e recursos do Python
 {: #python_client_download}
 
-Para acessar o cliente Python para o {{site.data.keyword.iot_short_notm}} e outros recursos disponíveis, acesse o repositório [iot-python](https://github.com/ibm-messaging/iot-python) no GitHub e conclua as instruções de instalação.
+Para acessar o cliente Python para o {{site.data.keyword.iot_short_notm}} e outros recursos disponíveis, acesse o repositório [iot-python ![Ícone de link
+externo](../../../../icons/launch-glyph.svg)](https://github.com/ibm-messaging/iot-python) no GitHub e conclua as instruções de instalação.
 
 ## Construtor
 {: #constructor}
@@ -353,7 +354,7 @@ import ibmiotf.application
 
 client.connect()
 commandData={'rebootDelay' : 50}
-client.publishCommand(myDeviceType, myDeviceId, "reboot", "json", myData)
+client.publishCommand(myDeviceType, myDeviceId, "reboot", "json", commandData)
 ```
 
 
@@ -375,7 +376,8 @@ except IoTFCReSTException as e:
     print("ERROR [" + e.httpcode + "] " + e.message)
 ```
 
-Para obter informações sobre o modelo de solicitação e resposta e os códigos de status HTTP (Protocolo de Transporte de Hipertexto), consulte a seção Configuração da organização da [API (interface de programação de aplicativos) do {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html).
+Para obter informações sobre o modelo de solicitação e de resposta e sobre os códigos de status HTTP, consulte a seção Configuração da organização da API do [{{site.data.keyword.iot_short_notm}}
+![Ícone de link externo](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html).
 
 
 ## Operações do dispositivo em massa
@@ -383,7 +385,8 @@ Para obter informações sobre o modelo de solicitação e resposta e os código
 
 Seus aplicativos podem usar operações em massa para obter, incluir ou remover diversos dispositivos simultaneamente.
 
-Para obter informações sobre a lista de parâmetros de consulta, o modelo de solicitação e resposta e os códigos de status HTTP (Protocolo de Transporte de Hipertexto), consulte a seção 'Operações em massa' da [API (interface de programação de aplicativos) do {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/).
+Para obter informações sobre a lista de parâmetros de consulta, o modelo de solicitação e de resposta e os códigos de status HTTP, consulte a seção 'Operações em massa' da API do [{{site.data.keyword.iot_short_notm}}
+![Ícone de link externo](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/).
 
 
 ### Recuperando Informações sobre o Dispositivo
@@ -458,7 +461,8 @@ except IoTFCReSTException as e:
 
 Os tipos de dispositivo que você cria em sua organização podem ser usados para criar modelos para incluir dispositivos. Usando os recursos da API (interface de programação de aplicativos) do {{site.data.keyword.iot_short_notm}}, seus aplicativos podem listar, criar, excluir, visualizar ou atualizar tipos de dispositivo em sua organização.
 
-Para obter informações sobre parâmetros de consulta, modelo de solicitação e resposta e códigos de status HTTP (Protocolo de Transporte de Hipertexto), consulte a seção 'Tipos de dispositivo' da documentação da [API (interface de programação de aplicativos) do {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html).
+Para obter informações sobre os parâmetros de consulta, o modelo de solicitação e de resposta e os códigos de status HTTP, consulte a seção 'Tipos de dispositivo' da documentação da API do [{{site.data.keyword.iot_short_notm}}
+![Ícone de link externo](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html).
 
 
 ### Recuperando todos os tipos de dispositivo
@@ -599,7 +603,8 @@ except IoTFCReSTException as e:
 
 As operações do dispositivo disponibilizadas na API (interface de programação de aplicativos) incluem listar, incluir, remover, visualizar, atualizar, visualizar localização e visualizar informações de gerenciamento do dispositivo em uma organização do {{site.data.keyword.iot_short_notm}}.
 
-Para obter informações sobre os parâmetros de consulta, o modelo de solicitação e resposta e os códigos de status HTTP (Protocolo de Transporte de Hipertexto), consulte a 'Seção do dispositivo' da [API (interface de programação de aplicativos) do {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html).
+Para obter informações sobre os parâmetros de consulta, o modelo de solicitação e de resposta e os códigos de status HTTP, consulte a 'Seção de dispositivos' da API do [{{site.data.keyword.iot_short_notm}}
+![Ícone de link externo](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html).
 
 
 ### Recuperando dispositivos de um tipo de dispositivo específico
@@ -637,7 +642,8 @@ Para incluir um dispositivo em uma organização do {{site.data.keyword.iot_shor
 |`metadata`|Optional|Pares de sequência de valores de campo customizado, conforme esboçado em [Código de amostra para incluir um tipo de dispositivo](#sample_device_type).|
 |`location`|Optional|Contém as variáveis longitude, latitude, elevation, accuracy e measuredDateTime.|
 
-Para obter mais informações sobre esses parâmetros e o formato e códigos de resposta, consulte a [Documentação da API (interface de programação de aplicativos)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Devices/post_device_types_typeId_devices).
+Para obter informações sobre esses parâmetros e o formato e códigos de resposta, consulte a documentação da API do [
+![Ícone de link externo](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Devices/post_device_types_typeId_devices).
 
 Ao usar o método `registerDevice()`, defina o parâmetro deviceID obrigatório e os parâmetros opcionais necessários para seu dispositivo, em seguida, chame o método usando os parâmetros selecionados.
 
@@ -752,7 +758,8 @@ Use as operações de diagnóstico do dispositivo para implementar as tarefas de
 - Recuperando códigos de erro do dispositivo
 - Incluindo códigos de erro
 
-Para obter mais informações sobre modelos de consulta e resposta, códigos de resposta e parâmetros de consulta, consulte a [Documentação da API (interface de programação de aplicativos)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html) documentação da API (interface de programação de aplicativos) do {{site.data.keyword.iot_short_notm}}.
+Para obter mais informações sobre os modelos de consulta e de resposta, os códigos de resposta e os parâmetros de consulta, consulte a documentação da API do [
+![Ícone de link externo](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html) {{site.data.keyword.iot_short_notm}}.
 
 ### Obter logs de diagnóstico
 

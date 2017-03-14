@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2016-10-27"
+lastupdated: "2017-02-20"
 
 ---
 
@@ -26,7 +26,7 @@ Utilisez les informations et les exemples fournis pour commencer à développer 
 ## Téléchargement du client et des ressources Python
 {: #python_client_download}
 
-Pour accéder au client Python pour {{site.data.keyword.iot_short_notm}} et aux autres ressources disponibles, accédez au référentiel [iot-python](https://github.com/ibm-messaging/iot-python) dans GitHub et exécutez les instructions d'installation.
+Pour accéder au client Python pour {{site.data.keyword.iot_short_notm}} et aux autres ressources disponibles, accédez au référentiel [iot-python ![](../../../../icons/launch-glyph.svg)](https://github.com/ibm-messaging/iot-python) dans GitHub et exécutez les instructions d'installation. 
 
 ## Constructeur
 {: #constructor}
@@ -353,7 +353,7 @@ import ibmiotf.application
 
 client.connect()
 commandData={'rebootDelay' : 50}
-client.publishCommand(myDeviceType, myDeviceId, "reboot", "json", myData)
+client.publishCommand(myDeviceType, myDeviceId, "reboot", "json", commandData)
 ```
 
 
@@ -375,7 +375,7 @@ except IoTFCReSTException as e:
     print("ERROR [" + e.httpcode + "] " + e.message)
 ```
 
-Pour plus d'informations sur le modèle de demande et de réponse et les codes de statut HTTP, voir la section Organization Configuration dans la documentation de l'[API {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html).
+Pour plus d'informations sur le modèle de demande et de réponse et les codes de statut HTTP, voir la section Organization Configuration dans la documentation de l'[API {{site.data.keyword.iot_short_notm}}![](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html).
 
 
 ## Opérations globales sur les terminaux
@@ -383,7 +383,7 @@ Pour plus d'informations sur le modèle de demande et de réponse et les codes d
 
 Vos applications peuvent utiliser des opérations globales pour obtenir, ajouter ou retirer plusieurs terminaux simultanément.
 
-Pour plus d'informations sur la liste de paramètres de requête, le modèle de réponse et de demande et les codes de statut HTTP, voir la section Bulk Operations dans la documentation de l'[API {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/).
+Pour plus d'informations sur la liste de paramètres de requête, le modèle de réponse et de demande et les codes de statut HTTP, voir la section Bulk Operations dans la documentation de l'[API {{site.data.keyword.iot_short_notm}}![](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/).
 
 
 ### Extraction d'informations sur les terminaux
@@ -458,7 +458,7 @@ except IoTFCReSTException as e:
 
 Les types de terminal que vous créez dans votre organisation peuvent être utilisés pour créer des modèles destinés à l'ajout de terminaux. En utilisant les fonctions API de {{site.data.keyword.iot_short_notm}}, vos applications peuvent répertorier, créer, supprimer, afficher ou mettre à jour des types de terminal dans votre organisation.
 
-Pour plus d'informations sur les paramètres de requête, le modèle de demande et de réponse et les codes de statut HTTP, voir la section Device types dans la documentation de l'[API {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html).
+Pour plus d'informations sur les paramètres de requête, le modèle de demande et de réponse et les codes de statut HTTP, voir la section Device types dans la documentation de l'[API {{site.data.keyword.iot_short_notm}}![](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html).  
 
 
 ### Extraction de tous les types de terminal
@@ -599,7 +599,7 @@ except IoTFCReSTException as e:
 
 Les opérations relatives aux terminaux disponibles dans l'API incluent le recensement, l'ajout, le retrait, l'affichage, la mise à jour, la visualisation de l'emplacement et la visualisation des informations de gestion des terminaux dans une organisation {{site.data.keyword.iot_short_notm}}.
 
-Pour plus d'informations sur les paramètres de requête, le modèle de demande et de réponse et les codes de statut HTTP, voir la section Device section de la documentation de l'[API {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html).
+Pour plus d'informations sur les paramètres de requête, le modèle de demande et de réponse et les codes de statut HTTP, voir la section Device section dans la documentation de l'[API {{site.data.keyword.iot_short_notm}} ![](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html).
 
 
 ### Extraction de terminaux d'un type donné
@@ -637,7 +637,7 @@ Pour ajouter un terminal à une organisation {{site.data.keyword.iot_short_notm}
 |`metadata`|Facultatif|Paires de chaînes personnalisées zone:valeur, comme indiqué dans [Exemple de code pour l'ajout d'un type de terminal](#sample_device_type).|
 |`location`|Facultatif|Contient les variables longitude, latitude, elevation, accuracy et measuredDateTime.|
 
-Pour plus d'informations sur ces paramètres et le format et les codes de réponse, voir la [documentation de l'API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Devices/post_device_types_typeId_devices).
+Pour plus d'informations sur ces paramètres et le format et les codes de réponse, voir la [documentation de l'API![](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Devices/post_device_types_typeId_devices).
 
 Lorsque vous utilisez la méthode `registerDevice()`, définissez le paramètre deviceID obligatoire, ainsi que les paramètres facultatifs requis pour votre terminal, puis appelez la méthode à l'aide des paramètres que vous avez sélectionnés.
 
@@ -752,7 +752,7 @@ Utilisez les opérations de diagnostic d'un terminal pour implémenter les tâch
 - Extraction de codes d'erreur de terminaux
 - Ajout de codes d'erreur
 
-Pour plus d'informations sur les modèles de requête et de réponse, les codes de réponse et les paramètres de requête, voir la documentation de l'[API ](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html) {{site.data.keyword.iot_short_notm}}.
+Pour plus d'informations sur les modèles de requête et de réponse, les codes de réponse et les paramètres de requête, voir la [documentation de l'API![](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html) {{site.data.keyword.iot_short_notm}}. 
 
 ### Extraction de journaux de diagnostic
 

@@ -88,36 +88,40 @@ lastupdated: "2017-2-6"
     若要從 {{site.data.keyword.iot_short_notm}} 寫入至區塊鏈，您必須先鏈結服務。
      1. 在 {{site.data.keyword.Bluemix_notm}} 中，移至「儀表板」
      2. 選取已在其中部署 {{site.data.keyword.blockchainfull_notm}} 的空間。
-     3. 按一下 **Blockchain** 磚。
-     4. 在左窗格中，按一下**服務認證**。
-     5. 選取一組服務認證，或按一下**新增認證**，以建立一組新的服務認證，並指定其敘述性名稱（例如 "IoT-Platform-integration"）。
+     3. 按一下**服務**下的 **Blockchain** 鏈結。
+     4. 按一下**服務認證**標籤。
+     5. 選取一組服務認證，或按一下**新建認證**，以建立一組新的服務認證，並指定其敘述性名稱（例如 "IoT-Platform-integration"）。
      6. 在 JSON 格式化服務認證中，記下下列參數：  
-      - 對等節點資訊：`api_host` 及 `api_port`
+      - 對等節點資訊：`api_host` 及 `api_port_tls`
       - 類型 1（用戶端）資訊的使用者：`username` 及 `secret`  
 
       服務認證範例：
      ```json
      {
-      "credentials": {
       "peers": [
       {
-       "discovery_host": "169.44.63.203",
-       "discovery_port": "32904",
-       "api_host": "169.44.63.203",
-       "api_port_tls": "443",
-       "api_port": "80",
-       "type": "peer",
-       "network_id": "f621cde2-bdec-4897-b737-da4df144c41f",
-       "container_id": "5750f7734fb06c64d70c443b1dfcf39a3f5de7b51b792294c05dbdbe7d8356f7",
-       "id": "f621cde2-bdec-4897-b737-da4df144c41f_vp1",
-       "api_url": "http://169.44.63.203:32905"
-      },
+       "discovery_host": "fa68cbcbfcec4726932e53e2fa4f3afc-vp0.us.blockchain.ibm.com",
+        "discovery_port": 30003,
+        "api_host": "fa68cbcbfcec4726932e53e2fa4f3afc-vp0.us.blockchain.ibm.com",
+        "api_port_tls": 5003,
+        "api_port": 5003,
+        "event_host": "fa68cbcbfcec4726932e53e2fa4f3afc-vp0.us.blockchain.ibm.com",
+        "event_port": 31003,
+        "type": "peer",
+        "network_id": "fa68cbcbfcec4726932e53e2fa4f3afc",
+        "container_id": "e33f08f85988bf57ccfcf34ccdb80d72489e5bfb46786b570e1a74a6679f804e",
+        "id": "fa68cbcbfcec4726932e53e2fa4f3afc-vp0",
+        "api_url": "http://fa68cbcbfcec4726932e53e2fa4f3afc-vp0.us.blockchain.ibm.com:5003"
+    },
        ...
       ],
       "users": [
       {
-       "username": "user_type1_fa8e6ef0dc",
-       "secret": "33401036a9"
+       "enrollId": "user_type1_0",
+        "enrollSecret": "63c58806d6",
+        "affiliation": "group1",
+        "username": "user_type1_0",
+        "secret": "63c58806d6"
       },
        ...
        ]
@@ -127,7 +131,7 @@ lastupdated: "2017-2-6"
      **重要事項：**您選取的使用者先前不得已向所選取對等節點之外的對等節點進行登錄。
      7. 按一下**回到儀表板**，以回到 {{site.data.keyword.Bluemix_notm}} 儀表板。
      8. 選取已在其中部署 {{site.data.keyword.iot_short_notm}} 的空間。
-     9. 按一下 **{{site.data.keyword.iot_short_notm}}** 磚。
+     9. 按一下**服務**下的 **{{site.data.keyword.iot_short_notm}}** 鏈結。
      10. 按一下**啟動**，以開啟 {{site.data.keyword.iot_short_notm}} 儀表板。
      11. 從 {{site.data.keyword.iot_short_notm}} 儀表板中，選取功能表資訊看板中的**延伸規格**。
      12. 在**延伸規格**頁面的 Blockchain 磚中，按一下**設定**，或者，如果您已鏈結網狀架構，請按一下 ![齒輪圖示](../images/gear.png "配置")。
@@ -153,7 +157,7 @@ lastupdated: "2017-2-6"
    </tr>
    <tr>
    <td>埠</td>
-   <td>`api_port` 號碼<ul><li>如果您的實作未使用 TLS，請使用埠 80。</li><li>如果您的實作使用 TLS，請使用埠 443。</li></ul></td>
+   <td>`api_port_tls` 號碼</td>
    </tr>
    <tr>
    <td>使用者 ID</td>
@@ -165,7 +169,7 @@ lastupdated: "2017-2-6"
    </tr>
    <tr>
    <td>使用 TLS</td>
-   <td>開啟或關閉</br>使用「傳輸層安全 (TLS)」來加密 {{site.data.keyword.iot_short_notm}} 與網狀架構中合約之間的通訊。預設埠號是由您所連接的已部署 {{site.data.keyword.iot_short_notm}} 實例所設定。</td>
+   <td>開啟或關閉</br>使用「傳輸層安全 (TLS)」來加密 {{site.data.keyword.iot_short_notm}} 與網狀架構中合約之間的通訊。連接至 {{site.data.keyword.blockchainfull_notm}} 網狀架構時，必須啟用 TLS。</td>
    </tr></tbody>
    </table>  
     3. 按一下**完成**。
@@ -230,9 +234,9 @@ IBM 提供許多智慧型合約，您可以下載且直接依現狀使用，或�
   2. 向您先前連接的對等節點登錄合約。  
 使用 REST 用戶端（例如 CURL 或 Postman），以提交登錄呼叫。如需登錄呼叫的相關資訊，請參閱 [POST 登記員 API 文件](https://ibmblockchainapi.mybluemix.net/swagger/ui.html?scheme=http&host=127.0.0.1:3000&basepath=/#!/Registrar/registerUser)。登錄時，請使用下列資訊：
   <ul>
-  <li>URL：`http://api_host:api_port/registrar`
+  <li>URL：`http://api_host:api_port_tls/registrar`
   <li>類型：POST
-  <li>標頭：`Content type: application/x-www-form-urlencoded`
+  <li>標頭：`Content type: application/json`
   <li>有效負載：  
   ```json
    {  
@@ -246,26 +250,28 @@ IBM 提供許多智慧型合約，您可以下載且直接依現狀使用，或�
 如需部署呼叫的相關資訊，請參閱 [POST 開發/部署 API 文件](https://ibmblockchainapi.mybluemix.net/swagger/ui.html?scheme=http&host=127.0.0.1:3000&basepath=/#!/Devops/chaincodeDeploy)。  
 部署時，請使用下列資訊：  
   <ul>
-  <li>URL：`http://api_host:api_port/devops/deploy`
+  <li>URL：`http://api_host:api_port_tls/chaincode`
   <li>類型：POST
-  <li>標頭：`Content type: application/x-www-form-urlencoded`
+  <li>標頭：`Accept: application/json`
+  <li>標頭：`Content type: application/json`
   <li>有效負載：  
   ```
   {
-      "type": "GOLANG",   
-      "chaincodeID": {  
-      "path": "http://github.com/{my organization}/{my project}/sample.go",
-      "name": "string"
+    "jsonrpc": "2.0",
+    "method": "deploy",
+    "params": {
+        "type": 1,
+        "chaincodeID":{
+              "path": "http://github.com/{my organization}/{my project}/sample.go"
+        },
+        "ctorMsg": {
+            "function":"init",
+            "args":["{\"version\":\"1.0\",\"nickname\":\"sample_contract\"}"]
+        },
+        "secureContext": "username"
     },
-    "ctorMsg": {  
-      "function": "init",  
-      "args": [
-        "{\"version\":\"1.0\}"}"
-      ]
-    },
-    "secureContext": "'username'",
-    "confidentialityLevel": "PUBLIC"
-  }
+    "id":1234
+}
   ```  
   </ul>  
   您的合約已部署至網狀架構。  
@@ -275,17 +281,16 @@ IBM 提供許多智慧型合約，您可以下載且直接依現狀使用，或�
 若要開始將裝置資料寫入至新的區塊鏈智慧型合約，您必須先將裝置資料對映至合約。  
    1. 在 {{site.data.keyword.Bluemix_notm}} 中，移至「儀表板」
    2. 選取已在其中部署 {{site.data.keyword.iot_short_notm}} 的空間。
-   3. 按一下 **{{site.data.keyword.iot_short_notm}}** 磚。
+   3. 按一下 **{{site.data.keyword.iot_short_notm}}** 服務。
    4. 按一下**啟動**，以開啟 {{site.data.keyword.iot_short_notm}} 儀表板。
    5. 按一下功能表資訊看板中的![區塊鏈](images/platform_blockchain.png "區塊鏈")，以選取**區塊鏈**。
-   6. 按一下**鏈結合約**。
-   6. 選取先前所建立網狀架構的網狀架構名稱。
-   7. 輸入下列資訊：  
+   6. 按一下**對映裝置資料**。
+   7. 選取您要在區塊鏈中儲存其裝置資料的裝置類型，以及您要儲存之事件的事件名稱。按**下一步**。
+   8. 選取先前所建立網狀架構的網狀架構名稱。按**下一步**。
+   9. 輸入下列資訊，然後按**下一步**：
      - 合約 ID - 貼入在部署合約時所儲存的 128 個字元的合約 ID。
      - 合約名稱 - 輸入名稱以識別 {{site.data.keyword.iot_short_notm}} 中的合約。
-     - 選取要在區塊鏈中儲存其裝置資料的裝置類型。
-     - 選取您要儲存之事件的事件名稱。  
-       
+     
      **提示：**若要尋找裝置的事件類型，請移至**裝置**頁面，然後按一下裝置名稱以開啟裝置詳細資料頁面。向下捲動至**感應器資訊**區段，以查看裝置的可用事件及資料點清單。
 
    11. 將可用的裝置內容對映至合約參數。  
@@ -327,7 +332,7 @@ IBM 提供許多智慧型合約，您可以下載且直接依現狀使用，或�
 <tr>
 <td>API 主機及埠</td>
 <td>`http://peer_URL:port`</td>
-<td>前面附加 `http://` 的 {{site.data.keyword.blockchainfull_notm}} REST API 的主機及埠。使用 `api_host` 位址及 `api_port` 號碼。</td>
+<td>前面附加 `https://` 的 {{site.data.keyword.blockchainfull_notm}} REST API 的主機及埠。使用 `api_host` 位址及 `api_port_tls` 號碼。</td>
 </tr>
 <tr>
 <td>鏈碼 ID</td>

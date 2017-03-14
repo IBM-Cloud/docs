@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-03"
+lastupdated: "2017-02-20"
 
 ---
 
@@ -80,6 +80,6 @@ lastupdated: "2017-02-03"
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
 * 有关服务的疑问和入门指示信息，请使用 [IBM developerWorks dW Answers ![外部链接图标](../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/topics/watson-iot/?smartspace=bluemix){:new_window} 论坛。请加上“watson-iot”和“bluemix”标记。
 
-有关使用论坛的更多详细信息，请参阅[获取帮助 ![外部链接图标](../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/support/index.html#getting-help){: new_window}。
+有关使用论坛的更多详细信息，请参阅[获取帮助](https://www.{DomainName}/docs/support/index.html#getting-help)。
 
-有关开具 IBM 支持凭单或者有关支持级别和凭单严重性的信息，请参阅[联系支持人员 ![外部链接图标](../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/support/index.html#contacting-support){: new_window}。
+有关开具 IBM 支持凭单或者有关支持级别和凭单严重性的信息，请参阅[联系支持人员 ![外部链接图标](../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/support/index.html#contacting-support)。

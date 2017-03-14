@@ -399,7 +399,7 @@ Cualquier dato XML se puede convertir a serie y publicarse como se indica a cont
     status = myClient.publishEvent("load", xmlConvertedString, "xml", 2);
 ```
 
-De forma similar, para publicar eventos en formato binario, utilice la matriz de bytes, tal como se describe en el ejemplo siguiente:
+De forma similar, para publicar sucesos en formato binario, utilice la matriz de bytes, tal como se describe en el ejemplo siguiente:
 
 ```
     myClient.connect();

@@ -74,7 +74,7 @@ Prima di iniziare a distribuire e verificare gli smart contract, devi configurar
 L'integrazione blockchain {{site.data.keyword.iot_short_notm}} richiede il fabric {{site.data.keyword.blockchainfull_notm}} per gestire il ledger blockchain, gli smart contract e l'infrastruttura blockchain generale. L'integrazione blockchain {{site.data.keyword.Bluemix_notm}} utilizza {{site.data.keyword.blockchainfull_notm}} per gestire le catene. Se hai accesso a un ambiente {{site.data.keyword.blockchainfull_notm}} esistente, puoi utilizzarlo. Se non hai accesso, devi creare un'istanza di {{site.data.keyword.blockchainfull_notm}} dal catalogo {{site.data.keyword.Bluemix_notm}} [](https://console.ng.bluemix.net/catalog/services/blockchain/).
 
   1. Dal tuo dashboard dell'account {{site.data.keyword.Bluemix_notm}}, fai clic su **Utilizza servizi o API**.
-  2. Individua la sezione Servizi applicazione del catalogo del servizio e seleziona **Blockchain**.   
+  2. Individua la sezione Servizi applicazione del catalogo del servizio e seleziona **Blockchain**.  
    **Suggerimento:** Fai clic [qui](https://console.ng.bluemix.net/catalog/services/blockchain/) per andare direttamente alla pagina del servizio {{site.data.keyword.blockchainfull_notm}}.
   3. Nella pagina del servizio {{site.data.keyword.blockchainfull_notm}}, verifica le selezioni di aggiunta del servizio:  
     - Spazio - Se hai più dello spazio `dev` predefinito, verifica che stai distribuendo il servizio nello spazio voluto.
@@ -88,36 +88,40 @@ L'integrazione blockchain {{site.data.keyword.iot_short_notm}} richiede il fabri
     Per scrivere nel blockchain da {{site.data.keyword.iot_short_notm}}, devi prima collegare i servizi.
      1. In {{site.data.keyword.Bluemix_notm}}, vai al dashboard
      2. Seleziona lo spazio nel quale hai distribuito {{site.data.keyword.blockchainfull_notm}}.
-     3. Fai clic sul tile **Blockchain**.
-     4. Nel pannello di sinistra, fai clic su **Credenziali del servizio**.
-     5. Seleziona una serie di credenziali del servizio o fai clic su **Aggiungi credenziali** per crearne una nuova e fornisci un nome descrittivo, come ad esempio "IoT-Platform-integration."
+     3. Fai clic sul link **Blockchain** sotto **Servizi**.
+     4. Fai clic sulla scheda **Credenziali del servizio**.
+     5. Seleziona una serie di credenziali del servizio o fai clic su **Nuova credenziale** per crearne una nuova e fornisci un nome descrittivo, come ad esempio "IoT-Platform-integration."
      6. Nelle credenziali del servizio formattate JSON, prendi nota dei seguenti parametri:  
-      - Informazioni peer: `api_host` e `api_port`
+      - Informazioni peer: `api_host` e `api_port_tls`
       - Informazioni sull'utente del tipo 1 (client): `username` e `secret`  
 
       Esempio di credenziali del servizio:
      ```json
      {
-      "credentials": {
       "peers": [
       {
-       "discovery_host": "169.44.63.203",
-       "discovery_port": "32904",
-       "api_host": "169.44.63.203",
-       "api_port_tls": "443",
-       "api_port": "80",
-       "type": "peer",
-       "network_id": "f621cde2-bdec-4897-b737-da4df144c41f",
-       "container_id": "5750f7734fb06c64d70c443b1dfcf39a3f5de7b51b792294c05dbdbe7d8356f7",
-       "id": "f621cde2-bdec-4897-b737-da4df144c41f_vp1",
-       "api_url": "http://169.44.63.203:32905"
-      },
+        "discovery_host": "fa68cbcbfcec4726932e53e2fa4f3afc-vp0.us.blockchain.ibm.com",
+        "discovery_port": 30003,
+        "api_host": "fa68cbcbfcec4726932e53e2fa4f3afc-vp0.us.blockchain.ibm.com",
+        "api_port_tls": 5003,
+        "api_port": 5003,
+        "event_host": "fa68cbcbfcec4726932e53e2fa4f3afc-vp0.us.blockchain.ibm.com",
+        "event_port": 31003,
+        "type": "peer",
+        "network_id": "fa68cbcbfcec4726932e53e2fa4f3afc",
+        "container_id": "e33f08f85988bf57ccfcf34ccdb80d72489e5bfb46786b570e1a74a6679f804e",
+        "id": "fa68cbcbfcec4726932e53e2fa4f3afc-vp0",
+        "api_url": "http://fa68cbcbfcec4726932e53e2fa4f3afc-vp0.us.blockchain.ibm.com:5003"
+    },
        ...
       ],
       "users": [
       {
-       "username": "user_type1_fa8e6ef0dc",
-       "secret": "33401036a9"
+        "enrollId": "user_type1_0",
+        "enrollSecret": "63c58806d6",
+        "affiliation": "group1",
+        "username": "user_type1_0",
+        "secret": "63c58806d6"
       },
        ...
        ]
@@ -127,7 +131,7 @@ L'integrazione blockchain {{site.data.keyword.iot_short_notm}} richiede il fabri
      **Importante:** l'utente che selezioni non deve essere precedentemente registrato con un peer diverso da quello selezionato.
      7. Fai clic su **Back to Dashboard** per ritornare al tuo dashboard {{site.data.keyword.Bluemix_notm}}.
      8. Seleziona lo spazio nel quale hai distribuito {{site.data.keyword.iot_short_notm}}.
-     9. Fai clic sul tile **{{site.data.keyword.iot_short_notm}}**.
+     9. Fai clic sul link **{{site.data.keyword.iot_short_notm}}** sotto **Servizi**.
      10. Fai clic su **Launch** per aprire il dashboard {{site.data.keyword.iot_short_notm}}.
      11. Dal dashboard {{site.data.keyword.iot_short_notm}}, seleziona **Extensions** nella barra laterale del menu.
      12. Nella pagina **Extensions**, nel tile Blockchain, fai clic su **Setup** o su ![Gear icon](../images/gear.png "Configure") se già disponi di fabric collegati.
@@ -153,7 +157,7 @@ L'integrazione blockchain {{site.data.keyword.iot_short_notm}} richiede il fabri
    </tr>
    <tr>
    <td>Porta</td>
-   <td>Il numero `api_port`<ul><li>Utilizza la porta 80 se la tua implementazione non utilizza TLS.</li><li>Utilizza la porta 443 se la tua implementazione utilizza TLS.</li></ul></td>
+   <td>Il numero The `api_port_tls`</td>
    </tr>
    <tr>
    <td>ID utente</td>
@@ -165,7 +169,7 @@ L'integrazione blockchain {{site.data.keyword.iot_short_notm}} richiede il fabri
    </tr>
    <tr>
    <td>Utilizza TLS</td>
-   <td>Attivo o Non attivo</br>Utilizza TLS (Transport Layer Security) per codificare la comunicazione tra {{site.data.keyword.iot_short_notm}} e il contratto nel fabric. I numeri di porta predefiniti sono impostati dall'istanza {{site.data.keyword.iot_short_notm}} distribuita a cui ti stai collegando.</td>
+   <td>Attivo o Non attivo</br>Utilizza TLS (Transport Layer Security) per codificare la comunicazione tra {{site.data.keyword.iot_short_notm}} e il contratto nel fabric. È necessario abilitare TLS per la connessione a un fabric {{site.data.keyword.blockchainfull_notm}}.</td>
    </tr></tbody>
    </table>  
     3. Fai clic su **Finish**.
@@ -224,9 +228,9 @@ Per scaricare i contratti di esempio:
   2. Registra il contratto con il peer a cui ti sei collegato precedentemente.  
   Utilizza un client REST come CURL o Postman per inviare la chiamate di registrazione. Per ulteriori informazioni sulla chiamata di registrazione, consulta [POST registrar API documentation](https://ibmblockchainapi.mybluemix.net/swagger/ui.html?scheme=http&host=127.0.0.1:3000&basepath=/#!/Registrar/registerUser). Utilizza le seguenti informazioni durante la registrazione:
   <ul>
-  <li>URL: `http://api_host:api_port/registrar`
+  <li>URL: `http://api_host:api_port_tls/registrar`
   <li>Tipo: POST
-  <li>Intestazione: `Content type: application/x-www-form-urlencoded`
+  <li>Intestazione: `Content type: application/json`
   <li>Payload:  
   ```json
    {  
@@ -240,26 +244,28 @@ Per scaricare i contratti di esempio:
   Per ulteriori informazioni sulla chiamata di distribuzione, consulta [POST devops/deploy API documentation](https://ibmblockchainapi.mybluemix.net/swagger/ui.html?scheme=http&host=127.0.0.1:3000&basepath=/#!/Devops/chaincodeDeploy).  
   Utilizza le seguenti informazioni durante la distribuzione:  
   <ul>
-  <li>URL: `http://api_host:api_port/devops/deploy`
+  <li>URL: `http://api_host:api_port_tls/chaincode`
   <li>Tipo: POST
-  <li>Intestazione: `Content type: application/x-www-form-urlencoded`
+  <li>Intestazione: `Accept: application/json`
+  <li>Intestazione: `Content type: application/json`
   <li>Payload:  
   ```
   {
-      "type": "GOLANG",   
-      "chaincodeID": {  
-      "path": "http://github.com/{my organization}/{my project}/sample.go",
-      "name": "string"
+    "jsonrpc": "2.0",
+    "method": "deploy",
+    "params": {
+        "type": 1,
+        "chaincodeID":{
+              "path": "http://github.com/{my organization}/{my project}/sample.go"
+        },
+        "ctorMsg": {
+            "function":"init",
+            "args":["{\"version\":\"1.0\",\"nickname\":\"sample_contract\"}"]
+        },
+        "secureContext": "username"
     },
-    "ctorMsg": {  
-      "function": "init",  
-      "args": [
-        "{\"version\":\"1.0\}"}"
-      ]
-    },
-    "secureContext": "'username'",
-    "confidentialityLevel": "PUBLIC"
-  }
+    "id":1234
+}
   ```  
   </ul>  
   Il tuo contratto è stato distribuito al fabric.  
@@ -269,16 +275,16 @@ Per scaricare i contratti di esempio:
   Per iniziare a scrivere i dati del dispositivo nei nuovi smart contract blockchain, devi prima associare i dati del dispositivo ai contratti.  
    1. In {{site.data.keyword.Bluemix_notm}}, vai al dashboard
    2. Seleziona lo spazio nel quale hai distribuito {{site.data.keyword.iot_short_notm}}.
-   3. Fai clic sul tile **{{site.data.keyword.iot_short_notm}}**.
+   3. Fai clic sul servizio **{{site.data.keyword.iot_short_notm}}**.
    4. Fai clic su **Launch** per aprire il dashboard {{site.data.keyword.iot_short_notm}}.
    5. Seleziona **Blockchain**  facendo clic su ![Blockchain.](images/platform_blockchain.png "Blockchain") nella barra laterale del menu.
-   6. Fai clic su **Link Contract**.
-   6. Seleziona il nome del fabric per il fabric che hai precedentemente creato.
-   7. Immetti le seguenti informazioni:  
+   6. Fai clic su **Map Device Data**.
+   7. Seleziona il tipo di dispositivo per cui desideri archiviare i dati nel blockchain e il nome dell'evento che desideri archiviare. Fai clic su **Avanti**.
+   8. Seleziona il nome del fabric per il fabric che hai precedentemente creato. Fai clic su **Avanti**.
+   9. Immetti le seguenti informazioni e fai clic su **Avanti**:
      - ID contratto - Incolla l'ID del contratto di 128 caratteri che hai salvato quando hai distribuito il contratto.
      - Nome contratto - Immetti un nome che identifica il contratto in {{site.data.keyword.iot_short_notm}}.
-     - Seleziona il tipo di dispositivo per cui desideri archiviare i dati nel blockchain.
-     - Seleziona il nome dell'evento che desideri archiviare.  
+     
      **Suggerimento:** per trovare i tipi di evento per un dispositivo, vai alla pagina **Devices** e fai clic sul nome del dispositivo per aprire la pagina dei dettagli del dispositivo. Scorri verso il basso fino alla sezione **Sensor Information** per visualizzare un elenco dei punti dati e degli eventi disponibili per il dispositivo.
 
    11. Associa le proprietà del dispositivo disponibili ai parametri del contratto.   
@@ -318,7 +324,7 @@ Per verificare il tuo smart contract, esegui un test end-to-end creando un dispo
 <tr>
 <td>Porta e host API</td>
 <td>`http://peer_URL:port`</td>
-<td>L'host e la porta per l'API REST {{site.data.keyword.blockchainfull_notm}} preceduti da `http://`. Utilizza l'indirizzo `api_host` e il numero `api_port`. </td>
+<td>L'host e la porta dell'API REST {{site.data.keyword.blockchainfull_notm}} preceduti da `https://`. Utilizza l'indirizzo  `api_host` e il numero `api_port_tls`. </td>
 </tr>
 <tr>
 <td>ID chaincode</td>

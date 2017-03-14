@@ -88,36 +88,40 @@ Für die {{site.data.keyword.iot_short_notm}}-Blockchain-Integration ist das {{s
     Um von {{site.data.keyword.iot_short_notm}} aus an Blockchain zu schreiben, müssen Sie die Services zunächst verlinken.
      1. Wechseln Sie in {{site.data.keyword.Bluemix_notm}} zum Dashboard.
      2. Wählen Sie den Bereich aus, in dem Sie {{site.data.keyword.blockchainfull_notm}} bereitgestellt haben.
-     3. Klicken Sie auf die Kachel **Blockchain**.
-     4. Klicken Sie im linken Teilfenster auf **Serviceberechtigungsnachweise**.
-     5. Wählen Sie eine Gruppe von Serviceberechtigungsnachweisen aus oder klicken Sie auf **Berechtigungsnachweise hinzufügen**, um eine neue Gruppe von Serviceberechtigungsnachweisen zu erstellen, und benennen Sie diese Gruppe mit einem beschreibenden Namen wie beispielsweise 'IoT Platform-Integration'.
+     3. Klicken Sie unter **Services** auf den Link **Blockchain**.
+     4. Klicken Sie auf die Registerkarte **Serviceberechtigungsnachweise**.
+     5. Wählen Sie eine Gruppe von Serviceberechtigungsnachweisen aus oder klicken Sie auf **Neuer Berechtigungsnachweis**, um eine neue Gruppe von Serviceberechtigungsnachweisen zu erstellen, und benennen Sie diese Gruppe mit einem beschreibenden Namen wie beispielsweise 'IoT Platform-Integration'.
      6. Notieren Sie sich in den Serviceberechtigungsnachweisen, die das JSON-Format aufweisen, folgende Parameter:  
-      - Peerinformationen: `api_host` und `api_port`.
+      - Peerinformationen: `api_host` und `api_port_tls`.
       - Benutzer der Informationen des Typs 1 (Client): `username` und `secret`.  
 
       Beispiel für Serviceberechtigungsnachweise:
      ```json
      {
-      "credentials": {
       "peers": [
       {
-       "discovery_host": "169.44.63.203",
-       "discovery_port": "32904",
-       "api_host": "169.44.63.203",
-       "api_port_tls": "443",
-       "api_port": "80",
-       "type": "peer",
-       "network_id": "f621cde2-bdec-4897-b737-da4df144c41f",
-       "container_id": "5750f7734fb06c64d70c443b1dfcf39a3f5de7b51b792294c05dbdbe7d8356f7",
-       "id": "f621cde2-bdec-4897-b737-da4df144c41f_vp1",
-       "api_url": "http://169.44.63.203:32905"
-      },
+        "discovery_host": "fa68cbcbfcec4726932e53e2fa4f3afc-vp0.us.blockchain.ibm.com",
+        "discovery_port": 30003,
+        "api_host": "fa68cbcbfcec4726932e53e2fa4f3afc-vp0.us.blockchain.ibm.com",
+        "api_port_tls": 5003,
+        "api_port": 5003,
+        "event_host": "fa68cbcbfcec4726932e53e2fa4f3afc-vp0.us.blockchain.ibm.com",
+        "event_port": 31003,
+        "type": "peer",
+        "network_id": "fa68cbcbfcec4726932e53e2fa4f3afc",
+        "container_id": "e33f08f85988bf57ccfcf34ccdb80d72489e5bfb46786b570e1a74a6679f804e",
+        "id": "fa68cbcbfcec4726932e53e2fa4f3afc-vp0",
+        "api_url": "http://fa68cbcbfcec4726932e53e2fa4f3afc-vp0.us.blockchain.ibm.com:5003"
+    },
        ...
       ],
       "users": [
       {
-       "username": "user_type1_fa8e6ef0dc",
-       "secret": "33401036a9"
+        "enrollId": "user_type1_0",
+        "enrollSecret": "63c58806d6",
+        "affiliation": "group1",
+        "username": "user_type1_0",
+        "secret": "63c58806d6"
       },
        ...
        ]
@@ -127,7 +131,7 @@ Für die {{site.data.keyword.iot_short_notm}}-Blockchain-Integration ist das {{s
      **Wichtig:** Der Benutzer, den Sie auswählen, darf nicht zuvor für einen anderen als den von Ihnen ausgewählten Peer registriert worden sein.
      7. Klicken Sie auf **Zurück zum Dashboard**, um zu Ihrem {{site.data.keyword.Bluemix_notm}}-Dashboard zurückzukehren.
      8. Wählen Sie den Bereich aus, in dem Sie {{site.data.keyword.iot_short_notm}} bereitgestellt haben.
-     9. Klicken Sie auf die Kachel für **{{site.data.keyword.iot_short_notm}}**.
+     9. Klicken Sie unter **Services** auf den Link **{{site.data.keyword.iot_short_notm}}**.
      10. Klicken Sie auf die Option zum **Starten**, um das {{site.data.keyword.iot_short_notm}}-Dashboard zu öffnen.
      11. Wählen Sie im {{site.data.keyword.iot_short_notm}}-Dashboard in der seitlichen Menüleiste die Option **Erweiterungen** aus.
      12. Klicken Sie auf der Seite **Erweiterungen** der Kachel 'Blockchain' auf **Einrichten** oder klicken Sie auf ![Zahnradsymbol](../images/gear.png "Konfigurieren"), falls bereits Fabrics verbunden sind.
@@ -153,7 +157,7 @@ Für die {{site.data.keyword.iot_short_notm}}-Blockchain-Integration ist das {{s
    </tr>
    <tr>
    <td>Port</td>
-   <td>Die Nummer `api_port`.<ul><li>Verwenden Sie Port 80, wenn Ihre Implementierung kein TLS verwendet.</li><li>Verwenden Sie Port 443, wenn Ihre Implementierung TLS verwendet.</li></ul></td>
+   <td>Die Nummer für `api_port_tls`.</td>
    </tr>
    <tr>
    <td>Benutzer-ID</td>
@@ -165,7 +169,7 @@ Für die {{site.data.keyword.iot_short_notm}}-Blockchain-Integration ist das {{s
    </tr>
    <tr>
    <td>TLS verwenden</td>
-   <td>An oder Aus</br>Verwenden Sie Transport Layer Security, um die Kommunikation zwischen {{site.data.keyword.iot_short_notm}} und dem Vertrag im Fabric zu verschlüsseln. Die Standardportnummern werden durch die bereitgestellte {{site.data.keyword.iot_short_notm}}-Instanz festgelegt, zu der Sie eine Verbindung herstellen.</td>
+   <td>An oder Aus</br>Verwenden Sie Transport Layer Security, um die Kommunikation zwischen {{site.data.keyword.iot_short_notm}} und dem Vertrag im Fabric zu verschlüsseln. TLS muss bei der Herstellung einer Verbindung zu einem {{site.data.keyword.blockchainfull_notm}}-Fabric aktiviert sein.</td>
    </tr></tbody>
    </table>  
     3. Klicken Sie auf **Fertigstellen**.
@@ -193,7 +197,7 @@ Um Ihren eigenen Chaincode vor dem Bereitstellen in {{site.data.keyword.blockcha
 IBM stellt eine Reihe von intelligenten Verträgen bereit, die Sie herunterladen und unverändert sofort verwenden können bzw. für Ihre Unternehmensziele anpassen können.  
 Gehen Sie wie folgt vor, um die Beispielverträge herunterzuladen:
  1. Wechseln Sie zum GitHub-Repository mit den Blockchain-Beispielen unter https://github.com/ibm-watson-iot/blockchain-samples/.  
-Die Ordner 'basic_contract_hyperledger' und 'trade_lane_contract_hyperledger' enthalten den Basisvertrag bzw. den Trade Lane-Vertrag.
+ Die Ordner 'basic_contract_hyperledger' und 'trade_lane_contract_hyperledger' enthalten den Basisvertrag bzw. den Trade Lane-Vertrag.
  3. Mit der Option `git clone` im Terminal können Sie das https://github.com/ibm-watson-iot/blockchain-samples-Projekt klonen.  
  **Tipp:** Sie können auch eine komprimierte Datei des Projekts herunterladen, indem Sie auf der Projektseite auf **Download ZIP** klicken.
 
@@ -223,9 +227,9 @@ Die Ordner 'basic_contract_hyperledger' und 'trade_lane_contract_hyperledger' en
   2. Registrieren Sie den Vertrag auf dem Peer, zu dem Sie zuvor eine Verbindung hergestellt haben.  
   Verwenden Sie einen REST-Client wie beispielsweise CURL oder Postman, um den Registrierungsaufruf zu übergeben. Weitere Informationen zum Registrierungsaufruf finden Sie in der [Dokumentation zur POST-Registrator-API](https://ibmblockchainapi.mybluemix.net/swagger/ui.html?scheme=http&host=127.0.0.1:3000&basepath=/#!/Registrar/registerUser). Verwenden Sie bei der Registrierung folgende Informationen:
   <ul>
-  <li>URL: `http://api_host:api_port/registrar`
+  <li>URL: `http://api_host:api_port_tls/registrar`
   <li>Typ: POST
-  <li>Header: `Content type: application/x-www-form-urlencoded`
+  <li>Header: `Content type: application/json`
   <li>Nutzdaten:  
   ```json
    {  
@@ -239,26 +243,28 @@ Die Ordner 'basic_contract_hyperledger' und 'trade_lane_contract_hyperledger' en
   Weitere Informationen zum Aufruf für das Bereitstellen finden Sie in der [Dokumentation zur POST-API 'devops/deploy'](https://ibmblockchainapi.mybluemix.net/swagger/ui.html?scheme=http&host=127.0.0.1:3000&basepath=/#!/Devops/chaincodeDeploy).  
   Verwenden Sie bei der Bereitstellung folgende Informationen:  
   <ul>
-  <li>URL: `http://api_host:api_port/devops/deploy`
+  <li>URL: `http://api_host:api_port_tls/chaincode`
   <li>Typ: POST
-  <li>Header: `Content type: application/x-www-form-urlencoded`
+  <li>Header: `Accept: application/json`
+  <li>Header: `Content type:  application/json`
   <li>Nutzdaten:  
   ```
   {
-      "type": "GOLANG",   
-      "chaincodeID": {  
-      "path": "http://github.com/{my organization}/{my project}/sample.go",
-      "name": "string"
+    "jsonrpc": "2.0",
+    "method": "deploy",
+    "params": {
+        "type": 1,
+        "chaincodeID":{
+              "path": "http://github.com/{my organization}/{my project}/sample.go"
+        },
+        "ctorMsg": {
+            "function":"init",
+            "args":["{\"version\":\"1.0\",\"nickname\":\"sample_contract\"}"]
+        },
+        "secureContext": "username"
     },
-    "ctorMsg": {  
-      "function": "init",  
-      "args": [
-        "{\"version\":\"1.0\}"}"
-      ]
-    },
-    "secureContext": "'username'",
-    "confidentialityLevel": "PUBLIC"
-  }
+    "id":1234
+}
   ```  
   </ul>  
   Ihr Vertrag wird im Fabric bereitgestellt.  
@@ -268,16 +274,16 @@ Die Ordner 'basic_contract_hyperledger' und 'trade_lane_contract_hyperledger' en
   Bevor Sie an die neuen intelligenten Blockchain-Verträge Gerätedaten schreiben, müssen Sie den Verträgen zunächst Gerätedaten zuordnen.  
    1. Wechseln Sie in {{site.data.keyword.Bluemix_notm}} zum Dashboard.
    2. Wählen Sie den Bereich aus, in dem Sie {{site.data.keyword.iot_short_notm}} bereitgestellt haben.
-   3. Klicken Sie auf die Kachel für **{{site.data.keyword.iot_short_notm}}**.
+   3. Klicken Sie auf den Service **{{site.data.keyword.iot_short_notm}}**.
    4. Klicken Sie auf die Option zum **Starten**, um das {{site.data.keyword.iot_short_notm}}-Dashboard zu öffnen.
    5. Wählen Sie **Blockchain** aus, indem Sie in der seitlichen Menüleiste auf ![Blockchain](images/platform_blockchain.png "Blockchain") klicken.
-   6. Klicken Sie auf **Link zu Vertrag erstellen**.
-   6. Wählen Sie den Fabric-Namen für das Fabric aus, das Sie zuvor erstellt haben.
-   7. Geben Sie folgende Informationen ein:  
+   6. Klicken Sie auf **Gerätedaten zuordnen**.
+   7. Wählen Sie den Gerätetyp, für den Sie Gerätedaten in Blockchain speichern wollen, sowie den Ereignisnamen für die Ereignisse, die Sie speichern möchten, aus. Klicken Sie auf **Weiter**.
+   8. Wählen Sie den Fabric-Namen für das Fabric aus, das Sie zuvor erstellt haben. Klicken Sie auf **Weiter**.
+   9. Geben Sie die folgenden Informationen ein und klicken Sie auf **Weiter**:
      - Vertrags-ID - Fügen Sie die aus 128 Zeichen bestehende Vertrags-ID ein, die Sie beim Bereitstellen des Vertrags gespeichert haben.
      - Vertragsname - Geben Sie einen Namen ein, um den Vertrag in {{site.data.keyword.iot_short_notm}} anzugeben.
-     - Wählen Sie den Gerätetyp aus, für den Sie Gerätedaten in Blockchain speichern wollen.
-     - Wählen Sie den Ereignisnamen für die Ereignisse aus, die Sie speichern möchten.  
+     
      **Tipp:** Um die Ereignistypen für ein Gerät zu finden, wechseln Sie zur Seite **Geräte** und klicken Sie auf den Gerätenamen, um die Detailseite des Geräts zu öffnen. Blättern Sie abwärts zum Abschnitt **Sensorinformationen**, um eine Liste der verfügbaren Ereignisse und Datenpunkte für das Gerät anzuzeigen.
 
    11. Ordnen Sie die verfügbaren Geräteeigenschaften den Vertragsparametern zu.   
@@ -317,7 +323,7 @@ Zum Testen Ihres intelligenten Vertrags führen Sie einen umfassenden Test durch
 <tr>
 <td>API Host and Port</td>
 <td>`http://peer_URL:port`</td>
-<td>Der Host und der Port für die {{site.data.keyword.blockchainfull_notm}}-REST-API, der `http://` vorangestellt ist. Verwenden Sie die Adresse `api_host` und die Nummer `api_port`. </td>
+<td>Der Host und der Port für die {{site.data.keyword.blockchainfull_notm}}-REST-API, der `https://` vorangestellt ist. Verwenden Sie die Adresse `api_host` und die Nummer `api_port_tls`.</td>
 </tr>
 <tr>
 <td>Chaincode ID</td>
@@ -345,9 +351,9 @@ Zum Testen Ihres intelligenten Vertrags führen Sie einen umfassenden Test durch
 3. Überprüfen Sie in der Benutzerschnittstelle für die Überwachung, dass Ihr Setup wie erwartet funktioniert.  
 Verwenden Sie die Komponenten der Benutzerschnittstelle für die Überwachung, um mit dem Blockchain-Vertrag zu interagieren:  
  - Chaincode-Operationen  
-Überprüfen Sie, dass die vertragsspezifischen Chaincode-Operationen wie erwartet ausgeführt werden können. Überprüfen Sie beispielsweise für den Basisvertrag, dass die Ausführung der Funktion `createAsset` dazu führt, dass ein Asset zu Blockchain hinzugefügt wird.
+ Überprüfen Sie, dass die vertragsspezifischen Chaincode-Operationen wie erwartet ausgeführt werden können. Überprüfen Sie beispielsweise für den Basisvertrag, dass die Ausführung der Funktion `createAsset` dazu führt, dass ein Asset zu Blockchain hinzugefügt wird.
  - Antwortnutzdaten  
-Stellen Sie sicher, dass Antworten auf Peer-Anforderungen wie erwartet angezeigt werden, wenn Sie REST-Anforderungen über die Registerkarte für Chaincode-Operationen übergeben.
+ Stellen Sie sicher, dass Antworten auf Peer-Anforderungen wie erwartet angezeigt werden, wenn Sie REST-Anforderungen über die Registerkarte für Chaincode-Operationen übergeben.
  - Blockchain  
 Überprüfen Sie, dass beim Einfügen von Daten, die von einem verbundenen Gerät stammen, oder bei der Verwendung der Komponente für Chaincode-Operationen in der Kette (Chain) Blöcke hinzugefügt werden.    
 

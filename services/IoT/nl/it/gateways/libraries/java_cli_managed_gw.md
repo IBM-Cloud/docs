@@ -12,13 +12,13 @@ lastupdated: "2016-12-06"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Sviluppo dei gateway gestiti utilizzando Java 
+# Sviluppo dei gateway gestiti utilizzando Java
 {: #java_cli_managed_gw}
 
 I gateway hanno un ruolo importante nella gestione dei dispositivi a loro collegati. Molti dispositivi sono molto basici e non dispongono di funzionalità di gestione, per cui questi dispositivi di base devono essere gestiti da un gateway. In {{site.data.keyword.iot_full}}, un gateway gestito è un gateway che può gestire i dispositivi collegati ad esso e fornisce funzionalità di gestione, come gli aggiornamenti del firmware, dell'ubicazione e della diagnostica.
 {:shortdesc}
 
-Utilizzando la libreria client Java™ {{site.data.keyword.iot_short}} e le informazioni fornite, puoi sviluppare il codice Java per modificare il tuo gateway in un gateway gestito. Vengono inoltre forniti degli esempi per aiutarti nello sviluppo del codice Java per collegare un gateway al servizio di gestione del dispositivo ed eseguire le operazioni di gestione del dispositivo. 
+Utilizzando la libreria client Java™ {{site.data.keyword.iot_short}} e le informazioni fornite, puoi sviluppare il codice Java per modificare il tuo gateway in un gateway gestito. Vengono inoltre forniti degli esempi per aiutarti nello sviluppo del codice Java per collegare un gateway al servizio di gestione del dispositivo ed eseguire le operazioni di gestione del dispositivo.
 
 ## Servizio di gestione dispositivo
 {: #dm_service}
@@ -27,16 +27,16 @@ Il servizio Gestione del dispositivo (DM) {{site.data.keyword.iot_short}} fornis
 
 Un gateway gestito esegue un agent di gestione del dispositivo, che viene eseguito come un proxy per tutti i dispositivi collegati a {{site.data.keyword.iot_short}} tramite il gateway.
 
-### Agent di gestione del dispositivo 
+### Agent di gestione del dispositivo
 
 I dispositivi collegati a {{site.data.keyword.iot_short}} indirettamente tramite un gateway possono utilizzare vari protocolli di connessione, se supportati dal dispositivo gateway.
 
 L'istanza `ManagedGateway` è un agent di gestione del dispositivo che fornisce un elenco di metodi per l'esecuzione di una o più azioni di gestione, ad esempio, partecipando all'attività di gestione del dispositivo, aggiornando i codici di  errore, i log e il firmware o le azioni del dispositivo.
 
 L'agent di gestione del dispositivo sul gateway converte ed elabora i protocolli di connessione dei dispositivi collegati, per assicurare che il dispositivo possa essere gestito da {{site.data.keyword.iot_short}}. Tramite l'agent di gestione del dispositivo, il gateway diventa qualcosa di più rispetto a un tunnel trasparente tra il dispositivo collegato e {{site.data.keyword.iot_short}}. Ad esempio, se un dispositivo collegato a un gateway non riesce a scaricare il firmware, l'agent di gestione del dispositivo sul gateway può eseguire le seguenti azioni:
-- Intercettare una richiesta di un dispositivo per scaricare il firmware 
+- Intercettare una richiesta di un dispositivo per scaricare il firmware
 - Scaricare il firmware per il dispositivo
-- Memorizzare il firmware del dispositivo sul gateway 
+- Memorizzare il firmware del dispositivo sul gateway
 
 In un momento successivo, quando viene richiesto al dispositivo di eseguire l'aggiornamento, l'agent di gestione del dispositivo sul gateway può passare il firmware al dispositivo e aggiornarlo.
 
@@ -99,7 +99,7 @@ Ogni gateway e dispositivo collegato devono avere la propria definizione di clas
 
 Nella classe `ManagedGateway`, due diversi constructor, Constructor uno e Constructor due, supportano diversi modelli utente.
 
-### Constructor uno 
+### Constructor uno
 
 Il constructor uno crea un'istanza `ManagedGateway` accettando una classe `DeviceData` che contiene tutte le seguenti proprietà:
 
@@ -109,7 +109,7 @@ Il constructor uno crea un'istanza `ManagedGateway` accettando una classe `Devic
 |`Gateway-Type` |Il tipo del tuo dispositivo gateway.|
 |`Gateway-ID` |L'ID del dispositivo gateway.|
 |`Authentication-Method`|Il metodo di autenticazione. L'unico metodo supportato è "token".|
-|`Authentication-Token`|Il token della chiave API. |
+|`Authentication-Token`|Il token della chiave API.|
 |`auth-key`   |Una chiave API facoltativa, che devi specificare quando imposti il valore di auth-method su `apikey`.|
 |`auth-token`   |Un token chiave API, che è inoltre obbligatorio quando imposti il valore di auth-method su `apikey`. |
 |`clean-session`|Un valore true o false obbligatorio solo se desideri collegarti al gateway con il metodo di sottoscrizione durevole. Per impostazione predefinita, `clean-session` è impostato su `true`.|
@@ -134,7 +134,7 @@ options.setProperty("Authentication-Token", "AUTH TOKEN FOR DEVICE");
 ManagedGateway ManagedGateway = new ManagedGateway(options, deviceData);
 ```
 
-### Constructor due 
+### Constructor due
 
 Il constructor due crea un'istanza `ManagedGateway` accettando un oggetto `DeviceData` e l'istanza client MQTT. Il constructor due richiede inoltre che l'oggetto `DeviceData` nell'istanza includa l'ID e il tipo di dispositivo, come illustrato nel seguente esempio di codice:
 
@@ -157,10 +157,10 @@ ManagedGateway ManagedGateway = new ManagedGateway(mqttClient, deviceData);
 
 **Nota:**  se stai sviluppando dei dispositivi personalizzati, utilizza il constructor due, perché questo constructor crea un'istanza gateway gestita utilizzando l'istanza client MQTT collegata esistente in modo che puoi sfruttare le operazioni di gestione del dispositivo. Utilizza la libreria client Java per tutte le altre funzioni del dispositivo.
 
-## Richieste di gestione dispositivo da un gateway 
+## Richieste di gestione dispositivo da un gateway
 {: #dm_requests}
 
-### Invio di una richiesta di gestione da un gateway 
+### Invio di una richiesta di gestione da un gateway
 
 Per indicare a un gateway di partecipare alle azioni di gestione del dispositivo, richiama il metodo `sendGatewayManageRequest()`, come illustrato nel seguente esempio di codice:
 
@@ -175,12 +175,12 @@ Il metodo `sendGatewayManageRequest()` accetta i seguenti parametri:
 |----------------|----------------|
 |`lifetime`|La durata in secondi in cui il gateway deve inviare un'altra richiesta di gestione del dispositivo per evitare di essere classificato come inattivo e diventare un dispositivo non gestito. Se il campo `lifetime` viene omesso o impostato su 0, il gateway gestito non diventa inattivo. L'impostazione supportata minima per il campo `lifetime` è 3600 secondi (1 ora).|
 |`supportFirmwareActions`|Un valore true o false che determina se il gateway supporta le azioni firmware. Il gateway deve inoltre aggiungere un gestore firmware per gestire le richieste del firmware.|
-|`supportDeviceActions`|Un valore true o false che determina se il gateway supporta le azioni del dispositivo. Il gateway deve inoltre aggiungere un gestore azioni del dispositivo per gestire le richieste di ripristino delle impostazioni predefinite e di riavvio. |
+|`supportDeviceActions`|Un valore true o false che determina se il gateway supporta le azioni del dispositivo. Il gateway deve inoltre aggiungere un gestore azioni del dispositivo per gestire le richieste di ripristino delle impostazioni predefinite e di riavvio.|
 
 
 L'istanza `ManagedGateway` è un agent di gestione del dispositivo che fornisce un elenco di metodi per l'esecuzione di una o più azioni di gestione, ad esempio, partecipando all'attività di gestione del dispositivo, aggiornando i codici di  errore, i log e il firmware o le azioni del dispositivo.
 
-### Invio di una richiesta di gestione dai dispositivi collegati 
+### Invio di una richiesta di gestione dai dispositivi collegati
 
 Per consentire ai dispositivi collegati dietro a un gateway di partecipare alle azioni di gestione del dispositivo sul gateway, richiama il metodo `sendDeviceManageRequest()`.
 
@@ -192,21 +192,21 @@ Il metodo `sendDeviceManageRequest()` accetta i dettagli dei dispositivi collega
 managedGateway.sendDeviceManageRequest(typeId, deviceId, lifetime, true, true);
 ```
 
-### Invio di una richiesta di annullamento della gestione da un gateway 
+### Invio di una richiesta di annullamento della gestione da un gateway
 
 Quando un gateway non deve più essere gestito, per arrestare le attività di gestione del dispositivo sul gateway, richiama il metodo `sendGatewayUnmanageRequet()`.  Quando viene richiamato `sendGatewayUnmanageRequet()`, {{site.data.keyword.iot_short}} non invierà più nuove richieste di gestione del dispositivo e tutte le richiesta dal gateway vengono rifiutate, con eccezione delle richieste **Gestione**. Le richieste dai dispositivi dietro a un gateway vengono rifiutate.
 
-#### Esempio di invio di una richiesta di annullamento della gestione da un gateway 
+#### Esempio di invio di una richiesta di annullamento della gestione da un gateway
 
 ```java
 managedGateway.sendGatewayUnmanageRequet();
 ```
 
-### Invio di una richiesta di annullamento della gestione dai dispositivi collegati 
+### Invio di una richiesta di annullamento della gestione dai dispositivi collegati
 
 Quando un dispositivo dietro a un gateway non deve più essere gestito, per modificare lo stato di un dispositivo da gestito a non gestito, il gateway può richiamare il metodo `sendDeviceUnmanageRequet()`. Quando viene richiamato `sendDeviceUnmanageRequet()`, {{site.data.keyword.iot_short}} non invia più nuove richieste di gestione del dispositivo per il dispositivo e tutte le richieste dal gateway per il dispositivo collegato vengono rifiutate, con l'eccezione delle richieste **Gestione**.
 
-#### Esempio di invio di una richiesta di annullamento della gestione dai dispositivi collegati 
+#### Esempio di invio di una richiesta di annullamento della gestione dai dispositivi collegati
 
 ```java
 managedGateway.sendDeviceUnmanageRequet();
@@ -242,7 +242,7 @@ Per ulteriori informazioni sugli aggiornamenti dell'ubicazione, consulta [Richie
 ## Gestione dei codici di errore
 {: #errors}
 
-### Creazione ed eliminazione dei codici di errore gateway 
+### Creazione ed eliminazione dei codici di errore gateway
 
 Un gateway può scegliere di inviare notifiche a {{site.data.keyword.iot_short}} sulle modifiche al proprio stato di errore. Il gateway può richiamare il metodo `addErrorCode()` per aggiungere il codice di errore corrente a {{site.data.keyword.iot_short}}.
 
@@ -256,7 +256,7 @@ I codici di errore per un gateway possono essere cancellati da {{site.data.keywo
 int rc = managedGateway.clearGatewayErrorCodes();
 ```
 
-### Creazione ed eliminazione dei codici di errore per i dispositivi collegati 
+### Creazione ed eliminazione dei codici di errore per i dispositivi collegati
 
 Un gateway può anche richiamare il metodo del dispositivo corrispondente per aggiungere o cancellare i codici di errore per i dispositivi collegati:
 
@@ -265,9 +265,9 @@ int rc = managedGateway.addDeviceErrorCode(typeId, deviceId, 300);
 rc = managedGateway.clearDeviceErrorCodes(typeId, deviceId);
 ```
 
-### Creazione ed eliminazione dei codici dei messaggi di log 
+### Creazione ed eliminazione dei codici dei messaggi di log
 
-Un gateway può scegliere di inviare notifiche a {{site.data.keyword.iot_short}} sulle modifiche aggiungendo una nuova voce di log. Una voce di log include i seguenti elementi: 
+Un gateway può scegliere di inviare notifiche a {{site.data.keyword.iot_short}} sulle modifiche aggiungendo una nuova voce di log. Una voce di log include i seguenti elementi:
 
 - Stringa messaggio
 - Data/ora
@@ -290,7 +290,7 @@ I messaggi di log possono essere cancellati da {{site.data.keyword.iot_short}} r
 rc = managedGateway.clearGatewayLogs();
 ```
 
-### Creazione ed eliminazione dei log per i dispositivi collegati 
+### Creazione ed eliminazione dei log per i dispositivi collegati
 
 Allo stesso modo, il gateway può richiamare il metodo del dispositivo corrispondente per creare e cancellare i log per i dispositivi collegati, come illustrato nel seguente esempio di codice:
 
@@ -557,31 +557,31 @@ Per ulteriori informazioni sulle azioni firmware, consulta [Richieste di gestion
 - Riavvio
 - Reimpostazione fabric
 
-Il gateway deve eseguire le seguenti azioni per supportare le azioni del dispositivo per se stesso e anche per i suoi dispositivi. 
+Il gateway deve eseguire le seguenti azioni per supportare le azioni del dispositivo per se stesso e anche per i suoi dispositivi.
 
-1. Informare il server sul supporto delle azioni del dispositivo. 
-2. Creare il gestore dell'azione del dispositivo. 
+1. Informare il server sul supporto delle azioni del dispositivo.
+2. Creare il gestore dell'azione del dispositivo.
 3. Aggiungere il gestore a `ManagedGateway`.
 
 ### Passo 1: informare il server sul supporto delle azioni del dispositivo
 
 Per eseguire un riavvio o un'azione di ripristino delle impostazioni predefinite per un gateway e i suoi dispositivi collegati, il gateway deve prima informare {{site.data.keyword.iot_short}} sul supporto. Questa azione può essere eseguita trasmettendo un valore true per il parametro `supportDeviceActions` durante l'invio della richiesta di **Gestione**.
 
-Un gateway può richiamare il seguente metodo per informare il server riguardo il suo supporto per l'azione del dispositivo: 
+Un gateway può richiamare il seguente metodo per informare il server riguardo il suo supporto per l'azione del dispositivo:
 
 ```java
 // L'ultimo parametro rappresenta il supporto per l'azione del dispositivo
 managedGateway.sendGatewayManageRequest(3600, true, true);
 ```
 
-Un gateway può richiamare il metodo del dispositivo corrispondente per informare il supporto dell'azione del dispositivo dei dispositivi collegati: 
+Un gateway può richiamare il metodo del dispositivo corrispondente per informare il supporto dell'azione del dispositivo dei dispositivi collegati:
 
 ```java
 // L'ultimo parametro rappresenta il supporto per l'azione del dispositivo
 managedGateway.sendDeviceManageRequest(typeId, deviceId, 0, true, true);
 ```
 
-Quando il supporto viene informato dal server di gestione del dispositivo, inoltra le richieste di azione al dispositivo. 
+Quando il supporto viene informato dal server di gestione del dispositivo, inoltra le richieste di azione al dispositivo.
 
 ### Passo 2: creazione del gestore dell'azione del dispositivo
 
@@ -596,7 +596,7 @@ public abstract void handleFactoryReset(DeviceAction action);
 
 ### Un'implementazione di esempio di `handleReboot`
 
-L'implementazione deve creare un gestore separato e aggiungere la logica per riavviare il gateway e il dispositivo collegato e notificare lo stato del riavvio utilizzando l'oggetto `DeviceAction`. Dopo la ricezione della richiesta, il gateway deve prima informare il server sul supporto o il malfunzionamento prima di procedere con il riavvio attuale. Se l'esempio non può riavviare il dispositivo o si è verificato un qualsiasi altro errore durante il riavvio, il gateway può aggiornare lo stato in un messaggio facoltativo. Viene fornita un'implementazione di esempio del riavvio per un dispositivo Raspberry Pi nel seguente esempio di codice: 
+L'implementazione deve creare un gestore separato e aggiungere la logica per riavviare il gateway e il dispositivo collegato e notificare lo stato del riavvio utilizzando l'oggetto `DeviceAction`. Dopo la ricezione della richiesta, il gateway deve prima informare il server sul supporto o il malfunzionamento prima di procedere con il riavvio attuale. Se l'esempio non può riavviare il dispositivo o si è verificato un qualsiasi altro errore durante il riavvio, il gateway può aggiornare lo stato in un messaggio facoltativo. Viene fornita un'implementazione di esempio del riavvio per un dispositivo Raspberry Pi nel seguente esempio di codice:
 
 ```java
 public void handleReboot(DeviceAction action) {
@@ -641,7 +641,7 @@ public void handleFactoryReset(DeviceAction action) {
 
 ### Passo 3: aggiunta del gestore a `ManagedGateway`
 
-Quando viene creato un gestore, deve essere aggiunto all'istanza `ManagedGateway` in modo che la libreria client Java invochi il metodo corrispondente se è presente una richiesta di azione del dispositivo da {{site.data.keyword.iot_short}}. 
+Quando viene creato un gestore, deve essere aggiunto all'istanza `ManagedGateway` in modo che la libreria client Java invochi il metodo corrispondente se è presente una richiesta di azione del dispositivo da {{site.data.keyword.iot_short}}.
 
 ```java
 GatewayActionHandlerSample actionHandler = new GatewayActionHandlerSample();
@@ -650,10 +650,10 @@ mgdGateway.addDeviceActionHandler(actionHandler);
 
 Per ulteriori informazioni sulle azioni del dispositivo, consulta [Richieste di gestione del dispositivo](../../devices/device_mgmt/requests.html#/device-actions-reboot#device-actions-reboot).
 
-## Restare in ascolto per le modifiche dell'attributo del dispositivo 
+## Restare in ascolto per le modifiche dell'attributo del dispositivo
 {: #listen_device_attributes}
 
-La libreria client Java aggiorna i corrispettivi oggetti se è presente una richiesta di aggiornamento da {{site.data.keyword.iot_short}}. Queste richieste di aggiornamento sono avviate dall'applicazione direttamente o indirettamente tramite un aggiornamento firmware utilizzando l'API REST {{site.data.keyword.iot_short}}. Oltre ad aggiornare questi attributi, la libreria fornisce un meccanismo tramite il quale il gateway può ricevere notifiche quando viene aggiornato un attributo dispositivo. 
+La libreria client Java aggiorna i corrispettivi oggetti se è presente una richiesta di aggiornamento da {{site.data.keyword.iot_short}}. Queste richieste di aggiornamento sono avviate dall'applicazione direttamente o indirettamente tramite un aggiornamento firmware utilizzando l'API REST {{site.data.keyword.iot_short}}. Oltre ad aggiornare questi attributi, la libreria fornisce un meccanismo tramite il quale il gateway può ricevere notifiche quando viene aggiornato un attributo dispositivo.
 
 Gli attributi che possono essere aggiornati da questo tipo di operazione sono l'ubicazione, i metadati, le informazioni sul dispositivo e il firmware del gateway o del dispositivo collegato.
 

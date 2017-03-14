@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-03"
+lastupdated: "2017-02-17"
 
 ---
 
@@ -22,7 +22,7 @@ lastupdated: "2017-02-03"
 
 {{site.data.keyword.messagehub}}를 {{site.data.keyword.iot_short}} 서비스에 연결하기 전에 다음 태스크를 완료하십시오.
 
-- {{site.data.keyword.Bluemix_notm}} 카탈로그를 사용하여 {{site.data.keyword.iot_short_notm}}과 동일한 {{site.data.keyword.Bluemix_notm}} 영역에서 {{site.data.keyword.messagehub}}를 설정하십시오. {{site.data.keyword.messagehub}}에 대한 자세한 정보는 [{{site.data.keyword.messagehub}} 시작하기 ![외부 링크 아이콘](../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/services/MessageHub/index.html){: new_window}를 참조하십시오. 
+- {{site.data.keyword.Bluemix_notm}} 카탈로그를 사용하여 {{site.data.keyword.iot_short_notm}}과 동일한 {{site.data.keyword.Bluemix_notm}} 영역에서 {{site.data.keyword.messagehub}}를 설정하십시오. {{site.data.keyword.messagehub}}에 대한 자세한 정보는 [{{site.data.keyword.messagehub}} 시작하기](https://console.{DomainName}/docs/services/MessageHub/index.html)를 참조하십시오.
 
 - {{site.data.keyword.Bluemix_notm}} 조직에서 개발자 권한이 있는지와 {{site.data.keyword.Bluemix_notm}}를 통해 로그인했는지 확인하십시오. {{site.data.keyword.Bluemix_notm}}를 통해 로그인하지 않았거나 이 {{site.data.keyword.Bluemix_notm}} 조직에서 개발자 권한이 없는 경우에는 {{site.data.keyword.messagehub}} 및 {{site.data.keyword.iot_short_notm}}의 바인딩에 대해 권한 부여할 수 없습니다.
 

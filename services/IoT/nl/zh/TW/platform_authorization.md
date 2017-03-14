@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-09-14"
+lastupdated: "2017-02-17"
 
 ---
 
@@ -21,7 +21,7 @@ lastupdated: "2016-09-14"
 {: #api-key}
 將應用程式連接至 {{site.data.keyword.iot_short_notm}} 組織時，會使用 API 金鑰。應用程式需要有 API 金鑰才能連接至組織，而且要有必須與該 API 金鑰搭配使用的唯一鑑別記號。  
 
-如需應用程式連線的相關資訊，請參閱開發人員文件中的[應用程式的 MQTT 連線功能](https://docs.internetofthings.ibmcloud.com/applications/mqtt.html)。
+如需應用程式連線的相關資訊，請參閱開發人員文件中的[應用程式的 MQTT 連線功能 ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/applications/mqtt.html){: new_window}。
 
 若要建立新的 API 金鑰及鑑別記號配對，請執行下列步驟：  
 1.	在 {{site.data.keyword.iot_short_notm}} 儀表板中，移至**應用程式 > API 金鑰**。  

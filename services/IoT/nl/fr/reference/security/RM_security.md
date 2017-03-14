@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-07"
+lastupdated: "2017-02-22"
 
 ---
 
@@ -15,16 +15,18 @@ lastupdated: "2017-02-07"
 # Gestion des risques et de la sécurité
 {: #RM_security}
 
- Le module complémentaire de gestion des risques et de la sécurité permet aux organisations d'améliorer la sécurité d'{{site.data.keyword.iot_full}} en créant, en appliquant et en signalant la sécurité des connexions des terminaux. Avec ce module complémentaire, les certificats et l'authentification TLS (Transport Layer security) sont utilisés, en plus des ID utilisateur et des jetons utilisés par {{site.data.keyword.iot_short_notm}}, pour déterminer comment et où les terminaux se connectent à la plateforme. Lors de la communication entre les terminaux et le serveur, tous les terminaux ne disposant pas de certificats valides avec accès au serveur, tels que configurés dans le module complémentaire Gestion des risques et de la sécurité, se voient refuser l'accès, même s'ils utilisent des ID utilisateur et des mots de passe valides.
+Le module complémentaire de gestion des risques et de la sécurité permet aux organisations d'améliorer la sécurité d'{{site.data.keyword.iot_full}} en créant, en appliquant et en signalant la sécurité des connexions des terminaux. Avec ce module complémentaire, les certificats et l'authentification TLS (Transport Layer security) sont utilisés, en plus des ID utilisateur et des jetons utilisés par {{site.data.keyword.iot_short_notm}}, pour déterminer comment et où les terminaux se connectent à la plateforme. Lors de la communication entre les terminaux et le serveur, tous les terminaux ne disposant pas de certificats valides avec accès au serveur, tels que configurés dans le module complémentaire Gestion des risques et de la sécurité, se voient refuser l'accès, même s'ils utilisent des ID utilisateur et des mots de passe valides.
 
 ## Règles de sécurité des connexions
 {: #connect_policy}
 
-Les règles de sécurité des connexions appliquent la façon dont les terminaux se connectent à la plateforme. Vous pouvez définir des règles de connexion par défaut pour tous les types de terminaux, ainsi que des paramètres personnalisés pour des types de terminaux spécifiques. Les règles peuvent être configurées pour autoriser des connexions non chiffrées, pour appliquer uniquement les connexions de sécurité de couche de transport (TLS) et pour permettre aux terminaux de s'authentifier avec des certificats côté client. Lorsque des certificats côté client sont utilisés, les règles de sécurité offrent une option supplémentaire consistant à n'utiliser que le certificat pour l'authentification client ou à utiliser une combinaison d'un certificat client et d'un ID client et d'une paire de jetons d'authentification.
+Les règles de sécurité des connexions contrôlent la façon dont les terminaux sont connectés à la plateforme et utilisés avec des plans de sécurité gratuits et avancés. Vous pouvez définir des règles de connexion par défaut pour tous les types de terminaux, ainsi que des paramètres personnalisés pour des types de terminaux spécifiques. Les règles peuvent être configurées pour autoriser des connexions non chiffrées, pour appliquer uniquement les connexions de sécurité de couche de transport (TLS) et pour permettre aux terminaux de s'authentifier avec des certificats côté client.
 
-Pour plus d'informations sur la configuration des règles de sécurité de connexion, voir [Configuration des règles de sécurité](set_up_policies.html).
+Si vous utilisez un plan de sécurité standard, aucune règle de connexion n'est disponible. Pour plus d'informations sur la configuration des règles de sécurité de connexion, voir [Configuration des règles de sécurité](set_up_policies.html).
 
 La sécurité de connexion peut également être configurée pour que les clients utilisent leur propre certificat côté serveur au lieu du certificat par défaut fourni. Cela peut être utile, par exemple, si les terminaux des utilisateurs vont s'authentifier auprès du serveur pendant l'établissement de connexion TLS. Dans cette première version du module Gestion des risques et de la sécurité, le nom de domaine du serveur {{site.data.keyword.iot_short_notm}} ne peut pas être modifié et doit être utilisé tel quel dans le certificat du serveur.
+
+
 
 ## Certificats client
 {: #certificates}

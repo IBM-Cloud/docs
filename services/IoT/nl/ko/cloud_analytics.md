@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-16"
+lastupdated: "2017-02-17"
 
 ---
 
@@ -24,7 +24,7 @@ lastupdated: "2017-01-16"
 {: #byb}
 규칙에서 조건으로 사용할 디바이스 특성이 스키마에 맵핑되었는지 확인하십시오. 자세한 정보는 [디바이스 연결](iotplatform_task.html) 및 [스키마 작성](im_schemas.html)을 참조하십시오. 
 
-또한 [{{site.data.keyword.iot_short}} 클라우드 분석에서 규칙 및 조치 사용](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/) 레시피를 검토하여 클라우드 분석에서 사용되는 규칙과 조치를 파악하십시오. 
+또한 [Using Rules and Actions with {{site.data.keyword.iot_short}} Cloud Analytics ![외부 링크 아이콘](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/){: new_window} 레시피를 검토하여 클라우드 분석에 사용되는 규칙 및 조치를 파악하십시오.
 
 ## 규칙 및 조치 관리  
 {: #managing_rules}
@@ -160,7 +160,7 @@ lastupdated: "2017-01-16"
 ### IFTTT  
 {: #ifttt}
 
-IFTTT 조치를 사용하여 규칙이 트리거될 때 IFTTT 레시피를 트리거할 수 있습니다. IFTTT 레시피로서 조치를 트리거하는 자세한 정보는 IFTTT 사이트의 [Maker 채널](https://ifttt.com/maker)을 참조하십시오. 
+IFTTT 조치를 사용하여 규칙이 트리거될 때 IFTTT 레시피를 트리거할 수 있습니다. IFTTT 레시피로서 조치를 트리거하는 방법에 대한 자세한 정보는 IFTTT 사이트의 [Maker 채널![외부 링크 아이콘](../../icons/launch-glyph.svg))](https://ifttt.com/maker){: new_window}을 참조하십시오.
 
 예제: [IFTTT를 사용하여 Trello 카드 게시](#iftttex).
 
@@ -229,7 +229,7 @@ URL | 대상 Node-RED HTTP 입력 노드의 URL입니다.
 이 예제에서는 Twilio 노드의 Node-RED를 사용하여 문자 메시지를 서비스 엔지니어에게 전송하도록 조치가 구성되어 있습니다. 
 
 문자 메시지 전송 조치를 작성하려면 다음을 수행하십시오. 
-1. Twilio에서, Twilio 계정으로부터 문자 메시지 전송에 사용할 새 메시지 전달 서비스를 찾거나 작성하십시오. 자세한 정보는 [Twilio 문서](https://www.twilio.com/help)를 참조하십시오. 
+1. Twilio에서, Twilio 계정으로부터 문자 메시지 전송에 사용할 새 메시지 전달 서비스를 찾거나 작성하십시오. 정보는 [Twilio 문서(![외부 링크 아이콘](../../icons/launch-glyph.svg))](https://www.twilio.com/help){: new_window}를 참조하십시오.
 2. Bluemix에서, Node-RED URL `http://mynodered.mybluemix.net/red/`로 Node-RED 계정에 액세스하거나 이를 설정하십시오. 자세한 정보는 Bluemix 문서의 [Node-RED 스타터에서 앱 작성](https://www.ng.bluemix.net/docs/starters/Node-RED/nodered.html) 주제를 참조하십시오. 
 3. Node-RED에서, 두 개의 단순 노드 플로우를 작성하십시오(예: [RTI-alert]->[SMS]).  
 여기서 첫 번째 노드는 http 노드이며, 두 번째 노드는 twilio 노드입니다. 
@@ -290,7 +290,7 @@ URL | 대상 웹훅 사용 서버의 URL입니다. **팁:** [변수 대체](#var
 이 예제에서는 웹훅을 사용하여 #service-requests 슬랙 채널에 메시지를 게시하도록 조치가 구성되어 있습니다. 
 
 슬랙에 게시 조치를 작성하려면 다음을 수행하십시오. 
-1. 슬랙에서, 채널 #service-requests에 대한 수신 웹훅 통합을 설정하십시오. 웹훅 URL을 기록하십시오. 자세한 정보는 [슬랙 문서](https://api.slack.com/incoming-webhooks)를 참조하십시오. 
+1. 슬랙에서, 채널 #service-requests에 대한 수신 웹훅 통합을 설정하십시오. 웹훅 URL을 기록하십시오. 자세한 정보는 [Slack 문서(![외부 링크 아이콘](../../icons/launch-glyph.svg))](https://api.slack.com/incoming-webhooks){: new_window}를 참조하십시오.
 2. {{site.data.keyword.iot_short}} 대시보드에서 **규칙 > 조치**로 이동하고 다음 매개변수를 갖는 새 조치를 작성하십시오. 
  - 이름 - `Post service request on Slack`
  - 유형 - **웹훅**
@@ -301,7 +301,7 @@ URL | 대상 웹훅 사용 서버의 URL입니다. **팁:** [변수 대체](#var
  ```json
  {"text":"*A device needs your attention*\n Time: {{timestamp}}\n {{site.data.keyword.iot_short}} instance: {{tenantId}}\n Device: {{deviceId}}\n Rule: {{ruleName}}\n Description: {{ruleDescription}}\n Condition: {{ruleCondition}}\n Raw device message: \n{{message}}"}
  ```  
-  **중요:** 슬랙 웹훅에는 최소한 "텍스트" 필드가 포함되어야 합니다. 자세한 정보는 슬랙 문서의 [수신 웹훅](https://api.slack.com/incoming-webhooks "슬랙 문서")을 참조하십시오.
+  **중요:** 슬랙 웹훅에는 최소한 "텍스트" 필드가 포함되어야 합니다. 정보는 Slack 문서의 [Incoming Webhooks(![외부 링크 아이콘](../icons/launch-glyph.svg))](https://api.slack.com/incoming-webhooks){: new_window}를 참조하십시오.
 11. **완료**를 클릭하여 조치를 저장하십시오. 
 
 
@@ -328,12 +328,12 @@ URL | 대상 웹훅 사용 서버의 URL입니다. **팁:** [변수 대체](#var
 
 다음 레시피는 다양한 유스 케이스에 대해 클라우드 분석 기능을 사용하는 방법을 설명합니다. 
 
-- [IBM Watson™ IoT Platform 분석을 사용한 실시간 데이터 분석](https://developer.ibm.com/recipes/tutorials/real-time-data-analysis-using-ibm-watson-iot-platform-analytics/)
+- [Real Time Data Analysis Using IBM Watson™ IoT Platform Analytics ![외부 링크 아이콘](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/real-time-data-analysis-using-ibm-watson-iot-platform-analytics/){: new_window}
 
-- [IOT 샘플 데이터에 대한 예측 분석](https://developer.ibm.com/recipes/tutorials/predictive-analytics-on-iot-sample-data/)
+- [Predictive Analytics on IOT Sample Data ![외부 링크 아이콘](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/predictive-analytics-on-iot-sample-data/){: new_window}
 
-- [디바이스 목록 카드는 WIoTP 대시보드에서 실시간 디바이스 모니터링을 단순화함](https://developer.ibm.com/recipes/tutorials/device-list-card-simplifies-real-time-device-monitoring-on-wiotp-dashboard/)
+- [Device List Card SIMPLIFIES Real Time Device Monitoring on WIoTP Dashboard ![외부 링크 아이콘](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/device-list-card-simplifies-real-time-device-monitoring-on-wiotp-dashboard/){: new_window}
 
-- [IBM Watson IoT Platform 클라우드 분석에서 조치 수행](https://developer.ibm.com/recipes/tutorials/perform-actions-in-ibm-watson-iot-platform-cloud-analytics/)
+- [Perform Actions in IBM Watson IoT Platform Cloud Analytics ![외부 링크 아이콘](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/perform-actions-in-ibm-watson-iot-platform-cloud-analytics/){: new_window}
 
-- [IBM Data Science Experience를 사용하여 시계열 이상현상 감지](https://developer.ibm.com/recipes/tutorials/use-ibm-data-science-experience-to-detect-time-series-anomalies/)
+- [Use IBM Data Science Experience to detect time series anomalies ![외부 링크 아이콘](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/use-ibm-data-science-experience-to-detect-time-series-anomalies/){: new_window}

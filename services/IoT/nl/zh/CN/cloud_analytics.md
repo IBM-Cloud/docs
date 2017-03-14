@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-16"
+lastupdated: "2017-02-17"
 
 ---
 
@@ -24,7 +24,7 @@ lastupdated: "2017-01-16"
 {: #byb}
 确保要用作规则中条件的设备属性已映射到模式。请参阅[连接设备](iotplatform_task.html)和[创建模式](im_schemas.html)以获取更多信息。
 
-此外，请查看 [Using Rules and Actions with {{site.data.keyword.iot_short}} Cloud Analytics](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/) 诀窍，以了解 Cloud Analytics 中使用的规则和操作。
+此外，请查看 [Using Rules and Actions with {{site.data.keyword.iot_short}} Cloud Analytics ![外部链接图标](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/){: new_window} 诀窍，以了解 Cloud Analytics 中使用的规则和操作。
 
 ## 管理规则和操作  
 {: #managing_rules}
@@ -167,7 +167,7 @@ lastupdated: "2017-01-16"
 ### IFTTT  
 {: #ifttt}
 
-使用 IFTTT 操作可在触发规则时触发 IFTTT 诀窍。有关触发操作作为 IFTTT 诀窍的更多信息，请参阅 IFTTT 站点上的 [Maker Channel](https://ifttt.com/maker)。
+使用 IFTTT 操作可在触发规则时触发 IFTTT 诀窍。有关触发操作作为 IFTTT 诀窍的更多信息，请参阅 IFTTT 站点上的 [Maker Channel ![外部链接图标](../../icons/launch-glyph.svg)](https://ifttt.com/maker){: new_window}。
 
 示例：[使用 IFTTT 发布 Trello 卡](#iftttex)。
 
@@ -237,7 +237,7 @@ URL | 目标 Node-RED HTTP 输入节点的 URL。
 在此示例中，操作配置为将 Node-RED 用于 Twilio 节点，以向服务工程师发送短信。
 
 要创建“发送短信”操作，请执行以下操作：
-1. 在 Twilio 中，找到或新建消息传递服务，以用于从 Twilio 帐户发送短信。有关信息，请参阅 [Twilio 文档](https://www.twilio.com/help)。
+1. 在 Twilio 中，找到或新建消息传递服务，以用于从 Twilio 帐户发送短信。有关信息，请参阅 [Twilio 文档 ![外部链接图标](../../icons/launch-glyph.svg)](https://www.twilio.com/help){: new_window}。
 2. 在 Bluemix 中，使用 Node-RED URL (`http://mynodered.mybluemix.net/red/`) 来设置并访问 Node-RED 帐户。有关更多信息，请参阅 Bluemix 文档中的 [Creating apps with Node-RED Starter](https://www.ng.bluemix.net/docs/starters/Node-RED/nodered.html) 主题。
 3. 在 Node-RED 中，创建简单的双节点流，例如 [RTI-alert]->[SMS]。
   
@@ -302,7 +302,7 @@ URL | 支持 Webhook 的目标服务器的 URL。**提示：**您可以使用[�
 在此示例中，操作配置为使用 Webhook 将消息发布到 #service-requests Slack 通道。
 
 要创建“发布到 Slack”操作，请执行以下操作：
-1. 在 Slack 中，为通道 #service-requests 设置“入局 Webhook”集成。记下 Webhook URL。有关更多信息，请参阅 [Slack 文档](https://api.slack.com/incoming-webhooks)。
+1. 在 Slack 中，为通道 #service-requests 设置“入局 Webhook”集成。记下 Webhook URL。有关更多信息，请参阅 [Slack 文档 ![外部链接图标](../../icons/launch-glyph.svg)](https://api.slack.com/incoming-webhooks){: new_window}。
 2. 在 {{site.data.keyword.iot_short}} 仪表板中，转至**规则 > 操作**，然后创建具有以下参数的新操作：
  - 名称 - `Post service request on Slack`
  - 类型 - **Webhook**
@@ -313,7 +313,7 @@ URL | 支持 Webhook 的目标服务器的 URL。**提示：**您可以使用[�
  ```json
  {"text":"*某个设备需要您的关注*\n 时间：{{timestamp}}\n {{site.data.keyword.iot_short}} 实例：{{tenantId}}\n 设备：{{deviceId}}\n 规则：{{ruleName}}\n 描述：{{ruleDescription}}\n 条件：{{ruleCondition}}\n 原始设备消息：\n{{message}}"}
  ```  
-  **重要信息：**Slack Webhook 必须至少包含“text”字段。有关信息，请参阅 Slack 文档中的[入局 Webhook](https://api.slack.com/incoming-webhooks "Slack 文档")。
+  **重要信息：**Slack Webhook 必须至少包含“text”字段。有关信息，请参阅 Slack 文档中的[入局 Webhook ![外部链接图标](../icons/launch-glyph.svg)](https://api.slack.com/incoming-webhooks){: new_window}。
 11. 单击**完成**以保存操作。
 
 
@@ -339,12 +339,12 @@ URL | 支持 Webhook 的目标服务器的 URL。**提示：**您可以使用[�
 
 以下诀窍描述了如何针对不同的用例来使用 Cloud Analytics 功能：
 
-- [Real Time Data Analysis Using IBM Watson™ IoT Platform Analytics](https://developer.ibm.com/recipes/tutorials/real-time-data-analysis-using-ibm-watson-iot-platform-analytics/)
+- [RealTime Data Analysis Using IBM Watson™ IoT Platform Analytics ![外部链接图标](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/real-time-data-analysis-using-ibm-watson-iot-platform-analytics/){: new_window}
 
-- [Predictive Analytics on IOT Sample Data](https://developer.ibm.com/recipes/tutorials/predictive-analytics-on-iot-sample-data/)
+- [Predictive Analytics on IOT Sample Data ![外部链接图标](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/predictive-analytics-on-iot-sample-data/){: new_window}
 
-- [Device List Card SIMPLIFIES Real Time Device Monitoring on WIoTP Dashboard](https://developer.ibm.com/recipes/tutorials/device-list-card-simplifies-real-time-device-monitoring-on-wiotp-dashboard/)
+- [DeviceList Card SIMPLIFIES Real Time Device Monitoring on WIoTP Dashboard ![外部链接图标](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/device-list-card-simplifies-real-time-device-monitoring-on-wiotp-dashboard/){: new_window}
 
-- [Perform Actions in IBM Watson IoT Platform Cloud Analytics](https://developer.ibm.com/recipes/tutorials/perform-actions-in-ibm-watson-iot-platform-cloud-analytics/)
+- [PerformActions in IBM Watson IoT Platform Cloud Analytics ![外部链接图标](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/perform-actions-in-ibm-watson-iot-platform-cloud-analytics/){: new_window}
 
-- [Use IBM Data Science Experience to detect time series anomalies](https://developer.ibm.com/recipes/tutorials/use-ibm-data-science-experience-to-detect-time-series-anomalies/)
+- [UseIBM Data Science Experience to detect time series anomalies ![外部链接图标](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/use-ibm-data-science-experience-to-detect-time-series-anomalies/){: new_window}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-10"
+lastupdated: "2017-02-17"
 
 ---
 
@@ -33,8 +33,8 @@ lastupdated: "2017-01-10"
 - ルールで条件として使用するデバイス・プロパティーがスキーマにマップされていることを確認します。詳しくは、[デバイスの接続](iotplatform_task.html)と[スキーマの作成](im_schemas.html)を参照してください。
 - エッジ分析レシピの検討  
 レシピ・ポータルでは、いくつかのレシピで、IBM エッジ分析を実行するために必要な手順を説明しています。レシピでは、Apache エージェント上に構築されたデバイスで IBM エッジ分析エージェントをインストールして構成し、IoT データ・ソースに近い分析を実行する方法が分かりやすく説明されています。
- - このシリーズの始まりは、[IBM Watson IoT Platform でのエッジ分析の概説](https://developer.ibm.com/recipes/tutorials/getting-started-with-edge-analytics-in-watson-iot-platform/)レシピです。このレシピでは、Cisco DSA Platform on a Laptop System と Raspberry Pi 3 デバイスのセットアップ、IBM エッジ分析エージェントのインストールと {{site.data.keyword.iot_short}} に接続するための構成、System DS Link のインストールと {{site.data.keyword.iot_short}} 上のエッジ・ゲートウェイに接続デバイスとして接続するための構成、エッジ・ゲートウェイでのエッジ・ルールの定義とアクティブ化、{{site.data.keyword.iot_short}} からのエッジ・ルールの管理について説明されています。
- - エッジ分析の発展的な使用法を説明するために、[Handling Alerts and Device Actions with Edge Analytics in IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/handling-alerts-and-device-actions-with-edge-analytics-in-ibm-watson-iot-platform/) レシピでは、独自の DS Link を構築し、接続された Arduino Uno デバイスから Raspberry Pi 3 デバイスにデータを転送する方法が示されています。このレシピでは、エッジ・ルール・アラートの一部として、データ・フィルタリングやローカル・デバイス・アクションの操作についても説明されています。
+ - [IBM Watson IoT Platform でのエッジ分析の概説![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/getting-started-with-edge-analytics-in-watson-iot-platform/){: new_window} レシピが、このシリーズの最初のレシピです。このレシピでは、Cisco DSA Platform on a Laptop System と Raspberry Pi 3 デバイスのセットアップ、IBM エッジ分析エージェントのインストールと {{site.data.keyword.iot_short}} に接続するための構成、System DS Link のインストールと {{site.data.keyword.iot_short}} 上のエッジ・ゲートウェイに接続デバイスとして接続するための構成、エッジ・ゲートウェイでのエッジ・ルールの定義とアクティブ化、{{site.data.keyword.iot_short}} からのエッジ・ルールの管理について説明されています。
+ - エッジ分析の高度な使用方法を説明するために、[Handling Alerts and Device Actions with Edge Analytics in IBM Watson IoT Platform ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/handling-alerts-and-device-actions-with-edge-analytics-in-ibm-watson-iot-platform/){: new_window} レシピでは、独自の DS Link を構築し、接続された Arduino Uno デバイスから Raspberry Pi 3 デバイスにデータを転送する方法が示されています。このレシピでは、エッジ・ルール・アラートの一部として、データ・フィルタリングやローカル・デバイス・アクションの操作についても説明されています。
 
 ## エッジ・ルールとアクションの管理  
 {: #managing_rules}
@@ -231,3 +231,7 @@ EAA 対応のゲートウェイで実行されるエッジ・ルール・トリ�
 `RuleNumber` | ルール・エンジン・コアにある定義済みルールの数。
 `ProcessorNumber` | デバッグ用。ルール・エンジン・コアにある定義済みプロセッサーの数。</br>**注:** プロセッサーは、ルール・エンジン・コアにおける最小実行単位です。
 `DataPointsInWindow` | 時間枠内にバッファーに入れられるデータ・ポイントの総数。データ・ポイントのバイト・サイズは、そのデータ・タイプによって異なります。例えば、float/int データ・ポイントのサイズは 8 バイトですが、string データ・ポイントのサイズはその長さによって異なります。ほとんどの場合、以下の数式を使用して、時間枠のメモリー使用率を推定することができます。`DataPointsInWindow * 8`
+## エッジ分析のコミュニティー
+{: #eaa_community}
+
+[IBM エッジ分析のコミュニティー・ページ](https://www.ibm.com/developerworks/community/groups/service/html/communitystart?communityUuid=3df173af-0c21-4b9c-9fd1-e8e5561ef460&ftHelpTip=true)からエッジ分析 SDK をダウンロードできます。この SDK には、SDK JAR ファイル、javadoc、サンプル・コード、レシピのリンク、README ファイルが含まれています。このコミュニティーで、ビデオを視聴してエッジ分析を開始したり、コミュニティー・フォーラムを使用して質問したりすることもできます。

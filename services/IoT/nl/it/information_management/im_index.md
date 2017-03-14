@@ -63,7 +63,7 @@ Per elaborare i dati dagli eventi in entrata e associare le proprietà nell'even
 
     La struttura e il formato dei dati contenuti in un evento del dispositivo in entrata sono definiti da un file dello schema evento che è nel formato schema JSON. Puoi caricare il file dello schema evento in {{site.data.keyword.iot_short_notm}} utilizzando un metodo POST per creare una risorsa dello schema denominata. Per la beta, tutti gli eventi in entrata devono essere nel formato JSON.
 
-- La struttura dello stato del dispositivo desiderato. Lo schema dell'interfaccia dell'applicazione definisce queste informazioni. 
+- La struttura dello stato del dispositivo desiderato. Lo schema dell'interfaccia dell'applicazione definisce queste informazioni.
 
     Lo stato del dispositivo è una rappresentazione della struttura dei dati e i dati che la tua applicazione è configurata a ricevere come dati dal dispositivo. Il valori della proprietà che sono archiviati nello stato del dispositivo, vengono aggiornati in risposta a un evento del dispositivo in entrata. Gli ultimi valori dello stato del dispositivo vengono forniti all'applicazione su richiesta utilizzando un'API HTTP.
 
@@ -77,11 +77,11 @@ Per elaborare i dati dagli eventi in entrata e associare le proprietà nell'even
 
 Puoi gestire le risorse illustrate nei precedenti diagrammi utilizzando le API REST. Per informazioni sulle API REST, consulta la [Documentazione {{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html).
 
-Risorsa                         | Descrizione       
+Risorsa                        | Descrizione       
 ------------- | ------------- | -------------  
 Schemi                         | Gli schemi JSON sono utilizzati per definire la struttura degli eventi in entrata pubblicati in {{site.data.keyword.iot_short_notm}} dai dispositivi e lo stato del dispositivo desiderato. Per ulteriori informazioni sullo schema JSON, consulta [Schema JSON](http://json-schema.org/). Nell'associazione dell'interfaccia, si fa riferimento a due schemi JSON - gli schemi dell'evento e gli schemi dell'interfaccia dell'applicazione. Gli schemi dell'evento sono utilizzati per definire la struttura degli eventi pubblicati in {{site.data.keyword.iot_short_notm}} da un dispositivo. Viene fatto riferimento agli schemi dell'interfaccia dell'applicazione dall'interfaccia dell'applicazione e sono utilizzati per definire la struttura dello [stato del dispositivo](#key_concepts) archiviato in {{site.data.keyword.iot_short_notm}}.
-Tipo di evento                          | Devi creare un tipo di evento nella tua organizzazione in modo che {{site.data.keyword.iot_short_notm}} possa elaborare i dati contenuti in un evento specifico. Tutti i tipi di evento devono far riferimento a uno schema dell'evento. Per la beta, tutti gli eventi in entrata devono essere nel formato JSON.    
-Interfaccia fisica                          | L'interfaccia fisica può essere associata con uno o più tipi di evento e definisce quali tipi di evento sono associati a un tipo di dispositivo.  
+Tipo di evento                         | Devi creare un tipo di evento nella tua organizzazione in modo che {{site.data.keyword.iot_short_notm}} possa elaborare i dati contenuti in un evento specifico. Tutti i tipi di evento devono far riferimento a uno schema dell'evento. Per la beta, tutti gli eventi in entrata devono essere nel formato JSON.   
+Interfaccia fisica                         | L'interfaccia fisica può essere associata con uno o più tipi di evento e definisce quali tipi di evento sono associati a un tipo di dispositivo.  
 Tipo dispositivo                         | Ogni dispositivo collegato a Watson IoT Platform è associato a un tipo di dispositivo. I tipi di dispositivo sono gruppi di dispositivi che condividono le caratteristiche o i comportamenti. Nell'associazione dell'interfaccia, il tipo di evento viene esteso per includere un'interfaccia fisica per un dispositivo e un'interfaccia dell'applicazione che può essere utilizzata per richiamare lo stato del dispositivo. Un tipo di dispositivo può essere configurato con più interfacce dell'applicazione. Per ulteriori informazioni sui tipi di dispositivo, consulta la sezione "Tipi di dispositivo e identificativi" in [Modello del dispositivo](../reference/device_model.html#id_and_device_types).
 Interfaccia applicazione                         | L'interfaccia dell'applicazione deve far riferimento a uno schema dell'interfaccia dell'applicazione. Nella tua interfaccia dell'applicazione, puoi definire la struttura dei dati archiviati come lo stato del dispositivo. Lo stato del dispositivo è una rappresentazione della struttura dei dati e i dati che un'applicazione è configurata a ricevere come dati dal dispositivo. Deve essere associata almeno un'interfaccia con un tipo di dispositivo prima che possa essere definita un'associazione.
 Associazioni                         | Le associazione definiscono come le proprietà associate negli eventi in entrata vengono associate alle proprietà definite in un'interfaccia dell'applicazione specifica. Un'associazione deve specificare l'identificativo dell'interfaccia dell'applicazione a cui viene applicata e tale interfaccia dell'applicazione deve essere associata al tipo di dispositivo a cui l'associazione sta venendo aggiunta.
@@ -236,11 +236,11 @@ Utilizza le seguenti informazioni per configurare lo scenario di esempio utilizz
 ### Se necessario, aggiungi un tipo di dispositivo e un dispositivo.
 {: #step14}
 
-In questo scenario, vengono prese in considerazione due tipi di dispositivo e due istanze del dispositivo. L'istanza del dispositivo *TemperatureSensor1* è associata con il tipo di dispositivo *EnvSensor1*. L'istanza del dispositivo *TemperatureSensor2* è associata con il tipo di dispositivo *EnvSensor2*. 
+In questo scenario, vengono prese in considerazione due tipi di dispositivo e due istanze del dispositivo. L'istanza del dispositivo *TemperatureSensor1* è associata con il tipo di dispositivo *EnvSensor1*. L'istanza del dispositivo *TemperatureSensor2* è associata con il tipo di dispositivo *EnvSensor2*.
 
 Per informazioni sull'utilizzo delle API REST per aggiungere un tipo di dispositivo, consulta la [Documentazione {{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Types).
 
-### Crea un file dello schema evento 
+### Crea un file dello schema evento
 {: #step1}
 
 Per questo scenario, crea due file dello schema evento per definire la struttura di ogni evento sulla temperatura in entrata.
@@ -374,7 +374,6 @@ POST /event/types
 Per ulteriori dettagli, consulta la [Documentazione {{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Event_Types).
 
 
-
 Il seguente esempio mostra come utilizzare cURL per creare un tipo di evento per un evento sulla temperatura misurato in gradi Celsius:
 
 ```
@@ -434,7 +433,8 @@ Il seguente esempio mostra una risposta al metodo POST:
 }
 ```
 L'identificativo del tipo di evento *5846d2846522050001db0e10* restituito nella risposta al metodo POST viene utilizzato per aggiungere un tipo di evento all'interfaccia fisica.
-### Crea un'interfaccia fisica 
+
+### Crea un'interfaccia fisica
 {: #step7}
 
 Per creare un'interfaccia fisica, utilizza la seguente API:
@@ -446,7 +446,7 @@ Per ulteriori dettagli, consulta la [Documentazione {{site.data.keyword.iot_shor
 
 In questo scenario, abbiamo bisogno di due interfacce fisiche - una per ogni tipo di evento.
 
-Il seguente esempio mostra come utilizzare cURL per creare la prima interfaccia fisica: 
+Il seguente esempio mostra come utilizzare cURL per creare la prima interfaccia fisica:
 
 ```
 curl --request POST \
@@ -474,7 +474,7 @@ Il seguente esempio mostra una risposta al metodo POST:
 
 L'identificativo dell'interfaccia fisica *5847d1df6522050001db0e1a* restituito nella risposta viene utilizzato nell'URL del metodo POST richiamato per aggiungere un evento sulla temperatura misurato in gradi Celsius all'interfaccia fisica.
 
-l seguente esempio mostra come utilizzare cURL per creare la seconda interfaccia fisica: 
+l seguente esempio mostra come utilizzare cURL per creare la seconda interfaccia fisica:
 
 ```
 curl --request POST \
@@ -502,7 +502,7 @@ Il seguente esempio mostra una risposta al metodo POST:
 
 L'identificativo dell'interfaccia fisica *5847d1df6522050001db0e1b* restituito nella risposta viene utilizzato nell'URL del metodo POST richiamato per aggiungere un evento sulla temperatura misurato in gradi Fahrenheit all'interfaccia fisica.   
 
-### Aggiungi il tipo di evento all'interfaccia fisica 
+### Aggiungi il tipo di evento all'interfaccia fisica
 {: #step8}
 
 Per aggiungere un tipo di evento all'interfaccia fisica, utilizza la seguente API:
@@ -555,7 +555,7 @@ Il seguente esempio mostra una risposta al metodo POST:
 }
 ```
 
-### Aggiorna il tipo di dispositivo per il collegamento dell'interfaccia fisica 
+### Aggiorna il tipo di dispositivo per il collegamento dell'interfaccia fisica
 {: #step9}
 
 Per aggiornare il tipo di dispositivo, utilizza la seguente API:
@@ -565,7 +565,6 @@ PUT /device/types/{typeId}
 ```
 
 Per ulteriori dettagli, consulta la [Documentazione {{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types).
-
 
 In questo scenario, il tipo di dispositivo *EnvSensor1* per collegarsi all'interfaccia fisica *5847d1df6522050001db0e1a* e il tipo di dispositivo *EnvSensor2* per collegarsi all'interfaccia fisica *5847d1df6522050001db0e1b*.
 
@@ -633,7 +632,7 @@ L'identificativo del dispositivo *EnvSensor2* è obbligatorio quando aggiungi la
 
 
 
-### Crea un file dello schema dell'interfaccia dell'applicazione 
+### Crea un file dello schema dell'interfaccia dell'applicazione
 {: #step4}
 
 Il seguente esempio mostra come creare un file dello schema dell'interfaccia dell'applicazione denominato *envSensor.json*.
@@ -656,17 +655,17 @@ Il seguente esempio mostra come creare un file dello schema dell'interfaccia del
 }
 ```
 
-### Crea una risorsa dello schema dell'interfaccia dell'applicazione 
+### Crea una risorsa dello schema dell'interfaccia dell'applicazione
 {: #step5}
 
-Per creare una risorsa dello schema dell'interfaccia dell'applicazione, utilizza la seguente API: 
+Per creare una risorsa dello schema dell'interfaccia dell'applicazione, utilizza la seguente API:
 
 ```
 POST /schemas
 ```
 Per ulteriori dettagli, consulta la [Documentazione {{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Schemas).
 
-Il seguente esempio mostra come utilizzare cURL per creare lo schema dell'interfaccia dell'applicazione: 
+Il seguente esempio mostra come utilizzare cURL per creare lo schema dell'interfaccia dell'applicazione:
 
 ```
 curl --request POST \
@@ -700,7 +699,7 @@ Utilizza l'identificativo dello schema *5846ec826522050001db0e11* restituito nel
 ### Crea un'interfaccia dell'applicazione che fa riferimento a uno schema dell'interfaccia dell'applicazione
 {: #step6}
 
-Per creare un'interfaccia dell'applicazione, utilizza la seguente API: 
+Per creare un'interfaccia dell'applicazione, utilizza la seguente API:
 
 ```
 POST /applicationinterfaces
@@ -709,7 +708,7 @@ Per ulteriori dettagli, consulta la [Documentazione {{site.data.keyword.iot_shor
 
 In questo scenario, utilizza l'identificativo dello schema *5846ec826522050001db0e11* restituito nella precedente risposta per aggiungere lo schema dell'interfaccia dell'applicazione all'interfaccia dell'applicazione.
 
-Il seguente esempio mostra come utilizzare cURL per creare un'interfaccia dell'applicazione: 
+Il seguente esempio mostra come utilizzare cURL per creare un'interfaccia dell'applicazione:
 
 ```
 curl --request POST \
@@ -816,7 +815,7 @@ Il seguente esempio mostra una risposta al metodo POST:
 }
 ```
 
-### Definisci le associazioni per associare le proprietà nell'evento in entrata alle proprietà nell'interfaccia dell'applicazione 
+### Definisci le associazioni per associare le proprietà nell'evento in entrata alle proprietà nell'interfaccia dell'applicazione
 {: #step11}
 
 Per associare gli eventi, utilizza la seguente API:
@@ -858,6 +857,7 @@ Il seguente esempio mostra una risposta al metodo POST:
 }
 ```
 Il seguente esempio mostra come utilizzare cURL per aggiungere un'associazione al tipo di dispositivo *EnvSensor2*:
+
 ```
 curl --request POST \
   --url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/device/types/EnvSensor2/mappings \
@@ -888,7 +888,7 @@ Il seguente esempio mostra una risposta al metodo POST:
 }
 ```
 
-### Distribuisci la configurazione 
+### Distribuisci la configurazione
 {: #step15}
 
 Distribuisci la configurazione collegata all'aggiornamento dello stato del dispositivo per ogni tipo di dispositivo. Questa configurazione include i tuoi schemi, tipi di evento, interfacce fisiche, interfacce dell'applicazione e associazioni.
@@ -952,7 +952,7 @@ Il seguente esempio mostra una risposta al metodo PATCH:
 }
 ```
 
-### Pubblica un evento del dispositivo in entrata 
+### Pubblica un evento del dispositivo in entrata
 {: #step12}
 
 Pubblica un evento sulla temperatura da *TemperatureSensor1* nell'argomento `iot-2/evt/tevt/fmt/json` e un evento sulla temperatura da *TemperatureSensor2* nell'argomento `iot-2/evt/tempevt/fmt/json`.
@@ -960,7 +960,7 @@ Pubblica un evento sulla temperatura da *TemperatureSensor1* nell'argomento `iot
 Per informazioni sulla pubblicazione di un evento in entrata da un dispositivo, consulta [Connettività MQTT per le applicazioni](../applications/mqtt.html#publishing_device_events).
 
 
-### Controlla che lo stato del dispositivo sia stato modificato 
+### Controlla che lo stato del dispositivo sia stato modificato
 {: #step13}
 
 Per controllare lo stato del dispositivo, utilizza la seguente API:

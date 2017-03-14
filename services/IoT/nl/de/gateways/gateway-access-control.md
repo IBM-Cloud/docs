@@ -19,9 +19,9 @@ Gateway-Geräte sind berechtigt, im Namen anderer Geräte zu handeln. Gateway-Re
 
 ## Rolle einem Gateway zuordnen
 
-Einem Gateway muss eine Rolle zugeordnet werden, damit das Gateway über eine Ressourcengruppe verfügen kann. Gateways ohne Ressourcengruppe können im Namen aller Geräte in der Organisation handeln. Beim Zuordnen der Rolle *Standardgateway* wird automatisch eine neue Ressourcengruppe für das Gateway erstellt. Ein Gateway, dem eine Ressourcengruppe zugeordnet ist, kann nur im Namen der Geräte in dieser Ressourcengruppe und im eigenen Namen handeln, selbst wenn die Rolle des Gateways geändert wird. 
+Einem Gateway muss eine Rolle zugeordnet werden, damit das Gateway über eine Ressourcengruppe verfügen kann. Gateways ohne Ressourcengruppe können im Namen aller Geräte in der Organisation handeln. Beim Zuordnen der Rolle *Standardgateway* wird automatisch eine neue Ressourcengruppe für das Gateway erstellt. Ein Gateway, dem eine Ressourcengruppe zugeordnet ist, kann nur im Namen der Geräte in dieser Ressourcengruppe und im eigenen Namen handeln, selbst wenn die Rolle des Gateways geändert wird.
 
-Verwenden Sie die folgende API, um einem Gateway eine Rolle zuzuordnen: 
+Verwenden Sie die folgende API, um einem Gateway eine Rolle zuzuordnen:
 
 ```
 PUT /authorization/devices/{deviceId}/roles
@@ -31,7 +31,7 @@ Details zu dem Anforderungsschema finden Sie in der API-Dokumentation für [{{si
 
 ## Geräte in einer Ressourcengruppe hinzufügen und entfernen
 
-Damit ein Gateway mit der Rolle *Standardgateway* im Namen eines Geräts handeln kann, muss das betreffende Gerät Mitglied der Ressourcengruppe sein, die dem Gateway zugeordnet ist. Verwenden Sie die folgende API, um mehrere Geräte gleichzeitig einer Ressourcengruppe hinzuzufügen: 
+Damit ein Gateway mit der Rolle *Standardgateway* im Namen eines Geräts handeln kann, muss das betreffende Gerät Mitglied der Ressourcengruppe sein, die dem Gateway zugeordnet ist. Verwenden Sie die folgende API, um mehrere Geräte gleichzeitig einer Ressourcengruppe hinzuzufügen:
 
 ```
  PUT /bulk/devices/{groupId}/add
@@ -39,7 +39,7 @@ Damit ein Gateway mit der Rolle *Standardgateway* im Namen eines Geräts handeln
 
 Die Gruppe, der Geräte hinzugefügt werden sollen, muss im Pfad der Anforderung angegeben werden, und die Geräte, die hinzugefügt werden sollen, müssen im Hauptteil der Anforderung angegeben werden. Weitere Informationen zum Anforderungsschema und zu den Antworten finden Sie in der API-Dokumentation für [{{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/limited-gateway.html#!/Limited_Gateway/put_bulk_devices_groupId_add).
 
-Verwenden Sie die folgende API, um mehrere Geräte aus einer Ressourcengruppe zu entfernen: 
+Verwenden Sie die folgende API, um mehrere Geräte aus einer Ressourcengruppe zu entfernen:
 
 ```
 PUT /bulk/devices/{groupId}/remove
@@ -49,7 +49,7 @@ Die im Hauptteil der Anforderung angegebenen Geräte werden aus der Gruppe entfe
 
 ## Ressourcengruppe suchen
 
-Ressourcengruppen können Suchtags zugeordnet werden. Suchtags können verwendet werden, um mithilfe der folgenden API die Details zu einer Ressourcengruppe abzurufen: 
+Ressourcengruppen können Suchtags zugeordnet werden. Suchtags können verwendet werden, um mithilfe der folgenden API die Details zu einer Ressourcengruppe abzurufen:
 
 ```
 GET /groups
@@ -57,7 +57,7 @@ GET /groups
 
 Diese API gibt die Ressourcengruppen zurück, die dem verwendeten Suchtag zugeordnet sind. Wenn kein Suchtag angegeben ist, werden alle Ressourcengruppen zurückgegeben.<!-- For more information about the request schema, response, and how to page through results, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
 
-Die ID einer Ressourcengruppe kann mithilfe der folgenden API gefunden werden: 
+Die ID einer Ressourcengruppe kann mithilfe der folgenden API gefunden werden:
 
 ```
 GET /authorization/devices/{deviceId}
@@ -67,9 +67,9 @@ Diese API gibt die eindeutige Kennung der Ressourcengruppe(n) zurück, der bzw. 
 
 ## Ressourcengruppe abfragen
 
-Beim Abfragen von Ressourcengruppen können verschiedene Parameter verwendet werden, um die vollständigen Eigenschaften aller Geräte in der Gruppe, die eindeutigen Kennungen aller Geräte in der Gruppe oder die Eigenschaften der Ressourcengruppe zurückzugeben. 
+Beim Abfragen von Ressourcengruppen können verschiedene Parameter verwendet werden, um die vollständigen Eigenschaften aller Geräte in der Gruppe, die eindeutigen Kennungen aller Geräte in der Gruppe oder die Eigenschaften der Ressourcengruppe zurückzugeben.
 
-Verwenden Sie die folgende API, um die vollständigen Eigenschaften für alle Geräte in der angegebenen Ressourcengruppe zurückzugeben: 
+Verwenden Sie die folgende API, um die vollständigen Eigenschaften für alle Geräte in der angegebenen Ressourcengruppe zurückzugeben:
 
 ```
 GET /bulk/devices/{groupId}
@@ -77,7 +77,7 @@ GET /bulk/devices/{groupId}
 
 Diese API gibt die vollständige Liste der Eigenschaften für alle Mitglieder der angegebenen Ressourcengruppe zurück. Weitere Informationen zum Anforderungsschema, zu den Antworten und zum Durchblättern der Ergebnisse finden Sie in der API-Dokumentation für [{{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/limited-gateway.html#!/Limited_Gateway/get_bulk_devices_groupId).
 
-Verwenden Sie die folgende API, um nur die eindeutigen Kennungen der Mitglieder der Ressourcengruppe zurückzugeben: 
+Verwenden Sie die folgende API, um nur die eindeutigen Kennungen der Mitglieder der Ressourcengruppe zurückzugeben:
 
 ```
 GET /bulk/devices/{groupId}/ids
@@ -85,7 +85,7 @@ GET /bulk/devices/{groupId}/ids
 
 Diese API gibt die eindeutigen Kennungen aller Geräte zurück, die Mitglieder der Ressourcengruppe sind. <!-- For more information on the request schema and responses, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
 
-Verwenden Sie die folgende API, um die Eigenschaften der Ressourcengruppe zurückzugeben: 
+Verwenden Sie die folgende API, um die Eigenschaften der Ressourcengruppe zurückzugeben:
 
 ```
 GET /groups/{groupId}
@@ -95,7 +95,7 @@ Diese API gibt die Eigenschaften der Ressourcengruppe (Name, Beschreibung, Sucht
 
 ## Ressourcengruppe erstellen und löschen
 
-Ressourcengruppen können unabhängig von den verbindenden Gateways erstellt und gelöscht werden. Verwenden Sie die folgende API, um eine Ressourcengruppe zu erstellen: 
+Ressourcengruppen können unabhängig von den verbindenden Gateways erstellt und gelöscht werden. Verwenden Sie die folgende API, um eine Ressourcengruppe zu erstellen:
 
 ```
 POST /groups
@@ -103,7 +103,7 @@ POST /groups
 
 Diese API erstellt eine Ressourcengruppe und gibt die Gruppendetails zurück. <!-- For details on the request schema and the responses, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
 
-Verwenden Sie die folgende API, um eine Ressourcengruppe zu löschen: 
+Verwenden Sie die folgende API, um eine Ressourcengruppe zu löschen:
 
 ```
 DELETE /groups/{groupId}
@@ -120,7 +120,7 @@ Diese API löscht die angegebene Ressourcengruppe. Geräte, die Mitglieder der G
 
 ## Geräteeigenschaften abrufen und aktualisieren
 
-Mit der API können Geräteeigenschaften auf verschiedene Arten abgerufen werden. Dabei gibt jede API andere Informationen zurück. Verwenden Sie die folgende API, um die Geräteeigenschaften für alle Geräte abzurufen, die mit Ihrer {{site.data.keyword.iot_short_notm}}-Organisation verbunden sind: 
+Mit der API können Geräteeigenschaften auf verschiedene Arten abgerufen werden. Dabei gibt jede API andere Informationen zurück. Verwenden Sie die folgende API, um die Geräteeigenschaften für alle Geräte abzurufen, die mit Ihrer {{site.data.keyword.iot_short_notm}}-Organisation verbunden sind:
 
 ```
 GET /authorization/devices:
@@ -129,7 +129,7 @@ GET /authorization/devices:
 
 Diese API gibt die Eigenschaften aller mit der Organisation verbundenen Geräte zurück, einschließlich der zugehörigen Eigenschaften für die Zugriffssteuerung wie Rolle, Status und Ablaufdatum.<!-- For more information on responses and how to page through results, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
 
-Verwenden Sie die folgende API, um Geräteeigenschaften ohne die zugehörigen Informationen für die Zugriffssteuerung abzurufen: 
+Verwenden Sie die folgende API, um Geräteeigenschaften ohne die zugehörigen Informationen für die Zugriffssteuerung abzurufen:
 
 ```
 GET /authorization/devices/{deviceId}
@@ -137,7 +137,7 @@ GET /authorization/devices/{deviceId}
 
 Diese API gibt alle Geräteeigenschaften für das angegebene Geräte ohne die Zugriffssteuerungsinformationen zurück. <!-- For more information, see the [{{site.data.keyword.iot_short_notm}} device model documentation](LINK TO DEVICE MODEL) and [API documentation](LINK TO CORRECT API). -->
 
-Verwenden Sie die folgende API, um die Zugriffssteuerungsinformationen für ein bestimmtes Gerät abzurufen: 
+Verwenden Sie die folgende API, um die Zugriffssteuerungsinformationen für ein bestimmtes Gerät abzurufen:
 
 ```
 GET /authorization/devices/{deviceId}/roles:
@@ -145,9 +145,9 @@ GET /authorization/devices/{deviceId}/roles:
 
 Diese API gibt die zugehörigen Informationen für die Zugriffssteuerung des angegebenen Geräts ohne die übrigen Geräteeigenschaften zurück. <!-- For more information on the request schema and responses, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
 
-Die Geräteeigenschaften können mit zwei Methoden aktualisiert werden, entweder durch Aktualisieren ohne Ändern der Zugriffssteuerungseigenschaften oder durch direktes Aktualisieren der Zugriffsteuerungseigenschaften. 
+Die Geräteeigenschaften können mit zwei Methoden aktualisiert werden, entweder durch Aktualisieren ohne Ändern der Zugriffssteuerungseigenschaften oder durch direktes Aktualisieren der Zugriffsteuerungseigenschaften.
 
-Verwenden Sie die folgende API, um Geräteeigenschaften ohne Änderung der Zugriffssteuerungseigenschaften zu aktualisieren: 
+Verwenden Sie die folgende API, um Geräteeigenschaften ohne Änderung der Zugriffssteuerungseigenschaften zu aktualisieren:
 
 ```
 PUT /authorization/devices/{deviceId}
@@ -155,7 +155,7 @@ PUT /authorization/devices/{deviceId}
 
 Diese API aktualisiert nur Geräteeigenschaften, die nicht der Zugriffssteuerung zugeordnet sind. <!-- For more information on request schema, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
 
-Verwenden Sie die folgende API, um nur die Zugriffssteuerungseigenschaften für das angegebene Gerät zu aktualisieren: 
+Verwenden Sie die folgende API, um nur die Zugriffssteuerungseigenschaften für das angegebene Gerät zu aktualisieren:
 
 ```
 PUT /authorization/devices/{deviceId}/withroles:

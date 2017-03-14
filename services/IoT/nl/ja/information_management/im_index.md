@@ -950,7 +950,7 @@ curl --request PATCH \
 
 *TemperatureSensor1* からトピック `iot-2/evt/tevt/fmt/json`に温度イベントをパブリッシュし、*TemperatureSensor2* からトピック `iot-2/evt/tempevt/fmt/json` に温度イベントをパブリッシュします。
 
-デバイスからインバウンド・イベントをパブリッシュする方法については、[アプリの MQTT 接続](../applications/mqtt.html#publishing_device_events)を参照してください。
+デバイスからインバウンド・イベントをパブリッシュする方法については、[アプリケションの MQTT 接続](../applications/mqtt.html#publishing_device_events)を参照してください。
 
 
 ### デバイス状態が変更されたことを確認します。

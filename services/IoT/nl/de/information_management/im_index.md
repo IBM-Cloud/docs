@@ -23,9 +23,9 @@ Mit der Funktion für Schnittstellenzuordnung in {{site.data.keyword.iot_full}} 
 ## Übersicht
 {: #overview}
 
-Sie können die Funktion für Schnittstellenzuordnung verwenden, um Schnittstellen für Ihre Anwendungen zu entwickeln. Möglicherweise möchten Sie verschiedene Typen, Marken oder Modelle von Geräten oder Sensoren mit {{site.data.keyword.iot_short_notm}} verbinden, die Daten in verschiedenen Formaten publizieren. Mit der Funktion für Schnittstellenzuordnung können Sie eingehende Daten normalisieren und Ihre Anwendungen vereinfachen, indem Sie sie von der Komplexität der Verbindungsvorgänge für bestimmte Geräte entkoppeln. 
+Sie können die Funktion für Schnittstellenzuordnung verwenden, um Schnittstellen für Ihre Anwendungen zu entwickeln. Möglicherweise möchten Sie verschiedene Typen, Marken oder Modelle von Geräten oder Sensoren mit {{site.data.keyword.iot_short_notm}} verbinden, die Daten in verschiedenen Formaten publizieren. Mit der Funktion für Schnittstellenzuordnung können Sie eingehende Daten normalisieren und Ihre Anwendungen vereinfachen, indem Sie sie von der Komplexität der Verbindungsvorgänge für bestimmte Geräte entkoppeln.
 
-Angenommen, Sie verwenden zwei Temperatursensoren. Der eine Sensor misst die Temperatur in Grad Celsius und der andere Sensor misst die Temperatur in Grad Fahrenheit. 
+Angenommen, Sie verwenden zwei Temperatursensoren. Der eine Sensor misst die Temperatur in Grad Celsius und der andere Sensor misst die Temperatur in Grad Fahrenheit.
 
 ![Zuordnung zwischen Temperatursensorgeräten und einer Anwendung in {{site.data.keyword.iot_short_notm}}.](images/Information "Zuordnung zwischen Temperatursensorgeräten und einer Anwendung in {{site.data.keyword.iot_short_notm}}")
 
@@ -36,11 +36,11 @@ Mithilfe der Funktion für Schnittstellenzuordnung können Sie diese Messwerte f
 ## Datenfluss zwischen Geräten und Anwendungen
 {: #mapping}
 
-Das folgende Ablaufdiagramm zeigt, wie verschiedene Ressourcen in der Funktion für Schnittstellenzuordnung verwendet werden: 
+Das folgende Ablaufdiagramm zeigt, wie verschiedene Ressourcen in der Funktion für Schnittstellenzuordnung verwendet werden:
 
 ![Der Datenfluss zwischen einem Gerät und einer Anwendung in {{site.data.keyword.iot_short_notm}}.](images/Information "Der Datenfluss zwischen einem Gerät und einer Anwendung in {{site.data.keyword.iot_short_notm}}")
 
-Das folgende Diagramm veranschaulicht die Verwendung von Schemas in diesem Datenfluss: 
+Das folgende Diagramm veranschaulicht die Verwendung von Schemas in diesem Datenfluss:
 
 ![Der Datenfluss zwischen einem Gerät und einer Anwendung in {{site.data.keyword.iot_short_notm}}.](images/Information "Der Datenfluss zwischen einem Gerät und einer Anwendung in {{site.data.keyword.iot_short_notm}}")
 
@@ -59,7 +59,7 @@ Die Schnittstellenzuordnung bezieht sich auf das Konzept des Gerätestatus. Der 
 
 Um Daten aus eingehenden Ereignissen zu verarbeiten und Eigenschaften in dem eingehenden Ereignis den Eigenschaften in der Anwendungsschnittstelle zuzuordnen, müssen die folgenden Informationen konfiguriert werden:
 
-- Die Struktur für ein oder mehrere eingehende Ereignisse. Diese Informationen werden im Ereignisschema definiert. Jedes Ereignisschema definiert die Struktur für ein eingehenden Ereignis und ist einem Ereignistyp zugeordnet. Die physische Schnittstelle ordnet einen oder mehrere Ereignistypen einer Gruppe zu. 
+- Die Struktur für ein oder mehrere eingehende Ereignisse. Diese Informationen werden im Ereignisschema definiert.  Jedes Ereignisschema definiert die Struktur für ein eingehenden Ereignis und ist einem Ereignistyp zugeordnet. Die physische Schnittstelle ordnet einen oder mehrere Ereignistypen einer Gruppe zu.
 
     Die Struktur und das Format der Daten, die in einem eingehenden Geräteereignis enthalten sind, wird durch eine Ereignisschemadatei definiert, die ein JSON-Schemaformat aufweist. Zum Hochladen der Ereignisschemadatei in {{site.data.keyword.iot_short_notm}} können Sie eine POST-Methode verwenden, die eine benannte Schemaressource erstellt. In der Betaversion müssen alle eingehenden Ereignisse im JSON-Format vorliegen.
 
@@ -85,6 +85,8 @@ Physische Schnittstelle                         | Die physische Schnittstelle ka
 Gerätetyp                         | Jedem Gerät, das mit Watson IoT Platform verbunden ist, wird ein Gerätetyp zugeordnet. Gerätetypen sind Gruppen von Geräten, die gemeinsame Merkmale haben oder gleiches Verhalten zeigen. Bei der Schnittstellenzuordnung wird der Gerätetyp um eine physische Schnittstelle für ein Gerät und eine Anwendungsschnittstelle erweitert, die verwendet werden kann, um den Gerätestatus abzurufen. Für einen Gerätetyp können mehrere Anwendungsschnittstellen konfiguriert werden. Weitere Informationen zu Gerätetypen finden Sie im Abschnitt über Kennungen und Gerätetypen in [Gerätemodell](../reference/device_model.html#id_and_device_types).
 Anwendungsschnittstelle                         | Die Anwendungsschnittstelle muss auf ein Anwendungsschnittstellenschema verweisen. In Ihrer Anwendungsschnittstelle können Sie die Struktur der Daten definieren, die als Gerätestatus gespeichert werden. Der Gerätestatus ist eine Darstellung der Datenstruktur und der Daten, die eine Anwendung als Daten von dem Gerät empfangen soll. Eine Gerätetyp muss mindestens eine Anwendungsschnittstelle zugeordnet werden, damit Zuordnungen definiert werden können.
 Zuordnungen                         | Zuordnungen definieren, wie zugehörige Eigenschaften für eingehende Ereignisse den Eigenschaften zugeordnet werden, die in einer bestimmten Anwendungsschnittstelle definiert sind. Eine Zuordnung muss die ID der Anwendungsschnittstelle angeben, auf die sie angewendet wird, und die betreffende Anwendungsschnittstelle muss dem Gerätetyp zugeordnet sein, dem die Zuordnung hinzugefügt wird.
+
+
 ## Allgemeiner Workflow
 {: #workflow}
 
@@ -158,7 +160,7 @@ Weitere Informationen zum Hinzufügen eines Gerätetyps und eines Geräts finden
 
         Die Anwendungsschnittstelle verweist mithilfe der Schemakennung, die als Antwort auf die POST-Methode zum Erstellen der Schemaressource für die Anwendungsschnittstelle zurückgegeben wurde, auf das Anwendungsschnittstellenschema.
 
-  4. [Fügen Sie die Anwendungsschnittstelle zu einem Gerätetyp hinzu](#step10), indem Sie die POST-Methode der REST-API mit dem folgenden URI verwenden: 
+  4. [Fügen Sie die Anwendungsschnittstelle zu einem Gerätetyp hinzu](#step10), indem Sie die POST-Methode der REST-API mit dem folgenden URI verwenden:
         ```
         https://**orgId**.internetofthings.ibmcloud.com/api/v0002/types/{typeId}/applicationinterfaces
         ```
@@ -226,6 +228,7 @@ Außerdem wird eine Anwendungsschnittstelle konfiguriert. Diese Anwendungsschnit
   }
 ```
 Mithilfe dieser Konfiguration können Sie Ihre Anwendung so konfigurieren, dass der zugeordnete Wert für **temperature** verarbeitet wird, anstatt den zugeordneten Wert für **t** zu verarbeiten und den zugeordneten Wert für **temp** erst nach Umwandlung in Grad Celsius zu verarbeiten.
+
 ## Schritte
 
 Verwenden Sie die folgenden Informationen, um das Beispielszenario mithilfe von Schnittstellen zu konfigurieren.
@@ -240,9 +243,9 @@ Informationen zur Verwendung der REST-APIs zum Hinzufügen eines Gerätetyps fin
 ### Erstellen Sie eine Ereignisschemadatei
 {: #step1}
 
-Erstellen Sie für das vorliegende Szenario zwei Ereignisschemadateien, um die Struktur der eingehenden Temperaturereignisse zu definieren. 
+Erstellen Sie für das vorliegende Szenario zwei Ereignisschemadateien, um die Struktur der eingehenden Temperaturereignisse zu definieren.
 
-Das folgende Beispiel zeigt das Erstellen einer Schemadatei mit dem Namen *tEventSchema.json*. In dieser Datei wird die Struktur eines eingehenden Ereignisses von einem Temperatursensor definiert, der die Temperatur in Grad Celsius misst: 
+Das folgende Beispiel zeigt das Erstellen einer Schemadatei mit dem Namen *tEventSchema.json*. In dieser Datei wird die Struktur eines eingehenden Ereignisses von einem Temperatursensor definiert, der die Temperatur in Grad Celsius misst:
 
 ```
 {
@@ -306,7 +309,7 @@ curl --request POST \
   --form 'schemaFile=@"/Users/ANOther/Documents/IoT/DeviceState/deviceStateDemo/setup/schemas/tEventSchema.json'
 ```
 
-Das folgende Beispiel zeigt eine Antwort auf die POST-Methode: 
+Das folgende Beispiel zeigt eine Antwort auf die POST-Methode:
 
 ```
 {
@@ -325,6 +328,7 @@ Das folgende Beispiel zeigt eine Antwort auf die POST-Methode:
 }
 ```
 Die Schemakennung *5846cd7c6522050001db0e0d*, die als Antwort auf die POST-Methode zurückgegeben wird, ist erforderlich, wenn Sie ein Ereignisschema zu Ihrem Ereignistyp hinzufügen.
+
 Das folgende Beispiel zeigt die Verwendung von 'cURL' zum Erstellen der Ereignisschemaressource *tempEventSchema.json*:
 
 ```
@@ -361,14 +365,13 @@ Die Schemakennung *5846cee36522050001db0e0e*, die als Antwort auf die POST-Metho
 
 Jeder Ereignistyp verwendet zum Verweisen auf das Ereignisschema, das im vorherigen Beispiel erstellt wurde, die in der Antwort auf die POST-Methode zum Erstellen der Ereignisschemaressource zurückgegebene Schemakennung.
 
-Verwenden Sie die folgende API, um einen Ereignistyp zu erstellen: 
+Verwenden Sie die folgende API, um einen Ereignistyp zu erstellen:
 
 ```
 POST /event/types
 ```
 
 Weitere Details finden Sie in der Dokumentation zur [{{site.data.keyword.iot_short_notm}}-HTTP-REST-API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Event_Types).
-
 
 
 Das folgende Beispiel zeigt die Verwendung von 'cURL' zum Erstellen eines Ereignistyps für ein Temperaturereignis, das in Grad Celsius gemessen wird:
@@ -441,7 +444,7 @@ POST /physicalinterfaces
 ```
 Weitere Details finden Sie in der Dokumentation zur [{{site.data.keyword.iot_short_notm}}-HTTP-REST-API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Physical_Interfaces).
 
-Für das vorliegende Szenario sind zwei physische Schnittstellen erforderlich (eine für jeden Ereignistyp). 
+Für das vorliegende Szenario sind zwei physische Schnittstellen erforderlich (eine für jeden Ereignistyp).
 
 Das folgende Beispiel zeigt die Verwendung von 'cURL' zum Erstellen der ersten physischen Schnittstelle:
 
@@ -514,7 +517,7 @@ Im vorliegenden Szenario werden die folgenden Ereignistypen zu den angegebenen p
 - Das Temperaturereignis in Grad Fahrenheit (*tempevt*) wird zur physischen Schnittstelle mit der Kennung *5847d1df6522050001db0e1b* unter Verwendung von *eventId* aus dem Topic und von *eventTypeId* aus der Erstellung der Ereignisschemaressource hinzugefügt.
 
 
-Das folgende Beispiel zeigt die Verwendung von 'cURL' zum Hinzufügen des Temperaturereignisses *tevt* zur physischen Schnittstelle mit der Kennung *5847d1df6522050001db0e1a*: 
+Das folgende Beispiel zeigt die Verwendung von 'cURL' zum Hinzufügen des Temperaturereignisses *tevt* zur physischen Schnittstelle mit der Kennung *5847d1df6522050001db0e1a*:
 
 ```
 curl --request POST \
@@ -562,7 +565,6 @@ PUT /device/types/{typeId}
 ```
 
 Weitere Details finden Sie in der Dokumentation zur [{{site.data.keyword.iot_short_notm}}-HTTP-REST-API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types).
-
 
 In diesem Szenario wird der Gerätetyp *EnvSensor1* zum Verbinden mit der physischen Schnittstelle *5847d1df6522050001db0e1a* und der Gerätetyp *EnvSensor2* zum Verbinden mit der physischen Schnittstelle *5847d1df6522050001db0e1b* aktualisiert.
 
@@ -703,6 +705,7 @@ Verwenden Sie die folgende API, um eine Anwendungsschnittstelle zu erstellen:
 POST /applicationinterfaces
 ```
 Weitere Details finden Sie in der Dokumentation zur [{{site.data.keyword.iot_short_notm}}-HTTP-REST-API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Application_Interfaces).
+
 Verwenden Sie in diesem Szenario die Schemakennung *5846ec826522050001db0e11*, die in der vorherigen Antwort zurückgegeben wurde, um das Anwendungsschnittstellenschema zu der Anwendungsschnittstelle hinzuzufügen.
 
 Das folgende Beispiel zeigt die Verwendung von 'cURL' zum Erstellen einer Anwendungsschnittstelle:
@@ -742,6 +745,7 @@ Verwenden Sie die folgende API, um eine Anwendungsschnittstelle zu einem Geräte
 POST /device/types/{typeId}/applicationinterfaces
 ```
 Weitere Details finden Sie in der Dokumentation zur [{{site.data.keyword.iot_short_notm}}-HTTP-REST-API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types).
+
 Im vorliegenden Szenario ist die Anwendungsschnittstelle dem Gerätetyp *EnvSensor1* und dem Gerätetyp *EnvSensor2* zugeordnet.
 
 Das folgende Beispiel zeigt die Verwendung von 'cURL' zum Hinzufügen der Anwendungsschnittstelle *5846ed076522050001db0e12*, die auf die Anwendungsschemakennung *5846ec826522050001db0e11* verweist, zu dem Gerätetyp *EnvSensor1*:
@@ -814,7 +818,7 @@ Das folgende Beispiel zeigt eine Antwort auf die POST-Methode:
 ### Definieren Sie Zuordnungen, um Eigenschaften des eingehenden Ereignisses den Eigenschaften der Anwendungsschnittstelle zuzuordnen
 {: #step11}
 
-Verwenden Sie die folgende API, um Ereignisse zuzuordnen: 
+Verwenden Sie die folgende API, um Ereignisse zuzuordnen:
 
 ```
 POST /device/types/{typeId}/mappings

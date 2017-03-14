@@ -94,7 +94,7 @@ Il supporto per la gestione del ciclo di vita del dispositivo è facoltativo. Il
 
 ### Livelli di QOS (quality of service) e sessione di pulizia
 
-I dispositivi gestiti possono pubblicare i messaggi con un livello di QOS (quality of service) di 0 o 1. 
+I dispositivi gestiti possono pubblicare i messaggi con un livello di QOS (quality of service) di 0 o 1.
 
 I messaggi con QoS=0 possono essere scartati e non sono conservati dopo il riavvio del server di messaggistica. I messaggi con QoS=1 possono essere accodati e sono conservati dopo il riavvio del server di messaggistica. La durata della sottoscrizione determina se una richiesta viene accodata. Il parametro `cleansession` della connessione che effettua la sottoscrizione determina la durata della sottoscrizione.  
 

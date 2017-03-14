@@ -31,13 +31,13 @@ Le constructeur génère l'instance client de passerelle et accepte l'objet `Pro
 |Définition |Description |
 |:----|:----|
 |`org`|Valeur requise qui doit être définie avec votre ID d'organisation. Si vous utilisez un flux Quickstart, spécifiez `quickstart`.|
-|`domain`|URL de noeud final de message, qui est facultative. Si vous n'indiquez pas une valeur pour un domaine, l'URL prend la valeur par défaut `internetofthings.ibmcloud.com`, qui est le serveur de production {{site.data.keyword.iot_short_notm}}. |
-|`type`|Valeur requise qui spécifie le type de la passerelle. |
-|`id` |Valeur requise qui spécifie l'ID unique de la passerelle. |
+|`domain`|URL de noeud final de message, qui est facultative. Si vous n'indiquez pas une valeur pour un domaine, l'URL prend la valeur par défaut `internetofthings.ibmcloud.com`, qui est le serveur de production {{site.data.keyword.iot_short_notm}}.|
+|`type`|Valeur requise qui spécifie le type de la passerelle.|
+|`id` |Valeur requise qui spécifie l'ID unique de la passerelle.|
 |`auth-method`|Méthode d'authentification à utiliser. La seule méthode prise en charge est `token`.|
 |`auth-token`|Jeton d'authentification de clé d'API permettant d'établir une connexion sécurisée entre votre passerelle et {{site.data.keyword.iot_short_notm}}.|
 |`clean-session`|Valeur true ou false requise uniquement si vous souhaitez connecter la passerelle en mode d'abonnement durable. Par défaut, `clean-session` a pour valeur true.|
-|`WebSocket`|Valeur true ou false requise uniquement si vous souhaitez connecter la passerelle à l'aide de WebSockets. |
+|`WebSocket`|Valeur true ou false requise uniquement si vous souhaitez connecter la passerelle à l'aide de WebSockets.|
 |`Port`|Numéro de port auquel se connecter. Indiquez 8883 ou 443. Si vous n'indiquez pas de numéro de port, le client se connecte à {{site.data.keyword.iot_short_notm}} sur le numéro de port 8883 par défaut.|
 |`MaxInflightMessages`|Définit le nombre maximal de messages en cours pour la connexion. La valeur par défaut est 100.|
 |`Automatic-Reconnect`|Valeur true ou false lorsque vous souhaitez reconnecter automatiquement la passerelle à {{site.data.keyword.iot_short_notm}} alors qu'elle est en mode déconnecté. La valeur par défaut est false.|
@@ -63,7 +63,7 @@ GatewayClient gwClient = new GatewayClient(options);
 
 ### Utilisation d'un fichier de configuration
 
-Au lieu d'utiliser l'objet `Propriétés` directement pour créer une instance de passerelle, vous pouvez utiliser un fichier de configuration contenant les paires nom-valeur pour les propriétés de la passerelle. Pour utiliser un fichier de configuration afin de créer l'objet `Propriétés` pour la passerelle, utilisez le format de code suivant : 
+Au lieu d'utiliser l'objet `Propriétés` directement pour créer une instance de passerelle, vous pouvez utiliser un fichier de configuration contenant les paires nom-valeur pour les propriétés de la passerelle. Pour utiliser un fichier de configuration afin de créer l'objet `Propriétés` pour la passerelle, utilisez le format de code suivant :
 
 ```Java
 Properties props = GatewayClient.parsePropertiesFile(new File("C:\\temp\\device.prop"));
@@ -89,7 +89,7 @@ auth-token=$token
 
 Pour établir la connexion à {{site.data.keyword.iot_short_notm}}, utilisez la fonction `connect()`. La fonction `connect()` inclut un paramètre booléen facultatif appelé `autoRetry`, qui détermine si la bibliothèque tente de se reconnecter en cas d'échec de la connexion MQTT (MqttException). Par défaut, `autoRetry` a pour valeur true. Si une connexion MqttSecurityException échoue en raison de détails d'enregistrement de terminal incorrects, la bibliothèque ne tente pas de se reconnecter, même si `autoRetry` a pour valeur true.
 
-Afin de définir l'intervalle keep alive pour MQTT, vous pouvez éventuellement utiliser la méthode `setKeepAliveInterval(int)` avant d'appeler la fonction `connect()`. La valeur `setKeepAliveInterval(int)` est mesurée en secondes et définit l'intervalle de temps maximal entre les messages envoyés ou reçus. Lorsqu'une valeur `setKeepAliveInterval(int)` est spécifiée, le client peut détecter que le serveur n'est plus disponible sans avoir à attendre la fin du délai d'attente TCP/IP. Le client s'assure qu'au moins un message transite par le réseau au cours de chaque période d'intervalle keep alive. Si aucun message relatif aux données n'est reçu pendant le délai d'attente, le client envoie un petit message `ping` dont le serveur accuse réception. Par défaut, le paramètre `setKeepAliveInterval(int)` prend la valeur 60 secondes. Pour désactiver la fonction de traitement keep alive sur le client, affectez la valeur 0 au paramètre `setKeepAliveInterval(int)`. 
+Afin de définir l'intervalle keep alive pour MQTT, vous pouvez éventuellement utiliser la méthode `setKeepAliveInterval(int)` avant d'appeler la fonction `connect()`. La valeur `setKeepAliveInterval(int)` est mesurée en secondes et définit l'intervalle de temps maximal entre les messages envoyés ou reçus. Lorsqu'une valeur `setKeepAliveInterval(int)` est spécifiée, le client peut détecter que le serveur n'est plus disponible sans avoir à attendre la fin du délai d'attente TCP/IP. Le client s'assure qu'au moins un message transite par le réseau au cours de chaque période d'intervalle keep alive. Si aucun message relatif aux données n'est reçu pendant le délai d'attente, le client envoie un petit message `ping` dont le serveur accuse réception. Par défaut, le paramètre `setKeepAliveInterval(int)` prend la valeur 60 secondes. Pour désactiver la fonction de traitement keep alive sur le client, affectez la valeur 0 au paramètre `setKeepAliveInterval(int)`.
 
 ```java
 Properties props = GatewayClient.parsePropertiesFile(new File("C:\\temp\\device.prop"));
@@ -106,18 +106,18 @@ gwClient.setKeepAliveInterval(80);
 gwClient .connect(10);
 ```
 
-Lorsque le client de passerelle se connecte à {{site.data.keyword.iot_short_notm}}, la passerelle peut publier des événements et s'abonner aux commandes pour elle-même et pour le compte des terminaux qui sont connectés à la passerelle. 
+Lorsque le client de passerelle se connecte à {{site.data.keyword.iot_short_notm}}, la passerelle peut publier des événements et s'abonner aux commandes pour elle-même et pour le compte des terminaux qui sont connectés à la passerelle.
 
 ## Enregistrement des terminaux qui se trouvent derrière la passerelle
 {: #register_device_gateway}
 
-Vous pouvez enregistrer des terminaux qui se trouvent derrière la passerelle connectée à votre instance {{site.data.keyword.iot_short_notm}} soit automatiquement soit en développant un code à l'aide de l'API. 
+Vous pouvez enregistrer des terminaux qui se trouvent derrière la passerelle connectée à votre instance {{site.data.keyword.iot_short_notm}} soit automatiquement soit en développant un code à l'aide de l'API.
 
 ### Enregistrement de terminal automatique
-Vous pouvez enregistrer vos terminaux automatiquement sur {{site.data.keyword.iot_short_notm}} chaque fois que la passerelle publie des événements ou s'abonne à des commandes pour les terminaux qui lui sont connectés. 
+Vous pouvez enregistrer vos terminaux automatiquement sur {{site.data.keyword.iot_short_notm}} chaque fois que la passerelle publie des événements ou s'abonne à des commandes pour les terminaux qui lui sont connectés.
 
 ### Enregistrement de terminal d'API
-Vous pouvez utiliser l'API {{site.data.keyword.iot_short_notm}} pour enregistrer les terminaux situés derrière une passerelle auprès de votre instance {{site.data.keyword.iot_short_notm}}. 
+Vous pouvez utiliser l'API {{site.data.keyword.iot_short_notm}} pour enregistrer les terminaux situés derrière une passerelle auprès de votre instance {{site.data.keyword.iot_short_notm}}.
 
 Pour simplifier le développement à l'aide de l'API {{site.data.keyword.iot_short_notm}}, initiez une instance client API en appelant la méthode api(), illustrée dans l'exemple de code suivant :
 
@@ -144,7 +144,7 @@ gwClient.connect();
 
 ```
 
-Lorsqu'un terminal situé derrière une passerelle est enregistré, le terminal est associé à la passerelle par les valeurs des attributs `gwDeviceId` et `gwDeviceType`. 
+Lorsqu'un terminal situé derrière une passerelle est enregistré, le terminal est associé à la passerelle par les valeurs des attributs `gwDeviceId` et `gwDeviceType`.
 
 ## Publication d'événements
 {: #publish_events}
@@ -257,7 +257,7 @@ status = gwClient.publishDeviceEvent(deviceType, deviceId, "blink", cpuLoad , "b
 ## Traitement des commandes
 {: #handling_commands}
 
-La passerelle peut s'abonner aux commandes qui lui sont envoyées directement et qui sont envoyées à tout terminal connecté derrière une passerelle. Lorsque le client de passerelle se connecte, il s'abonne automatiquement aux commandes de cette passerelle. Mais, pour vous abonner aux commandes des terminaux qui sont connectés via la passerelle, utilisez la méthode `subscribeToDeviceCommands()` surchargée, comme illustré dans l'exemple suivant : 
+La passerelle peut s'abonner aux commandes qui lui sont envoyées directement et qui sont envoyées à tout terminal connecté derrière une passerelle. Lorsque le client de passerelle se connecte, il s'abonne automatiquement aux commandes de cette passerelle. Mais, pour vous abonner aux commandes des terminaux qui sont connectés via la passerelle, utilisez la méthode `subscribeToDeviceCommands()` surchargée, comme illustré dans l'exemple suivant :
 
 ```java
 gwClient.connect()
@@ -266,15 +266,15 @@ gwClient.connect()
 gwClient.subscribeToDeviceCommands(DEVICE_TYPE, DEVICE_ID);
 ```
 
-Pour traiter des commandes spécifiques, vous devez enregistrer une méthode de rappel `Command`. Les messages sont renvoyés en tant qu'instance de la classe `Command` et contiennent les propriétés suivantes : 
+Pour traiter des commandes spécifiques, vous devez enregistrer une méthode de rappel `Command`. Les messages sont renvoyés en tant qu'instance de la classe `Command` et contiennent les propriétés suivantes :
 
 
 | Propriété     |Type de données     | Description|
 |----------------|----------------|---------------
-|`deviceType`|Chaîne| Type de terminal pour lequel la commande est reçue. |
-|`deviceId`|Chaîne| ID terminal pour lequel la commande est reçue ; il peut s'agir de la passerelle ou d'un terminal connecté via la passerelle. |
-|`data`|objet| Contenu de la commande. |
-|`format`|Chaîne| Format du contenu de la commande ; il peut s'agir de n'importe quel chaîne, par exemple, JSON, d'un format binaire, texte ou autre. |
+|`deviceType`|Chaîne| Type de terminal pour lequel la commande est reçue.|
+|`deviceId`|Chaîne| ID terminal pour lequel la commande est reçue ; il peut s'agir de la passerelle ou d'un terminal connecté via la passerelle.|
+|`data`|objet| Contenu de la commande.|
+|`format`|Chaîne| Format du contenu de la commande ; il peut s'agir de n'importe quel chaîne, par exemple, JSON, d'un format binaire, texte ou autre.|
 |`command`|Chaîne|Nom de la commande.|
 |`timestamp`|org.joda.time.DateTime|Date et heure auxquelles la commande a été envoyée.|
 

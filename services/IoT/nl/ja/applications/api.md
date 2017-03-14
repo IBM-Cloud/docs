@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2016-12-01"
+lastupdated: "2016-02-17"
 
 ---
 
@@ -38,11 +38,9 @@ lastupdated: "2016-12-01"
 ## HTTP REST API 資料へのアクセス
 {: #api_link}
 
-{{site.data.keyword.iot_short_notm}} HTTP REST API 資料にアクセスしてアプリケーションの作成とカスタマイズを行う方法に関する情報をさらに入手するには、https://docs.internetofthings.ibmcloud.com/swagger/v0002.html をご覧ください。
+{{site.data.keyword.iot_short_notm}} HTTP REST API 資料にアクセスしてアプリケーションの作成とカスタマイズの方法についての詳細を確認するには、[https://docs.internetofthings.ibmcloud.com/swagger/v0002.html](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html) を参照してください。
 
 サポートされている {{site.data.keyword.iot_short_notm}} HTTP REST API のバージョンはバージョン 2 のみです。{{site.data.keyword.iot_short_notm}} ソリューションには必ずバージョン 2 を使用してください。
-
-
 
 # アプリケーション用の HTTP REST Messaging API
 {: #rest_messaging_api}
@@ -72,8 +70,8 @@ MQTT メッセージング・プロトコルを使用するほかにも、HTTP �
 
 Quickstart サービスにデバイスまたはアプリケーションを接続している場合は、**orgId** を文字列「quickstart」に置換してください。
 
-**注:** 
-- アプリケーションで 1 つの HTTP 接続を再利用してさまざまなデバイスにイベントまたはコマンドをポストすることができますが、許可 HTTP ヘッダーを変更することはできません。 
+**注:**
+- アプリケーションで 1 つの HTTP 接続を再利用してさまざまなデバイスにイベントまたはコマンドをポストすることができますが、許可 HTTP ヘッダーを変更することはできません。
 - ポート 443 (デフォルトの SSL ポート) は、セキュアな HTTP API 呼び出しにも指定できます。
 
 ### 認証

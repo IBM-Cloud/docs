@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-10"
+lastupdated: "2017-02-17"
 
 ---
 
@@ -197,4 +197,4 @@ Bei bestimmten Kartentypen können Sie auf **Einstellungen** klicken, um zusätz
 
 Sehr gut! Sie können nun die Echtzeitdaten Ihres Geräts anzeigen.
 
-Eine Beschreibung der einzelnen Schritte zum Anzeigen von Echtzeitgerätedaten finden Sie in der Anleitung [Boards & Karten im neuen Watson IoT-Dashboard konfigurieren](https://developer.ibm.com/recipes/tutorials/configuring-the-cards-in-the-new-watson-iot-dashboard/).
+Eine Beschreibung der einzelnen Schritte zum Anzeigen von Echtzeitgerätedaten finden Sie in der Anleitung [Boards & Karten im neuen Watson IoT-Dashboard konfigurieren ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/configuring-the-cards-in-the-new-watson-iot-dashboard/){: new_window}.

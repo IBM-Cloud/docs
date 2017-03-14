@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-10"
+lastupdated: "2017-02-21"
 
 ---
 
@@ -23,8 +23,8 @@ Avant de pouvoir commencer à recevoir des données depuis vos terminaux IoT, vo
 
 Avant de commencer le processus de connexion, vous devez vous assurer que vos terminaux sont conformes aux exigences suivantes relatives à la communication avec {{site.data.keyword.iot_short_notm}} :
 
-- Votre terminal doit pouvoir communiquer à l'aide des protocoles HTTP ou MQTT. 
-- Les messages de terminal doivent être conformes aux exigences de contenu de message de {{site.data.keyword.iot_short_notm}}. 
+- Votre terminal doit pouvoir communiquer à l'aide des protocoles HTTP ou MQTT.
+- Les messages de terminal doivent être conformes aux exigences de contenu de message de {{site.data.keyword.iot_short_notm}}.
 
 Pour plus d'informations, voir [Développement de terminaux sur Watson IoT Platform](https://console.ng.bluemix.net/docs/services/IoT/devices/device_dev_index.html).
 
@@ -35,7 +35,7 @@ Pour connecter votre terminal à {{site.data.keyword.iot_short_notm}}, procédez
 
 Enregistrer un terminal implique de le classifier en tant que type de terminal, de lui donner un nom et de fournir des informations le concernant. Vous indiquez ensuite un jeton de connexion ou vous acceptez un jeton qui est généré par {{site.data.keyword.iot_short_notm}}.
 
-Vous pouvez ajouter un seul terminal à la fois depuis le tableau de bord {{site.data.keyword.iot_short_notm}} ou vous pouvez utiliser l'[API {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/post_bulk_devices_add) pour ajouter un ou plusieurs terminaux à la fois.
+Vous pouvez ajouter un seul terminal à la fois depuis le tableau de bord {{site.data.keyword.iot_short_notm}} ou vous pouvez utiliser l'[API {{site.data.keyword.iot_short_notm}} ![](../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/post_bulk_devices_add){: new_window} pour ajouter un ou plusieurs terminaux à la fois. 
 
 Pour ajouter un terminal depuis le tableau de bord {{site.data.keyword.iot_short_notm}} :
 
@@ -81,7 +81,7 @@ L'ID de terminal permet d'identifier le terminal dans le tableau de bord {{site.
 13. Cliquez sur **Suivant** pour finaliser l'ajout de votre terminal.
 14. Vérifiez que les informations récapitulatives sont correctes, puis cliquez sur **Ajouter** pour ajouter la connexion.  
 **Astuce :** Vous avez la possibilité d'accepter un jeton d'authentification généré automatiquement ou de fournir vous-même un jeton d'authentification.  
-Si vous choisissez de créer votre propre jeton, celui-ci doit comporter uniquement des caractères alphanumériques et les caractères spéciaux suivants :
+Si vous choisissez de créer votre propre jeton, assurez-vous qu'il est long de 8 à 36 caractères et qu'il ne comporte que des caractères alphanumériques et les caractères spéciaux suivants :
  - Trait d'union (-)
  - Trait de soulignement (&lowbar;)
  - Point d'exclamation (!)
@@ -113,7 +113,7 @@ Après avoir enregistré un terminal auprès de {{site.data.keyword.iot_short_no
 - Configurer votre terminal pour la messagerie MQTT et utiliser l'ID d'organisation, le jeton d'authentification, le type de terminal et l'ID de terminal pour l'authentification.  
 - Envoyer des messages de terminal à votre organisation {{site.data.keyword.iot_short_notm}} à l'aide du protocole MQTT.
 
-**Astuce :** Un grand nombre de recettes de connexion sont disponibles pour les terminaux couramment utilisés. Pour obtenir une liste de recettes, voir les [recettes de connexion de terminal](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/) disponibles sur IBM.com.
+**Astuce :** Un grand nombre de recettes de connexion sont disponibles pour les terminaux couramment utilisés. Pour obtenir une liste de recettes, voir les [recettes de connexion de terminal![](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){: new_window} disponibles sur le site IBM.com.
 
 Les informations suivantes sont requises lors de la connexion de votre terminal :
 - URL : *org_id*.messaging.internetofthings.ibmcloud.com  
@@ -125,7 +125,7 @@ Où *org_id* est l'ID de votre organisation {{site.data.keyword.iot_short_notm}}
 - Identificateur de terminal : d:*org_id*:*device_type*:*device_id*  
 Cette combinaison de paramètres identifie votre terminal de manière unique.
 - Nom d'utilisateur : use-token-auth  
-Cette valeur indique que vous utilisez l'autorisation à base de jeton. 
+Cette valeur indique que vous utilisez l'autorisation à base de jeton.
 - Mot de passe : *Authentication token*  
 Cette valeur est le jeton unique que vous avez défini ou qui a été affecté à votre terminal lorsque vous l'avez enregistré.
 - Format de sujet d'événement : iot-2/evt/*event_id*/fmt/*format_string*  
@@ -135,18 +135,18 @@ Cette valeur est le jeton unique que vous avez défini ou qui a été affecté �
  {{site.data.keyword.iot_short_notm}} prend en charge plusieurs formats, tels que JSON et texte.
 
 Pour plus d'informations sur la connexion de votre terminal, voir [Connectivité MQTT pour les terminaux](devices/mqtt.html) dans la documentation technique.
-La section [Connectivité](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Connectivity/post_device_types_deviceType_devices_deviceId_events_eventName) de la documentation d'API contient également les informations requises.
+La section [Connectivité ![](../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Connectivity/post_device_types_deviceType_devices_deviceId_events_eventName){: new_window} de la documentation d'API contient également les informations requises. 
 
 ## Recettes relatives à la connexion de terminaux
 
 Les recettes suivantes décrivent le flux complet utilisé pour enregistrer et connecter des terminaux à Watson IoT Platform.
 
-- [How to Register Devices in IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/how-to-register-devices-in-ibm-iot-foundation/)
+- [How to Register Devices in IBM Watson IoT Platform ![](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/how-to-register-devices-in-ibm-iot-foundation/){: new_window}
 
-- [Connecting Raspberry Pi as a Device to Watson IoT using Node-RED](https://developer.ibm.com/recipes/tutorials/deploy-watson-iot-node-on-raspberry-pi/)
+- [Connecting Raspberry Pi as a Device to Watson IoT using Node-RED ![](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/deploy-watson-iot-node-on-raspberry-pi/){: new_window}
 
-- [Connect an Arduino Uno device to the IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/connect-an-arduino-uno-device-to-the-ibm-internet-of-things-foundation/)
+- [Connect an Arduino Uno device to the IBM Watson IoT Platform ![](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/connect-an-arduino-uno-device-to-the-ibm-internet-of-things-foundation/){: new_window}
 
-- [Connecting a Sense HAT to Watson IoT using Node-RED](https://developer.ibm.com/recipes/tutorials/connecting-a-sense-hat-to-watson-iot-using-node-red/)
+- [Connecting a Sense HAT to Watson IoT using Node-RED ![](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/connecting-a-sense-hat-to-watson-iot-using-node-red/){: new_window}
 
-- [Connecting Raspberry Pi with Windows IoT Core as a Device to Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/connecting-raspberry-pi-with-windows-iot-core-as-a-device-to-watson-iot-using-node-red/)
+- [Connecting Raspberry Pi with Windows IoT Core as a Device to Watson IoT Platform ![](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/connecting-raspberry-pi-with-windows-iot-core-as-a-device-to-watson-iot-using-node-red/){: new_window}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2016-12-01"
+lastupdated: "2016-02-17"
 
 ---
 
@@ -38,11 +38,9 @@ Die {{site.data.keyword.iot_short_notm}}-HTTP-REST-API unterstützt folgende Fun
 ## Zugriff auf die Dokumentation der HTTP-REST-API
 {: #api_link}
 
-Für den Zugriff auf die Dokumentation der {{site.data.keyword.iot_short_notm}}-HTTP-REST-API und zum Abrufen weiterer Informationen zur Vorgehensweise beim Erstellen und Anpassen Ihrer Anwendungen rufen Sie die Webadresse https://docs.internetofthings.ibmcloud.com/swagger/v0002.html auf.
+Für den Zugriff auf die Dokumentation der {{site.data.keyword.iot_short_notm}}-HTTP-REST-API und zum Abrufen weiterer Informationen zur Vorgehensweise beim Erstellen und Anpassen Ihrer Anwendungen rufen Sie die folgende URL auf: [https://docs.internetofthings.ibmcloud.com/swagger/v0002.html](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html).
 
 Nur Version 2 der {{site.data.keyword.iot_short_notm}}-HTTP-REST-API ist unterstützt. Stellen Sie sicher, dass Ihre {{site.data.keyword.iot_short_notm}}-Lösungen Version 2 verwenden.
-
-
 
 # HTTP-REST-Messaging-API für Anwendungen
 {: #rest_messaging_api}
@@ -72,8 +70,8 @@ Zusätzlich zur Verwendung des MQTT-Nachrichtenprotokolls können Sie Ihre Anwen
 
 Wenn Sie eine Verbindung zwischen einem Gerät oder einer Anwendung und dem Quickstart-Service herstellen wollen, ersetzen Sie **Organisations-ID** durch die Zeichenfolge 'quickstart'.
 
-**Hinweise:** 
-- Zwar können Anwendungen eine HTTP-Verbindung wiederverwenden, um Ereignisse oder Befehle an andere Geräte zu posten, der HTTP-Header für die Berechtigung kann jedoch nicht geändert werden. 
+**Hinweise:**
+- Zwar können Anwendungen eine HTTP-Verbindung wiederverwenden, um Ereignisse oder Befehle an andere Geräte zu posten, der HTTP-Header für die Berechtigung kann jedoch nicht geändert werden.
 - Port 443, der SSL-Standardport, kann auch für sichere HTTP-API-Aufrufe angegeben werden.
 
 ### Authentifizierung

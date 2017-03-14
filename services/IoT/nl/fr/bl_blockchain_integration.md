@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-12-08"
+lastupdated: "2017-02-17"
 
 ---
 
@@ -43,17 +43,17 @@ Le diagramme suivant illustre l'environnement général de l'intégration de cha
 ## Avant de commencer
 {: #byb}
 
-- Dans le document [{{site.data.keyword.iot_short_notm}}](http://www.ibm.com/blockchain/) sur le site IBM.com, découvrez le produit {{site.data.keyword.iot_short_notm}}, de quelle manière il est lié au concept général de chaîne de blocs et ce qu'il peut faire pour vous.
+- Découvrez le produit {{site.data.keyword.iot_short_notm}}, de quelle manière il est lié au concept général de chaîne de blocs et ce qu'il peut faire pour vous en consultant le document [{{site.data.keyword.iot_short_notm}} ![](../../icons/launch-glyph.svg)](http://www.ibm.com/blockchain/){: new_window} sur le site IBM.com.
 - [Activez l'intégration de chaîne de blocs {{site.data.keyword.iot_short_notm}}](reference/extensions/index.html#blockchain) pour votre organisation.
 - Connectez les terminaux qui produisent les données que vous souhaitez écrire dans le grand livre de chaîne de blocs.  
 Suivez les instructions décrites dans la rubrique [Connexion de terminaux](iotplatform_task.html) pour connecter vos terminaux.
 - Installez l'interface utilisateur de surveillance.
-Cette interface utilisateur permet de vérifier la connexion entre {{site.data.keyword.iot_short_notm}} et la matrice de chaîne de blocs. Suivez les instructions décrites dans le fichier Readme Monitoring UI disponible dans le répertoire GitHub [Blockchain Monitoring UI](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui).
+Cette interface utilisateur permet de vérifier la connexion entre {{site.data.keyword.iot_short_notm}} et la matrice de chaîne de blocs. Suivez les instructions décrites dans le fichier Readme Monitoring UI disponible dans le répertoire GitHub [Blockchain Monitoring UI![](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui){: new_window}.
 
 ### Utilisation du scénario IBM de base pour commencer rapidement
 
 Pour vous familiariser rapidement avec l'intégration de chaîne de blocs {{site.data.keyword.iot_short_notm}}, vous pouvez vous connecter à une matrice fournie par IBM et mapper un exemple de terminal Node-RED à l'exemple de contrat fourni par IBM.  Les étapes requises pour ce scénario sont précédées de la mention **Scénario IBM de base** dans cette rubrique.  
-**Important :** Sachez que l'exemple de grand livre de chaîne de blocs fourni par IBM et toutes ses données sont visibles pour tous les utilisateurs de l'exemple de chaîne de blocs. Ne stockez aucune information sensible dans l'exemple de chaîne de blocs fourni par IBM. De plus, les exemples de matrice qui prennent en charge les exemples de contrat et les contrats commerciaux sont soumis à des modifications, notamment les informations de connexion pour chaque homologue. Les informations de connexion sont fournies sur la page wiki [IoT Blockchain Connection Info](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections) de la communauté Watson IoT Blockchain.
+**Important :** Sachez que l'exemple de grand livre de chaîne de blocs fourni par IBM et toutes ses données sont visibles pour tous les utilisateurs de l'exemple de chaîne de blocs. Ne stockez aucune information sensible dans l'exemple de chaîne de blocs fourni par IBM. De plus, les exemples de matrice qui prennent en charge les exemples de contrat et les contrats commerciaux sont soumis à des modifications, notamment les informations de connexion pour chaque homologue. Les informations de connexion sont fournies sur la page wiki [IoT Blockchain Connection Info ![](../../icons/launch-glyph.svg)](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} de la communauté Watson IoT Blockchain. 
 
 L'environnement de l'intégration de chaîne de blocs {{site.data.keyword.iot_short_notm}} de base fourni par IBM est constitué des composants suivants :
 - {{site.data.keyword.Bluemix_notm}}:
@@ -71,7 +71,7 @@ Le diagramme d'architecture suivant illustre les composants requis pour cet exem
 
 ![Architecture IoT Blockchain.](blockchain/images/architecture.svg "Architecture IoT Blockchain")
 
-**Scénario IBM de base :** Créez un simulateur de terminal Node-RED en suivant les instructions décrites dans la rubrique [Création et connexion d'un simulateur de terminal Node-RED](nodereddevice_sample.html). Pour l'intégration de chaîne de blocs, utilisez les informations de noeud spécifiques du terminal de chaîne de blocs lorsque vous importez les données de noeud. Les informations de noeud sont disponibles sur la page Wiki [Node-RED Device Simulator](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Node-RED%20Device%20Simulator) de la communauté Watson IoT Blockchain. Si nécessaire, prenez contact avec votre agent IBM blockchain pour obtenir les droits d'accès à la communauté.
+**Scénario IBM de base :** Créez un simulateur de terminal Node-RED en suivant les instructions décrites dans la rubrique [Création et connexion d'un simulateur de terminal Node-RED](nodereddevice_sample.html). Pour l'intégration de chaîne de blocs, utilisez les informations de noeud spécifiques du terminal de chaîne de blocs lorsque vous importez les données de noeud. Les informations de noeud sont disponibles sur la page wiki [Node-RED Device Simulator ![](../../icons/launch-glyph.svg)](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Node-RED%20Device%20Simulator){: new_window} de la communauté Watson IoT Blockchain. Si nécessaire, prenez contact avec votre agent IBM blockchain pour obtenir les droits d'accès à la communauté.
 
 ## Connexion à une matrice de chaîne de blocs
 {: #getting_started}  
@@ -81,7 +81,7 @@ L'intégration de chaîne de blocs {{site.data.keyword.iot_short_notm}} étant a
 Pour établir une connexion à une matrice de chaîne de blocs :
 1. Dans le tableau de bord {{site.data.keyword.iot_short_notm}}, sélectionnez **Extensions**.
 2. Sur la page **Extensions**, dans le titre Blockchain, cliquez sur **Configuration**.
-3. Sur la page **Extensions**, dans le titre Blockchain, cliquez sur **Configuration** ou sur l'![icône représentant un engrenage](images/gear.png "Configure") si des matrices sont déjà liées, puis entrez les informations relatives à la matrice. 
+3. Sur la page **Extensions**, dans le titre Blockchain, cliquez sur **Configuration** ou sur l'![icône représentant un engrenage](images/gear.png "Configure") si des matrices sont déjà liées, puis entrez les informations relatives à la matrice.
  1. Dans l'onglet **Matrice**, entrez un nom permettant d'identifier la matrice dans {{site.data.keyword.iot_short_notm}}, puis cliquez sur **Suivant**.   
  2. Dans l'onglet **Homologue**, entrez les informations sur l'homologue :  
 <table>
@@ -119,10 +119,9 @@ Pour établir une connexion à une matrice de chaîne de blocs :
 </table>  
  3. Cliquez sur **Terminer**.
 3. Dans la section Configuration de la chaîne de blocs, cliquez sur **Terminé** pour sauvegarder les informations sur la matrice.
-    
 
 
-**Scénario IBM de base :** Pour vous connecter à la matrice fournie par IBM, utilisez les informations de connexion de l'exemple de contrat fournies sur la page wiki [IoT Blockchain Connection Info](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections) de la communauté Watson IoT Blockchain. Si nécessaire, prenez contact avec votre agent IBM blockchain pour obtenir les droits d'accès à la communauté.
+**Scénario IBM de base :** pour vous connecter à la matrice fournie par IBM, utilisez les informations de connexion de l'exemple de contrat fournies sur la page wiki [IoT Blockchain Connection Info ![](../../icons/launch-glyph.svg)](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} de la communauté Watson IoT Blockchain. Si nécessaire, prenez contact avec votre agent IBM blockchain pour obtenir les droits d'accès à la communauté.
 
 
 ## Mappage de données de terminal aux contrats intelligents
@@ -138,7 +137,7 @@ Pour mapper des données de terminal à un contrat :
  **Astuce :** Le nom d'événement par défaut pour l'exemple de terminal de chaîne de blocs Node-RED est obc. Pour rechercher les types d'événement d'un terminal, dans le tableau de bord {{site.data.keyword.iot_short_notm}}, sélectionnez **Terminaux** et cliquez sur le nom du terminal pour ouvrir la page d'informations le concernant. Faites défiler l'écran vers le bas jusqu'à la section **Informations sur le capteur** pour voir la liste des événements et points de données disponibles pour le terminal. Vous pouvez modifier le nom d'événement publié par le terminal Node-RED en mettant à jour la zone Sujet dans le noeud Publication dans IoT mqtt.  
  6. Cliquez sur **Suivant**.
  6. Sélectionnez l'instance de matrice que vous avez créée précédemment.
- 7. Entrez un nom de contrat et l'identificateur de contrat.   
+ 7. Entrez un nom de contrat et l'identificateur de contrat.  
 <table>
 <thead>
 <tr>
@@ -159,11 +158,13 @@ Pour mapper des données de terminal à un contrat :
 </tr>
 </tbody>
 </table>
-**Scénario IBM de base :** L'exemple de contrat intelligent prédéployé vous permet de mapper des points de données de terminal à certains attributs de contrat pour stocker les valeurs de point de données dans le grand livre de chaîne de blocs. Utilisez l'exemple de contrat pour tester le mappage de données de terminal avant d'essayer d'utiliser les contrats commerciaux plus avancés ou d'écrire vos propres contrats. L'ID de contrat est fourni sur la page wiki [IoT Blockchain Connection Info](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections) de la communauté Watson IoT Blockchain. Si nécessaire, prenez contact avec votre agent IBM blockchain pour obtenir les droits d'accès à la communauté.
+**Scénario IBM de base :** L'exemple de contrat intelligent prédéployé vous permet de mapper des points de données de terminal à certains attributs de contrat pour stocker les valeurs de point de données dans le grand livre de chaîne de blocs. Utilisez l'exemple de contrat pour tester le mappage de données de terminal avant d'essayer d'utiliser les contrats commerciaux plus avancés ou d'écrire vos propres contrats. L'ID de contrat est fourni sur la page wiki [IoT Blockchain Connection Info ![](../../icons/launch-glyph.svg)](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} de la communauté Watson IoT Blockchain. Si nécessaire, prenez contact avec votre agent IBM blockchain pour obtenir les droits d'accès à la communauté.
+
+
  8. Créez une route pour mapper des propriétés de terminal aux paramètres de contrat.  
  Les paramètres qui sont disponibles dans le contrat sont importés. Pour chaque paramètre, entrez une propriété d'événement correspondante.  
  **Important :** N'incluez pas le caractère `d.` qui est ajouté en préfixe au point de données dans le message de terminal.
- **Scénario IBM de base :** Si vous utilisez les contrats fournis par IBM, mappez les paramètres suivants répertoriés sur la page wiki [Data mapping](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Data%20Mapping) de la communauté Watson IoT Blockchain. Si nécessaire, prenez contact avec votre agent IBM blockchain pour obtenir les droits d'accès à la communauté.
+ **Scénario IBM de base :** Si vous utilisez les contrats fournis par IBM, mappez les paramètres suivants répertoriés sur la page wiki [Data mapping ![External link icon](../../icons/launch-glyph.svg)](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Data%20Mapping){: new_window} de la communauté Watson IoT Blockchain. Si nécessaire, prenez contact avec votre agent IBM blockchain pour obtenir les droits d'accès à la communauté.
  9. Sur la page de synthèse, vérifiez que toutes les informations saisies sont correctes.
  10. Le mappage de données de terminal au contrat s'affiche sur la page de chaîne de blocs.
 
@@ -173,7 +174,7 @@ Félicitations, vous êtes opérationnel !
 {: #test_simple}
 
 Si vous êtes connecté à la matrice fournie par IBM et que vous avez mappé vos données de terminal à l'exemple de contrat, vous pouvez tester le flux de données de bout en bout entre le terminal et le grand livre de chaîne de blocs. Utilisez l'interface utilisateur de surveillance IoT Blockchain pour consulter l'activité et les données de chaîne de blocs pour vos actifs.  
-**Astuce :** Si l'interface utilisateur de surveillance n'est pas encore installée dans votre environnement local, vous pouvez l'installer dès maintenant. Suivez les instructions décrites dans le fichier Readme Monitoring UI disponible dans le répertoire GitHub [Blockchain Monitoring UI](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui).  
+**Astuce :** Si l'interface utilisateur de surveillance n'est pas encore installée dans votre environnement local, vous pouvez l'installer dès maintenant. Suivez les instructions décrites dans le fichier Readme Monitoring UI disponible dans le répertoire GitHub [Blockchain Monitoring UI![](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui){: new_window}.  
 1. Configurez l'interface utilisateur de surveillance pour qu'elle se connecte à {{site.data.keyword.iot_short_notm}}.  
  Dans l'interface utilisateur de surveillance, cliquez sur **CONFIGURATION** pour configurer sa connexion :
  <table>
@@ -202,7 +203,7 @@ Si vous êtes connecté à la matrice fournie par IBM et que vous avez mappé vo
 </tr>
 </tbody>
 </table>
-**Scénario IBM de base :** Pour configurer l'interface utilisateur de surveillance pour qu'elle se connecte aux contrats de base ou aux contrats commerciaux plus avancés, utilisez les informations de connexion fournies sur la page wiki [IoT Blockchain Connection Info](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections) de la communauté Watson IoT Blockchain. Si nécessaire, prenez contact avec votre agent IBM blockchain pour obtenir les droits d'accès à la communauté.
+**Scénario IBM de base :** Pour configurer l'interface utilisateur de surveillance pour qu'elle se connecte aux contrats de base ou aux contrats commerciaux plus avancés, utilisez les informations de connexion fournies sur la page wiki [IoT Blockchain connection Info ![](../../icons/launch-glyph.svg)](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} de la communauté Watson IoT Blockchain. Si nécessaire, prenez contact avec votre agent IBM blockchain pour obtenir les droits d'accès à la communauté.
 2. Dans l'éditeur de flux Node-RED, cliquez sur le bouton du noeud CON123 afin d'injecter des données de terminal, faites en sorte que ces dernières soient envoyées sous forme de message à {{site.data.keyword.iot_short_notm}} et écrites dans le grand livre {{site.data.keyword.iot_short_notm}} par le contrat simple.   
 **Astuce :** Pour obtenir un flot de données en continu, cliquez deux fois sur le noeud d'injection, affectez la valeur `interval` au paramètre Répéter et configurez un intervalle approprié, par exemple, 1 minute.
 3. Dans l'interface utilisateur de surveillance, vérifiez que les données de terminal sont affichées comme prévu dans les blocs de chaîne de blocs.  

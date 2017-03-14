@@ -40,14 +40,14 @@ Des instances de {{site.data.keyword.iot_short_notm}} peuvent être créées dan
 ### Calculatrice de la tarification IoT
 Pour plus d'informations sur les modèles de tarification et les plans {{site.data.keyword.iot_short_notm}} disponibles :
 1. Accédez à [IoT Pricing calculator ![](../../../icons/launch-glyph.svg)](http://iot-cost-calculator.ng.bluemix.net/){: new_window}.  
-2. Cliquez sur **Add** ou **Configure** en regard de l'élément Internet of Things Platform. 
-3. Effectuez une sélection dans la liste déroulante **Pricing tier**, puis entrez des valeurs estimées pour la quantité de données que vous prévoyez d'échanger, d'analyser sur le nuage et d'analyser sur les terminaux Edge.   
-Le prix estimé pour le niveau et le chargement de données sélectionnés s'affiche. 
+2. Cliquez sur **Add** ou **Configure** en regard de l'élément Internet of Things Platform.
+3. Effectuez une sélection dans la liste déroulante **Pricing tier**, puis entrez des valeurs estimées pour la quantité de données que vous prévoyez d'échanger, d'analyser sur le nuage et d'analyser sur les terminaux Edge.  
+Le prix estimé pour le niveau et le chargement de données sélectionnés s'affiche.
 
 ### Informations sur le plan en cours
-1. Sur votre tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur le titre Internet of Things Platform pour l'organisation {{site.data.keyword.iot_short_notm}} pour laquelle vous souhaitez obtenir des informations sur le plan en cours. 
+1. Sur votre tableau de bord {{site.data.keyword.Bluemix_notm}}, cliquez sur le titre Internet of Things Platform pour l'organisation {{site.data.keyword.iot_short_notm}} pour laquelle vous souhaitez obtenir des informations sur le plan en cours.
 2. Sélectionnez l'onglet **Plan**.  
-Les détails de votre plan de tarification en cours s'affichent. 
+Les détails de votre plan de tarification en cours s'affichent.
 
 # Liens connexes
 {: #rellinks}
