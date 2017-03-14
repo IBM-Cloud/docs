@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-13"
+lastupdated: "2017-03-14"
 
 ---
 {:new_window: target="_blank"}
@@ -21,11 +21,11 @@ Build your Android apps with the {{site.data.keyword.appid_short}} client SDK, i
 ## Before you begin
 {: #before-you-begin}
 
-You need:
+You need the following information:
   * An instance of the {{site.data.keyword.appid_short_notm}} service.
-  * Your Tenant ID.
-    * In the **Service Credentials** tab of your service dashboard, click **View Credentials**. Your Tenant ID is displayed in the TenantID field. This value is used for initializing your app.
-  * Your {{site.data.keyword.Bluemix}} region. You can find your current region in the UI. The value is used for initializing your app.
+  * Your tenant ID.
+    * In the **Service Credentials** tab of your service dashboard, click **View Credentials**. Your tenant ID is displayed in the **tenant ID** field. This value is used for initializing your app.
+  * Your {{site.data.keyword.Bluemix}} region. You can find your region by looking in the UI. The value is used for initializing your app.
     <table> <caption> Table 1. {{site.data.keyword.Bluemix_notm}} regions and corresponding SDK values </caption>
     <tr>
       <th> Bluemix Region </th>
@@ -76,7 +76,7 @@ You need:
      }
     ```
     {:pre}
-5. Find the defaultConfig section and add the following line:
+5. Find the defaultConfig section and add the following lines of code:
 
     ```
     gradle
@@ -91,7 +91,7 @@ You need:
 ## Initializing the Client SDK
 {: #initialize-client-sdk}
 
-Initialize the client SDK by passing the context, tenant Id and region parameters to the initialize method. A common, though not mandatory, place to put the initialization code is in the onCreate method of the main activity in your Android application.
+Initialize the client SDK by passing the context, tenant ID, and region parameters to the initialize method. A common, though not mandatory, place to put the initialization code is in the onCreate method of the main activity in your Android application.
 
     ```java
     AppID.getInstance().initialize(getApplicationContext(), <tenantId>, AppID.REGION_UK);
@@ -101,12 +101,12 @@ Initialize the client SDK by passing the context, tenant Id and region parameter
     2. Replace the AppID.REGION_UK with your {{site.data.keyword.Bluemix_notm}} region.
 
 
-## Authenticate users using the login widget
+## Authenticate users by using the login widget
 {: #authenticate-login-widget}
 
-The login widget default configuration uses Facebook and Google as authentication options. If you configure only one of them the login widget will NOT launch and the user will be redirected to the configured IDP authentication screen.
+The login widget default configuration requires the use of both Facebook and Google for authentication. If you configure only one of them, the login widget does not launch and the user is redirected to the configured IDP authentication screen.
 
-After the {{site.data.keyword.appid_short_notm}} client SDK is initialized, you can start to authenticate users by launching the login widget.
+After the {{site.data.keyword.appid_short_notm}} client SDK is initialized, you can authenticate your users by running the login widget.
 
     ```java
     LoginWidget loginWidget = AppID.getInstance().getLoginWidget();

@@ -80,7 +80,8 @@ If the request returns a valid token, control is passed to the next middleware a
 ### Web app strategy
 {: #web notoc}
 
-Web app strategy is based on authorization_code OAuth2 flow and should be used for web applications that use browsers. The strategy provides tools to easily implement authentication and authorization flows. When WebAppStrategy detects unauthenticated attempts to access a protected resource it will automatically redirect a user's browser to the authentication page. After successful authentication, the user will be returned to the web application's callback URL. The service uses WebAppStrategy to obtain access and identity tokens. After obtaining these tokens the WebAppStrategy stores them in an HTTP session under `WebAppStrategy.AUTH_CONTEXT`. It is up to the developer to decide whether to store access and identity tokens in the application database.
+
+When the web app strategy class detects unauthenticated attempts to access a protected resource, it automatically redirects a user's browser to the authentication page. After successful authentication, the user is returned to the web application's callback URL. The service uses the web app strategy class to obtain access and identity tokens. After obtaining these tokens, the web app strategy class stores them in an HTTP session under WebAppStrategy.AUTH_CONTEXT. It is up to the user to decide whether to store access and identity tokens in the application database.
 
 ## Authorization header
 {: #auth-header}

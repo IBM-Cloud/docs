@@ -75,7 +75,7 @@ The {{site.data.keyword.appid_short_notm}} client SDK is distributed with CocoaP
     ```
     {:pre}
 
-6. Open your Xcode project and enable Keychain Sharing. Under **Project Settings**, click **Capabilities** > **Keychain sharing**.
+6. Open your Xcode project and enable keychain sharing. Under **Project Settings**, click **Capabilities** > **Keychain Sharing**.
 7. Under **Project Settings** > **Info** > **URL Types**, add a URL Type. Fill both the **Identifier** text box and the **URL Scheme** text box with this value: $(PRODUCT_BUNDLE_IDENTIFIER)
 
 
