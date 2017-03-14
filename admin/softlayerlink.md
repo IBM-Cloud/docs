@@ -188,7 +188,7 @@ Not all {{site.data.keyword.Bluemix_notm}} services can be used with SoftLayer. 
 * {{site.data.keyword.mqa}}
 * {{site.data.keyword.mobileappbuilder_short}}
 * {{site.data.keyword.mql}}
-* {{site.data.keyword.nlclassifierlshort}}
+* {{site.data.keyword.nlclassifiershort}}
 * {{site.data.keyword.objectstorageshort}}
 * {{site.data.keyword.personalityinsightsshort}}
 * {{site.data.keyword.presenceinsightsshort}}
