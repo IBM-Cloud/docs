@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-03"
+lastupdated: "2017-03-14"
 
 ---
 
@@ -18,13 +18,15 @@ lastupdated: "2017-03-03"
 {{site.data.keyword.DRA_full}} applies developer, team, and deployment analytics to your busiest DevOps projects. Use it to learn how compliant your team is with DevOps and developer practices, to manage risk in your codebase, and to automatically enforce quality standards in continuous delivery projects.
 {:shortdesc}
 
-{{site.data.keyword.DRA_short}} comprises three groups of capabilities:
+{{site.data.keyword.DRA_short}} comprises several groups of capabilities:
 
    * Developer Insights provides a comprehensive way to explore your project’s development maturity. You can identify files with high error proneness and get a compliance view of the project against developer practices.
 
    * Team Dynamics uses social coding analysis to help you learn how your team collaborates and understand how it can work better.
 
    * Deployment Risk is like a continuous delivery safety net. It analyzes the results from unit tests, functional tests, application scans, and code coverage tools at specified gates in your deployment process and prevents risky changes from being released.
+
+   * Delivery Insights shows deployment statistics, metrics, and other information about your IBM UrbanCode Deploy installation. For example, it can show charts of deployment duration, successes, and failures, all sorted by logically grouped environments. See [Integrating DevOps Insights with IBM UrbanCode Deploy](uc_insights_overview.html).
 
 {{site.data.keyword.DRA_short}} is an integration in the Bluemix toolchain catalog. For more information about toolchains, see [Working with toolchains](/docs/services/ContinuousDelivery/toolchains_working.html).
 
