@@ -17,8 +17,8 @@ The {{site.data.keyword.investportshort}} service lets you store, update, and qu
 After you create an application that binds to the service instance, use the service access credentials you get to make calls to the API. The service access credentials are similar to the following example:
 
 ```
-    {
-    "fss-portfolio-service": [
+{
+  "fss-portfolio-service": [
     {
       "credentials": {
         "url": "https://investment-portfolio.mybluemix.net/",
