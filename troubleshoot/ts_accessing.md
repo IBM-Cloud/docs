@@ -173,30 +173,6 @@ The confirmation email is sent to the email address that you provided. Check you
 {: tsResolve}
 
 
-<!-- begin STAGING ONLY --> 
-
-## Can't log in to {{site.data.keyword.Bluemix_notm}}: Problem accessing external website
-{: #ts_bmlinkid}
-
-To log in to {{site.data.keyword.Bluemix_notm}} by using your IBM intranet ID, you must link your intranet ID with your IBMid.
-
-After you select **Sign in with your intranet ID** from the {{site.data.keyword.Bluemix_notm}} Sign in page, the following message might be displayed::
-{: tsSymptoms} 
-
-`Problem Accessing External Website`
-
-This problem occurs when you log in to {{site.data.keyword.Bluemix_notm}} by using an IBM intranet ID that isn't linked to an IBMid. Your IBMid is the ID that you use to log in to www.ibm.com.
-{: tsCauses}
-
-As an IBM employee, before you can log in to {{site.data.keyword.Bluemix_notm}} by using your IBM intranet ID, you must link your intranet ID with your external IBMid. To link the two IDs, complete the following steps:
-{: tsResolve} 
-
-  1. On the [Central Sign-on ![External link icon](../icons/launch-glyph.svg "External link icon")](https://w3-03.sso.ibm.com/tools/cso/index.jsp){: new_window} page, click **My Sign-ons**.
-  2. On the My Sign-ons page, click **Link IDs**, and enter your IBMid and password on the {{site.data.keyword.Bluemix_notm}} Sign in page. After that, your intranet ID and IBMid will be automatically linked.
-  
-
-<!-- end STAGING ONLY -->
-
 ## You have unsaved changes
 {: #ts_unsaved_changes}
 
