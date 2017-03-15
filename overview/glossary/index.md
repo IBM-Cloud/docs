@@ -131,7 +131,7 @@ A web or mobile device application. See also [mobile application](#x4258535), [w
 ### app ID
 {: #x7909906}
 
-A GUID that is assigned to a Bluemix mobile application. See also [globally unique identifier](#x2390455). See also [{{site.data.keyword.appid_full}}}(/docs/services/appid/index.html)
+A GUID that is assigned to a Bluemix mobile application. See also [globally unique identifier](#x2390455). See also [{{site.data.keyword.appid_full}}](/docs/services/appid/index.html)
 
 ### application key
 {: #x7290111}
