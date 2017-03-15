@@ -2,13 +2,12 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-03-15"
 
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
 
@@ -16,7 +15,7 @@ lastupdated: "2017-03-14"
 # About {{site.data.keyword.appid_short_notm}}
 {: #gettingstarted}
 
-With {{site.data.keyword.appid_full}} developers can secure and add authentication to their {{site.data.keyword.Bluemix}} apps, with a few lines of code. Developers can also manage user specific data to build personalized app experiences.
+With {{site.data.keyword.appid_full}} developers can secure and add authentication to their {{site.data.keyword.Bluemix}} apps, with a few lines of code. Developers can also manage user-specific data to build personalized app experiences.
 {:shortdesc}
 
 
@@ -25,7 +24,7 @@ You can use the service in the following ways:
 * To add authentication to your mobile and web applications
 * To grant access to protected back-end resources and web apps
 * To protect Node.js and Swift applications that are hosted on {{site.data.keyword.Bluemix_notm}}
-* To store end user data, such as app preferences or information from their public social profiles
+* To store user data, such as app preferences or information from their public social profiles
 * To use stored data to build personalized app experiences
 * To protect resources for both authenticated and anonymous users
 
@@ -38,7 +37,7 @@ You can use the service in the following ways:
 * Dashboard - Download onboarding samples, see activity logs, configure various authentication types and identity providers
 * Client SDK - Build mobile and web apps that use the service to implement user authentication
     * Prerequisites for Android: API 25 or higher, Java 8.x, Android SDK tools 25.2.5 or higher, Android SDK Platform Tools 25.0.3 or higher, Android Build Tools version 25.0.2
-    * Prerequisites for iOS: iOS9 or higher, MacOS 10.11.5, XCode 8.2
+    * Prerequisites for iOS: iOS9 or higher, MacOS 10.11.5, Xcode 8.2
 * Server SDK - Protect resources that are hosted on {{site.data.keyword.Bluemix_notm}}
     * Supported runtimes are Node.js and Swift
 
@@ -48,13 +47,13 @@ You can use the service in the following ways:
 
 Figure 1. {{site.data.keyword.appid_short_notm}} architecture diagram
 
-You can protect your cloud resources with the {{site.data.keyword.appid_short_notm}} server SDK. Use the request class provided by the {{site.data.keyword.appid_short_notm}} client SDK to communicate with your protected cloud resources.
+You can protect your cloud resources with the {{site.data.keyword.appid_short_notm}} server SDK. Use the request class that is provided by the {{site.data.keyword.appid_short_notm}} client SDK to communicate with your protected cloud resources.
 
 * The server SDK detects an unauthorized request and returns HTTP 401 authorization challenge.
 * The client SDK detects an HTTP 401 Authorization challenge and automatically starts the authentication process based on configuration of the identity providers.
 * Authentication is attempted according to currently configured identity providers.
 * After successful authentication, the service returns authorization and identity tokens.
-* The client SDK automatically adds the authorization token to the original request, and re-sends the request to the cloud resource.
+* The client SDK automatically adds the authorization token to the original request, and resends the request to the cloud resource.
 * The server SDK extracts the access token from the request and validates it with {{site.data.keyword.appid_short_notm}}.
 Access is granted and the response is returned to the application.
 
@@ -73,7 +72,7 @@ Access is granted and the response is returned to the application.
 {: #access-tokens notoc}
 
 The access token enables communication with resources that are protected by {{site.data.keyword.appid_short_notm}} authorization filters, see [Protecting Resources](/docs/services/appid/protecting-resources.html).
-The token conforms to Javascript Object Signing and Encryption (JOSE) specifications and has the following format:
+The token conforms to JavaScript Object Signing and Encryption (JOSE) specifications and has the following format:
 
 ```
 Header: {
@@ -193,4 +192,4 @@ You can use the following identity providers in your mobile and Web applications
 ## Using the default configuration
 {: #default-configuration}
 
-The default identity providers configuration uses internal IBM credentials. You can use internal IBM credentials when you're in development mode only. For each identity provider, these credentials are limited to 100 uses per {{site.data.keyword.appid_short_notm}} instance, per day. Before publishing your application, update the Facebook and Google default configuration to your own credentials. To update your configuration, see [configuring identity providers](/docs/services/appid/identity-providers.html).
+{{site.data.keyword.appid_short_notm}} provides a default configuration when you initially set up your identity providers. You can use the default configuration in development mode only. For each identity provider, these credentials are limited to 100 uses per {{site.data.keyword.appid_short_notm}} instance, per day. Before you publish your application, update the default configuration to your own credentials. To update your configuration, see [configuring identity providers](/docs/services/appid/identity-providers.html).
