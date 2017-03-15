@@ -136,7 +136,7 @@ import SwiftMetricsBluemix
       let monitor: SwiftMonitor
       sm = try SwiftMetrics()
       _ = SwiftMetricsKitura(swiftMetricsInstance: sm)
-      _ = AutoScalar(swiftMetricsInstance: sm)
+      _ = SwiftMetricsBluemix(swiftMetricsInstance: sm)
       monitor = sm.monitor()
       ```
     +  A sample of a Swift app that uses SwiftMetrics and Kitura is shown below:
@@ -169,7 +169,7 @@ import SwiftMetricsBluemix
               configMgr = ConfigurationManager().load(.environmentVariables)
               sm = try SwiftMetrics()
               _ = SwiftMetricsKitura(swiftMetricsInstance: sm)
-              _ = AutoScalar(swiftMetricsInstance: sm)
+              _ = SwiftMetricsBluemix(swiftMetricsInstance: sm)
               monitor = sm.monitor()
               // All web apps need a Router instance to define routes
               router = Router()
