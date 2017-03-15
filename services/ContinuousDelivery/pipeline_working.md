@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-2"
+lastupdated: "2017-3-14"
 
 ---
 
@@ -12,32 +12,32 @@ lastupdated: "2017-3-2"
 {:codeblock: .codeblock}
 {:shortdesc: .shortdesc}
 
-# Working with {{site.data.keyword.deliverypipeline}} {: #pipeline-working}  
+# Working with {{site.data.keyword.deliverypipeline}} {: #pipeline-working}
 
 To automate your builds and deployments to {{site.data.keyword.Bluemix}}, use {{site.data.keyword.deliverypipeline}} for {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
 
-With {{site.data.keyword.deliverypipeline}}, you can choose from several build types. You provide the build script, and {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.jazzhub_short}} runs it; you don't need to set up build systems. Then, with one click, you can automatically deploy your app to one or many {{site.data.keyword.Bluemix_notm}} spaces, public Cloud Foundry servers, or Docker containers on IBM Containers for {{site.data.keyword.Bluemix_notm}}.  
+With {{site.data.keyword.deliverypipeline}}, you can choose from several build types. You provide the build script, and {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.jazzhub_short}} runs it; you don't need to set up build systems. Then, with one click, you can automatically deploy your app to one or many {{site.data.keyword.Bluemix_notm}} spaces, public Cloud Foundry servers, or Docker containers on IBM Containers for {{site.data.keyword.Bluemix_notm}}.
 
 Build jobs compile and package your app source code from Git repositories. The build jobs produce deployable artifacts, such as WAR files or Docker containers for IBM Containers. In addition, you can run unit tests within your build automatically. You can set up your build jobs so that each time a commit is pushed, a build is triggered.
 
-A deployment job takes output from a build job and deploys it to either IBM Containers or Cloud Foundry servers such as {{site.data.keyword.Bluemix_notm}}.  
+A deployment job takes output from a build job and deploys it to either IBM Containers or Cloud Foundry servers such as {{site.data.keyword.Bluemix_notm}}.
 
 You can deploy to one or many regions and services. For example, you can set up your {{site.data.keyword.deliverypipeline}} to use one or more services, test in one region, and deploy to production in multiple regions. For more information, see [Regions](/docs/overview/whatisbluemix.html#ov_intro_reg){: new_window}.
 
-<!-- If you use multiple pipelines in a toolchain, you can create a composite pipeline to manage the deployment of all pipelines from a single location. -->
+If you use multiple pipelines in a toolchain, you can create a composite pipeline to manage the deployment of all pipelines from a single location.
 
 There are several ways to create a pipeline, including adding a pipeline to an existing application and creating a pipeline without an existing application. If you do not already have a {{site.data.keyword.deliverypipeline}} service in your organization, you can go to the catalog, click {{site.data.keyword.deliverypipeline}}, and click Create.
 
-Complete these steps to set up a {{site.data.keyword.deliverypipeline}} for an existing application:    
+Complete these steps to set up a {{site.data.keyword.deliverypipeline}} for an existing application:
 
 1. On the {{site.data.keyword.Bluemix_notm}} app Dashboard, click your app.
 1. From the hamburger menu on the {{site.data.keyword.Bluemix_notm}} menu bar, click **Services**, and then click **DevOps**.
 1. Click **Pipelines**, and then click **Create a Pipeline**.
 
-To [create a pipeline![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window} that is configured to deploy a Cloud Foundry application, follow these steps:    
+To [create a pipeline![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window} that is configured to deploy a Cloud Foundry application, follow these steps:
 
-1. Click **Cloud Foundry**.  
+1. Click **Cloud Foundry**.
 1. If you want to use a different name for the pipeline, change its default name.
 1. If you want to use a different name for the application, change its default name. This name is the application that the pipeline deploys to.
 1. If you don't have a toolchain, a toolchain with a default name is created for you. If you want to use a different name for the toolchain, change its name. With the toolchain, you can extend the capabilities of your pipeline by integrating with other tools and services. For more information about toolchains, see [Working with toolchains](/docs/services/ContinuousDelivery/toolchains_working.html){: new_window}.
@@ -68,7 +68,7 @@ To create an [empty pipeline![External link icon](../../icons/launch-glyph.svg "
 1. Either select the toolchain that you want to use or type a name for the new toolchain that you want to create.
 1. Click **Create**. An empty pipeline is created and represented as a card on the toolchain's Overview page.
 
-From your {{site.data.keyword.deliverypipeline}}, change your configuration; check the status of builds, the deployed app, and recent deployments; see the most recent logs and deployment details; or delete your pipeline.  
+From your {{site.data.keyword.deliverypipeline}}, change your configuration; check the status of builds, the deployed app, and recent deployments; see the most recent logs and deployment details; or delete your pipeline.
 
 # Related Links
 {: #rellinks}
@@ -76,9 +76,10 @@ From your {{site.data.keyword.deliverypipeline}}, change your configuration; che
 ## Tutorials and Samples
 {: #samples}
 
+* [Learning Lab![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/category/courses){:new_window}
 * [developerWorks: {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.deliverypipeline}} service![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/developerworks/topics/delivery%20pipeline%20service){:new_window}
 
 ## Related Links
 {: #general}
 
-* [IBM Bluemix Garage Method: Delivery pipeline![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/practice_delivery_pipeline/){:new_window}
+* [IBM Cloud Garage Method: Delivery pipeline![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/content/deliver/practice_delivery_pipeline/){:new_window}
