@@ -427,32 +427,6 @@ Use one of the following methods:
   * Create a `package.json` file that is in the same directory as your app.
   
   
-<!-- begin STAGING ONLY --> 
-
-## Bluemix Live Sync Debug doesn't start from the command line
-{: #ts_no_debug}
-
-You enabled the IBM Bluemix Live Sync Debug feature for your app by using the command line, but you can't access the Debug interface.  
-
-You enabled the Debug feature for your app by setting the **BLUEMIX_APP_MGMT_ENABLE** environment variable. However, you can't access the Debug user interface at `app_url/bluemix-debug/manage`.
-{: tsSymptoms}
-
-The Debug feature can't be enabled in these situations:
-{: tsCauses} 
-
-  * When the `manifest.yml` contains the command attribute
-  * When you use the **-c** option to push an app to {{site.data.keyword.Bluemix_notm}}
-  
-Use one of the following options to resolve the issue: 
-{: tsResolve}
-
-  * The recommended practice is to use the IBM Node.js buildpack to start the app. For more information, see the Startup command section of the [Deploying a Node.js application to {{site.data.keyword.Bluemix_notm}}](/docs/runtimes/nodejs/index.html#nodejs_runtime) topic. 
-  * Disable the command for your existing app either by revising the command attribute in your `manifest.yml` to command: null or by editing your push command to include `-c null`. 
-  * Remove the **command** attribute from the `manifest.yml`. Then delete the current app from {{site.data.keyword.Bluemix_notm}} and push the app again.
-  
-<!-- end STAGING ONLY -->  
-  
-  
 ## Orgs can't be found on {{site.data.keyword.Bluemix_notm}}
 {: #ts_orgs}
 
