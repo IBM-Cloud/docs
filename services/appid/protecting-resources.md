@@ -70,7 +70,7 @@ The API protection strategy returns an HTTP 401 response with a list of scopes t
 ### API strategy
 {: #api notoc}
 
-The API strategy expects requests to contain an authorization header with a valid access token. The response can also include an identity token, but it is not required; see [Access and identity tokens](/docs/services/appid/about.html#acess-tokens).
+The API strategy expects requests to contain an authorization header with a valid access token. The response can also include an identity token, but it is not required; see [Access and identity tokens](/docs/services/appid/about.html#acess-and-identity).
 
 If a token is invalid or has expired, the API strategy returns an HTTP 401 error that contains the following information: Www-Authenticate=Bearer scope="{scope}" error="{error}". The `error` component is optional.
 
