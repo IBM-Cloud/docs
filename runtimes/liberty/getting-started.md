@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-02-23"
+lastupdated: "2017-03-08"
 
 ---
 
@@ -96,25 +96,27 @@ In this manifest.yml file, **random-route: true** generates a random route for y
 ## 4. Deploy to {{site.data.keyword.Bluemix_notm}}
 {: #deploy}
 
-Run the following command to set your API endpoint, replacing the _API-endpoint_ value with the API endpoint for your region.
-   ```
+Deploy your app to one of the following Bluemix regions. For optimal latency, choose a region that's closest to your users.
+
+|Region          |API endpoint                             |
+|:---------------|:-------------------------------|
+| US South       |https://api.ng.bluemix.net     |
+| United Kingdom | https://api.eu-gb.bluemix.net  |
+| Sydney         | https://api.au-syd.bluemix.net |
+
+1. Set the API endpoint by replacing  `<API-endpoint>`  with the endpoint for your region.
+  ```
 cf api <API-endpoint>
-   ```
-   {: pre}
+  ```
+  {: pre}
 
-|API endpoint                             |Region          |
-|:-------------------------------|:---------------|
-| https://api.ng.bluemix.net     | US South       |
-| https://api.eu-gb.bluemix.net  | United Kingdom |
-| https://api.au-syd.bluemix.net | Sydney         |
-
-Log in to your {{site.data.keyword.Bluemix_notm}} account.
+1. Log in to your {{site.data.keyword.Bluemix_notm}} account.
   ```
 cf login
   ```
   {: pre}
 
-From within the `get-started-java` directory, push your application to  {{site.data.keyword.Bluemix_notm}}.
+1. From within the `get-started-java` directory, push your application to  {{site.data.keyword.Bluemix_notm}}.
   ```
 cf push
   ```
@@ -180,8 +182,8 @@ Next, we'll add a NoSQL database to this application and set up the application 
 
 1. In your browser, log in to {{site.data.keyword.Bluemix_notm}} and go to the Dashboard. Select your application by clicking on its name in the **Name** column.
 2. Click on **Connections** and then **Connect new**.
-2. In the **Data & Analytics** section, select **Cloudant NoSQL DB** and then create the service.
-3. Select **Restage** when prompted. {{site.data.keyword.Bluemix_notm}} will restart your application and provide the database credentials to your application using the `VCAP_SERVICES` environment variable. This environment variable is available to the application only when it is running on {{site.data.keyword.Bluemix_notm}}.
+3. In the **Data & Analytics** section, select **Cloudant NoSQL DB** and then create the service.
+4. Select **Restage** when prompted. {{site.data.keyword.Bluemix_notm}} will restart your application and provide the database credentials to your application using the `VCAP_SERVICES` environment variable. This environment variable is available to the application only when it is running on {{site.data.keyword.Bluemix_notm}}.
 
 Environment variables enable you to separate deployment settings from your source code. For example, instead of hardcoding a database password, you can store this in an environment variable which you reference in your source code. [Learn more...](/docs/manageapps/depapps.html#app_env)
 {: tip}
@@ -202,6 +204,7 @@ We're now going to update your local code to point to this database. We'll store
   ```
   cloudant_url=https://123456789 ... bluemix.cloudant.com
   ```
+  {:pre}
 
 4. Restart the Liberty server in Eclipse from the `Servers` view.
 
