@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-28"
+lastupdated: "2017-03-08"
 ---
 
 {:new_window: target="_blank"}
@@ -24,14 +24,14 @@ The {{site.data.keyword.iotmapinsights_short}} service provides the following fe
 - Dynamic event data
 - Geospatial tools
 
-The {{site.data.keyword.iotmapinsights_short}} service collects and uses [OpenStreetMap](http://www.openstreetmap.org/){: new_window} road network data that is stored in the service memory cache for processing.
+The {{site.data.keyword.iotmapinsights_short}} service collects and uses [OpenStreetMap ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.openstreetmap.org/){: new_window} road network data that is stored in the service memory cache for processing.
 
-Data from OpenStreetMap is made available under the Open Data Common Open Database License (ODbL) by the OpenStreetMap Foundation (OSMF). For more information, see [OpenStreetMap Copyright and License](http://www.openstreetmap.org/copyright){: new_window}.
+Data from OpenStreetMap is made available under the Open Data Common Open Database License (ODbL) by the OpenStreetMap Foundation (OSMF). For more information, see [OpenStreetMap Copyright and License ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.openstreetmap.org/copyright){: new_window}.
 
 ## Static map data
 {: #static_map_data_query}
 
-One of the key features of the product is the ability to retrieve detailed road information for use with your applications. Use the Link Query REST API interface to query for static map road attribute data by link ID. Use the [map matching function](#map_matching) function of  {{site.data.keyword.iotmapinsights_short}} to identify the required link ID parameter.
+One of the key features of the product is the ability to retrieve detailed road information for use with your applications. Use the Link Query REST API interface to query for static map road attribute data by link ID. Use the [map matching function](#map_matching) function of {{site.data.keyword.iotmapinsights_short}} to identify the required link ID parameter.
 
 The data that is returned includes the following information about the requested link ID:
 
@@ -67,7 +67,7 @@ Enhance your application with the map matching and route search functions that a
 ### Map matching
 {: #map_matching}
 
-Use the map matching REST API interface with your application to map actual device GPS coordinates to [OpenStreetMap](http://www.openstreetmap.org/){: new_window} road network data to increase the location accuracy for inaccurate GPS data. You can also receive information about road attributes based on location. The map matching REST API enables your application to fit raw GPS data point to a matched point on the road link.
+Use the map matching REST API interface with your application to map actual device GPS coordinates to [OpenStreetMap ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.openstreetmap.org/){: new_window} road network data to increase the location accuracy for inaccurate GPS data. You can also receive information about road attributes based on location. The map matching REST API enables your application to fit raw GPS data point to a matched point on the road link.
 
 The map matching REST API interface receives one point of longitude and latitude GPS coordinate data and returns a map-matched point. The map-matched point is analyzed by considering historical data for each car within a specific time period to find the most probable point in real time. For points that do not have historical location data, the map matching interface returns the nearest point on the road link from the requested GPS point.
 

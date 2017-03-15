@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-28"
+lastupdated: "2017-03-03"
 ---
 
 {:new_window: target="_blank"}
@@ -16,7 +16,6 @@ lastupdated: "2017-02-28"
 {: #iotdriverinsights_overview}
 
 Driving Behavior Analysis is a service that you can use to analyze the behavior of a driver from car probe and contextual data.
-
 {:shortdesc}
 
 
@@ -102,7 +101,7 @@ The {{site.data.keyword.iotdriverinsights_short}} REST API provides requests tha
    - `getAnalyzedTripInfo` returns the information of the specified analyzed trajectory
    - `deleteJobResult` deletes all analyzed results that are related to a job
 
-For more information, see the [{{site.data.keyword.iotdriverinsights_short}} API](http://ibm.biz/IoTDriverBehavior_APIdoc){:new_window} documentation.
+For more information, see the [{{site.data.keyword.iotdriverinsights_short}} API ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ibm.biz/IoTDriverBehavior_APIdoc){:new_window} documentation.
 
 ## Big data analysis infrastructure
 {: #big_data_analysis_infrastructure}
