@@ -1,10 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
   
-lastupdated: "2016-10-20"
-
+lastupdated: "2016-03-08"
 
 ---
 
@@ -16,10 +15,14 @@ lastupdated: "2016-10-20"
 # Troubleshooting
 {: #troubleshooting}
 
+If you experience problems with {{site.data.keyword.Bluemix}}, you can use this troubleshooting information to identify and resolve the problem.
 
-If you experience problems with {{site.data.keyword.Bluemix}}, you can perform troubleshooting tasks to determine the corrective action to take.
+Log in to the {{site.data.keyword.Bluemix_notm}} console:
+* To view the status of the running services and runtimes, click **Suport > Status** in the menu bar.
+* To view notifications, click **Account > Notifications** in the menu bar. 
+* To search documentation and Stack Overflow or developerWorks (dW) Answers forums for answers, or to contact Support, click **Suport > Find Answers** in the menu bar.
 
-Log in to the {{site.data.keyword.Bluemix_notm}} console and click the **Account** menu item from the menu bar. You can view the status of the running services and runtimes and view notifications. In addition, you can select **Support** &gt; **Get help**, where you can search documentation and Stack Overflow or developerWorks (dW) Answers forums for answers, or contact Support.
-
-
-If you are using an account that is linked between {{site.data.keyword.Bluemix_notm}} and {{site.data.keyword.BluSoftlayer}}, you can log in to the Bluemix console and click the **Status** link to view the status of running services and runtimes. In addition, you can click the **Support** link from the menu bar to open the Support widget and then select **Add Ticket** &gt; **Find Answers**. You can also go directly to *Stack Overflow* or *developerWorks (dW) Answers forms* to search for answers or post questions.
+If your account is linked between {{site.data.keyword.Bluemix_notm}} and {{site.data.keyword.BluSoftlayer}}, log in to the Bluemix console:
+* To view the status of the running services and runtimes, click the **Status** link.
+* To search for answers, click the **Support** link in the menu bar, then click **Add Ticket > Find Answers**.
+  You can also go directly to *Stack Overflow* or *developerWorks (dW) Answers forums* to search for answers or post questions.
