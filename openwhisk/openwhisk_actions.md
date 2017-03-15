@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-21"
+lastupdated: "2017-03-13"
 
 ---
 
@@ -26,6 +26,13 @@ Learn how to create, invoke, and debug actions in your preferred development env
 * [Python](#openwhisk_actions_python)
 * [Java](#openwhisk_actions_java)
 * [Docker](#openwhisk_actions_docker)
+
+In addition, learn about:
+
+* [Watching action output](#openwhisk_actions_polling)
+* [Listing actions](#openwhisk_listing_actions)
+* [Deleting actions](#openwhisk_delete_action)
+* [Accessing action metadata within the action body](#openwhisk_action_metadata)
 
 
 ## Creating and invoking JavaScript actions
@@ -54,7 +61,7 @@ Review the following steps and examples to create your first JavaScript action.
   ```
   wsk action create hello hello.js
   ```
-  {: pre}
+    {: pre}
   ```
   ok: created action hello
   ```
@@ -69,18 +76,20 @@ Review the following steps and examples to create your first JavaScript action.
   actions
   hello       private
   ```
+
   You can see the `hello` action you just created.
 
-4. After you create your action, you can run it in the cloud in OpenWhisk with the 'invoke' command. You can invoke actions with a *blocking* invocation (i.e., request/response style) or a *non-blocking* invocation by specifying a flag in the command. A blocking invocation request will _wait_ for the activation result to be available. The wait period is the lesser of 60 seconds or the action's configured [time limit](./openwhisk_reference.html#openwhisk_syslimits). The result of the activation is returned if it is available within the wait period. Otherwise, the activation continues processing in the system and an activation ID is returned so that one may check for the result later, as with non-blocking requests (see [here](#watching-action-output) for tips on monitoring activations).
+4. After you create your action, you can run it in the cloud in OpenWhisk with the 'invoke' command. You can invoke actions with a *blocking* invocation (i.e., request/response style) or a *non-blocking* invocation by specifying a flag in the command. A blocking invocation request will _wait_ for the activation result to be available. The wait period is the lesser of 60 seconds or the action's configured [time limit](./openwhisk_reference.html#openwhisk_syslimits). The result of the activation is returned if it is available within the wait period. Otherwise, the activation continues processing in the system and an activation ID is returned so that one may check for the result later, as with non-blocking requests (see [here](#openwhisk_actions_polling) for tips on monitoring activations).
 
   This example uses the blocking parameter, `--blocking`:
+
   ```
   wsk action invoke --blocking hello
   ```
   {: pre}
   ```
   ok: invoked hello with id 44794bd6aab74415b4e42a308d880e5b
-  ```
+    ```
   ```json
   {
       "result": {
@@ -90,9 +99,11 @@ Review the following steps and examples to create your first JavaScript action.
       "success": true
   }
   ```
+
   The command outputs two important pieces of information:
   * The activation ID (`44794bd6aab74415b4e42a308d880e5b`)
-  * The invocation result if it is available within the expected wait period  
+  * The invocation result if it is available within the expected wait period
+
   The result in this case is the string `Hello world` returned by the JavaScript function. The activation ID can be used to retrieve the logs or result of the invocation at a future time.  
 
 5. If you don't need the action result right away, you can omit the `--blocking` flag to make a non-blocking invocation. You can get the result later by using the activation ID. See the following example:
@@ -424,6 +435,9 @@ To create an OpenWhisk action from this package:
   ```
   {: pre}
 
+    > Please note: Using the Windows Explorer action for creating the zip file will result in an incorrect structure. OpenWhisk zip actions must have `package.json` at the root of the zip, while Windows Explorer will put it inside a nested folder. The safest option is to use the command line `zip` command as shown above.
+
+
 3. Create the action:
 
   ```
@@ -617,6 +631,68 @@ wsk action invoke --blocking --result helloSwift --param name World
 
 **Attention:** Swift actions run in a Linux environment. Swift on Linux is still in
 development, and {{site.data.keyword.openwhisk_short}} usually uses the latest available release, which is not necessarily stable. In addition, the version of Swift that is used with {{site.data.keyword.openwhisk_short}} might be inconsistent with versions of Swift from stable releases of XCode on MacOS.
+
+### Packaging an action as a Swift executable
+{: #openwhisk_actions_swift_zip}
+When you create an OpenWhisk Swift action with a Swift source file, it has to be compiled into a binary before the action is run. Once done, subsequent calls to the action are much faster until the container holding your action is purged.
+
+To avoid the delay of the compilation step, you can compile your Swift file into a binary and then upload it to OpenWhisk in a zip file. As you need the OpenWhisk scaffolding, the easiest way to create the binary is to build it within the same environment as it will be run in. These are the steps:
+
+- Run an interactive Swift action container.
+  ```
+  docker run -it -v "$(pwd):/owexec" openwhisk/swift3action bash
+  ```
+  {: pre}
+This puts you in a bash shell within the Docker container. Execute the following commands within it:
+  
+- Install zip for convenience, to package the binary
+  ```
+  apt-get install -y zip
+  ```
+  {: pre}
+- Copy the source code and prepare to build it
+  ```
+  cp /owexec/hello.swift /swift3Action/spm-build/main.swift 
+  ```
+  {: pre}
+  ```
+  cat /swift3Action/epilogue.swift >> /swift3Action/spm-build/main.swift
+  ```
+  {: pre}
+  ```
+  echo '_run_main(mainFunction:main)' >> /swift3Action/spm-build/main.swift
+  ```
+  {: pre}
+- zBuild and link
+  ```
+  /swift3Action/spm-build/swiftbuildandlink.sh
+  ```
+  {: pre}
+- Create the zip archive
+  ```
+  cd /swift3Action/spm-build
+  ```
+  {: pre}
+  ```
+  zip /owexec/hello.zip .build/release/Action
+  ```
+- Exit the Docker container
+  ```
+  exit
+  ```
+  {: pre}
+This has created hello.zip in the same directory as hello.swift. 
+-Upload it to OpenWhisk with the action name helloSwifty:
+  ```
+  wsk action update helloSwiftly hello.zip --kind swift:3
+  ```
+  {: pre}
+- To check how much faster it is, run 
+  ```
+  wsk action invoke helloSwiftly --blocking
+  ``` 
+  {: pre}
+
 
 ## Creating Java actions
 {: #openwhisk_actions_java}
@@ -835,7 +911,26 @@ You can use the {{site.data.keyword.openwhisk_short}} CLI to watch the output of
     2016-02-11T16:46:56.842065025Z stdout: hello bob!
   ```
 
-  Similarly, whenever you run the poll utility, you see in real time the logs for any actions running on your behalf in {{site.data.keyword.openwhisk_short}}.
+  Similarly, whenever you run the poll utility, you see in real time the logs for any actions running on your behalf in OpenWhisk.
+
+
+## Listing actions
+{: #openwhisk_listing_actions}
+
+You can list all the actions that you have created using:
+
+```
+wsk action list
+```
+{: pre}
+
+As you write more actions, this list gets longer and it can be helpful to group related actions into [packages](./packages.md). To filter your list of actions to just the those within a specific pacakge, you can use: 
+
+```
+wsk action list [PACKAGE NAME]
+```
+{: pre}
+
 
 ## Deleting actions
 {: #openwhisk_delete_action}
@@ -862,6 +957,7 @@ You can clean up by deleting actions that you do not want to use.
   {: pre}
 
 ## Accessing action metadata within the action body
+{: #openwhisk_action_metadata}
 
 The action environment contains several properties that are specific to the running action.
 These allow the action to programmatically work with OpenWhisk assets via the REST API,

@@ -2,16 +2,15 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-11-29"
-
+lastupdated: "2017-03-10"
 ---
 
-
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="\_blank"}
+{:new_window: target="blank"}
 {:shortdesc: .shortdesc}
-{:screen:.screen}
-{:codeblock:.codeblock}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
 # Configuring mobile connectivity and security
 {: #iot4e_configureMCA}
@@ -22,7 +21,9 @@ Enable mobile communications and security by configuring {{site.data.keyword.ama
 Before you begin, you must deploy an instance of the {{site.data.keyword.iotelectronics}} starter in your {{site.data.keyword.Bluemix_notm}}
  organization. Deploying an instance of the starter automatically deploys the component applications and services, including {{site.data.keyword.amafull}}.
 
-1. If you just deployed the {{site.data.keyword.iotelectronics}} starter, the Getting Started tab of the starter app is displayed, and you should proceed to the next step of these instructions. If the starter app is not displayed, open your {{site.data.keyword.Bluemix_notm}} dashboard and start your {{site.data.keyword.iotelectronics}} starter application by clicking the starter application name.
+1. In the {{site.data.keyword.Bluemix_notm}} dashboard, open the {{site.data.keyword.iotelectronics}} application.
+
+   **Tip:** The application is located in the Applications section of your {{site.data.keyword.Bluemix_notm}} dashboard. Be sure to click the name and not the route.
 
     ![{{site.data.keyword.iotelectronics}} in the dashboard](images/IoT4E_bm_dashboard.svg "{{site.data.keyword.iotelectronics}} in the dashboard")
 

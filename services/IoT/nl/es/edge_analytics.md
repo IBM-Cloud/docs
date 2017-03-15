@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-10"
+lastupdated: "2017-02-17"
 
 ---
 
@@ -33,8 +33,8 @@ Para empezar a crear las acciones y las reglas de extremo:
 - Asegúrese de que las propiedades de dispositivos que desea utilizar como condiciones en las reglas estén correlacionadas con esquemas. Consulte [Conexión de dispositivos](iotplatform_task.html) y [Creación de esquemas](im_schemas.html) para obtener más información.
 - Revise las recetas de Edge Analytics  
 En nuestro portal de recetas, hay par de recetas que muestran los pasos a seguir para trabajar con IBM Edge Analytics. En las recetas se describe claramente cómo instalar y configurar IBM Edge Analytics Agent en un dispositivo instalado sobre Apache Edgent para ejecutar analíticas sobre un origen de datos IoT.
- - La receta [Iniciación a Edge Analytics en IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/getting-started-with-edge-analytics-in-watson-iot-platform/) es la primera de esta serie. En esta receta se describe cómo configurar Cisco DSA Platform en un sistema portátil y en un dispositivo Raspberry Pi 3, cómo instalar y configurar IBM Edge Analytics Agent para que se conecte a {{site.data.keyword.iot_short}}, cómo instalar System DS Link y cómo configurarlo para que se conecte a Edge Gateway en {{site.data.keyword.iot_short}} como dispositivo conectado, cómo definir y activar la regla de extremo en Edge Gateway y cómo gestionar la regla de extremo desde {{site.data.keyword.iot_short}}.
- - Para ilustrar un caso de uso avanzado de Edge Analytics, la receta [Manejo de alertas y acciones de dispositivo con Edge Analytics en IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/handling-alerts-and-device-actions-with-edge-analytics-in-ibm-watson-iot-platform/) muestra cómo crear su propio enlace DS para transferir datos desde un dispositivo Arduino Uno conectado a un dispositivo Raspberry Pi 3. La receta también muestra cómo filtrar datos y manejar acciones de dispositivos locales como parte de la alerta de regla de extremo.
+ - La receta [Iniciación a Edge Analytics en IBM Watson IoT Platform ![icono de enlace externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/getting-started-with-edge-analytics-in-watson-iot-platform/){: new_window} es la primera de esta serie. En esta receta se describe cómo configurar Cisco DSA Platform en un sistema portátil y en un dispositivo Raspberry Pi 3, cómo instalar y configurar IBM Edge Analytics Agent para que se conecte a {{site.data.keyword.iot_short}}, cómo instalar System DS Link y cómo configurarlo para que se conecte a Edge Gateway en {{site.data.keyword.iot_short}} como dispositivo conectado, cómo definir y activar la regla de extremo en Edge Gateway y cómo gestionar la regla de extremo desde {{site.data.keyword.iot_short}}.
+ - Para ilustrar un caso de uso avanzado de Edge Analytics, la receta [Manejo de alertas y acciones de dispositivo con Edge Analytics en IBM Watson IoT Platform ![icono de enlace externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/handling-alerts-and-device-actions-with-edge-analytics-in-ibm-watson-iot-platform/){: new_window} muestra cómo crear su propio enlace DS para transferir datos desde un dispositivo Arduino Uno conectado a un dispositivo Raspberry Pi 3. La receta también muestra cómo filtrar datos y manejar acciones de dispositivos locales como parte de la alerta de regla de extremo.
 
 ## Gestión de reglas y acciones de extremo  
 {: #managing_rules}
@@ -216,3 +216,8 @@ Para ver información sobre el estado de la pasarela:
  `RuleNumber` | El número de reglas definidas en el núcleo del motor de reglas.
  `ProcessorNumber` | Para uso de depuración. El número de procesadores definidos en el núcleo del motor de reglas. </br>**Nota:** Un procesador es la unidad de ejecución mínima en el núcleo del motor de reglas.
  `DataPointsInWindow` | El número total de puntos de datos que se colocan en almacenamiento intermedio en la ventana de tiempo. El tamaño de bytes de un punto de datos difiere en función de su tipo de datos. Por ejemplo, un tamaño de punto de datos float/int es 8 bytes, mientras que un tamaño de punto de datos de serie difiere en función de su longitud.  En la mayoría de los casos, puede estimar el uso de memoria de la ventana de tiempo utilizando la fórmula siguiente: `DataPointsInWindow * 8`.
+
+## Comunidad de Edge Analytics
+{: #eaa_community}
+
+Puede descargar el SDK de Edge Analytics desde la [página de comunidad de IBM Edge Analytics](https://www.ibm.com/developerworks/community/groups/service/html/communitystart?communityUuid=3df173af-0c21-4b9c-9fd1-e8e5561ef460&ftHelpTip=true). El SDK incluye el archivo JAR de SDK, javadoc, código de ejemplo, enlaces de recetas y archivos README. En la comunidad, también puede ver vídeos para ponerse en marcha con Edge Analytics y puede utilizar el foro de la comunidad para hacer preguntas. 

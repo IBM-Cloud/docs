@@ -19,7 +19,7 @@ Letzte Aktualisierung: 26. November 2016
 
 Ein Gerät ist alles, was eine Verbindung zum Internet hat und Daten in die Cloud sendet oder aus der Cloud empfängt. Sie können Geräte verwenden, um Ereignisinformationen wie Sensormesswerte in die Cloud zu senden und Befehle von Anwendungen in der Cloud entgegenzunehmen.
 
-Geräte publizieren Daten mithilfe von Ereignissen an {{site.data.keyword.iot_short_notm}}. Dabei steuert das Gerät den Inhalt des Ereignisses und ordnet jedem gesendeten Ereignis einen Namen zu. Wenn {{site.data.keyword.iot_short_notm}} ein Ereignis von einem Gerät empfängt, wird anhand der Berechtigungsnachweise für die Verbindung, über die das Ereignis empfangen wurde, ermittelt, von welchem Gerät das Ereignis gesendet wurde. Durch diese Architektur wird verhindert, dass ein Gerät die Identität eines anderen Geräts annimmt. 
+Geräte publizieren Daten mithilfe von Ereignissen an {{site.data.keyword.iot_short_notm}}. Dabei steuert das Gerät den Inhalt des Ereignisses und ordnet jedem gesendeten Ereignis einen Namen zu. Wenn {{site.data.keyword.iot_short_notm}} ein Ereignis von einem Gerät empfängt, wird anhand der Berechtigungsnachweise für die Verbindung, über die das Ereignis empfangen wurde, ermittelt, von welchem Gerät das Ereignis gesendet wurde. Durch diese Architektur wird verhindert, dass ein Gerät die Identität eines anderen Geräts annimmt.
 
 Weitere Informationen zu wichtigen Konzepten, einschließlich Geräten, finden Sie in [Informationen zu Watson IoT Platform](https://console.ng.bluemix.net/docs/services/IoT/iotplatform_overview.html#watsoniotplatform_importantconcepts).
 
@@ -41,7 +41,7 @@ Wenn Sie über ein Gerät verfügen, das bereits für {{site.data.keyword.iot_sh
 
 Wenn das Gerät noch nicht aktiviert ist, lesen Sie die verfügbaren Anleitungen in [developerWorks](https://developer.ibm.com/recipes/). Suchen Sie in den vorhandenen Anleitungen nach einer Anleitung für Ihr Gerät und verwenden Sie diese Anleitung, um mit der Entwicklung zu beginnen. Sie können auch eigene Anleitungen veröffentlichen.
 
-Falls keine Anleitung für Ihr spezielles Gerät vorhanden ist, stellt IBM verschiedene Programmierungshandbücher und APIs bereit, die Sie als Einstieg verwenden können. Diese Handbücher enthalten Clientbibliotheken, Beispiele und Informationen als Hilfe zum Erstellen und Entwickeln von Code für die Integration und das Verbinden Ihrer Geräte und Anwendungen in {{site.data.keyword.iot_short_notm}}. Momentan sind die folgenden Programmierungshandbücher verfügbar: 
+Falls keine Anleitung für Ihr spezielles Gerät vorhanden ist, stellt IBM verschiedene Programmierungshandbücher und APIs bereit, die Sie als Einstieg verwenden können. Diese Handbücher enthalten Clientbibliotheken, Beispiele und Informationen als Hilfe zum Erstellen und Entwickeln von Code für die Integration und das Verbinden Ihrer Geräte und Anwendungen in {{site.data.keyword.iot_short_notm}}. Momentan sind die folgenden Programmierungshandbücher verfügbar:
 
 - Java
 - Node.js

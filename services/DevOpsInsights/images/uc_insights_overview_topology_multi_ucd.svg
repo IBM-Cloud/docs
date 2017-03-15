@@ -141,22 +141,23 @@
      guidetolerance="10"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:window-width="1680"
-     inkscape:window-height="1023"
+     inkscape:window-width="1920"
+     inkscape:window-height="1015"
      id="namedview3338"
      showgrid="false"
      inkscape:zoom="1.4591254"
-     inkscape:cx="183.51477"
+     inkscape:cx="461.95104"
      inkscape:cy="306.46195"
-     inkscape:window-x="-9"
-     inkscape:window-y="21"
+     inkscape:window-x="1671"
+     inkscape:window-y="-9"
      inkscape:window-maximized="1"
      inkscape:current-layer="g3344" /><g
      id="g3344"
      inkscape:groupmode="layer"
      inkscape:label="UC_mobile_sec_1"
      transform="matrix(1.25,0,0,-1.25,0,802.5)"><g
-       id="g3677"><g
+       id="g3677"
+       transform="matrix(1,0,0,1.347707,15.420196,-62.072078)"><g
          transform="matrix(1,0,0,0.16458368,459.22112,231.73623)"
          id="g3382"><path
            inkscape:connector-curvature="0"
@@ -191,30 +192,32 @@
            y="-96.110168"
            x="428.92581 431.3158 436.73581 444.77579 446.89581 453.36581 456.6748 462.36481 467.18478 472.7348 478.4238 483.91379 489.5538 494.56381 496.68381 503.38379 508.3938 514.0838 516.44379 521.86383">IBM UrbanCode Deploy</tspan></text>
 </g><g
-       id="g3440"
-       transform="translate(0,-75.040229)"><g
-         id="g3442"
-         clip-path="url(#clipPath3444)"><path
-           d="m 432.25,288.327 h -150.5 v 65.345 h 150.5 z"
-           style="fill:#abe1fa;fill-opacity:1;fill-rule:nonzero;stroke:#373535;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-           id="path3448"
-           inkscape:connector-curvature="0" /></g></g><text
-       transform="scale(1,-1)"
-       style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:'Myriad Pro';-inkscape-font-specification:MyriadPro-Regular;writing-mode:lr-tb;fill:#292929;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       id="text3450"
-       x="356.55762"
-       y="-250.14874"><tspan
-         sodipodi:role="line"
-         id="tspan3452"
-         x="356.55762"
+       id="g4810"
+       transform="translate(-7.710098,-59.110751)"><g
+         transform="translate(-28.270359,-75.040229)"
+         id="g3440"><g
+           clip-path="url(#clipPath3444)"
+           id="g3442"><path
+             inkscape:connector-curvature="0"
+             id="path3448"
+             style="fill:#abe1fa;fill-opacity:1;fill-rule:nonzero;stroke:#373535;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             d="m 432.25,288.327 h -150.5 v 65.345 h 150.5 z" /></g></g><text
          y="-250.14874"
-         style="text-align:center;text-anchor:middle">IBM Bluemix</tspan><tspan
-         sodipodi:role="line"
-         x="356.55762"
-         y="-235.14874"
-         id="tspan3704"
-         style="text-align:center;text-anchor:middle">DevOps Connect</tspan></text>
-<text
+         x="328.28726"
+         id="text3450"
+         style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:'Myriad Pro';-inkscape-font-specification:MyriadPro-Regular;writing-mode:lr-tb;fill:#292929;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         transform="scale(1,-1)"><tspan
+           style="text-align:center;text-anchor:middle"
+           y="-250.14874"
+           x="328.28726"
+           id="tspan3452"
+           sodipodi:role="line">IBM Bluemix</tspan><tspan
+           style="text-align:center;text-anchor:middle"
+           id="tspan3704"
+           y="-235.14874"
+           x="328.28726"
+           sodipodi:role="line">DevOps Connect</tspan></text>
+</g><text
        transform="matrix(0,1,1,0,0,0)"
        style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:'Myriad Pro';-inkscape-font-specification:MyriadPro-Regular;writing-mode:lr-tb;fill:#373535;fill-opacity:1;fill-rule:nonzero;stroke:none"
        id="text3522"
@@ -251,13 +254,13 @@
 <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:32px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="468.00369"
+       x="483.42389"
        y="-201.53094"
        id="text3635-9"
        transform="scale(1,-1)"><tspan
          sodipodi:role="line"
          id="tspan3637-1"
-         x="468.00369"
+         x="483.42389"
          y="-201.53094"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;font-family:'Myriad Pro';-inkscape-font-specification:'Myriad Pro'">HTTPS</tspan></text>
 <g
@@ -266,11 +269,7 @@
          d="M 0,0 H -122.965"
          style="fill:none;stroke:#292929;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
          id="path3536-0"
-         inkscape:connector-curvature="0" /></g><path
-       d="m 281.08553,232.52938 h -54.46147 v 26.85979 h 54.46147 z"
-       style="fill:#3bade2;fill-opacity:1;fill-rule:nonzero;stroke:#373535;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-       id="path3472-3"
-       inkscape:connector-curvature="0" /><g
+         inkscape:connector-curvature="0" /></g><g
        id="g3538-2"
        transform="matrix(1.1530808,0,0,1,146.00371,245.95877)"><path
          d="M 0,0 C 2.84,1.054 6.363,2.852 8.547,4.756 L 6.827,0 8.547,-4.755 C 6.363,-2.851 2.84,-1.053 0,0"
@@ -339,11 +338,7 @@
            id="tspan3553"
            x="452.30838"
            y="-340.70099">UCD patch</tspan></text>
-</g><path
-       d="M 487.58317,232.52938 H 433.1217 v 26.85979 h 54.46147 z"
-       style="fill:#3bade2;fill-opacity:1;fill-rule:nonzero;stroke:#373535;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-       id="path3472-3-6"
-       inkscape:connector-curvature="0" /><g
+</g><g
        transform="translate(0,265.09135)"
        id="g3575-4"><path
          inkscape:connector-curvature="0"
@@ -362,13 +357,13 @@
 </g><text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:32px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="468.00369"
+       x="483.42389"
        y="-280.94586"
        id="text3635-9-5"
        transform="scale(1,-1)"><tspan
          sodipodi:role="line"
          id="tspan3637-1-4"
-         x="468.00369"
+         x="483.42389"
          y="-280.94586"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;font-family:'Myriad Pro';-inkscape-font-specification:'Myriad Pro'">HTTPS</tspan></text>
 <g
@@ -389,7 +384,7 @@
            x="452.30838"
            y="-340.70099">UCD patch</tspan></text>
 </g><g
-       transform="rotate(180,459.22112,245.82924)"
+       transform="matrix(-1,0,0,-1.2414632,933.86244,534.76409)"
        id="g3677-9"><g
          transform="matrix(1,0,0,0.16458368,459.22112,231.73623)"
          id="g3382-8"><path
@@ -403,56 +398,6 @@
            id="path3406-6"
            style="fill:#292929;fill-opacity:1;fill-rule:nonzero;stroke:none"
            d="m 13.121269,-22.144824 c -1.054,2.84 -2.852,6.363 -4.7559999,8.547 l 4.7559999,-1.72 4.755,1.72 c -1.904,-2.184 -3.702,-5.707 -4.755,-8.547" /></g></g><g
-       id="g299"
-       transform="translate(-0.51991508,-1.0372231)"><text
-         transform="scale(1,-1)"
-         y="-250.3945"
-         x="254.33809"
-         id="text3450-8"
-         style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:'Myriad Pro';-inkscape-font-specification:MyriadPro-Regular;writing-mode:lr-tb;fill:#292929;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1"><tspan
-           id="tspan174"
-           style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle;stroke-width:1"
-           y="-250.3945"
-           x="254.33809"
-           sodipodi:role="line">Reporting</tspan></text>
-<text
-         transform="scale(1,-1)"
-         id="text219"
-         y="-238.08092"
-         x="237.07491"
-         style="font-style:normal;font-weight:normal;font-size:30px;line-height:18.75px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           style="font-size:10px;stroke-width:0.75px"
-           y="-238.08092"
-           x="237.07491"
-           id="tspan217"
-           sodipodi:role="line">plug-in</tspan></text>
-</g><g
-       id="g293"
-       transform="translate(-1.2509766e-5,-1.1858819)"><text
-         transform="scale(1,-1)"
-         y="-249.60304"
-         x="460.31583"
-         id="text3450-8-93"
-         style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:'Myriad Pro';-inkscape-font-specification:MyriadPro-Regular;writing-mode:lr-tb;fill:#292929;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1"><tspan
-           id="tspan174-9"
-           style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle;stroke-width:1"
-           y="-249.60304"
-           x="460.31583"
-           sodipodi:role="line">UCD</tspan></text>
-<text
-         transform="scale(1,-1)"
-         id="text219-0"
-         y="-239.34547"
-         x="443.05264"
-         style="font-style:normal;font-weight:normal;font-size:30.00000191px;line-height:18.75000191px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           style="font-size:10px;stroke-width:0.75px"
-           y="-239.34547"
-           x="443.05264"
-           id="tspan217-9"
-           sodipodi:role="line">plug-in</tspan></text>
-</g><g
        id="g269"
        transform="translate(-113.51157,45.585164)"><text
          transform="scale(1,-1)"
@@ -516,4 +461,35 @@
            x="21.109856"
            id="tspan275"
            sodipodi:role="line">secured web browsers</tspan></text>
-</g></g></svg>
+</g><g
+       id="g4802"
+       transform="translate(-8.2626836,56.573812)"><rect
+         transform="scale(1,-1)"
+         y="-211.83377"
+         x="258.9408"
+         height="47.98064"
+         width="140.68286"
+         id="rect4793"
+         style="fill:#3bade2;fill-opacity:1;stroke:#000000;stroke-width:0.67236125;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" /><flowRoot
+         transform="matrix(0.74999999,0,0,-0.74999999,-68.900871,648.01714)"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:12px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="flowRoot4779"
+         xml:space="preserve"><flowRegion
+           style="line-height:12px"
+           id="flowRegion4781"><rect
+             style="line-height:12px"
+             y="581.17786"
+             x="413.26126"
+             height="80.185051"
+             width="234.38692"
+             id="rect4783" /></flowRegion><flowPara
+           style="font-size:13.33333302px;line-height:12px;text-align:center;text-anchor:middle"
+           id="flowPara4785">IBM UrbanCode Deploy</flowPara><flowPara
+           id="flowPara4789"
+           style="font-size:13.33333302px;line-height:12px;text-align:center;text-anchor:middle">for Cloud Reporting</flowPara><flowPara
+           id="flowPara4791"
+           style="font-size:13.33333302px;line-height:12px;text-align:center;text-anchor:middle">plug-in</flowPara></flowRoot></g><path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.75118109;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 392.70099,246.20914 h 82.75505 v 0"
+       id="path4812"
+       inkscape:connector-curvature="0" /></g></svg>

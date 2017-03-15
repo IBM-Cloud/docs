@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-02"
+lastupdated: "2017-02-22"
 ---
 
 {:new_window: target="\_blank"}
@@ -26,12 +26,12 @@ Zertifikate einer Zertifizierungsstelle (CA-Zertifikate) ermöglichen der Organi
 
 Wenn Sie ein CA-Zertifikat hinzufügen oder das Zertifikat des Messaging-Servers ersetzen, müssen alle Geräte mithilfe eines MQTT-Clients eine Verbindung herstellen, der SNI (Server Name Indication) unterstützt, damit der Server die entsprechenden Zertifizierungsstellen verwenden kann, um das Gerät zu authentifizieren.
 
-Wenn Sie ein CA-Zertifikat hinzufügen und das Add-on für Risiko- und Sicherheitsmanagement nicht aktiviert ist, stellen alle Geräte mit der Verbindungsrichtlinie für TLS mit Token- und Clientzertifikatsauthentifizierung eine Verbindung her. Wenn das Add-on für Risiko- und Sicherheitsmanagement aktiviert ist, können Sie verschiedene Verbindungsrichtlinien konfigurieren. Informationen zum Konfigurieren von Sicherheitsrichtlinien für Verbindungen finden Sie in [Sicherheitsrichtlinien konfigurieren](set_up_policies.html).
+Wenn Sie ein CA-Zertifikat hinzufügen und einen Standardsicherheitsplan verwenden, stellen alle Geräte mit der Verbindungsrichtlinie für TLS mit Token- und Clientzertifikatsauthentifizierung eine Verbindung her. Wenn Sie über einen gebührenfreien oder erweiterten Sicherheitsplan verfügen, können Sie verschiedene Verbindungsrichtlinien konfigurieren. Informationen zum Konfigurieren von Sicherheitsrichtlinien für Verbindungen finden Sie in [Sicherheitsrichtlinien konfigurieren](set_up_policies.html).
 
 ### Client- oder Gerätezertifikate
-Einzelclientzertifikate oder Gerätezertifikate verbleiben auf den Geräten und werden nicht in die Plattform hochgeladen. Das zum Signieren aller Gerätezertifikate verwendete Signaturzertifikat der Zertifizierungsstelle wird als einziges Zertifikat in die Plattform hochgeladen. Wenn Sie selbst signierte Serverzertifikate verwenden, müssen Sie die Stamm- und Zwischenzertifizierungsstelle (ca.pem) hochladen, die zum Signieren des Clientzertifikats (cert.pem) verwendet wird.
+Einzelclientzertifikate oder Gerätezertifikate verbleiben auf den Geräten und werden nicht in die Plattform hochgeladen. Das zum Signieren aller Gerätezertifikate verwendete Signaturzertifikat der Zertifizierungsstelle wird als einziges Zertifikat in die Plattform hochgeladen. Wenn Sie selbst signierte Serverzertifikate verwenden, müssen Sie die Stamm- und Zwischenzertifikate hochladen, die zum Signieren des Clientzertifikats (cert.pem) verwendet werden.
 
-Für das Einzelgerätezertifikat, das Sie mit dem CA-Zertifikat signieren, muss die Geräte-ID entweder als allgemeiner Name (Common Name, CN) oder als 'SubjectAltName' im Zertifikat eingegeben werden. Das Format für das Feld *CN* lautet 'CN=d:devtype:devid'. Das Format für das Feld 'SubjectAltName' lautet 'SubjectAltName=email:d:devtype:devid'. Dabei ist 'devtype' der Gerätetyp und 'devid' die Client-ID des Geräts.
+Für das Einzelgerätezertifikat, das Sie mit dem CA-Zertifikat signieren, muss die Geräte-ID entweder als allgemeiner Name (Common Name, CN) oder als 'SubjectAltName' im Zertifikat eingegeben werden. Das Format für das Feld *CN* lautet 'CN=d:devtype:devid'. Das Format für das Feld 'SubjectAltName' lautet 'SubjectAltName=email:d:*devtype:devid*'. Dabei ist 'email:d' konstant und '*devtype*' ist der Gerätetyp des Geräts und '*devid*' ist die Client-ID des Geräts.
 
 ## Zertifikate der Zertifizierungsstelle für die Geräteauthentifizierung registrieren
 {: #reg_ca_cert}
@@ -68,4 +68,4 @@ Wenn Sie ein neues Messaging-Serverzertifikat verwenden möchten, können Sie ei
  1. Klicken Sie unter **Allgemeine Einstellungen** im Abschnitt **Sicherheit** unter **Messaging-Serverzertifikate** auf **CSR erstellen**.
  2. Geben Sie die Details zum Anfordern einer CSR für Ihren Server ein und klicken Sie auf **Generieren**. Die Zertifikatssignieranforderung wird in der Tabelle angezeigt.
  3. Laden Sie die Anforderung herunter und übergeben Sie sie zum Signieren an eine Zertifizierungsstelle.
- 4. Nach dem Erhalt eines Zertifikats können Sie es anhand der im Abschnitt [Zertifikat aus Ihrer Organisation hochladen](#upload_cert) beschriebenen Schritte hochladen. Nachdem das Zertifikat hochgeladen wurde, wird die Zertifikatssignieranforderung in der Tabelle durch das hochgeladene Zertifikat ersetzt.
+ 4. Nach dem Abruf eines Zertifikats kehren Sie zum CSR-Eintrag in der Tabelle zurück und laden das neue Zertifikat hoch. Nachdem das Zertifikat hochgeladen wurde, wird die Zertifikatssignieranforderung in der Tabelle durch das hochgeladene Zertifikat ersetzt.

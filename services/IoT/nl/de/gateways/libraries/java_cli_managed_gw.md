@@ -47,7 +47,7 @@ In {{site.data.keyword.iot_short}} beschreibt das Gerätemodell die Metadaten un
 
 In {{site.data.keyword.iot_short}}-Java-Clientbibliothek wird das Gerätemodell durch die Java-Classe `DeviceData` dargestellt.
 
-Erstellen Sie die folgenden Objekte, um die Klasse `DeviceData` zu erstellen: 
+Erstellen Sie die folgenden Objekte, um die Klasse `DeviceData` zu erstellen:
 
 - `DeviceInfo` (optional)
 - `DeviceLocation` (optional; nur erforderlich, wenn das Gerät über die Position benachrichtigt werden möchte, die von der Anwendung durch die {{site.data.keyword.iot_short}}-API festgelegt wird)
@@ -194,7 +194,7 @@ managedGateway.sendDeviceManageRequest(typeId, deviceId, lifetime, true, true);
 
 ### Senden einer Managementbeendigungsanforderung von einem Gateway
 
-Wenn ein Gateway nicht länger verwaltet werden muss, rufen Sie zum Stoppen der Gerätemanagementaktivitäten im Gateway die Methode `sendGatewayUnmanageRequet()` auf. Sobald `sendGatewayUnmanageRequet()` aufgerufen wird, sendet {{site.data.keyword.iot_short}} keine weiteren neuen Gerätemanagementanforderungen für das Gateway und alle Gerätemanagementanforderungen von dem Gateway werden abgelehnt (mit Ausnahme von **Manage**-Anforderungen). Anforderungen von Geräten hinter dem Gateway werden nicht abgelehnt.
+Wenn ein Gateway nicht länger verwaltet werden muss, rufen Sie zum Stoppen der Gerätemanagementaktivitäten im Gateway die Methode `sendGatewayUnmanageRequet()` auf.  Sobald `sendGatewayUnmanageRequet()` aufgerufen wird, sendet {{site.data.keyword.iot_short}} keine weiteren neuen Gerätemanagementanforderungen für das Gateway und alle Gerätemanagementanforderungen von dem Gateway werden abgelehnt (mit Ausnahme von **Manage**-Anforderungen). Anforderungen von Geräten hinter dem Gateway werden nicht abgelehnt.
 
 #### Beispiel für das Senden einer Managementbeendigungsanforderung von einem Gateway
 
@@ -258,7 +258,7 @@ int rc = managedGateway.clearGatewayErrorCodes();
 
 ### Erstellen und Löschen von Fehlercodes für angeschlossene Geräte
 
-Ein Gateway kann auch die entsprechende Gerätemethode aufrufen, um Fehlercodes für die angeschlossenen Geräte hinzuzufügen oder zu löschen: 
+Ein Gateway kann auch die entsprechende Gerätemethode aufrufen, um Fehlercodes für die angeschlossenen Geräte hinzuzufügen oder zu löschen:
 
 ```java
 int rc = managedGateway.addDeviceErrorCode(typeId, deviceId, 300);
@@ -316,12 +316,12 @@ Weitere Informationen zu Diagnoseoperation finden Sie in [Gerätemanagementanfor
 ## Firmware-Updates und -Aktionen
 {: #firmware}
 
-Der Prozess für das Firmware-Update ist in zwei separate Aktionen aufgeteilt: 
+Der Prozess für das Firmware-Update ist in zwei separate Aktionen aufgeteilt:
 
 - Herunterladen der Firmware
 - Aktualisieren der Firmware
 
-Das Gateway muss die folgenden Aktivitäten ausführen, um eigene Firmwareaktionen und Firmwareaktionen für die angeschlossenen Geräte zu unterstützen: 
+Das Gateway muss die folgenden Aktivitäten ausführen, um eigene Firmwareaktionen und Firmwareaktionen für die angeschlossenen Geräte zu unterstützen:
 
 1. Optional: Ein Objekt `DeviceFirmware` erstellen
 2. Den Server über die Unterstützung der Firmwarekation informieren
@@ -385,7 +385,7 @@ public abstract void downloadFirmware(DeviceFirmware deviceFirmware);
 public abstract void updateFirmware(DeviceFirmware deviceFirmware);
 ```
 
-**Hinweis**: Für das Gateway und die angeschlossenen Geräte darf nur ein einziger Handler zur Bibliothek hinzugefügt werden, an den die Download- oder Aktualisierungsanforderungen für Firmware umgeleitet werden. Bei der Implementierung muss ein Thread erstellt werden oder ein Thread-Pool, der mehrere Firmwareanforderungen gleichzeitig verarbeitet. 
+**Hinweis**: Für das Gateway und die angeschlossenen Geräte darf nur ein einziger Handler zur Bibliothek hinzugefügt werden, an den die Download- oder Aktualisierungsanforderungen für Firmware umgeleitet werden. Bei der Implementierung muss ein Thread erstellt werden oder ein Thread-Pool, der mehrere Firmwareanforderungen gleichzeitig verarbeitet.
 
 Eine Beispielimplementierung für einen Thread-Pool-Handler finden Sie in [Gateway-Beispiele - GitHub-Repository](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java).
 
@@ -567,7 +567,7 @@ Das Gateway muss die folgenden Aktivitäten ausführen, um eigene Geräteaktione
 
 Vor dem Ausführen einer Neustartaktion oder einer Aktion zum Zurücksetzen auf Werkseinstellungen für ein Gateway und die angeschlossenen Geräte muss das Gateway zunächst {{site.data.keyword.iot_short}} über die Unterstützung informieren. DieseMaßnahme Aktion kann durch Übergeben des Werts 'true' für den Parameter `supportDeviceActions` beim Senden der Anforderung **Manage** erfolgen.
 
-Ein Gateway kann die folgende Methode aufrufen, um den Server über die Unterstützung der Geräteaktion zu informieren. 
+Ein Gateway kann die folgende Methode aufrufen, um den Server über die Unterstützung der Geräteaktion zu informieren.
 
 ```java
 // Der letzte Parameter gibt die Unterstützung der Geräteaktion an
@@ -624,7 +624,7 @@ Die vollständige Beispielimplementierung eines Handlers, der einen Thread-Pool 
 
 ### Beispielimplementierung von `handleFactoryReset`
 
-Durch die Implementierung muss ein separater Thread erstellt und Logik hinzugefügt werden, um das Gateway und das angeschlossene Gerät auf die Werkseinstellungen zurückzusetzen und den Status der Zurücksetzung mithilfe des Objekts 'DeviceAction' zu berichten. Nachdem die Anforderung empfangen wurde, muss das Gateway zunächst den Server über die Unterstützung oder den Fehler informieren, bevor das Zurücksetzen durchgeführt wird. Der allgemeine Ablauf der Implementierung für das Zurücksetzen wird im folgenden Codebeispiel gezeigt: 
+Durch die Implementierung muss ein separater Thread erstellt und Logik hinzugefügt werden, um das Gateway und das angeschlossene Gerät auf die Werkseinstellungen zurückzusetzen und den Status der Zurücksetzung mithilfe des Objekts 'DeviceAction' zu berichten. Nachdem die Anforderung empfangen wurde, muss das Gateway zunächst den Server über die Unterstützung oder den Fehler informieren, bevor das Zurücksetzen durchgeführt wird. Der allgemeine Ablauf der Implementierung für das Zurücksetzen wird im folgenden Codebeispiel gezeigt:
 
 ```java
 public void handleFactoryReset(DeviceAction action) {
@@ -657,7 +657,7 @@ Durch die Java-Clientbibliothek werden die entsprechenden Objekte jedes Mal aktu
 
 Mit diesem Operationstyp können die Attribute für Position, Metadaten, Geräteinformationen und Firmware des Gateways oder der angeschlossenen Geräte aktualisiert werden.
 
-Um über Attributänderungen benachrichtigt zu werden, muss das Gateway eine Änderungslistener für Eigenschaften zu den Objekten hinzufügen, die von Interesse sind, wie im folgenden Codebeispiel gezeigt: 
+Um über Attributänderungen benachrichtigt zu werden, muss das Gateway eine Änderungslistener für Eigenschaften zu den Objekten hinzufügen, die von Interesse sind, wie im folgenden Codebeispiel gezeigt:
 
 ```java
 deviceLocation.addPropertyChangeListener(listener);

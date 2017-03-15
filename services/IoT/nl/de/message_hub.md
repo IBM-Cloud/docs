@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-03"
+lastupdated: "2017-02-17"
 
 ---
 
@@ -22,7 +22,7 @@ Durch eine Verbindung zwischen {{site.data.keyword.messagehub_full}} und {{site.
 
 Führen Sie vor dem Herstellen einer Verbindung von {{site.data.keyword.messagehub}} zu Ihrem {{site.data.keyword.iot_short}}-Service folgende Tasks aus:
 
-- Richten Sie {{site.data.keyword.messagehub}} mithilfe des {{site.data.keyword.Bluemix_notm}}-Katalogs im selben {{site.data.keyword.Bluemix_notm}}-Bereich ein, in dem auch {{site.data.keyword.iot_short_notm}} vorhanden ist. Weitere Informationen zu {{site.data.keyword.messagehub}} finden Sie in [Einführung in {{site.data.keyword.messagehub}} ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/services/MessageHub/index.html){: new_window}.
+- Richten Sie {{site.data.keyword.messagehub}} mithilfe des {{site.data.keyword.Bluemix_notm}}-Katalogs im selben {{site.data.keyword.Bluemix_notm}}-Bereich ein, in dem auch {{site.data.keyword.iot_short_notm}} vorhanden ist. Weitere Informationen zu {{site.data.keyword.messagehub}} finden Sie in [Einführung in {{site.data.keyword.messagehub}}](https://console.{DomainName}/docs/services/MessageHub/index.html).
 
 - Stellen Sie sicher, dass Sie innerhalb der {{site.data.keyword.Bluemix_notm}}-Organisation über Entwicklerberechtigungen verfügen und dass Sie über {{site.data.keyword.Bluemix_notm}} angemeldet sind. Wenn Sie nicht über {{site.data.keyword.Bluemix_notm}} angemeldet sind oder innerhalb dieser {{site.data.keyword.Bluemix_notm}}-Organisation nicht über Entwicklerberechtigungen verfügen, können Sie die Bindung zwischen {{site.data.keyword.messagehub}} und {{site.data.keyword.iot_short_notm}} nicht autorisieren.
 

@@ -409,4 +409,3 @@ public class RegisteredDeviceCommandSubscribe {
 {: #samples}
 
 Para obter uma lista de amostras de dispositivo e de gerenciamento de dispositivo desenvolvidas usando a biblioteca de cliente Java do {{site.data.keyword.iot_short_notm}}, veja o [repositório do GitHub iot-device-samples](https://github.com/ibm-messaging/iot-device-samples/tree/master/java).
-

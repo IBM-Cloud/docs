@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-02"
+lastupdated: "2017-02-22"
 ---
 
 {:new_window: target="\_blank"}
@@ -26,12 +26,12 @@ Los certificados de CA permiten a la organización reconocer los certificados de
 
 Si añade un certificado de CA o sustituye el certificado del servidor de mensajería, todos los dispositivos se deben conectar utilizando un cliente MQTT que admita la indicación de nombre de servidor (SNI) para que el servidor pueda utilizar las CA adecuadas para autenticar el dispositivo.
 
-Si añade un certificado de CA pero no tiene habilitado el complemento Gestión de riesgos y de seguridad, todos los dispositivos se conectan con el TLS con la política de conexión de autenticación de certificado de cliente y de señal. Si tiene habilitado el complemento Gestión de riesgos y de seguridad, puede configurar otras políticas de conexión. Para obtener información sobre cómo configurar las políticas de seguridad de conexión, consulte [Configuración de políticas de seguridad](set_up_policies.html).
+Si añade un certificado de CA y utiliza un plan de seguridad estándar, todos los dispositivos se conectan a la política de conexiones TLS con autenticación de señal y de certificado de cliente. Si tiene un plan de seguridad gratuito o avanzado, puede configurar distintas políticas de conexión. Para obtener información sobre cómo configurar las políticas de seguridad de conexión, consulte [Configuración de políticas de seguridad](set_up_policies.html).
 
 ### Certificados de cliente o de dispositivo
-Los certificados de cliente o de dispositivo individual permanecen en los dispositivos y no se cargan en la plataforma. El certificado firmado por la CA que se utiliza para firmar todos los certificados de dispositivo es el único certificado que se carga en la plataforma. Si utiliza certificados de servidor autofirmados, debe cargar la CA intermedia y raíz (ca.pem) utilizada para firmar el certificado de cliente (cert.pem).
+Los certificados de cliente o de dispositivo individual permanecen en los dispositivos y no se cargan en la plataforma. El certificado firmado por la CA que se utiliza para firmar todos los certificados de dispositivo es el único certificado que se carga en la plataforma. Si utiliza certificados de servidor autofirmados, debe cargar los certificados raíz e intermedios que se utilizan para firmar el certificado cliente (cert.pem).
 
-El certificado de dispositivo individual que firma con el certificado de CA debe tener el ID de dispositivo especificado como valor de Nombre común (CN) o de SubjectAltName en el certificado. Para el campo *CN*, el formato es 'CN=d:devtype:devid'. Para el campo SubjectAltName, el formato es 'SubjectAltName=email:d:devtype:devid', donde 'devtype' es el tipo del dispositivo y 'devid' es el ID de cliente del dispositivo.
+El certificado de dispositivo individual que firma con el certificado de CA debe tener el ID de dispositivo especificado como valor de Nombre común (CN) o de SubjectAltName en el certificado. Para el campo *CN*, el formato es 'CN=d:devtype:devid'. Para el campo SubjectAltName, el formato es 'SubjectAltName=email:d:*devtype:devid*' donde 'email:d' es constante y '*devtype*' es el tipo de dispositivo del dispositivo y '*devid*' es el ID de cliente del dispositivo. 
 
 ## Registro de certificados de la entidad emisora de certificados (CA) para la autenticación de dispositivos
 {: #reg_ca_cert}
@@ -68,4 +68,4 @@ Si desea utilizar un nuevo certificado de servidor de mensajería, puede generar
  1. En la sección **Seguridad** de la **Configuración general**, bajo **Certificados del servidor de mensajería** pulse **Gestión de riesgos**.
  2. Especifique los detalles para realizar una solicitud firmada de certificado (CSR) para el servidor y pulse **Generar**. El CSR se visualiza en la tabla.
  3. Descargue la solicitud y envíela a una autoridad de certificación para que la firme.
- 4. Después de obtener un certificado, puede cargarlo siguiendo los pasos del apartado [Carga de un certificado de la organización](#upload_cert). Después de cargar el certificado, la CSR de la tabla se sustituye por el certificado cargado.
+ 4. Después de obtener un certificado, vuelva a la entrada CSR en la tabla y cargue el nuevo certificado. Después de cargar el certificado, la CSR de la tabla se sustituye por el certificado cargado.

@@ -4,7 +4,7 @@
 
 copyright:
   years: 2015，2017
-lastupdated: "2017-2-21"
+lastupdated: "2017-3-10"
 
 ---
 
@@ -17,31 +17,46 @@ lastupdated: "2017-2-21"
 {: #live-sync}
 
  
-If you are building a Node.js application, you can use {{site.data.keyword.Bluemix}} Live Sync to quickly update the application instance on {{site.data.keyword.Bluemix_notm}} and develop as you would on the desktop without redeploying.   
+If you are building a Node.js application, you can use {{site.data.keyword.Bluemix}} Live Sync to quickly update the application instance on {{site.data.keyword.Bluemix_notm}} and develop without manually redeploying.   
 {: shortdesc}
 
-When you make a change, you can see that change in your running {{site.data.keyword.Bluemix_notm}} application immediately. {{site.data.keyword.Bluemix_notm}} Live Sync works from both the command line and in the Web IDE. You can debug applications written in Node.js by using {{site.data.keyword.Bluemix_notm}} Live Sync.  
+When you make a change, you can see that change in your running {{site.data.keyword.Bluemix_notm}} application immediately. {{site.data.keyword.Bluemix_notm}} Live Sync works 
+<!--from both the command line and -->
+in the Eclipse Orion Web IDE (Web IDE). You can debug applications written in Node.js by using {{site.data.keyword.Bluemix_notm}} Live Sync.  
 
-{{site.data.keyword.Bluemix_notm}} Live Sync consists of three features.
+{{site.data.keyword.Bluemix_notm}} Live Sync consists of two features.
+<!--three -->
 
+<!--
 **Desktop Sync**  
-    You can synchronize any desktop directory tree with a cloud-based project workspace similar to the way Dropbox works. The Web IDE directly edits the same cloud-based workspace, so both stay in sync. Desktop Sync works for any kind of application. To use Desktop Sync, you need to download and install the BL command line interface.  
+
+You can synchronize any desktop directory tree with a cloud-based project workspace similar to the way Dropbox works. The Web IDE directly edits the same cloud-based workspace, so both stay in sync. Desktop Sync works for any kind of application. To use Desktop Sync, you need to download and install the BL command line interface.  
+-->
 
 **Live Edit**
-    You can make changes to a Node.js application running in {{site.data.keyword.Bluemix_notm}} and test them in your browser right away. Any changes that you make in a synchronized desktop directory or in the Web IDE are propagated to the application’s file system immediately.  
+
+You can make changes to a Node.js application running in {{site.data.keyword.Bluemix_notm}} and test them in your browser right away. Any changes that you make in the Web IDE are propagated to the application’s file system immediately.  
 
 **Debug**  
-    While a Node.js application is in Live Edit mode, you can shell into it and debug it. You can edit code dynamically, insert breakpoints, step through code, restart the runtime, and more using the Node Inspector debugger.  
 
-You can use Desktop Sync to keep your desktop workspace in sync with the cloud-based project workspace that you edit directly with the Web IDE. You can use Live Edit to propagate changes in your cloud-based project workspace to your running application. You can use one or both of these features. And if you use Desktop Sync or Live Edit to put your application into Live Edit mode, you can debug your running application.
+While a Node.js application is in Live Edit mode, you can shell into it and debug it. You can edit code dynamically, insert breakpoints, step through code, restart the runtime, and more using the Node Inspector debugger.  
 
-The Bluemix Live Sync process is illustrated in the following diagram.
+<!-- You can use Desktop Sync to keep your desktop workspace in sync with the cloud-based project workspace that you edit directly with the Web IDE. -->
 
-Figure 1. The Bluemix Live Sync process
+You can use Live Edit to propagate changes in your cloud-based project workspace to your running application. 
+<!-- You can use one or both of these features. And if you use Desktop Sync or -->
+If you use Live Edit to put your application into Live Edit mode, you can debug your running application.
+
+
+The Bluemix Live Sync process is illustrated in the following diagram.    
+
+Figure 1. The Bluemix Live Sync process    
+
 ![Image of the Bluemix Live Sync process](images/bluemix-live-sync.png)
 
 If you are developing a Java application that is running on Liberty, you can debug remotely by using the [Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html#eclipsetools).
 
+<!--
 ##Desktop Sync {: #desktop-sync}
 
 You can use the Desktop Sync feature of Bluemix Live Sync to quickly update the application instance on {{site.data.keyword.Bluemix_notm}} and develop as you would on your desktop.
@@ -89,6 +104,7 @@ When you change the files in your local directory, the changes are automatically
 ```
 bl start --restart
 ```
+-->
 
 ##Live Edit {: #live-edit}
 
@@ -96,13 +112,15 @@ If you are building a Node.js application, when you make changes to your project
 
 Live Edit is supported for Node.js applications only.
 
-In the Web IDE, in the run bar, click **Live Edit**.
+In the Eclipse Orion Web IDE (Web IDE), in the run bar, click **Live Edit**.
 
-![Image of Run bar with live edit](images/run-bar-live-edit.png)
+![Image of Run bar with live edit](images/bluemix-live-sync-light.png)
 
 Live Edit allows you to quickly preview changes to Node.js applications running on {{site.data.keyword.Bluemix_notm}}. When you update your code with Live Edit turned on, you can refresh your web application's browser window to see those changes reflected seconds after you make them.
 
+<!--
 For a tutorial on using the Live Edit feature of {{site.data.keyword.Bluemix_notm}} Live Sync, see the tutorial [Test and debug a Node.js app with Bluemix Live Sync![External link icon](../icons/launch-glyph.svg "External link icon")](https://hub.jazz.net/tutorials/livesync){:new_window}.
+-->
 
 When you change the files in your Web IDE, they are automatically redeployed to your application running on {{site.data.keyword.Bluemix_notm}}. If you need to restart the Node application, then you can use the **Restart** button in the run bar.
 
@@ -172,7 +190,9 @@ After the {{site.data.keyword.Bluemix_notm}} Live Debug is installed, you can us
 
 Push the app and then browse to `https://app-host.mybluemix.net/bluemix-debug/manage` to access the {{site.data.keyword.Bluemix_notm}} debug user interface. When you are prompted to authenticate, enter your user ID and personal access token or IBMid password.    
 
+<!--
    **Note**: Your user ID for DevOps Services can be either an IBMid or a federated ID (corporate ID). If you use federated authentication, to log in to your Bluemix Live Sync command-line client, you must use a personal access token instead of a password. If you don't use federated authentication, your IBMid and password work with all clients. For more information about creating a personal access token, see [What's federated authentication and how does it affect me?![External link icon](../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/){:new_window}
+   -->
 
 ###Restoring app configurations and disabling Bluemix Live Debug {: #restore_live_debug}
 
@@ -182,6 +202,7 @@ Push the app and then browse to `https://app-host.mybluemix.net/bluemix-debug/ma
 
 3. Push the app.
 
+<!--
 ## {{site.data.keyword.Bluemix_notm}} Live Sync (bl) commands  {: #bl-commands}
 
 If you are building a Node.js application, you can use {{site.data.keyword.Bluemix_live}} to quickly update the application instance running on {{site.data.keyword.Bluemix_notm}} and develop as you would on the desktop without redeploying. When you make a change, you can see that change in your running {{site.data.keyword.Bluemix_notm}} application immediately. The {{site.data.keyword.Bluemix_live}} command line interface is called *bl*.
@@ -592,6 +613,7 @@ bl stop –l “launchConfigurations/mylaunchconfig.launch”
 ```
 {: pre}
 
+
 # Related Links
 {: #rellinks}
 
@@ -599,6 +621,8 @@ bl stop –l “launchConfigurations/mylaunchconfig.launch”
 {: #samples}
 
 * [Test and debug a Node.js app with Bluemix Live Sync![External link icon](../icons/launch-glyph.svg "External link icon")](https://hub.jazz.net/tutorials/livesync){:new_window}
+
+-->
 
 ## Related Links
 {: #general}

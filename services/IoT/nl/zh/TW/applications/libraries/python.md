@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2016-10-27"
+lastupdated: "2017-02-20"
 
 ---
 
@@ -27,7 +27,7 @@ lastupdated: "2016-10-27"
 ## 下載 Python 用戶端及資源
 {: #python_client_download}
 
-若要存取適用於 {{site.data.keyword.iot_short_notm}} 的 Python 用戶端及其他可用的資源，請移至 GitHub 中的 [iot-python](https://github.com/ibm-messaging/iot-python) 儲存庫，並完成安裝指示。
+若要存取適用於 {{site.data.keyword.iot_short_notm}} 的 Python 用戶端及其他可用的資源，請移至 GitHub 中的 [iot-python ![外部鏈結圖示](../../../../icons/launch-glyph.svg)](https://github.com/ibm-messaging/iot-python) 儲存庫，並完成安裝指示。
 
 ## 建構子
 {: #constructor}
@@ -354,7 +354,7 @@ import ibmiotf.application
 
 client.connect()
 commandData={'rebootDelay' : 50}
-client.publishCommand(myDeviceType, myDeviceId, "reboot", "json", myData)
+client.publishCommand(myDeviceType, myDeviceId, "reboot", "json", commandData)
 ```
 
 
@@ -376,7 +376,7 @@ except IoTFCReSTException as e:
     print("ERROR [" + e.httpcode + "] " + e.message)
 ```
 
-如需要求和回應模型以及 HTTP 狀態碼的相關資訊，請參閱 [{{site.data.keyword.iot_short_notm}} API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html) 的 Organization Configuration 小節。
+如需要求和回應模型以及 HTTP 狀態碼的相關資訊，請參閱 [{{site.data.keyword.iot_short_notm}} API ![外部鏈結圖示](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html) 的 Organization Configuration 小節。
 
 
 ## 大量裝置作業
@@ -384,7 +384,7 @@ except IoTFCReSTException as e:
 
 您的應用程式可以使用大量作業，以同時取得、新增或移除多個裝置。
 
-如需查詢參數清單、要求和回應模型以及 HTTP 狀態碼的相關資訊，請參閱 [{{site.data.keyword.iot_short_notm}} API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/) 的 Bulk Operations 小節。
+如需查詢參數清單、要求和回應模型以及 HTTP 狀態碼的相關資訊，請參閱 [{{site.data.keyword.iot_short_notm}} API ![外部鏈結圖示](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/) 的 Bulk Operations 小節。
 
 
 ### 擷取裝置資訊
@@ -459,7 +459,7 @@ except IoTFCReSTException as e:
 
 您在組織中建立的裝置類型可以用來建立用於新增裝置的範本。使用 {{site.data.keyword.iot_short_notm}} API 特性，您的應用程式可以列出、建立、刪除、檢視或更新組織中的裝置類型。
 
-如需查詢參數、要求和回應模型以及 HTTP 狀態碼的相關資訊，請參閱 [{{site.data.keyword.iot_short_notm}} API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html) 文件的 Device Types 小節。
+如需查詢參數、要求和回應模型以及 HTTP 狀態碼的相關資訊，請參閱 [{{site.data.keyword.iot_short_notm}} API ![外部鏈結圖示](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html) 文件的 Device Types 小節。
 
 
 ### 擷取所有裝置類型
@@ -600,7 +600,7 @@ except IoTFCReSTException as e:
 
 API 中可用的裝置作業，包括針對 {{site.data.keyword.iot_short_notm}} 組織中裝置的裝置進行列出、新增、移除、檢視、更新、檢視位置，以及檢視管理資訊。
 
-如需查詢參數、要求和回應模型以及 HTTP 狀態碼的相關資訊，請參閱 [{{site.data.keyword.iot_short_notm}} API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html) 的 Devices 小節。
+如需查詢參數、要求和回應模型以及 HTTP 狀態碼的相關資訊，請參閱 [{{site.data.keyword.iot_short_notm}} API ![外部鏈結圖示](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html) 的 Devices 小節。
 
 
 ### 擷取特定裝置類型的裝置
@@ -638,7 +638,7 @@ response = apiClient.retrieveDevices("iotsample-arduino", parameters);
 |`metadata`|選用|自訂欄位值字串配對，如[新增裝置類型的範例程式碼](#sample_device_type)中所概述。|
 |`location`|選用|包含 longitude、latitude、elevation、accuracy 及 measuredDateTime 變數。|
 
-如需這些參數以及回應格式和程式碼的相關資訊，請參閱 [API 文件](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Devices/post_device_types_typeId_devices)。
+如需這些參數以及回應格式和程式碼的相關資訊，請參閱 [API 文件 ![外部鏈結圖示](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Devices/post_device_types_typeId_devices)。
 
 當您使用 `registerDevice()` 方法時，請定義裝置所需的必要 deviceID 參數及選用性參數，然後使用所選取的參數來呼叫方法。
 
@@ -753,7 +753,7 @@ apiCli.getDeviceManagementInformation("iotsample-arduino", "00aabbccde03")
 - 擷取裝置錯誤碼
 - 新增錯誤碼
 
-如需查詢和回應模型、回應碼以及查詢參數的相關資訊，請參閱 [API 文件](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html) {{site.data.keyword.iot_short_notm}} API 文件。
+如需查詢和回應模型、回應碼以及查詢參數的相關資訊，請參閱 [API 文件 ![外部鏈結圖示](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html) {{site.data.keyword.iot_short_notm}} API 文件。
 
 ### 取得診斷日誌
 

@@ -12,7 +12,7 @@ lastupdated: "2016-12-12"
 {:codeblock:.codeblock}
 {:pre: .pre}
 
-# Calcoli avanzati per le proprietà virtuali edge 
+# Calcoli avanzati per le proprietà virtuali edge
 {: #im_vir_calculations}
 
 Estendi i calcoli della proprietà virtuale di base con le formule di analisi edge predefinite.
@@ -40,7 +40,7 @@ Le opzioni di calcolo avanzate includono le seguenti formule:
 </thead>
 <tbody>
 <tr>
-<td>Media </td>
+<td>Media</td>
 <td>Restituisce il valore medio di una proprietà per un numero di punti dati recente o per un periodo recente.  </br></br>
 Input:
 <ul>
@@ -55,7 +55,7 @@ Input:
 Input:
 <ul>
 <li>Proprietà
-<li>Lunghezza del periodo o numero di punti dati nel formato di un numero intero maggiore di 0. </ul></td>
+<li>Lunghezza del periodo o numero di punti dati nel formato di un numero intero maggiore di 0.</ul></td>
 <td>Lo spostamento Z-Score di un punto dati indica l'estensione di un'anomalia per il valore del punto dati relativo alla propria media recente. Un valore z-score assoluto maggiore indica che il valore del punto dati corrente è molto diverso dai valori del punto dati medi precedenti.
 </br></br>Utilizza la formula di spostamento Z-Score con una regola per attivare gli avvisi per un cambiamento rapido quando i valori del punto dati differiscono dalla media recente piuttosto che quando il punto dati supera un certo valore.
 </br></br>Utilizza una scheda grafica a linee per visualizzare le fluttuazioni nei tuoi dati tracciando la frequenza e la rilevanza nelle deviazioni standard.
@@ -78,7 +78,7 @@ Input:
 </tr>
 <tr>
 <td>livellamento con casella</td>
-<td>Restituisce il valore medio di una proprietà basata su un intervallo di punti dati centrati nel punto dati corrente.   
+<td>Restituisce il valore medio di una proprietà basata su un intervallo di punti dati centrati nel punto dati corrente.  
 Il livellamento con casella utilizza un numero configurato di valori di punti dati che viene prima e dopo il punto dati elaborato corrente per determinare il proprio valore livellato. Nei propri calcoli, il livellamento con casella pesa tutti i valori del punto dati ugualmente.  </br></br>
 Input:
 <ul>
@@ -90,7 +90,7 @@ Input:
 </tr>
 <tr>
 <td>Livellamento gaussiano</td>
-<td>Restituisce il valore medio di una proprietà basata su un intervallo di punti dati centrati nel punto dati corrente, dove i valori di proprietà più lontani dal punto dati corrente vendo ponderati esponenzialmente meno rispetto ai valori più vicini. </br></br>
+<td>Restituisce il valore medio di una proprietà basata su un intervallo di punti dati centrati nel punto dati corrente, dove i valori di proprietà più lontani dal punto dati corrente vendo ponderati esponenzialmente meno rispetto ai valori più vicini.</br></br>
 Input:
 <ul>
 <li>Proprietà

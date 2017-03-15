@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-03"
+lastupdated: "2017-02-20"
 
 ---
 
@@ -32,8 +32,8 @@ Votre accès à votre organisation {{site.data.keyword.iot_short_notm}} est peut
 
 Vous pouvez résoudre ce problème en accédant à votre organisation {{site.data.keyword.iot_short_notm}} à l'aide de {{site.data.keyword.Bluemix_notm}} et en modifiant les paramètres d'expiration de votre profil utilisateur. Pour modifier les paramètres d'expiration de votre profil utilisateur :
 
-1. Dans votre tableau de bord {{site.data.keyword.Bluemix_notm}}, ouvrez votre service {{site.data.keyword.iot_short_notm}}. 
-2. Cliquez sur **Membres** dans la barre de navigation. 
+1. Dans votre tableau de bord {{site.data.keyword.Bluemix_notm}}, ouvrez votre service {{site.data.keyword.iot_short_notm}}.
+2. Cliquez sur **Membres** dans la barre de navigation.
 3. Cliquez sur l'icône **Editer**.
 4. Désélectionnez la zone **L'accès arrive à expiration** et cliquez sur **Sauvegarder**.
 {: tsResolve}
@@ -80,6 +80,6 @@ Si vous utilisez les forums pour poser une question, libellez votre question de 
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
 * Pour des questions relatives au service et aux instructions de mise en route, utilisez le forum [IBM developerWorks dW Answers ![](../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/topics/watson-iot/?smartspace=bluemix){:new_window}. Ajoutez les étiquettes "watson-iot" et "bluemix".
 
-Voir la rubrique décrivant [comment obtenir de l'aide![](../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/support/index.html#getting-help){: new_window} pour plus d'informations sur l'utilisation des forums. 
+Pour plus d'informations sur l'utilisation des forums, voir la rubrique décrivant [comment obtenir de l'aide](https://www.{DomainName}/docs/support/index.html#getting-help). 
 
-Pour plus d'informations sur l'ouverture d'un ticket de demande de service IBM, sur les niveaux de support disponibles ou les niveaux de gravité des tickets, voir la rubrique décrivant [comment contacter le support![](../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/support/index.html#contacting-support){: new_window}.
+Pour plus d'informations sur l'ouverture d'un ticket de demande de service IBM, sur les niveaux de support disponibles ou les niveaux de gravité des tickets, voir la rubrique décrivant [comment contacter le support![](../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/support/index.html#contacting-support).

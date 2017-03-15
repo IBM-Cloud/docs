@@ -67,7 +67,7 @@ Un gateway può pubblicare gli eventi per se stesso o per conto di qualsiasi dis
 **Importante:** il payload dei messaggi è limitato ad un massimo di 131072 byte. I messaggi che superano questo limite vengono rifiutati.
 
 ### Messaggi conservati
-Le organizzazioni {{site.data.keyword.iot_short_notm}} non sono autorizzate a pubblicare i messaggi MQTT conservati. Se un gateway invia un messaggio conservato, il servizio {{site.data.keyword.iot_short_notm}} sovrascrive l'indicatore del messaggio conservato quando viene impostato su true ed elabora il messaggio come se l'indicatore fosse impostato su false. 
+Le organizzazioni {{site.data.keyword.iot_short_notm}} non sono autorizzate a pubblicare i messaggi MQTT conservati. Se un gateway invia un messaggio conservato, il servizio {{site.data.keyword.iot_short_notm}} sovrascrive l'indicatore del messaggio conservato quando viene impostato su true ed elabora il messaggio come se l'indicatore fosse impostato su false.
 
 ## Sottoscrizione ai comandi
 {: #subscribing_cmds}

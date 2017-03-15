@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-10"
+lastupdated: "2017-02-17"
 
 ---
 
@@ -200,4 +200,4 @@ IBM 提供了一组缺省卡，您还可以通过[创建自己的定制卡](cust
 
 太棒了！您现在可以查看设备的实时数据了！
 
-有关如何显示实时设备数据的逐步指示信息，请参阅 [Configuring Boards & Cards in the new Watson IoT Dashboard](https://developer.ibm.com/recipes/tutorials/configuring-the-cards-in-the-new-watson-iot-dashboard/) 诀窍。
+有关如何显示实时设备数据的逐步指示信息，请参阅 [Configuring Boards & Cards in the new Watson IoT Dashboard ![外部链接图标](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/configuring-the-cards-in-the-new-watson-iot-dashboard/){: new_window} 诀窍。

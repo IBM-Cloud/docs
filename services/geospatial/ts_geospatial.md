@@ -2,21 +2,21 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-09"
+lastupdated: "2017-03-09"
 
 ---
 
-<!-- Attribute definitions --> 
-{:tsSymptoms: .tsSymptoms} 
-{:tsCauses: .tsCauses} 
-{:tsResolve: .tsResolve} 
+<!-- Attribute definitions -->
+{:tsSymptoms: .tsSymptoms}
+{:tsCauses: .tsCauses}
+{:tsResolve: .tsResolve}
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
 
-#{{site.data.keyword.geospatialshort_Geospatial}} troubleshooting 
+#{{site.data.keyword.geospatialshort_Geospatial}} troubleshooting
 {: #ts_geospatial}
 
 
@@ -35,7 +35,7 @@ You stopped your application that uses {{site.data.keyword.geospatialshort_Geosp
 {: tsSymptoms}
 
 
-If you stop your application, your {{site.data.keyword.geospatialshort_Geospatial}} service instance will continue to run. The service continues to monitor regions until you stop the service, regardless of whether your app is running. 
+If you stop your application, your {{site.data.keyword.geospatialshort_Geospatial}} service instance will continue to run. The service continues to monitor regions until you stop the service, regardless of whether your app is running.
 {: tsCauses}
 
 
@@ -72,6 +72,6 @@ To stop {{site.data.keyword.geospatialshort_Geospatial}} from monitoring certain
 As you troubleshoot your application, you'll want to go to the service administration dashboard to check the status of your service instance. If it is not processing data, you might be able to fix the problem by stopping and restarting the service.
 {:shortdesc}
 
-The status of your {{site.data.keyword.geospatialshort_Geospatial}} service instance is separate from the status of your application, and several applications can be bound to the same service instance. 
+The status of your {{site.data.keyword.geospatialshort_Geospatial}} service instance is separate from the status of your application, and several applications can be bound to the same service instance.
 
 The service administration dashboard provides information about the status of the {{site.data.keyword.geospatialshort_Geospatial}}, not the applications that are bound to it. The separate statuses of your service instance and your application or applications means that if you stop your application, your {{site.data.keyword.geospatialshort_Geospatial}} service instance continues to run. The service continues to monitor the regions you chose until you remove them, regardless of whether or not your app is running.

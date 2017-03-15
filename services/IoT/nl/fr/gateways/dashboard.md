@@ -86,7 +86,7 @@ L'ID de terminal permet d'identifier le terminal de passerelle dans le tableau d
 
 Félicitations, vous avez enregistré votre terminal de passerelle. Vous pouvez maintenant configurer votre terminal de passerelle pour qu'il se connecte à {{site.data.keyword.iot_short_notm}}.
 
-Pour obtenir les instructions étape par étape qui illustrent le flux requis pour enregistrer une passerelle, voir la recette [How to Register Gateways in IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/how-to-register-gateways-in-ibm-watson-iot-platform/). 
+Pour obtenir les instructions étape par étape qui illustrent le flux requis pour enregistrer une passerelle, voir la recette [How to Register Gateways in IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/how-to-register-gateways-in-ibm-watson-iot-platform/).
 
 ## Etape2 : Connexion de votre passerelle à {{site.data.keyword.iot_short_notm}}
 {: #connect_gateway}
@@ -108,7 +108,7 @@ Pour plus d'informations sur l'enregistrement automatique de terminal et la publ
 
 Lorsqu'un terminal se connecte à votre passerelle, il s'affiche sur le tableau de bord de votre organisation {{site.data.keyword.iot_short_notm}}.
 
-Pour obtenir un flux détaillé et une description, voir la recette[Connecting Raspberry Pi as a Gateway to Watson IoT](https://developer.ibm.com/recipes/tutorials/connecting-raspberry-pi-as-a-gateway-to-watson-iot-using-node-red/).  
+Pour obtenir un flux détaillé et une description, voir la recette[Connecting Raspberry Pi as a Gateway to Watson IoT](https://developer.ibm.com/recipes/tutorials/connecting-raspberry-pi-as-a-gateway-to-watson-iot-using-node-red/). 
 
 **Remarque :** Dans le tableau de bord {{site.data.keyword.iot_short_notm}}, les terminaux et les passerelles qui sont directement connectés à {{site.data.keyword.iot_short_notm}} affichent une icône de statut sur le tableau de bord pour indiquer qu'ils sont connectés. Le tableau de bord affiche les terminaux qui sont connectés indirectement via une passerelle comme des terminaux étant déconnectés car il ne reconnaît pas les terminaux qui sont connectés via la passerelle.
 

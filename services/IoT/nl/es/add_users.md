@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-24"
+lastupdated: "2017-02-17"
 
 ---
 
@@ -79,7 +79,7 @@ Para registrar un miembro con la organización de {{site.data.keyword.iot_short_
 3. Especifique la dirección de correo electrónico del miembro.
 4. Seleccione un rol para este miembro.
 5. Especifique el asunto, el nombre de reino y el emisor.
-   **Importante:** Asegúrese de que los campos `Asunto`, `Nombre de reino` y `Emisor` cumplen con las recomendaciones y los estándares de OpenID Connect. Para obtener más información, consulte el sitio web de [OpenID Connect](http://openid.net/connect/).
+   **Importante:** Asegúrese de que los campos `Asunto`, `Nombre de reino` y `Emisor` cumplen con las recomendaciones y los estándares de OpenID Connect. Para obtener más información, consulte el sitio web de [OpenID Connect ![icono de enlace externo](../../icons/launch-glyph.svg)](http://openid.net/connect/){: new_window}.
 6. Opcional: Establezca una fecha de caducidad para el miembro.
 7. Pulse **Registrar miembro**.
 

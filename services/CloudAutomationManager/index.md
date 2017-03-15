@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-28"
+lastupdated: "2017-03-08"
 
 ---
 <!-- Copyright info and last updated date at top of file: REQUIRED
@@ -58,14 +58,13 @@ The task section includes steps to integrate the service into the app.
 <!-- Include a sentence to briefly introduce the steps. Examples: -->
 
 After you add the Cloud Automation Manager service from the Bluemix Experimental Services catalog, to get started with the service, create and deploy a template to your cloud provider. The following cloud providers are supported:
- - Bluemix
- - SoftLayer
+ - IBM Cloud
  - Amazon EC2
  - vSphere (Beta)
 
-Note that before you can use the Cloud Automation Manager service to deploy templates to the Bluemix infrastructure (SoftLayer), you may need to upgrade and unify your Bluemix and SoftLayer accounts. For more information, see [Upgrading and unifying Bluemix and SoftLayer billing accounts](https://console.{DomainName}/docs/admin/softlayerlink.html){:new_window}.
+<!-- Note that before you can use the Cloud Automation Manager service to deploy templates to the IBM Cloud infrastructure (SoftLayer), you may need to upgrade and unify your Bluemix and SoftLayer accounts. For more information, see [Upgrading and unifying Bluemix and SoftLayer billing accounts](https://console.{DomainName}/docs/admin/softlayerlink.html){:new_window}. -->
 
-Note that you can deploy templates to SoftLayer infrastructures only within the region, organization, and space to which you are logged in.
+Note that you can deploy templates to IBM Cloud infrastructures only within the region, organization, and space to which you are logged in.
 
 Complete the following steps:
 
@@ -76,8 +75,8 @@ Complete the following steps:
 - For non-copyable output snippet, include {: screen} following the last set of backticks.
  -->
 
-1. Click **Clouds** to set a connection to the cloud provider where you want to deploy your template. For information about creating a connection, see [Managing connections](https://console.{DomainName}/docs/services/CloudAutomationManager/cam_managing_connections.html).
-2. Click **Library** to create and deploy a template from scratch or deploy one of the pre-built templates. For information about deploying a template, see [Deploying a template](https://console.{DomainName}/docs/services/CloudAutomationManager/cam_deploying.html).
+1. Click **Cloud Connections** to set a connection to the cloud provider where you want to deploy your template. For information about creating a connection, see [Managing connections](https://console.{DomainName}/docs/services/CloudAutomationManager/cam_managing_connections.html).
+2. Click **Template Library** to create and deploy a template from scratch or deploy one of the pre-built templates. For information about deploying a template, see [Deploying a template](https://console.{DomainName}/docs/services/CloudAutomationManager/cam_deploying.html).
 3. Click **Deployed Instances** to view the deployed instance details and perform actions on the related resources. For more information, see [Viewing instance details](https://console.{DomainName}/docs/services/CloudAutomationManager/cam_instance_details.html).
 
 <!-- Related links section: REQUIRED.

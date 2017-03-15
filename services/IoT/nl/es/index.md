@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-07"
+lastupdated: "2017-02-22"
 
 ---
 
@@ -21,9 +21,9 @@ lastupdated: "2017-02-07"
 ## Antes de empezar
 {: #byb}
 
-Antes de conectar dispositivos y de utilizar datos, regístrese para una cuenta de {{site.data.keyword.Bluemix_notm}} y cree una instancia del servicio de {{site.data.keyword.iot_short_notm}} en la organización de {{site.data.keyword.Bluemix_notm}}. Puede crear una instancia de {{site.data.keyword.iot_short_notm}} directamente desde la página [{{site.data.keyword.iot_short_notm}} en el Catálogo de servicios de Bluemix](https://console.{DomainName}/catalog/services/internet-of-things-platform/).  
+Antes de conectar dispositivos y de utilizar datos, regístrese para una cuenta de {{site.data.keyword.Bluemix_notm}} y cree una instancia del servicio de {{site.data.keyword.iot_short_notm}} en la organización de {{site.data.keyword.Bluemix_notm}}. Puede crear una instancia de {{site.data.keyword.iot_short_notm}} directamente desde la página [{{site.data.keyword.iot_short_notm}} en el Catálogo de servicios de Bluemix ![icono de enlace externo](../../icons/launch-glyph.svg)](https://console.{DomainName}/catalog/services/internet-of-things-platform/){:new_window}.  
 
-Para obtener información detallada sobre cómo registrarse para una cuenta en {{site.data.keyword.Bluemix_notm}}, configurar regiones y otros valores de gestión de cuentas, consulte [Gestión de la cuenta de Bluemix![icono de enlace externo](../../icons/launch-glyph.svg)](https://console.ng.bluemix.net/docs/admin/account.html#signup){:new_window}.
+Para obtener información detallada sobre cómo registrarse para una cuenta en {{site.data.keyword.Bluemix_notm}}, configurar regiones y otros valores de gestión de cuentas, consulte [Gestión de la cuenta de Bluemix](https://console.ng.bluemix.net/docs/admin/account.html#signup).
 
 Puede establecer y configurar la instancia de {{site.data.keyword.iot_short_notm}} desde el panel de control. Para abrir el panel de control, vaya a la instancia de servicio de {{site.data.keyword.iot_short_notm}} en {{site.data.keyword.Bluemix_notm}} y, a continuación, pulse **Iniciar panel de control**.
 
@@ -34,9 +34,9 @@ Para ejecutar el servicio, explore las opciones siguientes en función de su sit
 
    |   El servicio se despliega | El servicio no se despliega
   ------------- | -------------
-  **Tengo un dispositivo para conectar** | [Conecte el dispositivo a {{site.data.keyword.iot_short_notm}}](iotplatform_task.html#iotplatform_task).| Explore la conexión del dispositivo en la [Demostración de la organización Play![icono de enlace externo](../../icons/launch-glyph.svg)](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window}.
-  **No tengo un dispositivo para conectar** | [Cree y conecte un simulador de dispositivos Node-RED](nodereddevice_sample.html){:new_window}. | Iníciese a [Watson IoT Platform Starter![icono de enlace externo](../../icons/launch-glyph.svg)](https://console.ng.bluemix.net/docs/starters/IoT/iot500.html){:new_window}.
-Para obtener más información sobre cómo conectarse a tipos de dispositivos específicos a {{site.data.keyword.iot_short_notm}}, consulte [Recetas de developerWorks![icono de enlace externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}.  
+  **Tengo un dispositivo para conectar** | [Conecte el dispositivo a {{site.data.keyword.iot_short_notm}}](iotplatform_task.html#iotplatform_task).| Explore la conexión del dispositivo en la [Demostración de la organización Play ![icono de enlace externo](../../icons/launch-glyph.svg)](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window}.
+  **No tengo un dispositivo para conectar** | [Cree y conecte un simulador de dispositivos Node-RED](nodereddevice_sample.html){:new_window}. | Iníciese a [Watson IoT Platform Starter](https://console.ng.bluemix.net/docs/starters/IoT/iot500.html).
+Para obtener más información sobre cómo conectarse a tipos de dispositivos específicos a {{site.data.keyword.iot_short_notm}}, consulte [Recetas de developerWorks ![icono de enlace externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}.  
 
 Para la documentación de desarrollador de conexiones de dispositivos, consulte:
 - [Conectividad de MQTT para dispositivos](devices/mqtt.html).
@@ -51,7 +51,7 @@ Empiece a explorar los datos en tiempo real que los dispositivos están enviando
 - [Paneles y tarjetas](data_visualization.html) para visualizar los datos de dispositivos en tiempo real.
 - [Reglas y acciones](analytics.html) que desencadenan datos de dispositivos en tiempo real.
 
-Para ver un ejemplo rápido de como empezar, consulte la receta de developerWorks [Uso de reglas y acciones con IBM Watson IoT Platform Cloud Analytics![icono de enlace externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/){:new_window}.
+Para ver un ejemplo rápido de como empezar, consulte la receta de developerWorks [Uso de reglas y acciones con IBM Watson IoT Platform Cloud Analytics ![icono de enlace externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/){:new_window}.
 
 ## Paso 3: Crear las aplicaciones que van a consumir los datos de dispositivo
 {: #develop_applications}
@@ -70,7 +70,7 @@ Para obtener más información consulte los siguientes temas:
 {: #rellinks}
 ## Guías de aprendizaje y ejemplos
 {: #samples}
-* [Recetas para conectar los dispositivos![icono de enlace externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}
+* [Recetas para conectar los dispositivos ![icono de enlace externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}
 * Organización [{{site.data.keyword.iot_short_notm}} Play ![icono de enlace externo](../../icons/launch-glyph.svg)](https://play.internetofthings.ibmcloud.com/){:new_window}
 * [Conexión de Intel Galileo a {{site.data.keyword.iot_short_notm}} ![icono de enlace externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/connect-an-intel-galileo-to-the-internet-of-things-foundation-connect/){:new_window}
 * [Conexión de ARM® mbed™ IoT Starter Kit ![icono de enlace externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/arm-mbed-iot-starter-kit-part-1/){:new_window}

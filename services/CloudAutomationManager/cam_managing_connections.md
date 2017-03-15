@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-28"
+lastupdated: "2017-03-09"
 
 ---
 <!-- Copyright info and last updated date at top of file: REQUIRED
@@ -33,29 +33,30 @@ This is the template for additional task topics that are needed beyond the basic
 In the Connections view, manage your connections to define the parameters to connect to the cloud providers where you want to deploy your templates.
 {:shortdesc}
 
-A connection to Bluemix is created by default. If you want to use Bluemix as cloud provider, edit the connection to specify the required parameters.
+<!--A connection to Bluemix is created by default. If you want to use Bluemix as cloud provider, edit the connection to specify the required parameters.-->
 
 To add a new connection, follow these steps:
 
-1. Click **Clouds**.
+1. Click **Cloud Connections**.
 
 2. Click **Create Connections**. 
 
 3. Select the cloud provider to which you want you connect. The following cloud providers are supported:
- - Bluemix
- - SoftLayer
+ - IBM Cloud
  - Amazon EC2
  - vSphere (Beta)
 
-4. Click **Next**.
+4. Enter the connection name and description, and specify the required connection parameters depending on the cloud provider you selected.
 
-5. Enter the connection name and description, and specify the required connection parameters depending on the cloud provider you selected.
+ Cloud Automation Manager must have access to the provider cloud region where you want to deploy your templates.  The access is granted by supplying Cloud Automation Manager with access credentials. The method for obtaining access credentials depends on the cloud provider.
 
-6. Click **Create**. The connection is added to the connection list.
+ **Note:** If you are creating a connection to Amazon EC2, in order for Cloud Automation Manager to access your Amazon Web Services (AWS) account, an access key and the secret access key to your account are required. The access key and the secret access key are not your AWS user name and password, but they are special tokens that allow Cloud Automation Manager to communicate with your AWS account via secure API calls. For more information about creating AWS access keys, see [Creating, Modifying, and Viewing Access Keys (AWS Management Console)](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey){:new_window}.
+
+5. Click **Create**. The connection is added to the connection list.
 
 To edit an existing connection, follow these steps:
 
-1. Click **Clouds**.
+1. Click **Cloud Connections**.
 
 2. In the connection list, click the connection that you want to edit.
 
@@ -65,12 +66,14 @@ To edit an existing connection, follow these steps:
 
 To delete a connection, follow these steps:
 
-1. Click **Clouds**.
+1. Click **Cloud Connections**.
 
 2. In the connection list, click the menu in the **ACTIONS** column for the connection that you want to delete.
 
 3. In the action list, click **Delete Connection**. A confirmation window is opened.
 
 4. Click **Delete** to confirm that you want to delete the connection.
+
+
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-07"
+lastupdated: "2017-02-22"
 
 ---
 
@@ -21,11 +21,11 @@ lastupdated: "2017-02-07"
 ## Prima di cominciare
 {: #byb}
 
-Prima di collegare i dispositivi utilizzando i dati, registra un account {{site.data.keyword.Bluemix_notm}} e crea un'istanza del servizio {{site.data.keyword.iot_short_notm}} nella tua organizzazione {{site.data.keyword.Bluemix_notm}}. Puoi creare un'istanza {{site.data.keyword.iot_short_notm}} direttamente dalla pagina [{{site.data.keyword.iot_short_notm}} nel catalogo dei servizi Bluemix](https://console.{DomainName}/catalog/services/internet-of-things-platform/).  
+Prima di collegare i dispositivi utilizzando i dati, registra un account {{site.data.keyword.Bluemix_notm}} e crea un'istanza del servizio {{site.data.keyword.iot_short_notm}} nella tua organizzazione {{site.data.keyword.Bluemix_notm}}. Puoi creare un'istanza {{site.data.keyword.iot_short_notm}} direttamente dalla pagina [{{site.data.keyword.iot_short_notm}} nel catalogo dei servizi Bluemix ![icona link esterno](../../icons/launch-glyph.svg)](https://console.{DomainName}/catalog/services/internet-of-things-platform/){:new_window}.  
 
-Per informazioni dettagliate su come registrare un account in {{site.data.keyword.Bluemix_notm}}, configura le regioni e le altre impostazioni di gestione dell'account, consulta [Gestione del tuo account Bluemix ![icona link esterno](../../icons/launch-glyph.svg)](https://console.ng.bluemix.net/docs/admin/account.html#signup){:new_window}.
+Per informazioni dettagliate su come registrare un account in {{site.data.keyword.Bluemix_notm}}, configura le regioni e le altre impostazioni di gestione dell'account, consulta [Gestione del tuo account Bluemix](https://console.ng.bluemix.net/docs/admin/account.html#signup).
 
-Puoi configurare la tua istanza {{site.data.keyword.iot_short_notm}} dal dashboard. Per aprire il dashboard, vai alla tua istanza del servzio {{site.data.keyword.iot_short_notm}} in  {{site.data.keyword.Bluemix_notm}} e fai quindi clic su **Launch Dashboard**.
+Puoi configurare la tua istanza {{site.data.keyword.iot_short_notm}} dal dashboard. Per aprire il dashboard, vai alla tua istanza del servizio {{site.data.keyword.iot_short_notm}} in  {{site.data.keyword.Bluemix_notm}} e fai quindi clic su **Launch Dashboard**.
 
 ## Passo 1: Collega i tuoi dispositivi
 {: #up_and_running}
@@ -35,7 +35,7 @@ Per essere operativo con il servizio, esplora le seguenti opzioni in base alla t
    |   Il servizio è stato distribuito | Il servizio non è stato distribuito
   ------------- | -------------
   **Ho un dispositivo da collegare** | [Collega il tuo dispositivo a {{site.data.keyword.iot_short_notm}}](iotplatform_task.html#iotplatform_task).| Esplora la connessione del dispositivo nella demo [Play organization demo ![icona link esterno](../../icons/launch-glyph.svg)](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window}.
-  **Non ho un dispositivo da collegare** | [Crea e collega un simulatore del dispositivo Node-RED](nodereddevice_sample.html){:new_window}. | Introduzione a [Watson IoT Platform Starter ![icona link esterno](../../icons/launch-glyph.svg)](https://console.ng.bluemix.net/docs/starters/IoT/iot500.html){:new_window}.
+  **Non ho un dispositivo da collegare** | [Crea e collega un simulatore del dispositivo Node-RED](nodereddevice_sample.html){:new_window}. | Introduzione a [Watson IoT Platform Starter](https://console.ng.bluemix.net/docs/starters/IoT/iot500.html).
 Per ulteriori informazioni su come collegare tipi di dispositivi specifici a {{site.data.keyword.iot_short_notm}}, consulta [developerWorks recipes ![icona link esterno](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}.  
 
 Per la documentazione dello sviluppatore per la connessione del dispositivo, consulta:

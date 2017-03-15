@@ -165,7 +165,7 @@ Per ulteriori informazioni, consulta [Connettività MQTT per le applicazioni](..
 Il servizio {{site.data.keyword.iot_short_notm}} supporta solo le autenticazioni basate sui token per i dispositivi; quindi, ogni dispositivo ha solo un nome utente valido.
 Un valore di `use-token-auth` indica al servizio che viene utilizzato il token di autenticazione per il gateway o per il dispositivo come password per la connessione MQTT.
 
-Per ulteriori informazioni, consulta [Connettività MQTT per i dispositivi](../../devices/mqtt.html). 
+Per ulteriori informazioni, consulta [Connettività MQTT per i dispositivi](../../devices/mqtt.html).
 
 #### Password
 Se il client sta utilizzando l'autenticazione basata sul token, invia il token di autenticazione del dispositivo come password per le connessioni MQTT.

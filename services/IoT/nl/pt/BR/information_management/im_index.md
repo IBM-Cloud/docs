@@ -59,7 +59,7 @@ Mapeamento de interface refere-se ao conceito de um estado do dispositivo. O est
 
 Para processar dados de eventos de entrada e mapear propriedades no evento de entrada para as propriedades na interface de aplicativo, as informações a seguir devem ser configuradas:
 
-- A estrutura de um ou mais eventos de entrada. O esquema de evento define essas informações. Cada esquema de evento define a estrutura de um evento de entrada e está associado a um tipo de evento. A interface física agrupa um ou mais tipos de eventos.
+- A estrutura de um ou mais eventos de entrada. O esquema de evento define essas informações.  Cada esquema de evento define a estrutura de um evento de entrada e está associado a um tipo de evento. A interface física agrupa um ou mais tipos de eventos.
 
     A estrutura e o formato de dados contidos em um evento de dispositivo de entrada são definidos por um arquivo de esquema de evento que está no formato de esquema JSON. É possível fazer upload do arquivo de esquema de evento para o {{site.data.keyword.iot_short_notm}} usando um método POST para criar um recurso de esquema nomeado. Para Beta, todos os eventos de entrada devem estar no formato JSON.
 
@@ -364,8 +364,6 @@ O identificador de esquema *5846cee36522050001db0e0e* retornado em resposta ao m
 {: #step3}
 
 Cada tipo de evento referencia o esquema de evento relevante que foi criado no exemplo anterior usando o identificador de esquema retornado na resposta para o método POST usado para criar o recurso de esquema de evento.
-
-
 
 Para criar um tipo de evento, use a API a seguir:
 
@@ -978,7 +976,8 @@ curl --request GET \
   --header 'authorization: Basic TGS04NXg5dHotKNBzbGZ5eWdiaToxX543S0lKOmE3Tk5Mc0xMu6n='
 ```
 
-O identificador de interface de aplicativo *5846ed076522050001db0e12* é usado no método GET. Esse identificador é retornado na resposta ao método POST que foi usado para criar a interface de aplicativo. O exemplo a seguir mostra uma resposta para o método GET:
+O identificador de interface de aplicativo *5846ed076522050001db0e12* é usado no método GET. Esse identificador é retornado na resposta ao método POST que foi usado para criar a interface de aplicativo.
+O exemplo a seguir mostra uma resposta para o método GET:
 ```
 {
   "temperature":34.5
@@ -991,7 +990,8 @@ curl --request GET \
   --header 'authorization: Basic TGS04NXg5dHotKNBzbGZ5eWdiaToxX543S0lKOmE3Tk5Mc0xMu6n='
 ```
 
-O identificador de interface de aplicativo *5846ed076522050001db0e12* é usado no método GET. Esse identificador é retornado na resposta ao método POST que foi usado para criar a interface de aplicativo. O exemplo a seguir mostra uma resposta para o método GET:
+O identificador de interface de aplicativo *5846ed076522050001db0e12* é usado no método GET. Esse identificador é retornado na resposta ao método POST que foi usado para criar a interface de aplicativo.
+O exemplo a seguir mostra uma resposta para o método GET:
 ```
 {
   "temperature":22.5

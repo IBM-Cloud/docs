@@ -18,14 +18,14 @@ lastupdated: "2017-01-17"
 Utilisez la fonction de mappage d'interface d'{{site.data.keyword.iot_full}} pour organiser et intégrer des données de terminal entrantes et sortantes.
 {:shortdesc}
 
-**Important :** Pour le moment, la fonction de mappage d'interface est disponible uniquement sous forme de fonction bêta. Avant l'édition finale, il est possible que les fonctions bêta incluent des modifications qui sont incompatibles avec la version en cours. Il est fortement recommandé de ne pas utiliser les fonctions bêta dans des applications en production avant l'édition finale. Pour recevoir d'autres informations et communiquer des commentaires en retour sur cette fonction bêta, merci de vous [inscrire au programme bêta IM](https://www.ibm.com/software/support/trial/cst/forms/nomination.wss?id=7050) et de nous faire part de vos impressions. 
+**Important :** Pour le moment, la fonction de mappage d'interface est disponible uniquement sous forme de fonction bêta. Avant l'édition finale, il est possible que les fonctions bêta incluent des modifications qui sont incompatibles avec la version en cours. Il est fortement recommandé de ne pas utiliser les fonctions bêta dans des applications en production avant l'édition finale. Pour recevoir d'autres informations et communiquer des commentaires en retour sur cette fonction bêta, merci de vous [inscrire au programme bêta IM](https://www.ibm.com/software/support/trial/cst/forms/nomination.wss?id=7050) et de nous faire part de vos impressions.
 
 ## Présentation
 {: #overview}
 
-Vous pouvez utiliser la fonction de mappage d'interface afin de développer des interfaces pour vos applications. Il existe différents types, différentes marques ou différents modèles de terminal ou de capteur à connecter à {{site.data.keyword.iot_short_notm}} et les données publiées par ces terminaux peuvent se présenter dans différents formats. Utilisez la fonction de mappage d'interface pour normaliser les données entrantes et pour simplifier vos applications en les dissociant des complexités liées à la façon dont vos terminaux spécifiques sont connectés. 
+Vous pouvez utiliser la fonction de mappage d'interface afin de développer des interfaces pour vos applications. Il existe différents types, différentes marques ou différents modèles de terminal ou de capteur à connecter à {{site.data.keyword.iot_short_notm}} et les données publiées par ces terminaux peuvent se présenter dans différents formats. Utilisez la fonction de mappage d'interface pour normaliser les données entrantes et pour simplifier vos applications en les dissociant des complexités liées à la façon dont vos terminaux spécifiques sont connectés.
 
-Imaginons par exemple que vous possédiez deux capteurs thermiques. L'un d'eux mesure la température en degrés Celsius et l'autre en degrés Fahrenheit. 
+Imaginons par exemple que vous possédiez deux capteurs thermiques. L'un d'eux mesure la température en degrés Celsius et l'autre en degrés Fahrenheit.
 
 ![Mappage entre des terminaux capteur thermique et une application sur {{site.data.keyword.iot_short_notm}}.](images/Information "Mappage entre des terminaux capteur thermique et une application sur {{site.data.keyword.iot_short_notm}}")
 
@@ -55,33 +55,33 @@ Le diagramme suivant illustre le mappage logique entre des terminaux et des appl
 
 ![Mappage logique entre un terminal et une application sur {{site.data.keyword.iot_short_notm}}.](images/im_mapping.svg "Mappage logique entre un terminal et une application sur {{site.data.keyword.iot_short_notm}}")
 
-Le mappage d'interface fait référence au concept d'état de terminal. L'état de terminal correspond à un ensemble de propriétés définies par l'interface d'application. Les valeurs les plus récentes de ces propriétés sont stockées dans {{site.data.keyword.iot_short_notm}} et sont fournies sur demande à l'application à l'aide d'une API HTTP. 
+Le mappage d'interface fait référence au concept d'état de terminal. L'état de terminal correspond à un ensemble de propriétés définies par l'interface d'application. Les valeurs les plus récentes de ces propriétés sont stockées dans {{site.data.keyword.iot_short_notm}} et sont fournies sur demande à l'application à l'aide d'une API HTTP.
 
-Pour traiter les données provenant d'événements entrants et mapper les propriétés de l'événement entrant aux propriétés définies sur l'interface d'application, les informations suivantes doivent être configurées : 
+Pour traiter les données provenant d'événements entrants et mapper les propriétés de l'événement entrant aux propriétés définies sur l'interface d'application, les informations suivantes doivent être configurées :
 
-- La structure d'un ou plusieurs événements entrants. Ces informations sont définies dans le schéma d'événement. Chaque schéma d'événement définit la structure d'un événement entrant et est associé à un type d'événement. L'interface physique regroupe un ou plusieurs types d'événement. 
+- La structure d'un ou plusieurs événements entrants. Ces informations sont définies dans le schéma d'événement.  Chaque schéma d'événement définit la structure d'un événement entrant et est associé à un type d'événement. L'interface physique regroupe un ou plusieurs types d'événement.
 
-    La structure et le format des données contenues dans un événement de terminal entrant est défini par un fichier schéma d'événement qui se présente au format de schéma JSON. Vous pouvez télécharger le fichier schéma d'événement sur {{site.data.keyword.iot_short_notm}} à l'aide d'une méthode POST pour créer une ressource de schéma nommée. Pour la version bêta, tous les événements entrants doivent être au format JSON. 
+    La structure et le format des données contenues dans un événement de terminal entrant est défini par un fichier schéma d'événement qui se présente au format de schéma JSON. Vous pouvez télécharger le fichier schéma d'événement sur {{site.data.keyword.iot_short_notm}} à l'aide d'une méthode POST pour créer une ressource de schéma nommée. Pour la version bêta, tous les événements entrants doivent être au format JSON.
 
-- La structure de l'état de terminal souhaité. Ces informations sont définies dans le schéma d'interface d'application. 
+- La structure de l'état de terminal souhaité. Ces informations sont définies dans le schéma d'interface d'application.
 
-    L'état de terminal est une représentation de la structure de données et des données que votre application est configurée pour recevoir en tant que données du terminal. Les valeurs de propriété qui sont stockées dans l'état de terminal sont mises à jour en réponse à un événement de terminal entrant. Les valeurs d'état de terminal les plus récentes sont fournies sur demande à une application à l'aide d'une API HTTP. 
+    L'état de terminal est une représentation de la structure de données et des données que votre application est configurée pour recevoir en tant que données du terminal. Les valeurs de propriété qui sont stockées dans l'état de terminal sont mises à jour en réponse à un événement de terminal entrant. Les valeurs d'état de terminal les plus récentes sont fournies sur demande à une application à l'aide d'une API HTTP.
 
-- Les informations décrivant comment mapper les événements entrants à l'état de terminal préféré. Ces informations sont définies dans les mappages. 
+- Les informations décrivant comment mapper les événements entrants à l'état de terminal préféré. Ces informations sont définies dans les mappages.
 
-    Pour mapper les données contenues dans les propriétés d'un événement entrant aux propriétés appropriées sur l'interface d'application, vous devez créer un mappage. Le mappage explique comment mettre à jour les propriétés définies par une interface d'application spécifique en réponse à un événement entrant provenant d'un terminal. 
+    Pour mapper les données contenues dans les propriétés d'un événement entrant aux propriétés appropriées sur l'interface d'application, vous devez créer un mappage. Le mappage explique comment mettre à jour les propriétés définies par une interface d'application spécifique en réponse à un événement entrant provenant d'un terminal.
 
 
 ## Ressources
 {: #resources}
 
-Vous pouvez gérer les ressources illustrées dans les diagrammes précédents à l'aide d'API REST. Pour plus d'informations sur les API REST, voir la documentation sur l'[{{site.data.keyword.iot_short_notm}} API REST HTTP](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html). 
+Vous pouvez gérer les ressources illustrées dans les diagrammes précédents à l'aide d'API REST. Pour plus d'informations sur les API REST, voir la documentation sur l'[{{site.data.keyword.iot_short_notm}} API REST HTTP](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html).
 
 Ressource                        | Description       
 ------------- | ------------- | -------------  
 Schémas                         | Les schémas JSON sont utilisés pour définir la structure des événements entrants publiés sur {{site.data.keyword.iot_short_notm}} à partir de terminaux, ainsi que l'état de terminal souhaité. Pour plus d'informations sur les schémas JSON, voir [JSON Schema](http://json-schema.org/). Dans le mappage d'interface, deux schémas JSON sont référencés : le schéma d'événement et le schéma d'interface d'application. Les schémas d'événement sont utilisés pour définir la structure des événements publiés sur {{site.data.keyword.iot_short_notm}} par un terminal. Les schémas d'interface d'application sont référencés par l'interface d'application et sont utilisés pour définir la structure de l'[état de terminal](#key_concepts) qui est stocké sur {{site.data.keyword.iot_short_notm}}.
-Type d'événement                         | Vous devez créer un type d'événement dans votre organisation de sorte que {{site.data.keyword.iot_short_notm}} puisse traiter les données contenues dans un événement spécifique. Tous les types d'événement doivent faire référence à un schéma d'événement. Pour la version bêta, tous les événements entrants doivent être au format JSON.    
-Interface physique                         | L'interface physique peut être associée à un ou plusieurs types d'événement et définit les types d'événement qui sont associés à un type de terminal.   
+Type d'événement                         | Vous devez créer un type d'événement dans votre organisation de sorte que {{site.data.keyword.iot_short_notm}} puisse traiter les données contenues dans un événement spécifique. Tous les types d'événement doivent faire référence à un schéma d'événement. Pour la version bêta, tous les événements entrants doivent être au format JSON.   
+Interface physique                         | L'interface physique peut être associée à un ou plusieurs types d'événement et définit les types d'événement qui sont associés à un type de terminal.  
 Type de terminal                         | Chaque terminal connecté à Watson IoT Platform est associé à un type de terminal. Les types de terminal sont des groupes de terminaux ayant des caractéristiques ou des comportements communs. Dans le mappage d'interface, le type de terminal est étendu de manière à inclure une interface physique pour un terminal et une interface d'application qui peut être utilisée pour extraire l'état de terminal. Un type de terminal peut être configuré avec plusieurs interfaces d'application. Pour plus d'informations sur les types de terminal, voir la section "Identificateurs et type de terminal" dans [Modèle d'unité](../reference/device_model.html#id_and_device_types).
 Interface d'application                         | L'interface d'application doit faire référence à un schéma d'interface d'application. Dans une interface d'application, vous pouvez définir la structure des données qui sont stockées en tant qu'état de terminal. L'état de terminal est une représentation de la structure de données et des données qu'une application est configurée pour recevoir en tant que données du terminal. Au moins une interface d'application doit être associée à un type de terminal pour que des mappages puissent être définis.
 Mappages                         | Les mappages décrivent de quelle façon les propriétés associées à des événements entrants sont mappées aux propriétés définies sur une interface d'application spécifique. Un mappage doit spécifier l'identificateur d'interface d'application auquel il s'applique et l'interface d'application doit être associée au type de terminal auquel le mappage est ajouté.
@@ -97,7 +97,7 @@ Mappages                         | Les mappages décrivent de quelle façon les 
 Utilisez les étapes décrites ci-après pour vous aider à configurer les ressources dont vous avez besoin pour commencer à mapper vos données de terminal à l'aide d'interfaces.
 
 Pour plus d'informations sur l'API, voir la documentation sur l'[{{site.data.keyword.iot_short_notm}} API REST HTTP](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html).
-Pour plus d'informations sur chacune de ces étapes, reportez-vous à l'[exemple de scénario](#scenario) ou cliquez sur les liens pour accéder directement à une étape spécifique dans l'exemple de scénario. 
+Pour plus d'informations sur chacune de ces étapes, reportez-vous à l'[exemple de scénario](#scenario) ou cliquez sur les liens pour accéder directement à une étape spécifique dans l'exemple de scénario.
 
 ### Configuration de votre environnement pour commencer à utiliser des interfaces dans le but de mapper des données de terminal
 
@@ -107,12 +107,12 @@ Pour plus d'informations sur chacune de ces étapes, reportez-vous à l'[exemple
       ```
       https://**orgId**.internetofthings.ibmcloud.com/api/v0002/device/types
       ```
-  2.  Le cas échéant, ajoutez un terminal.   
+  2.  Le cas échéant, ajoutez un terminal.  
 Pour plus d'informations sur l'ajout d'un type de terminal et d'un terminal, voir [Connexion de terminaux](../iotplatform_task.html#devices)
 
 2. Créez une interface physique
 
-  1. [Créez un fichier schéma d'événement](#step1). Il s'agit d'un fichier .JSON local qui définit la structure et le format d'un événement entrant. 
+  1. [Créez un fichier schéma d'événement](#step1). Il s'agit d'un fichier .JSON local qui définit la structure et le format d'un événement entrant.
 
   2. [Créez une ressource de schéma d'événement pour votre type d'événement](#step2) en utilisant la méthode POST de l'API REST avec l'URI suivant :
       ```
@@ -124,6 +124,7 @@ Pour plus d'informations sur l'ajout d'un type de terminal et d'un terminal, voi
       https://**orgId**.internetofthings.ibmcloud.com/api/v0002/event/types
       ```
       Ajoutez le type d'événement à votre schéma d'événement à l'aide de l'identificateur de schéma qui a été renvoyé en réponse à la méthode POST utilisée pour créer la ressource de schéma d'événement.
+
   4. [Créez une interface physique](#step7) en utilisant la méthode POST de l'API REST avec l'URI suivant :
         ```
         https://**orgId**.internetofthings.ibmcloud.com/api/v0002/physicalinterfaces
@@ -134,7 +135,7 @@ Pour plus d'informations sur l'ajout d'un type de terminal et d'un terminal, voi
         https://**orgId**.internetofthings.ibmcloud.com/api/v0002/physicalinterfaces/{physicalInterfaceId}/events
         ```
 
-       Ajoutez le type d'événement à votre interface physique en utilisant l'identificateur *eventId* de la rubrique et l'identificateur de type d'événement *eventTypeId* qui a été renvoyé en réponse à la méthode POST utilisée pour créer le type d'événement.        
+       Ajoutez le type d'événement à votre interface physique en utilisant l'identificateur *eventId* de la rubrique et l'identificateur de type d'événement *eventTypeId* qui a été renvoyé en réponse à la méthode POST utilisée pour créer le type d'événement.       
 
 3. Ajoutez votre interface physique à votre type de terminal       
 
@@ -145,30 +146,30 @@ Pour plus d'informations sur l'ajout d'un type de terminal et d'un terminal, voi
 
 4. Créez une interface d'application
 
-  1. [Créez un fichier schéma d'interface d'application](#step4). Un fichier schéma d'interface d'application est un fichier .JSON local qui définit l'état de terminal. 
+  1. [Créez un fichier schéma d'interface d'application](#step4). Un fichier schéma d'interface d'application est un fichier .JSON local qui définit l'état de terminal.
 
   2. [Créez une ressource de schéma d'interface d'application](#step5) en utilisant la méthode POST de l'API REST avez l'URI suivant :
         ```
-      https://**orgId**.internetofthings.ibmcloud.com/api/v0002/schemas
-      ```     
+        https://**orgId**.internetofthings.ibmcloud.com/api/v0002/schemas
+        ```     
 
-  3. [Créez une interface d'application qui fait référence à un schéma d'interface d'application](#step6) en utilisant la méthode POST de l'API REST avec l'URI suivant : 
+  3. [Créez une interface d'application qui fait référence à un schéma d'interface d'application](#step6) en utilisant la méthode POST de l'API REST avec l'URI suivant :
          ```
          https://**orgId**.internetofthings.ibmcloud.com/api/v0002/applicationinterfaces
          ```  
 
-        L'interface d'application fait référence au schéma d'interface d'application à l'aide de l'identificateur de schéma qui a été renvoyé en réponse à la méthode POST utilisée pour créer la ressource de schéma d'interface d'application. 
+        L'interface d'application fait référence au schéma d'interface d'application à l'aide de l'identificateur de schéma qui a été renvoyé en réponse à la méthode POST utilisée pour créer la ressource de schéma d'interface d'application.
 
   4. [Ajoutez l'interface d'application à un type de terminal](#step10) en utilisant la méthode POST de l'API REST avec l'URI suivant :
         ```
         https://**orgId**.internetofthings.ibmcloud.com/api/v0002/types/{typeId}/applicationinterfaces
         ```
 
-        Ajoutez votre interface d'application à votre type de terminal en utilisant la réponse à la méthode POST qui a été utilisée pour créer l'interface d'application. 
+        Ajoutez votre interface d'application à votre type de terminal en utilisant la réponse à la méthode POST qui a été utilisée pour créer l'interface d'application.
 
 5. Définissez les mappages pour le type de terminal
 
-  [Définissez les mappages permettant de mapper les propriétés de l'événement entrant aux propriétés de l'interface d'application](#step11) en utilisant la méthode POST de l'API REST avec l'URI suivant :        
+  [Définissez les mappages permettant de mapper les propriétés de l'événement entrant aux propriétés de l'interface d'application](#step11) en utilisant la méthode POST de l'API REST avec l'URI suivant :       
       ```
       https://**orgId**.internetofthings.ibmcloud.com/api/v0002/device/types/{typeId}/mappings/{applicationInterfaceId}
       ```
@@ -192,7 +193,7 @@ Pour plus d'informations sur l'ajout d'un type de terminal et d'un terminal, voi
 ## Exemple de scénario
 {: #scenario}
 
-Utilisez les informations ci-dessous pour créer un scénario dans lequel deux capteurs thermiques publient des événements sur {{site.data.keyword.iot_short_notm}}. L'un de ces capteurs mesure la température en degrés Celsius. L'autre capteur mesure la température en degrés Fahrenheit. Ces relevés sont mappés à un seul relevé de température exprimé en degrés Celsius. Lorsqu'un nouveau relevé de température est publié par ces terminaux, la valeur de la propriété associée à l'état de terminal est modifiée. 
+Utilisez les informations ci-dessous pour créer un scénario dans lequel deux capteurs thermiques publient des événements sur {{site.data.keyword.iot_short_notm}}. L'un de ces capteurs mesure la température en degrés Celsius. L'autre capteur mesure la température en degrés Fahrenheit. Ces relevés sont mappés à un seul relevé de température exprimé en degrés Celsius. Lorsqu'un nouveau relevé de température est publié par ces terminaux, la valeur de la propriété associée à l'état de terminal est modifiée.
 
 ### Conditions prérequises
 
@@ -227,21 +228,22 @@ Une interface d'application est également configurée. Cette interface d'applic
   }
 ```
 Cette configuration signifie que vous pouvez configurer votre application pour traiter la valeur qui est associée à **temperature** au lieu de configurer votre application pour traiter la valeur qui est associée à **t** et pour traiter la valeur qui est associée à **temp** après la conversion de cette valeur en degrés Celsius.
+
 ## Procédure
 
-Utilisez les informations suivantes pour configurer l'exemple de scénario à l'aide d'interfaces. 
+Utilisez les informations suivantes pour configurer l'exemple de scénario à l'aide d'interfaces.
 
 ### Si nécessaire, ajoutez un type de terminal et un terminal
 {: #step14}
 
 Ce scénario part du principe qu'il existe deux types de terminal et deux instances de terminal. L'instance de terminal *TemperatureSensor1* est associée au type de terminal *EnvSensor1*. L'instance de terminal *TemperatureSensor2* est associée au type de terminal *EnvSensor2*.
 
-Pour plus d'informations sur l'utilisation des API REST pour ajouter un type de terminal, voir la documentation sur l'[API REST HTTP {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Types). 
+Pour plus d'informations sur l'utilisation des API REST pour ajouter un type de terminal, voir la documentation sur l'[API REST HTTP {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Types).
 
 ### Créez un fichier schéma d'événement
 {: #step1}
 
-Pour les besoins de ce scénario, créez deux fichiers schéma d'événement afin de définir la structure de chaque événement de température entrant. 
+Pour les besoins de ce scénario, créez deux fichiers schéma d'événement afin de définir la structure de chaque événement de température entrant.
 
 L'exemple suivant montre comment créer un fichier schéma nommé *tEventSchema.json*. Ce fichier définit la structure d'un événement entrant à partir d'un capteur thermique qui mesure la température en degrés Celsius :
 
@@ -263,9 +265,9 @@ L'exemple suivant montre comment créer un fichier schéma nommé *tEventSchema.
 }
   ```
 
-Le nom de fichier schéma *tEventSchema* est utilisé lorsque vous créez une ressource de schéma d'événement pour votre type d'événement. 
+Le nom de fichier schéma *tEventSchema* est utilisé lorsque vous créez une ressource de schéma d'événement pour votre type d'événement.
 
-L'exemple suivant explique comment créer un fichier schéma nommé *tempEventSchema.json*. Ce fichier définit la structure d'un événement entrant à partir d'un capteur thermique qui mesure la température en degrés Fahrenheit : 
+L'exemple suivant explique comment créer un fichier schéma nommé *tempEventSchema.json*. Ce fichier définit la structure d'un événement entrant à partir d'un capteur thermique qui mesure la température en degrés Fahrenheit :
 
 ```
 {
@@ -284,7 +286,7 @@ L'exemple suivant explique comment créer un fichier schéma nommé *tempEventSc
   "required" : ["temp"]
 }
   ```
-Le nom de fichier schéma *tempEventSchema* est utilisé lorsque vous créez une ressource de schéma d'événement pour votre type d'événement.    
+Le nom de fichier schéma *tempEventSchema* est utilisé lorsque vous créez une ressource de schéma d'événement pour votre type d'événement.   
 
 ### Créez une ressource de schéma d'événement pour votre type d'événement
 {: #step2}
@@ -296,7 +298,7 @@ POST /schemas
 ```
 Pour plus d'informations, voir la documentation sur l'[API REST HTTP {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Schemas).
 
-L'exemple suivant montre comment utiliser cURL pour créer la ressource de schéma d'événement *tEventSchema.json* : 
+L'exemple suivant montre comment utiliser cURL pour créer la ressource de schéma d'événement *tEventSchema.json* :
 
 ```
 curl --request POST \
@@ -326,7 +328,8 @@ L'exemple suivant illustre une réponse à la méthode POST :
 }
 ```
 L'identificateur de schéma *5846cd7c6522050001db0e0d* qui est renvoyé en réponse à la méthode POST est requis lorsque vous ajoutez un schéma d'événement à votre type d'événement.
-L'exemple suivant montre comment utiliser cURL pour créer la ressource de schéma d'événement *tempEventSchema.json* : 
+
+L'exemple suivant montre comment utiliser cURL pour créer la ressource de schéma d'événement *tempEventSchema.json* :
 
 ```
 curl --request POST \
@@ -356,10 +359,11 @@ L'exemple suivant illustre une réponse à la méthode POST :
 }
 ```
 L'identificateur de schéma *5846cee36522050001db0e0e* qui est renvoyé en réponse à la méthode POST est requis lorsque vous ajoutez un schéma d'événement à votre type d'événement.
+
 ### Créez un type d'événement qui fait référence au schéma d'événement
 {: #step3}
 
-Chaque type d'événement fait référence au schéma d'événement approprié qui a été créé dans l'exemple précédent à l'aide de l'identificateur de schéma renvoyé dans la réponse à la méthode POST utilisée pour créer la ressource de schéma d'événement. 
+Chaque type d'événement fait référence au schéma d'événement approprié qui a été créé dans l'exemple précédent à l'aide de l'identificateur de schéma renvoyé dans la réponse à la méthode POST utilisée pour créer la ressource de schéma d'événement.
 
 Pour créer un type d'événement, utilisez l'API suivante :
 
@@ -367,10 +371,10 @@ Pour créer un type d'événement, utilisez l'API suivante :
 POST /event/types
 ```
 
-Pour plus d'informations, voir la documentation sur l'[API REST HTTP {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Event_Types). 
+Pour plus d'informations, voir la documentation sur l'[API REST HTTP {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Event_Types).
 
 
-L'exemple suivant montre comment utiliser cURL afin de créer un type d'événement pour un événement de température mesuré en degrés Celsius : 
+L'exemple suivant montre comment utiliser cURL afin de créer un type d'événement pour un événement de température mesuré en degrés Celsius :
 
 ```
 curl --request POST \
@@ -380,7 +384,7 @@ curl --request POST \
   --data '{"name" : "tEvent", "schemaId" : "5846cd7c6522050001db0e0d"}'
 ```
 
-L'identificateur de schéma *5846cd7c6522050001db0e0d* est utilisé pour ajouter le schéma d'événement au type d'événement. Cet identificateur a été renvoyé en réponse à la méthode POST qui a été utilisée pour créer la ressource de schéma d'événement *tEventSchema.json*. 
+L'identificateur de schéma *5846cd7c6522050001db0e0d* est utilisé pour ajouter le schéma d'événement au type d'événement. Cet identificateur a été renvoyé en réponse à la méthode POST qui a été utilisée pour créer la ressource de schéma d'événement *tEventSchema.json*.
 
 L'exemple suivant illustre une réponse à la méthode POST :
 
@@ -399,9 +403,9 @@ L'exemple suivant illustre une réponse à la méthode POST :
 }
 ```
 
-L'identificateur de type d'événement *5846d0fd6522050001db0e0f* qui est renvoyé en réponse à la méthode POST est utilisé pour ajouter un type d'événement à l'interface physique. 
+L'identificateur de type d'événement *5846d0fd6522050001db0e0f* qui est renvoyé en réponse à la méthode POST est utilisé pour ajouter un type d'événement à l'interface physique.
 
-L'exemple suivant montre comment utiliser cURL afin de créer un type d'événement pour un événement de température mesuré en degrés Fahrenheit : 
+L'exemple suivant montre comment utiliser cURL afin de créer un type d'événement pour un événement de température mesuré en degrés Fahrenheit :
 
 ```
 curl --request POST \
@@ -410,7 +414,9 @@ curl --request POST \
   --header 'content-type: application/json' \
   --data '{"name" : "tempEvent", "schemaId" : "5846cee36522050001db0e0e"}'
 ```
-L'identificateur de schéma *5846cee36522050001db0e0e* est utilisé pour ajouter le schéma d'événement au type d'événement. Cet identificateur a été renvoyé en réponse à la méthode POST qui a été utilisée pour créer la ressource de schéma d'événement *tempEventSchema.json*. L'exemple suivant illustre une réponse à la méthode POST :
+L'identificateur de schéma *5846cee36522050001db0e0e* est utilisé pour ajouter le schéma d'événement au type d'événement. Cet identificateur a été renvoyé en réponse à la méthode POST qui a été utilisée pour créer la ressource de schéma d'événement *tempEventSchema.json*.
+
+L'exemple suivant illustre une réponse à la méthode POST :
 
 ```
 {
@@ -437,9 +443,10 @@ Pour créer une interface physique, utilisez l'API suivante :
 POST /physicalinterfaces
 ```
 Pour plus d'informations, voir la documentation sur l'[API REST HTTP {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Physical_Interfaces).
-Dans ce scénario, nous avons besoin de deux interfaces physiques, une pour chaque type d'événement. 
 
-L'exemple suivant montre comment utiliser cURL pour créer la première interface physique : 
+Dans ce scénario, nous avons besoin de deux interfaces physiques, une pour chaque type d'événement.
+
+L'exemple suivant montre comment utiliser cURL pour créer la première interface physique :
 
 ```
 curl --request POST \
@@ -465,9 +472,9 @@ L'exemple suivant illustre une réponse à la méthode POST :
 }
 ```
 
-L'identificateur d'interface physique *5847d1df6522050001db0e1a* qui est renvoyé dans la réponse est utilisé dans l'URL de la méthode POST appelée pour ajouter un événement de température mesuré en degrés Celsius à l'interface physique. 
+L'identificateur d'interface physique *5847d1df6522050001db0e1a* qui est renvoyé dans la réponse est utilisé dans l'URL de la méthode POST appelée pour ajouter un événement de température mesuré en degrés Celsius à l'interface physique.
 
-L'exemple suivant montre comment utiliser cURL pour créer la seconde interface physique : 
+L'exemple suivant montre comment utiliser cURL pour créer la seconde interface physique :
 
 ```
 curl --request POST \
@@ -493,7 +500,7 @@ L'exemple suivant illustre une réponse à la méthode POST :
 }
 ```
 
-L'identificateur d'interface physique *5847d1df6522050001db0e1b* qui est renvoyé dans la réponse est utilisé dans l'URL de la méthode POST appelée pour ajouter un événement de température mesuré en degrés Fahrenheit à l'interface physique.    
+L'identificateur d'interface physique *5847d1df6522050001db0e1b* qui est renvoyé dans la réponse est utilisé dans l'URL de la méthode POST appelée pour ajouter un événement de température mesuré en degrés Fahrenheit à l'interface physique.   
 
 ### Ajoutez le type d'événement à l'interface physique
 {: #step8}
@@ -504,12 +511,13 @@ Pour ajouter un type d'événement à votre interface physique, utilisez l'API s
 POST /physicalinterfaces/{physicalInterfaceId}/events
 ```
 Pour plus d'informations, voir la documentation sur l'[API REST HTTP {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Physical_Interfaces).
-Dans ce scénario, les types d'événement suivants sont ajoutés aux interfaces physiques spécifiées : 
-- L'événement de température exprimé en degrés Celsius, *tevt*, est ajouté à l'interface physique avec l'identificateur *5847d1df6522050001db0e1a* à l'aide de l'identificateur *eventId* issu de la rubrique et de l'identificateur *eventTypeId* issu de la création de la ressource de schéma d'événement. 
-- L'événement de température exprimé en degrés Fahrenheit, *tempevt*, est ajouté à l'interface physique avec l'identificateur *5847d1df6522050001db0e1b* à l'aide de l'identificateur *eventId* issu de la rubrique et de l'identificateur *eventTypeId* issu de la création de la ressource de schéma d'événement. 
+
+Dans ce scénario, les types d'événement suivants sont ajoutés aux interfaces physiques spécifiées :
+- L'événement de température exprimé en degrés Celsius, *tevt*, est ajouté à l'interface physique avec l'identificateur *5847d1df6522050001db0e1a* à l'aide de l'identificateur *eventId* issu de la rubrique et de l'identificateur *eventTypeId* issu de la création de la ressource de schéma d'événement.
+- L'événement de température exprimé en degrés Fahrenheit, *tempevt*, est ajouté à l'interface physique avec l'identificateur *5847d1df6522050001db0e1b* à l'aide de l'identificateur *eventId* issu de la rubrique et de l'identificateur *eventTypeId* issu de la création de la ressource de schéma d'événement.
 
 
-L'exemple suivant montre comment utiliser cURL pour ajouter l'événement de température *tevt* à l'interface physique avec l'identificateur *5847d1df6522050001db0e1a* : 
+L'exemple suivant montre comment utiliser cURL pour ajouter l'événement de température *tevt* à l'interface physique avec l'identificateur *5847d1df6522050001db0e1a* :
 
 ```
 curl --request POST \
@@ -528,7 +536,7 @@ L'exemple suivant illustre une réponse à la méthode POST :
 }
 ```
 
-L'exemple suivant montre comment utiliser cURL pour ajouter l'événement de température *tempevt* à l'interface physique avec l'identificateur *5847d1df6522050001db0e1b* : 
+L'exemple suivant montre comment utiliser cURL pour ajouter l'événement de température *tempevt* à l'interface physique avec l'identificateur *5847d1df6522050001db0e1b* :
 
 ```
 curl --request POST \
@@ -556,11 +564,11 @@ Pour mettre à jour un type de terminal, utilisez l'API suivante :
 PUT /device/types/{typeId}
 ```
 
-Pour plus d'informations, voir la documentation sur l'[API REST HTTP {{site.data.keyword.iot_short_notm}} ](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types). 
+Pour plus d'informations, voir la documentation sur l'[API REST HTTP {{site.data.keyword.iot_short_notm}} ](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types).
 
 Dans ce scénario, le type de terminal *EnvSensor1* est mis à jour pour se connecter à l'interface physique *5847d1df6522050001db0e1a* et le type de terminal *EnvSensor2* est mis à jour pour se connecter à l'interface physique *5847d1df6522050001db0e1b*.
 
-L'exemple suivant montre comment utiliser cURL pour mettre à jour le type de terminal *EnvSensor1* : 
+L'exemple suivant montre comment utiliser cURL pour mettre à jour le type de terminal *EnvSensor1* :
 
 ```
 curl --request PUT \
@@ -591,7 +599,7 @@ L'exemple suivant illustre une réponse à la méthode POST :
 ```
 L'identificateur de terminal *EnvSensor1* est requis lorsque vous ajoutez votre interface physique et votre interface d'application.
 
-L'exemple suivant montre comment utiliser cURL pour mettre à jour le type de terminal *EnvSensor2* : 
+L'exemple suivant montre comment utiliser cURL pour mettre à jour le type de terminal *EnvSensor2* :
 
 ```
 curl --request PUT \
@@ -627,7 +635,7 @@ L'identificateur de terminal *EnvSensor2* est requis lorsque vous ajoutez votre 
 ### Créez un fichier schéma d'interface d'application
 {: #step4}
 
-L'exemple suivant montre comment créer un fichier schéma d'interface d'application nommé *envSensor.json*. 
+L'exemple suivant montre comment créer un fichier schéma d'interface d'application nommé *envSensor.json*.
 
 ```
 {
@@ -687,6 +695,7 @@ L'exemple suivant illustre une réponse à la méthode POST :
 }
 ```
 Utilisez l'identificateur de schéma *5846ec826522050001db0e11* qui est renvoyé dans la réponse à la méthode POST pour ajouter le schéma d'interface d'application à l'interface d'application.
+
 ### Créez une interface d'application qui fait référence à un schéma d'interface d'application
 {: #step6}
 
@@ -697,7 +706,7 @@ POST /applicationinterfaces
 ```
 Pour plus d'informations, voir la documentation sur l'[API REST HTTP {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Application_Interfaces).
 
-Dans ce scénario, utilisez l'identificateur de schéma *5846ec826522050001db0e11* qui a été renvoyé dans la réponse précédente pour ajouter le schéma d'interface d'application à l'interface d'application. 
+Dans ce scénario, utilisez l'identificateur de schéma *5846ec826522050001db0e11* qui a été renvoyé dans la réponse précédente pour ajouter le schéma d'interface d'application à l'interface d'application.
 
 L'exemple suivant montre comment utiliser cURL pour créer une interface d'application :
 
@@ -726,6 +735,7 @@ L'exemple suivant illustre une réponse à la méthode POST :
 }
 ```
 Dans ce scénario, utilisez l'identificateur d'interface d'application *5846ed076522050001db0e12* qui est renvoyé dans la réponse à la méthode POST pour ajouter votre interface d'application à votre type de terminal. Vous pouvez également utiliser cet identificateur pour mapper un événement de terminal entrant à une propriété qui est définie par l'interface d'application.
+
 ### Ajoutez l'interface d'application à un type de terminal
 {: #step10}
 
@@ -815,9 +825,9 @@ POST /device/types/{typeId}/mappings
 ```
 Pour plus d'informations, voir la documentation sur l'[API REST HTTP {{site.data.keyword.iot_short_notm}} ](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types).
 
-Dans ce scénario, nous définissons des mappages pour le type de terminal *EnvSensor1* afin de mapper la propriété **t** de l'événement entrant *tevt* à la propriété **temperature** de l'interface d'application. Nous définissons également des mappages pour le type de terminal *EnvSensor2* afin de mapper la propriété **temp** de l'événement entrant *tempevt* à la propriété **temperature** de l'interface d'application. 
+Dans ce scénario, nous définissons des mappages pour le type de terminal *EnvSensor1* afin de mapper la propriété **t** de l'événement entrant *tevt* à la propriété **temperature** de l'interface d'application. Nous définissons également des mappages pour le type de terminal *EnvSensor2* afin de mapper la propriété **temp** de l'événement entrant *tempevt* à la propriété **temperature** de l'interface d'application.
 
-L'exemple suivant montre comment utiliser cURL pour ajouter un mappage au type de terminal *EnvSensor1* : 
+L'exemple suivant montre comment utiliser cURL pour ajouter un mappage au type de terminal *EnvSensor1* :
 
 ```
 curl --request POST \
@@ -842,7 +852,7 @@ L'exemple suivant illustre une réponse à la méthode POST :
       "tevt" : {
        "temperature" : "$event.t"
               }
-            },
+  },
   "applicationInterfaceId" : "5846ed076522050001db0e12"
 }
 ```
@@ -862,7 +872,7 @@ curl --request POST \
 ```
 
 Spécifiez l'identificateur d'interface d'application *5846ed076522050001db0e12* qui est renvoyé dans la réponse à la méthode POST utilisée pour créer l'interface d'application et le type de terminal *EnvSensor2*.
-Une conversion est appliquée pour modifier la valeur mesurée en degrés Fahrenheit en une valeur mesurée en degrés Celsius. 
+Une conversion est appliquée pour modifier la valeur mesurée en degrés Fahrenheit en une valeur mesurée en degrés Celsius.
 
 
 L'exemple suivant illustre une réponse à la méthode POST :
@@ -870,7 +880,7 @@ L'exemple suivant illustre une réponse à la méthode POST :
 ```
 {
   "propertyMappings" : {
-      "tempevt" : {
+    "tempevt" : {
       "temperature" : "($event.temp - 32) / 1.8"
     }
   },
@@ -881,7 +891,7 @@ L'exemple suivant illustre une réponse à la méthode POST :
 ### Déployez la configuration
 {: #step15}
 
-Déployez la configuration relative à la mise à jour d'état de terminal pour chaque type de terminal. Cette configuration inclut vos schémas, types d'événement, interfaces physiques, interfaces d'application et mappages. 
+Déployez la configuration relative à la mise à jour d'état de terminal pour chaque type de terminal. Cette configuration inclut vos schémas, types d'événement, interfaces physiques, interfaces d'application et mappages.
 
 Pour déployer votre configuration de type de terminal, utilisez l'API suivante :
 
@@ -890,9 +900,9 @@ PATCH /device/types/{typeId}
 ```
 Pour plus d'informations, voir la documentation sur l'[API REST HTTP {{site.data.keyword.iot_short_notm}} ](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types).
 
-Dans ce scénario, nous devons déployer une configuration pour deux types de terminal. 
+Dans ce scénario, nous devons déployer une configuration pour deux types de terminal.
 
-L'exemple suivant montre comment utiliser cURL afin de déployer la configuration pour le type de terminal *EnvSensor1* : 
+L'exemple suivant montre comment utiliser cURL afin de déployer la configuration pour le type de terminal *EnvSensor1* :
 
 ```
 curl --request PATCH \
@@ -917,7 +927,7 @@ L'exemple suivant illustre une réponse à la méthode PATCH :
 }
 ```
 
-L'exemple suivant montre comment utiliser cURL afin de déployer la configuration pour le type de terminal *EnvSensor2* : 
+L'exemple suivant montre comment utiliser cURL afin de déployer la configuration pour le type de terminal *EnvSensor2* :
 
 ```
 curl --request PATCH \
@@ -959,7 +969,7 @@ GET /device/types/{typeId}/devices/{deviceId}/state/{applicationInterfaceId}
 ```
 Pour plus d'informations, voir la documentation sur l'[API REST HTTP {{site.data.keyword.iot_short_notm}} ](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types).
 
-L'exemple suivant montre comment utiliser cURL pour extraire l'état en cours de *TemperatureSensor1* en faisant référence à l'identificateur de l'interface d'application qui a été créée : 
+L'exemple suivant montre comment utiliser cURL pour extraire l'état en cours de *TemperatureSensor1* en faisant référence à l'identificateur de l'interface d'application qui a été créée :
 ```
 curl --request GET \
   --url https://yourOrgID.internetofthings.ibmcloud.com/api/v0002/device/types/EnvSensor1/devices/TemperatureSensor1/state/5846ed076522050001db0e12 \
@@ -989,4 +999,4 @@ L'exemple suivant illustre une réponse à la méthode GET :
 ```
 Notez que le relevé de température qui est renvoyé est exprimé en degrés Celsius et non en degrés Fahrenheit.
 
-Votre application peut traiter ces données normalisées sans qu'aucune configuration ne soit nécessaire pour comprendre ou convertir les différentes échelles de température. 
+Votre application peut traiter ces données normalisées sans qu'aucune configuration ne soit nécessaire pour comprendre ou convertir les différentes échelles de température.

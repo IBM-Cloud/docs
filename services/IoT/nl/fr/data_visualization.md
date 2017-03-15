@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-10"
+lastupdated: "2017-02-17"
 
 ---
 
@@ -197,4 +197,4 @@ Pour certains types de carte, vous pouvez cliquer sur **Paramètres** pour confi
 
 Parfait ! Vous pouvez désormais voir les données en temps réel de votre terminal !
 
-Pour obtenir les instructions étape par étape relatives à l'affichage des données de terminal en temps réel, voir [Configuring Boards & Cards in the new Watson IoT Dashboard](https://developer.ibm.com/recipes/tutorials/configuring-the-cards-in-the-new-watson-iot-dashboard/). 
+Pour obtenir les instructions étape par étape relatives à l'affichage des données de terminal en temps réel, voir la recette [Configuring Boards & Cards in the new Watson IoT Dashboard ![](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/configuring-the-cards-in-the-new-watson-iot-dashboard/){: new_window}.

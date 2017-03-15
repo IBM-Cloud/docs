@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-12-08"
+lastupdated: "2017-02-17"
 
 ---
 
@@ -43,18 +43,18 @@ lastupdated: "2016-12-08"
 ## 始めに
 {: #byb}
 
-- {{site.data.keyword.iot_short_notm}} の概要と、それとブロック・チェーンの一般概念との関連性、それを使用する利点について、IBM.com の [{{site.data.keyword.iot_short_notm}}](http://www.ibm.com/blockchain/) で確認します。
+- {{site.data.keyword.iot_short_notm}} の概要、一般的なブロック・チェーンの概念との関連性、使用する利点について、IBM.com の [{{site.data.keyword.iot_short_notm}} ![外部リンク・アイコン](../../icons/launch-glyph.svg)](http://www.ibm.com/blockchain/){: new_window} で確認します。
 - [{{site.data.keyword.iot_short_notm}} ブロック・チェーン統合](reference/extensions/index.html#blockchain)を組織のために有効にします。
 - ブロック・チェーン台帳に書き込むデータを生成するデバイスを接続します。
   
 [デバイスの接続](iotplatform_task.html)トピックの手順に従って、デバイスを接続します。
 - Monitoring UI をインストールします。
-Monitoring UI は、{{site.data.keyword.iot_short_notm}} とブロック・チェーン・ファブリックの間の接続を確認するために使用します。[Blockchain Monitoring UI](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui) GitHub ディレクトリーにある Monitoring UI の README ドキュメントの手順に従ってください。
+Monitoring UI は、{{site.data.keyword.iot_short_notm}} とブロック・チェーン・ファブリックの間の接続を確認するために使用します。[Blockchain Monitoring UI ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui){: new_window} GitHub ディレクトリーにある Monitoring UI の README ドキュメントの手順に従ってください。
 
 ### IBM の基本的なシナリオを使用してすぐに開始する
 
 {{site.data.keyword.iot_short_notm}} ブロック・チェーン統合をすぐにテストしたいという場合は、IBM 提供のファブリックに接続し、Node-RED サンプル・デバイスを IBM 提供のサンプル・コントラクトにマップしてください。このトピックでは、このシナリオに必要な手順に『**IBM の基本的なシナリオ**』というラベルを付けています。  
-**重要:** IBM 提供のサンプル・ブロック・チェーン台帳とそのすべてのデータは、サンプル・ブロック・チェーンのすべてのユーザーが閲覧できることに注意してください。IBM 提供のサンプル・ブロック・チェーンに機密情報を保管しないでください。また、サンプル・コントラクトとトレード・レーン・コントラクトをサポートするサンプル・ファブリックは、各ピアの接続情報を含め、変更されることがあります。接続の詳細については、Watson IoT ブロック・チェーンのコミュニティーの wiki ページ [IoT Blockchain Connection Info](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections) に記載されています。
+**重要:** IBM 提供のサンプル・ブロック・チェーン台帳とそのすべてのデータは、サンプル・ブロック・チェーンのすべてのユーザーが閲覧できることに注意してください。IBM 提供のサンプル・ブロック・チェーンに機密情報を保管しないでください。また、サンプル・コントラクトとトレード・レーン・コントラクトをサポートするサンプル・ファブリックは、各ピアの接続情報を含め、変更されることがあります。接続の詳細については、Watson IoT ブロック・チェーン・コミュニティーの wiki ページ [IoT Blockchain Connection Info ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} に記載されています。
 
 IBM 提供の基本的な {{site.data.keyword.iot_short_notm}} ブロック・チェーン統合環境は、次のコンポーネントで構成されています。
 - {{site.data.keyword.Bluemix_notm}}:
@@ -72,7 +72,7 @@ IBM 提供の基本的な {{site.data.keyword.iot_short_notm}} ブロック・�
 
 ![IoT ブロック・チェーンのアーキテクチャー。](blockchain/images/architecture.svg "IoT ブロック・チェーンのアーキテクチャー")
 
-**IBM の基本的なシナリオ:** [Node-RED デバイス・シミュレーターの作成と接続](nodereddevice_sample.html)トピックに記載されている手順に従って、Node-RED デバイス・シミュレーターを作成します。ブロック・チェーン統合を行う場合は、ノード・データをインポートするときにブロック・チェーン・デバイス固有のノード情報を使用します。ノード情報は、Watson IoT ブロック・チェーンのコミュニティーの wiki ページ [Node-RED Device Simulator](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Node-RED%20Device%20Simulator) に記載されています。必要な場合は、IBM ブロック・チェーンの窓口に連絡してコミュニティーへのアクセス権限を取得してください。
+**IBM の基本的なシナリオ:** [Node-RED デバイス・シミュレーターの作成と接続](nodereddevice_sample.html)トピックに記載されている手順に従って、Node-RED デバイス・シミュレーターを作成します。ブロック・チェーン統合を行う場合は、ノード・データをインポートするときにブロック・チェーン・デバイス固有のノード情報を使用します。ノード情報は、Watson IoT ブロック・チェーン・コミュニティーの wiki ページ [Node-RED Device Simulator ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Node-RED%20Device%20Simulator){: new_window} に記載されています。必要な場合は、IBM ブロック・チェーンの窓口に連絡してコミュニティーへのアクセス権限を取得してください。
 
 ## ブロック・チェーン・ファブリックへの接続
 {: #getting_started}  
@@ -122,9 +122,7 @@ IBM 提供の基本的な {{site.data.keyword.iot_short_notm}} ブロック・�
 3. ブロック・チェーン構成のセクションで**「完了」**をクリックしてファブリック情報を保存します。
 
 
-**IBM の基本的なシナリオ:** IBM 提供のファブリックに接続するには、Watson IoT ブロック・チェーンのコミュニティーの wiki ページ [IoT Blockchain Connection Info](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections) に記載されているサンプル・コントラクトの接続詳細を使用してください。
-
-必要な場合は、IBM ブロック・チェーンの窓口に連絡してコミュニティーへのアクセス権限を取得してください。
+**IBM の基本的なシナリオ:** IBM 提供のファブリックに接続するには、Watson IoT ブロック・チェーン・コミュニティーの wiki ページ [IoT Blockchain Connection Info ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} に記載されているサンプル・コントラクトの接続詳細を使用してください。必要な場合は、IBM ブロック・チェーンの窓口に連絡してコミュニティーへのアクセス権限を取得してください。
 
 
 ## スマート・コントラクトへのデバイス・データのマップ
@@ -162,16 +160,13 @@ IBM 提供の基本的な {{site.data.keyword.iot_short_notm}} ブロック・�
 </tr>
 </tbody>
 </table>
-**IBM の基本的なシナリオ:** デプロイ済みのサンプル・スマート・コントラクトを使用すると、デバイスのデータ・ポイントを特定のコントラクト属性にマップして、データ・ポイント値をブロック・チェーン台帳に格納することができます。サンプル・コントラクトを使用してデバイスのデータ・マッピングをテストした後に、より高度なトレード・レーン・コントラクトを試したり、独自のコントラクトを作成したりできます。コントラクト ID は、Watson IoT ブロック・チェーンのコミュニティーの wiki ページ [IoT Blockchain Connection Info](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections) に記載されています。
-
-
-必要な場合は、IBM ブロック・チェーンの窓口に連絡してコミュニティーへのアクセス権限を取得してください。
+**IBM の基本的なシナリオ:** デプロイ済みのサンプル・スマート・コントラクトを使用すると、デバイスのデータ・ポイントを特定のコントラクト属性にマップして、データ・ポイント値をブロック・チェーン台帳に格納することができます。サンプル・コントラクトを使用してデバイスのデータ・マッピングをテストした後に、より高度なトレード・レーン・コントラクトを試したり、独自のコントラクトを作成したりできます。コントラクト ID は、Watson IoT ブロック・チェーン・コミュニティーの wiki ページ [IoT Blockchain Connection Info ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} に記載されています。必要な場合は、IBM ブロック・チェーンの窓口に連絡してコミュニティーへのアクセス権限を取得してください。
  8. デバイス・プロパティーをコントラクト・パラメーターにマップするためのルートを作成します。
    
 コントラクトで使用可能なパラメーターがインポートされます。パラメーターごとに、対応するイベント・プロパティーを入力します。
    
  **重要:** デバイス・メッセージのデータ・ポイントの前に付加される `d.` は含めないでください。
- **IBM の基本的なシナリオ:** IBM 提供のコントラクトを使用する場合は、Watson IoT ブロック・チェーンのコミュニティーの wiki ページ [Data mapping](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Data%20Mapping) にリストされている次のパラメーターをマップしてください。必要な場合は、IBM ブロック・チェーンの窓口に連絡してコミュニティーへのアクセス権限を取得してください。
+ **IBM の基本的なシナリオ:** IBM 提供のコントラクトを使用する場合は、Watson IoT ブロック・チェーン・コミュニティーの wiki ページ [Data mapping ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Data%20Mapping){: new_window} にリストされている以下のパラメーターをマップしてください。必要な場合は、IBM ブロック・チェーンの窓口に連絡してコミュニティーへのアクセス権限を取得してください。
  9. 要約ページで、すべての情報が正しく入力されたことを確認します。
  10. 「ブロック・チェーン」ページに、デバイス・データとコントラクトのマッピングが表示されます。
 
@@ -181,7 +176,7 @@ IBM 提供の基本的な {{site.data.keyword.iot_short_notm}} ブロック・�
 {: #test_simple}
 
 IBM 提供のファブリックに接続し、デバイス・データをサンプル・コントラクトにマップしたら、デバイスからブロック・チェーン台帳へのエンドツーエンドのデータ・フローをテストすることができます。IoT Blockchain Monitoring UI を使用して、自分のアセットに関するブロック・チェーンのアクティビティーとデータを確認します。  
-**ヒント:** Monitoring UI をまだローカル環境にインストールしていない場合は、このときにインストールすることができます。[Blockchain Monitoring UI](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui) GitHub ディレクトリーにある Monitoring UI の README ドキュメントの手順に従ってください。  
+**ヒント:** Monitoring UI をまだローカル環境にインストールしていない場合は、このときにインストールすることができます。[Blockchain Monitoring UI ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui){: new_window} GitHub ディレクトリーにある Monitoring UI の README ドキュメントの手順に従ってください。  
 1. {{site.data.keyword.iot_short_notm}} に接続するように Monitoring UI を構成します。  
 Monitoring UI で、**「CONFIGURATION」**をクリックし、Monitoring UI 接続を構成します。
  <table>
@@ -210,8 +205,7 @@ Monitoring UI で、**「CONFIGURATION」**をクリックし、Monitoring UI �
 </tr>
 </tbody>
 </table>
-**IBM の基本的なシナリオ:** 基本的なコントラクトまたはトレード・レーン・コントラクトに接続するように Monitoring UI を構成する場合には、Watson IoT ブロック・チェーンのコミュニティーの wiki ページ [IoT Blockchain Connection Info](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections) に記載されている接続詳細を使用してください。
-必要な場合は、IBM ブロック・チェーンの窓口に連絡してコミュニティーへのアクセス権限を取得してください。
+**IBM の基本的なシナリオ:** 基本的なコントラクトまたはトレード・レーン・コントラクトに接続するように Monitoring UI を構成する場合は、Watson IoT ブロック・チェーン・コミュニティーの wiki ページ [IoT Blockchain Connection Info ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/W7a44a0e604d9_4a90_89b7_0a2bdbe81b00/page/Blockchain%20Fabric%20Connections){: new_window} に記載されている接続詳細を使用してください。必要な場合は、IBM ブロック・チェーンの窓口に連絡してコミュニティーへのアクセス権限を取得してください。
 2. Node-RED フロー・エディターで、CON123 ノード上のボタンをクリックしてデバイス・データを注入します。これにより、デバイス・データが {{site.data.keyword.iot_short_notm}} にメッセージとして送信され、シンプル・コントラクトによって {{site.data.keyword.iot_short_notm}} 台帳に書き込まれます。
    
 **ヒント:** 継続的にデータ・フローを発生させるには、「inject」ノードをダブルクリックし、Repeat パラメーターを `interval` に設定してから、1 分間隔などの適切な間隔に構成します。

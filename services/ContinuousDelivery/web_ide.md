@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-2-16"
+lastupdated: "2017-3-6"
 ---
 
 {:new_window: target="_blank"}
@@ -81,6 +81,7 @@ The {{site.data.keyword.webide}} is integrated with source code management tools
 2. After your app is deployed, you can use the run bar to stop, restart, or debug your app, view logs, and more.
 ![Run bar](images/webide_runbar_light.png)    
 
+<!-- 3/6/2016: bl commands don't work with V2/CD 
 ## Editing outside of the {{site.data.keyword.webide}}
 {: #editlocal}
 
@@ -139,3 +140,5 @@ The Desktop Sync feature is like Live Edit mode for the command line. You need t
 
 1. In the second command-line window, enter `bl stop`.
 2. In the first command-line window, enter `q`.
+
+--> 
