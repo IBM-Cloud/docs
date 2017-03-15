@@ -17,6 +17,7 @@
     offlineMode.md
     ts_index.md   
     updates.md
+    secureWebApp.md
     [Using the starter applications](../../cfapps/starter_app_usage.html)
     [Managing Liberty and Node.js apps](../../manageapps/app_mng.html)
     [Working with a proxy](../../manageapps/workingWithProxy.html)
