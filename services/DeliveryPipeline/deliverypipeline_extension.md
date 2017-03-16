@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-2-16"
+lastupdated: "2017-3-16"
 
 ---
 
@@ -324,13 +324,14 @@ To create HipChat notifications:
 ## Using Active Deploy for zero downtime deployment in the pipeline
 {: #deliverypipeline_activedeploy}
 
-You can automate the continuous deployment of your apps or container groups by using the IBM® Active Deploy service in the Bluemix® DevOps Services Delivery Pipeline. For more information about getting started, see the [Active Deploy documentation](/docs/services/ActiveDeploy/updatingapps.html#adpipeline).
+You can automate the continuous deployment of your apps or container groups by using the IBM Active Deploy service in the Delivery Pipeline. For more information about getting started, see the [Active Deploy documentation](/docs/services/ActiveDeploy/updatingapps.html#adpipeline).
 
 ## Building and deploying container images with the pipeline
 {: #deliverypipeline_containers}
 
-You can automate your app builds and container deployments to Bluemix® by using the IBM® Continuous Delivery Pipeline for Bluemix. The Delivery Pipeline service in DevOps services supports:
+You can automate your app builds and container deployments to Bluemix by using the IBM Continuous Delivery Pipeline for Bluemix. The Delivery Pipeline service supports:
   - Building Docker images
   - Deploying images in containers to Bluemix
 
 For more information about getting started, see the [Delivery Pipeline and containers overview](/docs/containers/container_pipeline_ov.html#container_pipeline_ov).
+
