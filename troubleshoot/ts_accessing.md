@@ -26,16 +26,16 @@ General problems with accessing {{site.data.keyword.Bluemix}} might include diff
 ## Can't log in to {{site.data.keyword.Bluemix_notm}}: Incorrect password
 {: #ts_logintobm}
 
-You must have a valid IBMid to log in to the {{site.data.keyword.Bluemix_notm}} console.
+You must have a valid password that's associated with your IBMid to log in to the {{site.data.keyword.Bluemix_notm}} console.
 
-You must have a valid IBMid or SoftLayer ID to log in through the [Customer Portal](https://control.softlayer.com).
+You must have a valid password that's associated with your IBMid or SoftLayer ID to log in through the [Customer Portal](https://control.softlayer.com).
 
 When you try to log in to {{site.data.keyword.Bluemix_notm}}, the following error message is displayed: 
 {: tsSymptoms} 
 
 `The password that you entered is not correct.`
 
-The IBMid and password that you used to log in to {{site.data.keyword.Bluemix_notm}} is invalid.
+The IBMid and password that you used to log in to {{site.data.keyword.Bluemix_notm}} is not valid.
 {: tsCauses} 
  
 Use one of the following solutions:
@@ -45,9 +45,7 @@ Use one of the following solutions:
  * If you forgot your IBMid or continue to have problems with your password, contact the Worldwide IBM Registration Help Desk for help. 
  * To obtain a valid IBMid and password, go to the My IBM profile page, then click **Register**.
   
-**Notes:** 
- * For IBM employees, your IBMid might be different from your intranet ID.
- * If you are on the Sign in to IBM page and the login process is disrupted for any reason (for example, resetting your password), return to the [Bluemix console](https://console.{DomainName}) or the [Customer Portal](https://control.softlayer.com) and start the log in process again.
+**Note:** If you are on the Sign in to IBM page and the login process is disrupted for any reason (for example, resetting your password), return to the [Bluemix console](https://console.{DomainName}) or the [Customer Portal](https://control.softlayer.com) and start the log in process again.
  
 
 ## Can't log in to {{site.data.keyword.Bluemix_notm}}: Invalid login credentials
@@ -103,7 +101,7 @@ Complete the following checks, as appropriate:
 {: tsResolve}
  * Contact your master user or account administrator to check that you are enabled to switch to IBMid authentication.
  * Ensure that you complete the Switch to IBMid step in your Softlayer account. See [Switching to IBMid](/docs/admin/softlayerlink.html#ibmid_switch).
- * Ensure that you follow the actions in the **Associate your SoftLayer user with an IBMid** email. Check your inbox and your junk mail folder for the email. To get the email again, for example, if it has expired, go to the Edit User Profile page in the Control Portal and click **Resend Email**. Alternatively, contact [{{site.data.keyword.Bluemix_notm}} Support ![External link icon](../icons/launch-glyph.svg "External link icon")](http://ibm.biz/bluemixsupport.com){: new_window}.
+ * Ensure that you follow the actions in the **Associate your SoftLayer user with an IBMid** email. Check your inbox and your spam folder for the email. To get the email again, for example, if it has expired, go to the Edit User Profile page in the Control Portal and click **Resend Email**. Alternatively, contact [{{site.data.keyword.Bluemix_notm}} Support ![External link icon](../icons/launch-glyph.svg "External link icon")](http://ibm.biz/bluemixsupport.com){: new_window}.
 
 **Note:** If you created your IBMid directly with IBMid, you receive two emails to process; one from IBMid registration, and one from Softlayer. Ensure that you follow the actions in both emails.
 
@@ -169,7 +167,7 @@ After you register for a {{site.data.keyword.Bluemix_notm}} trial account, you m
 After you register for a {{site.data.keyword.Bluemix_notm}} trial account, you receive a confirmation email. You must click the link that is in the confirmation email to complete the registration process.
 {: tsCauses} 
 
-The confirmation email is sent to the email address that you provided. Check your inbox and your junk mail folder. If you haven't received the confirmation email, contact [{{site.data.keyword.Bluemix_notm}} Support ![External link icon](../icons/launch-glyph.svg "External link icon")](http://ibm.biz/bluemixsupport.com){: new_window}.  
+The confirmation email is sent to the email address that you provided. Check your inbox and your spam folder. If you haven't received the confirmation email, contact [{{site.data.keyword.Bluemix_notm}} Support ![External link icon](../icons/launch-glyph.svg "External link icon")](http://ibm.biz/bluemixsupport.com){: new_window}.  
 {: tsResolve}
 
 
