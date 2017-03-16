@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-14"
+lastupdated: "2017-3-16"
 
 ---
 
@@ -22,7 +22,7 @@ After you create an instance of {{site.data.keyword.contdelivery_short}} by sele
  * To create and configure a continuous delivery toolchain from a template, in the "Starting from a toolchain template" section, click **[Start here](#starting_from_a_toolchain_template)**. The toolchain integrates tools for planning, developing, deploying pipelines, and managing your applications. You can always add or remove tools from your toolchains.
  * If you already have toolchains, in the "Starting from a toolchain template" section, click **View your toolchains**. For more information about working with toolchains, see [Using toolchains](/docs/services/ContinuousDelivery/toolchains_using.html){: new_window}.
 
-**Tip**: Pipelines are managed by toolchains. If you create a pipeline and don't have any existing toolchains, a toolchain with a default name will be created for you. With the toolchain, you can expand the capabilities of your pipeline by integrating with other tools and services.
+**Tip**: Pipelines are managed by toolchains. You can add a pipeline to an existing toolchain. If you create a pipeline and don't have any existing toolchains, a toolchain with a default name will be created for you. With the toolchain, you can expand the capabilities of your pipeline by integrating with other tools and services.
 
 ##Starting with a pipeline
 {: #starting_with_a_pipeline}
@@ -39,20 +39,21 @@ To [create a pipeline![External link icon](../../icons/launch-glyph.svg "Externa
  **Tip**: Pipelines and toolchains belong to organizations (orgs). If you belong to an org that has toolchains, you can use those toolchains even if you didn't create them.
 
 1. Either select the toolchain that you want to use or type a name for the new toolchain that you want to create.
-1. Provide the location of your GitHub or {{site.data.keyword.ghe_short}} repo.
+1. Select your Git provider. 
 
- **Tip**: If you have not authorized {{site.data.keyword.Bluemix_notm}} to access GitHub, you are prompted to click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.Bluemix_notm}} to access your GitHub account. If you have an active GitHub session but you haven't entered your password recently, you might be prompted to enter your GitHub password to confirm.
+ **Tip**: If you have not authorized {{site.data.keyword.Bluemix_notm}} to access GitHub, you are prompted to click **Authorize** to go  to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.Bluemix_notm}} to access your GitHub account. If you have an active GitHub session but you haven't entered your password recently, you might be prompted to enter your GitHub password to confirm.
 
  If you are not authorized to access the {{site.data.keyword.ghe_short}} repo, someone who has admin privileges for the repo must add you. For instructions to authorize with {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}, see [Getting started with {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.keyword.ghe_short}}](/docs/services/ghededicated/index.html){: new_window}. If you need to authorize with your own managed version of {{site.data.keyword.ghe_short}}, follow your internal procedures.
 
-   * If you have a GitHub or {{site.data.keyword.ghe_short}} repo and want to use it, for the repository type, select **Link**. Search for the location of the repo or select the repo from the list of available repos.
+   * If you have a repo and want to use it, for the repository type, select **Link**. Search for the location of the repo or select the repo from the list of available repos.
 
-   * If you want to create an empty GitHub or {{site.data.keyword.ghe_short}} repo, for the repository type, select **New**. Type a name for the repo.
+   * If you want to create an empty repo, for the repository type, select **New**. Type a name for the repo.
 
-   * If you want to create a clone of a GitHub or {{site.data.keyword.ghe_short}} repo, for the repository type, select **Copy**. Search for the location of the repo or select the repo from the list of available repos.
+   * If you want to create a clone of a repo, for the repository type, select **Copy**. Search for the location of the repo or select the repo from the list of available repos.
 
-   * If you want to fork a GitHub or {{site.data.keyword.ghe_short}} repo so that you can contribute changes through pull requests, select **Fork**. Search for the location of the repo or select the repo from the list of available repos.
+   * If you want to fork a repo so that you can contribute changes through pull requests, select **Fork**. Search for the location of the repo or select the repo from the list of available repos.
 
+1. Select a repo or enter a repo URL.
 1. Click **Create**. The pipeline is created, configured, and displayed on the toolchain's Overview page.
  ![Pipeline card](images/cd_pipeline.png)
 
@@ -85,7 +86,7 @@ To create and configure a continuous delivery toolchain from a [template![Extern
  * If you configured Sauce Labs, the toolchain is set up to add Sauce Labs test jobs to the pipelines.
  * If you configured PagerDuty, the toolchain is set up to send alert notifications to the PagerDuty service that you specified.
  * If you configured Slack, the toolchain is set up to send notifications about deployment status to the Slack channel that you specified.
- * If you configured GitHub, the sample GitHub repo is cloned into your GitHub account.
+ * If you configured a source code tool integration such as GitHub, the sample GitHub repo is cloned into your GitHub account.
 
 
 # Related Links
