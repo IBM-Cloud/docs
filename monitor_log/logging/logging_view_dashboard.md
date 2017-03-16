@@ -107,7 +107,7 @@ Every log entry contains the following fields:
 </dl>
 
 The following figure shows the different components (log types) in a Cloud Foundry architecture that is based on the Droplet Execution Agent (DEA): 
-![Log types in a DEA architecture.](images/logging_F1.png "Components (log types) in a Cloud Foundry architecture that is based on the Droplet Execution Agent (DEA).")
+![Log types in a DEA architecture.](images/logging_F1.png "Components in a Cloud Foundry architecture that is based on the Droplet Execution Agent.")
 
 
 
