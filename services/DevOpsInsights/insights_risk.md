@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-3-13"
+lastupdated: "2017-03-16"
 
 ---
 
@@ -302,7 +302,7 @@ Follow these steps to use Deployment Risk's gates and dashboard with your projec
    
    * For deployment jobs, use **Publish deployment information to IBM Cloud DevOps**.
    
-3. Complete the required fields:
+3. Complete the required fields. These will vary depending on job type. 
 
    * From the **Credentials** list, select your {{site.data.keyword.Bluemix_notm}} ID and password. If they are not saved in Jenkins, click **Add** to add and save them. Test your connection with {{site.data.keyword.Bluemix_notm}} by clicking **Test Connection**.
    
@@ -334,7 +334,7 @@ Follow these steps to use Deployment Risk's gates and dashboard with your projec
 The Deployment Risk dashboard relies on the presence of a gate after a staging deployment job. If you want to use the dashboard, make sure that you have a gate after you deploy to the staging environment, but before you deploy to a production environment.
     
 ### Configuring notifications
-{: #jenkins notifications}
+{: #jenkins_notifications}
 
 You can configure your Jenkins jobs to send notifications to tools like Slack or PagerDuty by following the instructions in the [Bluemix Docs](https://console.ng.bluemix.net/docs/services/ContinuousDelivery/toolchains_integrations.html#jenkins).
 

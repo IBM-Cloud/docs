@@ -15,7 +15,6 @@ lastupdated: "2017-02-24"
 # Integrating {{site.data.keyword.DRA_short}} with Jenkins
 {: #toolchain_configure_jenkins}
 
-After you define the policies for {{site.data.keyword.DRA_full}} to monitor, you can add it to a toolchain and configure a continuous delivery pipeline.
+This page has moved. You can view this information at [its new location](/docs/services/DevOpsInsights/insights_risk#integrate_jenkins.html).
 {:shortdesc}
 
-This document has been moved to [Deployment Risk](/docs/services/DevOpsInsights/insights_risk#integrate_jenkins.html).
