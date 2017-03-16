@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-14"
+lastupdated: "2017-3-16"
 
 ---
 
@@ -23,7 +23,7 @@ Each toolchain is associated with a specific organization (org), and any user th
 ##Creating a toolchain from a template   
 {: #creating_a_toolchain_from_a_template}
 
-You can use a template as a starting point to [create a toolchain![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/devops/create){: new_window} that includes a specific set of tool integrations. Learn more about how to use the templates from the [IBM Bluemix Garage Method![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/category/tools){:new_window}.
+You can use a template as a starting point to [create a toolchain![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/devops/create){: new_window} that includes a specific set of tool integrations. Learn more about how to use the templates from the [IBM Cloud Garage Method![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/category/tools){:new_window}.
 
 1. If you use {{site.data.keyword.Bluemix_notm}} Public, log in to [{{site.data.keyword.Bluemix_notm}}![External link icon](../../icons/launch-glyph.svg "External link icon")](http://console.ng.bluemix.net){:new_window}.
 1. If you use {{site.data.keyword.Bluemix_notm}} Dedicated, log in to your Dedicated environment on {{site.data.keyword.Bluemix_notm}}.
@@ -46,7 +46,7 @@ You can use a template as a starting point to [create a toolchain![External link
  * If you configured Sauce Labs, the toolchain is set up to add Sauce Labs test jobs to the pipelines.
  * If you configured PagerDuty, the toolchain is set up to send alert notifications to the PagerDuty service that you specified.
  * If you configured Slack, the toolchain is set up to send notifications about deployment status to the Slack channel that you specified.
- * If you configured GitHub, the sample GitHub repo is cloned into your GitHub account.
+ * If you configured a source code tool integration such as  GitHub, the sample GitHub repo is cloned into your GitHub account.
 
 
 ##Creating a toolchain from an app
@@ -73,7 +73,7 @@ After you configure the toolchain and its tool integrations, you can view a visu
 1. On the DevOps dashboard, on the **Toolchains** page, click the toolchain to open its Overview page. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View Toolchain**. Then, click **Overview**.
 2. To access a tool integration that is in your toolchain, click the tool.
 
- **Tip**: If you have more than one GitHub or {{site.data.keyword.ghe_short}} repo, you might have multiple cards for the same tool integration because each repo is represented by its own card. If you have more than one pipeline, you might have multiple cards for the same tool integration because each pipeline is represented by its own card. For example, when you create a Microservices toolchain, each of the three microservices has its own GitHub or {{site.data.keyword.ghe_short}} repo and its own pipeline.
+ **Tip**: If you have more than one GitHub, {{site.data.keyword.ghe_short}}, or Git repo, you might have multiple cards for the same tool integration because each repo is represented by its own card. If you have more than one pipeline, you might have multiple cards for the same tool integration because each pipeline is represented by its own card. For example, when you create a Microservices toolchain, each of the three microservices has its own GitHub, {{site.data.keyword.ghe_short}}, or Git repo and its own pipeline.
 
 
 # Related Links
