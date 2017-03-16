@@ -143,7 +143,7 @@ You can integrate {{site.data.keyword.DRA_short}} with IBM Application Security 
 #### Creating dynamic security scan rules
 {: #criteria_dynamic}
 
-You can integrate {{site.data.keyword.DRA_short}} with {{site.data.keyword.appseccloudfull}} to run dynamic-app scans. For more information about {{site.data.keyword.appseccloud_short}}, see [the official documentation](/docs/services/ApplicationSecurityonCloud/index.html).
+You can integrate {{site.data.keyword.DRA_short}} with {{site.data.keyword.appseccloudfull}} to run dynamic-app scans. For more information about Application Security on Cloud, see [the official documentation](/docs/services/ApplicationSecurityonCloud/index.html).
 
 1. Type a description.
 
