@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-14"
+lastupdated: "2017-3-16"
 
 ---
 
@@ -41,7 +41,7 @@ The tool integrations that are available to add and configure for your toolchain
 |Slack			|Yes		|Yes		|
 {: caption="Table 1. Tool integrations available for toolchains on {{site.data.keyword.Bluemix_notm}} Public and Dedicated" caption-side="top"}
 
-**Tip**: If you want to start developing with your source code on {{site.data.keyword.Bluemix_notm}} Public, configure the GitHub tool integration before you configure the {{site.data.keyword.deliverypipeline}}. If you want to start developing with your code on {{site.data.keyword.Bluemix_notm}} Dedicated, configure the {{site.data.keyword.ghe_short}} tool integration or the GitHub tool integration before you configure the {{site.data.keyword.deliverypipeline}}.
+**Tip**: If you want to start developing with your source code on {{site.data.keyword.Bluemix_notm}} Public, configure the GitHub tool integration or the Git Repos and Issue Tracking tool integration before you configure the {{site.data.keyword.deliverypipeline}}. If you want to start developing with your code on {{site.data.keyword.Bluemix_notm}} Dedicated, configure the {{site.data.keyword.ghe_short}} tool integration or the GitHub tool integration before you configure the {{site.data.keyword.deliverypipeline}}.
 
 
 ## Configuring {{site.data.keyword.alertnotificationshort}} (Experimental)
@@ -213,7 +213,7 @@ Configure {{site.data.keyword.deliverypipeline}} to automate the continuous buil
 1. Click **Create Integration** to add the {{site.data.keyword.deliverypipeline}} to your toolchain.
 1. Click **{{site.data.keyword.deliverypipeline}}** to view the pipeline and configure it. To learn the basics of configuring a pipeline, see [Building and deploying pipelines](/docs/services/ContinuousDelivery/pipeline_build_deploy.html){: new_window}.
 
-  **Tip**: If you want to trigger the pipeline when you push changes to your GitHub or {{site.data.keyword.ghe_short}} repository (repo), you must configure GitHub or {{site.data.keyword.ghe_short}} for your toolchain before you define the stages for your pipeline. The pipeline stages need the Git URLs for your repos. Each pipeline stage can refer to only one of the GitHub or {{site.data.keyword.ghe_short}} repos that are associated with your toolchain. For instructions to configure GitHub, see the [GitHub](#github) section. For instructions to configure Dedicated {{site.data.keyword.ghe_short}}, see [Getting started with {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window}.
+  **Tip**: If you want to trigger the pipeline when you push changes to your GitHub, {{site.data.keyword.ghe_short}}, or Git repository (repo), you must configure GitHub, {{site.data.keyword.ghe_short}}, or Git Repos and Issue Tracking for your toolchain before you define the stages for your pipeline. The pipeline stages need the Git URLs for your repos. Each pipeline stage can refer to only one of the GitHub, {{site.data.keyword.ghe_short}}, or Git repos that are associated with your toolchain. For instructions to configure GitHub, see the [GitHub](#github) section. For instructions to configure Dedicated {{site.data.keyword.ghe_short}}, see [Getting started with {{site.data.keyword.ghe_long}}](/docs/services/ghededicated/index.html){: new_window}. For instructions to configure Git Repos and Issue Tracking, see the [Git Repos and Issue Tracking](##gitbluemix) section.
 
 1. Optional: If you are using a toolchain on {{site.data.keyword.Bluemix_notm}} Public and you want Sauce Labs to run tests on your app, configure the {{site.data.keyword.deliverypipeline}} to add a Sauce Labs test job. For instructions to configure the test job, see the [Configuring a Sauce Labs test job in your pipeline](#config_saucelabs) section.
 
@@ -296,7 +296,7 @@ To learn more, see [Editing code with the Eclipse Orion {{site.data.keyword.webi
 ## Configuring Git Repos and Issue Tracking (Experimental)
 {: #gitbluemix}
 
-The Git Repos and Issue Tracking tool integration is based on GitLab Community Edition, which is a web-based hosting service for Git repos. You can have both local and remote copies of your repos. To learn more, see [Git Repos and Issue Tracking (Experimental) ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git.stage1.ng.bluemix.net/help){:new_window}
+The Git Repos and Issue Tracking tool integration is based on GitLab Community Edition, which is a web-based hosting service for Git repos. You can have both local and remote copies of your repos. To learn more, see [Git Repos and Issue Tracking (Experimental) ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/help){:new_window}
 
 If you are configuring Git Repos and Issue Tracking as you are creating the toolchain, follow these steps:    
 
