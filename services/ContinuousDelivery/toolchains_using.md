@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-14"
+lastupdated: "2017-3-16"
 
 ---
 
@@ -99,11 +99,12 @@ If you are using {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.ke
 
 You can delete a toolchain and specify which of the associated tool integrations you want to delete. When you delete a toolchain, the deletion cannot be undone.
 
-1. On the DevOps dashboard, on the **Toolchains** page, click the toolchain to delete, and then click **Manage**. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View Toolchain**, and then click **Manage**.
-1. Click **Delete Toolchain** and review or adjust the tool integrations that you are deleting.
+1. On the DevOps dashboard, on the **Toolchains** page, click the toolchain to delete. Alternatively, on the app's Overview page, on the Continuous delivery card, click **View Toolchain**.
+1. Click the **More Actions** menu, which is next to **View app**.
+1. Click **Delete** and review or adjust the tool integrations that you are deleting.
 1. Confirm the deletion by typing the name of the toolchain and clicking **Delete**.  
 
- **Tip**: When you delete a GitHub or {{site.data.keyword.ghe_short}} tool integration, the associated repo is not deleted from GitHub or {{site.data.keyword.ghe_short}}. You must manually remove the repo from GitHub or {{site.data.keyword.ghe_short}}.
+ **Tip**: When you delete a GitHub, {{site.data.keyword.ghe_short}}, or Git Repos and Issue Tracking tool integration, the associated repo is not deleted from GitHub, {{site.data.keyword.ghe_short}}, or Git Repos and Issue Tracking. You must manually remove the repo.
 
 
 # Related Links
