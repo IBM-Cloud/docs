@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
   
-lastupdated: "2017-01-10"
+lastupdated: "2017-3-16"
 
 ---
 
@@ -404,9 +404,9 @@ When you push an app to {{site.data.keyword.Bluemix_notm}} from IBM Eclipse Tool
 ## {{site.data.keyword.Bluemix_notm}} Live Sync icons aren't shown
 {: #ts_llz_lkb_3r}
 
-You created an app in IBM Bluemix DevOps Services, but the IBM Bluemix Live Sync icons aren't shown in the Web IDE.
+You created an app, but the IBM Bluemix Live Sync icons aren't shown in the Web IDE.
 
-When you edit a Node.js app in the DevOps Services Web IDE, the {{site.data.keyword.Bluemix_notm}} live edit, quick restart, and debug icons aren't shown.
+When you edit a Node.js app in the Web IDE, the {{site.data.keyword.Bluemix_notm}} live edit, quick restart, and debug icons aren't shown.
 {: tsSymptoms}
 
 The icons aren't available in these circumstances:
@@ -424,7 +424,7 @@ Use one of the following methods:
   ```
    path: path_to_application
    ```
-  * Create a `package.json` file that is in the same directory as your app.
+  * Create a `package.json` file that is in the same directory as your app.   
   
   
 ## Orgs can't be found on {{site.data.keyword.Bluemix_notm}}
@@ -600,12 +600,12 @@ Use one of the following methods, depending on the cause of the problem:
 For more tips about Node.js apps, see [Tips for Node.js Applications](http://docs.cloudfoundry.org/buildpacks/node/node-tips.html ![External link icon](../icons/launch-glyph.svg "External link icon"){: new_window}.	
 
 
-## Configuration errors appear in the `server.xml` file after you import a {{site.data.keyword.Bluemix_notm}} Liberty app from Bluemix DevOps Services to Eclipse
+## Configuration errors appear in the `server.xml` file after you import a {{site.data.keyword.Bluemix_notm}} Liberty app into Eclipse
 {: #ts_eclipse}
 
-If you see configuration errors in the `server.xml` file after you import a {{site.data.keyword.Bluemix_notm}} Liberty app from IBM Bluemix DevOps Services to Eclipse, you might need to remove the `server.xml` file from the project. 
+If you see configuration errors in the `server.xml` file after you import a {{site.data.keyword.Bluemix_notm}} Liberty app into Eclipse, you might need to remove the `server.xml` file from the project. 
 
-After you import a {{site.data.keyword.Bluemix_notm}} Liberty app from {{site.data.keyword.Bluemix_notm}} DevOps Services into Eclipse, you see configuration errors within the `server.xml` file from Eclipse Problems view. 
+After you import a {{site.data.keyword.Bluemix_notm}} Liberty app into Eclipse, you see configuration errors within the `server.xml` file from Eclipse Problems view. 
 {: tsSymptoms}
 
 Liberty buildpack uses the `server.xml` file to configure the app and generates a `runtime-vars.xml` file when the Liberty app is pushed to {{site.data.keyword.Bluemix_notm}}. When you import the app to Eclipse, the `runtime-vars.xml` file doesn't exist in your local environment.
