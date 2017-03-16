@@ -85,7 +85,7 @@ You must have a valid IBMid and password to log in to {{site.data.keyword.Bluemi
  * Ensure that you enter a fully qualified email address for the IBMid.
  {: tsResolve}
  * If you are a SoftLayer user with a SoftLayer ID, you must switch to IBMid authentication in the Customer Portal in each account that you have access to before you can log in by using IBMid authentication. 
- For more information, see [Switching to IBMid](docs/admin/softlayerlink.html#ibmid_switch).
+ For more information, see [Switching to IBMid](/docs/admin/softlayerlink.html#ibmid_switch).
 
 
 ## Can't log in to {{site.data.keyword.Bluemix_notm}}: IBMid is not associated with any IBM Cloud accounts
@@ -134,7 +134,7 @@ Depending on how your account is set up, some of these log in options might appl
 ## Can't log in to {{site.data.keyword.Bluemix_notm}}: Console doesn't open
 {: #ts_login_stalls}
 
-When you log in using your IBMid, a login success message is displayed, but you don't return to the [Bluemix console](https://console.{DomainName}) or the [Customer Portal](https://control.softlayer.com)
+When you log in using your IBMid, a login success message is displayed, but you don't return to the [Bluemix console](https://console.{DomainName}) or the [Customer Portal](https://control.softlayer.com).
 {: tsSymptoms}
 
 Use one of the following solutions:
@@ -282,5 +282,5 @@ Complete one or more of the following actions, as necessary:
   * Log out of {{site.data.keyword.Bluemix_notm}} and log in again.
   * Use the private browsing mode of your browser. 
   * Clear the cookies and the cache of the browser.
-  * Use a different browser. For information about the versions of the browsers that are supported by {{site.data.keyword.Bluemix_notm}}, see [{{site.data.keyword.Bluemix_notm}} Prerequisites ![External link icon](../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}.
+  * Use a different browser. For information about the versions of the browsers that are supported by {{site.data.keyword.Bluemix_notm}}, see [Bluemix prerequisites](/docs/overview/whatisbluemix.html#prereqs).
   * If you installed the cf command line interface, enter the `cf apps` command to see whether your app is running.
