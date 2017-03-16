@@ -34,7 +34,7 @@ Add security to your applications with the {{site.data.keyword.appid_full}} serv
 ## API Reference
 {: #api notoc}
 
-* [{{site.data.keyword.appid_short_notm}} oauth-flows](http://mobileclientaccess.stage1.mybluemix.net/swagger-ui/#!/Authorization_Server_V3/authorization)
+* [{{site.data.keyword.appid_short_notm}} oauth-flows](http://appid-oauth.ng.bluemix.net/swagger-ui/#!/Authorization_Server_V3/authorization)
 
 ## SDK
 {: #sdk notoc}
