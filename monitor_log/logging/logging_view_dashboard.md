@@ -52,7 +52,7 @@ To see the deployment or runtime logs of a Cloud Foundry application, complete t
 ## Log format for Cloud Foundry app logs
 {: #log_format_cf}
 
-Every log entry contains the following fileds:
+Every log entry contains the following fields:
 
 <dl>
 <dt><strong>Time stamp</strong></dt>
