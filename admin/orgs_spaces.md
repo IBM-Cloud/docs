@@ -44,7 +44,7 @@ Organizations can span multiple regions, and they are defined by the following i
 <dd>Provide the route on the internet that is allocated to the organization. A route has a sub-domain and a domain. A sub-domain is typically the application name. A domain might be a system domain, or a custom domain that you registered for your application. See [Managing custom domains](orgs_spaces.html#managedomains).<br/>
 <p>**Note**: If you add a custom domain, you must configure your DNS server to resolve your custom domain to point to the {{site.data.keyword.Bluemix_notm}} system domain. In this way, when {{site.data.keyword.Bluemix_notm}} receives a request for your custom domain, it can properly route it to your application.</p></dd>
 <dt>Quota</dt>
-<dd>Represents the resource limits for the organization, including the number of services and the amount of memory that can be allocated for use by the organization. Quotas are assigned when organizations are created. Any application or service in a space of the organization contributes to the usage of the quota. With the Pay-As-You-Go or Subscription plans, you can adjust your quota for Cloud Foundry applications and containers as the needs of your organization change. See [Managing quota](orgs_spaces.html#managequota).</dd>
+<dd>Represents the resource limits for the organization, including the number of services and the amount of memory that can be allocated for use by the organization. Note that the quota is not an enforced cap.  Instead, it is a trigger for spending notifications. Quotas are assigned when organizations are created. Any application or service in a space of the organization contributes to the usage of the quota. With the Pay-As-You-Go or Subscription plans, you can adjust your quota for Cloud Foundry applications and containers as the needs of your organization change. See [Managing quota](orgs_spaces.html#managequota).</dd>
 </dl>
 
 In {{site.data.keyword.Bluemix_notm}}, you can use organizations to enable collaboration among team members and to facilitate the logical grouping of project resources in the following ways:
@@ -147,7 +147,7 @@ Complete the following steps to list the members for a specific space:
 ## Managing quota
 {: #managequota}
 
-As a {{site.data.keyword.Bluemix_notm}} account owner or organization manager, you can view the used and allocated quota for an  organization. The quota represents the resource limits for the organization, which is assigned when the organization is created. Depending on whether you have a trial account or a billable account, the resources that are available to an organization vary. Any application or service in a space within the organization contributes to the usage of the allocated quota.
+As a {{site.data.keyword.Bluemix_notm}} account owner or organization manager, you can view the used and allocated quota for an  organization. The quota represents the resource limits for the organization, which is assigned when the organization is created. The limit is not a cap that is enforced against the org  Instead, it is a trigger for spending notifications. Depending on whether you have a trial account or a billable account, the resources that are available to an organization vary. Any application or service in a space within the organization contributes to the usage of the allocated quota.
 
 To view the used and allocated quota for an organization, complete the following steps:
 
