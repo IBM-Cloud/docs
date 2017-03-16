@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-14"
+lastupdated: "2017-3-15"
 
 ---
 
@@ -45,18 +45,19 @@ To [create a pipeline![External link icon](../../icons/launch-glyph.svg "Externa
  **Tip**: Pipelines and toolchains belong to organizations (orgs). If you belong to an org that has toolchains, you can be added to the access control list for any of its associated toolchains. After you are added to the access control list for a toolchain, you can use that toolchain and any associated pipelines, even if you didn't create them. For more information about access control for toolchains, see [Managing access](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){: new_window}.
 
 1. Either select the toolchain that you want to use or type a name for the new toolchain that you want to create.
-1. Provide the location of your GitHub repo.
+1. Select your Git provider. 
 
  **Tip**: If you have not authorized {{site.data.keyword.Bluemix_notm}} to access GitHub, you are prompted to click **Authorize** to go to the GitHub website. If you don't have an active GitHub session, you are prompted to log in. Click **Authorize Application** to allow {{site.data.keyword.Bluemix_notm}} to access your GitHub account. If you have an active GitHub session but you haven't entered your password recently, you might be prompted to enter your GitHub password to confirm.
 
-   * If you have a GitHub repo and want to use it, for the repository type, select **Link**. Search for the location of the repo or select the repo from the list of available repos.
+   * If you have a repo and want to use it, for the repository type, select **Link**. Search for the location of the repo or select the repo from the list of available repos.
 
-   * If you want to create an empty GitHub repo, for the repository type, select **New**. Type a name for the repo.
+   * If you want to create an empty repo, for the repository type, select **New**. Type a name for the repo.
 
-   * If you want to create a clone of a GitHub repo, for the repository type, select **Copy**. Search for the location of the repo or select the repo from the list of available repos.
+   * If you want to create a clone of a repo, for the repository type, select **Copy**. Search for the location of the repo or select the repo from the list of available repos.
 
-   * If you want to fork a GitHub repo so that you can contribute changes through pull requests, select **Fork**. Search for the location of the repo or select the repo from the list of available repos.
+   * If you want to fork a repo so that you can contribute changes through pull requests, select **Fork**. Search for the location of the repo or select the repo from the list of available repos.
 
+1. Select a repo or enter a repo URL.
 1. Click **Create**. The pipeline is created, configured, and displayed on the toolchain's Overview page.
  ![Pipeline card](images/cd_pipeline.png)
 
