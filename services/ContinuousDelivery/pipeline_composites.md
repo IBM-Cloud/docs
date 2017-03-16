@@ -71,6 +71,33 @@ The list of deployment tasks for your environment is displayed.
 
 For more information about modifying the deployment plan, see [Customizing deployment plans for composite pipelines](/docs/services/ContinuousDelivery/pipeline_deployment_plan.html).
 
+## Modifying individual pipelines
+{: #compositepipeline_add_job}
+
+You can modify individual pipelines from the composite pipeline.
+
+1. Expand the app.
+
+2. From the menu on the stage, click **Configure**.
+
+3. Add, modify, or delete jobs from the stage. For detailed instructions, see [Adding a job to a stage](pipeline_build_deploy.html#deliverypipeline_add_job).
+
+## Running jobs in a composite pipeline
+{: #compositepipeline_run_jobs}
+
+After you expand an app to display its jobs, you can manually run all of its jobs in a stage. Click the **Deploy to *stage*** icon in the space for an app.
+
+![Running a stage in a single app](images/composite_run_stage.png)
+
+To run all of the jobs in all of the apps that are in a space, click the **Deploy to *space*** icon in the space for the composite pipeline. The jobs run according to the composite blueprint's deployment plan.
+
+![Running a stage in all apps](images/composite_run_space.png)
+
+## Viewing logs
+{: #compositepipeline_view_logs}
+
+To view the logs for a job, expand the app that contains the job and click the job.
+
 ## Using IBM Bluemix DevOps Connect to integrate with IBM UrbanCode Deploy
 {: #compositepipeline_devops_connect}
 
@@ -160,30 +187,3 @@ After you connect your organization to UrbanCode Deploy, you can add its applica
     3. Click **Save**.
 
     4. Repeat these steps for each logical environment that you use.
-
-## Modifying individual pipelines
-{: #compositepipeline_add_job}
-
-You can modify individual pipelines from the composite pipeline.
-
-1. Expand the app.
-
-2. From the menu on the stage, click **Configure**.
-
-3. Add, modify, or delete jobs from the stage. For detailed instructions, see [Adding a job to a stage](pipeline_build_deploy.html#deliverypipeline_add_job).
-
-## Running jobs in a composite pipeline
-{: #compositepipeline_run_jobs}
-
-After you expand an app to display its jobs, you can manually run all of its jobs in a stage. Click the **Deploy to *stage*** icon in the space for an app.
-
-![Running a stage in a single app](images/composite_run_stage.png)
-
-To run all of the jobs in all of the apps that are in a space, click the **Deploy to *space*** icon in the space for the composite pipeline. The jobs run according to the composite blueprint's deployment plan.
-
-![Running a stage in all apps](images/composite_run_space.png)
-
-## Viewing logs
-{: #compositepipeline_view_logs}
-
-To view the logs for a job, expand the app that contains the job and click the job.

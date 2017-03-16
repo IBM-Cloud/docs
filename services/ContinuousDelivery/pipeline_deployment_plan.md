@@ -11,7 +11,7 @@ lastupdated: "2017-3-16"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Managing deployment plans for composite pipelines
+# Customizing deployment plans for composite pipelines
 {: #tasks_overview}
 
 In a deployment plan for a composite pipeline, a task represents some business-meaningful activity that is associated with a software deployment. Tasks are defined in deployment plans.
