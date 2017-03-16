@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-03-16"
 
 ---
 
@@ -39,47 +39,47 @@ The {{site.data.keyword.appid_short_notm}} server SDK uses the Passport framewor
 1. Using the command line, open the directory with your Node.js app.
 2. Run the following commands:
 
-    ```
-    npm install -save express
-    npm install -save passport
-    npm install -save appid-serversdk-nodejs
-    ```
-    {:pre}
+  ```
+  npm install -save express
+  npm install -save passport
+  npm install -save appid-serversdk-nodejs
+  ```
+  {:pre}
 
 ## Protecting resources in Node.js
 {: #protecting-resources-nodesdk}
 
 The following snippet demonstrates how to use `ApiStrategy` in a simple Express application to protect the `/protected` endpoint GET methods.
 
-    ```JavaScript
+  ```JavaScript
 
-    var express = require('express');
-    var passport = require('passport');
-    var ApiStrategy = require('appid-serversdk-nodejs').ApiStrategy;
+  var express = require('express');
+  var passport = require('passport');
+  var ApiStrategy = require('appid-serversdk-nodejs').ApiStrategy;
 
-    passport.use(new ApiStrategy());
-    var app = express();
-    app.use(passport.initialize());
+  passport.use(new ApiStrategy());
+  var app = express();
+  app.use(passport.initialize());
 
-    app.get('/protected', passport.authenticate('appid-api-strategy', {session: false }),
-        function(request, response){
-            console.log("Securty context", request.securityContext)    
-            response.send(200, "Success!");
-        }
-    );
+  app.get('/protected', passport.authenticate('appid-api-strategy', {session: false }),
+      function(request, response){
+          console.log("Securty context", request.securityContext)    
+          response.send(200, "Success!");
+      }
+  );
 
-    app.listen(process.env.PORT);
-    ```
-    {:pre}
+  app.listen(process.env.PORT);
+  ```
+  {:pre}
 
 You can use `WebAppStrategy` to protect web application resources:
 
-    ```JavaScript
+  ```JavaScript
 
-    var express = require('express');
-    var passport = require('passport');
-    var ApiStrategy = require('appid-serversdk-nodejs').WebStrategy;
-    ```
-    {:pre}
+  var express = require('express');
+  var passport = require('passport');
+  var ApiStrategy = require('appid-serversdk-nodejs').WebStrategy;
+  ```
+  {:pre}
 
 For more information, see the <a href="https://github.com/ibm-cloud-security/appid-serversdk-nodejs" target="_blank">GitHub repository <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>.

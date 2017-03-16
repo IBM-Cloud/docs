@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-  lastupdated: "2017-03-15"
+  lastupdated: "2017-03-16"
 
 ---
 {:new_window: target="_blank"}
@@ -106,6 +106,7 @@ The {{site.data.keyword.appid_short_notm}} client SDK is distributed with CocoaP
           return AppID.sharedInstance.application(application, open: url, options: options)
       }
   ```
+  {;pre}
 
 ## Authenticate users by using the login widget
 {: #authenticate-login}
@@ -172,7 +173,7 @@ For example, you can invoke this code to set a new attribute, or override an exi
       }
   })
   ```
-  {pre}
+  {:pre}
 
 
 ### Anonymous login

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-03-16"
 
 ---
 {:new_window: target="_blank"}
@@ -108,28 +108,27 @@ The login widget default configuration requires the use of both Facebook and Goo
 
 After the {{site.data.keyword.appid_short_notm}} client SDK is initialized, you can authenticate your users by running the login widget.
 
-    ```java
-    LoginWidget loginWidget = AppID.getInstance().getLoginWidget();
-    loginWidget.launch(this, new AuthorizationListener() {
-          @Override
-          public void onAuthorizationFailure (AuthorizationException exception) {
-            //Exception occurred
-          }
+  ```java
+  LoginWidget loginWidget = AppID.getInstance().getLoginWidget();
+  loginWidget.launch(this, new AuthorizationListener() {
+        @Override
+        public void onAuthorizationFailure (AuthorizationException exception) {
+          //Exception occurred
+        }
 
-          @Override
-          public void onAuthorizationCanceled () {
-            //Authentication canceled by the user
-          }
+        @Override
+        public void onAuthorizationCanceled () {
+          //Authentication canceled by the user
+        }
 
-          @Override
-          public void onAuthorizationSuccess (AccessToken accessToken, IdentityToken identityToken) {
-            //User authenticated
-          }
-        });
-    ```
-    {:pre}
+        @Override
+        public void onAuthorizationSuccess (AccessToken accessToken, IdentityToken identityToken) {
+          //User authenticated
+        }
+      });
+  ```
+  {:pre}
 
-  **Note:** If you have Chrome installed but have never used it, you must accept the terms of services and privacy notice, before launching the login widget or an error message will occur.
 
 ## Accessing user attributes
 {: #accessing}
