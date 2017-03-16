@@ -236,7 +236,7 @@ To create Slack notifications:
 
 6. Repeat these steps to send Slack notifications for other stages that include IBM Container Service, IBM Security Analyzer, and IBM Globalization jobs.
 
-The build notification that is displayed in Slack includes a link to the DevOps Services project and sometimes to the project's dashboard. For a Slack user to open these links, the user must be registered with DevOps Services and be a member of the project that the pipeline is configured in.
+The build notification that is displayed in Slack includes a link to the project and sometimes to the project's dashboard. For a Slack user to open these links, the user must be registered with Bluemix and be a member of the project that the pipeline is configured in.
 
 ## Creating HipChat notifications for builds in the pipeline
 {: #deliverypipeline_hipchat}
@@ -334,4 +334,3 @@ You can automate your app builds and container deployments to Bluemix by using t
   - Deploying images in containers to Bluemix
 
 For more information about getting started, see the [Delivery Pipeline and containers overview](/docs/containers/container_pipeline_ov.html#container_pipeline_ov).
-
