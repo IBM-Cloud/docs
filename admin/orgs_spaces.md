@@ -147,7 +147,7 @@ Complete the following steps to list the members for a specific space:
 ## Managing quota
 {: #managequota}
 
-As a {{site.data.keyword.Bluemix_notm}} account owner or organization manager, you can view the used and allocated quota for an  organization. The quota represents the resource limits for the organization, which is assigned when the organization is created. The limit is not a cap that is enforced against the org  Instead, it is a trigger for spending notifications. Depending on whether you have a trial account or a billable account, the resources that are available to an organization vary. Any application or service in a space within the organization contributes to the usage of the allocated quota.
+As a {{site.data.keyword.Bluemix_notm}} account owner or organization manager, you can view the used and allocated quota for an  organization. The quota represents the resource limits for the organization, which is assigned when the organization is created. The limit is not a cap that is enforced against the org. Instead, it is a trigger for spending notifications. Depending on whether you have a trial account or a billable account, the resources that are available to an organization vary. Any application or service in a space within the organization contributes to the usage of the allocated quota.
 
 To view the used and allocated quota for an organization, complete the following steps:
 
