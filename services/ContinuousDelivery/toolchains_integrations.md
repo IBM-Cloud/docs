@@ -296,7 +296,7 @@ To learn more, see [Editing code with the Eclipse Orion {{site.data.keyword.webi
 ## Configuring Git Repos and Issue Tracking (Experimental)
 {: #gitbluemix}
 
-The Git Repos and Issue Tracking tool integration is based on GitLab Community Edition, which is a web-based hosting service for Git repos. You can have both local and remote copies of your repos. To learn more, see [Git Repos and Issue Tracking (Experimental) ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/help){:new_window}
+The Git Repos and Issue Tracking tool integration is based on GitLab Community Edition, which is a web-based hosting service for Git repos. You can have both local and remote copies of your repos. To learn more, see [Git Repos and Issue Tracking (Experimental)![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/help){:new_window}.
 
 If you are configuring Git Repos and Issue Tracking as you are creating the toolchain, follow these steps:    
 
@@ -316,7 +316,7 @@ If you have a toolchain and are adding Git Repos and Issue Tracking to it, follo
   d. If you have a Git repo and want to use it, for the repository type, click **Existing**. Type the URL.    
 
 1. If you want to use Issues for issue tracking, select the **Enable Issues** check box.
-1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** check box.
+1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** check box. For more information, see [Track where your code is deployed with toolchains![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}. 
 1. Click **Create Integration**.
 1. Click the card for the Git repo that you want to work with. Your project overview page opens.
 
@@ -350,7 +350,7 @@ Configure GitHub to manage your source code on the cloud:
  c. To fork a GitHub repo so that you can contribute changes through pull requests, click **Fork**.
 
 1. If you want to use GitHub's Issues for issue tracking, select the **Enable GitHub Issues** check box.
-1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** check box.
+1. If you want to track the deployment of code changes by creating tags and comments on commits, and labels and comments on issues that are referenced by the commits, select the **Track deployment of code changes** check box. For more information, see [Track where your code is deployed with toolchains![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/03/track-code-deployed-toolchains/){:new_window}.
 1. Click **Create Integration**.
 1. Click the card for the GitHub repo that you want to work with. The GitHub website opens, where you can view the contents of the repo.
 
