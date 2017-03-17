@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2017-02-03"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -75,7 +75,7 @@ To add a custom device management package by using the {{site.data.keyword.iot_s
 3. Click the **Add Package** button.
 4. Select your package file and click **Open**.
 
-To add a custom device management package by using the API, see the [{{site.data.keyword.iot_short_notm}} API documentation ![External link icon](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
+To add a custom device management package by using the API, see the [{{site.data.keyword.iot_short_notm}} API documentation ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 ### Extension package properties
 
@@ -128,7 +128,7 @@ Use the following {{site.data.keyword.iot_short_notm}} REST API commands to mana
 - To delete a device management extension package:
   `DELETE https://<orgID>.internetofthings.ibmcloud.com:443/api/v0002/mgmt/custom/bundle/{bundleId}`
 
-For more information about the REST APIs for device management extension packages, see the [{{site.data.keyword.iot_short_notm}} API V2](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} documentation.
+For more information about the REST APIs for device management extension packages, see the [{{site.data.keyword.iot_short_notm}} API V2 ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} documentation.
 
 
 ## Supporting custom device management actions
@@ -163,7 +163,7 @@ To specify custom actions from an extension package, the device must specify the
 
 ```
 
-For more information about device manage requests, see [Device Management Protocol](index.html){: new_window}.
+For more information about device manage requests, see [Device Management Protocol](index.html).
 
 ## Initiating custom device management actions
 {: #initiating_custom_dm_actions}
@@ -468,4 +468,4 @@ Use the following API requests to manage your devices:
 
 The following recipes demonstrate the flow that is required to handle Device Management Extensions:
 
-- [Device Management Extension Packages in WIoT Platform ![External link icon](../../../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/device-management-extension-packages-in-wiot-platform/){: new_window} recipe provides instructions to register a managed device with {{site.data.keyword.iot_short}} so that the device can receive and handle Device Management Extension actions. The code samples in the recipe are written using the Python Client Library.
+- [Device Management Extension Packages in WIoT Platform ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/device-management-extension-packages-in-wiot-platform/){: new_window} recipe provides instructions to register a managed device with {{site.data.keyword.iot_short}} so that the device can receive and handle Device Management Extension actions. The code samples in the recipe are written using the Python Client Library.
