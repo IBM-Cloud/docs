@@ -2,7 +2,7 @@
 
 copyright:
  years: 2017
-lastupdated: "2017-3-6"
+lastupdated: "2017-3-17"
 
 ---
 
@@ -133,10 +133,12 @@ If you are creating tasks in a CSV file, you must include the required fields th
 |Group already exists in Continuous Release.|
 {: caption="Table 2. CSV import error messages" caption-side="top"}  
 
--->
+
 
 ## Generating deployment plans with Continuous Delivery composite pipelines
-{: #plan_genPipeline}                                                
+{: #plan_genPipeline}   
+
+-->                                             
 
 ## Copying and promoting deployment plans
 {: #plan_copyPromote}
