@@ -36,13 +36,13 @@
     "category_id": "devops"
   }, {
     "type": "extra",
-    "title": "Working with Mobile Client Access",
-    "href": "services/mobileaccess/index.html",
+    "title": "Building mobile projects",
+    "href": "mobile/index.html",
     "category_id": "mobile"
   }, {
     "type": "extra",
-    "title": "Building mobile projects",
-    "href": "mobile/index.html",
+    "title": "Working with Mobile Client Access",
+    "href": "services/mobileaccess/index.html",
     "category_id": "mobile"
   }]
 }
