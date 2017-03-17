@@ -16,7 +16,7 @@ lastupdated: "2017-3-16"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Creating composite pipelines (Experimental)
+# Working with composite pipelines (Experimental)
 {: #deliverypipeline_create_composite}
 
 With the composite pipeline feature for {{site.data.keyword.deliverypipeline}}, you can manage repeatable continuous integration and continuous delivery processes for related software apps.
@@ -50,7 +50,7 @@ The stages that you configured are automatically mapped to the appropriate space
 If you created the composite pipeline for a toolchain that contains delivery pipelines, apps for all of the pipelines in the toolchain are added to the composite pipeline. The stages that you configured in the delivery pipelines are automatically mapped to the appropriate spaces in your org, and their status is displayed.
 To view the status of each job in an app, expand the app.
 
-A deployment plan is also created for the composite pipeline. By default, the jobs for all apps run in parallel for a space, but you can change the deployment order in the plan.
+A deployment plan is also created for the composite pipeline. By default, jobs for all apps run in parallel for a space, but you can change the deployment order of your apps in the plan.
 
 If you created the composite pipeline for a new toolchain, a deployment plan is created for you to customize.
 
@@ -89,9 +89,11 @@ After you expand an app to display its jobs, you can manually run all of its job
 
 ![Running a stage in a single app](images/composite_run_stage.png)
 
-To run all of the jobs in all of the apps that are in a space, click the **Deploy to *space*** icon in the space for the composite pipeline. The jobs run according to the composite blueprint's deployment plan.
+To run all of the jobs in all of the apps that are in a space, click the **Deploy to *space*** icon in the space for the composite pipeline.
 
 ![Running a stage in all apps](images/composite_run_space.png)
+
+The jobs run according to the composite blueprint's deployment plan.
 
 ## Viewing logs
 {: #compositepipeline_view_logs}
@@ -158,7 +160,7 @@ If your integration succeeded, you can add IBM UrbanCode Deploy apps to your com
 ## Adding apps from IBM UrbanCode Deploy
 {: #compositepipeline_add_apps}
 
-If you integrate with IBM UrbanCode Deploy by using DevOps Connect, you can add apps from IBM UrbanCode Deploy to the composite pipeline. For installation instructions, see [Using IBM Bluemix DevOps Connect to integrate with IBM UrbanCode Deploy](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_devops_connect}).
+If you integrate with IBM UrbanCode Deploy by using DevOps Connect, you can add apps from IBM UrbanCode Deploy to the composite pipeline. For installation instructions, see [Using IBM Bluemix DevOps Connect to integrate with IBM UrbanCode Deploy](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_devops_connect).
 
 After you connect your org to IBM UrbanCode Deploy, you can add its apps to composite pipelines, select the app processes to include in the deployment plan, and customize the deployment of the apps.
 

@@ -60,11 +60,11 @@ Each task in a deployment plan is contained in a separate row. The information t
 After tasks are added to deployment plans, you can manage them in several ways:
 
    * To move a task, drag it to a new location.
-   
+
    * To copy a task or group, click the task, click the **Copy** icon <img class="inline" src="../UCCR/images/copy-group.png"  alt="copy icon">, place the cursor where you want to insert the copied task, and click the **Paste** icon <img class="inline" src="../UCCR/images/paste-group.png"  alt="paste icon">.
-   
+
    * To cut a task or group from a deployment plan, click the task and click **Cut** <img class="inline" src="../UCCR/images/cut-group.png"  alt="cut icon">.
-   
+
    * To delete a task, click it and click **Delete** <img class="inline" src="../UCCR/images/trash-group.png"  alt="delete icon">. The task is removed from the deployment plan.
 
 <!-- ## Creating UrbanCode Deploy tasks
@@ -167,12 +167,12 @@ To create a header task, follow these steps:
 
 5. Click **Save**. The task is inserted into the deployment plan.
 
-## Creating Continuous Delivery Pipeline tasks
+## Creating Delivery Pipeline tasks
 {: #tasks_pipelineCD}
 
 In the {{site.data.keyword.contdelivery_short}} service, {{site.data.keyword.deliverypipeline}} automates your DevOps workflows. You can manage your instances of {{site.data.keyword.deliverypipeline}} with pipeline tasks.
 
-To create a Continuous Delivery Pipeline task, follow these steps:
+To create a Delivery Pipeline task, follow these steps:
 
 1. On the Deployment Plan Details page, click **Create Task**. If you want to insert a task at a specific position in the plan, before you click **Create Task**, select a task. The new task is inserted above the selected task.
 
@@ -272,4 +272,4 @@ In the following figure, the first task does not have any prerequisites and two 
 
 *Figure 4. Task dependencies*
 
-To review or modify dependencies, select the task and click **Manage Prerequisites** <img class="inline" src="../UCCR/images/task-depend.png"  alt="task prerequisite">. 
+To review or modify dependencies, select the task and click **Manage Prerequisites** <img class="inline" src="../UCCR/images/task-depend.png"  alt="task prerequisite">.
