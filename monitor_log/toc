@@ -18,4 +18,7 @@
         logging/logging_view_cli.md
         logging/external/logging_external_hosts.md
         logging/dedicated/logging_local_dedicated.md
-    [Monitoring and logging IBM Bluemix Container Service](../containers/monitoringandlogging/container_ml_ov.html)
+    [Monitoring and logging containers](../containers/monitoringandlogging/container_ml_ov.html)
+        [Monitoring](../containers/monitoringandlogging/container_ml_monitor.html)
+        [Logging](../containers/monitoringandlogging/container_ml_logs.html)
+        [Tutorial: Testing the logging capabilities](../containers/monitoringandlogging/container_ml_gettingstarted_tutorial.html)

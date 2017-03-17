@@ -19,7 +19,7 @@ lastupdated: "2017-3-16"
 # Creating composite pipelines (Experimental)
 {: #deliverypipeline_create_composite}
 
-With the composite pipeline feature for {{site.data.keyword.deliverypipeline}}, you can manage repeatable continuous integration and continuous delivery processes for related software applications.
+With the composite pipeline feature for {{site.data.keyword.deliverypipeline}}, you can manage repeatable continuous integration and continuous delivery processes for related software apps.
 {:shortdesc}
 
 ## Creating a composite pipeline
@@ -29,7 +29,7 @@ With the composite pipeline feature for {{site.data.keyword.deliverypipeline}}, 
 
 1. From the left navigation, click **Pipelines**.
 
-2. Enable the composite pipeline feature by clicking **Learn more** and then clicking **Enable**. The composite pipeline is enabled for each user, so only the members of your organization who opt in to the experimental feature see the composite pipelines that you create.
+2. Enable the composite pipeline feature by clicking **Learn more** and then clicking **Enable**. The composite pipeline is enabled for each user, so only the members of your organization (org) who opt in to the experimental feature see the composite pipelines that you create.
 
 2. Click **Create** > **Composite Pipeline**.
 
@@ -45,9 +45,9 @@ With the composite pipeline feature for {{site.data.keyword.deliverypipeline}}, 
 
 6. Click **Create**.
 
-The stages that you configured are automatically mapped to the appropriate space in your organization and a deployment plan is created for the composite pipeline.
+The stages that you configured are automatically mapped to the appropriate space in your org and a deployment plan is created for the composite pipeline.
 
-If you created the composite pipeline for a toolchain that contains delivery pipelines, apps for all of the pipelines in the toolchain are added to the composite pipeline. The stages that you configured in the delivery pipelines are automatically mapped to the appropriate spaces in your organization, and their status is displayed.
+If you created the composite pipeline for a toolchain that contains delivery pipelines, apps for all of the pipelines in the toolchain are added to the composite pipeline. The stages that you configured in the delivery pipelines are automatically mapped to the appropriate spaces in your org, and their status is displayed.
 To view the status of each job in an app, expand the app.
 
 A deployment plan is also created for the composite pipeline. By default, the jobs for all apps run in parallel for a space, but you can change the deployment order in the plan.
@@ -101,83 +101,84 @@ To view the logs for a job, expand the app that contains the job and click the j
 ## Using IBM Bluemix DevOps Connect to integrate with IBM UrbanCode Deploy
 {: #compositepipeline_devops_connect}
 
-IBM Bluemix DevOps Connect coordinates communication between your on-premises IBM&reg; UrbanCode&reg; Deploy  installation and {{site.data.keyword.contdelivery_short}}. After you install DevOps Connect, you can create integrations that enable you to manage UrbanCode Deploy applications with composite pipelines.
+IBM Bluemix DevOps Connect coordinates communication between your on-premises IBM&reg; UrbanCode&reg; Deploy installation and {{site.data.keyword.contdelivery_short}}. After you install DevOps Connect, you can create integrations that you can use to manage IBM UrbanCode Deploy apps with composite pipelines.
 
 **Prerequisites**
 
-* To register DevOps Connect, you must have an IBMid.
+   * To register DevOps Connect, you must have an IBMid.
 
-* You must have [Java™ Runtime Environment version 8 update 121 or later](https://java.com/en/download/){:new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") on the host system and set the system PATH variable to its location.
+   * Make sure that [Java&trade; Runtime Environment version 8 update 121 or later](https://java.com/en/download/){:new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") is on the host system and that the system PATH variable is set to its location.
 
-* You need an admin authorization token from UrbanCode Deploy.
+   * You need an admin authorization token from IBM UrbanCode Deploy.
 
+To use DevOps Connect to integrate with IBM UrbanCode Deploy, follow these steps:
 
-1. Install DevOps Connect and use it to integrate your org with UrbanCode Deploy.
+1. Install DevOps Connect and use it to integrate your org with IBM UrbanCode Deploy.
 
-  1.  From within a composite pipeline, click **Add app** and from the **Managed by** list, select **IBM UrbanCode Deploy**.
+  1. In a composite pipeline, click **Add app**. From the **Managed by** list, select **IBM UrbanCode Deploy**.
 
   1. Display the integration steps.
 
-  1.  In the Configure UrbanCode Deploy Integration dialog box, click **Download** to download DevOps Connect. Place the JAR file on a computer that has access to UrbanCode Deploy.
+  1. In the Configure UrbanCode Deploy Integration window, click **Download** to download DevOps Connect. Place the JAR file on a computer that has access to IBM UrbanCode Deploy.
 
-  1.  Using the dialog box, copy the DevOps Connect installation script. The script contains the command to start DevOps Connect and the credentials that are required to identify your {{site.data.keyword.contdelivery_short}} Bluemix service.
+  1. From the window, copy the DevOps Connect installation script. The script contains the command to start DevOps Connect and the credentials that are required to identify your {{site.data.keyword.contdelivery_short}} service.
 
-  1.  On the computer where you placed DevOps Connect, open a command shell and paste the copied script into it.
+  1. On the computer where you placed DevOps Connect, open a command shell and paste the copied script into it.
 
-  1.  Run the script.  DevOps Connect displays startup messages.
+  1. Run the script. DevOps Connect displays startup messages.
 
 2. Register DevOps Connect.
 
-  1.  On the computer where you placed DevOps Connect, use a web browser to open the DevOps Connect dashboard. The default URL is `https://localhost:8443`. To change the URL and learn about other startup options, see the [DevOps Connect documentation](https://developer.ibm.com/urbancode/plugindoc/urbancode-sync/ibm-urbancode-sync-utility/1-2/){:new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
+  1.  On the computer where you placed DevOps Connect, use a web browser to open the DevOps Connect dashboard. The default URL is https://localhost:8443. To change the URL and learn about other startup options, see the [DevOps Connect documentation](https://developer.ibm.com/urbancode/plugindoc/urbancode-sync/ibm-urbancode-sync-utility/1-2/){:new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
 
 
-  1.  On the **Sign-in to IBM** page, enter your IBMid and password, and then click **Sign In**. You sign in each time you start DevOps Connect.
+  1. On the "Sign-in to IBM" page, enter your IBMid and password and click **Sign In**. You sign in each time you start DevOps Connect.
 
-3. With DevOps Connect, use the IBM UrbanCode Deploy for DevOps Connect plug-in to create an integration between your org and UrbanCode Deploy.
+3. With DevOps Connect, use the IBM UrbanCode Deploy for DevOps Connect plug-in to create an integration between your org and IBM UrbanCode Deploy.
 
-    1.  From the Integrations page, click **Add New**.
+    1. On the Integrations page, click **Add New**.
 
-    1.  In the **Name** field, enter a name for the integration.
+    1. In the **Name** field, type a name for the integration.
 
-    1.  From the **Integration Type** list, select **IBM UrbanCode Deploy for DevOps Connect**.
+    1. From the **Integration Type** list, select **IBM UrbanCode Deploy for DevOps Connect**.
 
-    1.  In the **Server URI** field, enter the public URL of the UrbanCode Deploy server. For example, `https://my_UCD.example.com:8443`.
+    1. In the **Server URI** field, type the public URL of the IBM UrbanCode Deploy server; for example, `https://my_UCD.example.com:8443`.
 
-    1.  In the **Authentication Token** field, enter or paste the authentication token that was generated by UrbanCode Deploy.
+    1. In the **Authentication Token** field, type or paste the authentication token that was generated by IBM UrbanCode Deploy.
 
-    1.  In the **Admin User Email** field, enter your email address.
+    1. In the **Admin User Email** field, type your email address.
 
-    1. To confirm that the integration succeeded, click **Run Integration**. DevOps Connect connects to the UrbanCode Deploy instance specified in the **Server URI** field. DevOps Connect is authorized by the token that is pasted in the **Authentication Token** field.
+    1. To confirm that the integration succeeded, click **Run Integration**. DevOps Connect connects to the IBM UrbanCode Deploy instance that is specified in the **Server URI** field. DevOps Connect is authorized by the token that is pasted in the **Authentication Token** field.
 
-    1.  Click **Save**.
+    1. Click **Save**.
 
-If your integration succeeded, you can add UrbanCode Deploy applications to your composite pipelines. See [Adding apps from IBM UrbanCode Deploy](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_add_apps)
+If your integration succeeded, you can add IBM UrbanCode Deploy apps to your composite pipelines. For more information, see [Adding apps from IBM UrbanCode Deploy](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_add_apps).
 
 
 ## Adding apps from IBM UrbanCode Deploy
 {: #compositepipeline_add_apps}
 
-If you integrate with IBM UrbanCode Deploy by using IBM Bluemix DevOps Connect, you can add applications from UrbanCode Deploy to the composite pipeline. For detailed installation instructions, see [Using IBM Bluemix DevOps Connect to integrate with IBM UrbanCode Deploy](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_devops_connect}).
+If you integrate with IBM UrbanCode Deploy by using DevOps Connect, you can add apps from IBM UrbanCode Deploy to the composite pipeline. For installation instructions, see [Using IBM Bluemix DevOps Connect to integrate with IBM UrbanCode Deploy](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_devops_connect}).
 
-After you connect your organization to UrbanCode Deploy, you can add its applications to composite pipelines, select the application processes to include in the deployment plan, and customize the deployment of the apps.
+After you connect your org to IBM UrbanCode Deploy, you can add its apps to composite pipelines, select the app processes to include in the deployment plan, and customize the deployment of the apps.
 
 1. From the composite pipeline, click **Add app**.
 
-2. From the **Managed by** list, select **IBM UrbanCode Deploy**. If you recently integrated {{site.data.keyword.contdelivery_short}} with UrbanCode Deploy, you might need to refresh your browser to see your server.
+2. From the **Managed by** list, select **IBM UrbanCode Deploy**. If you recently integrated {{site.data.keyword.contdelivery_short}} with IBM UrbanCode Deploy, you might need to refresh your browser to see your server.
 
-3. Select the apps to add and click **Continue**. All of the application processes available to UrbanCode Deploy applications are shown. Entries to run the processes that you selected are added to the deployment plan.
+3. Select the apps to add and click **Continue**. All of the app processes that are available to IBM UrbanCode Deploy apps are shown. Entries to run the processes that you selected are added to the deployment plan.
 
-4. Select all the application processes to use for all of the apps. Use the search and filter options to locate processes.
+4. Select the app processes to use for the apps. Use the search and filter options to locate processes.
 
-5. Click **Save**. Each UrbanCode Deploy application that you selected is displayed as an app in the composite pipeline.
+5. Click **Save**. Each IBM UrbanCode Deploy app that you selected is displayed as an app in the composite pipeline.
 
-6. Map environments from the UrbanCode Deploy applications to the composite pipeline's logical environments.
+6. Map environments from the IBM UrbanCode Deploy apps to the composite pipeline's logical environments:
 
     1. From the menu near a logical environment name, select **Manage logical environments**.
 
     ![Selecting Manage logical environments](images/composite_logical_env.png)
 
-    2. For each app in the composite pipeline, select the UrbanCode Deploy environments to run the process that you selected in.
+    2. For each app in the composite pipeline, select environments that you defined in IBM UrbanCode Deploy. The app processes that you selected run in only the environments from that app.
 
     3. Click **Save**.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-17"
 
 ---
 
@@ -138,4 +138,4 @@ The following code demonstrates how to use WebAppKituraCredentialsPlugin in a Ki
   ```
   {:pre}
 
-For more information see the <a href="https://github.com/ibm-cloud-security/appid-serversdk-swift" target="_blank">GitHub repository <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>.
+For more information see the <a href="https://github.com/ibm-cloud-security/appid-serversdk-swift" target="_blank">{{site.data.keyword.appid_short_notm}} Swift GitHub repository <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>.

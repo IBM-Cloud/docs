@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-  lastupdated: "2017-03-16"
+  lastupdated: "2017-03-17"
 
 ---
 {:new_window: target="_blank"}
@@ -106,7 +106,7 @@ The {{site.data.keyword.appid_short_notm}} client SDK is distributed with CocoaP
           return AppID.sharedInstance.application(application, open: url, options: options)
       }
   ```
-  {;pre}
+  {:pre}
 
 ## Authenticate users by using the login widget
 {: #authenticate-login}

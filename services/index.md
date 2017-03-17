@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-03-16"
 
 ---
 
@@ -46,6 +46,7 @@ Not all services are available for purchase in every {{site.data.keyword.Bluemix
 |{{site.data.keyword.activedeployshort}}			|Hosted in Dallas,US		|Hosted in London,UK		|Not available in region |
 |{{site.data.keyword.alchemyapishort}} 		|Hosted in Dallas,US	   	|Hosted in Dallas,US  		|Hosted in Dallas,US |
 |{{site.data.keyword.alertnotificationshort}}		|Hosted in Dallas,US		|Hosted in London,UK			|Hosted in Sydney,AU |
+|{{site.data.keyword.appid_short}}		|Hosted in Dallas,US		|Hosted in London,UK			|Hosted in Sydney,AU |
 |{{site.data.keyword.appseccloudshort}}  |Hosted in Dallas,US  |Hosted in Dallas,US  |Hosted in Dallas,US  |
 |Apache Spark			|Hosted in Dallas,US		|Not available in region		|Not available in region|
 |{{site.data.keyword.apiconnect_short}}			|Hosted in US South		|Hosted in United Kingdom		|Hosted in Sydney |
