@@ -111,7 +111,7 @@ request.send(this, new ResponseListener() {
 
  let baseRequestUrl = "http://localhost:<port>"; //set to your server running port
  let tenantId = "your-AppID-service-tenantID"
- let region = AppID.Region.unitedKingdom; //set your App ID application region here. Currently possible values are AppID.Region.usSouth, AppID.Region.sydney, or AppID.Region.unitedKingdom.
+ let region = BMSClient.Region.unitedKingdom; //set your App ID application region here. Currently possible values are BMSClient.Region.usSouth, BMSClient.Region.sydney, or BMSClient.Region.unitedKingdom.
 
 BMSClient.sharedInstance.initialize(bluemixRegion: region)
 BMSClient.sharedInstance.authorizationManager = AppIDAuthorizationManager(appid:AppID.sharedInstance)

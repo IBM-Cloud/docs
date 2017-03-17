@@ -94,12 +94,12 @@ The {{site.data.keyword.appid_short_notm}} client SDK is distributed with CocoaP
 2. Initialize the client SDK by passing tenant ID and region parameters to the initialize method. A common, though not mandatory, place to put the initialization code is in the application:didFinishLaunchingWithOptions: method of the AppDelegate in your Swift application.
 
   ```swift
-  AppID.sharedInstance.initialize(tenantId: <tenantId>, bluemixRegion: AppID.<region>)
+  AppID.sharedInstance.initialize(tenantId: <tenantId>, bluemixRegion: BMSClient.Region.unitedKingdom)
   ```
   {:pre}
 
   * Replace ״tenantId״ with the tenant ID for your App ID service.
-  * Replace ״region״ with your {{site.data.keyword.appid_short_notm}} region.
+  * Replace the BMSClient.Region.unitedKingdom with your {{site.data.keyword.appid_short_notm}} region.
 
 3. Add the following code to your AppDelegate file.
 
@@ -199,7 +199,7 @@ With {{site.data.keyword.appid_short_notm}} you can log in anonymously, see [ano
       }
    }
 
-  AppID.sharedInstance.loginAnonymously( authorizationDelegate: delegate())`
+  AppID.sharedInstance.loginAnonymously( authorizationDelegate: delegate())
   ```
   {:pre}
 
