@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-02-16"
+lastupdated: "2017-03-06"
 
 ---
 
@@ -24,7 +24,7 @@ You can use the monitoring capabilities in {{site.data.keyword.Bluemix_notm}} to
 
 You also can configure and monitor more performance metrics. You can visualize and analyze these metrics outside {{site.data.keyword.Bluemix_notm}}. For example, you can use Grafana to monitor more metrics when you run your app in the {{site.data.keyword.containershort}}. You can cutomize dashboards per container instance or per space where you visualize and analyze the performance data.
 
-![Grafana monitoring view of a container running in {{site.data.keyword.Bluemix_notm}}](images/monitoring_default_container_grafana_view.jpg)
+![Grafana monitoring view of a container running in {{site.data.keyword.Bluemix_notm}}](images/monitoring_default_container_grafana_view.jpg "Grafana monitoring view of a container running in Bluemix")
 
 You can use the {{site.data.keyword.Bluemix_notm}} platform monitoring to:
 
@@ -33,5 +33,4 @@ You can use the {{site.data.keyword.Bluemix_notm}} platform monitoring to:
 
 For more information about monitoring apps that run on Cloud Foundry, see [Monitoring apps that run on Cloud Foundry](monitoring_cf_apps.html#monitoring_bluemix_apps).
 
-For more information about monitoring in {{site.data.keyword.containershort}}, see [Monitoring in {{site.data.keyword.containershort}}](/docs/containers/monitoringandlogging/container_ml_monitor.html#container_ml_monitor).   
-
+For more information about monitoring in {{site.data.keyword.containershort}}, see [Monitoring in {{site.data.keyword.containershort}}](containers/monitoring_containers_ov.html#monitoring_bmx_containers_ov).
