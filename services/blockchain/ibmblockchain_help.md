@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-06-17"
 ---
 
 {:new_window: target="_blank"}
@@ -13,8 +13,7 @@ copyright:
 
 # Getting help for blockchain
 {: #ibmblockchain_help}
-Last updated: 17 June 2016
-{: .last-updated}
+
 
 Wait for the new Atlas style UI and then we can implement this section.  Not enough content yet...
 

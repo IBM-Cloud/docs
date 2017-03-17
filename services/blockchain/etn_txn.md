@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2016
-
+  years: 2016
+lastupdated: "2016-11-03"
 ---
 
 {:new_window: target="_blank"}
@@ -14,8 +14,7 @@ years: 2016
 
 # Testing blockchain networks
 {: #etn_txn}
-Last updated: 03 November 2016
-{: .last-updated}
+
 
 Use the following roles and transactions tests to confirm IBM Blockchain network security and availability. All tests can be conducted using the Starter Developer plan or the High Security Business Network plan.
 {:shortdesc}

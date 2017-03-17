@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2016
-
+  years: 2016, 2017
+lastupdated: "2016-10-07"
 ---
 
 {:new_window: target="_blank"}
@@ -14,8 +14,7 @@ years: 2016
 
 # Verified performance
 {: #etn_performance}
-Last updated: 07 October 2016
-{: .last-updated}
+
 
 The following behaviors have been tested and verified by IBM. The results were achieved on a High Security network, unless otherwise noted:
 {:shortdesc}

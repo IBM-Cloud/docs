@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2016
-
+  years: 2016, 2017
+lastupdated: "2016-10-31"
 ---
 
 {:new_window: target="_blank"}
@@ -14,8 +14,7 @@ years: 2016
 
 # HFC SDK for Node.js
 {: #etn_sdk}
-Last updated: 09 November 2016
-{: .last-updated}
+
 
 The Hyperledger Fabric Client (HFC) SDK enables application developers to build Node.js applications that interact with a blockchain network. Node.js applications that leverage the HFC SDK can be used to perform the following network tasks:
 {:shortdesc}

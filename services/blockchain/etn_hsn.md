@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2016
-
+  years: 2016, 2017
+lastupdated: "2016-10-13"
 ---
 
 {:new_window: target="_blank"}
@@ -14,8 +14,7 @@ years: 2016
 
 # High Security Business Network
 {: #etn_overview}
-Last updated: 13 October 2016
-{: .last-updated}
+
 
 The IBM Blockchain High Security Business Network runs in an isolated and highly secured environment, distinguishing it from other cloud-hosted offerings. The operating system, fabric, and nodes all exist in an IBM Secure Service Container, providing  the levels of security and impregnability that enterprise customers have come to expect from z Systems technology.  The IBM Secure Service Container also delivers performance optimization for  peer-to-peer communication, availability, scalability, hardware encryption, tamper-proof crypto keys, and securely encrypted VMs.  
 {:shortdesc}
