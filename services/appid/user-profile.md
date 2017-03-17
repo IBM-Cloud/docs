@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-17"
 
 ---
 
@@ -49,7 +49,7 @@ An anonymous user with an identity that is provided by an identity provider can 
 * {{site.data.keyword.appid_short_notm}} finds the anonymous user record defined by the access token and assigns the identity to it.
 
     **Note**: The identity can be assigned to the anonymous record only if the same identity was not already assigned to another user. If the identity is already associated with another {{site.data.keyword.appid_short_notm}} user, the access and identity tokens contain information of that user's record and provide access to it's attributes. The previous anonymous user and its attributes will not be accessible through the new access token. Until the token expires, the information can still be accessed through the anonymous access token. The developer can choose how they want to merge the anonymous attributes of the anonymous user and the known user.
-    
+
 * The new access and identity tokens received from {{site.data.keyword.appid_short_notm}} point to the known user and the identity token contains the public information that is received from the identity provider.
 * The anonymous tokens become invalid for the user.
 
