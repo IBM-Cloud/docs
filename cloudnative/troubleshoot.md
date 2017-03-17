@@ -27,6 +27,62 @@ Some known issues with the {{site.data.keyword.dev_cli_notm}} are documented, al
 The following sections describe known issues and possible resolutions.
 
 
+### Hostname is taken error while creating a project with a non-mobile pattern
+{: #hostname}
+
+You might see the following error if you use the {{site.data.keyword.dev_cli_short}} to create a project from the Web App, BFF, or Microservice patterns:
+
+```
+The hostname <myHostname> is taken.
+```
+{: codeblock}
+
+
+#### Cause
+{: #hostname-cause}
+   
+This error is due to an expired login token.
+
+
+#### Resolution
+{: #hostname-resolution}
+
+Log in again.
+
+```
+bx login
+```
+{: codeblock}
+
+
+### General failures with the {{site.data.keyword.dev_cli_short}}
+{: #general}
+
+You might see the following error if you use the {{site.data.keyword.dev_cli_short}} create, delete, list, or code commands:
+
+```
+Failed to <command> project.
+```
+{: codeblock}
+
+
+#### Cause
+{: #hostname-cause}
+   
+This error is due to an expired login token.
+
+
+#### Resolution
+{: #hostname-resolution}
+
+Log in again.
+
+```
+bx login
+```
+{: codeblock}
+
+
 ### Service broker error while adding {{site.data.keyword.objectstorageshort}} capability
 {: #os}
 
