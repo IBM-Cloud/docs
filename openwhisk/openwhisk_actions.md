@@ -634,76 +634,65 @@ development, and {{site.data.keyword.openwhisk_short}} usually uses the latest a
 
 ### Packaging an action as a Swift executable
 {: #openwhisk_actions_swift_zip}
-When you create an OpenWhisk Swift action with a Swift source file, it has to be compiled into a binary before the action is run. Once done, subsequent calls to the action are much faster until the container holding your action is purged. This delay is known as the cold-start delay.
+When you create an OpenWhisk Swift action with a Swift source file, it has to be compiled into a binary before the action is run. Once done, subsequent calls to the action are much faster until the container holding your action is purged.
 
-To avoid the cold-start delay, you can compile your Swift file into a binary and then upload to OpenWhisk in a zip file. As you need the OpenWhisk scaffolding, the easiest way to create the binary is to build it within the same environment as it will be run in. These are the steps:
+To avoid the delay of the compilation step, you can compile your Swift file into a binary and then upload it to OpenWhisk in a zip file. As you need the OpenWhisk scaffolding, the easiest way to create the binary is to build it within the same environment as it will be run in. These are the steps:
 
-1. Run an interactive Swift action container.
-        ```
-        docker run -it -v "$(pwd):/owexec" openwhisk/swift3action bash
-        ```
-        {: pre}
+- Run an interactive Swift action container.
+  ```
+  docker run -it -v "$(pwd):/owexec" openwhisk/swift3action bash
+  ```
+  {: pre}
+This puts you in a bash shell within the Docker container. Execute the following commands within it:
   
-    This puts you in a bash shell within the Docker container. Execute the following commands within it:
-  
-    a. Install zip for convenience, to package the binary
-            ```
-            apt-get install -y zip
-            ```
-            {: pre}
+- Install zip for convenience, to package the binary
+  ```
+  apt-get install -y zip
+  ```
+  {: pre}
+- Copy the source code and prepare to build it
+  ```
+  cp /owexec/hello.swift /swift3Action/spm-build/main.swift 
+  ```
+  {: pre}
+  ```
+  cat /swift3Action/epilogue.swift >> /swift3Action/spm-build/main.swift
+  ```
+  {: pre}
+  ```
+  echo '_run_main(mainFunction:main)' >> /swift3Action/spm-build/main.swift
+  ```
+  {: pre}
+- zBuild and link
+  ```
+  /swift3Action/spm-build/swiftbuildandlink.sh
+  ```
+  {: pre}
+- Create the zip archive
+  ```
+  cd /swift3Action/spm-build
+  ```
+  {: pre}
+  ```
+  zip /owexec/hello.zip .build/release/Action
+  ```
+- Exit the Docker container
+  ```
+  exit
+  ```
+  {: pre}
+This has created hello.zip in the same directory as hello.swift. 
+-Upload it to OpenWhisk with the action name helloSwifty:
+  ```
+  wsk action update helloSwiftly hello.zip --kind swift:3
+  ```
+  {: pre}
+- To check how much faster it is, run 
+  ```
+  wsk action invoke helloSwiftly --blocking
+  ``` 
+  {: pre}
 
-    b. Copy the source code and prepare to build it
-  
-            ```
-            cp /owexec/hello.swift /swift3Action/spm-build/main.swift 
-            ```
-            {: pre}
-            ```
-            cat /swift3Action/epilogue.swift >> /swift3Action/spm-build/main.swift
-            ```
-            {: pre}
-            ```
-            echo '_run_main(mainFunction:main)' >> /swift3Action/spm-build/main.swift
-            ```
-            {: pre}
-  
-    c. Build and link
-            ```
-            /swift3Action/spm-build/swiftbuildandlink.sh
-            ```
-            {: pre}
-  
-    d. Create the zip archive
-  
-            ```
-            cd /swift3Action/spm-build
-            ```
-            {: pre}
-            ```
-            zip /owexec/hello.zip .build/release/Action
-            ```
-  
-    e. Exit the Docker container
-            ```
-            exit
-            ```
-            {: pre}
-  
-  
-2. This has created hello.zip in the same directory as hello.swift. Upload it to OpenWhisk with the action name helloSwifty:
-        ```
-        wsk action update helloSwiftly hello.zip --kind swift:3
-        ```
-        {: pre}
-
-To check how much faster it is, run 
-
-```
-wsk action invoke helloSwiftly --blocking
-``` 
-{: pre}
-
-The time it took for the action to run is in the "duration" property and compare to the time it takes to cold start the hello action.
 
 ## Creating Java actions
 {: #openwhisk_actions_java}

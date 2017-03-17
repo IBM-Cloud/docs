@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-10"
+lastupdated: "2017-02-17"
 
 ---
 
@@ -197,4 +197,4 @@ Para determinados tipos de tarjeta, puede pulsar **Valores** para configurar det
 
 Perfecto. Ahora puede ver los datos en tiempo real del dispositivo.
 
-Para ver instrucciones paso a paso sobre cómo visualizar datos de dispositivo en tiempo real, consulte la receta [Configuración de tableros y tarjetas en el nuevo panel de control de Watson IoT](https://developer.ibm.com/recipes/tutorials/configuring-the-cards-in-the-new-watson-iot-dashboard/) receta.
+Para ver instrucciones paso a paso sobre cómo visualizar datos de dispositivo en tiempo real, consulte la receta [Configuración de tableros y tarjetas en el nuevo panel de control de Watson IoT ![icono de enlace externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/configuring-the-cards-in-the-new-watson-iot-dashboard/){: new_window}. 

@@ -1,0 +1,922 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Arbortext, Inc., 1988-2011, v.4002-->
+<!DOCTYPE map PUBLIC "-//IBM//DTD DITA IBM Map//EN"
+ "ibm-map.dtd">
+
+
+<map xml:lang="zh-cn">
+<title>Watson IoT Platform</title>
+<topicref format="html" href="index.html" locktitle="yes"
+navtitle="Watson IoT Platform" scope="peer">
+<topicref format="html" href="index.html" locktitle="yes"
+navtitle="入门" scope="peer">
+<topicref format="html" href="index.html#byb" navtitle="开始之前"
+scope="peer"></topicref>
+<topicref format="html" href="index.html#up_and_running"
+navtitle="连接设备" scope="peer"></topicref>
+<topicref format="html" href="index.html#analyzing_data"
+navtitle="分析设备数据" scope="peer"></topicref>
+<topicref format="html" href="index.html#develop_applications"
+navtitle="开发应用程序" scope="peer"></topicref>
+</topicref>
+<topicref format="html"
+href="iotplatform_overview.html#about_iotplatform" navtitle="关于"
+outputclass="subsection" scope="peer">
+<topicref format="html"
+href="iotplatform_overview.html#watsoniotplatform_architecture"
+navtitle="体系结构" outputclass="subsection" scope="peer">
+</topicref>
+<topicref format="html"
+href="iotplatform_overview.html#watsoniotplatform_importantconcepts"
+navtitle="概念" scope="peer"></topicref>
+<topicref format="html" href="feature_overview.html"
+navtitle="功能概述" scope="peer">
+<topicref format="html" href="feature_overview.html#connect"
+navtitle="Connect" scope="peer"></topicref>
+<topicref format="html"
+href="feature_overview.html#information_management"
+navtitle="信息管理" scope="peer"></topicref>
+<topicref format="html" href="feature_overview.html#analytics"
+navtitle="分析" scope="peer"></topicref>
+<topicref format="html" href="feature_overview.html#risk_management"
+navtitle="风险管理" scope="peer"></topicref>
+</topicref>
+<topicref  format="html" href="reference/standards_and_requirements.html"
+navtitle="标准和需求" scope="peer">
+<topicref format="html" href="reference/standards_and_requirements.html#mqtt" navtitle="MQTT"
+scope="peer"/>
+</topicref>
+<topicref format="html" href="reference/bluemix_and_platform.html"
+navtitle="Bluemix 和 Watson IoT Platform" scope="peer">
+<topicref format="html" href="reference/bluemix_and_platform.html#iot-bluemix-work"
+navtitle="Bluemix 中的 Watson IoT Platform" scope="peer"/>
+<topicref format="html" href="reference/bluemix_and_platform.html#iot-sla"
+navtitle="服务级别协议" scope="peer"/>
+<topicref format="html" href="reference/bluemix_and_platform.html#iot-pricing"
+navtitle="IoT 定价" scope="peer"/>
+</topicref>
+<topicref format="html" href="reference/bluemix_and_platform.html#iot-pricing"
+navtitle="IoT 定价" scope="peer"/>
+</topicref>
+<topicref format="html" href="iotplatform_beta_features.html" navtitle="Beta 功能"
+outputclass="subsection" scope="peer">
+<topicref format="html" navtitle="使用接口映射设备数据" outputclass="subsection"
+href="information_management/im_index.html">
+<topicref format="html" outputclass="subsection"
+href="information_management/im_index.html#overview" navtitle="概述"></topicref>
+<topicref format="html" outputclass="subsection" navtitle="数据流"
+href="information_management/im_index.html#mapping"></topicref>
+<topicref format="html" outputclass="subsection" navtitle="关键概念"
+href="information_management/im_index.html#key_concepts"></topicref>
+<topicref format="html" outputclass="subsection" navtitle="资源"
+href="information_management/im_index.html#resources"></topicref>
+<topicref format="html" outputclass="subsection" navtitle="高级别工作流"
+href="information_management/im_index.html#workflow"></topicref>
+<topicref format="html" outputclass="subsection" navtitle="示例场景"
+href="information_management/im_index.html#scenario"></topicref>
+
+</topicref>
+<topicref format="html" href="gateways/gateway-access-control.html"
+navtitle="网关访问控制" scope="peer"/>
+<topicref format="html" href="applications/mqtt.html#shared_sub_mixed"
+navtitle="混合持久共享预订" locktitle="yes"/>
+</topicref>
+<topicref format="html" href="reference/security/index.html"
+navtitle="Watson IoT Platform 安全性" scope="peer">
+<topicref format="html"
+href="reference/security/index.html#iot-bluemix-sec"
+navtitle="Watson IoT Platform 和 Bluemix" scope="peer"></topicref>
+<topicref format="html" href="reference/security/index.html#compliance"
+navtitle="安全合规性" scope="peer"></topicref>
+<topicref format="html" href="reference/security/index.html#terminology"
+navtitle="术语" scope="peer"></topicref>
+<topicref format="html" href="reference/security/index.html#secure-org"
+navtitle="组织管理安全性" scope="peer"></topicref>
+<topicref format="html"
+href="reference/security/index.html#secure-credentials"
+navtitle="设备和应用程序安全性" scope="peer"></topicref>
+<topicref format="html"
+href="reference/security/index.html#secure-device-connection"
+navtitle="设备连接安全性" scope="peer"></topicref>
+<topicref format="html"
+href="reference/security/index.html#prevent-leak-devices"
+navtitle="设备到设备的安全性" scope="peer"></topicref>
+<topicref format="html"
+href="reference/security/index.html#prevent-leak-org"
+navtitle="组织到组织的安全性" scope="peer">
+</topicref>
+<topicref format="html" href="reference/security/connect_devices_apps_gw.html"
+navtitle="连接应用程序、设备和网关" scope="peer">
+<topicref format="html" href="reference/security/connect_devices_apps_gw.html#client_connect_url"
+outputclass="subsection" scope="peer" navtitle="客户机连接 URL"/>
+<topicref format="html" href="reference/security/connect_devices_apps_gw.html#client_port_security"
+outputclass="subsection" scope="peer" navtitle="端口安全性"/>
+<topicref format="html" href="reference/security/connect_devices_apps_gw.html#tls_requirements"
+outputclass="subsection" scope="peer" navtitle="TLS 需求"/>
+<topicref format="html" href="reference/security/connect_devices_apps_gw.html#mqtt_authentication"
+outputclass="subsection" scope="peer" navtitle="MQTT 客户机认证"/>
+</topicref>
+<topicref format="html" href="reference/security/custom_cards_server.html"
+navtitle="定制卡服务器安全性" scope="peer"/>
+<topicref format="html" href="reference/security/RM_security.html"
+navtitle="风险和安全管理" scope="peer">
+<topicref format="html" href="reference/security/set_up_certificates.html"
+navtitle="配置证书" scope="peer">
+<topicref href="reference/security/set_up_certificates.html#cert_reqs"
+navtitle="证书要求"/>
+<topicref href="reference/security/set_up_certificates.html#reg_ca_cert"
+navtitle="注册 CA 证书"/>
+<topicref href="reference/security/set_up_certificates.html#reg_msg_cert"
+navtitle="注册消息传递服务器证书"/>
+</topicref>
+<topicref format="html" href="reference/security/set_up_policies.html"
+navtitle="配置安全策略" scope="peer">
+<topicref href="reference/security/set_up_policies.html#config_connect"
+navtitle="配置连接策略"/>
+</topicref>
+<topicref href="reference/security/set_up_policies.html#config_black_white"
+navtitle="配置黑名单和白名单"/>
+</topicref>
+</topicref>
+<topicref format="html" href="iotplatform_task.html#devices"
+navtitle="管理 Watson IoT Platform" outputclass="subsection"
+scope="peer">
+<topicref format="html" href="iotplatform_task.html#devices"
+navtitle="连接设备" scope="peer">
+<topicref format="html" href="iotplatform_task.html#byb"
+navtitle="开始之前" scope="peer"></topicref>
+<topicref format="html"
+href="iotplatform_task.html#iotplatform_subtask1"
+navtitle="注册设备" scope="peer"></topicref>
+<topicref format="html" href="iotplatform_task.html#iotplatform_subtask2"
+navtitle="连接设备" scope="peer"></topicref>
+<topicref audience="blue" format="html"
+href="reference/device_model.html" navtitle="设备模型" scope="peer">
+</topicref>
+</topicref>
+<topicref format="html" href="gateways/dashboard.html"
+navtitle="连接网关" scope="peer">
+<topicref format="html" href="gateways/dashboard.html#Prerequisites"
+navtitle="开始之前" scope="peer"></topicref>
+<topicref format="html" href="gateways/dashboard.html#register_gateway"
+navtitle="注册网关" scope="peer"></topicref>
+<topicref format="html" href="gateways/dashboard.html#connect_gateway"
+navtitle="连接网关" scope="peer"></topicref>
+<topicref format="html" href="gateways/dashboard.html#gateway_devices"
+navtitle="设置网关设备" scope="peer"></topicref>
+<topicref format="html" href="gateways/dashboard.html#edge"
+navtitle="安装 Edge Analytics Agent" scope="peer"></topicref>
+</topicref>
+<topicref format="html" href="platform_authorization.html"
+navtitle="连接应用程序" scope="peer">
+<topicref format="html" href="platform_authorization.html#api-key"
+navtitle="API 密钥连接" scope="peer"></topicref>
+<topicref format="html"
+href="platform_authorization.html#bluemix-binding"
+navtitle="Bluemix 绑定连接" scope="peer"></topicref>
+</topicref>
+<topicref format="html" href="cloudant_connector.html"
+navtitle="连接 Cloudant 历史服务" scope="peer">
+<topicref format="html" href="cloudant_connector.html#byb"
+navtitle="开始之前" scope="peer"></topicref>
+<topicref format="html" href="cloudant_connector.html#design_docs"
+navtitle="创建新设计文档" scope="peer"></topicref>
+</topicref>
+<topicref format="html" href="message_hub.html"
+navtitle="连接 Message Hub 历史服务" scope="peer">
+<topicref format="html" href="cloudant_connector.html#byb" navtitle="开始之前" scope="peer"
+/>
+</topicref>
+<topicref format="html" href="im_schemas.html"
+navtitle="创建模式" scope="peer">
+<topicref format="html" href="im_schemas.html#add_schema"
+navtitle="添加设备模式" scope="peer"></topicref>
+<topicref format="html" href="im_schemas.html#identify-datapoints"
+navtitle="确定设备属性" scope="peer"/>
+<topicref format="html" href="im_vir_calculations.html"
+navtitle="虚拟属性的高级计算" scope="peer"/>
+</topicref>
+<topicref format="html" navtitle="使用接口映射设备数据 (Beta)"
+outputclass="subsection" href="information_management/im_index_split.html" audience="blue">
+<topicref format="html" outputclass="subsection"
+href="information_management/im_index_split.html#overview" audience="blue" navtitle="概述"
+></topicref>
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="数据流"
+href="information_management/im_index_split.html#mapping"></topicref>
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="关键概念"
+href="information_management/im_index_split.html#key_concepts"></topicref>
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="资源"
+href="information_management/im_index_split.html#resources"></topicref>
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="高级别工作流"
+href="information_management/im_index_split.html#workflow"></topicref>
+
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="示例场景"
+href="information_management/im_index_scenario.html#scenario"></topicref>
+</topicref>
+<topicref format="html" href="add_users.html" navtitle="管理用户访问权" scope="peer">
+<topicref format="html" scope="peer" href="add_users.html#editing-users"
+navtitle="编辑、阻止和除去用户"/>
+</topicref>
+<topicref format="html" href="singlesignon.html" navtitle="使用 IBM Single Sign On" scope="peer"/>
+<topicref format="html" href="roles_index.html" navtitle="用户、应用程序和网关角色"
+outputclass="subsection" scope="peer">
+<topicref format="html" href="managing_user_roles.html" navtitle="管理用户角色" scope="peer"/>
+<topicref format="html" href="custom_role.html" navtitle="使用定制角色" scope="peer"/>
+<topicref format="html" href="reference/roles_access.html"
+navtitle="用户角色的访问级别" scope="peer"/>
+<topicref format="html" href="reference/app_roles_access.html"
+navtitle="应用程序角色的访问级别" scope="peer"/>
+<topicref format="html" href="reference/gateway_roles_access.html"
+navtitle="网关角色的访问级别" scope="peer"/>
+</topicref>
+<topicref format="html" href="reference/extensions/index.html"
+navtitle="集成外部服务" scope="peer">
+<topicref format="html" href="reference/extensions/index.html#jasper"
+navtitle="Jasper" scope="peer"></topicref>
+<topicref format="html" href="reference/extensions/index.html#att" navtitle="AT&amp;T" scope="peer"/>
+<topicref format="html" href="reference/extensions/index.html#arm" navtitle="ARM mbed 连接器"
+scope="peer"/>
+<topicref format="html" href="reference/extensions/index.html#orange" navtitle="Orange" scope="peer"/>
+<topicref format="html" href="reference/extensions/index.html#historical_data"
+navtitle="历史数据存储" scope="peer"/>
+<topicref format="html" href="reference/extensions/index.html#device_mgmt"
+navtitle="设备管理" scope="peer"/>
+<topicref format="html" href="reference/extensions/index.html#blockchain" navtitle="区块链"
+scope="peer"/>
+<topicref format="html" href="reference/extensions/index.html#weathercompany"
+navtitle="The Weather Company" scope="peer"/>
+</topicref>
+<topicref format="html" href="bl_blockchain_integration.html"
+navtitle="区块链集成" scope="peer">
+<topicref format="html" href="bl_blockchain_integration.html#byb"
+navtitle="开始之前" scope="peer"></topicref>
+<topicref format="html"
+href="bl_blockchain_integration.html#getting_started"
+navtitle=" 连接到区块链光纤网" scope="peer"></topicref>
+<topicref format="html"
+href="bl_blockchain_integration.html#map_device_properties"
+navtitle=" 映射设备属性" scope="peer"></topicref>
+<topicref format="html" href="bl_blockchain_integration.html#test_simple"
+navtitle="试用样本智能合同" scope="peer"></topicref>
+<topicref format="html" href="bl_blockchain_integration.html#next_steps"
+navtitle="后续步骤" scope="peer"></topicref>
+</topicref>
+</topicref>
+<topicref format="html" href="analytics.html"
+navtitle="分析 IoT 数据" outputclass="subsection" scope="peer">
+<topicref format="html" href="data_visualization.html"
+navtitle="可视化实时数据" scope="peer">
+<topicref format="html" href="data_visualization.html#default_boards"
+navtitle="缺省板" scope="peer"></topicref>
+<topicref format="html" href="data_visualization.html#visualizing_data"
+navtitle="创建板和卡" scope="peer"></topicref>
+<topicref format="html" href="/custom_cards/custom-cards.html" navtitle="使用定制卡"
+scope="peer"/>
+</topicref>
+<topicref format="html" href="cloud_analytics.html"
+navtitle="云分析" scope="peer">
+<topicref format="html" href="cloud_analytics.html#byb"
+navtitle="开始之前" scope="peer"></topicref>
+<topicref format="html" href="cloud_analytics.html#managing_rules"
+navtitle="管理规则和操作" scope="peer"></topicref>
+<topicref format="html" href="cloud_analytics.html#rules"
+navtitle="创建规则" scope="peer"></topicref>
+<topicref format="html" href="cloud_analytics.html#conditional"
+navtitle="有条件规则触发" scope="peer"></topicref>
+<topicref format="html" href="cloud_analytics.html#shared"
+navtitle="创建和使用操作" scope="peer"></topicref>
+</topicref>
+<topicref format="html" href="edge_analytics.html"
+navtitle="边缘分析" scope="peer">
+<topicref format="html" href="edge_analytics.html#byb"
+navtitle="开始之前" scope="peer"></topicref>
+<topicref format="html" href="edge_analytics.html#managing_rules"
+navtitle="管理边缘规则和操作" scope="peer"></topicref>
+<topicref format="html" href="edge_analytics.html#rules"
+navtitle="创建边缘规则" scope="peer"></topicref>
+<topicref format="html" href="edge_analytics.html#edge_actions"
+navtitle="创建边缘操作" scope="peer"></topicref>
+<topicref format="html"
+href="edge_analytics.html#integrate_with_cloud_analytics"
+navtitle="与云分析集成" scope="peer"></topicref>
+<topicref format="html" href="edge_analytics.html#eaa_community" navtitle="Edge Analytics 社区"
+scope="peer" audience="blue"/>
+</topicref>
+</topicref>
+<topicref format="html" href="samples_main.html"
+navtitle="使用 IoT 样本" outputclass="subsection" scope="peer">
+<topicref format="html" href="nodereddevice_sample.html"
+navtitle="Node-RED 设备模拟器" scope="peer">
+<topicref format="html" href="nodereddevice_sample.html#flow_data"
+navtitle="Node-RED 节点数据" scope="peer"></topicref>
+</topicref>
+<topicref format="html" href="visualizingdata_sample.html"
+navtitle="可视化样本" scope="peer">
+<topicref format="html" href="visualizingdata_sample.html#byb"
+navtitle="开始之前" scope="peer"></topicref>
+<topicref format="html" href="visualizingdata_sample.html#running_sample"
+navtitle="运行样本" scope="peer"></topicref>
+<topicref format="html"
+href="visualizingdata_sample.html#customize_sample"
+navtitle="定制样本" scope="peer"></topicref>
+<topicref format="html"
+href="visualizingdata_sample.html#customize_real_time_display"
+navtitle="定制实时显示" scope="peer"></topicref>
+<topicref format="html"
+href="visualizingdata_sample.html#customize_historical_display"
+navtitle="定制历史显示" scope="peer"></topicref>
+</topicref>
+<topicref format="html" href="getting_started/quickstart/index.html"
+navtitle="Quickstart" scope="peer">
+<topicref format="html"
+href="getting_started/quickstart/index.html#simulated_devices"
+navtitle="模拟设备" scope="peer"></topicref>
+<topicref format="html"
+href="getting_started/quickstart/index.html#data_visualization"
+navtitle="数据可视化" scope="peer"></topicref>
+<topicref format="html"
+href="getting_started/quickstart/index.html#mosquitto_demonstration"
+navtitle="Mosquitto 演示" scope="peer"></topicref>
+</topicref>
+</topicref>
+<topicref format="html" href="developer_doc_overview.html"
+navtitle="针对 Watson IoT Platform 开发" outputclass="subsection"
+scope="peer">
+<topicref format="html" href="reference/rest_api.html" navtitle="API" scope="peer"/>
+<topicref format="html" href="iot_platform_client_lib.html" navtitle="客户机库" scope="peer"/>
+<topicref format="html" href="applications/dev_nodered.html"
+navtitle="使用 Node-RED 开发 Watson IoT Platform" scope="peer" locktitle="yes">
+<topicref format="html" href="applications/dev_nodered.html#watson_iot_node"
+navtitle="Watson IoT 节点" locktitle="yes" scope="peer"/>
+<topicref format="html" href="applications/dev_nodered.html#watson_app_node"
+navtitle="IBM IoT 应用程序节点" locktitle="yes" scope="peer"/>
+<topicref format="html" href="applications/dev_nodered.html#more_info" navtitle="更多信息"
+locktitle="yes" scope="peer"/>
+</topicref>
+</topicref>
+<topicref format="html" href="applications/app_dev_index.html" outputclass="subsection"
+navtitle="开发应用程序">
+<topicref format="html" href="applications/api.html" navtitle="针对应用程序的 HTTP REST API"
+scope="peer">
+<topicref format="html" href="applications/api.html#capabilities" navtitle="REST API 功能"
+scope="peer"/>
+<topicref format="html" href="applications/api.html#api_link" navtitle="访问 HTTP REST API"
+scope="peer"/>
+<topicref format="html" href="applications/api.html#rest_messaging_api"
+navtitle="HTTP REST 消息传递 API" locktitle="yes"/>
+</topicref>
+<topicref format="html" href="reference/mqtt/index.html" navtitle="MQTT 消息传递" scope="peer">
+<topicref format="html" href="reference/mqtt/index.html#version-support" navtitle="版本支持"
+scope="peer"/>
+<topicref format="html" href="reference/mqtt/index.html"
+navtitle="应用程序、设备和网关客户机" scope="peer"/>
+<topicref format="html" href="reference/mqtt/index.html#qos-levels"
+navtitle="服务质量级别" scope="peer"/>
+<topicref format="html" href="reference/mqtt/index.html#subscription-buffers-and-clean-session"
+navtitle="预订缓冲区和干净会话" scope="peer"/>
+<topicref format="html" href="reference/mqtt/index.html#message-payload"
+navtitle="消息有效内容限制" scope="peer"/>
+<topicref format="html" href="reference/mqtt/index.html#mqtt-keep-alive"
+navtitle="MQTT 保持活动的时间间隔"/>
+</topicref>
+<topicref format="html" href="applications/mqtt.html" navtitle="针对应用程序的 MQTT 连接"
+scope="peer">
+<topicref format="html" href="applications/mqtt.html#client_connections"
+navtitle="客户机连接" scope="peer"/>
+<topicref format="html" href="applications/mqtt.html#mqtt_authentication"
+navtitle="MQTT 认证" scope="peer"/>
+<topicref format="html" href="applications/mqtt.html#publishing_device_events"
+navtitle="发布设备事件" scope="peer"/>
+<topicref format="html" href="applications/mqtt.html#publishing_device_commands"
+navtitle="发布设备命令" scope="peer"/>
+<topicref format="html" href="applications/mqtt.html#subscribe_device_events"
+navtitle="预订设备事件" scope="peer"/>
+<topicref format="html" href="applications/mqtt.html#subscribe_device_commands"
+navtitle="预订设备命令" scope="peer"/>
+<topicref format="html" href="applications/mqtt.html#subscribe_device_status"
+navtitle="预订设备状态消息" scope="peer"/>
+<topicref format="html" href="applications/mqtt.html#subscribe_app_status"
+navtitle="预订应用程序状态消息" scope="peer"/>
+<topicref format="html" href="applications/mqtt.html#quickstart_restrictions"
+navtitle="Quickstart 限制" scope="peer"/>
+<topicref format="html" href="applications/mqtt.html#scalable_apps" navtitle="可扩展应用程序"
+scope="peer"/>
+</topicref>
+<topicref format="html" navtitle="使用接口映射设备数据 (Beta)"
+outputclass="subsection" href="information_management/im_index.html" audience="blue">
+<topicref format="html" outputclass="subsection"
+href="information_management/im_index.html#overview" audience="blue" navtitle="概述"
+></topicref>
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="数据流"
+href="information_management/im_index.html#mapping"></topicref>
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="关键概念"
+href="information_management/im_index.html#key_concepts"></topicref>
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="资源"
+href="information_management/im_index.html#resources"></topicref>
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="高级别工作流"
+href="information_management/im_index.html#workflow"></topicref>
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="示例场景"
+href="information_management/im_index.html#scenario"></topicref>
+
+</topicref>
+<topicref format="html" href="applications/libraries/python.html"
+navtitle="针对应用程序开发者的 Python" scope="peer">
+<topicref format="html" href="applications/libraries/python.html#python_client_download"
+navtitle="下载 Python 客户机和资源" scope="peer"/>
+<topicref format="html" href="applications/libraries/python.html#constructor" navtitle="构造方法"
+scope="peer"/>
+<topicref format="html" href="applications/libraries/python.html#api_calls" navtitle="API 调用"
+scope="peer"/>
+<topicref format="html" href="applications/libraries/python.html#subscribe_device_events"
+navtitle="预订设备事件" scope="peer"/>
+<topicref format="html" href="applications/libraries/python.html#handling_events_devices"
+navtitle="处理来自设备的事件" scope="peer"/>
+<topicref format="html" href="applications/libraries/python.html#subscribe_device_status"
+navtitle="预订设备状态" scope="peer"/>
+<topicref format="html" href="applications/libraries/python.html#handling_device_updates"
+navtitle="处理来自设备的状态更新" scope="peer"/>
+<topicref format="html" href="applications/libraries/python.html#publishing_device_events"
+navtitle="发布来自设备的事件" scope="peer"/>
+<topicref format="html" href="applications/libraries/python.html#publishing_commands_devices"
+navtitle="将命令发布到设备" scope="peer"/>
+<topicref format="html" href="applications/libraries/python.html#org_details"
+navtitle="组织详细信息" scope="peer"/>
+<topicref format="html" href="applications/libraries/python.html#bulk_device_ops"
+navtitle="批量设备操作" scope="peer"/>
+<topicref format="html" href="applications/libraries/python.html#device_type_ops"
+navtitle="设备类型操作" scope="peer"/>
+<topicref format="html" href="applications/libraries/python.html#device_ops"
+navtitle="设备操作" scope="peer"/>
+<topicref format="html" href="applications/libraries/python.html#device_diag_ops"
+navtitle="设备诊断操作" scope="peer"/>
+<topicref format="html" href="applications/libraries/python.html#connection_problem_determination"
+navtitle="连接问题确定" scope="peer"/>
+<topicref format="html" href="applications/libraries/python.html#historical_event_retrieval"
+navtitle="历史事件检索" scope="peer"/>
+</topicref>
+<topicref format="html" href="applications/libraries/nodejs.html"
+navtitle="针对应用程序开发者的 Node.js" scope="peer">
+<topicref format="html" href="applications/libraries/nodejs.html#nodejs_client_download"
+navtitle="下载 Node.js 客户机和资源" scope="peer"/>
+<topicref format="html" href="applications/libraries/nodejs.html#constructor" navtitle="构造方法"
+scope="peer"/>
+<topicref format="html" href="applications/libraries/nodejs.html#connecting_to_iotp"
+navtitle="连接到 Watson IoT Platform" scope="peer"/>
+<topicref format="html" href="applications/libraries/nodejs.html#logging" navtitle="日志记录"
+scope="peer"/>
+<topicref format="html" href="applications/libraries/nodejs.html#shared_subscriptions"
+navtitle="共享的预订" scope="peer"/>
+<topicref format="html" href="applications/libraries/nodejs.html#handling_errors"
+navtitle="处理错误" scope="peer"/>
+<topicref format="html" href="applications/libraries/nodejs.html#subscribing_device_events"
+navtitle="预订设备事件" scope="peer"/>
+<topicref format="html" href="applications/libraries/nodejs.html#subscribing_device_status"
+navtitle="预订设备状态" scope="peer"/>
+<topicref format="html" href="applications/libraries/nodejs.html#publishing_device_events"
+navtitle="发布来自设备的事件" scope="peer"/>
+<topicref format="html" href="applications/libraries/nodejs.html#publishing_commands_devices"
+navtitle="将命令发布到设备" scope="peer"/>
+<topicref format="html" href="applications/libraries/nodejs.html#disconnect_client"
+navtitle="断开客户机连接" scope="peer"/>
+<topicref format="html" href="applications/libraries/nodejs.html#reference_nodejs"
+navtitle="参考" scope="peer"/>
+</topicref>
+<topicref format="html" href="applications/libraries/java.html"
+navtitle="针对应用程序开发者的 Java" scope="peer">
+<topicref format="html" href="applications/libraries/java.html#java_client_download"
+navtitle="下载 Java 客户机和资源" scope="peer"/>
+<topicref format="html" href="applications/libraries/java.html#constructor" navtitle="构造方法"
+scope="peer"/>
+<topicref format="html" href="applications/libraries/java.html#connecting_to_iotp"
+navtitle="连接到 Watson IoT Platform" scope="peer"/>
+<topicref format="html" href="applications/libraries/java.html#subscribing_device_events"
+navtitle="预订设备事件" scope="peer"/>
+<topicref format="html" href="applications/libraries/java.html#handling_device_events"
+navtitle="处理来自设备的事件" scope="peer"/>
+<topicref format="html" href="applications/libraries/java.html#subscribing_device_status"
+navtitle="预订设备状态" scope="peer"/>
+<topicref format="html" href="applications/libraries/java.html#handling_device_status_updates"
+navtitle="处理来自设备的状态更新" scope="peer"/>
+<topicref format="html" href="applications/libraries/java.html#publishing_events_devices"
+navtitle="发布来自设备的事件" scope="peer"/>
+<topicref format="html" href="applications/libraries/java.html#publishing_commands_devices"
+navtitle="将命令发布到设备" scope="peer"/>
+<topicref format="html" href="applications/libraries/java.html#samples"
+navtitle="样本" scope="peer"/>
+</topicref>
+<topicref format="html" href="applications/libraries/c_sharp.html"
+navtitle="针对应用程序开发者的 C#" scope="peer">
+<topicref format="html" href="applications/libraries/c_sharp.html#csharp_client_download"
+navtitle="下载 C# 客户机和资源" scope="peer"/>
+<topicref format="html" href="applications/libraries/c_sharp.html#constructor"
+navtitle="构造方法" scope="peer"/>
+<topicref format="html" href="applications/libraries/c_sharp.html#subscribe_device_events"
+navtitle="预订设备事件" scope="peer"/>
+<topicref format="html" href="applications/libraries/c_sharp.html#subscribe_device_status"
+navtitle="预订设备状态" scope="peer"/>
+<topicref format="html" href="applications/libraries/c_sharp.html#publish_events_devices"
+navtitle="发布来自设备的事件" scope="peer"/>
+<topicref format="html" href="applications/libraries/c_sharp.html#publish_commands_devices"
+navtitle="将命令发布到设备" scope="peer"/>
+</topicref>
+</topicref>
+<topicref format="html" href="devices/device_dev_index.html" navtitle="开发设备"
+outputclass="subsection" locktitle="yes">
+<topicref format="html" href="devices/api.html" navtitle="针对设备的 HTTP REST API" scope="peer">
+<topicref format="html" href="devices/api.html" navtitle="访问 HTTP REST API"
+locktitle="yes"/>
+<topicref format="html" href="devices/api.html#rest_messaging_api"
+navtitle="HTTP REST 消息传递 API" scope="peer"/>
+<topicref format="html" href="devices/api.html#event_publication" navtitle="发布事件"
+scope="peer"/>
+<topicref href="devices/api.html#last-event-cache" format="html" navtitle="上次事件高速缓存"/>
+</topicref>
+<topicref format="html" href="reference/mqtt/index.html" navtitle="MQTT 消息传递" scope="peer">
+<topicref format="html" href="reference/mqtt/index.html#version-support" navtitle="版本支持"
+scope="peer"/>
+<topicref format="html" href="reference/mqtt/index.html"
+navtitle="应用程序、设备和网关客户机" scope="peer"/>
+<topicref format="html" href="reference/mqtt/index.html#qos-levels"
+navtitle="服务质量级别" scope="peer"/>
+<topicref format="html" href="reference/mqtt/index.html#subscription-buffers-and-clean-session"
+navtitle="预订缓冲区和干净会话" scope="peer"/>
+<topicref format="html" href="reference/mqtt/index.html#message-payload"
+navtitle="消息有效内容限制" scope="peer"/>
+<topicref format="html" href="reference/mqtt/index.html#mqtt-keep-alive"
+navtitle="MQTT 保持活动的时间间隔"/>
+</topicref>
+<topicref format="html" href="devices/mqtt.html" navtitle="设备的 MQTT 连接"
+scope="peer" locktitle="yes">
+<topicref format="html" href="devices/mqtt.html#client_connections" navtitle="客户机连接"
+scope="peer"/>
+<topicref format="html" href="devices/mqtt.html#connecting_devices"
+navtitle="将设备连接到 Quickstart" scope="peer"/>
+<topicref format="html" href="devices/mqtt.html#mqtt_authentication" navtitle="MQTT 认证"
+scope="peer"/>
+<topicref format="html" href="devices/mqtt.html#publishing_events" navtitle="发布事件"
+scope="peer"/>
+<topicref format="html" href="devices/mqtt.html#subscribing_to_commands"
+navtitle="预订命令" scope="peer"/>
+<topicref format="html" href="devices/mqtt.html#managed-devices" navtitle="受管设备"
+scope="peer"/>
+</topicref>
+<topicref format="html" navtitle="使用接口映射设备数据 (Beta)"
+outputclass="subsection" href="information_management/im_index.html" audience="blue">
+<topicref format="html" outputclass="subsection"
+href="information_management/im_index.html#overview" audience="blue" navtitle="概述"
+></topicref>
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="数据流"
+href="information_management/im_index.html#mapping"></topicref>
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="关键概念"
+href="information_management/im_index.html#key_concepts"></topicref>
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="资源"
+href="information_management/im_index.html#resources"></topicref>
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="高级别工作流"
+href="information_management/im_index.html#workflow"></topicref>
+<topicref format="html" outputclass="subsection" audience="blue" navtitle="示例场景"
+href="information_management/im_index.html#scenario"></topicref>
+
+</topicref>
+<topicref format="html" href="devices/device_mgmt/index.html" navtitle="设备管理协议"
+scope="peer">
+<topicref format="html" href="devices/device_mgmt/index.html#introduction" navtitle="简介"
+scope="peer"/>
+<topicref format="html" href="devices/device_mgmt/index.html#manage_device_request"
+navtitle="管理设备" scope="peer"/>
+<topicref format="html" href="devices/device_mgmt/index.html#manage-unmanage"
+navtitle="取消管理设备" scope="peer"/>
+<topicref format="html" href="devices/device_mgmt/index.html#update-location"
+navtitle="更新位置" scope="peer"/>
+<topicref format="html" href="devices/device_mgmt/index.html#update-attributes"
+navtitle="更新设备属性" scope="peer"/>
+<topicref format="html" href="devices/device_mgmt/index.html#diag-add-error-code"
+navtitle="添加错误代码" scope="peer"/>
+<topicref format="html" href="devices/device_mgmt/index.html#diag-clear-error-codes"
+navtitle="清除错误代码" scope="peer"/>
+<topicref format="html" href="devices/device_mgmt/index.html#diag-add-log" navtitle="添加日志"
+scope="peer"/>
+<topicref format="html" href="devices/device_mgmt/index.html#diag-clear-logs" navtitle="清除日志"
+scope="peer"/>
+<topicref format="html" href="devices/device_mgmt/index.html#observations-observe"
+navtitle="观察属性更改" scope="peer"/>
+<topicref format="html" href="devices/device_mgmt/index.html#observations-cancel"
+navtitle="取消属性观察" scope="peer"/>
+<topicref format="html" href="devices/device_mgmt/index.html#observations-notify"
+navtitle="通知属性更改" scope="peer"/>
+</topicref>
+<topicref format="html" href="devices/device_mgmt/requests.html"
+navtitle="设备管理请求" scope="peer">
+<topicref format="html" href="devices/device_mgmt/requests.html#initiating-dm-dashboard"
+navtitle="通过仪表板发起请求" scope="peer"/>
+<topicref format="html" href="devices/device_mgmt/requests.html#initiating-dm-api"
+navtitle="通过 REST API 发起请求" scope="peer"/>
+<topicref format="html" href="devices/device_mgmt/requests.html#device-actions"
+navtitle="设备操作" scope="peer"/>
+<topicref format="html" href="devices/device_mgmt/requests.html#device-actions-reboot"
+navtitle="设备操作 - 重新引导" scope="peer"/>
+<topicref format="html" href="devices/device_mgmt/requests.html#device-actions-factory-reset"
+navtitle="设备操作 - 恢复出厂设置" scope="peer"/>
+<topicref format="html" href="devices/device_mgmt/requests.html#firmware-actions"
+navtitle="固件操作" scope="peer"/>
+<topicref format="html" href="devices/device_mgmt/requests.html#firmware-actions-download"
+navtitle="固件操作 - 下载" scope="peer"/>
+<topicref format="html" href="devices/device_mgmt/requests.html#firmware-actions-update"
+navtitle="固件操作 - 更新" scope="peer"/>
+</topicref>
+<topicref format="html" href="devices/device_mgmt/custom_actions.html"
+navtitle="扩展设备管理" scope="peer">
+<topicref format="html" href="devices/device_mgmt/custom_actions.html#device_management_ext"
+navtitle="设备管理扩展包" scope="peer"/>
+<topicref format="html"
+href="devices/device_mgmt/custom_actions.html#supporting_custom_device_management_actions"
+navtitle="支持定制设备管理操作" scope="peer"/>
+<topicref format="html" href="devices/device_mgmt/custom_actions.html#initiating_custom_dm_actions"
+navtitle="启动定制设备管理操作" scope="peer"/>
+<topicref format="html" href="devices/device_mgmt/custom_actions.html#handling_custom_dm_actions"
+navtitle="处理定制设备管理操作" scope="peer"/>
+<topicref format="html" href="devices/device_mgmt/custom_actions.html#example" navtitle="示例"
+scope="peer"/>
+<topicref format="html" href="devices/device_mgmt/custom_actions.html#api_examples"
+navtitle="API 示例" scope="peer"/>
+</topicref>
+<topicref format="html" href="devices/libraries/python.html" navtitle="针对设备开发者的 Python"
+scope="peer">
+<topicref format="html" href="devices/libraries/python.html#python_client_download"
+navtitle="下载 Python 客户机和资源" scope="peer"/>
+<topicref format="html" href="devices/libraries/python.html#constructor" navtitle="构造方法"
+scope="peer"/>
+<topicref format="html" href="devices/libraries/python.html#publishing_events"
+navtitle="发布事件" scope="peer"/>
+<topicref format="html" href="devices/libraries/python.html#handling_commands"
+navtitle="处理命令" scope="peer"/>
+<topicref format="html" href="devices/libraries/python.html#custom_message_format"
+navtitle="定制消息格式支持" scope="peer"/>
+</topicref>
+<topicref format="html" href="devices/libraries/nodejs.html"
+navtitle="针对设备开发者的 Node.js" scope="peer">
+<topicref format="html" href="devices/libraries/nodejs.html#node.js_client_downloads"
+navtitle="下载 Node.js 客户机和资源" scope="peer"/>
+<topicref format="html" href="devices/libraries/nodejs.html#constructor" navtitle="构造方法"
+scope="peer"/>
+<topicref format="html" href="devices/libraries/nodejs.html#connecting_to_iotp"
+navtitle="连接到 Watson IoT Platform" scope="peer"/>
+<topicref format="html" href="devices/libraries/nodejs.html#logging" navtitle="日志记录" scope="peer"/>
+<topicref format="html" href="devices/libraries/nodejs.html#publishing_events"
+navtitle="发布事件" scope="peer"/>
+<topicref format="html" href="devices/libraries/nodejs.html#handling_commands"
+navtitle="处理命令" scope="peer"/>
+<topicref format="html" href="devices/libraries/nodejs.html#handling_errors"
+navtitle="处理错误" scope="peer"/>
+<topicref format="html" href="devices/libraries/nodejs.html#disconnecting_client"
+navtitle="断开客户机连接" scope="peer"/>
+</topicref>
+<topicref format="html" href="devices/libraries/java.html" navtitle="针对设备开发者的 Java"
+scope="peer">
+<topicref format="html" href="devices/libraries/java.html#java_client_download"
+navtitle="下载 Java 客户机和资源" scope="peer"/>
+<topicref format="html" href="devices/libraries/java.html#constructor" navtitle="构造方法"
+scope="peer"/>
+<topicref format="html" href="devices/libraries/java.html#connecting_to_iotp"
+navtitle="连接到 Watson IoT Platform" scope="peer"/>
+<topicref format="html" href="devices/libraries/java.html#publishing_events"
+navtitle="发布事件" scope="peer"/>
+<topicref format="html" href="devices/libraries/java.html#handling_commands"
+navtitle="处理命令" scope="peer"/>
+<topicref format="html" href="devices/libraries/java.html#samples" navtitle="样本" scope="peer"/>
+</topicref>
+<topicref format="html" href="devices/libraries/c_sharp.html" navtitle="针对设备开发者的 C#"
+scope="peer">
+<topicref format="html" href="devices/libraries/c_sharp.html#csharp_client_download"
+navtitle="下载 C# 客户机和资源" scope="peer"/>
+<topicref format="html" href="devices/libraries/c_sharp.html#constructor" navtitle="构造方法"
+scope="peer"/>
+<topicref format="html" href="devices/libraries/c_sharp.html#publishing-events"
+navtitle="发布事件" scope="peer"/>
+<topicref format="html" href="devices/libraries/c_sharp.html#publish_event_default_qos"
+navtitle="在缺省 QoS 级别发布" scope="peer"/>
+<topicref format="html" href="devices/libraries/c_sharp.html#publish_event_user_qos"
+navtitle="在用户定义的 QoS 级别发布" scope="peer"/>
+<topicref format="html" href="devices/libraries/c_sharp.html#handling_commands"
+navtitle="处理命令" scope="peer"/>
+</topicref>
+<topicref format="html" href="devices/libraries/embedded_c.html"
+navtitle="针对设备开发者的 Embedded C" scope="peer">
+<topicref format="html" href="devices/libraries/embedded_c.html#embeddedc_client_download"
+navtitle="下载 Embedded C 客户机和资源" scope="peer"/>
+<topicref format="html" href="devices/libraries/embedded_c.html#dependencies"
+navtitle="依赖关系" scope="peer"/>
+<topicref format="html" href="devices/libraries/embedded_c.html#installation"
+navtitle="安装" scope="peer"/>
+<topicref format="html" href="devices/libraries/embedded_c.html#initialize_client_library"
+navtitle="初始化客户机库" scope="peer"/>
+<topicref format="html" href="devices/libraries/embedded_c.html#connecting_service"
+navtitle="连接到服务" scope="peer"/>
+<topicref format="html" href="devices/libraries/embedded_c.html#handling_commands"
+navtitle="处理命令" scope="peer"/>
+<topicref format="html" href="devices/libraries/embedded_c.html#publishing_events"
+navtitle="发布事件" scope="peer"/>
+<topicref format="html" href="devices/libraries/embedded_c.html#disconnect_client"
+navtitle="断开客户机连接" scope="peer"/>
+<topicref format="html" href="devices/libraries/embedded_c.html#samples" navtitle="样本"
+scope="peer"/>
+</topicref>
+<topicref format="html" href="devices/libraries/mbedcpp.html"
+navtitle="针对设备开发者的 mBed C++" scope="peer">
+<topicref format="html" href="devices/libraries/mbedcpp.html#dependencies" navtitle="依赖关系"
+scope="peer"/>
+<topicref format="html" href="devices/libraries/mbedcpp.html#library_use"
+navtitle="如何使用库" scope="peer"/>
+<topicref format="html" href="devices/libraries/mbedcpp.html#constructor" navtitle="构造方法"
+scope="peer"/>
+<topicref format="html" href="devices/libraries/mbedcpp.html#connecting_to_iotp"
+navtitle="连接到 Watson IoT Platform" scope="peer"/>
+<topicref format="html" href="devices/libraries/mbedcpp.html#publishing_events"
+navtitle="发布事件" scope="peer"/>
+<topicref format="html" href="devices/libraries/mbedcpp.html#handling_commands"
+navtitle="处理命令" scope="peer"/>
+<topicref format="html" href="devices/libraries/mbedcpp.html#disconnect_client"
+navtitle="断开客户机连接" scope="peer"/>
+<topicref format="html" href="devices/libraries/mbedcpp.html#samples" navtitle="样本"
+scope="peer"/>
+</topicref>
+</topicref>
+<topicref format="html" href="gateways/gw_dev_index.html" outputclass="subsection"
+navtitle="开发网关">
+<topicref format="html" href="gateways/gw_api.html" navtitle="针对网关设备的 HTTP REST API"
+scope="peer" audience="blue">
+<topicref format="html" href="gateways/gw_api.html" navtitle="访问 HTTP REST API"
+locktitle="yes" audience="blue"/>
+<topicref format="html" href="gateways/gw_api.html#rest_messaging_api"
+navtitle="HTTP REST 消息传递 API" scope="peer" audience="blue"/>
+<topicref format="html" href="gateways/gw_api.html#event_publication" navtitle="发布事件"
+scope="peer" audience="blue"/>
+<topicref href="gateways/gw_api.html#last-event-cache" format="html" navtitle="上次事件高速缓存"
+audience="blue"/>
+</topicref>
+<topicref format="html" href="reference/mqtt/index.html" navtitle="MQTT 消息传递" scope="peer">
+<topicref format="html" href="reference/mqtt/index.html#version-support" navtitle="版本支持"
+scope="peer"/>
+<topicref format="html" href="reference/mqtt/index.html"
+navtitle="应用程序、设备和网关客户机" scope="peer"/>
+<topicref format="html" href="reference/mqtt/index.html#qos-levels"
+navtitle="服务质量级别" scope="peer"/>
+<topicref format="html" href="reference/mqtt/index.html#subscription-buffers-and-clean-session"
+navtitle="预订缓冲区和干净会话" scope="peer"/>
+<topicref format="html" href="reference/mqtt/index.html#message-payload"
+navtitle="消息有效内容限制" scope="peer"/>
+<topicref format="html" href="reference/mqtt/index.html#mqtt-keep-alive"
+navtitle="MQTT 保持活动的时间间隔"/>
+</topicref>
+<topicref format="html" href="gateways/mqtt.html" navtitle="针对网关的 MQTT 连接"
+scope="peer">
+<topicref format="html" href="gateways/mqtt.html#MQTT_client_connection"
+navtitle="客户机连接" scope="peer"/>
+<topicref format="html" href="gateways/mqtt.html#authentication" navtitle="MQTT 认证"
+scope="peer"/>
+<topicref format="html" href="gateways/mqtt.html#pub_events" navtitle="发布事件"
+scope="peer"/>
+<topicref format="html" href="gateways/mqtt.html#subscribing_cmds"
+navtitle="预订命令" scope="peer"/>
+<topicref format="html" href="gateways/mqtt.html#auto-reg" navtitle="网关自动注册"
+scope="peer"/>
+<topicref format="html" href="gateways/mqtt.html#notification" navtitle="网关通知"
+scope="peer"/>
+<topicref format="html" href="gateways/mqtt.html#managed_gateways" navtitle="受管网关"
+scope="peer"/>
+</topicref>
+<topicref format="html" href="gateways/libraries/java_cli_gw.html"
+navtitle="使用 Java 开发网关" locktitle="yes">
+<topicref format="html" href="gateways/libraries/java_cli_gw.html#java_client_download"
+navtitle="下载 Java 客户机和资源" scope="peer"/>
+<topicref format="html" href="gateways/libraries/java_cli_gw.html#constructor"
+navtitle="构造方法" scope="peer"/>
+<topicref format="html" href="gateways/libraries/java_cli_gw.html#connecting_to_iotp"
+navtitle="连接到 Watson IoT Platform" scope="peer"/>
+<topicref format="html" href="gateways/libraries/java_cli_gw.html#publishing_events"
+navtitle="发布事件" scope="peer"/>
+<topicref format="html" href="gateways/libraries/java_cli_gw.html#handling_commands"
+navtitle="处理命令" scope="peer"/>
+<topicref format="html" href="gateways/libraries/java_cli_gw.html#samples" navtitle="样本"
+scope="peer"/>
+</topicref>
+<topicref format="html" href="gateways/libraries/java_cli_managed_gw.html"
+navtitle="开发受管网关 (Java)" scope="peer">
+<topicref format="html" href="gateways/libraries/java_cli_managed_gw.html"
+navtitle="设备管理服务" scope="peer"/>
+<topicref format="html" href="gateways/libraries/java_cli_managed_gw.html#create_device_model"
+navtitle="创建设备模型" scope="peer"/>
+<topicref format="html" href="gateways/libraries/java_cli_managed_gw.html#construct_managed_gateway"
+navtitle="ManagedGateway 构造函数" scope="peer"/>
+<topicref format="html" href="gateways/libraries/java_cli_managed_gw.html#dm_requests"
+navtitle="设备管理请求" scope="peer"/>
+<topicref format="html" href="gateways/libraries/java_cli_managed_gw.html#location_updates"
+navtitle="位置更新"/>
+<topicref format="html" href="gateways/libraries/java_cli_managed_gw.html#errors"
+navtitle="错误代码处理" scope="peer"/>
+<topicref format="html" href="gateways/libraries/java_cli_managed_gw.html#firmware"
+navtitle="固件更新和操作" scope="peer"/>
+<topicref format="html" href="gateways/libraries/java_cli_managed_gw.html#dev_actions"
+navtitle="设备操作" scope="peer"/>
+<topicref format="html" href="gateways/libraries/java_cli_managed_gw.html#samples"
+navtitle="样本" scope="peer"/>
+<topicref format="html" href="gateways/libraries/java_cli_managed_gw.html#recipes"
+navtitle="诀窍" scope="peer"/>
+</topicref>
+<topicref format="html" href="gateways/gateway-access-control.html"
+navtitle="网关访问控制 (Beta)" scope="peer"/>
+</topicref>
+<topicref format="html" href="blockchain/dev_blockchain.html"
+navtitle="针对区块链集成开发" outputclass="subsection"
+scope="peer">
+<topicref format="html" href="blockchain/dev_blockchain.html#byb"
+navtitle="开始之前" scope="peer"></topicref>
+<topicref format="html" href="blockchain/dev_blockchain.html#samples"
+navtitle="样本智能合同" scope="peer"></topicref>
+<topicref format="html"
+href="blockchain/dev_blockchain.html#configure_environment"
+navtitle="配置区块链光纤网" scope="peer"></topicref>
+<topicref format="html"
+href="blockchain/dev_blockchain.html#test_contracts"
+navtitle="创建、测试和部署合同" scope="peer"></topicref>
+<topicref format="html" href="blockchain/dev_blockchain.html#next_steps"
+navtitle="后续步骤" scope="peer"></topicref>
+</topicref>
+<topicref format="html" href="reference/mqtt/index.html"
+navtitle="参考" outputclass="subsection" scope="peer">
+<topicref format="html" href="reference/rest_api.html" navtitle="API" scope="peer"/>
+<topicref format="html" href="reference/mqtt/index.html" navtitle="MQTT 消息传递" scope="peer">
+<topicref format="html" href="reference/mqtt/index.html#version-support" navtitle="版本支持"
+scope="peer"/>
+<topicref format="html" href="reference/mqtt/index.html"
+navtitle="应用程序、设备和网关客户机" scope="peer"/>
+<topicref format="html" href="reference/mqtt/index.html#qos-levels"
+navtitle="服务质量级别" scope="peer"/>
+<topicref format="html" href="reference/mqtt/index.html#subscription-buffers-and-clean-session"
+navtitle="预订缓冲区和干净会话" scope="peer"/>
+<topicref format="html" href="reference/mqtt/index.html#message-payload"
+navtitle="消息有效内容限制" scope="peer"/>
+<topicref format="html" href="reference/mqtt/index.html#mqtt-keep-alive"
+navtitle="MQTT 保持活动的时间间隔"/>
+</topicref>
+<topicref format="html" href="reference/device_model.html"
+navtitle="设备模型" scope="peer">
+<topicref format="html" href="reference/device_model.html#device_id"
+navtitle="设备标识" scope="peer"></topicref>
+<topicref format="html"
+href="reference/device_model.html#id_and_device_types"
+navtitle="标识和设备类型" scope="peer"></topicref>
+<topicref format="html" href="reference/device_model.html#attributes"
+navtitle="属性" scope="peer"></topicref>
+<topicref format="html"
+href="reference/device_model.html#extended_attributes"
+navtitle="扩展属性" scope="peer"></topicref>
+</topicref>
+</topicref>
+<topicref format="html" href="ts_index.html"
+navtitle="Watson IoT Platform 故障诊断" outputclass="subsection"
+scope="peer">
+<topicref format="html" href="ts_index.html#access-expiry-problem"
+navtitle="访问组织时发生问题" scope="peer"/>
+<topicref format="html" href="ts_index.html#connection_problem"
+navtitle="连接到平台时发生问题" scope="peer"/>
+<topicref format="html" href="ts_index.html#disconnection_problem"
+navtitle="间歇性断开连接" scope="peer"></topicref>
+<topicref format="html" href="ts_index.html#gettinghelp"
+navtitle="获取帮助和支持" scope="peer"></topicref>
+</topicref>
+<topicref audience="blue" format="html" href="glossary.html" navtitle="术语表"
+outputclass="subsection" scope="peer"/>
+</topicref>
+<topicref audience="blue" navtitle="以下是测试部分"/>
+<topicref format="html" href="index.html" locktitle="yes" navtitle="入门" scope="peer"
+audience="blue">
+<topicref format="html" href="index.html#byb" navtitle="开始之前" scope="peer"/>
+<topicref format="html" href="index.html#up_and_running" navtitle="连接设备"
+scope="peer"/>
+<topicref format="html" href="index.html#analyzing_data" navtitle="分析设备数据" scope="peer"/>
+<topicref format="html" href="index.html#develop_applications" navtitle="开发应用程序"
+scope="peer"/>
+</topicref>
+<topicref format="html" href="iotplatform_overview.html#about_iotplatform" navtitle="关于"
+outputclass="subsection" scope="peer" audience="blue">
+<topicref format="html" href="iotplatform_overview.html#watsoniotplatform_architecture"
+navtitle="体系结构" outputclass="subsection" scope="peer"/>
+<topicref format="html" href="iotplatform_overview.html#watsoniotplatform_importantconcepts"
+navtitle="概念" scope="peer"/>
+<topicref format="html" href="feature_overview.html" navtitle="功能概述" scope="peer">
+<topicref format="html" href="feature_overview.html#connect" navtitle="Connect" scope="peer"/>
+<topicref format="html" href="feature_overview.html#information_management"
+navtitle="信息管理" scope="peer"/>
+<topicref format="html" href="feature_overview.html#analytics" navtitle="分析" scope="peer"/>
+<topicref format="html" href="feature_overview.html#risk_management" navtitle="风险管理"
+scope="peer"/>
+</topicref>
+<topicref audience="blue" format="html" href="reference/standards_and_requirements.html"
+navtitle="支持的标准和需求" scope="peer">
+<topicref format="html" href="reference/standards_and_requirements.html#mqtt" navtitle="MQTT"
+scope="peer"/>
+</topicref>
+<topicref format="html" href="reference/bluemix_and_platform.html"
+navtitle="Bluemix 和 Watson IoT Platform" scope="peer"/>
+</topicref>
+</map>

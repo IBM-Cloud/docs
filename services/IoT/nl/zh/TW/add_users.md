@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-24"
+lastupdated: "2017-02-17"
 
 ---
 
@@ -79,7 +79,7 @@ lastupdated: "2017-01-24"
 3. 輸入成員的電子郵件位址。
 4. 選取此成員的角色。
 5. 輸入主旨、領域名稱及發出者。  
-   **重要事項：**確保 `Subject`、`Realm Name` 及 `Issuer` 欄位符合 OpenID Connect 的建議及標準。如需相關資訊，請參閱 [OpenID Connect](http://openid.net/connect/) 網站。
+   **重要事項：**確保 `Subject`、`Realm Name` 及 `Issuer` 欄位符合 OpenID Connect 的建議及標準。如需相關資訊，請參閱 [OpenID Connect ![外部鏈結圖示](../../icons/launch-glyph.svg)](http://openid.net/connect/){: new_window} 網站。
 6. 選用項目：設定成員的到期日。
 7. 按一下**登錄成員**。
 

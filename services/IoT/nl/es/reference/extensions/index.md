@@ -293,7 +293,7 @@ La integración de blockchain de {{site.data.keyword.iot_short_notm}} es una ofe
  2. En la página **Extensiones**, pulse **Añadir ampliación**.
  3. Pulse **Añadir** junto a la extensión de Blockchain.
  4. En el mosaico de Blockchain, pulse **Configuración**.
- 3. En la sección **Activar Blockchain**, pulse el enlace **Más información** para ir a la [página de ofertas de servicios Blockchain de IoT![icono de enlace externo](../../../../icons/launch-glyph.svg)](http://www.ibm.com/internet-of-things/iot-news/announcements/private-blockchain/){: new_window}.
+ 3. En la sección **Activar Blockchain**, pulse el enlace **Más información** para ir a la [página de ofertas de servicios Blockchain de IoT ![icono de enlace externo](../../../../icons/launch-glyph.svg)](http://www.ibm.com/internet-of-things/iot-news/announcements/private-blockchain/){: new_window}.
  4. Pulse **Inicio rápido del proyecto blockchain** para rellenar y enviar el formulario de *Exploración del potencial de IoT y Blockchain*.  
  5. Una vez aprobada la solicitud, IBM se pondrá en contacto con usted para activar la integración de blockchain para su organización.
  6. Vuelva al panel de control de {{site.data.keyword.iot_short_notm}} para que la organización finalice la configuración siguiendo los pasos de [integración de blockchain de {{site.data.keyword.iot_short_notm}}](../../bl_blockchain_integration.html).

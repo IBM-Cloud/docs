@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2017-01-10"
+  years: 2015, 2017
 
+lastupdated: "2017-02-23"
 ---
 
 {:new_window: target="_blank"}
@@ -20,7 +20,7 @@ lastupdated: "2017-01-10"
 ## Acceso a la documentación de la API REST HTTP
 {: #api_link}
 
-Para acceder a la documentación de la API REST HTTP de {{site.data.keyword.iot_short_notm}} y obtener más información sobre cómo integrar dispositivos en su organización, vaya a https://docs.internetofthings.ibmcloud.com/swagger/v0002.html.
+Para acceder a la documentación de la API REST HTTP de {{site.data.keyword.iot_short_notm}} y obtener más información sobre cómo integrar dispositivos en su organización, vaya al siguiente URL:  [https://docs.internetofthings.ibmcloud.com/swagger/v0002.html](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html)
 
 La única versión de la API REST HTTP de {{site.data.keyword.iot_short_notm}} soportada es la versión 2. Asegúrese de que las soluciones de {{site.data.keyword.iot_short_notm}} utilicen la versión 2.
 
@@ -40,24 +40,21 @@ Además de utilizar el protocolo de mensajería MQTT, también puede configurar 
 Utilice uno de los URL siguientes para enviar una solicitud `POST` desde un dispositivo conectado a {{site.data.keyword.iot_short_notm}}:
 
 ### Solicitud POST no segura
-<pre class="pre">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
-{: codeblock}
+<pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
 ### Solicitud POST segura
-<pre class="pre">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
-{: codeblock}
+
+<pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
 **Nota: **el puerto 443, el puerto SSL predeterminado, también se puede especificar para llamadas de API HTTP seguras.
 
 Si está conectando un dispositivo o una aplicación al servicio de Quickstart, utilice uno de los siguientes URL en su lugar:
 
 ### Solicitud POST no segura para Quickstart
-<pre class="pre">http://quickstart.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
-{: codeblock}
+<pre class="pre"><code class="hljs">http://quickstart.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
 ### Solicitud POST segura para Quickstart
-<pre class="pre">https://quickstart.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
-{: codeblock}
+<pre class="pre"><code class="hljs">https://quickstart.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 
 **Notas importantes:**
 - En la versión de la API REST HTTP actual, sólo puede enviar sucesos de dispositivo mediante la mensajería HTTP. Utilice el protocolo de mensajería MQTT para enviar solicitudes para otras características de gestión de dispositivos y de control.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-07"
+lastupdated: "2017-02-22"
 
 ---
 
@@ -20,11 +20,13 @@ El complemento Risk and Security Management permite a las organizaciones mejorar
 ## Política de seguridad de conexión
 {: #connect_policy}
 
-La política de seguridad de conexión impone la forma en que los dispositivos se conectan a la plataforma. Puede configurar políticas de conexión predeterminadas para todos los tipos de dispositivo, así como valores personalizados para tipos de dispositivo específicos. La política se puede definir de modo que permita conexiones sin cifrar, que imponga solo conexiones de seguridad de la capa de transporte (sólo TLS) y que habilite los dispositivos para que se autentiquen con certificados del lado del cliente. Cuando se utilizan certificados del lado del cliente, la política de seguridad proporciona la opción adicional de utilizar solo certificado para la autenticación de cliente o de utilizar una combinación de certificado de cliente y par de señales de ID de cliente y señal de autenticación.
+La política de seguridad de conexión impone la forma en que los dispositivos se conectan a la plataforma y se utilizan con planes de seguridad gratuitos y avanzados. Puede configurar políticas de conexión predeterminadas para todos los tipos de dispositivo, así como valores personalizados para tipos de dispositivo específicos. La política se puede definir de modo que permita conexiones sin cifrar, que imponga solo conexiones de seguridad de la capa de transporte (sólo TLS) y que habilite los dispositivos para que se autentiquen con certificados del lado del cliente.
 
-Para obtener información sobre cómo configurar las políticas de seguridad de conexión, consulte [Configuración de políticas de seguridad](set_up_policies.html).
+Si utiliza un plan de seguridad estándar, las políticas de conexión no están disponibles. Para obtener información sobre cómo configurar las políticas de seguridad de conexión, consulte [Configuración de políticas de seguridad](set_up_policies.html).
 
 La seguridad de conexión también se puede configurar de modo que los clientes utilicen su propio certificado del lado del servidor en lugar del certificado predeterminado que se proporciona. Esto puede resultar útil, por ejemplo, si los dispositivos del usuario se autenticarán ante el servidor durante el reconocimiento de TLS. En este release inicial de Risk and Security Management, el nombre del dominio del servidor de {{site.data.keyword.iot_short_notm}} no se puede modificar y se debe utilizar tal cual en el certificado del servidor.
+
+
 
 ## Certificados de cliente
 {: #certificates}

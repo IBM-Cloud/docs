@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-03"
+lastupdated: "2017-02-20"
 
 ---
 
@@ -80,6 +80,6 @@ lastupdated: "2017-02-03"
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
 * サービスや概説に関する質問は、[IBM developerWorks dW Answers ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/topics/watson-iot/?smartspace=bluemix){:new_window} フォーラムを使用してください。「watson-iot」と「bluemix」のタグを含めてください。
 
-フォーラムの使用について詳しくは、[ヘルプの取得 ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/support/index.html#getting-help){: new_window} を参照してください。
+フォーラムの使用について詳しくは、[ヘルプの取得](https://www.{DomainName}/docs/support/index.html#getting-help)を参照してください。
 
-IBM サポート・チケットを開く方法や、サポート・レベルとチケットの重大度については、[サポートへのお問い合わせ ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/support/index.html#contacting-support){: new_window} を参照してください。
+IBM サポート・チケットを開く方法や、サポート・レベルとチケットの重大度については、[サポートへのお問い合わせ ![外部リンク・アイコン](../../icons/launch-glyph.svg)](https://www.{DomainName}/docs/support/index.html#contacting-support) を参照してください。

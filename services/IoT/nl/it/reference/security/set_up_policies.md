@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016, 2017
+lastupdated: "2017-02-22"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # Configurazione delle politiche di sicurezza
 {: #set_up_policies.md}
-Ultimo aggiornamento: 02-02-2017
-{: .last-updated}
 
 Un analista della sicurezza può configurare le politiche di sicurezza della connessione e le blacklist o le whitelist.
 
@@ -29,11 +28,9 @@ Puoi configurare il livello di sicurezza predefinito che viene applicato a tutti
     - TLS con autenticazione token
     - TLS con autenticazione certificato client
     - TLS con autenticazione certificato client e token
-    - TLS con certificato client o token 
-
-In base al livello di sicurezza selezionato, la tabella visualizza il numero di dispositivi influenzati e il livello previsto di conformità a livello di sicurezza impostato.
-
-3. Se necessario, fai clic su **Add Custom Connection** e seleziona i tipi di dispositivo e i livelli di sicurezza personalizzati. Il valore di conformità previsto viene aggiornato per riflettere le modifiche risultanti dalle impostazioni di sicurezza personalizzate.
+    - TLS con certificato client o token
+3. Se necessario, fai clic su **Add Custom Connection** e seleziona i tipi di dispositivo e i livelli di sicurezza personalizzati. 
+3. Fai clic su **Refresh Compliance**. In base al livello di sicurezza selezionato, la tabella aggiornata mostra il numero di dispositivi influenzati e il livello previsto di conformità al livello di sicurezza impostato.
 4. Fai clic su **Salva**.  
 
 ## Configurazione delle blacklist e delle whitelist
@@ -53,6 +50,7 @@ Limita l'accesso al server da alcuni dispositivi utilizzando una blacklist o uti
 4. Nella finestra **Add to Blacklist**, fai clic su **Save**.
 5. Rivedi l'elenco dei dispositivi bloccati. Tutti i dispositivi che fanno parte dell'elenco, in base all'indirizzo IP, al CIDR o al paese, non possono collegarsi al server {{site.data.keyword.iot_short_notm}}.
 6. Fai clic su **Salva**.
+7. Abilita la blacklist. Se avevi una whitelist abilitata, viene disabilitata.
 
 ### Configura una whitelist
 {: #config_whitelist}
@@ -66,3 +64,4 @@ Limita l'accesso al server da alcuni dispositivi utilizzando una blacklist o uti
 4. Nella finestra **Add to Whitelist**, fai clic su **Save**.
 5. Rivedi l'elenco dei dispositivi consentiti. Tutti i dispositivi che fanno parte dell'elenco, in base all'indirizzo IP, al CIDR o al paese, possono collegarsi al server {{site.data.keyword.iot_short_notm}}.
 6. Fai clic su **Salva**.
+7. Abilita la whitelist. Se avevi una blacklist abilitata, viene disabilitata.

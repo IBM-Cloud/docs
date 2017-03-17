@@ -12,7 +12,7 @@ lastupdated: "2017-02-24"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Defining policies (Experimental)
+# Defining policies
 {: #policies}
 
 Policies control the gates in your continuous delivery pipeline. If your code does not meet or exceed a policy that is enacted at a particular gate, the deployment is halted to prevent risky changes from being released. 

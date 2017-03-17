@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-10"
+lastupdated: "2017-02-21"
 
 ---
 
@@ -35,7 +35,7 @@ Complete los pasos siguientes para conectar el dispositivo a {{site.data.keyword
 
 El registro de un dispositivo implica la clasificación del dispositivo como un tipo de dispositivo, lo que le da un nombre al dispositivo, y proporciona una información de dispositivo. A continuación, proporcione una señal de conexión o acepte una señal generada por {{site.data.keyword.iot_short_notm}}.
 
-Puede añadir dispositivos de uno en uno desde el panel de instrumentos de {{site.data.keyword.iot_short_notm}}, o puede utilizar la [API de {{site.data.keyword.iot_short_notm}}](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/post_bulk_devices_add) para añadir uno o varios dispositivos a la vez.
+Puede añadir dispositivos de uno en uno desde el panel de instrumentos de {{site.data.keyword.iot_short_notm}} o puede utilizar la API de [ {{site.data.keyword.iot_short_notm}}![icono de enlace externo](../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/post_bulk_devices_add){: new_window} para añadir uno o varios dispositivos a la vez. 
 
 Para añadir un dispositivo desde el panel de instrumentos de {{site.data.keyword.iot_short_notm}}:
 
@@ -113,8 +113,7 @@ Después de registrar un dispositivo con {{site.data.keyword.iot_short_notm}}, p
 - Configure el dispositivo para la mensajería de MQTT y utilice ID de organización, Señal de autenticación, Tipo de dispositivo e ID de dispositivo para autenticarse.  
 - Envíe mensajes de dispositivo a la organización de {{site.data.keyword.iot_short_notm}} utilizando el protocolo de MQTT.
 
-**Consejo:** Muchas recetas de conexión están disponibles para los dispositivos utilizados de forma común. Para obtener una lista de recetas, consulte las
-[Recetas de conexión de dispositivos](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/) disponibles en IBM.com.
+**Consejo:** Muchas recetas de conexión están disponibles para los dispositivos utilizados de forma común. Para obtener una lista de recetas, consulte las [Recetas de conexión de dispositivos ![icono de enlace externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){: new_window} disponibles en IBM.com.
 
 Se necesita la siguiente información al conectar el dispositivo:
 - URL: *org_id*.messaging.internetofthings.ibmcloud.com  
@@ -136,18 +135,18 @@ Este valor es la señal exclusiva que ha definido o que se ha asignado al dispos
  {{site.data.keyword.iot_short_notm}} JSON da soporte a varios formatos, como JSON y texto.
 
 Para obtener más información sobre cómo conectar su dispositivo, consulte [Conectividad de MQTT para dispositivos](devices/mqtt.html) en la documentación técnica.
-La sección [Conectividad](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Connectivity/post_device_types_deviceType_devices_deviceId_events_eventName) de la documentación de la API también contiene la información necesaria.
+La sección [Conectividad ![icono de enlace externo](../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Connectivity/post_device_types_deviceType_devices_deviceId_events_eventName){: new_window} de la documentación de la API también contiene la información necesaria.
 
 ## Recetas sobre la conexión de dispositivos
 
 En las siguientes recetas se describe el flujo completo que se utiliza para registrar y conectar dispositivos a Watson IoT Platform.
 
-- [Cómo registrar dispositivos en IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/how-to-register-devices-in-ibm-iot-foundation/)
+- [Cómo registrar dispositivos en IBM Watson IoT Platform ![icono de enlace externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/how-to-register-devices-in-ibm-iot-foundation/){: new_window}
 
-- [Conexión de Raspberry Pi como dispositivo a Watson IoT mediante Node-RED](https://developer.ibm.com/recipes/tutorials/deploy-watson-iot-node-on-raspberry-pi/)
+- [Conexión de Raspberry Pi como dispositivo a Watson IoT mediante Node-RED ![icono de enlace externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/deploy-watson-iot-node-on-raspberry-pi/){: new_window}
 
-- [Conexión de un dispositivo Arduino Uno a IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/connect-an-arduino-uno-device-to-the-ibm-internet-of-things-foundation/)
+- [Conexión de un dispositivo Arduino Uno a IBM Watson IoT Platform ![icono de enlace externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/connect-an-arduino-uno-device-to-the-ibm-internet-of-things-foundation/){: new_window}
 
-- [Conexión de Sense HAT a Watson IoT mediante Node-RED](https://developer.ibm.com/recipes/tutorials/connecting-a-sense-hat-to-watson-iot-using-node-red/)
+- [Conexión de Sense HAT a Watson IoT mediante Node-RED ![icono de enlace externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/connecting-a-sense-hat-to-watson-iot-using-node-red/){: new_window}
 
-- [Conexión de Raspberry Pi con Windows IoT Core como dispositivo a Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/connecting-raspberry-pi-with-windows-iot-core-as-a-device-to-watson-iot-using-node-red/)
+- [Conexión de Raspberry Pi con Windows IoT Core como dispositivo a Watson IoT Platform ![icono de enlace externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/connecting-raspberry-pi-with-windows-iot-core-as-a-device-to-watson-iot-using-node-red/){: new_window}

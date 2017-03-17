@@ -66,14 +66,13 @@ L'exemple de code suivant présente le format standard d'un package d'extension 
 
 ### Ajout d'un package de gestion des terminaux personnalisé
 
-
-Vous pouvez ajouter un package de gestion des terminaux personnalisé à l'aide du tableau de nord {{site.data.keyword.iot_short_notm}} ou de l'API. 
+Vous pouvez ajouter un package de gestion des terminaux personnalisé à l'aide du tableau de nord {{site.data.keyword.iot_short_notm}} ou de l'API.
 
 Pour ajouter un package de gestion des terminaux personnalisé à l'aide du tableau de bord {{site.data.keyword.iot_short_notm}} :
 
-1. Depuis votre tableau de bord {{site.data.keyword.iot_short_notm}}, cliquez sur **Paramètres** dans la barre de navigation. 
+1. Depuis votre tableau de bord {{site.data.keyword.iot_short_notm}}, cliquez sur **Paramètres** dans la barre de navigation.
 2. Cliquez sur **Packages de gestion des terminaux personnalisés**.
-3. Cliquez sur le bouton **Ajouter un package**. 
+3. Cliquez sur le bouton **Ajouter un package**.
 4. Sélectionnez votre fichier de package et cliquez sur **Ouvrir**.
 
 Pour ajouter un package de gestion des terminaux personnalisé à l'aide de l'API, voir la [documentation de l'API {{site.data.keyword.iot_short_notm}} ![](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
@@ -469,4 +468,4 @@ Utilisez les demandes d'API suivantes pour gérer vos terminaux :
 
 Les recettes suivantes décrivent le flux requis pour gérer les extensions de gestion des terminaux :
 
-- La recette [Device Management Extension Packages in WIoT Platform ![](../../../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/device-management-extension-packages-in-wiot-platform/){: new_window} explique comment enregistre un terminal géré auprès de{{site.data.keyword.iot_short}} afin qu'il puisse recevoir et traiter des actions d'extension de gestion des terminaux. Les exemples de code décrits dans la recette sont écrits à l'aide de la bibliothèque client Python. 
+- La recette [Device Management Extension Packages in WIoT Platform ![](../../../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/device-management-extension-packages-in-wiot-platform/){: new_window} explique comment enregistre un terminal géré auprès de{{site.data.keyword.iot_short}} afin qu'il puisse recevoir et traiter des actions d'extension de gestion des terminaux. Les exemples de code décrits dans la recette sont écrits à l'aide de la bibliothèque client Python.

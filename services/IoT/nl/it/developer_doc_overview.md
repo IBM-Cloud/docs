@@ -12,42 +12,42 @@ lastupdated: "2017-02-03"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Developer documentation for {{site.data.keyword.iot_short_notm}}
+# Documentazione per lo sviluppatore per {{site.data.keyword.iot_short_notm}}
 {: #developer_doc_overview}
 
 {: .last-updated}
-Client libraries, content, and samples are available to help you to build and develop code to integrate your applications and devices on {{site.data.keyword.iot_full}}.
+Le librerie client, il contenuto e gli esempi sono disponibili come supporto nella creazione e nello sviluppo del codice per integrare le tue applicazioni e i tuoi dispositivi in {{site.data.keyword.iot_full}}.
 {:shortdesc}
 
 
-## Developing your {{site.data.keyword.iot_short_notm}}
+## Sviluppo del tuo {{site.data.keyword.iot_short_notm}}
 {: #goals}
-You can develop code to set up and connect your devices to {{site.data.keyword.iot_short_notm}} and to retrieve and analyze the real-time data that you are interested in. Information is provided to help you to do the following common tasks:
+Puoi sviluppare il codice per configurare e collegare i tuoi dispositivi a {{site.data.keyword.iot_short_notm}} e per recuperare e analizzare i dati in tempo reale a cui sei interessato. Ti vengono fornite informazioni per aiutarti ad eseguire le seguenti attività comuni:
 
--  Create and manage applications
--  Create, connect, and manage devices
--  Extend device management
--  Create and manage gateways
--  Retrieve device data
+-  Crea e gestisci le applicazioni
+-  Crea, collega e gestisci i dispositivi
+-  Estendi la gestione del dispositivo
+-  Crea e gestisci i gateway
+-  Richiama i dati del dispositivo
 
 
-## Application development
+## Sviluppo dell'applicazione
 {: #app-dev}
 
-You can build and manage applications in {{site.data.keyword.iot_short_notm}} by using the following supported protocols and standards:
+Puoi creare e gestire le applicazioni in {{site.data.keyword.iot_short_notm}} utilizzando i seguenti standard e protocolli supportati:
 
-- MQTT messaging protocol
+- Protocollo di messaggistica MQTT
 - Python
 - Node.js
 - Java™
 - C#
 
-## Device development
+## Sviluppo del dispositivo
 {: #device-dev}
 
-You can build and manage devices in {{site.data.keyword.iot_short_notm}} by using the following supported protocols and standards:
+Puoi creare e gestire i dispositivi in {{site.data.keyword.iot_short_notm}} utilizzando i seguenti standard e protocolli supportati:
 
-- MQTT messaging protocol
+- Protocollo di messaggistica MQTT
 - Python
 - Node.js
 - Java
@@ -55,23 +55,23 @@ You can build and manage devices in {{site.data.keyword.iot_short_notm}} by usin
 - Embedded C
 - mBed C++
 
-## Gateway development
+## Sviluppo del gateway
 {: #gateway-dev}
-If your devices cannot directly connect to the internet, use the information provided to build a gateway device to retrieve and send data to applications in your {{site.data.keyword.iot_short_notm}} organization.
-The MQTT messaging protocol is supported for gateway development in {{site.data.keyword.iot_short_notm}}.
+Se i tuoi dispositivi non possono collegarsi direttamente a internet, utilizza le informazioni fornite per creare un dispositivo gateway per richiamare e inviare i dati alle applicazioni nella tua organizzazione {{site.data.keyword.iot_short_notm}}.
+Il protocollo di messaggistica MQTT è supportato per lo sviluppo del gateway in {{site.data.keyword.iot_short_notm}}.
 
-For more information and links to the client libraries that are available, see [Client libraries for {{site.data.keyword.iot_short_notm}} development](iot_platform_client_lib.html).
+Per ulteriori informazioni e link alle librerie client disponibili, consulta [Librerie client per lo sviluppo {{site.data.keyword.iot_short_notm}}](iot_platform_client_lib.html).
 
-# Related Links
+# Link correlati
 {: #rellinks}
 
-## Client libraries for {{site.data.keyword.iot_short_notm}}
+## Librerie client per {{site.data.keyword.iot_short_notm}}
 {: #client_libraries}
 
-* [C++ ![External link icon](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-cpp){:new_window}
-* [C# ![External link icon](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-csharp){:new_window}
-* [Embedded C ![External link icon](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-embeddedc){:new_window}
-* [Java ![External link icon](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-java){:new_window}
-* [mBed C++ ![External link icon](../../icons/launch-glyph.svg)](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/){:new_window}
-* [Node.js ![External link icon](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-nodejs){:new_window}
-* [Python ![External link icon](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-python){:new_window}
+* [C++ ![icona link esterno](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-cpp){:new_window}
+* [C# ![icona link esterno](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-csharp){:new_window}
+* [Embedded C ![icona link esterno](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-embeddedc){:new_window}
+* [Java ![icona link esterno](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-java){:new_window}
+* [mBed C++ ![icona link esterno](../../icons/launch-glyph.svg)](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTF/){:new_window}
+* [Node.js ![icona link esterno](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-nodejs){:new_window}
+* [Python ![icona link esterno](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/iot-python){:new_window}

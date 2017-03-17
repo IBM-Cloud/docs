@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016, 2017
+lastupdated: "2017-02-22"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # Configuration des règles de sécurité
 {: #set_up_policies.md}
-Dernière mise à jour : 02/02/2017
-{: .last-updated}
 
 Un analyste de sécurité peut configurer des règles de sécurité de connexion et des listes noires ou des listes blanches.
 
@@ -30,10 +29,8 @@ Vous pouvez définir le niveau de sécurité par défaut qui est appliqué à to
     - TLS avec authentification par certificat client
     - TLS avec authentification par jeton et par certificat client
     - TLS avec certificat client ou jeton
-
-En fonction du niveau de sécurité sélectionné, le tableau indique le nombre de terminaux concernés et le niveau de conformité prévu au niveau de sécurité défini.
-
-3. Si nécessaire, cliquez sur **Ajouter une connexion personnalisée** et sélectionnez les types de terminaux et les niveaux de sécurité personnalisés. La valeur de conformité prévue est mise à jour pour refléter les modifications résultant des paramètres de sécurité personnalisés.
+3. Si nécessaire, cliquez sur **Ajouter une connexion personnalisée** et sélectionnez les types de terminaux et les niveaux de sécurité personnalisés. 
+3. Cliquez sur **Actualiser la conformité**. En fonction du niveau de sécurité sélectionné, le tableau actualisé indique le nombre de terminaux concernés et le niveau de conformité prévu au niveau de sécurité défini.
 4. Cliquez sur **Sauvegarder**.  
 
 ## Configuration des listes noires et des listes blanches
@@ -51,8 +48,9 @@ Limitez l'accès au serveur à partir de certains terminaux en utilisant une lis
     - Dans l'onglet **CIDR**, entrez un bloc noté Classless Inter-Domain Routing (CIDR).
     - Dans l'onglet **Pays**, entrez ou sélectionnez les pays dont vous souhaitez bloquer tous les terminaux.
 4. Dans la fenêtre **Ajouter à la liste noire**, cliquez sur **Sauvegarder**.
-5. Consultez la liste des terminaux bloqués. Tous les terminaux figurant dans la liste, en fonction de l'adresse IP, du routage CIDR ou du pays, ne peuvent pas se connecter au serveur {{site.data.keyword.iot_short_notm}}. 
+5. Consultez la liste des terminaux bloqués. Tous les terminaux figurant dans la liste, en fonction de l'adresse IP, du routage CIDR ou du pays, ne peuvent pas se connecter au serveur {{site.data.keyword.iot_short_notm}}.
 6. Cliquez sur **Sauvegarder**.
+7. Activez la liste noire. Si une liste blanche était activée, elle est désactivée. 
 
 ### Configuration d'une liste blanche
 {: #config_whitelist}
@@ -66,3 +64,4 @@ Limitez l'accès au serveur à partir de certains terminaux en utilisant une lis
 4. Dans la fenêtre **Ajouter à la liste blanche**, cliquez sur **Sauvegarder**.
 5. Consultez la liste des terminaux autorisés. Tous les terminaux figurant dans la liste, en fonction de l'adresse IP, du routage CIDR ou du pays, sont autorisés à se connecter au serveur {{site.data.keyword.iot_short_notm}}.
 6. Cliquez sur **Sauvegarder**.
+7. Activez la liste blanche. Si une liste noire était activée, elle est désactivée. 

@@ -288,7 +288,7 @@ Per aggiungere un pacchetto di gestione personalizzato utilizzando l'API, consul
 
 ### Configurazione di Blockchain
 
-L'integrazione blockchain {{site.data.keyword.iot_short_notm}} è un offerta di servizi che non è attivata per impostazione predefinita in {{site.data.keyword.iot_short_notm}}. Per attivare la funzione nella tua organizzazione, completa la seguente procedura: 
+L'integrazione blockchain {{site.data.keyword.iot_short_notm}} è un offerta di servizi che non è attivata per impostazione predefinita in {{site.data.keyword.iot_short_notm}}. Per attivare la funzione nella tua organizzazione, completa la seguente procedura:
  1. Dal dashboard {{site.data.keyword.iot_short_notm}}, seleziona **Extensions**.
  2. Nella pagina **Extensions**, fai clic su **Add Extension**.
  3. Fai clic su **Add** vicino all'estensione Blockchain.

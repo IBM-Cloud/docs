@@ -61,7 +61,6 @@ Certaines bibliothèques client TLS (Transport Layer Security) ne prennent pas e
 
 Les exigences TLS varient selon que vous vous connectez à {{site.data.keyword.iot_short_notm}} à l'aide du protocole MQTT ou HTTP. Les sections ci-après montrent les suites de chiffrement qui sont prises en charge si le certificat serveur par défaut est utilisé. Si vous utilisez votre propre certificat client, les suites de chiffrement qui sont prises en charge varient en fonction du certificat utilisé.
 
-
 ### Exigences TLS pour les connexions MQTT
 
 {{site.data.keyword.iot_short_notm}} requiert TLS v1.2 et les suites de chiffrement suivantes :

@@ -71,7 +71,7 @@ Les terminaux connectés utilisent une combinaison clientId/jeton d'authentifica
 
 ![image](connectivity_platform.svg)
 
-Pour plus d'informations sur les exigences relatives à TLS et aux suites de chiffrement, voir la section [Exigences TLS![](../../../../icons/launch-glyph.svg)](https://console.ng.bluemix.net/docs/services/IoT/reference/security/connect_devices_apps_gw.html#tls_requirements){: new_window} dans la documentation `Connexions d'application, de terminal et de passerelle à Watson IoT Platform`. 
+Pour plus d'informations sur les exigences relatives à TLS et aux suites de chiffrement, voir la section [Exigences TLS![](../../../../icons/launch-glyph.svg)](https://console.ng.bluemix.net/docs/services/IoT/reference/security/connect_devices_apps_gw.html#tls_requirements){: new_window} dans la documentation `Connexions d'application, de terminal et de passerelle à Watson IoT Platform`.
 
 ## Comment évitons-nous la fuite des données entre des terminaux IoT ?
 {: #prevent-leak-devices}

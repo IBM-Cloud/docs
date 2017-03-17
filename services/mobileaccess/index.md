@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-15"
+lastupdated: "2017-03-15"
 
 ---
 {:new_window: target="_blank"}
@@ -11,8 +11,19 @@ lastupdated: "2017-01-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Getting started with {{site.data.keyword.amashort}}
+
+# {{site.data.keyword.amashort}} is replaced with {{site.data.keyword.appid_short_notm}}
 {: #gettingstarted}
+
+
+**The {{site.data.keyword.amafull}} service is replaced with the [{{site.data.keyword.appid_full}} service](/docs/services/appid/index.html).** If you need information about {{site.data.keyword.amashort}} before moving to {{site.data.keyword.appid_short_notm}}, refer to the following pages.
+{:shortdesc}
+
+{{site.data.keyword.amashort}} provided security to your mobile app: client authorization for accessing protected back-end resources from identity providers (Google and Facebook) or custom identities to authenticate users and grant access to protected back-end resources and Web apps.
+
+**Note:** The {{site.data.keyword.amashort}} service was previously known as Advanced Mobile Access.
+
+<!-- Commenting out all getting started content because new users should start with App ID, not this old service.
 
 Add security to your mobile app with the {{site.data.keyword.amafull}} service. You can configure client authorization for accessing protected back-end resources running on {{site.data.keyword.Bluemix}}. Use identity providers (Google and Facebook), or custom identities to authenticate users and grant access to protected back-end resources and Web apps.
 {:shortdesc}
@@ -58,7 +69,7 @@ To get up and running with the {{site.data.keyword.amashort}} service:
 **Optional:** Configure an identity provider for your application. You can configure one identity provider per application. Configuring an identity provider enables the users of your mobile app to log in with their existing Facebook or Google+ account. Or, you can define how users log in by creating a custom authentication.
    * [Authenticating users with Facebook credentials](facebook-auth-overview.html)
    * [Authenticating users with Google credentials](google-auth-overview.html)
-   * [Authenticating users with a custom identity provider](custom-auth.html)
+   * [Authenticating users with a custom identity provider](custom-auth.html) --->
 
 ## Tutorials and Samples
 {: #samples}
@@ -76,5 +87,3 @@ To get up and running with the {{site.data.keyword.amashort}} service:
 * [Custom authentication - simple sample ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-sample){: new_window}
 
 * [Custom authentication - advanced sample ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-mca-custom-identity-provider-with-user-management){: new_window}
-
-

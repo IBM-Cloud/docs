@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-3-13"
+lastupdated: "2017-03-16"
 
 ---
 
@@ -69,7 +69,7 @@ To create a policy:
 
 1. From the left navigation, click **Settings**.
 
-2. Click **Policy**.
+2. Click **Policies**.
 
 3. Click **Create Policy** and then type a name and description for the new policy.
 
@@ -143,7 +143,7 @@ You can integrate {{site.data.keyword.DRA_short}} with IBM Application Security 
 #### Creating dynamic security scan rules
 {: #criteria_dynamic}
 
-You can integrate {{site.data.keyword.DRA_short}} with {{site.data.keyword.appseccloudfull}} to run dynamic-app scans. For more information about {{site.data.keyword.appseccloud_short}}, see [the official documentation](/docs/services/ApplicationSecurityonCloud/index.html).
+You can integrate {{site.data.keyword.DRA_short}} with {{site.data.keyword.appseccloudfull}} to run dynamic-app scans. For more information about Application Security on Cloud, see [the official documentation](/docs/services/ApplicationSecurityonCloud/index.html).
 
 1. Type a description.
 
@@ -223,7 +223,9 @@ Figure 1 shows a test job that is configured to run unit tests, upload the resul
 
 {{site.data.keyword.DRA_short}} gates check whether your test results comply with a defined policy. If the policy is not met, the {{site.data.keyword.DRA_short}} gate fails by default. You can also configure gates to act in an advisory role to permit pipeline progression even after failure.
 
-Usually, gates are placed before build promotion in your pipeline. This location is ideal to check the quality of the build against your policy to ensure that it is safe to promote from one environment to another. However, you can put gates anywhere in the pipeline where you want a specific criterion to be checked.
+The Deployment Risk dashboard relies on the presence of a gate after a staging deployment job. If you want to use the dashboard, make sure that you have a gate after you deploy to the staging environment, but before you deploy to a production environment.
+
+Usually, gates are placed before build promotion in your pipeline. These locations are ideal to check the quality of the build against your policies to ensure that it is safe to promote from one environment to another. However, you can put gates anywhere in the pipeline where you want a specific criterion to be checked. Gates that are placed before you deploy to a staging environment will still enforce policies, but they will not appear on the Deployment Risk dashboard.
 
 1. On a stage, click the **Stage Configuration** icon ![Pipeline stage configuration icon](images/pipeline-stage-configuration-icon.png) and click **Configure Stage**.
 2. Click **Add Job**. For the job type, select **Test**.
@@ -254,10 +256,12 @@ After you install the IBM Cloud DevOps plugin, you can publish test results to {
 The plugin provides post-build actions and CLIs to support the integration. {{site.data.keyword.DRA_short}} aggregates and analyzes the results from unit tests, functional tests, code coverage tools, static security code scans, and dynamic security code scans to determine whether your code meets predefined policies at gates in your deployment process. If your code does not meet or exceed a policy, the deployment is halted, preventing risky changes from being released. You can use {{site.data.keyword.DRA_short}} as a safety net for your continuous delivery environment, a way to implement and improve quality standards over time, and a data visualization tool to help you understand your project's health.
 
 ### Prerequisites
+{: #jenkins_prerequisites}
 
 You must have access to a server that is running a Jenkins project.
 
 ### Creating a toolchain
+{: #jenkins_create}
 
 Before you can integrate {{site.data.keyword.DRA_short}} with a Jenkins project, you must create a toolchain. 
 
@@ -266,6 +270,7 @@ Before you can integrate {{site.data.keyword.DRA_short}} with a Jenkins project,
 2. After you create the toolchain, add {{site.data.keyword.DRA_short}} to it. For instructions, see the [{{site.data.keyword.DRA_short}} documentation](https://console.ng.bluemix.net/docs/services/DevOpsInsights/index.html). 
 
 ### Installing the plugin
+{: #jenkins_install}
 
 First, download the plugin from {{site.data.keyword.DRA_short}}.  
 
@@ -281,6 +286,7 @@ Then, on your Jenkins server, install the plugin.
 4. Restart Jenkins and verify that the plugin was installed.
 
 ### Configuring Jenkins jobs for the Deployment Risk dashboard
+{: #jenkins_configure}
 
 After the plugin is installed, you can integrate {{site.data.keyword.DRA_short}} into your Jenkins project. 
 
@@ -296,7 +302,7 @@ Follow these steps to use Deployment Risk's gates and dashboard with your projec
    
    * For deployment jobs, use **Publish deployment information to IBM Cloud DevOps**.
    
-3. Complete the required fields:
+3. Complete the required fields. These will vary depending on job type. 
 
    * From the **Credentials** list, select your {{site.data.keyword.Bluemix_notm}} ID and password. If they are not saved in Jenkins, click **Add** to add and save them. Test your connection with {{site.data.keyword.Bluemix_notm}} by clicking **Test Connection**.
    
@@ -325,8 +331,10 @@ Follow these steps to use Deployment Risk's gates and dashboard with your projec
 
 6. View the Deployment Risk dashboard by going to [IBM Bluemix DevOps](https://console.ng.bluemix.net/devops), selecting your toolchain, and clicking **DevOps Insights**.
 
+The Deployment Risk dashboard relies on the presence of a gate after a staging deployment job. If you want to use the dashboard, make sure that you have a gate after you deploy to the staging environment, but before you deploy to a production environment.
     
 ### Configuring notifications
+{: #jenkins_notifications}
 
 You can configure your Jenkins jobs to send notifications to tools like Slack or PagerDuty by following the instructions in the [Bluemix Docs](https://console.ng.bluemix.net/docs/services/ContinuousDelivery/toolchains_integrations.html#jenkins).
 

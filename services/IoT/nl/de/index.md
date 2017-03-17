@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-07"
+lastupdated: "2017-02-22"
 
 ---
 
@@ -21,9 +21,9 @@ lastupdated: "2017-02-07"
 ## Vorbereitende Schritte
 {: #byb}
 
-Bevor Geräte verbunden und Daten verwendet werden können, müssen Sie sich für ein {{site.data.keyword.Bluemix_notm}}-Konto registrieren und eine Instanz des {{site.data.keyword.iot_short_notm}}-Service in Ihrer {{site.data.keyword.Bluemix_notm}}-Organisation erstellen. Sie können eine {{site.data.keyword.iot_short_notm}}-Instanz direkt über die [{{site.data.keyword.iot_short_notm}}-Seite im Bluemix-Servicekatalog](https://console.{DomainName}/catalog/services/internet-of-things-platform/) erstellen.  
+Bevor Geräte verbunden und Daten verwendet werden können, müssen Sie sich für ein {{site.data.keyword.Bluemix_notm}}-Konto registrieren und eine Instanz des {{site.data.keyword.iot_short_notm}}-Service in Ihrer {{site.data.keyword.Bluemix_notm}}-Organisation erstellen. Sie können eine {{site.data.keyword.iot_short_notm}}-Instanz direkt über die [{{site.data.keyword.iot_short_notm}}-Seite im Bluemix-Servicekatalog ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://console.{DomainName}/catalog/services/internet-of-things-platform/){:new_window} erstellen.  
 
-Detaillierte Informationen zur Vorgehensweise beim Anmelden eines Kontos in {{site.data.keyword.Bluemix_notm}}, beim Konfigurieren von Regionen sowie andere Einstellungen für die Kontoverwaltung finden Sie in [Bluemix-Konto verwalten ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://console.ng.bluemix.net/docs/admin/account.html#signup){:new_window}.
+Detaillierte Informationen zur Vorgehensweise beim Anmelden eines Kontos in {{site.data.keyword.Bluemix_notm}}, beim Konfigurieren von Regionen sowie andere Einstellungen für die Kontoverwaltung finden Sie in [Bluemix-Konto verwalten](https://console.ng.bluemix.net/docs/admin/account.html#signup).
 
 Sie können Ihre {{site.data.keyword.iot_short_notm}}-Instanz im Dashboard einrichten und konfigurieren. Zum Öffnen des Dashboards wechseln Sie zu Ihrer Instanz des {{site.data.keyword.iot_short_notm}}-Service in {{site.data.keyword.Bluemix_notm}} und klicken Sie anschließend auf **Dashboard starten**.
 
@@ -35,7 +35,7 @@ Um den Service betriebsbereit zu machen, müssen Sie folgende Optionen betrachte
    |   Service ist bereitgestellt | Service ist nicht bereitgestellt
   ------------- | -------------
   **Ich verfüge über ein Gerät, das ich verbinden kann** | [Verbinden Sie Ihr Gerät mit {{site.data.keyword.iot_short_notm}}](iotplatform_task.html#iotplatform_task).| Untersuchen Sie die Geräteverbindung in [Organisationsdemo wiedergeben ![Symbol für externen Link](../../icons/launch-glyph.svg)](http://discover-iot.eu-gb.mybluemix.net/?cm_mc_uid=44491599487314618721024&cm_mc_sid_50200000=1462798151#/play){:new_window}.
-  **Ich verfüge nicht über ein Gerät, das ich verbinden kann** | [Erstellen und verbinden Sie einen Node-RED-Gerätesimulator](nodereddevice_sample.html){:new_window}. | Beginnen Sie mit [Watson IoT Platform Starter ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://console.ng.bluemix.net/docs/starters/IoT/iot500.html){:new_window}.
+  **Ich verfüge nicht über ein Gerät, das ich verbinden kann** | [Erstellen und verbinden Sie einen Node-RED-Gerätesimulator](nodereddevice_sample.html){:new_window}. | Beginnen Sie mit [Watson IoT Platform Starter](https://console.ng.bluemix.net/docs/starters/IoT/iot500.html).
 Weitere Informationen zur Vorgehensweise beim Verbinden bestimmter Gerätetypen mit {{site.data.keyword.iot_short_notm}} finden Sie in [developerWorks - Anleitungen ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}.  
 
 Entwicklerdokumentation für Geräteverbindungen siehe

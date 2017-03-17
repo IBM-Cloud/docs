@@ -11,7 +11,7 @@ lastupdated: "2016-12-16"
 
 # Contrôle d'accès aux passerelles (bêta)
 
-**Important** : Cette fonction est actuellement disponible dans le cadre d'une version bêta limitée. 
+**Important** : Cette fonction est actuellement disponible dans le cadre d'une version bêta limitée.
 
 Les terminaux de passerelle sont habilitées à agir pour compte d'autres terminaux. Les groupes de ressources de passerelle définissent les terminaux d'une organisation pour le compte desquels les passerelles sont autorisées à agir. Les passerelles peuvent se voir attribuer le rôle *Passerelle standard*. Les passerelles standard peuvent uniquement publier ou s'abonner à des messages pour le compte de terminaux présents dans leur groupe de ressources.
 {: #shortdesc}
@@ -19,7 +19,7 @@ Les terminaux de passerelle sont habilitées à agir pour compte d'autres termin
 
 ## Affectation d'un rôle à une passerelle
 
-L'affectation d'un rôle à une passerelle est obligatoire pour la création d'un groupe de ressources pour cette dernière. Les passerelles sans groupe de ressources peuvent agir pour le compte de tous les terminaux de l'organisation. L'affectation du rôle *Passerelles standard* crée automatiquement un nouveau groupe de ressources pour la passerelle. Dès lors qu'une passerelle est affectée à un groupe de ressources, elle peut uniquement agir pour le compte des terminaux de ce groupe de ressources et pour elle-même, même si son rôle est modifié. 
+L'affectation d'un rôle à une passerelle est obligatoire pour la création d'un groupe de ressources pour cette dernière. Les passerelles sans groupe de ressources peuvent agir pour le compte de tous les terminaux de l'organisation. L'affectation du rôle *Passerelles standard* crée automatiquement un nouveau groupe de ressources pour la passerelle. Dès lors qu'une passerelle est affectée à un groupe de ressources, elle peut uniquement agir pour le compte des terminaux de ce groupe de ressources et pour elle-même, même si son rôle est modifié.
 
 Pour affecter un rôle à une passerelle, utilisez l'API suivante :
 
@@ -49,7 +49,7 @@ Les terminaux spécifiés dans le corps de la demande seront retirés du groupe 
 
 ## Recherche d'un groupe de ressources
 
-Des étiquettes de recherche peuvent être associées à des groupes de ressources. Les étiquettes de recherche peuvent être utilisées pour extraire les détails d'un groupe de ressources à l'aide de l'API suivante : 
+Des étiquettes de recherche peuvent être associées à des groupes de ressources. Les étiquettes de recherche peuvent être utilisées pour extraire les détails d'un groupe de ressources à l'aide de l'API suivante :
 
 ```
 GET /groups
@@ -67,7 +67,7 @@ Cette API renvoie l'identificateur unique du ou des groupes de ressources dont c
 
 ## Analyse d'un groupe de ressources
 
-Les groupes de ressources peuvent être analysés dans divers paramètres afin de renvoyer les propriétés complètes de tous les terminaux du groupe, les identificateurs uniques de tous les terminaux du groupe ou les propriétés du groupe de ressources. 
+Les groupes de ressources peuvent être analysés dans divers paramètres afin de renvoyer les propriétés complètes de tous les terminaux du groupe, les identificateurs uniques de tous les terminaux du groupe ou les propriétés du groupe de ressources.
 
 Pour renvoyer les propriétés complètes de tous les terminaux du groupe de ressources spécifié, utilisez l'API suivante :
 
@@ -116,11 +116,11 @@ Cette API supprime le groupe de ressources spécifié. Les terminaux qui étaien
 
 
   - /groups/{groupId}
-    - PUT : met à jour les propriétés du groupe spécifié. 
+    - PUT : met à jour les propriétés du groupe spécifié.
 
 ## Extraction et mise à jour de propriétés de terminal
 
-Il existe plusieurs façons d'extraire des propriétés de terminal à l'aide d'une API et chaque API renvoie des informations différentes. Pour extraire les propriétés de terminal de tous les terminaux connectés à votre organisation {{site.data.keyword.iot_short_notm}}, utilisez l'API suivante : 
+Il existe plusieurs façons d'extraire des propriétés de terminal à l'aide d'une API et chaque API renvoie des informations différentes. Pour extraire les propriétés de terminal de tous les terminaux connectés à votre organisation {{site.data.keyword.iot_short_notm}}, utilisez l'API suivante :
 
 ```
 GET /authorization/devices:
@@ -145,7 +145,7 @@ GET /authorization/devices/{deviceId}/roles:
 
 Cette API extrait les informations de contrôle d'accès du terminal spécifié sans renvoyer les autres propriétés de terminal. <!-- For more information on the request schema and responses, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
 
-Il existe deux façons de mettre à jour des propriétés de terminal. Les propriétés peuvent être mises à jour sans modifier les propriétés de contrôle d'accès ou les propriétés de contrôle d'accès peuvent être mises à jour directement. 
+Il existe deux façons de mettre à jour des propriétés de terminal. Les propriétés peuvent être mises à jour sans modifier les propriétés de contrôle d'accès ou les propriétés de contrôle d'accès peuvent être mises à jour directement.
 
 Pour mettre à jour des propriétés de terminal sans affecter le propriétés de contrôle d'accès, utilisez l'API suivante :
 

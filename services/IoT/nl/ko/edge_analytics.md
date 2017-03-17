@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-10"
+lastupdated: "2017-02-17"
 
 ---
 
@@ -33,8 +33,8 @@ lastupdated: "2017-01-10"
 - 규칙에서 조건으로 사용할 디바이스 특성이 스키마에 맵핑되었는지 확인하십시오. 자세한 정보는 [디바이스 연결](iotplatform_task.html) 및 [스키마 작성](im_schemas.html)을 참조하십시오.
 - 에지 분석 레시피 검토  
 레시피 포털에서 한 쌍의 레시피는 IBM 에지 분석을 수행하는 데 필요한 단계를 설명합니다. 레시피는 IoT 데이터 소스에 인접하여 분석을 실행하기 위해 Apache Edgent 위에 빌드된 디바이스에서 IBM Edge Analytics Agent를 설치하고 구성하는 방법에 대해 명료하게 설명합니다. 
- - [IBM Watson IoT Platform에서 에지 분석 시작하기](https://developer.ibm.com/recipes/tutorials/getting-started-with-edge-analytics-in-watson-iot-platform/) 레시피는 이 시리즈의 시작입니다. 이 레시피에서는 랩탑 시스템과 Raspberry Pi 3 디바이스에서 Cisco DSA 플랫폼 설정, {{site.data.keyword.iot_short}}에 연결하기 위한 IBM Edge Analytics Agent의 설치와 구성, 시스템 DS 링크 설치 및 연결된 디바이스로서 {{site.data.keyword.iot_short}}의 에지 게이트웨이에 연결하도록 이를 구성, 에지 게이트웨이에서 에지 규칙의 정의와 활성화, 그리고 {{site.data.keyword.iot_short}}에서 에지 규칙의 관리를 설명합니다. 
- - 에지 분석의 고급 사용을 예시하기 위해 [IBM Watson IoT Platform의 에지 분석에서 경보 및 디바이스 조치 핸들링](https://developer.ibm.com/recipes/tutorials/handling-alerts-and-device-actions-with-edge-analytics-in-ibm-watson-iot-platform/) 레시피는 연결된 Arduino Uno 디바이스의 데이터를 Raspberry Pi 3 디바이스로 전송하기 위한 자체 DS 링크를 빌드하는 방법을 보여줍니다. 이 레시피는 에지 규칙 경보의 일부로서 데이터 필터링 및 핸들링 로컬 디바이스 조치도 보여줍니다. 
+ - [Getting Started with Edge Analytics in IBM Watson IoT Platform ![외부 링크 아이콘](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/getting-started-with-edge-analytics-in-watson-iot-platform/){: new_window} 레시피는 이 시리즈의 처음입니다. 이 레시피에서는 랩탑 시스템과 Raspberry Pi 3 디바이스에서 Cisco DSA 플랫폼 설정, {{site.data.keyword.iot_short}}에 연결하기 위한 IBM Edge Analytics Agent의 설치와 구성, 시스템 DS 링크 설치 및 연결된 디바이스로서 {{site.data.keyword.iot_short}}의 에지 게이트웨이에 연결하도록 이를 구성, 에지 게이트웨이에서 에지 규칙의 정의와 활성화, 그리고 {{site.data.keyword.iot_short}}에서 에지 규칙의 관리를 설명합니다. 
+ - Edge Analytics의 고급 사용을 예시하기 위해 [Handling Alerts and Device Actions with Edge Analytics in IBM Watson IoT Platform ![외부 링크 아이콘](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/handling-alerts-and-device-actions-with-edge-analytics-in-ibm-watson-iot-platform/){: new_window} 레시피는 연결된 Arduino Uno 디바이스의 데이터를 Raspberry Pi 3 디바이스로 전송하기 위한 자체 DS 링크를 빌드하는 방법을 보여줍니다. 이 레시피는 에지 규칙 경보의 일부로서 데이터 필터링 및 핸들링 로컬 디바이스 조치도 보여줍니다. 
 
 ## 에지 규칙 및 조치 관리  
 {: #managing_rules}
@@ -216,3 +216,7 @@ EAA 사용 게이트웨이에서 실행되는 에지 규칙 트리거 조치를 
 `RuleNumber` | 규칙 엔진 코어에 정의된 규칙 수입니다.
 `ProcessorNumber` | 디버그용입니다. 규칙 엔진 코어에 정의된 프로세서 수입니다. </br>**참고:** 프로세서는 규칙 엔진 코어의 최소 실행 단위입니다.
 `DataPointsInWindow` | 기간 내에 버퍼링된 데이터 점의 총 수입니다. 데이터 점의 바이트 크기는 해당 데이터 유형에 따라 다릅니다. 예를 들어 float/int 데이터 점 크기는 8바이트인 반면 문자열 데이터 점 크기는 해당 길이에 따라 따릅니다. 대부분의 경우 다음 공식을 사용하여 일정 기간의 메모리 사용을 추정할 수 있습니다. `DataPointsInWindow * 8`.
+## Edge Analytics 커뮤니티
+{: #eaa_community}
+
+[IBM Edge Analytics 커뮤니티 페이지](https://www.ibm.com/developerworks/community/groups/service/html/communitystart?communityUuid=3df173af-0c21-4b9c-9fd1-e8e5561ef460&ftHelpTip=true)에서 Edge Analytics SDK를 다운로드할 수 있습니다. SDK에는 SDK JAR 파일, javadoc, 샘플 코드, 레시피 링크 및 README 파일이 포함됩니다. 커뮤니티에서 비디오를 보고 Edge Analytics를 시작하고 실행할 수 있으며 커뮤니티 포럼을 사용하여 질문할 수 있습니다.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2016-12-01"
+lastupdated: "2016-02-17"
 
 ---
 
@@ -38,11 +38,9 @@ L'API REST HTTP {{site.data.keyword.iot_short_notm}} prend en charge les fonctio
 ## Accès à la documentation de l'API REST HTTP
 {: #api_link}
 
-Pour accéder à la documentation de l'API REST HTTP {{site.data.keyword.iot_short_notm}} et obtenir davantage d'informations sur la génération et la personnalisation de vos applications, voir https://docs.internetofthings.ibmcloud.com/swagger/v0002.html.
+Pour accéder à la documentation de l'API REST HTTP {{site.data.keyword.iot_short_notm}} et obtenir davantage d'informations sur la génération et personnalisation de vos applications, voir [https://docs.internetofthings.ibmcloud.com/swagger/v0002.html](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html)
 
 La seule version de l'API REST HTTP {{site.data.keyword.iot_short_notm}} prise en charge est la version 2. Assurez-vous que vos solutions {{site.data.keyword.iot_short_notm}} utilisent bien la version 2.
-
-
 
 # API de messagerie REST HTTP pour les applications
 {: #rest_messaging_api}
@@ -72,9 +70,9 @@ Outre l'utilisation du protocole de messagerie MQTT, vous pouvez également conf
 
 Si vous connectez un terminal ou une application au service Quickstart, remplacez la valeur d'**orgId** par la chaîne 'quickstart'.
 
-**Remarques :** 
-- Si les applications peuvent réutiliser une connexion HTTP pour publier des événements ou des commandes sur différents terminaux, l'en-tête HTTP d'autorisation quant à lui ne peut pas être modifié. 
-- Le port 443, port SSL par défaut, peut également être spécifié pour les appels API HTTP sécurisés. 
+**Remarques :**
+- Si les applications peuvent réutiliser une connexion HTTP pour publier des événements ou des commandes sur différents terminaux, l'en-tête HTTP d'autorisation quant à lui ne peut pas être modifié.
+- Le port 443, port SSL par défaut, peut également être spécifié pour les appels API HTTP sécurisés.
 
 ### Authentification
 

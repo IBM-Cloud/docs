@@ -39,5 +39,10 @@
     "title": "Building mobile projects",
     "href": "mobile/index.html",
     "category_id": "mobile"
+  }, {
+    "type": "extra",
+    "title": "Working with Mobile Client Access",
+    "href": "services/mobileaccess/index.html",
+    "category_id": "mobile"
   }]
 }

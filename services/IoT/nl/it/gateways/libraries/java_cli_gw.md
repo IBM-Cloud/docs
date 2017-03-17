@@ -26,7 +26,7 @@ Per accedere agli esempi e alle librerie client Java per {{site.data.keyword.iot
 ## Constructor
 {: #constructor}
 
-Il constructor crea l'istanza client gateway e accetta l'oggetto `Properties` che contiene le seguenti definizioni: 
+Il constructor crea l'istanza client gateway e accetta l'oggetto `Properties` che contiene le seguenti definizioni:
 
 |Definizione |Descrizione |
 |:----|:----|
@@ -35,7 +35,7 @@ Il constructor crea l'istanza client gateway e accetta l'oggetto `Properties` ch
 |`type`|Un valore obbligatorio che specifica il tipo di gateway.|
 |`id` |Un valore obbligatorio che specifica l'ID univoco del gateway.|
 |`auth-method`|Il metodo di autenticazione da utilizzare. L'unico metodo supportato è `token`.|
-|`auth-token`|Un token di autenticazione della chiave API per la connessione sicura del tuo gateway a {{site.data.keyword.iot_short_notm}}. |
+|`auth-token`|Un token di autenticazione della chiave API per la connessione sicura del tuo gateway a {{site.data.keyword.iot_short_notm}}.|
 |`clean-session`|Un valore true o false obbligatorio solo se desideri collegarti al gateway con il metodo di sottoscrizione durevole. Per impostazione predefinita, `clean-session` è impostato su true.|
 |`WebSocket`|Un valore true o false obbligatorio solo se desideri collegarti al gateway utilizzando i socket web.|
 |`Porta`|Il numero di porta a cui collegarsi. Specifica 8883 o 443. Se non specifichi un numero di porta, il client si collega a {{site.data.keyword.iot_short_notm}} nel numero di porta 8883 per impostazione predefinita.|
@@ -47,7 +47,7 @@ Il constructor crea l'istanza client gateway e accetta l'oggetto `Properties` ch
 
 L'oggetto `Properties` crea le definizioni utilizzate per interagire con il modulo {{site.data.keyword.iot_short_notm}}.
 
-Il seguente esempio di codice mostra come creare un'istanza client gateway: 
+Il seguente esempio di codice mostra come creare un'istanza client gateway:
 
 ```java
 Properties options = new Properties();
@@ -89,7 +89,7 @@ auth-token=$token
 
 Per collegarti a {{site.data.keyword.iot_short_notm}}, utilizza la funzione `connect()`. La funzione `connect()` include un parametro booleano facoltativo denominato `autoRetry` che determina se la libreria tenta di ricollegarsi nel caso di un errore di connessione dell'eccezione MQTT (MqttException). Per impostazione predefinita, `autoRetry` è impostato su true. Se una connessione MqttSecurityException ha esito negativo perché vengono trasmessi i dettagli di registrazione del dispositivo non corretti, la libreria non tenta di ricollegarsi, anche se `autoRetry` è impostato su true.
 
-Per impostare l'intervallo keepalive per MQTT, puoi facoltativamente utilizzare il metodo `setKeepAliveInterval(int)` prima di richiamare la funzione `connect()`. Il valore `setKeepAliveInterval(int)` viene misurato in secondi e definisce l'intervallo di tempo massimo tra i messaggi inviati o ricevuti. Quando viene specificato un valore `setKeepAliveInterval(int)` il client può rilevare che il server non è più disponibile senza attendere che venga raggiunta la fine del periodo di timeout TCP/IP. Il client assicura che almeno un messaggio sia trasmesso in rete in ogni periodo di intervallo keepalive. Se i messaggi correlati a zero dati vengono ricevuti durante il periodo di timeout, il client invia un piccolo messaggio `ping`, che il server riconosce. `setKeepAliveInterval(int)` è impostato su 60 secondi per impostazione predefinita. Per disabilitare la funzione di elaborazione keepalive sul client, impostata il valore `setKeepAliveInterval(int)` su 0. 
+Per impostare l'intervallo keepalive per MQTT, puoi facoltativamente utilizzare il metodo `setKeepAliveInterval(int)` prima di richiamare la funzione `connect()`. Il valore `setKeepAliveInterval(int)` viene misurato in secondi e definisce l'intervallo di tempo massimo tra i messaggi inviati o ricevuti. Quando viene specificato un valore `setKeepAliveInterval(int)` il client può rilevare che il server non è più disponibile senza attendere che venga raggiunta la fine del periodo di timeout TCP/IP. Il client assicura che almeno un messaggio sia trasmesso in rete in ogni periodo di intervallo keepalive. Se i messaggi correlati a zero dati vengono ricevuti durante il periodo di timeout, il client invia un piccolo messaggio `ping`, che il server riconosce. `setKeepAliveInterval(int)` è impostato su 60 secondi per impostazione predefinita. Per disabilitare la funzione di elaborazione keepalive sul client, impostata il valore `setKeepAliveInterval(int)` su 0.
 
 ```java
 Properties props = GatewayClient.parsePropertiesFile(new File("C:\\temp\\device.prop"));
@@ -98,7 +98,7 @@ gwClient.setKeepAliveInterval(80);
 gwClient.connect();
 ```
 
-Per controllare il numero di tentativi che si verificano quando una connessione ha esito negativo, utilizza la funzione connect(int numberOfTimesToRetry) sovrascritta. 
+Per controllare il numero di tentativi che si verificano quando una connessione ha esito negativo, utilizza la funzione connect(int numberOfTimesToRetry) sovrascritta.
 
 ```java
 GatewayClient gwClient = new GatewayClient(props);
@@ -151,7 +151,7 @@ Quando un dispositivo dietro a un gateway viene registrato, il dispositivo viene
 
 Gli eventi sono meccanismi con cui i dispositivi e i gateway pubblicano i dati in {{site.data.keyword.iot_short_notm}}. Il dispositivo o il gateway controlla il contenuto dell'evento e assegna un nome ad ogni evento che invia. Un gateway può pubblicare gli eventi per se stesso o per conto di qualsiasi dispositivo collegato attraverso di esso.
 
-Quando viene ricevuto un evento dall'istanza {{site.data.keyword.iot_short_notm}}, le credenziali dell'evento ricevuto identificano il gateway di invio, il che significa che un gateway non può impersonare un altro dispositivo. 
+Quando viene ricevuto un evento dall'istanza {{site.data.keyword.iot_short_notm}}, le credenziali dell'evento ricevuto identificano il gateway di invio, il che significa che un gateway non può impersonare un altro dispositivo.
 
 Gli eventi possono essere pubblicati in uno dei tre [livelli di QoS (quality of service)](../../reference/mqtt/index.html#qos-levels), definiti dal protocollo MQTT.  Per impostazione predefinita, gli eventi vengono pubblicati al livello QoS=0.
 
@@ -169,7 +169,7 @@ gwClient.publishGatewayEvent("status", event);
 
 ### Codice per l'incremento del livello QoS predefinito per un evento
 
-Puoi incrementare i [livelli QoS](../../reference/mqtt/index.html#qos-levels) per gli eventi gateway pubblicati. Gli eventi con un livello QoS maggiore di zero possono impiegare più tempo per la pubblicazione, perché sono incluse ulteriori informazioni di ricezione della conferma. 
+Puoi incrementare i [livelli QoS](../../reference/mqtt/index.html#qos-levels) per gli eventi gateway pubblicati. Gli eventi con un livello QoS maggiore di zero possono impiegare più tempo per la pubblicazione, perché sono incluse ulteriori informazioni di ricezione della conferma.
 
 
 ```java
@@ -184,7 +184,7 @@ gwClient.publishGatewayEvent("status", event, 2);
 
 ### Codice per la pubblicazione di eventi nei formati personalizzati.
 
-Gli eventi possono essere pubblicati in diversi formati, ad esempio, JSON, stringa, binario e altro. Per impostazione predefinita, la libreria pubblica gli eventi nel formato JSON, ma puoi specificare i dati in formati differenti se preferisci. Ad esempio, per pubblicare i dati nel formato stringa utilizza il seguente frammento di codice: 
+Gli eventi possono essere pubblicati in diversi formati, ad esempio, JSON, stringa, binario e altro. Per impostazione predefinita, la libreria pubblica gli eventi nel formato JSON, ma puoi specificare i dati in formati differenti se preferisci. Ad esempio, per pubblicare i dati nel formato stringa utilizza il seguente frammento di codice:
 
 ```java
 gwClient.connect();
@@ -194,7 +194,7 @@ boolean status = gwClient.publishGatewayEvent("load", data, "text", 2);
 
 **Nota:** nel precedente esempio di codice, il payload dell'evento deve essere nel formato stringa:
 
-I dati XML possono essere convertiti nel formato stringa e pubblicati come descritto nel seguente codice di esempio: 
+I dati XML possono essere convertiti nel formato stringa e pubblicati come descritto nel seguente codice di esempio:
 
 ```java
 status = gwClient.publishGatewayEvent("load", xmlConvertedString, "xml", 2);
@@ -208,10 +208,10 @@ byte[] cpuLoad = new byte[] {30, 35, 30, 25};
 status = gwClient.publishGatewayEvent("blink", cpuLoad , "binary", 1);
 ```
 
-### Codice per la pubblicazione di eventi dai dispositivi 
+### Codice per la pubblicazione di eventi dai dispositivi
 {: #publishing_events_devices}
 
-Un gateway può pubblicare gli eventi per conto di qualsiasi dispositivo collegato attraverso di esso trasmettendo i valori dell'ID del tipo appropriato e l'ID del dispositivo dell'evento originale, come descritto nel seguente esempio: 
+Un gateway può pubblicare gli eventi per conto di qualsiasi dispositivo collegato attraverso di esso trasmettendo i valori dell'ID del tipo appropriato e l'ID del dispositivo dell'evento originale, come descritto nel seguente esempio:
 
 ```java
 
@@ -231,7 +231,7 @@ Utilizza il metodo overloaded `publishDeviceEvent()` per pubblicare l'evento del
 
 ### Codice per la pubblicazione di eventi del dispositivo che sono in un formato personalizzato
 
-In modo simile agli eventi gateway, anche gli eventi dispositivo possono essere pubblicati in diversi formati. Per impostazione predefinita, la libreria pubblica gli eventi dispositivo nel formato JSON, ma puoi specificare i dati in formati differenti se preferisci. Ad esempio, per pubblicare i dati nel formato stringa utilizza il seguente esempio di codice: 
+In modo simile agli eventi gateway, anche gli eventi dispositivo possono essere pubblicati in diversi formati. Per impostazione predefinita, la libreria pubblica gli eventi dispositivo nel formato JSON, ma puoi specificare i dati in formati differenti se preferisci. Ad esempio, per pubblicare i dati nel formato stringa utilizza il seguente esempio di codice:
 
 ```java
 gwClient.connect();
@@ -241,13 +241,13 @@ boolean status = gwClient.publishDeviceEvent(deviceType, deviceId, "load", data,
 
 **Nota:** il payload dell'evento deve essere nel formato stringa.
 
-Tutti i dati XML possono essere convertiti nel formato stringa e pubblicati come mostrato nel seguente esempio di codice: 
+Tutti i dati XML possono essere convertiti nel formato stringa e pubblicati come mostrato nel seguente esempio di codice:
 
 ```java
 status = gwClient.publishDeviceEvent(deviceType, deviceId, "load", xmlConvertedString, "xml", 2);
 ```
 
-In modo simile, per pubblicare gli eventi dispositivo nel formato binario, utilizza un array di byte descritto nel seguente esempio: 
+In modo simile, per pubblicare gli eventi dispositivo nel formato binario, utilizza un array di byte descritto nel seguente esempio:
 ```java
 gwClient.connect();
 byte[] cpuLoad = new byte[] {30, 35, 30, 25};
@@ -266,14 +266,14 @@ gwClient.connect()
 gwClient.subscribeToDeviceCommands(DEVICE_TYPE, DEVICE_ID);
 ```
 
-Per elaborare comandi specifici è necessario registrare un metodo di callback `Command`. I messaggi vengono restituiti come un'istanza della classe `Command`, che contiene le seguenti proprietà: 
+Per elaborare comandi specifici è necessario registrare un metodo di callback `Command`. I messaggi vengono restituiti come un'istanza della classe `Command`, che contiene le seguenti proprietà:
 
 
 | Proprietà     |Tipo di dati     | Descrizione|
 |----------------|----------------|---------------
-|`deviceType`|Stringa| Il tipo di dispositivo per cui viene ricevuto il comando. |
+|`deviceType`|Stringa| Il tipo di dispositivo per cui viene ricevuto il comando.|
 |`deviceId`|Stringa| L'ID del dispositivo per cui viene ricevuto il comando, che può essere il gateway o un dispositivo collegato tramite il gateway.|
-|`data`|Oggetto| Il payload del comando. |
+|`data`|Oggetto| Il payload del comando.|
 |`format`|Stringa| Il formato del payload del comando, che può essere qualsiasi stringa, ad esempio, JSON. binario, testo o altro.|
 |`command`|Stringa|Il nome del comando.|
 |`timestamp`|org.joda.time.DateTime|La data e l'ora del momento in cui è stato inviato il comando.|
@@ -326,7 +326,7 @@ gwClient.setGatewayCallback(callback);
 gwClient.subscribeToDeviceCommands(DEVICE_TYPE, DEVICE_ID);
 ```
 
-I metodi overloaded sono disponibili per controllare la sottoscrizione ai comandi. 
+I metodi overloaded sono disponibili per controllare la sottoscrizione ai comandi.
 
 ### Elenco dei dispositivi collegati tramite un gateway
 {: #list_devices_gw}

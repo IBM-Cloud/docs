@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-24"
+lastupdated: "2017-02-17"
 
 ---
 
@@ -79,7 +79,7 @@ Pour enregistrer un membre auprès de votre organisation {{site.data.keyword.iot
 3. Entrez l'adresse électronique du membre.
 4. Sélectionnez un rôle pour ce membre.
 5. Entrez l'objet, le nom de domaine et l'émetteur.
-   **Important :** Assurez-vous que les zones `Objet`, `Nom de domaine` et `Emetteur` sont conformes aux recommandations et aux normes d'OpenID Connect. Pour plus d'informations, voir le site Web [OpenID Connect](http://openid.net/connect/).
+   **Important :** Assurez-vous que les zones `Objet`, `Nom de domaine` et `Emetteur` sont conformes aux recommandations et aux normes d'OpenID Connect. Pour plus d'informations, voir le site Web [OpenID Connect ![](../../icons/launch-glyph.svg)](http://openid.net/connect/){: new_window}. 
 6. Facultatif : Définissez une date d'expiration pour le membre.
 7. Cliquez sur **Enregistrer un membre**.
 
@@ -100,25 +100,25 @@ Lorsque vous construisez un fichier CSV pour importer des membres dans votre org
 
 Les utilisateurs peuvent être édités pour modifier leur rôle, ajouter, retirer ou modifier une date d'expiration d'accès ou ajouter ou retirer des droits d'accès à l'organisation.
 
-1. Depuis votre tableau de bord {{site.data.keyword.iot_short_notm}}, cliquez sur **Membres** dans la barre de navigation sur la gauche. 
-2. Cliquez sur l'icône **Editer** ![Edit](/docs/images/edit_32.svg) en regard de l'utilisateur que vous souhaitez éditer. 
+1. Depuis votre tableau de bord {{site.data.keyword.iot_short_notm}}, cliquez sur **Membres** dans la barre de navigation sur la gauche.
+2. Cliquez sur l'icône **Editer** ![Edit](/docs/images/edit_32.svg) en regard de l'utilisateur que vous souhaitez éditer.
 3. Apportez les modifications souhaitées à l'utilisateur.
 4. Cliquez sur **Sauvegarder**.
 
 ## Blocage de l'accès utilisateur
 {: #blocking-users}
 
-Il est possible de bloquer l'accès des utilisateurs à l'organisation {{site.data.keyword.iot_short_notm}} tout en conservant l'appartenance de ces utilisateurs à l'organisation. 
+Il est possible de bloquer l'accès des utilisateurs à l'organisation {{site.data.keyword.iot_short_notm}} tout en conservant l'appartenance de ces utilisateurs à l'organisation.
 
-1. Depuis votre tableau de bord {{site.data.keyword.iot_short_notm}}, cliquez sur **Membres** dans la barre de navigation sur la gauche. 
-2. Cliquez sur le bouton à bascule en regard de l'utilisateur dont vous souhaitez bloquer l'accès à l'organisation {{site.data.keyword.iot_short_notm}}. 
+1. Depuis votre tableau de bord {{site.data.keyword.iot_short_notm}}, cliquez sur **Membres** dans la barre de navigation sur la gauche.
+2. Cliquez sur le bouton à bascule en regard de l'utilisateur dont vous souhaitez bloquer l'accès à l'organisation {{site.data.keyword.iot_short_notm}}.
 
 
 ## Retrait d'utilisateurs
 {: #removing-users}
 
-Les utilisateurs peuvent être entièrement retirés de l'organisation {{site.data.keyword.iot_short_notm}}. Le retrait d'utilisateurs ne peut pas être annulé, et les utilisateurs doivent être [ajoutés à la plateforme](#adding-new-users) pour restaurer leur accès. 
+Les utilisateurs peuvent être entièrement retirés de l'organisation {{site.data.keyword.iot_short_notm}}. Le retrait d'utilisateurs ne peut pas être annulé, et les utilisateurs doivent être [ajoutés à la plateforme](#adding-new-users) pour restaurer leur accès.
 
-1. Depuis votre tableau de bord {{site.data.keyword.iot_short_notm}}, cliquez sur **Membres** dans la barre de navigation sur la gauche. 
-2. Cliquez sur l'icône **Supprimer** ![Supprimer](/docs/images/trash_32.svg) en regard de l'utilisateur à retirer. 
+1. Depuis votre tableau de bord {{site.data.keyword.iot_short_notm}}, cliquez sur **Membres** dans la barre de navigation sur la gauche.
+2. Cliquez sur l'icône **Supprimer** ![Supprimer](/docs/images/trash_32.svg) en regard de l'utilisateur à retirer.
 3. Cliquez sur **Supprimer** dans la boîte de dialogue de confirmation.

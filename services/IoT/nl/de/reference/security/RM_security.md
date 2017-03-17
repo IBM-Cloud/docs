@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-07"
+lastupdated: "2017-02-22"
 
 ---
 
@@ -20,11 +20,13 @@ Mit dem Add-on für das Risiko- und Sicherheitsmanagement können Organisationen
 ## Verbindungssicherheitsrichtlinie
 {: #connect_policy}
 
-Die Verbindungssicherheitsrichtlinie legt fest, wie Geräte eine Verbindung zur Plattform herstellen. Sie können Standardverbindungsrichtlinien für alle Gerätetypen sowie angepasste Einstellungen für bestimmte Gerätetypen festlegen. Die Richtlinie kann so eingerichtet werden, dass unverschlüsselte Verbindungen möglich sind, nur TLS-Verbindungen zulässig sind oder Geräte sich mit clientseitigen Zertifikaten authentifizieren müssen. Wenn clientseitige Zertifikate verwendet werden, stellt die Sicherheitsrichtlinie eine zusätzliche Option für die ausschließliche Verwendung des Zertifikats für die Clientauthentifizierung oder einer Kombination aus Clientzertifikat und Client-ID/Authentifizierungstoken bereit.
+Die Verbindungssicherheitsrichtlinie legt fest, wie Geräte eine Verbindung zur Plattform herstellen und wie sie mit den gebührenfreien und erweiterten Sicherheitsplänen verwendet werden. Sie können Standardverbindungsrichtlinien für alle Gerätetypen sowie angepasste Einstellungen für bestimmte Gerätetypen festlegen. Die Richtlinie kann so eingerichtet werden, dass unverschlüsselte Verbindungen möglich sind, nur TLS-Verbindungen zulässig sind oder Geräte sich mit clientseitigen Zertifikaten authentifizieren müssen.
 
-Informationen zum Konfigurieren von Sicherheitsrichtlinien für Verbindungen finden Sie in [Sicherheitsrichtlinien konfigurieren](set_up_policies.html).
+Wenn Sie einen Standardsicherheitsplan verwenden, sind keine Verbindungsrichtlinien verfügbar. Informationen zum Konfigurieren von Sicherheitsrichtlinien für Verbindungen finden Sie in [Sicherheitsrichtlinien konfigurieren](set_up_policies.html).
 
 Die Verbindungssicherheit kann auch so eingerichtet werden, dass Clients anstelle des bereitgestellten Standardzertifikats ihr eigenes serverseitiges Zertifikat verwenden. Dies kann beispielsweise hilfreich sein, wenn die Benutzergeräte den Server während des TLS-Handshakes authentifizieren. In diesem ersten Release des Add-ons für das Risiko- und Sicherheitsmanagement kann der Domänenname des {{site.data.keyword.iot_short_notm}}-Servers nicht geändert werden und muss im Serverzertifikat wie vorgegeben verwendet werden.
+
+
 
 ## Clientzertifikate
 {: #certificates}

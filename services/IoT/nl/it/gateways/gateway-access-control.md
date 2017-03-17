@@ -103,7 +103,7 @@ POST /groups
 
 Questa API crea un gruppo di risorse e restituisce i dettagli del gruppo. <!-- For details on the request schema and the responses, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
 
-Per eliminare un gruppo di risorse, utilizza la seguente API: 
+Per eliminare un gruppo di risorse, utilizza la seguente API:
 
 ```
 DELETE /groups/{groupId}
@@ -118,9 +118,9 @@ Questa API elimina il gruppo di risorse specificato. I dispositivi che sono memb
   - /groups/{groupId}
     - PUT: aggiorna le proprietà del gruppo specificato.
 
-## Richiamo e aggiornamento delle proprietà del dispositivo. 
+## Richiamo e aggiornamento delle proprietà del dispositivo.
 
-Esistono diversi modi per richiamare le proprietà del dispositivo utilizzando l'API, ogni API restituisce informazioni diverse. Per richiamare le proprietà del dispositivo di tutti i dispositivi collegati alla tua organizzazione {{site.data.keyword.iot_short_notm}}, utilizza la seguente API: 
+Esistono diversi modi per richiamare le proprietà del dispositivo utilizzando l'API, ogni API restituisce informazioni diverse. Per richiamare le proprietà del dispositivo di tutti i dispositivi collegati alla tua organizzazione {{site.data.keyword.iot_short_notm}}, utilizza la seguente API:
 
 ```
 GET /authorization/devices:

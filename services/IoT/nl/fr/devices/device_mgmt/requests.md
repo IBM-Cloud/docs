@@ -593,7 +593,7 @@ La liste suivante fournit des informations utiles pour le traitement du processu
 
 ## Recettes relatives aux actions sur les terminaux et aux actions sur un microprogramme
 
-Les recettes suivantes décrivent le flux complet requis pour effectuer des actions sur les terminaux et sur un microprogramme. 
+Les recettes suivantes décrivent le flux complet requis pour effectuer des actions sur les terminaux et sur un microprogramme.
 
 - [Device Management in WIoT Platform – Roll Back & Factory Reset](https://developer.ibm.com/recipes/tutorials/device-management-in-wiot-platform-roll-back-factory-reset/)
 

@@ -30,7 +30,7 @@ El {{site.data.keyword.iot_short_notm}} tiene suministros para un nivel de servi
 
 ## Acuerdo de nivel de servicio de {{site.data.keyword.Bluemix_notm}}
 
-{{site.data.keyword.Bluemix_notm}} publica términos de uso que difieren en función de si [Acuerdo de servicios en la nube de IBM![icono de enlace externo](../../../icons/launch-glyph.svg)](http://www-05.ibm.com/support/operations/files/pdf/csa_us.pdf?cm_mc_uid=65870113399114371461368&cm_mc_sid_50200000=1469524513){: new_window} o el [Acuerdo de IBM International Passport Advantage![icono de enlace externo](../../../icons/launch-glyph.svg)](https://www-01.ibm.com/software/passportadvantage/pa_agreements.html){: new_window} se aplican al usuario. Para obtener más información sobre el Acuerdo de nivel de servicio de {{site.data.keyword.Bluemix_notm}}, consulte [Términos de {{site.data.keyword.Bluemix_notm}}](.../.../.../navigation/notices.html#terms).
+{{site.data.keyword.Bluemix_notm}} publica términos de uso que difieren en función de si [Acuerdo de servicios en la nube de IBM ![icono de enlace externo](../../../icons/launch-glyph.svg)](http://www-05.ibm.com/support/operations/files/pdf/csa_us.pdf?cm_mc_uid=65870113399114371461368&cm_mc_sid_50200000=1469524513){: new_window} o el [Acuerdo de IBM International Passport Advantage ![icono de enlace externo](../../../icons/launch-glyph.svg)](https://www-01.ibm.com/software/passportadvantage/pa_agreements.html){: new_window} se aplican al usuario. Para obtener más información sobre el Acuerdo de nivel de servicio de {{site.data.keyword.Bluemix_notm}}, consulte [Términos de {{site.data.keyword.Bluemix_notm}}](.../.../.../navigation/notices.html#terms).
 
 ## Tarifas de {{site.data.keyword.iot_short_notm}}
 {: #iot-pricing}

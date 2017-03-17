@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-10"
+lastupdated: "2017-02-17"
 
 ---
 
@@ -95,11 +95,11 @@ Ihre Gerätedaten werden nun in Ihrer {{site.data.keyword.cloudant}}-Datenbank g
 
 Die folgende Anleitung beschreibt die Vorgehensweise zum Verwenden von {{site.data.keyword.cloudant_short_notm}} als Archivierungsspeicher für {{site.data.keyword.iot_short}}:
 
-- [{{site.data.keyword.cloudant_short_notm}} als Archivdatenspeicher für {{site.data.keyword.iot_short}} konfigurieren](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-parti/) - Diese Anleitung beschreibt das Speichern von Gerätedaten in {{site.data.keyword.cloudant_short_notm}} und erläutert die Vorgehensweise zum Konfigurieren und Speichern von Gerätedaten mit {{site.data.keyword.cloudant_short_notm}} als Archivdatenspeicher.
+- [{{site.data.keyword.cloudant_short_notm}} als Archivdatenspeicher für {{site.data.keyword.iot_short}} konfigurieren ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-parti/){: new_window} - Diese Anleitung beschreibt das Speichern von Gerätedaten in {{site.data.keyword.cloudant_short_notm}} und erläutert die Vorgehensweise zum Konfigurieren und Speichern von Gerätedaten mit {{site.data.keyword.cloudant_short_notm}} als Archivdatenspeicher.
 
-- [{{site.data.keyword.iot_short}}-Gerätedaten aus {{site.data.keyword.cloudant_short_notm}} abrufen und verarbeiten](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-partii) - Diese Anleitung beschreibt das Ausführen von Abfrage- und Verarbeitungsoperationen für Gerätedaten, die in {{site.data.keyword.cloudant_short_notm}} gespeichert sind.
+- [{{site.data.keyword.iot_short}}-Gerätedaten aus {{site.data.keyword.cloudant_short_notm}} abrufen und verarbeiten ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/cloudant-nosql-db-as-historian-data-storage-for-ibm-watson-iot-partii){: new_window} - Diese Anleitung beschreibt das Ausführen von Abfrage- und Verarbeitungsoperationen für Gerätedaten, die in {{site.data.keyword.cloudant_short_notm}} gespeichert sind.
 
-- [In der Cloudant NoSQL-Datenbank gespeicherte Watson IoT-Gerätedaten darstellen](https://developer.ibm.com/recipes/?post_type=pnext_tutorial&p=27327) - Diese Anleitung zeigt, wie eine Verknüpfung zwischen Kurvendiagrammkarten und dem Archivdatenspeicher eingerichtet wird, um Gerätedaten im Watson IoT Platform-Dashboard anzuzeigen.
+- [In der Cloudant NoSQL-Datenbank gespeicherte Watson IoT-Gerätedaten darstellen ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/?post_type=pnext_tutorial&p=27327){: new_window} - Diese Anleitung zeigt, wie eine Verknüpfung zwischen Kurvendiagrammkarten und dem Archivdatenspeicher eingerichtet wird, um Gerätedaten im Watson IoT Platform-Dashboard anzuzeigen.
 
 
 ## Neue Designdokumente erstellen  
@@ -109,7 +109,7 @@ Neue Designdokumente, die in der Konfigurationsdatenbank enthalten sind, werden 
 
 Die standardmäßig in {{site.data.keyword.iot_short_notm}} enthaltenen Designdokumente implementieren neben der Zusammenfassungsfunktion Abfragen, die in der aktuellen Archivierungsfunktion zur Verfügung stehen.
 
-Der Konfigurationsdatenbank können zusätzliche Designdokumente hinzugefügt werden, die im Zuge ihrer Erstellung in neue Datenbanken für Bucketintervalle kopiert werden. Informationen zum Hinzufügen von Designdokumenten zur Konfigurationsdatenbank finden Sie in der [Dokumentation zur Cloudant-API](https://docs.cloudant.com/document.html).
+Der Konfigurationsdatenbank können zusätzliche Designdokumente hinzugefügt werden, die im Zuge ihrer Erstellung in neue Datenbanken für Bucketintervalle kopiert werden. Informationen zum Hinzufügen von Designdokumenten zur Konfigurationsdatenbank finden Sie in der [Dokumentation zur Cloudant-API ![Symbol für externen Link](../icons/launch-glyph.svg)](https://docs.cloudant.com/document.html){: new_window}.
 
 <!--  # Related links
 {: #rellinks}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017
-lastupdated: "2017-01-30"
+lastupdated: "2017-03-15"
 
 ---
 
@@ -11,6 +11,8 @@ lastupdated: "2017-01-30"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
+The {{site.data.keyword.amafull}} service is replaced with the {{site.data.keyword.appid_full}} service.
 
 # About {{site.data.keyword.amashort}}
 {: #mca-overview}
@@ -91,7 +93,7 @@ The following diagram describes how a request flows from the client SDK to your 
 ## Getting help and support for {{site.data.keyword.amashort}}
 {: #gettinghelp}
 
-If you have problems or questions when using {{site.data.keyword.amashort}}, you can get help by searching for information or by asking questions through a forum. You can also open a support ticket. 
+If you have problems or questions when using {{site.data.keyword.amashort}}, you can get help by searching for information or by asking questions through a forum. You can also open a support ticket.
 
 When using the forums to ask a question, tag your question so that it is seen by the {{site.data.keyword.Bluemix_notm}} development teams.
 
@@ -102,4 +104,3 @@ When using the forums to ask a question, tag your question so that it is seen by
 See [Getting help](https://www.{DomainName}/docs/support/index.html#getting-help) for more details about using the forums.
 
 For information about opening an IBM support ticket, or about support levels and ticket severities, see [Contacting support](https://www.{DomainName}/docs/support/index.html#contacting-support).
-

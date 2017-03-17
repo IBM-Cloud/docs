@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-24"
+lastupdated: "2017-02-17"
 
 ---
 
@@ -79,7 +79,7 @@ lastupdated: "2017-01-24"
 3. メンバーの E メール・アドレスを入力します。
 4. このメンバーの役割を選択します。
 5. サブジェクト、レルム名、発行者を入力します。
-   **重要:** `「サブジェクト」`、`「レルム名 (Realm Name)」`、`「発行者」`の各フィールドは、OpenID Connect の推奨事項と規格に準拠したものにしてください。詳しくは、[OpenID Connect](http://openid.net/connect/) Web サイトを参照してください。
+   **重要:** `「サブジェクト」`、`「レルム名 (Realm Name)」`、`「発行者」`の各フィールドは、OpenID Connect の推奨事項と規格に準拠したものにしてください。詳しくは、[OpenID Connect ![外部リンク・アイコン](../../icons/launch-glyph.svg)](http://openid.net/connect/){: new_window} の Web サイトを参照してください。
 6. オプション: メンバーの有効期限日付を設定します。
 7. **「メンバーの登録 (Register Member)」**をクリックします。
 

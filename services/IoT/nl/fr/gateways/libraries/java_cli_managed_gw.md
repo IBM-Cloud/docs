@@ -18,39 +18,39 @@ lastupdated: "2016-12-06"
 Les passerelles jouent un rôle important dans la gestion des terminaux qui leur sont connectés. De nombreux terminaux sont très basiques et ne sont dotés d'aucune fonction de gestion des terminaux, par conséquent, ces terminaux basiques doivent être gérés depuis une passerelle. Dans {{site.data.keyword.iot_full}}, une passerelle gérée est une passerelle qui peut gérer les terminaux qui lui sont connectés et fournir des fonctions de gestion des terminaux, telles que les mises à jour de microprogramme, d'emplacement et de diagnostic.
 {:shortdesc}
 
-Vous pouvez utiliser la bibliothèque client Java {{site.data.keyword.iot_short}} et les informations fournies pour développer du code Java et faire de votre passerelle une passerelle connectée. Des exemples sont également fournis pour vous aider à développer du code Java dans le but de connecter une passerelle au service de gestion des terminaux et d'exécuter des opérations de gestion des terminaux. 
+Vous pouvez utiliser la bibliothèque client Java {{site.data.keyword.iot_short}} et les informations fournies pour développer du code Java et faire de votre passerelle une passerelle connectée. Des exemples sont également fournis pour vous aider à développer du code Java dans le but de connecter une passerelle au service de gestion des terminaux et d'exécuter des opérations de gestion des terminaux.
 
 ## Service de gestion de terminaux
 {: #dm_service}
 
-Le service de gestion des terminaux {{site.data.keyword.iot_short}} fournit des fonctions de gestion des terminaux permettant aux passerelles de gérer les terminaux qui lui sont connectés. 
+Le service de gestion des terminaux {{site.data.keyword.iot_short}} fournit des fonctions de gestion des terminaux permettant aux passerelles de gérer les terminaux qui lui sont connectés.
 
-Une passerelle gérée exécute un agent de gestion des terminaux, lequel s'exécute en tant que proxy pour tous les terminaux qui se connectent à {{site.data.keyword.iot_short}} via la passerelle. 
+Une passerelle gérée exécute un agent de gestion des terminaux, lequel s'exécute en tant que proxy pour tous les terminaux qui se connectent à {{site.data.keyword.iot_short}} via la passerelle.
 
 ### Agent de gestion des terminaux
 
-Les terminaux qui se connectent à {{site.data.keyword.iot_short}} indirectement via une passerelle peuvent utiliser différents protocoles de connexion, s'ils sont pris en charge par le terminal de passerelle. 
+Les terminaux qui se connectent à {{site.data.keyword.iot_short}} indirectement via une passerelle peuvent utiliser différents protocoles de connexion, s'ils sont pris en charge par le terminal de passerelle.
 
-L'instance `ManagedGateway` est un agent de gestion des terminaux qui fournit une liste de méthodes permettant d'effectuer une ou plusieurs actions de gestion des terminaux, telles que la participation à l'activité de gestion des terminaux et la mise à jour de codes d'erreur, de journaux, d'emplacement et de microprogramme ou de terminal. 
+L'instance `ManagedGateway` est un agent de gestion des terminaux qui fournit une liste de méthodes permettant d'effectuer une ou plusieurs actions de gestion des terminaux, telles que la participation à l'activité de gestion des terminaux et la mise à jour de codes d'erreur, de journaux, d'emplacement et de microprogramme ou de terminal.
 
 L'agent de gestion des terminaux sur la passerelle convertit et traite le protocole de connexion des terminaux qui se connectent, garantissant ainsi que le terminal peut être géré par {{site.data.keyword.iot_short}}. Grâce à l'agent de gestion des terminaux, la passerelle devient plus qu'un tunnel transparent entre le terminal connecté et {{site.data.keyword.iot_short}}. Par exemple, si un terminal connecté à une passerelle ne parvient pas à télécharger un microprogramme, l'agent de gestion des terminaux sur la passerelle peut effectuer les actions suivantes :
 - Intercepter une demande de téléchargement de microprogramme émise par un terminal
 - Télécharger le microprogramme pour le terminal
 - Stocker le microprogramme de terminal sur la passerelle
 
-Plus tard, lorsque le terminal reçoit l'instruction d'effectuer la mise à niveau, l'agent de gestion des terminaux sur la passerelle peut envoyer le microprogramme au terminal et le mettre à jour. 
+Plus tard, lorsque le terminal reçoit l'instruction d'effectuer la mise à niveau, l'agent de gestion des terminaux sur la passerelle peut envoyer le microprogramme au terminal et le mettre à jour.
 
 ## Création du modèle de terminal
 {: #create_device_model}
 
 Dans {{site.data.keyword.iot_short}}, le modèle de terminal décrit les métadonnées et les caractéristiques de gestion de terminaux et de passerelles. La base de données de terminaux représente la principale source d'informations sur les terminaux ou les passerelles. Les applications et les terminaux gérés peuvent envoyer des mises à jour d'emplacement, des mises à jour de processus de mise à niveau de microprogramme et d'autres types de mise à jour. Lorsque des mises à jour sont reçues par {{site.data.keyword.iot_short}}, la base de données de terminaux est mise à jour et les informations sont disponibles pour les applications qui se connectent.
 
-Dans la bibliothèque client Java {{site.data.keyword.iot_short}}, le modèle de terminal est représenté par la classe Java `DeviceData`. 
+Dans la bibliothèque client Java {{site.data.keyword.iot_short}}, le modèle de terminal est représenté par la classe Java `DeviceData`.
 
 Pour créer la classe `DeviceData`, créez les objets suivants :
 
 - `DeviceInfo` (facultatif)
-- `DeviceLocation` (facultatif, requis uniquement si le terminal souhaite être averti de l'emplacement qui est défini par l'application via l'API {{site.data.keyword.iot_short}}) 
+- `DeviceLocation` (facultatif, requis uniquement si le terminal souhaite être averti de l'emplacement qui est défini par l'application via l'API {{site.data.keyword.iot_short}})
 - `DeviceFirmware` (facultatif)
 - `DeviceMetadata` (facultatif)
 
@@ -81,7 +81,7 @@ DeviceMetadata metadata = new DeviceMetadata(data);
 
 ```
 
-Le fragment de code suivant illustre la création de la classe `DeviceData` à l'aide des objets `DeviceInfo` et `DeviceMetadata` qui ont été créés dans l'exemple précédent : 
+Le fragment de code suivant illustre la création de la classe `DeviceData` à l'aide des objets `DeviceInfo` et `DeviceMetadata` qui ont été créés dans l'exemple précédent :
 
 ```java
 DeviceData deviceData = new DeviceData.Builder().
@@ -90,14 +90,14 @@ DeviceData deviceData = new DeviceData.Builder().
                          build();
 ```
 
-Chaque passerelle et chaque terminal connecté doivent posséder leur propre définition de classe `DeviceData` destinée à les représenter dans {{site.data.keyword.iot_short}}. Pour les passerelles, la classe `DeviceData` est transmise à la bibliothèque dans le cadre de la construction de l'instance `ManagedGateway`. Pour les terminaux connectés, la classe `DeviceData` est transmise à la bibliothèque en même temps que l'objet `sendDeviceManageRequest()`. 
+Chaque passerelle et chaque terminal connecté doivent posséder leur propre définition de classe `DeviceData` destinée à les représenter dans {{site.data.keyword.iot_short}}. Pour les passerelles, la classe `DeviceData` est transmise à la bibliothèque dans le cadre de la construction de l'instance `ManagedGateway`. Pour les terminaux connectés, la classe `DeviceData` est transmise à la bibliothèque en même temps que l'objet `sendDeviceManageRequest()`.
 
 ## Constructeurs ManagedGateway
 {: #construct_managed_gateway}
 
-`ManagedGateway` est une classe Java qui permet de connecter une passerelle à {{site.data.keyword.iot_short}} en tant que passerelle gérée pouvant effectuer au moins une opération de gestion des terminaux soit pour elle même soit pour les terminaux connectés. Une instance `ManagedGateway` peut également être utilisée pour effectuer des opérations de passerelle normales, telles que la publication d'événements de terminal, la connexion d'événements de terminal et l'écoute de commandes provenant d'applications. L'instance `ManagedGateway` est un agent de gestion des terminaux. 
+`ManagedGateway` est une classe Java qui permet de connecter une passerelle à {{site.data.keyword.iot_short}} en tant que passerelle gérée pouvant effectuer au moins une opération de gestion des terminaux soit pour elle même soit pour les terminaux connectés. Une instance `ManagedGateway` peut également être utilisée pour effectuer des opérations de passerelle normales, telles que la publication d'événements de terminal, la connexion d'événements de terminal et l'écoute de commandes provenant d'applications. L'instance `ManagedGateway` est un agent de gestion des terminaux.
 
-Dans la classe `ManagedGateway`, deux constructeurs, Constructeur 1 et Constructeur 2, prennent en charge des modèles d'utilisateur distincts. 
+Dans la classe `ManagedGateway`, deux constructeurs, Constructeur 1 et Constructeur 2, prennent en charge des modèles d'utilisateur distincts.
 
 ### Constructeur 1
 
@@ -106,15 +106,15 @@ Le constructeur 1 construit une instance `ManagedGateway` en acceptant une class
 | Propriété     |Description     |
 |----------------|----------------|
 |`Organization-ID` |ID de votre organisation.|
-|`Gateway-Type` |Type de votre terminal de passerelle. |
-|`Gateway-ID` |ID du terminal de passerelle. |
+|`Gateway-Type` |Type de votre terminal de passerelle.|
+|`Gateway-ID` |ID du terminal de passerelle.|
 |`Authentication-Method`|Méthode d'authentification. La seule méthode prise en charge est "token".|
 |`Authentication-Token`|Jeton de clé d'API.|
 |`auth-key`   |Clé d'API facultative qui est requise lorsque vous affectez la valeur `apikey` au paramètre auth-method.|
 |`auth-token`   |Jeton de clé d'API qui est également requis lorsque vous affectez la valeur `apikey` au paramètre auth-method. |
 |`clean-session`|Valeur true ou false requise uniquement si vous souhaitez connecter la passerelle en mode d'abonnement durable. Par défaut, `clean-session` prend la valeur `true`.|
 |`Port`|Numéro de port auquel se connecter. Indiquez 8883 ou 443. Si vous n'indiquez pas de numéro de port, le client se connecte à {{site.data.keyword.iot_short_notm}} sur le numéro de port 8883 par défaut.|
-|`WebSocket`|Valeur true ou false requise uniquement si vous souhaitez connecter la passerelle à l'aide de WebSockets. |
+|`WebSocket`|Valeur true ou false requise uniquement si vous souhaitez connecter la passerelle à l'aide de WebSockets.|
 |`MaxInflightMessages`  |Définit le nombre maximal de messages en cours pour la connexion. La valeur par défaut est 100.|
 |`Automatic-Reconnect`  |Valeur true ou false qui est requise lorsque vous souhaitez reconnecter automatiquement le terminal à {{site.data.keyword.iot_short_notm}} alors qu'il est en ode déconnecté. La valeur par défaut est false.|
 |`Disconnected-Buffer-Size`|Nombre maximal de messages qui peut être stocké en mémoire alors que le client est déconnecté. La valeur par défaut est 5 000.|
@@ -155,35 +155,36 @@ ManagedGateway ManagedGateway = new ManagedGateway(mqttClient, deviceData);
 
 ```
 
-**Remarque :** Dans le cadre du développement pour des terminaux personnalisés, utilisez le constructeur 2, car ce dernier crée une instance de passerelle gérée en utilisant l'instance client MQTT connectée existante et vous permet ainsi de bénéficier des opérations de gestion des terminaux. Utilisez la bibliothèque client Java pour toutes les fonctions de terminal. 
+**Remarque :** Dans le cadre du développement pour des terminaux personnalisés, utilisez le constructeur 2, car ce dernier crée une instance de passerelle gérée en utilisant l'instance client MQTT connectée existante et vous permet ainsi de bénéficier des opérations de gestion des terminaux. Utilisez la bibliothèque client Java pour toutes les fonctions de terminal.
 
 ## Demandes de gestion de terminal à partir d'une passerelle
 {: #dm_requests}
 
 ### Envoi d'une demande de gestion à partir d'une passerelle
 
-Pour indiquer à une passerelle qu'elle doit participer à des activités de gestion des terminaux, appelez la méthode `sendGatewayManageRequest()`, illustrée dans l'exemple de code suivant : 
+Pour indiquer à une passerelle qu'elle doit participer à des activités de gestion des terminaux, appelez la méthode `sendGatewayManageRequest()`, illustrée dans l'exemple de code suivant :
 
 ```java
 managedGateway.sendGatewayManageRequest(0, true, true);
 ```
 La demande de gestion lance une demande de connexion en interne si le terminal n'est pas encore connecté à {{site.data.keyword.iot_short}}.
-La méthode `sendGatewayManageRequest()` accepte les paramètres suivants : 
+
+La méthode `sendGatewayManageRequest()` accepte les paramètres suivants :
 
 | Paramètre     |Description     |
 |----------------|----------------|
 |`lifetime`|Nombre de secondes durant lesquelles la passerelle doit envoyer une autre demande de gestion de type de terminal afin d'éviter d'être classée comme en veille et de devenir un terminal non géré. Si la zone `lifetime` est omise ou si elle a pour valeur 0, la passerelle gérée n'est pas classée comme en veille. La valeur minimale prise en charge pour la zone `lifetime` est 3600 secondes (1 heure).|
-|`supportFirmwareActions`|Valeur true ou false qui détermine si la passerelle prend en charge des actions de microprogramme. La passerelle doit également ajouter un gestionnaire de microprogramme pour gérer les demandes de microprogramme. |
-|`supportDeviceActions`|Valeur true ou false qui détermine si la passerelle prend en charge des actions sur les terminaux. La passerelle doit également ajouter un gestionnaire d'actions sur les terminaux pour gérer les demandes de réamorçage et de réinitialisation avec les paramètres d'usine. |
+|`supportFirmwareActions`|Valeur true ou false qui détermine si la passerelle prend en charge des actions de microprogramme. La passerelle doit également ajouter un gestionnaire de microprogramme pour gérer les demandes de microprogramme.|
+|`supportDeviceActions`|Valeur true ou false qui détermine si la passerelle prend en charge des actions sur les terminaux. La passerelle doit également ajouter un gestionnaire d'actions sur les terminaux pour gérer les demandes de réamorçage et de réinitialisation avec les paramètres d'usine.|
 
 
-L'instance `ManagedGateway` est un agent de gestion des terminaux qui fournit une liste de méthodes permettant d'effectuer une ou plusieurs actions de gestion des terminaux, telles que la participation à l'activité de gestion des terminaux et la mise à jour de codes d'erreur, de journaux, d'emplacement et de microprogramme ou de terminal. 
+L'instance `ManagedGateway` est un agent de gestion des terminaux qui fournit une liste de méthodes permettant d'effectuer une ou plusieurs actions de gestion des terminaux, telles que la participation à l'activité de gestion des terminaux et la mise à jour de codes d'erreur, de journaux, d'emplacement et de microprogramme ou de terminal.
 
 ### Envoi d'une demande de gestion à partir de terminaux connectés
 
-Pour permettre aux terminaux connectés derrière une passerelle de participer aux activités de gestion des terminaux sur la passerelle, appelez la méthode `sendDeviceManageRequest()`. 
+Pour permettre aux terminaux connectés derrière une passerelle de participer aux activités de gestion des terminaux sur la passerelle, appelez la méthode `sendDeviceManageRequest()`.
 
-La méthode `sendDeviceManageRequest()` accepte les détails des terminaux connectés, ainsi que les paramètres `lifetime`, `supportFirmwareActions` et `supportDeviceActions`. Une passerelle peut également utiliser la méthode `sendDeviceManageRequest()` surchargée afin de définir l'objet `DeviceData` pour le terminal connecté. 
+La méthode `sendDeviceManageRequest()` accepte les détails des terminaux connectés, ainsi que les paramètres `lifetime`, `supportFirmwareActions` et `supportDeviceActions`. Une passerelle peut également utiliser la méthode `sendDeviceManageRequest()` surchargée afin de définir l'objet `DeviceData` pour le terminal connecté.
 
 #### Exemple d'envoi d'une demande de gestion à partir de terminaux connectés
 
@@ -193,7 +194,7 @@ managedGateway.sendDeviceManageRequest(typeId, deviceId, lifetime, true, true);
 
 ### Envoi d'une demande d'annulation de gestion à partir d'une passerelle
 
-Lorsqu'une passerelle n'a pas plus besoin d'être gérée, vous pouvez appeler la méthode `sendGatewayUnmanageRequet()` pour arrêter les activités de gestion des terminaux sur la passerelle. Lorsque la méthode `sendGatewayUnmanageRequet()` est appelée, {{site.data.keyword.iot_short}} n'envoie plus aucune nouvelle demande de gestion des terminaux pour la passerelle et toutes les demandes de gestion des terminaux depuis la passerelle sont rejetées, à l'exception des demandes **Manage**. Les demandes émises par les terminaux situés derrière la passerelle ne sont pas rejetées. 
+Lorsqu'une passerelle n'a pas plus besoin d'être gérée, vous pouvez appeler la méthode `sendGatewayUnmanageRequet()` pour arrêter les activités de gestion des terminaux sur la passerelle.  Lorsque la méthode `sendGatewayUnmanageRequet()` est appelée, {{site.data.keyword.iot_short}} n'envoie plus aucune nouvelle demande de gestion des terminaux pour la passerelle et toutes les demandes de gestion des terminaux depuis la passerelle sont rejetées, à l'exception des demandes **Manage**. Les demandes émises par les terminaux situés derrière la passerelle ne sont pas rejetées.
 
 #### Exemple d'envoi d'une demande d'annulation de gestion à partir d'une passerelle
 
@@ -203,7 +204,7 @@ managedGateway.sendGatewayUnmanageRequet();
 
 ### Envoi d'une demande d'annulation de gestion à partir de terminaux connectés
 
-Lorsqu'un terminal situé derrière une passerelle n'a plus besoin d'être géré, pour faire passer un terminal connecté de l'état Géré à l'état Non géré, la passerelle peut appeler la méthode `sendDeviceUnmanageRequet()`. Lorsque la méthode `sendDeviceUnmanageRequet()` est appelée, {{site.data.keyword.iot_short}} n'envoie plus aucune nouvelle demande de gestion des terminaux pour le terminal et toutes les demandes de gestion des terminaux depuis la passerelle relatives au terminal connecté sont rejetées, à l'exception des demandes **Manage**. 
+Lorsqu'un terminal situé derrière une passerelle n'a plus besoin d'être géré, pour faire passer un terminal connecté de l'état Géré à l'état Non géré, la passerelle peut appeler la méthode `sendDeviceUnmanageRequet()`. Lorsque la méthode `sendDeviceUnmanageRequet()` est appelée, {{site.data.keyword.iot_short}} n'envoie plus aucune nouvelle demande de gestion des terminaux pour le terminal et toutes les demandes de gestion des terminaux depuis la passerelle relatives au terminal connecté sont rejetées, à l'exception des demandes **Manage**.
 
 #### Exemple d'envoi d'une demande d'annulation de gestion à partir de terminaux connectés
 
@@ -216,7 +217,7 @@ managedGateway.sendDeviceUnmanageRequet();
 
 ### Envoi de mises à jour d'emplacement de passerelle
 
-Les passerelles qui peuvent déterminer leur emplacement peuvent choisir d'avertir {{site.data.keyword.iot_short}} que des modifications d'emplacement ont été apportées. La passerelle peut appeler l'une des méthodes `updateLocation()` surchargées pour mettre à jour l'emplacement du terminal. 
+Les passerelles qui peuvent déterminer leur emplacement peuvent choisir d'avertir {{site.data.keyword.iot_short}} que des modifications d'emplacement ont été apportées. La passerelle peut appeler l'une des méthodes `updateLocation()` surchargées pour mettre à jour l'emplacement du terminal.
 
 ```java
     // update the location with latitude, longitude, and elevation.
@@ -230,13 +231,14 @@ System.err.println("Failed to update the location!");
 
 ### Envoi de mises à jour d'emplacement de terminal connecté
 
-La passerelle peut appeler la méthode de terminal `updateDeviceLocation()` correspondante pour mettre à jour l'emplacement des terminaux connectés. La méthode surchargée peut être utilisée pour spécifier la méthode `measuredDateTime`.   
+La passerelle peut appeler la méthode de terminal `updateDeviceLocation()` correspondante pour mettre à jour l'emplacement des terminaux connectés. La méthode surchargée peut être utilisée pour spécifier la méthode `measuredDateTime`.  
 
 ```java
 // update the location of the attached device with latitude, longitude, and elevation
 int rc = managedGateway.updateDeviceLocation(typeId, deviceId, 30.28565, -97.73921, 10);
 ```
 Pour plus d'informations sur les mises à jour d'emplacement, voir [Demandes de gestion des terminaux](../../devices/device_mgmt/index.html#/update-location#update-location).
+
 ## Traitement de code d'erreur
 {: #errors}
 
@@ -248,7 +250,7 @@ Une passerelle peut choisir d'avertir {{site.data.keyword.iot_short}} que son é
 int rc = managedGateway.addGatewayErrorCode(300);
 ```
 
-Les codes d'erreur affichés pour une passerelle peuvent être effacés de {{site.data.keyword.iot_short}} en appelant la méthode `clearErrorCodes()`, comme illustré ci-dessous : 
+Les codes d'erreur affichés pour une passerelle peuvent être effacés de {{site.data.keyword.iot_short}} en appelant la méthode `clearErrorCodes()`, comme illustré ci-dessous :
 
 ```java
 int rc = managedGateway.clearGatewayErrorCodes();
@@ -314,14 +316,14 @@ Pour plus d'informations sur l'opération de diagnostic, voir [Demandes de gesti
 ## Mises à jour et actions sur un microprogramme
 {: #firmware}
 
-La procédure de mise à jour du microprogramme se compose de deux actions distinctes : 
+La procédure de mise à jour du microprogramme se compose de deux actions distinctes :
 
 - Téléchargement du microprogramme
 - Mise à jour du microprogramme
 
-La passerelle doit exécuter les activités suivantes afin de prendre en charge les actions sur le microprogramme à la fois pour elle-même et pour les terminaux qui lui sont connectés : 
+La passerelle doit exécuter les activités suivantes afin de prendre en charge les actions sur le microprogramme à la fois pour elle-même et pour les terminaux qui lui sont connectés :
 
-1. Facultatif : Construire un objet `DeviceFirmware`. 
+1. Facultatif : Construire un objet `DeviceFirmware`.
 2. Informer le serveur de la prise en charge de l'action sur le microprogramme.
 3. Créer le gestionnaire d'actions sur le microprogramme.
 4. Ajouter le gestionnaire à `ManagedGateway`.
@@ -359,20 +361,20 @@ L'objet `DeviceFirmware` représente le microprogramme en cours du passerelle ou
 
 ### Etape 2 : Informer le serveur de la prise en charge de l'action sur le microprogramme
 
-La passerelle ou les terminaux qui lui sont connectés doivent affecter la valeur true à l'indicateur d'action sur le microprogramme pour permettre au serveur de lancer la demande de microprogramme. Cette modification peut être obtenue en affectant la valeur true au paramètre `supportFirmwareActions` dans la demande de gestion. 
+La passerelle ou les terminaux qui lui sont connectés doivent affecter la valeur true à l'indicateur d'action sur le microprogramme pour permettre au serveur de lancer la demande de microprogramme. Cette modification peut être obtenue en affectant la valeur true au paramètre `supportFirmwareActions` dans la demande de gestion.
 
 La passerelle peut appeler la méthode suivante pour informer le serveur de sa prise en charge de microprogramme :
 ```java
 managedGateway.sendGatewayManageRequest(3600, true, false);
 ```
 
-De même, la passerelle peut appeler la méthode de terminal correspondante pour informer la prise en charge de microprogramme des terminaux connectés : 
+De même, la passerelle peut appeler la méthode de terminal correspondante pour informer la prise en charge de microprogramme des terminaux connectés :
 
 ```java
 managedGateway.sendDeviceManageRequest(typeId, deviceId, deviceData, 3600, true, false);
 ```
 
-Lorsque la prise en charge est signalée au serveur de gestion des terminaux, celui-ci transmet les actions sur le microprogramme à la passerelle, soit pour elle-même soit pour les terminaux situés derrière elle. 
+Lorsque la prise en charge est signalée au serveur de gestion des terminaux, celui-ci transmet les actions sur le microprogramme à la passerelle, soit pour elle-même soit pour les terminaux situés derrière elle.
 
 ### Etape 3 : Créer le gestionnaire d'actions sur le microprogramme
 
@@ -383,13 +385,13 @@ public abstract void downloadFirmware(DeviceFirmware deviceFirmware);
 public abstract void updateFirmware(DeviceFirmware deviceFirmware);
 ```
 
-**Remarque** : Un seul gestionnaire peut être ajouté à la bibliothèque, à la fois pour la passerelle et pour les terminaux connectés vers lesquels les demandes de mise à jour ou de téléchargement de microprogramme sont redirigées. L'implémentation doit créer une unité d'exécution ou un pool d'unités d'exécution pour gérer plusieurs demandes de microprogramme à la fois. 
+**Remarque** : Un seul gestionnaire peut être ajouté à la bibliothèque, à la fois pour la passerelle et pour les terminaux connectés vers lesquels les demandes de mise à jour ou de téléchargement de microprogramme sont redirigées. L'implémentation doit créer une unité d'exécution ou un pool d'unités d'exécution pour gérer plusieurs demandes de microprogramme à la fois.
 
 Un exemple d'implémentation d'un gestionnaire de pool d'unités d'exécution figure dans le [référentiel GitHub d'exemples de passerelle](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java).
 
 ### Exemple d'implémentation de `downloadFirmware`
 
-L'implémentation doit ajouter une logique pour télécharger le microprogramme et signaler l'état du téléchargement à l'aide de l'objet `DeviceFirmware`. Si l'opération de téléchargement de microprogramme aboutit, l'état du microprogramme doit prendre la valeur 'DOWNLOADED' et la propriété `UpdateStatus` doit prendre la valeur 'SUCCESS'. 
+L'implémentation doit ajouter une logique pour télécharger le microprogramme et signaler l'état du téléchargement à l'aide de l'objet `DeviceFirmware`. Si l'opération de téléchargement de microprogramme aboutit, l'état du microprogramme doit prendre la valeur 'DOWNLOADED' et la propriété `UpdateStatus` doit prendre la valeur 'SUCCESS'.
 
 Si une erreur se produit lors du téléchargement d'un microprogramme, l'état prend la valeur 'IDLE' et la propriété `updateStatus` doit prendre l'une des valeurs d'état d'erreur suivantes :
 
@@ -458,7 +460,7 @@ public void downloadFirmware(DeviceFirmware deviceFirmware) {
 }
 ```
 
-Une passerelle gérée peut vérifier l'intégrité de l'image de microprogramme téléchargée à l'aide du vérificateur et signaler l'état à {{site.data.keyword.iot_short}}. Le vérificateur peut être défini par la passerelle au cours des étapes suivantes : 
+Une passerelle gérée peut vérifier l'intégrité de l'image de microprogramme téléchargée à l'aide du vérificateur et signaler l'état à {{site.data.keyword.iot_short}}. Le vérificateur peut être défini par la passerelle au cours des étapes suivantes :
 
 - Pendant le démarrage lors de la création de l'objet 'DeviceFirmware'
 - Lors de la soumission d'une demande 'downloadFirmware' par une application
@@ -494,7 +496,7 @@ La totalité du code est consultable dans l'exemple de gestion des passerelles[G
 
 ### Exemple d'implémentation de `updateFirmware`
 
-L'implémentation doit créer une unité d'exécution distincte et ajouter une logique pour installer le microprogramme téléchargé et signaler l'état de la mise à jour via l'objet `DeviceFirmware`. Si l'opération de mise à jour de microprogramme aboutit, l'état du microprogramme doit prendre la valeur 'IDLE' et la propriété `updateStatus` doit prendre la valeur 'SUCCESS'. 
+L'implémentation doit créer une unité d'exécution distincte et ajouter une logique pour installer le microprogramme téléchargé et signaler l'état de la mise à jour via l'objet `DeviceFirmware`. Si l'opération de mise à jour de microprogramme aboutit, l'état du microprogramme doit prendre la valeur 'IDLE' et la propriété `updateStatus` doit prendre la valeur 'SUCCESS'.
 
 Si une erreur se produit lors de la mise à jour de microprogramme, `updateStatus` doit prendre l'une des valeurs d'état d'erreur suivantes :
 
@@ -552,21 +554,20 @@ Pour plus d'informations sur les actions sur le microprogramme, voir [Demandes d
 
 {{site.data.keyword.iot_short}} prend en charge les actions sur les terminaux décrites ci-dessous :
 
-- Réamorcage
+- Réamorçage
 - Réinitialisation avec les paramètres d'usine
 
 La passerelle doit exécuter les activités suivantes afin de prendre en charge les actions sur les terminaux à la fois pour elle-même et pour les terminaux situés derrière elle :
 
-1. Informer le serveur de la prise en charge des actions sur les terminaux. 
-2. Créer le gestionnaire d'actions sur les terminaux. 
+1. Informer le serveur de la prise en charge des actions sur les terminaux.
+2. Créer le gestionnaire d'actions sur les terminaux.
 3. Ajouter le gestionnaire à `ManagedGateway`.
 
 ### Etape 1 : Informer le serveur de la prise en charge des actions sur les terminaux
 
-Pour effectuer une action de réamorçage ou de réinitialisation avec les paramètres d'usine pour une passerelle et les terminaux qui lui sont connectés, la passerelle doit d'abord avertir {{site.data.keyword.iot_short}} de la prise en charge de ces actions. Pour cela, une valeur true peut être affectée au paramètre `supportDeviceActions` lors de l'envoi de la demande **Manage**. 
+Pour effectuer une action de réamorçage ou de réinitialisation avec les paramètres d'usine pour une passerelle et les terminaux qui lui sont connectés, la passerelle doit d'abord avertir {{site.data.keyword.iot_short}} de la prise en charge de ces actions. Pour cela, une valeur true peut être affectée au paramètre `supportDeviceActions` lors de l'envoi de la demande **Manage**.
 
 Une passerelle peut appeler la méthode suivante afin de signaler au serveur la prise en charge des actions sur les terminaux :
-
 
 ```java
 // Last parameter represents the device action support
@@ -575,13 +576,12 @@ managedGateway.sendGatewayManageRequest(3600, true, true);
 
 Une passerelle peut appeler la méthode de terminal correspondante pour signaler la prise en charge des actions sur les terminaux pour les terminaux connectés,
 
-
 ```java
 // Last parameter represents the device action support
 managedGateway.sendDeviceManageRequest(typeId, deviceId, 0, true, true);
 ```
 
-Lorsque la prise en charge est signalée au serveur de gestion des terminaux, celui-ci transmet les demandes d'action sur les terminaux au terminal. 
+Lorsque la prise en charge est signalée au serveur de gestion des terminaux, celui-ci transmet les demandes d'action sur les terminaux au terminal.
 
 ### Etape 2 : Créer le gestionnaire d'actions sur les terminaux
 
@@ -655,9 +655,9 @@ Pour plus d'informations sur les actions sur les terminaux, voir [Demande de ges
 
 La bibliothèque client Java met à jour les objets correspondants chaque fois qu'une demande de mise à jour émane de {{site.data.keyword.iot_short}}. Ces demandes de mise à jour sont initiées par l'application de manière directe ou indirecte via une mise à jour de microprogramme à l'aide de l'API REST {{site.data.keyword.iot_short}}. En dehors de la mise à jour de ces attributs, la bibliothèque fournit un mécanisme au cours duquel la passerelle peut être avertie chaque fois qu'un attribut de terminal est mis à jour.
 
-Les attributs qui peuvent être mis à jour par ce type d'opération sont l'emplacement, les métadonnées, les informations sur les terminaux et le microprogramme de la passerelle et des terminaux connectés. 
+Les attributs qui peuvent être mis à jour par ce type d'opération sont l'emplacement, les métadonnées, les informations sur les terminaux et le microprogramme de la passerelle et des terminaux connectés.
 
-Pour être avertie des modifications d'attribut, la passerelle doit ajouter un programme d'écoute de modification de propriété aux objets qui l'intéressent, comme illustré dans l'exemple de code suivant : 
+Pour être avertie des modifications d'attribut, la passerelle doit ajouter un programme d'écoute de modification de propriété aux objets qui l'intéressent, comme illustré dans l'exemple de code suivant :
 
 ```java
 deviceLocation.addPropertyChangeListener(listener);
@@ -666,7 +666,7 @@ deviceInfo.addPropertyChangeListener(listener);
 metadata.addPropertyChangeListener(listener);
 ```
 
-La passerelle doit également implémenter la méthode `propertyChange()` à l'endroit où elle reçoit la notification, comme illustré dans l'exemple d'implémentation suivant : 
+La passerelle doit également implémenter la méthode `propertyChange()` à l'endroit où elle reçoit la notification, comme illustré dans l'exemple d'implémentation suivant :
 
 ```java
 public void propertyChange(PropertyChangeEvent evt) {
@@ -710,4 +710,4 @@ Plusieurs exemples sont disponibles pour vous aider à connecter des passerelles
 
 Pour obtenir une recette expliquant comment connecter un terminal Raspberry Pi en tant que passerelle gérée à {{site.data.keyword.iot_short_notm}} et comment gérer les terminaux connectés, voir [Raspberry Pi as a managed gateway in {{site.data.keyword.iot_short_notm}} ](https://developer.ibm.com/recipes/tutorials/raspberry-pi-as-managed-gateway-in-watson-iot-platform-part-1/).
 
-Cette recette explique comment utiliser le protocole de gestion des terminaux de {{site.data.keyword.iot_short_notm}} pour gérer un terminal Arduino Uno à partir d'un terminal Raspberry Pi qui agit en tant que passerelle et comment effectuer des opérations de gestion des terminaux, telles que le réamorçage du terminal ou l'ajout d'un programme d'esquisse. 
+Cette recette explique comment utiliser le protocole de gestion des terminaux de {{site.data.keyword.iot_short_notm}} pour gérer un terminal Arduino Uno à partir d'un terminal Raspberry Pi qui agit en tant que passerelle et comment effectuer des opérations de gestion des terminaux, telles que le réamorçage du terminal ou l'ajout d'un programme d'esquisse.

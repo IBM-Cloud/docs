@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-10"
+lastupdated: "2017-02-17"
 
 ---
 
@@ -197,4 +197,4 @@ Per alcuni tipi di schede, puoi fare clic su **Settings** per configurare ulteri
 
 Bene! Puoi ora visualizzare i dati in tempo reale del tuo dispositivo!
 
-Per le istruzioni dettagliate su come visualizzare i dati del dispositivo in tempo reale, consulta la ricetta [Configuring Boards & Cards in the new Watson IoT Dashboard](https://developer.ibm.com/recipes/tutorials/configuring-the-cards-in-the-new-watson-iot-dashboard/).
+Per le istruzioni dettagliate su come visualizzare i dati del dispositivo in tempo reale, consulta la ricetta [Configuring Boards & Cards in the new Watson IoT Dashboard ![icona link esterno](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/configuring-the-cards-in-the-new-watson-iot-dashboard/){: new_window}.

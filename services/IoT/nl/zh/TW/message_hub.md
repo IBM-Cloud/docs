@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-03"
+lastupdated: "2017-02-17"
 
 ---
 
@@ -22,7 +22,7 @@ lastupdated: "2017-02-03"
 
 將 {{site.data.keyword.messagehub}} 連接至 {{site.data.keyword.iot_short}} 服務之前，請完成下列作業：
 
-- 使用「{{site.data.keyword.Bluemix_notm}} 型錄」，在與 {{site.data.keyword.iot_short_notm}} 相同的 {{site.data.keyword.Bluemix_notm}} 空間中設定 {{site.data.keyword.messagehub}}。如需 {{site.data.keyword.messagehub}} 的相關資訊，請參閱[開始使用 {{site.data.keyword.messagehub}} ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/services/MessageHub/index.html){: new_window}。
+- 使用「{{site.data.keyword.Bluemix_notm}} 型錄」，在與 {{site.data.keyword.iot_short_notm}} 相同的 {{site.data.keyword.Bluemix_notm}} 空間中設定 {{site.data.keyword.messagehub}}。如需 {{site.data.keyword.messagehub}} 的相關資訊，請參閱[開始使用 {{site.data.keyword.messagehub}}](https://console.{DomainName}/docs/services/MessageHub/index.html)。
 
 - 請確定您具有 {{site.data.keyword.Bluemix_notm}} 組織中的開發人員專用權，並且透過 {{site.data.keyword.Bluemix_notm}} 登入。如果您未透過 {{site.data.keyword.Bluemix_notm}} 登入，或沒有此 {{site.data.keyword.Bluemix_notm}} 組織中的開發人員專用權，則無法授權 {{site.data.keyword.messagehub}} 與 {{site.data.keyword.iot_short_notm}} 的連結。
 

@@ -50,7 +50,7 @@ Now you can configure the {{site.data.keyword.autoscaling}} policy, see the metr
 <dd>Use this section to create or edit the scaling rules to specify the conditions in which certain scaling activities are to be triggered.<ul>
 <li> For Liberty for Java™ applications, you can define scaling rules for Heap, Memory, Response Time, and Throughput.
 <li> For Node.js applications, you can define scaling rules for Heap, Memory, and Throughput.
-<li> For Swift applications, you can define scaling rules for Memory and Throughput.
+<li> For Swift applications, you can define scaling rules for Memory, Throughput and Response Time.
 <li> For Ruby applications, you can define scaling rules for Memory.</ul>
 *Note:* You can define multiple scaling rules for more than one metric type. However, the {{site.data.keyword.autoscaling}} service does not detect conflicts between scaling policies. When you define the scaling policy, you must ensure that multiple scaling rules do not conflict with one another. Otherwise, you might see the total instance number fluctuates because the application scales in 1 minute and scales out the next.<br/><br/>
 If the workload of your application changes dramatically during the peak time and the spare time, you can create a scaling schedule to handle the different scaling requirements for different time periods. Use the Minimum Instance Count parameter that is specified in a schedule to define the baseline of the application instance number, while dynamic scaling rules still apply to the schedule to trigger the scaling in and scaling out actions.</dd>
@@ -136,7 +136,7 @@ import SwiftMetricsBluemix
       let monitor: SwiftMonitor
       sm = try SwiftMetrics()
       _ = SwiftMetricsKitura(swiftMetricsInstance: sm)
-      _ = AutoScalar(swiftMetricsInstance: sm)
+      _ = SwiftMetricsBluemix(swiftMetricsInstance: sm)
       monitor = sm.monitor()
       ```
     +  A sample of a Swift app that uses SwiftMetrics and Kitura is shown below:
@@ -169,7 +169,7 @@ import SwiftMetricsBluemix
               configMgr = ConfigurationManager().load(.environmentVariables)
               sm = try SwiftMetrics()
               _ = SwiftMetricsKitura(swiftMetricsInstance: sm)
-              _ = AutoScalar(swiftMetricsInstance: sm)
+              _ = SwiftMetricsBluemix(swiftMetricsInstance: sm)
               monitor = sm.monitor()
               // All web apps need a Router instance to define routes
               router = Router()
@@ -340,7 +340,7 @@ The {{site.data.keyword.autoscaling}} CLI provides similar functionality as {{si
 | *Heap* |     The usage percentage of the heap memory.        | Liberty for Java (with IBM JDK), Node.js SDK |
 | *Memory*   | The usage percentage of the memory.     |  All |
 | *Throughput* | The number of the processed requests per second.| Liberty for Java (with IBM JDK), Node.js SDK, Swift (with Kitura) |
-| *Response time* |    The response time of the processed requests.    | Liberty for Java (with IBM JDK)|
+| *Response time* |    The response time of the processed requests.    | Liberty for Java (with IBM JDK), Swift (with Kitura) |
 
 
 {: caption="Table 2. Supported metric names" caption-side="top"}

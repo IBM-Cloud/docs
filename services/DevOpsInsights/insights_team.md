@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-24"
+lastupdated: "2017-03-16"
 
 ---
 
@@ -18,15 +18,11 @@ lastupdated: "2017-02-24"
 {{site.data.keyword.DRA_full}} Team Dynamics employs social coding analysis to identify the level of interaction between team members so that the team can fix unproductive practices. 
 {:shortdesc}
 
-After you open {{site.data.keyword.DRA_short}} from your toolchain, click **Team Dynamics**. From there, you can select an analytic category to dive deeper into your team's collaboration habits and practices. What each set of data indicates can vary from team to team, and you can drill down into each visualization for help and guidance. 
-
-**Note:** Team Dynamics is available to only IBM employees and a limited number of external parties. 
+After you open {{site.data.keyword.DRA_short}} from your toolchain, click **Team Dynamics**. From there, you can select an analytic category to dive deeper into your team's collaboration habits and practices. What each set of data indicates can vary from team to team, and you can drill down into each visualization for help and guidance.  
 
 ## Data categories
 
-The data that {{site.data.keyword.DRA_short}} uses to populate its dashboards is mined automatically from your team's source-control repository. By default, this data is not restricted to any particular period or set of labels, but you can configure the data from the **Settings** menu. 
-
-On any chart, click the **Information** or **Guidance** buttons for more information about what the data means and how you can apply it to your project. 
+The data that {{site.data.keyword.DRA_short}} uses to populate its dashboards is mined automatically from your team's source-control repository. You can get more information about what the data means and how you can apply it to your project by clicking **Information** or **Guidance** on any chart.
 
 ### Social Coding
 
@@ -37,8 +33,3 @@ Each node is colored blue and red to varying degrees. Blue indicates how many li
 ### Authors
 
 The Authors category provides the number of commits, line changes, and file changes per repository contributor. While something like the total number of lines coded should not be used to determine a team member's net contribution to a project, that information can be valuable to team leads and managers. A team member who contributes extensive numbers of line changes might be overworked, represent a bottleneck in your processes, or code in a more verbose style compared to other team members. 
-
-
-<!--## WORKING - Garage Method tie in?
-
-Add paragraph linking to GM. Not sure what form this would take--are there identified practices here? The Bluemix Docs material should generally not be prescriptive, especially given that the product UI doesn't often indicate what to do with data, but there's an opportunity to link out for interested parties. -->

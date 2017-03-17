@@ -19,7 +19,7 @@ lastupdated: "2016-11-22"
 {: #introduction}
 
 Dans {{site.data.keyword.iot_full}}, un terminal géré est un terminal qui peut effectuer des opérations de gestion des terminaux, telles que les mises à jour de microprogramme, d'emplacement et de diagnostic.
-Vous pouvez utiliser la bibliothèque client Java {{site.data.keyword.iot_short}} et les informations fournies pour développer du code Java et faire de vos terminaux connectés des terminaux gérés. Des exemples sont également fournis pour vous aider à développer du code Java dans le but de connecter un terminal au service de gestion des terminaux et d'exécuter des opérations de gestion des terminaux. 
+Vous pouvez utiliser la bibliothèque client Java {{site.data.keyword.iot_short}} et les informations fournies pour développer du code Java et faire de vos terminaux connectés des terminaux gérés. Des exemples sont également fournis pour vous aider à développer du code Java dans le but de connecter un terminal au service de gestion des terminaux et d'exécuter des opérations de gestion des terminaux.
 
 Pour plus d'informations sur la façon dont vos applications peuvent utiliser la bibliothèque client Java pour interagir avec des terminaux, voir [Java pour les développeurs d'applications](../../applications/libraries/java.html).
 

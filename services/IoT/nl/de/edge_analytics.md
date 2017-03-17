@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-10"
+lastupdated: "2017-02-17"
 
 ---
 
@@ -33,8 +33,8 @@ Bevor Sie mit der Erstellung von Edge-Regeln und -Aktionen beginnen:
 - Stellen Sie sicher, dass die Geräteeigenschaften, die Sie als Bedingungen in Ihren Regeln verwenden möchten, Schemas zugeordnet sind. Weitere Informationen finden Sie in [Geräte verbinden](iotplatform_task.html) und [Schemas erstellen](im_schemas.html).
 - Lesen Sie die Edge Analytics-Anleitungen.  
 Ihr Anleitungsportal enthält einige Anleitungen, in denen die erforderlichen Schritte zum Ausführen von IBM Edge Analytics beschrieben sind. Diese Anleitungen beschreiben die Vorgehensweise zum Installieren und Konfigurieren von IBM Edge Analytics Agent auf einem Gerät, das auf dem Fundament von Apache Edgent aufbaut, um Analyseprozesse in der Nähe einer IoT-Datenquelle auszuführen.
- - Die Anleitung [Einführung in Edge Analytics in IBM Watson IoT Platform](https://developer.ibm.com/recipes/tutorials/getting-started-with-edge-analytics-in-watson-iot-platform/) bildet den Anfang dieser Reihe. Diese Anleitung beschreibt das Einrichten von Cisco DSA Platform auf einem Laptop System- und einem Raspberry Pi 3-Gerät, das Installieren und Konfigurieren von IBM Edge Analytics Agent zum Herstellen einer Verbindung zu {{site.data.keyword.iot_short}}, das Installieren und Konfigurieren von System DS Link zum Herstellen einer Verbindung zu Edge Gateway unter {{site.data.keyword.iot_short}} als angeschlossenes Gerät, das Definieren und Aktivieren der Edge-Regel auf dem Edge-Gateway und das Verwalten der Edge-Regel mit {{site.data.keyword.iot_short}}.
- - Als Beispiel für die innovative Verwendung von Edge Analytics veranschaulicht die Anleitung [Alerts und Geräteaktionen mit Edge Analytics in IBM Watson IoT Platform verarbeiten](https://developer.ibm.com/recipes/tutorials/handling-alerts-and-device-actions-with-edge-analytics-in-ibm-watson-iot-platform/) die Vorgehensweise zum Erstellen eines eigenen DS-Links für die Datenübertragung von einem verbundenen Arduino Uno-Gerät auf ein Raspberry Pi 3-Gerät. Darüber hinaus veranschaulicht diese Anleitung die Datenfilterung und die Verarbeitung lokaler Geräteaktionen als Teil des Edge-Regelalerts.
+ - Die Anleitung [Einführung in Edge Analytics in IBM Watson IoT Platform ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/getting-started-with-edge-analytics-in-watson-iot-platform/){: new_window} bildet den Anfang dieser Reihe. Diese Anleitung beschreibt das Einrichten von Cisco DSA Platform auf einem Laptop System- und einem Raspberry Pi 3-Gerät, das Installieren und Konfigurieren von IBM Edge Analytics Agent zum Herstellen einer Verbindung zu {{site.data.keyword.iot_short}}, das Installieren und Konfigurieren von System DS Link zum Herstellen einer Verbindung zu Edge Gateway unter {{site.data.keyword.iot_short}} als angeschlossenes Gerät, das Definieren und Aktivieren der Edge-Regel auf dem Edge-Gateway und das Verwalten der Edge-Regel mit {{site.data.keyword.iot_short}}.
+ - Als Beispiel für die innovative Verwendung von Edge Analytics veranschaulicht die Anleitung [Alerts und Geräteaktionen mit Edge Analytics in IBM Watson IoT Platform verarbeiten ![Symbol für externen Link](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/handling-alerts-and-device-actions-with-edge-analytics-in-ibm-watson-iot-platform/){: new_window} die Vorgehensweise zum Erstellen eines eigenen DS-Links für die Datenübertragung von einem verbundenen Arduino Uno-Gerät auf ein Raspberry Pi 3-Gerät. Darüber hinaus veranschaulicht diese Anleitung die Datenfilterung und die Verarbeitung lokaler Geräteaktionen als Teil des Edge-Regelalerts.
 
 ## Edge-Regeln und -Aktionen verwalten  
 {: #managing_rules}
@@ -218,3 +218,8 @@ Gehen Sie wie folgt vor, um Informationen zum Status des Gateways anzuzeigen:
  `RuleNumber` | Die Anzahl der definierten Regeln in der Basis der Regelengine.
  `ProcessorNumber` | Für Debugzwecke. Die Anzahl der definierten Prozessoren in der Basis der Regelengine. </br>**Hinweis:** Ein Prozessor ist die minimale Ausführungseinheit in der Basis der Regelengine.
  `DataPointsInWindow` | Die Gesamtzahl der Datenpunkte, die im Zeitfenster gepuffert werden. Die Bytegröße eines Datenpunkts ist je nach seinem Datentyp unterschiedlich. Die Größe eines Datenpunkts mit dem Format 'float' oder 'int' beträgt beispielsweise 8 Byte, während die Größe eines Datenpunkts mit dem Typ 'string' abhängig von seiner Länge unterschiedlich ist.  In den meisten Fällen können Sie die Speicherbelegung des Zeitfensters mithilfe der folgenden Formel schätzen: `DataPointsInWindow * 8`.
+
+## Edge Analytics-Community
+{: #eaa_community}
+
+Sie können das Edge Analytics SDK von der [Seite der IBM Edge Analytics-Community](https://www.ibm.com/developerworks/community/groups/service/html/communitystart?communityUuid=3df173af-0c21-4b9c-9fd1-e8e5561ef460&ftHelpTip=true) herunterladen. Das SDK umfasst die SDK-JAR-Datei, Javadoc, Beispielcode, Links zu Anleitungen und Readme-Dateien. In der Community können Sie außerdem Videos zur Einführung in Edge Analytics ansehen; im Communityforum können Sie Fragen stellen.

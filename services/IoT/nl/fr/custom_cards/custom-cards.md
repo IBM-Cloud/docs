@@ -131,13 +131,13 @@ Après avoir configuré et vérifié la carte HelloWorld, vous pouvez passer aux
 
 La référentiel d'exemples de carte personnalisée inclut les exemples de carte suivants :
 - HelloWorld  
-Carte simple qui fournit un exemple Hello World de base. 
+Carte simple qui fournit un exemple Hello World de base.
 - Vide  
 Carte vide contenant l'infrastructure nécessaire pour une carte. Utilisez cette carte comme modèle lorsque vous générez une carte à partir de zéro.
 - Webcam  
 Carte de caméra Web simple. Configurez la carte avec une URL webcam et définissez la fréquence de régénération.
 - iFrame  
-Carte iFrame de base que vous pouvez utiliser pour intégrer n'importe quelle page Web HTTPS dans votre tableau. 
+Carte iFrame de base que vous pouvez utiliser pour intégrer n'importe quelle page Web HTTPS dans votre tableau.
 
 Le processus de création d'une nouvelle carte implique les étapes de haut niveau suivantes :
 

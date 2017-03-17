@@ -2,6 +2,7 @@
 
 copyright:
   years: 2016, 2017
+lastupdated: "2017-02-22"
 
 ---
 
@@ -13,8 +14,6 @@ copyright:
 
 # Sicherheitsrichtlinien konfigurieren
 {: #set_up_policies.md}
-Letzte Aktualisierung: 2017-02-02
-{: .last-updated}
 
 Ein Sicherheitsanalyst kann die Verbindungssicherheitsrichtlinien sowie die Black- oder Whitelists konfigurieren.
 
@@ -30,10 +29,8 @@ Sie können die Standardsicherheitsebene festlegen, die auf alle Geräte angewen
     - TLS mit Clientzertifikatsauthentifizierung
     - TLS mit Token- und Clientzertifikatsauthentifizierung
     - TLS mit Clientzertifikat oder Token
-
-Basierend auf der von Ihnen ausgewählten Sicherheitsebene enthält die Tabelle die Anzahl der betroffenen Geräte und den vorhergesagte Umfang der Einhaltung auf der angegebenen Sicherheitsebene.
-
-3. Falls erforderlich, klicken Sie auf **Angepasste Verbindung hinzufügen** und wählen Sie die Gerätetypen und angepassten Sicherheitsebenen aus. Der vorhergesagte Wert wird so aktualisiert, dass er die durch die angepassten Sicherheitseinstellungen resultierenden Änderungen widerspiegelt.
+3. Falls erforderlich, klicken Sie auf **Angepasste Verbindung hinzufügen** und wählen Sie die Gerätetypen und angepassten Sicherheitsebenen aus. 
+3. Klicken Sie auf die Option zum Aktualisieren der Einhaltung. Basierend auf der von Ihnen ausgewählten Sicherheitsebene enthält die aktualisierte Tabelle die Anzahl der betroffenen Geräte und den vorhergesagte Umfang der Einhaltung auf der angegebenen Sicherheitsebene.
 4. Klicken Sie auf **Speichern**.  
 
 ## Blacklists und Whitelists konfigurieren
@@ -53,6 +50,7 @@ Schränken Sie den Zugriff auf den Server von bestimmten Geräten durch die Verw
 4. Klicken Sie im Fenster **Zu Blacklist hinzufügen** auf **Speichern**.
 5. Überprüfen Sie die Liste der blockierten Geräte. Alle Geräte aus der Liste können basierend auf der IP-Adresse, CIDR oder dem Land keine Verbindung mit dem {{site.data.keyword.iot_short_notm}}-Server herstellen.
 6. Klicken Sie auf **Speichern**.
+7. Aktivieren Sie die Blacklist. War eine Whitelist aktiviert, wird diese inaktiviert.
 
 ### Whitelist konfigurieren
 {: #config_whitelist}
@@ -66,3 +64,4 @@ Schränken Sie den Zugriff auf den Server von bestimmten Geräten durch die Verw
 4. Klicken Sie im Fenster **Zu Whitelist hinzufügen** auf **Speichern**.
 5. Überprüfen Sie die Liste der zulässigen Geräte. Alle Geräte aus der Liste können basierend auf der IP-Adresse, CIDR oder dem Land eine Verbindung mit dem {{site.data.keyword.iot_short_notm}}-Server herstellen.
 6. Klicken Sie auf **Speichern**.
+7. Aktivieren Sie die Whitelist. War eine Blacklist aktiviert, wird diese inaktiviert.

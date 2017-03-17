@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-2-15"
+lastupdated: "2017-3-17"
 
 ---
 
@@ -21,11 +21,13 @@ A task represents some business-meaningful activity that is associated with a so
 Most tasks have a starting and ending point, and a measurable duration.  A task can be of one of following types:
 
 <ul>
-<li>**Manual** tasks can represent any activity that is associated with a software deployment, such as taking a server offline or updating a database.</li>
-<li>**UrbanCode Deploy** tasks represent IBM&reg; UrbanCode&reg; Deploy applications. You can run IBM UrbanCode Deploy applications with UrbanCode Deploy-type tasks.</li>
-<li>**Bluemix Continuous Delivery** tasks represent {{site.data.keyword.contdelivery_full}} pipelines. You can manage your {{site.data.keyword.contdelivery_short}} pipelines with this task type.</li>
-<li>**Delayed** tasks represent critical events that happen at a specific time.</li>
-<li>**Header** tasks are organizational elements. For example, you might use a header task to identify a task group.</li>
+<li>A **Manual** task can represent any activity that is associated with a software deployment, such as taking a server offline or updating a database.</li>
+<li>An **UrbanCode Deploy** task represents an IBM&reg; UrbanCode&reg; Deploy application. You can run UrbanCode Deploy applications with this task type.</li>
+<li>A **Continuous Delivery pipeline** task represents a {{site.data.keyword.contdelivery_full}} pipeline. You can manage your {{site.data.keyword.contdelivery_short}} pipelines with this task type.</li>
+<li>A **Delayed** task represents a critical event that happens at a specific time.</li>
+<li>A **Header** task is an organizational element. For example, you might use a header task to identify a task group.</li>
+<li>An **Email** task sends an email message when it runs.</li>
+<li>A **Run another plan** task runs deployments for other deployment plans participating in the same release event. This is an experimental task type.</li>
 </ul>
 
 You can add tasks to deployment plans by creating tasks or you can import tasks from CSV files that are created by IBM UrbanCode Release or another application. You can also copy tasks from other deployment plans. See [Importing tasks](/docs/services/UCCR/UCCR_deployPlan.html#plan_importTasks) for information about the format of the CSV file.
@@ -167,26 +169,87 @@ To create a header task, complete the following steps:
 
 5. Click **Save**. The task is inserted into the deployment plan.
 
-## Creating Bluemix Continuous Delivery tasks
+## Creating Continuous Delivery Pipeline tasks
 {: #tasks_pipelineCD}
 
-{{site.data.keyword.contdelivery_full}} pipelines automate your DevOps workflows. You can manage your {{site.data.keyword.contdelivery_short}} pipelines with pipeline tasks.
+{{site.data.keyword.contdelivery_full}} pipelines automate your DevOps workflows. A pipeline is a sequence of stages that retrieve input and run jobs. You can manage your {{site.data.keyword.contdelivery_short}} pipelines with pipeline tasks. Continuous Delivery pipeline tasks are auto tasks and run as soon as they are eligible.
 
-To create a Bluemix Continuous Delivery task, complete the following steps:
+To create a Continuous Delivery pipeline task, complete the following steps:
 
-1. On the Deployment Plan Details page, click **Create Task**. If you want to insert a task at a specific position in the plan, select a task before using the **Create Task**. The new task is inserted above the selected task.
+1. On the Deployment Plan Details page, click **Create Task**. If you want to insert a task at a specific position in the plan, select a task before you use the **Create Task** action. The new task is inserted before the selected task.
 
-1. In the Create Task dialog box, in the **Type** list, select **Bluemix Continuous Delivery**.
+1. In the Create Task dialog box, in the **Type** list, select **Continuous Delivery Pipeline**.
 
-1. In the **Name** field, enter a name for the task. The name might represent a task group name.
+1. In the **Name** field, enter a name for the task.
 
 3. In the **Description** field, enter or paste a description. You might enter a note, a reminder, or other instructions in the field.
 
-3. In the **Pipeline ID** field, enter or paste the pipeline ID.
+3. In the **Pipeline** field, enter or select the pipeline.
 
-3. In the **Stage Name** field, enter or paste the stage name.
+3. In the **Stage Name** field, enter or select the stage name. The stages defined for the selected pipeline are available.
+
+3. In the **Tags** list, attach a tag to the task. You can select multiple tags. To create a tag, type the tag name in list's text field.
+
+3. In the **Assigned groups and users** list, assign the task to a user or group. The assigned user runs the task during deployment.
+
+3. In the **Owner** list, select the task owner. The default owner is the user who created the task. The **Owner** list is displayed after the task is assigned to a user or group.    
 
 5. Click **Save**. The task is inserted into the deployment plan.
+
+When a Continuous Delivery pipeline task runs, it runs the jobs on the specified stage for the selected pipeline.
+
+## Creating email tasks
+{: #tasks_email}
+
+An email task sends an email message when the task runs. You specify the email's recipients and message when you create the task. Email tasks are auto tasks and run as soon as they are eligible.
+
+To create an email task, complete the following steps:
+
+1. On the Deployment Plan Details page, click **Create Task**. If you want to insert a task at a specific position in the plan, select a task before you use the **Create Task** action. The new task is inserted before the selected task.
+
+1. In the Create Task dialog box, in the **Type** list, select **Email**.
+
+1. In the **Name** field, enter a name for the task.
+
+3. In the **Recipients** field, enter or select the email's recipient. The list of available recipients include the users and groups who are members of your team. You can also type the email addresses of non-team members. You can specify multiple recipients.
+
+3. In the **Email subject** field, enter the email topic.
+
+3. In the **Email message** field, enter or paste the email message.
+
+5. Click **Save**. The task is inserted into the deployment plan.
+
+When the task runs, the recipients receive an email from **IBM Continuous Release** with the subject you specified when you created the task.
+
+## Creating run another plan tasks
+{: #tasks_runAnother}
+
+A run another plan task runs a deployment for another deployment plan. The targeted plan must be created from a template. Both the template and the targeted plan must be in the same release event as plan with the run another plan task.
+
+Note that this is an experimental task type.
+
+To create a run another plan task, complete the following steps:
+
+1. On the Deployment Plan Details page, click **Create Task**. If you want to insert a task at a specific position in the plan, select a task before you use the **Create Task** action. The new task is inserted before the selected task.
+
+1. In the Create Task dialog box, in the **Type** list, select **Run Another Plan**.
+
+1. In the **Name** field, enter a name for the task.
+
+3. In the **Plan Template Name** list, select a deployment plan template. The template must be in the same release event as the task's parent plan.
+
+3. In the **Tags** list, attach a tag to the task. You can select multiple tags. To create a tag, type the tag name in text box.
+
+5. Click **Save**. The task is inserted into the deployment plan.
+
+When the task runs, a deployment starts for the deployment plan that is created from the selected template and in the same release event. If multiple plans in the release event are created from the template, deployments start for all of them. While the other deployments run, status information is provided by the run another plan task. Expand the task to see the status information. You can open the other deployments by using links on the task. While the other deployments run, the run another plan task has a status of **In Progress**.
+
+<!--
+
+## Creating slack tasks
+{: #tasks_slack}
+
+-->
 
 ## Managing task groups
 {: #tasks_groups}
@@ -212,7 +275,7 @@ The group is formed and a **group select bar** is added to the deployment plan. 
 
 The following figure shows a parallel group. The **group select bar** identifies the type of group: parallel <img class="inline" src="images/para-select.png"  alt="parallel group select">, or sequential <img class="inline" src="images/seq-select.png"  alt="sequential group select">.
 
-(![](images/group-select.png "Typical deployment plan"))
+![](images/group-select.png "Typical deployment plan")
 
 Figure 2. Parallel group
 

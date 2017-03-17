@@ -775,17 +775,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.68"
-     inkscape:cx="240.20471"
-     inkscape:cy="159.72601"
+     inkscape:zoom="1.6045498"
+     inkscape:cx="315.97649"
+     inkscape:cy="155.2912"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="in"
-     inkscape:window-width="1920"
-     inkscape:window-height="1019"
-     inkscape:window-x="-9"
-     inkscape:window-y="-9"
+     inkscape:window-width="1600"
+     inkscape:window-height="837"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
      inkscape:window-maximized="1"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -799,7 +799,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -873,104 +873,124 @@
        style="fill:#c2edfb;fill-opacity:1;fill-rule:evenodd;stroke:#f0f0ef;stroke-opacity:1" />
     <g
        id="g6624"
-       transform="translate(309.94118,533.92621)" />
+       transform="translate(309.94118,533.92621)"
+       style="" />
     <g
        id="g6626"
-       transform="translate(309.94118,533.92621)" />
+       transform="translate(309.94118,533.92621)"
+       style="" />
     <g
        id="g6628"
-       transform="translate(309.94118,533.92621)" />
+       transform="translate(309.94118,533.92621)"
+       style="" />
     <g
        id="g6630"
-       transform="translate(309.94118,533.92621)" />
+       transform="translate(309.94118,533.92621)"
+       style="" />
     <g
        id="g6632"
-       transform="translate(309.94118,533.92621)" />
+       transform="translate(309.94118,533.92621)"
+       style="" />
     <g
        id="g6634"
-       transform="translate(309.94118,533.92621)" />
+       transform="translate(309.94118,533.92621)"
+       style="" />
     <g
        id="g6636"
-       transform="translate(309.94118,533.92621)" />
+       transform="translate(309.94118,533.92621)"
+       style="" />
     <g
        id="g6638"
-       transform="translate(309.94118,533.92621)" />
+       transform="translate(309.94118,533.92621)"
+       style="" />
     <g
        id="g6640"
-       transform="translate(309.94118,533.92621)" />
+       transform="translate(309.94118,533.92621)"
+       style="" />
     <g
        id="g6642"
-       transform="translate(309.94118,533.92621)" />
+       transform="translate(309.94118,533.92621)"
+       style="" />
     <g
        id="g6644"
-       transform="translate(309.94118,533.92621)" />
+       transform="translate(309.94118,533.92621)"
+       style="" />
     <g
        id="g6646"
-       transform="translate(309.94118,533.92621)" />
+       transform="translate(309.94118,533.92621)"
+       style="" />
     <g
        id="g6648"
-       transform="translate(309.94118,533.92621)" />
+       transform="translate(309.94118,533.92621)"
+       style="" />
     <g
        id="g6650"
-       transform="translate(309.94118,533.92621)" />
+       transform="translate(309.94118,533.92621)"
+       style="" />
     <g
        id="g6652"
-       transform="translate(309.94118,533.92621)" />
+       transform="translate(309.94118,533.92621)"
+       style="" />
     <flowRoot
        xml:space="preserve"
        id="flowRoot7250"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;font-size:12.50000149px;line-height:125%;font-family:'MS UI Gothic';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;-inkscape-font-specification:'MS UI Gothic, Normal';font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;"
        transform="translate(0,287.3622)"><flowRegion
          id="flowRegion7252"><rect
            id="rect7254"
            width="259.48962"
            height="181.5571"
            x="701.39276"
-           y="252.01556" /></flowRegion><flowPara
+           y="252.01556"
+           style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12.50000149px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;" /></flowRegion><flowPara
          id="flowPara7256" /></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot7455"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;font-size:12.50000149px;line-height:125%;font-family:'MS UI Gothic';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;-inkscape-font-specification:'MS UI Gothic, Normal';font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;"
        transform="translate(0,287.3622)"><flowRegion
          id="flowRegion7457"><rect
            id="rect7459"
            width="474.44638"
            height="131.02942"
            x="26.548443"
-           y="637.39618" /></flowRegion><flowPara
+           y="637.39618"
+           style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12.50000149px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;" /></flowRegion><flowPara
          id="flowPara7461" /></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot6413"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;font-size:12.50000149px;line-height:125%;font-family:'MS UI Gothic';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;-inkscape-font-specification:'MS UI Gothic, Normal';font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;"
        transform="translate(16.120655,362.60083)"><flowRegion
          id="flowRegion6415"><rect
            id="rect6417"
            width="289.46365"
            height="118.18339"
            x="360.54498"
-           y="137.15674" /></flowRegion><flowPara
+           y="137.15674"
+           style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12.50000149px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;" /></flowRegion><flowPara
          id="flowPara6419" /></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot6453"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;font-size:12.50000149px;line-height:125%;font-family:'MS UI Gothic';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;-inkscape-font-specification:'MS UI Gothic, Normal';font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;"
        transform="translate(16.120655,362.60083)"><flowRegion
          id="flowRegion6455"><rect
            id="rect6457"
            width="83.07093"
            height="357.11935"
            x="388.80621"
-           y="143.15155" /></flowRegion><flowPara
+           y="143.15155"
+           style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12.50000149px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;" /></flowRegion><flowPara
          id="flowPara6459" /></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot6802"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;font-size:12.50000149px;line-height:125%;font-family:'MS UI Gothic';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;-inkscape-font-specification:'MS UI Gothic, Normal';font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;"
        transform="translate(15.573944,367.73921)"><flowRegion
          id="flowRegion6804"><rect
            id="rect6806"
            width="334.85294"
            height="108.76297"
            x="638.87543"
-           y="193.67924" /></flowRegion><flowPara
+           y="193.67924"
+           style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12.50000149px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;" /></flowRegion><flowPara
          id="flowPara6808" /></flowRoot>    <rect
        ry="0"
        rx="0"
@@ -990,7 +1010,7 @@
        id="rect79371-1-6-6-9-8-7-3-5-1-8-2-9"
        style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" />
     <text
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.50000149px;line-height:125%;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';text-align:start;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;"
        id="text44191"
        font-size="11"
        x="253.81931"
@@ -1007,7 +1027,7 @@
        style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.50000149px;line-height:125%;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;"
        x="42.015415"
        y="450.36569"
        id="text18189-1"
@@ -1024,12 +1044,12 @@
          x="42.015415"
          y="477.86569"
          id="tspan6878-8"
-         style="font-size:7.5px;stroke:none" /><tspan
+         style="font-size:12.50000149px;stroke:none;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;" /><tspan
          sodipodi:role="line"
          x="42.015415"
          y="491.61569"
          id="tspan18193-4"
-         style="font-size:7.5px;stroke:none" /></text>
+         style="font-size:12.50000149px;stroke:none;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;" /></text>
     <rect
        ry="0"
        rx="0"
@@ -1044,7 +1064,7 @@
        id="text44235-7"
        y="576.93506"
        x="270.40372"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.50000149px;line-height:125%;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;"
        xml:space="preserve"><tspan
          y="576.93506"
          x="270.40372"
@@ -1065,7 +1085,7 @@
        style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.50000149px;line-height:125%;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;"
        x="42.015415"
        y="517.8609"
        id="text18189-1-0"
@@ -1082,20 +1102,20 @@
          x="42.015415"
          y="545.3609"
          id="tspan6808-9"
-         style="font-size:7.5px" /><tspan
+         style="font-size:12.50000149px;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;" /><tspan
          sodipodi:role="line"
          x="42.015415"
          y="559.1109"
          id="tspan6878-8-3"
-         style="font-size:7.5px" /><tspan
+         style="font-size:12.50000149px;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;" /><tspan
          sodipodi:role="line"
          x="42.015415"
          y="572.8609"
          id="tspan18193-4-9"
-         style="font-size:7.5px" /></text>
+         style="font-size:12.50000149px;-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;" /></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.75000164px;line-height:125%;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.20000002;stroke-miterlimit:4;stroke-dasharray:none;"
        x="208.63893"
        y="382.87268"
        id="text266398"
@@ -1114,7 +1134,7 @@
        x="188.43343"
        font-size="13"
        id="text56812"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">IBM® Bluemix</text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.00000179px;line-height:125%;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';text-align:start;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.20000002;stroke-miterlimit:4;stroke-dasharray:none;">IBM® Bluemix</text>
     <path
        inkscape:connector-curvature="0"
        id="path8199-4"
@@ -1133,20 +1153,21 @@
        x="152.27927"
        font-size="11"
        id="text56834-0-4-80"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;opacity:1;fill:#000000;fill-opacity:1">MQTT</text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.50000149px;line-height:125%;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';text-align:start;writing-mode:lr;text-anchor:start;opacity:1;fill:#000000;fill-opacity:1;">MQTT</text>
     <flowRoot
        xml:space="preserve"
        id="flowRoot7059"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;font-size:12.50000149px;line-height:125%;font-family:'MS UI Gothic';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;-inkscape-font-specification:'MS UI Gothic, Normal';font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;"
        transform="translate(-13.005022,369.03027)"><flowRegion
          id="flowRegion7061"><rect
            id="rect7063"
            width="131.45161"
            height="185.48387"
            x="358.06451"
-           y="-39.357193" /></flowRegion><flowPara
+           y="-39.357193"
+           style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12.50000149px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;" /></flowRegion><flowPara
          id="flowPara7065" /></flowRoot>    <path
-       style="fill:none;stroke:#000000;stroke-width:1.65158689;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:4.95476096, 4.95476096;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#TriangleInM-5);marker-end:url(#TriangleOutM-7)"
+       style="fill:none;stroke:#000000;stroke-width:1.65158689;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:4.95476096, 4.95476095999999980;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#TriangleInM-5);marker-end:url(#TriangleOutM-7)"
        d="m 371.0242,460.12079 64.7472,0"
        id="path8207"
        inkscape:connector-curvature="0" />
@@ -1163,7 +1184,7 @@
        x="388.11801"
        font-size="11"
        id="text56834-0-4-1"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000191px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.50000149px;line-height:125%;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';text-align:start;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;">
       <tspan
          sodipodi:role="line"
          id="tspan5798"
@@ -1181,7 +1202,7 @@
        x="147.24741"
        font-size="11"
        id="text66184"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">インターネット</text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.50000149px;line-height:125%;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';text-align:start;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;">インターネット</text>
     <path
        inkscape:connector-curvature="0"
        id="path13593"
@@ -1189,7 +1210,7 @@
        style="fill:#66d1f5;fill-opacity:1" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.50000149px;line-height:125%;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.20000002;stroke-miterlimit:4;stroke-dasharray:none"
        x="440.41376"
        y="430.50845"
        id="text266398-0"
@@ -1213,7 +1234,7 @@
        style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:none" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.50000149px;line-height:125%;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;"
        x="54.029083"
        y="588.73309"
        id="text44241"
@@ -1259,7 +1280,7 @@
        style="fill:#66d1f5;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.50000149px;line-height:125%;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;"
        x="43.057407"
        y="394.01312"
        id="text18189-5-9"
@@ -1286,7 +1307,7 @@
        x="159.2424"
        font-size="11"
        id="text56834-0-4"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;opacity:1;fill:#000000;fill-opacity:1">API</text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.50000149px;line-height:125%;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';text-align:start;writing-mode:lr;text-anchor:start;opacity:1;fill:#000000;fill-opacity:1;">API</text>
     <path
        inkscape:connector-curvature="0"
        id="path8199-4-4"
@@ -1305,7 +1326,7 @@
        x="152.38312"
        font-size="11"
        id="text56834-0-4-80-3"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.00000191px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;opacity:1;fill:#000000;fill-opacity:1">
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.50000149px;line-height:125%;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';text-align:start;writing-mode:lr;text-anchor:start;opacity:1;fill:#000000;fill-opacity:1;">
       <tspan
          sodipodi:role="line"
          id="tspan5794"
@@ -1319,7 +1340,8 @@
     </text>
     <g
        id="g5278"
-       transform="translate(-10.531131,436.61056)">
+       transform="translate(-10.531131,436.61056)"
+       style="">
       <path
          id="path5280"
          d="M 40,12 35.33,12 9.67,12 5,12 5,33 9.67,33 35.34,33 40,33 40,12 Z m -9.22,8.06 5.32,0 m -5.32,2.44 5.32,0 m -5.32,2.44 5.32,0 m -18.57,-4.88 5.32,0 m -5.32,2.44 5.32,0 m -5.32,2.44 5.32,0 m -0.02,1.5 7.87,0 0,-7.87 -7.87,0 0,7.87 z m -10.98,-2.5 c 1.1,0 2,0.9 2,2 0,1.1 -0.9,2 -2,2 -1.1,0 -2,-0.9 -2,-2 0,-1.11 0.9,-2 2,-2 z m 1.98,-2.88 -4,0 0,-4 4,0 0,4 z"
@@ -1430,7 +1452,8 @@
        style="fill:#c2edfb;fill-opacity:1;fill-rule:evenodd;stroke:none" />
     <g
        id="g5339"
-       transform="translate(222.22527,444.99945)">
+       transform="translate(222.22527,444.99945)"
+       style="">
       <path
          id="path5341"
          d="m 20.02,24.81 c -0.14,0 -0.24,-0.04 -0.29,-0.12 -0.05,-0.08 -0.07,-0.21 -0.07,-0.4 l 0,-3.59 c 0,-0.37 -0.08,-0.68 -0.24,-0.94 -0.16,-0.26 -0.37,-0.46 -0.64,-0.63 -0.26,-0.16 -0.56,-0.28 -0.9,-0.35 -0.33,-0.07 -0.67,-0.11 -1.01,-0.11 -0.39,0 -0.76,0.04 -1.13,0.11 -0.37,0.07 -0.7,0.2 -0.99,0.38 -0.29,0.18 -0.53,0.42 -0.72,0.71 -0.19,0.3 -0.3,0.67 -0.32,1.12 l 1.53,0 c 0.04,-0.38 0.19,-0.66 0.47,-0.83 0.28,-0.18 0.63,-0.27 1.06,-0.27 0.15,0 0.31,0.01 0.48,0.03 0.17,0.02 0.33,0.07 0.46,0.13 0.14,0.07 0.26,0.16 0.35,0.29 0.09,0.13 0.14,0.29 0.14,0.48 0,0.22 -0.06,0.39 -0.17,0.5 -0.11,0.11 -0.26,0.2 -0.46,0.25 -0.19,0.05 -0.42,0.09 -0.67,0.11 -0.25,0.02 -0.52,0.06 -0.79,0.11 -0.32,0.04 -0.64,0.09 -0.96,0.15 -0.32,0.07 -0.61,0.18 -0.86,0.33 -0.26,0.15 -0.46,0.36 -0.62,0.63 -0.16,0.27 -0.24,0.62 -0.24,1.05 0,0.34 0.07,0.64 0.2,0.9 0.13,0.26 0.31,0.47 0.53,0.63 0.22,0.17 0.47,0.29 0.76,0.38 0.29,0.09 0.59,0.13 0.9,0.13 0.41,0 0.84,-0.07 1.29,-0.2 0.44,-0.13 0.82,-0.35 1.12,-0.65 0.06,0.31 0.2,0.53 0.4,0.66 0.21,0.13 0.47,0.19 0.78,0.19 0.06,0 0.14,0 0.23,-0.01 0.09,-0.01 0.18,-0.02 0.27,-0.04 0.09,-0.02 0.18,-0.04 0.26,-0.06 0.08,-0.02 0.15,-0.04 0.21,-0.06 l 0,-1.06 c -0.08,0.02 -0.15,0.03 -0.22,0.03 -0.04,0.02 -0.09,0.02 -0.14,0.02 z m -1.9,-1.32 c 0,0.24 -0.06,0.45 -0.17,0.61 -0.12,0.17 -0.26,0.3 -0.44,0.41 -0.17,0.11 -0.36,0.18 -0.56,0.23 -0.2,0.05 -0.38,0.07 -0.55,0.07 -0.13,0 -0.28,-0.01 -0.45,-0.04 -0.17,-0.03 -0.32,-0.07 -0.46,-0.14 -0.14,-0.07 -0.26,-0.16 -0.36,-0.28 -0.1,-0.12 -0.15,-0.26 -0.15,-0.43 0,-0.2 0.03,-0.37 0.1,-0.5 0.07,-0.14 0.16,-0.25 0.28,-0.34 0.12,-0.09 0.25,-0.15 0.4,-0.2 0.15,-0.05 0.31,-0.09 0.47,-0.11 0.34,-0.06 0.68,-0.11 1.02,-0.14 0.34,-0.03 0.63,-0.12 0.86,-0.28 l 0,1.14 z"
@@ -1464,22 +1487,27 @@
     </g>
     <g
        id="Page-1_1_"
-       transform="translate(209.03082,390.77723)">
+       transform="translate(209.03082,390.77723)"
+       style="">
       <g
          transform="translate(-278,-377)"
-         id="Artboard-1-Longer_1_">
+         id="Artboard-1-Longer_1_"
+         style="">
         <g
            transform="translate(279,378)"
-           id="Page-1_2_">
+           id="Page-1_2_"
+           style="">
           <g
-             id="IOt-Icon">
+             id="IOt-Icon"
+             style="">
             <path
                d="m 30.25,30.4 -17.48,0 0,-17.66 17.48,0 0,17.66 z"
                id="Stroke-1_1_"
                inkscape:connector-curvature="0"
                style="fill:none;stroke:#ffffff;stroke-width:1.04999995" />
             <g
-               id="Group-20">
+               id="Group-20"
+               style="">
               <path
                  d="m 24.31,21.55 c 0,-1.54 -1.26,-2.79 -2.81,-2.79 -1.55,0 -2.81,1.25 -2.81,2.79 0,1.54 1.26,2.79 2.81,2.79 1.55,-0.01 2.81,-1.25 2.81,-2.79 l 0,0 z"
                  id="Stroke-2"
@@ -1532,7 +1560,7 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.50000149px;line-height:125%;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;"
        x="494.67459"
        y="464.4097"
        id="text18189-5-9-1"
@@ -1672,20 +1700,21 @@
     <flowRoot
        xml:space="preserve"
        id="flowRoot5802"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-weight:normal;font-size:12.50000149px;line-height:125%;font-family:'MS UI Gothic';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;-inkscape-font-specification:'MS UI Gothic, Normal';font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;"
        transform="translate(-27.496986,351.02977)"><flowRegion
          id="flowRegion5804"><rect
            id="rect5806"
            width="119.44444"
            height="286.11111"
            x="30.555555"
-           y="-62.752552" /></flowRegion><flowPara
+           y="-62.752552"
+           style="-inkscape-font-specification:'MS UI Gothic, Normal';font-family:'MS UI Gothic';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:12.50000149px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;" /></flowRegion><flowPara
          id="flowPara5808" /></flowRoot>    <text
        sodipodi:linespacing="125%"
        id="text44235-7-0"
        y="464.08423"
        x="270.03796"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.50000149px;line-height:125%;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;"
        xml:space="preserve"><tspan
          id="tspan44239-7-2"
          y="464.08423"
@@ -1713,7 +1742,8 @@
       <path
          id="path4806"
          d="M 78.288,62 64,47.944 64,41 l -7,0 0,-5 7,0 0,-16 -6.932,0 -5.826,-4 1.758,0 0,-16 -17,0 0,16 1.822,0 -5.759,4 -7.063,0 0,16 16,0 0,-16 -6.118,0 5.759,-4 7.759,0 5.826,4 -6.226,0 0,16 7,0 0,5 -7,0 0,16 7,0 0,5 -7,0 0,16 7,0 0,5 -7,0 0,17 16,0 0,-17 -7,0 0,-5 7,0 0,-16 -7,0 0,-5 7,0 0,-6.757 L 75.988,62 71,62 l 0,16 16,0 0,-16 -8.712,0 z M 40,3 l 9,0 0,10 -9,0 0,-10 z"
-         inkscape:connector-curvature="0" />
+         inkscape:connector-curvature="0"
+         style="" />
     </g>
     <path
        inkscape:connector-curvature="0"
@@ -1733,7 +1763,7 @@
        x="153.26682"
        font-size="11"
        id="text56834-0-4-80-4"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;opacity:1;fill:#000000;fill-opacity:1">HTTP</text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.50000149px;line-height:125%;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';text-align:start;writing-mode:lr;text-anchor:start;opacity:1;fill:#000000;fill-opacity:1;">HTTP</text>
     <rect
        ry="0"
        rx="0"
@@ -1748,7 +1778,7 @@
        id="text44235-7-5"
        y="520.48785"
        x="270.06448"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.50000149px;line-height:125%;font-family:'MS UI Gothic';-inkscape-font-specification:'MS UI Gothic, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;"
        xml:space="preserve"><tspan
          y="520.48785"
          x="270.06448"
@@ -1770,35 +1800,41 @@
        id="g4835"
        transform="matrix(0.6753665,0,0,0.6753665,233.69287,514.62336)">
       <g
-         id="g4817">
+         id="g4817"
+         style="">
         <rect
            id="rect4819"
            height="2"
            width="20"
            y="29"
-           x="6" />
+           x="6"
+           style="" />
         <path
            id="path4821"
            d="M 6,1 6,5 6,27 26,27 26,5 26,1 6,1 Z M 24,25 8,25 8,7 24,7 24,25 Z"
-           inkscape:connector-curvature="0" />
+           inkscape:connector-curvature="0"
+           style="" />
         <rect
            id="rect4823"
            height="1"
            width="12"
            y="15"
-           x="10" />
+           x="10"
+           style="" />
         <rect
            id="rect4825"
            height="1"
            width="12"
            y="11"
-           x="10" />
+           x="10"
+           style="" />
         <rect
            id="rect4827"
            height="1"
            width="12"
            y="19"
-           x="10" />
+           x="10"
+           style="" />
       </g>
     </g>
   </g>

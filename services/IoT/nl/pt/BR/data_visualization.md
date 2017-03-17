@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-10"
+lastupdated: "2017-02-17"
 
 ---
 
@@ -197,4 +197,5 @@ Para determinados tipos de cartão, é possível clicar em **Configurações** p
 
 Ótimo! Agora é possível ver os dados em tempo real de seu dispositivo!
 
-Para obter instruções passo a passo sobre como exibir dados do dispositivo em tempo real, veja a orientação [Configurando placas e cartões no novo painel do Watson IoT](https://developer.ibm.com/recipes/tutorials/configuring-the-cards-in-the-new-watson-iot-dashboard/).
+Para obter instruções passo a passo sobre como exibir dados do dispositivo em tempo real, consulte a orientação [Configurando
+placas e cartões no novo Painel do Watson IoT ![Ícone de link externo](../../icons/launch-glyph.svg)](https://developer.ibm.com/recipes/tutorials/configuring-the-cards-in-the-new-watson-iot-dashboard/){: new_window}.
