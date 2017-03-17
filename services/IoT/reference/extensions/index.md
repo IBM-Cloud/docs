@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2017-02-03"
+  years: 2015, 2017
+lastupdated: "2017-03-15"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -39,7 +39,7 @@ The built-in Jasper integration that is provided by our platform provides suppor
 You can access the supported operations in the device drilldown of a Jasper connected device after the following configuration steps are completed.
 
 ### REST APIs for Jasper
-To access the REST API for Jasper, see the Jasper Extension section in the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension){: new_window} documentation.
+To access the REST API for Jasper, see the Jasper Extension section in the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Jasper_Extension){: new_window} documentation.
 
 ### Configuration for Jasper
 
@@ -91,7 +91,7 @@ The AT&T extension enables the following AT&T operations:
 - Change rate plan
 
 ### REST APIs for AT&T
-To access the REST API for AT&T, see the AT&T Extension section in the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension){: new_window} documentation.
+To access the REST API for AT&T, see the AT&T Extension section in the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/AT&T_Extension){: new_window} documentation.
 
 ### Configuration for AT&T
 
@@ -223,7 +223,7 @@ If you have a device which is connected to your {{site.data.keyword.iot_short_no
 - Location status
 
 ### REST APIs for Orange
-To access the REST API for Orange, see the Orange Extension section in the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension){: new_window} documentation.
+To access the REST API for Orange, see the Orange Extension section in the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Orange_Extension){: new_window} documentation.
 
 ### Configuration for Orange
 
@@ -274,7 +274,7 @@ To add a custom device management package by using the {{site.data.keyword.iot_s
 3. Click the **Add Package** button.
 4. Select your package file and click **Open**.
 
-To add a custom device management package by using the API, see the [{{site.data.keyword.iot_short_notm}} API documentation ![External link icon](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
+To add a custom device management package by using the API, see the [{{site.data.keyword.iot_short_notm}} API documentation ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 ## Blockchain
 {: #blockchain}
@@ -293,14 +293,12 @@ To add a custom device management package by using the API, see the [{{site.data
  2. In the **Extensions** page, click **Add Extension**.
  3. Click **Add** next to the Blockchain extension.
  4. In the Blockchain tile, click **Setup**.
- 3. In the **Activate Blockchain** section, click the **Learn more** link to go to the [IoT Blockchain Services Offering page ![External link icon](../../../../icons/launch-glyph.svg)](http://www.ibm.com/internet-of-things/iot-news/announcements/private-blockchain/){: new_window}.
+ 3. In the **Activate Blockchain** section, click the **Learn more** link to go to the [IoT Blockchain Services Offering page ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/internet-of-things/iot-news/announcements/private-blockchain/){: new_window}.
  4. Click **Kick-start your blockchain project** to fill out and submit the *Explore the potential of IoT and Blockchain* form.  
  5. After your request is approved, IBM will contact you to enable blockchain integration for your organization.
  6. Return to the {{site.data.keyword.iot_short_notm}} dashboard for your organization to complete the setup by following the steps in [{{site.data.keyword.iot_short_notm}} blockchain integration](../../bl_blockchain_integration.html).
 
-
-
-## The Weather Company
+<!-- ## The Weather Company
 {: #weathercompany}
 
 The Weather Company extension combines weather data with your existing {{site.data.keyword.iot_short_notm}} devices. Weather data from The Weather Company appears in the device details view if an update location request has been made by using the API, or if the device has already set its location by using a device management message.
@@ -325,5 +323,70 @@ To view the weather data retrieved for a device location, find the device in the
 - Wind direction.
 - Latitude.
 - Longitude.
+-->
 
-<!-- Weather data from The Weather Company extension can be retrieved by using the API. For information on the Weather Company API, see [The Weather Company API documentation ![External link icon](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/ext-twc.html){: new_window}. -->
+<!-- Weather data from The Weather Company extension can be retrieved by using the API. For information on the Weather Company API, see [The Weather Company API documentation ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/swagger/ext-twc.html){: new_window}. -->
+
+## Email
+{: #email}
+
+Users can be added to the {{site.data.keyword.iot_short_notm}} by using email invitations. For information, see  [Managing user access](../../add_users.html).
+
+To use the email invitation feature, an email extension must be configured to use the SendGrid online service or a Simple Mail Transfer Protocol (SMTP) service. The extension can also use the SendGrid {{site.data.keyword.Bluemix_notm}} application.
+
+### SendGrid online service
+
+To configure the email extension for use with the SendGrid online service, follow these steps:
+
+1. Retrieve the authorized API key from your SendGrid online account.
+2. In your {{site.data.keyword.iot_short_notm}} dashboard, click **Extensions** from the navigation bar.
+3. In the **Email** section, click **Setup**.
+4. Select **SendGrid with API key**
+5. Enter the name and email address of your site administrator, and the authorized API key.
+
+### SMTP service
+
+To configure the email extension for use with an SMTP service, follow these steps:
+
+1. In your {{site.data.keyword.iot_short_notm}} dashboard, click **Extensions** from the navigation bar.
+2. In the **Email** section, click **Setup**.
+3. Select **SMTP**.
+4. Enter the configuration details of your SMTP service.
+
+### SendGrid {{site.data.keyword.Bluemix_notm}} application
+
+To configure the email extension for use with the SendGrid {{site.data.keyword.Bluemix_notm}} application, follow these steps:
+
+1. Create a dummy application and bind the SendGrid service.  
+In order to retrieve the configuration credentials, add and bind the SendGrid service to a dummy app.
+
+ 1. From your {{site.data.keyword.Bluemix_notm}} dashboard, click **Create Service**.
+ 2. Select the SendGrid service from the catalog and click **Create**.
+ 3. From the {{site.data.keyword.Bluemix_notm}} dashboard add the {{site.data.keyword.sdk4nodefull}} application.
+ 4. Click the {{site.data.keyword.sdk4nodefull}} application from the {{site.data.keyword.Bluemix_notm}} dashboard and click **Bind a service or API**.
+ 5. Select the SendGrid service and click **Add**.
+ 6. The {{site.data.keyword.sdk4nodefull}} application must now be restaged.
+2. Prepare to configure the {{site.data.keyword.iot_short_notm}} service.  
+The {{site.data.keyword.iot_short_notm}} can be configured by using the {{site.data.keyword.iot_short_notm}} dashboard or by using the {{site.data.keyword.iot_short_notm}} API.  
+ 1. Click the {{site.data.keyword.sdk4nodefull}} application from the {{site.data.keyword.Bluemix_notm}} dashboard.
+ 2. Click **Environment Variables** from the navigation bar.
+ 3. Copy the displayed JSON to a temporary text file.  
+ The JSON should have the following format:
+```
+{
+  "name": "SendGridServiceName",
+  "label": "user-provided",
+  "credentials": {
+    "password": "xxx",
+    "hostname": "smtp.sendgrid.net",
+    "username": "username"
+  }
+}
+```
+3. Add the configuration data to the {{site.data.keyword.iot_short_notm}} organization.
+ 1. Open the {{site.data.keyword.iot_short_notm}} dashboard.
+ 2. Click **Extensions** from the navigation bar.
+ 3. Click **Setup** under the **Email** icon.
+ 4. Select **SendGrid with username**.
+ 5. Enter the configuration data from the temporary text file.
+ 6. Click **Done**.
