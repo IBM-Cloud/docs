@@ -41,7 +41,7 @@ To resolve this problem, complete the following steps:
 
     **Note**: By default, in {{site.data.keyword.Bluemix_notm}}, the *Time Picker* is set to show data for the last 15 minutes.
 
-    For more information on how to set the *Time Picker*, see [Setting a time filter](logging_kibana_set_time_filter.html#set_time_filter).
+    For more information on how to set the *Time Picker*, see [Setting a time filter](../kibana4/logging_kibana_set_time_filter.html#set_time_filter).
        
 2. Click the magnifying glass that is located in the *Discover* page search bar. The page data is refreshed based on the default search query.
 
@@ -49,7 +49,7 @@ To resolve this problem, complete the following steps:
 
     **Note**: By default, in {{site.data.keyword.Bluemix_notm}}, the *Auto refresh* period is set to **OFF**.
     
-    For more information on how to enable it, see [Automatically refreshing the data](logging_kibana_analize_logs_interactively.html#kibana_discover_view_refresh_interval).
+    For more information on how to enable it, see [Automatically refreshing the data](../kibana4/logging_kibana_analize_logs_interactively.html#kibana_discover_view_refresh_interval).
 
 
 
