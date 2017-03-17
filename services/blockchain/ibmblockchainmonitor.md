@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-11-08"
 ---
 
 {:new_window: target="_blank"}
@@ -13,8 +13,7 @@ copyright:
 
 # Dashboard monitor
 {: #blockchain_dashboard_monitor}
-Last updated: 08 November 2016
-{: .last-updated}
+
 
 The dashboard monitor provides an overview of your blockchain environment, including performance data and deployed chaincode. Use the monitor to view network information about peers, logs, ledger state, APIs and chaincode.  
 {:shortdesc}
