@@ -2,9 +2,10 @@
 
 copyright:
   years: 2017
-  lastupdated: "2017-03-17"
+lastupdated: "2017-03-17"
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -58,6 +59,7 @@ The {{site.data.keyword.appid_short_notm}} client SDK is distributed with CocoaP
 1. Create an Xcode project, or open an existing project.
 2. Open, or create, the Podfile in the project's directory.
 3. Under your project's target add a dependency for the 'BluemixAppID' pod. Make sure the `use_frameworks!` command is also under your target.
+
   For example:
 
   ```swift
@@ -79,10 +81,10 @@ The {{site.data.keyword.appid_short_notm}} client SDK is distributed with CocoaP
 7. Under **Project Settings** > **Info** > **URL Types**, add a URL Type. Fill both the **Identifier** text box and the **URL Scheme** text box with this value: $(PRODUCT_BUNDLE_IDENTIFIER)
 
 
-## Initializing the {{site.data.keyword.appid_short_notm}} Client SDK
+## Initializing the {{site.data.keyword.appid_short_notm}} client SDK
 {: #initialize-client-sdk}
 
-1. Add the following import to your AppDelegate.swift file:
+1. Add the following import to your `AppDelegate.swift` file:
 
   ```swift
   import BluemixAppID

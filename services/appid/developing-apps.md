@@ -23,6 +23,6 @@ After creating the {{site.data.keyword.appid_short}} service, you can download s
 ## Web development
 {: #web-dev}
 
-The {{site.data.keyword.appid_short_notm}} service protects your web app, and it requires no special SDK. You can use different identity providers in addition to the protection that is provided by the service. The {{site.data.keyword.appid_short_notm}} integration enables any web application, regardless of the technology it implements, to take advantage of the OAuth2 protocol.
+The {{site.data.keyword.appid_short_notm}} service protects your web app, and it requires no special SDK.<!--- You can use different identity providers in addition to the protection that is provided by the service.---> The {{site.data.keyword.appid_short_notm}} integration enables any web application, regardless of the technology it implements, to take advantage of the OAuth2 protocol.
 
 For information about setting up your web app to access the {{site.data.keyword.appid_short_notm}} service, see the <a href="https://github.com/ibm-cloud-security/appid-serversdk-nodejs" target="_blank">Node.js server SDK GitHub repository <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>.

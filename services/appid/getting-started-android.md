@@ -5,6 +5,7 @@ copyright:
 lastupdated: "2017-03-17"
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -23,7 +24,7 @@ Build your Android apps with the {{site.data.keyword.appid_short}} client SDK, i
 You need the following information:
   * An instance of the {{site.data.keyword.appid_short_notm}} service.
   * Your tenant ID.
-    * In the **Service Credentials** tab of your service dashboard, click **View Credentials**. Your tenant ID is displayed in the **tenant ID** field. This value is used for initializing your app.
+    * In the **Service Credentials** tab of your service dashboard, click **View Credentials**. Your tenant ID is displayed in the **tenantID** field. This value is used for initializing your app.
   * Your {{site.data.keyword.Bluemix}} region. You can find your region by looking in the UI. The value is used for initializing your app.
     <table> <caption> Table 1. {{site.data.keyword.Bluemix_notm}} regions and corresponding SDK values </caption>
     <tr>
