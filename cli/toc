@@ -8,6 +8,7 @@
     [Bluemix CLI plug-ins](bxplug-in.html)
         [Active Deploy](../services/ActiveDeploy/cli.html?pos=2#ad-cli-bx)
         [Auto-Scaling](./plugins/auto-scaling/index.html)
+        [Container Registry](./plugins/registry/index.html)
         [Container Service](../containers/cs_cli_devtools.html)
         [Developer](../cloudnative/dev_cli.html)
         [Private network peering](./plugins/pnp/index.html)
