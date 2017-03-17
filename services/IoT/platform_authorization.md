@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-17"
+lastupdated: "2017-03-13"
 
 ---
 
@@ -21,7 +21,7 @@ To connect your application to {{site.data.keyword.iot_full}}, you must connect 
 {: #api-key}
 API keys are used when connecting applications to your {{site.data.keyword.iot_short_notm}} organization. Applications require an API key to connect into an organization and a unique authentication token that must be used with that API key.  
 
-For more information about application connections, see [MQTT Connectivity for Applications ![External link icon](../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/applications/mqtt.html){: new_window} in the developer documentation.
+For more information about application connections, see [MQTT Connectivity for Applications ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/applications/mqtt.html){: new_window} in the developer documentation.
 
 To create a new API key and authentication token pair:  
 1.	In the {{site.data.keyword.iot_short_notm}} dashboard, go to **Apps > API Keys**.  
