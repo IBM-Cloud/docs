@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-09"
+lastupdated: "2017-03-17"
 
 ---
 <!-- Copyright info and last updated date at top of file: REQUIRED
@@ -50,7 +50,7 @@ To add a new connection, follow these steps:
 
  Cloud Automation Manager must have access to the provider cloud region where you want to deploy your templates.  The access is granted by supplying Cloud Automation Manager with access credentials. The method for obtaining access credentials depends on the cloud provider.
 
- **Note:** If you are creating a connection to Amazon EC2, in order for Cloud Automation Manager to access your Amazon Web Services (AWS) account, an access key and the secret access key to your account are required. The access key and the secret access key are not your AWS user name and password, but they are special tokens that allow Cloud Automation Manager to communicate with your AWS account via secure API calls. For more information about creating AWS access keys, see [Creating, Modifying, and Viewing Access Keys (AWS Management Console)](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey){:new_window}.
+ For information about specifying Amazon EC2 access credentials, see [Configuring an Amazon EC2 connection](https://console.{DomainName}/docs/services/CloudAutomationManager/cam_creating_aws_connection.html).
 
 5. Click **Create**. The connection is added to the connection list.
 
