@@ -20,7 +20,7 @@ To see data from an IBM UrbanCode Deploy server in Delivery Insights, you must i
 
 ## Before you begin
 
-- See the [prerequisites](uc_insights_prereqs.md), including setting up an instance of DevOps Connect.
+- See the [prerequisites](uc_insights_prereqs.html), including setting up an instance of DevOps Connect.
 - Your IBM UrbanCode Deploy server must be at version 6.2 or later.
 
 ## Procedure
