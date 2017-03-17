@@ -37,7 +37,7 @@ To use {{site.data.keyword.DRA_short}}, you must add it to a toolchain. Many too
 
 {{site.data.keyword.DRA_short}} is part of {{site.data.keyword.contdelivery_short}}. You can add {{site.data.keyword.DRA_short}} to any toolchain by selecting it from the tool integration catalog.
 
-{{site.data.keyword.DRA_short}} is also part of many toolchain templates. If you create a toolchain from a template that includes {{site.data.keyword.DRA_short}}, make sure that {{site.data.keyword.DRA_short}} is set to **Advanced**. Then, create the toolchain skip to [Using Insights](#using).
+{{site.data.keyword.DRA_short}} is also part of many toolchain templates. If you create a toolchain from a template that includes {{site.data.keyword.DRA_short}}, make sure that {{site.data.keyword.DRA_short}} is set to **Advanced**. Then, create the toolchain and skip to [Using Insights](#using).
 
 To add {{site.data.keyword.DRA_short}} to a toolchain:
 

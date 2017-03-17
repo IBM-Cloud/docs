@@ -11,10 +11,10 @@ copyright:
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Integrating {{site.data.keyword.DRA_short}} with {{site.data.keyword.deliverypipeline}}
-{: #DRA_toolchain_configure_pipeline}
+# Integrating {{site.data.keyword.DRA_short}} with Jenkins
+{: #DRA_toolchain_configure_jenkins}
 
-*Last updated: 1 November 2016*
+*Last updated: 13 September 2016*
 {: .last-updated}
 
 This information has moved to [a new location](/docs/services/DevOpsInsights/index.html).
