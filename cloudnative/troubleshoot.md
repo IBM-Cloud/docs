@@ -151,7 +151,7 @@ When using the forums to ask a question, tag your question so that it is seen by
 If you have technical questions about developing or deploying an app with the {{site.data.keyword.dev_console}} or the {{site.data.keyword.dev_cli_notm}}:
 
 * Post your question on [Stack Overflow ![External link icon](../icons/launch-glyph.svg "External link icon")](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix) and tag your question with `bluemix-dev-services` and `ibm-bluemix`.
-* Post your question on [Slack ![External link icon](../icons/launch-glyph.svg "External link icon")](http://dwopen.slack.com/) in the `bluemix-dev-services` channel.
+* Post your question on [Slack ![External link icon](../icons/launch-glyph.svg "External link icon")](http://ibm-cloud-tech.slack.com/) in the `bluemix-dev-services` channel. [Sign up ![External link icon](../icons/launch-glyph.svg "External link icon")](http://ibm.biz/IBMCloudNativeSlack) today.
 
 
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
