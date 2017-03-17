@@ -48,6 +48,9 @@ Go to [Configure CLI](https://new-console.{DomainName}/openwhisk/cli){: new_wind
 - [Common uses cases for Serverless applications](./openwhisk_use_cases.html)
 - [Setting up and using OpenWhisk CLI](./openwhisk_cli.html)
 - [Using OpenWhisk from an iOS app](./openwhisk_mobile_sdk.html)
+- [Articles, samples and tutorials](https://github.com/openwhisk/openwhisk-external-resources)
+- [Apache OpenWhisk FAQ](http://openwhisk.org/faq)
+- [Pricing](https://console.ng.bluemix.net/openwhisk/learn/pricing)
 
 ## Programming model
 {: #openwhisk_start_programming}
