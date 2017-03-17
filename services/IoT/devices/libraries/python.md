@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-10-27"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -24,7 +24,7 @@ Use the information and examples that are provided to start developing your devi
 ## Downloading the Python client and resources
 {: #python_client_download}
 
-To access the Python client for {{site.data.keyword.iot_short_notm}} and other available resources, go to the [iot-python](https://github.com/ibm-watson-iot/iot-python) repository in GitHub and complete the installation instructions.
+To access the Python client for {{site.data.keyword.iot_short_notm}} and other available resources, go to the [iot-python ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-python){: new_window} repository in GitHub and complete the installation instructions.
 
 ## Constructor
 {: #constructor}
@@ -151,7 +151,7 @@ client.commandCallback = myCommandCallback
 ## Custom message format support
 {: #custom_message_format}
 
-By default, the message format is set to ``json``, which means that the library supports the encoding and decoding of Python dictionary objects in JSON format. When the message format is set to ``json-iotf``, the message is encoded in accordance with the {{site.data.keyword.iot_short_notm}} JSON Payload specification. To add support for your own custom message formats, see the [Custom Message Format sample](https://github.com/ibm-watson-iot/iot-python/tree/master/samples/customMessageFormat) in GitHub.
+By default, the message format is set to ``json``, which means that the library supports the encoding and decoding of Python dictionary objects in JSON format. When the message format is set to ``json-iotf``, the message is encoded in accordance with the {{site.data.keyword.iot_short_notm}} JSON Payload specification. To add support for your own custom message formats, see the [Custom Message Format sample ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-python/tree/master/samples/customMessageFormat){: new_window} in GitHub.
 
 When you create a custom encoder module, you must register it in the device client as outlined in the following example:
 

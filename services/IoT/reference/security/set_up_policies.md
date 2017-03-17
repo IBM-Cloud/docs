@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-22"
+lastupdated: "2017-03-15"
 
 ---
 
@@ -15,15 +15,15 @@ lastupdated: "2017-02-22"
 # Configuring security policies
 {: #set_up_policies.md}
 
-A security analyst can configure connection security policies and blacklists or whitelists.
+When an advanced security plan (ASP) is used for an organization, a security analyst can configure connection security policies and blacklists or whitelists. When a standard plan is used, the analyst can configure connection policies, with fewer options, and cannot configure blacklists or whitelists.
 
-## Configuring connection policies
+## Configuring connection policies for advanced security
 {: #config_connect}
 
 You can set the default security level that is applied to all devices. You can then add custom security settings for specific devices.
 
-1. On the Risk and Security Management add-on **Policies** page, click **Configure** beside **Connection Security**.
-2. On the **Connection Security** page, select the default connection security level from the drop-down list. The value that you select here is applied to all devices, except for devices that have custom connection settings. These policies affect how the devices connect to the server -- they do not change any settings on the actual device or send any messages to the device. You can select one of the following security levels as the default:
+1. On the Security **Policies** page, click **Configure** beside **Connection Security**.
+2. Under **Default Connection Security**, select the default connection security level from the drop-down list. The value that you select here is applied to all devices, except for devices that have custom connection settings. These policies affect how the devices connect to the server -- they do not change any settings on the actual device or send any messages to the device. You can select one of the following security levels as the default:
     - TLS Optional
     - TLS with Token Authentication
     - TLS with Client Certificate Authentication
@@ -33,15 +33,30 @@ You can set the default security level that is applied to all devices. You can t
 3. Click **Refresh Compliance**. Based on the security level you select, the refreshed table shows the number of devices that are impacted, and the predicted level of compliance at the set security level.
 4. Click **Save**.  
 
+**Note:** 
+You also can access the connection security settings from the **General** page under **Settings**. Click **Open Connection Security Policy**.
+
+## Configuring connection policies for standard security
+{: #config_connect}
+
+For organizations that use standard security, you change the security settings in the **General** page under **Settings**. You can set the default security level that is applied to all devices.
+
+1. Under **Settings**, select the **General**.
+2. Under **Connection Security**, select the default connection security level from the drop-down list. The value that you select here is applied to all devices. These policies affect how the devices connect to the server -- they do not change any settings on the actual device or send any messages to the device. You can select one of the following security levels as the default:
+    - TLS Optional
+    - TLS with Token Authentication
+    - TLS with Token and Client Certificate Authentication
+4. Click **Save**.  
+
 ## Configuring blacklists and whitelists
 {: #config_black_white}
 
-Restrict access to the server from certain devices by using a blacklist or use a whitelist to grant server access to specific devices. You an use either a blacklist or a whitelist -- they cannot be used together.
+Organizations that used advanced security can restrict access to the server from certain devices by using a blacklist, or can use a whitelist to grant server access to specific devices. You an use either a blacklist or a whitelist -- they cannot be used together.
 
 ### Configure a blacklist
 {: #config_blacklist}
 
-1. On the Risk and Security Management **Policies** page, in the **Blacklist** section, click **Configure**.
+1. On the Security **Policies** page, in the **Blacklist** section, click **Configure**.
 2. On the **Blacklist** page, click **Add to Blacklist**.
 3. In the **Add to Blacklist** window, do one of the following:
     - On the **IP Address/Range** tab, enter the IP addresses devices that you want to block, or ranges of IP addresses for multiple consecutive devices.
@@ -55,7 +70,7 @@ Restrict access to the server from certain devices by using a blacklist or use a
 ### Configure a whitelist
 {: #config_whitelist}
 
-1. On the Risk and Security Management **Policies**, click **Configure** beside **Whitelist**.
+1. On the Security **Policies**, click **Configure** beside **Whitelist**.
 2. On the **Whitelist** page, click **Add to Whitelist**.
 3. In the **Add to Whitelist** window, do one of the following:
     - On the **IP Address/Range** tab, enter the IP addresses devices that you want to allow access to, or ranges of IP addresses for multiple consecutive devices.
