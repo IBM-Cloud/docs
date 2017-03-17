@@ -25,16 +25,16 @@ disponíveis as quais o dispositivo podem assinar.
 
 ```
 // Get a list of available tags to which the device can subscribe
-push.getTags(new MFPPushResponseListener<List<String>>(){  
+push.getTags(new MFPPushResponseListener<List<String>>(){
    @Override
-    public void onSuccess(List<String> tags) { 
-   updateTextView("Retrieved available tags: " + tags);  
+   public void onSuccess(List<String> tags){
+   updateTextView("Retrieved available tags: " + tags);
    System.out.println("Available tags are: "+tags);
-   availableTags = tags;   
-   subscribeToTag();   
-  }    
-  @Override    
-  public void onFailure(MFPPushException ex) {
+   availableTags = tags;
+   subscribeToTag();
+  }
+  @Override
+  public void onFailure(MFPPushException ex){
      updateTextView("Error getting available tags.. " + ex.getMessage());
   }
 })  
@@ -96,9 +96,7 @@ lista de tags disponíveis as quais o dispositivo pode assinar.
 //Get a list of available tags to which the device can subscribe 
 [push retrieveAvailableTagsWithCompletionHandler:
 ^(IMFResponse *response, NSError *error){ 
- if (error){    
-   [self updateMessage:error.description];  
- } else {
+ if (error){[ self updateMessage:error.description];} else {
    [self updateMessage:@"Successfully retrieved available tags."];
  NSDictionary *availableTags = [[NSDictionary alloc]init];
  availableTags = [response tags];
@@ -115,7 +113,7 @@ lista de tags nas quais o dispositivo está inscrito.
 // Get a list of tags that to which the device is subscribed.
 [push retrieveSubscriptionsWithCompletionHandler:
 ^(IMFResponse *response, NSError *error) {
-  if (error){
+  if(error){
      [self updateMessage:error.description];
    } else {
      [self updateMessage:@"Successfully retrieved subscriptions."];

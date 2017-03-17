@@ -28,20 +28,10 @@ Installez et utilisez le plug-in push client pour développer davantage vos appl
 
 1. Téléchargez les dernières versions d'Android Studio SDK et Xcode.
 1. Configurez votre émulateur. Pour Android Studio, utilisez un émulateur qui prend en charge l'API Google Play.
-1. Installez l'outil de ligne de commande Git. Pour Windows, prenez soin de sélectionner l'option **Run Git from the Window Command Prompt**. 
-Pour plus d'informations sur le téléchargement et l'installation de cet outil, voir
-[Git
-![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://git-scm.com/downloads "Icône de lien externe"){: new_window}.
-1. Installez Node.js et l'outil Node Package Manager (NPM). L'outil de ligne de commande NPM est intégré à Node.js. Pour plus d'informations sur le
-téléchargement et l'installation de Node.js, voir [Node.js
-![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://nodejs.org/en/download/ "Icône de lien externe"){: new_window}.
-1. A partir de la ligne de commande, installez les outils de ligne de commande Cordova à l'aide de la commande **npm install -g cordova**. Cette action est requise pour pouvoir utiliser le plug-in push Cordova. Pour
-plus d'informations sur l'installation de Cordova et la configuration de votre application Cordova, voir
-[Cordova Apache ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lienexterne")](https://cordova.apache.org/#getstarted "Icône de lien externe"){: new_window}. Pour plus d'informations, reportez-vous au
-
-[Fichier
-Readme![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push "Icône de lien externe"){: new_window} du plug-in push de Cordova.
-1. Placez-vous dans le dossier dans lequel créer votre application Cordova et exécutez la commande ci-dessous pour créer une application Cordova. Si vous possédez déjà une application Cordova, passez à l'étape 3.
+1. Installez l'outil de ligne de commande Git. Pour Windows, prenez soin de sélectionner l'option **Run Git from the Window Command Prompt**. Pour plus d'informations sur le téléchargement et l'installation de cet outil, voir [Git ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://git-scm.com/downloads){: new_window}.
+1. Installez Node.js et l'outil Node Package Manager (NPM). L'outil de ligne de commande NPM est intégré à Node.js. Pour plus d'informations sur le téléchargement et l'installation de Node.js, voir [Node.js ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://nodejs.org/en/download/){: new_window}.
+1. A partir de la ligne de commande, installez les outils de ligne de commande Cordova à l'aide de la commande **npm install -g cordova**. Cette action est requise pour pouvoir utiliser le plug-in push Cordova. Pour plus d'informations sur l'installation de Cordova et la configuration de votre application Cordova, voir [Cordova Apache ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://cordova.apache.org/#getstarted){: new_window}. Pour plus d'informations, reportez-vous au [fichier Readme ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push){: new_window} du plug-in Push de Cordova.
+1. Basculez vers le dossier dans lequel créer votre application Cordova et exécutez la commande ci-dessous pour créer une application Cordova. Si vous possédez déjà une application Cordova, passez à l'étape 3.
 ```cordova create your_app_name
 	cd your_app_name
 ```

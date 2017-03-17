@@ -14,18 +14,15 @@
 ```
 // Get a list of available tags to which the device can subscribe
 push.getTags(new MFPPushResponseListener<List<String>>(){  
-@Override
-    public void onSuccess(List<String> tags) {
-    updateTextView("Retrieved available tags: " + tags);  
+   @Override
+   public void onSuccess(List<String> tags){
+   updateTextView("Retrieved available tags: " + tags);  
    System.out.println("Available tags are: "+tags);
    availableTags = tags;   
-subscribeToTag();
-   
+   subscribeToTag();   
   }    
-@Override
-    
-public void onFailure(MFPPushException ex) {
-
+  @Override    
+  public void onFailure(MFPPushException ex){
      updateTextView("Error getting available tags.. " + ex.getMessage());
   }
 })  
@@ -36,8 +33,7 @@ public void onFailure(MFPPushException ex) {
 ```
 // Get a list of tags that to which the device is subscribed.
 push.getSubscriptions(new MFPPushResponseListener<List<String>>() {
-
-    @Override
+@Override
     public void onSuccess(List<String> tags) {
     updateTextView("Retrieved subscriptions : " + tags);
     System.out.println("Subscribed tags are: "+tags);
@@ -47,7 +43,7 @@ push.getSubscriptions(new MFPPushResponseListener<List<String>>() {
     @Override
     public void onFailure(MFPPushException ex) {
          updateTextView("Error getting subscriptions.. " + ex.getMessage());
-    }
+  }
 })
 ```
 
@@ -59,18 +55,14 @@ push.getSubscriptions(new MFPPushResponseListener<List<String>>() {
 
 ```
 //Get a list of available tags to which the device can subscribe
-MFPPush.retrieveAvailableTags(function(tags) {
-    alert(tags);
+MFPPush.retrieveAvailableTags(function(tags) {alert(tags);
 }, null);
-
-
 ```
 
 ```
 //Get a list of available tags to which the device is subscribed.
 MFPPush.getSubscriptionStatus(function(tags) {
-
-    alert(tags);
+alert(tags);
 }, null);
 ```
 
@@ -85,10 +77,10 @@ MFPPush.getSubscriptionStatus(function(tags) {
 [push retrieveAvailableTagsWithCompletionHandler:
 ^(IMFResponse *response, NSError *error){ 
  if(error){    
-[self updateMessage:error.description];
-  
-} else {
-[self updateMessage:@"Successfully retrieved available tags."];
+   [self updateMessage:error.description];  
+ } else 
+	{
+    [self updateMessage:@"Successfully retrieved available tags."];
  NSDictionary *availableTags = [[NSDictionary alloc]init];
  availableTags = [response tags];
 [self.appDelegateVC updateMessage:availableTags.description];
@@ -125,10 +117,7 @@ subscribedTags = [response subscriptions];
 
 ```
 //Get a list of available tags to which the device can subscribe
-push.retrieveAvailableTagsWithCompletionHandler({ (response, statusCode, error) -> Void in
-
-    if error.isEmpty {
-
+push.retrieveAvailableTagsWithCompletionHandler({ (response, statusCode, error) -> Void inif error.isEmpty {
         print( "Response during retrieve tags : \(response)")
         print( "status code during retrieve tags : \(statusCode)")
     }
@@ -147,8 +136,9 @@ push.retrieveSubscriptionsWithCompletionHandler { (response, statusCode, error) 
         print( "Response during retrieving subscribed tags : \(response.description)")
         print( "status code during retrieving subscribed tags : \(statusCode)")
     }
-    else {
-print( "Error during retrieving subscribed tags \(error) ")
+    else 
+	{
+    print( "Error during retrieving subscribed tags \(error) ")
         Print( "Error during retrieving subscribed tags \n  - status code: \(statusCode) \n Error :\(error) \n")
     }
 }

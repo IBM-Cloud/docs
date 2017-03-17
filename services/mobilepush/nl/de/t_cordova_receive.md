@@ -28,15 +28,15 @@ MFPPush.registerNotificationsCallback(notification);
 
 Im folgenden Abschnitt sind die Eigenschaften für Android-Benachrichtigungen aufgelistet:
 
-* message - Push-Nachricht
-* payload - JSON-Objekt mit den Nutzdaten einer Benachrichtigung
+* message - Push-Benachrichtigung.
+* payload - JSON-Objekt mit den Nutzdaten einer Benachrichtigung.
 
 
 ##Eigenschaften für iOS-Benachrichtigungen
 
 Im folgenden Abschnitt sind die Eigenschaften für iOS-Benachrichtigungen aufgelistet:
 
-* message - Push-Nachricht.
+* message - Push-Benachrichtigung.
 * payload - JSON-Objekt mit den Nutzdaten einer Benachrichtigung.
 action-loc-key - Diese Zeichenfolge dient als Schlüssel zum Abrufen einer lokalisierten Zeichenfolge in der aktuellen Lokalisierung, die anstelle von 'View' als Titel für die rechte Schaltfläche verwendet werden soll.
 * badge - Die Nummer, die als Badge des App-Symbols angezeigt werden soll. Wenn diese Eigenschaft fehlt, wird das Badge nicht geändert. Um das Badge zu entfernen,

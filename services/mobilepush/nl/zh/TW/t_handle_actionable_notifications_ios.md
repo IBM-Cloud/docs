@@ -27,7 +27,6 @@ copyright:
  
 ```
 func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], completionHandler: () -> Void) {
-
       //must call completion handler when finished
       completionHandler()
   }

@@ -359,7 +359,8 @@ var tagsArray = ["tag1", "Tag2"]
 ```
 	{: codeblock}
 
-# Usando notificações baseada em tag
+# Usando
+notificações baseada em tag
 {: #using_tags}
 
 Notificações baseadas em tag são mensagens que se destinam a todos os dispositivos inscritos em uma tag específica. Cada dispositivo pode ser inscrito em qualquer número de tags. Este

@@ -10,9 +10,9 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Ativando notificação baseada em evento do webhooks
+# Ativando webhooks 
 {: #tag_based_notifications}
-Última atualização: 16 de janeiro de 2017
+Última atualização: 23 de janeiro de 2017
 {: .last-updated}
 
 
@@ -43,4 +43,4 @@ despachada.
 múltiplos eventos webhooks, que podem incluir falhas e sucesso. 
 Os eventos webhook têm o mesmo messageID que a mensagem despachada. 
 
-Para obter mais informações sobre webhooks, veja a [API de REST do IBM Push Notifications ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://mobile.{DomainName}/imfpush/#/webhooks "Ícone de link externo"){: new_window}.
+Para obter mais informações sobre webhooks, veja a [API de REST de notificações push da IBM ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://mobile.{DomainName}/imfpush/#/webhooks){: new_window}.

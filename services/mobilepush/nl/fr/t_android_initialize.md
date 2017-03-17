@@ -1,7 +1,7 @@
 ---
 
-Copyright :
-  Années : 2015, 2016
+copyright:
+ years: 2015, 2016
 
 ---
 
@@ -16,7 +16,7 @@ Cliquez sur le lien **Options pour application mobile** dans le tableau de bord 
 ##Initialisation du logiciel SDK de base
 
 ```
-// Initialisez le logiciel SDK pour Java (Android) avec la route et l'identificateur global unique d'application IBM Bluemix
+// Initialize the SDK for Java (Android) with IBM Bluemix AppGUID and route
 BMSClient.getInstance().initialize(getApplicationContext(), "applicationRoute","applicationGUID", bluemixRegion:"Location where your app Hosted");
 ```
 
@@ -41,7 +41,7 @@ Indique l'emplacement où l'application est hébergée. Vous pouvez utiliser l'u
 ##Initialisation du logiciel SDK Push du client
 
 ```
-//Initialisez le logiciel SDK Push du client pour Java
+//Initialize client Push SDK for Java
 MFPPush push = MFPPush.getInstance();
 push.initialize(getApplicationContext());
 ```

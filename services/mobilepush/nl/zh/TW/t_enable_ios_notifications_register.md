@@ -18,10 +18,9 @@
 
 ```
 	//For Objective-C
-
 	- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0){
-[[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:categories]];
+	    [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:categories]];
 	    [[UIApplication sharedApplication] registerForRemoteNotifications];
 	    }
 	    else{
@@ -37,7 +36,7 @@
 ```
 	//For Swift
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-let notificationTypes: UIUserNotificationType = UIUserNotificationType.Badge | UIUserNotificationType.Alert | UIUserNotificationType.Sound
+		let notificationTypes: UIUserNotificationType = UIUserNotificationType.Badge | UIUserNotificationType.Alert | UIUserNotificationType.Sound
 		let notificationSettings: UIUserNotificationSettings = UIUserNotificationSettings(forTypes: notificationTypes, categories: categories)
 		application.registerUserNotificationSettings(notificationSettings)
 		application.registerForRemoteNotifications()
@@ -46,7 +45,7 @@ let notificationTypes: UIUserNotificationType = UIUserNotificationType.Badge | U
 
 ##將記號傳遞至 Push Notifications
 
-從 APNs 接收到記號之後，將記號傳遞至 Push Notifications，這是 ```registerDevice:withDeviceToken``` 方法的一部分。
+從 APNs 接收到記號之後，將記號傳遞至 Push Notifications，這是 `registerDevice:withDeviceToken` 方法的一部分。
 
 ###Objective-C
 
@@ -56,9 +55,7 @@ let notificationTypes: UIUserNotificationType = UIUserNotificationType.Badge | U
 
    IMFClient *client = [IMFClient sharedInstance];
 
-
- [client initializeWithBackendRoute:@"your-backend-route-here" backendGUID:@"Your-backend-GUID-here"];
-
+ [client initializeWithBackendRoute: @"your-backend-route-here" backendGUID: @"Your-backend-GUID-here"];
 
 
  // get Push instance
@@ -74,7 +71,7 @@ IMFPushClient* push = [IMFPushClient sharedInstance];
 
 ###Swift
 
-從 APNs 接收到記號之後，將記號傳遞至 Push Notifications，這是 ```didRegisterForRemoteNotificationsWithDeviceToken``` 方法的一部分。
+從 APNS 接收到記號之後，將記號傳遞至 Push Notifications，這是 `didRegisterForRemoteNotificationsWithDeviceToken` 方法的一部分。
 
 ```
 func application (application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData){

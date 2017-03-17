@@ -12,7 +12,7 @@ copyright:
 
 ## Android
 
-複製下列程式碼 Snippet，並將其貼入 Android 行動式應用程式。
+複製下列程式碼 Snippet，並將其貼入 Android 行動應用程式。
 
 ```
 push.subscribe(allTags.get(0),
@@ -32,7 +32,7 @@ new MFPPushResponseListener<String>() {
 
 ```
 push.unsubscribe(tag, new MFPPushResponseListener<String>() {
-@Override
+ @Override
  public void onSuccess(String s) {
    updateTextView("Unsubscribing from tag");
    updateTextView("Successfully unsubscribed from tag . "+ tag);
@@ -46,7 +46,7 @@ push.unsubscribe(tag, new MFPPushResponseListener<String>() {
 
 ## Cordova
 
-複製下列程式碼 Snippet，並將其貼入 Cordova 行動式應用程式。
+複製下列程式碼 Snippet，並將其貼入 Cordova 行動應用程式。
 
 ```
 var tag = "YourTag";
@@ -56,7 +56,7 @@ MFPPush.unsubscribe(tag, success, failure);
 
 ## Objective-C
 
-複製下列程式碼 Snippet，並將其貼入 Objective-C 行動式應用程式。
+複製下列程式碼 Snippet，並將其貼入 Objective-C 行動應用程式。
 
 使用 **subscribeToTags** API 來訂閱標籤。
 
@@ -91,7 +91,7 @@ MFPPush.unsubscribe(tag, success, failure);
 
 ## Swift
 
-複製下列程式碼 Snippet，並將其貼入 Swift 行動式應用程式。
+複製下列程式碼 Snippet，並將其貼入 Swift 行動應用程式。
 
 **訂閱可用的標籤**
 
@@ -99,9 +99,8 @@ MFPPush.unsubscribe(tag, success, failure);
 
 ```
 push.subscribeToTags(tagsArray: tags) { (response: IMFResponse!, error: NSError!) -> Void in
-
-	if (error != nil) {
-//error while subscribing to tags
+	if (error != nil) { 
+		//error while subscribing to tags
 	} else {
 		//successfully subscribed to tags var subStatus = response.subscribeStatus();
 	}
@@ -120,7 +119,7 @@ push.unsubscribeFromTags(response, completionHandler: { (response, statusCode, e
         print( "status code during unsubscribed tags : \(statusCode)")
     }
     else {
-print( "Error during  unsubscribed tags \(error) ")
+        print( "Error during  unsubscribed tags \(error) ")
         print( "Error during unsubscribed tags \n  - status code: \(statusCode) \n Error :\(error) \n")
     }
 }

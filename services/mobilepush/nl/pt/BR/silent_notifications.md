@@ -15,7 +15,7 @@ copyright:
 Última atualização: 16 de janeiro de 2017
 {: .last-updated}
 
-As notificações silenciosas não aparecem na tela do dispositivo. Essas notificações são recebidas pelo aplicativo no segundo plano, que acorda o aplicativo por até 30 segundos para executar a tarefa em segundo plano especificada. É possível que um usuário não perceba a chegada da notificação. Para enviar notificações silenciosas para iOS, use a [API de REST ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://mobile.{DomainName}/imfpush/ "Ícone de link externo"){: new_window}.   
+As notificações silenciosas não aparecem na tela do dispositivo. Essas notificações são recebidas pelo aplicativo no segundo plano, que acorda o aplicativo por até 30 segundos para executar a tarefa em segundo plano especificada. É possível que um usuário não perceba a chegada da notificação. Para enviar notificações silenciosas para o iOS, use a [API de REST ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://mobile.{DomainName}/imfpush/){: new_window}.   
 
 1. Para enviar notificações push silenciosas, implemente o método a seguir no arquivo `appDelegate.m` em seu projeto. Em Swift, o valor `contentAvailable` enviado pelo servidor para notificações silenciosas é igual a 1.
 ```

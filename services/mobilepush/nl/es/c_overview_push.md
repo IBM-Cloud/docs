@@ -15,13 +15,13 @@ copyright:
 Última actualización: 18 de enero de 2017
 {: .last-updated}
 
-IBM {{site.data.keyword.mobilepushshort}} es un servicio que puede utilizar para enviar notificaciones a dispositivos y plataformas. Las notificaciones se pueden destinar a todos los usuarios de la aplicación o a un conjunto específico de usuarios y dispositivos mediante etiquetas. Puede administrar dispositivos, etiquetas y suscripciones.   
+IBM {{site.data.keyword.mobilepushshort}} es un servicio que puede utilizar para enviar notificaciones a dispositivos y plataformas. Las notificaciones se pueden destinar a todos los usuarios de la aplicación o a un conjunto específico de usuarios y dispositivos mediante etiquetas. Puede administrar dispositivos, etiquetas y suscripciones.  
 
-Puede utilizar cualquiera de las siguientes opciones para crear un servicio enlazado o sin enlazar: 
+Puede utilizar cualquiera de las siguientes opciones para crear un servicio enlazado o sin enlazar:
 
-- Creando una aplicación Bluemix mediante el contenedor modelo del iniciador de servicios MobileFirst desde el catálogo. Se creará un servicio de notificaciones Push enlazado a una aplicación de fondo de Bluemix. 
-- Creando un servicio de notificaciones Push sin enlazar directamente desde el catálogo de Mobile. Luego puede enlazar una aplicación o incluso utilizarlo sin enlazar.  
-- Utilizando el [panel de control de Mobile ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://console.ng.bluemix.net/docs/mobile/services.html "icono de enlace externo"){: new_window}.
+- Creando una aplicación Bluemix mediante el contenedor modelo del iniciador de servicios MobileFirst desde el catálogo. Se creará un servicio de notificaciones Push enlazado a una aplicación de fondo de Bluemix.
+- Creando un servicio de notificaciones Push sin enlazar directamente desde el catálogo de Mobile. Luego puede enlazar una aplicación o incluso utilizarlo sin enlazar. 
+- Utilizando el [panel de control de Mobile ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://console.ng.bluemix.net/docs/mobile/services.html){: new_window}.
 
 Tenga en cuenta que el separador de supervisión de {{site.data.keyword.mobilepushshort}} no muestra los datos analíticos.
 
@@ -31,7 +31,7 @@ El servicio {{site.data.keyword.mobilepushshort}} ahora está habilitado para Op
 ## Proceso del servicio {{site.data.keyword.mobilepushshort}}
 {: #overview_push_process}
 
-Los clientes de navegadores web y móviles y las aplicaciones y extensiones de Google Chrome pueden suscribirse y registrarse para el servicio de {{site.data.keyword.mobilepushshort}}. Al arrancar, las aplicaciones móviles y de navegador se registrarán y se suscribirán al servicio {{site.data.keyword.mobilepushshort}}. Las notificaciones se asignan al servicio de APN (Apple Push Notification Service) o al servidor de Firebase Cloud Messaging (FCM)/Google Cloud Messaging (GCM) y, a continuación, se enviarán a los clientes móviles y de navegador registrados.
+Los clientes de navegadores web y móviles y las aplicaciones y extensiones de Google Chrome pueden suscribirse y registrarse para el servicio de {{site.data.keyword.mobilepushshort}}. Al arrancar, las aplicaciones móviles y de navegador se registrarán y se suscribirán al servicio {{site.data.keyword.mobilepushshort}}. Las notificaciones se asignan al servicio APNs (Apple Push Notification Service) o al servidor de Firebase Cloud Messaging (FCM)/Google Cloud Messaging (GCM) y, a continuación, se enviarán a los clientes móviles y de navegador registrados.
 
 ![Visión general de push](images/overview.jpg)
 
@@ -59,17 +59,17 @@ El servicio {{site.data.keyword.mobilepushshort}} gestiona toda la información 
 ###Pasarelas
 {: gateways}
 
-Los servicios de nube específicos de plataformas para las notificaciones push, como FCM/GCM o Apple Push Notification Service (APN), que utilizan el servicio IBM {{site.data.keyword.mobilepushshort}} para asignar notificaciones a las aplicaciones móviles y de navegador.
+Los servicios de nube específicos de plataformas para las notificaciones push, como FCM/GCM o Apple Push Notification Service (APNs), que utilizan el servicio IBM {{site.data.keyword.mobilepushshort}} para asignar notificaciones a las aplicaciones móviles y de navegador.
 
 ###Seguridad push
 {: push-security}
 
-Las API de {{site.data.keyword.mobilepushshort}} se protegen mediante dos tipos de secretos: 
+Las API de {{site.data.keyword.mobilepushshort}} se protegen mediante dos tipos de secretos:
 
-- **appSecret**: 'appSecret' protege las API que suelen invocar las aplicaciones de fondo, como por ejemplo la API para enviar {{site.data.keyword.mobilepushshort}} y la API para configurar las opciones.   
-- **clientSecret**:  'clientSecret' protege las API que suelen invocar las aplicaciones de clientes móviles. Sólo hay una API relacionada con el registro de un dispositivo con un ID de usuario asociado que requiere este 'clientSecret'. Ninguna del resto de las API invocadas desde los clientes móviles requiere el clientSecret.  
+- **appSecret**: 'appSecret' protege las API que suelen invocar las aplicaciones de fondo, como por ejemplo la API para enviar {{site.data.keyword.mobilepushshort}} y la API para configurar las opciones.
+- **clientSecret**:  'clientSecret' protege las API que suelen invocar las aplicaciones de clientes móviles. Sólo hay una API relacionada con el registro de un dispositivo con un ID de usuario asociado que requiere este 'clientSecret'. Ninguna del resto de las API invocadas desde los clientes móviles requiere el clientSecret. 
 
-'appSecret' y 'clientSecret' se asignan a todas las instancias de servicio en el momento de enlazar una aplicación con el servicio {{site.data.keyword.mobilepushshort}}. Consulte la documentación de las [API REST ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://mobile.{DomainName}/imfpush/ "icono de enlace externo") para obtener información sobre cómo se pasan los secretos y a qué API. 
+'appSecret' y 'clientSecret' se asignan a todas las instancias de servicio en el momento de enlazar una aplicación con el servicio {{site.data.keyword.mobilepushshort}}. Consulte la documentación de las [API REST ![icono de enlace externo](../../icons/launch-glyph.svg "icono de enlace externo")](https://mobile.{DomainName}/imfpush/) para obtener información sobre cómo se pasan los secretos y a qué API.
 
 **Nota**: Las aplicaciones anteriores requerían que se pasara clientSecret solo al registrar o actualizar dispositivos con el campo userID. Todas las otras API invocadas con clientes móviles y de navegador no necesitaban clientSecret. Estas aplicaciones antiguas pueden seguir utilizando el clientSecret de forma opcional para los registros de dispositivos o las llamadas de actualización. Sin embargo, se recomienda encarecidamente realizar la comprobación de clientSecret en todas las llamadas de API de cliente. Para imponer esto en las aplicaciones existentes, se ha publicado una nueva API 'verifyClientSecret'.  En las aplicaciones nuevas, la comprobación de clientSecret se efectuará en todas las llamadas de API de cliente. Este comportamiento no puede modificarse con la API 'verfiyClientSecret'.
 
@@ -115,7 +115,7 @@ Las notificaciones se pueden definir para alcanzar una plataforma de dispositivo
 ## Tamaño de los mensajes de {{site.data.keyword.mobilepushshort}}
 {: #push-message-size}
 
-El tamaño de carga útil de los mensajes de {{site.data.keyword.mobilepushshort}} depende de las restricciones diseñadas por las pasarelas (FCM/GCM, APN) y las plataformas cliente. 
+El tamaño de carga útil de los mensajes de {{site.data.keyword.mobilepushshort}} depende de las restricciones diseñadas por las pasarelas (FCM/GCM, APNs) y las plataformas cliente. 
 
 ### iOS y Safari
 {: ios-message-size}

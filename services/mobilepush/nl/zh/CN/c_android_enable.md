@@ -12,7 +12,7 @@ years: 2015, 2017
 
 # 使 Android 应用程序能够接收 {{site.data.keyword.mobilepushshort}}
 {: #tag_based_notifications}
-上次更新时间：2017 年 1 月 16 日
+上次更新时间：2017 年 2 月 14 日
 {: .last-updated}
 
 您可以让 Android 应用程序具有向您的设备接收推送通知的能力。Android Studio 是必备软件，也是构建 Android 项目的建议方法。必须具有 Android Studio 的基本知识。
@@ -23,7 +23,7 @@ years: 2015, 2017
 本部分描述如何安装和使用客户机推送 SDK 来进一步开发 Android 应用程序。
 
 可以使用 Gradle 来添加 Bluemix® Mobile Services 推送 SDK。Gradle 会从存储库自动下载工件，并使这些工件可用于您的 Android 应用程序。
-确保正确设置了 Android Studio 和 Android Studio SDK。有关如何设置系统的更多信息，请参阅 [Android Studio 概述 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.android.com/tools/studio/index.html "外部链接图标"){: new_window}。有关 Gradle 的更多信息，请参阅[配置 Gradle 构建 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://developer.android.com/tools/building/configuring-gradle.html "外部链接图标"){: new_window}。
+确保正确设置了 Android Studio 和 Android Studio SDK。有关如何设置系统的更多信息，请参阅 [Android Studio 概述 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.android.com/tools/studio/index.html){: new_window}。有关 Gradle 的更多信息，请参阅[配置 Gradle 构建 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://developer.android.com/tools/building/configuring-gradle.html){: new_window}。
 
 创建并打开移动应用程序后，使用 Android Studio 完成以下步骤。
 
@@ -54,24 +54,24 @@ years: 2015, 2017
 3. 向项目级别 **build.gradle** 文件添加以下依赖关系。
 ```
 dependencies {
-classpath 'com.android.tools.build:gradle:3.0.0'
+classpath 'com.android.tools.build:gradle:2.2.3'
     classpath 'com.google.gms:google-services:3.0.0'
 }
 ``` 
     {: codeblock}
-5. 在 **AndroidManifest.xml** 文件中，添加以下许可权，要查看样本清单，请参阅 [Android helloPush 样本应用程序![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml "外部链接图标"){: new_window}。要查看样本 Gradle 清单，请参阅 [样本构建 Gradle 文件 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle "外部链接图标"){: new_window}。
+5. 在 **AndroidManifest.xml** 文件中，添加以下许可权，要查看样本清单，请参阅 [Android helloPush 样本应用程序 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml){: new_window}。要查看样本 Gradle 清单，请参阅 [样本构建 Gradle 文件 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle){: new_window}。
 ```
-<uses-permission android:name="android.permission.INTERNET"/>
-<uses-permission android:name="android.permission.GET_ACCOUNTS" />
-<uses-permission android:name="android.permission.USE_CREDENTIALS" />
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+	<uses-permission android:name="android.permission.USE_CREDENTIALS" />
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 ```
 	{: codeblock}
-在此处阅读有关 [Android 许可权 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://developer.android.com/guide/topics/security/permissions.html "外部链接图标"){: new_window} 的更多信息。
+在此处阅读有关 [Android 许可权 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://developer.android.com/guide/topics/security/permissions.html){: new_window} 的更多信息。
 4. 添加活动的通知意向设置。此设置会在用户单击通知区域中收到的通知时启动应用程序。
 ```
-<intent-filter>
+	<intent-filter>
 	<action android:name="Your_Android_Package_Name.IBMPushNotification"/>
 	<category  android:name="android.intent.category.DEFAULT"/>
 </intent-filter>
@@ -81,26 +81,26 @@ classpath 'com.android.tools.build:gradle:3.0.0'
 
 5. 针对 RECEIVE 和 REGISTRATION 事件通知，添加 Firebase 云消息传递 (FCM) 或 Google 云消息传递 (GCM) 意向服务和意向过滤器。
 ```
-<service android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushIntentService"
+	<service android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushIntentService"
     android:exported="true" >
     <intent-filter>
         <action android:name="com.google.firebase.MESSAGING_EVENT" />
     </intent-filter>
-</service>
+	</service>
 <service
     android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPush"
     android:exported="true" >
     <intent-filter>
         <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
     </intent-filter>
-</service>
+	</service>
 ```
     {: codeblock}
 
 6. {{site.data.keyword.mobilepushshort}} 服务支持从通知区检索个别通知。对于从通知区访问的通知，系统仅会就单击的通知向您提供手柄。当正常打开应用程序时会显示所有通知。使用以下片段来更新 **AndroidManifest.xml** 文件，以使用此功能：
 
 ```
-<activity android:name="
+	<activity android:name="
 com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationHandler"
 android:theme="@android:style/Theme.NoDisplay"/>
 ```
@@ -174,11 +174,11 @@ push.initialize(getApplicationContext(), "appGUID", "clientSecret");
 将以下代码片段复制到 Android 移动应用程序中。
 
 ```
-//Register Android devices
+	//Register Android devices
 	push.registerDevice(new MFPPushResponseListener<String>() {
 	    @Override
-	    public void onSuccess(String deviceId) {
-	           //handle success here
+    	public void onSuccess(String response) {
+    		//handle success here
 	    }
 	    @Override
     public void onFailure(MFPPushException ex) {
@@ -190,7 +190,7 @@ push.initialize(getApplicationContext(), "appGUID", "clientSecret");
 
 
 ```
-//Handles the notification when it arrives
+	//Handles the notification when it arrives
 	MFPPushNotificationListener notificationListener = new MFPPushNotificationListener() {
 	    @Override
 	    public void onReceive (final MFPSimplePushNotification message){
@@ -209,7 +209,7 @@ push.initialize(getApplicationContext(), "appGUID", "clientSecret");
 
 
 ```
-@Override
+	@Override
 	protected void onResume(){
 	   super.onResume();
 	   if(push != null) {
@@ -222,9 +222,8 @@ push.initialize(getApplicationContext(), "appGUID", "clientSecret");
 
 
 ```
-@Override
-protected void onPause() {
-    super.onPause();
+	@Override
+protected void onPause() {super.onPause();
     if (push != null) {
         push.hold();
     }
@@ -250,7 +249,7 @@ protected void onPause() {
 您需要使用 MFPPush，来注册 **com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationStatusListener** 类。
 
 ```
-push.setNotificationStatusListener(new MFPPushNotificationStatusListener() {
+	push.setNotificationStatusListener(new MFPPushNotificationStatusListener() {
 @Override
 public void onStatusChange(String messageId, MFPPushNotificationStatus status) {
 // Handle status change
@@ -269,11 +268,11 @@ public void onStatusChange(String messageId, MFPPushNotificationStatus status) {
   添加以下片段到 `AndroidManifest.xml` 文件：
 
 ```
-<receiver android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationDismissHandler">
+	<receiver android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationDismissHandler">
 <intent-filter>
 <action android:name="Your_Android_Package_Name.Cancel_IBMPushNotification"/>
 </intent-filter>
-</receiver>
+	</receiver>
 ```
 	{: codeblock}
 
@@ -282,7 +281,7 @@ public void onStatusChange(String messageId, MFPPushNotificationStatus status) {
 您需要扩展 **com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationDismissHandler** 广播接收器并覆盖方法 **onReceive()**，其中 **MFPPushNotificationStatusListener** 应该在调用基类的方法 **onReceive()** 之前注册。
 
 ```
-public class MyDismissHandler extends MFPPushNotificationDismissHandler {
+	public class MyDismissHandler extends MFPPushNotificationDismissHandler {
 @Override
 public void onReceive(Context context, Intent intent) {
 MFPPush.getInstance().setNotificationStatusListener(new MFPPushNotificationStatusListener() {
@@ -301,11 +300,11 @@ super.onReceive(context, intent);
 添加以下片段到 `AndroidManifest.xml` 文件：
 
 ```
-<receiver android:name="Your_Android_Package_Name.Your_Handler">
+	<receiver android:name="Your_Android_Package_Name.Your_Handler">
 <intent-filter>
 <action android:name="Your_Android_Package_Name.Cancel_IBMPushNotification"/>
 </intent-filter>
-</receiver>
+	</receiver>
 ```
     {: codeblock}
 
@@ -357,4 +356,6 @@ super.onReceive(context, intent);
 
 成功设置基本通知后，可以配置基于标记的通知和高级选项。
 
-将这些推送通知服务功能添加到应用程序中。要使用基于标记的通知，请参阅[基于标记的通知](c_tag_basednotifications.html)。要使用高级通知选项，请参阅[启用高级推送通知](t_advance_badge_sound_payload.html)。
+将这些推送通知服务功能添加到应用程序中。
+要使用基于标记的通知，请参阅[基于标记的通知](c_tag_basednotifications.html)。
+要使用高级通知选项，请参阅[启用高级推送通知](t_advance_badge_sound_payload.html)。

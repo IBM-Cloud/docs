@@ -1,17 +1,17 @@
 ---
 
-Copyright :
-  Années : 2015, 2016
+copyright:
+ years: 2015, 2016
 
 ---
 
-# Enregistrement des périphériques
+# Enregistrement des appareils
 
 {: #cordova_register}
 
-Pour enregistrer un périphérique auprès du service Notification push, appelez la méthode d'enregistrement.
+Pour enregistrer un appareil auprès du service de notifications push, appelez la méthode d'enregistrement.
 
-Copiez et collez le fragment de code suivant dans votre application Cordova pour enregistrer un périphérique :
+Copiez et collez le fragment de code suivant dans votre application Cordova pour enregistrer un appareil :
 
 ```
 	var success = function(message) { console.log("Success: " + message); };
@@ -56,21 +56,21 @@ MFPPush.registerDevice({}, success, failure);
 Vous pouvez accéder au contenu du paramètre de réponse success dans Javascript à l'aide de JSON.parse : **var token = JSON.parse(response).token**
 
 
-Les clés disponibles sont les suivantes : ```token```, ```userId`` et ```deviceId``.
+Les clés disponibles sont les suivantes : `token`, `userId`, and `deviceId`.
 
-Le fragment de code JavaScript ci-après montre comment initialiser votre logiciel SDK du client Bluemix Mobile Services, enregistrer un périphérique à l'aide du service Notification push et passer en mode écoute sur les notifications push. Placez ce code dans votre fichier Javascript.
+Le fragment de code JavaScript ci-après montre comment initialiser le logiciel SDK de votre client Bluemix Mobile Services, enregistrer un appareil à l'aide du service de notifications push et passer en mode écoute sur les notifications push. Placez ce code dans votre fichier Javascript.
 
 
 
 ```
-//Enregistrez le jeton de périphérique auprès du service Notification push de Bluemix
+//Register device token with Bluemix Push Notification Service
 funcapplication(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData){
   CDVMFPPush.sharedInstance().didRegisterForRemoteNotifications(deviceToken)
 }
 ```
 
 ```
-//Traitez l'erreur en cas d'échec de l'enregistrement du jeton de périphérique auprès de APNs
+//Handle error when failed to register device token with APNs
 funcapplication(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSErrorPointer){
 CDVMFPPush.sharedInstance().didFailToRegisterForRemoteNotifications(error)
 }
@@ -87,9 +87,9 @@ onDeviceReady: function() {
      var settings = {
          ios: {
              alert: true,
-             badge: true,
-             sound: true
-         }   
+	       badge: true,
+	       sound: true
+	   }   
      };
      MFPPush.registerDevice(settings, success, failure);
      var notification = function(notif){
@@ -105,11 +105,11 @@ onDeviceReady: function() {
 Ajoutez le fragment de code Objective-C suivant à la classe de votre délégué d'application :
 
 ```
-	// Enregistrez le jeton de périphérique auprès du service Notification push de Bluemix
+	// Enregistrement du jeton d'unité auprès du service de notification Push de Bluemix
 	- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 	  [[CDVMFPPush sharedInstance] didRegisterForRemoteNotifications:deviceToken];
 	}
-	// Traitez l'erreur en cas d'échec de l'enregistrement du jeton de périphérique auprès de APNs
+	// Handle error when failed to register device token with APNs
 	- (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error {
 	   [[CDVMFPPush sharedInstance] didFailToRegisterForRemoteNotificationsWithError:error];
 	}
@@ -123,9 +123,9 @@ Ajoutez le fragment de code Swift suivant à la classe de votre délégué d'app
 funcapplication(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData){
    CDVMFPPush.sharedInstance().didRegisterForRemoteNotifications(deviceToken)
 }
-//Traitez l'erreur en cas d'échec de l'enregistrement du jeton de périphérique auprès de APNs
+// Handle error when failed to register device token with APNs
 funcapplication(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSErrorPointer){
-CDVMFPPush.sharedInstance().didFailToRegisterForRemoteNotifications(error)
+   CDVMFPPush.sharedInstance().didFailToRegisterForRemoteNotifications(error)
 }
 ```
 
@@ -137,4 +137,4 @@ CDVMFPPush.sharedInstance().didFailToRegisterForRemoteNotifications(error)
 	* Android - **cordova build android**, puis **cordova run android**
 
 	* iOS - **cordova build ios**, puis **cordova run ios**
-1. [Réception de notifications push sur les périphériques](t_cordova_receive.html).
+1. [Réception de notifications push sur les appareils](t_cordova_receive.html).

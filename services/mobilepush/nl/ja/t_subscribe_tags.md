@@ -18,12 +18,11 @@ copyright:
 push.subscribe(allTags.get(0),
 new MFPPushResponseListener<String>() {
   @Override
-	    public void onFailure(MFPPushException ex) {
-	    
-    updateTextView("Error subscribing to Tag1.."
+    public void onFailure(MFPPushException ex) {
+         updateTextView("Error subscribing to Tag1.."
            + ex.getMessage());
-  }
-  @Override
+    }
+    @Override
   public void onSuccess(String arg0) {
    updateTextView("Succesfully Subscribed to: "+ arg0);
    unsubscribeFromTags(arg0);
@@ -63,16 +62,16 @@ MFPPush.unsubscribe(tag, success, failure);
 
 ```
 [push subscribeToTags:tags completionHandler:
-^(IMFResponse *response, NSError *error) {
-  if(error){
+	^(IMFResponse *response, NSError *error) {
+    if(error){
      [self updateMessage:error.description];
-  }else{
+    }else{
       NSDictionary* subStatus = [[NSDictionary alloc]init];
       subStatus = [response subscribeStatus];
       [self updateMessage:@"Parsed subscribe status is:"];
       [self updateMessage:subStatus.description];
-  }
-}];
+    }
+    }];
 ```
 
 タグからアンサブスクライブするには、**unsubscribeFromTags** API を使用します。
@@ -82,8 +81,8 @@ MFPPush.unsubscribe(tag, success, failure);
 ^(IMFResponse *response, NSError *error) {
    if (error){
        [self updateMessage:error.description];
-   } else {
-     NSDictionary* subStatus = [[NSDictionary alloc]init];
+    } else {
+       NSDictionary* subStatus = [[NSDictionary alloc]init];
        subStatus = [response unsubscribeStatus];
        [self updateMessage:subStatus.description];
   }
@@ -100,9 +99,8 @@ MFPPush.unsubscribe(tag, success, failure);
 
 ```
 push.subscribeToTags(tagsArray: tags) { (response: IMFResponse!, error: NSError!) -> Void in
-
-	if (error != nil) { 
-//error while subscribing to tags
+	if (error != nil) {
+		//error while subscribing to tags
 	} else {
 		//successfully subscribed to tags var subStatus = response.subscribeStatus();
 	}
@@ -114,9 +112,7 @@ push.subscribeToTags(tagsArray: tags) { (response: IMFResponse!, error: NSError!
 タグからアンサブスクライブするには、**unsubscribeFromTags** API を使用します。
 
 ```
-push.unsubscribeFromTags(response, completionHandler: { (response, statusCode, error) -> Void in
-
-    if error.isEmpty {print( "Response during unsubscribed tags : \(response.description)")
+push.unsubscribeFromTags(response, completionHandler: { (response, statusCode, error) -> Void inif error.isEmpty {print( "Response during unsubscribed tags : \(response.description)")
         print( "status code during unsubscribed tags : \(statusCode)")
     }
     else {

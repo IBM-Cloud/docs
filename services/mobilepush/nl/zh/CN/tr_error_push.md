@@ -12,7 +12,7 @@ copyright:
 
 # {{site.data.keyword.mobilepushshort}} 服务错误消息
 {: #errors}
-上次更新时间：2017 年 1 月 16 日
+上次更新时间：2017 年 2 月 13 日
 {: .last-updated}
 
 
@@ -52,7 +52,7 @@ copyright:
 
 **说明**：{{site.data.keyword.mobilepushshort}} 服务的必备配置不完整。可能是您在尝试获取 Apple 推送通知服务 (APNs) 凭证，但凭证尚未配置。
 
-**用户响应**：请确保已使用有效的 APNs 安全证书配置 {{site.data.keyword.mobilepushshort}}服务。有关的更多信息，请参阅[配置 APN 的凭证 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](t_push_provider_ios.html "外部链接图标"){: new_window}。
+**用户响应**：请确保已使用有效的 APNs 安全证书配置 {{site.data.keyword.mobilepushshort}}服务。有关的更多信息，请参阅[配置 APN 的凭证 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](t_push_provider_ios.html){: new_window}。
 
 
 ## FPWSE0004E
@@ -81,7 +81,7 @@ copyright:
 **说明**：请求的 JSON 主体具有 {{site.data.keyword.mobilepushshort}} 服务器无法识别的参数。
 
 
-**用户响应**：请验证请求中的 JSON 主体是否遵循 {{site.data.keyword.mobilepushshort}} 服务器所预期的请求格式。有关的更多信息，请参阅 [REST API ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://mobile.{DomainName}/imfpush/ "外部链接图标"){: new_window}。
+**用户响应**：请验证请求中的 JSON 主体是否遵循 {{site.data.keyword.mobilepushshort}} 服务器所预期的请求格式。有关的更多信息，请参阅 [REST API ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://mobile.{DomainName}/imfpush/){: new_window}。
 
 
 
@@ -91,7 +91,7 @@ copyright:
 **说明**：请求 URL 中的查询字符串具有无法识别的参数。例如，如果预订删除请求具有 deviceId 和 tagName 以外的参数，那么可能会发生此错误。
 
 
-**用户响应**：请验证请求中的 JSON 主体是否遵循 {{site.data.keyword.mobilepushshort}} 服务器所预期的请求格式。有关的更多信息，请参阅 [REST API ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://mobile.{DomainName}/imfpush/ "外部链接图标"){: new_window}。
+**用户响应**：请验证请求中的 JSON 主体是否遵循 {{site.data.keyword.mobilepushshort}} 服务器所预期的请求格式。有关的更多信息，请参阅 [REST API ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://mobile.{DomainName}/imfpush/){: new_window}。
 
 
 
@@ -101,7 +101,7 @@ copyright:
 **说明**：请求 URL 中的查询字符串缺少必需参数。例如，预订删除请求中可能缺少 deviceId 和 tagName 参数。
 
 
-**用户响应**：请验证请求中的 JSON 主体是否遵循 {{site.data.keyword.mobilepushshort}} 服务器所预期的请求格式。有关的更多信息，请参阅 [REST API ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://mobile.{DomainName}/imfpush/ "外部链接图标"){: new_window}。
+**用户响应**：请验证请求中的 JSON 主体是否遵循 {{site.data.keyword.mobilepushshort}} 服务器所预期的请求格式。有关的更多信息，请参阅 [REST API ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://mobile.{DomainName}/imfpush/){: new_window}。
 
 
 
@@ -154,6 +154,13 @@ copyright:
 
 **用户响应**：请确保 JSON 有效内容有效。
 
+
+## FPWSE0025E
+{: #error_fpwse0025e}
+
+**解释**：服务器当前无法处理请求。
+
+**用户响应**：请稍后重新提交请求。
 
 
 ## FPWSE1007E 

@@ -33,7 +33,6 @@ Android では、settings パラメーターを使用しません。Android ア�
 {: #cordova_register_ios}
 アラート、バッジ、および音声のプロパティーをカスタマイズする場合は、次の JavaScript コード・スニペットを Cordova アプリケーションの Web パーツに追加します。
 
-
 ```
 	var settings = {
 	   ios: {
@@ -50,13 +49,14 @@ Android では、settings パラメーターを使用しません。Android ア�
 {: #cordova_register_js}
 
 ```
-MFPPush.registerDevice({}, success, failure);```
+MFPPush.registerDevice({}, success, failure);
+```
 
 次のように JSON.parse を使用して、Javascript 内の成功した応答パラメーターの内容にアクセスできます。
 **var token = JSON.parse(response).token**
 
 
-使用可能なキーは、```token```、```userId``、および ```deviceId`` です。
+使用可能なキーは、`token`、`userId`、および `deviceId` です。
 
 以下の JavaScript コード・スニペットは、Bluemix Mobile Services クライアント SDK を初期化し、デバイスを Push Notification Service に登録し、プッシュ通知を listen する方法を示しています。このコードを Javascript ファイルに置きます。
 
@@ -89,7 +89,7 @@ onDeviceReady: function() {
              alert: true,
              badge: true,
              sound: true
-         }   
+         }
      };
      MFPPush.registerDevice(settings, success, failure);
      var notification = function(notif){
@@ -106,13 +106,12 @@ onDeviceReady: function() {
 
 ```
 	// Register the device token with Bluemix Push Notification Service
-
 	- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 	  [[CDVMFPPush sharedInstance] didRegisterForRemoteNotifications:deviceToken];
 	}
 	// Handle error when failed to register device token with APNs
 	- (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error {
-	   [[CDVMFPPush sharedInstance] didFailToRegisterForRemoteNotificationsWithError:error];
+   [[CDVMFPPush sharedInstance] didFailToRegisterForRemoteNotificationsWithError:error];
 	}
 ```
 
@@ -139,4 +138,3 @@ funcapplication(application: UIApplication, didFailToRegisterForRemoteNotificati
 
 	* iOS - **cordova build ios** および **cordova run ios**
 1. [デバイスでのプッシュ通知の受け取り](t_cordova_receive.html)を行います。
-

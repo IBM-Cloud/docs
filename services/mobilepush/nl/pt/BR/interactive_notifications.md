@@ -1,4 +1,4 @@
-ka---
+---
 
 copyright:
  years: 2015, 2017
@@ -12,7 +12,7 @@ copyright:
 
 # Notificações interativas
 {: #interactive-notifications}
-Última atualização: 18 de janeiro de 2017
+Última atualização: 23 de janeiro de 2017
 {: .last-updated}
 
 As notificações interativas permitem que os usuários respondam a uma notificação sem abrir o aplicativo. Quando uma notificação interativa chega, o dispositivo mostra os botões de ação junto com a mensagem de notificação. As notificações interativas são suportadas em dispositivos iOS com a versão 8 ou mais recente. Para notificações interativas enviadas para dispositivos iOS que são anteriores à versão 8, as ações de notificação não são exibidas.

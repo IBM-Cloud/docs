@@ -18,4 +18,4 @@ copyright:
 
 {{site.data.keyword.mobilepushshort}} サービスをセットアップするには、プッシュ通知プロバイダー (Firebase Cloud Messaging ([FCM](t_push_provider_android.html)) または Apple Push Notification service ([APNs](t_push_provider_ios.html))) からモバイル・デバイスに必要な資格情報を取得します。Web ブラウザーについては、[Web ブラウザーの資格情報の構成](t_push_provider_safari.html)を参照してください。
 
-{{site.data.keyword.mobilepushshort}} のセットアップは、**IBM Bluemix Services** ダッシュボードを使用するか、[REST API ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://mobile.{DomainName}/imfpush/ "外部リンク・アイコン"){: new_window}を使用して実行できます。
+{{site.data.keyword.mobilepushshort}} のセットアップは、**IBM Bluemix Services** ダッシュボードを使用するか、[REST API ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://mobile.{DomainName}/imfpush/){: new_window}を使用して実行できます。

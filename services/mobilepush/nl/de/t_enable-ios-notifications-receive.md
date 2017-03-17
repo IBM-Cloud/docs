@@ -14,7 +14,7 @@ Empfangen Sie Push-Benachrichtigungen in iOS-Geräten.
 Um Push-Benachrichtigungen in iOS-Geräten zu empfangen, fügen Sie die folgende Objective-C-Methode zum Anwendungs-Delegat Ihrer Anwendung hinzu.
 
 ```
-// For Objective-C
+// Für Objective-C
 -(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
 //userInfo dictionary will contain data sent from server.
 }
@@ -24,7 +24,7 @@ Um Push-Benachrichtigungen in iOS-Geräten zu empfangen, fügen Sie die folgende
 Um Push-Benachrichtigungen in iOS-Geräten zu empfangen, fügen Sie die folgende Swift-Methode zum Anwendungs-Delegat Ihrer Anwendung hinzu.
 
 ```
- // For Swift
+ // Für Swift
 func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
        //UserInfo dictionary will contain data sent from the server
    }

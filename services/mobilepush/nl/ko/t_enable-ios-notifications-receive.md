@@ -24,8 +24,8 @@ iOS 디바이스에서 푸시 알림을 수신하려면 애플리케이션의 �
 iOS 디바이스에서 푸시 알림을 수신하려면 애플리케이션의 위임자에 다음 Swift 메소드를 추가하십시오.
 
 ```
- // For Swift
-func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
+//For Swift
+	 func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
        //UserInfo dictionary will contain data sent from the server
    }
 ```

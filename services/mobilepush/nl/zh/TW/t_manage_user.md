@@ -12,7 +12,7 @@ copyright:
 
 # 使用 userId 登錄裝置
 {: #register_device_with_userId}
-前次更新：2017 年 1 月 11 日
+前次更新：2017 年 2 月 6 日
 {: .last-updated}
 
 若要登錄 userId 型通知，請完成下列步驟：
@@ -22,7 +22,7 @@ copyright:
 
 使用 {{site.data.keyword.mobilepushshort}} Service 的 `AppGUID` 及 `clientSecret` 金鑰，來起始設定 MFPPush 類別。
 ```
-// Initialize the MFPPush
+// Initialize the Push Notifications service
 push = MFPPush.getInstance();
 push.initialize(getApplicationContext(),"AppGUID", "clientSecret");
 ```
@@ -33,22 +33,21 @@ push.initialize(getApplicationContext(),"AppGUID", "clientSecret");
 - **clientSecret**：這是 {{site.data.keyword.mobilepushshort}} Service 的 clientSecret 金鑰。
 
   使用 **registerDeviceWithUserId** API 登錄裝置，以取得 {{site.data.keyword.mobilepushshort}}。
+
 ```
-// Register the device to {{site.data.keyword.mobilepushshort}}.
+// Register the device to Push Notifications
 push.registerDeviceWithUserId("userId",new MFPPushResponseListener<String>() {
-    @Override
-	    public void onSuccess(String deviceId) {
-	           Log.d("Device is registered with Push Service.");
-  }
-  @Override
-  public void onFailure(MFPPushException ex) {
-    Log.d("Error registering with Push Service...\n"
-        + "Push notifications will not be received.");
-  }
-});
+		@Override
+		public void onSuccess(String response) {
+		Log.d("Device is registered with Push Service.");}
+		@Override
+		public void onFailure(MFPPushException ex) {
+		  Log.d("Error registering with Push Service...\n"
+   		  + "Push notifications will not be received.");
+		}
+		});
 ```
 	{: codeblock}
-
 
 - **userId**：傳遞唯一 userId 值，以登錄 {{site.data.keyword.mobilepushshort}}。
 
@@ -60,9 +59,9 @@ push.registerDeviceWithUserId("userId",new MFPPushResponseListener<String>() {
 使用下列 API 來登錄使用者 ID 型 {{site.data.keyword.mobilepushshort}}。
 
 ```
-// Register device for push notification with UserId
+// Register device for Push Notification with UserId
 var options = {"userId": "Your User Id value"};
-BMSPush.registerDevice(options,success, failure); 
+BMSPush.registerDevice(options,success, failure);
 ```
 	{: codeblock}
 
@@ -87,16 +86,15 @@ push.initializeWithAppGUID("appGUID", clientSecret:"clientSecret")
 使用 **registerWithUserId** API 登錄裝置，以取得 {{site.data.keyword.mobilepushshort}}。
 
 ```
-// Register the device to Push Notifications service.
+// Register the device to Push Notifications service
 push.registerWithDeviceToken("deviceToken", WithUserId: "userId")  { (response, statusCode, error) -> Void in
 if error.isEmpty {
-
-    print( "Response during device registration : \(response)")
-        print( "status code during device registration : \(statusCode)")
-    } else {
-        print( "Error during device registration \(error) ")
-    }
-    }
+  print( "Response during device registration : \(response)")
+  print( "status code during device registration : \(statusCode)")
+  } else {
+  print( "Error during device registration \(error) ")
+  }
+  }
 ```
 	{: codeblock}
 

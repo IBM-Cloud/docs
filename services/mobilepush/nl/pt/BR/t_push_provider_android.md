@@ -25,7 +25,7 @@ A chave API é armazenada com segurança e usada pelo serviço {{site.data.keywo
 
 Para configurar o FCM, gerar a chave API e o ID do emissor, conclua as etapas:
 
-1. Visite o [Console do Firebase ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.firebase.google.com/?pli=1 "Ícone de link externo"){: new_window}.
+1. Visite o [console do Firebase ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://console.firebase.google.com/?pli=1){: new_window}.
 2. Selecione **Criar novo projeto**. 
 3. Na janela Criar um projeto, forneça um nome do projeto, escolha um país/região e clique em **Criar projeto**.
 3. Na área de janela de navegação, clique no ícone Configurações e selecione **Configurações do projeto**.
@@ -48,7 +48,6 @@ desvinculado para abrir o painel do serviço {{site.data.keyword.mobilepushshort
 GCM) e a Chave API. Para Apps Google Chrome e Extensões, acesse a guia **Web** e configure o ID do emissor (número do projeto do FCM/GCM) e
 a Chave API apropriadamente.
 4. Clique em **Salvar**.
-5. Próximas etapas. [Ativando notificações para Android](c_enable_push.html) ou [Ativando notificações para
-Apps Google Chrome e Extensões](c_enable_push.html).
+5. Próximas etapas. [Ativando notificações para Android](c_enable_push.html) ou [Ativando notificações para Apps Google Chrome e Extensões](c_enable_push.html).
 
 

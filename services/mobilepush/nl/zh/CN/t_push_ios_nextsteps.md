@@ -13,7 +13,7 @@ copyright:
 
 成功设置基本通知后，可以配置基于标记的通知和高级选项。
 
-将这些 Push Notifications Service 功能添加到应用程序中。
+将这些 Push Notifications 服务功能添加到应用程序中。
 
 
 

@@ -12,7 +12,7 @@ copyright:
 
 # {{site.data.keyword.mobilepushshort}} サービスのエラー・メッセージ
 {: #errors}
-最終更新日: 2017 年 1 月 16 日
+最終更新日: 2017 年 2 月 13 日
 {: .last-updated}
 
 
@@ -52,7 +52,7 @@ copyright:
 
 **説明**: {{site.data.keyword.mobilepushshort}} サービスの前提条件となる構成が完了していません。Apple Push Notification サービス (APNs) の資格情報をまだ構成していないのに取得しようとしている可能性があります。
 
-**ユーザー応答**: {{site.data.keyword.mobilepushshort}}  サービスが APNs 用の有効なセキュリティー証明書を使用して構成されているようにしてください。詳細情報については、[APNs の資格情報の構成 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](t_push_provider_ios.html "外部リンク・アイコン"){: new_window}を参照してください。
+**ユーザー応答**: {{site.data.keyword.mobilepushshort}}  サービスが APNs 用の有効なセキュリティー証明書を使用して構成されているようにしてください。詳細情報については、[APNs の資格情報の構成![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](t_push_provider_ios.html){: new_window}を参照してください。
 
 
 ## FPWSE0004E
@@ -81,7 +81,7 @@ copyright:
 **説明**: 要求の JSON 本体に、{{site.data.keyword.mobilepushshort}} サーバーが理解できないパラメーターが含まれています。
 
 
-**ユーザー応答**: 要求内の JSON 本体が、{{site.data.keyword.mobilepushshort}} サーバーで予想されている要求の形式に従っていることを確認してください。詳細情報については、[REST API ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://mobile.{DomainName}/imfpush/ "外部リンク・アイコン"){: new_window}を参照してください。
+**ユーザー応答**: 要求内の JSON 本体が、{{site.data.keyword.mobilepushshort}} サーバーで予想されている要求の形式に従っていることを確認してください。詳細情報については、[REST API ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://mobile.{DomainName}/imfpush/){: new_window}を参照してください。
 
 
 
@@ -91,7 +91,7 @@ copyright:
 **説明**: 要求 URL に、認識されないパラメーターが含まれる照会ストリングがあります。例えば、サブスクリプションを削除する要求に deviceId と tagName 以外のパラメーターが含まれている場合に、このエラーが発生する可能性があります。
 
 
-**ユーザー応答**: 要求内の JSON 本体が、{{site.data.keyword.mobilepushshort}} サーバーで予想されている要求の形式に従っていることを確認してください。詳細情報については、[REST API ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://mobile.{DomainName}/imfpush/ "外部リンク・アイコン"){: new_window}を参照してください。
+**ユーザー応答**: 要求内の JSON 本体が、{{site.data.keyword.mobilepushshort}} サーバーで予想されている要求の形式に従っていることを確認してください。詳細情報については、[REST API ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://mobile.{DomainName}/imfpush/){: new_window}を参照してください。
 
 
 
@@ -101,7 +101,7 @@ copyright:
 **説明**: 要求 URL に、必須パラメーターが欠落している照会ストリングがあります。例えば、サブスクリプションを削除する要求から deviceId パラメーターや tagName パラメーターが欠落していることが考えられます。
 
 
-**ユーザー応答**: 要求内の JSON 本体が、{{site.data.keyword.mobilepushshort}} サーバーで予想されている要求の形式に従っていることを確認してください。詳細情報については、[REST API ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://mobile.{DomainName}/imfpush/ "外部リンク・アイコン"){: new_window}を参照してください。
+**ユーザー応答**: 要求内の JSON 本体が、{{site.data.keyword.mobilepushshort}} サーバーで予想されている要求の形式に従っていることを確認してください。詳細情報については、[REST API ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://mobile.{DomainName}/imfpush/){: new_window}を参照してください。
 
 
 
@@ -154,6 +154,13 @@ copyright:
 
 **ユーザー応答**: JSON ペイロードが有効になるようにしてください。
 
+
+## FPWSE0025E
+{: #error_fpwse0025e}
+
+**説明**: 現在サーバーは要求を処理できません。
+
+**ユーザー応答**: しばらく時間をおいてから要求を再サブミットしてください。
 
 
 ## FPWSE1007E 

@@ -1,13 +1,12 @@
 # Push-Serviceinstanz erstellen
 {: #create-push-instance}
 
-Um mit {{site.data.keyword.IBM}} {{site.data.keyword.mobilepushshort}} arbeiten zu können, müssen Sie zunächst eine {{site.data.keyword.Bluemix}}-Anwendung erstellen (z. B. die App 'Node.js'). Anschließend erstellen Sie eine Instanz des Push-Service {{site.data.keyword.mobilepushfull}}, die an diese Bluemix-Anwendung gebunden werden muss. Zu diesem Zweck können Sie auch den Abschnitt 'Boilerplate' im Bluemix-Katalog aufrufen und auf 'MobileFirst Services Starter' klicken.
+Um mit {{site.data.keyword.IBM}} {{site.data.keyword.mobilepushshort}} arbeiten zu können, müssen Sie zunächst eine {{site.data.keyword.Bluemix}}-Anwendung erstellen (z. B. eine Node.js-App). Anschließend erstellen Sie eine Instanz des Push-Service {{site.data.keyword.mobilepushfull}}, die an diese Bluemix-Anwendung gebunden werden muss. Zu diesem Zweck können Sie auch den Abschnitt 'Boilerplate' im Bluemix-Katalog aufrufen und auf 'MobileFirst Services Starter' klicken.
 
 **Hinweis**: Wenn Sie Organisationen konfiguriert haben, um Ihre Umgebung zu verwalten, wählen Sie die Organisation aus, in der Sie die Laufzeit und die Services für Ihre mobile App erstellen möchten.
 
 
-1. Wenn Sie nicht über eine Bluemix-Anwendung verfügen, müssen Sie eine erstellen
-(z. B. die App Node.js). Um eine Bluemix-Anwendung zu erstellen, rufen Sie das Bluemix-Dashboard auf und klicken Sie auf **Anwendung erstellen**.
+1. Wenn Sie nicht über eine Bluemix-Anwendung verfügen, müssen Sie eine erstellen (z. B. eine Node.js-App). Um eine Bluemix-Anwendung zu erstellen, rufen Sie das Bluemix-Dashboard auf und klicken Sie auf **Anwendung erstellen**.
 
 	**Hinweis**: Wenn Sie bereits über eine Anwendung verfügen, fahren Sie mit Schritt 7 fort, um einen Service hinzuzufügen.![Serviceinstanz erstellen](images/create_service_instance1.jpg "Serviceinstanz erstellen")
 

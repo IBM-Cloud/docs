@@ -51,12 +51,13 @@ alert: true,
 {: #cordova_register_js}
 
 ```
-MFPPush.registerDevice({}, success, failure);```
+MFPPush.registerDevice({}, success, failure);
+```
 
 您可以使用 JSON.parse 存取 JavaScript 中成功回應參數的內容：**var token = JSON.parse(response).token**
 
 
-可用的索引鍵如下：```token```、```userId`` 及 ```deviceId``。
+可用的索引鍵如下：`token`、`userId` 及 `deviceId`。
 
 下列 JavaScript 程式碼 Snippet 顯示如何起始設定 Bluemix Mobile Services Push Client SDK、向 Push Notification Service 登錄裝置，以及接聽推送通知。將此程式碼放入 JavaScript 檔案中。
 
@@ -89,7 +90,7 @@ onDeviceReady: function() {
              alert: true,
              badge: true,
              sound: true
-         }   
+         }
      };
      MFPPush.registerDevice(settings, success, failure);
      var notification = function(notif){
@@ -106,12 +107,10 @@ onDeviceReady: function() {
 
 ```
 	// Register the device token with Bluemix Push Notification Service
-
 	- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 	  [[CDVMFPPush sharedInstance] didRegisterForRemoteNotifications:deviceToken];
 	}
 	// Handle error when failed to register device token with APNs
-
 	- (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error {
 	   [[CDVMFPPush sharedInstance] didFailToRegisterForRemoteNotificationsWithError:error];
 	}

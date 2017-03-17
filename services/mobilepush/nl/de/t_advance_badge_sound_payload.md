@@ -10,8 +10,8 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-#Erweiterte Push-Benachrichtigungen aktivieren
-Letzte Aktualisierung: 11. Januar 2017
+#Erweitertes {{site.data.keyword.mobilepushshort}} aktivieren
+Letzte Aktualisierung: 23. Januar 2017
 {: .last-updated}
 
 Konfigurieren Sie ein iOS Badge, zusätzliche JSON-Nutzdaten, umsetzbare Benachrichtigungen und Blockierungsnachrichten.
@@ -73,72 +73,5 @@ protected void onPause() {
 } 
 ```
 	{: codeblock}
-## Umsetzbare iOS-Benachrichtigungen aktivieren  
-{: #enable-actionable-notifications-ios}
 
-Im Gegensatz zu konventionellen Push-Benachrichtigungen werden Benutzer bei umsetzbaren Benachrichtigungen dazu aufgefordert, bei Erhalt des Benachrichtigungsalerts
-eine Auswahl zu treffen, ohne die App zu öffnen. 
-
-Führen Sie die entsprechenden Schritte aus, um umsetzbare Push-Benachrichtigungen in Ihrer Anwendung zu aktivieren.
-
-1. Erstellen Sie eine Benutzeraktion.
-```
-//For Swift
-	let acceptAction = UIMutableUserNotificationAction()
-	acceptAction.identifier = "ACCEPT_ACTION"
-	acceptAction.title = "Accept"
-	acceptAction.destructive = false
-	acceptAction.authenticationRequired = false
-	acceptAction.activationMode = UIUserNotificationActivationMode.Foreground
-```
-	{: codeblock}
-```
-//For Swift
-	let declineAction = UIMutableUserNotificationAction()
-	declineAction.identifier = "DECLINE_ACTION"
-	declineAction.title = "Decline"
-	declineAction.destructive = true
-	declineAction.authenticationRequired = false
-	declineAction.activationMode = UIUserNotificationActivationMode.Background
-```
-	{: codeblock}
-
-2. Erstellen Sie die Benachrichtigungskategorie und legen Sie eine Aktion fest. Gültige Kontexte sind **UIUserNotificationActionContextDefault** oder **UIUserNotificationActionContextMinimal**.
-```
-// For Swift
-	let pushCategory = UIMutableUserNotificationCategory()
-	pushCategory.identifier = "TODO_CATEGORY"
-	pushCategory.setActions([acceptAction, declineAction], forContext: UIUserNotificationActionContext.Default)
-```
-	{: codeblock}
-
-1. Erstellen Sie die Benachrichtigungseinstellung und weisen Sie die Kategorien aus dem vorherigen Schritt zu.
-```
-// For Swift
-	let categories = NSSet(array:[pushCategory]);
-```
-	{: codeblock}
-
-1. Erstellen Sie die lokale oder ferne Benachrichtigung und weisen Sie ihr die Identität der Kategorie zu.
-```
-//For Swift
-	let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: categories as? Set<UIUserNotificationCategory>)
-    UIApplication.sharedApplication().registerUserNotificationSettings(settings)
-    UIApplication.sharedApplication().registerForRemoteNotifications() 
-```
-	{: codeblock}
-	
-## Umsetzbare iOS-Benachrichtigungen verarbeiten  
-{: #actionable-notifications}
-
-Wenn eine umsetzbare Benachrichtigung empfangen wird, wird die Steuerung basierend auf der ausgewählten Kennung an die folgende Methode weitergeleitet.
-
- 
-```
-func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], completionHandler: () -> Void) {
-      //must call completion handler when finished
-      completionHandler()
-  }
-```    
-	{: codeblock}
     

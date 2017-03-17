@@ -66,8 +66,7 @@ Apple 開発者アカウントを必ず取得しておいてください。Safar
 以下の手順を実行します。
 
 1. 「Push Notifications」サービス・ダッシュボードで、**「構成」**をクリックします。 
-2. 「Web」タブを選択します。
-	 
+2. 「Web」タブを選択します。 
 3. 「Safari Push」セクションで、必要な情報を指定してフォームを更新します。 
 	- **Website Name**: これは、「通知」センターで指定した名前です。
 	- **Website Push ID**: Web サイト Push ID の反転ドメイン・ストリングを使用して更新します。例: web.com.example.www。
