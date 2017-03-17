@@ -172,7 +172,7 @@ For example, you can invoke this code to set a new attribute, or override an exi
 ### Anonymous login
 {: #anonymous notoc}
 
-With {{site.data.keyword.appid_short_notm}} you can log in anonymously, see [anonymous identity](/docs/services/appid/user-profile.html#anonymous).
+With {{site.data.keyword.appid_short_notm}} you can log in anonymously, see [anonymous user](/docs/services/appid/user-profile.html#anonymous).
 
   ```
   appId.loginAnonymously(getApplicationContext(), new AuthorizationListener() {

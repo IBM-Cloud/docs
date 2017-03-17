@@ -82,4 +82,4 @@ You can use `WebAppStrategy` to protect web application resources:
   ```
   {:pre}
 
-For more information, see the <a href="https://github.com/ibm-cloud-security/appid-serversdk-nodejs" target="_blank">GitHub repository <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>.
+For more information, see the <a href="https://github.com/ibm-cloud-security/appid-serversdk-nodejs" target="_blank">{{site.data.keyword.appid_short_notm}} Node.js GitHub repository <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>.

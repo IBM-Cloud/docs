@@ -43,7 +43,7 @@ You can use the service in the following ways:
 
 ## Architecture overview
 
-![{{site.data.keyword.appid_short_notm}} flow](/images/appid_flow.png)
+![{{site.data.keyword.appid_short_notm}} architecture diagram](/images/appid_flow.png)
 
 Figure 1. {{site.data.keyword.appid_short_notm}} architecture diagram
 
@@ -71,7 +71,7 @@ Access is granted and the response is returned to the application.
 ### Access token
 {: #access-tokens notoc}
 
-The access token enables communication with resources that are protected by {{site.data.keyword.appid_short_notm}} authorization filters, see [Protecting Resources](/docs/services/appid/protecting-resources.html).
+The access token enables communication with resources that are protected by {{site.data.keyword.appid_short_notm}} authorization filters, see [Protecting back-end resources](/docs/services/appid/protecting-resources.html).
 The token conforms to JavaScript Object Signing and Encryption (JOSE) specifications and has the following format:
 
 ```
@@ -183,7 +183,7 @@ Payload: {
 ## Identity providers overview
 {: #identity-providers-overview}
 
-You can use the following identity providers in your mobile and Web applications:
+You can use the following identity providers in your mobile and web applications:
 
 * **Facebook** - Your users log in to the mobile or web app with their Facebook credentials.
 * **Google** -  Your users log in to the mobile or web app with their Google+ credentials.
@@ -192,4 +192,4 @@ You can use the following identity providers in your mobile and Web applications
 ## Using the default configuration
 {: #default-configuration}
 
-{{site.data.keyword.appid_short_notm}} provides a default configuration when you initially set up your identity providers. You can use the default configuration in development mode only. For each identity provider, these credentials are limited to 100 uses per {{site.data.keyword.appid_short_notm}} instance, per day. Before you publish your application, update the default configuration to your own credentials. To update your configuration, see [configuring identity providers](/docs/services/appid/identity-providers.html).
+{{site.data.keyword.appid_short_notm}} provides a default configuration when you initially set up your identity providers. You can use the default configuration in development mode only. For each identity provider, these credentials are limited to 100 uses per {{site.data.keyword.appid_short_notm}} instance, per day. Before you publish your application, update the default configuration to your own credentials. To update your configuration, see [Configuring identity providers](/docs/services/appid/identity-providers.html).

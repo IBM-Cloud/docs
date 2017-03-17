@@ -106,7 +106,7 @@ The {{site.data.keyword.appid_short_notm}} client SDK is distributed with CocoaP
           return AppID.sharedInstance.application(application, open: url, options: options)
       }
   ```
-  {;pre}
+  {:pre}
 
 ## Authenticate users by using the login widget
 {: #authenticate-login}
