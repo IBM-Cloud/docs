@@ -23,7 +23,7 @@ As a result of user feedback, Web Actions are the programming model chosen to bu
 
 Most of the API Gateway functionality was merged into Web Actions, Web Actions allows you to handle any HTTP request and return HTTP responses with full control from your Web Action.
 
-A revised OpenWhisk API Gateway integration will be available soon. It will be configured to proxy your Web Actions providing them with API Gateway features such as rate limiting, oauth token validation, API keys, and more. See the video [Create and Control APIs](https://youtu.be/JMB9FMM1i_o)
+A revised OpenWhisk API Gateway integration will be available soon. It will be configured to proxy your Web Actions providing them with API Gateway features such as rate limiting, oauth token validation, API keys, and more. See the video [Create and Control APIs](https://youtu.be/XT9KwWTnnzo)
 
 **Note:** The APIs you created using the `wsk api-experimental` will continue to work, however you should begin migrating your APIs to web actions.
 
