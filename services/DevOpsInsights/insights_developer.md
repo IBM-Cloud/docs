@@ -11,7 +11,7 @@ lastupdated: "2017-03-17"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
-*
+
 # Developer Insights (Experimental)
 {: #gettingstarted}
 
