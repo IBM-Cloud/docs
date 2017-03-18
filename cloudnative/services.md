@@ -38,9 +38,11 @@ Read more about operating this service in the <a href="/docs/services/mobileanal
 Read more about operating this service in the <a href="/docs/services/mobilefoundation/index.html" alt="{{site.data.keyword.mobilefoundation_short}} documentation link">{{site.data.keyword.mobilefoundation_short}} documentation</a>.</td>
 </tr>
 <tr>
+<!--
 <td><img src="images/mqa_icon.png" alt="{{site.data.keyword.mqa}} service icon"><br/>{{site.data.keyword.mqa}}</td>
 <td valign="top">Use the {{site.data.keyword.mqafull}} service to discover and set up mobile quality services for your apps. You can view high-level quality metrics for your mobile apps to get a quick understanding of the issues for apps that you are working on. These metrics include information for crashes, bugs, user feedback, and user sentiment. By viewing this information for your apps, you can determine whether to investigate specific issues further.<br/><br/>
 Read more about operating this service in the <a href="/docs/services/MobileQualityAssurance/index.html" alt="{{site.data.keyword.mqa}} documentation link">{{site.data.keyword.mqa}} documentation</a>.</td>
+-->
 </tr>
 <tr>
 <td><img src="images/push_icon.png" alt="{{site.data.keyword.mobilepushshort}} service icon"><br/>{{site.data.keyword.mobilepushshort}}</td>
