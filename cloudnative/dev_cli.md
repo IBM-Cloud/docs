@@ -44,7 +44,7 @@ A few prerequisites are required to fully explore and properly utilize the {{sit
 ### Installing
 {: #installation}
 
-1. Install the [{{site.data.keyword.dev_cli_short}} ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/cli/reference/bluemix_cli/index.html#install_plug-in) by running the following command:
+1. Install the [{{site.data.keyword.dev_cli_short}} ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/cli/reference/bluemix_cli/index.html#install_plug-in){: new_window} by running the following command:
  
 	```
 	bx plugin install dev -r Bluemix
@@ -62,7 +62,7 @@ A few prerequisites are required to fully explore and properly utilize the {{sit
 ### Before you begin
 {: #before-install}
 	
-1. Log into {{site.data.keyword.Bluemix_notm}}.
+1. Log in to {{site.data.keyword.Bluemix_notm}}.
 
 	```
 	bx login
@@ -76,11 +76,11 @@ A few prerequisites are required to fully explore and properly utilize the {{sit
 	
 	This link does not work in production yet --> 
 	
-	1. Login to [{{site.data.keyword.Bluemix_notm}}](https://www.bluemix.net/iam/#/apikeys).
+	1. Log in to [{{site.data.keyword.iamshort}} ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.bluemix.net/iam/#/apikeys){: new_window}.
 	2. Select **Create API key**.
 		* Enter an apiKey name and description
 	3. Download your apiKey.
-	4. Open the file and copy the value from the "apiKey" field.
+	4. Open the file and copy the value from the `apiKey` field.
 	5. Log in using the following command:
 	 
 		```
