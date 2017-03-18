@@ -22,7 +22,7 @@ lastupdated: "2017-03-17"
 The March 2017 update of the {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}} introduced the following changes:
 
    * The {{site.data.keyword.Bluemix_notm}} Mobile dashboard is now the {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}.
-   * Project creation has been redesigned to include Web, BFF, and Microservice server pattern types with support for Node, Java, and Swift.
+   * Project creation has been redesigned to include Web App, BFF, and Microservice server pattern types with support for Node.js, Java, and Swift.
    * Integration with the new and improved {{site.data.keyword.appid_full}} service gives authenentication for Mobile and Web projects.
    * You can now additionally generate SDKs for your projects using the [SDK Generator plug-in](sdk_cli.html). SDK generation in the {{site.data.keyword.dev_console}} is available only for Mobile projects.
    * You can now additionally create projects using the [{{site.data.keyword.dev_cli_short}}](dev_cli.html).

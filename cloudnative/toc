@@ -10,7 +10,7 @@
         services.md
     cli.md
         dev_cli.md
-        dev_cli_local_debug.md
+            dev_cli_local_debug.md
         sdk_cli.md
     tutorials.md
         tutorial_web.md
