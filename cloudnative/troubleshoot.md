@@ -142,7 +142,7 @@ You can get the code either of the following ways:
 
 * Use the {{site.data.keyword.dev_console}}.
 
-	1. Select your [project ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/developer/projects) in the {{site.data.keyword.dev_console}} and click **Get the Code**.
+	1. Select your [project ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/developer/projects) in the {{site.data.keyword.dev_console}} and click **Get the Code**.
 
 	2. Click **Generate Code**.
 
