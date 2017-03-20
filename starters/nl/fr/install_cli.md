@@ -54,7 +54,7 @@ Une fois l'interface de ligne de commande installée, vous pouvez commencer :
 
   3.  Modifiez le code de votre application si nécessaire. Par exemple, si vous utilisez une application exemple {{site.data.keyword.Bluemix}} et qu'elle contient le fichier `src/main/webapp/index.html`, vous pouvez le modifier et éditer "Thanks for creating ..." pour indiquer un nouveau contenu. Vérifiez que l'application s'exécute en local avant de la déployer à nouveau dans {{site.data.keyword.Bluemix_notm}}.
 
-    Tenez compte du fichier `manifest.yml`. Lorsque vous déployez à nouveau votre application dans {{site.data.keyword.Bluemix_notm}}, il est utilisé pour déterminer l'adresse URL de votre application, l'allocation de mémoire, le nombre d'instance et d'autres paramètres essentiels. Vous pouvez [en apprendre davantage sur le fichier manifeste ![icône de lien externe](../icons/launch-glyph.svg "icône de lien externe")](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html "icône de lien externe"){: new_window} dans la documentation de Cloud Foundry.
+    Tenez compte du fichier `manifest.yml`. Lorsque vous déployez à nouveau votre application dans {{site.data.keyword.Bluemix_notm}}, il est utilisé pour déterminer l'adresse URL de votre application, l'allocation de mémoire, le nombre d'instance et d'autres paramètres essentiels. Vous pouvez [en apprendre davantage sur le fichier manifeste ![](../icons/launch-glyph.svg "")](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){: new_window} dans la documentation Cloud Foundry. 
 
     Prêtez également attention au fichier `README.md`, qui contient des détails tels que les instructions de génération, le cas échéant.
 
@@ -64,7 +64,8 @@ Une fois l'interface de ligne de commande installée, vous pouvez commencer :
 
   <pre class="pre">cf api https://api.<span class="keyword" data-hd-keyref="DomainName">nom_domaine</span></pre>
 
-  <pre class="pre">cf login -u <var class="keyword varname" data-hd-keyref="user_ID">nom_utilisateur</var> -o <var class="keyword varname" data-hd-keyref="org_name">nom_organisation</var> -s <var class="keyword varname" data-hd-keyref="space_name">nom_espace</var></pre>
+  <pre class="pre">cf login -u <var class="keyword varname" data-hd-keyref="user_ID">nom_utilisateur</var> -o
+<var class="keyword varname" data-hd-keyref="org_name">nom_organisation</var> -s <var class="keyword varname" data-hd-keyref="space_name">nom_espace</var></pre>
 
   Si vous vous servez d'un ID fédéré, utilisez l'option `-sso`.
 

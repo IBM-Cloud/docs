@@ -25,8 +25,6 @@ lastupdated: "2017-01-12"
 
   <a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="（在新分頁或視窗中開啟）"><img class="image" src="images/btn_bx_commandline.svg" alt="下載 {{site.data.keyword.Bluemix}} 指令行介面" /> </a>  <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="（在新分頁或視窗中開啟）"><img class="image" src="images/btn_cf_commandline.svg" alt="下載 Cloud Foundry 指令行介面" /> </a>
 
-
-
   2. 連接至 {{site.data.keyword.Bluemix}}。
 
   <pre class="pre">bluemix api https://api.<span class="keyword" data-hd-keyref="DomainName">DomainName</span></pre>

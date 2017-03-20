@@ -23,7 +23,7 @@ lastupdated: "2017-01-12"
 開始前に、以下のことを行ってください。
   1. {{site.data.keyword.Bluemix}} と Cloud Foundry コマンド・ライン・インターフェースをインストールします。 
 
-  <a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(新しいタブまたはウィンドウで開きます)"><img class="image" src="images/btn_bx_commandline.svg" alt="{{site.data.keyword.Bluemix}} コマンド・ライン・インターフェースのダウンロード" /> </a>  <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(新しいタブまたはウィンドウで開きます)"><img class="image" src="images/btn_cf_commandline.svg" alt="Cloud Foundry コマンド・ライン・インターフェースのダウンロード" /> </a> 
+  <a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(新しいタブまたはウィンドウで開きます)"><img class="image" src="images/btn_bx_commandline.svg" alt="{{site.data.keyword.Bluemix}} コマンド・ライン・インターフェースのダウンロード" /> </a>  <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(新しいタブまたはウィンドウで開きます)"><img class="image" src="images/btn_cf_commandline.svg" alt="Cloud Foundry コマンド・ライン・インターフェースのダウンロード" /> </a>
 
   2. {{site.data.keyword.Bluemix}} に接続します。
 

@@ -54,7 +54,7 @@ lastupdated: "2017-01-12"
 
   3.  根据需要对应用程序代码进行更改。例如，如果要使用 {{site.data.keyword.Bluemix}} 样本应用程序，并且应用程序包含 `src/main/webapp/index.html` 文件，那么可以对其进行修改并编辑“Thanks for creating ...”以输入新内容。确保应用程序在本地运行，然后再将其部署回 {{site.data.keyword.Bluemix_notm}}。
 
-    记录 `manifest.yml` 文件。将应用程序部署回 {{site.data.keyword.Bluemix_notm}} 时，此文件用于确定应用程序的 URL、内存分配、实例数和其他关键参数。您可以在 Cloud Foundry 文档中[阅读有关清单文件的更多信息 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html "外部链接图标"){: new_window}。
+    记录 `manifest.yml` 文件。将应用程序部署回 {{site.data.keyword.Bluemix_notm}} 时，此文件用于确定应用程序的 URL、内存分配、实例数和其他关键参数。您可以在 Cloud Foundry 文档中[阅读有关清单文件的更多信息 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){: new_window}。
 
     此外，请注意 `README.md` 文件，此文件包含详细信息，如构建指示信息（如果适用）。
 

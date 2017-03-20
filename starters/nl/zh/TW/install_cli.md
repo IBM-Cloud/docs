@@ -52,11 +52,11 @@ lastupdated: "2017-01-12"
 
   <pre class="pre">cd <var class="keyword varname">your_new_directory</var></pre>
 
-  3.  適當地變更應用程式碼。例如，如果您是使用 {{site.data.keyword.Bluemix}} 範例應用程式，而且您的應用程式包含 `src/main/webapp/index.html` 檔案，則可以修改它，並編輯 "Thanks for creating ..." 指出新內容。請先確定應用程式在本端執行，再將它部署回 {{site.data.keyword.Bluemix_notm}}。
+  3.  適當地變更應用程式碼。例如，如果您是使用 {{site.data.keyword.Bluemix}} 範例應用程式，而且您的應用程式包含 `src/main/webapp/index.html` 檔案，則可以修改它，並編輯 "Thanks for creating ..." 傳達新的訊息。請先確定應用程式在本端執行，再將它部署回 {{site.data.keyword.Bluemix_notm}}。
 
-    記下 `manifest.yml` 檔案。將應用程式部署回 {{site.data.keyword.Bluemix_notm}} 時，此檔案用來決定您應用程式的 URL、記憶體配置、實例數以及其他決定性參數。您可以在 Cloud Foundry 文件中[深入閱讀資訊清單檔 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html "外部鏈結圖示"){: new_window}。
+    記下 `manifest.yml` 檔案。將應用程式部署回 {{site.data.keyword.Bluemix_notm}} 時，此檔案用來決定您應用程式的 URL、記憶體配置、實例數以及其他決定性參數。您可以在 Cloud Foundry 文件中[深入閱讀資訊清單檔 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){: new_window}。
 
-    也請注意 `README.md` 檔案，內含建置指示這類詳細資料（適用時）。
+    也請注意 `README.md` 檔案，它包含建置指示這類詳細資料（適用時）。
 
     附註：如果您的應用程式是 Liberty 應用程式，則必須先建置它，再重新部署。
 
