@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-29"
+  years: 2015, 2017
+lastupdated: "2017-2-21"
 
 ---
 
@@ -36,16 +36,17 @@ lastupdated: "2016-11-29"
 ##iFrame 流的示例 {: #iframe-example}
 
 <p>
-<a class="xref" href="http://d2bm-iframe-sample.ng.bluemix.net/" target="_blank" title="（在新选项卡或窗口中打开）">IBM Bluemix D2BM iFrame Sample</a> 提供了用于公共 Git 存储库的 iFrame 流示例。<div class="image"><img class="image" src="images/d2bm_iframe_sample2.png" alt="“部署到 Bluemix”iFrame 流样本" /></div>
+<a class="xref" href="http://d2bm-iframe-sample.ng.bluemix.net/" target="_blank" title="（在新选项卡或窗口中打开）">IBM Bluemix D2BM iFrame Sample <img class="image" src="../icons/launch-glyph.svg" alt="外部链接图标"/></a> 提供了用于公共 Git 存储库的 iFrame 流示例。
+<div class="image"><img class="image" src="images/d2bm_iframe_sample2.png" alt="“部署到 Bluemix”iFrame 流样本" /></div>
 </p>
 
 <p>
-要查看此样本的源代码，请单击 <a class="xref" href="https://hub.jazz.net/project/idsorg/d2bm-iframe-sample/overview" target="_blank" title="（在新选项卡或窗口中打开）">source</a>。</p>
+要查看此样本的源代码，请单击<a class="xref" href="https://hub.jazz.net/project/idsorg/d2bm-iframe-sample/overview" target="_blank" title="（在新选项卡或窗口中打开）">源代码 <img class="image" src="../icons/launch-glyph.svg" alt="外部链接图标"/></a>。</p>
 
 ##嵌入 iFrame 流 {: #embed-iframe}  
 
 <ol>
-<li>从 <a href="https://bluemix.net/deploy/embed.js" target="_blank">https://bluemix.net/deploy/embed.js</a> 装入 JavaScript 实用程序。此实用程序依赖于 jQuery，并通过向文档添加以下脚本标记来装入：
+<li>从 <a class="xref" href="https://bluemix.net/deploy/embed.js" target="_blank" title="（在新选项卡或窗口中打开）">https://bluemix.net/deploy/embed.js <img class="image" src="../icons/launch-glyph.svg" alt="外部链接图标"/></a> 装入 JavaScript 实用程序。此实用程序依赖于 jQuery，并通过向文档添加以下脚本标记来装入：
 <pre class="pre">
 <code>&lt;script type="text/javascript" src="https://bluemix.net/deploy/embed.js"&gt;&lt;/script&gt;</code>
 </pre>

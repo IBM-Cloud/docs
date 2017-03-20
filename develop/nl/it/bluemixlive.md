@@ -3,8 +3,8 @@
 
 
 copyright:
-  years: 2015，2016
-lastupdated: "2016-10-19"
+  years: 2015，2017
+lastupdated: "2017-2-21"
 
 ---
 
@@ -67,7 +67,7 @@ sincronizzare il tuo progetto desktop con lo spazio di lavoro cloud.
 Per ulteriori dettagli sui comandi, vedi [Comandi Bluemix Live Sync (bl)](bluemixlive.html#bl-commands).
 
 <ol>
-<li>Registrati per un account <a class="xref" href="https://hub.jazz.net/" target="_blank" alt="Bluemix DevOps Services">Bluemix DevOps Services</a> gratuito.</li>
+<li>Registrati per un account <a class="xref" href="https://hub.jazz.net/" target="_blank" title="(Si apre in una nuova scheda o finestra)">Bluemix DevOps Services <img class="image" src="../icons/launch-glyph.svg" alt="icona link esterno"/></a> gratuito.</li>
 <li>Scarica e installa la riga di comando bl di {{site.data.keyword.Bluemix_notm}} Live Sync.   
 <p>
 <a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/blive_setup.msi" target="_blank" title="(Si apre in una nuova scheda o finestra)"><img class="image" src="images/bl_gs_icons_windows_b.svg" alt="Pulsante Scarica la riga di comando bl per Windows" /> </a>
@@ -79,7 +79,7 @@ Per ulteriori dettagli sui comandi, vedi [Comandi Bluemix Live Sync (bl)](bluemi
 <li>Su una riga di comando, accedi utilizzando il seguente comando. Ti verranno richiesti i tuoi ID utente e password.  
 <pre class="codeblock">bl login</pre>
 
-<strong>Nota:</strong> il tuo ID utente per i servizi DevOps può essere un ID IBM o un ID federato (ID aziendale). Se utilizzi l'autenticazione federata per accedere al client della riga di comando Bluemix Live Sync, devi utilizzare un token di accesso personale invece di una password. Se non utilizzi l'autenticazione federata, i tuoi ID IBM e password funzionano con tutti i client. Per ulteriori informazioni sulla creazione di un token di accesso personale, consulta <a class="xref" href="https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/" target="_blank" alt="Bluemix DevOps Services"> What's federated authentication and how does it affect me?</a>
+<strong>Nota:</strong> il tuo ID utente per i servizi DevOps può essere un ID IBM o un ID federato (ID aziendale). Se utilizzi l'autenticazione federata per accedere al client della riga di comando Bluemix Live Sync, devi utilizzare un token di accesso personale invece di una password. Se non utilizzi l'autenticazione federata, i tuoi ID IBM e password funzionano con tutti i client. Per ulteriori informazioni sulla creazione di un token di accesso personale, consulta <a class="xref" href="https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/" target="_blank" title="(Si apre in una nuova scheda o finestra)">What's federated authentication and how does it affect me?<img class="image" src="../icons/launch-glyph.svg" alt="icona link esterno"/></a>.
 </li>
 
 <li>Visualizza l'elenco dei progetti disponibili per la sincronizzazione di {{site.data.keyword.Bluemix_notm}} Live Sync immettendo il seguente comando:
@@ -121,7 +121,7 @@ il tuo codice con Live Edit attivato, puoi aggiornare la finestra del browser
 della tua applicazione web per vedere tali modifiche riflesse entro pochi secondi
 da quando le hai apportate.
 
-Per un'esercitazione sull'utilizzo della funzione Live Edit di {{site.data.keyword.Bluemix_notm}} Live Sync, consulta l'esercitazione [Test and debug a Node.js app with Bluemix Live Sync](https://hub.jazz.net/tutorials/livesync).
+Per un'esercitazione sull'utilizzo della funzione Live Edit di {{site.data.keyword.Bluemix_notm}} Live Sync, consulta l'esercitazione [Test and debug a Node.js app with Bluemix Live Sync![icona link esterno](../icons/launch-glyph.svg "External link icon")](https://hub.jazz.net/tutorials/livesync){:new_window}.
 
 Quando modifichi i file nel tuo Web IDE, ne viene eseguita automaticamente la ridistribuzione alla tua applicazione in esecuzione su {{site.data.keyword.Bluemix_notm}}. Se devi riavviare l'applicazione Node, puoi utilizzare il pulsante **Riavvia** nella barra di esecuzione.
 
@@ -139,7 +139,7 @@ Debug di {{site.data.keyword.Bluemix_notm}} Live
 include le seguenti funzioni:
 
 * Controllo del runtime dell'applicazione
-* Debug utilizzando [node-inspector](https://github.com/node-inspector/node-inspector)
+* Debug utilizzando [node-inspector![icona link esterno](../icons/launch-glyph.svg "External link icon")](https://github.com/node-inspector/node-inspector){:new_window}
 * Accesso shell
 
 ###Controllo del runtime dell'applicazione {: #app-runtime}
@@ -205,7 +205,7 @@ puoi utilizzare gli strumenti debug.
 
 Distribuisci l'applicazione e vai quindi a `https://app-host.mybluemix.net/bluemix-debug/manage` per accedere all'interfaccia utente di debug {{site.data.keyword.Bluemix_notm}}. Quando ti viene richiesto di autenticarti, immetti il tuo ID utente e il token di accesso personale o la password dell'ID IBM.    
 
-   **Nota**: il tuo ID utente per i servizi DevOps può essere un ID IBM o un ID federato (ID aziendale). Se utilizzi l'autenticazione federata per accedere al client della riga di comando Bluemix Live Sync, devi utilizzare un token di accesso personale invece di una password. Se non utilizzi l'autenticazione federata, i tuoi ID IBM e password funzionano con tutti i client. Per ulteriori informazioni sulla creazione di un token di accesso personale, consulta [What's federated authentication and how does it affect me?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/)
+   **Nota**: il tuo ID utente per i servizi DevOps può essere un ID IBM o un ID federato (ID aziendale). Se utilizzi l'autenticazione federata per accedere al client della riga di comando Bluemix Live Sync, devi utilizzare un token di accesso personale invece di una password. Se non utilizzi l'autenticazione federata, i tuoi ID IBM e password funzionano con tutti i client. Per ulteriori informazioni sulla creazione di un token di accesso personale, consulta [What's federated authentication and how does it affect me?![icona link esterno](../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/){:new_window}
 
 ###Ripristino delle configurazioni dell'applicazione e disabilitazione di Debug di Bluemix Live {: #restore_live_debug}
 
@@ -324,7 +324,7 @@ effettuare l'accesso solo una volta per sessione.
 
 **Avvertenza:** fornire la tua password come opzione della riga di comando è sconsigliato poiché visibile agli altri e registrata nell'ambito della cronologia dei comandi.
 
-**Nota:** devi registrarti per un account <a class="xref" href="https://hub.jazz.net/" target="_blank" alt="Bluemix DevOps Services">Bluemix DevOps Services</a> gratuito.
+**Nota:** devi registrarti per un account [Bluemix DevOps Services![icona link esterno](../icons/launch-glyph.svg "External link icon")](https://hub.jazz.net/){:new_window} gratuito prima di effettuare l'accesso.
 
 **Opzioni**
 
@@ -334,7 +334,7 @@ effettuare l'accesso solo una volta per sessione.
 
 -s *server*: il nome server o l'indirizzo IP del server {{site.data.keyword.jazzhub_short}}.    
 
-   **Nota**: il tuo ID utente per i servizi DevOps può essere un ID IBM o un ID federato (ID aziendale). Se utilizzi l'autenticazione federata per accedere al client della riga di comando Bluemix Live Sync, devi utilizzare un token di accesso personale invece di una password. Se non utilizzi l'autenticazione federata, i tuoi ID IBM e password funzionano con tutti i client. Per ulteriori informazioni sulla creazione di un token di accesso personale, consulta [What's federated authentication and how does it affect me?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/)
+   **Nota**: il tuo ID utente per i servizi DevOps può essere un ID IBM o un ID federato (ID aziendale). Se utilizzi l'autenticazione federata per accedere al client della riga di comando Bluemix Live Sync, devi utilizzare un token di accesso personale invece di una password. Se non utilizzi l'autenticazione federata, i tuoi ID IBM e password funzionano con tutti i client. Per ulteriori informazioni sulla creazione di un token di accesso personale, consulta [What's federated authentication and how does it affect me?![icona link esterno](../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/){:new_window}
 
 **Esempi**
 
@@ -662,12 +662,15 @@ bl stop –l “launchConfigurations/mylaunchconfig.launch”
 ```
 {: pre}
 
-># Link correlati {:class="linklist"}
->## Esercitazioni ed esempi {:id="samples"}
->* [Verificare ed eseguire il debug di un'applicazione Node.js con Bluemix Live Sync](https://hub.jazz.net/tutorials/livesync)
->
-># Link correlati {:class="linklist"}
->## Link correlati {:id="general"}
->* [Eclipse tools for Bluemix](https://www.ng.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html)   
->
->{:elementKind="article" id="rellinks"}
+# Link correlati
+{: #rellinks}
+
+## Esercitazioni ed esempi
+{: #samples}
+
+* [Test and debug a Node.js app with Bluemix Live Sync![icona link esterno](../icons/launch-glyph.svg "External link icon")](https://hub.jazz.net/tutorials/livesync){:new_window}
+
+## Link correlati
+{: #general}
+
+* [Eclipse tools for Bluemix![icona link esterno](../icons/launch-glyph.svg "External link icon")](https://www.ng.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html){:new_window}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-29"
+  years: 2015, 2017
+lastupdated: "2017-2-21"
 
 ---
 
@@ -36,17 +36,17 @@ iFrame 流程適用於您維持公司品牌之時。當有人按一下您的內�
 ##iFrame 流程的範例 {: #iframe-example}
 
 <p>
-<a class="xref" href="http://d2bm-iframe-sample.ng.bluemix.net/" target="_blank" title="（在新分頁或視窗中開啟）">IBM Bluemix D2BM iFrame 範例</a>提供公用 Git 儲存庫的 iFrame 流程範例。<div class="image"><img class="image" src="images/d2bm_iframe_sample2.png" alt="「部署至 Bluemix」iFrame 流程範例" /></div>
+<a class="xref" href="http://d2bm-iframe-sample.ng.bluemix.net/" target="_blank" title="（在新分頁或視窗中開啟）">IBM Bluemix D2BM iFrame Sample <img class="image" src="../icons/launch-glyph.svg" alt="外部鏈結圖示"/></a> 提供公用 Git 儲存庫的 iFrame 流程範例。<div class="image"><img class="image" src="images/d2bm_iframe_sample2.png" alt="「部署至 Bluemix」iFrame 流程範例" /></div>
 </p>
 
 <p>
-若要檢視此範例的原始檔，請按一下<a class="xref" href="https://hub.jazz.net/project/idsorg/d2bm-iframe-sample/overview" target="_blank" title="（在新分頁或視窗中開啟）">原始檔</a>。
+若要檢視此範例的原始檔，請按一下<a class="xref" href="https://hub.jazz.net/project/idsorg/d2bm-iframe-sample/overview" target="_blank" title="（在新分頁或視窗中開啟）">原始檔 <img class="image" src="../icons/launch-glyph.svg" alt="外部鏈結圖示"/></a>。
 </p>
 
 ##內嵌 iFrame 流程 {: #embed-iframe}  
 
 <ol>
-<li>從 <a href="https://bluemix.net/deploy/embed.js" target="_blank">https://bluemix.net/deploy/embed.js</a> 中載入 JavaScript 公用程式。此公用程式會依賴 jQuery，並透過將下列 Script 標籤新增至您的文件中進行載入：
+<li>從 <a class="xref" href="https://bluemix.net/deploy/embed.js" target="_blank" title="（在新分頁或視窗中開啟）">https://bluemix.net/deploy/embed.js <img class="image" src="../icons/launch-glyph.svg" alt="外部鏈結圖示"/></a> 載入 JavaScript 公用程式。此公用程式會依賴 jQuery，並透過將下列 Script 標籤新增至您的文件中進行載入：
 <pre class="pre">
 <code>&lt;script type="text/javascript" src="https://bluemix.net/deploy/embed.js"&gt;&lt;/script&gt;</code>
 </pre>

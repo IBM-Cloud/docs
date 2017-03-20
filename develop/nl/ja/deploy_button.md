@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-29"
+  years: 2015, 2017
+lastupdated: "2017-2-21"
 
 ---
 
@@ -113,7 +113,7 @@ lastupdated: "2016-11-29"
 	
 	* イメージをローカルに保管したい場合は、イメージをダウンロードし、ご使用の Git リポジトリーに保管できます。イメージの相対ロケーションを使用するようにパスを調整してください。 
 	
-	* 翻訳版のボタンを使用したい場合は、そのボタンをリモートで参照するか、[ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button](ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button) からダウンロードすることができます。 
+	* 翻訳版のボタンを使用したい場合は、そのボタンをリモートで参照するか、[ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button){:new_window} からダウンロードすることができます。 
 	
 ##このボタンのリポジトリーの考慮事項 {: #button-repo} 
 
@@ -125,13 +125,14 @@ lastupdated: "2016-11-29"
 マニフェスト・ファイルによって、以下を指定できます。 
     <ul>
     <li>固有のアプリ名</li>  
-    <li>宣言されたサービス: アプリのデプロイ前にセットアップされていることが求められる必須サービスまたはオプション・サービス (データ・キャッシュ・サービスなど) を作成または検索するマニフェスト拡張。適格な {{site.data.keyword.Bluemix_notm}} サービス、ラベル、およびプランのリストは、<a href="https://github.com/cloudfoundry/cli/releases">CF コマンド・ライン・インターフェース</a>を使用して <code>cf marketplace</code> コマンドを実行するか、<a href="https://console.ng.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-*-dWdevcenter-*-devops-services-_-lp#/store">{{site.data.keyword.Bluemix_notm}} カタログ</a>を参照すれば、見つけることができます。
+    <li>宣言されたサービス: アプリのデプロイ前にセットアップされていることが求められる必須サービスまたはオプション・サービス (データ・キャッシュ・サービスなど) を作成または検索するマニフェスト拡張。適格な {{site.data.keyword.Bluemix_notm}} サービス、ラベル、およびプランのリストは、<a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(新しいタブまたはウィンドウで開きます)">CF コマンド・ライン・インターフェース<img class="image" src="../icons/launch-glyph.svg" alt="「外部リンク」アイコン"/></a> を使用して <code>cf marketplace</code> コマンドを実行するか、<a class="xref" href="https://console.ng.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-_-dWdevcenter-_-devops-services-_-lp#/store" target="_blank" title="(新しいタブまたはウィンドウで開きます)"> {{site.data.keyword.Bluemix_notm}} カタログ<img class="image" src="../icons/launch-glyph.svg" alt="「外部リンク」アイコン"/></a> を参照すれば、見つけることができます。
     
+        
     <strong>注:</strong> 宣言されたサービスは、標準 Cloud Foundry マニフェスト・フォーマットに対する IBM 拡張です。
 この拡張は、フィーチャーの発展と改善に伴い、今後のリリースで改訂
 される可能性があります。
 	
-	<a href="http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html#minimal-manifest" target="_blank"><code>manifest.yml</code> ファイルを作成する方法を学習してください。</a>  
+	<a class="xref" href="http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html#minimal-manifest" target="_blank" title="(新しいタブまたはウィンドウで開きます)"><code>manifest.yml</code> ファイルの作成方法を参照してください <img class="image" src="../icons/launch-glyph.svg" alt="「外部リンク」アイコン"/></a> 。  
 <pre class="codeblock">
 	---
     #Template manifest.yml
@@ -166,10 +167,10 @@ lastupdated: "2016-11-29"
 	<li> アプリケーションのデプロイ前にビルドが必要な場合は、リポジトリーにビルド・ファイルを含めてください。リポジトリーのルート・ディレクトリーにビルド・スクリプト・ファイルが検出されると、デプロイメントの前にコードの自動ビルドが起動されます。
 	
 	サポートされるビルダー:<ul>
-		<li> <a href="http://ant.apache.org/manual/using.html" target="_blank">Ant:</a> /<code>build.xml</code> (<code>./output/</code> フォルダーへの出力をビルドする)</li>
-		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank">Gradle:</a> <code>/build.gradle</code> (<code>. </code> フォルダーへの出力をビルドする) </li>
-		<li> <a href="http://gruntjs.com/getting-started#the-gruntfile" target="_blank">Grunt:</a> <code>/Gruntfile.js</code> (<code>. </code> フォルダーへの出力をビルドする)</li>
-		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven" target="_blank">Maven:</a> <code>/pom.xml</code> (<code>./target/</code> フォルダーへの出力をビルドする)</li>
+		<li> <a class="xref" href="http://ant.apache.org/manual/using.html" target="_blank" title="(新しいタブまたはウィンドウで開きます)">Ant:<img class="image" src="../icons/launch-glyph.svg" alt="「外部リンク」アイコン"/></a> /<code>build.xml</code>。<code>./output/</code> フォルダーへの出力をビルドします。</li>
+		<li> <a class="xref" href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank" title="(新しいタブまたはウィンドウで開きます)">Gradle:<img class="image" src="../icons/launch-glyph.svg" alt="「外部リンク」アイコン"/></a> <code>/build.gradle</code>。<code>. </code> フォルダーへの出力をビルドします。</li>
+		<li> <a class="xref" href="http://gruntjs.com/getting-started#the-gruntfile" target="_blank" title="(新しいタブまたはウィンドウで開きます)">Grunt:<img class="image" src="../icons/launch-glyph.svg" alt="「外部リンク」アイコン"/></a> <code>/Gruntfile.js</code>。<code>. </code> フォルダーへの出力をビルドします。</li>
+		<li> <a class="xref" href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven" target="_blank" title="(新しいタブまたはウィンドウで開きます)">Maven:<img class="image" src="../icons/launch-glyph.svg" alt="「外部リンク」アイコン"/></a> <code>/pom.xml</code>。<code>./target/</code> フォルダーへの出力をビルドします。</li>
 	   </ul>
 	</li>	
 	<li>プロジェクト用のパイプラインを構成するには、<code>.bluemix</code> ディレクトリーに <code>pipeline.yml</code> ファイルを含めます。<code>pipeline.yml</code> ファイルは手動で作成するか、既存の DevOps Services プロジェクトから生成することができます。pipeline.yml ファイルを {{site.data.keyword.jazzhub_short}} プロジェクトから作成して、それをリポジトリーに追加するには、以下の手順を実行してください。
@@ -185,8 +186,8 @@ lastupdated: "2016-11-29"
 	<li><strong>IBM Containers</strong> を使用してアプリをコンテナーにデプロイするには、リポジトリーのルート・ディレクトリーに Dockerfile を、<code>.bluemix</code> ディレクトリーに <code>pipeline.yml</code> ファイルを含める必要があります。
 	<ul>
 	    <li>Dockerfile は、アプリのビルド・スクリプトのようなものとして機能します。リポジトリーに Dockerfile が検出されると、アプリは、コンテナーにデプロイされる前に自動的にイメージにビルドされます。アプリがイメージにビルドされる前にアプリ自体をビルドする必要がある場合は、前述のとおり、Dockerfile とともにアプリのビルド・スクリプトを含めてください。</li>
-	    <li> Dockerfile の作成について詳しくは、<a href="https://docs.docker.com/reference/builder/" target="_blank">Docker 資料</a>を参照してください。</li>
-	    <li><code>pipeline.yml</code> ファイルは手動で作成するか、既存の DevOps Services プロジェクトから生成することができます。コンテナーに固有の <code>pipeline.yml</code> を手動で作成するには、<a href="https://github.com/Puquios/" target="_blank">GitHub にある例</a>を参照してください。</li>
+	    <li> Dockerfile の作成について詳しくは、<a class="xref" href="https://docs.docker.com/reference/builder/" target="_blank" title="(新しいタブまたはウィンドウで開きます)">Docker 資料を参照してください <img class="image" src="../icons/launch-glyph.svg" alt="「外部リンク」アイコン"/></a>。</li>
+	    <li><code>pipeline.yml</code> ファイルは手動で作成するか、既存の DevOps Services プロジェクトから生成することができます。コンテナーに固有の <code>pipeline.yml</code> を手動で作成するには、<a class="xref" href="https://github.com/Puquios/" target="_blank" title="(新しいタブまたはウィンドウで開きます)">GitHub にある例を参照してください <img class="image" src="../icons/launch-glyph.svg" alt="「外部リンク」アイコン"/></a>。</li>
         </ul>
 
  </li>
@@ -194,4 +195,3 @@ lastupdated: "2016-11-29"
 </ul>
 
 トラブルシューティングのヘルプについては、[「Bluemix にデプロイ」ボタンでアプリがデプロイされない](/docs/troubleshoot/index.html#deploytobluemixbuttondoesntdeployanapp){:new_window}を参照してください。	
-

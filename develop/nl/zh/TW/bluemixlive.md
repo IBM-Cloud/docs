@@ -3,8 +3,8 @@
 
 
 copyright:
-  years: 2015，2016
-lastupdated: "2016-10-19"
+  years: 2015，2017
+lastupdated: "2017-2-21"
 
 ---
 
@@ -58,7 +58,7 @@ lastupdated: "2016-10-19"
 如需指令的詳細資料，請參閱 [Bluemix Live Sync (bl) 指令](bluemixlive.html#bl-commands)。
 
 <ol>
-<li>註冊免費 <a class="xref" href="https://hub.jazz.net/" target="_blank" alt="Bluemix DevOps Services">Bluemix DevOps Services</a> 帳戶。</li>
+<li>註冊免費的 <a class="xref" href="https://hub.jazz.net/" target="_blank" title="（在新分頁或視窗中開啟）">Bluemix DevOps Services 帳戶 <img class="image" src="../icons/launch-glyph.svg" alt="外部鏈結圖示"/></a>。</li>
 <li>下載並安裝 {{site.data.keyword.Bluemix_notm}} Live Sync bl 指令行。   
 <p>
 <a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/blive_setup.msi" target="_blank" title="（在新分頁或視窗中開啟）"><img class="image" src="images/bl_gs_icons_windows_b.svg" alt="下載 Windows bl 指令行按鈕" /> </a>
@@ -70,7 +70,7 @@ lastupdated: "2016-10-19"
 <li>在指令行上，使用下列指令登入。系統會提示您輸入使用者 ID 和密碼。  
 <pre class="codeblock">bl login</pre>
 
-<strong>附註：</strong>您的 DevOps Services 使用者 ID 可以是 IBM ID 或聯合 ID（組織 ID）。如果您使用聯合鑑別，在登入 Bluemix Live Sync 指令行用戶端時，您必須使用個人存取記號，而不是密碼。如果未使用聯合鑑別，則您的 IBM ID 及密碼可用於所有用戶端。如需建立個人存取記號的相關資訊，請參閱<a class="xref" href="https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/" target="_blank" alt="Bluemix DevOps Services">何謂聯合鑑別以及它對我有什麼影響？</a>
+<strong>附註：</strong>您的 DevOps Services 使用者 ID 可以是 IBM ID 或聯合 ID（組織 ID）。如果您使用聯合鑑別，在登入 Bluemix Live Sync 指令行用戶端時，您必須使用個人存取記號，而不是密碼。如果未使用聯合鑑別，則您的 IBM ID 及密碼可用於所有用戶端。如需建立個人存取記號的相關資訊，請參閱 <a class="xref" href="https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/" target="_blank" title="（在新分頁或視窗中開啟）">What's federated authentication and how does it affect me? <img class="image" src="../icons/launch-glyph.svg" alt="外部鏈結圖示"/></a>。
 </li>
 
 <li>輸入下列指令，以查看可用於 {{site.data.keyword.Bluemix_notm}} Live Sync 同步化的專案清單：
@@ -103,7 +103,7 @@ bl start --restart
 
 「即時編輯」可讓您快速預覽在 {{site.data.keyword.Bluemix_notm}} 上執行之 Node.js 應用程式的變更。當您開啟「即時編輯」來更新程式碼時，可以重新整理 Web 應用程式的瀏覽器視窗，就能看到在進行變更幾秒後所反映的變更。
 
-如需有關使用 {{site.data.keyword.Bluemix_notm}} Live Sync 的「即時編輯」特性的指導教學，請參閱 [Test and debug a Node.js app with Bluemix Live Sync](https://hub.jazz.net/tutorials/livesync) 指導教學。
+如需有關使用 {{site.data.keyword.Bluemix_notm}} Live Sync 的「即時編輯」特性的指導教學，請參閱 [Test and debug a Node.js app with Bluemix Live Sync ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://hub.jazz.net/tutorials/livesync){:new_window} 指導教學。
 
 當您變更 Web IDE 中的檔案時，會自動將其重新部署至在 {{site.data.keyword.Bluemix_notm}} 上執行的應用程式。如果您需要重新啟動 Node 應用程式，可以使用執行列中的**重新啟動**按鈕。
 
@@ -118,7 +118,7 @@ bl start --restart
 「{{site.data.keyword.Bluemix_notm}} 即時除錯」包含下列特性：
 
 * 應用程式運行環境控制
-* 使用 [node-inspector](https://github.com/node-inspector/node-inspector) 進行除錯
+* 使用 [node-inspector ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/node-inspector/node-inspector){:new_window} 進行除錯
 * Shell 存取
 
 ###應用程式運行環境控制 {: #app-runtime}
@@ -174,7 +174,7 @@ bl start --restart
 
 推送應用程式，然後瀏覽至 `https://app-host.mybluemix.net/bluemix-debug/manage`，以存取 {{site.data.keyword.Bluemix_notm}} 除錯使用者介面。當系統提示您進行鑑別時，請輸入您的使用者 ID 及個人存取記號或 IBM ID 密碼。    
 
-   **附註**：您的 DevOps Services 使用者 ID 可以是 IBM ID 或聯合 ID（組織 ID）。如果您使用聯合鑑別，在登入 Bluemix Live Sync 指令行用戶端時，您必須使用個人存取記號，而不是密碼。如果未使用聯合鑑別，則您的 IBM ID 及密碼可用於所有用戶端。如需建立個人存取記號的相關資訊，請參閱[何謂聯合鑑別以及它對我有什麼影響？](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/)
+   **附註**：您的 DevOps Services 使用者 ID 可以是 IBM ID 或聯合 ID（組織 ID）。如果您使用聯合鑑別，在登入 Bluemix Live Sync 指令行用戶端時，您必須使用個人存取記號，而不是密碼。如果未使用聯合鑑別，則您的 IBM ID 及密碼可用於所有用戶端。如需建立個人存取記號的相關資訊，請參閱 [What's federated authentication and how does it affect me? ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/){:new_window}
 
 ###還原應用程式配置並停用 Bluemix 即時除錯 {: #restore_live_debug}
 
@@ -288,7 +288,7 @@ bl login | l [ -u username ] [-p password ][ -s server ]
 
 **警告：**不鼓勵您以指令行選項來提供密碼，因為其他人可以看到它，而且它會記錄為指令歷程的一部分。
 
-**附註：**您必須先註冊免費 <a class="xref" href="https://hub.jazz.net/" target="_blank" alt="Bluemix DevOps Services">Bluemix DevOps Services</a> 帳戶，才能登入。
+**附註：**您必須先註冊免費的 [Bluemix DevOps Services![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://hub.jazz.net/){:new_window} 帳戶，才能登入。
 
 **選項**
 
@@ -298,7 +298,7 @@ bl login | l [ -u username ] [-p password ][ -s server ]
 
 -s *server*：{{site.data.keyword.jazzhub_short}} 伺服器的伺服器名稱或 IP 位址。    
 
-   **附註**：您的 DevOps Services 使用者 ID 可以是 IBM ID 或聯合 ID（組織 ID）。如果您使用聯合鑑別，在登入 Bluemix Live Sync 指令行用戶端時，您必須使用個人存取記號，而不是密碼。如果未使用聯合鑑別，則您的 IBM ID 及密碼可用於所有用戶端。如需建立個人存取記號的相關資訊，請參閱[何謂聯合鑑別以及它對我有什麼影響？](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/)
+   **附註**：您的 DevOps Services 使用者 ID 可以是 IBM ID 或聯合 ID（組織 ID）。如果您使用聯合鑑別，在登入 Bluemix Live Sync 指令行用戶端時，您必須使用個人存取記號，而不是密碼。如果未使用聯合鑑別，則您的 IBM ID 及密碼可用於所有用戶端。如需建立個人存取記號的相關資訊，請參閱 [What's federated authentication and how does it affect me? ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/){:new_window}
 
 **範例**
 
@@ -599,12 +599,15 @@ bl stop –l "launchConfigurations/mylaunchconfig.launch"
 ```
 {: pre}
 
-># 相關鏈結 {:class="linklist"}
->## 指導教學及範例 {:id="samples"}
->* [Test and debug a Node.js app with Bluemix Live Sync](https://hub.jazz.net/tutorials/livesync)
->
-># 相關鏈結 {:class="linklist"}
->## 相關鏈結 {:id="general"}
->* [Eclipse Tools for Bluemix](https://www.ng.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html)   
->
->{:elementKind="article" id="rellinks"}
+# 相關鏈結
+{: #rellinks}
+
+## 指導教學及範例
+{: #samples}
+
+* [Test and debug a Node.js app with Bluemix Live Sync ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://hub.jazz.net/tutorials/livesync){:new_window}
+
+## 相關鏈結
+{: #general}
+
+* [Eclipse Tools for Bluemix ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ng.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html){:new_window}

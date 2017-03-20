@@ -1,8 +1,8 @@
 ﻿---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-29"
+  years: 2015, 2017
+lastupdated: "2017-2-21"
 
 ---
 
@@ -14,17 +14,12 @@ lastupdated: "2016-11-29"
 
 #Création d'un bouton Déployer dans {{site.data.keyword.Bluemix_notm}} {: #deploy-button} 
 
-Le bouton Déployer dans {{site.data.keyword.Bluemix}} est un moyen efficace de partager votre application publique hébergée par Git de sorte que d'autres personnes puissent tester le code
-et le déployer dans {{site.data.keyword.Bluemix_notm}}. Il nécessite une configuration minimale et vous pouvez l'insérer à n'importe quel emplacement prenant en charge le balisage. Un utilisateur qui clique sur le bouton crée une copie clonée du code dans un nouveau référentiel Git pour que votre application d'origine ne soit pas affectée. 
+Le bouton Déployer dans {{site.data.keyword.Bluemix}} est un moyen efficace de partager votre application publique hébergée par Git de sorte que d'autres personnes puissent tester le code et le déployer dans {{site.data.keyword.Bluemix_notm}}. Il nécessite une configuration minimale et vous pouvez l'insérer à n'importe quel emplacement prenant en charge le balisage. Un utilisateur qui clique sur le bouton crée une copie clonée du code dans un nouveau référentiel Git pour que votre application d'origine ne soit pas affectée. 
 {: shortdesc} 
 
 **Astuce :** si l'image de marque de votre entreprise est importante, vous pouvez [incorporer un flux de trame d'information Déployer dans {{site.data.keyword.Bluemix_notm}}](/docs/develop/deploy_button_embed.html) à votre contenu plutôt qu'insérer un bouton. Lorsque des personnes créent une copie clonée de votre application publique hébergée par Git, elles restent dans votre contenu au lieu d'être redirigées vers le site Web bluemix.net. 
 
-**Remarque** : La fonction des chaînes d'outils est désormais disponible. N'importe
-quel utilisateur cliquant sur le lien Déployer dans
-{{site.data.keyword.Bluemix_notm}} peut cliquer sur le lien situé dans
-la bannière pour essayer de déployer son application à l'aide d'une chaîne
-d'outils.
+**Remarque** : La fonction des chaînes d'outils est désormais disponible. N'importe quel utilisateur cliquant sur le lien Déployer dans {{site.data.keyword.Bluemix_notm}} peut cliquer sur le lien situé dans la bannière pour essayer de déployer son application à l'aide d'une chaîne d'outils.
 
 Lorsqu'un utilisateur clique sur votre bouton, les actions suivantes se produisent : 
 
@@ -118,7 +113,7 @@ Tenez compte de ces remarques lorsque vous personnalisez le fragment de votre bo
 	
 	* Si vous préférez stocker l'image localement, vous pouvez la télécharger et la stocker dans votre référentiel Git. Ajustez le chemin d'accès pour qu'il reflète l'emplacement relatif de l'image. 
 	
-	* Si vous voulez utiliser une version traduite du bouton, vous pouvez la référencer à distance ou la télécharger depuis [ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button](ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button). 
+	* Si vous voulez utiliser une version traduite du bouton, vous pouvez la référencer à distance ou la télécharger depuis [ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button![](../icons/launch-glyph.svg "External link icon")](ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button){:new_window}. 
 	
 ##Remarques sur le référentiel du bouton {: #button-repo} 
 
@@ -130,10 +125,12 @@ Tenez compte de ces remarques pour le référentiel de projet que vous allez uti
 Le fichier manifeste vous permet d'indiquer : 
     <ul>
     <li>Un nom d'application unique.</li>  
-    <li>Des services déclarés : une extension de manifeste, qui crée ou recherche les services requis ou facultatifs devant être configurés avant le déploiement de l'application, comme un service de cache de données. Vous pouvez afficher la liste des services, des libellés et des plans {{site.data.keyword.Bluemix_notm}} éligibles à l'aide de l'<a href="https://github.com/cloudfoundry/cli/releases">interface de ligne de commande CF</a>, en exécutant la commande <code>cf marketplace</code> ou en parcourant le <a href="https://console.ng.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-_-dWdevcenter-_-devops-services-_-lp#/store">catalogue {{site.data.keyword.Bluemix_notm}}</a>.      
+    <li>Des services déclarés : une extension de manifeste, qui crée ou recherche les services requis ou facultatifs devant être configurés avant le déploiement de l'application, comme un service de cache de données. Vous pouvez afficher la liste des services, des libellés et des plans {{site.data.keyword.Bluemix_notm}} éligibles à l'aide de l'<a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(s'ouvre dans un nouvel onglet ou une nouvelle fenêtre)">interface de ligne de commande CF<img class="image" src="../icons/launch-glyph.svg" alt="External link icon"/></a> pour exécuter la commande <code>cf marketplace</code> ou en parcourant le <a class="xref" href="https://console.ng.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-_-dWdevcenter-_-devops-services-_-lp#/store" target="_blank" title="(s'ouvre dans un nouvel onglet ou une nouvelle fenêtre)"> catalogue {{site.data.keyword.Bluemix_notm}} <img class="image" src="../icons/launch-glyph.svg" alt="External link icon"/></a>.
+    
+        
     <strong>Remarque :</strong> les services déclarés constituent une extension IBM du format de manifeste Cloud Foundry standard. Cette extension est susceptible d'être révisée dans une édition ultérieure, parallèlement à l'évolution et à l'amélioration de la fonction.
 	
-	<a href="http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html#minimal-manifest" target="_blank">Apprenez à créer un fichier <code>manifest.yml</code>.</a>  
+	<a class="xref" href="http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html#minimal-manifest" target="_blank" title="(s'ouvre dans un nouvel onglet ou une nouvelle fenêtre)">Apprendre à créer un fichier <code>manifest.yml</code> <img class="image" src="../icons/launch-glyph.svg" alt="External link icon"/></a>.  
 <pre class="codeblock">
 	---
     #Modèle de fichier manifest.yml
@@ -165,19 +162,14 @@ Le fichier manifeste vous permet d'indiquer :
 </pre>
    </li>
    </ul>
-	<li> Si l'application doit être construite pour pouvoir être déployée, vous devez inclure un fichier de génération dans votre référentiel. Si
-un fichier script de génération est détecté dans le répertoire racine du
-référentiel, une génération automatisée du code est déclenchée avant le
-déploiement. 
+	<li> Si l'application doit être construite pour pouvoir être déployée, vous devez inclure un fichier de génération dans votre référentiel. Si un fichier script de génération est détecté dans le répertoire racine du référentiel, une génération automatisée du code est déclenchée avant le déploiement.
 	
 	Générateurs pris en charge : 
 	    <ul>
-		<li> <a href="http://ant.apache.org/manual/using.html" target="_blank">Ant :</a> /<code>build.xml</code>, qui génère la sortie dans le dossier <code>./output/</code> </li>
-		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank">Gradle
-: </a> <code>/build.gradle</code>, qui génère la sortie dans le dossier <code>.</code> </li>
-		<li> <a href="http://gruntjs.com/getting-started#the-gruntfile" target="_blank">Grunt :</a> <code>/Gruntfile.js</code>,
-qui génère la sortie dans le dossier <code>.</code> </li>
-		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven" target="_blank">Maven :</a> <code>/pom.xml</code>, qui génère la sortie dans le dossier <code>./target/</code></li>
+		<li> <a class="xref" href="http://ant.apache.org/manual/using.html" target="_blank" title="(s'ouvre dans un nouvel onglet ou une nouvelle fenêtre)">Ant : <img class="image" src="../icons/launch-glyph.svg" alt="External link icon"/></a> /<code>build.xml</code>, qui génère la sortie dans le dossier <code>./output/</code> </li>
+		<li> <a class="xref" href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank" title="(s'ouvre dans un nouvel onglet ou une nouvelle fenêtre)">Gradle : <img class="image" src="../icons/launch-glyph.svg" alt="External link icon"/></a> <code>/build.gradle</code>, qui génère la sortie dans le dossier <code>. </code> </li>
+		<li> <a class="xref" href="http://gruntjs.com/getting-started#the-gruntfile" target="_blank" title="(s'ouvre dans un nouvel onglet ou une nouvelle fenêtre)">Grunt : <img class="image" src="../icons/launch-glyph.svg" alt="External link icon"/></a> <code>/Gruntfile.js</code>, qui génère la sortie dans le dossier <code>. </code> </li>
+		<li> <a class="xref" href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven" target="_blank" title="(s'ouvre dans un nouvel onglet ou une nouvelle fenêtre)">Maven : <img class="image" src="../icons/launch-glyph.svg" alt="External link icon"/></a> <code>/pom.xml</code>, qui génère la sortie dans le dossier <code>./target/</code> </li>
 	   </ul>
 	</li>	
 	<li>Afin de configurer un pipeline pour le projet, incluez un fichier <code>pipeline.yml</code> dans un répertoire <code>.bluemix</code>. Vous pouvez créer un fichier <code>pipeline.yml</code> manuellement ou en générer un à partir d'un projet DevOps Services existant. Pour créer un fichier pipeline.yml à partir d'un projet {{site.data.keyword.jazzhub_short}} et l'ajouter à votre référentiel, procédez comme suit. 
@@ -191,17 +183,13 @@ qui génère la sortie dans le dossier <code>.</code> </li>
 <li>Dans le répertoire racine de votre projet, créez un répertoire <code>.bluemix</code>.</li>
 <li>Téléchargez le fichier <code>pipeline.yml</code> dans le référentiel <code>.bluemix</code>.</li>
 </ol> </li>
-	<li>Pour déployer une application dans un conteneur à l'aide d'<strong>IBM Containers</strong>, vous devez inclure un document Dockerfile dans le répertoire
+	<li>Pour déployer une application dans un conteneur à l'aide d'<strong>IBM
+Containers</strong>, vous devez inclure un document Dockerfile dans le répertoire
 racine du référentiel, et, dans un répertoire <code>.bluemix</code>, inclure un fichier <code>pipeline.yml</code>. 
 	<ul>
-	    <li>Le document Dockerfile agit comme une sorte de script de génération
-pour l'application. Si un document Dockerfile est détecté dans le référentiel,
-l'application est générée automatiquement en image avant d'être déployée dans
-un conteneur. Si l'application elle-même doit être générée avant la génération
-de l'image, incluez un script de génération, ainsi qu'un document Dockerfile,
-comme décrit précédemment.</li>
-	    <li> Pour en savoir plus sur la création de documents Dockerfile, <a href="https://docs.docker.com/reference/builder/" target="_blank">voir la documentation Docker</a>. </li>
-	    <li>Vous pouvez créer un fichier <code>pipeline.yml</code> manuellement ou en générer un à partir d'un projet DevOps Services existant. Pour créer manuellement un fichier <code>pipeline.yml</code> propre à des conteneurs, <a href="https://github.com/Puquios/" target="_blank">consultez les exemples dans GitHub</a>. </li>
+	    <li>Le document Dockerfile agit comme une sorte de script de génération pour l'application. Si un document Dockerfile est détecté dans le référentiel, l'application est générée automatiquement en image avant d'être déployée dans un conteneur. Si l'application elle-même doit être générée avant la génération de l'image, incluez un script de génération, ainsi qu'un document Dockerfile, comme décrit précédemment.</li>
+	    <li> Pour en savoir plus sur la création de documents Dockerfile, <a class="xref" href="https://docs.docker.com/reference/builder/" target="_blank" title="(s'ouvre dans un nouvel onglet ou une nouvelle fenêtre)">voir la documentation Docker<img class="image" src="../icons/launch-glyph.svg" alt="External link icon"/></a>. </li>
+	    <li>Vous pouvez créer un fichier <code>pipeline.yml</code> manuellement ou en générer un à partir d'un projet DevOps Services existant. Pour créer manuellement un fichier <code>pipeline.yml</code> propre à des conteneurs, <a class="xref" href="https://github.com/Puquios/" target="_blank" title="(s'ouvre dans un nouvel onglet ou une nouvelle fenêtre)">voir les exemples dans GitHub<img class="image" src="../icons/launch-glyph.svg" alt="External link icon"/></a>. </li>
         </ul>
 
  </li>
@@ -209,4 +197,3 @@ comme décrit précédemment.</li>
 </ul>
 
 Pour obtenir de l'aide relative au traitement des incidents, voir [Le bouton Déployer dans Bluemix ne déploie pas d'application](/docs/troubleshoot/index.html#deploytobluemixbuttondoesntdeployanapp){:new_window}.	
-
