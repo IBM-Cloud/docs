@@ -64,8 +64,7 @@ Une fois l'interface de ligne de commande installée, vous pouvez commencer :
 
   <pre class="pre">cf api https://api.<span class="keyword" data-hd-keyref="DomainName">nom_domaine</span></pre>
 
-  <pre class="pre">cf login -u <var class="keyword varname" data-hd-keyref="user_ID">nom_utilisateur</var> -o
-<var class="keyword varname" data-hd-keyref="org_name">nom_organisation</var> -s <var class="keyword varname" data-hd-keyref="space_name">nom_espace</var></pre>
+  <pre class="pre">cf login -u <var class="keyword varname" data-hd-keyref="user_ID">nom_utilisateur</var> -o <var class="keyword varname" data-hd-keyref="org_name">nom_organisation</var> -s <var class="keyword varname" data-hd-keyref="space_name">nom_espace</var></pre>
 
   Si vous vous servez d'un ID fédéré, utilisez l'option `-sso`.
 
