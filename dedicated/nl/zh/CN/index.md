@@ -30,8 +30,9 @@ lastupdated: "2017-01-11"
 | **类型**        | **名称**            | **描述** |
 |-----------------|-------------------|-------------------|
 |已包含 | [{{site.data.keyword.Bluemix_notm}} 运行时](/docs/cfapps/runtimes.html) | 使用运行时可快速启动并运行应用程序，无需设置和管理计算机与操作系统。所有 {{site.data.keyword.Bluemix_notm}} 运行时都可供您在 {{site.data.keyword.Bluemix_dedicated_notm}} 实例中使用。|
-| 已包含 | [{{site.data.keyword.autoscaling}}](/docs/services/Auto-Scaling/index.html) | 根据策略，动态增大或减小应用程序的计算容量。通过此服务，您在 {{site.data.keyword.Bluemix_dedicated_notm}} 环境中的使用不受限制。 |
+| 已包含 | [{{site.data.keyword.autoscaling}}](/docs/services/Auto-Scaling/index.html) | 根据策略，动态增大或减小应用程序的计算容量。通过此服务，您在 {{site.data.keyword.Bluemix_dedicated_notm}} 环境中的使用不受限制。注：自动扩展目前只适用于 Cloud Foundry 运行时 |
 |可选 | [{{site.data.keyword.apiconnect_short}}](/docs/services/apiconnect/index.html) | {{site.data.keyword.apiconnect_long}} 将 {{site.data.keyword.APIM}} 和 IBM StrongLoop 集成到单个产品中，以提供一个综合解决方案来创建、运行、管理和强制执行 API 与微服务。 |
+|可选 | [{{site.data.keyword.rules_short}}](/docs/services/rules/rules.html) | {{site.data.keyword.rules_short}} 提供了一个综合环境来自动化和执行频繁发生且可重复的基于规则的业务决策。此外，它通过降低对 IT 技能的需求，支持业务用户或开发者以更低的成本快速对决策建模并进行测试。 |
 |可选 | [{{site.data.keyword.cloudant}}](/docs/services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}} 提供了对始终启用的完全受管 NoSQL JSON 数据层的访问。此服务兼容 CouchDB，并且可通过易用的 HTTP 接口供移动和 Web 应用程序模型访问。 |
 |可选 | [{{site.data.keyword.containershort}}](/docs/containers/container_index.html) | 在 {{site.data.keyword.Bluemix_dedicated_notm}} 上运行 Docker 容器。容器是包含应用程序运行所需的所有元素的虚拟软件对象。容器不仅具有资源隔离和分配的好处，而且还比虚拟机器（举例来说）的可移植性更好，且更有效率。有关硬件需求的信息，请参阅 [{{site.data.keyword.Bluemix_dedicated_notm}} 和 Bluemix Local 中的 IBM {{site.data.keyword.containershort}}](/docs/containers/container_dl.html)。|
 | 可选 | [{{site.data.keyword.contdelivery_short}}](/docs/services/ContinuousDelivery/index.html) | 使用 {{site.data.keyword.contdelivery_short}} Dedicated 可自动执行构建、单元测试、部署等操作。通过丰富的基于 Web 的 IDE 来编辑和推送代码。创建工具链以便进行支持开发、部署和操作任务的工具集成。 |
@@ -45,7 +46,7 @@ lastupdated: "2017-01-11"
 |可选 | [{{site.data.keyword.sescashort}}](/docs/services/SessionCache/index.html#session_cache) | 为了提高冗余度，{{site.data.keyword.sescashort}} 提供了高速缓存中存储的会话的副本。因此，万一发生掉线或中断，客户机应用程序能够继续访问高速缓存中的会话。此服务支持 Web 和移动应用程序的会话高速缓存场景。 |
 | 可选 | [{{site.data.keyword.iot_short}}](/docs/services/IoT/index.html) | 此服务允许应用程序与连接的设备、传感器和网关进行通信，以及使用这些设备、传感器和网关收集的数据。基本产品允许在专用环境中运行 {{site.data.keyword.iot_short}} 的专用版本，容量为 100,000 个并行连接设备或应用程序，数据交换量为 1.6 TB。 |
 | 可选 | [{{site.data.keyword.appserver_short}}](/docs/services/ApplicationServeronCloud/index.html) | IBM {{site.data.keyword.appserver_short}} for IBM {{site.data.keyword.Bluemix_notm}} 是有助于在 {{site.data.keyword.Bluemix_notm}} 上托管的云环境中预配置的 {{site.data.keyword.appserver_short}} Liberty、Traditional Network Deployment 或 Traditional WebSphere Java EE 实例上执行快速设置的服务。 |
-{: caption="Table 1. Dedicated Services" caption-side="top"}
+{: caption="表 1. 专用服务" caption-side="top"}
 {: #table01}
 
 
@@ -58,6 +59,7 @@ lastupdated: "2017-01-11"
 |Dedicated {{site.data.keyword.apiconnect_short}} Professional 增加 10 万次 API 调用 | {{site.data.keyword.apiconnect_short}} Professional 环境的扩展，用于每月提供额外 10 万次 API 调用容量。 |
 |Dedicated {{site.data.keyword.apiconnect_short}} Enterprise 2500 万次 API 调用 | 此环境允许在专用环境中运行 {{site.data.keyword.apiconnect_short}} 的专用版本，容量为每月针对企业级 API 项目进行 2500 万次 API 调用。 |
 |Dedicated {{site.data.keyword.apiconnect_short}} Enterprise 增加 10 万次 API 调用 | {{site.data.keyword.apiconnect_short}} Enterprise 环境的扩展，用于每月提供额外 10 万次 API 调用容量。 |
+|IBM {{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.rules_short}} 100 万个规则决策 | 规则决策是从规则执行服务器调用规则集的结果。必须获得充分的权利才能涵盖结算周期内执行或处理的规则决策总数（四舍五入到最接近的百万数）。由此云服务度量的规则决策是为了获取决策而对规则执行服务器发出的调用。 |
 |Dedicated {{site.data.keyword.cloudant}} 增加 1.6 TB 容量 | 包含在专用环境中运行 {{site.data.keyword.cloudantfull}} 的专用版本，设计容量为 1.6 TB。  |
 |Dedicated {{site.data.keyword.datacshort}} 和 {{site.data.keyword.sescashort}} 增加 50 GB 容量 | 此环境允许部署和运行 {{site.data.keyword.datacshort}} 和 {{site.data.keyword.sescashort}} 实例，最高累计容量为 50 GB。 |
 |{{site.data.keyword.contdelivery_short}} Dedicated 实例 | 在专用环境中运行的 {{site.data.keyword.contdelivery_short}} 专用版本。容量由 {{site.data.keyword.contdelivery_short}} Dedicated 授权用户权利确定。 |
@@ -78,7 +80,7 @@ lastupdated: "2017-01-11"
 |IBM {{site.data.keyword.appserver_short}} for {{site.data.keyword.Bluemix_notm}} - Dedicated Medium| 在 {{site.data.keyword.Bluemix_notm}} 上托管的云环境中预配置的 {{site.data.keyword.appserver_short}} Liberty、Traditional Network Deployment 或 Traditional WebSphere Java EE 实例，每月 128 个 vCore、256GB RAM 和 2TB HDD。 |
 |IBM {{site.data.keyword.appserver_short}} for {{site.data.keyword.Bluemix_notm}} - Dedicated Large| 在 {{site.data.keyword.Bluemix_notm}} 上托管的云环境中预配置的 {{site.data.keyword.appserver_short}} Liberty、Traditional Network Deployment 或 Traditional WebSphere Java EE 实例，每月 256 个 vCore、512GB RAM 和 4TB HDD。 |
 |IBM {{site.data.keyword.appserver_short}} for {{site.data.keyword.Bluemix_notm}} - Dedicated| 在 {{site.data.keyword.Bluemix_notm}} 上托管的云环境中预配置的 {{site.data.keyword.appserver_short}} Liberty、Traditional Network Deployment 或 Traditional WebSphere Java EE 实例，具有 HDD 扩展和每月 1TB HDD。 |
-{: caption="Table 2. Optional service components for purchase" caption-side="top"}
+{: caption="表 2. 可选择采购的服务组件" caption-side="top"}
 {: #table02}
 
 
@@ -89,7 +91,7 @@ lastupdated: "2017-01-11"
 |Dedicated Direct Link 1 Gbps 容量 | 此专用网络链路直接连接到相应的现有 {{site.data.keyword.BluSoftlayer}} 网络点，设计数据传输量最高 1 Gbps。 |
 |Dedicated Direct Link 10 Gbps 容量 | 此专用网络链路直接连接到相应的现有 {{site.data.keyword.BluSoftlayer}} 网络点，设计数据传输量最高 10 Gbps。 |
 |IBM Bluemix Dedicated 硬件防火墙 - 高可用性 | 冗余 1 Gbps 硬件防火墙，配置用于保护专用环境中同一 VLAN 中的单台服务器、多台服务器或所有服务器。 |
-{: caption="Table 3. Optional platform add-on components for purchase" caption-side="top"}
+{: caption="表 3. 可选择采购的平台附加组件" caption-side="top"}
 {: #table03}
 
 **注**：{{site.data.keyword.Bluemix_dedicated_notm}} 组件可能指示特定配置的容量，例如千兆字节或每秒事务数。由于现实中云服务的任何配置的实际容量根据多种因素而变化，因此现实中的实际容量可能大于或小于配置的容量。
@@ -152,7 +154,7 @@ lastupdated: "2017-01-11"
 |{{site.data.keyword.iot_short}}		|是		|是		|否|
 |{{site.data.keyword.weather_short}}		|是		|是		|是|
 |{{site.data.keyword.workloadscheduler}}	|是		|是		|是 |
-{: caption="Table 4. Services available for syndication from {{site.data.keyword.Bluemix_notm}} Public by region" caption-side="top"}
+{: caption="表 4. 按区域为 {{site.data.keyword.Bluemix_notm}} Public 联合提供的服务" caption-side="top"}
 {: #table04}
 
 **注**：此表中未包含第三方服务。请检查专用目录以获取第三方服务选项。
@@ -333,7 +335,7 @@ IBM 为您提供了使用受密码保护的登录来访问 {{site.data.keyword.B
 |审查物理基础架构 | 审查托管解决方案组件的物理部署是否有威胁，并查看用于保护数据中心的安全性控制。 | 客户 |
 |检查监视软件 | 检查上报和问题确定计划中定义的监视和管理组件。 | 客户 |
 |检查操作系统 | 检查以确保操作系统映像达到合规标准。IBM 提供对操作系统映像的访问权。 | IBM 和客户共担责任 |
-{: caption="Table 5. Inception phase tasks" caption-side="top"}
+{: caption="表 5. 先启阶段任务" caption-side="top"}
 
 
 接下来是进展阶段。进展阶段描述了您和 IBM Cloud 的持续协作关系。此阶段的主要目标包含以下内容：
@@ -358,7 +360,7 @@ IBM 为您提供了使用受密码保护的登录来访问 {{site.data.keyword.B
 |状态报告、审计协调和合规性会议  | 完成状态报告、外部审计协调以及在合规性审查状态会议上陈述。 | IBM |
 |聘用和业务需求核查 | 针对有权访问客户环境的 IBM 代表，完成每季度就业核查和持续业务需求核查。 | IBM |
 |解决安全漏洞 | 解决报告的平台安全漏洞。 | IBM |
-{: caption="Table 6. Progression phase tasks" caption-side="top"}
+{: caption="表 6. 进展阶段任务" caption-side="top"}
 
 最后是完成阶段，此阶段表示您和 IBM {{site.data.keyword.Bluemix_notm}} 之间的关系结束。此阶段的主要任务包含以下内容：
 
@@ -373,7 +375,7 @@ IBM 为您提供了使用受密码保护的登录来访问 {{site.data.keyword.B
 |解除环境 | 关闭对环境的访问以及环境的凭证。 | IBM 和客户共担责任 |
 |除去客户网络连接 | 除去 IBM 与客户环境之间的网络连接。 | IBM 和客户共担责任 |
 |回收基础架构 | 您的环境将基于 {{site.data.keyword.BluSoftlayer}} 定义的流程进行回收。 | IBM |
-{: caption="Table 7. Completion phase tasks" caption-side="top"}
+{: caption="表 7. 完成阶段任务" caption-side="top"}
 
 ##维护专用实例
 {: #maintaindedicated}
@@ -460,7 +462,7 @@ IBM 会发送有关在“状态”页面上针对每个维护时段计划进行�
 * 根据应用程序运行状况检查，提供站点故障转移
 * 在端点之间使用加权路由
 
-您可以选择全球负载均衡器，例如 Akamai 或 Dyn。有关将 Akamai 用作全球负载均衡器的更多信息，请参阅 [Global Traffic Management ![外部链接图标](../icons/launch-glyph.svg)](https://www.akamai.com/us/en/solutions/products/web-performance/global-traffic-management.jsp "Opens in new window"){: new_window}。有关将 Dyn 用作全球负载均衡器的更多信息，请参阅 [4 Reasons Businesses Are Taking Global Load Balancing to the Cloud ![外部链接图标](../icons/launch-glyph.svg)](http://dyn.com/blog/4-reasons-businesses-are-taking-global-load-balancing-to-the-cloud/){: new_window}。
+您可以选择全球负载均衡器，例如 Akamai 或 Dyn。有关将 Akamai 用作全球负载均衡器的更多信息，请参阅 [Global traffic management ![外部链接图标](../icons/launch-glyph.svg)](https://www.akamai.com/us/en/solutions/products/web-performance/global-traffic-management.jsp "在新窗口中打开"){: new_window}。有关将 Dyn 用作全球负载均衡器的更多信息，请参阅 [4 Reasons Businesses Are Taking Global Load Balancing to the Cloud ![外部链接图标](../icons/launch-glyph.svg)](http://dyn.com/blog/4-reasons-businesses-are-taking-global-load-balancing-to-the-cloud/){: new_window}。
 
 ### 高可用性
 {: #ha}
