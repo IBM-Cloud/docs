@@ -1,22 +1,21 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-02-22"
+  years: 2016, 2017
+lastupdated: "2016-02-23"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
+{:screen: .screen}
 {:pre: .pre}
 
 # Création de déclencheurs et de règles
 {: #openwhisk_triggers}
 
-
-Les déclencheurs et les règles {{site.data.keyword.openwhisk}} apportent des capacités gérées par des événements sur la
+Les déclencheurs et les règles {{site.data.keyword.openwhisk_short}} apportent des capacités gérées par des événements sur la
 plateforme. Les événements provenant de sources d'événements externes et internes sont canalisés via un déclencheur, et des règles autorisent vos actions
 à réagir à ces événements.
 {: shortdesc}
@@ -78,11 +77,9 @@ Par exemple, créez un déclencheur pour envoyer les mises à jour de l'emplacem
   wsk trigger create locationUpdate
   ```
   {: pre}
-
   ```
   ok: created trigger locationUpdate
   ```
-  {: screen}
 
 2. Vérifiez que le déclencheur a été créé en affichant la liste des déclencheurs.
 
@@ -90,12 +87,10 @@ Par exemple, créez un déclencheur pour envoyer les mises à jour de l'emplacem
   wsk trigger list
   ```
   {: pre}
-
   ```
   triggers
   /un_espace_nom/locationUpdate                            private
   ```
-  {: screen}
 
   Jusqu'à présent, vous avez créé un "canal" nommé dans lequel des événements peuvent être déclenchés.
 
@@ -105,11 +100,9 @@ Par exemple, créez un déclencheur pour envoyer les mises à jour de l'emplacem
   wsk trigger fire locationUpdate --param name Daniel --param place "Marseille"
   ```
   {: pre}
-
   ```
   ok: triggered locationUpdate with id fa495d1223a2408b999c3e0ca73b2677
   ```
-  {: screen}
 
 Un déclencheur qui est lancé sans aucune règle associée n'a aucun effet visible.
 Les déclencheurs ne peuvent pas être créés au sein d'un package ; ils doivent être créés directement sous un espace de noms.
@@ -117,13 +110,12 @@ Les déclencheurs ne peuvent pas être créés au sein d'un package ; ils doiven
 ## Association de déclencheurs et d'actions à l'aide de règles
 {: #openwhisk_rules_assoc}
 
-Des règles sont utilisées pour associer un déclencheur à une action. A chaque fois qu'un événement déclencheur est exécuté, l'action est appelée
-avec les paramètres d'événement.
+Des règles sont utilisées pour associer un déclencheur à une action. A chaque fois qu'un événement déclencheur est exécuté, l'action est appelée avec les paramètres d'événement.
 
 Par exemple, créez une règle qui appelle l'action hello à chaque fois qu'une mise à jour d'emplacement est publiée.
 
 1. Créez un fichier 'hello.js' avec le code d'action à utiliser :
-  ```
+  ```javascript
   function main(params) {
      return {payload:  'Hello, ' + params.name + ' from ' + params.place};
   }
@@ -135,14 +127,12 @@ Par exemple, créez une règle qui appelle l'action hello à chaque fois qu'une 
   wsk trigger update locationUpdate
   ```
   {: pre}
-
   ```
   wsk action update hello hello.js
   ```
   {: pre}
 
-3. Créez la règle. Elle est activée au moment de la création, ce qui signifie qu'elle est disponible immédiatement pour répondre aux activations
-de votre déclencheur. Les trois paramètres sont le nom de la règle, le déclencheur et l'action.
+3. Créez la règle. Elle est activée au moment de la création, ce qui signifie qu'elle est disponible immédiatement pour répondre aux activations de votre déclencheur. Les trois paramètres sont le nom de la règle, le déclencheur et l'action.
   ```
   wsk rule create maRègle locationUpdate hello
   ```
@@ -154,58 +144,48 @@ de votre déclencheur. Les trois paramètres sont le nom de la règle, le décle
   ```
   {: pre}
 
-4. Exécutez le déclencheur locationUpdate. A chaque fois que vous déclenchez un événement, l'action hello est appelée avec les paramètres
-d'événement.
+4. Exécutez le déclencheur locationUpdate. A chaque fois que vous déclenchez un événement, l'action hello est appelée avec les paramètres d'événement.
   ```
   wsk trigger fire locationUpdate --param name Daniel --param place "Marseille"
   ```
   {: pre}
-
   ```
   ok: triggered locationUpdate with id d5583d8e2d754b518a9fe6914e6ffb1e
   ```
-  {: screen}
 
 5. Assurez-vous que l'action a été appelée en vérifiant l'activation la plus récente.
   ```
   wsk activation list --limit 1 hello
   ```
   {: pre}
-
   ```
   activations
   9c98a083b924426d8b26b5f41c5ebc0d             hello
   ```
-  {: screen}
-
   ```
   wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
   ```
   {: pre}
-  ```
-  {
+  ```json
+    {
      "payload": "Hello, Daniel de Marseille"
   }
   ```
-  {: screen}
 
   Vous constatez que l'action hello a reçu le contenu de l'événement et a renvoyé la chaîne attendue.
 
-Vous pouvez créer plusieurs règles qui associent le même déclencheur à des actions différentes.
-Les déclencheurs et les règles ne peuvent pas appartenir à un package. Cependant,
-la règle peut être associée à une action qui appartient à un package, par
-exemple :
+Vous pouvez créer plusieurs règles qui associent le même déclencheur à des actions différentes. Les déclencheurs et les règles ne peuvent pas appartenir à un package. Cependant, la règle peut être associée à une action qui appartient à un package, par exemple :
   ```
   wsk rule create recordLocation locationUpdate /whisk.system/utils/echo
   ```
   {: pre}
 
-Vous pouvez également utiliser des règles avec des séquences. Vous
-pouvez ainsi créer une séquence d'actions
-`recordLocationAndHello`, qui est activée par la règle `anotherRule`.
+Vous pouvez également utiliser des règles avec des séquences. Vous pouvez ainsi créer une séquence d'actions `recordLocationAndHello`, qui est activée par la règle `anotherRule`.
   ```
   wsk action create recordLocationAndHello --sequence /whisk.system/utils/echo,hello
+  ```
+  {: pre}
+  ```
   wsk rule create anotherRule locationUpdate recordLocationAndHello
   ```
   {: pre}
- 

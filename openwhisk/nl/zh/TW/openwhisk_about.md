@@ -1,12 +1,8 @@
 ---
 
- 
-
 copyright:
-
   years: 2016, 2017
-lastupdated: "2016-08-02"
- 
+lastupdated: "2016-02-21"
 
 ---
 
@@ -18,17 +14,9 @@ lastupdated: "2016-08-02"
 
 # 關於 {{site.data.keyword.openwhisk_short}}
 
-下列各節提供有關 {{site.data.keyword.openwhisk}} 的詳細資料。
-{: shortdesc}
+{{site.data.keyword.openwhisk}} 是事件驅動運算平台（也稱為「無伺服器運算」或「功能即服務 (FaaS)」），會執行程式碼來回應事件或直接呼叫。下圖顯示高階 {{site.data.keyword.openwhisk}} 架構。{: shortdesc}
 
-## {{site.data.keyword.openwhisk_short}} 的運作方式
-{: #openwhisk_how}
-
-{{site.data.keyword.openwhisk_short}} 是事件驅動運算平台（也稱為「無伺服器運算」或「功能即服務 (FaaS)」），會執行程式碼來回應事件或直接呼叫。
-
-下圖顯示高階 {{site.data.keyword.openwhisk_short}} 架構。
-
-![{{site.data.keyword.openwhisk_short}} 架構](OpenWhisk.png)
+![{{site.data.keyword.openwhisk_short}} 架構](./images/OpenWhisk.png)
 
 事件範例包括資料庫記錄變更、超出特定溫度的 IoT 感應器讀數、GitHub 儲存庫的新程式碼確定，或來自 Web 或行動應用程式的簡單 HTTP 要求。來自外部及內部事件來源的事件是透過觸發程式進行傳送，而規則容許動作反應這些事件。
 
@@ -43,28 +31,147 @@ lastupdated: "2016-08-02"
 現有套件型錄提供快速的方式以使用有用的功能來加強應用程式，以及在生態系統中存取外部服務。已啟用 {{site.data.keyword.openwhisk_short}} 功能的外部服務範例包括 Cloudant、The Weather Company、Slack 及 GitHub。
 
 
+## {{site.data.keyword.openwhisk_short}} 的運作方式
+{: #openwhisk_how}
 
-## 常見使用案例
-{: #openwhisk_use_cases}
+OpenWhisk 是一個開放程式碼專案，利用各種技術，包括 Nginx、Kafka、Consul、Docker、CouchDB。合併使用這些元件，以構成「無伺服器事件型程式設計服務」。若要更詳細地說明所有元件，請透過系統追蹤所發生的動作呼叫。OpenWhisk 中的呼叫是無伺服器引擎所執行的核心事項：執行使用者已提供給系統的程式碼，並傳回該執行的結果。
 
-{{site.data.keyword.openwhisk_short}} 所提供的執行模型支援各種使用案例。下列各節包括一般範例。
+### 建立動作
 
-### 將應用程式分解成微服務
-{: #openwhisk_use_cases_decomp}
+若要提供環境定義的更多說明，請先在系統中建立一個動作。我們稍後將在透過系統追蹤時使用該動作來說明這些概念。下列指令假設[已適當地設定 OpenWhisk CLI](https://github.com/openwhisk/openwhisk/tree/master/docs#setting-up-the-openwhisk-cli)。
 
-{{site.data.keyword.openwhisk_short}} 的模組及固有可擴充本質，讓它適合實作運作中邏輯的精細部分。例如，{{site.data.keyword.openwhisk_short}} 可能適用於透過前端程式碼移除載入密集、潛在 spiky（背景）作業，以及將這些作業實作為動作。
+首先，我們將建立檔案 *action.js*，其所包含的下列程式碼會將 "Hello World" 列印至 stdout，並傳回在索引鍵 "hello" 下包含 "world" 的 JSON 物件。
+```javascript
+function main() {
+    console.log('Hello World');
+    return { hello: 'world' };
+}
+```
+{: codeblock}
 
-### 行動後端
-{: #openwhisk_use_cases_mobile_backend}
+我們可以使用下列指令來建立該動作。
+```
+wsk action create myAction action.js
+```
+{: pre}
 
-許多行動應用程式都需要伺服器端邏輯。有鑒於行動開發人員通常沒有管理伺服器端邏輯的經驗，而寧願關注裝置上執行的應用程式，所以使用 {{site.data.keyword.openwhisk_short}} 作為伺服器端後端是很好的解決方案。此外，Swift 的內建支援容許開發人員重複使用其現有 iOS 程式設計技術。
+完成。現在，我們想要實際呼叫該動作：
+```
+wsk action invoke myAction
+```
+{: pre}
 
-### 資料處理
-{: #openwhisk_use_cases_data_proc}
+## 內部處理流程
+OpenWhisk 中實際發生什麼情況？
 
-運用現在可用的資料量，應用程式開發需要處理新資料的能力，而且可能會對它做出反應。此需求包括處理結構化資料庫記錄以及非結構化文件、映像檔或視訊。
+![OpenWhisk 處理流程](images/OpenWhisk_flow_of_processing.png)
 
-### IoT
-{: #openwhisk_use_cases_iot}
+### 進入系統：nginx
 
-Internet of Things 情境本質上經常是由感應器所驅動。例如，如果需要針對感應器超過特定溫度做出反應，可能會觸發 {{site.data.keyword.openwhisk_short}} 中的動作。
+首先：OpenWhisk 的使用者應對 API 完全是以 HTTP 為基礎，並且遵循 RESTful 設計。因此，透過 wsk-CLI 傳送的指令基本上是對 OpenWhisk 系統提出的 HTTP 要求。上面的特定指令大致上會轉換為：
+```
+POST /api/v1/namespaces/$userNamespace/actions/myAction
+Host: $openwhiskEndpoint
+```
+{: screen}
+
+請記下這裡的 *$userNamespace* 變數。使用者可以存取至少一個名稱空間。為求簡化，假設使用者擁有放入 *myAction* 的名稱空間。
+
+系統的第一個進入點是透過 **nginx**（HTTP 及反向 Proxy 伺服器）。它主要用於 SSL 終止，並且將適當的 HTTP 呼叫轉遞給下一個元件。
+
+### 進入系統：控制器
+
+nginx 不會對我們的 HTTP 要求進行太多處理，而是將它轉遞給**控制器**（透過 OpenWhisk 的流程中的下一個元件）。它是實際 REST API 的 Scala 型實作（根據 **Akka** 及 **Spray**），因此可作為使用者執行一切作業的介面，包括 OpenWhisk 中之實體的 [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) 要求，以及動作的呼叫（也就是我們現在正在做的事）。
+
+「控制器」會先釐清使用者嘗試執行的動作。作法是根據您在 HTTP 要求中使用的 HTTP 方法。根據上述轉換，使用者會對現有的動作發出 POST 要求，而「控制器」會將其轉換為**動作的呼叫**。
+
+提供「控制器」的中央角色（因此得名），下列步驟都會將它併入特定範圍。
+
+### 鑑別及授權：CouchDB
+
+現在，「控制器」會驗證您的身分（*鑑別*），並驗證您是否具有專用權可以執行您想要對該實體執行的動作（*授權*）。針對 **CouchDB** 實例中所謂的 **subjects** 資料庫驗證要求中所含的認證。
+
+在此情況下，「控制器」會確認使用者存在於 OpenWhisk 的資料庫中，並且具有專用權可以呼叫動作 myAction（我們假設它是使用者所擁有的名稱空間中的動作）。後者可以有效率地將使用者想要執行的動作呼叫的專用權授與使用者。
+
+一切就緒後，就會開啟下一個處理階段的閘道。
+
+### 重新取得動作：CouchDB…
+
+因為「控制器」現在確定使用者已獲許加入並且具有呼叫其動作的專用權，所以會從 CouchDB 的 **whisks** 資料庫中實際載入此動作（在此情況下為 *myAction*）。
+
+動作的記錄主要包含要執行的程式碼（如上所示），以及您要傳遞給動作並與實際呼叫要求中所含參數合併的預設參數。同時包含執行時強加於它的資源限制（例如允許它使用的記憶體）。
+
+在此特定情況下，我們的動作不會採用任何參數（函數的參數定義是空清單），因此我們假設尚未設定任何預設參數，並且尚未將任何特定參數傳送給動作，從此觀點來看，這是最微不足道的情況。
+
+### 呼叫動作的對象：Consul
+
+「控制器」（或更具體的說是它的負載平衡部分）現在已全部就緒，可實際執行程式碼。它需要知道可以執行此作業的對象。**Consul**（服務探索）用來連續檢查執行程式的性能狀態，以追蹤系統中可用的執行程式。這些執行程式稱為**呼叫程式**。
+
+「控制器」（現在知道哪些「呼叫程式」可供使用）會選擇其中一個來呼叫所要求的動作。
+
+在此情況下，假設系統有 3 個「呼叫程式」可供使用（呼叫程式 0 到 2），而且「控制器」已選擇*呼叫程式 2* 來呼叫現有的動作。
+
+### 請劃一條線：Kafka
+
+從現在開始，您傳入的呼叫要求主要可能會發生兩件不好的事情：
+
+1. 系統可能損毀，遺失呼叫。
+2. 系統可能有這類大量載入，因此呼叫需要先等待其他呼叫完成。
+
+這兩者的答案是 **Kafka**，它是一種高產量的分散式發佈/訂閱傳訊系統。「控制器」及「呼叫程式」只能透過 Kafka 所緩衝及持續保存的訊息進行通訊。這會增加「控制器」及「呼叫程式」記憶體中的緩衝負擔，導致發生 *OutOfMemoryException* 的風險，同時確保訊息不會在系統損毀時遺失。
+
+若要呼叫動作，「控制器」會將訊息發佈至 Kafka，其包含要呼叫的動作以及要傳遞給該動作的參數（在此情況下沒有參數）。此訊息會定址到「呼叫程式」，其為上述從 Consul 取得的清單中所選擇的「控制器」。
+
+Kafka 確認它取得訊息之後，會使用 **ActivationId** 回應對使用者的 HTTP 要求。使用者稍後會使用該項目，以存取此特定呼叫的結果。請注意，這是非同步呼叫模型，其中，HTTP 要求會在系統接受動作呼叫要求之後終止。提供同步模型（稱為封鎖呼叫），但本文並未涵蓋。
+
+### 已實際呼叫程式碼：呼叫程式
+
+**呼叫程式**是 OpenWhisk 的核心。「呼叫程式」的責任是呼叫動作。它也會在 Scala 中進行實作。但還需要進行許多作業。若要使用隔離及安全的方式執行動作，它會使用 **Docker**。
+
+Docker 用來設定使用快速、隔離及控制方式所呼叫的每一個動作的全新自行封裝環境（稱為*容器*）。在 nutshell 中，針對每一個動作呼叫，會大量產生 Docker 容器、注入動作碼、使用傳遞給它的參數予以執行、取得結果，以及破壞容器。這也是執行許多效能最佳化以減少額外負擔並盡可能設定低回應時間的位置。 
+
+在我們的特定情況下，因為我們已具有 *Node.js* 型動作，所以「呼叫程式」將會啟動 Node.js 容器、從 *myAction* 注入程式碼、在不使用參數的情況下予以執行、擷取結果、儲存日誌，並且再次破壞 Node.js 容器。
+
+### 重新儲存結果：CouchDB
+
+「呼叫程式」取得結果時，會將它儲存至 **whisks** 資料庫，作為上述所提及的 ActivationId 下的啟動。**whisks** 資料庫存在於 **CouchDB** 中。
+
+在我們的特定情況下，「呼叫程式」會取得動作傳回的產生的 JSON 物件、抓取 Docker 所撰寫的日誌、將它們全都放入啟動記錄，並將它儲存至資料庫。它大致上會類似下列內容：
+
+```json
+{
+   "activationId": "31809ddca6f64cfc9de2937ebd44fbb9",
+   "response": {
+       "statusCode": 0,
+       "result": {
+           "hello": "world"
+       }
+   },
+   "end": 1474459415621,
+   "logs": [
+       "2016-09-21T12:03:35.619234386Z stdout: Hello World"
+   ],
+   "start": 1474459415595,
+}
+```
+{: codeblock}
+
+請注意記錄如何包含傳回的結果及撰寫的日誌。它也會包含動作呼叫的開始及結束時間。啟動記錄中還有其他欄位，這是精簡版。
+
+現在，您可以重新使用 REST API（從步驟 1 重新開始）以取得您的啟動，因而取得動作的結果。若要這樣做，請使用：
+
+```bash
+wsk activation get 31809ddca6f64cfc9de2937ebd44fbb9
+```
+{: pre} 
+
+### 摘要
+
+我們已瞭解簡單的 **wsk action invoke myAction** 如何通過 {{site.data.keyword.openwhisk_short}} 系統的不同階段。系統本身主要僅包含兩個自訂元件：**控制器**及**呼叫程式**。由開放程式碼社群中的許多人員所開發的其他所有項目也都已就緒。
+
+您可以在下列主題中尋找 {{site.data.keyword.openwhisk_short}} 的其他資訊：
+
+* [實體名稱](./openwhisk_reference.html#openwhisk_entities)
+* [動作語意](./openwhisk_reference.html#openwhisk_semantics)
+* [限制](./openwhisk_reference.md#openwhisk_syslimits)
+* [REST API](./openwhisk_reference.md#openwhisk_ref_restapi)

@@ -1,15 +1,15 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-26"
+  years: 2016, 2017
+lastupdated: "2016-02-23"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
+{:screen: .screen}
 {:pre: .pre}
 
 # {{site.data.keyword.openwhisk_short}} Mobile-SDK verwenden
@@ -86,7 +86,7 @@ Erstellen Sie das Projekt (Build) für die Ziele, die Sie benötigen, und fügen
 Sie können die {{site.data.keyword.openwhisk_short}}-CLI zum Herunterladen von Beispielcode verwenden, der in das {{site.data.keyword.openwhisk_short}}-SDK-Framework eingebettet wird.  
 
 Geben Sie den folgenden Befehl ein, um das Starter-App-Beispiel zu installieren:
-```
+```bash
 wsk sdk install iOS
 ```
 {: pre}
@@ -94,7 +94,7 @@ wsk sdk install iOS
 Mit diesem Befehl wird eine komprimierte Datei mit der Starter-App heruntergeladen. Im Projektverzeichnis befindet sich eine Podfile.
 
 Geben Sie den folgenden Befehl ein, um das SDK zu installieren:
-```
+```bash
 pod install
 ```
 {: pre}
@@ -106,7 +106,7 @@ Um die Arbeit rasch aufnehmen zu können, erstellen Sie ein Objekt 'WhiskCredent
 
 Sie können zum Beispiel folgenden Beispielcode zum Erstellen des Berechtigungsnachweisobjekts verwenden:
 
-```
+```swift
 let credentialsConfiguration = WhiskCredentials(accessKey: "myKey", accessToken: "myToken")
 
 let whisk = Whisk(credentials: credentialsConfiguration!)
@@ -115,7 +115,7 @@ let whisk = Whisk(credentials: credentialsConfiguration!)
 
 Im obigen Beispiel werden die aus {{site.data.keyword.openwhisk_short}} abgerufenen Parameter `myKey` und `myToken` übergeben. Sie können den Schlüssel (Key) und das Token mit dem folgenden CLI-Befehl abrufen:
 
-```
+```bash
 wsk property get --auth
 ```
 {: pre}
@@ -134,8 +134,8 @@ Zum Aufrufen einer fernen Aktion können Sie `invokeAction` mit dem Aktionsnamen
 
 Beispiel:
 
-```
-// In diesem Beispiel rufen wir eine Aktion zum Drucken einer Nachricht in der {{site.data.keyword.openwhisk_short}}-Konsole auf
+```swift
+// In diesem Beispiel wird eine Aktion zur Ausgabe einer Nachricht auf der {{site.data.keyword.openwhisk_short}}-Konsole aufgerufen.
 var params = Dictionary<String, String>()
 params["payload"] = "Hi from mobile"
 
@@ -162,7 +162,7 @@ Im obigen Beispiel wird die Aktion `helloConsole` unter Verwendung des Standardn
 
 Zur Aktivierung eines fernen Auslösers können Sie die Methode `fireTrigger` aufrufen. Übergeben Sie die erforderlichen Parameter durch ein Wörterverzeichnis.
 
-```
+```swift
 // In diesem Beispiel wird ein Auslöser aktiviert, wenn sich der Standort um eine bestimmte Entfernung geändert hat.
 
 var locationParams = Dictionary<String, String>()
@@ -190,7 +190,7 @@ Im obigen Beispiel wird ein Auslöser mit dem Namen `locationChanged` aktiviert.
 
 Wenn die Aktion ein Ergebnis zurückgibt, geben Sie im Aufruf von 'invokeAction' für 'hasResult' den Wert 'true' an. Das Ergebnis der Aktion wird im Reply-Wörterverzeichnis zurückgegeben. Beispiel:
 
-```
+```swift
 do {
     try whisk.invokeAction(name: "actionWithResult", package: "mypackage", namespace: "mynamespace", parameters: params, hasResult: true, callback: {(reply, error) -> Void in
 
@@ -213,7 +213,7 @@ do {
 
 Standardmäßig gibt das SDK nur die Aktivierungs-ID und das durch die aufgerufene Aktion erzeugte Ergebnis zurück. Wenn Sie Metadaten des gesamten Antwortobjekts abrufen wollen, zu denen der HTTP-Antwortstatuscode gehört, verwenden Sie die folgende Einstellung:
 
-```
+```swift
 whisk.verboseReplies = true
 ```
 {: codeblock}
@@ -223,7 +223,7 @@ whisk.verboseReplies = true
 
 Sie können das SDK mithilfe des Parameters 'baseURL' zur Arbeit mit verschiedenen Installationen von {{site.data.keyword.openwhisk_short}} konfigurieren. Beispiel:
 
-```
+```swift
 whisk.baseURL = "http://localhost:8080"
 ```
 {: codeblock}
@@ -232,7 +232,7 @@ In diesem Beispiel wird eine Installation verwendet, die unter 'localhost:8080' 
 
 Sie können einen angepassten Parameter NSURLSession übergeben, wenn Sie eine besondere Netzverwaltung benötigen. Sie könnten zum Beispiel eine eigene {{site.data.keyword.openwhisk_short}}-Installation haben, die mit selbst signierten Zertifikaten arbeitet:
 
-```
+```swift
 // Netzdelegate erstellen, der allen vertraut
 class NetworkUtilsDelegate: NSObject, NSURLSessionDelegate {
     func URLSession(session: NSURLSession, didReceiveChallenge challenge: NSURLAuthenticationChallenge, completionHandler: (NSURLSessionAuthChallengeDisposition, NSURLCredential?) -> Void) {
@@ -265,7 +265,7 @@ Alle anderen Kombinationen haben einen Fehler WhiskError.QualifiedName zur Folge
 
 Aus Gründen der Verwendungsfreundlichkeit enthält das SDK eine Schaltfläche `WhiskButton`, die die Schaltfläche `UIButton` erweitert, sodass sie Aktionen aufrufen kann.  Gehen Sie zur Verwendung von `WhiskButton` wie im folgenden Beispiel vor:
 
-```
+```swift
 var whiskButton = WhiskButton(frame: CGRectMake(0,0,20,20))
 
 whiskButton.setupWhiskAction("helloConsole", package: "mypackage", namespace: "_", credentials: credentialsConfiguration!, hasResult: false, parameters: nil, urlSession: nil)

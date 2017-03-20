@@ -1,31 +1,32 @@
 ---
 
- 
-
 copyright:
-
   years: 2016, 2017
-lastupdated: "2017-01-04"
-
+lastupdated: "2016-02-21"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
+{:screen: .screen}
 {:pre: .pre}
 
 # 创建并调用 {{site.data.keyword.openwhisk_short}} 操作
 {: #openwhisk_actions}
 
 
-操作是在 {{site.data.keyword.openwhisk}} 平台上运行的无状态代码片段。操作可以是 JavaScript 函数、Swift 函数或封装在 Docker 容器中的定制可执行程序。例如，操作可用于检测映像中的构面、聚集一组 API 调用或发布推文。
+操作是在 {{site.data.keyword.openwhisk}} 平台上运行的无状态代码片段。操作可以编写为 JavaScript、Swift 或 Python 函数，也可编写为 Java 方法或封装在 Docker 容器中的定制可执行程序。例如，操作可用于检测映像中的构面、响应数据库更改、聚集一组 API 调用或发布推文。
 {:shortdesc}
+操作可以显式调用，也可以作为对事件的响应来运行。对于其中任一情况，每次运行操作都会生成由唯一激活标识进行标识的激活记录。操作的输入和操作的结果是键/值对的字典，其中键为字符串，值为有效的 JSON 值。操作可以由对其他操作或对定义的操作序列的调用组成。
 
-操作可以显式调用，也可以作为对事件的响应来运行。对于其中任一情况，运行操作都会生成由唯一激活标识进行识别的激活记录。操作的输入和操作的结果是键/值对的字典，其中键为字符串，值为有效的 JSON 值。
+了解如何在首选开发环境中创建、调用和调试操作：
+* [JavaScript](#openwhisk_create_action_js)
+* [Swift](#openwhisk_actions_swift)
+* [Python](#openwhisk_actions_python)
+* [Java](#openwhisk_actions_java)
+* [Docker](#openwhisk_actions_docker)
 
-操作可以由对其他操作的调用组成，也可以由定义的操作序列组成。
 
 ## 创建并调用 JavaScript 操作
 {: #openwhisk_create_action_js}
@@ -39,99 +40,92 @@ lastupdated: "2017-01-04"
 查看以下步骤和示例以创建第一个 JavaScript 操作。
 
 1. 创建具有以下内容的 JavaScript 文件。对于此示例，文件名为“hello.js”。
-  
-  ```
-function main() {return {payload: 'Hello world'};
+
+  ```javascript
+  function main() {
+      return {payload: 'Hello world'};
   }
   ```
   {: codeblock}
-
-  JavaScript 文件可能包含其他函数。但是，根据约定，名为 `main` 的函数必须存在，才能为操作提供入口点。
+JavaScript 文件可能包含其他函数。但是，根据约定，名为 `main` 的函数必须存在，才能为操作提供入口点。
 
 2. 通过以下 JavaScript 函数创建操作。对于此示例，操作名为“hello”。
 
   ```
-wsk action create hello hello.js
+  wsk action create hello hello.js
   ```
   {: pre}
   ```
-ok: created action hello
+  ok: created action hello
   ```
-  {: screen}
 
 3. 列出已创建的操作：
-  
+
   ```
-wsk action list
+  wsk action list
   ```
   {: pre}
   ```
-actions
+  actions
   hello       private
   ```
-  {: screen}
+您可以看到刚才创建的 `hello` 操作。
 
-  您可以看到刚才创建的 `hello` 操作。
-
-4. 创建操作后，可以使用“invoke”命令在 OpenWhisk 的云中运行该操作。可以通过在命令中指定标记以使用*阻塞*调用（即，请求/响应样式）或*非阻塞*调用来调用操作。阻塞调用请求将*等待*激活结果可用。等待时间段为 60 秒或为操作的已配置[时间限制](./openwhisk_reference.html#openwhisk_syslimits_timeout)（两者取较短的时间）。如果激活结果在等待时间段内可用，那么会返回激活结果。否则，激活会继续在系统中处理，并返回激活标识，以便可以稍后检查结果，这与非阻塞请求一样（请参阅[此处](#watching-action-output)，以获取有关监视激活的提示）。
+4. 创建操作后，可以使用“invoke”命令在 OpenWhisk 的云中运行该操作。可以通过在命令中指定标记以使用*阻塞*调用（即，请求/响应样式）或*非阻塞*调用来调用操作。阻塞调用请求将*等待*激活结果可用。等待时间段为 60 秒或为操作的已配置[时间限制](./openwhisk_reference.html#openwhisk_syslimits)（两者取较短的时间）。如果激活结果在等待时间段内可用，那么会返回激活结果。否则，激活会继续在系统中处理，并返回激活标识，以便可以稍后检查结果，这与非阻塞请求一样（请参阅[此处](#watching-action-output)，以获取有关监视激活的提示）。
 
   此示例使用的是阻塞参数 `--blocking`：
-
   ```
-wsk action invoke --blocking hello
+  wsk action invoke --blocking hello
   ```
   {: pre}
   ```
-ok: invoked hello with id 44794bd6aab74415b4e42a308d880e5b
-  {"result": {
+  ok: invoked hello with id 44794bd6aab74415b4e42a308d880e5b
+  ```
+  ```json
+  {
+      "result": {
           "payload": "Hello world"
       },
       "status": "success",
       "success": true
   }
   ```
-  {: screen}
-
-  此命令输出两条重要的信息：
+此命令输出两条重要的信息：
   * 激活标识 (`44794bd6aab74415b4e42a308d880e5b`)
-  * 如果激活结果在预期的等待时间段内可用，那么输出调用结果
-
+  * 如果激活结果在预期的等待时间段内可用，那么输出调用结果  
   在本例中，结果为 JavaScript 函数返回的字符串 `Hello world`。激活标识可以用于在未来检索调用的日志或结果。  
 
 5. 如果不是立即需要操作结果，可以省略 `--blocking` 标记以进行非阻塞调用。可以在以后使用激活标识来获取结果。请参阅以下示例：
-
+  
   ```
-wsk action invoke hello
-  ```
-  {: pre}
-  ```
-ok: invoked hello with id 6bf1f670ee614a7eb5af3c9fde813043
-  ```
-  {: screen}
-
-  ```
-wsk activation result 6bf1f670ee614a7eb5af3c9fde813043
+  wsk action invoke hello
   ```
   {: pre}
   ```
+  ok: invoked hello with id 6bf1f670ee614a7eb5af3c9fde813043
+  ```
+  ```
+  wsk activation result 6bf1f670ee614a7eb5af3c9fde813043
+  ```
+  {: pre}
+  ```json
   {
       "payload": "Hello world"
   }
   ```
-  {: screen}
 
 6. 如果忘记了记录激活标识，那么可以获取激活列表，其中激活按从最新到最旧的顺序列出。运行以下命令来获取激活列表：
 
   ```
-wsk activation list
+  wsk activation list
   ```
   {: pre}
   ```
-activations
+  activations
   44794bd6aab74415b4e42a308d880e5b         hello
   6bf1f670ee614a7eb5af3c9fde813043         hello
   ```
-  {: screen}
+  
 
 ### 向操作传递参数
 {: #openwhisk_adding_parameters_js}
@@ -139,8 +133,8 @@ activations
 调用操作时，可以将参数传递给操作。
 
 1. 在操作中使用参数。例如，使用以下内容来更新“hello.js”文件：
-  
-  ```
+
+  ```javascript
   function main(params) {
       return {payload:  'Hello, ' + params.name + ' from ' + params.place};
   }
@@ -150,9 +144,9 @@ activations
   输入参数会作为 JSON 对象参数传递给 `main` 函数。请注意此示例中的 `name` 和 `place` 参数是如何从 `params` 对象检索到的。
 
 2. 将 `name` 和 `place` 参数值传递给 `hello` 操作时，更新并调用该操作。请参阅以下示例：
-  
+
   ```
-wsk action update hello hello.js
+  wsk action update hello hello.js
   ```
   {: pre}
 
@@ -164,10 +158,11 @@ wsk action update hello hello.js
   ```
   {: pre}
 
-  为了使用包含参数内容的文件，请创建 JSON 格式的包含参数的文件。然后，必须将文件名传递到 `param-file` 标志：
+  为了使用包含参数内容的文件，请创建 JSON 格式的包含参数的文件。
+然后，必须将文件名传递到 `param-file` 标志：
 
   名为 parameters.json 的示例参数文件：
-  ```
+  ```json
   {
       "name": "Bernie",
       "place": "Vermont"
@@ -180,14 +175,12 @@ wsk action update hello hello.js
   ```
   {: pre}
 
-  ```
+  ```json
   {
       "payload": "Hello, Bernie from Vermont"
   }
   ```
-  {: screen}
-
-  请注意，使用 `--result` 选项将仅显示调用结果。
+请注意，使用 `--result` 选项将仅显示调用结果。
 
 ### 设置缺省参数
 {: #openwhisk_binding_actions}
@@ -195,7 +188,7 @@ wsk action update hello hello.js
 操作可以通过多个指定参数进行调用。重新调用上面示例中的 `hello` 操作需要两个参数：*name*（人员的姓名）和 *place*（人员所在位置）。
 
 您可以绑定特定参数，而不用每次将所有参数传递给操作。以下示例绑定 *place* 参数，以便操作的缺省位置为“Vermont”：
- 
+
 1. 更新该操作，方法是使用 `--param` 选项来绑定参数值，或者将包含参数的文件传递到 `--param-file`。
 
   要在命令行上显式指定缺省参数，请向 `param` 标志提供键/值对：
@@ -205,10 +198,11 @@ wsk action update hello hello.js
   ```
   {: pre}
 
-  从文件传递参数需要创建包含所需内容的 JSON 格式的文件。然后，必须将文件名传递到 `-param-file` 标志：
+  从文件传递参数需要创建包含所需内容的 JSON 格式的文件。
+然后，必须将文件名传递到 `-param-file` 标志：
 
   名为 parameters.json 的示例参数文件：
-  ```
+  ```json
   {
       "place": "Vermont"
   }
@@ -226,47 +220,38 @@ wsk action update hello hello.js
   wsk action invoke --blocking --result hello --param name Bernie
   ```
   {: pre}
-  ```
+  ```json
   {
       "payload": "Hello, Bernie from Vermont"
   }
   ```
-  {: screen}
-
-  请注意，调用操作时，无需指定 place 参数。绑定的参数仍可以通过在调用时指定该参数值来进行覆盖。
+请注意，调用操作时，无需指定 place 参数。绑定的参数仍可以通过在调用时指定该参数值来进行覆盖。
 
 3. 调用操作，并同时传递 `name` 和 `place` 值。后者将覆盖绑定到操作的值。
 
   使用 `--param` 标志：
-
   ```
   wsk action invoke --blocking --result hello --param name Bernie --param place "Washington, DC"
   ```
   {: pre}
-
   使用 `--param-file` 标志：
-
   文件 parameters.json：
-  ```
+  ```json
   {
     "name": "Bernie",
     "place": "Vermont"
   }
   ```
-  {: codeblock}
-
-
+  {: codeblock}  
   ```
   wsk action invoke --blocking --result hello --param-file parameters.json
   ```
   {: pre}
-
-  ```
+  ```json
   {  
       "payload": "Hello, Bernie from Washington, DC"
   }
   ```
-  {: screen}
 
 ### 创建异步操作
 {: #openwhisk_asynchrony_js}
@@ -275,7 +260,7 @@ wsk action update hello hello.js
 
 1. 将以下内容保存在名为 `asyncAction.js` 的文件中。
 
-  ```
+  ```javascript
   function main(args) {
        return new Promise(function(resolve, reject) {
          setTimeout(function() {
@@ -297,49 +282,42 @@ wsk action update hello hello.js
 2. 运行以下命令来创建并调用操作：
 
   ```
-wsk action create asyncAction asyncAction.js
+  wsk action create asyncAction asyncAction.js
   ```
   {: pre}
   ```
-wsk action invoke --blocking --result asyncAction
+  wsk action invoke --blocking --result asyncAction
   ```
   {: pre}
-  ```
+  ```json
   {
       "done": true
   }
   ```
-  {: screen}
-
-  请注意，您执行的是对异步操作的阻塞调用。
+请注意，您执行的是对异步操作的阻塞调用。
 
 3. 访存激活日志以查看完成激活所用的时间：
 
   ```
-wsk activation list --limit 1 asyncAction
+  wsk activation list --limit 1 asyncAction
   ```
   {: pre}
   ```
-activations
+  activations
   b066ca51e68c4d3382df2d8033265db0             asyncAction
   ```
-  {: screen}
-
 
   ```
-wsk activation get b066ca51e68c4d3382df2d8033265db0
+  wsk activation get b066ca51e68c4d3382df2d8033265db0
   ```
   {: pre}
- ```
+  ```json
   {
       "start": 1455881628103,
-      "end":   1455881648126,
-      ...
+      "end":   1455881648126
   }
   ```
-  {: screen}
-
-  通过比较激活记录中的 `start` 和 `end` 时间戳记，可以看出完成此激活所用时间略微超过 2 秒。
+通过比较激活记录中的 `start` 和 `end` 时间戳记，可以看出完成此激活所用时间略微超过 2 秒。
 
 
 ### 使用操作来调用外部 API
@@ -347,13 +325,14 @@ wsk activation get b066ca51e68c4d3382df2d8033265db0
 
 到目前为止，示例都是自包含 JavaScript 函数。您还可以创建调用外部 API 的操作。
 
-以下示例调用 Yahoo Weather 服务来获取特定位置的当前天气状况。 
+以下示例调用 Yahoo Weather 服务来获取特定位置的当前天气状况。
 
 1. 将以下内容保存在名为 `weather.js` 的文件中。
 
-  
-  ```
-var request = require('request');function main(params) {
+  ```javascript
+  var request = require('request');
+
+  function main(params) {
      var location = params.location || 'Vermont';
         var url = 'https://query.yahooapis.com/v1/public/yql?q=select item.condition from weather.forecast where woeid in (select woeid from geo.places(1) where text="' + location + '")&format=json';
     
@@ -374,13 +353,13 @@ var request = require('request');function main(params) {
   }
   ```
   {: codeblock}
-  
+
   请注意，示例中的操作使用 JavaScript `request` 库向 Yahoo Weather API 发起 HTTP 请求，然后从 JSON 结果中抽取字段。[参考](./openwhisk_reference.html#openwhisk_ref_javascript_environments)详细描述了可以在操作中使用的 Node.js 包。
-  
+
   此示例还显示了需要异步操作。此操作返回 Promise，指示函数返回时此操作的结果尚不可用。相反，结果会在 HTTP 调用完成后在 `request` 回调中提供，并且会作为自变量传递给 `resolve()` 函数。
-  
+
 2. 运行以下命令来创建并调用操作：
-  
+
   ```
 wsk action create weather weather.js
   ```
@@ -389,12 +368,12 @@ wsk action create weather weather.js
   wsk action invoke --blocking --result weather --param location "Brooklyn, NY"
   ```
   {: pre}
-  ```
+  ```json
   {
       "msg": "It is 28 degrees in Brooklyn, NY and Cloudy"
   }
   ```
-  {: screen}
+
 
 ### 将操作包装为 Node.js 模块
 {: #openwhisk_js_packaged_action}
@@ -403,7 +382,7 @@ wsk action create weather weather.js
 
 首先是 `package.json`：
 
-```
+```json
 {
   "name": "my-action",
   "main": "index.js",
@@ -416,7 +395,7 @@ wsk action create weather weather.js
 
 接着是 `index.js`：
 
-```
+```javascript
 function myAction(args) {
     const leftPad = require("left-pad")
     const lines = args.lines || [];
@@ -460,7 +439,7 @@ exports.main = myAction;
   wsk action invoke --blocking --result packageAction --param lines "[\"and now\", \"for something completely\", \"different\" ]"
   ```
   {: pre}
-  ```
+  ```json
   {
       "padded": [
           ".......................and now",
@@ -469,7 +448,7 @@ exports.main = myAction;
       ]
   }
   ```
-  {: screen}
+
 
 最后，请注意，虽然大部分 `npm` 包会在执行 `npm install` 时安装 JavaScript 源代码，但还有些 npm 包会安装并编译二进制工件。目前，归档文件上传不支持二进制依赖关系，而只支持 JavaScript 依赖关系。如果归档包含二进制依赖关系，那么操作调用可能会失败。
 
@@ -481,7 +460,7 @@ exports.main = myAction;
 在名为 `/whisk.system/utils` 的包中提供了多个实用程序操作，可用于创建第一个序列。您可以在[包](./openwhisk_packages.html)部分中了解有关包的更多信息。
 
 1. 显示 `/whisk.system/utils` 包中的操作。
-  
+
   ```
   wsk package get --summary /whisk.system/utils
   ```
@@ -495,26 +474,26 @@ exports.main = myAction;
    action /whisk.system/utils/date：当前日期和时间
    action /whisk.system/utils/cat：将输入连接成一个字符串
   ```
-  {: screen}
-  
+
+
   您将使用此示例中的 `split` 和 `sort` 操作。
-  
+
 2. 创建操作序列，使一个操作的结果作为自变量传递给下一个操作。
-  
+
   ```
   wsk action create sequenceAction --sequence /whisk.system/utils/split,/whisk.system/utils/sort
   ```
   {: pre}
-  
+
   此操作序列会将一些文本行转换为数组，然后对这些行排序。
-  
+
 3. 调用操作：
-  
+
   ```
   wsk action invoke --blocking --result sequenceAction --param payload "Over-ripe sushi,\nThe Master\nIs full of regret."
   ```
   {: pre}
-  ```
+  ```json
   {
       "length": 3,
       "lines": [
@@ -524,8 +503,8 @@ exports.main = myAction;
       ]
   }
   ```
-  {: screen}
-  
+
+
   在结果中，您会看到这些行已排序。
 
 **注**：在序列中的操作之间传递的参数为显式参数，但缺省参数除外。因此，传递到操作序列的参数只可用于序列中的第一个操作。序列中第一个操作的结果成为序列中第二个操作的输入 JSON 对象（依此类推）。此对象不包含初始传递到序列的任何参数，除非第一个操作在其结果中显式包含这些参数。操作的输入参数会与操作的缺省参数合并，并且操作的输入参数优先于并覆盖任何匹配的缺省参数。有关使用多个指定参数来调用操作序列的更多信息，请参阅[设置缺省参数](./openwhisk_actions.html#openwhisk_binding_actions)。
@@ -540,11 +519,11 @@ exports.main = myAction;
 
 操作其实就是顶级 Python 函数，这表示必须要有名称为 `main` 的方法。例如，创建名为 `hello.py` 的文件并包含以下内容：
 
-```
-    def main(dict):
-        name = dict.get("name", "stranger")
-        greeting = "Hello " + name + "!"
-        print(greeting)
+```python
+def main(dict):
+    name = dict.get("name", "stranger")
+    greeting = "Hello " + name + "!"
+    print(greeting)
         return {"greeting": greeting}
 ```
 {: codeblock}
@@ -567,12 +546,12 @@ wsk action invoke --blocking --result helloPython --param name World
 ```
 {: pre}
 
-```
+```json
   {
       "greeting": "Hello World!"
   }
 ```
-{: screen}
+
 
 
 ## 创建 Swift 操作
@@ -587,8 +566,9 @@ wsk action invoke --blocking --result helloPython --param name World
 
 操作仅仅是顶级 Swift 函数。例如，创建名为 `hello.swift` 的文件并包含以下内容：
 
-```
-func main(args: [String:Any]) -> [String:Any] {if let name = args["name"] as? String {
+```swift
+func main(args: [String:Any]) -> [String:Any] {
+    if let name = args["name"] as? String {
           return [ "greeting" : "Hello \(name)!" ]
     } else {
 return [ "greeting" : "Hello stranger!" ]
@@ -615,12 +595,12 @@ wsk action invoke --blocking --result helloSwift --param name World
 ```
 {: pre}
 
-```
+```json
   {
       "greeting": "Hello World!"
   }
 ```
-{: screen}
+
 
 **注意：**Swift 操作在 Linux 环境中运行。Swift on Linux 仍在开发中；{{site.data.keyword.openwhisk_short}} 通常会使用最新可用发行版，但此版本不一定稳定。此外，用于 {{site.data.keyword.openwhisk_short}} 的 Swift 版本可能与 Mac OS 上 Xcode 的稳定发行版中的 Swift 版本不一致。
 
@@ -635,14 +615,14 @@ wsk action invoke --blocking --result helloSwift --param name World
 {: #openwhisk_actions_java_invoke}
 
 Java 操作是包含名为 `main` 的方法的 Java 程序，该方法的特征符与以下内容完全一样：
-```
+```java
 public static com.google.gson.JsonObject main(com.google.gson.JsonObject);
 ```
 {: codeblock}
 
 例如，创建名为 `Hello.java` 的 Java 文件并包含以下内容：
 
-```
+```java
 import com.google.gson.JsonObject;
 public class Hello {
     public static JsonObject main(JsonObject args) {
@@ -660,6 +640,9 @@ public class Hello {
 然后，将 `Hello.java` 编译成 JAR 文件 `hello.jar`，如下所示：
 ```
 javac Hello.java
+```
+{: pre}
+```
 jar cvf hello.jar Hello.class
 ```
 {: pre}
@@ -684,13 +667,11 @@ wsk action invoke --blocking --result helloJava --param name World
 ```
 {: pre}
 
-```
+```json
   {
       "greeting": "Hello World!"
   }
 ```
-{: screen}
-
 
 ## 创建 Docker 操作
 {: #openwhisk_actions_docker}
@@ -712,8 +693,6 @@ wsk sdk install docker
   ```
 现在，Docker 框架已安装在当前目录中。
 ```
-  {: screen}
-
   ```
 ls dockerSkeleton/
   ```
@@ -721,9 +700,7 @@ ls dockerSkeleton/
   ```
   Dockerfile      README.md       buildAndPush.sh example.c
   ```
-  {: screen}
-
-  框架是一种 Docker 容器模板，可以在其中以定制二进制文件的形式插入代码。
+框架是一种 Docker 容器模板，可以在其中以定制二进制文件的形式插入代码。
 
 2. 在 Docker 框架中设置定制二进制文件。该框架已经包含可以使用的 C 程序。
 
@@ -731,10 +708,10 @@ ls dockerSkeleton/
   cat dockerSkeleton/example.c
   ```
   {: pre}
-  ```
+  ```c
   #include <stdio.h>
-  
-  int main(int argc, char *argv[]) {printf("This is an example log message from an arbitrary C program!\n");
+  int main(int argc, char *argv[]) {
+      printf("This is an example log message from an arbitrary C program!\n");
       printf("{ \"msg\": \"Hello from arbitrary C program!\", \"args\": %s }",
              (argc == 1) ? "undefined" : argv[1]);
   }
@@ -746,7 +723,7 @@ ls dockerSkeleton/
   可执行文件会从命令行接收单个自变量。该自变量是字符串序列化的 JSON 对象，表示操作的自变量。程序可能会记录到 `stdout` 或 `stderr`。根据约定，输出的最后一行*必须*是字符串化的 JSON 对象，用于表示操作结果。
 
 3. 使用提供的脚本来构建 Docker 映像并进行上传。必须首先运行 `docker login` 以进行认证，然后使用所选映像名称来运行脚本。
-  
+
   ```
 docker login -u janesmith -p janes_password
   ```
@@ -759,24 +736,23 @@ cd dockerSkeleton
 ./buildAndPush.sh janesmith/blackboxdemo
   ```
   {: pre}
-  
+
   请注意，在 Docker 映像构建过程中，会对 example.c 文件中的部分内容进行编译，所以无需在您的计算机上对 C 程序进行编译。事实上，除非要在兼容主机上编译二进制文件，否则其不会在容器内部运行，因为格式不匹配。
-  
+
   现在，Docker 容器可用作 {{site.data.keyword.openwhisk_short}} 操作。
-  
-  
+
   ```
 wsk action create --docker example janesmith/blackboxdemo
   ```
   {: pre}
-  
+
   请注意，创建操作时使用 `--docker`。目前，假定所有 Docker 映像都在 Docker Hub 上进行托管。该操作可能会作为其他任何 {{site.data.keyword.openwhisk_short}} 操作进行调用。
-  
+
   ```
 wsk action invoke --blocking --result example --param payload Rey
   ```
   {: pre}
-  ```
+  ```json
   {
       "args": {
           "payload": "Rey"
@@ -784,19 +760,19 @@ wsk action invoke --blocking --result example --param payload Rey
       "msg": "Hello from arbitrary C program!"
   }
   ```
-  {: screen}
-  
-  要更新 Docker 操作，请运行 buildAndPush.sh 以将最新的映像上传到 Docker Hub。这将允许系统在下次运行操作的代码时，拉取新的 Docker 映像。如果没有运行中的容器，那么任何新调用都将使用新的 Docker 映像。但是，如果有使用前版 Docker 映像的运行中容器，那么除非运行 wsk 操作更新，否则任何新调用都将继续使用该映像。这将指示系统对于任何新调用，都应该执行 docekr pull 来获取新的 Docker 映像。
- 
+
+  要更新 Docker 操作，请运行 buildAndPush.sh 以将最新的映像上传到 Docker Hub。这将允许系统在下次运行操作的代码时，拉取新的 Docker 映像。如果没有运行中的容器，那么任何新调用都将使用新的 Docker 映像。但是，如果有使用前版 Docker 映像的运行中容器，那么除非运行 `wsk action update`，否则任何新调用都将继续使用该映像。这将指示系统对于任何新调用，都应该执行 docekr pull 来获取新的 Docker 映像。
+
   ```
 ./buildAndPush.sh janesmith/blackboxdemo
   ```
   {: pre}
+
   ```
   wsk action update --docker example janesmith/blackboxdemo
   ```
   {: pre}
-  
+
   您可以在[参考](./openwhisk_reference.html#openwhisk_ref_docker)部分中找到有关创建 Docker 操作的更多信息。
 
 ## 监视操作输出
@@ -823,7 +799,6 @@ wsk action invoke /whisk.system/samples/helloWorld --param payload Bob
   ```
 ok: invoked /whisk.system/samples/helloWorld with id 7331f9b9e2044d85afd219b12c0f1491
   ```
-  {: screen}
 
 3. 观察轮询窗口中的激活日志：
 
@@ -831,7 +806,6 @@ ok: invoked /whisk.system/samples/helloWorld with id 7331f9b9e2044d85afd219b12c0
   Activation: helloWorld (7331f9b9e2044d85afd219b12c0f1491)
     2016-02-11T16:46:56.842065025Z stdout: hello bob!
   ```
-  {: screen}
 
   与此类似，每当运行轮询实用程序时，都会实时看到 {{site.data.keyword.openwhisk_short}} 中代表您运行的任何操作的日志。
 
@@ -848,7 +822,6 @@ wsk action delete hello
   ```
 ok: deleted hello
   ```
-  {: screen}
 
 2. 验证该操作是否不再出现在操作列表中。
   ```
@@ -858,8 +831,8 @@ wsk action list
   ```
 actions
   ```
-  {: screen}
-  
+  {: pre}
+
 ## 访问操作体中的操作元数据
 
 操作环境包含多个特定于运行中操作的属性。这些属性允许操作以编程方式通过 REST API 来使用 OpenWhisk 资产，或者允许设置在操作即将耗尽其分配的时间预算时发出内部警报。使用 OpenWhisk Docker 框架时，这些属性可通过所有受支持运行时的系统环境进行访问：Node.js、Python、Swift、Java 和 Docker 操作。

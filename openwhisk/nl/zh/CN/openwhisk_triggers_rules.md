@@ -1,22 +1,21 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-02-22"
+  years: 2016, 2017
+lastupdated: "2016-02-23"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
+{:screen: .screen}
 {:pre: .pre}
 
 # 创建触发器和规则
 {: #openwhisk_triggers}
 
-
-{{site.data.keyword.openwhisk}} 触发器和规则为平台带来了事件驱动型功能。来自外部和内部事件源的事件将通过触发器进行传递，并且规则允许操作对这些事件做出反应。
+{{site.data.keyword.openwhisk_short}} 触发器和规则为平台带来了事件驱动型功能。来自外部和内部事件源的事件将通过触发器进行传递，并且规则允许操作对这些事件做出反应。
 {: shortdesc}
 
 ## 创建触发器
@@ -69,11 +68,9 @@ lastupdated: "2016-02-22"
 wsk trigger create locationUpdate
   ```
   {: pre}
-
   ```
 ok: created trigger locationUpdate
   ```
-  {: screen}
 
 2. 通过列出触发器集来检查是否已创建该触发器。
 
@@ -81,12 +78,10 @@ ok: created trigger locationUpdate
 wsk trigger list
   ```
   {: pre}
-
   ```
 triggers
   /someNamespace/locationUpdate                            private
   ```
-  {: screen}
 
   到目前为止，您已创建可向其触发事件的指定“通道”。
 
@@ -96,11 +91,9 @@ triggers
   wsk trigger fire locationUpdate --param name Donald --param place "Washington, D.C."
   ```
   {: pre}
-
   ```
 ok: triggered locationUpdate with id fa495d1223a2408b999c3e0ca73b2677
   ```
-  {: screen}
 
 在没有匹配的伴随规则下触发的触发器没有可见效果。
 触发器不可以在包内创建，它们必须直接在名称空间下创建。
@@ -113,8 +106,8 @@ ok: triggered locationUpdate with id fa495d1223a2408b999c3e0ca73b2677
 例如，创建一个规则，用于在每次发布位置更新时都调用 hello 操作。
 
 1. 通过我们将使用的操作码来创建“hello.js”文件：
-  ```
-function main(params) {
+  ```javascript
+  function main(params) {
      return {payload:  'Hello, ' + params.name + ' from ' + params.place};
   }
   ```
@@ -125,7 +118,6 @@ function main(params) {
 wsk trigger update locationUpdate
   ```
   {: pre}
-
   ```
 wsk action update hello hello.js
   ```
@@ -148,34 +140,28 @@ wsk action update hello hello.js
   wsk trigger fire locationUpdate --param name Donald --param place "Washington, D.C."
   ```
   {: pre}
-
   ```
 ok: triggered locationUpdate with id d5583d8e2d754b518a9fe6914e6ffb1e
   ```
-  {: screen}
 
 5. 通过检查最新的激活来验证是否调用了该操作。
   ```
 wsk activation list --limit 1 hello
   ```
   {: pre}
-
   ```
 activations
   9c98a083b924426d8b26b5f41c5ebc0d             hello
   ```
-  {: screen}
-
   ```
 wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
   ```
   {: pre}
-  ```
+  ```json
   {
      "payload": "Hello, Donald from Washington, D.C."
   }
   ```
-  {: screen}
 
   您将看到 hello 操作收到了事件有效内容，并返回了期望的字符串。
 
@@ -188,7 +174,9 @@ wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
 您还可以搭配使用规则与序列。例如，您可以创建由规则 `anotherRule` 激活的操作序列 `recordLocationAndHello`。
   ```
   wsk action create recordLocationAndHello --sequence /whisk.system/utils/echo,hello
+  ```
+  {: pre}
+  ```
   wsk rule create anotherRule locationUpdate recordLocationAndHello
   ```
   {: pre}
- 

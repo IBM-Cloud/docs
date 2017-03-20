@@ -1,22 +1,18 @@
 ---
 
- 
-
 copyright:
-
   years: 2016, 2017
-lastupdated: "2017-01-04"
- 
+lastupdated: "2016-02-21"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
+{:screen: .screen}
 {:pre: .pre}
 
-# Aktionen über API Gateway verfügbar machen (experimentell)
+# Aktionen über API-Gateway verfügbar machen (experimentell)
 {: #openwhisk_apigateway}
 
 In {{site.data.keyword.openwhisk}} können Sie Ihre Aktionen über die [REST-API](./openwhisk_reference.html#openwhisk_ref_restapi) mit einer HTTP-Anforderung nur über die Methode **POST** aufrufen.

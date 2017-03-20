@@ -1,22 +1,21 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-02-22"
+  years: 2016, 2017
+lastupdated: "2016-02-23"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
+{:screen: .screen}
 {:pre: .pre}
 
 # Criando acionadores e regras
 {: #openwhisk_triggers}
 
-
-Acionadores e regras do {{site.data.keyword.openwhisk}} trazem recursos acionados por eventos para a plataforma. Eventos de origens de eventos externos e internos são canalizados por meio de um acionador e as regras permitem que suas ações reajam a esses eventos.
+Acionadores e regras do {{site.data.keyword.openwhisk_short}} trazem recursos acionados por eventos para a plataforma. Eventos de origens de eventos externos e internos são canalizados por meio de um acionador e as regras permitem que suas ações reajam a esses eventos.
 {: shortdesc}
 
 ## Criando Acionadores
@@ -69,11 +68,9 @@ Como um exemplo, crie um acionador para enviar atualizações de local do usuár
   wsk trigger create locationUpdate
   ```
   {: pre}
-
   ```
   ok: acionador locationUpdate criado
   ```
-  {: screen}
 
 2. Verifique se você criou o acionador listando o conjunto de acionadores.
 
@@ -81,12 +78,10 @@ Como um exemplo, crie um acionador para enviar atualizações de local do usuár
   wsk trigger list
   ```
   {: pre}
-
   ```
   acionadores
   /someNamespace/locationUpdate                            privado
   ```
-  {: screen}
 
   Até o momento, você criou um "canal" denominado para o qual os eventos podem ser disparados.
 
@@ -96,11 +91,9 @@ Como um exemplo, crie um acionador para enviar atualizações de local do usuár
   wsk trigger fire locationUpdate --param name Donald --param place "Washington, D.C."
   ```
   {: pre}
-
   ```
   ok: locationUpdate acionado com id fa495d1223a2408b999c3e0ca73b2677
   ```
-  {: screen}
 
 Um acionador que é disparado sem uma regra que acompanha para fazer a correspondência não tem efeito visível.
 Acionadores não podem ser criados dentro de um pacote; eles devem ser criados diretamente sob um namespace.
@@ -113,7 +106,7 @@ As regras são usadas para associar um acionador a uma ação. Toda vez que um e
 Como um exemplo, crie uma regra que chame a ação hello sempre que uma atualização de local for postada.
 
 1. Crie um arquivo 'hello.js' com o código de ação que iremos usar:
-  ```
+  ```javascript
   function main(params) {
      return {payload:  'Hello, ' + params.name + ' from ' + params.place};
   }
@@ -125,7 +118,6 @@ Como um exemplo, crie uma regra que chame a ação hello sempre que uma atualiza
   wsk trigger update locationUpdate
   ```
   {: pre}
-
   ```
   wsk action update hello hello.js
   ```
@@ -149,34 +141,28 @@ ação hello será chamada com os parâmetros do evento.
   wsk trigger fire locationUpdate --param name Donald --param place "Washington, D.C."
   ```
   {: pre}
-
   ```
   ok: locationUpdate acionado com id d5583d8e2d754b518a9fe6914e6ffb1e
   ```
-  {: screen}
 
 5. Verifique se a ação foi chamada, verificando a ativação mais recente.
   ```
   wsk activation list --limit 1 hello
   ```
   {: pre}
-
   ```
   ativações
   9c98a083b924426d8b26b5f41c5ebc0d             hello
   ```
-  {: screen}
-
   ```
   wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
   ```
   {: pre}
-  ```
-  {
+  ```json
+     {
      "payload": "Hello, Donald from Washington, D.C."
   }
   ```
-  {: screen}
 
   Você vê que a ação hello recebeu a carga útil do evento e retornou a sequência esperada.
 
@@ -192,7 +178,9 @@ Também é possível usar regras com sequências. Por exemplo, é possível cria
 de ações `recordLocationAndHello` que é ativada pela regra `anotherRule`.
   ```
   wsk action create recordLocationAndHello --sequence /whisk.system/utils/echo,hello
+  ```
+  {: pre}
+  ```
   wsk rule create anotherRule locationUpdate recordLocationAndHello
   ```
   {: pre}
- 

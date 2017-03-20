@@ -1,15 +1,15 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-08-26"
+  years: 2016, 2017
+lastupdated: "2016-02-23"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
+{:screen: .screen}
 {:pre: .pre}
 
 # Usando o SDK móvel do {{site.data.keyword.openwhisk_short}}
@@ -91,7 +91,7 @@ seu app (geralmente, em ~/Library/Developer/Xcode/DerivedData/nome de seu app).
 É possível usar a CLI do {{site.data.keyword.openwhisk_short}} para fazer download de código de exemplo que incorpora a estrutura do SDK do {{site.data.keyword.openwhisk_short}}.  
 
 Para instalar o exemplo do app iniciador, insira o comando a seguir:
-```
+```bash
 wsk sdk install iOS
 ```
 {: pre}
@@ -99,7 +99,7 @@ wsk sdk install iOS
 Esse comando faz download de um arquivo compactado que contém o app iniciador. Dentro do diretório de projeto há um arquivo pod.
 
 Para instalar o SDK, insira o comando a seguir:
-```
+```bash
 pod install
 ```
 {: pre}
@@ -113,7 +113,7 @@ do {{site.data.keyword.openwhisk_short}} a partir do objeto.
 
 Por exemplo, use o código de exemplo a seguir para criar um objeto de credenciais:
 
-```
+```swift
 let credentialsConfiguration = WhiskCredentials(accessKey: "myKey", accessToken: "myToken")
 
 let whisk = Whisk(credentials: credentialsConfiguration!)
@@ -122,7 +122,7 @@ let whisk = Whisk(credentials: credentialsConfiguration!)
 
 No exemplo anterior, você passa o `myKey` e o `myToken` que obtém do {{site.data.keyword.openwhisk_short}}. É possível recuperar a chave e o token com o comando da CLI a seguir:
 
-```
+```bash
 wsk property get --auth
 ```
 {: pre}
@@ -145,7 +145,7 @@ para aceitar o namespace padrão. Use um dicionário para passar parâmetros par
 Por
 exemplo:
 
-```
+```swift
 // In this example, we are invoking an action to print a message to the {{site.data.keyword.openwhisk_short}} Console
 var params = Dictionary<String, String>()
 params["payload"] = "Hi from mobile"
@@ -174,9 +174,8 @@ No exemplo anterior, você chama a ação `helloConsole` usando o namespace padr
 
 Para disparar um acionador remoto, é possível chamar o método `fireTrigger`. Passe parâmetros conforme necessário usando um dicionário.
 
-```
-// In this example we are firing a trigger when our location has
-changed by a certain amount
+```swift
+// In this example we are firing a trigger when our location has changed by a certain amount
 
 var locationParams = Dictionary<String, String>()
 locationParams["payload"] = "{\"lat\":41.27093, \"lon\":-73.77763}"
@@ -204,7 +203,7 @@ No exemplo anterior, você está disparando um acionador que é chamado
 
 Se a ação retornar um resultado, configure hasResult para true na chamada invokeAction. O resultado da ação é retornado no dicionário de resposta, por exemplo:
 
-```
+```swift
 do {
     try whisk.invokeAction(name: "actionWithResult", package: "mypackage", namespace: "mynamespace", parameters: params, hasResult: true, callback: {(reply, error) -> Void in
 
@@ -228,7 +227,7 @@ do {
 
 Por padrão, o SDK retorna apenas o ID de ativação e qualquer resultado produzido pela ação chamada. Para obter os metadados do objeto de resposta inteiro, que inclui o código de status de resposta HTTP, use a configuração a seguir:
 
-```
+```swift
 whisk.verboseReplies = true
 ```
 {: codeblock}
@@ -238,7 +237,7 @@ whisk.verboseReplies = true
 
 É possível configurar o SDK para trabalhar com diferentes instalações do {{site.data.keyword.openwhisk_short}} usando o parâmetro baseURL. Por exemplo:
 
-```
+```swift
 whisk.baseURL = "http://localhost:8080"
 ```
 {: codeblock}
@@ -249,9 +248,9 @@ https://openwhisk.ng.bluemix.net.
 
 É possível passar um NSURLSession customizado caso requeira manipulação de rede especial. Por exemplo, você pode ter sua própria instalação do {{site.data.keyword.openwhisk_short}} que usa certificados autoassinados:
 
-```
-// create a network delegate that trusts everything class
-NetworkUtilsDelegate: NSObject, NSURLSessionDelegate {
+```swift
+// create a network delegate that trusts everything
+class NetworkUtilsDelegate: NSObject, NSURLSessionDelegate {
     func URLSession(session: NSURLSession, didReceiveChallenge challenge: NSURLAuthenticationChallenge, completionHandler: (NSURLSessionAuthChallengeDisposition, NSURLCredential?) -> Void) {
         completionHandler(NSURLSessionAuthChallengeDisposition.UseCredential, NSURLCredential(forTrust: challenge.protectionSpace.serverTrust!))
     }
@@ -287,7 +286,7 @@ usar nomes qualificados, deve-se agrupar a chamada em uma construção "`do/try/
 
 Por conveniência, o SDK inclui um `WhiskButton`, que estende o `UIButton` para permitir que ele chame ações.  Para usar o `WhiskButton`, siga este exemplo:
 
-```
+```swift
 var whiskButton = WhiskButton(frame: CGRectMake(0,0,20,20))
 
 whiskButton.setupWhiskAction("helloConsole", package: "mypackage", namespace: "_", credentials: credentialsConfiguration!, hasResult: false, parameters: nil, urlSession: nil)
