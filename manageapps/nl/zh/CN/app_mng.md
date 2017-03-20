@@ -11,7 +11,7 @@ lastupdated: "2017-01-11"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#管理 Liberty 和 Node.js 应用程序
+# 管理 Liberty 和 Node.js 应用程序
 {: #app_management}
 
 

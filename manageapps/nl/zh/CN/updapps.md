@@ -12,14 +12,14 @@ lastupdated: "2016-08-25"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#更新应用程序
+# 更新应用程序
 {: #updatingapps}
 
 
 您可以使用 cf push 命令或 {{site.data.keyword.Bluemix}} DevOps Services 来更新 {{site.data.keyword.Bluemix_notm}} 中的应用程序。在许多情况下，即便对于内置 buildpack（例如 Node.js），也必须提供 -c 参数来指定用于启动应用程序的命令。
 {:shortdesc}
 
-##创建并使用定制域
+## 创建并使用定制域
 {: #domain}
 
 对于 CF 应用程序和容器组，您可以在应用程序的 URL 中使用定制域，而不使用缺省 {{site.data.keyword.Bluemix_notm}} 系统域，即 mybluemix.net。
@@ -125,7 +125,7 @@ cf delete-route domain -n hostname -f
 
 如果已经将应用程序部署到 {{site.data.keyword.Bluemix_notm}}，并且要将应用程序更新为新版本，那么可以使用以下两种方法之一来确保蓝绿部署。
 
-###示例：使用 cf rename 命令
+### 示例：使用 cf rename 命令
 
 在此示例中，应用程序的名称为 Blue。此示例演示了如何使用 **cf rename** 命令来更新 *Blue* 的版本，而不中断到应用程序的流量。现在，在更新版本可用时，可以选择删除 *Blue* 的旧版本。
 
@@ -191,7 +191,7 @@ cf delete Green -f
 
   **结果：**该 *Blue* 应用程序正在响应 URL `Blue.mybluemix.net`。
 
-###示例：使用 cf map-route 命令
+### 示例：使用 cf map-route 命令
 
 在此示例中，*Blue* 是先前部署的应用程序，*Green* 是更新的版本。此示例演示了如何使用 **cf map-route** 命令来更新 *Blue* 的版本，而不中断到应用程序的流量。现在，在更新版本可用时，可以选择删除 *Blue* 的旧版本。
 
@@ -290,7 +290,7 @@ cf delete Blue -f
 
 
 # 相关链接
-{: #rellinks}
+{: #rellinks notoc}
 
 ## 相关链接
 {: #general}

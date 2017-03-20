@@ -57,7 +57,7 @@ Per ulteriori dettagli sul comando **cf push**, consulta [cf push](/docs/cli/ref
 ### Migrazione di un'applicazione esistente a Diego
 {: #migrateapp}
 
-Diego è l'architettura Cloud Foundry predefinita per {{site.data.keyword.Bluemix_notm}} e il supporto per i DEA sarà rimosso, per cui devi migrare tutte le tue applicazioni esistenti aggiornando ogni applicazione. Avvia la migrazione delle tue applicazioni a Diego aggiornando l'applicazione con l'indicatore Diego. L'applicazione tenta immediatamente di avviare l'esecuzione in Diego e arresta l'esecuzione nei DEA. 
+Diego è l'architettura Cloud Foundry predefinita per {{site.data.keyword.Bluemix_notm}} e il supporto per i DEA sarà rimosso, per cui devi migrare tutte le tue applicazioni esistenti aggiornando ogni applicazione. Avvia la migrazione delle tue applicazioni a Diego aggiornando l'applicazione con l'indicatore Diego. L'applicazione tenta immediatamente di avviare l'esecuzione in Diego e arresta l'esecuzione nei DEA.
 
 Come la tua applicazione viene aggiornata dall'architettura DEA a Diego, potresti riscontrare un tempo di inattività piccolo o prolungato, se l'applicazione non è compatibile con Diego. Per limitare il tempo di inattività, esegui [blue-green deploy](/docs/manageapps/updapps.html#blue_green) distribuendo una copia della tua applicazione a Diego e quindi scambiando le rotte e ridimensionando l'applicazione DEA.
 
@@ -73,7 +73,7 @@ Completa la seguente procedura per migrare la tua applicazione a Diego:
 Dopo aver aggiornato la tua applicazione, verifica che sia avviata. Se è impossibile avviare la tua applicazione migrata, rimarrà offline finché non identifichi e risolvi il problema e quindi riavvi l'applicazione.
 
 IBM ti avviserà del prossimo periodo di migrazione obbligatoria quando il supporto all'architettura DEA sarà rimosso e se non hai migrato le tue applicazioni, il team operativo lo farà per te.
-  
+
 Per convalidare su quale backend l'applicazione è in esecuzione, utilizzare il seguente comando:
 
   ```
@@ -290,7 +290,7 @@ cf push -f appManifest.yml
 |**env**	|Le variabili di ambiente personalizzate per l'applicazione.|`env: DEV_ENV: production`|
 {: caption="Table 1. Supported options in the manifest YAML file" caption-side="top"}
 
-### Un file `manifest.yml` di esempio
+### Un file manifest.yml di esempio
 
 Il seguente esempio mostra un file manifest per un'applicazione Node.js
 che utilizza il pacchetto di build Node.js community integrato
@@ -490,7 +490,7 @@ un'istanza del server di profili Liberty nel DEA.</dd>
 	  <dd>L'ubicazione dell'output generato, quali ad esempio file di log e
 directory di lavoro di un'istanza del server di profili Liberty in esecuzione.</dd>
 	  </dl>
-</li>   
+</li>
 <li>Le seguenti variabili sono definite dal pacchetto di build Node.js:
 	<dl>
 	<dt><strong>BUILD_DIR</strong></dt>
@@ -614,7 +614,7 @@ tmp/
 ```
 
 # Link correlati
-{: #rellinks}
+{: #rellinks notoc}
 
 ## Link correlati
 {: #general}

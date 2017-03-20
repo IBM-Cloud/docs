@@ -12,14 +12,14 @@ lastupdated: "2016-08-25"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#アプリの更新
+# アプリの更新
 {: #updatingapps}
 
 
 cf push コマンドまたは {{site.data.keyword.Bluemix}} DevOps Services を使用して、{{site.data.keyword.Bluemix_notm}} 内のアプリケーションを更新することができます。多くの場合、Node.js などの組み込みビルドパックにおいても、-c パラメーターを使用して、アプリケーションの開始にどのコマンドを使用するかを指定する必要があります。
 {:shortdesc}
 
-##カスタム・ドメインの作成と使用
+## カスタム・ドメインの作成と使用
 {: #domain}
 
 CF アプリおよびコンテナー・グループには、デフォルトの {{site.data.keyword.Bluemix_notm}} システム・ドメイン (mybluemix.net) の代わりに、カスタム・ドメインをアプリケーションの URL 内で使用できます。
@@ -125,7 +125,7 @@ cf delete-route domain -n hostname -f
 
 {{site.data.keyword.Bluemix_notm}} に既にデプロイ済みのアプリケーションがあり、そのアプリケーションを新規バージョンに更新する場合は、以下の 2 つのアプローチのいずれかを使用して Blue-Green デプロイメントを確実にすることができます。
 
-###例: cf rename コマンドの使用
+### 例: cf rename コマンドの使用
 
 この例では、アプリケーションの名前は Blue です。この例では、**cf rename** コマンドを使用して、アプリケーションのトラフィックを阻害することなく *Blue* のバージョンを更新する方法を示しています。オプションで、*Blue* の更新されたバージョンが導入された時点で、現在の古いバージョンを削除することもできます。
 
@@ -191,7 +191,7 @@ cf delete Green -f
 
   **結果:** *Blue* アプリが、URL `Blue.mybluemix.net` に応答しています。
 
-###例: cf map-route コマンドの使用
+### 例: cf map-route コマンドの使用
 
 この例では、*Blue* は以前デプロイされたアプリケーションで *Green* は更新後のバージョンです。この例では、**cf map-route** コマンドを使用して、アプリケーションのトラフィックを阻害することなく *Blue* のバージョンを更新する方法を示しています。オプションで、*Blue* の更新されたバージョンが導入された時点で、現在の古いバージョンを削除することもできます。
 
@@ -290,7 +290,7 @@ cf delete Blue -f
 
 
 # 関連リンク
-{: #rellinks}
+{: #rellinks notoc}
 
 ## 関連リンク
 {: #general}

@@ -55,7 +55,7 @@ unter
 ### Vorhandene App in Diego migrieren
 {: #migrateapp}
 
-Diego ist die Cloud Foundry-Standardarchitektur für {{site.data.keyword.Bluemix_notm}} und Sie müssen alle vorhandenen Anwendungen durch Aktualisieren der einzelnen Apps migrieren, da die Unterstützung für DEAs entfernt wird. Beginnen Sie mit dem Migrieren von Apps in Diego, indem Sie die Anwendung mit dem Diego-Flag aktualisieren. Es wird umgehend versucht, die Anwendung unter Diego auszuführen und die Ausführung auf den DEAs wird gestoppt. 
+Diego ist die Cloud Foundry-Standardarchitektur für {{site.data.keyword.Bluemix_notm}} und Sie müssen alle vorhandenen Anwendungen durch Aktualisieren der einzelnen Apps migrieren, da die Unterstützung für DEAs entfernt wird. Beginnen Sie mit dem Migrieren von Apps in Diego, indem Sie die Anwendung mit dem Diego-Flag aktualisieren. Es wird umgehend versucht, die Anwendung unter Diego auszuführen und die Ausführung auf den DEAs wird gestoppt.
 
 Da Ihre Anwendung von der DEA-Architektur auf Diego aktualisiert wird, erfolgt möglicherweise eine kurze oder eine anhaltende Ausfallzeit, wenn die Anwendung nicht mit Diego kompatibel ist. Um die Ausfallzeit zu begrenzen, nehmen Sie eine [Blue-Green-Bereitstellung](/docs/manageapps/updapps.html#blue_green) vor, indem Sie eine Kopie Ihrer Anwendung für Diego bereitstellen. Lagern Sie anschließend Routen aus und skalieren Sie die DEA-Anwendung herab.
 
@@ -71,7 +71,7 @@ Führen Sie die folgenden Schritte aus, um Ihre App in Diego zu migrieren:
 Stellen Sie nach dem Aktualisieren Ihrer App sicher, dass die App gestartet wurde. Wenn die migrierte App nicht gestartet werden kann, bleibt sie offline, bis Sie das Problem identifiziert und behoben haben. Starten Sie die App anschließend erneut.
 
 Sie werden von IBM über den bevorstehenden Zeitraum für die obligatorische Migration benachrichtigt, wenn die Unterstützung für die DEA-Architektur entfernt wird. Wenn Sie Ihre Apps im vorgegebenen Zeitraum nicht migriert haben, werden alle Apps vom Operationsteam für Sie migriert.
-  
+
 Verwenden Sie den folgenden Befehl, um zu bestätigen, auf welchem Back-End die Anwendung ausgeführt wird:
 
   ```
@@ -272,7 +272,7 @@ cf push -f appManifest.yml
 |**env**	|Die angepassten Umgebungsvariablen für die Anwendung.|`env: DEV_ENV: production`|
 {: caption="Table 1. Supported options in the manifest YAML file" caption-side="top"}
 
-### Beispiel für eine Datei `manifest.yml`
+### Beispiel für eine Datei 'manifest.yml'
 
 Das folgende Beispiel zeigt eine Manifestdatei für eine Node.js-Anwendung, die das integrierte Node.js-Community-Buildpack in {{site.data.keyword.Bluemix_notm}} verwendet.
 
@@ -452,7 +452,7 @@ Von Buildpacks definierte Variablen sind für jedes Buildpack unterschiedlich. I
 	  <dt><strong>WLP_OUTPUT_DIR</strong></dt>
 	  <dd>Die Position der generierten Ausgabe, z. B. Protokolldateien oder das Arbeitsverzeichnis einer aktiven Liberty-Profil-Serverinstanz.</dd>
 	  </dl>
-</li>   
+</li>
 <li>Folgende Variablen werden vom Node.js-Buildpack definiert:
 	<dl>
 	<dt><strong>BUILD_DIR</strong></dt>
@@ -553,7 +553,7 @@ tmp/
 ```
 
 # Zugehörige Links
-{: #rellinks}
+{: #rellinks notoc}
 
 ## Zugehörige Links
 {: #general}

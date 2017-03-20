@@ -42,7 +42,7 @@ Pour [Liberty for Java](/docs/runtimes/liberty/index.html) et les applications [
 et reconstituer votre application.  Votre application utilise ensuite les paramètres de proxy spécifiés lors de l'exécution. Pour plus d'informations sur les options de proxy Java, voir [Java Networking and Proxies](https://docs.oracle.com/javase/8/docs/technotes/guides/net/proxies.html).
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## general
 {: #general}
 * [Liberty for Java](/docs/runtimes/liberty/index.html)

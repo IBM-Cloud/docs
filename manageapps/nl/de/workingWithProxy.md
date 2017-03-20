@@ -16,7 +16,8 @@ lastupdated: "2016-07-20"
 
 
 
-In einigen Umgebungen wie [Bluemix Dedicated](/docs/dedicated/index.html#dedicated) und [Bluemix Local](/docs/local/index.html#local) kann ein Proxy konfiguriert werden, was sich auf das Verhalten der Anwendung beim Staging und während der Laufzeit auswirkt.
+In einigen Umgebungen wie [Bluemix Dedicated](/docs/dedicated/index.html#dedicated) und
+[Bluemix Local](/docs/local/index.html#local) kann ein Proxy konfiguriert werden, was sich auf das Verhalten der Anwendung beim Staging und während der Laufzeit auswirkt.
 
 Mit den folgenden Umgebungsvariablen können Sie Ihre Anwendung für den Proxy konfigurieren:
   * [http_proxy](https://docs.cloudfoundry.org/buildpacks/proxy-usage.html)
@@ -41,7 +42,7 @@ Für [Liberty for Java](/docs/runtimes/liberty/index.html) und die [java_buildpa
 Führen Sie ein erneutes Staging für die Anwendung durch.  Die angegebenen Proxy-Einstellungen werden daraufhin zur Laufzeit von der Anwendung verwendet. Weitere Informationen zu den Java-Proxy-Optionen finden Sie in [Java Networking and Proxies](https://docs.oracle.com/javase/8/docs/technotes/guides/net/proxies.html).
 
 # Zugehörige Links
-{: #rellinks}
+{: #rellinks notoc}
 ## Allgemein
 {: #general}
 * [Liberty for Java](/docs/runtimes/liberty/index.html)

@@ -32,29 +32,14 @@ Toutes les nouvelles applications que vous créez s'exécutent sur Diego, et vou
 ### Constitution d'une application
 {: #diego}
 
-Lors de la phase de constitution, Diego s'occupe de tous les aspects liés
-à l'orchestration des conteneurs d'applications. Lorsque vous envoyez une
-application par commande push, le contrôleur de cloud envoie une demande de
-constitution à Diego, qui reprend à son tour l'allocation des instances de
-l'application. Le back end Diego orchestre les conteneurs d'applications afin
-de garantir la cohérence entre le long terme et la tolérance aux pannes, qui
-équilibre la charge sur une série de machines virtuelles appelées cellules. Diego
-garantit en outre aux utilisateurs un accès aux journaux de leurs
-applications. Tous les composants Diego sont conçus pour être mis en cluster,
-ce qui signifie que vous pouvez créer différentes zones de disponibilité.
+Lors de la phase de constitution, Diego s'occupe de tous les aspects liés à l'orchestration des conteneurs d'applications. Lorsque vous envoyez une application par commande push, le contrôleur de cloud envoie une demande de constitution à Diego, qui reprend à son tour l'allocation des instances de l'application. Le back end Diego orchestre les conteneurs d'applications afin de garantir la cohérence entre le long terme et la tolérance aux pannes, qui équilibre la charge sur une série de machines virtuelles appelées cellules. Diego garantit en outre aux utilisateurs un accès aux journaux de leurs applications. Tous les composants Diego sont conçus pour être mis en cluster, ce qui signifie que vous pouvez créer différentes zones de disponibilité.
 
-Pour valider la santé des applications, Diego prend en charge les
-vérifications PORT qui étaient utilisées pour l'agent DEA. Il est cependant conçu
-pour pouvoir fonctionner avec davantage d'options génériques comme les
-diagnostics d'intégrité basés sur les URL, qui devraient être activés
-ultérieurement.
+Pour valider la santé des applications, Diego prend en charge les vérifications PORT qui étaient utilisées pour l'agent DEA. Il est cependant conçu pour pouvoir fonctionner avec davantage d'options génériques comme les diagnostics d'intégrité basés sur les URL, qui devraient être activés ultérieurement.
 
 #### Constitution d'une nouvelle application
 {: #stageapp}
 
-Toutes les nouvelles applications sont déployées dans l'architecture
-Diego. Pour constituer une nouvelle application, déployez cette dernière avec
-la commande **cf push** :
+Toutes les nouvelles applications sont déployées dans l'architecture Diego. Pour constituer une nouvelle application, déployez cette dernière avec la commande **cf push** :
 
   1. Déployez l'application :
   ```
@@ -66,14 +51,7 @@ Pour plus de détails sur la commande **cf push**, voir [cf push](/docs/cli/refe
 ### Migration d'une application existante vers Diego
 {: #migrateapp}
 
-Diego est l'architecture Cloud Foundry par défaut pour
-{{site.data.keyword.Bluemix_notm}} ; la prise en charge des agents DEA
-va être supprimée, vous devez donc migrer toutes vos applications existantes en
-les mettant à jour chacune à leur tour. Commencez la migration de vos
-applications vers Diego en mettant chaque application à jour avec l'indicateur
-Diego. L'application
-tente immédiatement de s'exécuter sur Diego et arrête de s'exécuter sur les
-agents DEA. 
+Diego est l'architecture Cloud Foundry par défaut pour {{site.data.keyword.Bluemix_notm}} ; la prise en charge des agents DEA va être supprimée, vous devez donc migrer toutes vos applications existantes en les mettant à jour chacune à leur tour. Commencez la migration de vos applications vers Diego en mettant chaque application à jour avec l'indicateur Diego. L'application tente immédiatement de s'exécuter sur Diego et arrête de s'exécuter sur les agents DEA.
 
 Lors de la mise à jour d'une application de l'architecture DEA
 vers Diego, il se peut que vous deviez faire face à un bref temps
@@ -99,7 +77,7 @@ IBM vous informera de la période de migration obligatoire à venir à
 l'occasion de la suppression de la prise en charge de l'architecture DEA. Si, à
 ce moment-là, vous n'avez pas encore migré vos applications, l'équipe
 chargée des opérations les migrera pour vous.
-  
+
 Pour savoir sur quel back-end l'application est exécutée, utilisez la
 commande suivante :
 
@@ -306,10 +284,9 @@ cf push -f appManifest.yml
 |**env**	|Variables d'environnement personnalisées pour l'application.|`env: DEV_ENV: production`|
 {: caption="Table 1. Supported options in the manifest YAML file" caption-side="top"}
 
-### Exemple de fichier `manifest.yml`
+### Exemple de fichier manifest.yml
 
-L'exemple ci-dessous illustre un fichier manifeste pour une application Node.js
-utilisant le pack de construction de communauté intégré Node.js dans {{site.data.keyword.Bluemix_notm}}.
+L'exemple ci-dessous illustre un fichier manifeste pour une application Node.js utilisant le pack de construction de communauté intégré Node.js dans {{site.data.keyword.Bluemix_notm}}.
 
 ```
 --- - name: myNodejsapp
@@ -331,17 +308,13 @@ utilisant le pack de construction de communauté intégré Node.js dans {{site.d
 ## Variables d'environnement
 {: #app_env}
 
-Les variables d'environnement contiennent les informations relatives à l'environnement d'une application déployée dans {{site.data.keyword.Bluemix_notm}}. En plus des variables d'environnement définies par un *agent DEA (Droplet Execution Agent)* et les packs de construction, vous pouvez aussi
-définir des variables d'environnement propres à l'application dans {{site.data.keyword.Bluemix_notm}}.
+Les variables d'environnement contiennent les informations relatives à l'environnement d'une application déployée dans {{site.data.keyword.Bluemix_notm}}. En plus des variables d'environnement définies par un *agent DEA (Droplet Execution Agent)* et les packs de construction, vous pouvez aussi définir des variables d'environnement propres à l'application dans {{site.data.keyword.Bluemix_notm}}.
 
-Vous pouvez afficher les variables d'environnement suivantes d'une application
-{{site.data.keyword.Bluemix_notm}} en cours d'exécution en utilisant la commande **cf env** ou
-l'interface utilisateur de {{site.data.keyword.Bluemix_notm}} :
+Vous pouvez afficher les variables d'environnement suivantes d'une application {{site.data.keyword.Bluemix_notm}} en cours d'exécution en utilisant la commande **cf env** ou l'interface utilisateur de {{site.data.keyword.Bluemix_notm}} :
 
   * Les variables définies par l'utilisateur, propres à une application. Pour savoir comment ajouter une variable définie par l'utilisateur à une application, voir [Ajout de variables d'environnement définies par l'utilisateur ![icône de lien externe](../icons/launch-glyph.svg)](#ud_env){:new_window}.
 
-  * La variable VCAP_SERVICES, qui contient les informations de connexion pour l'accès à une instance de service. Si votre application est liée à
-plusieurs services, la variable VCAP_SERVICES inclut les informations de connexion pour chaque instance de service. Exemple :
+  * La variable VCAP_SERVICES, qui contient les informations de connexion pour l'accès à une instance de service. Si votre application est liée à plusieurs services, la variable VCAP_SERVICES inclut les informations de connexion pour chaque instance de service. Exemple :
 
   ```
   {
@@ -490,7 +463,7 @@ Les variables définies par les packs de construction sont différentes pour cha
 	  <dt><strong>WLP_OUTPUT_DIR</strong></dt>
 	  <dd>Emplacement de la sortie générée, par exemple des fichiers journaux et du répertoire de travail d'une instance de serveur de profil Liberty en cours d'exécution.</dd>
 	  </dl>
-</li>   
+</li>
 <li>Les variables suivantes sont définies par le pack de construction Node.js :
 	<dl>
 	<dt><strong>BUILD_DIR</strong></dt>
@@ -562,8 +535,7 @@ Variables d'environnement définies par l'utilisateur spécifiques à une applic
       VAR2:valeur2
     ```
 
-Une fois que vous avez ajouté une variable d'environnement définie par l'utilisateur, vous pouvez utiliser l'exemple de code Node.js suivant pour
-obtenir la valeur de la variable que vous avez définie :
+Une fois que vous avez ajouté une variable d'environnement définie par l'utilisateur, vous pouvez utiliser l'exemple de code Node.js suivant pour obtenir la valeur de la variable que vous avez définie :
 
 ```
 var myEnv = process.env.nom_var_env;
@@ -574,8 +546,7 @@ console.log("My user defined = " + myEnv);
 
 Pour configurer l'environnement de démarrage de votre application,
 vous pouvez ajouter des scripts shell dans le répertoire `/.profile.d`. Le répertoire `/.profile.d` est situé sous le répertoire de construction de votre application. Les scripts du répertoire `/.profile.d` sont exécutés par {{site.data.keyword.Bluemix_notm}} avant le démarrage de
-l'application. Par exemple, vous pouvez associer la variable d'environnement NODE_ENV à la valeur **production** en plaçant un fichier
-`node_env.sh` comportant le contenu suivant sous le répertoire `/.profile.d` :
+l'application. Par exemple, vous pouvez associer la variable d'environnement NODE_ENV à la valeur **production** en plaçant un fichier `node_env.sh` comportant le contenu suivant sous le répertoire `/.profile.d` :
 
 ```
 export NODE_ENV=production;
@@ -583,19 +554,11 @@ export NODE_ENV=production;
 
 ###Empêcher le téléchargement de fichiers et de répertoires
 
-Lorsque vous utilisez l'interface de ligne de commande cf pour déployer une application, vous pouvez réduire le temps de téléchargement en
-ignorant
-certains fichiers et répertoires que {{site.data.keyword.Bluemix_notm}} peut obtenir ailleurs. Pour empêcher le
-téléchargement de ces fichiers et répertoires dans {{site.data.keyword.Bluemix_notm}}, vous pouvez créer un
-fichier `.cfignore` dans le répertoire racine de votre application.
+Lorsque vous utilisez l'interface de ligne de commande cf pour déployer une application, vous pouvez réduire le temps de téléchargement en ignorant certains fichiers et répertoires que {{site.data.keyword.Bluemix_notm}} peut obtenir ailleurs. Pour empêcher le téléchargement de ces fichiers et répertoires dans {{site.data.keyword.Bluemix_notm}}, vous pouvez créer un fichier `.cfignore` dans le répertoire racine de votre application.
 
 **Remarque :** le fichier `.cfignore` doit être au format UTF-8.
 
-Le fichier `.cfignore` contient les noms des
-fichiers et des répertoires à ignorer (un par ligne). Vous pouvez utiliser l'astérisque (*) comme caractère générique. Lorsque vous spécifiez un
-répertoire, tous les fichiers et sous-répertoires qu'il contient sont également ignorés. Par exemple, le contenu suivant dans le fichier `.cfignore` indique qu'aucun fichier `.swp` et qu'aucun
-fichier et sous-répertoire se trouvant dans le répertoire `tmp/` ne sera téléchargé dans
-{{site.data.keyword.Bluemix_notm}}.
+Le fichier `.cfignore` contient les noms des fichiers et des répertoires à ignorer (un par ligne). Vous pouvez utiliser l'astérisque (*) comme caractère générique. Lorsque vous spécifiez un répertoire, tous les fichiers et sous-répertoires qu'il contient sont également ignorés. Par exemple, le contenu suivant dans le fichier `.cfignore` indique qu'aucun fichier `.swp` et qu'aucun fichier et sous-répertoire se trouvant dans le répertoire `tmp/` ne sera téléchargé dans {{site.data.keyword.Bluemix_notm}}.
 
 ```
 *.swp
@@ -603,13 +566,12 @@ tmp/
 ```
 
 # Liens connexes
-{: #rellinks}
+{: #rellinks notoc}
 
 ## Liens connexes
 {: #general}
 
-* [Deploying with Application Manifests ![icône de lien externe](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){:new_window}
-* [CF Manifest Generator ![icône de lien externe](../icons/launch-glyph.svg)](http://cfmanigen.mybluemix.net/){:new_window}
-* [Getting Started with cf v6 ![icône de lien externe](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html){:new_window}
-* [Initiation à IBM Continuous Delivery Pipeline for
-Bluemix](/docs/services/DeliveryPipeline/index.html#getstartwithCD)
+* [Deploying with Application Manifests ![](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){:new_window}
+* [CF Manifest Generator ![](../icons/launch-glyph.svg)](http://cfmanigen.mybluemix.net/){:new_window}
+* [Getting Started with cf v6 ![](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html){:new_window}
+* [Initiation à IBM Continuous Delivery Pipeline for Bluemix](/docs/services/DeliveryPipeline/index.html#getstartwithCD)

@@ -11,7 +11,7 @@ lastupdated: "2017-01-11"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#管理 Liberty 及 Node.js 應用程式
+# 管理 Liberty 及 Node.js 應用程式
 {: #app_management}
 
 
@@ -36,7 +36,7 @@ lastupdated: "2017-01-11"
 
 *noproxy* 公用程式會停用其中一個其他公用程式已自動啟動的 *proxy* 公用程式。使用 Diego 時，因為 Diego 提供直接 *ssh* 到應用程式以及設定埠轉遞的功能，所以不需要 proxy。
 
-*noproxy* 公用程式僅適用於在 Diego cell 中執行的應用程式。
+*noproxy* 公用程式僅適用於在 Diego Cell 中執行的應用程式。
 
 
 
@@ -82,7 +82,7 @@ $ cf ssh -N -T -L 1883:127.0.0.1:1883 <appName>
 
 *shell* 公用程式也會啟動 *proxy*。
 
-Diego 透過 `cf ssh` 指令提供互動式 Shell，讓 *shell* 公用程式只適用於在 DEA 上執行的應用程式。
+Diego 透過 `cf ssh` 指令提供互動式 Shell，因此 *shell* 公用程式只適用於在 DEA 上執行的應用程式。
 
 ### 這些公用程式僅支援 Liberty
 {: #liberty_utilities}
@@ -114,9 +114,9 @@ $ cf ssh -N -T -L 7777:127.0.0.1:7777 <appName>
 #### localjmx
 {: #localjmx}
 
-*localjmx* 公用程式會啟用 [localConnector-1.0 ![外部鏈結圖示](../icons/launch-glyph.svg)](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feature_localConnector-1.0.html){:new_window} Liberty 特性。這與本端埠轉遞合併使用，可啟用容許遠端 JMX 用戶端管理應用程式的替代方式。
+*localjmx* 公用程式會啟用 [localConnector-1.0 ![外部鏈結圖示](../icons/launch-glyph.svg)](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feature_localConnector-1.0.html){:new_window} Liberty 特性。這與本端埠轉遞合併使用時，可啟用容許遠端 JMX 用戶端管理應用程式的替代方式。
 
-*localjmx* 公用程式僅適用於在 Diego cell 上執行的應用程式。若要使用 *localjmx*，請先使用 `cf ssh` 指令來建立埠轉遞。例如：
+*localjmx* 公用程式僅適用於在 Diego Cell 上執行的應用程式。若要使用 *localjmx*，請先使用 `cf ssh` 指令來建立埠轉遞。例如：
 
 ```
 $ cf ssh -N -T -L 5000:127.0.0.1:5000 <appName>
@@ -216,7 +216,7 @@ $ cf restage myApp
 ## 限制
 {: #restrictions}
 
-* 應用程式在 DEA 節點上執行時，「應用程式管理」僅支援單一實例應用程式。
+* 「應用程式管理」僅在應用程式於 DEA 節點上執行時支援單一實例應用程式。
 * 使用「應用程式管理」對應用程式進行的變更是暫時性的，會在結束此模式之後遺失。此模式僅供暫時開發使用，而且基於效能原因，不是用來作為正式作業環境。
 * 如果您在 `manifest.yml` 檔案 (command) 或 CF CLI (-c) 中設定 start 指令，則大部分「應用程式管理」公用程式不會運作。這些方法是建置套件置換，而且是啟動 Node.js 應用程式的反面模式 (anti-pattern)。若要獲得最佳的結果，請在 `package.json` 檔案或 `Procfile` 中設定 start 指令。
 

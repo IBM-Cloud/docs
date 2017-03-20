@@ -12,14 +12,14 @@ lastupdated: "2017-01-11"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#保護應用程式安全
+# 保護應用程式安全
 {: #securingapps}
 
 
 您可以上傳 SSL 憑證並限制應用程式存取，來保護您的應用程式。
 {:shortdesc}
 
-##建立憑證簽署要求
+## 建立憑證簽署要求
 {: #ssl_csr}
 
 您必須先在伺服器上建立憑證簽署要求 (CSR)，才能使用 {{site.data.keyword.Bluemix}} 上傳授與您的 SSL 憑證。

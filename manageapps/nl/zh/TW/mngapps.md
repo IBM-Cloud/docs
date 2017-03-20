@@ -10,7 +10,7 @@ lastupdated: "2015-03-17"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-#管理應用程式
+# 管理應用程式
 {: #manageapps}
 
 您可以使用 {{site.data.keyword.Bluemix}} 使用者介面中的「儀表板」來檢視及管理應用程式與服務，以及使用配額量規來監視資源用量。

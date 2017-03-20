@@ -51,7 +51,7 @@ Cloud Foundry 支持 Diego，这是全新的缺省运行时体系结构，它提
 ### 将现有应用程序迁移到 Diego
 {: #migrateapp}
 
-Diego 是 {{site.data.keyword.Bluemix_notm}} 的缺省 Cloud Foundry 体系结构，将除去对 DEA 的支持，所以您必须通过更新每个现有应用程序来迁移所有这些应用程序。通过使用 Diego 标志更新应用程序，开始将应用程序迁移到 Diego。应用程序将立即尝试开始在 Diego 上运行，并最终停止在 DEA 上运行。 
+Diego 是 {{site.data.keyword.Bluemix_notm}} 的缺省 Cloud Foundry 体系结构，将除去对 DEA 的支持，所以您必须通过更新每个现有应用程序来迁移所有这些应用程序。通过使用 Diego 标志更新应用程序，开始将应用程序迁移到 Diego。应用程序将立即尝试开始在 Diego 上运行，并最终停止在 DEA 上运行。
 
 在应用程序从 DEA 体系结构更新到 Diego 的过程中，您可能会遇到较短时间的停机，或者如果应用程序与 Diego 不兼容，那么可能会遇到较长时间的停机。为了缩短停机时间，请通过将应用程序的副本部署到 Diego，然后交换路径并向下扩展 DEA 应用程序，从而执行[蓝绿部署](/docs/manageapps/updapps.html#blue_green)。
 
@@ -67,7 +67,7 @@ Diego 是 {{site.data.keyword.Bluemix_notm}} 的缺省 Cloud Foundry 体系结�
 更新应用程序后，验证应用程序是否已启动。如果迁移的应用程序无法启动，那么该应用程序会保持脱机状态，直到您确定并解决了问题，然后重新启动应用程序为止。
 
 在将除去 DEA 体系结构支持时，IBM 将向您提醒即将到来的必需迁移时间段；如果您一直未迁移应用程序，操作团队将为您迁移所有应用程序。
-  
+
 要验证应用程序正在哪个后端上运行，请使用以下命令：
 
   ```
@@ -238,9 +238,9 @@ cf push -f appManifest.yml
 |**random-route**	|布尔值，用于将随机路径分配给应用程序。缺省值为 **false**。	|`random-route: true`|
 |**services**	|要绑定到应用程序的服务。	|`services: - mysql_maptest`|
 |**env**	|应用程序的定制环境变量。|`env: DEV_ENV: production`|
-{: caption="Table 1. Supported options in the manifest YAML file" caption-side="top"}
+{: caption="表 1. 清单 YAML 文件中的受支持选项" caption-side="top"}
 
-### 样本 `manifest.yml` 文件
+### 样本 manifest.yml 文件
 
 以下示例显示了在 {{site.data.keyword.Bluemix_notm}} 中使用内置社区 Node.js buildpack 的 Node.js 应用程序的清单文件。
 
@@ -420,7 +420,7 @@ cf push -f appManifest.yml
 	  <dt><strong>WLP_OUTPUT_DIR</strong></dt>
 	  <dd>生成的输出（例如，日志文件）的位置以及正在运行的 Liberty 概要文件服务器实例的工作目录。</dd>
 	  </dl>
-</li>   
+</li>
 <li>以下变量通过 Node.js buildpack 定义：
 	<dl>
 	<dt><strong>BUILD_DIR</strong></dt>
@@ -522,7 +522,7 @@ tmp/
 ```
 
 # 相关链接
-{: #rellinks}
+{: #rellinks notoc}
 
 ## 相关链接
 {: #general}

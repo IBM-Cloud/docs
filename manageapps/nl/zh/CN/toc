@@ -1,0 +1,15 @@
+[管理应用程序](/docs/manageapps/mngapps.html)
+    mngapps.md
+    [将服务添加到应用程序](../services/reqnsi.html)
+        [请求新的服务实例](../services/reqnsi.html#req_instance)
+        [将应用程序配置为与服务进行交互](../services/reqnsi.html#config)
+        [支持外部应用程序使用 Bluemix 服务](../services/reqnsi.html#accser_external)
+        [创建用户提供的服务实例](../services/reqnsi.html#user_provide_services)
+        [在另一个区域使用服务](../services/reqnsi.html#cross_region_service)
+        [在其他服务中使用服务](../services/reqnsi.html#s2s_binding)
+    depapps.md
+    [创建按钮](../develop/deploy_button.html)
+        [共享“部署到 Bluemix”项目管道](../develop/sharetextpipelines.html)
+        [嵌入“部署到 Bluemix”iFrame 流](../develop/deploy_button_embed.html)
+    updapps.md
+    secapps.md
