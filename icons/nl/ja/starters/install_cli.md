@@ -54,7 +54,7 @@ Cloud Foundry コマンド・ライン・インターフェースを使用して
 
   3.  適切なアプリ・コードを変更します。例えば、{{site.data.keyword.Bluemix}} サンプル・アプリケーションを使用していて、アプリに `src/main/webapp/index.html` ファイルが含まれている場合、それを編集して「Thanks for creating ...」を何か別の内容に変更します。アプリを {{site.data.keyword.Bluemix_notm}} に戻してデプロイする前に、ローカルで稼働することを確認してください。
 
-    `manifest.yml` ファイルをメモします。{{site.data.keyword.Bluemix_notm}} にアプリをデプロイする際、このファイルを使用してアプリケーションの URL、メモリー割り振り、インスタンス数、その他の重要なパラメーターを判別します。[マニフェスト・ファイルの詳細 ![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html "「外部リンク」アイコン"){: new_window} は Cloud Foundry 資料に記載されています。
+    `manifest.yml` ファイルをメモします。{{site.data.keyword.Bluemix_notm}} にアプリをデプロイする際、このファイルを使用してアプリケーションの URL、メモリー割り振り、インスタンス数、その他の重要なパラメーターを判別します。[マニフェスト・ファイルの詳細 ![「外部リンク」アイコン](../icons/launch-glyph.svg "External link icon")](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){: new_window} は Cloud Foundry 資料に記載されています。
 
     該当する場合にはビルド手順などの詳細が含まれている `README.md` ファイルにも注意を払ってください。
 

@@ -1,25 +1,21 @@
 ---
 
-
-
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-04"
-
+lastupdated: "2016-02-27"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
+{:screen: .screen}
 {:pre: .pre}
 
 # {{site.data.keyword.openwhisk_short}} パッケージの使用と作成
 {: #openwhisk_packages}
 
-
-{{site.data.keyword.openwhisk}} では、パッケージを使用して関連するアクションのセットを 1 つにまとめ、それらのパッケージを他のユーザーと共有することができます。
+{{site.data.keyword.openwhisk_short}} では、パッケージを使用して関連するアクションのセットを 1 つにまとめ、それらのパッケージを他のユーザーと共有することができます。
 
 パッケージには、*アクション*および*フィード*を含めることができます。
 - アクションは、
@@ -60,7 +56,6 @@ lastupdated: "2017-01-04"
   /whisk.system/github                                                   shared
   /whisk.system/pushnotifications                                        shared
   ```
-  {: screen}
 
 2. `/whisk.system/cloudant` パッケージ内のエンティティーのリストを取得します。
 
@@ -75,7 +70,6 @@ lastupdated: "2017-01-04"
    action /whisk.system/cloudant/write: Write document to database
    feed   /whisk.system/cloudant/changes: Database change feed
   ```
-  {: screen}
 
   この出力は、Cloudant パッケージが 2 つのアクション `read` および `write` と、`changes` という 1 つのトリガー・フィードを提供していることを示しています。`changes` フィードは、指定された Cloudant データベースに文書が追加されると、トリガーを発生させます。
 
@@ -92,7 +86,6 @@ lastupdated: "2017-01-04"
   action /whisk.system/cloudant/read: Read document from database
      (params: dbname includeDoc id)
   ```
-  {: screen}
 
   この出力は、Cloudant の `read` アクションに、取得するデータベースと文書 ID などの 3 つのパラメーターが必要であることを示しています。
 
@@ -113,7 +106,6 @@ lastupdated: "2017-01-04"
   action /whisk.system/samples/greeting: Print a friendly greeting
      (params: name place)
   ```
-  {: screen}
 
   `greeting` アクションは 2 つのパラメーター `name` と `place` を取ることに注意してください。
 
@@ -124,12 +116,11 @@ lastupdated: "2017-01-04"
   wsk action invoke --blocking --result /whisk.system/samples/greeting
   ```
   {: pre}
-  ```
+  ```json
   {
       "payload": "Hello, stranger from somewhere!"
   }
   ```
-  {: screen}
 
   パラメーターが指定されなかったため、出力は汎用メッセージです。
 
@@ -140,12 +131,11 @@ lastupdated: "2017-01-04"
   wsk action invoke --blocking --result /whisk.system/samples/greeting --param name Mork --param place Ork
   ```
   {: pre}
-  ```
+  ```json
   {
       "payload": "Hello, Mork from Ork!"
   }
   ```
-  {: screen}
 
   出力は、アクションに渡された `name` パラメーターと `place` パラメーターを使用することに注意してください。
 
@@ -172,7 +162,6 @@ lastupdated: "2017-01-04"
   ```
   ok: created binding valhallaSamples
   ```
-  {: screen}
 
 2. パッケージ・バインディングの説明を取得します。
 
@@ -187,7 +176,6 @@ lastupdated: "2017-01-04"
    action /myNamespace/valhallaSamples/helloWorld: Demonstrates logging facilities
    action /myNamespace/valhallaSamples/curl: Curl a host url
   ```
-  {: screen}
 
   `/whisk.system/samples` パッケージ内のすべてのアクションが `valhallaSamples` パッケージ・バインディングで使用可能であることに注意してください。
 
@@ -202,7 +190,6 @@ lastupdated: "2017-01-04"
       "payload": "Hello, Odin from Valhalla!"
   }
   ```
-  {: screen}
 
   `valhallaSamples` パッケージ・バインディングを作成したときに設定した `place`
 パラメーターを、アクションが継承している結果に注目してください。
@@ -218,7 +205,6 @@ lastupdated: "2017-01-04"
       "payload": "Hello, Odin from Asgard!"
   }
   ```
-  {: screen}
 
   アクションの起動で指定された `place` パラメーター値によって、
 `valhallaSamples` パッケージ・バインディングに設定されたデフォルト値が上書きされている点に注意してください。
@@ -239,7 +225,6 @@ lastupdated: "2017-01-04"
   package /whisk.system/alarms
    feed   /whisk.system/alarms/alarm
   ```
-  {: screen}
 
   ```
   wsk action get --summary /whisk.system/alarms/alarm
@@ -249,7 +234,6 @@ lastupdated: "2017-01-04"
   action /whisk.system/alarms/alarm: Fire trigger when alarm occurs
      (params: cron trigger_payload)
   ```
-  {: screen}
 
   `/whisk.system/alarms/alarm` フィードは、次の 2 つのパラメーターを使用します。
   - `cron`: トリガーを発生させるタイミングを示す crontab 仕様。
@@ -265,11 +249,10 @@ lastupdated: "2017-01-04"
   ```
   ok: created trigger feed everyEightSeconds
   ```
-  {: screen}
 
 3. 以下のアクション・コードを含む「hello.js」ファイルを作成します。
 
-  ```
+  ```javascript
   function main(params) {
       return {payload:  'Hello, ' + params.name + ' from ' + params.place};
   }
@@ -292,7 +275,6 @@ lastupdated: "2017-01-04"
   ```
   ok: created rule myRule
   ```
-  {: screen}
 
 6. アクティベーション・ログをポーリングして、アクションが起動中であることを確認します。
 
@@ -322,7 +304,6 @@ lastupdated: "2017-01-04"
   ```
   ok: created package custom
   ```
-  {: screen}
 
 2. パッケージの要約を取得します。
 
@@ -333,14 +314,13 @@ lastupdated: "2017-01-04"
   ```
   package /myNamespace/custom
   ```
-  {: screen}
 
   パッケージが空であることに注意してください。
 
 3. 以下のアクション・コードを含む「`identity.js`」というファイルを作成します。このアクションは、
 すべての入力パラメーターを返します。
 
-  ```
+  ```javascript
   function main(args) { return args; }
   ```
   {: codeblock}
@@ -354,7 +334,6 @@ lastupdated: "2017-01-04"
   ```
   ok: created action custom/identity
   ```
-  {: screen}
 
   パッケージ内にアクションを作成する場合、アクション名の前にパッケージ名を付ける必要があります。パッケージのネスティングは許可されません。パッケージは、アクションのみを含むことができ、別のパッケージを含むことはできません。
 
@@ -368,7 +347,6 @@ lastupdated: "2017-01-04"
   package /myNamespace/custom
    action /myNamespace/custom/identity
   ```
-  {: screen}
 
   名前空間に `custom/identity` アクションが表示されるようになりました。
 
@@ -378,10 +356,9 @@ lastupdated: "2017-01-04"
   wsk action invoke --blocking --result custom/identity
   ```
   {: pre}
-  ```
+  ```json
   {}
   ```
-  {: screen}
 
 
 パッケージ内のすべてのエンティティーに、デフォルトのパラメーターを設定することができます。これを行うには、パッケージ内のすべてのアクションで継承されるパッケージ・レベルのパラメーターを設定します。これがどのように動作するかを確認するには、次の例に従ってください。
@@ -395,19 +372,19 @@ lastupdated: "2017-01-04"
   ```
   ok: updated package custom
   ```
-  {: screen}
 
 2. パッケージのパラメーターとアクションのパラメーターを表示し、
 パッケージ内の `identity` アクションが、パッケージからパラメーターを継承していることを確認します。
 
   ```
-  wsk package get custom
+  wsk package get custom parameters
   ```
   {: pre}
   ```
-  ok: got package custom
-  ...
-  "parameters": [
+  ok: got package custom, displaying field parameters
+  ```
+  ```json
+  [
       {
           "key": "city",
           "value": "Austin"
@@ -417,18 +394,17 @@ lastupdated: "2017-01-04"
           "value": "USA"
       }
   ]
-  ...
   ```
-  {: screen}
 
   ```
-  wsk action get custom/identity
+  wsk action get custom/identity parameters
   ```
   {: pre}
   ```
-  ok: got action custom/identity
-  ...
-  "parameters": [
+  ok: got action custom/identity, , displaying field parameters
+  ```
+  ```json
+  [
       {
           "key": "city",
           "value": "Austin"
@@ -438,9 +414,7 @@ lastupdated: "2017-01-04"
           "value": "USA"
       }
   ]
-  ...
   ```
-  {: screen}
 
 3. identity アクションをパラメーターを指定せずに起動して、アクションが本当にパラメーターを継承しているかどうか確認します。
 
@@ -448,13 +422,12 @@ lastupdated: "2017-01-04"
   wsk action invoke --blocking --result custom/identity
   ```
   {: pre}
-  ```
+  ```json
   {
       "city": "Austin",
       "country": "USA"
   }
   ```
-  {: screen}
 
 4. いくつかのパラメーターを指定して identity アクションを起動します。
 起動パラメーターは、パッケージ・パラメーターとマージされ、パッケージ・パラメーターをオーバーライドします。
@@ -463,14 +436,13 @@ lastupdated: "2017-01-04"
   wsk action invoke --blocking --result custom/identity --param city Dallas --param state Texas
   ```
   {: pre}
-  ```
+  ```json
   {
       "city": "Dallas",
       "country": "USA",
       "state": "Texas"
   }
   ```
-  {: screen}
 
 
 ## パッケージの共有
@@ -489,21 +461,19 @@ lastupdated: "2017-01-04"
   ```
   ok: updated package custom
   ```
-  {: screen}
 
 2. パッケージの `publish` プロパティーを表示して、このプロパティーが現在 true かどうかを確認します。
 
   ```
-  wsk package get custom
+  wsk package get custom publish
   ```
   {: pre}
   ```
-  ok: got package custom
-  ...
-  "publish": true,
-  ...
+  ok: got package custom, displaying field publish
   ```
-  {: screen}
+  ```json
+  true
+  ```
 
 
 これで、他のユーザーは、パッケージへのバインディングや、パッケージ内のアクションの直接起動を含め、`custom` パッケージを使用することができます。
@@ -520,7 +490,6 @@ lastupdated: "2017-01-04"
   package /myNamespace/custom
    action /myNamespace/custom/identity
   ```
-  {: screen}
 
   前述の例では、`myNamespace` 名前空間で作業
 しています。この名前空間が、完全修飾名に含まれています。

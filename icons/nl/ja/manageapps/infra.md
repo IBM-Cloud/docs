@@ -13,7 +13,7 @@ lastupdated: "2016-03-15"
 
 {:shortdesc: .shortdesc}
 
-#  Bluemix インフラストラクチャー・レイヤー
+# Bluemix インフラストラクチャー・レイヤー
 
 
 

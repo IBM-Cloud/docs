@@ -3,8 +3,8 @@
 
 
 copyright:
-  years: 2015，2016
-lastupdated: "2016-10-19"
+  years: 2015，2017
+lastupdated: "2017-2-21"
 
 ---
 
@@ -59,7 +59,7 @@ Desktop Sync では以下の点を考慮してください。
 コマンドについて詳しくは、[「Bluemix Live Sync (bl) コマンド」](bluemixlive.html#bl-commands)を参照してください。
 
 <ol>
-<li><a class="xref" href="https://hub.jazz.net/" target="_blank" alt="Bluemix DevOps Services">Bluemix DevOps Services</a> の無料アカウントを登録します。</li>
+<li>無料の <a class="xref" href="https://hub.jazz.net/" target="_blank" title="(新しいタブまたはウィンドウで開きます)">Bluemix DevOps Services アカウント<img class="image" src="../icons/launch-glyph.svg" alt="「外部リンク」アイコン"/></a> に登録してください。</li>
 <li>{{site.data.keyword.Bluemix_notm}} Live Sync bl コマンド・ラインをダウンロードし、インストールします。   
 <p>
 <a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/blive_setup.msi" target="_blank" title="(新しいタブまたはウィンドウで開きます)"><img class="image" src="images/bl_gs_icons_windows_b.svg" alt="「Windows bl コマンド・ラインのダウンロード」ボタン" /> </a>
@@ -71,7 +71,7 @@ Desktop Sync では以下の点を考慮してください。
 <li>コマンド・ラインで、以下のコマンドを使用してログインします。ユーザー ID とパスワードの入力を求めるプロンプトが出されます。  
 <pre class="codeblock">bl login</pre>
 
-<strong>注:</strong> DevOps Services のユーザー ID には、IBM ID またはフェデレーテッド ID (企業 ID) のいずれかを使用できます。フェデレーテッド認証を使用して Bluemix Live Sync コマンド・ライン・クライアントにログインする場合は、パスワードの代わりにパーソナル・アクセス・トークンを使用する必要があります。フェデレーテッド認証を使用しない場合は、IBM ID とパスワードがすべてのクライアントで機能します。パーソナル・アクセス・トークンの作成について詳しくは、<a class="xref" href="https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/" target="_blank" alt="Bluemix DevOps Services">What's federated authentication and how does it affect me?</a> を参照してください。
+<strong>注:</strong> DevOps Services のユーザー ID には、IBM ID またはフェデレーテッド ID (企業 ID) のいずれかを使用できます。フェデレーテッド認証を使用して Bluemix Live Sync コマンド・ライン・クライアントにログインする場合は、パスワードの代わりにパーソナル・アクセス・トークンを使用する必要があります。フェデレーテッド認証を使用しない場合は、IBM ID とパスワードがすべてのクライアントで機能します。パーソナル・アクセス・トークンの作成について詳しくは、<a class="xref" href="https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/" target="_blank" title="(新しいタブまたはウィンドウで開きます)">What's federated authentication and how does it affect me?<img class="image" src="../icons/launch-glyph.svg" alt="「外部リンク」アイコン"/></a> を参照してください。
 </li>
 
 <li>以下のコマンドを入力して、{{site.data.keyword.Bluemix_notm}} Live Sync で同期できるプロジェクトのリストを表示します。
@@ -104,7 +104,7 @@ Web IDE の実行バーで、**「Live Edit」**をクリックします。
 
 Live Edit を使用すれば、{{site.data.keyword.Bluemix_notm}} で実行中の Node.js アプリケーションに対する変更を迅速にプレビューできます。Live Edit をオンにしてコードを更新すると、変更を加えてからほんの数秒で、Web アプリケーションのブラウザー・ウィンドウを最新表示して変更が反映されたことを確認できます。
 
-{{site.data.keyword.Bluemix_notm}} Live Sync の Live Edit フィーチャーの使用に関するチュートリアルについては、「[Bluemix Live Sync を使用した Node.js アプリのテストおよびデバッグ](https://hub.jazz.net/tutorials/livesync)」チュートリアルを参照してください。
+{{site.data.keyword.Bluemix_notm}} Live Sync の Live Edit フィーチャーの使用に関するチュートリアルについては、「[Test and debug a Node.js app with Bluemix Live Sync![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](https://hub.jazz.net/tutorials/livesync){:new_window} 」というチュートリアルを参照してください。
 
 Web IDE 内でファイルを変更すると、それらのファイルは {{site.data.keyword.Bluemix_notm}} で実行中のアプリケーションに自動的に再デプロイされます。Node アプリケーションの再始動が必要な場合、実行バーにある **「再始動」**ボタンを使用できます。
 
@@ -119,7 +119,7 @@ Debug を使用すると、アプリが {{site.data.keyword.Bluemix_notm}} で�
 {{site.data.keyword.Bluemix_notm}} Live Debug には、以下のフィーチャーが含まれています。
 
 * アプリケーション・ランタイム制御
-* [node-inspector](https://github.com/node-inspector/node-inspector) を使用したデバッグ
+* [node-inspector![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](https://github.com/node-inspector/node-inspector){:new_window} を使用したデバッグ
 * シェル・アクセス
 
 ###アプリケーション・ランタイム制御 {: #app-runtime}
@@ -175,7 +175,7 @@ Debug には、以下の機能が含まれています。
 
 アプリをプッシュし、次に `https://app-host.mybluemix.net/bluemix-debug/manage` を参照して、{{site.data.keyword.Bluemix_notm}} デバッグ・ユーザー・インターフェースにアクセスします。認証を求めるプロンプトが出されたら、ユーザー ID と、パーソナル・アクセス・トークンまたは IBM ID のパスワードを入力します。    
 
-   **注**: DevOps Services のユーザー ID には、IBM ID またはフェデレーテッド ID (企業 ID) のいずれかを使用できます。フェデレーテッド認証を使用して Bluemix Live Sync コマンド・ライン・クライアントにログインする場合は、パスワードの代わりにパーソナル・アクセス・トークンを使用する必要があります。フェデレーテッド認証を使用しない場合は、IBM ID とパスワードがすべてのクライアントで機能します。パーソナル・アクセス・トークンの作成について詳しくは、[What's federated authentication and how does it affect me?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/) を参照してください。
+   **注**: DevOps Services のユーザー ID には、IBM ID またはフェデレーテッド ID (企業 ID) のいずれかを使用できます。フェデレーテッド認証を使用して Bluemix Live Sync コマンド・ライン・クライアントにログインする場合は、パスワードの代わりにパーソナル・アクセス・トークンを使用する必要があります。フェデレーテッド認証を使用しない場合は、IBM ID とパスワードがすべてのクライアントで機能します。パーソナル・アクセス・トークンの作成について詳しくは、[What's federated authentication and how does it affect me?![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/){:new_window} を参照してください。
 
 ###アプリ構成の復元および Bluemix Live Debug の使用不可化 {: #restore_live_debug}
 
@@ -293,7 +293,7 @@ bl login | l [ -u username ] [-p password ][ -s server ]
 
 **警告:**コマンド・ライン・オプションは他のユーザーから見えるようになっており、コマンド・ヒストリーの一部として記録されるため、コマンド・ライン・オプションでパスワードを指定することは避けてください。
 
-**注:** ログインする前に、<a class="xref" href="https://hub.jazz.net/" target="_blank" alt="Bluemix DevOps Services">Bluemix DevOps Services</a> の無料アカウントを登録する必要があります。
+**注:** ログインする前に、[Bluemix DevOps Services![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](https://hub.jazz.net/){:new_window} の無料アカウントを登録する必要があります。
 
 **options**
 
@@ -303,7 +303,7 @@ bl login | l [ -u username ] [-p password ][ -s server ]
 
 -s *server*: {{site.data.keyword.jazzhub_short}} サーバーのサーバー名または IP アドレス。    
 
-   **注**: DevOps Services のユーザー ID には、IBM ID またはフェデレーテッド ID (企業 ID) のいずれかを使用できます。フェデレーテッド認証を使用して Bluemix Live Sync コマンド・ライン・クライアントにログインする場合は、パスワードの代わりにパーソナル・アクセス・トークンを使用する必要があります。フェデレーテッド認証を使用しない場合は、IBM ID とパスワードがすべてのクライアントで機能します。パーソナル・アクセス・トークンの作成について詳しくは、[What's federated authentication and how does it affect me?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/) を参照してください。
+   **注**: DevOps Services のユーザー ID には、IBM ID またはフェデレーテッド ID (企業 ID) のいずれかを使用できます。フェデレーテッド認証を使用して Bluemix Live Sync コマンド・ライン・クライアントにログインする場合は、パスワードの代わりにパーソナル・アクセス・トークンを使用する必要があります。フェデレーテッド認証を使用しない場合は、IBM ID とパスワードがすべてのクライアントで機能します。パーソナル・アクセス・トークンの作成について詳しくは、[What's federated authentication and how does it affect me?![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/){:new_window} を参照してください。
 
 **例**
 
@@ -645,12 +645,15 @@ bl stop –l “launchConfigurations/mylaunchconfig.launch”
 ```
 {: pre}
 
-># 関連リンク {:class="linklist"}
->## チュートリアルおよびサンプル {:id="samples"}
->* [Test and debug a Node.js app with Bluemix Live Sync](https://hub.jazz.net/tutorials/livesync)
->
-># 関連リンク {:class="linklist"}
->## 関連リンク {:id="general"}
->* [Eclipse tools for Bluemix](https://www.ng.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html)   
->
->{:elementKind="article" id="rellinks"}
+# 関連リンク
+{: #rellinks}
+
+## チュートリアルおよびサンプル
+{: #samples}
+
+* [Test and debug a Node.js app with Bluemix Live Sync![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](https://hub.jazz.net/tutorials/livesync){:new_window}
+
+## 関連リンク
+{: #general}
+
+* [Eclipse tools for Bluemix![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](https://www.ng.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html){:new_window}

@@ -82,6 +82,14 @@ cf push app_name -p app_path -b https://github.com/dmikusa-pivotal/cf-php-build-
 ```
 {:pre}
 
+また、プロジェクトの `manifest.yml` ファイルを編集して次のような `buildpack` 行を追加することも可能です。
+
+```
+buildpack: https://github.com/cloudfoundry/python-buildpack.git
+```
+{:pre}
+
+
 ## Java ビルドパックのバージョンの指定
 
 <ul>

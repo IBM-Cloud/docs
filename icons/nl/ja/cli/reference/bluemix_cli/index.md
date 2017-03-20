@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-01-24"
+lastupdated: "2017-02-16"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2017-01-24"
 # {{site.data.keyword.Bluemix_notm}} CLI 入門
 {: #getting-started}
 
-{{site.data.keyword.Bluemix_notm}} CLI は、{{site.data.keyword.Bluemix_notm}} 内のアプリケーション、仮想サーバー、コンテナー、およびその他のサービスとの対話をコマンド・ライン・インターフェースを使用して行うための一元化された手法を提供します。また、{{site.data.keyword.Bluemix_notm}} CLI は、各種コミュニティー・ツール (Cloud Foundry CLI、Docker CLI、OpenStack CLI など) を統合し、さまざまな計算タイプとの対話のための環境設定を初期化します。
+{{site.data.keyword.Bluemix_notm}} CLI は、アプリケーション、仮想サーバー、コンテナー、およびその他のサービスとの対話をコマンド・ライン・インターフェースを使用して行うための一元化された手法を提供します。また、{{site.data.keyword.Bluemix_notm}} CLI は、各種コミュニティー・ツール (Cloud Foundry CLI、Docker CLI、OpenStack CLI など) を統合し、さまざまな計算タイプとの対話のための環境設定を初期化します。
 
 **制約事項:** {{site.data.keyword.Bluemix_notm}} CLI は Cygwin ではサポートされないため、Cygwin コマンド・ライン・ウィンドウでは {{site.data.keyword.Bluemix_notm}} CLI を使用しないでください。
 
@@ -25,7 +25,7 @@ lastupdated: "2017-01-24"
 ## {{site.data.keyword.Bluemix_notm}} CLI のインストール
 {: #install_bluemix_cli}
 
-{{site.data.keyword.Bluemix_notm}} CLI をインストールする前に、ご使用のシステムに Cloud Foundry CLI がインストールされていることを確認してください。
+{{site.data.keyword.Bluemix_notm}} CLI をインストールする前に、[cf CLI ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window} をインストールしてください。
 
 Mac OS および Windows の場合は、[{{site.data.keyword.Bluemix_notm}} CLI パッケージ](/docs/cli/index.html#downloads)をダウンロードし、インストーラーを実行してください。
 
@@ -58,12 +58,12 @@ Linux の場合は、以下のステップを実行してください。
   ~/Bluemix_CLI#
   ```
 
-これで、{{site.data.keyword.Bluemix_notm}} CLI の使用を開始するか、追加プラグインをインストールすることができます。
+これで、{{site.data.keyword.Bluemix_notm}} CLI の使用を開始することも、追加プラグインをインストールすることもできます。
 
 ## プラグインのインストール
 {: #install_plug-in}
 
-Cloud Foundry CLI と同様に、{{site.data.keyword.Bluemix_notm}} CLI でも、組み込みコマンド以外の他のコマンドを統合するためのプラグイン拡張フレームワークがサポートされています。
+Cloud Foundry CLI と同様に、{{site.data.keyword.Bluemix_notm}} CLI で、組み込みコマンド以外の他のコマンドを統合するためのプラグイン拡張フレームワークがサポートされています。
 
 ローカル環境からプラグインをインストールするには、以下のステップを実行します。
 
@@ -135,7 +135,7 @@ Cloud Foundry CLI と同様に、{{site.data.keyword.Bluemix_notm}} CLI でも�
   ~$
   ```
 
-  2. 次に、`bluemix plugin install` コマンドを使用して、`Bluemix` リポジトリーからプラグインをインストールします。例えば次のようにします。
+  2. `bluemix plugin install` コマンドを使用して、`Bluemix` リポジトリーからプラグインをインストールします。例えば次のようにします。
 
   ```
   ~$ bluemix plugin install auto-scaling -r Bluemix
@@ -150,7 +150,7 @@ Cloud Foundry CLI と同様に、{{site.data.keyword.Bluemix_notm}} CLI でも�
 ## {{site.data.keyword.Bluemix_notm}} CLI へのログイン
 {: #log_bmcli}
 
-{{site.data.keyword.Bluemix_notm}} CLI をインストールした後、{{site.data.keyword.Bluemix_notm}} アカウントおよびパスワードを使用して {{site.data.keyword.Bluemix_notm}} にログインできます。例えば次のようにします。
+{{site.data.keyword.Bluemix_notm}} CLI をインストールした後、IBM ID およびパスワードを使用して {{site.data.keyword.Bluemix_notm}} にログインできます。例えば次のようにします。
 
 ```
 ~$ bluemix login -a https://api.ng.bluemix.net
@@ -1013,8 +1013,8 @@ bluemix iam account-user-invite Mary IBM OrgManager Cloud SpaceAuditor
 ```
  bluemix iam account-user-reinvite USER_EMAIL ORG_NAME
 ```
- 
- 
+
+
 ### bluemix iam org-users
 {: #bluemix_iam_org_users}
 

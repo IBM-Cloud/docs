@@ -65,12 +65,12 @@ lastupdated: "2017-01-11"
 
 `入力したパスワードは正しくありません。`
 
-{{site.data.keyword.Bluemix_notm}} へのログインに使用した IBMid およびパスワードが無効です。
+{{site.data.keyword.Bluemix_notm}} へのログインに使用した IBM ID およびパスワードが無効です。
 {: tsCauses} 
  
-有効な IBMid とパスワードを取得するには、「マイ IBM プロファイル (My IBM profile)」ページに移動し、以下のいずれかのステップを実行します。
+有効な IBM ID とパスワードを取得するには、「マイ IBM プロファイル (My IBM profile)」ページに移動し、以下のいずれかのステップを実行します。
 {: tsResolve}
-  * IBM ID について登録済みであり、自分の ID とパスワードが有効であるかどうかを確認したい場合は、**「ログイン」**をクリックし、「ログイン」ページで IBM ID とパスワードを入力します。パスワードを忘れた場合は、「ログイン」ページにある**「パスワードを忘れた場合 (Forgot your password)」**をクリックして、パスワードをリセットします。IBMid を忘れた場合、あるいはパスワードに関する問題が続く場合は、Worldwide IBM Registration Help Desk にご相談ください。 
+  * IBM ID について登録済みであり、自分の ID とパスワードが有効であるかどうかを確認したい場合は、**「ログイン」**をクリックし、「ログイン」ページで IBM ID とパスワードを入力します。パスワードを忘れた場合は、「ログイン」ページにある**「パスワードを忘れた場合 (Forgot your password)」**をクリックして、パスワードをリセットします。IBM ID を忘れた場合、あるいはパスワードに関する問題が続く場合は、Worldwide IBM Registration Help Desk にご相談ください。 
   * IBM ID をお持ちでない場合は、**「登録」**をクリックして IBM ID とパスワードを登録してください。 
 
 
@@ -78,13 +78,13 @@ lastupdated: "2017-01-11"
 ## Softlayer ユーザー名を使用してログインできない
 {: #ts_softlayer_username}
 
-{{site.data.keyword.Bluemix_notm}} にログインするには、有効な IBMid とパスワードが必要です。
+{{site.data.keyword.Bluemix_notm}} にログインするには、有効な IBM ID とパスワードが必要です。
 
 
 Softlayer ユーザー名を使用して {{site.data.keyword.Bluemix_notm}} コンソールにログインしようとすると、以下のメッセージを受け取ります。
 {: tsSymptoms} 
 
-`この IBM ID または E メールを認識できません。(We didn't recognize this IBMid or email.)`
+`この IBM ID または E メールを認識できません。(We didn't recognize this IBM ID or email.)`
 
 ログインして Bluemix コンソールの「インフラストラクチャー」ダッシュボードを使用するには、IBM ID が必要です。
 {: tsCauses} 
