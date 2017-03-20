@@ -1384,8 +1384,8 @@ Para resolver o problema, inclua um arquivo `requirements.txt` e um arquivo `Pro
 	 web.py==0.37
      wsgiref==0.1.2
 	 ```
-	Para obter mais informações sobre como configurar o arquivo `requirements.txt`, consulte [Arquivos de requisitos](https://pip.readthedocs.org/en/1.1/requirements.html).
-	
+	Para obter mais informações sobre como configurar o arquivo `requirements.txt`, consulte [Arquivos de requisitos](https://pip.readthedocs.org/en/1.1/requirements.html). 
+	 
   2. Inclua um arquivo `Procfile` no diretório-raiz de seu aplicativo Python.
 	O arquivo `Procfile` deve conter o comando inicial do aplicativo Python. No comando a seguir, *yourappname* é o nome de seu aplicativo Python e *PORT* é o número da porta que o seu aplicativo Python deve usar para receber solicitações de usuários do app. *$PORT* é opcional. Se você não especificar PORT no comando inicial, o número da porta sob a variável de ambiente `VCAP_APP_PORT` que está dentro do aplicativo será usado em seu lugar. 
 	```

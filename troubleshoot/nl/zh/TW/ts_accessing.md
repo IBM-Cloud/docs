@@ -50,9 +50,9 @@ lastupdated: "2017-01-11"
 
 根據帳戶的設定方式，您可能可以使用其中一些登入選項： 
  * 具有 SoftLayer ID 的 SoftLayer 使用者必須透過[客戶入口網站 ![外部鏈結圖示](../icons/launch-glyph.svg)](https://control.softlayer.com){: new_window} 登入。
- * 具有 IBM ID 以及具有鏈結 Bluemix 帳戶或沒有鏈結 Bluemix 帳戶的 SoftLayer 使用者，可以透過[客戶入口網站 ![外部鏈結圖示](../icons/launch-glyph.svg)](https://control.softlayer.com){: new_window} 登入來開啟「SoftLayer 客戶入口網站」，或透過 [Bluemix 主控台 ![外部鏈結圖示](../icons/launch-glyph.svg)](https://console.{DomainName}){: new_window} 來開啟「基礎架構」儀表板。 
- * 沒有鏈結 SoftLayer 帳戶的 Bluemix 使用者必須透過 Bluemix 主控台登入。
- * 具有鏈結 SoftLayer 帳戶的 Bluemix 使用者可以透過 [Bluemix 主控台 ![外部鏈結圖示](../icons/launch-glyph.svg)](https://console.{DomainName}){: new_window} 或[客戶入口網站 ![外部鏈結圖示](../icons/launch-glyph.svg)](https://control.softlayer.com){: new_window} 登入。
+ * 具有 IBM ID 並且具有（或沒有）已鏈結 Bluemix 帳戶的 SoftLayer 使用者，可以透過[客戶入口網站 ![外部鏈結圖示](../icons/launch-glyph.svg)](https://control.softlayer.com){: new_window} 登入來開啟「SoftLayer 客戶入口網站」，或透過 [Bluemix 主控台 ![外部鏈結圖示](../icons/launch-glyph.svg)](https://console.{DomainName}){: new_window} 來開啟「基礎架構」儀表板。 
+ * 沒有已鏈結 SoftLayer 帳戶的 Bluemix 使用者必須透過 Bluemix 主控台登入。
+ * 具有已鏈結 SoftLayer 帳戶的 Bluemix 使用者可以透過 [Bluemix 主控台 ![外部鏈結圖示](../icons/launch-glyph.svg)](https://console.{DomainName}){: new_window} 或[客戶入口網站 ![外部鏈結圖示](../icons/launch-glyph.svg)](https://control.softlayer.com){: new_window} 登入。
  
 
 ## 密碼無效
@@ -70,7 +70,7 @@ lastupdated: "2017-01-11"
  
 若要取得有效的 IBM ID 及密碼，請移至「我的 IBM 設定檔」頁面，然後完成下列其中一個步驟：
 {: tsResolve}
-  * 如果您已登錄一個 IBM ID，而且想要檢查您的 ID 及密碼是否有效，請按一下**登入**，然後在「登入」頁面上輸入您的 IBM ID 及密碼。如果您忘記密碼，請按一下「登入」頁面上的**忘記密碼**來重設密碼。如果您忘記 IBM ID 或是持續發生密碼問題，請聯絡 Worldwide IBM Registration Help Desk 以取得協助。 
+  * 如果您已登錄一個 IBM ID，而且想要檢查您的 ID 及密碼是否有效，請按一下**登入**，然後在「登入」頁面上輸入您的 IBM ID 及密碼。如果您忘記密碼，請按一下「登入」頁面上的**忘記密碼**來重設密碼。如果您忘記 IBM ID 或是持續發生密碼問題，請與 Worldwide IBM Registration Help Desk 聯絡以取得協助。 
   * 如果您沒有 IBM ID，請按一下**登錄**來登錄一個 IBM ID 及密碼。 
 
 
@@ -91,7 +91,7 @@ lastupdated: "2017-01-11"
  
 如果您是使用 SoftLayer ID 的 SoftLayer 使用者，則必須先在「客戶入口網站」中於您可存取的每一個帳戶內切換至 IBM ID 鑑別，才能使用 IBM ID 鑑別登入。 
 
-請聯絡用於切換至 IBM ID 的主要使用者或帳戶管理者。
+請與主要使用者或帳戶管理者聯絡，以便切換至 IBM ID。
 {: tsResolve}
 
 
@@ -152,13 +152,13 @@ nslookup stage1.mybluemix.net
 在登錄取得 {{site.data.keyword.Bluemix_notm}} 試用帳戶之後，您可能無法登入 {{site.data.keyword.Bluemix_notm}}。相反地，您看到下列訊息：
 {: tsSymptoms}
 
-<code>您的帳戶處於擱置狀態。請稍候，最晚 24 小時即會收到電子郵件確認信，同時也請檢查垃圾郵件資料夾。如果您仍未收到電子郵件確認，請聯絡 <a href="http://ibm.biz/bluemixsupport.com" target="_blank">Bluemix 支援中心<img src="../icons/launch-glyph.svg" alt="外部鏈結圖示"></a>。</code>
+<code>您的帳戶處於擱置狀態。請稍候，最晚 24 小時即會收到電子郵件確認信，同時也請檢查垃圾郵件資料夾。如果您仍未收到電子郵件確認，請與 <a href="http://ibm.biz/bluemixsupport.com" target="_blank">Bluemix 支援中心 <img src="../icons/launch-glyph.svg" alt="外部鏈結圖示"></a> 聯絡。</code>
 
 
 在登錄取得 {{site.data.keyword.Bluemix_notm}} 試用帳戶之後，您會收到一封確認電子郵件。您必須按一下此封確認電子郵件中的鏈結，才能完成登錄程序。
 {: tsCauses} 
 
-確認電子郵件會寄送到您提供的電子郵件位址。請檢查您的收件匣以及垃圾郵件資料夾。如果您尚未收到確認電子郵件，請聯絡 [{{site.data.keyword.Bluemix_notm}} 支援中心 ![外部鏈結圖示](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}。  
+確認電子郵件會寄送到您提供的電子郵件位址。請檢查您的收件匣以及垃圾郵件資料夾。如果您尚未收到確認電子郵件，請與 [{{site.data.keyword.Bluemix_notm}} 支援中心 ![外部鏈結圖示](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window} 聯絡。  
 {: tsResolve}
 
 
@@ -202,7 +202,7 @@ nslookup stage1.mybluemix.net
   
 如果您因自己是合作人員（而非成員）而無法邀請使用者，則您必須刪除先前的 {{site.data.keyword.Bluemix_notm}} 帳戶，然後受邀以組織成員的身分加入帳戶。若要刪除先前的帳戶並以成員的身分加入帳戶，請完成下列步驟： 
 
-  1. 聯絡 [{{site.data.keyword.Bluemix_notm}} 支援中心 ![外部鏈結圖示](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window}，以開啟支援問題單並要求刪除您的帳戶。如果您的資料與要儲存並移至新帳戶的舊帳戶相關聯，請在電子郵件中包含此資訊。 
+  1. 與 [{{site.data.keyword.Bluemix_notm}} 支援中心 ![外部鏈結圖示](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window} 聯絡，以開啟支援問題單並要求刪除您的帳戶。如果您的資料與要儲存並移至新帳戶的舊帳戶相關聯，請在電子郵件中包含此資訊。 
   2. 刪除您的帳戶之後，請讓具有組織管理員角色的使用者，邀請您以組織管理員的身分加入組織。然後，透過該邀請註冊 {{site.data.keyword.Bluemix_notm}}。 
 
 
