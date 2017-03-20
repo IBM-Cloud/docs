@@ -48,7 +48,7 @@
 		"href": "pricing/index.html"
 	}, {
 		"title": "Architecture Center",
-		"description": "Durchsuchen Sie unsere Architekturen, um die beste Lösung für Ihre Cloud-Apps zu bestimmen. ",
+		"description": "Durchsuchen Sie unsere Architekturen, um die beste Lösung für Ihre Cloud-Apps zu bestimmen.",
 		"img": "homepage/images/architectures.svg",
 		"href": "https://developer.ibm.com/architecture/"
 	}]
