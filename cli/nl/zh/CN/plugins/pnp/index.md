@@ -86,7 +86,7 @@ chmod a+x ./private-network-peering-linux-amd64
 | pnp-create  | 创建专用网络对等连接   |
 | pnp-delete  | 删除专用网络对等连接   |
 | pnp-show    | 列出所有专用网络对等连接  |
-{: caption="Table 1. Private network peering commands" caption-side="top"}
+{: caption="表 1. 专用网络对等连接命令" caption-side="top"}
 
 
 ### 命令用法

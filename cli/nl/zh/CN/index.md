@@ -36,7 +36,7 @@ Cloud Foundry cf 命令行工具是所有 {{site.data.keyword.Bluemix_notm}} CLI
 | *{{site.data.keyword.Bluemix_notm}}：bx* | *Cloud Foundry：cf* |
 |---------------------|---------------|
 | [下载 CLI](http://clis.ng.bluemix.net/)<br> [查看文档](/docs/cli/reference/bluemix_cli/index.html)|  [下载 CLI ![外部链接图标](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}<br> [查看文档](/docs/cli/reference/cfcommands/index.html) |
-{: caption="Table 1. CLI download" caption-side="top"}
+{: caption="表 1. CLI 下载" caption-side="top"}
 
 
 ## ![](./images/CLI_Plugin.svg) 命令行界面插件
@@ -64,12 +64,12 @@ bluemix plugin install plugin_name -r bluemix-bx
 | *{{site.data.keyword.activedeployshort}} CLI* | *{{site.data.keyword.autoscaling}} CLI* | *IBM Containers*  |
 |-----|-----|-----|
 | 插件名称：active-deploy<br> [查看文档](/docs/services/ActiveDeploy/cli.html#cli) | 插件名称：auto-scaling<br> [查看文档](/docs/cli/plugins/auto-scaling/index.html) |  插件名称：IBM-Containers<br> [查看文档](/docs/cli/plugins/containers/index.html) |
-{: caption="Table 2. Plug-ins" caption-side="top"}
+{: caption="表 2. 插件" caption-side="top"}
 
 |  *专用网络对等* | *VPN*  |
 |-----|-----|
 | 插件名称：private-network-peering<br> [查看文档](/docs/cli/plugins/pnp/index.html) |插件名称：VPN<br> [查看文档](/docs/cli/plugins/bx_vpn/index.html) |
-{: caption="Table 3. Plug-ins" caption-side="top"}
+{: caption="表 3. 插件" caption-side="top"}
 
 
 ### 扩展 Cloud Foundry 命令行界面：cf
@@ -93,13 +93,13 @@ cf install-plugin plugin_name -r bluemix-cf
 | *Active Deploy* | *管理控制台* |
 |-----------------|-----------------|
 | 插件名称：active-deploy<br>  [查看文档](/docs/services/ActiveDeploy/cli.html#cli) |  插件名称：bluemix-admin<br> [查看文档](/docs/cli/plugins/bluemix_admin/index.html) |
-{: caption="Table 4. Plug-ins" caption-side="top"}
+{: caption="表 4. 插件" caption-side="top"}
 
 
 | *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* | *VPN* |
 |-----------------|-----------------|
 | 插件名称：ibm-containers<br> [查看文档](https://www.{DomainName}/docs/containers/container_cli_cfic.html#container_cli_cfic) | 插件名称：VPN<br> [查看文档](/docs/cli/plugins/vpn/index.html) |
-{: caption="Table 5. Plug-ins" caption-side="top"}
+{: caption="表 5. 插件" caption-side="top"}
 
 
 ## ![](./images/Integrated_Dev_Tools.svg) 集成开发工具
@@ -109,4 +109,4 @@ cf install-plugin plugin_name -r bluemix-cf
 | *{{site.data.keyword.jazzhub_short}}* | *Liberty for Java* | *MobileFirst* | *{{site.data.keyword.rules_short}}* | *Eclipse Tools for Bluemix* |
 |-------------|----------|----------|----------|----------|
 | [Egit Eclipse 插件 ![外部链接图标](../icons/launch-glyph.svg)](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_egit){: new_window} <br> [RTC Eclipse 插件 ![外部链接图标](../icons/launch-glyph.svg)](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_rtc){: new_window} | [Liberty Eclipse 插件 ![外部链接图标](../icons/launch-glyph.svg)](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Eclipse 插件 ![外部链接图标](../icons/launch-glyph.svg)](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Rules Designer Eclipse 插件 ![外部链接图标](../icons/launch-glyph.svg)](/docs/services/rules/index.html#rulov002) | [Bluemix Eclipse 插件 ![外部链接图标](../icons/launch-glyph.svg)](https://console.ng.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html){: new_window} |
-{: caption="Table 6. Plug-ins" caption-side="top"}
+{: caption="表 6. 插件" caption-side="top"}

@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-01-24"
+lastupdated: "2017-02-16"
 
 ---
 
@@ -16,36 +16,18 @@ lastupdated: "2017-01-24"
 # Initiation à l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}
 {: #getting-started}
 
-L'interface de ligne de commande
-{{site.data.keyword.Bluemix_notm}} vous permet d'interagir avec vos
-applications, vos serveurs virtuels, vos conteneurs et d'autres services
-dans {{site.data.keyword.Bluemix_notm}} via une interface de ligne de commande. L'interface
-de ligne de commande {{site.data.keyword.Bluemix_notm}} intègre
-également des outils de communauté, comme l'interface de ligne de commande
-Cloud Foundry, l'interface de ligne de commande Docker et l'interface de ligne
-de commande OpenStack, et initialise des paramètres d'environnement qui
-vous permettent d'interagir avec différents types de traitement.
+L'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} vous permet d'interagir avec vos applications, vos serveurs virtuels, vos conteneurs et d'autres services via une interface de ligne de commande. L'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} intègre également des outils de communauté, comme l'interface de ligne de commande Cloud Foundry, l'interface de ligne de commande Docker et l'interface de ligne de commande OpenStack, et initialise des paramètres d'environnement qui vous permettent d'interagir avec différents types de traitement.
 
-**Restriction** : l'interface de ligne de commande
-{{site.data.keyword.Bluemix_notm}} n'est pas prise en charge par
-Cygwin. Ne l'utilisez donc pas dans la fenêtre de ligne de commande Cygwin.
+**Restriction** : l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} n'est pas prise en charge par Cygwin. Ne l'utilisez donc pas dans la fenêtre de ligne de commande Cygwin.
 
-**Remarque** : si votre réseau comporte un serveur
-proxy HTTP entre l'hôte qui exécute l'interface de ligne de commande
-et {{site.data.keyword.Bluemix_notm}}, vous devez spécifier le nom
-d'hôte ou l'adresse IP du serveur proxy dans la variable d'environnement HTTP_PROXY.
+**Remarque** : si votre réseau comporte un serveur proxy HTTP entre l'hôte qui exécute l'interface de ligne de commande et {{site.data.keyword.Bluemix_notm}}, vous devez spécifier le nom d'hôte ou l'adresse IP du serveur proxy dans la variable d'environnement HTTP_PROXY.
 
 ## Installation de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}
 {: #install_bluemix_cli}
 
-Avant d'installer {{site.data.keyword.Bluemix_notm}},
-assurez-vous que l'interface de ligne de commande Cloud Foundry est
-installée sur votre système.
+Avant d'installer l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}, installez l'[l'interface de ligne de commande cf ![icône de lien externe](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}.
 
-Pour Mac OS et Windows, téléchargez le
-[package de l'interface de ligne de
-commande {{site.data.keyword.Bluemix_notm}}](/docs/cli/index.html#downloads) et exécutez le
-programme d'installation.
+Pour Mac OS et Windows, téléchargez le [package de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}](/docs/cli/index.html#downloads) et exécutez le programme d'installation.
 
 Pour Linux, procédez comme suit :
 
@@ -64,10 +46,7 @@ Pour Linux, procédez comme suit :
   ~$
   ```
 
-  2. Accédez au répertoire `Bluemix_CLI`, puis exécutez
-la commande `./install_bluemix_cli` avec les droits root. Vous
-pouvez exécuter la commande en tant qu'utilisateur root ou utiliser la
-commande `sudo` afin d'obtenir les droits root. Par exemple :
+  2. Accédez au répertoire `Bluemix_CLI`, puis exécutez la commande `./install_bluemix_cli` avec les droits root. Vous pouvez exécuter la commande en tant qu'utilisateur root ou utiliser la commande `sudo` afin d'obtenir les droits root. Par exemple :
 
   ```
   ~# cd Bluemix_CLI
@@ -79,20 +58,14 @@ commande `sudo` afin d'obtenir les droits root. Par exemple :
   ~/Bluemix_CLI#
   ```
 
-Vous pouvez maintenant commencer à utiliser l'interface de ligne de
-commande {{site.data.keyword.Bluemix_notm}} ou installer des plug-in
-supplémentaires.
+Vous pouvez maintenant commencer à utiliser l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} ou installer des plug-in supplémentaires.
 
 ## Installation d'un plug-in
 {: #install_plug-in}
 
-A l'instar de l'interface de ligne de commande Cloud Foundry,
-l'interface
-de ligne de commande {{site.data.keyword.Bluemix_notm}} prend aussi en
-charge une infrastructure d'extension de plug-in permettant d'ajouter des commandes aux commandes intégrées.
+A l'instar de l'interface de ligne de commande Cloud Foundry, l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} prend en charge une infrastructure d'extension de plug-in permettant d'ajouter des commandes aux commandes intégrées.
 
-Pour installer un plug-in depuis votre environnement local,
-procédez comme suit :
+Pour installer un plug-in depuis votre environnement local, procédez comme suit :
 
   1. Téléchargez le plug-in. Par exemple :
 
@@ -172,8 +145,7 @@ pouvez afficher la liste des plug-in du référentiel `Bluemix`
   ~$
   ```
 
-  2. Installez ensuite le plug-in depuis le référentiel
-`Bluemix` à l'aide de la commande `bluemix plugin install`. Par exemple :
+  2. Installez le plug-in depuis le référentiel `Bluemix` à l'aide de la commande `bluemix plugin install`. Par exemple :
 
   ```
   ~$ bluemix plugin install auto-scaling -r Bluemix
@@ -188,10 +160,7 @@ pouvez afficher la liste des plug-in du référentiel `Bluemix`
 ## Connexion à l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}
 {: #log_bmcli}
 
-Après avoir installé l'interface de ligne de commande
-{{site.data.keyword.Bluemix_notm}}, vous pouvez vous connecter à
-{{site.data.keyword.Bluemix_notm}} avec votre compte et votre mot de
-passe {{site.data.keyword.Bluemix_notm}}. Par exemple :
+Après avoir installé l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}, vous pouvez vous connecter à {{site.data.keyword.Bluemix_notm}} à l'aide de votre IBMid et de votre mot de passe. Par exemple :
 
 ```
 ~$ bluemix login -a https://api.ng.bluemix.net
@@ -204,10 +173,7 @@ Authenticating...
 OK
 ```
 
-Vous êtes désormais prêt à utiliser les commandes
-{{site.data.keyword.Bluemix_notm}} intégrées. Par exemple, exécutez la
-commande `bluemix catalog templates` pour répertorier
-tous les modèles de conteneur boilerplate {{site.data.keyword.Bluemix_notm}} disponibles.
+Vous êtes désormais prêt à utiliser les commandes {{site.data.keyword.Bluemix_notm}} intégrées. Par exemple, exécutez la commande `bluemix catalog templates` pour répertorier tous les modèles de conteneur boilerplate {{site.data.keyword.Bluemix_notm}} disponibles.
 
 ```
 ~$ bluemix catalog templates
@@ -1054,8 +1020,8 @@ Renvoyer l'invitation à un utilisateur (gestionnaire d'organisation ou proprié
 ```
  bluemix iam account-user-reinvite EMAIL_UTIL NOM_ORG
 ```
- 
- 
+
+
 ### bluemix iam org-users
 {: #bluemix_iam_org_users}
 
@@ -3250,8 +3216,7 @@ bluemix ic start proxy
 ### bluemix ic stats
 {: #bluemix_ic_stats}
 
-Affichez les statistiques d'utilisation actuelles d'un ou de plusieurs conteneurs. Utilisez `CTRL+C` pour quitter. 
-Pour plus d'informations, voir la commande
+Affichez les statistiques d'utilisation actuelles d'un ou de plusieurs conteneurs. Utilisez `CTRL+C` pour quitter. Pour plus d'informations, voir la commande
 [stats](https://docs.docker.com/engine/reference/commandline/stats/){: new_window}
 dans l'aide de Docker.
 

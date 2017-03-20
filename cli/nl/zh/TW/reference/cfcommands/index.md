@@ -825,5 +825,7 @@ cf -v
 ## 相關鏈結
 {: #general}
 
-* [下載 Cloud Foundry CLI ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}
-* [快速參照卡 - cf 指令 ![外部鏈結圖示](../../../icons/launch-glyph.svg)](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html){: new_window}
+* [下載 Cloud Foundry CLI ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases)
+{: new_window}
+* [快速參照卡 - cf 指令 ![外部鏈結圖示](../../../icons/launch-glyph.svg)](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html)
+{: new_window}
