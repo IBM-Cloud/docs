@@ -44,7 +44,7 @@ lastupdated: "2016-12-05"
 <dd>提供網際網路上配置給組織的路徑。路徑具有一個子網域及一個網域。子網域一般是應用程式名稱。網域可能是系統網域，或您針對應用程式所登錄的自訂網域。請參閱[管理自訂網域](orgs_spaces.html#managedomains)。<br/>
 <p>**附註**：如果您新增自訂網域，則必須配置 DNS 伺服器來解析自訂網域，以指向 {{site.data.keyword.Bluemix_notm}} 系統網域。使用此方式，{{site.data.keyword.Bluemix_notm}} 接到您的自訂網域的要求時，可以將它適當地遞送至您的應用程式。</p></dd>
 <dt>配額</dt>
-<dd>代表組織的資源限制，包括可配置供組織使用的服務數目及記憶體量。建立組織時，會指派配額。組織空間中的任何應用程式或服務都會影響配額使用。使用「隨收隨付制」或「訂閱」方案，您可以在組織需要變更時，調整 Cloud Foundry 應用程式及容器的配額。請參閱[管理配額](orgs_spaces.html#managequota)。</dd>
+<dd>代表組織的資源限制，包括可配置供組織使用的服務數目及記憶體量。建立組織時，會指派配額。組織空間中的任何應用程式或服務都會使用配額。使用「隨收隨付制」或「訂閱」方案，您可以在組織需要變更時，調整 Cloud Foundry 應用程式及容器的配額。請參閱[管理配額](orgs_spaces.html#managequota)。</dd>
 </dl>
 
 在 {{site.data.keyword.Bluemix_notm}} 中，您可以使用組織來啟用團隊成員之間的協同作業，以及使用下列方式促進專案資源的邏輯分組：
@@ -57,7 +57,7 @@ lastupdated: "2016-12-05"
 建立組織時，組織名稱在 {{site.data.keyword.Bluemix_notm}} 內必須是唯一的。
 如果另一位 {{site.data.keyword.Bluemix_notm}}「公用」、「專用」或「本端」使用者已在使用組織名稱，則您必須指定新的名稱。建立組織之後，您會自動獲指派*組織管理員* 許可權，這可讓您編輯組織名稱、新增團隊成員，以及在組織中建立或刪除空間。
 
-您必須聯絡 [{{site.data.keyword.Bluemix_notm}} 支援中心 ![外部鏈結圖示](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window}，以刪除組織。當您要求支援團隊刪除組織時，會刪除組織內的所有空間、應用程式及服務。
+您必須與 [{{site.data.keyword.Bluemix_notm}} 支援中心 ![外部鏈結圖示](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window} 聯絡，以刪除組織。當您要求支援團隊刪除組織時，會刪除組織內的所有空間、應用程式及服務。
 
 可以將下列[使用者角色](/docs/admin/users_roles.html#userrolesinfo)指派給組織中的團隊成員：
 
@@ -119,7 +119,7 @@ lastupdated: "2016-12-05"
 ## 刪除現有組織或空間
 {: #deleteorgs}
 
-身為帳戶擁有者，您可以聯絡 [{{site.data.keyword.Bluemix_notm}} 支援中心 ![外部鏈結圖示](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window}，以刪除組織。 
+身為帳戶擁有者，您可以與 [{{site.data.keyword.Bluemix_notm}} 支援中心 ![外部鏈結圖示](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window} 聯絡，以刪除組織。 
 
 **附註**：刪除作業無法回復。您會遺失與組織相關聯的所有應用程式和服務。
 

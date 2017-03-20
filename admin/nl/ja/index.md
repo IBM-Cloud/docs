@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-24"
+lastupdated: "2017-02-22"
 
 ---
 
@@ -57,7 +57,7 @@ lastupdated: "2017-01-24"
 |-----------------|-------------------|
 | 保守の更新情報 | 保留中および完了した通知の全リストおよび履歴を確認するには、**「管理」&gt;「システム情報」** &gt;「*Number* 件の**保留中 **」をクリックします。スケジュールされた停止を伴う保守更新イベントに関するアラートも「状況」ページで受け取ります。**「サポート」** &gt; **「状況」**をクリックします。E メールを任意の受信者に送信するサブスクリプションをセットアップすることで、通知機能を拡張できます。あるいは、Web フックを使用して、「管理」ページの通知を任意の Web サービスと統合するサブスクリプションをセットアップできます。|
 | 重大なインシデント | 重大なインシデントに関するアラートは「状況」ページで受け取ります。**「サポート」** &gt; **「状況」**をクリックします。E メールを任意の受信者に送信する通知サブスクリプションをセットアップすることで、通知機能を拡張できます。あるいは、Web フックを使用して、「管理」ページの通知を任意の Web サービスと統合するサブスクリプションをセットアップできます。  |  
-| しきい値イベント | ご使用の環境で物理ディスク、物理メモリー、予約済みディスク、または予約済みメモリーのリソースしきい値に達したときに、選択した受信者に E メールを送信する通知サブスクリプションをセットアップできます。あるいは、Web フックを使用して、通知を任意の Web サービスと統合するサブスクリプションをセットアップできます。  |  
+| しきい値イベント | ご使用の環境で組織割り当て量、物理ディスク、物理メモリー、予約済みディスク、または予約済みメモリーのしきい値に達したときに、選択した受信者に E メールを送信する通知サブスクリプションをセットアップできます。あるいは、Web フックを使用して、通知を任意の Web サービスと統合するサブスクリプションをセットアップできます。  |  
 | {{site.data.keyword.Bluemix_notm}} 状況 | いつでも、「状況」ページでプラットフォーム、サービス、および {{site.data.keyword.Bluemix_notm}} インスタンスの最新状況を表示できます。**「サポート」** &gt; **「状況」**をクリックします。  |
 {: caption="Table 2. Event types and notifications methods" caption-side="top"}
 
@@ -110,7 +110,7 @@ lastupdated: "2017-01-24"
 | 有効 | E メール通知を有効にする場合は、このオプションを選択します。E メール通知を無効にする場合は、選択をクリアします。デフォルトでは、サブスクリプションは有効になっています。 |
 | タイプ  | **「E メール」**を選択します。 |
 | イベント | **「しきい値」**を選択します。 |
-| しきい値 | 通知するしきい値のタイプ (「物理ディスク (Physical Disk)」、「物理メモリー (Physical Memory)」、「予約済みディスク (Reserved Disk)」、または「予約済みメモリー (Reserved Memory)」) を選択します。 |
+| しきい値 | 通知するしきい値のタイプ (「組織割り当て量 (Organization Quota)」、「物理ディスク (Physical Disk)」、「物理メモリー (Physical Memory)」、「予約済みディスク (Reserved Disk)」、または「予約済みメモリー (Reserved Memory)」) を選択します。 |
 | しきい値方向 | 設定した「(%) を上/下回ったら通知 (Notify When Crossing)」の値を超えるときのデータの移動方向 (「昇 (Ascending)」または「降 (Descending)」) を選択します。例えば、「(%) を上/下回ったら通知 (Notify When Crossing)」の値が 50% で、方向が降の場合、使用率 (%) が 50% 以上から 50% 未満に低下した場合にのみ通知されます。方向を昇に設定した場合、使用率 (%) が 50% 未満から 50% 超に増加した場合に通知されます。|
 | (%) を上回ったら通知 (Notify When Crossing Above (%)) | 通知を受けるしきい値 (パーセンテージ) を入力します。「しきい値方向」フィールドで「昇 (Ascending)」プロパティーを選択した場合、しきい値がこのパーセンテージを上回ったときに E メール通知が送信されます。 |
 | (%) を下回ったら通知 (Notify When Crossing Below (%)) | 通知を受けるしきい値 (パーセンテージ) を入力します。「しきい値方向」フィールドで「降 (Descending)」プロパティーを選択した場合、しきい値がこのパーセンテージを下回ったときに E メール通知が送信されます。 |
@@ -120,10 +120,11 @@ lastupdated: "2017-01-24"
 | 宛先 | メール通知の受信者の E メール・アドレス (複数の場合はコンマ区切りリストを使用する) を入力します。E メールを他のユーザーに複製送信するには、「cc」オプションまたは「bcc」オプションを展開します。これは必須フィールドです。 |
 {: caption="Table 4. Fields for email notification subscriptions about maintenance updates or incidents" caption-side="top"}
 
-しきい値データは 6 時間おきに収集されます。  通知は、値が設定したしきい値をまたがったときに一度だけ送信されます。昇を選択した場合、値がしきい値を下回り、その後またしきい値を上回らない限り、新しい通知は送信されません。同様に、降を選択した場合、再び通知を受けるのは、値が設定したしきい値を上回り、その後またしきい値を下回った場合のみです。 
+しきい値データは 6 時間おきに収集されます。  通知は、値が設定したしきい値をまたがったときに一度だけ送信されます。昇を選択した場合、値がしきい値を下回り、その後またしきい値を上回らない限り、新しい通知は送信されません。同様に、降を選択した場合、通知を受けるのは、値が設定したしきい値を上回り、その後またしきい値を下回った場合のみです。 
 
-しきい値が満たされたときに通知が送信されるまで 6 時間待機しない場合、フォームのフィールドに入力した後に、**「保存してテスト」**をクリックすることで、通知を保存し、サンプル・データを使用して通知をテストできます。
+しきい値が満たされて通知が送信されるまで 6 時間待機したくない場合は、フォームのフィールドに入力した後に、**「保存してテスト」**をクリックすることで、サンプル・データを使用したテスト通知を受け取ることができます。  
 
+組織割り当て量のしきい値通知には、その通知に対応する 6 時間に、指定されたしきい値 (パーセンテージ) をまたがった組織のみが含まれます。それより前のいずれかの 6 時間にしきい値をまたがった組織は、しきい値を上回ったまま、または下回ったままであっても含まれません。組織割り当て量の通知を送信するかどうかを決定する際、組織の割り当て量を構成する 3 つのリソース (予約済みメモリー、サービス、および経路) は独立して考慮されます。例えば、組織割り当て量のしきい値が値 50 % で構成されている場合、組織が使用した予約済みメモリーの量が組織割り当て量の 50 % を超えると通知が送信されます。その後、ある時点で、同じ組織が使用したサービスの数が組織割り当て量の 50 % を超えると、使用済みメモリー量は変わらなくても、同じ組織割り当て量のしきい値サブスクリプションでまた通知が送信されることになります。
 
 {: #webhooknotsub}
 
@@ -157,7 +158,7 @@ lastupdated: "2017-01-24"
 | 有効 | 通知を有効にする場合は、このオプションを選択します。通知を無効にする場合は、選択をクリアします。デフォルトでは、サブスクリプションは有効になっています。 |
 | タイプ  | **「Web フック」**を選択します。 |
 | イベント | **「しきい値」**を選択します。 |
-| しきい値 | 通知するしきい値のタイプ (「物理ディスク (Physical Disk)」、「物理メモリー (Physical Memory)」、「予約済みディスク (Reserved Disk)」、または「予約済みメモリー (Reserved Memory)」) を選択します。 |
+| しきい値 | 通知するしきい値のタイプ (「組織割り当て量 (Organization Quota)」、「物理ディスク (Physical Disk)」、「物理メモリー (Physical Memory)」、「予約済みディスク (Reserved Disk)」、または「予約済みメモリー (Reserved Memory)」) を選択します。|
 | しきい値方向 | しきい値データを昇方向で見るのか降方向で見るのかを選択します。
 | (%) を下回ったら通知 (Notify When Crossing Below (%)) | **「降 (Descending)」**の**「しきい値方向」**を選択した場合、通知を受けるしきい値 (%) を入力します。しきい値がこのパーセンテージを下回ったときに、Web フック通知が送信されます。 |
 | (%) を上回ったら通知 (Notify When Crossing Above (%)) | **「昇 (Ascending)」**の**「しきい値方向」**を選択した場合、通知を受けるしきい値 (%) を入力します。しきい値がこのパーセンテージを上回ったときに、Web フック通知が送信されます。 |
@@ -169,6 +170,11 @@ lastupdated: "2017-01-24"
 | URL | Web サービスに接続するための URL を入力します。 |
 {: caption="Table 6. Form fields for a webhook notification subscription about thresholds" caption-side="top"}
 
+しきい値データは 6 時間おきに収集されます。  通知は、値が設定したしきい値をまたがったときに一度だけ送信されます。昇を選択した場合、値がしきい値を下回り、その後またしきい値を上回らない限り、新しい通知は送信されません。同様に、降を選択した場合、再び通知を受けるのは、値が設定したしきい値を上回り、その後またしきい値を下回った場合のみです。 
+
+しきい値が満たされたときに通知が送信されるまで 6 時間待機しない場合、フォームのフィールドに入力した後に、**「保存してテスト」**をクリックすることで、通知を保存し、サンプル・データを使用して通知をテストできます。
+
+組織割り当て量のしきい値通知には、その通知に対応する 6 時間に、指定されたしきい値 (パーセンテージ) をまたがった組織のみが含まれます。それより前のいずれかの 6 時間にしきい値をまたがった組織は、しきい値を上回ったまま、または下回ったままであっても含まれません。組織割り当て量の通知を送信するかどうかを決定する際、組織の割り当て量を構成する 3 つのリソースである予約済みメモリー、サービス、および経路は独立して考慮されます。例えば、組織割り当て量のしきい値が値 50 % で構成されている場合、組織が使用した予約済みメモリーの量が組織割り当て量の 50 % を超えると通知が送信されます。その後、ある時点で、同じ組織が使用したサービスの数が組織割り当て量の 50 % を超えると、使用済みメモリー量は変わらなくても、同じ組織割り当て量のしきい値サブスクリプションでまた通知が送信されることになります。
 
 {: #payload}
 
@@ -192,6 +198,7 @@ lastupdated: "2017-01-24"
 
 | **IBM 値** | **説明** | **イベント・タイプ** |
 |----------------|----------------|------------------------|
+| {{content.org_quota}} | 組織割り当て量しきい値 | しきい値 |
 | {{content.physical_disk}} | 物理ディスクしきい値 | しきい値 |
 | {{content.physical_memory}} | 物理メモリーメモリーしきい値 | しきい値 |  
 | {{content.reserved_disk}} | 予約済みディスクしきい値 | しきい値 |
@@ -588,8 +595,8 @@ DEA 別のメモリー、ディスク、CPU の使用量を表示するには、
             "id":"cool-service-plan-id",
             "metadata":{
                "bullets":[
-                                    "1 GB Min per instance. 10 GB Max per instance."
-],
+                  "1 GB Min per instance. 10 GB Max per instance."
+               ],
                "costs":[
                   {
                      "unitId":"INSTANCES_PER_MONTH",
@@ -829,7 +836,7 @@ JSON ファイルを埋めるのに役立つ表を以下に示します。
 <dd>組織のすべてのスペースで割り振ることのできるパブリック IP アドレスの最大数。</dd>
 </dl>
 <strong>注:</strong> 環境にまだコンテナーがない場合、または、環境内のコンテナーをまだセットアップしていない場合は、エラー・メッセージが出されます。
-<p>コンテナーについて詳しくは、『[IBM コンテナーについて](https://console.ng.bluemix.net/docs/containers/container_ov.html)』を参照してください。コンテナー割り当て量について詳しくは、『[割り当て量および Bluemix アカウント]( https://console.ng.bluemix.net/docs/containers/container_planning_org_ov.html#container_planning_quota)』を参照してください。</p>
+<p>コンテナーについて詳しくは、『[IBM コンテナーについて](/docs/containers/container_ov.html)』を参照してください。コンテナー割り当て量について詳しくは、『[割り当て量および Bluemix アカウント](/docs/containers/container_planning_org_ov.html#container_planning_quota)』を参照してください。</p>
 <strong>注:</strong> {{site.data.keyword.Bluemix_notm}} シドニー地域ではコンテナーを使用できません。</li>
 </ul>
 <li>「組織の管理」ページで行った変更を保存するには、<strong>「保存」</strong>をクリックします。</li>
@@ -896,13 +903,12 @@ JSON ファイルを埋めるのに役立つ表を以下に示します。
   2. **「検索」**フィールドに、検索するグループ名を入力し、取り込まれたリストからグループ名を選択します。
   3. 次に、**「組織」**フィールドで、組織名を入力し、取り込まれたリストから該当する組織を選択することで、ユーザー・グループを追加する組織を選択します。
   4. 選択した組織にユーザー・グループを追加するには、**「ユーザーの追加」**をクリックします。
-  
 
   **注**: 50 人を超えるユーザーのグループは、バックグラウンド・バッチ・ジョブを介して追加されます。追加操作が成功すると、ユーザーまたはグループが表に追加され、表示および検索できるようになります。追加されたユーザーには、許可は割り当てられていません。
 
 * ユーザー ID、ユーザーの E メール・アドレス、およびユーザーを追加する予定の組織が含まれているスプレッドシートをインポートすることで、ユーザー・グループを追加します。**Superuser** 許可、または **Write** アクセス権限がある **Users** 許可を持っている場合、ユーザーを追加することができます。
 
-**注**: ユーザー・レジストリーで使用されている値に一致するユーザー ID を入力してください。
+  **注**: ユーザー・レジストリーで使用されている値に一致するユーザー ID を入力してください。
 
   1. **「ユーザーのインポート」**をクリックします。
   2. **「テンプレート (.CSV) のダウンロード」**をクリックして、入力可能な必須列が入ったスプレッドシートをダウンロードします。あるいは、必須の列見出し**「ユーザー ID」**、**「E メール」**、および**「組織」**が含まれているスプレッドシートを使用して、自分で作成することもできます。テンプレートには、オプションの 2 つの列 (**「名前」**と**「姓」**) も含まれています。
@@ -948,40 +954,39 @@ JSON ファイルを埋めるのに役立つ表を以下に示します。
 | Users | **Users** 許可を持つユーザーには、ユーザーのリストを **Read** (表示) する権限、およびユーザーを **Write** (追加または削除) する権限を割り当てることができます。この許可では、他のユーザーの許可を設定することはできません。書き込みアクセスでは、ユーザーは環境への新規ユーザーの追加、環境からのユーザーの削除、および環境内にすでに存在する組織への既存のユーザーの追加を行うことができます。さらに、**Write** アクセスでは、ユーザーは新規組織の追加、組織の削除、および組織内のユーザーの編集を行うことができます。 |
 {: caption="Table 14. Permissions" caption-side="top"}
 
-## Admin REST API を使用したユーザーの管理
-{: #usingadminapi}
+## REST API の使用 
+{: #auth_adminapi}
 
-`Admin` REST API を使用して、{{site.data.keyword.Bluemix_notm}} インスタンスのユーザーの追加と削除を行うことができます。`Admin` REST API のエンドポイントおよび JSON のリソースは、コマンド・ラインからの基本操作を可能にするために実験に基づいて提供されています。この情報の例に含まれているエンドポイントと URL は、急な通知で変更または廃止される可能性があります。
+REST API コマンドを使用するには、まず認証が必要です。セッションを生成してサポートするために、cURL コマンドで以下のタスクを行えます。
 
-他のツールを使用するという選択肢もありますが、以下のツールはこの後の例を使用するための前提条件です。他のツールも使用してください。
-* cURL。REST API 要求をコマンドとして入力するために必要です。cURL は、HTTP 要求をサーバーに送信し、コマンド・ライン・インターフェースを介してサーバー応答を受信するための、無料ユーティリティーです。cURL は [cURL Download サイト ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://curl.haxx.se/download.html){: new_window} からダウンロードできます。
-* Python。Python の pretty-print JSON ツールを使用するために必要です。このオプション・ツールは、JSON テキストを入力として取り、読みやすい出力を提供します。Python は [Python Downloads サイト ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://www.python.org/downloads){: new_window} からダウンロードできます。
+* [管理コンソールへのログイン](#auth_loginapi) 
+* [ユーザー ID とパスワードの保管](#auth_setuidpw)
+* [Cookie の保管](#auth_apistorecook)
+* [Cookie の再使用](#auth_apireusecook)
 
 ### 管理コンソールへのログイン
+{: #auth_loginapi}
 
-`Admin` API 要求を実行する前に、管理コンソールにログインする必要があります。**Superuser** 許可、または **Write** アクセス権限がある **Users** 許可を持っている場合、ユーザーを追加または削除することができます。他のユーザーの許可を編集するには、**Superuser** 許可を持っている必要があります。
+`Admin` API 要求を実行する前に、管理コンソールにログインする必要があります。 
 
-管理コンソールにログインするには、`https://<your_host>.ibm.com/login` エンドポイントで基本アクセス認証を使用できます。サーバーは、セッションで Cookie を返します。その Cookie を、管理コンソールのすべての操作に使用します。
+管理コンソールにログインするには、`https://console.<region>.bluemix.net/login` エンドポイントで基本アクセス認証を使用できます。サーバーは、セッションで Cookie を返します。その Cookie を、管理コンソールのすべての操作に使用します。
 
 **注:** 数時間使用されない場合、そのセッションは無効になります。
 
 管理コンソールにログインするには、次のコマンドを実行します。
 
-
-`curl --user <user_id>:<password> -c ./cookies.txt --header "Accept: application/json" https://<your_host>.ibm.com/login | python -m json.tool`
+`curl --user <user_id>:<password> -c ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/login | python -m json.tool`
 {: codeblock}
 
 <dl class="parml">
-
 <dt class="pt dlterm">--user <em>user_id</em>:<em>password</em></dt>
 <dd class="pd">ユーザー ID とパスワードを受け入れ、Basic 許可ヘッダーを送信します。</dd>
-
 <dt class="pt dlterm">-c <em>filename</em></dt>
 <dd class="pd">指定されたユーザー ID とパスワードを、指定されたファイルに Cookie として保管します。</dd>
-
+<dt class="pt dlterm">-b <em>filename</em></dt>
+<dd class="pd">指定されたファイルで、指定されたユーザー ID とパスワードを Cookie として取得します。</dd>
 <dt class="pt dlterm">--header</dt>
 <dd class="pd">Accept ヘッダーを送信します。</dd>
-
 </dl>
 
 このコマンドの出力例を以下に示します。
@@ -996,6 +1001,64 @@ JSON ファイルを埋めるのに役立つ表を以下に示します。
 }
 ```
 {: screen}
+
+### ユーザー ID とパスワードの保管
+{: #auth_setuidpw}
+
+ログイン時に毎回手動で入力する必要がないように、ユーザー ID とパスワードを保管することもできます。ユーザー ID とパスワードを再使用のために保管するには、以下の cURL の例を利用してください。
+
+`curl -X GET -H "Authorization: Basic <redacted>" -H "Accept: application/json" "http://localhost:3000/login"`
+{: codeblock}
+
+認証要求のたびに再入力する必要がないようにするために、ログイン情報を別のファイルにセットアップしてそのファイルを呼び出すには、cURL コマンドの `--netrc` オプションを使用します。
+
+cURL で `--netrc` オプションを使用するには、まず、以下のいずれかの方法でユーザーのホーム・ディレクトリーにファイルを作成します。
+* UNIX システムでは、.netrc という名前のファイルを作成します。 
+* Windows システムでは、_netrc という名前のファイルを作成します。 
+
+このファイルに、以下の情報を入力します。
+
+`machine console.<region>.bluemix.net
+login <id>
+password <password>`
+{: codeblock}
+
+cURL コマンドを呼び出す際に、引数 `--netrc` を追加します。
+<p>別のディレクトリーにある netrc ファイルを使用するには、`--netrc-file [file]` オプションを使用します。ここで、`[file]` は netrc ファイルの場所です。</p>
+</li>
+</ol>
+
+
+### Cookie の保管
+{: #auth_apistorecook}
+
+管理コンソールにログインすると、サーバーは、セッションで Cookie を返します。この Cookie は、管理コンソールでのすべての操作に関するそれ以降の API 呼び出しでログイン・プロセスの一環として必要になります。Cookie は、後で使用するために保管することができます。
+
+ログイン後に Cookie を保管するには、次の CURL の例に示したように `-c` オプションを使用します。
+
+`curl --user <user_id>:<password> -c ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/login | python -m json.tool`
+{: codeblock}
+
+### Cookie の再使用
+{: #auth_apireusecook}
+
+Cookie を再使用するには、次の CURL の例に示したように、`-c` オプションで割り当てた Cookie ファイル名を指定した `-b` オプションを使用します。
+
+`curl --user <user_id>:<password> -b ./cookies.txt`
+{: codeblock}
+
+## Admin REST API を使用したユーザーの管理
+
+{: #usingadminapi}
+
+`Admin` REST API を使用して、{{site.data.keyword.Bluemix_notm}} インスタンスのユーザーの追加と削除を行うことができます。`Admin` REST API のエンドポイントおよび JSON のリソースは、コマンド・ラインからの基本操作を可能にするために実験に基づいて提供されています。この情報の例に含まれているエンドポイントと URL は、急な通知で変更または廃止される可能性があります。
+
+**Superuser** 許可、または **Write** アクセス権限がある **Users** 許可を持っている場合、ユーザーを追加または削除することができます。他のユーザーの許可を編集するには、**Superuser** 許可を持っている必要があります。
+
+他のツールを使用するという選択肢もありますが、以下のツールはこの後の例を使用するための前提条件です。他のツールも使用してください。
+* cURL。REST API 要求をコマンドとして入力するために必要です。cURL は、HTTP 要求をサーバーに送信し、コマンド・ライン・インターフェースを介してサーバー応答を受信するための、無料ユーティリティーです。cURL は [cURL Download サイト ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://curl.haxx.se/download.html){: new_window} からダウンロードできます。
+* Python。Python の pretty-print JSON ツールを使用するために必要です。このオプション・ツールは、JSON テキストを入力として取り、読みやすい出力を提供します。Python は [Python Downloads サイト ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://www.python.org/downloads){: new_window} からダウンロードできます。
+
 
 ### 組織のリスト表示
 {: #listingorg}
@@ -1076,25 +1139,25 @@ JSON ファイルを埋めるのに役立つ表を以下に示します。
             "permissions": [
                 {
                     "display": "ops.admin"
-},
+                },
                 {
                     "display": "ops.catalog.write"
-},
+                },
                 {
                     "display": "ops.reports.write"
-},
+                },
                 {
                     "display": "ops.catalog.read"
-},
+                },
                 {
                     "display": "ops.users.write"
-},
+                },
                 {
                     "display": "ops.reports.read"
-},
+                },
                 {
                     "display": "ops.login"
-},
+                },
                 {
                     "display": "ops.users.read"
                 }
@@ -1112,8 +1175,6 @@ JSON ファイルを埋めるのに役立つ表を以下に示します。
 
 ```
 {: screen}
-
-
 
 ### ユーザーの追加
 
@@ -1147,25 +1208,25 @@ PUT console.<subdomain>.bluemix.net/codi/env_config/allow_managers?flag=<TRUE or
 </p>
 <pre>
 {
-"members": [
+    "members": [
         {
-"emails": [
-"some_user_id@domain.com"
+            "emails": [
+                "some_user_id@domain.com"
             ],
-"first_name": "Some_first_name",
-"last_name": "Some_last_name",
-"user_id": "some_user_id@domain.com"
+            "first_name": "Some_first_name",
+            "last_name": "Some_last_name",
+            "user_id": "some_user_id@domain.com"
         }
     ],
-"organization_roles": [
+    "organization_roles": [
         {
-"id": "7a891f9c-e4e7-46c7-8b4e-dffaa7eb3bcd"
+            "id": "7a891f9c-e4e7-46c7-8b4e-dffaa7eb3bcd"
         }
     ]
 }
 </pre>
 </li>
-<li>以下のコマンドを実行して、JSON ファイルのコンテンツをユーザーのエンドポイントに投稿します:<br/><br/>
+<li>次のコマンドを実行して、JSON ファイルの内容をユーザーのエンドポイントに POST します。<br/><br/>
 <code>
 curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.json https://<your_host>.ibm.com/codi/v1/users
 </code>
@@ -1249,33 +1310,37 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
 ## メトリックの API (試験的)
 {: #envappmetricsapi}
 
-2 つの試験的 API を使用して、環境またはアプリケーションに関するメトリックを収集できます。これらの API は、指定した期間内に要求したメトリックのデータ・ポイントの配列を返します。
+3 つの試験的 API を使用して、環境またはアプリケーションに関するメトリックを収集できます。これらの API は、指定した期間内に要求したメトリックのデータ・ポイントの配列を返します。
 
 以下のセクションで説明されているメトリック API には、地域固有のエンドポイントからアクセスできます。以下に例を示します。 
 
- `https://console.<region>.bluemix.net/admin/metrics`
+`https://console.<region>.bluemix.net/admin/metrics`
 {: codeblock}
 
 **注**:
 
 1. ユーザーは、1 時間に最大 200 個の、メトリックの API 要求を行うことができます。
 2. 各 API 要求は、要求当たり最大 200 個のデータ・ポイントを返します。それよりも多くのデータがある場合は、次の一連のデータをロードするための URL が応答に提供されます。
+3. 各 API 要求で、ユーザーは管理コンソールへの少なくとも Basic Access の許可を持たなければなりません。下記のように、追加の許可が必要な場合もあります。
 
 ## 環境に関するメトリックの収集 
 
 試験的環境 API を使用して、指定した期間における高度な環境情報を収集できます。指定した時間内の有効なデータ・ポイントが返されます。データは、ほぼ 1 時間ごとに記録されます。例えば、環境での 6 時間の CPU データを要求すると、要求された 6 時間の 1 時間ごとの CPU データが応答に含まれます。
 
- ### 環境エンドポイント 
- 
+
+### 環境エンドポイント 
+
 次のエンドポイントを使用して、この API コマンドを起動できます。  `/api/v1/env`
+
+**注**: これらのエンドポイントにアクセスするには、**Basic Access**、**User Read**、**User Write**、または **Superuser** のいずれかの許可が必要です。
 
 ### 環境メトリックの照会パラメーター
 
-次の照会パラメーターを使用して、CPU、ディスク、メモリー、ネットワーク、およびアプリに関するメトリックを収集できます。
+次の照会パラメーターを使用して、CPU、ディスク、メモリー、ネットワーク、割り当て量、およびアプリに関するメトリックを収集できます。
 
 <dl class="parml">
 <dt class="pt dlterm">metric</dt>
-<dd class="pd">`memory`、`disk`、`cpu`、`network`、`apps` の 1 つ以上の値をコンマで区切ったもの。</dd>
+<dd class="pd">`memory`、`disk`、`cpu`、`network`、`quota`、`apps` の 1 つ以上の値をコンマで区切ったもの。</dd>
 <dt class="pt dlterm">startTime</dt>
 <dd class="pd">データを返す最初の時点。startTime が指定されないと、入手可能な最初のデータ・ポイントが含められます。例えば、2 PM から 5 PM までのデータを収集するには、startTime に 2 PM を指定します。</dd>
 <dt class="pt dlterm">endTime</dt>
@@ -1284,12 +1349,13 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
 <dd class="pd">データを返す順序。有効な値は、`asc` (昇順) と `desc` (降順) です。デフォルトは降順で、最新のデータを最初に返します。</dd>
 </dl>
 
- 以下の例は、照会パラメーターを使用して環境についてのメトリックを収集しています。
- 
- ```
+以下の例は、照会パラメーターを使用して環境についてのメトリックを収集しています。
+
+```
  curl -b ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/admin/metrics/api/v1/env?metric=cpu,network,disk,apps,memory
  ```
 {: codeblock}
+
 
 ### 環境メトリックのデータ・フォーマット
 
@@ -1301,7 +1367,23 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
 {
   "sample_time": 1477494000000,
   "memory": {
-    "cell": {
+    "total": {
+      "physical": {
+      "total_gb": 1728,
+        "used": {
+          "value_gb": 673.68,
+          "percent": 38.99
+        }
+      },
+    "allocated": {
+      "reserved_gb": 3456,
+        "total_allocated": {
+          "value_gb": 2575.18,
+          "percent": 74.51
+        }
+      },
+    },
+  	"cell": {
       "physical": {
       "total_gb": 864,
       "used": {
@@ -1370,6 +1452,22 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
 {
   "sample_time": 1477494000000,
   "disk": {
+    "total": {
+      "physical": {
+      "total_gb": 16200,
+        "used": {
+          "value_gb": 1614,
+          "percent": 9.96
+        }
+      },
+    "allocated": {
+      "reserved_gb": 32400,
+        "total_allocated": {
+          "value_gb": 3979,
+          "percent": 12.28
+        }
+      },
+    },
     "cell": {
       "physical": {
       "total_gb": 8100,
@@ -1439,11 +1537,14 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
 {
   "sample_time": 1477494000000,
   "cpu": {
+    "total": {
+      "average_percent_cpu_used": 14.725
+    },
     "cell": {
-      "average_percent_cpu_used": 27.288461538461544
+      "average_percent_cpu_used": 19
     },
     "dea": {
-      "average_percent_cpu_used": 27.288461538461544
+      "average_percent_cpu_used": 10.45
     },
     "cpu_by_container": [
       {
@@ -1463,16 +1564,16 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
         "wait_percent": "0.0"
       },
       {
-        "name": "dea_next/2",
-        "type": "dea",
+        "name": "cell/1",
+        "type": "cell",
         "ip": "169.53.230.49",
         "sys_percent": "5.3",
         "user_percent": "1.9",
         "wait_percent": "0.0"
       },
       {
-        "name": "dea_next/3",
-        "type": "dea",
+        "name": "cell/2",
+        "type": "cell",
         "ip": "169.44.109.231",
         "sys_percent": "8.2",
         "user_percent": "22.6",
@@ -1528,16 +1629,36 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
       }
       ],
         "bandwidth": {
-        "in_mbps": 10855,
-        "out_mbps": 38090
+        "in_kbps": 10855,
+        "out_kbps": 38090
       }
   }
 }
 ```
 {: screen}
 
-* アプリケーションに関するデータ・レコードを収集するには、以下のデータ・フォーマットを使用します。
+* 割り当て量使用に関するデータ・レコードを収集するには、以下のデータ・フォーマットを使用します。
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "quota": {
+    "reserved_memory": {
+      "total_bytes": 33176474877952
+    },
+    "services": {
+      "total": 111650
+    },
+    "routes": {
+      "total": 1675000
+    }
+  }
+}
+```
+{: screen}
 
+* アプリケーションに関するデータ・レコードを収集するには、以下のデータ・フォーマットを使用します。
+ 
 ```
 {
   "sample_time": 1477494000000,
@@ -1562,6 +1683,59 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
 ```
 {: screen}
 
+## 組織に関するメトリックの収集
+
+すべての組織について、ほぼ 1 時間ごとにデータが記録されます。特定メトリックの要求では、指定した期間内の各データ・サンプル内のすべての組織の情報が、要求されたメトリックで降順にソートされて返されます。例えば、200 個のアプリがある環境で、6 時間のメモリー使用に関してすべての組織について要求すると、一度に 200 件ずつ、1200 件のレコードが返されます。
+
+要求された期間に各データ・サンプルについて返される情報量を削減するには、count オプションを指定します。
+前の例で count オプションを 5 に指定して追加すると、各データ・サンプルについて、メモリー使用で上位 5 つの組織を表す 30 件のレコードが返されます。
+
+### 組織のエンドポイント 
+
+以下のエンドポイントを使用して、この API コマンドを起動できます。
+* `/api/v1/org/memory/physical`
+* `/api/v1/org/memory/reserved`
+* `/api/v1/org/disk/physical`
+* `/api/v1/org/disk/reserved`
+
+**注**: これらのエンドポイントにアクセスするには、**User Read**、**User Write**、または **Superuser** のいずれかの許可が必要です。
+
+### 組織の照会パラメーター
+ 
+以下の照会パラメーターを使用して、組織のメトリックを収集します。
+
+<dl class="parml">
+<dt class="pt dlterm">startTime</dt>
+<dd class="pd">データを返す最初の時点。startTime が指定されないと、入手可能な最初のデータ・ポイントが含められます。例えば、2 PM から 5 PM までのデータを収集するには、startTime に 2 PM を指定します。</dd>
+<dt class="pt dlterm">endTime</dt>
+<dd class="pd">データを返す最後の時点。endTime が指定されないと、最新のデータ・ポイントが使用されます。例えば、2 PM から 5 PM までのデータを収集するには、endTime に 5 PM を指定します。</dd>
+<dt class="pt dlterm">count</dt>
+<dd class="pd">各データ・サンプルで返すレコード数。
+</dd>
+<dt class="pt dlterm">minValue</dt>
+<dd class="pd">指定されたメトリックについて返す処理が行われる最小値。minValue が指定されていない場合、すべての値が返されます。例えば、最小限 20000 バイトの物理メモリーを使用している組織を収集するには、minValue に 20000 を指定します。
+</dd>
+</dl>
+
+以下の例は、組織についてのメトリックを収集します。
+
+```
+curl -b ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/admin/metrics/api/v1/org/memory/physical?count=5&startTime=2016-12-02T16:54:09.467Z
+```
+{: codeblock}
+
+### 組織の応答フォーマット
+
+```
+{
+   docs: [],
+   next_url:
+}
+```
+{: screen}
+
+返される各文書は、要求時点における各データ・サンプル内の組織の要求されたメトリックを表します。
+
 ## アプリケーションに関するメトリックの収集
 
 すべてのアプリケーションについて、ほぼ 1 時間ごとにデータが記録されます。特定メトリックの要求では、指定した期間内の各データ・サンプル内のすべてのアプリの情報が、要求されたメトリックで降順にソートされて返されます。例えば、200 個のアプリがある環境で、6 時間の CPU 使用に関してすべてのアプリについて要求すると、一度の 200 件ずつ、1200 件のレコードが返されます。
@@ -1578,6 +1752,7 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
 * `/api/v1/app/disk/physical`
 * `/api/v1/app/disk/reserved`
 
+**注**: これらのエンドポイントにアクセスするには、**User Read**、**User Write**、または **Superuser** のいずれかの許可が必要です。
 
 ### アプリケーションの照会パラメーター
  
@@ -1602,6 +1777,7 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
 curl -b ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/admin/metrics/api/v1/app/cpu/physical?count=5&startTime=2016-12-02T16:54:09.467Z
 ```
 {: codeblock}
+
 
 ### アプリケーションの応答フォーマット
 
@@ -1841,7 +2017,9 @@ CF コマンド・ライン・インターフェースをインストール後�
 
 
 <ol>
-<li>{{site.data.keyword.Bluemix_notm}} 管理プラグイン・リポジトリーを追加するには、以下のコマンドを実行します:<br/><br/> <code>
+<li>{{site.data.keyword.Bluemix_notm}} 管理プラグイン・リポジトリーを追加するには、以下のコマンドを実行します。
+<br/><br/>
+<code>
 cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cli
 </code><br/><br/>
 <dl class="parml">
@@ -1849,7 +2027,9 @@ cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cl
 <dd class="pd">ご使用の {{site.data.keyword.Bluemix_notm}} インスタンス用 URL のサブドメインです。</dd>
 </dl>
 </li>
-<li>{{site.data.keyword.Bluemix_notm}} 管理 CLI プラグインをインストールするには、以下のコマンドを実行します:<br/><br/> <code>
+<li>{{site.data.keyword.Bluemix_notm}} 管理
+CLI プラグインをインストールするには、以下のコマンドを実行します。<br/><br/>
+<code>
 cf install-plugin bluemix-admin-cli -r BluemixAdmin
 </code>
 </li>

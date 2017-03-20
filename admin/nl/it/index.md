@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-24"
+lastupdated: "2017-02-22"
 
 ---
 
@@ -57,7 +57,7 @@ Puoi visualizzare le notifiche riguardanti il tuo ambiente locale o dedicato, al
 |-----------------|-------------------|
 | Aggiornamenti di manutenzione | Per visualizzare uno storico e un elenco completo delle tue notifiche complete e in sospeso, fai clic su **AMMINISTRAZIONE &gt; INFORMAZIONI DI SISTEMA** &gt; *Numero* **in sospeso**. Ricevi anche un avviso degli eventi di aggiornamento della manutenzione pianificata con interruzioni del servizio nella pagina Stato. Fai clic su **Supporto** &gt; **Stato**. Puoi estendere la funzionalità di notifica impostando una sottoscrizione che invia un'email a destinatari di tua scelta. In alternativa, puoi impostare una sottoscrizione che utilizza dei webhook per integrare le notifiche provenienti dalla pagina Amministrazione con un servizio Web a scelta.|
 | Incidenti critici | Vieni avvisato degli incidenti critici sulla pagina Stato. Fai clic su **Supporto** &gt; **Stato**. Puoi estendere la funzionalità di notifica impostando una sottoscrizione di notifica che invia un'email a un destinatario di tua scelta. In alternativa, puoi impostare una sottoscrizione che utilizza dei webhook per integrare le notifiche provenienti dalla pagina Amministrazione con un servizio Web a scelta.  |  
-| Eventi di soglia | Puoi impostare una sottoscrizione di notifica che invia un'email a un destinatario di tua scelta quando nel tuo ambiente vengono raggiunte le soglie di risorse per disco fisico, memoria fisica, disco riservato o memoria riservata. In alternativa, puoi impostare una sottoscrizione che utilizza dei webhook per integrare le notifiche con un servizio Web di tua scelta.  |  
+| Eventi di soglia | Puoi impostare una sottoscrizione di notifica che invia un'email a un destinatario di tua scelta quando nel tuo ambiente vengono raggiunte le soglie per la quota dell'organizzazione, il disco fisico, la memoria fisica o la memoria riservata. In alternativa, puoi impostare una sottoscrizione che utilizza dei webhook per integrare le notifiche con un servizio Web di tua scelta.  |  
 | Stato di {{site.data.keyword.Bluemix_notm}} | In qualsiasi momento puoi visualizzare l'ultimo stato della piattaforma, dei servizi e della tua istanza {{site.data.keyword.Bluemix_notm}} nella pagina Stato. Fai clic su **Supporto** &gt; **Stato**.  |
 {: caption="Table 2. Event types and notifications methods" caption-side="top"}
 
@@ -109,7 +109,7 @@ Per creare una sottoscrizione webhook o e-mail dalla pagina **Sottoscrizioni di 
 | Abilitato | Seleziona questa opzione per abilitare le notifiche e-mail. Deselezionare l'opzione per disabilitare la notifica e-mail. Le sottoscrizioni sono abilitate per impostazione predefinita. |
 | Tipo | Seleziona **E-mail**. |
 | Evento | Seleziona **Soglia**. |
-| Soglia | Seleziona il tipo di soglia per cui ricevere una notifica: Disco fisico, Memoria fisica, Disco riservato o Memoria riservata. |
+| Soglia | Seleziona il tipo di soglia per cui ricevere una notifica: Quota organizzazione, Disco fisico, Memoria fisica, Disco riservato o Memoria riservata. |
 | Direzione soglia | Seleziona la direzione in cui spostare i dati, in ordine crescente o decrescente, quando si supera il valore Notifica quando incrociato che hai impostato. Ad esempio, se il valore di Notifica quando incrociato è 50%,  e la direzione è decrescente, riceverai una notifica solo se la percentuale di utilizzo va da più di 50%  a meno di 50%.  Se imposti la direzione su Crescente, riceverai una notifica quando la percentuale di utilizzo va da meno di 50% a più di 50%.   |
 | Notifica quando incrociato superiore a (%) | Immetti la percentuale di soglia per cui ricevere una notifica. Se nel campo Direzione soglia hai scelto la proprietà Crescente, la notifica e-mail viene inviata quando la soglia supera questa percentuale. |
 | Notifica quando incrociato inferiore a (%) | Immetti la percentuale di soglia per cui ricevere una notifica. Se nel campo Direzione soglia hai scelto la proprietà Decrescente, la notifica e-mail viene inviata quando la soglia scende sotto questa percentuale. |
@@ -119,10 +119,11 @@ Per creare una sottoscrizione webhook o e-mail dalla pagina **Sottoscrizioni di 
 | A: | Immetti uno o più indirizzi e-mail tramite elenco separato da virgole per indicare i destinatari della notifica e-mail. Espandi le opzioni "cc" o "bcc" per inviare copia dell'e-mail ad altri destinatari. Questo campo è obbligatorio. |
 {: caption="Table 4. Fields for email notification subscriptions about maintenance updates or incidents" caption-side="top"}
 
-I dati della soglia vengono raccolti una volta ogni 6 ore. Una notifica viene inviata solo una volta quando il valore supera il valore soglia impostato. Non viene inviata una nuova notifica a meno che il valore non vada al di sotto della soglia (se hai scelto la proprietà crescente) e quindi la risuperi nuovamente. Allo stesso modo, se hai scelto la proprietà decrescente, ricevi una nuova una notifica se il valore supera la soglia impostata e quindi scende di nuovo sotto la soglia. 
+I dati della soglia vengono raccolti una volta ogni 6 ore. Una notifica viene inviata solo una volta quando il valore supera il valore soglia impostato. Se hai scelto la proprietà crescente, non viene inviata una nuova notifica a meno che il valore non scenda sotto la soglia e quindi la oltrepassi nuovamente. Allo stesso modo, se hai scelto la proprietà decrescente, ricevi una notifica solo se il valore supera la soglia impostata e quindi scende di nuovo sotto la soglia. 
 
-Se non vuoi aspettare 6 ore per ricevere la notifica sul raggiungimento della soglia, dopo aver completato i campi nel modulo, puoi fare clic su **Salva e verifica** per salvare e verificare la notifica con i dati di esempio.
+Se non vuoi aspettare 6 ore per ricevere la notifica sul raggiungimento della soglia, dopo aver completato i campi nel modulo, puoi fare clic su **Salva e verifica** per ricevere una notifica di verifica con i dati di esempio.  
 
+Una notifica per la soglia della Quota organizzazione include solo le organizzazioni che hanno superato la percentuale di soglia specificata nel periodo di tempo di 6 ore corrispondente a tale notifica. Le organizzazioni che hanno superato una soglia durante intervalli di 6 ore precedenti non verranno incluse, anche se rimangono sopra o sotto la soglia. Le tre risorse che compongono la quota di un'organizzazione (memoria riservata, servizi e rotte) vengono considerate separatamente quando si deve valutare se inviare una notifica sulla quota. Ad esempio, se la quantità di memoria riservata utilizzata da un'organizzazione supera il 50% della quota, una soglia della Quota organizzazione configurata con un valore di 50% comporterà l'invio di una notifica.  Se il numero di servizi utilizzati dalla stessa organizzazione supera successivamente il 50% della quota, anche se la quantità di memoria utilizzata rimane invariata, la stessa sottoscrizione di soglia della Quota dell'organizzazione comporterà anch'essa l'invio di una notifica.
 
 {: #webhooknotsub}
 
@@ -156,7 +157,7 @@ Se non vuoi aspettare 6 ore per ricevere la notifica sul raggiungimento della so
 | Abilitato | Seleziona l'opzione per abilitare la notifica. Deselezionare l'opzione per disabilitare la notifica. Le sottoscrizioni sono abilitate per impostazione predefinita. |
 | Tipo | Seleziona **Webhook**. |
 | Evento | Seleziona **Soglia**. |
-| Soglia | Seleziona il tipo di soglia per cui ricevere una notifica: Disco fisico, Memoria fisica, Disco riservato o Memoria riservata. |
+| Soglia | Seleziona il tipo di soglia per cui ricevere una notifica: Quota organizzazione, Disco fisico, Memoria fisica, Disco riservato o Memoria riservata.|
 | Direzione soglia | Scegli se visualizzare i dati di soglia in ordine crescente o decrescente.  |
 | Notifica quando incrociato inferiore a (%) | Se hai selezionato la **Direzione di soglia** **Decrescente**, immetti la percentuale di soglia per cui ricevere una notifica. Quando la soglia scende sotto questa percentuale, viene inviata una notifica webhook. |
 | Notifica quando incrociato superiore a (%) | Se hai selezionato la **Direzione di soglia** **Crescente**, immetti la percentuale di soglia per cui ricevere una notifica. Quando la soglia supera questa percentuale, viene inviata una notifica webhook. |
@@ -168,6 +169,11 @@ Se non vuoi aspettare 6 ore per ricevere la notifica sul raggiungimento della so
 | URL | Immetti l'URL per la connessione al tuo servizio Web. |
 {: caption="Table 6. Form fields for a webhook notification subscription about thresholds" caption-side="top"}
 
+I dati della soglia vengono raccolti una volta ogni 6 ore. Una notifica viene inviata solo una volta quando il valore supera il valore soglia impostato. Non viene inviata una nuova notifica a meno che il valore non vada al di sotto della soglia (se hai scelto la proprietà crescente) e quindi la risuperi nuovamente. Allo stesso modo, se hai scelto la proprietà decrescente, ricevi una nuova una notifica se il valore supera la soglia impostata e quindi scende di nuovo sotto la soglia. 
+
+Se non vuoi aspettare 6 ore per ricevere la notifica sul raggiungimento della soglia, dopo aver completato i campi nel modulo, puoi fare clic su **Salva e verifica** per salvare e verificare la notifica con i dati di esempio.
+
+Una notifica per la soglia della Quota organizzazione include solo le organizzazioni che hanno superato la percentuale di soglia specificata nel periodo di tempo di 6 ore corrispondente a tale notifica. Le organizzazioni che hanno superato una soglia durante intervalli di 6 ore precedenti non verranno incluse, anche se rimangono sopra o sotto la soglia. Le tre risorse che compongono la quota di un'organizzazione, ossia memoria riservata, servizi e rotte, vengono considerate separatamente quando si deve valutare se inviare una notifica sulla quota. Ad esempio, se la quantità di memoria riservata utilizzata da un'organizzazione supera il 50% della quota, una soglia della Quota organizzazione configurata con un valore di 50% comporterà l'invio di una notifica.  Se il numero di servizi utilizzati dalla stessa organizzazione supera successivamente il 50% della quota, anche se la quantità di memoria utilizzata rimane invariata, la stessa sottoscrizione di soglia della Quota dell'organizzazione comporterà anch'essa l'invio di una notifica.
 
 {: #payload}
 
@@ -191,6 +197,7 @@ Se non vuoi aspettare 6 ore per ricevere la notifica sul raggiungimento della so
 
 | **Valore IBM** | **Descrizione** | **Tipo di evento** |
 |----------------|----------------|------------------------|
+| {{content.org_quota}} | Soglia quota organizzazione | Soglia |
 | {{content.physical_disk}} | Soglia disco fisico | Soglia |
 | {{content.physical_memory}} | Soglia memoria fisica | Soglia |  
 | {{content.reserved_disk}} | Soglia disco riservato | Soglia |
@@ -838,7 +845,7 @@ dell'organizzazione, riceverai un messaggio.</p></li>
 <dt class="pt dlterm">Limite immagine</dt>
 <dd class="pd">Il numero massimo di immagini contenitore che puoi avere nel tuo registro privato. Un'immagine contenitore è la base per ogni contenitore che crei. Un'immagine viene creata da un Dockerfile che è un file in sola lettura che ospita il sistema operativo, l'applicazione e tutte le relative dipendenze e descrive come viene configurato un contenitore. Le immagini sono condivise tra tutti i membri di un'organizzazione.</dd>
 <dt class="pt dlterm">Assegnazione memoria predefinita</dt>
-<dd>La quantità di memoria del contenitore che viene automaticamente assegnata quando viene creato un nuovo spazio. Quando crei un contenitore, devi scegliere una dimensione del contenitore. La dimensione determina la quantità di memoria che il contenitore può utilizzare sull'host di calcolo ed è comporesa nel tuo limite di memoria del contenitore. </dd>
+<dd>La quantità di memoria del contenitore che viene automaticamente assegnata quando viene creato un nuovo spazio. Quando crei un contenitore, devi scegliere una dimensione del contenitore. La dimensione determina la quantità di memoria che il contenitore può utilizzare sull'host di calcolo ed è compresa nel tuo limite di memoria del contenitore. </dd>
 <dt class="pt dlterm">Assegnazione memoria massima</dt>
 <dd>La quantità massima di memoria della memoria del contenitore che può essere assegnata tra tutti gli spazi di un'organizzazione.</dd>
 <dt class="pt dlterm">IP mobili predefiniti</dt>
@@ -847,7 +854,7 @@ dell'organizzazione, riceverai un messaggio.</p></li>
 <dd>Il numero massimo di indirizzi IP pubblici che puoi assegnare tra tutti gli spazi di un'organizzazione.</dd>
 </dl>
 <strong>Nota</strong>: se non disponi ancora di contenitori nel tuo ambiente o se non li hai ancora configurati, ricevi un messaggio di errore.
-<p>Per ulteriori informazioni sui contenitori, consulta [Informazioni su IBM Containers](https://console.ng.bluemix.net/docs/containers/container_ov.html). Per ulteriori informazioni sulle quote del contenitore, consulta [Quota e account Bluemix]( https://console.ng.bluemix.net/docs/containers/container_planning_org_ov.html#container_planning_quota).</p>
+<p>Per ulteriori informazioni sui contenitori, consulta [Informazioni su IBM Containers](/docs/containers/container_ov.html). Per ulteriori informazioni sulle quote del contenitore, consulta [Quota e account Bluemix](/docs/containers/container_planning_org_ov.html#container_planning_quota).</p>
 <strong>Nota:</strong> i contenitori non sono disponibili nella regione {{site.data.keyword.Bluemix_notm}} Sydney.</li>
 </ul>
 <li>Per salvare le eventuali modifiche apportate nella pagina Gestisci organizzazione, fai clic su <strong>SALVA</strong>.</li>
@@ -974,31 +981,24 @@ non dispongono di autorizzazioni.
 | Utenti | Agli utenti con autorizzazione **Utenti** può essere assegnato l'accesso in  **Lettura ** (visualizzazione) per l'elenco di utenti o in **Scrittura** (aggiunta o rimozione) per gli utenti. Questa autorizzazione non ti consente di impostare le autorizzazioni per gli altri utenti. L'accesso in scrittura consente all'utente di aggiungere nuovi utenti all'ambiente, eliminare utenti dall'ambiente e aggiungere utenti esistenti all'organizzazione che già esistono nell'ambiente. In aggiunta, l'accesso in **Scrittura** consente agli utenti di aggiungere nuove organizzazioni, eliminare le organizzazioni e modificare gli utenti nelle organizzazioni. |
 {: caption="Table 14. Permissions" caption-side="top"}
 
-## Gestione degli utenti con la API REST Admin
-{: #usingadminapi}
+## Utilizzo delle API REST 
+{: #auth_adminapi}
 
-Puoi utilizzare l'API REST `Admin` per aggiungere e rimuovere utenti per l'istanza {{site.data.keyword.Bluemix_notm}}.
-Gli endpoint della API REST `Admin` e le risposte JSON sono fornite su base sperimentale per abilitare le operazioni di base da una riga di comando. Gli endpoint e gli URL negli esempi nelle presenti
-informazioni possono variare o potrebbero essere abbandonate con breve preavviso.
+Per utilizzare i comandi dell'API REST, devi innanzitutto eseguire l'autenticazione. Per generare e supportare le sessioni, puoi utilizzare i comandi cURL per compiere le seguenti attività:
 
-Anche se puoi utilizzare altri strumenti, i seguenti sono prerequisiti per l'utilizzo degli esempi che seguono:
-utilizzare altri strumenti.
-* cURL, per immettere richieste API REST come comandi. cURL è un programma di utilità gratuito che puoi
-                    utilizzare per inviare richieste HTTP a un server e ricevere le risposte
-                    attraverso un'interfaccia riga di comando. Puoi scaricare
-cURL dal [sito cURL Download ![icona link esterno](../icons/launch-glyph.svg)](http://curl.haxx.se/download.html){: new_window}.
-* Python, per utilizzare lo strumento JSON Pretty-Print Python. Questo strumento
-facoltativo prende il testo JSON come input e fornisce un output facile da leggere. Puoi scaricare
-Python dal [sito Python Downloads ![icona link esterno](../icons/launch-glyph.svg)](https://www.python.org/downloads){: new_window}.
+* [Accesso alla Console di gestione](#auth_loginapi) 
+* [Memorizzazione di ID utente e password](#auth_setuidpw)
+* [Memorizzazione di cookie](#auth_apistorecook)
+* [Riutilizzo dei cookie](#auth_apireusecook)
 
 ### Accesso alla Console di gestione
+{: #auth_loginapi}
 
 Prima di poter eseguire qualsiasi richiesta API `Admin`,
-devi eseguire l'accesso alla Console di gestione. Se disponi dell'autorizzazione **Superuser** o **Utenti**
-con l'accesso in **Scrittura**, puoi aggiungere o rimuovere gli utenti. Per modificare le autorizzazioni di altri utenti devi disporre
-dell'autorizzazione **Superuser**.
+devi eseguire l'accesso alla Console di gestione. 
 
-Per accedere alla Console di gestione, puoi utilizzare l'autenticazione di accesso di base sull'endpoint `https://<il_tuo_host>.ibm.com/login`. Il server restituisce un cookie con la tua sessione. Puoi utilizzare tale
+Per accedere alla Console di gestione, puoi utilizzare l'autenticazione di accesso di base
+sull'endpoint `https://console.<region>.bluemix.net/login`. Il server restituisce un cookie con la tua sessione. Puoi utilizzare tale
 cookie per tutte le operazioni con la Console di gestione.
 
 **Nota:** la sessione diventa non valida se non viene utilizzata per qualche ora.
@@ -1006,21 +1006,18 @@ cookie per tutte le operazioni con la Console di gestione.
 Per accedere alla
 Console di gestione, esegui questo comando:
 
-
-`curl --user <id_utente>:<password> -c ./cookies.txt --header "Accept: application/json" https://<il_tuo_host>.ibm.com/login | python -m json.tool`
+`curl --user <user_id>:<password> -c ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/login | python -m json.tool`
 {: codeblock}
 
 <dl class="parml">
-
 <dt class="pt dlterm">--user <em>id_utente</em>:<em>password</em></dt>
 <dd class="pd">Accetta l'ID utente e la password e invia un'intestazione di autorizzazione di base.</dd>
-
 <dt class="pt dlterm">-c <em>nomefile</em></dt>
 <dd class="pd">Memorizza l'ID utente e la password specificati come un cookie nel file specificato.</dd>
-
+<dt class="pt dlterm">-b <em>nomefile</em></dt>
+<dd class="pd">Richiama l'ID utente e la password specificati come un cookie nel file specificato.</dd>
 <dt class="pt dlterm">--header</dt>
 <dd class="pd">Invia un'intestazione Accept.</dd>
-
 </dl>
 
 Il seguente esempio mostra l'output di questo
@@ -1035,6 +1032,74 @@ Il seguente esempio mostra l'output di questo
 }
 ```
 {: screen}
+
+### Memorizzazione di ID utente e password
+{: #auth_setuidpw}
+
+Puoi memorizzare il tuo ID utente e password in modo da non doverli immettere manualmente ogni volta che esegui l'accesso.  Per memorizzare il tuo ID utente e password per poterli riutilizzare, utilizza il seguente esempio cURL:
+
+`curl -X GET -H "Authorization: Basic <redacted>" -H "Accept: application/json" "http://localhost:3000/login"`
+{: codeblock}
+
+Per configurare le tue informazioni di accesso in un file separato e quindi richiamare il file in modo da non doverlo immettere per ogni richiesta di autenticazione, utilizza l'opzione `--netrc` fornita dal comando cURL.
+
+Per utilizzare l'opzione `--netrc` con cURL, crea prima un file nella directory home dell'utente in uno dei seguenti modi:
+* Su un sistema Unix, crea un file denominato .netrc 
+* Su un sistema Windows, crea un file denominato _netrc. 
+
+Nel file, immetti le seguenti informazioni:
+
+`machine console.<region>.bluemix.net
+login <id>
+password <password>`
+{: codeblock}
+
+Quando si richiama un comando cURL, aggiungi il seguente argomento: `--netrc`.
+<p>Per utilizzare un file netrc che si trova in una directory differente, utilizza l'opzione `--netrc-file [file]`, dove `[file]` è la posizione del file netrc.</p>
+</li>
+</ol>
+
+
+### Memorizzazione di cookie
+{: #auth_apistorecook}
+
+Quando accedi alla Console di gestione, il server restituisce un cookie con la tua sessione. Questo cookie è richiesto come parte del processo di accesso per le future chiamate API per tutte le operazioni con la Console di gestione. Puoi memorizzare i cookie anche per un utilizzo successivo.
+
+Per memorizzare i cookie dopo aver eseguito l'accesso, utilizza l'opzione `-c`, come mostrato nel seguente esempio CURL:
+
+`curl --user <user_id>:<password> -c ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/login | python -m json.tool`
+{: codeblock}
+
+### Riutilizzo dei cookie
+{: #auth_apireusecook}
+
+Per riutilizzare i cookie, utilizza l'opzione `-b` con il nome del file cookie che hai assegnato con l'opzione `-c`, come mostrato nel seguente esempio CURL:
+
+`curl --user <user_id>:<password> -b ./cookies.txt`
+{: codeblock}
+
+## Gestione degli utenti con la API REST Admin
+
+{: #usingadminapi}
+
+Puoi utilizzare l'API REST `Admin` per aggiungere e rimuovere utenti per l'istanza {{site.data.keyword.Bluemix_notm}}.
+Gli endpoint della API REST `Admin` e le risposte JSON sono fornite su base sperimentale per abilitare le operazioni di base da una riga di comando. Gli endpoint e gli URL negli esempi nelle presenti
+informazioni possono variare o potrebbero essere abbandonate con breve preavviso.
+
+Se disponi dell'autorizzazione **Superuser** o **Utenti**
+con l'accesso in **Scrittura**, puoi aggiungere o rimuovere gli utenti. Per modificare le autorizzazioni di altri utenti devi disporre
+dell'autorizzazione **Superuser**.
+
+Anche se puoi utilizzare altri strumenti, i seguenti sono prerequisiti per l'utilizzo degli esempi che seguono:
+utilizzare altri strumenti.
+* cURL, per immettere richieste API REST come comandi. cURL è un programma di utilità gratuito che puoi
+                    utilizzare per inviare richieste HTTP a un server e ricevere le risposte
+                    attraverso un'interfaccia riga di comando. Puoi scaricare
+cURL dal [sito cURL Download ![icona link esterno](../icons/launch-glyph.svg)](http://curl.haxx.se/download.html){: new_window}.
+* Python, per utilizzare lo strumento JSON Pretty-Print Python. Questo strumento
+facoltativo prende il testo JSON come input e fornisce un output facile da leggere. Puoi scaricare
+Python dal [sito Python Downloads ![icona link esterno](../icons/launch-glyph.svg)](https://www.python.org/downloads){: new_window}.
+
 
 ### Elenco delle organizzazioni
 {: #listingorg}
@@ -1162,8 +1227,6 @@ Il seguente esempio mostra l'output di questo
 ```
 {: screen}
 
-
-
 ### Aggiunta di un utente
 
 Puoi utilizzare l'API REST `Admin` per aggiungere utenti all'istanza {{site.data.keyword.Bluemix_notm}}. Devi
@@ -1219,9 +1282,9 @@ questo contenuto:</p>
 }
 </pre>
 </li>
-<li>Pubblica il contenuto del file JSON nell'endpoint dell'utente immettendo il seguente comando:<br/><br/>
+<li>Inserisci il contenuto del file JSON nell'endpoint dell'utente eseguendo questo comando:<br/><br/>
 <code>
-curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.json https://<il_tuo_host>.ibm.com/codi/v1/users
+curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.json https://<your_host>.ibm.com/codi/v1/users
 </code>
 </li>
 </ol>
@@ -1305,33 +1368,37 @@ Il seguente esempio mostra l'output di questo
 ## API per le metriche (sperimentale)
 {: #envappmetricsapi}
 
-Puoi utilizzare due API sperimentali per raccogliere le metriche sul tuo ambiente o sulle tue applicazioni. Queste API restituiscono un array di punti dati per le metriche che hai richiesto nell'intervallo di tempo che hai specificato.
+Puoi utilizzare tre API sperimentali per raccogliere le metriche sul tuo ambiente o sulle tue applicazioni. Queste API restituiscono un array di punti dati per le metriche che hai richiesto nell'intervallo di tempo che hai specificato.
 
 Puoi accedere alle API delle metriche descritte nelle seguenti sezioni dall'endpoint specifico della regione, ad esempio: 
 
- `https://console.<region>.bluemix.net/admin/metrics`
+`https://console.<region>.bluemix.net/admin/metrics`
 {: codeblock}
 
 **Note**:
 
 1. Un utente può effettuare fino a 200 richieste API per le metriche in un'ora.
 2. Ogni richiesta API restituisce fino a 200 punti dati per richiesta. Se sono disponibili più dati, viene fornito un URL per il caricamento della successiva serie di dati.
+3. Ogni richiesta API richiede che un utente disponga almeno dell'accesso di base alla Console di gestione. Potrebbero essere richieste delle autorizzazioni aggiuntive, come specificato di seguito.
 
 ## Raccolta delle metriche sul tuo ambiente 
 
 Puoi utilizzare l'API di ambiente sperimentale per raccogliere le informazioni sull'ambiente di alto livello in un periodo di tempo che specifichi. Vengono restituiti i punti dati nel periodo di tempo che specifichi. I dati sono registrati approssimativamente ogni ora. Se, ad esempio, hai richiesto sei ore di dati CPU per l'ambiente, la risposta includerà i dati CPU per ognuna delle sei ore richieste.
 
- ### Endpoint di ambiente 
- 
+
+### Endpoint di ambiente 
+
 Puoi utilizzare il seguente endpoint per richiamare questo comando API:  `/api/v1/env`
+
+**Nota**: per accedere a questi endpoint, è richiesta una delle seguenti autorizzazioni: **Accesso di base**, **Lettura utente**, **Scrittura utente** o **Superuser**
 
 ### Parametri della query delle metriche di ambiente
 
-Utilizzando i seguenti parametri della query, puoi raccogliere le metriche per i tuoi CPU, disco, memoria, rete e applicazioni:
+Utilizzando i seguenti parametri della query, puoi raccogliere le metriche per i tuoi CPU, disco, memoria, rete, quota e applicazioni:
 
 <dl class="parml">
 <dt class="pt dlterm">metrica</dt>
-<dd class="pd">Uno o più dei seguenti valori, separati da virgole: `memory`, `disk`, `cpu`, `network` e `apps`.</dd>
+<dd class="pd">Uno o più dei seguenti valori, separati da virgole: `memory`, `disk`, `cpu`, `network`, `quota` e `apps`.</dd>
 <dt class="pt dlterm">OraInizio</dt>
 <dd class="pd">Il primo punto nel tempo da cui vengono restituiti i dati. Se non viene specificata una OraInizio, viene incluso il primo punto dati disponibile. Ad esempio, per raccogliere i dati tra la 14 e le 17, specificare una OraInizio di 14.</dd>
 <dt class="pt dlterm">OraFine</dt>
@@ -1340,12 +1407,13 @@ Utilizzando i seguenti parametri della query, puoi raccogliere le metriche per i
 <dd class="pd">L'ordinamento in cui vengono restituiti i dati. I valori validi sono `asc` (crescente) e `desc` (decrescente). Il valore predefinito è decrescente, che restituisce prima i dati più recenti. </dd>
 </dl>
 
- Il seguente esempio utilizza i parametri di query per raccogliere le metriche relative al tuo ambiente:
- 
- ```
- curl -b ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/admin/metrics/api/v1/env?metric=cpu,network,disk,apps,memory
- ```
+Il seguente esempio utilizza i parametri di query per raccogliere le metriche relative al tuo ambiente:
+
+```
+curl -b ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/admin/metrics/api/v1/env?metric=cpu,network,disk,apps,memory
+```
 {: codeblock}
+
 
 ### Formato dei dati delle metriche di ambiente
 
@@ -1357,7 +1425,23 @@ Le seguenti sezioni forniscono il formato dei dati.
 {
   "sample_time": 1477494000000,
   "memory": {
-    "cell": {
+    "total": {
+      "physical": {
+        "total_gb": 1728,
+        "used": {
+          "value_gb": 673.68,
+          "percent": 38.99
+        }
+      },
+    "allocated": {
+        "reserved_gb": 3456,
+        "total_allocated": {
+          "value_gb": 2575.18,
+          "percent": 74.51
+        }
+      },
+    },
+  	"cell": {
       "physical": {
         "total_gb": 864,
       "used": {
@@ -1426,6 +1510,22 @@ Le seguenti sezioni forniscono il formato dei dati.
 {
   "sample_time": 1477494000000,
   "disk": {
+    "total": {
+      "physical": {
+        "total_gb": 16200,
+        "used": {
+          "value_gb": 1614,
+          "percent": 9.96
+        }
+      },
+    "allocated": {
+        "reserved_gb": 32400,
+        "total_allocated": {
+          "value_gb": 3979,
+          "percent": 12.28
+        }
+      },
+    },
     "cell": {
       "physical": {
         "total_gb": 8100,
@@ -1495,11 +1595,14 @@ Le seguenti sezioni forniscono il formato dei dati.
 {
   "sample_time": 1477494000000,
   "cpu": {
+    "total": {
+      "average_percent_cpu_used": 14.725
+    },
     "cell": {
-      "average_percent_cpu_used": 27.288461538461544
+      "average_percent_cpu_used": 19
     },
     "dea": {
-      "average_percent_cpu_used": 27.288461538461544
+      "average_percent_cpu_used": 10.45
     },
     "cpu_by_container": [
       {
@@ -1519,16 +1622,16 @@ Le seguenti sezioni forniscono il formato dei dati.
         "wait_percent": "0.0"
       },
       {
-        "name": "dea_next/2",
-        "type": "dea",
+        "name": "cell/1",
+        "type": "cell",
         "ip": "169.53.230.49",
         "sys_percent": "5.3",
         "user_percent": "1.9",
         "wait_percent": "0.0"
       },
       {
-        "name": "dea_next/3",
-        "type": "dea",
+        "name": "cell/2",
+        "type": "cell",
         "ip": "169.44.109.231",
         "sys_percent": "8.2",
         "user_percent": "22.6",
@@ -1584,16 +1687,36 @@ Le seguenti sezioni forniscono il formato dei dati.
       }
       ],
         "bandwidth": {
-        "in_mbps": 10855,
-        "out_mbps": 38090
+        "in_kbps": 10855,
+        "out_kbps": 38090
       }
   }
 }
 ```
 {: screen}
 
-* Per raccogliere i dati registrati sulle tue applicazioni, utilizza il seguente formato dei dati:
+* Per raccogliere i dati registrati sul tuo utilizzo della quota, utilizza il seguente formato dei dati:
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "quota": {
+    "reserved_memory": {
+      "total_bytes": 33176474877952
+    },
+    "services": {
+      "total": 111650
+    },
+    "routes": {
+      "total": 1675000
+    }
+  }
+}
+```
+{: screen}
 
+* Per raccogliere i dati registrati sulle tue applicazioni, utilizza il seguente formato dei dati:
+ 
 ```
 {
   "sample_time": 1477494000000,
@@ -1618,9 +1741,61 @@ Le seguenti sezioni forniscono il formato dei dati.
 ```
 {: screen}
 
+## Raccolta delle metriche sulle tue organizzazioni
+
+I dati vengono registrati per tutte le organizzazioni approssimativamente ogni ora. Una richiesta per una metrica particolare restituisce le informazioni per tutte le organizzazioni in ogni esempio di dati nel periodo di tempo che specifichi, ordinate in modo decrescente per la metrica richiesta. Ad esempio, la richiesta di tutte le organizzazioni per memoria in un periodo di tempo di 6 ore in un ambiente con 200 applicazioni restituisce 1200 record, 200 alla volta.
+
+Per ridurre la quantità di informazioni restituite per ogni esempio di dati nel periodo di tempo richiesto, puoi specificare un'opzione di conteggio. Utilizzando il precedente esempio e aggiungendo un'opzione di conteggio di 5, vengono restituiti 30 record che rappresentano le prime 5 organizzazioni per memoria per ogni esempio di dati.
+
+### Endpoint delle organizzazioni 
+
+Puoi utilizzare i seguenti endpoint per richiamare questo comando API:
+* `/api/v1/org/memory/physical`
+* `/api/v1/org/memory/reserved`
+* `/api/v1/org/disk/physical`
+* `/api/v1/org/disk/reserved`
+
+**Nota**: per accedere a questi endpoint, è richiesta una delle seguenti autorizzazioni: **Lettura utente**, **Scrittura utente** o **Superuser**
+
+### Parametri di query delle organizzazioni
+ 
+Utilizza i seguenti parametri della query per raccogliere le metriche per le tue organizzazioni:
+
+<dl class="parml">
+<dt class="pt dlterm">OraInizio</dt>
+<dd class="pd">Il primo punto nel tempo da cui vengono restituiti i dati. Se non viene specificata una OraInizio, viene incluso il primo punto dati disponibile. Ad esempio, per raccogliere i dati tra la 14 e le 17, specificare una OraInizio di 14.</dd>
+<dt class="pt dlterm">OraFine</dt>
+<dd class="pd">L'ultimo  punto nel tempo da cui vengono restituiti i dati. Se non viene specificata alcuna OraFine, viene utilizzato il punto dati più recente. Ad esempio, per raccogliere i dati tra la 14 e le 17, specificare una OraFine di 17.</dd>
+<dt class="pt dlterm">conteggio</dt>
+<dd class="pd">Il numero di record da restituire in ogni esempio di dati.
+</dd>
+<dt class="pt dlterm">minValue</dt>
+<dd class="pd">Il valore minimo da restituire per la metrica specificata.  Se non si specifica alcun minValue, vengono restituiti tutti i valori.  Ad esempio, per raccogliere organizzazioni che utilizzano almeno 20000 byte di memoria fisica, specifica un minValue di 20000.
+</dd>
+</dl>
+
+Il seguente esempio raccoglie le metriche relative alle tue organizzazioni:
+
+```
+curl -b ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/admin/metrics/api/v1/org/memory/physical?count=5&startTime=2016-12-02T16:54:09.467Z
+```
+{: codeblock}
+
+### Formato della risposta delle organizzazioni
+
+```
+{
+   docs: [],
+   next_url:
+}
+```
+{: screen}
+
+Ogni documento restituito rappresenta le metriche richieste per un'organizzazione in ogni esempio di dati, al momento della richiesta.
+
 ## Raccolta delle metriche sulle tue applicazioni
 
-I dati sono registrati per tutte le applicazioni approssimativamente ogni ora. Una richiesta per una metrica particolare restituisce le informazioni per tutte le applicazioni in ogni esempio di dati nel periodo di tempo che specifichi, ordinate in modo decrescente per la metrica richiesta. Ad esempio, la richiesta di tutte le applicazioni per la CPU in un periodo di tempo di 6 ore in un ambiente con 200 applicazioni restituisce 1200 record, 200 alla volta.
+I dati vengono registrati per tutte le applicazioni approssimativamente ogni ora. Una richiesta per una metrica particolare restituisce le informazioni per tutte le applicazioni in ogni esempio di dati nel periodo di tempo che specifichi, ordinate in modo decrescente per la metrica richiesta. Ad esempio, la richiesta di tutte le applicazioni per la CPU in un periodo di tempo di 6 ore in un ambiente con 200 applicazioni restituisce 1200 record, 200 alla volta.
 
 Per ridurre la quantità di informazioni restituite per ogni esempio di dati nel periodo di tempo richiesto, puoi specificare un'opzione di conteggio. Utilizzando il precedente esempio e aggiungendo un'opzione di conteggio di 5, vengono restituiti 30 record che rappresentano le prime 5 applicazioni per CPU per ogni esempio di dati.
 
@@ -1633,6 +1808,7 @@ Puoi utilizzare i seguenti endpoint per richiamare questo comando API:
 * `/api/v1/app/disk/physical`
 * `/api/v1/app/disk/reserved`
 
+**Nota**: per accedere a questi endpoint, è richiesta una delle seguenti autorizzazioni: **Lettura utente**, **Scrittura utente** o **Superuser**
 
 ### Parametri della query delle applicazioni
  
@@ -1647,7 +1823,7 @@ Utilizza i seguenti parametri della query per raccogliere le metriche per le tue
 <dd class="pd">Il numero di record da restituire in ogni esempio di dati.
 </dd>
 <dt class="pt dlterm">minValue</dt>
-<dd class="pd">Il valore minimo da restituire per la metrica specificata.  Se non si specifica alcun minValue, vengono restituiti tutti i valori.  Ad esempio, per raccogliere applicazioni che utilizzano almeno 20000 byte di memoria fisica, specifica un minValue di 20000.
+<dd class="pd">Il valore minimo da restituire per la metrica specificata. Se non si specifica alcun minValue, vengono restituiti tutti i valori. Ad esempio, per raccogliere applicazioni che utilizzano almeno 20000 byte di memoria fisica, specifica un minValue di 20000.
 </dd>
 </dl>
 
@@ -1657,6 +1833,7 @@ Il seguente esempio raccoglie le metriche relative alle tue applicazioni:
 curl -b ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/admin/metrics/api/v1/app/cpu/physical?count=5&startTime=2016-12-02T16:54:09.467Z
 ```
 {: codeblock}
+
 
 ### Formato della risposta delle applicazioni
 
@@ -1905,16 +2082,18 @@ Completa la seguente procedura per aggiungere il repository e installare
 il plug-in:
 
 <ol>
-<li>Per aggiungere il repository del plug-in {{site.data.keyword.Bluemix_notm}} Admin, esegui questo comando:<br/><br/>
+<li>Per aggiungere il repository del plug-in {{site.data.keyword.Bluemix_notm}} Admin,
+immetti il seguente comando:<br/><br/>
 <code>
-cf add-plugin-repo BluemixAdmin https://console.&lt;dominiosecondario&gt;.bluemix.net/cli
+cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cli
 </code><br/><br/>
 <dl class="parml">
 <dt class="pt dlterm">&lt;dominiosecondario&gt;</dt>
 <dd class="pd">Dominio secondario dell'URL per la tua istanza {{site.data.keyword.Bluemix_notm}}.</dd>
 </dl>
 </li>
-<li>Per installare il plug-in {{site.data.keyword.Bluemix_notm}} Admin CLI, esegui questo comando:<br/><br/>
+<li>Per installare il plug-in {{site.data.keyword.Bluemix_notm}} Admin
+CLI, immetti il seguente comando:<br/><br/>
 <code>
 cf install-plugin bluemix-admin-cli -r BluemixAdmin
 </code>

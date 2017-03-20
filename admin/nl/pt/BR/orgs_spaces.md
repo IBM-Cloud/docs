@@ -47,7 +47,7 @@ obter informações detalhadas, veja
 <dt>Domínios</dt>
 <dd>Fornecem a rota na Internet que é alocada para a organização. Uma rota tem um subdomínio e um domínio. Um subdomínio normalmente é o nome do aplicativo. Um
 domínio pode ser um domínio do sistema ou um domínio customizado que você registrou para
-seu aplicativo. Consulte [Gerenciando domínios customizados](orgs_spaces.html#managedomains).<br/>
+seu aplicativo. Veja [Gerenciando domínios customizados](orgs_spaces.html#managedomains).<br/>
 <p>**Nota**: Se um domínio customizado for incluído, deve-se configurar seu servidor DNS para resolver seu domínio customizado para apontar para o domínio de sistema {{site.data.keyword.Bluemix_notm}}. Dessa
 maneira, quando o
 {{site.data.keyword.Bluemix_notm}}
