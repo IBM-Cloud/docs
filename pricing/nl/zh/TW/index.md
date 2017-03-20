@@ -153,7 +153,7 @@ lastupdated: "2017-01-11"
 
 您也可以訂購選購項目（例如 SoftLayer DirectLink 或高品質支援選項）。如需相關資訊，請與 [Bluemix 業務](https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs)聯絡。
 
-使用「{{site.data.keyword.Bluemix_notm}} 專用」，您必須註冊至少一年期限。您在該期間每個月所支付的金額是根據您想要的專用服務，加上讓您存取所有公用服務的訂閱帳戶。「{{site.data.keyword.Bluemix_notm}} 公用」中的服務使用費用是根據您的訂閱帳戶合約來計算。您會收到關於任何超出訂閱合約之使用服務的發票。請與 IBM 指定客戶業務代表聯絡，或與 [Bluemix 業務](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs)聯絡，以開始您的合約。
+使用「{{site.data.keyword.Bluemix_notm}} 專用」，您必須註冊至少一年期限。您在該期間每個月所支付的金額是根據您想要的專用服務，加上讓您存取所有公用服務的訂閱帳戶。「{{site.data.keyword.Bluemix_notm}} 公用」中的服務使用費用是根據您的訂閱帳戶合約來計算。您會收到關於任何超出訂閱合約之使用服務的發票。請與 IBM 指定的客戶業務代表聯絡，或與 [Bluemix 業務](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs)聯絡，以開始您的合約。
 
 
 ###{{site.data.keyword.Bluemix_notm}} 本端帳戶
@@ -166,7 +166,7 @@ lastupdated: "2017-01-11"
 * 您選取的所有本端服務，及所有公用 {{site.data.keyword.Bluemix_notm}} 服務的存取
 * 標準 {{site.data.keyword.Bluemix_notm}} 支援
 
-使用「{{site.data.keyword.Bluemix_notm}} 本端」，您必須註冊至少一年期限。您在該期間每個月所支付的金額是根據您想要的本端服務，加上讓您存取所有公用服務的訂閱帳戶。「{{site.data.keyword.Bluemix_notm}} 公用」中的服務使用費用是根據您的訂閱帳戶合約來計算。您會收到關於任何超出訂閱合約之使用服務的發票。請與 IBM 指定業務代表聯絡，或與 [{{site.data.keyword.Bluemix_notm}} 業務代表](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs)聯絡，以開始您的合約。
+使用「{{site.data.keyword.Bluemix_notm}} 本端」，您必須註冊至少一年期限。您在該期間每個月所支付的金額是根據您想要的本端服務，加上讓您存取所有公用服務的訂閱帳戶。「{{site.data.keyword.Bluemix_notm}} 公用」中的服務使用費用是根據您的訂閱帳戶合約來計算。您會收到關於任何超出訂閱合約之使用服務的發票。請與 IBM 指定的業務代表聯絡，或與 [{{site.data.keyword.Bluemix_notm}} 業務代表](https://console.ng.bluemix.net/#/contactUs/cloudOEPaneId=contactUs)聯絡，以開始您的合約。
 
 ##收費方式
 {: #charges}
@@ -223,7 +223,7 @@ lastupdated: "2017-01-11"
 | 層級 3：2001 - 3000                  |   美金 $0.75                       |
 | 層級 4：3001 - 4000           |      美金 $0.60                    |
 |層級 5：&gt; 4000 | 美金 $0.40 | 
-{:caption="Table 1. Simple tier pricing table" caption-side="top"}
+{: caption="表 1. 簡式層級定價表" caption-side="top"}
 
 下表說明您要對根據簡式層級定價模型的方案支付多少錢：
 
@@ -234,12 +234,12 @@ lastupdated: "2017-01-11"
 |2500 |	2500 × 0.75 = 1875 |	美金 $1875|
 |... |	... |	...|
 |5200 |	5200 × 0.40 = 2080 |美金 $2080|
-{:caption="Table 2. Charge calculation by using the simple tier pricing model" caption-side="top"}
+{: caption="表 2. 使用簡式層級定價模型的費用計算" caption-side="top"}
 
 ####提升層級
 {: #graduated_tier}
 
-在提升層級模型中，每個層級的單價都會隨著使用層次的增加而減少。總價是每一個使用層次的累積費用（包含您的數量乘上該層級的單價）。例如：
+在提升層級模型中，每個層級的單價都會隨著使用層次的增加而減少。總價是每一個用量層次的累積費用，其組成為您的數量乘上該層級的單價。例如：
 
 | 項目數量 |	層級中項目的單價|
 |-------------------|------------------------------------|
@@ -248,7 +248,7 @@ lastupdated: "2017-01-11"
 |    層級 3：2001 - 3000 |	美金 $0.75 |
 |    層級 4：3001 - 4000 |	美金 $0.60 |
 |    層級 5：&gt; 4000 |	美金 $0.40 |
-{:caption="Table 3. Graduated tier pricing table" caption-side="top"}
+{: caption="表 3. 提升層級定價表" caption-side="top"}
 
 下表說明您要對根據提升層級定價模型的方案支付多少錢：
 
@@ -259,7 +259,7 @@ lastupdated: "2017-01-11"
 |2500 |	(1000 × 1（層級 1 的單價）) + (1000 × 0.90（層級 2 的單價）) + (500 × 0.75（層級 3 的單價）) = 2275 |	美金 $2275 |
 |... |	... |	...|
 |5200 |	(1000 × 1（層級 1 的單價）) + (1000 × 0.90（層級 2 的單價）) + (1000 × 0.75（層級 3 的單價）) + (1000 × 0.60（層級 4 的單價）) + (1200 × 0.40（層級 5 的單價）) = 3730 |	美金 $3730|
-{:caption="Table 4. Charge calculation by using the graduated tier pricing model" caption-side="top"}
+{: caption="表 4. 使用提升層級定價模型的費用計算" caption-side="top"}
 
 ####區塊層級
 {: #block_tier}
@@ -273,7 +273,7 @@ lastupdated: "2017-01-11"
 | 層級 3：&lt;= 3000 |	美金 $2800|
 | 層級 4：&lt;= 4000 |	美金 $3500|
 | 層級 5：&lt;= 10000 |	美金 $5000|
-{:caption="Table 5. Block tier pricing table" caption-side="top"}
+{: caption="表 5. 區塊層級定價表" caption-side="top"}
 
 下表說明您要對根據區塊層級定價模型的方案支付多少錢：
 
@@ -283,7 +283,7 @@ lastupdated: "2017-01-11"
 |1500 |	此項目數落在層級 2，因此總價為美金 $1900。 |	美金 $1900|
 |... |	... |	...|
 |5200 |	此項目數落在層級 5，因此總價為美金 $5000。 |	美金 $5000|
-{:caption="Table 6. Charge calculation by using the block tier pricing model" caption-side="top"}
+{: caption="表 6. 使用區塊層級定價模型的費用計算" caption-side="top"}
 
 ### 虛擬伺服器的免費額度
 {: #vms}
@@ -347,8 +347,9 @@ lastupdated: "2017-01-11"
 |Data Cache - Starter |	1 GB 的快取空間及一個抄本 |	$55.00 USD/實例 |
 |Data Cache - Standard |	5 GB 的快取空間及一個抄本  |	$155.00 USD/實例 |
 |Data Cache - Premium |	25 GB 的快取空間及一個抄本 |	$505.00 USD/實例|
-|IBM Cloudant® NoSQL DB for {{site.data.keyword.Bluemix_notm}} |	2 GB 的免費資料儲存空間<br/>每個月有 50,000 次輕量型 API 呼叫免費<br/>每個月有 10,000 次重量型 API 呼叫免費 | $1.00 USD/GB<br/>$0.03 USD/1000 次輕量型 API 呼叫<br/>$0.15 USD/1000 次重量型 API 呼叫 |
-{:caption="Table 7. Pricing sheet" caption-side="top"}
+|IBM Cloudant® NoSQL DB for {{site.data.keyword.Bluemix_notm}} |	2 GB 的可用資料儲存體
+<br/>每個月有 50,000 次輕量型 API 呼叫免費<br/>每個月有 10,000 次重量型 API 呼叫免費 | $1.00 USD/GB<br/>$0.03 USD/1000 次輕量型 API 呼叫<br/>$0.15 USD/1000 次重量型 API 呼叫 |
+{: caption="表 7. 定價單" caption-side="top"}
 
 ###計算應用程式價格
 
@@ -407,7 +408,7 @@ lastupdated: "2017-01-11"
 |SEK |	  瑞典克朗|
 |USD |    美元|
 |ZAR |	  南非幣|
-{:caption="Table 8. Supported currencies" caption-side="top"}
+{: caption="表 8. 支援的貨幣" caption-side="top"}
 
 **附註：**如果您已鏈結 {{site.data.keyword.Bluemix_notm}} 與 SoftLayer 帳戶，則所收到的單一發票的計價單位僅為美元 (USD)。  
 
@@ -420,7 +421,7 @@ lastupdated: "2017-01-11"
 
 在每一個計費週期的結尾，會針對跨所有組織發生的用量總計，向帳戶擁有者收費。每個計費週期為期一個月。
 
-帳戶擁有者可以依地區和組織來過濾用量摘要。如果您是帳戶擁有者，請將**組織**設為**所有組織**，以查看整個帳戶 12 個月期間的使用情形。按一下特定月份，以查看該月份的使用情形。顯示的費用代表您（帳戶擁有者）該月份的計費金額。
+帳戶擁有者可以依地區和組織來過濾用量摘要。如果您是帳戶擁有者，請將**組織**設為**所有組織**，以查看整個帳戶 12 個月期間的用量。按一下特定月份，以查看該月份的用量。顯示的費用代表您（帳戶擁有者）該月份的計費金額。
 
 如果您針對**組織**選取特定組織，則可以看到該組織的用量總計（包括免費層級的任何用量）。顯示的組織費用不是您的計費費用。免費層級用量在帳戶層次會顯示為免費，但在組織層次則不是。因此，當您檢視組織用量時，會看到該組織的實際用量（包括免費及收費用量）。在移除免費層級之後，所有組織用量都會累積更新至帳戶用量。
 
@@ -446,12 +447,12 @@ lastupdated: "2017-01-11"
 只有特定服務才可讓您變更服務方案。如果已啟用服務的方案變更，則服務「儀表板」會在導覽中顯示**方案**選項。如果您變更方案，則每一個服務都會有要遵循的不同後續步驟集。
 
 1. 若要變更方案，請按一下服務「儀表板」中的**方案**。您一般可以升級方案，或降低方案。
-2. 在您變更方案之後，必須完成一個後續步驟集。步驟會根據方案變更類型及服務而不同。例如，如果您降低方案，則可能需要重新編譯打包應用程式。或者，如果您升級方案，則可能需要重新編譯打包應用程式並採取其他動作。<br/><br/>若要重新編譯打包應用程式，請移至 {{site.data.keyword.Bluemix_notm}}「儀表板」，找到服務所連結的應用程式。在應用程式功能表中，選取**重新啟動應用程式**。<br/><br/>其他下一步動作取決於服務。如需特定動作，請參閱下表。
+2. 在您變更方案之後，必須完成一個後續步驟集。步驟會根據方案變更類型及服務而不同。例如，如果您降低方案，則可能需要重新編譯打包應用程式。或者，如果您升級方案，則可能需要重新編譯打包應用程式並採取其他動作。<br/><br/>若要重新編譯打包應用程式，請移至 {{site.data.keyword.Bluemix_notm}}「儀表板」，並找到服務所連結的應用程式。在應用程式功能表中，選取**重新啟動應用程式**。<br/><br/>其他後續步驟動作是與服務相依。如需特定動作，請參閱下表。
 
 |服務 |	資訊|
 |--------|-------------|
-|Presence Insights 	|如果您有 Lite 方案，並超出免費額度，則會顯示 403 訊息，或記載此訊息以指出您不再獲得授權，並且停用服務實例。此外，還會以 403 回應來拒絕 POST REST API 呼叫。<br/><br/>如果因為超出免費額度而停用您的服務，則可以從 Lite 方案升級為「付費」方案。您的服務會在 2 小時內重新啟用。<br/><br/>如果您有「付費」方案，則只要事件及總儲存空間的用量落在 Lite 方案額度內，就可以將方案降低為 Lite 方案。<br/><br/>當您升級或降低方案時，並不需要重新編譯打包或重新啟動應用程式。|
-{:caption="Table 9. Next steps for changing your plan" caption-side="top"}
+|Presence Insights 	|如果您有 Lite 方案，並超出免費額度，則會顯示 403 訊息，或記載此訊息以指出您不再獲得授權，並且停用服務實例。此外，還會以 403 回應來拒絕 POST REST API 呼叫。<br/><br/>如果因超出免費額度而停用您的服務，您可以從「精簡」方案升級為「付費」方案。您的服務會在 2 個小時內重新予以啟用。<br/><br/>如果您有付費方案，則只要事件及總儲存空間的用量落在精簡方案額度內，就可以將方案降低為精簡方案。<br/><br/>當您升級或降低方案時，並不需要重新編譯打包或重新啟動應用程式。|
+{: caption="表 9. 變更方案的後續步驟" caption-side="top"}
 
 ###如何透過指令行介面變更方案
 

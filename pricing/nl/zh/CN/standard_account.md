@@ -35,7 +35,7 @@ lastupdated: "2017-02-02"
 | 您可以使用即将推出的更多服务，访问 Cloudant NoSQL DB 和 Internet of Things Platform 的免费 Lite 套餐。 |
 | 如果超过 10 天没有任何开发活动，那么您的应用程序将休眠。 |
 | 您的服务实例将在处于不活动状态 30 天后删除。 |
-{:caption="Table 1. What's new in a Standard Account" caption-side="top"}
+{:caption="表 1. 标准帐户中的新增内容" caption-side="top"}
 
 |转换试用帐户时未发生更改的内容？ | 
 |-----------------|
@@ -43,7 +43,7 @@ lastupdated: "2017-02-02"
 |Cloudant NoSQL DB 和 Internet of Things Platform 的任何 Lite 实例。上述每个服务的一个 Lite 实例可转移到您的新帐户。 |
 |您的组织、空间和相关联团队成员权限设置仍保持相同。一个组织可转移到您的新帐户。 |
 |{{site.data.keyword.Bluemix_notm}} 支持的级别仍相同。 |
-{:caption="Table 2. What's not changing" caption-side="top"}
+{:caption="表 2. 未发生更改的内容" caption-side="top"}
 
 **注**：如果未转换试用帐户，那么您将看到一条说明原因的消息。您可能在现有试用帐户或应用程序中具有无法转移的多个组织。您可以采取适当的操作，然后重新尝试转换帐户。
 

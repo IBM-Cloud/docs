@@ -217,7 +217,7 @@ lastupdated: "2017-01-11"
 | 第 3 层：2001 - 3000                  |   0.75 美元                       |
 | 第 4 层：3001 - 4000           |      0.60 美元                    |
 |第 5 层：大于 4000 | 0.40 美元 | 
-{:caption="Table 1. Simple tier pricing table" caption-side="top"}
+{:caption="表 1. 简单层定价表" caption-side="top"}
 
 下表说明了使用基于简单层定价模型的套餐要支付的费用：
 
@@ -228,7 +228,7 @@ lastupdated: "2017-01-11"
 |2500 |	2500 × 0.75 = 1875 |	1875 美元|
 |... |	... |	...|
 |5200 |	5200 × 0.40 = 2080 |2080 美元|
-{:caption="Table 2. Charge calculation by using the simple tier pricing model" caption-side="top"}
+{:caption="表 2. 使用简单层定价模型进行费用计算" caption-side="top"}
 
 ####累进层
 {: #graduated_tier}
@@ -242,7 +242,7 @@ lastupdated: "2017-01-11"
 |    第 3 层：2001 - 3000 |	0.75 美元 |
 |    第 4 层：3001 - 4000 |	0.60 美元 |
 |    第 5 层：大于 4000 |	0.40 美元 |
-{:caption="Table 3. Graduated tier pricing table" caption-side="top"}
+{:caption="表 3. 累进层定价表" caption-side="top"}
 
 下表说明了使用基于累进层定价模型的套餐要支付的费用：
 
@@ -253,7 +253,7 @@ lastupdated: "2017-01-11"
 |2500 |	(1000 × 1 (第 1 层的单价)) + (1000 × 0.90 (第 2 层的单价)) + (500 × 0.75 (第 3 层的单价)) = 2275 |	2275 美元 |
 |... |	... |	...|
 |5200 |	(1000 × 1 (第 1 层的单价)) + (1000 × 0.90 (第 2 层的单价)) + (1000 × 0.75 (第 3 层的单价)) + (1000 × 0.60 (第 4 层的单价)) + (1200 × 0.40 (第 5 层的单价)) = 3730 |	3730 美元|
-{:caption="Table 4. Charge calculation by using the graduated tier pricing model" caption-side="top"}
+{:caption="表 4. 使用累进层定价模型进行费用计算" caption-side="top"}
 
 ####包量层
 {: #block_tier}
@@ -267,7 +267,7 @@ lastupdated: "2017-01-11"
 | 第 3 层：小于等于 3000 |	2800 美元|
 | 第 4 层：小于等于 4000 |	3500 美元|
 | 第 5 层：小于等于 10000 |	5000 美元|
-{:caption="Table 5. Block tier pricing table" caption-side="top"}
+{:caption="表 5. 包量层定价表" caption-side="top"}
 
 下表说明了使用基于包量层定价模型的套餐要支付的费用：
 
@@ -277,7 +277,7 @@ lastupdated: "2017-01-11"
 |1500 |	项数属于第 2 层，所以总价是 1900 美元。 |	1900 美元|
 |... |	... |	...|
 |5200 |	项数属于第 5 层，所以总价是 5000 美元。 |	5000 美元|
-{:caption="Table 6. Charge calculation by using the block tier pricing model" caption-side="top"}
+{:caption="表 6. 使用包量层定价模型进行费用计算" caption-side="top"}
 
 ### 虚拟服务器的免费限额
 {: #vms}
@@ -340,8 +340,8 @@ lastupdated: "2017-01-11"
 |Data Cache - 入门级 |	1 GB 高速缓存空间和副本 |	55.00 美元/实例 |
 |Data Cache - 标准 |	5 GB 高速缓存空间和副本 |	155.00 美元/实例 |
 |Data Cache - 高级 |	25 GB 高速缓存空间和副本 |	505.00 美元/实例|
-|IBM Cloudant® NoSQL DB for {{site.data.keyword.Bluemix_notm}} |	2 GB 免费数据存储<br/>50,000 个免费稀少 API 调用/月<br/>10,000 个免费频繁 API 调用/月 | 1.00 美元/GB<br/>0.03 美元/1000 个稀少 API 调用<br/>0.15 美元/1000 个频繁 API 调用 |
-{:caption="Table 7. Pricing sheet" caption-side="top"}
+|IBM Cloudant® NoSQL DB for {{site.data.keyword.Bluemix_notm}} |	2 GB 免费数据存储<br/>每月 50,000 个免费稀少 API 调用<br/>每月 10,000 个免费频繁 API 调用 | 1.00 美元/GB<br/>0.03 美元/1000 个稀少 API 调用<br/>0.15 美元/1000 个频繁 API 调用 |
+{:caption="表 7. 价格表" caption-side="top"}
 
 ###计算应用程序价格
 
@@ -399,7 +399,7 @@ lastupdated: "2017-01-11"
 |SEK |	  瑞典克朗|
 |USD |    美元|
 |ZAR |	  南非兰特|
-{:caption="Table 8. Supported currencies" caption-side="top"}
+{:caption="表 8. 支持的货币" caption-side="top"}
 
 **注：**如果已链接您的 {{site.data.keyword.Bluemix_notm}} 和 SoftLayer 帐户，那么您收到的单个发票只使用美元 (USD)。  
 
@@ -438,12 +438,12 @@ lastupdated: "2017-01-11"
 只有特定服务才提供更改服务套餐的功能。如果服务支持套餐更改，那么服务“仪表板”的导航中会显示**套餐**选项。每个服务在套餐更改后都有一组不同的后续步骤要执行。
 
 1. 要更改套餐，请在服务“仪表板”中单击**套餐**。通常，可以升级套餐或降级套餐。
-2. 更改套餐后，必须完成一组后续步骤。步骤根据套餐更改和服务的类型而有所不同。例如，如果降级了套餐，那么可能需要重新编译打包应用程序。或者，如果升级了套餐，那么可能需要重新编译打包应用程序以及执行其他操作。<br/><br/>要重新编译打包应用程序，请转至 {{site.data.keyword.Bluemix_notm}}“仪表板”，然后找到与服务绑定的应用程序。在应用程序菜单中，选择**重新启动应用程序**。<br/><br/>其他后续步骤操作根据服务而定。请参阅下表以了解具体的操作。
+2. 更改套餐后，必须完成一组后续步骤。步骤根据套餐更改和服务的类型而有所不同。例如，如果降级了套餐，那么可能需要重新编译打包应用程序。或者，如果升级了套餐，那么可能需要重新编译打包应用程序并执行其他操作。<br/><br/>要重新编译打包应用程序，请转至 {{site.data.keyword.Bluemix_notm}}“仪表板”，然后找到与服务绑定的应用程序。在应用程序菜单中，选择**重新启动应用程序**。<br/><br/>其他后续步骤操作取决于服务。请参阅下表以了解具体的操作。
 
 |服务 |	信息|
 |--------|-------------|
-|Presence Insights 	|如果您拥有 Lite 套餐，但已超过免费限额，那么会显示或记录 403 消息，指示您不再有权使用，且您的服务实例已禁用。此外，还会拒绝 POST REST API 调用，并返回 403 响应。<br/><br/>如果服务是因为超过免费限额而禁用，那么可以从 Lite 套餐升级到付费套餐。您的服务会在两小时内重新启用。<br/><br/>如果您拥有付费套餐，那么可以将套餐降级到 Lite 套餐，只要您的使用量未超出事件和总存储量的 Lite 套餐限额即可。<br/><br/>升级或降级套餐时，无需重新编译打包或重新启动应用程序。|
-{:caption="Table 9. Next steps for changing your plan" caption-side="top"}
+|Presence Insights 	|如果您拥有 Lite 套餐，但已超过免费限额，那么会显示或记录 403 消息，指示您不再有权使用，且您的服务实例已禁用。此外，还会拒绝 POST REST API 调用，并返回 403 响应。<br/><br/>如果由于超过免费限额而禁用了服务，那么可以从 Lite 套餐升级到付费套餐。服务将在 2 小时内重新启用。<br/><br/>如果您拥有付费套餐，那么可以将套餐降级到 Lite 套餐，只要您的使用量未超出事件和总存储量的 Lite 套餐限额即可。<br/><br/>升级或降级套餐后，都无需重新编译打包或重新启动应用程序。|
+{:caption="表 9. 更改套餐的后续步骤" caption-side="top"}
 
 ###通过命令行界面更改套餐
 
