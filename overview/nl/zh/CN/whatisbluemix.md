@@ -164,7 +164,7 @@ cf api https://api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net
 | 美国南部区域 | 美国达拉斯 | ng | api.ng.bluemix.net | console.ng.bluemix.net |
 | 英国区域 | 英国伦敦 | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
 | 悉尼区域 | 澳大利亚悉尼 | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
-{: caption="Table 1. {{site.data.keyword.Bluemix_notm}} region list" caption-side="top"}
+{: caption="表 1. {{site.data.keyword.Bluemix_notm}} 区域列表" caption-side="top"}
 
 
 ### {{site.data.keyword.Bluemix_notm}} 弹性
