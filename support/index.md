@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
   
-lastupdated: "2017-03-01"
+lastupdated: "2017-03-21"
 
 ---
 
@@ -148,10 +148,11 @@ For {{site.data.keyword.Bluemix_notm}} Public, you can sign up for platform noti
 
   * Take advantage of multiple {{site.data.keyword.Bluemix_notm}} regions
 
-    All users of {{site.data.keyword.Bluemix_notm}} Public automatically have access to the US-SOUTH, EU-GB, and AU-SYD regions:
+    All users of {{site.data.keyword.Bluemix_notm}} Public automatically have access to the US-SOUTH, EU-GB, EU-DE, and AU-SYD regions:
 
 	  * US-SOUTH: https://console.ng.bluemix.net
 	  * EU-GB: https://console.eu-gb.bluemix.net
+	  * EU-DE: https://console.eu-de.bluemix.net
 	  * AU-SYD: https://console.au-syd.bluemix.net
 
 	The {{site.data.keyword.Bluemix_notm}} Global Operations team manages all regions to avoid maintenance impacts and minimize the risk of incidents that affect all regions at the same time.
