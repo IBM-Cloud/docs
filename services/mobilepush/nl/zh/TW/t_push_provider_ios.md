@@ -19,7 +19,7 @@ Apple Push Notification Service (APNs) 容許應用程式開發人員將遠端�
 
 請取得並配置 APNs 認證。APNs 憑證是透過 {{site.data.keyword.mobilepushshort}} Service 安全地進行管理，並且用來以提供者身分連接至 APNs 伺服器。
 
-<!-- 1. Obtain an [Apple Developers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.apple.com/ "External link icon"){: new_window} account.-->
+<!-- 1. Obtain an [Apple Developers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.apple.com/){: new_window} account.-->
 
 <!--2. [Register an App ID](#create-push-credentials-apns-register)
 3. [Create a development and distribution APNs SSL certificate](#create-push-credentials-apns-ssl)
@@ -36,9 +36,9 @@ Apple Push Notification Service (APNs) 容許應用程式開發人員將遠端�
 
 「應用程式 ID」（軟體組 ID）是可識別特定應用程式的唯一 ID。每一個應用程式都需要「應用程式 ID」。{{site.data.keyword.mobilepushshort}} Service 這類服務會配置成「應用程式 ID」。
 
-1. 請確定您有一個 [Apple Developers ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.apple.com/ "外部鏈結圖示"){: new_window} 帳戶。
-2. 移至 [Apple Developer ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.apple.com "外部鏈結圖示"){: new_window} 入口網站，按一下 **Member Center**，然後選取 **Certificates, Identifiers & Profiles**。
-3. 移至 [Apple Developer Library ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW991 "外部鏈結圖示"){: new_window} 中的 **Registering App IDs** 區段，遵循指示登錄 App ID。
+1. 請確定您有一個 [Apple Developers ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.apple.com/){: new_window} 帳戶。
+2. 移至 [Apple Developer ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.apple.com){: new_window} 入口網站，按一下 **Member Center**，然後選取 **Certificates, Identifiers & Profiles**。
+3. 移至 [Apple Developer Library ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW991){: new_window} 中的 **Registering App IDs** 區段，遵循指示登錄 App ID。
 
 登錄「應用程式 ID」時，請選取下列選項：
 
@@ -67,7 +67,7 @@ Apple Push Notification Service (APNs) 容許應用程式開發人員將遠端�
 
 <!-- Create a development and distribution SSL certificate. -->
 
-1. 移至 [Apple Developer ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.apple.com "外部鏈結圖示"){: new_window} 網站，按一下 **Member Center**，然後選取 **Certificates, Identifiers & Profiles**。
+1. 移至 [Apple Developer ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.apple.com){: new_window} 網站，按一下 **Member Center**，然後選取 **Certificates, Identifiers & Profiles**。
 2. 在 **Identifiers** 區域中，按一下 **App IDs**。
 3. 從 App IDs 清單中，選取 <!--newly created--> App ID，然後選取 **Settings**。
 4. 在 **Push Notifications** 區域中，依序建立「開發 SSL」憑證及「正式作業 SSL」憑證。
@@ -104,8 +104,8 @@ Apple Push Notification Service (APNs) 容許應用程式開發人員將遠端�
 
 建立開發佈建設定檔，如下所示：
 
-1. 移至 [Apple Developer ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.apple.com "外部鏈結圖示"){: new_window} 入口網站，按一下 **Member Center**，然後選取 **Certificates, Identifiers & Profiles**。
-2. 移至 [Mac Developer Library ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW62site "外部鏈結圖示"){: new_window}，捲動至 **Creating Development Provisioning Profiles** 區段，並遵循指示以建立開發設定檔。
+1. 移至 [Apple Developer ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.apple.com){: new_window} 入口網站，按一下 **Member Center**，然後選取 **Certificates, Identifiers & Profiles**。
+2. 移至 [Mac Developer Library ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html#//apple_ref/doc/uid/TP40012582-CH30-SW62site){: new_window}，捲動至 **Creating Development Provisioning Profiles** 區段，並遵循指示以建立開發設定檔。
 **附註**：配置開發佈建設定檔時，請選取下列選項：
 	* **iOS 應用程式開發**
 	* **對於 iOS 及 watchOS 應用程式**
@@ -117,7 +117,7 @@ Apple Push Notification Service (APNs) 容許應用程式開發人員將遠端�
 
 使用市集佈建設定檔，將要進行配送的應用程式提交給「應用程式市集」。
 
-1. 移至 [Apple Developer ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.apple.com "外部鏈結圖示"){: new_window} 入口網站，按一下 **Member Center**，然後選取 **Certificates, Identifiers & Profiles**。
+1. 移至 [Apple Developer ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.apple.com){: new_window} 入口網站，按一下 **Member Center**，然後選取 **Certificates, Identifiers & Profiles**。
 2. 按兩下下載的佈建設定檔，以將它安裝至 Xcode。
 
 ##在 {{site.data.keyword.mobilepushshort}} 儀表板上設定 APNs
@@ -131,7 +131,7 @@ APNs 需要的憑證為 `.p12` 憑證。這些憑證包含私密金鑰以及建�
 
 **附註**：`.cer` 檔案位於您的金鑰鏈存取之後，請將它匯出至您的電腦，以建立 `.p12` 憑證。
 
-如需有關使用 APNs 的相關資訊，請參閱 [iOS Developer Library: Local and Push Notification Programming Guide ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ProvisioningDevelopment.html#//apple_ref/doc/uid/TP40008194-CH104-SW4 "外部鏈結圖示"){: new_window}。
+如需有關使用 APNs 的相關資訊，請參閱 [iOS Developer Library: Local and Push Notification Programming Guide ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ProvisioningDevelopment.html#//apple_ref/doc/uid/TP40008194-CH104-SW4){: new_window}。
 
 若要在 Push Notification Service 儀表板上設定 APNs，請完成以下步驟：
 

@@ -12,7 +12,7 @@ copyright:
 
 #{{site.data.keyword.mobilepushshort}}를 전송하도록 iOS 애플리케이션 설정
 {: #enable-push-ios-notifications}
-마지막 업데이트 날짜: 2017년 1월 16일
+마지막 업데이트 날짜: 2017년 2월 14일
 {: .last-updated}
 
 iOS 애플리케이션이 {{site.data.keyword.mobilepushshort}}를 사용자 디바이스에 전송하도록 설정할 수 있습니다.
@@ -23,7 +23,7 @@ iOS 애플리케이션이 {{site.data.keyword.mobilepushshort}}를 사용자 디
 
 기존 Xcode 프로젝트의 경우 CocoaPods 종속 항목 관리 도구를 사용하여 Bluemix Mobile Services Client SDK를 설정할 수 있습니다. 또는 SDK를 수동으로 설치할 수 있습니다. 
 
-Swift 푸시 readme 파일을 보려면 [Readme ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/tree/master "외부 링크 아이콘"){: new_window}으로 이동하십시오.
+Swift 푸시 Readme 파일을 보려면 [Readme ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/tree/master){: new_window}으로 이동하십시오. 
 
 
 
@@ -35,15 +35,14 @@ Swift 푸시 readme 파일을 보려면 [Readme ![외부 링크 아이콘](../..
 3. 생성된 Podfile에 필요한 SDK 종속 항목을 추가하십시오. 다음 Podfile을 복사하십시오.
    
 	```
-	source 'https://github.com/CocoaPods/Specs.git'
-	// Copy the following list as is and remove the dependencies you do not need.
-	use_frameworks!
-	target 'MyApp' do
-	platform :ios, '8.0'
-	pod 'BMSCore'
-	pod 'BMSPush'
-	pod 'BMSAnalyticsAPI'
-	end
+		source 'https://github.com/CocoaPods/Specs.git'
+		//Copy the following list as is and remove the dependencies you do not need.
+		use_frameworks!
+		target 'MyApp' do
+		platform :ios, '8.0'
+		pod 'BMSCore'
+		pod 'BMSPush'
+		pod 'BMSAnalyticsAPI' end
 	```
 		{: codeblock}
 
@@ -61,7 +60,7 @@ $ open App.xcworkspace
 ##Carthage를 사용하여 프레임워크 추가
 {: #carthage}
 
-[Carthage ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos "외부 링크 아이콘"){: new_window}을 사용하여 프로젝트에 프레임워크를 추가하십시오. Xcode8의 Carthage는 지원되지 않습니다. 
+[Carthage ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos){: new_window}을 사용하여 프로젝트에 프레임워크를 추가하십시오. Xcode8의 Carthage는 지원되지 않습니다. 
 
 1. `BMSPush` 프레임워크를 Cartfile에 추가하십시오. 
 ```
@@ -69,7 +68,7 @@ github "github "ibm-bluemix-mobile-services/bms-clientsdk-swift-push" ~> 1.0"
 ```
 	{: codeblock}
 2. `carthage update` 명령을 실행하십시오. 빌드가 완료되면 `BMSPush.framework`, `BMSCore.framework`, `BMSAnalyticsAPI.framework`를 Xcode 프로젝트로 끌어오십시오. 
-3. [Carthage ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos "외부 링크 아이콘"){: new_window} 사이트의 지시사항을 따라 통합을 완료하십시오.
+3. [Carthage ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos){: new_window} 사이트의 지시사항에 따라 통합을 완료하십시오. 
 
 ##iOS SDK 설정
 {: ios-sdk}
@@ -88,20 +87,21 @@ didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
 {: using-imported-frameworks}
 
 코드에서 SDK를 참조하십시오. 다음 전제조건이 충족되는지 확인하십시오.
-	- iOS 8.0 이상	
-	- Xcode 7
+
+- iOS 8.0 이상	
+- Xcode 7
 
 관련 헤더에 대해 `#import` 지시문을 작성합니다. 예: 
-	```
-	//swift
-	import BMSCore
-	import BMSPush
-	```
+```
+//swift
+import BMSCore
+import BMSPush
+```
 		{: codeblock}
 
-Swift 푸시 readme 파일을 읽으려면 [Readme ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/tree/master "외부 링크 아이콘"){: new_window}을 참조하십시오.
+Swift 푸시 Readme 파일을 읽어보려면 [Readme ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-swift-push/tree/master){: new_window}을 참조하십시오. 
 
-**참고**: CocoaPods 명령 `pod install` 또는 `pod update`를 사용하여 Pods 프로젝트를 업데이트하면 Bluemix Mobile Services 소스 폴더가 대체될 수 있습니다. 원래 파일의 사용자 정의한 버전을 유지하려면, 이러한 명령을 실행하기 전에 해당 버전을 백업해야 합니다. 
+**참고**: CocoaPods 명령 `pod install` 또는 `pod update`를 사용하여 Pods 프로젝트를 업데이트하면 Bluemix Mobile Services 소스 폴더를 대체할 수 있습니다. 원래 파일의 사용자 정의한 버전을 유지하려면, 이러한 명령을 실행하기 전에 해당 버전을 백업해야 합니다. 
 
 
 ##빌드 설정
@@ -109,7 +109,7 @@ Swift 푸시 readme 파일을 읽으려면 [Readme ![외부 링크 아이콘](..
 
 **Xcode > 빌드 설정 > 빌드 옵션 및 Bitcode 사용 설정**으로 이동하여 **No**로 설정하십시오.
 
-**주의**: iOS 9의 경우, ATS(App Transport Security) 기능을 변경하면 인증 프로세스의 처리 방식에 영향이 미칠 수 있습니다. 다음 블로그 게시물은 변경사항에 대한 자세한 정보를 설명합니다. [ATS and Bitcode in iOS 9 ![외부 링크 아이콘](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/mobilefirstplatform/2015/09/09/ats-and-bitcode-in-ios9/){: new_window} 및 [Connect your iOS 9 app to Bluemix today ![외부 링크 아이콘](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/bluemix/2015/09/16/connect-your-ios-9-app-to-bluemix/){: new_window}.
+**주의**: iOS 9의 경우, ATS(App Transport Security) 기능을 변경하면 인증 프로세스의 처리 방식에 영향이 미칠 수 있습니다. 다음 블로그 게시물에서 변경사항에 대한 자세한 정보를 설명합니다. [ATS and Bitcode in iOS 9 ![외부 링크 아이콘](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/mobilefirstplatform/2015/09/09/ats-and-bitcode-in-ios9/){: new_window} 및 [Connect your iOS 9 app to Bluemix today ![외부 링크 아이콘](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/bluemix/2015/09/16/connect-your-ios-9-app-to-bluemix/){: new_window}.
 
 ## iOS 앱을 위한 푸시 SDK 초기화
 {: #enable-push-ios-notifications-initialize}
@@ -127,7 +127,7 @@ myBMSClient.initialize(bluemixRegion: "Location where your app is hosted.")
 ```
 	{: codeblock}
 
-### 라우트, GUID 및 Bluemix 리젼
+### 라우트, GUID 및 Bluemix 지역
 {: route-guid-bluemix-region}
 
 ####appRoute
@@ -158,7 +158,7 @@ Bluemix에서 작성한 {{site.data.keyword.mobilepushshort}} 서비스에 지�
 {: initializing-the-client-Push-SDK}
 
 ```
-//Initialize client Push SDK for Swift
+	//Initialize client Push SDK for Swift
 let push = BMSPushClient.sharedInstance
 push.initializeWithAppGUID("appGUID", clientSecret:"clientSecret")
 ```
@@ -180,7 +180,7 @@ iOS 애플리케이션과 디바이스를 등록하려면 다음을 수행해야
 ###백엔드 애플리케이션 작성
 {: create-a-backend-app}
 
-Boilerplates 섹션 Bluemix® 카탈로그에서 {{site.data.keyword.mobilepushshort}} 서비스를 이 애플리케이션에 자동으로 바인드하는 백엔드 애플리케이션을 작성하십시오. 백엔드 앱을 이미 작성한 경우에는 앱을 {{site.data.keyword.mobilepushshort}} 서비스에 바인드했는지 확인하십시오. 
+표준 유형 섹션 Bluemix® 카탈로그에서 {{site.data.keyword.mobilepushshort}} 서비스를 이 애플리케이션에 자동으로 바인드하는 백엔드 애플리케이션을 작성하십시오. 백엔드 앱을 이미 작성한 경우에는 앱을 {{site.data.keyword.mobilepushshort}} 서비스에 바인드했는지 확인하십시오. 
 
 
 ###{{site.data.keyword.mobilepushshort}}에 토큰 전달
@@ -188,7 +188,7 @@ Boilerplates 섹션 Bluemix® 카탈로그에서 {{site.data.keyword.mobilepushs
 
 APNs에서 토큰이 수신되면 `registerWithDeviceToken` 메소드의 일부로 {{site.data.keyword.mobilepushshort}}에 토큰을 전달하십시오. 
 
-APNs로부터 토큰이 수신되면 이 토큰을 `didRegisterForRemoteNotificationsWithDeviceToken` 메소드의 일부로 푸시 알림에 전달하십시오. 
+APNs에서 토큰이 수신되면 이 토큰을 `didRegisterForRemoteNotificationsWithDeviceToken` 메소드의 일부로 푸시 알림에 전달하십시오. 
 
 ```
 func application (_application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data){
@@ -203,7 +203,7 @@ func application (_application: UIApplication, didRegisterForRemoteNotifications
             print( "Error during device registration \n  - status code: \(statusCode) \n Error :\(error) \n")
         }
     }
-}
+  }
 ```
 	{: codeblock}
 
@@ -227,7 +227,7 @@ func application(_ application: UIApplication, didReceiveRemoteNotification user
 알림의 현재 상태를 모니터하려면 다음 Swift 메소드를 애플리케이션의 애플리케이션 위임자에 추가하십시오.
 
 ```
-// Send notification status when app is opened by clicking the notifications
+	// Send notification status when app is opened by clicking the notifications
 func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
  let push =  BMSPushClient.sharedInstance
  let respJson = (userInfo as NSDictionary).value(forKey: "payload") as! String
@@ -242,7 +242,7 @@ func application(_ application: UIApplication, didReceiveRemoteNotification user
 	{: codeblock}
 
 ```
-// Send notification status when the app is in background mode.
+	// Send notification status when the app is in background mode.
 func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
  let payLoad = ((((userInfo as NSDictionary).value(forKey: "aps") as! NSDictionary).value(forKey: "alert") as! NSDictionary).value(forKey: "body") as! NSString)
  self.showAlert(title: "Recieved Push notifications", message: payLoad)
@@ -295,18 +295,18 @@ iOS 디바이스에 알림을 전송하기 위해 {{site.data.keyword.mobilepush
 대화식 알림을 설정하려면 다음 코드를 사용하십시오. 
 
 ```
-// This defines the button action.
+	// This defines the button action.
 let actionOne = BMSPushNotificationAction(identifierName: "ACCEPT", buttonTitle: "Accept", isAuthenticationRequired: false, defineActivationMode: UIUserNotificationActivationMode.background)
  let actionTwo = BMSPushNotificationAction(identifierName: "DECLINE", buttonTitle: "Decline", isAuthenticationRequired: false, defineActivationMode: UIUserNotificationActivationMode.background)
 ```
 	{: codeblock}
 ```
-// This defines category for the buttons
+	// This defines category for the buttons
 let category = BMSPushNotificationActionCategory(identifierName: "category", buttonActions: [actionOne, actionTwo])
 ```
 	{: codeblock}
 ```
-// This updates the registration to include the buttonsPass the defined category into iOS BMSPushClientOptions
+	// This updates the registration to include the buttonsPass the defined category into iOS BMSPushClientOptions
 let notificationOptions = BMSPushClientOptions(categoryName: [category])
 let push = BMSPushClient.sharedInstance
 push.initializeWithAppGUID(appGUID: "APP-GUID-HERE", clientSecret:"CLIENT-SECRET-HERE", options: notificationOptions)
@@ -330,4 +330,4 @@ push.initializeWithAppGUID(appGUID: "APP-GUID-HERE", clientSecret:"CLIENT-SECRET
 
 이러한 푸시 알림 서비스 기능을 앱에 추가하십시오.
 태그 기반 알림을 사용하려면 [태그 기반 알림](c_tag_basednotifications.html)을 참조하십시오.
-고급 알림 옵션을 사용하려면 [고급 푸시 알림 사용](t_advance_badge_sound_payload.html)의 내용을 참조하십시오. 
+고급 알림 옵션을 사용하려면 [고급 푸시 알림 사용](t_advance_badge_sound_payload.html)을 참조하십시오. 

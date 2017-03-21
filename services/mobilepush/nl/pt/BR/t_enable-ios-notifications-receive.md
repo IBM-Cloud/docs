@@ -15,8 +15,8 @@ Para receber notificações push em dispositivos iOS, inclua o método
 Objective-C a seguir na delegação de seu aplicativo.
 
 ```
-// For Objective-C
--(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+// For Objective-C -(void)application:(UIApplication *)application
+didReceiveRemoteNotification:(NSDictionary *)userInfo {
 //O dicionário userInfo conterá dados enviados do servidor.
 }
 ```

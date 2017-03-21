@@ -3,7 +3,7 @@
 
 若要開始使用 {{site.data.keyword.IBM}} {{site.data.keyword.mobilepushshort}}，請先建立 {{site.data.keyword.Bluemix}} 應用程式；例如，Node.js 應用程式。然後，建立需要連結至此 Bluemix 應用程式之 Push 服務 ({{site.data.keyword.mobilepushfull}}) 的實例。另一種作法為移至 Bluemix 型錄的「樣板」區段，然後按一下 MobileFirst Services Starter。
 
-**附註**：如果您已配置組織來管理環境，請選取該組織，而您要在該組織中建立針對行動式應用程式的執行時期及服務。
+**附註**：如果您已配置組織來管理環境，請選取該組織，而您要在該組織中建立針對行動應用程式的運行環境及服務。
 
 
 1. 如果您沒有 Bluemix 應用程式，則需要予以建立（例如，Node.js 應用程式）。若要建立 Bluemix 應用程式，請移至 Bluemix 儀表板，然後按一下**建立應用程式**。

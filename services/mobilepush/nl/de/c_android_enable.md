@@ -12,7 +12,7 @@ years: 2015, 2017
 
 # Android-Anwendungen für den Empfang von Push-Benachrichtigungen aktivieren
 {: #tag_based_notifications}
-Letzte Aktualisierung: 16. Januar 2017
+Letzte Aktualisierung: 14. Februar 2017
 {: .last-updated}
 
 Sie können Android-Anwendungen für den Empfang von Push-Benachrichtigungen auf Ihren Geräten aktivieren. Android Studio ist dafür Voraussetzung und auch die empfohlene Methode für die Erstellung von Android-Projekten. Grundlegende Kenntnisse von Android Studio sind erforderlich.
@@ -22,7 +22,7 @@ Sie können Android-Anwendungen für den Empfang von Push-Benachrichtigungen auf
 
 In diesem Abschnitt wird die Vorgehensweise zum Installieren und Verwenden des Client-Push-SDK für die weitere Entwicklung Ihrer Android-Anwendungen beschrieben.
 
-Das Push-SDK für Bluemix® Mobile Services kann mithilfe von Gradle hinzugefügt werden. Gradle lädt automatisch Artefakte aus Repositorys herunter und stellt Sie in Ihrer Android-Anwendung zur Verfügung. Stellen Sie sicher, dass Sie Android Studio und das Android Studio-SDK ordnungsgemäß einrichten. Weitere Informationen zum Einrichten Ihres Systems finden Sie unter [Android Studio - Übersicht ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.android.com/tools/studio/index.html "Symbol für externen Link"){: new_window}. Informationen zu Gradle finden Sie unter [Gradle-Builds konfigurieren ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://developer.android.com/tools/building/configuring-gradle.html "Symbol für externen Link"){: new_window}.
+Das Push-SDK für Bluemix® Mobile Services kann mithilfe von Gradle hinzugefügt werden. Gradle lädt automatisch Artefakte aus Repositorys herunter und stellt Sie in Ihrer Android-Anwendung zur Verfügung. Stellen Sie sicher, dass Sie Android Studio und das Android Studio-SDK ordnungsgemäß einrichten. Weitere Informationen zum Einrichten Ihres Systems finden Sie in der [Android Studio-Übersicht ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.android.com/tools/studio/index.html){: new_window}. Informationen zu Gradle finden Sie im Abschnitt zum [Konfigurieren von Gradle-Builds ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://developer.android.com/tools/building/configuring-gradle.html){: new_window}.
 
 Führen Sie nach der Erstellung und Öffnung Ihrer mobilen Anwendung mithilfe von Android Studio die folgenden Schritte aus.
 
@@ -53,54 +53,54 @@ Führen Sie nach der Erstellung und Öffnung Ihrer mobilen Anwendung mithilfe vo
 3. Fügen Sie die folgenden Abhängigkeiten zu Ihrer Projektebenendatei **build.gradle** hinzu.
 ```
 dependencies {
-    classpath 'com.android.tools.build:gradle:3.0.0'
+    classpath 'com.android.tools.build:gradle:2.2.3'
     classpath 'com.google.gms:google-services:3.0.0'
 }
 ``` 
     {: codeblock}
-5. Fügen Sie die folgenden Berechtigungen in der Datei **AndroidManifest.xml** hinzu. Informationen zum Anzeigen eines Beispielmanifests finden Sie unter [Android-Beispielanwendung 'helloPush' ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml "Symbol für externen Link"){: new_window}. Eine Gradle-Beispieldatei finden Sie unter [Beispieldatei für Gradle-Build ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle "Symbol für externen Link"){: new_window}.
+5. Fügen Sie die folgenden Berechtigungen in der Datei **AndroidManifest.xml** hinzu. Informationen zum Anzeigen eines Beispielmanifests finden Sie bei der [Android-Beispielanwendung 'helloPush' ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/src/main/AndroidManifest.xml){: new_window}. Eine Gradle-Beispieldatei finden Sie bei der [Beispieldatei für Gradle-Build ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellopush/blob/master/helloPush/app/build.gradle){: new_window}.
 ```
-<uses-permission android:name="android.permission.INTERNET"/>
-<uses-permission android:name="android.permission.GET_ACCOUNTS" />
-<uses-permission android:name="android.permission.USE_CREDENTIALS" />
-<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+	<uses-permission android:name="android.permission.USE_CREDENTIALS" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 ```
 	{: codeblock}
-Weitere Informationen zu [Android-Berechtigungen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://developer.android.com/guide/topics/security/permissions.html "Symbol für externen Link"){: new_window} finden Sie hier.
+Weitere Informationen zu [Android-Berechtigungen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://developer.android.com/guide/topics/security/permissions.html){: new_window} finden Sie hier.
 
 4. Fügen Sie die Einstellungen für die Benachrichtigungsabsicht für die Aktivität hinzu. Mit dieser Einstellung wird die Anwendung gestartet, wenn der Benutzer im Benachrichtigungsbereich auf die empfangene Benachrichtigung klickt.
 ```
-<intent-filter>
+	<intent-filter>
 	<action android:name="Your_Android_Package_Name.IBMPushNotification"/>
 	<category  android:name="android.intent.category.DEFAULT"/>
-</intent-filter>
+	</intent-filter>
 ```
 	{: codeblock}
 **Hinweis**: Ersetzen Sie in der obigen Aktion *Your_Android_Package_Name* durch den Namen des Anwendungspakets, der in Ihrer Anwendung verwendet wird.
 
 5. Fügen Sie den Absichtsservice und die Absichtsfilter von Firebase Cloud Messaging (FCM) bzw. Google Cloud Messaging (GCM) für Ereignisbenachrichtigungen des Typs RECEIVE und REGISTRATION hinzu.
 ```
-<service android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushIntentService"
+	<service android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushIntentService"
     android:exported="true" >
-    <intent-filter>
+    	<intent-filter>
         <action android:name="com.google.firebase.MESSAGING_EVENT" />
     </intent-filter>
-</service>
+	</service>
 <service
     android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPush"
     android:exported="true" >
     <intent-filter>
         <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
     </intent-filter>
-</service>
+	</service>
 ```
     {: codeblock}
 
 6. Der {{site.data.keyword.mobilepushshort}}-Service unterstützt den Abruf von Einzelbenachrichtigungen aus dem Benachrichtigungsfach. Für Benachrichtigungen, auf die über das Benachrichtigungsfach zugegriffen wird, wird Ihnen ein Handle nur für die Benachrichtigung bereitgestellt, auf die geklickt wird. Wenn die Anwendung auf normale Weise geöffnet wird, werden alle Benachrichtigungen angezeigt. Aktualisieren Sie Ihre Datei **AndroidManifest.xml** mit dem folgenden Snippet, um diese Funktion zu nutzen:
 
 ```
-<activity android:name="
+	<activity android:name="
 com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationHandler"
 android:theme="@android:style/Theme.NoDisplay"/>
 ```
@@ -175,29 +175,29 @@ Verwenden Sie die API `MFPPush.register()`, um das Gerät beim {{site.data.keywo
 Kopieren Sie die folgenden Code-Snippets in Ihre mobile Android-Anwendung.
 
 ```
-//Register Android devices
+	//Register Android devices
 	push.registerDevice(new MFPPushResponseListener<String>() {
-    @Override
-	    public void onSuccess(String deviceId) {
-//handle success here
+    	@Override
+    	public void onSuccess(String response) {
+    		//handle success here
 	    }
-    @Override
+		@Override
     public void onFailure(MFPPushException ex) {
-//handle failure here
+    		//handle failure here
 	    }
-});
+		});
 ```
 	{: codeblock}
 
 
 ```
-//Handles the notification when it arrives
+	//Handles the notification when it arrives
 	MFPPushNotificationListener notificationListener = new MFPPushNotificationListener() {
     @Override
 	    public void onReceive (final MFPSimplePushNotification message){
 	      // Push Notification ausführen
 	    }
-};
+		};
 ```
 	{: codeblock}
 
@@ -210,26 +210,26 @@ Rufen Sie die Methode **MFPPush.listen()** auf, um das Objekt 'notificationListe
 
 
 ```
-@Override
+	@Override
 	protected void onResume(){
 	   super.onResume();
 	   if(push != null) {
        push.listen(notificationListener);
 	   }
-}
+	}
 ```
 	{: codeblock}
 
 
 
 ```
-@Override
+	@Override
 protected void onPause() {
     super.onPause();
     if (push != null) {
         push.hold();
     }
-}
+	}
 ```
 	{: codeblock}
 
@@ -251,12 +251,12 @@ Die **messageId** ist die Kennung der vom Server gesendeten Nachricht.  **MFPPus
 Sie müssen die Klasse **com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationStatusListener** für MFPPush registrieren.
 
 ```
-push.setNotificationStatusListener(new MFPPushNotificationStatusListener() {
-@Override
+	push.setNotificationStatusListener(new MFPPushNotificationStatusListener() {
+	@Override
 public void onStatusChange(String messageId, MFPPushNotificationStatus status) {
-// Handle status change
+		// Handle status change
 }
-});
+	});
 ```
     {: codeblock}
 
@@ -270,11 +270,11 @@ Sie können für den Status DISMISSED unter jeder der folgenden Bedingungen empf
   Fügen Sie das Snippet Ihrer Datei `AndroidManifest.xml` hinzu:
 
 ```
-<receiver android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationDismissHandler">
+	<receiver android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationDismissHandler">
 <intent-filter>
 <action android:name="Your_Android_Package_Name.Cancel_IBMPushNotification"/>
-</intent-filter>
-</receiver>
+	</intent-filter>
+	</receiver>
 ```
 	{: codeblock}
 
@@ -283,18 +283,18 @@ Sie können für den Status DISMISSED unter jeder der folgenden Bedingungen empf
 Sie müssen den Rundsendungsempfänger **com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationDismissHandler** erweitern und die Methode **onReceive()** überschreiben, wobei **MFPPushNotificationStatusListener** vor dem Aufrufen der Methode **onReceive()** der Basisklasse registriert werden sollte.
 
 ```
-public class MyDismissHandler extends MFPPushNotificationDismissHandler {
-@Override
+	public class MyDismissHandler extends MFPPushNotificationDismissHandler {
+	@Override
 public void onReceive(Context context, Intent intent) {
-MFPPush.getInstance().setNotificationStatusListener(new MFPPushNotificationStatusListener() {
-@Override
+	MFPPush.getInstance().setNotificationStatusListener(new MFPPushNotificationStatusListener() {
+	@Override
 public void onStatusChange(String messageId, MFPPushNotificationStatus status) {
-// Handle status change
+	// Handle status change
 }
-});
+	});
 super.onReceive(context, intent);
 }
-}
+	}
 ```
     {: codeblock}
 
@@ -302,11 +302,11 @@ super.onReceive(context, intent);
 Fügen Sie das folgende Snippet Ihrer Datei `AndroidManifest.xml` hinzu:
 
 ```
-<receiver android:name="Your_Android_Package_Name.Your_Handler">
+	<receiver android:name="Your_Android_Package_Name.Your_Handler">
 <intent-filter>
 <action android:name="Your_Android_Package_Name.Cancel_IBMPushNotification"/>
-</intent-filter>
-</receiver>
+	</intent-filter>
+	</receiver>
 ```
     {: codeblock}
 

@@ -12,7 +12,7 @@ copyright:
 
 # Enregistrement d'un appareil avec un ID utilisateur
 {: #register_device_with_userId}
-Dernière mise à jour : 11 janvier 2017
+Dernière mise à jour : 6 février 2017
 {: .last-updated}
 
 Pour procéder à un enregistrement pour une notification à base d'ID utilisateur, procédez comme suit :
@@ -22,7 +22,7 @@ Pour procéder à un enregistrement pour une notification à base d'ID utilisate
 
 Initialisez la classe MFPPush avec l'identificateur `AppGUID` et la clé `clientSecret` du service {{site.data.keyword.mobilepushshort}}.
 ```
-// Initialize the MFPPush
+// Initialisation du service de notifications Push
 push = MFPPush.getInstance();
 push.initialize(getApplicationContext(),"AppGUID", "clientSecret");
 ```
@@ -33,22 +33,21 @@ push.initialize(getApplicationContext(),"AppGUID", "clientSecret");
 - **clientSecret** : clé clientSecret du service {{site.data.keyword.mobilepushshort}}.
 
   Utilisez l'API **registerDeviceWithUserId** pour enregistrer l'appareil pour {{site.data.keyword.mobilepushshort}}.
+
 ```
-// Register the device to {{site.data.keyword.mobilepushshort}}.
+// Enregistrement de l'appareil auprès du service de notifications Push
 push.registerDeviceWithUserId("userId",new MFPPushResponseListener<String>() {
-  @Override
-	    public void onSuccess(String deviceId) {
-    Log.d("Device is registered with Push Service.");
-  }
-  @Override
+		@Override
+		public void onSuccess(String response) {
+		Log.d("Device is registered with Push Service.");}
+		@Override
     public void onFailure(MFPPushException ex) {
-      Log.d("Error registering with Push Service...\n"
+		  Log.d("Error registering with Push Service...\n"
         + "Push notifications will not be received.");
-  }
-});
+		}
+		});
 ```
 	{: codeblock}
-
 
 - **userId** : passe la valeur userId unique pour l'enregistrement de {{site.data.keyword.mobilepushshort}}.
 
@@ -60,9 +59,9 @@ push.registerDeviceWithUserId("userId",new MFPPushResponseListener<String>() {
 Utilisez les API suivantes pour l'enregistrement des notifications de type {{site.data.keyword.mobilepushshort}} à base d'ID utilisateur.
 
 ```
-// Enregistrement de l'appareil pour notification push avec UserId
+// Enregistrement de l'appareil pour notification push avec l'ID utilisateur
 var options = {"userId": "Your User Id value"};
-BMSPush.registerDevice(options,success, failure); 
+BMSPush.registerDevice(options,success, failure);
 ```
 	{: codeblock}
 
@@ -87,7 +86,7 @@ push.initializeWithAppGUID("appGUID", clientSecret:"clientSecret")
 Utilisez l'API **registerWithUserId** pour enregistrer l'appareil pour {{site.data.keyword.mobilepushshort}}.
 
 ```
-// Register the device to Push Notifications service.
+// Enregistrement de l'appareil auprès du service de notifications Push
 push.registerWithDeviceToken("deviceToken", WithUserId: "userId")  { (response, statusCode, error) -> Void in
 if error.isEmpty {
   print( "Response during device registration : \(response)")

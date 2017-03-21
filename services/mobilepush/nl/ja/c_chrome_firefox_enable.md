@@ -12,7 +12,7 @@ copyright:
 
 # Web アプリケーションによる {{site.data.keyword.mobilepushshort}} の受信の使用可能化
 {: #web_notifications}
-最終更新日: 2017 年 1 月 18 日
+最終更新日: 2017 年 2 月 16 日
 {: .last-updated}
 
 Google Chrome、Mozilla Firefox、および Safari の Web アプリケーションによる {{site.data.keyword.mobilepushshort}} の受信を可能にすることができます。以下のステップに進む前に、[通知プロバイダーの資格情報の構成](t__main_push_config_provider.html)を確実に実行してください。
@@ -32,8 +32,8 @@ Google Chrome Web アプリケーションに Javascript SDK をインストー�
 	- Google Chrome ブラウザーの場合、`name` を、ご使用のサイトの名前に変更します。例えば、`www.dailynewsupdates.com` とします。`gcm_sender_id` を、Firebase Cloud Messaging (FCM) または Google Cloud Messaging (GCM) の送信側_ID に変更します。詳しくは、[送信側 ID と API キーの取得](t_push_provider_android.html)を参照してください。gcm_sender_id 値には数値のみが含まれます。
 
 		```
- 			{
- 			 "name": "YOUR_WEBSITE_NAME",
+			{
+	"name": "YOUR_WEBSITE_NAME",
   			"gcm_sender_id": "GCM_Sender_Id"
 			 }
 		```
@@ -42,8 +42,8 @@ Google Chrome Web アプリケーションに Javascript SDK をインストー�
 	- Mozilla Firefox ブラウザーの場合、以下の値を `manifest_Website.json` ファイルに追加します。適切な `name` を入力します。これは、ご使用の Web サイトの名前にすることができます。
 
 		```
-			{
- 			 "name": "YOUR_WEBSITE_NAME"
+			{ 
+	"name": "YOUR_WEBSITE_NAME"
 			 }
 		```
     		{: codeblock}
@@ -51,13 +51,17 @@ Google Chrome Web アプリケーションに Javascript SDK をインストー�
 2. `manifest_Website.json` ファイル名を `manifest.json` に変更します。
 3. `BMSPushSDK.js`、`BMSPushServiceWorker.js`、および `manifest.json` を Web サイトのルート・ディレクトリーに追加します。
 3. `manifest.json` を html ファイルの `<head>` タグに組み込みます。
-```<link rel="manifest" href="manifest.json">
-```
-    {: codeblock}
+	```
+		<link rel="manifest" href="manifest.json">
+	```
+    	{: codeblock}
 4. Bluemix Web プッシュ SDK を Web アプリケーションに組み込みます。
-```<script src="BMSPushSDK.js" async></script>
-```
-    {: codeblock}
+	```
+		<script src="BMSPushSDK.js" async></script>
+	```
+    	{: codeblock}
+
+**注**: コードのデプロイおよびサンプル・リンクのアクセスは、必ず `http` ではなく `https` を使用して行うようにしてください。 
 
 ## Web Push SDK の初期化 
 {: #web_initialize}
@@ -72,17 +76,18 @@ app GUID を入手するには、初期化されたプッシュ・サービス�
  - 英国:      			 `.eu-gb.bluemix.net`
  - シドニー:   		 `.au-syd.bluemix.net`
 
-``` var bmsPush = new BMSPush();
-function callback(response) {
-     alert(response.response)
-  }
-  var initParams = {
-      "appGUID":"push app GUID",
-  "appRegion":"Region where service hosted",
-   "clientSecret":"clientSecret of your push service"
-   "websitePushIDSafari": "Optional parameter for Safari Push Notifications only. The value should match the website Push ID provided during the server side configuration."
+```
+	var bmsPush = new BMSPush();
+ 	function callback(response) {
+ 	alert(response.response)
+ 	}
+  	var initParams = {
+  	"appGUID":"push app GUID",
+  	"appRegion":"Region where service hosted",
+   	"clientSecret":"clientSecret of your push service"
+   	"websitePushIDSafari": "Optional parameter for Safari Push Notifications only. The value should match the website Push ID provided during the server side configuration."
     }
-  bmsPush.initialize(initParams, callback)
+  	bmsPush.initialize(initParams, callback)
 ```
 	{: codeblock}
 
@@ -100,19 +105,21 @@ function callback(response) {
 - Mozilla Firefox から登録する場合は、Web サイト URL を Bluemix {{site.data.keyword.mobilepushshort}}サービスの Web 構成ダッシュボードで Firefox 用セットアップの下に追加してください。
 
 以下のコード・スニペットを使用して、 Bluemix {{site.data.keyword.mobilepushshort}}サービスに登録します。
-```var bmsPush = new BMSPush();
-function callback(response) {
+
+```
+	var bmsPush = new BMSPush();
+	function callback(response) {
      alert(response.response)
   }
   var initParams = {
-      "appGUID":"push app GUID",
+  "appGUID":"push app GUID",
   "appRegion":"Region where service hosted",
   "clientSecret":"clientSecret of your push service"
   "websitePushIDSafari": "Optional parameter for Safari Push Notifications only. The value should match the website Push ID provided during the server side configuration."
   }
   bmsPush.initialize(params, callback)
-    bmsPush.register(function(response) {
-      alert(response.response)
+  bmsPush.register(function(response) {
+    alert(response.response)
   })
 ```
     {: codeblock}

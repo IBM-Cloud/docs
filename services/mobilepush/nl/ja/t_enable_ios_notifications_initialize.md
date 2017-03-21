@@ -60,7 +60,7 @@ Bluemix で作成したアプリケーションに割り当てられた固有キ
 
 **bluemixRegionSuffix**
 
-アプリがホストされている場所を指定します。```bluemixRegion``` パラメーターは、使用する Bluemix デプロイメントを指定します。```BMSClient.REGION`` 静的プロパティーを使用してこの値を設定し、次の 3 つの値のいずれかを使用できます。
+アプリがホストされている場所を指定します。`bluemixRegion` パラメーターでは、使用する Bluemix デプロイメントを指定します。`BMSClient.REGION` 静的プロパティーを使用してこの値を設定し、次の 3 つの値のいずれかを使用できます。
 
 - BMSClient.REGION_US_SOUTH
 - BMSClient.REGION_UK

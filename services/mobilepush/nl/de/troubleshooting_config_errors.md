@@ -17,7 +17,7 @@ Letzte Aktualisierung: 11. Januar 2017
 
 In diesem Abschnitt finden Sie Anweisungen für die Behebung von allgemeinen Fehlern in der Web-Push-Konfiguration. Web-Push-Fehler aus der Datei `BMSPushSDK.js` enthalten Informationen zu dem Fehler. 
 
-Das folgende Codebeispiel veranschaulicht das Analysieren eines Fehlers im Callback: 
+Das folgende Codebeispiel veranschaulicht das Analysieren eines Fehlers im Callback:
 
 ```
 function showStatus(response) {
@@ -33,7 +33,7 @@ function showStatus(response) {
    		}   		
    	}
    	else {
-   		document.getElementById("status").innerHTML = "Response is " + response.response + " with the error "
+   		document.getElementById("status").innerHTML = "Response is " + response.response + " with the error " 
 		+ response.error + " and the status code " + response.statusCode;
    	}
  	}

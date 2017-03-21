@@ -1,4 +1,4 @@
-﻿---
+---
 
 copyright:
  years: 2015, 2017
@@ -10,9 +10,9 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Activation de la notification webhooks basée événement
+# Activation de webhooks 
 {: #tag_based_notifications}
-Dernière mise à jour : 16 janvier 2017
+Dernière mise à jour : 23 janvier 2017
 {: .last-updated}
 
 
@@ -33,4 +33,4 @@ le service {{site.data.keyword.mobilepushshort}}, vous pouvez vous enregistrer p
 **Remarque ** : les transmissions de notifications sont effectuées par lots. Une transmission de message peut avoir plusieurs événements webhook, lesquels peuvent inclure à la fois des réussites et des échecs. 
 Les événements webhook porteraient le même messageID que le message transmis. 
 
-Pour plus d'informations sur les webhooks, reportez-vous au document [API REST IBM Push Notifications![Icône de lien externe ](../../icons/launch-glyph.svg "External link icon")](https://mobile.{DomainName}/imfpush/#/webhooks){: new_window}.
+Pour plus d'informations sur les webhooks, reportez-vous au document [API REST IBM de notifications Push ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://mobile.{DomainName}/imfpush/#/webhooks){: new_window}.

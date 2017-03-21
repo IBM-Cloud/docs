@@ -15,8 +15,7 @@ copyright:
 前次更新：2017 年 1 月 16 日
 {: .last-updated}
 
-您可以對 {{site.data.keyword.mobilepushshort}} 使用 REST（具象狀態傳輸）API（應用程式介面）。您也可以使用 SDK（軟體開發套件）及
-[Push API ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://mobile.{DomainName}/imfpush/ "外部鏈結圖示"){: new_window}，進一步開發用戶端應用程式。
+您可以對 {{site.data.keyword.mobilepushshort}} 使用 REST（具象狀態傳輸）API（應用程式介面）。您也可以使用 SDK（軟體開發套件）及 [Push API ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://mobile.{DomainName}/imfpush/){: new_window}，進一步開發用戶端應用程式。
 
 運用 Push REST API，後端伺服器應用程式及用戶端可以存取 {{site.data.keyword.mobilepushshort}} 功能。
 
@@ -45,14 +44,12 @@ copyright:
 ## Accept-Language（接受語言）標頭
 {: #push-api-rest-accept}
 
-"Accept-Language" 標頭指定要用於 [Push REST API
-![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://mobile.{DomainName}/imfpush/ "外部鏈結圖示"){: new_window} 所輸出之錯誤訊息的語言。以下是錯誤訊息支援的語言：簡體中文、繁體中文、美式英文、德文、法文、義大利文、日文、韓文、葡萄牙文及西班牙文。
+"Accept-Language" 標頭指定要用於 [Push REST API ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://mobile.{DomainName}/imfpush/){: new_window} 所輸出之錯誤訊息的語言。以下是錯誤訊息支援的語言：簡體中文、繁體中文、美式英文、德文、法文、義大利文、日文、韓文、葡萄牙文及西班牙文。
 
 ## appSecret 
 {: #push-api-rest-secret}
 
-應用程式連結至 {{site.data.keyword.mobilepushshort}} 時，服務會產生 appSecret（唯一金鑰）並透過回應標頭進行傳遞。如果您使用的是 IBM {{site.data.keyword.mobilepushshort}} for Bluemix Rest API，請使用 REST API 參考資料來取得所需保護之 API 的資訊。如需資訊，請參閱 [Push REST API
-![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://mobile.{DomainName}/imfpush/ "外部鏈結圖示"){: new_window}。
+應用程式連結至 {{site.data.keyword.mobilepushshort}} 時，服務會產生 appSecret（唯一金鑰）並透過回應標頭進行傳遞。如果您使用的是 IBM {{site.data.keyword.mobilepushshort}} for Bluemix Rest API，請使用 REST API 參考資料來取得所需保護之 API 的資訊。如需資訊，請參閱 [Push REST API ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://mobile.{DomainName}/imfpush/){: new_window}。
 
 要求標頭必須包含 appSecret。如果沒有，則伺服器會傳回「401 未獲授權」的錯誤碼。將 {{site.data.keyword.mobilepushshort}} 新增至應用程式時，會建立特定的 AppID。在回應中有一個稱為 appSecret 的標頭，它用來建立標籤或傳送訊息。作業是透過型錄或樣板中的服務進行。
 

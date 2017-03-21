@@ -8,9 +8,7 @@ copyright:
 # Ativando notificações acionáveis para iOS
 {: #enable-actionable-notifications-ios}
 
-Ao contrário das notificações push tradicionais, as notificações que permitem ações solicita que os usuários façam uma
-seleção no recebimento do alerta de notificação sem abrir o app. Use as instruções
-a seguir para ativar notificações push que permitem ações no aplicativo.
+Ao contrário das notificações push tradicionais, as notificações acionáveis solicitam que os usuários façam uma seleção no recibo do alerta de notificação sem abrir o app. Use as instruções a seguir para ativar as notificações push acionáveis em seu aplicativo.
 
 1. Crie uma ação de resposta do usuário.
 

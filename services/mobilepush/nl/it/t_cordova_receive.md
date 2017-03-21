@@ -17,7 +17,7 @@ Aggiungi il seguente frammento di codice JavaScript alla parte web della tua app
 
 ```
 var notification = function(notification){
-    // notifica in un oggetto JSON .
+    // la notifica è un oggetto JSON.
     alert(notification.message);
 };
 MFPPush.registerNotificationsCallback(notification);

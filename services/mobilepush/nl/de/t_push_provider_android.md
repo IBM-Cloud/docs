@@ -24,7 +24,7 @@ Der API-Schlüssel wird geschützt gespeichert und vom {{site.data.keyword.mobil
 
 Zum Einrichten von FCM generieren Sie den API-Schlüssel und die Absender-ID und führen Sie folgende Schritte aus:
 
-1. Rufen Sie die [Firebase-Konsole ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.firebase.google.com/?pli=1 "Symbol für externen Link"){: new_window} auf.
+1. Rufen Sie die [Firebase-Konsole ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.firebase.google.com/?pli=1){: new_window} auf.
 2. Wählen Sie **Neues Projekt erstellen** aus. 
 3. Geben Sie im Fenster 'Projekt erstellen' einen Projektnamen ein, wählen Sie ein Land/eine Region aus und klicken Sie auf **Projekt erstellen**.
 3. Klicken Sie im Navigationsfenster auf das Symbol 'Einstellungen' und wählen Sie **Projekteinstellungen** aus.

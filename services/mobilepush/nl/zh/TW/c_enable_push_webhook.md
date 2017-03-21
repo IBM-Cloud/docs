@@ -10,9 +10,9 @@ years: 2015, 2017
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# 啟用 Webhook 事件通知
+# 啟用 Webhook 
 {: #tag_based_notifications}
-前次更新：2017 年 1 月 16 日
+前次更新：2017 年 1 月 23 日
 {: .last-updated}
 
 
@@ -31,4 +31,4 @@ Webhook 是使用者定義的回呼，它們是由例如登錄裝置或訂閱標
 
 **附註：**通知分派會以批次處理。訊息分派可以有多個 Webhook 事件，事件可能同時包含失敗和成功。Webhook 事件的 messageID 會與分派訊息的相同。 
 
-如需 Webhook 的相關資訊，請參閱 [IBM Push Notifications REST API ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://mobile.{DomainName}/imfpush/#/webhooks "外部鏈結圖示"){: new_window}。
+如需 Webhook 的相關資訊，請參閱 [IBM Push Notifications REST API ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://mobile.{DomainName}/imfpush/#/webhooks){: new_window}。

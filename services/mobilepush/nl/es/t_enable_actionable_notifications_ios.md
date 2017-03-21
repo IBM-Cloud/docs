@@ -1,14 +1,14 @@
 ---
 
 copyright:
- años: 2015, 2016
+ years: 2015, 2016
 
 ---
 
 # Habilitación de notificaciones accionables para iOS
 {: #enable-actionable-notifications-ios}
 
-A diferencia de las notificaciones push tradicionales, estas solicitan a los usuarios que realicen una selección al recibir la alerta de notificación sin abrir la app. Utilice las instrucciones siguientes para habilitar notificaciones push en la aplicación.
+A diferencia de las notificaciones push tradicionales, estas solicitan a los usuarios que realicen una selección al recibir la alerta de notificación sin abrir la app. Siga las instrucciones siguientes para habilitar notificaciones push en la aplicación.
 
 1. Cree una acción de respuesta del usuario.
 
@@ -43,8 +43,7 @@ A diferencia de las notificaciones push tradicionales, estas solicitan a los usu
 	declineAction.activationMode = UIUserNotificationActivationMode.Background
 	```
 
-2. Cree la categoría de notificaciones y configure una acción. **UIUserNotificationActionContextDefault** o
-                **UIUserNotificationActionContextMinimal** son contextos válidos.
+2. Cree la categoría de notificaciones y configure una acción. **UIUserNotificationActionContextDefault** o **UIUserNotificationActionContextMinimal** son contextos válidos.
 
 	Objective-C
 

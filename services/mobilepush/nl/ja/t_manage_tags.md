@@ -135,12 +135,12 @@ BMSPush.retrieveSubscriptions(function(tags) {
     if error.isEmpty 
 		{
         print( "Response during retrieve tags : \(response)")
-        print( "status code during retrieve tags : \(statusCode)")
-         }
+     print( "status code during retrieve tags : \(statusCode)")
+      }
     else
 	{
     print( "Error during retrieve tags \(error) ")
-        Print( "Error during retrieve tags \n  - status code: \(statusCode) \n Error :\(error) \n")
+    Print( "Error during retrieve tags \n  - status code: \(statusCode) \n Error :\(error) \n")
     	}
 		}
 ```
@@ -148,17 +148,18 @@ BMSPush.retrieveSubscriptions(function(tags) {
 
 ```
 //Get a list of available tags to which the device is subscribed
-	push.retrieveSubscriptionsWithCompletionHandler { (response, statusCode, error) -> Void in
-    if error.isEmpty
-		{
-        print( "Response during retrieving subscribed tags : \(response?.description)")
-        print( "status code during retrieving subscribed tags : \(statusCode)")
-        }
-    else {
-    print( "Error dur]ing retrieving subscribed tags \(error) ")
-         Print( "Error during retrieving subscribed tags \n  - status code: \(statusCode) \n Error :\(error) \n")
-        }
-	   }
+push.retrieveSubscriptionsWithCompletionHandler { (response, statusCode, error) -> Void in
+  if error.isEmpty
+	{
+    print( "Response during retrieving subscribed tags : \(response?.description)")
+    print( "status code during retrieving subscribed tags : \(statusCode)")
+    }
+    else
+	{
+    print( "Error during retrieving subscribed tags \(error) ")
+    Print( "Error during retrieving subscribed tags \n  - status code: \(statusCode) \n Error :\(error) \n")
+      }
+	}
 ```
 	{: codeblock}
 
@@ -168,18 +169,18 @@ BMSPush.retrieveSubscriptions(function(tags) {
 お客様がサブスクライブできる、使用可能なタグのリストを取得するには、以下のコードを使用します。
 
 ```
-  var bmsPush = new BMSPush();
-  bmsPush.retrieveAvailableTags(function(response) 
-	{
-    alert(response.response)
-    var json = JSON.parse(response.response);
-    var tagsA = []
-    for (i in json.tags)
-	{
-      tagsA.push(json.tags[i].name)
-    }
-    alert(tagsA)
-  })
+var bmsPush = new BMSPush();
+bmsPush.retrieveAvailableTags(function(response)
+{
+  alert(response.response)
+  var json = JSON.parse(response.response);
+  var tagsA = []
+  for (i in json.tags)
+{
+    tagsA.push(json.tags[i].name)
+   }
+   alert(tagsA)
+ })
 ```
 	{: codeblock}
 
@@ -190,29 +191,29 @@ BMSPush.retrieveSubscriptions(function(tags) {
 お客様がサブスクライブできる、使用可能なタグのリストを取得するには、以下のコードを使用します。
 
 ```
-  var bmsPush = new BMSPush();
-  bmsPush.retrieveAvailableTags(function(response) 
-	{
-    alert(response.response)
-    var json = JSON.parse(response.response);
-    var tagsA = []
-    for (i in json.tags)
-	{
-      tagsA.push(json.tags[i].name)
-    }
-    alert(tagsA)
-  })
+var bmsPush = new BMSPush();
+bmsPush.retrieveAvailableTags(function(response)
+{
+  alert(response.response)
+  var json = JSON.parse(response.response);
+  var tagsA = []
+  for (i in json.tags)
+{
+    tagsA.push(json.tags[i].name)
+   }
+   alert(tagsA)
+ })
 ```
 	{: codeblock}
 
 お客様がサブスクライブしているタグのリストを取得するには、以下のコード・スニペットを Google Chrome アプリケーションおよびエクステンションにコピーします。
 
 ```
-  var bmsPush = new BMSPush();
-  bmsPush.retrieveSubscriptions(function(response) 
-	{
-    alert(response.response)
-  })
+var bmsPush = new BMSPush();
+bmsPush.retrieveSubscriptions(function(response)
+{
+   alert(response.response)
+ })
 ```
 	{: codeblock}
 
@@ -231,31 +232,31 @@ BMSPush.retrieveSubscriptions(function(tags) {
 push.subscribe(allTags.get(0),
 new MFPPushResponseListener<String>() {
   @Override
-    public void onFailure(MFPPushException ex) {
-         updateTextView("Error subscribing to Tag1.."
+  public void onFailure(MFPPushException ex) {
+  updateTextView("Error subscribing to Tag1.."
            + ex.getMessage());
-    }
-    @Override
-    public void onSuccess(String arg0) {
-    updateTextView("Succesfully Subscribed to: "+ arg0);
-    unsubscribeFromTags(arg0);
-    }
-    });
+  }
+  @Override
+  public void onSuccess(String arg0) {
+  updateTextView("Succesfully Subscribed to: "+ arg0);
+  unsubscribeFromTags(arg0);
+  }
+  });
 ```
 	{: codeblock}
 
 ```
 push.unsubscribe(tag, new MFPPushResponseListener<String>() {
-@Override
-    public void onSuccess(String s) {
-    updateTextView("Unsubscribing from tag");
-    updateTextView("Successfully unsubscribed from tag . "+ tag);
-     }
-    @Override
+ @Override
+ public void onSuccess(String s) {
+ updateTextView("Unsubscribing from tag");
+ updateTextView("Successfully unsubscribed from tag . "+ tag);
+  }
+ @Override
  public void onFailure(MFPPushException e) {
  updateTextView("Error while unsubscribing from tags. "+ e.getMessage());
-    }
-    });
+ }
+ });
 ```
 	{: codeblock}
 
@@ -296,14 +297,14 @@ push.subscribeToTags(tagsArray: ["MyTag"], completionHandler: { (response, statu
 
 ```
 push.unsubscribeFromTags(response, completionHandler: { (response, statusCode, error) -> Void in
-    if error.isEmpty {
-        print( "Response during unsubscribed tags : \(response?.description)")
-        print( "status code during unsubscribed tags : \(statusCode)")
+  if error.isEmpty {
+     print( "Response during unsubscribed tags : \(response?.description)")
+     print( "status code during unsubscribed tags : \(statusCode)")
     }
-    else {
+  else {
     print( "Error during  unsubscribed tags \(error) ")
-        print( "Error during unsubscribed tags \n  - status code: \(statusCode) \n Error :\(error) \n")
-    }
+    print( "Error during unsubscribed tags \n  - status code: \(statusCode) \n Error :\(error) \n")
+  }
 }
 ```
 	{: codeblock}

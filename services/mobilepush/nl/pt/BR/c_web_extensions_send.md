@@ -42,7 +42,4 @@ extensões do Chrome no painel.
 Após ter configurado com sucesso as notificações básicas,
 será possível configurar notificações baseadas em tag e opções avançadas.
 
-Inclua esses recursos de serviço do {{site.data.keyword.mobilepushshort}} no seu app. Para usar
-notificações baseadas em tag, consulte [Notificações baseadas em
-tag](c_tag_basednotifications.html). Para
-usar opções de notificações avançadas, veja [Notificações avançadas](t_advance_badge_sound_payload.html).
+Inclua esses recursos de serviço do {{site.data.keyword.mobilepushshort}} no seu app. Para usar notificações baseadas em tag, consulte [Notificações baseadas em tag](c_tag_basednotifications.html). Para usar opções de notificações avançadas, veja [Notificações avançadas](t_advance_badge_sound_payload.html).

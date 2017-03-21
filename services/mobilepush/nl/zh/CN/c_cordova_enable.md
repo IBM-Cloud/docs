@@ -28,9 +28,9 @@ Cordova 是一种平台，用于通过 JavaScript、CSS 和 HTML 构建混合应
 
 1. 下载最新版本的 Android Studio SDK 和 Xcode。
 1. 设置仿真器。对于 Android Studio，请使用支持 Google Play API 的仿真器。
-1. 安装 Git 命令行工具。对于 Windows，请确保选择**从 Windows 命令提示符运行 Git** 选项。有关如何下载和安装此工具的更多信息，请参阅 [Git ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://git-scm.com/downloads "外部链接图标"){: new_window}。
-1. 安装 Node.js 和 Node 软件包管理器 (NPM) 工具。NPM 命令行工具与 Node.js 捆绑在一起。有关如何下载和安装 Node.js 的更多信息，请参阅 [Node.js ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://nodejs.org/en/download/ "外部链接图标"){: new_window}。
-1. 在命令行中，使用 **npm install -g cordova** 命令来安装 Cordova 命令行工具。必须有该工具才能使用 Cordova 推送插件。有关如何安装 Cordova 并设置 Cordova 应用程序的更多信息，请参阅 [Cordova Apache ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cordova.apache.org/#getstarted "外部链接图标"){: new_window}。有关的更多信息，请参阅 Cordova 推送插件[自述文件 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push "外部链接图标"){: new_window}。
+1. 安装 Git 命令行工具。对于 Windows，请确保选择**从 Windows 命令提示符运行 Git** 选项。有关如何下载和安装此工具的更多信息，请参阅 [Git ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://git-scm.com/downloads){: new_window}。
+1. 安装 Node.js 和 Node 软件包管理器 (NPM) 工具。NPM 命令行工具与 Node.js 捆绑在一起。有关如何下载和安装 Node.js 的更多信息，请参阅 [Node.js ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://nodejs.org/en/download/){: new_window}。
+1. 在命令行中，使用 **npm install -g cordova** 命令来安装 Cordova 命令行工具。必须有该工具才能使用 Cordova 推送插件。有关如何安装 Cordova 并设置 Cordova 应用程序的更多信息，请参阅 [Cordova Apache ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://cordova.apache.org/#getstarted){: new_window}。有关的更多信息，请参阅 Cordova 推送插件[自述文件 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push){: new_window}。
 1. 切换到要在其中创建 Cordova 应用程序的文件夹，然后运行以下命令来创建 Cordova 应用程序。如果已有 Cordova 应用程序，请转至步骤 3。
 ```cordova create your_app_name
 	cd your_app_name
@@ -309,4 +309,6 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
 
 成功设置基本通知后，可以配置基于标记的通知和高级选项。
 
-将 {{site.data.keyword.mobilepushshort}} 服务功能添加到应用程序中。要使用基于标记的通知，请参阅[基于标记的通知](c_tag_basednotifications.html)。要使用高级通知选项，请参阅[启用高级推送通知](t_advance_badge_sound_payload.html)。
+将 {{site.data.keyword.mobilepushshort}} 服务功能添加到应用程序中。
+要使用基于标记的通知，请参阅[基于标记的通知](c_tag_basednotifications.html)。
+要使用高级通知选项，请参阅[启用高级推送通知](t_advance_badge_sound_payload.html)。

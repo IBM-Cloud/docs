@@ -19,11 +19,11 @@ copyright:
 
 ```
 	@Override
-protected void onPause() {
-super.onPause();
+	protected void onPause() {
+    super.onPause();
     if (push != null) {
-                push.hold();
+        push.hold();
     }
-} 
+	} 
 ```
 	{: codeblock}

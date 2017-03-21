@@ -13,7 +13,7 @@ copyright:
 # Mensagens de erro
 de serviço {{site.data.keyword.mobilepushshort}}
 {: #errors}
-Última atualização: 16 de janeiro de 2017
+Última atualização: 13 de fevereiro de 2017
 {: .last-updated}
 
 
@@ -60,7 +60,7 @@ configuradas.
 
 **Resposta do usuário**: assegure-se de que o serviço
 {{site.data.keyword.mobilepushshort}}
-tenha sido configurado com certificados de segurança válidos para APNs. Para obter mais informações, veja [Configurando credenciais para APNs ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](t_push_provider_ios.html "Ícone de link externo"){: new_window}.
+tenha sido configurado com certificados de segurança válidos para APNs. Para obter mais informações, veja [Configurando credenciais para APNs ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](t_push_provider_ios.html){: new_window}.
 
 
 ## FPWSE0004E
@@ -96,7 +96,7 @@ ausente ou não é válido e, em seguida, forneça as informações necessárias
 
 
 **Resposta do usuário**: verifique se o corpo de JSON na solicitação segue o
-formato da solicitação que é esperado pelo servidor {{site.data.keyword.mobilepushshort}}. Para obter mais informações, veja [APIs de REST ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://mobile.{DomainName}/imfpush/ "Ícone de link externo"){: new_window}.
+formato da solicitação que é esperado pelo servidor {{site.data.keyword.mobilepushshort}}. Para obter mais informações, veja [APIs de REST ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://mobile.{DomainName}/imfpush/){: new_window}.
 
 
 
@@ -108,7 +108,7 @@ não reconhecidos. Por exemplo, se a solicitação para excluir a assinatura tiv
 
 
 **Resposta do usuário**: verifique se o corpo de JSON na solicitação segue o formato
-da solicitação que é esperado pelo servidor {{site.data.keyword.mobilepushshort}}. Para obter mais informações, veja [APIs de REST ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://mobile.{DomainName}/imfpush/ "Ícone de link externo"){: new_window}.
+da solicitação que é esperado pelo servidor {{site.data.keyword.mobilepushshort}}. Para obter mais informações, veja [APIs de REST ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://mobile.{DomainName}/imfpush/){: new_window}.
 
 
 
@@ -120,7 +120,7 @@ ausentes. Por exemplo, os parâmetros deviceId e tagName podem estar ausentes na
 
 
 **Resposta do usuário**: verifique se o corpo de JSON na solicitação segue o formato
-da solicitação que é esperado pelo servidor {{site.data.keyword.mobilepushshort}}. Para obter mais informações, veja [APIs de REST ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://mobile.{DomainName}/imfpush/ "Ícone de link externo"){: new_window}.
+da solicitação que é esperado pelo servidor {{site.data.keyword.mobilepushshort}}. Para obter mais informações, veja [APIs de REST ![Ícone de link externo](../../icons/launch-glyph.svg "External link icon")](https://mobile.{DomainName}/imfpush/){: new_window}.
 
 
 
@@ -182,6 +182,13 @@ solicitação.
 
 **Resposta do usuário**: assegure-se de que a carga útil de JSON seja válida.
 
+
+## FPWSE0025E
+{: #error_fpwse0025e}
+
+**Explicação**: atualmente o servidor não é capaz de manipular a solicitação.
+
+**Resposta do usuário**: envie novamente a solicitação posteriormente.
 
 
 ## FPWSE1007E 

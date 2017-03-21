@@ -1,7 +1,7 @@
 ---
 
-Copyright :
-  Années : 2015, 2016
+copyright:
+ years: 2015, 2016
 
 ---
 
@@ -9,7 +9,7 @@ Copyright :
 {: #using_tags}
 
 
-Les notification basées sur les balises sont des messages de notification qui sont envoyés à tous les périphériques abonnés à une balise particulière. Chaque périphérique peut s'abonner à un nombre illimité de balises. Cette section explique comment envoyer des notifications basées sur les balises. Les abonnements sont gérés par l'instance de service Bluemix Push Notifications. Lorsqu'une balise est supprimée, toutes les informations qui lui sont associées, y compris ses abonnés et périphériques, sont supprimées. Aucun désabonnement automatique n'est requis pour cette balise car elle n'existe plus et aucune action supplémentaire n'est requise depuis le côté client.
+Les notification basées sur les balises sont des messages de notification qui sont envoyés à tous les appareils abonnés à une balise particulière. Chaque appareil peut s'abonner à un nombre illimité de balises. Cette section explique comment envoyer des notifications basées sur les balises. Les abonnements sont gérés par l'instance de service Bluemix Push Notifications. Lorsqu'une balise est supprimée, toutes les informations qui lui sont associées, y compris ses abonnés et appareils, sont supprimées. Aucun désabonnement automatique n'est requis pour cette balise car elle n'existe plus et aucune action supplémentaire n'est requise depuis le côté client.
 
 **Avant de commencer**
 

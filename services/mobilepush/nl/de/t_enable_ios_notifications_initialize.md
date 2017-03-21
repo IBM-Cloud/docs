@@ -10,7 +10,7 @@ copyright:
 
 Das Anwendungs-Delegat für die iOS-Anwendung ist eine übliche Position für den
 Initialisierungscode.
-Klicken Sie auf den Link **Mobile Optionen** in Ihrem Bluemix-Anwendungsdashboard, um
+Klicken Sie auf den Link **Mobile Systemerweiterungen** in Ihrem Bluemix-Anwendungsdashboard, um
 die Anwendungsroute und die GUID abzurufen.
 
 ##Core-SDK initialisieren
@@ -30,7 +30,7 @@ IMFClient *imfClient = [IMFClient sharedInstance];
 let myBMSClient = BMSClient.sharedInstance
 
 myBMSClient.initializeWithBluemixAppRoute("BluemixAppRoute", bluemixAppGUID: "APPGUID", bluemixRegion:"Location where your app Hosted")
-myBMSClient.defaultRequestTimeout = 10.0 // Timput in seconds
+myBMSClient.defaultRequestTimeout = 10.0 // Timeout in seconds
 ```
 
 ##Client-Push-SDK initialisieren
@@ -61,7 +61,7 @@ Gibt den eindeutigen Schlüssel an, der der Anwendung zugewiesen wird, die Sie i
 
 **bluemixRegionSuffix**
 
-Gibt den Standort an, an dem die App gehostet ist. Der Parameter `bluemixRegion` gibt an, welche Bluemix-Bereitstellung Sie verwenden. Sie können diesen Wert mit der statischen Eigenschaft `BMSClient.REGION` angeben und einen von drei Werten verwenden:
+Gibt den Standort an, an dem die App gehostet ist. Der Parameter `bluemixRegion` gibt an, welche Bluemix-Bereitstellung verwendet wird. Sie können diesen Wert mit der statischen Eigenschaft `BMSClient.REGION` angeben und einen von drei Werten verwenden:
 
 - BMSClient.REGION_US_SOUTH
 - BMSClient.REGION_UK

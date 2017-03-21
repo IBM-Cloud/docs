@@ -25,9 +25,7 @@ IMFClient *imfClient = [IMFClient sharedInstance];
 
 ```
 // Initialize the Core SDK for Swift with IBM Bluemix GUID, route, and region
-let myBMSClient = BMSClient.sharedInstance
-
-myBMSClient.initializeWithBluemixAppRoute("BluemixAppRoute", bluemixAppGUID: "APPGUID", bluemixRegion:"Location where your app Hosted")
+let myBMSClient = BMSClient.sharedInstancemyBMSClient.initializeWithBluemixAppRoute("BluemixAppRoute", bluemixAppGUID: "APPGUID", bluemixRegion:"Location where your app Hosted")
 myBMSClient.defaultRequestTimeout = 10.0 // Timput in seconds
 ```
 
@@ -47,7 +45,7 @@ IMFPushClient _pushService = [IMFPushClient sharedInstance];
 let push = BMSPushClient.sharedInstance
 ```
 
-## 라우트, GUID 및 Bluemix 리젼
+## 라우트, GUID 및 Bluemix 지역
 
 **appRoute**
 
@@ -59,7 +57,7 @@ Bluemix에서 생성한 애플리케이션에 지정된 고유 키를 지정합�
 
 **bluemixRegionSuffix**
 
-앱이 호스트된 위치를 지정합니다. ```bluemixRegion``` 매개변수는 사용 중인 Bluemix 배치를 지정합니다. 이 값을 ```BMSClient.REGION`` 정적 특성으로 설정하고 다음 값 중 하나를 사용할 수 있습니다.
+앱이 호스트된 위치를 지정합니다. `bluemixRegion` 매개변수는 사용 중인 Bluemix 배치를 지정합니다. 이 값을 `BMSClient.REGION` 정적 특성으로 설정하고 세 값 중 하나를 사용할 수 있습니다. 
 
 - BMSClient.REGION_US_SOUTH
 - BMSClient.REGION_UK

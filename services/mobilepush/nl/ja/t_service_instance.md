@@ -24,11 +24,9 @@ Bluemix アプリケーションを作成するには「Bluemix ダッシュボ�
 
 4. **「スペース」**プルダウン・メニューで、組織スペースを選択します。
 
-
 	![
 Select organization space](images/create_a_service3.jpg)
 1. **「名前」**にアプリの名前を入力し、「ホスト」にホストの名前を入力します。
-
 
 1. **「選択済みプラン」**プルダウン・メニューから、プランを選択し、**「作成」**ボタンをクリックします。アプリケーションのステージングを待ちます。
 
@@ -43,7 +41,6 @@ Select organization space](images/create_a_service3.jpg)
 1. **「選択済みプラン」**で、プランを選択し、**「作成」**ボタンをクリックします。
 
 1. **「はい」**をクリックして、アプリケーションを再ステージングします。
-                                
 
 	![IBM Push Notification Service](images/create_service_notification5.jpg)
 

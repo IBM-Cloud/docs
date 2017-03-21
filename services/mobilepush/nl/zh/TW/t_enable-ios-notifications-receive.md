@@ -24,9 +24,9 @@ copyright:
 若要在 iOS 裝置上接收推送通知，請將下列 Swift 方法新增至應用程式的應用程式委派。
 
 ```
- // For Swift
+// For Swift
 func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
-       //UserInfo dictionary will contain data sent from the server
+//UserInfo dictionary will contain data sent from the server
    }
 ```
 

@@ -10,9 +10,9 @@ copyright:
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# Abilitazione della notifica basata sugli eventi webhook
+# Abilitazione dei webhook 
 {: #tag_based_notifications}
-Ultimo aggiornamento: 16 gennaio 2017
+Ultimo aggiornamento: 23 gennaio 2017
 {: .last-updated}
 
 
@@ -32,4 +32,4 @@ I webhook sono dei callback definiti dall'utente che vengono attivati da un even
 **Nota**: gli invii delle notifiche vengono effettuati in batch. L'invio di un messaggio può avere più eventi webhook, che possono includere sia errori che esiti positivi. 
 Gli eventi webhook hanno lo stesso messageID del messaggio inviato. 
 
-Per ulteriori informazioni sui webhook, vedi [IBM Push Notifications REST API ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://mobile.{DomainName}/imfpush/#/webhooks "Icona link esterno"){: new_window}.
+Per ulteriori informazioni sui webhook, vedi [IBM Push Notifications REST API ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://mobile.{DomainName}/imfpush/#/webhooks){: new_window}.

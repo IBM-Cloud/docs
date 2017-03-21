@@ -28,9 +28,9 @@ Installieren und verwenden Sie das Client-Push-Plug-in für die weitere Entwickl
 
 1. Laden Sie die aktuelle Version für das Android Studio-SDK und Xcode herunter.
 1. Richten Sie den Emulator ein. Verwenden Sie für Android Studio einen Emulator, der die Google Play-API unterstützt.
-1. Installieren Sie das Git-Befehlszeilentool. Stellen Sie unter Windows sicher, dass Sie die Option zum Ausführen von Git über die Windows-Eingabeaufforderung auswählen. Informationen zum Herunterladen und Installieren dieses Tools finden Sie unter [Git ![External link icon](../../icons/launch-glyph.svg "Symbol für externen Link")](https://git-scm.com/downloads "Symbol für externen Lin"){: new_window}.
-1. Installieren Sie Node.js und das NPM-Tool (NPM = Node Package Manager). Das NPM-Befehlszeilentool wird als Produktpaket mit Node.js bereitgestellt. Informationen zum Herunterladen und Installieren von Node.js finden Sie unter [Node.js ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://nodejs.org/en/download/ "Symbol für externen Link"){: new_window}.
-1. Installieren Sie über die Befehlszeile die Cordova-Befehlszeilentools mithilfe des Befehls **npm install -g cordova**. Dies ist eine Voraussetzung für die Verwendung des Cordova-Push-Plug-ins. Informationen zum Installieren von Cordova und zum Einrichten Ihrer Cordova-App finden Sie unter [Cordova Apache ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cordova.apache.org/#getstarted "Symbol für externen Lin"){: new_window}. Weitere Informationen finden Sie in der [Readme-Datei ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push "Symbol für externen Link"){: new_window} für das Cordova-Push-Plug-in.
+1. Installieren Sie das Git-Befehlszeilentool. Stellen Sie unter Windows sicher, dass Sie die Option zum Ausführen von Git über die Windows-Eingabeaufforderung auswählen. Informationen zum Herunterladen und Installieren dieses Tools finden Sie unter [Git ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://git-scm.com/downloads){: new_window}.
+1. Installieren Sie Node.js und das NPM-Tool (NPM = Node Package Manager). Das NPM-Befehlszeilentool wird als Produktpaket mit Node.js bereitgestellt. Informationen zum Herunterladen und Installieren von Node.js finden Sie unter [Node.js ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://nodejs.org/en/download/){: new_window}.
+1. Installieren Sie über die Befehlszeile die Cordova-Befehlszeilentools mithilfe des Befehls **npm install -g cordova**. Dies ist eine Voraussetzung für die Verwendung des Cordova-Push-Plug-ins. Informationen zum Installieren von Cordova und zum Einrichten Ihrer Cordova-App finden Sie unter [Cordova Apache ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cordova.apache.org/#getstarted){: new_window}. Weitere Informationen finden Sie in der [Readme-Datei ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push){: new_window} für das Cordova-Push-Plug-in.
 1. Wechseln Sie in den Ordner, in dem Sie Ihre Cordova-App erstellen möchten, und führen Sie den folgenden Befehl aus, um eine Cordova-Anwendung zu erstellen. Wenn Sie bereits über eine Cordova-App verfügen, fahren Sie mit Schritt 3 fort.
 ```cordova create your_app_name
 	cd your_app_name
@@ -53,7 +53,7 @@ das Element `<platform name="android">` mit der SDK-Mindestversion und -Zielvers
     	<preference name="android-minSdkVersion" value="15" />
     	<preference name="android-targetSdkVersion" value="23" />
     	<!-- add minimum and target Android API level declaration -->
-	</platform>
+	</platform> 
 	```
     	{: codeblock}
 
@@ -125,7 +125,7 @@ onDeviceReady: function() {
 	alert(JSON.stringify(notif));
 	};
 	BMSPush.registerNotificationsCallback(showNotification);
-    }
+    } 
 ```
 	{: codeblock}
 

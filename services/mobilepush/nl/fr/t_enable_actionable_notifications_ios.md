@@ -1,18 +1,14 @@
 ---
 
-Copyright :
-  Années : 2015, 2016
+copyright:
+ years: 2015, 2016
 
 ---
 
 # Activation des notifications interactives pour iOS
 {: #enable-actionable-notifications-ios}
 
-A la différence des notifications push traditionnelles, les notifications
-interactives invitent les utilisateurs à effectuer une sélection lorsqu'ils
-reçoivent l'alerte de notification sans ouvrir l'application. Utilisez les
-instructions ci-après pour activer les notifications push interactives dans
-votre application.
+A la différence des notifications push traditionnelles, les notifications interactives invitent les utilisateurs à effectuer une sélection lorsqu'ils reçoivent l'alerte de notification sans ouvrir l'application. Utilisez les instructions ci-après pour activer les notifications push interactives dans votre application.
 
 1. Créez une réponse utilisateur.
 
@@ -47,9 +43,7 @@ votre application.
 	declineAction.activationMode = UIUserNotificationActivationMode.Background
 	```
 
-2. Créez une catégorie de notification et définissez une action. **UIUserNotificationActionContextDefault** ou
-**UIUserNotificationActionContextMinimal** sont des contextes
-valides.
+2. Créez une catégorie de notification et définissez une action. **UIUserNotificationActionContextDefault** ou **UIUserNotificationActionContextMinimal** sont des contextes valides.
 
 	Objective-C
 
@@ -86,13 +80,12 @@ précédente.
 	let categories = NSSet(array:[pushCategory]);
 	```
 
-1. Créez la notification locale ou éloignée et affectez-lui l'identité de la
-catégorie.
+1. Créez la notification locale ou éloignée et affectez-lui l'identité de la catégorie.
 
 	Objective-C
 
 	```
-	// Pour Objective-C
+	//For Objective-C
 
 	[[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:categories]];
 

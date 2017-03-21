@@ -21,7 +21,6 @@ Bluemix® カタログの Boilerplates セクションでバックエンド・�
 
 ```
 	//For Objective-C
-
 	- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0){
 [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:categories]];
@@ -49,7 +48,7 @@ let notificationTypes: UIUserNotificationType = UIUserNotificationType.Badge | U
 
 ##プッシュ通知へのトークンの受け渡し
 
-トークンを APNs から受け取った後で、```registerDevice:withDeviceToken``` メソッドの一部としてそのトークンをプッシュ通知に渡します。
+トークンを APNs から受け取った後で、`registerDevice:withDeviceToken` メソッドの一部として、そのトークンをプッシュ通知に渡します。
 
 ###Objective-C
 
@@ -58,12 +57,8 @@ let notificationTypes: UIUserNotificationType = UIUserNotificationType.Badge | U
 -( void) application:( UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:( NSData *)deviceToken{
 
    IMFClient *client = [IMFClient sharedInstance];
-
-
- [client initializeWithBackendRoute: @"your-backend-route-here" backendGUID: @"Your-backend-GUID-here"];
-
-
- // get Push instance
+[client initializeWithBackendRoute: @"your-backend-route-here" backendGUID: @"Your-backend-GUID-here"];
+// get Push instance
 IMFPushClient* push = [IMFPushClient sharedInstance];
 [push registerDeviceToken:deviceToken completionHandler:^(IMFResponse *response,  NSError *error) {
    if (error){
@@ -76,13 +71,14 @@ IMFPushClient* push = [IMFPushClient sharedInstance];
 
 ###Swift
 
-トークンを APNS から受け取った後で、```didRegisterForRemoteNotificationsWithDeviceToken``` メソッドの一部としてそのトークンをプッシュ通知に渡します。
+トークンを APNS から受け取った後で、`didRegisterForRemoteNotificationsWithDeviceToken` メソッドの一部として、そのトークンをプッシュ通知に渡します。
 
 ```
 func application (application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData){
    let push =  BMSPushClient.sharedInstance
    push.registerDeviceToken(deviceToken) { (response, statusCode, error) -> Void in
-        if error.isEmpty {print( "Response during device registration : \(response)")
+        if error.isEmpty {
+            print( "Response during device registration : \(response)")
             print( "status code during device registration : \(statusCode)")
         }
         else{

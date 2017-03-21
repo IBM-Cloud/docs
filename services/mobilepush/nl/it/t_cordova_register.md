@@ -59,7 +59,7 @@ Puoi accedere ai contenuti del parametro di risposta con esito positivo in Javas
 **var token = JSON.parse(response).token**
 
 
-Le chiavi disponibili sono le seguenti: ```token```, ```userId`` e ```deviceId``.
+Le chiavi disponibili sono le seguenti: `token`, `userId` e `deviceId`.
 
 Il seguente frammento di codice JavaScript mostra come inizializzare il tuo Bluemix Mobile Services client SDK, registra un dispositivo ed è in ascolto per le notifiche push. Inserisci questo codice nel tuo file Javascript.
 
@@ -90,9 +90,9 @@ onDeviceReady: function() {
      var settings = {
          ios: {
              alert: true,
-             badge: true,
-             sound: true
-         }   
+	       badge: true,
+	       sound: true
+	   }   
      };
      MFPPush.registerDevice(settings, success, failure);
      var notification = function(notif){
@@ -108,7 +108,7 @@ onDeviceReady: function() {
 Aggiungi il seguente frammento di codice Objective-C alla classe delegato della tua applicazione
 
 ```
-	// Registra il token di dispositivo presso il Bluemix Push Notification Service
+	// Registra il token dispositivo con Bluemix Push Notification Service
 	- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 	  [[CDVMFPPush sharedInstance] didRegisterForRemoteNotifications:deviceToken];
 	}

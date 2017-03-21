@@ -29,14 +29,13 @@ Cordova アプリケーションをさらに開発するために、クライア
 
 1. 最新バージョンの Android Studio SDK と Xcode をダウンロードします。
 1. エミュレーターをセットアップします。Android Studio では、Google Play API をサポートするエミュレーターを使用します。
-1. Git のコマンド・ライン・ツールをインストールします。Windows では、必ず **「Windows コマンド・プロンプトから Git を実行する (Run Git from the Window Command Prompt)」**オプションを選択してください。このツールのダウンロードとインストールの方法については、[Git ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://git-scm.com/downloads "外部リンク・アイコン"){: new_window}を参照してください。
-1. Node.js と Node Package Manager (NPM) ツールをインストールします。NPM コマンド・ライン・ツールは Node.js とバンドルされています。Node.js のダウンロードとインストールの方法については、[Node.js ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://nodejs.org/en/download/ "外部リンク・アイコン"){: new_window}を参照してください。
-1. コマンド・ラインから、**npm install -g cordova** コマンドを使用して、Cordova コマンド・ライン・ツールをインストールします。これは、Cordova の Push プラグインを使用するために必要です。Cordova をインストールして Cordova アプリをセットアップする方法については、[Apache Cordova  ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cordova.apache.org/#getstarted "外部リンク・アイコン"){: new_window}を参照してください。詳細については、Cordova プッシュ・プラグインの [Readme ファイル![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push "外部リンク・アイコン"){: new_window}を参照してください。
+1. Git のコマンド・ライン・ツールをインストールします。Windows では、必ず **「Windows コマンド・プロンプトから Git を実行する (Run Git from the Window Command Prompt)」**オプションを選択してください。このツールのダウンロードとインストールの方法については、[Git ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://git-scm.com/downloads){: new_window}を参照してください。
+1. Node.js と Node Package Manager (NPM) ツールをインストールします。NPM コマンド・ライン・ツールは Node.js とバンドルされています。Node.js のダウンロードとインストールの方法については、[Node.js ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://nodejs.org/en/download/){: new_window}を参照してください。
+1. コマンド・ラインから、**npm install -g cordova** コマンドを使用して、Cordova コマンド・ライン・ツールをインストールします。これは、Cordova の Push プラグインを使用するために必要です。Cordova をインストールして Cordova アプリをセットアップする方法については、[Cordova Apache ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cordova.apache.org/#getstarted){: new_window}を参照してください。詳細については、Cordova プッシュ・プラグインの [README ファイル![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-bluemix-mobile-services/bms-clientsdk-cordova-plugin-push){: new_window}を参照してください。
 1. Cordova アプリを作成するフォルダーに移動し、次のコマンドを実行して Cordova アプリケーションを作成します。
 既存の Cordova アプリがある場合は、ステップ 3 に進みます。
-
 ```cordova create your_app_name
-	cd your_app_name
+cd your_app_name
 ```
 	{: codeblock}
 - オプション: **config.xml** ファイルを編集して、<name> エレメントのアプリケーション名を、デフォルトの HelloCordova という名前ではなく、自分で選択した名前に変更できます。
@@ -233,7 +232,6 @@ cordova run ios
 ###JavaScript
 
 以下の JavaScript コード・スニペットを Cordova アプリケーションの Web パーツに追加します。
-
 ```
 var showNotification = function(notif) {
   alert(JSON.stringify(notif));
@@ -273,8 +271,7 @@ func application(application: UIApplication,
 
 ```
 // Handle receiving a remote notification on launch
-func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
-  {
+func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
   let remoteNotif = launchOptions?[UIApplicationLaunchOptionsKey.remoteNotification] as? NSDictionary
   if remoteNotif != nil {
     CDVBMSPush.sharedInstance().didReceiveRemoteNotificationOnLaunchWithLaunchOptions(launchOptions)
@@ -291,7 +288,8 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
 基本プッシュ通知を送信するには、以下の手順を実行します。
 
 1. **「通知の送信 (Send Notifications)」**を選択し、**「送信先 (Send To)」**オプションを選択することでメッセージを構成します。サポートされるオプションは、**「タグ指定によるデバイス (Device by Tag)」**、**「デバイス ID (Device Id)」**、**「ユーザー ID」**、**「Android デバイス (Android devices)」**、**「iOS デバイス (iOS devices)」**、**「Web 通知 (Web Notifications)」**、および**「すべてのデバイス」**です。
-**注**: **「すべてのデバイス」**オプションを選択すると、{{site.data.keyword.mobilepushshort}}をサブスクライブしているすべてのデバイスが通知を受け取ることになります。![「通知」画面](images/tag_notification.jpg)
+**注**: **「すべてのデバイス」**オプションを選択すると、{{site.data.keyword.mobilepushshort}}をサブスクライブしているすべてのデバイスが通知を受け取ることになります。
+![「通知」画面](images/tag_notification.jpg)
 
 2. **「メッセージ」**フィールドで、メッセージを構成します。必要に応じてオプションの設定を構成してください。
 3. **「送信」**をクリックします。

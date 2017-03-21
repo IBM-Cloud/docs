@@ -1,7 +1,7 @@
 ---
 
 copyright:
- años: 2015, 2016
+ years: 2015, 2016
 
 ---
 
@@ -18,7 +18,7 @@ Copie y pegue este fragmento de código en la aplicación para móviles de Andro
 push.subscribe(allTags.get(0),
 new MFPPushResponseListener<String>() {
   @Override
-  public void onFailure(MFPPushException ex) {
+    public void onFailure(MFPPushException ex) {
     updateTextView("Error subscribing to Tag1.."
            + ex.getMessage());
   }
@@ -79,7 +79,7 @@ Utilice la API **unsubscribeFromTags** para anular la suscripción a una etiquet
 ```
 [push unsubscribeFromTags:tags completionHandler:
 ^(IMFResponse *response, NSError *error) {
-   if(error){
+   if (error){
        [self updateMessage:error.description];
  } else {
        NSDictionary* subStatus = [[NSDictionary alloc]init];

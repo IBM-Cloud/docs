@@ -347,6 +347,6 @@ voir [Création de balises](t_manage_tags.html).
 1. Dans le tableau de bord des notifications push, cliquez sur **Envoyer des notifications**.
 1. Sélectionnez l'option **Appareil par étiquette** dans la liste déroulante **Envoyer à**.
 1. Recherchez les balises que vous voulez utiliser et sélectionnez-les.
-![Ecran des notifications](images/tag_notification.jpg)
-1. Dans la zone **Message Text**, entrez le texte qui sera envoyé en tant que notification aux destinataires abonnés.
+![Ecran Notifications](images/tag_notification.jpg)
+1. Dans la zone **Texte du message**, entrez le texte qui sera envoyé en tant que notification aux destinataires abonnés.
 1. Cliquez sur **Envoyer**.

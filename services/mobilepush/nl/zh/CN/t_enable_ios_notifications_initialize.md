@@ -24,9 +24,7 @@ IMFClient *imfClient = [IMFClient sharedInstance];
 
 ```
 // Initialize the Core SDK for Swift with IBM Bluemix GUID, route, and region
-let myBMSClient = BMSClient.sharedInstance
-
-myBMSClient.initializeWithBluemixAppRoute("BluemixAppRoute", bluemixAppGUID: "APPGUID", bluemixRegion:"Location where your app Hosted")
+let myBMSClient = BMSClient.sharedInstancemyBMSClient.initializeWithBluemixAppRoute("BluemixAppRoute", bluemixAppGUID: "APPGUID", bluemixRegion:"Location where your app Hosted")
 myBMSClient.defaultRequestTimeout = 10.0 // Timput in seconds
 ```
 
@@ -58,7 +56,7 @@ let push = BMSPushClient.sharedInstance
 
 **bluemixRegionSuffix**
 
-指定托管应用程序的位置。```bluemixRegion``` 参数指定要使用的 Bluemix 部署。可以使用 ```BMSClient.REGION`` 静态属性设置此值，并使用以下三个值中的一个值：
+指定托管应用程序的位置。`bluemixRegion` 参数指定要使用的 Bluemix 部署。可以使用 `BMSClient.REGION` 静态属性设置此值，并使用以下三个值中的一个值：
 
 - BMSClient.REGION_US_SOUTH
 - BMSClient.REGION_UK

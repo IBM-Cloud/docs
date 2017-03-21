@@ -1,12 +1,12 @@
 # 푸시 서비스 인스턴스 작성
 {: #create-push-instance}
 
-{{site.data.keyword.IBM}} {{site.data.keyword.mobilepushshort}}에서 시작하려면 먼저 {{site.data.keyword.Bluemix}} 애플리케이션(예: Node.js 앱)을 작성하십시오. 그런 다음 이 Bluemix 애플리케이션에 바인드하는 데 필요한 푸시 서비스 인스턴스 {{site.data.keyword.mobilepushfull}}를 작성합니다. Bluemix 카탈로그의 Boilerplate 섹션으로 이동하여 MobileFirst 서비스 스타터를 클릭하여 이를 수행할 수도 있습니다. 
+{{site.data.keyword.IBM}} {{site.data.keyword.mobilepushshort}}를 시작하기 위해, 먼저 {{site.data.keyword.Bluemix}} 애플리케이션을 작성합니다(예: Node.js 앱). 그런 다음 이 Bluemix 애플리케이션에 바인드하는 데 필요한 푸시 서비스 인스턴스 {{site.data.keyword.mobilepushfull}}를 작성합니다. Bluemix 카탈로그의 표준 유형 섹션으로 이동하여 MobileFirst 서비스 스타터를 클릭하여 이를 수행할 수도 있습니다. 
 
 **참고**: 환경을 관리하도록 조직을 구성하였으면, 모바일 앱을 위한 런타임과 서비스를 작성하려는 조직을 선택하십시오. 
 
 
-1. Bluemix 애플리케이션이 없는 경우 작성해야 합니다(예: Node.js 앱). Bluemix 애플리케이션을 작성하려면 Bluemix 대시보드로 이동하여 **앱 작성**을 클릭하십시오. 
+1. Bluemix 애플리케이션이 없는 경우 애플리케이션을 작성해야 합니다(예: Node.js 앱). Bluemix 애플리케이션을 작성하려면, Bluemix 대시보드로 이동하여 **앱 작성**을 클릭하십시오. 
 
 	**참고**: 애플리케이션이 있을 경우 7단계로 이동하여 서비스를 추가하십시오. ![서비스 인스턴스 작성](images/create_service_instance1.jpg "서비스 인스턴스 작성")
 

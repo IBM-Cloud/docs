@@ -8,7 +8,7 @@ copyright:
 # 起始設定 Push SDK for iOS 應用程式
 {: #enable-push-ios-notifications-initialize}
 
-放置起始設定碼的一般位置位於 iOS 應用程式的應用程式委派中。按一下「Bluemix 應用程式儀表板」中的**行動式選項**鏈結，以取得應用程式的路徑及應用程式 GUID。
+放置起始設定碼的一般位置位於 iOS 應用程式的應用程式委派中。按一下「Bluemix 應用程式儀表板」中的**行動選項**鏈結，以取得應用程式的路徑及應用程式 GUID。
 
 ##起始設定 Core SDK
 
@@ -24,9 +24,7 @@ IMFClient *imfClient = [IMFClient sharedInstance];
 
 ```
 // Initialize the Core SDK for Swift with IBM Bluemix GUID, route, and region
-let myBMSClient = BMSClient.sharedInstance
-
-myBMSClient.initializeWithBluemixAppRoute("BluemixAppRoute", bluemixAppGUID: "APPGUID", bluemixRegion:"Location where your app Hosted")
+let myBMSClient = BMSClient.sharedInstancemyBMSClient.initializeWithBluemixAppRoute("BluemixAppRoute", bluemixAppGUID: "APPGUID", bluemixRegion:"Location where your app Hosted")
 myBMSClient.defaultRequestTimeout = 10.0 // Timput in seconds
 ```
 
@@ -58,7 +56,7 @@ let push = BMSPushClient.sharedInstance
 
 **bluemixRegionSuffix**
 
-指定管理應用程式的位置。```bluemixRegion``` 參數指定您要使用的 Bluemix 部署。您可以使用 ```BMSClient.REGION`` 靜態內容設定此值，然後使用下列三個值的其中一個：
+指定管理應用程式的位置。`bluemixRegion` 參數指定您所使用的 Bluemix 部署。您可以使用 `BMSClient.REGION` 靜態內容設定此值，然後使用下列三個值的其中一個：
 
 - BMSClient.REGION_US_SOUTH
 - BMSClient.REGION_UK

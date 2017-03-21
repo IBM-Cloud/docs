@@ -18,7 +18,6 @@
 
 ```
 	//For Objective-C
-
 	- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0){
 [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:categories]];
@@ -37,7 +36,8 @@
 ```
 	//For Swift
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-let notificationTypes: UIUserNotificationType = UIUserNotificationType.Badge | UIUserNotificationType.Alert | UIUserNotificationType.Sound
+
+    let notificationTypes: UIUserNotificationType = UIUserNotificationType.Badge | UIUserNotificationType.Alert | UIUserNotificationType.Sound
 		let notificationSettings: UIUserNotificationSettings = UIUserNotificationSettings(forTypes: notificationTypes, categories: categories)
 		application.registerUserNotificationSettings(notificationSettings)
 		application.registerForRemoteNotifications()
@@ -46,7 +46,8 @@ let notificationTypes: UIUserNotificationType = UIUserNotificationType.Badge | U
 
 ##将令牌传递给 Push Notifications
 
-从 APNs 收到令牌后，将该令牌传递给 Push Notifications（作为 ```registerDevice:withDeviceToken``` 方法的一部分）。
+从 APNs 收到令牌后，将该令牌传递给 Push Notifications（作为 `registerDevice:withDeviceToken`
+方法的一部分）。
 
 ###Objective-C
 
@@ -55,13 +56,8 @@ let notificationTypes: UIUserNotificationType = UIUserNotificationType.Badge | U
 -( void) application:( UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:( NSData *)deviceToken{
 
    IMFClient *client = [IMFClient sharedInstance];
-
-
- [client initializeWithBackendRoute:@"your-backend-route-here" backendGUID:@"Your-backend-GUID-here"];
-
-
-
- // get Push instance
+[client initializeWithBackendRoute:@"your-backend-route-here" backendGUID:@"Your-backend-GUID-here"];
+// get Push instance
 IMFPushClient* push = [IMFPushClient sharedInstance];
 [push registerDeviceToken:deviceToken completionHandler:^(IMFResponse *response,  NSError *error) {
    if (error){
@@ -74,7 +70,8 @@ IMFPushClient* push = [IMFPushClient sharedInstance];
 
 ###Swift
 
-从 APNs 收到令牌后，将该令牌传递给 Push Notifications（作为 ```didRegisterForRemoteNotificationsWithDeviceToken``` 方法的一部分）。
+从 APNS 收到令牌后，将该令牌传递给 Push Notifications（作为 `didRegisterForRemoteNotificationsWithDeviceToken`
+方法的一部分）。
 
 ```
 func application (application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData){

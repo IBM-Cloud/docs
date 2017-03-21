@@ -45,7 +45,7 @@ copyright:
 	declineAction.activationMode = UIUserNotificationActivationMode.Background
 	```
 
-2. 알림 카테고리를 작성하고 조치를 설정하십시오. 올바른 컨텍스트는 **UIUserNotificationActionContextDefault** 또는 **UIUserNotificationActionContextMinimal**입니다.
+2. 알림 카테고리를 작성하고 조치를 설정하십시오. **UIUserNotificationActionContextDefault** 또는 **UIUserNotificationActionContextMinimal**이 올바른 컨텍스트입니다.
 
 	Objective-C
 

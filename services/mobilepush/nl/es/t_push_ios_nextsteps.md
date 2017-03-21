@@ -2,17 +2,16 @@
 ---
 
 copyright:
- años: 2015, 2016
+ years: 2015, 2016
 
 ---
 
 {:new_window: target="_blank"}
-# Siguientes pasos
+# Pasos siguientes
 
 {: #push-ios-nextsteps}
 
-Una vez que haya configurado correctamente las notificaciones básicas, puede configurar
-        las notificaciones basadas en código y las opciones avanzadas.
+Una vez que haya configurado correctamente las notificaciones básicas, puede configurar las notificaciones basadas en código y las opciones avanzadas.
 
 Añada estas características de Servicio de notificaciones push a la aplicación.
 
