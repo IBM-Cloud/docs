@@ -12,7 +12,7 @@ lastupdated: "2016-03-17"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#开发应用程序
+# 开发应用程序
 {: #developingapps}
 
 

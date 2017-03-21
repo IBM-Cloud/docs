@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016
-
+lastupdated: "2016-07-08"
 ---
 
 {:new_window: target="_blank"}
@@ -14,9 +14,6 @@ copyright:
 
 # Blockchain on z
 {: #zblockchain}
-Last updated: 8 July 2016
-{: .last-updated}
-
 
 
 You can use blockchain service in the Bluemix dedicated offering with z/OS to create private and secure digital assets, which can then be traded quickly and securely over permissioned networks.  *(Additional info as part of short description)*

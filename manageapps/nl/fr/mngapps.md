@@ -10,7 +10,7 @@ lastupdated: "2015-03-17"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-#Gestion des applications
+# Gestion des applications
 {: #manageapps}
 
 Vous pouvez utiliser le tableau de bord de l'interface utilisateur {{site.data.keyword.Bluemix}} pour afficher et gérer vos applications

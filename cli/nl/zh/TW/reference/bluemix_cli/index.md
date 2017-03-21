@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-01-24"
+lastupdated: "2017-02-16"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2017-01-24"
 # 開始使用 {{site.data.keyword.Bluemix_notm}} CLI
 {: #getting-started}
 
-{{site.data.keyword.Bluemix_notm}} CLI 提供統一方式，可讓您使用指令行介面與應用程式、虛擬伺服器、容器以及 {{site.data.keyword.Bluemix_notm}} 中的其他服務互動。{{site.data.keyword.Bluemix_notm}} CLI 同時整合社群工具（例如 Cloud Foundry CLI、Docker CLI 及 OpenStack CLI），以及起始設定環境設定，讓您可以與不同的運算類型互動。
+{{site.data.keyword.Bluemix_notm}} CLI 提供統一方式，可讓您使用指令行介面與應用程式、虛擬伺服器、容器以及其他服務互動。{{site.data.keyword.Bluemix_notm}} CLI 同時整合社群工具（例如 Cloud Foundry CLI、Docker CLI 及 OpenStack CLI），以及起始設定環境設定，讓您可以與不同的運算類型互動。
 
 **限制**：Cygwin 不支援 {{site.data.keyword.Bluemix_notm}} CLI，因此請不要在 Cygwin 指令行視窗中使用 {{site.data.keyword.Bluemix_notm}} CLI。
 
@@ -25,7 +25,7 @@ lastupdated: "2017-01-24"
 ## 安裝 {{site.data.keyword.Bluemix_notm}} CLI
 {: #install_bluemix_cli}
 
-安裝 {{site.data.keyword.Bluemix_notm}} CLI 之前，請確定系統上已安裝 Cloud Foundry CLI。
+安裝 {{site.data.keyword.Bluemix_notm}} CLI 之前，請安裝 [cf CLI ![外部鏈結圖示](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}。
 
 若為 Mac OS 及 Windows，請下載 [{{site.data.keyword.Bluemix_notm}} CLI 套件](/docs/cli/index.html#downloads)，然後執行安裝程式。
 
@@ -63,7 +63,7 @@ lastupdated: "2017-01-24"
 ## 安裝外掛程式
 {: #install_plug-in}
 
-與 Cloud Foundry CLI 相似，{{site.data.keyword.Bluemix_notm}} CLI 也支援外掛程式延伸架構以整合內建指令以外的其他指令。
+與 Cloud Foundry CLI 相似，{{site.data.keyword.Bluemix_notm}} CLI 支援外掛程式延伸架構以整合內建指令以外的其他指令。
 
 若要從本端環境安裝外掛程式，請採取下列步驟：
 
@@ -135,7 +135,7 @@ lastupdated: "2017-01-24"
   ~$
   ```
 
-  2. 然後，使用 `bluemix plugin install` 指令，以從 `Bluemix` 儲存庫安裝外掛程式。例如：
+  2. 使用 `bluemix plugin install` 指令，從 `Bluemix` 儲存庫安裝外掛程式。例如：
 
   ```
   ~$ bluemix plugin install auto-scaling -r Bluemix
@@ -150,7 +150,7 @@ lastupdated: "2017-01-24"
 ## 登入 {{site.data.keyword.Bluemix_notm}} CLI
 {: #log_bmcli}
 
-安裝 {{site.data.keyword.Bluemix_notm}} CLI 之後，即可使用 {{site.data.keyword.Bluemix_notm}} 帳戶及密碼來登入 {{site.data.keyword.Bluemix_notm}}。例如：
+安裝 {{site.data.keyword.Bluemix_notm}} CLI 之後，即可使用 IBM ID 及密碼來登入 {{site.data.keyword.Bluemix_notm}}。例如：
 
 ```
 ~$ bluemix login -a https://api.ng.bluemix.net
@@ -997,8 +997,8 @@ bluemix iam account-user-invite Mary IBM OrgManager Cloud SpaceAuditor
 ```
  bluemix iam account-user-reinvite USER_EMAIL ORG_NAME
 ```
- 
- 
+
+
 ### bluemix iam org-users
 {: #bluemix_iam_org_users}
 
@@ -2224,7 +2224,7 @@ bluemix ic group-create [--publish,-p PORT] --name GROUP_NAME [--memory,-m MEMOR
 | CCS_BIND_APP=*&lt;appname&gt;*       | 將服務連結至容器。請使用 `CCS_BIND_APP` 環境變數，將應用程式連結至容器。應用程式會連結至目標服務，並作為橋接器，以容許 {{site.data.keyword.Bluemix_notm}} 將您橋接應用程式的 `VCAP_SERVICES` 資訊帶入執行中容器實例。|
 | CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | 若要將 Bluemix 服務直接連結至容器，而不使用橋接應用程式，請使用 CCS_BIND_SRV。此連結容許 Bluemix 將 VCAP_SERVICES 資訊注入執行中容器實例。若要列出多個 Bluemix 服務，請將它們併入為相同環境變數的一部分。 |
 | LOG_LOCATIONS=*&lt;path_to_file&gt;* | 新增要在容器中監視的日誌檔。包括含有日誌檔路徑的 `LOG_LOCATIONS` 環境變數。 |
-{: caption="Table 8. Commonly used environment variables" caption-side="top"}
+{: caption="表 8. 常用環境變數" caption-side="top"}
 
 
  <dl>
@@ -3052,7 +3052,7 @@ bluemix ic run [-p PORT|--publish PORT] [-P] [-m MEMORY|--memory MEMORY] [-e ENV
 | CCS_BIND_APP=*&lt;appname&gt;*       | 將服務連結至容器。請使用 `CCS_BIND_APP` 環境變數，將應用程式連結至容器。應用程式會連結至目標服務，並作為橋接器，以容許 {{site.data.keyword.Bluemix_notm}} 將您橋接應用程式的 `VCAP_SERVICES` 資訊帶入執行中容器實例。如需建立橋接應用程式的相關資訊，請參閱[將服務連結至容器](/docs/containers/container_integrations_binding.html){: new_window}。 |
 | CCS_BIND_SRV=*&lt;service_instance_name1&gt;*,*&lt;service_instance_name2&gt;* | 若要將 Bluemix 服務直接連結至容器，而不使用橋接應用程式，請使用 CCS_BIND_SRV。此連結容許 Bluemix 將 VCAP_SERVICES 資訊注入執行中容器實例。若要列出多個 Bluemix 服務，請將它們併入為相同環境變數的一部分。 |
 | LOG_LOCATIONS=*&lt;path_to_file&gt;* | 新增要在容器中監視的日誌檔。包括含有日誌檔路徑的 `LOG_LOCATIONS` 環境變數。 |
-{: caption="Table 9. Commonly used environment variables" caption-side="top"}
+{: caption="表 9. 常用環境變數" caption-side="top"}
 
 
    <dl>

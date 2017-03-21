@@ -12,14 +12,14 @@ lastupdated: "2017-01-11"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#Sécurisation des applications
+# Sécurisation des applications
 {: #securingapps}
 
 
 Vous pouvez sécuriser vos applications en téléchargeant des certificats SSL et en limitant l'accès aux applications.
 {:shortdesc}
 
-##Création de demandes de signature de certificat
+## Création de demandes de signature de certificat
 {: #ssl_csr}
 
 Pour pouvoir télécharger les certificats SSL pour lesquels vous disposez d'une habilitation dans {{site.data.keyword.Bluemix}}, vous devez créer une demande de signature

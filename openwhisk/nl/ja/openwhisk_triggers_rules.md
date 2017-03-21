@@ -1,22 +1,21 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-02-22"
+  years: 2016, 2017
+lastupdated: "2016-02-23"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
+{:screen: .screen}
 {:pre: .pre}
 
 # トリガーとルールの作成
 {: #openwhisk_triggers}
 
-
-{{site.data.keyword.openwhisk}} のトリガーとルールにより、プラットフォームにイベント・ドリブン機能がもたらされます。外部および内部のイベント・ソースからのイベントは、トリガーを通じてチャネル設定され、ルールによって許可されたアクションがこれらのイベントに対応します。
+{{site.data.keyword.openwhisk_short}} のトリガーとルールにより、プラットフォームにイベント・ドリブン機能がもたらされます。外部および内部のイベント・ソースからのイベントは、トリガーを通じてチャネル設定され、ルールによって許可されたアクションがこれらのイベントに対応します。
 {: shortdesc}
 
 ## トリガーの作成
@@ -71,11 +70,9 @@ lastupdated: "2016-02-22"
 wsk trigger create locationUpdate
   ```
   {: pre}
-
   ```
 ok: created trigger locationUpdate
   ```
-  {: screen}
 
 2. トリガーのセットをリストして、トリガーが作成されたことを確認します。
 
@@ -83,12 +80,10 @@ ok: created trigger locationUpdate
 wsk trigger list
   ```
   {: pre}
-
   ```
 triggers
   /someNamespace/locationUpdate                            private
   ```
-  {: screen}
 
   これで、名前を指定した「チャネル」が作成され、このチャネルに対してイベントを発生させることができます。
 
@@ -98,11 +93,9 @@ triggers
   wsk trigger fire locationUpdate --param name Donald --param place "Washington, D.C."
   ```
   {: pre}
-
   ```
 ok: triggered locationUpdate with id fa495d1223a2408b999c3e0ca73b2677
   ```
-  {: screen}
 
 発生したトリガーは、それに突き合わせる付随のルールがない場合は、目に見える効果はありません。
 トリガーはパッケージ内に作成できません。名前空間の直下に作成する必要があります。
@@ -116,9 +109,9 @@ ok: triggered locationUpdate with id fa495d1223a2408b999c3e0ca73b2677
 
 1. 使用するアクション・コードを含む 'hello.js' ファイルを作成します。
 
-  ```
-function main(params) {
-     return {payload:  'Hello, ' + params.name + ' from ' + params.place};
+  ```javascript
+  function main(params) {
+      return {payload:  'Hello, ' + params.name + ' from ' + params.place};
   }
   ```
   {: codeblock}
@@ -129,7 +122,6 @@ function main(params) {
 wsk trigger update locationUpdate
   ```
   {: pre}
-
   ```
 wsk action update hello hello.js
   ```
@@ -153,11 +145,9 @@ wsk action update hello hello.js
   wsk trigger fire locationUpdate --param name Donald --param place "Washington, D.C."
   ```
   {: pre}
-
   ```
 ok: triggered locationUpdate with id d5583d8e2d754b518a9fe6914e6ffb1e
   ```
-  {: screen}
 
 5. 最新のアクティベーションをチェックして、アクションが呼び出されたことを確認します。
 
@@ -165,23 +155,19 @@ ok: triggered locationUpdate with id d5583d8e2d754b518a9fe6914e6ffb1e
 wsk activation list --limit 1 hello
   ```
   {: pre}
-
   ```
 activations
   9c98a083b924426d8b26b5f41c5ebc0d             hello
   ```
-  {: screen}
-
   ```
 wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
   ```
   {: pre}
-  ```
+  ```json
   {
-     "payload": "Hello, Donald from Washington, D.C."
+      "payload": "Hello, Donald from Washington, D.C."
   }
   ```
-  {: screen}
 
   hello アクションがイベント・ペイロードを受け取り、予期されるストリングを戻したことが分かります。
 
@@ -196,7 +182,9 @@ wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
 で有効化されるアクション・シーケンス `recordLocationAndHello` を作成することができます。
   ```
   wsk action create recordLocationAndHello --sequence /whisk.system/utils/echo,hello
+  ```
+  {: pre}
+  ```
   wsk rule create anotherRule locationUpdate recordLocationAndHello
   ```
   {: pre}
- 

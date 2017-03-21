@@ -2,11 +2,12 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-03-17"
 
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:pre: .pre}
 {:screen: .screen}
 {:tsSymptoms: .tsSymptoms}
 {:tsCauses: .tsCauses}
@@ -15,7 +16,7 @@ lastupdated: "2017-03-14"
 # Troubleshooting
 {: #troubleshooting}
 
-When you have problems using {{site.data.keyword.appid_short_notm}}, consider these techniques for troubleshooting and getting help.
+When you have problems while using {{site.data.keyword.appid_short_notm}}, consider these techniques for troubleshooting and getting help.
 {: shortdesc}
 
 

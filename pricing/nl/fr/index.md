@@ -51,16 +51,12 @@ lastupdated: "2017-01-11"
 # Tarification
 {: #pricing}
 
-Vous pouvez exécuter des applications dans {{site.data.keyword.Bluemix}} et essayer des services
-{{site.data.keyword.Bluemix_notm}} gratuitement. Vous pouvez vous inscrire pour bénéficier d'un essai gratuit de
-30 jours offrant des franchises supplémentaires, notamment un support gratuit. Au bout de 30 jours, vous pouvez choisir un type de compte et ne payer que ce que vous utilisez au-delà des franchises. Bluemix met à disposition une calculatrice des coûts pour que vous puissiez estimer le coût à l'avance, ainsi que la vue Tableau de bord de l'utilisation pour que
-vous puissiez vérifier le coût réel après avoir construit vos applications.
+Vous pouvez exécuter des applications dans {{site.data.keyword.Bluemix}} et essayer des services {{site.data.keyword.Bluemix_notm}} gratuitement. Vous pouvez vous inscrire pour bénéficier d'un essai gratuit de 30 jours offrant des franchises supplémentaires, notamment un support gratuit. Au bout de 30 jours, vous pouvez choisir un type de compte et ne payer que ce que vous utilisez au-delà des franchises. Bluemix met à disposition une calculatrice des coûts pour que vous puissiez estimer le coût à l'avance, ainsi que la vue Tableau de bord de l'utilisation pour que vous puissiez vérifier le coût réel après avoir construit vos applications.
 {:shortdesc}
 
 ## Essai gratuit
 {: #trial}
-Vous pouvez vous inscrire pour bénéficier d'un essai gratuit de 30 jours avec votre ID {{site.data.keyword.Bluemix_notm}}. Au cours de
-l'essai, vous pouvez développer des applications et utiliser des services dans {{site.data.keyword.Bluemix_notm}}.
+Vous pouvez vous inscrire pour bénéficier d'un essai gratuit de 30 jours avec votre ID {{site.data.keyword.Bluemix_notm}}. Au cours de l'essai, vous pouvez développer des applications et utiliser des services dans {{site.data.keyword.Bluemix_notm}}.
 
 Les ressources gratuites suivantes sont mises à disposition sur votre compte :
 
@@ -68,16 +64,10 @@ Les ressources gratuites suivantes sont mises à disposition sur votre compte :
 * 10 services
 * 1 certificat SSL
 
-Votre essai gratuit prend fin 30 jours après votre inscription. A la fin de votre essai de 30 jours, les applications de
-votre
-compte sont arrêtées. Vous ne pouvez pas vous inscrire pour un autre essai dans {{site.data.keyword.Bluemix_notm}}. Toutefois, vous pouvez continuer d'accéder à votre compte et aux comptes sur lesquels vous êtes invités. Pour redémarrer vos applications, vous devez fournir vos informations de carte de crédit pour un compte de type Paiement à la carte ou créer un compte de
-type Abonnement. Une fois que vous avez converti votre compte, vous pouvez continuer d'utiliser les franchises pour les ressources de traitement et les
-services. Vous ne payez que pour l'utilisation des services, des conteneurs et des contextes d'exécution qui ne font pas partie de la franchise mensuelle.
+Votre essai gratuit prend fin 30 jours après votre inscription. A la fin de votre essai de 30 jours, les applications de votre compte sont arrêtées. Vous ne pouvez pas vous inscrire pour un autre essai dans {{site.data.keyword.Bluemix_notm}}. Toutefois, vous pouvez continuer d'accéder à votre compte et aux comptes sur lesquels vous êtes invités. Pour redémarrer vos applications, vous devez fournir vos informations de carte de crédit pour un compte de type Paiement à la carte ou créer un compte de type Abonnement. Une fois que vous avez converti votre compte, vous pouvez continuer d'utiliser les franchises pour les ressources de traitement et les services. Vous ne payez que pour l'utilisation des services, des conteneurs et des contextes d'exécution qui ne font pas partie de la franchise mensuelle.
 
-Si vous ne convertissez pas votre compte à la fin de l'essai gratuit, vous recevez des notifications par courrier électronique sur le statut de votre
-compte une fois votre essai terminé. Elles vous rappellent de créer votre compte payant pour que vos configurations et paramètres d'application ne soient pas perdus. Pour ne plus recevoir ces notifications de {{site.data.keyword.Bluemix_notm}}, vous pouvez vous désabonner à tout moment.
-Un mois après la fin de l'essai, vos applications et vos configurations de service sont supprimées. La figure ci-dessous illustre
-le processus général de gestion des comptes {{site.data.keyword.Bluemix_notm}}.
+Si vous ne convertissez pas votre compte à la fin de l'essai gratuit, vous recevez des notifications par courrier électronique sur le statut de votre compte une fois votre essai terminé. Elles vous rappellent de créer votre compte payant pour que vos configurations et paramètres d'application ne soient pas perdus. Pour ne plus recevoir ces notifications de {{site.data.keyword.Bluemix_notm}}, vous pouvez vous désabonner à tout moment.
+Un mois après la fin de l'essai, vos applications et vos configurations de service sont supprimées. La figure ci-dessous illustre le processus général de gestion des comptes {{site.data.keyword.Bluemix_notm}}.
 
 
 ![Organigramme du processus de gestion des comptes {{site.data.keyword.Bluemix_notm}}](acctmgmt600.png)
@@ -438,7 +428,7 @@ temps, par exemple sur un mois. La tarification dans cet exemple est en dollar.
 |Data Cache - Starter |	1 Go d'espace en cache et une réplique |	55,00 $/instance |
 |Data Cache - Standard |	5 Go d'espace en cache et une réplique |	155,00 $/instance |
 |Data Cache - Premium |	25 Go d'espace en cache et une réplique |	505,00 $/instance|
-|IBM Cloudant® NoSQL DB for {{site.data.keyword.Bluemix_notm}} |	2 Go de stockage de données gratuits<br/>50 000 appels d'API légers gratuits par mois<br/>10 000 appels d'API lourds gratuits par mois | 1,00 $/Go<br/>0,03 $/1000 appels d'API légers<br/>0,15 $/1000 appels d'API lourds |
+|IBM Cloudant® NoSQL DB for {{site.data.keyword.Bluemix_notm}} |	2 Go de stockage de données disponible<br/>50 000 appels API légers gratuits par mois<br/>10 000 appels API lourds gratuits par mois | $1.00 USD/GB<br/>$0.03 USD pour 1000 appels API légers<br/>$0.15 USD pour 1000 appels API lourds |
 {:caption="Table 7. Pricing sheet" caption-side="top"}
 
 ###Calcul du prix de l'application
@@ -574,21 +564,17 @@ ensemble différent d'étapes à suivre si vous changez de plan.
 
 1. Pour changer de plan, dans le tableau de bord du service, cliquez sur **Plan**. En général, vous pouvez mettre à niveau votre plan ou passer à un plan de niveau inférieur.
 2. Après avoir changé de plan, vous devez effectuer un certain nombre d'étapes. Celles-ci varient selon le type de changement de plan et le service. Par
-exemple, si vous êtes passé à un plan de niveau inférieur, il se peut que vous deviez reconstituer votre application. Ou bien, si vous avez mis à niveau
-votre plan, il peut être nécessaire de reconstituer votre application et de prendre d'autres mesures.<br/><br/>Pour reconstituer votre
-application, accédez au tableau de bord {{site.data.keyword.Bluemix_notm}} et recherchez l'application à laquelle le service est lié. Dans le menu
-de l'application, sélectionnez **Redémarrer l'application**.<br/><br/>Les actions à effectuer ensuite dépendent du service. Reportez-vous au tableau ci-dessous pour prendre connaissance des actions spécifiques à
+exemple, si vous êtes passé à un plan de niveau inférieur, il se peut que vous deviez reconstituer votre application. Ou, si vous avez effectué une mise à niveau de votre plan, il se peut que vous deviez reconstituer votre application et prendre d'autres mesures. <br/><br/>Pour reconstituer votre application, accédez au tableau de bord {{site.data.keyword.Bluemix_notm}} et recherchez l'application à laquelle le service est lié. Dans le menu de l'application, sélectionnez **Redémarrer l'application**.<br/><br/>Les autres actions varient en fonction du service. Reportez-vous au tableau ci-dessous pour prendre connaissance des actions spécifiques à
 exécuter.
 
 |Service |	Information|
 |--------|-------------|
-|Presence Insights 	|Si vous avez choisi un plan léger et que vous dépassez les franchises, un message 403 s'affiche ou est consigné afin d'indiquer que vous ne disposez plus des autorisations, et votre instance de service est désactivée. De plus, les appels d'API REST POST sont rejetés avec une réponse 403.<br/><br/>Si votre service est désactivé car vous avez dépassé les franchises, vous pouvez procéder à la mise à niveau du plan léger vers un plan payant. Votre service est réactivé dans les deux heures.<br/><br/>Si vous disposez d'un plan payant, vous pouvez passer à un plan inférieur, c'est-à-dire au plan léger, tant que votre utilisation ne dépasse pas la franchise du plan léger pour les événements et l'espace de stockage total.<br/><br/>Lorsque vous mettez un plan à niveau ou passez à un plan inférieur, il n'est pas nécessaire de reconstituer ou de redémarrer vos applications.|
+|Presence Insights 	|Si vous avez choisi un plan léger et que vous dépassez les franchises, un message 403 s'affiche ou est consigné afin d'indiquer que vous ne disposez plus des autorisations, et votre instance de service est désactivée. De plus, les appels API REST POST sont rejetés avec une réponse 403. <br/><br/>Si votre service est désactivé car vous avez dépassé les franchises, vous pouvez procéder à la mise à niveau du plan léger vers un plan payant. Votre service est réactivé dans un délai de 2 heures. <br/><br/>i vous disposez d'un plan payant, vous pouvez passer à un plan inférieur, c'est-à-dire au plan léger, tant que votre utilisation ne dépasse pas la franchise du plan léger pour les événements et l'espace de stockage total. <br/><br/>Lorsque vous mettez à niveau ou réduisez votre plan, vous n'avez pas à reconstituer ou à redémarrer applications.|
 {:caption="Table 9. Next steps for changing your plan" caption-side="top"}
 
 ###Changement de plan via l'interface de ligne de commande
 
-Si vous le souhaitez, vous pouvez changer de plan de service via l'interface de ligne de commande.
-Pour mettre à jour le plan du service, entrez la commande suivante :
+Si vous le souhaitez, vous pouvez changer de plan de service via l'interface de ligne de commande. Pour mettre à jour le plan du service, entrez la commande suivante :
 ```
 cf update-service <nom_service> [-p <nouveau_plan>]
 ```

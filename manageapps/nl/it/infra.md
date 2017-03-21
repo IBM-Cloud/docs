@@ -13,7 +13,7 @@ lastupdated: "2016-03-15"
 
 {:shortdesc: .shortdesc}
 
-#  Livelli dell'infrastruttura Bluemix
+# Livelli dell'infrastruttura Bluemix
 
 
 

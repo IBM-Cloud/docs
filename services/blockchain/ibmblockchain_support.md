@@ -1,8 +1,8 @@
 ---
 
 copyright:
-years: 2016
-
+  years: 2017
+lastupdated: "2017-03-07"
 ---
 
 {:new_window: target="_blank"}
@@ -12,10 +12,9 @@ years: 2016
 {:pre: .pre}
 
 
-# Support and known issues
+# Getting support
 {: #ibmblockchain_support}
-Last updated: 28 September 2016
-{: .last-updated}
+
 
 There are several mechanisms available to obtain support and troubleshoot problems associated with your blockchain instance on Bluemix:
 {:shortdesc}

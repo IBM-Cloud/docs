@@ -12,7 +12,7 @@ lastupdated: "2016-03-17"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#Développement d'applications
+# Développement d'applications
 {: #developingapps}
 
 

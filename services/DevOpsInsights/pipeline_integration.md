@@ -15,7 +15,6 @@ lastupdated: "2017-03-14"
 # Integrating {{site.data.keyword.DRA_short}} with {{site.data.keyword.deliverypipeline}}
 {: #toolchain_configure_pipeline}
 
-After you add {{site.data.keyword.DRA_full}} to a toolchain and define the policies that it monitors, integrate it with your pipeline.
+This page has moved. You can view this information at [its new location](/docs/services/DevOpsInsights/insights_risk.html#configuration).
 {:shortdesc}
 
-This document has been moved to [Deployment Risk](/docs/services/DevOpsInsights/insights_risk.html#configuration).

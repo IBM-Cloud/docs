@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-01-24"
+lastupdated: "2017-02-16"
 
 ---
 
@@ -13,21 +13,21 @@ lastupdated: "2017-01-24"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# Einführung in die {{site.data.keyword.Bluemix_notm}} CLI
+# Einführung in die {{site.data.keyword.Bluemix_notm}}-CLI
 {: #getting-started}
 
-Die {{site.data.keyword.Bluemix_notm}} CLI stellt eine einheitliche Möglichkeit zur Interaktion mit Ihren Anwendungen, virtuellen Servern, Containern und weiteren Services in {{site.data.keyword.Bluemix_notm}} über eine Befehlszeilenschnittstelle bereit. Mit der {{site.data.keyword.Bluemix_notm}} CLI werden auch Community-Tools, wie die Cloud Foundry CLI, die Docker CLI und die OpenStack CLI integriert und Umgebungseinstellungen initialisiert, mit denen Sie mit verschiedenen Berechnungstypen interagieren können.
+Die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle (CLI) stellt eine einheitliche Möglichkeit zur Interaktion mit Ihren Anwendungen, virtuellen Servern, Containern und weiteren Services über eine Befehlszeilenschnittstelle bereit. Mit der {{site.data.keyword.Bluemix_notm}}-CLI werden auch Community-Tools, wie die Cloud Foundry-CLI, die Docker-CLI und die OpenStack-CLI integriert und Umgebungseinstellungen initialisiert, mit denen Sie mit verschiedenen Berechnungstypen interagieren können.
 
-**Einschränkung:** Die {{site.data.keyword.Bluemix_notm}} CLI wird nicht von Cygwin unterstützt. Die {{site.data.keyword.Bluemix_notm}} CLI darf daher nicht im Fenster mit der Cygwin-Befehlszeile verwendet werden.
+**Einschränkung:** Die {{site.data.keyword.Bluemix_notm}}-CLI wird nicht von Cygwin unterstützt. Die {{site.data.keyword.Bluemix_notm}}-CLI darf daher nicht im Fenster mit der Cygwin-Befehlszeile verwendet werden.
 
 **Hinweis:** Wenn sich in Ihrem Netz zwischen dem Host, auf dem die CLI ausgeführt wird, und {{site.data.keyword.Bluemix_notm}} ein HTTP-Proxy-Server befindet, müssen Sie den Hostnamen oder die IP-Adresse des Proxy-Servers in der Umgebungsvariable HTTP_PROXY angeben.
 
-## {{site.data.keyword.Bluemix_notm}} CLI installieren
+## {{site.data.keyword.Bluemix_notm}}-CLI installieren
 {: #install_bluemix_cli}
 
-Vor der Installation der {{site.data.keyword.Bluemix_notm}} CLI müssen Sie sicherstellen, dass die Cloud Foundry-Befehlszeilenschnittstelle auf Ihrem System installiert ist.
+Installieren Sie vor der Installation der {{site.data.keyword.Bluemix_notm}}-CLI die [CF-CLI![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}.
 
-Laden Sie unter Mac OS und Windows das [{{site.data.keyword.Bluemix_notm}} CLI-Paket](/docs/cli/index.html#downloads) herunter und führen Sie anschließend das Installationsprogramm aus.
+Laden Sie unter Mac OS und Windows das [{{site.data.keyword.Bluemix_notm}}-CLI-Paket](/docs/cli/index.html#downloads) herunter und führen Sie anschließend das Installationsprogramm aus.
 
 Führen Sie unter Linux die folgenden Schritte aus:
 
@@ -58,12 +58,12 @@ Führen Sie unter Linux die folgenden Schritte aus:
   ~/Bluemix_CLI#
   ```
 
-Sie können nun beginnen, mit der {{site.data.keyword.Bluemix_notm}} CLI zu arbeiten, oder weitere Plug-ins installieren.
+Sie können nun mit der Verwendung der {{site.data.keyword.Bluemix_notm}}-CLI beginnen oder weitere Plug-ins installieren.
 
 ## Plug-ins installieren
 {: #install_plug-in}
 
-Wie die Cloud Foundry CLI unterstützt auch die {{site.data.keyword.Bluemix_notm}} CLI ein Plug-in-Erweiterungsframework, mit dem neben den integrierten Befehlen weitere Befehle integriert werden können.
+Wie die Cloud Foundry-CLI unterstützt auch die {{site.data.keyword.Bluemix_notm}}-CLI ein Plug-in-Erweiterungsframework, mit dem über die bereits Befehle hinaus weitere Befehle integriert werden können. 
 
 Führen Sie die folgenden Schritte aus, um in Ihrer lokalen Umgebung ein Plug-in zu installieren:
 
@@ -114,14 +114,14 @@ Führen Sie die folgenden Schritte aus, um die Installation von einem fernen Ser
   ~$
   ```
 
-Sie können ein Plug-in auch über das Repository installieren. {{site.data.keyword.Bluemix_notm}} enthält Repositorys, in denen Plug-ins für die {{site.data.keyword.Bluemix_notm}} CLI und die Cloud Foundry CLI gehostet werden:
+Sie können ein Plug-in auch über das Repository installieren. {{site.data.keyword.Bluemix_notm}} enthält Repositorys, in denen Plug-ins für die {{site.data.keyword.Bluemix_notm}}-CLI und die Cloud Foundry-CLI gehostet werden:
 
-  * [Plug-in-Repository die für Cloud Foundry CLI ](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){: new_window} ![Symbol für externen Link](../../../icons/launch-glyph.svg) - Diese Komponente hostet Plug-ins für die Cloud Foundry CLI.
-  * [Plug-in-Repository für die {{site.data.keyword.Bluemix_notm}} CLI](http://clis.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window} ![Symbol für externen Link](../../../icons/launch-glyph.svg) - Diese Komponente hostet Plug-ins speziell für die {{site.data.keyword.Bluemix_notm}} CLI. 
+  * [Plug-in-Repository die für Cloud Foundry-CLI ](http://clis.ng.bluemix.net/ui/repository.html#cf-plugins){: new_window} ![Symbol für externen Link](../../../icons/launch-glyph.svg) - Diese Komponente hostet Plug-ins für die Cloud Foundry-CLI.
+  * [Plug-in-Repository für die {{site.data.keyword.Bluemix_notm}}-CLI](http://clis.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window} ![Symbol für externen Link](../../../icons/launch-glyph.svg) - Diese Komponente hostet Plug-ins speziell für die {{site.data.keyword.Bluemix_notm}}-CLI.
 
 Führen Sie die folgenden Schritte aus, um die Installation vom Repository aus durchzuführen:
 
-  1. Suchen Sie das Plug-in im Repository. Nach der Installation der {{site.data.keyword.Bluemix_notm}} CLI wird standardmäßig das offizielle Repository `Bluemix` hinzugefügt. Sie können die Plug-ins im Repository `Bluemix` mit dem Befehl `bluemix plugin repo-plugins` auflisten. Beispiel:
+  1. Suchen Sie das Plug-in im Repository. Nach der Installation der {{site.data.keyword.Bluemix_notm}}-CLI wird standardmäßig das offizielle Repository `Bluemix` hinzugefügt. Sie können die Plug-ins im Repository `Bluemix` mit dem Befehl `bluemix plugin repo-plugins` auflisten. Beispiel:
 
   ```
   ~$ bluemix plugin repo-plugins -r Bluemix
@@ -135,7 +135,7 @@ Führen Sie die folgenden Schritte aus, um die Installation vom Repository aus d
   ~$
   ```
 
-  2. Installieren Sie anschließend das Plug-in über das Repository `Bluemix`. Verwenden Sie hierfür den Befehl `bluemix plugin install`. Beispiel:
+  2. Installieren Sie das Plug-in über das `Bluemix`-Repository mit dem Befehl `bluemix plugin install`. Beispiel:
 
   ```
   ~$ bluemix plugin install auto-scaling -r Bluemix
@@ -147,10 +147,10 @@ Führen Sie die folgenden Schritte aus, um die Installation vom Repository aus d
   ~$
   ```
 
-## Bei der {{site.data.keyword.Bluemix_notm}} CLI anmelden
+## Bei der {{site.data.keyword.Bluemix_notm}}-CLI anmelden
 {: #log_bmcli}
 
-Nach der Installation der {{site.data.keyword.Bluemix_notm}} CLI können Sie sich mit Ihrem {{site.data.keyword.Bluemix_notm}}-Benutzernamen und dem entsprechenden Kennwort bei {{site.data.keyword.Bluemix_notm}} anmelden. Beispiel:
+Nach der Installation der {{site.data.keyword.Bluemix_notm}}-CLI können Sie sich Ihrer IBMid und Ihrem Kennwort bei {{site.data.keyword.Bluemix_notm}} anmelden. Beispiel:
 
 ```
 ~$ bluemix login -a https://api.ng.bluemix.net
@@ -1001,8 +1001,8 @@ Einladung erneut an einen Benutzer senden (Organisationsmanager oder Kontoeigner
 ```
  bluemix iam account-user-reinvite USER_EMAIL ORG_NAME
 ```
- 
- 
+
+
 ### bluemix iam org-users
 {: #bluemix_iam_org_users}
 
@@ -1586,7 +1586,7 @@ bluemix network route-map CF_APP_NAME|CONTAINER_GROUP_NAME  DOMAIN  [-n HOST
    <dt>CF_APP_NAME|CONTAINER_GROUP_NAME (erforderlich)</dt>
    <dd>Der Name der cf-Anwendung oder -Containergruppe für die Zuordnung der Route.</dd>
    <dt>DOMAIN (erforderlich)</dt>
-   <dd>Die Domäne der Route. Beispiele: mychinabluemix.net oder chinabluemix.net.</dd>
+   <dd>Die Domäne der Route. Beispiele: mychinabluemix.net oder chinabluemix.net. </dd>
    <dt>-n <i>HOST_NAME</i> (optional)</dt>
    <dd>Der Hostname der Route. Wenn der Hostname nicht angegeben wird, wird standardmäßig der Anwendungsname oder der Containergruppenname festgelegt.</dd>
    </dl>

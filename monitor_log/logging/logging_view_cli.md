@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-02-16"
+lastupdated: "2017-03-01"
 
 ---
 
@@ -13,11 +13,21 @@ lastupdated: "2017-02-16"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Analyzing CF app logs from the CLI
+# Analyzing logs from the CLI
 {: #analyzing_logs_cli}
 
-In {{site.data.keyword.Bluemix}}, you can view, filter, and analyze logs through the command line interface by using the **cf logs** command. Use the command line to manage logs programmatically. 
+In {{site.data.keyword.Bluemix}}, you can view, filter, and analyze logs through the command line interface. Use the command line to manage logs programmatically. 
 {:shortdesc}
+
+To analyze Cloud Foundry (CF) application logs, use the following command: `cf logs`
+For more information, see [Analyzing CF app logs from the CLI](logging_view_cli.html#analyzing_cf_logs_cli).
+
+To analyze Docker container logs, use the following command: `cf ic logs`
+For more information, see [Analyzing Docker container logs from the CLI](logging_view_cli.html#analyzing_container_logs_cli).
+
+
+## Analyzing CF app logs from the CLI
+{: #analyzing_cf_logs_cli}
 
 Use the **cf logs** command to display logs from a Cloud Foundry app and from the system components that interact with it when you deploy the app in {{site.data.keyword.Bluemix_notm}}. The **cf logs** command displays the STDOUT and STDERR log streams of a Cloud Foundry application.
 
@@ -27,6 +37,16 @@ To view logs that you are interested in or exclude the content that you don't wa
 * To view the most recent log records for a Cloud Foundry app, see [Viewing the latest log entries for a Cloud Foundry app](logging_view_cli.html#tailing_log_cli).
 * To view the log records for a Cloud Foundry app in a specific time range, see [Viewing a section of the logs](logging_view_cli.html#partial_log_cli).
 * To view entries in the logs for a Cloud Foundry app that contain specific keywords, see [Viewing log entries that contain certain keywords](logging_view_cli.html#partial_by_keyword_log_cli).
+
+
+## Analyzing Docker container logs from the CLI
+{: #analyzing_container_logs_cli}
+
+Use the `cf ic logs` command to display logs from a container in {{site.data.keyword.Bluemix_notm}}. For example, you can use the logs to analyze why a container has stopped or for reviewing the container output. 
+
+To see application errors for the app that runs in a container through the `cf ic logs` command, the application must write its logs to the standard output (STDOUT) and standard error (STDERR) output streams. If you design your application to write to these standard output streams, you can view the logs via the command line even if the container shuts down or crashes.
+
+For more information about the `cf ic logs` command, see [cf ic logs command](/docs/containers/container_cli_reference_cfic.html#container_cli_reference_cfic__logs).
 
 
 ## Viewing the log for a Cloud Foundry app
@@ -94,31 +114,23 @@ For more information about the **grep** option, type **grep --help**.
 
 The following logs are available for a Cloud Foundry application after you deploy it in {{site.data.keyword.Bluemix}}:
 
-<dl><dt><strong>buildpack.log</strong></dt>
-<dd>
-<p>This log file records fine-grained informational events for
-debugging. You can  use this log to troubleshoot buildpack execution
-problems.</p>
+**buildpack.log**
 
-<p>To generate data to the <span class="ph filepath">buildpack.log</span> file, you must enable buildpack tracing by using the following command:</p>
+This log file records fine-grained informational events for debugging. You can  use this log to troubleshoot buildpack execution problems.
 
-   <pre class="pre">cf set-env <var class="keyword varname">appname</var> JBP_LOG_LEVEL DEBUG</pre>
+To generate data to the *buildpack.log* file, you must enable buildpack tracing by using the following command: `cf set-env appname JBP_LOG_LEVEL DEBUG`
    
-<p>To view this log, enter the following command:</p>
+To view this log, enter the following command: `cf files appname app/.buildpack-diagnostics/buildpack.log`
 
-    <pre class="pre">cf files <var class="keyword varname">appname</var> app/.buildpack-diagnostics/buildpack.log</pre>
 
-</dd>
+**staging_task.log**
 
-<dt><strong>staging_task.log</strong></dt>
-<dd><p>This log file records messages after the major steps of the
-staging task. You can use this log to troubleshoot staging problems.</p>
+This log file records messages after the major steps of the staging task. You can use this log to troubleshoot staging problems.
 
-<p>To view this log, enter the following command:</p>
+To view this log, enter the following command: `cf files appname logs/staging_task.log`
 
-    <pre class="pre">cf files <var class="keyword varname">appname</var> logs/staging_task.log</pre>
-</dd>
-</dl>
 
 **Note:** For information about how to enable application logging, see [Debugging runtime errors](/docs/debug/index.html#debugging-runtime-errors).
+
+
 

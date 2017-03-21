@@ -12,14 +12,14 @@ lastupdated: "2016-08-25"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#Atualizando apps
+# Atualizando apps
 {: #updatingapps}
 
 
 É possível usar o comando cf push ou o {{site.data.keyword.Bluemix}} DevOps Services para atualizar os aplicativos no {{site.data.keyword.Bluemix_notm}}. Em muitos casos, mesmo para os buildpacks integrados, como o Node.js, deve-se também fornecer um parâmetro -c para especificar qual comando será usado para iniciar seu aplicativo.
 {:shortdesc}
 
-##Criando e usando um domínio customizado
+## Criando e usando um domínio customizado
 {: #domain}
 
 Para aplicativos CF e grupos de contêiner, é possível usar um domínio customizado na URL de seu aplicativo, em vez do domínio de sistema padrão do {{site.data.keyword.Bluemix_notm}} que é
@@ -148,7 +148,7 @@ aplicativo no
 atualizar o aplicativo para uma nova versão, poderá usar qualquer uma das duas abordagens
 a seguir para assegurar a implementação azul/verde.
 
-###Exemplo: usando o comando cf rename
+### Exemplo: usando o comando cf rename
 
 Neste exemplo, o nome do aplicativo é Blue. O exemplo
 demonstra como atualizar a versão de *Blue* usando o comando **cf
@@ -219,7 +219,7 @@ pronta. Envie por push o app *Blue* atualizado para o {{site.data.keyword.Bluemi
 
   **Resultado:** o app *Blue* está respondendo à URL `Blue.mybluemix.net`.
 
-###Exemplo: usando o comando cf map-route
+### Exemplo: usando o comando cf map-route
 
 Neste exemplo, *Blue* é o aplicativo implementado
 anteriormente e *Green* é a versão atualizada. Esse exemplo demonstra
@@ -325,7 +325,7 @@ a URL `Blue.mybluemix.net`.
 
 
 # Links Relacionados
-{: #rellinks}
+{: #rellinks notoc}
 
 ## Links Relacionados
 {: #general}

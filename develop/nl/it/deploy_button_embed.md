@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-29"
+  years: 2015, 2017
+lastupdated: "2017-2-21"
 
 ---
 
@@ -39,19 +39,18 @@ procedi alla creazione di un account di prova.
 ##Esempi del flusso iFrame {: #iframe-example}
 
 <p>
-L'<a class="xref" href="http://d2bm-iframe-sample.ng.bluemix.net/" target="_blank" title="(Si apre in una nuova scheda o finestra)">IBM
-Bluemix D2BM iFrame Sample</a> fornisce un esempio di flusso iFrame
-per un repository Git pubblico.<div class="image"><img class="image" src="images/d2bm_iframe_sample2.png" alt="Esempio di flusso iFrame Distribuisci a Bluemix" /></div>
+<a class="xref" href="http://d2bm-iframe-sample.ng.bluemix.net/" target="_blank" title="(Si apre in una nuova scheda o finestra)">IBM
+Bluemix D2BM iFrame Sample<img class="image" src="../icons/launch-glyph.svg" alt="icona link esterno"/></a> fornisce un esempio di flusso iFrame per un repository Git pubblico.<div class="image"><img class="image" src="images/d2bm_iframe_sample2.png" alt="Esempio di flusso iFrame Distribuisci a Bluemix" /></div>
 </p>
 
 <p>
-Per visualizzare l'origine per questo esempio, fai clic su <a class="xref" href="https://hub.jazz.net/project/idsorg/d2bm-iframe-sample/overview" target="_blank" title="(Si apre in una nuova scheda o finestra)">origine</a>.
+Per visualizzare l'origine per questo esempio, fai clic su <a class="xref" href="https://hub.jazz.net/project/idsorg/d2bm-iframe-sample/overview" target="_blank" title="(Si apre in una nuova scheda o finestra)">origine<img class="image" src="../icons/launch-glyph.svg" alt="icona link esterno"/></a>.
 </p>
 
 ##Incorporazione del flusso iFrame {: #embed-iframe}  
 
 <ol>
-<li>Carica il programma di utilità JavaScript da <a href="https://bluemix.net/deploy/embed.js" target="_blank">https://bluemix.net/deploy/embed.js</a>. Questo programma di utilità dipende da jQuery e viene caricato aggiungendo la seguente tag di script al tuo documento:
+<li>Carica il programma di utilità JavaScript da <a class="xref" href="https://bluemix.net/deploy/embed.js" target="_blank" title="(Si apre in una nuova scheda o finestra)">https://bluemix.net/deploy/embed.js<img class="image" src="../icons/launch-glyph.svg" alt="icona link esterno"/></a>. Questo programma di utilità dipende da jQuery e viene caricato aggiungendo la seguente tag di script al tuo documento:
 <pre class="pre">
 <code>&lt;script type="text/javascript" src="https://bluemix.net/deploy/embed.js"&gt;&lt;/script&gt;</code>
 </pre>

@@ -2,13 +2,12 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-03-17"
 
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
 

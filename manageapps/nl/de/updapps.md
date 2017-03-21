@@ -12,14 +12,14 @@ lastupdated: "2016-08-25"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#Apps aktualisieren
+# Apps aktualisieren
 {: #updatingapps}
 
 
 Sie können den Befehl 'cf push' oder {{site.data.keyword.Bluemix}} DevOps Services verwenden, um die Anwendungen in {{site.data.keyword.Bluemix_notm}} zu aktualisieren. In vielen Fällen müssen Sie (selbst für die integrierten Buildpacks wie beispielsweise 'Node.js') auch den Parameter '-c' verwenden, um anzugeben, welcher Befehl zum Starten Ihrer Anwendung verwendet wird.
 {:shortdesc}
 
-##Angepasste Domäne erstellen und verwenden
+## Angepasste Domäne erstellen und verwenden
 {: #domain}
 
 Sie können für CF-Apps und Containergruppen in der URL Ihrer Anwendung eine angepasste Domäne anstelle der standardmäßigen {{site.data.keyword.Bluemix_notm}}-Systemdomäne (mybluemix.net) verwenden.
@@ -137,7 +137,7 @@ für {{site.data.keyword.Bluemix_notm}} bereitgestellt haben und
 diese Anwendung auf eine neue Version aktualisieren wollen, können Sie eine der folgenden beiden Methoden verwenden,
 um eine Blue-Green-Bereitstellung sicherzustellen.
 
-###Beispiel: Befehl 'cf rename' verwenden
+### Beispiel: Befehl 'cf rename' verwenden
 
 In diesem Beispiel lautet der Name der Anwendung 'Blue'. Das Beispiel veranschaulicht, wie die Version von *Blue* mithilfe des Befehls
 **cf rename** aktualisiert wird, ohne den Datenverkehr zu der Anwendung zu unterbrechen. Optional kann die dann alte Version von
@@ -209,7 +209,7 @@ delete**.
 
   **Ergebnis:** Die App *Blue* antwortet an die URL `Blue.mybluemix.net`.
 
-###Beispiel: Befehl 'cf map-route' verwenden
+### Beispiel: Befehl 'cf map-route' verwenden
 
 In diesem Beispiel ist *Blue* die zuvor bereitgestellte Anwendung, und
 *Green* ist die aktualisierte Version. Dieses Beispiel veranschaulicht, wie die Version von *Blue* mithilfe des Befehls
@@ -316,7 +316,7 @@ delete`.
 
 
 # Zugehörige Links
-{: #rellinks}
+{: #rellinks notoc}
 
 ## Zugehörige Links
 {: #general}

@@ -13,7 +13,7 @@ lastupdated: "2016-03-15"
 
 {:shortdesc: .shortdesc}
 
-#  Bluemix 基礎架構層
+# Bluemix 基礎架構層
 
 
 

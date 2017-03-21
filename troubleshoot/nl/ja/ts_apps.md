@@ -452,7 +452,7 @@ cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/nul
 
 ```
 cf push appname -p app_path
-  ```
+```
 さらに、停止、例外、接続障害といった問題を見つけて、そのような問題から復旧するようにアプリをコーディングすることもできます。  
 
 ## アプリケーションがプッシュされたときにユーザー定義変数が失われる
@@ -503,7 +503,7 @@ DevOps Services Web IDE で Node.js アプリを編集するときは、{{site.d
   * アプリがサブディレクトリーに格納されている場合は、そのサブディレクトリーのパスを `manifest.yml` ファイルに指定します。
 
   ```
-path: path_to_application
+   path: path_to_application
    ```
   * アプリと同じディレクトリーに `package.json` ファイルを作成します。
 
@@ -611,8 +611,7 @@ Eclipse ツールを使用してアプリケーションを {{site.data.keyword.
     ```
     host: host_name	
 	```
-  * コマンド・プロンプトからアプリケーションをデプロイする場合は、`cf
-push` コマンドを **-n** オプションで使用します。 
+  * コマンド・プロンプトからアプリケーションをデプロイする場合は、`cf push` コマンドを **-n** オプションで使用します。 
     ```
     cf push appname -p app_path -n host_name
     ```
@@ -725,7 +724,7 @@ Node.js アプリを更新する際、または Node.js アプリを {{site.data
 		{
       ...
   	   "scripts": {
-"start": "node app.js"
+	 		 "start": "node app.js"
  	   }
 	}
 	    ```
@@ -1052,7 +1051,7 @@ Eclipse Orion {{site.data.keyword.webide}} に実行バーが見つからない�
 アカウントを再アクティブ化するには、[{{site.data.keyword.Bluemix_notm}} サポート ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window} にお問い合わせください。E メールには、以下の情報を含めてください。
 {: tsResolve}
 
-  * {{site.data.keyword.Bluemix_notm}} へのログインに使用している IBMid。
+  * {{site.data.keyword.Bluemix_notm}} へのログインに使用している IBM ID。
   * アプリを作成している組織の名前。この情報は、サポート・チームが、組織内の正しい役割またはメンバーシップがユーザーに割り当てられているかどうかを判別するのに役立ちます。
 
 
@@ -1203,11 +1202,11 @@ rm -rfv $2/*
   ```
   3. 以下のコマンドを使用して、キャッシュを削除するように変更されたヌル・ビルドパックでアプリをプッシュします。このステップを完了すると、アプリのキャッシュ・ディレクトリー内にあるすべてのコンテンツが削除されます。
   ```
-cf push appname -p app_path -b <modified_null_buildpack>
+  cf push appname -p app_path -b <modified_null_buildpack>
   ```
   4. 以下のコマンドを使用して、希望する最新のビルドパックでアプリをプッシュします。 
   ```
-cf push appname -p app_path -b <latest_buildpack>
+  cf push appname -p app_path -b <latest_buildpack>
   ```
   
 	

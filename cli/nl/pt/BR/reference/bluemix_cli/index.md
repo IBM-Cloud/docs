@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-01-24"
+lastupdated: "2017-02-16"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2017-01-24"
 # Introdução ao {{site.data.keyword.Bluemix_notm}} CLI
 {: #getting-started}
 
-O {{site.data.keyword.Bluemix_notm}} CLI fornece uma maneira unificada para você interagir com seus aplicativos, servidores virtuais, contêineres e outros serviços no {{site.data.keyword.Bluemix_notm}} usando uma interface da linha de comandos. O {{site.data.keyword.Bluemix_notm}} CLI também integra ferramentas da comunidade, como o Cloud Foundry CLI, a CLI do Docker e a CLI do OpenStack, além de inicializar as configurações de ambiente para você interagir com diferentes tipos de cálculo.
+O {{site.data.keyword.Bluemix_notm}} CLI fornece uma maneira unificada para você interagir com seus aplicativos, servidores virtuais, contêineres e outros serviços usando uma interface da linha de comandos. O {{site.data.keyword.Bluemix_notm}} CLI também integra ferramentas da comunidade, como o Cloud Foundry CLI, a CLI do Docker e a CLI do OpenStack, além de inicializar as configurações de ambiente para você interagir com diferentes tipos de cálculo.
 
 **Restrição**: o {{site.data.keyword.Bluemix_notm}} CLI não é suportado por Cygwin, portanto, não use o {{site.data.keyword.Bluemix_notm}} CLI na janela de linha de comandos do Cygwin.
 
@@ -25,7 +25,7 @@ O {{site.data.keyword.Bluemix_notm}} CLI fornece uma maneira unificada para voc�
 ## Instalando o {{site.data.keyword.Bluemix_notm}} CLI
 {: #install_bluemix_cli}
 
-Antes de instalar o {{site.data.keyword.Bluemix_notm}} CLI, assegure-se de que o Cloud Foundry CLI esteja instalado no sistema.
+Antes de instalar o {{site.data.keyword.Bluemix_notm}} CLI, instale o [cf CLI ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}.
 
 Para Mac OS e Windows, faça download do
 [pacote de CLI do {{site.data.keyword.Bluemix_notm}}](/docs/cli/index.html#downloads) e execute o instalador.
@@ -61,12 +61,12 @@ exemplo:
   ~/Bluemix_CLI#
   ```
 
-Agora é possível iniciar o {{site.data.keyword.Bluemix_notm}} CLI ou instalar plug-ins adicionais.
+Agora é possível começar a usar o {{site.data.keyword.Bluemix_notm}} CLI ou instalar plug-ins adicionais.
 
 ## Instalando um plug-in
 {: #install_plug-in}
 
-Como o Cloud Foundry CLI, o {{site.data.keyword.Bluemix_notm}} CLI também suporta uma estrutura de extensão de plug-in para integrar outros comandos além dos integrados.
+Como o Cloud Foundry CLI, o {{site.data.keyword.Bluemix_notm}} CLI suporta uma estrutura de extensão de plug-in para integrar outros comandos além daqueles integrados.
 
 Para instalar um plug-in por meio de seu ambiente local, execute as etapas a seguir:
 
@@ -144,7 +144,7 @@ exemplo:
   ~$
   ```
 
-  2. Em seguida, instale o plug-in do repositório do `Bluemix` usando o comando `bluemix plugin install`. Por
+  2. Instale o plug-in do repositório `Bluemix` usando o comando `bluemix plugin install`. Por
 exemplo:
 
   ```
@@ -160,7 +160,7 @@ exemplo:
 ## Efetuando login no {{site.data.keyword.Bluemix_notm}} CLI
 {: #log_bmcli}
 
-Depois de ter instalado o {{site.data.keyword.Bluemix_notm}} CLI, será possível efetuar login no {{site.data.keyword.Bluemix_notm}} usando a conta e a senha do {{site.data.keyword.Bluemix_notm}}. Por
+Depois de instalar a CLI do {{site.data.keyword.Bluemix_notm}}, é possível efetuar login no {{site.data.keyword.Bluemix_notm}} usando o IBMid e a senha. Por
 exemplo:
 
 ```
@@ -1019,8 +1019,8 @@ Reenviar o convite a um usuário (é necessário ser o gerente da organização 
 ```
  bluemix iam account-user-reinvite USER_EMAIL ORG_NAME
 ```
- 
- 
+
+
 ### bluemix iam org-users
 {: #bluemix_iam_org_users}
 

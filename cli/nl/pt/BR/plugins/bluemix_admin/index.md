@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-01-12"
+lastupdated: "2017-02-20"
 
 ---
 
@@ -44,13 +44,12 @@ Conclua as etapas a seguir para incluir o repositório e instalar
 o plug-in:
 
 <ol>
-<li>Para incluir o repositório do plug-in Administrador do {{site.data.keyword.Bluemix_notm}}, execute o comando a seguir:<br/><br/> <code> cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cli </code><br/><br/>
-<dl class="parml">
-<dt class="pt dlterm">&lt;subdomain&gt;</dt>
-<dd class="pd">Subdomínio da URL da sua instância do {{site.data.keyword.Bluemix_notm}}. Por exemplo, <code>https://console.mycompany.bluemix.net/cli</code></dd>
-</dl>
+<li>Para incluir o repositório do plug-in de administrador do {{site.data.keyword.Bluemix_notm}}, execute o comando a seguir:<br/><br/>
+<code>
+cf add-plugin-repo BluemixAdmin http://plugins.ng.bluemix.net
+</code><br/><br/>
 </li>
-<li>Para instalar o plug-in da CLI do administrador do {{site.data.keyword.Bluemix_notm}}, execute o comando a seguir:<br/><br/>
+<li>Para instalar o plug-in da CLI do Administrador do {{site.data.keyword.Bluemix_notm}}, execute o comando a seguir:<br/><br/>
 <code>
 cf install-plugin BluemixAdminCLI -r BluemixAdmin
 </code>
@@ -85,7 +84,10 @@ Antes de poder usar o plug-in da CLI do Administrador, deverá conectar e efetua
 ainda não fez isso.
 
 <ol>
-<li>Para se conectar ao terminal da API do {{site.data.keyword.Bluemix_notm}}, execute o comando a seguir:<br/><br/> <code> cf ba api https://console.&lt;subdomain&gt;.bluemix.net </code>
+<li>Para conectar-se ao terminal da API do {{site.data.keyword.Bluemix_notm}}, execute o comando a seguir:<br/><br/>
+<code>
+cf ba api https://console.&lt;subdomain&gt;.bluemix.net
+</code>
 <dl class="parml">
 <dt class="pt dlterm">&lt;subdomain&gt;</dt>
 <dd class="pd">Subdomínio da URL da sua instância do {{site.data.keyword.Bluemix_notm}}.<br />
@@ -95,9 +97,9 @@ ainda não fez isso.
 administrativo para a URL correta. A URL é mostrada
 na seção Informações da API no campo **URL da API**.</p>
 </li>
-<li>Efetue login no {{site.data.keyword.Bluemix_notm}} com o
-seguinte comando:<br/><br/>
-<code> cf login
+<li>Efetue login no {{site.data.keyword.Bluemix_notm}} com o comando a seguir:<br/><br/>
+<code>
+cf login
 </code>
 </li>
 </ol>
@@ -112,7 +114,7 @@ Para incluir um usuário em seu ambiente do {{site.data.keyword.Bluemix_notm}} a
 registro do usuário de seu ambiente, use o comando a seguir:
 
 ```
-cf ba add-user <user_name> <organization>
+cf ba add-user <user_name> <organization> <first_name> <last_name>
 ```
 {: codeblock}
 
@@ -123,6 +125,10 @@ cf ba add-user <user_name> <organization>
 <dd class="pd">O nome do usuário no registro LDAP.</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">O nome ou GUID da organização do {{site.data.keyword.Bluemix_notm}} na qual incluir o usuário.</dd>
+<dt class="pt dlterm">&lt;first_name&gt;</dt>
+<dd class="pd">O nome do usuário a ser incluído na organização.</dd>
+<dt class="pt dlterm">&lt;last_name&gt;</dt>
+<dd class="pd">O sobrenome do usuário a ser incluído na organização.</dd>
 </dl>
 
 **Dica:** também é possível usar **ba au** como um alias para o nome do comando mais longo **ba add-user**.
@@ -238,7 +244,7 @@ do comando **ba disable-managers-add-users**.
 Para incluir uma organização, use o comando a seguir:
 
 ```
-cf ba create-organization <organization> <manager>
+cf ba create-org <organization> <manager>
 ```
 {: codeblock}
 
@@ -249,7 +255,8 @@ cf ba create-organization <organization> <manager>
 <dd class="pd">O nome do usuário do gerenciador para a organização.</dd>
 </dl>
 
-**Dica:** também é possível usar **ba co** como um alias para o nome do comando mais longo **ba create-organization**.
+**Dica:** também é possível usar **ba co** como um alias para o nome
+do comando mais longo **ba create-org**.
 
 ### Excluindo uma Organização
 {: #admin_delete_org}
@@ -257,7 +264,7 @@ cf ba create-organization <organization> <manager>
 Para excluir uma organização, use o comando a seguir:
 
 ```
-cf ba delete-organization <organization>
+cf ba delete-org <organization>
 ```
 {: codeblock}
 
@@ -266,7 +273,8 @@ cf ba delete-organization <organization>
 <dd class="pd">O nome ou o GUID da organização {{site.data.keyword.Bluemix_notm}} a ser excluída.</dd>
 </dl>
 
-**Dica:** também é possível usar **ba do** como um alias para o nome do comando mais longo **ba delete-organization**.
+**Dica:** também é possível usar **ba do** como um alias para o nome
+do comando mais longo **ba delete-org**.
 
 ### Designando um usuário a uma organização
 {: #admin_ass_user_org}
@@ -438,6 +446,105 @@ O arquivo JSON deve ter o formato mostrado no exemplo a seguir:
 
 **Dica:** também é possível usar **ba scq** como um alias para o nome mais longo
 do comando **bluemix-admin set-containers-quota**.
+
+## Administrando Espaços
+{: #admin_spaces}
+
+### Incluindo um espaço na organização
+
+Para incluir um espaço na organização, use o comando a seguir:
+
+```
+cf bluemix-admin create-space <organization> <space_name>
+```
+
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">O nome ou GUID da organização na qual o espaço deve ser incluído.</dd>
+<dt class="pt dlterm">&lt;space_name&gt;</dt>
+<dd class="pd">O nome do espaço que deve ser criado na organização.</dd>
+</dl>
+
+**Dica:** também é possível usar **ba cs** como um alias para o nome
+do comando mais longo **ba create-space**.
+
+### Excluindo um espaço da organização
+
+Para remover um espaço da organização, use o comando a seguir:
+
+```
+cf bluemix-admin delete-space <organization> <space_name>
+```
+
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">O nome ou GUID da organização da qual o espaço deve ser removido.</dd>
+<dt class="pt dlterm">&lt;space_name&gt;</dt>
+<dd class="pd">O nome do espaço que deve ser removido da organização.</dd>
+</dl>
+
+**Dica:** também é possível usar **ba cs** como um alias para o nome
+do comando mais longo **ba delete-space**.
+
+### Incluindo um usuário em um espaço com uma função
+
+Para criar um usuário em um espaço com uma função especificada, use o comando a seguir:
+
+```
+cf bluemix-admin set-space <organization> <space_name> <user_name> <role>
+```
+
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">O nome ou GUID da organização na qual o usuário deve ser incluído.</dd>
+<dt class="pt dlterm">&lt;space_name&gt;</dt>
+<dd class="pd">O nome do espaço no qual o usuário deve ser incluído.</dd>
+<dt class="pt dlterm">&lt;user_anme&gt;</dt>
+<dd class="pd">O nome do usuário que deve ser incluído.</dd>
+<dt class="pt dlterm">&lt;role&gt;</dt>
+<dd class="pd">A função do usuário que deve ser designada. O valor pode ser Gerenciador, Desenvolvedor ou Auditor. Veja [Designando funções](/docs/admin/users_roles.html) para
+funções de usuário e descrições
+do {{site.data.keyword.Bluemix_notm}} em um espaço.</dd>
+</dl>
+
+**Dica:** também é possível usar **ba ss** como um alias para o nome
+do comando mais longo **ba set-space**.
+
+
+### Removendo a função de um usuário em um espaço 
+
+Para remover a função de um usuário em um espaço, use o comando a seguir:
+
+```
+cf bluemix-admin unset-space <organization> <space_name> <user_name> <role>
+```
+
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">O nome ou GUID da organização na qual o usuário deve ser incluído.</dd>
+<dt class="pt dlterm">&lt;space_name&gt;</dt>
+<dd class="pd">O nome do espaço no qual o usuário deve ser incluído.</dd>
+<dt class="pt dlterm">&lt;user_anme&gt;</dt>
+<dd class="pd">O nome do usuário que deve ser incluído.</dd>
+<dt class="pt dlterm">&lt;role&gt;</dt>
+<dd class="pd">A função do usuário que deve ser designada. O valor pode ser Gerenciador, Desenvolvedor ou Auditor. Veja [Designando funções](/docs/admin/users_roles.html) para
+funções de usuário e descrições
+do {{site.data.keyword.Bluemix_notm}} em um espaço.</dd>
+</dl>
+
+**Dica:** também é possível usar **ba us** como um alias para o nome
+do comando mais longo **ba unset-space**.
+
+## Administrando o catálogo
+{: #admin_catalog}
 
 ### Ativando serviços para todas as organizações
 {: #admin_ena_service_org}
@@ -621,17 +728,13 @@ cf ba delete-report <category> <date> <name>
 Para recuperar um relatório de segurança, use o comando a seguir:
 
 ```
-cf ba retrieve-report <category> <date> <name>
+cf ba retrieve-report <search>
 ```
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;category&gt;</dt>
-<dd class="pd">A categoria para o relatório. Se houver um espaço no nome, use as aspas em torno do nome.</dd>
-<dt class="pt dlterm">&lt;date&gt;</dt>
-<dd class="pd">A data do relatório no formato <samp class="ph codeph">YYYYMMDD</samp>.</dd>
-<dt class="pt dlterm">&lt;name&gt;</dt>
-<dd class="pd">O nome do relatório.</dd>
+<dt class="pt dlterm">&lt;search&gt;</dt>
+<dd class="pd">O nome do arquivo do relatório. Se houver um espaço no nome, use as aspas em torno do nome.</dd>
 </dl>
 
 **Dica:** também é possível usar **ba rr** como um alias para o nome do comando mais longo **ba retrieve-report**.
@@ -639,7 +742,7 @@ cf ba retrieve-report <category> <date> <name>
 ## Visualizando informações de métrica de recurso
 {: #cliresourceusage}
 
-É possível visualizar informações de métrica de recurso, incluindo memória, disco e uso de CPU. É possível ver um resumo dos recursos físicos e reservados disponíveis, bem como o uso de recursos físicos e reservados. Também é possível ver os dados de uso, a memória histórica e o uso de disco dos Droplet Execution Agents (DEAs). Os dados históricos para uso de memória e disco são exibidos semanalmente e em ordem decrescente, por padrão. Para visualizar as informações de métrica de recurso, use o comando a seguir:
+É possível visualizar informações de métrica de recurso, incluindo memória, disco e uso de CPU. É possível ver um resumo dos recursos físicos e reservados disponíveis, bem como o uso de recursos físicos e reservados. Também é possível ver dados de uso de Droplet Execution Agents (DEAs) e células e uso histórico de memória e disco. Os dados históricos para uso de memória e disco são exibidos semanalmente e em ordem decrescente, por padrão. Para visualizar as informações de métrica de recurso, use o comando a seguir:
 
 ```
 cf ba resource-metrics <monthly> <weekly>

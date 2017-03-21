@@ -33,7 +33,7 @@ You must have:
 * Your application route. This is the URL of your back-end application.
 * Your `tenantId` value. Open your {{site.data.keyword.amashort}} service dashboard. Click **Mobile Options**. The `tenantId` (also known as `appGUID`)  value is displayed in the **App GUID / TenantId** field. You will need these values for intializing the SDK and for sending requests to the back-end service.
 *  Find the region where your {{site.data.keyword.Bluemix_notm}} service is hosted. You can find your current {{site.data.keyword.Bluemix_notm}} region in the header, next to the **Avatar** icon ![Avatar icon](images/face.jpg "Avatar icon")  in the menu bar. The region value should be one of the following: **US South**, **Sydney**, or **UK**. The exact SDK constant values that correspond to these names are indicated in the code examples.
-* A Facebook application and App ID. For more information, see [Obtaining a Facebook App ID from the Facebook Developer Portal](facebook-auth-overview.html#facebook-appID).
+* A Facebook application and App ID. For more information, see [Creating an application on the Facebook for Developers website](facebook-auth-overview.html#facebook-appID).
 
 
 

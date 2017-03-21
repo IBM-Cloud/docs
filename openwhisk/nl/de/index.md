@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-09-09"
+lastupdated: "2016-02-21"
 
 ---
 
@@ -15,14 +15,20 @@ lastupdated: "2016-09-09"
 # Einführung in {{site.data.keyword.openwhisk_short}}
 
 
-{{site.data.keyword.openwhisk}} ist ein verteilter, ereignisgesteuerter Berechnungsservice (auch serverunabhängiges Computing oder Function as a Service (FaaS)). {{site.data.keyword.openwhisk_short}} führt Code in Reaktion auf Ereignisse oder direkte Aufrufe über das Web oder mobile Apps über HTTP aus. Ereignisse können von Bluemix-Services wie Cloudant und von externen Quellen bereitgestellt werden. Entwickler können sich auf das Schreiben von Anwendungslogik sowie auf das Erstellen von Aktionen, die auf Anforderung ausgeführt werden, konzentrieren. Die Rate der Ausführung von Aktionen entspricht immer der Ereignisrate, sodass sich eine inhärente Skalierung und Ausfallsicherheit sowie eine optimale Auslastung ergeben. Sie bezahlen nur für das, was Sie nutzen, und Sie brauchen keinen Server zu verwalten. Sie können darüber hinaus den [Quellcode](https://github.com/openwhisk/openwhisk) erhalten und das System selbst ausführen.
+{{site.data.keyword.openwhisk}} ist ein verteilter, ereignisgesteuerter Berechnungsservice (auch serverunabhängiges Computing oder Function as a Service (FaaS)). {{site.data.keyword.openwhisk_short}} führt Code in Reaktion auf Ereignisse oder direkte Aufrufe über das Web oder mobile Apps über HTTP aus. Ereignisse können von Bluemix-Services wie Cloudant und von externen Quellen bereitgestellt werden. Entwickler können sich auf das Schreiben von Anwendungslogik sowie auf das Erstellen von Aktionen, die auf Anforderung ausgeführt werden, konzentrieren.
+Die Vorteile dieses neuen Konzepts bestehen darin, dass Sie nicht explizit Server bereitstellen und sich nicht um automatische Skalierung oder um hohe Verfügbarkeit, Aktualisierungen und Wartungen zu kümmern brauchen oder Stunden an Prozessorzeit bezahlen, während deren Ihr Server zwar aktiv ist, jedoch keine Anforderungen verarbeitet.
+Ihr Code wird immer dann ausgeführt, wenn ein HTTP-Aufruf, eine Änderung eines Datenbankstatus oder ein anderer Typ von Ereignis eingeht, der die Ausführung Ihres Codes auslöst.
+Die Ausführungszeit wird Ihnen in Millisekunden (aufgerundet auf die nächsten 100ms) in Rechnung gestellt und nicht pro Stunde VM-Nutzung und völlig ungeachtet dessen, ob VM nützliche Operationen ausgeführt hat oder nicht, berechnet.
 {: shortdesc}
+
+Dieses Programmiermodell ist eine perfekte Anpassung an Microservices, mobile Apps, IoT-Apps und viele andere Apps – Sie erhalten sofort nutzbare Auto-Scaling- und Lastverteilungsfunktionen, ohne Cluster, Lastverteilungsfunktionen, HTTP-Plug-ins usw. manuell konfigurieren zu müssen. Wenn Sie dann auch noch in {{site.data.keyword.openwhisk}} arbeiten, haben Sie außerdem den Vorteil, keinen Verwaltungsaufwand treiben zu müssen, da sämtliche Hardware, Netzfunktionalität und Software von IBM gewartet wird. Sie müssen nur noch den Code bereitstellen, den Sie ausführen wollen, und an {{site.data.keyword.openwhisk}} übergeben. Der Rest geht wie von selbst. Eine gute Einführung in das serverunabhängige Programmiermodell finden Sie im [Blog von Martin Fowler](https://martinfowler.com/articles/serverless.html).
+
+Sie können auch den [Apache OpenWHisk-Quellcode](https://github.com/openwhisk/openwhisk) erhalten und das System selbst ausführen.
 
 Weitere Einzelheiten zur Funktionsweise von {{site.data.keyword.openwhisk_short}} finden Sie unter [Informationen zu {{site.data.keyword.openwhisk_short}}](./openwhisk_about.html).
 
 Sie können den Browser oder die CLI (Command-Line Interface) verwenden, um Ihre {{site.data.keyword.openwhisk_short}}-Anwendungen zu entwickeln.
 Beide Komponenten haben ein ähnliches Leistungsspektrum in Hinblick auf die Entwicklung von Anwendungen. Die CLI bietet ein höheres Maß an Kontrolle über die Bereitstellung und die Operationen.
-
 
 ## Im eigenen Browser entwickeln
 {: #openwhisk_start_editor}
@@ -30,47 +36,39 @@ Beide Komponenten haben ein ähnliches Leistungsspektrum in Hinblick auf die Ent
 Testen Sie {{site.data.keyword.openwhisk_short}} in Ihrem [Browser](https://console.{DomainName}/openwhisk/editor){: new_window}, um Aktionen zu erstellen, Aktionen mit Auslösern zu automatisieren und öffentliche Pakete zu untersuchen. 
 Besuchen Sie die Seite [Weitere Informationen](https://console.{DomainName}/openwhisk/learn){: new_window}, auf der Sie eine Schnelleinführung zur OpenWhisk-Benutzerschnittstelle finden.
 
-## {{site.data.keyword.openwhisk_short}}-CLI einrichten
+## Über die CLI entwickeln
 {: #openwhisk_start_configure_cli}
 
 Sie können Ihren Namensbereich und Ihren Berechtigungsschlüssel über die {{site.data.keyword.openwhisk_short}}-Befehlszeilenschnittstelle (CLI) einrichten.
 Navigieren Sie zu [CLI konfigurieren](https://new-console.{DomainName}/openwhisk/cli){: new_window} und gehen Sie gemäß den Anweisungen für die Installation vor.
 
-### CLI für die Verwendung eines HTTPS-Proxy konfigurieren
-{: #openwhisk_configure_https_proxy_cli}
+## Übersicht
+{: #openwhisk_start_overview}
+- [Funktionsweise von OpenWhisk](./openwhisk_about.html)
+- [Häufige Anwendungsfälle für serverunabhängige Anwendungen](./openwhisk_use_cases.html)
+- [OpenWhisk-CLI einrichten und verwenden](./openwhisk_cli.html)
+- [OpenWhisk über eine iOS-App verwenden](./openwhisk_mobile_sdk.html)
 
-Die CLI kann so eingerichtet werden, dass ein HTTPS-Proxy verwendet werden kann. Um einen HTTPS-Proxy einzurichten, muss die Umgebungsvariable `HTTPS_PROXY` erstellt werden erstellt werden. Die Variable muss auf die Adresse des HTTPS-Proxy festgelegt werden und der Port muss das folgende Format haben:
-`{PROXY IP}:{PROXY PORT}`.
+## Programmiermodell
+{: #openwhisk_start_programming}
+- [Systemdetails](./openwhisk_reference.html)
+- [Katalog der durch OpenWhisk bereitgestellten Services](./openwhisk_catalog.html)
+- [Aktionen](./openwhisk_actions.html)
+- [Auslöser und Regeln](./openwhisk_triggers_rules.html)
+- [Feeds](./openwhisk_feeds.html)
+- [Pakete](./openwhisk_packages.html)
+- [Annotationen](./openwhisk_annotations.html)
+- [Webaktionen](./openwhisk_webactions.html)
+- [API-Gateway](./openwhisk_apigateway.html)
+- [Entitätsnamen](./openwhisk_reference.html#openwhisk_entities)
+- [Aktionssemantik](./openwhisk_reference.html#openwhisk_semantics)
+- [Begrenzungen](./openwhisk_reference.html#openwhisk_syslimits)
 
-Nach der Einrichtung von {{site.data.keyword.openwhisk_short}} mithilfe der Befehlszeilenschnittstelle können Sie mit der Verwendung über die Befehlszeile beginnen.
-
-## {{site.data.keyword.openwhisk_short}}-Befehlszeilenschnittstelle (CLI) verwenden
-{: #openwhisk_start_using_cli}
-
-Wenn Sie Ihre [Umgebung konfiguriert](https://new-console.{DomainName}/openwhisk/cli){: new_window} haben, können Sie mit der Verwendung der {{site.data.keyword.openwhisk_short}}-Befehlszeilenschnittstelle zu folgenden Zwecken beginnen:
-
-* Sie können Code-Snippets oder Aktionen in {{site.data.keyword.openwhisk_short}} ausführen. Siehe [Aktionen erstellen und aufrufen](./openwhisk_actions.html).
-* Sie können Ihre Aktionen durch Auslöser und Regeln so einrichten, dass sie auf Ereignisse reagieren. Siehe [Auslöser und Regeln erstellen](./openwhisk_triggers_rules.html).
-* Sie können sich informieren, wie Aktionen in Paketen gebündelt und externe Ereignisquellen konfiguriert werden. Siehe [Pakete verwenden und erstellen](./openwhisk_packages.html).
-* Sie können den Katalog der Pakete durchsuchen und Ihre Anwendungen durch externe Services wie zum Beispiel eine [Cloudant-Ereignisquelle](./openwhisk_catalog.html#openwhisk_catalog_cloudant) erweitern. Siehe [Für {{site.data.keyword.openwhisk_short}} eingerichtete Services verwenden](./openwhisk_catalog.html).
-
-
-## {{site.data.keyword.openwhisk_short}} über eine iOS-App verwenden
-{: #openwhisk_start_using_ios}
-
-Sie können {{site.data.keyword.openwhisk_short}} mithilfe des {{site.data.keyword.openwhisk_short}}-iOS-SDK über Ihre mobile iOS-App oder Apple Watch verwenden. Weitere Details finden Sie in der [iOS-Dokumentation](./openwhisk_mobile_sdk.html).
-
-## REST-APIs mit {{site.data.keyword.openwhisk_short}} verwenden
-{: #openwhisk_start_using_restapi}
-
-Nach der Einrichtung Ihrer {{site.data.keyword.openwhisk_short}}-Umgebung können Sie {{site.data.keyword.openwhisk_short}} mit Ihren Web-Apps oder mobilen Apps mithilfe von REST-API-Aufrufen verwenden.
-Weitere Details zu den APIs für Aktionen, Aktivierungen, Pakete, Regeln und Auslöser finden Sie in der [API-Dokumentation für {{site.data.keyword.openwhisk_short}}](https://new-console.{DomainName}/apidocs/98).
-
-## {{site.data.keyword.openwhisk_short}}-Beispiel Hello World
+## {{site.data.keyword.openwhisk_short}}-Beispiel 'Hello World'
 {: #openwhisk_start_hello_world}
 Für den Einstieg in {{site.data.keyword.openwhisk_short}} können Sie das folgende Beispiel für JavaScript-Code ausprobieren.
 
-```
+```javascript
 /**
  * Hello world as an OpenWhisk action.
  */
@@ -101,13 +99,12 @@ Führen Sie die folgenden Schritte aus, um dieses Beispiel zu verwenden:
 
     Dieser Befehl liefert die folgende Ausgabe:
 
-    ```
+    ```json
     {
         "payload": "Hello, World!"
     }
     ```
-    {: screen}
-
+    
     ```
     wsk action invoke hello --blocking --result --param name Fred
     ```
@@ -115,35 +112,22 @@ Führen Sie die folgenden Schritte aus, um dieses Beispiel zu verwenden:
 
     Dieser Befehl liefert die folgende Ausgabe:
 
-    ```
+    ```json
     {
         "payload": "Hello, Fred!"
     }
     ```
-    {: screen}
 
 Sie können darüber hinaus die ereignisgesteuerten Funktionen in {{site.data.keyword.openwhisk_short}} verwenden, um diese Aktion als Reaktion auf Ereignisse aufzurufen. Gehen Sie wie im [Beispiel für den Service Alarm](./openwhisk_packages.html#openwhisk_packages_trigger) beschrieben vor, um eine Ereignisquelle zu konfigurieren, sodass die Aktion `hello` jedes Mal aufgerufen wird, wenn ein regelmäßiges Ereignis generiert wird.
 
 
-## Systemdetails
-{: #openwhisk_system_details}
-
-Weitere Informationen zu {{site.data.keyword.openwhisk_short}} finden Sie in den folgenden Abschnitten:
-
-* [Entitätsnamen](./openwhisk_reference.html#openwhisk_entities)
-* [Aktionssemantik](./openwhisk_reference.html#openwhisk_semantics)
-* [Begrenzungen](./openwhisk_reference.html#openwhisk_syslimits)
-* [REST-API](https://new-console.{DomainName}/apidocs/98)
-
-# Zugehörige Links
-{: #rellinks notoc}
-
 ## API-Referenz
-{: #api}
+{: #openwhisk_start_api notoc}
 * [REST-API-Dokumentation](./openwhisk_reference.html#openwhisk_ref_restapi)
 * [REST-API](https://new-console.{DomainName}/apidocs/98){:new_window}
 
 ## Zugehörige Links
-{: #general}
+{: #general notoc}
 * [Entdecken Sie: {{site.data.keyword.openwhisk_short}}](http://www.ibm.com/cloud-computing/bluemix/openwhisk/){:new_window}
 * [{{site.data.keyword.openwhisk_short}} auf IBM developerWorks](https://developer.ibm.com/openwhisk/){:new_window}
+* [Apache {{site.data.keyword.openwhisk_short}}-Projektwebsite](http://openwhisk.org){:new_window}

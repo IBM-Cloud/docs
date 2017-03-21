@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-29"
+  years: 2015, 2017
+lastupdated: "2017-2-21"
 
 ---
 
@@ -110,7 +110,7 @@ lastupdated: "2016-11-29"
 	
 	* 如果您希望在本端儲存影像，則可以下載影像，並將它儲存在 Git 儲存庫中。請調整路徑來使用影像的相對位置。 
 	
-	* 如果您想要使用翻譯版本按鈕，可以從遠端參照，或是從 [ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button](ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button) 下載。 
+	* 如果您想要使用翻譯版本按鈕，可以從遠端參照，或是從 [ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button){:new_window} 下載。 
 	
 ##按鈕的儲存庫考量 {: #button-repo} 
 
@@ -122,10 +122,12 @@ lastupdated: "2016-11-29"
 您可以利用資訊清單檔指定： 
     <ul>
     <li>唯一應用程式名稱。</li>  
-    <li>宣告的服務：資訊清單延伸規格，可建立或尋找預期要在部署應用程式之前設定的必要或選用服務，例如資料快取服務。您可以使用 <a href="https://github.com/cloudfoundry/cli/releases">CF 指令行介面</a>來執行 <code>cf marketplace</code> 指令，或是瀏覽 <a href="https://console.ng.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-_-dWdevcenter-_-devops-services-_-lp#/store">{{site.data.keyword.Bluemix_notm}} 型錄</a>，以尋找合格的 {{site.data.keyword.Bluemix_notm}} 服務、標籤和方案清單。    
+    <li>宣告的服務：資訊清單延伸規格，可建立或尋找預期要在部署應用程式之前設定的必要或選用服務，例如資料快取服務。您可以使用 <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="（在新分頁或視窗中開啟）">CF 指令行介面 <img class="image" src="../icons/launch-glyph.svg" alt="外部鏈結圖示"/></a> 來執行 <code>cf marketplace</code> 指令，或是瀏覽 <a class="xref" href="https://console.ng.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-_-dWdevcenter-_-devops-services-_-lp#/store" target="_blank" title="（在新分頁或視窗中開啟）"> {{site.data.keyword.Bluemix_notm}} 型錄 <img class="image" src="../icons/launch-glyph.svg" alt="外部鏈結圖示"/></a>，以尋找合格的 {{site.data.keyword.Bluemix_notm}} 服務、標籤和方案清單。
+    
+        
     <strong>附註：</strong>宣告的服務是標準 Cloud Foundry 資訊清單格式的 IBM 延伸規格。此延伸規格可能會隨著該特性的發展與改進，在未來的版本中修訂。
 	
-	<a href="http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html#minimal-manifest" target="_blank">瞭解如何建立 <code>manifest.yml</code> 檔案。</a>  
+	<a class="xref" href="http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html#minimal-manifest" target="_blank" title="（在新分頁或視窗中開啟）">瞭解如何建立 <code>manifest.yml</code> 檔案 <img class="image" src="../icons/launch-glyph.svg" alt="外部鏈結圖示"/></a>。  
 <pre class="codeblock">
 	---
     #Template manifest.yml
@@ -160,10 +162,10 @@ lastupdated: "2016-11-29"
 	<li> 如果應用程式必須先進行建置才能部署，則您必須在儲存庫中併入建置檔。如果在儲存庫的根目錄中偵測到建置 Script 檔，則會在部署之前觸發程式碼的自動建置。
 	
 	支援的建置器：<ul>
-		<li> <a href="http://ant.apache.org/manual/using.html" target="_blank">Ant：</a>/<code>build.xml</code>，會將輸出建置到 <code>./output/</code> 資料夾</li>
-		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank">Gradle：</a><code>/build.gradle</code>，會將輸出建置到 <code>.</code> 資料夾</li>
-		<li> <a href="http://gruntjs.com/getting-started#the-gruntfile" target="_blank">Grunt：</a><code>/Gruntfile.js</code>，會將輸出建置到 <code>.</code> 資料夾</li>
-		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven" target="_blank">Maven：</a><code>/pom.xml</code>，會將輸出建置到 <code>./target/</code> 資料夾</li>
+		<li> <a class="xref" href="http://ant.apache.org/manual/using.html" target="_blank" title="（在新分頁或視窗中開啟）">Ant：<img class="image" src="../icons/launch-glyph.svg" alt="外部鏈結圖示"/></a> /<code>build.xml</code>，可將輸出建置至 <code>./output/</code> 資料夾</li>
+		<li> <a class="xref" href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank" title="（在新分頁或視窗中開啟）">Gradle：<img class="image" src="../icons/launch-glyph.svg" alt="外部鏈結圖示"/></a> <code>/build.gradle</code>，可將輸出建置至 <code>. </code> 資料夾</li>
+		<li> <a class="xref" href="http://gruntjs.com/getting-started#the-gruntfile" target="_blank" title="（在新分頁或視窗中開啟）">Grunt：<img class="image" src="../icons/launch-glyph.svg" alt="外部鏈結圖示"/></a> <code>/Gruntfile.js</code>，可將輸出建置至 <code>. </code> 資料夾</li>
+		<li> <a class="xref" href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven" target="_blank" title="（在新分頁或視窗中開啟）">Maven：<img class="image" src="../icons/launch-glyph.svg" alt="外部鏈結圖示"/></a> <code>/pom.xml</code>，可將輸出建置至 <code>./target/</code> 資料夾</li>
 	   </ul>
 	</li>	
 	<li>若要配置專案的管線，請在 <code>.bluemix</code> 目錄中包含 <code>pipeline.yml</code> 檔案。您可以手動建立 <code>pipeline.yml</code> 檔案，或從現有 DevOps Services 專案中產生檔案。若要從 {{site.data.keyword.jazzhub_short}} 專案中建立 pipeline.yml 檔案並將它新增至儲存庫中，請完成下列步驟。
@@ -179,8 +181,8 @@ lastupdated: "2016-11-29"
 	<li>若要使用 <strong>IBM Containers</strong> 在容器中部署應用程式，則必須在儲存庫的根目錄中併入 Dockerfile，以及在 <code>.bluemix</code> 目錄中併入 <code>pipeline.yml</code> 檔案。
 	<ul>
 	    <li>Dockerfile 用來作為應用程式的一種建置 Script。如果在儲存庫中偵測到 Dockerfile，則會先自動將應用程式建置至映像檔，再將它部署於容器中。如果必須先建置應用程式本身，再將應用程式建置成映像檔，請併入應用程式的建置 Script 以及 Dockerfile（如前所述）。</li>
-	    <li> 若要進一步瞭解如何建立 Dockerfile，<a href="https://docs.docker.com/reference/builder/" target="_blank">請參閱 Docker 文件</a>。</li>
-	    <li>您可以手動建立 <code>pipeline.yml</code> 檔案，或從現有 DevOps Services 專案中產生檔案。若要手動建立專用於容器的 <code>pipeline.yml</code>，<a href="https://github.com/Puquios/" target="_blank">請參閱 GitHub 中的範例</a>。</li>
+	    <li> 若要進一步瞭解如何建立 Dockerfile，請參閱 <a class="xref" href="https://docs.docker.com/reference/builder/" target="_blank" title="（在新分頁或視窗中開啟）">Docker 文件 <img class="image" src="../icons/launch-glyph.svg" alt="外部鏈結圖示"/></a>。</li>
+	    <li>您可以手動建立 <code>pipeline.yml</code> 檔案，或從現有 DevOps Services 專案中產生檔案。若要手動建立專用於容器的 <code>pipeline.yml</code>，<a class="xref" href="https://github.com/Puquios/" target="_blank" title="（在新分頁或視窗中開啟）">請參閱 GitHub 中的範例 <img class="image" src="../icons/launch-glyph.svg" alt="外部鏈結圖示"/></a>。</li>
         </ul>
 
  </li>
@@ -188,4 +190,3 @@ lastupdated: "2016-11-29"
 </ul>
 
 如需疑難排解說明，請參閱[「部署至 Bluemix」按鈕未部署應用程式](/docs/troubleshoot/index.html#deploytobluemixbuttondoesntdeployanapp){:new_window}。	
-

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-24"
+lastupdated: "2017-02-22"
 
 ---
 
@@ -32,7 +32,7 @@ lastupdated: "2017-01-24"
 |查看报告和日志 | 单击**管理 &gt; 报告和日志**可查看针对您实例的安全报告和审计日志。请参阅[查看报告](/docs/admin/index.html#oc_report)。 |
 |查看系统信息 | 单击**管理 &gt; 系统信息**可查看系统信息，例如暂挂维护更新数、实例的名称和版本、区域、API URL、CLI URL、LDAP 配置详细信息、组和用户映射、统计信息以及共享域。请参阅[查看系统信息](/docs/admin/index.html#oc_system)。 |
 |扩展通知和设置通知预订 | 单击**管理 &gt; 系统信息 &gt; *Number* 个暂挂**。可以使用 Webhook 来与所选 Web 服务集成，以设置某个更新或事件的事件通知预订。请参阅[通知和通知预订](/docs/admin/index.html#oc_eventsubscription)。 |
-{: caption="Table 1. Administrative tasks for managing your {{site.data.keyword.Bluemix_notm}} local or dedicated instance" caption-side="top"}
+{: caption="表 1. 用于管理 {{site.data.keyword.Bluemix_notm}} Local 或 Dedicated 实例的管理任务" caption-side="top"}
 
 <!-- staging only for WoW start -->
 
@@ -57,9 +57,9 @@ lastupdated: "2017-01-24"
 |-----------------|-------------------|
 | 维护更新 | 要查看暂挂和完成的通知的完整列表和历史记录，请单击**管理 &gt; 系统信息** &gt; *数字* **个暂挂**。您还可以在“状态”页面上发出有关安排的中断性维护更新事件的警报。单击**支持** &gt; **状态**。您可以通过设置预订，向您选择的收件人发送电子邮件，来扩展通知功能。或者，您可以设置预订，使用 Webhook 将“管理”页面的通知与您选择的 Web Service 相集成。|
 | 严重事件 | 您将在“状态”页面上获得有关严重事件的警报。单击**支持** &gt; **状态**。您可以通过设置通知预订，向您选择的收件人发送电子邮件，以扩展通知功能。或者，您可以设置预订，使用 Webhook 将“管理”页面的通知与您选择的 Web Service 相集成。  |  
-| 阈值事件 | 您可以设置通知预订，在环境中的物理磁盘、物理内存、保留磁盘或保留内存达到资源阈值时，向您选择的收件人发送电子邮件。或者，您可以设置预订，使用 Webhook 将通知与您选择的 Web Service 相集成。  |  
+| 阈值事件 | 您可以设置通知预订，以在环境中的组织配额、物理磁盘、物理内存、保留磁盘或保留内存达到阈值时，向您选择的收件人发送电子邮件。或者，您可以设置预订，使用 Webhook 将通知与您选择的 Web Service 相集成。  |  
 | {{site.data.keyword.Bluemix_notm}} 状态 | 您始终可以在“状态”页面查看平台、服务和您的 {{site.data.keyword.Bluemix_notm}} 实例的最新状态。单击**支持** &gt; **状态**。  |
-{: caption="Table 2. Event types and notifications methods" caption-side="top"}
+{: caption="表 2. 事件类型和通知方法" caption-side="top"}
 
 ### 设置通知预订
 {: #seteventsub}
@@ -100,8 +100,7 @@ lastupdated: "2017-01-24"
 | 主体 | 输入要在电子邮件中发送的消息体文本。您可以使用 IBM 有效内容值，向电子邮件通知填充相关信息。请参阅[维护和事件有效内容部分值](index.html#payload)表，以识别可以使用的值。使用基本 HTML 标记，来构建您的电子邮件。这是必填字段。 |
 | 收件人 | 使用电子邮件通知收件人的逗号分隔列表，输入一个或多个电子邮件地址。展开“抄送”或“密件抄送”选项，将电子邮件抄送给其他人。这是必填字段。 |
 | 描述 | 添加要创建的预订的唯一描述。 |
-{: caption="Table 3. Fields for email notification subscriptions about thresholds" caption-side="top"}
-
+{: caption="表 3. 关于阈值的电子邮件通知预订字段" caption-side="top"}
 
 {: #emailnottrhesh}
 
@@ -110,7 +109,7 @@ lastupdated: "2017-01-24"
 | 已启用 | 选择要启用电子邮件通知的选项。清除选项将禁用电子邮件通知。缺省情况下，会启用预订。 |
 | 类型 | 选择**电子邮件**。 |
 | 事件 | 选择**阈值**。 |
-| 阈值 | 选择要获取相关通知的阈值的类型：物理磁盘、物理内存、保留磁盘或保留内存。 |
+| 阈值 | 选择要获取相关通知的阈值的类型：组织配额、物理磁盘、物理内存、保留磁盘或保留内存。 |
 | 阈值方向 | 选择在超过设置的“跨越阈值时通知”值时希望数据移入的方向，即“升序”或“降序”。例如，如果“跨越阈值时通知”值为 50%，并且方向为“降序”，那么仅当使用量百分比从大于或等于 50% 变为小于 50% 时，才会向您发送通知。如果将方向设置为“升序”，那么当使用量百分比从小于 50% 变为大于 50% 时，会向您发送通知。|
 | 超过 (%) 时通知 | 输入达到时发送通知的阈值百分比。如果在“阈值方向”字段中选择“升序”属性，那么当阈值高于此百分比时，会发送电子邮件通知。 |
 | 低于 (%) 时通知 | 输入达到时发送通知的阈值百分比。如果在“阈值方向”字段中选择“降序”属性，那么当阈值低于此百分比时，会发送电子邮件通知。 |
@@ -118,12 +117,13 @@ lastupdated: "2017-01-24"
 | 主题 | 输入电子邮件的主题行。这是必填字段。  |
 | 消息体 | 输入要在电子邮件中发送的消息体文本。您可以使用 IBM 有效内容值，向电子邮件通知填充相关信息。请参阅[阈值有效内容部分值](index.html#threshpayload)表，以识别可以使用的值。使用基本 HTML 标记，来构建您的电子邮件。这是必填字段。 |
 | 收件人 | 使用电子邮件通知收件人的逗号分隔列表，输入一个或多个电子邮件地址。展开“抄送”或“密件抄送”选项，将电子邮件抄送给其他人。这是必填字段。 |
-{: caption="Table 4. Fields for email notification subscriptions about maintenance updates or incidents" caption-side="top"}
+{: caption="表 4. 关于维护更新或事件的电子邮件通知预订字段" caption-side="top"}
 
-阈值数据每 6 个小时收集一次。当值跨越设置的阈值时，只发送一次通知。如果选择“升序”，那么当值低于阈值，然后再次高于阈值时，才会发送新通知。同样，如果选择“降序”，那么仅当值高于设置的阈值，然后再次低于阈值时，才会再次向您发送通知。 
+阈值数据每 6 个小时收集一次。当值跨越设置的阈值时，只发送一次通知。如果选择“升序”，那么当值低于阈值，然后再次高于阈值时，才会发送新通知。同样，如果选择“降序”，那么仅当值高于设置的阈值，然后再次低于阈值时，才会向您发送通知。 
 
-如果在达到阈值时不想等 6 小时再发送通知，在填完表单上的字段后，可以单击**保存并测试**以保存通知并使用样本数据来测试通知。
+如果在达到阈值时不想等 6 小时再发送通知，那么在填完表单上的字段后，可以单击**保存并测试**以接收使用样本数据的测试通知。  
 
+“组织配额”阈值通知仅包含在与该通知对应的 6 小时时间段内跨越指定阈值百分比的组织。不会包含在先前的 6 小时时间段内跨越阈值的组织，即便这些组织仍然高于或低于阈值。在确定是否应该发送组织配额通知时，会独立考虑构成组织配额的三个资源（保留内存、服务和路径）。例如，如果组织使用的保留内存量跨越组织配额的 50%，那么配置为值 50% 的“组织配额”阈值会导致发送通知。如果相同组织使用的服务数在将来某个时间点跨越组织配额的 50%，那么尽管使用的内存量保持不变，相同的“组织配额”阈值预订也将导致发送通知。
 
 {: #webhooknotsub}
 
@@ -148,7 +148,7 @@ lastupdated: "2017-01-24"
 | 有效内容 | 如果选择了 POST 或 PUT 方法，请输入特定于要使用的 Web Service 的属性，以及与属性成对的用于 IBM 通知的有效内容值。请参阅[维护和事件有效内容部分值](index.html#payload)表，以识别可以使用的值。如果未在此部分中输入信息，您会收到不含任何更多信息的通知。 |
 | 组合通知 | 选中该选项可将所有区域的事件通知组合到单个通知。此选项仅可用于事件。
  |
-{: caption="Table 5. Form fields for a webhook notification subscription about maintenance or incidents" caption-side="top"}
+{: caption="表 5. 关于维护更新或事件的 Webhook 通知预订的表单字段" caption-side="top"}
 
 
 {: #webhooknotthresh}
@@ -158,7 +158,7 @@ lastupdated: "2017-01-24"
 | 已启用 | 选中该选项可启用通知。清除该选项会禁用通知。缺省情况下，会启用预订。 |
 | 类型 | 选择 **Webhook**。 |
 | 事件 | 选择**阈值**。 |
-| 阈值 | 选择要获取相关通知的阈值的类型：物理磁盘、物理内存、保留磁盘或保留内存。 |
+| 阈值 | 选择要获取相关通知的阈值的类型：组织配额、物理磁盘、物理内存、保留磁盘或保留内存。|
 | 阈值方向 | 选择是要以“升序”还是“降序”查看阈值数据。  |
 | 低于 (%) 时通知 | 如果选择**降序****阈值方向**，请输入达到时发送通知的阈值百分比。当阈值低于此百分比时，会发送 Webhook 通知。 |
 | 超过 (%) 时通知 | 如果选择**升序****阈值方向**，请输入达到时发送通知的阈值百分比。当阈值高于此百分比时，会发送 Webhook 通知。 |
@@ -168,8 +168,13 @@ lastupdated: "2017-01-24"
 | 密码 | 如果选择基本授权，请输入您的 Web Service 的密码。 |
 | 方法 | 选择 **GET**、**POST** 或 **PUT**。 |
 | URL | 输入要连接到 Web Service 的 URL。 |
-{: caption="Table 6. Form fields for a webhook notification subscription about thresholds" caption-side="top"}
+{: caption="表 6. 关于阈值的 Webhook 通知预订的表单字段" caption-side="top"}
 
+阈值数据每 6 个小时收集一次。当值跨越设置的阈值时，只发送一次通知。如果选择“升序”，那么当值低于阈值，然后再次高于阈值时，才会发送新通知。同样，如果选择“降序”，那么仅当值高于设置的阈值，然后再次低于阈值时，才会再次向您发送通知。 
+
+如果在达到阈值时不想等 6 小时再发送通知，在填完表单上的字段后，可以单击**保存并测试**以保存通知并使用样本数据来测试通知。
+
+“组织配额”阈值通知仅包含在与该通知对应的 6 小时时间段内跨越指定阈值百分比的组织。不会包含在先前的 6 小时时间段内跨越阈值的组织，即便这些组织仍然高于/低于阈值。在确定是否应该发送组织配额通知时，会独立考虑构成组织配额的三个资源（保留内存、服务和路径）。例如，如果组织使用的保留内存量跨越组织配额的 50%，那么配置为值 50% 的“组织配额”阈值会导致发送通知。如果相同组织使用的服务数在将来某个时间点跨越组织配额的 50%，那么尽管使用的内存量保持不变，相同的“组织配额”阈值预订也将导致发送通知。
 
 {: #payload}
 
@@ -186,18 +191,19 @@ lastupdated: "2017-01-24"
 | {{region}} | 受影响的区域 | 维护更新和事件 |
 | {{status}} | 更新的状态 | 维护更新 |
 | {{type}} | 更新或事件 | 维护更新和事件 |
-{: caption="Table 7. Maintenance and incident payload section values" caption-side="top"}
+{: caption="表 7. 维护和事件有效内容部分值" caption-side="top"}
 
 
 {: #threshpayload}
 
 | **IBM 值** | **描述** | **事件类型** |
 |----------------|----------------|------------------------|
+| {{content.org_quota}} | 组织配额阈值 | 阈值 |
 | {{content.physical_disk}} | 物理磁盘阈值 | 阈值 |
 | {{content.physical_memory}} | 物理内存阈值 | 阈值 |  
 | {{content.reserved_disk}} | 保留磁盘阈值 | 阈值 |
 | {{content.reserved_memory}} | 保留内存阈值 | 阈值 |
-{: caption="Table 8. Threshold payload section values" caption-side="top"}
+{: caption="表 8. 阈值有效内容部分值" caption-side="top"}
 
 保存通知预订时，您会通过设置的方法接收通知。通知仍将在以下位置中进行发布：  
  * 在“状态”页面上发布事件
@@ -453,7 +459,7 @@ lastupdated: "2017-01-24"
 | 防病毒 | 防病毒扫描报告 | 已就位的防病毒软件。 |
 | 软件修订管理 | 补丁安装报告 | 已应用的软件修订。 |
 | 安全事件管理 | 安全事件补救报告 | 用于安全事件管理的安全事件证据。 |
-{: caption="Table 9. Security report list" caption-side="top"}
+{: caption="表 9. 安全报告列表" caption-side="top"}
 
 ## 查看状态
 {: #oc_status}
@@ -617,7 +623,7 @@ lastupdated: "2017-01-24"
 |id  | 服务的标识。此标识必须在 {{site.data.keyword.Bluemix_notm}} 中唯一，并且必须是 GUID（全局唯一标识）。向 {{site.data.keyword.Bluemix_notm}} 注册服务后，不能更改该服务的标识。 |
 |metadata | 服务套餐元数据，在 {{site.data.keyword.Bluemix_notm}}“目录”和价格表中显示。metadata 字段是可选字段。可以指定 metadata 的更多字段。请参阅下表 [Metadata 字段](index.html#metadatafields)，以获取更多信息。 |
 |plans | 服务套餐定义的数组。请参阅下表 [Plan 字段](index.html#planfields)，以获取更多信息。 |
-{: caption="Table 10. JSON fields" caption-side="top"}
+{: caption="表 10. JSON 字段" caption-side="top"}
 
 
 {: #metadatafields}
@@ -646,7 +652,7 @@ lastupdated: "2017-01-24"
 |sdkDownloadUrl（可选） | 单击“下载 SDK”按钮时打开的 Web 页面的 URL。“下载 SDK”按钮位于“仪表板”中“应用程序概述”页面的服务磁贴上。Web 页面会在新的浏览器选项卡中打开。 |
 |serviceMonitorApi    | 返回 JSON 数据的 API 的 URL，如以下示例中所示，用于报告服务运行状况。必须在服务元数据中具有 serviceMonitorApi 或 serviceMonitorApp。请参阅以下代码样本以获取示例。 |
 |serviceMonitorApp    | 应用程序的 URL，该应用程序可部署到 {{site.data.keyword.Bluemix_notm}} 并绑定服务，以提供特定于服务状态的输出。应用程序返回的 JSON 数据格式必须与 serviceMonitorApi 相同。必须在服务元数据中具有 serviceMonitorApi 或 serviceMonitorApp。请参阅以下代码样本以获取示例。 |
-{: caption="Table 11. Metadata fields" caption-side="top"}
+{: caption="表 11. 元数据字段" caption-side="top"}
 
 
 ```
@@ -687,7 +693,7 @@ lastupdated: "2017-01-24"
 |free      | 布尔值，指示服务套餐是否免费。缺省值为 true。 |
 |id       | 服务套餐的标识。标识必须唯一，并且必须为 GUID。  |
 |metadata（可选）    | 服务套餐元数据，在 {{site.data.keyword.Bluemix_notm}}“目录”和价格表中显示。metadata 字段是可选字段。可以在 metadata 字段内指定以下字段：displayName, type（subscription、reservable 或 planDetails）、bullets、costs（unitId、unit 或 partNumber）和 paidOnly。请参阅下表 [Plan metadata 字段](index.html#planmetadata)，以获取更多信息。 |
-{: caption="Table 12. Plan fields" caption-side="top"}
+{: caption="表 12. Plan 字段" caption-side="top"}
 
 
 {: #planmetadata}
@@ -699,7 +705,7 @@ lastupdated: "2017-01-24"
 |bullets                 | 可用于套餐的资源的描述。描述会显示在“目录”中服务详细信息页面上的**功能**列中以及价格表上。 |
 |costs                   | 有关服务的成本信息，显示在“目录”中服务详细信息页面上的“价格”列中以及价格表上。每个数组条目都包含以下字段：unitId（单位标识。使用复数形式并且所有字母均大写。对于免费套餐，此字段是可选的。）、unit（用于计算服务费用的度量值。此字段的值在 {{site.data.keyword.Bluemix_notm}} 用户界面中用于表示费用度量值。）和 partNumber（记帐系统使用的 `part_number` 标识。对于免费套餐，此字段是可选的。）.   |
 |paidOnly（可选）     | 布尔值，指示此服务套餐是否只可用于 {{site.data.keyword.Bluemix_notm}} 付费帐户。值为 **true** 表示此服务套餐只可用于付费帐户，不能添加到试用帐户。值为 **false** 表示此服务套餐可以添加到付费帐户和试用帐户。缺省值为 **false**。	  |
-{: caption="Table 13. Plan metadata fields" caption-side="top"}
+{: caption="表 13. Plan 元数据字段" caption-side="top"}
 
 以下示例显示了 GET /v2/catalog 的 JSON 响应如何映射到 {{site.data.keyword.Bluemix_notm}}“目录”中的服务详细信息页面。具体而言，即上表中描述的 plan metadata 字段如何映射到用户界面：
 
@@ -825,7 +831,7 @@ lastupdated: "2017-01-24"
 <dd>可以在组织的所有空间中分配的最大公共 IP 地址数。</dd>
 </dl>
 <strong>注</strong>：如果环境中尚无容器，或者如果在环境中尚未设置容器，那么您将收到错误消息。
-<p>有关容器的更多信息，请参阅[关于 IBM Containers](https://console.ng.bluemix.net/docs/containers/container_ov.html)。有关容器配额的更多信息，请参阅[配额和 Bluemix 帐户]( https://console.ng.bluemix.net/docs/containers/container_planning_org_ov.html#container_planning_quota)。</p>
+<p>有关容器的更多信息，请参阅[关于 IBM Containers](/docs/containers/container_ov.html)。有关容器配额的更多信息，请参阅[配额和 Bluemix 帐户](/docs/containers/container_planning_org_ov.html#container_planning_quota)。</p>
 <strong>注：</strong>在 {{site.data.keyword.Bluemix_notm}} 悉尼区域中无法使用容器。</li>
 </ul>
 <li>要保存在“管理组织”页面上进行的任何更改，请单击<strong>保存</strong>。</li>
@@ -940,42 +946,41 @@ lastupdated: "2017-01-24"
 | 目录 | 可以为拥有 **Catalog** 许可权的用户分配 **Read** 或 **Write**（修改）的访问权，以指出本地或专用实例中哪些服务可用。Read 访问权允许用户访问“目录管理”磁贴，以查看可用的服务。Write 访问权允许用户访问[目录管理](#oc_catalog)磁贴，以查看服务、编辑服务的可视性、注册定制服务并控制 buildpack 优先级列表。 |  
 | Reports | 可以为拥有 **Reports** 许可权的用户分配 **Read** 或 **Write**（修改）安全报告的访问权。Read 访问权允许用户访问“报告和日志”磁贴，以下载报告。Write 访问权允许用户查看[报告和日志](#oc_report)磁贴，以及使用 CLI 上传新报告，并创建新类别以供用户访问。 |
 | Users | 可以为拥有 **Users** 许可权的用户分配针对用户列表执行 **Read**（查看）操作或针对用户执行 **Write**（添加或除去）操作的访问权。此许可权不允许为其他用户设置许可权。Write 访问权允许用户向环境添加新用户、从环境删除用户，并向环境内已经存在的组织添加现有用户。此外，**Write** 访问权允许用户添加新组织、删除组织并编辑组织内的用户。 |
-{: caption="Table 14. Permissions" caption-side="top"}
+{: caption="表 14. 许可权" caption-side="top"}
 
-## 使用 Admin REST API 管理用户
-{: #usingadminapi}
+## 使用 REST API 
+{: #auth_adminapi}
 
-您可以使用 `Admin` REST API 为 {{site.data.keyword.Bluemix_notm}} 实例添加和除去用户。为了能够从命令行执行基本操作，提供了试验性 `Admin` REST API 端点和 JSON 响应。本信息的示例中的端点和 URL 可能会发生变化，也可能会临时通知停止使用。
+要使用 REST API 命令，您首先需要进行认证。要生成并支持会话，可以使用 cURL 命令来完成以下任务：
 
-虽然可以选择使用其他工具，但下面是使用后续示例时所需的必备工具：
-* cURL - 将 REST API 请求作为命令进行输入。cURL 是一个免费的实用程序，可用于通过命令行界面将 HTTP 请求发送到服务器并接收服务器响应。可以从 [cURL 下载站点 ![外部链接图标](../icons/launch-glyph.svg)](http://curl.haxx.se/download.html){: new_window} 来下载 cURL。
-* Python - 使用 Python 直观显示 JSON 工具的输出。此可选工具接受 JSON 文本作为输入，并提供易读输出。可以从 [Python 下载站点 ![外部链接图标](../icons/launch-glyph.svg)](https://www.python.org/downloads){: new_window} 来下载 Python。
+* [登录到管理控制台](#auth_loginapi) 
+* [存储用户标识和密码](#auth_setuidpw)
+* [存储 cookie](#auth_apistorecook)
+* [复用 cookie](#auth_apireusecook)
 
 ### 登录到管理控制台
+{: #auth_loginapi}
 
-运行任何 `Admin` API 请求之前，都必须登录到管理控制台。如果您拥有 **Superuser** 许可权或者具有 **Write** 访问权的 **Users** 许可权，那么可以添加或移除用户。必须拥有 **Superuser** 许可权，才能编辑其他用户的许可权。
+运行任何 `Admin` API 请求之前，都必须登录到管理控制台。 
 
-要登录到管理控制台，可以在 `https://<your_host>.ibm.com/login` 端点上使用基本访问认证。服务器会使用您的会话返回 cookie。您使用该 cookie 来执行所有管理控制台操作。
+要登录到管理控制台，可以在 `https://console.<region>.bluemix.net/login` 端点上使用基本访问认证。服务器会使用您的会话返回 cookie。您使用该 cookie 来执行所有管理控制台操作。
 
 **注：**如果几个小时不使用会话，会话将变为无效。
 
 要登录到管理控制台，请运行以下命令：
 
-
-`curl --user <user_id>:<password> -c ./cookies.txt --header "Accept: application/json" https://<your_host>.ibm.com/login | python -m json.tool`
+`curl --user <user_id>:<password> -c ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/login | python -m json.tool`
 {: codeblock}
 
 <dl class="parml">
-
 <dt class="pt dlterm">--user <em>user_id</em>:<em>password</em></dt>
 <dd class="pd">接受用户标识和密码，并发送基本授权头。</dd>
-
 <dt class="pt dlterm">-c <em>filename</em></dt>
 <dd class="pd">将指定的用户标识和密码作为 cookie 存储在指定的文件中。</dd>
-
+<dt class="pt dlterm">-b <em>filename</em></dt>
+<dd class="pd">检索指定的用户标识和密码作为 cookie 放入指定的文件中。</dd>
 <dt class="pt dlterm">--header</dt>
 <dd class="pd">发送 Accept 头。</dd>
-
 </dl>
 
 以下示例显示了此命令的输出：
@@ -989,6 +994,64 @@ lastupdated: "2017-01-24"
 }
 ```
 {: screen}
+
+### 存储用户标识和密码
+{: #auth_setuidpw}
+
+您还可以存储用户标识和密码，这样就不必每次登录时都手动输入。要存储用户标识和密码以供复用，请使用以下 cURL 示例：
+
+`curl -X GET -H "Authorization: Basic <redacted>" -H "Accept: application/json" "http://localhost:3000/login"`
+{: codeblock}
+
+要在单独的文件中设置登录信息，然后调用该文件，以便您不必为每个认证请求重新输入这些信息，请使用 cURL 命令提供的 `--netrc` 选项。
+
+要将 `--netrc` 选项与 cURL 配合使用，请首先通过以下某种方式在用户的主目录中创建文件：
+* 在 Unix 系统上，创建名为 .netrc 的文件 
+* 在 Windows 系统上，创建名为 _netrc 的文件。 
+
+在该文件中，输入以下信息：
+
+`machine console.<region>.bluemix.net
+login <id>
+password <password>`
+{: codeblock}
+
+调用 cURL 命令时，添加以下自变量：`--netrc`。
+<p>要使用位于其他目录中的 netrc 文件，请使用 `--netrc-file [file]` 选项，其中 `[file]` 是 netrc 文件的位置。</p>
+</li>
+</ol>
+
+
+### 存储 cookie
+{: #auth_apistorecook}
+
+登录到管理控制台时，服务器会随会话返回 cookie。未来通过 API 调用使用管理控制台执行所有操作时，在登录过程中都需要该 cookie。可以存储 cookie 以供日后使用。
+
+要在登录后存储 cookie，请使用 `-c` 选项，如以下 CURL 示例中所示：
+
+`curl --user <user_id>:<password> -c ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/login | python -m json.tool`
+{: codeblock}
+
+### 复用 cookie
+{: #auth_apireusecook}
+
+要复用 cookie，请使用 `-b` 选项，后跟使用 `-c` 选项分配的 cookie 文件名，如以下 CURL 示例中所示：
+
+`curl --user <user_id>:<password> -b ./cookies.txt`
+{: codeblock}
+
+## 使用 Admin REST API 管理用户
+
+{: #usingadminapi}
+
+您可以使用 `Admin` REST API 为 {{site.data.keyword.Bluemix_notm}} 实例添加和除去用户。为了能够从命令行执行基本操作，提供了试验性 `Admin` REST API 端点和 JSON 响应。本信息的示例中的端点和 URL 可能会发生变化，也可能会临时通知停止使用。
+
+如果您拥有 **Superuser** 许可权或者具有 **Write** 访问权的 **Users** 许可权，那么可以添加或移除用户。必须拥有 **Superuser** 许可权，才能编辑其他用户的许可权。
+
+虽然可以选择使用其他工具，但下面是使用后续示例时所需的必备工具：
+* cURL - 将 REST API 请求作为命令进行输入。cURL 是一个免费的实用程序，可用于通过命令行界面将 HTTP 请求发送到服务器并接收服务器响应。可以从 [cURL 下载站点 ![外部链接图标](../icons/launch-glyph.svg)](http://curl.haxx.se/download.html){: new_window} 来下载 cURL。
+* Python - 使用 Python 直观显示 JSON 工具的输出。此可选工具接受 JSON 文本作为输入，并提供易读输出。可以从 [Python 下载站点 ![外部链接图标](../icons/launch-glyph.svg)](https://www.python.org/downloads){: new_window} 来下载 Python。
+
 
 ### 列出组织
 {: #listingorg}
@@ -1102,8 +1165,6 @@ lastupdated: "2017-01-24"
 
 ```
 {: screen}
-
-
 
 ### 添加用户
 
@@ -1234,33 +1295,37 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
 ## 用于度量值的 API（试验性）
 {: #envappmetricsapi}
 
-您可以使用两个试验性 API 来收集有关环境或应用程序的度量值。这两个 API 都会返回在指定的时间内所请求度量值的数据点数组。
+您可以使用三个试验性 API 来收集有关环境或应用程序的度量值。这两个 API 都会返回在指定的时间内所请求度量值的数据点数组。
 
 以下各部分中描述的度量值 API 可以从特定于区域的端点进行访问，例如： 
 
- `https://console.<region>.bluemix.net/admin/metrics`
+`https://console.<region>.bluemix.net/admin/metrics`
 {: codeblock}
 
 **注**：
 
 1. 用户每小时最多可以对度量值发起 200 个 API 请求。
 2. 每个 API 请求最多可返回 200 个数据点。如果有更多数据可用，将在响应中提供 URL，以用于装入下一组数据。
+3. 每个 API 请求都需要用户至少具有对管理控制台的基本访问权。可能还需要其他许可权，如下面所指定。
 
 ## 收集有关环境的度量值 
 
 您可以使用试验性环境 API 来收集指定时间段内的高级别环境信息。这将返回指定时间内的可用数据点。数据大约每小时记录一次。例如，如果请求 6 个小时的环境 CPU 数据，那么响应将包含请求 6 个小时内每个小时的 CPU 数据。
 
- ### 环境端点 
- 
+
+### 环境端点 
+
 您可以使用以下端点来调用此 API 命令：`/api/v1/env`
+
+**注**：访问这些端点需要以下某个许可权：**基本访问权**、**用户读许可权**、**用户写许可权**或**超级用户**
 
 ### 环境度量值查询参数
 
-使用以下查询参数可以收集 CPU、磁盘、内存、网络和应用程序的度量值：
+使用以下查询参数可以收集 CPU、磁盘、内存、网络、配额和应用程序的度量值：
 
 <dl class="parml">
 <dt class="pt dlterm">metric</dt>
-<dd class="pd">以下一个或多个值，各值之间用逗号分隔：`memory`、`disk`、`cpu`、`network` 和 `apps`。</dd>
+<dd class="pd">以下一个或多个值，各值之间用逗号分隔：`memory`、`disk`、`cpu`、`network`、`quota` 和 `apps`。</dd>
 <dt class="pt dlterm">startTime</dt>
 <dd class="pd">开始返回数据的最早时间点。如果未指定 startTime，那么将包含最早的可用数据点。例如，要收集下午 2 点到 5 点的数据，请将 startTime 指定为 2 PM。</dd>
 <dt class="pt dlterm">endTime</dt>
@@ -1269,12 +1334,13 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
 <dd class="pd">数据的返回顺序。有效值为 `asc`（升序）和 `desc`（降序）。缺省值为降序，即首先返回最新的数据。</dd>
 </dl>
 
- 以下示例使用查询参数来收集环境的度量值：
- 
- ```
+以下示例使用查询参数来收集环境的度量值：
+
+```
  curl -b ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/admin/metrics/api/v1/env?metric=cpu,network,disk,apps,memory
  ```
 {: codeblock}
+
 
 ### 环境度量值数据格式
 
@@ -1286,7 +1352,23 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
 {
   "sample_time": 1477494000000,
   "memory": {
-    "cell": {
+    "total": {
+      "physical": {
+      "total_gb": 1728,
+        "used": {
+          "value_gb": 673.68,
+          "percent": 38.99
+        }
+      },
+    "allocated": {
+      "reserved_gb": 3456,
+        "total_allocated": {
+          "value_gb": 2575.18,
+          "percent": 74.51
+        }
+      },
+    },
+  	"cell": {
       "physical": {
       "total_gb": 864,
       "used": {
@@ -1355,6 +1437,22 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
 {
   "sample_time": 1477494000000,
   "disk": {
+    "total": {
+      "physical": {
+      "total_gb": 16200,
+        "used": {
+          "value_gb": 1614,
+          "percent": 9.96
+        }
+      },
+    "allocated": {
+      "reserved_gb": 32400,
+        "total_allocated": {
+          "value_gb": 3979,
+          "percent": 12.28
+        }
+      },
+    },
     "cell": {
       "physical": {
       "total_gb": 8100,
@@ -1424,11 +1522,14 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
 {
   "sample_time": 1477494000000,
   "cpu": {
+    "total": {
+      "average_percent_cpu_used": 14.725
+    },
     "cell": {
-      "average_percent_cpu_used": 27.288461538461544
+      "average_percent_cpu_used": 19
     },
     "dea": {
-      "average_percent_cpu_used": 27.288461538461544
+      "average_percent_cpu_used": 10.45
     },
     "cpu_by_container": [
       {
@@ -1448,16 +1549,16 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
         "wait_percent": "0.0"
       },
       {
-        "name": "dea_next/2",
-        "type": "dea",
+        "name": "cell/1",
+        "type": "cell",
         "ip": "169.53.230.49",
         "sys_percent": "5.3",
         "user_percent": "1.9",
         "wait_percent": "0.0"
       },
       {
-        "name": "dea_next/3",
-        "type": "dea",
+        "name": "cell/2",
+        "type": "cell",
         "ip": "169.44.109.231",
         "sys_percent": "8.2",
         "user_percent": "22.6",
@@ -1513,16 +1614,36 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
       }
       ],
         "bandwidth": {
-        "in_mbps": 10855,
-        "out_mbps": 38090
+        "in_kbps": 10855,
+        "out_kbps": 38090
       }
   }
 }
 ```
 {: screen}
 
-* 要收集有关应用程序的数据记录，请使用以下数据格式：
+* 要收集有关配额使用情况的数据记录，请使用以下数据格式：
+ 
+```
+{
+  "sample_time": 1477494000000,
+  "quota": {
+    "reserved_memory": {
+      "total_bytes": 33176474877952
+    },
+    "services": {
+      "total": 111650
+    },
+    "routes": {
+      "total": 1675000
+    }
+  }
+}
+```
+{: screen}
 
+* 要收集有关应用程序的数据记录，请使用以下数据格式：
+ 
 ```
 {
   "sample_time": 1477494000000,
@@ -1547,6 +1668,58 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
 ```
 {: screen}
 
+## 收集有关组织的度量值
+
+大约每小时为所有组织记录一次数据。对特定度量值的请求会返回指定时间段内每次数据采样中的所有组织的信息，信息按请求的度量值降序排列。例如，如果在具有 200 个应用程序的环境中请求 6 小时时间段内按内存列出的所有组织，将返回 1200 个记录，每次返回 200 个。
+
+要减少在请求的时间段内每次数据采样返回的信息量，可以指定 count 选项。使用上面的示例并添加值为 5 的 count 选项时，将返回 30 个记录，这表示每次数据采样中按内存列出的排名前 5 位的组织。
+
+### 组织端点 
+
+您可以使用以下端点来调用此 API 命令：
+* `/api/v1/org/memory/physical`
+* `/api/v1/org/memory/reserved`
+* `/api/v1/org/disk/physical`
+* `/api/v1/org/disk/reserved`
+
+**注**：访问这些端点需要以下某个许可权：**用户读许可权**、**用户写许可权**或**超级用户**
+
+### 组织查询参数
+ 
+使用以下查询参数可收集组织的度量值：
+
+<dl class="parml">
+<dt class="pt dlterm">startTime</dt>
+<dd class="pd">开始返回数据的最早时间点。如果未指定 startTime，那么将包含最早的可用数据点。例如，要收集下午 2 点到 5 点的数据，请将 startTime 指定为 2 PM。</dd>
+<dt class="pt dlterm">endTime</dt>
+<dd class="pd">结束返回数据的最晚时间点。如果未指定 endTime，那么将使用最新的数据点。例如，要收集下午 2 点到 5 点的数据，请将 endTime 指定为 5 PM。</dd>
+<dt class="pt dlterm">count</dt>
+<dd class="pd">每次数据采样中返回的记录数。
+</dd>
+<dt class="pt dlterm">minValue</dt>
+<dd class="pd">针对指定度量值返回的最小值。如果未指定 minValue，那么会返回所有值。例如，要使用至少 20000 字节的物理内存来收集组织，请将 minValue 指定为 20000。
+</dd>
+</dl>
+
+以下示例收集有关组织的度量值：
+
+```
+curl -b ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/admin/metrics/api/v1/org/memory/physical?count=5&startTime=2016-12-02T16:54:09.467Z
+```
+{: codeblock}
+
+### 组织响应格式
+
+```
+{
+   docs: [],
+   next_url:
+}
+```
+{: screen}
+
+返回的每个文档都表示在请求的时间点，在每次数据采样中针对某个组织所请求的度量值。
+
 ## 收集有关应用程序的度量值
 
 所有应用程序的数据大约每小时记录一次。对特定度量值的请求会返回指定时间段内每次数据采样中的所有应用程序的信息，信息按请求的度量值降序排列。例如，在具有 200 个应用程序的环境中，请求 6 小时时间段内按 CPU 列出的所有应用程序，这样将返回 1200 个记录，每次返回 200 个。
@@ -1562,6 +1735,7 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
 * `/api/v1/app/disk/physical`
 * `/api/v1/app/disk/reserved`
 
+**注**：访问这些端点需要以下某个许可权：**用户读许可权**、**用户写许可权**或**超级用户**
 
 ### 应用程序查询参数
  
@@ -1586,6 +1760,7 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
 curl -b ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/admin/metrics/api/v1/app/cpu/physical?count=5&startTime=2016-12-02T16:54:09.467Z
 ```
 {: codeblock}
+
 
 ### 应用程序响应格式
 
@@ -1636,7 +1811,7 @@ POST /codi/v1/serviceBrokers
 | auth_password | 用于与服务代理程序连接的密码。 |
 | broker_url | 用于连接服务代理程序的 URL。 |
 | owningOrganization | 将服务列入白名单时要使用的初始组织。 |
-{: caption="Table 15. Fields" caption-side="top"}
+{: caption="表 15. 字段" caption-side="top"}
 
 #### 主体
 {: #registerbody}
@@ -1711,7 +1886,7 @@ Content-Type: application/json
 | auth_password | 用于与服务代理程序连接的密码。 |
 | broker_url | 用于连接服务代理程序的 URL。 |
 | owningOrganization | 将服务列入白名单时要使用的初始组织。 |
-{: caption="Table 16. Requests" caption-side="top"}
+{: caption="表 16. 请求" caption-side="top"}
 
 #### 主体
 {: #updatebody}
@@ -1773,7 +1948,7 @@ Content-Type: application/json
 | **名称** | **描述** |
 |-----------------|-------------------|
 | name | 服务代理程序的名称。此名称是创建服务时使用的名称，无法更改。 |
-{: caption="Table 17. Parameter" caption-side="top"}
+{: caption="表 17. 参数" caption-side="top"}
 
 ### 路径
 

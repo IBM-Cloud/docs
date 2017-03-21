@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-21"
+lastupdated: "2017-03-16"
 
 ---
 
@@ -12,17 +12,20 @@ lastupdated: "2017-02-21"
 {:screen: .screen}
 {:pre: .pre}
 
-# Exposing your actions via API Gateway (Experimental)
+# API Gateway (Experimental)
 {: #openwhisk_apigateway}
 
-In {{site.data.keyword.openwhisk}} you can invoke your actions using the [REST API](./openwhisk_reference.html#openwhisk_ref_restapi) using an HTTP Request only via a __POST__ method.
-This requires the HTTP client to make the request using the OpenWhisk authorization API key which is a master
-key that in addition of allowing to invoke an action, also allows for deleting and creating more actions.
-{: shortdesc}
+[Web Actions](openwhisk_webactions.html) are released for general availability.
 
-This experimental feature will allow you to invoke an action with HTTP methods other than POST and without the action's authorization API key.
+Web Actions allows you to invoke an action with HTTP methods other than POST and without the action's authorization API key.
 
-Use the CLI to expose your OpenWhisk actions through the OpenWhisk API Gateway. 
+As a result of user feedback, Web Actions are the programming model chosen to build OpenWhisk actions capable of handling HTTP events.
+
+Most of the API Gateway functionality was merged into Web Actions, Web Actions allows you to handle any HTTP request and return HTTP responses with full control from your Web Action.
+
+A revised OpenWhisk API Gateway integration will be available soon. It will be configured to proxy your Web Actions providing them with API Gateway features such as rate limiting, oauth token validation, API keys, and more. See the video [Create and Control APIs](https://youtu.be/XT9KwWTnnzo)
+
+**Note:** The APIs you created using the `wsk api-experimental` will continue to work, however you should begin migrating your APIs to web actions.
 
 ## OpenWhisk CLI configuration
 {: #openwhisk_apigateway_cli}

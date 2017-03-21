@@ -23,7 +23,7 @@ lastupdated: "2017-03-15"
 
 **Note:** The {{site.data.keyword.amashort}} service was previously known as Advanced Mobile Access.
 
-+<!-- Commenting out all getting started content because new users should start with App ID, not this old service.
+<!-- Commenting out all getting started content because new users should start with App ID, not this old service.
 
 Add security to your mobile app with the {{site.data.keyword.amafull}} service. You can configure client authorization for accessing protected back-end resources running on {{site.data.keyword.Bluemix}}. Use identity providers (Google and Facebook), or custom identities to authenticate users and grant access to protected back-end resources and Web apps.
 {:shortdesc}

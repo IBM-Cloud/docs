@@ -23,7 +23,7 @@ lastupdated: "2017-01-12"
 A interface da linha de comandos (CLI) do Cloud Foundry (cf) fornece um conjunto de comandos para gerenciar seus apps. As informações a seguir listam os comandos cf usados mais comumente para gerenciar apps e inclui seus nomes, opções, uso, pré-requisitos, descrições e exemplos. Para listar todos os comandos cf e informações de ajuda associadas, use `cf help`. Use `cf command_name -h` para visualizar informações detalhadas da ajuda para um comando específico.
 {: shortdesc}
 
-**Observação**: se a sua rede contém um servidor proxy HTTP entre o host que executa os comandos cf e o terminal de API Cloud Foundry, deve-se especificar o nome do host ou endereço IP do servidor proxy, configurando a variável de ambiente `HTTP_PROXY`. Para obter detalhes, veja [Usando a CLI cf com um Servidor proxy HTTP ![Ícone de link externo](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}.
+**Observação**: se a sua rede contém um servidor proxy HTTP entre o host que executa os comandos cf e o terminal de API Cloud Foundry, deve-se especificar o nome do host ou endereço IP do servidor proxy, configurando a variável de ambiente `HTTP_PROXY`. Para obter detalhes, veja [Usando o cf CLI com um Servidor proxy HTTP ![Ícone de link externo](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}.
 
 
 ## Índice de comandos da CLI do Cloud Foundry
@@ -814,9 +814,7 @@ cf -v
 ## Links Relacionados
 {: #general}
 
-* [Fazer download da CLI do Cloud Foundry ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases)
+* [Fazer download do Cloud Foundry CLI ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases)
 {: new_window}
-
 * [Cartão de referência rápida - comandos cf ![Ícone de link externo](../../../icons/launch-glyph.svg)](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html)
 {: new_window}
-

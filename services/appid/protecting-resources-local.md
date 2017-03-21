@@ -2,12 +2,11 @@
 
 copyright:
   years:  2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-03-17"
 
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
 
@@ -28,8 +27,7 @@ To use {{site.data.keyword.appid_short_notm}} with a local development server, y
 * APIStrategy: `oauthServerUrl`
 * WebAppStrategy: tenantId, clientId, secret, oauthServerUrl, redirectUri
 
-
-The 'redirectUri' attribute should be set to your localhost app port with the callback path ,i.e: `http://localhost:<port>/callback`. The callback endpoint should finish the authorization process.
+Set your 'redirectUri' attribute to your localhost app port with the callback path, i.e.: `http://localhost:<port>/callback`. The callback endpoint finishes the authorization process.
 
 To get your service credentials, complete the following steps:
 
@@ -44,7 +42,7 @@ For samples and more information, see <a href="https://github.com/ibm-cloud-secu
 
 To configure your apps to work with a local development server, use the local host in each of your requests.
 
-1. Replace the tenant Id with your {{site.data.keyword.appid_short_notm}} tenant Id. You can find this ID in your service dashboard.
+1. Replace the tenant ID with your {{site.data.keyword.appid_short_notm}} tenant ID. You can find this ID in your service dashboard.
 2. Replace the region with the appropriate region as shown in the following table.
 
 <table> <caption> Table 1. {{site.data.keyword.Bluemix_notm}} regions and corresponding Android and iOS SDK regions </caption>
@@ -113,7 +111,7 @@ request.send(this, new ResponseListener() {
 
  let baseRequestUrl = "http://localhost:<port>"; //set to your server running port
  let tenantId = "your-AppID-service-tenantID"
- let region = AppID.Region.unitedKingdom; //set your App ID application region here. Currently possible values are AppID.Region.usSouth, AppID.Region.sydney, or AppID.Region.unitedKingdom.
+ let region = BMSClient.Region.unitedKingdom; //set your App ID application region here. Currently possible values are BMSClient.Region.usSouth, BMSClient.Region.sydney, or BMSClient.Region.unitedKingdom.
 
 BMSClient.sharedInstance.initialize(bluemixRegion: region)
 BMSClient.sharedInstance.authorizationManager = AppIDAuthorizationManager(appid:AppID.sharedInstance)

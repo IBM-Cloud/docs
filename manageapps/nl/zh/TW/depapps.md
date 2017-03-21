@@ -27,12 +27,12 @@ Cloud Foundry 支援 Diego，Diego 是新的預設運行環境架構，可提供
 
 您建立的所有新應用程式都會在 Diego 上執行，而且您必須開始將 DEA 上執行的現有應用程式移轉至新的 Diego 架構。
 
-**附註**：Cloud Foundry Diego 架構會影響所有「{{site.data.keyword.Bluemix_notm}} 公用」地區環境。稍後將會更新「{{site.data.keyword.Bluemix_notm}} 專用」及「{{site.data.keyword.Bluemix_notm}} 本端」環境。
+**附註**：Cloud Foundry Diego 架構會影響所有「{{site.data.keyword.Bluemix_notm}} 公用」地區環境。「{{site.data.keyword.Bluemix_notm}} 專用」及「{{site.data.keyword.Bluemix_notm}} 本端」環境則會在稍晚的日期更新。
 
 ### 編譯打包應用程式
 {: #diego}
 
-在編譯打包階段期間，Diego 會處理所有與應用程式容器編排相關的層面。當您推送應用程式時，Cloud Controller 會將編譯打包要求傳送給 Diego，而 Diego 會處理應用程式實例的配置作業。Diego 後端會透過確保容錯及長期一致性的方式來編排應用程式容器，以平衡一系列虛擬機器（稱為儲存格）的負載。此外，Diego 確保使用者可以存取其應用程式的日誌。所有 Diego 元件的設計旨在叢集化，表示您可以建立不同的可用性區域。
+在編譯打包階段期間，Diego 會處理所有與應用程式容器編排相關的層面。當您推送應用程式時，Cloud Controller 會將編譯打包要求傳送給 Diego，而 Diego 則接手應用程式實例的配置作業。Diego 後端會透過確保容錯及長期一致性的方式來編排應用程式容器，以平衡一系列虛擬機器（稱為 Cell）的負載。此外，Diego 確保使用者可以存取其應用程式的日誌。所有 Diego 元件都設計為叢集化，這表示您可以建立不同的可用性區域。
 
 為了驗證應用程式性能，Diego 支援之前用於 DEA 的相同 PORT 型檢查。不過，Diego 的設計也可以具有更多的一般選項（如 URL 型性能檢查），未來可能會啟用這些選項。
 
@@ -51,9 +51,9 @@ Cloud Foundry 支援 Diego，Diego 是新的預設運行環境架構，可提供
 ### 將現有應用程式移轉至 Diego
 {: #migrateapp}
 
-Diego 是 {{site.data.keyword.Bluemix_notm}} 的預設 Cloud Foundry 架構，將移除 DEA 支援，因此您必須更新每一個應用程式來移轉所有現有應用程式。請開始將應用程式移轉至 Diego，方法是使用 Diego 旗標來更新應用程式。應用程式會立即嘗試開始在 Diego 上執行，並停止在 DEA 上執行。 
+Diego 是 {{site.data.keyword.Bluemix_notm}} 的預設 Cloud Foundry 架構，而且我們將會移除 DEA 支援，因此您必須更新每一個應用程式來移轉所有現有應用程式。請開始將應用程式移轉至 Diego，方法是使用 Diego 旗標來更新應用程式。應用程式會立即嘗試開始在 Diego 上執行，並停止在 DEA 上執行。
 
-因為您的應用程式是從 DEA 架構更新為 Diego，所以如果應用程式與 Diego 不相容，您可能會經歷短時間的關閉或長時間的關閉。若要限制關閉時間，請執行[藍綠部署](/docs/manageapps/updapps.html#blue_green)，方法是將應用程式副本部署至 Diego，然後交換路徑並縮減 DEA 應用程式。
+當您的應用程式從 DEA 架構更新到 Diego 時，可能會經歷短時間的關閉，如果應用程式與 Diego 不相容則關閉時間可能會延長。若要限制關閉時間，請執行[藍綠部署](/docs/manageapps/updapps.html#blue_green)，方法是將應用程式副本部署至 Diego，然後交換路徑並縮減 DEA 應用程式。
 
 完成下列步驟，以將應用程式移轉至 Diego：
 
@@ -64,10 +64,10 @@ Diego 是 {{site.data.keyword.Bluemix_notm}} 的預設 Cloud Foundry 架構，�
   $ cf enable-diego APPLICATION_NAME
   ```
 
-更新您的應用程式之後，請確認您的應用程式已啟動。如果您的已移轉應用程式無法啟動，則除非您識別及解決問題，然後重新啟動應用程式，否則應用程式會保持離線。
+更新您的應用程式之後，請確認您的應用程式已啟動。如果您的已移轉應用程式無法啟動，則在您識別並解決問題，然後重新啟動應用程式之前，應用程式會保持離線。
 
-IBM 會在移除 DEA 架構支援時，警示您即將發生必要移轉，如果您尚未移轉應用程式，則作業團隊將會移轉所有應用程式。
-  
+IBM 會在移除 DEA 架構支援時，警示您即將發生的強制移轉期間，如果您尚未移轉應用程式，作業團隊會為您移轉所有應用程式。
+
 若要驗證應用程式是在哪個後端上執行，請使用下列指令：
 
   ```
@@ -85,7 +85,7 @@ IBM 會在移除 DEA 架構支援時，警示您即將發生必要移轉，如�
 
 如需完整的已知問題清單，請參閱 [Migrating to Diego ![外部鏈結圖示](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/diego-design-notes/blob/master/migrating-to-diego.md){: new_window} 的 Cloud Foundry 文件頁面。
 
-除非舊 DEA 架構支援已被移除，否則您可以執行下列指令來轉移回 DEA：`cf disable-diego APPLICATION_NAME`。除非支援已被移除，否則您還是可以將新的應用程式部署至 DEA 架構：
+在移除舊 DEA 架構的支援之前，您可以執行下列指令，轉移回 DEA：`cf disable-diego APPLICATION_NAME`。在移除支援之前，您仍可將新的應用程式部署至 DEA 架構：
 
 **附註**：您必須已安裝 [cf CLI ![外部鏈結圖示](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window} 及 [Diego-Enabler CLI 外掛程式 ![外部鏈結圖示](../icons/launch-glyph.svg)](https://github.com/cloudfoundry-incubator/Diego-Enabler){:new_window}，才能使用 `disable-diego` 指令。
 
@@ -105,9 +105,9 @@ $ cf start APPLICATION_NAME
 ### 啟動應用程式
 {: #startapp}
 
-啟動應用程式時，即會建立應用程式容器實例。針對在 Diego 上執行的應用程式，您可以使用 **cf ssh** 或 **cf scp** 指令來存取包括日誌之應用程式容器的檔案系統。**cf files** 指令不適用於在 Diego 架構上執行的應用程式。
+啟動應用程式時，即會建立應用程式容器實例。針對在 Diego 上執行的應用程式，您可以使用 **cf ssh** 或 **cf scp** 指令來存取包括日誌的應用程式容器檔案系統。**cf files** 指令不適用於在 Diego 架構上執行的應用程式。
 
-**附註**：如果您仍然有在 DEA 上執行的應用程式，則除非 DEA 支援已被移除，否則可以使用 **cf files** 指令來檢視應用程式容器內的檔案。
+**附註**：如果您仍然有在 DEA 上執行的應用程式，則在移除 DEA 支援之前，您可以使用 **cf files** 指令來檢視應用程式容器內的檔案。
 
 如果應用程式無法啟動，則會停止該應用程式，並移除應用程式容器的所有內容。因此，如果應用程式停止或應用程式的編譯打包處理程序失敗，您將無法使用日誌檔。
 
@@ -237,9 +237,9 @@ cf push -f appManifest.yml
 |**random-route**	|布林值，將隨機路徑指派給應用程式。預設值為 **false**。	|`random-route: true`|
 |**services**	|要連結至應用程式的服務。	|`services:   - mysql_maptest`|
 |**env**	|應用程式的自訂環境變數。|`env: DEV_ENV: production`|
-{: caption="Table 1. Supported options in the manifest YAML file" caption-side="top"}
+{: caption="表 1. 資訊清單 YAML 檔案中的支援選項" caption-side="top"}
 
-### 範例 `manifest.yml` 檔案
+### 範例 manifest.yml 檔案
 
 下列範例顯示 Node.js 應用程式的資訊清單檔，該應用程式在 {{site.data.keyword.Bluemix_notm}} 中使用內建的社群 Node.js 建置套件。
 
@@ -418,7 +418,7 @@ cf push -f appManifest.yml
 	  <dt><strong>WLP_OUTPUT_DIR</strong></dt>
 	  <dd>所產生輸出的位置，例如執行中 Liberty 設定檔伺服器實例的日誌檔及工作目錄。</dd>
 	  </dl>
-</li>   
+</li>
 <li>下列變數透過「Node.js 建置套件」定義：
 	<dl>
 	<dt><strong>BUILD_DIR</strong></dt>
@@ -465,7 +465,7 @@ if (process.env.VCAP_SERVICES) {
 
 
   ```
-  command: node app.js
+command: node app.js
   ```
 
 
@@ -521,7 +521,7 @@ tmp/
 ```
 
 # 相關鏈結
-{: #rellinks}
+{: #rellinks notoc}
 
 ## 相關鏈結
 {: #general}

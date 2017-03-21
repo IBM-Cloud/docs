@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-03-17"
 
 ---
 
@@ -22,7 +22,7 @@ Add security to your applications with the {{site.data.keyword.appid_full}} serv
 2. Give your service instance a name, or use the preset name.
 3. To bind your instance, select an app from the **Connect to** drop-down menu. If you select **Leave unbound**, you can bind the service instance later.
 4. Select your pricing plan and click **Create**.
-5. Use the instructions in the UI to download the out-of-the-box samples. The samples help you to get up and running with {{site.data.keyword.appid_short_notm}}.
+5. Use the instructions in the UI to download the sample apps. The samples help you to get up and running with {{site.data.keyword.appid_short_notm}}.
 
 
 
@@ -34,7 +34,7 @@ Add security to your applications with the {{site.data.keyword.appid_full}} serv
 ## API Reference
 {: #api notoc}
 
-* [{{site.data.keyword.appid_short_notm}} oauth-flows](http://mobileclientaccess.stage1.mybluemix.net/swagger-ui/#!/Authorization_Server_V3/authorization)
+* [{{site.data.keyword.appid_short_notm}} oauth-flows](https://appid-oauth.ng.bluemix.net/swagger-ui/#!/Authorization_Server_V3/authorization)
 
 ## SDK
 {: #sdk notoc}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-29"
+  years: 2015, 2017
+lastupdated: "2017-2-21"
 
 ---
 
@@ -40,18 +40,17 @@ iFrame integrado, elas permanecem em seu conteúdo em vez de serem redirecionada
 
 <p>
 A <a class="xref" href="http://d2bm-iframe-sample.ng.bluemix.net/" target="_blank" title="(Abre em uma nova guia ou janela)">Amostra do
-IBM Bluemix D2BM iFrame</a> fornece um exemplo de fluxo do iFrame
-para um repositório Git público.<div class="image"><img class="image" src="images/d2bm_iframe_sample2.png" alt="Implementar na amostra do fluxo de iFrame do Bluemix" /></div>
+IBM Bluemix D2BM iFrame<img class="image" src="../icons/launch-glyph.svg" alt="Ícone de link externo"/></a> fornece um exemplo de fluxo do iFrame para um repositório Git público.<div class="image"><img class="image" src="images/d2bm_iframe_sample2.png" alt="Implementar na amostra do fluxo de iFrame do Bluemix" /></div>
 </p>
 
 <p>
-Para visualizar a origem dessa amostra, clique em <a class="xref" href="https://hub.jazz.net/project/idsorg/d2bm-iframe-sample/overview" target="_blank" title="(Abre em uma nova guia ou janela)">origem</a>.
+Para visualizar a origem dessa amostra, clique em <a class="xref" href="https://hub.jazz.net/project/idsorg/d2bm-iframe-sample/overview" target="_blank" title="(Abre em uma nova guia ou janela)">origem<img class="image" src="../icons/launch-glyph.svg" alt="Ícone de link externo"/></a>.
 </p>
 
 ##Integrando o fluxo do iFrame {: #embed-iframe}  
 
 <ol>
-<li>Carregue o utilitário JavaScript a partir de <a href="https://bluemix.net/deploy/embed.js" target="_blank">https://bluemix.net/deploy/embed.js</a>. Esse utilitário depende do jQuery e é carregado incluindo a tag de script a seguir em seu documento:
+<li>Carregue o utilitário JavaScript em <a class="xref" href="https://bluemix.net/deploy/embed.js" target="_blank" title="(Abre em uma nova guia ou janela)">https://bluemix.net/deploy/embed.js<img class="image" src="../icons/launch-glyph.svg" alt="Ícone de link externo"/></a>. Esse utilitário depende do jQuery e é carregado incluindo a tag de script a seguir em seu documento:
 <pre class="pre">
 <code>&lt;script type="text/javascript" src="https://bluemix.net/deploy/embed.js"&gt;&lt;/script&gt;</code>
 </pre>

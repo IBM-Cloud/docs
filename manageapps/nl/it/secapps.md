@@ -12,14 +12,14 @@ lastupdated: "2017-01-11"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#Protezione delle applicazioni
+# Protezione delle applicazioni
 {: #securingapps}
 
 
 Puoi proteggere le tue applicazioni caricando dei certificati SSL e limitando l'accesso alle applicazioni.
 {:shortdesc}
 
-##Creazione di richieste di firma del certificato
+## Creazione di richieste di firma del certificato
 {: #ssl_csr}
 
 Prima di poter caricare i certificati SSL a cui hai diritto con {{site.data.keyword.Bluemix}}, devi creare una richiesta di firma del certificato, o CSR, sul tuo server.

@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-01-24"
+lastupdated: "2017-02-16"
 
 ---
 
@@ -16,16 +16,16 @@ lastupdated: "2017-01-24"
 # Introduzione alla CLI {{site.data.keyword.Bluemix_notm}}
 {: #getting-started}
 
-La CLI {{site.data.keyword.Bluemix_notm}} ti fornisce un modo unico di interagire con le tue applicazioni, server virtuali, contenitori e altri servizi in {{site.data.keyword.Bluemix_notm}} utilizzando un'interfaccia riga di comando. La CLI {{site.data.keyword.Bluemix_notm}} integra inoltre gli strumenti della community, come le CLI Cloud Foundry, Docker e OpenStack e inizializza le impostazioni dell'ambiente per interagire con diversi tipi di calcolo.
+La CLI {{site.data.keyword.Bluemix_notm}} ti fornisce un modo unico di interagire con le tue applicazioni, server virtuali, contenitori e altri servizi utilizzando un'interfaccia riga di comando. La CLI {{site.data.keyword.Bluemix_notm}} integra inoltre gli strumenti della community, come le CLI Cloud Foundry, Docker e OpenStack e inizializza le impostazioni dell'ambiente per interagire con diversi tipi di calcolo.
 
 **Restrizione**: la CLI {{site.data.keyword.Bluemix_notm}} non è supportata da Cygwin, per cui non utilizzare la CLI {{site.data.keyword.Bluemix_notm}} nella finestra della riga di comando di Cygwin.
 
 **Nota**: se la tua rete contiene un server proxy HTTP tra l'host che esegue la CLI e {{site.data.keyword.Bluemix_notm}}, devi specificare il nome host o l'indirizzo IP del server proxy nella variabile di ambiente HTTP_PROXY.
 
-## Installazine della CLI {{site.data.keyword.Bluemix_notm}}
+## Installazione della CLI {{site.data.keyword.Bluemix_notm}}
 {: #install_bluemix_cli}
 
-Prima di installare la CLI {{site.data.keyword.Bluemix_notm}}, assicurati che sia installata la CLI Cloud Foundry sul tuo sistema.
+Prima di installare la CLI {{site.data.keyword.Bluemix_notm}}, installa la [CLI cf ![icona link esterno](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}.
 
 Per Mac OS e Windows, scarica il [pacchetto CLI {{site.data.keyword.Bluemix_notm}}](/docs/cli/index.html#downloads) ed esegui il programma di installazione.
 
@@ -60,12 +60,12 @@ esempio:
   ~/Bluemix_CLI#
   ```
 
-Puoi ora utilizzare la CLI {{site.data.keyword.Bluemix_notm}} o installare ulteriori plugin.
+Puoi ora iniziare a utilizzare la CLI {{site.data.keyword.Bluemix_notm}} o installare ulteriori plug-in.
 
 ## Installazione di un plugin
 {: #install_plug-in}
 
-Come la CLI Cloud Foundry, la CLI {{site.data.keyword.Bluemix_notm}} supporta anche un framework di estensione plugin per integrare altri comandi oltre a quelli integrati.
+Come la CLI Cloud Foundry, la CLI {{site.data.keyword.Bluemix_notm}} supporta un framework di estensione plug-in per integrare altri comandi oltre a quelli già integrati.
 
 Per installare un plugin dal tuo ambiente locale, completa la seguente procedura:
 
@@ -142,7 +142,7 @@ esempio:
   ~$
   ```
 
-  2. Quindi, installa il plugin dal repository `Bluemix` utilizzando il comando `bluemix plugin install`. Ad
+  2. Installa il plug-in dal repository `Bluemix` utilizzando il comando `bluemix plugin install`. Ad
 esempio:
 
   ```
@@ -158,7 +158,7 @@ esempio:
 ## Accesso alla CLI {{site.data.keyword.Bluemix_notm}}
 {: #log_bmcli}
 
-Dopo aver installato la CLI {{site.data.keyword.Bluemix_notm}}, puoi accedere a {{site.data.keyword.Bluemix_notm}} utilizzando i tuoi account e password {{site.data.keyword.Bluemix_notm}}. Ad
+Dopo aver installato la CLI {{site.data.keyword.Bluemix_notm}}, puoi accedere a {{site.data.keyword.Bluemix_notm}} utilizzando il tuo ID IBM e password. Ad
 esempio:
 
 ```
@@ -172,7 +172,7 @@ Authenticating...
 OK
 ```
 
-Sei ora pronto ad utilizzare i comandi integrati {{site.data.keyword.Bluemix_notm}}. Ad esempio, esegui il comando `bluemix catalog templates` per elencare tutti i template di contenitore tipo {{site.data.keyword.Bluemix_notm}} disponibili:
+Sei ora pronto a utilizzare i comandi integrati di {{site.data.keyword.Bluemix_notm}}. Ad esempio, esegui il comando `bluemix catalog templates` per elencare tutti i template di contenitore tipo {{site.data.keyword.Bluemix_notm}} disponibili:
 
 ```
 ~$ bluemix catalog templates
@@ -1012,8 +1012,8 @@ Invia di nuovo l'invito a un utente (è richiesto il gestore organizzazione o il
 ```
  bluemix iam account-user-reinvite USER_EMAIL ORG_NAME
 ```
- 
- 
+
+
 ### bluemix iam org-users
 {: #bluemix_iam_org_users}
 

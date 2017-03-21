@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-01-12"
+lastupdated: "2017-02-20"
 
 ---
 
@@ -36,14 +36,10 @@ lastupdated: "2017-01-12"
 <ol>
 <li>若要新增 {{site.data.keyword.Bluemix_notm}} 管理外掛程式儲存庫，請執行下列指令：<br/><br/>
 <code>
-cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cli
+cf add-plugin-repo BluemixAdmin http://plugins.ng.bluemix.net
 </code><br/><br/>
-<dl class="parml">
-<dt class="pt dlterm">&lt;subdomain&gt;</dt>
-<dd class="pd">您的 {{site.data.keyword.Bluemix_notm}} 實例 URL 的子網域。例如，<code>https://console.mycompany.bluemix.net/cli</code></dd>
-</dl>
 </li>
-<li>若要安裝「{{site.data.keyword.Bluemix_notm}} 管理 CLI」外掛程式，請執行下列指令：<br/><br/>
+<li>若要安裝 {{site.data.keyword.Bluemix_notm}} 管理 CLI 外掛程式，請執行下列指令：<br/><br/>
 <code>
 cf install-plugin BluemixAdminCLI -r BluemixAdmin
 </code>
@@ -86,7 +82,7 @@ cf ba api https://console.&lt;subdomain&gt;.bluemix.net
 </dl>
 <p>您可以查看「管理主控台」的「資源及資訊」頁面，以取得正確的 URL。URL 顯示在「API 資訊」區段的 **API URL** 欄位中。</p>
 </li>
-<li>使用下列指令來登入 {{site.data.keyword.Bluemix_notm}}：<br/><br/>
+<li>使用下列指令登入 {{site.data.keyword.Bluemix_notm}}：<br/><br/>
 <code>
 cf login
 </code>
@@ -102,7 +98,7 @@ cf login
 若要從環境的使用者登錄中，將使用者新增至 {{site.data.keyword.Bluemix_notm}} 環境，請使用下列指令：
 
 ```
-cf ba add-user <user_name> <organization>
+cf ba add-user <user_name> <organization> <first_name> <last_name>
 ```
 {: codeblock}
 
@@ -113,6 +109,10 @@ cf ba add-user <user_name> <organization>
 <dd class="pd">LDAP 登錄中的使用者名稱。</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">要新增使用者之 {{site.data.keyword.Bluemix_notm}} 組織的名稱或 GUID。</dd>
+<dt class="pt dlterm">&lt;first_name&gt;</dt>
+<dd class="pd">要新增至組織的使用者的名字。</dd>
+<dt class="pt dlterm">&lt;last_name&gt;</dt>
+<dd class="pd">要新增至組織的使用者的姓氏。</dd>
 </dl>
 
 **提示：**您也可以使用 **ba au** 作為較長的 **ba add-user** 指令名稱的別名。
@@ -198,7 +198,7 @@ cf ba enable-managers-add-users
 ```
 {: codeblock}
 
-**提示：**您也可以使用 **ba emau** 作為較長 **ba enable-managers-add-users** 指令名稱的別名。
+**提示：**您也可以使用 **ba emau** 作為較長的 **ba enable-managers-add-users** 指令名稱的別名。
 
 ### 禁止管理員新增使用者
 {: #clius_dmau}
@@ -210,7 +210,7 @@ cf ba disable-managers-add-users
 ```
 {: codeblock}
 
-**提示：**您也可以使用 **ba dmau** 作為較長 **ba disable-managers-add-users** 指令名稱的別名。
+**提示：**您也可以使用 **ba dmau** 作為較長的 **ba disable-managers-add-users** 指令名稱的別名。
 
 ## 管理組織
 {: #admin_orgs}
@@ -221,7 +221,7 @@ cf ba disable-managers-add-users
 若要新增組織，請使用下列指令：
 
 ```
-cf ba create-organization <organization> <manager>
+cf ba create-org <organization> <manager>
 ```
 {: codeblock}
 
@@ -232,7 +232,7 @@ cf ba create-organization <organization> <manager>
 <dd class="pd">組織管理員的使用者名稱。</dd>
 </dl>
 
-**提示：**您也可以使用 **ba co** 作為較長的 **ba create-organization** 指令名稱的別名。
+**提示：**您也可以使用 **ba co** 作為較長的 **ba create-org** 指令名稱的別名。
 
 ### 刪除組織
 {: #admin_delete_org}
@@ -240,7 +240,7 @@ cf ba create-organization <organization> <manager>
 若要刪除組織，請使用下列指令：
 
 ```
-cf ba delete-organization <organization>
+cf ba delete-org <organization>
 ```
 {: codeblock}
 
@@ -249,7 +249,7 @@ cf ba delete-organization <organization>
 <dd class="pd">要刪除之 {{site.data.keyword.Bluemix_notm}} 組織的名稱或 GUID。</dd>
 </dl>
 
-**提示：**您也可以使用 **ba do** 作為較長的 **ba delete-organization** 指令名稱的別名。
+**提示：**您也可以使用 **ba do** 作為較長的 **ba delete-org** 指令名稱的別名。
 
 ### 將使用者指派至組織
 {: #admin_ass_user_org}
@@ -409,6 +409,97 @@ JSON 檔案應該具有下列範例中所顯示的格式：
 
 **提示：**您也可以使用 **ba scq** 作為較長的 **bluemix-admin set-containers-quota** 指令名稱的別名。
 
+## 管理空間
+{: #admin_spaces}
+
+### 將空間新增至組織
+
+若要在組織中新增空間，請使用下列指令：
+
+```
+cf bluemix-admin create-space <organization> <space_name>
+```
+
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">要在其中新增空間的組織的名稱或 GUID。</dd>
+<dt class="pt dlterm">&lt;space_name&gt;</dt>
+<dd class="pd">要在組織中建立的空間的名稱。</dd>
+</dl>
+
+**提示：**您也可以使用 **ba cs** 作為較長的 **ba create-space** 指令名稱的別名。
+
+### 刪除組織中的空間
+
+若要移除組織中的空間，請使用下列指令：
+
+```
+cf bluemix-admin delete-space <organization> <space_name>
+```
+
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">要從中移除空間的組織的名稱或 GUID。</dd>
+<dt class="pt dlterm">&lt;space_name&gt;</dt>
+<dd class="pd">要從組織中移除的空間的名稱。</dd>
+</dl>
+
+**提示：**您也可以使用 **ba cs** 作為較長的 **ba delete-space** 指令名稱的別名。
+
+### 在空間中新增具有某角色的使用者
+
+若要在空間中建立具有指定角色的使用者，請使用下列指令：
+
+```
+cf bluemix-admin set-space <organization> <space_name> <user_name> <role>
+```
+
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">要在其中新增使用者的組織的名稱或 GUID。</dd>
+<dt class="pt dlterm">&lt;space_name&gt;</dt>
+<dd class="pd">要在其中新增使用者的空間的名稱。</dd>
+<dt class="pt dlterm">&lt;user_anme&gt;</dt>
+<dd class="pd">要新增的使用者的名稱。</dd>
+<dt class="pt dlterm">&lt;role&gt;</dt>
+<dd class="pd">要指派的使用者的角色。此值可以是 Manager、Developer 或 Auditor。請參閱[指派角色](/docs/admin/users_roles.html)，以取得空間中的 {{site.data.keyword.Bluemix_notm}} 使用者角色及說明。</dd>
+</dl>
+
+**提示：**您也可以使用 **ba ss** 作為較長的 **ba set-space** 指令名稱的別名。
+
+
+### 移除空間中的使用者角色 
+
+若要移除空間中的使用者角色，請使用下列指令：
+
+```
+cf bluemix-admin unset-space <organization> <space_name> <user_name> <role>
+```
+
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">要在其中新增使用者的組織的名稱或 GUID。</dd>
+<dt class="pt dlterm">&lt;space_name&gt;</dt>
+<dd class="pd">要在其中新增使用者的空間的名稱。</dd>
+<dt class="pt dlterm">&lt;user_anme&gt;</dt>
+<dd class="pd">要新增的使用者的名稱。</dd>
+<dt class="pt dlterm">&lt;role&gt;</dt>
+<dd class="pd">要指派的使用者的角色。此值可以是 Manager、Developer 或 Auditor。請參閱[指派角色](/docs/admin/users_roles.html)，以取得空間中的 {{site.data.keyword.Bluemix_notm}} 使用者角色及說明。</dd>
+</dl>
+
+**提示：**您也可以使用 **ba us** 作為較長的 **ba unset-space** 指令名稱的別名。
+
+## 管理型錄
+{: #admin_catalog}
+
 ### 啟用所有組織的服務
 {: #admin_ena_service_org}
 
@@ -557,17 +648,13 @@ cf ba delete-report <category> <date> <name>
 若要擷取安全報告，請使用下列指令：
 
 ```
-cf ba retrieve-report <category> <date> <name>
+cf ba retrieve-report <search>
 ```
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;category&gt;</dt>
-<dd class="pd">報告的種類。如果名稱中有空格，請使用引號括住該名稱。</dd>
-<dt class="pt dlterm">&lt;date&gt;</dt>
-<dd class="pd">報告日期，格式為 <samp class="ph codeph">YYYYMMDD</samp>。</dd>
-<dt class="pt dlterm">&lt;name&gt;</dt>
-<dd class="pd">報告的名稱。</dd>
+<dt class="pt dlterm">&lt;search&gt;</dt>
+<dd class="pd">報告的檔名。如果名稱中有空格，請使用引號括住該名稱。</dd>
 </dl>
 
 **提示：**您也可以使用 **ba rr** 作為較長的 **ba retrieve-report** 指令名稱的別名。
@@ -575,7 +662,7 @@ cf ba retrieve-report <category> <date> <name>
 ## 檢視資源度量值資訊
 {: #cliresourceusage}
 
-您可以檢視資源度量值資訊（包括記憶體用量、磁碟用量及 CPU 使用率）。您可以查看可用的實體資源與保留資源的摘要，以及實體資源與保留資源用量的摘要。您也可以查看 Droplet Execution Agent (DEA) 用量資料以及歷程記憶體和磁碟用量。預設會以遞減順序顯示每週的記憶體及磁碟用量歷程資料。若要檢視資源度量值資訊，請使用下列指令：
+您可以檢視資源度量值資訊（包括記憶體用量、磁碟用量及 CPU 用量）。您可以查看可用的實體資源與保留資源的摘要，以及實體資源與保留資源用量的摘要。您也可以查看 Droplet Execution Agent (DEA) 及 Cell（Diego 架構）用量資料以及歷程記憶體和磁碟用量。預設會以遞減順序顯示每週的記憶體及磁碟用量歷程資料。若要檢視資源度量值資訊，請使用下列指令：
 
 ```
 cf ba resource-metrics <monthly> <weekly>
@@ -896,7 +983,7 @@ cf ba buildpacks <buildpack_name>
 <dd class="pd">選用參數，可指定要檢視的特定建置套件。</dd>
 </dl>
 
-**提示：**您也可以使用 **ba lb** 作為較長 **ba buildpacks** 指令名稱的別名。
+**提示：**您也可以使用 **ba lb** 作為較長的 **ba buildpacks** 指令名稱的別名。
 
 ### 建立及上傳建置套件
 {: #clicreupbuildpack}
@@ -917,7 +1004,7 @@ cf ba create-buildpack <buildpack_name> <file_path> <position>
 <dd class="pd">在建置套件自動偵測期間檢查建置套件的順序。</dd>
 </dl>
 
-**提示：**您也可以使用 **ba cb** 作為較長 **ba create-buildpack** 指令名稱的別名。
+**提示：**您也可以使用 **ba cb** 作為較長的 **ba create-buildpack** 指令名稱的別名。
 
 ### 更新建置套件
 {: #cliupdabuildpack}
@@ -940,7 +1027,7 @@ cf ba update-buildpack <buildpack_name> <position> <enabled> <locked>
 <dd class="pd">指出是否鎖定建置套件，以防止更新。</dd>
 </dl>
 
-**提示：**您也可以使用 **ba ub** 作為較長 **ba update-buildpack** 指令名稱的別名。
+**提示：**您也可以使用 **ba ub** 作為較長的 **ba update-buildpack** 指令名稱的別名。
 
 ### 刪除建置套件
 {: #clidelbuildpack}
@@ -957,4 +1044,4 @@ cf ba delete-buildpack <buildpack_name>
 <dd class="pd">要刪除之建置套件的名稱。</dd>
 </dl>
 
-**提示：**您也可以使用 **ba db** 作為較長 **ba delete-buildpack** 指令名稱的別名。
+**提示：**您也可以使用 **ba db** 作為較長的 **ba delete-buildpack** 指令名稱的別名。

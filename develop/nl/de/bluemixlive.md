@@ -3,8 +3,8 @@
 
 
 copyright:
-  years: 2015，2016
-lastupdated: "2016-10-19"
+  years: 2015，2017
+lastupdated: "2017-2-21"
 
 ---
 
@@ -59,7 +59,7 @@ Die folgenden Aspekte sind bei Desktop Sync zu beachten:
 Weitere Details zu den Befehlen finden Sie unter [Bluemix Live Sync-Befehle (bl)](bluemixlive.html#bl-commands).
 
 <ol>
-<li>Melden Sie sich für ein kostenloses Konto für <a class="xref" href="https://hub.jazz.net/" target="_blank" alt="Bluemix DevOps Services">Bluemix DevOps Services</a> an.</li>
+<li>Melden Sie sich für ein kostenloses <a class="xref" href="https://hub.jazz.net/" target="_blank" title="(Wird in einer neuen Registerkarte oder in einem neuen Fenster geöffnet)">Bluemix DevOps Services-Konto<img class="image" src="../icons/launch-glyph.svg" alt="Symbol für externen Link"/></a> an.</li>
 <li>Laden Sie die Befehlszeile 'bl' für {{site.data.keyword.Bluemix_notm}} Live Sync herunter und installieren Sie sie.   
 <p>
 <a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/blive_setup.msi" target="_blank" title="(Wird in einer neuen Registerkarte oder in einem neuen Fenster geöffnet)"><img class="image" src="images/bl_gs_icons_windows_b.svg" alt="Schaltfläche zum Herunterladen der Windows-Befehlszeile 'bl'" /> </a>
@@ -71,7 +71,7 @@ Weitere Details zu den Befehlen finden Sie unter [Bluemix Live Sync-Befehle (bl)
 <li>Melden Sie sich in einer Befehlszeile mit dem folgenden Befehl an. Sie werden zur Eingabe Ihrer Benutzer-ID und des entsprechenden Kennworts aufgefordert.  
 <pre class="codeblock">bl login</pre>
 
-<strong>Hinweis:</strong> Ihre Benutzer-ID für DevOps Services kann entweder eine IBMid oder eine eingebundene ID (Unternehmens-ID) sein. Wenn Sie die eingebundene Authentifizierung für die Anmeldung am Bluemix Live Sync-Befehlszeilenclient verwenden, müssen Sie ein persönliches Zugriffstoken anstatt eines Kennworts verwenden. Wenn Sie die eingebundene Authentifizierung nicht verwenden, funktionieren die IBMid und das zugehörige Kennwort bei allen Clients. Weitere Informationen zum Erstellen eines persönlichen Zugriffstokens finden Sie unter <a class="xref" href="https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/" target="_blank" alt="Bluemix DevOps Services"> What's federated authentication and how does it affect me?</a>.
+<strong>Hinweis:</strong> Ihre Benutzer-ID für DevOps Services kann entweder eine IBMid oder eine eingebundene ID (Unternehmens-ID) sein. Wenn Sie die eingebundene Authentifizierung für die Anmeldung am Bluemix Live Sync-Befehlszeilenclient verwenden, müssen Sie ein persönliches Zugriffstoken anstatt eines Kennworts verwenden. Wenn Sie die eingebundene Authentifizierung nicht verwenden, funktionieren die IBMid und das zugehörige Kennwort bei allen Clients. Weitere Informationen zum Erstellen eines persönlichen Zugriffstokens finden Sie unter <a class="xref" href="https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/" target="_blank" title="(Wird in einer neuen Registerkarte oder in einem neuen Fenster geöffnet)">What's federated authentication and how does it affect me?<img class="image" src="../icons/launch-glyph.svg" alt="Symbol für externen Link"/></a>.
 </li>
 
 <li>Zeigen Sie die Liste der für die {{site.data.keyword.Bluemix_notm}} Live Sync-Synchronisation verfügbaren Projekte an, indem Sie den folgenden Befehl eingeben:
@@ -103,7 +103,7 @@ Klicken Sie in der Web-IDE in der Ausführungsleiste auf **Live Edit**.
 
 Mit Live Edit können Sie schnell Änderungen an in {{site.data.keyword.Bluemix_notm}} ausgeführten Node.js-Anwendungen als Vorschau anzeigen. Wenn Sie den Code bei aktiviertem Live Edit-Feature aktualisieren, können Sie das Browserfenster Ihrer Webanwendung aktualisieren, um diese Änderungen Sekunden nach deren Durchsetzung anzeigen zu lassen.
 
-Ein Lernprogramm zur Verwendung des Live Edit-Features von {{site.data.keyword.Bluemix_notm}} Live Sync finden Sie im [Lernprogramm zum Testen und Debuggen einer Node.js-App mit Bluemix Live Sync](https://hub.jazz.net/tutorials/livesync).
+Ein Lernprogramm zur Verwendung des Live Edit-Features von {{site.data.keyword.Bluemix_notm}} Live Sync finden Sie im [Lernprogramm zum Testen und Debuggen einer Node.js-App mit Bluemix Live Sync![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://hub.jazz.net/tutorials/livesync){:new_window}.
 
 Wenn Sie die Dateien in der Web-IDE ändern, werden sie automatisch erneut für die aktive Anwendung in {{site.data.keyword.Bluemix_notm}} bereitgestellt. Wenn Sie die Node-Anwendung erneut starten müssen, können Sie die Schaltfläche **Erneut starten** in der Ausführungsleiste verwenden.
 
@@ -118,7 +118,7 @@ Mit dem Debug-Feature können Sie Code dynamisch bearbeiten, Unterbrechungspunkt
 {{site.data.keyword.Bluemix_notm}} Live Debug enthält die folgenden Features:
 
 * Anwendungslaufzeitsteuerung
-* Debug mit [node-inspector](https://github.com/node-inspector/node-inspector)
+* Debug mit [node-inspector![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/node-inspector/node-inspector){:new_window}
 * Shellzugriff
 
 ###Anwendungslaufzeitsteuerung {: #app-runtime}
@@ -173,7 +173,7 @@ Nach der Installation von {{site.data.keyword.Bluemix_notm}} Live Debug können 
 
 Stellen Sie die App per Push-Operation bereit und rufen Sie dann `https://app-host.mybluemix.net/bluemix-debug/manage` auf, um auf die Benutzerschnittstelle des {{site.data.keyword.Bluemix_notm}}-Debug-Features zuzugreifen. Wenn Sie aufgefordert werden, sich zu authentifizieren, geben Sie Ihre Benutzer-ID und das persönliche Zugriffstoken oder das Kennwort zur IBMid ein.    
 
-   **Hinweis:** Ihre Benutzer-ID für DevOps Services kann entweder eine IBMid oder eine eingebundene ID (Unternehmens-ID) sein. Wenn Sie die eingebundene Authentifizierung für die Anmeldung am Bluemix Live Sync-Befehlszeilenclient verwenden, müssen Sie ein persönliches Zugriffstoken anstatt eines Kennworts verwenden. Wenn Sie die eingebundene Authentifizierung nicht verwenden, funktionieren die IBMid und das zugehörige Kennwort bei allen Clients. Weitere Informationen zum Erstellen eines persönlichen Zugriffstokens finden Sie unter [What's federated authentication and how does it affect me?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/).
+   **Hinweis:** Ihre Benutzer-ID für DevOps Services kann entweder eine IBMid oder eine eingebundene ID (Unternehmens-ID) sein. Wenn Sie die eingebundene Authentifizierung für die Anmeldung am Bluemix Live Sync-Befehlszeilenclient verwenden, müssen Sie ein persönliches Zugriffstoken anstatt eines Kennworts verwenden. Wenn Sie die eingebundene Authentifizierung nicht verwenden, funktionieren die IBMid und das zugehörige Kennwort bei allen Clients. Weitere Informationen zum Erstellen eines persönlichen Zugriffstokens finden Sie unter [What's federated authentication and how does it affect me?![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/){:new_window}. 
 
 ###App-Konfigurationen wiederherstellen und Bluemix Live Debug inaktivieren {: #restore_live_debug}
 
@@ -286,7 +286,7 @@ Verwenden Sie diesen Befehl für die Anmeldung bei {{site.data.keyword.Bluemix_n
 
 **Warnung:** Geben Sie Ihr Kennwort nicht als Befehlszeilenoption an, weil es auf diese Weise für andere sichtbar ist und als Teil Ihres Befehlsprotokolls aufgezeichnet wird.
 
-**Hinweis:** Sie müssen sich für ein kostenloses Konto für <a class="xref" href="https://hub.jazz.net/" target="_blank" alt="Bluemix DevOps Services">Bluemix DevOps Services</a> registrieren, bevor Sie sich anmelden.
+**Hinweis:** Sie müssen sich für ein kostenloses Konto für [Bluemix DevOps Services![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://hub.jazz.net/){:new_window} registrieren, bevor Sie sich anmelden.
 
 **Optionen**
 
@@ -296,7 +296,7 @@ Verwenden Sie diesen Befehl für die Anmeldung bei {{site.data.keyword.Bluemix_n
 
 -s *server*: Der Servername oder die IP-Adresse des {{site.data.keyword.jazzhub_short}}-Servers.    
 
-   **Hinweis:** Ihre Benutzer-ID für DevOps Services kann entweder eine IBMid oder eine eingebundene ID (Unternehmens-ID) sein. Wenn Sie die eingebundene Authentifizierung für die Anmeldung am Bluemix Live Sync-Befehlszeilenclient verwenden, müssen Sie ein persönliches Zugriffstoken anstatt eines Kennworts verwenden. Wenn Sie die eingebundene Authentifizierung nicht verwenden, funktionieren die IBMid und das zugehörige Kennwort bei allen Clients. Weitere Informationen zum Erstellen eines persönlichen Zugriffstokens finden Sie unter [What's federated authentication and how does it affect me?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/).
+   **Hinweis:** Ihre Benutzer-ID für DevOps Services kann entweder eine IBMid oder eine eingebundene ID (Unternehmens-ID) sein. Wenn Sie die eingebundene Authentifizierung für die Anmeldung am Bluemix Live Sync-Befehlszeilenclient verwenden, müssen Sie ein persönliches Zugriffstoken anstatt eines Kennworts verwenden. Wenn Sie die eingebundene Authentifizierung nicht verwenden, funktionieren die IBMid und das zugehörige Kennwort bei allen Clients. Weitere Informationen zum Erstellen eines persönlichen Zugriffstokens finden Sie unter [What's federated authentication and how does it affect me?![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/){:new_window}. 
 
 **Beispiele**
 
@@ -593,12 +593,15 @@ bl stop –l “launchConfigurations/mylaunchconfig.launch”
 ```
 {: pre}
 
-># Zugehörige Links {:class="linklist"}
->## Lerntexte und Beispiele {:id="samples"}
->* [Testen und Debuggen einer Node.js-App mit Bluemix Live Sync](https://hub.jazz.net/tutorials/livesync)
->
-># Zugehörige Links {:class="linklist"}
->## Zugehörige Links {:id="general"}
->* [IBM Eclipse Tools for Bluemix](https://www.ng.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html)   
->
->{:elementKind="article" id="rellinks"}
+# Zugehörige Links
+{: #rellinks}
+
+## Lernprogramme und Beispiele
+{: #samples}
+
+* [Testen und Debuggen einer Node.js-App mit Bluemix Live Sync![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://hub.jazz.net/tutorials/livesync){:new_window}
+
+## Zugehörige Links
+{: #general}
+
+* [Eclipse Tools for Bluemix![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ng.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html){:new_window}

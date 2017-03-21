@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-01-12"
+lastupdated: "2017-02-20"
 
 ---
 
@@ -35,15 +35,15 @@ CF コマンド・ライン・インターフェースをインストール後�
 
 
 <ol>
-<li>{{site.data.keyword.Bluemix_notm}} 管理プラグイン・リポジトリーを追加するには、以下のコマンドを実行します:<br/><br/> <code>
-cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cli
+<li>{{site.data.keyword.Bluemix_notm}} 管理プラグイン・リポジトリーを追加するには、以下のコマンドを実行します。
+<br/><br/>
+<code>
+cf add-plugin-repo BluemixAdmin http://plugins.ng.bluemix.net
 </code><br/><br/>
-<dl class="parml">
-<dt class="pt dlterm">&lt;subdomain&gt;</dt>
-<dd class="pd">ご使用の {{site.data.keyword.Bluemix_notm}} インスタンス用 URL のサブドメインです。例えば、<code>https://console.mycompany.bluemix.net/cli</code> です。</dd>
-</dl>
 </li>
-<li>{{site.data.keyword.Bluemix_notm}} 管理 CLI プラグインをインストールするには、以下のコマンドを実行します:<br/><br/> <code>
+<li>{{site.data.keyword.Bluemix_notm}} 管理
+CLI プラグインをインストールするには、以下のコマンドを実行します。<br/><br/>
+<code>
 cf install-plugin BluemixAdminCLI -r BluemixAdmin
 </code>
 </li>
@@ -75,7 +75,8 @@ cf plugins
 管理 CLI プラグインを使用する場合、まず接続とログインを行います (まだ行っていない場合)。
 
 <ol>
-<li>{{site.data.keyword.Bluemix_notm}} API エンドポイントに接続するには、以下のコマンドを実行します:<br/><br/> <code>
+<li>{{site.data.keyword.Bluemix_notm}} API エンドポイントに接続するには、次のコマンドを実行します。<br/><br/>
+<code>
 cf ba api https://console.&lt;subdomain&gt;.bluemix.net
 </code>
 <dl class="parml">
@@ -85,7 +86,8 @@ cf ba api https://console.&lt;subdomain&gt;.bluemix.net
 </dl>
 <p>正しい URL は、管理コンソールの「リソースおよび情報 (Resources and Information)」ページで確認できます。URL は**「API URL」**フィールドの「API 情報」セクションに表示されます。</p>
 </li>
-<li>以下のコマンドを使用して {{site.data.keyword.Bluemix_notm}} にログインします:<br/><br/>
+<li>次のコマンドを使用して、{{site.data.keyword.Bluemix_notm}} にログインします。
+<br/><br/>
 <code>
 cf login
 </code>
@@ -101,7 +103,7 @@ cf login
 ご使用環境のユーザー・レジストリーから {{site.data.keyword.Bluemix_notm}} 環境にユーザーを追加するには、以下のコマンドを使用します。
 
 ```
-cf ba add-user <user_name> <organization>
+cf ba add-user <user_name> <organization> <first_name> <last_name>
 ```
 {: codeblock}
 
@@ -112,6 +114,10 @@ cf ba add-user <user_name> <organization>
 <dd class="pd">LDAP レジストリー内のユーザーの名前。</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">ユーザーの追加先となる {{site.data.keyword.Bluemix_notm}} 組織の名前または GUID。</dd>
+<dt class="pt dlterm">&lt;first_name&gt;</dt>
+<dd class="pd">組織に追加するユーザーの名。</dd>
+<dt class="pt dlterm">&lt;last_name&gt;</dt>
+<dd class="pd">組織に追加するユーザーの姓。</dd>
 </dl>
 
 **ヒント:** **ba add-user** という長いコマンド名の別名として **ba au** を使用することもできます。
@@ -220,7 +226,7 @@ cf ba disable-managers-add-users
 組織を追加するには、以下のコマンドを使用します。
 
 ```
-cf ba create-organization <organization> <manager>
+cf ba create-org <organization> <manager>
 ```
 {: codeblock}
 
@@ -231,7 +237,7 @@ cf ba create-organization <organization> <manager>
 <dd class="pd">組織のマネージャーのユーザー名。</dd>
 </dl>
 
-**ヒント:** **ba create-organization** という長いコマンド名の別名として **ba co** を使用することもできます。
+**ヒント:** **ba create-org** という長いコマンド名の別名として **ba co** を使用することもできます。
 
 ### 組織の削除
 {: #admin_delete_org}
@@ -239,7 +245,7 @@ cf ba create-organization <organization> <manager>
 組織を削除するには、以下のコマンドを使用します。
 
 ```
-cf ba delete-organization <organization>
+cf ba delete-org <organization>
 ```
 {: codeblock}
 
@@ -248,7 +254,7 @@ cf ba delete-organization <organization>
 <dd class="pd">削除する {{site.data.keyword.Bluemix_notm}} 組織の名前または GUID。</dd>
 </dl>
 
-**ヒント:** **ba delete-organization** という長いコマンド名の別名として **ba do** を使用することもできます。
+**ヒント:** **ba delete-org** という長いコマンド名の別名として **ba do** を使用することもできます。
 
 ### 組織へのユーザーの割り当て
 {: #admin_ass_user_org}
@@ -413,6 +419,97 @@ JSON ファイルには、以下の例に示したフォーマットが含まれ
 
 **ヒント:** **bluemix-admin set-containers-quota** という長いコマンド名の別名として **ba scq** を使用することもできます。
 
+## スペースの管理
+{: #admin_spaces}
+
+### 組織へのスペースの追加
+
+組織でスペースを追加するには、以下のコマンドを使用します。
+
+```
+cf bluemix-admin create-space <organization> <space_name>
+```
+
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">スペースを追加する先の組織の名前または GUID。</dd>
+<dt class="pt dlterm">&lt;space_name&gt;</dt>
+<dd class="pd">組織に作成されるスペースの名前。</dd>
+</dl>
+
+**ヒント:** **ba create-space** という長いコマンド名の別名として **ba cs** を使用することもできます。
+
+### 組織からスペースを削除
+
+組織からスペースを削除するには、以下のコマンドを使用します。
+
+```
+cf bluemix-admin delete-space <organization> <space_name>
+```
+
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">スペースを削除する元の組織の名前または GUID。</dd>
+<dt class="pt dlterm">&lt;space_name&gt;</dt>
+<dd class="pd">組織から削除されるスペースの名前。</dd>
+</dl>
+
+**ヒント:** **ba delete-space** という長いコマンド名の別名として **ba cs** を使用することもできます。
+
+### 指定した役割のユーザーをスペースに追加
+
+指定した役割を持つユーザーをスペースに作成するには、以下のコマンドを使用します。
+
+```
+cf bluemix-admin set-space <organization> <space_name> <user_name> <role>
+```
+
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">ユーザーを追加する先の組織の名前または GUID。</dd>
+<dt class="pt dlterm">&lt;space_name&gt;</dt>
+<dd class="pd">ユーザーを追加する先のスペースの名前。</dd>
+<dt class="pt dlterm">&lt;user_anme&gt;</dt>
+<dd class="pd">追加するユーザーの名前。</dd>
+<dt class="pt dlterm">&lt;role&gt;</dt>
+<dd class="pd">割り当てるユーザーの役割。この値には、Manager、Developer、または Auditor が可能です。スペース内での {{site.data.keyword.Bluemix_notm}} ユーザーの役割と説明については、[役割の割り当て](/docs/admin/users_roles.html)を参照してください。</dd>
+</dl>
+
+**ヒント:** **ba set-space** という長いコマンド名の別名として **ba ss** を使用することもできます。
+
+
+### スペース内のユーザーの役割の削除 
+
+スペース内のユーザーの役割を削除するには、以下のコマンドを使用します。
+
+```
+cf bluemix-admin unset-space <organization> <space_name> <user_name> <role>
+```
+
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">ユーザーを追加する先の組織の名前または GUID。</dd>
+<dt class="pt dlterm">&lt;space_name&gt;</dt>
+<dd class="pd">ユーザーを追加する先のスペースの名前。</dd>
+<dt class="pt dlterm">&lt;user_anme&gt;</dt>
+<dd class="pd">追加するユーザーの名前。</dd>
+<dt class="pt dlterm">&lt;role&gt;</dt>
+<dd class="pd">割り当てるユーザーの役割。この値には、Manager、Developer、または Auditor が可能です。スペース内での {{site.data.keyword.Bluemix_notm}} ユーザーの役割と説明については、[役割の割り当て](/docs/admin/users_roles.html)を参照してください。</dd>
+</dl>
+
+**ヒント:** **ba unset-space** という長いコマンド名の別名として **ba us** を使用することもできます。
+
+## カタログの管理
+{: #admin_catalog}
+
 ### すべての組織のサービスの有効化
 {: #admin_ena_service_org}
 
@@ -561,17 +658,13 @@ cf ba delete-report <category> <date> <name>
 セキュリティー・レポートを取得するには、以下のコマンドを使用します。
 
 ```
-cf ba retrieve-report <category> <date> <name>
+cf ba retrieve-report <search>
 ```
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;category&gt;</dt>
-<dd class="pd">レポートのカテゴリー。名前にスペースが含まれている場合は、引用符を使用して名前を囲んでください。</dd>
-<dt class="pt dlterm">&lt;date&gt;</dt>
-<dd class="pd"><samp class="ph codeph">YYYYMMDD</samp> という形式のレポート日付。</dd>
-<dt class="pt dlterm">&lt;name&gt;</dt>
-<dd class="pd">レポートの名前。</dd>
+<dt class="pt dlterm">&lt;search&gt;</dt>
+<dd class="pd">レポートのファイル名。名前にスペースが含まれている場合は、引用符を使用して名前を囲んでください。</dd>
 </dl>
 
 **ヒント:** **ba retrieve-report** という長いコマンド名の別名として **ba rr**を使用することもできます。
@@ -579,7 +672,7 @@ cf ba retrieve-report <category> <date> <name>
 ## リソース・メトリック情報の表示
 {: #cliresourceusage}
 
-メモリー、ディスク、CPU 使用量など、リソース・メトリック情報を表示できます。使用可能な物理リソースと予約済みリソース、および物理リソースと予約済みリソースの使用量の要約を確認できます。Droplet Execution Agent (DEA) の使用データおよび履歴のメモリーとディスク使用量を確認することもできます。デフォルトでは、メモリーおよびディスク使用量の履歴データは、週次で降順に表示されます。リソース・メトリック情報を表示するには、以下のコマンドを使用します。
+メモリー、ディスク、CPU 使用量など、リソース・メトリック情報を表示できます。使用可能な物理リソースと予約済みリソース、および物理リソースと予約済みリソースの使用量の要約を確認できます。Droplet Execution Agent (DEA) およびセル (Diego アーキテクチャー) の使用データおよび履歴のメモリーとディスク使用量を確認することもできます。デフォルトでは、メモリーおよびディスク使用量の履歴データは、週次で降順に表示されます。リソース・メトリック情報を表示するには、以下のコマンドを使用します。
 
 ```
 cf ba resource-metrics <monthly> <weekly>

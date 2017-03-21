@@ -1,7 +1,8 @@
 ---
 
 copyright:
-years: 2016
+  years: 2016
+lastupdated: "2016-08-04"
 
 ---
 
@@ -15,8 +16,6 @@ years: 2016
 # Consensus Test 3: Two Byzantine nodes
 {: #pbft_test2}
 
-Last updated: 4 August 2016
-{: .last-updated}
 
 Consensus Test 3 tests the PBFT consensus protocol in a network scenario where two of the four nodes are Byzantine: two nodes have gone offline in an arbitrary and concurrent manner.
 {:shortdesc}

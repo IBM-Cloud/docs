@@ -814,8 +814,7 @@ cf -v
 ## Zugehörige Links
 {: #general}
 
-* [Cloud Foundry CLI herunterladen ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases)
+* [Cloud Foundry-CLI herunterladen ![Symbol für externen Link](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases)
 {: new_window}
-* [Kurzreferenzkarte - cf-Befehle ![Symbol für externen Link](../../../icons/launch-glyph.svg)](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html)
+* [Referenzkarte - cf-Befehle ![Symbol für externen Link](../../../icons/launch-glyph.svg)](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html)
 {: new_window}
-

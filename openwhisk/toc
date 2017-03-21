@@ -6,6 +6,13 @@
     openwhisk_actions.md
     openwhisk_triggers_rules.md
     openwhisk_packages.md
+    openwhisk_webactions.md
+    openwhisk_reference.md
+    openwhisk_monitoring.md
+    openwhisk_mobile_sdk.md
+    openwhisk_apigateway.md
+    openwhisk_feeds.md
+    openwhisk_annotations.md
     openwhisk_catalog.md
     openwhisk_cloudant.md
     openwhisk_alarms.md
@@ -15,13 +22,10 @@
     openwhisk_watson_speechtotext.md
     openwhisk_messagehub.md
     openwhisk_pushnotifications.md
-    openwhisk_watson_slack.md
-    openwhisk_watson_github.md
-    openwhisk_watson_websocket.md
-    openwhisk_monitoring.md
-    openwhisk_mobile_sdk.md
-    openwhisk_apigateway.md
-    openwhisk_webactions.md
-    openwhisk_feeds.md
-    openwhisk_reference.md
-    openwhisk_annotations.md
+    openwhisk_slack.md
+    openwhisk_github.md
+    openwhisk_websocket.md
+    openwhisk_goserverless.md
+    openwhisk_compare.md
+
+

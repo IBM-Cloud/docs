@@ -1,7 +1,8 @@
 ---
 
 copyright:
-years: 2016
+  years: 2016
+lastupdated: "2016-08-04"
 
 ---
 
@@ -14,8 +15,7 @@ years: 2016
 
 # Consensus Test 4: Restart a Byzantine node
 {: #pbft_test1}
-Last updated: 4 August 2016
-{: .last-updated}
+
 
 Consensus Test 4 tests the PBFT protocol in a network scenario where one of the four nodes has come back online after being Byzantine: one node is restarted after going offline in an arbitrary and concurrent manner.
 

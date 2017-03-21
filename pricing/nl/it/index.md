@@ -422,7 +422,7 @@ sono in dollari statunitensi.
                                 replica |	$155,00 USD/istanza |
 |Data Cache - Premium |	25 GB di spazio di cache e una
                                 replica |	$505,00 USD/istanza|
-|IBM Cloudant® NoSQL DB for {{site.data.keyword.Bluemix_notm}} |	2 GB di archiviazione dati gratuita<br/>50.000 chiamate API light API gratuite al mese<br/>10.000 chiamate API heavy gratuite al mese | $1,00 USD/GB<br/>$0,03 USD/1000 chiamate API light<br/>$0,15 USD/1000 chiamate API heavy |
+|IBM Cloudant® NoSQL DB for {{site.data.keyword.Bluemix_notm}} |	2 GB di archiviazione dati gratuita<br/>50.000 chiamate API light gratuite al mese<br/>10.000 chiamate API heavy gratuite al mese | $1,00 USD/GB<br/>$0,03 USD/1000 chiamate API light<br/>$0,15 USD/1000 chiamate API heavy |
 {:caption="Table 7. Pricing sheet" caption-side="top"}
 
 ###Calcolo del prezzo
@@ -539,13 +539,12 @@ il tuo piano, ogni servizio prevede una procedura diversa a cui devi attenerti.
 
 1. Per modificare il tuo piano, nel Dashboard del servizio, fai clic su **Piano**. Di norma, puoi eseguire un upgrade del tuo piano oppure ridurlo.
 2. Dopo che hai modificato il tuo piano, devi completare una specifica procedura. Tale procedura varia a
-seconda del tipo di modifica del piano e del servizio. Ad esempio, se hai ridotto il tuo piano, è possibile che tu debba preparare nuovamente la tua applicazione. Nel caso invece in cui tu abbia eseguito l'upgrade del tuo piano, potresti dover preparare di nuovo la tua applicazione ed eseguire delle altre azioni.<br/><br/>Per preparare di nuovo la tua applicazione, vai al dashboard {{site.data.keyword.Bluemix_notm}} e trova l'applicazione a cui è associato il servizio. Nel menu delle applicazioni, seleziona **Riavvia applicazione**.<br/><br/>Altre azioni dei passi successivi dipendono dal servizio. Consulta la seguente tabella per le specifiche azioni.
+seconda del tipo di modifica del piano e del servizio. Ad esempio, se hai ridotto il tuo piano, è possibile che tu debba preparare nuovamente la tua applicazione. Nel caso invece in cui tu abbia eseguito l'upgrade del tuo piano, potresti dover preparare di nuovo la tua applicazione ed eseguire delle altre azioni. <br/><br/>Per preparare di nuovo la tua applicazione, vai al dashboard {{site.data.keyword.Bluemix_notm}} e trova l'applicazione a cui è associato il servizio. Nel menu delle applicazioni, seleziona **Riavvia applicazione**.<br/><br/>Le altre azioni dei passi successivi dipendono dal servizio. Consulta la seguente tabella per le specifiche azioni.
 
 |Servizio |	Informazioni|
 |--------|-------------|
 |Presence Insights 	|Se hai un piano Lite e superi le franchigie, viene visualizzato oppure registrato nei log un messaggio 403 che indica che non sei più autorizzato e la tua
-istanza del servizio viene disabilitata. Inoltre, le chiamate API POST REST vengono rifiutate con una risposta 403.<br/><br/>Se il tuo servizio è
-disabilitato perché hai superato la franchigia, puoi eseguire l'upgrade da un piano Lite a un piano a pagamento. Il tuo servizio viene riabilitato entro 2 ore.<br/><br/>Se hai un piano a pagamento, puoi ridurlo a un piano Lite a condizione che il tuo utilizzo rimanga entro la franchigia prevista dal piano Lite per gli eventi e l'archiviazione totale.<br/><br/>Quando esegui l'upgrade o la riduzione del tuo piano, non hai bisogno di preparare nuovamente o riavviare le tue applicazioni.|
+istanza del servizio viene disabilitata. Inoltre, le chiamate API REST POST vengono rifiutate con una risposta 403.<br/><br/>Se il tuo servizio è disabilitato perché hai superato la franchigia, puoi eseguire l'upgrade da un piano Lite a un piano a pagamento.  Il tuo servizio viene riabilitato entro 2 ore.<br/><br/>Se hai un piano a pagamento, puoi ridurlo a un piano Lite a condizione che il tuo utilizzo rimanga entro la franchigia prevista dal piano Lite per gli eventi e l'archiviazione totale.<br/><br/>Quando esegui l'upgrade o la riduzione del tuo piano, non hai bisogno di preparare nuovamente o riavviare le tue applicazioni.|
 {:caption="Table 9. Next steps for changing your plan" caption-side="top"}
 
 ###Come modificare il tuo piano tramite l'interfaccia riga di comando

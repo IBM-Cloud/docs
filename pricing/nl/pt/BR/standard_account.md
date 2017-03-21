@@ -18,7 +18,8 @@ lastupdated: "2017-02-02"
 # Conta IBM {{site.data.keyword.Bluemix_notm}} Standard Beta 
 {: #betaintro}
 
-A conta {{site.data.keyword.Bluemix}} Standard Beta introduz uma nova conta grátis, que oferece uma nova maneira de trabalhar na Nuvem Pública {{site.data.keyword.Bluemix_notm}}. A conta Standard nunca expira, ao contrário da Avaliação de 30 dias do {{site.data.keyword.Bluemix_notm}}. É possível continuar a trabalhar em seus aplicativos {{site.data.keyword.Bluemix_notm}} sem quaisquer preocupações sobre restrições de tempo.{:shortdesc}
+A conta {{site.data.keyword.Bluemix}} Standard Beta introduz uma nova conta grátis, que oferece uma nova maneira de trabalhar na Nuvem Pública {{site.data.keyword.Bluemix_notm}}. A conta Standard nunca expira, ao contrário da Avaliação de 30 dias do {{site.data.keyword.Bluemix_notm}}. É possível continuar a trabalhar em seus aplicativos {{site.data.keyword.Bluemix_notm}} sem quaisquer preocupações sobre restrições de tempo. 
+{:shortdesc}
 
 A participação na conta Standard Beta é possível apenas por meio de um convite. Depois de
 aceitar o convite e criar sua conta Standard, será possível convidar amigos e colegas para participar
@@ -76,8 +77,7 @@ ou em uma base de uso único. Aqui estão alguns exemplos de cotas do plano Lite
 Em uma conta Standard, é possível usar qualquer coisa no Catálogo
 {{site.data.keyword.Bluemix_notm}} que tem um plano Lite. Os planos Lite são fáceis
 de localizar. Por padrão, quando você abre o Catálogo, todos os serviços com um plano Lite
-são exibidos e identificados com uma tag Lite ![tag Lite](../icons/Lite.svg). 
-Selecione um serviço para visualizar os detalhes da cota para o plano Lite associado.
+são exibidos e identificados com uma tag Lite ![tag Lite](../icons/Lite.svg). Selecione um serviço para visualizar os detalhes da cota para o plano Lite associado.
 
 ### O que está disponível na conta Standard?
 {: #whatsavailable}

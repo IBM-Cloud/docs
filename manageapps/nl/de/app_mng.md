@@ -11,7 +11,7 @@ lastupdated: "2017-01-11"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#Liberty- und Node.js-Apps verwalten
+# Liberty- und Node.js-Apps verwalten
 {: #app_management}
 
 

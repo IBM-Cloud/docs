@@ -2,7 +2,7 @@
 
 copyright:
  years: 2017
-lastupdated: "2017-2-21"
+lastupdated: "2017-3-7"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2017-2-21"
 
 {: #gettingstartedtemplate}
 
-The {{site.data.keyword.uccr_full}} service on IBM {{site.data.keyword.Bluemix_short}} is a comprehensive release management solution. With IBM Cloud Continuous Release, you can run deployments for all software applications in your development lifecycle.
+The {{site.data.keyword.uccr_full}} service on IBM {{site.data.keyword.Bluemix_short}} is a comprehensive release management solution. With {{site.data.keyword.uccr_short}}, you can run deployments for all software applications in your development lifecycle.
 {:shortdesc}
 
 [After you create an instance](https://console.ng.bluemix.net/catalog/services/continuous-release/){:new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") of {{site.data.keyword.uccr_short}}, choose how you want to get started.

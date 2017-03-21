@@ -413,7 +413,7 @@ cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s
 <dd>自分のパスワード。</dd>
 <dd>*重要:* コマンド・ライン・インターフェースで *-p* パラメーターを使用してパスワードを指定すると、パスワードがコマンド・ライン履歴に記録される可能性があります。セキュリティー上の理由から、パスワードの指定には -p パラメーターを使用しないようにしてください。代わりに、コマンド・ライン・インターフェースでプロンプトが出された場合にパスワードを入力します。</dd>
 <dt>*-sso*</dt>
-<dd>フェデレーテッド ID でログインする場合は、シングル・サインオン・オプション (SSO) を使用する必要があります。IBMid でログインする場合は、その必要はありません。フェデレーテッド ID でサインインしようとしたときに SSO パラメーターを指定していない場合、SSO パラメーターを含めるように求めるプロンプトが出されます。SSO パラメーターを使用すると、ログイン時にワンタイム・パスコードの入力を求められます。</dd>
+<dd>フェデレーテッド ID でログインする場合は、シングル・サインオン・オプション (SSO) を使用する必要があります。IBM ID でログインする場合は、その必要はありません。フェデレーテッド ID でサインインしようとしたときに SSO パラメーターを指定していない場合、SSO パラメーターを含めるように求めるプロンプトが出されます。SSO パラメーターを使用すると、ログイン時にワンタイム・パスコードの入力を求められます。</dd>
 <dt>*-o*organization_name</dt>
 <dd>ログイン先の組織の名前。</dd>
 <dt>*-s*space_name</dt>
@@ -818,5 +818,7 @@ cf -v
 ## 関連リンク
 {: #general}
 
-* [Cloud Foundry CLI のダウンロード ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}
-* [クイック・リファレンス・カード - cf コマンド ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html){: new_window}
+* [Cloud Foundry CLI のダウンロード ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases)
+{: new_window}
+* [クイック・リファレンス・カード - cf コマンド ![「外部リンク」アイコン](../../../icons/launch-glyph.svg)](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html)
+{: new_window}

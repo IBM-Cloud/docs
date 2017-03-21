@@ -1,25 +1,21 @@
 ---
 
-
-
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-04"
-
+lastupdated: "2016-02-27"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
+{:screen: .screen}
 {:pre: .pre}
 
 # {{site.data.keyword.openwhisk_short}}-Pakete verwenden und erstellen
 {: #openwhisk_packages}
 
-
-In {{site.data.keyword.openwhisk}} können Sie Pakete verwenden, um eine Gruppe zusammengehöriger Aktionen zu bündeln und diese zur gemeinsamen Nutzung mit anderen Benutzern bereitzustellen.
+In {{site.data.keyword.openwhisk_short}} können Sie Pakete verwenden, um eine Gruppe zusammengehöriger Aktionen zu bündeln und diese zur gemeinsamen Nutzung mit anderen Benutzern bereitzustellen.
 
 Ein Paket kann *Aktionen* und *Feeds* enthalten.
 - Eine Aktion ist ein Stück Code, das in {{site.data.keyword.openwhisk_short}} ausgeführt wird. Zum Beispiel enthält das Cloudant-Paket Aktionen zum Lesen und Schreiben von Datensätzen in einer Cloudant-Datenbank.
@@ -54,7 +50,6 @@ In {{site.data.keyword.openwhisk_short}} sind verschiedene Pakete registriert. S
   /whisk.system/github                                                   shared
   /whisk.system/pushnotifications                                        shared
   ```
-  {: screen}
 
 2. Rufen Sie eine Liste der Entitäten im Paket `/whisk.system/cloudant` ab.
 
@@ -69,7 +64,6 @@ In {{site.data.keyword.openwhisk_short}} sind verschiedene Pakete registriert. S
    action /whisk.system/cloudant/write: Write document to database
    feed   /whisk.system/cloudant/changes: Database change feed
   ```
-  {: screen}
 
   Diese Ausgabe zeigt, dass das Cloudant-Paket zwei Aktionen, `read` und `write`, sowie einen Auslöserfeed mit dem Namen `changes` bereitstellt. Der Feed `changes` bewirkt, dass Auslöser ausgelöst werden, wenn Dokumente der angegebenen Cloudant-Datenbank hinzugefügt werden.
 
@@ -85,7 +79,6 @@ In {{site.data.keyword.openwhisk_short}} sind verschiedene Pakete registriert. S
   action /whisk.system/cloudant/read: Read document from database
      (params: dbname includeDoc id)
   ```
-  {: screen}
 
   Diese Ausgabe zeigt, dass die Cloudant-Aktion `read` drei Parameter erfordert, zu denen die Datenbank und die abzurufende Dokument-ID gehören.
 
@@ -105,7 +98,6 @@ Sie können Aktionen in einem Paket ebenso wie bei anderen Aktionen aufrufen. Di
   action /whisk.system/samples/greeting: Print a friendly greeting
      (params: name place)
   ```
-  {: screen}
 
   Beachten Sie, dass die Aktion `greeting` zwei Parameter hat: `name` und `place`.
 
@@ -115,12 +107,11 @@ Sie können Aktionen in einem Paket ebenso wie bei anderen Aktionen aufrufen. Di
   wsk action invoke --blocking --result /whisk.system/samples/greeting
   ```
   {: pre}
-  ```
+  ```json
   {
       "payload": "Hello, stranger from somewhere!"
   }
   ```
-  {: screen}
 
   Die Ausgabe ist eine generische Nachricht, da keine Parameter angegeben wurden.
 
@@ -130,12 +121,11 @@ Sie können Aktionen in einem Paket ebenso wie bei anderen Aktionen aufrufen. Di
   wsk action invoke --blocking --result /whisk.system/samples/greeting --param name Mork --param place Ork
   ```
   {: pre}
-  ```
+  ```json
   {
       "payload": "Hello, Mork from Ork!"
   }
   ```
-  {: screen}
 
   Beachten Sie, dass die Ausgabe die Parameter `name` und `place` verwendet, die an die Aktion übergeben wurden.
 
@@ -158,7 +148,6 @@ In dem folgenden einfachen Beispiel erstellen Sie eine Bindung an das Paket `/wh
   ```
   ok: created binding valhallaSamples
   ```
-  {: screen}
 
 2. Rufen Sie eine Beschreibung der Paketbindung ab.
 
@@ -173,7 +162,6 @@ In dem folgenden einfachen Beispiel erstellen Sie eine Bindung an das Paket `/wh
    action /myNamespace/valhallaSamples/helloWorld: Demonstrates logging facilities
    action /myNamespace/valhallaSamples/curl: Curl a host url
   ```
-  {: screen}
 
   Beachten Sie, dass alle Aktionen im Paket `/whisk.system/samples` in der Paketbindung `valhallaSamples` verfügbar sind.
 
@@ -188,7 +176,6 @@ In dem folgenden einfachen Beispiel erstellen Sie eine Bindung an das Paket `/wh
       "payload": "Hello, Odin from Valhalla!"
   }
   ```
-  {: screen}
 
   Beachten Sie im Ergebnis, dass die Aktion den Parameter `place` übernimmt, den Sie beim Erstellen der Paketbindung `valhallaSamples` festgelegt haben.
 
@@ -203,7 +190,6 @@ In dem folgenden einfachen Beispiel erstellen Sie eine Bindung an das Paket `/wh
       "payload": "Hello, Odin from Asgard!"
   }
   ```
-  {: screen}
 
   Beachten Sie, dass der Wert des Parameters `place`, der im Aktionsaufruf angegeben wird, den Standardwert überschreibt, der in der Paketbindung `valhallaSamples` festgelegt wurde.
 
@@ -223,7 +209,6 @@ Feeds sind eine bequeme Methode zum Konfigurieren einer externen Ereignisquelle 
   package /whisk.system/alarms
    feed   /whisk.system/alarms/alarm
   ```
-  {: screen}
 
   ```
   wsk action get --summary /whisk.system/alarms/alarm
@@ -233,7 +218,6 @@ Feeds sind eine bequeme Methode zum Konfigurieren einer externen Ereignisquelle 
   action /whisk.system/alarms/alarm: Fire trigger when alarm occurs
      (params: cron trigger_payload)
   ```
-  {: screen}
 
   Der Feed `/whisk.system/alarms/alarm` hat zwei Parameter:
   - `cron`: Eine crontab-Angabe für den Zeitpunkt, wann der Auslöser zu aktivieren ist.
@@ -248,11 +232,10 @@ Feeds sind eine bequeme Methode zum Konfigurieren einer externen Ereignisquelle 
   ```
   ok: created trigger feed everyEightSeconds
   ```
-  {: screen}
 
 3. Erstellen Sie eine Datei 'hello.js' mit dem folgenden Aktionscode.
 
-  ```
+  ```javascript
   function main(params) {
       return {payload:  'Hello, ' + params.name + ' from ' + params.place};
   }
@@ -275,7 +258,6 @@ Feeds sind eine bequeme Methode zum Konfigurieren einer externen Ereignisquelle 
   ```
   ok: created rule myRule
   ```
-  {: screen}
 
 6. Prüfen Sie, ob die Aktion aufgerufen wird, indem Sie die Aktivierungsprotokolle durch Polling abfragen.
 
@@ -304,7 +286,6 @@ Versuchen Sie das folgende Beispiel, um ein angepasstes Paket mit einer einfache
   ```
   ok: created package custom
   ```
-  {: screen}
 
 2. Rufen Sie eine Zusammenfassung des Pakets ab.
 
@@ -315,13 +296,12 @@ Versuchen Sie das folgende Beispiel, um ein angepasstes Paket mit einer einfache
   ```
   package /myNamespace/custom
   ```
-  {: screen}
 
   Beachten Sie, dass das Paket leer ist.
 
 3. Erstellen Sie eine Datei mit dem Namen `identity.js`, die den folgenden Aktionscode enthält. Diese Aktion gibt alle Eingabeparameter zurück.
 
-  ```
+  ```javascript
   function main(args) { return args; }
   ```
   {: codeblock}
@@ -335,7 +315,6 @@ Versuchen Sie das folgende Beispiel, um ein angepasstes Paket mit einer einfache
   ```
   ok: created action custom/identity
   ```
-  {: screen}
 
   Zum Erstellen einer Aktion in einem Paket müssen Sie dem Aktionsnamen einen Paketnamen als Präfix voranstellen. Eine Verschachtelung von Paketen ist nicht zulässig. Ein Paket kann nur Aktionen, jedoch kein anderes Paket enthalten.
 
@@ -349,7 +328,6 @@ Versuchen Sie das folgende Beispiel, um ein angepasstes Paket mit einer einfache
   package /myNamespace/custom
    action /myNamespace/custom/identity
   ```
-  {: screen}
 
   Die Aktion `custom/identity` wird jetzt in Ihrem Namensbereich angezeigt.
 
@@ -359,10 +337,9 @@ Versuchen Sie das folgende Beispiel, um ein angepasstes Paket mit einer einfache
   wsk action invoke --blocking --result custom/identity
   ```
   {: pre}
-  ```
+  ```json
   {}
   ```
-  {: screen}
 
 
 Sie können Standardparameter für alle Entitäten in einem Paket festlegen. Dazu legen Sie Parameter auf Paketebene fest, die von allen Aktionen in dem Paket übernommen werden. Versuchen Sie das folgende Beispiel, um zu erfahren, wie dies funktioniert:
@@ -376,18 +353,18 @@ Sie können Standardparameter für alle Entitäten in einem Paket festlegen. Daz
   ```
   ok: updated package custom
   ```
-  {: screen}
 
 2. Zeigen Sie die Parameter in dem Paket und in der Aktion an und beachten Sie, wie die Aktion `identity` in dem Paket die Parameter aus dem Paket übernimmt.
 
   ```
-  wsk package get custom
+  wsk package get custom parameters
   ```
   {: pre}
   ```
-  ok: got package custom
-  ...
-  "parameters": [
+  ok: got package custom, displaying field parameters
+  ```
+  ```json
+  [
       {
           "key": "city",
           "value": "Austin"
@@ -397,18 +374,17 @@ Sie können Standardparameter für alle Entitäten in einem Paket festlegen. Daz
           "value": "USA"
       }
   ]
-  ...
   ```
-  {: screen}
 
   ```
-  wsk action get custom/identity
+  wsk action get custom/identity parameters
   ```
   {: pre}
   ```
-  ok: got action custom/identity
-  ...
-  "parameters": [
+  ok: got action custom/identity, , displaying field parameters
+  ```
+  ```json
+  [
       {
           "key": "city",
           "value": "Austin"
@@ -418,9 +394,7 @@ Sie können Standardparameter für alle Entitäten in einem Paket festlegen. Daz
           "value": "USA"
       }
   ]
-  ...
   ```
-  {: screen}
 
 3. Rufen Sie die Aktion 'identity' ohne Parameter auf, um zu prüfen, ob die Aktion die Parameter tatsächlich übernimmt.
 
@@ -428,13 +402,12 @@ Sie können Standardparameter für alle Entitäten in einem Paket festlegen. Daz
   wsk action invoke --blocking --result custom/identity
   ```
   {: pre}
-  ```
+  ```json
   {
       "city": "Austin",
       "country": "USA"
   }
   ```
-  {: screen}
 
 4. Rufen Sie die Aktion 'identity' mit Parametern auf. Die Aufrufparameter werden mit den Paketparametern gemischt, wobei die Aufrufparameter die Paketparameter überschreiben.
 
@@ -442,14 +415,13 @@ Sie können Standardparameter für alle Entitäten in einem Paket festlegen. Daz
   wsk action invoke --blocking --result custom/identity --param city Dallas --param state Texas
   ```
   {: pre}
-  ```
+  ```json
   {
       "city": "Dallas",
       "country": "USA",
       "state": "Texas"
   }
   ```
-  {: screen}
 
 
 ## Paket gemeinsam nutzen
@@ -466,21 +438,19 @@ Wenn die Aktionen und Feeds, die ein Paket bilden, auf Fehler geprüft und getes
   ```
   ok: updated package custom
   ```
-  {: screen}
 
 2. Zeigen Sie die Eigenschaft `publish` des Pakets an, um zu prüfen, ob sie jetzt den Wert 'true' hat.
 
   ```
-  wsk package get custom
+  wsk package get custom publish
   ```
   {: pre}
   ```
-  ok: got package custom
-  ...
-  "publish": true,
-  ...
+  ok: got package custom, displaying field publish
   ```
-  {: screen}
+  ```json
+  true
+  ```
 
 
 Andere Benutzer können Ihr Paket `custom` jetzt verwenden, indem sie Bindungen an das Paket erstellen oder eine Aktion in dem Paket direkt aufrufen. Andere Benutzer müssen die vollständig qualifizierten Namen des Pakets kennen, um es binden zu können oder um Aktionen in dem Paket aufrufen zu können. Aktionen und Feed in einem gemeinsam genutzten Paket sind *öffentlich*. Wenn ein Paket privat ist, ist auch sein gesamter Inhalt privat.
@@ -495,6 +465,5 @@ Andere Benutzer können Ihr Paket `custom` jetzt verwenden, indem sie Bindungen 
   package /myNamespace/custom
    action /myNamespace/custom/identity
   ```
-  {: screen}
 
   Im obigen Beispiel wird der Namensbereich `myNamespace` verwendet und dieser Namensbereich ist in dem vollständig qualifizierten Namen enthalten.

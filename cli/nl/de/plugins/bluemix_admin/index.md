@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-01-12"
+lastupdated: "2017-02-20"
 
 ---
 
@@ -17,9 +17,7 @@ lastupdated: "2017-01-12"
 {: #bluemixadmincli}
 
 
-Sie können Ihre {{site.data.keyword.Bluemix_notm}} Local- oder {{site.data.keyword.Bluemix_notm}} Dedicated-Umgebung über die Cloud
-Foundry-Befehlszeilenschnittstelle mit dem {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in verwalten. Sie können Benutzer zum Beispiel aus einer LDAP-Registry
-hinzufügen. Informationen zur Zuordnung Ihres {{site.data.keyword.Bluemix_notm}} Public-Kontos finden Sie unter [Verwalten](/docs/admin/adminpublic.html#administer).
+Sie können Ihre {{site.data.keyword.Bluemix_notm}} Local- oder {{site.data.keyword.Bluemix_notm}} Dedicated-Umgebung über die Cloud Foundry-Befehlszeilenschnittstelle mit dem {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in verwalten. Sie können Benutzer zum Beispiel aus einer LDAP-Registry hinzufügen. Informationen zur Zuordnung Ihres {{site.data.keyword.Bluemix_notm}} Public-Kontos finden Sie unter [Verwalten](/docs/admin/adminpublic.html#administer).
 
 Vor dem Beginn müssen Sie die Befehlszeilenschnittstelle 'cf' installieren. Für das
 {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in
@@ -43,16 +41,12 @@ hinzufügen.
 Führen Sie die folgenden Schritte aus, um das Repository hinzuzufügen und das Plug-in zu installieren:
 
 <ol>
-<li>Führen Sie zum Hinzufügen des {{site.data.keyword.Bluemix_notm}}-Administrator-Plug-in-Repositorys den folgenden Befehl aus:<br/><br/>
+<li>Führen Sie den folgenden Befehl aus, um das Repository für das {{site.data.keyword.Bluemix_notm}}-Admin-Plug-in hinzuzufügen:<br/><br/>
 <code>
-cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cli
+cf add-plugin-repo BluemixAdmin http://plugins.ng.bluemix.net
 </code><br/><br/>
-<dl class="parml">
-<dt class="pt dlterm">&lt;subdomain&gt;</dt>
-<dd class="pd">Die Unterdomäne der URL für Ihre {{site.data.keyword.Bluemix_notm}}-Instanz. Beispiel: <code>https://console.mycompany.bluemix.net/cli</code></dd>
-</dl>
 </li>
-<li>Führen Sie zum Installieren des {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-ins den folgenden Befehl aus:<br/><br/>
+<li>Führen Sie den folgenden Befehl aus, um das Plug-in für die {{site.data.keyword.Bluemix_notm}}-Administrator-CLI zu installieren:<br/><br/>
 <code>
 cf install-plugin BluemixAdminCLI -r BluemixAdmin
 </code>
@@ -112,7 +106,7 @@ cf login
 Verwenden Sie den folgenden Befehl, um Ihrer {{site.data.keyword.Bluemix_notm}}-Umgebung einen Benutzer aus der Benutzerregistry Ihrer Umgebung hinzuzufügen:
 
 ```
-cf ba add-user <user_name> <organization>
+cf ba add-user <user_name> <organization> <first_name> <last_name>
 ```
 {: codeblock}
 
@@ -123,6 +117,10 @@ cf ba add-user <user_name> <organization>
 <dd class="pd">Der Name des Benutzers im LDAP-Registry.</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">Der Name oder die GUID der {{site.data.keyword.Bluemix_notm}}-Organisation, der der Benutzer hinzugefügt werden soll.</dd>
+<dt class="pt dlterm">&lt;first_name&gt;</dt>
+<dd class="pd">Der Vorname des Benutzers, der der Organisation hinzugefügt werden soll.</dd>
+<dt class="pt dlterm">&lt;last_name&gt;</dt>
+<dd class="pd">Der Nachname des Benutzers, der der Organisation hinzugefügt werden soll.</dd>
 </dl>
 
 **Tipp:** Sie können auch **ba au** als Alias für den längeren Befehlsnamen **ba add-user** verwenden.
@@ -231,7 +229,7 @@ cf ba disable-managers-add-users
 Verwenden Sie den folgenden Befehl, um eine Organisation hinzuzufügen:
 
 ```
-cf ba create-organization <organization> <manager>
+cf ba create-org <organization> <manager>
 ```
 {: codeblock}
 
@@ -243,7 +241,7 @@ cf ba create-organization <organization> <manager>
 </dl>
 
 **Tipp:** Sie können auch **ba co** als Alias für den längeren
-Befehlsnamen **ba create-organization** verwenden.
+Befehlsnamen **ba create-org** verwenden.
 
 ### Organisation löschen
 {: #admin_delete_org}
@@ -251,7 +249,7 @@ Befehlsnamen **ba create-organization** verwenden.
 Verwenden Sie den folgenden Befehl, um eine Organisation zu löschen:
 
 ```
-cf ba delete-organization <organization>
+cf ba delete-org <organization>
 ```
 {: codeblock}
 
@@ -260,7 +258,8 @@ cf ba delete-organization <organization>
 <dd class="pd">Der Name oder die GUID der zu löschenden {{site.data.keyword.Bluemix_notm}}-Organisation.</dd>
 </dl>
 
-**Tipp:** Sie können auch **ba do** als Alias für den längeren Befehlsnamen **ba delete-organization** verwenden.
+**Tipp:** Sie können auch **ba do** als Alias für den längeren
+Befehlsnamen **ba delete-org** verwenden.
 
 ### Benutzer einer Organisation zuweisen
 {: #admin_ass_user_org}
@@ -424,6 +423,101 @@ Das Format der JSON-Datei sollte dem folgenden Beispiel entsprechen:
 
 **Tipp:** Sie können auch **ba scq** als Alias für den längeren Befehlsnamen **bluemix-admin set-containers-quota** verwenden.
 
+## Bereiche verwalten
+{: #admin_spaces}
+
+### Bereich in der Organisation hinzufügen
+
+Verwenden Sie den folgenden Befehl, um einen Bereich in der Organisation hinzuzufügen:
+
+```
+cf bluemix-admin create-space <organization> <space_name>
+```
+
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">Der Name oder die GUID der Organisation, der der Bereich hinzugefügt werden soll.</dd>
+<dt class="pt dlterm">&lt;space_name&gt;</dt>
+<dd class="pd">Der Name des Bereichs, der in der Organisation erstellt werden soll.</dd>
+</dl>
+
+**Tipp:** Sie können auch **ba cs** als Alias für den längeren
+Befehlsnamen **ba create-space** verwenden.
+
+### Bereich aus der Organisation löschen
+
+Verwenden Sie den folgenden Befehl, um einen Bereich aus der Organisation zu entfernen:
+
+```
+cf bluemix-admin delete-space <organization> <space_name>
+```
+
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">Der Name oder die GUID der Organisation, aus der der Bereich entfernt werden soll.</dd>
+<dt class="pt dlterm">&lt;space_name&gt;</dt>
+<dd class="pd">Der Name des Bereichs, der aus der Organisation entfernt werden soll.</dd>
+</dl>
+
+**Tipp:** Sie können auch **ba cs** als Alias für den längeren
+Befehlsnamen **ba delete-space** verwenden.
+
+### Benutzer einem Bereich mit einer Rolle hinzufügen
+
+Verwenden Sie den folgenden Befehl, um einen Benutzer in einem Bereich mit einer angegebenen Rolle zu erstellen:
+
+```
+cf bluemix-admin set-space <organization> <space_name> <user_name> <role>
+```
+
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">Der Name oder die GUID der Organisation, der der Benutzer hinzugefügt werden soll.</dd>
+<dt class="pt dlterm">&lt;space_name&gt;</dt>
+<dd class="pd">Der Name des Bereichs, dem der Benutzer hinzugefügt werden soll.</dd>
+<dt class="pt dlterm">&lt;user_anme&gt;</dt>
+<dd class="pd">Der Name des Benutzers, der hinzugefügt werden soll.</dd>
+<dt class="pt dlterm">&lt;role&gt;</dt>
+<dd class="pd">Die Rolle des Benutzers, die zugewiesen werden soll. Gültige Werte: Manager, Developer oder Auditor. Beschreibungen von {{site.data.keyword.Bluemix_notm}}-Benutzerrollen in einem Bereich finden Sie unter [Rollen zuweisen](/docs/admin/users_roles.html).</dd>
+</dl>
+
+**Tipp:** Sie können auch **ba ss** als Alias für den längeren
+Befehlsnamen **ba set-space** verwenden.
+
+
+### Rolle eines Benutzers in einem Bereich entfernen 
+
+Verwenden Sie den folgenden Befehl, um die Rolle eines Benutzers in einem Bereich zu entfernen:
+
+```
+cf bluemix-admin unset-space <organization> <space_name> <user_name> <role>
+```
+
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">Der Name oder die GUID der Organisation, der der Benutzer hinzugefügt werden soll.</dd>
+<dt class="pt dlterm">&lt;space_name&gt;</dt>
+<dd class="pd">Der Name des Bereichs, dem der Benutzer hinzugefügt werden soll.</dd>
+<dt class="pt dlterm">&lt;user_anme&gt;</dt>
+<dd class="pd">Der Name des Benutzers, der hinzugefügt werden soll.</dd>
+<dt class="pt dlterm">&lt;role&gt;</dt>
+<dd class="pd">Die Rolle des Benutzers, die zugewiesen werden soll. Gültige Werte: Manager, Developer oder Auditor. Beschreibungen von {{site.data.keyword.Bluemix_notm}}-Benutzerrollen in einem Bereich finden Sie unter [Rollen zuweisen](/docs/admin/users_roles.html).</dd>
+</dl>
+
+**Tipp:** Sie können auch **ba us** als Alias für den längeren
+Befehlsnamen **ba unset-space** verwenden.
+
+## Katalog verwalten
+{: #admin_catalog}
+
 ### Services für alle Organisationen aktivieren
 {: #admin_ena_service_org}
 
@@ -586,17 +680,13 @@ cf ba delete-report <category> <date> <name>
 Verwenden Sie den folgenden Befehl, um einen Sicherheitsbericht abzurufen:
 
 ```
-cf ba retrieve-report <category> <date> <name>
+cf ba retrieve-report <search>
 ```
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;category&gt;</dt>
-<dd class="pd">Die Kategorie für den Bericht. Wenn ein Leerzeichen im Namen enthalten ist, setzen Sie den Namen in Anführungszeichen.</dd>
-<dt class="pt dlterm">&lt;date&gt;</dt>
-<dd class="pd">Das Berichtsdatum im Format <samp class="ph codeph">JJJJMMTT</samp>.</dd>
-<dt class="pt dlterm">&lt;name&gt;</dt>
-<dd class="pd">Der Name des Berichts.</dd>
+<dt class="pt dlterm">&lt;search&gt;</dt>
+<dd class="pd">Der Dateiname des Berichts. Wenn ein Leerzeichen im Namen enthalten ist, setzen Sie den Namen in Anführungszeichen.</dd>
 </dl>
 
 **Tipp:** Sie können auch **ba rr** als Alias für den längeren Befehlsnamen **ba retrieve-report** verwenden.
@@ -604,7 +694,7 @@ cf ba retrieve-report <category> <date> <name>
 ## Metrikinformationen zu Ressourcen anzeigen
 {: #cliresourceusage}
 
-Sie können Metrikinformationen zu Ressourcen anzeigen, beispielsweise Hauptspeicher- und Plattenbelegung oder CPU-Auslastung. Es wird eine Zusammenfassung der verfügbaren physischen und reservierten Ressourcen sowie der Nutzung dieser Ressourcen angezeigt. Zudem werden Nutzungsdaten, die vergangene Speichernutzung und die Plattenbelegung angezeigt. Die Daten zur vergangenen Speichernutzung und Plattenbelegung werden standardmäßig nach Wochen und in absteigender Reihenfolge angezeigt. Verwenden Sie den folgenden Befehl, um die Metrikinformationen zu Ressourcen anzuzeigen:
+Sie können Metrikinformationen zu Ressourcen anzeigen, beispielsweise Hauptspeicher- und Plattenbelegung oder CPU-Auslastung. Es wird eine Zusammenfassung der verfügbaren physischen und reservierten Ressourcen sowie der Nutzung dieser Ressourcen angezeigt. Zudem werden Nutzungsdaten, die vergangene Speichernutzung und die Plattenbelegung zu Droplet Execution Agents (DEAs) und Diego-Zellen (Diego-Architektur) angezeigt. Die Daten zur vergangenen Speichernutzung und Plattenbelegung werden standardmäßig nach Wochen und in absteigender Reihenfolge angezeigt. Verwenden Sie den folgenden Befehl, um die Metrikinformationen zu Ressourcen anzuzeigen:
 
 ```
 cf ba resource-metrics <monthly> <weekly>

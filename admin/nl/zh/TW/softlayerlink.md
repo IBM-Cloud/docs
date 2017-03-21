@@ -97,7 +97,7 @@ SoftLayer 中的鑑別現在使用 IBM ID 來提供所有 {{site.data.keyword.Bl
 
 如果您是 {{site.data.keyword.slportal}} 中的主要使用者，而且沒有看到切換至 IBM ID 的提示，請[聯絡 IBM 支援中心](https://console.ng.bluemix.net/docs/support/index.html#contacting-support)以取得啟用此特性的協助。
 
-開始切換至 IBM ID 時，一律可以先取消這項切換，再完成此處理程序。不過，在下次登入時，系統還是會提示您切換至 IBM ID。您計劃要鏈結至 {{site.data.keyword.Bluemix_notm}} 帳戶的每一個帳戶都必須為具有唯一電子郵件位址的唯一 IBM ID 所擁有。
+開始切換至 IBM ID 時，在完成此過程之前隨時都可以取消這項切換。不過，在下次登入時，系統還是會提示您切換至 IBM ID。您計劃要鏈結至 {{site.data.keyword.Bluemix_notm}} 帳戶的每一個帳戶都必須為具有唯一電子郵件位址的唯一 IBM ID 所擁有。
 
 若要將現有 SoftLayer 使用者名稱切換至 IBM ID，請完成下列步驟：
 
@@ -106,7 +106,7 @@ SoftLayer 中的鑑別現在使用 IBM ID 來提供所有 {{site.data.keyword.Bl
  3. 當您收到電子郵件時，請遵循鏈結，或將 URL 複製到瀏覽器，並輸入登錄碼。此登錄碼的有效時間是 7 天，而且只能使用一次。
  
  
-在您切換至 IBM ID 鑑別之後，就只能使用 IBM ID 來登入帳戶。在登入提示時，按一下**使用 IBM ID 登入**，而非輸入 SoftLayer 使用者名稱和密碼。
+在您切換至 IBM ID 鑑別之後，就只能使用 IBM ID 來登入帳戶。在登入提示處，按一下**使用 IBM ID 登入**，而非輸入 SoftLayer 使用者名稱和密碼。
  
 以新客戶身分查看訂單時，系統會要求您輸入現有 IBM ID 帳戶的電子郵件位址，或建立新的 IBM ID 帳戶。如果您建立新的 IBM ID，請輸入新 IBM ID 的電子郵件位址。電子郵件位址是收到邀請電子郵件的電子郵件位址，也是新 IBM ID 的使用者名稱。
 
@@ -126,12 +126,12 @@ SoftLayer 中的鑑別現在使用 IBM ID 來提供所有 {{site.data.keyword.Bl
 **附註：** 
   * 所鏈結之帳戶的主要使用者必須是 IBM ID。
   * 以主要使用者身分登入每一個一般使用者帳戶。移至使用者設定檔頁面，然後按一下**切換至 IBM ID**。
-  * 您鏈結至 {{site.data.keyword.Bluemix_notm}} 帳戶的每一個帳戶都必須為具有唯一電子郵件位址的唯一 IBM ID 所擁有。雖然一個 IBM ID 可以擁有多個 SoftLayer 帳戶，但是您無法將這些帳戶鏈結至 {{site.data.keyword.Bluemix_notm}} 帳戶。如果一個 IBM ID 是多個 SoftLayer 帳戶的主要使用者，而且您要將那些帳戶鏈結至 {{site.data.keyword.Bluemix_notm}} 帳戶，則必須將主要使用者變更為每一個帳戶的唯一 IBM ID。請聯絡 [IBM SoftLayer 支援中心 ![外部鏈結圖示](../icons/launch-glyph.svg)](https://knowledgelayer.softlayer.com/topic/support){: new_window}，以變更 SoftLayer 帳戶上的主要使用者。
+  * 您鏈結至 {{site.data.keyword.Bluemix_notm}} 帳戶的每一個帳戶都必須為具有唯一電子郵件位址的唯一 IBM ID 所擁有。雖然一個 IBM ID 可以擁有多個 SoftLayer 帳戶，但是您無法將這些帳戶鏈結至 {{site.data.keyword.Bluemix_notm}} 帳戶。如果一個 IBM ID 是多個 SoftLayer 帳戶的主要使用者，而且您要將那些帳戶鏈結至 {{site.data.keyword.Bluemix_notm}} 帳戶，則必須為每一個帳戶將主要使用者變更為唯一的 IBM ID。請與 [IBM SoftLayer 支援中心 ![外部鏈結圖示](../icons/launch-glyph.svg)](https://knowledgelayer.softlayer.com/topic/support){: new_window} 聯絡，以變更 SoftLayer 帳戶上的主要使用者。
   
 完成下列步驟，以將每一個帳戶鏈結至 {{site.data.keyword.Bluemix_notm}} 帳戶： 
 
- 1. 若要建立新的 {{site.data.keyword.Bluemix_notm}} 帳戶，或鏈結至現有 {{site.data.keyword.Bluemix_notm}} 帳戶，請以主要使用者身分登入 SoftLayer 帳戶，然後按一下 **{{site.data.keyword.Bluemix_notm}}** 鏈結。這可讓您建立新的 {{site.data.keyword.Bluemix_notm}} 帳戶，或者鏈結至現有 {{site.data.keyword.Bluemix_notm}} 帳戶。作為 SoftLayer 帳戶之主要使用者的 IBM ID 必須是您所鏈結至之 Bluemix 帳戶的擁有者。請遵循精靈提示（包括將 SoftLayer 帳戶中的使用者新增至 {{site.data.keyword.Bluemix_notm}} 帳戶）。 
- 2. 在您鏈結帳戶之後，請通知一般使用者帳戶將移轉至 IBM ID。一般使用者接著可以在 {{site.data.keyword.Bluemix_notm}} 主控台中存取「基礎架構」、「應用程式」及「服務」儀表板。
+ 1. 若要建立新的 {{site.data.keyword.Bluemix_notm}} 帳戶，或鏈結至現有 {{site.data.keyword.Bluemix_notm}} 帳戶，請以主要使用者身分登入 SoftLayer 帳戶，然後按一下 **{{site.data.keyword.Bluemix_notm}}** 鏈結。這可讓您建立新的 {{site.data.keyword.Bluemix_notm}} 帳戶，或者鏈結至現有 {{site.data.keyword.Bluemix_notm}} 帳戶。作為 SoftLayer 帳戶之主要使用者的 IBM ID 必須是您正要鏈結的 Bluemix 帳戶的擁有者。請遵循精靈提示（包括將 SoftLayer 帳戶中的使用者新增至 {{site.data.keyword.Bluemix_notm}} 帳戶）。 
+ 2. 在您鏈結帳戶之後，請通知帳戶的一般使用者以移轉至 IBM ID。一般使用者接著可以在 {{site.data.keyword.Bluemix_notm}} 主控台中存取「基礎架構」、「應用程式」及「服務」儀表板。
  3. 將新使用者新增至鏈結的帳戶時，您需要將他們新增至 SoftLayer 帳戶及 {{site.data.keyword.Bluemix_notm}} 帳戶，他們才能存取統一主控台內的所有功能。
  
 **建議：**僅將一般使用者帳戶移轉至 IBM ID。請不要移轉品牌帳戶，這是一般使用者帳戶的母帳戶，未包含任何資源。移轉至 IBM ID 的品牌帳戶使用者將無法登入 Brand Agent Portal (BAP) 入口網站。
@@ -162,7 +162,7 @@ For a user with IBMid access to multiple accounts with two-factor authentication
 
 您可以從 SoftLayer 中的應用程式呼叫 Watson API，使其更加個人化，以獲得*見解和認知* 的知識。或者，使用*資料和分析* 服務，為您的應用程式進行高效能分析。或者，選擇資料庫即服務 (database-as-a-service)，將管理工作交給 {{site.data.keyword.Bluemix_notm}}。
 
-使用容器搭配 {{site.data.keyword.activedeployshort}} 和 {{site.data.keyword.deliverypipeline}} 等服務，使您的應用程式開發作業現代化。然後，您可以使用 {{site.data.keyword.vpn_short}} 服務與 SoftLayer 進行通訊，以將專用網路中的容器連接至 SoftLayer 專用網路。運算資源及服務的所有使用收費都會反映在您的 {{site.data.keyword.Bluemix_notm}} 帳單上。 
+使用容器搭配 {{site.data.keyword.activedeployshort}} 和 {{site.data.keyword.deliverypipeline}} 等服務，使您的應用程式開發作業現代化。然後，您可以使用 {{site.data.keyword.vpn_short}} 服務與 SoftLayer 進行通訊，以將專用網路中的容器連接至 SoftLayer 專用網路。運算資源及服務的所有使用費用都會反映在您的 {{site.data.keyword.Bluemix_notm}} 帳單上。 
 
 ### API 型 {{site.data.keyword.Bluemix_notm}} 服務
 並非所有 {{site.data.keyword.Bluemix_notm}} 服務都可以與 SoftLayer 搭配使用。下列服務可設定為與您的應用程式碼搭配執行：

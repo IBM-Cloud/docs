@@ -45,7 +45,7 @@ lastupdated: "2016-07-20"
 その後、アプリケーションを再ステージングします。これにより、アプリケーションは、指定されたプロキシー設定を実行時に使用します。Java プロキシー・オプションについて詳しくは、[「Java Networking and Proxies」](https://docs.oracle.com/javase/8/docs/technotes/guides/net/proxies.html)を参照してください。
 
 # 関連リンク
-{: #rellinks}
+{: #rellinks notoc}
 ## 一般
 {: #general}
 * [Liberty for Java](/docs/runtimes/liberty/index.html)

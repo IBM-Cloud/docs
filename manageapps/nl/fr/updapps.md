@@ -12,7 +12,7 @@ lastupdated: "2016-08-25"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#Mise à jour d'applications
+# Mise à jour d'applications
 {: #updatingapps}
 
 
@@ -20,7 +20,7 @@ Vous pouvez utiliser la commande cf push ou {{site.data.keyword.Bluemix}} DevOps
 commande à utiliser pour démarrer votre application.
 {:shortdesc}
 
-##Création et utilisation d'un domaine personnalisé
+## Création et utilisation d'un domaine personnalisé
 {: #domain}
 
 Pour les applications CF et les groupes de conteneurs, vous pouvez utiliser un domaine personnalisé dans l'adresse URL de votre application au lieu
@@ -146,7 +146,7 @@ avez déjà déployé une application dans {{site.data.keyword.Bluemix_notm}} et
 vers une
 nouvelle version, vous pouvez utiliser l'une des méthodes ci-dessous pour effectuer un déploiement Blue-Green.
 
-###Exemple : Utilisation de la commande cf rename
+### Exemple : Utilisation de la commande cf rename
 
 Dans cet exemple, le nom de l'application est Blue. Cet exemple illustre la mise à jour de la version de *Blue* à l'aide de la commande **cf rename** sans
 perturbation du trafic vers l'application. Vous pouvez, si vous le désirez, supprimer l'ancienne version de *Blue* une fois la nouvelle version en place.
@@ -216,7 +216,7 @@ delete**.
 
   **Résultat :** l'application *Blue* répond à l'adresse URL `Blue.mybluemix.net`.
 
-###Exemple : Utilisation de la commande cf map-route
+### Exemple : Utilisation de la commande cf map-route
 
 Dans cet exemple, *Blue* est l'ancienne version déployée et
 *Green* la version mise à jour. Cet exemple illustre la mise à jour de la version de *Blue* à l'aide de la commande **cf map-route** sans perturbation du trafic vers l'application. Vous pouvez, si vous le désirez, supprimer l'ancienne version de *Blue* une fois la nouvelle version en place.
@@ -322,7 +322,7 @@ delete`.
 
 
 # Liens connexes
-{: #rellinks}
+{: #rellinks notoc}
 
 ## Liens connexes
 {: #general}

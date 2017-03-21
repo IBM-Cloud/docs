@@ -20,7 +20,7 @@ lastupdated: "2016-12-05"
 {: #userroles}
 
 A partir da página de **Diretório da equipe** para a sua conta, é possível gerenciar membros da equipe existentes e suas funções em sua organização e espaços, bem como convidar novos
-membros da equipe. Para acessar o diretório da equipe de sua conta, clique em **Conta** > **Diretório de equipe**.
+membros da equipe. Para acessar o diretório da equipe de sua conta, clique em **Conta** > **Diretório de equipe**. 
 {:shortdesc}
 
 Proprietários da conta executam todas as operações nas organizações e espaços, incluindo o gerenciamento de membros da equipe e de suas funções designadas. Gerenciadores de organização têm acesso para

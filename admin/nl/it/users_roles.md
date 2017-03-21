@@ -97,7 +97,7 @@ Fai clic su **Visualizza in sospeso** per controllare se gli inviti sono in sosp
 
 ### Aggiunta di membri del team SoftLayer
 
-Se hai un account SoftLayer collegato al tuo account Bluemix, puoi aggiungere i membri del tuo team SoftLayer. 
+Se hai un account SoftLayer collegato al tuo account Bluemix, puoi aggiungere i membri del tuo team SoftLayer.
 
 1. Vai a **Account** > **Invita membri del team**.  
 2. Fai clic su **Aggiungi** nella sezione **Aggiungi membri del team SoftLayer** per effettuare l'autenticazione nel tuo account SoftLayer e visualizzare un elenco di membri del team dal tuo account SoftLayer.

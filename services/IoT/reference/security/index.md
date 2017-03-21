@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-03"
+lastupdated: "2017-03-17"
 
 ---
 
@@ -31,7 +31,7 @@ The following document answers some common questions about how your organization
 
 {{site.data.keyword.iot_short_notm}} runs within {{site.data.keyword.Bluemix_notm}} platform and so relies upon both {{site.data.keyword.Bluemix_notm}} and {{site.data.keyword.BluSoftlayer_full}} for access and connectivity. The reliance upon {{site.data.keyword.Bluemix_notm}} and {{site.data.keyword.BluSoftlayer}} makes {{site.data.keyword.Bluemix_notm}} and {{site.data.keyword.BluSoftlayer}} security and reliability important to users of {{site.data.keyword.iot_short_notm}}
 
-For more details about the security of the {{site.data.keyword.Bluemix_notm}}, see [{{site.data.keyword.Bluemix_notm}} platform security ![External link icon](../../../../icons/launch-glyph.svg)](https://console.ng.bluemix.net/docs/security/index.html#platform-security){: new_window}.
+For more details about the security of the {{site.data.keyword.Bluemix_notm}}, see [{{site.data.keyword.Bluemix_notm}} platform security](index.html#platform-security).
 
 ## {{site.data.keyword.iot_short_notm}} Security compliance
 {: #compliance}  
@@ -67,11 +67,13 @@ Device credentials and API keys can be individually revoked if they are compromi
 ## How do we ensure your devices connect securely to the {{site.data.keyword.iot_short_notm}}?
 {: #secure-device-connection}
 
-Devices connected use a combination of clientId and the authentication token that is generated when adding the devices to your platform. MQTT v3.1.1 is used to allow simple interoperability across many platforms and languages. The {{site.data.keyword.iot_short_notm}} supports connectivity over TLS v1.2.
+Devices connect by using either a clientID or the authentication token that is generated when the devices are added to your platform or both. MQTT is used to allow simple interoperability across many platforms and languages. The {{site.data.keyword.iot_short_notm}} supports connectivity over TLS v1.2.
 
 ![image](connectivity_platform.svg)
 
-For more information about TLS and cipher suite requirements, see the [TLS requirements ![External link icon](../../../../icons/launch-glyph.svg)](https://console.ng.bluemix.net/docs/services/IoT/reference/security/connect_devices_apps_gw.html#tls_requirements){: new_window} section in the `Application, device, and gateway connections to Watson IoT Platform` documentation.
+For more information about TLS and cipher suite requirements, see the [TLS requirements](connect_devices_apps_gw.html#tls_requirements) section in the `Application, device, and gateway connections to Watson IoT Platform` documentation.
+
+You can use certificates and security polices to enhance device connection security. Security policies can be set to allow unencrypted connections, to enforce only transport layer security (TLS) connections, and to enable devices to authenticate with client-side certificates. Blacklists can be used to specify devices that are not allowed to connect or whitelists can be used to allow specific devices to connect. For more information about enhanced security, see [Risk and security management](RM_security.html).
 
 ## How do we prevent data leaking between IoT devices?
 {: #prevent-leak-devices}

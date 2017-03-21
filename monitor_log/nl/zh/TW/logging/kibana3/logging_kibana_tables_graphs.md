@@ -1,0 +1,69 @@
+---
+
+copyright:
+  years: 2016, 2017
+lastupdated: "2017-02-07"
+
+---
+
+<!-- Common attributes used in the template are defined as follows: -->
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen:.screen}
+{:codeblock:.codeblock}
+
+<!-- Additional task topic: OPTIONAL
+This is the template for additional task topics that are needed beyond the basic tasks in the getting started index.md.  As needed, other task topics can be included, with titles such as "Configuring x", "Administering y", "Managing z", etc. This topic is a peer of the getting started index.md in the <servicename>.ditamap. This topic can have one level of children and they also can be referenced in <servicename>.ditamap -->
+
+# 在 Kibana 中從查詢建立表格和圖形
+<!-- for example, Uploading your data -->
+{: #logging_kibana_tables_graphs}
+<!-- Provide an appropriate ID above -->
+
+<!-- The short description section should include a sentence describing why this task is needed. For search engine optimization, include the service long name and "Bluemix". For example: -->
+
+使用 Kibana 來建立查詢的圖形和表格，以將日誌資料視覺化，並比較結果。您可以從 Cloud Foundry 應用程式的**日誌**標籤存取 Kibana 儀表板。
+{:shortdesc}
+
+<!-- Include a sentence to briefly introduce the steps/subtopics. Example: -->
+Kibana 儀表板會輸出成一連串的資料列，每一列都包含一個以上畫面。您可以配置畫面，以顯示資料的圖形表示法。使用查詢來決定要顯示哪些資料。若要建立圖形或表格，您必須先建立空白列，然後再建立畫面。如果您從 CF 應用程式的**日誌**標籤存取 Kibana 儀表板，該儀表板會自動顯示兩個畫面：一個直方圖和一個表格。
+
+完成下列作業，以在 Kibana 儀表板上新增圖形或表格：
+
+1. 若要存取 Cloud Foundry 應用程式的**日誌**標籤，請在 {{site.data.keyword.Bluemix_notm}} **應用程式**儀表板上的 **Cloud Foundry 應用程式**表格中，按一下應用程式名稱；然後按一下**日誌**標籤。即會顯示應用程式的日誌。
+
+2. 若要存取應用程式的 Kibana 儀表板顯示畫面，請按一下**進階視圖** ![進階視圖鏈結](images/logging_advanced_view.jpg)。即會顯示 Kibana 儀表板。
+
+3. 在 Kibana 儀表板上，捲動至儀表板底端，然後按一下**新增一列** ![新增一列圖示](images/logging_add_row.jpg)，為您要新增的畫面建立一列。即會顯示「儀表板設定」窗格。 
+	
+	![儀表板設定窗格](images/logging_dashboard_settings.jpg)
+	
+	在「新增列」窗格的**標題**欄位中，輸入該列的名稱，然後按一下**建立列**。即會新增一列。您可以按一下列標題旁邊的**上移鍵**或**下移鍵**圖示，以調整列順序。設定列順序之後，按一下**儲存**。Kibana 儀表板上即會建立一個空白列。
+
+4. 按一下**新增畫面至空白列**來新增畫面。即會顯示「列設定」窗格。
+
+    ![列設定窗格](images/logging_row_settings.jpg)
+	
+	您可以從**選取畫面類型**下拉清單中選擇不同的畫面類型，例如**表格**、**直方圖**或**項目**。選取**項目**可根據您的查詢來建立長條圖、圓餅圖或表格。「列設定」窗格中即會顯示一系列配置選項。
+	
+	![在列設定窗格中新增畫面](images/logging_add_panel.jpg)
+	
+	配置畫面。輸入圖形顯示畫面的**標題**。從下拉清單中選取畫面的**跨距**，**跨距**可決定畫面橫跨儀表板的寬度。在「參數」區段中，刪除**欄位**的內容，並輸入有效的日誌欄位，例如 `instance_id`。 
+
+5. 在「視圖選項」區段中，從**樣式**下拉清單中選取**長條圖**、**圓餅圖**或**表格**，以選擇長條圖、圓餅圖或表格。在「查詢」區段中，從**查詢**下拉清單中選取**已選取**，以使用來自儀表板查詢的日誌資料。最後，按一下**儲存**。您的新畫面即會顯示在儀表板上。
+
+	![儀表板，其中顯示包含長條圖的畫面](images/logging_bar_chart_panel.jpg)
+	
+6. 若要變更此畫面，使其顯示表格，請按一下**配置**圖示 ![配置圖示](images/logging_dashboard_config_panel.jpg)。即會顯示「項目設定」窗格。 
+
+	![項目設定窗格](images/logging_terms_settings.jpg)
+	
+	按一下**畫面**標籤，然後從**樣式**下拉清單中選取**表格**。按一下**儲存**，以更新畫面，並回到儀表板。
+
+7. 在儀表板中新增進一步的列和畫面。完成後，按一下**儲存**圖示，以將變更儲存至此儀表板。
+
+    **附註：**如果您嘗試用來儲存儀表板的名稱包含空格，將不會進行儲存。請輸入不含空格的名稱，然後按一下**儲存**圖示。
+
+    ![儲存儀表板名稱](images/logging_save_dashboard.jpg)。
+
+

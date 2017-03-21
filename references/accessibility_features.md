@@ -58,7 +58,7 @@ Table 1. Keyboard shortcuts in {{site.data.keyword.Bluemix_notm}}
 Modify the following table for your product; if your product uses no unique keyboard shortcuts, remove the table and introductory sentence.
 
 | **Action** | **Shortcut for Internet Explorer** |  **Shortcut for Firefox** |
-|------------|-----------------------------------|----------------------------|
+| | | |
 |Example: Move to the Contents View frame  | Alt+C, then press Enter and Shift+F6 | Shift+Alt+C and Shift+F6   |
 
 -->

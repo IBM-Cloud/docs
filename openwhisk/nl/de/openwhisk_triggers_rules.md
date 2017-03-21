@@ -1,22 +1,21 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-02-22"
+  years: 2016, 2017
+lastupdated: "2016-02-23"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
+{:screen: .screen}
 {:pre: .pre}
 
 # Auslöser und Regeln erstellen
 {: #openwhisk_triggers}
 
-
-{{site.data.keyword.openwhisk}}-Auslöser und -Regeln statten die Plattform mit ereignisgesteuerten Funktionen aus. Ereignisse aus externen und internen Ereignisquellen werden durch einen Auslöser kanalisiert. Regeln ermöglichen es Ihren Aktionen, auf diese Ereignisse zu reagieren.
+{{site.data.keyword.openwhisk_short}}-Auslöser und -Regeln statten die Plattform mit ereignisgesteuerten Funktionen aus. Ereignisse aus externen und internen Ereignisquellen werden durch einen Auslöser kanalisiert. Regeln ermöglichen es Ihren Aktionen, auf diese Ereignisse zu reagieren.
 {: shortdesc}
 
 ## Auslöser erstellen
@@ -69,11 +68,9 @@ Erstellen Sie zum Beispiel einen Auslöser, um Aktualisierungen an Benutzerstand
   wsk trigger create locationUpdate
   ```
   {: pre}
-
   ```
   ok: created trigger locationUpdate
   ```
-  {: screen}
 
 2. Prüfen Sie, ob der Auslöser erstellt wurde, indem Sie die Gruppe von Auslösern auflisten.
 
@@ -81,12 +78,10 @@ Erstellen Sie zum Beispiel einen Auslöser, um Aktualisierungen an Benutzerstand
   wsk trigger list
   ```
   {: pre}
-
   ```
   triggers
   /someNamespace/locationUpdate                            private
   ```
-  {: screen}
 
   Bis hierhin haben Sie einen benannten "Kanal" erstellt, an den Ereignisse ausgelöst werden können.
 
@@ -96,11 +91,9 @@ Erstellen Sie zum Beispiel einen Auslöser, um Aktualisierungen an Benutzerstand
   wsk trigger fire locationUpdate --param name Donald --param place "Washington, D.C."
   ```
   {: pre}
-
   ```
   ok: triggered locationUpdate with id fa495d1223a2408b999c3e0ca73b2677
   ```
-  {: screen}
 
 Ein Auslöser, der ohne zugehörige Regel aktiviert wird, die mit ihm abgeglichen werden soll, hat keine sichtbaren Auswirkungen.
 Auslöser können nicht innerhalb eines Pakets erstellt werden; sie müssen direkt in einem Namensbereich erstellt werden.
@@ -113,7 +106,7 @@ Regeln werden dazu verwendet, einen Auslöser einer Aktion zuzuordnen. Jedes Mal
 Erstellen Sie zum Beispiel eine Regel, die die Aktion "hello" aufruft, wenn eine Standortaktualisierung gesendet wird.
 
 1. Erstellen Sie eine Datei 'hello.js' mit dem folgenden Aktionscode:
-  ```
+  ```javascript
   function main(params) {
      return {payload:  'Hello, ' + params.name + ' from ' + params.place};
   }
@@ -125,7 +118,6 @@ Erstellen Sie zum Beispiel eine Regel, die die Aktion "hello" aufruft, wenn eine
   wsk trigger update locationUpdate
   ```
   {: pre}
-
   ```
   wsk action update hello hello.js
   ```
@@ -148,34 +140,28 @@ Erstellen Sie zum Beispiel eine Regel, die die Aktion "hello" aufruft, wenn eine
   wsk trigger fire locationUpdate --param name Donald --param place "Washington, D.C."
   ```
   {: pre}
-
   ```
   ok: triggered locationUpdate with id d5583d8e2d754b518a9fe6914e6ffb1e
   ```
-  {: screen}
 
 5. Stellen Sie fest, ob die Aktion aufgerufen wurde, indem Sie die letzte Aktivierung prüfen.
   ```
   wsk activation list --limit 1 hello
   ```
   {: pre}
-
   ```
   activations
   9c98a083b924426d8b26b5f41c5ebc0d             hello
   ```
-  {: screen}
-
   ```
   wsk activation result 9c98a083b924426d8b26b5f41c5ebc0d
   ```
   {: pre}
-  ```
+  ```json
   {
      "payload": "Hello, Donald from Washington, D.C."
   }
   ```
-  {: screen}
 
   Wie Sie sehen, hat die Aktion 'hello' die Ereignisnutzdaten (payload) empfangen und die erwartete Zeichenfolge zurückgegeben.
 
@@ -189,7 +175,9 @@ Auslöser und Regeln können nicht zu einem Paket gehören. Die Regel kann jedoc
 Sie können Regeln auch mit Sequenzen verwenden. Beispielsweise können Sie eine Aktionssequenz `recordLocationAndHello` erstellen, die mit der Regel `anotherRule` aktiviert wird.
   ```
   wsk action create recordLocationAndHello --sequence /whisk.system/utils/echo,hello
+  ```
+  {: pre}
+  ```
   wsk rule create anotherRule locationUpdate recordLocationAndHello
   ```
   {: pre}
- 

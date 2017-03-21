@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017
-lastupdated: "2016-11-18"
+  years: 2015, 2017
+lastupdated: "2017-03-14"
 
 ---
 
@@ -20,8 +20,8 @@ MQTT is the primary protocol that devices and applications use to communicate wi
 
 MQTT runs over TCP/IP, and while it is possible to code directly to TCP/IP, you can also choose to use a library that handles the details of the MQTT protocol for you. A wide range of MQTT client libraries are available. IBM contributes to the development and support of several client libraries, including those that are available at the following sites:
 
-- [MQTT community wiki](https://github.com/mqtt/mqtt.github.io/wiki)
-- [Eclipse Paho project](http://eclipse.org/paho/)
+- [MQTT community wiki ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/mqtt/mqtt.github.io/wiki){: new_window}
+- [Eclipse Paho project ![External link icon](../../../../icons/launch-glyph.svg "External link icon")](http://eclipse.org/paho/){: new_window}
 
 ## Version support
 {: #version-support}

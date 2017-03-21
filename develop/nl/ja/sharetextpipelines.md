@@ -168,7 +168,8 @@ space: <space name>
 ```
 {
   "project_id": "_ljkahfliasdlk",
-  "env": {"CF_ORGANIZATION" : "user@se.ibm.com"
+  "env": {
+     "CF_ORGANIZATION" : "user@se.ibm.com"
   },
   "config": {
     "format" : "yaml",
@@ -177,7 +178,8 @@ space: <space name>
         target:
           url: http://api.ng.bluemix.net
           organization: ${CF_ORGANIZATION}
-        script: \"echo ${CF_ORGANIZATION}\"...
+        script: \"echo ${CF_ORGANIZATION}\"
+      ...
     "
   }
 }

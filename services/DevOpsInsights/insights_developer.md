@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-24"
+lastupdated: "2017-03-17"
 
 ---
 
@@ -20,11 +20,12 @@ lastupdated: "2017-02-24"
 
 After you open {{site.data.keyword.DRA_short}} from your toolchain, click **Developer Insights**. From there, you can select an analytic category to dive deeper into your project's codebase. What each set of data indicates can vary from team to team, and you can drill down into each visualization for help and guidance. 
 
-**Note:** Developer Insights is available to only IBM employees and a limited number of external parties. 
-
 ## Data categories
-
 The data that {{site.data.keyword.DRA_short}} uses to populate its dashboards is mined automatically from your team's source-control repository. You can get more information about what the data means and how you can apply it to your project by clicking **Information** or **Guidance** on any chart.
+
+### Developer Best Practices
+
+Developer Insights provides a number of charts that measure your project against good DevOps and developer practices. Use this category to get a high-level view of your project's maturity, health, and efficiency. 
 
 ### Error Proneness
 
@@ -48,6 +49,19 @@ The Files category shows which of your project's files are the busiest. Whether 
 
 Generally, try to reduce both the number of hands that touch a file and that file's change frequency. This goal might be impossible with certain files, such as common configuration files. However, many developers making many changes to the same file at the same time is a recipe for trouble. 
 
-<!--## WORKING - Garage Method tie in?
+**Note**: DevOps Insights ignores files that have these extensions:
 
-Add paragraph linking to GM. Not sure what form this would take--are there identified practices here? The Bluemix Docs material should generally not be prescriptive, especially given that the product UI doesn't often indicate what to do with data, but there's an opportunity to link out for interested parties. -->
+* .bin
+* .cdr
+* .jpeg
+* .jpg
+* .json
+* .markdown
+* .md
+* .png
+* .pyc
+* .svg
+* .text
+* .yaml
+* .yml
+

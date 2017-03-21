@@ -26,7 +26,6 @@ Cloud Foundry (cf) 命令行界面 (CLI) 提供了一组用于管理应用程序
 **注**：如果您的网络中有 HTTP 代理服务器位于运行 cf 命令的主机和 Cloud Foundry API 端点之间，那么必须通过设置 `HTTP_PROXY` 环境变量来指定该代理服务器的主机名或 IP 地址。有关详细信息，请参阅 [Using the cf CLI with an HTTP Proxy Server ![外部链接图标](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}。
 
 
-
 ## Cloud Foundry CLI 命令索引
 {: #CLIname_commands_index}
 
@@ -828,7 +827,7 @@ cf -v
 ## 相关链接
 {: #general}
 
-* [Download Cloud Foundry CLI ![外部链接图标](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases)
+* [下载 Cloud Foundry CLI ![外部链接图标](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases)
 {: new_window}
 * [Quick Reference Card - cf commands ![外部链接图标](../../../icons/launch-glyph.svg)](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html)
 {: new_window}

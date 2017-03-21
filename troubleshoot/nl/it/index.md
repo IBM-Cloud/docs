@@ -15,59 +15,59 @@ lastupdated: "2017-01-11"
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock} 
 
-# Troubleshooting for accessing {{site.data.keyword.Bluemix_notm}} 
+# Risoluzione dei problemi di accesso a {{site.data.keyword.Bluemix_notm}} 
 {: #accessing}
 
 
 
-General problems with accessing {{site.data.keyword.Bluemix}} might include a user that is unable to log in to {{site.data.keyword.Bluemix_notm}}, an account that is stuck in a pending state, and so on. However, in many cases, you can recover from these problems by following a few easy steps. 
+I problemi generali con l'accesso a {{site.data.keyword.Bluemix}} potrebbero includere un utente che non riesce ad accedere a {{site.data.keyword.Bluemix_notm}}, un account bloccato in uno stato In sospeso e così via. Tuttavia, in molti casi, puoi eseguire un ripristino da tali problemi seguendo pochi semplici passi. 
 {:shortdesc}
 
-## Unable to log in to {{site.data.keyword.Bluemix_notm}}
+## Impossibile accedere a {{site.data.keyword.Bluemix_notm}}
 {: #ts_logintobm}
 
-You must have a valid IBMid and password to log in to {{site.data.keyword.Bluemix_notm}}.
+Per accedere a {{site.data.keyword.Bluemix_notm}}, devi disporre di un ID IBM e password validi.
 
 
-When you try to sign in to {{site.data.keyword.Bluemix_notm}}, you see the following error message: 
+Quando tenti di accedere a {{site.data.keyword.Bluemix_notm}}, visualizzi il seguente messaggio di errore: 
 {: tsSymptoms} 
 
-`The password that you entered is not correct.`
+`La password immessa non è corretta.`
 
 
-The IBMid and password that you use to sign in to {{site.data.keyword.Bluemix_notm}} is invalid.
+L'ID IBM e password da te utilizzati per accedere a {{site.data.keyword.Bluemix_notm}} non sono validi.
 {: tsCauses} 
  
 
-To get a valid IBMid and password, go to the My IBM profile page, and then complete one of the following steps:
+Per ottenere un ID IBM e una password validi, vai alla pagina Il mio profilo IBM e completa una della seguenti procedure:
 {: tsResolve}
-  * If you have already registered an IBMid and you want to check whether your ID and password are valid, click **Sign in** and enter your IBMid and password on the Sign in page. If you have forgotten your password, click **Forgot your password** on the Sign in page to reset your password. If you have forgotten your IBMid or continue to have problems with your password, contact the Worldwide IBM Registration Help Desk for help. 
-  * If you don't have an IBMid, click **Register** to register an IBMid and password. 
+  * Se già hai registrato un ID IBM e vuoi controllare se il tuo ID e la tua password sono validi, fai clic su **Accedi** e immetti il tuo ID IBM e la relativa password nella pagina di accesso. Se hai dimenticato la password, fai clic su **Password dimenticata** per reimpostarla. Se hai dimenticato il tuo ID IBM o continui ad avere problemi con la tua password, contatta l'Help Desk Worldwide IBM Registration per ottenere assistenza. 
+  * Se non hai un ID IBM, fai clic su **Registrati** per registrare un ID IBM e password. 
   
-**Note:** For IBM employees, the IBMid might be different from the intranet login ID. 
+**Nota:** per i dipendenti IBM, l'ID IBM potrebbe essere diverso dall'ID di accesso Intranet. 
 
 
 
 
 
-## You have unsaved changes
+## Sono presenti modifiche non salvate
 {: #ts_unsaved_changes}
 
 
-When you navigate on the app details page, you might be unable to perform any actions and might be prompted to save changes before you can proceed. 
+Quando navighi nella pagina dei dettagli dell'applicazione, potresti non riuscire ad eseguire delle azioni ed è possibile che ti venga richiesto di salvare le modifiche prima di continuare. 
 
 
-When you try to check your app or services on the app details page, you keep getting the following error message:
+Quanto tenti di controllare la tua applicazione o i tuoi servizi nella pagina dei dettagli dell'applicazione, continui a visualizzare il seguente messaggio di errore:
 {: tsSymptoms} 
 
-`You have unsaved changes in page app_name. Save or cancel the changes.`
+`Sono presenti modifiche non salvate nella pagina nomeapplicazione. Salva o annulla le modifiche.`
 
 
-When you scroll your mouse over the **INSTANCES** or **MEMORY QUOTA** field on the runtime pane, the values change. This behavior is by design; however, the error message prompts you to save the memory or instance settings before you navigate away from the page. 
+Quando passi il mouse sul campo **ISTANZE** o **QUOTA DI MEMORIA** nel riquadro del runtime, i valori cambiano. Questo è il funzionamento previsto; tuttavia, il messaggio di errore di richiede di salvare le impostazioni della memoria o dell'istanza prima di uscire dalla pagina. 
 {: tsCauses}
 
 
-Close the message window, and then click the **RESET** button in your runtime pane. 
+Chiudi la finestra del messaggio, quindi fai clic sul pulsante  **REIMPOSTA** nel riquadro del runtime. 
 {: tsResolve} 
 
 
@@ -75,142 +75,187 @@ Close the message window, and then click the **RESET** button in your runtime pa
 
     
     
-## Automatic failover between {{site.data.keyword.Bluemix_notm}} regions is not available
+## Il failover automatico tra le regioni {{site.data.keyword.Bluemix_notm}} non è disponibile
 {: #ts_failover}
 
-You are unable to use automatic failover between {{site.data.keyword.Bluemix_notm}} regions. However, you can use a DNS provider that supports failover among multiple IP addresses as a workaround.
+Non riesci a utilizzare il failover automatico tra le regioni {{site.data.keyword.Bluemix_notm}}. Tuttavia, come soluzione alternativa, puoi utilizzare un provider DNS che supporti il failover tra più indirizzi IP.
  
 
-When a {{site.data.keyword.Bluemix_notm}} region becomes unavailable, the apps that are running in that region are also unavailable, even if the same apps are running in another {{site.data.keyword.Bluemix_notm}} region.
+Quando una regione {{site.data.keyword.Bluemix_notm}}  diventa non disponibile, anche le applicazioni in esecuzione in tale regione non saranno più disponibili, anche se le stesse applicazioni sono in esecuzione in un'altra regione {{site.data.keyword.Bluemix_notm}}.
 {: tsSymptoms}
 
  
-{{site.data.keyword.Bluemix_notm}} does not yet provide automatic failover from one region to another.
+{{site.data.keyword.Bluemix_notm}} non fornisce ancora il failover automatico da una regione all'altra.
 {: tsCauses}
 
  
-You can use a DNS provider that supports intelligent failover among multiple ID addresses, and manually configure your DNS settings to enable the automatic failover between {{site.data.keyword.Bluemix_notm}} regions. DNS providers with this capability include NSONE, Akamai, Dyn.
+Puoi utilizzare un provider DNS che supporti il failover intelligente tra più indirizzi IP e configurare manualmente le tue impostazioni
+DNS per abilitare il failover automatico tra le regioni {{site.data.keyword.Bluemix_notm}}. I provider DNS con questa capacità comprendono NSONE, Akamai, Dyn.
 {: tsResolve}
 
-When you configure your DNS settings, you must specify the public IP addresses of the {{site.data.keyword.Bluemix_notm}} regions that your apps are running in. To get the public IP address of a {{site.data.keyword.Bluemix_notm}} region, use the `nslookup` command. For example, you can type the following command in a command line window:
+Quando configuri le tue impostazioni DNS, devi specificare gli indirizzi IP pubblici delle regioni {{site.data.keyword.Bluemix_notm}} in cui sono esecuzione le tue applicazioni. Per ottenere l'indirizzo IP pubblico
+di una regione {{site.data.keyword.Bluemix_notm}},
+usa il comando `nslookup`. Ad esempio, puoi immettere
+il seguente comando in una finestra della riga di comando:
 ```
 nslookup mybluemix.net
 ```
 
 
 
-## Account is pending
+## L'account è in sospeso
 {: #ts_accntpding}
 
-If your account is pending, you cannot log in to {{site.data.keyword.Bluemix_notm}}.
+Se il tuo account è in sospeso, non puoi accedere a {{site.data.keyword.Bluemix_notm}}.
 
  
-After you register for a {{site.data.keyword.Bluemix_notm}} trial account, you might not be able to log in to {{site.data.keyword.Bluemix_notm}}. Instead, you see the following message:
+Dopo aver eseguito la registrazione per un account di prova {{site.data.keyword.Bluemix_notm}},
+potresti non riuscire ad accedere a {{site.data.keyword.Bluemix_notm}}. Invece, visualizzi il seguente messaggio:
 {: tsSymptoms}
 
-<code>Your account is pending. Please wait up to 24 hours for email confirmation and also check your spam folder. If you still have not received your email confirmation, contact <a href="http://ibm.biz/bluemixsupport.com" target="_blank">Bluemix Support <img src="../icons/launch-glyph.svg" alt="External link icon"></a>.</code>
+<code>Your account is pending. Please wait up to 24 hours for email confirmation and also check your
+spam folder. If you still have not received your email confirmation, contact <a href="http://ibm.biz/bluemixsupport.com" target="_blank">Bluemix Support <img src="../icons/launch-glyph.svg" alt="External link icon"></a>.</code>
 
 
-After you register for a {{site.data.keyword.Bluemix_notm}} trial account, you receive a confirmation email. You must click the link that is in the confirmation email to complete the registration process.
+Dopo aver eseguito la registrazione per un account di prova {{site.data.keyword.Bluemix_notm}},
+riceverai un'email di conferma. Dovrai fare clic sul link
+che si trova nella email di conferma per completare il processo di registrazione.
 {: tsCauses} 
 
-The confirmation email is sent to the email address that you provided. Check your inbox and your junk mail folder. If you haven't received the confirmation email, contact [{{site.data.keyword.Bluemix_notm}} Support ![External link icon](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}.  
+L'email di conferma viene inviata all'indirizzo di posta
+da te fornito. Controlla la cartella della posta in arrivo e quella della posta indesiderata. Se non hai ricevuto un'e-mail di conferma, contatta il [{{site.data.keyword.Bluemix_notm}} Supporto ![icona link esterno](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}.  
 {: tsResolve}
 
 
 
-## Unable to add users to an org
+## Impossibile aggiungere utenti a un'organizzazione
 {: #ts_adduser}
 
-You can invite more than one user to work under the same organization. You can invite users to your organization only if you are the account owner, or if you are both a manager and a member of the organization.
+Puoi invitare più di un utente a lavorare nella stessa organizzazione. Puoi invitare utenti nella tua organizzazione solo
+se sei il proprietario dell'account o se sei allo stesso tempo un gestore e un membro dell'organizzazione.
  
 
-You cannot see the **Invite a New User** link in your **Manage Organizations** section. 
+Non riesci a visualizzare il link **Invita un nuovo utente**
+nella sezione **Gestisci organizzazioni**. 
 {: tsSymptoms}
 
  
 
-Only the following {{site.data.keyword.Bluemix_notm}} users can invite users to an organization:
+Solo i seguenti utenti {{site.data.keyword.Bluemix_notm}}
+possono invitare gli utenti in un'organizzazione:
 {: tsCauses}
-  * The account owner of the organization
-  * Organization managers who are also members, not collaborators, of the organization
+  * Il proprietario dell'account dell'organizzazione
+  * I gestori dell'organizzazione che sono anche membri, e non collaboratori,
+dell'organizzazione
   
-In {{site.data.keyword.Bluemix_notm}}, you can be either a member or a collaborator of an organization:
+In {{site.data.keyword.Bluemix_notm}},
+puoi essere un membro o un collaboratore di un'organizzazione.
 
-<dl><dt>Collaborator</dt>
-<dd>You are a collaborator of an organization if you already have a {{site.data.keyword.Bluemix_notm}} account, and someone else invites you to the organization.</dd>
-<dt>Member</dt>
-<dd>You are a member of an organization if you don't have a {{site.data.keyword.Bluemix_notm}} account, but then someone invites you to the organization and you sign up for {{site.data.keyword.Bluemix_notm}} from the invitation.</dd>
+<dl><dt>Collaboratore</dt>
+<dd>Sei un collaboratore di un'organizzazione se disponi già
+di un account {{site.data.keyword.Bluemix_notm}}
+e qualcun altro ti invita nell'organizzazione.</dd>
+<dt>Membro</dt>
+<dd>Sei membro di un'organizzazione se non disponi di un account {{site.data.keyword.Bluemix_notm}},
+ma poi qualcuno ti invita nell'organizzazione e ti registri a {{site.data.keyword.Bluemix_notm}}
+tramite l'invito.</dd>
 </dl>
 
 
-You cannot invite users to your organization if you are a collaborator of the organization, even if you have been assigned as an organization manager.
+Non puoi invitare utenti nella tua organizzazione se sei
+un collaboratore, anche se ti è stato assegnato il ruolo di
+gestore organizzazione.
 
-**Note:** All organization managers, including those who are collaborators of an organization, can add, modify, and remove users that are already in the organization.
+**Nota:** tutti i gestori organizzazione, compresi quelli che sono collaboratori di un'organizzazione, possono aggiungere, modificare e rimuovere gli utenti già presenti nell'organizzazione.
 
  
 
-If you are unable to invite users to your organization and need a different role to do so, contact your organization manager to change your role. To identify your organization manager, complete the following steps:
+Se non riesci a inviare utenti nella tua organizzazione e per farlo
+hai bisogno di un ruolo differente, contatta il gestore della tua organizzazione
+per modificare il tuo ruolo. Per identificare il gestore della tua organizzazione, completa
+la seguente procedura:
 {: tsResolve}
 
-  1. Go to the {{site.data.keyword.Bluemix_notm}} Dashboard, click the {{site.data.keyword.avatar}} icon ![Avatar icon](images/account_support.svg) in the menu bar, and select **Manage Organizations**.
-  2. Go to your organization, and view the information of organization manager on the **USERS** tab.  
+  1. Vai al Dashboard {{site.data.keyword.Bluemix_notm}}, fai clic sull'icona {{site.data.keyword.avatar}} ![icona Avatar](images/account_support.svg) nella barra dei menu e seleziona **Gestisci organizzazioni**.
+  2. Vai alla tua organizzazione e visualizza le informazioni del gestore organizzazione
+sulla scheda **UTENTI**.  
   
-If you are unable to invite users because you are a collaborator and not a member, you must delete your previous {{site.data.keyword.Bluemix_notm}} account and then be invited to join the account as a member of the organization. To delete your previous account and join the account as a member, complete the following steps: 
+Se non riesci a invitare utenti perché sei un collaboratore e non
+un membro, devi eliminare il tuo account {{site.data.keyword.Bluemix_notm}} precedente
+ed essere inviato a entrare a far parte dell'account come membro dell'organizzazione. Per eliminare il tuo account precedente ed entrare a far parte dell'account come membro,
+completa la seguente procedura: 
 
-  1. Contact [{{site.data.keyword.Bluemix_notm}} Support ![External link icon](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window} to open a support ticket and request that your account be deleted. If you have data that is associated with your old account that you want to save and move to the new account, include this information in your email. 
-  2. After your account is deleted, have a user with the organization manager role invite you to the organization as an organization manager. Then, sign up for {{site.data.keyword.Bluemix_notm}} from the invitation. 
+  1. Contatta il [{{site.data.keyword.Bluemix_notm}} Supporto ![icona link esterno](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window} per aprire un ticket di supporto e richiedere l'eliminazione del tuo account. Se hai dei dati associati al tuo
+account precedente che vuoi salvare e passare al nuovo account,
+includi queste informazioni nell'email. 
+  2. Una volta eliminato il tuo account, fa sì che un utente con il ruolo di gestore
+organizzazione ti inviti nell'organizzazione come gestore. Utilizza quindi l'invito per registrarti in
+{{site.data.keyword.Bluemix_notm}}. 
 
 
 
 
-## Batch registration of users is not supported
+## La registrazione batch degli utenti non è supportata
 {: #ts_batchregistration}
 
-When you register users for {{site.data.keyword.Bluemix_notm}}, you must register each user individually.
+Quando
+registri gli utenti per {{site.data.keyword.Bluemix_notm}},
+devi registrare ciascun utente singolarmente.
  
 
-{{site.data.keyword.Bluemix_notm}} does not provide the capability to register multiple users at the same time.
+{{site.data.keyword.Bluemix_notm}} non
+fornisce la capacità di registrare più utenti
+contemporaneamente.
 {: tsSymptoms}
  
 
-{{site.data.keyword.Bluemix_notm}} doesn't support batch registration of users. To register users for {{site.data.keyword.Bluemix_notm}}, you must register each user individually.
+{{site.data.keyword.Bluemix_notm}} non
+supporta la registra batch di utenti. Per registrare gli utenti per {{site.data.keyword.Bluemix_notm}},
+devi registrare ciascun utente singolarmente.
 {: tsCauses}
  
 
-To register multiple users for {{site.data.keyword.Bluemix_notm}}, you must complete the following steps for each user:
+Per registrare più utenti per {{site.data.keyword.Bluemix_notm}},
+devi completare la seguente procedura per ogni utente:
 {: tsResolve}
 
-  1. Click **SIGN UP** in the {{site.data.keyword.Bluemix_notm}} user interface.
-  2. Complete the steps by following the wizard.
+  1. Fai clic su **ESEGUI REGISTRAZIONE** nell'interfaccia utente {{site.data.keyword.Bluemix_notm}}.
+  2. Completa i passi seguendo la procedura guidata.
 
     
 
-## {{site.data.keyword.Bluemix_notm}} page can't be loaded
+## Impossibile caricare una pagina
+{{site.data.keyword.Bluemix_notm}}
 {: #ts_err}
 
-When you use the {{site.data.keyword.Bluemix_notm}} user interface, you might not be able to load a {{site.data.keyword.Bluemix_notm}} page. Instead, you might see error messages BXNUI0001E or BXNUI0016E.
+Durante l'utilizzo dell'interfaccia utente {{site.data.keyword.Bluemix_notm}},
+potresti non riuscire a caricare una pagina {{site.data.keyword.Bluemix_notm}}. Potresti visualizzare invece i messaggi di errore BXNUI0001E o BXNUI0016E.
  
 
-You might see one of the following error messages when you use the {{site.data.keyword.Bluemix_notm}} user interface:
+Quando utilizzi l'interfaccia utente
+{{site.data.keyword.Bluemix_notm}}, potresti visualizzare
+uno dei seguenti messaggi di errore:
 {: tsSymptoms}
 
-`BXNUI0001E: The page wasn't loaded because Bluemix didn't detect whether a session exists.`
+`BXNUI0001E: La pagina non è stata caricata perché Bluemix non ha rilevato se esiste una sessione.`
 
 
-`BXNUI0016E: The apps and services weren't retrieved because a Bluemix page didn't load.`
+`BXNUI0016E: Le applicazioni e i servizi non sono stati recuperati perché una pagina di Bluemix non è stata caricata.`
 
  
 
-You can complete one or more of the following actions as necessary:
+Puoi completare una o più delle seguenti azioni,
+secondo necessità:
 {: tsResolve}
 
-  * Refresh or restart your browser.
-  * Log out of {{site.data.keyword.Bluemix_notm}} and log in again.
-  * Use the private browsing mode of your browser. 
-  * Clear the cookies and the cache of the browser.
-  * Use a different browser. For information about the versions of the browsers that are supported by {{site.data.keyword.Bluemix_notm}}, see [{{site.data.keyword.Bluemix_notm}} Prerequisites ![External link icon](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}.
-  * If you have installed the cf command line interface, enter the `cf apps` command to see whether your application is running.
+  * Aggiorna o riavvia il tuo browser.
+  * Disconnettiti da {{site.data.keyword.Bluemix_notm}} e
+riesegui l'accesso.
+  * Utilizza la modalità di navigazione privata del tuo browser. 
+  * Cancella i cookie e la cache del browser.
+  * Utilizza un browser differente. Per informazioni sulle versioni dei browser supportati da {{site.data.keyword.Bluemix_notm}}, consulta [Prerequisiti di {{site.data.keyword.Bluemix_notm}} ![icona link esterno](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}.
+  * Se hai installato l'interfaccia riga di comando cf, immetti il comando `cf
+apps` per vedere se l'applicazione è in esecuzione.
   
   
   
@@ -219,26 +264,27 @@ You can complete one or more of the following actions as necessary:
 
 
 
-# Troubleshooting for managing apps
+# Risoluzione dei problemi relativi alla gestione delle applicazioni
 {: #managingapps}
 
-General problems with managing applications might include applications can't be updated, double-byte characters aren't displayed. However, in many cases, you can recover from these problems by following a few easy steps.
+I problemi generali con la gestione delle applicazioni potrebbero includere
+applicazioni che non possono essere aggiornate o caratteri double-byte che non vengono visualizzati. Tuttavia, in molti casi, puoi eseguire un ripristino da tali problemi seguendo pochi semplici passi.
 {:shortdesc}
 
 
 
 
 
-## Unable to switch apps into debug mode
+## Impossibile passare le applicazioni alla modalità di debug
 {: #ts_debug}
 
-You might not be able to enable the debug mode if the Java virtual machine (JVM) version is 8 or lower. 
+Potresti non essere in grado di abilitare la modalità di debug se la versione della JVM (Java virtual machine) è 8 o precedente. 
 
 
-After you select **Enable application debug**, the tools attempt to switch the application into the debug mode. Then, the Eclipse workbench begins a debug session. When the tools successfully enable debug mode, the web application status displays `Updating mode`, `Developing`, and `Debugging`. 
+Dopo che hai selezionato **Enable application debug**, gli strumenti tentano di passare l'applicazione alla modalità di debug. Quindi, il workbench di Eclipse avvia una sessione di debug. Quando gli strumenti hanno abilitato correttamente la modalità di debug, lo stato dell'applicazione web visualizza `Updating mode`, `Developing` e `Debugging`. 
 {: tsSymptoms}
 
-However, when the tools fail to enable the debug mode, the web application status displays `Updating mode` and `Developing` only, and does not display `Debugging`. The tools might also display the following error message in the Console view:
+Tuttavia, quando gli strumenti non riescono ad abilitare la modalità di debug, lo stato dell'applicazione web visualizza solo `Updating mode` e `Developing` e non visualizza `Debugging`. Gli strumenti visualizzano inoltre il seguente messaggio di errore nella vista Console:
 
 ```
 bluemixMgmgClient - ???? [pool-1-thread-1] .... ERROR --- ClientProxyImpl: Cannot create the websocket connections for MyWebProj
@@ -280,61 +326,62 @@ at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketC
 ```
  
 
-The following Java virtual machine (JVM) versions cannot establish a debug session: IBM JVM 7, IBM JVM 8, and previous versions of Oracle JVM 8.
+Le seguenti versioni della JVM (Java virtual machine) non possono stabilire una sessione di debug: IBM JVM 7, IBM JVM 8 e versioni precedenti di Oracle JVM 8.
 {: tsCauses}
 
-If your workbench JVM is one of these versions, then you might have issues when you create a debug session. Your workbench JVM version is typically the system JVM of your local computer. Your system JVM is not the same as the JVM of your running Bluemix Java application. The Bluemix Java application almost always runs on IBM JVM, and sometimes runs on OpenJDK JVM.
+Se il tuo workbench JVM è di una di queste versioni, potresti avere problemi durante la creazione di una sessione di debug. La versione JVM del workbench è normalmente la JVM di sistema del tuo computer locale. La tua JVM di sistema non è la stessa della tua applicazione Java Bluemix in esecuzione. L'applicazione Java Bluemix viene quasi sempre eseguita su JVM IBM e alcune volte su JVM OpenJDK.
   
 
-To check the version of Java that IBM Eclipse Tools for Bluemix runs, complete the following steps:
+Per controllare la versione di Java che segue IBM Eclipse Tools for Bluemix, completa la seguente procedura:
 {: tsResolve}
 
-  1. In IBM Eclipse Tools for Bluemix, select **Help** > **About Eclipse** > **Installation Details** > **Configuration**.
-  2. Find the `eclipse.vm` property from the list. The following line is an example of an `eclipse.vm` property:
+  1. In IBM Eclipse Tools for Bluemix, seleziona **Guida** > **Informazioni su Eclipse** > **Dettagli dell'installazione** > **Configurazione**.
+  2. Trova la proprietà `eclipse.vm` dall'elenco. La seguente linea è un esempio di una proprietà `eclipse.vm`:
 	
 	```
 	eclipse.vm=C:\Program Files\IBM\ibm-java-sdk-80-win-x86_64\bin\..\jre\bin\j9vm\jvm.dll
 	```
 
-  3. At the command line, enter `java -version` from the `bin` directory of your Java installation. Your IBM JVM version information is displayed.
+  3. Nella riga di comando, immetti `java -version` dalla directory `bin` della tua installazione Java. Vengono visualizzate le informazioni sulla tua versione Java IBM.
 
-If your workbench JVM is IBM JVM 7 or 8, or a previous version of Oracle JVM 8, complete the following steps to switch to Oracle JVM 8:
+Se il JVM workbench JVM è IBM JVM 7 o 8 o una versione precedente di Oracle JVM 8, completa la seguente procedura per passare a Oracle JVM 8:
 
-  1. Download and then install Oracle JVM 8, see [Java SE Downloads ![External link icon](../icons/launch-glyph.svg)](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window} for details.
-  2. Restart Eclipse.
-  3. Check whether the `eclipse.vm` property points to your new installation of Oracle JVM 8.
+  1. Scarica e installa Oracle JVM 8, per i dettagli consulta [Java SE Downloads ![icona link esterno](../icons/launch-glyph.svg)](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window}.
+  2. Riavvia Eclipse.
+  3. Controlla se la proprietà `eclipse.vm` punta alla tua nuova installazione di Oracle JVM 8.
 
 
   
-## Unable to reuse names of deleted apps
+## Impossibile riutilizzare i nomi di applicazioni eliminate
 {: #ts_reuse_appname}
   
-After you delete an app, you can reuse the app name only after you delete the app route. 
+Dopo aver eliminato un'applicazione, puoi riutilizzarne il nome solo dopo aver eliminato la rotta dell'applicazione. 
 
-When you try to reuse the app name, you receive the following message:
+Quando tenti di riutilizzare il nome applicazione, ricevi il seguente messaggio:
 {: tsSymptoms}
 
-`The name is already used by another app.`
+`Il nome è già utilizzato da un'altra applicazione.`
 
-When an app is deleted, its route, which is the URL for the app, isn't automatically deleted. Therefore, it's not available for reuse. You must go to the space where the app was created to delete the route so that it can be reused.
+Quando si elimina un'applicazione, la sua rotta, ossia l'URL dell'applicazione, non viene eliminata automaticamente. Pertanto, non è disponibile per il riutilizzo. Per poterlo riutilizzare, devi accedere allo spazio in cui è stata creata l'applicazione per eliminare la rotta.
 {: tsCauses}
 
-Take the following steps to delete the unused route: 
+Per eliminare la rotta non utilizzata, effettua la seguente procedura: 
 {: tsResolve}
 
-  1. Check whether the route belongs to the current space by entering the following command: 
+  1. Controlla se la rotta appartiene allo spazio corrente immettendo il seguente comando: 
      ```
 	 cf routes
 	 ```
-  2. If the route does not belong to the current space, switch to the space or org that it belongs to by entering the following command: 
+  2. Se la rotta non appartiene allo spazio corrente, passa allo spazio o all'organizzazione a cui appartiene immettendo il seguente comando: 
      ```
 	 cf target -o org_name -s space_name
 	 ```
-  3. Delete the app route by entering the following command:
+  3. Elimina la rotta dell'applicazione immettendo il seguente comando:
      ```
 	 cf delete-route domain_name -n host_name
 	 ```
-	 For example:
+	 Ad
+esempio:
 	 ```
 	 cf delete-route mybluemix.net -n app001
 	 ```
@@ -346,38 +393,39 @@ Take the following steps to delete the unused route:
   
   
   
-## Unable to retrieve spaces in the org
+## Impossibile richiamare gli spazi in un'organizzazione
 {: #ts_retrieve_space}
 
-You can't create an app or a service if your current organization does not have a space associated with it.
+Non puoi creare un'applicazione o un servizio se la tua organizzazione corrente non dispone di uno spazio associato ad essa.
 
-When you try to create an app in Bluemix, you see the following error message:
+Quando tenti di creare un'applicazione in Bluemix, viene visualizzato il seguente messaggio di errore:
 {: tsSymptoms}
 
-`BXNUI0515E: The attempt to retrieve the spaces in the org failed because of a network connection problem.`
+`BXNUI0515E: il tentativo di richiamare gli spazi nell'organizzazione non è riuscito a causa di un problema nella connessione di rete.`
 
-This error often is received the first time you try to create an app or a service from the Catalog when a space is not created yet. 
+Questo errore spesso viene ricevuto la prima volta che si tenta di creare un'applicazione o un servizio dal catalogo quando ancora non è stato creato uno spazio. 
 {: tsCauses}
 
-Ensure that you created a space in your current organization.  To create a space, use one of the following methods:
+Assicurati di aver creato uno spazio nella tua organizzazione corrente.  Per creare uno spazio, utilizza uno dei seguenti metodi:
 {: tsResolve}
 
-  * Click the {{site.data.keyword.avatar}} icon ![Avatar icon](images/account_support.svg) to open the Account and Support widget, select the organization that you want to create the space in, and then click **Create a Space**.
-  * In the cf command line interface, type `cf create-space <space_name> -o <organization_name>`.
+  * Fai clic sull'icona {{site.data.keyword.avatar}} ![icona Avatar](images/account_support.svg) per aprire il widget Account e supporto, seleziona l'organizzazione in cui vuoi creare lo spazio e fai clic su **Crea uno spazio**.
+  * Nell'interfaccia riga di comando cf, immetti `cf create-space <nome_spazio>
+-o <nome_organizzazione>`.
 
-Try again. If you see this message again, go to the [Bluemix status ![External link icon](../icons/launch-glyph.svg)](http://ibm.biz/bluemixstatus){: new_window} page to check whether a service or component has an issue.
+Riprova. Se vedi di nuovo questo messaggio, vai alla pagina sugli [stati di Bluemix ![icona link esterno](../icons/launch-glyph.svg)](http://ibm.biz/bluemixstatus){: new_window} per controllare se un servizio o un componente ha qualche problema.
 
 
 
 
-## Unable to perform requested actions
+## Impossibile effettuare le azioni richieste
 {: #ts_authority}
 
-You might not be able to complete actions without appropriate access authority.
+Potresti non riuscire a completare delle azioni senza un'appropriata autorità di accesso.
 
  
 
-When you try to perform actions for a service instance or an app instance, you can't complete the requested actions and see one of the following error messages: 
+Quando tenti di eseguire azioni per un'istanza del servizio o un'istanza dell'applicazione, non riesci a completare le azioni richieste e visualizzai uno dei seguenti messaggi di errore: 
 {: tsSymptoms}
 
 `BXNUI0514E: You are not a developer for any of the spaces in the <orgName> organization.`
@@ -387,39 +435,39 @@ When you try to perform actions for a service instance or an app instance, you c
 
  
 
-You do not have the appropriate level of authority that is required to perform the actions. 
+Non disponi di un adeguato livello di autorità necessario per eseguire le azioni. 
 {: tsCauses}
 
   
 
-To obtain the appropriate authority level, use one of the following methods: 
+Per ottenere il livello di autorità appropriato, utilizza uno dei seguenti metodi: 
 {: tsResolve}
- * Select another organization and space for which you have the developer role. 
- * Ask the org manager to change your role to developer or to create a space and then assign you a developer role. See [Managing organizations and spaces](/docs/admin/orgs_spaces.html) for details.
+ * Seleziona un'altra organizzazione e uno spazio per cui disponi del ruolo di sviluppatore. 
+ * Chiedi al gestore organizzazione di modificare il tuo ruolo in sviluppatore oppure di creare uno spazio e assegnarti quindi un ruolo sviluppatore. Consulta [Gestione di organizzazioni e spazi](/docs/admin/orgs_spaces.html) per i dettagli.
  
 
  
 
 
-## Unable to access {{site.data.keyword.Bluemix_notm}} services because of authorization errors
+## Impossibile accedere ai servizi {{site.data.keyword.Bluemix_notm}} a causa di errori di autorizzazione
 {: #ts_vcap}
 
-Authorization errors might occur when your app accesses a {{site.data.keyword.Bluemix_notm}} service if the service credentials are hardcoded in your app. 
+Gli errori di autorizzazione potrebbero verificarsi quando la tua applicazione accede a un servizio {{site.data.keyword.Bluemix_notm}} se le credenziali del servizio sono hardcoded nell'applicazione. 
 
-After you configure your app to communicate with a {{site.data.keyword.Bluemix_notm}} service, you deploy the app to {{site.data.keyword.Bluemix_notm}}. However, you can't use the app to access the {{site.data.keyword.Bluemix_notm}} service and receive an authorization error.
+Dopo aver configurato l'applicazione per comunicare con un servizio {{site.data.keyword.Bluemix_notm}}, distribuisci l'applicazione a {{site.data.keyword.Bluemix_notm}}. Tuttavia, non riesci a utilizzare l'applicazione per accedere al servizio {{site.data.keyword.Bluemix_notm}} e ricevi un messaggio di errore.
 {: tsSymptoms}
 
-The hardcoded credentials in the app might not be correct. Every time that the service is recreated, the credentials to access it change.
+Le credenziali hardcoded nell'applicazione potrebbero non essere corrette. Ogni volta che il servizio viene ricreato, le credenziali per accedervi cambiano.
 {: tsCauses}
 
 
-Instead of hardcoding the credentials in your app, use connection parameters from the VCAP_SERVICES environment variable. The methods to use connection parameters from the VCAP_SERVICES environment variable vary depending on program languages. For example, for Node.js apps, you can use the following command: 
+Invece di impostare come hardcoded le credenziali nella tua applicazione, utilizza i parametri di connessione dalla variabile di ambiente VCAP_SERVICES. I metodi per utilizzare i parametri di connessione dalla variabile di ambiente VCAP_SERVICES variano a seconda dei linguaggi di programmazione. Ad esempio, per le applicazioni Node.js, puoi utilizzare il seguente comando: 
 {: tsResolve}
 
 ```
 process.env.VCAP_SERVICES
 ```
-For more information about the commands that you can use in other program languages, see [Java ![External link icon](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} and [Ruby ![External link icon](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}. 
+Per ulteriori informazioni sui comandi che puoi utilizzare in altri linguaggi di programmazione, consulta [Java ![icona link esterno](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} e [Ruby ![icona link esterno](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}. 
  
 
  
@@ -428,327 +476,424 @@ For more information about the commands that you can use in other program langua
 
 
 
-## Unable to deploy apps by using IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}
+## Impossibile distribuire le applicazioni utilizzando IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}
 {: #ts_bm_tools_facet}
 
-When an unsupported facet is applied to your Eclipse project, you might not be able to deploy your apps to {{site.data.keyword.Bluemix_notm}} by using the IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}. 
+Quando al tuo progetto Eclipse viene applicato un facet non supportato, potresti non essere in grado di distribuire le
+tue applicazioni a {{site.data.keyword.Bluemix_notm}} utilizzando IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}. 
 
  
 
-You can successfully deploy your app to {{site.data.keyword.Bluemix_notm}} by using the Cloud Foundry CLI. However, you cannot deploy the app to {{site.data.keyword.Bluemix_notm}} by using the IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, and you see the error message: `Project facet <facet_name> is not supported.` For example, `Project facet Cloud Foundry Standalone Application version 1.0 is not supported.`
+Puoi distribuire correttamente la tua applicazione a {{site.data.keyword.Bluemix_notm}} utilizzando la CLI Cloud Foundry. Tuttavia, non puoi distribuire l'applicazione a {{site.data.keyword.Bluemix_notm}} utilizzando IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, e vedi un messaggio di errore: `Project facet <nome_facet> is not supported.`. Ad esempio, `Project facet Cloud Foundry Standalone Application version 1.0 is not supported.`
 {: tsSymptoms}
 
  
 
-The IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} map projects to {{site.data.keyword.Bluemix_notm}} runtimes by project facets. Facets define the requirements for Java EE projects in Eclipse, and are used as part of the runtime configuration so that different runtimes are associated with different projects. If the facet that is applied to the project is not supported by the IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, you might not be able to deploy your app by using the IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}.
+IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} associa i progetti ai runtime {{site.data.keyword.Bluemix_notm}} in base ai facet di progetto. I facet definiscono i requisiti per i progetti Java EE in Eclipse e sono utilizzati come parte della configurazione di runtime, in modo che runtime differenti siano associati a progetti differenti. Se il facet applicato al progetto non è supportato da
+IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, potresti non essere in grado di distribuire la tua applicazione utilizzando IBM Eclipse
+Tools for {{site.data.keyword.Bluemix_notm}}.
 {: tsCauses}
 
 
-You must remove the facet from the Eclipse project so that you can deploy your app by using the IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}.
+Devi rimuovere il facet dal progetto Eclipse in modo da poter distribuire la tua applicazione
+utilizzando IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}.
 {: tsResolve} 
 
-To remove the facet, in the IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, click **Project > Properties > Project Facets** for the project. Then, clear the check box for the unsupported facet. 
+Per rimuovere il
+facet, in IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, fai clic su **Project>Properties>Project Facets** per il progetto. Deseleziona quindi la casella di spunta per il facet non supportato. 
 
 
 
-## 502 Bad Gateway errors are received
+## Ricezione di errori 502 Bad Gateway
 {: #ts_502_error}
 
-If you receive 502 Bad Gateway errors when you interact with apps on {{site.data.keyword.Bluemix_notm}}, check the {{site.data.keyword.Bluemix_notm}} status page, and then take actions accordingly.
+Se ricevi degli errori 502 Bad Gateway quando interagisci
+con le applicazioni su {{site.data.keyword.Bluemix_notm}},
+controlla la pagina degli stati di {{site.data.keyword.Bluemix_notm}}
+ed effettua le operazioni appropriate.
 
  
 
-You receive error messages that start with 502 Bad Gateway. For example, you might see `502 Bad Gateway: Registered endpoint failed to handle the request.`
+Ricevi dei messaggi di errore che iniziano con 502 Bad Gateway. Ad esempio, potresti vedere `502 Bad Gateway: Registered endpoint failed to handle the request.`
 {: tsSymptoms}
 
  
 
-A Bad Gateway error usually happens when you visit a website that uses a proxy server to store and relay the data from the main server that hosts the site. The main server and the proxy server might not properly connect, therefore you see the HTTP status code 502 in your browser window. This status code indicates that the site's main server did not receive the HTTP implementation that it expected from the proxy server.
+Un errore
+Bad Gateway di solito si verifica quando visiti un sito Web che utilizza
+un server proxy per memorizzare e inoltrare i dati dal server principale che
+ospita il sito. Il server principale e il server proxy potrebbero non connettersi
+correttamente, pertanto visualizzi il codice di stato HTTP 502 nella finestra del
+browser. Questo codice di stato indica che il server principale del sito non ha
+ricevuto l'implementazione HTTP prevista dal server
+proxy.
 {: tsCauses}
 
-Other less common causes of a Bad Gateway error are Internet service provider (ISP) dropouts, bad firewall configurations, and browser cache errors. 
+Altre cause meno comuni di un errore Bad Gateway sono
+interruzioni ISP (Internet Service Provider), configurazioni firewall non valide ed
+errori della cache del browser. 
 
  
 
-If you suspect that a {{site.data.keyword.Bluemix_notm}} service is down, first check the [{{site.data.keyword.Bluemix_notm}} status ![External link icon](../icons/launch-glyph.svg)](http://ibm.biz/bluemixstatus){: new_window} page. You might want to use the service in another {{site.data.keyword.Bluemix_notm}} region as a workaround. Detailed information is available in [Using services in another region](/docs/services/reqnsi.html#cross_region_service). If the service status is normal, try the following steps to solve the problem: 
+Se sospetti che un servizio {{site.data.keyword.Bluemix_notm}} sia inattivo, controlla prima la pagina [{{site.data.keyword.Bluemix_notm}} status ![icona link esterno](../icons/launch-glyph.svg)](http://ibm.biz/bluemixstatus){: new_window}. Come soluzione alternativa, potresti voler utilizzare questo servizio in un'altra regione
+{{site.data.keyword.Bluemix_notm}}. Informazioni dettagliate sono disponibili in [Utilizzo
+dei servizi in un'altra regione](/docs/services/reqnsi.html#cross_region_service). Se lo stato del servizio è normale,
+prova le seguenti operazioni per risolvere il problema: 
 {: tsResolve}
 
-  * Retry the action:
-    * Reload the page by pressing F5 on your keyboard, or by clicking the refresh button. If this step does not work, clear your browser's cache and cookies, and then reload again.
-	* Use a different browser.
-	* Reboot your router, your modem, and your computer. Rebooting these devices can clear up various errors that lead to the error 502. 
-  * Wait and try again later. In some instances, temporary problems might occur with your Internet service provider or the {{site.data.keyword.Bluemix_notm}} services. You can wait until the temporary problems are solved.
-  * If the problem still exists, contact {{site.data.keyword.Bluemix_notm}} support. See [Contacting {{site.data.keyword.Bluemix_notm}} Support ![External link icon](../icons/launch-glyph.svg)](/docs/support/index.html#contacting-bluemix-support){: new_window} for more information. 
+  * Ritenta l'azione:
+    * Ricarica la pagina premendo F5 sulla tastiera o facendo clic sul
+pulsante di aggiornamento. Se questa operazione non funziona, cancella la cache
+e i cookie del tuo browser e ricarica di nuovo la pagina.
+	* Utilizza un browser differente.
+	* Riavvia il router, il modem e il computer. Il riavvio di questi
+dispositivi può cancellare i diversi errori che portano all'errore 502. 
+  * Attendi e riprova in seguito. In alcuni casi, possono verificarsi dei
+problemi temporanei con il tuo provider dei servizi Internet o con i servizi {{site.data.keyword.Bluemix_notm}}. Puoi attendere finché i problemi non vengono risolti.
+  * Se il problema persiste, contatta il supporto {{site.data.keyword.Bluemix_notm}}. Per ulteriori informazioni, consulta [Come contattare il supporto {{site.data.keyword.Bluemix_notm}} ![icona link esterno](../icons/launch-glyph.svg)](/docs/support/index.html#contacting-bluemix-support){: new_window}. 
 
 
 
 
-## Disk quota is exceeded
+## Quota disco superata
 {: #ts_disk_quota}
 
-If you run out of disk space, you can manually modify the disk quota to get more disk space.
+Se esaurisci lo spazio su disco, puoi modificare manualmente la quota per
+ottenere ulteriore spazio sul disco.
 
   
 
-When you run out of disk space, you might see a message that states that the disk quota is exceeded. To resolve the problem, you might have tried scaling up your app instance to get more disk space. For example, you might scale from 256 MB to 1256 MB by changing the memory quota on the app details page. However, because the disk quota remained the same, you did not get more disk space. 
+Se esaurisci lo spazio su disco, potresti visualizzare un messaggio
+che indica che la quota di disco è stata superata. Per risolvere il problema,
+potresti aver tentato di ridimensionare la tua istanza dell'applicazione per ottenere ulteriore spazio
+su disco. Ad esempio, avresti potuto eseguire il ridimensionamento da 256 MB a 1256 MB modificando
+la quota di memoria nella pagina dei dettagli dell'applicazione. Tuttavia, poiché la quota di
+disco è rimasta la stessa, non hai ottenuto ulteriore spazio su disco. 
 {: tsSymptoms}
 
 
-The default disk quota that is allocated for an app is 1 GB. If you need more disk space, you must manually specify the disk quota. 
+La quota di disco predefinita assegnata a un'applicazione è 1
+GB. Se hai bisogno di più spazio su disco, devi specificare manualmente la
+quota di disco. 
 {: tsCauses}
 
  
-Use one of the following methods to specify your disk quota. The maximum disk quota that you can specify is 2 GB. If 2 GB is still not enough, try an external service such as [Object Store](/docs/services/ObjectStorage/index.html).
+Utilizza uno dei seguenti metodi per specificare la quota disco. La quota di disco massima che puoi specificare è 2 GB. Se 2 GB non è ancora
+sufficiente, prova un servizio esterno come [Object Store](/docs/services/ObjectStorage/index.html).
 {: tsResolve}
 
-  * In the manifest.yml file, add the following item:
+  * Nel file manifest.yml, aggiungi la seguente voce:
     ```
-	disk_quota: <disk_quota>
+	disk_quota: <quota_disco>
 	```
-  * Use the **-k** option with the `cf push` command when you push your app to {{site.data.keyword.Bluemix_notm}}:
+  * Utilizza l'opzione **-k** con il comando `cf push`
+quando distribuisci la tua applicazione a {{site.data.keyword.Bluemix_notm}}:
     ```
-	cf push appname -p app_path -k <disk_quota>
+	cf push appname -p app_path -k <quota_disco>
 	```
 
 	
 	
-## Cannot add Git repository
+## Impossibile aggiungere il repository Git
 {: #ts_cannot_addgit}
 
-After you create an app on the Dashboard, you click ADD GIT to create a Git repository, but you cannot proceed.
+Dopo aver creato un'applicazione sul Dashboard, fai clic sul AGGIUNGI GIT per aggiungere un repository Git, ma non riesci a continuare.
 
 
 
-When you click **ADD GIT**, a window opens and one of these issues occur:
+Quando fai clic su **AGGIUNGI GIT**, si apre una finestra
+e si verifica uno dei seguenti problemi:
 {: tsSymptoms} 
 
-  * The window hangs with a blank screen.
-  * A message states that a problem exists with 3rd party cookies.
+  * La finestra si blocca con una schermata vuota.
+  * Un messaggio indica che esiste un problema con i cookie di terze parti.
 
 
 
-Your browser might be configured to prevent a cookie from being set. That cookie must be set from the IBM® Bluemix DevOps Services site in the hub.jazz.net internet domain from within the context of the {{site.data.keyword.Bluemix_notm}} console.
+È possibile che il tuo browser sia configurato per impedire l'impostazione
+di un cookie. Tale cookie deve essere impostato dal sito di IBM® Bluemix DevOps Services nel dominio Internet hub.jazz.net all'interno del contesto della console {{site.data.keyword.Bluemix_notm}}.
 {: tsCauses}  
 
  
 
-You can fix this problem in one of the following ways:
+Puoi risolvere questo problema in uno dei seguenti modi:
 {: tsResolve}
 
-  * Follow the instructions that are in the window that opens from the {{site.data.keyword.Bluemix_notm}} console. Click the button. Another browser window opens temporarily. In that window, DevOps Services sets the authentication cookie.
-  * In another browser tab, go to https://hub.jazz.net and log in. Return to the {{site.data.keyword.Bluemix_notm}} console and refresh the page. Click **ADD GIT** again.
-  * Change your browser settings to enable 3rd party cookies and click ADD GIT again. For details about configuring the settings, see the documentation for your browser:
-    * [Mozilla Firefox ![External link icon](../icons/launch-glyph.svg)](https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences#w_how-do-i-change-cookie-settings){: new_window}
-	* [Google Chrome ![External link icon](../icons/launch-glyph.svg)](https://support.google.com/chrome/answer/95647){: new_window}
-	* [Apple Safari ![External link icon](../icons/launch-glyph.svg)](https://support.apple.com/kb/PH17191){: new_window}
-	* [Microsoft Internet Explorer ![External link icon](../icons/launch-glyph.svg)](http://windows.microsoft.com/en-us/internet-explorer/delete-manage-cookies#ie=ie-11){: new_window}
-If those workarounds do not fix the problem, send an email to idslogin@jazz.net.
+  * Segui le istruzioni presenti nella finestra che viene visualizzata
+dalla console {{site.data.keyword.Bluemix_notm}}. Fai clic sul pulsante. Si aprirà temporaneamente un'altra finestra del browser. In tale
+finestra, DevOps Services imposta il cookie di autenticazione.
+  * In un'altra scheda del browser, vai all'indirizzo https://hub.jazz.net ed esegui l'accesso. Torna alla console {{site.data.keyword.Bluemix_notm}}
+e aggiorna la pagina. Fai di nuovo clic su **AGGIUNGI GIT**.
+  * Modifica le impostazioni del tuo browser per abilitare i cookie di terze parti e fai di nuovo clic su AGGIUNGI GIT. Per i dettagli sulla configurazione delle impostazioni,
+consulta la documentazione relativa al tuo browser:
+    * [Mozilla Firefox ![icona link esterno](../icons/launch-glyph.svg)](https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences#w_how-do-i-change-cookie-settings){: new_window}
+	* [Google Chrome ![icona link esterno](../icons/launch-glyph.svg)](https://support.google.com/chrome/answer/95647){: new_window}
+	* [Apple Safari ![icona link esterno](../icons/launch-glyph.svg)](https://support.apple.com/kb/PH17191){: new_window}
+	* [Microsoft Internet Explorer ![icona link esterno](../icons/launch-glyph.svg)](http://windows.microsoft.com/en-us/internet-explorer/delete-manage-cookies#ie=ie-11){: new_window}
+Se queste soluzioni alternative non risolvono il problema, invia un'email a idslogin@jazz.net.
 
 
 
-## Android apps can't receive push notifications
+## Le applicazioni Android non possono ricevere le notifiche di push
 {: #ts_push}
 
-Android apps in certain regions where Google is not accessible can't receive notifications that you send out through the IBM Push service. In this case, you can use third-party services as a workaround.
+In alcune regioni in cui Google non è accessibile, le applicazioni Android
+non possono ricevere le notifiche che invii tramite il servizio IBM
+Push. In questo caso, puoi utilizzare servizi di terze parti come soluzione alternativa.
 
  
 
-You bind a Push service for your Bluemix app and send a message to the registered devices. However, apps that are developed on the Android platform can't receive your notifications in certain regions. 
+Esegui il bind di un servizio Push per la tua applicazione Bluemix e invii un messaggio ai dispositivi registrati. Tuttavia, le applicazioni
+sviluppate sulla piattaforma Android non possono ricevere le tue notifiche
+in determinate regioni. 
 {: tsSymptoms}
 
  
-IBM Push service uses the Google Cloud Messaging (GCM) service to dispatch notifications to mobile apps that are developed on the Android platform. To enable the Android apps to receive notifications, Google Cloud Messaging (GCM) service must be accessible by the mobile apps. In regions where the GCM service can't be reached by the Android apps, the Android apps are not able to receive push notifications.
+Il servizio IBM Push utilizza il servizio GCM (Google Cloud Messaging)
+per inviare notifiche alle applicazioni mobili sviluppate sulla
+piattaforma Android. Per consentire alle applicazioni Android di ricevere le notifiche,
+è necessario che il servizio GCM (Google Cloud Messaging) sia accessibile dalle applicazioni
+mobili. Nelle regioni in cui il servizio GCM non può essere raggiunto dalle applicazioni Android,
+tali applicazioni non saranno in grado di ricevere le notifiche di push.
 {: tsCauses}
 
  
-Use third-party services that do not rely on the GCM service as a workaround, for example, [Pushy ![External link icon](../icons/launch-glyph.svg)](https://pushy.me){: new_window}, [igetui ![External link icon](../icons/launch-glyph.svg)](http://www.getui.com/){: new_window}, and [jpush ![External link icon](../icons/launch-glyph.svg)](https://www.jpush.cn/){: new_window}.
+Come soluzione alternativa, utilizza servizi di terze parti che non si basano sul servizio GCM, ad esempio
+[Pushy ![icona link esterno](../icons/launch-glyph.svg)](https://pushy.me){: new_window},
+[igetui ![icona link esterno](../icons/launch-glyph.svg)](http://www.getui.com/){: new_window} e
+[jpush ![icona link esterno](../icons/launch-glyph.svg)](https://www.jpush.cn/){: new_window}.
 {: tsResolve}
 
 
 
-## Org's services limit is exceeded
+## Limite dei servizi dell'organizzazione superato
 {: #ts_servicelimit}
 
-If you are a trial account user, you might be unable to create an application in {{site.data.keyword.Bluemix_notm}} if you have exceeded your organization's services limit.
+Se utilizzi un account utente di prova, potresti non riuscire
+a creare un'applicazione in {{site.data.keyword.Bluemix_notm}} se
+hai superato il limite dei servizi della tua organizzazione.
  
 
-When you try to create an application in {{site.data.keyword.Bluemix_notm}}, you see the following error message: 
+Quando tenti di creare un'applicazione in {{site.data.keyword.Bluemix_notm}},
+visualizzi il seguente messaggio di errore: 
 {: tsSymptoms}
 
-`BXNUI2032E: The <service_instances> resource wasn't created. While Cloud Foundry was being contacted to create the resource, an error occurred. Cloud Foundry message: "You have exceeded your organization's services limit."`
+`BXNUI2032E: La risorsa <istanze_servizio> non è stata creata. Mentre Cloud Foundry veniva contattato per creare la risorsa, si è verificato un errore. Messaggio di Cloud Foundry: "È stato superato il limite
+dei servizi dell'organizzazione."`
 
 
 
-This error occurs when you have exceeded the limit on the number of service instances that you can have for your account. The maximum number of services instances for a trial account is 10.
+Questo errore si verifica quando superi il limite per il
+numero di istanze del servizio che puoi avere per l'account. Il
+numero massimo di istanze di servizi per un account di prova è 10.
 {: tsCauses} 
 
  
 
-Delete any services instances that are not needed, or remove the limit on the number of service instances that you can have.
+Elimina tutte le istanze dei servizi che non sono necessarie o rimuovi
+il limite per il numero di istanze del servizio che puoi avere.
 {: tsResolve}
  
-  * To delete a services instance, you can use the {{site.data.keyword.Bluemix_notm}} user interface or the command line interface.
-    To use the {{site.data.keyword.Bluemix_notm}} user interface to delete a service instance, complete the following steps:
-	  1. On the {{site.data.keyword.Bluemix_notm}} Dashboard, click the service that you want to delete. The service tile displays. 
-	  2. On the service tile, click the **Menu** icon.
-	  3. Click **Delete Service**. After you delete the service instance, you will be prompted to restage the application that the service instance was bound to. 
-    To use the command line interface to delete a service instance, complete the following steps:
-	  1. Unbind the service instance from an application by typing `cf unbind-service <appname> <service_instance_name>`.
-	  2. Delete the service instance by typing `cf delete-service <service_instance_name>`.
-	  3. After you delete the service instance, you might want to restage your application that the service instance was bound to by typing `cf restage <appname>`.
-  * To remove the limit on the number of service instances that you can have, convert your trial account to a pay account. For information about how to convert your trial account to a pay account, see [How to change your plan](/docs/pricing/index.html#changing).
+  * Per eliminare un'istanza dei servizi, puoi utilizzare l'interfaccia utente di {{site.data.keyword.Bluemix_notm}}
+o l'interfaccia riga di comando.
+    Per utilizzare l'interfaccia utente di {{site.data.keyword.Bluemix_notm}}
+per eliminare un'istanza del servizio, completa la seguente procedura:
+	  1. Nel Dashboard {{site.data.keyword.Bluemix_notm}}, fai clic sul servizio che vuoi eliminare. Viene visualizzato il tile del servizio. 
+	  2. Sul tile del servizio, fai clic sull'icona **Menu**.
+	  3. Fai clic su **Elimina servizio**. Dopo aver eliminato
+l'istanza del servizio, ti verrà richiesto di preparare nuovamente l'applicazione
+a cui era associata l'istanza del servizio. 
+    Per utilizzare l'interfaccia riga di comando per eliminare un'istanza del
+servizio, completa la seguente procedura:
+	  1. Annulla il bind dell'istanza del servizio da un'applicazione immettendo `cf
+unbind-service <nomeapplicazione> <nome_istanza_servizio>`.
+	  2. Elimina l'istanza del servizio immettendo `cf delete-service <nome_istanza_servizio>`.
+	  3. Dopo aver eliminato l'istanza del servizio, potresti voler preparare nuovamente l'applicazione
+a cui era associata l'istanza del servizio immettendo `cf
+restage <nomeapplicazione>`.
+  * Per rimuovere il limite sul numero di istanze del servizio che puoi avere,
+converti il tuo account di prova in un account a pagamento. Per informazioni su come convertire il tuo account di prova in un account a pagamento, vedi [Come modificare il tuo piano](/docs/pricing/index.html#changing).
 
   
   
-## Executables can't be run on {{site.data.keyword.Bluemix_notm}}
+## Impossibile eseguire gli eseguibili su {{site.data.keyword.Bluemix_notm}}
 {: #ts_executable}
 
-You might be unable to run executables on {{site.data.keyword.Bluemix_notm}} when those executables were developed and built in a different environment. 
+Potresti non riuscire ad eseguire gli eseguibili su {{site.data.keyword.Bluemix_notm}} se
+tali eseguibili sono stati sviluppati e creati in un ambiente diverso. 
 
  
 
-You are unable to run executables on {{site.data.keyword.Bluemix_notm}} when those executables were developed and built in a different environment.
+Non riesci ad eseguire gli eseguibili su {{site.data.keyword.Bluemix_notm}} quando
+tali eseguibili sono stati sviluppati e creati in un ambiente diverso.
 {: tsSymptoms}
 
  
 
-If the content that you want to push to {{site.data.keyword.Bluemix_notm}} is already an executable, the content was previously built and doesn't need to be built on {{site.data.keyword.Bluemix_notm}}. In this case, no buildpack is required for the executable to be run on {{site.data.keyword.Bluemix_notm}}. However, you must explicitly indicate to {{site.data.keyword.Bluemix_notm}} that no buildpack is required.
+Se il contenuto che desideri distribuire a {{site.data.keyword.Bluemix_notm}} è
+già un eseguibile, il contenuto è stato creato precedentemente e non è necessario
+crearlo in {{site.data.keyword.Bluemix_notm}}. In questo caso, non è richiesto alcun pacchetto di build per l'eseguibile da eseguire
+su {{site.data.keyword.Bluemix_notm}}. Tuttavia, devi indicare esplicitamente a {{site.data.keyword.Bluemix_notm}} che
+non è richiesto alcun pacchetto di build.
 {: tsCauses}
 
  
 
-When you push the executable to {{site.data.keyword.Bluemix_notm}}, you must specify a null-buildpack, which indicates that no buildpack is required. Specify a null-buildpack by using the **-b** option with the `cf push` command:
+Quando distribuisci l'eseguibile a {{site.data.keyword.Bluemix_notm}},
+devi specificare un pacchetto di build null, che indica che
+non è richiesto alcun pacchetto di build. Specifica un pacchetto di build null utilizzando l'opzione **-b**
+con il comando `cf push`:
 {: tsResolve}
 
 ```
-cf push appname -p <app_path> -c <start_command> -b <null-buildpack>
+cf push appname -p <percorso_applicazione> -c <comando_di_avvio> -b <null-buildpack>
 ```
-For example:
+Per esempio:
 ```
-cf push appname -p <app_path> -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
+cf push appname -p <percorso_applicazione> -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 ```
 
 
-## Org's memory limit is exceeded
+## Limite di memoria dell'organizzazione superato
 {: #ts_outofmemory}
 
-If you are a trial account user, you might be unable to deploy an app to {{site.data.keyword.Bluemix_notm}} if you have exceeded the memory limit of your organization. You can either reduce the memory that your apps use or increase the memory quota of your account. 
+Se utilizzi un account utente di prova, potresti non riuscire a distribuire un'applicazione a {{site.data.keyword.Bluemix_notm}} se hai superato il limite di memoria della tua organizzazione. Puoi
+ridurre la memoria utilizzata dalle tue applicazioni o aumentare la quota di memoria
+del tuo account. 
 
 
 
-When you deploy an app to {{site.data.keyword.Bluemix_notm}}, you see the following error message:
+Quando distribuisci un'applicazione a {{site.data.keyword.Bluemix_notm}}, visualizzi il seguente messaggio di errore:
 {: tsSymptoms} 
 
-`FAILED Server error, status code: 400, error code: 100005, message: You have exceeded your organization's memory limit.`
+`FAILED Server error,
+status code: 400, error code: 100005, message: You have exceeded your
+organization's memory limit.`
 
  
 
-This error occurs when the amount of memory that is remaining for your organization is less than the amount of memory that is required by the app that you want to deploy. The maximum memory quota for a trial account is 2 GB.
+Questo errore si verifica quando la quantità di memoria rimanente per la tua organizzazione è inferiore alla quantità di memoria richiesta dall'applicazione che desideri distribuire. La quota massima di memoria
+per un account di prova è 2 GB.
 {: tsCauses}
 
 
 
-You can either increase the memory quota of your account, or reduce the memory that your apps use.
+Puoi aumentare la quota di memoria del tuo account o ridurre la memoria utilizzata dalle tue applicazioni.
 {: tsResolve} 
 
-  * To increase the memory quota of your account, convert your trial account to a pay account. For information about how to convert your trial account to a pay account, see [Pay accounts](/docs/pricing/index.html#pay-accounts). 
-  * To reduce the memory that your apps use, use either the {{site.data.keyword.Bluemix_notm}} user interface or the cf command line interface.
-    If you use the {{site.data.keyword.Bluemix_notm}} user interface, complete the following steps:
-	  1. On the {{site.data.keyword.Bluemix_notm}} Dashboard, select your application. The app details page opens.
-	  2. In the runtime pane, you can reduce the maximum memory limit or the numbers of app instances, or both, for your app. 
-	If you use the cf command line interface, complete the following steps:
-	  1. Check how much memory is being used for your apps:
+  * Per aumentare la quota di memoria dell'account,
+converti il tuo account di prova in un account a pagamento. Per informazioni
+su come convertire il tuo account di prova in un account a pagamento, vedi [Pay
+accounts](/docs/pricing/index.html#pay-accounts). 
+  * Per ridurre la memoria utilizzata dalle tue applicazioni, utilizza l'interfaccia utente{{site.data.keyword.Bluemix_notm}} o l'interfaccia riga di comando cf.
+    Se utilizzi l'interfaccia utente {{site.data.keyword.Bluemix_notm}}, completa la seguente procedura:
+	  1. Sul Dashboard {{site.data.keyword.Bluemix_notm}}, seleziona la tua applicazione. Viene visualizzata la pagina dei dettagli dell'applicazione.
+	  2. Nel riquadro runtime, puoi ridurre il limite massimo di memoria o il numero di istanze dell'applicazione, o entrambi, per tua applicazione.
+	Se utilizzi l'interfaccia riga di comando cf, completa la seguente procedura:
+	  1. Verifica la quantità di memoria utilizzata per le tue applicazioni:
 	  ```
 	  cf apps
 	  ```
-	     The cf apps command lists all the apps that you deployed in your current space. The status of each app is also displayed.
-      2. To reduce the amount of memory that is used by your app, reduce the number of app instances or the maximum memory limit, or both:
+	     Il comando cf apps elenca tutte le applicazioni che hai distribuito nel tuo spazio corrente. Viene visualizzato anche lo stato di ciascuna applicazione.
+      2. Per ridurre la quantità di memoria utilizzata dalla tua applicazione, riduci il numero di istanze dell'applicazione e/o il limite massimo di memoria.
 	  ```
-	  cf push <appname> -p <app_path> -i <instance_number> -m <memory_limit>
+	  cf push <appname> -p <percorso_applicazione> -i <numero_istanza> -m <limite_memoria>
       ```
-	  3. Restart your app for the changes to take effect.
+	  3. Riavvia la tua applicazione per rendere effettive le modifiche.
 
 
 
 	  
-## Apps are not automatically restarted
+## Le applicazioni non si riavviano automaticamente
 {: #ts_apps_not_auto_restarted}
 
 
-An app is not automatically restarted when a service that you bind to the app stops working.	  
+Un'applicazione non si riavvia automaticamente quando un servizio che associ mediante bind all'applicazione smette di funzionare.	  
 	  
  
 
-When a service that you bind to an app crashes, problems such as outages, exceptions, and connection failures might occur on the app. {{site.data.keyword.Bluemix_notm}} does not automatically restart the app to recover from these problems.
+Quando un servizio che associ mediante bind a un'applicazione viene arrestato in modo anomalo, nell'applicazione potrebbero verificarsi dei problemi come interruzioni, eccezioni ed errori di connessione. {{site.data.keyword.Bluemix_notm}} non riavvia automaticamente l'applicazione per eseguire un ripristino da tali problemi.
 {: tsSymptoms}
 
 
 
-This behavior is by design of Cloud Foundry.
+Questo è il funzionamento progettato da Cloud Foundry.
 {: tsCauses} 
 
  
 
-You can manually restart the app by typing the following command in the command line interface:
+Puoi riavviare manualmente l'applicazione immettendo il seguente comando nell'interfaccia riga di comando:
 {: tsResolve}
 
 ```
-cf push <appname> -p <app_path>
+cf push <appname> -p <percorso_applicazione>
 ```
-In addition, you can code the app to identify and recover from problems such as outages, exceptions, and connection failures. 
+Inoltre, puoi codificare l'applicazione per identificare e risolvere problemi come interruzioni, eccezioni ed errori di connessione. 
 
 	  
 
-## User-defined variables are lost when an application is pushed
+## Le variabili definite dall'utente vengono perse dopo la distribuzione di un'applicazione
 {: #ts_varsnotretained}
 
-When you push an app to {{site.data.keyword.Bluemix_notm}} from IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, the variables that you specified are reset unless you save the variables to the manifest file.
+Quando esegui il push di un'applicazione a {{site.data.keyword.Bluemix_notm}} da IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, le variabili che hai specificato vengono reimpostate a meno che non salvi tali variabili nel file
+manifest.
 
 
 
-The variables that you specified are lost after you push an app to {{site.data.keyword.Bluemix_notm}} from IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}.
+Le variabili che hai specificato vengono perse in seguito all'esecuzione del push di un'applicazione a {{site.data.keyword.Bluemix_notm}} da IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}.
 {: tsSymptoms} 
 
 
-The variables that you specified are saved only if you save them to the manifest file.
+Le variabili specificate vengono mantenute solo se le salvi
+nel file manifest.
 {: tsCauses} 
 
  
 
-When you push an app to {{site.data.keyword.Bluemix_notm}} from IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, select the **Save to the manifest file** check box in the Application details page of the Application wizard. Then, the variables that you specified in the wizard are saved to the manifest file for your application. The next time you open the wizard, the variables are displayed automatically.
+Quando esegui il push di un'applicazione a {{site.data.keyword.Bluemix_notm}} da IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, seleziona la casella di spunta **Salva nel file manifest** nella pagina Dettagli applicazione della procedura guidata Applicazione. Quindi,
+le variabili che hai specificato nella
+procedura guidata vengono
+salvate nel file manifest della tua applicazione. La prossima volta che apri la procedura guidata, le variabili vengono visualizzate automaticamente.
 {: tsResolve}
 
 
 
-## {{site.data.keyword.Bluemix_notm}} Live Sync icons are not shown
+## Le icone di {{site.data.keyword.Bluemix_notm}} Live
+Sync non vengono visualizzate
 {: #ts_llz_lkb_3r}
 
-You created an app in IBM Bluemix DevOps Services, but the IBM Bluemix Live Sync icons are not shown in the Web IDE.
+Hai creato un'applicazione in IBM Bluemix DevOps Services, ma le icone IBM Bluemix Live Sync non sono visualizzate nel Web IDE.
 
  
 
-When you edit a Node.js app in the DevOps Services Web IDE, the {{site.data.keyword.Bluemix_notm}} live edit, quick restart, and debug icons are not shown.
+Quando modifichi un'applicazione Node.js nel DevOps Services Web IDE, le icone di le icone di live edit, riavvio rapido e debug di {{site.data.keyword.Bluemix_notm}} non vengono visualizzate.
 {: tsSymptoms}
 
  
 
-The icons are not available in these circumstances:
+Le icone non sono disponibili nei seguenti casi:
 {: tsCauses}
 
-  * The `manifest.yml` file is not stored at the top level of your project.
-  * Your app is stored in a subdirectory rather than the top level of your project, but the path to the subdirectory is not specified in the `manifest.yml` file.
-  * The app does not contain a `package.json` file.
+  * Il file `manifest.yml` non è memorizzato al
+livello superiore del tuo progetto.
+  * La tua applicazione è memorizzata in una sottodirectory anziché al livello superiore
+del tuo progetto, ma il percorso della sottodirectory non è specificato
+nel file `manifest.yml`.
+  * L'applicazione non contiene un file `package.json`.
 
 
-Use one of the following methods to solve the problem: 
+Per risolvere il problema utilizza uno dei seguenti metodi: 
 {: tsResolve} 
 
-  * If the `manifest.yml` file is not stored at the top level of your project, store it there.
-  * If your app is stored in a subdirectory, specify the path to the subdirectory in the `manifest.yml` file.
+  * Se il file `manifest.yml` non è memorizzato al
+livello superiore del tuo progetto, memorizzalo lì.
+  * Se la tua applicazione è memorizzata in una sottodirectory, specifica il percorso
+di tale sottodirectory nel file `manifest.yml`.
   ```
-   path: path_to_application
+   path: percorso_alla_applicazione
    ```
-  * Create a `package.json` file that is in the same directory as your app.
+  * Crea un file `package.json` che si trovi nella stessa
+directory della tua applicazione.
 
   
   
@@ -759,95 +904,114 @@ Use one of the following methods to solve the problem:
 
   
   
-## Orgs can't be found on {{site.data.keyword.Bluemix_notm}}
+## Impossibile trovare le organizzazioni in {{site.data.keyword.Bluemix_notm}}
 {: #ts_orgs}
 
-You might not be able to locate your organization on {{site.data.keyword.Bluemix_notm}} when working on a {{site.data.keyword.Bluemix_notm}} region.
+Potresti non riuscire a individuare la tua organizzazione in {{site.data.keyword.Bluemix_notm}} quando
+lavori su una regione {{site.data.keyword.Bluemix_notm}}.
   
  
 
-You can log in to the {{site.data.keyword.Bluemix_notm}} user interface successfully, but you cannot push apps by using the cf command line interface or the Eclipse plug-in.
+Riesci ad accedere correttamente all'interfaccia utente {{site.data.keyword.Bluemix_notm}} ma non puoi distribuire le applicazioni utilizzando l'interfaccia riga di comando cf o il plug-in Eclipse.
 {: tsSymptoms}
 
-When you try to push an application to {{site.data.keyword.Bluemix_notm}} by using the cf command line interface, you see one of the following error messages with the organization name specified in the message: 
+Quando tenti di distribuire un'applicazione
+a {{site.data.keyword.Bluemix_notm}} utilizzando
+l'interfaccia riga di comando cf, puoi visualizzare uno dei seguenti
+messaggi di errore in cui viene specificato il nome dell'organizzazione: 
 
 `Error finding org`
 
 `Organization not found`
 
 
-When you try to push an application to {{site.data.keyword.Bluemix_notm}} by using the Cloud Foundry Eclipse Plugin, you see the following error message:
+Quando tenti di distribuire un'applicazione a {{site.data.keyword.Bluemix_notm}}
+utilizzando il plug-in Eclipse Cloud Foundry, visualizzi il seguente messaggio di
+errore:
 
 `cloudspace not found.`
 
 
 
-This problem occurs because the API endpoint of the region that you want to work with is not specified, and the organization you're looking for might be in a different region.
+Questo problema si verifica poiché l'endpoint API della regione
+che vuoi utilizzare non è specificato e l'organizzazione che stai
+cercando potrebbe trovarsi in una regione differente.
 {: tsCauses} 
 
    
   
-If you are pushing your application to {{site.data.keyword.Bluemix_notm}} by using the cf command line interface, enter the cf api command and specify the API endpoint of the region. For example, enter the following command to connect to the {{site.data.keyword.Bluemix_notm}} Europe United Kingdom region:
+Se stai eseguendo il push della tua applicazione a {{site.data.keyword.Bluemix_notm}} utilizzando l'interfaccia riga di comando cf, immetti il comando cf api e specifica l'endpoint API della regione. Ad esempio, immetti il seguente comando per stabilire una connessione alla regione {{site.data.keyword.Bluemix_notm}} Europa
+Regno Unito:
 {: tsResolve}
 
 ```
 cf api https://api.eu-gb.bluemix.net
 ```
-If you are pushing your application to {{site.data.keyword.Bluemix_notm}} by using the Eclipse tools, you must first create a {{site.data.keyword.Bluemix_notm}} server and specify the API endpoint of the {{site.data.keyword.Bluemix_notm}} region that your organization was created in. For more information about using the Eclipse tools, see [Deploying apps with IBM Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html).  
+Se stai distribuendo la tua applicazione a {{site.data.keyword.Bluemix_notm}} utilizzando
+gli strumenti Eclipse, devi prima creare un server {{site.data.keyword.Bluemix_notm}}
+e specificare l'endpoint API della regione {{site.data.keyword.Bluemix_notm}} in
+cui è stata creata la tua organizzazione. Per ulteriori informazioni sull'utilizzo di strumenti Eclipse, consulta il documento relativo alla [distribuzione di applicazioni con IBM Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html).  
   
   
 
 
-## App routes can't be created
+## Impossibile creare rotte di applicazione
 {: #ts_hostistaken}
 
-When you deploy an app to {{site.data.keyword.Bluemix_notm}}, the route of the app can't be created if the host name that you specified is already being used.
+Quando distribuisci un'applicazione a {{site.data.keyword.Bluemix_notm}}, la rotta dell'applicazione non può essere creata se il nome host da te specificato è già in uso.
 
 
 
-When you deploy an app to {{site.data.keyword.Bluemix_notm}}, you see the following error message: 
+Quando distribuisci un'applicazione a {{site.data.keyword.Bluemix_notm}}, visualizzi il seguente messaggio di errore: 
 {: tsSymptoms} 
 
 `Creating route hostname.domainname ... FAILED Server error, status code: 400, error code: 210003, message: The host is taken: hostname`
 
 
 
-This problem occurs if the host name that you specified is already being used.
+Questo problema si verifica se il nome host da te specificato
+è già in uso.
 {: tsCauses} 
 
 
   
-The host name that you specify must be unique within the domain that you are using. To specify a different host name, use one of the following methods:
+Il nome host specificato deve essere univoco all'interno
+del dominio che stai utilizzando. Per specificare un nome host differente, usa uno dei
+seguenti metodi:
 {: tsResolve} 
 
-  * If you deploy your application by using the `manifest.yml` file, specify the host name in the host option.	 
+  * Se distribuisci la tua applicazione utilizzando il file `manifest.yml`, specifica il nome host nell'opzione host.	 
     ```
-    host: <hostname>	
+    host: <nomehost>	
 	```
-  * If you deploy your application from the command prompt, use the `cf push` command with the **-n** option. 
+  * Se distribuisci la tua applicazione dal prompt dei comandi, utilizza il comando `cf
+push` con l'opzione **-n**. 
     ```
-    cf push <appname> -p <app_path> -n <hostname>
+    cf push <nome_applicazione> -p <percorso_applicazione> -n <nome_host>
     ```
 
 
-## WAR apps can't be pushed by using the cf push command
+## Non è possibile distribuire delle applicazioni WAR utilizzando il comando cf push
 {: #ts_cf_war}
 
-You might not be able to use the cf push command to deploy an archived web app to {{site.data.keyword.Bluemix_notm}} if the app location is not specified correctly.
+Potresti non riuscire a utilizzare il comando cf push per distribuire un'applicazione web archiviata a {{site.data.keyword.Bluemix_notm}} se la posizione dell'applicazione non è specificata correttamente.
 	
 
 
-When you upload a WAR app to {{site.data.keyword.Bluemix_notm}} by using the `cf push` command, you see the error message, `Staging error: cannot get instances since staging failed.`
+Quando carichi un'applicazione WAR in {{site.data.keyword.Bluemix_notm}} utilizzando il comando `cf push`, visualizzi il messaggio di errore `Staging
+error: cannot get instances since staging failed.`
 {: tsSymptoms} 
 
  
 
-This problem might happen if the WAR file is not specified, or if the path to the WAR file is not specified. 
+Questo problema potrebbe verificarsi se non si specifica il file WAR
+o il percorso del file WAR. 
 {: tsCauses}
 
  	
 	
-Use the **-p** option to specify a WAR file or add the path to the WAR file. For example:
+Utilizza l'opzione **-p** per specificare
+un file WAR o aggiungere il percorso del file WAR. Per esempio:
 {: tsResolve}
 
 ```
@@ -857,36 +1021,36 @@ cf push MyUniqueAppName01 -p app.war
 ```
 cf push MyUniqueAppName02 -p "./app.war"
 ```
-For more information about the `cf push` command, enter `cf push -h`. 	
+Per ulteriori informazioni sul comando `cf push` , immettere `cf push -h`. 	
 
 
 
 
 
-## Double-byte characters aren't displayed properly when Liberty applications are pushed to {{site.data.keyword.Bluemix_notm}}
+## I caratteri double-byte non vengono visualizzati correttamente quando si distribuiscono le applicazioni Liberty a {{site.data.keyword.Bluemix_notm}}
 {: #ts_doublebytes}
 
-Double-byte characters might not be displayed properly if Unicode support is not configured properly for the servlet or JSP files.
+I caratteri double-byte potrebbero non essere visualizzati correttamente se il supporto Unicode non è adeguatamente configurato per i file servlet o JSP.
 
  
 
-When a Liberty application is pushed to the {{site.data.keyword.Bluemix_notm}}, the double-byte characters that are specified within the app are not displayed properly.
+Quando un'applicazione Liberty viene distribuita a {{site.data.keyword.Bluemix_notm}}, i caratteri double-byte specificati all'interno dell'applicazione non vengono visualizzati correttamente.
 {: tsSymptoms}
 
  
 
-The problem might occur if Unicode support is not configured properly for the servlet or JSP files.
+Il problema può verificarsi se il supporto Unicode non è configurato correttamente per i file servlet o JSP.
 {: tsCauses}
 
 
-You can use the following code within your servlet or JSP file:
+Puoi utilizzare il seguente codice all'interno dei tuoi file servlet o JSP:
 {: tsResolve} 
 
-  * In the servlet source file 
+  * Nel file di origine servlet 
     ```
 	response.setContentType("text/html; charset=UTF-8");
 	```
-  * In the JSP 
+  * Nel JSP 
     ```
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	```
@@ -894,14 +1058,17 @@ You can use the following code within your servlet or JSP file:
 	
 	
 
-## Node.js apps can't be deployed
+## Impossibile distribuire le applicazioni Node.js
 {: #ts_nodejs_deploy}
 
-You might run into problems when you update a Node.js app or deploy a Node.js app to {{site.data.keyword.Bluemix_notm}}.
+Potresti riscontrare dei problemi quando aggiorni un'applicazione Node.js
+o quando distribuisci un'applicazione Node.js a {{site.data.keyword.Bluemix_notm}}.
 
 
 
-When you update a Node.js app or deploy your Node.js app to {{site.data.keyword.Bluemix_notm}}, you might see one of the following error messages:
+Quando aggiorni un'applicazione Node.js o distribuisci la tua applicazione Node.js
+a {{site.data.keyword.Bluemix_notm}},
+potresti visualizzare uno dei seguenti messaggi di errore:
 {: tsSymptoms} 
 
 `An app was not successfully detected by any available buildpack.`
@@ -915,24 +1082,26 @@ When you update a Node.js app or deploy your Node.js app to {{site.data.keyword.
 
  
 
-The following reasons are possible causes of the problem:
+Di seguito sono indicate le possibili cause del problema:
 {: tsCauses}
  
-  * The start command is not specified.
-  * Files that are required to deploy a Node.js app are either missing from the app or placed in a folder other than the root directory.
+  * Il comando di avvio non è specificato.
+  * I file richiesti per distribuire un'applicazione Node.js non sono presenti
+nell'applicazione o si trovano in una cartella diversa dalla directory root.
   
 
 
 	
-Take the following actions based on the cause that leads to the problem:
+Effettua le seguenti operazioni in base alla causa del
+problema:
 {: tsResolve} 
 
-  * Specify the start command by one of the following methods: 
-      * Use the cf command line interface. For example: 
+  * Specifica il comando di avvio utilizzando uno dei seguenti metodi: 
+      * Utilizza l'interfaccia riga di comando cf. Per esempio: 
         ```
 		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 		```
-	  * Use the [package.json ![External link icon](../icons/launch-glyph.svg)](https://docs.npmjs.com/json){: new_window} file. For example:
+	  * Utilizza il file [package.json ![icona link esterno](../icons/launch-glyph.svg)](https://docs.npmjs.com/json){: new_window}. Per esempio:
 	    ```
 		{
       ...
@@ -941,7 +1110,7 @@ Take the following actions based on the cause that leads to the problem:
  	   }
 	}
 	    ```
-	  * Use the `manifest.yml` file. For example: 
+	  * Utilizza il file `manifest.yml`. Per esempio: 
 	    ```
 		applications:
   name: MyUniqueNodejs01
@@ -950,8 +1119,10 @@ Take the following actions based on the cause that leads to the problem:
   ...
         ```
 
-  * Ensure that a `package.json` file exists in your Node.js app to enable the Node.js buildpack to recognize the app. In addition, you must put this file in the root directory of your app.	
-    The following example shows a simple `package.json` file:  
+  * Assicurati che nella tua applicazione Node.js sia presente un file `package.json` per consentire al pacchetto di build Node.js di riconoscere l'applicazione. Inoltre, devi inserire questo file nella directory root della tua applicazione.	
+    Il seguente
+                                                  esempio mostra un semplice file
+                                                  `package.json`:  
 	```
 	{
         "name": "MyUniqueNodejs01",
@@ -970,102 +1141,110 @@ Take the following actions based on the cause that leads to the problem:
  }
     ```
 	
-For more tips about Node.js apps, see [Tips for Node.js Applications ![External link icon](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}.	
+Per ulteriori suggerimenti relativi alle applicazioni Node.js, vedi [Tips for Node.js Applications ![icona link esterno](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}.	
 
 
 
 
-## Configuration errors appear in the `server.xml` file after you import a {{site.data.keyword.Bluemix_notm}} Liberty app from Bluemix DevOps Services to Eclipse
+## Sono presenti degli errori di configurazione nel file `server.xml` dopo che importi un'applicazione {{site.data.keyword.Bluemix_notm}} Liberty da Bluemix DevOps Services a Eclipse
 {: #ts_eclipse}
 
-If you see configuration errors in the `server.xml` file after you import a {{site.data.keyword.Bluemix_notm}} Liberty app from IBM Bluemix DevOps Services to Eclipse, you might need to remove the `server.xml` file from the project. 
+Se vedi degli errori di configurazione nel file `server.xml` dopo aver importato un'applicazione {{site.data.keyword.Bluemix_notm}} Liberty da IBM Bluemix DevOps Services a Eclipse, potresti dover rimuovere il file `server.xml` dal progetto. 
 
  
 
-After you import a {{site.data.keyword.Bluemix_notm}} Liberty app from {{site.data.keyword.Bluemix_notm}} DevOps Services into the Eclipse, you see configuration errors within the `server.xml` file from Eclipse Problems view. 
+Dopo aver importato un'applicazione {{site.data.keyword.Bluemix_notm}} Liberty da {{site.data.keyword.Bluemix_notm}} DevOps Services in Eclipse, vedi degli errori di configurazione nel file `server.xml` dalla vista Problemi di Eclipse. 
 {: tsSymptoms}
 
  
 
-Liberty buildpack uses the `server.xml` file to configure the app and generates a `runtime-vars.xml` file when the Liberty app is pushed to {{site.data.keyword.Bluemix_notm}}. When you import the app to Eclipse, the `runtime-vars.xml` file doesn't exist in your local environment.
+Il pacchetto di build Liberty utilizza il file `server.xml` per configurare l'applicazione e genera un file `runtime-vars.xml` quando viene eseguito il push dell'applicazione Liberty a {{site.data.keyword.Bluemix_notm}}. Quando importi l'applicazione in Eclipse, il file `runtime-vars.xml` non esiste nel tuo ambiente locale.
 {: tsCauses}
 
  
 
-You can resolve this problem by removing the server.xml file from the project. The buildpack creates the `server.xml` file dynamically when you push the app as a WAR app. For more information, see [Liberty for Java](/docs/runtimes/liberty/index.html).
+Puoi risolvere questo problema rimuovendo il file server.xml dal progetto. Il pacchetto di build crea il file `server.xml` dinamicamente quando esegui il push dell'applicazione come un'applicazione WAR. Per ulteriori informazioni, consulta [Liberty for Java](/docs/runtimes/liberty/index.html).
 {: tsResolve}
 	
 	
-## Apps can't be staged by using custom buildpacks
+## Impossibile preparare l'applicazione utilizzando i pacchetti di build personalizzati
 {: #ts_bp_compilation}
 
-You might not be able to deploy an app to {{site.data.keyword.Bluemix_notm}} by using a custom buildpack if the scripts within the buildpack are not executable.
+Potresti non riuscire a distribuire un'applicazione a {{site.data.keyword.Bluemix_notm}} utilizzando un pacchetto di build personalizzato se gli script all'interno del pacchetto di build non sono eseguibili.
 
 
 
-When you deploy an app to {{site.data.keyword.Bluemix_notm}} by using a custom buildpack, you see the error message, `The application failed to stage, so there are no instances to display.`
+Quando distribuisci un'applicazione a {{site.data.keyword.Bluemix_notm}} utilizzando un pacchetto di build personalizzato, visualizzi il messaggio di errore `La preparazione  dell'applicazione non è riuscita e, pertanto, non ci sono istanze da visualizzare.`
 {: tsSymptoms} 
 
 
-This problem might happen if scripts, such as the detect script, the compile script, and the release script, are not executable.
+Questo problema
+potrebbe verificarsi se gli script, ad esempio lo script di rilevamento, lo script di compilazione e lo
+                script di rilascio, non sono eseguibili.
 {: tsCauses}
 
  
 
-You can use the [git update ![External link icon](../icons/launch-glyph.svg)](http://git-scm.com/docs/git-update-index){: new_window} command to change the permission of each script to executable. For example, you can type `git update --chmod=+x script.sh`.
+Puoi utilizzare il comando [git update ![icona link esterno](../icons/launch-glyph.svg)](http://git-scm.com/docs/git-update-index){: new_window} per modificare l'autorizzazione di ciascuno script in eseguibile. Ad esempio, puoi immettere `git update --chmod=+x script.sh`.
 {: tsResolve}
 	
 	
 	
-## Unable to deploy an app from DevOps Services to {{site.data.keyword.Bluemix_notm}}
+## Un'applicazione non può essere distribuita da DevOps Services a {{site.data.keyword.Bluemix_notm}}
 {: #ts_devops_to_bm}
 
-You might not be able to push your app from IBM Bluemix DevOps Services to {{site.data.keyword.Bluemix_notm}} if the `manifest.yml` file is not present within your app.
+Potresti non riuscire ad eseguire il push della tua applicazione da IBM Bluemix DevOps Services a {{site.data.keyword.Bluemix_notm}} se il file `manifest.yml` non è presente nella tua applicazione.
 
  
 
-When you deploy an app from DevOps Services to {{site.data.keyword.Bluemix_notm}}, an error message `Unable to detect a supported application type` might display.
+Quando distribuisci un'applicazione da DevOps Services a {{site.data.keyword.Bluemix_notm}}, potrebbe essere visualizzato un messaggio di errore `Unable to detect a supported application type`.
 {: tsSymptoms}
 
  
 
-This problem might happen because DevOps Services requires a `manifest.yml` file to deploy an app to {{site.data.keyword.Bluemix_notm}}.
+Questo problema potrebbe verificarsi perché DevOps Services richiede un file `manifest.yml` per distribuire un'applicazione a {{site.data.keyword.Bluemix_notm}}.
 {: tsCauses}
 
  
 
-To resolve this problem, you must create a `manifest.yml` file. For more information about how to create a `manifest.yml` file, see [Application manifest](/docs/manageapps/depapps.html#appmanifest).
+Per risolvere questo problema, devi creare un file `manifest.yml`. Per ulteriori informazioni su come creare un file `manifest.yml`,
+vedi [Manifest
+dell'applicazione](/docs/manageapps/depapps.html#appmanifest).
 {: tsResolve}	
 	
 
 
 
 
-## Meteor apps can't be pushed
+## Impossibile distribuire le applicazioni Meteor
 {: #ts_meteor}
 
-You might not be able to push a Meteor application to {{site.data.keyword.Bluemix_notm}} if the buildpack is not specified correctly.
+Potresti non riuscire a distribuire un'applicazione Meteor a {{site.data.keyword.Bluemix_notm}} se
+il pacchetto di build non è specificato correttamente.
 
  
 
-When you deploy a Meteor app to {{site.data.keyword.Bluemix_notm}}, you might see the error message, `The application failed to stage, so there are no instances to display.`
+Quando distribuisci un'applicazione Meteor a {{site.data.keyword.Bluemix_notm}}, potresti visualizzare il messaggio di errore `La
+preparazione dell'applicazione non è riuscita e, pertanto, non ci sono istanze da visualizzare.`
 {: tsSymptoms}
 
 
-This problem occurs because no built-in buildpack is provided for Meteor apps. You must use a custom buildpack.
+Questo problema si verifica perché non viene fornito alcun pacchetto di build integrato per le applicazioni Meteor. Devi utilizzare un pacchetto di build personalizzato.
 {: tsCauses} 
 
 
  
 
-To use a custom buildpack for Meteor apps, use one of the following methods:
+Per utilizzare un pacchetto di build personalizzato per le applicazioni Meteor, usa uno dei seguenti metodi:
 {: tsResolve}
 
-  * If you deploy your app by using the `manifest.yml` file, specify the URL or the name of your custom buildpack by using the buildpack option. For example:
+  * Se distribuisci la tua applicazione utilizzando il file `manifest.yml`, specifica l'URL o il nome del pacchetto di build personalizzato usando l'opzione buildpack. Per esempio:
   ```
   buildpack: https://github.com/Sing-Li/bluemix-bp-meteor 
   ```
-  * If you deploy your application from the command prompt, use the `cf push` command and specify your custom buildpack by using the **-b** option. For example:
+  * Se distribuisci la tua applicazione dal prompt dei comandi, utilizza il comando `cf
+push` e specifica il pacchetto di build personalizzato usando
+l'opzione **-b**. Per esempio:
     ```
 	cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor 
 	```
@@ -1073,245 +1252,273 @@ To use a custom buildpack for Meteor apps, use one of the following methods:
   
 
     
-## Deploy to {{site.data.keyword.Bluemix_notm}} button doesn't deploy an app
+## Il pulsante Distribuisci a {{site.data.keyword.Bluemix_notm}}
+non distribuisce un'applicazione
 {: #deploytobluemixbuttondoesntdeployanapp}
 
-If you click the Deploy to {{site.data.keyword.Bluemix_notm}} button and find that either the Git repository is not cloned or the app is not deployed, try the troubleshooting methods for the following issues.
-  * [The Bluemix DevOps Services project cannot be created](#project-cannot-be-created)
-  * [The Git repository is not found and cannot be cloned in DevOps Services](#repo-not-found)
-  * [The Git repository is cloned in DevOps Services, but the app is not deployed to {{site.data.keyword.Bluemix_notm}}](#repo-cloned-app-not-deployed)
-For more information about how to create the button, see Creating a Deploy to {{site.data.keyword.Bluemix_notm}} button.
+Se fai clic sul pulsante Distribuisci a {{site.data.keyword.Bluemix_notm}}
+e rilevi che il repository Git non viene clonato o che l'applicazione
+non viene distribuita, prova i metodi di risoluzione per i seguenti problemi.
+  * [Impossibile creare il progetto Bluemix DevOps Services](#project-cannot-be-created)
+  * [Il repository Git non viene trovato e non può essere clonato in DevOps Services](#repo-not-found)
+  * [Il repository Git viene clonato in DevOps Services, ma l'applicazione non viene
+distribuita a {{site.data.keyword.Bluemix_notm}}](#repo-cloned-app-not-deployed)
+Per ulteriori informazioni su come creare il pulsante, vedi Creazione di un pulsante Distribuisci a {{site.data.keyword.Bluemix_notm}}.
 
-### The Bluemix DevOps Services project cannot be created
+### Impossibile creare il progetto Bluemix DevOps Services
 {: #project-cannot-be-created}
 
-If you find that the DevOps Services project cannot be created, your IBM {{site.data.keyword.Bluemix_notm}} account might have expired.
+Se noti che il progetto DevOps Services non può essere creato, il tuo account {{site.data.keyword.Bluemix_notm}} potrebbe essere scaduto.
 
 
 
-You click the **Deploy to Bluemix** button, but the "Creating project" step does not complete successfully.
+Fai clic sul pulsante **Distribuisci a Bluemix**, ma il passo "Creazione del progetto" non viene completato correttamente.
 {: tsSymptoms} 
 
 
-Your {{site.data.keyword.Bluemix_notm}} account might have expired.
+Il tuo account {{site.data.keyword.Bluemix_notm}}
+potrebbe essere scaduto.
 {: tsCauses} 
 
-Use one of the following methods to fix the problem:
+Per risolvere il problema utilizza uno dei seguenti metodi:
 {: tsResolve}
 
-  * Log in to {{site.data.keyword.Bluemix_notm}} and update your account information.
-  * Click the **Deploy to Bluemix** button again.
+  * Accedi a {{site.data.keyword.Bluemix_notm}} e
+aggiorna le informazioni del tuo account.
+  * Fai di nuovo clic sul pulsante **Distribuisci a Bluemix**.
 
 
-### The Git repository is not found and cannot be cloned in DevOps Services
+### Il repository Git non viene trovato e non può essere clonato in DevOps Services
 {: #repo-not-found}
 
-If you find that the Git repository is not cloned, an issue might exist with the repository or with the button snippet.
+Se noti che il repository Git non viene clonato, potrebbe esistere
+un problema con il repository o con il frammento di pulsante.
 
 
 
-You click the **Deploy to Bluemix** button, but the Git repository is not found and cannot be cloned in DevOps Services. The "Cloning repository" step does not complete successfully. Therefore, the app cannot be deployed to {{site.data.keyword.Bluemix_notm}}. 
+Fai clic sul pulsante **Distribuisci a Bluemix**, ma il repository Git non viene trovato e non può essere clonato in DevOps Services. Il passo "Clonazione del repository" non viene completato correttamente. Di conseguenza, l'applicazione non può essere distribuita a {{site.data.keyword.Bluemix_notm}}. 
 {: tsSymptoms} 
 
-This problem might occur because of the following reasons:
+Questo problema si verifica a causa dei seguenti motivi:
 {: tsCauses} 
 
-  * The Git repository might not exist or be accessible.
-  * An issue might exist in the HTML or markdown for the button snippet.
-  * An issue might exist where special characters, query parameters, or fragments in the URL are preventing the Git repository from being accessed properly.
+  * Il repository Git potrebbe non esistere o non essere accessibile.
+  * Potrebbe esistere un problema nell'HTML o markdown per il frammento di pulsante.
+  * Potrebbe esistere un problema in cui dei caratteri speciali, parametri di query
+o frammenti nell'URL impediscono di accedere correttamente al repository
+Git.
 
-Use one of the following methods to fix the problem:
+Per risolvere il problema utilizza uno dei seguenti metodi:
 {: tsResolve}
 
-  * Verify that your Git repository exists, is publicly accessible, and that the URL is correct.
-  * Verify that the snippet does not contain any HTML or markdown errors.
-  * If special characters, query parameters, or fragments cause an issue with the Git repository URL, encode the URL in the button snippet.
+  * Verifica che il repository Git esista e sia accessibile pubblicamente
+e che l'URL sia corretto.
+  * Verifica che il frammento non contenga errori di HTML o markdown.
+  * Se caratteri speciali, parametri di query o frammenti causano problemi con l'URL del repository Git, codifica l'URL nel frammento di pulsante.
   
 
   
   
-### The Git repository is cloned in DevOps Services, but the app is not deployed to {{site.data.keyword.Bluemix_notm}}
+### Il repository Git viene clonato in DevOps Services, ma l'applicazione non viene distribuita a {{site.data.keyword.Bluemix_notm}}
 {: #repo-cloned-app-not-deployed}
 
-If you find that the app is not deployed, issues might exist with the code in the repository.
+Se noti che l'applicazione non viene distribuita, potrebbero esistere
+dei problemi con il codice nel repository.
      
 
 
-You click the **Deploy to Bluemix** button and the Git repository is cloned in DevOps Services, but the app is not deployed to {{site.data.keyword.Bluemix_notm}}. The "Deploying to Bluemix" step does not complete successfully.
+Fai clic sul pulsante **Distribuisci a Bluemix** e il repository Git viene clonato in DevOps Services, ma l'applicazione non viene distribuita a {{site.data.keyword.Bluemix_notm}}. Il passo "Distribuzione a Bluemix" non viene completato correttamente.
 {: tsSymptoms} 
 
-This problem might occur because of the following reasons:
+Questo problema si verifica a causa dei seguenti motivi:
 {: tsCauses}  
 
-  * There might not be enough space in your {{site.data.keyword.Bluemix_notm}} space to deploy an app. 
-  * A required service might not be declared in the `manifest.yml` file.
-  * A required service might be declared in the `manifest.yml` file, but the service is already in the target space.
-  * An issue might exist with the code in the repository.
-To diagnose the issue, review the build and deploy logs from the deployment:
-  1. When the "Deploying to Bluemix" step does not complete successfully, click the link in the previous "Configuring pipeline" step to open the Delivery Pipeline.
-  2. Identify the failed build or deploy stage.
-  3. In the failed stage, click **View logs and history**.
-  4. Locate the error message.
+  * Nel tuo spazio {{site.data.keyword.Bluemix_notm}} potrebbe non esserci spazio sufficiente
+per distribuire un'applicazione. 
+  * Un servizio richiesto potrebbe non essere dichiarato nel file `manifest.yml`.
+  * Un servizio richiesto potrebbe essere dichiarato nel file `manifest.yml`,
+ma il servizio si trova già nello spazio di destinazione.
+  * Potrebbe esistere un problema con il codice nel repository.
+Per diagnosticare il problema, riesamina i log di creazione e distribuzione
+dalla distribuzione:
+  1. Quando il passo "Distribuzione a Bluemix" non viene completato correttamente, fai clic sul link nel precedente passo di "Configurazione della pipeline" per aprire Delivery Pipeline.
+  2. Identifica la fase di creazione o distribuzione non riuscita.
+  3. Nella fase non riuscita, fai clic su **Visualizza log e cronologia**.
+  4. Individua il messaggio di errore.
    
-Use one of the following methods to fix the problem:
+Per risolvere il problema utilizza uno dei seguenti metodi:
 {: tsResolve}
 
-  * If the error message indicates that there is not enough space in the {{site.data.keyword.Bluemix_notm}} space to deploy the app, target another space.
-  * If the error message indicates that a required service is not declared in the `manifest.yml` file, notify the repository owner that the required service must be added.
-  * If the error message indicates that a required service already exists in the target space, select a different space to use.
-  * If the error message indicates that an issue exists with the build, fix any issues with the code that are preventing the app from being built. To verify that the code does not contain any issues, build the code by using Git commands:
-    1. Clone the Git repository:
+  * Se il messaggio di errore indica che nello
+spazio {{site.data.keyword.Bluemix_notm}} non vi è spazio sufficiente
+per distribuire l'applicazione, mira a un altro spazio.
+  * Se il messaggio di errore indica che un servizio richiesto non è
+dichiarato nel file `manifest.yml`, comunica al proprietario
+del repository che è necessario aggiungere il servizio richiesto.
+  * Se il messaggio di errore indica che un servizio richiesto esiste
+già nello spazio di destinazione, seleziona un spazio differente da utilizzare.
+  * Se il messaggio di errore indica che esiste un problema con la creazione,
+correggi eventuali problemi con il codice che impediscono la creazione
+dell'applicazione. Per verificare che il codice non contenga alcun problema, crea il
+codice utilizzando i comandi Git:
+    1. Clona il repository Git:
     ```
-    git clone <git_repository_URL>
+    git clone <URL_repository_git>
     ```
-	2. Open the app directory:
+	2. Apri la directory dell'applicazione:
 	```
-	cd <appname>
+	cd <nomeapplicazione>
 	```
-	3. Create the app:
+	3. Crea l'applicazione:
 	```
 	<appname> create
 	```
-	4. If necessary, provision add-ons.
-	5. Add any configuration variables that are required.
-	6. Push the code:
+	4. Se necessario, fornisci componenti aggiuntivi.
+	5. Aggiungi eventuali variabili di configurazione richieste.
+	6. Distribuisci il codice:
 	```
-	git push <appname> master
+	git push <nomeapplicazione> master
 	```
-	7. Verify that the app builds correctly.
-	8. If necessary, run the post deployment command:
+	7. Verifica che l'applicazione venga creata correttamente.
+	8. Se necessario, esegui il comando di post distribuzione:
 	```
 	<appname> run
 	```
-	9. Open the app and verify that it is working correctly:
+	9. Apri l'applicazione e verifica che funzioni correttamente:
 	```
 	<appname> open
 	```
 
-## Deploying an app from the run bar fails
+## La distribuzione di un'applicazione dalla barra di esecuzione non riesce
 {: #deployinganappfromtherunbarfails}
 
-In this scenario, the deployment fails in a yellow, "not synchronized" state. 
+In questo scenario, la distribuzione non riesce indicando uno stato "non sincronizzato" di colore giallo. 
 
-The app that you are deploying has the same route as another app that is running. To fix this issue, change the route to be unique.
+L'applicazione che stai distribuendo ha la stessa rotta di un'altra applicazione in esecuzione. Per correggere questo problema, modifica la rotta in modo che sia univoca.
 
-## Run bar cannot be found
+## Impossibile trovare la barra di esecuzione
 {: #runbarcannotbefound}
 
-If you don't see the run bar in the Eclipse Orion {{site.data.keyword.webide}}, one of these issues occurred:
+Se non riesci a visualizzare la barra di esecuzione in Eclipse Orion {{site.data.keyword.webide}}, si è verificato uno dei seguenti problemi:
 
-1. {{site.data.keyword.jazzhub}} isn't identifying your project as a project.
-   * Fix: In your project's root directory, create a `project.json` file.
-2. {{site.data.keyword.jazzhub_short}} failed to determine which folder your app is in.
-   * Fix: If your app is in a directory other than the project root, do one of these steps:
-      * In your project's root directory, create a `manifest.yml` file. Then, edit the file so that it points to the location of your app; for example, `path: path_to_your_app`
-      * Move your app so that it is in your project's root directory.
-3. {{site.data.keyword.jazzhub_short}} does not detect that your app is a Node.js app.
-   * Fix: In the app folder of your project, create a `package.json` file.
+1. {{site.data.keyword.jazzhub}} non riesce a identificare il tuo progetto.
+   * Correzione: nella directory root del tuo progetto, crea un file `project.json`.
+2. {{site.data.keyword.jazzhub_short}} non riesce a determinare in quale cartella si trova la tua applicazione.
+   * Correzione: se la tua applicazione si trova in una directory diversa dalla root del progetto, effettua una delle seguenti operazioni:
+      * Nella directory root del tuo progetto, crea un file `manifest.yml`. Modifica quindi il file in modo che punti alla posizione della tua applicazione, ad esempio `path: percorso_tua_applicazione`
+      * Sposta la tua applicazione nella directory root del tuo progetto.
+3. {{site.data.keyword.jazzhub_short}} non riconosce la tua applicazione come applicazione Node.js.
+   * Correzione: nella cartella dell'applicazione del tuo progetto, crea un file `package.json`.
    
 
-## GitHub hook isn't working
+## L'hook GitHub non funziona
 {: #githubhookisntworking}
 
-If you configured your GitHub project to create work-item links when you push commits and the links aren't working as expected, follow these steps to find the problem:
+Se hai configurato il tuo progetto GitHub per creare link dell'elemento di lavoro quando esegui il push di commit e i link non funzionano nel modo previsto, usa la seguente procedura per trovare il problema:
 
-1. In your GitHub repo, click **Settings**.
-   ![GitHub settings link](images/githubSettings1_small.png)
+1. Nel repository GitHub, fai clic su **Impostazioni**.
+   ![Link alle impostazioni GitHub](images/githubSettings1_small.png)
 
-2. Click **Webhooks & services**.
-   ![GitHub web hooks and services link](images/githubHooks1_small.png)
+2. Fai clic su **Webhook & servizi**.
+   ![Link ai servizi e webhook GitHub](images/githubHooks1_small.png)
 
-3. To view the message, hover over the {{site.data.keyword.jazzhub}} status icon.
-   ![Error message on service hook](images/troubleshoothook1_small.png)
+3. Per visualizzare il messaggio, passa il puntatore del mouse sull'icona dello stato {{site.data.keyword.jazzhub}}.
+   ![Messaggio di errore sull'hook del servizio](images/troubleshoothook1_small.png)
 
-4. Resolve the error according to the GitHub message.
+4. Risolvi il problema in base al messaggio GitHub.
 
-5. To verify that the fix worked, commit and push another change, or go to the service page for {{site.data.keyword.jazzhub_short}} and click **Test service**.
-   ![GitHub Test service button](images/githubTestService_small.png)
+5. Per verificare che la correzione abbia funzionato, esegui il commit e il push di un'altra modifica o vai alla pagina del servizio per {{site.data.keyword.jazzhub_short}} e fai clic su **Verifica servizio**.
+   ![Pulsante Verifica servizio GitHub](images/githubTestService_small.png)
 
-6. Verify that there are no errors by checking the status icon again.
-   ![Status icon without errors](images/githubResolved_small.png)
+6. Verifica che non vi siano errori controllando di nuovo l'icona dello stato.
+   ![Icona dello stato senza errori](images/githubResolved_small.png)
 
-For more information, see [Setting up GitHub for Bluemix DevOps Services projects ![External link icon](../icons/launch-glyph.svg)](https://hub.jazz.net/docs/githubhooks/){: new_window}.
+Per ulteriori informazioni, consulta [Setting up GitHub for Bluemix DevOps Services projects ![icona link esterno](../icons/launch-glyph.svg)](https://hub.jazz.net/docs/githubhooks/){: new_window}.
 
 
-# Troubleshooting for managing accounts
+# Risoluzione dei problemi relativi alla gestione degli account
 {: #managingaccounts}
 
-You might experience problems when you manage your account, such as different apps share the same domain name, administrators can't view all organizations. However, in many cases, you can recover from these problems by following a few easy steps.
+Potrebbero verificarsi dei problemi durante la gestione del tuo account, ad esempio problemi relativi ad applicazioni differenti che condividono lo stesso nome dominio o amministratori che non riescono a visualizzare tutte le organizzazioni. Tuttavia, in molti casi, puoi eseguire un ripristino da tali problemi seguendo pochi semplici passi.
 {:shortdesc}
 
 
-## Account is inactive
+## Account non attivo
 {: #ts_accnt_inactive}
 
-You are unable to create an app in {{site.data.keyword.Bluemix_notm}} if your account is inactive. You must contact the support team to fix this problem.
+Non puoi creare un'applicazione in {{site.data.keyword.Bluemix_notm}} se il tuo account non è attivo. Per risolvere questo problema, devi contattare il team di supporto.
 
 
 
-When you try to create an app in {{site.data.keyword.Bluemix_notm}}, you see the following error message:
+Quando tenti di creare un'applicazione in {{site.data.keyword.Bluemix_notm}}, viene visualizzato il seguente messaggio di errore:
 {: tsSymptoms} 
 
-`BXNUI0096E: The app wasn't created. Your account is inactive because it was canceled or suspended.`
+`BXNUI0096E: L'applicazione non è stata creata. Il tuo account non è attivo perché è stato annullato o sospeso.`
 
 
-The status of your {{site.data.keyword.Bluemix_notm}} account becomes inactive when the account is cancelled or suspended.
+Lo stato del tuo account {{site.data.keyword.Bluemix_notm}} diventa inattivo quando l'account viene annullato o sospeso.
 {: tsCauses}
 
  
 
-To reactivate your account, contact [{{site.data.keyword.Bluemix_notm}} Support ![External link icon](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}. In the email, you must include the following information:
+Per riattivare il tuo account, contatta il [Supporto {{site.data.keyword.Bluemix_notm}} ![icona link esterno](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}. Nell'email, devi includere le seguenti informazioni:
 {: tsResolve}
 
-  * The IBMid that you use to log in to {{site.data.keyword.Bluemix_notm}}.
-  * The name of the organization in which your app is being created. This information can help the support team determine whether you are assigned the correct roles or membership within your organization.
+  * L'ID IBM utilizzato per accedere a {{site.data.keyword.Bluemix_notm}}.
+  * Il nome dell'organizzazione in cui verrà creata la tua applicazione. Queste informazioni consentono al team di supporto di determinare se ti sono stati assegnati i ruoli o l'appartenenza appropriati all'interno della tua organizzazione.
 
 
 
-## No space is associated with your current org
+## Nessuno spazio associato alla tua organizzazione corrente
 {: #ts_no_space}
 
-You are unable to create an application if no space is associated with your current organization.
+Non puoi creare un'applicazione se non vi è alcuno spazio
+associato alla tua organizzazione corrente.
 
 
 
-When you try to create an app in {{site.data.keyword.Bluemix_notm}}, you see the following error message:
+Quando tenti di creare un'applicazione in {{site.data.keyword.Bluemix_notm}}, viene visualizzato il seguente messaggio di errore:
 {: tsSymptoms} 
 
 
-`BXNUI0097E: Before you can add an app, at least one space must be associated with your organization and region. On the Dashboard, click **Create a Space**. When the space is created, try again.`
+`BXNUI0097E: Prima di poter aggiungere un'applicazione, è necessario associare almeno uno spazio alla tua organizzazione e alla tua regione. Sul Dashboard, fai clic su **Crea uno spazio**. Una volta creato lo spazio, prova di nuovo. `
 
 
 
-Apps in {{site.data.keyword.Bluemix_notm}} must be created within a space under your organization.
+Le applicazioni in {{site.data.keyword.Bluemix_notm}} devono essere create all'interno di uno spazio nella tua organizzazione.
 {: tsCauses} 
 
  
 
-To create a space, use one of the following methods: 
+Per creare uno spazio, utilizza uno dei seguenti metodi: 
 {: tsResolve}
  
-  * On the {{site.data.keyword.Bluemix_notm}} Dashboard, select the organization in which you want to create the space, then click **Create a Space**.
-  * In the cf command line interface, type `cf create-space <space_name> -o <organization_name>`.
+  * Sul Dashboard {{site.data.keyword.Bluemix_notm}}, seleziona l'organizzazione in cui vuoi creare lo spazio e fai quindi clic su **Crea uno spazio**.
+  * Nell'interfaccia riga di comando cf, immetti `cf create-space <nome_spazio>
+-o <nome_organizzazione>`.
   
   
   
   
-## Apps share same domain name
+## Le applicazioni condividono lo stesso nome di dominio
 {: #ts_domain_diff}
 
-You might notice that several applications share the same URL in {{site.data.keyword.Bluemix_notm}}.
+Potresti notare che diverse applicazioni condividono lo stesso
+URL in {{site.data.keyword.Bluemix_notm}}.
 
  
 
-This problem might happen when you assign the same URL route for different applications within a space.
+Questo problema potrebbe verificarsi quando assegni
+la stessa rotta URL per applicazioni differenti all'interno di uno spazio.
 {: tsCauses}
 
-For example, you push the myApp1 application to {{site.data.keyword.Bluemix_notm}} and set the domain to "mynewapp.mybluemix.net". Then, you push another myApp2 application to the same space and set one of its URL routes to "mynewapp.mybluemix.net". The route is now mapped to both applications.
+Ad esempio, esegui il push dell'applicazione myApp1 a {{site.data.keyword.Bluemix_notm}} e imposti il dominio su "mynewapp.mybluemix.net". Esegui quindi il push di un'altra applicazione myApp2 allo stesso spazio e imposti una delle sue rotte URL su "mynewapp.mybluemix.net". La rotta è ora associata a entrambe le applicazioni.
 
  
 
-This is supported behavior of the {{site.data.keyword.Bluemix_notm}} and you can use this practice to achieve zero downtime for your application upgrade. For more information, see Blue-green deployments.
+Questo è il funzionamento supportato da {{site.data.keyword.Bluemix_notm}} e
+puoi utilizzare questa procedura affinché non si verifichino tempi di inattività
+per l'aggiornamento della tua applicazione. Per ulteriori informazioni, vedi Distribuzioni Blue-Green.
 {: tsResolve}
   
 	
@@ -1321,93 +1528,108 @@ This is supported behavior of the {{site.data.keyword.Bluemix_notm}} and you can
 
 
 
-## Credit card can't be added
+## Impossibile aggiungere la carta di credito
 {: #ts_addcc}
 
-You cannot submit your credit card information to convert your trial account to a Pay As You Go account.
+Non riesci a inoltrare le informazioni della tua carta di credito per convertire
+il tuo account di prova in un account con pagamento a consumo.
 
  
 
-The Submit button on the Add credit card page is disabled.
+Il pulsante Inoltra nella pagina Aggiungi carta di credito è disabilitato.
 {: tsSymptoms}
 
  
 
-This problem happens when your information is not filled in correctly in the Add credit card page.
+Questo problema si verifica se le tue informazioni non sono compilate correttamente nella pagina Aggiungi carta di credito.
 {: tsCauses}
 
  
 
-Complete the following steps to solve this problem:
+Per risolvere il problema, completa la seguente procedura:
 {: tsResolve}
 
-  1. On the Add credit card page, fill in all of the required fields that are in the contact information, contact address, and billing address sections.
-  2. Select **I have read and agree to IBM's Terms and Conditions**, then click **Submit**. The **Select a payment method** section is displayed.
-  3. Enter your credit card number, the expiration date of your card, and the security code that is on your card. Then, click **Submit**.
+  1. Nella pagina Aggiungi carta di credito, compila tutti i campi richiesti che si trovano nelle sezioni relative a informazioni di contatto, indirizzo di contatto e indirizzo di fatturazione.
+  2. Seleziona **Ho letto e accetto i termini e le condizioni IBM**
+e fai clic su **Inoltra**. Viene visualizzata la sezione **Seleziona un
+metodo di pagamento**.
+  3. Immetti il numero della tua carta di credito, la data di scadenza della carta
+e il codice di sicurezza. Quindi, fai clic su **Inoltra**.
 
 
 
 
 
-# Troubleshooting for runtimes
+# Risoluzione dei problemi relativi ai runtime
 {: #runtimes}
 
-You might experience problems when you use IBM® Bluemix™ runtimes. However, in many cases, you can recover from these problems by following a few easy steps.
+Potresti riscontrare dei problemi quando utilizzi i runtime IBM® Bluemix™. Tuttavia, in molti casi, puoi eseguire un ripristino da tali problemi seguendo pochi semplici passi.
 {:shortdesc}
 
 
-## Obsolete buildpack used when an app is pushed
+## Pacchetto di build obsoleto utilizzato quando viene eseguito il push di un'applicazione
 {: #ts_loading_bp}
 
 
-You might not be able to use the latest buildpack components when you push an app. You can use buildpacks that have built-in mechanisms to prevent loading obsolete components, or you can delete the contents in your app's cache directory before you push or restage the app. 
+Potresti non essere in grado di utilizzare i componenti di pacchetti di build più recenti quando esegui il push di un'applicazione. Puoi utilizzare i pacchetti di build che hanno dei meccanismi integrati per impedire il caricamento di componenti obsoleti oppure puoi eliminare il contenuto nella directory cache della tua applicazione prima di eseguire il push o di preparare di nuovo l'applicazione. 
 
  
 
-When you push or restage an app after the buildpack is updated, the latest buildpack components are not loaded automatically. As a result, your app uses the obsolete buildpack components from the cache. Updates that have been applied to the buildpack since the last time you pushed the app are not implemented. 
+Quando esegui il push o prepari di nuovo un'applicazione
+dopo l'aggiornamento del pacchetto di build, i componenti del pacchetto di build più recenti non vengono
+caricati automaticamente. Di conseguenza, la tua applicazione utilizza i componenti del pacchetto di build obsoleti dalla cache. Gli aggiornamenti che
+sono stati applicati al pacchetto di build dall'ultima volta che hai eseguito il push
+dell'applicazione non vengono implementati. 
 {: tsSymptoms}
 
 
 
-Some buildpacks are not configured to automatically download all updated components from the internet to ensure that you always use the latest version.
+Alcuni
+pacchetti di build non sono configurati per scaricare automaticamente tutti
+i componenti aggiornati da Internet per garantire che tu utilizzi sempre
+la versione più recente.
 {: tsCauses} 
 
  
 
-You can use buildpacks that have built-in mechanisms to avoid loading obsolete components. The following buildpacks are two examples: 
+Puoi utilizzare dei pacchetti di build che hanno dei meccanismi integrati per evitare il caricamento di componenti obsoleti. I seguenti pacchetti di build sono due esempi: 
 {: tsResolve}
 
-  * [Cloud Foundry Java buildpack ![External link icon](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack){: new_window}. This buildpack has a built-in mechanism to ensure that the latest version of the buildpack is used. For more information about how this mechanism works, see [extending-caches.md ![External link icon](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}. 
-  * [Cloud Foundry Node.js buildpack ![External link icon](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}. This buildpack has similar functionality by using environment variables. To enable the Node.js buildpack to download node modules from the internet every time, type the following command in the cf command line interface: 	
+  * [Pacchetto di build Java Cloud Foundry ![icona link esterno](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack){: new_window}. Questo pacchetto di build ha un meccanismo integrato per garantire che venga utilizzata la versione più recente del pacchetto di build. Per ulteriori informazioni sulla modalità di funzionamento di questo meccanismo, consulta [extending-caches.md ![icona link esterno](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}. 
+  * [Pacchetto di build Cloud Foundry Node.js ![icona link esterno](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}. Questo pacchetto di build ha una funzionalità simile all'utilizzo delle variabili di ambiente. Per abilitare il pacchetto di build Node.js a scaricare i modulo nodo da Internet ogni volta, immetti il
+seguente comando nell'interfaccia riga di comando cf: 	
   ```
   set NODE_MODULES_CACHE=false
   ```
-If the buildpack that you are using does not provide a mechanism to load the latest components automatically, you can manually delete the contents in the cache directory and push your app again by taking the following steps:
-  1. Check out a branch of a null buildpack, for example, https://github.com/ryandotsmith/null-buildpack. For information about how to check out a branch, see [Git Basics - Getting a Git Repository ![External link icon](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}.  
-  2. Add the following line to the `null-buildpack/bin/compile` file and commit the changes. For information about how to commit changes, see [Git Basics - Recording Changes to the Repository ![External link icon](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}.
+Se il pacchetto di build che stai utilizzando non fornisce un meccanismo per caricare i componenti più recenti in modo automatico, puoi eliminare manualmente il contento nella directory cache ed eseguire nuovamente il push della tua applicazione attenendoti alla seguente procedura:
+  1. Estrai mediante checkout un ramo di un pacchetto di build null, ad esempio https://github.com/ryandotsmith/null-buildpack. Per informazioni su come estrarre mediante check-out un ramo, consulta [Git Basics - Getting a Git Repository ![icona link esterno](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}.  
+  2. Aggiungi la seguente riga al file `null-buildpack/bin/compile` ed esegui il commit delle modifiche. Per informazioni su come eseguire il commit delle modifiche, consulta [Git Basics - Recording Changes to the Repository ![icona link esterno](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}.
   ```
   rm -rfv $2/*
   ```
-  3. Push your app with the null buildpack that was modified to delete the cache by using the following command. After you complete this step, all contents in the cache directory of your app are deleted.
+  3. Esegui il push della tua applicazione con il pacchetto di build null che è stato modificato per eliminare
+la cache utilizzando il seguente comando. Dopo che hai completato questo passo, tutto il contenuto nella directory
+cache della tua applicazione viene eliminato.
   ```
-  cf push appname -p app_path -b <modified_null_buildpack>
+  cf push appname -p app_path -b <pacchetto_build_null_modificato>
   ```
-  4. Push your app with the latest buildpack that you want to use by using the following command: 
+  4. Esegui il push della tua applicazione con il pacchetto di build più recente che vuoi utilizzare servendoti del seguente comando: 
   ```
-  cf push appname -p app_path -b <latest_buildpack>
+  cf push appname -p app_path -b <ultimo_pacchetto_build>
   ```
   
 	
 
 
-## NOTICE messages from the PHP buildpack
+## Messaggi NOTICE dal pacchetto di build PHP
 {: #ts_phplog}
 
-You might see messages that contain NOTICE from the logs. You can stop the logging of these messages by changing the logging level.	
+Potresti visualizzare dei messaggi di log che contengono NOTICE. Puoi interrompere la registrazione di questi messaggi modificando il
+livello di registrazione.	
 	
  
 
-When you push an application to Bluemix by using a PHP buildpack, you might see messages that contain `NOTICE`:
+Quando distribuisci un'applicazione a Bluemix utilizzando un pacchetto di build PHP, potresti visualizzare dei messaggi che contengono `NOTICE`:
 {: tsSymptoms}
 
 ```
@@ -1419,7 +1641,10 @@ When you push an application to Bluemix by using a PHP buildpack, you might see 
 
 
 
-In the PHP buildpack, the error_log parameter is used to define the logging level. By default, the value of the `error_log` parameter is **stderr notice**. The following example shows the default logging level configuration in the `nginx-defaults.conf` file of the PHP buildpack that is provided by Cloud Foundry. For more information, see [cloudfoundry/php-buildpack ![External link icon](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/php-buildpack/blob/ff71ea41d00c1226d339e83cf2c7d6dda6c590ef/defaults/config/nginx/1.5.x/nginx-defaults.conf){: new_window}.
+Nel pacchetto di build PHP, il parametro error_log è utilizzato per definire il livello di registrazione. Per impostazione predefinita, il valore del parametro `error_log`
+è **stderr notice**. Il seguente esempio mostra la configurazione
+del livello di registrazione predefinita nel file `nginx-defaults.conf`
+del pacchetto di build PHP fornito da Cloud Foundry. Per ulteriori informazioni, vedi [cloudfoundry/php-buildpack ![icona link esterno](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/php-buildpack/blob/ff71ea41d00c1226d339e83cf2c7d6dda6c590ef/defaults/config/nginx/1.5.x/nginx-defaults.conf){: new_window}.
 {: tsCauses} 
 
 ```
@@ -1430,7 +1655,9 @@ pid @{HOME}/nginx/logs/nginx.pid;
 
  	
 	
-The `NOTICE` messages are informational and do not necessarily indicate that a problem has occurred. You can stop the logging of these messages by changing the logging level from stderr notice to stderr error in the nginx-defaults.conf file of your buildpack. For example: 	
+I messaggi `NOTICE` sono informativi e non
+indicano necessariamente che si è verificato un problema. Puoi interrompere la registrazione di questi messaggi modificando il livello di registrazione da stderr notice a stderr error nel file nginx-defaults.conf del tuo pacchetto di build. Ad
+esempio: 	
 {: tsResolve}
 
 ```
@@ -1438,67 +1665,82 @@ daemon off;
 error_log stderr error;
 pid @{HOME}/nginx/logs/nginx.pid;
 ```
-For more information about how to change the default logging configuration, see [error_log ![External link icon](../icons/launch-glyph.svg)](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}.
+Per ulteriori informazioni su come modificare la configurazione di registrazione predefinita, vedi [error_log ![icona link esterno](../icons/launch-glyph.svg)](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}.
 	
 
-## Unable to import a third-party Python library into {{site.data.keyword.Bluemix_notm}}
+## Impossibile importare una libreria Python di terze parti in {{site.data.keyword.Bluemix_notm}}
 {: #ts_importpylib}
 
-You might not be able to import a third-party Python library into {{site.data.keyword.Bluemix_notm}}. You can solve the problem by adding configuration files into the root directory of your python application.
+Potresti non riuscire a importare una libreria Python di terze parti
+in {{site.data.keyword.Bluemix_notm}}. Puoi risolvere il problema aggiungendo file di configurazione nella directory
+root della tua applicazione Python.
 
 
-When you try to import a third-party Python library, such as the `web.py` library, the `cf push` command fails.
+Quando tenti di importare una libreria Python di terze parti, come
+la libreria `web.py`, il comando `cf push`
+non riesce.
 {: tsSymptoms}
 
 
  
 
-This problem occurs when configuration information for the Python application is missing.
+Questo problema si verifica quando mancano delle informazioni di configurazione
+per l'applicazione Python.
 {: tsCauses}
 
 
  
 
-To solve the problem, add a `requirements.txt` file and a `Procfile` file into the root directory of your Python app. The following information assumes that you are importing the web.py library:
+Per risolvere il problema, aggiungi un file `requirements.txt` e un file `Procfile` nella directory root della tua applicazione Python. Le seguenti informazioni presumono che tu stia importando la libreria web.py:
 {: tsResolve}
 
-  1. Add a `requirements.txt` file into the root directory of your Python app.
-     The `requirements.txt` file specifies the library packages that are required for your Python application and the version of the packages. The following example shows the content of the `requirements.txt` file, where `web.py==0.37` indicates the version of the `web.py` library that will be downloaded is 0.37, and `wsgiref==0.1.2` indicates the version of the web server gateway interface that is required by the web.py library is 0.1.2.
+  1. Aggiungi un file `requirements.txt` nella directory root della tua applicazione Python.
+     Il file `requirements.txt` specifica i pacchetti di libreria richiesti per l'applicazione Python e la versione dei pacchetti. Il seguente esempio mostra il contenuto del file `requirements.txt`, dove `web.py==0.37` indica
+che la versione della libreria `web.py` che verrà scaricata è la 0.37 e `wsgiref==0.1.2` indica che la versione dell'interfaccia gateway del server Web richiesta dalla libreria web.py è la 0.1.2.
 	 ```
 	 web.py==0.37
      wsgiref==0.1.2
 	 ```
-	For more information about how to configure the `requirements.txt` file, see [Requirements files](https://pip.readthedocs.org/en/1.1/requirements.html). 
+	Per ulteriori informazioni su come configurare
+il file `requirements.txt`, vedi [Requirements files](https://pip.readthedocs.org/en/1.1/requirements.html). 
 	 
-  2. Add a `Procfile` file into the root directory of your Python application.
-	The `Procfile` file must contain the start command for your Python application. In the following command, *yourappname* is the name of your Python application, and *PORT* is the port number that your Python application must use to receive requests from users of the app. *$PORT* is optional. If you do not specify PORT in the start command, the port number under the `VCAP_APP_PORT` environment variable that is inside the app is used instead. 
+  2. Aggiungi un file `Procfile` nella directory root
+della tua applicazione Python.
+	Il file `Procfile`
+deve contenere il comando di avvio per la tua applicazione Python. Nel seguente comando, *ilnomedellatuaapplicazione* è il nome della tua applicazione Python e *PORT* è il numero di porta che l'applicazione Python dovrà utilizzare per ricevere le richieste dagli utenti dell'applicazione. *$PORT* è facoltativo. Se non specifichi una PORTA nel comando di avvio, verrà utilizzato
+il numero di porta indicato nella variabile di ambiente `VCAP_APP_PORT` che si trova all'interno dell'applicazione. 
 	```
-	web: python <yourappname>.py $PORT
+	web: python <ilnomedellatuaapplicazione>.py $PORT
 	```
-You are now able to import the third-party Python library into {{site.data.keyword.Bluemix_notm}}.	
+Adesso, puoi importare la libreria Python di terze parti
+in {{site.data.keyword.Bluemix_notm}}.	
 
 
 
-## The Actions button on the Instance Details page is disabled
+## Il pulsante Azioni nella pagina Dettagli istanza è disabilitato
 {: #ts_actionsbutton}
 
 
 
-The Actions button on the Instance Details page is disabled.
+Il pulsante Azioni nella pagina Dettagli istanza è disabilitato.
 {: tsSymptoms} 
 
  
 
-This problem occurs because of the following reasons:
+Questo problema si verifica a causa dei seguenti motivi:
 {: tsCauses}
 
-  * The application is not a Java™ web application. Runtime Management Utilities (RMU) supports only web applications that are deployed with Liberty buildpacks.
-  * The application is not deployed with the embedded Liberty buildpack.
-  * The application was deployed with an early version of Liberty buildpack.
+  * L'applicazione non è un'applicazione web Java™. RMU (Runtime Management Utilities) supporta solo le applicazioni
+Web distribuite con i pacchetti di build Liberty.
+  * L'applicazione non viene distribuita con il pacchetto di build Liberty integrato.
+  * L'applicazione è stata distribuita con una versione precedente del pacchetto di build
+Liberty.
 
 
 
-If the problem is caused by an early version of Liberty buildpack, redeploy the application in {{site.data.keyword.Bluemix_notm}}. Otherwise, you can provide the following client application log files to the support team:
+Se il problema è causato da una versione precedente del pacchetto di build Liberty, ridistribuisci l'applicazione in {{site.data.keyword.Bluemix_notm}}. In caso contrario, puoi
+fornire i seguenti file di log dell'applicazione client al team
+di supporto:
 {: tsResolve} 
 
   * logs/messages.log
@@ -1508,116 +1750,129 @@ If the problem is caused by an early version of Liberty buildpack, redeploy the 
 
   
   
-## Credentials are required when opening trace or dump window
+## Credenziali richieste all'apertura della finestra di traccia o di dump
 {: #ts_username}
 
 
  
 
-A user name and password are required when opening the trace and dump window.
+Vengono richiesti un nome utente e una password quando si apre la finestra di traccia
+e di dump.
 {: tsSymptoms}
 
  
 
-This problem occurs because of the login session timeout.
+Questo problema si verifica a causa del timeout della sessione di accesso.
 {: tsCauses}
 
  
 
-The solution is to reenter the user name and password.
+La soluzione consiste nell'immettere nuovamente il nome utente e la password.
 {: tsResolve}
 
 
 
 
-## Error occurs when trace or dump operations are running
+## Si verifica un errore durante l'esecuzione delle operazioni di traccia o di dump
 {: #ts_target}
 
  
 
-An error message is displayed while the trace or dump operations are running. The message indicates that a target instance for an app is not in the running state:	
+Viene visualizzato un messaggio di errore mentre le operazioni di
+traccia o di dump sono in esecuzione. Il messaggio indica che un'istanza di destinazione
+per un'applicazione non si trova nello stato di In esecuzione:	
 {: tsSymptoms}
 
 ```
-Instance 0: Trace specification is set successfully
-Instance 2: Trace specification is set successfully
-Instance 1: Target instance 1 for app abcd is not in the running state.
-Instance 3: Trace specification is set successfully
-Instance 4: Trace specification is set successfully
+Istanza 0: La specifica di traccia è stata impostata correttamente
+Istanza 2: La specifica di traccia è stata impostata correttamente
+Istanza 1: L'istanza di destinazione 1 per l'applicazione abcd non si trova nello stato di In esecuzione.
+Istanza 3: La specifica di traccia è stata impostata correttamente
+Istanza 4: La specifica di traccia è stata impostata correttamente
 ```
 
 
 
-This problem occurs because of the following reasons:
+Questo problema si verifica a causa dei seguenti motivi:
 {: tsCauses} 
 
-  * The trace or dump management capabilities are only for application instances that are running. Trace or dump operations cannot be used on application instances that are stopped, starting, or crashed.
-  * The status of the application instance is changing when the trace or dump dialog is opened. 
+  * Le capacità di gestione della traccia o del dump riguardano solo le istanze dell'applicazione
+che sono in esecuzione. Le operazioni di traccia o di dump non possono essere utilizzate
+su istanze dell'applicazione arrestate, in fase di avvio o bloccate.
+  * Lo stato dell'istanza dell'applicazione cambia quando si apre la finestra di dialogo della traccia o
+del dump. 
   
 
 
-The solution is to close the window, and then reopen it again.
+La soluzione consiste nel chiudere la finestra, e quindi
+riaprirla.
 {: tsResolve} 
 
 
 
-## Instances have different traceSpecification configuration
+## Le istanza hanno una configurazione traceSpecification differente
 {: #ts_different_config}
 
  
 
-For different instances of one application, you might see different traceSpecification configuration.
+Per diverse istanze di un'applicazione, potresti vedere una configurazione traceSpecification differente.
 {: tsSymptoms}
 
  
 
-This problem occurs because of the following reasons:
+Questo problema si verifica a causa dei seguenti motivi:
 {: tsCauses}
 
-  * You might have changed the configuration for one or more instances previously. If you change the traceSpecification configuration for one instance, it does not apply to other instances of the same application. For example, you application uses log4j and you have 2 instances for this application. You can change the log level of instance 0 from info to debug, but the log level of instance 1 remains info. 
-  * The application scales out and has new instances. RMU does not apply the traceSpecification configuration of the existing instance to the new, scaled out instance. The new instance uses the default configuration. For example, your application uses log4j and it has one instance. You can change the log level of this instance from info to debug. After you make this change, if you scale out your application into two instances, the log level of the new instance is info, rather than debug.
+  * Potresti aver modificato la configurazione per una o più istanze, precedentemente. Se modifichi la configurazione traceSpecification per una istanza, essa non si applica ad altre istanze della stessa applicazione. Ad esempio, la tua applicazione utilizza log4j e hai 2 istanze per questa applicazione. Puoi modificare il livello di log dell'istanza 0 da info a debug ma il livello di log dell'istanza 1 rimane info. 
+  * Viene eseguito un ridimensionamento incrementale dell'applicazione, che presenta delle nuove istanze. RMU non applica la configurazione traceSpecification dell'istanza esistente alla nuova istanza di cui è stato eseguito il ridimensionamento incrementale. La nuova istanza utilizza la configurazione predefinita. Ad esempio, la tua applicazione utilizza log4j e ha una istanza. Puoi modificare il livello di log di questa istanza da info a debug. Dopo che hai apportato questo modifica, se esegui il ridimensionamento incrementale della tua applicazione in due istanze, il livello di log della nuova istanza è info, invece di debug.
   
 
 
-This behavior is expected.
+Questo è il comportamento previsto.
 {: tsResolve} 
 
 
 
 
 
-## Disk quota exceeded
+## Quota disco superata
 {: #ts_diskquota}
 
-You might see, in your app log, that your disk quota is exceeded.
+Nel log dell'applicazione, potresti notare che la quota del disco è stata superata.
 
  
 
-You see the `Disk quota exceeded` error message in the log of your app.
+Nel log della tua applicazione vedi il messaggio di errore `Disk quota exceeded`.
 {: tsSymptoms}
 
 
 
-This problem is caused by one of the following reasons: 
+Questo problema è causato da uno dei seguenti motivi: 
 {: tsCauses} 
 
-  * The dump files are generated with the running application instances, and the files use up the allocated disk quota. By default, the disk quota for one application instance is 1 GB. You can check your disk usage by clicking **Dashboard > Application > App Runtime**. The following example shows the runtime information, including disk usage, for two instances of an application:
+  * I file di dump vengono generati con le istanze dell'applicazione in esecuzione
+e i file utilizzano la quota di disco assegnata. Per impostazione predefinita, la quota del disco
+per un'istanza dell'applicazione è di 1 GB. Puoi controllare l'utilizzo del
+disco facendo clic su **Dashboard>Applicazione>Runtime applicazione**. Il seguente esempio mostra le informazioni di runtime,
+incluso l'utilizzo del disco, per due istanze di un'applicazione:
     ```
     Instance	State	CPU	Memory Usage	Disk Usage
 
 	0		Running	1.0%	344.8MB/512MB	236.8MB/1GB
 	2		Running	2.3%	361.2MB/512MB	235.7MB/1GB
     ```
-  * The disk quota is limited by the current organization quota.
+  * La quota del disco è limitata dalla quota dell'organizzazione corrente.
   
   
 
 
-You can resolve this issue by using one of the following methods:
+Puoi risolvere il problema utilizzando uno dei seguenti
+metodi:
 {: tsResolve} 
 
-  * Delete dump files after they are downloaded.
-  * Redeploy the application with a bigger disk quota by including the following entry in the deployment manifest:
+  * Elimina i file di dump dopo averli scaricati.
+  * Ridistribuisci l'applicazione con una quota di disco maggiore includendo
+la seguente voce nel manifest di distribuzione:
     ```
 	disk_quota: 2048
 	```

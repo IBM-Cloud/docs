@@ -147,7 +147,7 @@ Negli ambienti {{site.data.keyword.Bluemix_notm}} dedicato e locale, gli amminis
 
 {{site.data.keyword.Bluemix_notm}} pubblico e dedicato si avvalgono della topologia di rete all'interno di una rete di {{site.data.keyword.BluSoftlayer}} per la sicurezza della rete fisica. Questa architettura di rete all'interno di una rete garantisce che i sistemi siano pienamente accessibili solo al personale autorizzato. Per {{site.data.keyword.Bluemix_notm}} locale, è di tua competenza la sicurezza fisica per l'istanza locale. Il tuo data center è protetto dietro il tuo firewall aziendale.
 
-Nella rete all'interno di una rete {{site.data.keyword.BluSoftlayer}}, il livello di rete pubblico gestisce il traffico pubblico a siti Web su host o risorse in linea. Il livello di rete privato consente una effettiva gestione fuori banda mediante un terzo vettore autonomo e distinto su gateway SSL, PPTP o IPSec VPN. Il livello di rete data center-data center fornisce una connettività gratuita e protetta tra server alloggiati in strutture {{site.data.keyword.BluSoftlayer}} separate. 
+Nella rete all'interno di una rete {{site.data.keyword.BluSoftlayer}}, il livello di rete pubblico gestisce il traffico pubblico a siti Web su host o risorse in linea. Il livello di rete privato consente una effettiva gestione fuori banda mediante un terzo vettore autonomo e distinto su gateway SSL, PPTP o IPSec VPN. Il livello di rete data center-data center fornisce una connettività gratuita e protetta tra server alloggiati in strutture {{site.data.keyword.BluSoftlayer}} separate.
 
 Ogni data center {{site.data.keyword.BluSoftlayer}} è pienamente protetto, con controlli che soddisfano i requisiti SSAE 16 e quelli riconosciuti dal settore, senza alcuna eccezione.
 
@@ -171,8 +171,7 @@ I dati associati a un'applicazione in esecuzione possono trovarsi in uno di tre 
 
 Quando pianifichi la sicurezza dei dati, è necessario considerare ciascun tipo di dati.
 
-La piattaforma {{site.data.keyword.Bluemix_notm}} protegge i data-in-transit proteggendo l'accesso dell'utente finale all'applicazione utilizzando SSL, per tutta la rete,
-finché i dati non raggiungono l'IBM DataPower Gateway al limite della rete interna {{site.data.keyword.Bluemix_notm}}. IBM DataPower Gateway funge da proxy inverso e fornisce la terminazione SSL. Da lì all'applicazione, IPSEC viene utilizzato per proteggere i dati mentre vengono trasmessi dall'IBM DataPower Gateway all'applicazione.
+La piattaforma {{site.data.keyword.Bluemix_notm}} protegge i data-in-transit proteggendo l'accesso dell'utente finale all'applicazione utilizzando SSL, per tutta la rete, finché i dati non raggiungono l'IBM DataPower Gateway al limite della rete interna {{site.data.keyword.Bluemix_notm}}. IBM DataPower Gateway funge da proxy inverso e fornisce la terminazione SSL. Da lì all'applicazione, IPSEC viene utilizzato per proteggere i dati mentre vengono trasmessi dall'IBM DataPower Gateway all'applicazione.
 
 Come sviluppatore della tua applicazione, sei responsabile della sicurezza sia dei data-in-use che dei data-at-rest. Puoi usufruire dei diversi servizi correlati ai dati disponibili nel catalogo {{site.data.keyword.Bluemix_notm}} per informazioni a tale riguardo.
 
@@ -198,7 +197,8 @@ Il servizio Single Sign On supporta diverse origini di identità in cui vengono 
 <dt>Cloud Directory</dt>
 <dd>Un registro utenti ospitato in IBM Cloud.</dd>
 
-<dt>Origini di identità sociale</dt> <dd> I registri utenti gestiti da Google, Facebook e LinkedIn.</dd>
+<dt>Origini di identità sociale</dt>
+<dd> I registri utenti gestiti da Google, Facebook e LinkedIn.</dd>
 </dl>
 
 Per ulteriori informazioni, vedi [Introduzione a Single Sign On](/docs/services/SingleSignOn/index.html).
@@ -232,7 +232,8 @@ Puoi utilizzare gli strumenti SIEM (Security Information and Event Management) p
 ## Distribuzione della sicurezza {{site.data.keyword.Bluemix_notm}}
 {: #security-deployment}
 
-L'architettura della distribuzione della sicurezza {{site.data.keyword.Bluemix_notm}} include flussi di informazioni differenti per gli utenti dell'applicazione e gli sviluppatori al fine di garantire un accesso sicuro.
+L'architettura della distribuzione della sicurezza {{site.data.keyword.Bluemix_notm}}
+include flussi di informazioni differenti per gli utenti dell'applicazione e gli sviluppatori al fine di garantire un accesso sicuro.
 
 ![Architettura della distribuzione della sicurezza Bluemix](images/sec_deployment.svg)
 

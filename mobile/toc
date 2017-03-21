@@ -1,25 +1,2 @@
 [Mobile dashboard](/docs/mobile/index.html)
     index.md
-        what_is_new.md
-        projects.md
-            project_overview_page.md
-        starters.md
-            projects_ui.md
-            projects_code.md
-        get_code.md
-        tutorial.md
-            tutorial_cloudant_sync.md
-            tutorial_openwhisk.md
-            tutorial_store_catalog.md
-            tutorial_visual_recognition.md
-            tutorial_conversation.md
-            tutorial_watson_language.md
-            tutorial_weather.md
-        services.md
-    sdk_compute.md
-    sdk_cli.md
-    sdk.md
-        sdk_BMSClient.md
-        sdk_network_request.md
-    try_mobile.md
-        samples.md

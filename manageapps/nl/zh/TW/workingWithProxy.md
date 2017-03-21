@@ -42,7 +42,7 @@ lastupdated: "2016-07-20"
 並且重新編譯打包應用程式。然後，您的應用程式就會在執行時使用指定的 Proxy 設定。如需 Java Proxy 選項的相關資訊，請參閱 [Java 網路及 Proxy](https://docs.oracle.com/javase/8/docs/technotes/guides/net/proxies.html)。
 
 # rellinks
-{: #rellinks}
+{: #rellinks notoc}
 ## general
 {: #general}
 * [Liberty for Java](/docs/runtimes/liberty/index.html)

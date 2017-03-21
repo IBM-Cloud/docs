@@ -3,8 +3,8 @@
 
 
 copyright:
-  years: 2015，2016
-lastupdated: "2016-10-19"
+  years: 2015，2017
+lastupdated: "2017-2-21"
 
 ---
 
@@ -59,7 +59,7 @@ lastupdated: "2016-10-19"
 有关命令的更多详细信息，请参阅 [Bluemix Live Sync (bl) 命令](bluemixlive.html#bl-commands)。
 
 <ol>
-<li>注册免费 <a class="xref" href="https://hub.jazz.net/" target="_blank" alt="Bluemix DevOps Services">Bluemix DevOps Services</a> 帐户。</li>
+<li>注册免费的 <a class="xref" href="https://hub.jazz.net/" target="_blank" title="（在新选项卡或窗口中打开）">Bluemix DevOps Services 帐户 <img class="image" src="../icons/launch-glyph.svg" alt="外部链接图标"/></a>。</li>
 <li>下载并安装 {{site.data.keyword.Bluemix_notm}} Live Sync bl 命令行。   
 <p>
 <a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/blive_setup.msi" target="_blank" title="（在新选项卡或窗口中打开）"><img class="image" src="images/bl_gs_icons_windows_b.svg" alt="下载 Windows bl 命令行按钮" /></a>
@@ -71,7 +71,7 @@ lastupdated: "2016-10-19"
 <li>在命令行上，使用以下命令登录。系统将提示您输入用户标识和密码。  
 <pre class="codeblock">bl login</pre>
 
-<strong>注：</strong>DevOps Services 的用户标识可以是 IBM 标识或联合标识（公司标识）。如果您使用联合认证，那么要登录到 Bluemix Live Sync 命令行客户端，您必须使用个人访问令牌而非密码。如果您未使用联合认证，那么在所有客户端登录时均可使用您的 IBM 标识和密码。有关创建个人访问令牌的更多信息，请参阅 <a class="xref" href="https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/" target="_blank" alt="Bluemix DevOps Services">What's federated authentication and how does it affect me?</a>
+<strong>注：</strong>DevOps Services 的用户标识可以是 IBM 标识或联合标识（公司标识）。如果您使用联合认证，那么要登录到 Bluemix Live Sync 命令行客户端，您必须使用个人访问令牌而非密码。如果您未使用联合认证，那么在所有客户端登录时均可使用您的 IBM 标识和密码。有关创建个人访问令牌的更多信息，请参阅 <a class="xref" href="https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/" target="_blank" title="（在新选项卡或窗口中打开）">What's federated authentication and how does it affect me? <img class="image" src="../icons/launch-glyph.svg" alt="外部链接图标"/></a>。
 </li>
 
 <li>通过输入以下命令，查看可用于 {{site.data.keyword.Bluemix_notm}} Live Sync 同步的项目的列表：
@@ -103,7 +103,7 @@ bl start --restart
 
 使用“实时编辑”，可以快速预览对 {{site.data.keyword.Bluemix_notm}} 上运行的 Node.js 应用程序所进行的更改。如果在打开“实时编辑”的情况下更新代码，那么在执行更改之后仅需几秒钟的时间，就可以通过刷新 Web 应用程序浏览器窗口看到这些更改反映出来。
 
-有关使用 {{site.data.keyword.Bluemix_notm}} Live Sync 的“实时编辑”功能的教程，请参阅教程 [Test and debug a Node.js app with Bluemix Live Sync](https://hub.jazz.net/tutorials/livesync)。
+有关使用 {{site.data.keyword.Bluemix_notm}} Live Sync 的“实时编辑”功能的教程，请参阅教程 [Test and debug a Node.js app with Bluemix Live Sync ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://hub.jazz.net/tutorials/livesync){:new_window}。
 
 当您在 Web IDE 中更改文件时，系统会自动将它们重新部署到 {{site.data.keyword.Bluemix_notm}} 上运行的应用程序中。如果需要重新启动 Node 应用程序，那么可以使用运行栏中的**重新启动**按钮。
 
@@ -118,7 +118,7 @@ bl start --restart
 {{site.data.keyword.Bluemix_notm}} 实时调试包括以下功能：
 
 * 应用程序运行时控件
-* 使用 [node-inspector](https://github.com/node-inspector/node-inspector) 进行调试
+* 使用 [node-inspector ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://github.com/node-inspector/node-inspector){:new_window} 调试
 * shell 访问
 
 ###应用程序运行时控件 {: #app-runtime}
@@ -174,7 +174,7 @@ bl start --restart
 
 推送应用程序，然后浏览到 `https://app-host.mybluemix.net/bluemix-debug/manage`，以访问 {{site.data.keyword.Bluemix_notm}} 调试用户界面。收到认证提示时，请输入用户标识和个人访问令牌或 IBM 标识密码。    
 
-   **注：**DevOps Services 的用户标识可以是 IBM 标识或联合标识（公司标识）。如果您使用联合认证，那么要登录到 Bluemix Live Sync 命令行客户端，您必须使用个人访问令牌而非密码。如果您未使用联合认证，那么在所有客户端登录时均可使用您的 IBM 标识和密码。有关创建个人访问令牌的更多信息，请参阅 [What's federated authentication and how does it affect me?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/)
+   **注：**DevOps Services 的用户标识可以是 IBM 标识或联合标识（公司标识）。如果您使用联合认证，那么要登录到 Bluemix Live Sync 命令行客户端，您必须使用个人访问令牌而非密码。如果您未使用联合认证，那么在所有客户端登录时均可使用您的 IBM 标识和密码。有关创建个人访问令牌的更多信息，请参阅 [What's federated authentication and how does it affect me? ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/){:new_window}
 
 ###复原应用程序配置并禁用 Bluemix 实时调试 {: #restore_live_debug}
 
@@ -287,7 +287,7 @@ bl login | l [ -u username ] [-p password ][ -s server ]
 
 **警告**：建议不要将密码作为命令行选项提供，因为这样一来，其他人也会看到密码，并且密码会记录为命令历史记录的一部分。
 
-**注**：您必须注册免费 <a class="xref" href="https://hub.jazz.net/" target="_blank" alt="Bluemix DevOps Services">Bluemix DevOps Services</a> 帐户后才能登录。
+**注**：您必须注册免费的 [Bluemix DevOps Services![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://hub.jazz.net/){:new_window} 帐户后才能登录。
 
 **选项**
 
@@ -297,7 +297,7 @@ bl login | l [ -u username ] [-p password ][ -s server ]
 
 -s *server*：{{site.data.keyword.jazzhub_short}} 服务器的服务器名称或 IP 地址。    
 
-   **注：**DevOps Services 的用户标识可以是 IBM 标识或联合标识（公司标识）。如果您使用联合认证，那么要登录到 Bluemix Live Sync 命令行客户端，您必须使用个人访问令牌而非密码。如果您未使用联合认证，那么在所有客户端登录时均可使用您的 IBM 标识和密码。有关创建个人访问令牌的更多信息，请参阅 [What's federated authentication and how does it affect me?](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/)
+   **注：**DevOps Services 的用户标识可以是 IBM 标识或联合标识（公司标识）。如果您使用联合认证，那么要登录到 Bluemix Live Sync 命令行客户端，您必须使用个人访问令牌而非密码。如果您未使用联合认证，那么在所有客户端登录时均可使用您的 IBM 标识和密码。有关创建个人访问令牌的更多信息，请参阅 [What's federated authentication and how does it affect me? ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/){:new_window}
 
 **示例**
 
@@ -594,12 +594,15 @@ bl stop –l “launchConfigurations/mylaunchconfig.launch”
 ```
 {: pre}
 
-># 相关链接 {:class="linklist"}
->## 教程和样本 {:id="samples"}
->* [Test and debug a Node.js app with Bluemix Live Sync](https://hub.jazz.net/tutorials/livesync)
->
-># 相关链接 {:class="linklist"}
->## 相关链接 {:id="general"}
->* [Eclipse Tools for Bluemix](https://www.ng.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html)   
->
->{:elementKind="article" id="rellinks"}
+# 相关链接
+{: #rellinks}
+
+## 教程和样本
+{: #samples}
+
+* [Test and debug a Node.js app with Bluemix Live Sync ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://hub.jazz.net/tutorials/livesync){:new_window}
+
+## 相关链接
+{: #general}
+
+* [Eclipse Tools for Bluemix ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://www.ng.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html){:new_window}

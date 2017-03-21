@@ -26,9 +26,7 @@ appropriées qui peuvent être utilisées pour le débogage et la détermination
 
 Les journaux ont un format fixe. Vous pouvez filtrer les journaux prolixes ou utiliser des hôtes de
 journalisation externes pour
-stocker et traiter les journaux. Pour plus d'informations sur les formats des journaux, leur affichage et leur filtrage, ainsi que sur la configuration de
-la journalisation externe, voir [Journalisation pour les applications qui s'exécutent dans Cloud
-Foundry](/docs/monitor_log/monitoringandlogging.html#logging_for_bluemix_apps).
+stocker et traiter les journaux. Pour plus d'informations sur les formats des journaux, leur affichage et leur filtrage, ainsi que sur la configuration de la journalisation externe, voir [Journalisation des applications qui s'exécutent dans Cloud Foundry](/docs/monitor_log/monitoringandlogging.html#logging_for_bluemix_apps).
 
 
 ## Débogage des erreurs de constitution

@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2017
-lastupdated: "2017-01-17"
+lastupdated: "2017-03-14"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2017-01-17"
 Use the interface mapping feature of {{site.data.keyword.iot_full}} to organize and integrate incoming and outgoing device data.
 {:shortdesc}
 
-**Important:** The interface mapping feature is available at present as a Beta feature only. Prior to final release, Beta updates are likely to include changes that are incompatible with the current version. It is strongly recommended that Beta features are not used in production applications until final release. To receive additional information and provide feedback on this Beta, please [register for the IM Beta program](https://www.ibm.com/software/support/trial/cst/forms/nomination.wss?id=7050) and let us know what you think.
+**Important:** The interface mapping feature is available at present as a Beta feature only. Prior to final release, Beta updates are likely to include changes that are incompatible with the current version. It is strongly recommended that Beta features are not used in production applications until final release. To receive additional information and provide feedback on this Beta, please [register for the IM Beta program ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/software/support/trial/cst/forms/nomination.wss?id=7050){: new_window} and let us know what you think.
 
 ## Overview
 {: #overview}
@@ -75,11 +75,11 @@ To process data from inbound events, and map properties in the inbound event to 
 ## Resources
 {: #resources}
 
-You can manage the resources that are illustrated in the previous diagrams by using REST APIs. For information about the REST APIs, see the [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html) documentation.
+You can manage the resources that are illustrated in the previous diagrams by using REST APIs. For information about the REST APIs, see the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html){: new_window} documentation.
 
 Resource                        | Description       
 ------------- | ------------- | -------------  
-Schemas                         | JSON schemas are used to define the structure of inbound events that are published to the {{site.data.keyword.iot_short_notm}} from devices, and the desired device state. For more information about JSON Schema, see [JSON Schema](http://json-schema.org/). In interface mapping, two JSON schemas are referenced - event schemas and application interface schemas. Event schemas are used to define the structure of the events that are published to {{site.data.keyword.iot_short_notm}} by a device. Application interface schemas are referenced by the application interface and are used to define the structure of the [device state](#key_concepts) that is stored on {{site.data.keyword.iot_short_notm}}.
+Schemas                         | JSON schemas are used to define the structure of inbound events that are published to the {{site.data.keyword.iot_short_notm}} from devices, and the desired device state. For more information about JSON Schema, see [JSON Schema ![External link icon](../../../icons/launch-glyph.svg "External link icon")](http://json-schema.org/){: new_window}. In interface mapping, two JSON schemas are referenced - event schemas and application interface schemas. Event schemas are used to define the structure of the events that are published to {{site.data.keyword.iot_short_notm}} by a device. Application interface schemas are referenced by the application interface and are used to define the structure of the [device state](#key_concepts) that is stored on {{site.data.keyword.iot_short_notm}}.
 Event type                         | You must create an event type within your organization so that {{site.data.keyword.iot_short_notm}} can process the data that is contained within a specific event. All event types must reference an event schema. For the beta, all inbound events must be in JSON format.   
 Physical interface                         | The physical interface can be associated with one or more event types and defines which event types are associated with a device type.  
 Device type                         | Every device that is connected to the Watson IoT Platform is associated with a device type. Device types are groups of devices that share characteristics or behaviors. In interface mapping, the device type is extended to include a physical interface for a device and an application interface that can be used to retrieve the device state. A device type can be configured with multiple application interfaces. For more information about device types, see the "Identifiers and device types" section in [Device Model](../reference/device_model.html#id_and_device_types).
@@ -96,7 +96,7 @@ Mappings                         | Mappings define how properties that are assoc
 
 Use the following steps to help you to configure the resources that you need to start mapping your device data by using interfaces.
 
-For details about the API, see the [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html) documentation.
+For details about the API, see the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html){: new_window} documentation.
 For more detailed information about each of the steps, see the [Example scenario](#scenario) or use the links to go directly to a specific step within the example scenario.
 
 ### Configure your environment to start using interfaces to map device data
@@ -238,7 +238,7 @@ Use the following information to configure the example scenario by using interfa
 
 In this scenario, two device types and two device instances are assumed. Device instance *TemperatureSensor1* is associated with device type *EnvSensor1*. Device instance *TemperatureSensor2* is associated with device type *EnvSensor2*.
 
-For information about using REST APIs to add a device type, see the [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Types) documentation.
+For information about using HTTP APIs to add a device type, see the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html#!/Device_Type_Configuration){: new_window} documentation.
 
 ### Create an event schema file
 {: #step1}
@@ -296,7 +296,7 @@ To create an event schema resource, use the following API:
 ```
 POST /schemas
 ```
-For more details, see the [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Schemas) documentation.
+For more details, see the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Schemas){: new_window}  documentation.
 
 The following example shows how to use cURL to create the event schema resource *tEventSchema.json*:
 
@@ -371,7 +371,7 @@ To create an event type, use the following API:
 POST /event/types
 ```
 
-For more details, see the [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Event_Types) documentation.
+For more details, see the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Event_Types){: new_window} documentation.
 
 
 The following example shows how to use cURL to create an event type for a temperature event that is measured in degrees Celsius:
@@ -442,7 +442,7 @@ To create a physical interface, use the following API:
 ```
 POST /physicalinterfaces
 ```
-For more details, see the [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Physical_Interfaces) documentation.
+For more details, see the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Physical_Interfaces){: new_window} documentation.
 
 In this scenario, we need two physical interfaces - one for each event type.
 
@@ -510,7 +510,7 @@ To add an event type to your physical interface, use the following API:
 ```
 POST /physicalinterfaces/{physicalInterfaceId}/events
 ```
-For more details, see the [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Physical_Interfaces) documentation.
+For more details, see the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Physical_Interfaces){: new_window} documentation.
 
 In this scenario, the following event types are added to the specified phyiscal interfaces:
 - the Celsius temperature event *tevt* is added to the physical interface with identifier *5847d1df6522050001db0e1a* by using the *eventId* from the topic and the *eventTypeId* from the creation of the event schema resource.
@@ -564,7 +564,7 @@ To update a device type, use the following API:
 PUT /device/types/{typeId}
 ```
 
-For more details, see the [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types) documentation.
+For more details, see the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types){: new_window} documentation.
 
 In this scenario, device type *EnvSensor1* is updated to connect to physical interface *5847d1df6522050001db0e1a* and device type *EnvSensor2* is updated to connect to physical interface *5847d1df6522050001db0e1b*.
 
@@ -663,7 +663,7 @@ To create an application interface schema resource, use the following API:
 ```
 POST /schemas
 ```
-For more details, see the [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Schemas) documentation.
+For more details, see the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Schemas){: new_window} documentation.
 
 The following example shows how to use cURL to create the application interface schema:
 
@@ -704,7 +704,7 @@ To create an application interface, use the following API:
 ```
 POST /applicationinterfaces
 ```
-For more details, see the [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Application_Interfaces) documentation.
+For more details, see the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Application_Interfaces){: new_window} documentation.
 
 In this scenario, use the schema identifier *5846ec826522050001db0e11* that was returned in the previous response to add the application interface schema to the application interface.
 
@@ -744,7 +744,7 @@ To add an application interface to a device type, use the following API:
 ```
 POST /device/types/{typeId}/applicationinterfaces
 ```
-For more details, see the [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types) documentation.
+For more details, see the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types){: new_window} documentation.
 
 In this scenario, the application interface is associated with device type *EnvSensor1* and device type *EnvSensor2*.
 
@@ -823,7 +823,7 @@ To map events, use the following API:
 ```
 POST /device/types/{typeId}/mappings
 ```
-For more details, see the [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types) documentation.
+For more details, see the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types){: new_window} documentation.
 
 In this scenario, we define mappings for device type *EnvSensor1* to map the **t** property in the inbound event *tevt* to the **temperature** property on the application interface. We also define mappings for device type *EnvSensor2* to map the **temp** property in the inbound event *tempevt* to the **temperature** property on the application interface.
 
@@ -898,7 +898,7 @@ To deploy your device type configuration, use the following API:
 ```
 PATCH /device/types/{typeId}
 ```
-For more details, see the [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types) documentation.
+For more details, see the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types){: new_window} documentation.
 
 In this scenario, we need to deploy configuration for two device types.
 
@@ -967,7 +967,7 @@ To check the device state, use the following API:
 ```
 GET /device/types/{typeId}/devices/{deviceId}/state/{applicationInterfaceId}
 ```
-For more details, see the [{{site.data.keyword.iot_short_notm}} HTTP REST API](https://docs.internetofthings.ibmcloud.com/swagger/info-mgmt-beta.html#!/Device_Types) documentation.
+For more details, see the [{{site.data.keyword.iot_short_notm}} HTTP REST API ![External link icon](../../../icons/launch-glyph.svg "External link icon")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html#!/Device_Types){: new_window} documentation.
 
 The following example shows how to use cURL to retrieve the current state of *TemperatureSensor1* by referencing the identifier of the application interface that was created:
 ```

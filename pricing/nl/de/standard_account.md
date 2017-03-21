@@ -18,7 +18,7 @@ lastupdated: "2017-02-02"
 # IBM {{site.data.keyword.Bluemix_notm}}-Standardkonto (Betaversion) 
 {: #betaintro}
 
-Mit der Betaversion des {{site.data.keyword.Bluemix}}-Standardkontos wird ein neues kostenfreies Konto eingeführt, das eine neue Möglichkeit bietet, in der öffentlichen Cloud von {{site.data.keyword.Bluemix_notm}} zu arbeiten. Für das Standardkonto gilt kein Ablaufdatum, im Gegensatz zum {{site.data.keyword.Bluemix_notm}}-Testkonto mit einer Gültigkeit von 30 Tagen. Sie können die Arbeit mit den {{site.data.keyword.Bluemix_notm}}-Anwendungen fortsetzen, ohne sich um Zeitbegrenzungen zu kümmern.
+Mit der Betaversion des {{site.data.keyword.Bluemix}}-Standardkontos wird ein neues kostenfreies Konto eingeführt, das eine neue Möglichkeit bietet, in der öffentlichen Cloud von {{site.data.keyword.Bluemix_notm}} zu arbeiten. Für das Standardkonto gilt kein Ablaufdatum, im Gegensatz zum {{site.data.keyword.Bluemix_notm}}-Testkonto mit einer Gültigkeit von 30 Tagen. Sie können die Arbeit mit den {{site.data.keyword.Bluemix_notm}}-Anwendungen fortsetzen, ohne sich um Zeitbegrenzungen zu kümmern. 
 {:shortdesc}
 
 Die Teinahme bei der Betaversion des Standardkontos ist nur mit einer Einladung möglich. Nachdem Sie die Einladung akzeptiert und ein Standardkonto erstellt haben, können Sie Freunde und Kollegen einladen, an der Betaversion teilzunehmen.  
