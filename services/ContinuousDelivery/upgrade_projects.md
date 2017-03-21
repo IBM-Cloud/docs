@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-2-28"
+lastupdated: "2017-3-21"
 
 ---
  
@@ -54,8 +54,8 @@ When your project is ready to be upgraded, a message is displayed on the project
 ## Starting the upgrade process
 {: #start_upgrade}
 
-Before you start the upgrade process, you can watch it in action on [YouTube![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.youtube.com/watch?v=-lX32GTKmbM&feature=youtu.be){: new_window}. 
-[![External link to YouTube](images/migration-video2.png)](https://www.youtube.com/watch?v=-lX32GTKmbM&feature=youtu.be){: new_window}    
+Before you start the upgrade process, you can watch it in action on [YouTube![External link icon](../../icons/launch-glyph.svg "External link icon")](https://youtu.be/oaZVGveVxBg){: new_window}. 
+[![External link to YouTube](images/migration-video2.png)](https://youtu.be/oaZVGveVxBg){: new_window}    
 To upgrade your project to a toolchain, follow these steps:
 
 1. To start the upgrade process, on the banner message, click **upgrade now**. The "Project upgrade toolchain" page opens. 
