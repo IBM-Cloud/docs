@@ -1,15 +1,15 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-06"
+  years: 2016, 2017
+lastupdated: "2017-03-08"
 
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# {{site.data.keyword.iot4auto_short}} APIs
+# IoT for Automotive APIs
 {: #iotautomotive_apis}
 
 
@@ -27,23 +27,23 @@ By using the available REST API commands, you can customize your {{site.data.key
 ## Vehicle Data Hub API
 {: #vdh_api}
 
-Use the [{{site.data.keyword.iot4auto_short}} API docs: Vehicle Data Hub](http://ibm.biz/IoT4Auto_VDH_APIdoc){:new_window} to retrieve and manage large volumes of automotive data, including map context and driver behavior data. API commands are available to fetch vehicle location, movement, vehicle health, and analytic insights.
+Use the [{{site.data.keyword.iot4auto_short}} API docs: Vehicle Data Hub ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ibm.biz/IoT4Auto_VDH_APIdoc){:new_window} to retrieve and manage large volumes of automotive data, including map context and driver behavior data. API commands are available to fetch vehicle location, movement, vehicle health, and analytic insights.
 
 
 ## Asset API
 {: #asset_api}
 
-Use the [{{site.data.keyword.iot4auto_short}} API docs: Asset](http://ibm.biz/IoT4Auto_Asset_APIdoc){:new_window} to create and manage master asset data, for example, system data that relates to vehicles, rules, drivers, vendors, and event types.
+Use the [{{site.data.keyword.iot4auto_short}} API docs: Asset ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ibm.biz/IoT4Auto_Asset_APIdoc){:new_window} to create and manage master asset data, for example, system data that relates to vehicles, rules, drivers, vendors, and event types.
 
 ## Contextual Map service API
 {: #context_map_api}
 
-Use the [Contextual Map service API](http://ibm.biz/IoTContextMapping_APIdoc){:new_window} to enable your automotive applications to use geospatial map matching and shortest path search.
+Use the [Contextual Map service API ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ibm.biz/IoTContextMapping_APIdoc){:new_window} to enable your automotive applications to use geospatial map matching and shortest path search.
 
 ## Driver Behavior service API
 {: #driver_behavior_api}
 
-Use the [Driver Behavior service API]( http://ibm.biz/IoTDriverBehavior_APIdoc){:new_window} to analyze the driver and vehicle data and produce insights and patterns about driving behavior. You can also use the Driver Behavior APIs to analyze the geographical movement and route patterns of driving trips and produce trajectory patterns.
+Use the [Driver Behavior service API ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ibm.biz/IoTDriverBehavior_APIdoc){:new_window} to analyze the driver and vehicle data and produce insights and patterns about driving behavior. You can also use the Driver Behavior APIs to analyze the geographical movement and route patterns of driving trips and produce trajectory patterns.
 
 ## REST API commands
 {: #rest_api_commands}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-06"  
+  years: 2016, 2017
+lastupdated: "2017-03-08"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2016-12-06"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Getting started with {{site.data.keyword.iot4auto_short}} (Experimental)
+# Getting started with IBM IoT for Automotive (Experimental)
 {: #getting_started_iotautomotive}
 
 {{site.data.keyword.iot4auto_full}} is a {{site.data.keyword.Bluemix_notm}} service that links drivers and vehicles to the surrounding environment to improve the mobility experience. You can use the {{site.data.keyword.iot4auto_short}} service to retrieve, manage, and analyze car probe data from connected vehicles and use the data to build smart automotive solutions that optimize fleet operations. {{site.data.keyword.iot4auto_short}} can provide intelligent and actionable insights into driving behavior, vehicle location, and other automotive-related activities and events of interest.
@@ -47,7 +47,7 @@ By using {{site.data.keyword.iot4auto_short}}, you can do the following tasks:
 Before you begin to integrate your automotive devices and applications with the {{site.data.keyword.iot4auto_short}} service, ensure that you complete the following steps:
 
 1. Review the [About {{site.data.keyword.iot4auto_short}}](iotautomotive_overview.html) topic to familiarize yourself with the features and analytics that are available and supported for the service.
-2. When you add an instance of the service from the [{{site.data.keyword.Bluemix_notm}} catalog](https://console.ng.bluemix.net/catalog/labs/){:new_window}, ensure that it is not bound to an app and that you make a note of the automatically generated tenant ID, user name, and password values. You need these values later to access the service by using the {{site.data.keyword.iot4auto_short}} API.
+2. When you add an instance of the service from the [{{site.data.keyword.Bluemix_notm}} catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/catalog/labs/){:new_window}, ensure that it is not bound to an app and that you make a note of the automatically generated tenant ID, user name, and password values. You need these values later to access the service by using the {{site.data.keyword.iot4auto_short}} API.
 3. Using the console on the dashboard, configure the ports, target host names, and other settings for your {{site.data.keyword.iot4auto_short}} instance. For more information, see [Administering](iotautomotive_admin.html).
 
 ## Deploying and integrating with the REST API
@@ -73,7 +73,7 @@ To get up and running quickly, complete the following steps:
 
 ## Starter experience
 {: #starter_experience}
-Experience the capabilities of {{site.data.keyword.iot4auto_short}}. Visit the [{{site.data.keyword.iot4auto_short}} Starter Experience](https://iot-for-automotive-starter-experience.mybluemix.net){:new_window} page to play an interactive demo and try out some starter apps that provide examples of how you can use the available  {{site.data.keyword.iot4auto_short}} services on {{site.data.keyword.Bluemix_notm}} to build automotive solutions.
+Experience the capabilities of {{site.data.keyword.iot4auto_short}}. Visit the [{{site.data.keyword.iot4auto_short}} Starter Experience ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://iot-for-automotive-starter-experience.mybluemix.net){:new_window} page to play an interactive demo and try out some starter apps that provide examples of how you can use the available  {{site.data.keyword.iot4auto_short}} services on {{site.data.keyword.Bluemix_notm}} to build automotive solutions.
 
 
 # Related Links
@@ -83,22 +83,22 @@ Experience the capabilities of {{site.data.keyword.iot4auto_short}}. Visit the [
 {: #general}
 * [Getting started with {{site.data.keyword.iotdriverinsights_short}}](../IotDriverInsights/index.html){:new_window}
 * [Getting started with {{site.data.keyword.iotmapinsights_short}}](../IotMapInsights/index.html){:new_window}
-* [Getting started with {{site.data.keyword.iot_full}}](https://www.ng.bluemix.net/docs/services/IoT/index.html){:new_window}
-* [What's new in Bluemix Services](http://www.ng.bluemix.net/docs/whatsnew/index.html#services_category){:new_window}
-* [dW Answers on IBM developerWorks](https://developer.ibm.com/answers/topics/iot-for-automotive){:new_window}
-* [Stack Overflow](http://stackoverflow.com/questions/tagged/iot-for-automotive){:new_window}
+* [Getting started with {{site.data.keyword.iot_full}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ng.bluemix.net/docs/services/IoT/index.html){:new_window}
+* [What's new in Bluemix Services ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ng.bluemix.net/docs/whatsnew/index.html#services_category){:new_window}
+* [dW Answers on IBM developerWorks ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/topics/iot-for-automotive){:new_window}
+* [Stack Overflow ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://stackoverflow.com/questions/tagged/iot-for-automotive){:new_window}
 
 ## Tutorials and Samples
 {: #samples}
 
-* [IBM IoT for Automotive Starter Experience](https://iot-for-automotive-starter-experience.mybluemix.net){:new_window}
-* [{{site.data.keyword.iotmapinsights_short}} and  {{site.data.keyword.iotdriverinsights_short}} tutorial part 1](https://github.com/IBM-Bluemix/car-data-management){:new_window}
-* [{{site.data.keyword.iotmapinsights_short}} and  {{site.data.keyword.iotdriverinsights_short}} tutorial part 2](https://github.com/IBM-Bluemix/map-driver-insights){:new_window}
+* [IBM IoT for Automotive Starter Experience ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://iot-for-automotive-starter-experience.mybluemix.net){:new_window}
+* [{{site.data.keyword.iotmapinsights_short}} and  {{site.data.keyword.iotdriverinsights_short}} tutorial part 1 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/IBM-Bluemix/car-data-management){:new_window}
+* [{{site.data.keyword.iotmapinsights_short}} and  {{site.data.keyword.iotdriverinsights_short}} tutorial part 2 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/IBM-Bluemix/map-driver-insights){:new_window}
 
 
 ## API Reference
 {: #api}
-* [{{site.data.keyword.iot4auto_short}} API docs: Vehicle Data Hub](http://ibm.biz/IoT4Auto_VDH_APIdoc){:new_window}
-* [{{site.data.keyword.iot4auto_short}} API docs: Asset](http://ibm.biz/IoT4Auto_Asset_APIdoc){:new_window}
-* [Contextual Map service APIs](http://ibm.biz/IoTContextMapping_APIdoc){:new_window}
-* [Driver Behavior service APIs]( http://ibm.biz/IoTDriverBehavior_APIdoc){:new_window}
+* [{{site.data.keyword.iot4auto_short}} API docs: Vehicle Data Hub ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ibm.biz/IoT4Auto_VDH_APIdoc){:new_window}
+* [{{site.data.keyword.iot4auto_short}} API docs: Asset ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ibm.biz/IoT4Auto_Asset_APIdoc){:new_window}
+* [Contextual Map service APIs ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ibm.biz/IoTContextMapping_APIdoc){:new_window}
+* [Driver Behavior service APIs ![External link icon](../../icons/launch-glyph.svg "External link icon")]( http://ibm.biz/IoTDriverBehavior_APIdoc){:new_window}
