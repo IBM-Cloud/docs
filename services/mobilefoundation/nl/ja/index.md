@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated:  "2017-01-17"
+lastupdated:  "2017-02-17"
 
 ---
 
@@ -11,7 +11,7 @@ lastupdated:  "2017-01-17"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# {{site.data.keyword.mobilefoundation_short}} の概要
+# Mobile Foundation の概要
 {: #gettingstartedtemplate}
 
 {{site.data.keyword.mobilefoundation_long}} は {{site.data.keyword.mfp_full}} 環境 (この環境からエンタープライズ・モバイル・アプリの開発、テスト、操作が可能です) のセットアップを迅速に処理します。
@@ -22,7 +22,8 @@ lastupdated:  "2017-01-17"
 
 
 
-## 「{{site.data.keyword.mobilefoundation_short}}: 開発者」プランの概要
+## 「Mobile Foundation: 開発者」プランの概要
+{: #gettingstartedtemplate_dev}
 
 「{{site.data.keyword.mobilefoundation_short}}: 開発者」のインスタンスの作成後に、数回クリックするだけでモバイル・チャネルの作成を開始できます。
 
@@ -33,7 +34,8 @@ lastupdated:  "2017-01-17"
 
 * トポロジー、セキュリティー、およびその他のサーバー構成について拡張構成を使用して {{site.data.keyword.mobilefirst_notm}} サーバー・インスタンスを作成するには、**「拡張構成を使用したサーバーの始動 (Start Server with Advanced Configuration)」**をクリックします。詳しくは、[拡張構成のセットアップ](c_using_mfs_p1.html#using_mfs_advanced_p1)を参照してください。
 
-## 「{{site.data.keyword.mobilefoundation_short}}: プロフェッショナル 1 アプリケーション」プランの概要
+## 「Mobile Foundation: プロフェッショナル 1 アプリケーション」プランの概要
+{: #gettingstartedtemplate_prof}
 
 「{{site.data.keyword.mobilefoundation_short}}: プロフェッショナル 1 アプリケーション」サービスのインスタンスの作成後に、以下のステップを実行することでモバイル・チャネルの作成を開始できます。
 
@@ -53,13 +55,15 @@ lastupdated:  "2017-01-17"
 
 2.  サーバーを作成して始動します。
 
-    * デフォルト構成を使用して {{site.data.keyword.mobilefirst_notm}} サーバー・インスタンスを作成するには、**「基本サーバーの始動」**をクリックします。 
+    * デフォルト構成を使用して {{site.data.keyword.mobilefirst_notm}} サーバー・インスタンスを作成するには、**「基本サーバーの始動」**をクリックします。
+		
 
       `基本サーバー・インスタンスには、単一のノードと 1 GB のメモリーが含まれています。`
 
     * トポロジー、セキュリティー、およびその他のサーバー構成について拡張構成を使用して {{site.data.keyword.mobilefirst_notm}} サーバー・インスタンスを作成するには、**「拡張構成を使用したサーバーの始動 (Start Server with Advanced Configuration)」**をクリックします。詳しくは、[拡張構成のセットアップ](c_using_mfs_p2.html#using_mfs_advanced_p2)を参照してください。
 
-## 「{{site.data.keyword.mobilefoundation_short}}: 開発者専門」プランの概要
+## 「Mobile Foundation: 開発者専門」プランの概要
+{: #gettingstartedtemplate_devpro}
 
 「{{site.data.keyword.mobilefoundation_short}}: 開発者専門」サービスのインスタンスの作成後に、以下のステップを実行することでモバイル・チャネルの作成を開始できます。
 
@@ -79,7 +83,8 @@ lastupdated:  "2017-01-17"
 
   2.  サーバーを作成して始動します。
 
-      * デフォルト構成を使用して {{site.data.keyword.mobilefirst_notm}} サーバー・インスタンスを作成するには、**「基本サーバーの始動」**をクリックします。 
+      * デフォルト構成を使用して {{site.data.keyword.mobilefirst_notm}} サーバー・インスタンスを作成するには、**「基本サーバーの始動」**をクリックします。
+		
 
       * この選択により、以下の設定で {{site.data.keyword.mfserver_long_notm}} がプロビジョンされます。
 
@@ -89,7 +94,8 @@ lastupdated:  "2017-01-17"
 
       * トポロジー、セキュリティー、およびその他のサーバー構成について拡張構成を使用して {{site.data.keyword.mobilefirst_notm}} サーバー・インスタンスを作成するには、**「拡張構成を使用したサーバーの始動 (Start Server with Advanced Configuration)」**をクリックします。詳しくは、[拡張構成のセットアップ](c_using_mfs_p3.html#using_mfs_advanced_p3)を参照してください。
 
-## 「{{site.data.keyword.mobilefoundation_short}}: 容量当たりのプロフェッショナル」プランの概要
+## 「Mobile Foundation: 容量当たりのプロフェッショナル」プランの概要
+{: #gettingstartedtemplate_profper}
 
 「{{site.data.keyword.mobilefoundation_short}}: 容量当たりのプロフェッショナル」サービスのインスタンスの作成後に、以下のステップを実行することでモバイル・チャネルの作成を開始できます。
 
@@ -109,7 +115,8 @@ lastupdated:  "2017-01-17"
 
   2.  サーバーを作成して始動します。
 
-      * デフォルト構成を使用して {{site.data.keyword.mobilefirst_notm}} サーバー・インスタンスを作成するには、**「基本サーバーの始動」**をクリックします。 
+      * デフォルト構成を使用して {{site.data.keyword.mobilefirst_notm}} サーバー・インスタンスを作成するには、**「基本サーバーの始動」**をクリックします。
+		
 
       * この選択により、以下の設定で {{site.data.keyword.mfserver_long_notm}} がプロビジョンされます。
           -  2 個のノード (それぞれ 1 GB のメモリーを装備)。開発アクティビティー、中程度のテスト・アクティビティー、および小規模な実動ワークロードには、このサイズが適しています。
@@ -118,18 +125,19 @@ lastupdated:  "2017-01-17"
 
       * トポロジー、セキュリティー、およびその他のサーバー構成について拡張構成を使用して {{site.data.keyword.mobilefirst_notm}} サーバー・インスタンスを作成するには、**「拡張構成を使用したサーバーの始動 (Start Server with Advanced Configuration)」**をクリックします。詳しくは、[拡張構成のセットアップ](c_using_mfs_p4.html#using_mfs_advanced_p4)を参照してください。
 
-{{site.data.keyword.mobilefoundation_short}} の使用を開始する方法について詳しくは、[Using the Mobile Foundation service to set up MobileFirst Server <!-- on IBM Containers-->![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/bluemix/using-mobile-foundation/ "外部リンク・アイコン"){: new_window}を参照してください。
+{{site.data.keyword.mobilefoundation_short}} の使用を開始する方法について詳しくは、[Using the Mobile Foundation service to set up MobileFirst Server<!-- on IBM Containers--> ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/bluemix/using-mobile-foundation/){: new_window}を参照してください。
 
 ##  既知の制限
+{: #knownlimitations_mfp}
 
 * {{site.data.keyword.mobilefoundation_short}} サービス UI は、番号を表示するためにユーザーが選択したロケール特定パターンを使用しません。
 
 
 # 関連リンク
-{: #rellinks}
+{: #rellinks  notoc}
 
 ## 関連リンク
-{: #general}
+{: #general notoc}
 
-*	[IBM MobileFirst Platform Foundation V8.0.0 product documentation ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html "外部リンク・アイコン"){: new_window}
-*	[IBM MobileFirst Platform Developer Center ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://mobilefirstplatform.ibmcloud.com "外部リンク・アイコン"){: new_window}
+*	[IBM MobileFirst Platform Foundation V8.0.0 製品資料![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html){: new_window}
+*	[IBM MobileFirst Platform Developer Center ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://mobilefirstplatform.ibmcloud.com){: new_window}

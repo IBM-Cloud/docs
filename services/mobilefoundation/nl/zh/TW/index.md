@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated:  "2017-01-17"
+lastupdated:  "2017-02-17"
 
 ---
 
@@ -11,7 +11,7 @@ lastupdated:  "2017-01-17"
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-# 開始使用 {{site.data.keyword.mobilefoundation_short}}
+# 開始使用 Mobile Foundation
 {: #gettingstartedtemplate}
 
 {{site.data.keyword.mobilefoundation_long}} 可加速設定 {{site.data.keyword.mfp_full}} 環境，您可以從該環境中開發、測試及操作企業行動應用程式。
@@ -22,7 +22,8 @@ lastupdated:  "2017-01-17"
 
 
 
-## 開始使用 {{site.data.keyword.mobilefoundation_short}}: Developer 方案
+## 開始使用 Mobile Foundation: Developer 方案
+{: #gettingstartedtemplate_dev}
 
 建立 {{site.data.keyword.mobilefoundation_short}}: Developer 的實例之後，只要按幾下，就可以開始建置行動通道。
 
@@ -32,7 +33,8 @@ lastupdated:  "2017-01-17"
 
 * 若要使用拓蹼、安全及其他伺服器配置的進階配置來建立 {{site.data.keyword.mobilefirst_notm}} 伺服器實例，請按一下**使用進階配置啟動伺服器**。如需相關資訊，請參閱[設定進階配置](c_using_mfs_p1.html#using_mfs_advanced_p1)。
 
-## 開始使用 {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application 方案
+## 開始使用 Mobile Foundation: Professional 1 Application 方案
+{: #gettingstartedtemplate_prof}
 
 建立 {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application 服務的實例之後，只要完成下列步驟，就可以開始建置行動通道。
 
@@ -58,7 +60,8 @@ lastupdated:  "2017-01-17"
 
     * 若要使用拓蹼、安全及其他伺服器配置的進階配置來建立 {{site.data.keyword.mobilefirst_notm}} 伺服器實例，請按一下**使用進階配置啟動伺服器**。如需相關資訊，請參閱[設定進階配置](c_using_mfs_p2.html#using_mfs_advanced_p2)。
 
-## 開始使用 {{site.data.keyword.mobilefoundation_short}}: Developer Pro 方案
+## 開始使用 Mobile Foundation: Developer Pro 方案
+{: #gettingstartedtemplate_devpro}
 
 在建立 {{site.data.keyword.mobilefoundation_short}}: Developer Pro 服務的實例之後，您可以完成下列步驟來開始建置行動通道。
 
@@ -88,7 +91,8 @@ lastupdated:  "2017-01-17"
 
       * 若要使用拓蹼、安全及其他伺服器配置的進階配置來建立 {{site.data.keyword.mobilefirst_notm}} 伺服器實例，請按一下**使用進階配置啟動伺服器**。如需相關資訊，請參閱[設定進階配置](c_using_mfs_p3.html#using_mfs_advanced_p3)。
 
-## 開始使用 {{site.data.keyword.mobilefoundation_short}}: Professional Per Capacity 方案
+## 開始使用 Mobile Foundation: Professional Per Capacity 方案
+{: #gettingstartedtemplate_profper}
 
 在建立 {{site.data.keyword.mobilefoundation_short}}: Professional Per Capacity 服務的實例之後，您可以完成下列步驟來開始建置行動通道。
 
@@ -117,18 +121,19 @@ lastupdated:  "2017-01-17"
 
       * 若要使用拓蹼、安全及其他伺服器配置的進階配置來建立 {{site.data.keyword.mobilefirst_notm}} 伺服器實例，請按一下**使用進階配置啟動伺服器**。如需相關資訊，請參閱[設定進階配置](c_using_mfs_p4.html#using_mfs_advanced_p4)。
 
-移至[使用 Mobile Foundation 服務來設定 MobileFirst Server<!-- on IBM Containers--> ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/bluemix/using-mobile-foundation/ "外部鏈結圖示"){: new_window}，來進一步瞭解如何開始使用 {{site.data.keyword.mobilefoundation_short}}。
+移至[使用 Mobile Foundation 服務來設定 MobileFirst Server<!-- on IBM Containers--> ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/bluemix/using-mobile-foundation/){: new_window}，來進一步瞭解如何開始使用 {{site.data.keyword.mobilefoundation_short}}。
 
 ##  已知限制
+{: #knownlimitations_mfp}
 
 * {{site.data.keyword.mobilefoundation_short}} 服務使用者介面不會以使用者選取的語言環境特有型樣來顯示數字。
 
 
 # 相關鏈結
-{: #rellinks}
+{: #rellinks  notoc}
 
 ## 相關鏈結
-{: #general}
+{: #general notoc}
 
-*	[IBM MobileFirst Platform Foundation 8.0.0 版產品說明文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html "外部鏈結圖示"){: new_window}
-*	[IBM MobileFirst Platform Developer Center ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://mobilefirstplatform.ibmcloud.com "外部鏈結圖示"){: new_window}
+*	[IBM MobileFirst Platform Foundation 8.0.0 版產品文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html){: new_window}
+*	[IBM MobileFirst Platform Developer Center ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://mobilefirstplatform.ibmcloud.com){: new_window}

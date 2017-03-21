@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated:  "2017-01-17"
+lastupdated:  "2017-02-17"
 
 ---
 
@@ -11,7 +11,7 @@ lastupdated:  "2017-01-17"
 
 「{{site.data.keyword.mobilefoundation_short}}: 開発者」サービス・インスタンスを作成した後、数秒後には {{site.data.keyword.Bluemix_notm}} の`「概要」`ページにアクセスでき、ここで {{site.data.keyword.mobilefoundation_short}} サービスを使い始める上で役立つチュートリアルやビデオが提供されます。
 
-## {{site.data.keyword.mobilefirst}} サーバーの始動
+## MobileFirst サーバーの始動
 {: #start_mobilefoundation_p1}
 * {{site.data.keyword.mfserver_short_notm}} をデフォルト設定で始動するには、**「基本サーバーの始動」**をクリックしてください。
 
@@ -45,7 +45,7 @@ lastupdated:  "2017-01-17"
 
 * {{site.data.keyword.mfserver_short_notm}} と Mobile Analytics サーバーとの間で、シングル・サインオンが使用可能になります。Mobile Analytics サーバーは、{{site.data.keyword.mfserver_short_notm}} と同じ LTPA 鍵とユーザー資格情報で構成されます。{{site.data.keyword.mfp_oc_short_notm}} のログインに使用したのと同じ `username` と `password` を使用して、Mobile Analytics コンソールにログインできます。
 
-MobileFirst Analytics について詳しくは、[MobileFirst Foundation Operational Analytics ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/ "外部リンク・アイコン"){: new_window}を参照してください。
+MobileFirst Analytics について詳しくは、[MobileFirst Foundation Operational Analytics ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/){: new_window}を参照してください。
 
 **注:** {{site.data.keyword.mobilefoundation_short}} サービス・インスタンスを削除する場合や、{{site.data.keyword.mfserver_short_notm}} を再作成しようとする場合、Mobile Analytics サーバーは削除されます。
 
@@ -59,7 +59,7 @@ MobileFirst Analytics について詳しくは、[MobileFirst Foundation Operati
  これにより、Analytics コンテナー・グループが削除されます。Analytics コンテナーの削除プロセスには、約 10 分かかります。画面を最新表示して、更新された状況を確認できます。Analytics コンテナーが削除されると、**「Analytics の追加 (Add Analytics)」**ボタンが再び有効になります。必要であれば、これを使用して再度 Mobile Analytics サーバーを追加できます。
 
 
-## {{site.data.keyword.mobilefirst}} サーバーの再作成
+## MobileFirst サーバーの再作成
 {: #recreate_mobilefoundation_p1}
 
 *	**「再作成」**をクリックしてサーバーを再作成します。
@@ -77,4 +77,4 @@ MobileFirst Analytics について詳しくは、[MobileFirst Foundation Operati
 
 * **「ノード (Nodes)」**は作成されたノード数を表示します。このフィールドは「{{site.data.keyword.mobilefoundation_short}}: 開発者」では編集できません。「開発者」プランで、ノードの数<!--in your {{site.data.keyword.IBM_notm}} container group-->は、**1** にデフォルト設定されます。
 
-詳しくは、[{{site.data.keyword.mobilefoundation_long}} documentation ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html "外部リンク・アイコン"){: new_window}を参照してください。
+詳細については、[{{site.data.keyword.mobilefoundation_long}} documentation ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html){: new_window}を参照してください。

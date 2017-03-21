@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated:  "2017-01-17"
+lastupdated:  "2017-02-17"
 
 ---
 
@@ -29,9 +29,9 @@ lastupdated:  "2017-01-17"
 ###  最初の手順
 {: #firststeps_p4}
 
-「{{site.data.keyword.mobilefoundation_short}}: 容量当たりのプロフェッショナル」サービス・インスタンスを作成した後、以下の手順に従って、始めてください。
+「{{site.data.keyword.mobilefoundation_short}}: 容量当たりのプロフェッショナル」サービス・インスタンスを作成した後、手順に従って、始めてください。
 
-### {{site.data.keyword.dashdbshort_notm}} サービス・インスタンスへの接続のセットアップ
+### dashDB サービス・インスタンスへの接続のセットアップ
 {: #connect_dashdb_p4}
 
 「{{site.data.keyword.mobilefoundation_short}}: 容量当たりのプロフェッショナル」サービス・インスタンスの作成後、*「概要」*ページが表示されます。ここで、{{site.data.keyword.mobilefoundation_short}} サービス・インスタンスを接続する「{{site.data.keyword.dashdbshort_notm}} for Transactions」サービス・インスタンスの接続情報を指定する必要があります。
@@ -67,7 +67,7 @@ lastupdated:  "2017-01-17"
 
 **注意**: {{site.data.keyword.mobilefoundation_short}} サービス・インスタンスで使用するように構成された {{site.data.keyword.dashdbshort_notm}} サービス・インスタンスを変更することはできません。ただし、同じ {{site.data.keyword.dashdbshort_notm}} サービス・インスタンスを複数の {{site.data.keyword.mobilefoundation_short}} サービス・インスタンスで使用することは可能です。これは、各 {{site.data.keyword.mobilefoundation_short}} サービス・インスタンスが選択された {{site.data.keyword.dashdbshort_notm}} サービス・インスタンス内に独自のスキーマを作成するためです。
 
-## {{site.data.keyword.mobilefirst}} サーバーの始動
+## MobileFirst サーバーの始動
 {: #start_mobilefoundation_p4}
 
 * {{site.data.keyword.mfserver_short_notm}} をデフォルト設定で始動するには、**「基本サーバーの始動」**をクリックしてください。
@@ -100,7 +100,7 @@ lastupdated:  "2017-01-17"
  ユーザーはまた、ボリュームをコンテナーに接続して、データを永続化できます。一度選択されたボリュームは変更できません。20 GB は、ユーザーに使用可能なデフォルトのファイル共有スペースです。分析データを保持するためにユーザーが追加のストレージ・スペースを必要とする場合、
 ユーザーは、追加ファイル共有を購入し、このファイル共有を使用してボリュームを作成する必要があります。これでユーザーは、分析サーバーをデプロイ中に、この新規ボリュームを選択できます。
 
- {{site.data.keyword.containerlong}} へのボリュームの追加について詳しくは、[{{site.data.keyword.Bluemix_notm}} ダッシュボードを使用してボリュームに永続データを保管する![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.ng.bluemix.net/docs/containers/container_volumes_ui.html "外部リンク・アイコン"){: new_window}を参照してください。
+ {{site.data.keyword.containerlong}} へのボリュームの追加について詳しくは、[{{site.data.keyword.Bluemix_notm}} ダッシュボードを使用したボリュームへの永続データの保管に関する資料![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.ng.bluemix.net/docs/containers/container_volumes_ui.html){: new_window}を参照してください。
 
 * **「Analytics の追加 (Add Analytics)」**をクリックして、Mobile Analytics サーバーを {{site.data.keyword.mobilefoundation_short}} サービス・インスタンスに追加します。
 
@@ -112,7 +112,7 @@ lastupdated:  "2017-01-17"
 
 * {{site.data.keyword.mfserver_short_notm}} と Mobile Analytics サーバーとの間で、シングル・サインオンが使用可能になります。Mobile Analytics サーバーは、{{site.data.keyword.mfserver_short_notm}} サーバーと同じ LTPA 鍵とユーザー資格情報で構成されます。{{site.data.keyword.mfp_oc_short_notm}} のログインに使用したのと同じ`ユーザー名`と`パスワード`を使用して、Mobile Analytics コンソールにログインできます。
 
-MobileFirst Analytics について詳しくは、[MobileFirst Foundation Operational Analytics ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/ "外部リンク・アイコン"){: new_window}を参照してください。
+MobileFirst Analytics について詳しくは、[MobileFirst Foundation Operational Analytics ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/){: new_window}を参照してください。
 
 **注:** {{site.data.keyword.mobilefoundation_short}} サービス・インスタンスを削除する場合や、{{site.data.keyword.mfserver_short_notm}} を再作成しようとする場合、Mobile Analytics サーバーは削除されます。
 
@@ -125,7 +125,7 @@ MobileFirst Analytics について詳しくは、[MobileFirst Foundation Operati
 
  これにより、Analytics コンテナー・グループが削除されます。Analytics コンテナーの削除プロセスには、約 10 分かかります。画面を最新表示して、更新された状況を確認できます。Analytics コンテナーが削除されると、**「Analytics の追加 (Add Analytics)」**ボタンが再び有効になります。必要であれば、これを使用して再度 Mobile Analytics サーバーを追加できます。
 
-## {{site.data.keyword.mobilefirst}} サーバーの再作成
+## MobileFirst サーバーの再作成
 {: #recreate_mobilefoundation_p4}
 
 *	**「再作成」**をクリックしてサーバーを再作成します。
@@ -146,4 +146,4 @@ MobileFirst Analytics について詳しくは、[MobileFirst Foundation Operati
 
       - ここでノード数を構成することで、{{site.data.keyword.mobilefirst}} サーバー・ファームを作成できます。サポートされる最小構成は 2 個のノード (それぞれ 1 GB のメモリーを装備)、最大構成は 32 個のノード (それぞれ 16 GB のメモリーを装備) です。
 
-詳しくは、[{{site.data.keyword.mobilefoundation_long}} documentation ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html "外部リンク・アイコン"){: new_window}を参照してください。
+詳しくは、[{{site.data.keyword.mobilefoundation_long}} documentation ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html){: new_window}を参照してください。
