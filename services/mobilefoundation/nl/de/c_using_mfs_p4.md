@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated:  "2017-01-17"
+lastupdated:  "2017-02-17"
 
 ---
 
@@ -29,9 +29,9 @@ Beachten Sie Folgendes, bevor Sie die Serviceinstanz von {{site.data.keyword.mob
 ###  Erste Schritte
 {: #firststeps_p4}
 
-Führen Sie nach der Erstellung der Serviceinstanz von {{site.data.keyword.mobilefoundation_short}}: Professional Per Capacity die nachfolgend beschriebene Prozedur aus, um mit der Verwendung des Service zu beginnen.
+Führen Sie nach der Erstellung der Serviceinstanz von {{site.data.keyword.mobilefoundation_short}}: Professional Per Capacity die beschriebene Prozedur aus, um mit der Verwendung des Service zu beginnen.
 
-### Stellen Sie eine Verbindung zur {{site.data.keyword.dashdbshort_notm}}-Serviceinstanz her.
+### Verbindung zur dashDB-Serviceinstanz herstellen
 {: #connect_dashdb_p4}
 
 Nachdem die Serviceinstanz von {{site.data.keyword.mobilefoundation_short}}: Professional Per Capacity erstellt wurde, sehen Sie die Seite *Übersicht*, auf der Sie die Verbindungsinformationen für die Serviceinstanz von {{site.data.keyword.dashdbshort_notm}} for Transactions angeben müssen, zu der die {{site.data.keyword.mobilefoundation_short}}-Serviceinstanz eine Verbindung herstellen soll.
@@ -40,7 +40,7 @@ Nachdem die Serviceinstanz von {{site.data.keyword.mobilefoundation_short}}: Pro
 
 Sie können auch eine neue Serviceinstanz von {{site.data.keyword.dashdbshort_notm}} for Transactions erstellen, falls noch keine vorhanden ist.
 
-Führen Sie die folgenden Schritte aus, um eine neue dashDB for Transactions-Serviceinstanz zu erstellen: 
+Führen Sie die folgenden Schritte aus, um eine neue dashDB for Transactions-Serviceinstanz zu erstellen:
 
 1. Wählen Sie auf der Seite *Übersicht* den Abschnitt **Neuen Service erstellen** aus.
 
@@ -67,7 +67,7 @@ Nach einigen Sekunden können Sie auf die Seite `Übersicht` zugreifen, auf der 
 
 **Hinweis**: Sie können die {{site.data.keyword.dashdbshort_notm}}-Serviceinstanz, die zur Verwendung durch die {{site.data.keyword.mobilefoundation_short}}-Serviceinstanz konfiguriert ist, nicht ändern. Sie können jedoch dieselbe {{site.data.keyword.dashdbshort_notm}}-Serviceinstanz für mehrere {{site.data.keyword.mobilefoundation_short}}-Serviceinstanzen verwenden, da jede {{site.data.keyword.mobilefoundation_short}}-Serviceinstanz ein eigenes Schema in der ausgewählten {{site.data.keyword.dashdbshort_notm}}-Serviceinstanz erstellt.
 
-## {{site.data.keyword.mobilefirst}}-Server starten
+## MobileFirst-Server starten
 {: #start_mobilefoundation_p4}
 
 * Um den {{site.data.keyword.mfserver_short_notm}} mit den Standardeinstellungen zu starten, klicken Sie auf **Basisserver starten**.
@@ -101,7 +101,7 @@ Informationen angezeigt:
 
  Benutzer können auch Datenträger an die Container anhängen, um Daten dauerhaft zu speichern. Wird ein Datenträger einmal ausgewählt, kann er nicht mehr geändert werden. 20 GB Speicherplatz für die Dateifreigabe stehen dem Benutzer standardmäßig zur Verfügung. Benötigt der Benutzer zusätzlichen Speicherplatz, um die Analysedaten dauerhaft zu speichern, muss er weiteren Speicherplatz für die Dateifreigabe erwerben und mit dieser Dateifreigabe einen Datenträger erstellen. Anschließend kann er diesen neuen Datenträger auswählen und den Analyseserver bereitstellen.
 
- Weitere Informationen zum Hinzufügen von Datenträgern zu {{site.data.keyword.containerlong}} finden Sie im Abschnitt zum [Speichern persistenter Daten auf einem Datenträger mit dem {{site.data.keyword.Bluemix_notm}}-Dashboard ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.ng.bluemix.net/docs/containers/container_volumes_ui.html "Symbol für externen Link"){: new_window}.
+ Weitere Informationen zum Hinzufügen von Datenträgern zu {{site.data.keyword.containerlong}} finden Sie im Abschnitt zum [Speichern persistenter Daten auf einem Datenträger mit dem {{site.data.keyword.Bluemix_notm}}-Dashboard ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.ng.bluemix.net/docs/containers/container_volumes_ui.html){: new_window}.
 
 * Klicken Sie auf die Option zum Hinzufügen der Analyse, um den Mobile Analytics-Server zur Instanz des {{site.data.keyword.mobilefoundation_short}}-Service hinzuzufügen.
 
@@ -113,7 +113,7 @@ Der Prozess der Bereitstellung wird gestartet. Dieser Prozess dauert ungefähr 1
 
 * Für den {{site.data.keyword.mfserver_short_notm}} und den Mobile Analytics-Server ist Single Sign-on aktiviert. Der Mobile Analytics-Server ist mit denselben LTPA-Schlüsseln und denselben Benutzerberechtigungen konfiguriert wie der {{site.data.keyword.mfserver_short_notm}}-Server. Sie können für die Anmeldung an der Mobile Analytics Console den `Benutzernamen` und das `Kennwort` verwenden, die Sie auch für die Anmeldung bei der {{site.data.keyword.mfp_oc_short_notm}} verwendet haben.
 
-Weitere Informationen zu MobileFirst Analytics finden Sie unter [MobileFirst Foundation Operational Analytics ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/ "Symbol für externen Link"){: new_window}.
+Weitere Informationen zu MobileFirst Analytics finden Sie unter [MobileFirst Foundation Operational Analytics ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/){: new_window}.
 
 **Anmerkung:** Der Mobile Analytics-Server wird entfernt, wenn Sie die Instanz des Service {{site.data.keyword.mobilefoundation_short}} löschen oder wenn Sie versuchen, den {{site.data.keyword.mfserver_short_notm}} erneut zu erstellen.
 
@@ -126,7 +126,7 @@ Sie können jetzt den Mobile Analytics-Server, der zur {{site.data.keyword.mobil
 
  Bei dieser Aktion wird die Analytics-Containergruppe gelöscht. Das Löschen der Analytics-Container dauert ca. 10 Minuten. Sie können die Anzeige aktualisieren, um den aktuellen Status anzuzeigen. Nach dem Löschen der Analysecontainer wird die Schaltfläche zum Hinzufügen der Analyse**** wieder aktiviert und kann verwendet werden, um den Mobile Analytics-Server bei Bedarf erneut hinzuzufügen.
 
-## {{site.data.keyword.mobilefirst}} Server erneut erstellen
+## MobileFirst-Server erneut erstellen
 {: #recreate_mobilefoundation_p4}
 
 *	Klicken Sie auf die Schaltfläche **Neu erstellen**, um den Server erneut zu erstellen.
@@ -149,4 +149,4 @@ Registerkarte **Konfiguration**. {{site.data.keyword.mobilefoundation_short}} bi
 
       - Die {{site.data.keyword.mobilefirst}}-Server-Farm kann durch die Konfiguration der Anzahl der Knoten hier unterstützt werden. Die unterstützte Mindestkonfiguration sind 2 Knoten mit jeweils 1 GB Hauptspeicher, die unterstützte Höchstkonfiguration sind 32 Knoten mit jeweils 16 GB Hauptspeicher.
 
-Weitere Details finden Sie in der [{{site.data.keyword.mobilefoundation_long}}-Dokumentation ![Symbol für externen Link icon](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html "Symbol für externen Link"){: new_window}.
+Weitere Details finden Sie in der [{{site.data.keyword.mobilefoundation_long}}-Dokumentation ![Symbol für externen Link icon](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html){: new_window}.

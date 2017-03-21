@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated:  "2017-01-17"
+lastupdated:  "2017-02-17"
 
 ---
 
@@ -30,9 +30,9 @@ lastupdated:  "2017-01-17"
 ###  首要步驟
 {: #firststeps_p3}
 
-建立 {{site.data.keyword.mobilefoundation_short}}: Developer Pro 服務實例之後，請遵循下面的程序以開始使用。
+建立 {{site.data.keyword.mobilefoundation_short}}: Developer Pro 服務實例之後，請遵循程序以開始使用。
 
-### 設定 {{site.data.keyword.dashdbshort_notm}} 服務實例的連線
+### 設定 dashDB 服務實例的連線
 {: #connect_dashdb_p3}
 
 在建立 {{site.data.keyword.mobilefoundation_short}}: Developer Pro 服務實例之後，就會看到*概觀* 頁面，您將需要在這裡為 {{site.data.keyword.mobilefoundation_short}} 服務實例應該連接至其中的 {{site.data.keyword.dashdbshort_notm}} for Transactions 服務實例指定連線資訊。
@@ -68,7 +68,7 @@ lastupdated:  "2017-01-17"
 
 **附註**：您無法變更配置來供 {{site.data.keyword.mobilefoundation_short}} 服務實例使用的 {{site.data.keyword.dashdbshort_notm}} 服務實例。不過，您能夠在多個 {{site.data.keyword.mobilefoundation_short}} 服務實例之間使用相同的 {{site.data.keyword.dashdbshort_notm}} 服務實例，因為每一個 {{site.data.keyword.mobilefoundation_short}} 服務實例都會在所選取的 {{site.data.keyword.dashdbshort_notm}} 服務實例中建立自己的綱目。
 
-## 啟動 {{site.data.keyword.mobilefirst}} 伺服器
+## 啟動 MobileFirst 伺服器
 {: #start_mobilefoundation_p3}
 
 * 若要以預設值啟動 {{site.data.keyword.mfserver_short_notm}}，請按一下**啟動基本伺服器**。
@@ -101,7 +101,7 @@ lastupdated:  "2017-01-17"
 
  使用者也可以附加容器的磁區來持續保存資料。一旦磁區選定後就無法變更。20 GB 是使用者可用的預設檔案共用空間。如果使用者需要額外的儲存空間來持續保存分析資料，則需要購買額外的檔案共用，並且使用該檔案共用來建立磁區。然後，在部署分析伺服器時，便可以選取這個新的磁區。
 
- 如需將磁區新增至 {{site.data.keyword.containerlong}} 的相關資訊，請參閱[使用 {{site.data.keyword.Bluemix_notm}} 儀表板將持續資料儲存在磁區中 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.ng.bluemix.net/docs/containers/container_volumes_ui.html "外部鏈結圖示"){: new_window}。
+ 如需將磁區新增至 {{site.data.keyword.containerlong}} 的相關資訊，請參閱[使用 {{site.data.keyword.Bluemix_notm}} 儀表板將持續資料儲存在磁區中 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.ng.bluemix.net/docs/containers/container_volumes_ui.html){: new_window}。
 
 * 按一下**新增分析**將 Mobile Analytics 伺服器新增至 {{site.data.keyword.mobilefoundation_short}} 服務實例。
 
@@ -113,7 +113,7 @@ lastupdated:  "2017-01-17"
 
 * 介於 {{site.data.keyword.mfserver_short_notm}} 及 Mobile Analytics 伺服器的單一登入已啟用。使用相同的 LTPA 金鑰及使用者認證將 Mobile Analytics 伺服器配置為 {{site.data.keyword.mfserver_short_notm}}。您可以使用與用來登入 {{site.data.keyword.mfp_oc_short_notm}} 相同的 `username` 及 `password` 來登入 Mobile Analytics 主控台。
 
-如需 MobileFirst Analytics 的相關資訊，您可以參閱 [MobileFirst FoundationOperational Analytics ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/ "外部鏈結圖示"){: new_window}。
+如需 MobileFirst Analytics 的相關資訊，您可以參閱 [MobileFirst FoundationOperational Analytics ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/){: new_window}。
 
 **附註：**當您刪除 {{site.data.keyword.mobilefoundation_short}} 服務實例時或當您嘗試重新建立
 {{site.data.keyword.mfserver_short_notm}} 時，會移除 Mobile Analytics 伺服器。
@@ -127,7 +127,7 @@ lastupdated:  "2017-01-17"
 
  這將刪除分析容器群組。刪除分析容器的程序需要大約 10 分鐘。您可以重新整理畫面來檢視更新的狀態。一旦刪除分析容器，便會重新啟用**新增分析**按鈕，您可以使用此按鈕，重新新增 Mobile Analytics 伺服器（如果您選擇這樣做的話）。
 
-## 重建 {{site.data.keyword.mobilefirst}} 伺服器
+## 重建 MobileFirst 伺服器
 {: #recreate_mobilefoundation_p3}
 
 *	按一下**重建**，以重建伺服器。
@@ -146,4 +146,4 @@ lastupdated:  "2017-01-17"
 
   - **節點數**會顯示已建立的節點數目。在 {{site.data.keyword.mobilefoundation_short}}: Developer Pro 中無法編輯此欄位。在 Developer Pro 方案中，<!--in your {{site.data.keyword.IBM_notm}} container group-->節點數目預設為 **1**。
 
-如需詳細資料，請參閱 [{{site.data.keyword.mobilefoundation_long}} 文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html "外部鏈結圖示"){: new_window}。
+如需詳細資料，請參閱 [{{site.data.keyword.mobilefoundation_long}} 文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html){: new_window}。

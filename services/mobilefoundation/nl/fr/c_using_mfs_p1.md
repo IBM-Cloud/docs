@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated:  "2017-01-17"
+lastupdated:  "2017-02-17"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated:  "2017-01-17"
 Une fois l'instance de service {{site.data.keyword.mobilefoundation_short}}: Developer créée, au bout de quelques secondes, vous pouvez accéder à la `Présentation` du site {{site.data.keyword.Bluemix_notm}} qui fournit des tutoriels et des vidéos facilitant
 vos premiers pas avec le service {{site.data.keyword.mobilefoundation_short}}.
 
-## Démarrage du serveur {{site.data.keyword.mobilefirst}}
+## Démarrage du serveur MobileFirst
 {: #start_mobilefoundation_p1}
 * Pour démarrer le serveur
 {{site.data.keyword.mfserver_short_notm}} avec les paramètres par
@@ -56,7 +56,7 @@ message indique la progression de l'opération.
 
 * La connexion unique est activée entre {{site.data.keyword.mfserver_short_notm}} et le serveur Mobile Analytics. Le serveur Mobile Analytics est configuré avec les mêmes clés LTPA et données d'identification de l'utilisateur que celles de {{site.data.keyword.mfserver_short_notm}}. Vous pouvez vous servir des mêmes `nom_d'utilisateur` et `mot_de_passe` pour vous connecter à la console Mobile Analytics que ceux utilisés pour la connexion à {{site.data.keyword.mfp_oc_short_notm}}.
 
-Pour plus d'informations sur MobileFirst Analytics, accédez au site [MobileFirst Foundation Operational Analytics ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/ "Icône de lien externe"){: new_window}.
+Pour plus d'informations sur MobileFirst Analytics, accédez au site [MobileFirst Foundation Operational Analytics ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/){: new_window}.
 
 **Remarque :** le serveur Mobile Analytics est retiré quand vous supprimez l'instance de service {{site.data.keyword.mobilefoundation_short}} ou si vous tentez de recréer le serveur {{site.data.keyword.mfserver_short_notm}}.
 
@@ -74,10 +74,10 @@ statut mis à jour. Une fois les conteneurs Analytics supprimés, le bouton **Aj
 éventuellement d'ajouter à nouveau le serveur Mobile Analytics.
 
 
-## Re-création du serveur {{site.data.keyword.mobilefirst}}
+## Re-création du serveur MobileFirst
 {: #recreate_mobilefoundation_p1}
 
-*	Cliquez sur **Recreate** pour re-créer le serveur.
+*	Cliquez sur **Recreate** pour recréer le serveur.
 
 * Cette action arrête votre serveur existant et supprime les données. Toutes les
 données de votre serveur mobile sont perdues. Une
@@ -101,4 +101,4 @@ vos besoins.
 * **Nodes** affiche le nombre de noeuds créés. Cette
 zone n'est pas modifiable dans {{site.data.keyword.mobilefoundation_short}}: Developer. Le nombre de noeuds <!--in your {{site.data.keyword.IBM_notm}} container group--> est de **1** par défaut dans le plan Developer.
 
-Reportez-vous à la page [Documentation d'{{site.data.keyword.mobilefoundation_long}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html "Icône de lien externe"){: new_window} pour plus d'informations.
+Pour plus de détails, voir la documentation [{{site.data.keyword.mobilefoundation_long}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html){: new_window}.

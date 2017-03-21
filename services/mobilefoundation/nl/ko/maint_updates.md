@@ -14,7 +14,7 @@ lastupdated:  "2016-08-03"
 # 유지보수 및 업데이트
 {: #maintupdates_mf}
 
-{{site.data.keyword.mobilefoundation_short}}에서는 {{site.data.keyword.mfserver_short_notm}}<!--on {{site.data.keyword.containerlong}} as a container group-->를 프로비저닝합니다. {{site.data.keyword.mobilefoundation_short}} 서버에 대한 업데이트가 사용자에게 알림으로 전달됩니다. 사용자가 편한 시간에 {{site.data.keyword.mobilefoundation_short}} 서버를 업데이트하도록 선택할 수 있습니다.
+{{site.data.keyword.mobilefoundation_short}}에서는 {{site.data.keyword.mfserver_short_notm}}<!-- on {{site.data.keyword.containerlong}} as a container group-->를 프로비저닝합니다. {{site.data.keyword.mobilefoundation_short}} 서버에 대한 업데이트가 사용자에게 알림으로 전달됩니다. 사용자가 편한 시간에 {{site.data.keyword.mobilefoundation_short}} 서버를 업데이트하도록 선택할 수 있습니다.
 {:shortdesc}
 
 ## 유지보수 전략
@@ -36,6 +36,8 @@ lastupdated:  "2016-08-03"
 
 업데이트 적용 시 {{site.data.keyword.mfp_oc_short_notm}}에 표시되는 대로 서버 업데이트 버전을 표시하도록 서버 버전이 수정됩니다. 
 
-**참고:**
+### 참고:
+{: #note notoc}
+
 * 사용자는 고유 수정사항 및 업데이트를 {{site.data.keyword.mobilefoundation_short}} 서비스 인스턴스에 적용할 수 없습니다. 
-* **재작성**을 클릭하는 경우 플랜에서 발생하는 동작의 차이점을 파악하려면 [개발자 플랜에서 서버 재작성](c_using_mfs_p1.html#recreate_mobilefoundation_p1) 및 [Professional 1 Application 플랜에서 서버 재작성](c_using_mfs_p2.html#recreate_mobilefoundation_p2)을 참조하십시오. 
+* **재작성**을 클릭하는 경우 플랜에서 발생하는 동작의 차이점을 파악하려면 [Developer 플랜에서 서버 재작성](c_using_mfs_p1.html#recreate_mobilefoundation_p1) 및 [Professional 1 Application 플랜에서 서버 재작성](c_using_mfs_p2.html#recreate_mobilefoundation_p2)을 참조하십시오. 

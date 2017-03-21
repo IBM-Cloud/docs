@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated:  "2017-01-17"
+lastupdated:  "2017-02-17"
 
 ---
 
@@ -31,9 +31,9 @@ as configurações de sua instância de serviço {{site.data.keyword.mobilefound
 ###  Primeiras etapas
 {: #firststeps_p2}
 
-Após criar a instância de serviço {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application, siga o procedimento abaixo para iniciar.
+Após criar a instância de serviço do {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application, siga o procedimento para iniciar.
 
-### Configurando a conexão para a instância de serviço {{site.data.keyword.dashdbshort_notm}}
+### Configurando a conexão com a instância de serviço dashDB
 {: #connect_dashdb_p2}
 
 Após a instância de serviço {{site.data.keyword.mobilefoundation_short}}: Professional 1 Application ser criada, você verá a página *Visão geral*, na qual será necessário
@@ -48,7 +48,7 @@ poderá configurar para usá-la para se conectar à instância de serviço
 
 Também é possível criar uma nova instância de serviço {{site.data.keyword.dashdbshort_notm}} for Transactions, caso você não tenha uma já existente.
 
-Siga as etapas abaixo para criar uma nova instância de serviço dashDB for Transactions:
+Siga estas etapas para criar uma nova instância de serviço dashDB for Transactions:
 
 1. Na página *Visão geral*, selecione a seção **Criar novo serviço**.
 
@@ -61,9 +61,7 @@ de serviço {{site.data.keyword.dashdbshort_notm}} for Transactions.
 Uma nova instância de serviço {{site.data.keyword.dashdbshort_notm}} for Transactions: EnterpriseForTransactions2.8.500 é criada, que fornece uma instância{{site.data.keyword.dashdbshort_notm}} dedicada com 8 GB de RAM, 2 vCPUs e 500 GB de
 armazenamento.
 
-Siga as etapas abaixo para se conectar a uma instância de serviço {{site.data.keyword.dashdbshort_notm}} existente ou à instância de
-serviço {{site.data.keyword.dashdbshort_notm}} for Transactions que
-você acabou de criar:
+Siga estas etapas para se conectar a uma instância de serviço do {{site.data.keyword.dashdbshort_notm}} existente ou a uma instância de serviço do {{site.data.keyword.dashdbshort_notm}} for Transactions que você acabou de criar:
 
 1. Selecione a {{site.data.keyword.Bluemix_notm}} `Organização` na qual a instância do serviço {{site.data.keyword.dashdbshort_notm}} existe.
 
@@ -85,7 +83,7 @@ Em alguns segundos, é possível acessar a página `Overview` que fornece tutori
 **Nota**: não é possível mudar a instância de serviço {{site.data.keyword.dashdbshort_notm}} que está configurada para ser usada por sua instância de serviço {{site.data.keyword.mobilefoundation_short}}. No entanto, é possível usar a mesma instância de serviço {{site.data.keyword.dashdbshort_notm}} em múltiplas instâncias de serviço {{site.data.keyword.mobilefoundation_short}}, uma vez que cada instância de serviço {{site.data.keyword.mobilefoundation_short}} cria seu próprio esquema na instância de serviço {{site.data.keyword.dashdbshort_notm}} selecionada.
 
 
-## Iniciando o servidor {{site.data.keyword.mobilefirst}}
+## Iniciando o servidor do MobileFirst
 {: #start_mobilefoundation_p2}
 
 * Para iniciar o {{site.data.keyword.mfserver_short_notm}}, com as configurações padrão, clique em **Iniciar servidor básico**.
@@ -128,7 +126,7 @@ backend móvel, enviar notificações push e muito mais.
 usuário. Se o usuário precisar de espaço de armazenamento adicional para persistir dados de analítica, ele precisará comprar compartilhamento de arquivo adicional e criar um volume usando esse
 compartilhamento de arquivo. Ele poderá, então, selecionar esse novo volume enquanto implementa o servidor analítico.
 
- Para obter mais informações sobre a inclusão de volumes no {{site.data.keyword.containerlong}}, consulte [Armazenando dados persistentes em um volume usando o painel do {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.ng.bluemix.net/docs/containers/container_volumes_ui.html "Ícone de link externo"){: new_window}.
+ Para obter mais informações sobre incluir volumes no {{site.data.keyword.containerlong}}, consulte [Armazenando dados persistentes em um volume usando o {{site.data.keyword.Bluemix_notm}} Dashboard ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.ng.bluemix.net/docs/containers/container_volumes_ui.html){: new_window}.
 
 * Clique em **Incluir Analytics** para incluir o servidor Mobile Analytics na instância de serviço do {{site.data.keyword.mobilefoundation_short}}.
 
@@ -141,8 +139,7 @@ janela de mensagem indica o progresso dessa operação.
 credenciais do usuário que o servidor {{site.data.keyword.mfserver_short_notm}}. É possível usar o mesmo `username` e `password` para efetuar login no console do
 Mobile Analytics que aqueles usados no {{site.data.keyword.mfp_oc_short_notm}}.
 
-Para obter mais informações sobre o MobileFirst Analytics, é possível consultar o [MobileFirst Foundation Operational Analytics ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/ "Íconede link externo"){: new_window}.
-
+Para obter mais informações sobre o MobileFirst Analytics, é possível consultar o [MobileFirst Foundation Operational Analytics![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/){: new_window}.
 
 **Nota:** o servidor Mobile Analytics é removido quando você exclui a instância de serviço do {{site.data.keyword.mobilefoundation_short}} ou quando você tenta recriar o
 {{site.data.keyword.mfserver_short_notm}}.
@@ -164,7 +161,7 @@ atualizado. Quando os contêineres de analítica forem excluídos, o botão
 novamente o servidor Mobile Analytics, caso escolha fazê-lo.
 
 
-## Recriando o servidor {{site.data.keyword.mobilefirst}}
+## Recriando o servidor do MobileFirst
 {: #recreate_mobilefoundation_p2}
 
 *	Clique em **Recriar** para recriar o servidor.
@@ -192,5 +189,4 @@ e o número de instâncias do servidor com base em sua necessidade. O servidor p
 
       - O server farm do {{site.data.keyword.mobilefirst}} pode ser criado configurando o número de nós aqui.
 
-Veja a documentação do [{{site.data.keyword.mobilefoundation_long}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html "Íconede link externo"){: new_window} para obter mais detalhes.
-
+Consulte a [documentação do {{site.data.keyword.mobilefoundation_long}}![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html){: new_window} para obter mais detalhes.

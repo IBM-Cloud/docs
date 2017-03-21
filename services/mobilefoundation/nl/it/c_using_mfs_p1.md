@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated:  "2017-01-17"
+lastupdated:  "2017-02-17"
 
 ---
 
@@ -11,7 +11,7 @@ lastupdated:  "2017-01-17"
 
 Dopo aver creato {{site.data.keyword.mobilefoundation_short}}: istanza del servizio dello sviluppatore, in pochi secondi, puoi accedere alla pagina `Panoramica` in {{site.data.keyword.Bluemix_notm}}, la quale ti fornisce le esercitazioni e i video di aiuto per iniziare ad utilizzare il servizio  {{site.data.keyword.mobilefoundation_short}}.
 
-## Avvio del server {{site.data.keyword.mobilefirst}}
+## Avvio del server MobileFirst
 {: #start_mobilefoundation_p1}
 * Per avviare {{site.data.keyword.mfserver_short_notm}} con le impostazioni predefinite, fai clic su **Avvia server di base**.
 
@@ -49,22 +49,22 @@ indica l'avanzamento di questa operazione.
 
 * SSO (single sign-on) è abilitato tra {{site.data.keyword.mfserver_short_notm}} e il server Mobile Analytics. Il server Mobile Analytics è configurato con le stesse credenziali utente e chiavi LTPA di {{site.data.keyword.mfserver_short_notm}}. Puoi utilizzare gli stessi `nomeutente` e `password` per accedere alla console di Mobile Analytics utilizzati per accedere a {{site.data.keyword.mfp_oc_short_notm}}.
 
-Per informazioni su MobileFirst Analytics puoi fare riferimento a [MobileFirst Foundation Operational Analytics ![icona link esterno](../../icons/launch-glyph.svg "icona link esterno")](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/ "icona link esterno"){: new_window}.
+Per ulteriori informazioni su MobileFirst Analytics, puoi fare riferimento a [MobileFirst Foundation Operational Analytics ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/){: new_window}.
 
 **Nota:** il server Mobile Analytics viene rimosso quando elimini l'istanza del servizio {{site.data.keyword.mobilefoundation_short}} o quando tenti di ricreare {{site.data.keyword.mfserver_short_notm}}.
 
-##  Eliminazione del server Mobile Analytics 
+##  Eliminazione del server Mobile Analytics
 {: #deleting_analytics_server_dev}
 
 Puoi ora eliminare il server Mobile Analytics che è stato aggiunto all'istanza del servizio {{site.data.keyword.mobilefoundation_short}},
 dal dashboard del servizio {{site.data.keyword.mobilefoundation_short}}.
 
-* Fai cli su **Elimina Analytics** per eliminare il server Mobile Analytics che è stato aggiunto all'istanza del servizio {{site.data.keyword.mobilefoundation_short}}.
+* Fai clic su **Elimina Analytics** per eliminare il server Mobile Analytics che è stato aggiunto all'istanza del servizio {{site.data.keyword.mobilefoundation_short}}.
 
  Questa operazione eliminerà il gruppo del contenitore di analisi. Il processo di eliminazione dei contenitori di analisi dura circa 10 minuti. Puoi aggiornare la schermata per visualizzare lo stato di aggiornamento. Una volta che i contenitori di analisi sono stati eliminati, viene riabilitato il pulsante **Aggiungi Analytics**, puoi utilizzarlo per aggiungere nuovamente il server Mobile Analytics se decidi di farlo.
 
 
-## Ricreazione del server {{site.data.keyword.mobilefirst}}
+## Ricreazione del server MobileFirst
 {: #recreate_mobilefoundation_p1}
 
 *	Fai clic su **Ricrea** per ricreare il server.
@@ -85,4 +85,4 @@ aggiornare le impostazioni del server per personalizzare la tua configurazione s
 
 * **Nodi** visualizza il numero di nodi creati. Questo campo non è modificabile in {{site.data.keyword.mobilefoundation_short}}: Developer. Il numero di nodi in <!--in your {{site.data.keyword.IBM_notm}} container group--> è predefinito su **1** nel piano Developer.
 
-Fai riferimento alla [Documentazione {{site.data.keyword.mobilefoundation_long}} ![icona link esterno](../../icons/launch-glyph.svg "icona link esterno")](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html "icona link esterno"){: new_window} per ulteriori dettagli.
+Fai riferimento alla [documentazione {{site.data.keyword.mobilefoundation_long}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html){: new_window} per ulteriori dettagli.

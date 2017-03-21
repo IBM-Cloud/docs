@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated:  "2017-01-17"
+lastupdated:  "2017-02-17"
 
 ---
 
@@ -30,20 +30,20 @@ lastupdated:  "2017-01-17"
 ###  첫 번째 단계
 {: #firststeps_p3}
 
-{{site.data.keyword.mobilefoundation_short}}: Developer Pro 서비스 인스턴스를 작성한 후 아래 프로시저에 따라 시작하십시오. 
+{{site.data.keyword.mobilefoundation_short}}: Developer Pro 서비스 인스턴스를 작성한 후 프로시저에 따라 시작하십시오. 
 
-### {{site.data.keyword.dashdbshort_notm}} 서비스 인스턴스에 대한 연결 설정
+### dashDB 서비스 인스턴스에 대한 연결 설정
 {: #connect_dashdb_p3}
 
-{{site.data.keyword.mobilefoundation_short}}: Developer Pro 서비스 인스턴스가 작성된 후에 {{site.data.keyword.mobilefoundation_short}} 서비스 인스턴스를 연결할 {{site.data.keyword.dashdbshort_notm}} for Transactions 서비스 인스턴스에 대한 연결 정보를 지정해야 하는 *개요* 페이지가 표시됩니다.
+{{site.data.keyword.mobilefoundation_short}}: Developer Pro 서비스 인스턴스가 작성된 후에 {{site.data.keyword.mobilefoundation_short}} 서비스 인스턴스를 연결할 {{site.data.keyword.dashdbshort_notm}} for Transactions 서비스 인스턴스에 대한 연결 정보를 지정해야 하는 *Overview* 페이지가 표시됩니다.
 
 **참고:** {{site.data.keyword.dashdbshort_notm}} for Analytics: Enterprise for Transactions 서비스 인스턴스가 이미 있는 경우, 동일한 인스턴스를 사용하여 {{site.data.keyword.mobilefoundation_short}} 서비스 인스턴스에 연결하도록 구성할 수 있습니다.
 
 기존 {{site.data.keyword.dashdbshort_notm}} for Transactions 서비스 인스턴스가 없는 경우에는 새로 작성할 수 있습니다.
 
-다음 단계를 수행하여 새 dashDB for Transactions 서비스 인스턴스를 작성하십시오.
+다음 단계에 따라 새로운 dashDB for Transactions 서비스 인스턴스를 작성하십시오. 
 
-1. *개요* 페이지에서 **새 서비스 작성** 섹션을 선택하십시오.
+1. *Overview* 페이지에서 **새 서비스 작성** 섹션을 선택하십시오.
 
 + 고가용성 {{site.data.keyword.dashdbshort_notm}} for Transactions 서비스 인스턴스를 원하는 경우 **고가용성 구성** 옵션에서 `Yes`를 선택하십시오.
 
@@ -51,12 +51,12 @@ lastupdated:  "2017-01-17"
 
 새 {{site.data.keyword.dashdbshort_notm}} for Transactions: EnterpriseForTransactions2.8.500 서비스 인스턴스가 작성되며, 전용 {{site.data.keyword.dashdbshort_notm}} 인스턴스에 8GB RAM과 2vCPU 및 500GB의 스토리지를 제공합니다.
 
-다음 단계를 수행하여 기존 {{site.data.keyword.dashdbshort_notm}} 서비스 인스턴스 또는 사용자가 작성한 {{site.data.keyword.dashdbshort_notm}} for Transactions 서비스 인스턴스에 연결하십시오.
+다음 단계에 따라 기존 {{site.data.keyword.dashdbshort_notm}} 서비스 인스턴스 또는 방금 작성한 {{site.data.keyword.dashdbshort_notm}} for Transactions 서비스 인스턴스에 연결하십시오. 
 
 1. {{site.data.keyword.dashdbshort_notm}} 서비스 인스턴스가 있는 {{site.data.keyword.Bluemix_notm}} `Organization`을 선택하십시오. 
 
 + 선택된 `Organization`에 사용 가능한 영역 목록에서 {{site.data.keyword.dashdbshort_notm}} 서비스 인스턴스가 존재하는 {{site.data.keyword.Bluemix_notm}} `Space`를 선택하십시오.    
-**참고:** {{site.data.keyword.dashdbshort_notm}} 서비스 인스턴스가 있는 `Organization`과 `Space`가 나열되지 않는 경우에는 해당 `Organization`과 `Space`의 구성원인지 여부를 확인하십시오. {{site.data.keyword.mobilefoundation_short}} 서비스가 {{site.data.keyword.dashdbshort_notm}} 서비스의 신임 정보에 액세스하므로 조직 및 영역에 대한 *개발자* 역할 액세스 권한을 가져야 합니다.
+**참고:** {{site.data.keyword.dashdbshort_notm}} 서비스 인스턴스가 있는 `Organization`과 `Space`가 나열되지 않는 경우에는 해당 `Organization`과 `Space`의 구성원인지 여부를 확인하십시오. {{site.data.keyword.mobilefoundation_short}} 서비스가 {{site.data.keyword.dashdbshort_notm}} 서비스의 신임 정보에 액세스하므로 조직 및 영역에 대한 *Developer* 역할 액세스 권한을 가져야 합니다.
 
 + {{site.data.keyword.dashdbshort_notm}} `Service Name` 및 `Credentials`를 선택하여 기존 {{site.data.keyword.dashdbshort_notm}} 서비스 인스턴스에 연결하십시오.
 
@@ -68,7 +68,7 @@ lastupdated:  "2017-01-17"
 
 **참고**: 사용자의 {{site.data.keyword.mobilefoundation_short}} 서비스 인스턴스에 의해 사용되도록 구성된 {{site.data.keyword.dashdbshort_notm}} 서비스 인스턴스를 변경할 수 없습니다. 그러나 각 {{site.data.keyword.mobilefoundation_short}} 서비스 인스턴스가 선택된 {{site.data.keyword.dashdbshort_notm}} 서비스 인스턴스 내에 자체 스키마를 작성하므로, 다중 {{site.data.keyword.mobilefoundation_short}} 서비스 인스턴스에 걸쳐 동일한 {{site.data.keyword.dashdbshort_notm}} 서비스 인스턴스를 사용할 수 있습니다.
 
-## {{site.data.keyword.mobilefirst}} 서버 시작
+## MobileFirst 서버 시작
 {: #start_mobilefoundation_p3}
 
 * 기본 설정으로 {{site.data.keyword.mfserver_short_notm}}를 시작하려면 **기본 서버 시작**을 클릭하십시오.
@@ -100,7 +100,7 @@ lastupdated:  "2017-01-17"
 
  데이터를 유지하기 위해 컨테이너에 볼륨도 연결할 수 있습니다. 볼륨을 한 번 선택하면 변경할 수 없습니다. 사용 가능한 기본 파일 공유 영역은 20GB입니다. 사용자가 분석 데이터를 유지할 추가 스토리지 영역이 필요하면 추가 파일 공유를 구매하고 이 파일 공유를 사용하여 볼륨을 작성해야 합니다. 그런 다음 분석 서버를 배치하는 동안 이 새 볼륨을 선택할 수 있습니다.
 
- {{site.data.keyword.containerlong}}에 볼륨 추가에 대한 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} 대시보드를 사용하여 볼륨에 지속적 데이터 저장 ![외부 링크 아이콘](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/docs/containers/container_volumes_ui.html){: new_window}을 참조하십시오.
+ {{site.data.keyword.containerlong}}에 볼륨 추가에 대한 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} 대시보드를 사용하여 볼륨에 지속적 데이터 저장 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.ng.bluemix.net/docs/containers/container_volumes_ui.html){: new_window}을 참조하십시오. 
 
 * **분석 추가**를 클릭하여 {{site.data.keyword.mobilefoundation_short}} 서비스 인스턴스에 Mobile Analytics 서버를 추가하십시오.
 
@@ -112,7 +112,7 @@ lastupdated:  "2017-01-17"
 
 * {{site.data.keyword.mfserver_short_notm}}와 Mobile Analytics 서버 간에 싱글 사인온이 사용됩니다. Mobile Analytics 서버는 {{site.data.keyword.mfserver_short_notm}}와 동일한 LTPA 키 및 사용자 신임 정보를 사용하여 구성합니다. {{site.data.keyword.mfp_oc_short_notm}}에 로그인하는 데 사용한 `username`과 `password`를 사용하여 Mobile Analytics 콘솔에 로그인할 수 있습니다. 
 
-MobileFirst Analytics에 대한 자세한 정보는 [MobileFirst Foundation Operational Analytics ![외부 링크 아이콘](../../icons/launch-glyph.svg "External link icon")](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/){: new_window}을 참조할 수 있습니다.
+MobileFirst Analytics에 대한 자세한 정보는 [MobileFirst Foundation Operational Analytics ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://mobilefirstplatform.ibmcloud.com/tutorials/en/foundation/8.0/analytics/){: new_window}을 참조할 수 있습니다. 
 
 **참고:** {{site.data.keyword.mobilefoundation_short}} 서버 인스턴스를 삭제하거나 {{site.data.keyword.mfserver_short_notm}}를 다시 작성하려고 할 때 Mobile Analytics 서버가 제거됩니다.
 
@@ -125,7 +125,7 @@ MobileFirst Analytics에 대한 자세한 정보는 [MobileFirst Foundation Oper
 
  이렇게 하면 분석 컨테이너 그룹이 삭제됩니다. 분석 컨테이너 삭제 프로세스에는 약 10분이 걸립니다. 화면을 새로 고쳐 업데이트된 상태를 볼 수 있습니다. 분석 컨테이너가 삭제되면 **분석 추가** 단추가 다시 사용 가능하게 되고 이 단추를 사용하여 Mobile Analytics 서버를 다시 추가할 수 있습니다(선택하는 경우).
 
-## {{site.data.keyword.mobilefirst}} 서버 재작성
+## MobileFirst 서버 재작성
 {: #recreate_mobilefoundation_p3}
 
 *	**재작성**을 클릭하여 서버를 재작성하십시오.
@@ -144,4 +144,4 @@ MobileFirst Analytics에 대한 자세한 정보는 [MobileFirst Foundation Oper
 
   - **노드**는 작성된 노드의 수를 표시합니다. 이 필드를 {{site.data.keyword.mobilefoundation_short}}: Developer Pro에서 편집할 수 없습니다. Developer Pro 플랜에서 <!--in your {{site.data.keyword.IBM_notm}} container group--> 노드 수는 기본적으로 **1**입니다. 
 
-세부사항은 [{{site.data.keyword.mobilefoundation_long}} 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html){: new_window}을 참조하십시오.
+세부사항은 [{{site.data.keyword.mobilefoundation_long}} 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/support/knowledgecenter/SSHS8R_8.0.0/wl_welcome.html){: new_window}을 참조하십시오. 

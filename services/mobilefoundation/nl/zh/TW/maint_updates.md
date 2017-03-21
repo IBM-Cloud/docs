@@ -14,7 +14,7 @@ lastupdated:  "2016-08-03"
 # 維護及更新
 {: #maintupdates_mf}
 
-{{site.data.keyword.mobilefoundation_short}} 佈建一個 {{site.data.keyword.mfserver_short_notm}} <!--on {{site.data.keyword.containerlong}} as a container group-->。{{site.data.keyword.mobilefoundation_short}} 伺服器的更新會通知使用者。您可以選擇在您方便的時候更新 {{site.data.keyword.mobilefoundation_short}} 伺服器。
+{{site.data.keyword.mobilefoundation_short}} 佈建一個 {{site.data.keyword.mfserver_short_notm}}<!-- on {{site.data.keyword.containerlong}} as a container group-->。{{site.data.keyword.mobilefoundation_short}} 伺服器的更新會通知使用者。您可以選擇在您方便的時候更新 {{site.data.keyword.mobilefoundation_short}} 伺服器。
 {:shortdesc}
 
 ## 維護策略
@@ -36,6 +36,8 @@ lastupdated:  "2016-08-03"
 
 套用更新時，伺服器版本（如 {{site.data.keyword.mfp_oc_short_notm}} 中所見）將修改為指出伺服器更新版本。
 
-**附註：**
+### 附註：
+{: #note notoc}
+
 * 使用者將無法套用自己的修正程式和更新至 {{site.data.keyword.mobilefoundation_short}} 服務實例。
 * 請參閱[在 Developer 方案中重建伺服器](c_using_mfs_p1.html#recreate_mobilefoundation_p1)和[在 Professional 1 Application 方案中重建伺服器](c_using_mfs_p2.html#recreate_mobilefoundation_p2)，以瞭解按一下**重建**時，方案之間的行為差異。
