@@ -36,7 +36,7 @@ To see data from an IBM UrbanCode Deploy server in Delivery Insights, you must i
   1. Put the patch files in the <code><em>application_data</em>/patches</code> folder, where <code><em>application_data</em></code> is the server application data folder. The default application data folder is `/opt/ibm-ucd/server/appdata` on Linux and `C:\Program Files\ibm-ucd\server\appdata` on Windows. On high-availability systems, the application data folder is always on a shared network drive that each server can access.
 
   1. Optional: While the server is stopped, to increase performance of the data import from this server, run the following SQL commands on the database:  
-  ```create index rt_cpr_submitted_time on MyUCDDatabase.rt_comp_process_request(component_id, submitted_time);  ```  
+  ```create index rt_cpr_submitted_time on MyUCDDatabase.rt_app_process_request(submitted_time);```  
   ```create index rt_cpr_submitted_time on MyUCDDatabase.rt_comp_process_request(component_id, submitted_time);```  
   Use the name of your database for `MyUCDDatabase`.
   <!-- Ross says that this will not be necessary for versions 6.2.4.1 and later if he gets his code changes in. -->
