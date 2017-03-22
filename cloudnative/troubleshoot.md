@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-03-22"
 
 ---
 
@@ -67,13 +67,13 @@ Failed to <command> project.
 
 
 #### Cause
-{: #hostname-cause}
+{: #general-cause}
    
 This error is due to an expired login token.
 
 
 #### Resolution
-{: #hostname-resolution}
+{: #general-resolution}
 
 Log in again.
 
