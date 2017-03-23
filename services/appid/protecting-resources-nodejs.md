@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-03-21"
 
 ---
 
@@ -42,26 +42,26 @@ The {{site.data.keyword.appid_short_notm}} server SDK uses the Passport framewor
   ```
   npm install -save express
   npm install -save passport
-  npm install -save appid-serversdk-nodejs
+  npm install -save bluemix-appid
   ```
   {:pre}
 
 ## Protecting resources in Node.js
 {: #protecting-resources-nodesdk}
 
-The following snippet demonstrates how to use `ApiStrategy` in a simple Express application to protect the `/protected` endpoint GET methods.
+The following snippet demonstrates how to use `APIStrategy` in a simple Express application to protect the `/protected` endpoint GET methods.
 
   ```JavaScript
 
   var express = require('express');
   var passport = require('passport');
-  var ApiStrategy = require('appid-serversdk-nodejs').ApiStrategy;
+  var APIStrategy = require('bluemix-appid').APIStrategy;
 
-  passport.use(new ApiStrategy());
+  passport.use(new APIStrategy());
   var app = express();
   app.use(passport.initialize());
 
-  app.get('/protected', passport.authenticate('appid-api-strategy', {session: false }),
+  app.get('/protected', passport.authenticate('APIStrategy.STRATEGY_NAME', {session: false }),
       function(request, response){
           console.log("Securty context", request.securityContext)    
           response.send(200, "Success!");
@@ -78,7 +78,7 @@ You can use `WebAppStrategy` to protect web application resources:
 
   var express = require('express');
   var passport = require('passport');
-  var ApiStrategy = require('appid-serversdk-nodejs').WebStrategy;
+  var WebAppStrategy = require('bluemix-appid').WebAppStrategy;
   ```
   {:pre}
 

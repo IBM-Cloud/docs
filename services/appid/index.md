@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-03-21"
 
 ---
 
@@ -26,8 +26,6 @@ Add security to your applications with the {{site.data.keyword.appid_full}} serv
 
 
 
-
-
 # Related Links
 {: #rellinks notoc}
 
@@ -43,14 +41,3 @@ Add security to your applications with the {{site.data.keyword.appid_full}} serv
 * [{{site.data.keyword.appid_short_notm}} iOS-Swift Client SDK](https://github.com/ibm-cloud-security/appid-clientsdk-swift){: new_window}
 * [{{site.data.keyword.appid_short_notm}} Nodejs Server SDK](https://github.com/ibm-cloud-security/appid-serversdk-nodejs){: new_window}
 * [{{site.data.keyword.appid_short_notm}} Swift Server SDK](https://github.com/ibm-cloud-security/appid-serversdk-swift){: new_window}
-
-
-<!---## Tutorials and Samples
-{: #samples notoc}--->
-
-
-
-## Related Links
-{: #general notoc}
-* [{{site.data.keyword.Bluemix}} Pricing Sheet](https://www.ng.bluemix.net/#/pricing){: new_window}
-* [{{site.data.keyword.Bluemix}} Prerequisites](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}

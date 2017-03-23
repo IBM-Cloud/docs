@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-03-21"
 
 ---
 
@@ -136,7 +136,7 @@ After the {{site.data.keyword.appid_short_notm}} client SDK is initialized, you 
 
 When you obtain an access token, it is possible to gain access to the user protected attributes endpoint. You can gain access by using the following API methods:
 
-  ```   
+  ```java
   void setAttribute(@NonNull String name, @NonNull String value, UserAttributeResponseListener listener);
   void setAttribute(@NonNull String name, @NonNull String value, @NonNull AccessToken accessToken, UserAttributeResponseListener listener);
 
@@ -155,7 +155,7 @@ When an access token is not explicitly passed, {{site.data.keyword.appid_short_n
 
 For example, you can invoke this code to set a new attribute, or override an existing one:
 
-  ```
+  ```java
   appId.getUserAttributeManager().setAttribute(name, value, useThisToken,new UserAttributeResponseListener() {
 		@Override
 		public void onSuccess(JSONObject attributes) {
@@ -175,7 +175,7 @@ For example, you can invoke this code to set a new attribute, or override an exi
 
 With {{site.data.keyword.appid_short_notm}} you can log in anonymously, see [anonymous user](/docs/services/appid/user-profile.html#anonymous).
 
-  ```
+  ```java
   appId.loginAnonymously(getApplicationContext(), new AuthorizationListener() {
 		@Override
 		public void onAuthorizationFailure(AuthorizationException exception) {
@@ -198,16 +198,16 @@ With {{site.data.keyword.appid_short_notm}} you can log in anonymously, see [ano
 ### Progressive authentication
 {: #progressive notoc}
 
-When the user holds an anonymous access toke, they can become identified by passing it to the `loginWidget.launch` method.
+When the user holds an anonymous access token, they can become identified by passing it to the `loginWidget.launch` method.
 
-  ```
+  ```java
   void launch (@NonNull final Activity activity, @NonNull final AuthorizationListener authorizationListener, String accessTokenString);
   ```
   {:pre}
 
 After an anonymous login, progressive authentication occurs even if the login widget is called without passing an access token because the service used the last received token. If you want to clear your stored tokens, run the following command:
 
-  ```
+  ```java
   	appIDAuthorizationManager = new AppIDAuthorizationManager(this.appId);
   appIDAuthorizationManager.clearAuthorizationData();
   ```
