@@ -30,7 +30,7 @@ To quickly get the {{site.data.keyword.mobileanalytics_short}} service up and ru
 
 3. Import the Client SDKs and initialize them with the following code snippet to record usage analytics:
 
-	#### Android
+	## Android
 	{: #android-import notoc}
 
 	Add the following `import` statements to the beginning of your project file:
@@ -40,84 +40,84 @@ To quickly get the {{site.data.keyword.mobileanalytics_short}} service up and ru
     import com.ibm.mobilefirstplatform.clientsdk.android.analytics.api.*;
     import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.*;
     ```
-    {: codeblock}
-  
- #### iOS
- {: #ios-import notoc}
-	
- **Note:** The Swift SDK is available for iOS and watchOS.
-	
- Import the `BMSCore` and `BMSAnalytics` frameworks by adding the following `import` statements to the beginning of your `AppDelegate.swift` project file:
+	{: codeblock}
 
-   ```Swift
-   import BMSCore
-   import BMSAnalytics
-   ```
-   {: codeblock}  
+	## iOS
+	{: #ios-import notoc}
+	
+	**Note:** The Swift SDK is available for iOS and watchOS.
+	
+	Import the `BMSCore` and `BMSAnalytics` frameworks by adding the following `import` statements to the beginning of your `AppDelegate.swift` project file:
+
+	```Swift
+	import BMSCore
+	import BMSAnalytics
+	```
+	{: codeblock}
    
- #### Cordova
- {: #cordova-import notoc}
+	## Cordova
+	{: #cordova-import notoc}
 		
- Add the Cordova plugin by running the following command from your Cordova application root directory:
+	Add the Cordova plugin by running the following command from your Cordova application root directory:
 
- ```Javascript
- cordova plugin add bms-core
- ```
- {: codeblock}  
+	```Javascript
+	cordova plugin add bms-core
+	```
+	{: codeblock}  
 
 4. Initialize the {{site.data.keyword.mobileanalytics_short}} Client SDK in your application code to record usage analytics and application sessions, using your [API Key](/docs/services/mobileanalytics/sdk.html#analytics-clientkey) value.	
 	
- #### Android
- {: #android-initialize notoc}	
+	## Android
+	{: #android-initialize notoc}	
 
-  ```
-  BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_US_SOUTH); // You can change the region
-  Analytics.init(getApplication(), "your_app_name_here", "your_api_key_here", hasUserContext, Analytics.DeviceEvent.ALL);
-  ```
-  {: codeblock}
+	```
+	BMSClient.getInstance().initialize(getApplicationContext(), BMSClient.REGION_US_SOUTH); // You can change the region
+	Analytics.init(getApplication(), "your_app_name_here", "your_api_key_here", hasUserContext, Analytics.DeviceEvent.ALL);
+	```
+	{: codeblock}
     
- The **bluemixRegion** parameter specifies which {{site.data.keyword.Bluemix_notm}} deployment you are using, for example, `BMSClient.REGION_US_SOUTH` and `BMSClient.REGION_UK`. 
+	The **bluemixRegion** parameter specifies which {{site.data.keyword.Bluemix_notm}} deployment you are using, for example, `BMSClient.REGION_US_SOUTH` and `BMSClient.REGION_UK`. 
     <!-- , or `BMSClient.Region.Sydney`.-->
     
- Set the value for `hasUserContext` to **true** or **false**. If false (default value), each device is counted as an active user.
+	Set the value for `hasUserContext` to **true** or **false**. If false (default value), each device is counted as an active user.
 
- #### iOS
- {: #ios-initialize notoc}
+	## iOS
+	{: #ios-initialize notoc}
   
-  Initialize the Client SDK inside your application code to record usage analytics and application sessions, using your [API Key](/docs/services/mobileanalytics/sdk.html#analytics-clientkey) value.
+	Initialize the Client SDK inside your application code to record usage analytics and application sessions, using your [API Key](/docs/services/mobileanalytics/sdk.html#analytics-clientkey) value.
 	
-  ```Swift
-  BMSClient.sharedInstance.initialize(bluemixRegion: BMSClient.Region.usSouth) // You can change the region
-  Analytics.initialize(appName: "your_app_name_here", apiKey: "your_api_key_here", hasUserContext: false, deviceEvents: deviceEvents: .lifecycle, .network)
-  ```
-  {: codeblock}
+	```Swift
+	BMSClient.sharedInstance.initialize(bluemixRegion: BMSClient.Region.usSouth) // You can change the region
+	Analytics.initialize(appName: "your_app_name_here", apiKey: "your_api_key_here", hasUserContext: false, deviceEvents: deviceEvents: .lifecycle, .network)
+	```
+	{: codeblock}
 			
-   The **bluemixRegion** parameter specifies which Bluemix deployment you are using, for example, `BMSClient.Region.usSouth` or `BMSClient.Region.unitedKingdom`.
+	The **bluemixRegion** parameter specifies which Bluemix deployment you are using, for example, `BMSClient.Region.usSouth` or `BMSClient.Region.unitedKingdom`.
 	<!-- , or `BMSClient.REGION_SYDNEY`. -->
  
- Set the value for `hasUserContext` to **true** or **false**. If false (default value), each device is counted as an active user.
+	Set the value for `hasUserContext` to **true** or **false**. If false (default value), each device is counted as an active user.
 	
- #### Cordova
- {: #cordova-initialize notoc}
+	## Cordova
+	{: #cordova-initialize notoc}
 	
- Initialize the Client SDK inside your application code to record usage analytics and application sessions, using your [API Key](/docs/services/mobileanalytics/sdk.html#analytics-clientkey) value.
+	Initialize the Client SDK inside your application code to record usage analytics and application sessions, using your [API Key](/docs/services/mobileanalytics/sdk.html#analytics-clientkey) value.
 	
-  ```
-  var appName = "your_app_name_here";
-  var apiKey = "your_api_key_here";
+	```
+	var appName = "your_app_name_here";
+	var apiKey = "your_api_key_here";
 	
-  BMSClient.initialize(BMSClient.REGION_US_SOUTH); // You can change the region
-  BMSAnalytics.initialize(appName, apiKey, false, [BMSAnalytics.ALL])
-  ```
-  {: codeblock}
+	BMSClient.initialize(BMSClient.REGION_US_SOUTH); // You can change the region
+	BMSAnalytics.initialize(appName, apiKey, false, [BMSAnalytics.ALL])
+	```
+	{: codeblock}
   
-  The **bluemixRegion** parameter specifies which {{site.data.keyword.Bluemix_notm}} deployment you are using, for example, `BMSClient.REGION_US_SOUTH` and `BMSClient.REGION_UK`.
+	The **bluemixRegion** parameter specifies which {{site.data.keyword.Bluemix_notm}} deployment you are using, for example, `BMSClient.REGION_US_SOUTH` and `BMSClient.REGION_UK`.
   
- **Note:** The name that you select for your application (`your_app_name_here`) displays in the {{site.data.keyword.mobileanalytics_short}} console as the application name. The application name is used as a filter to search for application logs in the dashboard. When you use the same application name across platforms (for example, Android and iOS), you can see all logs from that application under the same name, regardless of which platform the logs were sent from.
+	**Note:** The name that you select for your application (`your_app_name_here`) displays in the {{site.data.keyword.mobileanalytics_short}} console as the application name. The application name is used as a filter to search for application logs in the dashboard. When you use the same application name across platforms (for example, Android and iOS), you can see all logs from that application under the same name, regardless of which platform the logs were sent from.
 
 5. Send recorded usage analytics to the {{site.data.keyword.mobileanalytics_short}} Service. A simple way to test your analytics is to run the following code when your application starts:
 
-	#### Android
+	## Android
 	{: #android-send notoc}
 
 	Use the `Analytics.send()` method to send analytics data to the server. You can place the `Analytics.send()` method anywhere in the `onCreate` method of the main activity in your Android application, or in a location that works best for your project. 
@@ -129,7 +129,7 @@ To quickly get the {{site.data.keyword.mobileanalytics_short}} service up and ru
 	```
 	{: codeblock}
 
-	#### iOS
+	## iOS
 	{: #ios-send notoc}
 
 	Use the `Analytics.send` method to send analytics data to the server. You can place the `Analytics.send` method anywhere in the `application(_:didFinishLaunchingWithOptions:)` method of your application delegate, or in a location that works best for your project. 
@@ -139,7 +139,7 @@ To quickly get the {{site.data.keyword.mobileanalytics_short}} service up and ru
 	```
 	{: codeblock}
 	
-	#### Cordova
+	## Cordova
 	{: #cordova-send notoc}
 	
 	Use the `BMSAnalytics.send` method to send analytics data to the server. Place the `BMSAnalytics.send` method in a location that works best for your project.
