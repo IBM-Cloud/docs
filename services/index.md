@@ -40,7 +40,7 @@ Experimental services might not be stable and can change in ways that are not co
 Not all services are available for purchase in every {{site.data.keyword.Bluemix_notm}} region. And, even if the service is available to purchase in that region, the service might be hosted in a different location. The following table shows the services that are provided by IBM.
 
 
-| Service | Available for purchase in Dallas, United States | Available for purchase in London, United Kingdom | Available for purchase in Sydney, Australia | Available for purchase in Frankfurt, Germany |
+|Service | Available for purchase in Dallas, United States | Available for purchase in London, United Kingdom | Available for purchase in Sydney, Australia | Available for purchase in Frankfurt, Germany |
 |:----------|:------------------------------|:------------------|:------------------|
 |{{site.data.keyword.cloudaccesstrailshort}} | Hosted in Dallas,US | Hosted in London,UK | Not available in region | Not available in region |
 |{{site.data.keyword.activedeployshort}} | Hosted in Dallas,US | Hosted in London,UK | Not available in region | Not available in region |
