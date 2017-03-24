@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-16"
+lastupdated: "2017-3-23"
 
 ---
 
@@ -77,21 +77,23 @@ If you are using {{site.data.keyword.Bluemix_notm}} Dedicated for {{site.data.ke
 
 * To grant access to a user who is not a member of the toolchain's org, follow these steps:
 
-   a. From the menu bar, click **Account**.
+   a. From the menu bar, click **Manage > Account > Organizations**.
 
-   b. Click **Manage Organizations**.
+   b. Click **Invite Team Members**.
+   
+   c. Select the org that you want to invite the user to and click **Next**.
+   
+   d. Select the spaces that you want to allow the user to access.
+   
+   e. Select the role to assign for the selected spaces in the org. 
+   
+     **Note**: By default, org managers have full admin privileges for all of the toolchains that are associated with the org. To grant full admin privileges to the user, select the **Manager** role. The Billing Manager and Auditor roles do not affect toolchain access. You can change the roles later on the Team Directory page. For more information, see [Managing team members and roles](/docs/admin/users_roles.html){: new_window}.
+   
+   f. Select the option to confirm that you take financial responsibility for all charges that are incurred on the account.
+   
+   g. Enter the email address of the user that you want to invite and click **Send**.
 
-   c. Click the org that you want to add the user to and then click **Edit Org**.
-
-   d. Click **Invite a User**, and type the user's email address.
-
-   e. If you want to give advanced permissions to manage users in {{site.data.keyword.Bluemix_notm}} orgs, select one or more of the **Manager**, **Billing Manager**, or **Auditor** check boxes. For more information, see [Managing team members and roles](/docs/admin/users_roles.html){: new_window}.
-
-     **Note**: By default, org managers have full admin privileges for all of the toolchains that are associated with the org. To grant full admin privileges to the user, select the **Manager** check box. The Billing Manager and Auditor roles do not affect toolchain access.
-
-   f. Click **INVITE** and then click **SAVE**.
-
-   g. After the user is a member of the org, return to the toolchain's Manage page and add the user to the toolchain.  
+   h. After the user is a member of the org, return to the toolchain's Manage page and add the user to the toolchain.  
 
 
 ## Deleting a toolchain
