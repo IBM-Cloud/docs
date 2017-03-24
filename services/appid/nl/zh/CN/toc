@@ -1,0 +1,15 @@
+[App ID 入门](/docs/services/appid/index.html)
+    index.md
+    about.md
+    developing-apps.md
+        getting-started-android.md
+        getting-started-ios-swift-sdk.md
+    identity-providers.md
+    login-widget.md
+    protecting-resources.md
+        protecting-resources-nodejs.md
+        protecting-resources-swift.md
+        protecting-resources-local.md
+    user-profile.md
+    ts_index.md
+    mca.md
