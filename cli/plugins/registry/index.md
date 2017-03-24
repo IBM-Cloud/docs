@@ -15,7 +15,7 @@ lastupdated: "2017-03-20"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# {{site.data.keyword.registrylong}} CLI
+# {{site.data.keyword.registrylong_notm}} CLI
 {: #containerregcli}
 
 The {{site.data.keyword.registrylong}} CLI is a plug-in that lets you manage your registry resources, such as namespaces and images, across your org.
