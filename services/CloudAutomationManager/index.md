@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-08"
+lastupdated: "2017-03-22"
 
 ---
 <!-- Copyright info and last updated date at top of file: REQUIRED
@@ -57,7 +57,7 @@ The task section includes steps to integrate the service into the app.
 
 <!-- Include a sentence to briefly introduce the steps. Examples: -->
 
-After you add the Cloud Automation Manager service from the Bluemix Experimental Services catalog, to get started with the service, create and deploy a template to your cloud provider. The following cloud providers are supported:
+After you add the Cloud Automation Manager service from the Bluemix catalog, to get started with the service, create and deploy a template to your cloud provider. The following cloud providers are supported:
  - IBM Cloud
  - Amazon EC2
  - vSphere (Beta)
