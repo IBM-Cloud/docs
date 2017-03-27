@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-02-21"
+lastupdated: "2017-02-21"
 
 ---
 
@@ -142,8 +142,8 @@ Docker の使用によって、隔離され制御された方法で素早くア�
 ここで使用している特定の例では、Invoker は結果の JSON オブジェクトをアクションから返され、Docker によって書き込まれたログを取得し、それらをすべてアクティベーション・レコードに入れ、そのレコードをデータベースに保管します。そのレコードは以下のようなものです。
 
 ```json
-  {
-      "activationId": "31809ddca6f64cfc9de2937ebd44fbb9",
+{
+   "activationId": "31809ddca6f64cfc9de2937ebd44fbb9",
    "response": {
        "statusCode": 0,
        "result": {

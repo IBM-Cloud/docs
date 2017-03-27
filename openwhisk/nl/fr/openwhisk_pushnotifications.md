@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-02-23"
+lastupdated: "2017-02-23"
 
 ---
 
@@ -79,10 +79,10 @@ notification"`.
 - `gcmDelayWhileIdle` : lorsque ce paramètre a pour valeur true, il indique que le message ne doit pas être envoyé tant que le périphérique n'est pas actif.
 - `gcmPriority` : définit la priorité du message.
 - `gcmTimeToLive` : ce paramètre spécifie le nombre de secondes pendant lesquelles le message doit être conservé dans le stockage GCM si le périphérique est hors ligne.
-- `gcmSync` : la messagerie de groupe de périphériques permet à chaque instance d'application d'un groupe de refléter le dernier état de messagerie. 
-- `gcmVisibility` : privé/public - visibilité de cette notification, qui affecte comment et quand les notifications sont révélées sur un écran verrouillé. 
+- `gcmSync` : la messagerie de groupe de périphériques permet à chaque instance d'application d'un groupe de refléter le dernier état de messagerie.
+- `gcmVisibility` : privé/public - visibilité de cette notification, qui affecte comment et quand les notifications sont révélées sur un écran verrouillé.
 - `gcmStyleType` : spécifie les types de notification pouvant être développés. Les valeurs possibles sont `bigtext_notification`, `picture_notification`, `inbox_notification`.
-- `gcmStyleTitle` : spécifie le titre de la notification. Le titre s'affiche lorsque la notification est développée. Un titre doit être spécifié pour les trois notifications pouvant être développées. 
+- `gcmStyleTitle` : spécifie le titre de la notification. Le titre s'affiche lorsque la notification est développée. Un titre doit être spécifié pour les trois notifications pouvant être développées.
 - `gcmStyleUrl` : URL à partir de laquelle l'image doit être obtenur pour la notification. Doit être spécifiée pour picture_notification.
 - `gcmStyleText` : grand texte qui doit être affiché sur une notification bigtext_notification pouvant être développée. Doit être spécifié pour bigtext_notification.
 - `gcmStyleLines` : tableau de chaînes qui doit être affiché dans le style boîte de réception pour inbox_notification. Doit être spécifié pour inbox_notification.
@@ -92,22 +92,22 @@ notification"`.
 - `apnsPayload` : contenu JSON personnalisé qui sera envoyé dans le cadre du message de notification.
 - `apnsType` : ['DEFAULT', 'MIXED', 'SILENT'].
 - `apnsSound` : nom du fichier son dans l'ensemble d'applications. Le son de ce fichier est utilisé pour une alerte.
-- `fireFoxTitle` : spécifie le titre qui doit être défini pour WebPush Notification. 
+- `fireFoxTitle` : spécifie le titre qui doit être défini pour WebPush Notification.
 - `fireFoxIconUrl` : URL de l'icône qui doit être définie pour WebPush Notification.
-- `fireFoxTimeToLive` : ce paramètre spécifie la durée de conservation (exprimée en secondes) du message dans le stockage GCM si le périphérique est hors ligne. 
-- `fireFoxPayload` : contenu JSON personnalisé qui est envoyé dans le cadre du message de notification. 
+- `fireFoxTimeToLive` : ce paramètre spécifie la durée de conservation (exprimée en secondes) du message dans le stockage GCM si le périphérique est hors ligne.
+- `fireFoxPayload` : contenu JSON personnalisé qui est envoyé dans le cadre du message de notification.
 - `chromeTitle` : spécifie le titre qui doit être défini pour WebPush Notification.
 - `chromeIconUrl` : URL de l'icône qui doit être définie pour WebPush Notification.
-- `chromeTimeToLive` : ce paramètre spécifie la durée de conservation (exprimée en secondes) du message dans le stockage GCM si le périphérique est hors ligne. 
-- `chromePayload` : contenu JSON personnalisé qui est envoyé dans le cadre du message de notification. 
+- `chromeTimeToLive` : ce paramètre spécifie la durée de conservation (exprimée en secondes) du message dans le stockage GCM si le périphérique est hors ligne.
+- `chromePayload` : contenu JSON personnalisé qui est envoyé dans le cadre du message de notification.
 - `chromeAppExtTitle` : spécifie le titre qui doit être défini pour WebPush Notification.
 - `chromeAppExtCollapseKey` : ce paramètre identifie un groupe de messages.
 - `chromeAppExtDelayWhileIdle` : lorsque ce paramètre a pour valeur true, il indique que le message ne doit pas être envoyé tant que le périphérique n'est pas actif.
 - `chromeAppExtIconUrl` : URL de l'icône qui doit être définie pour WebPush Notification.
-- `chromeAppExtTimeToLive` : ce paramètre spécifie la durée de conservation (exprimée en secondes) du message dans le stockage GCM si le périphérique est hors ligne. 
-- `chromeAppExtPayload` : contenu JSON personnalisé qui est envoyé dans le cadre du message de notification. 
+- `chromeAppExtTimeToLive` : ce paramètre spécifie la durée de conservation (exprimée en secondes) du message dans le stockage GCM si le périphérique est hors ligne.
+- `chromeAppExtPayload` : contenu JSON personnalisé qui est envoyé dans le cadre du message de notification.
 
-Voici un exemple d'envoi d'une notification push depuis le package *pushnotification*. 
+Voici un exemple d'envoi d'une notification push depuis le package *pushnotification*.
 
 - Envoyez une notification push à l'aide de l'action `sendMessage` dans la liaison de package que vous avez créée précédemment. Prenez soin de remplacer `/nomEspaceNom/monPush` par votre nom de package.
   
@@ -173,7 +173,7 @@ events onDeviceRegister
   ```
   {: pre}  
   
-3. Vous pouvez créer une règle qui envoie un message à chaque fois qu'un nouveau périphérique est enregistré. Créez une règle à l'aide de l'action et du déclencheur précédents. 
+3. Vous pouvez créer une règle qui envoie un message à chaque fois qu'un nouveau périphérique est enregistré. Créez une règle à l'aide de l'action et du déclencheur précédents.
   
   ```
   wsk rule create --enable myRule myPushTrigger sendMessage
@@ -184,5 +184,5 @@ events onDeviceRegister
 
   Enregistrez un périphérique dans votre application Bluemix. Vous pouvez voir l'exécution de la `règle`, du `déclencheur` et de l'`action` dans openWhisk [dashboard] (https://console.{Domain}/openwhisk/dashboard).
 
-  L'action enverra une notification push. 
+  L'action enverra une notification push.
   

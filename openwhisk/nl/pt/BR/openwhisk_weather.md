@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-02-21"
+lastupdated: "2017-02-21"
 
 ---
 
@@ -38,7 +38,7 @@ A ação `/whisk.system/weather/forecast` retorna uma previsão do tempo para um
 - `password`: senha para o The Weather Company Data for IBM Bluemix que está autorizado a chamar a API de previsão.
 - `latitude`: a coordenada de latitude do local.
 - `longitude`: a coordenadas de longitude do local.
-- `timeperiod`: período para a previsão. As opções válidas são '10day' - (padrão) Retorna uma previsão diária de 10 dias, '48hour' - Retorna uma previsão de 2 dias de hora em hora,
+- `timePeriod`: período para a previsão. As opções válidas são '10day' - (padrão) Retorna uma previsão diária de 10 dias, '48hour' - Retorna uma previsão de 2 dias de hora em hora,
 'current' - Retorna as condições meteorológicas atuais, 'timeseries' - Retorna as observações atuais e até 24 horas de observações passadas, a partir da data e hora atuais.
 
 

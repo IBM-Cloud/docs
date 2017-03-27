@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-02-21"
+lastupdated: "2017-02-21"
 
 ---
 
@@ -15,9 +15,9 @@ lastupdated: "2016-02-21"
 # Feeds implementieren
 {: #openwhisk_feeds}
 
-{{site.data.keyword.openwhisk_short}} unterstützt eine offene API, mit der jeder Benutzer einen Ereignisproduzent-Service als **Feed** in einem **Paket** verfügbar machen kann. In diesem Abschnitt werden die Architektur- und Implementierungsoptionen beschrieben, mit denen Sie Ihren eigenen Feed bereitstellen können.
+{{site.data.keyword.openwhisk_short}} unterstützt eine offene API, mit der jeder Benutzer einen Ereignisproduzent-Service als **Feed** in einem **Paket** verfügbar machen kann.   In diesem Abschnitt werden die Architektur- und Implementierungsoptionen beschrieben, mit denen Sie Ihren eigenen Feed bereitstellen können.
 
-Die folgenden Informationen sind für erfahrene {{site.data.keyword.openwhisk_short}}-Benutzer gedacht, die eigene Feeds veröffentlichen möchten. Die meisten {{site.data.keyword.openwhisk_short}}-Benutzer können diesen Abschnitt ohne Weiteres überspringen.
+Die folgenden Informationen sind für erfahrene {{site.data.keyword.openwhisk_short}}-Benutzer gedacht, die eigene Feeds veröffentlichen möchten.  Die meisten {{site.data.keyword.openwhisk_short}}-Benutzer können diesen Abschnitt ohne Weiteres überspringen.
 
 ## Feedarchitektur
 
@@ -45,13 +45,13 @@ Feeds und Auslöser sind sich sehr ähnlich, aber technisch gesehen unterschiedl
 
 - {{site.data.keyword.openwhisk_short}} verarbeitet **Ereignisse** im Systemablauf.
 
-- Ein **Auslöser** ist ein Name für eine Klasse von Ereignissen. Jedes Ereignis gehört zu genau einem Auslöser. Ein Auslöser ähnelt daher einem *Thema* in themenbasierten Publish/Subscribe-Systemen. Die **Regel** *T -> A* bedeutet Folgendes: Sobald ein Ereignis vom Auslöser *T* eintrifft, wird die Aktion *A* mit den Auslöser-Nutzdaten aufgerufen.
+- Ein **Auslöser** ist ein Name für eine Klasse von Ereignissen.   Jedes Ereignis gehört zu genau einem Auslöser. Ein Auslöser ähnelt daher einem *Thema* in themenbasierten Publish/Subscribe-Systemen. Die **Regel** *T -> A* bedeutet Folgendes: Sobald ein Ereignis vom Auslöser *T* eintrifft, wird die Aktion *A* mit den Auslöser-Nutzdaten aufgerufen.
 
 - Ein **Feed** ist ein Strom von Ereignissen, die alle zum selben Auslöser *T* gehören. Ein Auslöser wird durch die **Feedaktion** gesteuert, die das Erstellen, Löschen, Anhalten und Fortsetzen des Ereignisstroms abwickelt, der einen Feed bildet. Die Feedaktion interagiert in der Regel mit externen Services, die die Ereignisse über eine REST-API (die Benachrichtigungen verwaltet) erstellen.
 
 ##  Feedaktionen implementieren
 
-Die *Feedaktion* ist eine normale {{site.data.keyword.openwhisk_short}}-*Aktion*, die die folgenden Parameter akzeptieren sollte: 
+Die *Feedaktion* ist eine normale {{site.data.keyword.openwhisk_short}}-*Aktion*, die die folgenden Parameter akzeptieren sollte:
 * **lifecycleEvent**: Entweder 'CREATE', 'DELETE', 'PAUSE' oder 'UNPAUSE'.
 * **triggerName**: Der vollständig qualifizierte Name des Auslösers, der die Ereignisse enthält, die von diesem Feed generiert werden.
 * **authKey**: Die grundlegenden Berechtigungsnachweise des {{site.data.keyword.openwhisk_short}}-Benutzers, der den genannten Auslöser besitzt.
@@ -106,9 +106,9 @@ Mit dieser Vorgehensweise wird ein Polling-basierter Auslöser implementiert, de
 
 Die vorherigen zwei Architekturoptionen sind einfach zu implementieren. Wenn Sie jedoch einen sehr leistungsfähigen Feed benötigen, sind persistente Verbindungen und Long-Polling- bzw. ähnliche Verfahren notwendig.
 
-Da {{site.data.keyword.openwhisk_short}}-Aktionen eine kurze Laufzeit haben müssen, kann eine Aktion keine persistente Verbindung zu einer dritten Partei verwalten. Stattdessen muss ein separater Service (außerhalb von OpenWhisk) automatisch installiert werden, der durchgehend ausgeführt wird. Dies sind *Provider-Services*. Ein Provider-Service kann Verbindungen zu Drittanbieter-Ereignisquellen verwalten, die Long-Polling- oder andere verbindungsbasierte Benachrichtigungen unterstützen.
+Da {{site.data.keyword.openwhisk_short}}-Aktionen eine kurze Laufzeit haben müssen, kann eine Aktion keine persistente Verbindung zu einer dritten Partei verwalten. Stattdessen muss ein separater Service (außerhalb von OpenWhisk) automatisch installiert werden, der durchgehend ausgeführt wird.   Dies sind *Provider-Services*.  Ein Provider-Service kann Verbindungen zu Drittanbieter-Ereignisquellen verwalten, die Long-Polling- oder andere verbindungsbasierte Benachrichtigungen unterstützen.
 
-Der Provider-Service muss eine REST-API bereitstellen, die es der {{site.data.keyword.openwhisk_short}}-*Feedaktion* ermöglicht, den Feed zu steuern. Der Provider-Service fungiert als Proxy zwischen dem Ereignisprovider und {{site.data.keyword.openwhisk_short}}. Wenn er vom Drittanbieter Ereignisse empfängt, werden sie an {{site.data.keyword.openwhisk_short}} gesendet, indem ein Auslöser aktiviert wird.
+Der Provider-Service muss eine REST-API bereitstellen, die es der {{site.data.keyword.openwhisk_short}}-*Feedaktion* ermöglicht, den Feed zu steuern.   Der Provider-Service fungiert als Proxy zwischen dem Ereignisprovider und {{site.data.keyword.openwhisk_short}}. Wenn er vom Drittanbieter Ereignisse empfängt, werden sie an {{site.data.keyword.openwhisk_short}} gesendet, indem ein Auslöser aktiviert wird.
 
 Der Cloudant-Feed *changes* ist ein kanonisches Beispiel. Der Service `cloudanttrigger` wird automatisch installiert und kommuniziert zwischen Cloudant-Benachrichtigungen über eine persistente Verbindung und {{site.data.keyword.openwhisk_short}}-Auslösern.
 <!-- TODO: add a reference to the open source implementation -->

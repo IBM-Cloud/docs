@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-02-21"
+lastupdated: "2017-02-21"
 
 ---
 
@@ -15,13 +15,15 @@ lastupdated: "2016-02-21"
 # Initiation à {{site.data.keyword.openwhisk_short}}
 
 
-{{site.data.keyword.openwhisk}} est un service de traitement distribué et géré par des événements, également appelé traitement sans serveur ou Function as a Service (FaaS). {{site.data.keyword.openwhisk_short}} exécute une logique d'application en réponse à des événements ou à des appels directs provenant d'applications Web ou mobiles via HTTP. Les événements peuvent être fournis par des services Bluemix tels que Cloudant et par des sources externes. Les développeurs peuvent se consacrer à l'écriture de la logique d'application et à la création d'actions qui sont exécutées à la demande. Les avantages de ce nouveau paradigme résident dans le fait que vous ne mettez pas à disposition des serveurs de manière explicite et vous n'avez pas à vous préoccuper de la mise à l'échelle automatique ni à vous soucier de la haute disponibilité, des mises à jour, de la maintenance, d'avoir à payer pour des heures de temps de processeur lorsque votre serveur est actif mais qu'il ne traite aucune demande. Votre code s'exécute chaque fois que se produit un appel HTTP, un changement d'état de base de données ou tout autre type d'événement qui déclenche l'exécution de votre code.
+{{site.data.keyword.openwhisk}} est un service de traitement distribué et géré par des événements, également appelé traitement sans serveur ou Function as a Service (FaaS). {{site.data.keyword.openwhisk_short}} exécute une logique d'application en réponse à des événements ou à des appels directs provenant d'applications Web ou mobiles via HTTP. Les événements peuvent être fournis par des services Bluemix tels que Cloudant et par des sources externes. Les développeurs peuvent se consacrer à l'écriture de la logique d'application et à la création d'actions qui sont exécutées à la demande.
+Les avantages de ce nouveau paradigme résident dans le fait que vous ne mettez pas à disposition des serveurs de manière explicite et vous n'avez pas à vous préoccuper de la mise à l'échelle automatique ni à vous soucier de la haute disponibilité, des mises à jour, de la maintenance, d'avoir à payer pour des heures de temps de processeur lorsque votre serveur est actif mais qu'il ne traite aucune demande.
+Votre code s'exécute chaque fois que se produit un appel HTTP, un changement d'état de base de données ou tout autre type d'événement qui déclenche l'exécution de votre code.
 Vous êtes facturé à la milliseconde de temps d'exécution (arrondie aux 100 ms supérieurs) et non à l'heure d'utilisation de machine virtuelle, que le travail effectué par celle-ci ait été utile ou non.
 {: shortdesc}
 
-Ce modèle de programmation est idéal pour les microservices, les appareils mobiles, IoT et de nombres autres applications. Vous bénéficiez implicitement d'une mise à l'échelle automatique et d'un équilibrage de charge clés en main sans avoir à configurer manuellement des clusters, des équilibreurs de charge, des plug-ins HTTP, etc. Si vous travaillez sur {{site.data.keyword.openwhisk}}, vous êtes déchargé de toutes les tâches d'administration, en effet, l'ensemble du matériel, du réseau et des logiciels sont gérés par IBM. Tout ce que vous avez à faire est fournir le code que vous souhaitez exécuter et le donner à {{site.data.keyword.openwhisk}}. Le reste se fait par magie.Vous trouverez une excellente présentation du modèle de programmation sans serveur sur le [blogue de Martin Fowler](https://martinfowler.com/articles/serverless.html).
+Ce modèle de programmation est idéal pour les microservices, les appareils mobiles, IoT et de nombres autres applications. Vous bénéficiez implicitement d'une mise à l'échelle automatique et d'un équilibrage de charge clés en main sans avoir à configurer manuellement des clusters, des équilibreurs de charge, des plug-ins HTTP, etc. Si vous travaillez sur {{site.data.keyword.openwhisk}}, vous êtes déchargé de toutes les tâches d'administration, en effet, l'ensemble du matériel, du réseau et des logiciels sont gérés par IBM. Tout ce que vous avez à faire est fournir le code que vous souhaitez exécuter et le donner à {{site.data.keyword.openwhisk}}. Le reste se fait par magie. Vous trouverez une excellente présentation du modèle de programmation sans serveur sur le [blogue de Martin Fowler](https://martinfowler.com/articles/serverless.html).
 
-Vous pouvez également obtenir le [code source Apache OpenWHisk](https://github.com/openwhisk/openwhisk) et exécuter le système vous-même. 
+Vous pouvez également obtenir le [code source Apache OpenWHisk](https://github.com/openwhisk/openwhisk) et exécuter le système vous-même.
 
 Pour plus de détails sur le fonctionnement d'{{site.data.keyword.openwhisk_short}}, voir [A propos d'{{site.data.keyword.openwhisk_short}}](./openwhisk_about.html).
 

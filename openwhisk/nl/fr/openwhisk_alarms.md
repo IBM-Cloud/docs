@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-02-21"
+lastupdated: "2017-02-21"
 
 ---
 
@@ -30,7 +30,8 @@ Le package inclut le flux ci-dessous.
 
 Le flux `/whisk.system/alarms/alarm` configure le service Alarm pour exécuter un événement déclencheur à une fréquence spécifiée. Les paramètres sont les suivants :
 
-- `cron` : chaîne basée sur la syntaxe crontab UNIX, qui indique quand déclencher la tâche périodique (en temps universel coordonné). Il s'agit d'une séquence de cinq zones séparées par un espace : `X X X X X`. Pour plus d'informations sur l'utilisation de la syntaxe cron, voir : http://crontab.org. Voici quelques exemples de la fréquence indiquée par la chaîne :
+- `cron` : chaîne basée sur la syntaxe crontab UNIX, qui indique quand déclencher la tâche périodique (en temps universel coordonné). Il s'agit d'une séquence de cinq zones séparées par un espace : `X X X X X`.
+Pour plus d'informations sur l'utilisation de la syntaxe cron, voir : http://crontab.org. Voici quelques exemples de la fréquence indiquée par la chaîne :
 
   - `* * * * *` : au début de chaque minute.
   - `0 * * * *` : au début de chaque heure.
@@ -54,6 +55,8 @@ Voici un exemple de création de déclencheur qui sera exécuté toutes les 2 mi
 
 Chaque événement généré inclut sous forme de paramètres les propriétés spécifiées dans la valeur `trigger_payload`. Dans ce cas, chaque événement déclencheur possède les paramètres `name=Odin` et `place=Asgard`.
 
-**Remarque** : Le paramètre `cron` prend également en charge une syntaxe personnalisée de six zones, dans laquelle la sixième zone représente les secondes. Pour plus de détails sur l'utilisation de cette syntaxe cron personnalisée, voir : https://github.com/ncb000gt/node-cron. Voici un exemple d'utilisation de la notation sur six zones :
+**Remarque** : Le paramètre `cron` prend également en charge une syntaxe personnalisée de six zones, dans laquelle la sixième zone représente les secondes. 
+Pour plus de détails sur l'utilisation de cette syntaxe cron personnalisée, voir : https://github.com/ncb000gt/node-cron. 
+Voici un exemple d'utilisation de la notation sur six zones :
   - `*/30 * * * * *` : toutes les trente secondes.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-02-27"
+lastupdated: "2017-03-13"
 
 ---
 
@@ -40,7 +40,9 @@ Führen Sie den folgenden Befehl aus, um den Berechtigungsschlüssel festzulegen
 ```
 wsk property set --auth <Berechtigungsschlüssel>
 ```
-{: pre} 
+{: pre}
+
+**Tipp:** Die OpenWhisk-CLI speichert standardmäßig die festgelegten Eigenschaften in `~/.wskprops`. die Speicherposition dieser Datei kann durch das Festlegen der Umgebungsvariablen `WSK_CONFIG_FILE` geändert werden.  
 
 Versuchen Sie, [eine Aktion zu erstellen und auszuführen](./index.html#openwhisk_start_hello_world), um Ihre CLI-Konfiguration zu überprüfen.
 

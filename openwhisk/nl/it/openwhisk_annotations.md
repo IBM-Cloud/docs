@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-02-21"
+lastupdated: "2017-02-21"
 
 ---
 
@@ -55,10 +55,13 @@ Le annotazioni utilizzate per descrivere i parametri sono:
 
 Le annotazioni *non* vengono controllate. Quindi, mentre è possibile utilizzare le annotazioni per dedurre ad esempio se una composizione di due azioni in una sequenza è legale, il sistema non lo fa ancora.
 
-## Annotazioni per le funzioni sperimentali
+## Annotazioni specifiche delle azioni web
+{: #openwhisk_annotations_webactions}
 
-Di recente abbiamo esteso l'API principale con alcune funzioni sperimentali. Per poter inserire i pacchetti e le azioni in queste funzioni, abbiamo introdotto tre nuove annotazioni semanticamente significative. Per avere effetto, queste annotazioni devono essere impostate esplicitamente su `true`. Se si modifica il valore da `true` a `false`, l'asseto collegato verrà escluso dall'API sperimentale. Le annotazioni non hanno significato al di fuori del sistema. Esse sono:
+Di recente abbiamo esteso l'API principale con nuove funzioni. Per poter inserire i pacchetti e le azioni in queste funzioni, abbiamo introdotto le seguenti nuove annotazioni semanticamente significative. Per avere effetto, queste annotazioni devono essere impostate esplicitamente su `true`. Se si modifica il valore da `true` a `false`, l'asset collegato verrà escluso dalla nuova API. Le annotazioni non hanno significato al di fuori del sistema. Esse sono:
 
 - `final`: si applica solo a un'azione. Rende immutabili tutti i parametri di azione già definiti. Un parametro di un'azione con l'annotazione non può essere sovrascritto dai parametri per il tempo di richiamata una volta che il parametro ha un valore definito tramite il suo pacchetto di inclusione o la definizione dell'azione.
 - `web-export`: si applica solo a un'azione. Se presente, rende accessibile la sua azione corrispondente alle chiamate REST *senza* eseguire l'autenticazione. Queste sono chiamate [*azioni web*](openwhisk_webactions.html) in quanto consentono di utilizzare le azioni OpenWhisk, ad esempio, da un browser. È importante notare che al *proprietario* delle azioni web verranno addebitati i costi delle loro esecuzioni nel sistema (vale a dire, il *proprietario* dell'azione possiede anche il record delle attivazioni).
+- `require-whisk-auth`: si applica a un'azione. Se un'azione contiene l'annotazione `web-export` e questa annotazione è `true`, la rotta è accessibile solo a un soggetto autenticato. È importante notare che al *proprietario* delle azioni web verranno addebitati i costi delle loro esecuzioni nel sistema (vale a dire, il *proprietario* dell'azione possiede anche il record delle attivazioni).
+- `raw-http`: si applica solo a un'azione in presenza di un'annotazione `web-export`. Se presente, i parametri di query e corpo della richiesta HTTP vengono passati all'azione come proprietà riservate. 
 

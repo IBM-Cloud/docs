@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-02-23"
+lastupdated: "2017-02-23"
 
 ---
 
@@ -28,7 +28,7 @@ Les rubriques ci-après expliquent comment configurer une base de données Cloud
 ## Configuration d'une base de données Cloudant dans Bluemix
 {: #openwhisk_catalog_cloudant_in}
 
-Si vous utilisez OpenWhisk depuis Bluemix, OpenWhisk crée automatiquement des liaisons de package pour vos instances de service Bluemix Cloudant. Si vous n'utilisez pas OpenWhisk et Cloudant depuis Bluemix, passez à l'étape suivante. 
+Si vous utilisez OpenWhisk depuis Bluemix, OpenWhisk crée automatiquement des liaisons de package pour vos instances de service Bluemix Cloudant. Si vous n'utilisez pas OpenWhisk et Cloudant depuis Bluemix, passez à l'étape suivante.
 
 1. Créez une instance de service Cloudant dans votre [tableau de bord](http://console.ng.Bluemix.net) Bluemix.
 
@@ -65,7 +65,7 @@ Si vous utilisez OpenWhisk depuis Bluemix, OpenWhisk crée automatiquement des l
 
   Le nom qualifié complet de la liaison de package qui correspond à votre instance de service Bluemix Cloudant apparaît.
 
-4. Vérifiez que la liaison de package qui a été créée précédemment est configurée avec l'hôte et les données d'identification de votre instance de service Cloudant Bluemix. 
+4. Vérifiez que la liaison de package qui a été créée précédemment est configurée avec l'hôte et les données d'identification de votre instance de service Cloudant Bluemix.
 
   ```
   wsk package get /myBluemixOrg_myBluemixSpace/Bluemix_testCloudant_Credentials-1 parameters
@@ -235,7 +235,8 @@ wsk action create myAction myAction.js
 ```
 {: pre}
 
-Pour lire un document à partir de la base de données, vous pouvez utiliser l'action `read` dans le package Cloudant. L'action `read` peut être associée à `myAction` pour créer une séquence d'actions.
+Pour lire un document à partir de la base de données, vous pouvez utiliser l'action `read` dans le package Cloudant.
+L'action `read` peut être associée à `myAction` pour créer une séquence d'actions.
 ```
 wsk action create sequenceAction --sequence /myNamespace/myCloudant/read,myAction
 ```

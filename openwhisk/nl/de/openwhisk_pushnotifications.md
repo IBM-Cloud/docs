@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-02-23"
+lastupdated: "2017-02-23"
 
 ---
 
@@ -106,7 +106,7 @@ Von der Aktion `/whisk.system/pushnotifications/sendMessage` werden Push-Benachr
 - `chromeAppExtTimeToLive`: Dieser Parameter gibt an, wie lange (in Sekunden) die Nachricht im GCM-Speicher aufbewahrt wird, wenn das Gerät offline ist.
 - `chromeAppExtPayload`: Angepasste JSON-Nutzdaten, die als Bestandteil der Benachrichtigung gesendet werden.
 
-Es folgt ein Beispiel für das Senden einer Push-Benachrichtigung aus dem Paket *pushnotification*. 
+Es folgt ein Beispiel für das Senden einer Push-Benachrichtigung aus dem Paket *pushnotification*.
 
 - Senden Sie eine Push-Benachrichtigung mithilfe der Aktion `sendMessage` in der Paketbindung ab, die Sie zuvor erstellt haben. Stellen Sie sicher, dass Sie `/myNamespace/myPush` durch Ihren Paketnamen ersetzen.
   
@@ -170,16 +170,16 @@ Das folgende Beispiel die Erstellung eines Auslösers, der jedes Mal aktiviert w
   ```
   {: pre}  
   
-3. Sie könnten eine Regel erstellen, die jedes Mal ein Nachricht sendet, wenn ein neues Gerät registriert wird. Erstellen Sie eine neue Regel unter Verwendung der vorherigen Aktion und des vorherigen Auslösers.
+3. Sie könnten eine Regel erstellen, die jedes Mal eine Nachricht sendet, wenn ein neues Gerät registriert wird. Erstellen Sie eine neue Regel unter Verwendung der vorherigen Aktion und des vorherigen Auslösers.
   
   ```
   wsk rule create --enable myRule myPushTrigger sendMessage
   ```
   {: pre}
   
-  Überprüfen Sie die Ergebnisse mit dem Befehl `wsk activation poll`. 
+  Überprüfen Sie die Ergebnisse mit dem Befehl `wsk activation poll`.
 
   Registrieren Sie ein Gerät in Ihrer Bluemix-Anwendung und Sie können sehen, wie die Regel (`rule`), der Auslöser (`trigger`) und die Aktion (`action`) im openWhisk-Dashboard (https://console.{Domain}/openwhisk/dashboard) ausgeführt werden.
 
-  Die Aktion sendet dann eine Push-Benachrichtigung. 
+  Die Aktion sendet dann eine Push-Benachrichtigung.
   

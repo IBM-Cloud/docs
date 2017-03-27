@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-02-21"
+lastupdated: "2017-03-13"
 
 ---
 
@@ -26,6 +26,13 @@ lastupdated: "2016-02-21"
 * [Python](#openwhisk_actions_python)
 * [Java](#openwhisk_actions_java)
 * [Docker](#openwhisk_actions_docker)
+
+此外，也請瞭解：
+
+* [監看動作輸出](#openwhisk_actions_polling)
+* [列出動作](#openwhisk_listing_actions)
+* [刪除動作](#openwhisk_delete_action)
+* [存取動作內文內的動作 meta 資料](#openwhisk_action_metadata)
 
 
 ## 建立及呼叫 JavaScript 動作
@@ -54,7 +61,7 @@ lastupdated: "2016-02-21"
   ```
   wsk action create hello hello.js
   ```
-  {: pre}
+    {: pre}
   ```
   ok: created action hello
   ```
@@ -69,11 +76,15 @@ lastupdated: "2016-02-21"
   actions
   hello       private
   ```
-  您可以看到剛剛建立的 `hello` 動作。
 
-4. 建立動作之後，即可使用 'invoke' 指令透過 OpenWhisk 在雲端執行它。在指令中指定旗標，即可透過*封鎖* 呼叫（即要求/回應樣式）或*非封鎖* 呼叫來呼叫動作。封鎖呼叫要求將*等待* 啟動結果可供使用。等待期間小於 60 秒或動作的已配置[時間限制](./openwhisk_reference.html#openwhisk_syslimits)。如果在等待期間內有啟動結果，則會予以傳回。否則，會在系統中繼續處理啟動，並傳回啟動 ID，讓您可以稍後檢查結果，這與非封鎖要求相同（如需監視啟動的提示，請參閱[這裡](#watching-action-output)）。
+    您可以看到剛剛建立的 `hello` 動作。
+
+
+
+4. 建立動作之後，即可使用 'invoke' 指令透過 OpenWhisk 在雲端執行它。在指令中指定旗標，即可透過*封鎖* 呼叫（即要求/回應樣式）或*非封鎖* 呼叫來呼叫動作。封鎖呼叫要求將*等待* 啟動結果可供使用。等待期間小於 60 秒或動作的已配置[時間限制](./openwhisk_reference.html#openwhisk_syslimits)。如果在等待期間內有啟動結果，則會予以傳回。否則，會在系統中繼續處理啟動，並傳回啟動 ID，讓您可以稍後檢查結果，這與非封鎖要求相同（如需監視啟動的提示，請參閱[這裡](#openwhisk_actions_polling)）。
 
   這個範例使用封鎖參數 `--blocking`：
+
   ```
   wsk action invoke --blocking hello
   ```
@@ -90,10 +101,13 @@ lastupdated: "2016-02-21"
       "success": true
   }
   ```
-此指令輸出兩個重要的資訊部分：
+
+  此指令輸出兩個重要的資訊部分：
+
   * 啟動 ID (`44794bd6aab74415b4e42a308d880e5b`)
-  * 如果在預期的等待期間內有呼叫結果，則為呼叫結果  
-在此情況下，結果是 JavaScript 函數所傳回的 `Hello world` 字串。啟動 ID 之後可以用來擷取日誌或呼叫結果。  
+  * 如果在預期的等待期間內有呼叫結果，則為呼叫結果
+
+  在此情況下，結果是 JavaScript 函數所傳回的 `Hello world` 字串。啟動 ID 之後可以用來擷取日誌或呼叫結果。  
 
 5. 如果您不是立即需要動作結果，則可以省略 `--blocking` 旗標，以進行非封鎖呼叫。您稍後可以透過使用啟動 ID 來取得結果。請參閱下列範例：
   
@@ -423,6 +437,9 @@ exports.main = myAction;
   ```
   {: pre}
 
+    > 請注意：使用 Windows 檔案總管動作來建立 zip 檔案會導致結構不正確。OpenWhisk zip 動作必須將 `package.json` 置於 zip 的根目錄，而 Windows 檔案總管會將它放在巢狀資料夾中。最安全的選項是使用上述指令行的 `zip` 指令。
+
+
 3. 建立動作：
 
   ```
@@ -602,6 +619,68 @@ wsk action invoke --blocking --result helloSwift --param name World
 
 
 **注意：**Swift 動作是在 Linux 環境中執行。Swift on Linux 仍在開發中，而且 {{site.data.keyword.openwhisk_short}} 通常會使用最新的可用版本，但此版本不一定是穩定的。此外，與 {{site.data.keyword.openwhisk_short}} 搭配使用的 Swift 版本，可能與 MacOS 上穩定 XCode 版本的 Swift 版本不一致。
+
+### 將動作包裝成 Swift 執行檔
+{: #openwhisk_actions_swift_zip}
+當您使用 Swift 來源檔建立 OpenWhisk Swift 動作時，必須先將其編譯成二進位檔，才能執行動作。完成之後，後續呼叫動作時就會快很多，直到清除用來保存動作的容器為止。
+
+若要避免編譯步驟延遲，您可以將 Swift 檔案編譯成二進位檔，然後將它以 zip 檔案上傳至 OpenWhisk。當您需要 OpenWhisk scaffolding 時，建立二進位檔最簡單的方式，就是在要執行檔案的相同環境中建置檔案。步驟如下：
+
+- 執行互動式 Swift 動作容器。
+  ```
+  docker run -it -v "$(pwd):/owexec" openwhisk/swift3action bash
+  ```
+  {: pre}
+這會將您放在 Docker 容器的 bash shell 中。在裡面執行下列指令：
+  
+- 為了方便起見，可安裝 zip 來包裝二進位檔
+  ```
+  apt-get install -y zip
+  ```
+  {: pre}
+- 複製原始碼，準備建置檔案
+  ```
+  cp /owexec/hello.swift /swift3Action/spm-build/main.swift 
+  ```
+  {: pre}
+  ```
+  cat /swift3Action/epilogue.swift >> /swift3Action/spm-build/main.swift
+  ```
+  {: pre}
+  ```
+  echo '_run_main(mainFunction:main)' >> /swift3Action/spm-build/main.swift
+  ```
+  {: pre}
+- zBuild 和鏈結
+  ```
+  /swift3Action/spm-build/swiftbuildandlink.sh
+  ```
+  {: pre}
+- 建立 zip 保存檔
+  ```
+  cd /swift3Action/spm-build
+  ```
+  {: pre}
+  ```
+  zip /owexec/hello.zip .build/release/Action
+  ```
+- 結束 Docker 容器
+  ```
+  exit
+  ```
+  {: pre}
+此作業已在與 hello.swift 相同的目錄中建立 hello.zip。
+- 使用動作名稱 helloSwifty，將它上傳至 OpenWhisk：
+  ```
+  wsk action update helloSwiftly hello.zip --kind swift:3
+  ```
+  {: pre}
+- 若要檢查速度快多少，請執行 
+  ```
+  wsk action invoke helloSwiftly --blocking
+  ``` 
+  {: pre}
+
 
 ## 建立 Java 動作
 {: #openwhisk_actions_java}
@@ -806,7 +885,26 @@ wsk action invoke --blocking --result helloJava --param name World
     2016-02-11T16:46:56.842065025Z stdout: hello bob!
   ```
 
-  同樣地，只要執行輪詢公用程式，就可即時看到日誌中是否有任何代表您在 {{site.data.keyword.openwhisk_short}} 中執行的動作。
+  同樣地，每當您執行輪詢公用程式時，都可以即時查看日誌中是否有任何代表您在 OpenWhisk 中執行的動作。
+
+
+## 列出動作
+{: #openwhisk_listing_actions}
+
+您可以使用下列指令，列出您已建立的所有動作：
+
+```
+  wsk action list
+  ```
+{: pre}
+
+隨著您撰寫愈多動作，此清單也會變得愈長，而其有助於將相關的動作分組成[套件](./packages.md)。若要將您的動作清單過濾為只有特定套件中的動作，您可以使用： 
+
+```
+wsk action list [PACKAGE NAME]
+```
+{: pre}
+
 
 ## 刪除動作
 {: #openwhisk_delete_action}
@@ -833,6 +931,7 @@ wsk action invoke --blocking --result helloJava --param name World
   {: pre}
 
 ## 存取動作內文內的動作 meta 資料
+{: #openwhisk_action_metadata}
 
 動作環境包含執行中動作特有的數個內容。這些內容容許動作透過 REST API 以程式設計方式使用 OpenWhisk 資產，或設定在動作即將用完其分配時間預算時的內部警示。使用 OpenWhisk Docker 架構時，可以透過所有支援運行環境的系統環境來存取這些內容：Node.js、Python、Swift、Java 及 Docker 動作。
 

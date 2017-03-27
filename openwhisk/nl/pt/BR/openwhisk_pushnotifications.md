@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-02-23"
+lastupdated: "2017-02-23"
 
 ---
 
@@ -101,7 +101,7 @@ A ação `/whisk.system/pushnotifications/sendMessage` envia notificações push
 - `chromeTitle`: especifica o título a ser configurado para a Notificação WebPush.
 - `chromeIconUrl`: a URL do ícone a ser configurado para a Notificação WebPush.
 - `chromeTimeToLive`: esse parâmetro especifica quanto tempo (em segundos) a mensagem deverá ser mantida no armazenamento de GCM se o dispositivo estiver off-line.
-- `chromePayload`: a carga útil de JSON customizada que será enviada como parte da mensagem de notificação. 
+- `chromePayload`: a carga útil de JSON customizada que será enviada como parte da mensagem de notificação.
 - `chromeAppExtTitle`: especifica o título a ser configurado para a Notificação WebPush.
 - `chromeAppExtCollapseKey`: esse parâmetro identifica um grupo de mensagens.
 - `chromeAppExtDelayWhileIdle`: quando esse parâmetro é configurado como true, ele indica que a mensagem não deve ser enviada até o dispositivo ficar ativo.

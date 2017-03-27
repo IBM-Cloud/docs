@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-02-21"
+lastupdated: "2017-02-21"
 
 ---
 
@@ -55,10 +55,13 @@ As anotações que usamos para descrever os parâmetros incluem:
 
 As anotações *não* são verificadas. Portanto, embora seja possível usar as anotações para indicar se uma composição de duas ações em uma sequência é legal, por exemplo, o sistema ainda não faz isso.
 
-## Anotações para recursos experimentais
+## As anotações específicas para ações da web
+{: #openwhisk_annotations_webactions}
 
-Nós recentemente estendemos a API principal com alguns recursos experimentais. Para permitir que os pacotes e ações participem desses recursos, introduzimos três novas anotações que são semanticamente significativas. Essas anotações devem ser configuradas explicitamente como `true` para que tenham efeito. Mudar o valor de `true` para `false` excluirá o ativo anexado da API experimental. As anotações não têm significado contrário no sistema. As anotações são:
+Recentemente estendemos a API principal com novos recursos. Para que os pacotes e as ações possam participar desses recursos, introduzimos as novas anotações a seguir que são semanticamente significativas. Essas anotações devem ser configuradas explicitamente como `true` para que tenham efeito. Mudar o valor de `true` para `false` excluirá o ativo anexado da nova API. As anotações não têm significado contrário no sistema. As anotações são:
 
 - `final`: aplica-se somente a uma ação. Isso torna todos os parâmetros de ação que já estão definidos imutáveis. Um parâmetro de uma ação transportando a anotação não pode ser substituído por parâmetros invoke-time quando o parâmetro tiver um valor definido por meio de seu pacote de fechamento ou a definição de ação.
 - `web-export`: aplica-se somente a uma ação. Se presente, ela torna sua ação correspondente acessível para chamadas REST *sem* autenticação. Nós as chamamos de [*ações da web*](openwhisk_webactions.html) porque elas permitem usar ações do OpenWhisk em um navegador, por exemplo. É importante observar que o *proprietário* da ação da web incorre no custo de executá-las no sistema (ou seja, o *proprietário* da ação também possui o registro de ativações).
+- `require-whisk-auth`: aplica-se a uma ação. Se uma ação carregar a anotação `web-export` e essa anotação também for `true`, a rota será acessível apenas a um assunto autenticado. É importante observar que o *proprietário* da ação da web incorre no custo de executá-las no sistema (ou seja, o *proprietário* da ação também possui o registro de ativações).
+- `raw-http`: aplica-se somente a uma ação na presença de uma anotação `web-export`. Se presente, os parâmetros de consulta e corpo da solicitação de HTTP serão passados para a ação como propriedades reservadas.
 

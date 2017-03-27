@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-02-23"
+lastupdated: "2017-02-23"
 
 ---
 
@@ -174,7 +174,8 @@ Par exemple, créez une règle qui appelle l'action hello à chaque fois qu'une 
 
   Vous constatez que l'action hello a reçu le contenu de l'événement et a renvoyé la chaîne attendue.
 
-Vous pouvez créer plusieurs règles qui associent le même déclencheur à des actions différentes. Les déclencheurs et les règles ne peuvent pas appartenir à un package. Cependant, la règle peut être associée à une action qui appartient à un package, par exemple :
+Vous pouvez créer plusieurs règles qui associent le même déclencheur à des actions différentes.
+Les déclencheurs et les règles ne peuvent pas appartenir à un package. Cependant, la règle peut être associée à une action qui appartient à un package, par exemple :
   ```
   wsk rule create recordLocation locationUpdate /whisk.system/utils/echo
   ```

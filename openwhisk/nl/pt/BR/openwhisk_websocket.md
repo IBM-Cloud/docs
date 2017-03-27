@@ -10,7 +10,7 @@ O pacote inclui a ação a seguir:
 | `/whisk.system/websocket` | pacote | uri | Utilitários para comunicação com WebSockets |
 | `/whisk.system/websocket/send` | ação | uri, payload | Enviar a carga útil para o URI do WebSocket |
 
-Se você planeja enviar muitas mensagens para o mesmo URI do WebSocket, sugere-se criar uma ligação de pacote com o valor `uri`. Com a ligação, não será necessário especificar o valor cada vez que a ação `send` for usada.
+Se você planeja enviar muitas mensagens para o mesmo URI do WebSocket, sugere-se criar uma ligação de pacote com o valor `uri`.  Com a ligação, não será necessário especificar o valor cada vez que a ação `send` for usada.
 
 ### Enviando uma mensagem para um WebSocket
 

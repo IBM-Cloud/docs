@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-02-21"
+lastupdated: "2017-02-21"
 
 ---
 
@@ -19,7 +19,8 @@ O {{site.data.keyword.openwhisk}} é um serviço de cálculo distribuído, orien
 {{site.data.keyword.openwhisk_short}} executa uma lógica de aplicativo em resposta a eventos ou chamadas diretas a partir de aplicativos da web ou móveis sobre HTTP. Os eventos
 podem ser fornecidos a partir de serviços do Bluemix, como o Cloudant e a partir de
 fontes externas. Os desenvolvedores podem focar a composição da lógica do aplicativo e a criação de ações que são executadas sob demanda.
-Os benefícios desse novo paradigma são que você não provisiona explicitamente os servidores e se preocupa com o ajuste automático de escala ou se preocupa com a alta disponibilidade, atualizações, manutenção e pagamento por horas de tempo do processador quando o servidor está em execução, mas não está atendendo solicitações. Seu código é executado sempre que há uma chamada HTTP, mudança de estado do banco de dados ou outro tipo de evento que aciona a execução do código.
+Os benefícios desse novo paradigma são que você não provisiona explicitamente os servidores e se preocupa com o ajuste automático de escala ou se preocupa com a alta disponibilidade, atualizações, manutenção e pagamento por horas de tempo do processador quando o servidor está em execução, mas não está atendendo solicitações.
+Seu código é executado sempre que há uma chamada HTTP, mudança de estado do banco de dados ou outro tipo de evento que aciona a execução do código.
 Você é cobrado por milissegundo de tempo de execução (arredondado para os 100 ms mais próximos), não por hora de utilização da VM, independentemente se essa VM estava executando trabalho útil ou não.
 {: shortdesc}
 

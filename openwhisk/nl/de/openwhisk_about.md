@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-02-21"
+lastupdated: "2017-02-21"
 
 ---
 
@@ -56,7 +56,7 @@ wsk action create myAction action.js
 ```
 {: pre}
 
-Erledigt. Nun wird diese Aktion tatsächlich aufgerufen: 
+Erledigt. Nun wird diese Aktion tatsächlich aufgerufen:
 ```
 wsk action invoke myAction
 ```
@@ -116,7 +116,7 @@ Nehmen Sie für diesen Fall an, dass das System drei verfügbare Aufrufer hat (A
 
 Ab hier können im Wesentlichen zwei nachteilige Ereignisse für die von Ihnen eingesendete Aufrufanforderung eintreten:
 
-1. Das System kann abstürzen, sodass Ihr Aufruf verloren geht. 
+1. Das System kann abstürzen, sodass Ihr Aufruf verloren geht.
 2. Das System kann so hoch ausgelastet sein, dass der Aufruf zunächst auf die Beendigung anderer Aufrufe warten muss.
 
 Die Antwort auf beide Fälle heißt **Kafka**, ein durchsatzstarkes, verteiltes Publish/Subscribe-Nachrichtenübermittlungssystem. Der Controller und der Aufrufer kommunizieren nur über Nachrichten, die von Kafka gepuffert und gespeichert werden. Dies nimmt die Last der Pufferung im Speicher, bei der das Risiko einer Ausnahmebedingung aufgrund von nicht ausreichendem Speicher (*OutOfMemoryException*) besteht, sowohl vom Controller als auch vom Aufrufer und stellt gleichzeitig sicher, dass Nachrichten im Fall eines Systemabsturzes nicht verloren gehen.
@@ -159,7 +159,7 @@ In dem hier erläuterten Fall ruft der Aufrufer das resultierende JSON-Objekt au
 
 Beachten Sie, wie der Datensatz sowohl das zurückgegebene Ergebnis als auch die geschriebenen Protokolle enthält. Er enthält außerdem die Startzeit und die Endzeit des Aufrufs der Aktion. In einem Aktivierungsdatensatz sind noch weitere Felder vorhanden, hier werden aus Gründen der Einfachheit nur einige gezeigt.
 
-Sie können jetzt die REST-API erneut verwenden (beginnen Sie wieder bei Schritt 1), um Ihre Aktivierung und damit das Ergebnis Ihrer Aktion abzurufen. Dazu verwenden Sie den folgenden Befehl: 
+Sie können jetzt die REST-API erneut verwenden (beginnen Sie wieder bei Schritt 1), um Ihre Aktivierung und damit das Ergebnis Ihrer Aktion abzurufen. Dazu verwenden Sie den folgenden Befehl:
 
 ```bash
 wsk activation get 31809ddca6f64cfc9de2937ebd44fbb9
@@ -168,7 +168,7 @@ wsk activation get 31809ddca6f64cfc9de2937ebd44fbb9
 
 ### Zusammenfassung
 
-Sie haben gesehen, wie ein einfacher Befehl **wsk action invoke myAction** verschiedene Komponenten des {{site.data.keyword.openwhisk_short}}-Systems durchlauft. Das System besteht selbst hauptsächlich aus zwei angepassten Komponenten: dem **Controller** und dem **Aufrufer** (Invoker). Alles andere ist bereits vorhanden - entwickelt von vielen Mitarbeitern in der Open-Source-Community. 
+Sie haben gesehen, wie ein einfacher Befehl **wsk action invoke myAction** verschiedene Komponenten des {{site.data.keyword.openwhisk_short}}-Systems durchlauft. Das System besteht selbst hauptsächlich aus zwei angepassten Komponenten: dem **Controller** und dem **Aufrufer** (Invoker). Alles andere ist bereits vorhanden - entwickelt von vielen Mitarbeitern in der Open-Source-Community.
 
 Weitere Informationen zu {{site.data.keyword.openwhisk_short}} finden Sie in den folgenden Abschnitten:
 

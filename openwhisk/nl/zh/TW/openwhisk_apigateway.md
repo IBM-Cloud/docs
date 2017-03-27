@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-02-21"
+lastupdated: "2017-03-16"
 
 ---
 
@@ -12,16 +12,20 @@ lastupdated: "2016-02-21"
 {:screen: .screen}
 {:pre: .pre}
 
-# 透過 API 閘道公開動作（實驗性）
+# API 閘道（實驗性）
 {: #openwhisk_apigateway}
 
-在 {{site.data.keyword.openwhisk}} 中，您只能透過 **POST** 方法，使用「HTTP 要求」來呼叫使用 [REST API](./openwhisk_reference.html#openwhisk_ref_restapi) 的動作。
-這需要 HTTP 用戶端使用 OpenWhisk 授權 API 金鑰來提出要求，而此金鑰是容許呼叫動作並容許刪除及建立更多動作的主要金鑰。
-{: shortdesc}
+[Web 動作](openwhisk_webactions.html)已開放供一般使用。
 
-此實驗性特性將可讓您使用 POST 以外的 HTTP 方法來呼叫動作，且不使用動作的授權 API 金鑰。
+Web 動作可讓您使用 POST 以外的 HTTP 方法來呼叫動作，而不需要動作的授權 API 金鑰。
 
-使用 CLI，透過「OpenWhisk API 閘道」來公開 OpenWhisk 動作。 
+根據使用者意見，「Web 動作」是一種程式設計模型，可供選擇用來建置能夠處理 HTTP 事件的 OpenWhisk 動作。
+
+大部分「API 閘道」功能都已合併至「Web 動作」中，「Web 動作」可讓您處理任何 HTTP 要求，以及從「Web 動作」傳回具有完整控制權的 HTTP 回應。
+
+修訂版 OpenWhisk API 閘道整合即將推出。其配置將可代理您的「Web 動作」，提供比率限制、OAuth 記號驗證、API 金鑰等「API 閘道」特性。
+
+**附註：**您使用 `wsk api-experimental` 來建立的 API 將會繼續運作，但您應該要開始將 API 移轉至 Web 動作。
 
 ## OpenWhisk CLI 配置
 {: #openwhisk_apigateway_cli}

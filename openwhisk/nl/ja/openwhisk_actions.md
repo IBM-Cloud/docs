@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-02-21"
+lastupdated: "2017-03-13"
 
 ---
 
@@ -26,6 +26,13 @@ lastupdated: "2016-02-21"
 * [Python](#openwhisk_actions_python)
 * [Java](#openwhisk_actions_java)
 * [Docker](#openwhisk_actions_docker)
+
+さらに、以下について説明します。
+
+* [アクション出力の監視](#openwhisk_actions_polling)
+* [アクションのリスト](#openwhisk_listing_actions)
+* [アクションの削除](#openwhisk_delete_action)
+* [アクション・ボディー内のアクション・メタデータへのアクセス](#openwhisk_action_metadata)
 
 
 ## JavaScript アクションの作成と起動
@@ -52,7 +59,7 @@ lastupdated: "2016-02-21"
   ```
   wsk action create hello hello.js
   ```
-  {: pre}
+    {: pre}
   ```
   ok: created action hello
   ```
@@ -67,10 +74,14 @@ lastupdated: "2016-02-21"
   actions
   hello       private
   ```
-作成したばかりの `hello` アクションが表示されているのを確認できます。4. アクションを作成した後、invoke コマンドを使用して、そのアクションを OpenWhisk においてクラウド内で実行できます。コマンドにフラグを指定することによって、*ブロッキング* 起動 (つまり、要求/応答スタイル) または*非ブロッキング* 起動のいずれかでアクションを起動できます。ブロッキング起動要求は、アクティベーション結果が使用可能になるのを*待機* します。待機時間は、60 秒と、アクションに構成された[制限時間](./openwhisk_reference.html#openwhisk_syslimits)のいずれか小さいほうです。アクティベーションの結果が待機時間内に使用可能になった場合、その結果が返されます。使用可能にならない場合、非ブロッキング要求の場合と同様に、アクティベーション処理はシステムで続行され、結果を後でチェックできるようにアクティベーション ID が返されます (アクティベーションのモニターに関するヒントについては、[ここ](#watching-action-output)を参照してください)。
+
+  作成したばかりの `hello` アクションが表示されているのを確認できます。
+
+4. アクションを作成した後、invoke コマンドを使用して、そのアクションを OpenWhisk においてクラウド内で実行できます。コマンドにフラグを指定することによって、*ブロッキング* 起動 (つまり、要求/応答スタイル) または*非ブロッキング* 起動のいずれかでアクションを起動できます。ブロッキング起動要求は、アクティベーション結果が使用可能になるのを*待機* します。待機時間は、60 秒と、アクションに構成された[制限時間](./openwhisk_reference.html#openwhisk_syslimits)のいずれか小さいほうです。アクティベーションの結果が待機時間内に使用可能になった場合、その結果が返されます。使用可能にならない場合、非ブロッキング要求の場合と同様に、アクティベーション処理はシステムで続行され、結果を後でチェックできるようにアクティベーション ID が返されます (アクティベーションのモニターに関するヒントについては、[ここ](#openwhisk_actions_polling)を参照してください)。
 
   
 次の例では、ブロッキングを示す `--blocking` パラメーターが使用されています。
+
   ```
   wsk action invoke --blocking hello
   ```
@@ -79,17 +90,20 @@ lastupdated: "2016-02-21"
   ok: invoked hello with id 44794bd6aab74415b4e42a308d880e5b
   ```
   ```json
-  {
-      "result": {
+{
+  "result": {
           "payload": "Hello world"
       },
       "status": "success",
       "success": true
   }
   ```
-コマンドの出力は、次の 2 つの重要な情報です。  * アクティベーション ID (`44794bd6aab74415b4e42a308d880e5b`)
-  * 予期される待機時間内に使用可能になった場合は起動結果  
-この例の結果は、JavaScript 関数によって返されたストリング `Hello world` です。アクティベーション ID は、後でログまたは起動結果を取り出すときに使用できます。  
+
+  コマンドの出力は、次の 2 つの重要な情報です。
+  * アクティベーション ID (`44794bd6aab74415b4e42a308d880e5b`)
+  * 予期される待機時間内に使用可能になった場合は起動結果
+
+  この例の結果は、JavaScript 関数によって返されたストリング `Hello world` です。アクティベーション ID は、後でログまたは起動結果を取り出すときに使用できます。  
 
 5. アクションの結果をすぐに必要としない場合は、`--blocking` フラグを省略して非ブロッキング起動を行うことができます。結果は後でアクティベーション ID を使用して取得できます。次の例を参照してください。
   
@@ -171,8 +185,8 @@ lastupdated: "2016-02-21"
   {: pre}
 
   ```json
-  {
-      "payload": "Hello, Bernie from Vermont"
+{
+  "payload": "Hello, Bernie from Vermont"
   }
   ```
 呼び出しの結果のみを表示する `--result` オプションの使用に注意してください。### デフォルト・パラメーターの設定
@@ -228,7 +242,7 @@ lastupdated: "2016-02-21"
   ファイル parameters.json:
   ```json
   {
-      "name": "Bernie",
+    "name": "Bernie",
     "place": "Vermont"
   }
   ```
@@ -410,6 +424,7 @@ exports.main = myAction;
   ```
   {: pre}
 
+    > 注意: Windows Explorer の操作を使用して zip ファイルを作成すると、誤った構造になります。OpenWhisk zip アクションでは、`package.json` が zip のルートに存在する必要がありますが、Windows Explorer はこれをネストされたフォルダー内に置きます。最も安全な方法は、上記のようにコマンド・ラインで `zip` コマンドを使用することです。
 3. 以下のように、アクションを作成します。
 
   ```
@@ -595,6 +610,68 @@ wsk action invoke --blocking --result helloSwift --param name World
 
 **重要:** Swift アクションは Linux 環境で実行されます。Linux 上の Swift はまだ発展途上であり、
 {{site.data.keyword.openwhisk_short}} は通常は使用可能な最新リリースを使用しますが、それは必ずしも安定しているとは限りません。それに加えて、{{site.data.keyword.openwhisk_short}} で使用される Swift のバージョンは、安定したリリースの MacOS 用 XCode からの Swift のバージョンと不整合である可能性があります。
+
+### Swift 実行可能ファイルとしてのアクションのパッケージ化
+{: #openwhisk_actions_swift_zip}
+Swift ソース・ファイルを使用して OpenWhisk Swift アクションを作成した場合、アクションを実行する前に、バイナリーにコンパイルしておく必要があります。これを行った後は、アクションを保持しているコンテナーがパージされるまで、そのアクションに対する後続の呼び出しが大幅に高速になります。
+
+コンパイル・ステップによる遅延を避けるために、Swift ファイルをバイナリーにコンパイルしてから、それを zip ファイルとして OpenWhisk にアップロードすることができます。OpenWhisk スキャフォールドが必要になるため、バイナリーを作成する最も簡単な方法は、実行する環境と同じ環境内でビルドすることです。手順は次のとおりです。
+
+- 対話式 Swift アクション・コンテナーを稼働する。
+  ```
+  docker run -it -v "$(pwd):/owexec" openwhisk/swift3action bash
+  ```
+  {: pre}
+これにより、Docker コンテナー内の bash シェルに移動します。その中で、以下のコマンドを実行します。
+  
+- バイナリーをパッケージ化するために、便宜上、zip ファイルをインストールする
+  ```
+  apt-get install -y zip
+  ```
+  {: pre}
+- ソース・コードをコピーして、ビルドの準備をする
+  ```
+  cp /owexec/hello.swift /swift3Action/spm-build/main.swift
+  ```
+  {: pre}
+  ```
+  cat /swift3Action/epilogue.swift >> /swift3Action/spm-build/main.swift
+  ```
+  {: pre}
+  ```
+  echo '_run_main(mainFunction:main)' >> /swift3Action/spm-build/main.swift
+  ```
+  {: pre}
+- zBuild およびリンク
+  ```
+  /swift3Action/spm-build/swiftbuildandlink.sh
+  ```
+  {: pre}
+- zip アーカイブを作成する
+  ```
+  cd /swift3Action/spm-build
+  ```
+  {: pre}
+  ```
+  zip /owexec/hello.zip .build/release/Action
+  ```
+- Docker コンテナーを終了する
+  ```
+  exit
+  ```
+  {: pre}
+これで、hello.swift と同じディレクトリー内に hello.zip が作成されました。
+- これをアクション名 helloSwifty として OpenWhisk にアップロードします。
+  ```
+  wsk action update helloSwiftly hello.zip --kind swift:3
+  ```
+  {: pre}
+- どのくらい高速になったかを確認するには、以下を実行します 
+  ```
+  wsk action invoke helloSwiftly --blocking
+  ``` 
+  {: pre}
+
 
 ## Java アクションの作成
 {: #openwhisk_actions_java}
@@ -803,7 +880,26 @@ Docker スケルトンが現在のディレクトリーにインストールさ�
     2016-02-11T16:46:56.842065025Z stdout: hello bob!
   ```
 
-  同様に、ポーリング・ユーティリティーを実行すると、{{site.data.keyword.openwhisk_short}} で実行されているアクションのログをリアルタイムで確認できます。
+  同様に、ポーリング・ユーティリティーを実行すると、OpenWhisk で実行されているアクションのログをリアルタイムで確認できます。
+
+
+## アクションのリスト
+{: #openwhisk_listing_actions}
+
+以下を使用して、作成したすべてのアクションをリストすることができます。
+
+```
+  wsk action list
+  ```
+{: pre}
+
+追加のアクションを作成するにつれて、このリストは長くなるので、関連するアクションをグループ化して[パッケージ](./packages.md)に入れると便利です。アクションのリストをフィルターに掛けて、特定のパッケージ内のアクションだけをリストするには、次のコマンドを使用します。 
+
+```
+wsk action list [PACKAGE NAME]
+```
+{: pre}
+
 
 ## アクションの削除
 {: #openwhisk_delete_action}
@@ -832,6 +928,7 @@ Docker スケルトンが現在のディレクトリーにインストールさ�
   {: pre}
 
 ## アクション・ボディー内のアクション・メタデータへのアクセス
+{: #openwhisk_action_metadata}
 
 アクション環境は、実行中のアクションに固有のいくつかのプロパティーを含んでいます。
 これらによって、アクションは REST API を介して OpenWhisk アセットをプログラマチックに処理したり、
