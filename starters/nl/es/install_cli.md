@@ -36,7 +36,7 @@ Utilice la interfaz de línea de mandatos de Cloud Foundry para descargar, modif
 Antes de empezar, descargue e instale la interfaz de línea de mandatos de Cloud Foundry. 
 
 <p>
-<a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(se abre en un separador o ventana nueva)"><img class="image" src="images/btn_cf_commandline.svg" alt="Descargar interfaz de línea de mandatos de Cloud Foundry" /> </a>
+<a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(Se abre en un nuevo separador o ventana)"><img class="image" src="images/btn_cf_commandline.svg" alt="Descargar interfaz de línea de mandatos de Cloud Foundry" /> </a>
 </p>
 
 **Restricción:** La herramienta de línea de mandatos no se admite en Cygwin. Utilice la herramienta en una ventana de línea de mandatos que no sea la ventana de Cygwin.
@@ -46,7 +46,7 @@ Tras instalar la interfaz de línea de mandatos, ya puede empezar:
 
   1. {: download} Descargue el código de la app en un directorio nuevo para configurar su entorno de desarrollo.
   
-    <a class="xref" href="http://bluemix.net" target="_blank" title="(se abre en un separador o ventana nueva)"><img class="image" src="images/btn_starter-code.svg" alt="Descargar código de aplicación" /> </a>
+    <a class="xref" href="http://bluemix.net" target="_blank" title="(Se abre en un nuevo separador o ventana)"><img class="image" src="images/btn_starter-code.svg" alt="Descargar código de aplicación" /> </a>
 
   2. Cambie al directorio donde se encuentra el código.
 
@@ -57,7 +57,7 @@ antes de volver a desplegarla en {{site.data.keyword.Bluemix_notm}}.
 
     Preste atención al archivo `manifest.yml`. Cuando despliegue su app nuevamente en
 {{site.data.keyword.Bluemix_notm}}, este archivo se utiliza para determinar el URL de la aplicación, la
-asignación de memoria, el número de instancias y otros parámetros cruciales. Puede [obtener más información sobre el archivo de manifiesto ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html "icono de enlace externo"){: new_window} en la documentación de Cloud Foundry.
+asignación de memoria, el número de instancias y otros parámetros cruciales. Puede [obtener más información sobre el archivo de manifiesto ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){: new_window} en la documentación de Cloud Foundry.
 
     Preste también atención al archivo `README.md`, que contiene detalles como instrucciones de compilación, si procede.
 

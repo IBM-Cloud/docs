@@ -30,6 +30,6 @@ Cloud Foundry.
 
   3. {: download} Descargue el código del iniciador e impórtelo en Eclipse seleccionando **Archivo>Importar proyectos existentes en el espacio de trabajo>Archivo de archivado**.
 
-    <a class="xref" href="http://bluemix.net" target="_blank" title="(se abre en un separador o ventana nueva)"><img class="image" src="images/btn_starter-code.svg" alt="Descargar código iniciador" /> </a>
+    <a class="xref" href="http://bluemix.net" target="_blank" title="(Se abre en un nuevo separador o ventana)"><img class="image" src="images/btn_starter-code.svg" alt="Descargar código iniciador" /> </a>
 
 Para ver instrucciones paso a paso sobre cómo desplegar apps, consulte [Despliegue de apps con IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} ![icono de enlace externo](../icons/launch-glyph.svg)](/docs/manageapps/eclipsetools/eclipsetools.html#eclipsetools){: new_window}.
