@@ -22,7 +22,7 @@ Follow these steps to get started with {{site.data.keyword.nlushort}}.
 
 ## Create a service instance
 
-Go to the [{{site.data.keyword.nlushort}}](https://console.ng.bluemix.net/catalog/services/natural-language-understanding) page in the service catalog, log in to Bluemix, and click **Create**.
+Go to the [{{site.data.keyword.nlushort}}](https://console.{DomainName}/catalog/services/natural-language-understanding) page in the service catalog, log in to Bluemix, and click **Create**.
 
 To view your service credentials, go to your [list of services](https://console.{DomainName}/dashboard/services/) and click the service instance you created. From your service instance page, click the "Service Credentials" tab, then click **View Credentials** to view your username and password.
 
@@ -72,7 +72,7 @@ To specify different features and options, or process different input such as HT
 ```
 {: codeblock}
 
-To learn more about the API and see more examples, check out the [API reference![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/natural-language-understanding/api/v1/) and view the [external documentation![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/doc/natural-language-understanding/).
+To learn more about the API and see more examples, check out the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/natural-language-understanding/api/v1/) and view the [external documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/doc/natural-language-understanding/).
 
 
 # Related Links
@@ -80,21 +80,21 @@ To learn more about the API and see more examples, check out the [API reference!
 
 ## Related Links
 {: #general}
-* [Documentation![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/doc/natural-language-understanding){:new_window}
-* [{{site.data.keyword.nlushort}} home page![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/natural-language-understanding.html){:new_window}
-* [Watson Developer Cloud Community![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/watson){:new_window}
+* [Documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/doc/natural-language-understanding){:new_window}
+* [{{site.data.keyword.nlushort}} home page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/natural-language-understanding.html){:new_window}
+* [Watson Developer Cloud Community ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/watson){:new_window}
 
 ## API Reference
 {: #api}
-* [API reference![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/natural-language-understanding/api/v1/){:new_window}
+* [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/natural-language-understanding/api/v1/){:new_window}
 
 ## Tutorials and Samples
 {: #samples}
-* [Live Demo![External link icon](../../icons/launch-glyph.svg "External link icon")](https://natural-language-understanding-demo.mybluemix.net){:new_window}
-* [Sample application and instructions![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/natural-language-understanding-nodejs){:new_window}
+* [Live Demo ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://natural-language-understanding-demo.mybluemix.net){:new_window}
+* [Sample application and instructions ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/natural-language-understanding-nodejs){:new_window}
 
 ## SDKs
 {: #sdk}
-* [Node.js![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/node-sdk){:new_window}
-* [Python![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/python-sdk){:new_window}
-* [Swift![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/swift-sdk){:new_window}
+* [Node.js ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/node-sdk){:new_window}
+* [Python ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/python-sdk){:new_window}
+* [Swift ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/swift-sdk){:new_window}
