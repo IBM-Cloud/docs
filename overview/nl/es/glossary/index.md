@@ -3,8 +3,8 @@
  
 
 copyright:
-  years: 2016
-lastupdated: "2016-10-31"
+  years: 2016, 2017
+lastupdated: "2017-03-15"
 
  
 
@@ -134,7 +134,7 @@ Aplicación de dispositivo móvil o web. Véase también [app móvil](#x4258535)
 ### ID de app
 {: #x7909906}
 
-Un GUID que se asigna a una app para móvil Bluemix. Véase también [identificador exclusivo global](#x2390455).
+Un GUID que se asigna a una app para móvil Bluemix. Véase también [identificador exclusivo global](#x2390455). Consulte también [{{site.data.keyword.appid_full}}](/docs/services/appid/index.html).
 
 ### clave de app
 {: #x7290111}
