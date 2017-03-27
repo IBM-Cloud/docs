@@ -83,9 +83,7 @@ ne sont plus illimitées comme celles proposées par de nombreux services IBM au
 ##Coût
 {: #what_it_costs}
 
-Le prix varie selon les ressources utilisées par un service, un contexte d'exécution, un conteneur, un serveur virtuel ou une option de support
-spécifique. Les ressources peuvent correspondre au nombre d'appels d'API, au nombre d'instances, à la mémoire, à l'espace de stockage, etc. {{site.data.keyword.Bluemix_notm}} met également à disposition des estimateurs de coût détaillé ainsi qu'une calculatrice de prix au centime près pour vous aider à planifier vos frais. Vous pouvez vérifier le coût réel une fois que vous avez construit vos applications dans la vue *Tableau de bord de l'utilisation*. Pour des informations
-plus détaillées sur les frais, voir [Paiement](index.html#charges).
+Le prix varie selon les ressources utilisées par un service, un contexte d'exécution, un conteneur ou une option de support spécifique. Les ressources peuvent correspondre au nombre d'appels d'API, au nombre d'instances, à la mémoire, à l'espace de stockage, etc. {{site.data.keyword.Bluemix_notm}} met également à disposition des estimateurs de coût détaillé ainsi qu'une calculatrice de prix au centime près pour vous aider à planifier vos frais. Vous pouvez vérifier le coût réel une fois que vous avez construit vos applications dans la vue *Tableau de bord de l'utilisation*. Pour des informations plus détaillées sur les frais, voir [Paiement](index.html#charges).
  
 
 ##Code promotionnel
@@ -351,21 +349,6 @@ sur un modèle de tarification à tranches fixes :
 |5200 |	Le nombre d'éléments correspond à la tranche 5 ; par conséquent, le prix total est 5000 $. |	5000 $|
 {:caption="Table 6. Charge calculation by using the block tier pricing model" caption-side="top"}
 
-### Franchises pour les serveurs virtuels
-{: #vms}
-
-Vous pouvez utiliser {{site.data.keyword.virtualmachineslong}} dans le cloud IBM public sous forme de fonction bêta gratuite. Des franchises sont proposées pour le nombre d'images de serveur virtuel que vous pouvez créer, le nombre d'adresses IP qui sont affectées,
-ainsi que la quantité de mémoire pouvant être utilisée.
-
-Les franchises suivantes sont accordées avec {{site.data.keyword.virtualmachineslong}} bêta :
-
-* 2 instances
-* 2 UC virtuelles
-* 8 Go de mémoire
-* 200 Go de stockage de bloc
-* 5 adresses IP publiques
-
-
 ##Estimation des coûts
 {: #cost}
 
@@ -564,17 +547,18 @@ ensemble différent d'étapes à suivre si vous changez de plan.
 
 1. Pour changer de plan, dans le tableau de bord du service, cliquez sur **Plan**. En général, vous pouvez mettre à niveau votre plan ou passer à un plan de niveau inférieur.
 2. Après avoir changé de plan, vous devez effectuer un certain nombre d'étapes. Celles-ci varient selon le type de changement de plan et le service. Par
-exemple, si vous êtes passé à un plan de niveau inférieur, il se peut que vous deviez reconstituer votre application. Ou, si vous avez effectué une mise à niveau de votre plan, il se peut que vous deviez reconstituer votre application et prendre d'autres mesures. <br/><br/>Pour reconstituer votre application, accédez au tableau de bord {{site.data.keyword.Bluemix_notm}} et recherchez l'application à laquelle le service est lié. Dans le menu de l'application, sélectionnez **Redémarrer l'application**.<br/><br/>Les autres actions varient en fonction du service. Reportez-vous au tableau ci-dessous pour prendre connaissance des actions spécifiques à
+exemple, si vous êtes passé à un plan de niveau inférieur, il se peut que vous deviez reconstituer votre application. Ou, si vous avez effectué une mise à niveau de votre plan, il se peut que vous deviez reconstituer votre application et prendre d'autres mesures.<br/><br/>Pour reconstituer votre application, accédez au tableau de bord {{site.data.keyword.Bluemix_notm}} et recherchez l'application à laquelle le service est lié. Dans le menu de l'application, sélectionnez **Redémarrer l'application**.<br/><br/>Les autres actions varient en fonction du service. Reportez-vous au tableau ci-dessous pour prendre connaissance des actions spécifiques à
 exécuter.
 
 |Service |	Information|
 |--------|-------------|
-|Presence Insights 	|Si vous avez choisi un plan léger et que vous dépassez les franchises, un message 403 s'affiche ou est consigné afin d'indiquer que vous ne disposez plus des autorisations, et votre instance de service est désactivée. De plus, les appels API REST POST sont rejetés avec une réponse 403. <br/><br/>Si votre service est désactivé car vous avez dépassé les franchises, vous pouvez procéder à la mise à niveau du plan léger vers un plan payant. Votre service est réactivé dans un délai de 2 heures. <br/><br/>i vous disposez d'un plan payant, vous pouvez passer à un plan inférieur, c'est-à-dire au plan léger, tant que votre utilisation ne dépasse pas la franchise du plan léger pour les événements et l'espace de stockage total. <br/><br/>Lorsque vous mettez à niveau ou réduisez votre plan, vous n'avez pas à reconstituer ou à redémarrer applications.|
+|Presence Insights 	|Si vous avez choisi un plan léger et que vous dépassez les franchises, un message 403 s'affiche ou est consigné afin d'indiquer que vous ne disposez plus des autorisations, et votre instance de service est désactivée. De plus, les appels API REST POST sont rejetés avec une réponse 403.<br/><br/>Si votre service est désactivé car vous avez dépassé les franchises, vous pouvez procéder à la mise à niveau du plan léger vers un plan payant. Votre service est réactivé dans un délai de 2 heures.<br/><br/>i vous disposez d'un plan payant, vous pouvez passer à un plan inférieur, c'est-à-dire au plan léger, tant que votre utilisation ne dépasse pas la franchise du plan léger pour les événements et l'espace de stockage total.<br/><br/>Lorsque vous mettez à niveau ou réduisez votre plan, vous n'avez pas à reconstituer ou à redémarrer applications.|
 {:caption="Table 9. Next steps for changing your plan" caption-side="top"}
 
 ###Changement de plan via l'interface de ligne de commande
 
-Si vous le souhaitez, vous pouvez changer de plan de service via l'interface de ligne de commande. Pour mettre à jour le plan du service, entrez la commande suivante :
+Si vous le souhaitez, vous pouvez changer de plan de service via l'interface de ligne de commande.
+Pour mettre à jour le plan du service, entrez la commande suivante :
 ```
 cf update-service <nom_service> [-p <nouveau_plan>]
 ```

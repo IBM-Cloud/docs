@@ -82,7 +82,7 @@ Si convierte la cuenta durante el periodo de prueba gratuito, las concesiones gr
 ##Coste
 {: #what_it_costs}
 
-Los cargos varían en función de los recursos utilizados por un servicio concreto, el tiempo de ejecución, el contenedor, el servidor virtual o la opción de soporte. Los recursos pueden ser el número de llamadas de API, el número de instancias,
+Los cargos varían en función de los recursos utilizados por un servicio concreto, el tiempo de ejecución, el contenedor o la opción de soporte. Los recursos pueden ser el número de llamadas de API, el número de instancias,
 memoria, almacenamiento, etc. {{site.data.keyword.Bluemix_notm}} también proporciona estimadores de coste detallado, y una calculadora de coste hasta el último céntimo para ayudarle a planificar los cargos. Puede comprobar el coste real tras crear las apps utilizando la vista *Panel de control de uso*. Para obtener información más detallada sobre los cargos, consulte [Cómo se le carga](index.html#charges).
  
 
@@ -294,21 +294,6 @@ se pagaría con un plan basado en un modelo de precios de nivel por bloque:
 |5200 |	El número de elementos cae en el Nivel 5, por lo que el precio total es $5000 USD. |	$5000 USD|
 {:caption="Table 6. Charge calculation by using the block tier pricing model" caption-side="top"}
 
-### Concesiones gratuitas para servidores virtuales
-{: #vms}
-
-Puede utilizar {{site.data.keyword.virtualmachineslong}} en la nube pública de IBM como función beta y de forma gratuita. Se proporcionan concesiones gratuitas para el número de imágenes de servidor virtual que puede crear, el número de direcciones IP que tiene asignadas y la cantidad de memoria que se utiliza.
-
-Las siguientes elementos son las concesiones gratuitas
-para {{site.data.keyword.virtualmachineslong}} beta:
-
-* 2 instancias
-* 2 CPU virtuales
-* 8 GB de memoria
-* 200 GB de almacenamiento en bloque
-* 5 direcciones IP públicas
-
-
 ##Cómo estimar sus costes
 {: #cost}
 
@@ -460,11 +445,15 @@ si cambia su plan.
 
 1. Para cambiar el plan, en el Panel de control del servicio, pulse **Plan**. Por lo general, puede actualizar su plan o reducirlo.
 2. Tras cambiar su plan, debe completar un conjunto de pasos a seguir. Los pasos varían según el tipo de cambio
-de plan y del servicio. Por ejemplo, si ha reducido su plan, es posible que tenga que volver a transferir su app. O, si ha actualizado su plan, es posible que deba volver a transferir su app y realizar otras acciones.<br/><br/>Para volver a transferir su app, vaya al Panel de control de {{site.data.keyword.Bluemix_notm}} y busque la app a la que está vinculado el servicio. En el menú de la app, seleccione **Reiniciar app**.<br/><br/>Otras acciones de paso siguiente dependen del servicio. Para acciones específicas, consulte la tabla siguiente.
+de plan y del servicio. Por ejemplo, si ha reducido su plan, es posible que tenga que volver a transferir su app. O, si ha actualizado su plan, es posible que deba volver a transferir su app y realizar otras acciones.<br/><br/>Para volver a transferir la app, vaya al
+Panel de control {{site.data.keyword.Bluemix_notm}}
+y busque la app a la que está vinculado el servicio. En el menú de la app, seleccione **Reiniciar app**.<br/><br/>Otros pasos siguientes dependen del servicio. Para acciones específicas, consulte la tabla siguiente.
 
 |Servicio |	Información|
 |--------|-------------|
-|Presence Insights 	|Si tiene un plan Lite y supera el permitido gratis, se mostrará un mensaje 403 o se registra para indicar que ya no tiene autorización, y su instancia de servicio se inhabilita. Además, las llamadas POST REST API se rechazan con la respuesta 403.<br/><br/>Si su servicio está inhabilitado porque no supera el permiso gratuito, puede actualizar de un plan Lite a un plan Paid. El servicio se reanudará dentro de las dos siguientes horas.<br/><br/>Si tiene un plan Paid, puede reducir el plan al plan Lite, siempre que su uso permanezca dentro de lo permitido en el plan Lite para sucesos y almacenamiento total.<br/><br/>Cuando actualice o reduzca el plan, no tiene que volver a transferir ni a reiniciar las apps.|
+|Presence Insights 	|Si tiene un plan Lite y supera el permitido gratis, se mostrará un mensaje 403 o se registra para indicar que ya no tiene autorización, y su instancia de servicio se inhabilita. Además, las llamadas POST
+REST API se rechazan con la respuesta 403.<br/><br/>Si su servicio está inhabilitado porque ha excedido el periodo de permiso gratuito, puede actualizar de un plan Lite a un plan de pago. Su servicio se vuelve a habilitar en 2 horas.<br/><br/>Si tiene un plan de pago, puede reducirlo al plan Lite, siempre que su uso permanezca dentro de lo permitido en el
+plan Lite para sucesos y almacenamiento total.<br/><br/>Cuando actualiza o reduce su plan, no necesita volver a transferir o reiniciar sus apps.|
 {:caption="Table 9. Next steps for changing your plan" caption-side="top"}
 
 ###Cómo cambiar el plan por medio de la interfaz de línea de mandatos

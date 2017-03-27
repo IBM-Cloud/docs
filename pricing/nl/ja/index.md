@@ -82,7 +82,7 @@ lastupdated: "2017-01-11"
 ##コスト
 {: #what_it_costs}
 
-課金は、特定のサービス、ランタイム、コンテナー、仮想サーバー、またはサポートのオプションで使用されるリソースに応じて異なります。リソースには、API 呼び出しの数、インスタンス数、メモリー、ストレージなどがあります。また、{{site.data.keyword.Bluemix_notm}} では、料金計画に役立つ、詳細なコスト見積もりツールと正確な金額まで算出するコスト計算器が用意されています。アプリのビルド後に、*「使用状況ダッシュボード」*ビューで実際のコストを確認できます。課金の詳細については、[『課金方法』](index.html#charges)を参照してください。
+課金は、特定のサービス、ランタイム、コンテナー、またはサポートのオプションで使用されるリソースに応じて異なります。リソースには、API 呼び出しの数、インスタンス数、メモリー、ストレージなどがあります。また、{{site.data.keyword.Bluemix_notm}} では、料金計画に役立つ、詳細なコスト見積もりツールと正確な金額まで算出するコスト計算器が用意されています。アプリのビルド後に、*「使用状況ダッシュボード」*ビューで実際のコストを確認できます。課金の詳細については、[『課金方法』](index.html#charges)を参照してください。
  
 
 ##割引コード
@@ -283,20 +283,6 @@ SoftLayer DirectLink やプレミアム・サポートのオプションなど�
 |5200 |	アイテムの数量は階層 5 に該当するため、合計額は $5000 (米ドル) となる。 |	$5000 (米ドル)|
 {:caption="Table 6. Charge calculation by using the block tier pricing model" caption-side="top"}
 
-### 仮想サーバーの無料枠。
-{: #vms}
-
-IBM パブリック・クラウドの {{site.data.keyword.virtualmachineslong}} をベータ機能として無料で使用できます。無料枠は、作成できる仮想サーバーのイメージの数、割り当てられた IP アドレスの数、および使用できるメモリー量に応じて提供されます。
-
-以下の項目は {{site.data.keyword.virtualmachineslong}} (ベータ) の無料枠です。
-
-* 2 つのインスタンス
-* 2 つの仮想 CPU
-* 8 GB のメモリー
-* 200 GB のブロック・ストレージ
-* 5 つの公開 IP アドレス
-
-
 ##コスト見積もり方法
 {: #cost}
 
@@ -468,10 +454,10 @@ REST API 呼び出しが 403 応答で拒否されます。<br/><br/>無料枠�
 ```
 cf update-service <service_name> [-p <new_plan>]
 ```
-# rellinks
+# 関連リンク
 {: rellinks}
-## general
-{: general}
+## 一般
+{: general} 
 * [{{site.data.keyword.Bluemix_notm}} 価格設定シート](https://console.{DomainName}/pricing/)
 * [{{site.data.keyword.Bluemix_notm}} Developers Community Forum ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/){: new_window}
 * [オンライン・ヘルプの表示 (Getting online help)](https://www.{DomainName}/docs/troubleshoot/getting_customer_support.html#online_help)

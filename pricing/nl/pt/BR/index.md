@@ -82,7 +82,7 @@ Se você converter sua conta durante a avaliação grátis, seus abonos grátis 
 ##Qual é o custo
 {: #what_it_costs}
 
-Os encargos variam dependendo dos recursos usados por um determinado serviço, tempo de execução, contêiner, servidor virtual ou opção de suporte. O recurso pode ser o número de chamadas API, o número de instâncias, a memória, o armazenamento e assim por diante. O {{site.data.keyword.Bluemix_notm}} também fornece estimadores de custo detalhados e uma calculadora de custo que não deixa escapar nenhum centavo para ajudar você a planejar os encargos. É possível verificar o custo real após a construção de seus aplicativos, usando a visualização *Detalhes de uso*. Para obter informações mais detalhadas sobre encargos, veja [Como você é cobrado](index.html#charges).
+Os encargos variam dependendo dos recursos usados por um determinado serviço, tempo de execução, contêiner ou opção de suporte. O recurso pode ser o número de chamadas API, o número de instâncias, a memória, o armazenamento e assim por diante. O {{site.data.keyword.Bluemix_notm}} também fornece estimadores de custo detalhados e uma calculadora de custo que não deixa escapar nenhum centavo para ajudar você a planejar os encargos. É possível verificar o custo real após a construção de seus aplicativos, usando a visualização *Detalhes de uso*. Para obter informações mais detalhadas sobre encargos, veja [Como você é cobrado](index.html#charges).
  
 
 ##Código promocional
@@ -280,20 +280,6 @@ A tabela a seguir ilustra o quanto do valor que você paga pelo seu plano se bas
 |... |	... |	...|
 |5.200 |	O número de itens se enquadra na Camada 5, assim o preço total é US$ 5.000. |	US$ 5.000|
 {:caption="Table 6. Charge calculation by using the block tier pricing model" caption-side="top"}
-
-### Abonos grátis para servidores virtuais
-{: #vms}
-
-É possível usar {{site.data.keyword.virtualmachineslong}} na nuvem pública da IBM como um recurso beta sem encargos. Abonos grátis são fornecidos para o número de imagens do servidor virtual que você pode criar, o número de endereços IP que são designados, bem como a quantia de memória que pode ser usada.
-
-Os itens a seguir são os abonos grátis para as {{site.data.keyword.virtualmachineslong}} beta:
-
-* 2 instâncias
-* 2 CPUs virtuais
-* 8 GB de memória
-* 200 GB de armazenamento de bloco
-* 5 endereços IP públicos
-
 
 ##Como estimar seus custos
 {: #cost}

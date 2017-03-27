@@ -91,7 +91,7 @@ normalmente fornite da ciascun servizio. Le franchigie non sono più quelle di u
 ##Costi
 {: #what_it_costs}
 
-Gli addebiti variano a seconda delle risorse utilizzate da una specifica opzione di servizio, runtime, contenitore, server virtuale o supporto. Le risorse possono essere il numero di chiamate API, il numero di istanze, la
+Gli addebiti variano a seconda delle risorse utilizzate da una specifica opzione di servizio, runtime, contenitore o supporto. Le risorse possono essere il numero di chiamate API, il numero di istanze, la
 memoria, l'archiviazione e così via. {{site.data.keyword.Bluemix_notm}} fornisce anche degli stimatori del costo dettagliati e un calcolatore dei costi accurato per aiutarti a pianificare i tuoi addebiti. Puoi controllare il costo effettivo dopo che hai creato le tue applicazioni utilizzando la vista *Dashboard di utilizzo*. Per informazioni più dettagliate sugli addebiti, vedi [Modalità di addebito](index.html#charges).
  
 
@@ -247,7 +247,7 @@ servizio Push, la quota di utilizzo che supera la franchigia mensile viene
 addebitata.</dd>
 <dt>Addebiti riservati</dt>
     <dd><p>In quanto proprietario di un account Pagamento a consumo o di un account Sottoscrizione, puoi riservare un'istanza del servizio, con un impegno a lungo termine, per un prezzo scontato. Ad esempio, puoi riservare l'offerta standard DB2 on Cloud di grandi dimensioni per 12 mesi.</p> 
-    <p>Alcuni servizi {{site.data.keyword.Bluemix_notm}} offrono dei piani riservati. Puoi richiedere un piano riservato dal <strong>Catalogo</strong> {{site.data.keyword.Bluemix_notm}} facendo clic sul tile del servizio. Seleziona quindi il piano di servizio che meglio soddisfa le tue esigenze. Se è disponibile un piano riservato, fai clic su <strong>Richiesta</strong> e attieniti alle richieste che ti vengono presentate per inviare la tua richiesta. Riceverai un'email che contiene le informazioni sul prezzo del piano riservato. Verrai anche contattato al più presto da un rappresentante del settore Vendite di {{site.data.keyword.Bluemix_notm}} per completare l'acquisto.</p></dd>
+    <p>Alcuni servizi {{site.data.keyword.Bluemix_notm}} offrono dei piani riservati. Puoi richiedere un piano riservato dal <strong>Catalogo</strong> {{site.data.keyword.Bluemix_notm}} facendo clic sul tile del servizio. Seleziona quindi il piano di servizio che meglio soddisfa le tue esigenze. Se è disponibile un piano riservato, fai clic su <strong>Richiesta</strong> e attieniti alle richieste che ti vengono presentate per inviare la tua richiesta. Riceverai un'e-mail che contiene le informazioni sul prezzo del piano riservato. Verrai anche contattato al più presto da un rappresentante del settore Vendite di {{site.data.keyword.Bluemix_notm}} per completare l'acquisto.</p></dd>
 <dt>Addebiti a livelli</dt>
     <dd>Analogamente agli addebiti misurati, paghi in base al tuo consumo di runtime e servizi. Tuttavia, gli addebiti a livelli aggiungono degli ulteriori livelli di prezzo, spesso offrendo degli addebiti scontati nei livelli con un più ampio consumo. Il prezzo a livelli è offerto in modalità semplice, graduale o a blocchi.</dd>
 </dl>
@@ -344,20 +344,6 @@ il prezzo totale è $1900 USD. |	$1900 USD|
 |5200 |	Il numero di elementi rientra nel livello 5, quindi
 il prezzo totale è $5000 USD. |	$5000 USD|
 {:caption="Table 6. Charge calculation by using the block tier pricing model" caption-side="top"}
-
-### Franchigie per i server virtuali
-{: #vms}
-
-Puoi utilizzare gratuitamente {{site.data.keyword.virtualmachineslong}} nel cloud pubblico IBM come funzione beta. Delle franchigie sono fornite per le immagini di server virtuale da te create, il numero di indirizzi IP assegnati e la quantità di memoria che può essere utilizzata.
-
-Per il beta {{site.data.keyword.virtualmachineslong}}, le franchigie consistono nei seguenti elementi:
-
-* 2 istanze
-* 2 CPU virtuali
-* 8 GB di memoria
-* 200 GB di archiviazione blocchi
-* 5 indirizzi IP pubblici
-
 
 ##Come stimare i tuoi costi
 {: #cost}
@@ -539,12 +525,12 @@ il tuo piano, ogni servizio prevede una procedura diversa a cui devi attenerti.
 
 1. Per modificare il tuo piano, nel Dashboard del servizio, fai clic su **Piano**. Di norma, puoi eseguire un upgrade del tuo piano oppure ridurlo.
 2. Dopo che hai modificato il tuo piano, devi completare una specifica procedura. Tale procedura varia a
-seconda del tipo di modifica del piano e del servizio. Ad esempio, se hai ridotto il tuo piano, è possibile che tu debba preparare nuovamente la tua applicazione. Nel caso invece in cui tu abbia eseguito l'upgrade del tuo piano, potresti dover preparare di nuovo la tua applicazione ed eseguire delle altre azioni. <br/><br/>Per preparare di nuovo la tua applicazione, vai al dashboard {{site.data.keyword.Bluemix_notm}} e trova l'applicazione a cui è associato il servizio. Nel menu delle applicazioni, seleziona **Riavvia applicazione**.<br/><br/>Le altre azioni dei passi successivi dipendono dal servizio. Consulta la seguente tabella per le specifiche azioni.
+seconda del tipo di modifica del piano e del servizio. Ad esempio, se hai ridotto il tuo piano, è possibile che tu debba preparare nuovamente la tua applicazione. Nel caso invece in cui tu abbia eseguito l'upgrade del tuo piano, potresti dover preparare di nuovo la tua applicazione ed eseguire delle altre azioni.<br/><br/>Per preparare di nuovo la tua applicazione, vai al dashboard {{site.data.keyword.Bluemix_notm}} e trova l'applicazione a cui è associato il servizio. Nel menu delle applicazioni, seleziona **Riavvia applicazione**.<br/><br/>Le altre azioni dei passi successivi dipendono dal servizio. Consulta la seguente tabella per le specifiche azioni.
 
 |Servizio |	Informazioni|
 |--------|-------------|
 |Presence Insights 	|Se hai un piano Lite e superi le franchigie, viene visualizzato oppure registrato nei log un messaggio 403 che indica che non sei più autorizzato e la tua
-istanza del servizio viene disabilitata. Inoltre, le chiamate API REST POST vengono rifiutate con una risposta 403.<br/><br/>Se il tuo servizio è disabilitato perché hai superato la franchigia, puoi eseguire l'upgrade da un piano Lite a un piano a pagamento.  Il tuo servizio viene riabilitato entro 2 ore.<br/><br/>Se hai un piano a pagamento, puoi ridurlo a un piano Lite a condizione che il tuo utilizzo rimanga entro la franchigia prevista dal piano Lite per gli eventi e l'archiviazione totale.<br/><br/>Quando esegui l'upgrade o la riduzione del tuo piano, non hai bisogno di preparare nuovamente o riavviare le tue applicazioni.|
+istanza del servizio viene disabilitata. Inoltre, le chiamate API REST POST vengono rifiutate con una risposta 403.<br/><br/>Se il tuo servizio è disabilitato perché hai superato la franchigia, puoi eseguire l'upgrade da un piano Lite a un piano a pagamento. Il tuo servizio viene riabilitato entro 2 ore.<br/><br/>Se hai un piano a pagamento, puoi ridurlo a un piano Lite a condizione che il tuo utilizzo rimanga entro la franchigia prevista dal piano Lite per gli eventi e l'archiviazione totale.<br/><br/>Quando esegui l'upgrade o la riduzione del tuo piano, non hai bisogno di preparare nuovamente o riavviare le tue applicazioni.|
 {:caption="Table 9. Next steps for changing your plan" caption-side="top"}
 
 ###Come modificare il tuo piano tramite l'interfaccia riga di comando
