@@ -464,7 +464,7 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 通过项目构面将�
 
  
 
-通常会在以下情况下发生“无效网关”错误：您访问某个 Web 站点，该站点使用代理服务器来存储和中继来自托管该站点的主服务器中的数据。主服务器和代理服务器之间可能未正确连接，因此您会在浏览器窗口中看到 HTTP 状态码 502。此状态码指示该站点的主服务器未收到代理服务器所期望的 HTTP 实施。
+通常会在以下情况下发生“无效网关”错误：您访问某个 Web 站点，该站点使用代理服务器来存储和中继来自托管该站点的主服务器中的数据。主服务器和代理服务器之间可能未正确连接，因此您会在浏览器窗口中看到 HTTP 状态码 502。此状态码指示该站点的主服务器未收到本该从代理服务器发来的 HTTP 实现。
 {: tsCauses}
 
 其他导致“无效网关”错误的不太常见的原因包括：因特网服务提供商 (ISP) 信息遗失、防火墙配置错误以及浏览器高速缓存错误。 
@@ -1442,10 +1442,10 @@ pid @{HOME}/nginx/logs/nginx.pid;
 有关如何更改缺省日志记录配置的更多信息，请参阅 [error_log ![外部链接图标](../icons/launch-glyph.svg)](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}。
 	
 
-## 无法将第三方 Python 库导入到 {{site.data.keyword.Bluemix_notm}}
+## 无法将第三方 Python 库导入 {{site.data.keyword.Bluemix_notm}}
 {: #ts_importpylib}
 
-您可能无法将第三方 Python 库导入到 {{site.data.keyword.Bluemix_notm}}。通过将配置文件添加到 Python 应用程序的根目录中，可以解决此问题。
+您可能无法将第三方 Python 库导入 {{site.data.keyword.Bluemix_notm}}。通过将配置文件添加到 Python 应用程序的根目录中，可以解决此问题。
 
 
 当您尝试导入第三方 Python 库（如 `web.py` 库）时，`cf push` 命令会失败。
@@ -1472,7 +1472,7 @@ pid @{HOME}/nginx/logs/nginx.pid;
 	有关如何配置 `requirements.txt` 文件的更多信息，请参阅 [Requirements files](https://pip.readthedocs.org/en/1.1/requirements.html)。
 
   2. 将 `Procfile` 文件添加到 Python 应用程序的根目录中。
-`Procfile` 文件中必须包含 Python 应用程序的 start 命令。在以下命令中，*yourappname* 是 Python 应用程序的名称，*PORT* 是 Python 应用程序在接收应用程序用户请求时必须使用的端口号。*$PORT* 为可选项。如果不在 start 命令中指定 PORT，那么会改用应用程序中 `VCAP_APP_PORT` 环境变量下的端口号。 
+`Procfile` 文件中必须包含 Python 应用程序的启动命令。在以下命令中，*yourappname* 是 Python 应用程序的名称，*PORT* 是 Python 应用程序在接收应用程序用户请求时必须使用的端口号。*$PORT* 为可选项。如果不在 start 命令中指定 PORT，那么会改用应用程序中 `VCAP_APP_PORT` 环境变量下的端口号。 
 	```
 	web: python <yourappname>.py $PORT
 	```

@@ -1,10 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2016
+  years: 2015, 2017
   
-lastupdated: "2016-10-20"
-
+lastupdated: "2016-03-08"
 
 ---
 
@@ -16,18 +15,14 @@ lastupdated: "2016-10-20"
 # Traitement des incidents
 {: #troubleshooting}
 
+Si vous rencontrez un problème avec {{site.data.keyword.Bluemix}}, vous pouvez utiliser les informations décrites ici pour identifier et résoudre le problème. 
 
-Si vous rencontrez des problèmes avec {{site.data.keyword.Bluemix}}, vous pouvez procéder à une opération de traitement des incidents afin de déterminer les actions correctives à mener.
+Connectez-vous à la console {{site.data.keyword.Bluemix_notm}} :
+* Pour afficher le statut des services en cours et des contextes d'exécution, cliquez sur **Support > Statut** dans la barre de menu. 
+* Pour afficher des notifications, cliquez sur **Compte > Notifications** dans la barre de menu.  
+* Pour rechercher des réponses dans la documentation et sur les forums Stack Overflow ou developerWorks (dW) Answers, ou pour contacter le support, cliquez sur **Support > Trouver des réponses** dans la barre de menu. 
 
-Connectez-vous à la console {{site.data.keyword.Bluemix_notm}} et cliquez sur l'élément de menu **Compte** depuis la barre
-de menu. Vous pouvez afficher le statut des services en cours et des contextes d'exécution ainsi que des
-notifications. De plus, vous pouvez sélectionner **Support** &gt; **Obtenir de l'aide** pour rechercher des réponses
-dans la documentation et sur les
-forums Stack Overflow ou developerWorks (dW) Answers, ou pour contacter le support.
-
-
-Si vous utilisez un compte qui est lié à {{site.data.keyword.Bluemix_notm}} et
-{{site.data.keyword.BluSoftlayer}}, vous pouvez vous connecter à la console Bluemix et cliquer sur le lien **Statut** pour
-afficher le statut des contextes d'exécution et des services en cours d'exécution. De plus, vous pouvez cliquer sur le lien **Support**
-dans la barre de menu pour ouvrir le widget Support, puis sélectionner **Ajouter un ticket** &gt; **Trouver des réponses**. Vous pouvez aussi accéder directement aux forums *Stack Overflow* et *developerWorks (dW) Answers* afin de rechercher des
-réponses ou de poser des questions.
+Si votre compte est lié entre {{site.data.keyword.Bluemix_notm}} et {{site.data.keyword.BluSoftlayer}}, connectez-vous à la console Bluemix :
+* Pour afficher le statut des services en cours et des contextes d'exécution, cliquez sur le lien **Status**. 
+* Pour rechercher des réponses, cliquez sur le lien **Support** dans la barre de menu, puis sur **Ajouter un ticket > Trouver des réponses**.
+  Vous pouvez aussi accéder directement aux forums *Stack Overflow* ou *developerWorks (dW) Answers* pour rechercher des réponses ou poser des questions. 
