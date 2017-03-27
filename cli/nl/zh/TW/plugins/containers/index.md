@@ -36,7 +36,7 @@ IBM Containers CLI 是一種 {{site.data.keyword.Bluemix_notm}} CLI 外掛程式
 </dl>
 
 <table summary="您可以用來在 Bluemix 上管理容器的 bluemix 指令。">
- <caption>表格 1. 用來在 Bluemix 上管理容器的指令</caption>
+ <caption>表 1. 用來在 Bluemix 上管理容器的指令</caption>
  <thead>
  <th colspan="5">用來在 Bluemix 上管理容器的指令</th>
  </thead>

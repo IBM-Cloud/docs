@@ -127,7 +127,7 @@ Puoi inoltre installare un plugin dal repository. {{site.data.keyword.Bluemix_no
 
 Per l'installazione da un repository, attieniti alla seguente procedura:
 
-  1. Trova il plug-in nel repository. Dop oaver installato la CLI {{site.data.keyword.Bluemix_notm}}, il repository ufficiale `Bluemix` viene aggiunto per impostazione predefinita. Puoi elencare i plugin nel repository `Bluemix` utilizzando il comando `bluemix plugin repo-plugins`. Ad
+  1. Trova il plug-in nel repository. Dopo aver installato la CLI {{site.data.keyword.Bluemix_notm}}, il repository ufficiale `Bluemix` viene aggiunto per impostazione predefinita. Puoi elencare i plugin nel repository `Bluemix` utilizzando il comando `bluemix plugin repo-plugins`. Ad
 esempio:
 
   ```
