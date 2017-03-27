@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-03-24"
 
 ---
 <!-- Copyright info and last updated date at top of file: REQUIRED
@@ -50,7 +50,11 @@ To add a new connection, follow these steps:
 
  Cloud Automation Manager must have access to the provider cloud region where you want to deploy your templates.  The access is granted by supplying Cloud Automation Manager with access credentials. The method for obtaining access credentials depends on the cloud provider.
 
+ For information about specifying IBM Cloud access credentials, see [Configuring an IBM Cloud connection](https://console.{DomainName}/docs/services/CloudAutomationManager/cam_creating_ibm_cloud_connection.html).
+ 
  For information about specifying Amazon EC2 access credentials, see [Configuring an Amazon EC2 connection](https://console.{DomainName}/docs/services/CloudAutomationManager/cam_creating_aws_connection.html).
+ 
+ For information about specifying vSphere access credentials, see [Configuring a vSphere connection](https://console.{DomainName}/docs/services/CloudAutomationManager/cam_creating_vsphere_connection.html).
 
 5. Click **Create**. The connection is added to the connection list.
 
