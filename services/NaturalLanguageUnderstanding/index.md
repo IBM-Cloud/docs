@@ -22,7 +22,7 @@ Follow these steps to get started with {{site.data.keyword.nlushort}}.
 
 ## Create a service instance
 
-Go to the [Natural Language Understanding](https://bluemix.net/catalog/services/natural-language-understanding) page in the service catalog, log in to Bluemix, and click **Create**.
+Go to the [{{site.data.keyword.nlushort}}](https://console.ng.bluemix.net/catalog/services/natural-language-understanding) page in the service catalog, log in to Bluemix, and click **Create**.
 
 To view your service credentials, go to your [list of services](https://console.{DomainName}/dashboard/services/) and click the service instance you created. From your service instance page, click the "Service Credentials" tab, then click **View Credentials** to view your username and password.
 
@@ -30,9 +30,9 @@ To view your service credentials, go to your [list of services](https://console.
 
 To get started with one of the Watson Developer Cloud SDKs, view the SDK repositories for installation instructions and example usage:
 
-* [Node.js![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/node-sdk)
-* [Python![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/python-sdk)
-* [Swift![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/swift-sdk)
+* [Node.js ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/node-sdk)
+* [Python ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/python-sdk)
+* [Swift ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/swift-sdk)
 
 The following example shows how to call the API from a command line with curl. Copy the following example parameters object into a new file called `parameters.json`. This sample configuration instructs the service to analyze **concepts** and **sentiment**, and limits the number of concepts results to three.
 
