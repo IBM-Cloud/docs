@@ -29,7 +29,7 @@ Sie können Kibana auf eine beliebige der folgenden Arten starten:
 
 * Über einen direkten Browser-Link
 
-    Sie können ein angepasstes Kibana-Dashboard starten, das Daten aus Services in einem bereitgestellten {{site.data.keyword.Bluemix}}-Bereich zusammenfasst. 
+    Sie können ein angepasstes Kibana-Dashboard starten, das Daten aus Services in einem bereitgestellten {{site.data.keyword.Bluemix}}-Bereich zusammenfasst.
     
     Die Abfrage, durch die die Daten gefiltert werden, die im Dashboard angezeigt werden, ruft Protokolleinträge für einen Bereich in der {{site.data.keyword.Bluemix}}-Organisation ab. Die Protokollinformationen, die im Kibana-Dashboard angezeigt werden, umfassen Einträge für alle Ressourcen, die innerhalb des Bereichs der {{site.data.keyword.Bluemix}}-Organisation bereitgestellt wurden, an der Sie angemeldet sind. Weitere Informationen finden Sie unter [Kibana-Dashboard im Web-Browser aufrufen](logging_view_kibana3.html#launch_Kibana_from_browser).
     
@@ -64,7 +64,7 @@ Weitere Informationen finden Sie in der [Kibana](https://www.elastic.co/guide/en
 ##  Kibana-Dashboard über das Bluemix-Dashboard aufrufen
 {: #launch_Kibana_from_bluemix}
 
-Die Abfrage, die zum Filtern der im Dashboard angezeigten Daten verwendet wird, ruft Protokolleinträge für die Cloud Foundry-Anwendung ab. Die Protokollinformationen, die standardmäßig im Kibana-Dashboard angezeigt werden, beziehen sich sämtlich auf eine einzelne Cloud Foundry-Anwendung und alle zugehörigen Instanzen. 
+Die Abfrage, die zum Filtern der im Dashboard angezeigten Daten verwendet wird, ruft Protokolleinträge für die Cloud Foundry-Anwendung ab. Die Protokollinformationen, die standardmäßig im Kibana-Dashboard angezeigt werden, beziehen sich sämtlich auf eine einzelne Cloud Foundry-Anwendung und alle zugehörigen Instanzen.
 
 Führen Sie die folgenden Schritte aus, um die Protokolle einer Cloud Foundry-Anwendung in Kibana anzuzeigen:
 
@@ -81,7 +81,7 @@ Weitere Informationen zur Anpassung eines Kibana-Dashboards finden Sie in [diese
 ##  Kibana-Dashboard im Web-Browser aufrufen
 {: #launch_Kibana_from_browser}
 
-Die Abfrage, durch die die Daten gefiltert werden, die im Dashboard angezeigt werden, ruft Protokolleinträge für einen Bereich in der {{site.data.keyword.Bluemix}}-Organisation ab. Die Protokollinformationen, die im Kibana-Dashboard angezeigt werden, umfassen Einträge für alle Ressourcen, die innerhalb des Bereichs der {{site.data.keyword.Bluemix}}-Organisation bereitgestellt wurden, an der Sie angemeldet sind. 
+Die Abfrage, durch die die Daten gefiltert werden, die im Dashboard angezeigt werden, ruft Protokolleinträge für einen Bereich in der {{site.data.keyword.Bluemix}}-Organisation ab. Die Protokollinformationen, die im Kibana-Dashboard angezeigt werden, umfassen Einträge für alle Ressourcen, die innerhalb des Bereichs der {{site.data.keyword.Bluemix}}-Organisation bereitgestellt wurden, an der Sie angemeldet sind.
 
 Führen Sie die folgenden Schritte aus, um ein Kibana-Dashboard über einen Browser zu öffnen:
 
@@ -100,7 +100,7 @@ Weitere Informationen zur Anpassung eines Kibana-Dashboards finden Sie in [diese
 
 In {{site.data.keyword.Bluemix}} können Sie Daten mithilfe des Kibana-Standarddashboards analysieren, das für jede Ressource bzw. jeden {{site.data.keyword.Bluemix}}-Bereich bereitgestellt wird. Diese Dashboards zeigen standardmäßig alle Daten an, die für die letzten 24 Stunden verfügbar sind. Sie können die durch ein Dashboard angezeigten Informationen jedoch eingrenzen. Sie können einem Standarddashboard Abfragen und Filter hinzufügen und es anschließend zur künftigen Wiederverwendung speichern.
 
-In einem Dashboard können Sie mehrere Abfragen und Filter hinzufügen. Eine Abfrage definiert eine Teilmenge von Protokolleinträgen. Ein Filter verfeinert die Datenauswahl durch Ein- oder Ausschluss von Informationen. 
+In einem Dashboard können Sie mehrere Abfragen und Filter hinzufügen. Eine Abfrage definiert eine Teilmenge von Protokolleinträgen.  Ein Filter verfeinert die Datenauswahl durch Ein- oder Ausschluss von Informationen. 
 
 In der folgenden Liste werden kurz einige Beispiele zur Filterung von Daten für Cloud Foundry-Apps dargestellt:
 * Wenn Sie nach Informationen in Ihren Protokollen suchen, die Schlüsselbegriffe enthalten, können Sie Abfragen erstellen, um nach diesen Begriffen zu filtern. Sie können die Abfragen visuell im Kibana-Dashboard vergleichen. Weitere Informationen finden Sie unter [Protokolle für Cloud Foundry-Apps mit Abfragen in Kibana filtern](kibana3/logging_kibana_query.html#logging_kibana_query).
@@ -116,11 +116,11 @@ In der folgenden Liste werden kurz einige Beispiele zur Filterung von Daten für
 ## Kibana-Dashboard anpassen
 {: #customize_kibana_dashboard}
 
-Es gibt verschiedene Typen von Dashboards, die Sie zum Visualisieren und Analysieren der Daten anpassen können, wie zum Beispiel die folgenden: 
+Es gibt verschiedene Typen von Dashboards, die Sie zum Visualisieren und Analysieren der Daten anpassen können, wie zum Beispiel die folgenden:
 * Single-cf-app-Dashboard: Dies ist ein Dashboard, das Informationen zu einer einzelnen Cloud Foundry-Anwendung anzeigt.  
 * Multi-cf-app-Dashboard: Dies ist ein Dashboard, das Informationen zu allen Cloud Foundry-Anwendungen anzeigt, die im selben {{site.data.keyword.Bluemix}}-Bereich bereitgestellt werden. 
 
-Wenn Sie ein Dashboard anpassen, können Sie Abfragen und Filter konfigurieren, um eine Teilmenge der Protokolldaten zur Anzeige durch das Dashboard auszuwählen. 
+Wenn Sie ein Dashboard anpassen, können Sie Abfragen und Filter konfigurieren, um eine Teilmenge der Protokolldaten zur Anzeige durch das Dashboard auszuwählen.
 
 Sie können Anzeigen (Panels) zur Visualisierung der Daten konfigurieren. Kibana enthält verschiedene Anzeigen, wie zum Beispiel Anzeigen für Tabellen, Trends und Histogramme, die Sie zur Analyse der Informationen verwenden können. Sie können Anzeigen im Dashboard hinzufügen, entfernen und neu anordnen. Der Zweck jeder Anzeige variiert. Einige Anzeigen werden in Zeilen aufbereitet, in denen die Ergebnisse einer oder mehrerer Abfragen dargestellt werden. Andere Anzeigen enthalten Dokumente oder angepasste Informationen. Sie können zum Beispiel ein Balkendiagramm, ein Kreisdiagramm oder eine Tabelle zum Visualisieren und Analysieren der Daten konfigurieren.  
 
@@ -134,7 +134,7 @@ Führen Sie die folgenden Schritte aus, um ein Kibana-Dashboard nach einer Anpas
 
 2. Geben Sie einen Namen für das Dashboard ein.
 
-    **Hinweis:** Wenn Sie versuchen, ein Dashboard unter einem Namen zu speichern, der Leerzeichen enthält, wird es nicht gespeichert. 
+    **Hinweis:** Wenn Sie versuchen, ein Dashboard unter einem Namen zu speichern, der Leerzeichen enthält, wird es nicht gespeichert.
 
 3. Klicken Sie neben dem Namensfeld auf das Symbol **Speichern**.
 
@@ -143,14 +143,14 @@ Führen Sie die folgenden Schritte aus, um ein Kibana-Dashboard nach einer Anpas
 ## Protokolle über ein Kibana-Dashboard analysieren
 {: #analyze_kibana_logs}
 
-Nach der Anpassung eines Kibana-Dashboards können Sie die Daten in den Dashboardanzeigen visualisieren und analysieren.  
+Nach der Anpassung eines Kibana-Dashboards können Sie die Daten in den Dashboardanzeigen visualisieren und analysieren. 
 
-Für die Suche nach Informationen können Sie Abfragen fixieren (Pin) oder freigeben (Unpin).  
+Für die Suche nach Informationen können Sie Abfragen fixieren (Pin) oder freigeben (Unpin). 
 
-* Sie können eine Abfrage im Dashboard fixieren und die Suche wird automatisch aktiviert. 
-* Zum Entfernen des Inhalts aus dem Dashboard können Sie eine Abfrage inaktivieren. 
+* Sie können eine Abfrage im Dashboard fixieren und die Suche wird automatisch aktiviert.
+* Zum Entfernen des Inhalts aus dem Dashboard können Sie eine Abfrage inaktivieren.
 
-Zum Filtern von Informationen können Sie Filter aktivieren oder inaktivieren.  
+Zum Filtern von Informationen können Sie Filter aktivieren oder inaktivieren. 
 
 * Sie können das Kontrollkästchen unter **Toggle** ![Umschaltfeld zum Einschließen eines Filters](images/logging_toggle_include_filter.jpg) in einem Filter auswählen, um den Filter zu aktivieren.   
 * Sie können das Kontrollkästchen unter **Toggle** ![Umschaltfeld zum Einschließen eines Filters](images/logging_toggle_exclude_filter.jpg) in einem Filter abwählen, um den Filter zu inaktivieren. 
@@ -159,17 +159,17 @@ Die Grafiken und Diagramme in Ihrem Dashboard zeigen die Daten an. Sie können d
 
 Bei einem Single-cf-app-Dashboard enthält das Dashboard zum Beispiel Informationen zu genau einer Cloud Foundry-Anwendung. Die Daten, die Sie visualisieren und analysieren können, sind auf diese App beschränkt. Sie können das Dashboard zum Analysieren aller Instanzen der App verwenden. Sie können Instanzen vergleichen. Sie können die Informationen nach Instanz-ID filtern. 
 
-Sie können für jede Instanz-ID eine Abfrage definieren und im Dashboard fixieren.  
+Sie können für jede Instanz-ID eine Abfrage definieren und im Dashboard fixieren. 
 
 ![Dashboard mit fixierten Abfragen](images/logging_kibana_dash_activate_query.jpg)
 
 Anschließend können Sie einzelne Abfragen abhängig von den gewünschten Instanzinformationen, die im Dashboard angezeigt werden sollen, aktivieren oder inaktivieren. 
 
-Die folgende Abbildung zeigt eine aktivierte Abfrage und eine inaktivierte Abfrage: 
+Die folgende Abbildung zeigt eine aktivierte Abfrage und eine inaktivierte Abfrage:
 
 ![Dashboard mit fixierten Abfragen](images/logging_kibana_dash_deactivate_query.jpg)
 
-Wenn Sie zwei Instanzen in einem Histogramm vergleichen wollen, können Sie zwei Abfragen im selben Dashboard, eine für jede Instanz-ID, definieren. Sie können ihnen einen Aliasnamen und eine eindeutige Farbe zur einfachen Unterscheidung zuordnen. Kibana verarbeitet mehrere Abfragen mit Verknüpfung durch ein logisches OR.  
+Wenn Sie zwei Instanzen in einem Histogramm vergleichen wollen, können Sie zwei Abfragen im selben Dashboard, eine für jede Instanz-ID, definieren. Sie können ihnen einen Aliasnamen und eine eindeutige Farbe zur einfachen Unterscheidung zuordnen. Kibana verarbeitet mehrere Abfragen mit Verknüpfung durch ein logisches OR. 
 
 Die folgende Abbildung zeigt die Anzeige zum Konfigurieren eines Aliasnamens und einer Farbe für eine Abfrage, zum Fixieren ('Pin') der Abfrage an das Dashboard und zum Inaktivieren der Abfrage:
 
@@ -180,7 +180,7 @@ Die folgende Abbildung zeigt die Anzeige zum Konfigurieren eines Aliasnamens und
 ## Kibana-Protokollformat für Cloud Foundry-Anwendungen
 {: #kibana_log_format_cf}
 
-Sie können ein Kibana-Dashboard so konfigurieren, dass es die folgenden Felder für jeden Protokolleintrag anzeigt: 
+Sie können ein Kibana-Dashboard so konfigurieren, dass es die folgenden Felder für jeden Protokolleintrag anzeigt:
 
 <dl>
 <dt><strong>@timestamp</strong></dt>
@@ -196,17 +196,17 @@ Sie können ein Kibana-Dashboard so konfigurieren, dass es die folgenden Felder 
 
 <dt><strong>ALCH_TENANT_ID</strong></dt>
 <dd>
-<p>Die ID der {{site.data.keyword.Bluemix_notm}}-Ressource. </p>
+<p>Die ID der {{site.data.keyword.Bluemix_notm}}-Ressource.</p>
 </dd>
 
 <dt><strong>_id</strong></dt>
 <dd>
-<p>Die eindeutige ID für Ihr Protokolldokument. </p>
+<p>Die eindeutige ID für Ihr Protokolldokument.</p>
 </dd>
 
 <dt><strong>_index</strong></dt>
 <dd>
-<p>Der Index für Ihren Protokolleintrag. </p>
+<p>Der Index für Ihren Protokolleintrag.</p>
 </dd>
 
 <dt><strong>_type</strong></dt>
@@ -216,22 +216,22 @@ Sie können ein Kibana-Dashboard so konfigurieren, dass es die folgenden Felder 
 
 <dt><strong>app_name</strong></dt>
 <dd>
-<p>Der Name Ihrer {{site.data.keyword.Bluemix_notm}}-Anwendung. </p>
+<p>Der Name Ihrer {{site.data.keyword.Bluemix_notm}}-Anwendung.</p>
 </dd>
 
 <dt><strong>application_id</strong></dt>
 <dd>
-<p>Die eindeutige ID Ihrer {{site.data.keyword.Bluemix_notm}}-Anwendung. </p>
+<p>Die eindeutige ID Ihrer {{site.data.keyword.Bluemix_notm}}-Anwendung.</p>
 </dd>
 
 <dt><strong>host</strong></dt>
 <dd>
-<p>Der Name Ihrer Anwendung, die die Protokolldaten generiert hat. </p>
+<p>Der Name Ihrer Anwendung, die die Protokolldaten generiert hat.</p>
 </dd>
 
 <dt><strong>instance_id</strong></dt>
 <dd>
-<p>Die Instanz-ID Ihrer Anwendungsinstanz, die die Protokolldaten generiert hat. </p>
+<p>Die Instanz-ID Ihrer Anwendungsinstanz, die die Protokolldaten generiert hat.</p>
 </dd>
 
 <dt><strong>module</strong></dt>
@@ -241,7 +241,7 @@ Sie können ein Kibana-Dashboard so konfigurieren, dass es die folgenden Felder 
 
 <dt><strong>loglevel</strong></dt>
 <dd>
-<p>Die Priorität des protokollierten Ereignisses. </p>
+<p>Die Priorität des protokollierten Ereignisses.</p>
 </dd>
 
 <dt><strong>message</strong></dt>
@@ -258,12 +258,12 @@ Sie können ein Kibana-Dashboard so konfigurieren, dass es die folgenden Felder 
 
 <dt><strong>org_id</strong></dt>
 <dd>
-<p>Die eindeutige ID Ihrer {{site.data.keyword.Bluemix_notm}}-Organisation. </p>
+<p>Die eindeutige ID Ihrer {{site.data.keyword.Bluemix_notm}}-Organisation.</p>
 </dd>
 
 <dt><strong>org_name</strong></dt>
 <dd>
-<p>Der Name der {{site.data.keyword.Bluemix_notm}}-Organisation, in der das Staging für Ihre App erfolgt. </p>
+<p>Der Name der {{site.data.keyword.Bluemix_notm}}-Organisation, in der das Staging für Ihre App erfolgt.</p>
 </dd>
 
 <dt><strong>origin</strong></dt>
@@ -274,35 +274,35 @@ Sie können ein Kibana-Dashboard so konfigurieren, dass es die folgenden Felder 
 <dt><strong>source_id</strong></dt>
 <dd>
 <pre class="pre screen"><code>[App/0]</code></pre>
-<p>Die Komponente, die Protokolle produziert. In der folgenden Liste werden die Protokolle aus jeder Komponente beschrieben: </p>
+<p>Die Komponente, die Protokolle produziert. In der folgenden Liste werden die Protokolle aus jeder Komponente beschrieben:</p>
 
 <dl>
 <dt><strong>API</strong></dt>
-<dd>Protokollierte Antworten auf API-Aufrufe, die eine Änderung an Ihrem App-Status anfordern. </dd>
+<dd>Protokollierte Antworten auf API-Aufrufe, die eine Änderung an Ihrem App-Status anfordern.</dd>
 
 <dt><strong>APP</strong></dt>
-<dd>Protokollierte Antworten aus Ihrer App. </dd>
+<dd>Protokollierte Antworten aus Ihrer App.</dd>
 
 <dt><strong>CELL</strong></dt>
-<dd>Protokollierte Antworten aus der Diego-Zelle, die den Zeitpunkt eines Starts, Stopps oder Absturzes einer App angeben. </dd>
+<dd>Protokollierte Antworten aus der Diego-Zelle, die den Zeitpunkt eines Starts, Stopps oder Absturzes einer App angeben.</dd>
 
 <dt><strong>LGR</strong></dt>
 <dd>Protokollierte Antworten aus Loggregator, die auf Probleme mit dem Protokollierungsprozess hinweisen.</dd>
 
 <dt><strong>RTR</strong></dt>
-<dd>Protokollierte Antworten aus dem Router, wenn er HTTP-Anforderungen an Ihre App leitet. </dd>
+<dd>Protokollierte Antworten aus dem Router, wenn er HTTP-Anforderungen an Ihre App leitet.</dd>
 
 <dt><strong>SSH</strong></dt>
-<dd>Protokollierte Antworten aus der Diego-Zelle, wenn ein Benutzer auf einen App-Container mit dem Befehl **cf ssh** zugreift. </dd>
+<dd>Protokollierte Antworten aus der Diego-Zelle, wenn ein Benutzer auf einen App-Container mit dem Befehl **cf ssh** zugreift.</dd>
 
 <dt><strong>STG</strong></dt>
-<dd>Protokollierte Antworten aus der Diego-Zelle oder dem Droplet Execution Agent (DEA), wenn ein Staging oder erneutes Staging für Ihre App erfolgt. </dd>
+<dd>Protokollierte Antworten aus der Diego-Zelle oder dem Droplet Execution Agent (DEA), wenn ein Staging oder erneutes Staging für Ihre App erfolgt.</dd>
 </dl>
 </dd>
 
 <dt><strong>space_name</strong></dt>
 <dd>
-<p>Der Name des {{site.data.keyword.Bluemix_notm}}-Bereichs, in das Staging für Ihre App erfolgt. </p>
+<p>Der Name des {{site.data.keyword.Bluemix_notm}}-Bereichs, in das Staging für Ihre App erfolgt.</p>
 </dd>
 
 <dt><strong>timestamp</strong></dt>

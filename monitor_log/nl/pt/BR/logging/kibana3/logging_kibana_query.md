@@ -6,8 +6,6 @@ lastupdated: "2017-02-02"
 
 ---
 
-
-<!-- Common attributes used in the template are defined as follows: -->
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -15,16 +13,11 @@ lastupdated: "2017-02-02"
 
 
 # Filtrando seus logs do app Cloud Foundry com consultas no Kibana
-<!-- for example, Uploading your data -->
 {: #logging_kibana_query}
-<!-- Provide an appropriate ID above -->
 
-<!-- The short description section should include a sentence describing why this task is needed. For search engine optimization, include the service long name and "Bluemix". For example: -->
-
-Use o Kibana para criar consultas para procurar termos chave em seus logs e filtrar por esses termos. Com o Kibana, é possível comparar as consultas visualmente no painel. É possível acessar o painel do Kibana na guia **Logs** para seu app Cloud Foundry.
+Use o Kibana para criar consultas para procurar termos chave em seus logs e filtrar por esses termos. Com o Kibana, é possível comparar as consultas visualmente no painel. É possível acessar o painel do Kibana na guia **Logs** para seu app Cloud Foundry. 
 {:shortdesc}
 
-<!-- Include a sentence to briefly introduce the steps/subtopics. Example: -->
 Conclua as tarefas a seguir para criar uma consulta para seus logs do app Cloud Foundry no painel do Kibana:
 
 1. Acesse a guia **Logs** de seu app Cloud Foundry. 

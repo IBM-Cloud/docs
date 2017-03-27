@@ -18,7 +18,7 @@ lastupdated: "2017-02-06"
 {: #logging_kibana_time_filter}
 
 
-Visualizza e filtra i log dell'applicazione {{site.data.keyword.Bluemix_notm}} in base all'ora sul dashboard Kibana. Puoi accedere al dashboard Kibana dalla scheda **Log** della tua applicazione Cloud Foundry.
+Visualizza e filtra i log dell'applicazione {{site.data.keyword.Bluemix_notm}} in base all'ora sul dashboard Kibana. Puoi accedere al dashboard Kibana dalla scheda **Log** della tua applicazione Cloud Foundry. 
 {:shortdesc}
 
 Completa le seguenti attività per visualizzare e filtrare i log della tua applicazione Cloud Foundry in base all'ora nel dashboard Kibana:
@@ -39,7 +39,7 @@ Completa le seguenti attività per visualizzare e filtrare i log della tua appli
 
 4. Fai clic sui campi **Da** e **A** per modificare l'ora di inizio e di fine per il tuo filtro. 
     
-    Per includere i log fino al momento attuale, fai clic sul link **adesso**.
+    Per includere i log fino al momento attuale, fai clic sul link **adesso**. 
     Quando hai finito di selezionare l'intervallo di tempo desiderato, fai clic su **Applica**. 
 
 Il dashboard Kibana visualizza ora gli eventi registrati in base al tuo filtro temporale personalizzato.

@@ -18,7 +18,7 @@ lastupdated: "2017-02-06"
 {: #logging_kibana_time_filter}
 
 
-Visualize e filtre os logs do aplicativo {{site.data.keyword.Bluemix_notm}} por horário no painel do Kibana. É possível acessar o painel do Kibana na guia **Logs** para seu app Cloud Foundry.
+Visualize e filtre os logs do aplicativo {{site.data.keyword.Bluemix_notm}} por horário no painel do Kibana. É possível acessar o painel do Kibana na guia **Logs** para seu app Cloud Foundry. 
 {:shortdesc}
 
 Conclua as tarefas a seguir para visualizar e filtrar seus logs do app Cloud Foundry por horário no painel do Kibana:
@@ -39,7 +39,7 @@ Conclua as tarefas a seguir para visualizar e filtrar seus logs do app Cloud Fou
 
 4. Clique nos campos **De** e **Até** para editar o horário de início e encerramento de seu filtro. 
     
-    Para incluir logs no presente momento, clique no link **agora**.
+    Para incluir logs no presente momento, clique no link **agora**. 
     Quando estiver satisfeito com seu intervalo de horário, clique em **Aplicar**. 
 
 O painel do Kibana agora exibe eventos registrados para seu filtro de tempo customizado.

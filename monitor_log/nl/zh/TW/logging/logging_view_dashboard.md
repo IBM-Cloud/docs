@@ -105,7 +105,7 @@ lastupdated: "2017-02-06"
 </dl>
 
 下圖顯示以 Droplet Execution Agent (DEA) 為基礎之 Cloud Foundry 架構中的不同元件（日誌類型）：
-![DEA 架構中的日誌類型。](images/logging_F1.png "以 Droplet Execution Agent (DEA) 為基礎之 Cloud Foundry 架構中的元件（日誌類型）。")
+![DEA 架構中的日誌類型。](images/logging_F1.png "以 Droplet Execution Agent 為基礎之 Cloud Foundry 架構中的元件。")
 
 
 

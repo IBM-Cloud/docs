@@ -43,7 +43,7 @@ lastupdated: "2017-02-16"
 	 {{site.data.keyword.Bluemix_notm}} 將日誌傳送至其中的記載端點。請參閱下表，以將 *logging_endpoint* 取代為您的值：
 
 	 <table>
-	 <caption>表格 1. 記載端點值</caption>
+	 <caption>表 1. 記載端點值</caption>
      <thead>
      <tr>
      <th>記載端點</th>

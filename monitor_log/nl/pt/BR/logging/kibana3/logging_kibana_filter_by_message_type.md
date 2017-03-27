@@ -18,7 +18,7 @@ lastupdated: "2017-02-16"
 {: #logging_kibana_message_type_filter}
 <!-- Provide an appropriate ID above -->
 
-Visualize e filtre os logs do aplicativo {{site.data.keyword.Bluemix_notm}} por tipo de mensagem no painel do Kibana. É possível acessar o painel do Kibana na guia **Logs** para seu app Cloud Foundry.
+Visualize e filtre os logs do aplicativo {{site.data.keyword.Bluemix_notm}} por tipo de mensagem no painel do Kibana. É possível acessar o painel do Kibana na guia **Logs** para seu app Cloud Foundry. 
 {:shortdesc}
 
 <!-- Include a sentence to briefly introduce the steps/subtopics. Example: -->

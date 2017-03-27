@@ -16,7 +16,7 @@ lastupdated: "2017-02-16"
 # Cloud Foundry-App-Protokolle über die Befehlszeilenschnittstelle (CLI) analysieren
 {: #analyzing_logs_cli}
 
-In {{site.data.keyword.Bluemix}} können Sie Protokolle über die Befehlszeilenschnittstelle (CLI) mithilfe des Befehls **cf logs** anzeigen, filtern und analysieren. Über die Befehlszeile können Protokolle programmgesteuert verwaltet werden.
+In {{site.data.keyword.Bluemix}} können Sie Protokolle über die Befehlszeilenschnittstelle (CLI) mithilfe des Befehls **cf logs** anzeigen, filtern und analysieren. Über die Befehlszeile können Protokolle programmgesteuert verwaltet werden. 
 {:shortdesc}
 
 Verwenden Sie den Befehl **cf logs**, um Protokolle aus einer Cloud Foundry-App und aus den Systemkomponenten, die mit der App interagieren, anzuzeigen, wenn Sie die App in {{site.data.keyword.Bluemix_notm}} bereitstellen. Der Befehl **cf logs** zeigt die STDOUT- und STDERR-Protokolldatenströme einer Cloud Foundry-Anwendung an.
@@ -44,7 +44,7 @@ Führen Sie die folgenden Schritte aus, um alle Protokolle anzuzeigen, die für 
 ## Letzte Protokolleinträge für eine Cloud Foundry-App anzeigen
 {: #tailing_log_cli}
 
-Führen Sie die folgenden Schritte aus, um die letzten Protokolle anzuzeigen, die für eine Cloud Foundry-App verfügbar sind: 
+Führen Sie die folgenden Schritte aus, um die letzten Protokolle anzuzeigen, die für eine Cloud Foundry-App verfügbar sind:
 
 1. Öffnen Sie ein Terminal und melden Sie sich bei {{site.data.keyword.Bluemix}} an.
 
@@ -58,7 +58,7 @@ Führen Sie die folgenden Schritte aus, um die letzten Protokolle anzuzeigen, di
 ## Abschnitt eines Cloud Foundry-Protokolls anzeigen
 {: #partial_log_cli}
 
-Führen Sie die folgenden Schritte aus, um einen Teil der Protokolle anzuzeigen, die für eine Cloud Foundry-App in einem Zeitraum verfügbar sind: 
+Führen Sie die folgenden Schritte aus, um einen Teil der Protokolle anzuzeigen, die für eine Cloud Foundry-App in einem Zeitraum verfügbar sind:
 
 1. Öffnen Sie ein Terminal und melden Sie sich bei {{site.data.keyword.Bluemix}} an.
 
@@ -81,7 +81,7 @@ Führen Sie die folgenden Schritte aus, um Protokolleinträge anzuzeigen, die be
     <pre class="pre screen"><code>cf logs <var class="keyword varname">App-Name</var> --recent | grep '<var class="keyword varname">Schlüsselwort</var>'</code></pre>
     
 
-Protokolleinträge, die das Schlüsselwort **APP** enthalten, können Sie beispielsweise mithilfe des folgenden Befehls anzeigen: 
+Protokolleinträge, die das Schlüsselwort **APP** enthalten, können Sie beispielsweise mithilfe des folgenden Befehls anzeigen:
 
 <pre class="pre screen"><code>cf logs App-Name --recent | grep '\[App'
 </code></pre>

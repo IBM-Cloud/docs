@@ -19,7 +19,7 @@ lastupdated: "2017-02-06"
 In {{site.data.keyword.Bluemix}} können Sie Protokolle über die Registerkarte **Protokolle** anzeigen, filtern und analysieren, die für jede Cloud Foundry-Anwendung verfügbar ist. Im {{site.data.keyword.Bluemix}}-Dashboard können Sie die letzte Aktivität der Anwendung analysieren.
 {:shortdesc}
 
-{{site.data.keyword.Bluemix_notm}} Public bietet einen integrierten Protokollierungsserivce an. Wenn Sie Ihre Anwendungen in Cloud Foundry ausführen, erfasst der Protokollierungsservice (Logging) aus Systemkomponenten, die mit Ihrer Anwendung interagieren, Protokolldaten zu Ihrer Anwendung und sogar Protokolldaten aus Ihrer Anwendung, wenn Sie die Standardausgabe (STDOUT) und die Standard-Fehlerausgabe (STDERR) verwenden. 
+{{site.data.keyword.Bluemix_notm}} Public bietet einen integrierten Protokollierungsserivce an. Wenn Sie Ihre Anwendungen in Cloud Foundry ausführen, erfasst der Protokollierungsservice (Logging) aus Systemkomponenten, die mit Ihrer Anwendung interagieren, Protokolldaten zu Ihrer Anwendung und sogar Protokolldaten aus Ihrer Anwendung, wenn Sie die Standardausgabe (STDOUT) und die Standard-Fehlerausgabe (STDERR) verwenden.
 
 Protokolle für {{site.data.keyword.Bluemix_notm}}-Anwendungen werden in einem festen Format angezeigt, ähnlich dem folgenden Muster:
 
@@ -36,7 +36,7 @@ Weitere Informationen zum Protokollformat finden Sie unter [Protokollformat für
 
 Führen Sie die folgenden Schritte aus, um Bereitstellungs- oder Laufzeitprotokolle einer Cloud Foundry-Anwendung anzuzeigen:
 
-1. Melden Sie sich bei {{site.data.keyword.Bluemix_notm}} an und klicken Sie auf den App-Namen im {{site.data.keyword.Bluemix_notm}}-Dashboard **Apps**.  
+1. Melden Sie sich bei {{site.data.keyword.Bluemix_notm}} an und klicken Sie auf den App-Namen im {{site.data.keyword.Bluemix_notm}}-Dashboard **Apps**. 
 
     Die Detailseite für die App wird angezeigt.
     
@@ -63,18 +63,18 @@ Jeder Protokolleintrag enthält die folgenden Felder:
 <dd>
 <pre class="pre screen"><code>[App/0]</code></pre>
 <p>Die Komponente, die das Protokoll generiert. </p>
-<p>Auf jeden Komponententyp folgt ein Schrägstrich und eine Ziffer, die die Anwendungsinstanz angibt. 0 ist die Ziffer, die der ersten Instanz zugeordnet ist, 1 die der zweiten usw. Beachten Sie, dass Sie filtern können, um nur eine App-Instanz im Dashboard anzuzeigen. </p>
-<p>In der folgenden Liste werden die verschiedenen Typen von Komponenten kurz beschrieben: </p>
+<p>Auf jeden Komponententyp folgt ein Schrägstrich und eine Ziffer, die die Anwendungsinstanz angibt. 0 ist die Ziffer, die der ersten Instanz zugeordnet ist, 1 die der zweiten usw. Beachten Sie, dass Sie filtern können, um nur eine App-Instanz im Dashboard anzuzeigen.</p>
+<p>In der folgenden Liste werden die verschiedenen Typen von Komponenten kurz beschrieben:</p>
 
 <dl>
 <dt><strong>LGR</strong></dt>
-<dd>Loggregator: Die LGR-Komponente stellt Informationen über den Cloud Foundry Loggregator bereit, der Protokolle aus Cloud Foundry heraus weiterleitet. </dd>
+<dd>Loggregator: Die LGR-Komponente stellt Informationen über den Cloud Foundry Loggregator bereit, der Protokolle aus Cloud Foundry heraus weiterleitet.</dd>
 
 <dt><strong>RTR</strong></dt>
-<dd>Router: Die RTR-Komponente stellt Informationen zu HTTP-Anforderungen an eine Anwendung bereit. </dd>
+<dd>Router: Die RTR-Komponente stellt Informationen zu HTTP-Anforderungen an eine Anwendung bereit.</dd>
 
 <dt><strong>STG</strong></dt>
-<dd>Staging: Die STG-Komponente stellt Informationen zum Staging und erneuten Staging einer Anwendung bereit. </dd>
+<dd>Staging: Die STG-Komponente stellt Informationen zum Staging und erneuten Staging einer Anwendung bereit.</dd>
 
 <dt><strong>APP</strong></dt>
 <dd>Anwendung: Die APP-Komponente stellt Protokolle aus der Anwendung bereit. Hier wird die Standard-Fehlerausgabe (STDERR) und die Standardausgabe (STDOUT) in Ihrem Code angezeigt.
@@ -84,16 +84,16 @@ Jeder Protokolleintrag enthält die folgenden Felder:
 <dd>Cloud Foundry-API: Die API-Komponente stellt Informationen zu den internen Aktionen bereit, die aus der Anforderung eines Benutzers zum Ändern des Status einer Anwendung resultieren.</dd>
 
 <dt><strong>DEA</strong></dt>
-<dd>Droplet Execution Agent: Die DEA-Komponente stellt Informationen zum Start, Stopp oder Absturz einer Anwendung bereit.
-<p>Diese Komponente ist nur verfügbar, wenn Ihre Anwendung in der Cloud Foundry-Architektur bereitgestellt wurde, die auf DEA basiert. </p></dd>
+<dd>Droplet Execution Agent: Die DEA-Komponente stellt Informationen zum Start, Stopp oder Absturz einer Anwendung bereit. 
+<p>Diese Komponente ist nur verfügbar, wenn Ihre Anwendung in der Cloud Foundry-Architektur bereitgestellt wurde, die auf DEA basiert.</p></dd>
 
 <dt><strong>CELL</strong></dt>
-<dd>Diego-Zelle: Die CELL-Komponente stellt Informationen zum Start, Stopp oder Absturz einer Anwendung bereit.
-<p>Diese Komponente ist nur verfügbar, wenn Ihre Anwendung in der Cloud Foundry-Architektur bereitgestellt wurde, die auf Diego basiert. </p></dd>
+<dd>Diego-Zelle: Die CELL-Komponente stellt Informationen zum Start, Stopp oder Absturz einer Anwendung bereit. 
+<p>Diese Komponente ist nur verfügbar, wenn Ihre Anwendung in der Cloud Foundry-Architektur bereitgestellt wurde, die auf Diego basiert.</p></dd>
 
 <dt><strong>SSH</strong></dt>
-<dd>SSH: Die SSH-Komponente stellt jedes Mal Informationen bereit, wenn ein Benutzer auf eine Anwendung mit dem Befehl **cf ssh** zugreift.
-<p>Diese Komponente ist nur verfügbar, wenn Ihre Anwendung in der Cloud Foundry-Architektur bereitgestellt wurde, die auf Diego basiert. </p></dd>
+<dd>SSH: Die SSH-Komponente stellt jedes Mal Informationen bereit, wenn ein Benutzer auf eine Anwendung mit dem Befehl **cf ssh** zugreift. 
+<p>Diese Komponente ist nur verfügbar, wenn Ihre Anwendung in der Cloud Foundry-Architektur bereitgestellt wurde, die auf Diego basiert.</p></dd>
 
 </dl>
 </dd>
@@ -106,7 +106,7 @@ Jeder Protokolleintrag enthält die folgenden Felder:
 </dl>
 
 Die folgende Abbildung zeigt die verschiedenen Komponenten (Protokolltypen) in einer Cloud Foundry-Architektur, die auf dem Droplet Execution Agent (DEA) basiert:
-![Protokolltypen in einer Cloud Foundry-Architektur auf DEA-Basis.](images/logging_F1.png "Komponenten (Protokolltypen") in einer Cloud Foundry-Architektur, die auf dem Droplet Execution Agent (DEA) basiert.")
+![Protokolltypen in einer DEA-Architektur.](images/logging_F1.png "Komponenten in einer Cloud Foundry-Architektur, die auf Droplet Execution Agent basiert.")
 
 
 

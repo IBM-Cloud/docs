@@ -106,8 +106,7 @@ Cloud Foundry アプリケーションのデプロイメントまたはランタ
 </dd>
 </dl>
 
-以下の図は、Droplet Execution Agent (DEA) に基づく Cloud Foundry アーキテクチャーのさまざまなコンポーネント (ログ・タイプ) を示します。
-![ DEA アーキテクチャーのログ・タイプ。](images/logging_F1.png "コンポーネント (ログ・タイプ ")Droplet Execution Agent (DEA) に基づいた Cloud Foundry アーキテクチャーの。")
+以下の図は、Droplet Execution Agent (DEA) に基づく Cloud Foundry アーキテクチャーのさまざまなコンポーネント (ログ・タイプ) を示します。 ![DEA アーキテクチャーのログ・タイプ。](images/logging_F1.png "Droplet Execution Agent に基づく Cloud Foundry アーキテクチャーのコンポーネント。")
 
 
 

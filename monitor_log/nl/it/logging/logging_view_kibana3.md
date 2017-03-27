@@ -36,7 +36,7 @@ Puoi avviare Kibana in uno dei seguenti modi:
     Puoi anche modificare o rimuovere la query iniziale e aggiungere altre query. Per ulteriori informazioni, vedi [Filtraggio dei log dell'applicazione Cloud Foundry con le query in Kibana](kibana3/logging_kibana_query.html#logging_kibana_query).
 
 
-Kibana è un'interfaccia basata su browser in cui puoi personalizzare i dahboard che potrai quindi utilizzare per analizzare i dati di log ed eseguire attività di gestione avanzate.  
+Kibana è un'interfaccia basata su browser in cui puoi personalizzare i dahboard che potrai quindi utilizzare per analizzare i dati di log ed eseguire attività di gestione avanzate. 
 
 In {{site.data.keyword.Bluemix}}, puoi analizzare i dati utilizzando il dashboard Kibana predefinito disponibile per ogni applicazione Cloud Foundry e per ogni spazio della tua organizzazione. Per impostazione predefinita, questi dashboard visualizzano tutti i dati disponibili durante le ultime 24 ore attraverso un pannello che include la riga Istogramma e una riga Tabella di eventi. 
 
@@ -50,11 +50,11 @@ Per visualizzare i dati, puoi configurare i pannelli. Kibana include diversi pan
 
 Dopo aver personalizzato un dashboard, puoi scegliere una delle seguenti azioni:
 
-* Puoi salvare il dashboard per riutilizzi futuri.  Per ulteriori informazioni, vedi [Salvataggio di un dashboard Kibana](logging_view_kibana3.html#save_Kibana_dashboard).
+* Puoi salvare il dashboard per riutilizzi futuri. Per ulteriori informazioni, vedi [Salvataggio di un dashboard Kibana](logging_view_kibana3.html#save_Kibana_dashboard).
 
 * Puoi esportare o condividere un link diretto a un dashboard Kibana con un altro utente. Per ulteriori informazioni, vedi [Esportazione e condivisione dei tuoi dashboard Kibana](kibana3/logging_kibana_export_share_dashboard.html#sexporting_sharing_kibana_dash).
 
-* Puoi incorporare il tuo dashboard in una pagina web. Perché un utente possa visualizzare un dashboard incorporato, deve avere le autorizzazioni per accedere a Kibana. 
+* Puoi incorporare il tuo dashboard in una pagina web. Perché un utente possa visualizzare un dashboard incorporato, deve avere le autorizzazioni per accedere a Kibana.
 
 Per ulteriori informazioni, consulta la documentazione [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html).
 
@@ -64,7 +64,7 @@ Per ulteriori informazioni, consulta la documentazione [Kibana](https://www.elas
 ##  Accesso al dashboard Kibana dal dashboard Bluemix
 {: #launch_Kibana_from_bluemix}
 
-La query che viene utilizzata per filtrare i dati visualizzati nel dashboard richiama le voci di log per l'applicazione Cloud Foundry. Le informazioni di log visualizzate dal dashboard Kibana per impostazione predefinita sono tutte correlate a un'unica applicazione Cloud Foundry e a tutte le sue istanze. 
+La query che viene utilizzata per filtrare i dati visualizzati nel dashboard richiama le voci di log per l'applicazione Cloud Foundry. Le informazioni di log visualizzate dal dashboard Kibana per impostazione predefinita sono tutte correlate a un'unica applicazione Cloud Foundry e a tutte le sue istanze.
 
 Per visualizzare i log di un'applicazione Cloud Foundry in Kibana, completa la seguente procedura:
 
@@ -81,7 +81,7 @@ Per ulteriori informazioni sulla personalizzazione di un dashboard Kibana, consu
 ##  Accesso al dashboard Kibana da un browser web
 {: #launch_Kibana_from_browser}
 
-La query che viene utilizzata per filtrare i dati visualizzati nel dashboard richiama le voci di log per uno spazio nell'organizzazione {{site.data.keyword.Bluemix}}. Le informazioni di log visualizzate dal dashboard Kibana includono i record per tutte le risorse che vengono distribuite all'interno dello spazio dell'organizzazione {{site.data.keyword.Bluemix}} a cui sei connesso. 
+La query che viene utilizzata per filtrare i dati visualizzati nel dashboard richiama le voci di log per uno spazio nell'organizzazione {{site.data.keyword.Bluemix}}. Le informazioni di log visualizzate dal dashboard Kibana includono i record per tutte le risorse che vengono distribuite all'interno dello spazio dell'organizzazione {{site.data.keyword.Bluemix}} a cui sei connesso.
 
 Completa la seguente procedura per aprire un dashboard Kibana da un browser:
 
@@ -100,7 +100,7 @@ Per ulteriori informazioni sulla personalizzazione di un dashboard Kibana, consu
 
 In {{site.data.keyword.Bluemix}}, puoi analizzare i dati utilizzando il dashboard Kibana predefinito fornito per ogni risorsa o in base allo spazio {{site.data.keyword.Bluemix}}. Per impostazione predefinita, questi dashboard visualizzano tutti i dati disponibili durante le ultime 24 ore. Tuttavia, puoi limitare le informazioni visualizzate tramite un dashboard. Puoi aggiungere query e filtri a un dashboard predefinito e quindi salvarlo per riutilizzi futuri.
 
-In un dashboard, puoi aggiungere più query e filtri. Una query definisce un sottoinsieme di voci di log.  Un filtro ridefinisce la selezione dei dati includendo o escludendo informazioni.  
+In un dashboard, puoi aggiungere più query e filtri. Una query definisce un sottoinsieme di voci di log.  Un filtro ridefinisce la selezione dei dati includendo o escludendo informazioni. 
 
 Per le applicazioni Cloud Foundry, il seguente elenco mostra degli esempi su come filtrare i dati:
 * Se nei log stai cercando delle informazioni che includono termini chiave, puoi creare query per filtrare in base a questi termini. Con Kibana, puoi confrontare visivamente le query sul dashboard. Per ulteriori informazioni, vedi [Filtraggio dei log dell'applicazione Cloud Foundry con le query in Kibana](kibana3/logging_kibana_query.html#logging_kibana_query).
@@ -134,7 +134,7 @@ Completa la seguente procedura per salvare un dashboard Kibana dopo averlo perso
 
 2. Immetti un nome per il dashboard.
 
-    **Nota:** un dashboard con un nome che contiene spazi vuoti non verrà salvato. 
+    **Nota:** un dashboard con un nome che contiene spazi vuoti non verrà salvato.
 
 3. Accanto al nome campo, fai clic sull'icona **Salva**.
 
@@ -169,7 +169,7 @@ La seguente figura mostra una query attivata e un'altra disattivata:
 
 ![Dashboard con query bloccate](images/logging_kibana_dash_deactivate_query.jpg)
 
-Se vuoi confrontare 2 istanze in un istogramma, puoi definire due query nello stesso dashboard, una per ogni ID istanza. Puoi fornire loro un alias e un colore univoco per identificarle facilmente. Kibana gestisce più query unendole con un OR logico.  
+Se vuoi confrontare 2 istanze in un istogramma, puoi definire due query nello stesso dashboard, una per ogni ID istanza. Puoi fornire loro un alias e un colore univoco per identificarle facilmente. Kibana gestisce più query unendole con un OR logico. 
 
 La seguente figura mostra il pannello per configurare un alias e un colore per una query, per bloccarla nel dashboard e per disattivarla:
 

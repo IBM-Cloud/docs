@@ -16,7 +16,7 @@ lastupdated: "2017-02-06"
 # Criação de log de aplicativo de tempo de execução por meio de apps CF
 {: #logging_writing_to_log_from_cf_app}
 
-No {{site.data.keyword.Bluemix}}, para persistir dados do log para um app Cloud Foundry e seu tempo de execução, deve-se gravar seus logs para STDOUT e STDERR.
+No {{site.data.keyword.Bluemix}}, para persistir dados do log para um app Cloud Foundry e seu tempo de execução, deve-se gravar seus logs para STDOUT e STDERR. 
 {:shortdesc}
 
 No {{site.data.keyword.Bluemix}}, os registros de log STDOUT e STDERR são coletados automaticamente:

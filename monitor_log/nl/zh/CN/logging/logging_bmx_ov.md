@@ -16,7 +16,8 @@ lastupdated: "2017-02-16"
 # 在 Bluemix 中进行日志记录
 {: #logging_bmx_ov}
 
-{{site.data.keyword.Bluemix_notm}} 日志记录功能集成在平台中，并且会对云资源自动启用数据收集。缺省情况下，{{site.data.keyword.Bluemix_notm}} 会收集并显示应用程序、应用程序运行时以及运行这些应用程序的计算运行时的日志。{:shortdesc}
+{{site.data.keyword.Bluemix_notm}} 日志记录功能集成在平台中，并且会对云资源自动启用数据收集。缺省情况下，{{site.data.keyword.Bluemix_notm}} 会收集并显示应用程序、应用程序运行时以及运行这些应用程序的计算运行时的日志。
+{:shortdesc}
 
 您可以使用 {{site.data.keyword.Bluemix_notm}} 中的日志记录功能来了解云平台的行为以及其中所运行的资源。无需进行特殊检测，即可收集标准输出和标准错误日志。例如，可以使用日志来为应用程序提供审计跟踪，检测服务中的问题，识别漏洞，对应用程序部署和运行时行为进行故障诊断，检测运行应用程序的基础架构中的问题，在云平台中的组件之间跟踪应用程序，以及检测可用于提前制止可能影响服务 SLA 的操作的模式。
 

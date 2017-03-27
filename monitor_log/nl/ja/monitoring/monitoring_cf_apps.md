@@ -23,4 +23,4 @@ Cloud Foundry インフラストラクチャーを使用して {{site.data.keywo
 
 * {{site.data.keyword.Bluemix_notm}} サービス。Monitoring and Analytics は、アプリケーション・パフォーマンスのモニターに使用できるサービスを提供します。詳しくは、[Monitoring and
 Analytics](/docs/services/monana/index.html#gettingstartedtemplate) を参照してください。
-* サード・パーティー・オプション。例えば、[New Relic ![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](http://newrelic.com/){:new_window} です。
+* サード・パーティー・オプション。例えば、[New Relic ![「外部リンク」アイコン](../../icons/launch-glyph.svg)](http://newrelic.com/){:new_window} です。

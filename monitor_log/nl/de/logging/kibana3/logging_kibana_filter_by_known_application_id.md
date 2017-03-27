@@ -20,7 +20,7 @@ lastupdated: "2017-02-06"
 
 <!-- The short description section should include a sentence describing why this task is needed. For search engine optimization, include the service long name and "Bluemix". For example: -->
 
-Wenn Sie die Anwendungs-ID Ihrer Cloud Foundry-App kennen, können Sie die Protokolle nach der Anwendungs-ID (application_id) Ihrer App im Kibana-Dashboard schnell anzeigen und filtern. Sie können über die Registerkarte **Protokolle** für Ihre Cloud Foundry-App auf das Kibana-Dashboard zugreifen.
+Wenn Sie die Anwendungs-ID Ihrer Cloud Foundry-App kennen, können Sie die Protokolle nach der Anwendungs-ID (application_id) Ihrer App im Kibana-Dashboard schnell anzeigen und filtern. Sie können über die Registerkarte **Protokolle** für Ihre Cloud Foundry-App auf das Kibana-Dashboard zugreifen. 
 {:shortdesc}
 
 <!-- Include a sentence to briefly introduce the steps/subtopics. Example: -->
@@ -47,7 +47,7 @@ Führen Sie die folgenden Tasks aus, um Ihre Cloud Foundry-App-Protokolle nach b
 
 5. Optional können Sie Ihrem Filterabschnitt weitere Felder hinzufügen, wie zum Beispiel **instance_id**, um die Filterung von Datensätzen nach Instanz-ID zu aktivieren bzw. zu inaktivieren. 
   
-    1. Klicken Sie im Fenster **ALL EVENTS** auf eine Protokollereigniszeile, um die Details für dieses Ereignis anzuzeigen.  
+    1. Klicken Sie im Fenster **ALL EVENTS** auf eine Protokollereigniszeile, um die Details für dieses Ereignis anzuzeigen. 
 	
         ![Fenster 'All Events' mit Details für ein ausgewähltes Protokollereignis](images/logging_selected_log_event.jpg)
 	

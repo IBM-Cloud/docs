@@ -6,26 +6,20 @@ lastupdated: "2017-02-07"
 
 ---
 
-<!-- Common attributes used in the template are defined as follows: -->
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-<!-- Additional task topic: OPTIONAL
-This is the template for additional task topics that are needed beyond the basic tasks in the getting started index.md.  As needed, other task topics can be included, with titles such as "Configuring x", "Administering y", "Managing z", etc. This topic is a peer of the getting started index.md in the <servicename>.ditamap. This topic can have one level of children and they also can be referenced in <servicename>.ditamap -->
 
 # Creazione di tabelle e grafici dalle query in Kibana
-<!-- for example, Uploading your data -->
 {: #logging_kibana_tables_graphs}
-<!-- Provide an appropriate ID above -->
 
-<!-- The short description section should include a sentence describing why this task is needed. For search engine optimization, include the service long name and "Bluemix". For example: -->
 
-Utilizza Kibana per creare grafici e tabelle di query per visualizzare i tuoi dati di log e confrontare i risultati. Puoi accedere al dashboard Kibana dalla scheda **Log** della tua applicazione Cloud Foundry.
+Utilizza Kibana per creare grafici e tabelle di query per visualizzare i tuoi dati di log e confrontare i risultati. Puoi accedere al dashboard Kibana dalla scheda **Log** della tua applicazione Cloud Foundry. 
 {:shortdesc}
 
-<!-- Include a sentence to briefly introduce the steps/subtopics. Example: -->
 Il dashboard Kibana si articola in una serie di righe, in cui ogni riga contiene uno o più pannelli. Puoi configurare i pannelli per visualizzare le rappresentazioni grafiche dei tuoi dati. Utilizza le query per determinare quali dati visualizzare. Per creare un grafico o una tabella, devi prima creare una riga vuota e quindi creare un pannello. Se accedi al dashboard Kibana dalla scheda **Log** della tua applicazione CF, il dashboard visualizza automaticamente due pannelli: un istogramma e una tabella.
 
 Completa le seguenti attività per aggiungere un grafico o una tabella nel dashboard Kibana:

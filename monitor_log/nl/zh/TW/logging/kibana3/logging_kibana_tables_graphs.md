@@ -6,26 +6,20 @@ lastupdated: "2017-02-07"
 
 ---
 
-<!-- Common attributes used in the template are defined as follows: -->
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-<!-- Additional task topic: OPTIONAL
-This is the template for additional task topics that are needed beyond the basic tasks in the getting started index.md.  As needed, other task topics can be included, with titles such as "Configuring x", "Administering y", "Managing z", etc. This topic is a peer of the getting started index.md in the <servicename>.ditamap. This topic can have one level of children and they also can be referenced in <servicename>.ditamap -->
 
 # 在 Kibana 中從查詢建立表格和圖形
-<!-- for example, Uploading your data -->
 {: #logging_kibana_tables_graphs}
-<!-- Provide an appropriate ID above -->
 
-<!-- The short description section should include a sentence describing why this task is needed. For search engine optimization, include the service long name and "Bluemix". For example: -->
 
 使用 Kibana 來建立查詢的圖形和表格，以將日誌資料視覺化，並比較結果。您可以從 Cloud Foundry 應用程式的**日誌**標籤存取 Kibana 儀表板。
 {:shortdesc}
 
-<!-- Include a sentence to briefly introduce the steps/subtopics. Example: -->
 Kibana 儀表板會輸出成一連串的資料列，每一列都包含一個以上畫面。您可以配置畫面，以顯示資料的圖形表示法。使用查詢來決定要顯示哪些資料。若要建立圖形或表格，您必須先建立空白列，然後再建立畫面。如果您從 CF 應用程式的**日誌**標籤存取 Kibana 儀表板，該儀表板會自動顯示兩個畫面：一個直方圖和一個表格。
 
 完成下列作業，以在 Kibana 儀表板上新增圖形或表格：

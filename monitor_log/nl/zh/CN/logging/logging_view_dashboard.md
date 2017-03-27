@@ -105,8 +105,7 @@ lastupdated: "2017-02-06"
 </dd>
 </dl>
 
-下图显示了基于 Droplet Execution Agent (DEA) 的 Cloud Foundry 体系结构中的不同组件（日志类型）：
-![DEA 体系结构中的日志类型。](images/logging_F1.png "基于 Droplet Execution Agent (DEA) 的 Cloud Foundry 体系结构中的组件（日志类型）。")
+下图显示了基于 Droplet Execution Agent (DEA) 的 Cloud Foundry 体系结构中的不同组件（日志类型）：![DEA 体系结构中的日志类型。](images/logging_F1.png "基于 Droplet Execution Agent 的 Cloud Foundry 体系结构中的组件。")
 
 
 

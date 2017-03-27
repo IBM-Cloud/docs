@@ -20,7 +20,7 @@ lastupdated: "2017-02-03"
 
 <!-- The short description section should include a sentence describing why this task is needed. For search engine optimization, include the service long name and "Bluemix". For example: -->
 
-Exporte seu esquema de painel como um arquivo JSON ou compartilhe uma URL para os painéis customizados do Kibana de seus dados do log.
+Exporte seu esquema de painel como um arquivo JSON ou compartilhe uma URL para os painéis customizados do Kibana de seus dados do log. 
 {:shortdesc}
 
 <!-- Include a sentence to briefly introduce the steps/subtopics. Example: -->

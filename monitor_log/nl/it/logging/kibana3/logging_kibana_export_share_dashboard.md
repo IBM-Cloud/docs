@@ -20,7 +20,7 @@ lastupdated: "2017-02-03"
 
 <!-- The short description section should include a sentence describing why this task is needed. For search engine optimization, include the service long name and "Bluemix". For example: -->
 
-Esporta il tuo schema dashboard come file JSON o condividi un URL ai dashboard Kibana personalizzati dei tuoi dati di log.
+Esporta il tuo schema dashboard come file JSON o condividi un URL ai dashboard Kibana personalizzati dei tuoi dati di log. 
 {:shortdesc}
 
 <!-- Include a sentence to briefly introduce the steps/subtopics. Example: -->

@@ -6,26 +6,20 @@ lastupdated: "2017-02-07"
 
 ---
 
-<!-- Common attributes used in the template are defined as follows: -->
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-<!-- Additional task topic: OPTIONAL
-This is the template for additional task topics that are needed beyond the basic tasks in the getting started index.md.  As needed, other task topics can be included, with titles such as "Configuring x", "Administering y", "Managing z", etc. This topic is a peer of the getting started index.md in the <servicename>.ditamap. This topic can have one level of children and they also can be referenced in <servicename>.ditamap -->
 
 # Tabellen und Diagramme aus Abfragen in Kibana erstellen
-<!-- for example, Uploading your data -->
 {: #logging_kibana_tables_graphs}
-<!-- Provide an appropriate ID above -->
 
-<!-- The short description section should include a sentence describing why this task is needed. For search engine optimization, include the service long name and "Bluemix". For example: -->
 
-In Kibana können Sie Diagramme und Tabellen für Ihre Abfragen erstellen, um die Protokolldaten zu visualisieren und Ergebnisse zu vergleichen. Sie können über die Registerkarte **Protokolle** für Ihre Cloud Foundry-App auf das Kibana-Dashboard zugreifen.
+In Kibana können Sie Diagramme und Tabellen für Ihre Abfragen erstellen, um die Protokolldaten zu visualisieren und Ergebnisse zu vergleichen. Sie können über die Registerkarte **Protokolle** für Ihre Cloud Foundry-App auf das Kibana-Dashboard zugreifen. 
 {:shortdesc}
 
-<!-- Include a sentence to briefly introduce the steps/subtopics. Example: -->
 Das Kibana-Dashboard besitzt ein Zeilenlayout, bei dem jede Zeile eine oder mehrere Anzeigen enthält. Sie können Anzeigen so konfigurieren, dass sie grafische Darstellungen Ihrer Daten anzeigen. Mithilfe von Abfragen legen Sie fest, welche Daten angezeigt werden sollen. Zum Erstellen eines Diagramms oder einer Tabelle müssen Sie zunächst eine leere Zeile (Row) erstellen. Anschließend erstellen Sie eine Anzeige (Panel). Wenn Sie auf das Kibana-Dashboard über die Registerkarte **Protokolle** Ihrer CF-App zugreifen, zeigt das Dashboard automatisch zwei Anzeigen an: ein Histogramm und eine Tabelle.
 
 Führen Sie die folgenden Tasks aus, um ein Diagramm oder eine Tabelle im Kibana-Dashboard hinzuzufügen:

@@ -6,26 +6,20 @@ lastupdated: "2017-02-07"
 
 ---
 
-<!-- Common attributes used in the template are defined as follows: -->
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
 {:codeblock:.codeblock}
 
-<!-- Additional task topic: OPTIONAL
-This is the template for additional task topics that are needed beyond the basic tasks in the getting started index.md.  As needed, other task topics can be included, with titles such as "Configuring x", "Administering y", "Managing z", etc. This topic is a peer of the getting started index.md in the <servicename>.ditamap. This topic can have one level of children and they also can be referenced in <servicename>.ditamap -->
 
 # Kibana での照会からの表とグラフの作成
-<!-- for example, Uploading your data -->
 {: #logging_kibana_tables_graphs}
-<!-- Provide an appropriate ID above -->
 
-<!-- The short description section should include a sentence describing why this task is needed. For search engine optimization, include the service long name and "Bluemix". For example: -->
 
 Kibana を使用して、照会のグラフと表を作成し、ログ・データを視覚化して結果を比較します。Kibana ダッシュボードには、Cloud Foundry アプリの**「ログ」**タブからアクセスできます。
 {:shortdesc}
 
-<!-- Include a sentence to briefly introduce the steps/subtopics. Example: -->
 Kibana ダッシュボードは、一連の行でレイアウトされ、各行には 1 つ以上のパネルが含まれます。データのグラフィカル表現を表示するためのパネルを構成できます。照会を使用して、表示するデータを決定します。グラフまたは表を作成するには、まずブランク行を作成し、その後、パネルを作成する必要があります。CF アプリの**「ログ」**タブから Kibana ダッシュボードにアクセスすると、ヒストグラムと表の 2 つのパネルがダッシュボードに自動的に表示されます。
 
 Kibana ダッシュボードにグラフまたは表を追加するには、以下のタスクを行います。

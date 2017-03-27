@@ -20,7 +20,7 @@ lastupdated: "2017-02-06"
 
 <!-- The short description section should include a sentence describing why this task is needed. For search engine optimization, include the service long name and "Bluemix". For example: -->
 
-Se conosci l'ID della tua applicazione Cloud Foundry, puoi visualizzare e filtrare rapidamente i log in base all'ID applicazione (application_id) nel dashboard Kibana. Puoi accedere al dashboard Kibana dalla scheda **Log** della tua applicazione Cloud Foundry.
+Se conosci l'ID della tua applicazione Cloud Foundry, puoi visualizzare e filtrare rapidamente i log in base all'ID applicazione (application_id) nel dashboard Kibana. Puoi accedere al dashboard Kibana dalla scheda **Log** della tua applicazione Cloud Foundry. 
 {:shortdesc}
 
 <!-- Include a sentence to briefly introduce the steps/subtopics. Example: -->
@@ -35,7 +35,7 @@ Completa le seguenti attività per visualizzare e filtrare i log della tua appli
 
 2. Accedi al dashboard Kibana per la tua applicazione. Fai clic su **Vista avanzata** ![link Vista avanzata](images/logging_advanced_view.jpg). Viene visualizzato il dashboard Kibana.
 
-3. Nel dashboard Kibana, fai clic sull'icona **Cartella** ![icona Cartella](images/logging_folder.jpg) per visualizzare un menu che elenca tutti i dashboard recenti.  
+3. Nel dashboard Kibana, fai clic sull'icona **Cartella** ![icona Cartella](images/logging_folder.jpg) per visualizzare un menu che elenca tutti i dashboard recenti. 
 
     **Nota:** oltre ai dashboard che hai salvato per nome, il menu elenca i dashboard senza nome in base al seguente formato: *ALCH_TENANT_ID_application_id*. 
 
@@ -47,7 +47,7 @@ Completa le seguenti attività per visualizzare e filtrare i log della tua appli
 
 5. Facoltativamente, puoi aggiungere altri campi alla tua sezione di filtro, ad esempio **instance_id** per abilitare o disabilitare il filtro di record per ID istanza. 
   
-    1. Nella finestra **TUTTI GLI EVENTI**, fai clic su una riga di evento di log per visualizzare i dettagli di tale evento.  
+    1. Nella finestra **TUTTI GLI EVENTI**, fai clic su una riga di evento di log per visualizzare i dettagli di tale evento. 
 	
         ![Finestra Tutti gli eventi che visualizza i dettagli di un evento di log selezionato](images/logging_selected_log_event.jpg)
 	

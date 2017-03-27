@@ -16,7 +16,7 @@ lastupdated: "2017-02-06"
 # Criação de log para apps Cloud Foundry no Bluemix
 {: #logging_bluemix_cf_apps}
 
-No {{site.data.keyword.Bluemix}}, é possível visualizar, filtrar e analisar logs por meio do painel do {{site.data.keyword.Bluemix}}, Kibana e da interface da linha de comandos. Além disso, é possível transmitir registros de log para uma ferramenta de gerenciamento de log externo.
+No {{site.data.keyword.Bluemix}}, é possível visualizar, filtrar e analisar logs por meio do painel do {{site.data.keyword.Bluemix}}, Kibana e da interface da linha de comandos. Além disso, é possível transmitir registros de log para uma ferramenta de gerenciamento de log externo. 
 {:shortdesc}
 
 Ao executar seus apps em uma plataforma como serviço (PaaS) de nuvem, como Cloud Foundry no {{site.data.keyword.Bluemix_notm}}, não é possível usar SSH ou FTP na infraestrutura na qual seus apps estão em execução para acessar os logs. A plataforma é controlada pelo provedor em nuvem. Os apps Cloud Foundry em execução no {{site.data.keyword.Bluemix_notm}} usam o componente Loggerator para encaminhar os registros de log de dentro da infraestrutura do Cloud Foundry. O Loggregator seleciona automaticamente os dados STDOUT e STDERR. É possível visualizar e analisar esses logs por meio do painel do {{site.data.keyword.Bluemix}}, Kibana e da interface da linha de comandos.

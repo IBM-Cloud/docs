@@ -17,7 +17,7 @@ lastupdated: "2017-02-06"
 {: #logging_kibana_component_filter}
 <!-- Provide an appropriate ID above -->
 
-Visualizza e filtra i log dell'applicazione {{site.data.keyword.Bluemix_notm}} in base al componente (tipo di log) sul dashboard Kibana. Puoi accedere al dashboard Kibana dalla scheda **Log** della tua applicazione Cloud Foundry.
+Visualizza e filtra i log dell'applicazione {{site.data.keyword.Bluemix_notm}} in base al componente (tipo di log) sul dashboard Kibana. Puoi accedere al dashboard Kibana dalla scheda **Log** della tua applicazione Cloud Foundry. 
 {:shortdesc}
 
 <!-- Include a sentence to briefly introduce the steps/subtopics. Example: -->

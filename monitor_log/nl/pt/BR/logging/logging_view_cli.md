@@ -16,7 +16,7 @@ lastupdated: "2017-02-16"
 # Analisando logs do app CF na CLI
 {: #analyzing_logs_cli}
 
-No {{site.data.keyword.Bluemix}}, é possível visualizar, filtrar e analisar logs por meio da interface da linha de comandos usando o comando **cf logs**. Use a linha de comandos para gerenciar logs programaticamente.
+No {{site.data.keyword.Bluemix}}, é possível visualizar, filtrar e analisar logs por meio da interface da linha de comandos usando o comando **cf logs**. Use a linha de comandos para gerenciar logs programaticamente. 
 {:shortdesc}
 
 Use o comando **cf logs** para exibir logs de um app Cloud Foundry e dos componentes do sistema que interagem com ele durante a implementação do app no {{site.data.keyword.Bluemix_notm}}. O comando **cf logs** exibe os fluxos de logs STDOUT e STDERR de um aplicativo Cloud Foundry.
@@ -85,7 +85,6 @@ Para exibir entradas de log que contenham determinadas palavras-chave para um ap
     
 
 Por exemplo, para exibir entradas de log que contenham a palavra-chave **APP**, é possível usar o comando a seguir:
-
 
 <pre class="pre screen"><code>cf logs appname --recent | grep '\[App'</code></pre>
 

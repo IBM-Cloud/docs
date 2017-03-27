@@ -23,4 +23,4 @@ Lorsque vous utilisez l'infrastructure Cloud Foundry pour exécuter vos applicat
 Pour surveiller des applications {{site.data.keyword.Bluemix_notm}}, appliquez l'une des méthodes suivantes :
 
 * Services {{site.data.keyword.Bluemix_notm}}. Monitoring and Analytics propose un service que vous pouvez utiliser pour surveiller les performances de votre application. Pour plus d'informations, voir [Monitoring and Analytics](/docs/services/monana/index.html#gettingstartedtemplate).
-* Options de tiers. Par exemple, [New Relic ![](../icons/launch-glyph.svg " ")](http://newrelic.com/){:new_window}.
+* Options de tiers. Par exemple, [New Relic ![](../../icons/launch-glyph.svg)](http://newrelic.com/){:new_window}.

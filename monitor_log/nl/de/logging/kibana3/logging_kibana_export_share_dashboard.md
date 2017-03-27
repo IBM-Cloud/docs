@@ -20,7 +20,7 @@ lastupdated: "2017-02-03"
 
 <!-- The short description section should include a sentence describing why this task is needed. For search engine optimization, include the service long name and "Bluemix". For example: -->
 
-Exportieren Sie Ihr Dashboardschema als JSON-Datei oder geben Sie eine URL-Adresse zu den angepassten Kibana-Dashboards für Ihre Protokolldaten zur gemeinsamen Nutzung frei.
+Exportieren Sie Ihr Dashboardschema als JSON-Datei oder geben Sie eine URL-Adresse zu den angepassten Kibana-Dashboards für Ihre Protokolldaten zur gemeinsamen Nutzung frei. 
 {:shortdesc}
 
 <!-- Include a sentence to briefly introduce the steps/subtopics. Example: -->

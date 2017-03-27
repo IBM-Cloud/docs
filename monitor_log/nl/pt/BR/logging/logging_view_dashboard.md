@@ -16,7 +16,8 @@ lastupdated: "2017-02-06"
 # Analisando logs de apps CF no painel do Bluemix
 {: #analyzing_logs_bmx_ui}
 
-No {{site.data.keyword.Bluemix}}, é possível visualizar, filtrar e analisar logs por meio do painel da guia **Log** que está disponível para cada aplicativo Cloud Foundry. Use o painel do {{site.data.keyword.Bluemix}} para visualizar a atividade mais recente do aplicativo.{:shortdesc}
+No {{site.data.keyword.Bluemix}}, é possível visualizar, filtrar e analisar logs por meio do painel da guia **Log** que está disponível para cada aplicativo Cloud Foundry. Use o painel do {{site.data.keyword.Bluemix}} para visualizar a atividade mais recente do aplicativo.
+{:shortdesc}
 
 O {{site.data.keyword.Bluemix_notm}} Public oferece um serviço de Criação de log integrado. Quando você executa seus aplicativos no Cloud Foundry,
 o serviço de Criação de log captura dados do log de componentes do sistema que interagem com seu aplicativo, sobre seu aplicativo e até mesmo dados do log de dentro de seu aplicativo ao usar stdout e stderr.
@@ -85,15 +86,15 @@ Toda entrada de log contém os campos a seguir:
 <dd>Cloud Foundry API: o componente API fornece informações sobre as ações internas que resultam da solicitação de um usuário para mudar o estado de um aplicativo.</dd>
 
 <dt><strong>DEA</strong></dt>
-<dd>Droplet Execution Agent: o componente DEA fornece informações sobre o início, a parada ou o travamento de um aplicativo.
+<dd>Droplet Execution Agent: o componente DEA fornece informações sobre o início, a parada ou o travamento de um aplicativo. 
 <p>Esse componente estará disponível somente se seu aplicativo for implementado na arquitetura Cloud Foundry que é baseada no DEA.</p></dd>
 
 <dt><strong>CELL</strong></dt>
-<dd>Célula Diego: o componente CELL fornece informações sobre o início, a parada ou o travamento de um aplicativo.
+<dd>Célula Diego: o componente CELL fornece informações sobre o início, a parada ou o travamento de um aplicativo. 
 <p>Esse componente estará disponível somente se seu aplicativo for implementado na arquitetura Cloud Foundry que é baseada no Diego.</p></dd>
 
 <dt><strong>SSH</strong></dt>
-<dd>SSH: o componente SSH fornece informações cada vez que um usuário acessa um aplicativo usando o comando **cf ssh**.
+<dd>SSH: o componente SSH fornece informações cada vez que um usuário acessa um aplicativo usando o comando **cf ssh**. 
 <p>Esse componente estará disponível somente se seu aplicativo for implementado na arquitetura Cloud Foundry que é baseada no Diego.</p></dd>
 
 </dl>
@@ -106,8 +107,8 @@ Toda entrada de log contém os campos a seguir:
 </dd>
 </dl>
 
-A figura a seguir mostra os diferentes componentes (tipos de log) em uma arquitetura Cloud Foundry que é baseada no Droplet Execution Agent (DEA):
-![Tipos de log em uma arquitetura DEA.](images/logging_F1.png "Componentes (tipos de log") em uma arquitetura Cloud Foundry que é baseada no Droplet Execution Agent (DEA).")
+A figura a seguir mostra os diferentes componentes (tipos de log) em uma arquitetura Cloud Foundry que se baseia no Droplet Execution Agent (DEA):
+![Tipos de log em uma arquitetura DEA.](images/logging_F1.png "Componentes em uma arquitetura Cloud Foundry que se baseia no Droplet Execution Agent.")
 
 
 

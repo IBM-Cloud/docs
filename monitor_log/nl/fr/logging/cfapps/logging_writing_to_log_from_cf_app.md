@@ -16,13 +16,13 @@ lastupdated: "2017-02-06"
 # Journalisation des applications de contexte d'exécution via des applications CF
 {: #logging_writing_to_log_from_cf_app}
 
-Dans {{site.data.keyword.Bluemix}}, pour conserver les données de journal pour une application Cloud Foundry et son contexte d'exécution, vous devez écrire vos journaux dans des enregistrements de sortie standard et d'erreur standard.
+Dans {{site.data.keyword.Bluemix}}, pour conserver les données de journal pour une application Cloud Foundry et son contexte d'exécution, vous devez écrire vos journaux dans des enregistrements de sortie standard et d'erreur standard. 
 {:shortdesc}
 
 Dans {{site.data.keyword.Bluemix}}, les enregistrements de journal de sortie standard et d'erreur standard sont collectés automatiquement :
 
-* STDOUT (sortie standard) fournit des informations générales.   
-* STDERR (erreur standard) fournit des informations incluant des messages d'erreur et d'autres avertissements de diagnostic.  
+* STDOUT (sortie standard) fournit des informations générales.  
+* STDERR (erreur standard) fournit des informations incluant des messages d'erreur et d'autres avertissements de diagnostic. 
 
 Le composant Loggregator prélève automatiquement des données de sortie standard et d'erreur standard. Loggregator est le composant qui réachemine des journaux depuis Cloud Foundry. 
 
@@ -30,8 +30,8 @@ Par exemple
 
 Pour une **application Liberty Cloud Foundry**, le fichier console.log par défaut du serveur Liberty est prélevé automatiquement par le composant Loggregator. 
 
-* Le fichier console.log contient l'enregistrement de sortie standard et l'enregistrement d'erreur standard réacheminés à partir du processus de machine virtuelle Java. La sortie de la console contient les événements et les erreurs principaux si vous utilisez la configuration consoleLogLevel par défaut. La sortie de la console contient également les messages écrits dans les flux system.out et system.err si vous utilisez la configuration copySystemStreams par défaut. La sortie de la console contient toujours les messages écrits directement par le processus de machine virtuelle Java, par exemple, -verbose:gc output. Vous pouvez ajuster le niveau de journalisation de Liberty via le fichier server.xml. 
-* La configuration consoleLogLevel définit le niveau de filtre du gestionnaire console.log. Lorsque vous affectez la valeur INFO à consoleLogLevel, vous configurez l'écriture de tous les messages INFO, AUDIT, WARNING et ERROR dans le fichier console.log. **Remarque :** les entrées de journal FINE, FINER, FINEST ne sont écrites que dans le fichier trace.log. 
+* Le fichier console.log contient l'enregistrement de sortie standard et l'enregistrement d'erreur standard réacheminés à partir du processus de machine virtuelle Java. La sortie de la console contient les événements et les erreurs principaux si vous utilisez la configuration consoleLogLevel par défaut. La sortie de la console contient également les messages écrits dans les flux system.out et system.err si vous utilisez la configuration copySystemStreams par défaut. La sortie de la console contient toujours les messages écrits directement par le processus de machine virtuelle Java, par exemple, -verbose:gc output. Vous pouvez ajuster le niveau de journalisation de Liberty via le fichier server.xml.
+* La configuration consoleLogLevel définit le niveau de filtre du gestionnaire console.log. Lorsque vous affectez la valeur INFO à consoleLogLevel, vous configurez l'écriture de tous les messages INFO, AUDIT, WARNING et ERROR dans le fichier console.log. **Remarque :** les entrées de journal FINE, FINER, FINEST ne sont écrites que dans le fichier trace.log.
 
 Pour plus d'informations sur les applications Liberty for Java, voir [Profil Liberty : Journalisation et trace](http://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/rwlp_logging.html).
 

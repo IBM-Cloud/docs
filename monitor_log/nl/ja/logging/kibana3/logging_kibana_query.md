@@ -6,8 +6,6 @@ lastupdated: "2017-02-02"
 
 ---
 
-
-<!-- Common attributes used in the template are defined as follows: -->
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen:.screen}
@@ -15,16 +13,11 @@ lastupdated: "2017-02-02"
 
 
 # Kibana での照会による Cloud Foundry アプリ・ログのフィルタリング
-<!-- for example, Uploading your data -->
 {: #logging_kibana_query}
-<!-- Provide an appropriate ID above -->
-
-<!-- The short description section should include a sentence describing why this task is needed. For search engine optimization, include the service long name and "Bluemix". For example: -->
 
 Kibana を使用して、ログでキーの条件について検索する照会を作成し、それらの条件でフィルタリングします。Kibana を使用すると、ダッシュボードで照会を視覚的に比較することができます。Kibana ダッシュボードには、Cloud Foundry アプリの**「ログ」**タブからアクセスできます。
 {:shortdesc}
 
-<!-- Include a sentence to briefly introduce the steps/subtopics. Example: -->
 Kibana ダッシュボードで Cloud Foundry アプリ・ログの照会を作成するには、以下のタスクを行います。
 
 1. Cloud Foundry アプリの**「ログ」**タブにアクセスします。 
