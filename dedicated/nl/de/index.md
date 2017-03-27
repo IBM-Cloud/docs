@@ -515,9 +515,9 @@ Da der Schutz privater Daten kritisch ist, ist IBM beim Umgang mit dem Sicherung
 <li>Stellen Sie die Sicherungsdateien für den IBM Operator bereit, falls eine Wiederherstellung erforderlich sein sollte.</li>
 </ul>
 
-# Zugehörige Links
+# rellinks
 {: rellinks}
-## Allgemein
+## general
 {: general}
 * [Entdecken Sie: {{site.data.keyword.Bluemix_dedicated_notm}}](http://www.ibm.com/cloud-computing/bluemix/hybrid/dedicated/)
 * [Neuerungen in {{site.data.keyword.Bluemix_notm}}](/docs/whatsnew/index.html)

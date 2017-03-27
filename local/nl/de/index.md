@@ -733,9 +733,9 @@ Da der Schutz privater Daten kritisch ist, ist {{site.data.keyword.IBM_notm}} be
 <li>Stellen Sie die Sicherungsdateien für den {{site.data.keyword.IBM_notm}} Administrator bereit, falls eine Wiederherstellung erforderlich sein sollte.</li>
 </ul>
 
-# Zugehörige Links
+# rellinks
 {: rellinks}
-## Allgemein
+## general
 {: general}
 * [Entdecken Sie: {{site.data.keyword.Bluemix_local_notm}} ![Symbol für externen Link](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/hybrid/local/){: new_window}
 * [Neuerungen in {{site.data.keyword.Bluemix_notm}}](/docs/whatsnew/index.html)
