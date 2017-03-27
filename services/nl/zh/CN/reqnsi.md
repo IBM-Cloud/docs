@@ -43,9 +43,6 @@ lastupdated: "2017-01-11"
 |Beta	|尚不可用于生产、目前处于开发试用阶段的服务。Beta 服务可帮助开发和市场营销团队先评估服务价值，再使服务普遍可用。	|如果问题确定为 IBM 提供的 beta 服务中的缺陷，那么将受支持，但 IBM 没有义务提供修订。此外，将在适当的情况下为问题凭单分配严重性 3 或 4。有关凭单严重性的信息，请参阅[联系支持人员](/docs/support/index.html#contacting-bluemix-support)。|
 {: caption="表 1. {{site.data.keyword.Bluemix_notm}} 服务支持信息" caption-side="top"}
 
-
-
-
 {{site.data.keyword.Bluemix_notm}} 还包含可供您试用的试验性服务。要查看所有可用的试验性服务、样板和运行时，请登录到 {{site.data.keyword.Bluemix_notm}}，滚动到“目录”的底部，然后单击 **{{site.data.keyword.Bluemix_notm}} Lab Catalog**。
 
 试验性服务可能不稳定，并且可能会发生变化而与较低版本不兼容。不建议在生产环境中使用这些服务。对试验性服务的支持由 {{site.data.keyword.Bluemix_notm}} 开发者社区提供。对于某个问题，如果经 IBM 调查后确定该问题是试验性服务中的缺陷，那么 IBM 没有义务提供修订。
