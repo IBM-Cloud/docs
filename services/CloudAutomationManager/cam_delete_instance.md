@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-24"
+lastupdated: "2017-03-23"
 
 ---
 <!-- Copyright info and last updated date at top of file: REQUIRED
@@ -41,13 +41,13 @@ To delete an instance details, follow these steps:
 
 2. In the instance list, click the menu in the **ACTIONS** column for the instance that you want to delete. The action list is displayed.
 
-3. In the action list, click **Destroy Instance** to delete all the resources related to the instance in the cloud provider.
+<!-- 3. In the action list, click **Destroy Instance** to delete all the resources related to the instance in the cloud provider.
 
  If you do not run this step, even if you delete the instance, all the related resources are still accessible on the cloud provider.
  
  When the action completes, the instance state is changed to `destroyed`. You may need to refresh the instance state to see the change.
  
-2. In the instance list, click the menu in the **ACTIONS** column for the instance that you want to delete. The action list is displayed.
+2. In the instance list, click the menu in the **ACTIONS** column for the instance that you want to delete. The action list is displayed. -->
 
-5. In the action list, click **Delete Instance** to delete the instance from the Cloud Automation Manager environment. The instance is deleted from the list.
+3. In the action list, click **Delete Instance** to delete the instance from the cloud provider and from the Cloud Automation Manager environment. The instance is deleted from the list.
 
