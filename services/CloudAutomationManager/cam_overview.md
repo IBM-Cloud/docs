@@ -42,7 +42,7 @@ IBM Cloud Automation Manager is a cloud management solution for deploying cloud 
 
 <p>You can spend more time building applications and less time building environments when cloud infrastructure is delivered with automation. You are able to get started fast with pre-built infrastructure from the Cloud Automation Manager library.</p>
 
-<p>The Cloud Automation Manager service supports the Bluemix resources that are supported by SoftLayer. For information about the SoftLayer resources, see <a href="https://github.com/softlayer/terraform-provider-softlayer/tree/master/docs/resources" target="_blank">https://github.com/softlayer/terraform-provider-softlayer/tree/master/docs/resources</a>. The only difference between the Bluemix resources and the SoftLayer resources is the actual name of the resource type, where `softlayer` is replaced by `bluemix_infrastructure`. For example the `softlayer_ssh_key` resource in SoftLayer is the `bluemix_infrastructure_ssh_key` resource in Bluemix. 
+<p>The Cloud Automation Manager service supports the Bluemix resources that are supported by SoftLayer. For information about the SoftLayer resources, see <a href="https://github.com/softlayer/terraform-provider-softlayer/tree/master/docs/resources" target="_blank">https://github.com/softlayer/terraform-provider-softlayer/tree/master/docs/resources</a>. The only difference between the Bluemix resources and the SoftLayer resources is the actual name of the resource type, where `softlayer` is replaced by `bluemix_infrastructure`. For example the `softlayer_ssh_key` resource in SoftLayer is the `bluemix_infrastructure_ssh_key` resource in Bluemix. </p>
 
 <!-- ## Concept title
 {: #cam_concept} -->
