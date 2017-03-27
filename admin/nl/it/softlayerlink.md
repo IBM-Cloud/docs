@@ -91,23 +91,37 @@ Per ulteriori informazioni su come invitare i membri del team attraverso l'inter
 ## Passaggio all'ID IBM
 {: #ibmid_switch}
 
-L'autenticazione in SoftLayer adesso utilizza l'ID IBM per fornire un singolo accesso per tutti i {{site.data.keyword.Bluemix_notm}}. Gli account SoftLayer esistenti stanno venendo abilitati per il passaggio all'autenticazione con ID IBM e una procedura guidata di migrazione ti guiderà in questo passaggio. 
+L'autenticazione in SoftLayer utilizza adesso un ID IBM per fornire un singolo accesso per tutti i {{site.data.keyword.Bluemix_notm}}. Gli account SoftLayer esistenti verranno abilitati a passare all'autenticazione tramite ID IBM. Una procedura guidata di migrazione ti guiderà in questo passaggio.
 {:shortdesc}
 
-Se sei un utente master o non visualizzi un prompt per passare a ID IBM nel {{site.data.keyword.slportal}}, [Contatta il supporto IBM](https://console.ng.bluemix.net/docs/support/index.html#contacting-support) per supporto su come abilitare questa funzione.
+Se sei un utente master o non visualizzi un prompt per passare a un ID IBM nel {{site.data.keyword.slportal}}, [Contatta il supporto IBM](/docs/support/index.html#contacting-support) per assistenza su come abilitare questa funzione.
 
-Dopo aver iniziato il passaggio all'ID IBM, puoi sempre annullare questo passaggio prima del completamento del processo. Tuttavia, ti continuerà a venire richiesto di passare all'ID IBM la prossima volta che effettuerai l'accesso. Ogni account che pianifichi di collegare all'account {{site.data.keyword.Bluemix_notm}} deve essere gestito da un solo ID IBM univoco con un indirizzo email univoco.
+Quando inizi a passare a un ID IBM, puoi sempre annullare il passaggio prima di completare il processo. Tuttavia, ogni volta che accedi verrà visualizzato il prompt per passare a un ID IBM. Ogni account SoftLayer che prevedi di collegare a un account {{site.data.keyword.Bluemix_notm}} deve appartenere a un unico ID IBM con un indirizzo e-mail univoco. 
 
-Per passare il tuo nome utente SoftLayer esistente a un ID IBM, completa la seguente procedura:
+Per passare dal tuo nome utente SoftLayer esistente a un ID IBM, completa la seguente procedura:
 
- 1. Se hai selezionato **Dopo** nella schermata iniziale dopo l'accesso, ma hai deciso di voler iniziare il passaggio all'autenticazione tramite ID IBM nella sessione corrente, vai alla pagina Modifica profilo utente e fai clic su **Passa a ID IBM**.
- 2. Segui le istruzioni della procedura guidata per creare il tuo ID IBM. Il tuo ID IBM è un indirizzo email univoco e non può essere modificato dopo la sua creazione. Puoi aggiornare l'e-mail associata al tuo profilo in seguito, l'email predefinita viene impostata su quello che hai definito per l'ID IBM. Riceverai un'email con il tuo codice di registrazione che indica che hai completato la procedura guidata di migrazione. 
- 3. Quando ricevi l'e-mail, segui il link o copia l'URL in un browser e immetti il codice di registrazione. Il codice è valido per 7 giorni e può essere utilizzato solo una volta.
+ 1. Accedi al tuo account SoftLayer. Quando viene visualizzato il prompt per passare a un ID IBM, fai clic su **OK**. 
  
+    Se hai già eseguito l'accesso (e hai fatto clic su **Dopo** nel prompt per passare a un ID IBM), ma vuoi passare all'autenticazione con ID IBM nella sessione corrente, vai alla pagina Modifica profilo utente e fai clic su **Passa a ID IBM**.
+	
+ 2. Segui le istruzioni della procedura guidata per creare il tuo ID IBM. 
  
-Dopo il passaggio all'autenticazione tramite ID IBM, puoi accedere al tuo account solo con il tuo ID IBM. Nel prompt di accesso, fai clic su **Accedi con ID IBM** invece di immettere nome utente e password SoftLayer.
+    Per creare un nuovo ID IBM, immetti un indirizzo e-mail che non sia attualmente utilizzato da nessun ID IBM. Il nuovo ID IBM utilizzerà tale indirizzo come nome utente e indirizzo e-mail. Una volta che l'ID IBM è stato creato, puoi aggiornare l'indirizzo e-mail associato all'ID IBM, ma non puoi modificare il nome utente. L'e-mail di invito verrà indirizzata all'indirizzo fornito.
+    
+    Dopo aver completato la procedura guidata, riceverai un'e-mail con il tuo codice di registrazione.
  
-Quando controlli il tuo ordine come un nuovo cliente, ti verrà chiesto un indirizzo e-mail per il tuo account ID IBM esistente o di creare un nuovo account. Se crei un nuovo ID IBM, immetti l'indirizzo email per il tuo nuovo ID IBM. L'indirizzo email è dove viene inviato l'email di invito ed è anche il nome utente per il tuo nuovo ID IBM.
+ 3. Quando ricevi l'e-mail, segui il link o copia l'URL in un browser e immetti quindi il codice di registrazione. Il codice è valido per 7 giorni e puoi utilizzarlo solo una volta.
+ 
+    Dopo il passaggio all'autenticazione tramite ID IBM, puoi accedere al tuo account solo con il tuo ID IBM. Al prompt di accesso dell'account, vai alla sezione **Accesso account ID IBM** e fai clic su **Accedi con ID IBM**. Non utilizzare i campi **Nome utente** e **Password** che utilizzavi in precedenza con il tuo ID SoftLayer.
+ 
+Se sei un nuovo cliente, quando controlli il tuo ordine ti verrà chiesto il tuo ID IBM esistente o di crearne uno nuovo. 
+
+ * Per utilizzare un ID IBM esistente, immetti il nome utente o l'indirizzo e-mail dell'ID IBM se è univoco (vale a dire, che non sia condiviso tra più ID IBM). 
+ 
+ * Per creare un nuovo ID IBM, immetti un indirizzo e-mail che non sia attualmente utilizzato da nessun ID IBM. Il nuovo ID IBM utilizzerà tale indirizzo come nome utente e indirizzo e-mail. Una volta che l'ID IBM è stato creato, puoi aggiornare l'indirizzo e-mail associato all'ID IBM, ma non puoi modificare il nome utente. L'e-mail di invito verrà indirizzata all'indirizzo fornito.
+
+Per risolvere eventuali problemi di accesso con il tuo ID IBM, vedi [Risoluzione dei problemi di accesso a Bluemix](/docs/troubleshoot/ts_accessing.html#accessing).
+
 
 ### Abilitazione degli utenti al passaggio all'ID IBM
 {: #link_accounts_resellers}
@@ -188,7 +202,7 @@ Non tutti i servizi {{site.data.keyword.Bluemix_notm}} possono essere utilizzati
 * {{site.data.keyword.mqa}}
 * {{site.data.keyword.mobileappbuilder_short}}
 * {{site.data.keyword.mql}}
-* {{site.data.keyword.nlclassifierlshort}}
+* {{site.data.keyword.nlclassifiershort}}
 * {{site.data.keyword.objectstorageshort}}
 * {{site.data.keyword.personalityinsightsshort}}
 * {{site.data.keyword.presenceinsightsshort}}

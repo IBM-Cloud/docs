@@ -30,10 +30,10 @@ Per il buon esito di un progetto, ti occorre del tempo per pianificare e progett
 
 {:shortdesc}
 
-Quando progetti una soluzione cloud, considera anche i requisiti funzionali e di sicurezza dell'account, le normative nazionali, le direttive per il mercato e le politiche aziendali.
+Quando progetti una soluzione cloud, considera anche i requisiti funzionali e di sicurezza dell'account, le normative nazionali, le direttive per il mercato e le politiche aziendali. 
 Per soddisfare le tue esigenze di progetto, {{site.data.keyword.Bluemix}} offre tre tipi di ambiente cloud. 
 
-* [{{site.data.keyword.Bluemix_notm}} pubblico](/docs/overview/whatisbluemix.html "{{site.data.keyword.Bluemix_notm}} Public"): le risorse dell'infrastruttura sono condivise da differenti aziende e utenti. 
+* [{{site.data.keyword.Bluemix_notm}} pubblico](/docs/overview/whatisbluemix.html "{{site.data.keyword.Bluemix_notm}} Public"): le risorse dell'infrastruttura sono condivise da differenti aziende e utenti.
 * [{{site.data.keyword.Bluemix_notm}} dedicato](/docs/dedicated/index.html#dedicated "{{site.data.keyword.Bluemix_notm}} Dedicated"): utilizza la tua propria infrastruttura SoftLayer dedicata, che puoi collegare in modo sicuro al cloud {{site.data.keyword.Bluemix_notm}} pubblico e alla tua rete.
 * [{{site.data.keyword.Bluemix_notm}} locale](/docs/local/index.html#local "{{site.data.keyword.Bluemix_notm}} Local"): si trova dietro il tuo firewall aziendale, può proteggere i tuoi carichi di lavoro più sensibili e può connettersi in modo sicuro ai cloud {{site.data.keyword.Bluemix_notm}} pubblico e {{site.data.keyword.Bluemix_notm}} dedicato.
 
@@ -73,16 +73,16 @@ Considera la dimensione e l'ambito delle applicazioni che intendi sviluppare e d
 
 Crea delle organizzazioni {{site.data.keyword.Bluemix_notm}} separate per le persone che lavorano in diverse aree di business e in cui le loro attività non si sovrappongano. Se ci sono due gruppi completamente indipendenti, la creazione di un'organizzazione per ognuno di questi definisce chiaramente i limiti per la distribuzione e gestione dei gruppi e delle risorse. Puoi definire una API per la comunicazione tra le organizzazioni.  
 
-Le organizzazioni {{site.data.keyword.Bluemix_notm}} possono essere create per soddisfare il modo in cui vuoi lavorare anziché la struttura all'interno di un'azienda. Di norma, le organizzazioni aziendali possono cambiare, ma lo sviluppo e la manutenzione di un'applicazione continueranno a prescindere.
+Le organizzazioni {{site.data.keyword.Bluemix_notm}} possono essere create per soddisfare il modo in cui vuoi lavorare anziché la struttura all'interno di un'azienda. Di norma, le organizzazioni aziendali possono cambiare, ma lo sviluppo e la manutenzione di un'applicazione continueranno a prescindere. 
 Progetta il tuo ambiente {{site.data.keyword.Bluemix_notm}} per tutta la durata delle applicazioni e non in base alla struttura dell'organizzazione aziendale. 
 
 Lo sviluppo e la distribuzione iterativa possono comportare una rapida espansione delle applicazioni. La progettazione del tuo processo di distribuzione deve potersi incrementare in modo rapido e veloce e tu necessiterai di uno sviluppo continuo con un tasso di distribuzione elevato. Con gli spazi di sviluppo e produzione presenti nella stessa organizzazione {{site.data.keyword.Bluemix_notm}}, si fornirà accesso alle stesse risorse. La gestione di spazi diversi all'interno di una singola organizzazione riduce i doveri amministrativi. Il personale addetto allo sviluppo, al test e alle operazioni può collaborare facilmente se lavorano tutti all'interno della stessa organizzazione {{site.data.keyword.Bluemix_notm}}. 
 
 Implementa una denominazione standard per identificare chiaramente l'utilizzo dell'organizzazione e dello spazio. Ad esempio, potresti includere il tipo di cloud, la regione geografica, il tipo di utilizzo (ad esempio, sviluppo, test, produzione), il nome dell'applicazione e il numero di versione o revisione. Le organizzazioni e gli spazi possono essere facilmente identificati per scopi di amministrazione e accesso.  
 
-Il numero di spazi può moltiplicarsi rapidamente per via dello sviluppo iterativo. All'interno di un'organizzazione, puoi definire il numero di spazi desiderato. Se intendi definire un numero elevato di spazi, potresti creare un'applicazione per facilitare la gestione di tali spazi. Se il numero di spazi supera sessanta, puoi valutare la possibilità di definire un'altra organizzazione.  
+Il numero di spazi può moltiplicarsi rapidamente per via dello sviluppo iterativo. All'interno di un'organizzazione, puoi definire il numero di spazi desiderato. Se intendi definire un numero elevato di spazi, potresti creare un'applicazione per facilitare la gestione di tali spazi. Se il numero di spazi supera sessanta, puoi valutare la possibilità di definire un'altra organizzazione. 
 
-Scegli una persona che crei e gestisca un'organizzazione, definisca gli spazi e conceda l'accesso ai membri del team. A una seconda persona può essere fornito lo stesso accesso per mantenere l'ambiente quando il gestore dell'organizzazione non è disponibile.   
+Scegli una persona che crei e gestisca un'organizzazione, definisca gli spazi e conceda l'accesso ai membri del team. A una seconda persona può essere fornito lo stesso accesso per mantenere l'ambiente quando il gestore dell'organizzazione non è disponibile.  
 
 Identifica tutte le persone che avranno bisogno dell'accesso a ogni spazio e organizzazione. Determina i loro ruoli. Il ruolo lavorativo di un membro del team ne determina l'autorità. Ad esempio, uno sviluppatore senior avrà bisogno dell'autorità per visualizzare e aggiornare l'intero ambiente di sviluppo {{site.data.keyword.Bluemix_notm}}. Tuttavia, per uno sviluppatore junior vi saranno delle limitazioni su ciò che potrà visualizzare e aggiornare.
 
@@ -124,7 +124,7 @@ distribuire le applicazioni cloud. In {{site.data.keyword.Bluemix_notm}} pubblic
  ![Figura che mostra l'architettura a singola organizzazione in {{site.data.keyword.Bluemix_notm}}](images/singleorg_example.svg "Figure that shows the single-organization architecture in {{site.data.keyword.Bluemix_notm}}")
 
  Figura 1. Esempio di architettura a singola organizzazione per {{site.data.keyword.Bluemix_notm}} pubblico, {{site.data.keyword.Bluemix_notm}} dedicato e
- {{site.data.keyword.Bluemix_notm}} locale
+ {{site.data.keyword.Bluemix_notm}} locale 
 {: #bpfigure1}
 
 Quando implementi un'architettura a più organizzazioni, le organizzazioni forniscono il primo livello di applicazione di limiti e astrazione che puoi utilizzare per controllare e definire
@@ -163,19 +163,19 @@ I seguenti scenari mostrano i diversi approcci che puoi adottare per definire il
 
 * **Scenario 3: Isolamento in base al progetto**
 
-  Descrizione: la tua azienda organizza degli hackathon per identificare nuovi servizi.   
+  Descrizione: la tua azienda organizza degli hackathon per identificare nuovi servizi.  
 
   Soluzione: puoi definire un'organizzazione per ogni hackathon e utilizzare l'organizzazione come un sandbox. Dopo l'hackathon, puoi promuovere l'organizzazione sandbox in un'ulteriore organizzazione nel tuo account.
 
 * **Scenario 4: Isolamento di utenti in base alla fase di distribuzione**
 
-  Descrizione: un'azienda vuole che gli utenti di sviluppo, test e produzione collaborino in una distribuzione, ma il loro accesso è controllato dal ruolo utente e dall'esperienza lavorativa. 
+  Descrizione: un'azienda vuole che gli utenti di sviluppo, test e produzione collaborino in una distribuzione, ma il loro accesso è controllato dal ruolo utente e dall'esperienza lavorativa.
 
   Soluzione: puoi creare una singola organizzazione e definire uno spazio per ogni fase di distribuzione. Quindi, a seconda del ruolo utente e dell'esperienza lavorativa, concedi agli utenti l'accesso in lettura e scrittura richiesto per completare il loro lavoro e per collaborare all'interno dell'organizzazione. 
 
   ![Figura che mostra l'isolamento degli utenti in base alla fase di distribuzione](images/user_groups_example.svg "Figure that shows isolation of users by delivery phase")
 
-   Figura 3. Esempio di architettura a singola organizzazione allineata alla fase di distribuzione
+   Figura 3. Esempio di architettura a singola organizzazione allineata alla fase di distribuzione 
 {: #bpfigure3}
 
 ### Denominazione, restrizioni e gestione dell'organizzazione
@@ -193,11 +193,11 @@ Tieni conto delle seguenti indicazioni sull'organizzazione:
 
 All'interno di un'organizzazione, gli spazi forniscono un ulteriore livello di applicazione di limiti e astrazione.
 
-Uno spazio è un'area riservata dell'organizzazione in cui gli utenti possono sviluppare ed eseguire applicazioni e servizi. Puoi creare un numero qualsiasi di spazi all'interno di un'organizzazione.
+Uno spazio è un'area riservata dell'organizzazione in cui gli utenti possono sviluppare ed eseguire applicazioni e servizi. Puoi creare un numero qualsiasi di spazi all'interno di un'organizzazione. 
 Puoi controllare gli utenti che hanno accesso a uno spazio. Per ulteriori informazioni, vedi [Spazi](/docs/admin/orgs_spaces.html#spaceinfo "Spaces").
 
 Se intendi definire un numero elevato di spazi, potresti creare un'applicazione per facilitare la gestione di tali spazi. Se il numero di
-spazi supera sessanta, puoi valutare la possibilità di definire un'altra organizzazione.  
+spazi supera sessanta, puoi valutare la possibilità di definire un'altra organizzazione. 
 
 ### Spazi per singola organizzazione contro più organizzazioni
 {: #spaceconsiderations}
@@ -209,7 +209,7 @@ Quando adotti un'architettura a singola organizzazione, il livello di separazion
   Ad esempio, puoi definire uno o più spazi per le applicazioni da sviluppare, uno o più spazi per le applicazioni che si trovano già in fase di test e uno o più
   spazi per le applicazioni che sono in produzione.
 * Se il limite del ciclo di vita della distribuzione non è sufficiente, puoi ottenere ulteriore separazione definendo uno o più spazi per ogni LOB e fase di distribuzione.
-* Se hai bisogno di applicare dei limiti per i diversi gruppi di utenti, definisci uno spazio per ogni insieme di utenti.
+* Stabilisci se hai bisogno di applicare dei limiti per i diversi gruppi di utenti.
   Ad esempio, gli sviluppatori non possono sviluppare l'applicazione e testarla. Hai bisogno di un insieme di utenti diverso per testare l'applicazione. In questo scenario crei due spazi, uno per
   gli sviluppatori dell'applicazione e uno per i tester. Ad ogni insieme di utenti concedi quindi l'accesso allo spazio corretto.
 
@@ -253,13 +253,13 @@ Puoi gestire e monitorare la quota di un account in base allo spazio e all'infra
 {: #roles}
 
 In un account {{site.data.keyword.Bluemix_notm}}, puoi concedere più ruoli ai membri del team. Questi ruoli definiscono le autorizzazioni dell'utente per gestire le risorse dell'account e dell'organizzazione:
-* Puoi concedere i [ruoli utente](/docs/admin/users_roles.html#userrolesinfo "user roles") ai membri di un'organizzazione. Questi ruoli definiscono il livello di accesso all'interno dell'organizzazione e limitano l'accesso a uno spazio e alle sue risorse. Ad esempio, puoi concedere agli utenti differenti autorizzazioni per spazi diversi. 
+* Puoi concedere i [ruoli utente](/docs/admin/users_roles.html#userrolesinfo "user roles") ai membri di un'organizzazione. Questi ruoli definiscono il livello di accesso all'interno dell'organizzazione e limitano l'accesso a uno spazio e alle sue risorse. Ad esempio, puoi concedere agli utenti differenti autorizzazioni per spazi diversi.
 * Solo in {{site.data.keyword.Bluemix_notm}} dedicato e {{site.data.keyword.Bluemix_notm}} locale, puoi concedere i [ruoli amministrativi](/docs/admin/index.html#oc_useradmin "administrative roles") ai membri di un account per gestire le informazioni di sistema, l'utilizzo delle risorse dell'account, i report e i log, i servizi di catalogo, gli utenti e l'utilizzo delle risorse per ogni organizzazione.
 
 ### Proprietario dell'account
 {: #accountowner}
 
-Sia che tu scelga di progettare un'architettura a più organizzazioni o un'architettura a singola organizzazione, il proprietario dell'account è il superuser dell'ambiente cloud. 
+Sia che tu scelga di progettare un'architettura a più organizzazioni o un'architettura a singola organizzazione, il proprietario dell'account è il superuser dell'ambiente cloud.
 
 Le attività principali del proprietario dell'account includono:
 
@@ -280,7 +280,7 @@ Il proprietario dell'account può effettuare anche le seguenti attività:
 ### Ruoli utente
 {: #userroles}
 
-I ruoli utente definiscono le autorizzazioni che puoi assegnare a un membro del team in un'organizzazione e definire il livello di accesso di cui dispone un membro del team all'interno dell'organizzazione e di ciascuno spazio. 
+I ruoli utente definiscono le autorizzazioni che puoi assegnare a un membro del team in un'organizzazione e definire il livello di accesso di cui dispone un membro del team all'interno dell'organizzazione e di ciascuno spazio.
 
 In un'architettura a più organizzazioni o in un'architettura a singola organizzazione, definisci i membri del team e le autorizzazioni richieste da ciascun utente per completare il proprio lavoro:
 
@@ -303,10 +303,10 @@ Le attività di cui è responsabile un gestore organizzazione includono la creaz
 #### Revisore organizzazione
 {: #bporgauditor}
 
-I membri del team con il ruolo **Revisore** dell'organizzazione possono monitorare la quota, l'utilizzo delle risorse e i membri del team di tutti gli spazi in un'organizzazione.
+I membri del team con il ruolo **Revisore** dell'organizzazione possono monitorare la quota, l'utilizzo delle risorse e i membri del team di tutti gli spazi in un'organizzazione. 
 I revisori possono quindi riferire in merito all'efficienza dell'organizzazione ed evidenziare eventuali problemi.
 
-* Quando adotti un'architettura a più organizzazioni, potresti voler concedere il ruolo di revisore agli stessi membri del team per ogni organizzazione che fa parte dell'account.
+* Quando adotti un'architettura a più organizzazioni, potresti voler concedere il ruolo di revisore agli stessi membri del team per ogni organizzazione che fa parte dell'account. 
 Questi membri del team possono quindi monitorare la quota in tutte le organizzazioni del tuo ambiente cloud e ottenere una visione globale dell'account.
 * Quando adotti un'architettura a singola organizzazione, concedi il ruolo di revisore ai membri del team con la responsabilità di monitorare l'utilizzo della quota e l'efficienza
 complessiva dell'organizzazione.
@@ -347,7 +347,7 @@ Per ogni spazio, potresti voler concedere il ruolo di **Revisore** spazio agli s
 ### Ruoli amministrativi
 {: #adminroles}
 
-I [Ruoli amministrativi](/docs/admin/index.html#oc_useradmin "Administrative roles") definiscono le autorizzazioni che puoi concedere agli utenti per gestire un account {{site.data.keyword.Bluemix_notm}} dedicato o {{site.data.keyword.Bluemix_notm}} locale.
+I [Ruoli amministrativi](/docs/admin/index.html#oc_useradmin "Administrative roles") definiscono le autorizzazioni che puoi concedere agli utenti per gestire un account {{site.data.keyword.Bluemix_notm}} dedicato o {{site.data.keyword.Bluemix_notm}} locale. 
 Puoi concedere le autorizzazioni di lettura o scrittura per consentire a un utente di visualizzare le informazioni di sistema, l'utilizzo delle risorse dell'account, i report e i log, i servizi di catalogo, gli utenti e l'utilizzo delle risorse per ogni organizzazione.
 
 In un'architettura a più organizzazioni o in un'architettura a singola organizzazione, definisci gli utenti e le autorizzazioni richieste per gestire l'account:
@@ -356,7 +356,7 @@ In un'architettura a più organizzazioni o in un'architettura a singola organizz
 2. Definisci le autorizzazioni per questi utenti nell'account. Suddividi le autorizzazioni per la gestione del catalogo e dei report tra gli utenti del team.
 3. Seleziona uno o più ruoli per ogni utente in modo da soddisfare le autorizzazioni richieste per gestire l'account:
 
-   * Ruolo Admin: concedi questo ruolo a più di due utenti nell'account. Gli utenti con questo ruolo hanno l'autorità per gestire l'intera organizzazione.
+   * Ruolo Admin: concedi questo ruolo a due o più utenti nell'account. Gli utenti con questo ruolo hanno l'autorità per gestire l'intera organizzazione.
    * Ruolo Utente: questo ruolo può essere configurato con le autorizzazioni di lettura o scrittura. Concedi questo ruolo con le autorizzazioni di scrittura ai gestori dell'organizzazione per consentire loro di aggiungere utenti all'account e alle proprie organizzazioni. Concedi questo ruolo con le autorizzazioni di lettura ai gestori dell'organizzazione che potrebbero necessitare dell'accesso per visualizzare l'elenco di membri nell'account.
    * Ruolo Catalogo: questo ruolo può essere configurato con le autorizzazioni di lettura o scrittura. Concedi questo ruolo con le autorizzazioni di scrittura a un insieme di utenti per consentire loro di definire e gestire quali servizi e starter Bluemix rendere visibili agli utenti nel Catalogo {{site.data.keyword.Bluemix_notm}}. Concedi questo ruolo con le autorizzazioni di lettura ai gestori dell'organizzazione.
    * Ruolo Report: questo ruolo può essere configurato con le autorizzazioni di lettura o scrittura. Concedi questo ruolo con le autorizzazioni di scrittura a un insieme di utenti per consentire loro di visualizzare e aggiungere report che altri utenti con autorizzazioni di lettura possono scaricare. Concedi le autorizzazioni di lettura a tutti i membri del team di amministrazione.

@@ -123,7 +123,7 @@ Os dados de limite são coletados uma vez a cada seis horas. Uma notificação �
 
 Se não desejar esperar 6 horas para que a notificação seja enviada quando o limite for atendido, depois de concluir os campos no formulário, será possível clicar em **Salvar e testar** para receber uma notificação de teste com dados de amostra.  
 
-Uma notificação de limite de Cota da organização inclui somente as organizações que ultrapassaram a porcentagem de limite especificado no período de 6 horas correspondente a essa notificação. As organizações que ultrapassaram um limite durante os períodos anteriores de 6 horas não serão incluídas, mesmo se elas permanecerem acima ou abaixo do limite. Os três recursos que compõem a cota de uma organização (memória reservada, serviços e rotas) são considerados independentemente ao determinar se uma notificação de cota da organização deve ser enviada. Por exemplo, se a quantia de memória reservada usada por uma organização ultrapassasse 50% da cota da organização, um limite de Cota da organização configurado com um valor de 50% resultaria no envio de uma notificação. Se o número de serviços usados pelo mesma organização ultrapassasse 50% da cota da organização em um momento posterior, mesmo que a quantia de memória usada permanecesse inalterada, a mesma assinatura de limite de Cota da organização também resultaria no envio de uma notificação.
+Uma notificação de limite de Cota da organização inclui somente as organizações que ultrapassaram a porcentagem de limite especificado no período de 6 horas correspondente a essa notificação. As organizações que ultrapassaram um limite durante os períodos anteriores de 6 horas não serão incluídas, mesmo se elas permanecerem acima ou abaixo do limite.  Os três recursos que compõem a cota de uma organização (memória reservada, serviços e rotas) são considerados independentemente ao determinar se uma notificação de cota da organização deve ser enviada. Por exemplo, se a quantia de memória reservada usada por uma organização ultrapassasse 50% da cota da organização, um limite de Cota da organização configurado com um valor de 50% resultaria no envio de uma notificação.  Se o número de serviços usados pelo mesma organização ultrapassasse 50% da cota da organização em um momento posterior, mesmo que a quantia de memória usada permanecesse inalterada, a mesma assinatura de limite de Cota da organização também resultaria no envio de uma notificação.
 
 {: #webhooknotsub}
 
@@ -173,7 +173,7 @@ Os dados de limite são coletados uma vez a cada seis horas. Uma notificação �
 
 Se não quiser esperar 6 horas para que a notificação seja enviada quando o limite for atendido, depois de concluir os campos no formulário, será possível clicar em **Salvar e testar** para salvar e testar a notificação com os dados de amostra.
 
-Uma notificação de limite de Cota da organização inclui somente as organizações que ultrapassaram a porcentagem de limite especificado no período de 6 horas correspondente a essa notificação. As organizações que ultrapassaram um limite durante os períodos anteriores de 6 horas não serão incluídas, mesmo se elas permanecerem acima/abaixo do limite. Os três recursos que compõem a cota de uma organização, memória reservada, serviços e rotas, são considerados independentemente ao determinar se uma notificação de cota da organização deve ser enviada. Por exemplo, se a quantia de memória reservada usada por uma organização ultrapassasse 50% da cota da organização, um limite de Cota da organização configurado com um valor de 50% resultaria no envio de uma notificação. Se o número de serviços usados pelo mesma organização ultrapassasse 50% da cota da organização em um momento posterior, mesmo que a quantia de memória usada permanecesse inalterada, a mesma assinatura de limite de Cota da organização também resultaria no envio de uma notificação.
+Uma notificação de limite de Cota da organização inclui somente as organizações que ultrapassaram a porcentagem de limite especificado no período de 6 horas correspondente a essa notificação. As organizações que ultrapassaram um limite durante os períodos anteriores de 6 horas não serão incluídas, mesmo se elas permanecerem acima/abaixo do limite.  Os três recursos que compõem a cota de uma organização, memória reservada, serviços e rotas, são considerados independentemente ao determinar se uma notificação de cota da organização deve ser enviada. Por exemplo, se a quantia de memória reservada usada por uma organização ultrapassasse 50% da cota da organização, um limite de Cota da organização configurado com um valor de 50% resultaria no envio de uma notificação.  Se o número de serviços usados pelo mesma organização ultrapassasse 50% da cota da organização em um momento posterior, mesmo que a quantia de memória usada permanecesse inalterada, a mesma assinatura de limite de Cota da organização também resultaria no envio de uma notificação.
 
 {: #payload}
 
@@ -1024,7 +1024,7 @@ comando:
 ### Armazenando seu ID do usuário e senha
 {: #auth_setuidpw}
 
-Também é possível armazenar seu ID do usuário e senha para que você não precise inseri-los manualmente cada vez que efetuar login. Para armazenar seu ID do usuário e senha para reutilização, use o exemplo de cURL a seguir:
+Também é possível armazenar seu ID do usuário e senha para que você não precise inseri-los manualmente cada vez que efetuar login.  Para armazenar seu ID do usuário e senha para reutilização, use o exemplo de cURL a seguir:
 
 `curl -X GET -H "Authorization: Basic <redacted>" -H "Accept: application/json" "http://localhost:3000/login"`
 {: codeblock}
@@ -1365,7 +1365,7 @@ As APIs métricas que são descritas nas seções a seguir podem ser acessadas d
 
 1. Um usuário pode fazer até 200 solicitações de API para métricas dentro de uma hora.
 2. Cada solicitação de API retorna até 200 pontos de dados por solicitação. Se mais dados estiverem disponíveis, uma URL será fornecida para carregar o próximo conjunto de dados.
-3. Cada solicitação de API requer que um usuário tenha pelo menos Acesso básico ao Console de administração. Permissões adicionais podem ser necessárias, conforme especificado abaixo.
+3. Cada solicitação de API requer que um usuário tenha pelo menos Acesso básico ao Console de administração.  Permissões adicionais podem ser necessárias, conforme especificado abaixo.
 
 ## Reunindo métricas sobre seu ambiente 
 

@@ -93,23 +93,37 @@ lastupdated: "2017-01-11"
 ## 切换到 IBM 标识
 {: #ibmid_switch}
 
-现在，在 SoftLayer 中进行认证将使用 IBM 标识来提供对所有 {{site.data.keyword.Bluemix_notm}} 的单点登录。将允许现有 SoftLayer 帐户切换到 IBM 标识认证，并且迁移向导将指导您逐步完成此切换。
+现在，在 SoftLayer 中进行认证将使用 IBM 标识来提供对所有 {{site.data.keyword.Bluemix_notm}} 的单点登录。将允许现有 SoftLayer 帐户切换到 IBM 标识认证。迁移向导将指导您完成此切换。
 {:shortdesc}
 
-如果您是主用户并且在 {{site.data.keyword.slportal}} 中未看到切换到 IBM 标识的提示，请[联系 IBM 支持](https://console.ng.bluemix.net/docs/support/index.html#contacting-support)以获取关于启用此功能的帮助。
+如果您是主用户并且在 {{site.data.keyword.slportal}} 中未显示切换到 IBM 标识的提示，请[联系 IBM 支持](/docs/support/index.html#contacting-support)以获取关于启用此功能的帮助。
 
-开始切换到 IBM 标识的过程后，只要尚未完成切换过程，随时都可以将其取消。但是，下次登录时，系统仍将提示您切换到 IBM 标识。计划链接到 {{site.data.keyword.Bluemix_notm}} 帐户的每个帐户都必须由具有唯一电子邮件地址的唯一 IBM 标识所拥有。
+开始切换到 IBM 标识的过程后，只要尚未完成切换过程，随时都可以将其取消。然而，您每次登录时，都会显示切换到 IBM 标识的提示。计划链接到 {{site.data.keyword.Bluemix_notm}} 帐户的每个 SoftLayer 帐户都必须由具有唯一电子邮件地址的唯一 IBM 标识所拥有。
 
-要将现有 SoftLayer 用户名切换到 IBM 标识，请完成以下步骤：
+要从现有 SoftLayer 用户名切换到 IBM 标识，请完成以下步骤：
 
- 1. 如果登录后在初始提示中选择了**稍后**，但在当前会话中又决定希望开始切换到 IBM 标识认证，请转至“编辑用户个人档案”页面，然后单击**切换到 IBM 标识**。
- 2. 遵循向导提示来创建 IBM 标识。您的 IBM 标识是唯一的电子邮件地址，创建后即无法更改。可以日后更新与个人档案关联的电子邮件，但缺省电子邮件会设置为您针对 IBM 标识定义的电子邮件。您将收到包含注册代码的电子邮件，这表明您已完成迁移向导。 
+ 1. 登录到 SoftLayer 帐户。显示切换到 IBM 标识的提示时，单击**确定**。 
+ 
+    如果您已登录（在切换到 IBM 标识的提示中单击了**稍后**），但在当前会话中又希望切换到 IBM 标识认证，请转至“编辑用户个人档案”页面，然后单击**切换到 IBM 标识**。
+	
+ 2. 遵循向导提示来创建 IBM 标识。 
+ 
+    要创建新的 IBM 标识，请输入当前任何 IBM 标识均未使用的电子邮件地址。新的 IBM 标识将使用该电子邮件地址作为用户名和电子邮件地址。创建 IBM 标识后，可以更新与此 IBM 标识关联的电子邮件地址，但不能更改用户名。邀请电子邮件将发往您提供的电子邮件地址。
+    
+    完成向导后，您将收到一封包含注册代码的电子邮件。
+ 
  3. 收到电子邮件后，请访问相应链接或将相应 URL 复制到浏览器中，然后输入注册代码。该代码有效期为 7 天，并且只能使用一次。
  
+    切换到 IBM 标识认证后，就只能使用 IBM 标识登录到您的帐户。在“帐户登录”提示中，转至 **IBM 标识帐户登录**部分，并单击**使用 IBM 标识登录**。不要使用先前用于 SoftLayer 标识的**用户名**和**密码**字段。
  
-切换到 IBM 标识认证后，就只能使用 IBM 标识登录到您的帐户。在登录提示时，请单击**使用 IBM 标识登录**，而不是输入 SoftLayer 用户名和密码。
+如果您是新客户，在检查订单时，系统会要求您输入现有 IBM 标识或创建新的 IBM 标识。 
+
+ * 要使用现有 IBM 标识，请输入 IBM 标识的用户名或电子邮件地址（如果唯一，即未在多个 IBM 标识之间共享）。
  
-您以新客户身份检出订单时，系统会要求您输入现有 IBM 标识帐户的电子邮件地址或创建新的 IBM 标识帐户。如果创建新的 IBM 标识，请输入新 IBM 标识的电子邮件地址。该电子邮件地址是接收邀请电子邮件的地址，同时也是新 IBM 标识的用户名。
+ * 要创建新的 IBM 标识，请输入当前任何 IBM 标识均未使用的电子邮件地址。新的 IBM 标识将使用该电子邮件地址作为用户名和电子邮件地址。创建 IBM 标识后，可以更新与此 IBM 标识关联的电子邮件地址，但不能更改用户名。邀请电子邮件将发往您提供的电子邮件地址。
+
+要解决使用 IBM 标识登录的任何问题，请参阅[有关访问 Bluemix 的故障诊断](/docs/troubleshoot/ts_accessing.html#accessing)。
+
 
 ### 允许用户切换到 IBM 标识
 {: #link_accounts_resellers}
@@ -190,7 +204,7 @@ For a user with IBMid access to multiple accounts with two-factor authentication
 * {{site.data.keyword.mqa}}
 * {{site.data.keyword.mobileappbuilder_short}}
 * {{site.data.keyword.mql}}
-* {{site.data.keyword.nlclassifierlshort}}
+* {{site.data.keyword.nlclassifiershort}}
 * {{site.data.keyword.objectstorageshort}}
 * {{site.data.keyword.personalityinsightsshort}}
 * {{site.data.keyword.presenceinsightsshort}}

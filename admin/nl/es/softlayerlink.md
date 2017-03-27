@@ -92,23 +92,38 @@ Para obtener más información sobre cómo invitar a miembros a través de la in
 ## Cambiar al ID de IBM
 {: #ibmid_switch}
 
-La autenticación en SoftLayer ahora utiliza el ID de IBM para proporcionar un inicio de sesión único para todo {{site.data.keyword.Bluemix_notm}}. Las cuentas existentes de SoftLayer se están habilitando para poder cambiar a la autenticación mediante ID de IBM y el asistente de migración le guiará por este proceso de cambio. 
+Ahora la autenticación en SoftLayer utiliza el ID de IBM para proporcionar un inicio de sesión único para todo {{site.data.keyword.Bluemix_notm}}. Las cuentas existentes de SoftLayer se están habilitando para poder cambiar a la autenticación mediante ID de IBM.
+Un asistente de migración le guiará por este cambio.
 {:shortdesc}
 
-Si es un usuario maestro y no ve el indicador para conmutar a un ID de IBM en el {{site.data.keyword.slportal}}, [póngase en contacto con el equipo de soporte de IBM](https://console.ng.bluemix.net/docs/support/index.html#contacting-support) para obtener ayuda para habilitar esta característica.
+Si es un usuario maestro y no ve el indicador para cambiar a un ID de IBM en el {{site.data.keyword.slportal}}, [póngase en contacto con el equipo de soporte de IBM](/docs/support/index.html#contacting-support) para obtener ayuda para habilitar esta característica.
 
-Cuando empiece a conmutar al ID de IBM, siempre puede cancelar la conmutación antes de finalizar el proceso. Sin embargo, se le seguirá solicitando que cambie al ID de IBM la próxima vez que inicie sesión. Cada cuenta que piense enlazar a la cuenta de {{site.data.keyword.Bluemix_notm}} debe ser propiedad de un ID de IBM exclusivo con una dirección de correo electrónico exclusiva.
+Cuando empiece a cambiar a un ID de IBM, siempre puede cancelar el cambio antes de finalizar el proceso. Sin embargo, cada vez que inicie una sesión, se mostrará el indicador para cambiar a un ID de IBM. Cada cuenta de SoftLayer que piense enlazar a la cuenta de {{site.data.keyword.Bluemix_notm}} debe ser propiedad de un ID de IBM exclusivo con una dirección de correo electrónico exclusiva.
 
-Para cambiar su nombre de usuario de SoftLayer existente por un ID de IBM, siga estos pasos:
+Para pasar de un nombre de usuario de SoftLayer existente a un ID de IBM, siga estos pasos:
 
- 1. Si ha seleccionado **Más tarde** en el indicador inicial después de iniciar la sesión pero ha decidido que desea empezar a cambiar a la autenticación con ID de IBM en la sesión actual, vaya a la página Editar perfil de usuario y pulse **Cambiar a ID de IBM**.
- 2. Siga las indicaciones del asistente para crear el ID de IBM. El ID de IBM es una dirección de correo electrónica exclusiva y no se puede modificar después de que se cree. Puede actualizar el correo electrónico asociado con el perfil más adelante; de forma predeterminada dicho valor se establece como lo que se ha definido para el ID de IBM. Recibirá un correo electrónico con su código de registro que le indicará que ha completado el asistente de migración. 
+ 1. Inicie una sesión en su cuenta de SoftLayer. Cuando se muestre el indicador para cambiar a un ID de IBM, pulse **Aceptar**. 
+ 
+    Si ya ha iniciado una sesión (ha pulsado **Más tarde** en el indicador para cambiar a un ID de IBM), pero desea cambiar a la autenticación mediante ID de IBM en la sesión actual, vaya a la página Editar perfil de usuario y pulse **Cambiar a ID de IBM**.
+	
+ 2. Siga las indicaciones del asistente para crear el ID de IBM. 
+ 
+    Para crear un nuevo ID de IBM, escriba una dirección de correo electrónico que no utilice actualmente ningún otro ID de IBM. El nuevo ID de IBM utilizará la dirección de correo electrónico como nombre de usuario y la dirección de correo electrónico. Una vez creado el ID de IBM, puede actualizar la dirección de correo electrónico asociada al ID de IBM, pero no puede cambiar el nombre de usuario. El correo electrónico de invitación irá a la dirección de correo electrónico especificada. 
+    
+    Una vez completado el asistente, recibirá un correo electrónico con su código de registro.
+ 
  3. Cuando reciba el correo electrónico, siga el enlace o copie el URL en un navegador y especifique el código de registro. El código es válido durante 7 días y solo se puede utilizar una vez.
  
+    Después de cambiar a autenticación con ID de IBM, solo podrá iniciar la sesión en su cuenta con su ID de IBM. En el indicador de inicio de sesión de la cuenta, vaya a la sección **Inicio de sesión de cuenta de ID de IBM** y pulse **Iniciar sesión con ID de IBM**. No utilice los campos el **Nombre de usuario** y **Contraseña** que ha utilizado previamente con su ID de SoftLayer.
  
-Después de cambiar a autenticación con ID de IBM, solo podrá iniciar la sesión en su cuenta con su ID de IBM. En el indicador de inicio de sesión, pulse **Iniciar sesión con el ID de IBM** en lugar de especificar el nombre de usuario y contraseña de SoftLayer.
+Si consulta su pedido como cliente nuevo, se le solicitará su ID de IBM o se le pedirá que cree un nuevo ID de IBM.  
+
+ * Para utilizar un ID de IBM existente, escriba la dirección de correo electrónico del ID de IBM si es exclusivo (es decir, no compartido entre varios ID de IBM). 
  
-Si consulta su pedido como cliente nuevo, se le pedirá una dirección de correo electrónico para la cuenta del ID de IBM existente o que cree una cuenta nueva del ID de IBM. Si crea un nuevo ID de IBM, escriba la dirección de correo electrónico del nuevo ID de IBM. El correo electrónico de invitación se enviará a esta dirección de correo electrónico, que también constituye el nombre de usuario para el nuevo ID de IBM.
+ * Para crear un nuevo ID de IBM, escriba una dirección de correo electrónico que no utilice actualmente ningún otro ID de IBM. El nuevo ID de IBM utilizará la dirección de correo electrónico como nombre de usuario y la dirección de correo electrónico. Una vez creado el ID de IBM, puede actualizar la dirección de correo electrónico asociada al ID de IBM, pero no puede cambiar el nombre de usuario. El correo electrónico de invitación irá a la dirección de correo electrónico especificada. 
+
+Para resolver problemas de inicio de sesión en con el ID de IBM, consulte [Resolución de problemas para acceder a Bluemix](/docs/troubleshoot/ts_accessing.html#accessing).
+
 
 ### Cómo permitir a los usuarios que cambien a un ID de IBM
 {: #link_accounts_resellers}
@@ -189,7 +204,7 @@ No todos los servicios de {{site.data.keyword.Bluemix_notm}} pueden utilizarse c
 * {{site.data.keyword.mqa}}
 * {{site.data.keyword.mobileappbuilder_short}}
 * {{site.data.keyword.mql}}
-* {{site.data.keyword.nlclassifierlshort}}
+* {{site.data.keyword.nlclassifiershort}}
 * {{site.data.keyword.objectstorageshort}}
 * {{site.data.keyword.personalityinsightsshort}}
 * {{site.data.keyword.presenceinsightsshort}}

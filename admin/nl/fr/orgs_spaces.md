@@ -1,4 +1,4 @@
-﻿---
+---
 
 
 
@@ -44,7 +44,7 @@ Les organisations peuvent couvrir plusieurs régions et sont définies par les �
 <dd>Indiquez la route Internet allouée à l'organisation. Une route possède un sous-domaine et un domaine. En général, le sous-domaine est le nom de l'application. Un domaine peut être un domaine de système ou un domaine personnalisé que vous avez enregistré pour votre application. Voir [Gestion des domaines personnalisés](orgs_spaces.html#managedomains).<br/>
 <p>**Remarque** : si vous ajoutez un domaine personnalisé, vous devez configurer votre serveur DNS afin de résoudre votre domaine personnalisé de sorte qu'il désigne le domaine de système {{site.data.keyword.Bluemix_notm}}. Ainsi, lorsque {{site.data.keyword.Bluemix_notm}} reçoit une demande pour votre domaine personnalisé, il peut l'acheminer correctement vers votre application.</p></dd>
 <dt>Le quota</dt>
-<dd>Il représente les limites de ressources pour l'organisation, notamment le nombre de services et la quantité de mémoire pouvant être alloués à l'organisation. Les quotas sont affectés lorsque les organisations sont créées. Toute application ou tout service dans un espace de l'organisation contribue à l'utilisation du quota. Avec les plans Paiement à la carte ou Abonnement, vous pouvez ajuster votre quota pour les applications et les conteneurs Cloud Foundry au fur et à mesure que les besoins de votre organisation changent. Voir [Gestion du quota](orgs_spaces.html#managequota).</dd>
+<dd>Il représente les limites de ressources pour l'organisation, notamment le nombre de services et la quantité de mémoire pouvant être alloués à l'organisation. Les quotas sont affectés lorsque les organisations sont créées. Toute application ou tout service dans un espace de l'organisation contribue à l'utilisation du quota. Le quota n'est pas un plafond appliqué. Il s'agit plutôt d'un déclencheur de notifications relatives aux dépenses. Avec les plans Paiement à la carte ou Abonnement, vous pouvez ajuster votre quota pour les applications et les conteneurs Cloud Foundry au fur et à mesure que les besoins de votre organisation changent. Voir [Gestion du quota](orgs_spaces.html#managequota).</dd>
 </dl>
 
 Dans {{site.data.keyword.Bluemix_notm}}, vous pouvez utiliser des organisations afin de permettre la collaboration entre les membres d'équipe et de faciliter le regroupement logique des ressources de projet comme suit :
@@ -147,7 +147,7 @@ Procédez comme suit pour répertorier les membres d'un espace spécifique :
 ## Gestion du quota
 {: #managequota}
 
-En tant que propriétaire de compte {{site.data.keyword.Bluemix_notm}} ou responsable de l'organisation, vous pouvez afficher le quota alloué et le quota utilisé pour une organisation. Le quota représente les limites de ressources pour l'organisation et est affecté lorsque l'organisation est créée. Selon que vous disposez d'un compte d'essai ou d'un compte facturable, les ressources disponibles pour une organisation varient. Toute application ou tout service dans un espace de l'organisation contribue à l'utilisation du quota alloué.
+En tant que propriétaire de compte {{site.data.keyword.Bluemix_notm}} ou responsable de l'organisation, vous pouvez afficher le quota alloué et le quota utilisé pour une organisation. Le quota représente les limites de ressources pour l'organisation et est affecté lorsque l'organisation est créée. La limite n'est pas un plafond appliqué à l'organisation. Il s'agit plutôt d'un déclencheur de notifications relatives aux dépenses. Selon que vous disposez d'un compte d'essai ou d'un compte facturable, les ressources disponibles pour une organisation varient. Toute application ou tout service dans un espace de l'organisation contribue à l'utilisation du quota alloué.
 
 Pour afficher le quota utilisé et le quota alloué d'une organisation, procédez comme suit :
 
@@ -167,7 +167,7 @@ Pour afficher le quota utilisé et le quota alloué d'une organisation, procéde
 
 **Remarque :** Les conteneurs ne sont pas disponibles dans la région {{site.data.keyword.Bluemix_notm}} Sydney. 
 
-Pour plus d'informations sur les conteneurs, reportez-vous à la rubrique [Quota](/docs/containers/container_planning_org_ov.html#container_planning_quota) dans la documentation sur les conteneurs. 
+Pour plus d'informations sur les conteneurs, reportez-vous à la rubrique [Quota](/docs/containers/container_planning_org_ov.html#container_planning_quota) dans la documentation sur les conteneurs.
 Pour modifier le quota alloué à une organisation, vous devez ouvrir un ticket de demande de service. Pour plus d'informations sur l'ouverture d'un ticket de demande de service, voir [Support client](/docs/support/index.html#contacting-support). 
 
 ## Gestion des domaines

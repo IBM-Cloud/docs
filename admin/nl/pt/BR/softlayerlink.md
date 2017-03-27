@@ -106,23 +106,37 @@ Para obter mais informações sobre convidar membros da equipe por meio da inter
 ## Alternando para o IBMid
 {: #ibmid_switch}
 
-A autenticação no SoftLayer agora usa o IBMid para fornecer um único login para todos os {{site.data.keyword.Bluemix_notm}}. As contas existentes do SoftLayer estão sendo ativadas para alternar para a autenticação do IBMid e um assistente de migração fornecerá orientação durante essa alternância. 
+A autenticação no SoftLayer agora usa o IBMid para fornecer um único login para todos os {{site.data.keyword.Bluemix_notm}}. As contas existentes do SoftLayer estão sendo ativadas para alternar para a autenticação do IBMid. Um assistente de migração fornece orientação durante essa alternância.
 {:shortdesc}
 
-Se você for um usuário principal e não vir um prompt para alternar para o IBMid no {{site.data.keyword.slportal}}, [Entre em contato com o suporte IBM](https://console.ng.bluemix.net/docs/support/index.html#contacting-support) para obter ajuda com a ativação do recurso.
+Se você for um usuário principal e um prompt para alternar para um IBMid não for exibido no {{site.data.keyword.slportal}}, [entre em contato com o suporte IBM](/docs/support/index.html#contacting-support) para obter ajuda com a ativação do recurso.
 
-À medida que você inicia a alternância para o IBMid, é sempre possível cancelá-la antes de concluir o processo. No entanto, você continuará sendo solicitado a alternar para o IBMid na próxima vez que efetuar login. Cada conta que você planejar vincular a uma conta do {{site.data.keyword.Bluemix_notm}} deverá pertencer a um IBMid exclusivo com um endereço de e-mail exclusivo.
+Quando você iniciar a alternância para um IBMid, sempre será possível cancelá-la antes de concluir o processo. No entanto, toda vez que você efetuar login, o prompt para alternar para um IBMid será exibido. Cada conta do SoftLayer que você planejar vincular a uma conta do {{site.data.keyword.Bluemix_notm}} deverá pertencer a um IBMid exclusivo com um endereço de e-mail exclusivo.
 
-Para alternar seu nome de usuário existente do SoftLayer para um IBMid, conclua as etapas a seguir:
+Para alternar de seu nome de usuário existente do SoftLayer para um IBMid, conclua as etapas a seguir:
 
- 1. Se você tiver selecionado **Posteriormente** no prompt inicial após o login, mas tiver decidido que deseja iniciar a alternância para a autenticação do IBMid na sessão atual, acesse a página Editar perfil do usuário e clique em **Alternar para o IBMid**.
- 2. Siga os prompts do assistente para criar seu IBMid. Seu IBMid é um endereço de e-mail exclusivo e não pode ser mudado depois de ser criado. Será possível atualizar o e-mail associado a seu perfil posteriormente; o e-mail padrão será configurado com o que tiver sido definido para o IBMid. Você receberá um e-mail com seu código de registro indicando que você concluiu o assistente de migração. 
- 3. Ao receber o e-mail, siga o link ou copie e cole a URL em um navegador e insira o seu código de registro. O código é válido por 7 dias e poderá ser usado somente uma vez.
+ 1. Efetue login em sua conta do SoftLayer. Quando o prompt para alternar para um IBMid for exibido, clique em **OK**. 
  
+    Se você já estiver conectado (clicou em **Posteriormente** no prompt para alternar para um IBMid), mas deseja alternar para a autenticação do IBMid na sessão atual, acesse a página Editar perfil do usuário e clique em **Alternar para o IBMid**.
+	
+ 2. Siga os prompts do assistente para criar seu IBMid. 
  
-Depois que você alternar para a autenticação do IBMid, será possível efetuar login em sua conta somente com o seu IBMid. No prompt de login, clique em **Efetuar login com o IBMid**, em vez de inserir seu nome de usuário e senha do SoftLayer.
+    Para criar um novo IBMid, insira um endereço de e-mail que não esteja atualmente em uso por nenhum IBMid. O novo IBMid usará esse endereço de e-mail como o nome do usuário e o endereço de e-mail. Após a criação do IBMid, será possível atualizar o endereço de e-mail que está associado ao IBMid, mas não será possível mudar o nome do usuário. O e-mail de convite vai para o endereço de e-mail fornecido.
+    
+    Depois de concluir o assistente, você receberá um e-mail com o código de registro.
  
-Ao efetuar check-out de sua ordem como um novo cliente, você será solicitado a fornecer um endereço de e-mail para sua conta existente do IBMid ou a criar uma nova conta do IBMid. Se você criar um novo IBMid, insira o endereço de e-mail para seu novo IBMid. O endereço de e-mail é para onde o e-mail de convite será enviado e é também o nome de usuário para seu novo IBMid.
+ 3. Ao receber o e-mail, siga o link ou copie a URL em um navegador e, em seguida, insira seu código de registro. O código é válido por 7 dias e só poderá ser usado uma vez.
+ 
+    Depois que você alternar para a autenticação do IBMid, será possível efetuar login em sua conta somente com o seu IBMid. No prompt Login da conta, acesse a seção **Login da conta IBMid** e clique em **Efetuar login com o IBMid**. Não use os campos **Nome do usuário** e **Senha** que foram usados anteriormente com seu ID do SoftLayer.
+ 
+Se for um novo cliente, ao efetuar check-out de sua ordem, você será solicitado a fornecer seu IBMid existente ou solicitado a criar um novo IBMid. 
+
+ * Para usar um IBMid existente, insira o nome do usuário ou o endereço de e-mail do IBMid se for exclusivo (ou seja, ele não é compartilhado entre diversos IBMids).
+ 
+ * Para criar um novo IBMid, insira um endereço de e-mail que não esteja atualmente em uso por nenhum IBMid. O novo IBMid usará esse endereço de e-mail como o nome do usuário e o endereço de e-mail. Após a criação do IBMid, será possível atualizar o endereço de e-mail que está associado ao IBMid, mas não será possível mudar o nome do usuário. O e-mail de convite vai para o endereço de e-mail fornecido.
+
+Para resolver quaisquer problemas ao efetuar login com seu IBMid, veja [Resolução de problemas para acessar o Bluemix](/docs/troubleshoot/ts_accessing.html#accessing).
+
 
 ### Permitindo que os usuários alternem para o IBMid
 {: #link_accounts_resellers}
@@ -211,7 +225,7 @@ Nem todos os serviços do {{site.data.keyword.Bluemix_notm}} podem ser usados co
 * {{site.data.keyword.mqa}}
 * {{site.data.keyword.mobileappbuilder_short}}
 * {{site.data.keyword.mql}}
-* {{site.data.keyword.nlclassifierlshort}}
+* {{site.data.keyword.nlclassifiershort}}
 * {{site.data.keyword.objectstorageshort}}
 * {{site.data.keyword.personalityinsightsshort}}
 * {{site.data.keyword.presenceinsightsshort}}

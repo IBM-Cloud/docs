@@ -30,7 +30,8 @@ Para um projeto bem-sucedido, reserve um tempo para planejar e projetar quais re
 
 {:shortdesc}
 
-Ao projetar uma solução em nuvem, pense também sobre a segurança da conta e os requisitos operacionais, regulamentações do país, diretivas de mercado e políticas corporativas. Para atender às suas necessidades do projeto, o {{site.data.keyword.Bluemix}} oferece três tipos de ambientes de nuvem. 
+Ao projetar uma solução em nuvem, pense também sobre a segurança da conta e os requisitos operacionais, regulamentações do país, diretivas de mercado e políticas corporativas. 
+Para atender às suas necessidades do projeto, o {{site.data.keyword.Bluemix}} oferece três tipos de ambientes de nuvem. 
 
 * [{{site.data.keyword.Bluemix_notm}} Public](/docs/overview/whatisbluemix.html "{{site.data.keyword.Bluemix_notm}} Public"): os recursos de infraestrutura são compartilhados por diferentes empresas e usuários.
 * [{{site.data.keyword.Bluemix_notm}} Dedicated](/docs/dedicated/index.html#dedicated "{{site.data.keyword.Bluemix_notm}} Dedicated"): você usa a sua própria infraestrutura SoftLayer dedicada, que é possível conectar com segurança à nuvem do {{site.data.keyword.Bluemix_notm}} Public e sua própria rede.
@@ -72,7 +73,8 @@ Considere a escala e o escopo dos aplicativos que você planeja desenvolver e im
 
 Crie organizações do {{site.data.keyword.Bluemix_notm}} separadas quando você tiver pessoas trabalhando em diferentes áreas de negócios e nas quais as suas atividades não se sobreponham. Se houver dois grupos completamente independentes, a criação de uma organização para cada um definirá limites claros para a entrega e o gerenciamento de reprodutores e recursos da equipe. É possível definir uma API para se comunicar entre as organizações.  
 
-As organizações do {{site.data.keyword.Bluemix_notm}} podem ser criadas para corresponder como você deseja trabalhar em vez da estrutura dentro de uma empresa. Geralmente, as organizações da empresa podem mudar, mas o desenvolvimento e a manutenção de um aplicativo continuarão independentemente. Projete seu ambiente {{site.data.keyword.Bluemix_notm}} para o tempo de vida dos aplicativos e não em sua estrutura da organização da empresa. 
+As organizações do {{site.data.keyword.Bluemix_notm}} podem ser criadas para corresponder como você deseja trabalhar em vez da estrutura dentro de uma empresa. Geralmente, as organizações da empresa podem mudar, mas o desenvolvimento e a manutenção de um aplicativo continuarão independentemente. 
+Projete seu ambiente {{site.data.keyword.Bluemix_notm}} para o tempo de vida dos aplicativos e não em sua estrutura da organização da empresa. 
 
 O desenvolvimento e a implementação interativos podem resultar em aplicativos se expandindo rapidamente. Seu design do processo de entrega deve ser capaz de aumentar a capacidade de modo rápido e fácil. Você desejará desenvolvimento contínuo com uma taxa de implementação rápida. Ter seus espaços de desenvolvimento e produção na mesma organização do {{site.data.keyword.Bluemix_notm}} fornecerá acesso aos mesmos recursos. O gerenciamento de diferentes espaços dentro de uma única organização reduz a sobrecarga de administração. A equipe de desenvolvimento, teste e operações poderá colaborar facilmente se eles estiverem trabalhando dentro da mesma organização do {{site.data.keyword.Bluemix_notm}}. 
 
@@ -122,7 +124,7 @@ implementar aplicativos em nuvem. No {{site.data.keyword.Bluemix_notm}} Public, 
  ![Figura que mostra a arquitetura de organização única no {{site.data.keyword.Bluemix_notm}}](images/singleorg_example.svg "Figura que mostra a arquitetura de organização única no {{site.data.keyword.Bluemix_notm}}")
 
  Figura 1. Exemplo de uma arquitetura de organização única para o {{site.data.keyword.Bluemix_notm}} Public, {{site.data.keyword.Bluemix_notm}} Dedicated e
- {{site.data.keyword.Bluemix_notm}} Local
+ {{site.data.keyword.Bluemix_notm}} Local 
 {: #bpfigure1}
 
 Ao implementar uma arquitetura de organização múltipla, as organizações fornecem o primeiro nível de cumprimento de limite e abstração que é possível usar para controlar e definir o que pode ser
@@ -173,10 +175,10 @@ Os cenários a seguir mostram as diferentes abordagens que podem ser adotadas ao
 
   ![Figura que mostra o isolamento de usuários por fase de entrega](images/user_groups_example.svg "Figura que mostra o isolamento de usuários por fase de entrega")
 
-   Figura 3. Exemplo de uma arquitetura de organização única alinhada por fase de entrega
+   Figura 3. Exemplo de uma arquitetura de organização única alinhada por fase de entrega 
 {: #bpfigure3}
 
-### Nomenclatura, restrições e gerenciamento de organização 
+### Nomenclatura, restrições e gerenciamento de organização
 {: #orgadmin}   
    
 Considere a orientação de organização a seguir:
@@ -191,7 +193,8 @@ Considere a orientação de organização a seguir:
 
 Dentro de uma organização, os espaços fornecem um nível adicional de cumprimento de limite e abstração.
 
-Um espaço é uma área reservada na organização na qual os usuários podem desenvolver e executar aplicativos e serviços. É possível criar qualquer número de espaços em uma organização. É possível controlar os usuários que têm acesso a um espaço. Para obter mais informações, veja [Espaços](/docs/admin/orgs_spaces.html#spaceinfo "Espaços").
+Um espaço é uma área reservada na organização na qual os usuários podem desenvolver e executar aplicativos e serviços. É possível criar qualquer número de espaços em uma organização. 
+É possível controlar os usuários que têm acesso a um espaço. Para obter mais informações, veja [Espaços](/docs/admin/orgs_spaces.html#spaceinfo "Espaços").
 
 Caso planeje definir um grande número de espaços, você talvez desejará criar um aplicativo para ajudar a gerenciar os espaços. Quando o número de
 espaços exceder sessenta, você talvez desejará considerar definir outra organização. 
@@ -206,8 +209,8 @@ Ao adotar uma arquitetura de organização única, o nível de segregação e ab
   Por exemplo, é possível definir um ou mais espaços para aplicativos que estão sendo desenvolvidos, um ou mais espaços para aplicativos que estão na fase de teste e um ou mais
   espaços para aplicativos que estão em produção.
 * Se o limite do ciclo de vida de entrega não for suficiente, será possível alcançar mais segregação definindo um ou mais espaços por LOB e fase de entrega.
-* Se for necessário impingir limites para diferentes grupos de usuários.
-  Por exemplo, seus desenvolvedores não podem desenvolver o aplicativo e testá-lo. Você requer um conjunto diferente de usuários para testar o aplicativo. Neste cenário, você cria dois espaços, um para os
+* Identifique se será necessário aplicar limites para diferentes grupos de usuários.
+Por exemplo, seus desenvolvedores não podem desenvolver o aplicativo e testá-lo. Você requer um conjunto diferente de usuários para testar o aplicativo. Neste cenário, você cria dois espaços, um para os
   desenvolvedores do aplicativo e um para os testadores do aplicativo. Em seguida, concede a cada conjunto de usuários o acesso ao espaço correto.
 
 Ao implementar uma arquitetura de organização múltipla, é possível segregar cada organização pelo LOB, o ciclo de vida de entrega ou ambos. É possível, então, definir
@@ -300,10 +303,10 @@ As tarefas pelas quais um gerenciador de organização é responsável incluem c
 #### Auditor da organização
 {: #bporgauditor}
 
-Os membros da equipe com a função de **Auditor** da organização podem monitorar a cota, o uso de recursos e os membros da equipe para todos os espaços em uma organização.
+Os membros da equipe com a função de **Auditor** da organização podem monitorar a cota, o uso de recursos e os membros da equipe para todos os espaços em uma organização. 
 Os auditores podem, então, relatar sobre a eficiência da organização e destacar quaisquer problemas potenciais.
 
-* Ao adotar uma arquitetura de organização múltipla, você poderá desejar conceder a função de auditor para os mesmos membros da equipe para cada organização que faz parte da conta.
+* Ao adotar uma arquitetura de organização múltipla, você poderá desejar conceder a função de auditor para os mesmos membros da equipe para cada organização que faz parte da conta. 
 Em seguida, esses membros da equipe podem monitorar a cota em todas as organizações em seu ambiente de nuvem e obter uma visualização global da conta.
 * Ao adotar uma arquitetura de organização única, conceda a função de auditor para os membros da equipe com a responsabilidade de monitorar o uso de cota e a eficiência geral
 da organização.
@@ -344,7 +347,7 @@ Para cada espaço, você pode desejar conceder a função de **Auditor** de espa
 ### Funções administrativas
 {: #adminroles}
 
-[Funções administrativas](/docs/admin/index.html#oc_useradmin "Funções administrativas") definem as permissões que é possível conceder aos usuários para gerenciar uma conta do {{site.data.keyword.Bluemix_notm}} Dedicated ou {{site.data.keyword.Bluemix_notm}} Local.
+[Funções administrativas](/docs/admin/index.html#oc_useradmin "Funções administrativas") definem as permissões que é possível conceder aos usuários para gerenciar uma conta do {{site.data.keyword.Bluemix_notm}} Dedicated ou {{site.data.keyword.Bluemix_notm}} Local. 
 É possível conceder permissões de leitura ou gravação para permitir que um usuário visualize informações do sistema, o uso dos recursos de conta, relatórios e logs, serviços de catálogo, usuários e o uso de recursos por organização.
 
 Em uma arquitetura de organização múltipla ou em uma arquitetura de organização única, defina os usuários e as permissões que cada usuário requer para gerenciar a conta:
@@ -353,7 +356,7 @@ Em uma arquitetura de organização múltipla ou em uma arquitetura de organiza�
 2. Defina as permissões para esses usuários na conta. Divida as permissões para gerenciar o catálogo e os relatórios entre os usuários da equipe.
 3. Selecione uma ou mais funções para cada usuário para corresponder às permissões necessárias para gerenciar a conta:
 
-   * Função administrativa: conceda essa função para mais dois usuários na conta. Os usuários com essa função têm a autoridade para gerenciar a organização inteira.
+   * Função administrativa: conceda essa função para dois ou mais usuários na conta. Os usuários com essa função têm a autoridade para gerenciar a organização inteira.
    * Função de usuário: essa função pode ser configurada com permissões de leitura ou gravação. Conceda essa função com permissões de gravação para os gerenciadores de organizações para permitir que eles incluam usuários na conta e suas organizações. Conceda essa função com permissões de leitura para os gerenciadores de organizações que podem precisar de acesso para ver a lista de membros na conta.
    * Função de catálogo: essa função pode ser configurada com permissões de leitura ou gravação. Conceda essa função para um conjunto de usuários com permissões de gravação para permitir que eles definam e gerenciem quais serviços e iniciadores do Bluemix são visíveis aos usuários no catálogo do {{site.data.keyword.Bluemix_notm}}. Conceda essa função com permissões de leitura para gerenciadores de organizações.
    * Função de relatórios: essa função pode ser configurada com permissões de leitura ou gravação. Conceda essa função para um conjunto de usuários com permissões de gravação para permitir que eles visualizem e incluam relatórios dos quais outros usuários com permissões de leitura podem fazer download. Conceda permissões de leitura para todos os membros da equipe administrativa.
