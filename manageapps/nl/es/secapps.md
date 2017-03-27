@@ -12,14 +12,14 @@ lastupdated: "2017-01-11"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-#Protección de apps
+# Protección de apps
 {: #securingapps}
 
 
 Puede proteger las apps subiendo certificados SSL y limitando el acceso a las apps.
 {:shortdesc}
 
-##Creación de solicitudes de firma de certificado
+## Creación de solicitudes de firma de certificado
 {: #ssl_csr}
 
 Para poder cargar los certificados SSL a los que esté autorizado con {{site.data.keyword.Bluemix}}, debe
