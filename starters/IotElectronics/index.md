@@ -2,11 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-10"
+lastupdated: "2017-03-15"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -21,9 +21,8 @@ lastupdated: "2017-03-10"
 
 To get started with {{site.data.keyword.iotelectronics}}, complete the following tasks:
 
-1. [Enable mobile communications and security](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mca.html) by configuring {{site.data.keyword.amashort}}.
-2. [Create simulated appliances](https://console.ng.bluemix.net/docs/starters/IotElectronics/iot4ecreatingappliances.html) by using the {{site.data.keyword.iotelectronics}} starter web application. For the purposes of demonstration, washers are used as the simulated appliance within the {{site.data.keyword.iotelectronics}} starter. The appliance you choose to connect could be any type of smart electronics device.
-3. [Download and connect](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html) the sample mobile app.
+1. [Create simulated appliances](https://console.ng.bluemix.net/docs/starters/IotElectronics/iot4ecreatingappliances.html) by using the {{site.data.keyword.iotelectronics}} starter web application. For the purposes of demonstration, washers are used as the simulated appliance within the {{site.data.keyword.iotelectronics}} starter. The appliance you choose to connect could be any type of smart electronics device.
+2. [Download and connect](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html) the sample mobile app.
 
 
 ## What's next
@@ -37,5 +36,4 @@ See what you can do with {{site.data.keyword.iotelectronics}}.
 ## Find out more about the components
 - [{{site.data.keyword.iotelectronics}} documentation](iotelectronics_overview.html)
 - [{{site.data.keyword.iot_full}} documentation](https://console.ng.bluemix.net/docs/services/IoT/index.html)
--  [{{site.data.keyword.amashort}} documentation](https://console.ng.bluemix.net/docs/services/mobileaccess/overview.html)
 - [{{site.data.keyword.sdk4nodefull}} documentation](https://console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime)

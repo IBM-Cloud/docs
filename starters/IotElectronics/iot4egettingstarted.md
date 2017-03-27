@@ -2,11 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-10"
+lastupdated: "2017-03-15"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -29,9 +29,8 @@ Before you begin, you must deploy an instance of the {{site.data.keyword.iotelec
 ## Getting started with {{site.data.keyword.iotelectronics}}
 To get started, complete the following tasks:
 
-1. [Enable mobile communications and security](iotelectronics_config_mca.html) by configuring {{site.data.keyword.amafull}}.
-2. [Create simulated appliances](iot4ecreatingappliances.html) by using the {{site.data.keyword.iotelectronics}} starter web application. For the purposes of demonstration, washers are used as the simulated appliance within the {{site.data.keyword.iotelectronics}} starter. The appliance you choose to connect could be any type of smart electronics device.
-3. [Download and connect](iotelectronics_config_mobile.html) the sample mobile app.
+1. [Create simulated appliances](iot4ecreatingappliances.html) by using the {{site.data.keyword.iotelectronics}} starter web application. For the purposes of demonstration, washers are used as the simulated appliance within the {{site.data.keyword.iotelectronics}} starter. The appliance you choose to connect could be any type of smart electronics device.
+2. [Download and connect](iotelectronics_config_mobile.html) the sample mobile app.
 
 
 ## What's next
@@ -49,14 +48,13 @@ See what you can do with {{site.data.keyword.iotelectronics}}.
 {: #api}
 * [{{site.data.keyword.iotelectronics}} API ![External link icon](../../icons/launch-glyph.svg)](https://broker-uss-iot4e.electronics.internetofthings.ibmcloud.com/public/iot4eregistrationapi.html){:new_window}
 * [{{site.data.keyword.iot_short}} API ![External link icon](../../icons/launch-glyph.svg)](https://developer.ibm.com/iotfoundation/recipes/api-documentation/){:new_window}
-
+* [IBM Watson IoT Service Health Dashboard ![External link icon](../../icons/launch-glyph.svg)](https://status.internetofthings.ibmcloud.com){: new_window}
 
 ## Components
 {: #general}
 
 * [{{site.data.keyword.iotelectronics}} documentation](iotelectronics_overview.html){:new_window}
 * [{{site.data.keyword.iot_full}} documentation](https://console.ng.bluemix.net/docs/services/IoT/index.html){:new_window}
-*  [{{site.data.keyword.amashort}} documentation](https://console.ng.bluemix.net/docs/services/mobileaccess/overview.html){:new_window}
 * [{{site.data.keyword.sdk4nodefull}} documentation](https://console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime){:new_window}
 
 ## Samples
