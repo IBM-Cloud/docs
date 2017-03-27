@@ -4,7 +4,7 @@
 
 copyright:
   years: 2015，2017
-lastupdated: "2017-2-21"
+lastupdated: "2017-3-10"
 
 ---
 
@@ -17,79 +17,43 @@ lastupdated: "2017-2-21"
 {: #live-sync}
 
  
-如果您要建置 Node.js 應用程式，可以使用 {{site.data.keyword.Bluemix}} Live Sync 快速更新 {{site.data.keyword.Bluemix_notm}} 上的應用程式實例，並像在桌面上那樣地開發應用程式而不必重新部署。   
+如果您要建置 Node.js 應用程式，可以使用 {{site.data.keyword.Bluemix}} Live Sync 快速更新 {{site.data.keyword.Bluemix_notm}} 上的應用程式實例，而且不需手動重新部署即可開發。   
 {: shortdesc}
 
-當您進行變更時，可以立即在執行中的 {{site.data.keyword.Bluemix_notm}} 應用程式看到該變更。{{site.data.keyword.Bluemix_notm}} Live Sync 在指令行及 Web IDE 中均可運作。您可以使用 {{site.data.keyword.Bluemix_notm}} Live Sync，針對以 Node.js 撰寫的應用程式進行除錯。  
+當您進行變更時，可以立即在執行中的 {{site.data.keyword.Bluemix_notm}} 應用程式看到該變更。{{site.data.keyword.Bluemix_notm}} Live Sync 會 
+<!--from both the command line and -->
+在 Eclipse Orion Web IDE (Web IDE) 中運作。您可以使用 {{site.data.keyword.Bluemix_notm}} Live Sync，針對以 Node.js 撰寫的應用程式進行除錯。  
 
-{{site.data.keyword.Bluemix_notm}} Live Sync 包含三個特性。
+{{site.data.keyword.Bluemix_notm}} Live Sync 包含兩個特性。
+<!-- three -->
 
-**桌面同步**  
-您可以將任何桌面目錄樹與雲端型專案工作區同步化，運作方式類似 Dropbox。Web IDE 會直接編輯相同的雲端型工作區，讓兩者保持同步。「桌面同步」適用於任何類型的應用程式。若要使用「桌面同步」，您需要下載並安裝 BL 指令行介面。  
+<!--
+**Desktop Sync**  
+
+You can synchronize any desktop directory tree with a cloud-based project workspace similar to the way Dropbox works. The Web IDE directly edits the same cloud-based workspace, so both stay in sync. Desktop Sync works for any kind of application. To use Desktop Sync, you need to download and install the BL command line interface.  
+-->
 
 **即時編輯**
-您可以對在 {{site.data.keyword.Bluemix_notm}} 中執行的 Node.js 應用程式進行變更，並立刻在瀏覽器中加以測試。您在已同步的桌面目錄中或在 Web IDE 中所進行的任何變更，都會立即延伸到應用程式的檔案系統。  
+
+您可以對在 {{site.data.keyword.Bluemix_notm}} 中執行的 Node.js 應用程式進行變更，並立刻在瀏覽器中加以測試。您在 Web IDE 中進行的任何變更，都會立即延伸到應用程式的檔案系統。  
 
 **除錯**  
+
 當 Node.js 應用程式處於「即時編輯」模式時，您可以使用 Shell 方式連入並進行除錯。您可以使用 Node Inspector 除錯器，以動態編輯程式碼、插入岔斷點、逐步執行程式碼、重新啟動運行環境等等。  
 
-您可以使用「桌面同步」，讓桌面工作區與您直接使用 Web IDE 來編輯的雲端型專案工作區保持同步。您可以使用「即時編輯」，將雲端型專案工作區中的變更延伸到執行中的應用程式。您可以單獨或同時使用這些特性。而如果您使用「桌面同步」或「即時編輯」將應用程式置於「即時編輯」模式，就可以對執行中的應用程式進行除錯。
+<!-- You can use Desktop Sync to keep your desktop workspace in sync with the cloud-based project workspace that you edit directly with the Web IDE. -->
 
-下圖說明 Bluemix Live Sync 處理程序。
+您可以使用「即時編輯」，將雲端型專案工作區中的變更延伸到執行中的應用程式。 
+<!-- You can use one or both of these features. And if you use Desktop Sync or -->
+如果您使用「即時編輯」將應用程式置於「即時編輯」模式，就可以對執行中的應用程式進行除錯。下圖說明 Bluemix Live Sync 處理程序。    
 
 圖 1. Bluemix Live Sync 處理程序
+    
+
 ![Bluemix Live Sync 處理程序的影像](images/bluemix-live-sync.png)
 
 如果您要開發在 Liberty 上執行的 Java 應用程式，可以使用 [Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html#eclipsetools) 進行遠端除錯。
 
-##桌面同步 {: #desktop-sync}
-
-您可以使用 Bluemix Live Sync 的「桌面同步」特性，快速更新 {{site.data.keyword.Bluemix_notm}} 上的應用程式實例，並如同在桌面上一樣進行開發。
-
-「桌面同步」具有下列考量：
-* 「桌面同步」在下列作業系統上執行：
-  * Windows 7 或 8
-  * Mac OS X 10.9 版或更新版本   
-      **附註：**Windows 需要 .NET Framework 4.5 版。如果未安裝 .NET，則在您安裝 {{site.data.keyword.Bluemix_notm}} Live Sync 指令行介面 (CLI) 時，系統會提示您進行安裝。  
-* 您不需要複製 Git 儲存庫。
-* 無論您開發什麼類型的應用程式，都可以將桌面專案與雲端工作區同步化。
-* 如果您的應用程式是以 Node.js 撰寫，則可以將變更延伸到執行中應用程式。
-
-如需指令的詳細資料，請參閱 [Bluemix Live Sync (bl) 指令](bluemixlive.html#bl-commands)。
-
-<ol>
-<li>註冊免費的 <a class="xref" href="https://hub.jazz.net/" target="_blank" title="（在新分頁或視窗中開啟）">Bluemix DevOps Services 帳戶 <img class="image" src="../icons/launch-glyph.svg" alt="外部鏈結圖示"/></a>。</li>
-<li>下載並安裝 {{site.data.keyword.Bluemix_notm}} Live Sync bl 指令行。   
-<p>
-<a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/blive_setup.msi" target="_blank" title="（在新分頁或視窗中開啟）"><img class="image" src="images/bl_gs_icons_windows_b.svg" alt="下載 Windows bl 指令行按鈕" /> </a>
-<a class="xref" href="http://livesyncdownload.ng.bluemix.net/downloads/BluemixLive.pkg" target="_blank" title="（在新分頁或視窗中開啟）"><img class="image" src="images/bl_gs_icons_mac-osx_b.svg" alt="下載 Mac bl 指令行按鈕" /> </a>
-</p>  
-
-<strong>重要事項：</strong>bl 指令行工具僅適用於 Windows 7 和 8，以及 Mac OS X 10.9 版或更新版本。</li>
-
-<li>在指令行上，使用下列指令登入。系統會提示您輸入使用者 ID 和密碼。  
-<pre class="codeblock">bl login</pre>
-
-<strong>附註：</strong>您的 DevOps Services 使用者 ID 可以是 IBM ID 或聯合 ID（組織 ID）。如果您使用聯合鑑別，在登入 Bluemix Live Sync 指令行用戶端時，您必須使用個人存取記號，而不是密碼。如果未使用聯合鑑別，則您的 IBM ID 及密碼可用於所有用戶端。如需建立個人存取記號的相關資訊，請參閱 <a class="xref" href="https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/" target="_blank" title="（在新分頁或視窗中開啟）">What's federated authentication and how does it affect me? <img class="image" src="../icons/launch-glyph.svg" alt="外部鏈結圖示"/></a>。
-</li>
-
-<li>輸入下列指令，以查看可用於 {{site.data.keyword.Bluemix_notm}} Live Sync 同步化的專案清單：
-<pre class="codeblock">bl projects </pre>
-<p>在清單中尋找符合您應用程式的專案名稱。專案名稱的格式為 <i>your alias</i> | <i>your application name</i>。</p>
-</li>
-<li>輸入下列指令，將您的本端環境與您在 {{site.data.keyword.Bluemix_notm}} 上的專案同步化。如果您是專案的擁有者，只需要指定 your-application-name 作為 projectName。
-<pre class="codeblock">bl sync projectName -d localDirectory --verbose</pre>
-<p>此指令會繼續執行（而且同步化也會繼續進行），直到您輸入 "q" 為止。--verbose 選項會顯示記載及狀態資訊。如果有任何引數包含空格，則必須將名稱含括在引號中。</p></li>
-<li>使用另一個指令行視窗，在本端目錄中輸入下列指令，以在「即時編輯」模式下，將應用程式部署至 {{site.data.keyword.Bluemix_notm}}：
-<pre class="codeblock">bl start</pre>
-</li>
-</ol>
-
-當您變更本端目錄中的檔案時，變更會自動延伸到 {{site.data.keyword.Bluemix_notm}} 上執行的應用程式，以及專案雲端工作區。如果您需要重新啟動 Node 應用程式，可以使用下列指令：
-
-```
-bl start --restart
-```
 
 ##即時編輯 {: #live-edit}
 
@@ -97,13 +61,15 @@ bl start --restart
 
 「即時編輯」支援僅適用於 Node.js 應用程式。
 
-在 Web IDE 的執行列中，按一下**即時編輯**。
+在 Eclipse Orion Web IDE (Web IDE) 的執行列中，按一下**即時編輯**。
 
-![含有即時編輯之執行列的影像](images/run-bar-live-edit.png)
+![含有即時編輯之執行列的影像](images/bluemix-live-sync-light.png)
 
 「即時編輯」可讓您快速預覽在 {{site.data.keyword.Bluemix_notm}} 上執行之 Node.js 應用程式的變更。當您開啟「即時編輯」來更新程式碼時，可以重新整理 Web 應用程式的瀏覽器視窗，就能看到在進行變更幾秒後所反映的變更。
 
-如需有關使用 {{site.data.keyword.Bluemix_notm}} Live Sync 的「即時編輯」特性的指導教學，請參閱 [Test and debug a Node.js app with Bluemix Live Sync ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://hub.jazz.net/tutorials/livesync){:new_window} 指導教學。
+<!--
+For a tutorial on using the Live Edit feature of {{site.data.keyword.Bluemix_notm}} Live Sync, see the tutorial [Test and debug a Node.js app with Bluemix Live Sync![External link icon](../icons/launch-glyph.svg "External link icon")](https://hub.jazz.net/tutorials/livesync){:new_window}.
+-->
 
 當您變更 Web IDE 中的檔案時，會自動將其重新部署至在 {{site.data.keyword.Bluemix_notm}} 上執行的應用程式。如果您需要重新啟動 Node 應用程式，可以使用執行列中的**重新啟動**按鈕。
 
@@ -174,7 +140,9 @@ bl start --restart
 
 推送應用程式，然後瀏覽至 `https://app-host.mybluemix.net/bluemix-debug/manage`，以存取 {{site.data.keyword.Bluemix_notm}} 除錯使用者介面。當系統提示您進行鑑別時，請輸入您的使用者 ID 及個人存取記號或 IBM ID 密碼。    
 
-   **附註**：您的 DevOps Services 使用者 ID 可以是 IBM ID 或聯合 ID（組織 ID）。如果您使用聯合鑑別，在登入 Bluemix Live Sync 指令行用戶端時，您必須使用個人存取記號，而不是密碼。如果未使用聯合鑑別，則您的 IBM ID 及密碼可用於所有用戶端。如需建立個人存取記號的相關資訊，請參閱 [What's federated authentication and how does it affect me? ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/){:new_window}
+<!--
+   **Note**: Your user ID for DevOps Services can be either an IBMid or a federated ID (corporate ID). If you use federated authentication, to log in to your Bluemix Live Sync command-line client, you must use a personal access token instead of a password. If you don't use federated authentication, your IBMid and password work with all clients. For more information about creating a personal access token, see [What's federated authentication and how does it affect me?![External link icon](../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/){:new_window}
+   -->
 
 ###還原應用程式配置並停用 Bluemix 即時除錯 {: #restore_live_debug}
 
@@ -184,428 +152,6 @@ bl start --restart
 
 3. 推送應用程式。
 
-## {{site.data.keyword.Bluemix_notm}} Live Sync (bl) 指令 {: #bl-commands}
-
-如果您要建置 Node.js 應用程式，可以使用 {{site.data.keyword.Bluemix_live}} 快速更新 {{site.data.keyword.Bluemix_notm}} 上執行的應用程式實例，並像在桌面上那樣地開發應用程式而不必重新部署。當您進行變更時，可以立即在執行中的 {{site.data.keyword.Bluemix_notm}} 應用程式看到該變更。{{site.data.keyword.Bluemix_live}} 指令行介面稱為 *bl*。
-{:shortdesc}
-
-您可以使用 **bl** 指令行介面指令來完成下列作業：
-
-* 啟動及停止在 {{site.data.keyword.Bluemix_notm}} 上執行的應用程式。
-* 從您的桌面建立新的雲端型專案。
-* 將桌面的變更同步至雲端專案工作區，以及在 {{site.data.keyword.Bluemix_notm}} 上執行的應用程式。
-* 查看可以同步化的專案清單。
-* 查看執行中應用程式的狀態。
-
-如需下載及使用 bl 指令的相關資訊，請參閱 [Bluemix Live Sync](/docs/develop/bluemixlive.html)。
-
-## bl 指令
-{: #bl_commands}
-
-{{site.data.keyword.Bluemix_live}} 指令行 (**bl**) 的語法如下：
-
-```
-bl command [arguments] [options] [--help]
-```
-{: pre}
-
-**指令**
-
-l *login*：登入 {{site.data.keyword.Bluemix_notm}}。
-
-lo *logout*：登出 {{site.data.keyword.Bluemix_notm}}。
-
-s *sync*：啟動桌上型電腦與伺服器之間的同步化處理程序。
-
-c *create*：建立專用專案，將它鏈結至此目錄中的 Git 儲存庫，然後將內容部署至 {{site.data.keyword.Bluemix_notm}}。
-
-p *projects*：列出可用於同步化的所有專案。
-
-st *start*：在 {{site.data.keyword.Bluemix_notm}} 中啟動應用程式實例。
-
-sp *stop*：在 {{site.data.keyword.Bluemix_notm}} 中停止應用程式實例。
-
-ss *status*：列出 {{site.data.keyword.Bluemix_notm}} 中的執行中應用程式實例狀態。
-
-
-**引數**
-
-指令的引數。
-
-
-**選項**
-
-指令的選項。
-
-**廣域選項**
-
-*--help*：顯示所指定指令的說明頁面
-
-*--verbose*：啟用詳細記載。
-
-**附註：**如果您的任何引數或選項包含空格，請將值含括在雙引號中。
-
-## Help
-{: bl_help}
-
-```
-bl [ command ] --help | --h
-```
-{: pre}
-
-**用法**
-
-使用這個指令來顯示有關指令或指令清單的說明。
-
-**範例**
-
-顯示指令清單：
-
-```
-bl --help
-```
-{: pre}
-
-顯示 sync 指令的詳細資訊：
-
-```
-bl sync --help
-```
-{: pre}
-
-## Login
-{: bl_login}
-
-```
-bl login | l [ -u username ] [-p password ][ -s server ]
-```
-{: pre}
-
-**用途**
-
-使用這個指令來登入 {{site.data.keyword.Bluemix_notm}}。每個階段作業只需要執行一次登入。
-
-
-**警告：**不鼓勵您以指令行選項來提供密碼，因為其他人可以看到它，而且它會記錄為指令歷程的一部分。
-
-**附註：**您必須先註冊免費的 [Bluemix DevOps Services![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://hub.jazz.net/){:new_window} 帳戶，才能登入。
-
-**選項**
-
--u *username*：您用來登入 {{site.data.keyword.Bluemix_notm}} 的使用者 ID。
-
--p *password*：您的個人存取記號或 IBM ID 密碼。
-
--s *server*：{{site.data.keyword.jazzhub_short}} 伺服器的伺服器名稱或 IP 位址。    
-
-   **附註**：您的 DevOps Services 使用者 ID 可以是 IBM ID 或聯合 ID（組織 ID）。如果您使用聯合鑑別，在登入 Bluemix Live Sync 指令行用戶端時，您必須使用個人存取記號，而不是密碼。如果未使用聯合鑑別，則您的 IBM ID 及密碼可用於所有用戶端。如需建立個人存取記號的相關資訊，請參閱 [What's federated authentication and how does it affect me? ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/devops-services/2016/06/23/whats-federated-authentication-and-how-does-it-affect-me/){:new_window}
-
-**範例**
-
-這個指令會提示輸入 *username* 及 *password*：
-
-```
-bl login
-```
-{: pre}
-
-以使用者 `name@company.com` 進行登入：
-
-```
-bl login –u name@company.com –p pa55w0rd
-```
-{: pre}
-
-以使用者 `name@company.com` 進行登入時的密碼 *pa55 w0rd* 包含空格，因此需要加上引號：
-
-```
-bl login –u name@company.com –p "pa55 w0rd"
-```
-{: pre}
-
-## Logout
-{: bl_logout}
-
-```
-bl logout | lo
-```
-{: pre}
-
-**用途**
-
-使用這個指令來登出。
-
-## projects
-{: bl_projects}
-
-```
-bl projects | p
-```
-{: pre}
-
-**用途**
-
-使用這個指令來列出已登入使用者可用於同步化的所有專案。
-
-## Sync
-{: bl_sync}
-
-```
-bl sync | s projectName -d localDirectory [ --overwritelocal ] [ --overwriteremote ] [ --verbose ]
-```
-{: pre}
-
-**用途**
-
-使用這個指令來啟動專案內容與本端目錄的同步化。在輸入 <code>q</code> 之前，這個指令會持續執行。這個指令可以選擇性地顯示所有檔案及應用程式狀態變更的日誌。
-
-**引數**
-
-*projectName*：形式為 *"alias | myproject"* 或只有 *myproject*（如果已登入使用者擁有此專案）的專案名稱。
-
-**選項**
-
--d *localDirectory*：本端目錄路徑。預設為現行資料夾 "."。
-
-*--overwritelocal*：使用專案工作區內容改寫本端目錄。
-
-*--overwriteremote*：使用本端目錄內容改寫專案工作區。
-
-*--verbose*：顯示詳細記載。
-
-**範例**
-
-如果現行目錄是現有同步目標，則這個指令會開始與關聯的專案進行同步化。如果現行目錄是空的而且不是現有同步目標，則指令會提示輸入 *projectName*。如果現行目錄不是空的而且不是現有同步目標，則需要改寫選項。
-
-```
-bl sync
-```
-{: pre}
-
-這個指令會開始同步化，且相當於 `bl sync "alias | myproject"`（如果已登入使用者擁有此專案）。
-
-```
-bl sync  myproject
-```
-{: pre}
-
-這個指令會開始與其名稱包含空格的專案 `my pro ject` 進行同步化，因此會使用引號括住該名稱：
-
-```
-bl sync "my pro ject"
-```
-{: pre}
-
-這個指令會開始進行 `myproject` 專案與 `myfolder` 目錄的同步化：
-
-```
-bl sync myproject –d  myfolder
-```
-{: pre}
-
-## Create
-{: bl_create}
-
-```
-bl create | c [ -n PROJECT_NAME ] [ -r REGION ] [ -o ORG ] [ -s SPACE ] [ -g GIT_REPO ] [-e GIT_EXE ] [ --creds ] [ --fork ] [ --public ] [ --prompt ]
-```
-{: pre}
-
-**用途**
-
-從包含程式碼的目錄使用此指令來建立專用專案、將它鏈結至 Git 儲存庫，然後將儲存庫內容部署至
-{{site.data.keyword.Bluemix_notm}}。
-
-**選項**
-
--n *PROJECT_NAME*：您專案的名稱。預設值：現行目錄名稱。
-
--r *REGION*：{{site.data.keyword.Bluemix_notm}} 地區。預設值：美國南部。
-
--o *ORG*：{{site.data.keyword.Bluemix_notm}} 組織。預設值：第一個發現的組織。
-
--s *SPACE*：{{site.data.keyword.Bluemix_notm}} 空間。預設值：第一個發現的空間。
-
--g *GIT_REPO*：要用於任何現有 Git 儲存庫的遠端儲存庫名稱。預設值：origin。
-
--e *GIT_EXE*：Git 執行檔的完整路徑。預設值：detected。
-
-*--creds*：提示輸入您的 Git 認證。
-
-*--fork*：分出此目錄並建立專案和儲存庫。
-
-*--public*：使新專案成為公用專案。
-
-*--prompt*：提示輸入所有必要的選項，並提供可用的選項。
-
-**範例**
-
-這個指令會開始建立專用專案的程序，並提示輸入要使用的專案名稱。
-
-
-```
-bl create
-```
-{: pre}
-
-這個指令會建立名為 `myNewProject` 的公用專案。
-
-
-```
-bl create -n myNewProject --public
-```
-{: pre}
-
-## Status
-{: bl_status}
-
-```
-bl status | ss [ projectName ]
-```
-{: pre}
-
-**用途**
-
-使用這個指令來列出與 `./launchConfigurations` 目錄裡的啟動配置相關聯之應用程式的狀態。
-
-**引數**
-
-*projectName*：形式為 `"alias | myproject"` 或只有 `myproject`（如果已登入使用者擁有此專案）的專案名稱。
-
-**範例**
-
-此範例顯示執行中應用程式的狀態。如果現行目錄是現有同步目標，則會使用關聯的專案。如果現行目錄不是現有同步目標，則指令會提示輸入 `projectName`。
-
-```
-bl status
-```
-{: pre}
-
-這個範例顯示專案 *myproject* 的狀態，相當於 `bl status "alias | myproject"`（如果已登入使用者擁有此專案）。
-
-```
-bl status myproject
-```
-{: pre}
-
-此範例會顯示與其名稱包含空格的專案 `my pro ject` 相關聯之執行中應用程式的狀態，因此會使用引號括住該名稱：
-
-```
-bl status "my pro ject"
-```
-{: pre}
-
-## Start
-{: bl_start}
-
-```
-bl start | st projectName [ -l launchConfigPath ] -m manifestPath ] [ --liveedit ] [--noliveedit ] [ --restart ]
-```
-{: pre}
-
-**用途**
-
-使用這個指令來啟動由啟動或資訊清單檔說明的應用程式實例。如果應用程式的建置套件支援即時編輯，則應用程式預設會以即時編輯模式啟動。啟動之後，即會顯示應用程式的 URL、除錯工具及 {{site.data.keyword.Bluemix_notm}} 儀表板。
-
-**引數**
-
-*projectName*：形式為 *"alias | myproject"* 或只有 *myproject*（如果已登入使用者擁有此專案）的專案名稱。
-
-**選項**
-
--l *launchConfiguration*：啟動配置名稱（例如，`mylaunchconfig`）、檔名（例如，`mylaunchconfig.launch`）或啟動配置檔的專案相對路徑（例如，`launchConfigurations/mylaunchconf.launch`）。
-
--m *manifestPath*：資訊清單檔（例如，`manifest.yml`）的專案相對路徑。
-
-*--liveedit*：以即時編輯模式啟動關聯的應用程式，或者，如果建置套件不支援即時編輯模式，則會結束，並發生錯誤。
-
-*--noliveedit*：以標準模式啟動關聯的應用程式。
-
-*--view*：開啟執行中應用程式的瀏覽器。
-
-*--restart*：重新啟動已經以即時編輯模式執行的應用程式，而無需重新進行部署。
-
-**範例**
-
-這個指令會啟動與啟動檔 `launchConfigurations/my.launch` 相關聯之 `myproject` 的應用程式實例。
-
-```
-bl start myproject –l "launchConfigurations/my.launch"
-```
-{: pre}
-
-這個指令會啟動與現行目錄（含啟動檔 `launchConfigurations/my.launch`）相關聯之專案的應用程式實例。如果現行目錄不是同步目標，則會顯示一則錯誤。
-
-```
-bl start –l "launchConfigurations/my.launch"
-```
-{: pre}
-
-這個指令會啟動與現行目錄（含資訊清單檔 `manifest.yml`）相關聯之專案的應用程式實例。資訊清單中指定的資訊是用來建立新的啟動配置檔。這個指令會提示您輸入其餘的必要資訊，然後啟動由啟動配置說明的應用程式：
-
-```
-bl start –m "mymanifest.yml"
-```
-{: pre}
-
-這個指令會啟動與現行目錄（含資訊清單檔 `manifest.yml`）相關聯之專案的應用程式實例，相當於 `bl start –m manifest.yml`。
-
-```
-bl start
-```
-{: pre}
-
-## Stop
-{: bl_stop}
-
-```
-bl stop | sp projectName [ -l launchConfiguration ]
-```
-{: pre}
-
-**用途**
-
-使用這個指令來停止與啟動檔相關聯的應用程式實例。
-
-**引數**
-
-*projectName*：形式為 *"alias | mproject"* 或只有 *mproject*（如果已登入使用者擁有此專案）的專案名稱。
-
-**選項**
-
--l *launchConfiguration*：啟動配置名稱（例如，`mylaunchconfig`）、檔名（例如，`mylaunchconfig.launch`）或啟動配置檔的專案相對路徑（例如，`launchConfigurations/mylaunchconf.launch`）。
-
-**範例**
-
-如果現行目錄是同步目標，則這個指令會停止應用程式；否則，它會結束，並發生錯誤。如果沒有啟動配置，則這個指令會結束，並發生錯誤。如果有多個啟動配置，則這個指令會提示您輸入要停止的啟動配置。
-
-```
-bl stop
-```
-{: pre}
-
-這個指令會停止使用啟動檔 `mylaunchConfig` 執行之專案的應用程式實例。
-
-
-```
-bl stop myproject –l "mylaunchConfig"
-```
-{: pre}
-
-如果現行目錄是使用啟動檔 `launchConfigurations/mylaunchconfig.launch` 啟動之關聯專案的同步目標，則這個指令會停止應用程式；否則，它會結束，並發生錯誤：
-
-```
-bl stop –l "launchConfigurations/mylaunchconfig.launch"
-```
-{: pre}
-
-# 相關鏈結
-{: #rellinks}
-
-## 指導教學及範例
-{: #samples}
-
-* [Test and debug a Node.js app with Bluemix Live Sync ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://hub.jazz.net/tutorials/livesync){:new_window}
 
 ## 相關鏈結
 {: #general}
