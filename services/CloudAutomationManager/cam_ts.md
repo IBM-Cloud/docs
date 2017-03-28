@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-24"
+lastupdated: "2017-03-28"
 
 ---
 <!-- Copyright info and last updated date at top of file: REQUIRED
@@ -49,6 +49,9 @@ Some known issues with Cloud Automation Manager in {{site.data.keyword.Bluemix_n
    allow_unverified_ssl = true
  }
  ```
+- When you deploy your own template and select **Import from a file**, a file cannot be selected using the Internet Explorer browser. Use a different browser to complete the task.
+
+- When using the Internet Explorer browser, some user interface elements might be displayed differently even if the Cloud Automation Manager service works correctly.
 
 <!-- ## <service_short_name> troubleshooting techniques
 {: #tstechniques} -->
