@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2016
-lastupdated: "2016-11-29"
+  years: 2015, 2017
+lastupdated: "2017-2-21"
 
 ---
 
@@ -113,7 +113,7 @@ Bluemix에 배치 단추에 대한 스니펫을 사용자 정의하는 경우, �
 	
 	* 이미지를 로컬에 저장하려는 경우 이미지를 다운로드하고 Git 저장소에 저장할 수 있습니다. 이미지의 상대 위치를 사용하도록 경로를 조정하십시오. 
 	
-	* 단추의 번역된 버전을 사용하려는 경우 이 버전을 원격으로 참조하거나 [ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button](ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button)에서 다운로드할 수 있습니다. 
+	* 단추의 번역된 버전을 사용하려는 경우 [ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button){:new_window}에서 원격으로 참조하거나 다운로드할 수 있습니다. 
 	
 ##단추에 대한 저장소 고려사항 {: #button-repo} 
 
@@ -125,11 +125,12 @@ Bluemix에 배치 단추에서 사용할 프로젝트 저장소에 대한 고려
 Manifest 파일을 사용하여 다음을 지정할 수 있습니다. 
     <ul>
     <li>고유한 앱 이름</li>  
-    <li>선언된 서비스: 앱 배치 전에 설정해야 하는 필수 또는 선택적 서비스(예: 데이터 캐시 서비스)를 작성하거나 찾는 Manifest 확장입니다. <a href="https://github.com/cloudfoundry/cli/releases">CF 명령행 인터페이스</a>를 사용하여 <code>cf marketplace</code> 명령을 실행하거나 <a href="https://console.ng.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-_-dWdevcenter-_-devops-services-_-lp#/store">{{site.data.keyword.Bluemix_notm}} 카탈로그</a>를 찾아보는 방식으로 적합한 {{site.data.keyword.Bluemix_notm}} 서비스, 레이블 및 플랜 목록을 찾을 수 있습니다.
+    <li>선언된 서비스: 앱 배치 전에 설정해야 하는 필수 또는 선택적 서비스(예: 데이터 캐시 서비스)를 작성하거나 찾는 Manifest 확장입니다. <a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(새 탭 또는 창에서 열림)">CF 명령행 인터페이스<img class="image" src="../icons/launch-glyph.svg" alt="외부 링크 아이콘"/></a>를 사용하여 <code>cf marketplace</code> 명령을 실행하거나 <a class="xref" href="https://console.ng.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-_-dWdevcenter-_-devops-services-_-lp#/store" target="_blank" title="(새 탭 또는 창에서 열림)">{{site.data.keyword.Bluemix_notm}} 카탈로그<img class="image" src="../icons/launch-glyph.svg" alt="외부 링크 아이콘"/></a>를 통해 적합한 {{site.data.keyword.Bluemix_notm}} 서비스, 레이블 및 플랜 목록을 찾을 수 있습니다.
     
+        
     <strong>참고:</strong> 선언된 서비스는 표준 Cloud Foundry Manifest 형식의 IBM 확장입니다. 기능이 진화하고 향상되면 이후 릴리스에서 이 확장을 수정할 수 있습니다.
 	
-	<a href="http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html#minimal-manifest" target="_blank"><code>manifest.yml</code> 파일 작성 방법을 알아보십시오.</a>  
+	<a class="xref" href="http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html#minimal-manifest" target="_blank" title="(새 탭 또는 창에서 열림)"><code>manifest.yml</code> 파일 작성 방법을 학습 <img class="image" src="../icons/launch-glyph.svg" alt="외부 링크 아이콘"/></a>하십시오.  
 <pre class="codeblock">
 	---
     #Template manifest.yml
@@ -165,10 +166,10 @@ Manifest 파일을 사용하여 다음을 지정할 수 있습니다.
 	
 	지원되는 빌더는 다음과 같습니다.
 	    <ul>
-		<li> <a href="http://ant.apache.org/manual/using.html" target="_blank">Ant:</a> /<code>build.xml</code> - 출력을 <code>./output/</code> 폴더에 빌드합니다. </li>
-		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank">Gradle:</a> <code>/build.gradle</code> - 출력을 <code>.</code> 폴더에 빌드합니다. </li>
-		<li> <a href="http://gruntjs.com/getting-started#the-gruntfile" target="_blank">Grunt:</a> <code>/Gruntfile.js</code> - 출력을 <code>.</code> 폴더에 빌드합니다. </li>
-		<li> <a href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven" target="_blank">Maven:</a> <code>/pom.xml</code> - 출력을 <code>./target/</code> 폴더에 빌드합니다.</li>
+		<li> <a class="xref" href="http://ant.apache.org/manual/using.html" target="_blank" title="(새 탭 또는 창에서 열림)">Ant:<img class="image" src="../icons/launch-glyph.svg" alt="외부 링크 아이콘"/></a> /<code>build.xml</code> - <code>./output/</code> 폴더에 출력 빌드 </li>
+		<li> <a class="xref" href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank" title="(새 탭 또는 창에서 열림)">Gradle:<img class="image" src="../icons/launch-glyph.svg" alt="외부 링크 아이콘"/></a> <code>/build.gradle</code> - <code>. </code> 폴더에 출력 빌드 </li>
+		<li> <a class="xref" href="http://gruntjs.com/getting-started#the-gruntfile" target="_blank" title="(새 탭 또는 창에서 열림)">Grunt:<img class="image" src="../icons/launch-glyph.svg" alt="외부 링크 아이콘"/></a> <code>/Gruntfile.js</code> - <code>. </code> 폴더에 출력 빌드 </li>
+		<li> <a class="xref" href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven" target="_blank" title="(새 탭 또는 창에서 열림)">Maven:<img class="image" src="../icons/launch-glyph.svg" alt="외부 링크 아이콘"/></a> <code>/pom.xml</code> - <code>./target/</code> 폴더에 출력 빌드</li>
 	   </ul>
 	</li>	
 	<li>프로젝트의 파이프라인을 구성하려면 <code>.bluemix</code> 디렉토리에 <code>pipeline.yml</code> 파일을 포함시키십시오. <code>pipeline.yml</code> 파일을 수동으로 작성하거나 기존 DevOps Services 프로젝트에서 하나를 생성할 수 있습니다. {{site.data.keyword.jazzhub_short}} 프로젝트로부터 pipeline.yml 파일을 작성하고 이를 저장소에 추가하려면 다음 단계를 완료하십시오.
@@ -184,8 +185,8 @@ Manifest 파일을 사용하여 다음을 지정할 수 있습니다.
 	<li><strong>IBM Containers</strong>를 사용하여 앱을 컨테이너에 배치하려면, 저장소의 루트 디렉토리에 Dockerfile을 포함시키고 <code>.bluemix</code> 디렉토리에 <code>pipeline.yml</code> 파일을 포함시켜야 합니다.
 	<ul>
 	    <li>Dockerfile은 해당 앱에 대해 일종의 빌드 스크립트 역할을 합니다. Dockerfile이 저장소에서 발견되는 경우, 앱이 컨테이너에 배치되기 전에 이미지에 자동으로 빌드됩니다. 앱이 이미지에 빌드되기 전에 앱 자체를 빌드해야 하는 경우, 이전에 설명된 대로, Dockerfile뿐 아니라 해당 앱에 대한 빌드 스크립트를 포함하십시오.</li>
-	    <li> Dockerfile 작성에 대해 자세히 알아보려면 <a href="https://docs.docker.com/reference/builder/" target="_blank">Docker 문서를 참조</a>하십시오.</li>
-	    <li><code>pipeline.yml</code> 파일을 수동으로 작성하거나 기존 DevOps Services 프로젝트에서 하나를 생성할 수 있습니다. 특히 컨테이너에 대한 <code>pipeline.yml</code>을 수동으로 작성하려면 <a href="https://github.com/Puquios/" target="_blank">GitHub의 예를 참조</a>하십시오.</li>
+	    <li> Docker 파일 작성에 대해 자세한 보려면 <a class="xref" href="https://docs.docker.com/reference/builder/" target="_blank" title="(새 탭 또는 창에서 열림)">Docker 문서를 참조 <img class="image" src="../icons/launch-glyph.svg" alt="외부 링크 아이콘"/></a>하십시오. </li>
+	    <li><code>pipeline.yml</code> 파일을 수동으로 작성하거나 기존 DevOps Services 프로젝트에서 하나를 생성할 수 있습니다. 특히 컨테이너에 대한 <code>pipeline.yml</code>을 수동으로 작성하려면 <a class="xref" href="https://github.com/Puquios/" target="_blank" title="(새 탭 또는 창에서 열림)">GitHub의 예를 참조 <img class="image" src="../icons/launch-glyph.svg" alt="외부 링크 아이콘"/></a>하십시오. </li>
         </ul>
 
  </li>
@@ -193,4 +194,3 @@ Manifest 파일을 사용하여 다음을 지정할 수 있습니다.
 </ul>
 
 문제점 해결 도움말은 [Bluemix에 배치 단추로 앱이 배치되지 않는 경우](/docs/troubleshoot/index.html#deploytobluemixbuttondoesntdeployanapp){:new_window}를 참조하십시오.	
-
