@@ -1,43 +1,42 @@
 {
   "id": "docs_homepage_services",
-  "title": "Bluemix 서비스 사용 방법",
-  "subtitle": "서비스 유형 및 가용성 학습",
-  "subtitleHref": "services/index.html",
+  "title": "컴퓨팅 및 서비스",
   "items": [{
     "id": "cfApp",
     "title": "Cloud Foundry 애플리케이션",
+    "img": "homepage/images/cloud-foundry.svg",
     "href": "cfapps/index.html",
     "category_id": "compute"
   }, {
-    "title": "런타임",
-    "href": "cfapps/runtimes.html",
-    "category_id": "compute"
-  }, {
     "title": "표준 유형",
+    "img": "homepage/images/Bluemix-logo.svg",
     "href": "cfapps/boilerplates.html",
     "category_id": "compute"
   }, {
+    "id": "whisk-rt",
     "title": "IBM OpenWhisk",
+    "img": "homepage/images/whisk_icon.svg",
     "href": "openwhisk/index.html",
     "category_id": "compute"
   }, {
     "id": "container",
     "title": "IBM Bluemix 컨테이너 서비스",
+    "img": "homepage/images/containerServiceIcon.svg",
     "href": "containers/container_index.html",
     "category_id": "compute"
   }, {
     "type": "extra",
-    "title": "데이터 관련 작업 수행해 보기",
+    "title": "데이터 작업",
     "href": "services/WorkWithData/index.html",
     "category_id": "data"
   }, {
     "type": "extra",
-    "title": "Dedicated GitHub Enterprise 사용해 보기",
+    "title": "Dedicated GitHub Enterprise",
     "href": "services/ghededicated/index.html",
     "category_id": "devops"
   }, {
     "type": "extra",
-    "title": "모바일 프로젝트 빌드해 보기",
+    "title": "모바일 프로젝트 빌드",
     "href": "mobile/index.html",
     "category_id": "mobile"
   }]
