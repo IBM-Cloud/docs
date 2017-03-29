@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-01-12"
+lastupdated: "2017-02-20"
 
 ---
 
@@ -39,19 +39,15 @@ cf 명령행 인터페이스가 설치된 후에
 저장소를 추가하고 플러그인을 설치하려면 다음 단계를 완료하십시오.
 
 <ol>
-<li>{{site.data.keyword.Bluemix_notm}} 관리 플러그인 저장소를 추가하려면 다음 명령을 실행하십시오. <br/><br/>
+<li>{{site.data.keyword.Bluemix_notm}} 관리 플러그인 저장소를 추가하려면 다음 명령을 실행하십시오.<br/><br/>
 <code>
-cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cli
+cf add-plugin-repo BluemixAdmin http://plugins.ng.bluemix.net
 </code><br/><br/>
-<dl class="parml">
-<dt class="pt dlterm">&lt;subdomain&gt;</dt>
-<dd class="pd">{{site.data.keyword.Bluemix_notm}} 인스턴스 URL의 하위 도메인입니다.예를 들어, <code>https://console.mycompany.bluemix.net/cli</code>입니다.</dd>
-</dl>
 </li>
-<li>{{site.data.keyword.Bluemix_notm}} 관리 CLI 플러그인을 설치하려면 <br/><br/>
+<li>{{site.data.keyword.Bluemix_notm}} 관리 CLI 플러그인을 설치하려면 다음 명령을 실행하십시오.<br/><br/>
 <code>
 cf install-plugin BluemixAdminCLI -r BluemixAdmin
-</code> 명령을 실행하십시오.
+</code>
 </li>
 </ol>
 
@@ -81,7 +77,7 @@ cf plugins
 로그인해야 합니다. 
 
 <ol>
-<li>{{site.data.keyword.Bluemix_notm}} API 엔드포인트에 연결하려면 다음 명령을 실행하십시오. <br/><br/>
+<li>{{site.data.keyword.Bluemix_notm}} API 엔드포인트에 연결하려면 다음 명령을 실행하십시오.<br/><br/>
 <code>
 cf ba api https://console.&lt;subdomain&gt;.bluemix.net
 </code>
@@ -94,7 +90,7 @@ cf ba api https://console.&lt;subdomain&gt;.bluemix.net
 있습니다. URL은 **API URL** 필드의 API 정보 섹션에
 표시됩니다.</p>
 </li>
-<li>다음 명령을 사용하여 {{site.data.keyword.Bluemix_notm}}에 로그인하십시오. <br/><br/>
+<li>다음 명령으로 {{site.data.keyword.Bluemix_notm}}에 로그인하십시오.<br/><br/>
 <code>
 cf login
 </code>
@@ -111,7 +107,7 @@ cf login
 다음 명령을 사용하십시오.
 
 ```
-cf ba add-user <user_name> <organization>
+cf ba add-user <user_name> <organization> <first_name> <last_name>
 ```
 {: codeblock}
 
@@ -122,6 +118,10 @@ cf ba add-user <user_name> <organization>
 <dd class="pd">LDAP 레지스트리 내의 사용자 이름입니다.</dd>
 <dt class="pt dlterm">&lt;organization&gt;</dt>
 <dd class="pd">사용자를 추가할 {{site.data.keyword.Bluemix_notm}} 조직의 이름 또는 GUID입니다.</dd>
+<dt class="pt dlterm">&lt;first_name&gt;</dt>
+<dd class="pd">조직에 추가할 사용자의 이름입니다.</dd>
+<dt class="pt dlterm">&lt;last_name&gt;</dt>
+<dd class="pd">조직에 추가할 사용자의 성입니다.</dd>
 </dl>
 
 **팁:** 긴 **ba add-user** 명령어에 대한
@@ -237,7 +237,7 @@ cf ba disable-managers-add-users
 조직을 추가하려면 다음 명령을 사용하십시오. 
 
 ```
-cf ba create-organization <organization> <manager>
+cf ba create-org <organization> <manager>
 ```
 {: codeblock}
 
@@ -248,7 +248,7 @@ cf ba create-organization <organization> <manager>
 <dd class="pd">조직 관리자의 사용자 이름입니다. </dd>
 </dl>
 
-**팁:** 긴 **ba create-organization** 명령어에 대한
+**팁:** 긴 **ba create-org** 명령어에 대한
 별명으로 **ba co**를 사용할 수도 있습니다.
 
 ### 조직 삭제
@@ -257,7 +257,7 @@ cf ba create-organization <organization> <manager>
 조직을 삭제하려면 다음 명령을 사용하십시오. 
 
 ```
-cf ba delete-organization <organization>
+cf ba delete-org <organization>
 ```
 {: codeblock}
 
@@ -266,7 +266,7 @@ cf ba delete-organization <organization>
 <dd class="pd">삭제할 {{site.data.keyword.Bluemix_notm}} 조직의 이름 또는 GUID입니다. </dd>
 </dl>
 
-**팁:** 긴 **ba delete-organization** 명령어에 대한
+**팁:** 긴 **ba delete-org** 명령어에 대한
 별명으로 **ba do**를 사용할 수도 있습니다.
 
 ### 조직에 사용자 지정
@@ -442,6 +442,105 @@ JSON 파일의 형식은 다음 예제와 같습니다.
 **팁:** 긴 **bluemix-admin set-containers-quota** 명령어의 별명으로
 **ba scq**를 사용할 수도 있습니다.
 
+## 영역 관리
+{: #admin_spaces}
+
+### 조직에 영역 추가
+
+조직에 영역을 추가하려면 다음 명령을 사용하십시오.
+
+```
+cf bluemix-admin create-space <organization> <space_name>
+```
+
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">영역을 추가할 조직의 이름 또는 GUID입니다.</dd>
+<dt class="pt dlterm">&lt;space_name&gt;</dt>
+<dd class="pd">조직에서 작성할 영역의 이름입니다.</dd>
+</dl>
+
+**팁:** 긴 **ba create-space** 명령어에 대한
+별명으로 **ba cs**를 사용할 수도 있습니다.
+
+### 조직에서 영역 삭제
+
+조직에서 영역을 삭제하려면 다음 명령을 사용하십시오.
+
+```
+cf bluemix-admin delete-space <organization> <space_name>
+```
+
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">영역을 제거할 조직의 이름 또는 GUID입니다.</dd>
+<dt class="pt dlterm">&lt;space_name&gt;</dt>
+<dd class="pd">조직에서 제거할 영역의 이름입니다.</dd>
+</dl>
+
+**팁:** 긴 **ba delete-space** 명령어에 대한
+별명으로 **ba cs**를 사용할 수도 있습니다.
+
+### 역할과 함께 영역에 사용자 추가
+
+지정된 역할과 함께 영역에 사용자를 작성하려면 다음 명령을 사용하십시오.
+
+```
+cf bluemix-admin set-space <organization> <space_name> <user_name> <role>
+```
+
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">사용자를 추가할 조직의 이름 또는 GUID입니다.</dd>
+<dt class="pt dlterm">&lt;space_name&gt;</dt>
+<dd class="pd">사용자를 추가할 영역의 이름입니다.</dd>
+<dt class="pt dlterm">&lt;user_anme&gt;</dt>
+<dd class="pd">추가할 사용자의 이름입니다.</dd>
+<dt class="pt dlterm">&lt;role&gt;</dt>
+<dd class="pd">지정할 사용자의 역할입니다. 값은 관리자, 개발자 또는 감사자입니다. 영역의
+{{site.data.keyword.Bluemix_notm}} 사용자 역할 및 설명은 [역할 지정](/docs/admin/users_roles.html)을
+참조하십시오.</dd>
+</dl>
+
+**팁:** 긴 **ba set-space** 명령어에 대한
+별명으로 **ba ss**를 사용할 수도 있습니다.
+
+
+### 영역에서 사용자의 역할 제거 
+
+영역에서 사용자 역할을 제거하려면 다음 명령을 사용하십시오.
+
+```
+cf bluemix-admin unset-space <organization> <space_name> <user_name> <role>
+```
+
+{: codeblock}
+
+<dl class="parml">
+<dt class="pt dlterm">&lt;organization&gt;</dt>
+<dd class="pd">사용자를 추가할 조직의 이름 또는 GUID입니다.</dd>
+<dt class="pt dlterm">&lt;space_name&gt;</dt>
+<dd class="pd">사용자를 추가할 영역의 이름입니다.</dd>
+<dt class="pt dlterm">&lt;user_anme&gt;</dt>
+<dd class="pd">추가할 사용자의 이름입니다.</dd>
+<dt class="pt dlterm">&lt;role&gt;</dt>
+<dd class="pd">지정할 사용자의 역할입니다. 값은 관리자, 개발자 또는 감사자입니다. 영역의
+{{site.data.keyword.Bluemix_notm}} 사용자 역할 및 설명은 [역할 지정](/docs/admin/users_roles.html)을
+참조하십시오.</dd>
+</dl>
+
+**팁:** 긴 **ba unset-space** 명령어에 대한
+별명으로 **ba us**를 사용할 수도 있습니다.
+
+## 카탈로그 관리
+{: #admin_catalog}
+
 ### 모든 조직에 대해 서비스 사용
 {: #admin_ena_service_org}
 
@@ -610,18 +709,14 @@ cf ba delete-report <category> <date> <name>
 보안 보고서를 검색하려면 다음 명령을 사용하십시오. 
 
 ```
-cf ba retrieve-report <category> <date> <name>
+cf ba retrieve-report <search>
 ```
 {: codeblock}
 
 <dl class="parml">
-<dt class="pt dlterm">&lt;category&gt;</dt>
-<dd class="pd">보고서의 카테고리입니다. 이름에 공백이 있는 경우 이름을 따옴표 안에
+<dt class="pt dlterm">&lt;search&gt;</dt>
+<dd class="pd">보고서의 파일 이름입니다. 이름에 공백이 있는 경우 이름을 따옴표 안에
 넣으십시오. </dd>
-<dt class="pt dlterm">&lt;date&gt;</dt>
-<dd class="pd"><samp class="ph codeph">YYYYMMDD</samp> 형식의 보고서 날짜입니다. </dd>
-<dt class="pt dlterm">&lt;name&gt;</dt>
-<dd class="pd">보고서의 이름입니다. </dd>
 </dl>
 
 **팁:** 긴 **ba retrieve-report** 명령어에 대한 별명으로 **ba rr**을 사용할 수도 있습니다.
@@ -629,7 +724,7 @@ cf ba retrieve-report <category> <date> <name>
 ## 리소스 메트릭 정보 보기
 {: #cliresourceusage}
 
-메모리, 디스크 및 CPU 사용량을 포함하여 리소스 메트릭 정보를 확인할 수 있습니다. 실제 및 예약 리소스의 사용량을 포함하여 사용 가능한 실제 및 예약 리소스의 요약을 볼 수 있습니다. 또한 DEA(Droplet Execution Agent) 사용량 데이터와 메모리 및 디스크 사용량 히스토리도 볼 수 있습니다. 기본적으로 매주 및 내림차순으로 메모리 및 디스크 사용량의 데이터 히스토리가 표시됩니다. 리소스 메트릭 정보를 보려면 다음 명령을 사용하십시오.
+메모리, 디스크 및 CPU 사용량을 포함하여 리소스 메트릭 정보를 확인할 수 있습니다. 실제 및 예약 리소스의 사용량을 포함하여 사용 가능한 실제 및 예약 리소스의 요약을 볼 수 있습니다. 또한 DEA(Droplet Execution Agent) 및 셀(Diego 아키텍처) 사용량 데이터와 히스토리 메모리 및 디스크 사용량도 볼 수 있습니다. 기본적으로 매주 및 내림차순으로 메모리 및 디스크 사용량의 데이터 히스토리가 표시됩니다. 리소스 메트릭 정보를 보려면 다음 명령을 사용하십시오.
 
 ```
 cf ba resource-metrics <monthly> <weekly>

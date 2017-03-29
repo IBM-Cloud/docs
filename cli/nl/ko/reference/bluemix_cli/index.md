@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-01-24"
+lastupdated: "2017-02-16"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2017-01-24"
 # {{site.data.keyword.Bluemix_notm}} CLI 시작하기
 {: #getting-started}
 
-{{site.data.keyword.Bluemix_notm}} CLI는 명령행 인터페이스를 사용하여 {{site.data.keyword.Bluemix_notm}}에서 애플리케이션, 가상 서버, 컨테이너 및 기타 서비스와 상호작용하기 위한 통합된 방법을 제공합니다. 또한 {{site.data.keyword.Bluemix_notm}} CLI는 Cloud Foundry CLI, Docker CLI 및 OpenStack CLI와 같은 커뮤니티 도구를 통합하고, 다른 컴퓨팅 유형과 상호작용하도록 환경 설정을 초기화합니다. 
+{{site.data.keyword.Bluemix_notm}} CLI는 명령행 인터페이스를 사용하여 애플리케이션, 가상 서버, 컨테이너 및 기타 서비스와 상호작용하기 위한 통합된 방법을 제공합니다. 또한 {{site.data.keyword.Bluemix_notm}} CLI는 Cloud Foundry CLI, Docker CLI 및 OpenStack CLI와 같은 커뮤니티 도구를 통합하고, 다른 컴퓨팅 유형과 상호작용하도록 환경 설정을 초기화합니다. 
 
 **제한사항**: {{site.data.keyword.Bluemix_notm}} CLI는 Cygwin에서 지원되지 않으므로 Cygwin 명령행 창에서는 {{site.data.keyword.Bluemix_notm}} CLI를 사용하지 마십시오. 
 
@@ -25,7 +25,7 @@ lastupdated: "2017-01-24"
 ## {{site.data.keyword.Bluemix_notm}} CLI 설치
 {: #install_bluemix_cli}
 
-{{site.data.keyword.Bluemix_notm}} CLI를 설치하기 전에 시스템에 Cloud Foundry CLI가 설치되어 있는지 확인하십시오. 
+{{site.data.keyword.Bluemix_notm}} CLI를 설치하기 전에 먼저 [cf CLI ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}를 설치하십시오.
 
 Mac OS 및 Windows의 경우, [{{site.data.keyword.Bluemix_notm}} CLI 패키지](/docs/cli/index.html#downloads)를 다운로드하고 설치 프로그램을 실행하십시오. 
 
@@ -58,12 +58,12 @@ Linux의 경우, 다음 단계를 수행하십시오.
   ~/Bluemix_CLI#
   ```
 
-지금 {{site.data.keyword.Bluemix_notm}} CLI를 시작하거나 추가 플러그인을 설치할 수 있습니다. 
+이제 {{site.data.keyword.Bluemix_notm}} CLI 사용을 시작하거나 추가 플러그인을 설치할 수 있습니다.
 
 ## 플러그인 설치
 {: #install_plug-in}
 
-Cloud Foundry CLI와 같이 {{site.data.keyword.Bluemix_notm}} CLI는 기본 제공 명령 외에 다른 명령을 통합할 수 있도록 플러그인 확장 프레임워크도 지원합니다. 
+Cloud Foundry CLI와 같이 {{site.data.keyword.Bluemix_notm}} CLI는 기본 제공 명령 외에 다른 명령을 통합할 수 있도록 플러그인 확장 프레임워크를 지원합니다.
 
 로컬 환경에서 플러그인을 설치하려면 다음 단계를 수행하십시오. 
 
@@ -135,7 +135,7 @@ Cloud Foundry CLI와 같이 {{site.data.keyword.Bluemix_notm}} CLI는 기본 제
   ~$
   ```
 
-  2. 그런 다음, `bluemix plugin install` 명령을 사용하여 `Bluemix` 저장소에서 플러그인을 설치하십시오. 예를 들어, 다음과 같습니다. 
+  2. `bluemix plugin install` 명령을 사용하여 `Bluemix` 저장소에서 플러그인을 설치하십시오. 예를 들어, 다음과 같습니다. 
 
   ```
   ~$ bluemix plugin install auto-scaling -r Bluemix
@@ -150,7 +150,7 @@ Cloud Foundry CLI와 같이 {{site.data.keyword.Bluemix_notm}} CLI는 기본 제
 ## {{site.data.keyword.Bluemix_notm}} CLI에 로그인
 {: #log_bmcli}
 
-{{site.data.keyword.Bluemix_notm}} CLI를 설치한 후 {{site.data.keyword.Bluemix_notm}} 계정 및 비밀번호를 사용하여 {{site.data.keyword.Bluemix_notm}}에 로그인할 수 있습니다. 예를 들어, 다음과 같습니다. 
+{{site.data.keyword.Bluemix_notm}} CLI를 설치한 후 IBM ID 및 비밀번호를 사용하여 {{site.data.keyword.Bluemix_notm}}에 로그인할 수 있습니다. 예를 들어, 다음과 같습니다. 
 
 ```
 ~$ bluemix login -a https://api.ng.bluemix.net
@@ -163,7 +163,7 @@ Authenticating...
 OK
 ```
 
-이제 {{site.data.keyword.Bluemix_notm}} 기본 제공 명령을 사용할 준비가 완료되었습니다. 예를 들어, 사용 가능한 모든 {{site.data.keyword.Bluemix_notm}} 표준 유형 템플리트를 나열하려면 `bluemix catalog templates` 명령을 실행하십시오. 
+이제 {{site.data.keyword.Bluemix_notm}} 기본 제공 명령을 사용할 준비가 되었습니다. 예를 들어, 사용 가능한 모든 {{site.data.keyword.Bluemix_notm}} 표준 유형 템플리트를 나열하려면 `bluemix catalog templates` 명령을 실행하십시오. 
 
 ```
 ~$ bluemix catalog templates
@@ -1003,8 +1003,8 @@ bluemix iam account-user-invite Mary IBM OrgManager Cloud SpaceAuditor
 ```
  bluemix iam account-user-reinvite USER_EMAIL ORG_NAME
 ```
- 
- 
+
+
 ### bluemix iam org-users
 {: #bluemix_iam_org_users}
 
@@ -1990,7 +1990,7 @@ bluemix plugin install PLUGIN_PATH|PLUGIN_NAME [-r REPO_NAME] [-v VERSION]
    <dt>PLUGIN_PATH|PLUGIN_NAME(필수)</dt>
    <dd>-r <i>REPO_NAME</i>을 지정하지 않으면 지정된 로컬 경로 또는 원격 URL에서 플러그인이 설치됩니다. </dd>
    <dt>-r <i>REPO_NAME</i>(선택사항)</dt>
-   <dd>플러그인 2진이 있는 저장소의 이름입니다. </dd>
+   <dd>플러그인 바이너리가 있는 저장소의 이름입니다. </dd>
    <dt>-v <i>VERSION</i>(선택사항)</dt>
    <dd>설치되는 플러그인의 버전입니다. 값을 지정하지 않으면 최신 버전의 플러그인이 설치됩니다. 이 옵션은 저장소에서 플러그인을 설치하는 경우에만 유효합니다.</dd>
     </dl>

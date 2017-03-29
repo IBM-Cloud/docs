@@ -65,7 +65,7 @@ bluemix plugin install plugin_name -r bluemix-bx
 | 플러그인 이름: active-deploy<br> [문서 보기](/docs/services/ActiveDeploy/cli.html#cli) | 플러그인 이름: auto-scaling <br> [문서 보기](/docs/cli/plugins/auto-scaling/index.html) |  플러그인 이름: IBM-Containers  <br> [문서 보기](/docs/cli/plugins/containers/index.html) |
 {: caption="표 2. 플러그인" caption-side="top"}
 
-|  *사설 네트워크 피어* | *VPN*  |
+|  *사설 네트워크 피어링* | *VPN*  |
 |-----|-----|
 | 플러그인 이름: private-network-peering  <br> [문서 보기](/docs/cli/plugins/pnp/index.html) |플러그인 이름: VPN <br> [문서 보기](/docs/cli/plugins/bx_vpn/index.html) |
 {: caption="표 3. 플러그인" caption-side="top"}
