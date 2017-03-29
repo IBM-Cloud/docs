@@ -13,7 +13,7 @@ lastupdated: "2016-03-15"
 
 {:shortdesc: .shortdesc}
 
-#  Bluemix 인프라 계층
+# Bluemix 인프라 계층
 
 
 
