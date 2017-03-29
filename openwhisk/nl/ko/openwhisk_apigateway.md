@@ -1,32 +1,31 @@
 ---
 
- 
-
 copyright:
-
   years: 2016, 2017
-lastupdated: "2017-01-04"
- 
+lastupdated: "2017-03-16"
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{:screen: .screen}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
+{:screen: .screen}
 {:pre: .pre}
 
-# API Gateway를 통해 조치 노출(시범)
+# API Gateway(시범)
 {: #openwhisk_apigateway}
 
-{{site.data.keyword.openwhisk}}에서 **POST** 메소드를 통해서만 HTTP 요청을 사용하는 [REST API](./openwhisk_reference.html#openwhisk_ref_restapi)를 통해 조치를 호출할 수 있습니다.
-이는 조치를 호출하도록 허용할 뿐만 아니라 마스터 키인 OpenWhisk 권한 부여 API 키를
-사용하여 HTTP 클라이언트가 요청을 작성해야 하며, 추가 조치를 삭제하거나 작성할 수도 있습니다.
-{: shortdesc}
+[웹 조치](openwhisk_webactions.html)가 GA(General Availability)용으로 릴리스되었습니다.
 
-이 시범 기능을 통해 조치의 권한 부여 API 키 없이, POST 메소드 외에 HTTP 메소드를 사용하여 조치를 호출할 수 있습니다. 
+웹 조치를 통해 조치의 권한 부여 API 키 없이, POST가 아닌 HTTP 메소드를 사용하여 조치를 호출할 수 있습니다.
 
-OpenWhisk API Gateway를 통해 OpenWhisk 조치를 노출하려면 CLI를 사용하십시오.  
+사용자 피드백의 결과로서 웹 조치는 HTTP 이벤트를 처리할 수 있는 OpenWhisk 조치를 빌드하도록 선택된 프로그래밍 모델입니다.
+
+대부분의 API Gateway 기능은 웹 조치에 병합되며, 웹 조치에서는 웹 조치의 전체적인 제어 권한을 사용하여 HTTP 요청을 처리하고 HTTP 응답을 리턴할 수 있습니다.
+
+개정된 OpenWhisk API Gateway 통합이 곧 사용 가능합니다. 이 통합은 비율 한계, OAuth 토큰 유효성 검증, API 키 등과 같은 API Gateway 기능을 제공하는 웹 조치를 프록시하도록 구성됩니다.
+
+**참고:** `wsk api-experimental`을 사용하여 작성한 API는 계속 작동하지만 API를 웹 조치로 마이그레이션해야 합니다.
 
 ## OpenWhisk CLI 구성
 {: #openwhisk_apigateway_cli}
